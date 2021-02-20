@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 22:13:34 agc Exp $
+$NetBSD: distinfo,v 1.19 2021/02/20 21:24:48 ryoon Exp $
 
-SHA1 (ibus-chewing-1.4.12-Source.tar.gz) = 9d626194459f0ba4d4da4d92dbc6c4d0a856daa6
-RMD160 (ibus-chewing-1.4.12-Source.tar.gz) = fff16cc108c73196870d9fbd2f6b8b366a9e3939
-SHA512 (ibus-chewing-1.4.12-Source.tar.gz) = e83a0889cc58c9b03da0f2abf4fcc1c5e92d4e7137ebd1fcaabae23f7962be80d2cda8c4a0e483ce17b25bd9c215ddcf22b725cc42da3494c3241ccc83143a36
-Size (ibus-chewing-1.4.12-Source.tar.gz) = 159593 bytes
-SHA1 (patch-CMakeLists.txt) = 86c9335ba9cbc82163bc49b837a72a0bfa4a8d3c
+SHA1 (ibus-chewing-1.5.1-Source.tar.gz) = 5a6f2b7aaebce330f9a390d492d5fbd1267c9c98
+RMD160 (ibus-chewing-1.5.1-Source.tar.gz) = eac9bf1b23e026359c38524ca937034629960f5b
+SHA512 (ibus-chewing-1.5.1-Source.tar.gz) = 2db6def1fe8ca3bd71419a001909d285ee48ef84c2f65e14bacff9cd114676bed594f0c90217e1fdab67c995a7b05d675812e90e281371d8464722c31649c633
+Size (ibus-chewing-1.5.1-Source.tar.gz) = 177044 bytes
 SHA1 (patch-Modules_ManageEnvironment.cmake) = 213274162dca9e3fb4d54d494908a309b6819e51
 SHA1 (patch-Modules_ManageEnvironmentCommon.cmake) = 1d8bb1e91c448df5dc8c7e5b7aa1760bb637a9d0
-SHA1 (patch-Modules_ManageTranslation.cmake) = eb96c2c3610ff15999f504c2211bca5231e384af
-SHA1 (patch-po_zh__CN.po) = 158a186e43f013fbd5c62cd70dbc9e0a79375ffc
+SHA1 (patch-po_zh__CN.po) = c05a5f6024941a7900529e152f771cc440964531
 SHA1 (patch-src_generate-gconf-schemas.c) = e48a546d676f65c83379ed0cd35bd3529b5db4e5
 SHA1 (patch-src_generate-gsettings-schemas.c) = 451ad5e9aece6b3436f9d549e4d733e8a7a0f958
 SHA1 (patch-src_ibus-setup-chewing.c) = b8526fe2ec87a54c3ed4cc5542a28c401da70d94
