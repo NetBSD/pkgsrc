@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/01/02 09:51:49 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/02/20 19:29:06 adam Exp $
 
-SHA1 (python-3.8.7-docs-html.tar.bz2) = d25b983a5da07515a119aa35279801798dd3efa5
-RMD160 (python-3.8.7-docs-html.tar.bz2) = 94bdc8bad0a8ede394d85f337cabc78c2a4f6040
-SHA512 (python-3.8.7-docs-html.tar.bz2) = 317217948168d870dee57f2b1633c5d3dbd1a54963f5595dda4cccdf902ea48bbc70369f98e2c03958047a76966aabf9842b87adade21bb1fc5ec01c3db694f1
-Size (python-3.8.7-docs-html.tar.bz2) = 6583700 bytes
+SHA1 (python-3.8.8-docs-html.tar.bz2) = 3da7edbf5fe83907dbddb0eec3d61e416d6d9dfc
+RMD160 (python-3.8.8-docs-html.tar.bz2) = 4960b60dc4425fde466ace56357f320ff823d537
+SHA512 (python-3.8.8-docs-html.tar.bz2) = 1f3da0cb48dd817a31b824ca88b27d8df6bf32d5e6348e339e4b4a06403d5aca37a0984d59d8d954ef037aa427ced77a8163c03887de51bd60ff25a6e5ef2682
+Size (python-3.8.8-docs-html.tar.bz2) = 6590826 bytes
