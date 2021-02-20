@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/03 05:30:45 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/20 11:07:27 markd Exp $
 
-SHA1 (zref.r54098.tar.xz) = 6631976a28cf52965e65baa97d0fabfb9a226b9b
-RMD160 (zref.r54098.tar.xz) = be5192f9da39e5f966bc885cb794cb46e8a2ba58
-SHA512 (zref.r54098.tar.xz) = 47be0976f18f367b42d6c6c174d27ad3577be39ee43a4188962e3f2a60cfc72c383e2af836d80ca66c8e247ecf6db823fc478a7c3c61d1a52cc0a06a799d716a
-Size (zref.r54098.tar.xz) = 14296 bytes
+SHA1 (zref.r56611.tar.xz) = 8b85c9f21c2cc1c0d68e9bb94d6828cfc580f366
+RMD160 (zref.r56611.tar.xz) = 5760dda135a40e6695e6b39ca05db410774722c4
+SHA512 (zref.r56611.tar.xz) = f64604e9308278b34347bcbcaed39b500371c575082311c1fb28bf6bd7db26fc2d2e3d3e8843e3a195fd22050450bffb18c3e8b64a54f0787c1122ac3901ad2f
+Size (zref.r56611.tar.xz) = 14364 bytes
