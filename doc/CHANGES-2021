@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1211 2021/02/20 21:59:01 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1212 2021/02/20 22:55:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1844,3 +1844,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/fcitx5-unikey version 5.0.3 [ryoon 2021-02-20]
 	Added inputmethod/fcitx5-zhuyin version 5.0.3 [ryoon 2021-02-20]
 	Added devel/capnproto version 0.8.0 [ryoon 2021-02-20]
+	Added emulators/qemu51 version 5.1.0nb13 [ryoon 2021-02-20]
