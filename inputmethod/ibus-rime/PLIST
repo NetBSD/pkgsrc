@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/04 12:59:26 obache Exp $
-lib/ibus-rime/ibus-engine-rime
+@comment $NetBSD: PLIST,v 1.2 2021/02/20 21:11:50 ryoon Exp $
+libexec/ibus-rime/ibus-engine-rime
+share/ibus-rime/icons/abc.png
+share/ibus-rime/icons/disabled.png
+share/ibus-rime/icons/keyboard.png
+share/ibus-rime/icons/pen.png
+share/ibus-rime/icons/reload.png
 share/ibus-rime/icons/rime.png
+share/ibus-rime/icons/sync.png
+share/ibus-rime/icons/zh.png
 share/ibus/component/rime.xml
+share/rime-data/ibus_rime.yaml
