@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:51 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/20 10:45:42 markd Exp $
 
 DISTNAME=	sttools
-PKGNAME=	tex-${DISTNAME}-2.0
-TEXLIVE_REV=	43684
+PKGNAME=	tex-${DISTNAME}-2.1
+TEXLIVE_REV=	56774
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/sttools
 COMMENT=	Various LaTeX tools and macros
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
