@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2021/02/19 12:50:13 jperkin Exp $
+# $NetBSD: options.mk,v 1.13 2021/02/20 01:02:29 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=		java erlang-hipe
@@ -35,6 +35,8 @@ PLIST_SRC+=		PLIST.java
 CONFIGURE_ARGS+=	--without-javac
 .endif
 
+# Some hipe-related files are still installed even when --disable-hipe
+# is supplied, and these should remain in the general PLIST.
 .if !empty(PKG_OPTIONS:Merlang-hipe)
 CONFIGURE_ARGS+=	--enable-hipe
 PLIST_SRC+=		PLIST.hipe
