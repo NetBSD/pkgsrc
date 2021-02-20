@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/13 11:52:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/20 10:57:30 markd Exp $
 share/texmf-dist/doc/latex/textpos/LICENCE
 share/texmf-dist/doc/latex/textpos/README
-share/texmf-dist/doc/latex/textpos/VERSION-1.9.1
+share/texmf-dist/doc/latex/textpos/VERSION-1.10
 share/texmf-dist/doc/latex/textpos/examples/README.examples
 share/texmf-dist/doc/latex/textpos/examples/t1.tex
 share/texmf-dist/doc/latex/textpos/examples/t10.tex
+share/texmf-dist/doc/latex/textpos/examples/t11.tex
 share/texmf-dist/doc/latex/textpos/examples/t2.tex
 share/texmf-dist/doc/latex/textpos/examples/t3.tex
 share/texmf-dist/doc/latex/textpos/examples/t4.tex
