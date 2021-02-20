@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/03 11:57:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/20 10:21:56 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -36,7 +36,16 @@ share/texmf-dist/doc/latex-dev/base/lgc2.pdf
 share/texmf-dist/doc/latex-dev/base/lppl-1-0.txt
 share/texmf-dist/doc/latex-dev/base/lppl-1-1.txt
 share/texmf-dist/doc/latex-dev/base/lppl-1-2.txt
+share/texmf-dist/doc/latex-dev/base/lppl.pdf
 share/texmf-dist/doc/latex-dev/base/lppl.txt
+share/texmf-dist/doc/latex-dev/base/ltfilehook-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltfilehook-code.tex
+share/texmf-dist/doc/latex-dev/base/ltfilehook-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltfilehook-doc.tex
+share/texmf-dist/doc/latex-dev/base/lthooks-code.pdf
+share/texmf-dist/doc/latex-dev/base/lthooks-code.tex
+share/texmf-dist/doc/latex-dev/base/lthooks-doc.pdf
+share/texmf-dist/doc/latex-dev/base/lthooks-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltluatex.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews.tex
@@ -104,6 +113,12 @@ share/texmf-dist/doc/latex-dev/base/ltnews31.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews31.tex
 share/texmf-dist/doc/latex-dev/base/ltnews32.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews32.tex
+share/texmf-dist/doc/latex-dev/base/ltnews33.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews33.tex
+share/texmf-dist/doc/latex-dev/base/ltshipout-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltshipout-code.tex
+share/texmf-dist/doc/latex-dev/base/ltshipout-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltshipout-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltx3info.pdf
 share/texmf-dist/doc/latex-dev/base/ltx3info.tex
 share/texmf-dist/doc/latex-dev/base/ltxdoc.pdf
@@ -127,6 +142,8 @@ share/texmf-dist/doc/latex-dev/base/tlc2.pdf
 share/texmf-dist/doc/latex-dev/base/tulm.pdf
 share/texmf-dist/doc/latex-dev/base/usrguide.pdf
 share/texmf-dist/doc/latex-dev/base/usrguide.tex
+share/texmf-dist/doc/latex-dev/base/usrguide3.pdf
+share/texmf-dist/doc/latex-dev/base/usrguide3.tex
 share/texmf-dist/doc/latex-dev/base/utf8ienc.pdf
 share/texmf-dist/doc/latex-dev/base/webcomp.err
 share/texmf-dist/doc/latex-dev/base/webcomp.pdf
