@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2021/02/20 21:51:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2021/02/20 21:53:53 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -34,6 +34,7 @@ SUBDIR+=	fcitx5-skk
 SUBDIR+=	fcitx5-table-extra
 SUBDIR+=	fcitx5-table-other
 SUBDIR+=	fcitx5-unikey
+SUBDIR+=	fcitx5-zhuyin
 SUBDIR+=	gcin
 SUBDIR+=	gtk-im-libthai
 SUBDIR+=	ibus
