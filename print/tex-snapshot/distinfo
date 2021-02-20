@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/03 11:57:36 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 10:42:15 markd Exp $
 
-SHA1 (snapshot.r52115.tar.xz) = 023d4d678b20fb730343d75e7eb3720705c9b254
-RMD160 (snapshot.r52115.tar.xz) = f9e6a9a8ab8e6b31901ed74bde80084ead08f23b
-SHA512 (snapshot.r52115.tar.xz) = b153eb4fe8e5ed8cc4d135edc3dcbeacba094dc73587a2b15255f725cd03ebeb450c562ff94e9d87927a6d04d95ddd66e30dd84c0fa664a1e120a190667a72ad
-Size (snapshot.r52115.tar.xz) = 5044 bytes
+SHA1 (snapshot.r56735.tar.xz) = ec942fbe3c5663661af4f7ee3989cc34ea1d40f8
+RMD160 (snapshot.r56735.tar.xz) = 2a40d7f502dc70d559a2c20750b1fc7b194f2c84
+SHA512 (snapshot.r56735.tar.xz) = 2b9bba924070f81319758c4b8a8e85533ff5099e901598248d5a645aba249e7158587e7d90072d3e8fa4d544d09f800b94aa415117683a8bb8c6d7ff642c313d
+Size (snapshot.r56735.tar.xz) = 5496 bytes
