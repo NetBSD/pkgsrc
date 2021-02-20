@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/05/03 11:57:32 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/02/20 10:30:42 markd Exp $
 
-SHA1 (moderncv.r52669.tar.xz) = 02e662548a3c19e25e1cff317b7a3ee218a6dd36
-RMD160 (moderncv.r52669.tar.xz) = 94b5650e0d7056c679cd3bfc5811992a85d6fee7
-SHA512 (moderncv.r52669.tar.xz) = d45dadcbe35356b64c6e81173e02d08f03f148333aab7f40f7ade71c6818a9be0fd649472ee9b7605bd0437054e304ba9fcd991c9092f7550b8cc925b66b6522
-Size (moderncv.r52669.tar.xz) = 21988 bytes
+SHA1 (moderncv.r57496.tar.xz) = 5c33781152e3c7ef1985b7fc9b8d5514727b4e33
+RMD160 (moderncv.r57496.tar.xz) = 45b88681a7e8cbec61a5f099fb351b189306e9b4
+SHA512 (moderncv.r57496.tar.xz) = 5afe854478a689c648695480bcece97a3c940e1be7cd0e32f3e1ddb1240e823ffae82f53a5b6a127c62f30a1e339f5dcaf9f7ac8b5da361fd3de80feca719614
+Size (moderncv.r57496.tar.xz) = 30884 bytes
