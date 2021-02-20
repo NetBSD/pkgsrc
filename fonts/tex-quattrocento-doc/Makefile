@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/04/26 12:21:19 markd Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/20 00:43:27 markd Exp $
 
 DISTNAME=	quattrocento.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54512
+PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56020
+TEXLIVE_REV=	56020
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/quattrocento
