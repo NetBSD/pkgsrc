@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1182 2021/02/20 13:56:38 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1183 2021/02/20 19:31:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1811,3 +1811,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libpinyin to 2.6.0 [ryoon 2021-02-20]
 	Updated databases/leveldb to 1.22nb1 [ryoon 2021-02-20]
 	Updated converters/opencc to 1.1.1 [ryoon 2021-02-20]
+	Updated lang/python38 to 3.8.8 [adam 2021-02-20]
+	Updated lang/python39 to 3.9.2 [adam 2021-02-20]
+	Updated lang/py38-html-docs to 3.8.8 [adam 2021-02-20]
+	Updated lang/py39-html-docs to 3.9.2 [adam 2021-02-20]
