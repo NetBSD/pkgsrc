@@ -1,0 +1,2 @@
+fcitx5-m17n contains some trivial little codes the wrap the m17n
+input method engine into a fcitx5 input method.
