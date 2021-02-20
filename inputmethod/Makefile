@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2021/02/20 21:09:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2021/02/20 21:15:34 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -6,7 +6,6 @@ COMMENT=	Input method tools and libraries
 SUBDIR+=	Chinput
 SUBDIR+=	anthy
 SUBDIR+=	anthy-elisp
-SUBDIR+=	brise
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
