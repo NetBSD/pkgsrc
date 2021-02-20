@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1183 2021/02/20 19:31:28 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1184 2021/02/20 20:13:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1815,3 +1815,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python39 to 3.9.2 [adam 2021-02-20]
 	Updated lang/py38-html-docs to 3.8.8 [adam 2021-02-20]
 	Updated lang/py39-html-docs to 3.9.2 [adam 2021-02-20]
+	Updated devel/protobuf to 3.15.1 [adam 2021-02-20]
+	Updated devel/py-protobuf to 3.15.1 [adam 2021-02-20]
