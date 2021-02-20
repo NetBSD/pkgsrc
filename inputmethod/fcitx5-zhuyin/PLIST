@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:52:29 ryoon Exp $
+lib/fcitx5/zhuyin.so
+share/fcitx5/addon/zhuyin.conf
+share/fcitx5/inputmethod/zhuyin.conf
+share/fcitx5/lua/imeapi/extensions/zhuyin.lua
+share/fcitx5/zhuyin/addon_phrase_index.bin
+share/fcitx5/zhuyin/addon_pinyin_index.bin
+share/fcitx5/zhuyin/bigram.db
+share/fcitx5/zhuyin/easysymbols.txt
+share/fcitx5/zhuyin/gb_char.bin
+share/fcitx5/zhuyin/gbk_char.bin
+share/fcitx5/zhuyin/merged.bin
+share/fcitx5/zhuyin/phrase_index.bin
+share/fcitx5/zhuyin/pinyin_index.bin
+share/fcitx5/zhuyin/table.conf
+share/icons/hicolor/48x48/apps/fcitx-zhuyin.png
+share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-zhuyin.png
+share/locale/ca/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/da/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/de/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/ja/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/ko/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/ru/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/tr/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/zh_CN/LC_MESSAGES/fcitx5-zhuyin.mo
+share/locale/zh_TW/LC_MESSAGES/fcitx5-zhuyin.mo
+share/metainfo/org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml
