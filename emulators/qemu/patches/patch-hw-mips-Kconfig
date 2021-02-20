@@ -1,19 +1,13 @@
-$NetBSD: patch-hw-mips-Kconfig,v 1.2 2021/02/17 17:16:01 reinoud Exp $
+$NetBSD: patch-hw-mips-Kconfig,v 1.3 2021/02/20 22:59:29 ryoon Exp $
 
 --- hw/mips/Kconfig.orig	2020-08-11 19:17:15.000000000 +0000
 +++ hw/mips/Kconfig
-@@ -21,6 +21,14 @@ config MIPSSIM
+@@ -20,6 +20,8 @@ config MIPSSIM
+     select ISA_BUS
      select SERIAL_ISA
      select MIPSNET
- 
-+config MIPSSIM_VIRTIO
-+    bool
-+    select ISA_BUS
-+    select SERIAL_ISA
-+    select MIPSNET
 +    select VIRTIO_MMIO
 +    select OR_IRQ
-+
+ 
  config JAZZ
      bool
-     select ISA_BUS
