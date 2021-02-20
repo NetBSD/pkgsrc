@@ -1,0 +1,16 @@
+$NetBSD: patch-plugins_CMakeLists.txt,v 1.1 2021/02/20 20:53:01 ryoon Exp $
+
+* plugins directory has no children at this moment.
+  Fix cmake error.
+
+--- plugins/CMakeLists.txt.orig	2021-02-07 12:37:26.000000000 +0000
++++ plugins/CMakeLists.txt
+@@ -44,7 +44,7 @@ foreach(plugin ${plugins})
+   unset(plugin_objs)
+   unset(plugin_deps)
+   unset(plugin_modules)
+-  add_subdirectory(${plugin})
++  #add_subdirectory(${plugin})
+   if(BUILD_MERGED_PLUGINS)
+     set(plugins_objs ${plugins_objs} ${plugin_objs})
+     list(REMOVE_ITEM plugin_deps ${rime_library})
