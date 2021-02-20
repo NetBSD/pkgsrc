@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:06:33 ryoon Exp $
+
+SHA1 (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = dee5a729cae92855f5cda1635750edbfb7932ffd
+RMD160 (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = b6e6e05653b24a0856ec0b6f7c280bbf90d99063
+SHA512 (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = eeef75c87f75b002b3bce01cf7a9fd8b38d7bf6fbf4c190f4ac7637e02303cd8aba151b84263c47668e939573d1e8fe5f41947e80f4db5271a760a7c1b493758
+Size (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = 730469 bytes
