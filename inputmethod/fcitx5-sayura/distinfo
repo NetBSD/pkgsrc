@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:43:08 ryoon Exp $
+
+SHA1 (fcitx5-sayura-5.0.2.tar.xz) = b283c145659060dca011f5ac3fd8b5e5a8116c55
+RMD160 (fcitx5-sayura-5.0.2.tar.xz) = 4c9a025ff746f6287d466760702133d56cf30272
+SHA512 (fcitx5-sayura-5.0.2.tar.xz) = ec67c5da287773760e5f5000ad3bb6fb6bad300860ec9a4ffc9587b5e0dd01b5f5e0db0d9d012f4474b3cb44f41884886fc2956c41b3a2f45bc82f202a2cb1a1
+Size (fcitx5-sayura-5.0.2.tar.xz) = 20972 bytes
