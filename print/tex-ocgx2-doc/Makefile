@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/05/03 11:57:33 markd Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/20 10:36:35 markd Exp $
 
 DISTNAME=	ocgx2.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.48
-TEXLIVE_REV=	52730
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.50
+TEXLIVE_REV=	57531
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ocgx2
