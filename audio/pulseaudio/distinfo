@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2021/02/07 06:25:31 ryoon Exp $
+$NetBSD: distinfo,v 1.76 2021/02/20 22:10:39 ryoon Exp $
 
 SHA1 (pulseaudio-14.2.tar.xz) = 5dfc46595e981f0eb6308d07666f4108a69b2106
 RMD160 (pulseaudio-14.2.tar.xz) = 5e52b8549a0ece2b52df854b5edaa2998c438ccd
@@ -6,8 +6,8 @@ SHA512 (pulseaudio-14.2.tar.xz) = 196338cbb26c542301b6d0579070dfbcc42e76dc17405f
 Size (pulseaudio-14.2.tar.xz) = 1951300 bytes
 SHA1 (patch-configure.ac) = 125098049a779b7afb70a7a4a625706a0c172683
 SHA1 (patch-src_Makefile.am) = 5d136002c12016a8b451e84103a627685ec403de
-SHA1 (patch-src_modules_module-detect.c) = b68923d6adc6640d2eef4b50b54e3f9ec437d042
-SHA1 (patch-src_modules_oss_module-oss.c) = 399ac178ae832619253ce8dd985edbed23db86e7
+SHA1 (patch-src_modules_module-detect.c) = 860529fef9a14cbaa3979d985f5fde391b121484
+SHA1 (patch-src_modules_oss_module-oss.c) = d254f6c346d34470c9e178199c485e929bfd84c5
 SHA1 (patch-src_modules_raop_raop-client.h) = 9fb7ae86a6852022f53aee3765777bd136250ffb
 SHA1 (patch-src_pulsecore_mix__neon.c) = 6f6d33d38024d65045d637d48276e1ba92b81342
 SHA1 (patch-src_pulsecore_shm.c) = c7079e8ac3461f5069e1415a2816784781aaa59c

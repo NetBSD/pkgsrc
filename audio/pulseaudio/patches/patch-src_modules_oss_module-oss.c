@@ -1,18 +1,15 @@
-$NetBSD: patch-src_modules_oss_module-oss.c,v 1.2 2014/06/25 15:26:40 ryoon Exp $
+$NetBSD: patch-src_modules_oss_module-oss.c,v 1.3 2021/02/20 22:10:39 ryoon Exp $
 
-Set proper sound device default on NetBSD.
+Set DEVOSSAUDIO value to fix default device on NetBSD at least.
 
---- src/modules/oss/module-oss.c.orig	2014-01-23 18:57:55.000000000 +0000
+--- src/modules/oss/module-oss.c.orig	2021-01-16 17:26:36.000000000 +0000
 +++ src/modules/oss/module-oss.c
-@@ -98,7 +98,11 @@ PA_MODULE_USAGE(
+@@ -95,7 +95,7 @@ PA_MODULE_USAGE(
  PA_MODULE_DEPRECATED("Please use module-alsa-card instead of module-oss!");
  #endif
  
-+#if defined(__NetBSD__)
-+#define DEFAULT_DEVICE "/dev/audio"
-+#else /* Linux */
- #define DEFAULT_DEVICE "/dev/dsp"
-+#endif
+-#define DEFAULT_DEVICE "/dev/dsp"
++#define DEFAULT_DEVICE "@DEVOSSAUDIO@"
  
  struct userdata {
      pa_core *core;

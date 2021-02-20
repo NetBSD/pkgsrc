@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2021/02/07 06:25:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2021/02/20 22:10:39 ryoon Exp $
 
 DISTNAME=	pulseaudio-14.2
 PKGREVISION=	1
@@ -12,6 +12,13 @@ COMMENT=	Sound server for POSIX and Win32 systems
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	DragonFly-*-*
+
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Set OSS device node
+SUBST_FILES.oss+=	src/modules/oss/module-oss.c
+SUBST_FILES.oss+=	src/modules/module-detect.c
+SUBST_VARS.oss+=	DEVOSSAUDIO
 
 # Requires --desktop in msgfmt.
 _TOOLS_USE_PKGSRC.msgfmt=	yes
