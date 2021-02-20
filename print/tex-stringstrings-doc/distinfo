@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 10:44:00 markd Exp $
 
-SHA1 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = ddb13ee2133fd136d529d6e01eef1b000988fa39
-RMD160 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = a50b82b0b8a0382b5f50ded33d4124ea467ea4df
-SHA512 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = 532c1407f9e6e4c41f969fb7b83f6b1d8a1a4a4b3fbdf79a6aefd8e7ad1fbe7f524a5dbdb2e408db36dfd2b3475c339d4687b8fc1998015e97cd05e4946574c9
-Size (tex-stringstrings-36203/stringstrings.doc.tar.xz) = 395856 bytes
+SHA1 (stringstrings.doc.r57097.tar.xz) = 45e410e381df75ae98b6696f296b43643bf504f4
+RMD160 (stringstrings.doc.r57097.tar.xz) = 6e94cdbade9c211c40e130f1f53832c01c209797
+SHA512 (stringstrings.doc.r57097.tar.xz) = 1779de4af914b69ab258bc1f69a807c12f750e5919936c78ace4496f86200bfc4c3146dffbb27ac5977c2e8d41ec8d0139cf2a2560ba7c627dacd70b34cc69ea
+Size (stringstrings.doc.r57097.tar.xz) = 381756 bytes
