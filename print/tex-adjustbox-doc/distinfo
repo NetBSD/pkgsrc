@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/29 19:41:42 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/02/20 09:40:27 markd Exp $
 
-SHA1 (tex-adjustbox-49596/adjustbox.doc.tar.xz) = 84d382283b1d5ae24b6ca92c2fa973930f71e1f7
-RMD160 (tex-adjustbox-49596/adjustbox.doc.tar.xz) = dfdf1ff3fb61cdd4f067a4d6db17e04d272795df
-SHA512 (tex-adjustbox-49596/adjustbox.doc.tar.xz) = d3ba7feb98e64bb5c3f9cfeda783deb186f4d314cfb6dc6c4d6aff9cfd5443489da36c8ea1271e3b80409b733b1f2c1480986792c884c06cfa9c4eaaa2072856
-Size (tex-adjustbox-49596/adjustbox.doc.tar.xz) = 725652 bytes
+SHA1 (adjustbox.doc.r56291.tar.xz) = f582ad55e274dc14297f1c1583f1a21c336d7db7
+RMD160 (adjustbox.doc.r56291.tar.xz) = dc84c835b42f2352eef96fd98c46e3a9b2a46f11
+SHA512 (adjustbox.doc.r56291.tar.xz) = 3ddd36dcf4c56390aef552644e053612f1b2a900b2031f63aa6dd5da013916a00ead80a4e677c5225a14055f3b34d972faf17fe42e3cbe1f74b59a3b7d5206d6
+Size (adjustbox.doc.r56291.tar.xz) = 719424 bytes
