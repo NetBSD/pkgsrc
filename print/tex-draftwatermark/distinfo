@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/05/01 00:15:13 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/20 10:08:29 markd Exp $
 
-SHA1 (draftwatermark.r54317.tar.xz) = 0c2a96538a2d1fea9f2136694a1e68c9222faf04
-RMD160 (draftwatermark.r54317.tar.xz) = 962f0c2cc39c8f330588aa30902c996bb3bd0a90
-SHA512 (draftwatermark.r54317.tar.xz) = 6fc981c0a4cd28b94c52c8a0cf1a173182db25bcdd96d8f533439e9a0880aa7447e4d914d79dec08a5e00f654c7803c500ec5bb4b00de37b35fa035ea071fb3a
-Size (draftwatermark.r54317.tar.xz) = 2724 bytes
+SHA1 (draftwatermark.r57099.tar.xz) = f0918a802d9670b77e8d9fecd653d3fbe5e9c2c9
+RMD160 (draftwatermark.r57099.tar.xz) = 08b06bf2d28382fd1e036833ddeb378059a0818f
+SHA512 (draftwatermark.r57099.tar.xz) = c12311ce3723e6b93e8d21df2a50a3c1ab2326aa5cb6a1600fb848efd5309fa9a1c920e0ad27c785925387af5872570142aae61a2ffea0b3578d10209060e9dc
+Size (draftwatermark.r57099.tar.xz) = 2816 bytes
