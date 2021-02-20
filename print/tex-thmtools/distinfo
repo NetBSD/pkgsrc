@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/05 12:01:04 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 11:00:46 markd Exp $
 
-SHA1 (thmtools.r53219.tar.xz) = fa88e131bf8483bb8fb2b0d45b8d107f762ca6cd
-RMD160 (thmtools.r53219.tar.xz) = d91f4c5f1aa8e281aa5fc2e152561dd2bba45a5b
-SHA512 (thmtools.r53219.tar.xz) = 1530f49499593262aaa24714bb4f9801876f9903b4c8f664deae0ee65e9384d52a050c5352ebd2cf158342752191e15deec4b7f5d2cc880a39012720963cc723
-Size (thmtools.r53219.tar.xz) = 12372 bytes
+SHA1 (thmtools.r56070.tar.xz) = 2a17f387a17290556ec495a660a084f2b0b41da7
+RMD160 (thmtools.r56070.tar.xz) = 7707995395ddf856c9cb37bc7bddd8e40f7fea15
+SHA512 (thmtools.r56070.tar.xz) = e7b4a7b97e7ace18e6d02d63d1e6014d0f702dfeca27f6e921a70a7c34797104c6bc26ca3717fe8237923f1c66fbb010b9e76a192d49f1600fd3362badb6261a
+Size (thmtools.r56070.tar.xz) = 13276 bytes
