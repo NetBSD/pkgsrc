@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/05 12:01:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/20 11:00:46 markd Exp $
 share/texmf-dist/doc/latex/thmtools/COPYING
-share/texmf-dist/doc/latex/thmtools/README
-share/texmf-dist/doc/latex/thmtools/TODO
+share/texmf-dist/doc/latex/thmtools/README.md
 share/texmf-dist/doc/latex/thmtools/VERSION.tex
 share/texmf-dist/doc/latex/thmtools/changes.txt
+share/texmf-dist/doc/latex/thmtools/thmtools-manual.pdf
 share/texmf-dist/doc/latex/thmtools/thmtools-manual.tex
-share/texmf-dist/doc/latex/thmtools/thmtools.pdf
