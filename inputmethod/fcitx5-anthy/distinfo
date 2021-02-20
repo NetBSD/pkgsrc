@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:19:23 ryoon Exp $
+
+SHA1 (fcitx5-anthy-5.0.2.tar.xz) = b67c54b81e87138dcb584274257e32c063c9b6e6
+RMD160 (fcitx5-anthy-5.0.2.tar.xz) = 051fe5f214dd6bd749832b8e8686197e73d69851
+SHA512 (fcitx5-anthy-5.0.2.tar.xz) = ea82ba4b5703caa6d57f42bdcec77f04869ba6761d58c5ebcad80111cf04cac01b46eb0e21181dd96b0bacea300fbde8dafd82ececa9fe30e62f532679181224
+Size (fcitx5-anthy-5.0.2.tar.xz) = 77332 bytes
