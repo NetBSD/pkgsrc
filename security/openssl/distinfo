@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.147 2020/12/08 18:54:17 wiz Exp $
+$NetBSD: distinfo,v 1.148 2021/02/20 08:53:23 wiz Exp $
 
-SHA1 (openssl-1.1.1i.tar.gz) = eb684ba4ed31fe2c48062aead75233ecd36882a6
-RMD160 (openssl-1.1.1i.tar.gz) = 95a45fa7c2240dde179e8f8028f998bfa5177cc3
-SHA512 (openssl-1.1.1i.tar.gz) = fe12e0ab9e1688f24dd862ac633d0ab703b499c0f34b53c3560aa0d3879d81d647aa0678ed517dda5efb2711f669fcb1a1e0e24f6eac2efc2cf4eae6b62014d8
-Size (openssl-1.1.1i.tar.gz) = 9808346 bytes
+SHA1 (openssl-1.1.1j.tar.gz) = 04c340b086828eecff9df06dceff196790bb9268
+RMD160 (openssl-1.1.1j.tar.gz) = b88dd6c2f1587a2cf9e5670f697343808dc80ea6
+SHA512 (openssl-1.1.1j.tar.gz) = 51e44995663b5258b0018bdc1e2b0e7e8e0cce111138ca1f80514456af920fce4e409a411ce117c0f3eb9190ac3e47c53a43f39b06acd35b7494e2bec4a607d5
+Size (openssl-1.1.1j.tar.gz) = 9823161 bytes
 SHA1 (patch-Configurations_shared-info.pl) = 0e835f6e343b5d05ef9a0e6ef2a195201262d15c
 SHA1 (patch-Configurations_unix-Makefile.tmpl) = cf6b46c6e10e84100beb468bbe6f85c5e62cbe7a
 SHA1 (patch-Configure) = 479f1bc826f7721f6b44d6b5a6cf460432924bf2
