@@ -1,0 +1,34 @@
+$NetBSD: patch-data_CMakeLists.txt,v 1.1 2021/02/20 21:27:37 ryoon Exp $
+
+* Fix runtime errors during build for pkgsrc.
+  pkgsrc removes $ORIGIN from RPATH.
+
+--- data/CMakeLists.txt.orig	2020-08-29 01:46:26.014709200 +0000
++++ data/CMakeLists.txt
+@@ -24,7 +24,7 @@ add_custom_target(opengram-lm ALL DEPEND
+ add_custom_command(
+   OUTPUT "${OPENGRAM_LM_PREDICT_OUTPUT}"
+   DEPENDS "${OPENGRAM_LM_SRC}" opengram-lm LibIME::prediction
+-  COMMAND LibIME::prediction "${OPENGRAM_LM_OUTPUT}" "${OPENGRAM_LM_SRC}" "${OPENGRAM_LM_PREDICT_OUTPUT}")
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_prediction "${OPENGRAM_LM_OUTPUT}" "${OPENGRAM_LM_SRC}" "${OPENGRAM_LM_PREDICT_OUTPUT}")
+ add_custom_target(opengram-lm-predict ALL DEPENDS "${OPENGRAM_LM_PREDICT_OUTPUT}")
+ 
+ install(FILES "${OPENGRAM_LM_OUTPUT}" RENAME zh_CN.lm DESTINATION "${LIBIME_INSTALL_LIBDATADIR}")
+@@ -46,7 +46,7 @@ add_custom_command(
+ add_custom_command(
+   OUTPUT "${OPENGRAM_DICT_OUTPUT}"
+   DEPENDS "${OPENGRAM_DICT_SRC}" LibIME::pinyindict
+-  COMMAND LibIME::pinyindict "${OPENGRAM_DICT_SRC}" "${OPENGRAM_DICT_OUTPUT}")
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/pinyin:${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_pinyindict "${OPENGRAM_DICT_SRC}" "${OPENGRAM_DICT_OUTPUT}")
+ add_custom_target(opengram-dict ALL DEPENDS "${OPENGRAM_DICT_OUTPUT}")
+ install(FILES "${OPENGRAM_DICT_OUTPUT}" DESTINATION "${LIBIME_INSTALL_PKGDATADIR}")
+ 
+@@ -64,7 +64,7 @@ foreach(TABLE_TXT_FILE ${TABLE_TXT_FILES
+   string(REPLACE .txt .main.dict TABLE_DICT_FILE ${TABLE_TXT_FILE})
+   add_custom_command(OUTPUT ${TABLE_DICT_FILE}
+                      DEPENDS ${TABLE_TXT_FILE} LibIME::tabledict
+-                     COMMAND LibIME::tabledict ${TABLE_TXT_FILE} ${CMAKE_CURRENT_BINARY_DIR}/${TABLE_DICT_FILE})
++                     COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/table:${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_tabledict ${TABLE_TXT_FILE} ${CMAKE_CURRENT_BINARY_DIR}/${TABLE_DICT_FILE})
+   list(APPEND TABLE_DICT_FILES ${CMAKE_CURRENT_BINARY_DIR}/${TABLE_DICT_FILE})
+ endforeach()
+ 
