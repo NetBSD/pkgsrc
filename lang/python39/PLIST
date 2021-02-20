@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/12/08 14:30:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/20 19:30:37 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1803,6 +1803,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_window.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.py
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.pyo
@@ -3265,6 +3268,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/echo3.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyo
@@ -5263,6 +5269,9 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/support.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.pyo
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.py
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.pyc
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.pyo
@@ -5278,6 +5287,9 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_loadtk.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.pyo
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.py
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.pyc
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.pyo
