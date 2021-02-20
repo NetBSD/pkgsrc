@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:52:29 ryoon Exp $
+
+SHA1 (fcitx5-zhuyin-5.0.3.tar.xz) = a35e1a9aa81858d0d79b144997d7a1f7b3052fb7
+RMD160 (fcitx5-zhuyin-5.0.3.tar.xz) = 215655ac6337c31730ffd5e14d429e73e40f0adc
+SHA512 (fcitx5-zhuyin-5.0.3.tar.xz) = 992be8e77f0dc2f93973c43899a3d2bbddaf5743f10939d42bcb51d756dc98ae8e4917ebc0b7e6419bb0cf39a1b2a3317765d3599c86df8fa1f96fcbfd89523d
+Size (fcitx5-zhuyin-5.0.3.tar.xz) = 28328 bytes
+SHA1 (model.text.20161206.tar.gz) = 5682265b672ec601ff0e7b42c2af99c096634918
+RMD160 (model.text.20161206.tar.gz) = 001f245c54af385f9f243f0ed10ec582332e541a
+SHA512 (model.text.20161206.tar.gz) = 26450e347b7a211e5abd94acbb9befc8cee7d8fc20e5161ef11b8b9b1ad47cde4f1add5c41484d9af04e4dde2aa748090e297e799ee7f6d2f9fcec3873eee429
+Size (model.text.20161206.tar.gz) = 15099931 bytes
