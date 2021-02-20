@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:27:37 ryoon Exp $
+
+SHA1 (libime-1.0.3/dict.utf8-20200715.tar.xz) = 1c483cb039e70f31035c129f1c61591402d21ed6
+RMD160 (libime-1.0.3/dict.utf8-20200715.tar.xz) = d35ca30c88f71d23484f12e702a36fb186c1b83d
+SHA512 (libime-1.0.3/dict.utf8-20200715.tar.xz) = 75ad207842937369e79c3c3616165424c4e71fbce7ba2b15c7c2f1dcb898950e6d9babf39ed5bde01c21dd025906c988a80989863175daa8d1315a9be4402130
+Size (libime-1.0.3/dict.utf8-20200715.tar.xz) = 471536 bytes
+SHA1 (libime-1.0.3/libime-1.0.3.tar.xz) = e34e33f27851dc9e0fefde88e05b4bfc936b9e20
+RMD160 (libime-1.0.3/libime-1.0.3.tar.xz) = 5df92aca8529e506e1b8737ca59b06aae333af1a
+SHA512 (libime-1.0.3/libime-1.0.3.tar.xz) = 12d8bfbec403acc538fa4df7556b429b3f7782798cc6c14368852c580947b433b5a719978168289baf30e3c653493230a2a7dbd62d0dafbab7701a2a7ecc6b09
+Size (libime-1.0.3/libime-1.0.3.tar.xz) = 409456 bytes
+SHA1 (libime-1.0.3/lm_sc.3gm.arpa-20140820.tar.bz2) = fb27b25a2a6242aadf0823004cb425eb8974acd4
+RMD160 (libime-1.0.3/lm_sc.3gm.arpa-20140820.tar.bz2) = 9de76d890d6ee3f02db2845a4a9b32c96b5b3845
+SHA512 (libime-1.0.3/lm_sc.3gm.arpa-20140820.tar.bz2) = ea3ede62eb993c4d21ca7cf339635f4686493a0cefd57df4a31f00a001e67502a13ff9612ff667b941b82b47de00be9f3c9689677d04195a7ef8716bac087519
+Size (libime-1.0.3/lm_sc.3gm.arpa-20140820.tar.bz2) = 36623028 bytes
+SHA1 (libime-1.0.3/table.tar.gz) = b7e89f95ce2da991821acd270a1220a4cd4cb65a
+RMD160 (libime-1.0.3/table.tar.gz) = b678c943b232b8aba2c462c7b81b2f99f27ecd07
+SHA512 (libime-1.0.3/table.tar.gz) = 99e1d69c679355fcf3e117a1ef39b131cbd3af841387d2335757247d840b90ff6b7323e16fca98cf7a043033faf250d2e9c6d47b96845d18c278a0cf6f30fec9
+Size (libime-1.0.3/table.tar.gz) = 4144686 bytes
+SHA1 (patch-data_CMakeLists.txt) = 54007355fa7e0adb145e97dd94225dd5a224a668
