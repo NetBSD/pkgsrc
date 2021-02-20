@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:53 joerg Exp $
-
-SHA1 (brise-0.30.tar.gz) = 74e05d49b80fbcb1266bda39d1a2651fe163b438
-RMD160 (brise-0.30.tar.gz) = a22e5707631be3d9f737489a1374d5b10f7fe3ba
-SHA512 (brise-0.30.tar.gz) = 1d727e71ad9aabbbfab04e934f6a26bee75f8d277eb2a1c67a05616c36b2e029b0b3958eaf94af4263aa6fe350738c96e7c084fe4a5ecc45474a8900d4927748
-Size (brise-0.30.tar.gz) = 6556594 bytes
-SHA1 (patch-Makefile) = 05458093aeb02cd71a53ffb710bbf7c212617852
