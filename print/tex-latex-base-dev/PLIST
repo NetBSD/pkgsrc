@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/03 11:57:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/20 10:21:56 markd Exp $
 share/texmf-dist/tex/latex-dev/base/alltt.sty
 share/texmf-dist/tex/latex-dev/base/ansinew.def
 share/texmf-dist/tex/latex-dev/base/applemac.def
 share/texmf-dist/tex/latex-dev/base/article.cls
 share/texmf-dist/tex/latex-dev/base/article.sty
 share/texmf-dist/tex/latex-dev/base/ascii.def
+share/texmf-dist/tex/latex-dev/base/atbegshi-ltx.sty
+share/texmf-dist/tex/latex-dev/base/atveryend-ltx.sty
 share/texmf-dist/tex/latex-dev/base/bezier.sty
 share/texmf-dist/tex/latex-dev/base/bk10.clo
 share/texmf-dist/tex/latex-dev/base/bk11.clo
@@ -23,6 +25,7 @@ share/texmf-dist/tex/latex-dev/base/cp865.def
 share/texmf-dist/tex/latex-dev/base/decmulti.def
 share/texmf-dist/tex/latex-dev/base/doc.sty
 share/texmf-dist/tex/latex-dev/base/docstrip.tex
+share/texmf-dist/tex/latex-dev/base/everyshi-ltx.sty
 share/texmf-dist/tex/latex-dev/base/exscale.sty
 share/texmf-dist/tex/latex-dev/base/fix-cm.sty
 share/texmf-dist/tex/latex-dev/base/fixltx2e.sty
@@ -57,7 +60,7 @@ share/texmf-dist/tex/latex-dev/base/leqno.clo
 share/texmf-dist/tex/latex-dev/base/leqno.sty
 share/texmf-dist/tex/latex-dev/base/letter.cls
 share/texmf-dist/tex/latex-dev/base/letter.sty
-share/texmf-dist/tex/latex-dev/base/ltexpl.ltx
+share/texmf-dist/tex/latex-dev/base/lppl.tex
 share/texmf-dist/tex/latex-dev/base/ltluatex.lua
 share/texmf-dist/tex/latex-dev/base/ltluatex.tex
 share/texmf-dist/tex/latex-dev/base/ltnews.cls
@@ -114,6 +117,8 @@ share/texmf-dist/tex/latex-dev/base/slides.cls
 share/texmf-dist/tex/latex-dev/base/slides.def
 share/texmf-dist/tex/latex-dev/base/slides.sty
 share/texmf-dist/tex/latex-dev/base/small2e.tex
+share/texmf-dist/tex/latex-dev/base/source2edoc.cls
+share/texmf-dist/tex/latex-dev/base/structuredlog.sty
 share/texmf-dist/tex/latex-dev/base/syntonly.sty
 share/texmf-dist/tex/latex-dev/base/t1cmdh.fd
 share/texmf-dist/tex/latex-dev/base/t1cmfib.fd
