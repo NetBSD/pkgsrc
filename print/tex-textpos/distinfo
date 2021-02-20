@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/05/13 11:52:22 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/02/20 10:57:30 markd Exp $
 
-SHA1 (tex-textpos-50988/textpos.tar.xz) = 02d41258a8576bdbcbdf46fbf4aad9fa9ccd1b4e
-RMD160 (tex-textpos-50988/textpos.tar.xz) = ee21c5042ab059accb1ef39b1178d818cfd2f5ef
-SHA512 (tex-textpos-50988/textpos.tar.xz) = 430c373d2c228615ecc9c46c10a99ce5394ff0497e9a375eec3c4e409452e006979501f7d18c5f603055c9ddb57b7c0687cf0a9273761d23aec75ed64c032200
-Size (tex-textpos-50988/textpos.tar.xz) = 3944 bytes
+SHA1 (textpos.r56441.tar.xz) = f51e6ed804eac194a0462dc0c7c551ec7b027cb2
+RMD160 (textpos.r56441.tar.xz) = de6dc2c12ab13f3f28bac390437eed24d04c678f
+SHA512 (textpos.r56441.tar.xz) = b7213e61a54addaafac6bf831273a000bf300939d74311e25a1412744e2baabcc35594b084a9ccb6eb5e8b91b105e0acf97686323f89f0623a8ee9749e33bbf9
+Size (textpos.r56441.tar.xz) = 4196 bytes
