@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:04:51 ryoon Exp $
+share/rime-data/cangjie5.dict.yaml
+share/rime-data/cangjie5.schema.yaml
+share/rime-data/cangjie5_express.schema.yaml
