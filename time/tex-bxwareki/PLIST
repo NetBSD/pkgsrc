@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 09:42:47 markd Exp $
+share/texmf-dist/tex/latex/bxwareki/bxwareki-cd.def
+share/texmf-dist/tex/latex/bxwareki/bxwareki.sty
+share/texmf-dist/tex/latex/bxwareki/bxwareki2019.def
