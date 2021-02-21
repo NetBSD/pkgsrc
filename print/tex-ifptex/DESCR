@@ -1,0 +1,3 @@
+The ifptex package is a counterpart of ifxetex, ifluatex, etc.
+for the ptex engine. The ifuptex package is an alias to ifptex
+provided for backward compatibility.
