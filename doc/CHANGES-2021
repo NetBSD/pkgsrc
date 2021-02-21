@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1221 2021/02/21 14:36:28 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1222 2021/02/21 15:43:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1944,3 +1944,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/lowdown to 0.8.2 [fcambus 2021-02-21]
 	Updated multimedia/ffmpeg4 to 4.3.2 [adam 2021-02-21]
 	Updated multimedia/ffplay4 to 4.3.2 [adam 2021-02-21]
+	Updated x11/gtk3 to 3.24.25 [adam 2021-02-21]
+	Updated textproc/py-yaml to 5.4.1 [adam 2021-02-21]
