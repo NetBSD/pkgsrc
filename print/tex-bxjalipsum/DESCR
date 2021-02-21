@@ -1,0 +1,5 @@
+This package enables users to print some Japanese text that can
+be used as dummy text. It is a Japanese counterpart of the
+lipsum package. Since there is no well-known nonsense text like
+Lipsum in the Japanese language, the package uses some real
+text in public domain.
