@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20398 2021/02/20 23:00:08 ryoon Exp $
+$NetBSD: TODO,v 1.20399 2021/02/21 08:15:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,6 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o afterstep-2.2.12
 	o aide-0.16
 	o akonadi-16.08.1
+	o alacritty-0.7.2
 	o alephone-20150620
 	o alevt-1.6.2
 	o alsa-lib-1.2.4
@@ -554,6 +555,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fakeroot-1.6.5
 	o felt-3.07 [wip]
 	o fet-5.28.6
+	o ffmpeg4-4.3.2
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
@@ -732,6 +734,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libbpg-0.9.6
 	o libcarddav-14.0.4
 	o libdrm-2.4.102
+	o libebur128-1.2.6
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -812,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o muse-0.9.2
+	o musicpd-0.22.6
 	o mysql-connector-c++-8.0.23
 	o mysql-server-8.0.23
 	o mysql-workbench-8.0.23
@@ -931,10 +935,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-astroid-2.5
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-hgview-1.9.0
+	o py-hypothesis-6.3.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
@@ -1046,6 +1052,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o taglib-1.12
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
