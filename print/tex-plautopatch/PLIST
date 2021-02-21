@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:37:26 markd Exp $
+share/texmf-dist/tex/latex/plautopatch/plarydshln.sty
+share/texmf-dist/tex/latex/plautopatch/plautopatch.sty
+share/texmf-dist/tex/latex/plautopatch/plcollcell.sty
+share/texmf-dist/tex/latex/plautopatch/plextarydshln.sty
+share/texmf-dist/tex/latex/plautopatch/plsiunitx.sty
+share/texmf-dist/tex/latex/plautopatch/pxpgfrcs.sty
+share/texmf-dist/tex/latex/plautopatch/pxstfloats.sty

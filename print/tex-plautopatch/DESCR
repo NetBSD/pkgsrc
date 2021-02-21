@@ -1,0 +1,10 @@
+Japanese pLaTeX/upLaTeX formats and packages often conflict
+with other LaTeX packages which are unaware of pLaTeX/upLaTeX.
+In the worst case, such packages throw a fatal error or end up
+with a wrong output. The goal of this package is that there
+should be no need to worry about such incompatibilities,
+because specific patches are loaded automatically whenever
+necessary. This helps not only to simplify source files, but
+also to make the appearance of working pLaTeX/upLaTeX sources
+similar to those of ordinary LaTeX ones. This package depends
+on the filehook package written by Martin Scharrer.
