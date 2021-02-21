@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/27 11:00:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/21 05:39:29 markd Exp $
 share/texmf-dist/doc/fonts/baekmuk/COPYRIGHT
 share/texmf-dist/doc/fonts/baekmuk/COPYRIGHT.ks
 share/texmf-dist/doc/fonts/baekmuk/README.md
-share/texmf-dist/doc/fonts/baekmuk/README_original

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/27 11:00:38 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/21 05:39:29 markd Exp $
 
-SHA1 (tex-baekmuk-42106/baekmuk.doc.tar.xz) = fec6fba10e8a45b2bc10817dc756edd49c62dc02
-RMD160 (tex-baekmuk-42106/baekmuk.doc.tar.xz) = 7775baaeaaa172ee2308e8c7a0d8a3a734ecd964
-SHA512 (tex-baekmuk-42106/baekmuk.doc.tar.xz) = 2a5ed41f73a07d0ecc0ee68acc77966d94b2ef23aa174d88bc5bbc844fdb55da2ac147eada45805f1fc8c75b478ea2fa4b2ff3f41b25721286bdfe053a8bbadf
-Size (tex-baekmuk-42106/baekmuk.doc.tar.xz) = 1656 bytes
+SHA1 (baekmuk.doc.r56915.tar.xz) = 3268ce938b838c66392168d1d91d84580c97af5b
+RMD160 (baekmuk.doc.r56915.tar.xz) = 587078f97937c70cb09cbf089cc8ada34c8f2ff0
+SHA512 (baekmuk.doc.r56915.tar.xz) = 3a3819f892bdf69afeb66b9fdfbfe1ffe06e2a488425e814cb3a1e223ec9659a71f0571dc25136e0f7afcdb616f717dcb3823b89e640b0894313683e4f79b197
+Size (baekmuk.doc.r56915.tar.xz) = 1576 bytes
