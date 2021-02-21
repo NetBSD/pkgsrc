@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/05/10 12:52:42 markd Exp $
+# $NetBSD: Makefile,v 1.17 2021/02/21 11:22:59 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54894
@@ -12,61 +12,61 @@ COMMENT=	Japanese TeX packages
 
 DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-langcjk
 
-# depend ascmac
-# depend babel-japanese
-# depend bxbase
-# depend bxcjkjatype
-# depend bxghost
-# depend bxjaholiday
-# depend bxjalipsum
-# depend bxjaprnind
-# depend bxjatoucs
-# depend bxjscls
-# depend bxorigcapt
-# depend bxwareki
-# depend convbkmk
-# depend endnotesj
-# depend gentombow
+DEPENDS+=	tex-ascmac-[0-9]*:../../fonts/tex-ascmac
+DEPENDS+=	tex-babel-japanese-[0-9]*:../../print/tex-babel-japanese
+DEPENDS+=	tex-bxbase-[0-9]*:../../print/tex-bxbase
+DEPENDS+=	tex-bxcjkjatype-[0-9]*:../../print/tex-bxcjkjatype
+DEPENDS+=	tex-bxghost-[0-9]*:../../print/tex-bxghost
+DEPENDS+=	tex-bxjaholiday-[0-9]*:../../time/tex-bxjaholiday
+DEPENDS+=	tex-bxjalipsum-[0-9]*:../../print/tex-bxjalipsum
+DEPENDS+=	tex-bxjaprnind-[0-9]*:../../print/tex-bxjaprnind
+DEPENDS+=	tex-bxjatoucs-[0-9]*:../../fonts/tex-bxjatoucs
+DEPENDS+=	tex-bxjscls-[0-9]*:../../print/tex-bxjscls
+DEPENDS+=	tex-bxorigcapt-[0-9]*:../../print/tex-bxorigcapt
+DEPENDS+=	tex-bxwareki-[0-9]*:../../time/tex-bxwareki
+DEPENDS+=	tex-convbkmk-[0-9]*:../../print/tex-convbkmk
+DEPENDS+=	tex-endnotesj-[0-9]*:../../print/tex-endnotesj
+DEPENDS+=	tex-gentombow-[0-9]*:../../print/tex-gentombow
 DEPENDS+=	tex-haranoaji-[0-9]*:../../fonts/tex-haranoaji
-# depend haranoaji-extra
-# depend ifptex
-# depend ifxptex
+DEPENDS+=	tex-haranoaji-extra-[0-9]*:../../fonts/tex-haranoaji-extra
+DEPENDS+=	tex-ifptex-[0-9]*:../../print/tex-ifptex
+DEPENDS+=	tex-ifxptex-[0-9]*:../../print/tex-ifxptex
 DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
 DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
-# depend japanese-otf-uptex
-# depend jlreq
-# depend jlreq-deluxe
+DEPENDS+=	tex-japanese-otf-uptex-[0-9]*:../../fonts/tex-japanese-otf-uptex
+DEPENDS+=	tex-jlreq-[0-9]*:../../print/tex-jlreq
+DEPENDS+=	tex-jlreq-deluxe-[0-9]*:../../fonts/tex-jlreq-deluxe
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
 # lshort-japanese is documentation only
-# depend luatexja
+DEPENDS+=	tex-luatexja-[0-9]*:../../print/tex-luatexja
 # mendex-doc is documentation only
-# depend morisawa
+DEPENDS+=	tex-morisawa-[0-9]*:../../fonts/tex-morisawa
 DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
-# depend platex-tools
+DEPENDS+=	tex-platex-tools-[0-9]*:../../print/tex-platex-tools
 # platexcheat is documentation only
-# depend plautopatch
+DEPENDS+=	tex-plautopatch-[0-9]*:../../print/tex-plautopatch
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-ptex-fontmaps-[0-9]*:../../fonts/tex-ptex-fontmaps
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
-# depend ptex-manual
-# depend ptex2pdf
-# depend pxbase
-# depend pxchfon
-# depend pxcjkcat
-# depend pxjahyper
-# depend pxjodel
-# depend pxrubrica
-# depend pxufont
-# depend texlive-ja
+# ptex-manual is documentation only
+DEPENDS+=	tex-ptex2pdf-[0-9]*:../../print/tex-ptex2pdf
+DEPENDS+=	tex-pxbase-[0-9]*:../../print/tex-pxbase
+DEPENDS+=	tex-pxchfon-[0-9]*:../../fonts/tex-pxchfon
+DEPENDS+=	tex-pxcjkcat-[0-9]*:../../print/tex-pxcjkcat
+DEPENDS+=	tex-pxjahyper-[0-9]*:../../print/tex-pxjahyper
+DEPENDS+=	tex-pxjodel-[0-9]*:../../fonts/tex-pxjodel
+DEPENDS+=	tex-pxrubrica-[0-9]*:../../print/tex-pxrubrica
+DEPENDS+=	tex-pxufont-[0-9]*:../../fonts/tex-pxufont
+# texlive-ja is documentation only
 # depend uplatex
-# uptex is documentation only
-# depend uptex-base
-# depend uptex-fonts
+# depend uptex
+DEPENDS+=	tex-uptex-base-[0-9]*:../../print/tex-uptex-base
+DEPENDS+=	tex-uptex-fonts-[0-9]*:../../fonts/tex-uptex-fonts
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
-# depend zxjafbfont
-# depend zxjatype
+DEPENDS+=	tex-zxjafbfont-[0-9]*:../../print/tex-zxjafbfont
+DEPENDS+=	tex-zxjatype-[0-9]*:../../print/tex-zxjatype
 
 META_PACKAGE=	yes
 
