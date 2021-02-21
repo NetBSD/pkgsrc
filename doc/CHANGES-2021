@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1213 2021/02/20 23:00:08 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1214 2021/02/21 06:00:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1846,3 +1846,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/capnproto version 0.8.0 [ryoon 2021-02-20]
 	Added emulators/qemu51 version 5.1.0nb13 [ryoon 2021-02-20]
 	Updated emulators/qemu to 5.2.0 [ryoon 2021-02-20]
+	Updated fonts/tex-baekmuk to 2.2.1 [markd 2021-02-21]
+	Updated fonts/tex-baekmuk-doc to 2.2.1 [markd 2021-02-21]
+	Updated fonts/tex-haranoaji to 20210130 [markd 2021-02-21]
+	Updated fonts/tex-haranoaji-doc to 20210130 [markd 2021-02-21]
+	Updated fonts/tex-japanese-otf to 1.7b8.56938 [markd 2021-02-21]
+	Updated fonts/tex-japanese-otf-doc to 1.7b8.56938 [markd 2021-02-21]
+	Updated print/tex-jsclasses to 2020.56608 [markd 2021-02-21]
+	Updated print/tex-platex to 2020.57730 [markd 2021-02-21]
+	Updated print/tex-platex-doc to 2020.57730 [markd 2021-02-21]
+	Updated print/tex-ptex-base to 2020.56487 [markd 2021-02-21]
+	Updated print/tex-ptex-base-doc to 2020.56487 [markd 2021-02-21]
+	Updated fonts/tex-ptex-fontmaps to 20201227.0 [markd 2021-02-21]
+	Updated fonts/tex-ptex-fontmaps-doc to 20201227.0 [markd 2021-02-21]
