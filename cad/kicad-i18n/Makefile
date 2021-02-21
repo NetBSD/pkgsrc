@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/21 18:56:36 bouyer Exp $
 #
 
-V=		5.1.4
+V=		5.1.9
 DISTNAME=	kicad-i18n-${V}
 CATEGORIES=	cad
-MASTER_SITES=	${MASTER_SITE_GITHUB:=KiCad/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
-EXTRACT_USING=	bsdtar
+MASTER_SITES=	https://gitlab.com/kicad/code/kicad-i18n/-/archive/${V}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kicad-pcb.org/

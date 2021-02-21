@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/06/14 15:59:32 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/21 18:56:35 bouyer Exp $
 bin/_cvpcb.kiface
 bin/_eeschema.kiface
 bin/_gerbview.kiface
@@ -13,7 +13,6 @@ bin/idf2vrml
 bin/idfcyl
 bin/idfrect
 bin/kicad
-bin/kicad-ogltest
 bin/pcb_calculator
 bin/pcbnew
 bin/pl_editor
