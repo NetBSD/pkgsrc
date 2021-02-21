@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:48:44 markd Exp $
+share/texmf-dist/doc/platex/pxrubrica/LICENSE
+share/texmf-dist/doc/platex/pxrubrica/README-ja.md
+share/texmf-dist/doc/platex/pxrubrica/README.md
+share/texmf-dist/doc/platex/pxrubrica/pxrubrica-en.pdf
+share/texmf-dist/doc/platex/pxrubrica/pxrubrica-en.tex
+share/texmf-dist/doc/platex/pxrubrica/pxrubrica.pdf
+share/texmf-dist/doc/platex/pxrubrica/sample/test-jlreq.pdf
+share/texmf-dist/doc/platex/pxrubrica/sample/test-jlreq.tex
+share/texmf-dist/doc/platex/pxrubrica/sample/test-sample.pdf
+share/texmf-dist/doc/platex/pxrubrica/sample/test-sample.tex
+share/texmf-dist/doc/platex/pxrubrica/sample/test-sf.pdf
+share/texmf-dist/doc/platex/pxrubrica/sample/test-sf.tex
+share/texmf-dist/doc/platex/pxrubrica/sample/test-toc.pdf
+share/texmf-dist/doc/platex/pxrubrica/sample/test-toc.tex
