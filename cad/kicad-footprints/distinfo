@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/29 15:36:40 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2021/02/21 18:56:36 bouyer Exp $
 
-SHA1 (kicad-footprints-5.1.4.tar.gz) = 8f4b76cadc24d1f390cb5318f4e744bec181e394
-RMD160 (kicad-footprints-5.1.4.tar.gz) = b2beabc720b8ba77e87bc6f1bc2254c416f7b26a
-SHA512 (kicad-footprints-5.1.4.tar.gz) = 84dee71a0e52d8bb4bc8d5708a0472bab9fae4ec47553e234ed8ca4aca926fa200593d264e016e688e2c0eb1fe4a680da8b8a5e48b7dc54866241d9965d235b5
-Size (kicad-footprints-5.1.4.tar.gz) = 5578039 bytes
+SHA1 (kicad-footprints-5.1.9.tar.gz) = 3a9cfbcd181c6cb19f416d47fa389687a975158a
+RMD160 (kicad-footprints-5.1.9.tar.gz) = 19f1212b8f4f51e5214f01bd4ff74ccd278a7c58
+SHA512 (kicad-footprints-5.1.9.tar.gz) = 59c64118de2417c2c767bc2394a2078c6d81a2e65a6e3fd2d62eb568ffad36efb8e8af2cec3c99a89a9a79074acf64b484d0c6e3896f435220538137a650b5d5
+Size (kicad-footprints-5.1.9.tar.gz) = 6035066 bytes

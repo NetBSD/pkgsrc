@@ -1,16 +1,16 @@
-$NetBSD: patch-common_CMakeLists.txt,v 1.3 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: patch-common_CMakeLists.txt,v 1.4 2021/02/21 18:56:36 bouyer Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
 and containt multiple directories
 
---- common/CMakeLists.txt.orig	2018-07-13 19:53:52.000000000 +0000
-+++ common/CMakeLists.txt
-@@ -141,7 +141,7 @@ add_custom_target(
+--- common/CMakeLists.txt.orig	2020-12-22 21:05:01.000000000 +0100
++++ common/CMakeLists.txt	2021-02-20 11:28:33.611686383 +0100
+@@ -168,7 +168,7 @@
          -DOUTPUT_FILE=${CMAKE_BINARY_DIR}/kicad_build_version.h
          -DSRC_PATH=${PROJECT_SOURCE_DIR}
          -DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}
 -        -P ${CMAKE_MODULE_PATH}/WriteVersionHeader.cmake
 +        -P ${PROJECT_SOURCE_DIR}/CMakeModules/WriteVersionHeader.cmake
      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+     BYPRODUCTS ${CMAKE_BINARY_DIR}/kicad_build_version.h
      COMMENT "Generating version string header"
-     )
