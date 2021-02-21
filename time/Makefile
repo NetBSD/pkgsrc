@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2021/01/01 14:14:36 pin Exp $
+# $NetBSD: Makefile,v 1.219 2021/02/21 09:44:50 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -188,6 +188,10 @@ SUBDIR+=	sunclock
 SUBDIR+=	swisswatch
 SUBDIR+=	taskwarrior
 SUBDIR+=	tdl
+SUBDIR+=	tex-bxjaholiday
+SUBDIR+=	tex-bxjaholiday-doc
+SUBDIR+=	tex-bxwareki
+SUBDIR+=	tex-bxwareki-doc
 SUBDIR+=	tex-datenumber
 SUBDIR+=	tex-datenumber-doc
 SUBDIR+=	tex-datetime2
