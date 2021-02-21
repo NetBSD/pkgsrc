@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:23:51 markd Exp $
+share/texmf-dist/doc/latex/gentombow/LICENSE
+share/texmf-dist/doc/latex/gentombow/README.md
+share/texmf-dist/doc/latex/gentombow/bounddvi-en.pdf
+share/texmf-dist/doc/latex/gentombow/bounddvi-en.tex
+share/texmf-dist/doc/latex/gentombow/bounddvi.pdf
+share/texmf-dist/doc/latex/gentombow/bounddvi.tex
+share/texmf-dist/doc/latex/gentombow/gentombow-ja.pdf
+share/texmf-dist/doc/latex/gentombow/gentombow-ja.tex
+share/texmf-dist/doc/latex/gentombow/gentombow.pdf
+share/texmf-dist/doc/latex/gentombow/gentombow.tex
+share/texmf-dist/doc/latex/gentombow/pxgentombow.pdf
+share/texmf-dist/doc/latex/gentombow/pxgentombow.tex
