@@ -1,11 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2021/02/21 18:56:36 bouyer Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
 and containt multiple directories
 
---- CMakeLists.txt.orig	2018-07-13 19:53:52.000000000 +0000
-+++ CMakeLists.txt
-@@ -851,7 +851,7 @@ endif()
+--- CMakeLists.txt.orig	2020-12-22 21:05:01.000000000 +0100
++++ CMakeLists.txt	2021-02-20 11:17:34.774733503 +0100
+@@ -36,7 +36,7 @@
+ include( GNUInstallDirs )
+ 
+ # Path to local CMake modules.
+-set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules )
++set (CMAKE_MODULE_PATH "/usr/tmp/cad/kicad/work/.buildlink/cmake-Modules" ${PROJECT_SOURCE_DIR}/CMakeModules )
+ 
+ # On Windows, binaries created by link option -g3 are very large (more than 1Gb for pcbnew,
+ # and more than 3Gb for the full kicad suite)
+@@ -861,7 +861,7 @@
  # "make uninstall" rules
  #================================================
  configure_file(
@@ -13,4 +22,16 @@ and containt multiple directories
 +    "${PROJECT_SOURCE_DIR}/CMakeModules/cmake_uninstall.cmake.in"
      "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
      IMMEDIATE @ONLY )
+ 
+@@ -873,9 +873,9 @@
+ # Generate platform metadata files
+ #################################################
+ if( APPLE )
+-    include( ${CMAKE_MODULE_PATH}/WritePlatformMetadata_macos.cmake )
++    include( ${PROJECT_SOURCE_DIR}/CMakeModules/WritePlatformMetadata_macos.cmake )
+ elseif( UNIX )
+-    include( ${CMAKE_MODULE_PATH}/WritePlatformMetadata_linux.cmake )
++    include( ${PROJECT_SOURCE_DIR}/CMakeModules/WritePlatformMetadata_linux.cmake )
+ endif()
+ 
  

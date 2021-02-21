@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/08/29 15:36:40 bouyer Exp $
+$NetBSD: distinfo,v 1.3 2021/02/21 18:56:36 bouyer Exp $
 
-SHA1 (kicad-symbols-5.1.4.tar.gz) = 8a8f0fdda791aef4ab6d3d86e8d4cb2590a8a342
-RMD160 (kicad-symbols-5.1.4.tar.gz) = 3f18c4c78b3620adca47f67d12379a943a072727
-SHA512 (kicad-symbols-5.1.4.tar.gz) = 573dd74d5d3c2b32fc12499826a9e43e5d63649f760c91e5fc3d7a8acb44b2308bbd70facc4f29d139dd895ec26f0feb1d9195b2194131e6c13397d030464fd5
-Size (kicad-symbols-5.1.4.tar.gz) = 2897335 bytes
+SHA1 (kicad-symbols-5.1.9.tar.gz) = 3c0d0690fedb2720a2e662e34738012b31f002c8
+RMD160 (kicad-symbols-5.1.9.tar.gz) = 90c89c617c4a6c5c876472a6ec9fb838542bba04
+SHA512 (kicad-symbols-5.1.9.tar.gz) = 91cfd33a267fe04b0064369dacbea24efe90da938956781ad6b1fcd326fec6ac102292c42ec41537ee6720dc9af562448901e0d0eaad5943ad2386315da62038
+Size (kicad-symbols-5.1.9.tar.gz) = 3033150 bytes
