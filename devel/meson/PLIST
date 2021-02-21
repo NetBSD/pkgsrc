@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/21 11:27:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/02/21 12:45:22 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,9 +9,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mesonbuild/__init__.py
 ${PYSITELIB}/mesonbuild/__init__.pyc
 ${PYSITELIB}/mesonbuild/__init__.pyo
-${PYSITELIB}/mesonbuild/_pathlib.py
-${PYSITELIB}/mesonbuild/_pathlib.pyc
-${PYSITELIB}/mesonbuild/_pathlib.pyo
 ${PYSITELIB}/mesonbuild/arglist.py
 ${PYSITELIB}/mesonbuild/arglist.pyc
 ${PYSITELIB}/mesonbuild/arglist.pyo
@@ -246,9 +243,21 @@ ${PYSITELIB}/mesonbuild/mdist.pyo
 ${PYSITELIB}/mesonbuild/mesondata.py
 ${PYSITELIB}/mesonbuild/mesondata.pyc
 ${PYSITELIB}/mesonbuild/mesondata.pyo
-${PYSITELIB}/mesonbuild/mesonlib.py
-${PYSITELIB}/mesonbuild/mesonlib.pyc
-${PYSITELIB}/mesonbuild/mesonlib.pyo
+${PYSITELIB}/mesonbuild/mesonlib/__init__.py
+${PYSITELIB}/mesonbuild/mesonlib/__init__.pyc
+${PYSITELIB}/mesonbuild/mesonlib/__init__.pyo
+${PYSITELIB}/mesonbuild/mesonlib/platform.py
+${PYSITELIB}/mesonbuild/mesonlib/platform.pyc
+${PYSITELIB}/mesonbuild/mesonlib/platform.pyo
+${PYSITELIB}/mesonbuild/mesonlib/posix.py
+${PYSITELIB}/mesonbuild/mesonlib/posix.pyc
+${PYSITELIB}/mesonbuild/mesonlib/posix.pyo
+${PYSITELIB}/mesonbuild/mesonlib/universal.py
+${PYSITELIB}/mesonbuild/mesonlib/universal.pyc
+${PYSITELIB}/mesonbuild/mesonlib/universal.pyo
+${PYSITELIB}/mesonbuild/mesonlib/win32.py
+${PYSITELIB}/mesonbuild/mesonlib/win32.pyc
+${PYSITELIB}/mesonbuild/mesonlib/win32.pyo
 ${PYSITELIB}/mesonbuild/mesonmain.py
 ${PYSITELIB}/mesonbuild/mesonmain.pyc
 ${PYSITELIB}/mesonbuild/mesonmain.pyo
@@ -309,6 +318,9 @@ ${PYSITELIB}/mesonbuild/modules/qt4.pyo
 ${PYSITELIB}/mesonbuild/modules/qt5.py
 ${PYSITELIB}/mesonbuild/modules/qt5.pyc
 ${PYSITELIB}/mesonbuild/modules/qt5.pyo
+${PYSITELIB}/mesonbuild/modules/qt6.py
+${PYSITELIB}/mesonbuild/modules/qt6.pyc
+${PYSITELIB}/mesonbuild/modules/qt6.pyo
 ${PYSITELIB}/mesonbuild/modules/rpm.py
 ${PYSITELIB}/mesonbuild/modules/rpm.pyc
 ${PYSITELIB}/mesonbuild/modules/rpm.pyo
@@ -324,6 +336,9 @@ ${PYSITELIB}/mesonbuild/modules/unstable_external_project.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_rust.py
+${PYSITELIB}/mesonbuild/modules/unstable_rust.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_rust.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
@@ -366,9 +381,6 @@ ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyo
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.py
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyc
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyo
-${PYSITELIB}/mesonbuild/scripts/commandrunner.py
-${PYSITELIB}/mesonbuild/scripts/commandrunner.pyc
-${PYSITELIB}/mesonbuild/scripts/commandrunner.pyo
 ${PYSITELIB}/mesonbuild/scripts/coverage.py
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyc
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyo
@@ -378,6 +390,9 @@ ${PYSITELIB}/mesonbuild/scripts/delwithsuffix.pyo
 ${PYSITELIB}/mesonbuild/scripts/depfixer.py
 ${PYSITELIB}/mesonbuild/scripts/depfixer.pyc
 ${PYSITELIB}/mesonbuild/scripts/depfixer.pyo
+${PYSITELIB}/mesonbuild/scripts/depscan.py
+${PYSITELIB}/mesonbuild/scripts/depscan.pyc
+${PYSITELIB}/mesonbuild/scripts/depscan.pyo
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.py
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyc
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyo
