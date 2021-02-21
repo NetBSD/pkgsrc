@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1196 2021/02/14 14:53:42 taca Exp $
+# $NetBSD: Makefile,v 1.1197 2021/02/21 06:22:03 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1165,6 +1165,7 @@ SUBDIR+=	unicode-character-database
 SUBDIR+=	unicode-emoji
 SUBDIR+=	unroff
 SUBDIR+=	untex
+SUBDIR+=	upmendex
 SUBDIR+=	uriparser
 SUBDIR+=	urlview
 SUBDIR+=	verify-synopsis
