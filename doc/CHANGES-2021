@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1218 2021/02/21 12:35:08 martin Exp $
+$NetBSD: CHANGES-2021,v 1.1219 2021/02/21 12:55:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1935,3 +1935,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-zxjatype version 0.7 [markd 2021-02-21]
 	Added print/tex-zxjatype-doc version 0.7 [markd 2021-02-21]
 	Added sysutils/imx_usb_loader version 0.0.0.20210220 [martin 2021-02-21]
+	Updated devel/meson to 0.57.1 [adam 2021-02-21]
+	Updated devel/glib2 to 2.66.7 [adam 2021-02-21]
+	Updated devel/glib2-tools to 2.66.7 [adam 2021-02-21]
+	Updated devel/gdbus-codegen to 2.66.7 [adam 2021-02-21]
+	Updated devel/py-cython to 0.29.22 [adam 2021-02-21]
+	Updated x11/py-pyperclip to 1.8.2 [adam 2021-02-21]
