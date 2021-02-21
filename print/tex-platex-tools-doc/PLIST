@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:34:57 markd Exp $
+share/texmf-dist/doc/latex/platex-tools/LICENSE
+share/texmf-dist/doc/latex/platex-tools/README.md
+share/texmf-dist/doc/latex/platex-tools/plarray.pdf
+share/texmf-dist/doc/latex/platex-tools/plarray.tex
+share/texmf-dist/doc/latex/platex-tools/pldocverb.pdf
+share/texmf-dist/doc/latex/platex-tools/pldocverb.tex
+share/texmf-dist/doc/latex/platex-tools/plextarray.pdf
+share/texmf-dist/doc/latex/platex-tools/plextarray.tex
+share/texmf-dist/doc/latex/platex-tools/plextcolortbl.pdf
+share/texmf-dist/doc/latex/platex-tools/plextcolortbl.tex
+share/texmf-dist/doc/latex/platex-tools/plextdelarray.pdf
+share/texmf-dist/doc/latex/platex-tools/plextdelarray.tex
+share/texmf-dist/doc/latex/platex-tools/pxatbegshi.pdf
+share/texmf-dist/doc/latex/platex-tools/pxatbegshi.tex
+share/texmf-dist/doc/latex/platex-tools/pxeverysel.pdf
+share/texmf-dist/doc/latex/platex-tools/pxeverysel.tex
+share/texmf-dist/doc/latex/platex-tools/pxeveryshi.pdf
+share/texmf-dist/doc/latex/platex-tools/pxeveryshi.tex
+share/texmf-dist/doc/latex/platex-tools/pxftnright.pdf
+share/texmf-dist/doc/latex/platex-tools/pxftnright.tex
+share/texmf-dist/doc/latex/platex-tools/pxmulticol.pdf
+share/texmf-dist/doc/latex/platex-tools/pxmulticol.tex
+share/texmf-dist/doc/latex/platex-tools/pxxspace.pdf
+share/texmf-dist/doc/latex/platex-tools/pxxspace.tex
