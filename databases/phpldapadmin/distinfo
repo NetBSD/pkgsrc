@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.16 2015/11/29 11:25:53 taca Exp $
+$NetBSD: distinfo,v 1.17 2021/02/21 22:22:22 khorben Exp $
 
 SHA1 (phpldapadmin-1.2.3.tgz) = 669fca66c75e24137e106fdd02e3832f81146e23
 RMD160 (phpldapadmin-1.2.3.tgz) = 0d170a1da26836b8c9af3c3a06960cfc42f29b26
 SHA512 (phpldapadmin-1.2.3.tgz) = 58a57ca577586685ebd0d7fde7e299b8945d1693018c7803e19239b79f4b9d72a4d207d53c9f284268e32398108038efafcdb434e634619bfe87db3524d267b6
 Size (phpldapadmin-1.2.3.tgz) = 1115707 bytes
+SHA1 (patch-config_config.php.example) = c6cdc8e62ec8c06ae99f219f1a20694502d6fe0d
+SHA1 (patch-htdocs_index.php) = 4788ea606b6aa0cc93bb319c8d6b180ccf3010e6
+SHA1 (patch-lib_PageRender.php) = 198e637024c01b164017a15b5449782ce8829996
+SHA1 (patch-lib_QueryRender.php) = 806e3d2f874aca0ff8c0c07d4f4db57a2008185c
+SHA1 (patch-lib_TemplateRender.php) = 766981b0a31221d2580e7f592140dd95601caf40
 SHA1 (patch-lib_ds__ldap.php) = 55563684fba16c1fbebbfa88ff1ce506f6c947fc
-SHA1 (patch-lib_functions.php) = 3d83f5fe56ba9d908ef6b55028483b0fc7764b29
+SHA1 (patch-lib_ds__ldap__pla.php) = 5331d8410ace331a5924f96e3f90a991866b9345
+SHA1 (patch-lib_functions.php) = 06be1a704070e5466278dfc3003f5c015fcc93c9
