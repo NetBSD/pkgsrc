@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:42:22 markd Exp $
+share/texmf-dist/tex/platex/pxbase/pxbabel.sty
+share/texmf-dist/tex/platex/pxbase/pxbase.def
+share/texmf-dist/tex/platex/pxbase/pxbase.sty
+share/texmf-dist/tex/platex/pxbase/pxbasenc.def
+share/texmf-dist/tex/platex/pxbase/pxbsjc.def
+share/texmf-dist/tex/platex/pxbase/pxbsjc1.def
+share/texmf-dist/tex/platex/pxbase/pxjsfenc.def
+share/texmf-dist/tex/platex/pxbase/upkcat.sty
