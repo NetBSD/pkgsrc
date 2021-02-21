@@ -1,0 +1,4 @@
+This package provides a Japanese document class based on
+requirements for Japanese text layout. The class file and the
+JFM (Japanese font metric) files for LuaTeX-ja / pLaTeX /
+upLaTeX are provided.
