@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/01/09 07:31:56 mef Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/21 12:13:07 nia Exp $
 
 DISTNAME=	rakudo-2020.12
 CATEGORIES=	lang perl6
@@ -21,7 +21,10 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
 
-REPLACE_PERL6=		tools/install-dist.p6
+REPLACE_INTERPRETER+=	raku
+REPLACE.raku.old=	/usr/bin/env raku
+REPLACE.raku.new=	${PREFIX}/bin/raku
+REPLACE_FILES.raku=	tools/install-dist.p6
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,7 +39,6 @@ INSTALLATION_DIRS=	share/perl6/bin
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/core/precomp/*
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
-	sed -i "s,/usr/bin/env raku,${PREFIX}/bin/raku," ${WRKSRC}/tools/install-dist.p6
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.p6 ${DESTDIR}${PREFIX}/share/perl6/bin/
 
 
