@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:32:46 markd Exp $
+share/texmf-dist/doc/luatex/luatexja/COPYING
+share/texmf-dist/doc/luatex/luatexja/README
+share/texmf-dist/doc/luatex/luatexja/jfm-test.lua
+share/texmf-dist/doc/luatex/luatexja/jfm-testf.lua
+share/texmf-dist/doc/luatex/luatexja/jfm-ujisc33.lua
+share/texmf-dist/doc/luatex/luatexja/lltjp-geometry.pdf
+share/texmf-dist/doc/luatex/luatexja/lltjp-geometry.tex
+share/texmf-dist/doc/luatex/luatexja/ltjclasses.pdf
+share/texmf-dist/doc/luatex/luatexja/ltjltxdoc.pdf
+share/texmf-dist/doc/luatex/luatexja/ltjsclasses.pdf
+share/texmf-dist/doc/luatex/luatexja/luatexja-en.pdf
+share/texmf-dist/doc/luatex/luatexja/luatexja-ja.pdf
+share/texmf-dist/doc/luatex/luatexja/luatexja-ruby.pdf
+share/texmf-dist/doc/luatex/luatexja/luatexja-ruby.tex
+share/texmf-dist/doc/luatex/luatexja/luatexja.dtx
+share/texmf-dist/doc/luatex/luatexja/luatexja.ins
