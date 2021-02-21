@@ -1,0 +1,5 @@
+The package provides a working configuration of the CJK
+package, suitable for Japanese typesetting of moderate quality.
+Moreover, it facilitates use of the CJK package for pLaTeX
+users, by providing commands that are similar to those used by
+the pLaTeX kernel and some other packages used with it.
