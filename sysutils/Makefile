@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.940 2021/02/18 14:55:32 martin Exp $
+# $NetBSD: Makefile,v 1.941 2021/02/21 12:33:32 martin Exp $
 #
 
 COMMENT=	System utilities
@@ -339,6 +339,7 @@ SUBDIR+=	install-sh
 SUBDIR+=	intel-backlight
 SUBDIR+=	intel-microcode-netbsd
 SUBDIR+=	intellij-fsnotifier
+SUBDIR+=	imx_usb_loader
 SUBDIR+=	ioping
 SUBDIR+=	ipa
 SUBDIR+=	ipmitool
