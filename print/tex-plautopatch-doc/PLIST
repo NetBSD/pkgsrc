@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:37:27 markd Exp $
+share/texmf-dist/doc/latex/plautopatch/LICENSE
+share/texmf-dist/doc/latex/plautopatch/README.md
+share/texmf-dist/doc/latex/plautopatch/plautopatch-ja.pdf
+share/texmf-dist/doc/latex/plautopatch/plautopatch-ja.tex
+share/texmf-dist/doc/latex/plautopatch/plautopatch.pdf
+share/texmf-dist/doc/latex/plautopatch/plautopatch.tex
