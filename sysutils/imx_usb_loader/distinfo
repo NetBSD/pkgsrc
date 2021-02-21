@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/02/21 12:33:32 martin Exp $
+
+SHA1 (imx_usb_loader-0.0.0.20210220-30b43d69770cd69e84c045dc9dcabb1f3e9d975a.tar.gz) = c78c427c979938904201598d15ac9c699d7324b4
+RMD160 (imx_usb_loader-0.0.0.20210220-30b43d69770cd69e84c045dc9dcabb1f3e9d975a.tar.gz) = c0fb4eb8c60d74afc9d91f43bef123a7213c4d7a
+SHA512 (imx_usb_loader-0.0.0.20210220-30b43d69770cd69e84c045dc9dcabb1f3e9d975a.tar.gz) = 5394f89da3d086db34a4ce7f2816bea6eee08d56c53390fb4b53492fab05c5c79674b8fdf00b3eb34ef4e0f5696f0b691d78b914ec9fb6661ec428f7c4d87fc9
+Size (imx_usb_loader-0.0.0.20210220-30b43d69770cd69e84c045dc9dcabb1f3e9d975a.tar.gz) = 68279 bytes
+SHA1 (patch-Makefile) = 9356949ac767fc035734097e866d90b32fe5dabb
+SHA1 (patch-imx_loader_config.c) = 4e25f8bb0755a54748a7f78fe19359894ea96127

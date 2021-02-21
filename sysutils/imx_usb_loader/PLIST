@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 12:33:32 martin Exp $
+bin/imx_uart
+bin/imx_usb
+share/examples/imx_usb_loader/imx-loader.d/imx_usb.conf
+share/examples/imx_usb_loader/imx-loader.d/mx50_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx51_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx53_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx6_usb_sdp_spl.conf
+share/examples/imx_usb_loader/imx-loader.d/mx6_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx6ull_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx7_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx7ulp_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx8m_usb_sdp_spl.conf
+share/examples/imx_usb_loader/imx-loader.d/mx8mm_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx8mn_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/mx8mq_usb_work.conf
+share/examples/imx_usb_loader/imx-loader.d/vybrid_usb_work.conf
