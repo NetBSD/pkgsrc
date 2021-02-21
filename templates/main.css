@@ -1,0 +1,35 @@
+/* $NetBSD: main.css,v 1.1 2021/02/21 10:15:24 nia Exp $ */
+
+body {
+	font-family: sans-serif;
+	background-color: #fff;
+	color: #000;
+}
+
+a:link {
+	color: #d43900;
+ 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #844;
+	text-decoration: none;
+}
+
+a:visited:hover {
+	text-decoration: underline;
+}
+
+th {
+	text-align: left;
+	font-weight: bold;
+}
+
+#logo {
+	float: right;
+	border: 0;
+}
