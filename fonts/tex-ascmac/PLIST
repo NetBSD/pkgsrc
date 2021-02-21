@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:26:50 markd Exp $
+share/texmf-dist/fonts/map/dvips/ascmac/ascmac.map
+share/texmf-dist/fonts/source/public/ascmac/ascgrp.mf
+share/texmf-dist/fonts/source/public/ascmac/ascii.mf
+share/texmf-dist/fonts/source/public/ascmac/ascii10.mf
+share/texmf-dist/fonts/source/public/ascmac/ascii36.mf
+share/texmf-dist/fonts/tfm/public/ascmac/ascgrp.tfm
+share/texmf-dist/fonts/tfm/public/ascmac/ascii10.tfm
+share/texmf-dist/fonts/tfm/public/ascmac/ascii36.tfm
+share/texmf-dist/fonts/type1/public/ascmac/ascgrp.pfb
+share/texmf-dist/fonts/type1/public/ascmac/ascii10.pfb
+share/texmf-dist/fonts/type1/public/ascmac/ascii36.pfb
+share/texmf-dist/tex/latex/ascmac/ascmac.sty
+share/texmf-dist/tex/latex/ascmac/tascmac.sty

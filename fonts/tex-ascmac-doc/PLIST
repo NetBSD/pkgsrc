@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:26:50 markd Exp $
+share/texmf-dist/doc/latex/ascmac/LICENSE
+share/texmf-dist/doc/latex/ascmac/README.md
+share/texmf-dist/doc/latex/ascmac/ascmac.pdf
