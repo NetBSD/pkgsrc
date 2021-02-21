@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:39:50 markd Exp $
+bin/ptex2pdf
