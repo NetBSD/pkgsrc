@@ -1,0 +1,13 @@
+This package changes the setup of the japanese-otf package so
+that the TFMs for direct input are all replaced by new ones
+with prefixed names; for example, nmlminr-h will be replaced by
+foo--nmlminr-h, where foo is a prefix specified by the user.
+This function will assist users who want to use the
+japanese-otf package together with tailored TFMs of Japanese
+fonts. The "jodel" part of the package name stands for
+"japanese-otf deluxe". Here "deluxe" is the name of
+japanese-otf's option for employing multi-weight Japanese font
+families. This option is probably the most likely reason for
+using japanese-otf. So pxjodel is really about japanese-otf's
+"deluxe" option, hence the name. It is not related to yodel
+singing, although some sense of word-play is intended.
