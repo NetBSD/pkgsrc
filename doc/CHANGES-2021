@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1223 2021/02/21 18:53:29 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1224 2021/02/21 18:59:32 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1947,3 +1947,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/gtk3 to 3.24.25 [adam 2021-02-21]
 	Updated textproc/py-yaml to 5.4.1 [adam 2021-02-21]
 	Updated audio/librespot to 0.1.5 [pin 2021-02-21]
+	Updated cad/kicad  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-doc  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-footprints  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-i18n  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-packages3d  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-symbols  to 5.1.9 [bouyer 2021-02-21]
+	Updated cad/kicad-templates to 5.1.9 [bouyer 2021-02-21]
