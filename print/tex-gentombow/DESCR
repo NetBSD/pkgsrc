@@ -1,0 +1,10 @@
+This bundle provides a LaTeX package for generating
+Japanese-style crop marks (called 'tombow' in Japanese) for
+practical use in self-publishing. The bundle contains the
+following packages: gentombow.sty: Generate crop marks (called
+'tombow' in Japanese) for practical use in self-publishing. It
+provides the core 'tombow' feature if not available.
+pxgentombow.sty: Superseded by gentombow.sty; kept for
+compatibility only. bounddvi.sty: Set papersize special to DVI
+file. Can be used on LaTeX/pLaTeX/upLaTeX (with DVI output
+mode) with dvips or dvipdfmx drivers.
