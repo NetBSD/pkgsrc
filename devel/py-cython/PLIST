@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/07/09 07:21:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/02/21 12:50:44 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
@@ -311,9 +311,12 @@ ${PYSITELIB}/Cython/Includes/cpython/bool.pxd
 ${PYSITELIB}/Cython/Includes/cpython/buffer.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bytearray.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bytes.pxd
+${PYSITELIB}/Cython/Includes/cpython/cellobject.pxd
 ${PYSITELIB}/Cython/Includes/cpython/ceval.pxd
 ${PYSITELIB}/Cython/Includes/cpython/cobject.pxd
+${PYSITELIB}/Cython/Includes/cpython/codecs.pxd
 ${PYSITELIB}/Cython/Includes/cpython/complex.pxd
+${PYSITELIB}/Cython/Includes/cpython/conversion.pxd
 ${PYSITELIB}/Cython/Includes/cpython/datetime.pxd
 ${PYSITELIB}/Cython/Includes/cpython/dict.pxd
 ${PYSITELIB}/Cython/Includes/cpython/exc.pxd
