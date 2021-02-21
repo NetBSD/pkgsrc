@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:30:48 markd Exp $
+share/texmf-dist/doc/latex/jlreq/LICENSE
+share/texmf-dist/doc/latex/jlreq/README-ja.md
+share/texmf-dist/doc/latex/jlreq/README.md
+share/texmf-dist/doc/latex/jlreq/jlreq-ja.html
+share/texmf-dist/doc/latex/jlreq/jlreq-ja.pdf
+share/texmf-dist/doc/latex/jlreq/jlreq-trimmarks-ja.html
+share/texmf-dist/doc/latex/jlreq/jlreq-trimmarks-ja.md
+share/texmf-dist/doc/latex/jlreq/jlreq-trimmarks.html
+share/texmf-dist/doc/latex/jlreq/jlreq-trimmarks.md
+share/texmf-dist/doc/latex/jlreq/jlreq.html
+share/texmf-dist/doc/latex/jlreq/jlreq.pdf
