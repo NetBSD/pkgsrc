@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1219 2021/02/21 12:55:37 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1220 2021/02/21 13:29:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1941,3 +1941,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gdbus-codegen to 2.66.7 [adam 2021-02-21]
 	Updated devel/py-cython to 0.29.22 [adam 2021-02-21]
 	Updated x11/py-pyperclip to 1.8.2 [adam 2021-02-21]
+	Updated textproc/lowdown to 0.8.2 [fcambus 2021-02-21]
