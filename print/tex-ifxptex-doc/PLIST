@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:28:19 markd Exp $
+share/texmf-dist/doc/generic/ifxptex/README
+share/texmf-dist/doc/generic/ifxptex/ifxptex-doc.pdf
+share/texmf-dist/doc/generic/ifxptex/ifxptex-doc.tex
