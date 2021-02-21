@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:56:14 markd Exp $
+share/texmf-dist/doc/latex/pxjodel/LICENSE
+share/texmf-dist/doc/latex/pxjodel/README.md
+share/texmf-dist/doc/latex/pxjodel/pxjodel.pdf
+share/texmf-dist/doc/latex/pxjodel/pxjodel.tex
