@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:46:52 markd Exp $
+share/texmf-dist/doc/platex/pxjahyper/LICENSE
+share/texmf-dist/doc/platex/pxjahyper/README-ja.md
+share/texmf-dist/doc/platex/pxjahyper/README.md
+share/texmf-dist/doc/platex/pxjahyper/pxjahyper.pdf
+share/texmf-dist/doc/platex/pxjahyper/pxjahyper.tex
