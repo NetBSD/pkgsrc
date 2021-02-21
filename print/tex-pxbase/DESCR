@@ -1,0 +1,4 @@
+The main purpose of this package is to provide auxiliary
+functions which are utilized by other packages created by the
+same author. It also provides a few user commands to assist in
+creating Japanese documents using (u)pLaTeX.
