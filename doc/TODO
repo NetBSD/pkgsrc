@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20399 2021/02/21 08:15:49 wiz Exp $
+$NetBSD: TODO,v 1.20400 2021/02/21 14:36:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -555,7 +555,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fakeroot-1.6.5
 	o felt-3.07 [wip]
 	o fet-5.28.6
-	o ffmpeg4-4.3.2
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
