@@ -1,0 +1,5 @@
+The package provides management of the CJK category code
+('kcatcode'> table of the upTeX extended TeX engine. Package
+options are available for tailored use in the cases of
+documents that are principally written in Japanese, or
+principally written in English or other Western languages.
