@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1217 2021/02/21 12:33:55 martin Exp $
+$NetBSD: CHANGES-2021,v 1.1218 2021/02/21 12:35:08 martin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1934,4 +1934,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-zxjafbfont-doc version 0.2 [markd 2021-02-21]
 	Added print/tex-zxjatype version 0.7 [markd 2021-02-21]
 	Added print/tex-zxjatype-doc version 0.7 [markd 2021-02-21]
-	Updated sysutils/imx_usb_loader to 0.0.0.20210220 [martin 2021-02-21]
+	Added sysutils/imx_usb_loader version 0.0.0.20210220 [martin 2021-02-21]
