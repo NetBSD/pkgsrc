@@ -1,0 +1,5 @@
+In Japanese typesetting, opening parentheses placed at the
+beginning of paragraphs or lines are treated specially; for
+example, while the paragraph indent before normal kanji
+characters is 1em, the indent before parentheses can be 0.5em,
+1em or 1.5em deoending on the local rule in effect.
