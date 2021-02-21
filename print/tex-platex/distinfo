@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/05/03 11:57:35 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/02/21 05:54:40 markd Exp $
 
-SHA1 (platex.r54758.tar.xz) = 4b81943d1e3c790ef8329a71ed3fa26765a79e5b
-RMD160 (platex.r54758.tar.xz) = 0b4f0209b9369ca1ace40f8a66ab92cf13b757d1
-SHA512 (platex.r54758.tar.xz) = 38761c0bafb13838605d9578c1f79c71d126f560e788a440cd36bdd50ae574e99112a58f4ca2456de3b32985a65c2c9bc7b1348456b9710000a9b16b776fbaad
-Size (platex.r54758.tar.xz) = 39776 bytes
+SHA1 (platex.r57730.tar.xz) = 90ae9114d478cdf834ae8c7bf1f43eccd56348bf
+RMD160 (platex.r57730.tar.xz) = 1ecfb99a917185c8e348b433666e64ff1dd907d1
+SHA512 (platex.r57730.tar.xz) = 81c0bcf71933d67ef6aaa05d81bd880f7efb2eb4bcea48afce013f62d8abd48137b9a9bcf0f86fd4a50fa7caeea278a864e1a42946d7c7c66c9ab45c4dc7f5ec
+Size (platex.r57730.tar.xz) = 41468 bytes
