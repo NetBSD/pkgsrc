@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.40 2021/02/18 10:39:50 nia Exp $
+# $NetBSD: genreadme.awk,v 1.41 2021/02/21 09:45:01 nia Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,10 +37,11 @@
 #
 # topdepends[]  : index=pkgdir (math/scilab)
 #                 List of explicitly listed depencencies by name.
-#                 I.e.  "xless-[0-9]* pvm-3.4.3"
 #
-# alldepends[]  : index=pkgdir (math/scilab)
-#                 Flattened dependency list by name.
+# topbuilddepends[]  : index=pkgdir (math/scilab)
+#                 List of explicitly listed depencencies by name.
+#                 I.e.  "xless-[0-9]* pvm-3.4.3"
+#                 I.e.  "xless-[0-9]* pvm-3.4.3"
 #
 BEGIN {
 	do_pkg_readme=1;
@@ -199,9 +200,6 @@ BEGIN {
 END {
 	readme = TMPDIR "/" readme_name;
 
-	if ( dependsfile == "" ) dependsfile = "/dev/stdout";
-	if ( builddependsfile == "" ) builddependsfile = "/dev/stdout";
-
 	printf("Making sure binary package cache file is up to date...\n");
 	if ( quiet == "yes" ){
 		cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s GZIP_CMD=\"%s\" PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache %s --packages %s",
@@ -233,34 +231,6 @@ END {
 			printf("    Loaded %d binary packages with unknown PKGPATH\n", pkg_count["unknown"]);
 		}
 	}
-
-	printf("Flattening dependencies\n");
-	printf("") > dependsfile;
-	for (toppkg in topdepends){
-		if (debug) printf("calling find_all_depends(%s, run)\n", toppkg);
-		find_all_depends(toppkg, "run");
-		if (debug) printf("%s depends on: %s, topdepends on %s\n",
-				  toppkg, alldepends[toppkg],
-				  topdepends[toppkg]);
-		printf("%s depends on: %s\n",
-		       toppkg, alldepends[toppkg]) >> dependsfile;
-		flatdepends[toppkg] = alldepends[toppkg];
-	}
-	close(dependsfile);
-
-
-# clear out the flattened depends list and repeat for the build depends
-	for( key in alldepends ) {
-		delete alldepends[key];
-	}
-	printf("Flattening build dependencies\n");
-	printf("") > builddependsfile;
-	for (toppkg in topbuilddepends){
-		find_all_depends(toppkg, "build");
-		printf("%s build_depends on: %s\n",
-		       toppkg, alldepends[toppkg]) >> builddependsfile;
-	}
-	close(builddependsfile);
 
 # extract date for vulnerabilities file
 	if (SCAN_VULNERABILITIES == 0)
@@ -295,47 +265,9 @@ END {
 				}
 			}
 			printf("") > readme;
-			htmldeps = "";
-			for( key in dpkgs ) {
-				delete dpkgs[key];
-			}
-			split(alldepends[toppkg], dpkgs);
-			i = 1;
-			htmldeps_file = TMPDIR "/htmldep";
-			printf("") > htmldeps_file;
-			while(i in dpkgs){
-				if (debug) {
-				  printf("\tdpkg=%s, pat2dir[%s] = %s\n",
-					 dpkgs[i],
-					 dpkgs[i],
-					 pat2dir[dpkgs[i]]);
-				}
-				nm=dpkgs[i];
 
-				gsub(/&/, "\\&amp;", nm);
-				gsub(/</, "\\&lt;", nm);
-				gsub(/>/, "\\&gt;", nm);
-#				htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
-#						 htmldeps,
-#						 pat2dir[dpkgs[i]],
-#						 readme_name, nm);
-# We use a temp file to hold the html dependencies because for
-# packages like gnome, this list can get very very large and
-# become larger than what some awk implementations can deal
-# with.  The nawk shipped with solaris 9 is an example of
-# such a limited awk.
-				printf("%s<a href=\"../../%s/%s\">%s</a>\n",
-						 htmldeps,
-						 pat2dir[dpkgs[i]],
-						 readme_name, nm) >> htmldeps_file;
-				i = i + 1;
-			}
-			if ( i == 1 ) {
-			  printf("<EM>none</EM>") >> htmldeps_file;
-			}
-			close(htmldeps_file);
-			if (debug) printf("wrote = %d entries to \"%s\"\n",
-					  i-1, htmldeps_file);
+			run_deps = create_htmldeps(uniq(topdepends[toppkg]));
+			build_deps = create_htmldeps(uniq(topbuilddepends[toppkg]));
 
 			vul = "";
 
@@ -369,14 +301,6 @@ END {
 # lookup_cache( wildcard ) will produce HTML for the packages which are found
 			lookup_cache( toppkg );
 
-
-
-			if ( flatdepends[toppkg] ~ /^[ \t]*$/ ) {
-				rundeps = "<EM>none</EM>";
-			} else {
-				rundeps = flatdepends[toppkg];
-			}
-
 			while((getline < templatefile) > 0){
 				gsub(/%%PORT%%/, toppkg);
 				gsub(/%%PKG%%/, pkgdir2name[toppkg]);
@@ -395,8 +319,12 @@ END {
 				}
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
-				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
 				gsub(/%%OPTIONS%%/, escape_re_replacement(""options[toppkg]""));
+
+				# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS
+				# split.
+				gsub(/%%BUILD_DEPENDS%%/, ""build_deps"");
+				gsub(/%%RUN_DEPENDS%%/, ""run_deps"");
 
 				line = $0;
 
@@ -406,16 +334,6 @@ END {
 				      print >> readme;
 				    }
 				    close( binpkgs_file );
-				}
-
-				# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS
-				# split.
-				if( line ~/%%BUILD_DEPENDS%%/ ) {
-				    gsub(/%%BUILD_DEPENDS%%/, "", line);
-				    while((getline < htmldeps_file) > 0) {
-				      print >> readme;
-				    }
-				    close( htmldeps_file );
 				}
 
 				print line >> readme;
@@ -599,72 +517,31 @@ END {
 	exit 0;
 }
 
-function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
-# pkg is the package directory, like math/scilab
-
-#    printf("find_all_depends(%s, %s)\n", pkg, type);
-# if we find the package already has been fully depended
-# then return the depends list
-	if (pkg in alldepends){
-		if (debug) printf("\t%s is allready depended.  Returning %s\n",
-				  pkg, alldepends[pkg]);
-		return(alldepends[pkg]);
+function create_htmldeps(dependslist){
+	htmldeps = "";
+	for( key in dpkgs ) {
+		delete dpkgs[key];
 	}
-
-# if this package has no top dependencies, enter an empty flat dependency
-# list for it.
-	if( type == "run" ) {
-# we only want DEPENDS
-		topdep = topdepends[pkg];
-	} else {
-# we want BUILD_DEPENDS and DEPENDS
-		topdep = topdepends[pkg] " " topbuilddepends[pkg];
-	}
-	if (topdep ~ "^[ \t]*$") {
-		alldepends[pkg] = " ";
-		if (debug) printf("\t%s has no depends(%s).  Returning %s\n",
-				  pkg, topdep, alldepends[pkg]);
-		return(alldepends[pkg]);
-	}
-
-# recursively gather depends that each of the depends has
-	pkgreg = reg2str(pkg);
-	split(topdep, deps);
+	split(dependslist, dpkgs);
 	i = 1;
-	alldepends[pkg] = " ";
-	while ( i in deps ) {
-
-# figure out the directory name associated with the package hame
-# in (wild card/dewey) version form
-		depdir = pat2dir[deps[i]];
-		if (debug) printf("\tadding dependency #%d on \"%s\" (%s)\n",
-				  i, deps[i], depdir);
-
-# do not add ourselves to the list (should not happen, but
-# we would like to not get stuck in a loop if one exists)
-#		if (" "deps[i]" " !~ pkgreg){
-
-# if we do not already have this dependency (deps[i]) listed, then add
-# it.  However, we may have already added it because another package
-# we depend on may also have depended on
-# deps[i].
-		if (alldepends[pkg] !~ reg2str(deps[i])){
-		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(depdir, type);
+	while(i in dpkgs){
+		if (debug) {
+		  printf("\tdpkg=%s, pat2dir[%s] = %s\n",
+			 dpkgs[i],
+			 dpkgs[i],
+			 pat2dir[dpkgs[i]]);
 		}
-		else {
-		  if (debug) printf("\t%s is already listed in %s\n",
-				    deps[i], alldepends[pkg]);
-		}
-
+		htmldeps = sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+				 htmldeps,
+				 pat2dir[dpkgs[i]],
+				 readme_name,
+				 pat2dir[dpkgs[i]]);
 		i = i + 1;
-	} # while i
-
-	if (debug) printf("\tcalling uniq() on alldepends[%s] = %s\n",
-			  pkg, alldepends[pkg]);
-	alldepends[pkg] = uniq(alldepends[pkg]);
-	if (debug) printf("\tuniq() output alldepends[%s] = %s\n",
-			  pkg, alldepends[pkg]);
-	return(alldepends[pkg]);
+	}
+	if ( i == 1 ) {
+	  htmldeps = "<EM>none</EM>";
+	}
+	return htmldeps;
 }
 
 #
