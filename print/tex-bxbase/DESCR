@@ -1,0 +1,4 @@
+The main purpose of this bundle is to serve as an underlying
+library for other packages created by the same author (their
+names start with "BX" or "PX"). However bxbase package contains
+a few user-level commands and is of some use by itself.
