@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1220 2021/02/21 13:29:35 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1221 2021/02/21 14:36:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1942,3 +1942,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-cython to 0.29.22 [adam 2021-02-21]
 	Updated x11/py-pyperclip to 1.8.2 [adam 2021-02-21]
 	Updated textproc/lowdown to 0.8.2 [fcambus 2021-02-21]
+	Updated multimedia/ffmpeg4 to 4.3.2 [adam 2021-02-21]
+	Updated multimedia/ffplay4 to 4.3.2 [adam 2021-02-21]
