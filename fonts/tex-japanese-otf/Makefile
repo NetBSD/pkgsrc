@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/05/10 04:31:47 markd Exp $
+# $NetBSD: Makefile,v 1.12 2021/02/21 05:46:18 markd Exp $
 
 DISTNAME=	japanese-otf
-PKGNAME=	tex-${DISTNAME}-1.7b8
-PKGREVISION=	1
-TEXLIVE_REV=	50769
+PKGNAME=	tex-${DISTNAME}-1.7b8.56938
+TEXLIVE_REV=	56938
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/japanese-otf
@@ -17,6 +16,5 @@ TEX_KANJIMAP_FILES+=	otf-sc-@scEmbed@.map
 TEX_KANJIMAP_FILES+=	otf-tc-@tcEmbed@.map
 TEX_KANJIMAP_FILES+=	otf-ko-@koEmbed@.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
