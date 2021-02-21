@@ -1,0 +1,10 @@
+This package enables users to declare in their document which
+physical fonts should be used for the standard Japanese
+(logical) fonts of pLaTeX and upLaTeX. Font setup is realized
+by changing the font mapping of dvipdfmx, and thus users can
+use any (monospaced) physical fonts they like, once they
+properly install this package, without creating helper files
+for each new font. This package also supports setup for the
+fonts used in the japanese-otf package. System requirements:
+TeX format: LaTeX. TeX engine: pTeX or upTeX. DVIware:
+dvipdfmx. Prerequisite packages: atbegshi.
