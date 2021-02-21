@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 09:58:07 markd Exp $
+share/texmf-dist/doc/latex/bxbase/LICENSE
+share/texmf-dist/doc/latex/bxbase/README-ja.md
+share/texmf-dist/doc/latex/bxbase/README.md
+share/texmf-dist/doc/latex/bxbase/bxbase-ja.pdf
+share/texmf-dist/doc/latex/bxbase/bxbase-ja.tex
