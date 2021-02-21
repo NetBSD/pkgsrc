@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/21 10:30:48 markd Exp $
+
+SHA1 (jlreq.r57255.tar.xz) = bfce7894c7a7fd6737355b2ab661d055179cdeb9
+RMD160 (jlreq.r57255.tar.xz) = 0f0a94f04cde3ac5e233d1889aac1b138948e0ea
+SHA512 (jlreq.r57255.tar.xz) = 3bf697f70e74e89f0ac386b873d1858b5873c7889e07c6d77f72fc5a8249d60f0253b8531d7071a0153ac1ef70a3420d0f06664535f5beb5b7c734286cc142f0
+Size (jlreq.r57255.tar.xz) = 134796 bytes
