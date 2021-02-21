@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2020/05/22 19:28:33 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2021/02/21 22:22:22 khorben Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 EXTRACT_SUFX=	.tgz
