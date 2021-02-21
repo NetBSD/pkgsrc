@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:23:51 markd Exp $
+share/texmf-dist/tex/latex/gentombow/bounddvi.sty
+share/texmf-dist/tex/latex/gentombow/gentombow.sty
+share/texmf-dist/tex/latex/gentombow/pxesopic.sty
+share/texmf-dist/tex/latex/gentombow/pxgentombow.sty
+share/texmf-dist/tex/latex/gentombow/pxpdfpages.sty
+share/texmf-dist/tex/latex/gentombow/pxtextpos.sty
