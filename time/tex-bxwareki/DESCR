@@ -1,0 +1,8 @@
+This LaTeX package provides commands to convert from the
+Gregorian calendar (e. g. 2018/8/28) to the Japanese rendering
+of the Japanese calendar (e. g. Heisei 30 nen 8 gatsu 28 nichi;
+actually with kanji characters). You can choose whether the
+numbers are written in Western numerals or kanji numerals. Note
+that the package only deals with dates in the year 1873 or
+later, where the Japanese calendar is really a Gregorian
+calendar with a different notation of years.
