@@ -1,0 +1,3 @@
+The package provides a small Ruby script that corrects
+bookmarks in PDF files created by platex/uplatex, using
+hyperref.
