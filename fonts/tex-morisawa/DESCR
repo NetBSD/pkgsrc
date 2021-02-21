@@ -1,0 +1,4 @@
+The package enables selection of 5 standard Japanese fonts for
+pLaTeX + dvips. It was originally written by Haruhiko Okumura
+as part of jsclasses bundle, and the TFM/VF files were
+previously distributed as part of the ptex-fonts package.
