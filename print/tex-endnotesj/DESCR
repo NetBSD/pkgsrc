@@ -1,0 +1,3 @@
+This package provides customized styles for endnotes to be used
+with Japanese documents. It can be used on pLaTeX, upLaTeX, and
+LuaLaTeX (LuaTeX-ja).
