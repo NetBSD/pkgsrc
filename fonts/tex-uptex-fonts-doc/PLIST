@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 09:02:00 markd Exp $
+share/texmf-dist/doc/fonts/uptex-fonts/LICENSE
+share/texmf-dist/doc/fonts/uptex-fonts/README.md
+share/texmf-dist/doc/fonts/uptex-fonts/README_ASCII_Corp.txt
+share/texmf-dist/doc/fonts/uptex-fonts/README_uptex_font.md
