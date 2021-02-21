@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:51:21 markd Exp $
+share/texmf-dist/tex/uptex/uptex-base/euptex.ini
+share/texmf-dist/tex/uptex/uptex-base/euptex.src
+share/texmf-dist/tex/uptex/uptex-base/ukinsoku.tex
+share/texmf-dist/tex/uptex/uptex-base/uptex.ini
+share/texmf-dist/tex/uptex/uptex-base/uptex.tex
