@@ -1,0 +1,6 @@
+This package provides an extended version of the Japanese
+document class collection provided by jsclasses. While the
+original version supports only pLaTeX and upLaTeX, the extended
+version also supports pdfLaTeX, XeLaTeX and LuaLaTeX, with the
+aid of suitable packages that provide capability of Japanese
+typesetting.

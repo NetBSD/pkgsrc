@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:15:32 markd Exp $
+share/texmf-dist/tex/latex/bxjscls/bxjsarticle.cls
+share/texmf-dist/tex/latex/bxjscls/bxjsbook.cls
+share/texmf-dist/tex/latex/bxjscls/bxjscjkcat.sty
+share/texmf-dist/tex/latex/bxjscls/bxjscompat.sty
+share/texmf-dist/tex/latex/bxjscls/bxjsja-minimal.def
+share/texmf-dist/tex/latex/bxjscls/bxjsja-modern.def
+share/texmf-dist/tex/latex/bxjscls/bxjsja-pandoc.def
+share/texmf-dist/tex/latex/bxjscls/bxjsja-standard.def
+share/texmf-dist/tex/latex/bxjscls/bxjspandoc.sty
+share/texmf-dist/tex/latex/bxjscls/bxjsreport.cls
+share/texmf-dist/tex/latex/bxjscls/bxjsslide.cls
