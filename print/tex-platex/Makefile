@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2020/05/10 04:32:06 markd Exp $
+# $NetBSD: Makefile,v 1.12 2021/02/21 05:54:40 markd Exp $
 
 DISTNAME=	platex
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	1
-TEXLIVE_REV=	54758
+PKGNAME=	tex-${DISTNAME}-2020.57730
+TEXLIVE_REV=	57730
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex
 COMMENT=	pLaTeX2e and miscellaneous macros for pTeX
 LICENSE=	modified-bsd
 
+DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
+DEPENDS+=	tex-atveryend-[0-9]*:../../print/tex-atveryend
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
+DEPENDS+=	tex-everyshi-[0-9]*:../../print/tex-everyshi
+DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
