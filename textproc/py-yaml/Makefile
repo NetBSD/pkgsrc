@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/03/21 08:37:55 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/02/21 15:43:35 adam Exp $
 
-DISTNAME=	PyYAML-5.3.1
+DISTNAME=	PyYAML-5.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyYAML/yaml/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyYAML/}
@@ -10,6 +10,6 @@ HOMEPAGE=	https://github.com/yaml/pyyaml
 COMMENT=	Collection of libraries to process YAML with Python
 LICENSE=	mit
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
