@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:46:52 markd Exp $
+share/texmf-dist/tex/platex/pxjahyper/pxjahyper-ajm.def
+share/texmf-dist/tex/platex/pxjahyper/pxjahyper-enc.sty
+share/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty
