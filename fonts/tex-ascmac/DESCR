@@ -1,0 +1,5 @@
+The bundle provides boxes and picture macros with Japanese
+vertical writing support. It uses only native picture macros
+and fonts for drawing boxes and is thus driver-independent.
+Formerly part of the Japanese pLaTeX bundle, it now supports
+all LaTeX engines.
