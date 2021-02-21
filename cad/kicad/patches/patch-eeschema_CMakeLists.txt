@@ -1,12 +1,12 @@
-$NetBSD: patch-eeschema_CMakeLists.txt,v 1.4 2019/08/29 15:36:40 bouyer Exp $
+$NetBSD: patch-eeschema_CMakeLists.txt,v 1.5 2021/02/21 18:56:36 bouyer Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
 and containt multiple directories
 
 Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
 
---- eeschema/CMakeLists.txt.orig	2019-08-04 18:36:25.000000000 +0200
-+++ eeschema/CMakeLists.txt	2019-08-29 13:25:28.313735800 +0200
+--- eeschema/CMakeLists.txt.orig	2020-12-22 21:05:01.000000000 +0100
++++ eeschema/CMakeLists.txt	2021-02-20 10:28:21.902013845 +0100
 @@ -283,7 +283,7 @@
      COMMAND ${CMAKE_COMMAND}
          -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html
@@ -34,4 +34,4 @@ Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
 +
  # these 2 binaries are a matched set, keep them together:
  if( APPLE )
-     include( ${CMAKE_MODULE_PATH}/KiCadVersion.cmake )
+     set_target_properties( eeschema PROPERTIES
