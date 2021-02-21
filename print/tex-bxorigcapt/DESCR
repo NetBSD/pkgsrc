@@ -1,0 +1,4 @@
+This package forces the caption names (`\chaptername`,
+`\today`, etc) declared by the document class in use to be used
+as the caption names for a specific language introduced by the
+Babel package.
