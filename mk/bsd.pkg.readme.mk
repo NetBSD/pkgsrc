@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.29 2020/11/04 16:38:59 khorben Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.30 2021/02/21 10:23:40 nia Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -310,6 +310,7 @@ print-run-depends-list:
 print-summary-data:
 	@${ECHO} depends ${PKGPATH} ${DEPENDS:Q}
 	@${ECHO} build_depends ${PKGPATH} ${BUILD_DEPENDS:Q}
+	@${ECHO} tool_depends ${PKGPATH} ${TOOL_DEPENDS:Q}
 	@${ECHO} conflicts ${PKGPATH} ${CONFLICTS:Q}
 	@${ECHO} index ${PKGPATH} ${PKGNAME:Q}
 	@${ECHO} htmlname ${PKGPATH} ${_HTML_PKGLINK:Q}
