@@ -1,0 +1,5 @@
+The Lua script provides system-independent support of Japanese
+typesetting engines in TeXworks. As TeXworks typesetting setup
+does not allow for multistep processing, this script runs one
+of the ptex-based programs (ptex, uptex, eptex, platex,
+uplatex) followed by dvipdfmx.
