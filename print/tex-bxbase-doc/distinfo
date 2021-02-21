@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/21 09:58:07 markd Exp $
+
+SHA1 (bxbase.doc.r56528.tar.xz) = 5e1c844003f0396559006e0b5cf2008e9853dd5b
+RMD160 (bxbase.doc.r56528.tar.xz) = 80ed2fbc1bc1fef6a091252db68a1af3b5d51356
+SHA512 (bxbase.doc.r56528.tar.xz) = aa76f5acfe7367c48219eee28635bddc4655fde3e91a7eae5ff8fd03baf0e2732c0f3b587b7518f660cf58fd124a8c021ea495b57520347c4bacbd5246cc2a99
+Size (bxbase.doc.r56528.tar.xz) = 76320 bytes
