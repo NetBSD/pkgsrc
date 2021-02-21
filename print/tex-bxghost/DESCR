@@ -1,0 +1,3 @@
+The package provides two commands to help authors for documents
+in Japanese to insert proper xkanjiskips. It supports LuaTeX,
+XeTeX, pTeX, upTeX, and ApTeX (pTeX-ng).
