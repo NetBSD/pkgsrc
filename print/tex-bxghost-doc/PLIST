@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:03:18 markd Exp $
+share/texmf-dist/doc/latex/bxghost/LICENSE
+share/texmf-dist/doc/latex/bxghost/README.md
