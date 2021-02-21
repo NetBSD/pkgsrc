@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:30:29 markd Exp $
+share/texmf-dist/fonts/tfm/public/bxjatoucs/bxjatoucs-cid.tfm
+share/texmf-dist/fonts/tfm/public/bxjatoucs/bxjatoucs-jis.tfm
+share/texmf-dist/tex/latex/bxjatoucs/bxjatoucs.sty

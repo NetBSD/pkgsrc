@@ -1,0 +1,6 @@
+This package is meant for macro/package developers: It provides
+function-like (fully-expandable) macros that convert a
+character code value in one of several Japanese encodings to a
+Unicode value. Supported source encodings are: ISO-2022-JP
+(jis), EUC-JP (euc), Shift_JIS (sjis), and the Adobe-Japan1
+glyph set.
