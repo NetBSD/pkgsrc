@@ -1,13 +1,15 @@
-<!-- $NetBSD: README.top,v 1.18 2021/02/19 17:49:06 nia Exp $ -->
-<html>
+<!-- $NetBSD: README.top,v 1.19 2021/02/21 10:15:24 nia Exp $ -->
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<link href="templates/main.css" rel="stylesheet">
 <title>The NetBSD Packages Collection</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
-<img align="right" src="templates/pkg-daemon.gif" alt="Daemon Power"
-	width="147" height="121" border="0">
+<img src="templates/pkg-daemon.gif" alt="Daemon Power" id="logo">
 </a>
 <h1>The NetBSD Packages Collection</h1>
 
