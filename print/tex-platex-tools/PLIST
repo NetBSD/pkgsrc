@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:34:57 markd Exp $
+share/texmf-dist/tex/latex/platex-tools/plarray.sty
+share/texmf-dist/tex/latex/platex-tools/pldocverb.sty
+share/texmf-dist/tex/latex/platex-tools/plextarray.sty
+share/texmf-dist/tex/latex/platex-tools/plextcolortbl.sty
+share/texmf-dist/tex/latex/platex-tools/plextdelarray.sty
+share/texmf-dist/tex/latex/platex-tools/pxatbegshi.sty
+share/texmf-dist/tex/latex/platex-tools/pxeverysel.sty
+share/texmf-dist/tex/latex/platex-tools/pxeveryshi.sty
+share/texmf-dist/tex/latex/platex-tools/pxftnright.sty
+share/texmf-dist/tex/latex/platex-tools/pxmulticol.sty
+share/texmf-dist/tex/latex/platex-tools/pxxspace.sty
