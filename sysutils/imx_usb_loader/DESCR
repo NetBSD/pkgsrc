@@ -1,0 +1,6 @@
+This utility allows to download and execute code on Freescale i.MX5/i.MX6/i.MX7
+and Vybrid SoCs through the Serial Download Protocol (SDP). Depending on
+the board, there is usually some kind of recovery button to bring the SoC
+into serial download boot mode, check documentation of your hardware.
+
+The utility support USB and UART as serial link.
