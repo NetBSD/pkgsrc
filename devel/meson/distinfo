@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2021/01/11 07:26:32 adam Exp $
+$NetBSD: distinfo,v 1.20 2021/02/21 12:45:22 adam Exp $
 
-SHA1 (meson-0.56.2.tar.gz) = a62199aca12eb69d4df7e828a8d11cc241ecff73
-RMD160 (meson-0.56.2.tar.gz) = 50db2f70e1984c8ace05fb1655f282c5de37d08a
-SHA512 (meson-0.56.2.tar.gz) = 3b6cc5cae31d756b251ecde3483d3710bceff50cfd03ef6cf6f939d9e599998e61fcb03a2ee09d6a6f9bfa2198f43e7f20447359de3bff1055febcf03e82e514
-Size (meson-0.56.2.tar.gz) = 1794847 bytes
-SHA1 (patch-mesonbuild_compilers_mixins_gnu.py) = 17f09e1b147f6baa434091f8a31b48f1941004f6
+SHA1 (meson-0.57.1.tar.gz) = eb87a41d4265aec1223c446c344455b674d4538c
+RMD160 (meson-0.57.1.tar.gz) = 741aff38cfab30963efc044f47216fe688514760
+SHA512 (meson-0.57.1.tar.gz) = 815dc2a41d389c3eb798b00bbfb458fde91ce360803a1b9e589d95fb4716d6b88f0e7c04545fa4f60fed82e9866fbf4f2638bf8f5ab15cb73d2ad252284826e9
+Size (meson-0.57.1.tar.gz) = 1849222 bytes
+SHA1 (patch-mesonbuild_compilers_mixins_gnu.py) = cc9fe3204c7cf003d288ef5635fa7853a44a2e34
 SHA1 (patch-mesonbuild_dependencies_dev.py) = ce9b93369d771f7e24208923b58af769e51bcd98
 SHA1 (patch-mesonbuild_environment.py) = d0340ea4149c7ed89fd64d0f1631721f7b9f04aa
-SHA1 (patch-mesonbuild_modules_pkgconfig.py) = 7b5dff2fbc29199a2b1b18a0073e73461c517744
+SHA1 (patch-mesonbuild_modules_pkgconfig.py) = 7b524383bfa6511c43d2d27de91442d42623c3ad
 SHA1 (patch-mesonbuild_scripts_depfixer.py) = b8673de86f49f7a9876afcd05536766e0555d217
