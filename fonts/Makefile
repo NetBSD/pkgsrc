@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2021/02/14 02:15:09 markd Exp $
+# $NetBSD: Makefile,v 1.358 2021/02/21 06:30:09 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -167,6 +167,7 @@ SUBDIR+=	liberation-ttf
 SUBDIR+=	libfontenc
 SUBDIR+=	linux-libertine-ttf
 SUBDIR+=	lohit-fonts
+SUBDIR+=	makejvf
 SUBDIR+=	mftrace
 SUBDIR+=	mglfonts
 SUBDIR+=	migu-ttf
