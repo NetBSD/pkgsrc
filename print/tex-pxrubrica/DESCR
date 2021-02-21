@@ -1,0 +1,7 @@
+This package provides a function to add ruby annotations
+(furigana) that follow the style conventional in Japanese
+typography as described in the W3C technical note "Requirements
+for Japanese Text Layout" ([JLREQ]) and the JIS specification
+JIS X 4051. Starting with version 1.3, this package also
+provides a function to add kenten (emphasis marks) to Japanese
+text.
