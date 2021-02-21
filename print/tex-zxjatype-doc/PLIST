@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:57:48 markd Exp $
+share/texmf-dist/doc/latex/zxjatype/LICENSE
+share/texmf-dist/doc/latex/zxjatype/README-ja.md
+share/texmf-dist/doc/latex/zxjatype/README.md
+share/texmf-dist/doc/latex/zxjatype/example/example.pdf
+share/texmf-dist/doc/latex/zxjatype/example/example.tex
+share/texmf-dist/doc/latex/zxjatype/example/xetexsamp01.pdf
