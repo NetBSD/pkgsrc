@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/08/29 15:36:40 bouyer Exp $
+$NetBSD: distinfo,v 1.3 2021/02/21 18:56:36 bouyer Exp $
 
-SHA1 (kicad-templates-5.1.4.tar.gz) = 30493b914932db97a362cb58d1cc36486014335f
-RMD160 (kicad-templates-5.1.4.tar.gz) = e18e0ccbdd65ee5f1cc4b16819f0888de367957c
-SHA512 (kicad-templates-5.1.4.tar.gz) = 20409524ba8e195b774c703bfa99bc6d65d8fc46de5fae5cc5c3f5f37d0b9115cc56d116262ac6df56658840b2b1c7fbab65c9ac9fd1bfaafb56dedcdf691bf4
-Size (kicad-templates-5.1.4.tar.gz) = 1630338 bytes
+SHA1 (kicad-templates-5.1.9.tar.gz) = f527f8f3735b503271de3d20277f8fd7e476acc1
+RMD160 (kicad-templates-5.1.9.tar.gz) = 77e12702e18718e78365e9630cc6fe5cd28b4ce0
+SHA512 (kicad-templates-5.1.9.tar.gz) = 2f972b12b04e719083a936b07beb5e61c4a8832680b99f0f5be94dfd1645ad02d935e6ba7ee95f946d50c8100824c86553e34716958e3f24c9fe859436da2e61
+Size (kicad-templates-5.1.9.tar.gz) = 1643954 bytes
