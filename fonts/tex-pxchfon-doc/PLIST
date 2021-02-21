@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:53:28 markd Exp $
+share/texmf-dist/doc/platex/pxchfon/LICENSE
+share/texmf-dist/doc/platex/pxchfon/README-ja.md
+share/texmf-dist/doc/platex/pxchfon/README.md
+share/texmf-dist/doc/platex/pxchfon/pxchfon.pdf
+share/texmf-dist/doc/platex/pxchfon/pxchfon.tex
+share/texmf-dist/doc/platex/pxchfon/sample-2000jis.pdf
+share/texmf-dist/doc/platex/pxchfon/sample-2000jis.tex
+share/texmf-dist/doc/platex/pxchfon/sample-2004jis.pdf
+share/texmf-dist/doc/platex/pxchfon/sample-2004jis.tex
+share/texmf-dist/doc/platex/pxchfon/sample-pxchfon.pdf
+share/texmf-dist/doc/platex/pxchfon/sample-pxchfon.tex
