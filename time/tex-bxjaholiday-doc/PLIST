@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/21 09:40:13 markd Exp $
+share/texmf-dist/doc/latex/bxjaholiday/LICENSE
+share/texmf-dist/doc/latex/bxjaholiday/README.md
+share/texmf-dist/doc/latex/bxjaholiday/bxjaholiday-ja.pdf
+share/texmf-dist/doc/latex/bxjaholiday/bxjaholiday-ja.tex
+share/texmf-dist/doc/latex/bxjaholiday/bxjaholiday.pdf
+share/texmf-dist/doc/latex/bxjaholiday/bxjaholiday.tex

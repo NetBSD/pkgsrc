@@ -1,0 +1,5 @@
+This LaTeX package provides a command to convert dates to names
+of Japanese holidays. Another command, converting dates to the
+day of the week in Japanese, is available as a free gift.
+Further (lower-level) APIs are provided for expl3. The package
+supports pdfTeX, XeTeX, LuaTeX, pTeX, and upTeX.
