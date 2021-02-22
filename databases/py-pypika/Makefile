@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/02/12 08:25:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/22 10:36:46 adam Exp $
 
-DISTNAME=	pypika-0.47.4
+DISTNAME=	pypika-0.47.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyPika/}
