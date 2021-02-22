@@ -1,22 +1,6 @@
-$NetBSD: distinfo,v 1.62 2021/01/16 16:49:36 skrll Exp $
+$NetBSD: distinfo,v 1.63 2021/02/22 14:03:35 ryoon Exp $
 
-SHA1 (gxemul-0.6.2.tar.gz) = aabaeba783e70be952ab0056bf84d0f2b70c2155
-RMD160 (gxemul-0.6.2.tar.gz) = ccac73d82446f89792b1fc803bee623813f3aab2
-SHA512 (gxemul-0.6.2.tar.gz) = 4f389c509f9ecf39603ceed50e899e2bee285d3fefac9b3214076115ee71b5a7a68d1d92690b6debc8de5cf5f0303da83b3cc921a5c0b5eb4c7ad89baa730b59
-Size (gxemul-0.6.2.tar.gz) = 5897883 bytes
-SHA1 (patch-doc_networking.html) = dd7a1519a678196fd5a835317a32ba483630ece8
-SHA1 (patch-src_cpus_cpu__mips__instr__loadstore.cc) = 378c514ddf3b93279b2c479f21b77447d83d5afd
-SHA1 (patch-src_devices_dev_dec21143.cc) = 52f36741038c76a2dbafc7da6737e816aed5c9f9
-SHA1 (patch-src_devices_dev_ether.cc) = 00221e09530743e81faedcc75ee951fa853d0e2c
-SHA1 (patch-src_devices_dev_le.cc) = a728e8008a7a9f33aaf95811a33ebac2cb86e80e
-SHA1 (patch-src_devices_dev_rtl8139c.cc) = ee6dbba7c7c9c62c50493c476297ee5ac89d2b83
-SHA1 (patch-src_devices_dev_sgi_mec.cc) = 24b1259350faf60265df7958f0f680302f475e8e
-SHA1 (patch-src_devices_dev_sn.cc) = e939521be1630f51e7ddc67abe90980de38e8837
-SHA1 (patch-src_include_net.h) = 4d31fcefe384fcc9d68255825240c89b45acc92e
-SHA1 (patch-src_net_Makefile.skel) = 4738229a928b9cb5a2531dfc357297f91e9fdc09
-SHA1 (patch-src_net_net.cc) = 57397c9a8197ee25e7faa8c0733273014e3e0670
-SHA1 (patch-src_net_net_ether.cc) = ef7464dbb0812a9cb8d5be806db07cc19853fc1e
-SHA1 (patch-src_net_net_ip.cc) = f5615f3b347e9bdcd256fa4b5b1594473fd2e5e4
-SHA1 (patch-src_net_net_tap.cc) = f913b3efb51bc4a8080420988d5fc845e8a38f73
-SHA1 (patch-src_old_main_emul.cc) = 0b1106745e7c5d320e93f9f7775d8ced6109c089
-SHA1 (patch-src_old_main_emul_parse.cc) = 23048bc3a0a83fd189b3bbd4656ef0e1a2c23b99
+SHA1 (gxemul-0.6.3.tar.gz) = 433b26f34205924c4a0febd37ed9df3769da0111
+RMD160 (gxemul-0.6.3.tar.gz) = c155accc030fc63002be3a72aae1e6b33d027878
+SHA512 (gxemul-0.6.3.tar.gz) = 30bdb926ab180a44b277b734d5ff4d31b8f0a8b580c6976226f6ed1952cb50d16e18591591d6aeee243c5b3e9d27b71d24a3cba3906bcb332399f46a1ebd8ac5
+Size (gxemul-0.6.3.tar.gz) = 6024573 bytes
