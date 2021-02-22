@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.pkg,v 1.34 2021/02/22 06:39:00 nia Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.35 2021/02/22 08:25:12 nia Exp $ -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 </a>
 <h1><em>%%PORT%%</em> - The NetBSD Packages Collection</h1>
 
-<details>
+<details open>
 <summary><em>%%COMMENT%%</em></summary>
 <p></p> <!-- spacing hack for older browsers with no details support -->
 <pre>
