@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/22 10:20:54 markd Exp $
+man/man1/uplatex.1
+share/texmf-dist/doc/uplatex/base/LICENSE
+share/texmf-dist/doc/uplatex/base/README.md
+share/texmf-dist/doc/uplatex/base/README_uplatex.txt
+share/texmf-dist/doc/uplatex/base/uplatex-en.pdf
+share/texmf-dist/doc/uplatex/base/uplatex.pdf
+share/texmf-dist/doc/uplatex/base/upldoc.pdf
