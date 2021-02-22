@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1225 2021/02/22 09:24:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1226 2021/02/22 09:38:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1956,3 +1956,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/kicad-templates to 5.1.9 [bouyer 2021-02-21]
 	Updated devel/py-astroid to 2.5 [adam 2021-02-22]
 	Updated devel/py-pylint to 2.7.0 [adam 2021-02-22]
+	Updated audio/librespot to 0.1.6 [pin 2021-02-22]
