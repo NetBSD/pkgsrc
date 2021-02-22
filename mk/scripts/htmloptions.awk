@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: htmloptions.awk,v 1.3 2020/05/10 07:48:10 rillig Exp $
+# $NetBSD: htmloptions.awk,v 1.4 2021/02/22 04:19:00 nia Exp $
 #
 # Copyright (c) 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -32,7 +32,7 @@ BEGIN {
 
 /^\t/ {
 	o++;
-	printf "<dt>%s</dt><dd>%s</dd>\n", escape_html($2), escape_html($3);
+	printf "<dt>%s</dt><dd>%s</dd>\t", escape_html($2), escape_html($3);
 }
 
 /^These options are/ {
