@@ -1,4 +1,4 @@
-/* $NetBSD: main.css,v 1.4 2021/02/22 09:40:48 nia Exp $ */
+/* $NetBSD: main.css,v 1.5 2021/02/22 09:43:58 nia Exp $ */
 
 body {
 	font-family: sans-serif;
@@ -58,4 +58,8 @@ hr {
 .package-data {
 	list-style-type: none;
 	padding-left: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
 }
