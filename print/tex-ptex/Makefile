@@ -1,32 +1,30 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:32:06 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/22 10:10:22 markd Exp $
 
 DISTNAME=	ptex
-PKGNAME=	tex-${DISTNAME}-3.2pl41220
-PKGREVISION=	5
-TEXLIVE_REV=	41220
+PKGNAME=	tex-${DISTNAME}-3.2pl55920
+TEXLIVE_REV=	55920
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/ptex
 COMMENT=	TeX system for publishing in Japanese
+LICENSE=	modified-bsd
 
-CONFLICTS+=	ja-ptex-bin-[0-9]*
-DEPENDS+=	tex-adobemapping-[0-9]*:../../fonts/tex-adobemapping
+DEPENDS+=	makejvf-[0-9]*:../../fonts/makejvf
+DEPENDS+=	mendexk-[0-9]*:../../textproc/mendexk
+DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
+DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
-DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
-DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
-DEPENDS+=	tex-latex>=2010:../../print/tex-latex
-DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
+DEPENDS+=	tex-knuth-lib-[0-9]*:../../fonts/tex-knuth-lib
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
-DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
-# switch.def
-DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
-DEPENDS+=	web2c>=2010nb5:../../print/web2c
+DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
 TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\n"
-TEX_KANJIMAP_FILES+=	morisawa.map
+TEX_KANJIMAP_FILES+=	ptex-@jaEmbed@@jaVariant@.map
 
-TEXLIVE_UNVERSIONED=	yes
+PLIST_SRC=	# none
+
 .include "../../print/texlive/package.mk"
-
 .include "../../mk/bsd.pkg.mk"
