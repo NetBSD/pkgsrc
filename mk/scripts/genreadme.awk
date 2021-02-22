@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.42 2021/02/22 04:19:00 nia Exp $
+# $NetBSD: genreadme.awk,v 1.43 2021/02/22 04:24:12 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,11 +35,11 @@
 # The following associative arrays are used for storing the dependency
 # information and other information for the packages
 #
-# topdepends[]  : index=pkgdir (math/scilab)
+# depends[]  : index=pkgdir (math/scilab)
 #                 List of explicitly listed depencencies by name.
 #                 I.e.  "xless-[0-9]* pvm-3.4.3"
 #
-# topbuilddepends[]  : index=pkgdir (math/scilab)
+# builddepends[]  : index=pkgdir (math/scilab)
 #                 List of explicitly listed depencencies by name.
 #
 BEGIN {
@@ -59,7 +59,7 @@ BEGIN {
 #depends /usr/pkgsrc/math/scilab xless-[0-9]*:../../x11/xless pvm-3.4.3:../../parallel/pvm3
 #
 
-/^(build_)?depends / {
+/^(build_|tool_)?depends / {
 #
 # Read in the entire depends tree
 # These lines look like:
@@ -70,10 +70,10 @@ BEGIN {
 	deptype=$1;
 #    pkg=fulldir2pkgdir($2);
 	pkg = $2;
-	if (pkg in topdepends) {}
-	else {topdepends[pkg] = "";}
-	if (pkg in topbuilddepends) {}
-	else {topbuilddepends[pkg] = "";}
+	if (pkg in depends) {}
+	else {depends[pkg] = "";}
+	if (pkg in builddepends) {}
+	else {builddepends[pkg] = "";}
 
 	for (i = 3; i <= NF; i++) {
 		split($i, a,":");
@@ -103,18 +103,18 @@ BEGIN {
 		pat2dir[pkgpat] = pkgdir;
 
 		if (deptype == "depends") {
-			topdepends[pkg] = topdepends[pkg] " " pkgpat " " ;
+			depends[pkg] = depends[pkg] " " pkgpat " " ;
 			if (debug) {
-			  printf("Appending %s to topdepends[%s] (%s)\n",
-				 pkgpat, pkg, topdepends[pkg]);
+			  printf("Appending %s to depends[%s] (%s)\n",
+				 pkgpat, pkg, depends[pkg]);
 			}
 		}
 		else {
 			if (debug) {
-			  printf("Appending %s to topbuilddepends[%s] (%s)\n",
-				 pkgpat, pkg, topbuilddepends[pkg]);
+			  printf("Appending %s to builddepends[%s] (%s)\n",
+				 pkgpat, pkg, builddepends[pkg]);
 			}
-			topbuilddepends[pkg] = topbuilddepends[pkg] " " pkgpat " " ;
+			builddepends[pkg] = builddepends[pkg] " " pkgpat " " ;
 		}
 	}
 
@@ -242,10 +242,10 @@ END {
 
 	if (SINGLEPKG != "" ) {
 		printf("Only creating README for %s\n",SINGLEPKG);
-		for( key in topdepends ) {
-			delete topdepends[key];
+		for( key in depends ) {
+			delete depends[key];
 		}
-		topdepends[SINGLEPKG] = "yes";
+		depends[SINGLEPKG] = "yes";
 	}
 
 	printf("Generating README.html files\n");
@@ -253,7 +253,7 @@ END {
 	if (do_pkg_readme) {
 		templatefile = PKGSRCDIR "/templates/README.pkg";
 		fatal_check_file(templatefile);
-		for (toppkg in topdepends){
+		for (toppkg in depends){
 			pkgcnt++;
 			pkgdir = PKGSRCDIR "/" toppkg;
 			readmenew=pkgdir  "/" readme_name;
@@ -268,8 +268,8 @@ END {
 			}
 			printf("") > readme;
 
-			run_deps = create_htmldeps(uniq(topdepends[toppkg]));
-			build_deps = create_htmldeps(uniq(topbuilddepends[toppkg]));
+			run_deps = create_htmldeps(uniq(depends[toppkg]));
+			build_deps = create_htmldeps(uniq(builddepends[toppkg]));
 
 			vul = "";
 
@@ -323,8 +323,6 @@ END {
 				gsub(/%%VULDATE%%/, ""vuldate"");
 				gsub(/%%OPTIONS%%/, escape_re_replacement(""options[toppkg]""));
 
-				# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS
-				# split.
 				gsub(/%%BUILD_DEPENDS%%/, ""build_deps"");
 				gsub(/%%RUN_DEPENDS%%/, ""run_deps"");
 
