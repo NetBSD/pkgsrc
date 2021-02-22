@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1226 2021/02/22 09:38:03 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1227 2021/02/22 10:28:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1957,3 +1957,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-astroid to 2.5 [adam 2021-02-22]
 	Updated devel/py-pylint to 2.7.0 [adam 2021-02-22]
 	Updated audio/librespot to 0.1.6 [pin 2021-02-22]
+	Updated print/tex-ptex to 3.2pl55920 [markd 2021-02-22]
+	Removed print/tex-ptex-doc [markd 2021-02-22]
+	Added print/tex-uptex version 2020 [markd 2021-02-22]
+	Added print/tex-uptex-doc version 2020 [markd 2021-02-22]
+	Added print/tex-uplatex version 2020 [markd 2021-02-22]
+	Added print/tex-uplatex-doc version 2020 [markd 2021-02-22]
+	Added meta-pkgs/texlive-collection-langjapanese version 2020 [markd 2021-02-22]
