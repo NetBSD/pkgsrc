@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/08/23 13:13:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/02/22 14:03:35 ryoon Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -112,6 +112,8 @@ share/doc/gxemul/20190612-netbsd-sgimips-2.png
 share/doc/gxemul/20190612-netbsd-sgimips-2_small.png
 share/doc/gxemul/20190616-netbsd-playstation2-userland-small.png
 share/doc/gxemul/20190616-netbsd-playstation2-userland.png
+share/doc/gxemul/20190715-sgi-o2-linux-small.png
+share/doc/gxemul/20190715-sgi-o2-linux.png
 share/doc/gxemul/Doxyfile
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
@@ -197,6 +199,10 @@ share/doc/gxemul/machines/machine_testmips-thumb.png
 share/doc/gxemul/misc.html
 share/doc/gxemul/model.png
 share/doc/gxemul/networking.html
+share/doc/gxemul/openbsd-luna88k-20210130-small.png
+share/doc/gxemul/openbsd-luna88k-20210130.png
+share/doc/gxemul/openbsd-luna88k-20210209-small.png
+share/doc/gxemul/openbsd-luna88k-20210209.png
 share/doc/gxemul/openbsd-pmax-20040710.png
 share/doc/gxemul/openbsd-pmax-20040710_small.png
 share/doc/gxemul/sgi-o2-real.jpg
