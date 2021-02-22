@@ -1,31 +1,30 @@
-<!-- $NetBSD: README.category,v 1.12 2021/02/22 05:10:18 nia Exp $ -->
+<!-- $NetBSD: README.category,v 1.13 2021/02/22 09:32:55 nia Exp $ -->
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <link href="../templates/main.css" rel="stylesheet">
-<title>The NetBSD Packages Collection: %%CATEGORY%%</title>
+<title>%%CATEGORY%% - The NetBSD Packages Collection</title>
 </head>
 <body>
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
 <img src="../templates/pkg-daemon.gif" alt="Daemon Power" id="logo">
 </a>
-<h1>The NetBSD Packages Collection: <i>%%CATEGORY%%</i></h1>
-
-<p>You are now in the directory "%%CATEGORY%%".
+<h1><em>%%CATEGORY%%</em> - The NetBSD Packages Collection</h1>
 
 <p>
 %%DESCR%%
+</p>
 
 <p>Here are the one-line descriptions for each of the
 %%NUMITEMS%%
-items in this directory:
+items in this directory:</p>
 
-<p><hr noshade>
-<p><table>
+<hr noshade>
+<dl>
 %%SUBDIR%%
-</table>
+</dl>
 
 <hr noshade>
 [
