@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/02/21 11:22:59 markd Exp $
+# $NetBSD: Makefile,v 1.18 2021/02/22 10:26:02 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2020
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54894
@@ -60,8 +60,8 @@ DEPENDS+=	tex-pxjodel-[0-9]*:../../fonts/tex-pxjodel
 DEPENDS+=	tex-pxrubrica-[0-9]*:../../print/tex-pxrubrica
 DEPENDS+=	tex-pxufont-[0-9]*:../../fonts/tex-pxufont
 # texlive-ja is documentation only
-# depend uplatex
-# depend uptex
+DEPENDS+=	tex-uplatex-[0-9]*:../../print/tex-uplatex
+DEPENDS+=	tex-uptex-[0-9]*:../../print/tex-uptex
 DEPENDS+=	tex-uptex-base-[0-9]*:../../print/tex-uptex-base
 DEPENDS+=	tex-uptex-fonts-[0-9]*:../../fonts/tex-uptex-fonts
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
