@@ -1,0 +1,7 @@
+upTeX is an extension of pTeX, using UTF-8 input and producing
+UTF-8 output. It was originally designed to improve support for
+Japanese, but is also useful for documents in Chinese and
+Korean. It can process Chinese simplified, Chinese traditional,
+Japanese, and Korean simultaneously, and can also process
+original LaTeX with \inputenc{utf8} and Babel
+(Latin/Cyrillic/Greek etc.) by switching its \kcatcode tables.
