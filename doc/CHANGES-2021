@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1228 2021/02/22 10:32:39 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1229 2021/02/22 10:37:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1964,3 +1964,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-uplatex version 2020 [markd 2021-02-22]
 	Added print/tex-uplatex-doc version 2020 [markd 2021-02-22]
 	Updated meta-pkgs/texlive-collection-langjapanese to 2020 [markd 2021-02-22]
+	Updated textproc/py-precis-i18n to 1.0.3 [adam 2021-02-22]
+	Updated databases/py-aiosqlite to 0.17.0 [adam 2021-02-22]
+	Updated textproc/py-tabulate to 0.8.9 [adam 2021-02-22]
+	Updated databases/py-pypika to 0.47.7 [adam 2021-02-22]
