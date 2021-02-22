@@ -1,4 +1,3 @@
-PTeX adds features related to vertical writing, and deals with other
-problems in typesetting Japanese. A set of additions to a TEXMF tree,
-for use with PTeX, may be found in package PTeX- texmf. PTeX is
-distributed as WEB change files.
+pTeX adds features related to vertical writing, and deals with
+other problems in typesetting Japanese. A manual (in both
+Japanese and English) is distributed as package pTeX-manual.
