@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.44 2021/02/22 05:10:18 nia Exp $
+# $NetBSD: genreadme.awk,v 1.45 2021/02/22 05:32:02 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -341,6 +341,16 @@ END {
 				      print >> readme;
 				    }
 				    close( binpkgs_file );
+				}
+
+				descr_file = pkgdir "/DESCR"
+
+				if( line ~/%%DESCR%%/ ) {
+				    gsub(/%%DESCR%%/, "", line);
+				    while((getline < descr_file ) > 0) {
+				      print >> readme;
+				    }
+				    close( descr_file );
 				}
 
 				print line >> readme;

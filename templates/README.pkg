@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.pkg,v 1.32 2021/02/22 05:10:18 nia Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.33 2021/02/22 05:32:02 nia Exp $ -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,20 +13,24 @@
 </a>
 <h1><em>%%PORT%%</em> - The NetBSD Packages Collection</h1>
 
-<p>
-<em>%%COMMENT%%</em>
-</p>
-
-<p>Please read the file <a href="DESCR">DESCR</a> for a
-longer description, or browse the package's
-<a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/%%PORT%%/">history</a>.
-</p>
+<details>
+<summary><em>%%COMMENT%%</em></summary>
+<div>
+<pre>
+%%DESCR%%
+</pre>
+</div>
+</details>
 
 <ul class="package-data">
 <li><strong>Source version:</strong> <samp>%%PKG%%</samp></li>
 <li><strong>Maintainer:</strong> <em>%%MAINTAINER%%</em></li>
 <li><strong>Website:</strong> %%HOMEPAGE%%</li>
 <li><strong>License:</strong> %%LICENSE%%</li>
+<li><strong>Package history:</strong>
+<a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/%%PORT%%/">cvs</a>,
+<a href="https://anonhg.NetBSD.org/pkgsrc/file/tip/%%PORT%%/">hg</a>,
+<a href="https://github.com/NetBSD/pkgsrc/tree/trunk/%%PORT%%/">git</a></li>
 </ul>
 
 <section>
