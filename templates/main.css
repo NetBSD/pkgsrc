@@ -1,4 +1,4 @@
-/* $NetBSD: main.css,v 1.1 2021/02/21 10:15:24 nia Exp $ */
+/* $NetBSD: main.css,v 1.2 2021/02/22 05:10:18 nia Exp $ */
 
 body {
 	font-family: sans-serif;
@@ -32,4 +32,9 @@ th {
 #logo {
 	float: right;
 	border: 0;
+}
+
+.package-data {
+	list-style-type: none;
+	padding-left: 0;
 }
