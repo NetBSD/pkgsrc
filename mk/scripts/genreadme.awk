@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.41 2021/02/21 09:45:01 nia Exp $
+# $NetBSD: genreadme.awk,v 1.42 2021/02/22 04:19:00 nia Exp $
 #
-# Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
+# Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -37,11 +37,10 @@
 #
 # topdepends[]  : index=pkgdir (math/scilab)
 #                 List of explicitly listed depencencies by name.
+#                 I.e.  "xless-[0-9]* pvm-3.4.3"
 #
 # topbuilddepends[]  : index=pkgdir (math/scilab)
 #                 List of explicitly listed depencencies by name.
-#                 I.e.  "xless-[0-9]* pvm-3.4.3"
-#                 I.e.  "xless-[0-9]* pvm-3.4.3"
 #
 BEGIN {
 	do_pkg_readme=1;
@@ -161,9 +160,12 @@ BEGIN {
 
 /^htmloptions / {
 	htmloptions = $3;
+	origfs = FS;
+	FS = "\t";
 	for (i = 4; i <= NF; i++){
 		htmloptions = htmloptions " " $i;
 	}
+	FS = origfs;
 	options[$2] = htmloptions;
 	next;
 }
