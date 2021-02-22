@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.43 2021/02/22 04:24:12 nia Exp $
+# $NetBSD: genreadme.awk,v 1.44 2021/02/22 05:10:18 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -118,6 +118,12 @@ BEGIN {
 		}
 	}
 
+	next;
+}
+
+/^maintainer /{
+	maintainer[$2] = $3;
+	gsub(/@/, " AT ", maintainer[$2]);
 	next;
 }
 
@@ -306,18 +312,19 @@ END {
 			while((getline < templatefile) > 0){
 				gsub(/%%PORT%%/, toppkg);
 				gsub(/%%PKG%%/, pkgdir2name[toppkg]);
+				gsub(/%%MAINTAINER%%/, maintainer[toppkg]);
 				gsub(/%%COMMENT%%/, comment[toppkg]);
 				if (homepage[toppkg] == "") {
-					gsub(/%%HOMEPAGE%%/, "");
+					gsub(/%%HOMEPAGE%%/, "<em>none stated</em>");
 				} else {
-					gsub(/%%HOMEPAGE%%/,
-					     "<p>This package has a home page at <a HREF=\"" homepage[toppkg] "\">" homepage[toppkg] "</a>.</p>");
+					gsub(/%%HOMEPAGE%%/, "<a href=\"" \
+					    homepage[toppkg] "\">" homepage[toppkg] "</a>");
 				}
 				if (license[toppkg] == "") {
-					gsub(/%%LICENSE%%/, "");
+					gsub(/%%LICENSE%%/, "<em>none stated</em>");
 				} else {
-					gsub(/%%LICENSE%%/,
-					     "<p>Please note that this package has a " license[toppkg] " license.</p>");
+					gsub(/%%LICENSE%%/, "<a href=\"../../licenses/" \
+					    license[toppkg] "\">" license[toppkg] "</a>");
 				}
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
