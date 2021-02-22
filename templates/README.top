@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.20 2021/02/21 10:19:53 nia Exp $ -->
+<!-- $NetBSD: README.top,v 1.21 2021/02/22 09:32:55 nia Exp $ -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,9 +24,9 @@ is also available.
 </p>
 
 <hr noshade>
-<table>
+<dl>
 %%SUBDIR%%
-</table>
+</dl>
 <hr noshade>
 
 Prebuilt binary packages can be installed using

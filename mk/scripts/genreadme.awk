@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.45 2021/02/22 05:32:02 nia Exp $
+# $NetBSD: genreadme.awk,v 1.46 2021/02/22 09:32:55 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -201,10 +201,6 @@ BEGIN {
 	wildcard[$2] = $3;
 }
 
-#
-# Now recurse the tree to give a flattened depends list for each pkg
-#
-
 END {
 	readme = TMPDIR "/" readme_name;
 
@@ -242,9 +238,9 @@ END {
 
 # extract date for vulnerabilities file
 	if (SCAN_VULNERABILITIES == 0)
-		vuldate="<TR><TD><I>(no vulnerabilities list, update pkg_install)</I>";
+		vuldate="<li><em>(no vulnerabilities list, update pkg_install)</em></li>";
 	else if (SCAN_VULNERABILITIES == 1)
-		vuldate="<TR><TD><I>(no vulnerabilities list available)</I>";
+		vuldate="<li><em>(no vulnerabilities list available)</em></li>";
 
 	if (SINGLEPKG != "" ) {
 		printf("Only creating README for %s\n",SINGLEPKG);
@@ -292,13 +288,13 @@ END {
 					if (status == "fixed")
 						continue
 					status = "a " status;
-					vul =  sprintf("%s<LI>%s <a href=\"%s\">%s</a> vulnerability</LI>\n",
+					vul =  sprintf("%s<li>%s <a href=\"%s\">%s</a> vulnerability</li>\n",
 					  vul, status, entry[3], entry[2]);
 				}
 				close(cmd);
 
 				if ( vul == "" ) {
-					vul="<I>(no vulnerabilities known)</I>";
+					vul="<em>(no vulnerabilities known)</em>";
 				}
 			}
 
@@ -400,8 +396,6 @@ END {
 			}
 			cat_make = catdir"/Makefile";
 			pkgs = "";
-			pkgs_file = TMPDIR "/pkgs_file";
-			printf("") > pkgs_file;
 			numpkg = 0;
 			print "" > readme;
 			while((getline < cat_make) > 0){
@@ -418,20 +412,12 @@ END {
 						 pkgdir2name[dir],
 						 comment[dir]);
 					}
-#					pkgs =  sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
-#							pkgs, pkg, readme_name,
-#							pkgdir2name[dir],
-#							comment[dir]);
-# We use a temp file to hold the list of all packages because
-# this list can get very very large and
-# become larger than what some awk implementations can deal
-# with.  The nawk shipped with solaris 9 is an example of
-# such a limited awk.
-					printf("<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
-							pkg, readme_name,
-							pkgdir2name[dir],
-							comment[dir]) >> pkgs_file;
-					allpkg[tot_numpkg] =  sprintf("<!-- %s (for sorting) --><TR VALIGN=TOP><TD><a href=\"%s/%s/%s\">%s</a>: <TD>(<a href=\"%s/%s\">%s</a>) <td>%s\n",
+					pkgs = sprintf("%s<dt><a href=\"%s/%s\">%s</a></dt><dd>%s</dd>\n",
+					    pkgs,
+					    pkg, readme_name,
+					    pkgdir2name[dir],
+					    comment[dir]);
+					allpkg[tot_numpkg] = sprintf("<!-- %s (for sorting) --><tr><td><a href=\"%s/%s/%s\">%s</a></td><td><a href=\"%s/%s\">%s</a></td><td>%s</td>\n",
 								      pkgdir2name[dir],
 								      category, pkg,
 								      readme_name,
@@ -453,26 +439,16 @@ END {
 				gsub(/%%CATEGORY%%/, category);
 				gsub(/%%NUMITEMS%%/, numpkg);
 				gsub(/%%DESCR%%/, descr);
+				gsub(/%%SUBDIR%%/, ""pkgs"");
 
-				line = $0
-
-				if( $0 ~/%%SUBDIR%%/ ) {
-				    gsub(/%%SUBDIR%%/, "", line);
-				    while((getline < pkgs_file) > 0) {
-				      gsub(/README.html/, readme_name);
-				      print >> readme;
-				    }
-				    close( pkgs_file );
-				}
-
-				print line >> readme;
+				print $0 >> readme;
 			}
 			close(readme);
 			close(templatefile);
 			copy_readme(readmenew, readme);
 
 			gsub(/href=\"/, "href=\""category"/", pkgs);
-			allcat = sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
+			allcat = sprintf("%s<dt><a href=\"%s/%s\">%s</a></dt><dd>%s</dd>\n",
 					 allcat, category, readme_name,
 					 category, descr);
 			close(cat_make);
@@ -556,7 +532,7 @@ function create_htmldeps(dependslist){
 		i = i + 1;
 	}
 	if ( i == 1 ) {
-	  htmldeps = "<EM>none</EM>";
+	  htmldeps = "<em>(none)</em>";
 	}
 	return htmldeps;
 }
@@ -750,12 +726,12 @@ function lookup_cache( d, binpkgs) {
   binpkgs_file = TMPDIR "/binpkgs";
   spipe = SORT " > " binpkgs_file;
   for(i=1 ; i<=pkg_count[d]; i=i+1) {
-    printf("<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)\n",
+    printf("<tr><td>%s:<td><a href=\"%s/%s\">%s</a><td>(%s %s)\n",
       march_list[d, i], PKG_URL, pkgfile_list[d, i], pkgnm_list[d, i],
       opsys_list[d, i], osver_list[d, i]) | spipe;
   }
   if( pkg_count[d] == 0 ) {
-	printf("<TR><TD><EM>none</EM></TD></TR>\n") | spipe;
+	printf("<tr><td><em>(none)</em></td></tr>\n") | spipe;
   }
 
   close( spipe );
