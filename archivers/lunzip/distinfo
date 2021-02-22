@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/22 19:45:08 fcambus Exp $
+
+SHA1 (lunzip-1.12.tar.gz) = 86177aafeca99c09ca667255c4edc868f84bf496
+RMD160 (lunzip-1.12.tar.gz) = 2910fee20d9b030fa901a71ec5f3d74fe09c2a82
+SHA512 (lunzip-1.12.tar.gz) = 9261f87e7403217018e87cf52c0cc7f71ce9e29b7d262efffae5dfff797ea4913803f0a94999dfd6b0ad89abb22cf37e21baa390b5c920cb8668a6ba240358c6
+Size (lunzip-1.12.tar.gz) = 66001 bytes

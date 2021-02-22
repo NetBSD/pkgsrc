@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/22 19:45:08 fcambus Exp $
+bin/lunzip
+man/man1/lunzip.1

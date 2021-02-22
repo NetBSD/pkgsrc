@@ -1,0 +1,4 @@
+Lunzip is a decompressor for the lzip format written in C. Its small size
+makes it well suited for embedded devices or software installers that need
+to decompress files but don't need compression capabilities. Lunzip is fully
+compatible with lzip 1.4 or newer.
