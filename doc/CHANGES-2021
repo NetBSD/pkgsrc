@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1227 2021/02/22 10:28:15 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1228 2021/02/22 10:32:39 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1963,4 +1963,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-uptex-doc version 2020 [markd 2021-02-22]
 	Added print/tex-uplatex version 2020 [markd 2021-02-22]
 	Added print/tex-uplatex-doc version 2020 [markd 2021-02-22]
-	Added meta-pkgs/texlive-collection-langjapanese version 2020 [markd 2021-02-22]
+	Updated meta-pkgs/texlive-collection-langjapanese to 2020 [markd 2021-02-22]
