@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/05/05 18:18:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/02/22 09:22:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -64,6 +64,9 @@ ${PYSITELIB}/astroid/brain/brain_hashlib.pyo
 ${PYSITELIB}/astroid/brain/brain_http.py
 ${PYSITELIB}/astroid/brain/brain_http.pyc
 ${PYSITELIB}/astroid/brain/brain_http.pyo
+${PYSITELIB}/astroid/brain/brain_hypothesis.py
+${PYSITELIB}/astroid/brain/brain_hypothesis.pyc
+${PYSITELIB}/astroid/brain/brain_hypothesis.pyo
 ${PYSITELIB}/astroid/brain/brain_io.py
 ${PYSITELIB}/astroid/brain/brain_io.pyc
 ${PYSITELIB}/astroid/brain/brain_io.pyo
@@ -130,6 +133,9 @@ ${PYSITELIB}/astroid/brain/brain_scipy_signal.pyo
 ${PYSITELIB}/astroid/brain/brain_six.py
 ${PYSITELIB}/astroid/brain/brain_six.pyc
 ${PYSITELIB}/astroid/brain/brain_six.pyo
+${PYSITELIB}/astroid/brain/brain_sqlalchemy.py
+${PYSITELIB}/astroid/brain/brain_sqlalchemy.pyc
+${PYSITELIB}/astroid/brain/brain_sqlalchemy.pyo
 ${PYSITELIB}/astroid/brain/brain_ssl.py
 ${PYSITELIB}/astroid/brain/brain_ssl.pyc
 ${PYSITELIB}/astroid/brain/brain_ssl.pyo
@@ -139,6 +145,9 @@ ${PYSITELIB}/astroid/brain/brain_subprocess.pyo
 ${PYSITELIB}/astroid/brain/brain_threading.py
 ${PYSITELIB}/astroid/brain/brain_threading.pyc
 ${PYSITELIB}/astroid/brain/brain_threading.pyo
+${PYSITELIB}/astroid/brain/brain_type.py
+${PYSITELIB}/astroid/brain/brain_type.pyc
+${PYSITELIB}/astroid/brain/brain_type.pyo
 ${PYSITELIB}/astroid/brain/brain_typing.py
 ${PYSITELIB}/astroid/brain/brain_typing.pyc
 ${PYSITELIB}/astroid/brain/brain_typing.pyo
