@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.797 2021/02/21 11:10:39 markd Exp $
+# $NetBSD: Makefile,v 1.798 2021/02/22 10:23:48 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1267,7 +1267,6 @@ SUBDIR+=	tex-pstricks-examples-en-doc
 SUBDIR+=	tex-ptex
 SUBDIR+=	tex-ptex-base
 SUBDIR+=	tex-ptex-base-doc
-SUBDIR+=	tex-ptex-doc
 SUBDIR+=	tex-ptex2pdf
 SUBDIR+=	tex-ptex2pdf-doc
 SUBDIR+=	tex-pxbase
@@ -1562,8 +1561,12 @@ SUBDIR+=	tex-units-doc
 SUBDIR+=	tex-updmap-map
 SUBDIR+=	tex-upquote
 SUBDIR+=	tex-upquote-doc
+SUBDIR+=	tex-uplatex
+SUBDIR+=	tex-uplatex-doc
+SUBDIR+=	tex-uptex
 SUBDIR+=	tex-uptex-base
 SUBDIR+=	tex-uptex-base-doc
+SUBDIR+=	tex-uptex-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
 SUBDIR+=	tex-urlbst
