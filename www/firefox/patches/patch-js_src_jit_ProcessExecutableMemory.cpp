@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_jit_ProcessExecutableMemory.cpp,v 1.1 2020/11/06 08:56:37 maya Exp $
+$NetBSD: patch-js_src_jit_ProcessExecutableMemory.cpp,v 1.2 2021/02/23 17:02:04 ryoon Exp $
 
 PaX MPROTECT safety for NetBSD.
 
---- js/src/jit/ProcessExecutableMemory.cpp.orig	2020-10-27 23:47:06.000000000 +0000
+--- js/src/jit/ProcessExecutableMemory.cpp.orig	2021-02-11 21:17:13.000000000 +0000
 +++ js/src/jit/ProcessExecutableMemory.cpp
 @@ -362,9 +362,16 @@ static void* ReserveProcessExecutableMem
    // Note that randomAddr is just a hint: if the address is not available
@@ -23,8 +23,8 @@ PaX MPROTECT safety for NetBSD.
    }
 @@ -409,8 +416,12 @@ static unsigned ProtectionSettingToFlags
  
- static MOZ_MUST_USE bool CommitPages(void* addr, size_t bytes,
-                                      ProtectionSetting protection) {
+ [[nodiscard]] static bool CommitPages(void* addr, size_t bytes,
+                                       ProtectionSetting protection) {
 -  void* p = MozTaggedAnonymousMmap(
 -      addr, bytes, ProtectionSettingToFlags(protection),
 +  void* p = MozTaggedAnonymousMmap(addr, bytes,
