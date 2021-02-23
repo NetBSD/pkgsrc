@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/05/02 02:27:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/02/23 06:04:21 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -18,6 +18,7 @@ share/texmf-dist/doc/generic/musixtex/ChangeLog-127.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-128.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-129.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-130.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-131.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
 share/texmf-dist/doc/generic/musixtex/examples/adagio.tex
