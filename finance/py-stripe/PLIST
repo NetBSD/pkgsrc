@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/09/30 06:52:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/02/23 11:43:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -74,6 +74,9 @@ ${PYSITELIB}/stripe/api_resources/bank_account.pyo
 ${PYSITELIB}/stripe/api_resources/billing_portal/__init__.py
 ${PYSITELIB}/stripe/api_resources/billing_portal/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/billing_portal/__init__.pyo
+${PYSITELIB}/stripe/api_resources/billing_portal/configuration.py
+${PYSITELIB}/stripe/api_resources/billing_portal/configuration.pyc
+${PYSITELIB}/stripe/api_resources/billing_portal/configuration.pyo
 ${PYSITELIB}/stripe/api_resources/billing_portal/session.py
 ${PYSITELIB}/stripe/api_resources/billing_portal/session.pyc
 ${PYSITELIB}/stripe/api_resources/billing_portal/session.pyo
