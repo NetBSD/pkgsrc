@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1233 2021/02/23 11:44:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1234 2021/02/23 14:47:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1973,3 +1973,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added fonts/unifraktur-ttf version 20170319 [wiz 2021-02-22]
 	Updated devel/py-jaraco.classes to 3.2.1 [adam 2021-02-23]
 	Updated finance/py-stripe to 2.56.0 [adam 2021-02-23]
+	Updated security/pleaser to 0.3.23 [pin 2021-02-23]
