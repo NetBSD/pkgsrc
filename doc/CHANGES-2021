@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1235 2021/02/23 14:48:33 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1236 2021/02/23 17:02:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1975,3 +1975,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.56.0 [adam 2021-02-23]
 	Updated security/pleaser to 0.3.23 [pin 2021-02-23]
 	Updated math/kalk to 0.3.14 [pin 2021-02-23]
+	Updated www/firefox to 86.0 [ryoon 2021-02-23]
