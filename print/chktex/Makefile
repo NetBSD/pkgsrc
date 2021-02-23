@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/08/31 18:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/02/23 06:34:44 markd Exp $
 
 DISTNAME=	chktex-1.7.6
 PKGREVISION=	4
@@ -10,10 +10,6 @@ HOMEPAGE=	https://www.nongnu.org/chktex/
 COMMENT=	LaTeX semantic checker
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
-BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 EGDIR=		${PREFIX}/share/examples/chktex
