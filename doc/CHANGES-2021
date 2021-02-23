@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1234 2021/02/23 14:47:27 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1235 2021/02/23 14:48:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-jaraco.classes to 3.2.1 [adam 2021-02-23]
 	Updated finance/py-stripe to 2.56.0 [adam 2021-02-23]
 	Updated security/pleaser to 0.3.23 [pin 2021-02-23]
+	Updated math/kalk to 0.3.14 [pin 2021-02-23]
