@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2021/02/20 22:59:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.264 2021/02/23 09:28:33 wiz Exp $
 
 DISTNAME=	qemu-5.2.0
 CATEGORIES=	emulators
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qemu-project.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
+
+BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -36,7 +38,7 @@ SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		palcode-clipper
-SITES.palcode-clipper=	http://ftp.netbsd.org/pub/NetBSD/arch/alpha/qemu/
+SITES.palcode-clipper=	http://ftp.NetBSD.org/pub/NetBSD/arch/alpha/qemu/
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
