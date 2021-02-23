@@ -1,11 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2016/09/30 11:33:06 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2021/02/23 06:34:44 markd Exp $
 
 Use proper installation tools.
+Don't build ChkTeX.dvi as we don't do anything with it.
 
 --- Makefile.in.orig	2016-09-10 04:14:58.000000000 +0000
 +++ Makefile.in
-@@ -162,13 +162,13 @@ chktex: $(OBJS)
- install: chktex ChkTeX.dvi
+@@ -159,16 +159,16 @@ check: chktex $(srcdir)/$(TestOutFile)
+ chktex: $(OBJS)
+ 	$(CC) $(LDFLAGS) -o chktex $(OBJS) $(LIBS)
+ 
+-install: chktex ChkTeX.dvi
++install: chktex
  	$(MKDIR_P) $(DESTDIR)$(bindir)
  	for program in chktex $(BUILT_SCRIPTS); do \
 -		$(INSTALL_PROGRAM) $$program $(DESTDIR)$(bindir); \
