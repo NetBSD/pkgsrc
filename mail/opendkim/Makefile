@@ -1,12 +1,14 @@
 # $NetBSD: Makefile,v 1.33 2020/08/31 18:09:58 wiz Exp $
 
-DISTNAME=	opendkim-2.10.3
-PKGREVISION=	6
+GITHUB_PROJECT=	OpenDKIM
+GITHUB_TAG=	2.11.0-Beta2
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	opendkim-2.11.0b2
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendkim/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://opendkim.org/
+HOMEPAGE=	http://www.trusteddomain.org/
 COMMENT=	Open source DKIM library, MTA filter implementation and tools
 LICENSE=	sendmail-open-source-license
 
@@ -15,6 +17,8 @@ USE_TOOLS+=             autoconf automake autoreconf
 USE_TOOLS+=		pkg-config perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+LIBS.SunOS+=	-lnsl
 
 REPLACE_PERL+=	opendkim/opendkim-genkey.in
 

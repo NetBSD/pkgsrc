@@ -1,8 +1,10 @@
 $NetBSD: distinfo,v 1.20 2020/01/07 13:35:13 sborrill Exp $
 
-SHA1 (opendkim-2.10.3.tar.gz) = 4e9b966860bcfbca6441ed84a95bbe762fff69f4
-RMD160 (opendkim-2.10.3.tar.gz) = c6553757ae9675434e647f3cc1e6357bc60c7d2a
-SHA512 (opendkim-2.10.3.tar.gz) = 97923e533d072c07ae4d16a46cbed95ee799aa50f19468d8bc6d1dc534025a8616c3b4b68b5842bc899b509349a2c9a67312d574a726b048c0ea46dd4fcc45d8
-Size (opendkim-2.10.3.tar.gz) = 1210224 bytes
-SHA1 (patch-configure.ac) = c9ae182ed2c5c2ec3018fe4c6066ed7fa0d3686f
-SHA1 (patch-opendkim_opendkim-crypto.c) = d7d08fda3dba5bf9cb834123218b1e89b78878e5
+SHA1 (OpenDKIM-2.11.0-Beta2.tar.gz) = dc511f3faa7efd598a122e4ec297b904e0fd6299
+RMD160 (OpenDKIM-2.11.0-Beta2.tar.gz) = 0402b03481a6958d56e8bedbf418c3d102ba1734
+SHA512 (OpenDKIM-2.11.0-Beta2.tar.gz) = 6574755db70b4959a9d6f9f854a889f3905057b8563690571a3a13b6215658b9c5ea365fa34316208c71561eefd9bdcacbccea420557d5a76a7744e98f095980
+Size (OpenDKIM-2.11.0-Beta2.tar.gz) = 792991 bytes
+SHA1 (patch-configure.ac) = 424652ad2900f80ff50c67e35bddbf6b77797ae6
+SHA1 (patch-libopendkim_dkim-dns.c) = 93cae38341b30e381253afd15b10440e611ebe0c
+SHA1 (patch-libopendkim_dkim-dns.h) = d720cdcadc54b13a7be4fe13f06d1c6567da7e3e
+SHA1 (patch-librbl_rbl.c) = c50029d01fa5c7acdbda14614ee129e73ee61e6e
