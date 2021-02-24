@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/24 18:38:42 hauke Exp $
+
+SHA1 (nx-libs-3.5.99.22-lite.tar.gz) = 8b1170000541be9c567de9b582a201258c7b1e50
+RMD160 (nx-libs-3.5.99.22-lite.tar.gz) = 33db4dcc1d54e956f875b5531637ef2123b154f4
+SHA512 (nx-libs-3.5.99.22-lite.tar.gz) = 161587f87e52bf274ac7fbad59ceaf8ad111666a966b26d4f9a063fbb53f80f48a7844d343b7d19bf22e48707e925797e126058dbae6081b27dbb22a3346cd90
+Size (nx-libs-3.5.99.22-lite.tar.gz) = 740152 bytes
+SHA1 (patch-nxcomp_src_Socket.cpp) = dce79c91ede78fbc0367f5f9de81a7dbca5ba928
