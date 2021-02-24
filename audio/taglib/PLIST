@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/10/31 16:32:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/02/24 12:31:57 wiz Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -25,6 +25,7 @@ include/taglib/flacproperties.h
 include/taglib/generalencapsulatedobjectframe.h
 include/taglib/id3v1genres.h
 include/taglib/id3v1tag.h
+include/taglib/id3v2.h
 include/taglib/id3v2extendedheader.h
 include/taglib/id3v2footer.h
 include/taglib/id3v2frame.h
@@ -107,7 +108,7 @@ include/taglib/xmfile.h
 include/taglib/xmproperties.h
 lib/libtag.so
 lib/libtag.so.1
-lib/libtag.so.1.17.0
+lib/libtag.so.1.18.0
 lib/libtag_c.so
 lib/libtag_c.so.0
 lib/libtag_c.so.0.0.0

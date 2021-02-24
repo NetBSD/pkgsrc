@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/01/18 23:30:06 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2021/02/24 12:31:57 wiz Exp $
 
-DISTNAME=	taglib-1.11.1
-PKGREVISION=	1
+DISTNAME=	taglib-1.12
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
@@ -31,7 +30,7 @@ SUBST_MESSAGE.pc=	Fixing rpath in taglib-config.
 #
 # depends on builtin functions which enabled with i486 and later with GCC.
 #
-.if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:Mgcc-[4-9]*) && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:Mgcc-[4-9]*) && ${MACHINE_ARCH} == i386
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
