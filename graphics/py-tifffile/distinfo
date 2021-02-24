@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/24 19:54:49 markd Exp $
+
+SHA1 (tifffile-2021.2.1.tar.gz) = be1dc4cf0079523482b0d3b5671a14551d9ab4ea
+RMD160 (tifffile-2021.2.1.tar.gz) = bac85430525f6a2e6c3df359bacf942c6b606bbf
+SHA512 (tifffile-2021.2.1.tar.gz) = 09ee4a6ed844ef8468acfdac75f0ae0e4ad06eb3b2cb53dd7aebe3271aa98efe5c49b89a9e979649cc28ec43b88add18144a741efac4f99055b42dfb9add41cf
+Size (tifffile-2021.2.1.tar.gz) = 239047 bytes
