@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/24 18:39:30 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/24 18:52:46 hauke Exp $
 
 DISTNAME=	x2goclient-${PKGVER}
 PKGVER=		4.1.2.2
+PKGREVISION=	1
 CATEGORIES=	x11 net
 MASTER_SITES=	http://code.x2go.org/releases/source/x2goclient/
 
@@ -10,6 +11,8 @@ HOMEPAGE=	http://www.x2go.org/
 COMMENT=	Qt client for the X2Go remote desktop system
 
 LICENSE=	gnu-gpl-v2
+
+NOT_FOR_PLATFORM+=	Linux-*-* Darwin-*-*
 
 USE_TOOLS+=		pkg-config gmake
 USE_LIBTOOL=		yes
@@ -61,7 +64,6 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/lrelease ${BUILDLINK_DIR}/bin/lrelease-qt4
 
 post-install:
-	#@${MKDIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/HOWTO.GPGCARD ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../x11/qt4-tools/buildlink3.mk"
