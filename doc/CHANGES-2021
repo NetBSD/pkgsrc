@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1238 2021/02/23 18:20:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1239 2021/02/24 08:01:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1978,3 +1978,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 86.0 [ryoon 2021-02-23]
 	Updated www/firefox-l10n to 86.0 [ryoon 2021-02-23]
 	Added print/jpeg-to-pdf version 0.2.1 [pin 2021-02-23]
+	Updated x11/xorgproto to 2021.2 [wiz 2021-02-24]
