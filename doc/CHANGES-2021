@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1251 2021/02/24 15:39:39 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1252 2021/02/24 18:40:45 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78 to 78.8.0 [nia 2021-02-24]
 	Added biology/igv version 2.9.2 [bacon 2021-02-24]
 	Updated emulators/mame to 0.229 [wiz 2021-02-24]
+	Added x11/nx-libs version 3.5.99.22 [hauke 2021-02-24]
