@@ -1,0 +1,7 @@
+Tifffile is a Python library to
+* store numpy arrays in TIFF (Tagged Image File Format) files, and
+* read image and metadata from TIFF-like files used in bioimaging.
+Image and metadata can be read from TIFF, BigTIFF, OME-TIFF, STK,
+LSM, SGI, NIHImage, ImageJ, MicroManager, FluoView, ScanImage, SEQ,
+GEL, SVS, SCN, SIS, ZIF (Zoomable Image File Format), QPTIFF (QPI),
+NDPI, and GeoTIFF files.
