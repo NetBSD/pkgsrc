@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/11 03:17:19 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2021/02/24 23:19:15 gutteridge Exp $
 
-SHA1 (music21-noCorpus-6.7.0.tar.gz) = 36ec9b7ade2cf83b6aead5da35a3d3c338d43195
-RMD160 (music21-noCorpus-6.7.0.tar.gz) = f13b9c5ee2ea2ad00dd3a33721dbf64683e15e38
-SHA512 (music21-noCorpus-6.7.0.tar.gz) = 6d72d005eb59dcb5c828ba3f211c68c4d57759da346c3a5dc8935743de411242df011ac7abc9305de3a0caca71be0f46e776cf741846680fa5293b8c20e77443
-Size (music21-noCorpus-6.7.0.tar.gz) = 5321626 bytes
+SHA1 (music21-noCorpus-6.7.1.tar.gz) = 8756acab1099d5ee226086d5c86bb301e684c2c3
+RMD160 (music21-noCorpus-6.7.1.tar.gz) = 2ee8869c9486d5e24090a508c1780558ffef6b68
+SHA512 (music21-noCorpus-6.7.1.tar.gz) = fe1e965c4a4ea704e26bd8955cb41f3e550265fa01af460d9efba6d4c1888edabff1951576e06246b4cbdfba0b18121345d375aa57b6a7f58a716592a2a05b6f
+Size (music21-noCorpus-6.7.1.tar.gz) = 5323225 bytes
