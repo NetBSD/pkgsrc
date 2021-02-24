@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 21:49:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/24 21:48:36 markd Exp $
+man/man1/dvilualatex.1
 man/man1/latex.1
+man/man1/lualatex.1
 man/man1/pdflatex.1
