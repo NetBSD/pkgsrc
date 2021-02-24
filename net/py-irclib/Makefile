@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:10 nia Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/02/24 01:17:24 gutteridge Exp $
 
 PYIRCVERS=		11.1.1
 DISTNAME=		irc-${PYIRCVERS}
@@ -21,14 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-jaraco_util>=10.0.2:../../devel/py-jaraco_util
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5:../../devel/py-hgtools
 
-.include "../../lang/python/distutils.mk"
-
-PLIST_VARS+=	requires
-.if ${PYVERSSUFFIX} == "2.5" || ${PYVERSSUFFIX} == "2.6"
-PLIST.requires=	yes
-.endif
-
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} ${SHAREMODE} irc.egg-info/*
 
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
