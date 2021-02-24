@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1243 2021/02/24 11:06:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1244 2021/02/24 12:26:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs10 to 10.24.0 [adam 2021-02-24]
 	Updated lang/nodejs12 to 12.21.0 [adam 2021-02-24]
 	Updated lang/nodejs to 14.16.0 [adam 2021-02-24]
+	Updated audio/libebur128 to 1.2.6 [wiz 2021-02-24]
