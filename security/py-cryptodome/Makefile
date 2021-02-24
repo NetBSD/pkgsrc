@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/02/17 15:59:20 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/02/24 01:11:34 gutteridge Exp $
 
 DISTNAME=	pycryptodome-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -17,7 +17,15 @@ CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP=	appveyor/get_wheels.sh
 
+.include "../../lang/python/egg.mk"
+
+# Python 3 builds of this package get an extra "abi3" suffix added
+.if ${PYVERSSUFFIX} != "2.7"
+PLIST_SUBST+=	SOEXT="abi3.so"
+.else
+PLIST_SUBST+=	SOEXT="so"
+.endif
+
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=5.0
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
