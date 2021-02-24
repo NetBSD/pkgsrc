@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1255 2021/02/24 19:41:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1256 2021/02/24 20:08:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2000,3 +2000,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/openvpn to 2.5.1 [adam 2021-02-24]
 	Updated security/py-rsa to 4.7.2 [adam 2021-02-24]
 	Updated devel/py-rply to 0.7.8 [adam 2021-02-24]
+	Added graphics/py-tifffile version 2021.2.1 [markd 2021-02-24]
+	Updated math/py-scikit-image to 0.18.1 [markd 2021-02-24]
