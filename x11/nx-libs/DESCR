@@ -1,0 +1,2 @@
+nxcomp is a library for compressing X commands to be passed over a
+network, for use with x2go.
