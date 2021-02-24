@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.46 2021/02/22 09:32:55 nia Exp $
+# $NetBSD: genreadme.awk,v 1.47 2021/02/24 08:16:32 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -417,14 +417,12 @@ END {
 					    pkg, readme_name,
 					    pkgdir2name[dir],
 					    comment[dir]);
-					allpkg[tot_numpkg] = sprintf("<!-- %s (for sorting) --><tr><td><a href=\"%s/%s/%s\">%s</a></td><td><a href=\"%s/%s\">%s</a></td><td>%s</td>\n",
+					# Prefix with the package name in a comment for sorting.
+					allpkg[tot_numpkg] = sprintf("<!-- %s --><dt><a href=\"%s/%s/%s\">%s</a></dt><dd>%s</dd>\n",
 								      pkgdir2name[dir],
 								      category, pkg,
 								      readme_name,
 								      pkgdir2name[dir],
-								      category,
-								      readme_name,
-								      category,
 								      comment[dir]);
 # we need slightly fewer escapes here since we are not gsub()-ing
 # allpkg[] into the output files but just printf()-ing it.
