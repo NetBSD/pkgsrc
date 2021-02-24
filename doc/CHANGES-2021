@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1254 2021/02/24 19:14:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1255 2021/02/24 19:41:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1999,3 +1999,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added x11/x2go-client version 4.1.2.2 [hauke 2021-02-24]
 	Updated net/openvpn to 2.5.1 [adam 2021-02-24]
 	Updated security/py-rsa to 4.7.2 [adam 2021-02-24]
+	Updated devel/py-rply to 0.7.8 [adam 2021-02-24]
