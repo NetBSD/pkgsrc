@@ -1,0 +1,18 @@
+X2Go is a Remote Desktop solution: It enables you to access a
+computer's graphical desktop over the network.
+
+X2Go works well over a low bandwidth connection.
+
+The Unix computer you are accessing is the X2Go Server (there are ways
+to connect to a Windows computer as well).
+
+You can connect from a computer running Unix, Windows or Mac OS
+X. This computer is the X2Go Client.
+
+Multiple users/clients can access a single X2Go Server at the same
+time, with each user/client having an individual Desktop session by
+default - however, Desktop sharing (Remote Assistance) is possible,
+too.
+
+For the graphical part of remote desktop sessions, X2Go uses No
+Machine NX3 technology under the hood.
