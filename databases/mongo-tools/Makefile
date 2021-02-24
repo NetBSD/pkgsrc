@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/05/27 19:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/02/24 19:38:33 adam Exp $
 
-DISTNAME=	mongo-tools-3.4.23
-PKGREVISION=	1
+DISTNAME=	mongo-tools-4.2.12
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	r${PKGVERSION_NOREV}
@@ -16,11 +15,12 @@ BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 
+CHECK_PORTABILITY_SKIP=	vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
+
 .include "options.mk"
 
-# TODO: mongoreplay
 MONGO_TOOLS=	bsondump mongodump mongoexport mongofiles mongoimport \
-		mongooplog mongorestore mongostat mongotop
+		mongoreplay mongorestore mongostat mongotop
 
 # go uses volatile /tmp dirs that contain required includes files too
 BUILDLINK_PASSTHRU_DIRS+=	/tmp
@@ -29,11 +29,11 @@ INSTALLATION_DIRS+=		bin
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/vendor/github.com/mongodb/mongo-tools
-.for tool in common ${MONGO_TOOLS}
+.for tool in common legacy ${MONGO_TOOLS}
 	${LN} -s ${WRKSRC}/${tool} ${WRKSRC}/vendor/github.com/mongodb/mongo-tools/${tool}
 .endfor
 	${MKDIR} -p ${WRKSRC}/vendor/src
-.for site in github.com golang.org gopkg.in
+.for site in github.com golang.org go.mongodb.org gopkg.in
 	${LN} -s ${WRKSRC}/vendor/${site} ${WRKSRC}/vendor/src/${site}
 .endfor
 
