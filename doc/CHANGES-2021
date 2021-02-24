@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1241 2021/02/24 09:45:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1242 2021/02/24 10:13:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1982,3 +1982,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-tortoisehg to 5.7 [wiz 2021-02-24]
 	Updated devel/protobuf to 3.15.2 [adam 2021-02-24]
 	Updated devel/py-protobuf to 3.15.2 [adam 2021-02-24]
+	Updated print/jpeg-to-pdf to 0.2.2 [pin 2021-02-24]
