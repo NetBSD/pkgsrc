@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/02/12 00:24:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.66 2021/02/24 14:05:25 wiz Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -32,6 +32,7 @@ SUBDIR+=	gromacs
 SUBDIR+=	hisat2
 SUBDIR+=	hmmer
 SUBDIR+=	htslib
+SUBDIR+=	igv
 SUBDIR+=	kallisto
 SUBDIR+=	lucy
 SUBDIR+=	maeparser
