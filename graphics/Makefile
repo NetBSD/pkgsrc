@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.925 2021/02/14 11:51:57 nros Exp $
+# $NetBSD: Makefile,v 1.926 2021/02/24 19:56:15 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -511,6 +511,7 @@ SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-strich
+SUBDIR+=	py-tifffile
 SUBDIR+=	py-uniconvertor
 SUBDIR+=	py-wand
 SUBDIR+=	qimageblitz
