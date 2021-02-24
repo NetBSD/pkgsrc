@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:32:05 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/24 21:05:30 markd Exp $
 
 DISTNAME=	latex-bin
 PKGNAME=	tex-${DISTNAME}-2016
-PKGREVISION=	3
+PKGREVISION=	4
 TEXLIVE_REV=	40963
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,6 +11,9 @@ COMMENT=	LaTeX executables
 CONFLICTS+=	tex-bin-latex<2009
 DEPENDS+=	tex-babel>3.14:../../print/tex-babel
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
+DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
+DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
+DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex>=2012:../../print/tex-latex
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 SUPERSEDES=	tex-bin-latex<2009
