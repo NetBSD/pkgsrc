@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/24 18:52:46 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/24 19:22:22 hauke Exp $
 
 DISTNAME=	x2goclient-${PKGVER}
 PKGVER=		4.1.2.2
@@ -74,6 +74,6 @@ post-install:
 
 .include "../../print/libcups/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../hauke/nx-libs/buildlink3.mk"
+.include "../../x11/nx-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
