@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2021/02/24 21:10:20 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/24 21:48:35 markd Exp $
 
 DISTNAME=	latex-bin
-PKGNAME=	tex-${DISTNAME}-2016
-PKGREVISION=	4
-TEXLIVE_REV=	40963
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	57186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX executables
 
 CONFLICTS+=	tex-bin-latex<2009
+DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
+DEPENDS+=	tex-atveryend-[0-9]*:../../print/tex-atveryend
 DEPENDS+=	tex-babel>3.14:../../print/tex-babel
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
 DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
@@ -24,7 +25,6 @@ INSTALLATION_DIRS=	bin
 TEX_FORMATS+=	"latex pdftex language.dat -translate-file=cp227.tcx *latex.ini\\npdflatex pdftex language.dat -translate-file=cp227.tcx *pdflatex.ini\\ndvilualatex luatex language.dat,language.dat.lua dvilualatex.ini\\nlualatex luatex language.dat,language.dat.lua lualatex.ini\\n"
 TEX_TEXMF_DIRS=	# empty
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:
