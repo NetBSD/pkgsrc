@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1246 2021/02/24 12:32:06 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1247 2021/02/24 13:00:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1989,3 +1989,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libebur128 to 1.2.6 [wiz 2021-02-24]
 	Updated audio/musicpd to 0.22.6 [wiz 2021-02-24]
 	Updated audio/taglib to 1.12 [wiz 2021-02-24]
+	Updated databases/mongo-c-driver to 1.17.4 [adam 2021-02-24]
+	Updated devel/py-pylint to 2.7.1 [adam 2021-02-24]
