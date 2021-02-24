@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2021/02/24 18:39:30 hauke Exp $
+
+SHA1 (x2goclient-4.1.2.2.tar.gz) = 822924d16f8bb297f6046ff86084e10a46442216
+RMD160 (x2goclient-4.1.2.2.tar.gz) = bc8d71587e5c278632150db0a84836963b791b3e
+SHA512 (x2goclient-4.1.2.2.tar.gz) = 85e6db6a34629512be64376883c205d8bf0696c4697cf216970b57a91ffe68dcf7f38bfda0d396c104602f6991b596c5fb0934e75fa4a93f7d0e41c2b3f5ac4d
+Size (x2goclient-4.1.2.2.tar.gz) = 2576404 bytes
+SHA1 (patch-Makefile) = 6c431a2a9aac9f1b35061a89221553449d5968e4
+SHA1 (patch-src_printwidget.cpp) = b3b8a9efa43fd6f53ea91c11911a531d3e1d950c
+SHA1 (patch-src_sshmasterconnection.cpp) = 5758273e6a7fd6aeb95f3bd02a08c3fc9b8fcd52
+SHA1 (patch-src_sshprocess.cpp) = ff1da65d92068f7f5e2a958019d3dbd74bff9642
+SHA1 (patch-src_sshprocess.h) = 172c4a54b1b1dc55898aa85b5a7dc42dbec102a5
+SHA1 (patch-src_x2goclientconfig.h) = a98438be46c9fd5c1bbc53ec711ce37c12dc067d
