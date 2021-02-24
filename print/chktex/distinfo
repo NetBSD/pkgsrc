@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2018/05/16 12:42:19 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/02/24 20:41:23 markd Exp $
 
 SHA1 (chktex-1.7.6.tar.gz) = f1deb9ef9d5bd7732334f09c64587ff2c30cdb5f
 RMD160 (chktex-1.7.6.tar.gz) = 08a2e1bd14aff2d4eec3c48f77d873ec2321304f
 SHA512 (chktex-1.7.6.tar.gz) = dd5ad2d7fce66eeb8d890bd79d00bdb28d9807539988232a917d6478c204e9a0ab287f2b8baf7977dba374b551609d8951cbf67ad15a793d35cdfe3411e4fe0b
 Size (chktex-1.7.6.tar.gz) = 153071 bytes
 SHA1 (patch-ChkTeX.tex.in) = dd04eb6da0a7808f40b515862deffd5b1d99f9ae
-SHA1 (patch-aa) = 6a8c9c7e916e60a4a16e54832101dbd1af4fd153
+SHA1 (patch-aa) = e393bf5e059ee7dacb54ee42ddb3e9abab44dccf
