@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/12/09 12:20:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/02/24 09:04:58 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -271,6 +271,12 @@ ${PYSITELIB}/tortoisehg/hgqt/shellconf.pyo
 ${PYSITELIB}/tortoisehg/hgqt/shelve.py
 ${PYSITELIB}/tortoisehg/hgqt/shelve.pyc
 ${PYSITELIB}/tortoisehg/hgqt/shelve.pyo
+${PYSITELIB}/tortoisehg/hgqt/shortcutregistry.py
+${PYSITELIB}/tortoisehg/hgqt/shortcutregistry.pyc
+${PYSITELIB}/tortoisehg/hgqt/shortcutregistry.pyo
+${PYSITELIB}/tortoisehg/hgqt/shortcutsettings.py
+${PYSITELIB}/tortoisehg/hgqt/shortcutsettings.pyc
+${PYSITELIB}/tortoisehg/hgqt/shortcutsettings.pyo
 ${PYSITELIB}/tortoisehg/hgqt/sign.py
 ${PYSITELIB}/tortoisehg/hgqt/sign.pyc
 ${PYSITELIB}/tortoisehg/hgqt/sign.pyo
