@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2021/01/26 22:10:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2021/02/24 15:39:30 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -38,6 +38,7 @@ share/mame/artwork/aperture2x4bg.png
 share/mame/artwork/aperture2x4rb.png
 share/mame/artwork/aperture4x6.png
 share/mame/artwork/bgfx/border_blur/default.lay
+share/mame/artwork/bgfx/chains/crt-geom/add_alpha.py
 share/mame/artwork/bgfx/chains/crt-geom/aperture_1_2_bgr.png
 share/mame/artwork/bgfx/chains/crt-geom/aperture_1_4_rgb.png
 share/mame/artwork/bgfx/chains/crt-geom/aperture_2_4_rgb.png
@@ -297,6 +298,7 @@ share/mame/hash/hp9k3xx_cdrom.xml
 share/mame/hash/hp9k3xx_flop.xml
 share/mame/hash/hp9k3xx_hdd.xml
 share/mame/hash/hp_ipc.xml
+share/mame/hash/hp_ipc_rom.xml
 share/mame/hash/ht68k.xml
 share/mame/hash/hx20_rom.xml
 share/mame/hash/hyperscan.xml
