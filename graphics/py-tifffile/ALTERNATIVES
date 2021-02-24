@@ -1,0 +1,3 @@
+bin/lsm2bin @PREFIX@/bin/lsm2bin-@PYVERSSUFFIX@
+bin/tiffcomment @PREFIX@/bin/tiffcomment-@PYVERSSUFFIX@
+bin/tifffile @PREFIX@/bin/tifffile-@PYVERSSUFFIX@
