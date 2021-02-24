@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1240 2021/02/24 09:05:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1241 2021/02/24 09:45:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1980,3 +1980,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/jpeg-to-pdf version 0.2.1 [pin 2021-02-23]
 	Updated x11/xorgproto to 2021.2 [wiz 2021-02-24]
 	Updated devel/py-tortoisehg to 5.7 [wiz 2021-02-24]
+	Updated devel/protobuf to 3.15.2 [adam 2021-02-24]
+	Updated devel/py-protobuf to 3.15.2 [adam 2021-02-24]
