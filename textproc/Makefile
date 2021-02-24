@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1197 2021/02/21 06:22:03 markd Exp $
+# $NetBSD: Makefile,v 1.1198 2021/02/24 13:18:45 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -799,6 +799,7 @@ SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	p5-podlators
 SUBDIR+=	p5-sdf
 SUBDIR+=	p5-yamcha
+SUBDIR+=	paperoni
 SUBDIR+=	par
 SUBDIR+=	pdfgrep
 SUBDIR+=	pear-Console_Table
