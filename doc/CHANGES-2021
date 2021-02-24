@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1258 2021/02/24 23:20:04 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1259 2021/02/24 23:32:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2005,3 +2005,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-latex-bin to 2020 [markd 2021-02-24]
 	Updated print/tex-latex-bin-doc to 2020 [markd 2021-02-24]
 	Updated audio/py-music21 to 6.7.1 [gutteridge 2021-02-24]
+	Updated time/p5-DateTime-TimeZone to 2.47 [gutteridge 2021-02-24]
