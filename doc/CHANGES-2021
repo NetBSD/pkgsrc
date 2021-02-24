@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1249 2021/02/24 13:20:54 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1250 2021/02/24 13:55:42 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pylint to 2.7.1 [adam 2021-02-24]
 	Added textproc/paperoni version 0.3.0 [pin 2021-02-24]
 	Updated www/firefox78 to 78.8.0 [nia 2021-02-24]
+	Added biology/igv version 2.9.2 [bacon 2021-02-24]
