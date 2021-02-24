@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ -e /usr/libexec/java_home ]; then
+    # MacOS openjdk
+    export JAVA_HOME=$(/usr/libexec/java_home)
+elif [ -e %%PREFIX%%/java/openjdk11/bin/java ]; then
+    # Custom pkgsrc
+    export JAVA_HOME=%%PREFIX%%/java/openjdk11
+elif [ -e /usr/pkg/java/openjdk11/bin/java ]; then
+    # Try NetBSD default pkgsrc if not installed in the custom tree
+    export JAVA_HOME=/usr/pkg/java/openjdk11
+fi
+
+if [ -e $JAVA_HOME/bin/java ]; then
+    java=$JAVA_HOME/bin/java
+else
+    # Assume env is correctly configured
+    java=java
+fi
+
+if ! $java -version 2>&1 | head -n 1 | fgrep '"11.'; then
+    printf "You need Java 11 to run IGV.\n"
+    java -version
+    exit 1
+fi
+
+$java -showversion \
+    --module-path="%%JAVAJARDIR%%/igv" -Xmx4g \
+    @"%%JAVAJARDIR%%/igv/igv.args" \
+    -Dapple.laf.useScreenMenuBar=true \
+    -Djava.net.preferIPv4Stack=true \
+    --module=org.igv/org.broad.igv.ui.Main "$@"
