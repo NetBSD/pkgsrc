@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/24 18:38:42 hauke Exp $
+bin/nxproxy
+include/nx/MD5.h
+include/nx/NX.h
+include/nx/NXalert.h
+include/nx/NXpack.h
+include/nx/NXproto.h
+include/nx/NXvars.h
+lib/libXcomp.la
+lib/pkgconfig/nxcomp.pc
+man/man1/nxproxy.1
