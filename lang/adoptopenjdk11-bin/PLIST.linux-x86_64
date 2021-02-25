@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2020/05/29 10:57:06 abs Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2021/02/25 09:51:51 ryoon Exp $
 bin/adoptopenjdk11-bin-jar
 bin/adoptopenjdk11-bin-java
 bin/adoptopenjdk11-bin-javac
@@ -129,6 +129,7 @@ java/adoptopenjdk11-bin/jmods/jdk.management.agent.jmod
 java/adoptopenjdk11-bin/jmods/jdk.management.jfr.jmod
 java/adoptopenjdk11-bin/jmods/jdk.management.jmod
 java/adoptopenjdk11-bin/jmods/jdk.naming.dns.jmod
+java/adoptopenjdk11-bin/jmods/jdk.naming.ldap.jmod
 java/adoptopenjdk11-bin/jmods/jdk.naming.rmi.jmod
 java/adoptopenjdk11-bin/jmods/jdk.net.jmod
 java/adoptopenjdk11-bin/jmods/jdk.pack.jmod
@@ -162,7 +163,6 @@ java/adoptopenjdk11-bin/legal/java.desktop/ADDITIONAL_LICENSE_INFO
 java/adoptopenjdk11-bin/legal/java.desktop/ASSEMBLY_EXCEPTION
 java/adoptopenjdk11-bin/legal/java.desktop/LICENSE
 java/adoptopenjdk11-bin/legal/java.desktop/colorimaging.md
-java/adoptopenjdk11-bin/legal/java.desktop/freetype.md
 java/adoptopenjdk11-bin/legal/java.desktop/giflib.md
 java/adoptopenjdk11-bin/legal/java.desktop/harfbuzz.md
 java/adoptopenjdk11-bin/legal/java.desktop/jpeg.md
@@ -297,7 +297,6 @@ java/adoptopenjdk11-bin/legal/jdk.jartool/LICENSE
 java/adoptopenjdk11-bin/legal/jdk.javadoc/ADDITIONAL_LICENSE_INFO
 java/adoptopenjdk11-bin/legal/jdk.javadoc/ASSEMBLY_EXCEPTION
 java/adoptopenjdk11-bin/legal/jdk.javadoc/LICENSE
-java/adoptopenjdk11-bin/legal/jdk.javadoc/jquery-migrate.md
 java/adoptopenjdk11-bin/legal/jdk.javadoc/jquery.md
 java/adoptopenjdk11-bin/legal/jdk.javadoc/jqueryUI.md
 java/adoptopenjdk11-bin/legal/jdk.javadoc/jszip.md
@@ -349,6 +348,9 @@ java/adoptopenjdk11-bin/legal/jdk.management/LICENSE
 java/adoptopenjdk11-bin/legal/jdk.naming.dns/ADDITIONAL_LICENSE_INFO
 java/adoptopenjdk11-bin/legal/jdk.naming.dns/ASSEMBLY_EXCEPTION
 java/adoptopenjdk11-bin/legal/jdk.naming.dns/LICENSE
+java/adoptopenjdk11-bin/legal/jdk.naming.ldap/ADDITIONAL_LICENSE_INFO
+java/adoptopenjdk11-bin/legal/jdk.naming.ldap/ASSEMBLY_EXCEPTION
+java/adoptopenjdk11-bin/legal/jdk.naming.ldap/LICENSE
 java/adoptopenjdk11-bin/legal/jdk.naming.rmi/ADDITIONAL_LICENSE_INFO
 java/adoptopenjdk11-bin/legal/jdk.naming.rmi/ASSEMBLY_EXCEPTION
 java/adoptopenjdk11-bin/legal/jdk.naming.rmi/LICENSE
@@ -406,7 +408,7 @@ java/adoptopenjdk11-bin/lib/libawt_xawt.so
 java/adoptopenjdk11-bin/lib/libdt_socket.so
 java/adoptopenjdk11-bin/lib/libextnet.so
 java/adoptopenjdk11-bin/lib/libfontmanager.so
-java/adoptopenjdk11-bin/lib/libfreetype.so
+java/adoptopenjdk11-bin/lib/libharfbuzz.so
 java/adoptopenjdk11-bin/lib/libinstrument.so
 java/adoptopenjdk11-bin/lib/libj2gss.so
 java/adoptopenjdk11-bin/lib/libj2pcsc.so
