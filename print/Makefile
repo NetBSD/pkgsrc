@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.800 2021/02/25 04:31:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.801 2021/02/25 16:35:45 khorben Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -131,6 +131,7 @@ SUBDIR+=	py-PDF2
 SUBDIR+=	py-Pdf
 SUBDIR+=	py-cups
 SUBDIR+=	py-latexcodec
+SUBDIR+=	py-octoprint
 SUBDIR+=	py-octoprint-filecheck
 SUBDIR+=	py-octoprint-firmwarecheck
 SUBDIR+=	py-pisa
