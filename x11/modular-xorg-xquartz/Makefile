@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/22 10:56:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/02/25 12:30:58 ryoon Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
@@ -81,10 +81,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 .include "../../security/nettle/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sha1=libnettle
 
-.if exists(/usr/bin/xcrun)
-MY_XCODE_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERSION} --show-sdk-path
-MAKE_ENV+=		OSX_SDK_PATH=${MY_XCODE_SDK_PATH}
-.endif
+MAKE_ENV+=		OSX_SDK_PATH=${XCODE_SDK_PATH}
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
