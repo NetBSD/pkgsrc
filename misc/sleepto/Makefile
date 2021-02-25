@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/02/25 10:11:30 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/25 10:28:22 simonb Exp $
 
-DISTNAME=	sleepto-1.0
+DISTNAME=	sleepto-1.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz

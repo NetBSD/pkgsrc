@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/25 10:11:30 simonb Exp $
+$NetBSD: distinfo,v 1.2 2021/02/25 10:28:22 simonb Exp $
 
-SHA1 (sleepto-1.0.tar.xz) = 81646cec067a553887107ca113fb3ccad308dff1
-RMD160 (sleepto-1.0.tar.xz) = 42405c3e8e3aa974a279d179e85296313addbd96
-SHA512 (sleepto-1.0.tar.xz) = 0e924cc9c0c646a6103ec3071f4dcb7fab78aea61fad8f674c9c0064d6a7c0e22edacbb90ac2f1a3858366bc429c68bc6d8eb08bf14dead711e218ce05702f33
-Size (sleepto-1.0.tar.xz) = 7976 bytes
+SHA1 (sleepto-1.1.tar.xz) = ccbd55ec47ee34e0e4c335ac62067b8ee8904ea3
+RMD160 (sleepto-1.1.tar.xz) = f8b7ddd53332d0bab6e5289eb125b3c3f936aa65
+SHA512 (sleepto-1.1.tar.xz) = 3027f6ab8ff93dad31a9a08e917c73b01bd7ce6f93fb7f9eda1281d949370c62a0ad7a78bfd539d864b6ff9025d3777d91d57d341ad32a9f022bb57d9e09850e
+Size (sleepto-1.1.tar.xz) = 7992 bytes
