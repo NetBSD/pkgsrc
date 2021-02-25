@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1262 2021/02/25 03:31:30 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1263 2021/02/25 07:06:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-TimeZone to 2.47 [gutteridge 2021-02-24]
 	Updated multimedia/libkcompactdisc to 20.04.1 [markd 2021-02-24]
 	Updated multimedia/audiocd-kio to 20.04.1 [markd 2021-02-24]
+	Updated x11/xorgproto to 2021.3 [wiz 2021-02-25]
