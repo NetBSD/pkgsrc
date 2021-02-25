@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/25 15:34:38 khorben Exp $
+
+SHA1 (sentry-python/sentry-sdk-0.20.3.tar.gz) = 8a0422a4857975f7db82d968a0f8836a69da7942
+RMD160 (sentry-python/sentry-sdk-0.20.3.tar.gz) = 35be0c7c053a225b4548edc4f6cf116bf9bbc535
+SHA512 (sentry-python/sentry-sdk-0.20.3.tar.gz) = 1e3a8c7f81148343b92a3006e6c275bf36fcc54b4bbdbf941338a5e4c0e890a8b5420f34427e95d1a59f0dcca388f08a586281a9b2a8d3e0119e8141774196d5
+Size (sentry-python/sentry-sdk-0.20.3.tar.gz) = 99177 bytes
