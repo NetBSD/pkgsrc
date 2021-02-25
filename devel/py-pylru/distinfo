@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/25 15:10:08 khorben Exp $
+
+SHA1 (pylru-1.2.0.tar.gz) = e2754775c3025428a1c5406d7dc1bac54f586f42
+RMD160 (pylru-1.2.0.tar.gz) = b066998bdc27e6588723b7f674ea8c10b44a5a58
+SHA512 (pylru-1.2.0.tar.gz) = d4b247cb3740c2f94f4f41bd9affbb87db4e2ec8ff566978d130d08fee9df6109c13b64f22536903bf8be3ea60d4b105dd969d1156a279115b6bfedb817cdbf5
+Size (pylru-1.2.0.tar.gz) = 18533 bytes
