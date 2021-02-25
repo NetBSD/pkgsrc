@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/25 15:27:19 pin Exp $
+
+SHA1 (xst-0.8.4.1.tar.gz) = 0ae5cf29eaae1aebb87885d0be16e8f1af6cbef0
+RMD160 (xst-0.8.4.1.tar.gz) = 8a5d6b5dd7fb08bc44713515c80811c02c6e7d2a
+SHA512 (xst-0.8.4.1.tar.gz) = 00478f16caf599ae4a0c1cdfc7e5e148eb864ae5e28c416d5872d7e1d20f56e01b58475653f742418168edfc64eba781926b51adc815ef3a63f28da85025c0ac
+Size (xst-0.8.4.1.tar.gz) = 58339 bytes
+SHA1 (patch-Makefile) = 12d096790c7c808114297d44404932f7d00156f8
