@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/25 09:55:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/25 16:18:14 nia Exp $
 
 DISTNAME=	gtk-4.0.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.gtk.org/
-COMMENT=	Multi-platform toolkit for creating GUI, version 4
+COMMENT=	Multi-platform toolkit for creating GUIs, version 4
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
