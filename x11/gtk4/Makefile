@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/25 16:18:14 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/25 18:50:50 ryoon Exp $
 
 DISTNAME=	gtk-4.0.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -53,7 +53,7 @@ PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 #.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
-# json-gliba and librest07 are required to support Google Cloud Print.
+# json-glib and librest07 are required to support Google Cloud Print.
 # Google Cloud Print reached EOL (2020-12-31).
 #.include "../../textproc/json-glib/buildlink3.mk"
 #.include "../../www/librest07/buildlink3.mk"
