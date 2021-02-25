@@ -1,0 +1,19 @@
+$NetBSD: patch-meson.build,v 1.1 2021/02/25 09:55:55 ryoon Exp $
+
+* Do not check gtk-doc dependency unconditionally. (only for pkgsrc)
+
+--- meson.build.orig	2021-02-07 23:06:57.760977300 +0000
++++ meson.build
+@@ -400,10 +400,12 @@ else
+ endif
+ iso_codes_dep  = dependency('iso-codes', required: false)
+ 
++if get_option('gtk_doc')
+ gtk_doc_dep    = dependency('gtk-doc', version: '>=1.33',
+                             fallback: ['gtk-doc', 'dummy_dep'],
+                             default_options: ['tests=false', 'yelp_manual=false'],
+                             required: get_option('gtk_doc'))
++endif
+ 
+ fontconfig_dep = [] # only used in x11 backend
+ 
