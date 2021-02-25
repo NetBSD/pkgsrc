@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1269 2021/02/25 10:23:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1270 2021/02/25 10:51:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2018,3 +2018,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated inputmethod/fcitx5-gtk to 5.0.3nb1 [ryoon 2021-02-25]
 	Updated games/simgear to 2020.3.6 [nia 2021-02-25]
 	Updated games/flightgear to 2020.3.6 [nia 2021-02-25]
+	Updated sysutils/sfm to 0.4.1 [pin 2021-02-25]
