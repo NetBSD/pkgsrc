@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/08/17 20:20:36 leot Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/25 15:20:28 pin Exp $
 
 DISTNAME=	st-0.8.4
 PKGNAME=	${DISTNAME:S/-/-term-/}
@@ -12,6 +12,8 @@ COMMENT=	Simple terminal implementation for X
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
+
+CONFLICTS=      xst-[0-9]*
 
 USE_TOOLS+=	pkg-config
 
