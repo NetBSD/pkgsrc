@@ -1,0 +1,2 @@
+A Go package providing Levenshtein distance and similarity metrics with
+customizable edit costs and Winkler-like bonus for common prefix.
