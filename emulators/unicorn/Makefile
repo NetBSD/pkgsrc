@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2020/12/04 20:45:17 nia Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/25 19:47:50 leot Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 1.0.1
+#PYTHON_VERSIONS_ACCEPTED=	27 # as of 1.0.1
 
 .include "../../lang/python/application.mk"
 
