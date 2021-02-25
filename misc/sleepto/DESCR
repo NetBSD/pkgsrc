@@ -1,0 +1,4 @@
+sleepto is a sleep command that uses the at(1) command's moderately
+complex time specifications.
+
+Example usage:  sleepto 9am wednesday
