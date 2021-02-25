@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1264 2021/02/25 07:38:34 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1265 2021/02/25 09:19:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2010,3 +2010,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/audiocd-kio to 20.04.1 [markd 2021-02-24]
 	Updated x11/xorgproto to 2021.3 [wiz 2021-02-25]
 	Updated www/firefox78-l10n to 78.8.0 [nia 2021-02-25]
+	Updated net/py-botocore to 1.20.15 [adam 2021-02-25]
+	Updated net/py-boto3 to 1.17.15 [adam 2021-02-25]
+	Updated net/py-awscli to 1.19.15 [adam 2021-02-25]
+	Updated security/py-google-auth to 1.27.0 [adam 2021-02-25]
