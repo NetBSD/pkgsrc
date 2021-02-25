@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/02/25 16:35:23 khorben Exp $
+
+For timelapse support, py-octoprint also needs multimedia/ffmpeg4.
+Install it manually if this feature is required.
+===========================================================================
