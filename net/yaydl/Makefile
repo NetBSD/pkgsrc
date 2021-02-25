@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2021/01/31 14:52:06 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/25 10:51:58 pin Exp $
 
-DISTNAME=	yaydl-0.3.1
+DISTNAME=	yaydl-0.3.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dertuxmalwieder/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://code.rosaelefanten.org/yaydl/index
+HOMEPAGE=	https://code.rosaelefanten.org/yaydl/home
 COMMENT=	Yet another youtube down loader
 LICENSE=	cddl-1.0
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=			c	# rust, but needs a toolchain to link
-USE_TOOLS+=			pkg-config
+USE_LANGUAGES+=	c
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
 
