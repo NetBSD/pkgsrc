@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1280 2021/02/25 16:36:53 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.1281 2021/02/25 19:48:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2030,3 +2030,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-sentry-sdk version 0.20.3 [khorben 2021-02-25]
 	Updated lang/erlang-doc to 23.2nb2 [triaxx 2021-02-25]
 	Added print/py-octoprint version 1.5.3 [khorben 2021-02-25]
+	Updated emulators/unicorn to 1.0.2 [leot 2021-02-25]
