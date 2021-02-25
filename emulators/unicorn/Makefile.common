@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2020/08/18 00:35:20 tnn Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/02/25 19:47:50 leot Exp $
 #
 # used by emulators/py-unicorn/Makefile
 
-DISTNAME=	unicorn-1.0.1
+DISTNAME=	unicorn-1.0.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicorn-engine/}
 
