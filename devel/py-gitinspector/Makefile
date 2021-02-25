@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2018/05/29 16:39:24 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/25 02:03:47 markd Exp $
 
 GITHUB_PROJECT=	gitinspector
 DISTNAME=	gitinspector-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ejwa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
