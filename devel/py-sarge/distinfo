@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/25 15:23:21 khorben Exp $
+
+SHA1 (sarge-0.1.6.tar.gz) = e258e2ff546f3ec35d6aaf1aa2af0f5b26e13bea
+RMD160 (sarge-0.1.6.tar.gz) = 7f9640b40e42628b0c731f2b9cfcdd5d3ac0742c
+SHA512 (sarge-0.1.6.tar.gz) = 836cc7b2a7b18437e0e0a79d0ed9313d277ba6b3c56b497511e831311858a77a19541e29a5096bddd506af10f1d9fad5b2cc6b872f134a66881cecb2502fac32
+Size (sarge-0.1.6.tar.gz) = 26244 bytes
