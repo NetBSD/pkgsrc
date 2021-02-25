@@ -1,8 +1,8 @@
-$NetBSD: patch-simgear_canvas_ShivaVG_src_shConfig.h,v 1.2 2018/08/06 11:03:18 jperkin Exp $
+$NetBSD: patch-simgear_canvas_ShivaVG_src_shConfig.h,v 1.3 2021/02/25 10:22:14 nia Exp $
 
 Support NetBSD and SunOS.
 
---- simgear/canvas/ShivaVG/src/shConfig.h.orig	2018-06-03 18:56:36.000000000 +0000
+--- simgear/canvas/ShivaVG/src/shConfig.h.orig	2021-01-23 18:01:02.000000000 +0000
 +++ simgear/canvas/ShivaVG/src/shConfig.h
 @@ -16,7 +16,7 @@
          #define NOMINMAX
@@ -22,6 +22,6 @@ Support NetBSD and SunOS.
 +    // NetBSD
 +    #define VG_API_NETBSD
 +
- #else
+ #elif defined(__OpenBSD__)
  
-     // Unsupported system
+     // FreeBSD
