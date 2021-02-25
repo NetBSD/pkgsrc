@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/25 15:23:21 khorben Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/sarge/__init__.py
+${PYSITELIB}/sarge/__init__.pyc
+${PYSITELIB}/sarge/__init__.pyo
+${PYSITELIB}/sarge/shlext.py
+${PYSITELIB}/sarge/shlext.pyc
+${PYSITELIB}/sarge/shlext.pyo
+${PYSITELIB}/sarge/utils.py
+${PYSITELIB}/sarge/utils.pyc
+${PYSITELIB}/sarge/utils.pyo
