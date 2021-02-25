@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1265 2021/02/25 09:19:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1266 2021/02/25 09:56:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-boto3 to 1.17.15 [adam 2021-02-25]
 	Updated net/py-awscli to 1.19.15 [adam 2021-02-25]
 	Updated security/py-google-auth to 1.27.0 [adam 2021-02-25]
+	Added x11/gtk4 version 4.0.3 [ryoon 2021-02-25]
