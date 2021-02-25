@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1279 2021/02/25 16:35:58 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.1280 2021/02/25 16:36:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2027,9 +2027,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-sarge version 0.1.6 [khorben 2021-02-25]
 	Added x11/xst version 0.8.4.1 [pin 2021-02-25]
 	Updated lang/erlang to 23.2.6 [triaxx 2021-02-25]
-<<<<<<< CHANGES-2021
 	Added devel/py-sentry-sdk version 0.20.3 [khorben 2021-02-25]
-=======
 	Updated lang/erlang-doc to 23.2nb2 [triaxx 2021-02-25]
->>>>>>> 1.1278
 	Added print/py-octoprint version 1.5.3 [khorben 2021-02-25]
