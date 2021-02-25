@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2021/01/11 09:43:21 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.76 2021/02/25 12:20:09 ryoon Exp $
 bin/pango-list
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -30,7 +30,6 @@ include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango-version-macros.h
 include/pango-1.0/pango/pango.h
 include/pango-1.0/pango/pangocairo.h
-${PLIST.quartz}include/pango-1.0/pango/pangocoretext.h
 include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
