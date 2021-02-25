@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1198 2021/02/24 13:18:45 pin Exp $
+# $NetBSD: Makefile,v 1.1199 2021/02/25 01:14:36 gutteridge Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -237,6 +237,7 @@ SUBDIR+=	go-glob
 SUBDIR+=	go-goldmark
 SUBDIR+=	go-inflect
 SUBDIR+=	go-kr-text
+SUBDIR+=	go-levenshtein
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
 SUBDIR+=	go-org
