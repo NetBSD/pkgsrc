@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2020/11/19 20:19:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.545 2021/02/25 10:11:30 simonb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -345,6 +345,7 @@ SUBDIR+=	sd-mux-ctrl
 SUBDIR+=	send-pr
 SUBDIR+=	siag
 SUBDIR+=	since
+SUBDIR+=	sleepto
 SUBDIR+=	splitvt
 SUBDIR+=	starplot
 SUBDIR+=	stellarium
