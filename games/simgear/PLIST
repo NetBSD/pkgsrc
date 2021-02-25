@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/11/26 22:40:07 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/02/25 10:22:14 nia Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/bvh/BVHBoundingBoxVisitor.hxx
 include/simgear/bvh/BVHGroup.hxx
@@ -55,12 +55,22 @@ include/simgear/canvas/layout/SpacerItem.hxx
 include/simgear/compiler.h
 include/simgear/constants.h
 include/simgear/debug/BufferedLogCallback.hxx
+include/simgear/debug/ErrorReportingCallback.hxx
+include/simgear/debug/LogCallback.hxx
+include/simgear/debug/LogEntry.hxx
 include/simgear/debug/OsgIoCapture.hxx
 include/simgear/debug/debug_types.h
 include/simgear/debug/logstream.hxx
 include/simgear/embedded_resources/EmbeddedResource.hxx
 include/simgear/embedded_resources/EmbeddedResourceManager.hxx
 include/simgear/embedded_resources/EmbeddedResourceProxy.hxx
+include/simgear/emesary/Emesary.hxx
+include/simgear/emesary/INotification.hxx
+include/simgear/emesary/IReceiver.hxx
+include/simgear/emesary/ITransmitter.hxx
+include/simgear/emesary/ReceiptStatus.hxx
+include/simgear/emesary/Transmitter.hxx
+include/simgear/emesary/notifications.hxx
 include/simgear/environment/metar.hxx
 include/simgear/environment/precipitation.hxx
 include/simgear/ephemeris/celestialBody.hxx
@@ -140,10 +150,12 @@ include/simgear/misc/SVGpreserveAspectRatio.hxx
 include/simgear/misc/SimpleMarkdown.hxx
 include/simgear/misc/argparse.hxx
 include/simgear/misc/interpolator.hxx
+include/simgear/misc/lru_cache.hxx
 include/simgear/misc/make_new.hxx
 include/simgear/misc/sg_dir.hxx
 include/simgear/misc/sg_hash.hxx
 include/simgear/misc/sg_path.hxx
+include/simgear/misc/simgear_optional.hxx
 include/simgear/misc/stdint.hxx
 include/simgear/misc/stopwatch.hxx
 include/simgear/misc/strutils.hxx
@@ -153,6 +165,7 @@ include/simgear/misc/texcoord.hxx
 include/simgear/nasal/cppbind/Ghost.hxx
 include/simgear/nasal/cppbind/NasalCallContext.hxx
 include/simgear/nasal/cppbind/NasalContext.hxx
+include/simgear/nasal/cppbind/NasalEmesaryInterface.hxx
 include/simgear/nasal/cppbind/NasalHash.hxx
 include/simgear/nasal/cppbind/NasalMe.hxx
 include/simgear/nasal/cppbind/NasalMethodHolder.hxx
@@ -208,6 +221,7 @@ include/simgear/scene/model/ModelRegistry.hxx
 include/simgear/scene/model/PrimitiveCollector.hxx
 include/simgear/scene/model/SGClipGroup.hxx
 include/simgear/scene/model/SGInteractionAnimation.hxx
+include/simgear/scene/model/SGLight.hxx
 include/simgear/scene/model/SGMaterialAnimation.hxx
 include/simgear/scene/model/SGOffsetTransform.hxx
 include/simgear/scene/model/SGPickAnimation.hxx
@@ -286,7 +300,7 @@ include/simgear/scene/util/UpdateOnceCallback.hxx
 include/simgear/scene/util/VectorArrayAdapter.hxx
 include/simgear/scene/util/parse_color.hxx
 include/simgear/scene/util/project.hxx
-include/simgear/scene/viewer/ClusteredForward.hxx
+include/simgear/scene/viewer/ClusteredShading.hxx
 include/simgear/scene/viewer/Compositor.hxx
 include/simgear/scene/viewer/CompositorBuffer.hxx
 include/simgear/scene/viewer/CompositorPass.hxx
@@ -343,5 +357,7 @@ lib/cmake/SimGear/SimGearConfig.cmake
 lib/cmake/SimGear/SimGearConfigVersion.cmake
 lib/cmake/SimGear/SimGearTargets-release.cmake
 lib/cmake/SimGear/SimGearTargets.cmake
-lib/libSimGearCore.a
-lib/libSimGearScene.a
+lib/libSimGearCore.so
+lib/libSimGearCore.so.${PKGVERSION}
+lib/libSimGearScene.so
+lib/libSimGearScene.so.${PKGVERSION}
