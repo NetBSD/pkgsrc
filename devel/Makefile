@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3340 2021/02/25 14:59:40 khorben Exp $
+# $NetBSD: Makefile,v 1.3341 2021/02/25 15:10:45 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2474,6 +2474,7 @@ SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
 SUBDIR+=	py-pylint
 SUBDIR+=	py-pylint-plugin-utils
+SUBDIR+=	py-pylru
 SUBDIR+=	py-pyobjc
 SUBDIR+=	py-pyobjc-core
 SUBDIR+=	py-pyobjc-framework-AVFoundation
