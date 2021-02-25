@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/25 10:11:30 simonb Exp $
+bin/sleepto
