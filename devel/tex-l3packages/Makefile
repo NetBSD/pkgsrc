@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/02/13 05:52:46 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/25 10:19:29 markd Exp $
 
 DISTNAME=	l3packages
 PKGNAME=	tex-${DISTNAME}-2020.57600
+PKGREVISION=	1
 TEXLIVE_REV=	57600
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,7 +10,6 @@ HOMEPAGE=	https://ctan.org/pkg/l3packages
 COMMENT=	High-level LaTeX3 concepts
 LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
