@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.799 2021/02/23 18:19:49 pin Exp $
+# $NetBSD: Makefile,v 1.800 2021/02/25 04:31:26 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1560,10 +1560,10 @@ SUBDIR+=	tex-uniquecounter-doc
 SUBDIR+=	tex-units
 SUBDIR+=	tex-units-doc
 SUBDIR+=	tex-updmap-map
-SUBDIR+=	tex-upquote
-SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-uplatex
 SUBDIR+=	tex-uplatex-doc
+SUBDIR+=	tex-upquote
+SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-uptex
 SUBDIR+=	tex-uptex-base
 SUBDIR+=	tex-uptex-base-doc
