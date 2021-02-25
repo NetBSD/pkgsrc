@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3341 2021/02/25 15:10:45 khorben Exp $
+# $NetBSD: Makefile,v 1.3342 2021/02/25 15:23:45 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2594,6 +2594,7 @@ SUBDIR+=	py-ruamel-base
 SUBDIR+=	py-ruamel-ordereddict
 SUBDIR+=	py-ruamel-yaml
 SUBDIR+=	py-ruamel-yaml-clib
+SUBDIR+=	py-sarge
 SUBDIR+=	py-scandir
 SUBDIR+=	py-scard
 SUBDIR+=	py-selectors2
