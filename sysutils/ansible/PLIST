@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/06/20 06:55:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/02/25 12:35:57 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -224,9 +224,6 @@ ${PYSITELIB}/ansible/galaxy/data/network/terminal_plugins/example.py.j2
 ${PYSITELIB}/ansible/galaxy/data/network/tests/inventory
 ${PYSITELIB}/ansible/galaxy/data/network/tests/test.yml.j2
 ${PYSITELIB}/ansible/galaxy/data/network/vars/main.yml.j2
-${PYSITELIB}/ansible/galaxy/login.py
-${PYSITELIB}/ansible/galaxy/login.pyc
-${PYSITELIB}/ansible/galaxy/login.pyo
 ${PYSITELIB}/ansible/galaxy/role.py
 ${PYSITELIB}/ansible/galaxy/role.pyc
 ${PYSITELIB}/ansible/galaxy/role.pyo
@@ -16120,6 +16117,9 @@ ${PYSITELIB}/ansible/utils/display.pyo
 ${PYSITELIB}/ansible/utils/encrypt.py
 ${PYSITELIB}/ansible/utils/encrypt.pyc
 ${PYSITELIB}/ansible/utils/encrypt.pyo
+${PYSITELIB}/ansible/utils/fqcn.py
+${PYSITELIB}/ansible/utils/fqcn.pyc
+${PYSITELIB}/ansible/utils/fqcn.pyo
 ${PYSITELIB}/ansible/utils/hashing.py
 ${PYSITELIB}/ansible/utils/hashing.pyc
 ${PYSITELIB}/ansible/utils/hashing.pyo
@@ -16328,6 +16328,9 @@ ${PYSITELIB}/ansible_test/_data/sanity/compile/compile.pyo
 ${PYSITELIB}/ansible_test/_data/sanity/import/importer.py
 ${PYSITELIB}/ansible_test/_data/sanity/import/importer.pyc
 ${PYSITELIB}/ansible_test/_data/sanity/import/importer.pyo
+${PYSITELIB}/ansible_test/_data/sanity/integration-aliases/yaml_to_json.py
+${PYSITELIB}/ansible_test/_data/sanity/integration-aliases/yaml_to_json.pyc
+${PYSITELIB}/ansible_test/_data/sanity/integration-aliases/yaml_to_json.pyo
 ${PYSITELIB}/ansible_test/_data/sanity/pep8/current-ignore.txt
 ${PYSITELIB}/ansible_test/_data/sanity/pslint/pslint.ps1
 ${PYSITELIB}/ansible_test/_data/sanity/pslint/settings.psd1
@@ -16395,9 +16398,18 @@ ${PYSITELIB}/ansible_test/_internal/ansible_util.pyo
 ${PYSITELIB}/ansible_test/_internal/cache.py
 ${PYSITELIB}/ansible_test/_internal/cache.pyc
 ${PYSITELIB}/ansible_test/_internal/cache.pyo
-${PYSITELIB}/ansible_test/_internal/changes.py
-${PYSITELIB}/ansible_test/_internal/changes.pyc
-${PYSITELIB}/ansible_test/_internal/changes.pyo
+${PYSITELIB}/ansible_test/_internal/ci/__init__.py
+${PYSITELIB}/ansible_test/_internal/ci/__init__.pyc
+${PYSITELIB}/ansible_test/_internal/ci/__init__.pyo
+${PYSITELIB}/ansible_test/_internal/ci/azp.py
+${PYSITELIB}/ansible_test/_internal/ci/azp.pyc
+${PYSITELIB}/ansible_test/_internal/ci/azp.pyo
+${PYSITELIB}/ansible_test/_internal/ci/local.py
+${PYSITELIB}/ansible_test/_internal/ci/local.pyc
+${PYSITELIB}/ansible_test/_internal/ci/local.pyo
+${PYSITELIB}/ansible_test/_internal/ci/shippable.py
+${PYSITELIB}/ansible_test/_internal/ci/shippable.pyc
+${PYSITELIB}/ansible_test/_internal/ci/shippable.pyo
 ${PYSITELIB}/ansible_test/_internal/classification.py
 ${PYSITELIB}/ansible_test/_internal/classification.pyc
 ${PYSITELIB}/ansible_test/_internal/classification.pyo
@@ -16485,6 +16497,9 @@ ${PYSITELIB}/ansible_test/_internal/diff.pyo
 ${PYSITELIB}/ansible_test/_internal/docker_util.py
 ${PYSITELIB}/ansible_test/_internal/docker_util.pyc
 ${PYSITELIB}/ansible_test/_internal/docker_util.pyo
+${PYSITELIB}/ansible_test/_internal/encoding.py
+${PYSITELIB}/ansible_test/_internal/encoding.pyc
+${PYSITELIB}/ansible_test/_internal/encoding.pyo
 ${PYSITELIB}/ansible_test/_internal/env.py
 ${PYSITELIB}/ansible_test/_internal/env.pyc
 ${PYSITELIB}/ansible_test/_internal/env.pyo
@@ -16506,6 +16521,9 @@ ${PYSITELIB}/ansible_test/_internal/init.pyo
 ${PYSITELIB}/ansible_test/_internal/integration/__init__.py
 ${PYSITELIB}/ansible_test/_internal/integration/__init__.pyc
 ${PYSITELIB}/ansible_test/_internal/integration/__init__.pyo
+${PYSITELIB}/ansible_test/_internal/io.py
+${PYSITELIB}/ansible_test/_internal/io.pyc
+${PYSITELIB}/ansible_test/_internal/io.pyo
 ${PYSITELIB}/ansible_test/_internal/manage_ci.py
 ${PYSITELIB}/ansible_test/_internal/manage_ci.pyc
 ${PYSITELIB}/ansible_test/_internal/manage_ci.pyo
