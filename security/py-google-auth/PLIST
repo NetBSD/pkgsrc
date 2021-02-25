@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/10/06 05:35:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/02/25 09:19:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,6 +36,9 @@ ${PYSITELIB}/google/auth/_service_account_info.pyo
 ${PYSITELIB}/google/auth/app_engine.py
 ${PYSITELIB}/google/auth/app_engine.pyc
 ${PYSITELIB}/google/auth/app_engine.pyo
+${PYSITELIB}/google/auth/aws.py
+${PYSITELIB}/google/auth/aws.pyc
+${PYSITELIB}/google/auth/aws.pyo
 ${PYSITELIB}/google/auth/compute_engine/__init__.py
 ${PYSITELIB}/google/auth/compute_engine/__init__.pyc
 ${PYSITELIB}/google/auth/compute_engine/__init__.pyo
@@ -75,9 +78,15 @@ ${PYSITELIB}/google/auth/environment_vars.pyo
 ${PYSITELIB}/google/auth/exceptions.py
 ${PYSITELIB}/google/auth/exceptions.pyc
 ${PYSITELIB}/google/auth/exceptions.pyo
+${PYSITELIB}/google/auth/external_account.py
+${PYSITELIB}/google/auth/external_account.pyc
+${PYSITELIB}/google/auth/external_account.pyo
 ${PYSITELIB}/google/auth/iam.py
 ${PYSITELIB}/google/auth/iam.pyc
 ${PYSITELIB}/google/auth/iam.pyo
+${PYSITELIB}/google/auth/identity_pool.py
+${PYSITELIB}/google/auth/identity_pool.pyc
+${PYSITELIB}/google/auth/identity_pool.pyo
 ${PYSITELIB}/google/auth/impersonated_credentials.py
 ${PYSITELIB}/google/auth/impersonated_credentials.pyc
 ${PYSITELIB}/google/auth/impersonated_credentials.pyo
@@ -135,3 +144,9 @@ ${PYSITELIB}/google/oauth2/id_token.pyo
 ${PYSITELIB}/google/oauth2/service_account.py
 ${PYSITELIB}/google/oauth2/service_account.pyc
 ${PYSITELIB}/google/oauth2/service_account.pyo
+${PYSITELIB}/google/oauth2/sts.py
+${PYSITELIB}/google/oauth2/sts.pyc
+${PYSITELIB}/google/oauth2/sts.pyo
+${PYSITELIB}/google/oauth2/utils.py
+${PYSITELIB}/google/oauth2/utils.pyc
+${PYSITELIB}/google/oauth2/utils.pyo
