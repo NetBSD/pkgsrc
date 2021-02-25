@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1276 2021/02/25 15:28:09 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1277 2021/02/25 15:32:37 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-pylru version 1.2.0 [khorben 2021-02-25]
 	Added devel/py-sarge version 0.1.6 [khorben 2021-02-25]
 	Added x11/xst version 0.8.4.1 [pin 2021-02-25]
+	Updated lang/erlang to 23.2.6 [triaxx 2021-02-25]
