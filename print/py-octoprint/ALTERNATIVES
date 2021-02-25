@@ -1,0 +1,1 @@
+bin/octoprint @PREFIX@/bin/octoprint-@PYVERSSUFFIX@
