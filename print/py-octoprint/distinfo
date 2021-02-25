@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/02/25 16:35:23 khorben Exp $
+
+SHA1 (OctoPrint-1.5.3.tar.gz) = 1bac32121a2facee291947ce8ac76a4395ee6a66
+RMD160 (OctoPrint-1.5.3.tar.gz) = a75a135dc653fb0e7d3a9e2f73a9642516f03505
+SHA512 (OctoPrint-1.5.3.tar.gz) = b81bb2588a6a1c3a4bba9dd1cfaa9e76cfc47e7d36f8ca570aea21fe1c1ff8ca2aa357db24934c30fcbcd38cf1aa7146bdc08cc5e26348daf8b1d342f7712f96
+Size (OctoPrint-1.5.3.tar.gz) = 5984016 bytes
+SHA1 (patch-setup.py) = 5aa702fd73a8d08bc827e6b590a4639cc2794dd6
+SHA1 (patch-src_octoprint_util_comm.py) = 6f73998c3b51a17436e16b9a86b1e8b368f6cd2c
