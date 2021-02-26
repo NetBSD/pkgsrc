@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2021/02/25 15:32:16 triaxx Exp $
+$NetBSD: distinfo,v 1.86 2021/02/26 10:13:53 adam Exp $
 
 SHA1 (erlang-23.2.6.tar.gz) = 529689409a6898705a3c3fed3cf2df2a716cd693
 RMD160 (erlang-23.2.6.tar.gz) = 74be55189f2e02d6a59c52c613ae12292370ab7a
@@ -9,7 +9,6 @@ SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_aclocal.m4) = 3812a0feda06eb7c6ff02b5ac7125284ad5df2cb
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = e34674aea2fa5092b5215944cb5639738df647bb
 SHA1 (patch-erts_emulator_nifs_common_prim__net__nif.c) = 39a3c134f17ede852a736494f035c8ce01b0ed4b
-SHA1 (patch-erts_emulator_sys_common_erl__poll.c) = 28aeaba3c6313ce68741c3ca5541491c05c58431
 SHA1 (patch-erts_emulator_sys_unix_sys__uds.c) = ee131143c177b2bc1453d94097cbf6b3d3cfb899
 SHA1 (patch-erts_etc_unix_run__erl.c) = dbcd6819949874da19daa554335567c444d7abe2
 SHA1 (patch-erts_lib__src_common_erl__printf.c) = 31ab5c501d62f021e7570a925dcc75d38605ae41
