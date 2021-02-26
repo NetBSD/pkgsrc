@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2020/02/11 20:36:49 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/26 13:17:36 triaxx Exp $
 
-DISTNAME=	carddav-3.0.3
-PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME}
+DISTNAME=	carddav-v4.0.4
+PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME:S/-v/-/}
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GITHUB:=blind-coder/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mstilkerich/}
 GITHUB_PROJECT=	rcmcarddav
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tgz
 
 HOMEPAGE=	https://www.benjamin-schieder.de/carddav.html
 MAINTAINER=	triaxx@NetBSD.org
@@ -15,13 +15,17 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
+NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+REPLACE_PHP=	vendor/roundcube/plugin-installer/src/bin/rcubeinitdb.sh
+
+BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-composer-[0-9]*:../../devel/php-composer
 DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=1.0.0:../../mail/roundcube
 
 WRKSRC=		${WRKDIR}/carddav
 
-DISTINFO_FILE=		distinfo
+PHP_VERSIONS_ACCEPTED=	74 73
 
 PKG_SYSCONFSUBDIR=	roundcube
 
@@ -35,7 +39,7 @@ RCDIR=			share/roundcube
 CDDIR=			${RCDIR}/plugins/carddav
 EGDIR=			share/examples/roundcube/plugins/carddav
 
-CD_SUBDIRS=		dbmigrations localization skins vendor
+CD_SUBDIRS=		dbmigrations localization skins src vendor
 
 .for d in ${CD_SUBDIRS}
 INSTALLATION_DIRS+=	${CDDIR}/${d}
@@ -50,18 +54,13 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	pre-install
 SUBST_MESSAGE.cfg=	Fixing configuration files.
-SUBST_FILES.cfg=	carddav_common.php
+SUBST_FILES.cfg=	carddav.php
 SUBST_VARS.cfg=		PKG_SYSCONFDIR
 
 do-install:
+	cd ${WRKSRC} && ${PREFIX}/bin/composer install --no-dev
 	${INSTALL_DATA} ${WRKSRC}/carddav.php \
 		${DESTDIR}${PREFIX}/${CDDIR}/carddav.php
-	${INSTALL_DATA} ${WRKSRC}/carddav_backend.php \
-		${DESTDIR}${PREFIX}/${CDDIR}/carddav_backend.php
-	${INSTALL_DATA} ${WRKSRC}/carddav_common.php \
-		${DESTDIR}${PREFIX}/${CDDIR}/carddav_common.php
-	${INSTALL_DATA} ${WRKSRC}/carddav_discovery.php \
-		${DESTDIR}${PREFIX}/${CDDIR}/carddav_discovery.php
 .for i in ${CD_SUBDIRS}
 	cd ${WRKSRC}/${i} && ${FIND} . -type f -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${CDDIR}/${i}
@@ -75,5 +74,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.inc.php.dist \
 		${DESTDIR}${PREFIX}/${EGDIR}/config.inc.php
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/replace.mk"
 .include "../../mk/bsd.pkg.mk"
