@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1288 2021/02/26 13:17:50 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1289 2021/02/26 15:35:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2040,3 +2040,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rabbitmq to 3.8.12 [adam 2021-02-26]
 	Updated www/py-uvicorn to 0.13.4 [adam 2021-02-26]
 	Updated mail/roundcube-plugin-carddav to 4.0.4 [triaxx 2021-02-26]
+	Updated mail/thunderbird to 78.8.0 [ryoon 2021-02-26]
