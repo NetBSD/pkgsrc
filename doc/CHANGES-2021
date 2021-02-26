@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1285 2021/02/26 08:18:39 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1286 2021/02/26 10:13:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.19.6 [adam 2021-02-26]
 	Updated www/py-aiohttp to 3.7.4 [adam 2021-02-26]
 	Updated net/mosquitto to 2.0.8 [triaxx 2021-02-26]
+	Updated www/grafana to 7.4.3 [triaxx 2021-02-26]
