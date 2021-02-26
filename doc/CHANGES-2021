@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1284 2021/02/26 06:22:09 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1285 2021/02/26 08:18:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-composer to 2.0.11 [tpaul 2021-02-26]
 	Updated devel/cmake to 3.19.6 [adam 2021-02-26]
 	Updated www/py-aiohttp to 3.7.4 [adam 2021-02-26]
+	Updated net/mosquitto to 2.0.8 [triaxx 2021-02-26]
