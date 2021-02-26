@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/02/07 17:32:47 triaxx Exp $
+$NetBSD: distinfo,v 1.11 2021/02/26 10:12:41 triaxx Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -2652,6 +2652,14 @@ SHA1 (github.com_go-redis_redis_v8_@v_v8.2.3.zip) = d2d89919903dca8fa352b8e5d851
 RMD160 (github.com_go-redis_redis_v8_@v_v8.2.3.zip) = 29f36a21e3ecf6f5d1989b4793924f3080dc213a
 SHA512 (github.com_go-redis_redis_v8_@v_v8.2.3.zip) = d6230bfaf88348ce830edba2b0d0480a19cf8eb5c337dc806d333d0bbfecc306358f974ecf07eaa4c5c9bb6f10fc62468f76134b01a213703c8a475a9d8ab9be
 Size (github.com_go-redis_redis_v8_@v_v8.2.3.zip) = 142321 bytes
+SHA1 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.mod) = 418c3551575c0eebf3ea8bf8f36445c99c7c10b8
+RMD160 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.mod) = 9d5864ec3940280e6b97967f072d907251bfd8b0
+SHA512 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.mod) = adc702dc7c33daf8e8fe1d0eb73f02d9e2204dc8fc49a7ffe6d341e82e51a1bb763a1656f5a1e5197eeecf0bb899c56c8c6bd3135c3ec406cffead93ba2719aa
+Size (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.mod) = 41 bytes
+SHA1 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.zip) = c21f4d853862150951074db512eeae0c62b9ec71
+RMD160 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.zip) = 10aad30f159857676a1d564e47c4a15ef9b765cd
+SHA512 (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.zip) = a76ad63749cc7b80b7e4acad8465ae52506e22f20d9fce3b0349f390e1c097bddce848031f8e11075d804cd07d21175d3564b7ba46a0fad9422e1457be2116e2
+Size (github.com_go-sourcemap_sourcemap_@v_v2.1.3+incompatible.zip) = 9775 bytes
 SHA1 (github.com_go-sql-driver_mysql_@v_v1.4.0.mod) = f1f8e40c4fc2e451efef269b925dd450378043d3
 RMD160 (github.com_go-sql-driver_mysql_@v_v1.4.0.mod) = 4c29a47a7a78ee6fa8b954526d6fb23b441ffccc
 SHA512 (github.com_go-sql-driver_mysql_@v_v1.4.0.mod) = 21ac6d6f8fd92ccbe09cb30d0dd6a37142907048cc5f9d0574824765918dfd8ccef96b7ceab9dd259f9a95f5c5be566ac00ff4eb3e37ba7c7c98f25b3185baef
@@ -9636,14 +9644,14 @@ SHA1 (gotest.tools_v3_@v_v3.0.2.zip) = b43ecc234b5f71ea3eedd6fc2a2576741b569e4e
 RMD160 (gotest.tools_v3_@v_v3.0.2.zip) = 7e15b34b67bc08fca41f5009507400fefa96505c
 SHA512 (gotest.tools_v3_@v_v3.0.2.zip) = d85150c7a380874323c46fc493847ee12515ef50fa928da808dc5f03d91f65691dbd06473485afab5f5b5fa7b815bdab9ce19e62f69bad407b267a34397d5c40
 Size (gotest.tools_v3_@v_v3.0.2.zip) = 92950 bytes
-SHA1 (grafana-7.4.0.linux-amd64.tar.gz) = b30f9de7241852f3eabf6b8d88f671c7a4438a81
-RMD160 (grafana-7.4.0.linux-amd64.tar.gz) = 9ba7799d792de22f7d193e997ca338bc077e8d70
-SHA512 (grafana-7.4.0.linux-amd64.tar.gz) = 0d81ccefbc4488b83d262191f588411afa6c2eebd7e97cd0219810a73082442ae1fc04132c6e42332b92b45f40f0c2aa3a2ccb586ae8703716d762a7179ba976
-Size (grafana-7.4.0.linux-amd64.tar.gz) = 51244405 bytes
-SHA1 (grafana-7.4.0.tar.gz) = 6ed3221f609a4e5911c86688f6aab66dc2309a19
-RMD160 (grafana-7.4.0.tar.gz) = aa7b36b398930709ff8a92e8caa069c5dca69251
-SHA512 (grafana-7.4.0.tar.gz) = 54e20dc34aee238dc6dfd044b2cbab7e7f205b96472a7cedb2ca450f3f750091e599a41f6fc1088052ed7496ac0525483a5ea1c540a457928c8e4bb0b340c53b
-Size (grafana-7.4.0.tar.gz) = 10747097 bytes
+SHA1 (grafana-7.4.3.linux-amd64.tar.gz) = 6035c98ecddcbb41c1949aaf81c4fb8237a02ec4
+RMD160 (grafana-7.4.3.linux-amd64.tar.gz) = d84735f7aa23f1f5ae89e32762549c3f52bcfae8
+SHA512 (grafana-7.4.3.linux-amd64.tar.gz) = d841e829ca9b8d66294334b3870cd4ca40385e6896b5a25795f8696498f12ee192ab93c4c5a663bc745f77fb8b3b3d46d6066387c6d70c67177f6bc049abd9e9
+Size (grafana-7.4.3.linux-amd64.tar.gz) = 51268825 bytes
+SHA1 (grafana-7.4.3.tar.gz) = a1b27c99d3ce8093de38915a93c89bda640fa1e6
+RMD160 (grafana-7.4.3.tar.gz) = 13db8d38cb1a40f29f14343ddd212a93b48f2d39
+SHA512 (grafana-7.4.3.tar.gz) = dce1c9a987427514e3e2bdebeab102fa14534e2d1b66456e79b9d951fb36fa3895af8c753281de48ddb5d4d2cfe0b2f1c96b767ab1a004c5bc85e2bd32fc5b46
+Size (grafana-7.4.3.tar.gz) = 10751951 bytes
 SHA1 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 839eb1204960233bef25be21ade8455e791dc602
 RMD160 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 47531578a08ef258ad78a0e6b558a47285cb248e
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
