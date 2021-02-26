@@ -1,1 +1,14 @@
-xst is a st fork with some patches applied and other goodies.
+st is a simple terminal implementation for X from suckless.org
+xst is a st fork that adds Xresources support and some pretty good patches.
+
+xst contains the following suckless patches already applied to the source code:
+-alpha
+-boxdraw
+-clipboard
+-disable bold/italic fonts
+-externalpipe
+-scrollback
+-spoiler
+-vertcenter
+
+Note that the hidecursor patch is not supported.
