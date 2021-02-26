@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/01/20 00:55:58 gutteridge Exp $
+$NetBSD: distinfo,v 1.13 2021/02/26 18:02:24 ryoon Exp $
 
 SHA1 (link-grammar-5.8.1.tar.gz) = 115376fe13fe63245d49efc69171668aa2f4bce5
 RMD160 (link-grammar-5.8.1.tar.gz) = 968e0ab2cf20aeef9332bce5e17f94ec0dc9c1f7
@@ -6,3 +6,4 @@ SHA512 (link-grammar-5.8.1.tar.gz) = 0ef99d3ccb3d922a946f1f73b8b81cee9ece156886d
 Size (link-grammar-5.8.1.tar.gz) = 3791847 bytes
 SHA1 (patch-aa) = 3be918c26b639442b56efab2e9416974f31969c5
 SHA1 (patch-configure) = 0131e74f9f51bb380ab91d1cfdba2600fcee131a
+SHA1 (patch-link-grammar_dict-common_regex-morph.c) = 664db3a9b552fcec0917198a3694cacedc9552b0
