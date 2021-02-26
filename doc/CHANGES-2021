@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1283 2021/02/26 00:46:34 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.1284 2021/02/26 06:22:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2033,3 +2033,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/unicorn to 1.0.2 [leot 2021-02-25]
 	Updated emulators/py-unicorn to 1.0.2 [leot 2021-02-25]
 	Updated devel/php-composer to 2.0.11 [tpaul 2021-02-26]
+	Updated devel/cmake to 3.19.6 [adam 2021-02-26]
+	Updated www/py-aiohttp to 3.7.4 [adam 2021-02-26]
