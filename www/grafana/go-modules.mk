@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2021/02/07 17:32:47 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.4 2021/02/26 10:12:41 triaxx Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -663,6 +663,8 @@ GO_MODULE_FILES+=	github.com/go-openapi/validate/@v/v0.19.8.zip
 GO_MODULE_FILES+=	github.com/go-redis/redis/v8/@v/v8.0.0-beta.10.0.20200905143926-df7fe4e2ce72.mod
 GO_MODULE_FILES+=	github.com/go-redis/redis/v8/@v/v8.2.3.mod
 GO_MODULE_FILES+=	github.com/go-redis/redis/v8/@v/v8.2.3.zip
+GO_MODULE_FILES+=	github.com/go-sourcemap/sourcemap/@v/v2.1.3+incompatible.mod
+GO_MODULE_FILES+=	github.com/go-sourcemap/sourcemap/@v/v2.1.3+incompatible.zip
 GO_MODULE_FILES+=	github.com/go-sql-driver/mysql/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/go-sql-driver/mysql/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/go-sql-driver/mysql/@v/v1.5.0.mod
