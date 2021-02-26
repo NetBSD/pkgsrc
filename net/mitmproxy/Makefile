@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/12/19 11:54:41 leot Exp $
+# $NetBSD: Makefile,v 1.34 2021/02/26 08:47:03 leot Exp $
 
 DISTNAME=	mitmproxy-6.0.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,6 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-publicsuffix2>=2.20190812:../../www/py-publicsuffix2
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.6.0:../../x11/py-pyperclip
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.0:../../devel/py-urwid
