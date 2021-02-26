@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/26 09:17:57 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/26 11:24:33 pin Exp $
 
 DISTNAME=	xst-0.8.4.1
 CATEGORIES=	x11
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/gnotclub/xst/
-COMMENT=	st fork that uses Xresources and some patches
+COMMENT=	st fork that adds support for Xresources
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
