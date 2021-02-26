@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1286 2021/02/26 10:13:58 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1287 2021/02/26 10:18:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2037,3 +2037,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-aiohttp to 3.7.4 [adam 2021-02-26]
 	Updated net/mosquitto to 2.0.8 [triaxx 2021-02-26]
 	Updated www/grafana to 7.4.3 [triaxx 2021-02-26]
+	Updated net/rabbitmq to 3.8.12 [adam 2021-02-26]
+	Updated www/py-uvicorn to 0.13.4 [adam 2021-02-26]
