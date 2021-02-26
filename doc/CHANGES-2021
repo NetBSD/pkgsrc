@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1291 2021/02/26 15:39:56 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1292 2021/02/26 18:03:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2043,3 +2043,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird to 78.8.0 [ryoon 2021-02-26]
 	Updated mail/thunderbird-l10n to 78.8.0 [ryoon 2021-02-26]
 	Updated www/goaccess to 1.4.5 [schmonz 2021-02-26]
+	Updated textproc/link-grammar to 5.8.1nb1 [ryoon 2021-02-26]
