@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/02/26 08:35:26 nia Exp $
+# $NetBSD: Makefile,v 1.52 2021/02/26 18:04:34 markd Exp $
 
 DISTNAME=	audiocd-kio-${KAPPSVER}
 CATEGORIES=	multimedia
@@ -16,6 +16,6 @@ USE_TOOLS+=	msgmerge
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
-#.include "../../multimedia/libkcompactdisc/buildlink3.mk"
+.include "../../multimedia/libkcompactdisc/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
