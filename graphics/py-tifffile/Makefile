@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/24 19:54:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/27 23:47:59 markd Exp $
 
 DISTNAME=	tifffile-2021.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.lfd.uci.edu/~gohlke/
 COMMENT=	Read and write TIFF(r) files
 LICENSE=	modified-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
