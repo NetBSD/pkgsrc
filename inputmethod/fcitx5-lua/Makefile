@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/02/20 21:36:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/27 19:40:16 ryoon Exp $
 
-DISTNAME=	fcitx5-lua-5.0.2
+DISTNAME=	fcitx5-lua-5.0.3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-lua/
 EXTRACT_SUFX=	.tar.xz
