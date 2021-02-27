@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/27 14:56:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/27 09:59:54 adam Exp $
 bin/echo_supervisord_conf-${PYVERSSUFFIX}
 bin/pidproxy-${PYVERSSUFFIX}
 bin/supervisorctl-${PYVERSSUFFIX}
@@ -135,11 +135,15 @@ ${PYSITELIB}/supervisor/tests/fixtures/donothing.conf
 ${PYSITELIB}/supervisor/tests/fixtures/example/included.conf
 ${PYSITELIB}/supervisor/tests/fixtures/include.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1054.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1170a.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1170b.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1170c.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1224.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1231a.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1231b.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1231c.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1298.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-550.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-565.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-638.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-663.conf
@@ -149,6 +153,9 @@ ${PYSITELIB}/supervisor/tests/fixtures/issue-836.conf
 ${PYSITELIB}/supervisor/tests/fixtures/listener.py
 ${PYSITELIB}/supervisor/tests/fixtures/listener.pyc
 ${PYSITELIB}/supervisor/tests/fixtures/listener.pyo
+${PYSITELIB}/supervisor/tests/fixtures/print_env.py
+${PYSITELIB}/supervisor/tests/fixtures/print_env.pyc
+${PYSITELIB}/supervisor/tests/fixtures/print_env.pyo
 ${PYSITELIB}/supervisor/tests/fixtures/spew.py
 ${PYSITELIB}/supervisor/tests/fixtures/spew.pyc
 ${PYSITELIB}/supervisor/tests/fixtures/spew.pyo
