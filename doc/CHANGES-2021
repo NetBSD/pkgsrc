@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1294 2021/02/27 10:04:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1295 2021/02/27 16:20:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2056,3 +2056,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio to 1.36.0 [adam 2021-02-27]
 	Updated net/py-grpcio-testing to 1.36.0 [adam 2021-02-27]
 	Updated net/py-grpcio-tools to 1.36.0 [adam 2021-02-27]
+	Updated sysutils/sfm to 0.4.2 [pin 2021-02-27]
