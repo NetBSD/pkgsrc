@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/02/11 10:36:22 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/02/27 16:40:59 wiz Exp $
 
 DISTNAME=	zstd-1.4.8
 CATEGORIES=	archivers
@@ -43,8 +43,6 @@ MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 
 BUILD_TARGET=		allmost
-# stat -c error
-# https://github.com/facebook/zstd/issues/2493
 TEST_TARGET=		test
 
 .include "../../archivers/lz4/buildlink3.mk"
