@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/02/25 10:50:44 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/02/27 16:20:03 pin Exp $
 
 SHA1 (arrayref-0.3.6.crate) = 8df43c1c48a2ad356007ccfa9a74de36ae7372bd
 RMD160 (arrayref-0.3.6.crate) = 9a96dcbe3c51042d75ec3173c2ee7a42c9eb3eb6
@@ -140,10 +140,10 @@ SHA1 (serde-1.0.123.crate) = 968b745d5ea557515eed94f918bc2365d7ac9d7c
 RMD160 (serde-1.0.123.crate) = ffaa87f1f8cd54bdceb92f845969280d2b4158c8
 SHA512 (serde-1.0.123.crate) = 73d584193f1885561063d15c0124f0611f59ba60b14eb5df3fdfe9545e9e31a1a2afdb22b2a7dd4176ea0856a24352ca6d822e0bc779f0fbcfc41e545e27e823
 Size (serde-1.0.123.crate) = 74379 bytes
-SHA1 (sfm-0.4.1.tar.gz) = 7a739e2fdb398f3f4622aaa4cf4d632b9eb6cead
-RMD160 (sfm-0.4.1.tar.gz) = 7cb42c3b910795456f04de189f1f36c631f0a1cf
-SHA512 (sfm-0.4.1.tar.gz) = 0a257547dfd5e8b5711c6bf6077e62f968bac8c51a35dfd5eecc373e162f574f2a2caac3645f24c416eaf8720d62139984e4a4e995928dc271344b16661d6d2c
-Size (sfm-0.4.1.tar.gz) = 76060 bytes
+SHA1 (sfm-0.4.2.tar.gz) = 87336a1a2e86c95b40052ea2d1bf9cda8bdad3fa
+RMD160 (sfm-0.4.2.tar.gz) = ce0fe2c5c1a16de286c65a9c8b2047faa5bfc170
+SHA512 (sfm-0.4.2.tar.gz) = df23bd116f67bf121fe5243a302311aab956d34a6688c45dc06293298f799c624143628736424ffc34887c65f69fa119315c47b9b7bb59ae7126063c8a013372
+Size (sfm-0.4.2.tar.gz) = 76465 bytes
 SHA1 (signal-hook-0.1.17.crate) = ee7446f0b06ce0830311eff7bbdd695a87378cbc
 RMD160 (signal-hook-0.1.17.crate) = 638c4bbfcf2ce227ae94a8764f7850ab0f346fc0
 SHA512 (signal-hook-0.1.17.crate) = 253d1478d7a6491a0b423637a706c941cc2a9707d32d29126f48af808daf8acd88e59013936f8e164df687c04e3a8f5c201b5eeb1952e3269b1419efdb4df94f
