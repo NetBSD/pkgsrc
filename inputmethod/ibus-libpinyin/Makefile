@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/11/05 09:08:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2021/02/27 16:50:28 ryoon Exp $
 
-DISTNAME=	ibus-libpinyin-1.6.92
-PKGREVISION=	18
+DISTNAME=	ibus-libpinyin-1.12.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 
@@ -15,7 +14,7 @@ USE_TOOLS+=	gmake intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
@@ -26,6 +25,11 @@ PYTHON_VERSIONS_ACCEPTED=	27
 .  include "../../devel/libuuid/buildlink3.mk"
 .endif
 
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
+
 .if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--disable-boost
 .else
@@ -34,6 +38,7 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif
 
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
