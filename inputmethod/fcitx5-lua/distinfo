@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/20 21:36:59 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/02/27 19:40:16 ryoon Exp $
 
-SHA1 (fcitx5-lua-5.0.2.tar.xz) = ccdf5b059aa026c87187b849200b49f3895d9a5b
-RMD160 (fcitx5-lua-5.0.2.tar.xz) = fc3f9b7e50c8a45fc018bb205279a5654ff890fe
-SHA512 (fcitx5-lua-5.0.2.tar.xz) = 893a4899d99d81c7c8d48cb7a3a016f3dfd3878cf4253062014eec428f21948add76ade6494b6fc4f8390c8acb056fa9fe0fe12a0863aef4701090b60c17ed77
-Size (fcitx5-lua-5.0.2.tar.xz) = 32856 bytes
+SHA1 (fcitx5-lua-5.0.3.tar.xz) = 174abaebbaf223b0fe4fdbc944ababe4b2ba6a28
+RMD160 (fcitx5-lua-5.0.3.tar.xz) = 23eac90f7bf7dc655bc5e4fbeafca3517b538fad
+SHA512 (fcitx5-lua-5.0.3.tar.xz) = 6e0487a2783db13be2683dfd0b32086d4e9da3690f121b96d0a1ea580ec25a786bb123a09ca5baf0ce80dc8b4411eed98d3432c650874d7917da970eef7696e4
+Size (fcitx5-lua-5.0.3.tar.xz) = 33488 bytes
