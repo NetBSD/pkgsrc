@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/02/15 17:18:14 otis Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/27 20:58:26 otis Exp $
 
 PKGNAME=	unit-${LANG}${PHP_VERSION:R:S|.||g}-${UNIT_VERSION}
 COMMENT=	PHP module for NGINX Unit
@@ -12,9 +12,10 @@ PHP_VERSIONS_ACCEPTED?=	56 73 74
 
 .include "../../lang/php/phpversion.mk"
 
-#.if empty(PKG_BUILD_OPTIONS.${PHP_PKG_PREFIX}:Mphp-embed)
-#BROKEN=		"Requires the php-embed option enabled in PHP."
-#.endif
+PHP_BUILD_OPTIONS!=	${RUN} ${PKG_INFO} -Bn php | ${GREP} PKG_OPTIONS
+.if empty(PHP_BUILD_OPTIONS:Mphp-embed)
+BROKEN=		"Requires the php-embed option enabled in PHP."
+.endif
 
 post-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
