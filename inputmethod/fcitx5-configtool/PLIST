@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:18:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/27 19:43:17 ryoon Exp $
 bin/fcitx5-config-qt
 bin/fcitx5-migrator
 bin/kbd-layout-viewer5
@@ -6,6 +6,8 @@ lib/libFcitx5Migrator.so
 lib/libFcitx5Migrator.so.5
 lib/libFcitx5Migrator.so.${PKGVERSION}
 share/applications/kbd-layout-viewer5.desktop
+share/applications/org.fcitx.fcitx5-config-qt.desktop
+share/applications/org.fcitx.fcitx5-migrator.desktop
 share/locale/ca/LC_MESSAGES/fcitx5-configtool.mo
 share/locale/ca/LC_MESSAGES/org.fcitx.fcitx5.kcm.mo
 share/locale/da/LC_MESSAGES/fcitx5-configtool.mo
