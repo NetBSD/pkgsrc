@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_nanorc.5,v 1.1 2021/02/05 17:25:52 triaxx Exp $
+$NetBSD: patch-doc_nanorc.5,v 1.2 2021/02/27 19:26:28 schwarz Exp $
 
 * Fix hard-coded pathes.
 
---- doc/nanorc.5.orig	2021-01-14 10:11:45.000000000 +0000
-+++ doc/nanorc.5
-@@ -25,7 +25,7 @@ nanorc \- GNU nano's configuration file
+--- doc/nanorc.5.orig	2021-02-24 10:56:32.000000000 +0100
++++ doc/nanorc.5	2021-02-27 20:12:41.000000000 +0100
+@@ -25,7 +25,7 @@
  The \fInanorc\fP files contain the default settings for \fBnano\fP,
  a small and friendly editor.  During startup, if \fB\-\-rcfile\fR
  is not given, \fBnano\fR will read two files: first the
@@ -13,7 +13,7 @@ $NetBSD: patch-doc_nanorc.5,v 1.1 2021/02/05 17:25:52 triaxx Exp $
  different on your system), and then the user-specific settings, either
  from \fI~/.nanorc\fR or from \fI$XDG_CONFIG_HOME/nano/nanorc\fR
  or from \fI~/.config/nano/nanorc\fR, whichever is encountered first.
-@@ -995,13 +995,13 @@ for \fBunbind\fR it means all menus wher
+@@ -997,13 +997,13 @@
  
  .SH FILES
  .TP

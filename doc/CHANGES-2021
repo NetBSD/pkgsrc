@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1300 2021/02/27 19:05:45 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1301 2021/02/27 19:26:28 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2062,3 +2062,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/nsd to 4.3.5 [ryoon 2021-02-27]
 	Updated net/knot to 3.0.4 [ryoon 2021-02-27]
 	Updated www/php-nextcloud to 21.0.0 [ryoon 2021-02-27]
+	Updated editors/nano to 5.6 [schwarz 2021-02-27]
