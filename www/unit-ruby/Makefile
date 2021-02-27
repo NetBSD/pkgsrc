@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/02/14 13:43:40 otis Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/27 20:58:27 otis Exp $
 
-PKGNAME=	unit-${LANG}-${UNIT_VERSION}
+PKGNAME=	unit-${LANG}${RUBY_VER}-${UNIT_VERSION}
 COMMENT=	Ruby module for NGINX Unit
 
 LANG=		ruby
