@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1312 2021/02/27 21:05:25 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1313 2021/02/27 21:09:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2074,3 +2074,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated inputmethod/fcitx5-skk to 5.0.4 [ryoon 2021-02-27]
 	Updated inputmethod/libime to 1.0.4 [ryoon 2021-02-27]
 	Updated net/youtube-dl to 20210222 [leot 2021-02-27]
+	Added misc/catpoint version 0.2 [leot 2021-02-27]
