@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/17 15:26:00 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/02/27 20:10:32 ryoon Exp $
 
-SHA1 (fcitx5-skk-5.0.3.tar.xz) = 772d97d170371788775e74de7b001b196cca1e57
-RMD160 (fcitx5-skk-5.0.3.tar.xz) = 21248a0de443e30ae54e3bf55d62d8091e03dd86
-SHA512 (fcitx5-skk-5.0.3.tar.xz) = a66feb197640b0b49cec604fa1391b9c87f67ed90b884342809a9a07329df006d16d36cc9cf34c0fcf803c5ae83d4d71884224fe2521a9cc81ab7713ba0621bc
-Size (fcitx5-skk-5.0.3.tar.xz) = 36084 bytes
-SHA1 (patch-current-mode-popup.diff) = 7a01774f600ef9db45519aaad5c79602cd311ae5
+SHA1 (fcitx5-skk-5.0.4.tar.xz) = 3d25d065fafcc831a1f96111e4532e574a84aa50
+RMD160 (fcitx5-skk-5.0.4.tar.xz) = 2b33796a23590d9d7f502eb0cd08a516fb493d7e
+SHA512 (fcitx5-skk-5.0.4.tar.xz) = aeb9a6f23f6bebc9650868fe1c7f840cd4e05f4dce494402200f2ddf207e389d8db5f86f115c1c26598cdcda89c3ec2a12c91b07eb6961104a95fa1a9a88e2e8
+Size (fcitx5-skk-5.0.4.tar.xz) = 36448 bytes
