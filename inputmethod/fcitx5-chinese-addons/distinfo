@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1 2021/02/20 21:29:29 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/02/27 20:08:01 ryoon Exp $
 
-SHA1 (fcitx5-chinese-addons-5.0.3/fcitx5-chinese-addons-5.0.3.tar.xz) = 3553a00fc195369f197cf8f029566c4172998ef0
-RMD160 (fcitx5-chinese-addons-5.0.3/fcitx5-chinese-addons-5.0.3.tar.xz) = 20c0994144a81f3b73942c5a0e234e688d609dbc
-SHA512 (fcitx5-chinese-addons-5.0.3/fcitx5-chinese-addons-5.0.3.tar.xz) = 20c4ea6b4ae472337a8a5b762d56b5555e36349c5415acd65897a360ca20890aacdece1fd875e1ae66f7fce928efdc2b948b2da549450ed75229f1085fe10b38
-Size (fcitx5-chinese-addons-5.0.3/fcitx5-chinese-addons-5.0.3.tar.xz) = 198868 bytes
-SHA1 (fcitx5-chinese-addons-5.0.3/py_stroke-20121124.tar.gz) = 80a52eba30f0ab269e6d26cb2813af9da2e84017
-RMD160 (fcitx5-chinese-addons-5.0.3/py_stroke-20121124.tar.gz) = ce7cd591a92b0b0440ff5cfe18b1df325e8b9746
-SHA512 (fcitx5-chinese-addons-5.0.3/py_stroke-20121124.tar.gz) = d80ff9a3549e07c7a6935e686785f9a076c58f1a782a832ae28ee65e2a213d67f089f450ce09bed87ec2a141c32b9c1fcb83c221ddcab436858fa9009f161fb3
-Size (fcitx5-chinese-addons-5.0.3/py_stroke-20121124.tar.gz) = 445601 bytes
-SHA1 (fcitx5-chinese-addons-5.0.3/py_table-20121124.tar.gz) = e43d2760a607461ae8a4f52e4caf21cf673f6acc
-RMD160 (fcitx5-chinese-addons-5.0.3/py_table-20121124.tar.gz) = 58e54cc66f4384e6caa4ac6828ad0786da618b05
-SHA512 (fcitx5-chinese-addons-5.0.3/py_table-20121124.tar.gz) = 0fa72ce6820a316e9729bc0d7a08af5ca3468134de9ff1bf0c559a398846a7bcf7313a3609d943e6bab637d930cf45ad9acfe25a8d3df078a774b071a7296486
-Size (fcitx5-chinese-addons-5.0.3/py_table-20121124.tar.gz) = 186822 bytes
+SHA1 (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = c9aab98f9cefb1bdbb72010064d66734664ba9d3
+RMD160 (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = d0edbb60bde827feca3fc6db602e8717f4316186
+SHA512 (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = 0e7906bd2b1f502c0b6094e0b8cd3f811985608957a97c6bfb07838c711c6d0ea1dd9bb018f421ac623e81826686b20597967392cb34a9219b648061bcecfb41
+Size (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = 199476 bytes
+SHA1 (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = 80a52eba30f0ab269e6d26cb2813af9da2e84017
+RMD160 (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = ce7cd591a92b0b0440ff5cfe18b1df325e8b9746
+SHA512 (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = d80ff9a3549e07c7a6935e686785f9a076c58f1a782a832ae28ee65e2a213d67f089f450ce09bed87ec2a141c32b9c1fcb83c221ddcab436858fa9009f161fb3
+Size (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = 445601 bytes
+SHA1 (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = e43d2760a607461ae8a4f52e4caf21cf673f6acc
+RMD160 (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 58e54cc66f4384e6caa4ac6828ad0786da618b05
+SHA512 (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 0fa72ce6820a316e9729bc0d7a08af5ca3468134de9ff1bf0c559a398846a7bcf7313a3609d943e6bab637d930cf45ad9acfe25a8d3df078a774b071a7296486
+Size (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 186822 bytes
