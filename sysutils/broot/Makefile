@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/02/14 20:56:55 pin Exp $
+# $NetBSD: Makefile,v 1.14 2021/02/27 16:22:50 pin Exp $
 
 DISTNAME=	broot-1.2.4
+# WARNING: Do not update this package!
+# Newer versions require rust-1.50
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
