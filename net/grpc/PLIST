@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/01/21 17:27:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/02/27 10:03:10 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -259,11 +259,11 @@ lib/cmake/grpc/gRPCTargets.cmake
 lib/cmake/grpc/modules/Findc-ares.cmake
 lib/cmake/grpc/modules/Findre2.cmake
 lib/libaddress_sorting.so
-lib/libaddress_sorting.so.14
-lib/libaddress_sorting.so.14.0.0
+lib/libaddress_sorting.so.15
+lib/libaddress_sorting.so.15.0.0
 lib/libgpr.so
-lib/libgpr.so.14
-lib/libgpr.so.14.0.0
+lib/libgpr.so.15
+lib/libgpr.so.15.0.0
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
 lib/libgrpc++.so.1
@@ -280,20 +280,20 @@ lib/libgrpc++_unsecure.so
 lib/libgrpc++_unsecure.so.${PKGVERSION}
 lib/libgrpc++_unsecure.so.1
 lib/libgrpc.so
-lib/libgrpc.so.14
-lib/libgrpc.so.14.0.0
+lib/libgrpc.so.15
+lib/libgrpc.so.15.0.0
 lib/libgrpc_plugin_support.so
 lib/libgrpc_plugin_support.so.${PKGVERSION}
 lib/libgrpc_plugin_support.so.1
 lib/libgrpc_unsecure.so
-lib/libgrpc_unsecure.so.14
-lib/libgrpc_unsecure.so.14.0.0
+lib/libgrpc_unsecure.so.15
+lib/libgrpc_unsecure.so.15.0.0
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
 lib/libgrpcpp_channelz.so.1
 lib/libupb.so
-lib/libupb.so.14
-lib/libupb.so.14.0.0
+lib/libupb.so.15
+lib/libupb.so.15.0.0
 lib/pkgconfig/gpr.pc
 lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
