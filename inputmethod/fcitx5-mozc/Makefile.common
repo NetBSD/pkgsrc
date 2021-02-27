@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/02/27 04:19:46 ryoon Exp $
 # used by inputmethod/fcitx-mozc/Makefile
 #
 
@@ -60,15 +60,15 @@ MOZC_BUILD_MODE=	Release # or Debug
 # Maybe fix this later.
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
-#		GYP_DEFINES="use_libprotobuf=1"
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		GYP_DEFINES="use_libprotobuf=1" \
 		${PYTHONBIN} build_mozc.py \
 		gyp \
 		--gypdir=${LOCALBASE}/bin
 
 .include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
