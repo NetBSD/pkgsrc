@@ -1,4 +1,4 @@
-$NetBSD: patch-gyp_common.gypi,v 1.2 2021/02/27 04:19:46 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.3 2021/02/27 19:13:27 ryoon Exp $
 
 * NetBSD support
 
@@ -32,17 +32,6 @@ $NetBSD: patch-gyp_common.gypi,v 1.2 2021/02/27 04:19:46 ryoon Exp $
      ],
    },
    'target_defaults': {
-@@ -137,8 +151,8 @@
-       'mac_debug_optimization%': '0',    # Use -O0 unless overridden
- 
-       # Extra cflags for gcc
--      'release_extra_cflags%': ['-O2'],
--      'debug_extra_cflags%': ['-O0', '-g'],
-+      'release_extra_cflags%': ['-O2', '<!(echo $CFLAGS)', ],
-+      'debug_extra_cflags%': ['-O0', '-g', '<!(echo $CFLAGS)', ],
-     },
-     'configurations': {
-       'Debug': {
 @@ -318,6 +332,24 @@
            }],
          ],
