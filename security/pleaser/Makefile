@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/02/23 14:47:07 pin Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/27 16:52:22 pin Exp $
 
 DISTNAME=	please-0.3.23
 PKGNAME=	pleaser-0.3.23
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/please-v0.3.23-4bd0ba871fbe80d5af393f9fc5a8f6741144b3a4
+WRKSRC=		${WRKDIR}/please-v0.3.23-0bbb137f271792eb889a63f9e5a1f25e2dd75255
 USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 SUBST_CLASSES+=		prefix
