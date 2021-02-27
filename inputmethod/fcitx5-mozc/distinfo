@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/02/27 04:19:46 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2021/02/27 19:13:27 ryoon Exp $
 
 SHA1 (fcitx-mozc-2.26.4276.100.tar.xz) = d9b245a065a317b196816ff41cf52fc2fe3ff728
 RMD160 (fcitx-mozc-2.26.4276.100.tar.xz) = 1bd5ce4ec04d4be15840651cb570900b3dcb3e01
@@ -32,7 +32,7 @@ SHA1 (patch-gui_qt__moc.gypi) = e3d42e61b35012cda10da13aa03cee67786e171c
 SHA1 (patch-gui_qt__rcc.gypi) = d38a849fe8e81672eb441a41936f454d8e45ff5c
 SHA1 (patch-gui_qt__uic.gypi) = 7dd69ee109e81f0e70f2866b77555412518b4844
 SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 218e3706b819855814ba8871504fc7ccb4e40b23
-SHA1 (patch-gyp_common.gypi) = 6b9019c92a1b0f404feffb8b5a38b00caaeaf80a
+SHA1 (patch-gyp_common.gypi) = ce27e8665b9dab4dc6d34d337a2cb8c985c9e6f4
 SHA1 (patch-gyp_directories.gypi) = eea985113aac5b99bf3c12267ad754817eef5dcc
 SHA1 (patch-ipc_ipc__path__manager.cc) = cd1352bd5333f1ed755dcf6221f931fcd0a936d3
 SHA1 (patch-ipc_ipc__path__manager__test.cc) = 1b83b513383f184f5ab5a56cce734b7934998533
