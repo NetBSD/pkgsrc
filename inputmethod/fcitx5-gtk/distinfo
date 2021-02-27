@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/17 15:21:34 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/02/27 19:34:11 ryoon Exp $
 
-SHA1 (fcitx5-gtk-5.0.3.tar.xz) = fb7e7b884a746c95dccb2ad83e52bc12f9ce52f2
-RMD160 (fcitx5-gtk-5.0.3.tar.xz) = 6ab05f277c6253a41e1782d2e255230dabbb0a93
-SHA512 (fcitx5-gtk-5.0.3.tar.xz) = a79cfc365729691aa1bf5d049cb33f0fc115146140a566a3929fafdb79b379736f129889a9e96ede1388523e9ff666c760a54e07dcf5877ded69cf073b3e9425
-Size (fcitx5-gtk-5.0.3.tar.xz) = 34868 bytes
+SHA1 (fcitx5-gtk-5.0.4.tar.xz) = a08a7c098f0cfdf10d3b21492f2a8b788d4b2bbf
+RMD160 (fcitx5-gtk-5.0.4.tar.xz) = a8134853c85f611cf890cd863f5ede1ab26e8d5e
+SHA512 (fcitx5-gtk-5.0.4.tar.xz) = 9009369e19f2165bcf514f2a229db456ee8aa0d81611a133aa03f69ecd06a27689506edaf3c2d61e0f1928fc47070bb11280308ca5a4dca6ae35bb39a087a407
+Size (fcitx5-gtk-5.0.4.tar.xz) = 49044 bytes
