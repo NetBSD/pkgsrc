@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1307 2021/02/27 20:04:00 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1308 2021/02/27 20:05:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated inputmethod/fcitx5-lua to 5.0.3 [ryoon 2021-02-27]
 	Updated inputmethod/fcitx5-configtool to 5.0.3 [ryoon 2021-02-27]
 	Updated inputmethod/fcitx5-anthy to 5.0.3 [ryoon 2021-02-27]
+	Updated inputmethod/fcitx5-chewing to 5.0.4 [ryoon 2021-02-27]
