@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/02/15 14:50:23 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2021/02/27 04:19:46 ryoon Exp $
 
 SHA1 (mozc-2.26.4282.100.tar.xz) = aacec607aec52145ba66c993f9c02ae2d1a5948c
 RMD160 (mozc-2.26.4282.100.tar.xz) = b2f9f6fc129811b25640d4ae5582ab324b6bf2a4
@@ -33,12 +33,13 @@ SHA1 (patch-gui_qt__moc.gypi) = e3d42e61b35012cda10da13aa03cee67786e171c
 SHA1 (patch-gui_qt__rcc.gypi) = d38a849fe8e81672eb441a41936f454d8e45ff5c
 SHA1 (patch-gui_qt__uic.gypi) = 7dd69ee109e81f0e70f2866b77555412518b4844
 SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 218e3706b819855814ba8871504fc7ccb4e40b23
-SHA1 (patch-gyp_common.gypi) = 18e03490d6758ce49f4b79eb1259409cd440faba
+SHA1 (patch-gyp_common.gypi) = 6b9019c92a1b0f404feffb8b5a38b00caaeaf80a
 SHA1 (patch-gyp_directories.gypi) = eea985113aac5b99bf3c12267ad754817eef5dcc
 SHA1 (patch-ipc_ipc__path__manager.cc) = cd1352bd5333f1ed755dcf6221f931fcd0a936d3
 SHA1 (patch-ipc_ipc__path__manager__test.cc) = 1b83b513383f184f5ab5a56cce734b7934998533
 SHA1 (patch-ipc_named__event.cc) = 8be0b1e5c4675e5b238e07b63e395dbed3c2d125
 SHA1 (patch-ipc_unix__ipc.cc) = d5d86910ca610015103a309bba8d6392d96f6ce6
+SHA1 (patch-protobuf_protobuf.gyp) = bb1c9684881199936abb8acd73948d1cb174a1ea
 SHA1 (patch-renderer_renderer.gyp) = 83493259d6b8cd9ab6871512bebc9616d72132d1
 SHA1 (patch-session_session.cc) = 3ae2c8dd056aae4c92d9dbfdac53d9c45261aad2
 SHA1 (patch-session_session__test.cc) = 7396e2f4931257d8a33087b1bed5418a038fefa1

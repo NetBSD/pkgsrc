@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2021/02/17 00:14:25 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.34 2021/02/27 04:19:46 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -76,12 +76,13 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		GYP_DEFINES="use_libprotobuf=1" \
 		${PYTHONBIN} build_mozc.py \
 		gyp \
 		--gypdir=${LOCALBASE}/bin
 
 .include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
@@ -90,4 +91,5 @@ do-configure:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 
 .include "../../lang/python/tool.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
