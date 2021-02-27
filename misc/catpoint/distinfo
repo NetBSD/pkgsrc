@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/27 21:09:40 leot Exp $
+
+SHA1 (catpoint-v0.2.tgz) = a8917f73caac49811490ddd6905475546434ffcc
+RMD160 (catpoint-v0.2.tgz) = 759ee71649661bc5fa82be106c292d72ee1684bd
+SHA512 (catpoint-v0.2.tgz) = 9a3ce033dde8854ceaf6601ecb5258464001f125ee15c4efece97a1339e30f83b889d0195bc63be001050a98603c7f9f482b05f94d123fbfaa886b95d7619a74
+Size (catpoint-v0.2.tgz) = 16613 bytes
