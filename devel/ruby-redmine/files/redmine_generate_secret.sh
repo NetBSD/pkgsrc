@@ -1,7 +1,7 @@
 #!/bin/sh
 
-cd @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/app
+cd @PREFIX@/@RM_DIR@/app
 
-GEM_HOME=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
-  GEM_PATH=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
+GEM_HOME=@PREFIX@/@RM_DIR@/gems \
+  GEM_PATH=@PREFIX@/@RM_DIR@/gems \
     @RUBY@ bin/rake secret RAILS_ENV=production

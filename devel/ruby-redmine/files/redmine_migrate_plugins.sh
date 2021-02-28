@@ -7,8 +7,8 @@ if [ $? -eq 0 ]; then
 	exit 1
 fi
 
-cd @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/app/plugins
+cd @PREFIX@/@RM_DIR@/app/plugins
 
-GEM_HOME=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
-  GEM_PATH=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
+GEM_HOME=@PREFIX@/@RM_DIR@/gems \
+  GEM_PATH=@PREFIX@/@RM_DIR@/gems \
     @RUBY@ ../bin/rake redmine:plugins:migrate RAILS_ENV=production
