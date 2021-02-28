@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1316 2021/02/28 01:47:47 mef Exp $
+$NetBSD: CHANGES-2021,v 1.1317 2021/02/28 07:36:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/wordpress to 5.6.2 [morr 2021-02-28]
 	Updated editors/vim-share to 8.2.2557 [morr 2021-02-28]
 	Updated devel/hs-tagged to 0.8.6.1 [mef 2021-02-28]
+	Added games/abbayedesmorts version 2.0.1 [nia 2021-02-28]
