@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1335 2021/02/28 17:14:30 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1336 2021/02/28 18:41:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2107,3 +2107,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/bulk-medium to 20210228 [taca 2021-02-28]
 	Updated meta-pkgs/bulk-large to 20200228 [taca 2021-02-28]
 	Updated security/clamav to 0.103.1 [taca 2021-02-28]
+	Updated archivers/py-zstandard to 0.15.2 [adam 2021-02-28]
+	Updated www/py-httpx to 0.17.0 [adam 2021-02-28]
