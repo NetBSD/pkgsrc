@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: redmine_unicorn.sh,v 1.1 2015/07/05 23:55:25 rodent Exp $
+# $NetBSD: redmine_unicorn.sh,v 1.2 2021/02/28 16:01:05 taca Exp $
 #
 
 # PROVIDE: redmine_unicorn@RUBY_SUFFIX@
@@ -16,18 +16,18 @@ stop_cmd="redmine_unicorn_stop"
 
 redmine_unicorn_start()
 {
-	cd @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/app
-	GEM_HOME=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
-	GEM_PATH=@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems \
+	cd @PREFIX@/@RM_DIR@/app
+	GEM_HOME=@PREFIX@/@RM_DIR@/gems \
+	GEM_PATH=@PREFIX@/@RM_DIR@/gems \
 		@RUBY@ \
-		@PREFIX@/share/@RUBY_PKGPREFIX@-redmine/gems/bin/bundle exec unicorn \
-		-c @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/app/config/unicorn.rb \
+		@PREFIX@/@RM_DIR@/gems/bin/bundle exec unicorn \
+		-c @PREFIX@/@RM_DIR@/app/config/unicorn.rb \
 		-E production -D
 }
 
 redmine_unicorn_stop()
 {
-	/bin/kill -QUIT `/bin/cat @PREFIX@/share/@RUBY_PKGPREFIX@-redmine/unicorn.pid`
+	/bin/kill -QUIT `/bin/cat @PREFIX@/@RM_DIR@/unicorn.pid`
 }
 
 load_rc_config $name

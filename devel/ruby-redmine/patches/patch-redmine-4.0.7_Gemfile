@@ -1,0 +1,34 @@
+$NetBSD: patch-redmine-4.0.7_Gemfile,v 1.1 2021/02/28 16:01:06 taca Exp $
+
+* Update gem versions.
+* Do not include tzinfo-data.
+
+--- redmine-4.0.7/Gemfile.orig	2020-04-06 17:00:03.000000000 +0000
++++ redmine-4.0.7/Gemfile
+@@ -3,7 +3,7 @@ source 'https://rubygems.org'
+ ruby '>= 2.3.0', '< 2.7.0' if Bundler::VERSION >= '1.12.0'
+ gem "bundler", ">= 1.5.0"
+ 
+-gem 'rails', '5.2.4.2'
++gem 'rails', '5.2.4.5'
+ gem "rouge", "~> 3.3.0"
+ gem "request_store", "1.0.5"
+ gem "mini_mime", "~> 1.0.1"
+@@ -13,7 +13,7 @@ gem "mimemagic"
+ gem "mail", "~> 2.7.1"
+ gem "csv", "~> 3.0.1" if RUBY_VERSION >= "2.3" && RUBY_VERSION < "2.6"
+ 
+-gem "nokogiri", (RUBY_VERSION >= "2.3" ? "~> 1.10.0" : "~> 1.9.1")
++gem "nokogiri", "~> 1.10.0"
+ gem "i18n", "~> 0.7.0"
+ gem "xpath", "< 3.2.0" if RUBY_VERSION < "2.3"
+ 
+@@ -21,7 +21,7 @@ gem "xpath", "< 3.2.0" if RUBY_VERSION <
+ gem "sprockets", "~> 3.7.2"
+ 
+ # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+-gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
++# gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
+ gem "rbpdf", "~> 1.19.6"
+ 
+ # Optional gem for LDAP authentication
