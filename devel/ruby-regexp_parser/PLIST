@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/26 15:10:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/28 15:14:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/regexp_parser.rb
+${GEM_LIBDIR}/lib/regexp_parser/error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/alternation.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/anchor.rb
