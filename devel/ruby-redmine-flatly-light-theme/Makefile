@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/06 15:11:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/28 16:12:52 taca Exp $
 #
 
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-flatly-light-theme-${DISTNAME:S/v//1}
+PKGNAME=	${RUBY_PKGPREFIX}-redmine${RM_VER}-flatly-light-theme-${DISTNAME:S/v//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Nitrino/}
 GITHUB_PROJECT=	flatly_light_redmine
 GITHUB_TAG=	v0.2.4
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
 
-FLATLY_LIGHT_DIR=	${REDMINE_THEMEDIR}/flatly_light_redmine
+FLATLY_LIGHT_DIR=	${RM_THEMEDIR}/flatly_light_redmine
 
 INSTALLATION_DIRS+=	${FLATLY_LIGHT_DIR}/fonts ${FLATLY_LIGHT_DIR}/images
 INSTALLATION_DIRS+=	${FLATLY_LIGHT_DIR}/javascripts
