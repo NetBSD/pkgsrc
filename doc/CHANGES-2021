@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1332 2021/02/28 17:08:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1333 2021/02/28 17:11:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2104,3 +2104,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-redmine41 version 4.1.1 [taca 2021-02-28]
 	Updated devel/mantis to 2.24.4 [taca 2021-02-28]
 	Updated devel/php-xdebug to 3.0.3 [taca 2021-02-28]
+	Updated meta-pkgs/bulk-medium to 20210228 [taca 2021-02-28]
