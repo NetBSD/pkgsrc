@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/28 16:22:54 taca Exp $
 #
 
 THEME_NAME=	red-andy
 DISTNAME=	${THEME_NAME}_1.00
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-${DISTNAME:S/_/-theme-/1}
+PKGNAME=	${RUBY_PKGPREFIX}-redmine${RM_VER}-${DISTNAME:S/_/-theme-/1}
 MASTER_SITES=	http://projects.andriylesyuk.com/attachments/download/581/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${THEME_NAME}
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
 
-REDANDY_DIR=		${REDMINE_THEMEDIR}/${THEME_NAME}
+REDANDY_DIR=		${RM_THEMEDIR}/${THEME_NAME}
 
 INSTALLATION_DIRS+=	${REDANDY_DIR}/images/mobile ${REDANDY_DIR}/javascripts
 INSTALLATION_DIRS+=	${REDANDY_DIR}/stylesheets
