@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/02/28 07:36:14 nia Exp $
+
+Honor LDFLAGS for rpath.
+
+--- Makefile.orig	2016-09-04 20:29:22.000000000 +0000
++++ Makefile
+@@ -4,7 +4,7 @@ CC?=		gcc
+ CFLAGS?=	-O2 -finline-functions -funswitch-loops -fgcse-after-reload -fpredictive-commoning -ftree-vectorize
+ 
+ CFLAGS+=	`sdl2-config --cflags` -DDATADIR="\"$(PREFIX)/share/abbayev2\""
+-LIBS=		`sdl2-config --libs` -lSDL2_image -lSDL2_mixer -lm
++LIBS=		$(LDFLAGS) `sdl2-config --libs` -lSDL2_image -lSDL2_mixer -lm
+ 
+ PROG=		abbayev2
+ SRCS=		src/drawing.c \
