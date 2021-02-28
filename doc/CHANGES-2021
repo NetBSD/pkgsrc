@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1317 2021/02/28 07:36:50 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1318 2021/02/28 08:07:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/vim-share to 8.2.2557 [morr 2021-02-28]
 	Updated devel/hs-tagged to 0.8.6.1 [mef 2021-02-28]
 	Added games/abbayedesmorts version 2.0.1 [nia 2021-02-28]
+	Added lang/surgescript version 0.5.5 [nia 2021-02-28]
