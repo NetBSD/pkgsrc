@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2020/05/06 14:58:00 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/02/28 16:11:12 taca Exp $
 #
 # used by devel/ruby-redmine-flatly-light-theme/Makefile
 # used by devel/ruby-redmine-gitmike-theme/Makefile
@@ -12,12 +12,9 @@ CATEGORIES=	devel
 
 RUBY_VERSIONS_ACCEPTED=	25 26
 
-.include "../../lang/ruby/rubyversion.mk"
+.include "../../devel/ruby-redmine/redmine.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-redmine-[0-9]*:../../devel/ruby-redmine
+DEPENDS+=	${REDMINE_DEPENDS}
 
 USE_LANGUAGES=	# none
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
-
-REDMINE_THEMEDIR=	share/${RUBY_NAME}-redmine/app/public/themes
