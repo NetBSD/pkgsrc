@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/01/09 00:41:31 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/02/28 01:47:36 mef Exp $
 
-SHA1 (tagged-0.8.6.tar.gz) = e2a1498a6bdadd78bd0aff721d001a10384d0fdf
-RMD160 (tagged-0.8.6.tar.gz) = 050cdac17ff3c87ace3e7df011fa9516ca686bfc
-SHA512 (tagged-0.8.6.tar.gz) = 8cec49ea6f54ba84109ec6068cce209321bfa4662d5acdf75e4019087e2890e3056bf13a237cb5caf3fec597b05b710ebbfb74e06b736b7fb2f87941defeb814
-Size (tagged-0.8.6.tar.gz) = 11759 bytes
-SHA1 (patch-tagged.cabal) = 01891cbe4b580e5199ad777186ec8286ac1df3e7
+SHA1 (tagged-0.8.6.1.tar.gz) = 665a514768f40d72d1891df6f6e21a35a9a71153
+RMD160 (tagged-0.8.6.1.tar.gz) = deb0c96bd69df8f00c231f132b5922278b1ed5b3
+SHA512 (tagged-0.8.6.1.tar.gz) = 289be845821aada538caf3fd0fc85b8ed115c657dc5beb0408816e43cf72153881ad305a982effa572a46e5b1842d2772af44313674cb0a252db8aeb6953f345
+Size (tagged-0.8.6.1.tar.gz) = 9842 bytes
+SHA1 (patch-tagged.cabal) = 1df081e7cf5cb5496436f6da7bf89688daa6f61f
