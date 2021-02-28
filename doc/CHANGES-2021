@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1338 2021/02/28 22:48:18 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.1339 2021/02/28 22:58:38 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2111,3 +2111,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx to 0.17.0 [adam 2021-02-28]
 	Updated security/pleaser to 0.3.24 [pin 2021-02-28]
 	Updated comms/asterisk13 to 13.38.2 [jnemeth 2021-02-28]
+	Removed comms/asterisk14 [jnemeth 2021-02-28]
