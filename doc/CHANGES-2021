@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1323 2021/02/28 15:22:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1324 2021/02/28 15:38:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2085,3 +2085,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-minitest to 5.14.4 [taca 2021-02-28]
 	Updated devel/ruby-regexp_parser to 2.1.1 [taca 2021-02-28]
 	Updated mail/ruby-mime-types-data to 3.2021.0225 [taca 2021-02-28]
+	Updated math/ruby-spreadsheet to 1.2.8 [taca 2021-02-28]
