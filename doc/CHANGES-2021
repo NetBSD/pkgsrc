@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1321 2021/02/28 15:08:28 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1322 2021/02/28 15:14:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2083,3 +2083,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/ruby-mixlib-archive to 1.1.7 [taca 2021-02-28]
 	Updated databases/ruby-awesome_nested_set to 3.4.0 [taca 2021-02-28]
 	Updated devel/ruby-minitest to 5.14.4 [taca 2021-02-28]
+	Updated devel/ruby-regexp_parser to 2.1.1 [taca 2021-02-28]
