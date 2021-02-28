@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/05/06 15:02:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/02/28 16:10:40 taca Exp $
 #
 # used by devel/ruby-redmine_code_review/Makefile
 # used by devel/ruby-redmine_lightbox2/Makefile
@@ -9,17 +9,11 @@ CATEGORIES=	devel
 
 RUBY_VERSIONS_ACCEPTED=	25 26
 
-.include "../../lang/ruby/rubyversion.mk"
+.include "../../devel/ruby-redmine/redmine.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-redmine-[0-9]*:../../devel/ruby-redmine
+DEPENDS+=	${REDMINE_DEPENDS}
 
 USE_LANGUAGES=	# none
-
-RM_DIR=		share/${RUBY_NAME}-redmine
-GEM_HOME=	${RM_DIR}/gems
-PLIST_SUBST+=	GEM_HOME=${GEM_HOME}
-
-REDMINE_PLUGINDIR=	${RM_DIR}/app/plugins
 
 MESSAGE_SRC=	../../meta-pkgs/ruby-redmine-plugins/MESSAGE.common
 MESSAGE_SRC+=	${.CURDIR}/MESSAGE
