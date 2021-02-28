@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/06 13:50:39 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/28 16:14:57 taca Exp $
 #
 
 DISTNAME=	minimalflat2-${GITHUB_RELEASE:S/v//1}
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-minimalflat2-theme-${GITHUB_RELEASE:S/v//1}
+PKGNAME=	${RUBY_PKGPREFIX}-redmine${RM_VER}-minimalflat2-theme-${GITHUB_RELEASE:S/v//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akabekobeko/}
 GITHUB_PROJECT=	redmine-theme-minimalflat2
 GITHUB_RELEASE=	v1.7.0
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
 
-MINIMALFLAT_DIR=	${REDMINE_THEMEDIR}/minimalflat2
+MINIMALFLAT_DIR=	${RM_THEMEDIR}/minimalflat2
 MINIMALFLAT_SUBDIRS=	favicon fonts images javascripts stylesheets
 WRKSRC=			${WRKDIR}/minimalflat2
 
