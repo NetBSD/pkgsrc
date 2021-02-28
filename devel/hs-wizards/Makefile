@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/13 08:00:59 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/28 14:19:37 mef Exp $
 
 DISTNAME=	wizards-1.0.3
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "../../devel/hs-control-monad-free/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ghc+=	ghc<9.0
+BUILDLINK_API_DEPENDS.ghc+=	ghc<=8.10
+BUILDLINK_API_DEPENDS.ghc+=	ghc>=8.8
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
