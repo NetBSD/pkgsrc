@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1319 2021/02/28 13:18:40 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1320 2021/02/28 13:21:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2081,3 +2081,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/abbayedesmorts version 2.0.1 [nia 2021-02-28]
 	Added lang/surgescript version 0.5.5 [nia 2021-02-28]
 	Updated archivers/ruby-mixlib-archive to 1.1.7 [taca 2021-02-28]
+	Updated databases/ruby-awesome_nested_set to 3.4.0 [taca 2021-02-28]
