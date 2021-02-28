@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2020/12/11 18:09:09 morr Exp $
+@comment $NetBSD: PLIST,v 1.47 2021/02/28 00:04:11 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -603,6 +603,10 @@ share/wordpress/wp-content/themes/twentynineteen/footer.php
 share/wordpress/wp-content/themes/twentynineteen/functions.php
 share/wordpress/wp-content/themes/twentynineteen/header.php
 share/wordpress/wp-content/themes/twentynineteen/image.php
+share/wordpress/wp-content/themes/twentynineteen/images/pattern_01.jpg
+share/wordpress/wp-content/themes/twentynineteen/images/pattern_02.jpg
+share/wordpress/wp-content/themes/twentynineteen/images/pattern_03.jpg
+share/wordpress/wp-content/themes/twentynineteen/images/pattern_04.jpg
 share/wordpress/wp-content/themes/twentynineteen/inc/back-compat.php
 share/wordpress/wp-content/themes/twentynineteen/inc/block-patterns.php
 share/wordpress/wp-content/themes/twentynineteen/inc/color-patterns.php
@@ -901,6 +905,7 @@ share/wordpress/wp-content/themes/twentytwentyone/index.php
 share/wordpress/wp-content/themes/twentytwentyone/package-lock.json
 share/wordpress/wp-content/themes/twentytwentyone/package.json
 share/wordpress/wp-content/themes/twentytwentyone/page.php
+share/wordpress/wp-content/themes/twentytwentyone/postcss.config.js
 share/wordpress/wp-content/themes/twentytwentyone/readme.txt
 share/wordpress/wp-content/themes/twentytwentyone/screenshot.png
 share/wordpress/wp-content/themes/twentytwentyone/search.php
