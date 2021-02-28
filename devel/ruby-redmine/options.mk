@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2020/03/15 16:00:55 taca Exp $
+# $NetBSD: options.mk,v 1.8 2021/02/28 16:01:05 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
@@ -56,10 +56,9 @@ PLIST.unicorn=		yes
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
-SUBST_MESSAGE.prefix=		Setting PREFIX and RUBY_PKGPREFIX.
+SUBST_MESSAGE.prefix=		Setting PREFIX and RM_DIR.
 SUBST_FILES.prefix=		${WRKDIR}/unicorn.rb
-SUBST_VARS.prefix=		RUBY_PKGPREFIX
-SUBST_VARS.prefix+=		PREFIX
+SUBST_VARS.prefix=		PREFIX RM_DIR
 
 RCD_SCRIPTS+=	redmine_unicorn${RUBY_SUFFIX}
 RCD_SCRIPT_SRC.redmine_unicorn${RUBY_SUFFIX}=	${FILESDIR}/redmine_unicorn.sh
