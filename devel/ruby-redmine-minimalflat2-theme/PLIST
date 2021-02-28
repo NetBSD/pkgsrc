@@ -1,22 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/06 13:50:39 taca Exp $
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/favicon/favicon.ico
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.eot
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.svg
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.ttf
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.woff
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/arrow_down.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/draft.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/loading.gif
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/openid-bg.gif
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/sort_asc.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/sort_desc.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/task_parent_end.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/transparent.png
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/javascripts/theme.js
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/stylesheets/application.css
-share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/stylesheets/responsive.css
-@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/stylesheets
-@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/javascripts
-@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/images
-@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/fonts
-@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/favicon
+@comment $NetBSD: PLIST,v 1.2 2021/02/28 16:14:57 taca Exp $
+${RM_THEMEDIR}/minimalflat2/favicon/favicon.ico
+${RM_THEMEDIR}/minimalflat2/fonts/icon.eot
+${RM_THEMEDIR}/minimalflat2/fonts/icon.svg
+${RM_THEMEDIR}/minimalflat2/fonts/icon.ttf
+${RM_THEMEDIR}/minimalflat2/fonts/icon.woff
+${RM_THEMEDIR}/minimalflat2/images/arrow_down.png
+${RM_THEMEDIR}/minimalflat2/images/draft.png
+${RM_THEMEDIR}/minimalflat2/images/loading.gif
+${RM_THEMEDIR}/minimalflat2/images/openid-bg.gif
+${RM_THEMEDIR}/minimalflat2/images/sort_asc.png
+${RM_THEMEDIR}/minimalflat2/images/sort_desc.png
+${RM_THEMEDIR}/minimalflat2/images/task_parent_end.png
+${RM_THEMEDIR}/minimalflat2/images/transparent.png
+${RM_THEMEDIR}/minimalflat2/javascripts/theme.js
+${RM_THEMEDIR}/minimalflat2/stylesheets/application.css
+${RM_THEMEDIR}/minimalflat2/stylesheets/responsive.css
+@pkgdir ${RM_THEMEDIR}/minimalflat/stylesheets
+@pkgdir ${RM_THEMEDIR}/minimalflat/javascripts
+@pkgdir ${RM_THEMEDIR}/minimalflat/images
+@pkgdir ${RM_THEMEDIR}/minimalflat/fonts
+@pkgdir ${RM_THEMEDIR}/minimalflat/favicon
