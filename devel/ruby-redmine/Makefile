@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2020/12/04 04:55:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.59 2021/02/28 16:01:05 taca Exp $
 
-DISTNAME=	redmine-4.0.7
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	8
+DISTNAME=	redmine-${RM_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/
@@ -12,16 +11,18 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-GEMS_DISTFILES+=	actioncable-5.2.4.2.gem actionmailer-5.2.4.2.gem
-GEMS_DISTFILES+=	actionpack-5.2.4.2.gem actionpack-xml_parser-2.0.1.gem
-GEMS_DISTFILES+=	actionview-5.2.4.2.gem activejob-5.2.4.2.gem
-GEMS_DISTFILES+=	activemodel-5.2.4.2.gem activerecord-5.2.4.2.gem
-GEMS_DISTFILES+=	activestorage-5.2.4.2.gem activesupport-5.2.4.2.gem
+RM_VERSION=	4.0.7
+
+GEMS_DISTFILES+=	actioncable-5.2.4.5.gem actionmailer-5.2.4.5.gem
+GEMS_DISTFILES+=	actionpack-5.2.4.5.gem actionpack-xml_parser-2.0.1.gem
+GEMS_DISTFILES+=	actionview-5.2.4.5.gem activejob-5.2.4.5.gem
+GEMS_DISTFILES+=	activemodel-5.2.4.5.gem activerecord-5.2.4.5.gem
+GEMS_DISTFILES+=	activestorage-5.2.4.5.gem activesupport-5.2.4.5.gem
 GEMS_DISTFILES+=	addressable-2.7.0.gem arel-9.0.0.gem builder-3.2.3.gem
-GEMS_DISTFILES+=	capybara-2.18.0.gem childprocess-2.0.0.gem
-GEMS_DISTFILES+=	concurrent-ruby-1.1.5.gem crass-1.0.4.gem 
-GEMS_DISTFILES+=	css_parser-1.7.0.gem csv-3.0.9.gem docile-1.1.5.gem
-GEMS_DISTFILES+=	erubi-1.8.0.gem globalid-0.4.2.gem
+GEMS_DISTFILES+=	bundler-1.17.3.gem capybara-2.18.0.gem
+GEMS_DISTFILES+=	childprocess-2.0.0.gem concurrent-ruby-1.1.5.gem
+GEMS_DISTFILES+=	crass-1.0.4.gem css_parser-1.7.0.gem csv-3.0.9.gem
+GEMS_DISTFILES+=	docile-1.1.5.gem erubi-1.8.0.gem globalid-0.4.2.gem
 GEMS_DISTFILES+=	htmlentities-4.3.4.gem i18n-0.7.0.gem json-2.2.0.gem
 GEMS_DISTFILES+=	loofah-2.2.3.gem mail-2.7.1.gem marcel-0.3.3.gem
 GEMS_DISTFILES+=	metaclass-0.0.4.gem method_source-0.9.2.gem
@@ -29,10 +30,10 @@ GEMS_DISTFILES+=	mimemagic-0.3.4.gem mini_mime-1.0.2.gem
 GEMS_DISTFILES+=	mini_portile2-2.4.0.gem minitest-5.11.3.gem
 GEMS_DISTFILES+=	mocha-1.9.0.gem net-ldap-0.16.2.gem
 GEMS_DISTFILES+=	nio4r-2.5.1.gem nokogiri-1.10.7.gem
-GEMS_DISTFILES+=	public_suffix-4.0.1.gem puma-3.12.1.gem rack-2.0.7.gem
+GEMS_DISTFILES+=	public_suffix-4.0.1.gem puma-3.12.1.gem rack-2.2.3.gem
 GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-1.1.0.gem
-GEMS_DISTFILES+=	rails-5.2.4.2.gem rails-dom-testing-2.0.3.gem
-GEMS_DISTFILES+=	rails-html-sanitizer-1.0.4.gem railties-5.2.4.2.gem
+GEMS_DISTFILES+=	rails-5.2.4.5.gem rails-dom-testing-2.0.3.gem
+GEMS_DISTFILES+=	rails-html-sanitizer-1.2.0.gem railties-5.2.4.5.gem
 GEMS_DISTFILES+=	rake-12.3.3.gem rbpdf-1.19.8.gem
 GEMS_DISTFILES+=	rbpdf-font-1.19.1.gem redcarpet-3.4.0.gem
 GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.16.0.gem
@@ -40,23 +41,15 @@ GEMS_DISTFILES+=	roadie-3.5.0.gem roadie-rails-1.3.0.gem rouge-3.3.0.gem
 GEMS_DISTFILES+=	ruby-openid-2.9.2.gem rubyzip-1.2.3.gem
 GEMS_DISTFILES+=	selenium-webdriver-3.142.4.gem simplecov-0.14.1.gem
 GEMS_DISTFILES+=	simplecov-html-0.10.2.gem sprockets-3.7.2.gem
-GEMS_DISTFILES+=	sprockets-rails-3.2.1.gem thor-0.20.3.gem
+GEMS_DISTFILES+=	sprockets-rails-3.2.2.gem thor-0.20.3.gem
 GEMS_DISTFILES+=	thread_safe-0.3.6.gem tzinfo-1.2.6.gem
 GEMS_DISTFILES+=	websocket-driver-0.7.1.gem
 GEMS_DISTFILES+=	websocket-extensions-0.1.4.gem
 GEMS_DISTFILES+=	yard-0.9.20.gem
 
-PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
-				{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}") }
-PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
-				{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}") }
-PRINT_PLIST_AWK+=	/^${RM_DIR:S|/|\\/|g}/ { gsub(/^${RM_DIR:S|/|\\/|g}/, "$${RM_DIR}"); }
-
 RUBY_VERSIONS_ACCEPTED=	25 26
 
 .include "../../lang/ruby/rubyversion.mk"
-
-PLIST_SUBST+=		RM_DIR=${RM_DIR:Q}
 
 DISTFILES+=	${DEFAULT_DISTFILES}
 
@@ -68,7 +61,6 @@ SITES.${gem}=	https://rubygems.org/downloads/
 .endfor
 
 WRKSRC=		${WRKDIR}
-RM_DIR=		share/${RUBY_PKGPREFIX}-redmine
 
 USE_TOOLS+=	bash:run pax pkg-config
 
@@ -82,9 +74,9 @@ REPLACE_RUBY+=	mini_mime-1.0.2/bin/console mocha-1.9.0/bin/build-matrix
 REPLACE_RUBY+=	nio4r-2.5.1/examples/echo_server.rb nokogiri-1.10.7/bin/nokogiri
 REPLACE_RUBY+=	public_suffix-4.0.1/bin/console
 REPLACE_RUBY+=	puma-3.12.1/bin/puma-wild puma-3.12.1/bin/puma
-REPLACE_RUBY+=	puma-3.12.1/bin/pumactl rack-2.0.7/bin/rackup
-REPLACE_RUBY+=	rack-2.0.7/test/cgi/rackup_stub.rb rack-2.0.7/test/cgi/test
-REPLACE_RUBY+=	rack-2.0.7/test/cgi/test.fcgi railties-5.2.4.2/exe/rails
+REPLACE_RUBY+=	puma-3.12.1/bin/pumactl rack-2.2.3/bin/rackup
+REPLACE_RUBY+=	rack-2.2.3/test/cgi/rackup_stub.rb rack-2.2.3/test/cgi/test
+REPLACE_RUBY+=	rack-2.2.3/test/cgi/test.fcgi railties-5.2.4.5/exe/rails
 REPLACE_RUBY+=	raindrops-0.19.1/examples/linux-listener-stats.rb
 REPLACE_RUBY+=	rake-12.3.3/bin/bundle rake-12.3.3/bin/console
 REPLACE_RUBY+=	rake-12.3.3/bin/rake rake-12.3.3/bin/rdoc
@@ -229,7 +221,7 @@ SUBST_SED.rake=		-e "s|/usr/bin/env rake|${PREFIX}/${RM_DIR}/gems/bin/rake|g"
 SUBST_CLASSES+=		shell
 SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine_*${RUBY_SUFFIX}.sh
 SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
-SUBST_VARS.shell=	GEM PREFIX RUBY RUBY_PKGPREFIX RUBY_SUFFIX
+SUBST_VARS.shell=	PREFIX RUBY RUBY_SUFFIX RM_DIR RUBY_SUFFIX
 SUBST_STAGE.shell=	post-install
 
 REPLACE_BASH+=	net-ldap-0.16.2/script/changelog
@@ -242,7 +234,6 @@ REPLACE_SH+=	net-ldap-0.16.2/script/package net-ldap-0.16.2/script/release
 REPLACE_SH+=	rake-12.3.3/bin/setup
 REPLACE_PERL+=	unicorn-5.5.3/test/benchmark/uconnect.perl
 
-GEM_HOME=	${RM_DIR}/gems
 MESSAGE_SUBST+=	RM_DIR=${RM_DIR}
 PLIST_SUBST+=	GEM_HOME=${GEM_HOME}
 
@@ -250,7 +241,6 @@ USE_LANGUAGES=	c
 
 # Do not build internal libxml2 and libxslt.
 MAKE_ENV+=	NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
-INSTALL_ENV+=	RM_DIR=${RM_DIR}
 #		rake=${RUBYGEM_INSTALL_ROOT}/${PREFIX}/${GEM_HOME}/gems/rake-12.3.3/exe/rake
 EGDIR=		${PREFIX}/share/examples/${RUBY_PKGPREFIX}-redmine
 
@@ -264,10 +254,14 @@ RM_TEST_CONFIG=		default.yml empty.yml no_default.yml overrides.yml
 .for f in ${RM_APP_CONFIG}
 CONF_FILES+=	${EGDIR}/${f}.example ${RM_DIR}/app/config/${f}
 .endfor
+CONF_FILES_PERMS+=	\
+		${EGDIR}/secrets.yml.example ${RM_DIR}/app/config/secrets.yml \
+		${APACHE_USER} ${APACHE_GROUP} 0640
 .for f in ${RM_TEST_CONFIG}
 CONF_FILES+=	${EGDIR}/test/${f}.example \
 		${RM_DIR}/app/test/fixtures/configuration/${f}
 .endfor
+CONF_FILES+=	${EGDIR}/Gemfile.lock ${RM_DIR}/app/Gemfile.lock
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -282,6 +276,7 @@ GEM_EXTSDIR_NEEDS_SUBDIR=	no
 .include "../../lang/ruby/gem-extract.mk"
 
 pre-configure:
+	find ${WRKSRC}/${DISTNAME} -name \*.orig -exec rm {} \;
 	cd ${WRKSRC}/${DISTNAME} && ${CHMOD} -R g-w .
 
 do-build:
@@ -332,22 +327,29 @@ post-install: unicorn-post-install
 	find ${DESTDIR} -name .cvsignore -type f | xargs rm -rf
 	find ${DESTDIR} -name .gitignore -type f | xargs rm -rf
 	find ${DESTDIR} -name .hgignore -type f | xargs rm -rf
-	find ${DESTDIR} -name ext -type d | xargs rm -rf
+	find ${DESTDIR} -name 'rake-*' -prune -false -o -type d -name ext | \
+		xargs rm -rf
 	find ${DESTDIR} -name mkmf.log -type f | xargs rm -rf
 	find ${DESTDIR} -name gem_make.out -type f | xargs rm -rf
+	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/Gemfile.lock \
+		${DESTDIR}/${EGDIR}
 .for f in ${RM_APP_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/${f}.example \
 		${DESTDIR}/${EGDIR}
 .endfor
+	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/secrets.yml \
+		${DESTDIR}/${EGDIR}/secrets.yml.example
 .for f in ${RM_TEST_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/test/fixtures/configuration/${f}.example \
 		${DESTDIR}/${EGDIR}/test
 .endfor
-	find ${DESTDIR}${PREFIX}/share/${RUBY_PKGPREFIX}-redmine -type f -print0 \
+	find ${DESTDIR}${PREFIX}/${RM_DIR} -type f -print0 \
 		| xargs -0 chmod g+r,g-w,-x,o-w
-	find ${DESTDIR}${PREFIX}/share/${RUBY_PKGPREFIX}-redmine -type d -print0 \
+	find ${DESTDIR}${PREFIX}/${RM_DIR} -type d -print0 \
 		| xargs -0 chmod g-w
+	chmod 0755 ${DESTDIR}${PREFIX}/${GEM_HOME}/bin/*
 
+.include "../../devel/ruby-redmine/redmine.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../graphics/ImageMagick6/buildlink3.mk"
