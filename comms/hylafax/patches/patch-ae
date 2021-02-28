@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.20 2020/05/14 19:17:45 joerg Exp $
+$NetBSD: patch-ae,v 1.21 2021/02/28 22:16:52 gutteridge Exp $
 
 * Customize paths.
 * Configure for pkgsrc.
@@ -6,6 +6,7 @@ $NetBSD: patch-ae,v 1.20 2020/05/14 19:17:45 joerg Exp $
 the .a file) to match the other internal libraries. Otherwise the
 wrappers reorder it relative to the other internal libraries and some
 symbols aren't resolved at link time.
+* Allow newer libtiff.
 
 --- configure.orig	2012-06-06 00:58:38.000000000 +0000
 +++ configure
@@ -151,7 +152,7 @@ symbols aren't resolved at link time.
  				tiff_bytecount_t="uint32"
  				;;
 -		4.[0])		tiff_runlen_t="uint32"
-+		4.[01])		tiff_runlen_t="uint32"
++		4.[012])	tiff_runlen_t="uint32"
  				tiff_offset_t="uint64"
  				tiff_bytecount_t="uint64"
  				echo '#define TIFFHeader	TIFFHeaderClassic'
