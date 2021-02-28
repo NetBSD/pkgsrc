@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1328 2021/02/28 16:22:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1329 2021/02/28 16:30:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-actiontext61 to 6.1.3 [taca 2021-02-28]
 	Updated www/ruby-rails61 to 6.1.3 [taca 2021-02-28]
 	Updated devel/ruby-redmine-purplemine2-theme to 2.14.0 [taca 2021-02-28]
+	Updated devel/ruby-redmine_work_time to 0.4.1 [taca 2021-02-28]
