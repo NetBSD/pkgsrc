@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.20 2021/01/26 15:34:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/02/28 15:38:14 taca Exp $
 bin/xlsopcodes${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/bin/bundle
 ${GEM_LIBDIR}/bin/bundler
 ${GEM_LIBDIR}/bin/oletool
 ${GEM_LIBDIR}/bin/rake
