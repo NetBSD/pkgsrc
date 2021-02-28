@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1330 2021/02/28 16:51:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1331 2021/02/28 17:07:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-redmine-purplemine2-theme to 2.14.0 [taca 2021-02-28]
 	Updated devel/ruby-redmine_work_time to 0.4.1 [taca 2021-02-28]
 	Added devel/ruby-redmine41 version 4.1.1 [taca 2021-02-28]
+	Updated devel/mantis to 2.24.4 [taca 2021-02-28]
