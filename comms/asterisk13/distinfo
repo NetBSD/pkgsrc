@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.17 2021/01/02 22:45:43 jnemeth Exp $
+$NetBSD: distinfo,v 1.18 2021/02/28 22:48:07 jnemeth Exp $
 
-SHA1 (asterisk-13.38.1/asterisk-13.38.1.tar.gz) = 6a26385f1522db2b8ab927c76367ea717ff75117
-RMD160 (asterisk-13.38.1/asterisk-13.38.1.tar.gz) = 5771cbdfd3ceca754f9c8df28ed29d52b35b143e
-SHA512 (asterisk-13.38.1/asterisk-13.38.1.tar.gz) = 270b7c8374104b3c2e9999503fa5cab5b465e37ddfa6759c1019fb99b6bb5877fe4505501ac3306a708ce911aeda36d04796f51156312c04fec013dbaa56a57f
-Size (asterisk-13.38.1/asterisk-13.38.1.tar.gz) = 33705256 bytes
-SHA1 (asterisk-13.38.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
-RMD160 (asterisk-13.38.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
-SHA512 (asterisk-13.38.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-13.38.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+SHA1 (asterisk-13.38.2/asterisk-13.38.2.tar.gz) = 1e86b5b11c1053b0f6a7ec72a7e385aa356694f3
+RMD160 (asterisk-13.38.2/asterisk-13.38.2.tar.gz) = ad4ff2ef7f9c298f1bfcc8d28fc4600970d955a0
+SHA512 (asterisk-13.38.2/asterisk-13.38.2.tar.gz) = bd9755503048cd8dcf8e39947dd5cfb617c20c4b1ad5033ae297499a4967c06ba11b6e43233c1ae0d33f8f11a81dbb9b4487f16a1f4786007172028caf1ee051
+Size (asterisk-13.38.2/asterisk-13.38.2.tar.gz) = 33708267 bytes
+SHA1 (asterisk-13.38.2/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
+RMD160 (asterisk-13.38.2/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
+SHA512 (asterisk-13.38.2/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-13.38.2/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
 SHA1 (patch-Makefile) = 7fb5c784cb5246d7b1ec9c586db8af1a9b9c5577
 SHA1 (patch-apps_app__dumpchan.c) = 127ac02bdc180ad2334cd095aa6e646feb6fba10
 SHA1 (patch-apps_app__followme.c) = c6a5790b5e9b34d07dbfdd66a58e2854c8c72695
