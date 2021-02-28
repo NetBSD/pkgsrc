@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3343 2021/02/25 15:35:13 khorben Exp $
+# $NetBSD: Makefile,v 1.3344 2021/02/28 16:50:46 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2914,6 +2914,7 @@ SUBDIR+=	ruby-redmine-minimalflat2-theme
 SUBDIR+=	ruby-redmine-purplemine2-theme
 SUBDIR+=	ruby-redmine-red-andy-theme
 SUBDIR+=	ruby-redmine-yh-theme
+SUBDIR+=	ruby-redmine41
 SUBDIR+=	ruby-redmine_code_review
 SUBDIR+=	ruby-redmine_lightbox2
 SUBDIR+=	ruby-redmine_theme_changer
