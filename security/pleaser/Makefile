@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/02/27 16:52:22 pin Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/28 22:15:55 pin Exp $
 
-DISTNAME=	please-0.3.23
-PKGNAME=	pleaser-0.3.23
+DISTNAME=	please-0.3.24
+PKGNAME=	pleaser-0.3.24
 CATEGORIES=	security
 MASTER_SITES=	https://gitlab.com/edneville/please/-/archive/v${PKGVERSION_NOREV}/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/please-v0.3.23-0bbb137f271792eb889a63f9e5a1f25e2dd75255
+WRKSRC=		${WRKDIR}/please-v0.3.24-2a3a328be67143e7b86ec69a0d493a8a433817f5
 USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 SUBST_CLASSES+=		prefix
