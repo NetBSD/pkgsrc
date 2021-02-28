@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1314 2021/02/28 00:06:44 morr Exp $
+$NetBSD: CHANGES-2021,v 1.1315 2021/02/28 00:24:34 morr Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/youtube-dl to 20210222 [leot 2021-02-27]
 	Added misc/catpoint version 0.2 [leot 2021-02-27]
 	Updated www/wordpress to 5.6.2 [morr 2021-02-28]
+	Updated editors/vim-share to 8.2.2557 [morr 2021-02-28]
