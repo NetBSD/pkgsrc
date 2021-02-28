@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/07/13 20:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/28 16:20:55 taca Exp $
 
-DISTNAME=	PurpleMine2-2.10.2
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-purplemine2-theme-${DISTNAME:S/PurpleMine2-//}
+DISTNAME=	PurpleMine2-2.14.0
+PKGNAME=	${RUBY_PKGPREFIX}-redmine${RM_VER}-purplemine2-theme-${DISTNAME:S/PurpleMine2-//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrliptontea/}
 GITHUB_PROJECT=	PurpleMine2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
 
-PM2_DIR=	${REDMINE_THEMEDIR}/purplemine2
+PM2_DIR=	${RM_THEMEDIR}/purplemine2
 
 INSTALLATION_DIRS+=	${PM2_DIR}/favicon ${PM2_DIR}/fonts ${PM2_DIR}/images
 INSTALLATION_DIRS+=	${PM2_DIR}/javascripts ${PM2_DIR}/stylesheets
