@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1334 2021/02/28 17:13:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1335 2021/02/28 17:14:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-xdebug to 3.0.3 [taca 2021-02-28]
 	Updated meta-pkgs/bulk-medium to 20210228 [taca 2021-02-28]
 	Updated meta-pkgs/bulk-large to 20200228 [taca 2021-02-28]
+	Updated security/clamav to 0.103.1 [taca 2021-02-28]
