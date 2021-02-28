@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1336 2021/02/28 18:41:29 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1337 2021/02/28 22:16:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2109,3 +2109,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/clamav to 0.103.1 [taca 2021-02-28]
 	Updated archivers/py-zstandard to 0.15.2 [adam 2021-02-28]
 	Updated www/py-httpx to 0.17.0 [adam 2021-02-28]
+	Updated security/pleaser to 0.3.24 [pin 2021-02-28]
