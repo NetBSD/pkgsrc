@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/28 07:36:14 nia Exp $
+
+SHA1 (abbayedesmorts-gpl-2.0.1.tar.gz) = 9ebcb76a3a4176faa03a3470715c26071e379689
+RMD160 (abbayedesmorts-gpl-2.0.1.tar.gz) = f81af42c8992663e6572cd5c9982e741d47c14dd
+SHA512 (abbayedesmorts-gpl-2.0.1.tar.gz) = 5c9679fdeec6f55c37a012005728058448dcde992ef8011ba4c1b99d71f56e7d9091fb1558a1bc8807165385062475a4c959d52db15241a1c8d3331bf0e02329
+Size (abbayedesmorts-gpl-2.0.1.tar.gz) = 1717272 bytes
+SHA1 (patch-Makefile) = febf461181f92a221c1871b3be9d50d8619908ea
