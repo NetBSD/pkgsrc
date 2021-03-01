@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1342 2021/03/01 08:49:41 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1343 2021/03/01 09:06:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2115,3 +2115,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.16.4 [gdt 2021-03-01]
 	Updated geography/gama to 2.14 [gdt 2021-03-01]
 	Removed lang/rakudo-star [nia 2021-03-01]
+	Updated devel/py-astroid to 2.5.1 [adam 2021-03-01]
+	Updated devel/py-pylint to 2.7.2 [adam 2021-03-01]
+	Updated www/py-daphne to 3.0.1 [adam 2021-03-01]
+	Updated www/py-channels to 3.0.3 [adam 2021-03-01]
