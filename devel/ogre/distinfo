@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 03:27:53 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/03/01 12:12:14 nia Exp $
 
-SHA1 (ogre-v1-6-3.tar.bz2) = 0bde8f8d982151c561e9e6c9ccb51e0d19b5eab6
-RMD160 (ogre-v1-6-3.tar.bz2) = e1e16c152d5cb3141e306e4886092b5675695e9a
-SHA512 (ogre-v1-6-3.tar.bz2) = 198ac14c730f97a4ee5802a8b3d44dddc836082d05e18e9f5e0b6e79dad18b231b75f6f0f13837736aff27af7548139d3ed343d2c3aaf6bebccf793859b8ede4
-Size (ogre-v1-6-3.tar.bz2) = 41790055 bytes
-SHA1 (patch-OgreMain_include_OgreStringConverter.h) = 8ef476c0056fdf69b4f158e5e8c85bb3b0c0c386
-SHA1 (patch-OgreMain_src_OgreStringConverter.cpp) = 6c1cc7f6f5c23c68ebc0cee33d661ba199d836e9
-SHA1 (patch-aa) = 414c2f02124352cf89d2ebaa2a5c10c71b2be095
+SHA1 (ogre-1.12.11.tar.gz) = 973b435990b59f41a65e7eb221050b25507b7068
+RMD160 (ogre-1.12.11.tar.gz) = 7a30784b5ed503df96fcb36f324ea3ecff9bcade
+SHA512 (ogre-1.12.11.tar.gz) = eba7918b3731dcc0e61c8caddb3e93f4bfbf61731695bd619730741e16eaf6d85ecc867ef9f5935a745c3dbefdf9b2b639a3b839886781f24bccdc79d7eeb03f
+Size (ogre-1.12.11.tar.gz) = 91325649 bytes
+SHA1 (patch-OgreMain_include_OgreBitwise.h) = b9419c6b988486b1cf064f34cf6bbb5474a9278a
