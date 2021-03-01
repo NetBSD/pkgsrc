@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2021/03/01 08:44:21 nia Exp $
+# $NetBSD: Makefile,v 1.594 2021/03/01 08:45:42 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -247,7 +247,6 @@ SUBDIR+=	quickjs
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
 SUBDIR+=	rakudo
-SUBDIR+=	rakudo-star
 SUBDIR+=	rcfunge
 SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
