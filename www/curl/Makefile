@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2021/02/03 13:17:18 adam Exp $
+# $NetBSD: Makefile,v 1.239 2021/03/01 23:31:30 gdt Exp $
 
 DISTNAME=	curl-7.75.0
 CATEGORIES=	www
@@ -19,7 +19,13 @@ USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+# Some systems use bundles instead of directories; this needs configuring
+# because curl doesn't use default validation.
+.if !empty(SSLCERTBUNDLE)
+CONFIGURE_ARGS+=	--with-ca-bundle=${SSLCERTBUNDLE}
+.else
 CONFIGURE_ARGS+=	--with-ca-path=${SSLCERTS}
+.endif
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--without-libpsl
 PKGCONFIG_OVERRIDE=	libcurl.pc.in
