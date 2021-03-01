@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2021/02/21 18:56:35 bouyer Exp $
+$NetBSD: distinfo,v 1.15 2021/03/01 09:25:32 mef Exp $
 
-SHA1 (kicad-5.1.9.tar.gz) = 37e481753973d9844e37bfa62be21256e21a7e0b
-RMD160 (kicad-5.1.9.tar.gz) = 0873f8b4ae8d3f5c81cbf59a91b21257db71d66c
-SHA512 (kicad-5.1.9.tar.gz) = 1b0676c8e375578b6d06836af35dd2ceb5e35b585e12660fa22461139e2e3af2d90fe2d5787ff8eab111bdba8fbfcc5446a8aa467e54f1372351c5a975df477f
-Size (kicad-5.1.9.tar.gz) = 23783554 bytes
+SHA1 (kicad-5.1.9.tar.xz) = 1416d13240f2b707caec69be09694eddcfa4a263
+RMD160 (kicad-5.1.9.tar.xz) = a9ee9f17507dceb2daac6173dee33c53d5ed901d
+SHA512 (kicad-5.1.9.tar.xz) = 8d4ce9d30fdecd0250c045fa50f9ef86bd6a0e4f912c89868cae43d75e358de024872d86795a451b53311d83681e220724254341225611539d29b2324b26cec5
+Size (kicad-5.1.9.tar.xz) = 14530684 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = ead4f35c8980e00f25f804de53b3c14b0287ae57
 SHA1 (patch-CMakeLists.txt) = 1ae2aa5633de9a8e5f7a87a9ceeb5ebc85009494
 SHA1 (patch-CMakeModules_Functions.cmake) = 9517d3451fd90eeb7ef6a98f08b08a925757e360
