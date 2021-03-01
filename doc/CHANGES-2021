@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1346 2021/03/01 12:44:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1347 2021/03/01 13:13:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ogre to 1.12.11 [nia 2021-03-01]
 	Updated www/py-django3 to 3.1.7 [adam 2021-03-01]
 	Updated www/py-django2 to 2.2.19 [adam 2021-03-01]
+	Updated lang/nim to 1.4.4 [ryoon 2021-03-01]
