@@ -1,4 +1,9 @@
-$NetBSD: patch-cmake_FindQwt.cmake,v 1.2 2021/03/01 00:03:35 gdt Exp $
+$NetBSD: patch-cmake_FindQwt.cmake,v 1.3 2021/03/01 01:06:30 gdt Exp $
+
+Force pkgsrc path only rather than looking in a large number of random
+places.
+
+Not yet reported upstream.
 
 --- cmake/FindQwt.cmake.orig	2021-02-19 12:09:21.000000000 +0000
 +++ cmake/FindQwt.cmake
