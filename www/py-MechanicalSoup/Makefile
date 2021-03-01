@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2021/02/06 20:45:45 leot Exp $
+# $NetBSD: Makefile,v 1.9 2021/03/01 20:42:12 leot Exp $
 
 DISTNAME=	MechanicalSoup-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/hickford/MechanicalSoup
 COMMENT=	Library for automating interaction with websites
 LICENSE=	mit
