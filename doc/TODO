@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20410 2021/03/01 09:49:18 nia Exp $
+$NetBSD: TODO,v 1.20411 2021/03/01 13:22:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rbldnsd-0.998
 	o rdp-1.6
 	o rebar-3.13.2
-	o redis-6.2.0
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
