@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1352 2021/03/01 15:13:19 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1353 2021/03/01 19:08:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2130,3 +2130,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-city-lite to 2021.03 [fcambus 2021-03-01]
 	Updated net/dbip-country-lite to 2021.03 [fcambus 2021-03-01]
 	Updated editors/kiro-editor to 0.4.3 [pin 2021-03-01]
+	Updated geography/gdal-lib to 3.2.1 [gdt 2021-03-01]
