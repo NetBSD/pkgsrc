@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.am,v 1.1 2021/03/01 09:48:40 nia Exp $
+
+_POSIX_C_SOURCE=200112L or higher is needed for strdup.
+
+--- Makefile.am.orig	2020-10-10 13:03:09.000000000 +0000
++++ Makefile.am
+@@ -436,7 +436,7 @@ src/ComUtil/symbols.cc src/ComUtil/txtut
+ src/ComUtil/util.cc src/ComUtil/xdll.cc
+ 
+ libComUtil_la_CPPFLAGS = \
+- -D_POSIX_C_SOURCE $(IVSTD_INCLUDES)
++ -D_POSIX_C_SOURCE=200112L $(IVSTD_INCLUDES)
+ 
+ libComUtilPART1_la_SOURCES = src/ComUtil/errsys.cc
+ 
+@@ -447,7 +447,7 @@ libComUtilPART1_la_SOURCES = src/ComUtil
+ libComUtilPART1_la_CPPFLAGS = \
+  -DABSLIBALLDIR=\"$(pkgdatadir)/\" \
+  -DRELLIBALLDIR=\"lib/$(PACKAGE)/\" \
+- -D_POSIX_C_SOURCE $(IVSTD_INCLUDES)
++ -D_POSIX_C_SOURCE=200112L $(IVSTD_INCLUDES)
+ 
+ # NOTE: inconsistency in whether ABSLIBALLDIR has a trailing slash
+ 
