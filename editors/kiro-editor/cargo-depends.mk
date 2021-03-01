@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2021/01/30 22:22:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2021/03/01 15:13:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	cargo-husky-1.5.0
-CARGO_CRATE_DEPENDS+=	cc-1.0.66
+CARGO_CRATE_DEPENDS+=	cc-1.0.67
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	dirs-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.2
@@ -12,16 +12,16 @@ CARGO_CRATE_DEPENDS+=	getrandom-0.1.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.2
 CARGO_CRATE_DEPENDS+=	jemalloc-sys-0.3.2
 CARGO_CRATE_DEPENDS+=	jemallocator-0.3.2
-CARGO_CRATE_DEPENDS+=	libc-0.2.84
+CARGO_CRATE_DEPENDS+=	libc-0.2.86
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
 CARGO_CRATE_DEPENDS+=	rand-0.7.3
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
 CARGO_CRATE_DEPENDS+=	rand_core-0.5.1
 CARGO_CRATE_DEPENDS+=	rand_hc-0.2.0
-CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.4
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.5
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.0
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.4
-CARGO_CRATE_DEPENDS+=	signal-hook-0.3.4
+CARGO_CRATE_DEPENDS+=	signal-hook-0.3.6
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.3.0
 CARGO_CRATE_DEPENDS+=	term-0.7.0
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
