@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1339 2021/02/28 22:58:38 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.1340 2021/03/01 00:03:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pleaser to 0.3.24 [pin 2021-02-28]
 	Updated comms/asterisk13 to 13.38.2 [jnemeth 2021-02-28]
 	Removed comms/asterisk14 [jnemeth 2021-02-28]
+	Updated geography/qgis to 3.16.4 [gdt 2021-03-01]
