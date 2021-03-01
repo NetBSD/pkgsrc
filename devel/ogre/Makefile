@@ -1,37 +1,54 @@
-# $NetBSD: Makefile,v 1.46 2020/06/05 12:48:59 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.47 2021/03/01 12:12:14 nia Exp $
 
-DISTNAME=	ogre-v1-6-3
-PKGNAME=	ogre-1.6.3
-PKGREVISION=	15
+DISTNAME=	ogre-1.12.11
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OGRECave/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ogre.sourceforge.net/
-COMMENT=	Object-Oriented Graphics Rendering Engine
+HOMEPAGE=	https://github.com/OGRECave/ogre
+COMMENT=	Scene-oriented, flexible 3D engine written in C++
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=			${WRKDIR}/ogre
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config xmkmf
-USE_LANGUAGES=		c c++03
-USE_LIBTOOL=		yes
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--with-platform=GLX
-CONFIGURE_ARGS+=	--disable-freeimage
-CONFIGURE_ARGS+=	--disable-cg
+GCC_REQD+=	4.7 # C++11
 
-PKGCONFIG_OVERRIDE+=	OGRE.pc.in
+# Unsupported on some pkgsrc platforms (e.g. NetBSD).
+# It attempts to enable them solely based on the compiler version, which
+# doesn't work, and does not include good fallback.
+CMAKE_ARGS+=	-DOGRE_ENABLE_PRECOMPILED_HEADERS=OFF
+
+CMAKE_ARGS+=	-DOGRE_BUILD_DEPENDENCIES=OFF
+CMAKE_ARGS+=	-DOGRE_BUILD_COMPONENT_PYTHON=OFF
+CMAKE_ARGS+=	-DOGRE_BUILD_COMPONENT_JAVA=OFF
+
+# Mostly going by which dependencies other distributors enable by default to
+# determine what is useful to include.
+# Qt5 and SDL2 are only used by example programs.
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_ASSIMP=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Cg=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_OpenEXR=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PythonInterp=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PythonLibs=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SDL2=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Softimage=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SWIG=ON
+
+PKGCONFIG_OVERRIDE+=	CMake/Templates/*.pc.in
 
 .include "../../archivers/zziplib/buildlink3.mk"
-.include "../../devel/devIL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
