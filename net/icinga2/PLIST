@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/15 00:37:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/01 15:52:41 wiz Exp $
 ${PLIST.mysql}lib/icinga2/libmysql_shim.so
-${PLIST.mysql}lib/icinga2/libmysql_shim.so.2.12.0
+${PLIST.mysql}lib/icinga2/libmysql_shim.so.${PKGVERSION}
 ${PLIST.pgsql}lib/icinga2/libpgsql_shim.so
-${PLIST.pgsql}lib/icinga2/libpgsql_shim.so.2.12.0
+${PLIST.pgsql}lib/icinga2/libpgsql_shim.so.${PKGVERSION}
 lib/icinga2/sbin/icinga2
 libexec/nagios/check_nscp_api
 man/man8/icinga2.8
