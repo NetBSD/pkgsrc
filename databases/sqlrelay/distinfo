@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/02/16 13:12:39 adam Exp $
+$NetBSD: distinfo,v 1.27 2021/03/01 14:39:01 taca Exp $
 
 SHA1 (sqlrelay-1.8.0.tar.gz) = 30fe6bab49b04c091cee61d77c854d8b4674cc1d
 RMD160 (sqlrelay-1.8.0.tar.gz) = 1c87f0da0d8334a23fff35e9ff1edeb3f2093111
@@ -6,7 +6,7 @@ SHA512 (sqlrelay-1.8.0.tar.gz) = cfb430f1eb9de4c8dd5c4ee4a89a1c04ba2449cc302155b
 Size (sqlrelay-1.8.0.tar.gz) = 4684135 bytes
 SHA1 (patch-Makefile) = 4005ca28daec0180fe298f711b22b3d8dcf02a9a
 SHA1 (patch-config.mk.in) = 172f04e655d31705b107f0889d86c48db9e0919a
-SHA1 (patch-configure) = a2355371cbf9d81f8d17568ed9ff0b6788dd25f9
+SHA1 (patch-configure) = c4c00878bb377ffaed4ec3268956e6be825b7324
 SHA1 (patch-etc_Makefile) = 5c768f50a97489ea06ca586b131ef0324878f8d0
 SHA1 (patch-src_api_nodejs_Makefile) = 6f0e569f25fd1e78e088b8e0cd8eb541c2c5d417
 SHA1 (patch-src_api_nodejs_package__in.json) = 76e2ebc4e47d5ef38d0c96059b62460fef687d1e
