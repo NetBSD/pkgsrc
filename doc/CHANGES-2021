@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1341 2021/03/01 01:20:12 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1342 2021/03/01 08:49:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed comms/asterisk14 [jnemeth 2021-02-28]
 	Updated geography/qgis to 3.16.4 [gdt 2021-03-01]
 	Updated geography/gama to 2.14 [gdt 2021-03-01]
+	Removed lang/rakudo-star [nia 2021-03-01]
