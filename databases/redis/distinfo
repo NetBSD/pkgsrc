@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.56 2021/01/13 11:30:28 adam Exp $
+$NetBSD: distinfo,v 1.57 2021/03/01 13:19:18 adam Exp $
 
-SHA1 (redis-6.0.10.tar.gz) = fcdfddab2a9a0faa317148b9211af42db1d64523
-RMD160 (redis-6.0.10.tar.gz) = 590bec2469980b73e80286cfac7c23aa69d7a9a9
-SHA512 (redis-6.0.10.tar.gz) = 4ef60645316143db3c26c45e90c7dc629e15641313267fd732396212c67db9ebeb9e170d830599b2e143ad5135d1ef249b6fbc1fb4960f4cf857cfdb5c1470c8
-Size (redis-6.0.10.tar.gz) = 2271970 bytes
-SHA1 (patch-redis.conf) = 528c28e2b7483eb20ccab8f2ab9543822792f016
-SHA1 (patch-src_Makefile) = 5c5be572f50d0db6b050a9d83fc30a28e8fa9856
+SHA1 (redis-6.2.0.tar.gz) = a09b62525fc4b122de4a28f4f2324d6cf8c872b5
+RMD160 (redis-6.2.0.tar.gz) = f14cd2652ea16f1bc9ebcf48b5f6d22f65f228b8
+SHA512 (redis-6.2.0.tar.gz) = 905cdcbe42b6126c2bfb68a948cb38d232af3d04e620c51897fb80ac43b5b8da1f60e9701377dcd15db8c3eb168ab9c3605d5715d664903e0a620b464d1ac9b8
+Size (redis-6.2.0.tar.gz) = 2435539 bytes
+SHA1 (patch-redis.conf) = ee657a9d82711263ceb0fb8f7d8059ed23528fe9
+SHA1 (patch-src_Makefile) = b74e1575d423b9a4d09b6b5e3eeb355d79c27855
 SHA1 (patch-src_hyperloglog.c) = e9bdd3c630024a6fbe02c2c1d85e26131ad938cf
 SHA1 (patch-src_object.c) = 30ffaec9c7e6135e3a5576cd1a35d7bcec668299
+SHA1 (patch-src_zmalloc.c) = 6e182eb1ee22f5c8e36b5d98e221db0a6524b0a6
