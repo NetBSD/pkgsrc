@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.18 2020/04/28 23:50:03 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/03/01 19:07:51 gdt Exp $
 @pkgdir lib/gdalplugins
 bin/gdal-config
 bin/gdal_contour
+bin/gdal_create
 bin/gdal_grid
 bin/gdal_rasterize
 bin/gdal_translate
+bin/gdal_viewshed
 bin/gdaladdo
 bin/gdalbuildvrt
 bin/gdaldem
@@ -12,7 +14,8 @@ bin/gdalenhance
 bin/gdalinfo
 bin/gdallocationinfo
 bin/gdalmanage
-bin/gdalserver
+bin/gdalmdiminfo
+bin/gdalmdimtranslate
 bin/gdalsrsinfo
 bin/gdaltindex
 bin/gdaltransform
@@ -87,6 +90,7 @@ include/ogr_geometry.h
 include/ogr_p.h
 include/ogr_spatialref.h
 include/ogr_srs_api.h
+include/ogr_swq.h
 include/ogrsf_frmts.h
 include/rawdataset.h
 include/vrtdataset.h
@@ -104,6 +108,7 @@ share/gdal/eedaconf.json
 share/gdal/epsg.wkt
 share/gdal/esri_StatePlane_extra.wkt
 share/gdal/gdalicon.png
+share/gdal/gdalmdiminfo_output.schema.json
 share/gdal/gdalvrt.xsd
 share/gdal/gml_registry.xml
 share/gdal/gmlasconf.xml
@@ -165,6 +170,12 @@ share/gdal/s57objectclasses.csv
 share/gdal/seed_2d.dgn
 share/gdal/seed_3d.dgn
 share/gdal/stateplane.csv
+share/gdal/template_tiles.mapml
+share/gdal/tms_LINZAntarticaMapTileGrid.json
+share/gdal/tms_MapML_APSTILE.json
+share/gdal/tms_MapML_CBMTILE.json
+share/gdal/tms_NZTM2000.json
 share/gdal/trailer.dxf
 share/gdal/vdv452.xml
 share/gdal/vdv452.xsd
+share/gdal/vicar.json
