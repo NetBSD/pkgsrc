@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/02/25 10:22:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/03/01 09:00:33 nia Exp $
 
 SHA1 (flightgear-2020.3.6.tar.bz2) = 3f2b1c6dfeca5c09c33afa1b82064ba3ce0a1c9d
 RMD160 (flightgear-2020.3.6.tar.bz2) = aaa210b7af3f6b7cd1deb45266ff9129a5b723d2
@@ -7,3 +7,4 @@ Size (flightgear-2020.3.6.tar.bz2) = 8837251 bytes
 SHA1 (patch-3rdparty_hts__engine__API_lib_HTS__misc.c) = b6deb149e54dc92cb748fd149a806a016ba76a2e
 SHA1 (patch-3rdparty_iaxclient_lib_libiax2_src_iax.c) = d6ae7b47253c1ba8f79e42cde27189d32e603eea
 SHA1 (patch-3rdparty_joystick_jsNone.cxx) = 4a662c71f97dd2d5093f09d4631d672e5278f082
+SHA1 (patch-src_Input_fgjs.cxx) = e3d986b67142bac8c7084a026a730ebca48b15f5
