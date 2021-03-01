@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1344 2021/03/01 09:49:18 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1345 2021/03/01 12:13:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-daphne to 3.0.1 [adam 2021-03-01]
 	Updated www/py-channels to 3.0.3 [adam 2021-03-01]
 	Updated graphics/ivtools to 2.0.4a1 [nia 2021-03-01]
+	Updated devel/ogre to 1.12.11 [nia 2021-03-01]
