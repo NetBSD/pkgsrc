@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.592 2021/02/16 13:16:38 adam Exp $
+# $NetBSD: Makefile,v 1.593 2021/03/01 08:44:21 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -295,6 +295,7 @@ SUBDIR+=	sr-examples
 SUBDIR+=	stalin
 SUBDIR+=	sun-jdk7
 SUBDIR+=	sun-jre7
+SUBDIR+=	surgescript
 SUBDIR+=	swi-prolog
 SUBDIR+=	swi-prolog-jpl
 SUBDIR+=	swi-prolog-lite
