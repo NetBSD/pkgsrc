@@ -1,4 +1,4 @@
-$NetBSD: patch-src_core_CMakeLists.txt,v 1.2 2019/10/29 19:30:11 bouyer Exp $
+$NetBSD: patch-src_core_CMakeLists.txt,v 1.3 2021/03/01 00:03:35 gdt Exp $
 
 Add ApplicationServices framework
 Use Q_WS_MAC to conditionalize frameworks
@@ -6,17 +6,14 @@ This sort-of matches Q_OS_MACX conditionals in main.cpp and qgisapp.cpp
 but more importantly avoids using APPLE which we overwrite in the
 pkgsrc Makefile to disable the MAC application bundle
 
---- src/core/CMakeLists.txt.orig	2019-09-13 14:11:09.000000000 +0200
-+++ src/core/CMakeLists.txt	2019-10-27 19:11:40.694784656 +0100
-@@ -1369,9 +1369,9 @@
-   TARGET_LINK_LIBRARIES(qgis_core ${LIBTASN1_LIBRARY})
- ENDIF (APPLE)
+--- src/core/CMakeLists.txt.orig	2021-02-19 12:09:21.000000000 +0000
++++ src/core/CMakeLists.txt
+@@ -1713,7 +1713,7 @@ if (APPLE)
+   target_link_libraries(qgis_core ${LIBTASN1_LIBRARY})
+ endif()
  
--IF (APPLE AND NOT IOS)
-+IF (Q_WS_MAC)
-   TARGET_LINK_LIBRARIES(qgis_core qgis_native)
--ENDIF (APPLE AND NOT IOS)
-+ENDIF (Q_WS_MAC)
+-if (APPLE AND NOT IOS)
++if (Q_WS_MAC)
+   target_link_libraries(qgis_core qgis_native)
+ endif()
  
- IF (QT_MOBILITY_LOCATION_FOUND)
-   TARGET_LINK_LIBRARIES(qgis_core ${QT_MOBILITY_LOCATION_LIBRARY})
