@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1350 2021/03/01 13:24:18 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1351 2021/03/01 13:26:12 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2128,3 +2128,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rabbitmq to 3.8.13 [adam 2021-03-01]
 	Updated net/dbip-asn-lite to 2021.03 [fcambus 2021-03-01]
 	Updated net/dbip-city-lite to 2021.03 [fcambus 2021-03-01]
+	Updated net/dbip-country-lite to 2021.03 [fcambus 2021-03-01]
