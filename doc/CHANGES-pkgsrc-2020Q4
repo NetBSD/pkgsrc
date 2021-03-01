@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.13 2021/02/18 05:26:58 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.14 2021/03/01 20:05:49 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -96,5 +96,27 @@ security/tor-browser: security fix
 Pullup ticket #6420 - requested by wiz
 www/privoxy: security fix
 
+Pullup ticket #6422 - requested by bouyer
+sysutils/xenkernel413: security fix
+
 Pullup ticket #6423 - requested by bouyer
 sysutils/xentools413: security patch
+
+Pullup ticket #6424 - requested by bouyer
+sysutils/xenkernel411: security fix
+
+Pullup ticket #6425 - requested by bouyer
+sysutils/xentools411: build fix, bugfix
+
+Pullup ticket #6426 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6427 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6430 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6431 - requested by nia
+www/firefox78-l10n: dependent update
+
