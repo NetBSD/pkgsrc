@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/02/27 19:30:57 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2021/03/01 11:13:20 mef Exp $
 
 SHA1 (en_dict-20121020.tar.gz) = 3d6b85cbede261b3703b916e6a1a3303f6cba9a6
 RMD160 (en_dict-20121020.tar.gz) = ae6a1fcf214b9ba1b9d300edeec4d61ad62caf18
@@ -8,5 +8,7 @@ SHA1 (fcitx5-5.0.5.tar.xz) = 9b1657de47063da210b9eaf50213313552eb51ce
 RMD160 (fcitx5-5.0.5.tar.xz) = 2418279e2e76cdc98310cf00b3af1d9ec48f914a
 SHA512 (fcitx5-5.0.5.tar.xz) = 3bc1a51119c9ee0c62a7112b520f88bdc6afe10b6a7d61c97d4b7b69556716a15815b9523eb9aa566918217ad299285116a60a60978cd8297225e6f4b856785a
 Size (fcitx5-5.0.5.tar.xz) = 1294560 bytes
+SHA1 (patch-src_frontend_ibusfrontend_ibusfrontend.cpp) = 06d009f2d3977f5f72ca727a41e6aeb15aa257a2
 SHA1 (patch-src_lib_fcitx-utils_misc.cpp) = 3f7b13bea6fba8d59935465b3ede3732b1571c26
 SHA1 (patch-src_modules_spell_dict_CMakeLists.txt) = 3bbb67be4209af3d0cc50687c1f1be2ab8757c66
+SHA1 (patch-test_testdbus.cpp) = e20ca569ec6e79a7565471ebccd5fa54de645462
