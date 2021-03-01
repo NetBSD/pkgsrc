@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2021/03/01 00:03:35 gdt Exp $
+# $NetBSD: Makefile,v 1.110 2021/03/01 01:06:30 gdt Exp $
 
 # This is intentionally 3.16 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -75,6 +75,7 @@ pre-configure:
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
