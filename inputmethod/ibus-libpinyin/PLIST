@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/27 16:50:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/02 03:36:17 mef Exp $
 libexec/ibus-engine-libpinyin
 libexec/ibus-setup-libpinyin
 share/applications/ibus-setup-libbopomofo.desktop
@@ -18,16 +18,16 @@ share/ibus-libpinyin/icons/ibus-pinyin.svg
 share/ibus-libpinyin/icons/simp-chinese.svg
 share/ibus-libpinyin/icons/trad-chinese.svg
 share/ibus-libpinyin/network.txt
-share/ibus-libpinyin/setup/__pycache__/config.cpython-39.opt-1.pyc
-share/ibus-libpinyin/setup/__pycache__/config.cpython-39.pyc
-share/ibus-libpinyin/setup/__pycache__/dicttreeview.cpython-39.opt-1.pyc
-share/ibus-libpinyin/setup/__pycache__/dicttreeview.cpython-39.pyc
-share/ibus-libpinyin/setup/__pycache__/keyboardshortcut.cpython-39.opt-1.pyc
-share/ibus-libpinyin/setup/__pycache__/keyboardshortcut.cpython-39.pyc
-share/ibus-libpinyin/setup/__pycache__/main2.cpython-39.opt-1.pyc
-share/ibus-libpinyin/setup/__pycache__/main2.cpython-39.pyc
-share/ibus-libpinyin/setup/__pycache__/shortcuteditor.cpython-39.opt-1.pyc
-share/ibus-libpinyin/setup/__pycache__/shortcuteditor.cpython-39.pyc
+share/ibus-libpinyin/setup/__pycache__/config.cpython-${PYVERSION_DIGIT}.opt-1.pyc
+share/ibus-libpinyin/setup/__pycache__/config.cpython-${PYVERSION_DIGIT}.pyc
+share/ibus-libpinyin/setup/__pycache__/dicttreeview.cpython-${PYVERSION_DIGIT}.opt-1.pyc
+share/ibus-libpinyin/setup/__pycache__/dicttreeview.cpython-${PYVERSION_DIGIT}.pyc
+share/ibus-libpinyin/setup/__pycache__/keyboardshortcut.cpython-${PYVERSION_DIGIT}.opt-1.pyc
+share/ibus-libpinyin/setup/__pycache__/keyboardshortcut.cpython-${PYVERSION_DIGIT}.pyc
+share/ibus-libpinyin/setup/__pycache__/main2.cpython-${PYVERSION_DIGIT}.opt-1.pyc
+share/ibus-libpinyin/setup/__pycache__/main2.cpython-${PYVERSION_DIGIT}.pyc
+share/ibus-libpinyin/setup/__pycache__/shortcuteditor.cpython-${PYVERSION_DIGIT}.opt-1.pyc
+share/ibus-libpinyin/setup/__pycache__/shortcuteditor.cpython-${PYVERSION_DIGIT}.pyc
 share/ibus-libpinyin/setup/config.py
 share/ibus-libpinyin/setup/dicttreeview.py
 share/ibus-libpinyin/setup/ibus-libpinyin-preferences.ui
