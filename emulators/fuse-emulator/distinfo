@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.14 2018/12/12 16:45:52 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/03/02 11:55:49 adam Exp $
 
-SHA1 (fuse-1.5.7.tar.gz) = 53ffc684d4b1054a2e4ef1c36de456ab170d5030
-RMD160 (fuse-1.5.7.tar.gz) = c697afe4bf1807a79a94c6c20313c0a570f73d7e
-SHA512 (fuse-1.5.7.tar.gz) = ac11e03fc203f98433253fb72d7700cf6285ad8662147f318bb4ceda3888bc865b80d85473a3b2bda9e0971989b1579fc928f41ddabbf01d58358362066be13d
-Size (fuse-1.5.7.tar.gz) = 1634568 bytes
-SHA1 (patch-configure) = 0b8b90751bd34efcee5c1bd9e4cb8687e972b127
+SHA1 (fuse-1.6.0.tar.gz) = 47f1e56212b0660ed41655288ef1f2281228f311
+RMD160 (fuse-1.6.0.tar.gz) = e7a3b298802aeae28ff20a866ba01f9f3cc3d031
+SHA512 (fuse-1.6.0.tar.gz) = 5096b24b5b3d812942a7ad401b886b6a99f5493686912cb4aff18ede65404ae97a9bcafa6337aaed4378382f2a170918797d7d4570bb809476be5aa9fc625b8b
+Size (fuse-1.6.0.tar.gz) = 1686171 bytes
 SHA1 (patch-sound_coreaudiosound.c) = e293cd00d9466af4e49a7c0a1cb9b535aebf6f4d
 SHA1 (patch-sound_osssound.c) = e83d80c984592b4e52faccbea35cdc9b54b71933
-SHA1 (patch-ui_gtk_gtkmouse.c) = 6178ba399a145180a0bbe34cbff762f3a3b5e605
-SHA1 (patch-ui_gtk_gtkui.c) = 4789f241793ab9449d5df3b019b48607d4d24e9c
