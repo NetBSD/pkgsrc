@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/16 14:44:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/02 09:41:56 adam Exp $
 bin/osgarchive
 bin/osgconv
 bin/osgfilecache
@@ -576,9 +576,9 @@ include/osgViewer/View
 include/osgViewer/Viewer
 include/osgViewer/ViewerBase
 include/osgViewer/ViewerEventHandlers
-${PLIST.quartz}include/osgViewer/api/Carbon/GraphicsHandleCarbon
-${PLIST.quartz}include/osgViewer/api/Carbon/GraphicsWindowCarbon
-${PLIST.quartz}include/osgViewer/api/Carbon/PixelBufferCarbon
+${PLIST.quartz}include/osgViewer/api/Cocoa/GraphicsHandleCocoa
+${PLIST.quartz}include/osgViewer/api/Cocoa/GraphicsWindowCocoa
+${PLIST.quartz}include/osgViewer/api/Cocoa/PixelBufferCocoa
 ${PLIST.notdarwin}include/osgViewer/api/X11/GraphicsHandleX11
 ${PLIST.notdarwin}include/osgViewer/api/X11/GraphicsWindowX11
 ${PLIST.notdarwin}include/osgViewer/api/X11/PixelBufferX11
@@ -682,6 +682,7 @@ lib/libosgWidget.so.${PKGVERSION}
 lib/osgPlugins-${PKGVERSION}/osgdb_3dc.so
 lib/osgPlugins-${PKGVERSION}/osgdb_3ds.so
 lib/osgPlugins-${PKGVERSION}/osgdb_ac.so
+${PLIST.quartz}lib/osgPlugins-${PKGVERSION}/osgdb_avfoundation.so
 lib/osgPlugins-${PKGVERSION}/osgdb_bmp.so
 lib/osgPlugins-${PKGVERSION}/osgdb_bsp.so
 lib/osgPlugins-${PKGVERSION}/osgdb_bvh.so
@@ -710,9 +711,10 @@ lib/osgPlugins-${PKGVERSION}/osgdb_gles.so
 lib/osgPlugins-${PKGVERSION}/osgdb_glsl.so
 lib/osgPlugins-${PKGVERSION}/osgdb_gz.so
 lib/osgPlugins-${PKGVERSION}/osgdb_hdr.so
+${PLIST.quartz}lib/osgPlugins-${PKGVERSION}/osgdb_imageio.so
 lib/osgPlugins-${PKGVERSION}/osgdb_ive.so
 lib/osgPlugins-${PKGVERSION}/osgdb_jp2.so
-${PLIST.notdarwin}lib/osgPlugins-${PKGVERSION}/osgdb_jpeg.so
+lib/osgPlugins-${PKGVERSION}/osgdb_jpeg.so
 lib/osgPlugins-${PKGVERSION}/osgdb_ktx.so
 lib/osgPlugins-${PKGVERSION}/osgdb_logo.so
 lib/osgPlugins-${PKGVERSION}/osgdb_lua.so
@@ -764,7 +766,7 @@ ${PLIST.svg}lib/osgPlugins-${PKGVERSION}/osgdb_svg.so
 lib/osgPlugins-${PKGVERSION}/osgdb_tf.so
 lib/osgPlugins-${PKGVERSION}/osgdb_tga.so
 lib/osgPlugins-${PKGVERSION}/osgdb_tgz.so
-${PLIST.notdarwin}lib/osgPlugins-${PKGVERSION}/osgdb_tiff.so
+lib/osgPlugins-${PKGVERSION}/osgdb_tiff.so
 lib/osgPlugins-${PKGVERSION}/osgdb_trans.so
 lib/osgPlugins-${PKGVERSION}/osgdb_trk.so
 lib/osgPlugins-${PKGVERSION}/osgdb_txf.so
