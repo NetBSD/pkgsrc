@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1358 2021/03/02 03:56:27 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1359 2021/03/02 12:00:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2136,3 +2136,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/mawk to 1.3.4.20200120 [gutteridge 2021-03-02]
 	Updated x11/xfce4-screenshooter to 1.9.8 [gutteridge 2021-03-02]
 	Updated misc/xfce4-time-out-plugin to 1.1.2 [gutteridge 2021-03-02]
+	Updated emulators/libspectrum to 1.5.0 [adam 2021-03-02]
+	Updated emulators/fuse-emulator to 1.6.0 [adam 2021-03-02]
+	Updated databases/redis to 6.2.1 [adam 2021-03-02]
+	Updated devel/py-txaio to 21.2.1 [adam 2021-03-02]
