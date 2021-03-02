@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/02/27 16:50:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2021/03/02 03:36:17 mef Exp $
 
 DISTNAME=	ibus-libpinyin-1.12.0
 CATEGORIES=	inputmethod chinese
@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYVERSION_DIGIT=		${PYPKGPREFIX:S/py//}
+PLIST_SUBST+=			PYVERSION_DIGIT=${PYVERSION_DIGIT}
 
 .include "options.mk"
 
