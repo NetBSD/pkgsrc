@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1359 2021/03/02 12:00:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1360 2021/03/02 13:11:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/fuse-emulator to 1.6.0 [adam 2021-03-02]
 	Updated databases/redis to 6.2.1 [adam 2021-03-02]
 	Updated devel/py-txaio to 21.2.1 [adam 2021-03-02]
+	Updated devel/cbindgen to 0.18.0 [ryoon 2021-03-02]
