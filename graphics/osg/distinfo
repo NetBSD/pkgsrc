@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.13 2021/01/16 14:44:50 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/03/02 09:41:56 adam Exp $
 
 SHA1 (osg-3.6.5.tar.gz) = aef898a4e48dc235d8f1a5fd3f753fd2cb7b7861
 RMD160 (osg-3.6.5.tar.gz) = 1b9e1fd9250f5c3de85966d94edf5be393fa3928
 SHA512 (osg-3.6.5.tar.gz) = 7002fa30a3bcf6551d2e1050b4ca75a3736013fd190e4f50953717406864da1952deb09f530bc8c5ddf6e4b90204baec7dbc283f497829846d46d561f66feb4b
 Size (osg-3.6.5.tar.gz) = 5780762 bytes
 SHA1 (patch-CMakeModules_FindFFmpeg.cmake) = cb533fdfa7cc569b6e226e1ab422ef36d5d31c3a
+SHA1 (patch-CMakeModules_FindLua52.cmake) = 859b67b513f239f9f02fa069d91549c4d984fbc9
 SHA1 (patch-ab) = 0bb683599daae3b2718693f9df8077b0333a410b
 SHA1 (patch-applications_present3D_Cluster.cpp) = 017b1d9b42760cad8deb77d7330b04f75aa0e814
 SHA1 (patch-src_osgPlugins_osc_ip_posix_NetworkingUtils.cpp) = 5748636ed17d23a0a595d38b2b392e773840a102
