@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/20 21:52:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/02 03:04:23 mef Exp $
 
 DISTNAME=	fcitx5-zhuyin-5.0.3
 CATEGORIES=	inputmethod
@@ -9,6 +9,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/fcitx/fcitx5-zhuyin
 COMMENT=	Libzhuyin Wrapper for Fcitx5
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules/
 
 DISTFILES+=	${DEFAULT_DISTFILES}
 MOREDISTFILES+=	model.text.20161206.tar.gz
