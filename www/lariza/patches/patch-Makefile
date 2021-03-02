@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/03/02 19:46:38 pin Exp $
+
+Install manpages to proper location
+
+--- Makefile.orig	2021-03-02 19:25:29.240659545 +0000
++++ Makefile
+@@ -11,7 +11,7 @@ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ libdir = $(exec_prefix)/lib
+ datarootdir = $(prefix)/share
+-mandir = $(datarootdir)/man
++mandir = $(prefix)/$(PKGMANDIR)
+ man1dir = $(mandir)/man1
+ datadir = $(prefix)/share
+ 
