@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1354 2021/03/01 19:08:06 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1355 2021/03/02 01:56:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/kiro-editor to 0.4.3 [pin 2021-03-01]
 	Updated geography/gdal-lib to 3.2.1 [gdt 2021-03-01]
 	Updated geography/py-gdal to 3.2.1 [gdt 2021-03-01]
+	Updated editors/xfce4-mousepad to 0.5.3 [gutteridge 2021-03-02]
