@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/03/02 03:04:23 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/02 13:24:53 ryoon Exp $
 
 DISTNAME=	fcitx5-m17n-5.0.3
 CATEGORIES=	inputmethod
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-m17n
 COMMENT=	Wrapper library of m17n for Fcitx5
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules/
+BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes

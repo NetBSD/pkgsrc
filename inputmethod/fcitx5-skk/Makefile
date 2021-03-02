@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/27 20:10:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/02 13:24:54 ryoon Exp $
 
 DISTNAME=	fcitx5-skk-5.0.4
 CATEGORIES=	inputmethod
@@ -9,6 +9,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/fcitx/fcitx5-skk
 COMMENT=	SKK Kana-Kanji inputmethod for fcitx5
 LICENSE=	gnu-gpl-v3
+
+BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
