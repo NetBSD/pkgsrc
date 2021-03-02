@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2020/03/15 16:00:55 taca Exp $
+$NetBSD: MESSAGE,v 1.5 2021/03/02 13:16:59 ryoon Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
 1. If you want to use with MySQL server (by default), install
-   databases/mysql5[5|6|7]-* and enable it. Then, create the database.
+   databases/mysql5[6|7]-* and enable it. Then, create the database.
 
 2. Install nginx httpd server, www/nginx.
 
