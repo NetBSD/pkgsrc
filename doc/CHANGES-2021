@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1366 2021/03/03 12:05:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1367 2021/03/03 12:18:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/fasttracker2 to 1.44 [fox 2021-03-03]
 	Updated lang/mono to 6.12.0.107 [nia 2021-03-03]
 	Removed lang/mono6 successor lang/mono [nia 2021-03-03]
+	Added finance/rates version 0.2.0 [pin 2021-03-03]
