@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1369 2021/03/03 18:06:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1370 2021/03/03 23:35:57 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2154,3 +2154,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-aiohttp-socks to 0.6.0 [adam 2021-03-03]
 	Updated devel/py-dulwich to 0.20.20 [adam 2021-03-03]
 	Updated devel/py-greenlet to 1.0.0 [adam 2021-03-03]
+	Updated editors/nano to 5.6.1 [schwarz 2021-03-03[
