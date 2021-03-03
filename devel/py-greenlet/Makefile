@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/09/29 16:58:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/03/03 18:05:01 adam Exp $
 
-DISTNAME=	greenlet-0.4.17
+DISTNAME=	greenlet-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
@@ -12,5 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
-.include "../../lang/python/distutils.mk"
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover greenlet.tests
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
