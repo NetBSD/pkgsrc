@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1364 2021/03/03 10:09:42 mrg Exp $
+$NetBSD: CHANGES-2021,v 1.1365 2021/03/03 10:22:22 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2146,3 +2146,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/rocksndiamonds to 4.2.3.1 [adam 2021-03-03]
 	Updated net/rabbitmq to 3.8.14 [adam 2021-03-03]
 	Updated www/bozohttpd to 20210227 [mrg 2021-03-03]
+	Updated audio/fasttracker2 to 1.44 [fox 2021-03-03]
