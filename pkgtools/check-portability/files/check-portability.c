@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.16 2020/05/23 22:18:11 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.17 2021/03/03 10:20:00 nia Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -464,13 +464,20 @@ static bool
 is_irrelevant_extension(cstr ext)
 {
 	return cstr_eq(ext, CSTR("bz2"))
+	    || cstr_eq(ext, CSTR("bmp"))
 	    || cstr_eq(ext, CSTR("c"))
 	    || cstr_eq(ext, CSTR("cc"))
 	    || cstr_eq(ext, CSTR("cpp"))
 	    || cstr_eq(ext, CSTR("gz"))
+	    || cstr_eq(ext, CSTR("html"))
+	    || cstr_eq(ext, CSTR("js"))
 	    || cstr_eq(ext, CSTR("m4"))
+	    || cstr_eq(ext, CSTR("otf"))
 	    || cstr_eq(ext, CSTR("pdf"))
+	    || cstr_eq(ext, CSTR("png"))
 	    || cstr_eq(ext, CSTR("ps"))
+	    || cstr_eq(ext, CSTR("svg"))
+	    || cstr_eq(ext, CSTR("ttf"))
 	    || cstr_eq(ext, CSTR("xz"))
 	    || cstr_eq(ext, CSTR("zip"));
 }
