@@ -1,22 +1,16 @@
-$NetBSD: patch-mono_metadata_icall.c,v 1.1 2015/05/21 14:38:08 kefren Exp $
+$NetBSD: patch-mono_metadata_icall.c,v 1.2 2021/03/03 12:05:41 nia Exp $
 
-strtod hack until someone has time to debug mono_strtod
+NetBSD will side-load <stdbool.h> which must have #define bool _Bool.
+This causes some problems with the C preprocessor usage here. undef it.
 
---- mono/metadata/icall.c.orig	2015-05-21 14:20:36.000000000 +0300
-+++ mono/metadata/icall.c	2015-05-21 14:22:00.000000000 +0300
-@@ -127,10 +127,15 @@ mono_double_ParseImpl (char *ptr, double
- 	*result = 0.0;
+--- mono/metadata/icall.c.orig	2020-04-30 07:46:10.000000000 +0000
++++ mono/metadata/icall.c
+@@ -120,6 +120,8 @@
+ #include "mono/metadata/icall-signatures.h"
+ #include "mono/utils/mono-signal-handler.h"
  
- 	if (*ptr){
-+#if defined(__NetBSD__)
-+		/* XXX WIP: mono_strtod spins 100% CPU on NetBSD */
-+		*result = strtod(ptr, &endptr);
-+#else
- 		/* mono_strtod () is not thread-safe */
- 		mono_mutex_lock (&mono_strtod_mutex);
- 		*result = mono_strtod (ptr, &endptr);
- 		mono_mutex_unlock (&mono_strtod_mutex);
-+#endif
- 	}
++#undef bool
++
+ //#define MONO_DEBUG_ICALLARRAY
  
- 	if (!*ptr || (endptr && *endptr))
+ #ifdef MONO_DEBUG_ICALLARRAY

@@ -1,0 +1,14 @@
+$NetBSD: patch-data_net__4__0_Makefile.am,v 1.1 2021/03/03 12:05:41 nia Exp $
+
+Install configuration files to the examples directory.
+
+--- data/net_4_0/Makefile.am.orig	2019-07-18 07:46:04.000000000 +0000
++++ data/net_4_0/Makefile.am
+@@ -1,6 +1,6 @@
+ SUBDIRS = Browsers
+ 
+-monodir = $(sysconfdir)/mono/4.0
++monodir = $(datadir)/examples/mono/4.0
+ 
+ EXTRA_DIST =  machine.config \
+ 	      web.config \
