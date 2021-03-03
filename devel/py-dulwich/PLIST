@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.18 2021/01/16 15:06:08 maya Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/03/03 18:06:09 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docs/tutorial/conclusion.txt
 ${PYSITELIB}/docs/tutorial/encoding.txt
 ${PYSITELIB}/docs/tutorial/file-format.txt
@@ -12,12 +18,6 @@ ${PYSITELIB}/docs/tutorial/porcelain.txt
 ${PYSITELIB}/docs/tutorial/remote.txt
 ${PYSITELIB}/docs/tutorial/repo.txt
 ${PYSITELIB}/docs/tutorial/tag.txt
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dulwich/__init__.py
 ${PYSITELIB}/dulwich/__init__.pyc
 ${PYSITELIB}/dulwich/__init__.pyo
@@ -58,6 +58,9 @@ ${PYSITELIB}/dulwich/contrib/release_robot.pyo
 ${PYSITELIB}/dulwich/contrib/swift.py
 ${PYSITELIB}/dulwich/contrib/swift.pyc
 ${PYSITELIB}/dulwich/contrib/swift.pyo
+${PYSITELIB}/dulwich/contrib/test_paramiko_vendor.py
+${PYSITELIB}/dulwich/contrib/test_paramiko_vendor.pyc
+${PYSITELIB}/dulwich/contrib/test_paramiko_vendor.pyo
 ${PYSITELIB}/dulwich/contrib/test_release_robot.py
 ${PYSITELIB}/dulwich/contrib/test_release_robot.pyc
 ${PYSITELIB}/dulwich/contrib/test_release_robot.pyo
