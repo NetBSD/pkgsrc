@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1368 2021/03/03 12:45:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1369 2021/03/03 18:06:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2152,3 +2152,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added finance/rates version 0.2.0 [pin 2021-03-03]
 	Updated net/py-python-socks to 1.2.2 [adam 2021-03-03]
 	Updated www/py-aiohttp-socks to 0.6.0 [adam 2021-03-03]
+	Updated devel/py-dulwich to 0.20.20 [adam 2021-03-03]
+	Updated devel/py-greenlet to 1.0.0 [adam 2021-03-03]
