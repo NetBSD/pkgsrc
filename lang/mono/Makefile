@@ -1,34 +1,36 @@
-# $NetBSD: Makefile,v 1.195 2020/12/04 20:45:26 nia Exp $
+# $NetBSD: Makefile,v 1.196 2021/03/03 12:05:41 nia Exp $
 
-DISTNAME=	mono-4.0.4.1
-PKGREVISION=	23
+DISTNAME=	mono-6.12.0.107
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
-ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
-WRKSRC=		${WRKDIR}/mono-4.0.4
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
+ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
+ALL_ENV+=	PAXCTL=${PAXCTL}
+
+USE_TOOLS+=	bash:run cmake gmake msgfmt perl:run pkg-config
+USE_TOOLS+=	bison autoconf automake
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c99 c++
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-libgdiplus=installed
-CONFIGURE_ARGS+=	--disable-dtrace
+GNU_CONFIGURE_STRICT=	no # has sub-configures
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--disable-btls
+CONFIGURE_ARGS+=	--disable-btls-lib
 
-CTF_SUPPORTED=	no	# https://smartos.org/bugview/OS-6510
-
-.include "options.mk"
+# Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
+USE_CWRAPPERS=		no
 
 MAKE_FLAGS+=		PERL=${PERL5:Q} mandir=${PREFIX}/${PKGMANDIR}
 UNLIMIT_RESOURCES=	datasize stacksize memorysize
@@ -44,62 +46,49 @@ PKGCONFIG_OVERRIDE+=	data/system.web.extensions_1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.extensions.design_1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.mvc.pc.in data/wcf.pc.in
 
-REPLACE_PERL+=	mcs/tools/scan-tests.pl
-REPLACE_PERL+=	msvc/create-windef.pl mono/benchmark/test-driver
-REPLACE_PERL+=	mono/cil/make-opcodes-def.pl mono/metadata/make-bundle.pl
-REPLACE_PERL+=	mono/mini/genmdesc.pl mono/tests/stress-runner.pl
+REPLACE_PERL+=	mono/benchmark/test-driver
+REPLACE_PERL+=	mono/cil/make-opcodes-def.pl
+REPLACE_PERL+=	mono/tests/stress-runner.pl
 
 REPLACE_PYTHON+=	scripts/mono-heapviz
 
-REPLACE_BASH+=	build-mingw32.sh
 REPLACE_BASH+=	mono/arch/arm/dpiops.sh
 REPLACE_BASH+=	mono/arch/arm/vfpops.sh
-REPLACE_BASH+=	scripts/mono-find-provides.in
-REPLACE_BASH+=	scripts/mono-find-requires.in
+REPLACE_BASH+=	scripts/mono-package-runtime
+REPLACE_BASH+=	scripts/mono-find-provides.in scripts/mono-find-requires.in
 REPLACE_BASH+=	scripts/mono-test-install
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/png/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/win32/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/x11/compile.sh
-REPLACE_BASH+=	mcs/tools/tinderbox/tinderbox.sh
 REPLACE_BASH+=	libgc/mkinstalldirs
-REPLACE_BASH+=	mcs/mkinstalldirs
-REPLACE_BASH+=	mkinstalldirs
+REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 
 EGDIR=		${PREFIX}/share/examples/mono
-CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
-CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/2.0/machine.config \
-			${PKG_SYSCONFDIR}/mono/2.0/machine.config
-CONF_FILES+=	${EGDIR}/mconfig/config.xml \
-			${PKG_SYSCONFDIR}/mono/mconfig/config.xml
-CONF_FILES+=	${EGDIR}/2.0/settings.map \
-			${PKG_SYSCONFDIR}/mono/2.0/settings.map
-CONF_FILES+=	${EGDIR}/2.0/web.config \
-			${PKG_SYSCONFDIR}/mono/2.0/web.config
-CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.0/machine.config \
-			${PKG_SYSCONFDIR}/mono/4.0/machine.config
-CONF_FILES+=	${EGDIR}/4.0/settings.map \
-			${PKG_SYSCONFDIR}/mono/4.0/settings.map
-CONF_FILES+=	${EGDIR}/4.0/web.config \
-			${PKG_SYSCONFDIR}/mono/4.0/web.config
-CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.5/machine.config \
-			${PKG_SYSCONFDIR}/mono/4.5/machine.config
-CONF_FILES+=	${EGDIR}/4.5/settings.map \
-			${PKG_SYSCONFDIR}/mono/4.5/settings.map
-CONF_FILES+=	${EGDIR}/4.5/web.config  ${PKG_SYSCONFDIR}/mono/4.5/web.config
-CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
+
+EGDIR_CONF_FILES= \
+
+.for conf in \
+	2.0/Browsers/Compat.browser \
+	2.0/DefaultWsdlHelpGenerator.aspx \
+	2.0/DefaultWsdlHelpGenerator.aspx \
+	2.0/machine.config \
+	2.0/settings.map \
+	2.0/web.config \
+	4.0/Browsers/Compat.browser \
+	4.0/DefaultWsdlHelpGenerator.aspx \
+	4.0/machine.config \
+	4.0/settings.map \
+	4.0/web.config \
+	4.5/Browsers/Compat.browser \
+	4.5/DefaultWsdlHelpGenerator.aspx \
+	4.5/machine.config \
+	4.5/settings.map \
+	4.5/web.config \
+	browscap.ini \
+	config
+CONF_FILES+=	${EGDIR}/${conf} ${PKG_SYSCONFDIR}/mono/${conf}
+.endfor
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
@@ -109,7 +98,8 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
 
-INSTALLATION_DIRS+=	share/examples/mono/4.5
+# Uses [[ ... ]], not needed during the build.
+SKIP_PORTABILITY_CHECK+=	acceptance-tests/microbench-perf.sh.in
 
 TEST_TARGET=	check
 
@@ -118,13 +108,7 @@ SUBST_STAGE.fix-prefix=		pre-configure
 SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.fix-prefix=		-e 's,$${pcfiledir}/../..,\@prefix\@,g'
-SUBST_NOOP_OK.fix-prefix=	yes # some of the files are modified
-
-SUBST_CLASSES+=			fix-mcs
-SUBST_STAGE.fix-mcs=		pre-configure
-SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
-SUBST_FILES.fix-mcs=		mcs/build/config-default.make
-SUBST_VARS.fix-mcs=		PREFIX PKGMANDIR
+SUBST_NOOP_OK.fix-prefix=	yes
 
 SUBST_CLASSES+=			fix-cfgdir
 SUBST_STAGE.fix-cfgdir=		pre-configure
@@ -132,47 +116,31 @@ SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
 SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
 SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
 
-SUBST_CLASSES+=			fix-libx11
-SUBST_STAGE.fix-libx11=		pre-configure
-SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
-SUBST_FILES.fix-libx11=		configure
-SUBST_VARS.fix-libx11=		X11BASE
-
-PLIST_VARS=	libgc monodoc
+# Uses [[ ... ]], not needed during the build.
+CHECK_PORTABILITY_SKIP+=	acceptance-tests/microbench-perf.sh.in
+CHECK_PORTABILITY_SKIP+=	external/llvm-project/polly/lib/External/isl/configure
 
 .include "../../mk/bsd.prefs.mk"
 
-SUBST_CLASSES+=			fix-domlib
-SUBST_STAGE.fix-domlib=		pre-configure
-SUBST_FILES.fix-domlib=		mcs/class/System/System.Net.NetworkInformation/IPGlobalProperties.cs
-.if ${OPSYS} == "SunOS"
-SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libnsl,g'
-.else
-SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libc,g'
-.endif
-
-# The builtin boehm-gc fails on SunOS with newer GCC, just use the pkgsrc
-# version in any case as it is optimised.
-.if ${OPSYS} == "SunOS"
-.include "../../devel/boehm-gc/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gc=boehm
-.else
-CONFIGURE_ARGS+=	--with-gc=included
-PLIST.libgc=		yes
-.endif
+# We patched makefiles, regen
+pre-configure:
+	${RUN} cd ${WRKSRC} && NOCONFIGURE=1 ${SH} ./autogen.sh
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=		-D_XOPEN_SOURCE=600
+# Conflicts with the above settings
+CONFIGURE_ENV+=		ac_cv_func_madvise=no
 CONFIGURE_ARGS+=	--with-mcs-docs=no
-CONFIGURE_ARGS+=	--with-sgen=no
+CONFIGURE_ARGS+=	--enable-dtrace=no
 CONFIGURE_ARGS+=	--with-sigaltstack=no
+CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
+CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
 ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
-.elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
-CONFIGURE_ARGS+=	--with-mcs-docs=no
-CONFIGURE_ARGS+=	--disable-parallel-mark
-.else
-PLIST.monodoc=		yes
+.elif ${OPSYS} == "NetBSD"
+# Available as a libc symbol, but no declaration.
+# XXX learn about getvfsstat
+CONFIGURE_ENV+=		ac_cv_func_getfsstat=no
 .endif
 
 .if ${MACHINE_ARCH:M*i[34]86*}
@@ -180,6 +148,17 @@ PLIST.monodoc=		yes
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
 .endif
+
+PLIST_VARS+=		boehm
+.if ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ARGS+=	--disable-boehm
+CONFIGURE_ARGS+=	--with-libgc=none
+.else
+PLIST.boehm=		yes
+.endif
+
+# Unsafe JIT, possibly problematic boehm-gc
+NOT_PAX_MPROTECT_SAFE+=	bin/mono-sgen
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
@@ -199,6 +178,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
