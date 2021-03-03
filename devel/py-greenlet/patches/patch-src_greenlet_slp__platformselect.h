@@ -1,9 +1,11 @@
-$NetBSD: patch-slp__platformselect.h,v 1.1 2017/07/11 17:31:16 he Exp $
+$NetBSD: patch-src_greenlet_slp__platformselect.h,v 1.1 2021/03/03 18:05:02 adam Exp $
 
---- slp_platformselect.h.orig	2016-12-10 23:52:06.000000000 +0000
-+++ slp_platformselect.h
-@@ -20,6 +20,8 @@
- #include "platform/switch_ppc_macosx.h" /* Apple MacOS X on PowerPC */
+Support NetBSD/powerpc.
+
+--- src/greenlet/slp_platformselect.h.orig	2021-01-13 13:34:17.000000000 +0000
++++ src/greenlet/slp_platformselect.h
+@@ -22,6 +22,8 @@
+ #include "platform/switch_ppc64_aix.h" /* gcc on AIX/PowerPC 64-bit */
  #elif defined(__GNUC__) && defined(_ARCH_PPC) && defined(_AIX)
  #include "platform/switch_ppc_aix.h" /* gcc on AIX/PowerPC */
 +#elif defined(__GNUC__) && defined(__powerpc__) && defined(__NetBSD__)
