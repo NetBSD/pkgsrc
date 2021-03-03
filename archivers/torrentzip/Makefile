@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/10/05 15:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/03/03 12:05:41 nia Exp $
 
 DISTNAME=	TrrntZip.NET106
 PKGNAME=	torrentzip-1.0.6
@@ -11,7 +11,7 @@ HOMEPAGE=	https://romvault.com/trrntzip/
 COMMENT=	Convert zip archives to torrentzip format
 LICENSE=	apache-2.0
 
-DEPENDS+=	mono-[0-9]*:../../lang/mono6
+DEPENDS+=	mono-[0-9]*:../../lang/mono
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

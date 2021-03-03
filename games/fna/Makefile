@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/24 19:07:21 maya Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/03 12:05:41 nia Exp $
 
 GITHUB_PROJECT=	FNA
 GITHUB_TAG=	21.01
@@ -65,5 +65,5 @@ do-install:
 .include "../../graphics/fna3d/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../audio/faudio/buildlink3.mk"
-.include "../../lang/mono6/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

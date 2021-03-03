@@ -1,26 +1,15 @@
-$NetBSD: patch-mono_utils_mono-threads-posix.c,v 1.2 2014/11/30 08:40:51 spz Exp $
+$NetBSD: patch-mono_utils_mono-threads-posix.c,v 1.3 2021/03/03 12:05:41 nia Exp $
 
---- mono/utils/mono-threads-posix.c.orig	2014-10-04 09:27:43.000000000 +0000
+* Workaround for NetBSD's pthread_equal
+
+--- mono/utils/mono-threads-posix.c.orig	2020-02-04 17:00:34.000000000 +0000
 +++ mono/utils/mono-threads-posix.c
-@@ -420,13 +420,21 @@ mono_threads_core_set_name (MonoNativeTh
+@@ -224,7 +224,7 @@ mono_native_thread_id_get (void)
+ gboolean
+ mono_native_thread_id_equals (MonoNativeThreadId id1, MonoNativeThreadId id2)
  {
- #ifdef HAVE_PTHREAD_SETNAME_NP
- 	if (!name) {
-+#ifdef linux
- 		pthread_setname_np (tid, "");
-+#else
-+		pthread_setname_np (tid, "%s", "");
-+#endif
- 	} else {
- 		char n [16];
- 
- 		strncpy (n, name, 16);
- 		n [15] = '\0';
-+#ifdef linux
- 		pthread_setname_np (tid, n);
-+#else
-+		pthread_setname_np (tid, "%s", n);
-+#endif
- 	}
- #endif
+-	return pthread_equal (id1, id2);
++	return (id1 == id2);
  }
+ 
+ /*
