@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/03/01 09:48:40 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/03/03 10:46:14 nia Exp $
 
 DISTNAME=	ivtools-2.0.4a1
 CATEGORIES=	graphics
@@ -12,6 +12,9 @@ COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 LICENSE=	modified-bsd # close enough
 
 CONFLICTS+=	dclock-[0-9]*
+
+# ps2pdf
+TOOL_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 
