@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1365 2021/03/03 10:22:22 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1366 2021/03/03 12:05:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2147,3 +2147,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rabbitmq to 3.8.14 [adam 2021-03-03]
 	Updated www/bozohttpd to 20210227 [mrg 2021-03-03]
 	Updated audio/fasttracker2 to 1.44 [fox 2021-03-03]
+	Updated lang/mono to 6.12.0.107 [nia 2021-03-03]
+	Removed lang/mono6 successor lang/mono [nia 2021-03-03]
