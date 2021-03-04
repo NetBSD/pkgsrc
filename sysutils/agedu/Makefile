@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/08/26 19:33:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2021/03/04 10:06:56 nia Exp $
 #
 
-DISTNAME=	agedu-20180522.5b12791
+DISTNAME=	agedu-20200705.2a7d4a2
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
