@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1387 2021/03/04 10:42:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1388 2021/03/04 10:42:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2176,3 +2176,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/zbar to 0.23.90 [leot 2021-03-04]
 	Updated audio/audacious to 4.1 [nia 2021-03-04]
 	Updated audio/audacious-plugins to 4.1 [nia 2021-03-04]
+	Updated net/bmon to 4.0 [nia 2021-03-04]
