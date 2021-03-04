@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1391 2021/03/04 11:22:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1392 2021/03/04 11:23:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/bzflag to 2.4.22 [nia 2021-03-04]
 	Updated sysutils/coreutils to 8.32 [nia 2021-03-04]
 	Updated misc/gnuls to 8.32 [nia 2021-03-04]
+	Updated wm/cwm to 6.7 [nia 2021-03-04]
