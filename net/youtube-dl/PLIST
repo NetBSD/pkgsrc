@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.107 2021/02/27 21:05:15 leot Exp $
+@comment $NetBSD: PLIST,v 1.108 2021/03/04 09:48:34 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -194,6 +194,9 @@ ${PYSITELIB}/youtube_dl/extractor/azmedien.pyo
 ${PYSITELIB}/youtube_dl/extractor/baidu.py
 ${PYSITELIB}/youtube_dl/extractor/baidu.pyc
 ${PYSITELIB}/youtube_dl/extractor/baidu.pyo
+${PYSITELIB}/youtube_dl/extractor/bandaichannel.py
+${PYSITELIB}/youtube_dl/extractor/bandaichannel.pyc
+${PYSITELIB}/youtube_dl/extractor/bandaichannel.pyo
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.py
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyc
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyo
@@ -743,6 +746,9 @@ ${PYSITELIB}/youtube_dl/extractor/gazeta.pyo
 ${PYSITELIB}/youtube_dl/extractor/gdcvault.py
 ${PYSITELIB}/youtube_dl/extractor/gdcvault.pyc
 ${PYSITELIB}/youtube_dl/extractor/gdcvault.pyo
+${PYSITELIB}/youtube_dl/extractor/gedidigital.py
+${PYSITELIB}/youtube_dl/extractor/gedidigital.pyc
+${PYSITELIB}/youtube_dl/extractor/gedidigital.pyo
 ${PYSITELIB}/youtube_dl/extractor/generic.py
 ${PYSITELIB}/youtube_dl/extractor/generic.pyc
 ${PYSITELIB}/youtube_dl/extractor/generic.pyo
