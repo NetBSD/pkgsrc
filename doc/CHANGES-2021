@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1394 2021/03/04 14:17:37 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1395 2021/03/04 14:20:41 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-tifffile to 2021.2.26 [adam 2021-03-04]
 	Updated archivers/py-lhafile to 0.3.0 [adam 2021-03-04]
 	Updated lang/erlang to 23.2.7 [triaxx 2021-03-04]
+	Updated lang/erlang-doc to 23.2nb3 [triaxx 2021-03-04]
