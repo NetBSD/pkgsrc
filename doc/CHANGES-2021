@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1392 2021/03/04 11:23:53 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1393 2021/03/04 14:08:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2181,3 +2181,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/coreutils to 8.32 [nia 2021-03-04]
 	Updated misc/gnuls to 8.32 [nia 2021-03-04]
 	Updated wm/cwm to 6.7 [nia 2021-03-04]
+	Updated graphics/py-tifffile to 2021.2.26 [adam 2021-03-04]
+	Updated archivers/py-lhafile to 0.3.0 [adam 2021-03-04]
