@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/12 12:08:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/04 10:40:58 nia Exp $
 bin/audacious
 ${PLIST.dbus}bin/audtool
 include/audacious/audtag.h
+include/libaudcore/archive_reader.h
 include/libaudcore/audio.h
 include/libaudcore/audstrings.h
 include/libaudcore/drct.h
@@ -30,7 +31,12 @@ include/libaudcore/tuple.h
 include/libaudcore/vfs.h
 include/libaudcore/vfs_async.h
 include/libaudcore/visualizer.h
+include/libaudgui/libaudgui-gtk.h
+include/libaudgui/libaudgui.h
+include/libaudgui/list.h
+include/libaudgui/menu.h
 include/libaudqt/colorbutton.h
+include/libaudqt/dock.h
 include/libaudqt/export.h
 include/libaudqt/iface.h
 include/libaudqt/info-widget.h
@@ -39,10 +45,13 @@ include/libaudqt/menu.h
 include/libaudqt/treeview.h
 lib/libaudcore.so
 lib/libaudcore.so.5
-lib/libaudcore.so.5.2.0
+lib/libaudcore.so.5.3.0
+lib/libaudgui.so
+lib/libaudgui.so.5
+lib/libaudgui.so.5.1.0
 lib/libaudqt.so
 lib/libaudqt.so.2
-lib/libaudqt.so.2.2.0
+lib/libaudqt.so.2.3.0
 lib/libaudtag.so
 lib/libaudtag.so.3
 lib/libaudtag.so.3.0.0
@@ -87,6 +96,8 @@ share/locale/pt_PT/LC_MESSAGES/audacious.mo
 share/locale/ru/LC_MESSAGES/audacious.mo
 share/locale/si/LC_MESSAGES/audacious.mo
 share/locale/sk/LC_MESSAGES/audacious.mo
+share/locale/sl/LC_MESSAGES/audacious.mo
+share/locale/sq/LC_MESSAGES/audacious.mo
 share/locale/sr/LC_MESSAGES/audacious.mo
 share/locale/sr_RS/LC_MESSAGES/audacious.mo
 share/locale/sv/LC_MESSAGES/audacious.mo
