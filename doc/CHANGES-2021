@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1375 2021/03/04 09:42:42 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1376 2021/03/04 09:48:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-tools to 1.36.1 [adam 2021-03-04]
 	Updated misc/ocaml-opam to 2.0.8 [jaapb 2021-03-04]
 	Updated devel/wabt to 1.0.21 [fcambus 2021-03-04]
+	Updated net/youtube-dl to 20210303 [leot 2021-03-04]
