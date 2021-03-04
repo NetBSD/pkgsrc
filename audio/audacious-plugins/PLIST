@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/03/04 10:40:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/03/04 10:57:18 nia Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -25,6 +25,7 @@ lib/audacious/General/delete-files.so
 lib/audacious/General/gtkui.so
 lib/audacious/General/hotkey.so
 lib/audacious/General/lyricwiki-qt.so
+${PLIST.dbus}lib/audacious/General/mpris2.so
 lib/audacious/General/playlist-manager-qt.so
 lib/audacious/General/playlist-manager.so
 lib/audacious/General/qtui.so
@@ -38,18 +39,27 @@ lib/audacious/General/song_change.so
 lib/audacious/General/statusicon-qt.so
 lib/audacious/General/statusicon.so
 lib/audacious/Input/aac-raw.so
+${PLIST.adplug}lib/audacious/Input/adplug.so
+${PLIST.fluidsynth}lib/audacious/Input/amidi-plug.so
 lib/audacious/Input/cdaudio-ng.so
+${PLIST.libgme}lib/audacious/Input/console.so
 lib/audacious/Input/ffaudio.so
 lib/audacious/Input/flacng.so
 lib/audacious/Input/madplug.so
 lib/audacious/Input/metronom.so
+${PLIST.modplug}lib/audacious/Input/modplug.so
 lib/audacious/Input/psf2.so
 lib/audacious/Input/sndfile.so
 lib/audacious/Input/tonegen.so
 lib/audacious/Input/vorbis.so
 lib/audacious/Input/vtx.so
+${PLIST.wavpack}lib/audacious/Input/wavpack.so
 lib/audacious/Input/xsf.so
+${PLIST.alsa}lib/audacious/Output/alsa.so
 lib/audacious/Output/filewriter.so
+${PLIST.jack}lib/audacious/Output/jack-ng.so
+${PLIST.oss4}lib/audacious/Output/oss4.so
+${PLIST.pulse}lib/audacious/Output/pulse_audio.so
 lib/audacious/Output/sdlout.so
 lib/audacious/Transport/gio.so
 lib/audacious/Transport/mms.so
