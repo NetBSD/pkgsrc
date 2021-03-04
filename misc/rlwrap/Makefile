@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2021/01/20 18:31:22 leot Exp $
+# $NetBSD: Makefile,v 1.26 2021/03/04 10:12:12 leot Exp $
 #
 
-DISTNAME=	rlwrap-0.44
+DISTNAME=	rlwrap-0.45
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hanslub42/}
-GITHUB_RELEASE=	7c1e432
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/hanslub42/rlwrap
@@ -18,6 +18,7 @@ USE_TOOLS+=		autoreconf autoconf automake
 REPLACE_PERL+=	filters/censor_passwords
 REPLACE_PERL+=	filters/count_in_prompt
 REPLACE_PERL+=	filters/debug_null
+REPLACE_PERL+=	filters/edit_history
 REPLACE_PERL+=	filters/ftp_filter
 REPLACE_PERL+=	filters/handle_hotkeys
 REPLACE_PERL+=	filters/history_format
@@ -34,6 +35,9 @@ REPLACE_PERL+=	filters/template
 REPLACE_PERL+=	filters/unbackspace
 
 REPLACE_PYTHON+=	filters/*.py
+REPLACE_PYTHON+=	filters/dissect_prompt
+REPLACE_PYTHON+=	filters/handle_sigwinch
+REPLACE_PYTHON+=	filters/makefilter
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
