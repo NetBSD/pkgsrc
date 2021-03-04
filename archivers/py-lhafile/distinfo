@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/02/08 16:38:43 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/03/04 14:08:16 adam Exp $
 
-SHA1 (lhafile-0.2.2.tar.gz) = 4e631dd7f42c6efbe74aad81e6c99f9fb6332445
-RMD160 (lhafile-0.2.2.tar.gz) = a66aff1e98b8a5473838efa7729112f2279c8f80
-SHA512 (lhafile-0.2.2.tar.gz) = 7b8488e5bc136b818f940345ca91a4b80d9cf4d6814734c46efafbf3652b2e43a63ee8dfbe49d2d520f583723f69fb8dd7bc90b614aa27c097ff00e6d14dce78
-Size (lhafile-0.2.2.tar.gz) = 14311 bytes
+SHA1 (lhafile-0.3.0.tar.gz) = aefacd5427c691d31baa202e8e80e40af6142670
+RMD160 (lhafile-0.3.0.tar.gz) = 87927e4f4474498648967870167e98e661d52977
+SHA512 (lhafile-0.3.0.tar.gz) = 4403106a6c8109c70a66f0d7441a5c14e46ebb93713dece825404fda5d834aadb8ac2a70becbc9b730739cdbb95fa344a3f51dcb7f49e270174087dc4ec34f34
+Size (lhafile-0.3.0.tar.gz) = 14523 bytes
