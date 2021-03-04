@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/10/09 15:43:07 leot Exp $
+$NetBSD: distinfo,v 1.9 2021/03/04 10:20:48 leot Exp $
 
-SHA1 (py-rt/rt-2.0.1.tar.gz) = 99b8b82162134618d7aa5013e410dbeea7009415
-RMD160 (py-rt/rt-2.0.1.tar.gz) = 2ec2ae3027ac79cdf1f991c72ddbbda0354948fd
-SHA512 (py-rt/rt-2.0.1.tar.gz) = 36cea59fa72e083616834a5fb3e8c68a45b0f478b1d0def356793c504bf1f09af36b6e6700eb50ed5fa5132bfe9dd3635951153052eaa98d5e874ab33c988f21
-Size (py-rt/rt-2.0.1.tar.gz) = 40271 bytes
+SHA1 (py-rt/rt-2.1.0.tar.gz) = f6f1c71cebc6d323967416444c570727d589fae3
+RMD160 (py-rt/rt-2.1.0.tar.gz) = e95e11cd7e99fbdb646108a7d14dc493f09f9712
+SHA512 (py-rt/rt-2.1.0.tar.gz) = fbaa46a56d46814b1c67c974d66b506e96a8582d54c139da129d6a49c16d5bb83b10d4c21d8eff0031c143ea4e1649766d5c5e73f0b0973f2c3ed128f1cf95c8
+Size (py-rt/rt-2.1.0.tar.gz) = 40570 bytes
