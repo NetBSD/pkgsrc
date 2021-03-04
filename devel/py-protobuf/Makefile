@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2021/02/24 09:45:10 adam Exp $
+# $NetBSD: Makefile,v 1.37 2021/03/04 06:47:34 adam Exp $
 
-DISTNAME=	protobuf-3.15.2
+DISTNAME=	protobuf-3.15.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/protobuf/}
