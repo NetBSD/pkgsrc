@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1371 2021/03/04 02:13:25 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1372 2021/03/04 06:48:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2156,3 +2156,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-greenlet to 1.0.0 [adam 2021-03-03]
 	Updated editors/nano to 5.6.1 [schwarz 2021-03-03[
 	Updated devel/binaryen to 100 [fcambus 2021-03-04]
+	Updated devel/protobuf to 3.15.4 [adam 2021-03-04]
+	Updated devel/py-protobuf to 3.15.4 [adam 2021-03-04]
