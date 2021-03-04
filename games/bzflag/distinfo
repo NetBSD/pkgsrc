@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2020/05/21 18:16:46 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/03/04 11:02:05 nia Exp $
 
-SHA1 (bzflag-2.4.20.tar.gz) = 58cf9d1fdb4ca2a2d8e4afe0eb1ef1cae178c651
-RMD160 (bzflag-2.4.20.tar.gz) = 1095a6fb5efa64fa587ae89b028c1179837dcf1d
-SHA512 (bzflag-2.4.20.tar.gz) = ac92f909884bcc4b1ae165324ca613e6344f18a21ad13e4e4388875d5fe59ed19d27636accb9916b032475b7c81fbe4e9167ec1e7e942f9feda6e1433d776c4a
-Size (bzflag-2.4.20.tar.gz) = 15043126 bytes
+SHA1 (bzflag-2.4.22.tar.gz) = f84758349390c5dd82641d2bab26da90bb0b4e0f
+RMD160 (bzflag-2.4.22.tar.gz) = e5f82dbda8a5bce00e770c43767459c08905ac08
+SHA512 (bzflag-2.4.22.tar.gz) = 74262e786f5605e9f5aa8ff83f3abc0bf4c20fcb63666d7bd877a6c092f6910a089638908fc267d04500f30b93e77d966184c12da8f83c8e4ac32b411e1a3633
+Size (bzflag-2.4.22.tar.gz) = 15071606 bytes
 SHA1 (patch-ad) = 626ff20e3b73f77734995732f34869550f590d5e
 SHA1 (patch-src_bzadmin_curses__wrapper.h) = 3e978e7f699b91023c49a416e073fcc6ae732555
