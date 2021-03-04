@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1383 2021/03/04 10:19:00 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1384 2021/03/04 10:20:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/diffstat to 1.64 [nia 2021-03-04]
 	Updated misc/rlwrap to 0.45 [leot 2021-03-04]
 	Updated security/sqlmap to 1.5.3 [leot 2021-03-04]
+	Updated net/py-rt to 2.1.0 [leot 2021-03-04]
