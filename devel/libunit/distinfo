@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/14 12:04:30 otis Exp $
+$NetBSD: distinfo,v 1.2 2021/03/04 14:57:41 mef Exp $
 
-SHA1 (unit-1.21.0.tar.gz) = 19278761d3104ff8509422f55207b1daa45a4d14
-RMD160 (unit-1.21.0.tar.gz) = 91c24ed9e8eac402a170c8b02b5633cd892fb017
-SHA512 (unit-1.21.0.tar.gz) = 12e9e8b221ffe8014931fe46c7faa9398de6ad08bbc07e5f8e50f086e4a22419960522d33bece493e17ae544b499acb4ba29cb6cb731c0bb7fbdc6cdc44bf210
-Size (unit-1.21.0.tar.gz) = 802826 bytes
+SHA1 (unit-1.22.0.tar.gz) = ab38a89c12d15a56fdc1a51dd6fa8a689e02abae
+RMD160 (unit-1.22.0.tar.gz) = a658f1c8f898e381a017303264b0d7202627cdbb
+SHA512 (unit-1.22.0.tar.gz) = 7418e9dd86c10d64184f5a2f3e26c27bacc53b90ba35658fba6af00a57df89645c16c16b510d3e570eee6f8fdeef4ec7f92971f7231093e3da118e858ed386f5
+Size (unit-1.22.0.tar.gz) = 824763 bytes
