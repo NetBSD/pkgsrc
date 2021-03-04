@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2021/02/25 10:11:30 simonb Exp $
+# $NetBSD: Makefile,v 1.546 2021/03/04 04:32:30 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -31,6 +31,7 @@ SUBDIR+=	buffer
 SUBDIR+=	byobu
 SUBDIR+=	cabal-install
 SUBDIR+=	calibre
+SUBDIR+=	catpoint
 SUBDIR+=	celestia
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
