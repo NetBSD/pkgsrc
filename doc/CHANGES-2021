@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1370 2021/03/03 23:35:57 schwarz Exp $
+$NetBSD: CHANGES-2021,v 1.1371 2021/03/04 02:13:25 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2155,3 +2155,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-dulwich to 0.20.20 [adam 2021-03-03]
 	Updated devel/py-greenlet to 1.0.0 [adam 2021-03-03]
 	Updated editors/nano to 5.6.1 [schwarz 2021-03-03[
+	Updated devel/binaryen to 100 [fcambus 2021-03-04]
