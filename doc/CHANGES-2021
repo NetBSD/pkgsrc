@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1396 2021/03/04 15:48:12 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1397 2021/03/04 16:43:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/erlang to 23.2.7 [triaxx 2021-03-04]
 	Updated lang/erlang-doc to 23.2nb3 [triaxx 2021-03-04]
 	Updated security/tor-browser to 10.0.12 [wiz 2021-03-04]
+	Updated www/php-owncloud to 10.6.0 [ryoon 2021-03-04]
