@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1389 2021/03/04 11:02:33 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1390 2021/03/04 11:17:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2178,3 +2178,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/audacious-plugins to 4.1 [nia 2021-03-04]
 	Updated net/bmon to 4.0 [nia 2021-03-04]
 	Updated games/bzflag to 2.4.22 [nia 2021-03-04]
+	Updated sysutils/coreutils to 8.32 [nia 2021-03-04]
