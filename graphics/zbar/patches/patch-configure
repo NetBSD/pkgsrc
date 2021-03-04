@@ -1,14 +1,13 @@
-$NetBSD: patch-configure,v 1.2 2020/06/20 10:42:42 leot Exp $
+$NetBSD: patch-configure,v 1.3 2021/03/04 10:34:24 leot Exp $
 
 - Avoid `${parameter/pattern/string}' bash-ism
 - Only honor `--with-python' configure argument and completely ignore
   possible PYTHON environment variable that could be passed via
   CONFIGURE_ENV by pkgsrc
-- Use standard `=' test(1) operator
 
---- configure.orig	2020-04-20 21:13:55.000000000 +0000
+--- configure.orig	2021-02-14 06:54:03.000000000 +0000
 +++ configure
-@@ -23896,6 +23896,7 @@ fi
+@@ -24020,6 +24020,7 @@ fi
  
  
  
@@ -16,7 +15,7 @@ $NetBSD: patch-configure,v 1.2 2020/06/20 10:42:42 leot Exp $
  if test -z "$PYTHON"; then :
    if test "x$with_python" = "xauto"; then :
    for ac_prog in python3 python2 python
-@@ -24052,6 +24053,7 @@ else
+@@ -24176,6 +24177,7 @@ else
    with_python="auto"
  
  fi
@@ -24,21 +23,12 @@ $NetBSD: patch-configure,v 1.2 2020/06/20 10:42:42 leot Exp $
  
  if test "x$with_python" != "xno"; then :
  
-@@ -25064,7 +25066,7 @@ else
+@@ -25265,7 +25267,7 @@ else
  fi
  
  
 -JAVAC=${JAVAC/ecj/ecj -1.5}
 +JAVAC=`echo "$JAVAC" | sed -e 's/ecj/ecj -1.5/'`
  
- # Javah was obsoleted on Java 8 and removed on Java 11. So, we need to
- # look strictly at the $JAVA_HOME in order to avoid mixing different versions
-@@ -29146,7 +29148,7 @@ fi
- echo ""
- echo "please verify that the detected configuration matches your expectations:"
- echo "------------------------------------------------------------------------"
--if test "x$USE_NLS" == "xyes"; then :
-+if test "x$USE_NLS" = "xyes"; then :
-   echo    "gettext                $USE_NLS"
- 
- fi
+ if test -z "$JAVAH"; then :
+   for ac_prog in javah
