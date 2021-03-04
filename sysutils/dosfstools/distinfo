@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/09/09 09:26:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/03/04 10:02:44 nia Exp $
 
-SHA1 (dosfstools-4.1.tar.gz) = db39f667c3cb51bdf321f07f9cf17c726ca50323
-RMD160 (dosfstools-4.1.tar.gz) = 537b5418e6a78728ff8b94023966ce2155d64d6a
-SHA512 (dosfstools-4.1.tar.gz) = c45b26779c126c128ff64668403d552b9ed70e9205ced968fa9c80e7220c2b24c3f24007ae41ee20e8993637ec2aca584142458d25db42df6488edf18fb6185b
-Size (dosfstools-4.1.tar.gz) = 233766 bytes
-SHA1 (patch-src_device__info.c) = c342d080fb1b64d71813516e0aef4736587e6a3a
+SHA1 (dosfstools-4.2.tar.gz) = 14efc68c64987a9067b6a919ad2870007247686b
+RMD160 (dosfstools-4.2.tar.gz) = 5f9ae26d49fbc5cefc26eab8b02313a1ebfd9e69
+SHA512 (dosfstools-4.2.tar.gz) = 3cc0808edb4432428df8a67da4bb314fd1f27adc4a05754c1a492091741a7b6875ebd9f6a509cc4c5ad85643fc40395b6e0cadee548b25cc439cc9b725980156
+Size (dosfstools-4.2.tar.gz) = 320917 bytes
+SHA1 (patch-src_blkdev_blkdev.c) = dd39aa031b83429770a6164556f91d58bf88c3d5
+SHA1 (patch-src_device__info.c) = 46102c27a601de7297a4ce3488bf327e818b8fa6
