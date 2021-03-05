@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/10 08:19:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/05 19:25:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -97,6 +97,21 @@ ${PYSITELIB}/elementpath/xpath2/xpath2_functions.pyo
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.py
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.pyc
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.pyo
+${PYSITELIB}/elementpath/xpath3.py
+${PYSITELIB}/elementpath/xpath3.pyc
+${PYSITELIB}/elementpath/xpath3.pyo
+${PYSITELIB}/elementpath/xpath30/__init__.py
+${PYSITELIB}/elementpath/xpath30/__init__.pyc
+${PYSITELIB}/elementpath/xpath30/__init__.pyo
+${PYSITELIB}/elementpath/xpath30/xpath30_parser.py
+${PYSITELIB}/elementpath/xpath30/xpath30_parser.pyc
+${PYSITELIB}/elementpath/xpath30/xpath30_parser.pyo
+${PYSITELIB}/elementpath/xpath31/__init__.py
+${PYSITELIB}/elementpath/xpath31/__init__.pyc
+${PYSITELIB}/elementpath/xpath31/__init__.pyo
+${PYSITELIB}/elementpath/xpath31/xpath31_parser.py
+${PYSITELIB}/elementpath/xpath31/xpath31_parser.pyc
+${PYSITELIB}/elementpath/xpath31/xpath31_parser.pyo
 ${PYSITELIB}/elementpath/xpath_context.py
 ${PYSITELIB}/elementpath/xpath_context.pyc
 ${PYSITELIB}/elementpath/xpath_context.pyo
