@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1414 2021/03/05 13:45:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1415 2021/03/05 18:54:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2211,3 +2211,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/libfm to 1.3.2 [nia 2021-03-05]
 	Updated graphics/py-wand to 0.6.6 [adam 2021-03-05]
 	Updated devel/py-ruamel-yaml to 0.16.13 [adam 2021-03-05]
+	Updated net/tcpflow to 1.6.1 [adam 2021-03-05]
+	Updated graphics/jasper to 2.0.26 [adam 2021-03-05]
