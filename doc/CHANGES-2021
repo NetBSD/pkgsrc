@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1403 2021/03/05 08:57:30 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1404 2021/03/05 09:20:10 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/fish to 3.2.0 [nia 2021-03-05]
 	Updated wm/herbstluftwm to 0.9.2 [nia 2021-03-05]
 	Updated converters/help2man to 1.48.2 [nia 2021-03-05]
+	Updated lang/polyml to 5.8.1 [jaapb 2021-03-05]
