@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/19 12:09:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/05 08:55:26 nia Exp $
 bin/herbstclient
 bin/herbstluftwm
 man/man1/herbstclient.1
 man/man1/herbstluftwm.1
 man/man7/herbstluftwm-tutorial.7
 share/bash-completion/completions/herbstclient
-share/doc/herbstluftwm/BUGS
 share/doc/herbstluftwm/LICENSE
 share/doc/herbstluftwm/NEWS
 share/doc/herbstluftwm/examples/README
