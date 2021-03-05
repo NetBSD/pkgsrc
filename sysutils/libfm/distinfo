@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2019/01/16 19:20:52 youri Exp $
+$NetBSD: distinfo,v 1.7 2021/03/05 11:34:03 nia Exp $
 
-SHA1 (libfm-1.3.1.tar.xz) = 29539f50acd5c00a00362adffd532053b0688e66
-RMD160 (libfm-1.3.1.tar.xz) = fb45b7a8c137784ec86e4989ea8da7a94a207888
-SHA512 (libfm-1.3.1.tar.xz) = f385cf7bf2f4800c11dd6474cd20009cbe1208f1d08570b61954ea8bd84c56cc49880cbf84d4b2aa4b91eb6929d017ebc427649391059b786d7e6fc4535e4f14
-Size (libfm-1.3.1.tar.xz) = 940632 bytes
+SHA1 (libfm-1.3.2.tar.xz) = 7c5c14dd0615b457687966ce4e55c2d054bf93e1
+RMD160 (libfm-1.3.2.tar.xz) = 6b7ec86469338bd941f9a9cc317a112d85d27269
+SHA512 (libfm-1.3.2.tar.xz) = eaa3358cd1d8f611f8f4ac882e01a716b4dc32729b641417e1100aa039db3c57ae57ccc45df7dcac4f0570cd88684beba7752a5586c1d0598b1bc7502e99f4be
+Size (libfm-1.3.2.tar.xz) = 945532 bytes
 SHA1 (patch-Makefile.in) = 74a134b3e0ad868ea18ac09c142f869219396a8a
 SHA1 (patch-data_Makefile.in) = 810c5b93190f37d58609fbcd594b26fca4490311
 SHA1 (patch-src_Makefile.in) = 64bb2b66a683feaa3949d395620f6a2bedf860ff
