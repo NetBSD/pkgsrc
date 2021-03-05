@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2021/02/14 20:19:57 leot Exp $
+@comment $NetBSD: PLIST,v 1.52 2021/03/05 21:13:58 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -15,9 +15,6 @@ ${PYSITELIB}/gallery_dl/__main__.pyo
 ${PYSITELIB}/gallery_dl/cache.py
 ${PYSITELIB}/gallery_dl/cache.pyc
 ${PYSITELIB}/gallery_dl/cache.pyo
-${PYSITELIB}/gallery_dl/cloudflare.py
-${PYSITELIB}/gallery_dl/cloudflare.pyc
-${PYSITELIB}/gallery_dl/cloudflare.pyo
 ${PYSITELIB}/gallery_dl/config.py
 ${PYSITELIB}/gallery_dl/config.pyc
 ${PYSITELIB}/gallery_dl/config.pyo
@@ -87,6 +84,9 @@ ${PYSITELIB}/gallery_dl/extractor/booru.pyo
 ${PYSITELIB}/gallery_dl/extractor/common.py
 ${PYSITELIB}/gallery_dl/extractor/common.pyc
 ${PYSITELIB}/gallery_dl/extractor/common.pyo
+${PYSITELIB}/gallery_dl/extractor/cyberdrop.py
+${PYSITELIB}/gallery_dl/extractor/cyberdrop.pyc
+${PYSITELIB}/gallery_dl/extractor/cyberdrop.pyo
 ${PYSITELIB}/gallery_dl/extractor/danbooru.py
 ${PYSITELIB}/gallery_dl/extractor/danbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/danbooru.pyo
@@ -132,6 +132,12 @@ ${PYSITELIB}/gallery_dl/extractor/fuskator.pyo
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.py
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.pyo
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v01.py
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v01.pyc
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v01.pyo
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.py
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.pyc
+${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.pyo
 ${PYSITELIB}/gallery_dl/extractor/gfycat.py
 ${PYSITELIB}/gallery_dl/extractor/gfycat.pyc
 ${PYSITELIB}/gallery_dl/extractor/gfycat.pyo
@@ -267,6 +273,9 @@ ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
 ${PYSITELIB}/gallery_dl/extractor/naver.py
 ${PYSITELIB}/gallery_dl/extractor/naver.pyc
 ${PYSITELIB}/gallery_dl/extractor/naver.pyo
+${PYSITELIB}/gallery_dl/extractor/naverwebtoon.py
+${PYSITELIB}/gallery_dl/extractor/naverwebtoon.pyc
+${PYSITELIB}/gallery_dl/extractor/naverwebtoon.pyo
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.py
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.pyc
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.pyo
@@ -384,6 +393,9 @@ ${PYSITELIB}/gallery_dl/extractor/tsumino.pyo
 ${PYSITELIB}/gallery_dl/extractor/tumblr.py
 ${PYSITELIB}/gallery_dl/extractor/tumblr.pyc
 ${PYSITELIB}/gallery_dl/extractor/tumblr.pyo
+${PYSITELIB}/gallery_dl/extractor/tumblrgallery.py
+${PYSITELIB}/gallery_dl/extractor/tumblrgallery.pyc
+${PYSITELIB}/gallery_dl/extractor/tumblrgallery.pyo
 ${PYSITELIB}/gallery_dl/extractor/twitter.py
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyc
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
