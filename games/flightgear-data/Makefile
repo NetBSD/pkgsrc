@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/11/26 22:40:06 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/03/05 10:11:13 nia Exp $
 
-VERSION=	2019.1.1
+VERSION=	2020.3.6
 DISTNAME=	FlightGear-${VERSION}-data
 PKGNAME=	flightgear-data-${VERSION}
 CATEGORIES=	games
