@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/07/15 09:30:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/03/05 08:30:36 adam Exp $
 
-SHA1 (google-auth-httplib2-0.0.4.tar.gz) = a9947e01d765afcda0198c68976460d198780deb
-RMD160 (google-auth-httplib2-0.0.4.tar.gz) = 7de4cc29f1739cd96d55ed9e189e0ac97b339813
-SHA512 (google-auth-httplib2-0.0.4.tar.gz) = 7206e7ee78988af7101417d073fdac78851d8534575b0c895e8017d02e6083cfed722b4792592b02c7e523aaf652f173fb7dee2967983e55cd1022bcbbc938da
-Size (google-auth-httplib2-0.0.4.tar.gz) = 10287 bytes
+SHA1 (google-auth-httplib2-0.1.0.tar.gz) = ff359ff049cd3e20c0eb43daa3880f582f9693f8
+RMD160 (google-auth-httplib2-0.1.0.tar.gz) = 989b8175d45cfa889ea9279a2991f33d38b0d063
+SHA512 (google-auth-httplib2-0.1.0.tar.gz) = afc54c502046b29504641772ac135e2a11a6daaf6d76dcdb5daecebcd20887d098579eca8dab49fa59667544d323aee10bb99199d3c62e72582353dbddad88e2
+Size (google-auth-httplib2-0.1.0.tar.gz) = 10895 bytes
