@@ -1,4 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.2 2021/03/05 09:19:58 jaapb Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2021/03/05 13:56:25 jaapb Exp $
+
+It's not enough to disable ASLR on the output executable. You also
+need to disable it on the thing that gets run during the build.
 
 --- Makefile.in.orig	2020-07-17 08:44:22.000000000 +0000
 +++ Makefile.in
