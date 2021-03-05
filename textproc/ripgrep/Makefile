@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/03/05 21:49:56 pin Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/05 22:05:56 pin Exp $
 
 DISTNAME=	ripgrep-12.1.1
 PKGREVISION=	1
@@ -23,7 +23,6 @@ CARGO_FEATURES+=		pcre2
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rg ${DESTDIR}${PREFIX}/bin
 
-DEPENDS+=	pcre2-[0-9]*:../../devel/pcre2
-
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
