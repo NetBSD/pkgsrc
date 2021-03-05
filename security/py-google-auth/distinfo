@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/02/25 09:19:30 adam Exp $
+$NetBSD: distinfo,v 1.31 2021/03/05 08:28:25 adam Exp $
 
-SHA1 (google-auth-1.27.0.tar.gz) = 825ec3801f36ad5973484c07af4a92695073bef9
-RMD160 (google-auth-1.27.0.tar.gz) = a5eed180273d8c69f53699c7d9c11f6a045e8b9b
-SHA512 (google-auth-1.27.0.tar.gz) = adadea669ddd18a345011602e9fd575fa7783aee0f786d6a42e97278e14a0acf721451d7171765c8aea4bfa5eaa63762f9f826a2d1d5f2c4ea6abbb7d7186ebb
-Size (google-auth-1.27.0.tar.gz) = 157225 bytes
+SHA1 (google-auth-1.27.1.tar.gz) = e2ab495318495c2b54106b6e60957bc2793fe3b7
+RMD160 (google-auth-1.27.1.tar.gz) = ce987652a326b580f5c911641562d5d90d8aea17
+SHA512 (google-auth-1.27.1.tar.gz) = d640bb5395f956fd3442ea31145af2d72855108bff6b11dfeecfd4b48ad4fa50efba838e423bace310e78bbae74860d6c031d4ee873a7ab6dd522eb49e3fbdab
+Size (google-auth-1.27.1.tar.gz) = 157876 bytes
