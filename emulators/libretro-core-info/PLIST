@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/30 14:26:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/05 11:18:39 nia Exp $
 share/libretro/info/00_example_libretro.info
 share/libretro/info/2048_libretro.info
 share/libretro/info/3dengine_libretro.info
@@ -39,6 +39,7 @@ share/libretro/info/dosbox_core_libretro.info
 share/libretro/info/dosbox_libretro.info
 share/libretro/info/dosbox_svn_ce_libretro.info
 share/libretro/info/dosbox_svn_libretro.info
+share/libretro/info/duckstation_libretro.info
 share/libretro/info/easyrpg_libretro.info
 share/libretro/info/ecwolf_libretro.info
 share/libretro/info/emux_chip8_libretro.info
@@ -99,6 +100,7 @@ share/libretro/info/mednafen_psx_hw_libretro.info
 share/libretro/info/mednafen_psx_libretro.info
 share/libretro/info/mednafen_saturn_libretro.info
 share/libretro/info/mednafen_snes_libretro.info
+share/libretro/info/mednafen_supafaust_libretro.info
 share/libretro/info/mednafen_supergrafx_libretro.info
 share/libretro/info/mednafen_vb_libretro.info
 share/libretro/info/mednafen_wswan_libretro.info
@@ -112,6 +114,7 @@ share/libretro/info/mpv_libretro.info
 share/libretro/info/mrboom_libretro.info
 share/libretro/info/mu_libretro.info
 share/libretro/info/mupen64plus_next_develop_libretro.info
+share/libretro/info/mupen64plus_next_gles2_libretro.info
 share/libretro/info/mupen64plus_next_gles3_libretro.info
 share/libretro/info/mupen64plus_next_libretro.info
 share/libretro/info/nekop2_libretro.info
@@ -145,9 +148,9 @@ share/libretro/info/quasi88_libretro.info
 share/libretro/info/quicknes_libretro.info
 share/libretro/info/race_libretro.info
 share/libretro/info/redbook_libretro.info
-share/libretro/info/redream_libretro.info
 share/libretro/info/reminiscence_libretro.info
 share/libretro/info/remotejoy_libretro.info
+share/libretro/info/retrodream_libretro.info
 share/libretro/info/rustation_libretro.info
 share/libretro/info/sameboy_libretro.info
 share/libretro/info/scummvm_libretro.info
@@ -162,7 +165,6 @@ share/libretro/info/squirreljme_libretro.info
 share/libretro/info/stella2014_libretro.info
 share/libretro/info/stella_libretro.info
 share/libretro/info/stonesoup_libretro.info
-share/libretro/info/supafaust_libretro.info
 share/libretro/info/tempgba_libretro.info
 share/libretro/info/test_libretro.info
 share/libretro/info/test_netplay_libretro.info
@@ -194,8 +196,10 @@ share/libretro/info/vice_x128_libretro.info
 share/libretro/info/vice_x64_libretro.info
 share/libretro/info/vice_x64sc_libretro.info
 share/libretro/info/vice_xcbm2_libretro.info
+share/libretro/info/vice_xcbm5x0_libretro.info
 share/libretro/info/vice_xpet_libretro.info
 share/libretro/info/vice_xplus4_libretro.info
+share/libretro/info/vice_xscpu64_libretro.info
 share/libretro/info/vice_xvic_libretro.info
 share/libretro/info/virtualjaguar_libretro.info
 share/libretro/info/vitaquake2-rogue_libretro.info
