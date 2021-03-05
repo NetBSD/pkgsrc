@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1417 2021/03/05 21:14:10 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1418 2021/03/05 21:18:05 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2216,3 +2216,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.2.0 [adam 2021-03-05]
 	Updated devel/py-googleapis-common-protos to 1.53.0 [adam 2021-03-05]
 	Updated net/gallery-dl to 1.17.0 [leot 2021-03-05]
+	Updated security/opendnssec2 to 2.1.8nb1 [he 2021-03-05]
