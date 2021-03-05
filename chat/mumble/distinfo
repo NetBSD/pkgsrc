@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2020/10/16 07:42:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/03/05 09:57:20 nia Exp $
 
-SHA1 (mumble-1.3.3.tar.gz) = 3fd6f2fbd42be57dfc8277143d3d4aea857255ab
-RMD160 (mumble-1.3.3.tar.gz) = 415fbb4d436beaf0d104f1920ef9fe00509294ab
-SHA512 (mumble-1.3.3.tar.gz) = be4c6d4de82a1059bf30d4c7e3c44e41e4bb50dc4a811b7d0def808c52059ff7bcccf65140db940f18cc1bb66d58ea4dab23ba5dcfae3b8b904866751f32edb3
-Size (mumble-1.3.3.tar.gz) = 8591354 bytes
+SHA1 (mumble-1.3.4.tar.gz) = 5d981571cff562ea234bbd34b24d35b9e5fd47b3
+RMD160 (mumble-1.3.4.tar.gz) = 746994643c9b1177cf635be377ffc2ec1cdc0931
+SHA512 (mumble-1.3.4.tar.gz) = e2dde5aad30d1a931e7acd8d7db0b8c785d3a268d0b8cf5626fa03953a51bcadb719c6682c440d02524e83beee13d73d8f5bb3fdf98ab1c82d3ecf824cc25f68
+Size (mumble-1.3.4.tar.gz) = 8592741 bytes
 SHA1 (patch-src_mumble_OSS.cpp) = cf441337a6284da7f87429610275ef14d084ddbf
 SHA1 (patch-src_mumble_mumble.pro) = a49c3263f6034b2ea7c8633e24823937f4c4d3f5
