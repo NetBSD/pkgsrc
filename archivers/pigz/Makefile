@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:40 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/03/05 10:33:14 nia Exp $
 
-DISTNAME=	pigz-2.4
+DISTNAME=	pigz-2.6
 CATEGORIES=	archivers
-MASTER_SITES=	http://zlib.net/pigz/
+MASTER_SITES=	https://zlib.net/pigz/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://zlib.net/pigz/

@@ -1,16 +1,20 @@
-$NetBSD: patch-Makefile,v 1.6 2018/01/02 09:24:08 fhajny Exp $
+$NetBSD: patch-Makefile,v 1.7 2021/03/05 10:33:14 nia Exp $
 
 Do not mess with the build ENV.
 
---- Makefile.orig	2017-12-27 00:35:01.000000000 +0000
+--- Makefile.orig	2021-01-31 11:40:57.000000000 +0000
 +++ Makefile
-@@ -1,7 +1,6 @@
- CC=gcc
--CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas
+@@ -1,11 +1,9 @@
+-CC=gcc
+-CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual
 -LDFLAGS=
++CFLAGS+=-Wall -Wextra -Wno-unknown-pragmas -Wcast-qual
+ # CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual -g -fsanitize=thread
+ # LDFLAGS=-g -fsanitize=thread
+ # CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual -g -fsanitize=address
+ # LDFLAGS=-g -fsanitize=address
 -LIBS=-lm -lpthread -lz
-+CFLAGS+=-O3 -Wall -Wextra -Wno-unknown-pragmas
 +LIBS+=-lm -lpthread -lz
  ZOPFLI=zopfli/src/zopfli/
- ZOP=deflate.o blocksplitter.o tree.o lz77.o cache.o hash.o util.o squeeze.o katajainen.o
+ ZOP=deflate.o blocksplitter.o tree.o lz77.o cache.o hash.o util.o squeeze.o katajainen.o symbols.o
  
