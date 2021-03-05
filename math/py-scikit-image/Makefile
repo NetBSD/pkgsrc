@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/02/24 20:05:36 markd Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/05 04:16:57 gutteridge Exp $
 
 DISTNAME=	scikit-image-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 36 # py-tifffile
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
