@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1405 2021/03/05 09:57:32 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1406 2021/03/05 10:13:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2201,3 +2201,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/help2man to 1.48.2 [nia 2021-03-05]
 	Updated lang/polyml to 5.8.1 [jaapb 2021-03-05]
 	Updated chat/mumble to 1.3.4 [nia 2021-03-05]
+	Updated games/flightgear-data to 2020.3.6 [nia 2021-03-05]
