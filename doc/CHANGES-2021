@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1415 2021/03/05 18:54:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1416 2021/03/05 19:31:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2213,3 +2213,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ruamel-yaml to 0.16.13 [adam 2021-03-05]
 	Updated net/tcpflow to 1.6.1 [adam 2021-03-05]
 	Updated graphics/jasper to 2.0.26 [adam 2021-03-05]
+	Updated textproc/py-elementpath to 2.2.0 [adam 2021-03-05]
+	Updated devel/py-googleapis-common-protos to 1.53.0 [adam 2021-03-05]
