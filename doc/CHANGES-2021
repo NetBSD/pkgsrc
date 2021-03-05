@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1398 2021/03/05 04:21:52 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1399 2021/03/05 07:59:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2188,3 +2188,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser to 10.0.12 [wiz 2021-03-04]
 	Updated www/php-owncloud to 10.6.0 [ryoon 2021-03-04]
 	Updated graphics/py-tifffile to 2021.3.4 [gutteridge 2021-03-05]
+	Updated databases/py-peewee to 3.14.2 [adam 2021-03-05]
+	Updated devel/py-setuptools_scm to 5.0.2 [adam 2021-03-05]
+	Updated archivers/py-zipp to 3.4.1 [adam 2021-03-05]
+	Updated textproc/py-xmlschema to 1.5.2 [adam 2021-03-05]
