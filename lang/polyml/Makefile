@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2020/08/14 00:47:10 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2021/03/05 09:19:58 jaapb Exp $
 
-DISTNAME=	polyml-5.7.1
-PKGREVISION=	1
+DISTNAME=	polyml-5.8.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=polyml/}
 GITHUB_PROJECT=	polyml
