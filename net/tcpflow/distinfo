@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2018/08/21 06:52:11 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/03/05 18:52:14 adam Exp $
 
-SHA1 (tcpflow-1.5.0.tar.gz) = 5d8b3dda2be469fd2449b31d2ca8955010666d85
-RMD160 (tcpflow-1.5.0.tar.gz) = be77d858cf1825f41008d0ca51af83ccaaa96e12
-SHA512 (tcpflow-1.5.0.tar.gz) = eaf518e5e4d95ea9587542cec16a65a8e1518b54e6c23d84355ce11780c99758346db364ba502f90d938e54b01a1e32807d69ed35afb1e5e378a9a009c5609f5
-Size (tcpflow-1.5.0.tar.gz) = 471429 bytes
+SHA1 (tcpflow-1.6.1.tar.gz) = 049ded17fcc93d247ef694b32d7239ee33e0de06
+RMD160 (tcpflow-1.6.1.tar.gz) = d72cc93679ec2038ec8a61c231a96baaaee05109
+SHA512 (tcpflow-1.6.1.tar.gz) = 8a54554f2e47f6b136396b245eaeeafbfe3833e250a1eaf1905fadc14ccf821ca0f7ed18bf976fefa1de3efeae4895413af2c675bb6690d87b1368639cb15148
+Size (tcpflow-1.6.1.tar.gz) = 450511 bytes
 SHA1 (patch-configure) = 1cd65ab0ae845d908813773bcc6bc5f3fbd135d0
 SHA1 (patch-src_tcpip.cpp) = 0ff720b2192ba879c390bb5f82d0e0e240e26078
 SHA1 (patch-tests_test-multifile.sh) = 7c614f53a6664b74540ee54f7cb61dfa3934d978
