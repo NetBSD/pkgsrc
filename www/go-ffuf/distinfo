@@ -1,6 +1,22 @@
-$NetBSD: distinfo,v 1.2 2020/09/03 11:01:38 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/03/05 21:36:17 leot Exp $
 
-SHA1 (go-ffuf-1.1.0.tar.gz) = d01dec10bc6e9c67bf56130bccab8379d9155cf8
-RMD160 (go-ffuf-1.1.0.tar.gz) = 0bd203334a0d9763c5de30816f563140f291beb4
-SHA512 (go-ffuf-1.1.0.tar.gz) = 759b9009f41cc55626c16b4002382c7bf61dd73df00c979cd5b1fa139efc1b8cf5a39207e8e01a51821da20a1b3ddcc7f27f65257eb43370d1b64f3037eb7081
-Size (go-ffuf-1.1.0.tar.gz) = 31820 bytes
+SHA1 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = e2f2fc8c6f77544b39a9fdf884ecf34c6c0d9760
+RMD160 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 4852c7da0ba90c40c926de5b2fb9b55666a6d698
+SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
+Size (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 34 bytes
+SHA1 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 0f9760bda0c6ccacac5e57f62d0f5ad9c7dab03f
+RMD160 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = d9d3f6ce5853fcf7c112c8dc5d1fd49f99166846
+SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 7b4e4df2fea731e23e05437f26f24e32b2e99028d685b72e3a726c1cb616ada4a77ca4fb9db4a6fae48178cc5172e724b74499bc776d63a9110cb97377d5edeb
+Size (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 60320 bytes
+SHA1 (github.com_pelletier_go-toml_@v_v1.8.1.mod) = 43d0358221ea5f1a92c7f71be1f19622fdd3cf3c
+RMD160 (github.com_pelletier_go-toml_@v_v1.8.1.mod) = edd216ba7930abce719986dd53ad0e2e5b79e2c4
+SHA512 (github.com_pelletier_go-toml_@v_v1.8.1.mod) = 0e73093ef44bd32ae02910471bd85f6d135cde6d0fbf48780b8a58efb7419e16ac1b01497d451e8d3ee32602b7e32c0673dffbfc822c8f3a2d7670378f47f7cb
+Size (github.com_pelletier_go-toml_@v_v1.8.1.mod) = 88 bytes
+SHA1 (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 4b7e71a922e7f9f1073c1578ba47fd8453ccd781
+RMD160 (github.com_pelletier_go-toml_@v_v1.8.1.zip) = fbdeaa29456480cb9e713cca4500ba29a3f41feb
+SHA512 (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 09cca3645bbd191ffee980c80c747a8952a37a0e1bfb9615cc1d0c0c3fec7783a9254fa3e31239a036c2bfaabe8028525e9113327c6d72c385c8b9bad3b46017
+Size (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 117762 bytes
+SHA1 (go-ffuf-1.2.1.tar.gz) = c9fe89e20fb29a390a2ec8b8cb6845d532cadb79
+RMD160 (go-ffuf-1.2.1.tar.gz) = 70cb5f4e97799e9311e01d0b541b394aea107e54
+SHA512 (go-ffuf-1.2.1.tar.gz) = 66c505b3807969b94ab35f03fe8af739ef6860120a3b2008ab188c2ac2d14159dd2b6780fa7fa5097a6fef9f882c6a33894b88092570feb8ae8ea02e8d04e020
+Size (go-ffuf-1.2.1.tar.gz) = 38854 bytes
