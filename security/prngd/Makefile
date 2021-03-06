@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/03/20 11:58:18 nia Exp $
+# $NetBSD: Makefile,v 1.19 2021/03/06 09:28:18 nia Exp $
 
 DISTNAME=		prngd-0.9.29
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prngd/}
 
@@ -23,6 +24,11 @@ SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.path+=	-e 's,/var,${VARBASE},g'
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+CFLAGS+=		-DHAVE_SNPRINTF
+USE_FEATURES+=		snprintf
+CFLAGS+=		-DHAVE_VSNPRINTF
+USE_FEATURES+=		vsnprintf
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
