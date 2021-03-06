@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/03/06 08:07:10 wiz Exp $
+
+NetBSD's cp does not support '-n'.
+
+--- Makefile.in.orig	2021-02-24 14:33:19.000000000 +0000
++++ Makefile.in
+@@ -950,10 +950,10 @@ uninstall-man: uninstall-man1 uninstall-
+ 
+ 
+ install-data-hook:
+-	cp -an $(DESTDIR)$(sysconfdir)/detoxrc.sample $(DESTDIR)$(sysconfdir)/detoxrc && \
+-	cp -an $(DESTDIR)$(pkgdatadir)/iso8859_1.tbl.sample $(DESTDIR)$(pkgdatadir)/iso8859_1.tbl && \
+-	cp -an $(DESTDIR)$(pkgdatadir)/safe.tbl.sample $(DESTDIR)$(pkgdatadir)/safe.tbl && \
+-	cp -an $(DESTDIR)$(pkgdatadir)/unicode.tbl.sample $(DESTDIR)$(pkgdatadir)/unicode.tbl
++	cp -a $(DESTDIR)$(sysconfdir)/detoxrc.sample $(DESTDIR)$(sysconfdir)/detoxrc && \
++	cp -a $(DESTDIR)$(pkgdatadir)/iso8859_1.tbl.sample $(DESTDIR)$(pkgdatadir)/iso8859_1.tbl && \
++	cp -a $(DESTDIR)$(pkgdatadir)/safe.tbl.sample $(DESTDIR)$(pkgdatadir)/safe.tbl && \
++	cp -a $(DESTDIR)$(pkgdatadir)/unicode.tbl.sample $(DESTDIR)$(pkgdatadir)/unicode.tbl
+ 
+ .PHONY: force-install
+ force-install: install

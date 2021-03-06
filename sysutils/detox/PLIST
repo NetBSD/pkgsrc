@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/06 08:07:10 wiz Exp $
 bin/detox
 bin/inline-detox
 man/man1/detox.1
+man/man1/inline-detox.1
 man/man5/detox.tbl.5
 man/man5/detoxrc.5
 share/detox/iso8859_1.tbl
+share/detox/iso8859_1.tbl.sample
+share/detox/safe.tbl
+share/detox/safe.tbl.sample
 share/detox/unicode.tbl
+share/detox/unicode.tbl.sample
+share/doc/detox/README.md
 share/examples/detox/detoxrc
+share/examples/detox/detoxrc.sample
