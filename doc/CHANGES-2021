@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1429 2021/03/06 04:54:26 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1430 2021/03/06 04:56:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2228,3 +2228,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/rime-emoji version 0.0.0.20201113 [ryoon 2021-03-06]
 	Added inputmethod/rime-ipa version 0.0.0.20200413 [ryoon 2021-03-06]
 	Added inputmethod/rime-jyutping version 0.0.0.20200809 [ryoon 2021-03-06]
+	Added inputmethod/rime-middle-chinese version 0.0.0.20201219 [ryoon 2021-03-06]
