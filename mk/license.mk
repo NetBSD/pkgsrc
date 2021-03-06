@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.107 2020/08/18 20:18:32 riastradh Exp $
+# $NetBSD: license.mk,v 1.108 2021/03/06 04:36:21 ryoon Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -144,6 +144,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	mpl-1.0 mpl-1.1 mpl-2.0 \
 	mplusfont \
 	ms-pl \
+	odbl-v1 \
 	ofl-v1.0 ofl-v1.1 \
 	openssl \
 	original-bsd modified-bsd 2-clause-bsd 0-clause-bsd \
