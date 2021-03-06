@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1425 2021/03/06 04:47:21 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1426 2021/03/06 04:49:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2224,3 +2224,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/rime-array version 0.0.0.20200903 [ryoon 2021-03-06]
 	Added inputmethod/rime-cantonese version 0.0.0.20210218 [ryoon 2021-03-06]
 	Added inputmethod/rime-combo-pinyin version 0.0.0.20210131 [ryoon 2021-03-06]
+	Added inputmethod/rime-double-pinyin version 0.0.0.20210120 [ryoon 2021-03-06]
