@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/06 04:26:23 ryoon Exp $
+
+SHA1 (fcitx5-kkc-5.0.4.tar.xz) = 10d1fde89742652827332c302d01345749764b41
+RMD160 (fcitx5-kkc-5.0.4.tar.xz) = ad439de3d015e7cdc807e94db060e036129dd0ee
+SHA512 (fcitx5-kkc-5.0.4.tar.xz) = 0b8c5183e3bb621d95c1ff04526b9ba3f1efd47a59b919e285f6ce040f67449ddc8b6dc215651cbe1108104ce396e91767923e7a79644c58cc3d367d00116e27
+Size (fcitx5-kkc-5.0.4.tar.xz) = 39688 bytes
