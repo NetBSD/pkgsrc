@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1441 2021/03/06 11:21:16 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1442 2021/03/06 11:22:07 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/airportmodemutility [nia 2021-03-06]
 	Removed net/xnap [nia 2021-03-06]
 	Updated net/ettercap to 0.8.3.1 [nia 2021-03-06]
+	Updated emulators/qemu to version 5.2.0nb1 [reinoud 2021-03-06]
