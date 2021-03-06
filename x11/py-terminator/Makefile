@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/01/24 11:15:07 kamil Exp $
+# $NetBSD: Makefile,v 1.30 2021/03/06 09:22:44 nia Exp $
 
 GITHUB_PROJECT=	terminator
 DISTNAME=	terminator-2.1.0
@@ -27,12 +27,16 @@ SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
 
-DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
+DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.3:../../sysutils/py-psutil
 
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
