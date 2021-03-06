@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1444 2021/03/06 13:29:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1445 2021/03/06 13:35:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2246,3 +2246,19 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/ettercap-NG successor net/ettercap [nia 2021-03-06]
 	Updated emulators/qemu to version 5.2.0nb1 [reinoud 2021-03-06]
 	Updated lang/php74 to 7.4.16 [taca 2021-03-06]
+	Updated security/py-acme to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-apache to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-digitalocean to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-dnsimple to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-gehirn to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-google to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-linode to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-luadns to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-nsone to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-ovh to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-rfc2136 to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-route53 to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-dns-sakuracloud to 1.13.0 [adam 2021-03-06]
+	Updated security/py-certbot-nginx to 1.13.0 [adam 2021-03-06]
