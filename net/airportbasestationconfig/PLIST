@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:20 joerg Exp $
-bin/${BINNAME}
-lib/${BINNAME}/${JARNAME}
-share/doc/${BINNAME}/AUTHORS
-share/doc/${BINNAME}/COPYING
-share/doc/${BINNAME}/README
-share/doc/${BINNAME}/mainscreen.jpg
-share/doc/${BINNAME}/manual.html
