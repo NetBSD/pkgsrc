@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.11 2020/03/20 11:58:20 nia Exp $
-#
+# $NetBSD: Makefile,v 1.12 2021/03/06 08:07:10 wiz Exp $
 
-DISTNAME=		detox-1.2.0
+DISTNAME=		detox-1.4.1
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=detox/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=dharple/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://detox.sourceforge.net/
+HOMEPAGE=		https://github.com/dharple/detox
 COMMENT=		Removes non-standard characters from filenames
+LICENSE=		modified-bsd
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		lex:run gmake
-INSTALL_TARGET=		install-base install-unsafe-config
+USE_TOOLS+=		lex:run
 
 EGDIR=			${PREFIX}/share/examples/detox
+INSTALLATION_DIRS+=	share/examples/detox
 CONF_FILES=		${EGDIR}/detoxrc ${PKG_SYSCONFDIR}/detoxrc
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/detoxrc ${DESTDIR}${EGDIR}/detoxrc
+	mv ${DESTDIR}${PREFIX}/etc/detoxrc* ${DESTDIR}${PREFIX}/share/examples/detox
 
 .include "../../mk/bsd.pkg.mk"
