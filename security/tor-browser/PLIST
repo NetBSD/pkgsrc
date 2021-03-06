@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10.2.1 2021/02/04 17:25:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10.2.2 2021/03/06 17:02:40 bsiegert Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -5314,6 +5314,7 @@ lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line.svg
+lib/tor-browser/chrome/torbutton/skin/tor-survey-icon.svg
 lib/tor-browser/chrome/torbutton/skin/tor.png
 lib/tor-browser/chrome/torbutton/skin/torbrowser_mobile_logo.png
 lib/tor-browser/chrome/torbutton/skin/torbutton-update-needed.svg
