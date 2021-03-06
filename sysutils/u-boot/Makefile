@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/06/21 18:28:16 thorpej Exp $
+# $NetBSD: Makefile,v 1.32 2021/03/06 20:19:14 jmcneill Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -22,6 +22,7 @@ DEPENDS+=	u-boot-a20-olinuxino-lime2-[0-9]*:../../sysutils/u-boot-a20-olinuxino-
 DEPENDS+=	u-boot-a20-olinuxino-lime2-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-lime2-emmc
 DEPENDS+=	u-boot-a20-olinuxino-micro-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
 DEPENDS+=	u-boot-a20-olinuxino-micro-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
+DEPENDS+=	u-boot-apple-m1-[0-9]*:../../sysutils/u-boot-apple-m1
 DEPENDS+=	u-boot-bananapi-m2-zero-[0-9]*:../../sysutils/u-boot-bananapi-m2-zero
 DEPENDS+=	u-boot-bananapi-m3-[0-9]*:../../sysutils/u-boot-bananapi-m3
 DEPENDS+=	u-boot-bananapi-p2-zero-[0-9]*:../../sysutils/u-boot-bananapi-p2-zero
