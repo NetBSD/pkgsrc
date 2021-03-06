@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1454 2021/03/06 20:23:10 jmcneill Exp $
+$NetBSD: CHANGES-2021,v 1.1455 2021/03/06 21:06:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2273,3 +2273,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/preloader-m1 version 0.0.20210220 [jmcneill 2021-03-06]
 	Added sysutils/dtb-arm64-apple-m1 version 5.11rc4 [jmcneill 2021-03-06]
 	Added sysutils/u-boot-apple-m1 version 2021.01 [jmcneill 2021-03-06]
+	Added security/wfuzz version 3.1.0 [leot 2021-03-06]
