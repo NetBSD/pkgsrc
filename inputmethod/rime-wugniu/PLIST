@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 05:08:24 ryoon Exp $
+share/rime-data/wugniu.schema.yaml
+share/rime-data/wugniu_lopha.dict.yaml
+share/rime-data/wugniu_lopha.schema.yaml
