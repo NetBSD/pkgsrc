@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/06 04:56:00 ryoon Exp $
+
+SHA1 (rime-middle-chinese-0.0.0.20201219-9fad7a7c0c26167d5e6e85db8df48a15c7f7d4f0.tar.gz) = dc8dd98a292840c868dff858b3fa7cfaad03f026
+RMD160 (rime-middle-chinese-0.0.0.20201219-9fad7a7c0c26167d5e6e85db8df48a15c7f7d4f0.tar.gz) = 6bd33a5d8d52271dce1071d0f79248959c1bb9a9
+SHA512 (rime-middle-chinese-0.0.0.20201219-9fad7a7c0c26167d5e6e85db8df48a15c7f7d4f0.tar.gz) = a81a73e0298f566640ef36fd507bde3dd34b98a42e4c682fa3cb27c71656f4a24d32c4d0a6c4d04892e0fd978c325ea2830b2e16bac340529cd62a829d582665
+Size (rime-middle-chinese-0.0.0.20201219-9fad7a7c0c26167d5e6e85db8df48a15c7f7d4f0.tar.gz) = 137951 bytes
