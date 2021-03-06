@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1420 2021/03/05 21:50:24 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1421 2021/03/06 04:20:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/opendnssec2 to 2.1.8nb1 [he 2021-03-05]
 	Updated www/go-ffuf to 1.2.1 [leot 2021-03-05]
 	Updated textproc/ripgrep to 12.1.1nb1 [pin 2021-03-05]
+	Updated misc/libreoffice to 7.1.1.2 [ryoon 2021-03-06]
