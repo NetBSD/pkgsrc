@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.57 2020/04/30 09:47:51 plunky Exp $	*/
+/*	$NetBSD: license.c,v 1.58 2021/03/06 04:37:28 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -78,6 +78,7 @@ const char *default_acceptable_licenses =
     "mit "
     "mpl-1.0 mpl-1.1 mpl-2.0 "
     "mplusfont "
+    "odbl-v1 "
     "ofl-v1.0 ofl-v1.1 "
     "openssl "
     "original-bsd modified-bsd 2-clause-bsd "
