@@ -1,22 +1,24 @@
-$NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
+$NetBSD: patch-src_ProcessInfo.cpp,v 1.4 2021/03/06 04:47:37 markd Exp $
 
---- src/ProcessInfo.cpp.orig	2014-11-01 04:17:02.000000000 +0000
+NetBSD support
+
+--- src/ProcessInfo.cpp.orig	2019-08-08 23:59:38.000000000 +0000
 +++ src/ProcessInfo.cpp
-@@ -1012,6 +1012,171 @@ private:
-         }
+@@ -999,6 +999,163 @@ private:
+         return false;
      }
  };
 +#elif defined(Q_OS_NETBSD)
 +class NetBSDProcessInfo : public UnixProcessInfo
 +{
 +public:
-+    NetBSDProcessInfo(int pid, bool env) :
-+        UnixProcessInfo(pid,env)
++    NetBSDProcessInfo(int pid) :
++        UnixProcessInfo(pid)
 +    {
 +    }
 +
 +private:
-+    virtual bool readProcInfo(int pid)
++    bool readProcInfo(int aPid) Q_DECL_OVERRIDE
 +    {
 +        // indicies of various fields within the process status file which
 +        // contain various information about the process
@@ -38,7 +40,7 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 +        //
 +        // FIELD FIELD (FIELD WITH SPACES) FIELD FIELD
 +        //
-+        QFile processInfo( QString("/proc/%1/status").arg(pid) );
++        QFile processInfo( QStringLiteral("/proc/%1/status").arg(aPid) );
 +        if ( processInfo.open(QIODevice::ReadOnly) )
 +        {
 +            QTextStream stream(&processInfo);
@@ -48,18 +50,16 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 +            int field = 0;
 +            int pos = 0;
 +
-+            while (pos < data.count())
-+            {
++            while (pos < data.count()) {
 +                QChar c = data[pos];
 +
-+                if ( c == '(' )
++                if ( c == QLatin1Char('(')) {
 +                    stack++;
-+                else if ( c == ')' )
++                } else if ( c == QLatin1Char(')')) {
 +                    stack--;
-+                else if ( stack == 0 && c == ' ' )
++                } else if ( stack == 0 && c == QLatin1Char(' ')) {
 +                    field++;
-+                else
-+                {
++                } else {
 +                    switch ( field )
 +                    {
 +                        case PARENT_PID_FIELD:
@@ -110,26 +110,26 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 +            setName(processNameString);
 +
 +        // update object state
-+        setPid(pid);
++        setPid(aPid);
 +
 +        return ok;
 +    }
 +
-+    virtual bool readArguments(int pid)
++    bool readArguments(int aPid) Q_DECL_OVERRIDE
 +    {
 +        // read command-line arguments file found at /proc/<pid>/cmdline
 +        // the expected format is a list of strings delimited by null characters,
 +        // and ending in a double null character pair.
 +
-+        QFile argumentsFile( QString("/proc/%1/cmdline").arg(pid) );
++        QFile argumentsFile( QStringLiteral("/proc/%1/cmdline").arg(aPid) );
 +        if ( argumentsFile.open(QIODevice::ReadOnly) )
 +        {
 +            QTextStream stream(&argumentsFile);
-+            QString data = stream.readAll();
++            const QString &data = stream.readAll();
 +
-+            QStringList argList = data.split( QChar('\0') );
++            const QStringList &argList = data.split( QLatin1Char('\0') );
 +
-+            foreach ( const QString &entry , argList )
++            for ( const QString &entry : argList )
 +            {
 +                if (!entry.isEmpty())
 +                    addArgument(entry);
@@ -143,9 +143,9 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 +        return true;
 +    }
 +
-+    virtual bool readCurrentDir(int pid)
++    bool readCurrentDir(int aPid) Q_DECL_OVERRIDE
 +    {
-+        QFileInfo info( QString("/proc/%1/cwd").arg(pid) );
++        QFileInfo info( QStringLiteral("/proc/%1/cwd").arg(aPid) );
 +
 +        const bool readable = info.isReadable();
 +
@@ -164,22 +164,16 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 +            return false;
 +        }
 +    }
-+
-+    virtual bool readEnvironment(int pid)
-+    {
-+        // Not supported in NetBSD
-+        return true;
-+    }
 +} ;
  #endif
  
- SSHProcessInfo::SSHProcessInfo(const ProcessInfo& process)
-@@ -1168,6 +1333,8 @@ ProcessInfo* ProcessInfo::newInstance(in
-     return new LinuxProcessInfo(aPid, enableEnvironmentRead);
- #elif defined(Q_OS_SOLARIS)
-     return new SolarisProcessInfo(aPid, enableEnvironmentRead);
-+#elif defined(Q_OS_NETBSD)
-+    return new NetBSDProcessInfo(aPid, enableEnvironmentRead);
- #elif defined(Q_OS_MAC)
-     return new MacProcessInfo(aPid, enableEnvironmentRead);
+ SSHProcessInfo::SSHProcessInfo(const ProcessInfo &process) :
+@@ -1186,6 +1343,8 @@ ProcessInfo *ProcessInfo::newInstance(in
+     info = new MacProcessInfo(pid);
  #elif defined(Q_OS_FREEBSD)
+     info = new FreeBSDProcessInfo(pid);
++#elif defined(Q_OS_NETBSD)
++    info = new NetBSDProcessInfo(pid);
+ #elif defined(Q_OS_OPENBSD)
+     info = new OpenBSDProcessInfo(pid);
+ #else
