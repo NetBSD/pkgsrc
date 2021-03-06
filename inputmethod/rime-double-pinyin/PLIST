@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 04:48:26 ryoon Exp $
+share/rime-data/double_pinyin.schema.yaml
+share/rime-data/double_pinyin_abc.schema.yaml
+share/rime-data/double_pinyin_flypy.schema.yaml
+share/rime-data/double_pinyin_mspy.schema.yaml
+share/rime-data/double_pinyin_pyjj.schema.yaml
