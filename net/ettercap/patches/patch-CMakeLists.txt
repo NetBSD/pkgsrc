@@ -1,0 +1,37 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/03/06 11:20:56 nia Exp $
+
+- Don't set CMAKE_LIBRARY_PATH.
+- Use policykit everywhere it makes sense.
+- Honour man pages path from environment.
+
+--- CMakeLists.txt.orig	2020-08-01 14:32:06.000000000 +0000
++++ CMakeLists.txt
+@@ -90,10 +90,6 @@ include(EttercapOSTest)
+ #Check and see if we're running Darwin, specify the CMAKE_LIBARY_PATH to do so
+ if(OS_DARWIN)
+   set(CMAKE_SYSTEM_NAME Darwin)
+-  set(CMAKE_LIBRARY_PATH ${SPECIAL_LIB_DIR}/lib ${CMAKE_LIBRARY_PATH})
+-  set(CMAKE_INCLUDE_PATH ${SPECIAL_LIB_DIR}/include ${CMAKE_INCLUDE_PATH})
+-else()
+-  set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/lib64 /usr/lib32)
+ endif()
+ 
+ if(LIBRARY_BUILD)
+@@ -112,7 +108,7 @@ set(INSTALL_LIBDIR ${INSTALL_PREFIX}/lib
+ set(INSTALL_DATADIR ${INSTALL_PREFIX}/share CACHE PATH "Data installation directory")
+ set(INSTALL_EXECPREFIX ${INSTALL_PREFIX} CACHE PATH "")
+ set(INSTALL_BINDIR  ${INSTALL_PREFIX}/bin CACHE PATH "Binary files installation directory")
+-if(OS_DARWIN OR OS_BSD_FREE OR OS_WINDOWS)
++if(NOT OS_LINUX)
+   set(POLKIT_DIR ${INSTALL_PREFIX}/share/polkit-1/actions/ CACHE PATH "Polkit installation directory")
+ else()
+ #at least on ubuntu, polkit dir couldn't be /usr/local/share, but should be /usr/share
+@@ -122,7 +118,7 @@ set(PKEXEC_INSTALL_WRAPPER org.pkexec.et
+ set(DESKTOP_DIR ${INSTALL_PREFIX}/share/applications/ CACHE PATH "Desktop file installation directory")
+ set(METAINFO_DIR ${INSTALL_PREFIX}/share/metainfo/ CACHE PATH "Metainfo file installation directory")
+ set(ICON_DIR ${INSTALL_PREFIX}/share/pixmaps CACHE PATH "Icon file installation directory")
+-set(MAN_INSTALLDIR ${INSTALL_PREFIX}/share/man CACHE PATH "Path for manual pages")
++set(MAN_INSTALLDIR ${CMAKE_INSTALL_MANDIR} CACHE PATH "Path for manual pages")
+ 
+ if(NOT DISABLE_RPATH)
+   # Ensure that, when we link to stuff outside of our build path, we include the

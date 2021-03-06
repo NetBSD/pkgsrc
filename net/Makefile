@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1386 2021/03/06 09:44:31 nia Exp $
+# $NetBSD: Makefile,v 1.1387 2021/03/06 11:20:55 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -134,7 +134,7 @@ SUBDIR+=	erlang-xmpp
 SUBDIR+=	ether2dns
 SUBDIR+=	etherape
 SUBDIR+=	ettercap
-SUBDIR+=	ettercap-NG
+SUBDIR+=	ettercap-gtk
 SUBDIR+=	exabgp
 SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
