@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.17 2016/03/29 21:59:15 khorben Exp $
+$NetBSD: distinfo,v 1.18 2021/03/06 11:20:56 nia Exp $
 
-SHA1 (ettercap-0.6.b.tar.gz) = 8cc1bbfe61e894620deef74cff0b8ca5a0b9e628
-RMD160 (ettercap-0.6.b.tar.gz) = 05240616b98fdf1c4486837c6b8ff716188ab48b
-SHA512 (ettercap-0.6.b.tar.gz) = 2edb41f3d600665ac6b206cf58bbc7ef2c1534a470c3198c620b0390fa2c42297aaf1939dce1eee6caf321b7fa4d9a5125960ae9493b156916d3ff2d8dfabade
-Size (ettercap-0.6.b.tar.gz) = 689038 bytes
-SHA1 (patch-aa) = 730e78b97746dc9f4fc4efca99bd3eaf124bf614
-SHA1 (patch-ab) = 107ef5dda9457313d7d939745a6a21dbe2b989ce
-SHA1 (patch-ac) = 6771b96f36fa9439b0edf79e632f0d2f1125eecd
-SHA1 (patch-ad) = c7f997876c5b76fff77f70280f5b5fe523778abf
-SHA1 (patch-ae) = 58ea3d1500fb5f1c4b38ec795b884cfb2dd0ab42
-SHA1 (patch-af) = 27d9d6ca720758d68ef5e091140e8dfa5156e3ed
-SHA1 (patch-ag) = 2051a8c8e3ae0e246cbccd37cea355615a6ac677
-SHA1 (patch-src_ec__grell.c) = e70bafabfd95e7079d1d975a651fb5a6a2cdc5fc
+SHA1 (ettercap-0.8.3.1.tar.gz) = 9185c59883c8d128b852233c9aa0ae46f772d170
+RMD160 (ettercap-0.8.3.1.tar.gz) = 9f32f9320dd8369d7b58b9c07dcb89618d45e9ad
+SHA512 (ettercap-0.8.3.1.tar.gz) = 9bd71dcc1730293ee83934aca3587dfde662cb3890c12fafa557b6359f12226e5cb6f59a0db1aa11245a132b275e355e3bcc8952db921171d27b792827f148b5
+Size (ettercap-0.8.3.1.tar.gz) = 6678653 bytes
+SHA1 (patch-CMakeLists.txt) = f14a4c529631897bf5120be395a0111a639cda84
+SHA1 (patch-cmake_Modules_EttercapLibCheck.cmake) = 4d5d523735b64cf06d13fa4eb177d16553a9f8f3

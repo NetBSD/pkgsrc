@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/06 11:20:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 11:20:56 nia Exp $
 bin/ettercap
+bin/ettercap-pkexec
 bin/etterfilter
 bin/etterlog
 lib/ettercap/ec_arp_cop.so
@@ -49,6 +50,7 @@ man/man8/ettercap_curses.8
 man/man8/ettercap_plugins.8
 man/man8/etterfilter.8
 man/man8/etterlog.8
+share/applications/ettercap.desktop
 share/ettercap/AUTHORS
 share/ettercap/LICENSE
 share/ettercap/etter.dns.examples
@@ -70,3 +72,6 @@ share/ettercap/ettercap.svg
 share/ettercap/etterfilter.cnt
 share/ettercap/etterfilter.tbl
 share/ettercap/etterlog.dtd
+share/metainfo/ettercap.metainfo.xml
+share/pixmaps/ettercap.svg
+share/polkit-1/actions/org.pkexec.ettercap.policy
