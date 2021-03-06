@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/06 04:48:26 ryoon Exp $
+
+SHA1 (rime-double-pinyin-0.0.0.20210120-69bf85d4dfe8bac139c36abbd68d530b8b6622ea.tar.gz) = 698823d6a7dffe5e3df0859620b4dc714f167199
+RMD160 (rime-double-pinyin-0.0.0.20210120-69bf85d4dfe8bac139c36abbd68d530b8b6622ea.tar.gz) = 48ef47e0e1ada5924c85b8cd8dd51f11dc7d9dba
+SHA512 (rime-double-pinyin-0.0.0.20210120-69bf85d4dfe8bac139c36abbd68d530b8b6622ea.tar.gz) = 2ab98a7b804b2fa3d0a59fd0b9a8b79316caa3a2da070766359d550d1d56edf85d55874044409780a2a21d729a2a7e834fdcf9419eb0d34252acbdef304a5c40
+Size (rime-double-pinyin-0.0.0.20210120-69bf85d4dfe8bac139c36abbd68d530b8b6622ea.tar.gz) = 16998 bytes
