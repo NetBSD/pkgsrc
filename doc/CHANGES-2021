@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1448 2021/03/06 16:08:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1449 2021/03/06 17:28:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mantis to 2.24.5 [taca 2021-03-06]
 	Added sysutils/macchina version 0.4.9 [pin 2021-03-06]
 	Updated editors/codelite to 15.0 [wiz 2021-03-06]
+	Updated graphics/krita to 4.4.2 [nia 2021-03-06]
