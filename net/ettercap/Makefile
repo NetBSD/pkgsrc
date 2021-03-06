@@ -1,37 +1,12 @@
-# $NetBSD: Makefile,v 1.91 2020/08/17 20:19:44 leot Exp $
+# $NetBSD: Makefile,v 1.92 2021/03/06 11:20:56 nia Exp $
 
-DISTNAME=		ettercap-0.6.b
-PKGREVISION=		43
-CATEGORIES=		security net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/}
+.include "Makefile.common"
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ettercap.sourceforge.net/
-COMMENT=		Multipurpose sniffer/interceptor/logger for switched LAN
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Suite for man in the middle attacks
 
-BROKEN=			"Fails to build with OpenSSL 1.1"
+CONFLICTS+=	ettercap-gtk-[0-9]*
 
-CONFLICTS+=		ettercap-NG-[0-9]*
+CMAKE_ARGS+=	-DENABLE_GTK=OFF
 
-MAKE_JOBS_SAFE=		no
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-plugins
-CONFIGURE_ARGS+=	--enable-https
-
-.include "options.mk"
-
-# needs putwin()
-INCOMPAT_CURSES=	NetBSD-[0-4].*
-PTHREAD_OPTS+=		require
-PTHREAD_AUTO_VARS=	yes
-MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-
-BUILD_DIRS=		. plugins
-INSTALL_DIRS=		. plugins
-
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
