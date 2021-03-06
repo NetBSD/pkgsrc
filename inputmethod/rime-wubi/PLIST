@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 05:06:52 ryoon Exp $
+share/rime-data/wubi86.dict.yaml
+share/rime-data/wubi86.schema.yaml
+share/rime-data/wubi_pinyin.schema.yaml
+share/rime-data/wubi_trad.schema.yaml
