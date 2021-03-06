@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1440 2021/03/06 09:45:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1441 2021/03/06 11:21:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/airportbasestationconfig [nia 2021-03-06]
 	Removed net/airportmodemutility [nia 2021-03-06]
 	Removed net/xnap [nia 2021-03-06]
+	Updated net/ettercap to 0.8.3.1 [nia 2021-03-06]
