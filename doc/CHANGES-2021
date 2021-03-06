@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1449 2021/03/06 17:28:41 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1450 2021/03/06 18:13:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2266,3 +2266,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/macchina version 0.4.9 [pin 2021-03-06]
 	Updated editors/codelite to 15.0 [wiz 2021-03-06]
 	Updated graphics/krita to 4.4.2 [nia 2021-03-06]
+	Updated print/sile to 0.10.15 [joerg 2021-03-06]
