@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1445 2021/03/06 13:35:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1446 2021/03/06 13:42:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-route53 to 1.13.0 [adam 2021-03-06]
 	Updated security/py-certbot-dns-sakuracloud to 1.13.0 [adam 2021-03-06]
 	Updated security/py-certbot-nginx to 1.13.0 [adam 2021-03-06]
+	Updated devel/mantis to 2.24.5 [taca 2021-03-06]
