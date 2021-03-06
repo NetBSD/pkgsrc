@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.29 2020/06/21 10:06:53 wiz Exp $
+# $NetBSD: u-boot.mk,v 1.30 2021/03/06 15:52:55 jmcneill Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -63,7 +63,7 @@ do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${UBOOT_CONFIG}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${_MAKE_JOBS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${_MAKE_JOBS} ${BUILD_TARGET}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
