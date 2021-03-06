@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.14 2021/03/01 20:05:49 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.15 2021/03/06 17:03:06 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -119,4 +119,7 @@ www/firefox78: security fix
 
 Pullup ticket #6431 - requested by nia
 www/firefox78-l10n: dependent update
+
+Pullup ticket #6433 - requested by wiz
+security/tor-browser: security fix
 
