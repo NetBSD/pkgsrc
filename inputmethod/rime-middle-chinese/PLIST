@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 04:56:00 ryoon Exp $
+share/rime-data/sampheng.schema.yaml
+share/rime-data/zyenpheng.dict.yaml
+share/rime-data/zyenpheng.schema.yaml
