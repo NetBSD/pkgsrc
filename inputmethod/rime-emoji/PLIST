@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 04:50:28 ryoon Exp $
+share/rime-data/customize.recipe.yaml
+share/rime-data/emoji_suggestion.yaml
