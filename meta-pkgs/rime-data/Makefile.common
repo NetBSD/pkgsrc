@@ -1,9 +1,24 @@
-# $NetBSD: Makefile.common,v 1.1 2021/02/20 20:58:57 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/03/06 05:13:16 ryoon Exp $
 #
 # used by inputmethod/rime-prelude/Makefile
 # used by inputmethod/rime-bopomofo/Makefile
 # used by inputmethod/rime-cangjie/Makefile
 # used by inputmethod/rime-terra-pinyin/Makefile
+# used by inputmethod/rime-array/Makefile
+# used by inputmethod/rime-cantonese/Makefile
+# used by inputmethod/rime-combo-pinyin/Makefile
+# used by inputmethod/rime-double-pinyin/Makefile
+# used by inputmethod/rime-emoji/Makefile
+# used by inputmethod/rime-ipa/Makefile
+# used by inputmethod/rime-jyutping/Makefile
+# used by inputmethod/rime-middle-chinese/Makefile
+# used by inputmethod/rime-pinyin-simp/Makefile
+# used by inputmethod/rime-quick/Makefile
+# used by inputmethod/rime-scj/Makefile
+# used by inputmethod/rime-soutzoe/Makefile
+# used by inputmethod/rime-stenotype/Makefile
+# used by inputmethod/rime-wubi/Makefile
+# used by inputmethod/rime-wugniu/Makefile
 
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
