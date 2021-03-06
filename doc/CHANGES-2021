@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1447 2021/03/06 14:08:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1448 2021/03/06 16:08:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-nginx to 1.13.0 [adam 2021-03-06]
 	Updated devel/mantis to 2.24.5 [taca 2021-03-06]
 	Added sysutils/macchina version 0.4.9 [pin 2021-03-06]
+	Updated editors/codelite to 15.0 [wiz 2021-03-06]
