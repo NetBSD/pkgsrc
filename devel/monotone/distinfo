@@ -1,9 +1,44 @@
-$NetBSD: distinfo,v 1.53 2018/09/13 21:14:45 gavan Exp $
+$NetBSD: distinfo,v 1.54 2021/03/06 08:57:54 nia Exp $
 
 SHA1 (monotone-1.1.tar.bz2) = 2b97559b252decaee3a374b81bf714cf33441ba3
 RMD160 (monotone-1.1.tar.bz2) = c5e0f45028b806eb166b4aaecababa8e8e81b686
 SHA512 (monotone-1.1.tar.bz2) = 0599e7fc004552f6a15095b62627eb60d80bfd32904608b6fef15f6c6f83db8059375833cb8ddc54fed569223a95f8ea0ba3c7008ad2969a5776faa27e5e5f3b
 Size (monotone-1.1.tar.bz2) = 3428699 bytes
+SHA1 (patch-Makefile.in) = 7a7c9219f963e7ff352c1778e7d5465ba8fbc608
+SHA1 (patch-src_ancestry.cc) = 62d58a71a44e5454d69a35963774a2f31094e302
+SHA1 (patch-src_asciik.hh) = 2f83d92323bdcbb167868809efca7d4ab8eb8207
+SHA1 (patch-src_automate.cc) = 04306a7889e40ccaeea868eb655969944709578f
+SHA1 (patch-src_basic__io.hh) = a716d1f50949756ab6eea0cec66b1183119cf757
+SHA1 (patch-src_charset.cc) = 9ffe2e88c62cf897c72298a8626d55eb85709006
+SHA1 (patch-src_cmd__list.cc) = 74a11d4d15db798064accc9e1c92242ac8cdf48e
+SHA1 (patch-src_commands.hh) = 8112f948164e7c80ece2d66e0bf9d2bcdccc3e40
+SHA1 (patch-src_database.cc) = 806c19434a149fb96fe38aec281236b72d204955
+SHA1 (patch-src_database.hh) = 257f845e8c11727c10bf375ff1e2e1922c091745
+SHA1 (patch-src_enumerator.cc) = 5c86d27cfa45e3ccb3d9a88959d71a6c72692717
+SHA1 (patch-src_file__io.cc) = 851fe7d772063e74d73bb67aae973655a8e3c246
+SHA1 (patch-src_globish.cc) = e462c2407ce54f15c5107f12186335de17cda337
 SHA1 (patch-src_hash__map.hh) = 3f8e83b651452aa87eb5409d6e852a49e3747db4
+SHA1 (patch-src_hmac.cc) = ae17ce604eabf14c33e56fbed01700dd31829764
+SHA1 (patch-src_key__store.hh) = a83d85e4810a84e01559494d332399f65e882ecd
+SHA1 (patch-src_lua__hooks.cc) = 7593608df6c997368a7d57a2f8183514b7b0169e
+SHA1 (patch-src_migrate__work.cc) = 1917092a134c28dc4301107610c335eb92cccab7
+SHA1 (patch-src_netcmd.cc) = 7ebcbd1887158cc10dae5ba21e69975d82241820
+SHA1 (patch-src_netcmd.hh) = ce687b6fa80ccb0a8c07b1d20dcc26a4e56624a0
+SHA1 (patch-src_network_listener__base.hh) = 554e8b458e126f07ee0cf22b8b6b2158749dc98a
+SHA1 (patch-src_option.hh) = e36dfcd20b1e0d7015f8cb398c9bf6b157f1916d
 SHA1 (patch-src_pcrewrap.cc) = c40693610033a899b3d14867e3228d86d2a732d4
 SHA1 (patch-src_pcrewrap.hh) = 60fae878445e2eedece85660741062b80090b043
+SHA1 (patch-src_project.cc) = ade101994af3f2c64ee23bbaef0e2a0333fe0498
+SHA1 (patch-src_rcs__file.cc) = 531378ceb7cc0d4d88eb65b7c6f3cc72acf69c67
+SHA1 (patch-src_rcs__file.hh) = 730c8b7ab63cd1d33316efb3647af84327578f65
+SHA1 (patch-src_rcs__import.cc) = 723332ca1172707858bb1a7394ca9d039b9d88f1
+SHA1 (patch-src_restrictions.cc) = ebce64b7b09a35fb3f324e0dad20138db7ea8146
+SHA1 (patch-src_revision.hh) = 1b36f466b32d70ce46d827f68e11f95b6bb9d1ab
+SHA1 (patch-src_roster.cc) = 21f6a7afe1ba992fc7ebb4d4d1e81c84b7f21200
+SHA1 (patch-src_sanity.cc) = d091b89238110cae21e0c9881ef36a970b296bfb
+SHA1 (patch-src_sanity.hh) = 278b024cc601aec941980319f61823160e962625
+SHA1 (patch-src_sha1.cc) = 360fd1959d460fee792694af71795114b4422932
+SHA1 (patch-src_transforms.cc) = 108f778ace54093724704649a6450bd623a41c63
+SHA1 (patch-src_update.cc) = 28761a113536e6a00bef2d70a1c3855b56dadd82
+SHA1 (patch-src_vocab.cc) = c774b962065c6e7840dc1cc3138df6c0c37f2bf9
+SHA1 (patch-src_xdelta.cc) = 827820556c4a5ad19465d66efc55517a079053dd
