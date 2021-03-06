@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1453 2021/03/06 19:00:55 js Exp $
+$NetBSD: CHANGES-2021,v 1.1454 2021/03/06 20:23:10 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2270,3 +2270,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/detox to 1.4.2 [wiz 2021-03-06]
 	Updated chat/element-web to 1.7.22 [js 2021-03-06]
 	Updated chat/matrix-synapse to 1.28.0 [js 2021-03-06]
+	Added sysutils/preloader-m1 version 0.0.20210220 [jmcneill 2021-03-06]
+	Added sysutils/dtb-arm64-apple-m1 version 5.11rc4 [jmcneill 2021-03-06]
+	Added sysutils/u-boot-apple-m1 version 2021.01 [jmcneill 2021-03-06]
