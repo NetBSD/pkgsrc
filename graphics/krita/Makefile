@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2021/02/07 06:30:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2021/03/06 17:28:13 nia Exp $
 
-DISTNAME=		krita-4.4.1
-PKGREVISION=		5
-CATEGORIES=		graphics misc kde
+DISTNAME=		krita-4.4.2
+CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,8 +11,10 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 #BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
-USE_TOOLS+=		msgfmt pkg-config perl gmake
-USE_LANGUAGES=		c c++14 # as of 4.3.0 boost 1.75 geometry requires c++14
+USE_TOOLS+=		msgfmt pkg-config perl
+# Uses targets with spaces in the names
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_KDE_build

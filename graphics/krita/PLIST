@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/30 15:43:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/06 17:28:13 nia Exp $
 bin/krita
 bin/krita_version
 lib/kritaplugins/krita_colorspaces_extensions.so
@@ -51,6 +51,7 @@ lib/kritaplugins/kritagamutmask.so
 lib/kritaplugins/kritagaussianhighpassfilter.so
 lib/kritaplugins/kritagifexport.so
 lib/kritaplugins/kritagifimport.so
+lib/kritaplugins/kritagradientgenerator.so
 lib/kritaplugins/kritagradientmap.so
 lib/kritaplugins/kritagriddocker.so
 lib/kritaplugins/kritagridpaintop.so
@@ -358,6 +359,7 @@ share/krita/bundles/Krita_3_Default_Resources.bundle
 share/krita/bundles/Krita_4_Default_Resources.bundle
 share/krita/bundles/Krita_Artists_SeExpr_examples.bundle
 share/krita/bundles/README
+share/krita/bundles/RGBA_brushes.bundle
 share/krita/defaultpresets/colorsmudge.kpp
 share/krita/defaultpresets/complex.kpp
 share/krita/defaultpresets/curvebrush.kpp
