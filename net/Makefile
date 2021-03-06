@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1385 2021/03/06 09:41:09 nia Exp $
+# $NetBSD: Makefile,v 1.1386 2021/03/06 09:44:31 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -1008,7 +1008,6 @@ SUBDIR+=	xfce4-wavelan-plugin
 SUBDIR+=	xipdump
 SUBDIR+=	xl2tpd
 SUBDIR+=	xmftp
-SUBDIR+=	xnap
 SUBDIR+=	xorp
 SUBDIR+=	xrmftp
 SUBDIR+=	xtraceroute
