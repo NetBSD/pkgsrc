@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/02/28 17:06:40 taca Exp $
+$NetBSD: distinfo,v 1.23 2021/03/06 13:42:07 taca Exp $
 
-SHA1 (mantisbt-2.24.4.tar.gz) = a91ff61ec839aa177b94c8163ce893afe47cecb7
-RMD160 (mantisbt-2.24.4.tar.gz) = 9910ff0a3b9cdc9c1eda6bd8923c108cf1d82ef8
-SHA512 (mantisbt-2.24.4.tar.gz) = 115ae7786061b9a535a8396ee32e8aea31ac0d934f64fa614de757cdc1547beefe1d363867be663a1d974c0d94e29708b2b65f52abd2e85eaaefa3bb32c4bf8e
-Size (mantisbt-2.24.4.tar.gz) = 14400419 bytes
+SHA1 (mantisbt-2.24.5.tar.gz) = 995937c539fa61ab69419349344252777f49c232
+RMD160 (mantisbt-2.24.5.tar.gz) = 8b3411eb2df2d97cda31fc077e9b64a990cbfa98
+SHA512 (mantisbt-2.24.5.tar.gz) = bb84634154dd4b4a3a5549a45742501d7f852b19f5f7479239ab020ccbc8c54b0aa43f27cfbb39ce976931f483b77600b0a28f0096ac77b799656ceb35a9bea6
+Size (mantisbt-2.24.5.tar.gz) = 14407448 bytes

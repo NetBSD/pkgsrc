@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/02/28 17:06:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/03/06 13:42:07 taca Exp $
 share/doc/mantis/en-US/Admin_Guide/Admin_Guide.pdf
 share/doc/mantis/en-US/Admin_Guide/Admin_Guide.txt
 share/doc/mantis/en-US/Admin_Guide/html-desktop/Common_Content/css/brand.css
@@ -1706,6 +1706,7 @@ share/mantis/vendor/adodb/adodb-php/xsl/remove-0.2.xsl
 share/mantis/vendor/adodb/adodb-php/xsl/remove-0.3.xsl
 share/mantis/vendor/autoload.php
 share/mantis/vendor/composer/ClassLoader.php
+share/mantis/vendor/composer/InstalledVersions.php
 share/mantis/vendor/composer/LICENSE
 share/mantis/vendor/composer/autoload_classmap.php
 share/mantis/vendor/composer/autoload_files.php
@@ -1714,6 +1715,8 @@ share/mantis/vendor/composer/autoload_psr4.php
 share/mantis/vendor/composer/autoload_real.php
 share/mantis/vendor/composer/autoload_static.php
 share/mantis/vendor/composer/installed.json
+share/mantis/vendor/composer/installed.php
+share/mantis/vendor/composer/platform_check.php
 share/mantis/vendor/dapphp/securimage/.htaccess
 share/mantis/vendor/dapphp/securimage/AHGBold.ttf
 share/mantis/vendor/dapphp/securimage/LICENSE.txt

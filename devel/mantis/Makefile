@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2021/02/28 17:06:40 taca Exp $
+# $NetBSD: Makefile,v 1.57 2021/03/06 13:42:07 taca Exp $
 
-DISTNAME=	mantisbt-2.24.4
+DISTNAME=	mantisbt-2.24.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
