@@ -1,0 +1,25 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/03/06 11:19:34 reinoud Exp $
+
+To use the NetBSD/amd64 Virtual Memory Monitor (NVMM) for QEMU :
+
+Load the NVMM kernel driver if not already loaded
+# modload nvmm
+
+You may want to run the NVMM tests to confirm that your setup is correct:
+# cd /usr/tests/lib/libnvmm/
+# atf-run | atf-report
+
+Configure the permissions once
+# chown root:nvmm ${PREFIX}/bin/qemu-system-x86_64
+# chmod g+s ${PREFIX}/bin/qemu-system-x86_64
+# chown root:nvmm ${PREFIX}/bin/qemu-system-i386
+# chmod g+s ${PREFIX}/bin/qemu-system-i386
+
+Append "-accel nvmm" to your usual Qemu command line
+$ qemu-system-x86_64 -smp 4 -m 8G -cdrom Win10_2004_English_x64.iso -accel nvmm
+
+See nvmm(4) and nvmmctl(8) or visit
+   https://m00nbsd.net/4e0798b7f2620c965d0dd9d6a7a2f296.html for more info.
+
+===========================================================================

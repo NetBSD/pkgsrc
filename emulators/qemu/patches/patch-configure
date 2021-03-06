@@ -1,0 +1,43 @@
+$NetBSD: patch-configure,v 1.31 2021/03/06 11:19:34 reinoud Exp $
+
+Add NVMM support.
+Fix jemalloc detection.
+
+--- configure.orig	2020-12-08 16:59:44.000000000 +0000
++++ configure
+@@ -334,6 +334,7 @@ vhost_user_fs=""
+ kvm="auto"
+ hax="auto"
+ hvf="auto"
++nvmm="auto"
+ whpx="auto"
+ rdma=""
+ pvrdma=""
+@@ -1102,6 +1103,10 @@ for opt do
+   ;;
+   --enable-hvf) hvf="enabled"
+   ;;
++  --disable-nvmm) nvmm="disabled"
++  ;;
++  --enable-nvmm) nvmm="enabled"
++  ;;
+   --disable-whpx) whpx="disabled"
+   ;;
+   --enable-whpx) whpx="enabled"
+@@ -1783,6 +1788,7 @@ disabled with --disable-FEATURE, default
+   kvm             KVM acceleration support
+   hax             HAX acceleration support
+   hvf             Hypervisor.framework acceleration support
++  nvmm            NVMM acceleration support
+   whpx            Windows Hypervisor Platform acceleration support
+   rdma            Enable RDMA-based migration
+   pvrdma          Enable PVRDMA support
+@@ -7005,7 +7011,7 @@ NINJA=$ninja $meson setup \
+         ${staticpic:+-Db_staticpic=$staticpic} \
+         -Db_coverage=$(if test "$gcov" = yes; then echo true; else echo false; fi) \
+         -Dmalloc=$malloc -Dmalloc_trim=$malloc_trim -Dsparse=$sparse \
+-        -Dkvm=$kvm -Dhax=$hax -Dwhpx=$whpx -Dhvf=$hvf \
++        -Dkvm=$kvm -Dhax=$hax -Dwhpx=$whpx -Dhvf=$hvf -Dnvmm=$nvmm \
+         -Dxen=$xen -Dxen_pci_passthrough=$xen_pci_passthrough -Dtcg=$tcg \
+         -Dcocoa=$cocoa -Dmpath=$mpath -Dsdl=$sdl -Dsdl_image=$sdl_image \
+         -Dvnc=$vnc -Dvnc_sasl=$vnc_sasl -Dvnc_jpeg=$vnc_jpeg -Dvnc_png=$vnc_png \

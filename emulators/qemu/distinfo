@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.171 2021/02/23 09:28:33 wiz Exp $
+$NetBSD: distinfo,v 1.172 2021/03/06 11:19:34 reinoud Exp $
 
 SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
 RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
@@ -8,7 +8,9 @@ SHA1 (qemu-5.2.0.tar.xz) = 146578267387e301423502d19024f8ffe35ab332
 RMD160 (qemu-5.2.0.tar.xz) = 2c33e773f012e333f99237e3d4ff1653ea0bc88f
 SHA512 (qemu-5.2.0.tar.xz) = bddd633ce111471ebc651e03080251515178808556b49a308a724909e55dac0be0cc0c79c536ac12d239678ae94c60100dc124be9b9d9538340c03a2f27177f3
 Size (qemu-5.2.0.tar.xz) = 106902800 bytes
+SHA1 (patch-accel_stubs_nvmm-stub.c) = d66d47eabb8bb6728e777da7589b43d491adbcc8
 SHA1 (patch-backends_tpm_tpm__ioctl.h) = fbd6c877ad605f7120290efbb0ac653c69f351de
+SHA1 (patch-configure) = 8b392c5633c70d65f2f27af3b617a53af9772899
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
 SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
@@ -24,9 +26,13 @@ SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
 SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
 SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
+SHA1 (patch-include_sysemu_hw_accel.h) = d083cd51434e28eb0d647b5107d34018b0ef63dc
 SHA1 (patch-include_sysemu_kvm.h) = 9847abe3be70bd708a521310f5d5515e45a1a5a0
-SHA1 (patch-meson.build) = 5f9e00312b2dc6a6b1c43b1f28d092e69b09091d
+SHA1 (patch-include_sysemu_nvmm.h) = 1fe49c4f11910d6faf683ae3233f783a0b03ce5a
+SHA1 (patch-meson.build) = 65f1f51403b6def24640396ad26bb7c25a16dae0
+SHA1 (patch-meson__options.txt) = 286d097f596baa5af244a990d2874f1a7ee65198
 SHA1 (patch-net_tap-solaris.c) = cc953c9a624dd55ace4e130d0b31bbfb956c17d5
+SHA1 (patch-qemu-options.hx) = e2f264117f703aa4ccf56219f370c3b1303e8b07
 SHA1 (patch-roms_qemu-palcode_hwrpb.h) = ae7b4c0680367af6f740d62a54dc86352128d76f
 SHA1 (patch-roms_qemu-palcode_init.c) = 7a0ebcd86f4106318791e7d90273fb55a424f1b8
 SHA1 (patch-roms_qemu-palcode_memcpy.c) = 7761774ae9092d0f494deaf302d663ba479a09cf
@@ -40,5 +46,10 @@ SHA1 (patch-roms_qemu-palcode_sys-clipper.h) = 8983d7072b1c1e66bf0a18d2e49e50374
 SHA1 (patch-roms_qemu-palcode_vgaio.c) = c8d7adc053cd6655f005527d16647611040c09d2
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
+SHA1 (patch-target_i386_helper.c) = 3314e65df11492438af2ec2c53ed3082a0b62b09
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
+SHA1 (patch-target_i386_meson.build) = d0e0d7d4dd96ea43fc386e7166bbabbd71b0f4fc
+SHA1 (patch-target_i386_nvmm_all.c) = dd22747aa0b94bc371303fc865d523d3623ec043
+SHA1 (patch-target_i386_nvmm_cpus.c) = 7f028bf2637fe31d8524f710a9e508c8ce65c822
+SHA1 (patch-target_i386_nvmm_cpus.h) = 0a25e49929cb772fc46a4ace91127ccf3605521d
 SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
