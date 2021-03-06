@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.252 2021/02/18 12:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.253 2021/03/06 04:19:35 ryoon Exp $
 
-VERREL=		7.1.0
-VERRC=		3
+VERREL=		7.1.1
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -99,7 +99,7 @@ MORE_DISTFILES= \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2018-04-23.tar.bz2 \
 	libeot-0.01.tar.bz2 \
-	postgresql-9.2.24.tar.bz2 \
+	postgresql-13.1.tar.bz2 \
 	graphite2-minimal-1.3.10.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
