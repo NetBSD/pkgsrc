@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/02/12 07:23:29 nia Exp $
+# $NetBSD: Makefile,v 1.60 2021/03/06 04:49:18 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +17,7 @@ DEPENDS+=	kde-runtime4-15.12.0{,nb[0-9]*}:../../x11/kde-runtime4
 DEPENDS+=	kde-workspace4-4.11.22{,nb[0-9]*}:../../x11/kde-workspace4
 DEPENDS+=	kde-wallpapers4-15.08.3{,nb[0-9]*}:../../misc/kde-wallpapers4
 DEPENDS+=	kde-baseapps4-15.12.0{,nb[0-9]*}:../../x11/kde-baseapps4
-DEPENDS+=	konsole-4.14.3{,nb[0-9]*}:../../x11/konsole
+DEPENDS+=	konsole>=4.14.3:../../x11/konsole
 DEPENDS+=	kaccessible-16.12.0{,nb[0-9]*}:../../misc/kaccessible
 DEPENDS+=	kmag>=16.12.0:../../misc/kmag
 DEPENDS+=	kmouth>=4.14.3:../../misc/kmouth
