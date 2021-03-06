@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 05:01:36 ryoon Exp $
+share/rime-data/scj6.dict.yaml
+share/rime-data/scj6.schema.yaml
