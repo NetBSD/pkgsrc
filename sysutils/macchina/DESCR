@@ -1,0 +1,6 @@
+Basic system information fetcher, with a focus on performance and minimalism.
+
+Macchina lets you view basic system information, like your hostname, kernel
+version, uptime, memory usage, and much more.
+No one wants a slow fetcher, and Macchina's selling point is providing you with
+convenient features while keeping performance a priority and minimalism a goal.
