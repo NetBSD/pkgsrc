@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2021/03/06 05:00:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.116 2021/03/06 05:02:41 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -103,6 +103,7 @@ SUBDIR+=	rime-middle-chinese
 SUBDIR+=	rime-pinyin-simp
 SUBDIR+=	rime-prelude
 SUBDIR+=	rime-quick
+SUBDIR+=	rime-scj
 SUBDIR+=	rime-terra-pinyin
 SUBDIR+=	ruby-zinnia
 SUBDIR+=	scim
