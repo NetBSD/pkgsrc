@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/06 04:53:59 ryoon Exp $
+share/rime-data/hkcantonese.schema.yaml
+share/rime-data/jyutping.dict.yaml
+share/rime-data/jyutping.lettered.dict.yaml
+share/rime-data/jyutping.phrase.dict.yaml
+share/rime-data/jyutping.schema.yaml
+share/rime-data/yale.schema.yaml
