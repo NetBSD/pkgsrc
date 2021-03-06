@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1384 2021/02/14 21:01:17 pin Exp $
+# $NetBSD: Makefile,v 1.1385 2021/03/06 09:41:09 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -20,9 +20,6 @@ SUBDIR+=	SDL_net
 SUBDIR+=	adns
 SUBDIR+=	aget
 SUBDIR+=	aiccu
-SUBDIR+=	airport2basestationconfig
-SUBDIR+=	airportbasestationconfig
-SUBDIR+=	airportmodemutility
 SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amule
 SUBDIR+=	aoe-vblade
