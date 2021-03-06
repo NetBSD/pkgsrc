@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/23 11:57:13 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/06 16:08:32 wiz Exp $
 bin/codelite
 bin/codelite-cc
 bin/codelite-echo
@@ -14,10 +14,8 @@ bin/codelite_open_helper.py
 bin/codelite_xterm
 lib/codelite/AutoSave.so
 lib/codelite/CMakePlugin.so
-lib/codelite/CallGraph.so
 lib/codelite/CodeFormatter.so
 lib/codelite/CodeLiteDiff.so
-lib/codelite/ContinuousBuild.so
 lib/codelite/Copyright.so
 lib/codelite/DatabaseExplorer.so
 lib/codelite/Docker.so
@@ -63,6 +61,7 @@ share/applications/codelite.desktop
 share/codelite/LICENSE
 share/codelite/PHP.zip
 share/codelite/astyle.sample
+share/codelite/clang-tools.tgz
 share/codelite/codelite-bitmaps-dark.zip
 share/codelite/codelite-bitmaps-light.zip
 share/codelite/config/accelerators.conf.default
