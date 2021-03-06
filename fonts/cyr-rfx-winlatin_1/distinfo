@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/09/15 14:18:30 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/03/06 16:14:34 wiz Exp $
 
-SHA1 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = 2baee03a4c2c3f96a5fff8fe588baae0fe620535
-RMD160 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = a60a1befd3a9f2946306a455252d1e6af43c91c6
-SHA512 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = 29204eb753be90cf24260d9f34b9fcf7640efbb1ba1c264dc9d64e4225da0ca13eca06a3a99319e32d86945fd5be2aa70511c5409eee4d4ac3a68176cdd98505
-Size (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = 444440 bytes
+SHA1 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = c4258aaa8cd00b9d92d3e248acf61602ede8853c
+RMD160 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = 568f02542f9e94724fc1890e19e5d67b03b4ae26
+SHA512 (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = b9403609a2286b58810780ae55fb2d42d725ceccd1d3971f6e04ca79fb7f343aed642688370ca9b54cc73c7bd78d46a185d7f82db65fe8f3e3605dc98a3e97c8
+Size (cyr-rfx/cyr-rfx-winlatin-1-1.1.tgz) = 443934 bytes
