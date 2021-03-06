@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1452 2021/03/06 18:44:20 js Exp $
+$NetBSD: CHANGES-2021,v 1.1453 2021/03/06 19:00:55 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/sile to 0.10.15 [joerg 2021-03-06]
 	Updated sysutils/detox to 1.4.2 [wiz 2021-03-06]
 	Updated chat/element-web to 1.7.22 [js 2021-03-06]
+	Updated chat/matrix-synapse to 1.28.0 [js 2021-03-06]
