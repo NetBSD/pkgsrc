@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/01/10 14:49:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/03/07 08:30:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -528,6 +528,8 @@ ${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/powerpc64le-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/riscv64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390x-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-linux/types.conf
@@ -562,6 +564,7 @@ ${GEM_LIBDIR}/lib/ffi/union.rb
 ${GEM_LIBDIR}/lib/ffi/variadic.rb
 ${GEM_LIBDIR}/lib/ffi/version.rb
 ${GEM_LIBDIR}/lib/ffi_c.${RUBY_DLEXT}
+${GEM_LIBDIR}/rakelib/ffi_gem_helper.rb
 ${GEM_LIBDIR}/samples/getlogin.rb
 ${GEM_LIBDIR}/samples/getpid.rb
 ${GEM_LIBDIR}/samples/gettimeofday.rb
