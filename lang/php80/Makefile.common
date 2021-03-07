@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/03/07 13:41:36 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/03/07 15:08:36 taca Exp $
 # used by lang/php80/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php80-extensions/Makefile
@@ -11,9 +11,6 @@ CATEGORIES+=		www
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 
 USE_TOOLS+=		pkg-config
-
-# needed due to (broken?) configure checks in php-xmlrpc and php5-dom
-CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	ax_cv_have_func_attribute_ifunc=no
