@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1501 2021/03/07 15:15:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1502 2021/03/07 15:18:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-getopt to 1.6.0 [taca 2021-03-07]
 	Removed databases/ruby-postgres-pr [taca 2021-03-07]
 	Removed www/camping [taca 2021-03-07]
+	Removed www/ruby-staticmatic [taca 2021-03-07]
