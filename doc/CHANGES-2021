@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1494 2021/03/07 14:38:04 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1495 2021/03/07 14:40:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-json-pure to 2.5.1 [taca 2021-03-07]
 	Updated devel/ruby-native-package-installer to 1.1.1 [taca 2021-03-07]
 	Updated devel/ruby-simpleidn to 0.2.1 [taca 2021-03-07]
+	Updated misc/ruby-parallel to 1.20.1 [taca 2021-03-07]
