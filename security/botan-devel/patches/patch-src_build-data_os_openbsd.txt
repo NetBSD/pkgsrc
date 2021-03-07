@@ -1,4 +1,6 @@
-$NetBSD: patch-src_build-data_os_openbsd.txt,v 1.3 2019/07/15 18:31:29 bsiegert Exp $
+$NetBSD: patch-src_build-data_os_openbsd.txt,v 1.4 2021/03/07 17:56:25 he Exp $
+
+Simplify library naming for OpenBSD.
 
 --- src/build-data/os/openbsd.txt.orig	2019-07-01 10:23:16.000000000 +0000
 +++ src/build-data/os/openbsd.txt

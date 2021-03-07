@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/07/15 18:31:29 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/03/07 17:56:25 he Exp $
 bin/botan
 include/botan-2/botan/adler32.h
 include/botan-2/botan/aead.h
@@ -18,8 +18,8 @@ include/botan-2/botan/asn1_print.h
 include/botan-2/botan/asn1_str.h
 include/botan-2/botan/asn1_time.h
 include/botan-2/botan/assert.h
-include/botan-2/botan/atomic.h
 include/botan-2/botan/auto_rng.h
+include/botan-2/botan/b64_filt.h
 include/botan-2/botan/base32.h
 include/botan-2/botan/base58.h
 include/botan-2/botan/base64.h
@@ -122,6 +122,7 @@ include/botan-2/botan/gost_3411.h
 include/botan-2/botan/hash.h
 include/botan-2/botan/hash_id.h
 include/botan-2/botan/hex.h
+include/botan-2/botan/hex_filt.h
 include/botan-2/botan/hkdf.h
 include/botan-2/botan/hmac.h
 include/botan-2/botan/hmac_drbg.h
@@ -168,6 +169,7 @@ include/botan-2/botan/ocsp.h
 include/botan-2/botan/ocsp_types.h
 include/botan-2/botan/ofb.h
 include/botan-2/botan/oids.h
+include/botan-2/botan/otp.h
 include/botan-2/botan/p11.h
 include/botan-2/botan/p11_ecc_key.h
 include/botan-2/botan/p11_ecdh.h
@@ -178,6 +180,7 @@ include/botan-2/botan/p11_randomgenerator.h
 include/botan-2/botan/p11_rsa.h
 include/botan-2/botan/p11_session.h
 include/botan-2/botan/p11_slot.h
+include/botan-2/botan/p11_types.h
 include/botan-2/botan/p11_x509.h
 include/botan-2/botan/package.h
 include/botan-2/botan/par_hash.h
@@ -199,12 +202,15 @@ include/botan-2/botan/pkcs11.h
 include/botan-2/botan/pkcs11f.h
 include/botan-2/botan/pkcs11t.h
 include/botan-2/botan/pkcs8.h
+include/botan-2/botan/pkix_enums.h
+include/botan-2/botan/pkix_types.h
 include/botan-2/botan/point_gfp.h
 include/botan-2/botan/poly1305.h
 include/botan-2/botan/polyn_gf2m.h
 include/botan-2/botan/pow_mod.h
 include/botan-2/botan/prf_tls.h
 include/botan-2/botan/prf_x942.h
+include/botan-2/botan/processor_rng.h
 include/botan-2/botan/psk_db.h
 include/botan-2/botan/psk_db_sql.h
 include/botan-2/botan/pssr.h
@@ -218,6 +224,7 @@ include/botan-2/botan/rfc6979.h
 include/botan-2/botan/rmd160.h
 include/botan-2/botan/rng.h
 include/botan-2/botan/rotate.h
+include/botan-2/botan/roughtime.h
 include/botan-2/botan/rsa.h
 include/botan-2/botan/salsa20.h
 include/botan-2/botan/scan_name.h
@@ -294,15 +301,12 @@ include/botan-2/botan/x509path.h
 include/botan-2/botan/x509self.h
 include/botan-2/botan/x919_mac.h
 include/botan-2/botan/xmss.h
-include/botan-2/botan/xmss_address.h
-include/botan-2/botan/xmss_common_ops.h
 include/botan-2/botan/xmss_hash.h
-include/botan-2/botan/xmss_index_registry.h
 include/botan-2/botan/xmss_key_pair.h
 include/botan-2/botan/xmss_parameters.h
 include/botan-2/botan/xmss_privatekey.h
 include/botan-2/botan/xmss_publickey.h
-include/botan-2/botan/xmss_tools.h
+include/botan-2/botan/xmss_wots.h
 include/botan-2/botan/xmss_wots_parameters.h
 include/botan-2/botan/xmss_wots_privatekey.h
 include/botan-2/botan/xmss_wots_publickey.h
@@ -311,8 +315,8 @@ include/botan-2/botan/xts.h
 include/botan-2/botan/zlib.h
 lib/libbotan-2.a
 lib/libbotan-2.so
-lib/libbotan-2.so.11
-lib/libbotan-2.so.11.11.0
+lib/libbotan-2.so.17
+lib/libbotan-2.so.17.17.3
 lib/pkgconfig/botan-2.pc
 ${PYSITELIB}/botan2.py
 share/doc/${PKGNAME}/authors.txt
@@ -325,6 +329,7 @@ share/doc/${PKGNAME}/handbook/api_ref/contents.rst
 share/doc/${PKGNAME}/handbook/api_ref/credentials_manager.rst
 share/doc/${PKGNAME}/handbook/api_ref/cryptobox.rst
 share/doc/${PKGNAME}/handbook/api_ref/ecc.rst
+share/doc/${PKGNAME}/handbook/api_ref/env_vars.rst
 share/doc/${PKGNAME}/handbook/api_ref/ffi.rst
 share/doc/${PKGNAME}/handbook/api_ref/filters.rst
 share/doc/${PKGNAME}/handbook/api_ref/fpe.rst
@@ -340,6 +345,7 @@ share/doc/${PKGNAME}/handbook/api_ref/psk_db.rst
 share/doc/${PKGNAME}/handbook/api_ref/pubkey.rst
 share/doc/${PKGNAME}/handbook/api_ref/python.rst
 share/doc/${PKGNAME}/handbook/api_ref/rng.rst
+share/doc/${PKGNAME}/handbook/api_ref/roughtime.rst
 share/doc/${PKGNAME}/handbook/api_ref/secmem.rst
 share/doc/${PKGNAME}/handbook/api_ref/srp.rst
 share/doc/${PKGNAME}/handbook/api_ref/stream_ciphers.rst
@@ -368,6 +374,7 @@ share/doc/${PKGNAME}/handbook/dev_ref/test_framework.rst
 share/doc/${PKGNAME}/handbook/dev_ref/todo.rst
 share/doc/${PKGNAME}/handbook/goals.rst
 share/doc/${PKGNAME}/handbook/index.rst
+share/doc/${PKGNAME}/handbook/old_news.rst
 share/doc/${PKGNAME}/handbook/packaging.rst
 share/doc/${PKGNAME}/handbook/pgpkey.txt
 share/doc/${PKGNAME}/handbook/roadmap.rst
