@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.6 2019/07/15 18:31:29 bsiegert Exp $
+$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.7 2021/03/07 17:56:25 he Exp $
+
+Add check for ability to do mlock() on SunOS.
 
 --- src/lib/utils/os_utils.cpp.orig	2019-07-15 18:14:39.932394200 +0000
 +++ src/lib/utils/os_utils.cpp
