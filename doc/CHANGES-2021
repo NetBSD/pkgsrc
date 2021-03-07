@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1464 2021/03/07 09:18:42 tron Exp $
+$NetBSD: CHANGES-2021,v 1.1465 2021/03/07 09:45:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ffi to 1.15.0 [taca 2021-03-07]
 	Updated devel/ruby-rspec-rails to 4.1.0 [taca 2021-03-07]
 	Updated mail/mutt to 2.0.6 [tron 2021-03-07]
+	Updated graphics/ruby-RMagick to 4.2.2 [taca 2021-03-07]
