@@ -1,0 +1,28 @@
+$NetBSD: patch-11a50ae5b80b3e03694a19e84513345d0794e563-CMakeLists.txt,v 1.1 2021/03/07 10:51:06 kleink Exp $
+
+commit 11a50ae5b80b3e03694a19e84513345d0794e563
+Author: Thomas Jarosch <thomas.jarosch@intra2net.com>
+Date:   Mon Aug 24 19:27:22 2020 +0200
+
+    Fix building unit tests without FTDIPP
+    
+    Needed to run the baudrate unit tests.
+    
+    Probably another fallout from:
+    
+    ****************************
+    commit 0209a3633dc877a577af07d883eb5059e22f6a91
+    
+    cmake: do not check for g++ when FTDIPP is disabled
+    ****************************
+
+--- CMakeLists.txt.orig	2020-07-07 19:32:55.000000000 +0000
++++ CMakeLists.txt
+@@ -150,6 +150,7 @@ if ( EXAMPLES )
+ endif ()
+ add_subdirectory(packages)
+ if ( BUILD_TESTS )
++  project(libftdi1 C CXX)
+   add_subdirectory(test)
+ endif ()
+ 
