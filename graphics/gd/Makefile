@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.127 2021/02/05 20:17:29 adam Exp $
+# $NetBSD: Makefile,v 1.128 2021/03/07 06:41:42 adam Exp $
 
-DISTNAME=	libgd-2.3.1
+DISTNAME=	libgd-2.3.2
 PKGNAME=	${DISTNAME:S/libgd/gd/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
-CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
 CONFIGURE_ARGS+=	--with-liq=${BUILDLINK_PREFIX.libimagequant}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-webp=${BUILDLINK_PREFIX.libwebp}
