@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1514 2021/03/02 19:47:46 pin Exp $
+# $NetBSD: Makefile,v 1.1515 2021/03/07 15:13:43 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -71,7 +71,6 @@ SUBDIR+=	c-icap-modules
 SUBDIR+=	cadaver
 SUBDIR+=	caddy
 SUBDIR+=	calamaris
-SUBDIR+=	camping
 SUBDIR+=	cgic
 SUBDIR+=	cgicc
 SUBDIR+=	cgilib
