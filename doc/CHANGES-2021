@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1504 2021/03/07 15:27:29 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1505 2021/03/07 15:42:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2336,3 +2336,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/mongrel-cluster [taca 2021-03-07]
 	Removed www/mongrel-config [taca 2021-03-07]
 	Removed www/mongrel [taca 2021-03-07]
+	Added devel/php-memcache2 version 2.2.7 [taca 2021-03-07]
+	Added devel/php-memcache4 version 4.0.5.2 [taca 2021-03-07]
+	Updated devel/php-memcache to 8.0 [taca 2021-03-07]
