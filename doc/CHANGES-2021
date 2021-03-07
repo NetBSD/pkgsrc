@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1456 2021/03/07 03:11:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1457 2021/03/07 06:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2275,3 +2275,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/u-boot-apple-m1 version 2021.01 [jmcneill 2021-03-06]
 	Added security/wfuzz version 3.1.0 [leot 2021-03-06]
 	Updated databases/ruby-sequel to 5.42.0 [taca 2021-03-07]
+	Updated graphics/libimagequant to 2.14.1 [adam 2021-03-07]
+	Updated graphics/gd to 2.3.2 [adam 2021-03-07]
