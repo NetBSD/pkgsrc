@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1509 2021/03/07 17:57:09 he Exp $
+$NetBSD: CHANGES-2021,v 1.1510 2021/03/07 19:49:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-flask-jwt-extended to 4.0.2 [adam 2021-03-07]
 	Updated audio/py-discogs-client to 2.3.0 [adam 2021-03-07]
 	Updated security/botan-devel to 2.17.3 [he 2021-03-07]
+	Updated security/softhsm2 to 2.6.1 [he 2021-03-07]
