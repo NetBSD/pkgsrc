@@ -1,0 +1,74 @@
+# $NetBSD: options.mk,v 1.1 2021/03/07 13:41:36 taca Exp $
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
+PKG_SUPPORTED_OPTIONS+=	disable-filter-url
+PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
+PKG_SUPPORTED_OPTIONS+=	dtrace
+.endif
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
+.  include "../../security/openssl/buildlink3.mk"
+.  if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-openssl=yes
+LIBS.SunOS+=		-lcrypto
+.  else
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+.  endif
+.else
+CONFIGURE_ARGS+=	--without-openssl
+.endif
+
+.if !empty(PKG_OPTIONS:Mmaintainer-zts)
+CONFIGURE_ARGS+=	--enable-maintainer-zts
+.endif
+
+.if !empty(PKG_OPTIONS:Mreadline)
+.include "../../devel/readline/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+.else
+CONFIGURE_ARGS+=	--without-readline
+.endif
+
+.if !empty(PKG_OPTIONS:Mdtrace)
+PLIST.dtrace=		yes
+CONFIGURE_ARGS+=	--enable-dtrace
+
+# See https://bugs.php.net/bug.php?id=61268
+INSTALL_MAKE_FLAGS+=	-r
+.endif
+
+.if !empty(PKG_OPTIONS:Margon2)
+CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
+.include "../../security/argon2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mdisable-filter-url)
+CFLAGS+=		-DDISABLE_FILTER_URL
+.endif
+
+PLIST_VARS+=    embed
+
+.if !empty(PKGNAME:Mphp-[7-9]*)
+.if !empty(PKG_OPTIONS:Mphp-embed)
+CONFIGURE_ARGS+=	--enable-embed
+INSTALLATION_DIRS+=	include/php/sapi/embed
+PLIST.embed=		yes
+
+.PHONY: post-install-embed
+post-install: post-install-embed
+post-install-embed:
+	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/include/php/sapi/embed/
+	${INSTALL_LIB} ${WRKSRC}/libs/libphp7.so ${DESTDIR}${PREFIX}/lib/
+.endif
+.endif
