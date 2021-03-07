@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1459 2021/03/07 07:49:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1460 2021/03/07 08:27:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2281,3 +2281,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/retext to 7.2.1 [adam 2021-03-07]
 	Updated net/py-ncclient to 0.6.10 [adam 2021-03-07]
 	Updated textproc/py-defusedxml to 0.7.0 [adam 2021-03-07]
+	Updated mail/dovecot2 to 2.3.14 [taca 2021-03-07]
+	Updated mail/dovecot2-gssapi to 2.3.14 [taca 2021-03-07]
+	Updated mail/dovecot2-mysql to 2.3.14 [taca 2021-03-07]
+	Updated mail/dovecot2-pgsql to 2.3.14 [taca 2021-03-07]
+	Updated mail/dovecot2-sqlite to 2.3.14 [taca 2021-03-07]
