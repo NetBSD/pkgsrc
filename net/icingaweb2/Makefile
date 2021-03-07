@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/19 08:12:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/07 13:21:57 taca Exp $
 
 DISTNAME=	icingaweb2-2.8.2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-imagick-[0-9]*:../../graphics/php-imagick
 DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 # For php-*sql see options.mk
 
@@ -283,5 +282,5 @@ PLIST_SUBST+=	EGDIR="${EGDIR:S.${PREFIX}/..}"
 
 GENERATE_PLIST+=	printf "${EGDIR:S.${PREFIX}/..}/%s\n" ${CONFS};
 
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../lang/php/phpversion.mk"
