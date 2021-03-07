@@ -35,7 +35,7 @@
  * @author     Tias Guns <tias@ulyssis.org>
  */
 
-/* $NetBSD: go-pear.php,v 1.4 2011/08/20 14:02:29 taca Exp $ */
+/* $NetBSD: go-pear.php,v 1.5 2021/03/07 13:14:08 taca Exp $ */
 
 $sapi_name = php_sapi_name();
 
@@ -822,7 +822,7 @@ function which($program, $dont_search_in = false)
             if (!strlen($dir)) {
                 continue;
             }
-            if ($dir{strlen($dir) - 1} != '\\') {
+            if ($dir[strlen($dir) - 1] != '\\') {
                 $dir .= '\\';
             }
             $tmp = $dir . $program;
