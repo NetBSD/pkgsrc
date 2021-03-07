@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1463 2021/03/07 08:34:04 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1464 2021/03/07 09:18:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2289,3 +2289,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/dovecot2-pigeonhole to 0.5.14 [taca 2021-03-07]
 	Updated devel/ruby-ffi to 1.15.0 [taca 2021-03-07]
 	Updated devel/ruby-rspec-rails to 4.1.0 [taca 2021-03-07]
+	Updated mail/mutt to 2.0.6 [tron 2021-03-07]
