@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1474 2021/03/07 10:51:31 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.1475 2021/03/07 12:59:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/capistrano to 3.16.0 [taca 2021-03-07]
 	Updated www/ruby-puma to 5.2.2 [taca 2021-03-07]
 	Updated devel/libftdi1 to 1.5 [kleink 2021-03-07]
+	Added databases/php-redis4 version 4.3.0 [taca 2021-03-07]
