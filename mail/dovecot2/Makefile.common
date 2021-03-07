@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2021/01/04 14:57:18 taca Exp $
+# $NetBSD: Makefile.common,v 1.43 2021/03/07 08:26:24 taca Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -11,7 +11,7 @@
 # used by mail/dovecot2-pgsql/Makefile
 # used by mail/dovecot2-sqlite/Makefile
 
-DISTNAME=	dovecot-2.3.13
+DISTNAME=	dovecot-2.3.14
 CATEGORIES=	mail
 MASTER_SITES=	https://dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
