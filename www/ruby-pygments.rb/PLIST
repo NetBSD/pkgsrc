@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2021/01/16 13:08:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/07 13:48:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/release.yml
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/CHANGELOG.adoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.adoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bench.rb
-${GEM_LIBDIR}/cache-lexers.rb
+${GEM_LIBDIR}/cache_lexers.rb
 ${GEM_LIBDIR}/lexers
 ${GEM_LIBDIR}/lib/pygments.rb
 ${GEM_LIBDIR}/lib/pygments/lexer.rb
@@ -19,15 +20,15 @@ ${GEM_LIBDIR}/lib/pygments/popen.rb
 ${GEM_LIBDIR}/lib/pygments/version.rb
 ${GEM_LIBDIR}/pygments.rb.gemspec
 ${GEM_LIBDIR}/test/test_pygments.rb
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/AUTHORS
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/INSTALLER
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/LICENSE
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/METADATA
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/RECORD
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/REQUESTED
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/WHEEL
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/entry_points.txt
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.7.3.dist-info/top_level.txt
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/AUTHORS
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/INSTALLER
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/LICENSE
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/METADATA
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/RECORD
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/REQUESTED
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/WHEEL
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/entry_points.txt
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/top_level.txt
 ${GEM_LIBDIR}/vendor/pygments-main/bin/pygmentize
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/__init__.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/__main__.py
@@ -74,6 +75,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/actionscript.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/agile.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/algebra.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/ambient.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/amdgpu.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/ampl.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/apl.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/archetype.py
@@ -88,6 +90,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/business.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/c_cpp.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/c_like.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/capnproto.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/cddl.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/chapel.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/clean.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/compiled.py
@@ -120,11 +123,13 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/fortran.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/foxpro.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/freefem.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/functional.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/futhark.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/gdscript.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/go.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/grammar_notation.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/graph.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/graphics.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/graphviz.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/haskell.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/haxe.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/hdl.py
@@ -244,6 +249,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/igor.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/inkpot.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/lovelace.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/manni.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/material.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/monokai.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/murphy.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/native.py
@@ -262,6 +268,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/trac.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/vim.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/vs.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/xcode.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/zenburn.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/token.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/unistring.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/util.py
