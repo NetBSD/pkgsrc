@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1472 2021/03/07 10:10:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1473 2021/03/07 10:12:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2298,3 +2298,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-sslscan to 0.1.6 [taca 2021-03-07]
 	Updated security/ruby-rex-text to 0.2.33 [taca 2021-03-07]
 	Updated sysutils/capistrano to 3.16.0 [taca 2021-03-07]
+	Updated www/ruby-puma to 5.2.2 [taca 2021-03-07]
