@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/08/04 18:05:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/07 07:46:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/ncclient/devices/csr.pyo
 ${PYSITELIB}/ncclient/devices/default.py
 ${PYSITELIB}/ncclient/devices/default.pyc
 ${PYSITELIB}/ncclient/devices/default.pyo
+${PYSITELIB}/ncclient/devices/ericsson.py
+${PYSITELIB}/ncclient/devices/ericsson.pyc
+${PYSITELIB}/ncclient/devices/ericsson.pyo
 ${PYSITELIB}/ncclient/devices/h3c.py
 ${PYSITELIB}/ncclient/devices/h3c.pyc
 ${PYSITELIB}/ncclient/devices/h3c.pyo
@@ -52,6 +55,9 @@ ${PYSITELIB}/ncclient/devices/junos.pyo
 ${PYSITELIB}/ncclient/devices/nexus.py
 ${PYSITELIB}/ncclient/devices/nexus.pyc
 ${PYSITELIB}/ncclient/devices/nexus.pyo
+${PYSITELIB}/ncclient/devices/sros.py
+${PYSITELIB}/ncclient/devices/sros.pyc
+${PYSITELIB}/ncclient/devices/sros.pyo
 ${PYSITELIB}/ncclient/logging_.py
 ${PYSITELIB}/ncclient/logging_.pyc
 ${PYSITELIB}/ncclient/logging_.pyo
@@ -130,6 +136,12 @@ ${PYSITELIB}/ncclient/operations/third_party/nexus/__init__.pyo
 ${PYSITELIB}/ncclient/operations/third_party/nexus/rpc.py
 ${PYSITELIB}/ncclient/operations/third_party/nexus/rpc.pyc
 ${PYSITELIB}/ncclient/operations/third_party/nexus/rpc.pyo
+${PYSITELIB}/ncclient/operations/third_party/sros/__init__.py
+${PYSITELIB}/ncclient/operations/third_party/sros/__init__.pyc
+${PYSITELIB}/ncclient/operations/third_party/sros/__init__.pyo
+${PYSITELIB}/ncclient/operations/third_party/sros/rpc.py
+${PYSITELIB}/ncclient/operations/third_party/sros/rpc.pyc
+${PYSITELIB}/ncclient/operations/third_party/sros/rpc.pyo
 ${PYSITELIB}/ncclient/operations/util.py
 ${PYSITELIB}/ncclient/operations/util.pyc
 ${PYSITELIB}/ncclient/operations/util.pyo
