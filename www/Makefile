@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1515 2021/03/07 15:13:43 taca Exp $
+# $NetBSD: Makefile,v 1.1516 2021/03/07 15:16:24 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -955,7 +955,6 @@ SUBDIR+=	ruby-sawyer
 SUBDIR+=	ruby-selenium-webdriver
 SUBDIR+=	ruby-sinatra
 SUBDIR+=	ruby-sinatra-contrib
-SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-unicorn
