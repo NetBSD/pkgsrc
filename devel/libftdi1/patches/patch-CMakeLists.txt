@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2021/03/07 10:51:06 kleink Exp $
+
+Don't append libusb to the CMake package: It picks up the one from
+DESTDIR, and the dynamic linker does the right thing already.
+
+--- CMakeLists.txt.orig	2020-07-07 19:32:55.000000000 +0000
++++ CMakeLists.txt
+@@ -185,14 +185,11 @@ set ( LIBFTDI_INCLUDE_DIR ${includedir} 
+ set ( LIBFTDI_INCLUDE_DIRS ${LIBFTDI_INCLUDE_DIR} )
+ set ( LIBFTDI_LIBRARY ftdi1 )
+ set ( LIBFTDI_LIBRARIES ${LIBFTDI_LIBRARY} )
+-list ( APPEND LIBFTDI_LIBRARIES ${LIBUSB_LIBRARIES} )
+ set ( LIBFTDI_STATIC_LIBRARY ftdi1.a )
+ set ( LIBFTDI_STATIC_LIBRARIES ${LIBFTDI_STATIC_LIBRARY} )
+-list ( APPEND LIBFTDI_STATIC_LIBRARIES ${LIBUSB_LIBRARIES} )
+ if ( FTDIPP )
+   set ( LIBFTDIPP_LIBRARY ftdipp1 )
+   set ( LIBFTDIPP_LIBRARIES ${LIBFTDIPP_LIBRARY} )
+-  list ( APPEND LIBFTDIPP_LIBRARIES ${LIBUSB_LIBRARIES} )
+ endif ()
+ set ( LIBFTDI_LIBRARY_DIRS ${libdir} )
+ set ( LIBFTDI_ROOT_DIR ${prefix} )
