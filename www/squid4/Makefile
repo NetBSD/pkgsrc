@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13.4.1 2021/03/07 18:30:13 bsiegert Exp $
 
 DISTNAME=	squid-4.13
 PKGREVISION=	1
@@ -34,6 +34,13 @@ CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
 
 # Let 'purge' find correct config file by default.
 CPPFLAGS+=		-DDEFAULT_SQUID_CONF=\"${PKG_SYSCONFDIR}/squid.conf\"
+
+.if ${MACHINE_ARCH} == "i386"
+.  if empty(CFLAGS:M*march=*)
+CFLAGS+=	-march=i586
+CXXFLAGS+=	-march=i586
+.  endif
+.endif
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
@@ -88,5 +95,8 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/`basename ${f} .default`
 .endfor
 
+.if ${MACHINE_ARCH} == "powerpc"
+.  include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
