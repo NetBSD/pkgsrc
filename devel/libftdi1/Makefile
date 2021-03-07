@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2021/01/01 08:24:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2021/03/07 10:51:06 kleink Exp $
 
-DISTNAME=	libftdi1-1.4
-PKGREVISION=	2
+DISTNAME=	libftdi1-1.5
 CATEGORIES=	devel
 MASTER_SITES=	https://www.intra2net.com/en/developer/libftdi/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +20,8 @@ CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DEXAMPLES=off
 CMAKE_ARGS+=	-DDOCUMENTATION=off
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_ARGS+=	-DFTDIPP=on
+CMAKE_ARGS+=	-DPYTHON_BINDINGS=on
 
 PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
