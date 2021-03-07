@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2021/03/07 13:04:07 taca Exp $
+# $NetBSD: Makefile,v 1.626 2021/03/07 15:11:01 taca Exp $
 
 COMMENT=	Databases
 
@@ -476,7 +476,6 @@ SUBDIR+=	ruby-mysql28
 SUBDIR+=	ruby-odbc
 SUBDIR+=	ruby-pg
 SUBDIR+=	ruby-pg_array_parser
-SUBDIR+=	ruby-postgres-pr
 SUBDIR+=	ruby-qdbm
 SUBDIR+=	ruby-rrdtool
 SUBDIR+=	ruby-sequel
