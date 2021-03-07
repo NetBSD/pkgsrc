@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2019/11/06 10:11:41 he Exp $
+$NetBSD: distinfo,v 1.2 2021/03/07 19:49:12 he Exp $
 
-SHA1 (softhsm-2.5.0.tar.gz) = 9b1072d9e12e1834e4f9518ec60a3e38aa92bc09
-RMD160 (softhsm-2.5.0.tar.gz) = 652beae56eb85bb864df45e89fcb1ddf84276d6d
-SHA512 (softhsm-2.5.0.tar.gz) = a1e686729196dc25591eb3da57c2c8ea8494ed274ba711842b2dcae696f477a202acda13a975b8fb1eb68e8e44a79e839dbbc6ba500cab02ad13072c660752d9
-Size (softhsm-2.5.0.tar.gz) = 1078439 bytes
+SHA1 (softhsm-2.6.1.tar.gz) = c6fd316df6366960b8c8cda92408d7e02c3fb434
+RMD160 (softhsm-2.6.1.tar.gz) = 73b116b9513d1afcd241431e967a582de1cb737f
+SHA512 (softhsm-2.6.1.tar.gz) = e77137096ff2ac2f5396971efbaa2007188855a8f723cb511182c6c5e5a353b3f98297442758e77a18c3a378c0ca3fce8abe090977f0f4f8d526de204fd523fb
+Size (softhsm-2.6.1.tar.gz) = 1066766 bytes
 SHA1 (patch-configure) = 220881a76fa84e8ba6a81c902bdfd07bc6af88bd
 SHA1 (patch-configure.ac) = 5d1d5134e580f1310446da4323c0e1c65b6115de
 SHA1 (patch-src_lib_common_Makefile.in) = ca783cdfdb4d16eece5fd21d02033e71968d00c6
