@@ -1,9 +1,0 @@
-Camping is a web framework which consistently stays at less than 4kb
-of code.  You can probably view the complete source code on a single
-page.  But, you know, it's so small that, if you think about it, what
-can it really do?
-
-The idea here is to store a complete fledgling web application in a
-single file like many small CGIs.  But to organize it as a
-Model-View-Controller application like Rails does.  You can then easily
-move it to Rails once you've got it going.
