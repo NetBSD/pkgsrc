@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1479 2021/03/07 13:42:10 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1480 2021/03/07 13:48:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2305,3 +2305,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed databases/php-redis3 [taca 2021-03-07]
 	Updated textproc/ruby-review to 5.1.1 [taca 2021-03-07]
 	Added lang/php80 version 8.0.3 [taca 2021-03-07]
+	Updated devel/py-sentry-sdk to 1.0.0 [adam 2021-03-07]
+	Updated devel/blosc to 1.21.0 [adam 2021-03-07]
