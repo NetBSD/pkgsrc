@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/04/29 10:37:14 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/03/07 07:48:59 adam Exp $
 
-SHA1 (defusedxml-0.6.0.tar.gz) = 0bba33cc1e6d59f8fc71ceb8d12ad951072ad122
-RMD160 (defusedxml-0.6.0.tar.gz) = f7833b302774bf32c68a4f3376cad9fcaef1a2ff
-SHA512 (defusedxml-0.6.0.tar.gz) = dd1313802cf8565fd319ef10af04075019d00cba557e6414b2a2762bd4302437a32c05cd8c9e4cec5310c68c6a95d2951acf1360244e7974d40bb3fe963b7226
-Size (defusedxml-0.6.0.tar.gz) = 62670 bytes
+SHA1 (defusedxml-0.7.0.tar.gz) = 957d9d7f2476c56b1f3157cecd5b085dd571276b
+RMD160 (defusedxml-0.7.0.tar.gz) = 3a403a7d7d77344adba0197d013a713c3c474962
+SHA512 (defusedxml-0.7.0.tar.gz) = c0cb788b1e3e55ca49c0d0c1fef8ae483d2bcb759d79e4c2db3bed21fedae5ecaaa5783356497687fe2dc8a341e01216712b85b3857f8ffb2cd05867b4a874ea
+Size (defusedxml-0.7.0.tar.gz) = 74865 bytes
