@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/02/24 00:02:59 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2021/03/07 17:20:00 adam Exp $
 
-DISTNAME=	tweepy-3.5.0
+DISTNAME=	tweepy-3.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tweepy/}
 
@@ -11,12 +10,13 @@ HOMEPAGE=	https://github.com/tweepy/tweepy
 COMMENT=	Basic Python API for Twitter
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.3:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.1:../../security/py-requests-oauthlib
-DEPENDS+=	${PYPKGPREFIX}-six>=1.7.3:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.1:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.7.0:../../security/py-requests-oauthlib
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-JWT
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
