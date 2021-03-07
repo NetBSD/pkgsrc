@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/12/15 18:27:24 taca Exp $
+# $NetBSD: Makefile,v 1.41 2021/03/07 15:01:35 taca Exp $
 #
 
 DISTNAME=	fengoffice-${FO_VERSION}
@@ -22,7 +22,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.1.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.1.0:../../mail/php-imap
 
-FO_VERSION=	3.7.2.16
+FO_VERSION=	3.8.5.8
 
 #EXTRACT_USING=	bsd-tar
 USE_TOOLS=	pax
