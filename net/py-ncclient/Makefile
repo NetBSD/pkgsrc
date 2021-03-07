@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 23:07:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/07 07:46:01 adam Exp $
 
-DISTNAME=	ncclient-0.6.8
+DISTNAME=	ncclient-0.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncclient/}
