@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/08/17 20:17:32 leot Exp $
+# $NetBSD: Makefile,v 1.17 2021/03/07 14:47:07 taca Exp $
 
-DISTNAME=		cairo-1.16.6
-PKGREVISION=		1
+DISTNAME=		cairo-1.17.5
 CATEGORIES=		graphics
 
 MAINTAINER=		tsutsui@NetBSD.org
@@ -11,6 +10,7 @@ LICENSE=		ruby-license OR gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-native-package-installer>=1.0.3:../../devel/ruby-native-package-installer
 DEPENDS+=	${RUBY_PKGPREFIX}-pkg-config>=1.2.2:../../devel/ruby-pkg-config
+DEPENDS+=	${RUBY_PKGPREFIX}-red-colors>=0.1:../../devel/ruby-red-colors
 
 #do-test:
 #	${RUN} cd ${WRKSRC}; \
