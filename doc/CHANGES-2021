@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1498 2021/03/07 15:02:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1499 2021/03/07 15:06:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ruby-cairo to 1.17.5 [taca 2021-03-07]
 	Updated www/php-apcu to 5.1.20 [taca 2021-03-07]
 	Updated www/fengoffice to 3.8.5.8 [taca 2021-03-07]
+	Updated devel/ruby-getopt to 1.6.0 [taca 2021-03-07]
