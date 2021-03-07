@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 18:31:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/03/07 10:05:41 taca Exp $
 
-SHA1 (rex-sslscan-0.1.5.gem) = 24832852f13b9df4a2ff0bfd3daaae5cf9cd262f
-RMD160 (rex-sslscan-0.1.5.gem) = b193559cce1548a3a385c52ec0b04badc211c8fe
-SHA512 (rex-sslscan-0.1.5.gem) = 05c7606c722fad7be5f21f28de34de23882a31bf4fde1000f11d556740b14102e495efd0bc3ac478aee64ae417e761ce9b5ae80f1c10f2410828610611fc3dab
-Size (rex-sslscan-0.1.5.gem) = 17920 bytes
+SHA1 (rex-sslscan-0.1.6.gem) = 4309515abb30b9285d9c5ef965c08bdafa99f84b
+RMD160 (rex-sslscan-0.1.6.gem) = be6b651f193b87a6037c97fd2893e064e4731c6a
+SHA512 (rex-sslscan-0.1.6.gem) = 00bec7d63fa3b5d41a230cc9cdc4b6719009b0f19475c77552f23da0e72d379c925dd2361ce9fe9db8c5d9dacb74b2b3b9d5163cf54d055f13e9d1a5f5bd7549
+Size (rex-sslscan-0.1.6.gem) = 18432 bytes
