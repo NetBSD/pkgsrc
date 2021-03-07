@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1503 2021/03/07 15:21:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1504 2021/03/07 15:27:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2331,3 +2331,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/ruby-staticmatic [taca 2021-03-07]
 	Removed www/thoth-delicious [taca 2021-03-07]
 	Removed www/thoth [taca 2021-03-07]
+	Removed www/mongrel-upload-progress [taca 2021-03-07]
+	Removed www/mongrel-console [taca 2021-03-07]
+	Removed www/mongrel-cluster [taca 2021-03-07]
+	Removed www/mongrel-config [taca 2021-03-07]
+	Removed www/mongrel [taca 2021-03-07]
