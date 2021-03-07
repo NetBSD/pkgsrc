@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/05/27 19:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/03/07 13:31:49 taca Exp $
 
 MODNAME=		http
 PECL_VERSION=		2.6.0
@@ -43,5 +43,6 @@ post-extract:
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/php-propro/buildlink3.mk"
+.include "../../converters/php-iconv/buildlink3.mk"
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
