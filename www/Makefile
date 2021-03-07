@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1516 2021/03/07 15:16:24 taca Exp $
+# $NetBSD: Makefile,v 1.1517 2021/03/07 15:19:25 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -997,8 +997,6 @@ SUBDIR+=	swish-e
 SUBDIR+=	tcl-cgi
 SUBDIR+=	termtter
 SUBDIR+=	thin
-SUBDIR+=	thoth
-SUBDIR+=	thoth-delicious
 SUBDIR+=	thttpd
 SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
