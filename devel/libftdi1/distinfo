@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/03/24 16:21:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/03/07 10:51:06 kleink Exp $
 
-SHA1 (libftdi1-1.4.tar.bz2) = 5b14cebab8168e12dd6c2b5325a29ad93ed40f3d
-RMD160 (libftdi1-1.4.tar.bz2) = c7160d343c6098eb1f26f54d37b221113985e4e3
-SHA512 (libftdi1-1.4.tar.bz2) = dbab74f7bc35ca835b9c6dd5b70a64816948d65da1f73a9ece37a0f0f630bd0df1a676543acc517b02a718bc34ba4f7a30cbc48b6eed1c154c917f8ef0a358fc
-Size (libftdi1-1.4.tar.bz2) = 109521 bytes
+SHA1 (libftdi1-1.5.tar.bz2) = 0b4dc9763342d094d2b5e74ced7d10d574b4758d
+RMD160 (libftdi1-1.5.tar.bz2) = 4b763717d47f9ac5891d7a4d762a989349b7af3c
+SHA512 (libftdi1-1.5.tar.bz2) = c525b2ab6aff9ef9254971ae7d57f3549a36a36875765c48f947d52532814a2a004de1232389d4fe824a8c8ab84277b08427308573476e1da9b7db83db802f6f
+Size (libftdi1-1.5.tar.bz2) = 116297 bytes
+SHA1 (patch-11a50ae5b80b3e03694a19e84513345d0794e563-CMakeLists.txt) = 0350988ba545a69191f3daddc92582c87ca5787f
+SHA1 (patch-CMakeLists.txt) = 8fa0ba4d490a9c0b22bef382fc25aeb8ee1911bc
+SHA1 (patch-cdb28383402d248dbc6062f4391b038375c52385-CMakeLists.txt) = 375b9e113d5d86c8a014c2892f9e412a302dd8a4
