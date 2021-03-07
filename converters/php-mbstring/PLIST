@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/07 13:59:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/07 13:42:44 taca Exp $
 include/php/ext/mbstring/libmbfl/filters/cp932_table.h
 include/php/ext/mbstring/libmbfl/filters/emoji2uni.h
 include/php/ext/mbstring/libmbfl/filters/html_entities.h
@@ -102,7 +102,7 @@ include/php/ext/mbstring/libmbfl/mbfl/mbfilter.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfilter_8bit.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfilter_pass.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfilter_wchar.h
-include/php/ext/mbstring/libmbfl/mbfl/mbfl_allocators.h
+${PLIST.php7}include/php/ext/mbstring/libmbfl/mbfl/mbfl_allocators.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_consts.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_convert.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_defs.h
