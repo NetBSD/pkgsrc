@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/14 15:03:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/07 13:35:10 taca Exp $
 bin/review-catalog-converter${RUBY_SUFFIX}
 bin/review-check${RUBY_SUFFIX}
 bin/review-checkdep${RUBY_SUFFIX}
@@ -17,6 +17,7 @@ bin/review-vol${RUBY_SUFFIX}
 bin/review-webmaker${RUBY_SUFFIX}
 bin/review${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ruby-tex.yml
 ${GEM_LIBDIR}/.github/workflows/ruby-win.yml
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
@@ -84,14 +85,6 @@ ${GEM_LIBDIR}/doc/quickstart.md
 ${GEM_LIBDIR}/doc/sample.css
 ${GEM_LIBDIR}/doc/writing_vertical.ja.md
 ${GEM_LIBDIR}/doc/writing_vertical.md
-${GEM_LIBDIR}/lib/epubmaker.rb
-${GEM_LIBDIR}/lib/epubmaker/content.rb
-${GEM_LIBDIR}/lib/epubmaker/epubcommon.rb
-${GEM_LIBDIR}/lib/epubmaker/epubv2.rb
-${GEM_LIBDIR}/lib/epubmaker/epubv3.rb
-${GEM_LIBDIR}/lib/epubmaker/producer.rb
-${GEM_LIBDIR}/lib/epubmaker/zip_exporter.rb
-${GEM_LIBDIR}/lib/lineinput.rb
 ${GEM_LIBDIR}/lib/review.rb
 ${GEM_LIBDIR}/lib/review/book.rb
 ${GEM_LIBDIR}/lib/review/book/base.rb
@@ -105,6 +98,7 @@ ${GEM_LIBDIR}/lib/review/book/page_metric.rb
 ${GEM_LIBDIR}/lib/review/book/part.rb
 ${GEM_LIBDIR}/lib/review/book/volume.rb
 ${GEM_LIBDIR}/lib/review/builder.rb
+${GEM_LIBDIR}/lib/review/call_hook.rb
 ${GEM_LIBDIR}/lib/review/catalog.rb
 ${GEM_LIBDIR}/lib/review/compiler.rb
 ${GEM_LIBDIR}/lib/review/configure.rb
@@ -112,7 +106,13 @@ ${GEM_LIBDIR}/lib/review/converter.rb
 ${GEM_LIBDIR}/lib/review/epub2html.rb
 ${GEM_LIBDIR}/lib/review/epubbuilder.rb
 ${GEM_LIBDIR}/lib/review/epubmaker.rb
+${GEM_LIBDIR}/lib/review/epubmaker/content.rb
+${GEM_LIBDIR}/lib/review/epubmaker/epubcommon.rb
+${GEM_LIBDIR}/lib/review/epubmaker/epubv2.rb
+${GEM_LIBDIR}/lib/review/epubmaker/epubv3.rb
+${GEM_LIBDIR}/lib/review/epubmaker/producer.rb
 ${GEM_LIBDIR}/lib/review/epubmaker/reviewheaderlistener.rb
+${GEM_LIBDIR}/lib/review/epubmaker/zip_exporter.rb
 ${GEM_LIBDIR}/lib/review/exception.rb
 ${GEM_LIBDIR}/lib/review/extentions.rb
 ${GEM_LIBDIR}/lib/review/extentions/hash.rb
@@ -125,11 +125,13 @@ ${GEM_LIBDIR}/lib/review/i18n.rb
 ${GEM_LIBDIR}/lib/review/i18n.yml
 ${GEM_LIBDIR}/lib/review/idgxmlbuilder.rb
 ${GEM_LIBDIR}/lib/review/idgxmlmaker.rb
+${GEM_LIBDIR}/lib/review/img_math.rb
 ${GEM_LIBDIR}/lib/review/index_builder.rb
 ${GEM_LIBDIR}/lib/review/init-web/finish.html
 ${GEM_LIBDIR}/lib/review/init-web/index.html
 ${GEM_LIBDIR}/lib/review/init-web/review-layout-design.js
 ${GEM_LIBDIR}/lib/review/init.rb
+${GEM_LIBDIR}/lib/review/latexbox.rb
 ${GEM_LIBDIR}/lib/review/latexbuilder.rb
 ${GEM_LIBDIR}/lib/review/latexindex.rb
 ${GEM_LIBDIR}/lib/review/latexutils.rb
@@ -198,6 +200,7 @@ ${GEM_LIBDIR}/samples/syntax-book/images/cover-b5.ai
 ${GEM_LIBDIR}/samples/syntax-book/images/cover.jpg
 ${GEM_LIBDIR}/samples/syntax-book/images/fractal.png
 ${GEM_LIBDIR}/samples/syntax-book/images/img3-1.png
+${GEM_LIBDIR}/samples/syntax-book/images/img3-2.png
 ${GEM_LIBDIR}/samples/syntax-book/images/inlineicon.jpg
 ${GEM_LIBDIR}/samples/syntax-book/images/logic.png
 ${GEM_LIBDIR}/samples/syntax-book/images/logic2.png
@@ -213,6 +216,11 @@ ${GEM_LIBDIR}/samples/syntax-book/style.css
 ${GEM_LIBDIR}/samples/syntax-book/syntax.dic
 ${GEM_LIBDIR}/templates/LICENSE
 ${GEM_LIBDIR}/templates/README.md
+${GEM_LIBDIR}/templates/html/_colophon.html.erb
+${GEM_LIBDIR}/templates/html/_colophon_history.html.erb
+${GEM_LIBDIR}/templates/html/_cover.html.erb
+${GEM_LIBDIR}/templates/html/_part_body.html.erb
+${GEM_LIBDIR}/templates/html/_titlepage.html.erb
 ${GEM_LIBDIR}/templates/html/layout-html5.html.erb
 ${GEM_LIBDIR}/templates/html/layout-xhtml1.html.erb
 ${GEM_LIBDIR}/templates/latex-compat2/layout.tex.erb
@@ -223,6 +231,7 @@ ${GEM_LIBDIR}/templates/latex/review-jlreq/review-base.sty
 ${GEM_LIBDIR}/templates/latex/review-jlreq/review-custom.sty
 ${GEM_LIBDIR}/templates/latex/review-jlreq/review-jlreq.cls
 ${GEM_LIBDIR}/templates/latex/review-jlreq/review-style.sty
+${GEM_LIBDIR}/templates/latex/review-jlreq/review-tcbox.sty
 ${GEM_LIBDIR}/templates/latex/review-jlreq/reviewmacro.sty
 ${GEM_LIBDIR}/templates/latex/review-jsbook/README.md
 ${GEM_LIBDIR}/templates/latex/review-jsbook/jumoline.sty
@@ -231,19 +240,31 @@ ${GEM_LIBDIR}/templates/latex/review-jsbook/review-base.sty
 ${GEM_LIBDIR}/templates/latex/review-jsbook/review-custom.sty
 ${GEM_LIBDIR}/templates/latex/review-jsbook/review-jsbook.cls
 ${GEM_LIBDIR}/templates/latex/review-jsbook/review-style.sty
+${GEM_LIBDIR}/templates/latex/review-jsbook/review-tcbox.sty
 ${GEM_LIBDIR}/templates/latex/review-jsbook/reviewmacro.sty
 ${GEM_LIBDIR}/templates/ncx/epubv2.ncx.erb
 ${GEM_LIBDIR}/templates/opf/epubv2.opf.erb
 ${GEM_LIBDIR}/templates/opf/epubv3.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_manifest_epubv2.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_manifest_epubv3.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_metainfo_epubv2.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_metainfo_epubv3.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_tocx_epubv2.opf.erb
+${GEM_LIBDIR}/templates/opf/opf_tocx_epubv3.opf.erb
 ${GEM_LIBDIR}/templates/web/html/layout-html5.html.erb
 ${GEM_LIBDIR}/templates/web/html/layout-xhtml1.html.erb
 ${GEM_LIBDIR}/templates/xml/container.xml.erb
 ${GEM_LIBDIR}/test/assets/black.eps
 ${GEM_LIBDIR}/test/assets/fit.png
+${GEM_LIBDIR}/test/assets/header_listener.html
+${GEM_LIBDIR}/test/assets/img_math/img1.png
+${GEM_LIBDIR}/test/assets/img_math/img2.png
+${GEM_LIBDIR}/test/assets/img_math/img3.png
 ${GEM_LIBDIR}/test/assets/large.gif
 ${GEM_LIBDIR}/test/assets/large.jpg
 ${GEM_LIBDIR}/test/assets/large.png
 ${GEM_LIBDIR}/test/assets/large.svg
+${GEM_LIBDIR}/test/assets/syntax_book_index_detail.txt
 ${GEM_LIBDIR}/test/assets/test.xml.erb
 ${GEM_LIBDIR}/test/assets/test_template.tex
 ${GEM_LIBDIR}/test/assets/test_template_backmatter.tex
@@ -270,6 +291,7 @@ ${GEM_LIBDIR}/test/test_i18n.rb
 ${GEM_LIBDIR}/test/test_idgxmlbuilder.rb
 ${GEM_LIBDIR}/test/test_idgxmlmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_image_finder.rb
+${GEM_LIBDIR}/test/test_img_math.rb
 ${GEM_LIBDIR}/test/test_index.rb
 ${GEM_LIBDIR}/test/test_indexbuilder.rb
 ${GEM_LIBDIR}/test/test_latexbuilder.rb
@@ -285,11 +307,13 @@ ${GEM_LIBDIR}/test/test_pdfmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_plaintextbuilder.rb
 ${GEM_LIBDIR}/test/test_preprocessor.rb
 ${GEM_LIBDIR}/test/test_review_ext.rb
+${GEM_LIBDIR}/test/test_reviewheaderlistener.rb
 ${GEM_LIBDIR}/test/test_rstbuilder.rb
 ${GEM_LIBDIR}/test/test_sec_counter.rb
 ${GEM_LIBDIR}/test/test_template.rb
 ${GEM_LIBDIR}/test/test_textmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_textutils.rb
+${GEM_LIBDIR}/test/test_tocprinter.rb
 ${GEM_LIBDIR}/test/test_topbuilder.rb
 ${GEM_LIBDIR}/test/test_update.rb
 ${GEM_LIBDIR}/test/test_webtocprinter.rb
