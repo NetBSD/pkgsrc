@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/02/26 00:46:27 tpaul Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/07 13:21:57 taca Exp $
 
 VERSION=	2.0.11
 PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
@@ -17,7 +17,6 @@ NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip-[0-9]*:../../archivers/php-zip
 
 do-extract:
@@ -35,5 +34,5 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		composer
 SUBST_VARS.fix-paths=		PREFIX
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

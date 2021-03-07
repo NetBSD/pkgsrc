@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/11/05 09:08:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2021/03/07 13:21:57 taca Exp $
 
 DISTNAME=	cacti-1.2.11
 PKGREVISION=	4
@@ -15,7 +15,6 @@ USE_TOOLS+=		pax
 NO_BUILD=		yes
 
 #DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
@@ -28,7 +27,7 @@ DEPENDS+=		${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/apache.mk"
 
 PKG_USERS=			${CACTI_USER}:${CACTI_GROUP}

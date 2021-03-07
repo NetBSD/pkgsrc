@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/03/07 13:21:58 taca Exp $
 
 TTRVER=		1.12
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
@@ -13,7 +13,6 @@ COMMENT=	Tiny Tiny RSS is an open source web-based RSS feed reader
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 
 .include "options.mk"
@@ -54,5 +53,5 @@ do-install:
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/share/tt-rss
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
