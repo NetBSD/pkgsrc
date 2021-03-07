@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/06/07 22:07:04 taca Exp $
+# $NetBSD: Makefile,v 1.94 2021/03/07 13:21:57 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
@@ -10,7 +10,6 @@ LICENSE=	gnu-gpl-v3 AND mit AND gnu-lgpl-v2.1
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_Sieve>=1.3.2:../../net/pear-Net_Sieve
@@ -113,5 +112,5 @@ do-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/defaults.inc.php
 
 .include "Makefile.common"
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

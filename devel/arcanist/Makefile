@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/01/01 09:05:06 taca Exp $
+# $NetBSD: Makefile,v 1.16 2021/03/07 13:21:57 taca Exp $
 
 DISTNAME=		arcanist-20170609
 PKGREVISION=		3
@@ -17,7 +17,6 @@ EXTRACT_USING=		bsdtar
 USE_TOOLS+=		bsdtar pax
 
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 
 CONFLICTS+=		arc-[0-9]*
@@ -46,6 +45,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/arc
 
 .include "../../lang/python/application.mk"
-.include "../../lang/php/phpversion.mk"
-.include "${PHPPKGSRCDIR}/buildlink3.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
