@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2019/12/15 18:27:24 taca Exp $
+$NetBSD: distinfo,v 1.27 2021/03/07 15:01:35 taca Exp $
 
-SHA1 (fengoffice-3.7.2.16.tar.gz) = 0e7b2ef0f88f1c7f803ae1ee6ee69e371e9e2fa7
-RMD160 (fengoffice-3.7.2.16.tar.gz) = 46f80427923803af47ba1a1b9b45c35dc68fbaef
-SHA512 (fengoffice-3.7.2.16.tar.gz) = 5a610cfc6f507957696e1ef17945ee8f82e5871ae7be838c320d2508715487a4fea76e8d611eaf14e0f06f70d4e3bfb1853273cb7a2b8f5a7fc31c2129f8b497
-Size (fengoffice-3.7.2.16.tar.gz) = 11899877 bytes
+SHA1 (fengoffice-3.8.5.8.tar.gz) = 26e44c4f6818574338141d23f3d16a1552caef93
+RMD160 (fengoffice-3.8.5.8.tar.gz) = 014469a44526548802dcacd8e87cbd582809b41b
+SHA512 (fengoffice-3.8.5.8.tar.gz) = 48de824d838e4f39ee6e69360c8b3099fd2b0405cf58b5619d9565ed7601875fca5f7810ced5026282ffdc5764084b610a596e7abf902732e019b7a9d7e204e7
+Size (fengoffice-3.8.5.8.tar.gz) = 15195299 bytes
 SHA1 (patch-aa) = 0162718439c36bbc4c867c943b78854f863929c5
 SHA1 (patch-ac) = 10cdae0fe56a08d0f04e4071ba2eb82112495fe5
 SHA1 (patch-ag) = 03f09610de1c7fd41641d4f08eb72876d82b2bbf
