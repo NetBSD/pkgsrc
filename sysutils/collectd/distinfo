@@ -1,24 +1,16 @@
-$NetBSD: distinfo,v 1.46 2020/10/24 22:39:45 wiz Exp $
+$NetBSD: distinfo,v 1.47 2021/03/07 14:19:41 wiz Exp $
 
-SHA1 (collectd-5.11.0.tar.bz2) = 18bfb0be0493ed4a1b5d73c8bcc3f28d37652480
-RMD160 (collectd-5.11.0.tar.bz2) = 12ac883a22828d0c181459fe95f4701bf74b4407
-SHA512 (collectd-5.11.0.tar.bz2) = 87671545e3d01770c204ba4439265d1c0add6a105bf04ff02dc04db3731fd933d32ecb9b0dc15f2e504d70c3e421a64cf19728c897aa4fb1fda86e393ffc15bf
-Size (collectd-5.11.0.tar.bz2) = 1851663 bytes
-SHA1 (patch-Makefile.am) = 2762640d219125e0aa85d3c5c5354af5e659b257
-SHA1 (patch-configure.ac) = 77874524ded19078356a303b984c19bc85a86647
+SHA1 (collectd-5.12.0.tar.bz2) = af36fe83e2995270b5632fc21e5a001e6702cdce
+RMD160 (collectd-5.12.0.tar.bz2) = 9f21d334bbf6a791d3553c16cc533532056cd87f
+SHA512 (collectd-5.12.0.tar.bz2) = 7a15e4c0ae587db4987d673a790a4f3bea1cab29ce24a506fb21fa7bd2f60bfec70867eaa1c1395cb5b0e0ae81a024fb6109b064da0ef50e7c146d2198871c70
+Size (collectd-5.12.0.tar.bz2) = 1902756 bytes
+SHA1 (patch-Makefile.am) = 03739025e31bfa862a7194ba0e6c86a5031dbe16
 SHA1 (patch-src_bind.c) = ee9f6c5e7828010b4beecff4b2d3d8ff2aebc7ac
 SHA1 (patch-src_collectd.conf.in) = ee885263d5dca87857c8d56069952db0d4ffef37
-SHA1 (patch-src_cpu.c) = 099f04b0a156ae78f5f5809d6db639534d4556a1
 SHA1 (patch-src_df.c) = de699d221b003b70c22308cf43f4d61daa4071f7
-SHA1 (patch-src_entropy.c) = 77ddaf1df7ab898d3009f94bfcca82d16e22f9fe
-SHA1 (patch-src_irq.c) = 51f0e61a58b439f5e4e8de873e887700fc3dd67e
 SHA1 (patch-src_libcollectdclient_network__buffer.c) = 541332bcffcbcbb2e398275f93e2aa1ae8861598
-SHA1 (patch-src_memory.c) = ddfa79d68ebbaeed3bf1f35acbadda111d0387af
 SHA1 (patch-src_netstat__udp.c) = 4763c9c26a5639a84d1ed306b40c5b761110f632
-SHA1 (patch-src_nfs.c) = a38e2b2096b0b7c1d52bba18dcbb78f3cdc264a9
-SHA1 (patch-src_processes.c) = c1e4a5e45c2f489067b83164381b569f270b1a4e
 SHA1 (patch-src_statsd.c) = 35f4349d2d2c9bddc0f4770344f969157cd012f6
-SHA1 (patch-src_swap.c) = 4ef887e0eddf5c21c121c951f64262781f71e984
 SHA1 (patch-src_tcpconns.c) = dc6c1d361561f16623933b53ec127d88052236b2
 SHA1 (patch-src_utils_dns_dns.c) = aebb564540a51088fbd8ed56c031e7e0acc1b2e3
 SHA1 (patch-src_utils_format__kairosdb_format__kairosdb.c) = 9d6a1567645a5beafb22e3704866b0fcaa6b6c35
