@@ -1,9 +1,11 @@
-$NetBSD: patch-Makefile.am,v 1.4 2020/10/24 22:39:45 wiz Exp $
+$NetBSD: patch-Makefile.am,v 1.5 2021/03/07 14:19:41 wiz Exp $
 
 Use other data directory.
 
---- Makefile.am.orig	2020-03-08 16:57:09.000000000 +0100
-+++ Makefile.am	2020-07-06 19:13:59.289684798 +0200
+Add netstat_udp plugin.
+
+--- Makefile.am.orig	2020-09-03 17:12:19.000000000 +0200
++++ Makefile.am	2021-03-01 15:45:39.679956727 +0100
 @@ -8,7 +8,7 @@
  else
  cpkgdatadir=$(pkgdatadir)
@@ -13,8 +15,8 @@ Use other data directory.
  endif
  
  BUILT_SOURCES = \
-@@ -1478,6 +1478,12 @@
- netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
+@@ -1515,6 +1515,12 @@
+ TESTS += test_plugin_netlink
  endif
  
 +if BUILD_PLUGIN_NETSTAT_UDP
@@ -26,7 +28,7 @@ Use other data directory.
  if BUILD_PLUGIN_NETWORK
  pkglib_LTLIBRARIES += network.la
  network_la_SOURCES = \
-@@ -2352,6 +2358,8 @@
+@@ -2399,6 +2405,8 @@
  if BUILD_PLUGIN_WRITE_PROMETHEUS
  BUILT_SOURCES += prometheus.pb-c.c prometheus.pb-c.h
  
