@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/27 05:22:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/07 15:05:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGES.rdoc
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/MANIFEST.rdoc
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/MANIFEST.md
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/certs/djberg96_pub.pem
 ${GEM_LIBDIR}/examples/example_long.rb
@@ -15,6 +16,6 @@ ${GEM_LIBDIR}/lib/getopt.rb
 ${GEM_LIBDIR}/lib/getopt/long.rb
 ${GEM_LIBDIR}/lib/getopt/std.rb
 ${GEM_LIBDIR}/lib/getopt/version.rb
-${GEM_LIBDIR}/test/test_getopt_long.rb
-${GEM_LIBDIR}/test/test_getopt_std.rb
+${GEM_LIBDIR}/spec/getopt_long_spec.rb
+${GEM_LIBDIR}/spec/getopt_std_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
