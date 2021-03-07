@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1491 2021/03/07 14:30:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1492 2021/03/07 14:32:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2318,3 +2318,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-chef to 16.10.17 [taca 2021-03-07]
 	Updated sysutils/puppet to 7.4.1 [taca 2021-03-07]
 	Updated textproc/ruby-json to 2.5.1 [taca 2021-03-07]
+	Updated textproc/ruby-json-pure to 2.5.1 [taca 2021-03-07]
