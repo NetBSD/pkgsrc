@@ -1,4 +1,5 @@
 bin/doilit @PREFIX@/bin/doilit@RUBY_SUFFIX@
 bin/kdrfc @PREFIX@/bin/kdrfc@RUBY_SUFFIX@
+bin/kramdown-rfc-cache-i-d-bibxml @PREFIX@/bin/kramdown-rfc-cache-i-d-bibxml@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-markdown @PREFIX@/bin/kramdown-rfc-extract-markdown@RUBY_SUFFIX@
 bin/kramdown-rfc2629 @PREFIX@/bin/kramdown-rfc2629@RUBY_SUFFIX@
