@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST.extras,v 1.5 2021/01/03 07:40:24 taca Exp $
+@comment $NetBSD: PLIST.extras,v 1.6 2021/03/07 14:47:58 taca Exp $
 share/doc/${PKGBASE}/INSTALL
 include/php/ext/apcu/apc.h
 include/php/ext/apcu/apc_api.h
 include/php/ext/apcu/apc_arginfo.h
 include/php/ext/apcu/apc_cache.h
-include/php/ext/apcu/apc_cache_api.h
 include/php/ext/apcu/apc_globals.h
 include/php/ext/apcu/apc_iterator.h
 include/php/ext/apcu/apc_lock.h
-include/php/ext/apcu/apc_lock_api.h
 include/php/ext/apcu/apc_mutex.h
 include/php/ext/apcu/apc_serializer.h
 include/php/ext/apcu/apc_sma.h
-include/php/ext/apcu/apc_sma_api.h
 include/php/ext/apcu/apc_stack.h
 include/php/ext/apcu/php_apc.h
 include/php/ext/apcu/php_apc_legacy_arginfo.h
