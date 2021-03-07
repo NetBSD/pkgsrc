@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1505 2021/03/07 15:42:16 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1506 2021/03/07 16:46:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/php-memcache2 version 2.2.7 [taca 2021-03-07]
 	Added devel/php-memcache4 version 4.0.5.2 [taca 2021-03-07]
 	Updated devel/php-memcache to 8.0 [taca 2021-03-07]
+	Updated sysutils/lsd to 0.20.1 [pin 2021-03-07]
