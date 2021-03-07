@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/05 15:39:12 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/03/07 10:08:27 taca Exp $
 
-SHA1 (rex-text-0.2.31.gem) = 45bb33486e4b15a8ad5660198032ba528f001c75
-RMD160 (rex-text-0.2.31.gem) = acce69c18843a55d8d3564fd27069617f2e95aa1
-SHA512 (rex-text-0.2.31.gem) = b720838f2b7ca469aec7dc0be16563a7bad0092332ae798b74d9fbeab442450c333465d361924e89181bbccae9b5c15a2ff2d884fb7b8cb11f68425b78662075
-Size (rex-text-0.2.31.gem) = 47104 bytes
+SHA1 (rex-text-0.2.33.gem) = 8d2df4a5a04132c98ad19bdf4e2b16359618ec0d
+RMD160 (rex-text-0.2.33.gem) = 4177c7b73acf9665fe0db813e1aaebc93698d583
+SHA512 (rex-text-0.2.33.gem) = 4ee20d020da49351d692499b670bc095b1b1a1728188c6df0390e00008a81e9aa80deeeeb7430b48239b9a9c20480c6e7a4bd9af387df91b87a8557b4cc10911
+Size (rex-text-0.2.33.gem) = 47104 bytes
