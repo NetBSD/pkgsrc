@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/19 14:21:13 hauke Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/07 13:37:28 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 GLPI_VERSION=	9.4.6
@@ -34,6 +34,8 @@ USE_TOOLS+=	chmod find pax
 BUILD_DEFS+=	APACHE_USER APACHE_GROUP VARBASE
 
 MESSAGE_SUBST+=	APACHE_USER="${APACHE_USER}"
+
+PHP_VERSIONS_ACCEPTED=	56 73 74
 
 .include "../../mk/bsd.prefs.mk"
 
