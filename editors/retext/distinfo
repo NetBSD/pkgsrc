@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/02/11 03:42:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.4 2021/03/07 07:31:00 adam Exp $
 
-SHA1 (ReText-7.2.0.tar.gz) = f58cdf88c4804de51822f5864830b80652cb4827
-RMD160 (ReText-7.2.0.tar.gz) = e904a6bd2a855cf28eafd068484d18568731777e
-SHA512 (ReText-7.2.0.tar.gz) = ed1cb0088fcd3f1cba96bb07137766c6ae8177e8c9a91f22334ef2f949b58792e03f0b5022d9ef71bfb611b7969c651b4c7920f48ed8e1ad07caff2f69c85a35
-Size (ReText-7.2.0.tar.gz) = 516895 bytes
+SHA1 (ReText-7.2.1.tar.gz) = 8358a6b3178b35e1980e9fad8d924b890c59deed
+RMD160 (ReText-7.2.1.tar.gz) = b3e980d4611347088c228271c5b746920e890aec
+SHA512 (ReText-7.2.1.tar.gz) = 1a375acb40792e3cae9f955a75ebac7c30c9e5cc719477989b28d8d7f06e18ad14d98f1a600a5b6d050b3276ef22bd46b5f1f07af90d561cca500674ff461604
+Size (ReText-7.2.1.tar.gz) = 522364 bytes
