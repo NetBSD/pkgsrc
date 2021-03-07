@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2021/02/27 19:04:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2021/03/07 13:21:58 taca Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -23,7 +23,6 @@ LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
@@ -70,6 +69,6 @@ do-install:
 	cd ${WRKDIR} && ${FIND} nextcloud -type f \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

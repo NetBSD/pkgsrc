@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2020/10/02 01:51:10 wen Exp $
+# $NetBSD: Makefile,v 1.84 2021/03/07 13:21:58 taca Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.5.9:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.5.9:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.5.9:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.5.9:../../converters/php-mbstring
 
 EGDIR=			share/examples/mediawiki
@@ -92,5 +91,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/mediawiki.conf \
 	  ${DESTDIR}${PREFIX}/${EGDIR}/mediawiki.conf
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
