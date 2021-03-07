@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/07/09 08:16:50 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/07 17:31:28 adam Exp $
 
-DISTNAME=	discogs-client-2.2.1
+DISTNAME=	discogs-client-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/discogs-client/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-oauthlib
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
