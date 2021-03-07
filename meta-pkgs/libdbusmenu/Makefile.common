@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/05/20 22:14:25 youri Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/03/07 17:22:41 nia Exp $
 #
 # used by devel/libdbusmenu/Makefile
 # used by devel/libdbusmenu-glib/Makefile
@@ -24,6 +24,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt msgmerge intltool pkg-config xgettext
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 PKGCONFIG_OVERRIDE+=	libdbusmenu-glib/dbusmenu-glib-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
