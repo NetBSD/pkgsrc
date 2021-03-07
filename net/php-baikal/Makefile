@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/11/27 16:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/07 13:21:58 taca Exp $
 
 DISTNAME=	baikal-0.7.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ HOMEPAGE=	https://sabre.io/baikal/
 COMMENT=	Lightweight CalDAV+CardDAV server
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.1:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.3.1:../../databases/php-pdo_sqlite
 
@@ -82,5 +81,5 @@ do-install:
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${BAIKALDIR}
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

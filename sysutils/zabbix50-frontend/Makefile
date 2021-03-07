@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 22:48:55 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/07 13:21:58 taca Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -25,7 +25,6 @@ PKG_USERS_VARS=		${APACHE_USER}
 DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=7.2.0:../../math/php-bcmath
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=7.2.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.2.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=7.2.0:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.2.0:../../converters/php-mbstring
 .if ${ZABBIX_DB_TYPE} == "mysql"
@@ -47,6 +46,6 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/httpd-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/php-fpm-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/configure/replace-interpreter.mk"
 .include "../../mk/bsd.pkg.mk"

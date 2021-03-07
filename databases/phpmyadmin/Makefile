@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2020/11/11 11:56:14 tm Exp $
+# $NetBSD: Makefile,v 1.166 2021/03/07 13:21:57 taca Exp $
 
 DISTNAME=	phpMyAdmin-4.9.7-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -18,7 +18,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.3.0:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 
 .include "../../lang/php/phpversion.mk"
 
@@ -97,5 +96,5 @@ do-install:
 			${DESTDIR}${PREFIX}/share/doc/phpmyadmin
 	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${DESTDIR}${EXDIR}/apache.conf
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

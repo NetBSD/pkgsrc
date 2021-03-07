@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/03/04 16:42:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2021/03/07 13:21:58 taca Exp $
 #
 
 DISTNAME=	owncloud-10.6.0
@@ -15,7 +15,6 @@ LICENSE=	gnu-agpl-v3
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.0:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
@@ -61,7 +60,6 @@ do-install:
 	cd ${WRKDIR} && ${FIND} owncloud -type f \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../lang/python/application.mk"
-
 .include "../../mk/bsd.pkg.mk"
