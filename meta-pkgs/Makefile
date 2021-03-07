@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2021/02/20 21:00:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.111 2021/03/07 14:04:03 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -38,6 +38,7 @@ SUBDIR+=	netbsd-www
 SUBDIR+=	php56-extensions
 SUBDIR+=	php73-extensions
 SUBDIR+=	php74-extensions
+SUBDIR+=	php80-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
