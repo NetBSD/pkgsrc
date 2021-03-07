@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/07/12 10:45:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2021/03/07 13:37:28 taca Exp $
 #
 
 DISTNAME=	tiki-6.8
@@ -25,6 +25,8 @@ NO_BUILD=	yes
 USE_TOOLS+=	pax
 
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
+
+PHP_VERSIONS_ACCEPTED=	56 73 74
 
 TIKIDIR=		share/tiki6
 INSTALLATION_DIRS=	${TIKIDIR}
