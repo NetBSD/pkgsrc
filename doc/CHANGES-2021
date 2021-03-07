@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1480 2021/03/07 13:48:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1481 2021/03/07 13:48:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/php80 version 8.0.3 [taca 2021-03-07]
 	Updated devel/py-sentry-sdk to 1.0.0 [adam 2021-03-07]
 	Updated devel/blosc to 1.21.0 [adam 2021-03-07]
+	Updated www/ruby-pygments.rb to 2.1.0 [taca 2021-03-07]
