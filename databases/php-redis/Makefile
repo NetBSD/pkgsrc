@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/03/12 14:27:40 taca Exp $
+# $NetBSD: Makefile,v 1.13 2021/03/07 13:02:29 taca Exp $
 #
 
 MODNAME=	redis
-PECL_VERSION=	2.2.8
+PECL_VERSION=	5.3.3
 PECL_LEGACY_VERSION_SCHEME=	yes
 PECL_DISTNAME=	${PECL_VERSION}
 CATEGORIES=	databases
@@ -15,7 +15,7 @@ HOMEPAGE=	https://github.com/nicolasff/phpredis
 COMMENT=	PHP extension for Redis
 LICENSE=	php
 
-PHP_VERSIONS_ACCEPTED=	56
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
 
