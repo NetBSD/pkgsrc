@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/25 15:34:38 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/07 13:44:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,14 +48,14 @@ ${PYSITELIB}/sentry_sdk/integrations/_wsgi_common.py
 ${PYSITELIB}/sentry_sdk/integrations/_wsgi_common.pyc
 ${PYSITELIB}/sentry_sdk/integrations/_wsgi_common.pyo
 ${PYSITELIB}/sentry_sdk/integrations/aiohttp.py
-${PYSITELIB}/sentry_sdk/integrations/aiohttp.pyc
-${PYSITELIB}/sentry_sdk/integrations/aiohttp.pyo
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/aiohttp.pyc
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/aiohttp.pyo
 ${PYSITELIB}/sentry_sdk/integrations/argv.py
 ${PYSITELIB}/sentry_sdk/integrations/argv.pyc
 ${PYSITELIB}/sentry_sdk/integrations/argv.pyo
 ${PYSITELIB}/sentry_sdk/integrations/asgi.py
-${PYSITELIB}/sentry_sdk/integrations/asgi.pyc
-${PYSITELIB}/sentry_sdk/integrations/asgi.pyo
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/asgi.pyc
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/asgi.pyo
 ${PYSITELIB}/sentry_sdk/integrations/atexit.py
 ${PYSITELIB}/sentry_sdk/integrations/atexit.pyc
 ${PYSITELIB}/sentry_sdk/integrations/atexit.pyo
@@ -84,8 +84,8 @@ ${PYSITELIB}/sentry_sdk/integrations/django/__init__.py
 ${PYSITELIB}/sentry_sdk/integrations/django/__init__.pyc
 ${PYSITELIB}/sentry_sdk/integrations/django/__init__.pyo
 ${PYSITELIB}/sentry_sdk/integrations/django/asgi.py
-${PYSITELIB}/sentry_sdk/integrations/django/asgi.pyc
-${PYSITELIB}/sentry_sdk/integrations/django/asgi.pyo
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/django/asgi.pyc
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/django/asgi.pyo
 ${PYSITELIB}/sentry_sdk/integrations/django/middleware.py
 ${PYSITELIB}/sentry_sdk/integrations/django/middleware.pyc
 ${PYSITELIB}/sentry_sdk/integrations/django/middleware.pyo
@@ -135,8 +135,8 @@ ${PYSITELIB}/sentry_sdk/integrations/rq.py
 ${PYSITELIB}/sentry_sdk/integrations/rq.pyc
 ${PYSITELIB}/sentry_sdk/integrations/rq.pyo
 ${PYSITELIB}/sentry_sdk/integrations/sanic.py
-${PYSITELIB}/sentry_sdk/integrations/sanic.pyc
-${PYSITELIB}/sentry_sdk/integrations/sanic.pyo
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/sanic.pyc
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/sanic.pyo
 ${PYSITELIB}/sentry_sdk/integrations/serverless.py
 ${PYSITELIB}/sentry_sdk/integrations/serverless.pyc
 ${PYSITELIB}/sentry_sdk/integrations/serverless.pyo
@@ -159,8 +159,8 @@ ${PYSITELIB}/sentry_sdk/integrations/threading.py
 ${PYSITELIB}/sentry_sdk/integrations/threading.pyc
 ${PYSITELIB}/sentry_sdk/integrations/threading.pyo
 ${PYSITELIB}/sentry_sdk/integrations/tornado.py
-${PYSITELIB}/sentry_sdk/integrations/tornado.pyc
-${PYSITELIB}/sentry_sdk/integrations/tornado.pyo
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/tornado.pyc
+${PLIST.py3x}${PYSITELIB}/sentry_sdk/integrations/tornado.pyo
 ${PYSITELIB}/sentry_sdk/integrations/trytond.py
 ${PYSITELIB}/sentry_sdk/integrations/trytond.pyc
 ${PYSITELIB}/sentry_sdk/integrations/trytond.pyo
