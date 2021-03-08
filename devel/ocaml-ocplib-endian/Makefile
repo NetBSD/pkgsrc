@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:24 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/08 08:12:54 jaapb Exp $
 
 GITHUB_PROJECT=	ocplib-endian
 DISTNAME=	${GITHUB_PROJECT}-1.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OCamlPro/}
 
