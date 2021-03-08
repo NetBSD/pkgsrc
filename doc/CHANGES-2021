@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1518 2021/03/08 08:09:15 jaapb Exp $
+$NetBSD: CHANGES-2021,v 1.1519 2021/03/08 08:13:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2357,3 +2357,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-dot to 1.4.2 [adam 2021-03-08]
 	Updated biology/py-cutadapt to 3.3 [adam 2021-03-08]
 	Updated lang/ocaml to 4.11.2 [jaapb 2021-03-08]
+	Updated devel/p5-Test-Inline to 2.214 [wen 2021-03-08]
