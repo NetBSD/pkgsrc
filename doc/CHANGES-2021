@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1524 2021/03/08 11:23:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1525 2021/03/08 11:49:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2363,3 +2363,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/mono-basic to 4.7 [nia 2021-03-08]
 	Removed mail/re-alpine successor mail/alpine [nia 2021-03-08]
 	Updated sysutils/macchina to 0.5.1 [pin 2021-03-08]
+	Removed security/guardtime [nia 2021-03-08]
+	Removed security/libguardtime [nia 2021-03-08]
