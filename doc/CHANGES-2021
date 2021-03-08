@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1536 2021/03/08 21:41:06 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1537 2021/03/08 23:38:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/py-hangups to 0.4.13 [leot 2021-03-08]
 	Updated editors/featherpad to 0.18.0 [pin 2021-03-08]
 	Updated net/rclone to 1.54.1 [leot 2021-03-08]
+	Updated www/p5-HTTP-Message to 6.29 [wen 2021-03-08]
