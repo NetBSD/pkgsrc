@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/11 10:45:13 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/03/08 07:01:25 adam Exp $
 
-SHA1 (GitPython-3.1.13.tar.gz) = 6828d817b1f2e21e19aa29ad68151718c0006881
-RMD160 (GitPython-3.1.13.tar.gz) = 92e75535735b37a628cd12d20a3069e5aac33926
-SHA512 (GitPython-3.1.13.tar.gz) = 9618be674e592e3653eb8f59e5878f72b3583d2052184f6321d24130e4cdd16236c9ee4823ee38036c2361685d78ab7ed79660746506a8f98285ab776e1c98b0
-Size (GitPython-3.1.13.tar.gz) = 171249 bytes
+SHA1 (GitPython-3.1.14.tar.gz) = c1ada3a86243ad5f2871394a0d6d54a7f8f069bc
+RMD160 (GitPython-3.1.14.tar.gz) = 3bee699bdd2a38609c6ee5510dda902988500dd5
+SHA512 (GitPython-3.1.14.tar.gz) = ee9015d82a53aba18dde8cede276d1d4410c7d9791c5b224c772114801c1e6dc4210c02399dc1248593a4e52d5f5e549cdbf927d6a7c7f9a5a9b0801f5d79675
+Size (GitPython-3.1.14.tar.gz) = 171534 bytes
