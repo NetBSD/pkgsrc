@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1534 2021/03/08 21:28:38 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1535 2021/03/08 21:30:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2376,3 +2376,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ocaml-extlib to 1.7.8 [jaapb 2021-03-08]
 	Updated misc/ocaml-topkg to 1.0.3 [jaapb 2021-03-08]
 	Updated chat/py-hangups to 0.4.13 [leot 2021-03-08]
+	Updated editors/featherpad to 0.18.0 [pin 2021-03-08]
