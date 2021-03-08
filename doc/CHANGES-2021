@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1516 2021/03/08 07:01:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1517 2021/03/08 07:11:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2354,3 +2354,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.5.0 [pin 2021-03-08]
 	Updated mail/py-aiosmtpd to 1.4.2 [adam 2021-03-08]
 	Updated devel/py-gitpython to 3.1.14 [adam 2021-03-08]
+	Updated graphics/py-dot to 1.4.2 [adam 2021-03-08]
+	Updated biology/py-cutadapt to 3.3 [adam 2021-03-08]
