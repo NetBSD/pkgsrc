@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2020/12/09 11:35:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/08 08:12:58 jaapb Exp $
 
 VERSION=	6.3
 GITHUB_PROJECT=	ppx_tools
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-ppx/}
 
