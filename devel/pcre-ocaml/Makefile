@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2020/01/17 10:31:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.39 2021/03/08 08:13:02 jaapb Exp $
 
 VERSION=	7.4.3
 DISTNAME=	pcre-${VERSION}
 PKGNAME=	pcre-ocaml-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mmottl/}
 

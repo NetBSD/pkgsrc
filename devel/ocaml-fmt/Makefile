@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:22 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/03/08 08:12:52 jaapb Exp $
 
 DISTNAME=	fmt-0.8.5
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/fmt/releases/
 EXTRACT_SUFX=	.tbz

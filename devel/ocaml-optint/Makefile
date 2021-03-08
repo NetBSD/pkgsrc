@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/02/03 09:35:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/08 08:12:54 jaapb Exp $
 
 GITHUB_PROJECT=	optint
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -7,7 +7,7 @@ DISTNAME=	${GITHUB_PROJECT}-${VER}
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/optint/

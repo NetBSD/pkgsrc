@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/03/19 10:25:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/08 08:12:58 jaapb Exp $
 
 GITHUB_PROJECT=	ppx_pipebang
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-0.12.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 

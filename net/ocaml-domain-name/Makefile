@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/04/08 12:26:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/08 08:13:05 jaapb Exp $
 
 GITHUB_PROJECT=	domain-name
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	ocaml-${GITHUB_PROJECT}-0.3.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hannesm/}
 

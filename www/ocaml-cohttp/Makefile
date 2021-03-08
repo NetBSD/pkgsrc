@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2020/04/21 11:25:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/08 08:13:08 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-cohttp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-2.5.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 

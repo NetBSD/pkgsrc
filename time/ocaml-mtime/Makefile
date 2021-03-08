@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 16:28:39 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/08 08:13:08 jaapb Exp $
 
 DISTNAME=	mtime-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	https://erratique.ch/software/mtime/releases/
 EXTRACT_SUFX=	.tbz
