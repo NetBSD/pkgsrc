@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/29 16:13:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/08 20:09:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,6 +32,12 @@ ${PYSITELIB}/flask_caching/backends/simplecache.pyo
 ${PYSITELIB}/flask_caching/backends/uwsgicache.py
 ${PYSITELIB}/flask_caching/backends/uwsgicache.pyc
 ${PYSITELIB}/flask_caching/backends/uwsgicache.pyo
+${PYSITELIB}/flask_caching/contrib/__init__.py
+${PYSITELIB}/flask_caching/contrib/__init__.pyc
+${PYSITELIB}/flask_caching/contrib/__init__.pyo
+${PYSITELIB}/flask_caching/contrib/uwsgicache.py
+${PYSITELIB}/flask_caching/contrib/uwsgicache.pyc
+${PYSITELIB}/flask_caching/contrib/uwsgicache.pyo
 ${PYSITELIB}/flask_caching/jinja2ext.py
 ${PYSITELIB}/flask_caching/jinja2ext.pyc
 ${PYSITELIB}/flask_caching/jinja2ext.pyo
