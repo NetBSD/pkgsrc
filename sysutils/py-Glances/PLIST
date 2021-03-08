@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/31 05:12:44 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/08 03:53:48 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
