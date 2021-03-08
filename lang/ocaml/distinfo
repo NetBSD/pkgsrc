@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.141 2021/01/08 12:28:16 jperkin Exp $
+$NetBSD: distinfo,v 1.142 2021/03/08 08:08:43 jaapb Exp $
 
-SHA1 (ocaml-4.11.1.tar.gz) = a3f3d74a43a3d0054f0d0162522499f7d8958560
-RMD160 (ocaml-4.11.1.tar.gz) = 6bdd83aeab8a074cfeffa475fe2db72cbca2d6cf
-SHA512 (ocaml-4.11.1.tar.gz) = 7adc40ab1c4086861619ce7280c75d0d200c398f8a7c2c89b0569a34b4deac8c6857b645340a525f656523cb92c4f73c1329e757b6ed41ea080e9cd540e6cb7b
-Size (ocaml-4.11.1.tar.gz) = 5062453 bytes
+SHA1 (ocaml-4.11.2.tar.gz) = 66826c416f49f32374a63633876c29a532a42308
+RMD160 (ocaml-4.11.2.tar.gz) = ea2511f5114d489581378318e93ded251eb3307b
+SHA512 (ocaml-4.11.2.tar.gz) = 5697c8fe6a7d2b1a0199e60e397f766161d31edf146c4d9020dc08592c1ffb0e4cfaccaccfa3feb36bf31dceb10e23c566d6c4d53f0ecfa823abeef81235338e
+Size (ocaml-4.11.2.tar.gz) = 4969981 bytes
 SHA1 (patch-Makefile) = bd0451b5240b087c98747d13f9884d30722a91a8
 SHA1 (patch-Makefile.common.in) = 37d880f7125040fd4a125ff0e24615811ce9c827
-SHA1 (patch-asmcomp_amd64_emit.mlp) = c2b90f50bc3c4bf9817916bdd455a8bfc03cb69b
 SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
 SHA1 (patch-configure) = 5791eba70a6d06fe79f6268a3d4e40a1dc636fd1
 SHA1 (patch-lex_Makefile) = 7f1ad4d5852a9a38b9c33ca33728236cc457fa09
@@ -18,7 +17,6 @@ SHA1 (patch-otherlibs_systhreads_Makefile) = ff2cf90527bda37474097bb576bccbf7329
 SHA1 (patch-otherlibs_systhreads_st__stubs.c) = 3c0aa73f0e128646c01ed3855ee9c5645d5fa3f1
 SHA1 (patch-otherlibs_unix_Makefile) = 84f236dab98d684e70fe92294779e65ce3f11e7f
 SHA1 (patch-runtime_Makefile) = 6c70b68791e4c074179aa27dfafb398646b59dcb
-SHA1 (patch-runtime_amd64.S) = d4c33cb14c107ed03bf6a3704bbfe7c2799a048e
 SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
 SHA1 (patch-tools_Makefile) = 69f92a8615ed6f9b33f27546c6a25a1f24995e55
 SHA1 (patch-tools_ocamlmklib.ml) = 9a9c0e3b473f7ba4127fe120cf6dbbdbb3c957f2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2020/12/09 10:33:04 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.55 2021/03/08 08:08:43 jaapb Exp $
 bin/ocaml
 @comment ${PLIST.instrumented_runtime}bin/ocaml-instr-graph
 @comment ${PLIST.instrumented_runtime}bin/ocaml-instr-report
@@ -73,6 +73,7 @@ lib/ocaml/caml/backtrace.h
 lib/ocaml/caml/backtrace_prim.h
 lib/ocaml/caml/bigarray.h
 lib/ocaml/caml/callback.h
+lib/ocaml/caml/codefrag.h
 lib/ocaml/caml/compact.h
 lib/ocaml/caml/compare.h
 lib/ocaml/caml/compatibility.h
@@ -120,6 +121,7 @@ lib/ocaml/caml/roots.h
 lib/ocaml/caml/s.h
 lib/ocaml/caml/signals.h
 lib/ocaml/caml/signals_machdep.h
+lib/ocaml/caml/skiplist.h
 lib/ocaml/caml/socketaddr.h
 lib/ocaml/caml/spacetime.h
 lib/ocaml/caml/stack.h
