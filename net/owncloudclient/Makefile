@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2020/11/05 09:08:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2021/03/08 13:17:53 nia Exp $
 
-DISTNAME=	owncloudclient-2.2.3
-PKGREVISION=	16
+DISTNAME=	ownCloud-2.7.6.3261
+PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
 CATEGORIES=	net
-MASTER_SITES=	https://download.owncloud.com/desktop/stable/
+MASTER_SITES=	https://download.owncloud.com/desktop/ownCloud/stable/${PKGVERSION_NOREV}/source/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -11,36 +11,26 @@ HOMEPAGE=	https://owncloud.com/
 COMMENT=	Synchronization program for ownCloud
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		"Fails to build with OpenSSL 1.1"
-
-# Do not use libocsync.so from net/ocsync.
-CONFLICTS=	ocsync-[0-9]*
-CONFLICTS=	mirall-[0-9]*
-
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-# I have no idea about CMake...
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/owncloud
+CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR}
+CMAKE_ARGS+=	-DBUILD_SHELL_INTEGRATION=OFF
+CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
-ETCDIR=			etc/ownCloud
-MAKE_DIRS+=		${ETCDIR}
-EGDIR=			${PREFIX}/share/examples/owncloud
-INSTALLATION_DIRS=	${ETCDIR} share/examples/owncloud
-CONF_FILES+=		${EGDIR}/sync-exclude.lst \
-			${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
+EGDIR=		${PREFIX}/share/examples/owncloudclient
+CONF_FILES=	${EGDIR}/sync-exclude.lst \
+		${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
 
-post-install:
-	mv ${DESTDIR}${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst \
-		${DESTDIR}${EGDIR}/sync-exclude.lst
-
-.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.9.0
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/libinotify/buildlink3.mk"
+.if ${OPSYS} != "Linux"
+.  include "../../devel/libinotify/buildlink3.mk"
+.endif
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/qt4-qtkeychain/buildlink3.mk"
+.include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/neon/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
