@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:30 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/03/08 08:13:03 jaapb Exp $
 
 DISTNAME=	pict-4.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/papers/pict/pict-4.1/
 
