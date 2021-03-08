@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20422 2021/03/08 12:40:03 ryoon Exp $
+$NetBSD: TODO,v 1.20423 2021/03/08 14:34:32 nia Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xrmap-flags-2.9
 	o xrmap-hymns-1.4
 	o xsc-1.6
-	o xsd-3.3.0
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xview-3.2.1.4.25.5
