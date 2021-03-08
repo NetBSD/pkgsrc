@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2021/02/14 14:03:34 taca Exp $
+# $NetBSD: Makefile,v 1.567 2021/03/08 11:06:46 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -329,7 +329,6 @@ SUBDIR+=	queue-fix
 SUBDIR+=	queue-repair
 SUBDIR+=	quickml
 SUBDIR+=	rblcheck
-SUBDIR+=	re-alpine
 SUBDIR+=	relay-ctrl
 SUBDIR+=	ripmime
 SUBDIR+=	rmail-mime
