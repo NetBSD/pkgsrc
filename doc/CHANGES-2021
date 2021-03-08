@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1520 2021/03/08 08:47:45 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1521 2021/03/08 10:57:09 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ocaml to 4.11.2 [jaapb 2021-03-08]
 	Updated devel/p5-Test-Inline to 2.214 [wen 2021-03-08]
 	Updated devel/tig to 2.5.3 [fcambus 2021-03-08]
+	Updated games/woof to 4.0.0 [micha 2021-03-08]
