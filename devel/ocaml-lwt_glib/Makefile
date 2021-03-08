@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/07/01 07:55:46 yyamano Exp $
+# $NetBSD: Makefile,v 1.11 2021/03/08 08:12:53 jaapb Exp $
 
 GITHUB_PROJECT=	lwt_glib
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-1.1.1
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
