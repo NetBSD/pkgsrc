@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/03/08 13:17:53 nia Exp $
+
+Install config files to example, per pkgsrc norms.
+
+--- CMakeLists.txt.orig	2021-03-08 13:01:22.353460638 +0000
++++ CMakeLists.txt
+@@ -193,7 +193,7 @@ elseif(BUILD_CLIENT)
+     if(WIN32)
+         install(FILES sync-exclude.lst DESTINATION bin)
+     else()
+-        install(FILES sync-exclude.lst DESTINATION ${SYSCONFDIR}/${APPLICATION_SHORTNAME})
++        install(FILES sync-exclude.lst DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/owncloudclient)
+     endif()
+ endif()
+ 
