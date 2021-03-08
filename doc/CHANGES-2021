@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1532 2021/03/08 20:37:06 jaapb Exp $
+$NetBSD: CHANGES-2021,v 1.1533 2021/03/08 20:41:12 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2374,3 +2374,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-tifffile to 2021.3.5 [adam 2021-03-08]
 	Updated www/py-flask-caching to 1.10.0 [adam 2021-03-08]
 	Updated devel/ocaml-extlib to 1.7.8 [jaapb 2021-03-08]
+	Updated misc/ocaml-topkg to 1.0.3 [jaapb 2021-03-08]
