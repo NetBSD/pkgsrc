@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/09/25 13:19:46 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/03/08 13:17:53 nia Exp $
 
-SHA1 (owncloudclient-2.2.3.tar.xz) = b1434b445dc656ca7b90f6452994efdb59781d01
-RMD160 (owncloudclient-2.2.3.tar.xz) = ac18451135f15e5747f0308c733a07a48f2f6777
-SHA512 (owncloudclient-2.2.3.tar.xz) = 71be325e5d6177a767dc61b043bd6126b5b7a492a2a777c0179c2dbb77bf6104e26fce92734a6d4bfcc7b9c451026e86a2f44d39869e9451f21b0e534c26e189
-Size (owncloudclient-2.2.3.tar.xz) = 12215320 bytes
+SHA1 (ownCloud-2.7.6.3261.tar.xz) = 4fe5ea364f43a09d0b491a3028779cd70813a39d
+RMD160 (ownCloud-2.7.6.3261.tar.xz) = 93db5c13f49f1b53ff198779ab6cf3fb7bc89f22
+SHA512 (ownCloud-2.7.6.3261.tar.xz) = 1f647dd0b33472e31719651fa22b5864867d98fa1e2f11f9eadb6ce15382f5f97ac49d726af079716b6fac573367485a6f11a5b2e5e5c95d4d063f6caab51dcd
+Size (ownCloud-2.7.6.3261.tar.xz) = 14237692 bytes
+SHA1 (patch-CMakeLists.txt) = 771e7f10d8841a5700ded762ff17cfd75d72120f
