@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/08/31 18:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2021/03/08 08:12:06 wen Exp $
 
-DISTNAME=		Test-Inline-2.213
+DISTNAME=		Test-Inline-2.214
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		7
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -20,10 +19,9 @@ DEPENDS+=		p5-Config-Tiny>=2.00:../../devel/p5-Config-Tiny
 DEPENDS+=		p5-File-Find-Rule>=0.26:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-File-Flat>=1.00:../../devel/p5-File-Flat
 DEPENDS+=		p5-File-Remove>=0.37:../../sysutils/p5-File-Remove
-DEPENDS+=		p5-File-Slurp>=9999.04:../../devel/p5-File-Slurp
 DEPENDS+=		p5-File-chmod>=0.31:../../sysutils/p5-File-chmod
 DEPENDS+=		p5-Params-Util>=0.21:../../devel/p5-Params-Util
-DEPENDS+=		p5-Pod-Tests>=0.18:../../textproc/p5-Pod-Tests
+DEPENDS+=		p5-Path-Tiny>=0:../../filesystems/p5-Path-Tiny
 
 PERL5_PACKLIST=		auto/Test/Inline/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
