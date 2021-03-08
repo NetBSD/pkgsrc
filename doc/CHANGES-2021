@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1523 2021/03/08 11:08:21 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1524 2021/03/08 11:23:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2362,3 +2362,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/woof to 4.0.0 [micha 2021-03-08]
 	Updated lang/mono-basic to 4.7 [nia 2021-03-08]
 	Removed mail/re-alpine successor mail/alpine [nia 2021-03-08]
+	Updated sysutils/macchina to 0.5.1 [pin 2021-03-08]
