@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1529 2021/03/08 14:34:32 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1530 2021/03/08 15:26:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/bittornado-gui [adam 2021-03-08]
 	Updated net/owncloudclient to 2.7.6.3261 [nia 2021-03-08]
 	Updated devel/xsd to 4.0.0 [nia 2021-03-08]
+	Updated pkgtools/pkg_install to 20210308 [nia 2021-03-08]
