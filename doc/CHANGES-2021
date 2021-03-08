@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1521 2021/03/08 10:57:09 micha Exp $
+$NetBSD: CHANGES-2021,v 1.1522 2021/03/08 11:01:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-Inline to 2.214 [wen 2021-03-08]
 	Updated devel/tig to 2.5.3 [fcambus 2021-03-08]
 	Updated games/woof to 4.0.0 [micha 2021-03-08]
+	Updated lang/mono-basic to 4.7 [nia 2021-03-08]
