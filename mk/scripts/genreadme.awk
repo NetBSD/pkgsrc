@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.47 2021/02/24 08:16:32 nia Exp $
+# $NetBSD: genreadme.awk,v 1.48 2021/03/08 16:37:59 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -724,9 +724,9 @@ function lookup_cache( d, binpkgs) {
   binpkgs_file = TMPDIR "/binpkgs";
   spipe = SORT " > " binpkgs_file;
   for(i=1 ; i<=pkg_count[d]; i=i+1) {
-    printf("<tr><td>%s:<td><a href=\"%s/%s\">%s</a><td>(%s %s)\n",
-      march_list[d, i], PKG_URL, pkgfile_list[d, i], pkgnm_list[d, i],
-      opsys_list[d, i], osver_list[d, i]) | spipe;
+    printf("<tr><td>%s %s</td><td>%s</td><td><a href=\"%s/%s\">%s</a></td></tr>\n",
+      opsys_list[d, i], osver_list[d, i], march_list[d, i],
+      PKG_URL, pkgfile_list[d, i], pkgnm_list[d, i]) | spipe;
   }
   if( pkg_count[d] == 0 ) {
 	printf("<tr><td><em>(none)</em></td></tr>\n") | spipe;
