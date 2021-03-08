@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/03/05 04:21:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/08 20:07:20 adam Exp $
 
-DISTNAME=	tifffile-2021.3.4
+DISTNAME=	tifffile-2021.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tifffile/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
