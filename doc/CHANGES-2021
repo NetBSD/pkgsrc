@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1538 2021/03/08 23:41:57 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1539 2021/03/08 23:45:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2380,3 +2380,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rclone to 1.54.1 [leot 2021-03-08]
 	Updated www/p5-HTTP-Message to 6.29 [wen 2021-03-08]
 	Updated www/p5-HTTP-Cookies to 6.10 [wen 2021-03-08]
+	Updated meta-pkgs/bulk-medium to 20210309 [wiz 2021-03-08]
