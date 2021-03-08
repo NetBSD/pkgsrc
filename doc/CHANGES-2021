@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1530 2021/03/08 15:26:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1531 2021/03/08 20:09:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2371,3 +2371,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/owncloudclient to 2.7.6.3261 [nia 2021-03-08]
 	Updated devel/xsd to 4.0.0 [nia 2021-03-08]
 	Updated pkgtools/pkg_install to 20210308 [nia 2021-03-08]
+	Updated graphics/py-tifffile to 2021.3.5 [adam 2021-03-08]
+	Updated www/py-flask-caching to 1.10.0 [adam 2021-03-08]
