@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/02/11 22:02:19 leot Exp $
+$NetBSD: distinfo,v 1.10 2021/03/08 21:40:56 leot Exp $
 
 SHA1 (bazil.org_fuse_@v_v0.0.0-20200524192727-fb710f7dfd05.mod) = 77fd74198ef32143d4e68f6529c799bc74374f0f
 RMD160 (bazil.org_fuse_@v_v0.0.0-20200524192727-fb710f7dfd05.mod) = 444068414d61a4a27e147970dd975db32618193f
@@ -4896,10 +4896,10 @@ SHA1 (honnef.co_go_tools_@v_v0.0.1-2020.1.4.zip) = 1de668c13c7be698a61e61db79f50
 RMD160 (honnef.co_go_tools_@v_v0.0.1-2020.1.4.zip) = f5dee4100402c167bf724976a1495be1bad8178e
 SHA512 (honnef.co_go_tools_@v_v0.0.1-2020.1.4.zip) = 9d01facc2b973a45604ac010f0bf0ec6aa3121966eaea6d7e1ac15869a8f5892077c3bbf0cbc21517890e24379848b8def33bf7dee7b1152ce232dd996ad017f
 Size (honnef.co_go_tools_@v_v0.0.1-2020.1.4.zip) = 561290 bytes
-SHA1 (rclone-1.54.0.tar.gz) = 5230e60cfb8625ceeab6294e842dff0f43670326
-RMD160 (rclone-1.54.0.tar.gz) = 1e1e08591e5c54e8ef168978d50b0dde1c5889ac
-SHA512 (rclone-1.54.0.tar.gz) = 292e932ada8dc601a02da4e7daf1434af838d13d8828965cde1395d3616a8014991990ddfdb1aade24fe1f7c54222c4d5226048849673cc062fafc21884e166d
-Size (rclone-1.54.0.tar.gz) = 14940845 bytes
+SHA1 (rclone-1.54.1.tar.gz) = 833a81c1dfc74aa634aaafdfd78cc87bb894705f
+RMD160 (rclone-1.54.1.tar.gz) = 79cc6213b3dfa9fd54a064b50d54c46620a3f757
+SHA512 (rclone-1.54.1.tar.gz) = fd65e202977b989d60660103f15de801ddad57814443aef37846737dd5a0977d56a403b7f26b703452f50bf66170ba904b058d7c2ce6542482bc1d265163ca3b
+Size (rclone-1.54.1.tar.gz) = 14945382 bytes
 SHA1 (rsc.io_binaryregexp_@v_v0.2.0.mod) = 64964a37b0c8daaebce2e56caeb97b8385c476b4
 RMD160 (rsc.io_binaryregexp_@v_v0.2.0.mod) = 1212b4440e355c6dc2cadaa6287c93bb7b1da192
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
