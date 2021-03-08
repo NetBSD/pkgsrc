@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1511 2021/03/08 00:08:16 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1512 2021/03/08 03:47:23 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2348,3 +2348,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/botan-devel to 2.17.3 [he 2021-03-07]
 	Updated security/softhsm2 to 2.6.1 [he 2021-03-07]
 	Added devel/php-ffi version 8.0.3 [taca 2021-03-08]
+	Updated security/wolfssl to 4.7.0 [fox 2021-03-08]
