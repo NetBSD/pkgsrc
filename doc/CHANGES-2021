@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1527 2021/03/08 13:07:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1528 2021/03/08 13:18:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2368,3 +2368,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gnu-pw-mgr to 2.7.4 [ryoon 2021-03-08]
 	Removed net/bittornado [adam 2021-03-08]
 	Removed net/bittornado-gui [adam 2021-03-08]
+	Updated net/owncloudclient to 2.7.6.3261 [nia 2021-03-08]
