@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1515 2021/03/08 06:34:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1516 2021/03/08 07:01:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2352,3 +2352,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-Glances to 3.1.6.2 [fox 2021-03-08]
 	Updated devel/p5-Test-File to 1.448 [wen 2021-03-08]
 	Updated sysutils/macchina to 0.5.0 [pin 2021-03-08]
+	Updated mail/py-aiosmtpd to 1.4.2 [adam 2021-03-08]
+	Updated devel/py-gitpython to 3.1.14 [adam 2021-03-08]
