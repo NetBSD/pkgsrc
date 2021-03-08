@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1526 2021/03/08 12:40:03 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1527 2021/03/08 13:07:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2366,3 +2366,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed security/guardtime [nia 2021-03-08]
 	Removed security/libguardtime [nia 2021-03-08]
 	Updated security/gnu-pw-mgr to 2.7.4 [ryoon 2021-03-08]
+	Removed net/bittornado [adam 2021-03-08]
+	Removed net/bittornado-gui [adam 2021-03-08]
