@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2020/12/09 11:07:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/08 08:12:59 jaapb Exp $
 
 GITHUB_PROJECT=	result
 DISTNAME=	${GITHUB_PROJECT}-1.5
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 

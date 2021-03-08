@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2019/11/04 21:43:39 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2021/03/08 08:13:07 jaapb Exp $
 #
 
 VERSION=	1.0.0
 GITHUB_PROJECT=	ocaml-expat
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=whitequark/}
 

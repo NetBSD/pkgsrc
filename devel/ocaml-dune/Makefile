@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/09 10:48:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/08 08:12:51 jaapb Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}

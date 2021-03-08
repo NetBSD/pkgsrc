@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/11/29 10:45:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/08 08:13:08 jaapb Exp $
 
 GITHUB_PROJECT=	xml-light
 DISTNAME=	${GITHUB_PROJECT}-2.4
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ncannasse/}
 DIST_SUBDIR=	ocaml-${GITHUB_PROJECT}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/01/14 22:04:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.30 2021/03/08 08:12:47 jaapb Exp $
 #
 
 DISTNAME=	menhir-20190924
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.inria.fr/fpottier/${PKGBASE}/-/archive/${PKGVERSION_NOREV}/
 

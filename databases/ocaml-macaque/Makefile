@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2019/11/02 15:38:03 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/08 08:12:46 jaapb Exp $
 
 GITHUB_PROJECT=	macaque
 DISTNAME=	${GITHUB_PROJECT}-0.7.4
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 

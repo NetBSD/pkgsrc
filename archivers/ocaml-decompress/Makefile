@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/03/12 18:00:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/08 08:12:46 jaapb Exp $
 
 GITHUB_PROJECT=	decompress
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-0.8.1
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 

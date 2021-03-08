@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:23 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/08 08:12:52 jaapb Exp $
 
 DISTNAME=	fpath-0.7.2
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/fpath/releases/
 EXTRACT_SUFX=	.tbz
