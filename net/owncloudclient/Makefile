@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/03/08 13:17:53 nia Exp $
+# $NetBSD: Makefile,v 1.31 2021/03/08 13:25:12 nia Exp $
 
 DISTNAME=	ownCloud-2.7.6.3261
 PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
@@ -21,6 +21,8 @@ CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 EGDIR=		${PREFIX}/share/examples/owncloudclient
 CONF_FILES=	${EGDIR}/sync-exclude.lst \
 		${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
+
+OWN_DIRS+=	${PKG_SYSCONFDIR}/ownCloud
 
 .include "../../mk/bsd.prefs.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.9.0
