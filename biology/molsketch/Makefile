@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/12/18 22:29:11 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/09 13:54:28 pin Exp $
 
-DISTNAME=	Molsketch-0.7.0-src
+DISTNAME=	Molsketch-0.7.1-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=molsketch/}
@@ -27,6 +27,8 @@ CMAKE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/molsketch_LIB_autogen
 	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/CMakeFiles
+
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../biology/openbabel/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
