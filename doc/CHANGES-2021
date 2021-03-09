@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1541 2021/03/09 01:51:43 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1542 2021/03/09 01:57:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2383,3 +2383,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/bulk-medium to 20210309 [wiz 2021-03-08]
 	Updated www/p5-HTML-Parser to 3.76 [wen 2021-03-09]
 	Updated x11/lxsession to 0.5.5 [gutteridge 2021-03-09]
+	Updated sysutils/lxpanel to 0.10.1 [gutteridge 2021-03-09]
