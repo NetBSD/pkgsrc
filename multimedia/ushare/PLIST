@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:06 jperkin Exp $
-bin/ushare
-man/man1/ushare.1
-share/examples/ushare/init.d/ushare
-share/examples/ushare/ushare.conf
-share/locale/de/LC_MESSAGES/ushare.mo
-share/locale/fr/LC_MESSAGES/ushare.mo
