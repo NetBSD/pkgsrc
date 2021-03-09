@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2019/05/05 22:47:27 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2021/03/09 21:59:41 ryoon Exp $
 
 BUILDLINK_TREE+=	nss
 
@@ -11,8 +11,6 @@ BUILDLINK_PKGSRCDIR.nss?=	../../devel/nss
 
 BUILDLINK_LIBDIRS.nss+=		lib/nss
 BUILDLINK_RPATHDIRS.nss+=	lib/nss
-
-BUILDLINK_INCDIRS.nss+=		include/nss/nss
 
 .include "../../devel/nspr/buildlink3.mk"
 .endif # NSS_BUILDLINK3_MK
