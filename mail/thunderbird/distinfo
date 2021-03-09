@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.242 2021/02/26 15:35:12 ryoon Exp $
+$NetBSD: distinfo,v 1.243 2021/03/09 13:31:48 wiz Exp $
 
 SHA1 (thunderbird-78.8.0.source.tar.xz) = f3bf2544c0a39f8ec493c3b07b6323dc9ec6ae1a
 RMD160 (thunderbird-78.8.0.source.tar.xz) = 76da2ab44e71fa3250fafe8fb4b604cbc7368b7e
@@ -31,7 +31,7 @@ SHA1 (patch-media_libtheora_lib_info.c) = 96f3d3824459186476102a4598d07cf6f6a704
 SHA1 (patch-media_libvorbis_lib_vorbis__info.c) = 64c4e763835d1ab81e8854cae8a293e630e83250
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 2c07cd2361752c307b2a50599a000e41d054aff6
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 20b208c5ab4bfea5d49d79c19fc610867da0c4c7
-SHA1 (patch-old-configure.in) = b3f79e87a6a9733528294418fc43ca266c2f32c2
+SHA1 (patch-old-configure.in) = 27d42da882af2325dd3a8d8f6c062e59ffdb4d78
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 0cbf185955c77c9438ced0c294fbc8e4824797bf
 SHA1 (patch-third__party_rust_authenticator_.cargo-checksum.json) = 4a181138f3080b0e2203be1f8277f4ab2a584250
 SHA1 (patch-third__party_rust_authenticator_src_lib.rs) = 7ae115c6fa9617d3c211207739e74d2eaee194e4
