@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1562 2021/03/09 13:54:51 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1563 2021/03/09 13:59:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2408,3 +2408,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-Calendar-Julian to 0.103 [wen 2021-03-09]
 	Updated time/p5-DateTime-Format-ISO8601 to 0.16 [wen 2021-03-09]
 	Updated biology/molsketch to 0.7.1 [pin 2021-03-09]
+	Updated devel/ruby-rspec-rails to 5.0.0 [taca 2021-03-09]
