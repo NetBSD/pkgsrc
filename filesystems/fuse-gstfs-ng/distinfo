@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/01/07 16:15:25 nia Exp $
-
-SHA1 (gstfs-ng-1.1.tar.gz) = 4f3c853ccd74f19bc736c31969fe8db4425a1d41
-RMD160 (gstfs-ng-1.1.tar.gz) = 74cc0956fe769f18c7351aa7934489889c1bed4c
-SHA512 (gstfs-ng-1.1.tar.gz) = 96011f120ae3a516c6c0b47b3c42bbd708599a449b921ee48130f44f9c546767b94fb3096fe56e7a511a3125e8f02820ad6c1705eb54e9c498e883ccaae6c8b4
-Size (gstfs-ng-1.1.tar.gz) = 34885 bytes
