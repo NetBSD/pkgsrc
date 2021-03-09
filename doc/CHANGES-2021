@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1556 2021/03/09 09:55:40 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1557 2021/03/09 11:26:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2400,3 +2400,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/protobuf to 3.15.5 [adam 2021-03-09]
 	Updated devel/py-protobuf to 3.15.5 [adam 2021-03-09]
 	Updated security/libretls to 3.3.1p1 [schmonz 2021-03-09]
+	Updated net/haproxy to 2.3.6 [adam 2021-03-09]
+	Updated lang/py-mypy to 0.812 [adam 2021-03-09]
