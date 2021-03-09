@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2021/03/04 15:47:58 wiz Exp $
+$NetBSD: distinfo,v 1.37 2021/03/09 13:31:47 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-78.8.0esr-10.0-1-build1.tar.xz) = c855eb8ee7cd6f01e56549665b3a862fad386a51
 RMD160 (src-firefox-tor-browser-78.8.0esr-10.0-1-build1.tar.xz) = 9e0a54957c0bd2c853df7605e9a98747790e12b3
@@ -9,7 +9,7 @@ RMD160 (tor-browser-linux64-10.0.12_en-US.tar.xz) = afd7cb24ec80253c1aa7afc37f09
 SHA512 (tor-browser-linux64-10.0.12_en-US.tar.xz) = f629dc5f8e805227e018c085037a9fd75164d26d671b16bc702143bef458c74ec8b1c4b0da96b676a88cb82de53844cc643393ec6525f4fbed7b8750226290a0
 Size (tor-browser-linux64-10.0.12_en-US.tar.xz) = 85400268 bytes
 SHA1 (patch-.mozconfig) = 949472d011d40b02146c06e90ed07673667d192b
-SHA1 (patch-aa) = 11060461fdaca5661e89651b8ded4a59d2abc4d7
+SHA1 (patch-aa) = 458ee59cec3d2d1d52b222ab2031720e7a11fc02
 SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce901a296fc920280
 SHA1 (patch-browser_app_profile_firefox.js) = 89cea0a66457c96ad0b94aaa524aa5942ad781d0
 SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
