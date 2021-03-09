@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1552 2021/03/09 08:43:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1553 2021/03/09 08:56:38 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed multimedia/ushare [nia 2021-03-09]
 	Updated security/stunnel to 5.58 [triaxx 2021-03-09]
 	Removed filesystems/fuse-gstfs-ng [nia 2021-03-09]
+	Updated net/frr to 7.5.1 [kardel 2021-03-09]
