@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1549 2021/03/09 06:50:44 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1550 2021/03/09 08:28:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-defusedxml to 0.7.1 [adam 2021-03-09]
 	Updated devel/py-bintrees to 2.2.0 [adam 2021-03-09]
 	Updates time/p5-Calendar-Simple to 2.0.1 [wen 2021-03-09]
+	Removed multimedia/ushare [nia 2021-03-09]
