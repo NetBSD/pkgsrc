@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/03/07 07:48:59 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/03/09 05:59:33 adam Exp $
 
-DISTNAME=	defusedxml-0.7.0
+DISTNAME=	defusedxml-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/defusedxml/}
