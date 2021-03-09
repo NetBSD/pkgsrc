@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2020/10/08 21:46:26 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/09 06:00:47 adam Exp $
 
-DISTNAME=	bintrees-2.1.0
+DISTNAME=	bintrees-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bintrees/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://pypi.org/project/bintrees/
+HOMEPAGE=	https://github.com/mozman/bintrees
 COMMENT=	Provides Binary-, RedBlack- and AVL-Trees in Python and Cython
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
+DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
