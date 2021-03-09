@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1559 2021/03/09 12:29:35 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1560 2021/03/09 12:33:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2405,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/ansible-base version 2.10.6 [adam 2021-03-09]
 	Updated sysutils/ansible to 3.0.0 [adam 2021-03-09]
 	Updated textproc/p5-XML-Feed to 0.61 [wen 2021-03-09]
+	Updated time/p5-DateTime-Calendar-Julian to 0.103 [wen 2021-03-09]
