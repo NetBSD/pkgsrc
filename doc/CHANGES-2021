@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1554 2021/03/09 09:01:46 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1555 2021/03/09 09:47:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2397,3 +2397,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed filesystems/fuse-gstfs-ng [nia 2021-03-09]
 	Updated net/frr to 7.5.1 [kardel 2021-03-09]
 	Updated textproc/lok to 0.1.4 [pin 2021-03-09]
+	Updated devel/protobuf to 3.15.5 [adam 2021-03-09]
+	Updated devel/py-protobuf to 3.15.5 [adam 2021-03-09]
