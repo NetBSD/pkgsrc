@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/12/18 22:29:11 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/03/09 13:54:28 pin Exp $
 
-SHA1 (Molsketch-0.7.0-src.tar.gz) = ef5ea0baf68537899888df22876cc655252059f7
-RMD160 (Molsketch-0.7.0-src.tar.gz) = b581a650b5fbeb5af76cbcb9131c9d10ae5d15b9
-SHA512 (Molsketch-0.7.0-src.tar.gz) = e05bd946c86fe826e001de6da3b59b2876d7ce666784ce2f825122ebbe71b82264a9ef6eaf43382908f422d158daa549c316c768c17e1ae9a61428b2ef8a9994
-Size (Molsketch-0.7.0-src.tar.gz) = 1874764 bytes
+SHA1 (Molsketch-0.7.1-src.tar.gz) = edca4f896cf6027aa6759facdc72113c1ec3cd60
+RMD160 (Molsketch-0.7.1-src.tar.gz) = 6c6a4162419c9f74b5fd630eaeed7ecee415bb55
+SHA512 (Molsketch-0.7.1-src.tar.gz) = 88db4badab27635bb1006f51a20ffa623864079452bc48c49fea9cebaacfb650982b26f5427dd38fe979e8b59d9c9b8129285316fc5882d3523336712152a9f4
+Size (Molsketch-0.7.1-src.tar.gz) = 1906008 bytes

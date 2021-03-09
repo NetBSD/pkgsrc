@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/18 22:29:11 pin Exp $
-bin/molsketch-qt5
+@comment $NetBSD: PLIST,v 1.2 2021/03/09 13:54:28 pin Exp $
+bin/molsketch
 include/libmolsketch/TextInputItem.h
 include/libmolsketch/abstractxmlobject.h
 include/libmolsketch/actions/abstractitemaction.h
@@ -69,7 +69,7 @@ include/libmolsketch/molview.h
 include/libmolsketch/neighboralignment.h
 include/libmolsketch/propertiesdock.h
 include/libmolsketch/propertieswidget.h
-include/libmolsketch/qtversionmacros.h
+include/libmolsketch/qtdeprecations.h
 include/libmolsketch/radicalelectron.h
 include/libmolsketch/scenepropertieswidget.h
 include/libmolsketch/scenesettings.h
@@ -88,8 +88,8 @@ include/libmolsketch/ui_moleculepopup.h
 include/libmolsketch/ui_scenepropertieswidget.h
 include/libmolsketch/ui_typelistdialog.h
 include/libmolsketch/xmlobjectinterface.h
-lib/libmolsketch-qt5.so
-lib/libobabeliface-qt5.so
+lib/libmolsketch.so
+lib/libobabeliface.so
 share/applications/molsketch.desktop
 share/doc/molsketch/cs/advanced.html
 share/doc/molsketch/cs/basic.html
@@ -130,3 +130,4 @@ share/icons/hicolor/scalable/mimetypes/application-x-molsketch.svg
 share/metainfo/net.sourceforge.molsketch.appdata.xml
 share/mime/packages/molsketch.xml
 share/pixmaps/molsketch.xpm
+@pkgdir include/libmolsketch/.qm
