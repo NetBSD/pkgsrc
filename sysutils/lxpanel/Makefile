@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/03/09 01:57:43 gutteridge Exp $
 
-DISTNAME=	lxpanel-0.10.0
-PKGREVISION=	4
+DISTNAME=	lxpanel-0.10.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz

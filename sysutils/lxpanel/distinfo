@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/12/15 23:46:57 gutteridge Exp $
+$NetBSD: distinfo,v 1.4 2021/03/09 01:57:43 gutteridge Exp $
 
-SHA1 (lxpanel-0.10.0.tar.xz) = 8069e63cd41fe2a7795683c9db8e195bc0077d7a
-RMD160 (lxpanel-0.10.0.tar.xz) = 9d2c036e643daebb115273bd563894ca20ab0068
-SHA512 (lxpanel-0.10.0.tar.xz) = 3e664eef3cf0f37cf4609f53f1f40f5d50e94ae088c497be0439851ea8f1426ef6ec1373d146e2e0ef1b9f51f557ae19eb5fb1059b0e5fcd5b1c49fd76207a59
-Size (lxpanel-0.10.0.tar.xz) = 1544700 bytes
+SHA1 (lxpanel-0.10.1.tar.xz) = 393b78dbbb76518a99549411131c35da5bfed0fa
+RMD160 (lxpanel-0.10.1.tar.xz) = 79d5ddffcdd62a8112f7177765ecf479a4651437
+SHA512 (lxpanel-0.10.1.tar.xz) = 0478ca1322a6645c5120e0fdb2b6d6409799f3296d971456670eb8b23b8457ae93a966ddcb5b5e5bdbcd694442ade2252d6a3931d36296e19e5339b2d689cfef
+Size (lxpanel-0.10.1.tar.xz) = 1548276 bytes
 SHA1 (patch-data_Makefile.in) = 9551cbe8f1f5a71d537bbd7e07dfcc688399a85a
