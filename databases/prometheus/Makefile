@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2021/02/13 19:20:55 adam Exp $
+# $NetBSD: Makefile,v 1.46 2021/03/09 14:59:03 jperkin Exp $
 
 # Important: UI has to be manually built. See instructions below.
 
 DISTNAME=	prometheus-2.24.1
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -27,6 +28,16 @@ DISTFILES=		${DEFAULT_DISTFILES} ${REACT_UI_DIST}
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/prometheus/prometheus
+
+GO_BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d"
+GO_XFLAG_PREFIX=	-X ${GO_SRCPATH}/vendor/${GO_SRCPATH:H}/common/version
+
+GO_LDFLAGS=	-s
+GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Branch=release-${PKGVERSION_NOREV:R}
+GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.BuildDate=${GO_BUILD_DATE_cmd:sh}
+GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.BuildUser=pkgsrc
+GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Revision=${GITHUB_TAG}
+GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Version=${PKGVERSION_NOREV}
 
 PKG_SYSCONFSUBDIR=	prometheus
 
@@ -59,6 +70,10 @@ INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR} ${WEBUI_DIR}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
+do-build:
+	${RUN} ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${GO} install -v -ldflags ${GO_LDFLAGS:Q} ${GO_BUILD_PATTERN}
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
 		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
@@ -70,6 +85,7 @@ do-install:
 .endfor
 .for f in static templates
 	cd ${WRKSRC}/web/ui && ${PAX} -rw ${f} ${DESTDIR}${WEBUI_DIR}
+	${CHMOD} -R g-w ${DESTDIR}${WEBUI_DIR}/${f}
 .endfor
 
 post-install:
