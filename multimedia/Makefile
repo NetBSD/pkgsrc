@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2021/02/19 18:01:39 nros Exp $
+# $NetBSD: Makefile,v 1.310 2021/03/09 08:27:18 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -204,7 +204,6 @@ SUBDIR+=	totem-pl-parser
 SUBDIR+=	transcode
 SUBDIR+=	tstools
 SUBDIR+=	tvtime
-SUBDIR+=	ushare
 SUBDIR+=	vlc
 SUBDIR+=	win32-codecs
 SUBDIR+=	x264-devel
