@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/12/04 04:56:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.28 2021/03/09 01:51:32 gutteridge Exp $
 
-DISTNAME=	lxsession-0.5.4
-PKGREVISION=	4
+DISTNAME=	lxsession-0.5.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,10 +38,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/lxsession/
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
