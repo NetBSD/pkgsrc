@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1565 2021/03/09 15:11:29 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.1566 2021/03/09 16:54:44 martin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2411,3 +2411,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-rspec-rails to 5.0.0 [taca 2021-03-09]
 	Updated misc/ruby-bundler to 2.2.14 [taca 2021-03-09]
 	Updated databases/prometheus to 2.24.1nb1 [jperkin 2021-03-09]
+	Updated sysutils/u-boot-pico-pi-imx7d to 2021.01 [martin 2021-03-09]
