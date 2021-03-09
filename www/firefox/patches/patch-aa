@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.65 2020/01/18 15:32:40 nia Exp $
+$NetBSD: patch-aa,v 1.66 2021/03/09 03:50:25 ryoon Exp $
 
 * Add Sun audio support
-* Include include/nss/nss for workaround for neqo-crypto 0.1.6 of firefox-72.0
 
 --- old-configure.in.orig	Tue Jan  7 17:23:36 2020
 +++ old-configure.in	Fri Jan 17 16:03:40 2020
@@ -25,12 +24,3 @@ $NetBSD: patch-aa,v 1.65 2020/01/18 15:32:40 nia Exp $
  dnl ========================================================
  dnl NegotiateAuth
  dnl ========================================================
-@@ -2744,7 +2757,7 @@
- AC_SUBST_LIST(MOZ_CAIRO_OSLIBS)
- AC_SUBST(MOZ_TREE_PIXMAN)
- 
--BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS"
-+BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS -I${PREFIX}/include/nss/nss"
- AC_SUBST(BINDGEN_SYSTEM_FLAGS)
- BINDGEN_SYSTEM_TOML_FLAGS="$BINDGEN_SYSTEM_FLAGS"
- AC_SUBST_TOML_LIST(BINDGEN_SYSTEM_TOML_FLAGS)
