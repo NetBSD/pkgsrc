@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 02:19:06 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/03/09 06:00:47 adam Exp $
 
-SHA1 (bintrees-2.1.0.zip) = 5eedbe2848114c787daac2647806cffddc54abd5
-RMD160 (bintrees-2.1.0.zip) = 533a75a01a8329949b3b914228379b431ca4e810
-SHA512 (bintrees-2.1.0.zip) = 56d83e826992915c4085d76daa767e033a221ff346cac307c0a820d692d85e503517f1c339deccf315d0985ff6b4a8ebd139c173d054802586a9b68a7783bc01
-Size (bintrees-2.1.0.zip) = 107829 bytes
+SHA1 (bintrees-2.2.0.zip) = 43085fb5f24ec5f61d216a701fcecfe28147181c
+RMD160 (bintrees-2.2.0.zip) = 1522a48cbc2d36238c4355d0abb57d117f39a29d
+SHA512 (bintrees-2.2.0.zip) = 897109b658354c91c0a04cb79d928048c787a4f63b70b557390ea7898fdb63bf6742c52891f1b2c2d6cc170f0e89e0269c8904cc958532e7295aba9d42cbf764
+Size (bintrees-2.2.0.zip) = 108273 bytes
