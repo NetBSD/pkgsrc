@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1557 2021/03/09 11:26:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1558 2021/03/09 12:12:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2402,3 +2402,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libretls to 3.3.1p1 [schmonz 2021-03-09]
 	Updated net/haproxy to 2.3.6 [adam 2021-03-09]
 	Updated lang/py-mypy to 0.812 [adam 2021-03-09]
+	Added sysutils/ansible-base version 2.10.6 [adam 2021-03-09]
+	Updated sysutils/ansible to 3.0.0 [adam 2021-03-09]
