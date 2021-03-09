@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2020/11/24 13:41:57 nia Exp $
+# $NetBSD: Makefile,v 1.122 2021/03/09 08:38:07 triaxx Exp $
 
-DISTNAME=		stunnel-5.57
+DISTNAME=		stunnel-5.58
 CATEGORIES=		security
 MASTER_SITES=		https://www.stunnel.org/downloads/
 
