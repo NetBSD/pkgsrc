@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1544 2021/03/09 03:02:04 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1545 2021/03/09 03:05:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/lxpanel to 0.10.1 [gutteridge 2021-03-09]
 	Updated x11/lxterminal to 0.4.0 [gutteridge 2021-03-09]
 	Updated www/p5-Dancer2 to 0.300005 [wen 2021-03-09]
+	Updated www/moodle to 3.10.2 [wen 2021-03-09]
