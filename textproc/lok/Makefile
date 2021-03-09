@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/03/02 13:45:02 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/09 09:01:24 pin Exp $
 
-DISTNAME=	lok-0.1.3
+DISTNAME=	lok-0.1.4
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wyhaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
