@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1540 2021/03/09 00:53:31 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1541 2021/03/09 01:51:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2382,3 +2382,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTTP-Cookies to 6.10 [wen 2021-03-08]
 	Updated meta-pkgs/bulk-medium to 20210309 [wiz 2021-03-08]
 	Updated www/p5-HTML-Parser to 3.76 [wen 2021-03-09]
+	Updated x11/lxsession to 0.5.5 [gutteridge 2021-03-09]
