@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/07 16:15:25 nia Exp $
-bin/gstfs-ng
-bin/gstfs-ng.monitor
-man/man8/gstfs-ng.8

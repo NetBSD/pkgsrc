@@ -1,7 +1,0 @@
-gstfs-ng is a FUSE-based file system that works as a dynamic
-gstreamer-based transcoder over an existing directory.
-
-For example, this can make your FLAC music archive appear as an
-MP3 or OGG archive.
-
-Transcodings can be cached in memory and persisted to disk.
