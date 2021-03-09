@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1550 2021/03/09 08:28:13 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1551 2021/03/09 08:38:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bintrees to 2.2.0 [adam 2021-03-09]
 	Updates time/p5-Calendar-Simple to 2.0.1 [wen 2021-03-09]
 	Removed multimedia/ushare [nia 2021-03-09]
+	Updated security/stunnel to 5.58 [triaxx 2021-03-09]
