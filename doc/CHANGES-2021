@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1578 2021/03/10 18:11:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1579 2021/03/10 18:43:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2426,3 +2426,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/lilv to 0.24.12nb1 [jperkin 2021-03-10]
 	Updated converters/py-cairosvg to 2.5.2 [adam 2021-03-10]
 	Updated www/py-genshi to 0.7.5 [adam 2021-03-10]
+	Added graphics/py-Pillow6 version 6.2.2 [adam 2021-03-10]
+	Updated graphics/py-Pillow to 8.1.2 [adam 2021-03-10]
