@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.42 2020/01/13 11:01:55 adam Exp $
+$NetBSD: distinfo,v 1.43 2021/03/10 18:43:30 adam Exp $
 
-SHA1 (Pillow-6.2.2.tar.gz) = ed3cbafdb982cd55ca8bb726a3a76e7be89ea61c
-RMD160 (Pillow-6.2.2.tar.gz) = 22b39d6d4dff18415340df080e1b598ee204a97e
-SHA512 (Pillow-6.2.2.tar.gz) = 517c971d4fb23a47466a7e8326c8c29291f7832d4521001c1898d6223ea25d4b0a8b7c8f7e78dd706f421229a8261b558b9fbdc43e47a0a2a7b2b4bbc1a21eff
-Size (Pillow-6.2.2.tar.gz) = 37811273 bytes
-SHA1 (patch-setup.py) = 5a7b2d56532e6688bfe1a0349d4c3136a7c26d2a
+SHA1 (Pillow-8.1.2.tar.gz) = 2c972f30581da0c58edb1e2bed420c2b8f6fd216
+RMD160 (Pillow-8.1.2.tar.gz) = d1c1235ef634c602b03e4905f0f0fff6d5d72daa
+SHA512 (Pillow-8.1.2.tar.gz) = 7e1c14aed7446d53fb67a1f9de283aadc6be3b16e0b56361329af1d0e1b02e4110d1d1a4eb021aada90fbab2ee67d3e582e0c1829d90af39641c5562061c9270
+Size (Pillow-8.1.2.tar.gz) = 45218347 bytes
+SHA1 (patch-setup.py) = 11d48f7a21088eeb304fb88571d6c0f6eccffdb6
