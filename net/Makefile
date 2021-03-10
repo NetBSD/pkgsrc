@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1388 2021/03/08 13:06:36 adam Exp $
+# $NetBSD: Makefile,v 1.1389 2021/03/10 23:14:22 tpaul Exp $
 #
 
 COMMENT=	Networking tools
@@ -908,6 +908,7 @@ SUBDIR+=	tcptraceroute6
 SUBDIR+=	teamspeak-client
 SUBDIR+=	teamspeak-server
 SUBDIR+=	terraform
+SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws
 SUBDIR+=	terraform-provider-kubernetes
 SUBDIR+=	terraform-provider-local
