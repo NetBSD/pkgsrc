@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1583 2021/03/10 23:15:26 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.1584 2021/03/10 23:25:12 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/py-django-south [adam 2021-03-10]
 	Updated lang/go116 to 1.16.1 [bsiegert 2021-03-10]
 	Added net/terraform-provider-archive version 2.1.0 [tpaul 2021-03-10]
+	Added net/terraform-provider-template version 2.2.0 [tpaul 2021-03-10]
