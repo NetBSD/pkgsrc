@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1573 2021/03/10 16:36:05 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.1574 2021/03/10 16:41:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2420,3 +2420,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/star to 1.6.1nb13 [micha 2021-03-10]
 	Updated misc/libreoffice to 7.1.1.2nb1 [ryoon 2021-03-10]
 	Updated shells/bash-completion to 2.11 [jperkin 2021-03-10]
+	Updated net/youtube-dl to 20210303nb1 [jperkin 2021-03-10]
