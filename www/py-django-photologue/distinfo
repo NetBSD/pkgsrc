@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/02/23 23:59:04 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/03/10 19:07:06 adam Exp $
 
-SHA1 (django-photologue-3.8.1.tar.gz) = efa8295d4f5451fcecc9319002ae01d7eda20069
-RMD160 (django-photologue-3.8.1.tar.gz) = 07a8fec5f942724d3ddb9cfc3c724a78ca2c1abd
-SHA512 (django-photologue-3.8.1.tar.gz) = 081e7d7f31eb96f8fa12ecbafa07d63606c2efd950d05fe98fe73ed2daa5084b41daef99e7ee1e263c06b4f4af1fadb9bfb69d5edfaf9bde74c123d5ee4623f9
-Size (django-photologue-3.8.1.tar.gz) = 173045 bytes
-SHA1 (patch-setup.py) = 2f4d8840b911ab8e053e2481c7bbd56226848394
+SHA1 (django-photologue-3.13.tar.gz) = 147e372fe79ce673626bf5632d24590de417edb8
+RMD160 (django-photologue-3.13.tar.gz) = 205622c7fe015adcf0cb332f665c8da31ef6255d
+SHA512 (django-photologue-3.13.tar.gz) = 5c75b6c78fd95ed9787a688a4cd59e0267fb482c8673a056635ded132ad38251a759f318802f18a9c0fdd7cf9beca52b9fb3bda4196b74750543b5702c5b34d4
+Size (django-photologue-3.13.tar.gz) = 187317 bytes
