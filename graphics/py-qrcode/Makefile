@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/01/21 10:03:47 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/10 18:49:06 adam Exp $
 
 DISTNAME=	qrcode-6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://pypi.python.org/pypi/qrcode
 COMMENT=	Python QR Code image generator
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
 USE_LANGUAGES=	# none
 
@@ -32,4 +33,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

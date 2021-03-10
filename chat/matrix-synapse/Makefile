@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/03/06 19:00:43 js Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/10 18:49:06 adam Exp $
 
 DISTNAME=	matrix-synapse-1.28.0
 CATEGORIES=	chat
@@ -29,7 +29,6 @@ DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.3.1:../../devel/py-daemonize
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.3.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
@@ -43,6 +42,8 @@ DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
+
+PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
@@ -71,4 +72,5 @@ MESSAGE_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 MESSAGE_SUBST+=	SYNAPSE_DATA=${SYNAPSE_DATA:Q}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
