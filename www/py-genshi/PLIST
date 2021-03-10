@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/01/18 08:08:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/10 18:11:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,12 +55,6 @@ ${PYSITELIB}/genshi/path.pyo
 ${PYSITELIB}/genshi/template/__init__.py
 ${PYSITELIB}/genshi/template/__init__.pyc
 ${PYSITELIB}/genshi/template/__init__.pyo
-${PYSITELIB}/genshi/template/_ast24.py
-${PYSITELIB}/genshi/template/_ast24.pyc
-${PYSITELIB}/genshi/template/_ast24.pyo
-${PYSITELIB}/genshi/template/ast24.py
-${PYSITELIB}/genshi/template/ast24.pyc
-${PYSITELIB}/genshi/template/ast24.pyo
 ${PYSITELIB}/genshi/template/astutil.py
 ${PYSITELIB}/genshi/template/astutil.pyc
 ${PYSITELIB}/genshi/template/astutil.pyo
@@ -142,6 +136,9 @@ ${PYSITELIB}/genshi/tests/output.pyo
 ${PYSITELIB}/genshi/tests/path.py
 ${PYSITELIB}/genshi/tests/path.pyc
 ${PYSITELIB}/genshi/tests/path.pyo
+${PYSITELIB}/genshi/tests/test_utils.py
+${PYSITELIB}/genshi/tests/test_utils.pyc
+${PYSITELIB}/genshi/tests/test_utils.pyo
 ${PYSITELIB}/genshi/tests/util.py
 ${PYSITELIB}/genshi/tests/util.pyc
 ${PYSITELIB}/genshi/tests/util.pyo
