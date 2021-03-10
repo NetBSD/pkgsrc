@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2020/11/25 15:40:16 micha Exp $
+# $NetBSD: Makefile,v 1.57 2021/03/10 10:31:32 micha Exp $
 
 DISTNAME=	schily-2020-11-25
 PKGNAME=	star-1.6.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -85,5 +85,32 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/star/star
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc			\
 		${DESTDIR}${PREFIX}/share/doc/star/INSTALL.pkgsrc
+
+# Fix for pkg/56049:
+# Do not install the symlink "gnutar". The emulation of GNU tar is
+# incomplete and breaks the build of www/firefox.
+#
+# Do not install the symlink "suntar". The man page documents that the
+# emulation is incomplete (similar problems as with "gnutar" may be the
+# consequence).
+#
+# Do not install the symlink "tar". The man page documents it as an alias
+# for "suntar" (see above). Even if there are no compatibility problems,
+# the pkgsrc user likely expects that "tar" is the implementation of the
+# base system.
+#
+# The name "ustar" is commonly used for the tar format defined by POSIX.
+# "ustar" from this package should be fully POSIX conformant.
+# => No change.
+#
+# All other variants use the prefix "s" (to indicate the schily variant).
+# => No change.
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/gnutar
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gnutar.1
+	${RM} ${DESTDIR}${PREFIX}/bin/suntar
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tar.1
+	${RM} ${DESTDIR}${PREFIX}/bin/tar
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/suntar.1
 
 .include "../../mk/bsd.pkg.mk"
