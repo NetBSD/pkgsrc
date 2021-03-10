@@ -1,1 +1,1 @@
-bin/cairosvg @PREFIX@/bin/cairosvg@PYVERSSUFFIX@
+bin/cairosvg @PREFIX@/bin/cairosvg-@PYVERSSUFFIX@
