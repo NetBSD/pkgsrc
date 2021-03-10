@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/05 13:59:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/10 19:06:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sortedm2m/__init__.py
 ${PYSITELIB}/sortedm2m/__init__.pyc
@@ -19,6 +18,10 @@ ${PYSITELIB}/sortedm2m/forms.pyc
 ${PYSITELIB}/sortedm2m/forms.pyo
 ${PYSITELIB}/sortedm2m/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/sortedm2m/locale/cs/LC_MESSAGES/django.po
+${PYSITELIB}/sortedm2m/locale/de/LC_MESSAGES/django.mo
+${PYSITELIB}/sortedm2m/locale/de/LC_MESSAGES/django.po
+${PYSITELIB}/sortedm2m/locale/es/LC_MESSAGES/django.mo
+${PYSITELIB}/sortedm2m/locale/es/LC_MESSAGES/django.po
 ${PYSITELIB}/sortedm2m/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/sortedm2m/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/sortedm2m/models.py
