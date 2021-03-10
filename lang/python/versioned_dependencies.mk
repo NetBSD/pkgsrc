@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.48 2021/02/17 10:05:36 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.49 2021/03/10 18:44:02 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw X cairo dialog eliot html2text hypothesis ipython jsonlib more-itertools python-digest rsa setuptools sphinx test zipp
+#       Possible values: Pmw Pillow X cairo dialog eliot html2text hypothesis ipython jsonlib more-itertools python-digest rsa setuptools sphinx test zipp
 #       Default: (nothing)
 #
 
@@ -18,6 +18,7 @@
 # format: short name for PYTHON_VERSIONED_DEPENDENCIES<space>Python-2.x path<space>Python-3.x path
 _SUPPORTED_PACKAGES=	# empty
 _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
+_SUPPORTED_PACKAGES+=	Pillow graphics/py-Pillow6 graphics/py-Pillow
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
