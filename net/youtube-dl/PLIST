@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.108 2021/03/04 09:48:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.109 2021/03/10 16:41:22 jperkin Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -2451,6 +2451,6 @@ ${PYSITELIB}/youtube_dl/version.py
 ${PYSITELIB}/youtube_dl/version.pyc
 ${PYSITELIB}/youtube_dl/version.pyo
 man/man1/youtube-dl.1
-share/bash_completion.d/youtube-dl.bash-completion
+share/bash-completion/completions/youtube-dl
 share/doc/youtube_dl/README.txt
 share/fish/completions/youtube-dl.fish
