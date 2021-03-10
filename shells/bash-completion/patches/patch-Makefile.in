@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/03/10 16:35:54 jperkin Exp $
+
+Don't install profile.d bits.
+
+--- Makefile.in.orig	2020-07-25 11:50:01.000000000 +0000
++++ Makefile.in
+@@ -314,7 +314,7 @@ pkgdata_DATA = bash_completion
+ compatdir = $(sysconfdir)/bash_completion.d
+ compat_DATA = 
+ profiledir = $(sysconfdir)/profile.d
+-profile_DATA = bash_completion.sh
++#profile_DATA = bash_completion.sh
+ pkgconfigdir = $(datadir)/pkgconfig
+ pkgconfig_DATA = bash-completion.pc
+ cmakeconfigdir = $(datadir)/cmake/$(PACKAGE)/
