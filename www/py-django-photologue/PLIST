@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/23 23:59:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/10 19:07:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/photologue/__init__.py
 ${PYSITELIB}/photologue/__init__.pyc
@@ -10,21 +11,6 @@ ${PYSITELIB}/photologue/__init__.pyo
 ${PYSITELIB}/photologue/admin.py
 ${PYSITELIB}/photologue/admin.pyc
 ${PYSITELIB}/photologue/admin.pyo
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_archive.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_archive_day.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_archive_month.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_archive_year.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_detail.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/gallery_list.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_archive.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_archive_day.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_archive_month.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_archive_year.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_detail.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/photo_list.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/root.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/tags/next_in_gallery.html
-${PYSITELIB}/photologue/contrib/old_style_templates/templates/photologue/tags/prev_in_gallery.html
 ${PYSITELIB}/photologue/forms.py
 ${PYSITELIB}/photologue/forms.pyc
 ${PYSITELIB}/photologue/forms.pyo
@@ -34,16 +20,12 @@ ${PYSITELIB}/photologue/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/cs/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/da/LC_MESSAGES/django.po
-${PYSITELIB}/photologue/locale/da_DK/LC_MESSAGES/django.mo
-${PYSITELIB}/photologue/locale/da_DK/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/en_US/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/en_US/LC_MESSAGES/django.po
-${PYSITELIB}/photologue/locale/es/LC_MESSAGES/django.mo
-${PYSITELIB}/photologue/locale/es/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/es_ES/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/es_ES/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/eu/LC_MESSAGES/django.mo
@@ -72,6 +54,8 @@ ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.po
+${PYSITELIB}/photologue/locale/zh_Hans/LC_MESSAGES/django.mo
+${PYSITELIB}/photologue/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/management/__init__.py
 ${PYSITELIB}/photologue/management/__init__.pyc
 ${PYSITELIB}/photologue/management/__init__.pyo
@@ -120,6 +104,9 @@ ${PYSITELIB}/photologue/migrations/0009_auto_20160102_0904.pyo
 ${PYSITELIB}/photologue/migrations/0010_auto_20160105_1307.py
 ${PYSITELIB}/photologue/migrations/0010_auto_20160105_1307.pyc
 ${PYSITELIB}/photologue/migrations/0010_auto_20160105_1307.pyo
+${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.py
+${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.pyc
+${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.pyo
 ${PYSITELIB}/photologue/migrations/__init__.py
 ${PYSITELIB}/photologue/migrations/__init__.pyc
 ${PYSITELIB}/photologue/migrations/__init__.pyo
