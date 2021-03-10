@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/03/10 16:35:17 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/03/10 16:40:15 nia Exp $
 
 PKGNAME=	unit-${LANG}${PHP_VERSION:R:S|.||g}-${UNIT_VERSION}
 COMMENT=	PHP module for NGINX Unit
@@ -21,7 +21,7 @@ post-configure:
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 .if empty(PKG_BUILD_OPTIONS.php:Mphp-embed)
-BROKEN=		"Requires the php-embed option enabled in PHP."
+PKG_FAIL_REASON=	"Requires the php-embed option enabled in PHP."
 .endif
 .include "../../www/unit/ext.mk"
 .include "../../www/unit/Makefile.common"
