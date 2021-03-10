@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/05 14:04:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/10 19:03:34 adam Exp $
 bin/exifread-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/exifread/classes.pyo
 ${PYSITELIB}/exifread/exif_log.py
 ${PYSITELIB}/exifread/exif_log.pyc
 ${PYSITELIB}/exifread/exif_log.pyo
+${PYSITELIB}/exifread/heic.py
+${PYSITELIB}/exifread/heic.pyc
+${PYSITELIB}/exifread/heic.pyo
 ${PYSITELIB}/exifread/tags/__init__.py
 ${PYSITELIB}/exifread/tags/__init__.pyc
 ${PYSITELIB}/exifread/tags/__init__.pyo

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/05 14:04:33 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/03/10 19:03:34 adam Exp $
 
-SHA1 (ExifRead-2.1.2.tar.gz) = e3f29364e3ee4b2b547a8c0adbee57e70f13f35d
-RMD160 (ExifRead-2.1.2.tar.gz) = 5036995ea09dcf46dc1922c118ada0ad9195612d
-SHA512 (ExifRead-2.1.2.tar.gz) = 6357a96e6d5aeabe6b8eec519934e5754e09a53e5a3871254ee84f746ff8c2115dd175f1358a9d372ce2e3a062bf6f7be9d297661f5a4cf40b9c117d3f4e69d2
-Size (ExifRead-2.1.2.tar.gz) = 33159 bytes
+SHA1 (ExifRead-2.3.2.tar.gz) = 70a469c24a86230b0076c1bd16f407b1da16735d
+RMD160 (ExifRead-2.3.2.tar.gz) = 877e66257fa89582383439813603382ee34ea415
+SHA512 (ExifRead-2.3.2.tar.gz) = 8d18d6228ff72a44db4c282eb88ef69437e7fb5b36123e9a159c5d25c95b274cd98a4b89872e96763cead6b3e36e5e42ea966e77745690235abc923be4fc6c09
+Size (ExifRead-2.3.2.tar.gz) = 38276 bytes
