@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1570 2021/03/10 10:25:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1571 2021/03/10 10:33:21 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2417,3 +2417,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.5.4 [pin 2021-03-10]
 	Updated www/py-django-admin-rangefilter to 0.7.0 [adam 2021-03-10]
 	Updated www/py-django-filter to 2.4.0 [adam 2021-03-10]
+	Updated archivers/star to 1.6.1nb13 [micha 2021-03-10]
