@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2020/06/12 11:40:19 nia Exp $
+# $NetBSD: options.mk,v 1.32 2021/03/10 11:50:26 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
@@ -30,7 +30,7 @@ PLIST.nss=		yes
 CONFIGURE_ARGS+=	--enable-nss
 CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
 CONFIGURE_ARGS+= --with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
-CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
+CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss
 CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 .  include "../../devel/nss/buildlink3.mk"
 .endif
