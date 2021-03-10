@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/10 23:12:31 tpaul Exp $
+bin/terraform-provider-archive
