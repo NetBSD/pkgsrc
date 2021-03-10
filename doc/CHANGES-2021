@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1568 2021/03/09 21:15:31 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1569 2021/03/10 07:46:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/u-boot-pico-pi-imx7d to 2021.01 [martin 2021-03-09]
 	Updated sysutils/macchina to 0.5.2 [pin 2021-03-09]
 	Updated devel/git to 2.30.2 [leot 2021-03-09]
+	Updated sysutils/macchina to 0.5.4 [pin 2021-03-10]
