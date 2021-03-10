@@ -1,16 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2020/06/05 17:04:31 micha Exp $
-bin/gnutar
+@comment $NetBSD: PLIST,v 1.8 2021/03/10 10:31:32 micha Exp $
 bin/scpio
 bin/spax
 bin/star
-bin/suntar
-bin/tar
 bin/ustar
-man/man1/gnutar.1
 man/man1/scpio.1
 man/man1/spax.1
 man/man1/star.1
-man/man1/suntar.1
 man/man1/ustar.1
 ${PLIST.sysv}man/man4/star.4
 ${PLIST.bsd}man/man5/star.5
