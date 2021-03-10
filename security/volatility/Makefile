@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:13:03 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2021/03/10 18:51:52 adam Exp $
 
-DISTNAME=	volatility-2.4
-PKGREVISION=	1
+DISTNAME=	volatility-2.6.1
 CATEGORIES=	security
-MASTER_SITES=	http://downloads.volatilityfoundation.org/releases/2.4/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=volatilityfoundation/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://volatilityfoundation.org/
+HOMEPAGE=	https://www.volatilityfoundation.org/
 COMMENT=	Advanced memory forensics framework
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+# Recommended packages
+# from https://github.com/volatilityfoundation/volatility/wiki/Installation
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow6
+DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3
+DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
+DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
+DEPENDS+=	${PYPKGPREFIX}-yara-[0-9]*:../../security/py-yara
 
-PYDISTUTILSPKG=	yes
-REPLACE_PYTHON=	tools/vtype_diff.py
+REPLACE_PYTHON= tools/vtype_diff.py
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
