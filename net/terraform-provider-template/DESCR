@@ -1,0 +1,5 @@
+The template provider exposes data sources to use templates to generate strings
+for other Terraform resources or outputs.
+
+Note: This provider is deprecated.
+Please use the `templatefile` function or the `Cloudinit` provider instead.
