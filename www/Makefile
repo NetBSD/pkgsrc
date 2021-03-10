@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1519 2021/03/10 18:50:29 pin Exp $
+# $NetBSD: Makefile,v 1.1520 2021/03/10 19:09:54 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -682,7 +682,6 @@ SUBDIR+=	py-django-rest-framework-proxy
 SUBDIR+=	py-django-reversion
 SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-sortedm2m
-SUBDIR+=	py-django-south
 SUBDIR+=	py-django-sql-explorer
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django-taggit
