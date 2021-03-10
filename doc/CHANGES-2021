@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1576 2021/03/10 16:58:15 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.1577 2021/03/10 17:08:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2423,3 +2423,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/youtube-dl to 20210303nb1 [jperkin 2021-03-10]
 	Updated chat/ejabberd to 21.01nb1 [jperkin 2021-03-10]
 	Updated devel/git-base to 2.30.2nb1 [jperkin 2021-03-10]
+	Updated audio/lilv to 0.24.12nb1 [jperkin 2021-03-10]
