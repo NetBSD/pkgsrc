@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.84 2020/10/31 21:10:01 adam Exp $
+# $NetBSD: Makefile,v 1.85 2021/03/10 16:58:05 jperkin Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=	scmgit-base-[0-9]*
@@ -56,9 +57,9 @@ MAKE_DIRS=		${GIT_CORE_TEMPLATEDIR}
 MAKE_DIRS+=		${GIT_CORE_TEMPLATEDIR}/hooks
 MAKE_DIRS+=		${GIT_CORE_TEMPLATEDIR}/info
 
-REQD_FILES+=		${GIT_TEMPLATES:@.t.@\
-			${EGDIR}/${GIT_TEMPLATEDIR}/${.t.}\
-			${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.}\
+REQD_FILES+=		${GIT_TEMPLATES:@.t.@ \
+			${EGDIR}/${GIT_TEMPLATEDIR}/${.t.} \
+			${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.} \
 			@:M*}
 
 CONFIGURE_ENV+=		HOME=${PREFIX}
@@ -99,10 +100,12 @@ CONFIGURE_ARGS+=	git_cv_ld_dashr=no
 INSTALL_ENV+=		NO_CROSS_DIRECTORY_HARDLINKS=1
 INSTALL_ENV+=		NO_INSTALL_HARDLINKS=1
 
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-completion.bash \
-		${DESTDIR}${EGDIR}
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/git
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-prompt.sh \
 		${DESTDIR}${EGDIR}
 
