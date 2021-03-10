@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/03/20 11:57:52 nia Exp $
+# $NetBSD: Makefile,v 1.21 2021/03/10 18:51:51 adam Exp $
 
 DISTNAME=	mcomix-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	GTK2 comic book viewer
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12.0:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow6
 DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 DEPENDS+=	${PYPKGPREFIX}-czipfile-[0-9]*:../../archivers/py-czipfile
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
