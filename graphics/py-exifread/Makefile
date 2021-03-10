@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/03/05 14:04:33 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/10 19:03:34 adam Exp $
 
-DISTNAME=	ExifRead-2.1.2
+DISTNAME=	ExifRead-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	www python
+CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/ExifRead/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
