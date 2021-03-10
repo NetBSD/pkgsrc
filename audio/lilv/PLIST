@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/14 18:02:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/10 17:08:21 jperkin Exp $
 bin/lilv-bench
 bin/lv2apply
 ${PLIST.lv2bench}bin/lv2bench
@@ -14,6 +14,6 @@ man/man1/lv2apply.1
 man/man1/lv2info.1
 man/man1/lv2ls.1
 ${PLIST.doc}man/man3/lilv.3
-share/bash_completion.d/lilv
+share/bash-completion/completions/lilv
 ${PLIST.doc}share/doc/lilv-0/html/index.html
 ${PLIST.doc}share/doc/lilv-0/html/style.css
