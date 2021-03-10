@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2021/02/08 07:51:42 triaxx Exp $
+# $NetBSD: Makefile,v 1.93 2021/03/10 16:44:21 jperkin Exp $
 
 DISTNAME=	ejabberd-21.01
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -90,7 +91,8 @@ PKG_SHELL.${EJABBERD_USER}=	${SH}
 
 EGDIR=			share/examples/ejabberd
 
-INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR} share/bash-completion.d
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR}
 INSTALLATION_DIRS+=	lib/${DISTNAME}/priv/sql
 
 CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
@@ -115,7 +117,7 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/ejabberdctl.bc			\
-		${DESTDIR}${PREFIX}/share/bash-completion.d/ejabberd
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/ejabberd
 	cd ${WRKSRC}/sql && ${INSTALL_DATA} *.sql			\
 		${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/priv/sql
 
