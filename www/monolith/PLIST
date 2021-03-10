@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/10 18:49:39 pin Exp $
+bin/monolith
