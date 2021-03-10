@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:20 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/10 18:49:06 adam Exp $
 
 DISTNAME=	unknown-horizons-2019.1
 PKGREVISION=	1
@@ -15,9 +15,10 @@ USE_TOOLS+=	intltool msgfmt
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	fifengine-[0-9]*:../../devel/fifengine
+
+PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
 REPLACE_PYTHON+=	run_server.py
 REPLACE_PYTHON+=	run_uh.py
@@ -34,4 +35,5 @@ post-build:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
