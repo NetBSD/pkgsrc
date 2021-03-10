@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/01/07 21:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2021/03/10 18:49:07 adam Exp $
 
 DISTNAME=	PySolFC-2.6.4
 PKGNAME=	${DISTNAME:tl}
@@ -17,8 +17,9 @@ DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	${CARDSETS_NAME}.tar.bz2
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+
+PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
 USE_TOOLS+=	pax
 
@@ -46,4 +47,5 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
