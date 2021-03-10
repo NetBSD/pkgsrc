@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1579 2021/03/10 18:43:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1580 2021/03/10 18:51:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-genshi to 0.7.5 [adam 2021-03-10]
 	Added graphics/py-Pillow6 version 6.2.2 [adam 2021-03-10]
 	Updated graphics/py-Pillow to 8.1.2 [adam 2021-03-10]
+	Added www/monolith version 2.4.1 [pin 2021-03-10]
