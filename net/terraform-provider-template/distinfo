@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/03/10 23:24:00 tpaul Exp $
+
+SHA1 (terraform-provider-template-2.2.0.tar.gz) = fbaa05b80f02795581af4ba86fce01b0e807ef7d
+RMD160 (terraform-provider-template-2.2.0.tar.gz) = 5dd5b3b1460d9fe5e2d1086c4a15a6007d3459da
+SHA512 (terraform-provider-template-2.2.0.tar.gz) = f77459c2fd731fb6d69b2441dba1fe20c8945edec77ab890a1b00f5313d3ff091d9dd1d52c6bf94bc767f40d00238ddca636da9f833b990fa74d5f0c08887e0e
+Size (terraform-provider-template-2.2.0.tar.gz) = 3867150 bytes
+SHA1 (patch-main.go) = 156333e7a1414299e3366792b59bc2f929fe1515
