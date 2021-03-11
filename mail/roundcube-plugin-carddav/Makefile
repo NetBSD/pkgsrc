@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/02/26 13:17:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/11 14:35:52 triaxx Exp $
 
 DISTNAME=	carddav-v4.0.4
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME:S/-v/-/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mstilkerich/}
