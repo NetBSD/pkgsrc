@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1588 2021/03/11 08:11:20 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1589 2021/03/11 08:23:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2441,3 +2441,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pleaser to 0.3.25 [pin 2021-03-11]
 	Updated sysutils/macchina to 0.5.5 [pin 2021-03-11]
 	Updated editors/feathernotes to 0.9.0 [pin 2021-03-11]
+	Updated net/wireshark to 3.4.4 [adam 2021-03-11]
+	Updated archivers/unrar to 6.0.4 [adam 2021-03-11]
