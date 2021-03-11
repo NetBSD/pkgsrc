@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2021/03/10 16:41:22 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.4 2021/03/11 07:39:50 wiz Exp $
 
 Fix paths.
 
@@ -10,7 +10,7 @@ Fix paths.
      files_spec = [
 -        ('etc/bash_completion.d', ['youtube-dl.bash-completion']),
 -        ('etc/fish/completions', ['youtube-dl.fish']),
-+        ('share/bash-completion/completions', ['youtube-dl']),
++        ('share/bash-completion/completions', ['youtube-dl.bash-completion']),
 +        ('share/fish/completions', ['youtube-dl.fish']),
          ('share/doc/youtube_dl', ['README.txt']),
 -        ('share/man/man1', ['youtube-dl.1'])
