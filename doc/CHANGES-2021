@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1590 2021/03/11 09:47:59 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1591 2021/03/11 09:53:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2455,3 +2455,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/cyr-rfx-mac-cyrillic to 1.1nb5 [wiz 2021-03-11]
 	Updated fonts/cyr-rfx-windows_1251 to 1.1nb5 [wiz 2021-03-11]
 	Updated fonts/cyr-rfx-winlatin_1 to 1.1nb5 [wiz 2021-03-11]
+	Updated misc/py-tqdm to 4.59.0 [adam 2021-03-11]
+	Updated sysutils/ansible to 3.1.0 [adam 2021-03-11]
