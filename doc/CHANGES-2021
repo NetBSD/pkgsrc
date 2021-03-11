@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1584 2021/03/10 23:25:12 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.1585 2021/03/11 06:33:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2436,3 +2436,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go116 to 1.16.1 [bsiegert 2021-03-10]
 	Added net/terraform-provider-archive version 2.1.0 [tpaul 2021-03-10]
 	Added net/terraform-provider-template version 2.2.0 [tpaul 2021-03-10]
+	Updated print/py-reportlab to 3.5.65 [adam 2021-03-11]
+	Updated www/py-flask-jwt-extended to 4.1.0 [adam 2021-03-11]
