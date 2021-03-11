@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1599 2021/03/11 16:16:10 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1600 2021/03/11 19:00:10 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-unicode-display_width to 2.0.0 [taca 2021-03-11]
 	Updated security/ruby-rex-socket to 0.1.26 [taca 2021-03-11]
 	Updated security/ruby-metasploit-payloads to 2.0.38 [taca 2021-03-11]
+	Updated sysutils/u-boot-pine-h64 to 2021.01 [jakllsch 2021-03-11]
