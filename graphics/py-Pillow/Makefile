@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/03/10 18:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.52 2021/03/11 08:51:55 ryoon Exp $
 
 DISTNAME=	Pillow-8.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,9 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+PYSETUPBUILDTARGET=	build_ext
+PYSETUPBUILDARGS+=	--disable-xcb
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
