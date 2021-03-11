@@ -1,4 +1,4 @@
-/* $NetBSD: main.css,v 1.6 2021/03/08 16:37:59 nia Exp $ */
+/* $NetBSD: main.css,v 1.7 2021/03/11 15:07:33 nia Exp $ */
 
 body {
 	font-family: sans-serif;
@@ -66,4 +66,8 @@ hr {
 
 nav {
 	margin-bottom: 1em;
+}
+
+th {
+	padding-right: 90px;
 }
