@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1593 2021/03/11 13:19:36 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.1594 2021/03/11 14:36:05 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2460,3 +2460,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-faker to 6.6.0 [adam 2021-03-11]
 	Updated www/py-websocket-client to 0.58.0 [adam 2021-03-11]
 	Added devel/php-base58 version 1.0.2 [tpaul 2021-03-11]
+	Updated mail/roundcube-plugin-carddav to 4.0.4nb1 [triaxx 2021-03-11]
