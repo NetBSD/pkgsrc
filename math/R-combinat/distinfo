@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/07/31 19:17:39 brook Exp $
+$NetBSD: distinfo,v 1.6 2021/03/11 09:18:39 wiz Exp $
 
-SHA1 (R/combinat_0.0-8.tar.gz) = 8ddc471779384bff479013e6c5c3a1dbb0ee138b
-RMD160 (R/combinat_0.0-8.tar.gz) = 66a1a842b0eb2c1b9ba03186bb1a054a9e636a1b
-SHA512 (R/combinat_0.0-8.tar.gz) = 57e52b6f6bdc08d9d3647ffeca1c0d34a8da727feb1c4a26442155b6399c79f4ef55563af9706181a9c725d68e6de93d8e9003fa643d28b88acf006e04ac7d22
-Size (R/combinat_0.0-8.tar.gz) = 9197 bytes
+SHA1 (R/combinat-0.0-8v2/combinat_0.0-8.tar.gz) = 8ddc471779384bff479013e6c5c3a1dbb0ee138b
+RMD160 (R/combinat-0.0-8v2/combinat_0.0-8.tar.gz) = 66a1a842b0eb2c1b9ba03186bb1a054a9e636a1b
+SHA512 (R/combinat-0.0-8v2/combinat_0.0-8.tar.gz) = 57e52b6f6bdc08d9d3647ffeca1c0d34a8da727feb1c4a26442155b6399c79f4ef55563af9706181a9c725d68e6de93d8e9003fa643d28b88acf006e04ac7d22
+Size (R/combinat-0.0-8v2/combinat_0.0-8.tar.gz) = 9197 bytes
