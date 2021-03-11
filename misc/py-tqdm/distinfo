@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/02/13 21:27:19 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/03/11 09:50:19 adam Exp $
 
-SHA1 (tqdm-4.56.2.tar.gz) = c77b95746996e91dd9572b9a21726f2207c77b5f
-RMD160 (tqdm-4.56.2.tar.gz) = 9bd7b8f04722b0e998cba0ede058c11a98f93fde
-SHA512 (tqdm-4.56.2.tar.gz) = 8e7ec199c43a3cdb69bdbfaaec33c11ce8b337255eff4ae6af9928c2a2c5adb065698538562020c9f0a29a63671cbbfcf2c4c9ccb25bec0ec1d8ae8df66516c3
-Size (tqdm-4.56.2.tar.gz) = 167040 bytes
+SHA1 (tqdm-4.59.0.tar.gz) = 96855b54e27a00393257f2855f726cd2daa41615
+RMD160 (tqdm-4.59.0.tar.gz) = 2406073eeff7bbc103da552cfbab5325ee602d22
+SHA512 (tqdm-4.59.0.tar.gz) = be7ffe2f5e28dd2c653fdafd26cdfab6c89f1fd257420f9ab47460230318183b4934370261d7d5939d05f55b907e2d3982cbef078d372d9a4167e1df42c895a8
+Size (tqdm-4.59.0.tar.gz) = 168620 bytes
