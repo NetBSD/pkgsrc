@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/03/11 08:09:20 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/03/11 21:31:42 pin Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -48,10 +48,10 @@ SHA1 (libc-0.2.86.crate) = 65cf6875812c96570d2c2c9f888bd5aa05a1082d
 RMD160 (libc-0.2.86.crate) = f3d74258800f32db91a0a53e97d9ba456b371f6e
 SHA512 (libc-0.2.86.crate) = b5a0c94b3717a620cb47b27d2f3bbfe04fce475c3e2feaab8bc4b14c8aaee190d47a61f0dabf26ed9e525e96e6aa611f4dd29b16e13b678898f88352d86c1b74
 Size (libc-0.2.86.crate) = 522986 bytes
-SHA1 (macchina-0.5.5.tar.gz) = 60afcdf3873f5094d1e1544bdec5a831fc9c0712
-RMD160 (macchina-0.5.5.tar.gz) = dcad8f4b42f1d04538b5ea53bf27c154baae03ef
-SHA512 (macchina-0.5.5.tar.gz) = 0ae614b15644afdc7867004c346bda1311dd4f3da40ce4f3e69e725d7c612634ec113bf6b9fad60ca2cf464e9db26cb9cb0df7381e78025123bdcd18bca07b28
-Size (macchina-0.5.5.tar.gz) = 425978 bytes
+SHA1 (macchina-0.5.7.tar.gz) = 92d741c56b293086105a082455c3ce655b7a4a73
+RMD160 (macchina-0.5.7.tar.gz) = d0939a5735adcf7ca676a4fd127b954d51e99c2e
+SHA512 (macchina-0.5.7.tar.gz) = 5003c5b723ec18ca7ee71af03079d5c91c4dc4faac47480964a3838a8648b04018129f3b850423f33b16b7542b64c2274f1d49b0c389327b7f33999329097e28
+Size (macchina-0.5.7.tar.gz) = 426325 bytes
 SHA1 (nix-0.20.0.crate) = a04edab8fcfcda80b7e045101080ec76f2566797
 RMD160 (nix-0.20.0.crate) = 1e4bf9405f84a040ff72ceae82a43a7219042798
 SHA512 (nix-0.20.0.crate) = 4efb0a6147870aca6b5612428216f36cd826320b75f4f12fb0c75140d47561834695db7745908a23d08ac7114d69848cdafcf87830718da1f03aa6f2c664c5d5
