@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/02/28 22:15:55 pin Exp $
+$NetBSD: distinfo,v 1.9 2021/03/11 08:08:02 pin Exp $
 
 SHA1 (addr2line-0.14.1.crate) = 5e02a34c470fcb872eee8ee11037f0dce619404a
 RMD160 (addr2line-0.14.1.crate) = a152b28f56c4bcf8fcbb9575764b2d85fe0d6256
@@ -92,10 +92,10 @@ SHA1 (pam-sys-0.5.6.crate) = 026da526179fe07837aa221581426c817fb0d1cf
 RMD160 (pam-sys-0.5.6.crate) = c9ce1a53a6fff2c79da80d83acf068130494afbc
 SHA512 (pam-sys-0.5.6.crate) = f1aeb09fe4ed8a2a330d5a176c3f6a8b10c7fde6215f09212485b9170c3738686193b306c658d38373bff622522d58e319517613c2778db6e08c729cef8d5a07
 Size (pam-sys-0.5.6.crate) = 12738 bytes
-SHA1 (please-0.3.24.tar.gz) = 5333237e9e68d7e026f5f7726eedd938fed4689c
-RMD160 (please-0.3.24.tar.gz) = 29725392548c9c2e4c0d64fca6ffc83bb36c4bd2
-SHA512 (please-0.3.24.tar.gz) = 5aefb36787d1ff7d32dbab82b67739993d7ae462d9bd4b326d3782fc3d20b945212ba16d521b9fa977ff95f05e848a3d2dd6324ff65c59116825ea5ee58ca55f
-Size (please-0.3.24.tar.gz) = 41047 bytes
+SHA1 (please-0.3.25.tar.gz) = 23a03829283ee5a2f4325fa12b775f1c667bcef3
+RMD160 (please-0.3.25.tar.gz) = df1a02acc69982666cf8665d111e488ad7d56e87
+SHA512 (please-0.3.25.tar.gz) = be19cc05f2b5e0b9e0c57f6f50171c81647740567c44e997cef9f1ae765e57969879b3583d78afc33ae00598db51c5ed10dc7ef60b968d56188b6685a9ea7d75
+Size (please-0.3.25.tar.gz) = 41935 bytes
 SHA1 (regex-1.4.3.crate) = 9791be8e7a645b891dce0533a487dc3625e00ffe
 RMD160 (regex-1.4.3.crate) = 9f2849315b430248cc777a2f73b202a32c465bbf
 SHA512 (regex-1.4.3.crate) = bc0dbde01a79e7863997194b894c0e76e01ed209d56225bd611dcbccbbe997abd48bdc4640cbf349c5f16d96ec613f5b31740e81fc7da82082a4ed48fa06deac
