@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1596 2021/03/11 15:31:36 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1597 2021/03/11 15:32:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/roundcube-plugin-carddav to 4.0.4nb1 [triaxx 2021-03-11]
 	Updated textproc/ruby-strings to 0.2.1 [taca 2021-03-11]
 	Updated devel/uthash to 2.3.0 [fcambus 2021-03-11]
+	Updated textproc/ruby-unicode-display_width to 2.0.0 [taca 2021-03-11]
