@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1589 2021/03/11 08:23:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1590 2021/03/11 09:47:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2443,3 +2443,15 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/feathernotes to 0.9.0 [pin 2021-03-11]
 	Updated net/wireshark to 3.4.4 [adam 2021-03-11]
 	Updated archivers/unrar to 6.0.4 [adam 2021-03-11]
+	Updated fonts/cyr-rfx-bulgarian-mik to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-ibm-cp866 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-iso10646_0400 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-iso8859_15 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-iso8859_5 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-koi8-o to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-koi8-ru to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-koi8-ub to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-koi8_1 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-mac-cyrillic to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-windows_1251 to 1.1nb5 [wiz 2021-03-11]
+	Updated fonts/cyr-rfx-winlatin_1 to 1.1nb5 [wiz 2021-03-11]
