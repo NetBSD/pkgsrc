@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/11/05 09:08:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2021/03/11 08:10:58 pin Exp $
 
-VERSION=	0.8.0
+VERSION=	0.9.0
 DISTNAME=	FeatherNotes-V${VERSION}
 PKGNAME=	feathernotes-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -14,8 +13,8 @@ COMMENT=	Lightweight Qt5 hierarchical notes-manager
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/FeatherNotes-${VERSION}
-USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c++
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
@@ -31,5 +30,6 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
