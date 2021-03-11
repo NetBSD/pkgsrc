@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/01/08 21:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/03/11 12:04:08 adam Exp $
 
-DISTNAME=	websocket_client-0.57.0
+DISTNAME=	websocket_client-0.58.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/websocket-client/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=w/websocket-client/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/websocket-client/websocket-client
 COMMENT=	WebSocket client module
-LICENSE=	modified-bsd
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
