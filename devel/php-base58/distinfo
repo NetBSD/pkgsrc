@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/11 13:18:46 tpaul Exp $
+
+SHA1 (php-base58/base58-1.0.2.tgz) = 537ed59d2681f708a41fe07fb83eb65805366a50
+RMD160 (php-base58/base58-1.0.2.tgz) = 6b0ab8e9cf200f2c7fcfb8802cc603a13e5fc1f6
+SHA512 (php-base58/base58-1.0.2.tgz) = 881cecaf68116331d7102c554094a9e65b9a8051cdd20f6c41b378d37baf655aefcbd601d58229ae018e15536c9620305d40e1e2697f88656a53126930612d30
+Size (php-base58/base58-1.0.2.tgz) = 10043 bytes
