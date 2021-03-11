@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2020/04/12 23:59:42 joerg Exp $
+# $NetBSD: Makefile.common,v 1.21 2021/03/11 09:45:45 wiz Exp $
 
 # used by fonts/cyr-rfx-bulgarian-mik/Makefile
 # used by fonts/cyr-rfx-ibm-cp866/Makefile
@@ -18,11 +18,12 @@ CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/
 MASTER_SITES+=	ftp://ftp.ptc.spbu.ru/mirror/ftp.inp.nsk.su/pub/BINP/X11/fonts/cyr-rfx/
 EXTRACT_SUFX=	.tgz
+# distfiles were changed at some point
+DIST_SUBDIR=	cyr-rfx-20001007
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/00index.en.html
 COMMENT=	Cyrillic X11 fonts in ${CYR_RFX_ENCODING} encoding
-DIST_SUBDIR=	cyr-rfx
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

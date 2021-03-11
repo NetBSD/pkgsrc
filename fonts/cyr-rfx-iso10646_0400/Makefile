@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/11/02 22:24:39 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/03/11 09:45:44 wiz Exp $
 
 CYR_RFX_ENCODING=	iso10646-0400
 PKGNAME=		${DISTNAME:S/6-0/6_0/}
-PKGREVISION=		4
+PKGREVISION=		5
 
 .include "../../fonts/cyr-rfx-share/Makefile.common"
