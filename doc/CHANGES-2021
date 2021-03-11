@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1587 2021/03/11 08:09:40 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1588 2021/03/11 08:11:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2440,3 +2440,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-flask-jwt-extended to 4.1.0 [adam 2021-03-11]
 	Updated security/pleaser to 0.3.25 [pin 2021-03-11]
 	Updated sysutils/macchina to 0.5.5 [pin 2021-03-11]
+	Updated editors/feathernotes to 0.9.0 [pin 2021-03-11]
