@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/03/11 07:12:01 wiz Exp $
+
+NetBSD sed as of 20210311 does not support \t. Use plain tab character instead.
+
+--- Makefile.orig	2016-12-06 14:02:53.000000000 +0000
++++ Makefile
+@@ -304,7 +304,7 @@ hunspell-capmain-plus_$(1).tmp: $(AFFIX_
+ 	./bin/myspellfixprefix.pl < $$@.unfiltered-list0.tmp | (test -e ./bin/conv_dict_$(1) && ./bin/conv_dict_$(1) || cat) | grep -v '^$$$$' > $$@.unfiltered-list.tmp
+ 	cat $$@.unfiltered-list.tmp | $(AFFIX_EXPAND_COMMAND) > $$@.unfiltered-list-expanded.tmp
+ 	$(SED) -f ./bin/dic2iso < $$@.unfiltered-list-expanded.tmp |$(SED) "s/qq//g" | $(NL) | $(HUNSPELL) -d hunspell/$(1)_small -L > $$@.unknown.tmp
+-	$(SED) "s/^ *\([0-9]*\)\t.*$$$$/\1/" $$@.unknown.tmp > $$@.list-unknown-lines.tmp
++	$(SED) "s/^ *\([0-9]*\)	.*$$$$/\1/" $$@.unknown.tmp > $$@.list-unknown-lines.tmp
+ 	./bin/extractlines.pl $$@.list-unknown-lines.tmp $$@.unfiltered-list.tmp > $$@.tmp
+ 	./bin/hunspell-capmain $$@.tmp | $(SED) -f ./bin/iso2dic > $$@
+ 	$(RM_OR_NOT) $$@.unfiltered-list0.tmp $$@.unfiltered-list.tmp $$@.unfiltered-list-expanded.tmp $$@.unknown.tmp $$@.list-unknown-lines.tmp $$@.tmp
