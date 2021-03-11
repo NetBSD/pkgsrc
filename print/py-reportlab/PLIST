@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/10/21 06:49:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/03/11 06:30:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -213,12 +213,21 @@ ${PYSITELIB}/reportlab/graphics/testdrawings.pyo
 ${PYSITELIB}/reportlab/graphics/testshapes.py
 ${PYSITELIB}/reportlab/graphics/testshapes.pyc
 ${PYSITELIB}/reportlab/graphics/testshapes.pyo
+${PYSITELIB}/reportlab/graphics/transform.py
+${PYSITELIB}/reportlab/graphics/transform.pyc
+${PYSITELIB}/reportlab/graphics/transform.pyo
+${PYSITELIB}/reportlab/graphics/utils.py
+${PYSITELIB}/reportlab/graphics/utils.pyc
+${PYSITELIB}/reportlab/graphics/utils.pyo
 ${PYSITELIB}/reportlab/graphics/widgetbase.py
 ${PYSITELIB}/reportlab/graphics/widgetbase.pyc
 ${PYSITELIB}/reportlab/graphics/widgetbase.pyo
 ${PYSITELIB}/reportlab/graphics/widgets/__init__.py
 ${PYSITELIB}/reportlab/graphics/widgets/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/widgets/__init__.pyo
+${PYSITELIB}/reportlab/graphics/widgets/adjustableArrow.py
+${PYSITELIB}/reportlab/graphics/widgets/adjustableArrow.pyc
+${PYSITELIB}/reportlab/graphics/widgets/adjustableArrow.pyo
 ${PYSITELIB}/reportlab/graphics/widgets/eventcal.py
 ${PYSITELIB}/reportlab/graphics/widgets/eventcal.pyc
 ${PYSITELIB}/reportlab/graphics/widgets/eventcal.pyo
@@ -283,7 +292,6 @@ ${PYSITELIB}/reportlab/lib/formatters.pyo
 ${PYSITELIB}/reportlab/lib/geomutils.py
 ${PYSITELIB}/reportlab/lib/geomutils.pyc
 ${PYSITELIB}/reportlab/lib/geomutils.pyo
-${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
 ${PYSITELIB}/reportlab/lib/logger.pyo
