@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2021/03/09 12:11:40 adam Exp $
+# $NetBSD: Makefile,v 1.41 2021/03/11 09:53:19 adam Exp $
 
-DISTNAME=	ansible-3.0.0
+DISTNAME=	ansible-3.1.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -22,15 +22,27 @@ REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/community/general/tests/integration/targets/django_manage/files/base_test/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
 REPLACE_PYTHON+=	ansible_collections/ngine_io/cloudstack/scripts/inventory/cloudstack.py
+REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/*.py
+REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/ovirt-dr
 REPLACE_PYTHON+=	ansible_collections/sensu/sensu_go/fix-pytest-ini.py
+REPLACE_PYTHON+=	ansible_collections/sensu/sensu_go/tools/windows-versions.py
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/.azure-pipelines/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/netbox/netbox/hacking/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/kubernetes/utils/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/okd/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/check-ignores-order
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/files/*.bsx
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_server/files/*.bsx
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/ci/*
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bin/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/automation/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/build.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/sensu/sensu_go/docker/*.sh
 
 post-extract:
 	${FIND} ${WRKSRC}/ansible_collections -name .DS_Store -delete
