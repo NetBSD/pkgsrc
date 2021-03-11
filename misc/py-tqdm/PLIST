@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/01/16 11:15:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/03/11 09:50:19 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -70,6 +70,9 @@ ${PYSITELIB}/tqdm/contrib/telegram.pyo
 ${PYSITELIB}/tqdm/contrib/utils_worker.py
 ${PYSITELIB}/tqdm/contrib/utils_worker.pyc
 ${PYSITELIB}/tqdm/contrib/utils_worker.pyo
+${PYSITELIB}/tqdm/dask.py
+${PYSITELIB}/tqdm/dask.pyc
+${PYSITELIB}/tqdm/dask.pyo
 ${PYSITELIB}/tqdm/gui.py
 ${PYSITELIB}/tqdm/gui.pyc
 ${PYSITELIB}/tqdm/gui.pyo
