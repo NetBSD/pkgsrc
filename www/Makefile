@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1520 2021/03/10 19:09:54 adam Exp $
+# $NetBSD: Makefile,v 1.1521 2021/03/11 03:09:31 gutteridge Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -216,8 +216,8 @@ SUBDIR+=	midori
 SUBDIR+=	mimetex
 SUBDIR+=	mini_httpd
 SUBDIR+=	mknmz-wwwoffle
-SUBDIR+=	monolith
 SUBDIR+=	mono-xsp
+SUBDIR+=	monolith
 SUBDIR+=	moodle
 SUBDIR+=	motyl
 SUBDIR+=	mserv-php
