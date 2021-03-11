@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1585 2021/03/11 06:33:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1586 2021/03/11 08:08:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/terraform-provider-template version 2.2.0 [tpaul 2021-03-10]
 	Updated print/py-reportlab to 3.5.65 [adam 2021-03-11]
 	Updated www/py-flask-jwt-extended to 4.1.0 [adam 2021-03-11]
+	Updated security/pleaser to 0.3.25 [pin 2021-03-11]
