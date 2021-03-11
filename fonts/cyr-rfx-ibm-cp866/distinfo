@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/03/06 16:14:33 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/03/11 09:45:44 wiz Exp $
 
-SHA1 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 3ba45c22a29056913aa8b173e0f7c800847e20a3
-RMD160 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = fa56627724756bff2414f62967f78906563deec5
-SHA512 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 681de9afa1fea4228f20a7a89fc39b6ec7252b81beea20970e46df8ee3169ddfa3e7e1d1c0946b7583fc97c360a84e6a45139c15b8eabe82949a0fb9ebaa5cc2
-Size (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 368450 bytes
+SHA1 (cyr-rfx-20001007/cyr-rfx-ibm-cp866-1.1.tgz) = 4a5b188c077a3b93e197bcc85c2520d95273ca49
+RMD160 (cyr-rfx-20001007/cyr-rfx-ibm-cp866-1.1.tgz) = baa7ea1243d4cf697d13621df5d5d5ab9e764584
+SHA512 (cyr-rfx-20001007/cyr-rfx-ibm-cp866-1.1.tgz) = 94fb3a0015314999a51312537c28b8ae5d6d24552af649d39f0fa73ef409121f1a58542eb723b44a9d92a701683c48160677a33b042e5c09d9af92b0a5a37368
+Size (cyr-rfx-20001007/cyr-rfx-ibm-cp866-1.1.tgz) = 368685 bytes
