@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1604 2021/03/11 22:11:54 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1605 2021/03/12 02:29:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2471,3 +2471,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.5.7 [pin 2021-03-11]
 	Updated sysutils/sfm to 0.4.3 [pin 2021-03-11]
 	Updated audio/spotify-qt to 3.5 [pin 2021-03-11]
+	Added net/nng version 1.4.0 [khorben 2021-03-12]
