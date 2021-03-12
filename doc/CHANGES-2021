@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1622 2021/03/12 15:28:51 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.1623 2021/03/12 17:43:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird-l10n to 78.8.1 [ryoon 2021-03-12]
 	Added devel/php-msgpack version 2.1.2 [tpaul 2021-03-12]
 	Updated net/sayaka to 3.5.0 [tsutsui 2021-03-12]
+	Updated lang/openjdk11 to 1.11.0.10.9nb1 [ryoon 2021-03-12]
