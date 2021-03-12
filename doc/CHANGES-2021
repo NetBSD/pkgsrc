@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1611 2021/03/12 10:33:15 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1612 2021/03/12 10:35:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2478,3 +2478,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mednaffe to 0.9.1 [nia 2021-03-12]
 	Updated fonts/cascadia-ttf to 2102.25 [wiz 2021-03-12]
 	Updated devel/gopls to 0.6.6 [wiz 2021-03-12]
+	Updated net/libfilezilla to 0.27.0 [wiz 2021-03-12]
