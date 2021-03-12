@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/03/08 13:25:12 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/03/12 08:41:27 nia Exp $
 
 DISTNAME=	ownCloud-2.7.6.3261
 PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=	-DBUILD_SHELL_INTEGRATION=OFF
