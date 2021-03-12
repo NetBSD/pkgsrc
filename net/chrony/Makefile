@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/08/27 07:00:51 hannken Exp $
+# $NetBSD: Makefile,v 1.44 2021/03/12 09:57:18 nia Exp $
 
-DISTNAME=	chrony-3.5.1
+DISTNAME=	chrony-4.0
 CATEGORIES=	net
-MASTER_SITES=	http://download.tuxfamily.org/chrony/
+MASTER_SITES=	https://download.tuxfamily.org/chrony/
 
 MAINTAINER=	hannken@NetBSD.org
 HOMEPAGE=	https://chrony.tuxfamily.org/
@@ -22,7 +22,6 @@ AUTO_MKDIRS=		yes
 OWN_DIRS=		${VARBASE}/lib/chrony
 
 EGDIR=			${PREFIX}/share/examples/chrony
-EGFILES=		chrony.conf.example3 chrony.keys.example
 RCD_SCRIPTS=		chronyd
 
 SUBST_CLASSES+=		paths
@@ -37,6 +36,5 @@ post-install:
 	    "${DESTDIR}${EGDIR}/chrony.keys.example";
 
 .include "options.mk"
-
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
