@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1626 2021/03/12 22:51:13 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1627 2021/03/12 23:01:35 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ant-contrib to 1.0b3 [ryoon 2021-03-12]
 	Updated audio/din to 50 [fox 2021-03-12]
 	Updated devel/gradle to 6.8.3 [ryoon 2021-03-12]
+	Updated security/libdecaf to 1.0.1 [fox 2021-03-12]
