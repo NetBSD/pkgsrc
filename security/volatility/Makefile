@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/03/10 18:51:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/12 11:36:07 nia Exp $
 
 DISTNAME=	volatility-2.6.1
 CATEGORIES=	security
@@ -16,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3
 DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
-DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
+# does not support python 2.7
+#DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-yara-[0-9]*:../../security/py-yara
 
 REPLACE_PYTHON= tools/vtype_diff.py
