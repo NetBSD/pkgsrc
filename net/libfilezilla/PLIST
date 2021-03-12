@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/09/17 10:05:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/03/12 10:35:47 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -10,12 +10,15 @@ include/libfilezilla/file.hpp
 include/libfilezilla/format.hpp
 include/libfilezilla/glue/unix.hpp
 include/libfilezilla/glue/wx.hpp
+include/libfilezilla/glue/wxinvoker.hpp
 include/libfilezilla/hash.hpp
+include/libfilezilla/invoker.hpp
 include/libfilezilla/iputils.hpp
 include/libfilezilla/libfilezilla.hpp
 include/libfilezilla/local_filesys.hpp
 include/libfilezilla/logger.hpp
 include/libfilezilla/mutex.hpp
+include/libfilezilla/nonowning_buffer.hpp
 include/libfilezilla/optional.hpp
 include/libfilezilla/private/defs.hpp
 include/libfilezilla/private/visibility.hpp
@@ -39,6 +42,7 @@ include/libfilezilla/translate.hpp
 include/libfilezilla/uri.hpp
 include/libfilezilla/util.hpp
 include/libfilezilla/version.hpp
+include/libfilezilla/visibility_helper.hpp
 lib/libfilezilla.la
 lib/pkgconfig/libfilezilla.pc
 share/locale/an/LC_MESSAGES/libfilezilla.mo
