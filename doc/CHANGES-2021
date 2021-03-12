@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1608 2021/03/12 09:58:44 micha Exp $
+$NetBSD: CHANGES-2021,v 1.1609 2021/03/12 10:03:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2475,3 +2475,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/kvantum to 0.19.0 [pin 2021-03-12]
 	Updated net/chrony to 4.0 [nia 2021-03-12]
 	Updated archivers/star to 1.6.1nb14 [micha 2021-03-12]
+	Updated emulators/mednaffe to 0.9.1 [nia 2021-03-12]
