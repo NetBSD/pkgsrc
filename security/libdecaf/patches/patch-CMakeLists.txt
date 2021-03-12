@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/03/12 23:01:07 fox Exp $
+
+Bump the version of libdecaf to be correct.
+
+--- CMakeLists.txt.orig	2021-03-12 22:43:26.377889463 +0000
++++ CMakeLists.txt
+@@ -6,7 +6,7 @@
+ ############################################################################
+ 
+ cmake_minimum_required(VERSION 3.0)
+-project(DECAF VERSION 1.0 LANGUAGES C CXX)
++project(DECAF VERSION 1.0.1 LANGUAGES C CXX)
+ 
+ set(DECAF_SO_VERSION "0")
+ 
