@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/03/12 02:28:08 khorben Exp $
+
+SHA1 (nng-1.4.0.tar.gz) = d1c94aac6d46d9743e0c5693b8caade211860622
+RMD160 (nng-1.4.0.tar.gz) = 2022db8af9990f2bdb62c7366cb8e30627173aa1
+SHA512 (nng-1.4.0.tar.gz) = f573facbb5feee250d674e20d0d02dcf505b4c5c7b66f008c13f0c6d8864f2d8450cb36ae74772ac09944936aef4a06544e69eb6484bfc2856cc9f91c6aee2c2
+Size (nng-1.4.0.tar.gz) = 710306 bytes
+SHA1 (patch-src_platform_posix_posix__thread.c) = c54d183a7e6329550e4246bc764f1d2528669338
