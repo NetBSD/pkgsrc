@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 04:26:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/12 08:46:58 nia Exp $
 
 DISTNAME=	fcitx5-kkc-5.0.4
 CATEGORIES=	inputmethod
@@ -18,6 +18,7 @@ DEPENDS+=	libkkc-data-[0-9]*:../../misc/libkkc-data
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 .include "../../converters/libkkc/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
