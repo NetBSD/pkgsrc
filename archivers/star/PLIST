@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/10 10:31:32 micha Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/12 09:57:24 micha Exp $
 bin/scpio
 bin/spax
 bin/star
-bin/ustar
 man/man1/scpio.1
 man/man1/spax.1
 man/man1/star.1
-man/man1/ustar.1
 ${PLIST.sysv}man/man4/star.4
 ${PLIST.bsd}man/man5/star.5
 share/doc/star/INSTALL.pkgsrc
