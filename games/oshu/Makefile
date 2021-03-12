@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/08/18 17:57:57 leot Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/12 15:02:13 nia Exp $
 
 DISTNAME=	oshu-2.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fmang/}
 
@@ -11,10 +11,10 @@ COMMENT=	Fast osu! port
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DOSHU_SKINS="minimal;osu"
+CMAKE_ARGS+=	-DOSHU_SKINS="minimal"
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
