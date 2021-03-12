@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2021/03/07 07:30:09 adam Exp $
+# $NetBSD: Makefile,v 1.170 2021/03/12 08:48:49 nia Exp $
 
 DISTNAME=	mkvtoolnix-55.0.0
 CATEGORIES=	multimedia
@@ -13,6 +13,13 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+
+
+# 'The following features of the C++17 standards are not supported by c++:
+#  * file system library (C++17)
+# If you are using the GNU C compiler collection (gcc), you need
+# at least v8; for clang v7 and newer should work.'
+GCC_REQD+=	8
 
 USE_LANGUAGES=		c c++17
 USE_PKGLOCALEDIR=	yes
