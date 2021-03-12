@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1618 2021/03/12 14:13:08 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1619 2021/03/12 14:37:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-asteval to 0.9.23 [adam 2021-03-12]
 	Updated www/firefox to 86.0.1 [ryoon 2021-03-12]
 	Updated www/firefox-l10n to 86.0.1 [ryoon 2021-03-12]
+	Updated mail/thunderbird to 78.8.1 [ryoon 2021-03-12]
