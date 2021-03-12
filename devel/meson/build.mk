@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.6 2020/12/04 18:23:05 nia Exp $
+# $NetBSD: build.mk,v 1.7 2021/03/12 08:39:10 nia Exp $
 
 BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -38,13 +38,15 @@ meson-install:
 	if [ -f ${WRKSRC}/meson_post_install.py ]; then		\
 		${CHMOD} +x ${WRKSRC}/meson_post_install.py;	\
 	fi
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ninja -C output install
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+	    ninja -j ${_MAKE_JOBS_N:U1} -C output install
 .endfor
 
 do-test: meson-test
 meson-test:
 .for d in ${TEST_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} ninja -C output test
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
+	    ninja -j ${_MAKE_JOBS_N:U1} -C output test
 .endfor
 
 .include "../../lang/python/application.mk"
