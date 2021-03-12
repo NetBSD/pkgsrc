@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2021/03/12 09:57:18 nia Exp $
+
+NetBSD provides libedit-as-readline, but chrony wants libedit.
+just include the fake readline header.
+
+--- configure.orig	2020-10-07 15:27:34.000000000 +0000
++++ configure
+@@ -858,7 +858,7 @@ fi
+ READLINE_LINK=""
+ if [ $feat_readline = "1" ]; then
+   if [ $try_editline = "1" ]; then
+-    if test_code editline 'stdio.h editline/readline.h' '' '-ledit' \
++    if test_code editline 'stdio.h readline.h' '' '-ledit' \
+       'add_history(readline("prompt"));'
+     then
+       add_def FEAT_READLINE
