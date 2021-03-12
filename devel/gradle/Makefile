@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2020/01/02 20:10:01 abs Exp $
+# $NetBSD: Makefile,v 1.22 2021/03/12 22:50:42 ryoon Exp $
 
-DISTNAME=	gradle-4.10.3-bin
+DISTNAME=	gradle-6.8.3-bin
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://services.gradle.org/distributions/
+MASTER_SITES=	https://services.gradle.org/distributions/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	asiekierka@gmail.com
@@ -32,13 +32,10 @@ SUBST_SED.launcher+=	-e 's,@APP_LAUNCHER@,lib/gradle-launcher-${PKGVERSION_NOREV
 SUBST_SED.launcher+=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 
 INSTALLATION_DIRS=	bin lib/java/gradle/lib lib/java/gradle/lib/plugins
-INSTALLATION_DIRS+=	lib/java/gradle/media share/doc/java/gradle
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gradle-launcher ${DESTDIR}${PREFIX}/bin/gradle
 	cd ${WRKSRC}/lib && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/java/gradle/lib
-	${INSTALL_DATA} ${WRKSRC}/media/*.icns ${DESTDIR}${PREFIX}/lib/java/gradle/media
-	${INSTALL_DATA} ${WRKSRC}/getting-started.html ${DESTDIR}${PREFIX}/share/doc/java/gradle
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
