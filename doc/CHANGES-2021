@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1606 2021/03/12 09:40:37 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1607 2021/03/12 09:57:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-qt to 3.5 [pin 2021-03-11]
 	Added net/nng version 1.4.0 [khorben 2021-03-12]
 	Updated graphics/kvantum to 0.19.0 [pin 2021-03-12]
+	Updated net/chrony to 4.0 [nia 2021-03-12]
