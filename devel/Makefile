@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3347 2021/03/11 13:19:23 tpaul Exp $
+# $NetBSD: Makefile,v 1.3348 2021/03/12 15:02:38 tpaul Exp $
 #
 
 COMMENT=	Development utilities
@@ -2120,6 +2120,7 @@ SUBDIR+=	php-memcache2
 SUBDIR+=	php-memcache4
 SUBDIR+=	php-memcached
 SUBDIR+=	php-mode
+SUBDIR+=	php-msgpack
 SUBDIR+=	php-opcache
 SUBDIR+=	php-pcntl
 SUBDIR+=	php-posix
