@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/02/18 10:16:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/03/12 10:31:07 wiz Exp $
 
-SHA1 (CascadiaCode-2102.03.zip) = 2cc81173d4eb7ad6e1126f096e33ec3a1f746adb
-RMD160 (CascadiaCode-2102.03.zip) = 35a8ede7b584698c4088ad42b9e0f4380d47fe61
-SHA512 (CascadiaCode-2102.03.zip) = 167629f5111db4bcf7e51937e5fa072e16ff2dcdc8a3f003b70afb2f49ab15d839c1f6261d9c0ef15a71a45e0f04a29a5ae8102e8dd6cf6a00e8b003cf8b5fcd
-Size (CascadiaCode-2102.03.zip) = 8676365 bytes
+SHA1 (CascadiaCode-2102.25.zip) = 2337362a23b18f06793c901cf0c9e1f1f1defecd
+RMD160 (CascadiaCode-2102.25.zip) = 8d7caa81972388701e37ed3c26cc88eb8e294012
+SHA512 (CascadiaCode-2102.25.zip) = 4b0b1168bf3f1adbff362ed2d7fa1f548643e5c9506866e12dc26aefb8e807b7515e0c49705f03faf1a44c037d414ba3ab3f2189d29491711d6e802035914002
+Size (CascadiaCode-2102.25.zip) = 8666729 bytes
