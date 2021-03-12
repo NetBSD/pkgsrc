@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2020/11/10 15:03:09 tsutsui Exp $
+# $NetBSD: Makefile,v 1.30 2021/03/12 15:27:55 tsutsui Exp $
 
-DISTNAME=	sayaka-3.4.6
+DISTNAME=	sayaka-3.5.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=isaki68k/}
@@ -10,22 +10,20 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/isaki68k/sayaka
 COMMENT=	Terminal specific Twitter client
-LICENSE=	modified-bsd AND apache-2.0
+LICENSE=	modified-bsd AND mit
 
-USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c99 c++17
+BUILD_TARGET=		sayaka
 
 INSTALLATION_DIRS+=	bin
 
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vala/sayaka ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/sayaka ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_DEPMETHOD.vala= build
-BUILDLINK_API_DEPENDS.vala+=    vala>=0.38.1
-.include "../../lang/vala/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
