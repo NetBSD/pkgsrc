@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1633 2021/03/13 14:27:53 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1634 2021/03/13 15:25:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/screen to 4.8.0nb4 [kim 2021-03-13]
 	Updated geography/py-googlemaps to 4.4.4 [kleink 2021-03-13]
 	Updated meta-pkgs/php74-extensions to 7.4.16nb1 [taca 2021-03-13]
+	Updated www/squid4 to 4.14 [taca 2021-03-13]
