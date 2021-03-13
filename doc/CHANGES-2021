@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1630 2021/03/13 04:38:27 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1631 2021/03/13 07:25:28 kim Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2498,3 +2498,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gdal-lib to 3.2.2 [gdt 2021-03-13]
 	Updated net/mosquitto to 2.0.9 [gdt 2021-03-13]
 	Updated net/remmina to 1.4.12 [ryoon 2021-03-13]
+	Updated misc/screen to 4.8.0nb4 [kim 2021-03-13]
