@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2020/09/03 14:03:24 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2021/03/13 14:11:18 kleink Exp $
 
-DISTNAME=	googlemaps-4.4.2
+DISTNAME=	googlemaps-4.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
-MASTER_SITES=	${MASTER_SITE_PYPI:=g/googlemaps/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=googlemaps/}
+
+GITHUB_PROJECT=	google-maps-services-python
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	https://github.com/googlemaps/google-maps-services-python
