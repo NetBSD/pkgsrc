@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1629 2021/03/13 01:22:43 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1630 2021/03/13 04:38:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libdecaf to 1.0.1 [fox 2021-03-12]
 	Updated geography/gdal-lib to 3.2.2 [gdt 2021-03-13]
 	Updated net/mosquitto to 2.0.9 [gdt 2021-03-13]
+	Updated net/remmina to 1.4.12 [ryoon 2021-03-13]
