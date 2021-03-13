@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1627 2021/03/12 23:01:35 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1628 2021/03/13 01:11:46 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2495,3 +2495,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/din to 50 [fox 2021-03-12]
 	Updated devel/gradle to 6.8.3 [ryoon 2021-03-12]
 	Updated security/libdecaf to 1.0.1 [fox 2021-03-12]
+	Updated geography/gdal-lib to 3.2.2 [gdt 2021-03-13]
