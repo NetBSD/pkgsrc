@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:02 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/03/13 14:29:47 taca Exp $
 
-SHA1 (php-memcache/memcache-2.2.7.tgz) = 15235e0f85b54c429bdbf8f6b529243580e504a7
-RMD160 (php-memcache/memcache-2.2.7.tgz) = e65c9ed6dca0eff012dc980a6acd5f81b2f3d396
-SHA512 (php-memcache/memcache-2.2.7.tgz) = cf02aad8005e501a3222bdd0829d0a1363ae322a11b656c9b3993a08fc74675f9afed48de7b0d1941d0daaa145d47a11b2ebf04f79c686fb27d11dddf29e10ea
-Size (php-memcache/memcache-2.2.7.tgz) = 36459 bytes
+SHA1 (php-memcache/memcache-8.0.tgz) = c92a4e04a3a8ed1da22434623e7ed5a944657585
+RMD160 (php-memcache/memcache-8.0.tgz) = d2886c3edc9f58ca60b0d313d6b7752f2a8d7746
+SHA512 (php-memcache/memcache-8.0.tgz) = d5eea13b85d8d35ef6aab8c5699bdcc4707cf8debf4052cbbeac26e7e2360a4d3d4e55e8bd0b40cf19fe014ba1fc42d5417deabbe22a199f0c6aa98b67d132d4
+Size (php-memcache/memcache-8.0.tgz) = 78448 bytes
