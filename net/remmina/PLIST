@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/18 11:53:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/13 04:37:46 ryoon Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -6,7 +6,6 @@ include/remmina/remmina_trace_calls.h
 include/remmina/types.h
 lib/pkgconfig/remmina.pc
 lib/remmina/plugins/remmina-plugin-exec.so
-lib/remmina/plugins/remmina-plugin-kwallet.so
 lib/remmina/plugins/remmina-plugin-nx.so
 lib/remmina/plugins/remmina-plugin-rdp.so
 lib/remmina/plugins/remmina-plugin-secret.so
@@ -39,6 +38,7 @@ share/icons/hicolor/32x32/apps/remmina-panel.png
 share/icons/hicolor/48x48/apps/org.remmina.Remmina.png
 share/icons/hicolor/48x48/apps/remmina-panel-inverted.png
 share/icons/hicolor/48x48/apps/remmina-panel.png
+share/icons/hicolor/512x512/apps/org.remmina.Remmina.png
 share/icons/hicolor/64x64/apps/org.remmina.Remmina.png
 share/icons/hicolor/64x64/apps/remmina-panel-inverted.png
 share/icons/hicolor/64x64/apps/remmina-panel.png
@@ -61,6 +61,7 @@ share/icons/hicolor/scalable/actions/remmina-fit-window-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-fullscreen-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-go-bottom-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-keyboard-symbolic.svg
+share/icons/hicolor/scalable/actions/remmina-multi-monitor-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-pan-down-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-pan-up-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-pin-down-symbolic.svg
@@ -103,6 +104,7 @@ share/locale/de/LC_MESSAGES/remmina.mo
 share/locale/el/LC_MESSAGES/remmina.mo
 share/locale/en_AU/LC_MESSAGES/remmina.mo
 share/locale/en_GB/LC_MESSAGES/remmina.mo
+share/locale/en_US/LC_MESSAGES/remmina.mo
 share/locale/eo/LC_MESSAGES/remmina.mo
 share/locale/es/LC_MESSAGES/remmina.mo
 share/locale/es_VE/LC_MESSAGES/remmina.mo
@@ -120,6 +122,7 @@ share/locale/id/LC_MESSAGES/remmina.mo
 share/locale/ie/LC_MESSAGES/remmina.mo
 share/locale/it/LC_MESSAGES/remmina.mo
 share/locale/ja/LC_MESSAGES/remmina.mo
+share/locale/ka/LC_MESSAGES/remmina.mo
 share/locale/kab/LC_MESSAGES/remmina.mo
 share/locale/kk/LC_MESSAGES/remmina.mo
 share/locale/km/LC_MESSAGES/remmina.mo
@@ -127,6 +130,7 @@ share/locale/kn/LC_MESSAGES/remmina.mo
 share/locale/ko/LC_MESSAGES/remmina.mo
 share/locale/lt/LC_MESSAGES/remmina.mo
 share/locale/lv/LC_MESSAGES/remmina.mo
+share/locale/mk/LC_MESSAGES/remmina.mo
 share/locale/mr/LC_MESSAGES/remmina.mo
 share/locale/ms/LC_MESSAGES/remmina.mo
 share/locale/my/LC_MESSAGES/remmina.mo
@@ -165,6 +169,7 @@ share/remmina/external_tools/remmina_ping.sh
 share/remmina/external_tools/remmina_traceroute.sh
 share/remmina/theme/3024 Day.colors
 share/remmina/theme/3024 Night.colors
+share/remmina/theme/Adventure.colors
 share/remmina/theme/AdventureTime.colors
 share/remmina/theme/Afterglow.colors
 share/remmina/theme/AlienBlood.colors
@@ -174,14 +179,19 @@ share/remmina/theme/Arthur.colors
 share/remmina/theme/AtelierSulphurpool.colors
 share/remmina/theme/Atom.colors
 share/remmina/theme/AtomOneLight.colors
+share/remmina/theme/Aurora.colors
+share/remmina/theme/Banana Blueberry.colors
 share/remmina/theme/Batman.colors
 share/remmina/theme/Belafonte Day.colors
 share/remmina/theme/Belafonte Night.colors
 share/remmina/theme/BirdsOfParadise.colors
 share/remmina/theme/Blazer.colors
+share/remmina/theme/Blue Matrix.colors
+share/remmina/theme/BlueBerryPie.colors
 share/remmina/theme/BlulocoDark.colors
 share/remmina/theme/BlulocoLight.colors
 share/remmina/theme/Borland.colors
+share/remmina/theme/Breeze.colors
 share/remmina/theme/Bright Lights.colors
 share/remmina/theme/Broadcast.colors
 share/remmina/theme/Brogrammer.colors
@@ -203,12 +213,19 @@ share/remmina/theme/Ciapre.colors
 share/remmina/theme/Cobalt Neon.colors
 share/remmina/theme/Cobalt2.colors
 share/remmina/theme/CrayonPonyFish.colors
+share/remmina/theme/Cyberdyne.colors
 share/remmina/theme/Dark Pastel.colors
 share/remmina/theme/Dark+.colors
 share/remmina/theme/Darkside.colors
 share/remmina/theme/Desert.colors
 share/remmina/theme/DimmedMonokai.colors
+share/remmina/theme/Django.colors
+share/remmina/theme/DjangoRebornAgain.colors
+share/remmina/theme/DjangoSmooth.colors
+share/remmina/theme/Doom Peacock.colors
+share/remmina/theme/DoomOne.colors
 share/remmina/theme/DotGov.colors
+share/remmina/theme/Dracula+.colors
 share/remmina/theme/Dracula.colors
 share/remmina/theme/Duotone Dark.colors
 share/remmina/theme/ENCOM.colors
@@ -235,11 +252,14 @@ share/remmina/theme/Glacier.colors
 share/remmina/theme/Grape.colors
 share/remmina/theme/Grass.colors
 share/remmina/theme/Gruvbox Dark.colors
+share/remmina/theme/Gruvbox Light.colors
+share/remmina/theme/Guezwhoz.colors
 share/remmina/theme/Hacktober.colors
 share/remmina/theme/Hardcore.colors
 share/remmina/theme/Harper.colors
 share/remmina/theme/Highway.colors
 share/remmina/theme/Hipster Green.colors
+share/remmina/theme/Hivacruz.colors
 share/remmina/theme/Homebrew.colors
 share/remmina/theme/Hopscotch.256.colors
 share/remmina/theme/Hopscotch.colors
@@ -254,7 +274,9 @@ share/remmina/theme/Jellybeans.colors
 share/remmina/theme/JetBrains Darcula.colors
 share/remmina/theme/Kibble.colors
 share/remmina/theme/Kolorit.colors
+share/remmina/theme/Konsolas.colors
 share/remmina/theme/Lab Fox.colors
+share/remmina/theme/Laser.colors
 share/remmina/theme/Later This Evening.colors
 share/remmina/theme/Lavandula.colors
 share/remmina/theme/LiquidCarbon.colors
@@ -263,9 +285,11 @@ share/remmina/theme/LiquidCarbonTransparentInverse.colors
 share/remmina/theme/Man Page.colors
 share/remmina/theme/Material.colors
 share/remmina/theme/MaterialDark.colors
+share/remmina/theme/MaterialDarker.colors
 share/remmina/theme/MaterialOcean.colors
 share/remmina/theme/Mathias.colors
 share/remmina/theme/Medallion.colors
+share/remmina/theme/Mirage.colors
 share/remmina/theme/Misterioso.colors
 share/remmina/theme/Molokai.colors
 share/remmina/theme/MonaLisa.colors
@@ -287,6 +311,8 @@ share/remmina/theme/Ollie.colors
 share/remmina/theme/OneHalfDark.colors
 share/remmina/theme/OneHalfLight.colors
 share/remmina/theme/Operator Mono Dark.colors
+share/remmina/theme/Overnight Slumber.colors
+share/remmina/theme/PaleNightHC.colors
 share/remmina/theme/Pandora.colors
 share/remmina/theme/Paraiso Dark.colors
 share/remmina/theme/Parasio Dark.colors
@@ -295,21 +321,27 @@ share/remmina/theme/PencilDark.colors
 share/remmina/theme/PencilLight.colors
 share/remmina/theme/Piatto Light.colors
 share/remmina/theme/Pnevma.colors
+share/remmina/theme/Popping and Locking.colors
 share/remmina/theme/Pro Light.colors
 share/remmina/theme/Pro.colors
 share/remmina/theme/Purple Rain.colors
+share/remmina/theme/Rapture.colors
 share/remmina/theme/Red Alert.colors
 share/remmina/theme/Red Planet.colors
 share/remmina/theme/Red Sands.colors
 share/remmina/theme/Relaxed.colors
 share/remmina/theme/Rippedcasts.colors
+share/remmina/theme/Rouge 2.colors
 share/remmina/theme/Royal.colors
 share/remmina/theme/Ryuuko.colors
+share/remmina/theme/Sakura.colors
+share/remmina/theme/Scarlet Protocol.colors
 share/remmina/theme/SeaShells.colors
 share/remmina/theme/Seafoam Pastel.colors
 share/remmina/theme/Seti.colors
 share/remmina/theme/Shaman.colors
 share/remmina/theme/Slate.colors
+share/remmina/theme/SleepyHollow.colors
 share/remmina/theme/Smyck.colors
 share/remmina/theme/Snazzy.colors
 share/remmina/theme/SoftServer.colors
@@ -334,6 +366,8 @@ share/remmina/theme/Teerb.colors
 share/remmina/theme/Terminal Basic.colors
 share/remmina/theme/Thayer Bright.colors
 share/remmina/theme/The Hulk.colors
+share/remmina/theme/Tinacious Design (Dark).colors
+share/remmina/theme/Tinacious Design (Light).colors
 share/remmina/theme/Tomorrow Night Blue.colors
 share/remmina/theme/Tomorrow Night Bright.colors
 share/remmina/theme/Tomorrow Night Burns.colors
@@ -361,23 +395,18 @@ share/remmina/theme/Wryan.colors
 share/remmina/theme/Zenburn.colors
 share/remmina/theme/ayu.colors
 share/remmina/theme/ayu_light.colors
+share/remmina/theme/coffee_theme.colors
 share/remmina/theme/cyberpunk.colors
 share/remmina/theme/deep.colors
 share/remmina/theme/idea.colors
 share/remmina/theme/idleToes.colors
+share/remmina/theme/jubi.colors
 share/remmina/theme/lovelace.colors
 share/remmina/theme/midnight-in-mojave.colors
+share/remmina/theme/nord.colors
 share/remmina/theme/primary.colors
 share/remmina/theme/purplepeter.colors
 share/remmina/theme/rebecca.colors
+share/remmina/theme/shades-of-purple.colors
+share/remmina/theme/synthwave-everything.colors
 share/remmina/theme/synthwave.colors
-share/remmina/ui/remmina_about.glade
-share/remmina/ui/remmina_key_chooser.glade
-share/remmina/ui/remmina_main.glade
-share/remmina/ui/remmina_mpc.glade
-share/remmina/ui/remmina_news.glade
-share/remmina/ui/remmina_preferences.glade
-share/remmina/ui/remmina_snap_info_dialog.glade
-share/remmina/ui/remmina_spinner.glade
-share/remmina/ui/remmina_string_list.glade
-share/remmina/ui/remmina_unlock.glade
