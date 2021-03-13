@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/12/15 18:05:58 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/13 14:27:31 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_VERSION}<${NEXT_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dba>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-dba
 DEPENDS+=	${PHP_PKG_PREFIX}-enchant>=${PHP_VERSION}:../../textproc/php-enchant
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_VERSION}<${NEXT_VERS}:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-ffi>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-ffi
 DEPENDS+=	${PHP_PKG_PREFIX}-ftp>=${PHP_VERSION}<${NEXT_VERS}:../../net/php-ftp
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_VERSION}<${NEXT_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-gettext
