@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2021/03/12 11:54:25 khorben Exp $
+$NetBSD: distinfo,v 1.26 2021/03/14 02:29:19 khorben Exp $
 
-SHA1 (gitea-1.12.6-frontend.tar.gz) = 8f5d260af8dcbaddf6b74461fbfae9c1cc68a9c9
-RMD160 (gitea-1.12.6-frontend.tar.gz) = cf31729d71777fe02aa3611a6394c77442d0077b
-SHA512 (gitea-1.12.6-frontend.tar.gz) = 2e2b3d6013c0b6489e9a18e6835800fe703bc68faae9c26d88f29f2b328eec12ef27ba804797ea2af83ba3748f0a8ff9420837171e83178ec7ffb13c9f8e4687
-Size (gitea-1.12.6-frontend.tar.gz) = 21443322 bytes
+SHA1 (gitea-1.13.4-frontend.tar.gz) = 9e16620c304ea99d77c20e00924d52b4498544d9
+RMD160 (gitea-1.13.4-frontend.tar.gz) = 651c0ce5de36a47618864d9ef3632e82eb649c5f
+SHA512 (gitea-1.13.4-frontend.tar.gz) = 82aa832d78a9c3fb73ff3334a1b3095d97f34c5977fd37cfb4eab1602a0385442575e1f85db3e7b94146c8d88c0e187d110ed7847237c4295dca3405e991bd20
+Size (gitea-1.13.4-frontend.tar.gz) = 18312694 bytes
 SHA1 (gitea-1.13.4.tar.gz) = 793ca75e989d7105e83c9563260e6ebc4672d35a
 RMD160 (gitea-1.13.4.tar.gz) = 2684da2d24da276bfc29b2419cb0a1e69bca7a70
 SHA512 (gitea-1.13.4.tar.gz) = cddd1679b9bb9801fd9415ac07610b28bbd5ffb52cc9edbc3f47705c81e4c33c16c3b51725e1bbbf4a56ac53047d0a5c57e5214e65ea4c66589c3cebf2ee1bda
