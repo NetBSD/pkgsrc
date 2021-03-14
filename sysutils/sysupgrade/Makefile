@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/10/21 21:34:21 kamil Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/14 08:44:01 nia Exp $
 
 DISTNAME=	sysupgrade-1.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 MAINTAINER=	jmmv@NetBSD.org
