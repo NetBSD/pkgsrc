@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/17 08:07:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/14 18:15:16 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go116/AUTHORS
@@ -282,6 +282,9 @@ go116/misc/cgo/testplugin/testdata/issue25756/plugin/life.go
 go116/misc/cgo/testplugin/testdata/issue25756/plugin/life.h
 go116/misc/cgo/testplugin/testdata/method/main.go
 go116/misc/cgo/testplugin/testdata/method/plugin.go
+go116/misc/cgo/testplugin/testdata/method2/main.go
+go116/misc/cgo/testplugin/testdata/method2/p/p.go
+go116/misc/cgo/testplugin/testdata/method2/plugin.go
 go116/misc/cgo/testplugin/testdata/plugin1/plugin1.go
 go116/misc/cgo/testplugin/testdata/plugin2/plugin2.go
 go116/misc/cgo/testplugin/testdata/sub/plugin1/plugin1.go
@@ -2230,6 +2233,7 @@ go116/src/cmd/go/testdata/script/mod_replace_readonly.txt
 go116/src/cmd/go/testdata/script/mod_require_exclude.txt
 go116/src/cmd/go/testdata/script/mod_retention.txt
 go116/src/cmd/go/testdata/script/mod_retract.txt
+go116/src/cmd/go/testdata/script/mod_retract_fix_version.txt
 go116/src/cmd/go/testdata/script/mod_retract_incompatible.txt
 go116/src/cmd/go/testdata/script/mod_retract_pseudo_base.txt
 go116/src/cmd/go/testdata/script/mod_retract_rationale.txt
@@ -9148,6 +9152,10 @@ go116/test/fixedbugs/issue4396b.go
 go116/test/fixedbugs/issue4399.go
 go116/test/fixedbugs/issue4405.go
 go116/test/fixedbugs/issue4429.go
+go116/test/fixedbugs/issue44355.dir/a.go
+go116/test/fixedbugs/issue44355.dir/b.go
+go116/test/fixedbugs/issue44355.go
+go116/test/fixedbugs/issue44378.go
 go116/test/fixedbugs/issue4448.go
 go116/test/fixedbugs/issue4452.go
 go116/test/fixedbugs/issue4458.go
