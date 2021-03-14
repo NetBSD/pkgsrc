@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/12/15 00:09:25 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/14 11:44:12 nia Exp $
 
-DISTNAME=	aiomixer-1.0.1
+DISTNAME=	aiomixer-1.0.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=niacat/}
 
