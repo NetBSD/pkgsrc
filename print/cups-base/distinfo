@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2021/02/06 15:22:58 dbj Exp $
+$NetBSD: distinfo,v 1.27 2021/03/14 08:43:31 wiz Exp $
 
-SHA1 (cups-2.3.3op1-source.tar.gz) = a4cdab174881d4e6899fbbef637508bed10c5dc9
-RMD160 (cups-2.3.3op1-source.tar.gz) = 6dab18506dfac295c16e4341eb6257f3c01d951e
-SHA512 (cups-2.3.3op1-source.tar.gz) = 89949b4190288d5464f425cbff6b854e9da96ba3071e4e0d595ad581797b2db4724f49d884f3ea43e372ed4d0faec72839b0b7182cdde13b96f2824d619a4843
-Size (cups-2.3.3op1-source.tar.gz) = 7989156 bytes
+SHA1 (cups-2.3.3op2-source.tar.gz) = 23108e0f6ca7d8caa1a6a6224f5322e21ba0a27d
+RMD160 (cups-2.3.3op2-source.tar.gz) = a2ed690fab3575ede399a2f54f908b1a9dc32ced
+SHA512 (cups-2.3.3op2-source.tar.gz) = db27dd6fb616bd7ad895b2bdf4ea7b010501358a50dc8f2e7e29558d1cfc088a572b1b35ac512654d3ed410c84df87dc34ca636533a4499117253915d4763117
+Size (cups-2.3.3op2-source.tar.gz) = 7993205 bytes
 SHA1 (patch-ae) = b81d7a2ce457f0d6994d6a084c63aa0a870bb881
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-airprint-conf_mime.convs.in) = e0813b7e1da2337191bc6bfc2a6888f4173b8717
@@ -14,7 +14,7 @@ SHA1 (patch-at) = 9517bff0bf2c892f0723a25f243ba188f7781393
 SHA1 (patch-conf-cups-files.conf.in) = b2eccf54e108d8c9e70094acfd9618a66779a84a
 SHA1 (patch-conf_Makefile) = ba1c6f9e5c1bb8074038f65f4d17bf55e556738e
 SHA1 (patch-config-scripts_cups-compiler.m4) = 71c706121fdf7db699a9b9365ac63779e3c23f67
-SHA1 (patch-config-scripts_cups-directories.m4) = 68ff0c9ed333d5b00d11694fca7875c83bf9197d
+SHA1 (patch-config-scripts_cups-directories.m4) = ccc795b12064e15b8c325ef39e3b4adfabed407a
 SHA1 (patch-config-scripts_cups-gssapi.m4) = 965e54194de9f34f0f252f4993dcf8a8db935003
 SHA1 (patch-config-scripts_cups-libtool.m4) = d255bda2b740a04167e20be1662e3b9c242ed8f2
 SHA1 (patch-cups-tls.c) = b02bc528b6d551283373f271529d6f1956e1c7df

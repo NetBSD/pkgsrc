@@ -1,4 +1,4 @@
-#$NetBSD: Makefile,v 1.9 2021/01/04 22:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/14 08:43:31 wiz Exp $
 
 .include "../../print/cups/Makefile.common"
 
