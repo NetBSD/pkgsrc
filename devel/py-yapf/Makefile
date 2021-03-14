@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/18 08:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/14 08:23:15 adam Exp $
 
-DISTNAME=	yapf-0.30.0
+DISTNAME=	yapf-0.31.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
@@ -13,7 +13,10 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/yapf ${DESTDIR}${PREFIX}/bin/yapf-${PYVERSSUFFIX}
+.for bin in yapf yapf-diff
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
