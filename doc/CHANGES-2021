@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1642 2021/03/14 08:25:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1643 2021/03/14 08:37:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2511,3 +2511,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libxkbcommon to 1.1.0 [wiz 2021-03-14]
 	Updated devel/py-yapf to 0.31.0 [adam 2021-03-14]
 	Updated devel/py-xdis to 5.0.8 [adam 2021-03-14]
+	Updated print/cups-pdf to 3.0.1nb1 [wiz 2021-03-14]
