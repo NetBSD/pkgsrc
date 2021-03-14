@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/12 23:53:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/14 19:01:33 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -37,6 +37,9 @@ ${PYSITELIB}/approvaltests/core/scenario_namer.pyo
 ${PYSITELIB}/approvaltests/core/writer.py
 ${PYSITELIB}/approvaltests/core/writer.pyc
 ${PYSITELIB}/approvaltests/core/writer.pyo
+${PYSITELIB}/approvaltests/existing_file_writer.py
+${PYSITELIB}/approvaltests/existing_file_writer.pyc
+${PYSITELIB}/approvaltests/existing_file_writer.pyo
 ${PYSITELIB}/approvaltests/file_approver.py
 ${PYSITELIB}/approvaltests/file_approver.pyc
 ${PYSITELIB}/approvaltests/file_approver.pyo
