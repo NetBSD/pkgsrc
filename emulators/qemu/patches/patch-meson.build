@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
+$NetBSD: patch-meson.build,v 1.4 2021/03/14 11:16:45 reinoud Exp $
 
 * Add NetBSD support.
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
@@ -23,18 +23,20 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
  cocoa = not_found
  hvf = not_found
  if targetos == 'windows'
-@@ -196,6 +198,10 @@ elif targetos == 'openbsd'
+@@ -196,6 +198,12 @@ elif targetos == 'openbsd'
      # Disable OpenBSD W^X if available
      emulator_link_args = cc.get_supported_link_arguments('-Wl,-z,wxneeded')
    endif
 +elif targetos == 'netbsd'
 +  if not get_option('nvmm').disabled()
-+    nvmm = cc.find_library('nvmm')
++    if cc.has_header('nvmm.h')
++      nvmm = cc.find_library('nvmm')
++    endif
 +  endif
  endif
  
  accelerators = []
-@@ -228,6 +234,11 @@ if not get_option('hax').disabled()
+@@ -228,6 +236,11 @@ if not get_option('hax').disabled()
      accelerators += 'CONFIG_HAX'
    endif
  endif
@@ -46,7 +48,7 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
  if not get_option('tcg').disabled()
    if cpu not in supported_cpus
      if 'CONFIG_TCG_INTERPRETER' in config_host
-@@ -246,6 +257,9 @@ endif
+@@ -246,6 +259,9 @@ endif
  if 'CONFIG_HVF' not in accelerators and get_option('hvf').enabled()
    error('HVF not available on this platform')
  endif
@@ -56,7 +58,7 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
  if 'CONFIG_WHPX' not in accelerators and get_option('whpx').enabled()
    error('WHPX not available on this platform')
  endif
-@@ -517,7 +531,7 @@ if have_system and not get_option('curse
+@@ -517,7 +533,7 @@ if have_system and not get_option('curse
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -65,7 +67,7 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
                                      required: false,
-@@ -535,7 +549,7 @@ if have_system and not get_option('curse
+@@ -535,7 +551,7 @@ if have_system and not get_option('curse
      endif
    endif
    if not get_option('iconv').disabled()
@@ -74,7 +76,7 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
        # We need to use libiconv if available because mixing libiconv's headers with
        # the system libc does not work.
-@@ -1815,7 +1829,7 @@ foreach target : target_dirs
+@@ -1815,7 +1831,7 @@ foreach target : target_dirs
        'name': 'qemu-system-' + target_name,
        'gui': false,
        'sources': files('softmmu/main.c'),
@@ -83,7 +85,7 @@ $NetBSD: patch-meson.build,v 1.3 2021/03/06 21:50:34 leot Exp $
      }]
      if targetos == 'windows' and (sdl.found() or gtk.found())
        execs += [{
-@@ -2106,6 +2120,7 @@ summary_info += {'Install blobs':     ge
+@@ -2106,6 +2122,7 @@ summary_info += {'Install blobs':     ge
  summary_info += {'KVM support':       config_all.has_key('CONFIG_KVM')}
  summary_info += {'HAX support':       config_all.has_key('CONFIG_HAX')}
  summary_info += {'HVF support':       config_all.has_key('CONFIG_HVF')}

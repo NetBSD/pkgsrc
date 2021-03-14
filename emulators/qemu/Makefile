@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.266 2021/03/06 21:50:34 leot Exp $
+# $NetBSD: Makefile,v 1.267 2021/03/14 11:16:45 reinoud Exp $
 
 DISTNAME=	qemu-5.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bison flex gmake makeinfo perl:build pod2man pkg-config
+FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
@@ -173,6 +174,7 @@ post-install:
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -182,7 +184,6 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
