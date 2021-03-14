@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/03/06 19:00:43 js Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/03/14 21:21:13 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -619,6 +619,9 @@ ${PYSITELIB}/synapse/replication/http/membership.pyo
 ${PYSITELIB}/synapse/replication/http/presence.py
 ${PYSITELIB}/synapse/replication/http/presence.pyc
 ${PYSITELIB}/synapse/replication/http/presence.pyo
+${PYSITELIB}/synapse/replication/http/push.py
+${PYSITELIB}/synapse/replication/http/push.pyc
+${PYSITELIB}/synapse/replication/http/push.pyo
 ${PYSITELIB}/synapse/replication/http/register.py
 ${PYSITELIB}/synapse/replication/http/register.pyc
 ${PYSITELIB}/synapse/replication/http/register.pyo
@@ -1467,7 +1470,6 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/26access_token_last_
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/27local_invites.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28drop_last_used_column.sql.postgres
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28drop_last_used_column.sql.sqlite
-${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28rejected_events_metadata.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.py
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.pyc
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.pyo
@@ -1481,6 +1483,9 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06chain_cover_index.
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06shard_account_data.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06shard_account_data.sql.postgres
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/07shard_account_data_fix.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/08delete_pushers_for_deactivated_accounts.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/08delete_stale_pushers.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/09rejected_events_metadata.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
