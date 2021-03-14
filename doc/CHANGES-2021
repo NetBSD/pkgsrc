@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1653 2021/03/14 18:30:03 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.1654 2021/03/14 19:01:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed_curses to 0.9.9 [leot 2021-03-14]
 	Updated news/sfeed to 0.9.22 [leot 2021-03-14]
 	Updated lang/go116 to 1.16.2 [bsiegert 2021-03-14]
+	Updated devel/py-approvaltests to 0.3.2 [schmonz 2021-03-14]
