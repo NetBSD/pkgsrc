@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/03/04 09:59:11 leot Exp $
+$NetBSD: distinfo,v 1.6 2021/03/14 14:10:18 leot Exp $
 
-SHA1 (amass-3.11.8.tar.gz) = 46d80cc0fdc5c0322229a1ab342e77e5ebfb345e
-RMD160 (amass-3.11.8.tar.gz) = 015f63d61dbeae259d567301eb009e6b2e42418d
-SHA512 (amass-3.11.8.tar.gz) = 7d261eb84708f00434d4b307b5d0daa74be9226fb0c2fe7c29190f5708c5cc346b10f439ca69a9418511cf562ccbdf101bb434f24504b97f61b2eea9a65bb0b2
-Size (amass-3.11.8.tar.gz) = 32533263 bytes
+SHA1 (amass-3.11.9.tar.gz) = 32c002ed85bf28454f7aa52edd5cc76aca2049ee
+RMD160 (amass-3.11.9.tar.gz) = 99271c6f0604cdaff28097d2cb827d1d8ee1a601
+SHA512 (amass-3.11.9.tar.gz) = 0332c98c06bae5cdd82e134403ee9e32ea286f49358457673debe6f7bc2202bb255342f237038c668843a46fcfc5aa88f7a8d670e6874300facbb6534d98dce5
+Size (amass-3.11.9.tar.gz) = 32533058 bytes
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
