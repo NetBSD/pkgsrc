@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2021/02/28 00:04:11 morr Exp $
+@comment $NetBSD: PLIST,v 1.48 2021/03/14 17:01:33 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -173,6 +173,10 @@ share/wordpress/wp-admin/erase-personal-data.php
 share/wordpress/wp-admin/export-personal-data.php
 share/wordpress/wp-admin/export.php
 share/wordpress/wp-admin/freedoms.php
+share/wordpress/wp-admin/images/about-badge.svg
+share/wordpress/wp-admin/images/about-color-palette-vert.svg
+share/wordpress/wp-admin/images/about-color-palette.svg
+share/wordpress/wp-admin/images/about-header-brushes.svg
 share/wordpress/wp-admin/images/align-center-2x.png
 share/wordpress/wp-admin/images/align-center.png
 share/wordpress/wp-admin/images/align-left-2x.png
@@ -1098,12 +1102,12 @@ share/wordpress/wp-includes/blocks/calendar.php
 share/wordpress/wp-includes/blocks/calendar/block.json
 share/wordpress/wp-includes/blocks/categories.php
 share/wordpress/wp-includes/blocks/categories/block.json
-share/wordpress/wp-includes/blocks/classic/block.json
 share/wordpress/wp-includes/blocks/code/block.json
 share/wordpress/wp-includes/blocks/column/block.json
 share/wordpress/wp-includes/blocks/columns/block.json
 share/wordpress/wp-includes/blocks/embed/block.json
 share/wordpress/wp-includes/blocks/file/block.json
+share/wordpress/wp-includes/blocks/freeform/block.json
 share/wordpress/wp-includes/blocks/gallery/block.json
 share/wordpress/wp-includes/blocks/group/block.json
 share/wordpress/wp-includes/blocks/heading/block.json
@@ -1283,6 +1287,10 @@ share/wordpress/wp-includes/css/dist/block-editor/style-rtl.css
 share/wordpress/wp-includes/css/dist/block-editor/style-rtl.min.css
 share/wordpress/wp-includes/css/dist/block-editor/style.css
 share/wordpress/wp-includes/css/dist/block-editor/style.min.css
+share/wordpress/wp-includes/css/dist/block-library/common-rtl.css
+share/wordpress/wp-includes/css/dist/block-library/common-rtl.min.css
+share/wordpress/wp-includes/css/dist/block-library/common.css
+share/wordpress/wp-includes/css/dist/block-library/common.min.css
 share/wordpress/wp-includes/css/dist/block-library/editor-rtl.css
 share/wordpress/wp-includes/css/dist/block-library/editor-rtl.min.css
 share/wordpress/wp-includes/css/dist/block-library/editor.css
@@ -1408,6 +1416,8 @@ share/wordpress/wp-includes/functions.wp-scripts.php
 share/wordpress/wp-includes/functions.wp-styles.php
 share/wordpress/wp-includes/general-template.php
 share/wordpress/wp-includes/http.php
+share/wordpress/wp-includes/https-detection.php
+share/wordpress/wp-includes/https-migration.php
 share/wordpress/wp-includes/images/admin-bar-sprite-2x.png
 share/wordpress/wp-includes/images/admin-bar-sprite.png
 share/wordpress/wp-includes/images/arrow-pointer-blue-2x.png
@@ -1629,6 +1639,8 @@ share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-formdata.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-node-contains.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js
+share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-object-fit.js
+share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-url.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-url.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill.js
@@ -2017,6 +2029,7 @@ share/wordpress/wp-includes/rest-api/search/class-wp-rest-search-handler.php
 share/wordpress/wp-includes/rest-api/search/class-wp-rest-term-search-handler.php
 share/wordpress/wp-includes/revision.php
 share/wordpress/wp-includes/rewrite.php
+share/wordpress/wp-includes/robots-template.php
 share/wordpress/wp-includes/rss-functions.php
 share/wordpress/wp-includes/rss.php
 share/wordpress/wp-includes/script-loader.php
