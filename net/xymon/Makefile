@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2020/11/05 09:08:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2021/03/14 14:26:12 spz Exp $
 #
 
-DISTNAME=		xymon-4.3.29
+DISTNAME=		xymon-4.3.30
 #PKGREVISION=		0
-PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
@@ -136,10 +135,14 @@ USE_TOOLS+=	mv:run		rm:run		sed:run
 USE_TOOLS+=	sort:run	tail:run	touch:run
 USE_TOOLS+=	tr:run		wc:run		bash:run
 
-
 MAKE_DIRS+=		${XYMONTOPDIR}
 MAKE_DIRS+=		${XYMONHOME}
 
+MAKE_DIRS_PERMS+=	${EXAMPLEDIR}/www/help/manpages root wheel 0755
+MAKE_DIRS_PERMS+=	${EXAMPLEDIR}/www/help/manpages/man1 root wheel 0755
+MAKE_DIRS_PERMS+=	${EXAMPLEDIR}/www/help/manpages/man5 root wheel 0755
+MAKE_DIRS_PERMS+=	${EXAMPLEDIR}/www/help/manpages/man7 root wheel 0755
+MAKE_DIRS_PERMS+=	${EXAMPLEDIR}/www/help/manpages/man8 root wheel 0755
 
 OWN_DIRS_PERMS+=	${XYEXTDIR} ${XYMONUSER} ${XYMONGROUP} 0755
 OWN_DIRS_PERMS+=	${XYMONLOGDIR} ${XYMONUSER} ${XYMONGROUP} 0755
@@ -193,6 +196,8 @@ MAKE_ENV+=		${TOOLS_ENV}
 MENUFILES=		b2t-blue.gif b2t-grey.gif t2b-blue.gif t2b-grey.gif
 MENUFILES+=		xymonmenu-blue.css xymonmenu-grey.css
 
+MANDIRS=		man1 man5 man7 man8
+
 post-patch:
 	${CP} ${WRKSRC}/build/Makefile.FreeBSD \
 	      ${WRKSRC}/build/Makefile.DragonFly
@@ -200,6 +205,14 @@ post-patch:
 post-install:
 .for file in ${MENUFILES}
 	chmod 0644 ${DESTDIR}${EXAMPLEDIR}/www/menu/${file}
+.endfor
+
+	chmod 0755 ${DESTDIR}${EXAMPLEDIR}/www/help/manpages
+
+.for dir in ${MANDIRS}
+	chmod 0644 ${DESTDIR}${PREFIX}/${PKGMANDIR}/${dir}/*
+	chmod 0755 ${DESTDIR}${EXAMPLEDIR}/www/help/manpages/${dir}
+	chmod 0644 ${DESTDIR}${EXAMPLEDIR}/www/help/manpages/${dir}/*
 .endfor
 
 .include "options.mk"

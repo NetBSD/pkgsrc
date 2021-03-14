@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2019/11/24 20:16:55 spz Exp $
+$NetBSD: distinfo,v 1.19 2021/03/14 14:26:12 spz Exp $
 
-SHA1 (xymon-4.3.29.tar.gz) = faf18c75839b4ec0863cbf309651c54bb2890988
-RMD160 (xymon-4.3.29.tar.gz) = 5a1bac0ae5674db6e3d810a25597373fdc6b7238
-SHA512 (xymon-4.3.29.tar.gz) = 63db006baa0cf0a4e3b85d2cbe0a6e230f87922d0b9cc21792672a1551d40f60ea371a34337a93df248456731709a91bafdb630a219a25ba9d76043e54ded196
-Size (xymon-4.3.29.tar.gz) = 3548283 bytes
+SHA1 (xymon-4.3.30.tar.gz) = ae7a10fc9a9ddf64162dbc6150402f4d377fa325
+RMD160 (xymon-4.3.30.tar.gz) = 510fc85c87c30d39dcf4ccc31a334f66440b7bfb
+SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
+Size (xymon-4.3.30.tar.gz) = 3549653 bytes
 SHA1 (patch-aa) = 227b631c6e002712ebf6019d8473ca4b44904e4a
 SHA1 (patch-ab) = 39a6af51ec216bb8cbdb57a3c07d82fce559b27f
 SHA1 (patch-ac) = 518abacafb7f082ab2de6bcaace27d3e3d4de633
@@ -26,25 +26,8 @@ SHA1 (patch-build_rrd.sh) = cfafece75defb13b413917bfddedb41cb9bb3c8b
 SHA1 (patch-build_snmp.sh) = 4141c6e2bebea078ac662b7585e579f2af8ee64f
 SHA1 (patch-common_Makefile) = 32b7da06cd9d22f98ee0f83bb36ed6441c066707
 SHA1 (patch-configure) = 3754b9056c365b8664e5fc9620b17c4e13453b2e
-SHA1 (patch-lib_acklog.c) = 053e63b7b5d55345360c49279eacc7ae470cc3a4
-SHA1 (patch-lib_availability.c) = 04d6133f00811afd1aa1263a00ae6396df5202e3
-SHA1 (patch-lib_availability.h) = 89ac49779c9bd5090718dfdc24949c6eb67b5705
-SHA1 (patch-lib_eventlog.c) = b1b8ee4ffb211f2461cc3d6e3055d9ee045a4da0
-SHA1 (patch-lib_holidays.c) = 980d42b5780e37a483fde6a2059294e050abba85
-SHA1 (patch-lib_htmllog.c) = 7184ec5014f9b19916541b5ac4c7b7f393623a4d
-SHA1 (patch-lib_misc.c) = 2ee78934dfb5c25f78fc9c5400baadd3e2e7b70b
-SHA1 (patch-lib_stackio.c) = 6e97fde074ce41b39c29bf280c560b01d885f875
-SHA1 (patch-lib_timefunc.c) = 7e7d7e17252a8ea2e4b7d5bd8e5c2fa7247b9287
-SHA1 (patch-lib_tree.c) = 13f8d0d89cb0e0cb9e023734b60f9d67707b0a99
 SHA1 (patch-web_Makefile) = a27fbb7e97ce0c2f30093d5b05b0af2708fb594b
-SHA1 (patch-web_history.c) = cdddc0230efdb79dbae3055a93e252f43dc49524
-SHA1 (patch-web_reportlog.c) = 78068e40253ab295dced37368f19bf1bbe5bd747
-SHA1 (patch-web_showgraph.c) = 9c5542975ffd65aff9d2fd03a3d63fde10648ad4
 SHA1 (patch-xymond_client_netbsd.c) = 9034777cbf12e3e168cf1598bfd444468e3a5086
-SHA1 (patch-xymond_combostatus.c) = cce34cc01bfaba9f171e7d90d3ec398a97e4c4d5
 SHA1 (patch-xymond_rrd_do__disk.c) = e72cb0364e4e949e02a045da0abca46083624253
-SHA1 (patch-xymond_rrd_do__temperature.c) = bf78c81b6f189e6424574eae53921cf44d653a0d
 SHA1 (patch-xymond_rrd_do__vmstat.c) = 8062acc24e9b0e767c5abd3373641aa7b9a5b2ae
-SHA1 (patch-xymond_xymond__history.c) = 4fadebc1caaba9a0368de7626ed389040718d1ac
-SHA1 (patch-xymonnet_xymonnet.c) = 849cb3c3f3e673dc3927ce34195f9bc6c594d895
 SHA1 (patch-xymonproxy_Makefile) = 8ecfa4ceb66f66b7d5f40c01339479b26865746e
