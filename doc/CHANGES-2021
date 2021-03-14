@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1644 2021/03/14 08:40:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1645 2021/03/14 08:43:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2513,3 +2513,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-xdis to 5.0.8 [adam 2021-03-14]
 	Updated print/cups-pdf to 3.0.1nb1 [wiz 2021-03-14]
 	Updated print/mpage to 2.5.7nb1 [wiz 2021-03-14]
+	Updated print/cups to 2.3.3op2 [wiz 2021-03-14]
