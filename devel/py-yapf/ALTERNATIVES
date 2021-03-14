@@ -1,1 +1,2 @@
 bin/yapf @PREFIX@/bin/yapf-@PYVERSSUFFIX@
+bin/yapf-diff @PREFIX@/bin/yapf-diff-@PYVERSSUFFIX@
