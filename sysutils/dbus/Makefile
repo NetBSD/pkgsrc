@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2020/07/17 23:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2021/03/14 08:31:17 nia Exp $
 
 DISTNAME=	dbus-1.12.20
 CATEGORIES=	sysutils
@@ -28,9 +28,11 @@ SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROU
 SMF_METHODS=	dbus
 SMF_NAME=	dbus
 
-MESSAGE_SRC+=	MESSAGE
-
 .include "../../mk/bsd.prefs.mk"
+
+.if ${INIT_SYSTEM} == "rc.d"
+MESSAGE_SRC+=	MESSAGE.rcd
+.endif
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
