@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1648 2021/03/14 11:44:37 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1649 2021/03/14 13:35:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2517,3 +2517,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/pointfree version 1.1.1.7 [pho 2021-03-14]
 	Updated emulators/qemu to version 5.2.0nb3 [reinoud 2021-03-14]
 	Updated audio/aiomixer to 1.0.2 [nia 2021-03-14]
+	Updated net/youtube-dl to 20210314 [leot 2021-03-14]
