@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.rcd,v 1.1 2021/03/14 08:31:17 nia Exp $
+
+You should enable the dbus system-wide daemon for correct operation. Use:
+
+$ cp ${PREFIX}/share/examples/rc.d/dbus /etc/rc.d/dbus
+
+Edit /etc/rc.conf to set dbus=YES.
+
+===========================================================================
