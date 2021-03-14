@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/18 08:42:49 leot Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/14 08:23:15 adam Exp $
 bin/yapf-${PYVERSSUFFIX}
+bin/yapf-diff-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
