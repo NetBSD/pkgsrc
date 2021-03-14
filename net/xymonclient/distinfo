@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2019/11/24 20:16:55 spz Exp $
+$NetBSD: distinfo,v 1.18 2021/03/14 14:26:12 spz Exp $
 
-SHA1 (xymon-4.3.29.tar.gz) = faf18c75839b4ec0863cbf309651c54bb2890988
-RMD160 (xymon-4.3.29.tar.gz) = 5a1bac0ae5674db6e3d810a25597373fdc6b7238
-SHA512 (xymon-4.3.29.tar.gz) = 63db006baa0cf0a4e3b85d2cbe0a6e230f87922d0b9cc21792672a1551d40f60ea371a34337a93df248456731709a91bafdb630a219a25ba9d76043e54ded196
-Size (xymon-4.3.29.tar.gz) = 3548283 bytes
+SHA1 (xymon-4.3.30.tar.gz) = ae7a10fc9a9ddf64162dbc6150402f4d377fa325
+RMD160 (xymon-4.3.30.tar.gz) = 510fc85c87c30d39dcf4ccc31a334f66440b7bfb
+SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
+Size (xymon-4.3.30.tar.gz) = 3549653 bytes
 SHA1 (patch-aa) = c44f791ef6005c809127175cb563bd8f0ac74642
 SHA1 (patch-ab) = db0c5808cfad75aaf37217509399597191236180
 SHA1 (patch-ac) = d1694c2b67e6f2ae616b2a46de1a01d3199b45f5
