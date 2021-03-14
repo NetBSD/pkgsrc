@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.218 2020/12/03 12:27:38 nia Exp $
+# $NetBSD: Makefile,v 1.219 2021/03/14 07:58:20 wiz Exp $
 
-DISTNAME=	gnutls-3.7.0
+DISTNAME=	gnutls-3.7.1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -33,18 +33,16 @@ CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 .include "options.mk"
 
+# one failure as of 3.7.1
+# https://gitlab.com/gnutls/gnutls/-/issues/1190
 TEST_TARGET=		check
 
 INFO_FILES=		yes
 
-REPLACE_BASH+=		tests/cert-tests/certtool
 REPLACE_BASH+=		tests/danetool.sh
 REPLACE_BASH+=		tests/fastopen.sh
 REPLACE_BASH+=		tests/gnutls-cli-debug.sh
-REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
-REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
 REPLACE_BASH+=		tests/starttls.sh
-REPLACE_BASH+=		tests/cert-tests/pkcs12-utf8
 
 REPLACE_PERL+=		doc/scripts/gdoc doc/scripts/sort2.pl
 
