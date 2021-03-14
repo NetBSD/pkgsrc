@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/03/06 19:00:43 js Exp $
+$NetBSD: distinfo,v 1.13 2021/03/14 21:21:13 js Exp $
 
-SHA1 (matrix-synapse-1.28.0.tar.gz) = 814c5b6cb75f6fb85c1e6aa14af34108892eb1b1
-RMD160 (matrix-synapse-1.28.0.tar.gz) = 5b1d1c672d513ffa32c73782f9fc84542cad0a65
-SHA512 (matrix-synapse-1.28.0.tar.gz) = a248154eec9df21d82c78dd2cd166b82f6f41a2fa86096d87374417043c1c5352cc0b08265c5af4fa9927b9c6e818d3633db5a03ef2430a4cfb71d41ecc7b39c
-Size (matrix-synapse-1.28.0.tar.gz) = 7184001 bytes
+SHA1 (matrix-synapse-1.29.0.tar.gz) = f5ac2224a03902a2dd0808edfe4dcc8cad5f58c6
+RMD160 (matrix-synapse-1.29.0.tar.gz) = 9dff6604f84ca48aa24783177538268164643aeb
+SHA512 (matrix-synapse-1.29.0.tar.gz) = ee12f673854d2bce7ef5c8e288583a15056033c6c42dc07f1bc86bac66148e0da9f36c5e84d7a41b6366e41c3e8392dc8a69f5f0fd12f14ffa09dc1bff01f596
+Size (matrix-synapse-1.29.0.tar.gz) = 7198706 bytes
