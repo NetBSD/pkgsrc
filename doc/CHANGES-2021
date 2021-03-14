@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1638 2021/03/14 07:58:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1639 2021/03/14 08:03:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2506,3 +2506,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/sfm to 0.5.0 [pin 2021-03-13]
 	Updated mail/balsa to 2.6.2 [nia 2021-03-14]
 	Updated security/gnutls to 3.7.1 [wiz 2021-03-14]
+	Updated multimedia/dav1d to 0.8.2 [nia 2021-03-14]
