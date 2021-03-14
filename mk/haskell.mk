@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.27 2020/07/01 15:07:25 rillig Exp $
+# $NetBSD: haskell.mk,v 1.28 2021/03/14 08:19:24 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -113,6 +113,12 @@ _HASKELL_PKG_BIN=	${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc-pkg
 _HASKELL_VERSION_CMD=	${_HASKELL_BIN} -V 2>/dev/null | ${CUT} -d ' ' -f 8
 _HASKELL_VERSION=	ghc-${_HASKELL_VERSION_CMD:sh}
 
+# By default GHC uses a per-user default environment file if one is
+# available. Cabal has to be visible in order to compile Setup.?hs,
+# but per-user default environment files usually don't mark it as
+# visible. Tell GHC not to read any environment files.
+_HASKELL_BUILD_SETUP_OPTS=	-package-env -
+
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
 
@@ -207,8 +213,8 @@ WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
 # that didn't work.
 do-configure:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-		( ${_HASKELL_BIN:Q} --make Setup -dynamic || \
-			${_HASKELL_BIN:Q} --make Setup -static )
+		( ${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -dynamic || \
+			${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -static )
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
