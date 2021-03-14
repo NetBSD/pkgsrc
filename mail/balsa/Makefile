@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.162 2020/11/05 09:08:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.163 2021/03/14 07:43:47 nia Exp $
 
-DISTNAME=	balsa-2.6.1
-PKGREVISION=	5
+DISTNAME=	balsa-2.6.2
 CATEGORIES=	mail
 MASTER_SITES=	https://pawsa.fedorapeople.org/balsa/
 EXTRACT_SUFX=	.tar.bz2
@@ -40,6 +39,6 @@ CONFIGURE_ARGS+=	--with-sqlite
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/gtksourceview3/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
