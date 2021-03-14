@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.21 2020/11/26 12:31:33 ryoon Exp $
-
-COMMENT=		PDF backend for CUPS
+# $NetBSD: Makefile,v 1.22 2021/03/14 08:37:26 wiz Exp $
 
 DISTNAME=		cups-pdf-3.0.1
+PKGREVISION=		1
 CATEGORIES=		print
-
-HOMEPAGE=		https://www.cups-pdf.de/
 MASTER_SITES=		${HOMEPAGE}src/
 DISTFILES=		${DISTNAME:S/pdf-/pdf_/}.tar.gz
+
+HOMEPAGE=		https://www.cups-pdf.de/
+COMMENT=		PDF backend for CUPS
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		cups-base-[0-9]*:../../print/cups-base
 
 USE_TOOLS+=		perl:run
-REPLACE_PERL+=		contrib/cups-pdf-dispatch-0.1/cups-pdf-dispatch
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -32,7 +31,7 @@ INSTALLATION_DIRS+=	${PREFIX}/libexec/cups/backend \
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcups}/lib \
+	${CC} ${CFLAGS} ${LDFLAGS} ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcups}/lib \
 		-L${BUILDLINK_PREFIX.libcups}/lib \
 		-lcups \
 		-o src/cups-pdf src/cups-pdf.c
