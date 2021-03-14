@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
+$NetBSD: patch-aa,v 1.7 2021/03/14 08:40:46 wiz Exp $
 
---- Makefile.orig	2004-05-30 14:38:31.000000000 -0500
-+++ Makefile	2006-11-30 17:26:46.000000000 -0600
-@@ -24,7 +24,6 @@
+Fix build.
+
+--- Makefile.orig	2017-06-28 08:07:41.000000000 +0000
++++ Makefile
+@@ -32,7 +32,6 @@
  # Set this to an ANSI compatible C compiler (preferably gcc)
  # See also system specific settings below
  #CC=cc
@@ -10,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
  
  ############################################################################
  #
-@@ -40,7 +39,7 @@
+@@ -48,7 +47,7 @@ CC=gcc
  #  See glob.c for all possibilities
  #
  # PAGESIZE=Letter
@@ -19,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
  
  #
  # Define your spooler type
-@@ -50,11 +49,11 @@
+@@ -58,11 +57,11 @@ PAGESIZE=A4
  SPOOL_TYPE=BSD_SPOOLER
  
  # PREFIX=e:/usr		# OS/2 type
@@ -33,7 +35,7 @@ $NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
  
  #
  # A default encoding is given in encoding.h. Setting ENCODING=1 will
-@@ -106,8 +105,8 @@
+@@ -114,8 +113,8 @@ O = .o
  # Choose one of the following CFLAGS/CC definitions:
  # If you are using gcc, you probably don't need to change anything here.
  
@@ -44,7 +46,16 @@ $NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
  
  # AIX (xlC on aix 4):
  #CFLAGS = -O2 -s $(DEFS)
-@@ -181,7 +180,6 @@
+@@ -158,7 +157,7 @@ default:	mpage$(E) msample$(E) mpage.1
+ 	@echo Done!
+ 
+ mpage$(E):	$(MOBJ)
+-	$(CC) $(CFLAGS) -o mpage$(E) $(MOBJ) $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -o mpage$(E) $(MOBJ) $(LIBS)
+ 
+ msample$(E):	$(SOBJ)
+ 	$(CC) $(CFLAGS) -o msample$(E) $(SOBJ) $(LIBS)
+@@ -189,7 +188,6 @@ install:
  	if [ ! -d $(LIBDIR)/mpage ] ; then mkdir -p $(LIBDIR)/mpage ; fi
  	if [ ! -d $(BINDIR) ] ; then mkdir -p $(BINDIR) ; fi
  	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi

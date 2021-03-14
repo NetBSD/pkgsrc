@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2020/03/24 18:12:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/03/14 08:40:46 wiz Exp $
 
 SHA1 (mpage-2.5.7.tgz) = 38e01d9a53b77412e951da7fb8f040424b409f7c
 RMD160 (mpage-2.5.7.tgz) = 08518c16cc4e1790b677fd89f5ea610ac3b47c5f
 SHA512 (mpage-2.5.7.tgz) = e456e5daae7f6f395b34e5833baaeff74f5e00a0e61b780fcd600cdbe6455a9be8e0c9811ba21db167bea135de8e268fe4ede553e0a19630d5b854ec5620726b
 Size (mpage-2.5.7.tgz) = 87190 bytes
-SHA1 (patch-aa) = 2a48eb59e02842720be4320326123009ba67e3da
+SHA1 (patch-aa) = 83f67077bbb8aa4bcd6227489cb773975ad1e832
