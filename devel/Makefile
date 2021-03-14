@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3348 2021/03/12 15:02:38 tpaul Exp $
+# $NetBSD: Makefile,v 1.3349 2021/03/14 09:15:43 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -2148,6 +2148,7 @@ SUBDIR+=	pkgconf
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	poco
+SUBDIR+=	pointfree
 SUBDIR+=	polly
 SUBDIR+=	popt
 SUBDIR+=	poxml

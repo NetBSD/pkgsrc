@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/14 09:15:43 pho Exp $
+bin/pointfree
+@pkgdir lib/${PKGNAME}/ghc-8.8.4
