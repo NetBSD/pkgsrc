@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1639 2021/03/14 08:03:19 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1640 2021/03/14 08:16:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2507,3 +2507,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/balsa to 2.6.2 [nia 2021-03-14]
 	Updated security/gnutls to 3.7.1 [wiz 2021-03-14]
 	Updated multimedia/dav1d to 0.8.2 [nia 2021-03-14]
+	Updated devel/bison to 3.7.6 [wiz 2021-03-14]
