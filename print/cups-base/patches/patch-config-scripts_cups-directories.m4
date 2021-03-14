@@ -1,4 +1,4 @@
-$NetBSD: patch-config-scripts_cups-directories.m4,v 1.2 2020/05/26 08:36:56 triaxx Exp $
+$NetBSD: patch-config-scripts_cups-directories.m4,v 1.3 2021/03/14 08:43:31 wiz Exp $
 
 The '$' while loops expand the variables as long as possible so that no
 references to other variables occur. This is necessary because fontpath
@@ -9,7 +9,7 @@ loop.
 I'm also sure that this is not the Right Way to fix it, but at least it
 works.
 
---- config-scripts/cups-directories.m4.orig	2017-06-30 15:44:38.000000000 +0000
+--- config-scripts/cups-directories.m4.orig	2021-02-01 21:10:25.000000000 +0000
 +++ config-scripts/cups-directories.m4
 @@ -97,7 +97,7 @@ dnl Fix "libdir" variable...
  if test "$libdir" = "\${exec_prefix}/lib"; then
@@ -50,7 +50,7 @@ works.
  fi
  
  AC_SUBST(ICONDIR)
-@@ -194,7 +202,11 @@ AC_ARG_WITH(menudir, [  --with-menudir  
+@@ -194,7 +206,11 @@ AC_ARG_WITH(menudir, [  --with-menudir  
  if test "x$menudir" = x -a -d /usr/share/applications; then
  	MENUDIR="/usr/share/applications"
  else
@@ -63,7 +63,7 @@ works.
  fi
  
  AC_SUBST(MENUDIR)
-@@ -209,7 +226,15 @@ else
+@@ -209,7 +225,15 @@ else
  	CUPS_DOCROOT="$docdir"
  fi
  
@@ -134,9 +134,9 @@ works.
 +
 +if test x$serverbindir = x; then
  case "$host_os_name" in
- 	*bsd* | darwin*)
- 		# *BSD and Darwin (macOS)
-@@ -273,6 +315,10 @@ case "$host_os_name" in
+ 	*-gnu)
+ 		# GNUs
+@@ -278,6 +320,10 @@ case "$host_os_name" in
  		CUPS_SERVERBIN="$exec_prefix/lib/cups"
  		;;
  esac
@@ -147,7 +147,7 @@ works.
  
  AC_DEFINE_UNQUOTED(CUPS_SERVERBIN, "$CUPS_SERVERBIN")
  AC_SUBST(CUPS_SERVERBIN)
-@@ -280,7 +326,7 @@ AC_SUBST(INSTALL_SYSV)
+@@ -285,7 +331,7 @@ AC_SUBST(INSTALL_SYSV)
  
  # Configuration files
  CUPS_SERVERROOT="$sysconfdir/cups"
