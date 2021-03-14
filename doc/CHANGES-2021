@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1647 2021/03/14 11:18:23 reinoud Exp $
+$NetBSD: CHANGES-2021,v 1.1648 2021/03/14 11:44:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/cups to 2.3.3op2 [wiz 2021-03-14]
 	Added devel/pointfree version 1.1.1.7 [pho 2021-03-14]
 	Updated emulators/qemu to version 5.2.0nb3 [reinoud 2021-03-14]
+	Updated audio/aiomixer to 1.0.2 [nia 2021-03-14]
