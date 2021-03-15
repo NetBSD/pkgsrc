@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2020/10/27 08:58:13 nia Exp $
+# $NetBSD: options.mk,v 1.9 2021/03/15 18:25:21 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 PKG_OPTIONS_OPTIONAL_GROUPS=	fpu
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--with-cpu=altivec
 .elif !empty(PKG_OPTIONS:Mmpg123-neon64)
 CONFIGURE_ARGS+=	--with-cpu=neon64
 .elif !empty(PKG_OPTIONS:Mmpg123-aarch64)
-CONFIGURE_ARGS+=	--with-cup=aarch64
+CONFIGURE_ARGS+=	--with-cpu=aarch64
 .else
 CONFIGURE_ARGS+=	--with-cpu=generic_nofpu
 .endif
