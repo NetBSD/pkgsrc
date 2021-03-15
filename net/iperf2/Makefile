@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/03/15 16:44:32 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/15 17:00:06 gdt Exp $
 
+# Upstream has newer files but no newer actual releases.
+# https://sourceforge.net/p/iperf2/tickets/102/
 DISTNAME=	iperf-2.0.13
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf2/}
