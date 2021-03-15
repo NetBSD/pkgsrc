@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1656 2021/03/15 05:30:50 mrg Exp $
+$NetBSD: CHANGES-2021,v 1.1657 2021/03/15 07:23:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2525,3 +2525,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 0.3.2 [schmonz 2021-03-14]
 	Updated net/stagit-gopher to 0.9.5 [leot 2021-03-14]
 	Updated chat/ircII to 20210314 [mrg 2021-03-14]
+	Updated devel/py-configargparse to 1.4 [adam 2021-03-15]
+	Updated devel/py-flakes to 2.3.0 [adam 2021-03-15]
+	Updated textproc/py-xmlschema to 1.5.3 [adam 2021-03-15]
+	Updated devel/py-codestyle to 2.7.0 [adam 2021-03-15]
+	Updated devel/py-flake8 to 3.9.0 [adam 2021-03-15]
