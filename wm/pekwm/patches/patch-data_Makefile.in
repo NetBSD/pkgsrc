@@ -1,0 +1,15 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2021/03/15 11:51:00 nia Exp $
+
+Install config files to examples.
+
+--- data/Makefile.in.orig	2020-11-01 17:07:43.000000000 +0000
++++ data/Makefile.in
+@@ -339,7 +339,7 @@ EXTRA_DIST = autoproperties autoproperti
+ 	start vars \
+ 	CMakeLists.txt
+ 
+-cfgdatadir = $(sysconfdir)/pekwm
++cfgdatadir = @datadir@/examples/@PACKAGE@
+ cfgdata_DATA = autoproperties autoproperties_typerules \
+ 	config config_system \
+ 	keys menu \
