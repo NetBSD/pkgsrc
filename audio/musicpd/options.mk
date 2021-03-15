@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2020/04/15 08:48:13 wiz Exp $
+# $NetBSD: options.mk,v 1.37 2021/03/15 13:15:56 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -17,6 +17,7 @@ PKG_SUPPORTED_OPTIONS+=	avahi curl dbus libmms samba shout upnp
 PKG_SUPPORTED_OPTIONS+=	cdparanoia chromaprint musicpd-soundcloud libmpdclient
 
 PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg libao musepack samplerate shout vorbis
+PKG_SUGGESTED_OPTIONS+=	wavpack
 
 PKG_OPTIONS_LEGACY_OPTS+=	game-music-emu:libgme
 

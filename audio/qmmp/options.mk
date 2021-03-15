@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2019/10/01 12:43:04 nia Exp $
+# $NetBSD: options.mk,v 1.2 2021/03/15 13:15:56 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmmp
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
 PKG_SUPPORTED_OPTIONS+=		ffmpeg musepack wavpack
-PKG_SUGGESTED_OPTIONS+=		ffmpeg
+PKG_SUGGESTED_OPTIONS+=		ffmpeg wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.options.mk"
