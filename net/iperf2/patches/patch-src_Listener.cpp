@@ -1,13 +1,15 @@
-$NetBSD: patch-src_Listener.cpp,v 1.1 2021/03/15 16:44:32 gdt Exp $
+$NetBSD: patch-src_Listener.cpp,v 1.2 2021/03/15 17:00:06 gdt Exp $
 
 Fix bug where the standards-specificed IPV6_JOIN_GROUP is not used.
 See https://tools.ietf.org/html/rfc3493 on page 20.
 See https://pubs.opengroup.org/onlinepubs/9699919799/functions/V2_chap02.html#tag_15_10_16
 
+https://sourceforge.net/p/iperf2/tickets/103/
+
 Fix bug where setsockopt was used with int when it is defined to use
 unsigned char.  This should avoid bugs on BE machines.
 
-Not yet reported upstream.
+https://sourceforge.net/p/iperf2/tickets/104/
 
 --- src/Listener.cpp.orig	2019-01-22 20:31:17.000000000 +0000
 +++ src/Listener.cpp
