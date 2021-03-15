@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/02/07 06:30:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2021/03/15 12:20:57 nia Exp $
 
-DISTNAME=	qmmp-1.4.2
-PKGREVISION=	2
+DISTNAME=	qmmp-1.4.4
 CATEGORIES=	audio
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/
 EXTRACT_SUFX=	.tar.bz2
