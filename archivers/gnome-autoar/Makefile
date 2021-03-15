@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/11/04 12:27:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/15 14:52:10 cirnatdan Exp $
 
-DISTNAME=	gnome-autoar-0.2.4
+DISTNAME=	gnome-autoar-0.3.1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-autoar
 COMMENT=	GLib wrapper around libarchive
 LICENSE=	gnu-lgpl-v2.1
