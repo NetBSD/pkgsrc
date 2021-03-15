@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1669 2021/03/15 18:57:03 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.1670 2021/03/15 20:02:16 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/gnome-autoar to 0.3.1 [cirnatdan 2021-03-15]
 	Added net/iperf2 version 2.0.13 [gdt 2021-03-15]
 	Removed net/iperf successor net/iperf2 [gdt 2021-03-15]
+	Updated sysutils/auto-admin to 0.7.1 [bacon 2021-03-15]
