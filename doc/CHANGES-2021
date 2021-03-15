@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1657 2021/03/15 07:23:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1658 2021/03/15 11:05:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2530,3 +2530,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.5.3 [adam 2021-03-15]
 	Updated devel/py-codestyle to 2.7.0 [adam 2021-03-15]
 	Updated devel/py-flake8 to 3.9.0 [adam 2021-03-15]
+	Updated multimedia/lightspark to 0.8.4.1 [nia 2021-03-15]
