@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2020/12/06 11:18:40 nia Exp $
+# $NetBSD: Makefile.common,v 1.48 2021/03/15 19:32:21 markd Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -70,7 +70,7 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 	"${PKGPATH}" != "x11/qt5-mysql" && "${PKGPATH}" != "x11/qt5-psql" && \
 	"${PKGPATH}" != "x11/qt5-qtwayland"
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile ${QMAKE_ARGS}
 .endif
 
 .if ${OPSYS} == "Darwin"
