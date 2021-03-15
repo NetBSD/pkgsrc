@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/12 06:58:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/15 12:08:11 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pep517/__init__.py
 ${PYSITELIB}/pep517/__init__.pyc
 ${PYSITELIB}/pep517/__init__.pyo
-${PYSITELIB}/pep517/_in_process.py
-${PYSITELIB}/pep517/_in_process.pyc
-${PYSITELIB}/pep517/_in_process.pyo
 ${PYSITELIB}/pep517/build.py
 ${PYSITELIB}/pep517/build.pyc
 ${PYSITELIB}/pep517/build.pyo
@@ -24,6 +21,12 @@ ${PYSITELIB}/pep517/dirtools.pyo
 ${PYSITELIB}/pep517/envbuild.py
 ${PYSITELIB}/pep517/envbuild.pyc
 ${PYSITELIB}/pep517/envbuild.pyo
+${PYSITELIB}/pep517/in_process/__init__.py
+${PYSITELIB}/pep517/in_process/__init__.pyc
+${PYSITELIB}/pep517/in_process/__init__.pyo
+${PYSITELIB}/pep517/in_process/_in_process.py
+${PYSITELIB}/pep517/in_process/_in_process.pyc
+${PYSITELIB}/pep517/in_process/_in_process.pyo
 ${PYSITELIB}/pep517/meta.py
 ${PYSITELIB}/pep517/meta.pyc
 ${PYSITELIB}/pep517/meta.pyo
