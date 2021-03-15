@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/03/15 13:32:35 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2021/03/15 13:35:42 gdt Exp $
 
 DISTNAME=	bup-0.32
 CATEGORIES=	sysutils
@@ -36,6 +36,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_ACCEPTED=	27	# py-fuse-bindings
 
