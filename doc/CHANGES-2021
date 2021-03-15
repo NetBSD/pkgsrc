@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1660 2021/03/15 11:34:57 micha Exp $
+$NetBSD: CHANGES-2021,v 1.1661 2021/03/15 11:51:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2533,3 +2533,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/lightspark to 0.8.4.1 [nia 2021-03-15]
 	Updated www/luakit to 2.3 [nia 2021-03-15]
 	Updated games/woof to 4.0.1 [micha 2021-03-15]
+	Updated wm/pekwm to 0.1.18 [nia 2021-03-15]
