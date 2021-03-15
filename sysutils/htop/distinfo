@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.12 2018/11/05 12:19:23 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2021/03/15 22:23:58 fox Exp $
 
-SHA1 (htop-2.2.0.tar.gz) = 5da790e6addf495edc4d8ed7d69d1f0de085c7ad
-RMD160 (htop-2.2.0.tar.gz) = 4d89c35c22c5e6377d374af0e0ff68610b22c79f
-SHA512 (htop-2.2.0.tar.gz) = ec1335bf0e3e0387e5e50acbc508d0effad19c4bc1ac312419dc97b82901f4819600d6f87a91668f39d429536d17304d4b14634426a06bec2ecd09df24adc62e
-Size (htop-2.2.0.tar.gz) = 308109 bytes
-SHA1 (patch-configure) = b7205e0d3466d89be4ab4fb29676091c05b599b1
+SHA1 (htop-3.0.5.tar.gz) = de974e38e2c8d5900a4ab363111cb0544d391547
+RMD160 (htop-3.0.5.tar.gz) = 0963f4f94abaae2b2fa949c6a84b872415321421
+SHA512 (htop-3.0.5.tar.gz) = 7dae83ceff6b3f30e69c30c9559dbb3bf69281df006c6a26e4e2c49dd5a147e05ed7bafeeac8ec5bedc8ba670470100cc128209a92654858f98df09a9394594f
+Size (htop-3.0.5.tar.gz) = 297931 bytes
+SHA1 (patch-configure.ac) = c85ea20944869c910f65893f909729dfd4d7cf7f
+SHA1 (patch-linux_LinuxProcess.c) = 8fcf67c3f8b9ae05f61b5cac8a7dac103610fc5b
 SHA1 (patch-linux_Platform.c) = d37f4f5116023fa8d8f58f6b925e4f86e9748cea
+SHA1 (patch-linux_SELinuxMeter.c) = d5b479565f816e68e2d58ef535a3009f7da5262c
