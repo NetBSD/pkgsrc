@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/01/17 05:21:24 mrg Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/03/15 16:40:15 kleink Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -62,6 +62,7 @@ share/irc/help/bind/quit_irc${GZSUFFIX}
 share/irc/help/bind/quote_character${GZSUFFIX}
 share/irc/help/bind/refresh_inputline${GZSUFFIX}
 share/irc/help/bind/refresh_screen${GZSUFFIX}
+share/irc/help/bind/refresh_window_lastlog${GZSUFFIX}
 share/irc/help/bind/scroll_backward${GZSUFFIX}
 share/irc/help/bind/scroll_end${GZSUFFIX}
 share/irc/help/bind/scroll_forward${GZSUFFIX}
