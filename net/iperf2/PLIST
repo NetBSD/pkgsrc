@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/15 16:44:32 gdt Exp $
+bin/iperf
+man/man1/iperf.1
+share/doc/iperf/dast.gif
+share/doc/iperf/index.html
+share/doc/iperf/ui_license.html
