@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2020/12/03 22:23:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/03/15 11:04:55 nia Exp $
 
-SHA1 (lightspark-0.8.3.tar.gz) = 1e0a8bdf06593bce04d1f6f320c395577c5471f3
-RMD160 (lightspark-0.8.3.tar.gz) = 61cf25abf1906c35daa4579413ea0ab59b351d76
-SHA512 (lightspark-0.8.3.tar.gz) = 023d1872577445a857c77908bc2ec83ebfa086bc77161dfd22b53fc0c38eb5d94cd5bb5c5a7508dee2039d3b8479c917dcee089fe551a984ec5525a5ae781997
-Size (lightspark-0.8.3.tar.gz) = 2374990 bytes
+SHA1 (lightspark-0.8.4.1.tar.gz) = 2fe2579d00e9b84429df7b06c64a0aedfc62cfdb
+RMD160 (lightspark-0.8.4.1.tar.gz) = 188af57dc8405b6c3b7f84e1527a1199c54fd2f9
+SHA512 (lightspark-0.8.4.1.tar.gz) = 7878a38ccfbfa9ffbec320125f52baaaa93a582477b699e8151cbc638003e9fd6823f9dd542fda398f80aa823fff3967e4faa45566dadf17701c3269a81f4181
+Size (lightspark-0.8.4.1.tar.gz) = 2412533 bytes
 SHA1 (patch-CMakeLists.txt) = 0303a8e4af91b6db2faf4a9eb6ff98d90368e2c5
 SHA1 (patch-src_3rdparty_jxrlib_image_decode_segdec.c) = e263288ede1f11a780d438c0be836b0f33fef80e
 SHA1 (patch-src_backends_urlutils.cpp) = bd1e7584703a1045609b13b7379cf3eddcd13ef0
 SHA1 (patch-src_parsing_tags.cpp) = 951f2757ed68f6e0f5964df3fa944aeace4cbda3
-SHA1 (patch-src_platforms_engineutils.cpp) = d8ab1b6493c0b77125ab827e0700cc2c920026e4
+SHA1 (patch-src_platforms_engineutils.cpp) = 0105cdbb7d8802e2202976d99c8f3cabbb79932e
 SHA1 (patch-src_plugin__ppapi_plugin.cpp) = 52d76189aded5687ba5671623bdc919ebaffd5dd
 SHA1 (patch-src_swf.cpp) = 56630c2553c2ac7e7d83025850a2705bdefd1ce3
