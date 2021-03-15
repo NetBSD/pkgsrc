@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.297 2021/02/15 12:56:53 cjep Exp $
+# $NetBSD: bootstrap,v 1.298 2021/03/15 16:22:06 ryoon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -731,6 +731,11 @@ Linux)
 	i?86)		machine_arch=i386 ;;
 	ppc64le)	machine_arch=powerpc64le ;;
 	esac
+	;;
+MidnightBSD)
+	root_group=wheel
+	machine_arch=`uname -p`
+	check_compiler=yes
 	;;
 Minix)
 	root_group=wheel
