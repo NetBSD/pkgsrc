@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1655 2021/03/14 19:10:57 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1656 2021/03/15 05:30:50 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2524,3 +2524,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go116 to 1.16.2 [bsiegert 2021-03-14]
 	Updated devel/py-approvaltests to 0.3.2 [schmonz 2021-03-14]
 	Updated net/stagit-gopher to 0.9.5 [leot 2021-03-14]
+	Updated chat/ircII to 20210314 [mrg 2021-03-14]
