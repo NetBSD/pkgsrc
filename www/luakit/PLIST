@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/09 17:25:37 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/15 11:17:18 nia Exp $
 bin/luakit
 lib/luakit/luakit.so
 man/man1/luakit.1
@@ -37,6 +37,7 @@ share/doc/luakit/modules/binds_chrome.html
 share/doc/luakit/modules/bookmarks.html
 share/doc/luakit/modules/bookmarks_chrome.html
 share/doc/luakit/modules/chrome.html
+share/doc/luakit/modules/clear_data.html
 share/doc/luakit/modules/cmdhist.html
 share/doc/luakit/modules/completion.html
 share/doc/luakit/modules/domain_props.html
@@ -50,6 +51,7 @@ share/doc/luakit/modules/formfiller.html
 share/doc/luakit/modules/go_input.html
 share/doc/luakit/modules/go_next_prev.html
 share/doc/luakit/modules/go_up.html
+share/doc/luakit/modules/gopher.html
 share/doc/luakit/modules/help_chrome.html
 share/doc/luakit/modules/hide_scrollbars.html
 share/doc/luakit/modules/history.html
@@ -101,6 +103,7 @@ share/doc/luakit/modules/soup.html
 share/doc/luakit/modules/styles.html
 share/doc/luakit/modules/tab_favicons.html
 share/doc/luakit/modules/tabhistory.html
+share/doc/luakit/modules/tabmenu.html
 share/doc/luakit/modules/taborder.html
 share/doc/luakit/modules/tests.lib.html
 share/doc/luakit/modules/undoclose.html
@@ -132,6 +135,7 @@ share/luakit/lib/bookmarks.lua
 share/luakit/lib/bookmarks_chrome.lua
 share/luakit/lib/chrome.lua
 share/luakit/lib/chrome_wm.lua
+share/luakit/lib/clear_data.lua
 share/luakit/lib/cmdhist.lua
 share/luakit/lib/completion.lua
 share/luakit/lib/domain_props.lua
@@ -149,6 +153,7 @@ share/luakit/lib/formfiller_wm.lua
 share/luakit/lib/go_input.lua
 share/luakit/lib/go_next_prev.lua
 share/luakit/lib/go_up.lua
+share/luakit/lib/gopher.lua
 share/luakit/lib/help_chrome.lua
 share/luakit/lib/hide_scrollbars.lua
 share/luakit/lib/history.lua
@@ -198,6 +203,7 @@ share/luakit/lib/settings_chrome.lua
 share/luakit/lib/styles.lua
 share/luakit/lib/tab_favicons.lua
 share/luakit/lib/tabhistory.lua
+share/luakit/lib/tabmenu.lua
 share/luakit/lib/taborder.lua
 share/luakit/lib/undoclose.lua
 share/luakit/lib/unique_instance.lua
