@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2021/01/20 20:34:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.98 2021/03/15 14:51:01 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -497,9 +497,11 @@ share/doc/sqlite3/lang_expr.html
 share/doc/sqlite3/lang_indexedby.html
 share/doc/sqlite3/lang_insert.html
 share/doc/sqlite3/lang_keywords.html
+share/doc/sqlite3/lang_mathfunc.html
 share/doc/sqlite3/lang_naming.html
 share/doc/sqlite3/lang_reindex.html
 share/doc/sqlite3/lang_replace.html
+share/doc/sqlite3/lang_returning.html
 share/doc/sqlite3/lang_savepoint.html
 share/doc/sqlite3/lang_select.html
 share/doc/sqlite3/lang_transaction.html
@@ -620,6 +622,7 @@ share/doc/sqlite3/releaselog/3_32_3.html
 share/doc/sqlite3/releaselog/3_33_0.html
 share/doc/sqlite3/releaselog/3_34_0.html
 share/doc/sqlite3/releaselog/3_34_1.html
+share/doc/sqlite3/releaselog/3_35_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -801,6 +804,7 @@ share/doc/sqlite3/session/sqlite3session_diff.html
 share/doc/sqlite3/session/sqlite3session_enable.html
 share/doc/sqlite3/session/sqlite3session_indirect.html
 share/doc/sqlite3/session/sqlite3session_isempty.html
+share/doc/sqlite3/session/sqlite3session_memory_used.html
 share/doc/sqlite3/session/sqlite3session_patchset.html
 share/doc/sqlite3/session/sqlite3session_table_filter.html
 share/doc/sqlite3/sessionintro.html
@@ -868,6 +872,7 @@ share/doc/sqlite3/syntax/recursive-cte.html
 share/doc/sqlite3/syntax/reindex-stmt.html
 share/doc/sqlite3/syntax/release-stmt.html
 share/doc/sqlite3/syntax/result-column.html
+share/doc/sqlite3/syntax/returning-clause.html
 share/doc/sqlite3/syntax/rollback-stmt.html
 share/doc/sqlite3/syntax/savepoint-stmt.html
 share/doc/sqlite3/syntax/select-core.html
@@ -900,6 +905,7 @@ share/doc/sqlite3/undoredo.html
 share/doc/sqlite3/unionvtab.html
 share/doc/sqlite3/unlock_notify.html
 share/doc/sqlite3/uri.html
+share/doc/sqlite3/useovernet.html
 share/doc/sqlite3/vdbe.html
 share/doc/sqlite3/version3.html
 share/doc/sqlite3/versionnumbers.html
