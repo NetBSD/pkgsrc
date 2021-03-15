@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/12 06:36:42 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/03/15 07:20:35 adam Exp $
 
-SHA1 (pycodestyle-2.6.0.tar.gz) = b6dad24feff7e3eacb3f7f6044883b162836a8aa
-RMD160 (pycodestyle-2.6.0.tar.gz) = 7315d4bfe162b50095cd69ab8993173bf3d56180
-SHA512 (pycodestyle-2.6.0.tar.gz) = 3bf9904752170135ca399a1b25470a531adb5b85dfd8df7ffbbc86b5875bc3a507cd8732158bc9cb7fd5b44b48c9a32d63d621856d55a15bc3104a99ca4bd271
-Size (pycodestyle-2.6.0.tar.gz) = 100213 bytes
+SHA1 (pycodestyle-2.7.0.tar.gz) = 6244423bc4031118574be4197604e0d1d3811ee1
+RMD160 (pycodestyle-2.7.0.tar.gz) = febad3204558d07f9e90e3f93796bd8b5df06ce9
+SHA512 (pycodestyle-2.7.0.tar.gz) = 26502480e5855f0fd9378664ec813bb38dc2f8ac22e01767fc8bf75e52fa7a7691382fd4f6f1edaeb5f41d150ed71ee87e0d7f525bf06acbf4b3034cec3a227a
+Size (pycodestyle-2.7.0.tar.gz) = 103640 bytes
