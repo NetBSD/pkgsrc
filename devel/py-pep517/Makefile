@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/10/21 06:41:24 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/15 12:08:11 adam Exp $
 
-DISTNAME=	pep517-0.9.1
+DISTNAME=	pep517-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pep517/}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
