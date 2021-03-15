@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1664 2021/03/15 13:32:42 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1665 2021/03/15 14:52:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2538,3 +2538,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pep517 to 0.10.0 [adam 2021-03-15]
 	Updated audio/qmmp to 1.4.4 [nia 2021-03-15]
 	Updated sysutils/bup to 0.32 [gdt 2021-03-15]
+	Updated databases/sqlite3 to 3.35.0 [adam 2021-03-15]
+	Updated databases/sqlite3-docs to 3.35.0 [adam 2021-03-15]
+	Updated databases/sqlite3-tcl to 3.35.0 [adam 2021-03-15]
+	Updated devel/lemon to 1.0.3.35.0 [adam 2021-03-15]
