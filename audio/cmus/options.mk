@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2019/07/02 06:39:40 nia Exp $
+# $NetBSD: options.mk,v 1.23 2021/03/15 13:15:56 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 
@@ -9,6 +9,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 
 PKG_SUGGESTED_OPTIONS+=		faad flac libao mad modplug opus vorbis
+PKG_SUGGESTED_OPTIONS+=		wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 PKG_OPTIONS_LEGACY_OPTS+=	ao:libao

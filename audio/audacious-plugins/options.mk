@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.11 2019/07/20 10:39:18 nia Exp $
+# $NetBSD: options.mk,v 1.12 2021/03/15 13:15:56 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio lirc
 PKG_SUPPORTED_OPTIONS+=		adplug sidplay fluidsynth libgme modplug wavpack
+PKG_SUGGESTED_OPTIONS+=		wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa lirc
 PKG_OPTIONS_LEGACY_OPTS+=	sid:sidplay
 
