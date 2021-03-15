@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/01/21 20:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/15 14:57:01 adam Exp $
 
-DISTNAME=	pytest-xprocess-0.17.0
+DISTNAME=	pytest-xprocess-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-xprocess/}
