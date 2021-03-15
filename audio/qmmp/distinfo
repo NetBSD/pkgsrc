@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/12/03 22:32:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/03/15 12:20:57 nia Exp $
 
-SHA1 (qmmp-1.4.2.tar.bz2) = c3b6c9bfe54e93b44d4f026060190a204c61cc30
-RMD160 (qmmp-1.4.2.tar.bz2) = 3eeb5ec87a3c7ef7e08c41e47dea5ebce1b045df
-SHA512 (qmmp-1.4.2.tar.bz2) = 00ed0c4bd74dc50294c9d8e717f249a577fb26f5d4eb93dbc42c6c79964188fd885ab577904dea5aec31db0d2b828d7038febca1ffdfd2f4bfe81f931bbed7ff
-Size (qmmp-1.4.2.tar.bz2) = 1295867 bytes
+SHA1 (qmmp-1.4.4.tar.bz2) = 446f7fd6fd063a5fdf36735d3e0402798676b2bd
+RMD160 (qmmp-1.4.4.tar.bz2) = 24a09edbdf3ca948aca0869e2a89106b67097a65
+SHA512 (qmmp-1.4.4.tar.bz2) = 8500743918489f6dd98b42aaba4d8f5ab41ac5a78cb487d0d52574c9c43a395ab1d724b4c5e82b6821166016144d77f3e0a059e67c0a49638a3b301f7a52d8b0
+Size (qmmp-1.4.4.tar.bz2) = 1296348 bytes
