@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1670 2021/03/15 20:02:16 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1671 2021/03/15 22:24:30 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2548,3 +2548,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/iperf2 version 2.0.13 [gdt 2021-03-15]
 	Removed net/iperf successor net/iperf2 [gdt 2021-03-15]
 	Updated sysutils/auto-admin to 0.7.1 [bacon 2021-03-15]
+	Updated sysutils/htop to 3.0.5 [fox 2021-03-15]
