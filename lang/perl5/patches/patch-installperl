@@ -1,8 +1,11 @@
-$NetBSD: patch-installperl,v 1.1 2019/04/23 09:27:46 adam Exp $
+$NetBSD: patch-installperl,v 1.2 2021/03/15 14:23:12 ryoon Exp $
 
---- installperl.orig	2014-05-26 13:34:20.000000000 +0000
+Haiku part: From:
+https://github.com/haikuports/haikuports/blob/master/dev-lang/perl/patches/perl-5.32.0.patchset
+
+--- installperl.orig	2020-12-18 09:58:48.000000000 +0000
 +++ installperl
-@@ -332,7 +332,6 @@ $do_installprivlib = 0 if $versiononly &
+@@ -336,7 +336,6 @@ $do_installprivlib = 0 if $versiononly &
  mkpath($installprivlib);
  mkpath($installarchlib);
  mkpath($installsitelib, $opts{verbose}, 0777) if ($installsitelib);
@@ -10,3 +13,17 @@ $NetBSD: patch-installperl,v 1.1 2019/04/23 09:27:46 adam Exp $
  
  if (-d 'lib') {
      find({no_chdir => 1, wanted => \&installlib}, 'lib')
+@@ -382,6 +381,13 @@ elsif ($Is_Cygwin) { # On Cygwin symlink
+ 
+     # AIX needs perl.exp installed as well.
+     push(@corefiles,'perl.exp') if $^O eq 'aix';
++
++    # Haiku requires haikuish.h.
++    if ($^O eq 'haiku') {
++        # Haiku needs haikuish.h installed as well.
++        mkpath("$installarchlib/CORE/haiku", $opts{verbose}, 0777);
++        push(@corefiles,'haiku/haikuish.h');
++    }
+ }
+ 
+ 
