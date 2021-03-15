@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.51 2019/04/26 00:12:14 mrg Exp $
+$NetBSD: distinfo,v 1.52 2021/03/15 05:30:14 mrg Exp $
 
-SHA1 (ircii-20190117.tar.bz2) = 5e727cecd311117b0768586d37bf2126fb0fd7b7
-RMD160 (ircii-20190117.tar.bz2) = 2536c7783ca2ee9df0b49877858b65ccfc3e9bea
-SHA512 (ircii-20190117.tar.bz2) = 08ca96cd62bae35245b40791c8588752b96136b53e5c9434d0f7976d03841fca80e8c83cf8608aad79c381820b06e00167447c6dc0c6294c6b3dfd91a9fdb6d4
-Size (ircii-20190117.tar.bz2) = 606327 bytes
+SHA1 (ircii-20210314.tar.bz2) = 61830abe36ab02343862e296b858a3612aeb6a8a
+RMD160 (ircii-20210314.tar.bz2) = ec000f99e50a7a39b3822081bea5de46df220ec7
+SHA512 (ircii-20210314.tar.bz2) = 3dc3a4ddb000133907edb9b867ae7cb0b36488c875f5d4f56e70d7263cf042da6c429f60a8ed6cced89bca077aec42c9d992ea6b56b2ed8b4e91f125eeced310
+Size (ircii-20210314.tar.bz2) = 590626 bytes
 SHA1 (patch-Makefile.in) = 77fd2cfb1ef528faf03a3ef61c4802917fb6c8d5
-SHA1 (patch-source_server.c) = cfcaac144030c1c5ed907e940026dbdefc6897f4
