@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1666 2021/03/15 14:59:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1667 2021/03/15 17:01:57 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2544,3 +2544,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lemon to 1.0.3.35.0 [adam 2021-03-15]
 	Updated devel/py-test-xprocess to 0.17.1 [adam 2021-03-15]
 	Updated www/py-django-admin-sortable2 to 0.7.8 [adam 2021-03-15]
+	Updated archivers/gnome-autoar to 0.3.1 [dan 2021-03-15]
+	Updated archivers/gnome-autoar to 0.3.1 [dan 2021-03-15]
