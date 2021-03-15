@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/10/04 18:16:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/03/15 11:17:18 nia Exp $
 
-SHA1 (luakit-2.2.1.tar.gz) = a634f4e87aecf62a305284560ba15dbe1119e602
-RMD160 (luakit-2.2.1.tar.gz) = a0ac406989aa56e061d5a9e7722a85387bbe60de
-SHA512 (luakit-2.2.1.tar.gz) = 9a055c1541f31027805d3da2604d98c0193a9c2874099fc3ab3ef08c645a8e91b8504d1162e86cbd29a5e5e0a3c54b3154299708f864d135d8640bcc3866674b
-Size (luakit-2.2.1.tar.gz) = 488845 bytes
+SHA1 (luakit-2.3.tar.gz) = 7ef5847de005abc25a2b67ddf28d95d17070f0b9
+RMD160 (luakit-2.3.tar.gz) = f64c0aac01a869e82db5d6faf223de5ce525ffe8
+SHA512 (luakit-2.3.tar.gz) = f41121e1c47c020d90fe69f858b8c348f5c3ad752891abf2b94e5b44eebe3d5c8c315342c9aa4c53bbaef548f6ef2a1d0c522d877f0a20516734755967c0bb5c
+Size (luakit-2.3.tar.gz) = 497471 bytes
 SHA1 (patch-Makefile) = 8510a1de1c99244ce1f8cb925439921381692f3d
-SHA1 (patch-common_ipc.c) = bcaf0b83dac1b9e3af07883473c028f0dad1a696
