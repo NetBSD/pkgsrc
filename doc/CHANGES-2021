@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1662 2021/03/15 12:08:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1663 2021/03/15 12:21:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/pekwm to 0.1.18 [nia 2021-03-15]
 	Updated devel/py-radon to 4.5.0 [adam 2021-03-15]
 	Updated devel/py-pep517 to 0.10.0 [adam 2021-03-15]
+	Updated audio/qmmp to 1.4.4 [nia 2021-03-15]
