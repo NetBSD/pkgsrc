@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/02/16 20:43:19 adam Exp $
+$NetBSD: distinfo,v 1.13 2021/03/15 07:15:45 adam Exp $
 
-SHA1 (ConfigArgParse-1.3.tar.gz) = dee0bce3817b6bb48422dc3e134ebe21382ec117
-RMD160 (ConfigArgParse-1.3.tar.gz) = 6fe1570ae5281b93eee09f9e30cf8aa0b49be017
-SHA512 (ConfigArgParse-1.3.tar.gz) = dd562eaabe5a8e7da40ed7ae7732785721a0c39c0dc61df91ee94134c10f6a97f719499bf9e033494a5e4dcfa3817a81c54574f339a6cae565f37732e5f53b73
-Size (ConfigArgParse-1.3.tar.gz) = 43300 bytes
+SHA1 (ConfigArgParse-1.4.tar.gz) = 344e59dbaec570579e39d00f23544a7ca9376cc8
+RMD160 (ConfigArgParse-1.4.tar.gz) = 20e8c2eda9f3a0ec29652d747c264c0292d0a758
+SHA512 (ConfigArgParse-1.4.tar.gz) = 98d1bab8ae6cdd83a1287c7a240d04814a371a4317ba6b970157860d1c5f23151e10132da78a680306237a567b1421caf4cd9fe48468e4f04146eeeb2cc99e42
+Size (ConfigArgParse-1.4.tar.gz) = 45397 bytes
