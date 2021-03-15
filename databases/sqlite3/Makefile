@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2020/12/02 07:57:19 adam Exp $
+# $NetBSD: Makefile,v 1.139 2021/03/15 14:51:00 adam Exp $
 
 .include "Makefile.common"
 
@@ -31,6 +31,8 @@ CFLAGS.NetBSD+=		-DUSE_PREAD
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=		-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+
+CFLAGS+=		-DSQLITE_ENABLE_MATH_FUNCTIONS=1
 
 # This define includes the sqlite3_unlock_notify() API in the build.
 # It is required by Firefox 4.x.
