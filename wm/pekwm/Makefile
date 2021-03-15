@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/08/17 20:20:17 leot Exp $
+# $NetBSD: Makefile,v 1.58 2021/03/15 11:42:13 nia Exp $
 
 DISTNAME=	pekwm-0.1.17
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.pekwm.org/projects/pekwm/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	http://www.pekwm.org/
+HOMEPAGE=	https://www.pekwm.se/
 COMMENT=	Window manager based on aewm++
 LICENSE=	gnu-gpl-v2
 
