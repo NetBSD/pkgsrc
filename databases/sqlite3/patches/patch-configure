@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.5 2021/03/15 22:01:06 ryoon Exp $
+
+* Fix POSIX shell portability.
+
+--- configure.orig	2021-03-12 15:52:22.000000000 +0000
++++ configure
+@@ -13337,7 +13337,7 @@ else
+   enable_threadsafe=yes
+ fi
+ 
+-if test x"$enable_threadsafe" == "xno"; then
++if test x"$enable_threadsafe" = "xno"; then
+   BUILD_CFLAGS="$BUILD_CFLAGS -DSQLITE_THREADSAFE=0"
+ else
+   BUILD_CFLAGS="$BUILD_CFLAGS -D_REENTRANT=1 -DSQLITE_THREADSAFE=1"
