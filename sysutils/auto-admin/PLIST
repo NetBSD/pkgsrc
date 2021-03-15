@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/30 23:29:50 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/15 20:01:49 bacon Exp $
 sbin/auto-ad-adduser
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
@@ -61,7 +61,6 @@ sbin/auto-idrac-config
 sbin/auto-idrac-passwd
 sbin/auto-insert-line
 sbin/auto-install-infiniband-modules
-sbin/auto-install-linux-flash
 sbin/auto-install-linux_base
 sbin/auto-install-media-distname
 sbin/auto-install-packages
@@ -80,6 +79,7 @@ sbin/auto-mark-install-from-source
 sbin/auto-mark-package-critical
 sbin/auto-media-format
 sbin/auto-mount-any
+sbin/auto-mount-noautos
 sbin/auto-network-restart
 sbin/auto-nfs-add-share
 sbin/auto-nfs-client-setup
