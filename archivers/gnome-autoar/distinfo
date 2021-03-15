@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/11/04 12:27:58 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/03/15 14:52:10 cirnatdan Exp $
 
-SHA1 (gnome-autoar-0.2.4.tar.xz) = 2d09f406b0281d926bf53902e6c184c42467da41
-RMD160 (gnome-autoar-0.2.4.tar.xz) = 14e59e0b1f74ba4e12c139751120cc15b1136eab
-SHA512 (gnome-autoar-0.2.4.tar.xz) = 66750ae30bf9f59820f06653898eb33ac4edbb63976a02d15417118a068abd9292350220713813ddfdd1f2e77db7b3a8f8980f0c70a93d1bb87a9405e013de19
-Size (gnome-autoar-0.2.4.tar.xz) = 294956 bytes
+SHA1 (gnome-autoar-0.3.1.tar.xz) = 49120199a3c4fb0ae5dff933e65e7ac0cabca3d2
+RMD160 (gnome-autoar-0.3.1.tar.xz) = 0b2ea43e9a59684e1dc3668c0a7f9cb6a7718de4
+SHA512 (gnome-autoar-0.3.1.tar.xz) = a8ece09f66d7f1761fb4217f267b8a6dd1dee2266cc10f9944b1860c364e0d671286c6bf9477bdee5d0dd231b959ebefdd7a7003d679c38fe1553863033311dc
+Size (gnome-autoar-0.3.1.tar.xz) = 297904 bytes
