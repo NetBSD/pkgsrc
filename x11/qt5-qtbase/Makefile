@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2020/11/29 22:33:21 dbj Exp $
+# $NetBSD: Makefile,v 1.106 2021/03/15 19:33:44 markd Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -163,6 +163,14 @@ PC_FILES=		Qt5Concurrent.pc Qt5Core.pc \
 
 .if ${OPSYS} == "Linux"
 QMAKE_EXTRA=		QMAKE_PLATFORM += linux
+.elif ${OPSYS} == "NetBSD"
+QMAKE_EXTRA=		QMAKE_PLATFORM += netbsd
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+QMAKE_EXTRA=		QMAKE_PLATFORM += freebsd
+.elif ${OPSYS} == "OpenBSD"
+QMAKE_EXTRA=		QMAKE_PLATFORM += openbsd
+.elif ${OPSYS} == "SunOS"
+QMAKE_EXTRA=		QMAKE_PLATFORM += solaris
 .else
 QMAKE_EXTRA=
 .endif
