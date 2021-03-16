@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/03/08 08:13:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/16 17:26:12 gdt Exp $
 
-DISTNAME=	unison-2.51.3.70
-PKGREVISION=	5
+DISTNAME=	unison-2.51.3.72
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=     9ec70d5050eff62166e51d380fa44154f17c49ac
+# = v2.51.4rc2
+GITHUB_TAG=     2e12fc4f41b39ca9a5e501d7df5c2c33a75d3b95
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
