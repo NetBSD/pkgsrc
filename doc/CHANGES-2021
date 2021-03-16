@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1671 2021/03/15 22:24:30 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1672 2021/03/16 08:20:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2549,3 +2549,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/iperf successor net/iperf2 [gdt 2021-03-15]
 	Updated sysutils/auto-admin to 0.7.1 [bacon 2021-03-15]
 	Updated sysutils/htop to 3.0.5 [fox 2021-03-15]
+	Updated www/py-urllib3 to 1.26.4 [adam 2021-03-16]
+	Updated www/py-httpx to 0.17.1 [adam 2021-03-16]
+	Updated geography/py-googlemaps to 4.4.5 [adam 2021-03-16]
+	Updated sysutils/ansible-base to 2.10.7 [adam 2021-03-16]
