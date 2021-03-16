@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/01/01 08:24:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2021/03/16 23:51:48 fox Exp $
 
-DISTNAME=	cannonball-0.3.20191023
-PKGREVISION=	5
+DISTNAME=	cannonball-0.31
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
-GITHUB_TAG=	b6aa525ddd552f96b43b3b3a6f69326a277206bd
+GITHUB_TAG=	v0.31
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
@@ -17,10 +16,7 @@ USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}/cmake
-CMAKE_ARGS.Linux+=	-DTARGET=debian
-CMAKE_ARGS.NetBSD+=	-G "Unix Makefiles"
-CMAKE_ARGS.NetBSD+=	-DTARGET=bsd
-CMAKE_ARGS.NetBSD+=	-DBSD_PREFIX_PATH:STRING=${PREFIX}
+CMAKE_ARGS+=		-DTARGET=linux.cmake
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
@@ -68,5 +64,9 @@ do-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../graphics/glu/buildlink3.mk"
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
