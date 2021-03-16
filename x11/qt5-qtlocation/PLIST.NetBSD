@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2021/03/16 16:43:03 ryoon Exp $
+${PLIST.dbus}qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryGeoclue.cmake
+${PLIST.dbus}qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryGeoclue2.cmake
+${PLIST.dbus}qt5/plugins/position/libqtposition_geoclue.so
+${PLIST.dbus}qt5/plugins/position/libqtposition_geoclue2.so
