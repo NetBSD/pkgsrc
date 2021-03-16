@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1678 2021/03/16 19:51:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1679 2021/03/16 23:52:16 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2561,3 +2561,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/openldap to 2.4.58 [adam 2021-03-16]
 	Updated databases/lmdb to 0.9.29 [adam 2021-03-16]
 	Updated devel/cmake to 3.19.7 [adam 2021-03-16]
+	Updated emulators/cannonball to 0.31 [fox 2021-03-16]
