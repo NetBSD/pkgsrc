@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1676 2021/03/16 17:00:51 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1677 2021/03/16 17:26:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/stagit to 0.9.5 [fcambus 2021-03-16]
 	Updated textproc/lowdown to 0.8.3 [fcambus 2021-03-16]
 	Updated comms/qodem to 1.0.1 [fcambus 2021-03-16]
+	Updated net/unison-snapshot to 2.51.3.72 [gdt 2021-03-16]
