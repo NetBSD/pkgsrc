@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1674 2021/03/16 16:29:54 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1675 2021/03/16 16:33:52 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible-base to 2.10.7 [adam 2021-03-16]
 	Updated net/tor to 0.4.5.7 [wiz 2021-03-16]
 	Updated www/stagit to 0.9.5 [fcambus 2021-03-16]
+	Updated textproc/lowdown to 0.8.3 [fcambus 2021-03-16]
