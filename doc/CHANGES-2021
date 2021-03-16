@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1672 2021/03/16 08:20:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1673 2021/03/16 16:25:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx to 0.17.1 [adam 2021-03-16]
 	Updated geography/py-googlemaps to 4.4.5 [adam 2021-03-16]
 	Updated sysutils/ansible-base to 2.10.7 [adam 2021-03-16]
+	Updated net/tor to 0.4.5.7 [wiz 2021-03-16]
