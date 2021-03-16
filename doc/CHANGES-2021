@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1677 2021/03/16 17:26:29 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1678 2021/03/16 19:51:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2558,3 +2558,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/lowdown to 0.8.3 [fcambus 2021-03-16]
 	Updated comms/qodem to 1.0.1 [fcambus 2021-03-16]
 	Updated net/unison-snapshot to 2.51.3.72 [gdt 2021-03-16]
+	Updated databases/openldap to 2.4.58 [adam 2021-03-16]
+	Updated databases/lmdb to 0.9.29 [adam 2021-03-16]
+	Updated devel/cmake to 3.19.7 [adam 2021-03-16]
