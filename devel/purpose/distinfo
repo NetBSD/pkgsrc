@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/03/17 22:33:37 markd Exp $
+
+SHA1 (purpose-5.70.0.tar.xz) = 1bdef5d72899e7cf6abf8ea5c7f6b686a67f0158
+RMD160 (purpose-5.70.0.tar.xz) = caaa2e3388e985e792a4970ed65f515f65a1578f
+SHA512 (purpose-5.70.0.tar.xz) = 932fc3a56c47a3a031f4acc32ae5ea04733c99f953ce3248e60bc47b836d26929e71bb10633c3859d642c8667e4b1dbb60f03f450da8b0c2bda703142cf80916
+Size (purpose-5.70.0.tar.xz) = 153468 bytes
+SHA1 (patch-src_externalprocess_purposeprocess__main.cpp) = 11b52614e6165b134b32ec60feccb34df25b1265
