@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.360 2021/02/22 20:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.361 2021/03/17 21:33:41 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -861,7 +861,6 @@ SUBDIR+=	un-core-ttf
 SUBDIR+=	un-extra-ttf
 SUBDIR+=	uni-vga
 SUBDIR+=	unifont
-SUBDIR+=	unifraktur-ttf
 SUBDIR+=	unscii
 SUBDIR+=	uralic-ttf
 SUBDIR+=	urbanrenewal-ttf
