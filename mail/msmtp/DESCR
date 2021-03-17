@@ -6,7 +6,7 @@ to an SMTP server (for example at a free mail provider) which does
 the delivery.
 
 Features include:
-    * SMTP AUTH methods PLAIN, LOGIN and CRAM-MD5
+    * SMTP AUTH methods PLAIN, LOGIN, CRAM-MD5 and XOAUTH2
     * TLS encrypted connections
     * IPv6 support
     * robustness
