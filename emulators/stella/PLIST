@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/02/10 11:55:22 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/03/17 15:17:03 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -10,12 +10,10 @@ share/doc/stella/Readme.txt
 share/doc/stella/Todo.txt
 share/doc/stella/debugger.html
 share/doc/stella/graphics/Stella_icon.png
-share/doc/stella/graphics/basic_settings.png
 share/doc/stella/graphics/cheat.png
 share/doc/stella/graphics/chucky_cheese.png
 share/doc/stella/graphics/circuit.png
 share/doc/stella/graphics/commandmenu.png
-share/doc/stella/graphics/commandsmenu_r77.png
 share/doc/stella/graphics/console.png
 share/doc/stella/graphics/debugger_audiotab.png
 share/doc/stella/graphics/debugger_bankcomplex.png
