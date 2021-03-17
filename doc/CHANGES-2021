@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1683 2021/03/17 11:24:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1684 2021/03/17 11:46:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2569,3 +2569,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xkbcomp to 1.4.5 [wiz 2021-03-17]
 	Updated devel/py-mercurial to 5.7.1 [wiz 2021-03-17]
 	Updated devel/py-hg-evolve to 10.3.0 [wiz 2021-03-17]
+	Updated graphics/ilmbase to 2.5.5 [wiz 2021-03-17]
