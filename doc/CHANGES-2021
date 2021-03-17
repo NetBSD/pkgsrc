@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1680 2021/03/17 06:25:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1681 2021/03/17 08:19:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-docs to 3.35.1 [adam 2021-03-17]
 	Updated databases/sqlite3-tcl to 3.35.1 [adam 2021-03-17]
 	Updated devel/lemon to 1.0.3.35.1 [adam 2021-03-17]
+	Updated x11/xkbcomp to 1.4.5 [wiz 2021-03-17]
