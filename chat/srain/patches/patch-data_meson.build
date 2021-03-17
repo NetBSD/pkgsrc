@@ -1,0 +1,12 @@
+$NetBSD: patch-data_meson.build,v 1.1 2021/03/17 15:32:24 nia Exp $
+
+Install config files to examples.
+
+--- data/meson.build.orig	2021-02-28 09:19:09.000000000 +0000
++++ data/meson.build
+@@ -27,4 +27,4 @@ subdir('metainfo')
+ subdir('icons')
+ 
+ install_subdir('themes', install_dir: pkg_data_dir)
+-install_data('builtin.cfg', install_dir: pkg_sys_conf_dir)
++install_data('builtin.cfg', install_dir: join_paths(data_dir, 'examples', 'srain'))

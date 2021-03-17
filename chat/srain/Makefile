@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/11/24 14:17:53 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/17 15:32:24 nia Exp $
 
-DISTNAME=	srain-1.1.3
+DISTNAME=	srain-1.2.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SrainApp/}
 
@@ -9,26 +9,15 @@ HOMEPAGE=	https://srain.im/
 COMMENT=	Modern IRC client written in GTK
 LICENSE=	gnu-gpl-v3
 
-HAS_CONFIGURE=	yes
-
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-debug
-
-BUILD_TARGET=	default
-
-MAKE_FLAGS+=	MAKE=${GMAKE:Q}
-MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
-
-AUTO_MKDIRS=	yes
+MESON_ARGS+=	-Ddoc_builders=man
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/srain
 
-CONF_FILES+=	share/examples/srain/builtin.cfg \
-		${PKG_SYSCONFDIR}/srain/builtin.cfg
+EGDIR=		${PREFIX}/share/examples/srain
+CONF_FILES=	${EGDIR}/builtin.cfg ${PKG_SYSCONFDIR}/srain/builtin.cfg
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,8 +26,23 @@ CONF_FILES+=	share/examples/srain/builtin.cfg \
 TOOLS_PLATFORM.msgfmt=
 .endif
 
+SUBST_CLASSES+=		sphinx
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_FILES.sphinx=	doc/meson.build
+SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
+SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/srain/themes/meson.build
+
+.include "../../devel/meson/build.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
