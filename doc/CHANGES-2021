@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1688 2021/03/17 14:12:29 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1689 2021/03/17 15:17:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2574,3 +2574,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/mono to 6.12.0.122 [wiz 2021-03-17]
 	Updated devel/py-hypothesis to 6.8.1 [wiz 2021-03-17]
 	Updated mail/msmtp to 1.8.15 [ryoon 2021-03-17]
+	Updated emulators/stella to 6.5.2 [nia 2021-03-17]
