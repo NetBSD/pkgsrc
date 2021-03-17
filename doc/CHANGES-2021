@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1679 2021/03/16 23:52:16 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1680 2021/03/17 06:25:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2562,3 +2562,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/lmdb to 0.9.29 [adam 2021-03-16]
 	Updated devel/cmake to 3.19.7 [adam 2021-03-16]
 	Updated emulators/cannonball to 0.31 [fox 2021-03-16]
+	Updated databases/sqlite3 to 3.35.1 [adam 2021-03-17]
+	Updated databases/sqlite3-docs to 3.35.1 [adam 2021-03-17]
+	Updated databases/sqlite3-tcl to 3.35.1 [adam 2021-03-17]
+	Updated devel/lemon to 1.0.3.35.1 [adam 2021-03-17]
