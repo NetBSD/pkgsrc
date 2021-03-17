@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20437 2021/03/16 19:51:07 adam Exp $
+$NetBSD: TODO,v 1.20438 2021/03/17 11:24:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -940,7 +940,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
-	o py-mercurial-5.7.1
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
