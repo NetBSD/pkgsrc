@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1690 2021/03/17 15:20:50 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1691 2021/03/17 15:33:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2576,3 +2576,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/msmtp to 1.8.15 [ryoon 2021-03-17]
 	Updated emulators/stella to 6.5.2 [nia 2021-03-17]
 	Updated emulators/libretro-stella to 6.5.2 [nia 2021-03-17]
+	Updated chat/srain to 1.2.0 [nia 2021-03-17]
