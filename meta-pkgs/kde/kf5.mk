@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.8 2020/06/07 10:38:12 markd Exp $
+# $NetBSD: kf5.mk,v 1.9 2021/03/17 22:39:00 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -22,6 +22,7 @@
 # used by devel/kservice/Makefile
 # used by devel/ktexteditor/Makefile
 # used by devel/kwayland/Makefile
+# used by devel/purpose/Makefile
 # used by devel/threadweaver/Makefile
 # used by graphics/breeze-icons/Makefile
 # used by graphics/kiconthemes/Makefile
