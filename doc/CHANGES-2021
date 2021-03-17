@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1685 2021/03/17 11:46:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1686 2021/03/17 12:49:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hg-evolve to 10.3.0 [wiz 2021-03-17]
 	Updated graphics/ilmbase to 2.5.5 [wiz 2021-03-17]
 	Updated graphics/openexr to 2.5.5 [wiz 2021-03-17]
+	Updated lang/mono to 6.12.0.122 [wiz 2021-03-17]
