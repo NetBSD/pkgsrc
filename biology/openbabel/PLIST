@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/04 19:54:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/17 18:58:57 prlw1 Exp $
 bin/obabel
 bin/obconformer
 bin/obdistgen
-${PLIST.wx-gui}bin/obgui
 bin/obenergy
 bin/obfit
 bin/obfitall
 bin/obgen
 bin/obgrep
+${PLIST.wx-gui}bin/obgui
 bin/obminimize
 bin/obmm
 bin/obprobe

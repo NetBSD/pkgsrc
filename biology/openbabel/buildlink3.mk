@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/11/05 09:06:43 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2021/03/17 18:58:57 prlw1 Exp $
 
 BUILDLINK_TREE+=	openbabel
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.openbabel?=		../../biology/openbabel
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../math/eigen2/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif	# OPENBABEL_BUILDLINK3_MK
 
