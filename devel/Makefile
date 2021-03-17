@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3349 2021/03/14 09:15:43 pho Exp $
+# $NetBSD: Makefile,v 1.3350 2021/03/17 22:35:21 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2158,6 +2158,7 @@ SUBDIR+=	protobuf-c
 SUBDIR+=	pstreams
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
+SUBDIR+=	purpose
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
 SUBDIR+=	py-CppHeaderParser
