@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/26 11:11:39 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/17 15:32:24 nia Exp $
 bin/srain
+man/man1/srain.1
 share/applications/im.srain.Srain.desktop
 share/examples/srain/builtin.cfg
+share/icons/hicolor/128x128/apps/im.srain.Srain.Red.png
 share/icons/hicolor/128x128/apps/im.srain.Srain.png
 share/locale/nl/LC_MESSAGES/srain.mo
 share/locale/ru/LC_MESSAGES/srain.mo
