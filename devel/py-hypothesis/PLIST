@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/01/04 11:55:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2021/03/17 13:13:31 wiz Exp $
 bin/hypothesis
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -175,6 +175,9 @@ ${PYSITELIB}/hypothesis/internal/entropy.pyo
 ${PYSITELIB}/hypothesis/internal/escalation.py
 ${PYSITELIB}/hypothesis/internal/escalation.pyc
 ${PYSITELIB}/hypothesis/internal/escalation.pyo
+${PYSITELIB}/hypothesis/internal/filtering.py
+${PYSITELIB}/hypothesis/internal/filtering.pyc
+${PYSITELIB}/hypothesis/internal/filtering.pyo
 ${PYSITELIB}/hypothesis/internal/floats.py
 ${PYSITELIB}/hypothesis/internal/floats.pyc
 ${PYSITELIB}/hypothesis/internal/floats.pyo
@@ -190,6 +193,9 @@ ${PYSITELIB}/hypothesis/internal/lazyformat.pyo
 ${PYSITELIB}/hypothesis/internal/reflection.py
 ${PYSITELIB}/hypothesis/internal/reflection.pyc
 ${PYSITELIB}/hypothesis/internal/reflection.pyo
+${PYSITELIB}/hypothesis/internal/scrutineer.py
+${PYSITELIB}/hypothesis/internal/scrutineer.pyc
+${PYSITELIB}/hypothesis/internal/scrutineer.pyo
 ${PYSITELIB}/hypothesis/internal/validation.py
 ${PYSITELIB}/hypothesis/internal/validation.pyc
 ${PYSITELIB}/hypothesis/internal/validation.pyo
@@ -269,6 +275,9 @@ ${PYSITELIB}/hypothesis/strategies/_internal/strings.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/types.py
 ${PYSITELIB}/hypothesis/strategies/_internal/types.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/types.pyo
+${PYSITELIB}/hypothesis/strategies/_internal/utils.py
+${PYSITELIB}/hypothesis/strategies/_internal/utils.pyc
+${PYSITELIB}/hypothesis/strategies/_internal/utils.pyo
 ${PYSITELIB}/hypothesis/utils/__init__.py
 ${PYSITELIB}/hypothesis/utils/__init__.pyc
 ${PYSITELIB}/hypothesis/utils/__init__.pyo
