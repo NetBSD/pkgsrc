@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1694 2021/03/17 21:33:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1695 2021/03/17 22:36:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2578,3 +2578,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/srain to 1.2.0 [nia 2021-03-17]
 	Updated math/eigen3 to 3.3.9 [prlw1 2021-03-17]
 	Updated biology/openbabel to 3.1.1nb5 [prlw1 2021-03-17]
+	Added devel/purpose version 5.70.0 [markd 2021-03-17]
