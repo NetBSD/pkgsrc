@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.112 2021/03/03 12:05:41 nia Exp $
+$NetBSD: distinfo,v 1.113 2021/03/17 12:48:59 wiz Exp $
 
-SHA1 (mono-6.12.0.107.tar.xz) = 6a28375a714a9832f6b35eaf3f01c029fd93995d
-RMD160 (mono-6.12.0.107.tar.xz) = c5a005aae49e85725fff78c236dbd7ef08f047e6
-SHA512 (mono-6.12.0.107.tar.xz) = 567cd37847bd5a0bf78df8a3ada2ed2cfb10e466fffb5aadc3d145751552720bdd1fc2a734fba142b91f2e221f42b6717d6eb3f7c8823cbec3d458b10712d7ea
-Size (mono-6.12.0.107.tar.xz) = 291862192 bytes
+SHA1 (mono-6.12.0.122.tar.xz) = 0ddc92fccdeaa88aa8301421f2d997fdb9d1437e
+RMD160 (mono-6.12.0.122.tar.xz) = 44e1409c86e3fae3ea808cfd894ce8587b620a70
+SHA512 (mono-6.12.0.122.tar.xz) = 0fbd4147498cc81e384933147eb6aa5c559d17a794a308af7ffa43dce51e0faefde24fc75e987ed804dcb161b52756944bc3611100fc0a4adcc260ca97ddaecd
+Size (mono-6.12.0.122.tar.xz) = 292266176 bytes
 SHA1 (patch-acceptance-tests_Makefile.in) = b2edf3ed54d3669c5651c6d63bb8fb04fae0fec0
 SHA1 (patch-acceptance-tests_microbench-perf_sh_in) = d46118c1685e3e48a5b8594bf7f77acd2bebaf94
 SHA1 (patch-data_Makefile.am) = 535480855e413750d5b6cab6351b1683ac911246
