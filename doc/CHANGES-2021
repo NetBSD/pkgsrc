@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1692 2021/03/17 17:20:33 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.1693 2021/03/17 18:59:24 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2578,3 +2578,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-stella to 6.5.2 [nia 2021-03-17]
 	Updated chat/srain to 1.2.0 [nia 2021-03-17]
 	Updated math/eigen3 to 3.3.9 [prlw1 2021-03-17]
+	Updated biology/openbabel to 3.1.1nb5 [prlw1 2021-03-17]
