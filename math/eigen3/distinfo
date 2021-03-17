@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2020/04/18 22:01:56 joerg Exp $
+$NetBSD: distinfo,v 1.13 2021/03/17 17:20:00 prlw1 Exp $
 
-SHA1 (eigen3/3.3.7.tar.bz2) = a06faa6f358d5d1ca0da7cddb95da39e436dc9e8
-RMD160 (eigen3/3.3.7.tar.bz2) = 3330627708f54055a282ccfbae395f2b2f0885e9
-SHA512 (eigen3/3.3.7.tar.bz2) = c12bfd034d0a1112bf2df3f773ad98f36b2b53fbbfceac5f143ee1793322746fb8a6546d7db7da2a1000da6a535bd8cea0c4125b549afc90a6570743b02dcf3d
-Size (eigen3/3.3.7.tar.bz2) = 1665168 bytes
+SHA1 (eigen-3.3.9.tar.bz2) = 516322dc3d98f7f6d20f11050da43084f68e6c71
+RMD160 (eigen-3.3.9.tar.bz2) = f100af009a9b72532653d0e90eb81f12379f97a1
+SHA512 (eigen-3.3.9.tar.bz2) = 6f222e27480d02d90f258c94a4a4787771491fc30c73d5fb025a8089484fdeb2c65d464172f5c29d0c3096b69ff98027a18a40c04b006da670733a2c75f55b65
+Size (eigen-3.3.9.tar.bz2) = 1667231 bytes
 SHA1 (patch-Eigen_src_Core_IO.h) = 5798b47107799e4b8976af88630e8f79e5d2f18e
-SHA1 (patch-Eigen_src_Core_arch_CUDA_Half.h) = d346f21aeff79937ecc40ce621ef1c5f3cf93023
