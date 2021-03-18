@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/02/13 21:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/03/18 07:33:31 adam Exp $
 
-DISTNAME=	josepy-1.7.0
+DISTNAME=	josepy-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
@@ -13,10 +13,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.8:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cache>=1.0:../../devel/py-test-cache
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
