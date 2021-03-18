@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/11/27 19:30:31 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/03/18 07:29:31 adam Exp $
 
-DISTNAME=	responses-0.12.1
+DISTNAME=	responses-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/getsentry/responses
 COMMENT=	Utility library for mocking out the requests Python library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.10:../../www/py-urllib3
 
 .include "../../lang/python/pyversion.mk"
@@ -28,6 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-locals
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
