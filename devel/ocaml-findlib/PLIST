@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/05/14 15:55:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/03/18 08:30:43 jaapb Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -6,6 +6,7 @@ ${OCAML_SITELIB}/compiler-libs/META
 ${OCAML_SITELIB}/dynlink/META
 ${OCAML_SITELIB}/findlib/META
 ${OCAML_SITELIB}/findlib/Makefile.config
+${OCAML_SITELIB}/findlib/Makefile.packages
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib.a
 ${OCAML_SITELIB}/findlib/findlib.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib.cmxa

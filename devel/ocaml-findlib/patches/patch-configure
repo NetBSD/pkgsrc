@@ -1,79 +1,21 @@
-$NetBSD: patch-configure,v 1.6 2019/05/14 15:55:44 jaapb Exp $
+$NetBSD: patch-configure,v 1.7 2021/03/18 08:30:43 jaapb Exp $
 
 Do not install META files for libraries that were split off
---- configure.orig	2018-04-16 08:13:23.000000000 +0000
+
+--- configure.orig	2021-03-16 11:43:00.000000000 +0000
 +++ configure
-@@ -518,32 +518,32 @@ fi
+@@ -511,10 +511,10 @@ fi
  
- # dbm?
- 
--if [ -f "${ocaml_sitelib}/dbm/META" ]; then
--    echo "dbm: package already present"
--    ldbm=""
--elif [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
--    echo "dbm: found"
--    ldbm="dbm"
--else
--    echo "dbm: not present (normal since OCaml-4.00)"
--    ldbm=""
--fi
-+#if [ -f "${ocaml_sitelib}/dbm/META" ]; then
-+#   echo "dbm: package already present"
-+#   ldbm=""
-+#lif [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
-+#   echo "dbm: found"
-+#   ldbm="dbm"
-+#lse
-+#   echo "dbm: not present (normal since OCaml-4.00)"
-+   ldbm=""
-+#i
- 
- # num?
- 
--if [ -f "${ocaml_sitelib}/num/META" ]; then
--    echo "num: package already present"
--    lnum=""
--    numtop=""
--elif [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
--    echo "num: found but not as package"
--    lnum="num num-top"
--    numtop="num-top"
--else
--    echo "num: not present (normal since OCaml-4.06)"
-+#if [ -f "${ocaml_sitelib}/num/META" ]; then
-+#    echo "num: package already present"
-+#    lnum=""
-+#    numtop=""
-+#elif [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
-+#    echo "num: found but not as package"
-+#    lnum="num num-top"
-+#    numtop="num-top"
-+#else
-+#    echo "num: not present (normal since OCaml-4.06)"
-     lnum=""
-     numtop=""
--fi
-+#fi
- 
- # bytes?
- 
-@@ -570,13 +570,13 @@ fi
- 
- # graphics?
- 
--if [ -f "${ocaml_core_stdlib}/graphics.cmi" ]; then
--    echo "graphics: found"
--    lgraphics="graphics"
--else
--    echo "graphics: not found"
-+#if [ -f "${ocaml_core_stdlib}/graphics.cmi" ]; then
-+#    echo "graphics: found"
-+#    lgraphics="graphics"
-+#else
-+#    echo "graphics: not found"
-     lgraphics=""
--fi
-+#fi
- 
- 
- # Generate the META files now.
+ check_library bigarray 'possible since 4.08'
+ check_library compiler-libs '' 'compiler-libs'
+-check_library dbm 'normal since 4.00'
+-check_library graphics 'normal since 4.09'
+-check_library num 'normal since 4.06'
+-check_library ocamlbuild 'normal since 4.03' ocamlbuild/ocamlbuildlib.cma
++#check_library dbm 'normal since 4.00'
++#check_library graphics 'normal since 4.09'
++#check_library num 'normal since 4.06'
++#check_library ocamlbuild 'normal since 4.03' ocamlbuild/ocamlbuildlib.cma
+ check_library ocamldoc '' ocamldoc/odoc.cmi
+ check_library raw_spacetime 'normal since 4.12' raw_spacetime_lib.cmxa
+ check_library threads '' threads/thread.cmi vmthreads/thread.cmi;
