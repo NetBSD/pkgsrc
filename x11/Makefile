@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.920 2021/02/25 15:27:40 pin Exp $
+# $NetBSD: Makefile,v 1.921 2021/03/18 00:22:55 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -255,6 +255,7 @@ SUBDIR+=	lua-keybinder
 SUBDIR+=	luit
 SUBDIR+=	lxappearance
 SUBDIR+=	lxde-common
+SUBDIR+=	lxhotkey
 SUBDIR+=	lxinput
 SUBDIR+=	lxlauncher
 SUBDIR+=	lxqt-about
