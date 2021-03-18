@@ -1,12 +1,12 @@
-$NetBSD: patch-logsrvd_Makefile.in,v 1.1 2021/01/18 14:32:24 taca Exp $
+$NetBSD: patch-logsrvd_Makefile.in,v 1.2 2021/03/18 08:57:48 adam Exp $
 
 Fix build error.
 
---- logsrvd/Makefile.in.orig	2021-01-09 20:12:16.000000000 +0000
+--- logsrvd/Makefile.in.orig	2021-03-13 15:47:23.000000000 +0000
 +++ logsrvd/Makefile.in
-@@ -46,7 +46,7 @@ INSTALL_BACKUP = @INSTALL_BACKUP@
+@@ -45,7 +45,7 @@ INSTALL_BACKUP = @INSTALL_BACKUP@
+ # Libraries
  LT_LIBS = $(top_builddir)/lib/iolog/libsudo_iolog.la \
- 	  $(top_builddir)/lib/eventlog/libsudo_eventlog.la \
  	  $(top_builddir)/lib/logsrv/liblogsrv.la
 -LIBS = $(LT_LIBS) @LIBTLS@
 +LIBS = $(LT_LIBS) @LIBTLS@ @LIBS@

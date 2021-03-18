@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
+$NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2021-01-23 16:45:11.000000000 +0100
-+++ configure	2021-01-30 12:31:20.802349535 +0100
-@@ -892,6 +892,7 @@ with_libpath
+--- configure.orig	2021-03-15 16:50:00.000000000 +0000
++++ configure
+@@ -920,6 +920,7 @@ with_libpath
  with_libraries
  with_efence
  with_csops
@@ -17,7 +17,7 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
  with_passwd
  with_skey
  with_opie
-@@ -1621,7 +1622,7 @@ Fine tuning of the installation director
+@@ -1652,7 +1653,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -26,7 +26,7 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
-@@ -1737,6 +1738,7 @@ Optional Packages:
+@@ -1776,6 +1777,7 @@ Optional Packages:
    --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -4863,6 +4865,23 @@ fi
+@@ -5203,6 +5205,23 @@ fi
  
  
  
@@ -56,9 +56,9 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
 +
 +
  # Check whether --with-passwd was given.
- if test "${with_passwd+set}" = set; then :
-   withval=$with_passwd; case $with_passwd in
-@@ -15765,7 +15784,7 @@ fi
+ if test ${with_passwd+y}
+ then :
+@@ -16699,7 +16718,7 @@ fi
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -67,71 +67,25 @@ $NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
-@@ -18026,7 +18045,7 @@ if test "x$ac_cv_header_login_cap_h" = x
- _ACEOF
+@@ -18732,7 +18751,7 @@ then :
+   printf "%s\n" "#define HAVE_LOGIN_CAP_H 1" >>confdefs.h
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
  	case "$OS" in
--	    freebsd|netbsd)
-+	    dragonfly*|freebsd|netbsd*)
+-	    freebsd*|netbsd*)
++	    dragonfly*|freebsd*|netbsd*)
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -23965,10 +23984,9 @@ if test ${with_pam-"no"} != "no"; then
-     # Check for pam_start() in libpam first, then for pam_appl.h.
-     #
-     found_pam_lib=no
--    as_ac_Lib=`$as_echo "ac_cv_lib_pam_pam_start$lt_cv_dlopen_libs" | $as_tr_sh`
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for pam_start in -lpam" >&5
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pam_start in -lpam" >&5
- $as_echo_n "checking for pam_start in -lpam... " >&6; }
--if eval \${$as_ac_Lib+:} false; then :
-+if ${ac_cv_lib_pam_pam_start+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -23992,18 +24010,17 @@ return pam_start ();
- }
- _ACEOF
- if ac_fn_c_try_link "$LINENO"; then :
--  eval "$as_ac_Lib=yes"
-+  ac_cv_lib_pam_pam_start=yes
- else
--  eval "$as_ac_Lib=no"
-+  ac_cv_lib_pam_pam_start=no
- fi
- rm -f core conftest.err conftest.$ac_objext \
-     conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--eval ac_res=\$$as_ac_Lib
--	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
--$as_echo "$ac_res" >&6; }
--if eval test \"x\$"$as_ac_Lib"\" = x"yes"; then :
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pam_pam_start" >&5
-+$as_echo "$ac_cv_lib_pam_pam_start" >&6; }
-+if test "x$ac_cv_lib_pam_pam_start" = xyes; then :
-   found_pam_lib=yes
- fi
- 
-@@ -24738,6 +24755,8 @@ fi
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -25528,6 +25547,8 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.beam conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
 +fi
 +if test ${with_kerb5-'no'} != "no"; then
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
-     for ac_func in krb5_verify_user krb5_init_secure_context
-@@ -27120,7 +27139,7 @@ fi
- fi
- 
- case "$OS" in
--    netbsd)
-+    netbsd*)
- 	;;
-     *)
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -Wl,--enable-new-dtags" >&5
-@@ -28297,7 +28316,6 @@ test "$docdir" = '${datarootdir}/doc/${P
+     ac_fn_c_check_func "$LINENO" "krb5_verify_user" "ac_cv_func_krb5_verify_user"
+@@ -29695,7 +29716,6 @@ test "$docdir" = '${datarootdir}/doc/${P
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
  test "$runstatedir" = '${localstatedir}/run' && runstatedir='$(localstatedir)/run'
