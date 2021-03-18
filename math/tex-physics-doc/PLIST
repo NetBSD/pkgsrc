@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/18 03:46:01 markd Exp $
+share/texmf-dist/doc/latex/physics/README
+share/texmf-dist/doc/latex/physics/physics.pdf
+share/texmf-dist/doc/latex/physics/physics.tex
