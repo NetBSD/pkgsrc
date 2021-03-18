@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.38 2020/05/14 19:01:47 joerg Exp $
+$NetBSD: distinfo,v 1.39 2021/03/18 16:44:01 bouyer Exp $
 
 SHA1 (hplip-3.19.12.tar.gz) = 3d3cffb0808900ab4134df2acc246f22fb39aad7
 RMD160 (hplip-3.19.12.tar.gz) = c9e24b31dd51b2f1759e4f70c1c8617b49ace7c7
 SHA512 (hplip-3.19.12.tar.gz) = 5552cd717ae082ee55cdb77d79e8d035d8ecb7cf23c79d659fda43468d8ed414a33c4d869eab4ab83dee836f0d1cceb74c3c4a249e26f904a5ab2350e08a5677
 Size (hplip-3.19.12.tar.gz) = 25676247 bytes
 SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
-SHA1 (patch-ae) = a15426c555b47806b47eb40e22c4ca6862d6ba18
+SHA1 (patch-ae) = c67ea6d640175a1f0518640f41b5fb58241430f1
 SHA1 (patch-configure.in) = d6e20d8d4f0b1042a32149eeca45d2ddc319f65f
 SHA1 (patch-diagnose_queues.py) = 385c694642248818b28375711df244f12e63fdb4
 SHA1 (patch-installer_dcheck.py) = 9e8e6b552f935d2ed5a61060cc0a4541095e2751
