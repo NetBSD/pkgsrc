@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1708 2021/03/18 10:39:59 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1709 2021/03/18 14:56:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2600,3 +2600,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/py-cloudfiles [adam 2021-03-18]
 	Updated textproc/ruby-kramdown to 2.3.1 [fcambus 2021-03-18]
 	Updated audio/libopenmpt to 0.5.6 [fcambus 2021-03-18]
+	Updated www/webkit-gtk to 2.30.6 [leot 2021-03-18]
