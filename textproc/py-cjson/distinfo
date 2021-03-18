@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/09/28 16:21:21 adam Exp $
-
-SHA1 (python-cjson-1.2.1.tar.gz) = cc1d3568cc23d28eba0903df2e57b6de1dd558c8
-RMD160 (python-cjson-1.2.1.tar.gz) = 867ddc7312685999e966128893c2eeb11fa01f0a
-SHA512 (python-cjson-1.2.1.tar.gz) = dd998d1a77c4ac2f48316a66bb10741860a1ed7b8f54431bd72f949a4070284fa5040ed51c3030f7ad9fed4d76e12112206d32acf204800010c8b79b1665d684
-Size (python-cjson-1.2.1.tar.gz) = 12575 bytes
