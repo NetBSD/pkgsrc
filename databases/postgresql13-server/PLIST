@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/18 09:24:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/18 15:04:55 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -11,7 +11,9 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/brin/brin_revmap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/brin/brin_tuple.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/brin/brin_validate.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/brin/brin_xlog.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/attmap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/bufmask.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/detoast.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/heaptuple.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/indextuple.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/printsimple.bc
@@ -20,6 +22,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/relation.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/reloptions.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/scankey.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/session.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/toast_internals.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/tupconvert.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/tupdesc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/gin/ginarrayproc.bc
@@ -61,11 +64,11 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/hash/hashvalidate.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/heapam.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/heapam_handler.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/heapam_visibility.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/heaptoast.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/hio.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/pruneheap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/rewriteheap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/syncscan.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/tuptoaster.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/vacuumlazy.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/heap/visibilitymap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/index/amapi.bc
@@ -73,6 +76,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/index/amvalidate.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/index/genam.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/index/indexam.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/nbtree/nbtcompare.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/nbtree/nbtdedup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/nbtree/nbtinsert.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/nbtree/nbtpage.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/nbtree/nbtree.bc
@@ -117,6 +121,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/spgist/spgxlog.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/table/table.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/table/tableam.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/table/tableamapi.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/table/toast_helper.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/tablesample/bernoulli.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/tablesample/system.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/tablesample/tablesample.bc
@@ -153,6 +158,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/objectaccess.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/objectaddress.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/partition.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/pg_aggregate.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/pg_cast.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/pg_collation.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/pg_constraint.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/catalog/pg_conversion.bc
@@ -249,6 +255,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeGatherMerge.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeGroup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeHash.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeHashjoin.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeIncrementalSort.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeIndexonlyscan.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeIndexscan.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/nodeLimit.bc
@@ -289,7 +296,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/integerset.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/knapsack.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/pairingheap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/rbtree.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/stringinfo.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth-scram.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-fsstubs.bc
@@ -402,6 +408,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/bgworker.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/bgwriter.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/checkpointer.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/fork_process.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/interrupt.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/pgarch.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/pgstat.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/postmaster.bc
@@ -414,6 +421,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regexec.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regexport.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regfree.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regprefix.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/backup_manifest.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/basebackup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/decode.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/launcher.bc
@@ -492,6 +500,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/page/itemptr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/smgr/md.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/smgr/smgr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/sync/sync.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/cmdtag.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/dest.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/fastpath.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/postgres.bc
@@ -603,7 +612,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/tsrank.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/tsvector.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/tsvector_op.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/tsvector_parser.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/txid.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/uuid.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varbit.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varchar.bc
@@ -611,6 +619,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varlena.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/version.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/windowfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/xid.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/xid8funcs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/xml.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/cache/attoptcache.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/cache/catcache.bc
@@ -633,15 +642,13 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/fmgr/fmgr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/fmgr/funcapi.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/fmgrtab.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/hash/dynahash.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/hash/hashfn.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/hash/pg_crc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/init/globals.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/init/miscinit.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/init/postinit.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/conv.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/encnames.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/mbutils.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/wchar.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/stringinfo_mb.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/wstrcmp.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mb/wstrncmp.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/guc.bc
