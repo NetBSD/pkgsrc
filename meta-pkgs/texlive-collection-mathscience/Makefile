@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/02/15 01:38:18 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/18 03:50:53 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	57535
@@ -159,7 +159,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend perfectcut
 # depend physconst
-# depend physics
+DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend physunits
 # depend pinoutikz
 # depend pm-isomath
