@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/07 19:21:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/18 15:04:55 adam Exp $
 bin/oid2name
 bin/pg_standby
 bin/vacuumlo
@@ -176,6 +176,10 @@ ${PLIST.llvm}lib/postgresql/bitcode/tsm_system_time.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/tsm_system_time/tsm_system_time.bc
 ${PLIST.llvm}lib/postgresql/bitcode/unaccent.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/unaccent/unaccent.bc
+${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp.index.bc
+${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/md5.bc
+${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/sha1.bc
+${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/uuid-ossp.bc
 lib/postgresql/btree_gin.so
 lib/postgresql/btree_gist.so
 lib/postgresql/citext.so
