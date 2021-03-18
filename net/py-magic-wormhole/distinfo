@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/18 18:46:25 gdt Exp $
+
+SHA1 (magic-wormhole-0.12.0.tar.gz) = bca66948af4b200fd5f605797cf60f6955dc7370
+RMD160 (magic-wormhole-0.12.0.tar.gz) = bbb9d49f4520e5168f95b35264a4fce7ce4732a7
+SHA512 (magic-wormhole-0.12.0.tar.gz) = 0ef4241a5692227206c1a07a2aed8a2c1575281d52db8bcdb8ffd070c158b4969126486b5e68e899f2100d7daedbbe0b91a7d667915bd5b86be26d6553b34dd6
+Size (magic-wormhole-0.12.0.tar.gz) = 262269 bytes
