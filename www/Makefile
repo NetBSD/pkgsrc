@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1523 2021/03/18 09:39:32 adam Exp $
+# $NetBSD: Makefile,v 1.1524 2021/03/18 21:58:43 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -146,6 +146,7 @@ SUBDIR+=	guile-haunt
 SUBDIR+=	gumbo-parser
 SUBDIR+=	gwt
 SUBDIR+=	h2o
+SUBDIR+=	hackernews-tui
 SUBDIR+=	haskell-cgi
 SUBDIR+=	heel
 SUBDIR+=	hiawatha
