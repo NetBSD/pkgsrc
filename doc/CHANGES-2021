@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1714 2021/03/18 21:59:17 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1715 2021/03/18 22:08:02 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/tahoe-lafs to 1.15.0 [gdt 2021-03-18]
 	Added net/py-magic-wormhole version 0.12.0 [gdt 2021-03-18]
 	Added www/hackernews-tui version 0.3 [pin 2021-03-18]
+	Updated mail/up-imappproxy to 1.2.8nb2 [tm 2021-03-18]
