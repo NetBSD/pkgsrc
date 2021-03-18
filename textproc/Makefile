@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1200 2021/02/25 01:38:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1201 2021/03/18 09:37:12 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -842,7 +842,6 @@ SUBDIR+=	py-biplist
 SUBDIR+=	py-black
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
-SUBDIR+=	py-cjson
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-color
 SUBDIR+=	py-colored
