@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1698 2021/03/18 02:20:50 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1699 2021/03/18 03:49:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2582,3 +2582,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added x11/lxhotkey version 0.1.1 [gutteridge 2021-03-18]
 	Updated meta-pkgs/lxde to 1.0nb1 [gutteridge 2021-03-18]
 	Updated misc/xfce4-calculator-plugin to 0.7.1 [gutteridge 2021-03-18]
+	Added math/tex-physics version 1.3 [markd 2021-03-18]
+	Added math/tex-physics-doc version 1.3 [markd 2021-03-18]
