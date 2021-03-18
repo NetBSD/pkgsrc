@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/03/18 21:16:59 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2021/03/18 21:18:18 dholland Exp $
 #
 
 GITHUB_PROJECT=	camlp5
@@ -34,6 +34,8 @@ BUILD_TARGET=	world.opt
 BUILD_TARGET=	world
 .endif
 
+# compensate for upstream not having heard of 4.11.2 yet
+# (should be able to remove this at the next update)
 post-extract:
 	cd ${WRKSRC}/ocaml_stuff && ln -s 4.11.1 4.11.2
 	cd ${WRKSRC}/ocaml_src/lib/versdep && ln -s 4.11.1.ml 4.11.2.ml
