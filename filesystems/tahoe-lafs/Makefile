@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2021/03/18 19:41:14 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2021/03/18 23:23:31 gdt Exp $
 
 DISTNAME=	tahoe-lafs-1.15.0
 CATEGORIES=	filesystems
@@ -11,6 +11,8 @@ COMMENT=	Distributed fault-tolerant least-authority filesystem
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake
+
+BROKEN=		bulk builds are not happy and this is not important
 
 # \todo: fix nevow doc location
 
