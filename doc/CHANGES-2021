@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1703 2021/03/18 08:30:55 jaapb Exp $
+$NetBSD: CHANGES-2021,v 1.1704 2021/03/18 09:04:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2590,3 +2590,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-responses to 0.13.1 [adam 2021-03-18]
 	Updated security/py-josepy to 1.8.0 [adam 2021-03-18]
 	Updated devel/ocaml-findlib to 1.9.1 [jaapb 2021-03-18]
+	Updated security/sudo to 1.9.6p1 [adam 2021-03-18]
+	Updated net/py-lexicon to 3.5.4 [adam 2021-03-18]
