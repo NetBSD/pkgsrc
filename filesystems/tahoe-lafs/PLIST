@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/01/28 09:09:50 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/03/18 17:32:25 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -90,6 +90,9 @@ ${PYSITELIB}/allmydata/immutable/encode.pyo
 ${PYSITELIB}/allmydata/immutable/filenode.py
 ${PYSITELIB}/allmydata/immutable/filenode.pyc
 ${PYSITELIB}/allmydata/immutable/filenode.pyo
+${PYSITELIB}/allmydata/immutable/happiness_upload.py
+${PYSITELIB}/allmydata/immutable/happiness_upload.pyc
+${PYSITELIB}/allmydata/immutable/happiness_upload.pyo
 ${PYSITELIB}/allmydata/immutable/layout.py
 ${PYSITELIB}/allmydata/immutable/layout.pyc
 ${PYSITELIB}/allmydata/immutable/layout.pyo
@@ -201,9 +204,6 @@ ${PYSITELIB}/allmydata/scripts/runner.pyo
 ${PYSITELIB}/allmydata/scripts/slow_operation.py
 ${PYSITELIB}/allmydata/scripts/slow_operation.pyc
 ${PYSITELIB}/allmydata/scripts/slow_operation.pyo
-${PYSITELIB}/allmydata/scripts/startstop_node.py
-${PYSITELIB}/allmydata/scripts/startstop_node.pyc
-${PYSITELIB}/allmydata/scripts/startstop_node.pyo
 ${PYSITELIB}/allmydata/scripts/stats_gatherer.py
 ${PYSITELIB}/allmydata/scripts/stats_gatherer.pyc
 ${PYSITELIB}/allmydata/scripts/stats_gatherer.pyo
@@ -219,9 +219,15 @@ ${PYSITELIB}/allmydata/scripts/tahoe_check.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_cp.py
 ${PYSITELIB}/allmydata/scripts/tahoe_cp.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_cp.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_daemonize.py
+${PYSITELIB}/allmydata/scripts/tahoe_daemonize.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_daemonize.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_get.py
 ${PYSITELIB}/allmydata/scripts/tahoe_get.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_get.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_invite.py
+${PYSITELIB}/allmydata/scripts/tahoe_invite.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_invite.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_ls.py
 ${PYSITELIB}/allmydata/scripts/tahoe_ls.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_ls.pyo
@@ -237,6 +243,21 @@ ${PYSITELIB}/allmydata/scripts/tahoe_mv.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_put.py
 ${PYSITELIB}/allmydata/scripts/tahoe_put.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_put.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_restart.py
+${PYSITELIB}/allmydata/scripts/tahoe_restart.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_restart.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_run.py
+${PYSITELIB}/allmydata/scripts/tahoe_run.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_run.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_start.py
+${PYSITELIB}/allmydata/scripts/tahoe_start.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_start.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_status.py
+${PYSITELIB}/allmydata/scripts/tahoe_status.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_status.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_stop.py
+${PYSITELIB}/allmydata/scripts/tahoe_stop.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_stop.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_unlink.py
 ${PYSITELIB}/allmydata/scripts/tahoe_unlink.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_unlink.pyo
@@ -300,6 +321,9 @@ ${PYSITELIB}/allmydata/test/cli/__init__.pyo
 ${PYSITELIB}/allmydata/test/cli/common.py
 ${PYSITELIB}/allmydata/test/cli/common.pyc
 ${PYSITELIB}/allmydata/test/cli/common.pyo
+${PYSITELIB}/allmydata/test/cli/test_alias.py
+${PYSITELIB}/allmydata/test/cli/test_alias.pyc
+${PYSITELIB}/allmydata/test/cli/test_alias.pyo
 ${PYSITELIB}/allmydata/test/cli/test_backup.py
 ${PYSITELIB}/allmydata/test/cli/test_backup.pyc
 ${PYSITELIB}/allmydata/test/cli/test_backup.pyo
@@ -318,6 +342,12 @@ ${PYSITELIB}/allmydata/test/cli/test_create.pyo
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.py
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.pyc
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.pyo
+${PYSITELIB}/allmydata/test/cli/test_daemonize.py
+${PYSITELIB}/allmydata/test/cli/test_daemonize.pyc
+${PYSITELIB}/allmydata/test/cli/test_daemonize.pyo
+${PYSITELIB}/allmydata/test/cli/test_invite.py
+${PYSITELIB}/allmydata/test/cli/test_invite.pyc
+${PYSITELIB}/allmydata/test/cli/test_invite.pyo
 ${PYSITELIB}/allmydata/test/cli/test_list.py
 ${PYSITELIB}/allmydata/test/cli/test_list.pyc
 ${PYSITELIB}/allmydata/test/cli/test_list.pyo
@@ -330,6 +360,12 @@ ${PYSITELIB}/allmydata/test/cli/test_mv.pyo
 ${PYSITELIB}/allmydata/test/cli/test_put.py
 ${PYSITELIB}/allmydata/test/cli/test_put.pyc
 ${PYSITELIB}/allmydata/test/cli/test_put.pyo
+${PYSITELIB}/allmydata/test/cli/test_start.py
+${PYSITELIB}/allmydata/test/cli/test_start.pyc
+${PYSITELIB}/allmydata/test/cli/test_start.pyo
+${PYSITELIB}/allmydata/test/cli/test_status.py
+${PYSITELIB}/allmydata/test/cli/test_status.pyc
+${PYSITELIB}/allmydata/test/cli/test_status.pyo
 ${PYSITELIB}/allmydata/test/common.py
 ${PYSITELIB}/allmydata/test/common.pyc
 ${PYSITELIB}/allmydata/test/common.pyo
@@ -393,9 +429,9 @@ ${PYSITELIB}/allmydata/test/mutable/util.pyo
 ${PYSITELIB}/allmydata/test/no_network.py
 ${PYSITELIB}/allmydata/test/no_network.pyc
 ${PYSITELIB}/allmydata/test/no_network.pyo
-${PYSITELIB}/allmydata/test/run_trial.py
-${PYSITELIB}/allmydata/test/run_trial.pyc
-${PYSITELIB}/allmydata/test/run_trial.pyo
+${PYSITELIB}/allmydata/test/status.py
+${PYSITELIB}/allmydata/test/status.pyc
+${PYSITELIB}/allmydata/test/status.pyo
 ${PYSITELIB}/allmydata/test/test_auth.py
 ${PYSITELIB}/allmydata/test/test_auth.pyc
 ${PYSITELIB}/allmydata/test/test_auth.pyo
@@ -444,6 +480,9 @@ ${PYSITELIB}/allmydata/test/test_filenode.pyo
 ${PYSITELIB}/allmydata/test/test_ftp.py
 ${PYSITELIB}/allmydata/test/test_ftp.pyc
 ${PYSITELIB}/allmydata/test/test_ftp.pyo
+${PYSITELIB}/allmydata/test/test_happiness.py
+${PYSITELIB}/allmydata/test/test_happiness.pyc
+${PYSITELIB}/allmydata/test/test_happiness.pyo
 ${PYSITELIB}/allmydata/test/test_hashtree.py
 ${PYSITELIB}/allmydata/test/test_hashtree.pyc
 ${PYSITELIB}/allmydata/test/test_hashtree.pyo
