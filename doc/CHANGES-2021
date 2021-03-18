@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1707 2021/03/18 10:20:36 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1708 2021/03/18 10:39:59 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed textproc/py-cjson [adam 2021-03-18]
 	Removed www/py-cloudfiles [adam 2021-03-18]
 	Updated textproc/ruby-kramdown to 2.3.1 [fcambus 2021-03-18]
+	Updated audio/libopenmpt to 0.5.6 [fcambus 2021-03-18]
