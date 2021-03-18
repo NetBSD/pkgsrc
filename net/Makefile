@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1392 2021/03/15 16:47:08 gdt Exp $
+# $NetBSD: Makefile,v 1.1393 2021/03/18 18:47:04 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -717,6 +717,7 @@ SUBDIR+=	py-ldapdomaindump
 SUBDIR+=	py-lexicon
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-magic-wormhole
 SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
 SUBDIR+=	py-moto
