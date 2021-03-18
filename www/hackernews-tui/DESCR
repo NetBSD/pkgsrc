@@ -1,0 +1,7 @@
+hackernews_tui is a Terminal UI to browse Hacker News written in Rust.
+
+The application mainly consists of the following views:
+-Story View-Front Page displaying a list of stories in front page of Hacker News
+-Comment View` displaying a list of comments in a story
+-Story Search View displaying a search bar and a list of stories matching the
+search query.
