@@ -1,22 +1,22 @@
-$NetBSD: patch-lang_qt_src_Makefile.in,v 1.1 2018/01/31 11:36:14 markd Exp $
+$NetBSD: patch-lang_qt_src_Makefile.in,v 1.2 2021/03/18 06:44:45 markd Exp $
 
 Use installed libraries
 
---- lang/qt/src/Makefile.in.orig	2017-12-12 11:56:08.000000000 +0000
+--- lang/qt/src/Makefile.in.orig	2021-01-08 17:21:11.000000000 +0000
 +++ lang/qt/src/Makefile.in
-@@ -138,8 +138,7 @@ am__installdirs = "$(DESTDIR)$(libdir)"
+@@ -143,8 +143,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  	"$(DESTDIR)$(qgpgmeincludedir)" \
  	"$(DESTDIR)$(qgpgmeincludedir)"
  LTLIBRARIES = $(lib_LTLIBRARIES)
 -libqgpgme_la_DEPENDENCIES = ../../cpp/src/libgpgmepp.la \
 -	../../../src/libgpgme.la
-+libqgpgme_la_DEPENDENCIES = 
- am__objects_1 = dataprovider.lo job.lo multideletejob.lo \
++libqgpgme_la_DEPENDENCIES =
+ am__objects_1 = dataprovider.lo debug.lo job.lo multideletejob.lo \
  	qgpgmeadduseridjob.lo qgpgmebackend.lo \
  	qgpgmechangeexpiryjob.lo qgpgmechangeownertrustjob.lo \
-@@ -667,7 +666,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/lang/cpp/s
-               @GPGME_QT_CFLAGS@ @GPG_ERROR_CFLAGS@ @LIBASSUAN_CFLAGS@ \
-               -DBUILDING_QGPGME
+@@ -727,7 +726,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/lang/cpp/s
+               -DBUILDING_QGPGME -Wsuggest-override \
+               -Wzero-as-null-pointer-constant
  
 -libqgpgme_la_LIBADD = ../../cpp/src/libgpgmepp.la ../../../src/libgpgme.la \
 +libqgpgme_la_LIBADD = -lgpgmepp -lgpgme \
