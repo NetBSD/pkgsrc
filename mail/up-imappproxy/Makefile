@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/05/02 19:16:15 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/18 22:05:56 tm Exp $
 
 VERSION=	1.2.8
 PKGNAME=	up-imapproxy-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	up-imapproxy_${VERSION}~svn20171105.orig
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/u/up-imapproxy/}
