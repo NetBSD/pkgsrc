@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1705 2021/03/18 09:20:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1706 2021/03/18 09:40:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2596,3 +2596,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/py-cubes [adam 2021-03-18]
 	Removed mail/py-libgmail [adam 2021-03-18]
 	Removed www/py-hstspreload [adam 2021-03-18]
+	Removed textproc/py-cjson [adam 2021-03-18]
+	Removed www/py-cloudfiles [adam 2021-03-18]
