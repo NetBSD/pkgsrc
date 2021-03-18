@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2021/03/05 10:40:36 nia Exp $
+# $NetBSD: Makefile,v 1.50 2021/03/18 00:12:23 gutteridge Exp $
 #
 
 DISTNAME=	pcmanfm-1.3.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz
