@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/10/04 13:40:48 gdt Exp $
+# $NetBSD: Makefile,v 1.95 2021/03/18 10:03:36 fcambus Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
@@ -7,7 +7,7 @@ CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.kermitproject.org/kermit/archives/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.kermitproject.org/
+HOMEPAGE=	https://www.kermitproject.org/
 COMMENT=	Network and serial communication, file transfer, and scripting utility
 
 # UNIX C-Kermit 9.0 has been released with the Revised 3-Clause BSD License.
