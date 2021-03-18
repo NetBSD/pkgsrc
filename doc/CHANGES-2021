@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1706 2021/03/18 09:40:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1707 2021/03/18 10:20:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/py-hstspreload [adam 2021-03-18]
 	Removed textproc/py-cjson [adam 2021-03-18]
 	Removed www/py-cloudfiles [adam 2021-03-18]
+	Updated textproc/ruby-kramdown to 2.3.1 [fcambus 2021-03-18]
