@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/03/18 00:21:26 gutteridge Exp $
+
+SHA1 (lxhotkey-0.1.1.tar.xz) = 2f41397a07dc3ae19607be23f61f09cdb93c8a3d
+RMD160 (lxhotkey-0.1.1.tar.xz) = b3306f6cb29d0cd5cc0fd90fe9135cc823c3b49a
+SHA512 (lxhotkey-0.1.1.tar.xz) = 5b84a5d28717abf2d93f459f7ec745c0185b784125bc86f19dbbe9b760b55f01bcd2334e68db1f33ad70c1d715efba54395d415b55d58b75849c4298651ac4a3
+Size (lxhotkey-0.1.1.tar.xz) = 287204 bytes
+SHA1 (patch-src_lxhotkey.c) = 5bee473b64d7f08b5d01bf18ebcdbc7f924061dd
