@@ -1,24 +1,27 @@
 #!/bin/emacs --script
 ;;
-;; break thai string into words separated by spaces
+;; break thai string into words separated by spaces, using only
+;; 'thai-break-words from 'thai-word library with merged wordlist
 ;;
 ;; - if no args, process stdin
 ;; - if one arg and file exists with arg name, process file
-;; - else join get remainder of args and process
+;; - else join remainder of args and process
 ;;
 
 ;;(toggle-debug-on-error) ;; debug
 
-;; load custom dictionary first, 'thai-word-table is defvar
-(load "ST_SHARE_DIR/thai-dict" nil t)
-(load "ST_SHARE_DIR/thai-utility" nil t)
+;; turn off loading messages
+(setq pthai-verbose-wordloads nil)
+
+;; load pthai library
+(load "ST_SHARE_DIR/pthai" nil t)
 
 ;; split a thai line by spaces, return new line
 (defun process-thai-line(line)
   (with-temp-buffer
     (insert line)
     (goto-char (point-min))
-    (split-thai-line)
+    (thai-break-words " " (line-end-position))
     (buffer-string)))
 
 ;; hack to process stdin
@@ -48,6 +51,6 @@
     (insert (mapconcat 'identity (cdddr command-line-args) " "))
     (insert "\n"))
   (goto-char (point-min))
-  (split-thai)
+  (thai-break-words " " (point-max))
   (write-region nil nil "/dev/stdout"))
 (kill-emacs 0)
