@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/05/05 06:01:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/03/18 10:20:24 fcambus Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -292,6 +292,8 @@ ${GEM_LIBDIR}/test/testcases/block/09_html/simple.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/simple.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/standalone_image_in_div.htmlinput
 ${GEM_LIBDIR}/test/testcases/block/09_html/standalone_image_in_div.text
+${GEM_LIBDIR}/test/testcases/block/09_html/table.kramdown
+${GEM_LIBDIR}/test/testcases/block/09_html/table.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/xml.html
@@ -506,6 +508,8 @@ ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.text
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_defs.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_defs.text
+${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_in_html.html
+${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_in_html.text
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/in_footnote.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/in_footnote.text
 ${GEM_LIBDIR}/test/testcases/span/autolinks/url_links.html
