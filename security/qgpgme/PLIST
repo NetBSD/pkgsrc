@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/31 11:36:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/18 06:44:45 markd Exp $
 include/QGpgME/AbstractImportJob
 include/QGpgME/AddUserIDJob
 include/QGpgME/ChangeExpiryJob
@@ -7,6 +7,7 @@ include/QGpgME/ChangePasswdJob
 include/QGpgME/CryptoConfig
 include/QGpgME/DN
 include/QGpgME/DataProvider
+include/QGpgME/Debug
 include/QGpgME/DecryptJob
 include/QGpgME/DecryptVerifyJob
 include/QGpgME/DefaultKeyGenerationJob
@@ -14,6 +15,7 @@ include/QGpgME/DeleteJob
 include/QGpgME/DownloadJob
 include/QGpgME/EncryptJob
 include/QGpgME/ExportJob
+include/QGpgME/GpgCardJob
 include/QGpgME/HierarchicalKeyKistJob
 include/QGpgME/ImportFromKeyserverJob
 include/QGpgME/ImportJob
@@ -42,6 +44,7 @@ include/qgpgme/changeownertrustjob.h
 include/qgpgme/changepasswdjob.h
 include/qgpgme/cryptoconfig.h
 include/qgpgme/dataprovider.h
+include/qgpgme/debug.h
 include/qgpgme/decryptjob.h
 include/qgpgme/decryptverifyjob.h
 include/qgpgme/defaultkeygenerationjob.h
@@ -50,6 +53,7 @@ include/qgpgme/dn.h
 include/qgpgme/downloadjob.h
 include/qgpgme/encryptjob.h
 include/qgpgme/exportjob.h
+include/qgpgme/gpgcardjob.h
 include/qgpgme/hierarchicalkeylistjob.h
 include/qgpgme/importfromkeyserverjob.h
 include/qgpgme/importjob.h
