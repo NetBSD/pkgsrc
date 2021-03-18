@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
+$NetBSD: patch-ae,v 1.12 2021/03/18 16:44:02 bouyer Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
@@ -8,9 +8,9 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
 # still needs to handle the buildlink path for libusb-1.0 :(
 # schnoebe -- Fri May 24 14:55:57 CDT 2013
 
---- Makefile.am.orig	2019-12-10 05:00:36.000000000 +0000
-+++ Makefile.am
-@@ -8,7 +8,7 @@ CFLAGS+= -DCONFDIR=\"$(hplip_confdir)\"
+--- Makefile.am.orig	2019-12-10 06:00:36.000000000 +0100
++++ Makefile.am	2021-03-18 15:14:51.942673859 +0100
+@@ -8,7 +8,7 @@
  CXXFLAGS+= -DCONFDIR=\"$(hplip_confdir)\"
  
  hplipdir = $(datadir)/hplip
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  docdir = $(hpdocdir)
  htmldir = $(hphtmldir)
  doc_DATA = COPYING copyright prnt/hpijs/README_LIBJPG
-@@ -110,6 +110,7 @@ libhpmud_la_LDFLAGS += -lusb
+@@ -110,6 +110,7 @@
  else
  libhpmud_la_SOURCES += io/hpmud/musb.c 
  libhpmud_la_CFLAGS  += -I/usr/include/libusb-1.0
@@ -27,7 +27,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  libhpmud_la_LDFLAGS += -lusb-1.0
  endif
  
-@@ -131,12 +132,12 @@ libhpip_la_SOURCES = ip/xconvolve.c ip/x
+@@ -131,12 +132,12 @@
  	ip/hpip.h ip/ipdefs.h ip/xform.h ip/xjpg_dct.h ip/xjpg_huf.h ip/xjpg_mrk.h
  
  #hpmud rules data dir
@@ -42,7 +42,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  if UDEV_SYSFS_RULES
  dist_rules_DATA = data/rules/56-hpmud_sysfs.rules
  else
-@@ -144,11 +145,11 @@ dist_rules_DATA = data/rules/56-hpmud.ru
+@@ -144,11 +145,11 @@
  endif
  endif #HPLIP_CLASS_DRIVER
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  hplip_conf_DATA = hplip.conf
  
  if !HPLIP_CLASS_DRIVER
-@@ -158,7 +159,7 @@ pstotiff_SCRIPTS = fax/filters/pstotiff
+@@ -158,7 +159,7 @@
  endif #HPLIP_CLASS_DRIVER
  
  # hplip.state
@@ -65,7 +65,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  dist_hplip_state_DATA =
  
  if FULL_BUILD
-@@ -233,11 +234,11 @@ endif # FAX_BUILD
+@@ -233,11 +234,11 @@
  if !HPLIP_CLASS_DRIVER
  # AppArmor Changes
  if APPARMOR_BUILD
@@ -79,7 +79,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  apparmor_abstraction_DATA = apparmor/abstractions/hplip
  dist_apparmor_abstraction_DATA = apparmor/abstractions/hplip
  
-@@ -363,6 +364,7 @@ endif
+@@ -363,6 +364,7 @@
  
  if !LIBUSB01_BUILD
  hpmudext_la_CFLAGS +=-I/usr/include/libusb-1.0 
@@ -87,7 +87,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  endif
  endif #!HPLIP_CLASS_DRIVER
  # ui (qt3)
-@@ -448,9 +450,9 @@ endif
+@@ -448,9 +450,9 @@
  endif #HPLIP_CLASS_DRIVER
  # PolicyKit
  if POLICYKIT_INSTALL
@@ -99,7 +99,7 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
  policykit_policydir = $(policykit_dir)
  dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
-@@ -594,7 +596,7 @@ hpcups_SOURCES = prnt/hpcups/HPCupsFilte
+@@ -594,7 +596,7 @@
  	prnt/hpcups/ImageProcessor.h
  
  hpcups_CXXFLAGS = $(APDK_ENDIAN_FLAG) $(DBUS_CFLAGS)
@@ -108,7 +108,21 @@ $NetBSD: patch-ae,v 1.11 2020/01/04 04:24:12 khorben Exp $
  #else
  #hpcupsdir = $(cupsfilterdir)
  #hpcups_PROGRAMS = hpcups
-@@ -697,13 +699,13 @@ if HPLIP_BUILD
+@@ -683,27 +685,17 @@
+ endif #HPLIP_CLASS_DRIVER
+ 
+ install-data-hook:
+ if HPLIP_BUILD
+-	if [ \( "$(UNAME)" = "x86_64" -a  -d "$(libdir)/" \) ]; then \
+-		cp prnt/hpcups/libImageProcessor-x86_64.so $(libdir)/ ; \
+-		chmod 775 $(libdir)/libImageProcessor-x86_64.so ; \
+-		ln -sf $(libdir)/libImageProcessor-x86_64.so $(libdir)/libImageProcessor.so ; \
+-	fi; \
+-	if [ \( \( "$(UNAME)" = "i686" -o "$(UNAME)" = "i386" \) -a -d "$(libdir)/" \) ]; then \
+-		cp prnt/hpcups/libImageProcessor-x86_32.so $(libdir)/ ; \
+-		chmod 775 $(libdir)/libImageProcessor-x86_32.so ; \
+-		ln -sf $(libdir)/libImageProcessor-x86_32.so $(libdir)/libImageProcessor.so ; \
+-	fi
  if !HPLIP_CLASS_DRIVER
  #	   If scanner build, add hpaio entry to sane dll.conf.
  	if [ "$(scan_build)" = "yes" ]; then \
