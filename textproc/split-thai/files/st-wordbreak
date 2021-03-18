@@ -25,7 +25,7 @@ my @tmp_combos = ();
 #
 sub read_dictionary {
     # default dictionary
-    my $fname = "ST_SHARE_DIR/thaidict";
+    my $fname = "ST_SHARE_DIR/words";
     $fname = $opt_d if defined $opt_d;
 
     die "error reading dictionary $fname" unless -f $fname && -s $fname;
