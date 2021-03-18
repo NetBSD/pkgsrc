@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/01/26 14:24:29 triaxx Exp $
-
-SHA1 (python-cloudfiles-1.7.11.tar.gz) = 822344c5149f4f000679bc045996af9304f8b271
-RMD160 (python-cloudfiles-1.7.11.tar.gz) = b393a61fe209d6af4372cd0cecfcfb09106fc5ab
-SHA512 (python-cloudfiles-1.7.11.tar.gz) = c30106232291ee6a1429b182597857405162be171b30d5c74d6626d50428e93b8f6b96685e23c8d8f118ef7b025322469b5b990e08ba029332ad20c043efffcf
-Size (python-cloudfiles-1.7.11.tar.gz) = 330709 bytes
