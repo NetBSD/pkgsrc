@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/02/15 18:58:36 adam Exp $
+$NetBSD: distinfo,v 1.19 2021/03/18 15:04:53 adam Exp $
 
 SHA1 (postgresql-10.16.tar.bz2) = 594d7f1c604a9666499510d69b6dece97632a61d
 RMD160 (postgresql-10.16.tar.bz2) = d112a187f96bb75e39131e48ca7973286e2da89d
@@ -8,6 +8,7 @@ SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
 SHA1 (patch-config_perl.m4) = b3393d0f28e97f89ae20297d85553c508b3896bb
 SHA1 (patch-configure) = b0a758023b3b263ff51b154d0da32cf02520c6cd
 SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
+SHA1 (patch-contrib_uuid-ossp_Makefile) = 2eff5d539a4501dda45d23bc094a5099a456e0af
 SHA1 (patch-src_Makefile.global.in) = 335b57afff23a9684ab0a09257665810c1ba2d1e
 SHA1 (patch-src_Makefile.shlib) = 74ab026a457a4789a1aa1d6423d88ce4a2db7a2e
 SHA1 (patch-src_backend_Makefile) = 91aa620b3a26f3da66c22aef78611a352a8793b6
