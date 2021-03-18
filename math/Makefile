@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.490 2021/02/12 06:51:16 pin Exp $
+# $NetBSD: Makefile,v 1.491 2021/03/18 03:46:56 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -436,6 +436,8 @@ SUBDIR+=	tex-mathspec
 SUBDIR+=	tex-mathspec-doc
 SUBDIR+=	tex-minifp
 SUBDIR+=	tex-minifp-doc
+SUBDIR+=	tex-physics
+SUBDIR+=	tex-physics-doc
 SUBDIR+=	tex-unicode-math
 SUBDIR+=	tex-unicode-math-doc
 SUBDIR+=	texdrive
