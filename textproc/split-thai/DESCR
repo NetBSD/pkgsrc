@@ -3,5 +3,6 @@ boundaries, also known as word tokenization or word breaking.  The
 utilities use emacs, swath, perl, and a c++ icu-project program.  All
 use dictionary-based word splitting.
 
-Also included is a merged dictionary file of Thai words and a perl
-script to grep Thai UTF-8 words.
+Also included is a merged dictionary file of Thai words, a perl script
+to grep Thai UTF-8 words, and an emacs library that can split and play
+audio for Thai words.

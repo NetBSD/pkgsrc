@@ -10,7 +10,7 @@ swath_cmd=ST_SHARE_BIN/swath
 
 # use merged dictionary unless specified otherwise
 if [ -z "$SWATHDICT" ]; then
-    dictarg="-d ST_SHARE_DIR/thaidict.tri"
+    dictarg="-d ST_SHARE_DIR/words.tri"
 fi
 
 if [ "$#" -eq 0 ]; then

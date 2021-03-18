@@ -1,0 +1,45 @@
+# sample dictionary file for pthai.el emacs module
+#
+# format of vocabulary files:
+#  thai_word[whitespace]eng1,eng2,eng3, {thaiclass1 thaiclass2}, {engclass1, engclass1, engclass1}
+#  definitions can be arranged in any order
+#
+#  anything after '#' is ignored
+#  anything in () inclusively is ignored
+#  empty lines/whitespace/no-thai-character-in-line are ignored
+#
+#  thai words with multiple definition lines will be merged
+#
+#  anything in definition of word within {} is classifier info,
+#  either the actual thai word(s) used with classifier, or english
+#  definitions of what the word classifies, note english classifiers
+#  need to be separated by commas, thai classifiers by spaces.
+#
+#  see http://thai-language.com/ref/classifier-list for a large list of classifiers
+#
+
+# thai word with one definition
+แมว  cat
+
+# thai words that similar meanings, with some comments
+หมา   dog
+สุนัข   dog (more polite)
+ดิฉัน   I (female)
+ผม    I (male)
+
+# thai word with multiple definitions
+แม่น   accurately, exactly, precisely
+
+# thai word that includes classifier information
+# กรง          word that has a definition and is also a classifier
+#     cage      one of definitions of กรง
+#     coop      one of definitions of กรง
+#     {cage}    means กรง is a classifier for "cage"
+#     {กรง}     means กรง is a classifier for "กรง"
+กรง   cage, coop, {cage}, {กรง}
+
+# classifier-only defintion of thai word
+#  กระทง                                  classifier
+# statements, points, plots of land       กระทง is a classifier for these english words
+# กระทง ข้อหา กระทงความ                     กระทง is a classifer for these thai words
+กระทง    {statements, points, plots of land}, {กระทง ข้อหา กระทงความ}

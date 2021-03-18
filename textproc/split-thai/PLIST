@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/05 18:02:36 scole Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/18 17:53:41 scole Exp $
 bin/st-emacs
 bin/st-icu
 bin/st-swath
 bin/st-wordbreak
 bin/tgrep
 share/split-thai/README.txt
-share/split-thai/thai-dict.el
-share/split-thai/thai-dict.elc
-share/split-thai/thai-utility.el
-share/split-thai/thai-utility.elc
-share/split-thai/thaidict
-share/split-thai/thaidict.tri
+share/split-thai/pthai.el
+share/split-thai/sampledict.txt
+share/split-thai/words
+share/split-thai/words.tri

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2020/11/05 09:09:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/18 17:53:41 scole Exp $
 
-PKGNAME=	split-thai-1.1
-PKGREVISION=	1
+PKGNAME=	split-thai-2.0
 CATEGORIES=	textproc
-MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Utilities to split UTF-8 Thai text into words
-LICENSE=	public-domain AND mit AND gnu-gpl-v2 # code, icu dict, swath dict
+MAINTAINER=	scole@NetBSD.org
+COMMENT=	Utilities and an emacs library to split UTF-8 Thai text into words
+# pthai.el, other code, icu dict, swath dict
+LICENSE=	2-clause-bsd AND public-domain AND mit AND gnu-gpl-v2
 
 # xxx fetching a specific version of a file out of a github project
 EXTRACT_SUFX=	# none
@@ -20,6 +20,7 @@ USE_TOOLS+=	perl:run
 BUILD_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	swath-[0-9]*:../../textproc/swath
+DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 
 REPLACE_PERL=	st-wordbreak tgrep
 REPLACE_SH=	st-swath
@@ -30,8 +31,7 @@ ST_SHARE_DIR=		share/split-thai
 ST_SHARE_BIN=		bin
 INSTALLATION_DIRS=	${ST_SHARE_BIN} ${ST_SHARE_DIR}
 
-ST_SHARE_FILES=		README.txt thaidict thai-dict.el thai-dict.elc
-ST_SHARE_FILES+=	thai-utility.el thai-utility.elc thaidict.tri
+ST_SHARE_FILES=		README.txt pthai.el sampledict.txt words words.tri
 
 # xxx REPLACE_EMACS_SCRIPT
 SUBST_CLASSES+=			st-emacs-app
@@ -41,39 +41,36 @@ SUBST_FILES.st-emacs-app=	st-emacs
 SUBST_SED.st-emacs-app=		-e 's,!/bin/emacs,!${PREFIX}/bin/emacs,g'
 
 SUBST_CLASSES+=			dictionary-app
-SUBST_STAGE.dictionary-app=	pre-configure
+SUBST_STAGE.dictionary-app=	post-extract
 SUBST_MESSAGE.dictionary-app=	Fixing dictionary paths.
-SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak
+SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak pthai.el
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
 SUBST_SED.dictionary-app+=	-e 's,ST_SHARE_BIN,${PREFIX}/${ST_SHARE_BIN},g'
 
 pre-extract:
 	mkdir -p ${WRKSRC}
-	cd files && cp README.txt st-emacs st-icu.cc st-swath \
-		st-wordbreak tgrep thai-utility.el thaidict.abm ${WRKSRC}
+	cd files && cp README.txt pthai.el sampledict.txt \
+		st-emacs st-icu.cc st-swath st-wordbreak tgrep \
+		words.abm ${WRKSRC}
 
-post-extract:
+pre-build:
 	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
-		-f batch-byte-compile thai-utility.el
-	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch -l thai-utility.elc \
-		--eval '(thai-word-table-save "emacs-dict")'
+		--eval='(setq pthai-bootstrap t)' \
+		--eval='(load-file "pthai.el")' \
+		--eval='(pthai-twt-table-save "thai-word-dict")'
 	cp ${WRKDIR}/${DISTFILES} ${WRKSRC}/icu-dict
 	cd ${PREFIX}/share/swath && \
 		${UTF8_ENV} trietool swathdic list | \
 		awk '{print $$1}' > ${WRKSRC}/swath-dict
 	cd ${WRKSRC} && \
-		${UTF8_ENV} cat icu-dict swath-dict emacs-dict | \
-			grep -v '#' | sort | uniq > thaidict
+		${UTF8_ENV} cat icu-dict swath-dict thai-word-dict | \
+			grep -v '#' | sort | uniq > words
 	cd ${WRKSRC} && \
-		${UTF8_ENV} trietool thaidict add-list -e utf-8 thaidict
-	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch -l thai-utility.elc \
-		--eval '(thai-word-table-save-defvar "thaidict" "thai-dict.el")'
-	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
-		-f batch-byte-compile thai-dict.el
-.for i in emacs-dict icu-dict swath-dict
+		${UTF8_ENV} trietool words add-list -e utf-8 words
+.for i in thai-word-dict icu-dict swath-dict
 	@${ECHO} `wc -l ${WRKSRC}/${i} | awk '{print $$1}'` words in ${i}
 .endfor
-	@${ECHO} `wc -l ${WRKSRC}/thaidict | awk '{print $$1}'` \
+	@${ECHO} `wc -l ${WRKSRC}/words | awk '{print $$1}'` \
 		unique words in combined dictionary
 
 do-build:

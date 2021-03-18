@@ -4,6 +4,7 @@ NAME
      st-swath
      st-wordbreak
      tgrep
+     pthai.el
 
 SYNOPSIS
      st-emacs|st-icu|st-swath|st-wordbreak [filename|text1 text2 ...|'blank']
@@ -25,6 +26,9 @@ DESCRIPTION
 
      tgrep:        grep-like utility using perl, see "tgrep -h"
 
+     pthai.el:     emacs library for handling thai text in an emacs buffer,
+                   including word splitting
+     
 EXAMPLES
       split one or more text strings:
       # st-swath แมวและหมา
@@ -74,8 +78,13 @@ NOTES
      icu4c/source/data/brkitr/dictionaries/thaidict.txt and then
      rebuild the whole library.
 
+     Also included in this package is an emacs library called "pthai"
+     (practice-thai).  It can do word splitting, play mp3 audio for
+     thai words and a few other things.
+     
 SEE ALSO
      swath(1), libthai(1), emacs(1), locale(1), uconv(1), iconv(1)
+     trans(1) from pkgsrc/textproc/translate-shell
 
 BUGS
      st-icu should also use the combined dictionary words.
