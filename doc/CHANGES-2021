@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1711 2021/03/18 17:56:30 scole Exp $
+$NetBSD: CHANGES-2021,v 1.1712 2021/03/18 17:57:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2603,3 +2603,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/webkit-gtk to 2.30.6 [leot 2021-03-18]
 	Updated filesystems/tahoe-lafs to 1.13.0 [gdt 2021-03-18]
 	Updated textproc/split-thai to 2.0 [scole 2021-03-18]
+	Updated filesystems/tahoe-lafs to 1.15.0 [gdt 2021-03-18]
