@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2021/02/15 18:58:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.36 2021/03/18 15:04:55 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -95,6 +95,17 @@ CONFIGURE_ARGS.OpenBSD+=	--disable-thread-safety
 BUILD_DEFS+=		PGSQL_BLCKSZ
 .if defined(PGSQL_BLCKSZ)
 CONFIGURE_ARGS+=	--with-blocksize=${PGSQL_BLCKSZ}
+.endif
+
+# UUID support for contrib/uuid-ossp
+# It has to be defined here, because it affects Makefile.global
+.if ${OPSYS:M*BSD}
+CONFIGURE_ARGS+=	--with-uuid=bsd
+.elif ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-uuid=e2fs
+.elif ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-uuid=ossp
+.include "../../devel/ossp-uuid/buildlink3.mk"
 .endif
 
 # PostgreSQL explicitly forbids any use of -ffast-math

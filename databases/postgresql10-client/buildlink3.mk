@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/12/04 04:55:42 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2021/03/18 15:04:54 adam Exp $
 
 BUILDLINK_TREE+=	postgresql10-client
 
@@ -12,6 +12,11 @@ BUILDLINK_PKGSRCDIR.postgresql10-client?=	../../databases/postgresql10-client
 # This variable contains the libraries need to link most clients.
 BUILDLINK_LDADD.postgresql10-client=	-lpq ${BUILDLINK_LDADD.gettext}
 BUILDLINK_FILES.postgresql10-client+=	bin/pg_config
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../devel/ossp-uuid/buildlink3.mk"
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
