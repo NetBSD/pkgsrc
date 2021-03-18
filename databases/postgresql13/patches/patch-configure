@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2020/10/18 09:24:02 adam Exp $
+$NetBSD: patch-configure,v 1.2 2021/03/18 15:04:55 adam Exp $
 
+Do not store CONFIGURE_ARGS, as these may contain working directory references.
 Finally, native solaris uses -lgss for gssapi on mit-krb5.
 
---- configure.orig	2018-02-05 21:01:02.000000000 +0000
+--- configure.orig	2021-02-08 21:54:11.000000000 +0000
 +++ configure
-@@ -2879,6 +2879,7 @@ case $host_os in
+@@ -2805,7 +2805,7 @@ ac_configure="$SHELL $ac_aux_dir/configu
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define CONFIGURE_ARGS "$ac_configure_args"
++#define CONFIGURE_ARGS ""
+ _ACEOF
+ 
+ 
+@@ -2971,6 +2971,7 @@ case $host_os in
    darwin*) template=darwin ;;
  dragonfly*) template=netbsd ;;
   freebsd*) template=freebsd ;;
@@ -12,7 +22,7 @@ Finally, native solaris uses -lgss for gssapi on mit-krb5.
      hpux*) template=hpux ;;
   linux*|gnu*|k*bsd*-gnu)
             template=linux ;;
-@@ -7884,9 +7885,7 @@ if test "$PORTNAME" = "win32" ; then
+@@ -9731,9 +9732,7 @@ if test "$PORTNAME" = "win32" ; then
  		fi
  	fi
  else
@@ -23,7 +33,7 @@ Finally, native solaris uses -lgss for gssapi on mit-krb5.
  fi
  if test -z "$perl_embed_ldflags" ; then
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-@@ -9928,7 +9927,7 @@ return gss_init_sec_context ();
+@@ -12043,7 +12042,7 @@ return gss_init_sec_context ();
    return 0;
  }
  _ACEOF

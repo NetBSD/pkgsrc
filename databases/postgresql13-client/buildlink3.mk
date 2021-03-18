@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/12/04 04:55:45 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2021/03/18 15:04:55 adam Exp $
 
 BUILDLINK_TREE+=	postgresql13-client
 
@@ -12,6 +12,11 @@ BUILDLINK_PKGSRCDIR.postgresql13-client?=	../../databases/postgresql13-client
 # This variable contains the libraries need to link most clients.
 BUILDLINK_LDADD.postgresql13-client=	-lpq ${BUILDLINK_LDADD.gettext}
 BUILDLINK_FILES.postgresql13-client+=	bin/pg_config
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../devel/ossp-uuid/buildlink3.mk"
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
