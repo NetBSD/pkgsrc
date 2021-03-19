@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/02 20:55:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/19 10:45:31 nia Exp $
 include/libical-glib/i-cal-array.h
 include/libical-glib/i-cal-attach.h
 include/libical-glib/i-cal-comp-iter.h
@@ -84,6 +84,8 @@ include/libical/vcaltmp.h
 include/libical/vcc.h
 include/libical/vcomponent_cxx.h
 include/libical/vobject.h
+lib/cmake/LibIcal/IcalGlibSrcGenerator-noconfig.cmake
+lib/cmake/LibIcal/IcalGlibSrcGenerator.cmake
 lib/cmake/LibIcal/LibIcalConfig.cmake
 lib/cmake/LibIcal/LibIcalConfigVersion.cmake
 lib/cmake/LibIcal/LibIcalTargets-noconfig.cmake
@@ -114,3 +116,4 @@ lib/libicalvcal.so.3
 lib/libicalvcal.so.${PKGVERSION}
 lib/pkgconfig/libical-glib.pc
 lib/pkgconfig/libical.pc
+libexec/libical/ical-glib-src-generator
