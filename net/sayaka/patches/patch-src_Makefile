@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile,v 1.1 2021/03/12 15:27:55 tsutsui Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2021/03/19 16:31:58 tsutsui Exp $
 
 - enable optimization.
 
---- src/Makefile.orig	2021-03-03 11:55:35.000000000 +0000
+--- src/Makefile.orig	2021-03-18 09:51:03.000000000 +0000
 +++ src/Makefile
-@@ -42,10 +42,10 @@ SRCS_sixelv=	\
- 	sixelv.cpp \
- 
+@@ -67,10 +67,10 @@ SRCS_all=	\
+ 	${SRCS_sixelv} \
+ 	${SRCS_test} \
  
 -CXX+=		-g
 +#CXX+=		-g
