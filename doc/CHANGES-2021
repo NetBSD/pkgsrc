@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1724 2021/03/19 10:10:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1725 2021/03/19 10:19:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2624,3 +2624,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/dhewm3 to 1.5.1 [nia 2021-03-19]
 	Updated www/py-django-mptt to 0.12.0 [adam 2021-03-19]
 	Updated www/py-django-binary-database-files to 1.0.14 [adam 2021-03-19]
+	Updated shells/fish to 3.2.1 [nia 2021-03-19]
