@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1741 2021/03/19 20:29:44 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1742 2021/03/19 22:22:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2642,3 +2642,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go115 to 1.15.10 [bsiegert 2021-03-19]
 	Updated sysutils/smartmontools to 7.2 [triaxx 2021-03-19]
 	Updated ham/xlog to 2.0.22 [gdt 2021-03-19]
+	Added devel/libcutl version 1.10.0 [markd 2021-03-19]
+	Updated devel/xsd to 4.0.0nb1 [markd 2021-03-19]
+	Added textproc/libkolabxml version 1.1.6 [markd 2021-03-19]
