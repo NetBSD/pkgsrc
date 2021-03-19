@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/23 14:07:38 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/19 17:22:55 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -1991,6 +1991,7 @@ go115/src/cmd/go/testdata/script/cgo_bad_directives.txt
 go115/src/cmd/go/testdata/script/cgo_depends_on_syscall.txt
 go115/src/cmd/go/testdata/script/cgo_flag_contains_space.txt
 go115/src/cmd/go/testdata/script/cgo_path.txt
+go115/src/cmd/go/testdata/script/cgo_path_space.txt
 go115/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go115/src/cmd/go/testdata/script/clean_cache_n.txt
 go115/src/cmd/go/testdata/script/clean_testcache.txt
@@ -8958,6 +8959,7 @@ go115/test/fixedbugs/issue4252.go
 go115/test/fixedbugs/issue4264.go
 go115/test/fixedbugs/issue42753.go
 go115/test/fixedbugs/issue4283.go
+go115/test/fixedbugs/issue42876.go
 go115/test/fixedbugs/issue4313.go
 go115/test/fixedbugs/issue4316.go
 go115/test/fixedbugs/issue4323.go
@@ -8969,6 +8971,7 @@ go115/test/fixedbugs/issue4326.dir/z.go
 go115/test/fixedbugs/issue4326.go
 go115/test/fixedbugs/issue4348.go
 go115/test/fixedbugs/issue4353.go
+go115/test/fixedbugs/issue43570.go
 go115/test/fixedbugs/issue4359.go
 go115/test/fixedbugs/issue4365.go
 go115/test/fixedbugs/issue4370.dir/p1.go
