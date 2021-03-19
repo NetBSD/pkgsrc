@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1736 2021/03/19 16:43:18 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1737 2021/03/19 16:52:39 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2637,3 +2637,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/syncthing to 1.14.0 [triaxx 2021-03-19]
 	Updated net/sayaka to 3.5.1 [tsutsui 2021-03-19]
 	Updated devel/rebar3 to 3.14.4 [triaxx 2021-03-19]
+	Updated textproc/ruby-nokogiri to 1.11.2 [tsutsui 2021-03-19]
