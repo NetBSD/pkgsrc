@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/25 11:06:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/03/19 12:08:15 nia Exp $
 
-SHA1 (quodlibet-4.3.0.tar.gz) = fb95f5add56099fbba0bc3b959f76d4753312c49
-RMD160 (quodlibet-4.3.0.tar.gz) = 48a51133da1d4a5ce55ece5c31efd6ab2975ebd0
-SHA512 (quodlibet-4.3.0.tar.gz) = 054a31206935ad6bf44420e4d03a4ed7e75523985a944ccf85a0169d2824fd9e44e1c86db75ddef572cf25d73dd5efb588a4cad15bf345cfb6d6d81c3572a10a
-Size (quodlibet-4.3.0.tar.gz) = 4752295 bytes
+SHA1 (quodlibet-4.4.0.tar.gz) = a265dd251124fb68a33d7f9c09563253d70a0d21
+RMD160 (quodlibet-4.4.0.tar.gz) = bbf886886a3a99925b222cb96110a0abf95ef054
+SHA512 (quodlibet-4.4.0.tar.gz) = afe65d2389cbc72416a353c94d8bb2923c14238d3060e34e259a5af68cb14b9d12f059e6b0a832584fa7a5534f91552cccd70ac00bacd2da8717684a5248e605
+Size (quodlibet-4.4.0.tar.gz) = 4822260 bytes
