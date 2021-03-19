@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1718 2021/03/19 06:29:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1719 2021/03/19 07:05:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2613,3 +2613,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-docs to 3.35.2 [adam 2021-03-19]
 	Updated databases/sqlite3-tcl to 3.35.2 [adam 2021-03-19]
 	Updated devel/lemon to 1.0.3.35.2 [adam 2021-03-19]
+	Updated graphics/jasper to 2.0.27 [adam 2021-03-19]
+	Updated net/grpc to 1.36.4 [adam 2021-03-19]
