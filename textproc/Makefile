@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1201 2021/03/18 09:37:12 adam Exp $
+# $NetBSD: Makefile,v 1.1202 2021/03/19 00:48:36 scole Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1115,7 +1115,6 @@ SUBDIR+=	soprano
 SUBDIR+=	sord
 SUBDIR+=	source-highlight
 SUBDIR+=	sphinxsearch
-SUBDIR+=	split-thai
 SUBDIR+=	stardic
 SUBDIR+=	stava
 SUBDIR+=	sub2srt
