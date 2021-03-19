@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1720 2021/03/19 07:35:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1721 2021/03/19 08:17:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2617,3 +2617,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/grpc to 1.36.4 [adam 2021-03-19]
 	Updated devel/py-faker to 6.6.2 [adam 2021-03-19]
 	Updated devel/py-flake8-docstrings to 1.6.0 [adam 2021-03-19]
+	Removed security/py-crypto successor security/py-cryptodome [adam 2021-03-19]
+	Updated security/py-stix to 1.2.0.11 [adam 2021-03-19]
