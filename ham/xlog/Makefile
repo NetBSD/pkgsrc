@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.98 2021/02/16 20:22:52 gdt Exp $
+# $NetBSD: Makefile,v 1.99 2021/03/19 20:29:36 gdt Exp $
 #
 
-DISTNAME=	xlog-2.0.20
+DISTNAME=	xlog-2.0.22
 CATEGORIES=	ham
 MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # Beware that the author is opposed to anyone else building from the
 # repo, instead of distfiles, and objects to bug reports.
 # Beware that the upstream homepage will lead you to the wrong repo.
