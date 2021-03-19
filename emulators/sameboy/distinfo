@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/08/30 12:50:49 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/03/19 12:18:56 nia Exp $
 
-SHA1 (sameboy-0.13.6.tar.gz) = 896c758ed7f096e15f78f3d506d376aa4e3c874a
-RMD160 (sameboy-0.13.6.tar.gz) = 0b785506f425778d88743782cb37b94ebef37624
-SHA512 (sameboy-0.13.6.tar.gz) = 0def08618c797c4f30c8f47144604af7cc0e4fdf39d854df52069473a4565b22eb5ee85159ad4c055996857b77fba25865504936f30f80d9a70d2bd553700216
-Size (sameboy-0.13.6.tar.gz) = 2625465 bytes
+SHA1 (sameboy-0.14.2.tar.gz) = 98700cedd551aaaf005bac3ae27509ba2f623055
+RMD160 (sameboy-0.14.2.tar.gz) = 2f5d41d890334ee89f905c4c0bc434a84b4e6e44
+SHA512 (sameboy-0.14.2.tar.gz) = a322ad8bf5faf2a325b02ca0cdd29ff4a116918607094120f5c4f36dbf06ff578887d48ff0d8d10c276f07b1b8c625ff774b9ddfd7f9ac895505c99d46e56d5a
+Size (sameboy-0.14.2.tar.gz) = 2826305 bytes
