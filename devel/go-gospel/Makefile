@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/01/23 14:22:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/19 17:36:58 bsiegert Exp $
 
 DISTNAME=	go-gospel-0.0.20200416
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bfix/}
 GITHUB_TAG=	1d04e847bea4171138af65e5dbba9c8376fd7795
