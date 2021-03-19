@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1717 2021/03/19 00:51:36 scole Exp $
+$NetBSD: CHANGES-2021,v 1.1718 2021/03/19 06:29:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2609,3 +2609,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/up-imappproxy to 1.2.8nb2 [tm 2021-03-18]
 	Added net/beanstalkd version 1.12 [khorben 2021-03-18]
 	Removed textproc/split-thai 2.0 [scole 2021-03-18]
+	Updated databases/sqlite3 to 3.35.2 [adam 2021-03-19]
+	Updated databases/sqlite3-docs to 3.35.2 [adam 2021-03-19]
+	Updated databases/sqlite3-tcl to 3.35.2 [adam 2021-03-19]
+	Updated devel/lemon to 1.0.3.35.2 [adam 2021-03-19]
