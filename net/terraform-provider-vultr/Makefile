@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/02/01 16:53:59 tpaul Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/19 17:37:03 bsiegert Exp $
 
 DISTNAME=	terraform-provider-vultr-2.1.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_PROJECT=	${PKGBASE}

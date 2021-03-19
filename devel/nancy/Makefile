@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2021/01/23 14:23:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/19 17:36:59 bsiegert Exp $
 
 GITHUB_PROJECT=	nancy
 GITHUB_TAG=	v1.0.5
 DISTNAME=	v1.0.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sonatype-nexus-community/}
 DIST_SUBDIR=	${GITHUB_PROJECT}

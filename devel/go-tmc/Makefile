@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/01/23 14:23:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/19 17:36:56 bsiegert Exp $
 
 DISTNAME=	tmc-0.5.1
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bep/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	tmc

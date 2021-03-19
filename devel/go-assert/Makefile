@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/01/23 14:22:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2021/03/19 17:36:53 bsiegert Exp $
 
 DISTNAME=	assert-0.0.0.20170929
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	22
+PKGREVISION=	23
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alecthomas/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	assert
