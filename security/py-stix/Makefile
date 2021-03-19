@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/05/13 21:49:04 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/03/19 08:16:29 adam Exp $
 
-DISTNAME=	stix-1.2.0.10
+DISTNAME=	stix-1.2.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stix/}
