@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3351 2021/03/18 09:16:53 adam Exp $
+# $NetBSD: Makefile,v 1.3352 2021/03/19 22:12:08 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -736,6 +736,7 @@ SUBDIR+=	libcfg+
 SUBDIR+=	libcompizconfig
 SUBDIR+=	libconfig
 SUBDIR+=	libctl
+SUBDIR+=	libcutl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
 SUBDIR+=	libdazzle
