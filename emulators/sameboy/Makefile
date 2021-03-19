@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/30 12:50:49 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/03/19 12:18:55 nia Exp $
 
 .include "Makefile.common"
 
@@ -10,22 +10,7 @@ BUILD_TARGET=	sdl
 
 MAKE_FLAGS+=	DATA_DIR=${PREFIX}/share/sameboy/
 
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share/doc/sameboy
-INSTALLATION_DIRS+=	share/sameboy
-INSTALLATION_DIRS+=	share/sameboy/Shaders
-
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-do-install:
-	cd ${WRKSRC}/build/bin/SDL && ${INSTALL_PROGRAM} sameboy \
-	    ${DESTDIR}${PREFIX}/bin/sameboy
-	cd ${WRKSRC}/build/bin/SDL && ${INSTALL_DATA} *.bin *.sym *.bmp \
-	    ${DESTDIR}${PREFIX}/share/sameboy
-	cd ${WRKSRC}/build/bin/SDL && ${INSTALL_DATA} LICENSE \
-	    ${DESTDIR}${PREFIX}/share/doc/sameboy
-	cd ${WRKSRC}/build/bin/SDL/Shaders && ${INSTALL_DATA} *.fsh \
-	    ${DESTDIR}${PREFIX}/share/sameboy/Shaders
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
