@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2021/01/23 14:22:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2021/03/19 17:36:52 bsiegert Exp $
 
 DISTNAME=	go-homedir-1.0.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitchellh/}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
