@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2021/02/09 12:29:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2021/03/19 17:37:10 bsiegert Exp $
 
 DISTNAME=	hugo-0.80.0
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gohugoio/}
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}

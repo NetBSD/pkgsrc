@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/01/23 14:23:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/19 17:36:59 bsiegert Exp $
 
 DISTNAME=		go-gift-1.2.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=disintegration/}
 GITHUB_PROJECT=		gift
