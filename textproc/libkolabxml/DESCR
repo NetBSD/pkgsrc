@@ -1,0 +1,5 @@
+Libkolabxml is the reference implementation of the Kolab XML Format as
+defined in http://wiki.kolab.org/User:Mollekopf/Drafts/KEP:17.
+
+It provides serialization/deserialization from/to in-memory
+representations for all Kolab Objects, including input validation.
