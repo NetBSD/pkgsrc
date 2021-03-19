@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1202 2021/03/19 00:48:36 scole Exp $
+# $NetBSD: Makefile,v 1.1203 2021/03/19 22:18:13 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -444,6 +444,7 @@ SUBDIR+=	libcue
 SUBDIR+=	libexttextcat
 SUBDIR+=	libfastjson
 SUBDIR+=	libhighlight
+SUBDIR+=	libkolabxml
 SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
