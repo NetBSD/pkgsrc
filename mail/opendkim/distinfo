@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.20 2020/01/07 13:35:13 sborrill Exp $
+$NetBSD: distinfo,v 1.21 2021/03/19 09:50:21 manu Exp $
 
 SHA1 (opendkim-2.10.3.tar.gz) = 4e9b966860bcfbca6441ed84a95bbe762fff69f4
 RMD160 (opendkim-2.10.3.tar.gz) = c6553757ae9675434e647f3cc1e6357bc60c7d2a
 SHA512 (opendkim-2.10.3.tar.gz) = 97923e533d072c07ae4d16a46cbed95ee799aa50f19468d8bc6d1dc534025a8616c3b4b68b5842bc899b509349a2c9a67312d574a726b048c0ea46dd4fcc45d8
 Size (opendkim-2.10.3.tar.gz) = 1210224 bytes
 SHA1 (patch-configure.ac) = c9ae182ed2c5c2ec3018fe4c6066ed7fa0d3686f
+SHA1 (patch-libopendkim_dkim-canon.c) = 82dc322f86981feddc2ad0100b33ce1eca7435d6
 SHA1 (patch-opendkim_opendkim-crypto.c) = d7d08fda3dba5bf9cb834123218b1e89b78878e5
