@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/12/04 20:44:59 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/03/19 12:08:15 nia Exp $
 
-DISTNAME=	quodlibet-4.3.0
-PKGREVISION=	6
+DISTNAME=	quodlibet-4.4.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet
@@ -36,8 +35,10 @@ USE_TOOLS+=	msgfmt
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-# Needs --desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 # Requires Python 3.5 or higher
 PYTHON_VERSIONS_INCOMPATIBLE=	27
