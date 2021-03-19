@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/02/19 09:56:48 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/03/19 10:05:30 adam Exp $
 
-SHA1 (django-mptt-0.11.0.tar.gz) = 21912aa6dc8a4d7730add85e499e1fd105eca8c7
-RMD160 (django-mptt-0.11.0.tar.gz) = fd9da15c7275ed4738ba5272e4cddb889ac68997
-SHA512 (django-mptt-0.11.0.tar.gz) = 21af30007661db1474628b6f8af86a3f6de52494efe1aaf9235f8b1660ba153f0de3ad91ff979588e4b681b00b44652a05146df7d3951d6ee62da38a1900fd89
-Size (django-mptt-0.11.0.tar.gz) = 98300 bytes
+SHA1 (django-mptt-0.12.0.tar.gz) = 38dc689a76017a0190ff60052dbf1632d2487256
+RMD160 (django-mptt-0.12.0.tar.gz) = 1a55dd199554dfb9dc1a4a5e255736d2e7fee882
+SHA512 (django-mptt-0.12.0.tar.gz) = 527135b859170c887f592f4f9b6f105dfc7f54af18affbf205d33860e80e3ba2336cfc9a3727792f4778817359cbef705d696c122725cf45d36838b5026e8699
+Size (django-mptt-0.12.0.tar.gz) = 103513 bytes
