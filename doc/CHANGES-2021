@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1739 2021/03/19 17:23:20 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.1740 2021/03/19 17:48:53 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2640,3 +2640,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-nokogiri to 1.11.2 [tsutsui 2021-03-19]
 	Updated www/davical to 1.1.10 [triaxx 2021-03-19]
 	Updated lang/go115 to 1.15.10 [bsiegert 2021-03-19]
+	Updated sysutils/smartmontools to 7.2 [triaxx 2021-03-19]
