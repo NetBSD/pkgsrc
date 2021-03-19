@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.4 2021/03/14 11:16:45 reinoud Exp $
+$NetBSD: patch-meson.build,v 1.5 2021/03/19 13:25:36 reinoud Exp $
 
 * Add NetBSD support.
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
@@ -11,7 +11,7 @@ $NetBSD: patch-meson.build,v 1.4 2021/03/14 11:16:45 reinoud Exp $
    accelerator_targets += {
      'CONFIG_HAX': ['i386-softmmu', 'x86_64-softmmu'],
      'CONFIG_HVF': ['x86_64-softmmu'],
-+    'CONFIG_NVMM': ['x86_64-softmmu'],
++    'CONFIG_NVMM': ['i386-softmmu', 'x86_64-softmmu'],
      'CONFIG_WHPX': ['i386-softmmu', 'x86_64-softmmu'],
    }
  endif
