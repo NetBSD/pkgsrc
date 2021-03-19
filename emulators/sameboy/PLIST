@@ -1,6 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/03 13:47:21 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/19 12:18:56 nia Exp $
 bin/sameboy
-share/doc/sameboy/LICENSE
+share/applications/sameboy.desktop
+share/icons/hicolor/128x128/apps/sameboy.png
+share/icons/hicolor/128x128/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/128x128/mimetypes/x-gameboy-rom.png
+share/icons/hicolor/16x16/apps/sameboy.png
+share/icons/hicolor/16x16/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/16x16/mimetypes/x-gameboy-rom.png
+share/icons/hicolor/256x256/apps/sameboy.png
+share/icons/hicolor/256x256/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/256x256/mimetypes/x-gameboy-rom.png
+share/icons/hicolor/32x32/apps/sameboy.png
+share/icons/hicolor/32x32/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/32x32/mimetypes/x-gameboy-rom.png
+share/icons/hicolor/512x512/apps/sameboy.png
+share/icons/hicolor/512x512/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/512x512/mimetypes/x-gameboy-rom.png
+share/icons/hicolor/64x64/apps/sameboy.png
+share/icons/hicolor/64x64/mimetypes/x-gameboy-color-rom.png
+share/icons/hicolor/64x64/mimetypes/x-gameboy-rom.png
+share/mime/packages/sameboy.xml
+share/sameboy/LICENSE
 share/sameboy/Shaders/AAOmniScaleLegacy.fsh
 share/sameboy/Shaders/AAScale2x.fsh
 share/sameboy/Shaders/AAScale4x.fsh
