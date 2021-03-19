@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1723 2021/03/19 09:43:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1724 2021/03/19 10:10:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2622,3 +2622,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-drf-nested-routers to 0.93.3 [adam 2021-03-19]
 	Updated www/py-django-treebeard to 4.5.1 [adam 2021-03-19]
 	Updated games/dhewm3 to 1.5.1 [nia 2021-03-19]
+	Updated www/py-django-mptt to 0.12.0 [adam 2021-03-19]
+	Updated www/py-django-binary-database-files to 1.0.14 [adam 2021-03-19]
