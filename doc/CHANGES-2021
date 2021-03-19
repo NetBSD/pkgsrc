@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1721 2021/03/19 08:17:28 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1722 2021/03/19 09:10:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2619,3 +2619,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-flake8-docstrings to 1.6.0 [adam 2021-03-19]
 	Removed security/py-crypto successor security/py-cryptodome [adam 2021-03-19]
 	Updated security/py-stix to 1.2.0.11 [adam 2021-03-19]
+	Updated www/py-drf-nested-routers to 0.93.3 [adam 2021-03-19]
+	Updated www/py-django-treebeard to 4.5.1 [adam 2021-03-19]
