@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/03/05 08:47:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/03/19 10:19:35 nia Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -14,8 +14,6 @@ share/doc/fish/_static/classic.css
 share/doc/fish/_static/comment-bright.png
 share/doc/fish/_static/comment-close.png
 share/doc/fish/_static/comment.png
-share/doc/fish/_static/copybutton.js
-share/doc/fish/_static/custom.css
 share/doc/fish/_static/default.css
 share/doc/fish/_static/doctools.js
 share/doc/fish/_static/documentation_options.js
@@ -578,6 +576,7 @@ share/fish/completions/mkdosfs.fish
 share/fish/completions/mkfs.fat.fish
 share/fish/completions/mkfs.vfat.fish
 share/fish/completions/mkinitcpio.fish
+share/fish/completions/mkpasswd.fish
 share/fish/completions/mktemp.fish
 share/fish/completions/mkvextract.fish
 share/fish/completions/mocha.fish
