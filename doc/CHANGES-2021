@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1731 2021/03/19 12:08:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1732 2021/03/19 12:19:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/libical to 3.0.9 [nia 2021-03-19]
 	Updated converters/libmwaw to 0.3.17 [nia 2021-03-19]
 	Updated audio/quodlibet to 4.4.0 [nia 2021-03-19]
+	Updated emulators/sameboy to 0.14.2 [nia 2021-03-19]
