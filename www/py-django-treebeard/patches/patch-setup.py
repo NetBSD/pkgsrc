@@ -1,29 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2021/01/30 07:23:29 mef Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/03/19 09:09:50 adam Exp $
 
-Fix build for py36:
+Fix encoding error for Python 3.6.
 
-raceback (most recent call last):
-  File "setup.py", line 10, in <module>
-    long_description = fh.read()
-  File "/usr/pkg/lib/python3.6/encodings/ascii.py", line 26, in decode
-    return codecs.ascii_decode(input, self.errors)[0]
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 175: ordinal not in range(128)
-*** Error code 1
-
---- setup.py.orig	2021-01-13 18:18:36.000000000 +0900
-+++ setup.py	2021-01-30 16:15:37.800803620 +0900
-@@ -1,12 +1,13 @@
- #!/usr/bin/env python
- # -*- coding: utf-8 -*-
- import os
-+import sys
- from setuptools import setup, find_packages
+--- setup.py.orig	2021-02-15 03:07:11.000000000 +0000
++++ setup.py
+@@ -3,7 +3,7 @@ from setuptools import setup, find_packa
  from treebeard import __version__
- import codecs
  
  
 -with open('README.md') as fh:
-+with open("README.md", **({'encoding': 'UTF-8'} if sys.version_info.major>=3 else {})) as fh:
++with open('README.md', encoding='utf-8') as fh:
      long_description = fh.read()
  
  
