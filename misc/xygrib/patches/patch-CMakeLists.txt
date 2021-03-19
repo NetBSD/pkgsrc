@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2019/12/05 17:56:15 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2021/03/19 19:00:17 nros Exp $
 
 * sanitze the names and dirs to search for libs and headers files
 * use PATH_SUFFIX fix to find openjpeg
@@ -83,7 +83,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.3 2019/12/05 17:56:15 nros Exp $
 -     /opt/local/include # DarwinPorts
 -     /opt/csw/include # Blastwave
 -     /opt/include
-+     PATH_SUFFIXES openjpeg-2.3
++     PATH_SUFFIXES openjpeg-2.4 openjpeg-2.5
       REQUIRED
   )
  include_directories(${OPENJPEG_INCLUDE_DIR})

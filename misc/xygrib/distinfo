@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/08/21 11:31:28 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2021/03/19 19:00:17 nros Exp $
 
 SHA1 (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 8e3431ed6a5ef114d77ac57029129a26a381f696
 RMD160 (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 876e8a53b492b2e2ea0572e5b0cd31a2c04f505a
@@ -12,6 +12,6 @@ SHA1 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = eb82eb192bb3d6d97ebb32a21fdf7
 RMD160 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 1c47e3af9884e1a927b1e717f938178f12a17fa8
 SHA512 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 6bb9362c87fec7633b0ad1fd3b8717408c0fffa36631db1d1a680928c724e8e49758c292cac164ad7a9773fd51a432d25628eecbaa1261f5f3c5ab6fc499fd01
 Size (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 2487518 bytes
-SHA1 (patch-CMakeLists.txt) = f12e4cc04e94919a8ed5824df859b0573612ab02
+SHA1 (patch-CMakeLists.txt) = 4c6180e4ac20e728ecd3ddf019cd3da84a04835d
 SHA1 (patch-src_CMakeLists.txt) = 3a06026a033e2dbe93ea9d08c48d87f51186918a
 SHA1 (patch-src_SkewT.h) = 71f5d89e04aa4faa8e4812cca82186a834e5786f
