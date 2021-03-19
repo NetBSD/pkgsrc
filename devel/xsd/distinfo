@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2021/03/08 14:33:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/03/19 22:09:55 markd Exp $
 
 SHA1 (xsd-4.0.0+dep.tar.bz2) = ad3de699eb140e747a0a214462d95fc81a21b494
 RMD160 (xsd-4.0.0+dep.tar.bz2) = d1af702e6feb7216e04c2f30173311e2d4629313
 SHA512 (xsd-4.0.0+dep.tar.bz2) = 1b7f5f7a50007e0c739e23c46cf34657845038c3c58f2da4f9978a9486a30674d829e4dfe428af32669207af79375eb8d413ac471c4ffd1c2bc842411f454ae9
 Size (xsd-4.0.0+dep.tar.bz2) = 1642625 bytes
+SHA1 (patch-libxsd-frontend_xsd-frontend_semantic-graph_elements.cxx) = a4af6f1f10167577df591edc252a48c228979a43
 SHA1 (patch-xsd_doc_makefile) = 2440ca86fbcbe040e45a1859d76d0cad1b8c3865
 SHA1 (patch-xsd_doc_xsd.1) = 1660f480c8410133ae490b64c9a0fb52b5b3466f
 SHA1 (patch-xsd_doc_xsd.xhtml) = 52e4bcdcccf16cc32fffb3e81688a73558bf0a1b
