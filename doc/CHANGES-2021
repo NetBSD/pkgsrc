@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1726 2021/03/19 10:25:30 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1727 2021/03/19 10:30:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2626,3 +2626,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-django-binary-database-files to 1.0.14 [adam 2021-03-19]
 	Updated shells/fish to 3.2.1 [nia 2021-03-19]
 	Updated audio/fluidsynth to 2.1.8 [nia 2021-03-19]
+	Updated devel/gperftools to 2.9.1 [adam 2021-03-19]
+	Updated net/haproxy to 2.3.7 [adam 2021-03-19]
