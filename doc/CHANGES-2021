@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1728 2021/03/19 10:36:03 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1729 2021/03/19 10:45:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gperftools to 2.9.1 [adam 2021-03-19]
 	Updated net/haproxy to 2.3.7 [adam 2021-03-19]
 	Updated lang/janet to 1.15.4 [nia 2021-03-19]
+	Updated time/libical to 3.0.9 [nia 2021-03-19]
