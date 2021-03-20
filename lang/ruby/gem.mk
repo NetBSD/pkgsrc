@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.45 2021/01/11 11:21:31 taca Exp $
+# $NetBSD: gem.mk,v 1.46 2021/03/20 06:01:53 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -383,6 +383,9 @@ _GEM_INSTALL_TARGETS+=	_gem-install
 .ORDER: ${_GEM_INSTALL_TARGETS}
 
 USE_TOOLS+=	pax
+
+PRINT_PLIST_AWK+=	/^bin\/.*${RUBY_SUFFIX}$$/ \
+			{ sub(/${RUBY_SUFFIX}$$/, "$${RUBY_SUFFIX}"); }
 
 do-install: ${_GEM_INSTALL_TARGETS}
 
