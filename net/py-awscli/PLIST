@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/02/25 09:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/03/20 07:08:33 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -273,6 +273,9 @@ ${PYSITELIB}/awscli/customizations/ecs/deploy.pyo
 ${PYSITELIB}/awscli/customizations/ecs/exceptions.py
 ${PYSITELIB}/awscli/customizations/ecs/exceptions.pyc
 ${PYSITELIB}/awscli/customizations/ecs/exceptions.pyo
+${PYSITELIB}/awscli/customizations/ecs/executecommand.py
+${PYSITELIB}/awscli/customizations/ecs/executecommand.pyc
+${PYSITELIB}/awscli/customizations/ecs/executecommand.pyo
 ${PYSITELIB}/awscli/customizations/ecs/filehelpers.py
 ${PYSITELIB}/awscli/customizations/ecs/filehelpers.pyc
 ${PYSITELIB}/awscli/customizations/ecs/filehelpers.pyo
@@ -4130,12 +4133,14 @@ ${PYSITELIB}/awscli/examples/rds-data/commit-transaction.rst
 ${PYSITELIB}/awscli/examples/rds-data/execute-statement.rst
 ${PYSITELIB}/awscli/examples/rds-data/rollback-transaction.rst
 ${PYSITELIB}/awscli/examples/rds/add-option-to-option-group.rst
+${PYSITELIB}/awscli/examples/rds/add-role-to-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/add-role-to-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/add-source-identifier-to-subscription.rst
 ${PYSITELIB}/awscli/examples/rds/add-tags-to-resource.rst
 ${PYSITELIB}/awscli/examples/rds/apply-pending-maintenance-action.rst
 ${PYSITELIB}/awscli/examples/rds/authorize-db-security-group-ingress.rst
 ${PYSITELIB}/awscli/examples/rds/backtrack-db-cluster.rst
+${PYSITELIB}/awscli/examples/rds/cancel-export-task.rst
 ${PYSITELIB}/awscli/examples/rds/copy-db-cluster-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/copy-db-cluster-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/copy-db-parameter-group.rst
@@ -4173,6 +4178,7 @@ ${PYSITELIB}/awscli/examples/rds/delete-option-group.rst
 ${PYSITELIB}/awscli/examples/rds/describe-account-attributes.rst
 ${PYSITELIB}/awscli/examples/rds/describe-certificates.rst
 ${PYSITELIB}/awscli/examples/rds/describe-custom-availability-zones.rst
+${PYSITELIB}/awscli/examples/rds/describe-db-cluster-backtracks.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-cluster-endpoints.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-cluster-parameter-groups.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-cluster-parameters.rst
@@ -4211,7 +4217,9 @@ ${PYSITELIB}/awscli/examples/rds/generate-db-auth-token.rst
 ${PYSITELIB}/awscli/examples/rds/import-installation-media.rst
 ${PYSITELIB}/awscli/examples/rds/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/rds/modify-certificates.rst
+${PYSITELIB}/awscli/examples/rds/modify-current-db-cluster-capacity.rst
 ${PYSITELIB}/awscli/examples/rds/modify-db-cluster-endpoint.rst
+${PYSITELIB}/awscli/examples/rds/modify-db-cluster-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/modify-db-cluster-snapshot-attribute.rst
 ${PYSITELIB}/awscli/examples/rds/modify-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/modify-db-instance.rst
@@ -4222,13 +4230,17 @@ ${PYSITELIB}/awscli/examples/rds/modify-db-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/modify-db-subnet-group.rst
 ${PYSITELIB}/awscli/examples/rds/modify-event-subscription.rst
 ${PYSITELIB}/awscli/examples/rds/modify-global-cluster.rst
+${PYSITELIB}/awscli/examples/rds/promote-read-replica-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/promote-read-replica.rst
 ${PYSITELIB}/awscli/examples/rds/purchase-reserved-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/purchase-reserved-db-instances-offerings.rst
 ${PYSITELIB}/awscli/examples/rds/reboot-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/remove-option-from-option-group.rst
+${PYSITELIB}/awscli/examples/rds/remove-role-from-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/remove-role-from-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/remove-source-identifier-from-subscription.rst
+${PYSITELIB}/awscli/examples/rds/remove-tags-from-resource.rst
+${PYSITELIB}/awscli/examples/rds/reset-db-cluster-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/reset-db-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-cluster-from-s3.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-cluster-from-snapshot.rst
@@ -4237,6 +4249,7 @@ ${PYSITELIB}/awscli/examples/rds/restore-db-instance-from-db-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-instance-from-s3.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-instance-to-point-in-time.rst
 ${PYSITELIB}/awscli/examples/rds/start-activity-stream.rst
+${PYSITELIB}/awscli/examples/rds/start-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/start-db-instance-automated-backups-replication.rst
 ${PYSITELIB}/awscli/examples/rds/start-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/start-export-task.rst
@@ -4369,8 +4382,10 @@ ${PYSITELIB}/awscli/examples/resource-groups/delete-group.rst
 ${PYSITELIB}/awscli/examples/resource-groups/get-group-query.rst
 ${PYSITELIB}/awscli/examples/resource-groups/get-group.rst
 ${PYSITELIB}/awscli/examples/resource-groups/get-tags.rst
+${PYSITELIB}/awscli/examples/resource-groups/list-group-resources.rst
 ${PYSITELIB}/awscli/examples/resource-groups/list-groups.rst
 ${PYSITELIB}/awscli/examples/resource-groups/list-resource-groups.rst
+${PYSITELIB}/awscli/examples/resource-groups/put-group-configuration.rst
 ${PYSITELIB}/awscli/examples/resource-groups/search-resources.rst
 ${PYSITELIB}/awscli/examples/resource-groups/tag.rst
 ${PYSITELIB}/awscli/examples/resource-groups/untag.rst
