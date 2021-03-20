@@ -1,18 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/28 19:43:46 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/20 18:52:45 adam Exp $
 bin/editorconfig
 bin/editorconfig-${PKGVERSION}
 include/editorconfig/editorconfig.h
 include/editorconfig/editorconfig_handle.h
+lib/cmake/EditorConfig/EditorConfigConfig.cmake
+lib/cmake/EditorConfig/EditorConfigConfigVersion.cmake
+lib/cmake/EditorConfig/EditorConfigTargets-noconfig.cmake
+lib/cmake/EditorConfig/EditorConfigTargets.cmake
 lib/libeditorconfig.so
-lib/libeditorconfig.so.0
 lib/libeditorconfig.so.${PKGVERSION}
+lib/libeditorconfig.so.0
 lib/libeditorconfig_static.a
+lib/pkgconfig/editorconfig.pc
 ${PLIST.doc}man/man1/editorconfig.1
 ${PLIST.doc}man/man3/editorconfig.h.3
 ${PLIST.doc}man/man3/editorconfig_handle.h.3
 ${PLIST.doc}man/man5/editorconfig-format.5
-${PLIST.doc}share/doc/editorconfig/html/arrowdown.png
-${PLIST.doc}share/doc/editorconfig/html/arrowright.png
 ${PLIST.doc}share/doc/editorconfig/html/bc_s.png
 ${PLIST.doc}share/doc/editorconfig/html/bdwn.png
 ${PLIST.doc}share/doc/editorconfig/html/closed.png
@@ -20,7 +23,7 @@ ${PLIST.doc}share/doc/editorconfig/html/dir_000000.html
 ${PLIST.doc}share/doc/editorconfig/html/dir_000001.html
 ${PLIST.doc}share/doc/editorconfig/html/doc.png
 ${PLIST.doc}share/doc/editorconfig/html/doxygen.css
-${PLIST.doc}share/doc/editorconfig/html/doxygen.png
+${PLIST.doc}share/doc/editorconfig/html/doxygen.svg
 ${PLIST.doc}share/doc/editorconfig/html/dynsections.js
 ${PLIST.doc}share/doc/editorconfig/html/editorconfig-format.html
 ${PLIST.doc}share/doc/editorconfig/html/editorconfig.html
@@ -31,7 +34,7 @@ ${PLIST.doc}share/doc/editorconfig/html/editorconfig__handle_8h.html
 ${PLIST.doc}share/doc/editorconfig/html/editorconfig__handle_8h.js
 ${PLIST.doc}share/doc/editorconfig/html/editorconfig__handle_8h_source.html
 ${PLIST.doc}share/doc/editorconfig/html/files.html
-${PLIST.doc}share/doc/editorconfig/html/files.js
+${PLIST.doc}share/doc/editorconfig/html/files_dup.js
 ${PLIST.doc}share/doc/editorconfig/html/folderclosed.png
 ${PLIST.doc}share/doc/editorconfig/html/folderopen.png
 ${PLIST.doc}share/doc/editorconfig/html/globals.html
@@ -41,6 +44,8 @@ ${PLIST.doc}share/doc/editorconfig/html/globals_type.html
 ${PLIST.doc}share/doc/editorconfig/html/index.html
 ${PLIST.doc}share/doc/editorconfig/html/jquery.js
 ${PLIST.doc}share/doc/editorconfig/html/logo.png
+${PLIST.doc}share/doc/editorconfig/html/menu.js
+${PLIST.doc}share/doc/editorconfig/html/menudata.js
 ${PLIST.doc}share/doc/editorconfig/html/nav_f.png
 ${PLIST.doc}share/doc/editorconfig/html/nav_g.png
 ${PLIST.doc}share/doc/editorconfig/html/nav_h.png
@@ -53,14 +58,14 @@ ${PLIST.doc}share/doc/editorconfig/html/pages.html
 ${PLIST.doc}share/doc/editorconfig/html/resize.js
 ${PLIST.doc}share/doc/editorconfig/html/search/all_0.html
 ${PLIST.doc}share/doc/editorconfig/html/search/all_0.js
-${PLIST.doc}share/doc/editorconfig/html/search/close.png
+${PLIST.doc}share/doc/editorconfig/html/search/close.svg
 ${PLIST.doc}share/doc/editorconfig/html/search/defines_0.html
 ${PLIST.doc}share/doc/editorconfig/html/search/defines_0.js
 ${PLIST.doc}share/doc/editorconfig/html/search/files_0.html
 ${PLIST.doc}share/doc/editorconfig/html/search/files_0.js
 ${PLIST.doc}share/doc/editorconfig/html/search/functions_0.html
 ${PLIST.doc}share/doc/editorconfig/html/search/functions_0.js
-${PLIST.doc}share/doc/editorconfig/html/search/mag_sel.png
+${PLIST.doc}share/doc/editorconfig/html/search/mag_sel.svg
 ${PLIST.doc}share/doc/editorconfig/html/search/nomatches.html
 ${PLIST.doc}share/doc/editorconfig/html/search/pages_0.html
 ${PLIST.doc}share/doc/editorconfig/html/search/pages_0.js

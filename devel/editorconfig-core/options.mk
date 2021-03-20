@@ -1,14 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2019/11/03 10:39:10 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2021/03/20 18:52:45 adam Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.editorconfig-core
 PKG_SUPPORTED_OPTIONS=	doc
-PKG_SUGGESTED_OPTIONS=
-PLIST_VARS+=		doc
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Build and install html documentation and man pages
 ###
+PLIST_VARS+=	doc
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=ON
