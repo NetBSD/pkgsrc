@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1755 2021/03/20 19:04:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1756 2021/03/20 19:09:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2668,3 +2668,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-editorconfig-core to 0.12.3 [adam 2021-03-20]
 	Updated net/py-dropbox to 11.4.1 [adam 2021-03-20]
 	Updated sysutils/py-ptyprocess to 0.7.0 [adam 2021-03-20]
+	Updated devel/py-autopep8 to 1.5.6 [adam 2021-03-20]
+	Updated security/py-google-auth to 1.28.0 [adam 2021-03-20]
