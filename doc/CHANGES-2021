@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1757 2021/03/20 19:28:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1758 2021/03/20 20:25:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2674,3 +2674,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bitarray to 1.7.1 [adam 2021-03-20]
 	Updated devel/py-cachetools to 4.2.1 [adam 2021-03-20]
 	Updated net/samba4 to 4.13.5 [adam 2021-03-20]
+	Updated net/gallery-dl to 1.17.1 [leot 2021-03-20]
