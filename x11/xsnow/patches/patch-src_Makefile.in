@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2021/03/20 13:24:39 gdt Exp $
+
+Adjust  usptream's path of games to regular bin.
+
+(Not submitted upstream because this is a style choice.)
+
+--- src/Makefile.in.orig	2021-01-11 12:23:27.000000000 +0000
++++ src/Makefile.in
+@@ -583,7 +583,7 @@ top_srcdir = @top_srcdir@
+ #-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #-# 
+ SUBDIRS = Pixmaps
+-gamesdir = $(exec_prefix)/games
++gamesdir = $(exec_prefix)/bin
+ xsnow_CPPFLAGS = $(XML_CFLAGS) $(GTK_CFLAGS) $(X11_CFLAGS) 
+ xsnow_LDADD = $(XML_LIBS)   $(GTK_LIBS)  $(X11_LIBS)
+ xsnow_SOURCES = clocks.c ixpm.c main.c fallensnow.c wmctrl.c docs.c \
