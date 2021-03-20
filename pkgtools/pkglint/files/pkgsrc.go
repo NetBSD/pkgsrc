@@ -189,6 +189,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 	if _, yyyy := match1(filename.Base().String(), `-(\d\d\d\d)$`); yyyy >= "2018" {
 		year = yyyy
 	}
+	thorough := G.CheckGlobal || year >= "2020" // For performance reasons
 
 	latest := make(map[PkgsrcPath]*Change)
 
@@ -228,8 +229,10 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 			continue
 		}
 
-		src.checkChangeVersion(change, latest, line)
-		src.checkChangeDate(filename, year, change, line, changes)
+		if thorough {
+			src.checkChangeVersion(change, latest, line)
+			src.checkChangeDate(filename, year, change, line, changes)
+		}
 	}
 
 	return changes
@@ -360,10 +363,39 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 		author = f[n-2]
 	}
 
-	if !matches(author, `^\[\w+$`) || !matches(date, `\d\d\d\d-\d\d-\d\d]$`) {
+	parseAuthorAndDate := func(author *string, date *string) bool {
+		alex := textproc.NewLexer(*author)
+		if !alex.SkipByte('[') {
+			return false
+		}
+		*author = alex.NextBytesSet(textproc.AlnumU)
+		if !alex.EOF() {
+			return false
+		}
+		dlex := textproc.NewLexer(*date)
+		if len(*date) == 11 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.SkipByte('-') &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.SkipByte('-') &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.NextByteSet(textproc.Digit) != -1 &&
+			dlex.SkipByte(']') &&
+			dlex.EOF() {
+			*date = (*date)[:10]
+			return true
+		}
+
+		return false
+	}
+
+	if !parseAuthorAndDate(&author, &date) {
 		return invalid()
 	}
-	author, date = author[1:], date[:len(date)-1]
 
 	switch {
 	case
