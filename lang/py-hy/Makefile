@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/03/27 15:27:41 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/20 19:14:57 adam Exp $
 
-DISTNAME=	hy-0.18.0
+DISTNAME=	hy-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.hylang.org/
 COMMENT=	Lisp and Python love each other
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-astor>=0.6:../../devel/py-astor
+DEPENDS+=	${PYPKGPREFIX}-astor>=0.8:../../devel/py-astor
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.6:../../devel/py-funcparserlib
 DEPENDS+=	${PYPKGPREFIX}-rply>=0.7.7:../../devel/py-rply
