@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/18 15:18:53 is Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/20 13:24:38 gdt Exp $
 bin/xsnow
-${IMAKE_MAN_DIR}/xsnow.${IMAKE_MAN_SUFFIX}
+man/man6/xsnow.6
+share/applications/xsnow.desktop
+share/pixmaps/xsnow.svg
