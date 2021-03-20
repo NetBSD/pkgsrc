@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/03/19 17:36:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/20 08:33:47 bsiegert Exp $
 
 GITHUB_PROJECT=	nancy
 GITHUB_TAG=	v1.0.5
@@ -15,7 +15,7 @@ COMMENT=	Golang module/dep vulnerability scanner
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/nancy-1.0.5
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build -o nancy -v
