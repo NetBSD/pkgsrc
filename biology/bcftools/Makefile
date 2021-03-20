@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:00 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/20 18:17:07 bacon Exp $
 
-DISTNAME=	bcftools-1.10.2
-PKGREVISION=	2
+DISTNAME=	bcftools-1.12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 
