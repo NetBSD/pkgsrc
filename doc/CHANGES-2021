@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1744 2021/03/20 06:46:12 msaitoh Exp $
+$NetBSD: CHANGES-2021,v 1.1745 2021/03/20 07:09:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2647,3 +2647,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/libkolabxml version 1.1.6 [markd 2021-03-19]
 	Updated x11/qt5-qtsvg to 5.15.2nb2 [gutteridge 2021-03-20]
 	Updated sysutils/dmidecode to 3.3nb1 [msaitoh 2021-03-20]
+	Updated databases/py-peewee to 3.14.4 [adam 2021-03-20]
+	Updated devel/py-distorm3 to 3.5.2 [adam 2021-03-20]
+	Updated net/py-botocore to 1.20.33 [adam 2021-03-20]
+	Updated net/py-s3transfer to 0.3.6 [adam 2021-03-20]
+	Updated net/py-boto3 to 1.17.33 [adam 2021-03-20]
+	Updated net/py-awscli to 1.19.33 [adam 2021-03-20]
