@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/07/27 00:29:04 bacon Exp $
+$NetBSD: distinfo,v 1.3 2021/03/20 18:17:07 bacon Exp $
 
-SHA1 (bcftools-1.10.2.tar.gz) = b19c9ba06b1c8e8f135c1e0ab0e4ff713a291bf4
-RMD160 (bcftools-1.10.2.tar.gz) = 7713e8c5bd4195eb610544adb26158c16525fdac
-SHA512 (bcftools-1.10.2.tar.gz) = 12c004603db557ac69098e83ad3aaa5762b02b4718b79f3dc259fbcc5c74b8dad3726b5f61efb57f0b8e3d0349577f7934240f36c82bd98849885a5593791995
-Size (bcftools-1.10.2.tar.gz) = 2880994 bytes
-SHA1 (patch-Makefile) = 1f1397e9b0389a7b4fccc9eae87981e7ce1d7980
-SHA1 (patch-misc_run-roh.pl) = 8a29ee7b1001af6670955f174ce4dbab31f05659
+SHA1 (bcftools-1.12.tar.gz) = 17ded5a60da7a42d18fef5a846791ed295f69622
+RMD160 (bcftools-1.12.tar.gz) = 9d3a16c8266bcdd8f2a10f099aec3fc19da82a98
+SHA512 (bcftools-1.12.tar.gz) = f43074989a01cf4ef32a968935f5e5f3eacf2c04b9aa558d739166e3d96d3a498965d27db6482b2992b5d60fed3d2945ef3fd61fcc79b5dbe062994d49df4ad2
+Size (bcftools-1.12.tar.gz) = 3048508 bytes
+SHA1 (patch-Makefile) = 9dfe7b5dcf77deac6d248d7612440780ec8a3731
