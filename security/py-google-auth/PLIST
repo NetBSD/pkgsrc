@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/25 09:19:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/20 19:08:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,9 @@ ${PYSITELIB}/google/auth/transport/requests.pyo
 ${PYSITELIB}/google/auth/transport/urllib3.py
 ${PYSITELIB}/google/auth/transport/urllib3.pyc
 ${PYSITELIB}/google/auth/transport/urllib3.pyo
+${PYSITELIB}/google/auth/version.py
+${PYSITELIB}/google/auth/version.pyc
+${PYSITELIB}/google/auth/version.pyo
 ${PYSITELIB}/google/oauth2/__init__.py
 ${PYSITELIB}/google/oauth2/__init__.pyc
 ${PYSITELIB}/google/oauth2/__init__.pyo
