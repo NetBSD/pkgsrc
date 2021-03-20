@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1752 2021/03/20 18:17:44 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1753 2021/03/20 18:17:54 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2663,3 +2663,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/split-thai 2.0nb1 [scole 2021-03-20]
 	Updated biology/htslib to 1.12 [bacon 2021-03-20]
 	Updated biology/bcftools to 1.12 [bacon 2021-03-20]
+	Updated biology/samtools to 1.12 [bacon 2021-03-20]
