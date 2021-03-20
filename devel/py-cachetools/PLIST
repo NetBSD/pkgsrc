@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/09 14:20:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/20 19:24:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,15 +6,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cachetools/__init__.py
 ${PYSITELIB}/cachetools/__init__.pyc
 ${PYSITELIB}/cachetools/__init__.pyo
-${PYSITELIB}/cachetools/abc.py
-${PYSITELIB}/cachetools/abc.pyc
-${PYSITELIB}/cachetools/abc.pyo
 ${PYSITELIB}/cachetools/cache.py
 ${PYSITELIB}/cachetools/cache.pyc
 ${PYSITELIB}/cachetools/cache.pyo
 ${PYSITELIB}/cachetools/decorators.py
 ${PYSITELIB}/cachetools/decorators.pyc
 ${PYSITELIB}/cachetools/decorators.pyo
+${PYSITELIB}/cachetools/fifo.py
+${PYSITELIB}/cachetools/fifo.pyc
+${PYSITELIB}/cachetools/fifo.pyo
 ${PYSITELIB}/cachetools/func.py
 ${PYSITELIB}/cachetools/func.pyc
 ${PYSITELIB}/cachetools/func.pyo
@@ -27,6 +27,9 @@ ${PYSITELIB}/cachetools/lfu.pyo
 ${PYSITELIB}/cachetools/lru.py
 ${PYSITELIB}/cachetools/lru.pyc
 ${PYSITELIB}/cachetools/lru.pyo
+${PYSITELIB}/cachetools/mru.py
+${PYSITELIB}/cachetools/mru.pyc
+${PYSITELIB}/cachetools/mru.pyo
 ${PYSITELIB}/cachetools/rr.py
 ${PYSITELIB}/cachetools/rr.pyc
 ${PYSITELIB}/cachetools/rr.pyo
