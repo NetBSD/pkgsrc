@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1753 2021/03/20 18:17:54 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1754 2021/03/20 18:56:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2664,3 +2664,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/htslib to 1.12 [bacon 2021-03-20]
 	Updated biology/bcftools to 1.12 [bacon 2021-03-20]
 	Updated biology/samtools to 1.12 [bacon 2021-03-20]
+	Updated devel/editorconfig-core to 0.12.4 [adam 2021-03-20]
+	Updated devel/py-editorconfig-core to 0.12.3 [adam 2021-03-20]
