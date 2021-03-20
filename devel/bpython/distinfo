@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/06/27 23:33:08 wiedi Exp $
+$NetBSD: distinfo,v 1.6 2021/03/20 15:14:48 adam Exp $
 
-SHA1 (bpython-0.16.tar.gz) = 2acc00ac55f95a88ee0ba8b4ba55f111f1e15080
-RMD160 (bpython-0.16.tar.gz) = be0840b585b63f32ff4898aada76c51cd6ff9a8f
-SHA512 (bpython-0.16.tar.gz) = 1173d720aa679e4a6079c7febd36abbffa901604c99c6d1ce1e940a8fbcf8a4ba7bc526de0ef5290e3859a4384d1cd5cbef62fd9f056ddcb545b64d69d103a5b
-Size (bpython-0.16.tar.gz) = 201898 bytes
-SHA1 (patch-setup.py) = 5b60dae8c19e5e8fec40cc823b2b6919c7737964
+SHA1 (bpython-0.21.tar.gz) = 97c8d5f810841a90fa867845f2411de513002024
+RMD160 (bpython-0.21.tar.gz) = f2a4344a9efb586091c561b88fffac29bf3cb41a
+SHA512 (bpython-0.21.tar.gz) = a0eea1b9c2329ce5665456e99703ef476faab38f880eb8a330a6536970888cfdaada9f0e377d3c1acd8b6c79eb0c562ada43e82bac9df4cce5878594c3399ddf
+Size (bpython-0.21.tar.gz) = 208206 bytes
+SHA1 (patch-setup.py) = 9caba0004771928676c7d0d4f7c0594f8ba6934a
