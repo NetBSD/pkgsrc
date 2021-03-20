@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/27 15:27:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/20 19:14:57 adam Exp $
 bin/hy-${PYVERSSUFFIX}
 bin/hy2py-${PYVERSSUFFIX}
 bin/hyc-${PYVERSSUFFIX}
@@ -32,6 +32,7 @@ ${PYSITELIB}/hy/contrib/__init__.pyo
 ${PYSITELIB}/hy/contrib/botsbuildbots.hy
 ${PYSITELIB}/hy/contrib/hy_repr.hy
 ${PYSITELIB}/hy/contrib/loop.hy
+${PYSITELIB}/hy/contrib/pprint.hy
 ${PYSITELIB}/hy/contrib/profile.hy
 ${PYSITELIB}/hy/contrib/sequences.hy
 ${PYSITELIB}/hy/contrib/walk.hy
