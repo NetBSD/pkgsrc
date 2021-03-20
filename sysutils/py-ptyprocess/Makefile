@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/07/06 07:07:25 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/20 19:04:06 adam Exp $
 
-DISTNAME=	ptyprocess-0.6.0
+DISTNAME=	ptyprocess-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/ptyprocess/}
