@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/15 11:23:08 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/03/20 18:55:52 adam Exp $
 
-SHA1 (EditorConfig-0.12.2.tar.gz) = 2a382d04ee96250215907ce51a3673702aa3f283
-RMD160 (EditorConfig-0.12.2.tar.gz) = 0ec10caa53f774a304a382a438f2e15094a5797d
-SHA512 (EditorConfig-0.12.2.tar.gz) = 15648904683e04b68966651ebf2046b60473a47a408dff257d64d06b6c0cc6765882ebf5ec0e0ccaf5dc7e78e93b5f9bdf129ae0e2a23f7f489cb50c9ae3ff16
-Size (EditorConfig-0.12.2.tar.gz) = 13485 bytes
-SHA1 (patch-setup.py) = 3bb4f2bab462c3acb29df8c417760b818e0c9fd0
+SHA1 (EditorConfig-0.12.3.tar.gz) = ce0d6b76a57b4de11e5037173d8907dec7253560
+RMD160 (EditorConfig-0.12.3.tar.gz) = 458973a038828fe7b166d7b11c36e9cb7cf786fb
+SHA512 (EditorConfig-0.12.3.tar.gz) = 2cb909559dbcf0debab1ee41104dcfdede22aa5e74fcba6ad7b6d5317249ccf7f78b14b4bca4c75d8c4d4c226f5ea18349504fb07eff90ee8e157d67482a99f8
+Size (EditorConfig-0.12.3.tar.gz) = 13329 bytes
