@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/12/04 09:23:18 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/03/20 09:30:40 adam Exp $
 
-SHA1 (ddt-1.4.1.tar.gz) = f65afc9a1b95e5db65ba772c1ba00b3d982e02e5
-RMD160 (ddt-1.4.1.tar.gz) = 059b138416e0ee507739d4aeff3345445c60ba4d
-SHA512 (ddt-1.4.1.tar.gz) = b1ccbd3588c40d5ceb304b3a5e38c55cc6dbda690d1e9a93d1b7644f9aef155156020bcee2534df436fbea22b59e99d9bfcebe4e7a8fd6098a9d25a7a26dc9b1
-Size (ddt-1.4.1.tar.gz) = 11457 bytes
+SHA1 (ddt-1.4.2.tar.gz) = 15cbb4086549e53be35b3e5e9536ef6b40a13031
+RMD160 (ddt-1.4.2.tar.gz) = 21e77bcc88cb2011fa372dec8d2aedeef0108921
+SHA512 (ddt-1.4.2.tar.gz) = 5dd373d64cd176130da5edcc71693ef9566d52e06ad2664307ec540293e7a9769c3f9c325a296896ed3fb3881324ff33c28dc354263c9a819384c331a21e1ae1
+Size (ddt-1.4.2.tar.gz) = 11467 bytes
