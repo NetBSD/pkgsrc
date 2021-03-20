@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2020/07/26 23:30:29 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/20 18:17:07 bacon Exp $
 bin/ace2sam
 bin/blast2sam.pl
 bin/bowtie2sam.pl
 bin/export2sam.pl
+bin/fasta-sanitize.pl
 bin/interpolate_sam.pl
 bin/maq2sam-long
 bin/maq2sam-short
 bin/md5fa
 bin/md5sum-lite
 bin/novo2sam.pl
+bin/plot-ampliconstats
 bin/plot-bamstats
 bin/psl2sam.pl
 bin/sam2vcf.pl
@@ -20,10 +22,13 @@ bin/wgsim
 bin/wgsim_eval.pl
 bin/zoom2sam.pl
 man/man1/samtools-addreplacerg.1
+man/man1/samtools-ampliconclip.1
+man/man1/samtools-ampliconstats.1
 man/man1/samtools-bedcov.1
 man/man1/samtools-calmd.1
 man/man1/samtools-cat.1
 man/man1/samtools-collate.1
+man/man1/samtools-coverage.1
 man/man1/samtools-depad.1
 man/man1/samtools-depth.1
 man/man1/samtools-dict.1
