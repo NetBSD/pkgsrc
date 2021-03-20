@@ -1,6 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2021/03/20 13:24:39 gdt Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2021/03/20 13:25:25 gdt Exp $
 
-Adjust  usptream's path of games to regular bin.
+Adjust upstream's path of games to regular bin.
 
 (Not submitted upstream because this is a style choice.)
 
