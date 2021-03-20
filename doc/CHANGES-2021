@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1746 2021/03/20 09:29:47 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.1747 2021/03/20 09:33:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2654,3 +2654,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-boto3 to 1.17.33 [adam 2021-03-20]
 	Updated net/py-awscli to 1.19.33 [adam 2021-03-20]
 	Removed lang/go114 successor lang/go116 [bsiegert 2021-03-20]
+	Updated devel/py-ddt to 1.4.2 [adam 2021-03-20]
+	Updated fonts/py-fonttools to 4.21.1 [adam 2021-03-20]
