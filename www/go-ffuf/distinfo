@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/03/05 21:36:17 leot Exp $
+$NetBSD: distinfo,v 1.4 2021/03/20 09:22:39 bsiegert Exp $
 
 SHA1 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = e2f2fc8c6f77544b39a9fdf884ecf34c6c0d9760
 RMD160 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 4852c7da0ba90c40c926de5b2fb9b55666a6d698
@@ -20,3 +20,4 @@ SHA1 (go-ffuf-1.2.1.tar.gz) = c9fe89e20fb29a390a2ec8b8cb6845d532cadb79
 RMD160 (go-ffuf-1.2.1.tar.gz) = 70cb5f4e97799e9311e01d0b541b394aea107e54
 SHA512 (go-ffuf-1.2.1.tar.gz) = 66c505b3807969b94ab35f03fe8af739ef6860120a3b2008ab188c2ac2d14159dd2b6780fa7fa5097a6fef9f882c6a33894b88092570feb8ae8ea02e8d04e020
 Size (go-ffuf-1.2.1.tar.gz) = 38854 bytes
+SHA1 (patch-go.sum) = 619c8496dfa9c052d4b17fbe048a6137574c9733
