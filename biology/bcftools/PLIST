@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/07/27 00:29:04 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/20 18:17:07 bacon Exp $
 bin/bcftools
 bin/color-chrs
+bin/gff2gff.py
 bin/guess-ploidy
 bin/plot-roh
 bin/plot-vcfstats
@@ -34,12 +35,13 @@ libexec/bcftools/missing2ref.so
 libexec/bcftools/parental-origin.so
 libexec/bcftools/prune.so
 libexec/bcftools/remove-overlaps.so
+libexec/bcftools/scatter.so
 libexec/bcftools/setGT.so
 libexec/bcftools/smpl-stats.so
 libexec/bcftools/split-vep.so
 libexec/bcftools/split.so
 libexec/bcftools/tag2tag.so
-libexec/bcftools/trio-dnm.so
+libexec/bcftools/trio-dnm2.so
 libexec/bcftools/trio-stats.so
 libexec/bcftools/trio-switch-rate.so
 libexec/bcftools/variantkey-hex.so
