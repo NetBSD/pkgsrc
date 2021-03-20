@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/20 15:10:41 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cwcwidth/__init__.py
+${PYSITELIB}/cwcwidth/__init__.pyc
+${PYSITELIB}/cwcwidth/__init__.pyo
+${PYSITELIB}/cwcwidth/_impl.pyi
+${PYSITELIB}/cwcwidth/_impl.so
+${PYSITELIB}/cwcwidth/py.typed
