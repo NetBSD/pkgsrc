@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:10 rillig Exp $
- 
-DISTNAME=	editorconfig-core-c-0.12.1
+# $NetBSD: Makefile,v 1.4 2021/03/20 18:52:45 adam Exp $
+
+DISTNAME=	editorconfig-core-c-0.12.4
 PKGNAME=	${DISTNAME:S/c-//}
 CATEGORIES=	devel
-MASTER_SITES=	http://downloads.sf.net/project/editorconfig/EditorConfig-C-Core/${PKGVERSION}/source/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=editorconfig/}
+GITHUB_PROJECT=	editorconfig-core-c
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	http://www.editorconfig.org/
@@ -13,5 +15,6 @@ LICENSE=	2-clause-bsd
 USE_CMAKE=	yes
 
 .include "options.mk"
-.include "../../devel/pcre/buildlink3.mk"
+
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
