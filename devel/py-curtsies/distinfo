@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/08/27 12:26:59 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/03/20 15:12:22 adam Exp $
 
-SHA1 (curtsies-0.3.4.tar.gz) = 336b54a640a02d398ad7bfc8e93d6b8d0ae81be9
-RMD160 (curtsies-0.3.4.tar.gz) = a9839baf73fe50b367899243ee22006cac16d5f1
-SHA512 (curtsies-0.3.4.tar.gz) = 5f65af34f6dd13491acf65311516ed90e57d99f681032ab6b4753710953f5285b012a09de6c56d28ccd5bc942c9886076f04287cddf955ba424205a5c44785b2
-Size (curtsies-0.3.4.tar.gz) = 52733 bytes
-SHA1 (patch-setup.py) = 1d1e21ac1bb8f3a308a1466a53d32c0c253d0515
+SHA1 (curtsies-0.3.5.tar.gz) = f79ea1d728e10e05e9bbd90cf1399ea867cbcc6d
+RMD160 (curtsies-0.3.5.tar.gz) = b3107c9109491dccd1a16b5805c1063366574641
+SHA512 (curtsies-0.3.5.tar.gz) = e46ab3f79e2385055e4f3f9bc1d2c341605b93c21a0e6c42f4807b1801d37f70cfbdd1006db1ec12257e95d91aedddd95aa31a7de99bbfc09a6f0ee473497747
+Size (curtsies-0.3.5.tar.gz) = 53472 bytes
