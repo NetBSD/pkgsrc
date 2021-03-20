@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/05/25 06:38:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/20 15:14:48 adam Exp $
 bin/bpdb
 bin/bpython
 bin/bpython-curses
@@ -27,9 +27,6 @@ ${PYSITELIB}/bpython/__main__.pyo
 ${PYSITELIB}/bpython/_internal.py
 ${PYSITELIB}/bpython/_internal.pyc
 ${PYSITELIB}/bpython/_internal.pyo
-${PYSITELIB}/bpython/_py3compat.py
-${PYSITELIB}/bpython/_py3compat.pyc
-${PYSITELIB}/bpython/_py3compat.pyo
 ${PYSITELIB}/bpython/_version.py
 ${PYSITELIB}/bpython/_version.pyc
 ${PYSITELIB}/bpython/_version.pyo
@@ -130,9 +127,6 @@ ${PYSITELIB}/bpython/sample-config
 ${PYSITELIB}/bpython/simpleeval.py
 ${PYSITELIB}/bpython/simpleeval.pyc
 ${PYSITELIB}/bpython/simpleeval.pyo
-${PYSITELIB}/bpython/simplerepl.py
-${PYSITELIB}/bpython/simplerepl.pyc
-${PYSITELIB}/bpython/simplerepl.pyo
 ${PYSITELIB}/bpython/test/__init__.py
 ${PYSITELIB}/bpython/test/__init__.pyc
 ${PYSITELIB}/bpython/test/__init__.pyo
@@ -162,9 +156,6 @@ ${PYSITELIB}/bpython/test/test_args.pyo
 ${PYSITELIB}/bpython/test/test_autocomplete.py
 ${PYSITELIB}/bpython/test/test_autocomplete.pyc
 ${PYSITELIB}/bpython/test/test_autocomplete.pyo
-${PYSITELIB}/bpython/test/test_bpython.py
-${PYSITELIB}/bpython/test/test_bpython.pyc
-${PYSITELIB}/bpython/test/test_bpython.pyo
 ${PYSITELIB}/bpython/test/test_config.py
 ${PYSITELIB}/bpython/test/test_config.pyc
 ${PYSITELIB}/bpython/test/test_config.pyo
@@ -210,9 +201,6 @@ ${PYSITELIB}/bpython/test/test_line_properties.pyo
 ${PYSITELIB}/bpython/test/test_manual_readline.py
 ${PYSITELIB}/bpython/test/test_manual_readline.pyc
 ${PYSITELIB}/bpython/test/test_manual_readline.pyo
-${PYSITELIB}/bpython/test/test_pager.py
-${PYSITELIB}/bpython/test/test_pager.pyc
-${PYSITELIB}/bpython/test/test_pager.pyo
 ${PYSITELIB}/bpython/test/test_preprocess.py
 ${PYSITELIB}/bpython/test/test_preprocess.pyc
 ${PYSITELIB}/bpython/test/test_preprocess.pyo
@@ -235,6 +223,6 @@ ${PYSITELIB}/bpython/urwid.pyc
 ${PYSITELIB}/bpython/urwid.pyo
 man/man1/bpython.1
 man/man5/bpython-config.5
-share/appdata/bpython.appdata.xml
-share/applications/bpython.desktop
+share/appinfo/org.bpython-interpreter.bpython.appdata.xml
+share/applications/org.bpython-interpreter.bpython.desktop
 share/pixmaps/bpython.png
