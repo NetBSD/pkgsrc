@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/12/10 12:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/03/20 07:00:47 adam Exp $
 
-DISTNAME=	distorm3-3.5.1
+DISTNAME=	distorm3-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distorm3/}
