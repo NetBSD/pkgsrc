@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1748 2021/03/20 13:25:33 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1749 2021/03/20 15:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2657,3 +2657,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ddt to 1.4.2 [adam 2021-03-20]
 	Updated fonts/py-fonttools to 4.21.1 [adam 2021-03-20]
 	Updated x11/xsnow to 3.2.2 [gdt 2021-03-20]
+	Added devel/py-cwcwidth version 0.1.4 [adam 2021-03-20]
+	Updated devel/py-curtsies to 0.3.5 [adam 2021-03-20]
+	Updated devel/bpython to 0.21 [adam 2021-03-20]
