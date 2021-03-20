@@ -2948,6 +2948,57 @@ func (s *Suite) Test_VaralignBlock__right_margin_in_adjacent_lines(c *check.C) {
 	vt.Run()
 }
 
+// This code comes from usr.bin/make/unit-tests/varcmd.mk.
+// Its purpose is unclear and irrelevant for this test.
+// The two .ifmake directives are unknown to pkglint since they are not
+// used in pkgsrc.
+// The variable assignments are not aligned.  That's good, but why?
+// It might be because of the unknown '.ifmake' or for a completely
+// different reason.
+//
+// Yes, it is because '.ifmake' is not a known directive, therefore
+// VaralignBlock.Process does not classify it as IsDirective and skips
+// the block.
+func (s *Suite) Test_VaralignBlock__unknown_line_format(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		".ifmake two",
+		"# this should not work",
+		"FU+= oops",
+		"FOO+= oops",
+		"_FU:= ${FU}",
+		"_FOO:= ${FOO}",
+		"two: immutable",
+		"immutable:",
+		"\t:",
+		".endif",
+		".ifmake four",
+		"VAR=Internal",
+		".MAKEOVERRIDES+= VAR",
+		".endif")
+	vt.Diagnostics(
+		"ERROR: Makefile:1: Unknown Makefile line format: \".ifmake two\".",
+		"ERROR: Makefile:11: Unknown Makefile line format: \".ifmake four\".")
+	vt.Autofixes(
+		nil...)
+	vt.Fixed(
+		".ifmake two",
+		"# this should not work",
+		"FU+= oops",
+		"FOO+= oops",
+		"_FU:= ${FU}",
+		"_FOO:= ${FOO}",
+		"two: immutable",
+		"immutable:",
+		"        :",
+		".endif",
+		".ifmake four",
+		"VAR=Internal",
+		".MAKEOVERRIDES+= VAR",
+		".endif")
+	vt.Run()
+}
+
 func (s *Suite) Test_VaralignBlock_Process__var_spaces7_value(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(

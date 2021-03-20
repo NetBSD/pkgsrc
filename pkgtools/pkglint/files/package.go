@@ -1473,7 +1473,7 @@ func (pkg *Package) checkOwnerMaintainer(filename CurrPath) {
 		return
 	}
 
-	line := NewLineWhole(filename)
+	line := NewLineWhole(pkg.File("."))
 	line.Notef("Please only commit changes that %s would approve.", maintainer)
 	line.Explain(
 		"See the pkgsrc guide, section \"Package components\",",

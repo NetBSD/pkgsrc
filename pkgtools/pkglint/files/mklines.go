@@ -40,6 +40,8 @@ type MkLines struct {
 	checkAllData mklinesCheckAll
 }
 
+// mklinesCheckAll contains the data that may only be accessed during a call
+// to MkLines.checkAll.
 type mklinesCheckAll struct {
 	// Current make(1) target
 	target string
