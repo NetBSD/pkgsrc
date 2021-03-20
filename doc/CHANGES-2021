@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1747 2021/03/20 09:33:09 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1748 2021/03/20 13:25:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/go114 successor lang/go116 [bsiegert 2021-03-20]
 	Updated devel/py-ddt to 1.4.2 [adam 2021-03-20]
 	Updated fonts/py-fonttools to 4.21.1 [adam 2021-03-20]
+	Updated x11/xsnow to 3.2.2 [gdt 2021-03-20]
