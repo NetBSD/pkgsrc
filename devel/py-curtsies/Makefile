@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/07/16 06:08:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/20 15:12:22 adam Exp $
 
-DISTNAME=	curtsies-0.3.4
+DISTNAME=	curtsies-0.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
@@ -11,16 +11,14 @@ COMMENT=	Curses-like terminal wrapper, with colored strings
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-blessings>=1.5:../../devel/py-blessings
-DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.4:../../devel/py-wcwidth
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
-.endif
+DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} -m unittest discover -v
