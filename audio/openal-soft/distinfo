@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2020/04/09 13:35:21 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2021/03/21 20:05:17 adam Exp $
 
-SHA1 (openal-soft-1.20.1.tar.bz2) = 77c3d2736adf4058ec3e19f26e51fac9b5412ac1
-RMD160 (openal-soft-1.20.1.tar.bz2) = dd53b9aac8710db7344f16fb49c93f9f73af8b6d
-SHA512 (openal-soft-1.20.1.tar.bz2) = a8a03a2162b5d35e66adc079e81d7fa075b83a3ee1cec3412cb40f7789263ed8bd005beefb7ef995f464dfa43aac22ea0f547b752dfc7533ed9120a95fb92513
-Size (openal-soft-1.20.1.tar.bz2) = 512971 bytes
+SHA1 (openal-soft-1.21.1.tar.bz2) = f39b81a9ce22419e106259cf424405291520b8f3
+RMD160 (openal-soft-1.21.1.tar.bz2) = b5b96f0e36d4a29303d62a484d7c6c1fe0798de6
+SHA512 (openal-soft-1.21.1.tar.bz2) = 420eec18149a9b784daaabe8a2865de3b87d5550cf2e8e06569464d0b5ba6e51d904c18f1461af08676bf8c8b76ef270e860008d79545a5f85131299e89bffd4
+Size (openal-soft-1.21.1.tar.bz2) = 524787 bytes
+SHA1 (patch-CMakeLists.txt) = 5469748347d548838b8e4650e1ecbabacae1f30a
 SHA1 (patch-alc_alconfig.cpp) = 0539016dadf1827e5a86700c2db5a96479a8b70d
 SHA1 (patch-alc_backends_alsa.cpp) = 3ee7f86e544d9b33ccbe9422eb87b9540623053a
 SHA1 (patch-alc_backends_solaris.cpp) = 62e7a5bddb5c4ed7f7e4c4889b2234dd778be960
