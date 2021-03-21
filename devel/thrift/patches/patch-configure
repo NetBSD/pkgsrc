@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2019/09/18 11:27:53 adam Exp $
+$NetBSD: patch-configure,v 1.2 2021/03/21 12:41:11 taca Exp $
 
 Fix broken BOOST_LIB_DIR detection.
 Fix unportable test(1) operator.
 
---- configure.orig	2019-01-04 22:24:16.000000000 +0000
+--- configure.orig	2021-02-04 23:08:12.000000000 +0000
 +++ configure
-@@ -18129,7 +18129,7 @@ fi
+@@ -18182,7 +18182,7 @@ fi
  
  
    if test "x$succeeded" = "xyes" ; then
@@ -14,16 +14,7 @@ Fix unportable test(1) operator.
  
      BOOST_CHRONO_LDADD=$(echo "$BOOST_LIB_DIR/libboost_chrono.a")
  
-@@ -19497,7 +19497,7 @@ else
- $as_echo "yes" >&6; }
- 	mono_2_11=yes
- fi
--  if test "$mono_2_11" == "yes"; then
-+  if test "$mono_2_11" = "yes"; then
-     # Extract the first word of "mcs", so it can be a program name with args.
- set dummy mcs; ac_word=$2
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
-@@ -23324,7 +23324,7 @@ $as_echo "yes" >&6; }
+@@ -23057,7 +23057,7 @@ $as_echo "yes" >&6; }
  
            # Test whether OPTLINK is used by trying if DMD accepts -L/? without
            # erroring out.
