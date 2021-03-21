@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1774 2021/03/21 12:54:40 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1775 2021/03/21 12:57:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2697,3 +2697,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-odbc to 0.999991 [taca 2021-03-21]
 	Updated devel/ruby-mixlib-authentication to 3.0.10 [taca 2021-03-21]
 	Updated devel/ruby-rspec-rails to 5.0.1 [taca 2021-03-21]
+	Updated finance/ruby-braintree to 3.3.0 [taca 2021-03-21]
