@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/07/08 14:55:18 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/21 20:10:15 adam Exp $
 
-DISTNAME=	crayons-0.3.1
+DISTNAME=	crayons-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crayons/}
