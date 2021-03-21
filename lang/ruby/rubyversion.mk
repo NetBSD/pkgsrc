@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.224 2021/02/14 14:30:07 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.225 2021/03/21 12:39:52 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -803,6 +803,11 @@ PRINT_PLIST_AWK+=	/\/${RUBY_NAME}/ \
 			{ sub(/${RUBY_NAME}/, "$${RUBY_NAME}"); }
 PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g:S|.|\\.|g}/ \
 			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); }
+# handle ${RUBY_SUFFIX}
+PRINT_PLIST_AWK+=	/^bin\/.*${RUBY_SUFFIX}$$/ \
+			{ sub(/${RUBY_SUFFIX}$$/, "$${RUBY_SUFFIX}"); }
+PRINT_PLIST_AWK+=	/^man\/man[0-9]\/.*${RUBY_SUFFIX}.[0-9]$$/ \
+			{ sub(/${RUBY_SUFFIX}\./, "$${RUBY_SUFFIX}."); }
 
 # supporting scripts
 UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
