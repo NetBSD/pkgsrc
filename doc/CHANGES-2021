@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1790 2021/03/21 14:25:18 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1791 2021/03/21 15:03:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/sickgear to 0.23.14 [js 2021-03-21]
 	Updated mail/mew to 6.8nb1 [taca 2021-03-21]
 	Added biology/generand version 0.1.2 [bacon 2021-03-21]
+	Updated mail/squirrelmail to 1.4.23pre14904 [taca 2021-03-21]
