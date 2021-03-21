@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1787 2021/03/21 13:45:57 js Exp $
+$NetBSD: CHANGES-2021,v 1.1788 2021/03/21 13:48:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-ohai to 16.10.7 [taca 2021-03-21]
 	Updated sysutils/ruby-inspec-core to 4.28.0 [taca 2021-03-21]
 	Updated multimedia/sickgear to 0.23.14nb1 [js 2021-03-21]
+	Updated mail/mew to 6.8nb1 [taca 2021-03-21]
