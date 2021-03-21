@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:32 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/03/21 13:45:34 js Exp $
 
 DISTNAME=	release_${PKGVERSION_NOREV}
-PKGNAME=	sickgear-0.22.5
+PKGNAME=	sickgear-0.23.14
 PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SickGear/}
