@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2019/11/04 05:48:26 gutteridge Exp $
+$NetBSD: patch-ab,v 1.4 2021/03/21 19:50:54 gutteridge Exp $
 
 Add DragonFly support.
 
---- scapy/arch/unix.py.orig	2019-08-04 16:12:30.000000000 +0000
+--- scapy/arch/unix.py.orig	2020-09-02 11:26:21.000000000 +0000
 +++ scapy/arch/unix.py
 @@ -14,7 +14,7 @@ import scapy.config
  import scapy.utils
  from scapy.arch import get_if_addr
  from scapy.config import conf
--from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, LOOPBACK_NAME
-+from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, LOOPBACK_NAME, DRAGONFLY
+-from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS
++from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, DRAGONFLY
  from scapy.error import warning, log_interactive
  from scapy.pton_ntop import inet_pton
  from scapy.utils6 import in6_getscope, construct_source_candidate_set
@@ -19,7 +19,7 @@ Add DragonFly support.
          f = os.popen("netstat -rvn -f inet")
 -    elif FREEBSD:
 +    elif FREEBSD or DRAGONFLY:
-         f = os.popen("netstat -rnW")  # -W to handle long interface names
+         f = os.popen("netstat -rnW -f inet")  # -W to show long interface names
      else:
          f = os.popen("netstat -rn -f inet")
 @@ -276,7 +276,7 @@ def read_routes6():
