@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1204 2021/03/20 15:46:23 scole Exp $
+# $NetBSD: Makefile,v 1.1205 2021/03/21 21:18:21 triaxx Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -883,6 +883,8 @@ SUBDIR+=	py-humanize
 SUBDIR+=	py-inflection
 SUBDIR+=	py-iniparse
 SUBDIR+=	py-isc_dhcp_leases
+SUBDIR+=	py-itemadapter
+SUBDIR+=	py-itemloaders
 SUBDIR+=	py-jade
 SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
