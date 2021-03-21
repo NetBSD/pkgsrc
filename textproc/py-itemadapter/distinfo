@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/21 21:09:50 triaxx Exp $
+
+SHA1 (itemadapter-0.2.0.tar.gz) = f3e558a38c4f50895e4845f96df3b34a7ab7b72b
+RMD160 (itemadapter-0.2.0.tar.gz) = ee186ff5696cacd722fdbdae65959c7fcb47faaa
+SHA512 (itemadapter-0.2.0.tar.gz) = d44072d164909a0557014ca51f410fb70554f2ad363d08167357f5d73b1eceecad0a873c26fc90742ea17c45b71509db471eef04b405aac1a38f119abfeb23c0
+Size (itemadapter-0.2.0.tar.gz) = 12197 bytes
