@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/03/21 18:25:22 scole Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/21 19:42:52 scole Exp $
 
 ST_VERSION=	2.1
 PKGNAME=	split-thai-${ST_VERSION}
@@ -44,7 +44,7 @@ SUBST_FILES.st-emacs-app=	st-emacs
 SUBST_SED.st-emacs-app=		-e 's,!/bin/emacs,!${PREFIX}/bin/emacs,g'
 
 SUBST_CLASSES+=			dictionary-app
-SUBST_STAGE.dictionary-app=	post-extract
+SUBST_STAGE.dictionary-app=	pre-configure
 SUBST_MESSAGE.dictionary-app=	Fixing dictionary paths.
 SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak pthai.el
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
