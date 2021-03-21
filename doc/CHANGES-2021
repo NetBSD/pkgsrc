@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1764 2021/03/21 04:16:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1765 2021/03/21 07:51:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2681,3 +2681,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pear-Crypt_GPG to 1.6.5 [taca 2021-03-21]
 	Updated net/bind911 to 9.11.29 [taca 2021-03-21]
 	Updated net/bind916 to 9.16.13 [taca 2021-03-21]
+	Updated textproc/py-humanize to 3.3.0 [adam 2021-03-21]
+	Updated net/py-xandikos to 0.2.6 [adam 2021-03-21]
