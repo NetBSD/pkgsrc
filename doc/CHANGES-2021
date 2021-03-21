@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1765 2021/03/21 07:51:15 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1766 2021/03/21 07:57:17 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2683,3 +2683,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.13 [taca 2021-03-21]
 	Updated textproc/py-humanize to 3.3.0 [adam 2021-03-21]
 	Updated net/py-xandikos to 0.2.6 [adam 2021-03-21]
+	Updated net/gh to 1.7.0 [bsiegert 2021-03-21]
