@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/03/19 16:31:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.32 2021/03/21 01:23:39 mef Exp $
 
 DISTNAME=	sayaka-3.5.1
 #PKGREVISION=	0
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd AND mit
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c99 c++17
+USE_TOOLS+=		pkg-config
 BUILD_TARGET=		sayaka
 
 INSTALLATION_DIRS+=	bin
