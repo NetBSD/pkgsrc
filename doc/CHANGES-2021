@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1759 2021/03/20 23:32:53 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.1760 2021/03/21 01:56:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2676,3 +2676,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.13.5 [adam 2021-03-20]
 	Updated net/gallery-dl to 1.17.1 [leot 2021-03-20]
 	Updated pkgtools/pkglint to 20.4.1 [rillig 2021-03-20]
+	Updated emulators/PC6001VX to 3.7.1 [tsutsui 2021-03-21]
