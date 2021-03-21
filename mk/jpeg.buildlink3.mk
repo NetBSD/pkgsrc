@@ -1,4 +1,4 @@
-# $NetBSD: jpeg.buildlink3.mk,v 1.3 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: jpeg.buildlink3.mk,v 1.4 2021/03/21 08:02:27 wiz Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a libjpeg implementation.  jpeg.buildlink3.mk will:
@@ -15,6 +15,7 @@
 # JPEG_ACCEPTED is a package-settable list of libjpeg implementations
 #	that may be used by the package.
 #
+# The allowed values are: jpeg libjpeg-turbo
 
 MK_JPEG_BUILDLINK3_MK:=	${MK_JPEG_BUILDLINK3_MK}+
 
