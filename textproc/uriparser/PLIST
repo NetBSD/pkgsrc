@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/02 09:59:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/21 15:18:54 taca Exp $
 bin/uriparse
 include/uriparser/Uri.h
 include/uriparser/UriBase.h
@@ -12,5 +12,5 @@ lib/cmake/uriparser-${PKGVERSION}/uriparser-noconfig.cmake
 lib/cmake/uriparser-${PKGVERSION}/uriparser.cmake
 lib/liburiparser.so
 lib/liburiparser.so.1
-lib/liburiparser.so.1.0.27
+lib/liburiparser.so.1.0.28
 lib/pkgconfig/liburiparser.pc
