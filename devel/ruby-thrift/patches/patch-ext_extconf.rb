@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_extconf.rb,v 1.2 2019/09/18 11:27:52 adam Exp $
+$NetBSD: patch-ext_extconf.rb,v 1.3 2021/03/21 12:44:03 taca Exp $
 
 Don't treat warnings as errors.
 
@@ -9,7 +9,7 @@ Don't treat warnings as errors.
  
  
 -  $CFLAGS = "-fsigned-char -g -O2 -Wall -Werror " + $ARCH_FLAGS
-+  $CFLAGS = "-fsigned-char -Wall " + $ARCH_FLAGS
++  $CFLAGS = "-fsigned-char -g -O2 -Wall " + $ARCH_FLAGS
  
    have_func("strlcpy", "string.h")
  
