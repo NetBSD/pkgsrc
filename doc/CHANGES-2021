@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1761 2021/03/21 03:30:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1762 2021/03/21 03:31:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2678,3 +2678,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 20.4.1 [rillig 2021-03-20]
 	Updated emulators/PC6001VX to 3.7.1 [tsutsui 2021-03-21]
 	Updated net/pear-Net_SMTP to 1.10.0 [taca 2021-03-21]
+	Updated security/pear-Crypt_GPG to 1.6.5 [taca 2021-03-21]
