@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2021/03/19 22:17:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/03/21 19:32:45 markd Exp $
 
 SHA1 (libkolabxml-1.1.6.tar.gz) = 51c07082b48d5b32e6e9620dc212b6717acf45dd
 RMD160 (libkolabxml-1.1.6.tar.gz) = a404e9648b9b1d858ff6732fbe84e54c8eaa94eb
 SHA512 (libkolabxml-1.1.6.tar.gz) = ae74a9276cad2840db09ae9f9178991eb22137a13f83c04dd2fb7513407f2a5e6b7c79d71de80ced786457f1d3c8b5229226aecd8ea139f0af7125268aff4121
 Size (libkolabxml-1.1.6.tar.gz) = 128843 bytes
+SHA1 (patch-CMakeLists.txt) = 3f3e9c0eb0765b140db3bf6243a5eae608b76d28
