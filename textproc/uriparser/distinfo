@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2020/06/02 09:59:45 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/03/21 15:18:54 taca Exp $
 
-SHA1 (uriparser-0.9.4.tar.xz) = 3f7102e2a2e59e1cbdcaa7dc974fc8d0775703c7
-RMD160 (uriparser-0.9.4.tar.xz) = 475d616bb0a845964c3f32550bbdef7c0bec0a0b
-SHA512 (uriparser-0.9.4.tar.xz) = b62f13232be58f90b8d3ccd8d5de6759a2146ac67555ffbf1c32318c52073300e7ead55eb73254bef84d2273aa5eb815a66d3e81aafb30bfdb60a9ffb8233c55
-Size (uriparser-0.9.4.tar.xz) = 167456 bytes
-SHA1 (patch-CMakeLists.txt) = af3b6b9531f82956ce7aa4294d505d035b8c76f0
+SHA1 (uriparser-0.9.5.tar.xz) = 5926cbd60865265c5b20765df605085ddafa8edd
+RMD160 (uriparser-0.9.5.tar.xz) = 8ef71446a57ba087fefbe0aaa246be0f21d5bedc
+SHA512 (uriparser-0.9.5.tar.xz) = e6077a1892cf92542205d5f4f888502e0cd51586832dd5d06903b8cebfada3fd37310978fac0134a671dea07d471f384026da07c076bda194c7a0abc7ba9867a
+Size (uriparser-0.9.5.tar.xz) = 169220 bytes
 SHA1 (patch-include_uriparser_UriBase.h) = 71f3582a2988c6c35a1a2b1995d50f47f22939bd
