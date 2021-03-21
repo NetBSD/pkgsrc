@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1760 2021/03/21 01:56:59 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.1761 2021/03/21 03:30:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gallery-dl to 1.17.1 [leot 2021-03-20]
 	Updated pkgtools/pkglint to 20.4.1 [rillig 2021-03-20]
 	Updated emulators/PC6001VX to 3.7.1 [tsutsui 2021-03-21]
+	Updated net/pear-Net_SMTP to 1.10.0 [taca 2021-03-21]
