@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2021/02/17 21:36:03 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/03/21 04:16:17 taca Exp $
 
-SHA1 (bind-9.16.12.tar.xz) = 4e75a4c9ffb905d7eaa389464f0f3418c94cb2e7
-RMD160 (bind-9.16.12.tar.xz) = 7b180be178a847af1f47f06fbfec4bf79326df68
-SHA512 (bind-9.16.12.tar.xz) = 001613bd3c8bfc73d60bf3c053b233233a981132206e1ae5847820c5416ba0d65b0e026817ea3a718c7d3745c28a8de8dd9fb4355344955bead7bc2e1433e074
-Size (bind-9.16.12.tar.xz) = 5017756 bytes
+SHA1 (bind-9.16.13.tar.xz) = 5120b0e7fcc8b7d3e1c9d1414c5c3888640c3b40
+RMD160 (bind-9.16.13.tar.xz) = 95ca9bcf95ecf996d3bfe97a2bad602f35a63b3e
+SHA512 (bind-9.16.13.tar.xz) = 1f3c8f54dd2c9e18cd9b67cfebb645d0a8e8f566add07fc4690cb8820bf81640c33b2b0685cb8be095e0f9ac84b2cf78176aea841a30c27d547b569b8353b07b
+Size (bind-9.16.13.tar.xz) = 5028340 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -14,7 +14,7 @@ SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = d953bf48aadcdf7e95975d335167cc50f54ef9
 SHA1 (patch-bin_tools_arpaname.c) = 868da4454d06dc823680cf06a764fa40b8474708
 SHA1 (patch-bin_tools_nsec3hash.c) = 87c3891db62c45cd8ed2b484b17f7bf2e319bef3
 SHA1 (patch-config.guess) = f44c6344a297e7c623dcbf75b308eb35f797a537
-SHA1 (patch-config.h.in) = a9b2c067bada2055b51d88112e4058ccec0d1441
+SHA1 (patch-config.h.in) = fb0396429bd68bb3bf478cb1da67736592208702
 SHA1 (patch-config.sub) = 7389c0f2500f2afe96d43979a2d3e0b9f8dff073
 SHA1 (patch-config.threads.in) = fc5cc7097d87523a34c0e630cb8dd1d081d859e5
 SHA1 (patch-configure.ac) = 3dd8c49eb6bc475c20c88edc20bd8457698ad500
@@ -35,10 +35,9 @@ SHA1 (patch-lib_dns_sdb.c) = ed447ec7a134e620765b25ee36124a19dfd9fab0
 SHA1 (patch-lib_dns_sdlz.c) = 4fc15a577c64501c10c144eab147e54686e80309
 SHA1 (patch-lib_dns_validator.c) = 03dd60d4c38be7248d1e07f2c29ddd543b5f7454
 SHA1 (patch-lib_dns_view.c) = 5b092f0344b92d003f1fe1f28e4cc4c76b2505cf
-SHA1 (patch-lib_dns_zone.c) = 900e84e0de403d601df4c30f22758ab26a2a52b5
+SHA1 (patch-lib_dns_zone.c) = cad37c0fc4a05a2adb6159d4e1453fdbd3f08b41
 SHA1 (patch-lib_isc_backtrace.c) = 1b6bca9b3de7f7298882c6c88274b0baf1dad507
-SHA1 (patch-lib_isc_hp.c) = 4c9646722297460f0e973bd131439b4ede885588
-SHA1 (patch-lib_isc_include_isc_netmgr.h) = cdf6bceae7e0b288d3e7ef7a4545a9cf2411112c
+SHA1 (patch-lib_isc_include_isc_netmgr.h) = 48ac44c6a9b81e6b442deba6c075653d3691464b
 SHA1 (patch-lib_isc_include_isc_socket.h) = dc6376cd9e8391fa96efd805faee1a5d0647a142
 SHA1 (patch-lib_isc_include_isc_types.h) = bc0cdeb762d974b7be6e602b7dc2aac17fa7fe2f
 SHA1 (patch-lib_isc_netmgr_netmgr.c) = 63168c8901646e7b2079e1dc3324087508bb1e62
