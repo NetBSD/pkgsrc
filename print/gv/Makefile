@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/08/31 18:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2021/03/21 00:11:40 rillig Exp $
 
 DISTNAME=	gv-3.7.4
 PKGREVISION=	10
@@ -22,6 +22,17 @@ XAW_TYPE?=		3d
 .include "../../mk/bsd.prefs.mk"
 .if ${XAW_TYPE} == "standard"
 XAW_TYPE=		3d
+.endif
+
+.if ${XAW_TYPE} == "neXtaw"
+# The original configure links against Xaw3d, not Xaw.
+BUILDLINK_TRANSFORM+=	l:Xaw3d:neXtaw
+SUBST_CLASSES+=		gvnextaw
+SUBST_MESSAGE.gvnextaw=	Patching gv to use neXtaw
+SUBST_STAGE.gvnextaw=	pre-configure
+SUBST_FILES.gvnextaw=	configure
+SUBST_FILES.gvnextaw+=	src/paths.h
+SUBST_SED.gvnextaw=	-e 's,<X11/Xaw3d/,<X11/neXtaw/,g'
 .endif
 
 # Solaris-2.{8,9}/sparc are missing setenv() and unsetenv()
