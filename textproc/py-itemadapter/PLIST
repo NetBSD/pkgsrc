@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/21 21:09:50 triaxx Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/itemadapter/__init__.py
+${PYSITELIB}/itemadapter/__init__.pyc
+${PYSITELIB}/itemadapter/__init__.pyo
+${PYSITELIB}/itemadapter/adapter.py
+${PYSITELIB}/itemadapter/adapter.pyc
+${PYSITELIB}/itemadapter/adapter.pyo
+${PYSITELIB}/itemadapter/utils.py
+${PYSITELIB}/itemadapter/utils.pyc
+${PYSITELIB}/itemadapter/utils.pyo
