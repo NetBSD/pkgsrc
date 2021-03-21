@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2021/02/11 10:05:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2021/03/21 15:42:29 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -20,6 +20,7 @@ NUT_GROUP?=		nut
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/ups-nut/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/ups-nut/patches
 
+USE_TOOLS=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
