@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/26 13:21:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/03/21 04:16:17 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -220,6 +220,7 @@ include/isc/taskpool.h
 include/isc/thread.h
 include/isc/time.h
 include/isc/timer.h
+include/isc/tls.h
 include/isc/tm.h
 include/isc/types.h
 include/isc/utf8.h
