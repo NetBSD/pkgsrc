@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1782 2021/03/21 13:18:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1783 2021/03/21 13:22:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-pygments.rb to 2.2.0 [taca 2021-03-21]
 	Updated devel/radare2 to 5.1.1 [leot 2021-03-21]
 	Updated www/ruby-unicorn to 6.0.0 [taca 2021-03-21]
+	Updated sysutils/puppet to 7.5.0 [taca 2021-03-21]
