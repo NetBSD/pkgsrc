@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1779 2021/03/21 13:10:43 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1780 2021/03/21 13:12:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-train-core to 3.5.4 [taca 2021-03-21]
 	Updated security/ruby-metasploit-payloads to 2.0.39 [taca 2021-03-21]
 	Updated sysutils/ruby-facter to 4.0.52 [taca 2021-03-21]
+	Updated www/ruby-pygments.rb to 2.2.0 [taca 2021-03-21]
