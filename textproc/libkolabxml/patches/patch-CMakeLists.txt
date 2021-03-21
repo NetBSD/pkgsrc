@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/03/21 19:32:45 markd Exp $
+
+Don't use a relative path - confuses wrappers.
+
+--- CMakeLists.txt.orig	2016-09-02 08:50:26.000000000 +0000
++++ CMakeLists.txt
+@@ -202,7 +202,8 @@ endif()
+ #Get the include directory relative to CMAKECONFIG_INSTALL_DIR
+ file(RELATIVE_PATH REL_INCLUDE_DIR "${CMAKECONFIG_INSTALL_DIR}" "${INCLUDE_INSTALL_DIR}")
+ #Assemble the full relative path. This will be used in the LibkolabxmlConfig.cmake, which will be installed in CMAKECONFIG_INSTALL_DIR
+-set(CONF_INCLUDE_DIRS "\${Libkolabxml_CMAKE_DIR}/${REL_INCLUDE_DIR}")
++#set(CONF_INCLUDE_DIRS "\${Libkolabxml_CMAKE_DIR}/${REL_INCLUDE_DIR}")
++set(CONF_INCLUDE_DIRS "${INCLUDE_INSTALL_DIR}")
+ 
+ install(EXPORT LibkolabxmlExport DESTINATION ${CMAKECONFIG_INSTALL_DIR} FILE LibkolabxmlTargets.cmake )
+ 
