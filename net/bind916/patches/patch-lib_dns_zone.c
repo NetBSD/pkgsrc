@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_dns_zone.c,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_dns_zone.c,v 1.2 2021/03/21 04:16:17 taca Exp $
 
 * Take from NetBSD base.
 
---- lib/dns/zone.c.orig	2020-06-10 21:01:43.000000000 +0000
+--- lib/dns/zone.c.orig	2021-03-11 13:20:59.000000000 +0000
 +++ lib/dns/zone.c
 @@ -224,8 +224,13 @@ struct dns_zone {
  	int32_t journalsize;
@@ -30,13 +30,3 @@ $NetBSD: patch-lib_dns_zone.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  
  	/*%
  	 * True if added by "rndc addzone"
-@@ -499,7 +508,9 @@ typedef enum {
- 						      * notify due to the zone
- 						      * just being loaded for
- 						      * the first time.  */
-+#ifndef __NetBSD__
- 	DNS_ZONEFLG___MAX = UINT64_MAX, /* trick to make the ENUM 64-bit wide */
-+#endif
- } dns_zoneflg_t;
- 
- #define DNS_ZONE_OPTION(z, o)	 ((atomic_load_relaxed(&(z)->options) & (o)) != 0)
