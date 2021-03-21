@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/03/15 16:02:12 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2021/03/21 13:04:49 gdt Exp $
 
 DISTNAME=	bup-0.32
 CATEGORIES=	sysutils
@@ -36,7 +36,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=		test
 
 PYTHON_VERSIONS_ACCEPTED=	27	# py-fuse-bindings
 
@@ -84,4 +84,5 @@ post-install:
 # \todo Investigate "bup ftp" crash with NetBSD editline and resolve.
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
