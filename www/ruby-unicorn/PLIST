@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/03/20 16:04:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/03/21 13:17:45 taca Exp $
 bin/unicorn${RUBY_SUFFIX}
 bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -94,7 +94,6 @@ ${GEM_LIBDIR}/t/detach.ru
 ${GEM_LIBDIR}/t/env.ru
 ${GEM_LIBDIR}/t/fails-rack-lint.ru
 ${GEM_LIBDIR}/t/heartbeat-timeout.ru
-${GEM_LIBDIR}/t/hijack.ru
 ${GEM_LIBDIR}/t/listener_names.ru
 ${GEM_LIBDIR}/t/my-tap-lib.sh
 ${GEM_LIBDIR}/t/oob_gc.ru
@@ -132,7 +131,6 @@ ${GEM_LIBDIR}/t/t0022-listener_names-preload_app.sh
 ${GEM_LIBDIR}/t/t0100-rack-input-tests.sh
 ${GEM_LIBDIR}/t/t0116-client_body_buffer_size.sh
 ${GEM_LIBDIR}/t/t0116.ru
-${GEM_LIBDIR}/t/t0200-rack-hijack.sh
 ${GEM_LIBDIR}/t/t0300-no-default-middleware.sh
 ${GEM_LIBDIR}/t/t0301-no-default-middleware-ignored-in-config.sh
 ${GEM_LIBDIR}/t/t0301.ru
