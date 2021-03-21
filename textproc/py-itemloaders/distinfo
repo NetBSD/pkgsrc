@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/21 21:13:00 triaxx Exp $
+
+SHA1 (itemloaders-1.0.4.tar.gz) = 595be68cd09e723c84ea2de9824d624e6d288681
+RMD160 (itemloaders-1.0.4.tar.gz) = ff469e7217e7c48a7e466fb6f9696d314cf6a897
+SHA512 (itemloaders-1.0.4.tar.gz) = 2468d8bc0063a6cee2572980128ba1a419cecb775e981789f75ec2dab5ddecad446e5d3a728c3878045c586c99c30da4eed0ed28df29af5fe794922b5a13102f
+Size (itemloaders-1.0.4.tar.gz) = 11731 bytes
