@@ -1,25 +1,23 @@
-# $NetBSD: Makefile,v 1.18 2021/02/07 06:30:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2021/03/21 20:05:17 adam Exp $
 
-DISTNAME=	openal-soft-1.20.1
-PKGREVISION=	5
+DISTNAME=	openal-soft-1.21.1
 CATEGORIES=	audio
-MASTER_SITES=	https://kcat.strangesoft.net/openal-releases/
+MASTER_SITES=	https://openal-soft.org/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://kcat.strangesoft.net/openal.html
+HOMEPAGE=	https://openal-soft.org/
 COMMENT=	Software implementation of the OpenAL 3D audio API
 LICENSE=	gnu-lgpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++14
 USE_TOOLS+=	pkg-config gmake
 
 # https://github.com/kcat/openal-soft/issues/347
 GCC_REQD+=	5
 
-MAKE_JOBS_SAFE=		no
-
+PKGCONFIG_OVERRIDE+=	openal.pc.in
 PKG_SYSCONFSUBDIR=	openal
 
 CMAKE_ARGS+=	-DALSOFT_EXAMPLES=OFF
@@ -34,8 +32,8 @@ CONF_FILES+=	${PREFIX}/share/openal/alsoftrc.sample ${PKG_SYSCONFDIR}/alsoft.con
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD"
-CMAKE_ARGS+=		-DALSOFT_BACKEND_SOLARIS=ON
-CMAKE_ARGS+=		-DALSOFT_REQUIRE_SOLARIS=ON
+CMAKE_ARGS+=	-DALSOFT_BACKEND_SOLARIS=ON
+CMAKE_ARGS+=	-DALSOFT_REQUIRE_SOLARIS=ON
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
@@ -50,10 +48,11 @@ SUBST_FILES.oss=	alc/backends/oss.cpp
 SUBST_SED.oss=		-e 's,/dev/dsp,${DEVOSSAUDIO},'
 .endif
 
-
-PKGCONFIG_OVERRIDE+=	openal.pc.in
-
 .include "options.mk"
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/include/AL/al.h.orig
+
 .include "../../audio/libmysofa/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
