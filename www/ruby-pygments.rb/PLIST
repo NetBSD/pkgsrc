@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/07 13:48:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/21 13:12:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
@@ -11,8 +11,6 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.adoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bench.rb
-${GEM_LIBDIR}/cache_lexers.rb
-${GEM_LIBDIR}/lexers
 ${GEM_LIBDIR}/lib/pygments.rb
 ${GEM_LIBDIR}/lib/pygments/lexer.rb
 ${GEM_LIBDIR}/lib/pygments/mentos.py
@@ -20,15 +18,15 @@ ${GEM_LIBDIR}/lib/pygments/popen.rb
 ${GEM_LIBDIR}/lib/pygments/version.rb
 ${GEM_LIBDIR}/pygments.rb.gemspec
 ${GEM_LIBDIR}/test/test_pygments.rb
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/AUTHORS
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/INSTALLER
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/LICENSE
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/METADATA
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/RECORD
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/REQUESTED
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/WHEEL
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/entry_points.txt
-${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.0.dist-info/top_level.txt
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/AUTHORS
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/INSTALLER
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/LICENSE
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/METADATA
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/RECORD
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/REQUESTED
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/WHEEL
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/entry_points.txt
+${GEM_LIBDIR}/vendor/pygments-main/Pygments-2.8.1.dist-info/top_level.txt
 ${GEM_LIBDIR}/vendor/pygments-main/bin/pygmentize
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/__init__.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/__main__.py
