@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1763 2021/03/21 04:09:19 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1764 2021/03/21 04:16:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2680,3 +2680,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/pear-Net_SMTP to 1.10.0 [taca 2021-03-21]
 	Updated security/pear-Crypt_GPG to 1.6.5 [taca 2021-03-21]
 	Updated net/bind911 to 9.11.29 [taca 2021-03-21]
+	Updated net/bind916 to 9.16.13 [taca 2021-03-21]
