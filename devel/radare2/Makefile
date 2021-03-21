@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/01/26 14:25:00 kamil Exp $
+# $NetBSD: Makefile,v 1.29 2021/03/21 13:16:47 leot Exp $
 
-DISTNAME=	radare2-5.1.0
+DISTNAME=	radare2-5.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 
@@ -20,8 +20,12 @@ USE_TOOLS+=		gmake patch pkg-config perl
 # node
 CHECK_INTERPRETER_SKIP+=	share/radare2/${PKGVERSION_NOREV}/www/m/fonts/iconjar-map.js
 
-#PLIST_SUBST+=	R2VERSION=${PKGVERSION_NOREV}-git # trunk revision
-PLIST_SUBST+=	R2VERSION=${PKGVERSION_NOREV} # release revision
+#R2VERSION=	${PKGVERSION_NOREV}-git # trunk revision
+R2VERSION=	${PKGVERSION_NOREV} # release version
+
+PLIST_SUBST+=	R2VERSION=${R2VERSION}
+
+PRINT_PLIST_AWK+=	{ gsub(/${R2VERSION}/, "$${R2VERSION}") }
 
 .include "options.mk"
 
