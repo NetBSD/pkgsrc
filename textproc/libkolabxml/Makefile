@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/03/19 22:17:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/21 19:32:45 markd Exp $
 
 DISTNAME=	libkolabxml-1.1.6
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://mirror.kolabenterprise.com/pub/releases/
 
@@ -14,6 +15,11 @@ USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
 CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+
+SUBST_CLASSES+=		pathes
+SUBST_STAGE.pathes=	post-install
+SUBST_FILES.pathes=	${DESTDIR}${PREFIX}/lib/cmake/Libkolabxml/LibkolabxmlTargets-noconfig.cmake
+SUBST_SED.pathes=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/xsd/buildlink3.mk"
