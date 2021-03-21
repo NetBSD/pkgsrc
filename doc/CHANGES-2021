@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1769 2021/03/21 10:21:19 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1770 2021/03/21 12:44:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2687,3 +2687,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/rss2email to 3.12.3 [schmonz 2021-03-21]
 	Updated devel/p5-Test-BDD-Cucumber to 0.79 [schmonz 2021-03-21]
 	Updated cross/atasm to 1.09 [fcambus 2021-03-21]
+	Updated devel/thrift to 0.14.0 [taca 2021-03-21]
+	Updated devel/libthrift to 0.14.0 [taca 2021-03-21]
+	Updated devel/go-thrift to 0.14.0 [taca 2021-03-21]
+	Updated devel/p5-thrift to 0.14.0 [taca 2021-03-21]
+	Updated devel/py-thrift to 0.14.0 [taca 2021-03-21]
+	Updated devel/ruby-thrift to 0.14.0 [taca 2021-03-21]
