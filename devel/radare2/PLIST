@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/26 14:25:00 kamil Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/21 13:16:47 leot Exp $
 bin/r2
 bin/r2agent
 bin/r2p
@@ -128,6 +128,7 @@ include/libr/sdb/config.h
 include/libr/sdb/dict.h
 include/libr/sdb/ht_inc.h
 include/libr/sdb/ht_pp.h
+include/libr/sdb/ht_pu.h
 include/libr/sdb/ht_up.h
 include/libr/sdb/ht_uu.h
 include/libr/sdb/ls.h
@@ -651,8 +652,10 @@ share/radare2/${R2VERSION}/www/m/app.js
 share/radare2/${R2VERSION}/www/m/disasmNavProvider.js
 share/radare2/${R2VERSION}/www/m/disasmProvider.js
 share/radare2/${R2VERSION}/www/m/hexchunkProvider.js
+share/radare2/${R2VERSION}/www/m/images/apple-touch-icon.png
 share/radare2/${R2VERSION}/www/m/images/icon.png
 share/radare2/${R2VERSION}/www/m/images/rlogo256.png
+share/radare2/${R2VERSION}/www/m/images/touch/chrome-touch-icon-192x192.png
 share/radare2/${R2VERSION}/www/m/images/user.jpg
 share/radare2/${R2VERSION}/www/m/index.html
 share/radare2/${R2VERSION}/www/m/legacy.js
