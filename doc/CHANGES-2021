@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1770 2021/03/21 12:44:53 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1771 2021/03/21 12:49:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-thrift to 0.14.0 [taca 2021-03-21]
 	Updated devel/py-thrift to 0.14.0 [taca 2021-03-21]
 	Updated devel/ruby-thrift to 0.14.0 [taca 2021-03-21]
+	Updated databases/ruby-hiera to 3.7.0 [taca 2021-03-21]
