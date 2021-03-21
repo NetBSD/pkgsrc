@@ -1,12 +1,12 @@
-$NetBSD: patch-config.h.in,v 1.3 2020/12/19 16:41:36 taca Exp $
+$NetBSD: patch-config.h.in,v 1.4 2021/03/21 04:16:17 taca Exp $
 
 * Based on NetBSD, add support for blocklist(blacklist).
 
---- config.h.in.orig	2020-12-07 08:16:53.000000000 +0000
+--- config.h.in.orig	2021-03-11 13:20:59.000000000 +0000
 +++ config.h.in
-@@ -45,6 +45,12 @@
- /* define if the ARM yield instruction is available */
- #undef HAVE_ARM_YIELD
+@@ -51,6 +51,12 @@
+ /* Define to 1 if you have the `BIO_write_ex' function. */
+ #undef HAVE_BIO_WRITE_EX
  
 +/* Define to 1 if blacklist is supported. */
 +#undef HAVE_BLACKLIST_H
