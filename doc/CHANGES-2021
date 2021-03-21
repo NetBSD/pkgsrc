@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1794 2021/03/21 19:51:20 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.1795 2021/03/21 20:11:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2718,3 +2718,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/uriparser to 0.9.5 [taca 2021-03-21]
 	Updated textproc/split-thai to 2.1 [scole 2021-03-21]
 	Updated net/scapy to 2.4.4 [gutteridge 2021-03-21]
+	Updated audio/faudio to 21.03.05 [adam 2021-03-21]
+	Updated security/nettle to 3.7.2 [adam 2021-03-21]
+	Updated audio/openal-soft to 1.21.1 [adam 2021-03-21]
+	Updated devel/py-crayons to 0.4.0 [adam 2021-03-21]
