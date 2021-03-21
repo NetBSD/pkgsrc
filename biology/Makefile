@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2021/02/24 14:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2021/03/21 14:24:39 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -24,6 +24,7 @@ SUBDIR+=	fastp
 SUBDIR+=	fastqc
 SUBDIR+=	fluctuate
 SUBDIR+=	gabedit
+SUBDIR+=	generand
 SUBDIR+=	genesplicer
 SUBDIR+=	glimmer
 SUBDIR+=	gnome-chemistry-utils
