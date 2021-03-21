@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1768 2021/03/21 08:46:59 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1769 2021/03/21 10:21:19 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2686,3 +2686,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gh to 1.7.0 [bsiegert 2021-03-21]
 	Updated mail/rss2email to 3.12.3 [schmonz 2021-03-21]
 	Updated devel/p5-Test-BDD-Cucumber to 0.79 [schmonz 2021-03-21]
+	Updated cross/atasm to 1.09 [fcambus 2021-03-21]
