@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1797 2021/03/21 21:13:19 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1798 2021/03/21 22:16:06 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2724,3 +2724,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-crayons to 0.4.0 [adam 2021-03-21]
 	Added textproc/py-itemadapter version 0.2.0 [triaxx 2021-03-21]
 	Added textproc/py-itemloaders version 1.0.4 [triaxx 2021-03-21]
+	Updated converters/bdf2psf to 1.202 [fcambus 2021-03-21]
