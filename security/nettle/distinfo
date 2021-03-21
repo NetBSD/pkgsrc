@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2021/02/18 10:59:09 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/03/21 20:03:09 adam Exp $
 
-SHA1 (nettle-3.7.1.tar.gz) = 2113e52ef6755a68097732080b738fcacfac8797
-RMD160 (nettle-3.7.1.tar.gz) = fcb350221e21d7bb2c22f90a3b020df669ff34a7
-SHA512 (nettle-3.7.1.tar.gz) = 25567c0546b68851a03741ea69a2959b07cab660a723b193a9043faf1fd9eb4cd7aea72de150bb0717fd2db28e417f03ad31b14e98aec40ad316f1bcf0caf50b
-Size (nettle-3.7.1.tar.gz) = 2380974 bytes
+SHA1 (nettle-3.7.2.tar.gz) = d617fbcf8d301dfd887129c3883629d4d097c579
+RMD160 (nettle-3.7.2.tar.gz) = 78dced3b71dbcb531f0b0a27c8f9c858d1cbe47b
+SHA512 (nettle-3.7.2.tar.gz) = 5f6edcc24ff620885b24394b31e55b494418c35dd63e6ece222ddabc58e793c44a82155051cc5759896ed5f014a8efd547f0aef6736a131e41651c5cab7c7211
+Size (nettle-3.7.2.tar.gz) = 2382309 bytes
 SHA1 (patch-Makefile.in) = ddc92dc4343df2723fbbfd1ef1afc01f1d576b09
 SHA1 (patch-aa) = 2332668b077a6e3a1add603c87f60167755554ec
 SHA1 (patch-config.make.in) = 708fb3cac9c44825e0d231541cbecade2239c850
