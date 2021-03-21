@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/21 14:23:46 bacon Exp $
+
+SHA1 (generand-0.1.2.tar.gz) = 964d3e510ace176ecf463458b36d522ddde6c42c
+RMD160 (generand-0.1.2.tar.gz) = 402f0accb16c46fefd08ffacaea09395ab087823
+SHA512 (generand-0.1.2.tar.gz) = ca3c0cb0940f7d179c43d608090e5b0caa87256bbe2f391e1e2907a7c80fef90bffe54f37f2e69c3a6a7ef5e757c9a26b5e6ea31c1f1140121cdff95aaa8c0ac
+Size (generand-0.1.2.tar.gz) = 6782 bytes
