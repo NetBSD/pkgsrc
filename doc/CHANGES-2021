@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1793 2021/03/21 18:27:51 scole Exp $
+$NetBSD: CHANGES-2021,v 1.1794 2021/03/21 19:51:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2717,3 +2717,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/squirrelmail to 1.4.23pre14904 [taca 2021-03-21]
 	Updated textproc/uriparser to 0.9.5 [taca 2021-03-21]
 	Updated textproc/split-thai to 2.1 [scole 2021-03-21]
+	Updated net/scapy to 2.4.4 [gutteridge 2021-03-21]
