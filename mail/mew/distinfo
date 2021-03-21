@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.49 2018/06/07 18:55:30 ryoon Exp $
+$NetBSD: distinfo,v 1.50 2021/03/21 13:48:09 taca Exp $
 
 SHA1 (mew-6.8.tar.gz) = 579943ee8b5e7485ff6296b5df4fe38365ceed13
 RMD160 (mew-6.8.tar.gz) = 6a7cfa891f46d7313ca230f1125ab7200215497a
 SHA512 (mew-6.8.tar.gz) = e4713a4485fa31a95820100465728998b6d5b4822e2a522293754ab269fbfa625756417a55eccf400994a4cc6f6230b8142463ffe416917f321da5053abdb98c
 Size (mew-6.8.tar.gz) = 991876 bytes
 SHA1 (patch-aa) = 9f57a7fe902d1de13d92a647e7fa0f8d9e187b33
+SHA1 (patch-mew-imap.el) = d57026057a2d13b6794d500706cf98570a8555c2
