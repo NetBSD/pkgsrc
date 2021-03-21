@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/25 14:58:13 nia Exp $
-bin/altonegen
+@comment $NetBSD: PLIST,v 1.6 2021/03/21 20:05:17 adam Exp $
 bin/makemhr
 bin/openal-info
 include/AL/al.h
@@ -11,8 +10,8 @@ include/AL/efx.h
 lib/cmake/OpenAL/OpenALConfig-relwithdebinfo.cmake
 lib/cmake/OpenAL/OpenALConfig.cmake
 lib/libopenal.so
-lib/libopenal.so.1
 lib/libopenal.so.${PKGVERSION}
+lib/libopenal.so.1
 lib/pkgconfig/openal.pc
 share/openal/alsoftrc.sample
 share/openal/hrtf/Default HRTF.mhr
