@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1789 2021/03/21 13:53:31 js Exp $
+$NetBSD: CHANGES-2021,v 1.1790 2021/03/21 14:25:18 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2713,3 +2713,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-inspec-core to 4.28.0 [taca 2021-03-21]
 	Updated multimedia/sickgear to 0.23.14 [js 2021-03-21]
 	Updated mail/mew to 6.8nb1 [taca 2021-03-21]
+	Added biology/generand version 0.1.2 [bacon 2021-03-21]
