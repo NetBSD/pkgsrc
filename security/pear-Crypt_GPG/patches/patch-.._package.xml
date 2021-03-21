@@ -1,11 +1,11 @@
-$NetBSD: patch-.._package.xml,v 1.7 2020/03/23 15:02:48 taca Exp $
+$NetBSD: patch-.._package.xml,v 1.8 2021/03/21 03:31:25 taca Exp $
 
 * Drop MD5 for replacing shbang line.
 
---- ../package.xml.orig	2020-03-22 12:00:23.000000000 +0000
+--- ../package.xml.orig	2021-03-16 17:24:29.000000000 +0000
 +++ ../package.xml
-@@ -68,7 +68,7 @@ Compatibility with phpunit &gt;= 6.0.
-    <file baseinstalldir="/" md5sum="0bc5de9eea56992318643e5177e7c4d5" name="data/pinentry-cli.xml" role="data">
+@@ -63,7 +63,7 @@ Add getCreationDateTime() and getExpirat
+    <file baseinstalldir="/" md5sum="5ef3d672c9894e62a767999791b1ea69" name="data/pinentry-cli.xml" role="data">
      <tasks:replace from="@package-version@" to="version" type="package-info" />
     </file>
 -   <file baseinstalldir="/" md5sum="069d671c63366eaf64b050132dd76da3" name="scripts/crypt-gpg-pinentry" role="script">
