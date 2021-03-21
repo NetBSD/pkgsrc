@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/04/23 19:42:41 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/21 10:21:07 fcambus Exp $
 #
 
-DISTNAME=	atasm106
-PKGNAME=	atasm-1.06
-PKGREVISION=	1
+DISTNAME=	atasm109
+PKGNAME=	atasm-1.09
 CATEGORIES=	devel cross emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
 EXTRACT_SUFX=	.zip

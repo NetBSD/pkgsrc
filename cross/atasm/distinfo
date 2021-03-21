@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 00:47:42 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/03/21 10:21:07 fcambus Exp $
 
-SHA1 (atasm106.zip) = c016c2f6ee611e001dbd026923c29ce509979f1c
-RMD160 (atasm106.zip) = e9935d0e202bc668114af9d11fdbf396399cb6d3
-SHA512 (atasm106.zip) = 14d0266e2f38d94a0bdcdd29a1a96fdac6f736d5a92a563d8db2a6302ab1239cd5832ac79b90d7480eeaa588920e568b3c67b51417dbb18c2ea15e33f533f8a1
-Size (atasm106.zip) = 368360 bytes
-SHA1 (patch-aa) = e040580b87e68fc7ec2230fb22bc45b5d168ca83
-SHA1 (patch-ab) = 18c516a98ae5cbae3f8df7f38ca87bd1f47b9664
+SHA1 (atasm109.zip) = 2f2ca23937a92303ca75ac6002c38995999e521d
+RMD160 (atasm109.zip) = ced844bef7075114169693ee576c2697baf782e5
+SHA512 (atasm109.zip) = 7daed20c0fa4a2bf20372e6c102a5e0ef9072fc9fea59d2990209572167f71f4d432abf1176ea2365d894b9e3666f6290b93c25765c71d0741bc8bf144d5561e
+Size (atasm109.zip) = 397661 bytes
+SHA1 (patch-src_Makefile) = c2fa75d2920cf25006a47921f4c050971f2ebf81
