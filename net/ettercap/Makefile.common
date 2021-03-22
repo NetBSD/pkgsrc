@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2021/03/06 11:20:56 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/03/22 06:40:07 adam Exp $
 # used by net/ettercap/Makefile
 # used by net/ettercap-gtk/Makefile
 
 DISTNAME=	ettercap-0.8.3.1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ettercap/}
+GITHUB_PROJECT=	ettercap  # explicit for WRKSRC in net/ettercap-gtk
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://www.ettercap-project.org/
@@ -21,7 +22,6 @@ TEST_TARGET=	test
 
 CMAKE_ARGS+=	-DENABLE_IPV6=ON
 CMAKE_ARGS+=	-DENABLE_TESTS=ON
-
 
 DISTINFO_FILE=	${.CURDIR}/../../net/ettercap/distinfo
 PATCHDIR=	${.CURDIR}/../../net/ettercap/patches
