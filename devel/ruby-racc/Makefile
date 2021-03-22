@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/01/13 14:33:44 taca Exp $
+# $NetBSD: Makefile,v 1.27 2021/03/22 13:21:53 schmonz Exp $
 
 DISTNAME=	racc-1.5.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ PLIST_VARS+=	racc_command
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${RUBY_VER} == "27" || ${RUBY_VER} == "30
+.if ${RUBY_VER} == "27" || ${RUBY_VER} == "30"
 ALTERNATIVES_SRC=	# empty
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/racc${RUBY_SUFFIX}
