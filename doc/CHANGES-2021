@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1799 2021/03/22 00:21:44 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1800 2021/03/22 07:15:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2726,3 +2726,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-itemloaders version 1.0.4 [triaxx 2021-03-21]
 	Updated converters/bdf2psf to 1.202 [fcambus 2021-03-21]
 	Updated geography/viking to 1.9 [gdt 2021-03-22]
+	Updated devel/glib2 to 2.68.0 [adam 2021-03-22]
+	Updated devel/glib2-tools to 2.68.0 [adam 2021-03-22]
+	Updated devel/gdbus-codegen to 2.68.0 [adam 2021-03-22]
+	Updated devel/pango to 1.48.3 [adam 2021-03-22]
+	Updated devel/gobject-introspection to 1.68.0 [adam 2021-03-22]
+	Updated x11/gtk3 to 3.24.27 [adam 2021-03-22]
