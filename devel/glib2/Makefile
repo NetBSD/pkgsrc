@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2020/09/29 10:43:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.277 2021/03/22 06:54:19 adam Exp $
 
 .include "Makefile.common"
 
@@ -43,7 +43,6 @@ SUBST_CLASSES+=		dbusdb
 SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
 SUBST_STAGE.dbusdb=	pre-configure
 SUBST_FILES.dbusdb=	gio/gdbusconnection.c
-SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
 
