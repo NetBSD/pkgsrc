@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1809 2021/03/22 16:17:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1810 2021/03/22 17:46:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2740,3 +2740,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libopenmpt to 0.5.7 [fcambus 2021-03-22]
 	Updated devel/gconfmm to 2.28.3nb25 [ryoon 2021-03-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q1 branch [wiz 2021-03-22]
+	Updated x11/xlockmore to 5.46nb27 [wiz 2021-03-22]
