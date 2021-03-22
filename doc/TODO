@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20446 2021/03/21 15:19:46 taca Exp $
+$NetBSD: TODO,v 1.20447 2021/03/22 16:16:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.11.3
+	o ImageMagick-7.0.11.4
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.3.1
@@ -378,7 +378,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.8
 	o SOGo-5.0.1
 	o SOPE-5.0.1
-	o Sigil-1.4.3 [wip]
+	o Sigil-1.5.0 [wip]
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
@@ -587,6 +587,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghdl-0.33
+	o git-2.31.0
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -623,6 +624,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.6.9
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
@@ -634,6 +636,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.18.3 [wip]
+	o gstreamer1-1.18.4
 	o gthumb-3.4.0
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
@@ -858,7 +861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.7
 	o pam-passwdqc-1.3.0
 	o pam-yubico-2.21
-	o pari-2.11.4
+	o pari-2.13.1
 	o parrot-7.11.0
 	o pcc-1.1.0
 	o pcc-current-20160305
@@ -901,6 +904,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.10
+	o pkgconf-1.7.4
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.11
@@ -1084,6 +1088,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
+	o vala-0.52.0
 	o varnish-5.1.3
 	o varnish-6.0
 	o vbetool-1.1
