@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2021/01/11 09:43:21 prlw1 Exp $
+# $NetBSD: options.mk,v 1.19 2021/03/22 06:57:53 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	libthai quartz x11
@@ -48,6 +48,6 @@ PLIST.coretext=		yes
 .  endif
 .  if !empty(PKG_OPTIONS:Mquartz)
 ### installs its coretext header file if cairo was built with "quartz" option
-PLIST.quartz=		yes
+#PLIST.quartz=		yes
 .  endif
 .endif
