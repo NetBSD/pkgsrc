@@ -1,6 +1,9 @@
 package pkglint
 
-import "netbsd.org/pkglint/textproc"
+import (
+	"netbsd.org/pkglint/textproc"
+	"strings"
+)
 
 func CheckdirCategory(dir CurrPath) {
 	if trace.Tracing {
@@ -53,6 +56,7 @@ func CheckdirCategory(dir CurrPath) {
 	}
 
 	seen := make(map[RelPath]*MkLine)
+	seenLower := make(map[string]subdir)
 	for !mlex.EOF() {
 		mkline := mlex.CurrentMkLine()
 
@@ -75,6 +79,15 @@ func CheckdirCategory(dir CurrPath) {
 					sub, mkline.RelMkLine(prev))
 			}
 			seen[sub] = mkline
+
+			lowerSub := strings.ToLower(sub.String())
+			if lower := seenLower[lowerSub]; lower.line != nil && lower.name != sub {
+				mkline.Errorf("On case-insensitive file systems, "+
+					"%q is the same as %q from %s.",
+					sub, lower.name, mkline.RelMkLine(lower.line))
+			} else {
+				seenLower[lowerSub] = subdir{sub, mkline}
+			}
 
 			if len(mSubdirs) > 0 {
 				if prev := mSubdirs[len(mSubdirs)-1].name; sub < prev {
@@ -127,9 +140,11 @@ func CheckdirCategory(dir CurrPath) {
 			fRest = fRest[1:]
 
 		} else if len(fRest) == 0 || mRest[0].name < fRest[0] {
-			if !fCheck[mRest[0].name] {
+			mName := mRest[0].name
+			if !fCheck[mName] &&
+				seenLower[strings.ToLower(mName.String())].name == mName {
 				fix := mRest[0].line.Autofix()
-				fix.Errorf("%q does not contain a package.", mRest[0].name)
+				fix.Errorf("%q does not contain a package.", mName)
 				fix.Delete()
 				fix.Apply()
 			}

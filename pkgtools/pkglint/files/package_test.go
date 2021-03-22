@@ -3210,9 +3210,8 @@ func (s *Suite) Test_Package_checkOwnerMaintainer__maintainer_unequal_several_fi
 
 	G.Check(".")
 
-	// TODO: Remove the ".:", it is more confusing than helpful.
 	t.CheckOutputLines(
-		"NOTE: .: Please only commit changes " +
+		"NOTE: Please only commit changes " +
 			"that maintainer@example.org would approve.")
 }
 
