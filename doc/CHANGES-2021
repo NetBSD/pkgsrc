@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1798 2021/03/21 22:16:06 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1799 2021/03/22 00:21:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2725,3 +2725,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-itemadapter version 0.2.0 [triaxx 2021-03-21]
 	Added textproc/py-itemloaders version 1.0.4 [triaxx 2021-03-21]
 	Updated converters/bdf2psf to 1.202 [fcambus 2021-03-21]
+	Updated geography/viking to 1.9 [gdt 2021-03-22]
