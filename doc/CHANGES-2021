@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1800 2021/03/22 07:15:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1801 2021/03/22 08:57:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2732,3 +2732,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pango to 1.48.3 [adam 2021-03-22]
 	Updated devel/gobject-introspection to 1.68.0 [adam 2021-03-22]
 	Updated x11/gtk3 to 3.24.27 [adam 2021-03-22]
+	Updated www/py-scrapy to 2.4.1 [triaxx 2021-03-22]
