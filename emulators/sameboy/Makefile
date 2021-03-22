@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/03/19 12:18:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/22 14:36:09 nia Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,7 @@ COMMENT=	Highly accurate Game Boy and Game Boy Color emulator
 BUILD_TARGET=	sdl
 
 MAKE_FLAGS+=	DATA_DIR=${PREFIX}/share/sameboy/
+MAKE_FLAGS+=	FREEDESKTOP=true
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
