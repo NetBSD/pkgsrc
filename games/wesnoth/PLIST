@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.57 2021/01/03 15:07:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2021/03/22 09:45:03 adam Exp $
 bin/wesnoth
 bin/wesnothd
+man/ca/man6/wesnoth.6
+man/ca/man6/wesnothd.6
 man/cs/man6/wesnothd.6
 man/de/man6/wesnoth.6
 man/de/man6/wesnothd.6
@@ -105,6 +107,7 @@ share/doc/wesnoth/html/images/tr/multiplayer-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/recruit-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/right_pane-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/top_pane-1.14.7.jpg
+share/doc/wesnoth/html/manual.ca.html
 share/doc/wesnoth/html/manual.cs.html
 share/doc/wesnoth/html/manual.de.html
 share/doc/wesnoth/html/manual.en.html
@@ -14672,6 +14675,7 @@ share/wesnoth/data/test/scenarios/test_move_unit.cfg
 share/wesnoth/data/test/scenarios/test_movetype.cfg
 share/wesnoth/data/test/scenarios/test_relative_dir.cfg
 share/wesnoth/data/test/scenarios/test_require.cfg
+share/wesnoth/data/test/scenarios/test_resistances.cfg
 share/wesnoth/data/test/scenarios/test_return.cfg
 share/wesnoth/data/test/scenarios/test_role_types.cfg
 share/wesnoth/data/test/scenarios/test_unit_map.cfg
