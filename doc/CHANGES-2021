@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1803 2021/03/22 09:46:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1804 2021/03/22 10:48:44 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2736,3 +2736,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 0.3.3 [schmonz 2021-03-22]
 	Updated games/wesnoth to 1.14.16 [adam 2021-03-22]
 	Updated devel/py-bitarray to 1.8.0 [adam 2021-03-22]
+	Updated textproc/miller to 5.10.1 [fcambus 2021-03-22]
