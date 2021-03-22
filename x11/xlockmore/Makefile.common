@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.81 2020/01/26 17:32:28 rillig Exp $
+# $NetBSD: Makefile.common,v 1.82 2021/03/22 17:46:06 wiz Exp $
 #
-# used by x11/xlockmore/Makefile
-# used by x11/xlockmore-lite/Makefile
+# used by ../../x11/xlockmore/Makefile
+# used by ../../x11/xlockmore-lite/Makefile
 
 DISTNAME=	xlockmore-5.46
 CATEGORIES=	x11
@@ -11,11 +11,11 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sillycycle.com/xlockmore.html
 
-DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
-PATCHDIR?=		${.CURDIR}/../xlockmore/patches
-PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
-FILESDIR?=		${.CURDIR}/../xlockmore/files
-MESSAGE_SRC?=		${.CURDIR}/../xlockmore/MESSAGE
+DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
+PATCHDIR?=		${.CURDIR}/../../x11/xlockmore/patches
+PLIST_SRC?=		${.CURDIR}/../../x11/xlockmore/PLIST
+FILESDIR?=		${.CURDIR}/../../x11/xlockmore/files
+MESSAGE_SRC?=		${.CURDIR}/../../x11/xlockmore/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,6 +51,7 @@ CONFIGURE_ARGS+=	--without-esound
 CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 CONFIGURE_ENV+=		ac_cv_x_app_defaults=${PREFIX}/lib/X11/app-defaults/XLock
 
+OWN_DIRS+=		${PREFIX}/lib/X11/app-defaults
 CONF_FILES+=		${EGDIR}/app-defaults/XLock ${PREFIX}/lib/X11/app-defaults/XLock
 
 .if ${OPSYS} == "NetBSD"
@@ -75,19 +76,23 @@ CONFIGURE_ARGS+=	--disable-allow-root
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pam --enable-bad-pam
+.  if ${OPSYS} == "NetBSD"
+# needed to read shadow passwords
+DEPENDS+=       pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-pam
-.endif
 
 #
 # Special permissions of bin/xlock if any.
 #
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || \
-    ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
+.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || \
+      ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
 SPECIAL_PERMS+=	bin/xlock ${SETUID_ROOT_PERMS}
-.elif ${OPSYS} == "Linux"
+.  elif ${OPSYS} == "Linux"
 # setgid shadow should be enough for modern Linux
 SPECIAL_PERMS+=	bin/xlock ${REAL_ROOT_USER} shadow 2511
+.  endif
 .endif
 
 EGDIR=			${PREFIX}/share/examples/xlock
