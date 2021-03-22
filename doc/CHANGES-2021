@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1805 2021/03/22 10:51:14 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1806 2021/03/22 11:59:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2738,3 +2738,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bitarray to 1.8.0 [adam 2021-03-22]
 	Updated textproc/miller to 5.10.1 [fcambus 2021-03-22]
 	Updated audio/libopenmpt to 0.5.7 [fcambus 2021-03-22]
+	Updated audio/pulseaudio to 14.2nb1 [schmonz 2021-03-22]
