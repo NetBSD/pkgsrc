@@ -295,6 +295,9 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 	if !filename.IsEmpty() {
 		filename = filename.CleanPath()
 	}
+	if filename == "." {
+		filename = NewCurrPath("")
+	}
 	if G.Profiling && format != autofixFormat {
 		l.histo.Add(format, 1)
 	}
