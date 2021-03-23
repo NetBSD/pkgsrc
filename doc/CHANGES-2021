@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1811 2021/03/22 23:26:43 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.1812 2021/03/23 04:16:47 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2742,3 +2742,4 @@ Changes to the packages collection and infrastructure in 2021:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q1 branch [wiz 2021-03-22]
 	Updated x11/xlockmore to 5.46nb27 [wiz 2021-03-22]
 	Updated pkgtools/pkglint to 20.4.2 [rillig 2021-03-22]
+	Updated www/grafana to 7.4.5 [triaxx 2021-03-23]
