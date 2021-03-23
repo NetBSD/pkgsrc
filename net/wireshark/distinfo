@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.139 2021/03/11 08:22:01 adam Exp $
+$NetBSD: distinfo,v 1.140 2021/03/23 10:48:41 adam Exp $
 
 SHA1 (wireshark-3.4.4.tar.xz) = fa5c553596dcc6a59735f96a9a0845e3c40abab2
 RMD160 (wireshark-3.4.4.tar.xz) = 677c151b94af472ae3ae390e51781ec0cc371ddd
 SHA512 (wireshark-3.4.4.tar.xz) = 388b5634894f08bb1a0052f989133c2a8457fbf6525d1bb557f3ffce73da8063fd9fe82b50b5ababc30fa36ce154bf9d2a3d91d76e03913d6516ca61b4b6b172
 Size (wireshark-3.4.4.tar.xz) = 32290424 bytes
 SHA1 (patch-CMakeLists.txt) = 8faf8f63d75d5733a69b52ce9fbf291bd90a5575
+SHA1 (patch-caputils_capture__ifinfo.h) = 8eef1414274fae7a374776c2533343bf02ca114e
+SHA1 (patch-epan_conversation.h) = b3cdd98602570cbcb33b35e9362ff8802753edd8
+SHA1 (patch-epan_epan.h) = 869211117930b4a246f9bd1f199e3a201fdc39e3
+SHA1 (patch-epan_epan__dissect.h) = 9fe4d59c38786c1981ada2dc356f0d01a0703bf0
+SHA1 (patch-epan_prefs.h) = 4678aaaee9ea9e481b3d38f5bc491a86f7c0a75b
+SHA1 (patch-ui_recent.h) = 3358ba7d6a292741d34274db9fb86c02541c861f
