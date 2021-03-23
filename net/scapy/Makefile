@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/03/21 19:50:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2021/03/23 02:03:11 gutteridge Exp $
 
 DISTNAME=	scapy-2.4.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -27,6 +28,8 @@ SUBST_FILES.config=	scapy/data.py setup.py
 SUBST_VARS.config=	PKG_SYSCONFDIR
 SUBST_SED.config+=	-e "s|share/man|${PKGMANDIR}|g"
 SUBST_MESSAGE.config=	Fixing paths.
+
+TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
 
 post-extract:
 	${CP} ${FILESDIR}/ethertypes ${WRKSRC}
