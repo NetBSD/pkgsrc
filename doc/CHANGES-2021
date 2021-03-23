@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1813 2021/03/23 06:48:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1814 2021/03/23 13:49:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2744,3 +2744,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 20.4.2 [rillig 2021-03-22]
 	Updated www/grafana to 7.4.5 [triaxx 2021-03-23]
 	Updated textproc/py-lxml to 4.6.3 [adam 2021-03-23]
+	Downgraded devel/glib2 to 2.66.8 [adam 2021-03-23]
+	Downgraded devel/glib2-tools to 2.66.8 [adam 2021-03-23]
+	Downgraded devel/gdbus-codegen to 2.66.8 [adam 2021-03-23]
