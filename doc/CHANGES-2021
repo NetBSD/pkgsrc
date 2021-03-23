@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1812 2021/03/23 04:16:47 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1813 2021/03/23 06:48:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2743,3 +2743,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xlockmore to 5.46nb27 [wiz 2021-03-22]
 	Updated pkgtools/pkglint to 20.4.2 [rillig 2021-03-22]
 	Updated www/grafana to 7.4.5 [triaxx 2021-03-23]
+	Updated textproc/py-lxml to 4.6.3 [adam 2021-03-23]
