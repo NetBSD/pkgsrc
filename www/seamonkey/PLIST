@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2021/02/08 12:26:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.67 2021/03/23 13:03:16 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -4444,6 +4444,7 @@ lib/seamonkey/modules/lz4_internal.js
 lib/seamonkey/modules/mailServices.js
 lib/seamonkey/modules/mailnewsMigrator.js
 lib/seamonkey/modules/media/IdpSandbox.jsm
+${PLIST.webrtc}lib/seamonkey/components/PeerConnection.js
 lib/seamonkey/modules/media/PeerConnectionIdp.jsm
 lib/seamonkey/modules/media/RTCStatsReport.jsm
 lib/seamonkey/modules/microformat-shiv.js
