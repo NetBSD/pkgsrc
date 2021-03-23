@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1814 2021/03/23 13:49:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1815 2021/03/23 18:17:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2747,3 +2747,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Downgraded devel/glib2 to 2.66.8 [adam 2021-03-23]
 	Downgraded devel/glib2-tools to 2.66.8 [adam 2021-03-23]
 	Downgraded devel/gdbus-codegen to 2.66.8 [adam 2021-03-23]
+	Updated benchmarks/dnsperf to 2.5.1 [tron 2021-03-23]
