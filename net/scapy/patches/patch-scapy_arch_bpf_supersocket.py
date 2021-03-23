@@ -1,4 +1,4 @@
-$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.2 2021/03/21 19:50:54 gutteridge Exp $
+$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.3 2021/03/23 02:03:11 gutteridge Exp $
 
 Add DragonFly support.
 Fix NetBSD 32-bit architecture alignment.
@@ -26,12 +26,13 @@ Fix NetBSD 32-bit architecture alignment.
  else:
      BPF_ALIGNMENT = 4  # sizeof(int32_t)
  
-@@ -281,7 +279,7 @@ class L2bpfListenSocket(_L2bpfSocket):
-             else:
-                 # struct bpf_hdr (64bit time_t) or struct bpf_xhdr
+@@ -283,6 +281,9 @@ class L2bpfListenSocket(_L2bpfSocket):
                  bh_tstamp_offset = 16
--        elif NETBSD:
-+        elif NETBSD or DRAGONFLY:
+         elif NETBSD:
              # struct bpf_hdr or struct bpf_hdr32
++            bh_tstamp_offset = sizeof(c_long) * 2
++        elif DRAGONFLY:
++            # struct bpf_hdr
              bh_tstamp_offset = 16
          else:
+             # struct bpf_hdr
