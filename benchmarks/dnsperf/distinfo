@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/09/01 14:03:22 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/03/23 18:17:26 tron Exp $
 
-SHA1 (dnsperf-2.3.4.tar.gz) = 07f231060c9df3a858909653bcedbe62def3abc5
-RMD160 (dnsperf-2.3.4.tar.gz) = 2631528075e275eb7657e48f6dcb68edc92826da
-SHA512 (dnsperf-2.3.4.tar.gz) = ec1df94d9f1c9bc9d439318cfa75f9eea7a8a41c88a411e0678606a3fc4374d1bcc63ce5da606ed4951477d994b440cc2109f2ffc99feddf29bbdfa17f44efd8
-Size (dnsperf-2.3.4.tar.gz) = 406693 bytes
+SHA1 (dnsperf-2.5.1.tar.gz) = 4ee7749774d7357d117ba9e1751aa6d795c34730
+RMD160 (dnsperf-2.5.1.tar.gz) = 18451aab6e41b9a4db87c5fca3f6bb1db884bafe
+SHA512 (dnsperf-2.5.1.tar.gz) = cd19973560ddb3fa5f9e503b7e904edbed229745ec13cdc32a94444b8e7ec62433128dfd1d212ba47f2c7e749f9ef7ab3af4f2744fb9a23641c8dfb74ce9b102
+Size (dnsperf-2.5.1.tar.gz) = 428907 bytes
