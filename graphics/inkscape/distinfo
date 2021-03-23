@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.77 2021/01/13 11:43:34 jperkin Exp $
+$NetBSD: distinfo,v 1.78 2021/03/23 09:57:35 ryoon Exp $
 
 SHA1 (inkscape-1.0.1.tar.xz) = f04277c8476ab572fa099b4439bff6323c89470e
 RMD160 (inkscape-1.0.1.tar.xz) = c93974227d33674c3c840cd8706cec9761e8cb7c
 SHA512 (inkscape-1.0.1.tar.xz) = 70145e02fe7c3ffbfa3dcea690bfe3315131fb9a507c70bcdc1d0db394d207e3bd04d7cc86c3b625597bddfd2b6e09a03841aece6d2ffb6517fe1c619193ec96
 Size (inkscape-1.0.1.tar.xz) = 32051632 bytes
 SHA1 (patch-CMakeScripts_Pod2man.cmake) = c60f61a7a3eca511ced5e085dc66670cee8bfe33
+SHA1 (patch-src_3rdparty_autotrace_autotrace.h) = 4f93a25f3134a3fb21531cd264652432d1ab0a79
 SHA1 (patch-src_extension_implementation_script.cpp) = 2c2cbcee2fdda5a274906600930acc0257cc0ea2
 SHA1 (patch-src_path-prefix.cpp) = 1ce20f16063759aab60d9e8da6b25700b44099d2
 SHA1 (patch-src_svg_svg-length.cpp) = 076d30eb83fee4ab87b30791cc566c52baabbb68
