@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/02/26 10:12:41 triaxx Exp $
+$NetBSD: distinfo,v 1.12 2021/03/23 04:16:07 triaxx Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -9644,14 +9644,14 @@ SHA1 (gotest.tools_v3_@v_v3.0.2.zip) = b43ecc234b5f71ea3eedd6fc2a2576741b569e4e
 RMD160 (gotest.tools_v3_@v_v3.0.2.zip) = 7e15b34b67bc08fca41f5009507400fefa96505c
 SHA512 (gotest.tools_v3_@v_v3.0.2.zip) = d85150c7a380874323c46fc493847ee12515ef50fa928da808dc5f03d91f65691dbd06473485afab5f5b5fa7b815bdab9ce19e62f69bad407b267a34397d5c40
 Size (gotest.tools_v3_@v_v3.0.2.zip) = 92950 bytes
-SHA1 (grafana-7.4.3.linux-amd64.tar.gz) = 6035c98ecddcbb41c1949aaf81c4fb8237a02ec4
-RMD160 (grafana-7.4.3.linux-amd64.tar.gz) = d84735f7aa23f1f5ae89e32762549c3f52bcfae8
-SHA512 (grafana-7.4.3.linux-amd64.tar.gz) = d841e829ca9b8d66294334b3870cd4ca40385e6896b5a25795f8696498f12ee192ab93c4c5a663bc745f77fb8b3b3d46d6066387c6d70c67177f6bc049abd9e9
-Size (grafana-7.4.3.linux-amd64.tar.gz) = 51268825 bytes
-SHA1 (grafana-7.4.3.tar.gz) = a1b27c99d3ce8093de38915a93c89bda640fa1e6
-RMD160 (grafana-7.4.3.tar.gz) = 13db8d38cb1a40f29f14343ddd212a93b48f2d39
-SHA512 (grafana-7.4.3.tar.gz) = dce1c9a987427514e3e2bdebeab102fa14534e2d1b66456e79b9d951fb36fa3895af8c753281de48ddb5d4d2cfe0b2f1c96b767ab1a004c5bc85e2bd32fc5b46
-Size (grafana-7.4.3.tar.gz) = 10751951 bytes
+SHA1 (grafana-7.4.5.linux-amd64.tar.gz) = 0a1941784850a6660b7f19367cd5206518d4d7eb
+RMD160 (grafana-7.4.5.linux-amd64.tar.gz) = 85aa79129de8c639c8b5b2ac9866f9e4f5e3a87b
+SHA512 (grafana-7.4.5.linux-amd64.tar.gz) = 8ad7e2fa9ca92a406690f5a14ea111ff329e6abb4330d4ede5bb34870c3d28cdec940db4c849bb99c097276ad10a3d4c70cf6b73ed8286d45fdf056673d0892f
+Size (grafana-7.4.5.linux-amd64.tar.gz) = 51268864 bytes
+SHA1 (grafana-7.4.5.tar.gz) = 285c76deeb01806929d45d266df08cbc002085d4
+RMD160 (grafana-7.4.5.tar.gz) = 50d8dca1fcaa9c1bb0e802ffb9c07f854f601954
+SHA512 (grafana-7.4.5.tar.gz) = 921f17b03411fa4f6f113bb2536198b425197af98c064d5f1099bde0af8112a9338183f5764deb285e79a79312ce265b836fbda684204d63b0df3292f538e685
+Size (grafana-7.4.5.tar.gz) = 10751781 bytes
 SHA1 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 839eb1204960233bef25be21ade8455e791dc602
 RMD160 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 47531578a08ef258ad78a0e6b558a47285cb248e
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
@@ -9972,4 +9972,5 @@ SHA1 (xorm.io_xorm_@v_v0.8.1.zip) = a7f7e6f362eb9c47d205b297a8a3cf257d30ed60
 RMD160 (xorm.io_xorm_@v_v0.8.1.zip) = c5bf69debfb69e19caf2c4c5fb7d33d0c6a4cf55
 SHA512 (xorm.io_xorm_@v_v0.8.1.zip) = d10d7fae2308c1bd4ae39b45735e3191b14507a3757e60a788b722555b8c6fd7427842da8328848a13dd22b2aca239b0a04d1e5410bce053a1788b55982e7944
 Size (xorm.io_xorm_@v_v0.8.1.zip) = 468423 bytes
+SHA1 (patch-build.go) = a67a32329477143f0e18b2c53057c64428d2ee23
 SHA1 (patch-pkg_cmd_grafana-server_main.go) = ad30c64da50814df6cf10a1870afc51c1a731b47
