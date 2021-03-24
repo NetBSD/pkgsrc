@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/03/04 09:42:31 fcambus Exp $
+$NetBSD: distinfo,v 1.3 2021/03/24 10:25:29 fcambus Exp $
 
-SHA1 (wabt-1.0.21.tar.gz) = cb4e6c5bfec4e265d2e68c8f693f3b4cc2806c0f
-RMD160 (wabt-1.0.21.tar.gz) = e102b173c898a7b1344db94a2929c8da7a30eec7
-SHA512 (wabt-1.0.21.tar.gz) = 740c471dfebf86d0b10479213fe5e62331d1d249864c98e303819583aa0f9a52d5e96bd07f6612ae54954cdb58946f1e986d1f048e35ca63225fa2510e91c619
-Size (wabt-1.0.21.tar.gz) = 1094499 bytes
+SHA1 (wabt-1.0.22.tar.gz) = 2139a23009cd142b7efbf7df9bed7491a1fe7a33
+RMD160 (wabt-1.0.22.tar.gz) = 1e2e91ea4086601ba5d944fb6cbea9c3d04be159
+SHA512 (wabt-1.0.22.tar.gz) = 17a5c46fe37431480b3d6d8866b899f05782bab0d01f97fd732091b791feb53926529542657c05222153b8d612fa73ddc86dae6c90b56e927d3984c6f98bcffb
+Size (wabt-1.0.22.tar.gz) = 1106380 bytes
