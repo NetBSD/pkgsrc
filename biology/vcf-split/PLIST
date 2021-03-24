@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/24 15:22:29 bacon Exp $
+bin/vcf-split
+man/man1/vcf-split.1
