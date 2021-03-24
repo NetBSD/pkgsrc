@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1823 2021/03/24 16:25:16 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1824 2021/03/24 16:34:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2756,3 +2756,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/biolibc version 0.1.1 [bacon 2021-03-24]
 	Added biology/vcf-split version 0.1.1 [bacon 2021-03-24]
 	Updated mail/spamassassin to 3.4.5 [gdt 2021-03-24]
+	Updated databases/ldb to 2.2.1 [adam 2021-03-24]
+	Updated net/samba4 to 4.13.7 [adam 2021-03-24]
