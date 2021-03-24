@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/01/16 20:26:56 maya Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/24 09:25:09 hauke Exp $
 
-VERS=		0.9.0
-PKGREVISION=	1
+VERS=		0.10.0
+#PKGREVISION=	1
 DISTNAME=	hg-git-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm

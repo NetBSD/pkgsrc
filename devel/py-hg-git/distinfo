@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/01/16 15:15:30 maya Exp $
+$NetBSD: distinfo,v 1.8 2021/03/24 09:25:09 hauke Exp $
 
-SHA1 (hg-git-0.9.0.tar.bz2) = 6e90c508e3c7dd9b3cb4ee5f46b368780b6ac3da
-RMD160 (hg-git-0.9.0.tar.bz2) = dea163cef94f4ab3e9f653752090525c8fc867f6
-SHA512 (hg-git-0.9.0.tar.bz2) = 739fb4d815c1bf21c4ec956c9ff090fa271e6223aa60c0d04fe4f0cd598e39d2a4ca7f92d90bcb7af170db82faf95bf0e135991968b1e3b63bbd602d49d9d7fb
-Size (hg-git-0.9.0.tar.bz2) = 129281 bytes
+SHA1 (hg-git-0.10.0.tar.bz2) = 9207e04d942518dd9277555d2f54e063a0fa4e05
+RMD160 (hg-git-0.10.0.tar.bz2) = 9c1dc4227269a49a8c23afb9c0e3c53a4f580d8e
+SHA512 (hg-git-0.10.0.tar.bz2) = 6f4277bc2b63da97e63531c751465e72467be0dfe92a7b64bfa423412268f89f02985665428597281a53b44f169f1291447e7b1d3a8047d7b0d67d1b1e0e5e27
+Size (hg-git-0.10.0.tar.bz2) = 143518 bytes
