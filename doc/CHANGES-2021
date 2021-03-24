@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1827 2021/03/24 18:58:39 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1828 2021/03/24 18:59:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/ad2vcf version 0.1.2 [bacon 2021-03-24]
 	Added biology/vcf2hap version 0.1.2 [bacon 2021-03-24]
 	Updated www/firefox78 to 78.9.0 [ryoon 2021-03-24]
+	Updated www/firefox78-l10n to 78.9.0 [ryoon 2021-03-24]
