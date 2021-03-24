@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.57 2021/03/20 19:27:35 adam Exp $
+$NetBSD: distinfo,v 1.58 2021/03/24 16:33:46 adam Exp $
 
-SHA1 (samba-4.13.5.tar.gz) = abdfc52c7326e30508a6167d5e3e9256e17e1980
-RMD160 (samba-4.13.5.tar.gz) = 8148c4debd7c56693676b405970306ce7cf8b695
-SHA512 (samba-4.13.5.tar.gz) = 4187337fecf60fa133c6e81e894634f36028d34ccc521e5e856a5736a4f58fc2ad2cd136a206d141f17f7bc519a6168a27e83705fb2d38559667a60b24ad1c1f
-Size (samba-4.13.5.tar.gz) = 18426722 bytes
+SHA1 (samba-4.13.7.tar.gz) = c9c2238b04cc2e93054628fcdf82335c6ca51967
+RMD160 (samba-4.13.7.tar.gz) = e1baf0f450814cece012c00514f8abe2d9e35cb6
+SHA512 (samba-4.13.7.tar.gz) = eac0c0b60d50591ecd8e730bd6f24ec3d5731a9dd4172640259d841cca988f20265e5a57967a070713ab7b4bd95766a21247cc8e6b32177b79eb766520a3288a
+Size (samba-4.13.7.tar.gz) = 18432921 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
