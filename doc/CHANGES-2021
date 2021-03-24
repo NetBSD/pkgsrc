@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1817 2021/03/24 10:25:40 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1818 2021/03/24 10:31:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated benchmarks/dnsperf to 2.5.1 [tron 2021-03-23]
 	Updated devel/py-hg-git to 0.10.0 [hauke 2021-03-24]
 	Updated devel/wabt to 1.0.22 [fcambus 2021-03-24]
+	Updated textproc/miller to 5.10.2 [fcambus 2021-03-24]
