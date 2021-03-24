@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/24 15:20:08 bacon Exp $
+
+SHA1 (biolibc-0.1.1.tar.gz) = 7c5861ebfd97dd6d92a489297244debe3c48af05
+RMD160 (biolibc-0.1.1.tar.gz) = 95b9fce0efe0c68be43bea5f875a72efce98f58e
+SHA512 (biolibc-0.1.1.tar.gz) = 673fa88ab48bbbcd5d3256a244472fdaa2c76fc5c0fa78663179487f8d8e9c65aaff593220859a54ed6e17f76a080cabe7e5866d12ab3948996e28b0d05d12bc
+Size (biolibc-0.1.1.tar.gz) = 11770 bytes
