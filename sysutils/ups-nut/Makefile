@@ -1,10 +1,17 @@
-# $NetBSD: Makefile,v 1.59 2021/02/11 10:05:13 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2021/03/24 11:01:55 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 COMMENT=		Network UPS Tools
+
+SUBST_CLASSES+=		man-so
+SUBST_MESSAGE.man-so=	Fixing manpage .so references.
+SUBST_STAGE.man-so=	pre-build
+SUBST_FILES.man-so=	docs/man/*.[0-9]
+SUBST_SED.man-so=	-e 's,^\.so \([^/]*\)\.\([0-9]\)$$,.so man\2/\1.\2,'
+SUBST_NOOP_OK.man-so=	yes
 
 # Don't regenerate any files in tools/.
 TOOLS_SCRIPT.perl=	exit 1
