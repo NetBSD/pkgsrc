@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/24 15:22:29 bacon Exp $
+
+SHA1 (vcf-split-0.1.1.tar.gz) = 550fefb4c07d4632405e94127a19e98031ac0067
+RMD160 (vcf-split-0.1.1.tar.gz) = 76a1b0b5a8934949d39e69ebe719c8f0ba247a13
+SHA512 (vcf-split-0.1.1.tar.gz) = fcc67d287adb9b1f12fb316981ca0b0c06099d8de07113760d198fbcbafb2557ae0d1c202976fae98d6d712a7b802728979d8224354fbaaf65a7872a27d1aa00
+Size (vcf-split-0.1.1.tar.gz) = 14226 bytes
