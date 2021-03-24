@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1826 2021/03/24 18:23:02 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1827 2021/03/24 18:58:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2760,3 +2760,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.13.7 [adam 2021-03-24]
 	Added biology/ad2vcf version 0.1.2 [bacon 2021-03-24]
 	Added biology/vcf2hap version 0.1.2 [bacon 2021-03-24]
+	Updated www/firefox78 to 78.9.0 [ryoon 2021-03-24]
