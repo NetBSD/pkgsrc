@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1816 2021/03/24 09:25:41 hauke Exp $
+$NetBSD: CHANGES-2021,v 1.1817 2021/03/24 10:25:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2749,3 +2749,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Downgraded devel/gdbus-codegen to 2.66.8 [adam 2021-03-23]
 	Updated benchmarks/dnsperf to 2.5.1 [tron 2021-03-23]
 	Updated devel/py-hg-git to 0.10.0 [hauke 2021-03-24]
+	Updated devel/wabt to 1.0.22 [fcambus 2021-03-24]
