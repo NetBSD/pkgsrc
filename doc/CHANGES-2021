@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1821 2021/03/24 15:21:34 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.1822 2021/03/24 15:22:37 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2754,3 +2754,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ups-nut to 2.7.4nb4 [wiz 2021-03-24]
 	Updated sysutils/macchina to 0.6.2 [pin 2021-03-24]
 	Added biology/biolibc version 0.1.1 [bacon 2021-03-24]
+	Added biology/vcf-split version 0.1.1 [bacon 2021-03-24]
