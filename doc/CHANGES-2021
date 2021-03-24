@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1818 2021/03/24 10:31:15 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1819 2021/03/24 11:02:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hg-git to 0.10.0 [hauke 2021-03-24]
 	Updated devel/wabt to 1.0.22 [fcambus 2021-03-24]
 	Updated textproc/miller to 5.10.2 [fcambus 2021-03-24]
+	Updated sysutils/ups-nut to 2.7.4nb4 [wiz 2021-03-24]
