@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.system,v 1.1 2020/11/05 16:31:45 bacon Exp $
+$NetBSD: patch-Makefile.system,v 1.2 2021/03/25 23:22:35 thor Exp $
 
 Fully control the library name via LIBNAMESUFFIX
 And a bit of ARCH_
 
---- Makefile.system.orig	2019-08-11 21:23:27.000000000 +0000
+--- Makefile.system.orig	2020-06-14 20:03:04.000000000 +0000
 +++ Makefile.system
-@@ -1242,31 +1242,15 @@ ifndef LIBSUFFIX
+@@ -1326,31 +1326,15 @@ ifndef LIBSUFFIX
  LIBSUFFIX = a
  endif
  
@@ -41,7 +41,7 @@ And a bit of ARCH_
  endif
  LIBDYNNAME   = $(LIBNAME:.$(LIBSUFFIX)=.dylib)
  LIBDEFNAME   = $(LIBNAME:.$(LIBSUFFIX)=.def)
-@@ -1297,7 +1281,7 @@ LIB_COMPONENTS = CBLAS
+@@ -1381,7 +1365,7 @@ LIB_COMPONENTS = CBLAS
  endif
  
  export OSNAME
@@ -49,4 +49,4 @@ And a bit of ARCH_
 +export ARCH_
  export CORE
  export LIBCORE
- export PGCPATH
+ export __BYTE_ORDER__
