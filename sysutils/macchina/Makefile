@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/03/24 14:09:33 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/25 19:43:44 pin Exp $
 
 DISTNAME=	macchina-0.6.2
 CATEGORIES=	sysutils
@@ -13,6 +13,7 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
 
