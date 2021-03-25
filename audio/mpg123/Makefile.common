@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.56 2021/01/03 15:06:00 adam Exp $
+# $NetBSD: Makefile.common,v 1.57 2021/03/25 23:53:13 thor Exp $
 #
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.26.4
+DISTNAME=	mpg123-1.26.5
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
@@ -21,7 +21,6 @@ USE_LIBTOOL?=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-modules=yes
-CONFIGURE_ARGS+=	--with-optimization=0	# our CFLAGS are good enough
 CONFIGURE_ENV+=		BUILD_${MPG123_MODULE:tu}=yes
 CONFIGURE_ENV+=		MPG123_MODULE=${MPG123_MODULE:Q}
 
