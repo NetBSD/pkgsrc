@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1829 2021/03/24 20:49:19 maya Exp $
+$NetBSD: CHANGES-2021,v 1.1830 2021/03/25 08:33:01 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2763,3 +2763,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78 to 78.9.0 [ryoon 2021-03-24]
 	Updated www/firefox78-l10n to 78.9.0 [ryoon 2021-03-24]
 	Updated multimedia/ffmpeg4 to 4.3.2nb1 [maya 2021-03-24]
+	Updated math/lapack to 3.9.0nb2 [thor 2021-03-25]
