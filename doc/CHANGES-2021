@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1836 2021/03/25 22:09:24 thor Exp $
+$NetBSD: CHANGES-2021,v 1.1837 2021/03/25 23:22:59 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/openssl to 1.1.1k [jperkin 2021-03-25]
 	Updated pkgtools/pkglint to 21.1.0 [rillig 2021-03-25]
 	Updated math/py-numpy to 1.19.5nb1 [thor 2021-03-25]
+	Updated math/openblas to 0.3.10 [thor 2021-03-25]
