@@ -1,12 +1,20 @@
-$NetBSD: patch-configure.ac,v 1.1 2019/07/08 12:52:42 nia Exp $
+$NetBSD: patch-configure.ac,v 1.2 2021/03/25 10:47:24 nia Exp $
 
-Always use pkg-config to find libusb1.
-
-Support NetBSD.
+- Fix syntax for autoconf-2.71
+- Always use pkg-config to find libusb1.
+- Support NetBSD.
 
 --- configure.ac.orig	2019-06-19 10:34:38.000000000 +0000
 +++ configure.ac
-@@ -92,9 +92,10 @@ case $host in
+@@ -20,7 +20,6 @@ LTLDFLAGS="-version-info ${lt_current}:$
+ 
+ AC_CONFIG_MACRO_DIR([m4])
+ AM_INIT_AUTOMAKE([foreign -Wall -Werror])
+-AC_CONFIG_MACRO_DIR([m4])
+ 
+ m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
+ LT_INIT
+@@ -92,9 +91,10 @@ case $host in
  	CFLAGS="$CFLAGS -I/usr/local/include"
  	LDFLAGS="$LDFLAGS -L/usr/local/lib"
  	LIBS="${LIBS}"
@@ -19,7 +27,7 @@ Support NetBSD.
  	;;
  *-kfreebsd*)
  	AC_MSG_RESULT([ (kFreeBSD back-end)])
-@@ -104,8 +105,25 @@ case $host in
+@@ -104,8 +104,25 @@ case $host in
  	os="kfreebsd"
  	threads="pthreads"
  
@@ -47,7 +55,7 @@ Support NetBSD.
  	;;
  *-mingw*)
  	AC_MSG_RESULT([ (Windows back-end, using MinGW)])
-@@ -213,6 +231,7 @@ AM_CONDITIONAL(OS_LINUX, test "x$os" = x
+@@ -213,6 +230,7 @@ AM_CONDITIONAL(OS_LINUX, test "x$os" = x
  AM_CONDITIONAL(OS_DARWIN, test "x$os" = xdarwin)
  AM_CONDITIONAL(OS_FREEBSD, test "x$os" = xfreebsd)
  AM_CONDITIONAL(OS_KFREEBSD, test "x$os" = xkfreebsd)
