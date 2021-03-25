@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1837 2021/03/25 23:22:59 thor Exp $
+$NetBSD: CHANGES-2021,v 1.1838 2021/03/25 23:53:34 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2771,3 +2771,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.1.0 [rillig 2021-03-25]
 	Updated math/py-numpy to 1.19.5nb1 [thor 2021-03-25]
 	Updated math/openblas to 0.3.10 [thor 2021-03-25]
+	Updated audio/mpg123 to 1.26.5 [thor 2021-03-25]
