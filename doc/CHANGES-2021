@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1833 2021/03/25 15:48:03 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1834 2021/03/25 16:36:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/wabt to 1.0.23 [fcambus 2021-03-25]
 	Updated mail/thunderbird to 78.9.0 [ryoon 2021-03-25]
 	Updated mail/thunderbird-l10n to 78.9.0 [ryoon 2021-03-25]
+	Updated security/openssl to 1.1.1k [jperkin 2021-03-25]
