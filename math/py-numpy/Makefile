@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2021/01/09 09:29:41 adam Exp $
+# $NetBSD: Makefile,v 1.75 2021/03/25 21:47:50 thor Exp $
 
 DISTNAME=	numpy-1.19.5
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -18,6 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_LANGUAGES=		c99 fortran
 MAKE_ENV+=		ATLAS=None
+MAKE_ENV+=		BLAS_LIBS=${BLAS_LIBS:Q} LAPACK_LIBS=${LAPACK_LIBS:Q}
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
