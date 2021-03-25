@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/11/05 16:31:45 bacon Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/03/25 23:22:35 thor Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -27,10 +27,9 @@ HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 LICENSE=	modified-bsd
 
-# Needs source patching and/or GCC_REQD for NetBSD
-# NetBSD gfortran framework needs improvements for this and other packages
+# Darwin has a .so/.dylib PLIST issue
 # Untested on other platforms
-ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
@@ -39,11 +38,6 @@ NO_CONFIGURE=	yes
 
 TEST_TARGET=	tests
 
-# Work around CFLAGS breakage:
-# https://github.com/xianyi/OpenBLAS/issues/818
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
-MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
 # Also set compilers explicitly, overriding Makefile.rule
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CXX=${CXX:Q}
@@ -92,7 +86,7 @@ MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
 
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	pre-build
-SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
+SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+g"
 SUBST_FILES.arch+=	Makefile.tail
 SUBST_FILES.arch+=	driver/level3/Makefile
 SUBST_FILES.arch+=	driver/others/Makefile
@@ -101,11 +95,6 @@ SUBST_FILES.arch+=	interface/Makefile
 SUBST_FILES.arch+=	kernel/Makefile
 SUBST_FILES.arch+=	kernel/Makefile.L3
 SUBST_FILES.arch+=	lapack/laswp/Makefile
-SUBST_FILES.arch+=	lapack-netlib/SRC/Makefile
-SUBST_FILES.arch+=	lapack-netlib/SRC/VARIANTS/Makefile
-SUBST_FILES.arch+=	lapack-netlib/TESTING/MATGEN/Makefile
-SUBST_FILES.arch+=	lapack-netlib/LAPACKE/src/Makefile
-SUBST_FILES.arch+=	lapack-netlib/LAPACKE/utils/Makefile
 SUBST_FILES.arch+=	reference/Makefile
 SUBST_FILES.arch+=	Makefile.system
 
