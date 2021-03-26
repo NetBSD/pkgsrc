@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2021/01/10 14:50:06 leot Exp $
+# $NetBSD: Makefile,v 1.70 2021/03/26 17:44:56 gdt Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -11,6 +11,7 @@ COMMENT=		The pkgsrc guide
 
 # To regenerate pkgsrc/doc/pkgsrc.{html,txt} and
 # htdocs/docs/pkgsrc, just run "make regen".
+# NOTE THAT THIS WILL COMMIT THOSE UPDATED VERSIONS!
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
