@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1838 2021/03/25 23:53:34 thor Exp $
+$NetBSD: CHANGES-2021,v 1.1839 2021/03/26 00:04:14 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2772,3 +2772,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-numpy to 1.19.5nb1 [thor 2021-03-25]
 	Updated math/openblas to 0.3.10 [thor 2021-03-25]
 	Updated audio/mpg123 to 1.26.5 [thor 2021-03-25]
+	Updated comms/asterisk16 to 16.17.0 [gdt 2021-03-26]
