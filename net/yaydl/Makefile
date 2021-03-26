@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/02/25 10:51:58 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/26 07:43:17 pin Exp $
 
-DISTNAME=	yaydl-0.3.2
+DISTNAME=	yaydl-0.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dertuxmalwieder/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
