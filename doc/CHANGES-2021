@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1839 2021/03/26 00:04:14 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1840 2021/03/26 04:11:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2773,3 +2773,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/openblas to 0.3.10 [thor 2021-03-25]
 	Updated audio/mpg123 to 1.26.5 [thor 2021-03-25]
 	Updated comms/asterisk16 to 16.17.0 [gdt 2021-03-26]
+	Updated textproc/ispell-en_GB to 3.4.02nb1 [gutteridge 2021-03-26]
