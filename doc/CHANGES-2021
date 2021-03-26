@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1841 2021/03/26 07:57:12 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1842 2021/03/26 08:54:36 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk16 to 16.17.0 [gdt 2021-03-26]
 	Updated textproc/ispell-en_GB to 3.4.02nb1 [gutteridge 2021-03-26]
 	Updated net/yaydl to 0.4.0 [pin 2021-03-26]
+	Updated emulators/cannonball to 0.32 [fox 2021-03-26]
