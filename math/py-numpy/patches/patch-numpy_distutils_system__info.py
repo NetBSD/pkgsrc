@@ -1,10 +1,10 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.4 2021/03/25 22:09:07 thor Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.5 2021/03/26 20:34:28 thor Exp $
 
 Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
 
 --- numpy/distutils/system_info.py.orig	2020-06-02 05:24:58.000000000 +0000
 +++ numpy/distutils/system_info.py
-@@ -1730,34 +1722,15 @@ class lapack_opt_info(system_info):
+@@ -1730,34 +1722,18 @@ class lapack_opt_info(system_info):
          return getattr(self, '_calc_info_{}'.format(name))()
  
      def calc_info(self):
@@ -41,6 +41,9 @@ Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
 +        # if it is not set.
 +        info = {}
 +        info['language'] = 'f77'
++        info['libraries'] = []
++        info['include_dirs'] = []
++        info['define_macros'] = []
 +        info['extra_link_args'] = os.environ['LAPACK_LIBS'].split()
 + 
 +        self.set_info(**info)
@@ -48,7 +51,7 @@ Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
  
  
  class _ilp64_opt_info_mixin:
-@@ -1875,32 +1848,19 @@ class blas_opt_info(system_info):
+@@ -1875,32 +1848,22 @@ class blas_opt_info(system_info):
          return getattr(self, '_calc_info_{}'.format(name))()
  
      def calc_info(self):
@@ -82,11 +85,14 @@ Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
 +        # Existence of BLAS_LIBS is mandatory. Things shall break early
 +        # if it is not set.
 +        info = {}
-+        # I do not want to assume a language. It is potentially mixed anyway.
-+        #info['language'] = 'c'
++        # We assume a generic BLAS, which is a Fortran lib.
++        info['language'] = 'f77'
 +        # Try to work without cblas, just link BLAS_LIBS.
 +        #info['libraries'] = ['cblas']
 +        #info['define_macros'] = [('HAVE_CBLAS', None)]
++        info['libraries'] = []
++        info['include_dirs'] = []
++        info['define_macros'] = []
 +        info['extra_link_args'] = os.environ['BLAS_LIBS'].split()
 + 
 +        self.set_info(**info)
