@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.59 2020/05/17 00:54:00 tnn Exp $ -->
+<!-- $NetBSD: components.xml,v 1.60 2021/03/26 17:43:20 gdt Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -572,10 +572,30 @@ FILES_SUBST+=  SOMEVAR="somevalue"
 
 	  <listitem>
 	    <para>This file is displayed after installation of the package.
-	    Useful for things like legal notices on almost-free
-	    software and hints for updating config files after
-	    installing modules for apache, PHP etc.
-	    Please note that you can modify variables in it easily by using
+	    While this was used often in the past, it has two
+	    problems: the display will be missed if many packages are
+	    intalled at once, and the person installing the package
+	    and the one using or configuring it may be different.  It
+	    should therefore be used only in exceptional circumstances
+	    where lasting negative consequences would result from
+	    someone not reading it.</para>
+	    <para>MESSAGE should not be used for:</para>
+	    <itemizedlist>
+	      <listitem><para>exhortations to read the documentation</para></listitem>
+	      <listitem><para>reminders to install rc.d files and set variables</para></listitem>
+	      <listitem><para>anything that should be explained in the
+	      installation/configuration documentation that should
+	      come with the package</para></listitem>
+	    </itemizedlist>
+	    <para>If the documentation provided by upstream needs
+	    enhancing, create e.g. files/README.pkgsrc and install it
+	    in the package's documentation directory.
+	    </para>
+	    <para>Note that MESSAGE is shown for all operating
+	    systems and all init systems.  If a MESSAGE is necessary,
+	    it should be narrowed to only those operating systems and
+	    init systems to which it applies.</para>
+	    <para>Note that you can modify variables in it easily by using
 	    <varname>MESSAGE_SUBST</varname> in the package's
 	    <filename>Makefile</filename>:</para>
 
