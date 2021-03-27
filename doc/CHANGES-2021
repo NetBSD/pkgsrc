@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1843 2021/03/26 20:34:39 thor Exp $
+$NetBSD: CHANGES-2021,v 1.1844 2021/03/27 08:20:58 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2777,3 +2777,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/yaydl to 0.4.0 [pin 2021-03-26]
 	Updated emulators/cannonball to 0.32 [fox 2021-03-26]
 	Updated math/py-numpy to 1.19.5nb2 [thor 2021-03-26]
+	Updated print/foliate to 2.6.2 [fox 2021-03-27]
