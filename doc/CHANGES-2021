@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1846 2021/03/27 23:35:06 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1847 2021/03/27 23:45:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2780,3 +2780,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/foliate to 2.6.2 [fox 2021-03-27]
 	Updated textproc/p5-PDF-API2 to 2.039 [wen 2021-03-27]
 	Updated textproc/p5-PDF-Table to 1.002 [wen 2021-03-27]
+	Updated time/p5-DateTime-Calendar-Julian to 0.104 [wen 2021-03-27]
