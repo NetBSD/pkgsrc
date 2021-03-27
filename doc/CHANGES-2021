@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1848 2021/03/27 23:53:11 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1849 2021/03/27 23:57:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2782,3 +2782,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-PDF-Table to 1.002 [wen 2021-03-27]
 	Updated time/p5-DateTime-Calendar-Julian to 0.104 [wen 2021-03-27]
 	Updated time/p5-DateTime-Format-Natural to 1.12 [wen 2021-03-27]
+	Updated time/p5-DateTime-Format-Pg to 0.16014 [wen 2021-03-27]
