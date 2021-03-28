@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/09/07 17:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2021/03/28 00:17:53 wen Exp $
 
-DISTNAME=	DateTime-Format-Strptime-1.77
+DISTNAME=	DateTime-Format-Strptime-1.78
 PKGNAME=	p5-${DISTNAME}00
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
@@ -11,7 +11,7 @@ COMMENT=	Perl 5 module to parse and format strp and strf time patterns
 LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-DateTime>=1.00:../../time/p5-DateTime
-DEPENDS+=	p5-DateTime-Locale>=1.05:../../time/p5-DateTime-Locale
+DEPENDS+=	p5-DateTime-Locale>=1.30:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-DateTime-TimeZone>=0.79:../../time/p5-DateTime-TimeZone
 DEPENDS+=	p5-Params-ValidationCompiler>=0:../../devel/p5-Params-ValidationCompiler
 DEPENDS+=	p5-Package-DeprecationManager>=0.15:../../devel/p5-Package-DeprecationManager
