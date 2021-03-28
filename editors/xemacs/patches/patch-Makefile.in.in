@@ -1,11 +1,22 @@
-$NetBSD: patch-Makefile.in.in,v 1.3 2016/04/23 09:34:18 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.4 2021/03/28 10:36:33 hauke Exp $
 
 Avoid picking up local config when checking features
 
 Install {c,e}tags man pages with xemacs prefix
 
---- Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
+Make TAR settable, to work around shortcomings in base tar(1)
+
+--- Makefile.in.in.orig	2015-03-25 11:25:33.000000000 +0000
 +++ Makefile.in.in
+@@ -65,7 +65,7 @@ LC_ALL = C
+ RM = rm -f
+ MAKEPATH=./lib-src/make-path
+ pwd = /bin/pwd
+-TAR = tar
++TAR ?= tar
+ 
+ ## ==================== Things `configure' Might Edit ====================
+ 
 @@ -407,7 +407,7 @@ lwlib/config.h: ${srcdir}/lwlib/config.h
  ## all.  --cet
  

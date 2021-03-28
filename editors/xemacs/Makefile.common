@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2020/09/24 11:51:47 hauke Exp $
+# $NetBSD: Makefile.common,v 1.36 2021/03/28 10:36:33 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -18,7 +18,7 @@ PATCHDIR=		${.CURDIR}/../../editors/xemacs/patches
 DISTINFO_FILE=		${.CURDIR}/../../editors/xemacs/distinfo
 PLIST_SRC=		${.CURDIR}/../../editors/xemacs/PLIST
 
-USE_TOOLS+=		patch makeinfo perl
+USE_TOOLS+=		patch gtar makeinfo perl
 
 HAS_CONFIGURE=		yes
 
@@ -92,6 +92,8 @@ INSTALL_MAKE_FLAGS+=	pkgdir=${DESTDIR}${LIBDIR}/lisp
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	sitelispdir=${DESTDIR}${PREFIX}/lib/xemacs/site-lisp
 INSTALL_MAKE_FLAGS+=	sitemoduledir=${DESTDIR}${PREFIX}/lib/xemacs/site-modules
+
+INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 
 post-extract:
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/09/24 11:51:48 hauke Exp $
+# $NetBSD: Makefile.common,v 1.17 2021/03/28 10:36:33 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -19,7 +19,7 @@ PATCHDIR=	${.CURDIR}/../../editors/xemacs-current/patches
 DISTINFO_FILE=	${.CURDIR}/../../editors/xemacs-current/distinfo
 PLIST_SRC=	${.CURDIR}/../../editors/xemacs-current/PLIST
 
-USE_TOOLS+=		makeinfo perl
+USE_TOOLS+=		gtar makeinfo perl
 
 # The portable dumper creates a dump file with a build ID in its name
 GENERATE_PLIST+=	${ECHO} bin/${EMACS_DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--with-kkcc
 CONFIGURE_ARGS+=	--with-postgresql=no
 
 CFLAGS+=		-Dunix
+
+INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 
 # Use terminfo on NetBSD-6 and newer.
 # We cannot use terminfo.*.mk as XEmacs enforces a link to termcap,
