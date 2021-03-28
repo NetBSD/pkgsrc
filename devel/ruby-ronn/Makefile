@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/03/28 10:05:55 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/28 10:06:29 nia Exp $
 
 DISTNAME=		ronn-0.7.3
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel textproc
 
 MAINTAINER=		nils@NetBSD.org
