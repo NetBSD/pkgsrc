@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/18 11:27:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/28 03:32:02 mef Exp $
 include/thrift/c_glib/config.h
 include/thrift/c_glib/processor/thrift_dispatch_processor.h
 include/thrift/c_glib/processor/thrift_multiplexed_processor.h
@@ -16,6 +16,7 @@ include/thrift/c_glib/server/thrift_server.h
 include/thrift/c_glib/server/thrift_simple_server.h
 include/thrift/c_glib/thrift.h
 include/thrift/c_glib/thrift_application_exception.h
+include/thrift/c_glib/thrift_configuration.h
 include/thrift/c_glib/thrift_struct.h
 include/thrift/c_glib/transport/thrift_buffered_transport.h
 include/thrift/c_glib/transport/thrift_buffered_transport_factory.h
