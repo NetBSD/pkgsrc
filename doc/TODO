@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20450 2021/03/28 14:52:50 pin Exp $
+$NetBSD: TODO,v 1.20451 2021/03/28 18:14:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,6 +379,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOGo-5.0.1
 	o SOPE-5.0.1
 	o Sigil-1.5.0 [wip]
+	o Sigil-1.5.1
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
@@ -493,6 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dar-2.4.14
 	o darcs-2.12.0
 	o darktable-3.4
+	o dbus-glib-0.112
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o dega-1.12
@@ -520,6 +522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elfsh-0.78
 	o elm-me-2.4.127
 	o elscreen-1.5.3
+	o emacs27-27.2
 	o emerillon-0.1.90
 	o enlightenment-0.23.1
 	o eog-plugins-3.6.1
@@ -588,6 +591,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gfract-0.33
 	o ghdl-0.33
 	o git-2.31.0
+	o git-base-2.31.0
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -620,6 +624,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20130423
+	o gnucash-4.5
 	o gobby-0.5.0
 	o gok-2.30.1
 	o golem-0.0.6
@@ -730,11 +735,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lgeneral-1.3.1
 	o libbpg-0.9.6
 	o libcarddav-14.0.4
+	o libcdr-0.1.7
 	o libdrm-2.4.102
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.42
 	o libgphoto2-2.5.16
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
@@ -752,6 +759,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libressl-3.2.0
 	o libtecla-1.6.3
 	o libvirt-2.3
+	o libvpx-1.10.0
+	o libwildmidi-0.4.4
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
@@ -932,11 +941,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-borgbackup-1.1.16
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-google-api-python-client-2.0.0
 	o py-hgview-1.9.0
+	o py-hypothesis-6.8.3
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
@@ -967,6 +978,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
 	o rdp-1.6
+	o re2c-2.1.1
 	o rebar-3.13.2
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
@@ -1022,6 +1034,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.0.0
 	o sparse-0.5.0
 	o spcaview-20060501
+	o spdlog-1.8.5
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
@@ -1081,6 +1094,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ucview-0.33
 	o udpcast-20120424
 	o ufoai-2.3.1
+	o ugrep-3.1.10
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o units-2.12
@@ -1107,6 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.4
+	o webkit-gtk-2.32.0
 	o websvn-2.6.0
 	o whowatch-1.8.5
 	o windowlab-1.40
