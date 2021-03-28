@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/03/11 06:30:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/03/28 04:02:19 mef Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -292,6 +292,7 @@ ${PYSITELIB}/reportlab/lib/formatters.pyo
 ${PYSITELIB}/reportlab/lib/geomutils.py
 ${PYSITELIB}/reportlab/lib/geomutils.pyc
 ${PYSITELIB}/reportlab/lib/geomutils.pyo
+${PLIST.py2x}${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
 ${PYSITELIB}/reportlab/lib/logger.pyo
