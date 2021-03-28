@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1854 2021/03/28 14:01:39 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1855 2021/03/28 14:52:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/nnn to 3.6 [sjmulder 2021-03-28]
 	Updated math/sc-im to 0.8.0 [sjmulder 2021-03-28]
 	Updated x11/xterm to 367 [pin 2021-03-28]
+	Updated x11/alacritty to 0.7.2 [pin 2021-03-28]
