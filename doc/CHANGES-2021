@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1852 2021/03/28 12:26:02 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.1853 2021/03/28 12:28:15 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2786,3 +2786,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-Locale to 1.31 [wen 2021-03-28]
 	Updated time/p5-DateTime-Format-Strptime to 1.78 [wen 2021-03-28]
 	Updated sysutils/nnn to 3.6 [sjmulder 2021-03-28]
+	Updated math/sc-im to 0.8.0 [sjmulder 2021-03-28]
