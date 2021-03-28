@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/03/12 08:46:58 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/28 23:39:09 mef Exp $
 
 DISTNAME=	fcitx5-configtool-5.0.3
 CATEGORIES=	inputmethod
@@ -14,6 +14,8 @@ USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+BUILD_DEPENDS+=		extra-cmake-modueles-[0-9]*:../../devel/extra-cmake-modules
 
 OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
