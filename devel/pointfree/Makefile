@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/14 09:15:43 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/03/28 03:00:17 mef Exp $
 #
 
 DISTNAME=	pointfree-1.1.1.7
@@ -25,5 +25,6 @@ SUBST_STAGE.2=		pre-configure
 SUBST_FILES.2=		pointfree.cabal
 SUBST_FILTER_CMD.2=	${TR} '+' \\n
 
+.include "../../devel/hs-haskell-src-exts/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
