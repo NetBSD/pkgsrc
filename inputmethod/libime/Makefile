@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/03/28 04:59:13 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/28 13:12:28 mef Exp $
 
 DISTNAME=	libime-1.0.4
 CATEGORIES=	inputmethod
@@ -13,7 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 DICTDISTFILES+=	lm_sc.3gm.arpa-20140820.tar.bz2
-DICTDISTFILES+=	dict.utf8-20200715.tar.xz
+#ICTDISTFILES+=	dict.utf8-20200715.tar.xz
+DICTDISTFILES+=	dict.utf8-20210203.tar.xz
 DICTDISTFILES+=	table.tar.gz
 
 DISTFILES=	${DEFAULT_DISTFILES}

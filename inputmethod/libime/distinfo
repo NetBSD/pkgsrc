@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2021/02/27 20:14:02 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2021/03/28 13:12:28 mef Exp $
 
-SHA1 (libime-1.0.4/dict.utf8-20200715.tar.xz) = 1c483cb039e70f31035c129f1c61591402d21ed6
-RMD160 (libime-1.0.4/dict.utf8-20200715.tar.xz) = d35ca30c88f71d23484f12e702a36fb186c1b83d
-SHA512 (libime-1.0.4/dict.utf8-20200715.tar.xz) = 75ad207842937369e79c3c3616165424c4e71fbce7ba2b15c7c2f1dcb898950e6d9babf39ed5bde01c21dd025906c988a80989863175daa8d1315a9be4402130
-Size (libime-1.0.4/dict.utf8-20200715.tar.xz) = 471536 bytes
+SHA1 (libime-1.0.4/dict.utf8-20210203.tar.xz) = 8bc9a916782cbeac68928bd31225a8915e6115e3
+RMD160 (libime-1.0.4/dict.utf8-20210203.tar.xz) = 664992dda466881e5fc398818c4c16f932ac0c37
+SHA512 (libime-1.0.4/dict.utf8-20210203.tar.xz) = b0ed22a7898cd7ddb6f4a9f3bed32b270ea3d1080bc060f420cc5e4599892b0afca80364779741bfc19b6466d3d0ded89d8b3465c64c50a8892129971045d7ab
+Size (libime-1.0.4/dict.utf8-20210203.tar.xz) = 471532 bytes
 SHA1 (libime-1.0.4/libime-1.0.4.tar.xz) = cb431d26ebf703aee5fdcf10d45d3d6fa686e4aa
 RMD160 (libime-1.0.4/libime-1.0.4.tar.xz) = 98b86a57c25bdc6a5c020be92a64064e42a5d7d9
 SHA512 (libime-1.0.4/libime-1.0.4.tar.xz) = ef45e50b8b4073209e6adb580d998e8e67f176d1e560c641a2fc3da1bfff97062b3250e446225b406054bac49bda909acec7d46c41bb79652e67950cd07da991
