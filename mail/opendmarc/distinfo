@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.9 2021/02/17 01:49:12 manu Exp $
+$NetBSD: distinfo,v 1.10 2021/03/29 09:30:59 manu Exp $
 
 SHA1 (OpenDMARC/rel-opendmarc-1-4-0-Beta1.tar.gz) = 74ad1ef9f9a12b5fadef5919807cd55f7655d8d8
 RMD160 (OpenDMARC/rel-opendmarc-1-4-0-Beta1.tar.gz) = e8dda5350a734509843a04329777478d9410b796
 SHA512 (OpenDMARC/rel-opendmarc-1-4-0-Beta1.tar.gz) = d562050da9c4b96e7707157fbbf385ab3ac551cf07754b45deb6a010b4c47e7f478dfe35bc2c8625f6553af4fbf120820bf2a9f0ce246b26cabf81e7d1174405
 Size (OpenDMARC/rel-opendmarc-1-4-0-Beta1.tar.gz) = 1247386 bytes
+SHA1 (patch-RequiredFrom) = a21d77abbe93c806c6abee55e77e477c9c435c00
 SHA1 (patch-configure.ac) = d174911e4de37d3b50b525469cbe410bb7ae119f
 SHA1 (patch-libopendmarc_opendmarc__dns.c) = e76ca13707677525b72609b4a5268d77efcfba84
 SHA1 (patch-libopendmarc_opendmarc__spf__dns.c) = b6e1311be8e9ef44c333be57fef474f6b080a199
