@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/03/12 11:36:07 nia Exp $
+# $NetBSD: Makefile,v 1.15 2021/03/29 07:58:53 adam Exp $
 
 DISTNAME=	volatility-2.6.1
 CATEGORIES=	security
@@ -9,6 +9,7 @@ HOMEPAGE=	https://www.volatilityfoundation.org/
 COMMENT=	Advanced memory forensics framework
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # Recommended packages
 # from https://github.com/volatilityfoundation/volatility/wiki/Installation
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow6
@@ -20,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
 #DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-yara-[0-9]*:../../security/py-yara
 
-REPLACE_PYTHON= tools/vtype_diff.py
+REPLACE_PYTHON=	tools/vtype_diff.py
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
