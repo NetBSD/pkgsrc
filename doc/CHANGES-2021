@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1857 2021/03/29 20:28:57 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1858 2021/03/29 20:57:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/alacritty to 0.7.2 [pin 2021-03-28]
 	Updated net/youtube-dl to 20210325 [leot 2021-03-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q1 branch [wiz 2021-03-29]
+	Updated x11/libXaw to 1.0.14 [wiz 2021-03-29]
