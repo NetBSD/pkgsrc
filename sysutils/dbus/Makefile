@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2021/03/14 08:31:17 nia Exp $
+# $NetBSD: Makefile,v 1.124 2021/03/29 21:00:17 wiz Exp $
 
 DISTNAME=	dbus-1.12.20
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -108,6 +109,6 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.expat+=	expat>=2.1.0
+BUILDLINK_API_DEPENDS.expat+=	expat>=2.1.0
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
