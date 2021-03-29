@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/03/02 13:24:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/29 03:39:54 mef Exp $
 
 DISTNAME=	fcitx5-table-other-5.0.3
 CATEGORIES=	inputmethod
@@ -19,5 +19,6 @@ USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
