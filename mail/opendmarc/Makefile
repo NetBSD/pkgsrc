@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2021/02/17 01:49:12 manu Exp $
+# $NetBSD: Makefile,v 1.24 2021/03/29 09:30:59 manu Exp $
 
 GITHUB_PROJECT=	OpenDMARC
 GITHUB_TAG=	rel-opendmarc-1-4-0-Beta1
 DISTNAME=	rel-opendmarc-1-4-0-Beta1
 PKGNAME=	opendmarc-1.4.0b1
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
