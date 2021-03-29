@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/04/30 10:39:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/29 06:28:43 nia Exp $
 #
 
 DISTNAME=	jrep-1.1.0
@@ -26,6 +26,8 @@ MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR} MAVEN_OPTS=${MAVEN_OPTS:Q}
 MAVEN_OPTS+=	-Duser.home=${FAKEHOMEDIR}
 #MAVEN_OPTS+=	-Dmaven.repo.local=${WRKDIR}/deps
 #MAVEN_OPTS+=	--offline
+
+PKG_JVMS_ACCEPTED=	openjdk8
 
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/java-vm.mk"
