@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/03/29 06:40:47 nia Exp $
+
+Fix autoconf-2.71 fallout: avoid duplicate macro.
+
+--- configure.ac.orig	2019-03-15 04:24:46.000000000 +0000
++++ configure.ac
+@@ -5,7 +5,6 @@ AC_PREREQ([2.69])
+ AC_INIT([ltfs-plugins], [0.1], [manu@netbsd.org])
+ AC_CONFIG_SRCDIR([src/tape_drivers/netbsd/ltotape/ltotape.c])
+ AC_CONFIG_MACRO_DIRS([m4])
+-AC_CONFIG_MACRO_DIR([m4])
+ AC_CANONICAL_TARGET
+ AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
+ AC_CONFIG_HEADERS([config.h])
