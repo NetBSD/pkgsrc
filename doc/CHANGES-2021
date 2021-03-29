@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1860 2021/03/29 23:16:24 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1861 2021/03/29 23:17:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2794,3 +2794,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libXaw to 1.0.14 [wiz 2021-03-29]
 	Updated sysutils/dbus to 1.12.20nb1 [wiz 2021-03-29]
 	Updated geography/qgis to 3.16.5 [gdt 2021-03-29]
+	Updated ham/chirp to 20210307 [gdt 2021-03-29]
