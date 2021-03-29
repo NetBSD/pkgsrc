@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/03/10 18:49:07 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/03/29 07:38:52 nia Exp $
 
 DISTNAME=	PySolFC-2.6.4
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
 EXTRACT_SUFX=	.tar.xz
@@ -35,6 +35,10 @@ PLIST_SRC=	PLIST ${WRKDIR}/PLIST.CS
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 EGG_NAME=	${DISTNAME}
+
+# PR pkg/56069 
+# Depends on 'time.clock', which was removed in Python 3.8
+PYTHON_VERSIONS_ACCEPTED=	37
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/pysol.6 \
