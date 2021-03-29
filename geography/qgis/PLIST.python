@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.python,v 1.7 2021/03/01 00:03:35 gdt Exp $
+@comment $NetBSD: PLIST.python,v 1.8 2021/03/29 23:16:14 gdt Exp $
 lib/libqgispython.so
 lib/libqgispython.so.${PKGVERSION}
 share/qgis/python/console/__init__.py
@@ -1189,7 +1189,8 @@ share/qgis/python/plugins/processing/tests/GdalAlgorithmsGeneralTest.py
 share/qgis/python/plugins/processing/tests/GdalAlgorithmsRasterTest.py
 share/qgis/python/plugins/processing/tests/GdalAlgorithmsVectorTest.py
 share/qgis/python/plugins/processing/tests/Grass7AlgorithmsImageryTest.py
-share/qgis/python/plugins/processing/tests/Grass7AlgorithmsRasterTest.py
+share/qgis/python/plugins/processing/tests/Grass7AlgorithmsRasterTestPt1.py
+share/qgis/python/plugins/processing/tests/Grass7AlgorithmsRasterTestPt2.py
 share/qgis/python/plugins/processing/tests/Grass7AlgorithmsVectorTest.py
 share/qgis/python/plugins/processing/tests/GuiTest.py
 share/qgis/python/plugins/processing/tests/ModelerTest.py
