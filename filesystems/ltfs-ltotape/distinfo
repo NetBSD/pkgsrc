@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.3 2020/12/26 05:23:12 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/03/29 06:40:46 nia Exp $
 
 SHA1 (ltfs-backends/v0.2.tar.gz) = b91bd72a39f7e4ef13f353a91ad9a2ed8d32b0bc
 RMD160 (ltfs-backends/v0.2.tar.gz) = 905f30d738991484c29d672a4c29d896815670a2
 SHA512 (ltfs-backends/v0.2.tar.gz) = 2c4966ac5902a22bd282e0b73540289e09cf919d420af70a1c5d7e34190cd80bc4dccbaf03239bf727e18420984b5a644cb3d17c8b1c68a384b27bc59efe320f
 Size (ltfs-backends/v0.2.tar.gz) = 129136 bytes
 SHA1 (patch-Makefile.am) = 6a5de78c0972d84b85c28b27534f71fbe61a3b2f
+SHA1 (patch-configure.ac) = f636cea30b1d0dda7bdf4225151c80f44693a97b
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape.c) = 9aa69bdc423e02b084d9fd116612d15ab60ac9ab
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape__diag.c) = 20b00a01d300c7554ed6451e2532ef96d4b629fe
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape__platform.c) = 6e6f145a80ec620daaa0fad792707c444df3686e
