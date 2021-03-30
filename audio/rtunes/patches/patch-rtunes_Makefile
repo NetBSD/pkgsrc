@@ -1,0 +1,29 @@
+$NetBSD: patch-rtunes_Makefile,v 1.1 2021/03/30 12:01:04 nia Exp $
+
+Merge fixes from https://github.com/erincandescent/rtunes
+
+--- rtunes/Makefile.orig	2009-06-27 10:10:32.000000000 +0000
++++ rtunes/Makefile
+@@ -10,22 +10,12 @@ SRCS+= y.tab.h
+ y.tab.h: parse.y
+ .endif
+ 
+-.if ${OS} == "NetBSD"
+-VPATH=	../libbsd
+-SRCS+=	strtonum.c
+-.endif
+-
+ CFLAGS+=	-Wall -Wstrict-prototypes -ansi
+ LDADD+=		-lcrypto
+ LINTFLAGS+=	-u
+ 
+ CLEANFILES+=	y.tab.h
+ 
+-PIPE=		-pipe
+-
+ MAN=		rtunes.1 rtunes.conf.5
+-MANDIR=		/usr/local/man/cat
+-
+-BINDIR=		/usr/local/bin
+ 
+ .include <bsd.prog.mk>
