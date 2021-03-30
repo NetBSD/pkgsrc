@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.13 2019/11/04 19:05:18 rillig Exp $
+# $NetBSD: github.mk,v 1.14 2021/03/30 16:47:03 ryoon Exp $
 #
 # github.com master site handling
 #
@@ -15,6 +15,9 @@
 #			SHA-1 commit ids are also acceptable
 # GITHUB_RELEASE	defaults to not defined, set this to ${DISTNAME}
 #			when packaging a release not based on a git tag.
+# GITHUB_SUBMODULE	manually set submodule information:
+#			values should be:
+#			GitHub_user GitHub_project tag_or_hash submodule_path
 # GITHUB_TYPE		overrides the autodetected MASTER_SITE URL scheme:
 #
 # "tag"
@@ -72,10 +75,23 @@ SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/$
 
 .endif
 
+.if !empty(GITHUB_SUBMODULES)
+.  for _GITHUB_SM_USER _GITHUB_SM_PROJECT _GITHUB_SM_TAG _GITHUB_SM_PLACE in ${GITHUB_SUBMODULES}
+_GITHUB_SM_DISTFILE=			${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRACT_SUFX}
+_GITHUB_DEFAULT_DISTFILES+=		${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRACT_SUFX}
+SITES.${_GITHUB_SM_DISTFILE}=		-${MASTER_SITE_GITHUB:=${_GITHUB_SM_USER}/${_GITHUB_SM_PROJECT}/archive/${_GITHUB_SM_TAG}${EXTRACT_SUFX}}
+EXTRACT_DIR.${_GITHUB_SM_DISTFILE}=	${WRKSRC}/${_GITHUB_SM_PLACE}
+EXTRACT_OPTS_TAR.${_GITHUB_SM_DISTFILE}=	--strip-components=1
+.  endfor
+.endif
+
 _VARGROUPS+=		github
 _PKG_VARS.github=	GITHUB_PROJECT DISTNAME GITHUB_TYPE GITHUB_TAG \
-			GITHUB_RELEASE MASTER_SITES EXTRACT_SUFX
-_DEF_VARS.github=	_USE_GITHUB _GITHUB_DEFAULT_DISTFILES \
-			SITES.${_GITHUB_DEFAULT_DISTFILES}
+			GITHUB_RELEASE MASTER_SITES EXTRACT_SUFX \
+			GITHUB_SUBMODULES
+_DEF_VARS.github=	_USE_GITHUB _GITHUB_DEFAULT_DISTFILES
+.for f in ${_GITHUB_DEFAULT_DISTFILES}
+_DEF_VARS.github+=	SITES.${f}
+.endfor
 _USE_VARS.github=	PKGBASE PKGVERSION_NOREV
 _LISTED_VARS.github=	SITES.*

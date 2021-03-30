@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.24 2019/11/22 19:30:23 rillig Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.25 2021/03/30 16:47:03 ryoon Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -59,6 +59,13 @@ DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 .  endif
 .endif
 DISTFILES?=		${DEFAULT_DISTFILES}
+
+.if !empty(GITHUB_SUBMODULES)
+.  for _GITHUB_SM_USER _GITHUB_SM_PROJECT _GITHUB_SM_TAG _GITHUB_SM_PLACE in ${GITHUB_SUBMODULES}
+DISTFILES+=			${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRACT_SUFX}
+.  endfor
+.endif
+
 
 # File lists, defined early to allow tool dependencies.
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
