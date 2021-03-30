@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2012/03/21 13:37:08 obache Exp $
+# $NetBSD: INSTALL,v 1.2 2021/03/30 18:09:45 wiz Exp $
 #
 # Initialize gtk/pango module configuration.
 #
@@ -15,6 +15,6 @@ POST-INSTALL)
 	${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ > ${GNOME_ETCDIR}/pango/pango@ABISUFFIX@.modules
 	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
 	PATH=${PKG_PREFIX}/@EMULSUBDIR@/bin ROOT=${PKG_PREFIX}/@EMULSUBDIR@ bash ${SUSECONFIG} --module glib2
-	${LN} -s /../var/db/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
+	${LN} -s /../var/lib/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
 	;;
 esac

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/02/16 10:15:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2021/03/30 18:09:45 wiz Exp $
 
 PKGNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.10.2-14.1.3.${SUSE_ARCH}
 RPMUPDPKGS+=	dbus-1-1.5.8-2.10.1.${SUSE_ARCH}

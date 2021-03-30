@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.16 2021/03/22 11:59:23 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.17 2021/03/30 18:09:45 wiz Exp $
 
 * Don't assume sys/capability.h is guaranteed present on Linux.
 * Fix NetBSD detection for libatomics_ops check.
@@ -51,15 +51,6 @@ $NetBSD: patch-configure.ac,v 1.16 2021/03/22 11:59:23 schmonz Exp $
  AC_SUBST(HAVE_MEMFD)
  AM_CONDITIONAL([HAVE_MEMFD], [test "x$HAVE_MEMFD" = x1])
  AS_IF([test "x$HAVE_MEMFD" = "x1"], AC_DEFINE([HAVE_MEMFD], 1, [Have memfd shared memory.]))
-@@ -1070,7 +1069,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
- 
- PA_MACHINE_ID="${sysconfdir}/machine-id"
- AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
--PA_MACHINE_ID_FALLBACK="${localstatedir}/lib/dbus/machine-id"
-+PA_MACHINE_ID_FALLBACK="${localstatedir}/db/dbus/machine-id"
- AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
- 	      [Fallback machine-id file])
- 
 @@ -1375,9 +1374,9 @@ fi
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
