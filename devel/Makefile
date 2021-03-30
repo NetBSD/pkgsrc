@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3353 2021/03/20 15:10:41 adam Exp $
+# $NetBSD: Makefile,v 1.3354 2021/03/30 09:44:25 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2146,6 +2146,7 @@ SUBDIR+=	pilrc
 SUBDIR+=	pipestatus
 SUBDIR+=	pkg-config
 SUBDIR+=	pkgconf
+SUBDIR+=	plasma-wayland-protocols
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	poco
