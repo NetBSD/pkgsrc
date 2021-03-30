@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20453 2021/03/30 12:47:57 leot Exp $
+$NetBSD: TODO,v 1.20454 2021/03/30 18:13:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-5.5
+	o calibre-5.14
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
