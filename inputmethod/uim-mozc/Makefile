@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2020/11/05 09:08:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2021/03/30 17:04:48 ryoon Exp $
 
 PKGNAME=	uim-${DISTNAME}
-PKGREVISION=	27
 
 CONFLICTS+=	ibus-mozc<=1.13.1651.102
 
@@ -18,15 +17,13 @@ SUBST_MESSAGE.mozc_tool=	Fixing mozc_tool path
 SUBST_FILES.mozc_tool=		scm/mozc-custom.scm
 SUBST_SED.mozc_tool=		-e 's,/usr/lib/mozc/mozc_tool,${PREFIX}/libexec/mozc_tool,g'
 
-post-extract:
-	mv ${WRKDIR}/${UIM_MOZC}/uim ${WRKSRC}/unix
-	mv ${WRKDIR}/${UIM_MOZC}/scm ${WRKSRC}
+post-patch:
+	mv ${WRKSRC}/unix/uim/scm ${WRKSRC}/scm
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
-			unix/uim/uim.gyp:uim-mozc \
-			renderer/renderer.gyp:mozc_renderer
+			unix/uim/uim.gyp:uim-mozc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/libuim-mozc.so \
