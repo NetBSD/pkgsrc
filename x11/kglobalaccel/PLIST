@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:40:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:30 markd Exp $
 bin/kglobalaccel5
 include/KF5/KGlobalAccel/KGlobalAccel
 include/KF5/KGlobalAccel/KGlobalShortcutInfo
@@ -18,6 +18,7 @@ lib/libKF5GlobalAccel.so.5
 lib/libKF5GlobalAccel.so.${PKGVERSION}
 lib/libKF5GlobalAccelPrivate.so.5
 lib/libKF5GlobalAccelPrivate.so.${PKGVERSION}
+lib/systemd/user/plasma-kglobalaccel.service
 qt5/mkspecs/modules/qt_KGlobalAccel.pri
 qt5/plugins/org.kde.kglobalaccel5.platforms/KF5GlobalAccelPrivateXcb.so
 share/dbus-1/interfaces/kf5_org.kde.KGlobalAccel.xml
@@ -27,6 +28,7 @@ share/kservices5/kglobalaccel5.desktop
 share/locale/af/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/ar/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/as/LC_MESSAGES/kglobalaccel5_qt.qm
+share/locale/az/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/be/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/bg/LC_MESSAGES/kglobalaccel5_qt.qm
@@ -124,3 +126,4 @@ share/locale/zh_CN/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kglobalaccel5_qt.qm
 share/qlogging-categories5/kglobalaccel.categories
+share/qlogging-categories5/kglobalaccel.renamecategories

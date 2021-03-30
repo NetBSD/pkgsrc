@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/25 21:17:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:30 markd Exp $
 bin/kdebugdialog5
 bin/kf5-config
 include/KF5/KDELibs4Support/KDE/ConversionCheck/QVconvertible
@@ -1034,6 +1034,10 @@ share/doc/HTML/es/kcontrol5/kcm_ssl/index.cache.bz2
 share/doc/HTML/es/kcontrol5/kcm_ssl/index.docbook
 share/doc/HTML/es/kdebugdialog5/index.cache.bz2
 share/doc/HTML/es/kdebugdialog5/index.docbook
+share/doc/HTML/fr/kcontrol5/kcm_ssl/index.cache.bz2
+share/doc/HTML/fr/kcontrol5/kcm_ssl/index.docbook
+share/doc/HTML/fr/kdebugdialog5/index.cache.bz2
+share/doc/HTML/fr/kdebugdialog5/index.docbook
 share/doc/HTML/it/kcontrol5/kcm_ssl/index.cache.bz2
 share/doc/HTML/it/kcontrol5/kcm_ssl/index.docbook
 share/doc/HTML/it/kdebugdialog5/index.cache.bz2
@@ -1820,6 +1824,8 @@ share/kservicetypes5/qimageio_plugin.desktop
 share/locale/af/LC_MESSAGES/kdelibs4support.mo
 share/locale/ar/LC_MESSAGES/kdelibs4support.mo
 share/locale/as/LC_MESSAGES/kdelibs4support.mo
+share/locale/ast/LC_MESSAGES/kdelibs4support.mo
+share/locale/az/LC_MESSAGES/kdelibs4support.mo
 share/locale/be/LC_MESSAGES/kdelibs4support.mo
 share/locale/be@latin/LC_MESSAGES/kdelibs4support.mo
 share/locale/bg/LC_MESSAGES/kdelibs4support.mo

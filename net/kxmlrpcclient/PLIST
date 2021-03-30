@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/11 08:40:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:26 markd Exp $
 include/KF5/KXmlRpcClient/KXmlRpcClient/Client
 include/KF5/KXmlRpcClient/kxmlrpcclient/client.h
 include/KF5/KXmlRpcClient/kxmlrpcclient/kxmlrpcclient_export.h
@@ -12,6 +12,7 @@ lib/libKF5XmlRpcClient.so.5
 lib/libKF5XmlRpcClient.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KXmlRpcClient.pri
 share/locale/ar/LC_MESSAGES/libkxmlrpcclient5.mo
+share/locale/az/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/be/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/bg/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/bs/LC_MESSAGES/libkxmlrpcclient5.mo

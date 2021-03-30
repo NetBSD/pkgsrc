@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/06/07 11:23:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/30 10:58:24 markd Exp $
 bin/kbuildsycoca5
 include/KF5/KService/KApplicationTrader
 include/KF5/KService/KAutostart
@@ -48,6 +48,7 @@ man/de/man8/desktoptojson.8
 man/de/man8/kbuildsycoca5.8
 man/es/man8/desktoptojson.8
 man/es/man8/kbuildsycoca5.8
+man/fr/man8/kbuildsycoca5.8
 man/id/man8/desktoptojson.8
 man/it/man8/desktoptojson.8
 man/it/man8/kbuildsycoca5.8
@@ -70,6 +71,7 @@ share/kservicetypes5/kplugininfo.desktop
 share/locale/af/LC_MESSAGES/kservice5.mo
 share/locale/ar/LC_MESSAGES/kservice5.mo
 share/locale/as/LC_MESSAGES/kservice5.mo
+share/locale/az/LC_MESSAGES/kservice5.mo
 share/locale/be/LC_MESSAGES/kservice5.mo
 share/locale/be@latin/LC_MESSAGES/kservice5.mo
 share/locale/bg/LC_MESSAGES/kservice5.mo
@@ -167,3 +169,4 @@ share/locale/zh_CN/LC_MESSAGES/kservice5.mo
 share/locale/zh_HK/LC_MESSAGES/kservice5.mo
 share/locale/zh_TW/LC_MESSAGES/kservice5.mo
 share/qlogging-categories5/kservice.categories
+share/qlogging-categories5/kservice.renamecategories
