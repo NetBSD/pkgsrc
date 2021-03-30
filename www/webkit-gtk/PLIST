@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2021/03/30 12:47:42 leot Exp $
+@comment $NetBSD: PLIST,v 1.71 2021/03/30 22:32:40 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -51,6 +51,7 @@ include/webkitgtk-4.0/webkit2/WebKitHitTestResult.h
 include/webkitgtk-4.0/webkit2/WebKitInputMethodContext.h
 include/webkitgtk-4.0/webkit2/WebKitInstallMissingMediaPluginsPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitJavascriptResult.h
+include/webkitgtk-4.0/webkit2/WebKitMediaKeySystemPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitMimeInfo.h
 include/webkitgtk-4.0/webkit2/WebKitNavigationAction.h
 include/webkitgtk-4.0/webkit2/WebKitNavigationPolicyDecision.h
