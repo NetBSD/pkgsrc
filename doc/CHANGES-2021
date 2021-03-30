@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1864 2021/03/30 07:51:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1865 2021/03/30 07:58:14 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2802,3 +2802,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-docs to 3.35.3 [adam 2021-03-30]
 	Updated databases/sqlite3-tcl to 3.35.3 [adam 2021-03-30]
 	Updated devel/lemon to 1.0.3.35.3 [adam 2021-03-30]
+	Updated graphics/adwaita-icon-theme to 3.38.0 [cirnatdan 2021-03-30]
