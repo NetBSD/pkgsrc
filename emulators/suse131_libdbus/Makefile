@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/07/28 08:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/03/30 18:09:45 wiz Exp $
 
 PKGNAME=	suse_libdbus-${SUSE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	emulators
 RPMUPDPKGS+=	dbus-1-1.8.16-4.36.2.${SUSE_ARCH}
 RPMUPDPKGS+=	libdbus-1-3-1.8.16-4.36.1.${SUSE_ARCH}
