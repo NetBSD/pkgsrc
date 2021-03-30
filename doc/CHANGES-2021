@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1876 2021/03/30 12:47:56 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1877 2021/03/30 16:21:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2896,3 +2896,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/qqc2-desktop-style to 5.80.0 [markd 2021-03-30]
 	Added audio/rtunes version 0.8 [nia 2021-03-30]
 	Updated www/webkit-gtk to 2.32.0 [leot 2021-03-30]
+	Updated inputmethod/fcitx5 to 5.0.5nb1 [ryoon 2021-03-30]
