@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.17 2020/04/20 06:50:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/03/30 07:57:53 cirnatdan Exp $
 share/icons/Adwaita/16x16/devices/audio-headphones.png
 share/icons/Adwaita/16x16/devices/audio-headset.png
 share/icons/Adwaita/16x16/devices/computer.png
 share/icons/Adwaita/16x16/devices/drive-harddisk.png
 share/icons/Adwaita/16x16/devices/drive-removable-media.png
+share/icons/Adwaita/16x16/devices/input-gaming.png
 share/icons/Adwaita/16x16/devices/media-optical.png
+share/icons/Adwaita/16x16/devices/media-removable.png
 share/icons/Adwaita/16x16/devices/printer-network.png
 share/icons/Adwaita/16x16/devices/printer.png
 share/icons/Adwaita/16x16/emblems/emblem-readonly.png
@@ -207,7 +209,6 @@ share/icons/Adwaita/16x16/legacy/media-playback-stop.png
 share/icons/Adwaita/16x16/legacy/media-playlist-repeat.png
 share/icons/Adwaita/16x16/legacy/media-playlist-shuffle.png
 share/icons/Adwaita/16x16/legacy/media-record.png
-share/icons/Adwaita/16x16/legacy/media-removable.png
 share/icons/Adwaita/16x16/legacy/media-seek-backward.png
 share/icons/Adwaita/16x16/legacy/media-seek-forward.png
 share/icons/Adwaita/16x16/legacy/media-skip-backward.png
@@ -304,17 +305,6 @@ share/icons/Adwaita/16x16/legacy/view-refresh.png
 share/icons/Adwaita/16x16/legacy/view-restore.png
 share/icons/Adwaita/16x16/legacy/view-sort-ascending.png
 share/icons/Adwaita/16x16/legacy/view-sort-descending.png
-share/icons/Adwaita/16x16/legacy/weather-clear-night.png
-share/icons/Adwaita/16x16/legacy/weather-clear.png
-share/icons/Adwaita/16x16/legacy/weather-few-clouds-night.png
-share/icons/Adwaita/16x16/legacy/weather-few-clouds.png
-share/icons/Adwaita/16x16/legacy/weather-fog.png
-share/icons/Adwaita/16x16/legacy/weather-overcast.png
-share/icons/Adwaita/16x16/legacy/weather-severe-alert.png
-share/icons/Adwaita/16x16/legacy/weather-showers-scattered.png
-share/icons/Adwaita/16x16/legacy/weather-showers.png
-share/icons/Adwaita/16x16/legacy/weather-snow.png
-share/icons/Adwaita/16x16/legacy/weather-storm.png
 share/icons/Adwaita/16x16/legacy/web-browser.png
 share/icons/Adwaita/16x16/legacy/window-close.png
 share/icons/Adwaita/16x16/legacy/window-new.png
@@ -326,6 +316,8 @@ share/icons/Adwaita/16x16/mimetypes/application-certificate.png
 share/icons/Adwaita/16x16/mimetypes/application-x-addon.png
 share/icons/Adwaita/16x16/mimetypes/application-x-executable.png
 share/icons/Adwaita/16x16/mimetypes/application-x-firmware.png
+share/icons/Adwaita/16x16/mimetypes/application-x-generic.png
+share/icons/Adwaita/16x16/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/16x16/mimetypes/audio-x-generic.png
 share/icons/Adwaita/16x16/mimetypes/font-x-generic.png
 share/icons/Adwaita/16x16/mimetypes/image-x-generic.png
@@ -376,7 +368,9 @@ share/icons/Adwaita/22x22/devices/audio-headset.png
 share/icons/Adwaita/22x22/devices/computer.png
 share/icons/Adwaita/22x22/devices/drive-harddisk.png
 share/icons/Adwaita/22x22/devices/drive-removable-media.png
+share/icons/Adwaita/22x22/devices/input-gaming.png
 share/icons/Adwaita/22x22/devices/media-optical.png
+share/icons/Adwaita/22x22/devices/media-removable.png
 share/icons/Adwaita/22x22/devices/printer-network.png
 share/icons/Adwaita/22x22/devices/printer.png
 share/icons/Adwaita/22x22/emblems/emblem-readonly.png
@@ -579,7 +573,6 @@ share/icons/Adwaita/22x22/legacy/media-playback-stop.png
 share/icons/Adwaita/22x22/legacy/media-playlist-repeat.png
 share/icons/Adwaita/22x22/legacy/media-playlist-shuffle.png
 share/icons/Adwaita/22x22/legacy/media-record.png
-share/icons/Adwaita/22x22/legacy/media-removable.png
 share/icons/Adwaita/22x22/legacy/media-seek-backward.png
 share/icons/Adwaita/22x22/legacy/media-seek-forward.png
 share/icons/Adwaita/22x22/legacy/media-skip-backward.png
@@ -676,17 +669,6 @@ share/icons/Adwaita/22x22/legacy/view-refresh.png
 share/icons/Adwaita/22x22/legacy/view-restore.png
 share/icons/Adwaita/22x22/legacy/view-sort-ascending.png
 share/icons/Adwaita/22x22/legacy/view-sort-descending.png
-share/icons/Adwaita/22x22/legacy/weather-clear-night.png
-share/icons/Adwaita/22x22/legacy/weather-clear.png
-share/icons/Adwaita/22x22/legacy/weather-few-clouds-night.png
-share/icons/Adwaita/22x22/legacy/weather-few-clouds.png
-share/icons/Adwaita/22x22/legacy/weather-fog.png
-share/icons/Adwaita/22x22/legacy/weather-overcast.png
-share/icons/Adwaita/22x22/legacy/weather-severe-alert.png
-share/icons/Adwaita/22x22/legacy/weather-showers-scattered.png
-share/icons/Adwaita/22x22/legacy/weather-showers.png
-share/icons/Adwaita/22x22/legacy/weather-snow.png
-share/icons/Adwaita/22x22/legacy/weather-storm.png
 share/icons/Adwaita/22x22/legacy/web-browser.png
 share/icons/Adwaita/22x22/legacy/window-close.png
 share/icons/Adwaita/22x22/legacy/window-new.png
@@ -698,6 +680,8 @@ share/icons/Adwaita/22x22/mimetypes/application-certificate.png
 share/icons/Adwaita/22x22/mimetypes/application-x-addon.png
 share/icons/Adwaita/22x22/mimetypes/application-x-executable.png
 share/icons/Adwaita/22x22/mimetypes/application-x-firmware.png
+share/icons/Adwaita/22x22/mimetypes/application-x-generic.png
+share/icons/Adwaita/22x22/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/22x22/mimetypes/audio-x-generic.png
 share/icons/Adwaita/22x22/mimetypes/font-x-generic.png
 share/icons/Adwaita/22x22/mimetypes/image-x-generic.png
@@ -749,6 +733,7 @@ share/icons/Adwaita/24x24/devices/computer.png
 share/icons/Adwaita/24x24/devices/drive-harddisk.png
 share/icons/Adwaita/24x24/devices/drive-removable-media.png
 share/icons/Adwaita/24x24/devices/media-optical.png
+share/icons/Adwaita/24x24/devices/media-removable.png
 share/icons/Adwaita/24x24/devices/printer-network.png
 share/icons/Adwaita/24x24/devices/printer.png
 share/icons/Adwaita/24x24/emblems/emblem-readonly.png
@@ -940,7 +925,6 @@ share/icons/Adwaita/24x24/legacy/media-playback-stop.png
 share/icons/Adwaita/24x24/legacy/media-playlist-repeat.png
 share/icons/Adwaita/24x24/legacy/media-playlist-shuffle.png
 share/icons/Adwaita/24x24/legacy/media-record.png
-share/icons/Adwaita/24x24/legacy/media-removable.png
 share/icons/Adwaita/24x24/legacy/media-seek-backward.png
 share/icons/Adwaita/24x24/legacy/media-seek-forward.png
 share/icons/Adwaita/24x24/legacy/media-skip-backward.png
@@ -1034,17 +1018,6 @@ share/icons/Adwaita/24x24/legacy/view-refresh.png
 share/icons/Adwaita/24x24/legacy/view-restore.png
 share/icons/Adwaita/24x24/legacy/view-sort-ascending.png
 share/icons/Adwaita/24x24/legacy/view-sort-descending.png
-share/icons/Adwaita/24x24/legacy/weather-clear-night.png
-share/icons/Adwaita/24x24/legacy/weather-clear.png
-share/icons/Adwaita/24x24/legacy/weather-few-clouds-night.png
-share/icons/Adwaita/24x24/legacy/weather-few-clouds.png
-share/icons/Adwaita/24x24/legacy/weather-fog.png
-share/icons/Adwaita/24x24/legacy/weather-overcast.png
-share/icons/Adwaita/24x24/legacy/weather-severe-alert.png
-share/icons/Adwaita/24x24/legacy/weather-showers-scattered.png
-share/icons/Adwaita/24x24/legacy/weather-showers.png
-share/icons/Adwaita/24x24/legacy/weather-snow.png
-share/icons/Adwaita/24x24/legacy/weather-storm.png
 share/icons/Adwaita/24x24/legacy/web-browser.png
 share/icons/Adwaita/24x24/legacy/window-close.png
 share/icons/Adwaita/24x24/legacy/window-new.png
@@ -1056,6 +1029,8 @@ share/icons/Adwaita/24x24/mimetypes/application-certificate.png
 share/icons/Adwaita/24x24/mimetypes/application-x-addon.png
 share/icons/Adwaita/24x24/mimetypes/application-x-executable.png
 share/icons/Adwaita/24x24/mimetypes/application-x-firmware.png
+share/icons/Adwaita/24x24/mimetypes/application-x-generic.png
+share/icons/Adwaita/24x24/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/24x24/mimetypes/audio-x-generic.png
 share/icons/Adwaita/24x24/mimetypes/font-x-generic.png
 share/icons/Adwaita/24x24/mimetypes/image-x-generic.png
@@ -1184,7 +1159,6 @@ share/icons/Adwaita/256x256/legacy/mail-message-new.png
 share/icons/Adwaita/256x256/legacy/mail-read.png
 share/icons/Adwaita/256x256/legacy/media-flash.png
 share/icons/Adwaita/256x256/legacy/media-floppy.png
-share/icons/Adwaita/256x256/legacy/media-removable.png
 share/icons/Adwaita/256x256/legacy/multimedia-volume-control.png
 share/icons/Adwaita/256x256/legacy/network-cellular-connected.png
 share/icons/Adwaita/256x256/legacy/network-error.png
@@ -1260,7 +1234,9 @@ share/icons/Adwaita/32x32/devices/audio-headset.png
 share/icons/Adwaita/32x32/devices/computer.png
 share/icons/Adwaita/32x32/devices/drive-harddisk.png
 share/icons/Adwaita/32x32/devices/drive-removable-media.png
+share/icons/Adwaita/32x32/devices/input-gaming.png
 share/icons/Adwaita/32x32/devices/media-optical.png
+share/icons/Adwaita/32x32/devices/media-removable.png
 share/icons/Adwaita/32x32/devices/printer-network.png
 share/icons/Adwaita/32x32/devices/printer.png
 share/icons/Adwaita/32x32/emblems/emblem-readonly.png
@@ -1461,7 +1437,6 @@ share/icons/Adwaita/32x32/legacy/media-playback-stop.png
 share/icons/Adwaita/32x32/legacy/media-playlist-repeat.png
 share/icons/Adwaita/32x32/legacy/media-playlist-shuffle.png
 share/icons/Adwaita/32x32/legacy/media-record.png
-share/icons/Adwaita/32x32/legacy/media-removable.png
 share/icons/Adwaita/32x32/legacy/media-seek-backward.png
 share/icons/Adwaita/32x32/legacy/media-seek-forward.png
 share/icons/Adwaita/32x32/legacy/media-skip-backward.png
@@ -1556,17 +1531,6 @@ share/icons/Adwaita/32x32/legacy/view-refresh.png
 share/icons/Adwaita/32x32/legacy/view-restore.png
 share/icons/Adwaita/32x32/legacy/view-sort-ascending.png
 share/icons/Adwaita/32x32/legacy/view-sort-descending.png
-share/icons/Adwaita/32x32/legacy/weather-clear-night.png
-share/icons/Adwaita/32x32/legacy/weather-clear.png
-share/icons/Adwaita/32x32/legacy/weather-few-clouds-night.png
-share/icons/Adwaita/32x32/legacy/weather-few-clouds.png
-share/icons/Adwaita/32x32/legacy/weather-fog.png
-share/icons/Adwaita/32x32/legacy/weather-overcast.png
-share/icons/Adwaita/32x32/legacy/weather-severe-alert.png
-share/icons/Adwaita/32x32/legacy/weather-showers-scattered.png
-share/icons/Adwaita/32x32/legacy/weather-showers.png
-share/icons/Adwaita/32x32/legacy/weather-snow.png
-share/icons/Adwaita/32x32/legacy/weather-storm.png
 share/icons/Adwaita/32x32/legacy/web-browser.png
 share/icons/Adwaita/32x32/legacy/window-close.png
 share/icons/Adwaita/32x32/legacy/window-new.png
@@ -1578,6 +1542,8 @@ share/icons/Adwaita/32x32/mimetypes/application-certificate.png
 share/icons/Adwaita/32x32/mimetypes/application-x-addon.png
 share/icons/Adwaita/32x32/mimetypes/application-x-executable.png
 share/icons/Adwaita/32x32/mimetypes/application-x-firmware.png
+share/icons/Adwaita/32x32/mimetypes/application-x-generic.png
+share/icons/Adwaita/32x32/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/32x32/mimetypes/audio-x-generic.png
 share/icons/Adwaita/32x32/mimetypes/font-x-generic.png
 share/icons/Adwaita/32x32/mimetypes/image-x-generic.png
@@ -1628,7 +1594,9 @@ share/icons/Adwaita/48x48/devices/audio-headset.png
 share/icons/Adwaita/48x48/devices/computer.png
 share/icons/Adwaita/48x48/devices/drive-harddisk.png
 share/icons/Adwaita/48x48/devices/drive-removable-media.png
+share/icons/Adwaita/48x48/devices/input-gaming.png
 share/icons/Adwaita/48x48/devices/media-optical.png
+share/icons/Adwaita/48x48/devices/media-removable.png
 share/icons/Adwaita/48x48/devices/printer-network.png
 share/icons/Adwaita/48x48/devices/printer.png
 share/icons/Adwaita/48x48/emblems/emblem-readonly.png
@@ -1830,7 +1798,6 @@ share/icons/Adwaita/48x48/legacy/media-playback-stop.png
 share/icons/Adwaita/48x48/legacy/media-playlist-repeat.png
 share/icons/Adwaita/48x48/legacy/media-playlist-shuffle.png
 share/icons/Adwaita/48x48/legacy/media-record.png
-share/icons/Adwaita/48x48/legacy/media-removable.png
 share/icons/Adwaita/48x48/legacy/media-seek-backward.png
 share/icons/Adwaita/48x48/legacy/media-seek-forward.png
 share/icons/Adwaita/48x48/legacy/media-skip-backward.png
@@ -1925,17 +1892,6 @@ share/icons/Adwaita/48x48/legacy/view-refresh.png
 share/icons/Adwaita/48x48/legacy/view-restore.png
 share/icons/Adwaita/48x48/legacy/view-sort-ascending.png
 share/icons/Adwaita/48x48/legacy/view-sort-descending.png
-share/icons/Adwaita/48x48/legacy/weather-clear-night.png
-share/icons/Adwaita/48x48/legacy/weather-clear.png
-share/icons/Adwaita/48x48/legacy/weather-few-clouds-night.png
-share/icons/Adwaita/48x48/legacy/weather-few-clouds.png
-share/icons/Adwaita/48x48/legacy/weather-fog.png
-share/icons/Adwaita/48x48/legacy/weather-overcast.png
-share/icons/Adwaita/48x48/legacy/weather-severe-alert.png
-share/icons/Adwaita/48x48/legacy/weather-showers-scattered.png
-share/icons/Adwaita/48x48/legacy/weather-showers.png
-share/icons/Adwaita/48x48/legacy/weather-snow.png
-share/icons/Adwaita/48x48/legacy/weather-storm.png
 share/icons/Adwaita/48x48/legacy/web-browser.png
 share/icons/Adwaita/48x48/legacy/window-close.png
 share/icons/Adwaita/48x48/legacy/window-new.png
@@ -1947,6 +1903,8 @@ share/icons/Adwaita/48x48/mimetypes/application-certificate.png
 share/icons/Adwaita/48x48/mimetypes/application-x-addon.png
 share/icons/Adwaita/48x48/mimetypes/application-x-executable.png
 share/icons/Adwaita/48x48/mimetypes/application-x-firmware.png
+share/icons/Adwaita/48x48/mimetypes/application-x-generic.png
+share/icons/Adwaita/48x48/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/48x48/mimetypes/audio-x-generic.png
 share/icons/Adwaita/48x48/mimetypes/font-x-generic.png
 share/icons/Adwaita/48x48/mimetypes/image-x-generic.png
@@ -1998,7 +1956,9 @@ share/icons/Adwaita/512x512/devices/audio-microphone.png
 share/icons/Adwaita/512x512/devices/computer.png
 share/icons/Adwaita/512x512/devices/drive-harddisk.png
 share/icons/Adwaita/512x512/devices/drive-removable-media.png
+share/icons/Adwaita/512x512/devices/input-gaming.png
 share/icons/Adwaita/512x512/devices/media-optical.png
+share/icons/Adwaita/512x512/devices/media-removable.png
 share/icons/Adwaita/512x512/devices/printer-network.png
 share/icons/Adwaita/512x512/devices/printer.png
 share/icons/Adwaita/512x512/emblems/emblem-readonly.png
@@ -2033,6 +1993,8 @@ share/icons/Adwaita/512x512/legacy/utilities-terminal.png
 share/icons/Adwaita/512x512/mimetypes/application-x-addon.png
 share/icons/Adwaita/512x512/mimetypes/application-x-executable.png
 share/icons/Adwaita/512x512/mimetypes/application-x-firmware.png
+share/icons/Adwaita/512x512/mimetypes/application-x-generic.png
+share/icons/Adwaita/512x512/mimetypes/application-x-sharedlib.png
 share/icons/Adwaita/512x512/mimetypes/audio-x-generic.png
 share/icons/Adwaita/512x512/mimetypes/font-x-generic.png
 share/icons/Adwaita/512x512/mimetypes/image-x-generic.png
