@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/09/26 07:01:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/03/30 14:45:36 cirnatdan Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz-common.h
@@ -31,7 +31,6 @@ lib/compiz/libresize.la
 lib/compiz/librotate.la
 lib/compiz/libscale.la
 lib/compiz/libscreenshot.la
-${PLIST.gnome}lib/compiz/libsvg.la
 lib/compiz/libswitcher.la
 lib/compiz/libvideo.la
 lib/compiz/libwater.la
@@ -43,8 +42,6 @@ lib/pkgconfig/compiz-gconf.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
-${PLIST.gnome}lib/window-manager-settings/libcompiz.la
-${PLIST.gnome}share/applications/compiz.desktop
 share/compiz/annotate.xml
 share/compiz/blur.xml
 share/compiz/clone.xml
@@ -114,9 +111,6 @@ share/gconf/schemas/compiz-water.schemas
 share/gconf/schemas/compiz-wobbly.schemas
 share/gconf/schemas/compiz-zoom.schemas
 share/gconf/schemas/gwd.schemas
-${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
-${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-key.xml
-${PLIST.gnome}share/gnome/wm-properties/compiz-wm.desktop
 ${PLIST.kde}share/kde/config.kcfg/compiz-annotate.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-blur.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-clone.kcfg
