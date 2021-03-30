@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2021/02/18 16:38:26 nia Exp $
+# $NetBSD: Makefile,v 1.625 2021/03/30 12:01:04 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -411,6 +411,7 @@ SUBDIR+=	rhythmbox
 SUBDIR+=	rip
 SUBDIR+=	rosegarden
 SUBDIR+=	rsynth
+SUBDIR+=	rtunes
 SUBDIR+=	rubberband
 SUBDIR+=	ruby-mp3info
 SUBDIR+=	ruby-taglib
