@@ -1,14 +1,19 @@
-$NetBSD: distinfo,v 1.32 2019/11/01 16:21:11 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/03/30 17:01:49 ryoon Exp $
 
-SHA1 (uim-1.8.8.tar.bz2) = 369e0c10927d4ede8ed5434631b57ab42ca98406
-RMD160 (uim-1.8.8.tar.bz2) = 80eb077b2a53997f13f036da7cd565696441482e
-SHA512 (uim-1.8.8.tar.bz2) = 2257ae48f4f2b79039a5f6be0fc740e218d5609e004dad9a5a1aa5d4066587ee59d0be06bc23c7d567a48901466227fedc4778b480f7184d84b0b3b4dddac9a3
-Size (uim-1.8.8.tar.bz2) = 6228743 bytes
-SHA1 (patch-configure.ac) = 741c0f4ee905218cebe0f0b86aeb1e1923a82b40
-SHA1 (patch-fep_escseq.c) = 6c25c344e5b694542a3c5bc137ae1a1d36a8c835
-SHA1 (patch-fep_uim-fep.c) = 734bccf97a1f0a2ba709c0841a46fe9c9f448e92
+SHA1 (uim-1.8.9pre20210104-d1ac9d9315ff8c57c713b502544fef9b3a83b3e5.tar.gz) = 9b211ed03fb0d02c501f5203e1dfb11abab0effa
+RMD160 (uim-1.8.9pre20210104-d1ac9d9315ff8c57c713b502544fef9b3a83b3e5.tar.gz) = 444d6d120b7cff6dd5f5c8c540f0441964511080
+SHA512 (uim-1.8.9pre20210104-d1ac9d9315ff8c57c713b502544fef9b3a83b3e5.tar.gz) = 39e046a8ee3bbc06ff0bab685e0ded8f63e9c474661ffecf7ed12e25cad3151498b2fecc7f14ca6f0c78974e55265df47d656a55bf158b41fe21a69071d02fe8
+Size (uim-1.8.9pre20210104-d1ac9d9315ff8c57c713b502544fef9b3a83b3e5.tar.gz) = 4054622 bytes
+SHA1 (uim-libgcroots-d362356cc4c5f591695d2fbda7746918250c9e99.tar.gz) = f08e37c3df01e6db69f024b97ad9943ebf44646b
+RMD160 (uim-libgcroots-d362356cc4c5f591695d2fbda7746918250c9e99.tar.gz) = e7eb58e4fa56dea6eef0bda31ed3efd3ed26c364
+SHA512 (uim-libgcroots-d362356cc4c5f591695d2fbda7746918250c9e99.tar.gz) = b47e94b2aae208fe568a75d2f2d75043939b3c865ec90f9f1219c77ecd9c8649572eb609745886c1a018a1c6c6bdc3c235a8247e7240b2713f2320c57051b6c6
+Size (uim-libgcroots-d362356cc4c5f591695d2fbda7746918250c9e99.tar.gz) = 88827 bytes
+SHA1 (uim-sigscheme-beb8fbdc69b523d14fc202a4d17375555a74c772.tar.gz) = 3623bb2a7974129472e57558a1a44530c595f024
+RMD160 (uim-sigscheme-beb8fbdc69b523d14fc202a4d17375555a74c772.tar.gz) = 3b87b167a3bb741417cd74c9f3bd487d90cdd7b8
+SHA512 (uim-sigscheme-beb8fbdc69b523d14fc202a4d17375555a74c772.tar.gz) = 3151d849c6a56f8438a8676b646dabe5abac317b77e834c6ab29b0282e83d21e4e72171f1353f15b19a5d7b51b5ab4f287cf01b9a11e4785d18e4fa0cce2966c
+Size (uim-sigscheme-beb8fbdc69b523d14fc202a4d17375555a74c772.tar.gz) = 571469 bytes
 SHA1 (patch-scm_Makefile.am) = b4a23a7d507d8d7fe6122f3d2f50fed40589947f
-SHA1 (patch-sigscheme_configure.ac) = 221077809cfaa80cee2e52e3eaebf39b13ae5799
+SHA1 (patch-sigscheme_configure.ac) = 2e8a7c863be864c2132577a556788c78c8ca57cb
 SHA1 (patch-sigscheme_doc_Makefile.am) = e21e33d7eb078819ab34f9d7fdc10d7f4401a2c4
 SHA1 (patch-sigscheme_include_sigscheme_Makefile.am) = d54b38982c199b321c6ac0d8700bfe9c29084eee
 SHA1 (patch-uim_Makefile.am) = e3a9e4dc99965c271fd6e783d42a6a136bf904b2
