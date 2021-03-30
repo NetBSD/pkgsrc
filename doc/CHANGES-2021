@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1867 2021/03/30 09:23:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1868 2021/03/30 09:30:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2809,3 +2809,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/phonon-qt5-backend-gstreamer to 4.10.0 [markd 2021-03-30]
 	Updated devel/py-astroid to 2.5.2 [adam 2021-03-30]
 	Updated devel/py-pylint to 2.7.3 [adam 2021-03-30]
+	Updated graphics/jasper to 2.0.28 [adam 2021-03-30]
+	Updated net/libtorrent-rasterbar to 1.2.13 [adam 2021-03-30]
