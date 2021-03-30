@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/30 08:59:06 markd Exp $
+
+SHA1 (phonon-backend-vlc-0.11.2.tar.xz) = a57d5a80dc922ebd70a3d09caadc6f13c740003d
+RMD160 (phonon-backend-vlc-0.11.2.tar.xz) = 9f11f1dac8fd9fec573300c13e79a0f6fb108989
+SHA512 (phonon-backend-vlc-0.11.2.tar.xz) = 14ec3ef91aa4ca8275bc92f9cf5bee181ad57b4c2bf696120c8931e34c950d360c58d935f4a9298b2fae6e4ea5fac4b025df697a1bbf270da71a2151f0954949
+Size (phonon-backend-vlc-0.11.2.tar.xz) = 66096 bytes
