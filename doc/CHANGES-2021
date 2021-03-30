@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1866 2021/03/30 09:12:35 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1867 2021/03/30 09:23:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2807,3 +2807,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/phonon-qt5-backend-vlc to 0.11.2 [markd 2021-03-30]
 	Updated multimedia/phonon-backend-gstreamer-shared to 4.10.0 [markd 2021-03-30]
 	Updated multimedia/phonon-qt5-backend-gstreamer to 4.10.0 [markd 2021-03-30]
+	Updated devel/py-astroid to 2.5.2 [adam 2021-03-30]
+	Updated devel/py-pylint to 2.7.3 [adam 2021-03-30]
