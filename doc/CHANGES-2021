@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1863 2021/03/30 06:59:59 bouyer Exp $
+$NetBSD: CHANGES-2021,v 1.1864 2021/03/30 07:51:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2798,3 +2798,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/din to 50.1 [fox 2021-03-30]
 	Updated sysutils/xenkernel413 to 4.13.3 [bouyer 2021-03-30]
 	Updated sysutils/xentools413 to 4.13.3 [bouyer 2021-03-30]
+	Updated databases/sqlite3 to 3.35.3 [adam 2021-03-30]
+	Updated databases/sqlite3-docs to 3.35.3 [adam 2021-03-30]
+	Updated databases/sqlite3-tcl to 3.35.3 [adam 2021-03-30]
+	Updated devel/lemon to 1.0.3.35.3 [adam 2021-03-30]
