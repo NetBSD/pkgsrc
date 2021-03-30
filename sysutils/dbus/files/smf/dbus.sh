@@ -10,7 +10,7 @@ if [ ! -x @PREFIX@/bin/dbus-daemon ]; then
 	exit $SMF_EXIT_ERR_FATAL
 fi
 
-if [ ! -f @VARBASE@/db/dbus/machine-id ]; then
+if [ ! -f @VARBASE@/lib/dbus/machine-id ]; then
 	@PREFIX@/bin/dbus-uuidgen --ensure
 fi
 pidfile="@VARBASE@/run/dbus/pid"
