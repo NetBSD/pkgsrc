@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.8 2021/03/30 12:01:04 nia Exp $
+
+SHA1 (rtunes-0.8.tar.gz) = 16830fbdceaf2d70943113ee427ad9eeeddaed14
+RMD160 (rtunes-0.8.tar.gz) = 725b454b9c0f7d7b1170d8c89ec70536cd86d0ae
+SHA512 (rtunes-0.8.tar.gz) = 8e540b66c16d4a5f745999ceb6c07853dccf8270b5e5650cf3c21297dd45add3583ee0e866b27fb7082a279375b4be95f301ff1157e455a7d959b60f9a30a924
+Size (rtunes-0.8.tar.gz) = 21636 bytes
+SHA1 (patch-rtunes_Makefile) = f46e906afff59ad0f31817c0a87c622f37fa0597
+SHA1 (patch-rtunes_cipher.c) = 9b55b4f5fd0e48ba9039f52f2925bd1005e9a68b
+SHA1 (patch-rtunes_parse.y) = 76294edfb4d0c56cb08189578d7fe9991c533cb3
+SHA1 (patch-rtunes_rtsp.c) = ab8f8bf845258b9a994e02195fe65ce9ceba2c07
+SHA1 (patch-rtunes_rtunes.1) = c3d64a8c671dac0fdf1cd87ccbc562f2fb0d446e
+SHA1 (patch-rtunes_rtunes.c) = 0a177c985c642b9b1cfa122aa9ff67b5e54f5038
