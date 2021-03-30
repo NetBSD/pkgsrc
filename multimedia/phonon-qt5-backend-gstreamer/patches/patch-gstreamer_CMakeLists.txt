@@ -1,0 +1,12 @@
+$NetBSD: patch-gstreamer_CMakeLists.txt,v 1.1 2021/03/30 09:03:32 markd Exp $
+
+Dont install icons. Separated out into separate package.
+
+--- gstreamer/CMakeLists.txt.orig	2019-08-27 13:27:22.000000000 +0000
++++ gstreamer/CMakeLists.txt
+@@ -136,4 +136,4 @@ install(TARGETS phonon_gstreamer DESTINA
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/phonon-gstreamer.json.in
+                 ${CMAKE_CURRENT_BINARY_DIR}/phonon-gstreamer.json @ONLY)
+ 
+-add_subdirectory(icons)
++#add_subdirectory(icons)
