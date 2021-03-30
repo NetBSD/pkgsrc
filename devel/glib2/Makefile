@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.278 2021/03/30 18:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2021/03/30 20:34:10 cirnatdan Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
@@ -12,6 +12,7 @@ COMMENT=	Some useful routines for C programming (glib2)
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=disabled
+MESON_ARGS+=	-Dlocalstatedir=${VARBASE}
 .if ${OPSYS} == "FreeBSD"
 MESON_ARGS+=	-Db_lundef=false
 .endif
@@ -41,12 +42,6 @@ FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 
 BUILD_DEFS+=		VARBASE
-SUBST_CLASSES+=		dbusdb
-SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
-SUBST_STAGE.dbusdb=	pre-configure
-SUBST_FILES.dbusdb=	gio/gdbusconnection.c
-SUBST_FILES.dbusdb+=	po/*.po
-SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/lib/dbus,g'
 
 SUBST_CLASSES+=		xdg
 SUBST_MESSAGE.xdg=	Adjust XDG_DATA_DIRS so schemas and pixbuf loaders are found
