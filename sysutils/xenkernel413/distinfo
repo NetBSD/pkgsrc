@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.9 2021/02/03 22:27:16 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2021/03/30 06:59:03 bouyer Exp $
 
-SHA1 (xen413/xen-4.13.2.tar.gz) = d514f1de9582c58676420bb2c9fb1c765b44fbff
-RMD160 (xen413/xen-4.13.2.tar.gz) = 96727c20bd84338f8c67c7c584c01ef877bbcb18
-SHA512 (xen413/xen-4.13.2.tar.gz) = cd3092281c97e9421e303aa288aac04dcccd5536ba7c0ff4d51fbf3d07b5ffacfe3456ba06f5cf63577dafbf8cf3a5d9825ceb5e9ef8ca1427900cc3e57b50a3
-Size (xen413/xen-4.13.2.tar.gz) = 39037826 bytes
+SHA1 (xen413/xen-4.13.3.tar.gz) = edcd1bd736afa7b3b3022a97ce8ff215219a90c2
+RMD160 (xen413/xen-4.13.3.tar.gz) = 08665b76171957017c312d5637f6921526a3675d
+SHA512 (xen413/xen-4.13.3.tar.gz) = 622127d824b9c49b57282a887fb404e0bad05ff60bccade82e4e0e9b5ad975ff9aa1fba83392e6d8379e9a15340e8ae9785c0913eb11027816e4600432eea6b6
+Size (xen413/xen-4.13.3.tar.gz) = 39044539 bytes
 SHA1 (patch-Config.mk) = 9372a09efd05c9fbdbc06f8121e411fcb7c7ba65
-SHA1 (patch-XSA348) = 70de325f88e004228d2b69b7ae3b4106175be1e0
-SHA1 (patch-XSA351) = edb0975ab0aa53d7a0ae7816fe170a081eea695e
-SHA1 (patch-XSA355) = 73ca5dff042a4a54b06af36e6ace7d09673c05f0
-SHA1 (patch-XSA358) = 71d5b2e3d19223b986b8572adfbe7355a3a03db6
-SHA1 (patch-XSA359) = 4b778a86fffbe0e2a364e1589d573bbc7c27ff99
-SHA1 (patch-XSA360) = c1aa4bdade4d3318bc2dffa83e359f66997b11df
-SHA1 (patch-fixpvh) = fd71e150e0b3a461875c02c4419dbfb30548d8f6
+SHA1 (patch-fixpvh) = eec14f19d0adc6d96035d6c711270bb375304660
 SHA1 (patch-xen_Makefile) = 465388d80de414ca3bb84faefa0f52d817e423a6
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
 SHA1 (patch-xen_arch_x86_Rules.mk) = 0bedfc53a128a87b6a249ae04fbdf6a053bfb70b
