@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1868 2021/03/30 09:30:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1869 2021/03/30 09:38:47 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2811,3 +2811,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pylint to 2.7.3 [adam 2021-03-30]
 	Updated graphics/jasper to 2.0.28 [adam 2021-03-30]
 	Updated net/libtorrent-rasterbar to 1.2.13 [adam 2021-03-30]
+	Updated devel/glib2 to 2.68.0 [cirnatdan 2021-03-30]
