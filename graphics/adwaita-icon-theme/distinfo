@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/04/20 06:50:53 wiz Exp $
+$NetBSD: distinfo,v 1.15 2021/03/30 07:57:53 cirnatdan Exp $
 
-SHA1 (adwaita-icon-theme-3.36.1.tar.xz) = 4bb4bb8438521be1da332886c6f69c28a1e0ea19
-RMD160 (adwaita-icon-theme-3.36.1.tar.xz) = b068a9c270dcf8b237b7cd5de61294f787c1e43a
-SHA512 (adwaita-icon-theme-3.36.1.tar.xz) = 5df33c8592ebd17e05fb36590423177fa3e07345565302a5b7ef58fb7d7a9b2b3a1789907a81f5ca0abc7446f7e83af059ca9d6432e8182d5274394c79a24fb9
-Size (adwaita-icon-theme-3.36.1.tar.xz) = 17247020 bytes
+SHA1 (adwaita-icon-theme-3.38.0.tar.xz) = 64a4c9b75a2264ff301e48cfb29e675ee6a9164e
+RMD160 (adwaita-icon-theme-3.38.0.tar.xz) = 2803c62377edb268e8b8c329268fe76bbcfe94f7
+SHA512 (adwaita-icon-theme-3.38.0.tar.xz) = 710f034ef80476a4e9d60bcb7ba604e340ac561aafc67400b2cee2aac4696bfaab8a7d69a289116f884cce9bad1f8b3a3e0aff77588ecb9262e7bf250740af13
+Size (adwaita-icon-theme-3.38.0.tar.xz) = 17202144 bytes
