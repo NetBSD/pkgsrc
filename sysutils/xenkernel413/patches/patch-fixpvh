@@ -1,4 +1,4 @@
-$NetBSD: patch-fixpvh,v 1.1 2020/11/30 14:20:22 bouyer Exp $
+$NetBSD: patch-fixpvh,v 1.2 2021/03/30 06:59:03 bouyer Exp $
 
 Fix booting dom0 PVH. Debugged by Xen developpers Jan Beulich and
 Roger Pau MonnÈ
@@ -16,42 +16,4 @@ index 64dd0a929c..3eb6102a61 100644
              vpci_msix_arch_mask_entry(entry, pdev, entry->masked);
  
          break;
-
->From 232112a292c3b82b3063ea6c7aab56afc8e03f67 Mon Sep 17 00:00:00 2001
-From: Roger Pau Monne <roger.pau@citrix.com>
-Date: Sat, 28 Nov 2020 15:06:26 +0100
-Subject: [PATCH] x86/vioapic: fix usage of index in place of GSI in
- vioapic_write_redirent
-MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
-The usage of idx instead of the GSI in vioapic_write_redirent when
-accessing gsi_assert_count can cause a PVH dom0 with multiple
-vIO-APICs to lose interrupts in case a pin of a IO-APIC different than
-the first one is unmasked with pending interrupts.
-
-Switch to use gsi instead to fix the issue.
-
-Fixes: 9f44b08f7d0e4 ('x86/vioapic: introduce support for multiple vIO APICS')
-Signed-off-by: Roger Pau Monn√© <roge.rpau@citrix.com>
----
- xen/arch/x86/hvm/vioapic.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/xen/arch/x86/hvm/vioapic.c b/xen/arch/x86/hvm/vioapic.c
-index 67d4a6237f..e64abee7a9 100644
---- xen/arch/x86/hvm/vioapic.c.orig
-+++ xen/arch/x86/hvm/vioapic.c
-@@ -260,7 +260,7 @@ static void vioapic_write_redirent(
-         pent->fields.remote_irr = 0;
-     else if ( !ent.fields.mask &&
-               !ent.fields.remote_irr &&
--              hvm_irq->gsi_assert_count[idx] )
-+              hvm_irq->gsi_assert_count[gsi] )
-     {
-         pent->fields.remote_irr = 1;
-         vioapic_deliver(vioapic, idx);
--- 
-2.29.2
 
