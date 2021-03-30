@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/06/07 12:50:03 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/03/30 10:58:31 markd Exp $
 
-SHA1 (kwidgetsaddons-5.70.0.tar.xz) = 96578804ba98e5f573bc7f70040a8c19c1560fed
-RMD160 (kwidgetsaddons-5.70.0.tar.xz) = 6927925cf3a2c5f70b11307d2c1ba80e66b4c59c
-SHA512 (kwidgetsaddons-5.70.0.tar.xz) = 4c11822f3acc2dad31346ba536d2daa2f1f2d357b99f9c181f336696f88a2e3d6b5dd0c82af1481e38662731bba64e7dc7c95e9a4ea588488e987b0e180d02ef
-Size (kwidgetsaddons-5.70.0.tar.xz) = 2341452 bytes
+SHA1 (kwidgetsaddons-5.80.0.tar.xz) = 9a12c7e09a3700f5c9fccd23771a6139e5f0bfa5
+RMD160 (kwidgetsaddons-5.80.0.tar.xz) = e32988bc70b679766a23ee6184d34dcc7e7588df
+SHA512 (kwidgetsaddons-5.80.0.tar.xz) = b89ffcb86f791684e2e0ad06901cec5b235d639e423ad7b43b32fe59fd3a808ba2b6afeff2a7009bd9e03d9297b3fe8e4c04794048ff2da4539baccdbfddb8b4
+Size (kwidgetsaddons-5.80.0.tar.xz) = 2367736 bytes

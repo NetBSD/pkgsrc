@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/06/07 10:56:48 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/03/30 10:58:22 markd Exp $
 
-SHA1 (kdeclarative-5.70.0.tar.xz) = d9aaac0a40ff2e1c0e92a47f74b2d25bec77fb64
-RMD160 (kdeclarative-5.70.0.tar.xz) = f48ef82c1c20a7926a3634f3abd8a1e91c152c0a
-SHA512 (kdeclarative-5.70.0.tar.xz) = c974edf29cf5e02ce01bd0e158c1ee25ede8bac192d30d1398afa680420de05e0a8f4ba1b7f74577b6fd9c3e41d4bb5f7ec2730eddf1834b79dcda623b5f6714
-Size (kdeclarative-5.70.0.tar.xz) = 175644 bytes
+SHA1 (kdeclarative-5.80.0.tar.xz) = 20a31131768d0dd19e7a2b5515092886918a2c93
+RMD160 (kdeclarative-5.80.0.tar.xz) = 4515cc07af73bf374283d55a7975c10e3bf9ba2d
+SHA512 (kdeclarative-5.80.0.tar.xz) = e3db516267474acab8967464eb7ec7ff0ce93614efd708d76d9df5273d31cc104e6ec3a4dd8115d86ffc357e85a27afb797c5842d489ae93636d9a1f16d9915a
+Size (kdeclarative-5.80.0.tar.xz) = 185132 bytes

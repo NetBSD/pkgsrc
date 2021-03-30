@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/06/07 11:51:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/30 10:58:28 markd Exp $
 bin/solid-hardware5
 include/KF5/Solid/Solid/Battery
 include/KF5/Solid/Solid/Block
@@ -48,6 +48,7 @@ qt5/qml/org/kde/solid/libsolidextensionplugin.so
 qt5/qml/org/kde/solid/qmldir
 share/locale/ar/LC_MESSAGES/solid5_qt.qm
 share/locale/ast/LC_MESSAGES/solid5_qt.qm
+share/locale/az/LC_MESSAGES/solid5_qt.qm
 share/locale/bg/LC_MESSAGES/solid5_qt.qm
 share/locale/bs/LC_MESSAGES/solid5_qt.qm
 share/locale/ca/LC_MESSAGES/solid5_qt.qm
@@ -109,3 +110,4 @@ share/locale/uk/LC_MESSAGES/solid5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/solid5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/solid5_qt.qm
 share/qlogging-categories5/solid.categories
+share/qlogging-categories5/solid.renamecategories

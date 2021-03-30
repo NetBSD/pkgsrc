@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:04:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:29 markd Exp $
 bin/kactivities-cli
 include/KF5/KActivities/KActivities/ActivitiesModel
 include/KF5/KActivities/KActivities/Consumer
@@ -26,3 +26,4 @@ qt5/mkspecs/modules/qt_KActivities.pri
 qt5/qml/org/kde/activities/libkactivitiesextensionplugin.so
 qt5/qml/org/kde/activities/qmldir
 share/qlogging-categories5/kactivities.categories
+share/qlogging-categories5/kactivities.renamecategories

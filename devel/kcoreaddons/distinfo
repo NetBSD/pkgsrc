@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/01/13 10:47:05 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2021/03/30 10:58:21 markd Exp $
 
-SHA1 (kcoreaddons-5.70.0.tar.xz) = 4242f9e8ebfe57cac2bbceba7b026a5305623d69
-RMD160 (kcoreaddons-5.70.0.tar.xz) = 5a35804faa2b9a35b64a7df583f6ea3390bf5ee8
-SHA512 (kcoreaddons-5.70.0.tar.xz) = e14994ceef6fd9f65f8614ba3853b78b3cb416cb284c062eef0f0271bd692c153269d9da4acac285941bdca9e2952f75e292f62586f25358a33a646345a534a6
-Size (kcoreaddons-5.70.0.tar.xz) = 381028 bytes
+SHA1 (kcoreaddons-5.80.0.tar.xz) = 7259733b8ca50de16856c5629dc23a7f8c683bbb
+RMD160 (kcoreaddons-5.80.0.tar.xz) = b363ed07d1fe02e76c5c7e61dde98bb71e542830
+SHA512 (kcoreaddons-5.80.0.tar.xz) = 38e4784eb344402d31cd0be0af4f3d514d5b4b2713e781abce5896f3fef35852dad6a59e3965a25639d042ad90ca527a6e79a312ffc210594d501b5c52ee7d1c
+Size (kcoreaddons-5.80.0.tar.xz) = 410980 bytes
 SHA1 (patch-src_lib_caching_kshareddatacache_p.h) = a3dff380dd98bbef3f9bbfe32f1e852b985b6306
 SHA1 (patch-src_lib_io_kautosavefile.cpp) = b50bd37139febd7e82f3087241107171161dec2a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 19:53:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:26 markd Exp $
 include/KF5/Attica/Attica/AccountBalance
 include/KF5/Attica/Attica/Achievement
 include/KF5/Attica/Attica/Activity
@@ -92,3 +92,4 @@ lib/libKF5Attica.so.${PKGVERSION}
 lib/pkgconfig/libKF5Attica.pc
 qt5/mkspecs/modules/qt_Attica.pri
 share/qlogging-categories5/attica.categories
+share/qlogging-categories5/attica.renamecategories

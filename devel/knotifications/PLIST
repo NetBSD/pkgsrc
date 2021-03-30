@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/07 11:13:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:22 markd Exp $
 include/KF5/KNotifications/KNotification
 include/KF5/KNotifications/KNotificationJobUiDelegate
 include/KF5/KNotifications/KNotificationPlugin
@@ -30,6 +30,7 @@ share/locale/af/LC_MESSAGES/knotifications5_qt.qm
 share/locale/ar/LC_MESSAGES/knotifications5_qt.qm
 share/locale/as/LC_MESSAGES/knotifications5_qt.qm
 share/locale/ast/LC_MESSAGES/knotifications5_qt.qm
+share/locale/az/LC_MESSAGES/knotifications5_qt.qm
 share/locale/be/LC_MESSAGES/knotifications5_qt.qm
 share/locale/be@latin/LC_MESSAGES/knotifications5_qt.qm
 share/locale/bg/LC_MESSAGES/knotifications5_qt.qm
@@ -127,3 +128,4 @@ share/locale/zh_CN/LC_MESSAGES/knotifications5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/knotifications5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/knotifications5_qt.qm
 share/qlogging-categories5/knotifications.categories
+share/qlogging-categories5/knotifications.renamecategories
