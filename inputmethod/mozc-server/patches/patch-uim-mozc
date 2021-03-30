@@ -1,0 +1,2974 @@
+$NetBSD: patch-uim-mozc,v 1.1 2021/03/30 17:04:48 ryoon Exp $
+
+* From Debian sid.
+
+From 0758147463701aa40bc622c9b93c177f2cc5b3e3 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Tue, 3 Apr 2018 08:27:47 +0900
+Subject: [PATCH ] Update uim-mozc to
+ c979f127acaeb7b35d3344e8b1e40848e1a68d54
+
+Description: Support uim framewor
+Origin: macuim project: https://github.com/e-kato/macuim.git c979f127acaeb7b35d3344e8b1e40848e1a68d54
+Forwarded: http://code.google.com/p/mozc/issues/detail?id=13
+Author: uim Project http://code.google.com/p/uim/
+Last-Update: 2020-12-28
+
+* Fix mozc::InitMozc
+* Use Utf8SubString instead of SubString
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ src/unix/uim/key_translator.cc       |  441 ++++++++++
+ src/unix/uim/key_translator.h        |  111 +++
+ src/unix/uim/mozc.cc                 | 1219 ++++++++++++++++++++++++++
+ src/unix/uim/scm/mozc-custom.scm     |  396 +++++++++
+ src/unix/uim/scm/mozc-key-custom.scm |   74 ++
+ src/unix/uim/scm/mozc.scm            |  566 ++++++++++++
+ src/unix/uim/uim.gyp                 |   85 ++
+ 7 files changed, 2892 insertions(+)
+ create mode 100644 src/unix/uim/key_translator.cc
+ create mode 100644 src/unix/uim/key_translator.h
+ create mode 100644 src/unix/uim/mozc.cc
+ create mode 100644 src/unix/uim/scm/mozc-custom.scm
+ create mode 100644 src/unix/uim/scm/mozc-key-custom.scm
+ create mode 100644 src/unix/uim/scm/mozc.scm
+ create mode 100644 src/unix/uim/uim.gyp
+
+diff --git a/src/unix/uim/key_translator.cc b/src/unix/uim/key_translator.cc
+new file mode 100644
+index 00000000..b1c9be85
+--- /dev/null
++++ unix/uim/key_translator.cc
+@@ -0,0 +1,441 @@
++// Copyright 2010, Google Inc.
++// Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are
++// met:
++//
++//     * Redistributions of source code must retain the above copyright
++// notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above
++// copyright notice, this list of conditions and the following disclaimer
++// in the documentation and/or other materials provided with the
++// distribution.
++//     * Neither the name of authors nor the names of its
++// contributors may be used to endorse or promote products derived from
++// this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++
++#include "unix/uim/key_translator.h"
++
++#include <uim.h>
++
++#include "base/logging.h"
++
++namespace {
++
++const struct SpecialKeyMap {
++  unsigned int from;
++  mozc::commands::KeyEvent::SpecialKey to;
++} special_key_map[] = {
++  {0x20, mozc::commands::KeyEvent::SPACE},
++  {UKey_Return, mozc::commands::KeyEvent::ENTER},
++  {UKey_Left, mozc::commands::KeyEvent::LEFT},
++  {UKey_Right, mozc::commands::KeyEvent::RIGHT},
++  {UKey_Up, mozc::commands::KeyEvent::UP},
++  {UKey_Down, mozc::commands::KeyEvent::DOWN},
++  {UKey_Escape, mozc::commands::KeyEvent::ESCAPE},
++  {UKey_Delete, mozc::commands::KeyEvent::DEL},
++  {UKey_Backspace, mozc::commands::KeyEvent::BACKSPACE},
++  {UKey_Insert, mozc::commands::KeyEvent::INSERT},
++  {UKey_Henkan, mozc::commands::KeyEvent::HENKAN},
++  {UKey_Muhenkan, mozc::commands::KeyEvent::MUHENKAN},
++  {UKey_Hiragana, mozc::commands::KeyEvent::KANA},
++  {UKey_Katakana, mozc::commands::KeyEvent::KANA},
++  {UKey_Eisu_toggle, mozc::commands::KeyEvent::EISU},
++  {UKey_Home, mozc::commands::KeyEvent::HOME},
++  {UKey_End, mozc::commands::KeyEvent::END},
++  {UKey_Tab, mozc::commands::KeyEvent::TAB},
++  {UKey_F1, mozc::commands::KeyEvent::F1},
++  {UKey_F2, mozc::commands::KeyEvent::F2},
++  {UKey_F3, mozc::commands::KeyEvent::F3},
++  {UKey_F4, mozc::commands::KeyEvent::F4},
++  {UKey_F5, mozc::commands::KeyEvent::F5},
++  {UKey_F6, mozc::commands::KeyEvent::F6},
++  {UKey_F7, mozc::commands::KeyEvent::F7},
++  {UKey_F8, mozc::commands::KeyEvent::F8},
++  {UKey_F9, mozc::commands::KeyEvent::F9},
++  {UKey_F10, mozc::commands::KeyEvent::F10},
++  {UKey_F11, mozc::commands::KeyEvent::F11},
++  {UKey_F12, mozc::commands::KeyEvent::F12},
++  {UKey_F13, mozc::commands::KeyEvent::F13},
++  {UKey_F14, mozc::commands::KeyEvent::F14},
++  {UKey_F15, mozc::commands::KeyEvent::F15},
++  {UKey_F16, mozc::commands::KeyEvent::F16},
++  {UKey_F17, mozc::commands::KeyEvent::F17},
++  {UKey_F18, mozc::commands::KeyEvent::F18},
++  {UKey_F19, mozc::commands::KeyEvent::F19},
++  {UKey_F20, mozc::commands::KeyEvent::F20},
++  {UKey_F21, mozc::commands::KeyEvent::F21},
++  {UKey_F22, mozc::commands::KeyEvent::F22},
++  {UKey_F23, mozc::commands::KeyEvent::F23},
++  {UKey_F24, mozc::commands::KeyEvent::F24},
++  {UKey_Prior, mozc::commands::KeyEvent::PAGE_UP},
++  {UKey_Next, mozc::commands::KeyEvent::PAGE_DOWN},
++};
++
++const struct ModifierKeyMap {
++  unsigned int from;
++  mozc::commands::KeyEvent::ModifierKey to;
++} modifier_key_map[] = {
++  {UKey_Shift, mozc::commands::KeyEvent::SHIFT},
++  {UKey_Control, mozc::commands::KeyEvent::CTRL},
++  {UKey_Alt, mozc::commands::KeyEvent::ALT},
++};
++
++const struct ModifierMaskMap {
++  unsigned int from;
++  mozc::commands::KeyEvent::ModifierKey to;
++} modifier_mask_map[] = {
++  {UMod_Shift, mozc::commands::KeyEvent::SHIFT},
++  {UMod_Control, mozc::commands::KeyEvent::CTRL},
++  {UMod_Alt, mozc::commands::KeyEvent::ALT},
++};
++
++// TODO:Add kana_map_dv to support Dvoraklayout.
++const struct KanaMap {
++  unsigned int code;
++  const char *no_shift;
++  const char *shift;
++} kana_map_jp[] = {
++  { '1' , "\xe3\x81\xac", "\xe3\x81\xac" },  // "ぬ", "ぬ"
++  { '!' , "\xe3\x81\xac", "\xe3\x81\xac" },  // "ぬ", "ぬ"
++  { '2' , "\xe3\x81\xb5", "\xe3\x81\xb5" },  // "ふ", "ふ"
++  { '\"', "\xe3\x81\xb5", "\xe3\x81\xb5" },  // "ふ", "ふ"
++  { '3' , "\xe3\x81\x82", "\xe3\x81\x81" },  // "あ", "ぁ"
++  { '#' , "\xe3\x81\x81", "\xe3\x81\x81" },  // "ぁ", "ぁ"
++  { '4' , "\xe3\x81\x86", "\xe3\x81\x85" },  // "う", "ぅ"
++  { '$' , "\xe3\x81\x85", "\xe3\x81\x85" },  // "ぅ", "ぅ"
++  { '5' , "\xe3\x81\x88", "\xe3\x81\x87" },  // "え", "ぇ"
++  { '%' , "\xe3\x81\x87", "\xe3\x81\x87" },  // "ぇ", "ぇ"
++  { '6' , "\xe3\x81\x8a", "\xe3\x81\x89" },  // "お", "ぉ"
++  { '&' , "\xe3\x81\x89", "\xe3\x81\x89" },  // "ぉ", "ぉ"
++  { '7' , "\xe3\x82\x84", "\xe3\x82\x83" },  // "や", "ゃ"
++  { '\'', "\xe3\x82\x83", "\xe3\x82\x83" },  // "ゃ", "ゃ"
++  { '8' , "\xe3\x82\x86", "\xe3\x82\x85" },  // "ゆ", "ゅ"
++  { '(' , "\xe3\x82\x85", "\xe3\x82\x85" },  // "ゅ", "ゅ"
++  { '9' , "\xe3\x82\x88", "\xe3\x82\x87" },  // "よ", "ょ"
++  { ')' , "\xe3\x82\x87", "\xe3\x82\x87" },  // "ょ", "ょ"
++  { '0' , "\xe3\x82\x8f", "\xe3\x82\x92" },  // "わ", "を"
++  { '-' , "\xe3\x81\xbb", "\xe3\x81\xbb" },  // "ほ", "ほ"
++  { '=' , "\xe3\x81\xbb", "\xe3\x81\xbb" },  // "ほ", "ほ"
++  { '^' , "\xe3\x81\xb8", "\xe3\x81\xb8" },  // "へ", "へ"
++  { '~' , "\xe3\x82\x92", "\xe3\x82\x92" },  // "を", "を"
++  { '|' , "\xe3\x83\xbc", "\xe3\x83\xbc" },  // "ー", "ー"
++  { 'q' , "\xe3\x81\x9f", "\xe3\x81\x9f" },  // "た", "た"
++  { 'Q' , "\xe3\x81\x9f", "\xe3\x81\x9f" },  // "た", "た"
++  { 'w' , "\xe3\x81\xa6", "\xe3\x81\xa6" },  // "て", "て"
++  { 'W' , "\xe3\x81\xa6", "\xe3\x81\xa6" },  // "て", "て"
++  { 'e' , "\xe3\x81\x84", "\xe3\x81\x83" },  // "い", "ぃ"
++  { 'E' , "\xe3\x81\x83", "\xe3\x81\x83" },  // "ぃ", "ぃ"
++  { 'r' , "\xe3\x81\x99", "\xe3\x81\x99" },  // "す", "す"
++  { 'R' , "\xe3\x81\x99", "\xe3\x81\x99" },  // "す", "す"
++  { 't' , "\xe3\x81\x8b", "\xe3\x81\x8b" },  // "か", "か"
++  { 'T' , "\xe3\x81\x8b", "\xe3\x81\x8b" },  // "か", "か"
++  { 'y' , "\xe3\x82\x93", "\xe3\x82\x93" },  // "ん", "ん"
++  { 'Y' , "\xe3\x82\x93", "\xe3\x82\x93" },  // "ん", "ん"
++  { 'u' , "\xe3\x81\xaa", "\xe3\x81\xaa" },  // "な", "な"
++  { 'U' , "\xe3\x81\xaa", "\xe3\x81\xaa" },  // "な", "な"
++  { 'i' , "\xe3\x81\xab", "\xe3\x81\xab" },  // "に", "に"
++  { 'I' , "\xe3\x81\xab", "\xe3\x81\xab" },  // "に", "に"
++  { 'o' , "\xe3\x82\x89", "\xe3\x82\x89" },  // "ら", "ら"
++  { 'O' , "\xe3\x82\x89", "\xe3\x82\x89" },  // "ら", "ら"
++  { 'p' , "\xe3\x81\x9b", "\xe3\x81\x9b" },  // "せ", "せ"
++  { 'P' , "\xe3\x81\x9b", "\xe3\x81\x9b" },  // "せ", "せ"
++  { '@' , "\xe3\x82\x9b", "\xe3\x82\x9b" },  // "゛", "゛"
++  { '`' , "\xe3\x82\x9b", "\xe3\x82\x9b" },  // "゛", "゛"
++  { '[' , "\xe3\x82\x9c", "\xe3\x80\x8c" },  // "゜", "「"
++  { '{' , "\xe3\x82\x9c", "\xe3\x80\x8c" },  // "゜", "「"
++  { 'a' , "\xe3\x81\xa1", "\xe3\x81\xa1" },  // "ち", "ち"
++  { 'A' , "\xe3\x81\xa1", "\xe3\x81\xa1" },  // "ち", "ち"
++  { 's' , "\xe3\x81\xa8", "\xe3\x81\xa8" },  // "と", "と"
++  { 'S' , "\xe3\x81\xa8", "\xe3\x81\xa8" },  // "と", "と"
++  { 'd' , "\xe3\x81\x97", "\xe3\x81\x97" },  // "し", "し"
++  { 'D' , "\xe3\x81\x97", "\xe3\x81\x97" },  // "し", "し"
++  { 'f' , "\xe3\x81\xaf", "\xe3\x81\xaf" },  // "は", "は"
++  { 'F' , "\xe3\x81\xaf", "\xe3\x81\xaf" },  // "は", "は"
++  { 'g' , "\xe3\x81\x8d", "\xe3\x81\x8d" },  // "き", "き"
++  { 'G' , "\xe3\x81\x8d", "\xe3\x81\x8d" },  // "き", "き"
++  { 'h' , "\xe3\x81\x8f", "\xe3\x81\x8f" },  // "く", "く"
++  { 'H' , "\xe3\x81\x8f", "\xe3\x81\x8f" },  // "く", "く"
++  { 'j' , "\xe3\x81\xbe", "\xe3\x81\xbe" },  // "ま", "ま"
++  { 'J' , "\xe3\x81\xbe", "\xe3\x81\xbe" },  // "ま", "ま"
++  { 'k' , "\xe3\x81\xae", "\xe3\x81\xae" },  // "の", "の"
++  { 'K' , "\xe3\x81\xae", "\xe3\x81\xae" },  // "の", "の"
++  { 'l' , "\xe3\x82\x8a", "\xe3\x82\x8a" },  // "り", "り"
++  { 'L' , "\xe3\x82\x8a", "\xe3\x82\x8a" },  // "り", "り"
++  { ';' , "\xe3\x82\x8c", "\xe3\x82\x8c" },  // "れ", "れ"
++  { '+' , "\xe3\x82\x8c", "\xe3\x82\x8c" },  // "れ", "れ"
++  { ':' , "\xe3\x81\x91", "\xe3\x81\x91" },  // "け", "け"
++  { '*' , "\xe3\x81\x91", "\xe3\x81\x91" },  // "け", "け"
++  { ']' , "\xe3\x82\x80", "\xe3\x80\x8d" },  // "む", "」"
++  { '}' , "\xe3\x80\x8d", "\xe3\x80\x8d" },  // "」", "」"
++  { 'z' , "\xe3\x81\xa4", "\xe3\x81\xa3" },  // "つ", "っ"
++  { 'Z' , "\xe3\x81\xa3", "\xe3\x81\xa3" },  // "っ", "っ"
++  { 'x' , "\xe3\x81\x95", "\xe3\x81\x95" },  // "さ", "さ"
++  { 'X' , "\xe3\x81\x95", "\xe3\x81\x95" },  // "さ", "さ"
++  { 'c' , "\xe3\x81\x9d", "\xe3\x81\x9d" },  // "そ", "そ"
++  { 'C' , "\xe3\x81\x9d", "\xe3\x81\x9d" },  // "そ", "そ"
++  { 'v' , "\xe3\x81\xb2", "\xe3\x81\xb2" },  // "ひ", "ひ"
++  { 'V' , "\xe3\x81\xb2", "\xe3\x81\xb2" },  // "ひ", "ひ"
++  { 'b' , "\xe3\x81\x93", "\xe3\x81\x93" },  // "こ", "こ"
++  { 'B' , "\xe3\x81\x93", "\xe3\x81\x93" },  // "こ", "こ"
++  { 'n' , "\xe3\x81\xbf", "\xe3\x81\xbf" },  // "み", "み"
++  { 'N' , "\xe3\x81\xbf", "\xe3\x81\xbf" },  // "み", "み"
++  { 'm' , "\xe3\x82\x82", "\xe3\x82\x82" },  // "も", "も"
++  { 'M' , "\xe3\x82\x82", "\xe3\x82\x82" },  // "も", "も"
++  { ',' , "\xe3\x81\xad", "\xe3\x80\x81" },  // "ね", "、"
++  { '<' , "\xe3\x80\x81", "\xe3\x80\x81" },  // "、", "、"
++  { '.' , "\xe3\x82\x8b", "\xe3\x80\x82" },  // "る", "。"
++  { '>' , "\xe3\x80\x82", "\xe3\x80\x82" },  // "。", "。"
++  { '/' , "\xe3\x82\x81", "\xe3\x83\xbb" },  // "め", "・"
++  { '?' , "\xe3\x83\xbb", "\xe3\x83\xbb" },  // "・", "・"
++  { '_' , "\xe3\x82\x8d", "\xe3\x82\x8d" },  // "ろ", "ろ"
++  // uim distinguishes backslash key and yen key
++  { '\\', "\xe3\x82\x8d", "\xe3\x82\x8d" },  // "ろ", "ろ"
++  { UKey_Yen, "\xe3\x83\xbc", "\xe3\x83\xbc" }, // "ー", "ー"
++}, kana_map_us[] = {
++  { '`' , "\xe3\x82\x8d", "\xe3\x82\x8d" },  // "ろ", "ろ"
++  { '~' , "\xe3\x82\x8d", "\xe3\x82\x8d" },  // "ろ", "ろ"
++  { '1' , "\xe3\x81\xac", "\xe3\x81\xac" },  // "ぬ", "ぬ"
++  { '!' , "\xe3\x81\xac", "\xe3\x81\xac" },  // "ぬ", "ぬ"
++  { '2' , "\xe3\x81\xb5", "\xe3\x81\xb5" },  // "ふ", "ふ"
++  { '@' , "\xe3\x81\xb5", "\xe3\x81\xb5" },  // "ふ", "ふ"
++  { '3' , "\xe3\x81\x82", "\xe3\x81\x81" },  // "あ", "ぁ"
++  { '#' , "\xe3\x81\x81", "\xe3\x81\x81" },  // "ぁ", "ぁ"
++  { '4' , "\xe3\x81\x86", "\xe3\x81\x85" },  // "う", "ぅ"
++  { '$' , "\xe3\x81\x85", "\xe3\x81\x85" },  // "ぅ", "ぅ"
++  { '5' , "\xe3\x81\x88", "\xe3\x81\x87" },  // "え", "ぇ"
++  { '%' , "\xe3\x81\x87", "\xe3\x81\x87" },  // "ぇ", "ぇ"
++  { '6' , "\xe3\x81\x8a", "\xe3\x81\x89" },  // "お", "ぉ"
++  { '^' , "\xe3\x81\x89", "\xe3\x81\x89" },  // "ぉ", "ぉ"
++  { '7' , "\xe3\x82\x84", "\xe3\x82\x83" },  // "や", "ゃ"
++  { '&' , "\xe3\x82\x83", "\xe3\x82\x83" },  // "ゃ", "ゃ"
++  { '8' , "\xe3\x82\x86", "\xe3\x82\x85" },  // "ゆ", "ゅ"
++  { '*' , "\xe3\x82\x85", "\xe3\x82\x85" },  // "ゅ", "ゅ"
++  { '9' , "\xe3\x82\x88", "\xe3\x82\x87" },  // "よ", "ょ"
++  { '(' , "\xe3\x82\x87", "\xe3\x82\x87" },  // "ょ", "ょ"
++  { '0' , "\xe3\x82\x8f", "\xe3\x82\x92" },  // "わ", "を"
++  { ')' , "\xe3\x82\x92", "\xe3\x82\x92" },  // "を", "を"
++  { '-' , "\xe3\x81\xbb", "\xe3\x83\xbc" },  // "ほ", "ー"
++  { '_' , "\xe3\x83\xbc", "\xe3\x83\xbc" },  // "ー", "ー"
++  { '=' , "\xe3\x81\xb8", "\xe3\x81\xb8" },  // "へ", "へ"
++  { '+' , "\xe3\x81\xb8", "\xe3\x81\xb8" },  // "へ", "へ"
++  { 'q' , "\xe3\x81\x9f", "\xe3\x81\x9f" },  // "た", "た"
++  { 'Q' , "\xe3\x81\x9f", "\xe3\x81\x9f" },  // "た", "た"
++  { 'w' , "\xe3\x81\xa6", "\xe3\x81\xa6" },  // "て", "て"
++  { 'W' , "\xe3\x81\xa6", "\xe3\x81\xa6" },  // "て", "て"
++  { 'e' , "\xe3\x81\x84", "\xe3\x81\x83" },  // "い", "ぃ"
++  { 'E' , "\xe3\x81\x83", "\xe3\x81\x83" },  // "ぃ", "ぃ"
++  { 'r' , "\xe3\x81\x99", "\xe3\x81\x99" },  // "す", "す"
++  { 'R' , "\xe3\x81\x99", "\xe3\x81\x99" },  // "す", "す"
++  { 't' , "\xe3\x81\x8b", "\xe3\x81\x8b" },  // "か", "か"
++  { 'T' , "\xe3\x81\x8b", "\xe3\x81\x8b" },  // "か", "か"
++  { 'y' , "\xe3\x82\x93", "\xe3\x82\x93" },  // "ん", "ん"
++  { 'Y' , "\xe3\x82\x93", "\xe3\x82\x93" },  // "ん", "ん"
++  { 'u' , "\xe3\x81\xaa", "\xe3\x81\xaa" },  // "な", "な"
++  { 'U' , "\xe3\x81\xaa", "\xe3\x81\xaa" },  // "な", "な"
++  { 'i' , "\xe3\x81\xab", "\xe3\x81\xab" },  // "に", "に"
++  { 'I' , "\xe3\x81\xab", "\xe3\x81\xab" },  // "に", "に"
++  { 'o' , "\xe3\x82\x89", "\xe3\x82\x89" },  // "ら", "ら"
++  { 'O' , "\xe3\x82\x89", "\xe3\x82\x89" },  // "ら", "ら"
++  { 'p' , "\xe3\x81\x9b", "\xe3\x81\x9b" },  // "せ", "せ"
++  { 'P' , "\xe3\x81\x9b", "\xe3\x81\x9b" },  // "せ", "せ"
++  { '[' , "\xe3\x82\x9b", "\xe3\x82\x9b" },  // "゛", "゛"
++  { '{' , "\xe3\x82\x9b", "\xe3\x82\x9b" },  // "゛", "゛"
++  { ']' , "\xe3\x82\x9c", "\xe3\x80\x8c" },  // "゜", "「"
++  { '}' , "\xe3\x80\x8c", "\xe3\x80\x8c" },  // "「", "「"
++  { '\\', "\xe3\x82\x80", "\xe3\x80\x8d" },  // "む", "」"
++  { '|' , "\xe3\x80\x8d", "\xe3\x80\x8d" },  // "」", "」"
++  { 'a' , "\xe3\x81\xa1", "\xe3\x81\xa1" },  // "ち", "ち"
++  { 'A' , "\xe3\x81\xa1", "\xe3\x81\xa1" },  // "ち", "ち"
++  { 's' , "\xe3\x81\xa8", "\xe3\x81\xa8" },  // "と", "と"
++  { 'S' , "\xe3\x81\xa8", "\xe3\x81\xa8" },  // "と", "と"
++  { 'd' , "\xe3\x81\x97", "\xe3\x81\x97" },  // "し", "し"
++  { 'D' , "\xe3\x81\x97", "\xe3\x81\x97" },  // "し", "し"
++  { 'f' , "\xe3\x81\xaf", "\xe3\x81\xaf" },  // "は", "は"
++  { 'F' , "\xe3\x81\xaf", "\xe3\x81\xaf" },  // "は", "は"
++  { 'g' , "\xe3\x81\x8d", "\xe3\x81\x8d" },  // "き", "き"
++  { 'G' , "\xe3\x81\x8d", "\xe3\x81\x8d" },  // "き", "き"
++  { 'h' , "\xe3\x81\x8f", "\xe3\x81\x8f" },  // "く", "く"
++  { 'H' , "\xe3\x81\x8f", "\xe3\x81\x8f" },  // "く", "く"
++  { 'j' , "\xe3\x81\xbe", "\xe3\x81\xbe" },  // "ま", "ま"
++  { 'J' , "\xe3\x81\xbe", "\xe3\x81\xbe" },  // "ま", "ま"
++  { 'k' , "\xe3\x81\xae", "\xe3\x81\xae" },  // "の", "の"
++  { 'K' , "\xe3\x81\xae", "\xe3\x81\xae" },  // "の", "の"
++  { 'l' , "\xe3\x82\x8a", "\xe3\x82\x8a" },  // "り", "り"
++  { 'L' , "\xe3\x82\x8a", "\xe3\x82\x8a" },  // "り", "り"
++  { ';' , "\xe3\x82\x8c", "\xe3\x82\x8c" },  // "れ", "れ"
++  { ':' , "\xe3\x82\x8c", "\xe3\x82\x8c" },  // "れ", "れ"
++  { '\'', "\xe3\x81\x91", "\xe3\x81\x91" },  // "け", "け"
++  { '\"', "\xe3\x81\x91", "\xe3\x81\x91" },  // "け", "け"
++  { 'z' , "\xe3\x81\xa4", "\xe3\x81\xa3" },  // "つ", "っ"
++  { 'Z' , "\xe3\x81\xa3", "\xe3\x81\xa3" },  // "っ", "っ"
++  { 'x' , "\xe3\x81\x95", "\xe3\x81\x95" },  // "さ", "さ"
++  { 'X' , "\xe3\x81\x95", "\xe3\x81\x95" },  // "さ", "さ"
++  { 'c' , "\xe3\x81\x9d", "\xe3\x81\x9d" },  // "そ", "そ"
++  { 'C' , "\xe3\x81\x9d", "\xe3\x81\x9d" },  // "そ", "そ"
++  { 'v' , "\xe3\x81\xb2", "\xe3\x81\xb2" },  // "ひ", "ひ"
++  { 'V' , "\xe3\x81\xb2", "\xe3\x81\xb2" },  // "ひ", "ひ"
++  { 'b' , "\xe3\x81\x93", "\xe3\x81\x93" },  // "こ", "こ"
++  { 'B' , "\xe3\x81\x93", "\xe3\x81\x93" },  // "こ", "こ"
++  { 'n' , "\xe3\x81\xbf", "\xe3\x81\xbf" },  // "み", "み"
++  { 'N' , "\xe3\x81\xbf", "\xe3\x81\xbf" },  // "み", "み"
++  { 'm' , "\xe3\x82\x82", "\xe3\x82\x82" },  // "も", "も"
++  { 'M' , "\xe3\x82\x82", "\xe3\x82\x82" },  // "も", "も"
++  { ',' , "\xe3\x81\xad", "\xe3\x80\x81" },  // "ね", "、"
++  { '<' , "\xe3\x80\x81", "\xe3\x80\x81" },  // "、", "、"
++  { '.' , "\xe3\x82\x8b", "\xe3\x80\x82" },  // "る", "。"
++  { '>' , "\xe3\x80\x82", "\xe3\x80\x82" },  // "。", "。"
++  { '/' , "\xe3\x82\x81", "\xe3\x83\xbb" },  // "め", "・"
++  { '?' , "\xe3\x83\xbb", "\xe3\x83\xbb" },  // "・", "・"
++  { UKey_Yen, "\xe3\x83\xbc", "\xe3\x83\xbc" }, // "ー", "ー"
++};
++
++}  // namespace
++
++namespace mozc {
++namespace uim {
++
++KeyTranslator::KeyTranslator() {
++  Init();
++}
++
++KeyTranslator::~KeyTranslator() {
++}
++
++bool KeyTranslator::Translate(unsigned int keyval,
++                              unsigned int keycode,
++                              unsigned int modifiers,
++                              config::Config::PreeditMethod method,
++                              bool layout_is_jp,
++                              commands::KeyEvent *out_event) const {
++  DCHECK(out_event) << "out_event is NULL";
++  out_event->Clear();
++
++  string kana_key_string;
++  if ((method == config::Config::KANA) && IsKanaAvailable(
++          keyval, keycode, modifiers, layout_is_jp, &kana_key_string)) {
++    out_event->set_key_code(keyval);
++    out_event->set_key_string(kana_key_string);
++  } else if (IsAscii(keyval, keycode, modifiers)) {
++    out_event->set_key_code(keyval);
++  } else if (IsModifierKey(keyval, keycode, modifiers)) {
++    ModifierKeyMap::const_iterator i = modifier_key_map_.find(keyval);
++    DCHECK(i != modifier_key_map_.end());
++    out_event->add_modifier_keys((*i).second);
++  } else if (IsSpecialKey(keyval, keycode, modifiers)) {
++    SpecialKeyMap::const_iterator i = special_key_map_.find(keyval);
++    DCHECK(i != special_key_map_.end());
++    out_event->set_special_key((*i).second);
++  } else if ((method == config::Config::ROMAN) && keyval == UKey_Yen) {
++    /* regards yen key as backslash */
++    out_event->set_key_code('\\');
++  } else {
++    VLOG(1) << "Unknown keyval: " << keyval;
++    return false;
++  }
++
++  for (ModifierKeyMap::const_iterator i = modifier_mask_map_.begin();
++       i != modifier_mask_map_.end();
++       ++i) {
++    // Do not set a SHIFT modifier when |keyval| is a printable key by following
++    // the Mozc's rule.
++    if (((*i).second == commands::KeyEvent::SHIFT) &&
++        IsAscii(keyval, keycode, modifiers)) {
++      continue;
++    }
++
++    if ((*i).first & modifiers) {
++      out_event->add_modifier_keys((*i).second);
++    }
++  }
++
++  return true;
++}
++
++void KeyTranslator::Init() {
++  for (int i = 0; i < arraysize(special_key_map); ++i) {
++    CHECK(special_key_map_.insert(
++        std::make_pair(special_key_map[i].from,
++                       special_key_map[i].to)).second);
++  }
++  for (int i = 0; i < arraysize(modifier_key_map); ++i) {
++    CHECK(modifier_key_map_.insert(
++        std::make_pair(modifier_key_map[i].from,
++                       modifier_key_map[i].to)).second);
++  }
++  for (int i = 0; i < arraysize(modifier_mask_map); ++i) {
++    CHECK(modifier_mask_map_.insert(
++        std::make_pair(modifier_mask_map[i].from,
++                       modifier_mask_map[i].to)).second);
++  }
++  for (int i = 0; i < arraysize(kana_map_jp); ++i) {
++    CHECK(kana_map_jp_.insert(
++        std::make_pair(kana_map_jp[i].code,
++                       std::make_pair(kana_map_jp[i].no_shift,    
++                                      kana_map_jp[i].shift))).second);
++  }
++  for (int i = 0; i < arraysize(kana_map_us); ++i) {
++    CHECK(kana_map_us_.insert(
++        std::make_pair(kana_map_us[i].code,
++                       std::make_pair(kana_map_us[i].no_shift,
++                                      kana_map_us[i].shift))).second);
++  }
++}
++
++bool KeyTranslator::IsModifierKey(unsigned int keyval,
++                                  unsigned int keycode,
++                                  unsigned int modifiers) const {
++  return modifier_key_map_.find(keyval) != modifier_key_map_.end();
++}
++
++bool KeyTranslator::IsSpecialKey(unsigned int keyval,
++                                 unsigned int keycode,
++                                 unsigned int modifiers) const {
++  return special_key_map_.find(keyval) != special_key_map_.end();
++}
++
++bool KeyTranslator::IsKanaAvailable(unsigned int keyval,
++                                    unsigned int keycode,
++                                    unsigned int modifiers,
++                                    bool layout_is_jp,
++                                    string *out) const {
++  if ((modifiers & UMod_Control) || (modifiers & UMod_Alt)) {
++    return false;
++  }
++  const KanaMap &kana_map = layout_is_jp ? kana_map_jp_ : kana_map_us_;
++  KanaMap::const_iterator iter = kana_map.find(keyval);
++  if (iter == kana_map.end()) {
++    return false;
++  }
++
++  if (out)
++      *out = (modifiers & UMod_Shift) ?
++          iter->second.second : iter->second.first;
++
++  return true;
++}
++
++bool KeyTranslator::IsAscii(unsigned int keyval,
++                            unsigned int keycode,
++                            unsigned int modifiers) {
++  return (keyval > 0x20 &&
++          // Note: Space key (0x20) is a special key in Mozc.
++          keyval <= 0x7e);  // ~
++}
++
++}  // namespace uim
++}  // namespace mozc
+diff --git a/src/unix/uim/key_translator.h b/src/unix/uim/key_translator.h
+new file mode 100644
+index 00000000..2649cc5e
+--- /dev/null
++++ unix/uim/key_translator.h
+@@ -0,0 +1,111 @@
++// Copyright 2010, Google Inc.
++// Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are
++// met:
++//
++//     * Redistributions of source code must retain the above copyright
++// notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above
++// copyright notice, this list of conditions and the following disclaimer
++// in the documentation and/or other materials provided with the
++// distribution.
++//     * Neither the name of authors nor the names of its
++// contributors may be used to endorse or promote products derived from
++// this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++
++#ifndef MOZC_UNIX_UIM_KEY_TRANSLATOR_H_
++#define MOZC_UNIX_UIM_KEY_TRANSLATOR_H_
++
++#include <uim.h>
++
++#include <map>
++#include <ext/hash_map>
++using __gnu_cxx::hash_map;
++
++#include "base/port.h"
++#include "protocol/commands.pb.h"
++
++namespace mozc {
++namespace uim {
++
++// This class is responsible for converting key code sent from ibus-daemon
++// (defined in /usr/include/ibus-1.0/ibuskeysyms.h) to a KeyEvent object for
++// the input of session_interface.
++class KeyTranslator {
++ public:
++  KeyTranslator();
++  virtual ~KeyTranslator();
++
++  // Converts ibus keycode to Mozc key code and stores them on |out_event|.
++  // Returns true if ibus keycode is successfully converted to Mozc key code.
++  bool Translate(unsigned int keyval,
++                 unsigned int keycode,
++                 unsigned int modifiers,
++                 config::Config::PreeditMethod method,
++                 bool layout_is_jp,
++                 commands::KeyEvent *out_event) const;
++
++ private:
++  typedef hash_map<unsigned int, commands::KeyEvent::SpecialKey> SpecialKeyMap;
++  typedef std::map<unsigned int, commands::KeyEvent::ModifierKey> ModifierKeyMap;
++  typedef std::map<unsigned int, std::pair<string, string> > KanaMap;
++
++  // Returns true iff key is modifier key such as SHIFT, ALT, or CAPSLOCK.
++  bool IsModifierKey(unsigned int keyval,
++                     unsigned int keycode,
++                     unsigned int modifiers) const;
++
++  // Returns true iff key is special key such as ENTER, ESC, or PAGE_UP.
++  bool IsSpecialKey(unsigned int keyval,
++                    unsigned int keycode,
++                    unsigned int modifiers) const;
++  // Returns true iff |keyval| is a key with a kana assigned.
++  bool IsKanaAvailable(unsigned int keyval,
++                       unsigned int keycode,
++                       unsigned int modifiers,
++                       bool layout_is_jp,
++                       string *out) const;
++
++
++  // Returns true iff key is ASCII such as '0', 'A', or '!'.
++  static bool IsAscii(unsigned int keyval,
++                      unsigned int keycode,
++                      unsigned int modifiers);
++
++  // Initializes private fields.
++  void Init();
++
++  // Stores a mapping from ibus keys to Mozc's special keys.
++  SpecialKeyMap special_key_map_;
++  // Stores a mapping from ibus modifier keys to Mozc's modifier keys.
++  ModifierKeyMap modifier_key_map_;
++  // Stores a mapping from ibus modifier masks to Mozc's modifier keys.
++  ModifierKeyMap modifier_mask_map_;
++  // Stores a mapping from ASCII to Kana character. For example, ASCII character
++  // '4' is mapped to Japanese 'Hiragana Letter U' (without Shift modifier) and
++  // 'Hiragana Letter Small U' (with Shift modifier).
++  KanaMap kana_map_jp_;  // mapping for JP keyboard.
++  KanaMap kana_map_us_;  // mapping for US keyboard.
++
++  DISALLOW_COPY_AND_ASSIGN(KeyTranslator);
++};
++
++}  // namespace uim
++}  // namespace mozc
++
++#endif  // MOZC_UNIX_UIM_KEY_TRANSLATOR_H_
+diff --git a/src/unix/uim/mozc.cc b/src/unix/uim/mozc.cc
+new file mode 100644
+index 00000000..ceb16bd8
+--- /dev/null
++++ unix/uim/mozc.cc
+@@ -0,0 +1,1219 @@
++/*
++
++  Copyright (c) 2010-2013 uim Project http://code.google.com/p/uim/
++
++  All rights reserved.
++
++  Redistribution and use in source and binary forms, with or without
++  modification, are permitted provided that the following conditions
++  are met:
++
++  1. Redistributions of source code must retain the above copyright
++     notice, this list of conditions and the following disclaimer.
++  2. Redistributions in binary form must reproduce the above copyright
++     notice, this list of conditions and the following disclaimer in the
++     documentation and/or other materials provided with the distribution.
++  3. Neither the name of authors nor the names of its contributors
++     may be used to endorse or promote products derived from this software
++     without specific prior written permission.
++
++  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND
++  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++  ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
++  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++  SUCH DAMAGE.
++
++*/
++
++//#include <config.h>
++
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <ctype.h>
++
++#include "uim.h"
++#include "uim-scm.h"
++#include "uim-scm-abbrev.h"
++#include "uim-util.h"
++#if UIM_VERSION_REQUIRE(1, 6, 0)
++# include "dynlib.h"
++#else
++# include "plugin.h"
++#endif
++
++#include "base/port.h"
++#include "base/util.h"
++#include "base/init_mozc.h"
++#include "protocol/config.pb.h"
++#include "protocol/commands.pb.h"
++#include "client/client.h"
++#include "unix/uim/key_translator.h"
++
++// use server/client session
++#include "base/util.h"
++
++#define USE_CASCADING_CANDIDATES	0
++
++#include <map>
++#include <ext/hash_map>
++using __gnu_cxx::hash_map;
++static char **argv;
++
++// for every 5 minutes, call SyncData
++const uint64 kSyncDataInterval = 5 * 60;
++#if USE_CASCADING_CANDIDATES
++// An ID for a candidate which is not associated with a text.
++const int32 kBadCandidateId = -1;
++#endif
++
++uint64 GetTime() {
++  return static_cast<uint64>(time(NULL));
++}
++
++namespace mozc {
++
++namespace client {
++class ClientInterface;
++}
++namespace uim {
++
++static int nr_contexts;
++static struct context_slot_ {
++  client::ClientInterface *session;
++  commands::Output *output; 
++  commands::CompositionMode currentMode;
++  bool has_preedit_before;
++  bool need_cand_reactivate;
++  int prev_page;
++  int cand_nr_before;
++  uint64 last_sync_time;
++#if USE_CASCADING_CANDIDATES
++  vector<int32> *unique_candidate_ids;
++#endif
++  config::Config::PreeditMethod preedit_method;
++} *context_slot;
++
++static KeyTranslator *keyTranslator;
++static bool enable_reconversion;
++static void update_all(uim_lisp mc_, int id);
++
++static int
++unused_context_id(void)
++{
++  int i;
++
++  for (i = 0; i < nr_contexts; i++) {
++    if (!context_slot[i].session)
++      return i;
++  }
++
++  nr_contexts++;
++  context_slot = (context_slot_ *)uim_realloc(context_slot, sizeof(struct context_slot_) * (nr_contexts));
++
++  return i;
++}
++
++static void
++SyncData(int id, bool force)
++{
++  if (context_slot[id].session == NULL)
++    return;
++
++  const uint64 current_time = GetTime();
++  if (force ||
++      (current_time >= context_slot[id].last_sync_time &&
++       current_time - context_slot[id].last_sync_time >= kSyncDataInterval)) {
++    context_slot[id].session->SyncData();
++    context_slot[id].last_sync_time = current_time;
++  }
++}
++
++static void
++update_deletion_range(uim_lisp mc_, int id)
++{
++  commands::Output *output = context_slot[id].output;
++  int offset, length;
++
++  if (!enable_reconversion)
++    return;
++
++  if (!output->has_deletion_range())
++    return;
++
++  offset = output->deletion_range().offset();
++  length = output->deletion_range().length();
++
++  if (offset + length < 0)
++    return;
++
++  uim_scm_callf("im-delete-text", "oyyii", mc_, "primary", "cursor", -offset, offset + length);
++}
++
++static void
++update_result(uim_lisp mc_, int id)
++{
++  commands::Output *output = context_slot[id].output;
++
++  if (!output->has_result())
++    return;
++
++  const char *str = output->result().value().c_str();
++  uim_scm_callf("im-commit", "os", mc_, str);
++}
++
++static uim_lisp
++insert_cursor(uim_lisp segs, const commands::Preedit::Segment &segment, int attr, int pos)
++{
++  size_t len = segment.value_length();
++
++  auto former = string(Util::Utf8SubString(segment.value(), 0, pos));
++  auto latter = string(Util::Utf8SubString(segment.value(), pos, len));
++
++  uim_lisp seg_f, seg_c, seg_l;
++  if (pos == 0) {
++    seg_f = uim_scm_null(); /* not used */
++    seg_c = CONS(MAKE_INT(UPreeditAttr_Cursor), MAKE_STR(""));
++    seg_l = CONS(MAKE_INT(attr), MAKE_STR(latter.c_str()));
++
++    segs = CONS(seg_c, segs);
++    segs = CONS(seg_l, segs);
++  } else {
++    seg_f = CONS(MAKE_INT(attr), MAKE_STR(former.c_str()));
++    seg_c = CONS(MAKE_INT(UPreeditAttr_Cursor), MAKE_STR(""));
++    seg_l = CONS(MAKE_INT(attr), MAKE_STR(latter.c_str()));
++
++    segs = CONS(seg_f, segs);
++    segs = CONS(seg_c, segs);
++    segs = CONS(seg_l, segs);
++  }
++
++  return segs;
++}
++
++static uim_lisp
++compose_preedit(const commands::Output *output)
++{
++  const commands::Preedit &preedit = output->preedit();
++  uim_lisp segs = uim_scm_null();
++  uim_lisp separator = uim_scm_callf("mozc-separator", "");
++  int cursorPos;
++  int count = 0;
++  int seg_count = preedit.segment_size();
++  
++  cursorPos = output->preedit().cursor();
++
++  for (int i = 0; i < seg_count; ++i) {
++    const commands::Preedit::Segment segment = preedit.segment(i);
++    const char *str = segment.value().c_str();
++    int attr;
++    int prev_count = count;
++    uim_lisp seg;
++    count += segment.value_length();
++
++    switch (segment.annotation()) {
++    case commands::Preedit::Segment::NONE:
++      attr = UPreeditAttr_None;
++      break;
++    case commands::Preedit::Segment::UNDERLINE:
++      attr = UPreeditAttr_UnderLine;
++      break;
++    case commands::Preedit::Segment::HIGHLIGHT:
++      attr = UPreeditAttr_Reverse | UPreeditAttr_Cursor;
++      break;
++    default:
++      attr = UPreeditAttr_None;
++      break;
++    }
++
++    if (((prev_count < cursorPos) && (count > cursorPos)) || cursorPos == 0) {
++      uim_lisp new_segs;
++      if ((new_segs = insert_cursor(segs, segment, attr, cursorPos - prev_count)) != uim_scm_null()) {
++         segs = new_segs;
++         continue;
++      }
++    }
++
++    seg = CONS(MAKE_INT(attr), MAKE_STR(str));
++
++    if (TRUEP(separator) && i > 0)
++      segs = CONS(separator, segs);
++    segs = CONS(seg, segs);
++
++    if (count == cursorPos && !output->preedit().has_highlighted_position()) {
++      seg = CONS(MAKE_INT(UPreeditAttr_Cursor), MAKE_STR(""));
++      segs = CONS(seg, segs);
++    }
++  }
++
++  return uim_scm_callf("reverse", "o", segs);
++}
++
++static void
++update_preedit(uim_lisp mc_, int id)
++{
++  uim_lisp preedit;
++  commands::Output *output = context_slot[id].output;
++
++  if (!output->has_preedit()) {
++    if (context_slot[id].has_preedit_before) {
++      uim_scm_callf("context-update-preedit", "oo", mc_, uim_scm_null());
++    }
++    context_slot[id].has_preedit_before = false;
++
++    return;
++  } else {
++    preedit = compose_preedit(output);
++    context_slot[id].has_preedit_before = true;
++  }
++  uim_scm_callf("context-update-preedit", "oo", mc_, preedit);
++}
++
++static void
++update_candidates(uim_lisp mc_, int id)
++{
++  commands::Output *output = context_slot[id].output;
++
++  if (!output->has_candidates()) {
++    uim_scm_callf("im-deactivate-candidate-selector", "o", mc_);
++    context_slot[id].cand_nr_before = 0;
++
++    return;
++  }
++
++  const commands::Candidates &candidates = output->candidates();
++  bool first_time = false;
++  bool has_focused_index = candidates.has_focused_index();
++  int current_page = has_focused_index ? candidates.focused_index() / 9 : 0;
++
++  if ((context_slot[id].cand_nr_before != candidates.size()) || !has_focused_index)
++    first_time = true;
++
++  if (first_time || (context_slot[id].need_cand_reactivate && current_page != context_slot[id].prev_page)) {
++    uim_scm_callf("im-activate-candidate-selector", "oii", mc_, candidates.size(), 9);
++    // cope with issue #6
++    if (current_page != 0)
++      context_slot[id].need_cand_reactivate = true;
++    else
++      context_slot[id].need_cand_reactivate = false;
++  }
++  context_slot[id].prev_page = current_page;
++
++  if (has_focused_index) {
++    int index = candidates.focused_index();
++    uim_scm_callf("im-select-candidate", "oi", mc_, index);
++  }
++  context_slot[id].cand_nr_before = candidates.size();
++
++#if USE_CASCADING_CANDIDATES
++  if (first_time || (candidates.has_focused_index() && candidates.focused_index() % 9 == 0)) {
++    context_slot[id].unique_candidate_ids->clear();
++    for (int i = 0; i < candidates.candidate_size(); ++i) {
++      if (candidates.candidate(i).has_id()) {
++        const int32 cand_id = candidates.candidate(i).id();
++        context_slot[id].unique_candidate_ids->push_back(cand_id);
++      } else {
++        // The parent node of the cascading window does not have an id since the
++        // node does not contain a candidate word.
++        context_slot[id].unique_candidate_ids->push_back(kBadCandidateId);
++      }
++    }
++  }
++#endif
++}
++
++static void
++update_composition_mode(uim_lisp mc_, int id)
++{
++  commands::Output *output = context_slot[id].output;
++  
++  if (!output->has_mode())
++    return;
++
++  const commands::CompositionMode newMode = output->mode();
++  if (context_slot[id].currentMode == newMode)
++    return;
++
++  context_slot[id].currentMode = newMode;
++}
++
++static void
++execute_callback(uim_lisp mc_, int id)
++{
++  commands::Output *output = context_slot[id].output;
++  
++  if (!enable_reconversion)
++    return;
++
++  if (!output->has_callback())
++    return;
++
++  if (!output->callback().has_session_command())
++    return;
++
++  const commands::SessionCommand &command = output->callback().session_command();
++  if (!command.has_type())
++    return;
++
++  const commands::SessionCommand::CommandType type = command.type();
++  commands::SessionCommand session_command;
++  session_command.set_type(type);
++  int use_primary_text = 0;
++
++  switch (type) {
++  case commands::SessionCommand::UNDO:
++    // do nothing.
++    break;
++  case commands::SessionCommand::CONVERT_REVERSE:
++    {
++      // try selected text first
++      uim_lisp ustr = uim_scm_callf("im-acquire-text", "oyyiy", mc_, "selection", "beginning", 0, "full");
++      uim_lisp latter;
++
++      if (TRUEP(ustr) &&
++	  !NULLP(latter = uim_scm_callf("ustr-latter-seq", "o", ustr))) {
++	  uim_lisp str = CAR(latter);
++
++          string text = REFER_C_STR(str);
++          session_command.set_text(text);
++      } else {
++#if 0
++	// then primary text
++        uim_lisp former;
++        ustr = uim_scm_callf("im-acquire-text", "oyyyi", mc_, "primary", "cursor", "line", 0);
++	if (TRUEP(ustr) && !NULLP(former = uim_scm_callf("ustr-former-seq", "o", ustr))) {
++	  uim_lisp str = CAR(former);
++	  string text = REFER_C_STR(str);
++	  session_command.set_text(text);
++	  use_primary_text = 1;
++	} else
++	  return;
++#else
++        // UNDO if no selection
++        session_command.set_type(commands::SessionCommand::UNDO);
++#endif
++      }
++    }
++    break;
++  default:
++    return;
++  }
++
++  if (!context_slot[id].session->SendCommand(session_command, context_slot[id].output)) {
++    // callback command failed
++    return;
++  }
++
++  if (type == commands::SessionCommand::CONVERT_REVERSE) {
++    if (use_primary_text)
++      uim_scm_callf("im-delete-text", "oyyyi", mc_, "primary", "cursor", "line", 0);
++    else
++      uim_scm_callf("im-delete-text", "oyyiy", mc_, "selection", "beginning", 0, "full");
++  }
++  update_all(mc_, id);
++}
++
++static void
++update_all(uim_lisp mc_, int id)
++{
++  update_deletion_range(mc_, id);
++  update_result(mc_, id);
++  update_preedit(mc_, id);
++  update_candidates(mc_, id);
++  update_composition_mode(mc_, id);
++  execute_callback(mc_, id);
++}
++
++static uim_lisp
++create_context(uim_lisp mc_)
++{
++  int id;
++
++  client::ClientInterface *session = new client::Client;
++  commands::Output *output = new commands::Output;
++  if (!keyTranslator)
++    keyTranslator = new KeyTranslator;
++
++  id = unused_context_id();
++  context_slot[id].session = session;
++  context_slot[id].output = output;
++  context_slot[id].currentMode = commands::HIRAGANA;
++  context_slot[id].has_preedit_before = false;
++  context_slot[id].need_cand_reactivate = false;
++  context_slot[id].cand_nr_before = 0;
++  context_slot[id].prev_page = 0;
++#if USE_CASCADING_CANDIDATES
++  context_slot[id].unique_candidate_ids = new vector<int32>;
++#endif
++
++  // Launch mozc_server
++  // or should I call this with mozc-on-key?
++  session->EnsureConnection();
++#if !USE_CASCADING_CANDIDATES
++  session->EnableCascadingWindow(false);
++#endif
++
++  if (!enable_reconversion) {
++    if (!FALSEP(uim_scm_callf("symbol-bound?", "y", "mozc-check-uim-version")))
++      enable_reconversion = (bool)C_BOOL(uim_scm_callf("mozc-check-uim-version", "iii", 1, 7, 2));
++  }
++
++  if (enable_reconversion) {
++    commands::Capability capability;
++    capability.set_text_deletion(commands::Capability::DELETE_PRECEDING_TEXT);
++    session->set_client_capability(capability);
++  }
++
++
++  return MAKE_INT(id);
++}
++
++static uim_lisp
++release_context(uim_lisp id_)
++{
++  int id = C_INT(id_);
++
++  if (id < nr_contexts) {
++    SyncData(id, true);
++    delete context_slot[id].session;
++    delete context_slot[id].output;
++#if USE_CASCADING_CANDIDATES
++    delete context_slot[id].unique_candidate_ids;
++#endif
++    context_slot[id].session = NULL;
++    context_slot[id].output = NULL;
++  }
++
++  return uim_scm_f();
++}
++
++static uim_lisp
++reset_context(uim_lisp id_)
++{
++  return uim_scm_t();
++}
++
++static uim_lisp
++press_key(uim_lisp mc_, uim_lisp id_, uim_lisp key_, uim_lisp state_)
++{
++  client::ClientInterface *session;
++  commands::KeyEvent key;
++  int id;
++  int keyval, keycode, modifiers;
++  config::Config::PreeditMethod preedit_method;
++  char *keyboard;
++  bool layout_is_jp;
++
++  id = C_INT(id_);
++  session = context_slot[id].session;
++  preedit_method = context_slot[id].preedit_method;
++  keyboard = uim_scm_symbol_value_str("mozc-keyboard-type-for-kana-input-method");
++  layout_is_jp = keyboard && !strcmp(keyboard, "jp-keyboard") ? true : false;
++  free(keyboard);
++
++  keyval = C_INT(key_);
++  modifiers = C_INT(state_);
++  keycode = 0; /* XXX */
++
++  if (!(*keyTranslator).Translate(keyval, keycode, modifiers, preedit_method, layout_is_jp, &key))
++    return uim_scm_f();
++
++  if (uim_scm_symbol_value_bool("mozc-use-context-aware-conversion?")) {
++    commands::Context context;
++    uim_lisp ustr = uim_scm_callf("im-acquire-text", "oyyyy", mc_, "primary", "cursor", "line", "line");
++    uim_lisp former, latter, str;
++    if (TRUEP(ustr)) {
++      if(!NULLP(former = uim_scm_callf("ustr-former-seq", "o", ustr))) {
++        str = CAR(former);
++	context.set_preceding_text(REFER_C_STR(str));
++      }
++      if(!NULLP(latter = uim_scm_callf("ustr-latter-seq", "o", ustr))) {
++        str = CAR(latter);
++	context.set_following_text(REFER_C_STR(str));
++      }
++    }
++    if (!(*session).SendKeyWithContext(key, context, context_slot[id].output))
++      return uim_scm_f();
++  } else {
++    if (!(*session).SendKey(key, context_slot[id].output))
++      return uim_scm_f();
++  }
++
++  update_all(mc_, id);
++
++  const bool consumed = context_slot[id].output->consumed();
++#if 0
++  fprintf(stderr, "debugstring %s\n", output.DebugString().c_str());
++  fprintf(stderr, "consumed %d\n", consumed ? 1 : 0);
++#endif
++
++  return consumed ? uim_scm_t() : uim_scm_f();
++}
++
++static uim_lisp
++release_key(uim_lisp id_, uim_lisp key_, uim_lisp state_)
++{
++  return uim_scm_f();
++}
++
++static uim_lisp
++get_nr_candidates(uim_lisp id_)
++{
++  int id = C_INT(id_);
++  commands::Output *output = context_slot[id].output;
++
++  return MAKE_INT(output->candidates().size());
++}
++
++static uim_lisp
++get_nth_candidate(uim_lisp id_, uim_lisp nth_)
++{
++  int id = C_INT(id_);
++  commands::Output *output = context_slot[id].output;
++  const commands::Candidates &candidates = output->candidates();
++  const char *cand, *prefix, *suffix;
++  char *s;
++
++  int nth;
++  int idx;
++  int nr;
++  int page_nr;
++  
++  nth = C_INT(nth_);
++  nr = candidates.size();
++  page_nr = candidates.candidate_size();
++
++  if (nth < nr) {
++    idx = nth % 9;
++
++    if (idx < page_nr) {
++      prefix = candidates.candidate(idx).annotation().prefix().c_str();
++      cand = candidates.candidate(idx).value().c_str();
++      suffix = candidates.candidate(idx).annotation().suffix().c_str();
++      if (asprintf(&s, "%s%s%s", prefix, cand, suffix) == -1)
++        s = strdup("");
++    } else {
++      s = strdup("");
++    }
++  } else
++    s = strdup("");
++
++  return MAKE_STR_DIRECTLY(s);
++}
++
++static uim_lisp
++get_nth_label(uim_lisp id_, uim_lisp nth_)
++{
++  int id = C_INT(id_);
++  commands::Output *output = context_slot[id].output;
++  const commands::Candidates &candidates = output->candidates();
++  const char *label;
++
++  int nth;
++  int idx;
++  int nr;
++  int page_nr;
++  
++  nth = C_INT(nth_);
++  nr = candidates.size();
++  page_nr = candidates.candidate_size();
++
++  if (nth < nr) {
++    idx = nth % 9;
++    if (idx < page_nr)
++      label = candidates.candidate(idx).annotation().shortcut().c_str();
++    else
++      label = "";
++  } else
++    label = "";
++
++  return MAKE_STR(label);
++}
++
++static uim_lisp
++get_nth_annotation(uim_lisp id_, uim_lisp nth_)
++{
++  int id = C_INT(id_);
++  commands::Output *output = context_slot[id].output;
++  const commands::Candidates &candidates = output->candidates();
++  const char *annotation;
++
++  int nth;
++  int idx;
++  int nr;
++  int page_nr;
++  
++  nth = C_INT(nth_);
++  nr = candidates.size();
++  page_nr = candidates.candidate_size();
++
++  if (nth < nr) {
++    idx = nth % 9;
++    if (idx < page_nr)
++      annotation = candidates.candidate(idx).annotation().description().c_str();
++    else
++      annotation = "";
++
++  } else
++    annotation = "";
++
++  return MAKE_STR(annotation);
++}
++
++/* from uim-key.c */
++static struct key_entry {
++  int key;
++  const char *str;
++} key_tab[] = {
++  {UKey_Yen, "yen"},
++  {UKey_Backspace, "backspace"},
++  {UKey_Delete, "delete"},
++  {UKey_Escape, "escape"},
++  {UKey_Return, "return"},
++  {UKey_Tab, "tab"},
++  {UKey_Left, "left"},
++  {UKey_Up, "up"},
++  {UKey_Right, "right"},
++  {UKey_Down, "down"},
++  {UKey_Prior, "prior"},
++  {UKey_Next, "next"},
++  {UKey_Home, "home"},
++  {UKey_End, "end"},
++  {UKey_Insert, "insert"},
++  {UKey_Multi_key, "Multi_key"},
++  {UKey_Codeinput, "codeinput"},
++  {UKey_SingleCandidate, "single-candidate"},
++  {UKey_MultipleCandidate, "multiple-candidate"},
++  {UKey_PreviousCandidate, "previous-candidate"},
++  {UKey_Mode_switch, "Mode_switch"},
++  {UKey_Kanji, "Kanji"},
++  {UKey_Muhenkan, "Muhenkan"},
++  {UKey_Henkan_Mode, "Henkan_Mode"},
++  {UKey_Romaji, "romaji"},
++  {UKey_Hiragana, "hiragana"},
++  {UKey_Katakana, "katakana"},
++  {UKey_Hiragana_Katakana, "hiragana-katakana"},
++  {UKey_Zenkaku, "zenkaku"},
++  {UKey_Hankaku, "hankaku"},
++  {UKey_Zenkaku_Hankaku, "zenkaku-hankaku"},
++  {UKey_Touroku, "touroku"},
++  {UKey_Massyo, "massyo"},
++  {UKey_Kana_Lock, "kana-lock"},
++  {UKey_Kana_Shift, "kana-shift"},
++  {UKey_Eisu_Shift, "eisu-shift"},
++  {UKey_Eisu_toggle, "eisu-toggle"},
++
++  {UKey_Hangul, "hangul"},
++  {UKey_Hangul_Start, "hangul-start"},
++  {UKey_Hangul_End, "hangul-end"},
++  {UKey_Hangul_Hanja, "hangul-hanja"},
++  {UKey_Hangul_Jamo, "hangul-jamo"},
++  {UKey_Hangul_Romaja, "hangul-romaja"},
++  {UKey_Hangul_Codeinput, "hangul-codeinput"},
++  {UKey_Hangul_Jeonja, "hangul-jeonja"},
++  {UKey_Hangul_Banja, "hangul-banja"},
++  {UKey_Hangul_PreHanja, "hangul-prehanja"},
++  {UKey_Hangul_PostHanja, "hangul-posthanja"},
++  {UKey_Hangul_SingleCandidate, "hangul-single-candidate"},
++  {UKey_Hangul_MultipleCandidate, "hangul-multiple-candidate"},
++  {UKey_Hangul_PreviousCandidate, "hangul-previous-candidate"},
++  {UKey_Hangul_Special, "hangul-special"},
++
++  {UKey_F1, "F1"},
++  {UKey_F2, "F2"},
++  {UKey_F3, "F3"},
++  {UKey_F4, "F4"},
++  {UKey_F5, "F5"},
++  {UKey_F6, "F6"},
++  {UKey_F7, "F7"},
++  {UKey_F8, "F8"},
++  {UKey_F9, "F9"},
++  {UKey_F10, "F10"},
++  {UKey_F11, "F11"},
++  {UKey_F12, "F12"},
++  {UKey_F13, "F13"},
++  {UKey_F14, "F14"},
++  {UKey_F15, "F15"},
++  {UKey_F16, "F16"},
++  {UKey_F17, "F17"},
++  {UKey_F18, "F18"},
++  {UKey_F19, "F19"},
++  {UKey_F20, "F20"},
++  {UKey_F21, "F21"},
++  {UKey_F22, "F22"},
++  {UKey_F23, "F23"},
++  {UKey_F24, "F24"},
++  {UKey_F25, "F25"},
++  {UKey_F26, "F26"},
++  {UKey_F27, "F27"},
++  {UKey_F28, "F28"},
++  {UKey_F29, "F29"},
++  {UKey_F30, "F30"},
++  {UKey_F31, "F31"},
++  {UKey_F32, "F32"},
++  {UKey_F33, "F33"},
++  {UKey_F34, "F34"},
++  {UKey_F35, "F35"},
++
++  {UKey_Dead_Grave, "dead-grave"},
++  {UKey_Dead_Acute, "dead-acute"},
++  {UKey_Dead_Circumflex, "dead-circumflex"},
++  {UKey_Dead_Tilde, "dead-tilde"},
++  {UKey_Dead_Macron, "dead-macron"},
++  {UKey_Dead_Breve, "dead-breve"},
++  {UKey_Dead_Abovedot, "dead-abovedot"},
++  {UKey_Dead_Diaeresis, "dead-diaeresis"},
++  {UKey_Dead_Abovering, "dead-abovering"},
++  {UKey_Dead_Doubleacute, "dead-doubleacute"},
++  {UKey_Dead_Caron, "dead-caron"},
++  {UKey_Dead_Cedilla, "dead-cedilla"},
++  {UKey_Dead_Ogonek, "dead-ogonek"},
++  {UKey_Dead_Iota, "dead-iota"},
++  {UKey_Dead_VoicedSound, "dead-voiced-sound"},
++  {UKey_Dead_SemivoicedSound, "dead-semivoiced-sound"},
++  {UKey_Dead_Belowdot, "dead-belowdot"},
++  {UKey_Dead_Hook, "dead-hook"},
++  {UKey_Dead_Horn, "dead-horn"},
++
++  {UKey_Kana_Fullstop, "kana-fullstop"},
++  {UKey_Kana_OpeningBracket, "kana-opening-bracket"},
++  {UKey_Kana_ClosingBracket, "kana-closing-bracket"},
++  {UKey_Kana_Comma, "kana-comma"},
++  {UKey_Kana_Conjunctive, "kana-conjunctive"},
++  {UKey_Kana_WO, "kana-WO"},
++  {UKey_Kana_a, "kana-a"},
++  {UKey_Kana_i, "kana-i"},
++  {UKey_Kana_u, "kana-u"},
++  {UKey_Kana_e, "kana-e"},
++  {UKey_Kana_o, "kana-o"},
++  {UKey_Kana_ya, "kana-ya"},
++  {UKey_Kana_yu, "kana-yu"},
++  {UKey_Kana_yo, "kana-yo"},
++  {UKey_Kana_tsu, "kana-tsu"},
++  {UKey_Kana_ProlongedSound, "kana-prolonged-sound"},
++  {UKey_Kana_A, "kana-A"},
++  {UKey_Kana_I, "kana-I"},
++  {UKey_Kana_U, "kana-U"},
++  {UKey_Kana_E, "kana-E"},
++  {UKey_Kana_O, "kana-O"},
++  {UKey_Kana_KA, "kana-KA"},
++  {UKey_Kana_KI, "kana-KI"},
++  {UKey_Kana_KU, "kana-KU"},
++  {UKey_Kana_KE, "kana-KE"},
++  {UKey_Kana_KO, "kana-KO"},
++  {UKey_Kana_SA, "kana-SA"},
++  {UKey_Kana_SHI, "kana-SHI"},
++  {UKey_Kana_SU, "kana-SU"},
++  {UKey_Kana_SE, "kana-SE"},
++  {UKey_Kana_SO, "kana-SO"},
++  {UKey_Kana_TA, "kana-TA"},
++  {UKey_Kana_CHI, "kana-CHI"},
++  {UKey_Kana_TSU, "kana-TSU"},
++  {UKey_Kana_TE, "kana-TE"},
++  {UKey_Kana_TO, "kana-TO"},
++  {UKey_Kana_NA, "kana-NA"},
++  {UKey_Kana_NI, "kana-NI"},
++  {UKey_Kana_NU, "kana-NU"},
++  {UKey_Kana_NE, "kana-NE"},
++  {UKey_Kana_NO, "kana-NO"},
++  {UKey_Kana_HA, "kana-HA"},
++  {UKey_Kana_HI, "kana-HI"},
++  {UKey_Kana_FU, "kana-FU"},
++  {UKey_Kana_HE, "kana-HE"},
++  {UKey_Kana_HO, "kana-HO"},
++  {UKey_Kana_MA, "kana-MA"},
++  {UKey_Kana_MI, "kana-MI"},
++  {UKey_Kana_MU, "kana-MU"},
++  {UKey_Kana_ME, "kana-ME"},
++  {UKey_Kana_MO, "kana-MO"},
++  {UKey_Kana_YA, "kana-YA"},
++  {UKey_Kana_YU, "kana-YU"},
++  {UKey_Kana_YO, "kana-YO"},
++  {UKey_Kana_RA, "kana-RA"},
++  {UKey_Kana_RI, "kana-RI"},
++  {UKey_Kana_RU, "kana-RU"},
++  {UKey_Kana_RE, "kana-RE"},
++  {UKey_Kana_RO, "kana-RO"},
++  {UKey_Kana_WA, "kana-WA"},
++  {UKey_Kana_N, "kana-N"},
++  {UKey_Kana_VoicedSound, "kana-voiced-sound"},
++  {UKey_Kana_SemivoicedSound, "kana-semivoiced-sound"},
++
++  {UKey_Private1, "Private1"},
++  {UKey_Private2, "Private2"},
++  {UKey_Private3, "Private3"},
++  {UKey_Private4, "Private4"},
++  {UKey_Private5, "Private5"},
++  {UKey_Private6, "Private6"},
++  {UKey_Private7, "Private7"},
++  {UKey_Private8, "Private8"},
++  {UKey_Private9, "Private9"},
++  {UKey_Private10, "Private10"},
++  {UKey_Private11, "Private11"},
++  {UKey_Private12, "Private12"},
++  {UKey_Private13, "Private13"},
++  {UKey_Private14, "Private14"},
++  {UKey_Private15, "Private15"},
++  {UKey_Private16, "Private16"},
++  {UKey_Private17, "Private17"},
++  {UKey_Private18, "Private18"},
++  {UKey_Private19, "Private19"},
++  {UKey_Private20, "Private20"},
++  {UKey_Private21, "Private21"},
++  {UKey_Private22, "Private22"},
++  {UKey_Private23, "Private23"},
++  {UKey_Private24, "Private24"},
++  {UKey_Private25, "Private25"},
++  {UKey_Private26, "Private26"},
++  {UKey_Private27, "Private27"},
++  {UKey_Private28, "Private28"},
++  {UKey_Private29, "Private29"},
++  {UKey_Private30, "Private30"},
++  {UKey_Shift_key, "Shift_key"},
++  {UKey_Alt_key, "Alt_key"},
++  {UKey_Control_key, "Control_key"},
++  {UKey_Meta_key, "Meta_key"},
++  {UKey_Super_key, "Super_key"},
++  {UKey_Hyper_key, "Hyper_key"},
++
++  {UKey_Caps_Lock, "caps-lock"},
++  {UKey_Num_Lock, "num-lock"},
++  {UKey_Scroll_Lock, "scroll-lock"},
++  /*  {UKey_Other, "other"},*/
++  {0, 0}
++};
++
++struct eqstr
++{
++  bool operator()(const char* s1, const char* s2) const
++  {
++    return strcmp(s1, s2) == 0;
++  }
++};
++
++typedef hash_map<const char *, int, __gnu_cxx::hash<const char *>, eqstr> KeyMap;
++static KeyMap key_map;
++
++static void install_keymap(void)
++{
++  int i;
++
++  for (i = 0; key_tab[i].key; i++)
++    key_map.insert(std::make_pair(key_tab[i].str, key_tab[i].key));
++}
++
++static uim_lisp
++keysym_to_int(uim_lisp sym_)
++{
++  const char *sym = uim_scm_refer_c_str(sym_);
++  int key = 0;
++
++  KeyMap::iterator it = key_map.find(sym);
++  if (it != key_map.end())
++    key = it->second;
++
++  return uim_scm_make_int(key);
++}
++
++static uim_lisp
++get_composition_mode(uim_lisp id_)
++{
++  int id = C_INT(id_);
++  const commands::CompositionMode mode = context_slot[id].currentMode;
++  int type = 0;
++
++  switch (mode) {
++  case commands::DIRECT:
++    type = -1;
++    break;
++  case commands::HIRAGANA:
++    type = 0;
++    break;
++  case commands::FULL_KATAKANA:
++    type = 1;
++    break;
++  case commands::HALF_KATAKANA:
++    type = 2;
++    break;
++  case commands::HALF_ASCII:
++    type = 3;
++    break;
++  case commands::FULL_ASCII:
++    type = 4;
++    break;
++  default:
++    type = -1;
++    break;
++  }
++
++  return MAKE_INT(type);
++}
++
++static uim_lisp
++set_composition_mode(uim_lisp mc_, uim_lisp id_, uim_lisp new_mode_)
++{
++  int id = C_INT(id_);
++  commands::CompositionMode mode;
++  commands::SessionCommand command;
++
++  switch (C_INT(new_mode_)) {
++  case -1:
++    mode = commands::DIRECT;
++    break;
++  case 0:
++    mode = commands::HIRAGANA;
++    break;
++  case 1:
++    mode = commands::FULL_KATAKANA;
++    break;
++  case 2:
++    mode = commands::HALF_KATAKANA;
++    break;
++  case 3:
++    mode = commands::HALF_ASCII;
++    break;
++  case 4:
++    mode = commands::FULL_ASCII;
++    break;
++  default:
++    mode = commands::HIRAGANA;
++    break;
++  }
++
++  if (mode == commands::DIRECT) {
++    command.set_type(commands::SessionCommand::SUBMIT);
++    context_slot[id].session->SendCommand(command, context_slot[id].output);
++    update_all(mc_, id);
++    uim_scm_callf("mozc-context-set-on!", "oo", mc_, uim_scm_f());
++  } else {
++    command.set_type(commands::SessionCommand::SWITCH_INPUT_MODE);
++    command.set_composition_mode(mode);
++    context_slot[id].session->SendCommand(command, context_slot[id].output);
++    context_slot[id].currentMode = mode; /* don't set this with DIRECT mode */
++    uim_scm_callf("mozc-context-set-on!", "oo", mc_, uim_scm_t());
++  }
++
++  return uim_scm_t();
++}
++ 
++static uim_lisp
++set_composition_on(uim_lisp id_)
++{
++  int id = C_INT(id_);
++  commands::SessionCommand command;
++
++  command.set_type(commands::SessionCommand::SWITCH_INPUT_MODE);
++  command.set_composition_mode(context_slot[id].currentMode);
++  context_slot[id].session->SendCommand(command, context_slot[id].output);
++
++  return uim_scm_t();
++}
++
++static uim_lisp
++has_preedit(uim_lisp id_)
++{
++  int id = C_INT(id_);
++  
++  return context_slot[id].has_preedit_before ? uim_scm_t() : uim_scm_f();
++}
++
++static uim_lisp
++select_candidate(uim_lisp mc_, uim_lisp id_, uim_lisp idx_)
++{
++  int id = C_INT(id_);
++  int idx = C_INT(idx_) % 9;
++  
++#if USE_CASCADING_CANDIDATES
++  if (idx >= context_slot[id].unique_candidate_ids->size())
++#else
++  if (idx >= context_slot[id].output->candidates().candidate_size())
++#endif
++    return uim_scm_f();
++
++#if USE_CASCADING_CANDIDATES
++  const int32 cand_id = (*context_slot[id].unique_candidate_ids)[idx];
++  if (cand_id == kBadCandidateId)
++    return uim_scm_f();
++#else
++  const int32 cand_id = context_slot[id].output->candidates().candidate(idx).id();
++#endif
++
++  commands::SessionCommand command;
++  command.set_type(commands::SessionCommand::SELECT_CANDIDATE);
++  command.set_id(cand_id);
++  context_slot[id].session->SendCommand(command, context_slot[id].output);
++  update_all(mc_, id);
++  
++  return uim_scm_t();
++}
++
++static uim_lisp
++get_input_rule(uim_lisp id_)
++{
++  int id = C_INT(id_);
++  const config::Config::PreeditMethod method = context_slot[id].preedit_method;
++  int rule = 0;
++
++  switch (method) {
++  case config::Config::ROMAN:
++    rule = 0;
++    break;
++  case config::Config::KANA:
++    rule = 1;
++    break;
++  default:
++    rule = 0;
++    break;
++  }
++
++  return MAKE_INT(rule);
++}
++
++static uim_lisp
++set_input_rule(uim_lisp mc_, uim_lisp id_, uim_lisp new_rule_)
++{
++  int id = C_INT(id_);
++  config::Config config;
++  config::Config::PreeditMethod method;
++
++  switch (C_INT(new_rule_)) {
++  case 0:
++    method = config::Config::ROMAN;
++    break;
++  case 1:
++    method = config::Config::KANA;
++    break;
++  default:
++    method = config::Config::ROMAN;
++    break;
++  }
++
++  if (!context_slot[id].session->GetConfig(&config))
++    return uim_scm_f();
++
++  config.set_preedit_method(method);
++
++  if (!context_slot[id].session->SetConfig(config))
++    return uim_scm_f();
++
++  context_slot[id].preedit_method = method;
++
++  return uim_scm_t();
++}
++
++static uim_lisp
++reconvert(uim_lisp mc_, uim_lisp id_)
++{
++  if (!enable_reconversion)
++    return uim_scm_f();
++
++  int id = C_INT(id_);
++  commands::SessionCommand session_command;
++  session_command.set_type(commands::SessionCommand::CONVERT_REVERSE);
++
++  // try selected text first, then primary text
++  uim_lisp ustr = uim_scm_callf("im-acquire-text", "oyyiy", mc_, "selection" , "beginning", 0, "full");
++  uim_lisp former, latter;
++  int use_primary_text = 0;
++
++  if (TRUEP(ustr) &&
++      !NULLP(latter = uim_scm_callf("ustr-latter-seq", "o", ustr))) {
++    uim_lisp str = CAR(latter);
++
++    string text = REFER_C_STR(str);
++    session_command.set_text(text);
++  } else {
++    ustr = uim_scm_callf("im-acquire-text", "oyyyi", mc_, "primary", "cursor", "line", 0);
++    if (TRUEP(ustr) &&
++	!NULLP(former = uim_scm_callf("ustr-former-seq", "o", ustr))) {
++      uim_lisp str = CAR(former);
++      string text = REFER_C_STR(str);
++      session_command.set_text(text);
++      use_primary_text = 1;
++    } else
++      return uim_scm_f();
++  }
++
++  if (!context_slot[id].session->SendCommand(session_command, context_slot[id].output))
++    return uim_scm_f();
++
++  if (use_primary_text)
++    uim_scm_callf("im-delete-text", "oyyyi", mc_, "primary", "cursor", "line", 0);
++  else
++    uim_scm_callf("im-delete-text", "oyyiy", mc_, "selection", "beginning", 0, "full");
++  update_all(mc_, id);
++
++  return uim_scm_t();
++}
++
++static uim_lisp
++submit(uim_lisp mc_, uim_lisp id_)
++{
++  int id = C_INT(id_);
++  commands::SessionCommand command;
++
++  command.set_type(commands::SessionCommand::SUBMIT);
++  context_slot[id].session->SendCommand(command, context_slot[id].output);
++  update_all(mc_, id);
++
++  return uim_scm_t();
++}
++
++} // namespace
++} // namespace
++
++
++
++void
++uim_plugin_instance_init(void)
++{
++  uim_scm_init_proc1("mozc-lib-alloc-context", mozc::uim::create_context);
++  uim_scm_init_proc1("mozc-lib-free-context", mozc::uim::release_context);
++  uim_scm_init_proc1("mozc-lib-reset", mozc::uim::reset_context);
++  uim_scm_init_proc4("mozc-lib-press-key", mozc::uim::press_key);
++  uim_scm_init_proc3("mozc-lib-release-key", mozc::uim::release_key);
++  uim_scm_init_proc1("mozc-lib-get-nr-candidates", mozc::uim::get_nr_candidates);
++  uim_scm_init_proc2("mozc-lib-get-nth-candidate", mozc::uim::get_nth_candidate);
++  uim_scm_init_proc2("mozc-lib-get-nth-label", mozc::uim::get_nth_label);
++  uim_scm_init_proc2("mozc-lib-get-nth-annotation", mozc::uim::get_nth_annotation);
++  uim_scm_init_proc1("keysym-to-int", mozc::uim::keysym_to_int);
++  uim_scm_init_proc1("mozc-lib-input-mode", mozc::uim::get_composition_mode);
++  uim_scm_init_proc3("mozc-lib-set-input-mode", mozc::uim::set_composition_mode);
++  uim_scm_init_proc1("mozc-lib-set-on", mozc::uim::set_composition_on);
++  uim_scm_init_proc1("mozc-lib-has-preedit?", mozc::uim::has_preedit);
++  uim_scm_init_proc3("mozc-lib-set-candidate-index", mozc::uim::select_candidate);
++  uim_scm_init_proc1("mozc-lib-input-rule", mozc::uim::get_input_rule);
++  uim_scm_init_proc3("mozc-lib-set-input-rule", mozc::uim::set_input_rule);
++  uim_scm_init_proc2("mozc-lib-reconvert", mozc::uim::reconvert);
++  uim_scm_init_proc2("mozc-lib-submit-composition", mozc::uim::submit);
++
++  int argc = 1;
++  static const char name[] = "uim-mozc";
++  argv = (char **)malloc(sizeof(char *) * 2);
++  argv[0] = (char *)name;
++  argv[1] =  NULL;
++
++  mozc::InitMozc((const char *)argv[0], &argc, (char ***)&argv);
++  mozc::uim::install_keymap();
++}
++
++void
++uim_plugin_instance_quit(void)
++{
++  mozc::uim::key_map.clear();
++  for (int i = 0; i < mozc::uim::nr_contexts; i++) {
++    if (mozc::uim::context_slot[i].session) {
++      delete mozc::uim::context_slot[i].session;
++      delete mozc::uim::context_slot[i].output;
++    }
++  }
++  delete mozc::uim::keyTranslator;
++  mozc::uim::keyTranslator = NULL;
++  free(argv);
++}
+diff --git a/src/unix/uim/scm/mozc-custom.scm b/src/unix/uim/scm/mozc-custom.scm
+new file mode 100644
+index 00000000..adfd65bd
+--- /dev/null
++++ unix/uim/scm/mozc-custom.scm
+@@ -0,0 +1,396 @@
++;;;
++;;; Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++;;;
++;;; All rights reserved.
++;;;
++;;; Redistribution and use in source and binary forms, with or without
++;;; modification, are permitted provided that the following conditions
++;;; are met:
++;;; 1. Redistributions of source code must retain the above copyright
++;;;    notice, this list of conditions and the following disclaimer.
++;;; 2. Redistributions in binary form must reproduce the above copyright
++;;;    notice, this list of conditions and the following disclaimer in the
++;;;    documentation and/or other materials provided with the distribution.
++;;; 3. Neither the name of authors nor the names of its contributors
++;;;    may be used to endorse or promote products derived from this software
++;;;    without specific prior written permission.
++;;;
++;;; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND
++;;; ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++;;; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++;;; ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
++;;; FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++;;; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++;;; OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++;;; HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++;;; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++;;; OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++;;; SUCH DAMAGE.
++;;;;
++
++(require "i18n.scm")
++
++(define mozc-im-name-label (N_ "Mozc"))
++(define mozc-im-short-desc (N_ "Mozc Japanese engine"))
++
++(define-custom-group 'mozc
++		     (ugettext mozc-im-name-label)
++		     (ugettext mozc-im-short-desc))
++
++;;
++;; segment separator
++;;
++
++(define-custom 'mozc-show-segment-separator? #f
++  '(mozc segment-sep)
++  '(boolean)
++  (N_ "Show segment separator")
++  (N_ "long description will be here."))
++
++(define-custom 'mozc-segment-separator "|"
++  '(mozc segment-sep)
++  '(string ".*")
++  (N_ "Segment separator")
++  (N_ "long description will be here."))
++
++(custom-add-hook 'mozc-segment-separator
++                 'custom-activity-hooks
++                 (lambda ()
++                   mozc-show-segment-separator?))
++
++;;
++;; toolbar
++;;
++
++;; Can't be unified with action definitions in mozc.scm until uim
++;; 0.4.6.
++(define mozc-input-mode-indication-alist
++  (list
++   (list 'action_mozc_direct
++	 'ja_direct
++	 "-"
++	 (N_ "Direct input")
++	 (N_ "Direct input mode"))
++   (list 'action_mozc_hiragana
++	 'ja_hiragana
++	 "あ"
++	 (N_ "Hiragana")
++	 (N_ "Hiragana input mode"))
++   (list 'action_mozc_katakana
++	 'ja_katakana
++	 "ア"
++	 (N_ "Katakana")
++	 (N_ "Katakana input mode"))
++   (list 'action_mozc_halfkana
++	 'ja_halfkana
++	 "ｱ"
++	 (N_ "Halfwidth Katakana")
++	 (N_ "Halfwidth Katakana input mode"))
++   (list 'action_mozc_halfwidth_alnum
++	 'ja_halfwidth_alnum
++	 "a"
++	 (N_ "Halfwidth Alphanumeric")
++	 (N_ "Halfwidth Alphanumeric input mode"))
++   (list 'action_mozc_fullwidth_alnum
++	 'ja_fullwidth_alnum
++	 "Ａ"
++	 (N_ "Fullwidth Alphanumeric")
++	 (N_ "Fullwidth Alphanumeric input mode"))))
++
++(define mozc-kana-input-method-indication-alist
++  (list
++   (list 'action_mozc_roma
++         'ja_romaji
++         "Ｒ"
++         (N_ "Romaji")
++         (N_ "Romaji input mode"))
++   (list 'action_mozc_kana
++         'ja_kana
++         "か"
++         (N_ "Kana")
++         (N_ "Kana input mode"))))
++
++(define mozc-tool-indication-alist
++  (list
++   (list 'action_mozc_tool_selector
++         'mozc_tool_selector
++         "T"
++         (N_ "MozcTool selector")
++         (N_ "MozcTool selector"))
++   (list 'action_mozc_tool_about_dialog
++         'mozc_tool_about_dialog
++         "A"
++         (N_ "About")
++         (N_ "About"))
++   (list 'action_mozc_tool_config_dialog
++         'mozc_tool_config_dialog
++         "C"
++         (N_ "Config dialog")
++         (N_ "Config dialog"))
++   (list 'action_mozc_tool_dictionary_tool
++         'mozc_tool_dictionary_tool
++         "D"
++         (N_ "Dictionary tool")
++         (N_ "Dictionary tool"))
++   (list 'action_mozc_tool_word_register_dialog
++         'mozc_tool_word_register_dialog
++         "W"
++         (N_ "Word register dialog")
++         (N_ "Word register dialog"))
++   (list 'action_mozc_tool_character_palette
++         'mozc_tool_character_palette
++         "P"
++         (N_ "Character palette")
++         (N_ "Character palette"))
++   (list 'action_mozc_tool_hand_writing
++         'mozc_tool_hand_writing
++         "H"
++         (N_ "Hand writing")
++         (N_ "Hand writing"))
++   (list 'action_mozc_reconvert
++         'mozc_reconvert
++         "R"
++         (N_ "Reconvert")
++         (N_ "Reconvert"))))
++
++
++;;; Buttons
++
++(define-custom 'mozc-widgets '(widget_mozc_input_mode
++                               widget_mozc_kana_input_method
++                               widget_mozc_tool)
++  '(mozc toolbar)
++  (list 'ordered-list
++	(list 'widget_mozc_input_mode
++	      (_ "Input mode")
++	      (_ "Input mode"))
++	(list 'widget_mozc_kana_input_method
++	      (_ "Kana input method")
++	      (_ "Kana input method"))
++	(list 'widget_mozc_tool
++	      (_ "Mozc tool")
++	      (_ "Mozc tool")))
++  (_ "Enabled toolbar buttons")
++  (_ "long description will be here."))
++
++;; dynamic reconfiguration
++;; mozc-configure-widgets is not defined at this point. So wrapping
++;; into lambda.
++(custom-add-hook 'mozc-widgets
++		 'custom-set-hooks
++		 (lambda ()
++		   (mozc-configure-widgets)))
++
++
++;;; Input mode
++
++(define-custom 'default-widget_mozc_input_mode 'action_mozc_direct
++  '(mozc toolbar)
++  (cons 'choice
++	(map indication-alist-entry-extract-choice
++	     mozc-input-mode-indication-alist))
++  (_ "Default input mode")
++  (_ "long description will be here."))
++
++(define-custom 'mozc-input-mode-actions
++	       (map car mozc-input-mode-indication-alist)
++  '(mozc toolbar)
++  (cons 'ordered-list
++	(map indication-alist-entry-extract-choice
++	     mozc-input-mode-indication-alist))
++  (_ "Input mode menu items")
++  (_ "long description will be here."))
++
++;; value dependency
++(if custom-full-featured?
++    (custom-add-hook 'mozc-input-mode-actions
++		     'custom-set-hooks
++		     (lambda ()
++		       (custom-choice-range-reflect-olist-val
++			'default-widget_mozc_input_mode
++			'mozc-input-mode-actions
++			mozc-input-mode-indication-alist))))
++
++;; activity dependency
++(custom-add-hook 'default-widget_mozc_input_mode
++		 'custom-activity-hooks
++		 (lambda ()
++		   (memq 'widget_mozc_input_mode mozc-widgets)))
++
++(custom-add-hook 'mozc-input-mode-actions
++		 'custom-activity-hooks
++		 (lambda ()
++		   (memq 'widget_mozc_input_mode mozc-widgets)))
++
++;; dynamic reconfiguration
++(custom-add-hook 'default-widget_mozc_input_mode
++		 'custom-set-hooks
++		 (lambda ()
++		   (mozc-configure-widgets)))
++
++(custom-add-hook 'mozc-input-mode-actions
++		 'custom-set-hooks
++		 (lambda ()
++		   (mozc-configure-widgets)))
++
++;;; Kana input method
++
++(define-custom 'default-widget_mozc_kana_input_method 'action_mozc_roma
++  '(mozc toolbar)
++  (cons 'choice
++        (map indication-alist-entry-extract-choice
++             mozc-kana-input-method-indication-alist))
++  (N_ "Default kana input method")
++  (N_ "long description will be here."))
++
++(define-custom 'mozc-kana-input-method-actions
++               (map car mozc-kana-input-method-indication-alist)
++  '(mozc toolbar)
++  (cons 'ordered-list
++        (map indication-alist-entry-extract-choice
++             mozc-kana-input-method-indication-alist))
++  (N_ "Kana input method menu items")
++  (N_ "long description will be here."))
++
++;; value dependency
++(if custom-full-featured?
++    (custom-add-hook 'mozc-kana-input-method-actions
++                     'custom-set-hooks
++                     (lambda ()
++                       (custom-choice-range-reflect-olist-val
++                        'default-widget_mozc_kana_input_method
++                        'mozc-kana-input-method-actions
++                        mozc-kana-input-method-indication-alist))))
++
++;; activity dependency
++(custom-add-hook 'default-widget_mozc_kana_input_method
++                 'custom-activity-hooks
++                 (lambda ()
++                   (memq 'widget_mozc_kana_input_method mozc-widgets
++)))
++
++(custom-add-hook 'mozc-kana-input-method-actions
++                 'custom-activity-hooks
++                 (lambda ()
++                   (memq 'widget_mozc_kana_input_method mozc-widgets
++)))
++
++;; dynamic reconfiguration
++(custom-add-hook 'default-widget_mozc_kana_input_method
++                 'custom-set-hooks
++                 (lambda ()
++                   (mozc-configure-widgets)))
++
++(custom-add-hook 'mozc-kana-input-method-actions
++                 'custom-set-hooks
++                 (lambda ()
++                   (mozc-configure-widgets)))
++
++
++;;; Mozc tool
++(define mozc-tool-actions (map car mozc-tool-indication-alist))
++
++
++
++
++
++(define-custom 'mozc-use-with-vi? #f
++  '(mozc special-op)
++  '(boolean)
++  (N_ "Enable vi-cooperative mode")
++  (N_ "long description will be here."))
++
++(define-custom 'mozc-use-context-aware-conversion? #f
++  '(mozc special-op)
++  '(boolean)
++  (N_ "Use text input with context awareness")
++  (N_ "long description will be here."))
++
++(define-custom 'mozc-keyboard-type-for-kana-input-method 'jp-keyboard
++  '(mozc)
++  (list 'choice
++        (list 'jp-keyboard
++              (N_ "Japanese keyboard")
++              (N_ "long description will be here."))
++        (list 'us-keyboard
++              (N_ "US keyboard")
++              (N_ "long description will be here.")))
++  (N_ "Keyboard type for kana input method")
++  (N_ "long description will be here."))
++
++
++(define-custom-group 'mozc-tool
++		     (N_ "MozcTool")
++		     (N_ "MozcTool settings"))
++
++(define-custom 'mozc-tool-about-dialog-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of about dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-about-dialog-cmd-option "--mode=about_dialog"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for about dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-config-dialog-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of config dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-config-dialog-cmd-option "--mode=config_dialog"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for config dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-dictionary-tool-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of dictionary tool command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-dictionary-tool-cmd-option "--mode=dictionary_tool"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for dictionary tool command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-word-register-dialog-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of word register dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-word-register-dialog-cmd-option "--mode=word_register_dialog"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for word register dialog command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-character-palette-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of character palette command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-character-palette-cmd-option "--mode=character_palette"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for character palette command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-hand-writing-cmd "/usr/lib/mozc/mozc_tool"
++               '(mozc-tool)
++               '(pathname regular-file)
++               (N_ "Path of hand writing command")
++               (N_ "long description will be here."))
++
++(define-custom 'mozc-tool-hand-writing-cmd-option "--mode=hand_writing"
++               '(mozc-tool)
++               '(string ".*")
++               (N_ "Option for hand writing command")
++               (N_ "long description will be here."))
+diff --git a/src/unix/uim/scm/mozc-key-custom.scm b/src/unix/uim/scm/mozc-key-custom.scm
+new file mode 100644
+index 00000000..bcf85287
+--- /dev/null
++++ unix/uim/scm/mozc-key-custom.scm
+@@ -0,0 +1,74 @@
++;;;
++;;; Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++;;;
++;;; All rights reserved.
++;;;
++;;; Redistribution and use in source and binary forms, with or without
++;;; modification, are permitted provided that the following conditions
++;;; are met:
++;;; 1. Redistributions of source code must retain the above copyright
++;;;    notice, this list of conditions and the following disclaimer.
++;;; 2. Redistributions in binary form must reproduce the above copyright
++;;;    notice, this list of conditions and the following disclaimer in the
++;;;    documentation and/or other materials provided with the distribution.
++;;; 3. Neither the name of authors nor the names of its contributors
++;;;    may be used to endorse or promote products derived from this software
++;;;    without specific prior written permission.
++;;;
++;;; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND
++;;; ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++;;; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++;;; ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
++;;; FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++;;; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++;;; OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++;;; HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++;;; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++;;; OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++;;; SUCH DAMAGE.
++;;;;
++
++(require "i18n.scm")
++
++(define-custom-group 'mozc-keys
++		     (_ "Mozc key bindings")
++		     (_ "long description will be here."))
++
++;;
++;; overriding generic keys
++;;
++(define-custom 'mozc-on-key '(generic-on-key)
++               '(mozc-keys)
++	       '(key)
++	       (_ "[Mozc] on")
++	       (_ "long description will be here"))
++
++(define-custom 'mozc-off-key '(generic-off-key)
++               '(mozc-keys)
++	       '(key)
++	       (_ "[Mozc] off")
++	       (_ "long description will be here"))
++
++(define-custom 'mozc-kana-toggle-key '()
++               '(mozc-keys)
++	       '(key)
++	       (_ "[Mozc] toggle hiragana/katakana mode")
++	       (_ "long description will be here"))
++
++;;(define-custom 'mozc-cancel-key '(generic-cancel-key)
++;;               '(mozc-keys)
++;;	       '(key)
++;;	       (_ "[Mozc] cancel")
++;;	       (_ "long description will be here"))
++;;
++;;(define-custom 'mozc-prev-segment-key '(generic-go-left-key)
++;;               '(mozc-keys)
++;;	       '(key)
++;;	       (_ "[Mozc] previous segment")
++;;	       (_ "long description will be here"))
++
++(define-custom 'mozc-vi-escape-key '("escape" "<Control>[")
++               '(mozc-keys)
++	       '(key)
++	       (_ "[Mozc] ESC keys on vi-cooperative mode")
++	       (_ "long description will be here"))
+diff --git a/src/unix/uim/scm/mozc.scm b/src/unix/uim/scm/mozc.scm
+new file mode 100644
+index 00000000..9938ec47
+--- /dev/null
++++ unix/uim/scm/mozc.scm
+@@ -0,0 +1,566 @@
++;;;
++;;; Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++;;;
++;;; All rights reserved.
++;;;
++;;; Redistribution and use in source and binary forms, with or without
++;;; modification, are permitted provided that the following conditions
++;;; are met:
++;;; 1. Redistributions of source code must retain the above copyright
++;;;    notice, this list of conditions and the following disclaimer.
++;;; 2. Redistributions in binary form must reproduce the above copyright
++;;;    notice, this list of conditions and the following disclaimer in the
++;;;    documentation and/or other materials provided with the distribution.
++;;; 3. Neither the name of authors nor the names of its contributors
++;;;    may be used to endorse or promote products derived from this software
++;;;    without specific prior written permission.
++;;;
++;;; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND
++;;; ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++;;; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++;;; ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
++;;; FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++;;; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++;;; OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++;;; HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++;;; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++;;; OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++;;; SUCH DAMAGE.
++;;;;
++
++(require "util.scm")
++(require "process.scm")
++(require "japanese.scm")
++(require "ustr.scm")
++(require-custom "generic-key-custom.scm")
++(require-custom "mozc-custom.scm")
++(require-custom "mozc-key-custom.scm")
++
++;;; implementations
++
++(define mozc-type-direct          ja-type-direct)
++(define mozc-type-hiragana        ja-type-hiragana)
++(define mozc-type-katakana        ja-type-katakana)
++(define mozc-type-halfkana        ja-type-halfkana)
++(define mozc-type-halfwidth-alnum ja-type-halfwidth-alnum)
++(define mozc-type-fullwidth-alnum ja-type-fullwidth-alnum)
++
++(define mozc-input-rule-roma 0)
++(define mozc-input-rule-kana 1)
++
++(define mozc-prepare-input-mode-activation
++  (lambda (mc new-mode)
++    (let ((mid (mozc-context-mc-id mc)))
++      (if mid
++        (mozc-lib-set-input-mode mc mid new-mode)
++        #f))))
++
++(define mozc-prepare-input-rule-activation
++  (lambda (mc new-rule)
++    (let ((mid (mozc-context-mc-id mc)))
++      (if mid
++        (mozc-lib-set-input-rule mc mid new-rule)
++        #f))))
++
++(define (mozc-run-process file . args)
++  (let-optionals* args ((argv (list file)))
++    (let ((pid (process-fork)))
++      (cond ((< pid 0)
++             (begin
++               (uim-notify-fatal (N_ "cannot fork"))
++               #f))
++            ((= 0 pid) ;; child
++             (let ((pid2 (process-fork)))
++               (cond ((< pid2 0)
++                      (begin
++                        (uim-notify-fatal (N_ "cannot fork"))
++                        #f))
++                     ((= 0 pid2)
++                      (setenv "MALLOC_CHECK_" "0" 0)
++                      (setenv "GTK_IM_MODULE" "gtk-im-context-simple" 0)
++                      (if (= (process-execute file argv) -1)
++                        (uim-notify-fatal (format (N_ "cannot execute ~a") file)))
++                      (_exit 0))
++                     (else
++                       (_exit 0)))))
++            (else
++              (process-waitpid pid 0)
++              pid)))))
++
++(define mozc-tool-activate
++  (lambda (mc option)
++    (case option
++      ((mozc-tool-about-dialog)
++       (mozc-run-process mozc-tool-about-dialog-cmd (list mozc-tool-about-dialog-cmd mozc-tool-about-dialog-cmd-option)))
++      ((mozc-tool-config-dialog)
++       (mozc-run-process mozc-tool-config-dialog-cmd (list mozc-tool-config-dialog-cmd mozc-tool-config-dialog-cmd-option)))
++      ((mozc-tool-dictionary-tool)
++       (mozc-run-process mozc-tool-dictionary-tool-cmd (list mozc-tool-dictionary-tool-cmd mozc-tool-dictionary-tool-cmd-option)))
++      ((mozc-tool-word-register-dialog)
++       (mozc-run-process mozc-tool-word-register-dialog-cmd (list mozc-tool-word-register-dialog-cmd mozc-tool-word-register-dialog-cmd-option)))
++      ((mozc-tool-character-palette)
++       (mozc-run-process mozc-tool-character-palette-cmd (list mozc-tool-character-palette-cmd mozc-tool-character-palette-cmd-option)))
++      ((mozc-tool-hand-writing)
++       (mozc-run-process mozc-tool-hand-writing-cmd (list mozc-tool-hand-writing-cmd mozc-tool-hand-writing-cmd-option)))
++      (else
++        #f))))
++
++(define mozc-reconvert
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      (if mid
++        (begin
++          (if (not (mozc-context-on mc))
++            (begin
++              (mozc-lib-set-on mid)
++              (mozc-context-set-on! mc #t)))
++          (mozc-lib-reconvert mc mid))
++        #f))))
++
++(register-action 'action_mozc_hiragana
++		 (lambda (mc) ;; indication handler
++                   '(ja_hiragana
++                      "あ"
++                      "ひらがな"
++                      "ひらがな入力モード"))
++		 (lambda (mc) ;; activity predicate
++                   (and
++                     (mozc-context-mc-id mc)
++                     (mozc-context-on mc)
++		     (= (mozc-lib-input-mode (mozc-context-mc-id mc)) mozc-type-hiragana)))
++		 (lambda (mc) ;; action handler
++                   (mozc-prepare-input-mode-activation mc mozc-type-hiragana)))
++
++(register-action 'action_mozc_katakana
++		 (lambda (mc)
++                   '(ja_katakana
++                      "ア"
++                      "カタカナ"
++                      "カタカナ入力モード"))
++		 (lambda (mc)
++                   (and
++                     (mozc-context-mc-id mc)
++                     (mozc-context-on mc)
++		     (= (mozc-lib-input-mode (mozc-context-mc-id mc)) mozc-type-katakana)))
++		 (lambda (mc)
++                   (mozc-prepare-input-mode-activation mc mozc-type-katakana)))
++
++(register-action 'action_mozc_halfkana
++		 (lambda (mc)
++                   '(ja_halfkana
++                      "ｱ"
++                      "半角カタカナ"
++                      "半角カタカナ入力モード"))
++		 (lambda (mc)
++                   (and
++                     (mozc-context-mc-id mc)
++                     (mozc-context-on mc)
++		     (= (mozc-lib-input-mode (mozc-context-mc-id mc)) mozc-type-halfkana)))
++		 (lambda (mc)
++                   (mozc-prepare-input-mode-activation mc mozc-type-halfkana)))
++
++(register-action 'action_mozc_halfwidth_alnum
++		 (lambda (mc)
++                   '(ja_halfwidth_alnum
++                      "a"
++                      "半角英数"
++                      "半角英数入力モード"))
++		 (lambda (mc)
++                   (and
++                     (mozc-context-mc-id mc)
++                     (mozc-context-on mc)
++		     (= (mozc-lib-input-mode (mozc-context-mc-id mc)) mozc-type-halfwidth-alnum)))
++		 (lambda (mc)
++                   (mozc-prepare-input-mode-activation mc mozc-type-halfwidth-alnum)))
++
++(register-action 'action_mozc_direct
++		 (lambda (mc)
++                   '(ja_direct
++                      "-"
++                      "直接入力"
++                      "直接(無変換)入力モード"))
++		 (lambda (mc)
++		   (not (mozc-context-on mc)))
++		 (lambda (mc)
++                   (mozc-prepare-input-mode-activation mc mozc-type-direct)))
++
++(register-action 'action_mozc_fullwidth_alnum
++		 (lambda (mc)
++                   '(ja_fullwidth_alnum
++                      "Ａ"
++                      "全角英数"
++                      "全角英数入力モード"))
++		 (lambda (mc)
++                   (and
++                     (mozc-context-mc-id mc)
++                     (mozc-context-on mc)
++                     (= (mozc-lib-input-mode (mozc-context-mc-id mc)) mozc-type-fullwidth-alnum)))
++		 (lambda (mc)
++                   (mozc-prepare-input-mode-activation mc mozc-type-fullwidth-alnum)))
++
++(register-action 'action_mozc_roma
++;;               (indication-alist-indicator 'action_mozc_roma
++;;                                           mozc-kana-input-method-indication-alist)
++                 (lambda (mc)
++                   '(ja_romaji
++                     "Ｒ"
++                     "ローマ字"
++                     "ローマ字入力モード"))
++                 (lambda (mc)
++                   (and (mozc-context-mc-id mc)
++                        (= (mozc-lib-input-rule (mozc-context-mc-id mc))
++                           mozc-input-rule-roma)))
++                 (lambda (mc)
++                   (mozc-prepare-input-rule-activation mc mozc-input-rule-roma)
++))
++
++(register-action 'action_mozc_kana
++;;               (indication-alist-indicator 'action_mozc_kana
++;;                                           mozc-kana-input-method-indication-alist)
++                 (lambda (mc)
++                   '(ja_kana
++                     "か"
++                     "かな"
++                     "かな入力モード"))
++                 (lambda (mc)
++                   (and (mozc-context-mc-id mc)
++                        (= (mozc-lib-input-rule (mozc-context-mc-id mc))
++                           mozc-input-rule-kana)))
++                 (lambda (mc)
++                   (mozc-prepare-input-rule-activation mc mozc-input-rule-kana)
++                   ))
++
++(register-action 'action_mozc_tool_selector
++;;               (indication-alist-indicator 'action_mozc_tool_selector
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_selector
++                     "M"
++                     "MozcTool selector"
++                     "MozcTool selector"))
++                 (lambda (mc)
++                   #t)
++                 (lambda (mc)
++                   #f))
++
++(register-action 'action_mozc_tool_about_dialog
++;;               (indication-alist-indicator 'action_mozc_tool_about_dialog
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_about_dialog
++                     "A"
++                     "About"
++                     "About Mozc"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-about-dialog)))
++
++(register-action 'action_mozc_tool_config_dialog
++;;               (indication-alist-indicator 'action_mozc_tool_config_dialog
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_config_dialog
++                     "C"
++                     "Config dialog"
++                     "Config dialog"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-config-dialog)))
++
++(register-action 'action_mozc_tool_dictionary_tool
++;;               (indication-alist-indicator 'action_mozc_tool_dictionary_tool
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_dictionary_tool
++                     "D"
++                     "Dictionary tool"
++                     "Dictionary tool"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-dictionary-tool)))
++
++(register-action 'action_mozc_tool_word_register_dialog
++;;               (indication-alist-indicator 'action_mozc_tool_word_register_dialog
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_word_register_dialog
++                     "W"
++                     "Word register dialog"
++                     "Word register dialog"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-word-register-dialog)))
++
++(register-action 'action_mozc_tool_character_palette
++;;               (indication-alist-indicator 'action_mozc_tool_character_palette
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_character_palette
++                     "W"
++                     "Character palette"
++                     "Character palette"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-character-palette)))
++
++(register-action 'action_mozc_tool_hand_writing
++;;               (indication-alist-indicator 'action_mozc_tool_hand_writing
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_tool_hand_writing
++                     "W"
++                     "Hand writing"
++                     "Hand writing"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-tool-activate mc 'mozc-tool-hand-writing)))
++
++(register-action 'action_mozc_reconvert
++;;               (indication-alist-indicator 'action_mozc_reconvert
++;;                                           mozc-tool-indication-alist)
++                 (lambda (mc)
++                   '(mozc_reconvert
++                     "R"
++                     "Reconvert"
++                     "Reconvert"))
++                 (lambda (mc)
++                   #f)
++                 (lambda (mc)
++                   (mozc-reconvert mc)))
++
++;; Update widget definitions based on action configurations. The
++;; procedure is needed for on-the-fly reconfiguration involving the
++;; custom API
++(define mozc-configure-widgets
++  (lambda ()
++    (register-widget 'widget_mozc_input_mode
++		     (activity-indicator-new mozc-input-mode-actions)
++		     (actions-new mozc-input-mode-actions))
++    (register-widget 'widget_mozc_kana_input_method
++		     (activity-indicator-new mozc-kana-input-method-actions)
++		     (actions-new mozc-kana-input-method-actions))
++    (register-widget 'widget_mozc_tool
++		     (activity-indicator-new mozc-tool-actions)
++		     (actions-new (remove (lambda (x) (eq? x 'action_mozc_tool_selector)) mozc-tool-actions)))
++    (context-list-replace-widgets! 'mozc mozc-widgets)))
++
++(define mozc-context-rec-spec
++  (append
++   context-rec-spec
++   ;; renamed from 'id' to avoid conflict with context-id
++   (list
++     (list 'mc-id             #f)
++     (list 'on                #f))))
++(define-record 'mozc-context mozc-context-rec-spec)
++(define mozc-context-new-internal mozc-context-new)
++
++(define mozc-context-new
++  (lambda (id im name)
++    (let* ((mc (mozc-context-new-internal id im))
++           (mid (if (symbol-bound? 'mozc-lib-alloc-context)
++                    (if (= (getuid) 0)
++                        #f
++                        (mozc-lib-alloc-context mc))
++                    (begin
++                      (uim-notify-info
++                       (N_ "libuim-mozc.so couldn't be loaded"))
++                      #f))))
++      (mozc-context-set-widgets! mc mozc-widgets)
++      (mozc-context-set-mc-id! mc mid)
++      mc)))
++
++(define mozc-separator
++  (lambda ()
++    (let ((attr (bitwise-ior preedit-separator
++                             preedit-underline)))
++      (if mozc-show-segment-separator?
++        (cons attr mozc-segment-separator)
++        #f))))
++
++(define mozc-proc-direct-state
++  (lambda (mc key key-state)
++   (if (mozc-on-key? key key-state)
++     (let ((mid (mozc-context-mc-id mc)))
++       (if mid
++         (mozc-lib-set-on mid))
++       (mozc-context-set-on! mc #t))
++     (im-commit-raw mc))))
++
++(define mozc-init-handler
++  (lambda (id im arg)
++    (mozc-context-new id im arg)))
++
++(define mozc-release-handler
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      (if mid
++        (mozc-lib-free-context mid)
++        #f)
++    #f)))
++
++(define mozc-transpose-keys
++  (lambda (mid key key-state)
++    (let ((new (cons key key-state)))
++      ;; Since mozc_tool is now available, these key transposings
++      ;; are not needed usually.
++      ;;(if (mozc-lib-has-preedit? mid)
++      ;;  (cond
++      ;;    ((mozc-cancel-key? key key-state)
++      ;;     (set-car! new 'escape)
++      ;;     (set-cdr! new 0))
++      ;;    ((mozc-prev-segment-key? key key-state)
++      ;;     (set-car! new 'left)
++      ;;     (set-cdr! new 0))))
++      new)))
++
++(define mozc-kana-toggle
++  (lambda (mc mid)
++    (if mid
++      (let ((mode (mozc-lib-input-mode mid)))
++        (cond
++          ((= mode mozc-type-hiragana)
++           (mozc-lib-set-input-mode mc mid mozc-type-katakana))
++          ((= mode mozc-type-katakana)
++           (mozc-lib-set-input-mode mc mid mozc-type-hiragana))
++          (else
++            #f)))
++      #f)))
++
++(define mozc-proc-input-state
++  (lambda (mc key key-state)
++    (if (ichar-control? key)
++      (im-commit-raw mc)
++      (let ((mid (mozc-context-mc-id mc)))
++        (cond
++          ((and
++             mid
++             (mozc-off-key? key key-state)
++             (not (mozc-lib-has-preedit? mid)))
++           (mozc-lib-set-input-mode mc mid mozc-type-direct))
++          ;; non available modifiers on Mozc
++          ((or
++             (meta-key-mask key-state)
++             (super-key-mask key-state)
++             (hyper-key-mask key-state))
++           (if (and mid
++                    (mozc-lib-has-preedit? mid))
++             #f ;; ignore
++             (im-commit-raw mc))) ;; pass through
++          (else
++            (or
++              (and
++                (mozc-kana-toggle-key? key key-state)
++                (mozc-kana-toggle mc mid))
++              (let* ((new (mozc-transpose-keys mid key key-state))
++                     (nkey (car new))
++                     (nkey-state (cdr new)))
++                (if (and mid
++                         (mozc-lib-press-key mc mid (if (symbol? nkey)
++                                                      (keysym-to-int nkey) nkey)
++                                             nkey-state))
++                  #f ; Key event is consumed
++                  (begin
++                    (and mid
++                         mozc-use-with-vi?
++                         (mozc-vi-escape-key? key key-state)
++                         (mozc-lib-set-input-mode mc mid mozc-type-direct))
++                    (im-commit-raw mc)))))))))))
++
++(define mozc-press-key-handler
++  (lambda (mc key key-state)
++    (if (mozc-context-on mc)
++      (mozc-proc-input-state mc key key-state)
++      (mozc-proc-direct-state mc key key-state))))
++
++(define mozc-release-key-handler
++  (lambda (mc key key-state)
++    (if (or (ichar-control? key)
++            (not (mozc-context-on mc)))
++      (im-commit-raw mc))))
++
++(define mozc-reset-handler
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      (and mid
++           (mozc-lib-reset mid)))))
++
++(define mozc-focus-in-handler
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      ;(mozc-lib-focus-in mid)
++      )))
++
++(define mozc-focus-out-handler
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      ;(mozc-lib-focus-out mid)
++      )))
++
++(define mozc-displace-handler
++  (lambda (mc)
++    (let ((mid (mozc-context-mc-id mc)))
++      (and mid
++           (mozc-lib-submit-composition mc mid)))))
++
++(define mozc-get-candidate-handler
++  (lambda (mc idx accel-enum-hint)
++    (let* ((mid (mozc-context-mc-id mc))
++	   (cand
++             (mozc-lib-get-nth-candidate mid idx))
++           (label
++             (mozc-lib-get-nth-label mid idx))
++           (annotation
++             (mozc-lib-get-nth-annotation mid idx)))
++      (list cand label annotation))))
++
++(define mozc-set-candidate-index-handler
++  (lambda (mc idx)
++    (let ((mid (mozc-context-mc-id mc)))
++      (mozc-lib-set-candidate-index mc mid idx))))
++
++(define mozc-check-uim-version
++  (lambda (request-major request-minor request-patch)
++    (let* ((version (string-split (uim-version) "."))
++           (len (length version))
++           (major (if (>= len 1) (string->number (list-ref version 0)) 0))
++           (minor (if (>= len 2) (string->number (list-ref version 1)) 0))
++           (patch (if (>= len 3) (string->number (list-ref version 2)) 0)))
++      (or (> major request-major)
++          (and
++            (= major request-major)
++            (> minor request-minor))
++          (and
++            (= major request-major)
++            (= minor request-minor)
++            (>= patch request-patch))))))
++
++(mozc-configure-widgets)
++
++(register-im
++  'mozc
++  "ja"
++  "UTF-8"
++  mozc-im-name-label
++  mozc-im-short-desc
++  #f
++  mozc-init-handler
++  mozc-release-handler
++  context-mode-handler
++  mozc-press-key-handler
++  mozc-release-key-handler
++  mozc-reset-handler
++  mozc-get-candidate-handler
++  mozc-set-candidate-index-handler
++  context-prop-activate-handler
++  #f
++  #f ;mozc-focus-in-handler
++  #f ;mozc-focus-out-handler
++  #f
++  mozc-displace-handler
++)
+diff --git a/src/unix/uim/uim.gyp b/src/unix/uim/uim.gyp
+new file mode 100644
+index 00000000..bb1c602f
+--- /dev/null
++++ unix/uim/uim.gyp
+@@ -0,0 +1,85 @@
++#
++# Copyright (c) 2010-2012 uim Project http://code.google.com/p/uim/
++#
++# All rights reserved.
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions
++# are met:
++# 1. Redistributions of source code must retain the above copyright
++#    notice, this list of conditions and the following disclaimer.
++# 2. Redistributions in binary form must reproduce the above copyright
++#    notice, this list of conditions and the following disclaimer in the
++#    documentation and/or other materials provided with the distribution.
++# 3. Neither the name of authors nor the names of its contributors
++#    may be used to endorse or promote products derived from this software
++#    without specific prior written permission.
++#
++# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND
++# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
++# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++# SUCH DAMAGE.
++#
++
++{
++  'variables': {
++    'relative_dir': 'unix/uim',
++    'pkg_config_libs': [
++      'uim',
++    ],
++    'uim_dep_include_dirs': [
++    ],
++    'uim_dependencies': [
++      '../../base/base.gyp:base',
++      '../../client/client.gyp:client',
++    ],
++  },
++  'targets': [
++    {
++      'target_name': 'uim_mozc_lib',
++      'type': 'static_library',
++      'sources': [
++        'key_translator.cc',
++      ],
++      'dependencies': [
++        '../../protocol/protocol.gyp:commands_proto',
++      ],
++      'cflags': [
++        '<!@(pkg-config --cflags <@(pkg_config_libs))',
++      ],
++      'include_dirs': [
++        '<@(uim_dep_include_dirs)',
++      ],
++    },
++    {
++      'target_name': 'uim-mozc',
++      'type': 'loadable_module',
++      'sources': [
++        'mozc.cc',
++      ],
++      'dependencies': [
++        '<@(uim_dependencies)',
++        'uim_mozc_lib',
++      ],
++      'cflags': [
++        '<!@(pkg-config --cflags <@(pkg_config_libs))',
++      ],
++      'include_dirs': [
++        '<@(uim_dep_include_dirs)',
++      ],
++      'libraries': [
++        '<!@(pkg-config --libs-only-l <@(pkg_config_libs))',
++      ],
++      'ldflags': [
++        '<!@(pkg-config --libs-only-L <@(pkg_config_libs))',
++      ],
++    },
++  ],
++}
+-- 
+2.30.0.rc2
+
