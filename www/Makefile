@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1524 2021/03/18 21:58:43 pin Exp $
+# $NetBSD: Makefile,v 1.1525 2021/03/30 11:00:37 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -988,6 +988,7 @@ SUBDIR+=	swiftsurf
 SUBDIR+=	swiggle
 SUBDIR+=	swill
 SUBDIR+=	swish-e
+SUBDIR+=	syndication
 SUBDIR+=	tcl-cgi
 SUBDIR+=	termtter
 SUBDIR+=	thin
