@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2020/12/04 20:45:24 nia Exp $
+# $NetBSD: Makefile,v 1.77 2021/03/30 16:21:58 ryoon Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-ucd-dir=${PREFIX}/share/unicode/ucd
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
 SUBST_FILES.dbus=	src/ibusshare.c
-SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/db/dbus/machine-id,g'
+SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/machine-id,g'
 
 BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 MANCOMPRESSED=	yes
