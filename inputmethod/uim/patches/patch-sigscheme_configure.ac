@@ -1,9 +1,19 @@
-$NetBSD: patch-sigscheme_configure.ac,v 1.1 2019/11/01 16:21:11 nia Exp $
+$NetBSD: patch-sigscheme_configure.ac,v 1.2 2021/03/30 17:01:49 ryoon Exp $
 
-Correct _XOPEN_SOURCE
+Find ruby command for pkgsrc.
+Correct _XOPEN_SOURCE.
 
---- sigscheme/configure.ac.orig	2018-05-10 01:48:39.000000000 +0000
+--- sigscheme/configure.ac.orig	2020-08-24 21:28:26.000000000 +0000
 +++ sigscheme/configure.ac
+@@ -26,7 +26,7 @@ AC_PROG_EGREP
+ AC_PROG_SED
+ 
+ # These programs are only needed on make dist
+-AC_PATH_PROGS(RUBY, ruby18 ruby)
++AC_PATH_PROGS(RUBY, ruby18 ruby @RUBY_NAME@)
+ AC_PATH_PROGS(PERL, perl5 perl)
+ AC_PATH_PROG(ASCIIDOC, asciidoc)
+ AC_PATH_PROG(SH, sh)
 @@ -227,7 +227,7 @@ AC_CHECK_FUNCS(memalign)
  AC_CHECK_FUNCS(strdup,
    [

@@ -1,16 +1,18 @@
-# $NetBSD: Makefile.common,v 1.16 2019/11/07 03:01:35 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.17 2021/03/30 17:01:49 ryoon Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
 
-DISTNAME=	uim-1.8.8
+DISTNAME=	uim-1.8.9pre20210104
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uim/}
-GITHUB_RELEASE=	${DISTNAME:S/^uim-//1}
-EXTRACT_SUFX=	.tar.bz2
+GITHUB_TAG=	d1ac9d9315ff8c57c713b502544fef9b3a83b3e5
 
 MAINTAINER=	VEG03617@nifty.com
 HOMEPAGE=	https://github.com/uim/uim/wiki
+
+GITHUB_SUBMODULES+=	uim sigscheme beb8fbdc69b523d14fc202a4d17375555a74c772 sigscheme
+GITHUB_SUBMODULES+=	uim libgcroots d362356cc4c5f591695d2fbda7746918250c9e99 sigscheme/libgcroots
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/uim/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/uim/patches
