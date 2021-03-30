@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/29 11:49:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:22 markd Exp $
 include/KF5/KItemModels/KBreadcrumbSelectionModel
 include/KF5/KItemModels/KCheckableProxyModel
 include/KF5/KItemModels/KColumnHeadersModel
@@ -36,3 +36,4 @@ qt5/mkspecs/modules/qt_KItemModels.pri
 qt5/qml/org/kde/kitemmodels/libitemmodelsplugin.so
 qt5/qml/org/kde/kitemmodels/qmldir
 share/qlogging-categories5/kitemmodels.categories
+share/qlogging-categories5/kitemmodels.renamecategories

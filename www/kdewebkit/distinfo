@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/06/07 12:01:43 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/03/30 10:58:28 markd Exp $
 
-SHA1 (kdewebkit-5.70.0.tar.xz) = b94cb847859b38648349dbf78baa474f3ac6d149
-RMD160 (kdewebkit-5.70.0.tar.xz) = ef04a917d6da22dff5a547a03875328e083c1bca
-SHA512 (kdewebkit-5.70.0.tar.xz) = 79b57693fafd2a788d22963aa809358238bcbabf7da88b63224314c683165dc11d35a3383252a8ae79874f7a0c14d1a7efd07abe879f53f46cb3a3c21d902a17
-Size (kdewebkit-5.70.0.tar.xz) = 29736 bytes
+SHA1 (kdewebkit-5.80.0.tar.xz) = c704c3a75b318ff42f905a74d2719933e8049d93
+RMD160 (kdewebkit-5.80.0.tar.xz) = ccf45c4aa9751f76dfa6d58c3d730af4f7174f83
+SHA512 (kdewebkit-5.80.0.tar.xz) = aa21987ebe9c544a4ebcc15c63f55d1a0a8b2db613c8e70196a9c6a77a799bb0fc1f12e7a2f52f3edbc05e9c4c215472251086e91d6f08d9799efb5899f61d2f
+Size (kdewebkit-5.80.0.tar.xz) = 29776 bytes

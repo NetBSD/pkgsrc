@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/29 11:49:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:27 markd Exp $
 include/KF5/KAuth/KAuth
 include/KF5/KAuth/KAuthAction
 include/KF5/KAuth/KAuthActionReply
@@ -32,12 +32,13 @@ qt5/mkspecs/modules/qt_KAuth.pri
 qt5/mkspecs/modules/qt_KAuthCore.pri
 qt5/plugins/kauth/backend/kauth_backend_plugin.so
 qt5/plugins/kauth/helper/kauth_helper_plugin.so
-share/examples/kauth/org.kde.kf5auth.conf
+share/dbus-1/system.d/org.kde.kf5auth.conf
 share/kf5/kauth/dbus_policy.stub
 share/kf5/kauth/dbus_service.stub
 share/locale/af/LC_MESSAGES/kauth5_qt.qm
 share/locale/ar/LC_MESSAGES/kauth5_qt.qm
 share/locale/as/LC_MESSAGES/kauth5_qt.qm
+share/locale/az/LC_MESSAGES/kauth5_qt.qm
 share/locale/be/LC_MESSAGES/kauth5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kauth5_qt.qm
 share/locale/bg/LC_MESSAGES/kauth5_qt.qm
@@ -135,3 +136,4 @@ share/locale/zh_CN/LC_MESSAGES/kauth5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/kauth5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kauth5_qt.qm
 share/qlogging-categories5/kauth.categories
+share/qlogging-categories5/kauth.renamecategories

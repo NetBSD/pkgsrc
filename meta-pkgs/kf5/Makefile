@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/06/09 23:12:06 markd Exp $
+# $NetBSD: Makefile,v 1.18 2021/03/30 10:58:31 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	https://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
-KF5VER=		5.70.0
+KF5VER=		5.80.0
 
 DEPENDS+=	attica-qt5>=${KF5VER}:../../misc/attica-qt5
 DEPENDS+=	baloo5>=${KF5VER}:../../sysutils/baloo5
@@ -31,6 +31,7 @@ DEPENDS+=	kconfigwidgets>=${KF5VER}:../../x11/kconfigwidgets
 DEPENDS+=	kcontacts>=${KF5VER}:../../misc/kcontacts
 DEPENDS+=	kcoreaddons>=${KF5VER}:../../devel/kcoreaddons
 DEPENDS+=	kcrash>=${KF5VER}:../../devel/kcrash
+DEPENDS+=	kdav>=${KF5VER}:../../misc/kdav
 DEPENDS+=	kdbusaddons>=${KF5VER}:../../sysutils/kdbusaddons
 DEPENDS+=	kdeclarative>=${KF5VER}:../../devel/kdeclarative
 DEPENDS+=	kded>=${KF5VER}:../../x11/kded
@@ -78,10 +79,11 @@ DEPENDS+=	kxmlrpcclient>=${KF5VER}:../../net/kxmlrpcclient
 DEPENDS+=	oxygen-icons>=${KF5VER}:../../graphics/oxygen-icons
 DEPENDS+=	plasma-framework>=${KF5VER}:../../x11/plasma-framework
 DEPENDS+=	prison>=${KF5VER}:../../graphics/prison
-# purpose
+DEPENDS+=	purpose>=${KF5VER}:../../devel/purpose
 DEPENDS+=	qqc2-desktop-style>=${KF5VER}:../../x11/qqc2-desktop-style
 DEPENDS+=	solid>=${KF5VER}:../../sysutils/solid
 DEPENDS+=	sonnet>=${KF5VER}:../../textproc/sonnet
+DEPENDS+=	syndication>=${KF5VER}:../../www/syndication
 DEPENDS+=	syntax-highlighting>=${KF5VER}:../../textproc/syntax-highlighting
 DEPENDS+=	threadweaver>=${KF5VER}:../../devel/threadweaver
 

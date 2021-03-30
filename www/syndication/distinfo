@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/03/30 10:58:29 markd Exp $
+
+SHA1 (syndication-5.80.0.tar.xz) = 2ccdffeb5dcc612984217ecf73b9e4c7b633f7d5
+RMD160 (syndication-5.80.0.tar.xz) = 290cdcdf0c4ce52ebe7447141a7a09a65f767163
+SHA512 (syndication-5.80.0.tar.xz) = 913631280479682dd23118b4a1f464930a00546c12f283b2dc9fb1ab96b33b576b6d5fbbb82477d26189ee8fd376842104269fb5a05ff54b16447c7ae3ed651f
+Size (syndication-5.80.0.tar.xz) = 508592 bytes

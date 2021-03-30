@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/11 08:19:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/30 10:58:25 markd Exp $
+qt5/plugins/imageformats/kimg_ani.so
 qt5/plugins/imageformats/kimg_eps.so
 qt5/plugins/imageformats/kimg_exr.so
 qt5/plugins/imageformats/kimg_hdr.so
@@ -11,6 +12,7 @@ qt5/plugins/imageformats/kimg_ras.so
 qt5/plugins/imageformats/kimg_rgb.so
 qt5/plugins/imageformats/kimg_tga.so
 qt5/plugins/imageformats/kimg_xcf.so
+share/kservices5/qimageioplugins/ani.desktop
 share/kservices5/qimageioplugins/dds.desktop
 share/kservices5/qimageioplugins/eps.desktop
 share/kservices5/qimageioplugins/exr.desktop

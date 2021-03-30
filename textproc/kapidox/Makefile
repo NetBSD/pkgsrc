@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:45 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/03/30 10:58:28 markd Exp $
 
 DISTNAME=	kapidox-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -13,6 +12,5 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-PYDISTUTILSPKG=	YES
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/11 09:28:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/30 10:58:28 markd Exp $
 include/KF5/KCalendarCore/KCalCore/Alarm
 include/KF5/KCalendarCore/KCalCore/Attachment
 include/KF5/KCalendarCore/KCalCore/Attendee
@@ -6,6 +6,7 @@ include/KF5/KCalendarCore/KCalCore/CalFilter
 include/KF5/KCalendarCore/KCalCore/CalFormat
 include/KF5/KCalendarCore/KCalCore/CalStorage
 include/KF5/KCalendarCore/KCalCore/Calendar
+include/KF5/KCalendarCore/KCalCore/Conference
 include/KF5/KCalendarCore/KCalCore/CustomProperties
 include/KF5/KCalendarCore/KCalCore/Duration
 include/KF5/KCalendarCore/KCalCore/Event
@@ -36,6 +37,7 @@ include/KF5/KCalendarCore/KCalendarCore/CalFilter
 include/KF5/KCalendarCore/KCalendarCore/CalFormat
 include/KF5/KCalendarCore/KCalendarCore/CalStorage
 include/KF5/KCalendarCore/KCalendarCore/Calendar
+include/KF5/KCalendarCore/KCalendarCore/Conference
 include/KF5/KCalendarCore/KCalendarCore/CustomProperties
 include/KF5/KCalendarCore/KCalendarCore/Duration
 include/KF5/KCalendarCore/KCalendarCore/Event
@@ -66,6 +68,7 @@ include/KF5/KCalendarCore/kcalcore/calendar.h
 include/KF5/KCalendarCore/kcalcore/calfilter.h
 include/KF5/KCalendarCore/kcalcore/calformat.h
 include/KF5/KCalendarCore/kcalcore/calstorage.h
+include/KF5/KCalendarCore/kcalcore/conference.h
 include/KF5/KCalendarCore/kcalcore/customproperties.h
 include/KF5/KCalendarCore/kcalcore/duration.h
 include/KF5/KCalendarCore/kcalcore/event.h
@@ -97,6 +100,7 @@ include/KF5/KCalendarCore/kcalendarcore/calendar.h
 include/KF5/KCalendarCore/kcalendarcore/calfilter.h
 include/KF5/KCalendarCore/kcalendarcore/calformat.h
 include/KF5/KCalendarCore/kcalendarcore/calstorage.h
+include/KF5/KCalendarCore/kcalendarcore/conference.h
 include/KF5/KCalendarCore/kcalendarcore/customproperties.h
 include/KF5/KCalendarCore/kcalendarcore/duration.h
 include/KF5/KCalendarCore/kcalendarcore/event.h

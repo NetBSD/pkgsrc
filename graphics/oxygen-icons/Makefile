@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/06/07 10:42:48 markd Exp $
+# $NetBSD: Makefile,v 1.39 2021/03/30 10:58:25 markd Exp $
 
-DISTNAME=	oxygen-icons5-5.70.0
+DISTNAME=	oxygen-icons5-5.80.0
 PKGNAME=	${DISTNAME:S/5//}
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION:R}/}

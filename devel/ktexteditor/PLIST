@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/06/13 22:52:38 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/30 10:58:24 markd Exp $
 include/KF5/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
@@ -16,6 +16,7 @@ include/KF5/KTextEditor/KTextEditor/Editor
 include/KF5/KTextEditor/KTextEditor/InlineNote
 include/KF5/KTextEditor/KTextEditor/InlineNoteInterface
 include/KF5/KTextEditor/KTextEditor/InlineNoteProvider
+include/KF5/KTextEditor/KTextEditor/LineRange
 include/KF5/KTextEditor/KTextEditor/MainWindow
 include/KF5/KTextEditor/KTextEditor/MarkInterface
 include/KF5/KTextEditor/KTextEditor/Message
@@ -46,6 +47,7 @@ include/KF5/KTextEditor/ktexteditor/editor.h
 include/KF5/KTextEditor/ktexteditor/inlinenote.h
 include/KF5/KTextEditor/ktexteditor/inlinenoteinterface.h
 include/KF5/KTextEditor/ktexteditor/inlinenoteprovider.h
+include/KF5/KTextEditor/ktexteditor/linerange.h
 include/KF5/KTextEditor/ktexteditor/mainwindow.h
 include/KF5/KTextEditor/ktexteditor/markinterface.h
 include/KF5/KTextEditor/ktexteditor/message.h
@@ -67,7 +69,7 @@ lib/cmake/KF5TextEditor/KF5TextEditorTargets-noconfig.cmake
 lib/cmake/KF5TextEditor/KF5TextEditorTargets.cmake
 lib/libKF5TextEditor.so
 lib/libKF5TextEditor.so.5
-lib/libKF5TextEditor.so.5.70.0
+lib/libKF5TextEditor.so.${PKGVERSION}
 libexec/kauth/kauth_ktexteditor_helper
 qt5/mkspecs/modules/qt_KTextEditor.pri
 qt5/plugins/kf5/parts/katepart.so
@@ -81,6 +83,7 @@ share/kservicetypes5/ktexteditorplugin.desktop
 share/locale/af/LC_MESSAGES/ktexteditor5.mo
 share/locale/ar/LC_MESSAGES/ktexteditor5.mo
 share/locale/ast/LC_MESSAGES/ktexteditor5.mo
+share/locale/az/LC_MESSAGES/ktexteditor5.mo
 share/locale/be/LC_MESSAGES/ktexteditor5.mo
 share/locale/bg/LC_MESSAGES/ktexteditor5.mo
 share/locale/bn/LC_MESSAGES/ktexteditor5.mo
@@ -165,3 +168,4 @@ share/locale/zh_CN/LC_MESSAGES/ktexteditor5.mo
 share/locale/zh_TW/LC_MESSAGES/ktexteditor5.mo
 share/polkit-1/actions/org.kde.ktexteditor.katetextbuffer.policy
 share/qlogging-categories5/ktexteditor.categories
+share/qlogging-categories5/ktexteditor.renamecategories

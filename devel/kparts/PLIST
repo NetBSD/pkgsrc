@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/07 11:18:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:23 markd Exp $
 include/KF5/KParts/KParts/BrowserArguments
 include/KF5/KParts/KParts/BrowserExtension
 include/KF5/KParts/KParts/BrowserHostExtension
@@ -78,11 +78,12 @@ qt5/plugins/spellcheckplugin.so
 share/kdevappwizard/templates/kpartsapp.tar.bz2
 share/kservicetypes5/browserview.desktop
 share/kservicetypes5/kpart.desktop
-share/kservicetypes5/krop.desktop
-share/kservicetypes5/krwp.desktop
+share/kservicetypes5/kparts-readonlypart.desktop
+share/kservicetypes5/kparts-readwritepart.desktop
 share/locale/af/LC_MESSAGES/kparts5.mo
 share/locale/ar/LC_MESSAGES/kparts5.mo
 share/locale/as/LC_MESSAGES/kparts5.mo
+share/locale/az/LC_MESSAGES/kparts5.mo
 share/locale/be/LC_MESSAGES/kparts5.mo
 share/locale/be@latin/LC_MESSAGES/kparts5.mo
 share/locale/bg/LC_MESSAGES/kparts5.mo
@@ -179,3 +180,4 @@ share/locale/xh/LC_MESSAGES/kparts5.mo
 share/locale/zh_CN/LC_MESSAGES/kparts5.mo
 share/locale/zh_HK/LC_MESSAGES/kparts5.mo
 share/locale/zh_TW/LC_MESSAGES/kparts5.mo
+share/qlogging-categories5/kparts.categories

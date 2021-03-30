@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2020/06/07 11:41:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/03/30 10:58:26 markd Exp $
+bin/knewstuff-dialog
 include/KF5/KNewStuff3/KNS3/Button
 include/KF5/KNewStuff3/KNS3/DownloadDialog
 include/KF5/KNewStuff3/KNS3/DownloadManager
@@ -7,6 +8,7 @@ include/KF5/KNewStuff3/KNS3/Entry
 include/KF5/KNewStuff3/KNS3/KMoreTools
 include/KF5/KNewStuff3/KNS3/KMoreToolsMenuFactory
 include/KF5/KNewStuff3/KNS3/KMoreToolsPresets
+include/KF5/KNewStuff3/KNS3/QtQuickDialogWrapper
 include/KF5/KNewStuff3/KNS3/UploadDialog
 include/KF5/KNewStuff3/KNSCore/Author
 include/KF5/KNewStuff3/KNSCore/Cache
@@ -34,6 +36,7 @@ include/KF5/KNewStuff3/kns3/kmoretoolsmenufactory.h
 include/KF5/KNewStuff3/kns3/kmoretoolspresets.h
 include/KF5/KNewStuff3/kns3/knewstuff_export.h
 include/KF5/KNewStuff3/kns3/knewstuffaction.h
+include/KF5/KNewStuff3/kns3/qtquickdialogwrapper.h
 include/KF5/KNewStuff3/kns3/uploaddialog.h
 include/KF5/KNewStuff3/knscore/author.h
 include/KF5/KNewStuff3/knscore/cache.h
@@ -150,6 +153,7 @@ share/kf5/kmoretools/presets-kmoretools/xfce4-taskmanager.desktop
 share/locale/af/LC_MESSAGES/knewstuff5.mo
 share/locale/ar/LC_MESSAGES/knewstuff5.mo
 share/locale/as/LC_MESSAGES/knewstuff5.mo
+share/locale/az/LC_MESSAGES/knewstuff5.mo
 share/locale/be/LC_MESSAGES/knewstuff5.mo
 share/locale/be@latin/LC_MESSAGES/knewstuff5.mo
 share/locale/bg/LC_MESSAGES/knewstuff5.mo
@@ -247,3 +251,4 @@ share/locale/zh_CN/LC_MESSAGES/knewstuff5.mo
 share/locale/zh_HK/LC_MESSAGES/knewstuff5.mo
 share/locale/zh_TW/LC_MESSAGES/knewstuff5.mo
 share/qlogging-categories5/knewstuff.categories
+share/qlogging-categories5/knewstuff.renamecategories

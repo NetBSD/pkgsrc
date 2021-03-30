@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/07 11:27:01 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/03/30 10:58:24 markd Exp $
 
-SHA1 (kwayland-5.70.0.tar.xz) = 7cf6ad6f5fdd2909f348469098d81580048e0a95
-RMD160 (kwayland-5.70.0.tar.xz) = 695c93d48e30b5ca3104c5ade897fe7027f25f84
-SHA512 (kwayland-5.70.0.tar.xz) = 3ba6e090c8f94b7e49151807bbdc3525a3b6003273279ad4d29723da43e69885b30c5f6c10c3197fbd3e22695ae74368148d41cc4145a41b3e00c7fc359c23af
-Size (kwayland-5.70.0.tar.xz) = 347256 bytes
+SHA1 (kwayland-5.80.0.tar.xz) = 5f2d8442f801e05e86e9bf383d828c7c224ee14c
+RMD160 (kwayland-5.80.0.tar.xz) = b118e7241321b9bf445c85fec11390909c849560
+SHA512 (kwayland-5.80.0.tar.xz) = d681e7910a27c76925745dd508cc553a2ddb0b7cda9af150dbd59de3b69a19082e672c586b9e4de1da3fd8027f3aa8d85f36444a20db2604c76d7e407f269789
+Size (kwayland-5.80.0.tar.xz) = 344740 bytes

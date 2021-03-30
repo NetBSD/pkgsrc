@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/06 15:25:17 dbj Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/03/30 10:58:31 markd Exp $
 include/KF5/KWindowSystem/KKeyServer
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionOwner
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionWatcher
@@ -43,11 +43,12 @@ lib/libKF5WindowSystem.so
 lib/libKF5WindowSystem.so.5
 lib/libKF5WindowSystem.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KWindowSystem.pri
-qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemWaylandPlugin.so
-${PLIST.x11}qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemX11Plugin.so
+qt5/plugins/kf5/kwindowsystem/KF5WindowSystemWaylandPlugin.so
+${PLIST.x11}qt5/plugins/kf5/kwindowsystem/KF5WindowSystemX11Plugin.so
 share/locale/af/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/ar/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/as/LC_MESSAGES/kwindowsystem5_qt.qm
+share/locale/az/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/be/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/bg/LC_MESSAGES/kwindowsystem5_qt.qm
@@ -145,3 +146,4 @@ share/locale/zh_CN/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kwindowsystem5_qt.qm
 share/qlogging-categories5/kwindowsystem.categories
+share/qlogging-categories5/kwindowsystem.renamecategories
