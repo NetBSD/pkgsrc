@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1871 2021/03/30 10:02:06 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.1872 2021/03/30 10:22:55 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.68.0 [cirnatdan 2021-03-30]
 	Added devel/plasma-wayland-protocols version 1.1.1 [markd 2021-03-30]
 	Updated sysutils/gsettings-desktop-schemas to 40.0 [cirnatdan 2021-03-30]
+	Updated devel/libgweather to 40.0 [cirnatdan 2021-03-30]
