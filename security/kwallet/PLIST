@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/11/11 08:47:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/03/30 10:58:27 markd Exp $
 bin/kwallet-query
 bin/kwalletd5
 include/KF5/KWallet/KWallet
@@ -23,6 +23,8 @@ share/knotifications5/kwalletd.notifyrc
 share/kservices5/kwalletd5.desktop
 share/locale/ar/LC_MESSAGES/kwallet-query.mo
 share/locale/ar/LC_MESSAGES/kwalletd5.mo
+share/locale/az/LC_MESSAGES/kwallet-query.mo
+share/locale/az/LC_MESSAGES/kwalletd5.mo
 share/locale/be/LC_MESSAGES/kwalletd5.mo
 share/locale/bg/LC_MESSAGES/kwalletd5.mo
 share/locale/bn/LC_MESSAGES/kwalletd5.mo
@@ -38,6 +40,7 @@ share/locale/da/LC_MESSAGES/kwallet-query.mo
 share/locale/da/LC_MESSAGES/kwalletd5.mo
 share/locale/de/LC_MESSAGES/kwallet-query.mo
 share/locale/de/LC_MESSAGES/kwalletd5.mo
+share/locale/el/LC_MESSAGES/kwallet-query.mo
 share/locale/el/LC_MESSAGES/kwalletd5.mo
 share/locale/en_GB/LC_MESSAGES/kwallet-query.mo
 share/locale/en_GB/LC_MESSAGES/kwalletd5.mo
@@ -97,6 +100,7 @@ share/locale/nl/LC_MESSAGES/kwalletd5.mo
 share/locale/nn/LC_MESSAGES/kwallet-query.mo
 share/locale/nn/LC_MESSAGES/kwalletd5.mo
 share/locale/or/LC_MESSAGES/kwalletd5.mo
+share/locale/pa/LC_MESSAGES/kwallet-query.mo
 share/locale/pa/LC_MESSAGES/kwalletd5.mo
 share/locale/pl/LC_MESSAGES/kwallet-query.mo
 share/locale/pl/LC_MESSAGES/kwalletd5.mo
@@ -139,3 +143,4 @@ share/locale/zh_CN/LC_MESSAGES/kwalletd5.mo
 share/locale/zh_TW/LC_MESSAGES/kwallet-query.mo
 share/locale/zh_TW/LC_MESSAGES/kwalletd5.mo
 share/qlogging-categories5/kwallet.categories
+share/qlogging-categories5/kwallet.renamecategories
