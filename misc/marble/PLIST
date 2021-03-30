@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/02/02 02:57:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/30 09:08:58 markd Exp $
 bin/marble
 bin/marble-qt
 include/astro/astr2lib.h
@@ -236,10 +236,10 @@ lib/marble/plugins/libSpeedometer.so
 lib/marble/plugins/libStarsPlugin.so
 lib/marble/plugins/libSunPlugin.so
 lib/marble/plugins/libYoursPlugin.so
-lib/plugins/designer/libLatLonEditPlugin.so
-lib/plugins/designer/libMarbleNavigatorPlugin.so
-lib/plugins/designer/libMarbleWidgetPlugin.so
-mkspecs/modules/qt_Marble.pri
+qt5/mkspecs/modules/qt_Marble.pri
+qt5/plugins/designer/libLatLonEditPlugin.so
+qt5/plugins/designer/libMarbleNavigatorPlugin.so
+qt5/plugins/designer/libMarbleWidgetPlugin.so
 qt5/plugins/libmarble_part.so
 qt5/plugins/libmarblethumbnail.so
 qt5/plugins/plasma_runner_marble.so
