@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1862 2021/03/30 00:16:24 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1863 2021/03/30 06:59:59 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2796,3 +2796,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.16.5 [gdt 2021-03-29]
 	Updated ham/chirp to 20210307 [gdt 2021-03-29]
 	Updated audio/din to 50.1 [fox 2021-03-30]
+	Updated sysutils/xenkernel413 to 4.13.3 [bouyer 2021-03-30]
+	Updated sysutils/xentools413 to 4.13.3 [bouyer 2021-03-30]
