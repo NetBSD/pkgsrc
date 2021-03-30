@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2021/02/25 08:54:05 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2021/03/30 09:50:14 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
@@ -14,13 +14,7 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
-# As of 2021-02-25 cargo is only a static binary in x86_64 and
-# powerpc bootstraps
-.if ${OPSYS} == "NetBSD" && \
-    ${MACHINE_ARCH} != "i386" && \
-    ${MACHINE_ARCH} != "aarch64" && \
-    ${MACHINE_ARCH} != "earmv7hf" && \
-    ${MACHINE_ARCH} != "sparc64"
+.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
 
