@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/06/07 10:51:37 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/03/30 10:58:21 markd Exp $
 
-SHA1 (kconfig-5.70.0.tar.xz) = 8d078f063ed2711ac7bd9d81daa57b18f454e7c5
-RMD160 (kconfig-5.70.0.tar.xz) = 47096867038d81ed9dbd44e331a1db0bf011e66c
-SHA512 (kconfig-5.70.0.tar.xz) = 73618b8e36ed23f99a4d574dc1b15e4e0d4b127ad7b61f0c3d28b85fa4eb61b57d3333ba0df33b4d079fdfe90c4294be89881bdea62253e9e7f4f57b13d0c1b5
-Size (kconfig-5.70.0.tar.xz) = 260708 bytes
+SHA1 (kconfig-5.80.0.tar.xz) = e5213e0e7fd330090e90280961141b278d926ccc
+RMD160 (kconfig-5.80.0.tar.xz) = c4d0e908534b30add1162c8b861995722fe0318a
+SHA512 (kconfig-5.80.0.tar.xz) = 5836dded113c0e4365e9e48d56cb745e9de57dc025c0376b692151dccbe6c864f2e4a60bee02b8a171e2fbd4816adf18b6eb1b611125c379a91b0b7dc7d7e115
+Size (kconfig-5.80.0.tar.xz) = 267500 bytes

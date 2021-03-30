@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/06/07 12:43:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/03/30 10:58:30 markd Exp $
 include/KF5/Kirigami2/KirigamiPluginFactory
 include/KF5/Kirigami2/PlatformTheme
 include/KF5/Kirigami2/TabletModeWatcher
@@ -28,15 +28,19 @@ qt5/qml/org/kde/kirigami.2/ActionToolBar.qml
 qt5/qml/org/kde/kirigami.2/ApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/ApplicationItem.qml
 qt5/qml/org/kde/kirigami.2/ApplicationWindow.qml
+qt5/qml/org/kde/kirigami.2/Avatar.qml
 qt5/qml/org/kde/kirigami.2/BasicListItem.qml
 qt5/qml/org/kde/kirigami.2/Card.qml
 qt5/qml/org/kde/kirigami.2/CardsGridView.qml
 qt5/qml/org/kde/kirigami.2/CardsLayout.qml
 qt5/qml/org/kde/kirigami.2/CardsListView.qml
+qt5/qml/org/kde/kirigami.2/CheckableListItem.qml
 qt5/qml/org/kde/kirigami.2/ContextDrawer.qml
+qt5/qml/org/kde/kirigami.2/FlexColumn.qml
 qt5/qml/org/kde/kirigami.2/FormLayout.qml
 qt5/qml/org/kde/kirigami.2/GlobalDrawer.qml
 qt5/qml/org/kde/kirigami.2/Heading.qml
+qt5/qml/org/kde/kirigami.2/Hero.qml
 qt5/qml/org/kde/kirigami.2/InlineMessage.qml
 qt5/qml/org/kde/kirigami.2/ItemViewHeader.qml
 qt5/qml/org/kde/kirigami.2/Label.qml
@@ -50,12 +54,12 @@ qt5/qml/org/kde/kirigami.2/PagePoolAction.qml
 qt5/qml/org/kde/kirigami.2/PageRow.qml
 qt5/qml/org/kde/kirigami.2/PasswordField.qml
 qt5/qml/org/kde/kirigami.2/PlaceholderMessage.qml
+qt5/qml/org/kde/kirigami.2/RouterWindow.qml
 qt5/qml/org/kde/kirigami.2/ScrollablePage.qml
 qt5/qml/org/kde/kirigami.2/SearchField.qml
 qt5/qml/org/kde/kirigami.2/Separator.qml
 qt5/qml/org/kde/kirigami.2/ShadowedImage.qml
 qt5/qml/org/kde/kirigami.2/SwipeListItem.qml
-qt5/qml/org/kde/kirigami.2/Theme.qml
 qt5/qml/org/kde/kirigami.2/ToolBarApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/Units.qml
 qt5/qml/org/kde/kirigami.2/UrlButton.qml
@@ -64,7 +68,6 @@ qt5/qml/org/kde/kirigami.2/plugins.qmltypes
 qt5/qml/org/kde/kirigami.2/private/ActionButton.qml
 qt5/qml/org/kde/kirigami.2/private/ActionIconGroup.qml
 qt5/qml/org/kde/kirigami.2/private/ActionMenuItem.qml
-qt5/qml/org/kde/kirigami.2/private/ActionToolBarLayoutDetails.qml
 qt5/qml/org/kde/kirigami.2/private/ActionsMenu.qml
 qt5/qml/org/kde/kirigami.2/private/BannerImage.qml
 qt5/qml/org/kde/kirigami.2/private/CardsGridViewPrivate.qml
@@ -94,10 +97,15 @@ qt5/qml/org/kde/kirigami.2/styles/Material/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/styles/Material/Theme.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/AbstractApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/AbstractListItem.qml
-qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/ApplicationWindow.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/Theme.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/Units.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/PrivateSwipeHighlight.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/PrivateSwipeProgress.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/PrivateSwipeStack.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/PrivateSwipeTab.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/PrivateSwipeTabBar.qml
+qt5/qml/org/kde/kirigami.2/swipenavigator/SwipeNavigator.qml
 qt5/qml/org/kde/kirigami.2/templates/AbstractApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/templates/AbstractCard.qml
 qt5/qml/org/kde/kirigami.2/templates/AbstractListItem.qml
@@ -105,8 +113,10 @@ qt5/qml/org/kde/kirigami.2/templates/ApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/templates/InlineMessage.qml
 qt5/qml/org/kde/kirigami.2/templates/OverlayDrawer.qml
 qt5/qml/org/kde/kirigami.2/templates/OverlaySheet.qml
+qt5/qml/org/kde/kirigami.2/templates/SingletonHeaderSizeGroup.qml
 qt5/qml/org/kde/kirigami.2/templates/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/templates/private/BackButton.qml
+qt5/qml/org/kde/kirigami.2/templates/private/BorderPropertiesGroup.qml
 qt5/qml/org/kde/kirigami.2/templates/private/ContextIcon.qml
 qt5/qml/org/kde/kirigami.2/templates/private/ForwardButton.qml
 qt5/qml/org/kde/kirigami.2/templates/private/GenericDrawerIcon.qml
@@ -118,6 +128,7 @@ qt5/qml/org/kde/kirigami.2/templates/qmldir
 share/kdevappwizard/templates/kirigami.tar.bz2
 share/locale/ar/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ast/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/az/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ca/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ca@valencia/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/cs/LC_MESSAGES/libkirigami2plugin_qt.qm
@@ -141,9 +152,11 @@ share/locale/lt/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ml/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/nl/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/nn/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/pa/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/pl/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/pt/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/pt_BR/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/ro/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ru/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/sk/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/sl/LC_MESSAGES/libkirigami2plugin_qt.qm

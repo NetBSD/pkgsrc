@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/03/17 22:33:37 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/03/30 10:58:24 markd Exp $
 
-SHA1 (purpose-5.70.0.tar.xz) = 1bdef5d72899e7cf6abf8ea5c7f6b686a67f0158
-RMD160 (purpose-5.70.0.tar.xz) = caaa2e3388e985e792a4970ed65f515f65a1578f
-SHA512 (purpose-5.70.0.tar.xz) = 932fc3a56c47a3a031f4acc32ae5ea04733c99f953ce3248e60bc47b836d26929e71bb10633c3859d642c8667e4b1dbb60f03f450da8b0c2bda703142cf80916
-Size (purpose-5.70.0.tar.xz) = 153468 bytes
-SHA1 (patch-src_externalprocess_purposeprocess__main.cpp) = 11b52614e6165b134b32ec60feccb34df25b1265
+SHA1 (purpose-5.80.0.tar.xz) = 536d21b254e70e576a864a1d2bdd8f338d63ca86
+RMD160 (purpose-5.80.0.tar.xz) = 07ff67f76aac08fecdcc7210d5c3cbb0469d5fbe
+SHA512 (purpose-5.80.0.tar.xz) = 3746e66f0587ad0b7f62f0c262879a6f2f8a58af3753f6c4a1f28ca4996fa40ad63accb5d024fbef1269b137b45c38234cde0bfc5a046cf1c66b61064a7809b4
+Size (purpose-5.80.0.tar.xz) = 159308 bytes
