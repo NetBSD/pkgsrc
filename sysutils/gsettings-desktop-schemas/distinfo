@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/11/03 12:34:24 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/03/30 10:01:54 cirnatdan Exp $
 
-SHA1 (gsettings-desktop-schemas-3.38.0.tar.xz) = 3a78c37fc91975a8fb700de36cb28c8fc21d576e
-RMD160 (gsettings-desktop-schemas-3.38.0.tar.xz) = 338b1af688cfa2adb58a563a518bee25034cb759
-SHA512 (gsettings-desktop-schemas-3.38.0.tar.xz) = 5af7da90b8e7eec1c98e9e44653955f2882961dd9b5e2bf00e4eeb9f4f1149ae5171c600d457c6ab9c7482471c1a0e98f92f645a7ee7298e1b843c608f660756
-Size (gsettings-desktop-schemas-3.38.0.tar.xz) = 685868 bytes
+SHA1 (gsettings-desktop-schemas-40.0.tar.xz) = 0ce5d005700488882a5bdbe73ebcbc31c319bdf4
+RMD160 (gsettings-desktop-schemas-40.0.tar.xz) = a1d1eff1c9e245c9e396afe078927f9e32e65b7a
+SHA512 (gsettings-desktop-schemas-40.0.tar.xz) = 6b7f9b3095706b287254bd21d54311d6048e87340462e75848f05f7d7ded09da766cec7159fb6d889405ecfb4fdfe2243197989afeb21678fe4048783ae16424
+Size (gsettings-desktop-schemas-40.0.tar.xz) = 700672 bytes
