@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/01/13 10:57:48 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2021/03/30 10:58:30 markd Exp $
 
-SHA1 (kirigami2-5.70.0.tar.xz) = 91dc0ae7e993be7a861001c08bdf42a5e0db1f41
-RMD160 (kirigami2-5.70.0.tar.xz) = 5e325227b0afd56ee3518d77404cb0581b136277
-SHA512 (kirigami2-5.70.0.tar.xz) = 45c582110cc4d7595c6d467f16f77aba6d66ba0701fea2d1049e7c6af8a73376c0521126031cd1748a8735b0ea75917a8ba1c6f6f72497778d8a883671ef0afb
-Size (kirigami2-5.70.0.tar.xz) = 257720 bytes
+SHA1 (kirigami2-5.80.0.tar.xz) = 0f4554637a62a64297ecbc10cd9bd369820ae6e3
+RMD160 (kirigami2-5.80.0.tar.xz) = 31c68baf72e4a901695bb2be8920bbd8f53c338a
+SHA512 (kirigami2-5.80.0.tar.xz) = d40e95a4f5376eb16d45193c32d96a777e5045fbfdd3dbe4902edb561b6709dde8ab2e2c905042bc76b6a641575a05a876a0204090b0c705bdac9d8631b67971
+Size (kirigami2-5.80.0.tar.xz) = 310608 bytes
 SHA1 (patch-src_icon.cpp) = 5d1e8ffe75903807f8404685cbee9c435be123bb

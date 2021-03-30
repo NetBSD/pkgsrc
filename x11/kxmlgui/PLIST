@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/07 12:51:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:31 markd Exp $
 include/KF5/KXmlGui/KAboutApplicationDialog
 include/KF5/KXmlGui/KAboutPluginDialog
 include/KF5/KXmlGui/KActionCategory
@@ -54,6 +54,7 @@ share/locale/af/LC_MESSAGES/kxmlgui5.mo
 share/locale/ar/LC_MESSAGES/kxmlgui5.mo
 share/locale/as/LC_MESSAGES/kxmlgui5.mo
 share/locale/ast/LC_MESSAGES/kxmlgui5.mo
+share/locale/az/LC_MESSAGES/kxmlgui5.mo
 share/locale/be/LC_MESSAGES/kxmlgui5.mo
 share/locale/be@latin/LC_MESSAGES/kxmlgui5.mo
 share/locale/bg/LC_MESSAGES/kxmlgui5.mo
@@ -151,3 +152,4 @@ share/locale/zh_CN/LC_MESSAGES/kxmlgui5.mo
 share/locale/zh_HK/LC_MESSAGES/kxmlgui5.mo
 share/locale/zh_TW/LC_MESSAGES/kxmlgui5.mo
 share/qlogging-categories5/kxmlgui.categories
+share/qlogging-categories5/kxmlgui.renamecategories

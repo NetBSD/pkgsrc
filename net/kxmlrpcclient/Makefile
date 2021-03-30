@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2021/02/07 06:30:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2021/03/30 10:58:26 markd Exp $
 
 DISTNAME=	kxmlrpcclient-${KF5VER}
-PKGREVISION=	6
 CATEGORIES=	net
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,6 +8,7 @@ COMMENT=	XML-RPC client library for KDE
 LICENSE=	2-clause-bsd AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
 USE_TOOLS+=	msgmerge
 

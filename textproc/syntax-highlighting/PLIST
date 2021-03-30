@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/07 11:57:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:28 markd Exp $
 bin/kate-syntax-highlighter
 include/KF5/KSyntaxHighlighting/AbstractHighlighter
 include/KF5/KSyntaxHighlighting/Definition
@@ -30,6 +30,7 @@ lib/libKF5SyntaxHighlighting.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KSyntaxHighlighting.pri
 share/locale/af/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/ar/LC_MESSAGES/syntaxhighlighting5_qt.qm
+share/locale/az/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/be/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/bg/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/bn/LC_MESSAGES/syntaxhighlighting5_qt.qm
@@ -113,3 +114,4 @@ share/locale/xh/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/qlogging-categories5/ksyntaxhighlighting.categories
+share/qlogging-categories5/ksyntaxhighlighting.renamecategories
