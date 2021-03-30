@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.27 2019/11/01 16:21:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/03/30 17:01:49 ryoon Exp $
+bin/uim-fep
+bin/uim-fep-tick
 bin/uim-help
+bin/uim-im-switcher-gtk
+bin/uim-im-switcher-gtk3
+bin/uim-input-pad-ja
+bin/uim-input-pad-ja-gtk3
 bin/uim-module-manager
+bin/uim-pref-gtk
+bin/uim-pref-gtk3
 bin/uim-sh
+bin/uim-toolbar-gtk
+bin/uim-toolbar-gtk-systray
+bin/uim-toolbar-gtk3
+bin/uim-toolbar-gtk3-systray
 bin/uim-xim
 include/uim/dynlib.h
 include/uim/uim-custom.h
@@ -14,6 +26,8 @@ include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
 include/uim/version.h
+lib/gtk-2.0/2.10.0/immodules/im-uim.la
+lib/gtk-3.0/3.0.0/immodules/im-uim.la
 lib/libuim-custom.la
 lib/libuim-scm.la
 lib/libuim.la
@@ -21,6 +35,7 @@ lib/pkgconfig/uim.pc
 lib/uim/plugin/libuim-anthy-utf8.la
 lib/uim/plugin/libuim-anthy.la
 lib/uim/plugin/libuim-custom-enabler.la
+lib/uim/plugin/libuim-editline.la
 lib/uim/plugin/libuim-fileio.la
 lib/uim/plugin/libuim-lolevel.la
 lib/uim/plugin/libuim-look.la
@@ -29,8 +44,15 @@ lib/uim/plugin/libuim-skk.la
 lib/uim/plugin/libuim-socket.la
 lib/uim/plugin/libuim-sqlite3.la
 lib/uim/plugin/libuim-xkb.la
+libexec/uim-candwin-gtk
+libexec/uim-candwin-gtk3
+libexec/uim-candwin-horizontal-gtk
+libexec/uim-candwin-horizontal-gtk3
+libexec/uim-candwin-tbl-gtk
+libexec/uim-candwin-tbl-gtk3
 libexec/uim-helper-server
 man/man1/uim-xim.1
+qt5/plugins/platforminputcontexts/libuimplatforminputcontextplugin.${RUBY_DLEXT}
 share/applications/uim.desktop
 share/doc/uim/COMPATIBILITY
 share/doc/uim/CUSTOM
@@ -308,6 +330,22 @@ share/uim/pixmaps/zm.png
 share/uim/pixmaps/zm.svg
 share/uim/pixmaps/zm_dark_background.png
 share/uim/pixmaps/zm_dark_background.svg
+share/uim/pkgsrc/ajax-ime
+share/uim/pkgsrc/anthy-utf8
+share/uim/pkgsrc/baidu-olime-jp
+share/uim/pkgsrc/byeoru
+share/uim/pkgsrc/elatin
+share/uim/pkgsrc/google-cgiapi-jp
+share/uim/pkgsrc/ipa-x-sampa
+share/uim/pkgsrc/latin
+share/uim/pkgsrc/look
+share/uim/pkgsrc/py
+share/uim/pkgsrc/pyload
+share/uim/pkgsrc/pyunihan
+share/uim/pkgsrc/skk
+share/uim/pkgsrc/tutcode
+share/uim/pkgsrc/viqr
+share/uim/pkgsrc/xmload
 share/uim/plugin.scm
 share/uim/predict-custom.scm
 share/uim/predict-google-suggest.scm
