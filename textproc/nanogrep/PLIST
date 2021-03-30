@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/01 13:49:56 pin Exp $
-bin/ng
+@comment $NetBSD: PLIST,v 1.2 2021/03/30 20:29:04 pin Exp $
+bin/nanogrep
