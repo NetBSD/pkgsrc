@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2021/02/27 19:13:26 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2021/03/30 17:04:48 ryoon Exp $
 
 SHA1 (mozc-2.26.4282.100.tar.xz) = aacec607aec52145ba66c993f9c02ae2d1a5948c
 RMD160 (mozc-2.26.4282.100.tar.xz) = b2f9f6fc129811b25640d4ae5582ab324b6bf2a4
@@ -45,5 +45,6 @@ SHA1 (patch-session_session.cc) = 3ae2c8dd056aae4c92d9dbfdac53d9c45261aad2
 SHA1 (patch-session_session__test.cc) = 7396e2f4931257d8a33087b1bed5418a038fefa1
 SHA1 (patch-third__party_abseil-cpp_absl_base_config.h) = e996fad886e0763c7be7b79735819e668159fd82
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = 8adc79d5d7eed3cbf406ebcfbd5832b7a050ced6
+SHA1 (patch-uim-mozc) = 0000583d8f3f44ef2281888c7cfdb968c17ec798
 SHA1 (patch-unix_ibus_ibus.gyp) = aa2077cf3c379bf9ce33e97abe478540346782ad
 SHA1 (patch-unix_ibus_path__util.cc) = a6aa368d9ce8926e200602fdc370c13e35d5a8cf
