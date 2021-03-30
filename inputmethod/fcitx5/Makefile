@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/02/27 19:30:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2021/03/30 16:20:59 ryoon Exp $
 
 DISTNAME=	fcitx5-5.0.5
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +24,7 @@ SUBST_CLASSES+=			fix-machine-id
 SUBST_STAGE.fix-machine-id=	pre-configure
 SUBST_MESSAGE.fix-machine-id=	Fixing machine-id path
 SUBST_FILES.fix-machine-id+=	src/lib/fcitx/misc_p.h
-SUBST_SED.fix-machine-id+=	-e 's,/var/lib/dbus/machine-id,${VARBASE}/db/dbus/machine-id,g'
+SUBST_SED.fix-machine-id+=	-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/machine-id,g'
 
 CONFLICTS+=	fcitx-[0-9]*
 
