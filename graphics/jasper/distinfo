@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2021/03/19 07:04:11 adam Exp $
+$NetBSD: distinfo,v 1.42 2021/03/30 09:28:35 adam Exp $
 
-SHA1 (jasper-2.0.27.tar.gz) = 5233fa4a424e9aa0f606b2bfd9f6618f3ac23b2b
-RMD160 (jasper-2.0.27.tar.gz) = 628b6609d1bc8b13d777111a8d0439bbd209fc19
-SHA512 (jasper-2.0.27.tar.gz) = c5d336d8364d593a785b65e7114e33cc53638e28d3b5101a8f20da653a116a54b684d5d285cb4e6ddd786ff5f294781291f3675fa5078fc69eb3a4a8ef155ea9
-Size (jasper-2.0.27.tar.gz) = 1369593 bytes
+SHA1 (jasper-2.0.28.tar.gz) = f5c38365bee191de6fa760bddb85ab49ed0b9075
+RMD160 (jasper-2.0.28.tar.gz) = 6ba0789e1eeb82c572ad3abab66278ae47565f0c
+SHA512 (jasper-2.0.28.tar.gz) = 13a47efc3b3d10e0680e7cf0637a417df0920e1ca8af20f2206303d0a14753688f7e6c6b3383f6db946effca389754e5736e286ed45d5b643b422f5600223eab
+Size (jasper-2.0.28.tar.gz) = 1371111 bytes
 SHA1 (patch-CMakeLists.txt) = a848a73c9e717e5d6b0a98f3c27d0dcfc1dda8a5
 SHA1 (patch-build_cmake_modules_JasOpenGL.cmake) = 832cf84b0840fe1159d81c8ce92f24971da16838
 SHA1 (patch-src_appl_jiv.c) = 123f1db81a95b4ddd679ccea6f1b2c4887bf574d
