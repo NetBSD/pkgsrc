@@ -1,0 +1,67 @@
+$NetBSD: patch-rtunes_rtunes.1,v 1.1 2021/03/30 12:01:04 nia Exp $
+
+Merge fixes from https://github.com/erincandescent/rtunes
+
+--- rtunes/rtunes.1.orig	2009-06-26 14:43:09.000000000 +0000
++++ rtunes/rtunes.1
+@@ -15,22 +15,23 @@
+ .\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ .\"
+-.Dd Feb 10, 2008
++.Dd March 24, 2021
+ .Dt RTUNES 1
+ .Os
+ .Sh NAME
+ .Nm rtunes
+-.Nd Stream audio data to an Apple AirPort Express device
++.Nd Stream audio data to an Apple AirPlay device
+ .Sh SYNOPSIS
+ .Nm rtunes
+ .Op Fl 46
+ .Op Fl f Ar configfile
+ .Op Fl h Ar host
++.Op Fl p Ar port
+ .Ar file(s)
+ .Sh DESCRIPTION
+ .Nm
+-streams files containing Apple Lossless audio data to an Apple AirPort
+-Express device.
++streams files containing Apple Lossless audio data to an Apple AirPlay
++device.
+ If a '-' is given as the
+ .Ar file(s)
+ argument,
+@@ -40,7 +41,7 @@ and encodes it to the Apple Lossless for
+ With this method it is possible to stream audio data from any source
+ that can output raw PCM audio data on stdout, e.g.:
+ .Bd -literal -offset indent
+-madplay -S -R44100 -o raw:- benson.mp3 | rtunes -
++mpg123 -o raw -r 44100 benson.mp3 | rtunes -h 10.69.69.147 -p 36666 -
+ .Ed
+ .Pp
+ Here the audio player madplay is used to decode benson.mp3 to raw PCM
+@@ -56,17 +57,20 @@ Use only IPv6 transport.
+ .It Fl f
+ Specify an alternative configuration file.
+ .It Fl h
+-Specify the hostname of device to stream audio to.
++Specify the hostname of the device to stream audio to.
++.It Fl p
++Specify the port of the device to stream audio to.
++.El
+ .Sh FILES
+ .Bl -tag -width "/etc/rtunes.confXX" -compact
+ .It Pa /etc/rtunes.conf
+ Default location of the configuration file.
+ .El
++.Sh SEE ALSO
++.Xr rtunes.conf 5
+ .Sh AUTHORS
+ .Nm
+ was written by
+ .An Marcus Glocker Aq marcus@nazgul.ch
+ and
+ .An Marc Balmer Aq marc@msys.ch .
+-.Sh SEE ALSO
+-.Xr rtunes.conf 5
