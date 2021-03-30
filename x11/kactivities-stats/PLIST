@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/11 09:21:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/03/30 10:58:29 markd Exp $
 include/KF5/KActivitiesStats/KActivities/Stats/Cleaning
 include/KF5/KActivitiesStats/KActivities/Stats/Query
 include/KF5/KActivitiesStats/KActivities/Stats/ResultModel
@@ -23,3 +23,4 @@ lib/libKF5ActivitiesStats.so.${PKGVERSION}
 lib/pkgconfig/libKActivitiesStats.pc
 qt5/mkspecs/modules/qt_KActivitiesStats.pri
 share/qlogging-categories5/kactivities-stats.categories
+share/qlogging-categories5/kactivities-stats.renamecategories

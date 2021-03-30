@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:56:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:30 markd Exp $
 include/KF5/KJobWidgets/KAbstractWidgetJobTracker
 include/KF5/KJobWidgets/KDialogJobUiDelegate
 include/KF5/KJobWidgets/KJobWidgets
@@ -27,6 +27,7 @@ share/dbus-1/interfaces/kf5_org.kde.JobViewV2.xml
 share/locale/af/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/ar/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/as/LC_MESSAGES/kjobwidgets5_qt.qm
+share/locale/az/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/be/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/bg/LC_MESSAGES/kjobwidgets5_qt.qm
@@ -125,3 +126,4 @@ share/locale/zh_CN/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/kjobwidgets5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kjobwidgets5_qt.qm
 share/qlogging-categories5/kjobwidgets.categories
+share/qlogging-categories5/kjobwidgets.renamecategories

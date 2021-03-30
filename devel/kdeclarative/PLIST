@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/11 07:36:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:22 markd Exp $
 bin/kpackagelauncherqml
 include/KF5/KDeclarative/CalendarEvents/CalendarEventsPlugin
 include/KF5/KDeclarative/KDeclarative/ConfigPropertyMap
@@ -48,11 +48,14 @@ qt5/mkspecs/modules/qt_KDeclarative.pri
 qt5/mkspecs/modules/qt_QuickAddons.pri
 qt5/qml/org/kde/draganddrop/libdraganddropplugin.so
 qt5/qml/org/kde/draganddrop/qmldir
+qt5/qml/org/kde/kcm/AbstractKCM.qml
 qt5/qml/org/kde/kcm/GridDelegate.qml
 qt5/qml/org/kde/kcm/GridView.qml
 qt5/qml/org/kde/kcm/GridViewKCM.qml
 qt5/qml/org/kde/kcm/ScrollView.qml
 qt5/qml/org/kde/kcm/ScrollViewKCM.qml
+qt5/qml/org/kde/kcm/SettingHighlighter.qml
+qt5/qml/org/kde/kcm/SettingStateBinding.qml
 qt5/qml/org/kde/kcm/SimpleKCM.qml
 qt5/qml/org/kde/kcm/libkcmcontrolsplugin.so
 qt5/qml/org/kde/kcm/private/GridViewInternal.qml
@@ -75,6 +78,7 @@ qt5/qml/org/kde/private/kquickcontrols/qmldir
 share/locale/af/LC_MESSAGES/kdeclarative5.mo
 share/locale/ar/LC_MESSAGES/kdeclarative5.mo
 share/locale/as/LC_MESSAGES/kdeclarative5.mo
+share/locale/az/LC_MESSAGES/kdeclarative5.mo
 share/locale/be/LC_MESSAGES/kdeclarative5.mo
 share/locale/be@latin/LC_MESSAGES/kdeclarative5.mo
 share/locale/bg/LC_MESSAGES/kdeclarative5.mo
