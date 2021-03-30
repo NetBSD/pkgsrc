@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1865 2021/03/30 07:58:14 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.1866 2021/03/30 09:12:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2803,3 +2803,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-tcl to 3.35.3 [adam 2021-03-30]
 	Updated devel/lemon to 1.0.3.35.3 [adam 2021-03-30]
 	Updated graphics/adwaita-icon-theme to 3.38.0 [cirnatdan 2021-03-30]
+	Updated multimedia/phonon-qt5 to 4.11.1 [markd 2021-03-30]
+	Updated multimedia/phonon-qt5-backend-vlc to 0.11.2 [markd 2021-03-30]
+	Updated multimedia/phonon-backend-gstreamer-shared to 4.10.0 [markd 2021-03-30]
+	Updated multimedia/phonon-qt5-backend-gstreamer to 4.10.0 [markd 2021-03-30]
