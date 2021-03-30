@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/11/04 16:08:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/03/30 10:22:45 cirnatdan Exp $
 include/libgweather-3.0/libgweather/gweather-enum-types.h
 include/libgweather-3.0/libgweather/gweather-enums.h
 include/libgweather-3.0/libgweather/gweather-location-entry.h
@@ -12,6 +12,7 @@ lib/girepository-1.0/GWeather-3.0.typelib
 lib/libgweather-3.so
 lib/libgweather-3.so.16
 lib/libgweather-3.so.16.0.0
+lib/libgweather/Locations.bin
 lib/pkgconfig/gweather-3.0.pc
 share/gir-1.0/GWeather-3.0.gir
 share/glib-2.0/schemas/org.gnome.GWeather.enums.xml
