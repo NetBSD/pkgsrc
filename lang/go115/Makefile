@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/02/18 11:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/03/30 14:53:35 jperkin Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -66,6 +66,11 @@ CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/all.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/clean.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/run.rc
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/crypto/x509/root_solaris.go
+SUBST_VARS.paths=	PKG_SYSCONFDIR
 
 PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
 
