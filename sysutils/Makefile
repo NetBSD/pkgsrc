@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.945 2021/03/09 12:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.946 2021/03/31 20:22:32 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -678,6 +678,7 @@ SUBDIR+=	toshutils
 SUBDIR+=	tpb
 SUBDIR+=	tphdisk
 SUBDIR+=	trash
+SUBDIR+=	tre-command
 SUBDIR+=	tree
 SUBDIR+=	ts
 SUBDIR+=	tsm8
