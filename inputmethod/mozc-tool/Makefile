@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/02/27 04:19:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2021/03/31 16:45:35 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-tool-/}
 PKGREVISION=	1
@@ -6,6 +6,9 @@ PKGREVISION=	1
 INSTALLATION_DIRS+=	libexec
 
 ALL_ENV+=	qt_dir=${QTDIR}
+
+pre-configure:
+	${RM} ${WRKSRC}/unix/uim/uim.gyp
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
