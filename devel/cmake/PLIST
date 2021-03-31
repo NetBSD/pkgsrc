@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2020/12/17 12:14:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2021/03/31 07:43:39 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -32,6 +32,7 @@ share/cmake-${CMAKE_API}/Help/command/cmake_host_system_information.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_language.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_minimum_required.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_parse_arguments.rst
+share/cmake-${CMAKE_API}/Help/command/cmake_path.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_policy.rst
 share/cmake-${CMAKE_API}/Help/command/configure_file.rst
 share/cmake-${CMAKE_API}/Help/command/continue.rst
@@ -175,6 +176,7 @@ share/cmake-${CMAKE_API}/Help/envvar/CTEST_OUTPUT_ON_FAILURE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_PARALLEL_LEVEL.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_PROGRESS_OUTPUT.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_USE_LAUNCHERS_DEFAULT.rst
+share/cmake-${CMAKE_API}/Help/envvar/CUDAARCHS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CUDACXX.rst
 share/cmake-${CMAKE_API}/Help/envvar/CUDAFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CUDAHOSTCXX.rst
@@ -640,6 +642,12 @@ share/cmake-${CMAKE_API}/Help/policy/CMP0111.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0112.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0113.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0114.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0115.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0116.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0117.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0118.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0119.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0120.rst
 share/cmake-${CMAKE_API}/Help/policy/DEPRECATED.txt
 share/cmake-${CMAKE_API}/Help/policy/DISALLOWED_COMMAND.txt
 share/cmake-${CMAKE_API}/Help/prop_cache/ADVANCED.rst
@@ -899,6 +907,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/ENABLE_EXPORTS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EXCLUDE_FROM_ALL.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EXCLUDE_FROM_DEFAULT_BUILD.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EXCLUDE_FROM_DEFAULT_BUILD_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/EXPORT_COMPILE_COMMANDS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EXPORT_NAME.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EXPORT_PROPERTIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/EchoString.rst
@@ -1064,6 +1073,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_BATCH_SIZE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_CODE_AFTER_INCLUDE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_CODE_BEFORE_INCLUDE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_MODE.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_UNIQUE_ID.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VERSION.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VISIBILITY_INLINES_HIDDEN.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_CONFIGURATION_TYPE.rst
@@ -1107,6 +1117,10 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/VS_WINRT_REFERENCES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/WIN32_EXECUTABLE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/WINDOWS_EXPORT_ALL_SYMBOLS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_ATTRIBUTE_an-attribute.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_EMBED_FRAMEWORKS_CODE_SIGN_ON_COPY.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_EMBED_type.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_EMBED_type_PATH.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_EXPLICIT_FILE_TYPE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_GENERATE_SCHEME.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_LINK_BUILD_PHASE_MODE.rst
@@ -1148,6 +1162,7 @@ share/cmake-${CMAKE_API}/Help/release/3.17.rst
 share/cmake-${CMAKE_API}/Help/release/3.18.rst
 share/cmake-${CMAKE_API}/Help/release/3.19.rst
 share/cmake-${CMAKE_API}/Help/release/3.2.rst
+share/cmake-${CMAKE_API}/Help/release/3.20.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
 share/cmake-${CMAKE_API}/Help/release/3.5.rst
@@ -1172,6 +1187,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_ARCH_ABI.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_ARM_MODE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_ARM_NEON.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_ASSETS_DIRECTORIES.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_EXCEPTIONS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_GUI.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_JAR_DEPENDENCIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_JAR_DIRECTORIES.rst
@@ -1182,9 +1198,11 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_DEPRECATED_HEADERS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_HOST_TAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_PROCESS_MAX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_PROGUARD.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_PROGUARD_CONFIG_PATH.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_RTTI.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_SECURE_PROPS_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_SKIP_ANT_STEP.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_STANDALONE_TOOLCHAIN.rst
@@ -1277,6 +1295,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_DEBUG_TARGET_PROPERTIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DEFAULT_BUILD_TYPE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DEFAULT_CONFIGS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DEPENDS_IN_PROJECT_ONLY.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_DEPENDS_USE_COMPILER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DIRECTORY_LABELS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DISABLE_FIND_PACKAGE_PackageName.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_DISABLE_PRECOMPILE_HEADERS.rst
@@ -1394,6 +1413,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ANDROID_TOOLCHAIN_SUFFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_APPEND.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_CREATE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_FINISH.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_BYTE_ORDER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_CLANG_TIDY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_COMPILER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_COMPILER_ABI.rst
@@ -1584,6 +1604,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_TARGET_TYPE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TWEAK_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_UNITY_BUILD.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_UNITY_BUILD_BATCH_SIZE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_UNITY_BUILD_UNIQUE_ID.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE_LANG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_USE_RELATIVE_PATHS.rst
@@ -1886,6 +1907,7 @@ share/cmake-${CMAKE_API}/Modules/CMakePackageConfigHelpers.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseArguments.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseImplicitIncludeInfo.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseImplicitLinkInfo.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeParseLibraryArchitecture.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePlatformId.h.in
 share/cmake-${CMAKE_API}/Modules/CMakePrintHelpers.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePrintSystemInformation.cmake
@@ -2075,6 +2097,12 @@ share/cmake-${CMAKE_API}/Modules/Compiler/Intel-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-ISPC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IntelLLVM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C.cmake
@@ -2082,6 +2110,11 @@ share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-CXX-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NAG-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/OpenWatcom-C.cmake
@@ -2500,6 +2533,10 @@ share/cmake-${CMAKE_API}/Modules/Platform/Apple-Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-Intel.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Apple-IntelLLVM-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Apple-IntelLLVM-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Apple-IntelLLVM-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Apple-IntelLLVM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-NVIDIA-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Apple-PGI-C.cmake
@@ -2602,7 +2639,15 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Intel.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-IntelLLVM-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-IntelLLVM-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-IntelLLVM-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-IntelLLVM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-NAG-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-NVHPC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-NVHPC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-NVHPC-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-NVHPC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-OpenWatcom-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-OpenWatcom-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-OpenWatcom.cmake
@@ -2683,6 +2728,11 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-ISPC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-IntelLLVM-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-IntelLLVM-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-IntelLLVM-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-IntelLLVM-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-IntelLLVM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-MSVC.cmake
@@ -2759,9 +2809,10 @@ share/cmake-${CMAKE_API}/Modules/TestForSTDNamespace.cmake
 share/cmake-${CMAKE_API}/Modules/TestForSTDNamespace.cxx
 share/cmake-${CMAKE_API}/Modules/UseEcos.cmake
 share/cmake-${CMAKE_API}/Modules/UseJava.cmake
+share/cmake-${CMAKE_API}/Modules/UseJava/ClassFilelist.cmake
 share/cmake-${CMAKE_API}/Modules/UseJava/ClearClassFiles.cmake
-share/cmake-${CMAKE_API}/Modules/UseJavaClassFilelist.cmake
-share/cmake-${CMAKE_API}/Modules/UseJavaSymlinks.cmake
+share/cmake-${CMAKE_API}/Modules/UseJava/Symlinks.cmake
+share/cmake-${CMAKE_API}/Modules/UseJava/javaTargets.cmake.in
 share/cmake-${CMAKE_API}/Modules/UsePkgConfig.cmake
 share/cmake-${CMAKE_API}/Modules/UseQt4.cmake
 share/cmake-${CMAKE_API}/Modules/UseSWIG.cmake
@@ -2773,7 +2824,6 @@ share/cmake-${CMAKE_API}/Modules/WriteBasicConfigVersionFile.cmake
 share/cmake-${CMAKE_API}/Modules/WriteCompilerDetectionHeader.cmake
 share/cmake-${CMAKE_API}/Modules/ecos_clean.cmake
 share/cmake-${CMAKE_API}/Modules/exportheader.cmake.in
-share/cmake-${CMAKE_API}/Modules/javaTargets.cmake.in
 share/cmake-${CMAKE_API}/Modules/kde3init_dummy.cpp.in
 share/cmake-${CMAKE_API}/Modules/kde3uic.cmake
 share/cmake-${CMAKE_API}/Modules/readme.txt
