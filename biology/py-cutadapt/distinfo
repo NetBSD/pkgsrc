@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/03/08 07:10:56 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/03/31 09:23:56 adam Exp $
 
-SHA1 (cutadapt-3.3.tar.gz) = aab2e1ed047c58cbe354b4ac1a4def1c83bf8f8c
-RMD160 (cutadapt-3.3.tar.gz) = fc7617f33a4d35327af5013b8a7df0df431365a7
-SHA512 (cutadapt-3.3.tar.gz) = d8895453455aff31c613a4e031559c08646ce2bf072d85ed7b195e5863700a02a1ed44bfb409b63849aadf1db7cf40dea33d0ead4f056307365dc91aa6c93234
-Size (cutadapt-3.3.tar.gz) = 294579 bytes
+SHA1 (cutadapt-3.4.tar.gz) = e3ba4d7c62581cfabf0aa8c966dd1bde055ffdde
+RMD160 (cutadapt-3.4.tar.gz) = 2208111797c90defebb6a220f60b95eb3a7a3efe
+SHA512 (cutadapt-3.4.tar.gz) = 8d0556acb2c67146adf68eb208d2ec9701f391e6554d5e1ebaf146a12e3ba02c68b01856c254c94917ba9e919df26ece97a2c41ea386747e1c495eecbf4b2e0c
+Size (cutadapt-3.4.tar.gz) = 295282 bytes
