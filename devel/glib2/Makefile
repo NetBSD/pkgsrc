@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2021/03/30 20:34:10 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.280 2021/03/31 09:59:43 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -19,7 +19,7 @@ MESON_ARGS+=	-Db_lundef=false
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
-CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -D__stub_epoll_create
 LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
 LDFLAGS.FreeBSD+=	-liconv
 
