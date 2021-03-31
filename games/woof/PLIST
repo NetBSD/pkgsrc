@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/11 10:46:12 micha Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/03/31 10:09:15 micha Exp $
 bin/woof
 share/applications/woof.desktop
 share/doc/woof/COPYING
@@ -25,6 +25,7 @@ share/doc/woof/examples/playbud.deh
 share/doc/woof/examples/possbud.deh
 share/doc/woof/examples/sky.wad
 share/doc/woof/examples/touchy.deh
+share/doc/woof/mapcolors_vanilla.cfg
 share/doc/woof/mbf-bugs.html
 share/doc/woof/mbf.txt
 share/doc/woof/mbfedit.txt
