@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/03/08 07:10:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/03/31 09:23:56 adam Exp $
 
-DISTNAME=	cutadapt-3.3
+DISTNAME=	cutadapt-3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
