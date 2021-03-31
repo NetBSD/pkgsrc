@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2020/11/25 10:33:28 adam Exp $
+# $NetBSD: Makefile,v 1.180 2021/03/31 07:43:39 adam Exp $
 
 .include "Makefile.common"
 
@@ -46,7 +46,7 @@ pre-configure:
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cbegin.cxx ${WRKSRC}/Source/Checks/cm_cxx_cbegin.cxx
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cend.cxx ${WRKSRC}/Source/Checks/cm_cxx_cend.cxx
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_size_t.cxx ${WRKSRC}/Source/Checks/cm_cxx_size_t.cxx
-	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Compiler/*.orig ${WRKSRC}/Modules/Platform/*.orig  ${WRKSRC}/Modules/FindPython/*.orig
+	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Compiler/*.orig ${WRKSRC}/Modules/Platform/*.orig ${WRKSRC}/Modules/FindPython/*.orig
 	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 .for lang in C CXX Fortran
 	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
