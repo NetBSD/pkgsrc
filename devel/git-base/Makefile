@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2021/03/10 16:58:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.86 2021/03/31 08:04:21 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
-PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=	scmgit-base-[0-9]*
