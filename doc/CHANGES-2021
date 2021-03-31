@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1885 2021/03/31 07:45:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1886 2021/03/31 08:07:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2906,3 +2906,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated inputmethod/uim-mozc to 2.26.4282.100 [ryoon 2021-03-30]
 	Updated devel/cmake to 3.20.0 [adam 2021-03-31]
 	Updated net/qbittorrent to 4.3.4.1 [adam 2021-03-31]
+	Updated devel/git to 2.31.1 [adam 2021-03-31]
+	Updated devel/py-pylint to 2.7.4 [adam 2021-03-31]
