@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/03/31 21:42:28 maya Exp $
+
+Lower python requirement to the lowest available 3.x version in pkgsrc.
+
+--- configure.ac.orig	2021-02-02 11:35:58.000000000 +0000
++++ configure.ac
+@@ -151,7 +151,7 @@ AC_PROG_MKDIR_P
+ 
+ PKG_PROG_PKG_CONFIG([0.20])
+ 
+-AM_PATH_PYTHON([3.8],, [:])
++AM_PATH_PYTHON([3.6],, [:])
+ 
+ if [test "x$request_lib_only" = "xyes"]; then
+   request_app=no
