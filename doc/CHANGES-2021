@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1896 2021/03/31 18:43:55 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1897 2021/03/31 20:23:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2919,3 +2919,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/youtube-dl to 20210331 [leot 2021-03-31]
 	Added net/kubectl version 1.20.5 [leot 2021-03-31]
 	Updated www/hackernews-tui to 0.3.1 [pin 2021-03-31]
+	Added sysutils/tre-command version 0.3.6 [pin 2021-03-31]
