@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/02/27 16:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2021/03/31 13:26:06 nros Exp $
 
 DISTNAME=	zstd-1.4.8
 CATEGORIES=	archivers
@@ -24,16 +24,14 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-# see HASH in lib/Makefile
-.if ${OPSYS} == "NetBSD"
-# https://github.com/facebook/zstd/pull/2492
-MAKE_ENV+=		HASH="md5 -n"
-.elif ${OPSYS} != "Linux" && \
-    ${OPSYS} != "Darwin" && \
-    ${OPSYS} != "OpenBSD"
-TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
-MAKE_ENV+=		HASH=gmd5sum
-.endif
+# See HASH and BUILD_DIR in lib/Makefile and programs/Makefile.
+# Set BUILD_DIR so that HASH is not needed and there is no
+# need for coreutils as a dependency.
+# HASH is set to false because programs/Makefile try to
+# execute HASH in order to see if it exists but the result
+# is unused when BUILD_DIR is set.
+MAKE_ENV+=		BUILD_DIR=obj
+MAKE_ENV+=		HASH=${FALSE}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		ggrep gmake pkg-config
