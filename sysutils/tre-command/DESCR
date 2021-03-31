@@ -1,0 +1,5 @@
+A replacement for tree command that uses git ls-files as source of file when
+possible.
+tre can also create shell aliases that, when executed, opens the file
+associated with it with the default editor.
+Runs on Unix as well as Windows PowerShell.
