@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1394 2021/03/18 22:57:05 khorben Exp $
+# $NetBSD: Makefile,v 1.1395 2021/03/31 18:29:49 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -296,6 +296,7 @@ SUBDIR+=	kppp
 SUBDIR+=	krdc
 SUBDIR+=	krfb
 SUBDIR+=	ktorrent
+SUBDIR+=	kubectl
 SUBDIR+=	kxmlrpcclient
 SUBDIR+=	lambdamoo
 SUBDIR+=	lambdamoo-core
