@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.175 2021/03/19 13:25:36 reinoud Exp $
+$NetBSD: distinfo,v 1.176 2021/03/31 08:52:27 reinoud Exp $
 
 SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
 RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
@@ -49,7 +49,7 @@ SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd
 SHA1 (patch-target_i386_helper.c) = 3314e65df11492438af2ec2c53ed3082a0b62b09
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
 SHA1 (patch-target_i386_meson.build) = d0e0d7d4dd96ea43fc386e7166bbabbd71b0f4fc
-SHA1 (patch-target_i386_nvmm_all.c) = dd22747aa0b94bc371303fc865d523d3623ec043
+SHA1 (patch-target_i386_nvmm_all.c) = 9a6d85eb650b260dc33d63caee4bcd0e1f4cb49c
 SHA1 (patch-target_i386_nvmm_cpus.c) = 7f028bf2637fe31d8524f710a9e508c8ce65c822
 SHA1 (patch-target_i386_nvmm_cpus.h) = 0a25e49929cb772fc46a4ace91127ccf3605521d
 SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
