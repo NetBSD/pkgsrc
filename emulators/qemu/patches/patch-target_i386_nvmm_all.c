@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 
---- target/i386/nvmm-all.c.orig	2021-03-05 20:20:34.189784289 +0000
+--- target/i386/nvmm-all.c.orig	2021-03-29 12:28:50.237420268 +0000
 +++ target/i386/nvmm-all.c
-@@ -0,0 +1,1216 @@
+@@ -0,0 +1,1234 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -756,7 +756,11 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +        nvmm_vcpu_pre_run(cpu);
 +
 +        if (qatomic_read(&cpu->exit_request)) {
++#if NVMM_USER_VERSION >= 2
++            nvmm_vcpu_stop(vcpu);
++#else
 +            qemu_cpu_kick_self();
++#endif
 +        }
 +
 +        ret = nvmm_vcpu_run(mach, vcpu);
@@ -771,6 +775,11 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +        switch (exit->reason) {
 +        case NVMM_VCPU_EXIT_NONE:
 +            break;
++#if NVMM_USER_VERSION >= 2
++        case NVMM_VCPU_EXIT_STOPPED:
++            qcpu->stop = true;
++            break;
++#endif
 +        case NVMM_VCPU_EXIT_MEMORY:
 +            ret = nvmm_handle_mem(mach, vcpu);
 +            break;
@@ -875,6 +884,7 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +
 +static Error *nvmm_migration_blocker;
 +
++#if NVMM_USER_VERSION == 1
 +static void
 +nvmm_ipi_signal(int sigcpu)
 +{
@@ -885,10 +895,12 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +        qcpu->stop = true;
 +    }
 +}
++#endif
 +
 +static void
 +nvmm_init_cpu_signals(void)
 +{
++#if NVMM_USER_VERSION == 1
 +    struct sigaction sigact;
 +    sigset_t set;
 +
@@ -901,6 +913,12 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +    sigprocmask(SIG_BLOCK, NULL, &set);
 +    sigdelset(&set, SIG_IPI);
 +    pthread_sigmask(SIG_SETMASK, &set, NULL);
++#else
++    /*
++     * We use the nvmm_vcpu_stop() mechanism, and don't use signals.
++     * Nothing to do.
++     */
++#endif
 +}
 +
 +int
@@ -1166,7 +1184,7 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +        error_report("NVMM: Unable to fetch capability, error=%d", errno);
 +        return -err;
 +    }
-+    if (qemu_mach.cap.version != 1) {
++    if (qemu_mach.cap.version < NVMM_KERN_VERSION) {
 +        error_report("NVMM: Unsupported version %u", qemu_mach.cap.version);
 +        return -EPROGMISMATCH;
 +    }
