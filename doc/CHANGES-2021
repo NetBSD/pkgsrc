@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1900 2021/03/31 21:59:02 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1901 2021/03/31 22:00:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2923,3 +2923,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libXres to 1.2.1 [wiz 2021-03-31]
 	Added time/quest-tui version 0.2.0 [pin 2021-03-31]
 	Updated security/tor-browser to 10.0.15 [wiz 2021-03-31]
+	Updated security/tor-browser-noscript to 11.2.4 [wiz 2021-03-31]
