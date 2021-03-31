@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1898 2021/03/31 20:25:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1899 2021/03/31 20:28:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2921,3 +2921,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.3.1 [pin 2021-03-31]
 	Added sysutils/tre-command version 0.3.6 [pin 2021-03-31]
 	Updated x11/libXres to 1.2.1 [wiz 2021-03-31]
+	Added time/quest-tui version 0.2.0 [pin 2021-03-31]
