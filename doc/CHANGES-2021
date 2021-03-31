@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1886 2021/03/31 08:07:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1887 2021/03/31 08:54:28 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/qbittorrent to 4.3.4.1 [adam 2021-03-31]
 	Updated devel/git to 2.31.1 [adam 2021-03-31]
 	Updated devel/py-pylint to 2.7.4 [adam 2021-03-31]
+	Updated emulators/qemu to version 5.2.0nb5 [reinoud 2021-03-31]
