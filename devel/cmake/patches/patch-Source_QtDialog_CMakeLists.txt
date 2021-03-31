@@ -1,16 +1,16 @@
-$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.3 2021/01/16 11:16:25 adam Exp $
+$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.4 2021/03/31 07:43:39 adam Exp $
 
 Do not make app bundle on Darwin.
 
---- Source/QtDialog/CMakeLists.txt.orig	2021-01-13 12:58:18.000000000 +0000
+--- Source/QtDialog/CMakeLists.txt.orig	2021-03-23 15:43:17.000000000 +0000
 +++ Source/QtDialog/CMakeLists.txt
-@@ -161,14 +161,14 @@ target_link_libraries(CMakeGUILib PUBLIC
+@@ -243,14 +243,14 @@ target_link_libraries(CMakeGUILib PUBLIC
  add_library(CMakeGUIMainLib STATIC CMakeSetup.cxx)
  target_link_libraries(CMakeGUIMainLib PUBLIC CMakeGUILib)
  
 -add_executable(cmake-gui WIN32 MACOSX_BUNDLE CMakeGUIExec.cxx ${MANIFEST_FILE})
 +add_executable(cmake-gui WIN32 CMakeGUIExec.cxx ${MANIFEST_FILE})
- target_link_libraries(cmake-gui CMakeGUIMainLib Qt5::Core)
+ target_link_libraries(cmake-gui CMakeGUIMainLib Qt${INSTALLED_QT_VERSION}::Core)
  
  target_sources(CMakeGUIMainLib INTERFACE $<TARGET_OBJECTS:CMakeGUIQRCLib>)
  if(WIN32)
@@ -21,7 +21,7 @@ Do not make app bundle on Darwin.
    target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.icns)
    set(MACOSX_BUNDLE_ICON_FILE CMakeSetup.icns)
    set_source_files_properties(CMakeSetup.icns PROPERTIES
-@@ -198,7 +198,7 @@ Checks: '-*,llvm-twine-local'
+@@ -280,7 +280,7 @@ Checks: '-*,llvm-twine-local'
  ...
  ")
  
@@ -30,7 +30,7 @@ Do not make app bundle on Darwin.
    file(STRINGS "${CMake_SOURCE_DIR}/Copyright.txt" copyright_line
      LIMIT_COUNT 1 REGEX "^Copyright 2000-20[0-9][0-9] Kitware")
  
-@@ -225,7 +225,7 @@ install(TARGETS cmake-gui
+@@ -307,7 +307,7 @@ install(TARGETS cmake-gui
    RUNTIME DESTINATION bin ${COMPONENT}
    ${CMAKE_INSTALL_DESTINATION_ARGS})
  
@@ -39,7 +39,7 @@ Do not make app bundle on Darwin.
    foreach (size IN ITEMS 32 128)
      install(
        FILES       "${CMAKE_CURRENT_SOURCE_DIR}/CMakeSetup${size}.png"
-@@ -244,14 +244,14 @@ if(UNIX AND NOT APPLE)
+@@ -326,14 +326,14 @@ if(UNIX AND NOT APPLE)
      ${COMPONENT})
  endif()
  
