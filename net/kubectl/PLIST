@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/03/31 18:29:20 leot Exp $
+bin/kubectl
