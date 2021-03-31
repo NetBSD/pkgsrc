@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1893 2021/03/31 13:43:24 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.1894 2021/03/31 18:27:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/phppgadmin to 7.13.0 [khorben 2021-03-31]
 	Updated lang/erlang to 23.3.1 [triaxx 2021-03-31]
 	Updated lang/erlang-doc to 23.3nb3 [triaxx 2021-03-31]
+	Updated net/youtube-dl to 20210331 [leot 2021-03-31]
