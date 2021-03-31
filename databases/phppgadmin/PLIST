@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/09/17 10:50:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/03/31 12:30:52 khorben Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -24,6 +24,10 @@ share/phppgadmin/classes/class.select.php
 share/phppgadmin/classes/database/ADODB_base.php
 share/phppgadmin/classes/database/Connection.php
 share/phppgadmin/classes/database/Postgres.php
+share/phppgadmin/classes/database/Postgres10.php
+share/phppgadmin/classes/database/Postgres11.php
+share/phppgadmin/classes/database/Postgres12.php
+share/phppgadmin/classes/database/Postgres13.php
 share/phppgadmin/classes/database/Postgres74.php
 share/phppgadmin/classes/database/Postgres80.php
 share/phppgadmin/classes/database/Postgres81.php
@@ -32,8 +36,12 @@ share/phppgadmin/classes/database/Postgres83.php
 share/phppgadmin/classes/database/Postgres84.php
 share/phppgadmin/classes/database/Postgres90.php
 share/phppgadmin/classes/database/Postgres91.php
+share/phppgadmin/classes/database/Postgres92.php
+share/phppgadmin/classes/database/Postgres93.php
+share/phppgadmin/classes/database/Postgres94.php
+share/phppgadmin/classes/database/Postgres95.php
+share/phppgadmin/classes/database/Postgres96.php
 share/phppgadmin/colproperties.php
-share/phppgadmin/conf/config.inc.php
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
 share/phppgadmin/database.php
@@ -47,6 +55,11 @@ share/phppgadmin/functions.js
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
 share/phppgadmin/help.php
+share/phppgadmin/help/PostgresDoc10.php
+share/phppgadmin/help/PostgresDoc11.php
+share/phppgadmin/help/PostgresDoc12.php
+share/phppgadmin/help/PostgresDoc13.php
+share/phppgadmin/help/PostgresDoc14.php
 share/phppgadmin/help/PostgresDoc74.php
 share/phppgadmin/help/PostgresDoc80.php
 share/phppgadmin/help/PostgresDoc81.php
@@ -56,7 +69,14 @@ share/phppgadmin/help/PostgresDoc84.php
 share/phppgadmin/help/PostgresDoc90.php
 share/phppgadmin/help/PostgresDoc91.php
 share/phppgadmin/help/PostgresDoc92.php
+share/phppgadmin/help/PostgresDoc93.php
+share/phppgadmin/help/PostgresDoc94.php
+share/phppgadmin/help/PostgresDoc95.php
+share/phppgadmin/help/PostgresDoc96.php
 share/phppgadmin/history.php
+share/phppgadmin/images/themes/bootstrap/Favicon.ico
+share/phppgadmin/images/themes/bootstrap/Introduction.png
+share/phppgadmin/images/themes/bootstrap/title.png
 share/phppgadmin/images/themes/cappuccino/Lminus.png
 share/phppgadmin/images/themes/cappuccino/Lplus.png
 share/phppgadmin/images/themes/cappuccino/Tminus.png
@@ -209,10 +229,8 @@ share/phppgadmin/js/display.js
 share/phppgadmin/lang/afrikaans.php
 share/phppgadmin/lang/arabic.php
 share/phppgadmin/lang/catalan.php
-share/phppgadmin/lang/chinese-sim.php
-share/phppgadmin/lang/chinese-tr.php
-share/phppgadmin/lang/chinese-utf8-zh_CN.php
-share/phppgadmin/lang/chinese-utf8-zh_TW.php
+share/phppgadmin/lang/chinese-zh-CN.php
+share/phppgadmin/lang/chinese-zh-TW.php
 share/phppgadmin/lang/czech.php
 share/phppgadmin/lang/danish.php
 share/phppgadmin/lang/dutch.php
@@ -343,6 +361,8 @@ share/phppgadmin/tables.js
 share/phppgadmin/tables.php
 share/phppgadmin/tablespaces.php
 share/phppgadmin/tblproperties.php
+share/phppgadmin/themes/bootstrap/global.css
+share/phppgadmin/themes/bootstrap/title.png
 share/phppgadmin/themes/cappuccino/global.css
 share/phppgadmin/themes/default/global.css
 share/phppgadmin/themes/global.css
@@ -355,3 +375,4 @@ share/phppgadmin/viewproperties.php
 share/phppgadmin/views.php
 share/phppgadmin/xloadtree/xloadtree2.js
 share/phppgadmin/xloadtree/xtree2.js
+@pkgdir share/phppgadmin/conf
