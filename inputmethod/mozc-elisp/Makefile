@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2021/02/27 04:19:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2021/03/31 16:45:35 ryoon Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
 PKGREVISION=	1
@@ -9,6 +9,9 @@ EMACS_MODULES=	base leim
 .include "../../editors/emacs/modules.mk"
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX} bin
+
+pre-configure:
+	${RM} ${WRKSRC}/unix/uim/uim.gyp
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

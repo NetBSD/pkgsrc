@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/02/27 04:19:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2021/03/31 16:45:35 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
 PKGREVISION=	1
@@ -10,6 +10,9 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
+
+pre-configure:
+	${RM} ${WRKSRC}/unix/uim/uim.gyp
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
