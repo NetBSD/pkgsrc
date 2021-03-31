@@ -1,4 +1,8 @@
-$NetBSD: patch-simd_arm_jsimd.c,v 1.1 2020/04/12 06:17:06 adam Exp $
+$NetBSD: patch-simd_arm_jsimd.c,v 1.2 2021/03/31 22:26:51 gdt Exp $
+
+\todo Explain this patch.
+
+\todo File upstream.
 
 --- simd/arm/jsimd.c.orig	2019-12-31 07:10:30.000000000 +0000
 +++ simd/arm/jsimd.c
@@ -30,7 +34,7 @@ $NetBSD: patch-simd_arm_jsimd.c,v 1.1 2020/04/12 06:17:06 adam Exp $
 +#elif defined(__NetBSD__)
 +  if (sysctlbyname("machdep.neon_present", &neon_present, &len, NULL, 0) == 0
 +	&& neon_present != 0)
-+    simd_support |= JSIMD_ARM_NEON;
++    simd_support |= JSIMD_NEON;
  #endif
  
  #ifndef NO_GETENV
