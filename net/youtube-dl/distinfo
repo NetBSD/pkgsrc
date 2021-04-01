@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.217 2021/03/31 18:26:57 leot Exp $
+$NetBSD: distinfo,v 1.218 2021/04/01 12:14:15 leot Exp $
 
-SHA1 (youtube-dl-2021.03.31.tar.gz) = 80955ed9c2f2d5e06efc981e0f24b6ef0c2162b1
-RMD160 (youtube-dl-2021.03.31.tar.gz) = d13bf3048e7140295c86435d091d0cd4ef3bcfd9
-SHA512 (youtube-dl-2021.03.31.tar.gz) = 9f594aef9e5a490d1d5af6135a9df0fa6d0e050303fc7216ca36b29d176f018fab3f37b344ad6db6ebf9d650d25343cd671d4d54999eb34b39a020dadbb77d3f
-Size (youtube-dl-2021.03.31.tar.gz) = 3315008 bytes
+SHA1 (youtube-dl-2021.04.01.tar.gz) = 0df3aa96ad234cd9ae3fb6d26881f6dd82f9e952
+RMD160 (youtube-dl-2021.04.01.tar.gz) = 29573caf1f8a9b2c89d437e709f89941a2b31a48
+SHA512 (youtube-dl-2021.04.01.tar.gz) = 138307b14b9ca18a1d55d16d4ae5d179e3244a9e270dedd732a14bb9250665741a9a90ecb1887308dcebfc2e448df28a505168b2b3afed7caeddacf4da8bce53
+Size (youtube-dl-2021.04.01.tar.gz) = 3315743 bytes
 SHA1 (patch-setup.py) = 56115118d5a263f3b46ff0da0b8315a1459ad7d9
 SHA1 (patch-youtube__dl_extractor_la7.py) = 6c579f96e7ace1b64ef25fe8788b40bc4e7e67dd
 SHA1 (patch-youtube__dl_postprocessor_ffmpeg.py) = f96676170a448d9205d542a7def4beca615a1490
