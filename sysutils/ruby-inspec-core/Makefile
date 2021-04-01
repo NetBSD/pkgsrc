@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/03/21 13:33:31 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/01 14:10:53 taca Exp $
 
 DISTNAME=	inspec-core-4.28.0
 CATEGORIES=	sysutils
@@ -31,8 +31,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-multipart-post>=2.0<3:../../www/ruby-multipart-post
 DEPENDS+=	${RUBY_PKGPREFIX}-train-core>=3.0<4:../../net/ruby-train-core
 
 USE_LANGUAGES=	# none
-
-RUBY_VERSIONS_INCOMPATIBLE=	25 # ruby-chef-utils
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
