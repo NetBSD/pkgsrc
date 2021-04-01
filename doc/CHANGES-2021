@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1901 2021/03/31 22:00:15 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1902 2021/04/01 06:21:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2924,3 +2924,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added time/quest-tui version 0.2.0 [pin 2021-03-31]
 	Updated security/tor-browser to 10.0.15 [wiz 2021-03-31]
 	Updated security/tor-browser-noscript to 11.2.4 [wiz 2021-03-31]
+	Updated net/py-responses to 0.13.2 [adam 2021-04-01]
+	Updated net/py-zeroconf to 0.29.0 [adam 2021-04-01]
