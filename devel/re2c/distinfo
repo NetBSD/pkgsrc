@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2020/09/20 08:32:30 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/04/01 16:46:39 wiz Exp $
 
-SHA1 (re2c-2.0.3.tar.xz) = e203d97ef0e7fe2eb9b673a42eb9a7135b0ae220
-RMD160 (re2c-2.0.3.tar.xz) = 587747ef5f73aeff4421ff281b87b3e269163fde
-SHA512 (re2c-2.0.3.tar.xz) = 893c533e9847a6236d55ae65e413ddc48b7531b89f5552a3ad79beeac079317ceca4c35710f3c2d88a6de5a3c0a5070a24a8cffb1b4277578a41697ea0e3bf8c
-Size (re2c-2.0.3.tar.xz) = 1288996 bytes
+SHA1 (re2c-2.1.1.tar.xz) = 038a30357fc3631c357d34fc48c3171698567bf7
+RMD160 (re2c-2.1.1.tar.xz) = 91bd1148bf576c8767789be389650c0971520388
+SHA512 (re2c-2.1.1.tar.xz) = 13edbe961e0482677aff52ada93129500c10e134b579365f1d0cd180a898251f3060f1fe0597fc6c900c0ea29b1eb28fc2519b0ebfa2ed496a777bf7e138feae
+Size (re2c-2.1.1.tar.xz) = 1340740 bytes
+SHA1 (patch-configure) = 1f05ad6879aadf47cdcee098ca6b09039a5e2332
