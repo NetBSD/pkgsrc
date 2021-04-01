@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/10/02 09:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/01 16:12:19 wiz Exp $
 
-DISTNAME=	pkgconf-1.7.3
+DISTNAME=	pkgconf-1.7.4
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -27,7 +27,7 @@ PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
 PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 .endif
 
-CONFIGURE_ARGS+=	--with-pkg-config-dir='${PKGCONFIG_PATHS:ts::Q}'
+CONFIGURE_ARGS+=	--with-pkg-config-dir=${PKGCONFIG_PATHS:ts::Q}
 
 # configure script incorrectly sets only _FILE_OFFSET_BITS=64
 CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
