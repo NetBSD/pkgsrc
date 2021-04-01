@@ -1,6 +1,0 @@
-This a meta package including Ruby 2.5 full release.
-
-It includes ruby25-base, ruby25-gdbm, ruby25-fiddle and ruby25-readline
-package.
-
-No package should depend on this package directly.
