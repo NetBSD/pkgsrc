@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2019/06/14 08:11:35 nia Exp $
+$NetBSD: patch-aa,v 1.4 2021/04/01 15:28:10 martin Exp $
 
 * MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
 * Add Sun audio support
+* Fix GNU specific sed call by using a portable regex instead
 
---- old-configure.in.orig	2017-09-11 20:13:47.000000000 +0000
-+++ old-configure.in
+--- old-configure.in.orig	2017-09-11 22:13:47.000000000 +0200
++++ old-configure.in	2021-03-31 20:45:25.040426765 +0200
 @@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
@@ -252,3 +253,12 @@ $NetBSD: patch-aa,v 1.3 2019/06/14 08:11:35 nia Exp $
  dnl Check for pixman and cairo
  dnl ========================================================
  
+@@ -5916,7 +6106,7 @@ ac_configure_args="$_SUBDIR_CONFIG_ARGS"
+ 
+ # --with-system-nspr will have been converted into the relevant $NSPR_CFLAGS
+ # and $NSPR_LIBS.
+-ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr\S* *//'`"
++ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr[[^[:space:]]]* *//'`"
+ 
+ if test "$_INTL_API" = no; then
+     ac_configure_args="$ac_configure_args --without-intl-api"
