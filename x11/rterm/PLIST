@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/01 21:02:32 pin Exp $
+bin/rterm

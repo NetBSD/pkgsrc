@@ -1,0 +1,2 @@
+st is a simple terminal implementation for X from suckless.org
+rterm is a port of suckless terminal (st) to rust.
