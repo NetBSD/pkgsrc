@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20461 2021/04/01 16:55:59 wiz Exp $
+$NetBSD: TODO,v 1.20462 2021/04/01 17:04:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
-	o py-borgbackup-1.1.16
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
