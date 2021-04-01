@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3354 2021/03/30 09:44:25 markd Exp $
+# $NetBSD: Makefile,v 1.3355 2021/04/01 14:15:47 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2874,7 +2874,6 @@ SUBDIR+=	ruby-mixlib-log
 SUBDIR+=	ruby-mixlib-shellout
 SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
-SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-msgpack
 SUBDIR+=	ruby-multi_test
 SUBDIR+=	ruby-mustache
