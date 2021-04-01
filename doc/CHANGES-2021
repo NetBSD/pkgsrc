@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1925 2021/04/01 17:06:59 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1926 2021/04/01 18:45:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2952,3 +2952,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/dbus-glib to 0.112 [wiz 2021-04-01]
 	Updated sysutils/py-borgbackup to 1.1.16 [wiz 2021-04-01]
 	Updated textproc/ugrep to 3.1.10 [wiz 2021-04-01]
+	Updated devel/gopls to 0.6.9 [wiz 2021-04-01]
