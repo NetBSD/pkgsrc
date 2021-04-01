@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/01 08:58:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/01 06:16:50 adam Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
@@ -15,7 +15,12 @@ INSTALLATION_DIRS+=	include/harfbuzz
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	lib/pkgconfig
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+HARFBUZZ_ICU_LIBNAME=	libharfbuzz-icu.0.dylib
+.else
 HARFBUZZ_ICU_LIBNAME=	libharfbuzz-icu.so.0.20704.0
+.endif
 
 .PHONY: harfbuzz-icu-install
 
@@ -26,8 +31,16 @@ harfbuzz-icu-install:
 	    ${DESTDIR}${PREFIX}/lib/pkgconfig/harfbuzz-icu.pc
 	${INSTALL_LIB} ${WRKSRC}/output/src/${HARFBUZZ_ICU_LIBNAME} \
 	    ${DESTDIR}${PREFIX}/lib
-	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so.0
-	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so
+.if ${OPSYS} == "Darwin"
+	cd ${DESTDIR}${PREFIX}/lib && \
+	install_name_tool -change @rpath/libharfbuzz.0.dylib ${PREFIX}/lib/libharfbuzz.0.dylib \
+		-id ${PREFIX}/lib/${HARFBUZZ_ICU_LIBNAME} ${HARFBUZZ_ICU_LIBNAME} && \
+	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.dylib
+.else
+	cd ${DESTDIR}${PREFIX}/lib && \
+	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so.0 && \
+	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so
+.endif
 
 do-install: harfbuzz-icu-install
 
