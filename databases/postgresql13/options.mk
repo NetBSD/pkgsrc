@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2020/10/18 09:24:02 adam Exp $
+# $NetBSD: options.mk,v 1.2 2021/04/01 10:22:23 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql13
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
 PKG_SUGGESTED_OPTIONS=	gssapi nls
 
-PLIST_VARS+=		llvm nls
+PLIST_VARS+=		gssapi llvm nls
 
 .include "../../mk/bsd.options.mk"
 
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-icu
 # GSSAPI (Kerberos5) authentication for the PostgreSQL backend
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
+PLIST.gssapi=		yes
 CONFIGURE_ARGS+=       --with-gssapi
 .else
 CONFIGURE_ARGS+=       --without-gssapi
