@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1904 2021/04/01 07:08:02 wen Exp $
+$NetBSD: CHANGES-2021,v 1.1905 2021/04/01 08:22:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/nginx-devel to 1.19.9 [adam 2021-04-01]
 	Updated x11/gtk3 to 3.24.28 [adam 2021-04-01]
 	Updated devel/p5-Scalar-List-Utils to 1.56 [wen 2021-04-01]
+	Updated devel/p5-Moose to 2.2015 [wen 2021-04-01]
