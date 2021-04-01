@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20457 2021/04/01 13:19:02 adam Exp $
+$NetBSD: TODO,v 1.20458 2021/04/01 16:12:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,8 +378,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.8
 	o SOGo-5.0.1
 	o SOPE-5.0.1
-	o Sigil-1.5.0 [wip]
-	o Sigil-1.5.1
+	o Sigil-1.5.1 [wip]
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
@@ -910,7 +909,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.10
-	o pkgconf-1.7.4
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.11
