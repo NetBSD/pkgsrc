@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/28 16:50:02 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/01 14:23:20 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -14,7 +14,7 @@ RM_VERSION=	4.1.1
 
 NO_BUILD=	yes
 
-RUBY_VERSIONS_ACCEPTED=	25 26
+RUBY_VERSIONS_ACCEPTED=	26
 
 RUBY_RAILS_ACCEPTED=	52
 
