@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1395 2021/03/31 18:29:49 leot Exp $
+# $NetBSD: Makefile,v 1.1396 2021/04/01 14:19:16 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -819,7 +819,6 @@ SUBDIR+=	ruby-ipaddress
 SUBDIR+=	ruby-net-dhcp
 SUBDIR+=	ruby-net-ldap
 SUBDIR+=	ruby-net-ping
-SUBDIR+=	ruby-net-telnet
 SUBDIR+=	ruby-netaddr
 SUBDIR+=	ruby-netrc
 SUBDIR+=	ruby-network_interface
