@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1906 2021/04/01 08:23:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1907 2021/04/01 08:33:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Scalar-List-Utils to 1.56 [wen 2021-04-01]
 	Updated devel/p5-Moose to 2.2015 [wen 2021-04-01]
 	Updated finance/gnucash to 4.5 [wiz 2021-04-01]
+	Updated finance/gnucash-docs to 4.5 [wiz 2021-04-01]
