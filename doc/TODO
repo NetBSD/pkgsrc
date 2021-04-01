@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20456 2021/04/01 08:23:13 wiz Exp $
+$NetBSD: TODO,v 1.20457 2021/04/01 13:19:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -739,7 +739,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
-	o libgpg-error-1.42
 	o libgphoto2-2.5.16
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
