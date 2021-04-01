@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/03/21 13:31:36 taca Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/01 14:10:53 taca Exp $
 
 DISTNAME=	ohai-16.10.7
 CATEGORIES=	misc
@@ -25,8 +25,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=12.8:../../sysutils/ruby-chef-config
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-RUBY_VERSIONS_INCOMPATIBLE=	25 # ruby-chef-utils
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

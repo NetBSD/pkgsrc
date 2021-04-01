@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/01/18 15:16:21 taca Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/01 14:10:53 taca Exp $
 
 DISTNAME=	chef-zero-15.0.4
 CATEGORIES=	sysutils
@@ -16,8 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0.6<3:../../www/ruby-rack
 
 USE_LANGUAGES=		# none
 RUBYGEM_OPTIONS+=	--format-executable
-
-RUBY_VERSIONS_INCOMPATIBLE=	25
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} chef-zero

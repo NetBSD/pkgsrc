@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/03/21 13:28:35 taca Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/01 14:10:53 taca Exp $
 
 DISTNAME=	chef-config-16.11.7
 CATEGORIES=	sysutils
@@ -16,8 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-tomlrb>=1.2<2:../../devel/ruby-tomlrb
 
 USE_LANGUAGES=	# none
-
-RUBY_VERSIONS_INCOMPATIBLE=	25 # ruby-chef-utils
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
