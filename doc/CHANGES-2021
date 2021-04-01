@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1914 2021/04/01 14:17:41 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1915 2021/04/01 14:20:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/ruby25 [taca 2021-04-01]
 	Removed lang/ruby25-base [taca 2021-04-01]
 	Removed devel/ruby-mode [taca 2021-04-01]
+	Removed net/ruby-net-telnet [taca 2021-04-01]
