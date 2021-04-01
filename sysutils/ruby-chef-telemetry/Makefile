@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/03/09 08:58:23 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/01 14:10:53 taca Exp $
 
 DISTNAME=	chef-telemetry-1.0.29
 CATEGORIES=	sysutils
@@ -14,8 +14,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=0:../../sysutils/ruby-chef-config
 RUBYGEM_OPTIONS+=	--format-executable
 
 USE_LANGUAGES=	# none
-
-RUBY_VERSIONS_INCOMPATIBLE=	25 # ruby-chef-utils
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
