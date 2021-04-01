@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1923 2021/04/01 16:55:59 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1924 2021/04/01 17:04:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2950,3 +2950,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/libcdr to 0.1.7 [wiz 2021-04-01]
 	Updated devel/re2c to 2.1.1 [wiz 2021-04-01]
 	Updated sysutils/dbus-glib to 0.112 [wiz 2021-04-01]
+	Updated sysutils/py-borgbackup to 1.1.16 [wiz 2021-04-01]
