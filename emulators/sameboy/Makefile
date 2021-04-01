@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/03/22 14:36:09 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/01 15:37:24 adam Exp $
 
 .include "Makefile.common"
 
@@ -13,8 +13,13 @@ MAKE_FLAGS+=	FREEDESKTOP=true
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.endif
+
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
