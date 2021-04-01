@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/12 14:14:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/01 22:29:21 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -961,6 +961,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.sv
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.th
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.translators
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.zh
+share/emacs/${PKGVERSION}/etc/w32-feature.el
 share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
@@ -3252,6 +3253,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-plot.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-plot.elc
 share/emacs/${PKGVERSION}/lisp/org/org-protocol.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-protocol.elc
+share/emacs/${PKGVERSION}/lisp/org/org-refile.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-refile.elc
 share/emacs/${PKGVERSION}/lisp/org/org-src.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-src.elc
 share/emacs/${PKGVERSION}/lisp/org/org-table.el.gz
