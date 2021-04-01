@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2021/02/24 15:39:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2021/04/01 12:22:38 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -257,7 +257,9 @@ share/mame/hash/fm77av.xml
 share/mame/hash/fm7_cass.xml
 share/mame/hash/fm7_disk.xml
 share/mame/hash/fmtowns_cd.xml
-share/mame/hash/fmtowns_flop.xml
+share/mame/hash/fmtowns_flop_cracked.xml
+share/mame/hash/fmtowns_flop_misc.xml
+share/mame/hash/fmtowns_flop_orig.xml
 share/mame/hash/galaxy.xml
 share/mame/hash/gamate.xml
 share/mame/hash/gameboy.xml
@@ -359,6 +361,7 @@ share/mame/hash/leapfrog_ltleappad_cart.xml
 share/mame/hash/leapfrog_mfleappad_cart.xml
 share/mame/hash/leapfrog_turboextreme_cart.xml
 share/mame/hash/leapfrog_turbotwistbrainquest_cart.xml
+share/mame/hash/leapfrog_zippity_cart.xml
 share/mame/hash/leapster.xml
 share/mame/hash/lisa.xml
 share/mame/hash/lisa2.xml
