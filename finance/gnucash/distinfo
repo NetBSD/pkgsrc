@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.105 2021/01/04 10:50:33 wiz Exp $
+$NetBSD: distinfo,v 1.106 2021/04/01 08:22:36 wiz Exp $
 
-SHA1 (gnucash-4.4.tar.bz2) = 0489e1d2c3102f684850bafecd8c3752625047e4
-RMD160 (gnucash-4.4.tar.bz2) = 18ed3c0deeaa9f142adf3d7ee464422b91ea4b1a
-SHA512 (gnucash-4.4.tar.bz2) = 5882e5a91081bb9279ac5dc8798352cb15ebb934d1d37c6d6639244602108e067ece5b7f51ba32c9c413c1469d08ca32a73369e6af34e41c3ef704033c71f336
-Size (gnucash-4.4.tar.bz2) = 14430959 bytes
+SHA1 (gnucash-4.5.tar.bz2) = f735b922c544f6c99271f2d621b540c0ca3e4a82
+RMD160 (gnucash-4.5.tar.bz2) = 20badb1f56f6377c6050d89121e83a23b47f3c37
+SHA512 (gnucash-4.5.tar.bz2) = 5e6dfebae8845ab7ad8fcb95f38eb1d0907e789637f722fccf31486b05ee9ebbfb60b8c70e1cef1fc5913b73bfdc2251babed09b6f894c266b969874f3dff30b
+Size (gnucash-4.5.tar.bz2) = 14472274 bytes
+SHA1 (patch-gnucash_gnome_assistant-loan.cpp) = 0dc5526c7553d810daa47bc6768f6ebeff33ca86
