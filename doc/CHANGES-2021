@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1911 2021/04/01 12:22:47 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1912 2021/04/01 13:19:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2936,3 +2936,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/redis to 6.2.1nb1 [jperkin 2021-04-01]
 	Updated net/youtube-dl to 20210401 [leot 2021-04-01]
 	Updated emulators/mame to 0.230 [wiz 2021-04-01]
+	Updated misc/stellarium to 0.21.0 [adam 2021-04-01]
+	Updated security/libgpg-error to 1.42 [adam 2021-04-01]
