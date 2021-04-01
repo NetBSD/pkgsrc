@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2021/02/28 16:01:05 taca Exp $
+# $NetBSD: Makefile,v 1.60 2021/04/01 14:23:20 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -47,7 +47,7 @@ GEMS_DISTFILES+=	websocket-driver-0.7.1.gem
 GEMS_DISTFILES+=	websocket-extensions-0.1.4.gem
 GEMS_DISTFILES+=	yard-0.9.20.gem
 
-RUBY_VERSIONS_ACCEPTED=	25 26
+RUBY_VERSIONS_ACCEPTED=	26
 
 .include "../../lang/ruby/rubyversion.mk"
 

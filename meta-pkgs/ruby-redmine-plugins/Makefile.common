@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2021/02/28 16:10:40 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/04/01 14:23:20 taca Exp $
 #
 # used by devel/ruby-redmine_code_review/Makefile
 # used by devel/ruby-redmine_lightbox2/Makefile
@@ -7,7 +7,7 @@
 
 CATEGORIES=	devel
 
-RUBY_VERSIONS_ACCEPTED=	25 26
+RUBY_VERSIONS_ACCEPTED=	26
 
 .include "../../devel/ruby-redmine/redmine.mk"
 
