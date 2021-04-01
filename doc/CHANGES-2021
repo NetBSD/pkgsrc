@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1916 2021/04/01 15:23:03 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1917 2021/04/01 15:24:09 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2943,3 +2943,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/ruby-mode [taca 2021-04-01]
 	Removed net/ruby-net-telnet [taca 2021-04-01]
 	Updated net/dbip-asn-lite to 2021.04 [fcambus 2021-04-01]
+	Updated net/dbip-city-lite to 2021.04 [fcambus 2021-04-01]
