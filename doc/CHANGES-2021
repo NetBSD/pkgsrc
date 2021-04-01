@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1909 2021/04/01 11:45:01 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.1910 2021/04/01 12:14:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2934,3 +2934,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/gnucash-docs to 4.5 [wiz 2021-04-01]
 	Updated net/haproxy to 2.3.9 [wiz 2021-04-01]
 	Updated databases/redis to 6.2.1nb1 [jperkin 2021-04-01]
+	Updated net/youtube-dl to 20210401 [leot 2021-04-01]
