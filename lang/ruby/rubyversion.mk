@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.225 2021/03/21 12:39:52 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.226 2021/04/01 14:07:52 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 25 26 27 30
+#		Possible values: 26 27 30
 #		Default: 26
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 25 26 27 30
-#		Default: 25 26 27 30
+#		Possible values: 26 27 30
+#		Default: 26 27 30
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 25 26 27 30
+#		Possible values: 26 27 30
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 25 26 27 30
+#		Possible values: 26 27 30
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #
-#		Possible values: ruby25 ruby26 ruby27
+#		Possible values: ruby26 ruby27 ruby30
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 25 26 27 30
+#		Possible values: 26 27 30
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -213,25 +213,22 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY25_VERSION=		2.5.8
 RUBY26_VERSION=		2.6.6
 RUBY27_VERSION=		2.7.2
 RUBY30_VERSION=		3.0.0
 
 # current API compatible version; used for version of shared library
-RUBY25_API_VERSION=	2.5.0
 RUBY26_API_VERSION=	2.6.0
 RUBY27_API_VERSION=	2.7.0
 RUBY30_API_VERSION=	3.0.0
-
 
 #
 RUBY_VERSION_DEFAULT?=	26
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	25 26 27 30
+RUBY_VERSIONS_SUPPORTED=	26 27 30
 
-RUBY_VERSIONS_ACCEPTED?=	25 26 27 30
+RUBY_VERSIONS_ACCEPTED?=	26 27 30
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -270,30 +267,7 @@ RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
 
 RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
-.if ${RUBY_VER} == "25"
-RUBY_VERSION=		${RUBY25_VERSION}
-RUBY_ABI_VERSION=	${RUBY_VERSION}
-
-RUBY_RDOC_VERSION=	6.0.1.1
-
-RUBY_DID_YOU_MEAN_VERSION=	1.2.0
-RUBY_MINITEST_VERSION=		5.10.3
-RUBY_NET_TELNET_VERSION=	0.1.1
-RUBY_POWER_ASSERT_VERSION=	1.1.1
-RUBY_RAKE_VERSION=		12.3.3
-RUBY_TEST_UNIT_VERSION=		3.2.7
-RUBY_XML_RPC_VERSION=		0.3.0
-
-RUBY_BIGDECIMAL_VERSION=	1.3.4
-RUBY_FIDDLE_VERSION=		1.0.0
-RUBY_JSON_VERSION=		2.1.0
-RUBY_IO_CONSOLE_VERSION=	0.4.6
-RUBY_OPENSSL_VERSION=		2.1.2
-RUBY_PSYCH_VERSION=		3.0.2
-
-RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
-
-.elif ${RUBY_VER} == "26"
+.if ${RUBY_VER} == "26"
 RUBY_VERSION=		${RUBY26_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 
@@ -468,7 +442,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby25", "ruby26",  and so on.
+#	with ${RUBY_NAME}; "ruby26", "ruby27" and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
