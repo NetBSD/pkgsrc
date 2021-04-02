@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1929 2021/04/01 22:29:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1930 2021/04/02 04:12:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2956,3 +2956,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added x11/rterm version 0.0.2 [pin 2021-04-01]
 	Updated editors/emacs27 to 27.2 [wiz 2021-04-01]
 	Updated editors/emacs27-nox11 to 27.2 [wiz 2021-04-01]
+	Updated editors/emacs-packages to 0.11 [taca 2021-04-02]
