@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1938 2021/04/02 12:54:28 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.1939 2021/04/02 13:01:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/gcc49-libs [nia 2021-04-02]
 	Updated devel/php-composer to 2.0.12 [tpaul 2021-04-02]
 	Updated net/terraform-provider-vultr to 2.2.0 [tpaul 2021-04-02]
+	Updated devel/mob to 1.4.0 [schmonz 2021-04-02]
