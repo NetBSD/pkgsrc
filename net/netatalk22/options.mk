@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/11/12 15:36:58 khorben Exp $
+# $NetBSD: options.mk,v 1.6 2021/04/02 09:54:26 hauke Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam slp
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=       --with-ldap=no
 PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam
+CONFIGURE_ARGS+=	--with-pam=yes
 PLIST.pam=		yes
 MESSAGE_SRC+=		MESSAGE MESSAGE.pam
 .else

@@ -1,10 +1,10 @@
-$NetBSD: patch-include_atalk_ldapconfig.h,v 1.2 2017/07/12 13:56:00 hauke Exp $
+$NetBSD: patch-include_atalk_ldapconfig.h,v 1.3 2021/04/02 09:54:26 hauke Exp $
 
 Correct an erroneous patch that was unfortunately submitted upstream.
 
 Providing an empty header because we do not support ACLs only serves
 to break ldap support.
-							     
+
 --- include/atalk/ldapconfig.h.orig	2017-07-09 11:03:31.000000000 +0000
 +++ include/atalk/ldapconfig.h
 @@ -1,5 +1,4 @@

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2020/12/04 04:56:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.37 2021/04/02 09:54:26 hauke Exp $
 
 DISTNAME=	netatalk-2.2.6
 PKGNAME=	${DISTNAME:C/-/22-/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -80,9 +80,6 @@ CHECK_SSP_SKIP+=	libexec/netatalk/uams/*.a
 INSTALLATION_DIRS=	libexec/psffilters
 
 post-install:
-.if !empty(PKG_OPTIONS:Mldap)
-	${INSTALL_DATA} ${WRKSRC}/config/afp_ldap.conf ${DESTDIR}${EGDIR}
-.endif
 .if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EGDIR}
 .endif

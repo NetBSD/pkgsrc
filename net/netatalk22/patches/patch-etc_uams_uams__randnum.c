@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_uams_uams__randnum.c,v 1.1 2019/06/02 20:03:32 rjs Exp $
+$NetBSD: patch-etc_uams_uams__randnum.c,v 1.2 2021/04/02 09:54:26 hauke Exp $
+
+Adapt for new OpenSSL API.
 
 --- etc/uams/uams_randnum.c.orig	2017-07-09 11:03:31.000000000 +0000
 +++ etc/uams/uams_randnum.c
