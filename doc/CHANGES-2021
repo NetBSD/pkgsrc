@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1932 2021/04/02 07:47:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1933 2021/04/02 08:33:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-Pillow to 8.2.0 [adam 2021-04-02]
 	Updated sysutils/ansible to 3.2.0 [adam 2021-04-02]
 	Updated graphics/py-tifffile to 2021.3.31 [adam 2021-04-02]
+	Updated devel/spdlog to 1.8.5 [wiz 2021-04-02]

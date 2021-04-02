@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20467 2021/04/02 04:28:36 taca Exp $
+$NetBSD: TODO,v 1.20468 2021/04/02 08:33:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghdl-0.33
-	o git-base-2.31.0
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -993,7 +992,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-redmine-4.1.2
 	o ruby-redmine-4.2.0
 	o rump-20131213
-	o rust-1.50.0
+	o rust-1.51.0
 	o sabayon-2.30.1
 	o sablecc-3.7
 	o sarg-2.4.0
@@ -1029,7 +1028,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.0.0
 	o sparse-0.5.0
 	o spcaview-20060501
-	o spdlog-1.8.5
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
