@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.in,v 1.1 2021/04/02 10:06:27 wiz Exp $
+
+XXX
+https://trac.wxwidgets.org/ticket/18198
+
+tweak SEARCH_LIB
+
+--- configure.in.orig	2014-06-14 21:48:48.000000000 +0000
++++ configure.in
+@@ -2245,7 +2245,7 @@ fi
+ 
+ AC_MSG_RESULT($wx_cv_std_libfullpath)
+ 
+-SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath"
++SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath @PREFIX@/lib"
+ 
+ dnl Cross compiling with gcc?
+ if test "$build" != "$host" -a "$GCC" = yes; then

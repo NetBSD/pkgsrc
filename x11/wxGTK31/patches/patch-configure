@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2021/04/02 10:06:27 wiz Exp $
+
+Fix shell script portability
+tweak SEARCH_LIB
+
+--- configure.orig	2020-07-22 17:20:06.000000000 +0000
++++ configure
+@@ -39240,7 +39240,8 @@ fi
+       *-*-solaris2* )
+         SONAME_FLAG="-h "
+         USE_SOVERSION=1
+-        USE_SOVERSOLARIS=1
++        USE_SOVERLINUX=1
++        USE_SOTWOSYMLINKS=1
+       ;;
+ 
+       *-*-darwin* )
