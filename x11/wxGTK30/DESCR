@@ -1,5 +1,3 @@
-The wxWidgets cross-platform GUI library.
-
 wxWidgets is a set of libraries that allows C++ applications to compile and
 run on several different types of computer, with minimal source code changes.
 There is one library per supported GUI (such as Windows, GTK+, Motif, and Mac).
@@ -18,3 +16,5 @@ such as the many convenience dialogs, built-in HTML display and printing,
 virtual filesystems, easy-to-use OLE automation controller class, Open GL
 support, and many other features that make it easier to write modern and
 user-friendly applications.
+
+This package contains the 3.0 branch of the library.
