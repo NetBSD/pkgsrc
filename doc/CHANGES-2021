@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1936 2021/04/02 11:58:54 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1937 2021/04/02 12:42:56 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/gcc48-libs [nia 2021-04-02]
 	Removed lang/gcc49 [nia 2021-04-02]
 	Removed lang/gcc49-libs [nia 2021-04-02]
+	Updated devel/php-composer to 2.0.12 [tpaul 2021-04-02]
