@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/05/16 02:15:06 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2021/04/02 19:26:24 fcambus Exp $
 
-DISTNAME=	fig2dev-3.2.7b
-PKGREVISION=	1
+DISTNAME=	fig2dev-3.2.8
 CATEGORIES=	graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 EXTRACT_SUFX=	.tar.xz
