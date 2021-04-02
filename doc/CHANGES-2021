@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1930 2021/04/02 04:12:28 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1931 2021/04/02 06:19:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2957,3 +2957,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/emacs27 to 27.2 [wiz 2021-04-01]
 	Updated editors/emacs27-nox11 to 27.2 [wiz 2021-04-01]
 	Updated editors/emacs-packages to 0.11 [taca 2021-04-02]
+	Updated lang/npm to 6.14.12 [adam 2021-04-02]
+	Updated graphics/py-Pillow to 8.2.0 [adam 2021-04-02]
