@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2020/05/30 18:11:22 he Exp $
+$NetBSD: distinfo,v 1.32 2021/04/02 19:32:21 fcambus Exp $
 
-SHA1 (xfig-3.2.7b.tar.xz) = c8e4426194b8860b5d5e568eb2a94a790ad62f72
-RMD160 (xfig-3.2.7b.tar.xz) = 0e9096c7653141e061f7329d9efc90668f337c21
-SHA512 (xfig-3.2.7b.tar.xz) = f3396ebf8a5961909e58b05b60117fd7bbc8c24fabbd47f108eaea9586f4180af572faffe077b1a5dcbf669ebd69b1c2791f302c126dea62a44aa1592de66f73
-Size (xfig-3.2.7b.tar.xz) = 5059984 bytes
+SHA1 (xfig-3.2.8.tar.xz) = 93229765f9e764f76e10585309a6c690554cec64
+RMD160 (xfig-3.2.8.tar.xz) = ebe63130d8b8de0eeb4c28426df042448b3a0716
+SHA512 (xfig-3.2.8.tar.xz) = bbf72bb7c3a6249bb5247e9b588a93abcabd052ba9303b9da66258b19a1937ad622f410300ea43689331bd045f5e672e570557d7175f3ff1213558e4596ad747
+Size (xfig-3.2.8.tar.xz) = 4790064 bytes
