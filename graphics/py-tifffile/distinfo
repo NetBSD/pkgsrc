@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/03/08 20:07:20 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/04/02 07:47:00 adam Exp $
 
-SHA1 (tifffile-2021.3.5.tar.gz) = 61003c3326c769b2d196aef943aef4df2ebf956f
-RMD160 (tifffile-2021.3.5.tar.gz) = 71d65e799fc074d4f1313dfd6e5eaf5fc5e20988
-SHA512 (tifffile-2021.3.5.tar.gz) = a0f7e438e3a4c9162ce4ea31a8e298c74cbd384d4129ddb8ef06365052c92b48e8eb34eff7540df104fcd6eee0ff7b9225f1bf65c00a8f8c311ba73bd9567982
-Size (tifffile-2021.3.5.tar.gz) = 244327 bytes
+SHA1 (tifffile-2021.3.31.tar.gz) = 028fe6b7cececac4abc742466f73c73126dd2559
+RMD160 (tifffile-2021.3.31.tar.gz) = 4508a92f26e91c2f7afcf9cafc9c2507506fea4f
+SHA512 (tifffile-2021.3.31.tar.gz) = 208523c1749af88cf4155d0b601d7bd61da08233c7ff968c72bf0717b75144d426df529adc5d4f83a7e2afdb0298b7665b91f026196dda9dfa0afedba1f1ca26
+Size (tifffile-2021.3.31.tar.gz) = 246207 bytes
