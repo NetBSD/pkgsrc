@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1933 2021/04/02 08:33:09 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1934 2021/04/02 08:45:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2962,3 +2962,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible to 3.2.0 [adam 2021-04-02]
 	Updated graphics/py-tifffile to 2021.3.31 [adam 2021-04-02]
 	Updated devel/spdlog to 1.8.5 [wiz 2021-04-02]
+	Updated textproc/py-xlsxwriter to 1.3.8 [adam 2021-04-02]
+	Updated devel/py-gitdb to 4.0.7 [adam 2021-04-02]
