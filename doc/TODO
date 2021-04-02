@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20465 2021/04/01 22:29:34 wiz Exp $
+$NetBSD: TODO,v 1.20466 2021/04/02 04:26:19 taca Exp $
 
 Suggested new packages
 ======================
@@ -986,6 +986,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
+	o ruby-redmine-4.0.8
+	o ruby-redmine-4.1.2
+	o ruby-redmine-4.2.0
 	o rump-20131213
 	o rust-1.50.0
 	o sabayon-2.30.1
