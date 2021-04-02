@@ -1,0 +1,8 @@
+LibreDWG is a free C library to read and write DWG files, which was
+a file format created in the 70's for the emerging CAD applications,
+and is the native file format used by AutoCAD.
+
+This package includes some example tools to manipulate DWG files.
+
+This software is part of the GNU project, released under the aegis
+of GNU.
