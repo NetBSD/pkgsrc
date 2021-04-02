@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/04/02 10:06:27 wiz Exp $
+
+SHA1 (wxWidgets-3.1.4.tar.bz2) = f8c77e6336b5f6414b07e27baa489fb8abc620c4
+RMD160 (wxWidgets-3.1.4.tar.bz2) = 3e53350433b2b31b1f0bed683c165be9f8857383
+SHA512 (wxWidgets-3.1.4.tar.bz2) = aabb257fa222eb819f1e16086977b0ecfd3eb3406d695e0e642ffdb8b4dc586a9721404916be4756a2d92a1a8dc41b661b54717a64e03850a8a92d32d45ece14
+Size (wxWidgets-3.1.4.tar.bz2) = 21581661 bytes
+SHA1 (patch-configure) = 0c287f8d0f24c62bbb0efae300043dd83a156fce
+SHA1 (patch-configure.in) = 9f01c9d0478ffbd399f5765de9cc1d4115085201
