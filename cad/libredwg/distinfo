@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/02 21:32:59 plunky Exp $
+
+SHA1 (libredwg-0.12.tar.xz) = b60eef97df15c5cb5c128fe734437d237f931af5
+RMD160 (libredwg-0.12.tar.xz) = ade68bf7076d9a3ce7be3369d7ab48b401dcb68e
+SHA512 (libredwg-0.12.tar.xz) = 3994c2031b0c96f852e5eea3e422e4156b35581e7144755ed1a84d226033684f7eea344732ac08d8aab6f1197f6f39278188ea08db9ebec7a52ddb09855b527c
+Size (libredwg-0.12.tar.xz) = 9518568 bytes
