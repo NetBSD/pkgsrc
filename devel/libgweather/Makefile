@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2021/03/30 10:22:45 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.85 2021/04/02 16:21:05 cirnatdan Exp $
 
 DISTNAME=	libgweather-40.0
 CATEGORIES=	devel gnome
@@ -16,6 +16,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gweather-3.0.pc
+
+BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
