@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/05 07:20:16 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/02 16:53:42 nia Exp $
 
 PKGNAME=	adacurses-${ACVERSION}
 CATEGORIES=	devel
@@ -35,7 +35,7 @@ SUBST_MESSAGE.adagen=	Adjust gen Makefile
 
 SUBST_STAGE.sample=	pre-configure
 SUBST_FILES.sample=	samples/Makefile.in
-SUBST_SED.sample=	-e 's|@LIBS@|@LIBS@ -lmenu -lform -lpanel|'
+SUBST_SED.sample=	-e 's|@LIBS@|@LIBS@ -lgnumenu -lgnuform -lgnupanel|'
 SUBST_MESSAGE.sample=	Adjust samples Makefile
 
 SUBST_STAGE.pragma=	pre-configure
