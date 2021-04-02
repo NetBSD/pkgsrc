@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/02 10:06:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/02 10:26:17 wiz Exp $
 
 DISTNAME=	wxWidgets-3.1.4
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK31/}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://www.wxwidgets.org/
-COMMENT=	Cross-platform wxWidgets GUI library (3.1 branch)
+COMMENT=	Cross-platform wxWidgets GUI library (3.1 development branch)
 # LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
 LICENSE=	gnu-lgpl-v2
 
