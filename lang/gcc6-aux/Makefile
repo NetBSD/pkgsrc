@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/03 17:42:20 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/02 16:30:09 nia Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -39,6 +39,9 @@ BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
 OS_LABEL4VERS=		[${OPSYS}${GARCH:M*64:S/amd_//:S/x86_//}]
 FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc6-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
+
+# avoid mysterious iconv failures
+EXTRA_CONFARGS+=	--disable-nls
 
 .if ${OPSYS} == DragonFly
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.41.tar.bz2
@@ -329,4 +332,5 @@ create-bootstrap: stage-install
 		${TAR} -cf ${BSFILENAME} bootstrap; ${BZIP2} ${BSFILENAME})
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
