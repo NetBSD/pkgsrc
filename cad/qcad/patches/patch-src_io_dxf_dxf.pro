@@ -1,9 +1,9 @@
-$NetBSD: patch-src_io_dxf_dxf.pro,v 1.2 2018/07/27 14:12:41 plunky Exp $
+$NetBSD: patch-src_io_dxf_dxf.pro,v 1.3 2021/04/02 20:27:12 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- src/io/dxf/dxf.pro.orig	2017-12-19 14:26:30.000000000 +0000
+--- src/io/dxf/dxf.pro.orig	2020-09-04 08:28:36.000000000 +0000
 +++ src/io/dxf/dxf.pro
 @@ -17,7 +17,12 @@ SOURCES = \
  TEMPLATE = lib
@@ -21,7 +21,7 @@ and create an install target
      CONFIG += staticlib
 @@ -25,5 +30,3 @@ r_static_libs {
  else {
-     DESTDIR = ../../../plugins
+     DESTDIR = $$PWD/../../../plugins
  }
 -
--POST_TARGETDEPS += ../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}
+-POST_TARGETDEPS +=  $$PWD/../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}
