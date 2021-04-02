@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2020/08/31 18:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2021/04/02 14:58:22 cirnatdan Exp $
 
 DISTNAME=		pan-0.146
 PKGREVISION=		5
@@ -25,6 +25,10 @@ LIBS+=			-lcompat
 .endif
 
 LIBS.SunOS+=	-lsocket -liconv
+
+# temporary fix for GLib 2.68 breakage
+# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 # "Build" these files out of thin air, since base msgfmt doesn't know
 # about --xml --desktop.
