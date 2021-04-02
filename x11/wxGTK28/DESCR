@@ -1,5 +1,3 @@
-A GTK+-based implementation of the wxWidgets cross-platform GUI library.
-
 wxWidgets is a set of libraries that allows C++ applications to compile and
 run on several different types of computer, with minimal source code changes.
 There is one library per supported GUI (such as Windows, GTK+, Motif, and Mac).
@@ -19,5 +17,4 @@ virtual filesystems, easy-to-use OLE automation controller class, Open GL
 support, and many other features that make it easier to write modern and
 user-friendly applications.
 
-There is also a python interface available, wxPython (see the py-wxWidgets
-package).
+This package contains the old 2.8 branch of the library.
