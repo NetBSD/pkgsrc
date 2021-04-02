@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2021/01/05 15:08:43 gdt Exp $
+# $NetBSD: Makefile,v 1.87 2021/04/02 14:56:05 cirnatdan Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -48,6 +48,10 @@ pre-configure:
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+# temporary fix for GLib 2.68 breakage
+# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
+CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 ## for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
 #BUILDLINK_TRANSFORM+=	rm:-Wundef
