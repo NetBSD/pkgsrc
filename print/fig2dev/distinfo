@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/05/12 10:31:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/04/02 19:26:24 fcambus Exp $
 
-SHA1 (fig2dev-3.2.7b.tar.xz) = 8097c178b7fff1023112250938cc87837c0f564e
-RMD160 (fig2dev-3.2.7b.tar.xz) = 133011bf9d998464b87fc952a739a58307cfb270
-SHA512 (fig2dev-3.2.7b.tar.xz) = 134023febf935e76bd5e45695e3718f6af823297743045cf5aaf91136047d8f217785cd150667aa893f8424430bf60e36cad907419118f27fee75aafb02cbe41
-Size (fig2dev-3.2.7b.tar.xz) = 512224 bytes
+SHA1 (fig2dev-3.2.8.tar.xz) = 6a4714b653d98734dcfd3d24e6bdf091c2e20195
+RMD160 (fig2dev-3.2.8.tar.xz) = b59c24b248002aa7d5e606de4078065d4fe6f840
+SHA512 (fig2dev-3.2.8.tar.xz) = 4958e97cecd651a15f25cfc27ae55fa05ae628ae4257d1eb454cba60da26a907a5dddf5736bee9145007f5e0bf251fd52924ae09e5f87b95f287bab4c9da04f5
+Size (fig2dev-3.2.8.tar.xz) = 518984 bytes
 SHA1 (patch-fig2dev_tests_atlocal.in) = a4440e467472ba02b8a67cab0287f5859a5eb631
