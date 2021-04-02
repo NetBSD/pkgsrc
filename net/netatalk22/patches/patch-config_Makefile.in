@@ -1,13 +1,24 @@
-$NetBSD: patch-config_Makefile.in,v 1.1 2017/07/12 13:56:00 hauke Exp $
+$NetBSD: patch-config_Makefile.in,v 1.2 2021/04/02 09:54:26 hauke Exp $
+
+Install afp_ldap.conf based on LDAP support, not ACL support.
 
 Install config files to examples/netatalk, and leave installation to
 the pkginstall framerwork.
 
 Renamed from patch-ah
 
---- config/Makefile.in.orig	2011-09-06 07:41:20.000000000 -0400
-+++ config/Makefile.in	2011-09-21 09:34:21.000000000 -0400
-@@ -614,13 +614,14 @@
+--- config/Makefile.in.orig	2017-07-09 11:27:05.000000000 +0000
++++ config/Makefile.in
+@@ -88,7 +88,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@HAVE_ACLS_TRUE@am__append_1 = afp_ldap.conf
++@HAVE_LDAP_TRUE@am__append_1 = afp_ldap.conf
+ @USE_APPLETALK_TRUE@am__append_2 = atalkd.conf papd.conf
+ subdir = config
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -759,13 +759,14 @@ uninstall-local:
  		rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
  	done
  @USE_DEBIAN_TRUE@	rm -f $(DESTDIR)/etc/default/netatalk
