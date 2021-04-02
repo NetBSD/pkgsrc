@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2021/03/20 20:24:57 leot Exp $
+@comment $NetBSD: PLIST,v 1.54 2021/04/02 20:05:39 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -237,6 +237,9 @@ ${PYSITELIB}/gallery_dl/extractor/mangahere.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.py
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyo
+${PYSITELIB}/gallery_dl/extractor/manganelo.py
+${PYSITELIB}/gallery_dl/extractor/manganelo.pyc
+${PYSITELIB}/gallery_dl/extractor/manganelo.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangapark.py
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyo
@@ -375,6 +378,9 @@ ${PYSITELIB}/gallery_dl/extractor/speakerdeck.pyo
 ${PYSITELIB}/gallery_dl/extractor/subscribestar.py
 ${PYSITELIB}/gallery_dl/extractor/subscribestar.pyc
 ${PYSITELIB}/gallery_dl/extractor/subscribestar.pyo
+${PYSITELIB}/gallery_dl/extractor/tapas.py
+${PYSITELIB}/gallery_dl/extractor/tapas.pyc
+${PYSITELIB}/gallery_dl/extractor/tapas.pyo
 ${PYSITELIB}/gallery_dl/extractor/test.py
 ${PYSITELIB}/gallery_dl/extractor/test.pyc
 ${PYSITELIB}/gallery_dl/extractor/test.pyo
@@ -396,6 +402,9 @@ ${PYSITELIB}/gallery_dl/extractor/unsplash.pyo
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.py
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyc
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyo
+${PYSITELIB}/gallery_dl/extractor/vk.py
+${PYSITELIB}/gallery_dl/extractor/vk.pyc
+${PYSITELIB}/gallery_dl/extractor/vk.pyo
 ${PYSITELIB}/gallery_dl/extractor/vsco.py
 ${PYSITELIB}/gallery_dl/extractor/vsco.pyc
 ${PYSITELIB}/gallery_dl/extractor/vsco.pyo
