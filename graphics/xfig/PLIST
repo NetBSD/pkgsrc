@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/05/30 18:11:22 he Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/04/02 19:32:21 fcambus Exp $
 bin/xfig
 lib/X11/app-defaults/Fig
 man/man1/xfig.1
@@ -245,7 +245,6 @@ share/doc/xfig/html/images/polyline-example.png
 share/doc/xfig/html/images/power-supply.png
 share/doc/xfig/html/images/power-supply_sm.png
 share/doc/xfig/html/images/print-panel.png
-share/doc/xfig/html/images/pspbrwse.jbf
 share/doc/xfig/html/images/redball.png
 share/doc/xfig/html/images/redballdot.png
 share/doc/xfig/html/images/regular-polygon-button.png
@@ -311,9 +310,6 @@ share/doc/xfig/html/images/view-menu-button.png
 share/doc/xfig/html/images/watch.png
 share/doc/xfig/html/images/watch_sm.png
 share/doc/xfig/html/images/xfig-logo.png
-share/doc/xfig/html/images/xfig-title-old.png
-share/doc/xfig/html/images/xfig-title.fig
-share/doc/xfig/html/images/xfig-title.fig.in
 share/doc/xfig/html/images/xfig-title.png
 share/doc/xfig/html/images/xfig_splash_logo.png
 share/doc/xfig/html/images/xfighelp.png
@@ -400,7 +396,6 @@ share/doc/xfig/html/panning.html
 share/doc/xfig/html/printing.html
 share/doc/xfig/html/screen_image_map.html
 share/doc/xfig/xfig-howto.pdf
-share/doc/xfig/xfig-title.png
 share/doc/xfig/xfig_man.html
 share/doc/xfig/xfig_ref_en.pdf
 share/pixmaps/xfig.png
@@ -1656,9 +1651,7 @@ share/xfig/Libraries/Electronic/Schematic/Imperial/e_schmitt-symbol.fig
 share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-bip-npn.fig
 share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-bip-pnp.fig
 share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-fet-n-type.fig
-share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-fet-n-type.fig.bak
 share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-fet-p-type.fig
-share/xfig/Libraries/Electronic/Schematic/Imperial/f_trans-fet-p-type.fig.bak
 share/xfig/Libraries/Electronic/Schematic/Imperial/logic_and-and-gate.fig
 share/xfig/Libraries/Electronic/Schematic/Imperial/logic_and-nand-gate.fig
 share/xfig/Libraries/Electronic/Schematic/Imperial/logic_buffer-inverting.fig
