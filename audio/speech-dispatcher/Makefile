@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/12/31 00:34:36 js Exp $
+# $NetBSD: Makefile,v 1.19 2021/04/02 09:50:58 cirnatdan Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
 PKGREVISION=	1
@@ -72,6 +72,10 @@ CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/${module} \
 .endfor
 
 REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
+
+# temporary fix for GLib 2.68 breakage
+# # https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
+CXXFLAGS+=              -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 .if ${OPSYS} != "Darwin"
 .include "../../audio/espeak/buildlink3.mk"
