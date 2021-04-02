@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/24 19:54:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/02 07:47:00 adam Exp $
 bin/lsm2bin-${PYVERSSUFFIX}
+bin/tiff2fsspec-${PYVERSSUFFIX}
 bin/tiffcomment-${PYVERSSUFFIX}
 bin/tifffile-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -17,6 +18,9 @@ ${PYSITELIB}/tifffile/__main__.pyo
 ${PYSITELIB}/tifffile/lsm2bin.py
 ${PYSITELIB}/tifffile/lsm2bin.pyc
 ${PYSITELIB}/tifffile/lsm2bin.pyo
+${PYSITELIB}/tifffile/tiff2fsspec.py
+${PYSITELIB}/tifffile/tiff2fsspec.pyc
+${PYSITELIB}/tifffile/tiff2fsspec.pyo
 ${PYSITELIB}/tifffile/tiffcomment.py
 ${PYSITELIB}/tifffile/tiffcomment.pyc
 ${PYSITELIB}/tifffile/tiffcomment.pyo
