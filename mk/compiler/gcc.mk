@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.220 2021/02/04 21:45:13 gdt Exp $
+# $NetBSD: gcc.mk,v 1.221 2021/04/02 11:48:16 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -978,11 +978,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
       empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9]) && \
       empty(PKGPATH:Mlang/gcc10)
-.    if !empty(_GCC_PKGBASE:Mgcc48)
-.      include "../../lang/gcc48-libs/buildlink3.mk"
-.    elif !empty(_GCC_PKGBASE:Mgcc49)
-.      include "../../lang/gcc49-libs/buildlink3.mk"
-.    elif !empty(_GCC_PKGBASE:Mgcc5)
+.    if !empty(_GCC_PKGBASE:Mgcc5)
 .      include "../../lang/gcc5-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc6)
 .      include "../../lang/gcc6-libs/buildlink3.mk"
