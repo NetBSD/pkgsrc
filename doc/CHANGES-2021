@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1954 2021/04/03 15:34:18 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1955 2021/04/03 18:43:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2995,3 +2995,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 54.2.0 [adam 2021-04-03]
 	Updated www/py-djangorestframework to 3.12.4 [adam 2021-04-03]
 	Added games/openarena version 0.8.8 [nia 2021-04-03]
+	Updated mail/rss2email to 3.13 [schmonz 2021-04-03]
