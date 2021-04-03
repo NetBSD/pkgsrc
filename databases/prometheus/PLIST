@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/13 19:20:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/04/03 18:41:31 tnn Exp $
 bin/prometheus
 bin/promtool
 share/examples/prometheus/console_libraries/menu.lib
@@ -30,19 +30,20 @@ share/prometheus/static/react/asset-manifest.json
 share/prometheus/static/react/favicon.ico
 share/prometheus/static/react/index.html
 share/prometheus/static/react/manifest.json
-share/prometheus/static/react/precache-manifest.096969c3105e10e50ab55e99a457f83d.js
+share/prometheus/static/react/precache-manifest.7cd392065320e04fa24e876cb0c11e0f.js
 share/prometheus/static/react/service-worker.js
-share/prometheus/static/react/static/css/2.300141ce.chunk.css
-share/prometheus/static/react/static/css/2.300141ce.chunk.css.map
-share/prometheus/static/react/static/css/main.1087ae1e.chunk.css
-share/prometheus/static/react/static/css/main.1087ae1e.chunk.css.map
-share/prometheus/static/react/static/js/2.9c5a6143.chunk.js
-share/prometheus/static/react/static/js/2.9c5a6143.chunk.js.LICENSE.txt
-share/prometheus/static/react/static/js/2.9c5a6143.chunk.js.map
-share/prometheus/static/react/static/js/main.aa276dbf.chunk.js
-share/prometheus/static/react/static/js/main.aa276dbf.chunk.js.map
+share/prometheus/static/react/static/css/2.89610b22.chunk.css
+share/prometheus/static/react/static/css/2.89610b22.chunk.css.map
+share/prometheus/static/react/static/css/main.6d3c05e2.chunk.css
+share/prometheus/static/react/static/css/main.6d3c05e2.chunk.css.map
+share/prometheus/static/react/static/js/2.c17659cb.chunk.js
+share/prometheus/static/react/static/js/2.c17659cb.chunk.js.LICENSE.txt
+share/prometheus/static/react/static/js/2.c17659cb.chunk.js.map
+share/prometheus/static/react/static/js/main.99f6e27d.chunk.js
+share/prometheus/static/react/static/js/main.99f6e27d.chunk.js.map
 share/prometheus/static/react/static/js/runtime-main.7e00e584.js
 share/prometheus/static/react/static/js/runtime-main.7e00e584.js.map
+share/prometheus/static/react/static/media/codicon.22349029.ttf
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css.map
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.min.css
