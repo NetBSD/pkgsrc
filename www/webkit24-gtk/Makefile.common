@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2020/12/31 20:04:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.21 2021/04/03 10:19:03 cirnatdan Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -82,6 +82,10 @@ CPPFLAGS+=		-DUSE_SYSTEM_MALLOC
 .if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
 LDFLAGS+=	-Wl,-no-keep-memory -Wl,-reduce-memory
 .endif
+
+# temporary fix for GLib 2.68 breakage
+# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 .include "../../mk/atomic64.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
