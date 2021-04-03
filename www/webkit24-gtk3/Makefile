@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/04/02 15:19:45 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.38 2021/04/03 10:19:03 cirnatdan Exp $
 
 PKGREVISION= 32
 .include "../../www/webkit24-gtk/Makefile.common"
@@ -10,10 +10,6 @@ COMMENT=	GTK3 port of the WebKit browser engine
 CONFIGURE_ARGS+=	--with-gtk=3.0
 CONFIGURE_ARGS+=	--disable-gtk-doc-html
 CONFIGURE_ARGS+=	--disable-webkit2
-
-# temporary fix for GLib 2.68 breakage
-# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
-CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 # Automatically generate PLIST from www/webkit24-gtk/PLIST
 .PHONY: print-PLIST-from-gtk
