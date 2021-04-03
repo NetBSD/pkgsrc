@@ -1,10 +1,18 @@
-$NetBSD: patch-web_ui_ui.go,v 1.2 2020/05/26 15:30:49 adam Exp $
+$NetBSD: patch-web_ui_ui.go,v 1.3 2021/04/03 18:41:31 tnn Exp $
 
 Use absolute path for web files.
 
---- web/ui/ui.go.orig	2020-05-07 16:47:40.000000000 +0000
+--- web/ui/ui.go.orig	2021-03-31 10:12:23.000000000 +0000
 +++ web/ui/ui.go
-@@ -27,22 +27,7 @@ import (
+@@ -19,7 +19,6 @@ import (
+ 	"net/http"
+ 	"os"
+ 	"path"
+-	"path/filepath"
+ 	"strings"
+ 
+ 	"github.com/shurcooL/httpfs/filter"
+@@ -28,22 +27,7 @@ import (
  
  // Assets contains the project's assets.
  var Assets = func() http.FileSystem {
@@ -13,7 +21,7 @@ Use absolute path for web files.
 -		panic(err)
 -	}
 -	var assetsPrefix string
--	switch path.Base(wd) {
+-	switch filepath.Base(wd) {
 -	case "prometheus":
 -		// When running Prometheus (without built-in assets) from the repo root.
 -		assetsPrefix = "./web/ui"

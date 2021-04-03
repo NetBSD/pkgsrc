@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2021/03/19 17:36:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.48 2021/04/03 18:41:31 tnn Exp $
 
 # Important: UI has to be manually built. See instructions below.
 
-DISTNAME=	prometheus-2.24.1
-PKGREVISION=	2
+DISTNAME=	prometheus-2.26.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
+
+.include "go-modules.mk"
 
 # To generate UI distfile, install devel/yarn, and:
 # tar zxf ${DISTNAME}${EXTRACT_SUFX}
@@ -30,7 +31,7 @@ GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/prometheus/prometheus
 
 GO_BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d"
-GO_XFLAG_PREFIX=	-X ${GO_SRCPATH}/vendor/${GO_SRCPATH:H}/common/version
+GO_XFLAG_PREFIX=	-X github.com/prometheus/common/version
 
 GO_LDFLAGS=	-s
 GO_LDFLAGS+=	${GO_XFLAG_PREFIX}.Branch=release-${PKGVERSION_NOREV:R}
@@ -71,14 +72,16 @@ CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 do-build:
-	${RUN} ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -v -ldflags ${GO_LDFLAGS:Q} ${GO_BUILD_PATTERN}
+.for f in prometheus promtool
+	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${GO} install -v -ldflags ${GO_LDFLAGS:Q} ./cmd/${f}/...
+.endfor
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
 		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 .for f in prometheus promtool
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/${f} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for f in consoles console_libraries
 	cd ${WRKSRC} && ${PAX} -rw ${f} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
@@ -93,5 +96,5 @@ post-install:
 	${CHMOD} ${NONBINMODE} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}/${f}
 .endfor
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
