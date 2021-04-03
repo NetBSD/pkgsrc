@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/08/18 17:57:51 leot Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/03 18:03:12 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ioquake/}
 GITHUB_PROJECT=	ioq3
@@ -15,10 +15,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	release
+INSTALL_TARGET=	copyfiles
 
-do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ioquake3
-	cd ${WRKSRC} && ${GMAKE} copyfiles COPYDIR=${DESTDIR}${PREFIX}/lib/ioquake3
+MAKE_FLAGS+=	COPYDIR=${DESTDIR}${PREFIX}/lib/ioquake3
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,6 +36,18 @@ PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
 # recursive error after: VM_CompileX86: mprotect failed
 NOT_PAX_MPROTECT_SAFE+=	lib/ioquake3/ioq3ded.${QUAKE_ARCH}
 NOT_PAX_MPROTECT_SAFE+=	lib/ioquake3/ioquake3.${QUAKE_ARCH}
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man6
+INSTALLATION_DIRS+=	lib/ioquake3
+
+post-install:
+.for prog in ioquake3 ioq3ded
+	${LN} -sf ${DESTDIR}${PREFIX}/lib/ioquake3/${prog}.${QUAKE_ARCH} \
+	    ${DESTDIR}${PREFIX}/bin/${prog}
+	${INSTALL_MAN} ${FILESDIR}/${prog}.6 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+.endfor
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
