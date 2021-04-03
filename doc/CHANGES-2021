@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1953 2021/04/03 07:33:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1954 2021/04/03 15:34:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-protobuf to 3.15.7 [adam 2021-04-03]
 	Updated devel/py-setuptools to 54.2.0 [adam 2021-04-03]
 	Updated www/py-djangorestframework to 3.12.4 [adam 2021-04-03]
+	Added games/openarena version 0.8.8 [nia 2021-04-03]
