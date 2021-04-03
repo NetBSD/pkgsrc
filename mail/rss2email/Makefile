@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2021/03/21 08:38:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.54 2021/04/03 18:43:32 schmonz Exp $
 
-DISTNAME=		rss2email-3.12.3
+DISTNAME=		rss2email-3.13
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rss2email/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ COMMENT=		Get RSS feeds emailed to you
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=		${PYPKGPREFIX}-feedparser>=5.0.1<=6.0.0:../../textproc/py-feedparser5
+DEPENDS+=		${PYPKGPREFIX}-feedparser>=6.0.0:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text>=2014.4.5:../../textproc/py-html2text
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
