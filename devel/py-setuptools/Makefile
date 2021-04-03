@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.183 2021/01/18 16:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.184 2021/04/03 07:32:26 adam Exp $
 
 # 48.0.0 and newer are broken on NetBSD
 # https://github.com/pypa/setuptools/issues/2364
-DISTNAME=	setuptools-51.3.3
+DISTNAME=	setuptools-54.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -23,10 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON+=	setuptools/command/easy_install.py
-
 PYSETUPTESTTARGET=	pytest
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
