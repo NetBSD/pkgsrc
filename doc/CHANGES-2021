@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1950 2021/04/03 06:23:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1951 2021/04/03 06:26:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2986,3 +2986,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py38-html-docs to 3.8.9 [adam 2021-04-03]
 	Updated lang/python39 to 3.9.3 [adam 2021-04-03]
 	Updated lang/py39-html-docs to 3.9.3 [adam 2021-04-03]
+	Updated databases/sqlite3 to 3.35.4 [adam 2021-04-03]
+	Updated databases/sqlite3-docs to 3.35.4 [adam 2021-04-03]
+	Updated databases/sqlite3-tcl to 3.35.4 [adam 2021-04-03]
+	Updated devel/lemon to 1.0.3.35.4 [adam 2021-04-03]
