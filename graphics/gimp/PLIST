@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2020/10/08 11:19:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.73 2021/04/03 05:32:52 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -3794,6 +3794,7 @@ share/gimp/2.0/icons/Symbolic/scalable/apps/zoom-in.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/zoom-original.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/zoom-out.svg
 share/gimp/2.0/icons/hicolor/index.theme
+share/gimp/2.0/icons/hicolor/scalable/status/software-update-available.svg
 share/gimp/2.0/images/gimp-logo.png
 share/gimp/2.0/images/gimp-splash.png
 share/gimp/2.0/images/wilber.png
@@ -5219,6 +5220,8 @@ share/locale/ja/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/ja/LC_MESSAGES/gimp20-tips.mo
 share/locale/ja/LC_MESSAGES/gimp20.mo
 share/locale/ka/LC_MESSAGES/gimp20.mo
+share/locale/kab/LC_MESSAGES/gimp20-python.mo
+share/locale/kab/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/kk/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/kk/LC_MESSAGES/gimp20.mo
 share/locale/km/LC_MESSAGES/gimp20-libgimp.mo
