@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2021/01/20 10:57:01 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/03 07:33:30 adam Exp $
 
-DISTNAME=	djangorestframework-3.12.2
+DISTNAME=	djangorestframework-3.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangorestframework/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 3.10.0
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
