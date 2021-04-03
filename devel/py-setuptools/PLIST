@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2021/01/18 16:02:31 adam Exp $
-bin/easy_install-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.54 2021/04/03 07:32:26 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -13,9 +12,6 @@ ${PYSITELIB}/_distutils_hack/override.py
 ${PYSITELIB}/_distutils_hack/override.pyc
 ${PYSITELIB}/_distutils_hack/override.pyo
 ${PYSITELIB}/distutils-precedence.pth
-${PYSITELIB}/easy_install.py
-${PYSITELIB}/easy_install.pyc
-${PYSITELIB}/easy_install.pyo
 ${PYSITELIB}/pkg_resources/__init__.py
 ${PYSITELIB}/pkg_resources/__init__.pyc
 ${PYSITELIB}/pkg_resources/__init__.pyo
