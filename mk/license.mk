@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.108 2021/03/06 04:36:21 ryoon Exp $
+# $NetBSD: license.mk,v 1.109 2021/04/03 15:30:39 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -48,8 +48,8 @@
 #	pkgsrc.  For open source license, we generally use the same
 #	names as either the Open Source Initiative or the Free
 #	Software Foundation, choosing a name to reduce confusion.
-#	Open source and free licenses do not have a -license suffix,
-#	and non-free licenses do.
+#	Open Source and Free licenses do not have a -license suffix,
+#	and non-Free licenses do.
 #
 #	http://opensource.org/licenses/category
 #	http://www.gnu.org/licenses/license-list.html
@@ -74,8 +74,8 @@
 #	Licenses approved by Debian as meeting the Debian Free
 #	Software Guidelines will also be added by default.  They
 #	should be in a second section with a comment about each one,
-#	because Debian does not publish an accepted license list and
-#	acceptability must be inferred from inclusion in main.
+#	because Debian does not publish an approved license list and
+#	approval must be inferred from inclusion in main.
 #
 #	The board of The NetBSD Foundation is the final arbiter of
 #	which licenses may be in DEFAULT_ACCEPTABLE_LICENSES.  As an
