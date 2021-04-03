@@ -5,8 +5,6 @@ openarena \- OpenArena client
 
 .SH SYNOPSIS
 .BR openarena
-.BR "" [ \-h | \-\-help ]
-.BR "" [ \-q | \-\-quiet ]
 .BR "" [ +set
 .IR option " " value ]...
 
@@ -15,15 +13,7 @@ openarena \- OpenArena client
 is the client for the first-person shooter OpenArena.
 
 .SH OPTIONS
-The wrapper script used for OpenArena in Debian accepts these options:
-.TP
-\fB\-h\fR, \fB\-\-help\fR
-Display a short help summary
-.TP
-\fB\-q\fR, \fB\-\-quiet\fR
-Disable all output
-.PP
-Any console command can also be prefixed with \fB+\fR and used as a
+Any console command can be prefixed with \fB+\fR and used as a
 command-line option (press Shift+Esc to access the in-game console), including:
 .TP
 \fB+set\fR \fIoption\fR \fIvalue\fR
@@ -55,18 +45,6 @@ Configuration and state for OpenArena
 .TP
 \fI~/.openarena/missionpack\fR
 Configuration and state for the "missionpack" mod
-
-.SH ENVIRONMENT
-The wrapper script used to launch OpenArena allows it to be debugged
-by setting environment variables.
-.TP
-\fBOPENARENA_DEBUGGER=\fIcommand\fR
-A debugger or other prefix to prepend to the OpenArena command line, such
-as \fBstrace\fR; overridden by \fBOPENARENA_BACKTRACE\fR
-.TP
-\fBOPENARENA_BACKTRACE=1\fR
-Use \fBgdb\fR(1) to get a backtrace if OpenArena crashes (the \fBgdb\fR
-package must be installed for this to work)
 
 .SH AUTHOR
 OpenArena was written by the OpenArena Team. The engine used is a modified
