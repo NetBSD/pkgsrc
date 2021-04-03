@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/21 15:49:03 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/03 20:02:47 tnn Exp $
 bin/git-lfs
-@pkgdir gopkg
