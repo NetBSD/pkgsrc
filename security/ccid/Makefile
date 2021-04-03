@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2021/01/24 19:06:10 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/03 17:12:14 tnn Exp $
 #
 
 DISTNAME=	ccid-1.4.34
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,11 +40,11 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ccid/README.md
-	${INSTALL_DATA} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd \
+	${INSTALL_PROGRAM} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd \
 	${DESTDIR}${PREFIX}/bin/RSA_SecurID_getpasswd
 	${INSTALL_DATA} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd.1 \
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/RSA_SecurID_getpasswd.1
-	${INSTALL_DATA} ${WRKSRC}/contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch \
+	${INSTALL_PROGRAM} ${WRKSRC}/contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch \
 	${DESTDIR}${PREFIX}/sbin/Kobil_mIDentity_switch
 	${INSTALL_DATA} ${WRKSRC}/contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch.8 \
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/Kobil_mIDentity_switch.8
