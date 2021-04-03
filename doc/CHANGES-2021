@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1958 2021/04/03 19:34:51 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1959 2021/04/03 19:51:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2999,3 +2999,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/fehqlibs to 17 [schmonz 2021-04-03]
 	Updated net/ucspi-tcp6 to 1.12.3 [schmonz 2021-04-03]
 	Updated net/ucspi-ssl to 0.999.12.2 [schmonz 2021-04-03]
+	Updated databases/postgresql-timescaledb to 2.1.1 [tnn 2021-04-03]
+	Updated databases/promscale to 0.2.1 [tnn 2021-04-03]
+	Updated databases/prometheus to 2.26.0 [tnn 2021-04-03]
+	Updated databases/postgresql-promscale_extension to 0.1.1nb2 [tnn 2021-04-03]
+	Updated www/grafana to 7.5.2 [tnn 2021-04-03]
