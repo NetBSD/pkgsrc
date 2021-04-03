@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/03 15:34:03 nia Exp $
+bin/openarena
+lib/openarena/baseoa/pak0.pk3
+lib/openarena/baseoa/pak1-maps.pk3
+lib/openarena/baseoa/pak2-players-mature.pk3
+lib/openarena/baseoa/pak2-players.pk3
+lib/openarena/baseoa/pak4-textures.pk3
+lib/openarena/baseoa/pak5-TA.pk3
+lib/openarena/baseoa/pak6-misc.pk3
+lib/openarena/baseoa/pak6-patch085.pk3
+lib/openarena/baseoa/pak6-patch088.pk3
+lib/openarena/baseq3/cgame${QUAKE_ARCH}.so
+lib/openarena/baseq3/qagame${QUAKE_ARCH}.so
+lib/openarena/baseq3/ui${QUAKE_ARCH}.so
+lib/openarena/missionpack/cgame${QUAKE_ARCH}.so
+lib/openarena/missionpack/qagame${QUAKE_ARCH}.so
+lib/openarena/missionpack/ui${QUAKE_ARCH}.so
+man/man6/openarena.6
+share/applications/openarena.desktop
+share/pixmaps/openarena.png

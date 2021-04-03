@@ -1,0 +1,78 @@
+.TH OPENARENA 6 2010-10-15
+
+.SH NAME
+openarena \- OpenArena client
+
+.SH SYNOPSIS
+.BR openarena
+.BR "" [ \-h | \-\-help ]
+.BR "" [ \-q | \-\-quiet ]
+.BR "" [ +set
+.IR option " " value ]...
+
+.SH DESCRIPTION
+.B openarena
+is the client for the first-person shooter OpenArena.
+
+.SH OPTIONS
+The wrapper script used for OpenArena in Debian accepts these options:
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Display a short help summary
+.TP
+\fB\-q\fR, \fB\-\-quiet\fR
+Disable all output
+.PP
+Any console command can also be prefixed with \fB+\fR and used as a
+command-line option (press Shift+Esc to access the in-game console), including:
+.TP
+\fB+set\fR \fIoption\fR \fIvalue\fR
+Set an option (see below for some options)
+.TP
+\fB+connect\fR \fIserver\fR[\fB:\fIport\fR]
+Connect to a server
+.PP
+Options that can be set with \fB+set\fR
+(note that this is not a full list!) include:
+.TP
+\fBr_fullscreen\fR <bool>
+1: Play in fullscreen mode; 0: Play in window mode
+.TP
+\fBr_mode\fR <num>
+Sets the screen resolution mode. Set num to \-1 to use a customized resolution.
+See also r_customheight and r_customwidth!
+.TP
+\fBr_customwidth\fR <pixels>
+Use \fUpixels\fR as width if r_mode is set to \-1.
+.TP
+\fBr_customheight\fR <pixels>
+Use \fUpixels\fR as height if r_mode is set to \-1.
+
+.SH FILES
+.TP
+\fI~/.openarena/baseoa\fR
+Configuration and state for OpenArena
+.TP
+\fI~/.openarena/missionpack\fR
+Configuration and state for the "missionpack" mod
+
+.SH ENVIRONMENT
+The wrapper script used to launch OpenArena allows it to be debugged
+by setting environment variables.
+.TP
+\fBOPENARENA_DEBUGGER=\fIcommand\fR
+A debugger or other prefix to prepend to the OpenArena command line, such
+as \fBstrace\fR; overridden by \fBOPENARENA_BACKTRACE\fR
+.TP
+\fBOPENARENA_BACKTRACE=1\fR
+Use \fBgdb\fR(1) to get a backtrace if OpenArena crashes (the \fBgdb\fR
+package must be installed for this to work)
+
+.SH AUTHOR
+OpenArena was written by the OpenArena Team. The engine used is a modified
+ioQuake3, originally created by id Software and now maintained by the ioQuake3
+community.
+.PP
+This manual page was written by Bruno "Fuddl" Kleinert <fuddl@debian.org>
+and Simon McVittie <smcv@debian.org>, for the Debian project
+(but may be used by others).
