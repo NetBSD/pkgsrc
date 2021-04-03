@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/03/12 10:35:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/04/03 11:30:21 wiz Exp $
 
 DISTNAME=	libfilezilla-0.27.0
 CATEGORIES=	net
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++17
 PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 
 # for C++17
-GCC_REQD+=	7
+GCC_REQD+=	8
 
 # As of 0.19, 64-bit atomic ops are required
 .if ${MACHINE_ARCH} == "i386"
