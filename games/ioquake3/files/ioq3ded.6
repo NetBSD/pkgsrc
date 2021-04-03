@@ -1,0 +1,96 @@
+.TH IOQ3DED 6 "2010-10-15"
+
+.SH NAME
+ioq3ded \- ioQuake3 game engine (dedicated server)
+
+.SH SYNOPSIS
+.BR ioq3ded " [" +set " "
+.IR option " " value ]...
+
+.SH DESCRIPTION
+\fBioquake3-server\fP is the dedicated server for the ioQuake3 game engine.
+
+.SH OPTIONS
+.PP
+Any console command can be prefixed with \fB+\fR and used as a
+command-line option (run the server in a terminal to use the console).
+The \fB+set\fR command is generally the most useful to use on the command line,
+but things like \fB+map\fR also work.
+.PP
+Options that can be set with \fB+set\fR
+(note that this is not a full list!) include:
+.PP
+\fBcapturelimit\fR <value>
+.PP
+\fBdedicated\fR <bool>
+.PP
+\fBfraglimit\fR <value>
+.PP
+\fBfs_basepath\fR <string>
+.PP
+\fBfs_game\fR <value>
+.PP
+\fBg_allowVote\fR <bool>
+.PP
+\fBg_banIPs\fR <IP address>
+.PP
+\fBg_doWarmup\fR <bool>
+.PP
+\fBg_friendlyFire\fR <bool>
+.PP
+\fBg_gametype\fR <bool>
+.PP
+\fBg_gravity\fR <value>
+.PP
+\fBg_inactivity\fR <value>
+.PP
+\fBg_maxGameClients\fR <value>
+.PP
+\fBg_motd\fR <string>
+.PP
+\fBg_needpass\fR <bool>
+.PP
+\fBg_password\fR <string>
+.PP
+\fBg_quadfactor\fR <value>
+.PP
+\fBg_weaponrespawn\fR <value>
+.PP
+\fBnet_ip\fR <IP adress>
+.PP
+\fBnet_port\fR <value>
+.PP
+\fBnet_qport\fR <value>
+.PP
+\fBnextmap\fR <string>
+.PP
+\fBsv_allowDownload\fR <bool>
+.PP
+\fBsv_floodProtect\fR <bool>
+.PP
+\fBsv_fps\fR <value>
+.PP
+\fBsv_hostname\fR <string>
+.PP
+\fBsv_maxclients\fR <value>
+.PP
+\fBsv_maxPing\fR <value>
+(Measurd in milliseconds)
+.PP
+\fBsv_minPing\fR <value>
+(Measurd in milliseconds)
+.PP
+\fBsv_pure\fR <bool>
+.PP
+\fBtimelimit\fR <value>
+(Measured in minutes)
+
+.SH SEE ALSO
+.BR ioquake3 (6)
+
+.SH AUTHOR
+ioQuake3 was written by id Software Inc. and the ioQuake3 Team.
+.PP
+This manual page was written by Bruno "Fuddl" Kleinert <fuddl@debian.org>
+and Simon McVittie <smcv@debian.org>, for the Debian project
+(but may be used by others).
