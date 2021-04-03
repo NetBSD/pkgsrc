@@ -1,0 +1,26 @@
+#!/bin/sh
+# Based on the initialization script from Debian:
+# https://salsa.debian.org/games-team/openarena/-/blob/debian/latest/debian/scripts/openarena.in
+
+# we're a standalone game
+CVARS="+set com_basegame baseoa"
+CVARS="$CVARS +set fs_basepath @PREFIX@/lib/openarena"
+CVARS="$CVARS +set com_homepath .openarena"
+
+# OA uses a different protocol number to reflect incompatible game content.
+# When it says "71", that's actually the legacy Quake III Arena 1.32c protocol,
+# protocol 68.
+CVARS="$CVARS +set com_legacyprotocol 71"
+
+# For the moment, disable the modern protocol, by setting this cvar to the
+# same thing. When OA upstream decide what value they'll use, we should
+# catch up.
+CVARS="$CVARS +set com_protocol 71"
+
+# OA's default master server is different
+CVARS="$CVARS +set sv_master1 dpmaster.deathmask.net"
+
+# update.quake3arena.com is pretty irrelevant if you're playing OA
+CVARS="$CVARS +set cl_motd 0"
+
+exec "@IOQ3_BIN@" ${CVARS} "$@"
