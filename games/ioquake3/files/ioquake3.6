@@ -1,0 +1,51 @@
+.TH IOQUAKE3 6 "2010-10-15"
+
+.SH NAME
+ioquake3 \- ioQuake3 game engine (client)
+
+.SH SYNOPSIS
+.BR ioquake3 " [" +set " "
+.IR option " " value ]...
+
+.SH DESCRIPTION
+This manual page documents briefly the
+.B ioquake3
+command.
+.PP
+\fBioquake3\fP is the game engine client for ioQuake3 based games.
+
+.SH OPTIONS
+.PP
+Any console command can be prefixed with \fB+\fR and used as a
+command-line option (press Shift+Esc to access the in-game console), including:
+.TP
+\fB+set\fR \fIoption\fR \fIvalue\fR
+Set an option (see below for some options)
+.TP
+\fB+connect\fR \fIserver\fR[\fB:\fIport\fR]
+Connect to a server
+.PP
+Options which can be set using \fB+set\fR include:
+.TP
+\fBr_fullscreen\fR <bool>
+1: Play in fullscreen mode; 0: Play in window mode
+.TP
+\fBr_mode\fR <num>
+Sets the screen resulotion mode. Set num to \-1 to use a customized resolution. See also r_customheight and r_customwidth!
+.TP
+\fBr_customwidth\fR <pixels>
+Use \fUpixels\fR as width if r_mode is set to \-1.
+.TP
+\fBr_customheight\fR <pixels>
+Use \fUpixels\fR as height if r_mode is set to \-1.
+.PP
+
+.SH SEE ALSO
+.BR ioquake3-server (6)
+
+.SH AUTHOR
+ioquake3 was written by id Software Inc. and the ioQuake3 Team.
+.PP
+This manual page was written by Bruno "Fuddl" Kleinert <fuddl@debian.org>
+and Simon McVittie <smcv@debian.org>, for the Debian project
+(but may be used by others).
