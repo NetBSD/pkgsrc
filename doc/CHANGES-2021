@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1946 2021/04/03 02:28:59 fox Exp $
+$NetBSD: CHANGES-2021,v 1.1947 2021/04/03 05:31:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2979,3 +2979,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/qcad to 3.26.1.0 [plunky 2021-04-02]
 	Added cad/libredwg version 0.12 [plunky 2021-04-02]
 	Updated print/foliate to 2.6.3 [fox 2021-04-03]
+	Updated graphics/babl to 0.1.86 [ryoon 2021-04-03]
