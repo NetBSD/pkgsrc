@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2021/02/28 07:36:14 nia Exp $
+# $NetBSD: Makefile,v 1.500 2021/04/03 15:34:03 nia Exp $
 #
 
 COMMENT=	Games
@@ -306,6 +306,7 @@ SUBDIR+=	nudoku
 SUBDIR+=	nxengine-evo
 SUBDIR+=	omega
 SUBDIR+=	onscripter
+SUBDIR+=	openarena
 SUBDIR+=	openhexagon
 SUBDIR+=	openjk
 SUBDIR+=	openmortal
