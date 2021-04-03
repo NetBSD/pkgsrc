@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/10/21 08:47:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/03 19:33:28 schmonz Exp $
 
-DISTNAME=		fehQlibs-16
-PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-0.9./}
+DISTNAME=		fehQlibs-17
+PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-/}
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/fehQlibs/
 EXTRACT_SUFX=		.tgz
