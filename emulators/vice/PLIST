@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2021/01/09 05:20:58 mef Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/04/03 13:07:29 rhialto Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -16,6 +16,7 @@ bin/xvic
 @comment ${PLIST.desktop}etc/xdg/menus/applications-merged/vice-org-vice-org.menu
 ${PLIST.desktop}share/applications/vice-org-vsid.desktop
 ${PLIST.desktop}share/applications/vice-org-x128.desktop
+${PLIST.desktop}${PLIST.x64}share/applications/vice-org-x64.desktop
 ${PLIST.desktop}share/applications/vice-org-x64dtv.desktop
 ${PLIST.desktop}share/applications/vice-org-x64sc.desktop
 ${PLIST.desktop}share/applications/vice-org-xcbm2.desktop
