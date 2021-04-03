@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/03 15:34:03 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/03 18:55:35 nia Exp $
 
 #
 # There will be warnings about missing dependencies while building.
@@ -9,6 +9,7 @@
 
 OA_VER=		0.8.8
 PKGNAME=	openarena-${OA_VER}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oarena/}
 CATEGORIES=	games
 
@@ -75,6 +76,8 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 INSTALLATION_DIRS+=	lib/openarena/baseoa
 CHECK_WRKREF_SKIP+=	lib/openarena/baseoa/*.pk3
+INSTALLATION_DIRS+=	lib/openarena/missionpack
+CHECK_WRKREF_SKIP+=	lib/openarena/missionpack/*.pk3
 
 post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' \
@@ -86,6 +89,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/bin/openarena
 	${INSTALL_DATA} ${WRKDIR}/openarena-${OA_VER}/baseoa/*.pk3 \
 	    ${DESTDIR}${PREFIX}/lib/openarena/baseoa
+	${INSTALL_DATA} ${WRKDIR}/openarena-${OA_VER}/missionpack/*.pk3 \
+	    ${DESTDIR}${PREFIX}/lib/openarena/missionpack
 	${INSTALL_MAN} ${FILESDIR}/openarena.6 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA} ${FILESDIR}/openarena.desktop \
