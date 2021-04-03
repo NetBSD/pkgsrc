@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
+$NetBSD: patch-configure,v 1.7 2021/04/03 06:22:06 adam Exp $
 
 - Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
 - Fix linking on Darwin; don't use -stack_size.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
 - Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
   https://github.com/python/cpython/pull/22855
 
---- configure.orig	2020-12-21 16:25:24.000000000 +0000
+--- configure.orig	2021-04-02 10:32:10.000000000 +0000
 +++ configure
-@@ -1502,9 +1502,11 @@ Optional Packages:
+@@ -1490,9 +1490,11 @@ Optional Packages:
    --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
    --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
    --with-universal-archs=ARCH
@@ -24,7 +24,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
    --with-framework-name=FRAMEWORK
                            specify an alternate name of the framework built
                            with --enable-framework
-@@ -6924,7 +6926,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -6912,7 +6914,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -33,7 +33,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -7403,6 +7405,11 @@ $as_echo "$CC" >&6; }
+@@ -7391,6 +7393,11 @@ $as_echo "$CC" >&6; }
                 LIPO_32BIT_FLAGS="-extract ppc7400 -extract i386"
                 ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
                 ;;
@@ -45,7 +45,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
              intel)
                 UNIVERSAL_ARCH_FLAGS="-arch i386 -arch x86_64"
                 LIPO_32BIT_FLAGS="-extract i386"
-@@ -7424,7 +7431,7 @@ $as_echo "$CC" >&6; }
+@@ -7412,7 +7419,7 @@ $as_echo "$CC" >&6; }
                 ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
                 ;;
              *)
@@ -54,7 +54,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
                 ;;
              esac
  
-@@ -9288,6 +9295,9 @@ fi
+@@ -9276,6 +9283,9 @@ fi
      		;;
      	ppc)
      		MACOSX_DEFAULT_ARCH="ppc64"
@@ -64,7 +64,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
      		;;
      	*)
      		as_fn_error $? "Unexpected output of 'arch' on OSX" "$LINENO" 5
-@@ -9561,7 +9571,6 @@ then
+@@ -9549,7 +9559,6 @@ then
  		# to ensure that tests don't crash
  		# Note: This matches the value of THREAD_STACK_SIZE in
  		# thread_pthread.h
@@ -72,7 +72,7 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
  
  		if test "$enable_framework"
  		then
-@@ -11849,6 +11858,31 @@ $as_echo "no" >&6; }
+@@ -11837,6 +11846,31 @@ $as_echo "no" >&6; }
  
  fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -104,29 +104,29 @@ $NetBSD: patch-configure,v 1.6 2021/01/02 09:51:49 adam Exp $
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for memfd_create" >&5
  $as_echo_n "checking for memfd_create... " >&6; }
-@@ -14328,10 +14362,10 @@ _ACEOF
+@@ -14316,10 +14350,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
--if $GREP noonsees conftest.$ac_objext >/dev/null ; then
+-if grep noonsees conftest.$ac_objext >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
    ax_cv_c_float_words_bigendian=yes
  fi
--if $GREP seesnoon conftest.$ac_objext >/dev/null ; then
+-if grep seesnoon conftest.$ac_objext >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15215,7 +15249,7 @@ _ACEOF
- 
+@@ -15204,7 +15238,7 @@ _ACEOF
  fi
+ 
  
 -EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX}
 +EXT_SUFFIX=${SHLIB_SUFFIX}
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  $as_echo_n "checking LDVERSION... " >&6; }
-@@ -15232,11 +15266,7 @@ else
+@@ -15221,11 +15255,7 @@ else
  fi
  
  
