@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/11/03 22:59:35 tnn Exp $
+$NetBSD: distinfo,v 1.2 2021/04/03 19:03:44 tnn Exp $
 
 SHA1 (bindgen-0.54.0.crate) = 4165698210d42a3415c9c8cabfe5d62d40631511
 RMD160 (bindgen-0.54.0.crate) = d9dd6dc8395a7268a218d0b5de74e94fd7577134
@@ -60,10 +60,10 @@ SHA1 (proc-macro2-1.0.18.crate) = f2af370d3eece8a7b28eff8d81d1ba1f50910ebb
 RMD160 (proc-macro2-1.0.18.crate) = 4d9b7a8d30c9a470d960b6e293dc145754a20975
 SHA512 (proc-macro2-1.0.18.crate) = 3e7cf577bc3548e03a2f1bee620e3ef484dcaa45fbaf7858a8ea04f79d82d636b527584765ef43c92624e1a1afac50e60ad3f9dd8efc34e8e6b84cda20c864ef
 Size (proc-macro2-1.0.18.crate) = 36252 bytes
-SHA1 (promscale_extension-0.1.1.tar.gz) = 5bc139dfe62e6bca370074f8bffa5911a971c8d6
-RMD160 (promscale_extension-0.1.1.tar.gz) = c8197fa82678cdd258e4ebe7b67b928dd0fd1497
-SHA512 (promscale_extension-0.1.1.tar.gz) = 873d9b76c1df956c86febe7f5c8d582d083a37779fdb71bad2244b2525befdf0048704bc0a71af649201348751df5b6b128220a269d8b573cd07ea31f3cb0553
-Size (promscale_extension-0.1.1.tar.gz) = 10716 bytes
+SHA1 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = dc545e5f9bb4e68e00c6ed4a274b705d7ceec670
+RMD160 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 9541f33ff0b906d4a9b4853e3141c67ad685d21b
+SHA512 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = c48b9bdd63ffcb944e94fd54958b7f4581f6e294277f2591aa2f525e60bcd0a3e750a818006c2319af93a7e5b5875718d3dab3abbd54489557f0479614966a2b
+Size (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 10901 bytes
 SHA1 (quote-1.0.7.crate) = 63ef7b19865840266f1e4a2cb3e83be884c3fd09
 RMD160 (quote-1.0.7.crate) = f6637701a383ef477c2fbddb0268b0c2590c1e89
 SHA512 (quote-1.0.7.crate) = b7cb576c07419854f71072a88e4216f50d78196703d3d8a1068dfd0f2ccb1e417c3a865ec3be613b46e74e46654f64378f527800701f74d50352cb766a885953
@@ -84,10 +84,10 @@ SHA1 (shlex-0.1.1.crate) = 41294bd209003e7ab6c6e388d73c07b8b6f27904
 RMD160 (shlex-0.1.1.crate) = f69a4dee22edd6b0ca503ccaab6c0ab0ac1b2d35
 SHA512 (shlex-0.1.1.crate) = a4d202897861ca7955a3561dc1b0fd0307d77948c9b97aa0f8b9caff2b9721d2836a08760d308675973b0e9c7bae92e4d5fbd2a2497cba9e5aeefbe31075e069
 Size (shlex-0.1.1.crate) = 5687 bytes
-SHA1 (timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33.tar.gz) = 55a6442a93250cd96591252d0534c1a438cc4078
-RMD160 (timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33.tar.gz) = 1ba3cc364346b8e4f11eee3508bf656ba775455c
-SHA512 (timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33.tar.gz) = fa57e4b644f631606886c7d7efd4514d26c8acc4d6ff94c50c649bbab404969c9d96752fd1d2e8bfa7a68a9bc0cf400fbcf3be2dcbdcaace0b3cfa683e736bde
-Size (timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33.tar.gz) = 446324 bytes
+SHA1 (timescale-extension-utils-rs-bc3bdd2f0e0bcd59c5d2a8fa23ae6cd0959e28bc.tar.gz) = 2230d8b2418e3253fcec551fced5b9331e774529
+RMD160 (timescale-extension-utils-rs-bc3bdd2f0e0bcd59c5d2a8fa23ae6cd0959e28bc.tar.gz) = b2ff6d132fd42609ca87440f7747336aea5b1c93
+SHA512 (timescale-extension-utils-rs-bc3bdd2f0e0bcd59c5d2a8fa23ae6cd0959e28bc.tar.gz) = 5a33e928325a3e94e514abcd92c537bd7f99b5e18ad3e23aa68bc01a77a21c622018f5daa84b58f4e5f4e8a2acbd0311e1c761fb5ed71c8cd4dd8c18354b4e8c
+Size (timescale-extension-utils-rs-bc3bdd2f0e0bcd59c5d2a8fa23ae6cd0959e28bc.tar.gz) = 446411 bytes
 SHA1 (unicode-xid-0.2.1.crate) = c9132224bdc93872dd5b4d8099f5318ba15f2dfd
 RMD160 (unicode-xid-0.2.1.crate) = f22de16f57fe27fc9e88639f3a86310f8fd27ee7
 SHA512 (unicode-xid-0.2.1.crate) = 91e862137e837baea82829431cfed36634fdb05339f00c756eb5a4b429ef0bb871f5133d11adf9a023fa22168c8a0cf194ff3669779f04f219d48fc4fac339d2
@@ -108,4 +108,4 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-SHA1 (patch-Cargo.toml) = df6db0f7ec1dbdc9f14d2c4d7be9c7455e3cc9ae
+SHA1 (patch-Cargo.toml) = 8cc61927438f499788c11f20473fa2fb66bc6063
