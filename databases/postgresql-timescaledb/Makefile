@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/02/13 15:16:04 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/03 17:15:42 tnn Exp $
 
-DISTNAME=	timescaledb-2.0.1
+DISTNAME=	timescaledb-2.1.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -23,7 +23,7 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DUSE_OPENSSL=ON
 CMAKE_ARGS+=	-DREGRESS_CHECKS=OFF
 
-PGSQL_VERSIONS_ACCEPTED=	12 11
+PGSQL_VERSIONS_ACCEPTED=	13 12 11
 
 ## This transform can be removed in the next version update
 # https://github.com/timescale/timescaledb/commit/63a66524dd8638516d382ed0efc60c75fb17250e
