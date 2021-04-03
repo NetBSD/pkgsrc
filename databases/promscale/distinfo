@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/02/13 11:40:00 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/04/03 17:31:05 tnn Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -6612,10 +6612,10 @@ SHA1 (k8s.io_utils_@v_v0.0.0-20201110183641-67b214c5f920.zip) = e07d8188ced762dc
 RMD160 (k8s.io_utils_@v_v0.0.0-20201110183641-67b214c5f920.zip) = abb083ebd6d20e55aedee5efec29e1a7519cf399
 SHA512 (k8s.io_utils_@v_v0.0.0-20201110183641-67b214c5f920.zip) = 03eb8ba4916ec58144deb1a10f47019e127a688c7e3f87b3ba6fee85a2c41b92b6d7a9293c6bf8921b33f83f8e46be019fd4751fe6c1c98cb83a6080065d2b51
 Size (k8s.io_utils_@v_v0.0.0-20201110183641-67b214c5f920.zip) = 166996 bytes
-SHA1 (promscale-0.2.0.tar.gz) = f68d3de075247d2787aa3b3e7bb6ce3b927d7e7b
-RMD160 (promscale-0.2.0.tar.gz) = a39c5658a2e7b22a92b83946b10357fc90b0ebec
-SHA512 (promscale-0.2.0.tar.gz) = f28aca0babfa6c6bf2f8d01bcb9b1690869f5e10f10784866bf9642cc0cfed2422fa685b76bb04c9238d897418efcfacd07aa77ac710051b7f4c3a9db7f782dc
-Size (promscale-0.2.0.tar.gz) = 2681840 bytes
+SHA1 (promscale-0.2.1.tar.gz) = d036d896c7aec6f114816af2573b0076ade66586
+RMD160 (promscale-0.2.1.tar.gz) = bcf98e583c40f56c4e817afc6bd3853e968f3c29
+SHA512 (promscale-0.2.1.tar.gz) = 629971a3f1cb735dae9922a0378f019fb6baf1c025219a7dd3da244e522dd3e37cec8859c230f951e64330b0fe4eca2b255b8a67a5622fef443b69a888408b30
+Size (promscale-0.2.1.tar.gz) = 2681788 bytes
 SHA1 (rsc.io_binaryregexp_@v_v0.2.0.mod) = 64964a37b0c8daaebce2e56caeb97b8385c476b4
 RMD160 (rsc.io_binaryregexp_@v_v0.2.0.mod) = 1212b4440e355c6dc2cadaa6287c93bb7b1da192
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
