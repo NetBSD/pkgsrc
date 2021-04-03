@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1959 2021/04/03 19:51:16 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.1960 2021/04/03 20:18:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/prometheus to 2.26.0 [tnn 2021-04-03]
 	Updated databases/postgresql-promscale_extension to 0.1.1nb2 [tnn 2021-04-03]
 	Updated www/grafana to 7.5.2 [tnn 2021-04-03]
+	Updated devel/git-lfs to 2.13.3 [tnn 2021-04-03]
