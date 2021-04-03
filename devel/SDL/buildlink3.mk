@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2015/09/05 11:21:53 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2021/04/03 10:14:31 nia Exp $
 
 BUILDLINK_TREE+=	SDL
 
@@ -8,6 +8,7 @@ SDL_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.5nb5
 BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.15nb17
 BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
+BUILDLINK_INCDIRS.SDL+=		include/SDL
 
 PTHREAD_OPTS+=	require
 
