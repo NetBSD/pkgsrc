@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/21 08:47:33 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/03 19:33:28 schmonz Exp $
 include/qlibs/alloc.h
 include/qlibs/base64.h
 include/qlibs/buffer.h
@@ -16,6 +16,7 @@ include/qlibs/exit.h
 include/qlibs/fd.h
 include/qlibs/fifo.h
 include/qlibs/fmt.h
+include/qlibs/genalloc.h
 include/qlibs/getln.h
 include/qlibs/getoptb.h
 include/qlibs/iopause.h
