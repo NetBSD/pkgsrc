@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1956 2021/04/03 19:33:37 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1957 2021/04/03 19:34:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2997,3 +2997,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/openarena version 0.8.8 [nia 2021-04-03]
 	Updated mail/rss2email to 3.13 [schmonz 2021-04-03]
 	Updated net/fehqlibs to 17 [schmonz 2021-04-03]
+	Updated net/ucspi-tcp6 to 1.12.3 [schmonz 2021-04-03]
