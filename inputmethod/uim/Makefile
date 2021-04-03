@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2021/03/30 17:01:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.167 2021/04/03 05:13:07 ryoon Exp $
 
 .include "../../inputmethod/uim/Makefile.common"
 
@@ -69,12 +69,6 @@ post-install:
 
 .include "options.mk"
 
-SUBST_CLASSES+=		ruby
-SUBST_STAGE.ruby=	pre-configure
-SUBST_MESSAGE.ruby=	Find ruby command
-SUBST_FILES.ruby+=	sigscheme/configure.ac
-SUBST_VARS.ruby+=	RUBY_NAME
-
 .include "modules.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -84,5 +78,7 @@ BUILDLINK_API_DEPENDS.libgcroots+=	libgcroots>=0.2.3
 .include "../../devel/libgcroots/buildlink3.mk"
 .include "../../inputmethod/anthy/buildlink3.mk"
 .include "../../lang/ruby/rubyversion.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
+.include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
