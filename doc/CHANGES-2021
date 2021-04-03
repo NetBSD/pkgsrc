@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1957 2021/04/03 19:34:14 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1958 2021/04/03 19:34:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -2998,3 +2998,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/rss2email to 3.13 [schmonz 2021-04-03]
 	Updated net/fehqlibs to 17 [schmonz 2021-04-03]
 	Updated net/ucspi-tcp6 to 1.12.3 [schmonz 2021-04-03]
+	Updated net/ucspi-ssl to 0.999.12.2 [schmonz 2021-04-03]
