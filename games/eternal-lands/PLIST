@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/04 09:09:30 nia Exp $
-bin/eternal-lands
+@comment $NetBSD: PLIST,v 1.2 2021/04/04 09:11:54 nia Exp $
+bin/eternallands
 libexec/eternal-lands/el
 share/applications/eternallands.desktop
 share/eternal-lands/2dobjects/ground/b_bone1.2d0
