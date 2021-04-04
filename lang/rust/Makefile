@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2021/04/04 09:23:37 nia Exp $
+# $NetBSD: Makefile,v 1.225 2021/04/04 10:21:44 he Exp $
 
 DISTNAME=	rustc-1.49.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -538,6 +538,14 @@ stage0-bootstrap: install
 .include "../../devel/libatomic/buildlink3.mk"
 # Make those libraries available via a unique directory:
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
+.endif
+
+.if ${BUILD_TARGET} == "build"
+# This is without rust-cargo-static option, so need these available.
+BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
+BUILDLINK_API_DEPENDS.curl+=   curl>=7.67.0
+.  include "../../www/curl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
