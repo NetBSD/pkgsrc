@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1 2021/04/04 09:09:30 nia Exp $
+
+SHA1 (eternal-lands-1.9.5.8/EL_music_full.zip) = fd470d14d50873704de2ae13876b411a58eb39de
+RMD160 (eternal-lands-1.9.5.8/EL_music_full.zip) = 63955f223a8472c9956a5b6912dec7db924f32ee
+SHA512 (eternal-lands-1.9.5.8/EL_music_full.zip) = dbd24cb20331d3640b3a5891faaf88aa0e71ba0564dfde347f2ea0fcb7e0f2700f1324ee8e988c551efb943183bbc823d4ee0373ed2b1f6d0300df76e25a524c
+Size (eternal-lands-1.9.5.8/EL_music_full.zip) = 65511882 bytes
+SHA1 (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = ba6f993de78c91794a5419dd4401c6c0c728b300
+RMD160 (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = 0f369611678336cab02b8c3ea14a8b109baf33f0
+SHA512 (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = e5e89ec6e7df2b1ac80722b6daf5bbb350d2f1bc4c70c819992b528f25c2ac11434d053ff844ff5873deea16c5bbe305834ffeae7b5ecb6daea5638625851ce0
+Size (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = 2863932 bytes
+SHA1 (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 35b054b811f88dd45e999ff5703cd1da47042325
+RMD160 (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = f0259068798ce5656d76ca68ba6f25b580c7f72b
+SHA512 (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 8fdbb9959a8f3a7265651c676ef4510be33461a7934090cfd892892c92678b59885335552b7b0159b212171695379d78155625c9895509251e2b40d47b4dfcf6
+Size (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 63878875 bytes
+SHA1 (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 8c5566c4af592f2084d81f4f813deca75a573f91
+RMD160 (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = e11ca22098bb87d4f8d9bcb51adaaab35d8995b8
+SHA512 (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 0954d657eb7c810e3182390bbf89d9ba0d6a4e7c053e3e50520e38d5b898d822f024353c1bacd26cdd04845a025d2797a19dff30800314b9958707be29277043
+Size (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 42908278 bytes
+SHA1 (patch-CMakeLists.txt) = 466007e5c4cdb27d009b44395ec600bf49566889
+SHA1 (patch-image.h) = b6f13fa7f0b467289a646401cdd03e50d019f97f
+SHA1 (patch-platform.h) = 20d11caec43a39e5f4d023c5c3a5a3833f6c77e5
