@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2021/04/04 11:10:37 nia Exp $
+
+Use exact-lua-version-finding cmake script.
+
+--- src/CMakeLists.txt.orig	2019-09-13 15:35:59.000000000 +0000
++++ src/CMakeLists.txt
+@@ -7,7 +7,7 @@ FIND_PACKAGE(OpenGL REQUIRED)
+ FIND_PACKAGE(GLEW REQUIRED)
+ FIND_PACKAGE(OpenAL REQUIRED)
+ FIND_PACKAGE(VorbisFile REQUIRED)
+-FIND_PACKAGE(Lua 5.1 REQUIRED)
++FIND_PACKAGE(Lua51 REQUIRED)
+ FIND_PACKAGE(PNG REQUIRED)
+ FIND_PACKAGE(Gettext REQUIRED)
+ FIND_PACKAGE(Boost 1.46.1 REQUIRED)
