@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1963 2021/04/04 13:11:14 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.1964 2021/04/04 19:09:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/eternal-lands version 1.9.5.8 [nia 2021-04-04]
 	Added games/valyriatear version 1.1.0 [nia 2021-04-04]
 	Updated net/go-dnstap to 0.4.0 [bsiegert 2021-04-04]
+	Updated net/yaydl to 0.6.1 [pin 2021-04-04]
