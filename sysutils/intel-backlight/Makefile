@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/12/10 06:13:15 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/04 10:52:40 tnn Exp $
 
 DISTNAME=	intel_backlight_fbsd-20200418
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/^intel_backlight_fbsd/intel-backlight/1}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FreeBSDDesktop/}
@@ -23,6 +24,8 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+SPECIAL_PERMS+=	sbin/intel_backlight ${SETUID_ROOT_PERMS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/intel_backlight \
