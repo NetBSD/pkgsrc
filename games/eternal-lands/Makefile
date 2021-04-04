@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/04 09:09:30 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/04 09:11:54 nia Exp $
 
 EL_VER=		1.9.5.8
 PKGNAME=	eternal-lands-${EL_VER}
@@ -58,7 +58,7 @@ post-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/eternal-lands.sh \
-	    ${DESTDIR}${PREFIX}/bin/eternal-lands
+	    ${DESTDIR}${PREFIX}/bin/eternallands
 	${INSTALL_PROGRAM} ${WRKSRC}/el \
 	    ${DESTDIR}${PREFIX}/libexec/${PKGBASE}/el
 	${INSTALL_DATA} ${WRKSRC}/pkgfiles/eternallands.desktop \
