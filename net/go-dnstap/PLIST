@@ -1,29 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/16 15:16:55 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/04 13:10:52 bsiegert Exp $
 bin/dnstap
-gopkg/pkg/${GO_PLATFORM}/github.com/dnstap/golang-dnstap.a
-gopkg/src/github.com/dnstap/golang-dnstap/COPYRIGHT
-gopkg/src/github.com/dnstap/golang-dnstap/FrameStreamInput.go
-gopkg/src/github.com/dnstap/golang-dnstap/FrameStreamOutput.go
-gopkg/src/github.com/dnstap/golang-dnstap/FrameStreamSockInput.go
-gopkg/src/github.com/dnstap/golang-dnstap/LICENSE
-gopkg/src/github.com/dnstap/golang-dnstap/QuietTextFormat.go
-gopkg/src/github.com/dnstap/golang-dnstap/README
-gopkg/src/github.com/dnstap/golang-dnstap/TextOutput.go
-gopkg/src/github.com/dnstap/golang-dnstap/YamlFormat.go
-gopkg/src/github.com/dnstap/golang-dnstap/debian/changelog
-gopkg/src/github.com/dnstap/golang-dnstap/debian/compat
-gopkg/src/github.com/dnstap/golang-dnstap/debian/control
-gopkg/src/github.com/dnstap/golang-dnstap/debian/copyright
-gopkg/src/github.com/dnstap/golang-dnstap/debian/dnstap.install
-gopkg/src/github.com/dnstap/golang-dnstap/debian/docs
-gopkg/src/github.com/dnstap/golang-dnstap/debian/gbp.conf
-gopkg/src/github.com/dnstap/golang-dnstap/debian/golang-github-dnstap-go-dnstap-dev.install
-gopkg/src/github.com/dnstap/golang-dnstap/debian/rules
-gopkg/src/github.com/dnstap/golang-dnstap/debian/source/format
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.go
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.pb.go
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.pb/.gitignore
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.pb/LICENSE
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.pb/README
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap.pb/dnstap.proto
-gopkg/src/github.com/dnstap/golang-dnstap/dnstap/main.go
+man/man8/dnstap.8
