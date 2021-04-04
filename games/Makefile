@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2021/04/04 09:09:30 nia Exp $
+# $NetBSD: Makefile,v 1.502 2021/04/04 11:10:37 nia Exp $
 #
 
 COMMENT=	Games
@@ -405,6 +405,7 @@ SUBDIR+=	ufoai
 SUBDIR+=	unknown-horizons
 SUBDIR+=	uqm
 SUBDIR+=	urban
+SUBDIR+=	valyriatear
 SUBDIR+=	velena
 SUBDIR+=	violetland
 SUBDIR+=	vms-empire
