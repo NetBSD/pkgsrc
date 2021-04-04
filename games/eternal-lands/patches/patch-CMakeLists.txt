@@ -1,0 +1,21 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/04/04 09:09:30 nia Exp $
+
+We don't really care about the executable name, but we do need
+-DBSD to be defined as Makefile.bsd does.
+
+--- CMakeLists.txt.orig	2020-04-29 19:47:42.000000000 +0000
++++ CMakeLists.txt
+@@ -221,7 +221,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "-Og -ggdb -pi
+ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -fomit-frame-pointer -ffast-math -pipe -fno-strict-aliasing")
+ 
+ # set the OS level defines and default executable names
+-if (CMAKE_SYSTEM_NAME MATCHES "Linux")
++if (CMAKE_SYSTEM_NAME MATCHES "BSD")
++	if (NOT EXEC)
++		set(EXEC "el.bsd.bin")
++	endif()
++	add_definitions(-DBSD -DUSE_FILE32API)
++elseif (CMAKE_SYSTEM_NAME MATCHES "Linux")
+ 	if (NOT EXEC)
+ 		set(EXEC "el.linux.bin")
+ 	endif()
