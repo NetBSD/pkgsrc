@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2021/04/04 11:10:37 nia Exp $
+
+SHA1 (ValyriaTear-src-with-deps-1.1.0.tar.gz) = 407cc5bdf4ed67236cfab089c14cee0377bb3cc7
+RMD160 (ValyriaTear-src-with-deps-1.1.0.tar.gz) = 243b04060c6d2bdec717f98835f3c5f27e6742ea
+SHA512 (ValyriaTear-src-with-deps-1.1.0.tar.gz) = 29d4927f2dba691ff99568acdbaa70c9608ad9f5b56160982c0e10be78a3c401aab85b43c633e48bc36e00e7f6e2de6aea5577790cb65fedd72d4e6ad14baf8d
+Size (ValyriaTear-src-with-deps-1.1.0.tar.gz) = 117039173 bytes
+SHA1 (patch-src_CMakeLists.txt) = 6189c5313ef3f01b174032e249c1a94ceabfa96c
+SHA1 (patch-src_common_app__settings.cpp) = 826d0eb42ad777b61296b5b4a21787ce0707930b
+SHA1 (patch-src_main.cpp) = 2c8f826e34341f2a7a47c67886d6a6a3ce0fa819
