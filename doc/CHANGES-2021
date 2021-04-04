@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1961 2021/04/04 09:16:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1962 2021/04/04 11:11:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3006,3 +3006,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/grafana to 7.5.2 [tnn 2021-04-03]
 	Updated devel/git-lfs to 2.13.3 [tnn 2021-04-03]
 	Added games/eternal-lands version 1.9.5.8 [nia 2021-04-04]
+	Added games/valyriatear version 1.1.0 [nia 2021-04-04]
