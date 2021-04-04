@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/03/26 07:43:17 pin Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/04 19:08:59 pin Exp $
 
-DISTNAME=	yaydl-0.4.0
+DISTNAME=	yaydl-0.6.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dertuxmalwieder/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
@@ -17,13 +17,8 @@ USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yaydl ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
