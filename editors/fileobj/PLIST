@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/30 16:48:58 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/04 13:10:20 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/fileobj/__init__.py
@@ -182,6 +182,9 @@ ${PYSITELIB}/fileobj/marks.pyo
 ${PYSITELIB}/fileobj/methods.py
 ${PYSITELIB}/fileobj/methods.pyc
 ${PYSITELIB}/fileobj/methods.pyo
+${PYSITELIB}/fileobj/midnightbsd.py
+${PYSITELIB}/fileobj/midnightbsd.pyc
+${PYSITELIB}/fileobj/midnightbsd.pyo
 ${PYSITELIB}/fileobj/native.py
 ${PYSITELIB}/fileobj/native.pyc
 ${PYSITELIB}/fileobj/native.pyo
