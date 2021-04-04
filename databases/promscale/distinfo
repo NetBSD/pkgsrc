@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/04/03 17:31:05 tnn Exp $
+$NetBSD: distinfo,v 1.4 2021/04/04 09:58:38 tnn Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -6676,3 +6676,4 @@ SHA1 (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.
 RMD160 (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.zip) = 02771df20caaf567c5d5158c22effc25c739866f
 SHA512 (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.zip) = 2a99fa47042c0238d966d6a8fb272c35e4f9d9da50732e3fd65e9e716a860d8edd001504e662d59ecd8d99ec1ae727d36970163a74f525c60ec0d45288302917
 Size (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.zip) = 158069 bytes
+SHA1 (patch-pkg_version_version.go) = 019dd7ec09ce7ad000ed6f4df08fe82386fba0ab
