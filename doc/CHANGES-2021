@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1964 2021/04/04 19:09:20 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1965 2021/04/04 19:10:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3009,3 +3009,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/valyriatear version 1.1.0 [nia 2021-04-04]
 	Updated net/go-dnstap to 0.4.0 [bsiegert 2021-04-04]
 	Updated net/yaydl to 0.6.1 [pin 2021-04-04]
+	Updated biology/molsketch to 0.7.2 [pin 2021-04-04]
