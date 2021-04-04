@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2021/04/04 13:30:16 he Exp $
+# $NetBSD: Makefile,v 1.227 2021/04/04 17:49:42 he Exp $
 
 DISTNAME=	rustc-1.49.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -131,7 +131,7 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 # If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
 # \todo Consider avoiding setting this on netbsd-9 past the fix.
 .  if ${MACHINE_PLATFORM:MNetBSD-[1-9].*} && !${MACHINE_PLATFORM:MNetBSD-9.99.*}
-#MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=	no
 .  endif
 
 # Open PRs
