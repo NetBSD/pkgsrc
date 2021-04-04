@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2021/04/03 20:02:47 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/04 13:06:03 bsiegert Exp $
 
 DISTNAME=	git-lfs-2.13.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-lfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,8 +13,7 @@ LICENSE=	mit
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c
-GO_SRCPATH=	github.com/git-lfs/git-lfs
-GO_DIST_BASE=	${PKGNAME_NOREV}
+GO_BUILD_PATTERN=	.
 
 INSTALLATION_DIRS=	bin
 
@@ -21,10 +21,12 @@ pre-build:
 	cp ${WRKSRC}/lfshttp/certs_openbsd.go ${WRKSRC}/lfshttp/certs_netbsd.go
 # generate content for "git-lfs --help"
 	ln -sf ${GO} ${BUILDLINK_DIR}/bin/go
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} GOPATH=${WRKDIR} ${GO} generate github.com/git-lfs/git-lfs/commands
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} GOPATH=${WRKDIR} ${GO} generate ./commands
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/git-lfs ${DESTDIR}${PREFIX}/bin/git-lfs
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/git-lfs ${DESTDIR}${PREFIX}/bin/git-lfs
 
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
