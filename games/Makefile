@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.500 2021/04/03 15:34:03 nia Exp $
+# $NetBSD: Makefile,v 1.501 2021/04/04 09:09:30 nia Exp $
 #
 
 COMMENT=	Games
@@ -109,6 +109,7 @@ SUBDIR+=	eboard
 SUBDIR+=	einstein-puzzle
 SUBDIR+=	endless-sky
 SUBDIR+=	enigma
+SUBDIR+=	eternal-lands
 SUBDIR+=	etlegacy
 SUBDIR+=	etlegacy-data
 SUBDIR+=	etlegacy-server
