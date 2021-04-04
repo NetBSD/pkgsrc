@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2021/04/04 08:36:04 he Exp $
+# $NetBSD: Makefile,v 1.224 2021/04/04 09:23:37 nia Exp $
 
 DISTNAME=	rustc-1.49.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -530,27 +530,6 @@ stage0-bootstrap: install
 #.include "../../security/libssh2/buildlink3.mk"
 #.include "../../www/http-parser/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
-
-## Issues specific to: bootstrap AND NetBSD follow
-
-# rust-1.48.0 i386 bootstraps are built for 8.0 and still depend on
-# base OpenSSL for cargo. Pull in compat80 on 9.x and newer.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && empty(OS_VERSION:M8.*)
-DEPENDS+=	compat80>=0:../../emulators/compat80
-.endif
-
-# As of 2021-02-25 cargo is only a static binary in x86_64,
-# powerpc, and sparc64 bootstraps.
-# he@ says this should be fixed after the bootstraps are updated
-# to 1.49.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf)
-BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
-BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
-.  include "../../www/curl/buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
-.endif
 
 # This is for when we build natively:
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
