@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1974 2021/04/05 10:17:42 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1975 2021/04/05 10:54:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ugrep to 3.1.11 [wiz 2021-04-05]
 	Updated archivers/zstd to 1.4.9 [ryoon 2021-04-05]
 	Updated misc/libreoffice to 7.1.2.2 [ryoon 2021-04-05]
+	Updated graphics/krita to 4.4.3 [ryoon 2021-04-05]
