@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1981 2021/04/05 12:44:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1982 2021/04/05 12:55:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3034,3 +3034,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-google-api-core to 1.26.3 [adam 2021-04-05]
 	Added sysutils/u-boot-licheepi-zero version 2018.11 [rxg 2021-04-05]
 	Updated x11/libxkbcommon to 1.2.0 [wiz 2021-04-05]
+	Updated sysutils/k3b to 20.12.3 [markd 2021-04-05]
