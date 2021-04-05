@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/19 12:26:57 mef Exp $
-bin/asdftool
+@comment $NetBSD: PLIST,v 1.2 2021/04/05 19:45:49 adam Exp $
+bin/asdftool-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
