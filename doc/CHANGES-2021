@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1982 2021/04/05 12:55:40 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1983 2021/04/05 16:36:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3035,3 +3035,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/u-boot-licheepi-zero version 2018.11 [rxg 2021-04-05]
 	Updated x11/libxkbcommon to 1.2.0 [wiz 2021-04-05]
 	Updated sysutils/k3b to 20.12.3 [markd 2021-04-05]
+	Updated www/py-django-extensions to 3.1.2 [adam 2021-04-05]
+	Updated net/py-lexicon to 3.5.6 [adam 2021-04-05]
