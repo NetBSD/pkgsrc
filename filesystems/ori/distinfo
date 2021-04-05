@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 00:15:02 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/04/05 07:51:36 nia Exp $
 
-SHA1 (ori-0.8.1.tar.xz) = 4362159f6e24781724122d2927a2d45389b8b65d
-RMD160 (ori-0.8.1.tar.xz) = 03378e5d63059562d5a82314981b410c073077fd
-SHA512 (ori-0.8.1.tar.xz) = 9b02ff3bed73bff8e8ccaaf2fb3a65516e5c91791d637c913586ca9eb730bf7457b2140ddacbef7a6f2fe0364cd7390b2b40ad3284ac93289e7cf706fd872670
-Size (ori-0.8.1.tar.xz) = 296216 bytes
+SHA1 (ori-0.8.2.tar.xz) = 88856d3ceef858cca157c1ea7d9d6e29188109ec
+RMD160 (ori-0.8.2.tar.xz) = bf6ff123b6eae465477bc10a6ef72a24dde44df0
+SHA512 (ori-0.8.2.tar.xz) = 19e913506cb5edb4961def9f19a97a9e3ac54d32f20e379830349fd8d5a37923ce97b3419a04d6cbd665c74d4aa0cd9a3cf6d23c5b7c63440f2cf3f51a8ac8bd
+Size (ori-0.8.2.tar.xz) = 238576 bytes
+SHA1 (patch-liboriutil_key.cc) = cb1b773b43ee53df75863d02186c1390ab114e01
 SHA1 (patch-ori_SConscript) = e2eba2c01f2b6d4b7f3edea5eafc39656e047894
 SHA1 (patch-ori__httpd_SConscript) = 8b8ba3a1545a87e9a3c150fec8c1e7c271cc8603
 SHA1 (patch-oridbg_SConscript) = 36e6c4a8c08315412bdac2fa7a50113f216949ad
 SHA1 (patch-orilocal_SConscript) = be9cfffc40c5591831129dfa392849d376bd95a1
-SHA1 (patch-oris3_SConscript) = c4f908ecac6ad86a5767e8a1f117a97ed01d96f6
 SHA1 (patch-orisync_SConscript) = 4e12bce34f0f7d7827f47278a344645f42fa26fc
