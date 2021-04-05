@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/05 12:11:47 rxg Exp $
+share/u-boot/licheepi-zero/installboot.plist
+share/u-boot/licheepi-zero/u-boot-sunxi-with-spl.bin
