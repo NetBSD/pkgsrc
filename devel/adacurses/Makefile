@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/02 16:53:42 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/05 07:03:58 nia Exp $
 
 PKGNAME=	adacurses-${ACVERSION}
 CATEGORIES=	devel
@@ -53,5 +53,5 @@ post-install:
 	${SED} "s|@PREFIX@|${LOCALBASE}|g" ${FILESDIR}/adacurses.gpr.in > \
 		${DESTDIR}${PREFIX}/lib/gnat/adacurses.gpr
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
