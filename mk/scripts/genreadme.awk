@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.48 2021/03/08 16:37:59 nia Exp $
+# $NetBSD: genreadme.awk,v 1.49 2021/04/05 10:32:38 nia Exp $
 #
 # Copyright (c) 2002-2021 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,14 +44,6 @@
 #
 BEGIN {
 	do_pkg_readme=1;
-# set to 1 to use "README-new.html" as the name
-	use_readme_new=0;
-	if (use_readme_new) {
-		readme_name = "README-new.html";
-	}
-	else {
-		readme_name = "README.html";
-	}
 	printf("Reading database file\n");
 }
 
@@ -147,7 +139,7 @@ BEGIN {
 /^htmlname / {
 #
 # read lines like:
-# htmlname /usr/pkgsrc/archivers/arc <a href=../../archivers/arc/README.html>arc-5.21e</A>
+# htmlname /usr/pkgsrc/archivers/arc <a href=../../archivers/arc/index.html>arc-5.21e</A>
 #
 #    dir=fulldir2pkgdir($2);
 	dir = $2;
@@ -155,10 +147,7 @@ BEGIN {
 	for (i = 4; i <= NF; i++){
 		htmlname = htmlname " " $i;
 	}
-	# If we are using a name other than README.html, change it
-	# here.  This avoids having to process a huge line later which
-	# makes lesser awks puke.
-	gsub(/README.html/, readme_name, htmlname);
+	gsub(/README.html/, "index.html", htmlname);
 	dir2htmlname[dir] = htmlname;
 	if (debug) printf("added dir2htmlname[%s]=%s\n", dir, htmlname);
 	next;
@@ -202,7 +191,7 @@ BEGIN {
 }
 
 END {
-	readme = TMPDIR "/" readme_name;
+	readme = TMPDIR "/index.html";
 
 	printf("Making sure binary package cache file is up to date...\n");
 	if ( quiet == "yes" ){
@@ -250,7 +239,7 @@ END {
 		depends[SINGLEPKG] = "yes";
 	}
 
-	printf("Generating README.html files\n");
+	printf("Generating index.html files\n");
 	pkgcnt = 0;
 	if (do_pkg_readme) {
 		templatefile = PKGSRCDIR "/templates/README.pkg";
@@ -258,7 +247,7 @@ END {
 		for (toppkg in depends){
 			pkgcnt++;
 			pkgdir = PKGSRCDIR "/" toppkg;
-			readmenew=pkgdir  "/" readme_name;
+			readmenew=pkgdir  "/index.html";
 
 			if (debug) printf("Creating %s for %s\n",
 					  readme, readmenew);
@@ -380,9 +369,9 @@ END {
 	templatefile = PKGSRCDIR "/templates/README.category";
 	fatal_check_file(templatefile);
 
-# string with URLs for all categories (used by the top README.html)
+# string with URLs for all categories (used by the top index.html)
 	allcat = "";
-# string with URLs for all pkgs (used by the top README-all.html)
+# string with URLs for all pkgs (used by the top index-all.html)
 	tot_numpkg = 0;
 	top_make = PKGSRCDIR"/Makefile";
 	while((getline < top_make) > 0){
@@ -390,7 +379,7 @@ END {
 			category = $0;
 			gsub(/^[ \t]*SUBDIR.*=[ \t]*/, "", category);
 			catdir = PKGSRCDIR"/"category;
-			readmenew = catdir"/"readme_name;
+			readmenew = catdir"/index.html";
 			if (quiet != "yes") {
 				printf("Category = %s\n", category);
 			}
@@ -412,16 +401,15 @@ END {
 						 pkgdir2name[dir],
 						 comment[dir]);
 					}
-					pkgs = sprintf("%s<dt><a href=\"%s/%s\">%s</a></dt><dd>%s</dd>\n",
+					pkgs = sprintf("%s<dt><a href=\"%s/index.html\">%s</a></dt><dd>%s</dd>\n",
 					    pkgs,
-					    pkg, readme_name,
+					    pkg,
 					    pkgdir2name[dir],
 					    comment[dir]);
 					# Prefix with the package name in a comment for sorting.
-					allpkg[tot_numpkg] = sprintf("<!-- %s --><dt><a href=\"%s/%s/%s\">%s</a></dt><dd>%s</dd>\n",
+					allpkg[tot_numpkg] = sprintf("<!-- %s --><dt><a href=\"%s/%s/index.html\">%s</a></dt><dd>%s</dd>\n",
 								      pkgdir2name[dir],
 								      category, pkg,
-								      readme_name,
 								      pkgdir2name[dir],
 								      comment[dir]);
 # we need slightly fewer escapes here since we are not gsub()-ing
@@ -446,8 +434,8 @@ END {
 			copy_readme(readmenew, readme);
 
 			gsub(/href=\"/, "href=\""category"/", pkgs);
-			allcat = sprintf("%s<dt><a href=\"%s/%s\">%s</a></dt><dd>%s</dd>\n",
-					 allcat, category, readme_name,
+			allcat = sprintf("%s<dt><a href=\"%s/index.html\">%s</a></dt><dd>%s</dd>\n",
+					 allcat, category,
 					 category, descr);
 			close(cat_make);
 		}
@@ -457,13 +445,12 @@ END {
 	printf("Generating toplevel readmes:\n");
 	templatefile = PKGSRCDIR "/templates/README.top";
 	fatal_check_file(templatefile);
-	readmenew = PKGSRCDIR "/"readme_name;
+	readmenew = PKGSRCDIR "/index.html"
 	printf("\t%s\n", readmenew);
 	print "" > readme;
 	while((getline < templatefile) > 0){
 		gsub(/%%DESCR%%/, "");
 		gsub(/%%SUBDIR%%/, allcat);
-		gsub(/README.html/, readme_name);
 		print >> readme;
 	}
 	close(readme);
@@ -472,7 +459,7 @@ END {
 
 	templatefile = PKGSRCDIR "/templates/README.all";
 	fatal_check_file(templatefile);
-	readmenew = PKGSRCDIR "/README-all.html";
+	readmenew = PKGSRCDIR "/index-all.html";
 	printf("\t%s\n", readmenew);
 # sort the pkgs
 	sfile = TMPDIR"/unsorted";
@@ -496,7 +483,6 @@ END {
 		} else {
 			gsub(/%%DESCR%%/, "", line);
 			gsub(/%%NPKGS%%/, tot_numpkg, line);
-			gsub(/README.html/, readme_name, line);
 			print line >> readme;
 		}
 	}
@@ -522,10 +508,9 @@ function create_htmldeps(dependslist){
 			 dpkgs[i],
 			 pat2dir[dpkgs[i]]);
 		}
-		htmldeps = sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+		htmldeps = sprintf("%s<a href=\"../../%s/index.html\">%s</a>\n",
 				 htmldeps,
 				 pat2dir[dpkgs[i]],
-				 readme_name,
 				 pat2dir[dpkgs[i]]);
 		i = i + 1;
 	}
@@ -617,8 +602,8 @@ function fatal_check_file(file, cmd){
 	}
 }
 
-# 'new' is the newly created README.html file
-# 'old' is the existing (possibly not present) README.html file
+# 'new' is the newly created index.html file
+# 'old' is the existing (possibly not present) index.html file
 #
 #  This function copies over the 'new' file if the 'old' one does
 #  not exist or if they are different.  In addition, the 'new' one
@@ -626,7 +611,7 @@ function fatal_check_file(file, cmd){
 
 function copy_readme(old, new, cmd, rc) {
 
-#	if the README.html file does not exist at all then copy over
+#	if the index.html file does not exist at all then copy over
 #	the one we created
 
 	cmd = "if [ ! -f "old" ]; then cp " new " " old " ; fi";
@@ -638,7 +623,7 @@ function copy_readme(old, new, cmd, rc) {
 		printf("**** ------- ****\n") > "/dev/stderr";
 	}
 
-#	Compare the existing README.html file to the one we created.  If they are
+#	Compare the existing index.html file to the one we created.  If they are
 #	not the same, then copy over the one we created
 
 	cmd = sprintf("%s -s %s %s ; if test $? -ne 0 ; then mv -f %s %s ; fi",
