@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/14 19:01:33 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/05 19:13:59 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -82,6 +82,9 @@ ${PYSITELIB}/approvaltests/reporters/python_native_reporter.pyo
 ${PYSITELIB}/approvaltests/reporters/received_file_launcher_reporter.py
 ${PYSITELIB}/approvaltests/reporters/received_file_launcher_reporter.pyc
 ${PYSITELIB}/approvaltests/reporters/received_file_launcher_reporter.pyo
+${PYSITELIB}/approvaltests/reporters/report_with_beyond_compare.py
+${PYSITELIB}/approvaltests/reporters/report_with_beyond_compare.pyc
+${PYSITELIB}/approvaltests/reporters/report_with_beyond_compare.pyo
 ${PYSITELIB}/approvaltests/reporters/reporters.json
 ${PYSITELIB}/approvaltests/reporters/testing_reporter.py
 ${PYSITELIB}/approvaltests/reporters/testing_reporter.pyc
