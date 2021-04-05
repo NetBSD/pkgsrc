@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1966 2021/04/05 06:55:18 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1967 2021/04/05 07:40:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3012,3 +3012,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/molsketch to 0.7.2 [pin 2021-04-04]
 	Updated multimedia/juk to 20.12.3 [markd 2021-04-05]
 	Updated devel/kio-extras to 20.12.3 [markd 2021-04-05]
+	Updated lang/python39 to 3.9.4 [adam 2021-04-05]
+	Updated lang/py39-html-docs to 3.9.4 [adam 2021-04-05]
