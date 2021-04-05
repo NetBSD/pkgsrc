@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2021/01/26 06:22:51 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/05 19:49:48 adam Exp $
 
-DISTNAME=	braintree-4.6.0
+DISTNAME=	braintree-4.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/braintree/}
