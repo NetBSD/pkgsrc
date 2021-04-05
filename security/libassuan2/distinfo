@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2020/12/03 12:06:40 adam Exp $
+$NetBSD: distinfo,v 1.18 2021/04/05 08:57:39 adam Exp $
 
-SHA1 (libassuan-2.5.4.tar.bz2) = 55a35918e95566ef94e8843879a7dd3f87de3781
-RMD160 (libassuan-2.5.4.tar.bz2) = cdc21d7999d95bd5a0b1ea40538787b1996bef0f
-SHA512 (libassuan-2.5.4.tar.bz2) = 764993d5311c24f0c0f970016e903e1a16783a2050c42072dbc1bc4f350f119e53b0be17ed6df25a0086bc9f8c25ee4f3134330577968480997263f95e05594f
-Size (libassuan-2.5.4.tar.bz2) = 574039 bytes
+SHA1 (libassuan-2.5.5.tar.bz2) = ec4f67c0117ccd17007c748a392ded96dc1b1ae9
+RMD160 (libassuan-2.5.5.tar.bz2) = bd2d3fb38a81bff283f85d30bb1a342cf87bea6b
+SHA512 (libassuan-2.5.5.tar.bz2) = 70117f77aa43bbbe0ed28da5ef23834c026780a74076a92ec775e30f851badb423e9a2cb9e8d142c94e4f6f8a794988c1b788fd4bd2271e562071adf0ab16403
+Size (libassuan-2.5.5.tar.bz2) = 572263 bytes
 SHA1 (patch-configure) = 0cb945282bd00a96b66d245f9723fd8d0bc32d8b
 SHA1 (patch-src_assuan-uds.c) = 62d935c5fad5eb5bbc6721f89681b7be724c4916
