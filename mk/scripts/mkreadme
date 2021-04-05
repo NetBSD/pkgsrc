@@ -1,7 +1,7 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.32 2021/02/19 17:49:06 nia Exp $
+# $NetBSD: mkreadme,v 1.33 2021/04/05 10:32:38 nia Exp $
 #
-# Script for README.html generation
+# Script for index.html generation
 #
 # Copyright (c) 2002, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,7 +50,7 @@ esac
 BMAKE=${BMAKE:-${makeprog}}
 
 usage(){
-    echo "$prog - Generates README.html files for a pkgsrc tree"
+    echo "$prog - Generates index.html files for a pkgsrc tree"
     echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
     echo "                  [-q|--quiet] "
     echo "                  [-p|--pkgsrc directory] "
@@ -64,14 +64,14 @@ usage(){
     echo " "
     echo "The options supported by $prog are: "
     echo " "
-    echo "  -C|--prune          Prune unused README.html files which may exist in"
+    echo "  -C|--prune          Prune unused index.html files which may exist in"
     echo "                      pkg directories which have been removed from CVS."
     echo " "
-    echo "  -c|--cdrom          Generates CD-ROM README.html files"
+    echo "  -c|--cdrom          Generates CD-ROM index.html files"
     echo " "
     echo "  -d|--debug          Enables (extremely verbose) debug output"
     echo " "
-    echo "  -f|--ftp            Generates FTP README.html files"
+    echo "  -f|--ftp            Generates FTP index.html files"
     echo " "
     echo "  -h|--help           Displays this help message"
     echo " "
@@ -136,13 +136,13 @@ do
     case "$1"
     in
 
-    # We're generating README.html's for a CD-ROM
+    # We're generating index.html's for a CD-ROM
     -c|--cdrom)
 	ftp_readme=no
 	shift
 	;;
 
-    # Prune old README.html files from pkgs which no longer exist
+    # Prune old index.html files from pkgs which no longer exist
     -C|--prune)
 	prune=yes
 	shift
@@ -154,7 +154,7 @@ do
 	shift
 	;;
 
-    # We're generating README.html's for a CD-ROM
+    # We're generating index.html's for a CD-ROM
     -f|--ftp)
 	ftp_readme=yes
 	shift
@@ -249,7 +249,7 @@ DATABASEFILE=$TMPDIR/database
 export DATABASEFILE
 BINPKGFILE=$TMPDIR/binpkglist
 
-echo "Starting README.html generation: `date`"
+echo "Starting index.html generation: `date`"
 
 ######################################################################
 #
@@ -303,7 +303,7 @@ fi
 
 ######################################################################
 #
-#  Decide on FTP vs CDROM README.html files
+#  Decide on FTP vs CDROM index.html files
 #
 ######################################################################
 
@@ -409,12 +409,12 @@ fi
 
 ######################################################################
 #
-#  Generate the package and category README.html files
+#  Generate the package and category index.html files
 #
 ######################################################################
 
 echo " "
-echo "Generating package README.html files"
+echo "Generating package indexx.html files"
 echo " "
 if [ "x$DEBUG" = "xyes" ]; then
     debug=1;
@@ -449,26 +449,26 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
 	${DATABASEFILE}
 
 if [ $? != 0 ]; then
-    echo "Error:  genreadme.awk failed to create README.html files"
+    echo "Error:  genreadme.awk failed to create index.html files"
     clean_and_exit
 fi
 
 ######################################################################
 #
-#  Prune README.html files which are no longer needed
+#  Prune index.html files which are no longer needed
 #
 ######################################################################
 if [ "x$prune" = "xyes" ]; then
     echo " "
-    echo "Pruning unused README.html files"
+    echo "Pruning unused index.html files"
     echo " "
     cd ${PKGSRCDIR}
     # cats=`${BMAKE} show-subdir-var VARNAME=SUBDIR` # already set above
     for c in ${cats} ; do
 	for d in `ls -d ${c}/*` ; do
-	    if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
-		echo "Pruning ${d}/README.html which is no longer used"
-		rm -f ${d}/README.html
+	    if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/index.html ]; then
+		echo "Pruning ${d}/index.html which is no longer used"
+		rm -f ${d}/index.html
 	    fi
 	done
     done
@@ -480,7 +480,7 @@ fi
 #
 ######################################################################
 echo " "
-echo "README.html generation finished:  `date`"
+echo "index.html generation finished:  `date`"
 echo " "
 if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" -a "x$save" = "xno" ]; then
     rm -fr $TMPDIR
