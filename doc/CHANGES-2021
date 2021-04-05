@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1972 2021/04/05 10:08:09 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1973 2021/04/05 10:13:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/help2man to 1.48.3 [adam 2021-04-05]
 	Updated security/libassuan2 to 2.5.5 [adam 2021-04-05]
 	Updated textproc/ugrep to 3.1.11 [wiz 2021-04-05]
+	Updated archivers/zstd to 1.4.9 [ryoon 2021-04-05]
