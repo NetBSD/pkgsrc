@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:17 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/05 06:51:04 markd Exp $
 
-SHA1 (juk-20.04.1.tar.xz) = a53805239fa3d8391b2e7f10b0742f1e4cf3ced0
-RMD160 (juk-20.04.1.tar.xz) = 6fb6b7b3dbc774bf974fa9da9093c2cbb414385b
-SHA512 (juk-20.04.1.tar.xz) = eedae21df52ac055e2628c57a80dc17ab6f1c9f0907b5c9cff812b0b8e60acf9b21436849622b320fc6642cc4b658b2965042fe7249c9866e6027d870410bd60
-Size (juk-20.04.1.tar.xz) = 1869896 bytes
+SHA1 (juk-20.12.3.tar.xz) = fc35cddf6f638aa2e8d3828eb393ccd2f63fd9f0
+RMD160 (juk-20.12.3.tar.xz) = a709b340bd1efa2361b0b4af54638b42654d9bcc
+SHA512 (juk-20.12.3.tar.xz) = 3eca02446be784cc8d3dd68e7da146dfbe5ab7296d27ba78d0f15ce34b87183692d91ef01126aa97a9bc95a558e9af6b6bef47c0ba0a2f25fbeacda79285edc1
+Size (juk-20.12.3.tar.xz) = 1997996 bytes
