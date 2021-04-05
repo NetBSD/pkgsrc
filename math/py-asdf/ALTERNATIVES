@@ -1,0 +1,1 @@
+bin/asdftool @PREFIX@/bin/asdftool-@PYVERSSUFFIX@
