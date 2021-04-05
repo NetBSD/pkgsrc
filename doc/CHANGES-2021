@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1979 2021/04/05 11:53:14 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1980 2021/04/05 12:16:53 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-flakes to 2.3.1 [adam 2021-04-05]
 	Updated net/rabbitmq-c to 0.11.0 [adam 2021-04-05]
 	Updated devel/py-google-api-core to 1.26.3 [adam 2021-04-05]
+	Added sysutils/u-boot-licheepi-zero version 2018.11 [rxg 2021-04-05]
