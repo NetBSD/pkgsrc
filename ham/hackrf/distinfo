@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/02/02 08:44:44 tnn Exp $
+$NetBSD: distinfo,v 1.5 2021/04/05 12:49:22 tnn Exp $
 
-SHA1 (hackrf-2018.01.1.tar.xz) = 3f12401cc4df50b1bd278c87a5acd8a16f724bfa
-RMD160 (hackrf-2018.01.1.tar.xz) = 29a296bcbeb1344feb8fd44b9a8591e459e7cd1c
-SHA512 (hackrf-2018.01.1.tar.xz) = 89848fb58a8a29f7fe85bd817d5716117a2c7a5f2c4bb8582ad1ba8186831ca3054ea1314de943d1e923641eb18b6008cd8af79585e58fa50d55d5a7fd1b04e4
-Size (hackrf-2018.01.1.tar.xz) = 15464500 bytes
+SHA1 (hackrf-2021.03.1.tar.xz) = 0ac0d360486fcf52b1e70a3ae4a5a7670a5b6ebb
+RMD160 (hackrf-2021.03.1.tar.xz) = d8c454803cad3ae966192dc3668eceac534d60ab
+SHA512 (hackrf-2021.03.1.tar.xz) = 4a88b877a9f6fee0c8d9496eb265655af4baa678e862ca6147596cd3a1d85dd50315da6531efa54d050847ce5068c4726393b4897d40576888d10a898ad57139
+Size (hackrf-2021.03.1.tar.xz) = 13661964 bytes
