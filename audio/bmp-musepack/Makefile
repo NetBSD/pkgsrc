@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/08/17 20:18:04 leot Exp $
+# $NetBSD: Makefile,v 1.50 2021/04/05 08:40:07 nia Exp $
 #
 
 DISTNAME=		bmp-musepack-1.2
@@ -15,6 +15,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+
+# Workaround for glib2-2.68.0 c++ fallout.
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
