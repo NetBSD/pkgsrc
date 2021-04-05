@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/05 10:18:36 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/05 10:20:47 tnn Exp $
 
 DISTNAME=	intel_backlight_fbsd-20200418
 PKGREVISION=	1
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(UNPRIVILEGED:MM[yY][eE][sS])
+.if empty(UNPRIVILEGED:M[yY][eE][sS])
 SPECIAL_PERMS+=	sbin/intel_backlight ${SETUID_ROOT_PERMS}
 .endif
 
