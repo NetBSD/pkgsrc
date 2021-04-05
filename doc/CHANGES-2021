@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1978 2021/04/05 11:17:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1979 2021/04/05 11:53:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3030,3 +3030,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-regex to 2021.4.4 [adam 2021-04-05]
 	Updated www/py-httplib2 to 0.19.1 [adam 2021-04-05]
 	Updated devel/py-flakes to 2.3.1 [adam 2021-04-05]
+	Updated net/rabbitmq-c to 0.11.0 [adam 2021-04-05]
+	Updated devel/py-google-api-core to 1.26.3 [adam 2021-04-05]
