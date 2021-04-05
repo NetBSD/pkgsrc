@@ -1,32 +1,33 @@
-# $NetBSD: Makefile,v 1.1 2020/12/19 12:26:57 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/05 19:45:49 adam Exp $
 
-DISTNAME=	asdf-2.7.1
+DISTNAME=	asdf-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/asdf/
+HOMEPAGE=	https://github.com/asdf-format/asdf
 COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
 
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
-REPLACE_PYTHON+=		asdf-standard/reference_files/generate/generate
-REPLACE_PYTHON+=		asdf/extern/RangeHTTPServer.py
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.10.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.2:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.10.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-.include "../../lang/python/egg.mk"
+USE_LANGUAGES=	# none
+
+REPLACE_PYTHON+=	asdf-standard/reference_files/generate/generate
+REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} asdftool asdftool-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/application.mk"
-.include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
