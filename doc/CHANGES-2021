@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1986 2021/04/05 19:14:08 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1987 2021/04/05 19:53:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3041,3 +3041,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/hackrf to 2021.03.1 [tnn 2021-04-05]
 	Updated multimedia/mpv to 0.33.1 [leot 2021-04-05]
 	Updated devel/py-approvaltests to 0.4.0 [schmonz 2021-04-05]
+	Updated multimedia/mkvtoolnix to 56.0.0 [adam 2021-04-05]
+	Updated math/py-asdf to 2.7.3 [adam 2021-04-05]
+	Updated finance/py-braintree to 4.7.0 [adam 2021-04-05]
+	Updated security/py-google-auth-oauthlib to 0.4.4 [adam 2021-04-05]
