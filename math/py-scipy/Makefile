@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2020/10/12 21:52:04 bacon Exp $
+# $NetBSD: Makefile,v 1.44 2021/04/05 19:26:07 tnn Exp $
 
-DISTNAME=	scipy-1.5.2
+DISTNAME=	scipy-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
@@ -32,7 +31,7 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27
 
 REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 
