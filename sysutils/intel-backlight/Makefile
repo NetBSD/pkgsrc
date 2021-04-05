@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/04 10:52:40 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/05 10:18:36 tnn Exp $
 
 DISTNAME=	intel_backlight_fbsd-20200418
 PKGREVISION=	1
@@ -25,7 +25,11 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(UNPRIVILEGED:MM[yY][eE][sS])
 SPECIAL_PERMS+=	sbin/intel_backlight ${SETUID_ROOT_PERMS}
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/intel_backlight \
