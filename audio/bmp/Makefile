@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2021/04/05 08:49:33 nia Exp $
+# $NetBSD: Makefile,v 1.82 2021/04/05 08:51:29 nia Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=		53
+PKGREVISION=		54
 
 USE_TOOLS+=		unzip:run
 
