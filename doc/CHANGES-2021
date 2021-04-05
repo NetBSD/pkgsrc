@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1976 2021/04/05 10:54:25 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1977 2021/04/05 11:13:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3026,3 +3026,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/libreoffice to 7.1.2.2 [ryoon 2021-04-05]
 	Updated graphics/krita to 4.4.3 [ryoon 2021-04-05]
 	Updated audio/fluidsynth to 2.2.0 [wiz 2021-04-05]
+	Updated textproc/py-phonenumbers to 8.12.20 [adam 2021-04-05]
+	Updated textproc/py-regex to 2021.4.4 [adam 2021-04-05]
