@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20474 2021/04/05 10:54:25 wiz Exp $
+$NetBSD: TODO,v 1.20475 2021/04/05 12:44:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libvirt-2.3
 	o libvpx-1.10.0
 	o libwildmidi-0.4.4
-	o libxkbcommon-1.2.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
