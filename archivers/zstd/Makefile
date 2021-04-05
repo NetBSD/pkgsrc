@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2021/03/31 13:26:06 nros Exp $
+# $NetBSD: Makefile,v 1.40 2021/04/05 10:12:38 ryoon Exp $
 
-DISTNAME=	zstd-1.4.8
+DISTNAME=	zstd-1.4.9
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,7 +20,7 @@ CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
 # ld: ../lib/libzstd.a: error adding symbols: file format not recognized
 # reported as
 # https://github.com/facebook/zstd/issues/2453
-MAKE_JOBS_SAFE=		no
+#MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
