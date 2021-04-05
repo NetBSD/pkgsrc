@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2021/02/09 08:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/05 11:14:50 adam Exp $
 
-DISTNAME=	httplib2-0.19.0
+DISTNAME=	httplib2-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
