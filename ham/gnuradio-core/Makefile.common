@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2021/01/01 09:08:42 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.31 2021/04/05 07:02:52 nia Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -98,7 +98,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
-CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib -lrt
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
 CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 # adhoc setup not to pick non default version (say python3.6)
