@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1968 2021/04/05 07:51:50 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1969 2021/04/05 08:18:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3015,3 +3015,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python39 to 3.9.4 [adam 2021-04-05]
 	Updated lang/py39-html-docs to 3.9.4 [adam 2021-04-05]
 	Updated filesystems/ori to 0.8.2 [nia 2021-04-05]
+	Updated devel/py-test to 6.2.3 [adam 2021-04-05]
+	Updated devel/py-bitarray to 1.9.0 [adam 2021-04-05]
