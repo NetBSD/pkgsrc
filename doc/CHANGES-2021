@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1984 2021/04/05 18:14:01 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.1985 2021/04/05 18:14:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-lexicon to 3.5.6 [adam 2021-04-05]
 	Updated math/volk to 2.4.1 [tnn 2021-04-05]
 	Updated ham/hackrf to 2021.03.1 [tnn 2021-04-05]
+	Updated multimedia/mpv to 0.33.1 [leot 2021-04-05]
