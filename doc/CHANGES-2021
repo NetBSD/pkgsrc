@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1983 2021/04/05 16:36:37 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1984 2021/04/05 18:14:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3037,3 +3037,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/k3b to 20.12.3 [markd 2021-04-05]
 	Updated www/py-django-extensions to 3.1.2 [adam 2021-04-05]
 	Updated net/py-lexicon to 3.5.6 [adam 2021-04-05]
+	Updated math/volk to 2.4.1 [tnn 2021-04-05]
+	Updated ham/hackrf to 2021.03.1 [tnn 2021-04-05]
