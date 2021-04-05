@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/01/01 08:24:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/05 11:58:57 tnn Exp $
 
-DISTNAME=	volk-2.4.0
-PKGREVISION=	1
+DISTNAME=	volk-2.4.1
 CATEGORIES=	math ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnuradio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,5 +28,12 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 .include "../../devel/orc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.if	${MACHINE_ARCH:M*arm*} ||		\
+	${MACHINE_ARCH} == "aarch64" ||		\
+	${MACHINE_ARCH} == "i386" ||		\
+	${MACHINE_ARCH} == "x86_64" ||		\
+	${MACHINE_ARCH:M*mips*} ||		\
+	${MACHINE_ARCH:M*powerpc*}
 .include "../../devel/cpu_features/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
