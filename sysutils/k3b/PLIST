@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/06/09 11:56:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/04/05 12:54:28 markd Exp $
 bin/k3b
 include/k3b_export.h
 include/k3bactivepipe.h
@@ -124,10 +124,11 @@ lib/libk3bdevice.so.7.0.0
 lib/libk3blib.so
 lib/libk3blib.so.7
 lib/libk3blib.so.7.0.0
-libexec/k3bhelper
+libexec/kauth/k3bhelper
 qt5/plugins/k3baudiometainforenamerplugin.so
 qt5/plugins/k3baudioprojectcddbplugin.so
 qt5/plugins/k3bexternalencoder.so
+qt5/plugins/k3bffmpegdecoder.so
 qt5/plugins/k3bflacdecoder.so
 qt5/plugins/k3blameencoder.so
 qt5/plugins/k3blibsndfiledecoder.so
@@ -178,6 +179,12 @@ share/doc/HTML/fr/k3b/K3bMoreActions.png
 share/doc/HTML/fr/k3b/K3bsetup.png
 share/doc/HTML/fr/k3b/index.cache.bz2
 share/doc/HTML/fr/k3b/index.docbook
+share/doc/HTML/it/k3b/K3bAddButton.png
+share/doc/HTML/it/k3b/K3bAdvancedSettings.png
+share/doc/HTML/it/k3b/K3bDiskChoice.png
+share/doc/HTML/it/k3b/K3bMoreActions.png
+share/doc/HTML/it/k3b/K3bSetVerify.png
+share/doc/HTML/it/k3b/K3bsetup.png
 share/doc/HTML/it/k3b/index.cache.bz2
 share/doc/HTML/it/k3b/index.docbook
 share/doc/HTML/nl/k3b/index.cache.bz2
@@ -186,6 +193,8 @@ share/doc/HTML/pt/k3b/index.cache.bz2
 share/doc/HTML/pt/k3b/index.docbook
 share/doc/HTML/pt_BR/k3b/index.cache.bz2
 share/doc/HTML/pt_BR/k3b/index.docbook
+share/doc/HTML/ru/k3b/index.cache.bz2
+share/doc/HTML/ru/k3b/index.docbook
 share/doc/HTML/sv/k3b/burndialog_audio.png
 share/doc/HTML/sv/k3b/burndialog_progress.png
 share/doc/HTML/sv/k3b/cdcopy_done.png
@@ -371,6 +380,7 @@ share/kservices5/ServiceMenus/k3b_write_iso_image.desktop
 share/kservices5/k3baudiometainforenamerplugin.desktop
 share/kservices5/k3baudioprojectcddbplugin.desktop
 share/kservices5/k3bexternalencoder.desktop
+share/kservices5/k3bffmpegdecoder.desktop
 share/kservices5/k3bflacdecoder.desktop
 share/kservices5/k3blameencoder.desktop
 share/kservices5/k3blibsndfiledecoder.desktop
@@ -476,6 +486,7 @@ share/locale/hu/LC_MESSAGES/kio_videodvd.mo
 share/locale/hu/LC_MESSAGES/libk3b.mo
 share/locale/hu/LC_MESSAGES/libk3bdevice.mo
 share/locale/ia/LC_MESSAGES/k3b.mo
+share/locale/ia/LC_MESSAGES/kio_videodvd.mo
 share/locale/ia/LC_MESSAGES/libk3b.mo
 share/locale/ia/LC_MESSAGES/libk3bdevice.mo
 share/locale/id/LC_MESSAGES/kio_videodvd.mo
