@@ -1,5 +1,5 @@
-Viking is a Free/open-source program to manage and display GPS data.
-You can import and plot tracks and waypoints, show OpenStreetMap,
-Terraserver or other tiled maps under it, download geocaches for an
-area on the map, make new tracks and waypoints, see real-time GPS
-position, etc.
+Viking is a Free/open-source program to manage GPS data.
+You can import, plot and create tracks, routes and waypoints, show OSM
+(OpenStreetMap), Bing Aerial and other tiled maps, geotag images,
+create routes using OSRM, see real-time GPS position, control items,
+etc.
