@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2021/03/25 19:43:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2021/04/06 07:18:56 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -20,6 +20,7 @@ CARGO_CRATE_DEPENDS+=	core-foundation-0.9.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.2
 CARGO_CRATE_DEPENDS+=	crossterm-0.18.2
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.6.2
+CARGO_CRATE_DEPENDS+=	either-1.6.1
 CARGO_CRATE_DEPENDS+=	failure-0.1.8
 CARGO_CRATE_DEPENDS+=	failure_derive-0.1.8
 CARGO_CRATE_DEPENDS+=	fs_extra-1.2.0
@@ -27,12 +28,14 @@ CARGO_CRATE_DEPENDS+=	getrandom-0.2.2
 CARGO_CRATE_DEPENDS+=	gimli-0.23.0
 CARGO_CRATE_DEPENDS+=	heck-0.3.2
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
+CARGO_CRATE_DEPENDS+=	home-0.5.3
 CARGO_CRATE_DEPENDS+=	instant-0.1.9
+CARGO_CRATE_DEPENDS+=	itertools-0.10.0
 CARGO_CRATE_DEPENDS+=	jemalloc-sys-0.3.2
 CARGO_CRATE_DEPENDS+=	jemallocator-0.3.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.91
-CARGO_CRATE_DEPENDS+=	libmacchina-0.1.3
+CARGO_CRATE_DEPENDS+=	libmacchina-0.1.7
 CARGO_CRATE_DEPENDS+=	local_ipaddress-0.1.3
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.2
 CARGO_CRATE_DEPENDS+=	log-0.4.14
@@ -67,9 +70,9 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.1.17
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.3.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.6.1
-CARGO_CRATE_DEPENDS+=	sqlite-0.25.3
-CARGO_CRATE_DEPENDS+=	sqlite3-src-0.2.12
-CARGO_CRATE_DEPENDS+=	sqlite3-sys-0.12.0
+CARGO_CRATE_DEPENDS+=	sqlite-0.26.0
+CARGO_CRATE_DEPENDS+=	sqlite3-src-0.3.0
+CARGO_CRATE_DEPENDS+=	sqlite3-sys-0.13.0
 CARGO_CRATE_DEPENDS+=	squote-0.1.2
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	structopt-0.3.21
