@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/12/04 12:57:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/04/06 15:50:44 adam Exp $
 
-DISTNAME=	gunicorn-20.0.4
+DISTNAME=	gunicorn-20.1.0
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,14 @@ HOMEPAGE=	https://gunicorn.org/
 COMMENT=	Python WSGI HTTP server
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=3.0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.5:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
