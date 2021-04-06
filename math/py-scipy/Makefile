@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/04/05 19:26:07 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/06 09:00:42 prlw1 Exp $
 
 DISTNAME=	scipy-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,6 +36,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	36 27
 REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 
 .include "../../mk/bsd.prefs.mk"
+
+post-extract:
+	${CHMOD} -R g-w ${WRKSRC}
+	${CHMOD} 0644 ${WRKSRC}/scipy/optimize/_shgo_lib/sobol_vec.gz
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
