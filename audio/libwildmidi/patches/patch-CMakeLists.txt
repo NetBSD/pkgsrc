@@ -1,19 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2020/08/08 21:18:30 schmonz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/04/06 07:53:56 wiz Exp $
 
 Don't build so specially for macOS.
 
---- CMakeLists.txt.orig	2018-11-24 08:55:50.000000000 +0000
+--- CMakeLists.txt.orig	2021-03-21 08:55:50.000000000 +0000
 +++ CMakeLists.txt
-@@ -13,7 +13,7 @@ SET(SOVERSION 2)
- SET(VERSION 2.1.0)
- 
- # Find Macros
--SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
-+SET (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
- 
- INCLUDE(CMakeDependentOption)
- INCLUDE(CheckCCompilerFlag)
-@@ -44,7 +44,7 @@ OPTION(WANT_OSX_DEPLOYMENT "OSX Deployme
+@@ -42,7 +42,7 @@ OPTION(WANT_OSX_DEPLOYMENT "OSX Deployme
  IF (WIN32 AND MSVC)
      OPTION(WANT_MP_BUILD "Build with Multiple Processes (/MP)" OFF)
  ENDIF ()
@@ -22,7 +13,7 @@ Don't build so specially for macOS.
      SET(WILDMIDI_CFG "/etc/wildmidi/wildmidi.cfg" CACHE STRING "default config location")
  ELSE ()
      SET(WILDMIDI_CFG "wildmidi.cfg" CACHE STRING "default config location")
-@@ -152,6 +152,7 @@ CHECK_C_SOURCE_COMPILES("static __inline
+@@ -144,6 +144,7 @@ CHECK_C_SOURCE_COMPILES("static __inline
  # we must not have any unresolved symbols:
  if (APPLE)
      SET(EXTRA_LDFLAGS "-Wl,-undefined,error")
@@ -30,7 +21,7 @@ Don't build so specially for macOS.
  ELSE()
      SET(OLD_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")
      SET(CMAKE_REQUIRED_FLAGS "${OLD_REQUIRED_FLAGS} -Wl,--no-undefined")
-@@ -284,19 +285,11 @@ IF (AMIGA OR AROS)
+@@ -261,19 +262,11 @@ IF (AMIGA OR AROS)
  ENDIF ()
  
  IF (APPLE)
@@ -48,5 +39,5 @@ Don't build so specially for macOS.
 -ENDIF (APPLE)
 -
  # Setup up our config file
- CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/include/config.h.cmake" "${CMAKE_BINARY_DIR}/include/config.h")
+ CONFIGURE_FILE("${PROJECT_SOURCE_DIR}/include/config.h.cmake" "${PROJECT_BINARY_DIR}/include/config.h")
  

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/08/08 21:18:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/06 07:53:56 wiz Exp $
 
-DISTNAME=	wildmidi-0.4.3
+DISTNAME=	wildmidi-0.4.4
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Mindwerks/}
@@ -15,12 +15,6 @@ LICENSE=	gnu-lgpl-v3
 WRKSRC=		${WRKDIR}/wildmidi-${DISTNAME}
 USE_LANGUAGES=	c99
 USE_CMAKE=	yes
-
-SUBST_CLASSES+=		man
-SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
-SUBST_FILES.man+=	src/CMakeLists.txt
-SUBST_STAGE.man=	post-extract
-SUBST_MESSAGE.man=	Fixing man page installation path.
 
 .include "../../mk/bsd.prefs.mk"
 
