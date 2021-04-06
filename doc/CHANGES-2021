@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2005 2021/04/06 19:55:52 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2006 2021/04/06 20:16:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3074,3 +3074,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.6.0 [adam 2021-04-06]
 	Updated www/py-bleach to 3.3.0 [adam 2021-04-06]
 	Updated www/py-draftjs_exporter to 4.1.2 [adam 2021-04-06]
+	Updated devel/py-kaitaistruct to 0.9 [adam 2021-04-06]
+	Updated misc/py-tqdm to 4.60.0 [adam 2021-04-06]
