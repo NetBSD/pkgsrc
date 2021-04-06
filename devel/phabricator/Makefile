@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/01/01 09:05:07 taca Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/06 14:36:48 adam Exp $
 
 DISTNAME=		phabricator-20170609
 PKGREVISION=		1
@@ -31,7 +31,6 @@ DEPENDS+=		${PHP_PKG_PREFIX}-apcu<5:../../www/php-apcu4
 .else
 DEPENDS+=		${PHP_PKG_PREFIX}-apcu>=5:../../www/php-apcu
 .endif
-#DEPENDS+=		:../../textproc/py-pygments?
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 DEPENDS+=		arcanist-[0-9]*:../../devel/arcanist
 
