@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1990 2021/04/06 07:59:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1991 2021/04/06 08:34:00 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3049,3 +3049,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.2.1 [adam 2021-04-06]
 	Updated sysutils/macchina to 0.6.3 [pin 2021-04-06]
 	Updated audio/libwildmidi to 0.4.4 [wiz 2021-04-06]
+	Updated devel/py-pybind11 to 2.6.2 [tnn 2021-04-06]
+	Updated math/py-scipy to 1.6.2 [tnn 2021-04-06]
+	Added x11/py-qtgraph-qt5 version 0.12.0 [tnn 2021-04-06]
