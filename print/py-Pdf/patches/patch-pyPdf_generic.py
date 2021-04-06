@@ -1,4 +1,4 @@
-$NetBSD: patch-pyPdf_generic.py,v 1.1 2014/01/23 14:38:42 wiz Exp $
+$NetBSD: patch-pyPdf_generic.py,v 1.2 2021/04/06 18:57:10 joerg Exp $
 
 python-3.x compatibility.
 
@@ -22,7 +22,41 @@ python-3.x compatibility.
          while True:
              # skip leading whitespace
              tok = stream.read(1)
-@@ -425,7 +425,7 @@ class NameObject(str, PdfObject):
+@@ -245,20 +245,22 @@ def createStringObject(string):
+         return TextStringObject(string)
+     elif isinstance(string, str):
+         if string.startswith(codecs.BOM_UTF16_BE):
+-            retval = TextStringObject(string.decode("utf-16"))
+-            retval.autodetect_utf16 = True
+-            return retval
+-        else:
+-            # This is probably a big performance hit here, but we need to
+-            # convert string objects into the text/unicode-aware version if
+-            # possible... and the only way to check if that's possible is
+-            # to try.  Some strings are strings, some are just byte arrays.
+             try:
+-                retval = TextStringObject(decode_pdfdocencoding(string))
+-                retval.autodetect_pdfdocencoding = True
++                retval = TextStringObject(string.decode("utf-16"))
++                retval.autodetect_utf16 = True
+                 return retval
+             except UnicodeDecodeError:
+-                return ByteStringObject(string)
++                pass
++        # This is probably a big performance hit here, but we need to
++        # convert string objects into the text/unicode-aware version if
++        # possible... and the only way to check if that's possible is
++        # to try.  Some strings are strings, some are just byte arrays.
++        try:
++            retval = TextStringObject(decode_pdfdocencoding(string))
++            retval.autodetect_pdfdocencoding = True
++            return retval
++        except UnicodeDecodeError:
++            return ByteStringObject(string)
+     else:
+         raise TypeError("createStringObject should have str or unicode arg")
+ 
+@@ -425,7 +427,7 @@ class NameObject(str, PdfObject):
      def readFromStream(stream):
          name = stream.read(1)
          if name != "/":
@@ -31,7 +65,7 @@ python-3.x compatibility.
          while True:
              tok = stream.read(1)
              if tok.isspace() or tok in NameObject.delimiterCharacters:
-@@ -517,7 +517,7 @@ class DictionaryObject(dict, PdfObject):
+@@ -517,7 +519,7 @@ class DictionaryObject(dict, PdfObject):
      def readFromStream(stream, pdf):
          tmp = stream.read(2)
          if tmp != "<<":
@@ -40,7 +74,7 @@ python-3.x compatibility.
          data = {}
          while True:
              tok = readNonWhitespace(stream)
-@@ -531,7 +531,7 @@ class DictionaryObject(dict, PdfObject):
+@@ -531,7 +533,7 @@ class DictionaryObject(dict, PdfObject):
              value = readObject(stream, pdf)
              if data.has_key(key):
                  # multiple definitions of key not permitted
@@ -49,7 +83,7 @@ python-3.x compatibility.
              data[key] = value
          pos = stream.tell()
          s = readNonWhitespace(stream)
-@@ -570,7 +570,7 @@ class DictionaryObject(dict, PdfObject):
+@@ -570,7 +572,7 @@ class DictionaryObject(dict, PdfObject):
                      data["__streamdata__"] = data["__streamdata__"][:-1]
                  else:
                      stream.seek(pos, 0)
@@ -58,7 +92,7 @@ python-3.x compatibility.
          else:
              stream.seek(pos, 0)
          if data.has_key("__streamdata__"):
-@@ -655,7 +655,7 @@ class EncodedStreamObject(StreamObject):
+@@ -655,7 +657,7 @@ class EncodedStreamObject(StreamObject):
              return decoded._data
  
      def setData(self, data):
