@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/06 09:59:00 tnn Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/click_plugins/__init__.py
+${PYSITELIB}/click_plugins/__init__.pyc
+${PYSITELIB}/click_plugins/__init__.pyo
+${PYSITELIB}/click_plugins/core.py
+${PYSITELIB}/click_plugins/core.pyc
+${PYSITELIB}/click_plugins/core.pyo
