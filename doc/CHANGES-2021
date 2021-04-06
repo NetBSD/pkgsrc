@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1988 2021/04/06 07:19:17 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1989 2021/04/06 07:54:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3046,3 +3046,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-braintree to 4.7.0 [adam 2021-04-05]
 	Updated security/py-google-auth-oauthlib to 0.4.4 [adam 2021-04-05]
 	Updated sysutils/macchina to 0.6.3 [pin 2021-04-06]
+	Updated audio/libwildmidi to 0.4.4 [wiz 2021-04-06]
