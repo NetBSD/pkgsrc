@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:34:31 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/06 15:03:32 adam Exp $
 
 DISTNAME=	minted
 PKGNAME=	tex-${DISTNAME}-2.5
@@ -17,9 +17,12 @@ DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 TEXLIVE_UNVERSIONED=	yes
-.include "../../print/texlive/package.mk"
+
+PYTHON_VERSIONED_DEPENDENCIES=	pygments
+
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/versioned_dependencies.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
