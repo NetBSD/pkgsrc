@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2006 2021/04/06 20:16:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2007 2021/04/06 20:40:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3076,3 +3076,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-draftjs_exporter to 4.1.2 [adam 2021-04-06]
 	Updated devel/py-kaitaistruct to 0.9 [adam 2021-04-06]
 	Updated misc/py-tqdm to 4.60.0 [adam 2021-04-06]
+	Added print/texlab version 2.2.2 [wiz 2021-04-06]
