@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/02/26 16:09:55 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/04/06 20:01:36 adam Exp $
 
-SHA1 (kaitaistruct-0.8.tar.gz) = bea11b64259a36e74b3f0e03793912b06efeca2c
-RMD160 (kaitaistruct-0.8.tar.gz) = bc96d8d4e051319b4e5b895b53dbc8702f90fd25
-SHA512 (kaitaistruct-0.8.tar.gz) = 8361e30c5bec9a7c57c280d277232ff4123686f29f3813e61cde9bf7512ead2e2f447ea1e18b8925aefe432edbbd9682a690293dcb928a9049c4c81832b5666f
-Size (kaitaistruct-0.8.tar.gz) = 5158 bytes
+SHA1 (kaitaistruct-0.9.tar.gz) = c1671823fccb22d5c7c5d5072c0202e0ad255e7c
+RMD160 (kaitaistruct-0.9.tar.gz) = 272981cdc06dd84f9060f59bf0307cbe03b9f48f
+SHA512 (kaitaistruct-0.9.tar.gz) = 4654f18d72f31745f27eed035899231e69f9539a8e8322055b0dd99ad701dbd4d484357d0bc42f5a1953abc6947a90fc5ec9da80aeb862077c175c1295549682
+Size (kaitaistruct-0.9.tar.gz) = 5497 bytes
