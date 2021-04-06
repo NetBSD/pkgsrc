@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2004 2021/04/06 19:45:09 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2005 2021/04/06 19:55:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3072,3 +3072,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-wagtail to 2.12.2 [joerg 2021-04-06]
 	Updated www/py-asgiref to 3.3.4 [adam 2021-04-06]
 	Updated textproc/py-xmlschema to 1.6.0 [adam 2021-04-06]
+	Updated www/py-bleach to 3.3.0 [adam 2021-04-06]
+	Updated www/py-draftjs_exporter to 4.1.2 [adam 2021-04-06]
