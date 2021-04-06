@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2019/07/15 14:39:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/06 07:53:56 wiz Exp $
 bin/wildmidi
 include/wildmidi_lib.h
+lib/cmake/WildMidi/WildMidiConfig.cmake
+lib/cmake/WildMidi/WildMidiConfigVersion.cmake
+lib/cmake/WildMidi/WildMidiTargets-debug.cmake
+lib/cmake/WildMidi/WildMidiTargets.cmake
 lib/libWildMidi.so
 lib/libWildMidi.so.2
 lib/libWildMidi.so.2.1.0
