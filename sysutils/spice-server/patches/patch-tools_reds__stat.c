@@ -1,6 +1,6 @@
-$NetBSD: patch-tools_reds__stat.c,v 1.2 2021/01/10 14:53:47 jperkin Exp $
+$NetBSD: patch-tools_reds__stat.c,v 1.3 2021/04/06 23:43:40 khorben Exp $
 
-Add SunOS and NetBSD support.
+Add SunOS, NetBSD, and macOS support.
 
 --- tools/reds_stat.c.orig	2020-02-27 11:26:12.000000000 +0000
 +++ tools/reds_stat.c
@@ -10,7 +10,7 @@ Add SunOS and NetBSD support.
              shm_size = header_size + num_of_nodes * sizeof(SpiceStatNode);
 +#if defined(__NetBSD__)
 +            reds_stat = mremap(reds_stat, shm_old_size, NULL, shm_size, 0);
-+#elif defined(__sun)
++#elif defined(__sun) || defined(__APPLE__)
 +            munmap(reds_stat, shm_old_size);
 +            reds_stat = (SpiceStat *)mmap(NULL, shm_size, PROT_READ, MAP_SHARED, fd, 0);
 +#else
