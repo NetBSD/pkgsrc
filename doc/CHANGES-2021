@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2002 2021/04/06 19:05:14 joerg Exp $
+$NetBSD: CHANGES-2021,v 1.2003 2021/04/06 19:17:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3069,3 +3069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-gunicorn to 20.1.0 [adam 2021-04-06]
 	Updated sysutils/macchina to 0.6.5 [pin 2021-04-06]
 	Updated www/py-django-modelcluster to 5.1 [joerg 2021-04-06]
+	Updated www/py-wagtail to 2.12.2 [joerg 2021-04-06]
