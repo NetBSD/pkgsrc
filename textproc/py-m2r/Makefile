@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/10/14 12:10:47 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/06 15:03:32 adam Exp $
 
 DISTNAME=	m2r-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,12 +12,14 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-mistune-[0-9]*:../../textproc/py-mistune
-TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES=	pygments:test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} m2r m2r-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
