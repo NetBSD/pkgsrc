@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/05 19:25:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/06 04:50:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,9 +19,6 @@ ${PYSITELIB}/elementpath/datatypes/binary.pyo
 ${PYSITELIB}/elementpath/datatypes/datetime.py
 ${PYSITELIB}/elementpath/datatypes/datetime.pyc
 ${PYSITELIB}/elementpath/datatypes/datetime.pyo
-${PYSITELIB}/elementpath/datatypes/helpers.py
-${PYSITELIB}/elementpath/datatypes/helpers.pyc
-${PYSITELIB}/elementpath/datatypes/helpers.pyo
 ${PYSITELIB}/elementpath/datatypes/numeric.py
 ${PYSITELIB}/elementpath/datatypes/numeric.pyc
 ${PYSITELIB}/elementpath/datatypes/numeric.pyo
@@ -43,6 +40,9 @@ ${PYSITELIB}/elementpath/datatypes/uri.pyo
 ${PYSITELIB}/elementpath/exceptions.py
 ${PYSITELIB}/elementpath/exceptions.pyc
 ${PYSITELIB}/elementpath/exceptions.pyo
+${PYSITELIB}/elementpath/helpers.py
+${PYSITELIB}/elementpath/helpers.pyc
+${PYSITELIB}/elementpath/helpers.pyo
 ${PYSITELIB}/elementpath/namespaces.py
 ${PYSITELIB}/elementpath/namespaces.pyc
 ${PYSITELIB}/elementpath/namespaces.pyo
