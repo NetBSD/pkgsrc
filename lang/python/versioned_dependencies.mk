@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.49 2021/03/10 18:44:02 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.50 2021/04/06 14:14:08 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo dialog eliot html2text hypothesis ipython jsonlib more-itertools python-digest rsa setuptools sphinx test zipp
+#       Possible values: Pmw Pillow X cairo dialog eliot html2text hypothesis ipython jsonlib more-itertools pygments python-digest rsa setuptools sphinx test zipp
 #       Default: (nothing)
 #
 
@@ -30,6 +30,7 @@ _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
+_SUPPORTED_PACKAGES+=	pygments textproc/py-pygments25 textproc/py-pygments
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 _SUPPORTED_PACKAGES+=	rsa security/py-rsa40 security/py-rsa
 _SUPPORTED_PACKAGES+=	setuptools devel/py-setuptools44 devel/py-setuptools
