@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/08/08 21:18:30 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2021/04/06 07:53:56 wiz Exp $
 
-SHA1 (wildmidi-0.4.3.tar.gz) = 0a2294106690709263f9bf2b5604edb5ad8f5920
-RMD160 (wildmidi-0.4.3.tar.gz) = 366715c08a344e07bdf783c21b2f00c078feea8f
-SHA512 (wildmidi-0.4.3.tar.gz) = 7e86e998ee97cdf57328e4cf5ef52a64926fd01999879c0eae5b6c823be4e6d116f7026230bd15d209e6616fbc7ba1c29ebd1f3be04735e341ce5c83298f956f
-Size (wildmidi-0.4.3.tar.gz) = 196750 bytes
-SHA1 (patch-CMakeLists.txt) = fc91d32db65d9b33b74e96ce5cc9254d93e73dcd
-SHA1 (patch-src_CMakeLists.txt) = e5d391fc3a341f0e1d7a4523f51e96b6cfa921a4
+SHA1 (wildmidi-0.4.4.tar.gz) = 3c95c8ff211aa8b114d0ae70c5e812cbfa641b7a
+RMD160 (wildmidi-0.4.4.tar.gz) = af6573feeee6f443c51d42ebf9e76963c88bdbcf
+SHA512 (wildmidi-0.4.4.tar.gz) = 5b74ee83f1d7ce3b45d2f996aaa30ec6e7d7808eab294a3eaf6fcef77443523df1f54bb0fb1b3105edd0d72d75885fda1a2e97c68defb5bbd687bda5077d3454
+Size (wildmidi-0.4.4.tar.gz) = 197597 bytes
+SHA1 (patch-CMakeLists.txt) = 62675c407b01fd49d81089f75f4da43fadd2fcf2
