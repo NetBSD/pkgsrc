@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/03/20 07:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/06 18:55:05 joerg Exp $
 
 DISTNAME=	boto3-1.17.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.20.33:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.3.0:../../net/py-s3transfer
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
 
