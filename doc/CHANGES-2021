@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1994 2021/04/06 12:16:08 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1995 2021/04/06 12:17:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3056,3 +3056,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/fasttracker2 to 1.46 [fox 2021-04-06]
 	Removed lang/gcc5 [nia 2021-04-02]
 	Removed lang/gcc5-libs [nia 2021-04-02]
+	Updated math/py-statsmodels to 0.12.2 [prlw1 2021-04-06]
