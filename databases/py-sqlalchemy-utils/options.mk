@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/05/18 10:45:19 adam Exp $
+# $NetBSD: options.mk,v 1.6 2021/04/06 14:23:25 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
@@ -44,9 +44,8 @@ DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-PYTHON_VERSIONED_DEPENDENCIES=	test
+PYTHON_VERSIONED_DEPENDENCIES=	pygments test
 .include "../../lang/python/versioned_dependencies.mk"
-DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-flexmock>=0.9.7:../../devel/py-flexmock
