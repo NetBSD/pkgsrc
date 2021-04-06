@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/17 18:57:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/06 14:36:48 adam Exp $
 
 DISTNAME=	infinity-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,15 +12,14 @@ LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=2.4.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.2:../../devel/py-isort
-TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	pygments:test test:test
 
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
