@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1997 2021/04/06 14:48:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1998 2021/04/06 15:01:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mosquitto to 2.0.10 [gdt 2021-04-06]
 	Updated net/py-softlayer to 5.9.3 [adam 2021-04-06]
 	Added textproc/py-pygments25 version 2.5.2 [adam 2021-04-06]
+	Added sysutils/xplr version 0.3.2 [pin 2021-04-06]
