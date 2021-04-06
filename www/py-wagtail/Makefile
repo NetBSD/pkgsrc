@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/10/13 20:26:38 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/06 19:15:02 joerg Exp $
 
-DISTNAME=	wagtail-2.10.2
+DISTNAME=	wagtail-2.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://wagtail.io/
 COMMENT=	Django-based Content Management System
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2<3.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=2.2<3.2:../../www/py-django2
 DEPENDS+=	${PYPKGPREFIX}-django-filter>=2.2.0:../../www/py-django-filter
-DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=5.0<6.0:../../www/py-django-modelcluster
+DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=5.1<6.0:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=1.0<2.0:../../www/py-django-taggit
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.2<5.0:../../www/py-django-treebeard
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.11.1<4.0:../../www/py-djangorestframework
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0<8.0.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0<9.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Willow>=1.4<1.5.0:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8<5.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999<2:../../textproc/py-html5lib
