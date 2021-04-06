@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2021/02/07 06:30:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2021/04/06 14:36:48 adam Exp $
 
 DISTNAME=	cppcheck-2.1
 PKGREVISION=	6
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=		c c++0x
 USE_TOOLS+=		gmake
@@ -42,6 +41,8 @@ REPLACE_PYTHON+=	htmlreport/cppcheck-htmlreport
 
 TEST_TARGET=		test
 
+PYTHON_VERSIONED_DEPENDENCIES=	pygments
+
 .include "options.mk"
 
 .PHONY: man-install
@@ -49,7 +50,8 @@ post-install: man-install
 man-install:
 	${INSTALL_DATA} ${WRKSRC}/cppcheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../lang/python/application.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/z3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
