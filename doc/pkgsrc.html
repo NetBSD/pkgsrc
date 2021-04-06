@@ -4925,14 +4925,14 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <dt><span class="term">readme</span></dt>
 <dd>
 <p>This target generates a
-	  <code class="filename">README.html</code> file, which can be
+	  <code class="filename">index.html</code> file, which can be
 	  viewed using a browser such as <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.  The generated files
 	  contain references to any packages which are in the
 	  <code class="varname">PACKAGES</code> directory on the local
 	  host. The generated files can be made to refer to URLs
 	  based on <code class="varname">FTP_PKG_URL_HOST</code> and
 	  <code class="varname">FTP_PKG_URL_DIR</code>. For example, if I
-	  wanted to generate <code class="filename">README.html</code>
+	  wanted to generate <code class="filename">index.html</code>
 	  files which pointed to binary packages on the local
 	  machine, in the directory
 	  <code class="filename">/usr/packages</code>, set
@@ -4951,7 +4951,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  list of all packages currently available in the NetBSD
 	  Packages Collection, together with the category they belong
 	  to and a short description. This file is compiled from the
-	  <code class="filename">pkgsrc/*/README.html</code> files, so be sure
+	  <code class="filename">pkgsrc/*/index.html</code> files, so be sure
 	  to run this <span class="emphasis"><em>after</em></span> a <span class="command"><strong>make
 	  readme</strong></span>.</p></dd>
 <dt><span class="term">cdrom-readme</span></dt>
@@ -4959,7 +4959,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <span class="quote">&#8220;<span class="quote">readme</span>&#8221;</span> target (see above), but is to be
 	  used when generating a pkgsrc tree to be written to a
 	  CD-ROM.  This target also produces
-	  <code class="filename">README.html</code> files, and can be made
+	  <code class="filename">index.html</code> files, and can be made
 	  to refer to URLs based on
 	  <code class="varname">CDROM_PKG_URL_HOST</code> and
 	  <code class="varname">CDROM_PKG_URL_DIR</code>.</p></dd>
