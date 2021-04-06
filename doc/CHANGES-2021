@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1995 2021/04/06 12:17:12 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.1996 2021/04/06 13:16:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3057,3 +3057,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/gcc5 [nia 2021-04-02]
 	Removed lang/gcc5-libs [nia 2021-04-02]
 	Updated math/py-statsmodels to 0.12.2 [prlw1 2021-04-06]
+	Updated net/mosquitto to 2.0.10 [gdt 2021-04-06]
