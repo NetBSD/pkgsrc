@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/17 21:38:46 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/06 15:03:32 adam Exp $
 
 DISTNAME=	Sphinx-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize-[0-9]*:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.1nb1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=1.1:../../textproc/py-snowballstemmer
@@ -33,13 +32,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	pygments test:test
 
-USE_LANGUAGES=		# none
-USE_TOOLS+=		makeinfo
+USE_LANGUAGES=	# none
+USE_TOOLS+=	makeinfo
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
