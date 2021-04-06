@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/10/12 21:52:04 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/06 12:16:47 prlw1 Exp $
 
-DISTNAME=	statsmodels-0.11.1
+DISTNAME=	statsmodels-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
 
@@ -11,15 +10,19 @@ HOMEPAGE=	https://www.statsmodels.org/
 COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.24:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.19:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.4.0:../../math/py-patsy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18:../../math/py-scipy
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
 USE_LANGUAGES=			c
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.21:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5:../../math/py-patsy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../math/py-scipy
+
+post-extract:
+	${CHMOD} -R o-w,g-w ${WRKSRC}
+	${FIND} ${WRKSRC} -type f -printx | ${XARGS} ${CHMOD} a-x
+
 .include "../../lang/python/egg.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.11
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.15
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
