@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/03/09 18:34:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/04/06 15:27:29 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -93,6 +93,9 @@ ${PYSITELIB}/pygments/lexers/_mapping.pyo
 ${PYSITELIB}/pygments/lexers/_mql_builtins.py
 ${PYSITELIB}/pygments/lexers/_mql_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_mql_builtins.pyo
+${PYSITELIB}/pygments/lexers/_mysql_builtins.py
+${PYSITELIB}/pygments/lexers/_mysql_builtins.pyc
+${PYSITELIB}/pygments/lexers/_mysql_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_openedge_builtins.py
 ${PYSITELIB}/pygments/lexers/_openedge_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_openedge_builtins.pyo
@@ -117,6 +120,9 @@ ${PYSITELIB}/pygments/lexers/_stata_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.py
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.pyo
+${PYSITELIB}/pygments/lexers/_usd_builtins.py
+${PYSITELIB}/pygments/lexers/_usd_builtins.pyc
+${PYSITELIB}/pygments/lexers/_usd_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_vbscript_builtins.py
 ${PYSITELIB}/pygments/lexers/_vbscript_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_vbscript_builtins.pyo
@@ -135,6 +141,9 @@ ${PYSITELIB}/pygments/lexers/algebra.pyo
 ${PYSITELIB}/pygments/lexers/ambient.py
 ${PYSITELIB}/pygments/lexers/ambient.pyc
 ${PYSITELIB}/pygments/lexers/ambient.pyo
+${PYSITELIB}/pygments/lexers/amdgpu.py
+${PYSITELIB}/pygments/lexers/amdgpu.pyc
+${PYSITELIB}/pygments/lexers/amdgpu.pyo
 ${PYSITELIB}/pygments/lexers/ampl.py
 ${PYSITELIB}/pygments/lexers/ampl.pyc
 ${PYSITELIB}/pygments/lexers/ampl.pyo
@@ -144,12 +153,18 @@ ${PYSITELIB}/pygments/lexers/apl.pyo
 ${PYSITELIB}/pygments/lexers/archetype.py
 ${PYSITELIB}/pygments/lexers/archetype.pyc
 ${PYSITELIB}/pygments/lexers/archetype.pyo
+${PYSITELIB}/pygments/lexers/arrow.py
+${PYSITELIB}/pygments/lexers/arrow.pyc
+${PYSITELIB}/pygments/lexers/arrow.pyo
 ${PYSITELIB}/pygments/lexers/asm.py
 ${PYSITELIB}/pygments/lexers/asm.pyc
 ${PYSITELIB}/pygments/lexers/asm.pyo
 ${PYSITELIB}/pygments/lexers/automation.py
 ${PYSITELIB}/pygments/lexers/automation.pyc
 ${PYSITELIB}/pygments/lexers/automation.pyo
+${PYSITELIB}/pygments/lexers/bare.py
+${PYSITELIB}/pygments/lexers/bare.pyc
+${PYSITELIB}/pygments/lexers/bare.pyo
 ${PYSITELIB}/pygments/lexers/basic.py
 ${PYSITELIB}/pygments/lexers/basic.pyc
 ${PYSITELIB}/pygments/lexers/basic.pyo
@@ -171,6 +186,9 @@ ${PYSITELIB}/pygments/lexers/c_like.pyo
 ${PYSITELIB}/pygments/lexers/capnproto.py
 ${PYSITELIB}/pygments/lexers/capnproto.pyc
 ${PYSITELIB}/pygments/lexers/capnproto.pyo
+${PYSITELIB}/pygments/lexers/cddl.py
+${PYSITELIB}/pygments/lexers/cddl.pyc
+${PYSITELIB}/pygments/lexers/cddl.pyo
 ${PYSITELIB}/pygments/lexers/chapel.py
 ${PYSITELIB}/pygments/lexers/chapel.pyc
 ${PYSITELIB}/pygments/lexers/chapel.pyo
@@ -204,6 +222,9 @@ ${PYSITELIB}/pygments/lexers/dalvik.pyo
 ${PYSITELIB}/pygments/lexers/data.py
 ${PYSITELIB}/pygments/lexers/data.pyc
 ${PYSITELIB}/pygments/lexers/data.pyo
+${PYSITELIB}/pygments/lexers/devicetree.py
+${PYSITELIB}/pygments/lexers/devicetree.pyc
+${PYSITELIB}/pygments/lexers/devicetree.pyo
 ${PYSITELIB}/pygments/lexers/diff.py
 ${PYSITELIB}/pygments/lexers/diff.pyc
 ${PYSITELIB}/pygments/lexers/diff.pyo
@@ -264,6 +285,12 @@ ${PYSITELIB}/pygments/lexers/freefem.pyo
 ${PYSITELIB}/pygments/lexers/functional.py
 ${PYSITELIB}/pygments/lexers/functional.pyc
 ${PYSITELIB}/pygments/lexers/functional.pyo
+${PYSITELIB}/pygments/lexers/futhark.py
+${PYSITELIB}/pygments/lexers/futhark.pyc
+${PYSITELIB}/pygments/lexers/futhark.pyo
+${PYSITELIB}/pygments/lexers/gdscript.py
+${PYSITELIB}/pygments/lexers/gdscript.pyc
+${PYSITELIB}/pygments/lexers/gdscript.pyo
 ${PYSITELIB}/pygments/lexers/go.py
 ${PYSITELIB}/pygments/lexers/go.pyc
 ${PYSITELIB}/pygments/lexers/go.pyo
@@ -276,6 +303,9 @@ ${PYSITELIB}/pygments/lexers/graph.pyo
 ${PYSITELIB}/pygments/lexers/graphics.py
 ${PYSITELIB}/pygments/lexers/graphics.pyc
 ${PYSITELIB}/pygments/lexers/graphics.pyo
+${PYSITELIB}/pygments/lexers/graphviz.py
+${PYSITELIB}/pygments/lexers/graphviz.pyc
+${PYSITELIB}/pygments/lexers/graphviz.pyo
 ${PYSITELIB}/pygments/lexers/haskell.py
 ${PYSITELIB}/pygments/lexers/haskell.pyc
 ${PYSITELIB}/pygments/lexers/haskell.pyo
@@ -351,6 +381,9 @@ ${PYSITELIB}/pygments/lexers/modula2.pyo
 ${PYSITELIB}/pygments/lexers/monte.py
 ${PYSITELIB}/pygments/lexers/monte.pyc
 ${PYSITELIB}/pygments/lexers/monte.pyo
+${PYSITELIB}/pygments/lexers/mosel.py
+${PYSITELIB}/pygments/lexers/mosel.pyc
+${PYSITELIB}/pygments/lexers/mosel.pyo
 ${PYSITELIB}/pygments/lexers/ncl.py
 ${PYSITELIB}/pygments/lexers/ncl.pyc
 ${PYSITELIB}/pygments/lexers/ncl.pyo
@@ -393,6 +426,9 @@ ${PYSITELIB}/pygments/lexers/perl.pyo
 ${PYSITELIB}/pygments/lexers/php.py
 ${PYSITELIB}/pygments/lexers/php.pyc
 ${PYSITELIB}/pygments/lexers/php.pyo
+${PYSITELIB}/pygments/lexers/pointless.py
+${PYSITELIB}/pygments/lexers/pointless.pyc
+${PYSITELIB}/pygments/lexers/pointless.pyo
 ${PYSITELIB}/pygments/lexers/pony.py
 ${PYSITELIB}/pygments/lexers/pony.pyc
 ${PYSITELIB}/pygments/lexers/pony.pyo
@@ -402,6 +438,9 @@ ${PYSITELIB}/pygments/lexers/praat.pyo
 ${PYSITELIB}/pygments/lexers/prolog.py
 ${PYSITELIB}/pygments/lexers/prolog.pyc
 ${PYSITELIB}/pygments/lexers/prolog.pyo
+${PYSITELIB}/pygments/lexers/promql.py
+${PYSITELIB}/pygments/lexers/promql.pyc
+${PYSITELIB}/pygments/lexers/promql.pyo
 ${PYSITELIB}/pygments/lexers/python.py
 ${PYSITELIB}/pygments/lexers/python.pyc
 ${PYSITELIB}/pygments/lexers/python.pyo
@@ -420,6 +459,9 @@ ${PYSITELIB}/pygments/lexers/rebol.pyo
 ${PYSITELIB}/pygments/lexers/resource.py
 ${PYSITELIB}/pygments/lexers/resource.pyc
 ${PYSITELIB}/pygments/lexers/resource.pyo
+${PYSITELIB}/pygments/lexers/ride.py
+${PYSITELIB}/pygments/lexers/ride.pyc
+${PYSITELIB}/pygments/lexers/ride.pyo
 ${PYSITELIB}/pygments/lexers/rnc.py
 ${PYSITELIB}/pygments/lexers/rnc.pyc
 ${PYSITELIB}/pygments/lexers/rnc.pyo
@@ -450,6 +492,9 @@ ${PYSITELIB}/pygments/lexers/sgf.pyo
 ${PYSITELIB}/pygments/lexers/shell.py
 ${PYSITELIB}/pygments/lexers/shell.pyc
 ${PYSITELIB}/pygments/lexers/shell.pyo
+${PYSITELIB}/pygments/lexers/sieve.py
+${PYSITELIB}/pygments/lexers/sieve.pyc
+${PYSITELIB}/pygments/lexers/sieve.pyo
 ${PYSITELIB}/pygments/lexers/slash.py
 ${PYSITELIB}/pygments/lexers/slash.pyc
 ${PYSITELIB}/pygments/lexers/slash.pyo
@@ -501,6 +546,9 @@ ${PYSITELIB}/pygments/lexers/textfmts.pyo
 ${PYSITELIB}/pygments/lexers/theorem.py
 ${PYSITELIB}/pygments/lexers/theorem.pyc
 ${PYSITELIB}/pygments/lexers/theorem.pyo
+${PYSITELIB}/pygments/lexers/tnt.py
+${PYSITELIB}/pygments/lexers/tnt.pyc
+${PYSITELIB}/pygments/lexers/tnt.pyo
 ${PYSITELIB}/pygments/lexers/trafficscript.py
 ${PYSITELIB}/pygments/lexers/trafficscript.pyc
 ${PYSITELIB}/pygments/lexers/trafficscript.pyo
@@ -513,6 +561,9 @@ ${PYSITELIB}/pygments/lexers/unicon.pyo
 ${PYSITELIB}/pygments/lexers/urbi.py
 ${PYSITELIB}/pygments/lexers/urbi.pyc
 ${PYSITELIB}/pygments/lexers/urbi.pyo
+${PYSITELIB}/pygments/lexers/usd.py
+${PYSITELIB}/pygments/lexers/usd.pyc
+${PYSITELIB}/pygments/lexers/usd.pyo
 ${PYSITELIB}/pygments/lexers/varnish.py
 ${PYSITELIB}/pygments/lexers/varnish.pyc
 ${PYSITELIB}/pygments/lexers/varnish.pyo
@@ -522,6 +573,9 @@ ${PYSITELIB}/pygments/lexers/verification.pyo
 ${PYSITELIB}/pygments/lexers/web.py
 ${PYSITELIB}/pygments/lexers/web.pyc
 ${PYSITELIB}/pygments/lexers/web.pyo
+${PYSITELIB}/pygments/lexers/webidl.py
+${PYSITELIB}/pygments/lexers/webidl.pyc
+${PYSITELIB}/pygments/lexers/webidl.pyo
 ${PYSITELIB}/pygments/lexers/webmisc.py
 ${PYSITELIB}/pygments/lexers/webmisc.pyc
 ${PYSITELIB}/pygments/lexers/webmisc.pyo
@@ -534,6 +588,9 @@ ${PYSITELIB}/pygments/lexers/x10.pyo
 ${PYSITELIB}/pygments/lexers/xorg.py
 ${PYSITELIB}/pygments/lexers/xorg.pyc
 ${PYSITELIB}/pygments/lexers/xorg.pyo
+${PYSITELIB}/pygments/lexers/yang.py
+${PYSITELIB}/pygments/lexers/yang.pyc
+${PYSITELIB}/pygments/lexers/yang.pyo
 ${PYSITELIB}/pygments/lexers/zig.py
 ${PYSITELIB}/pygments/lexers/zig.pyc
 ${PYSITELIB}/pygments/lexers/zig.pyo
@@ -606,6 +663,9 @@ ${PYSITELIB}/pygments/styles/lovelace.pyo
 ${PYSITELIB}/pygments/styles/manni.py
 ${PYSITELIB}/pygments/styles/manni.pyc
 ${PYSITELIB}/pygments/styles/manni.pyo
+${PYSITELIB}/pygments/styles/material.py
+${PYSITELIB}/pygments/styles/material.pyc
+${PYSITELIB}/pygments/styles/material.pyo
 ${PYSITELIB}/pygments/styles/monokai.py
 ${PYSITELIB}/pygments/styles/monokai.pyc
 ${PYSITELIB}/pygments/styles/monokai.pyo
@@ -660,6 +720,9 @@ ${PYSITELIB}/pygments/styles/vs.pyo
 ${PYSITELIB}/pygments/styles/xcode.py
 ${PYSITELIB}/pygments/styles/xcode.pyc
 ${PYSITELIB}/pygments/styles/xcode.pyo
+${PYSITELIB}/pygments/styles/zenburn.py
+${PYSITELIB}/pygments/styles/zenburn.pyc
+${PYSITELIB}/pygments/styles/zenburn.pyo
 ${PYSITELIB}/pygments/token.py
 ${PYSITELIB}/pygments/token.pyc
 ${PYSITELIB}/pygments/token.pyo
