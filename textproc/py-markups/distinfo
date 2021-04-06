@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/02/11 03:31:37 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2021/04/06 14:58:43 adam Exp $
 
-SHA1 (Markups-3.1.0.tar.gz) = e2a816f640000ab6595557713001225279f98ae9
-RMD160 (Markups-3.1.0.tar.gz) = 17897a3deadfbcaf23b9b2afc89cd9bf37bf6b2d
-SHA512 (Markups-3.1.0.tar.gz) = eaf99b8f521dc93008e0e2519e5c6e8885609457739378d5af6e3aa044a9dd1370bf906a061d8a284d8ad4f9c5196c01a6d8dde3a4630898fe4711154cef7ce0
-Size (Markups-3.1.0.tar.gz) = 20146 bytes
+SHA1 (Markups-3.1.1.tar.gz) = e490bd642dc05887062ba9edfd7c7e01141adc71
+RMD160 (Markups-3.1.1.tar.gz) = 11c3c8bb5e90637d33abf22294f2560f9cfc693c
+SHA512 (Markups-3.1.1.tar.gz) = 9e8e7b3cc86127fed0367faf257d761e0eae4ca5e11a9ddc8e99b2fc88c76ddb218ee371added56e2c19f5772754adc4c01a09503c308220f6a9d35e736220d7
+Size (Markups-3.1.1.tar.gz) = 20482 bytes
