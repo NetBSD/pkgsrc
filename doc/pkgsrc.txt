@@ -4091,12 +4091,12 @@ index
 
 readme
 
-    This target generates a README.html file, which can be viewed using a
+    This target generates a index.html file, which can be viewed using a
     browser such as www/firefox or www/links. The generated files contain
     references to any packages which are in the PACKAGES directory on the local
     host. The generated files can be made to refer to URLs based on
     FTP_PKG_URL_HOST and FTP_PKG_URL_DIR. For example, if I wanted to generate
-    README.html files which pointed to binary packages on the local machine, in
+    index.html files which pointed to binary packages on the local machine, in
     the directory /usr/packages, set FTP_PKG_URL_HOST=file://localhost and
     FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
     subdirectories will be searched for all the binary packages.
@@ -4110,13 +4110,13 @@ readme-all
     file README-all.html which contains a list of all packages currently
     available in the NetBSD Packages Collection, together with the category
     they belong to and a short description. This file is compiled from the
-    pkgsrc/*/README.html files, so be sure to run this after a make readme.
+    pkgsrc/*/index.html files, so be sure to run this after a make readme.
 
 cdrom-readme
 
     This is very much the same as the "readme" target (see above), but is to be
     used when generating a pkgsrc tree to be written to a CD-ROM. This target
-    also produces README.html files, and can be made to refer to URLs based on
+    also produces index.html files, and can be made to refer to URLs based on
     CDROM_PKG_URL_HOST and CDROM_PKG_URL_DIR.
 
 show-distfiles
