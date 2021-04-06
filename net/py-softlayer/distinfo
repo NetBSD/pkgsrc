@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/12/02 16:33:59 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/04/06 14:47:59 adam Exp $
 
-SHA1 (SoftLayer-5.6.4.tar.gz) = 8d65138cd04f1831281f1d88ffcf10918b1cc184
-RMD160 (SoftLayer-5.6.4.tar.gz) = d05f7962b86e8bf0a681ffaf4f06f82b09d49045
-SHA512 (SoftLayer-5.6.4.tar.gz) = 79c08ad1936d2ed91f58af1ed46878c9e0d4b3385d553095b7cc6dfd27648ef6b23ae1b3bbc434aac0f0546cdda3bf79691e22d7190771855339a0eb55d646a5
-Size (SoftLayer-5.6.4.tar.gz) = 289218 bytes
-SHA1 (patch-setup.py) = bb5f80c300053b97f2cb7f345981a6fcdc8e58e1
+SHA1 (SoftLayer-5.9.3.tar.gz) = 9c0d9b84e0534b0de40e4f83d7552e86456ad6a7
+RMD160 (SoftLayer-5.9.3.tar.gz) = d7467517579db619f0876aedd3c1b21b8cfcd216
+SHA512 (SoftLayer-5.9.3.tar.gz) = f77d42ee15725fa4a3e3cb7cdc7f0e739f6a8477c8faa74488ae1e75fb2fd827f9a36a585ecbcf07b46ddfb870a4474feebcd83a11ce31e2a28889d161093fe2
+Size (SoftLayer-5.9.3.tar.gz) = 402020 bytes
