@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.12 2020/12/02 10:22:39 wiz Exp $
+# $NetBSD: depends.mk,v 1.13 2021/04/06 18:46:06 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -241,10 +241,11 @@ bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
 .PHONY: _pkgformat-bootstrap-depends
 .if empty(PKG_FAIL_REASON)
 _pkgformat-bootstrap-depends:
-	${RUN}${_LIST_DEPENDS_CMD.bootstrap} | 				\
+	${RUN}exec 3<&0;						\
+	${_LIST_DEPENDS_CMD.bootstrap} | 				\
 	while read type pattern dir; do					\
 		${TEST} "$$type" = "bootstrap" || continue;		\
-		${_DEPENDS_INSTALL_CMD};				\
+		${_DEPENDS_INSTALL_CMD} 0<&3;				\
 	done
 .else
 _pkgformat-bootstrap-depends:
@@ -270,10 +271,11 @@ _TEST_DEPENDS_TARGETS+=	release-test-depends-lock
 test-depends: ${_TEST_DEPENDS_TARGETS}
 
 _pkgformat-test-depends:
-	${RUN}${_LIST_DEPENDS_CMD.test} | 				\
+	${RUN}exec 3<&0;						\
+	${_LIST_DEPENDS_CMD.test} | 					\
 	while read type pattern dir; do					\
-		${TEST} "$$type" = "test" || continue;		\
-		${_DEPENDS_INSTALL_CMD};				\
+		${TEST} "$$type" = "test" || continue;			\
+		${_DEPENDS_INSTALL_CMD} 0<&3;				\
 	done
 
 .PHONY:
