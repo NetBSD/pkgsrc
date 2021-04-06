@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.85 2020/06/20 15:25:01 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.86 2021/04/06 17:21:17 nia Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -1069,7 +1069,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
 	<listitem>
 	  <para>This target generates a
-	  <filename>README.html</filename> file, which can be
+	  <filename>index.html</filename> file, which can be
 	  viewed using a browser such as <filename
 	  role="pkg">www/firefox</filename> or <filename
 	  role="pkg">www/links</filename>.  The generated files
@@ -1078,7 +1078,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  host. The generated files can be made to refer to URLs
 	  based on <varname>FTP_PKG_URL_HOST</varname> and
 	  <varname>FTP_PKG_URL_DIR</varname>. For example, if I
-	  wanted to generate <filename>README.html</filename>
+	  wanted to generate <filename>index.html</filename>
 	  files which pointed to binary packages on the local
 	  machine, in the directory
 	  <filename>/usr/packages</filename>, set
@@ -1103,7 +1103,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  list of all packages currently available in the &os;
 	  Packages Collection, together with the category they belong
 	  to and a short description. This file is compiled from the
-	  <filename>pkgsrc/*/README.html</filename> files, so be sure
+	  <filename>pkgsrc/*/index.html</filename> files, so be sure
 	  to run this <emphasis>after</emphasis> a <command>make
 	  readme</command>.</para>
 	</listitem>
@@ -1117,7 +1117,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <quote>readme</quote> target (see above), but is to be
 	  used when generating a pkgsrc tree to be written to a
 	  CD-ROM.  This target also produces
-	  <filename>README.html</filename> files, and can be made
+	  <filename>index.html</filename> files, and can be made
 	  to refer to URLs based on
 	  <varname>CDROM_PKG_URL_HOST</varname> and
 	  <varname>CDROM_PKG_URL_DIR</varname>.</para>
