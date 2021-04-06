@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1999 2021/04/06 15:29:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2000 2021/04/06 15:51:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3065,3 +3065,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-readme_renderer to 29.0 [adam 2021-04-06]
 	Updated textproc/py-pygments to 2.8.1 [adam 2021-04-06]
 	Updated www/py-httpie to 2.4.0 [adam 2021-04-06]
+	Updated textproc/py-sphinx to 3.5.3 [adam 2021-04-06]
+	Updated www/py-gunicorn to 20.1.0 [adam 2021-04-06]
