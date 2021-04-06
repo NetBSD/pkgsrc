@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/10/07 10:20:22 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/06 15:03:32 adam Exp $
 
 DISTNAME=	alabaster-0.7.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/bitprophet/alabaster
 COMMENT=	Configurable sidebar-enabled Sphinx theme
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
-
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES=	pygments
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

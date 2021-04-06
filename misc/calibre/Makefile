@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2021/03/10 18:51:51 adam Exp $
+# $NetBSD: Makefile,v 1.248 2021/04/06 15:03:32 adam Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	23
@@ -30,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow6
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments25
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
