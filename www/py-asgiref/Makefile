@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2020/11/10 11:13:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/06 04:48:34 adam Exp $
 
-DISTNAME=	asgiref-3.3.1
+DISTNAME=	asgiref-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
@@ -19,6 +19,11 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

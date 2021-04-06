@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/07 12:26:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/06 04:48:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,7 @@ ${PYSITELIB}/asgiref/current_thread_executor.pyo
 ${PYSITELIB}/asgiref/local.py
 ${PYSITELIB}/asgiref/local.pyc
 ${PYSITELIB}/asgiref/local.pyo
+${PYSITELIB}/asgiref/py.typed
 ${PYSITELIB}/asgiref/server.py
 ${PYSITELIB}/asgiref/server.pyc
 ${PYSITELIB}/asgiref/server.pyo
@@ -29,6 +30,9 @@ ${PYSITELIB}/asgiref/testing.pyo
 ${PYSITELIB}/asgiref/timeout.py
 ${PYSITELIB}/asgiref/timeout.pyc
 ${PYSITELIB}/asgiref/timeout.pyo
+${PYSITELIB}/asgiref/typing.py
+${PYSITELIB}/asgiref/typing.pyc
+${PYSITELIB}/asgiref/typing.pyo
 ${PYSITELIB}/asgiref/wsgi.py
 ${PYSITELIB}/asgiref/wsgi.pyc
 ${PYSITELIB}/asgiref/wsgi.pyo
