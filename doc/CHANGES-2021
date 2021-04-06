@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1987 2021/04/05 19:53:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1988 2021/04/06 07:19:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3045,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-asdf to 2.7.3 [adam 2021-04-05]
 	Updated finance/py-braintree to 4.7.0 [adam 2021-04-05]
 	Updated security/py-google-auth-oauthlib to 0.4.4 [adam 2021-04-05]
+	Updated sysutils/macchina to 0.6.3 [pin 2021-04-06]
