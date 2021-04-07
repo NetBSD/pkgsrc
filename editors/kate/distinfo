@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/06/09 11:56:06 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/04/07 12:28:17 markd Exp $
 
-SHA1 (kate-20.04.1.tar.xz) = c70e1ec6ed4fdf47f9be205381e43591765e15ae
-RMD160 (kate-20.04.1.tar.xz) = d925590bc9672596f0af97452db19b924f92c9c3
-SHA512 (kate-20.04.1.tar.xz) = b1b07b9ca25809afe316319f890e3a6eff2604f91779c2e1e942dbb16ce082f4a4d3bc6e72dea28a35fc2f31dc615eaa750f74c0528458d1397ae6cd651b7e47
-Size (kate-20.04.1.tar.xz) = 5826720 bytes
+SHA1 (kate-20.12.3.tar.xz) = 7b7993cdc9436990352c7e08e84aca8aa547a71c
+RMD160 (kate-20.12.3.tar.xz) = aebba03b59a31123303a1cbcc30fb5860262b17e
+SHA512 (kate-20.12.3.tar.xz) = 545ec2a48ea6ec737011602b20ac2f60a0f9db0a5e55e0b232f9fd7c10b7e3f54d2a346be7e6341537758a3f8f94868c4083a6d2d10b572568f5c56c9d3aee9c
+Size (kate-20.12.3.tar.xz) = 5949012 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/21 06:31:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:28 markd Exp $
 bin/kturtle
 share/applications/org.kde.kturtle.desktop
 share/doc/HTML/ca/kturtle/getting-started.docbook
@@ -54,6 +54,13 @@ share/doc/HTML/fr/kturtle/mainwindow_flower_nrs.png
 share/doc/HTML/fr/kturtle/programming-reference.docbook
 share/doc/HTML/fr/kturtle/translator-guide.docbook
 share/doc/HTML/fr/kturtle/using-kturtle.docbook
+share/doc/HTML/gl/kturtle/getting-started.docbook
+share/doc/HTML/gl/kturtle/glossary.docbook
+share/doc/HTML/gl/kturtle/index.cache.bz2
+share/doc/HTML/gl/kturtle/index.docbook
+share/doc/HTML/gl/kturtle/programming-reference.docbook
+share/doc/HTML/gl/kturtle/translator-guide.docbook
+share/doc/HTML/gl/kturtle/using-kturtle.docbook
 share/doc/HTML/it/kturtle/getting-started.docbook
 share/doc/HTML/it/kturtle/glossary.docbook
 share/doc/HTML/it/kturtle/index.cache.bz2

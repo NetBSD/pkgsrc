@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/02/25 03:27:54 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:29 markd Exp $
 
-SHA1 (audiocd-kio-20.04.1.tar.xz) = c14b6a41ece24440d54db0fb3f8d50727e193d56
-RMD160 (audiocd-kio-20.04.1.tar.xz) = 3c90ff414d3554ba789305045601112329ba2750
-SHA512 (audiocd-kio-20.04.1.tar.xz) = 9307473a305099ef5a5a1df7358b0165eefcef004589a5a0c61ccbfc19ddb2a62f0dfb36a96270a2a453b6f92562ac067039c399a3898482a3538f8fa337d01f
-Size (audiocd-kio-20.04.1.tar.xz) = 358584 bytes
+SHA1 (audiocd-kio-20.12.3.tar.xz) = 4b882e314931934b7b1b5282f9738632da1212d8
+RMD160 (audiocd-kio-20.12.3.tar.xz) = ccfc53f88cf68f3ff2eaa6db6a25aa15c69ce14f
+SHA512 (audiocd-kio-20.12.3.tar.xz) = 0b5d343f802cee3435fa1aadf39ddba3afa6ec70569bab00da0e0cbda4360618e5384042c913a4e54017f82f27f3f202a509d933762d1b7ef4884d2ba70556bc
+Size (audiocd-kio-20.12.3.tar.xz) = 500672 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:19 markd Exp $
 bin/kigo
 share/applications/org.kde.kigo.desktop
 share/config.kcfg/kigo.kcfg
@@ -61,8 +61,6 @@ share/doc/HTML/uk/kigo/setup-general.png
 share/doc/HTML/uk/kigo/setup-theme.png
 share/doc/HTML/uk/kigo/start-loaded-game.png
 share/doc/HTML/uk/kigo/start-new-game.png
-share/examples/kde-xdg/kigo.knsrc
-share/examples/kde-xdg/kigo-games.knsrc
 share/icons/hicolor/128x128/apps/kigo.png
 share/icons/hicolor/16x16/apps/kigo.png
 share/icons/hicolor/22x22/apps/kigo.png
@@ -77,6 +75,8 @@ share/kigo/themes/kigo_default.svgz
 share/kigo/themes/kigo_plain.png
 share/kigo/themes/kigo_plain.svgz
 share/kigo/themes/plain.desktop
+share/knsrcfiles/kigo-games.knsrc
+share/knsrcfiles/kigo.knsrc
 share/kxmlgui5/kigo/kigoui.rc
 share/locale/bs/LC_MESSAGES/kigo.mo
 share/locale/ca/LC_MESSAGES/kigo.mo
@@ -89,6 +89,7 @@ share/locale/en_GB/LC_MESSAGES/kigo.mo
 share/locale/eo/LC_MESSAGES/kigo.mo
 share/locale/es/LC_MESSAGES/kigo.mo
 share/locale/et/LC_MESSAGES/kigo.mo
+share/locale/eu/LC_MESSAGES/kigo.mo
 share/locale/fi/LC_MESSAGES/kigo.mo
 share/locale/fr/LC_MESSAGES/kigo.mo
 share/locale/ga/LC_MESSAGES/kigo.mo

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2021/03/30 09:08:58 markd Exp $
+# $NetBSD: Makefile,v 1.65 2021/04/07 12:28:28 markd Exp $
 
 DISTNAME=	marble-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/system/marble/
@@ -24,18 +23,9 @@ SUBST_FILES.fix-moc=	_KDE_build/src/apps/*/CMakeFiles/*_autogen.dir/AutogenInfo.
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/apps/marble-kde/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/marble.knsrc \
-		${PKG_SYSCONFDIR}/xdg/marble.knsrc
-
 .include "../../devel/kparts/buildlink3.mk"
 .include "../../devel/krunner/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../geography/shapelib/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"

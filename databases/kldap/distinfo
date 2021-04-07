@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/06/09 11:56:05 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/04/07 12:28:15 markd Exp $
 
-SHA1 (kldap-20.04.1.tar.xz) = fd25d5bbd91f891e4cd373bd245094ec7697dab5
-RMD160 (kldap-20.04.1.tar.xz) = 739a70f8aee2e75b8bd62b0cf48138ab97a1ad2a
-SHA512 (kldap-20.04.1.tar.xz) = d56e63815128606d539ed6cad3e25e05f7636df9f31cf019f792025acbb72ac66d05714497196f8e81641a26c24a4942011efc399113d6ae4b8d55f45f242ad1
-Size (kldap-20.04.1.tar.xz) = 148996 bytes
+SHA1 (kldap-20.12.3.tar.xz) = b9c903fe9f38e7d53fb777a670c59e21190da242
+RMD160 (kldap-20.12.3.tar.xz) = 769ddba47f7d7a42c8db9176c3b9294fe8ce5a0f
+SHA512 (kldap-20.12.3.tar.xz) = d1220afdd157de224fd65306f1b77f80c1adbe195307bea51c6de5234e9a94122b2c24d38e050ad5dd1a9597b5f7f0f65ea5de73a38c4a309d5692691ed09d54
+Size (kldap-20.12.3.tar.xz) = 164652 bytes
 SHA1 (patch-autotests_testkldap.cpp) = 7994aba5bc9e45fd2ec1ebd3bf2e918fb912e560
-SHA1 (patch-src_ber.cpp) = be0bb86e83fb8c01b9a5c26cf9636d9590eb25e2
-SHA1 (patch-src_ber.h) = ae191eb21abf68197887b42a3250c7efc2067fca
-SHA1 (patch-src_ldapcontrol.cpp) = 9f91d9e6ae20bde896584986009fe18700addfef
+SHA1 (patch-src_ber.cpp) = 66f9a33a6dd9680f582dd8e9662c2dd3e0bf9e71
+SHA1 (patch-src_ber.h) = 022a1c3ca4f77c4cc2ecfcc09d6153179a0d7977
+SHA1 (patch-src_ldapcontrol.cpp) = e0cfe8f2c7b1f4f68d77ac1e4bd1bb33e017b43c

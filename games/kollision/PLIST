@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:21 markd Exp $
 bin/kollision
 share/applications/org.kde.kollision.desktop
 share/doc/HTML/cs/kollision/index.cache.bz2
@@ -14,6 +14,8 @@ share/doc/HTML/et/kollision/index.cache.bz2
 share/doc/HTML/et/kollision/index.docbook
 share/doc/HTML/fr/kollision/index.cache.bz2
 share/doc/HTML/fr/kollision/index.docbook
+share/doc/HTML/id/kollision/index.cache.bz2
+share/doc/HTML/id/kollision/index.docbook
 share/doc/HTML/it/kollision/index.cache.bz2
 share/doc/HTML/it/kollision/index.docbook
 share/doc/HTML/ja/kollision/index.cache.bz2
@@ -67,6 +69,7 @@ share/locale/ga/LC_MESSAGES/kollision.mo
 share/locale/gl/LC_MESSAGES/kollision.mo
 share/locale/hr/LC_MESSAGES/kollision.mo
 share/locale/hu/LC_MESSAGES/kollision.mo
+share/locale/id/LC_MESSAGES/kollision.mo
 share/locale/is/LC_MESSAGES/kollision.mo
 share/locale/it/LC_MESSAGES/kollision.mo
 share/locale/ja/LC_MESSAGES/kollision.mo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/02/07 06:30:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/07 12:28:21 markd Exp $
 
 DISTNAME=	kpat-${KAPPSVER}
 PKGREVISION=	6
@@ -8,6 +8,7 @@ HOMEPAGE=	https://kde.org/applications/games/kpat/
 COMMENT=	Multiplicity of different solitaire games
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
+KAPPSVER=	20.04.1
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools

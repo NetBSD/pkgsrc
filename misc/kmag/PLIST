@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:27 markd Exp $
 bin/kmag
 man/ca/man1/kmag.1
 man/de/man1/kmag.1
@@ -30,6 +30,9 @@ share/doc/HTML/fr/kmag/index.docbook
 share/doc/HTML/fr/kmag/screenshot.png
 share/doc/HTML/it/kmag/index.cache.bz2
 share/doc/HTML/it/kmag/index.docbook
+share/doc/HTML/it/kmag/screenshot.png
+share/doc/HTML/ko/kmag/index.cache.bz2
+share/doc/HTML/ko/kmag/index.docbook
 share/doc/HTML/nl/kmag/index.cache.bz2
 share/doc/HTML/nl/kmag/index.docbook
 share/doc/HTML/nl/kmag/screenshot.png
@@ -38,6 +41,8 @@ share/doc/HTML/pt/kmag/index.docbook
 share/doc/HTML/pt_BR/kmag/index.cache.bz2
 share/doc/HTML/pt_BR/kmag/index.docbook
 share/doc/HTML/pt_BR/kmag/screenshot.png
+share/doc/HTML/ru/kmag/index.cache.bz2
+share/doc/HTML/ru/kmag/index.docbook
 share/doc/HTML/sv/kmag/index.cache.bz2
 share/doc/HTML/sv/kmag/index.docbook
 share/doc/HTML/sv/kmag/screenshot.png

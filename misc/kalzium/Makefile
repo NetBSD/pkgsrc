@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2021/03/08 08:13:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.60 2021/04/07 12:28:26 markd Exp $
 
 DISTNAME=	kalzium-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kalzium/
@@ -13,16 +12,6 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kalzium.knsrc \
-		${PKG_SYSCONFDIR}/xdg/kalzium.knsrc
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/kplotting/buildlink3.mk"

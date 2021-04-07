@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/21 06:29:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:28 markd Exp $
 bin/ktouch
 man/ca/man1/ktouch.1
 man/de/man1/ktouch.1
@@ -272,6 +272,7 @@ share/locale/he/LC_MESSAGES/ktouch.mo
 share/locale/hi/LC_MESSAGES/ktouch.mo
 share/locale/hr/LC_MESSAGES/ktouch.mo
 share/locale/hu/LC_MESSAGES/ktouch.mo
+share/locale/ia/LC_MESSAGES/ktouch.mo
 share/locale/is/LC_MESSAGES/ktouch.mo
 share/locale/it/LC_MESSAGES/ktouch.mo
 share/locale/ja/LC_MESSAGES/ktouch.mo

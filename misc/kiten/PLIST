@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/21 06:19:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/07 12:28:27 markd Exp $
 bin/kiten
 bin/kitengen
 bin/kitenkanjibrowser
@@ -47,6 +47,8 @@ share/doc/HTML/es/kiten/index.cache.bz2
 share/doc/HTML/es/kiten/index.docbook
 share/doc/HTML/et/kiten/index.cache.bz2
 share/doc/HTML/et/kiten/index.docbook
+share/doc/HTML/fr/kiten/index.cache.bz2
+share/doc/HTML/fr/kiten/index.docbook
 share/doc/HTML/it/kiten/index.cache.bz2
 share/doc/HTML/it/kiten/index.docbook
 share/doc/HTML/nl/kiten/index.cache.bz2

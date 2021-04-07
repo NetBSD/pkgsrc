@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/06/09 11:56:12 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/04/07 12:28:23 markd Exp $
 
-SHA1 (kdegraphics-mobipocket-20.04.1.tar.xz) = 05dde6c9faf799763a1ccc82574db7edec65829d
-RMD160 (kdegraphics-mobipocket-20.04.1.tar.xz) = 8758c20dafd8af6d4149c49afb0cfbb2f76119b2
-SHA512 (kdegraphics-mobipocket-20.04.1.tar.xz) = 3aa3b87d4498a1fecd756674f0a916b95765339b0f60cde4c02fa59b6472fdccd2c2bd53ddcfc9f9f54fc60172455ae267f7120b860ca1b47ae153ec100624bd
-Size (kdegraphics-mobipocket-20.04.1.tar.xz) = 16456 bytes
+SHA1 (kdegraphics-mobipocket-20.12.3.tar.xz) = e72138bdb8e879dccb504a3a0dcc77e8a3b699d6
+RMD160 (kdegraphics-mobipocket-20.12.3.tar.xz) = b786a5fb44d36ce8ec81ea4485e5025c17fa7983
+SHA512 (kdegraphics-mobipocket-20.12.3.tar.xz) = 53367ccebe087186a30959852daaa0168f0e4c65f11ec9e074dd2f52c37569258b304a3ee5159770d5d2571d5aea98be6e113d9112ed249d5c948f2f00d92e8d
+Size (kdegraphics-mobipocket-20.12.3.tar.xz) = 17056 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:10 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:21 markd Exp $
 
-SHA1 (kreversi-20.04.1.tar.xz) = 9834a12b940576aa566eafa483ece898b025f547
-RMD160 (kreversi-20.04.1.tar.xz) = cbfafb181ea14ec764fbf1db3be4a6b76e0a293f
-SHA512 (kreversi-20.04.1.tar.xz) = f53f85f7cca1860584367623c203fabaf6bffa556b74bd256a2fc079680eeaea4e598817ca549683da6741bbe65249b3cb06f859ef6961415d376830e289d2e5
-Size (kreversi-20.04.1.tar.xz) = 946852 bytes
+SHA1 (kreversi-20.12.3.tar.xz) = 7c98857c5ca27b08a557f5874726b309c79748a9
+RMD160 (kreversi-20.12.3.tar.xz) = 6d8483c4e4c6720e40c886cc6991c64b1f81aa18
+SHA512 (kreversi-20.12.3.tar.xz) = 300704489db887d3738491a7dc0b62bf6d7056c803c778ea48bbb086c71b4c57a46517fe4350379982c2b6effd8fa8bfe109e506957905f168c341eb51e0dcd2
+Size (kreversi-20.12.3.tar.xz) = 953588 bytes

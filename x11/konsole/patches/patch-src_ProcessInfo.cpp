@@ -1,13 +1,13 @@
-$NetBSD: patch-src_ProcessInfo.cpp,v 1.4 2021/03/06 04:47:37 markd Exp $
+$NetBSD: patch-src_ProcessInfo.cpp,v 1.5 2021/04/07 12:28:32 markd Exp $
 
 NetBSD support
 
---- src/ProcessInfo.cpp.orig	2019-08-08 23:59:38.000000000 +0000
+--- src/ProcessInfo.cpp.orig	2021-02-24 23:11:38.000000000 +0000
 +++ src/ProcessInfo.cpp
-@@ -999,6 +999,163 @@ private:
-         return false;
+@@ -646,6 +646,164 @@ private:
      }
  };
+ 
 +#elif defined(Q_OS_NETBSD)
 +class NetBSDProcessInfo : public UnixProcessInfo
 +{
@@ -164,11 +164,12 @@ NetBSD support
 +            return false;
 +        }
 +    }
-+} ;
- #endif
- 
- SSHProcessInfo::SSHProcessInfo(const ProcessInfo &process) :
-@@ -1186,6 +1343,8 @@ ProcessInfo *ProcessInfo::newInstance(in
++};
++
+ #elif defined(Q_OS_OPENBSD)
+ class OpenBSDProcessInfo : public UnixProcessInfo
+ {
+@@ -937,6 +1095,8 @@ ProcessInfo *ProcessInfo::newInstance(in
      info = new MacProcessInfo(pid);
  #elif defined(Q_OS_FREEBSD)
      info = new FreeBSDProcessInfo(pid);

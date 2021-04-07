@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:18 markd Exp $
 bin/kdiamond
 share/applications/org.kde.kdiamond.desktop
 share/doc/HTML/de/kdiamond/index.cache.bz2
@@ -29,7 +29,6 @@ share/doc/HTML/sv/kdiamond/index.docbook
 share/doc/HTML/uk/kdiamond/gameboard.png
 share/doc/HTML/uk/kdiamond/index.cache.bz2
 share/doc/HTML/uk/kdiamond/index.docbook
-share/examples/kde-xdg/kdiamond.knsrc
 share/icons/hicolor/128x128/apps/kdiamond.png
 share/icons/hicolor/16x16/apps/kdiamond.png
 share/icons/hicolor/22x22/apps/kdiamond.png
@@ -47,6 +46,7 @@ share/kdiamond/themes/funny_zoo.desktop
 share/kdiamond/themes/funny_zoo.png
 share/kdiamond/themes/funny_zoo.svgz
 share/knotifications5/kdiamond.notifyrc
+share/knsrcfiles/kdiamond.knsrc
 share/kxmlgui5/kdiamond/kdiamondui.rc
 share/locale/ar/LC_MESSAGES/kdiamond.mo
 share/locale/bg/LC_MESSAGES/kdiamond.mo

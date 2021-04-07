@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/21 03:00:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:18 markd Exp $
 bin/kblocks
 share/applications/org.kde.kblocks.desktop
 share/config.kcfg/kblocks.kcfg
@@ -30,7 +30,6 @@ share/doc/HTML/sv/kblocks/index.docbook
 share/doc/HTML/uk/kblocks/gameboard.png
 share/doc/HTML/uk/kblocks/index.cache.bz2
 share/doc/HTML/uk/kblocks/index.docbook
-share/examples/kde-xdg/kblocks.knsrc
 share/icons/hicolor/128x128/apps/kblocks.png
 share/icons/hicolor/16x16/apps/kblocks.png
 share/icons/hicolor/22x22/apps/kblocks.png
@@ -48,6 +47,7 @@ share/kblocks/themes/egyptian_preview.png
 share/kblocks/themes/oxygen.desktop
 share/kblocks/themes/oxygen.svg
 share/kblocks/themes/oxygen_preview.png
+share/knsrcfiles/kblocks.knsrc
 share/kxmlgui5/kblocks/kblocksui.rc
 share/locale/ar/LC_MESSAGES/kblocks.mo
 share/locale/bg/LC_MESSAGES/kblocks.mo

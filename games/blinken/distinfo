@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 11:56:06 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/04/07 12:28:17 markd Exp $
 
-SHA1 (blinken-20.04.1.tar.xz) = 6367617dfa1ee124fd7ad9303ab47af026b21249
-RMD160 (blinken-20.04.1.tar.xz) = add54799faa1bb895cf6fa2c54b979a2c1c16eb0
-SHA512 (blinken-20.04.1.tar.xz) = f2d69713e8bb6f60367bf21c1ae3dbbb8a572cf0561ff060cb654bcacfa5ad7a4304ab5c2835a0775d31a7a94c29efa3006bd40b8bf4abe22830b6628769ce9e
-Size (blinken-20.04.1.tar.xz) = 2821432 bytes
+SHA1 (blinken-20.12.3.tar.xz) = 96e018738ccd918e7477d382463fcbb9700d1756
+RMD160 (blinken-20.12.3.tar.xz) = 54ec857392a9897a7322b4de183cf6839ccfc193
+SHA512 (blinken-20.12.3.tar.xz) = 0c78fdddb9772f003e73ef12cd09557fa0af469ecdbbbefe1b6c01e236f6d882b93182bdd99427d430eb680a0cfb2346a36df54f626cab568bb86d60e1fe3a84
+Size (blinken-20.12.3.tar.xz) = 2537996 bytes

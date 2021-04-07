@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 11:56:18 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/04/07 12:28:31 markd Exp $
 
-SHA1 (kfloppy-20.04.1.tar.xz) = 7693f6819504adc0059ad31d83ed2e158f661023
-RMD160 (kfloppy-20.04.1.tar.xz) = 016047e17542bb92045c9e52c109ab5fb366003b
-SHA512 (kfloppy-20.04.1.tar.xz) = dfba3d4ac8befd1bb1f89c59d0067f9c393400c276bac666ded37b8fc5195936babc6cf9fbf18545baf63657bfd9e1322e3bdedc030516d3e52211b41f9d334b
-Size (kfloppy-20.04.1.tar.xz) = 199028 bytes
+SHA1 (kfloppy-20.12.3.tar.xz) = a7b7d2db4a4c178bdac91aa4fd7a5483d0becebf
+RMD160 (kfloppy-20.12.3.tar.xz) = 4201adc7e349303b4f8034f252e8e7189f5559c6
+SHA512 (kfloppy-20.12.3.tar.xz) = 5220a465fbcb9feeed5f572d26ae4c2cf4eaf2aad68d66e102e3b6d24521d6997582bcb27484c39bb257ffdb19b93239dfe791890edec94af68879e8e10179c6
+Size (kfloppy-20.12.3.tar.xz) = 204260 bytes

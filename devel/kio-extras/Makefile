@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/05 06:53:13 markd Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/07 12:28:16 markd Exp $
 
 DISTNAME=	kio-extras-${KAPPSVER}
 CATEGORIES=	misc
@@ -7,7 +7,6 @@ HOMEPAGE=	https://kde.org/applications/internet/
 COMMENT=	Additional components to increase the functionality of KIO
 LICENSE=	gnu-gpl-v2
 
-KAPPSVER=	20.12.3
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools

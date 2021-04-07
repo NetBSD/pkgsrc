@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:25 markd Exp $
 include/KF5/KIMAP/KIMAP/Acl
 include/KF5/KIMAP/KIMAP/AclJobBase
 include/KF5/KIMAP/KIMAP/AppendJob
@@ -8,6 +8,7 @@ include/KF5/KIMAP/KIMAP/CopyJob
 include/KF5/KIMAP/KIMAP/CreateJob
 include/KF5/KIMAP/KIMAP/DeleteAclJob
 include/KF5/KIMAP/KIMAP/DeleteJob
+include/KF5/KIMAP/KIMAP/EnableJob
 include/KF5/KIMAP/KIMAP/ExpungeJob
 include/KF5/KIMAP/KIMAP/FetchJob
 include/KF5/KIMAP/KIMAP/GetAclJob
@@ -49,6 +50,7 @@ include/KF5/KIMAP/kimap/CopyJob
 include/KF5/KIMAP/kimap/CreateJob
 include/KF5/KIMAP/kimap/DeleteAclJob
 include/KF5/KIMAP/kimap/DeleteJob
+include/KF5/KIMAP/kimap/EnableJob
 include/KF5/KIMAP/kimap/ExpungeJob
 include/KF5/KIMAP/kimap/FetchJob
 include/KF5/KIMAP/kimap/GetAclJob
@@ -90,6 +92,7 @@ include/KF5/KIMAP/kimap/copyjob.h
 include/KF5/KIMAP/kimap/createjob.h
 include/KF5/KIMAP/kimap/deleteacljob.h
 include/KF5/KIMAP/kimap/deletejob.h
+include/KF5/KIMAP/kimap/enablejob.h
 include/KF5/KIMAP/kimap/expungejob.h
 include/KF5/KIMAP/kimap/fetchjob.h
 include/KF5/KIMAP/kimap/getacljob.h
@@ -132,7 +135,7 @@ lib/cmake/KF5IMAP/KF5IMAPTargets-noconfig.cmake
 lib/cmake/KF5IMAP/KF5IMAPTargets.cmake
 lib/libKF5IMAP.so
 lib/libKF5IMAP.so.5
-lib/libKF5IMAP.so.5.14.1
+lib/libKF5IMAP.so.5.16.3
 lib/libkimaptest.a
 qt5/mkspecs/modules/qt_KIMAP.pri
 share/locale/bs/LC_MESSAGES/libkimap5.mo

@@ -1,7 +1,7 @@
-$NetBSD: patch-src_ber.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
+$NetBSD: patch-src_ber.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
 
---- src/ber.cpp.orig	2020-01-14 16:17:11.814803692 +0000
-+++ src/ber.cpp
+--- src/core/ber.cpp.orig	2020-01-14 16:17:11.814803692 +0000
++++ src/core/ber.cpp
 @@ -124,7 +124,7 @@ QByteArray Ber::flatten() const
      return ret;
  }

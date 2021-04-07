@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:21 markd Exp $
 bin/ksirk
 bin/ksirkskineditor
 lib/libiris_ksirk.so
@@ -116,7 +116,6 @@ share/doc/HTML/uk/ksirk/preferences.png
 share/doc/HTML/uk/ksirk/shownumberofarmies.png
 share/doc/HTML/uk/ksirkskineditor/index.cache.bz2
 share/doc/HTML/uk/ksirkskineditor/index.docbook
-share/examples/kde-xdg/ksirk.knsrc
 share/icons/hicolor/128x128/apps/ksirk.png
 share/icons/hicolor/16x16/apps/ksirk.png
 share/icons/hicolor/22x22/apps/ksirk.png
@@ -124,6 +123,7 @@ share/icons/hicolor/32x32/apps/ksirk.png
 share/icons/hicolor/48x48/apps/ksirk.png
 share/icons/hicolor/64x64/apps/ksirk.png
 share/icons/hicolor/scalable/apps/ksirk.svgz
+share/knsrcfiles/ksirk.knsrc
 share/ksirk/jabber.png
 share/ksirk/skins/default/Data/world.desktop
 share/ksirk/skins/default/Images/2DownArrow.png

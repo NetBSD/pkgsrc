@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/06/09 11:56:13 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/04/07 12:28:25 markd Exp $
 
-SHA1 (ksmtp-20.04.1.tar.xz) = b9ce2e5e62eab30737514918ec973d601e032d11
-RMD160 (ksmtp-20.04.1.tar.xz) = 5116e90a46f6fee33c1459e33286486f9e79d6ab
-SHA512 (ksmtp-20.04.1.tar.xz) = f8e573ec91aef270dd647795897bec368d2f0ab5d44a3e40de34b88859b03b965d7bd931e14463d74194b9de63c3cb40febbee680770b50df6c16b336213af41
-Size (ksmtp-20.04.1.tar.xz) = 41284 bytes
+SHA1 (ksmtp-20.12.3.tar.xz) = 8ac9127be282cd79209abd660583c8671f98a2a9
+RMD160 (ksmtp-20.12.3.tar.xz) = 23a7269029e0a5e1efedf06f818aaa99aa47c962
+SHA512 (ksmtp-20.12.3.tar.xz) = 813b742471f35a9ceb851e3b4fecdce578532b0754b45afd9e1ba1cd1c33b5ad06f40399488f65a9753af61af674c3c6ce9956307b61be5f2661ddabb53937fb
+Size (ksmtp-20.12.3.tar.xz) = 43124 bytes

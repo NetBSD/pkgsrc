@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:18 markd Exp $
 bin/kblackbox
 share/applications/org.kde.kblackbox.desktop
 share/doc/HTML/de/kblackbox/index.cache.bz2
@@ -10,6 +10,8 @@ share/doc/HTML/es/kblackbox/index.cache.bz2
 share/doc/HTML/es/kblackbox/index.docbook
 share/doc/HTML/et/kblackbox/index.cache.bz2
 share/doc/HTML/et/kblackbox/index.docbook
+share/doc/HTML/fr/kblackbox/index.cache.bz2
+share/doc/HTML/fr/kblackbox/index.docbook
 share/doc/HTML/it/kblackbox/index.cache.bz2
 share/doc/HTML/it/kblackbox/index.docbook
 share/doc/HTML/nl/kblackbox/index.cache.bz2
