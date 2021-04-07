@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2020/08/30 20:43:46 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2021/04/07 16:14:07 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
 # ninja-build is said supported, but not working
-# alas        is said supported, but not good on NetBSD
+# alsa        is said supported, but not good on NetBSD
 
 # Adding ninja-build to following line (now) stops
 # [164/850] cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
@@ -26,8 +26,7 @@ do-build:
 .endif
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
-# Running gr_filter_design asks for the package
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-qtgraph-qt5-[0-9]*:../../x11/py-qtgraph-qt5
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)

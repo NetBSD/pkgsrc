@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2020/08/30 21:07:13 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/07 16:14:09 tnn Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
 bin/uhd_siggen
 bin/uhd_siggen_gui
-include/gnuradio/swig/uhd_swig.i
-include/gnuradio/swig/uhd_swig_doc.i
 include/gnuradio/uhd/amsg_source.h
 include/gnuradio/uhd/api.h
 include/gnuradio/uhd/usrp_block.h
@@ -15,26 +13,29 @@ lib/cmake/gnuradio/gnuradio-uhdConfig.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets.cmake
 lib/libgnuradio-uhd.so
-lib/libgnuradio-uhd.so.3.8.1
+lib/libgnuradio-uhd.so.3.9.1
 lib/libgnuradio-uhd.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-uhd.pc
 ${PYSITELIB}/gnuradio/uhd/__init__.py
 ${PYSITELIB}/gnuradio/uhd/__init__.pyc
 ${PYSITELIB}/gnuradio/uhd/__init__.pyo
-${PYSITELIB}/gnuradio/uhd/_uhd_swig.so
+${PYSITELIB}/gnuradio/uhd/msgq_runner.py
+${PYSITELIB}/gnuradio/uhd/msgq_runner.pyc
+${PYSITELIB}/gnuradio/uhd/msgq_runner.pyo
 ${PYSITELIB}/gnuradio/uhd/uhd_app.py
 ${PYSITELIB}/gnuradio/uhd/uhd_app.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_app.pyo
+${PYSITELIB}/gnuradio/uhd/uhd_python.so
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.py
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyo
-${PYSITELIB}/gnuradio/uhd/uhd_swig.py
-${PYSITELIB}/gnuradio/uhd/uhd_swig.pyc
-${PYSITELIB}/gnuradio/uhd/uhd_swig.pyo
 share/doc/gnuradio-${PKGVERSION}/README.uhd
 share/gnuradio/examples/uhd/tags_demo
 share/gnuradio/examples/uhd/uhd_const_wave.grc
 share/gnuradio/examples/uhd/uhd_fft.grc
+share/gnuradio/examples/uhd/uhd_msg_tune.grc
+share/gnuradio/examples/uhd/uhd_normalized_gain.grc
+share/gnuradio/examples/uhd/uhd_siggen_gui.grc
 share/gnuradio/examples/uhd/uhd_two_tone_loopback.grc
 share/gnuradio/examples/uhd/uhd_wbfm_receive.grc
 share/gnuradio/grc/blocks/uhd.tree.yml

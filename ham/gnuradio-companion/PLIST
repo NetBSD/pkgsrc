@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/08/30 20:48:22 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/04/07 16:14:07 tnn Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -358,6 +358,10 @@ share/gnuradio/grc/blocks/blocks_complex_to_magphase.block.yml
 share/gnuradio/grc/blocks/blocks_complex_to_real.block.yml
 share/gnuradio/grc/blocks/blocks_conjugate_cc.block.yml
 share/gnuradio/grc/blocks/blocks_copy.block.yml
+share/gnuradio/grc/blocks/blocks_correctiq.block.yml
+share/gnuradio/grc/blocks/blocks_correctiq_auto.block.yml
+share/gnuradio/grc/blocks/blocks_correctiq_man.block.yml
+share/gnuradio/grc/blocks/blocks_correctiq_swapiq.block.yml
 share/gnuradio/grc/blocks/blocks_ctrlport_performance.block.yml
 share/gnuradio/grc/blocks/blocks_ctrlport_probe2_c.block.yml
 share/gnuradio/grc/blocks/blocks_ctrlport_probe2_x.block.yml
@@ -379,6 +383,7 @@ share/gnuradio/grc/blocks/blocks_float_to_complex.block.yml
 share/gnuradio/grc/blocks/blocks_float_to_int.block.yml
 share/gnuradio/grc/blocks/blocks_float_to_short.block.yml
 share/gnuradio/grc/blocks/blocks_float_uchar.block.yml
+share/gnuradio/grc/blocks/blocks_freqshift_cc.block.yml
 share/gnuradio/grc/blocks/blocks_head.block.yml
 share/gnuradio/grc/blocks/blocks_int_to_float.block.yml
 share/gnuradio/grc/blocks/blocks_integrate_xx.block.yml
@@ -392,8 +397,10 @@ share/gnuradio/grc/blocks/blocks_max_xx.block.yml
 share/gnuradio/grc/blocks/blocks_message_debug.block.yml
 share/gnuradio/grc/blocks/blocks_message_strobe.block.yml
 share/gnuradio/grc/blocks/blocks_message_strobe_random.block.yml
+share/gnuradio/grc/blocks/blocks_meta_to_pair.block.yml
 share/gnuradio/grc/blocks/blocks_min_xx.block.yml
 share/gnuradio/grc/blocks/blocks_moving_average_xx.block.yml
+share/gnuradio/grc/blocks/blocks_msg_pair_to_var.block.yml
 share/gnuradio/grc/blocks/blocks_multiply_by_tag_value_cc.block.yml
 share/gnuradio/grc/blocks/blocks_multiply_conjugate_cc.block.yml
 share/gnuradio/grc/blocks/blocks_multiply_const_vxx.block.yml
@@ -416,6 +423,7 @@ share/gnuradio/grc/blocks/blocks_pdu_set.block.yml
 share/gnuradio/grc/blocks/blocks_pdu_to_tagged_stream.block.yml
 share/gnuradio/grc/blocks/blocks_peak_detector2_fb.block.yml
 share/gnuradio/grc/blocks/blocks_peak_detector_xb.block.yml
+share/gnuradio/grc/blocks/blocks_phase_shift.block.yml
 share/gnuradio/grc/blocks/blocks_plateau_detector_fb.block.yml
 share/gnuradio/grc/blocks/blocks_probe_rate.block.yml
 share/gnuradio/grc/blocks/blocks_probe_signal_vx.block.yml
@@ -432,6 +440,7 @@ share/gnuradio/grc/blocks/blocks_short_to_char.block.yml
 share/gnuradio/grc/blocks/blocks_short_to_float.block.yml
 share/gnuradio/grc/blocks/blocks_skiphead.block.yml
 share/gnuradio/grc/blocks/blocks_socket_pdu.block.yml
+share/gnuradio/grc/blocks/blocks_stream_demux.block.yml
 share/gnuradio/grc/blocks/blocks_stream_mux.block.yml
 share/gnuradio/grc/blocks/blocks_stream_to_streams.block.yml
 share/gnuradio/grc/blocks/blocks_stream_to_tagged_stream.block.yml
@@ -462,6 +471,7 @@ share/gnuradio/grc/blocks/blocks_udp_sink.block.yml
 share/gnuradio/grc/blocks/blocks_udp_source.block.yml
 share/gnuradio/grc/blocks/blocks_unpack_k_bits_bb.block.yml
 share/gnuradio/grc/blocks/blocks_unpacked_to_packed_xx.block.yml
+share/gnuradio/grc/blocks/blocks_var_to_msg.block.yml
 share/gnuradio/grc/blocks/blocks_vco_c.block.yml
 share/gnuradio/grc/blocks/blocks_vco_f.block.yml
 share/gnuradio/grc/blocks/blocks_vector_insert_x.block.yml
@@ -482,6 +492,8 @@ share/gnuradio/grc/blocks/filter_band_pass_filter.block.yml
 share/gnuradio/grc/blocks/filter_band_reject_filter.block.yml
 share/gnuradio/grc/blocks/filter_dc_blocker_xx.block.yml
 share/gnuradio/grc/blocks/filter_fft_filter_xxx.block.yml
+share/gnuradio/grc/blocks/filter_fft_low_pass_filter.block.yml
+share/gnuradio/grc/blocks/filter_fft_root_raised_cosine_filter.block.yml
 share/gnuradio/grc/blocks/filter_filter_delay_fc.block.yml
 share/gnuradio/grc/blocks/filter_filterbank_vcvcf.block.yml
 share/gnuradio/grc/blocks/filter_fir_filter_xxx.block.yml
@@ -491,6 +503,7 @@ share/gnuradio/grc/blocks/filter_high_pass_filter.block.yml
 share/gnuradio/grc/blocks/filter_hilbert_fc.block.yml
 share/gnuradio/grc/blocks/filter_iir_filter_xxx.block.yml
 share/gnuradio/grc/blocks/filter_interp_fir_filter_xxx.block.yml
+share/gnuradio/grc/blocks/filter_ival_decimator.block.yml
 share/gnuradio/grc/blocks/filter_low_pass_filter.block.yml
 share/gnuradio/grc/blocks/filter_mmse_interpolator_xx.block.yml
 share/gnuradio/grc/blocks/filter_mmse_resampler_xx.block.yml
@@ -500,7 +513,6 @@ share/gnuradio/grc/blocks/filter_pfb_channelizer_hier.block.yml
 share/gnuradio/grc/blocks/filter_pfb_decimator.block.yml
 share/gnuradio/grc/blocks/filter_pfb_interpolator.block.yml
 share/gnuradio/grc/blocks/filter_pfb_synthesizer.block.yml
-share/gnuradio/grc/blocks/filter_rational_resampler_base_xxx.block.yml
 share/gnuradio/grc/blocks/filter_rational_resampler_xxx.block.yml
 share/gnuradio/grc/blocks/filter_root_raised_cosine_filter.block.yml
 share/gnuradio/grc/blocks/filter_single_pole_iir_filter_xx.block.yml
@@ -518,6 +530,7 @@ share/gnuradio/grc/blocks/variable.block.yml
 share/gnuradio/grc/blocks/variable_band_pass_filter_taps.block.yml
 share/gnuradio/grc/blocks/variable_band_reject_filter_taps.block.yml
 share/gnuradio/grc/blocks/variable_config.block.yml
+share/gnuradio/grc/blocks/variable_file_filter_taps.block.yml
 share/gnuradio/grc/blocks/variable_function_probe.block.yml
 share/gnuradio/grc/blocks/variable_high_pass_filter_taps.block.yml
 share/gnuradio/grc/blocks/variable_low_pass_filter_taps.block.yml
@@ -534,13 +547,6 @@ share/gnuradio/grc/freedesktop/grc-icon-256.png
 share/gnuradio/grc/freedesktop/grc-icon-32.png
 share/gnuradio/grc/freedesktop/grc-icon-48.png
 share/gnuradio/grc/freedesktop/grc-icon-64.png
-share/icons/gnome/128x128/apps/gnuradio-grc.png
-share/icons/gnome/16x16/apps/gnuradio-grc.png
-share/icons/gnome/24x24/apps/gnuradio-grc.png
-share/icons/gnome/256x256/apps/gnuradio-grc.png
-share/icons/gnome/32x32/apps/gnuradio-grc.png
-share/icons/gnome/48x48/apps/gnuradio-grc.png
-share/icons/gnome/64x64/apps/gnuradio-grc.png
 share/icons/hicolor/128x128/apps/gnuradio-grc.png
 share/icons/hicolor/16x16/apps/gnuradio-grc.png
 share/icons/hicolor/24x24/apps/gnuradio-grc.png
@@ -548,4 +554,5 @@ share/icons/hicolor/256x256/apps/gnuradio-grc.png
 share/icons/hicolor/32x32/apps/gnuradio-grc.png
 share/icons/hicolor/48x48/apps/gnuradio-grc.png
 share/icons/hicolor/64x64/apps/gnuradio-grc.png
+share/metainfo/org.gnuradio.grc.metainfo.xml
 share/mime/packages/gnuradio-grc.xml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/08/30 21:01:28 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/04/07 16:14:08 tnn Exp $
 bin/polar_channel_construction
 include/gnuradio/fec/alist.h
 include/gnuradio/fec/api.h
@@ -50,13 +50,11 @@ include/gnuradio/fec/tpc_common.h
 include/gnuradio/fec/tpc_decoder.h
 include/gnuradio/fec/tpc_encoder.h
 include/gnuradio/fec/viterbi.h
-include/gnuradio/swig/fec_swig.i
-include/gnuradio/swig/fec_swig_doc.i
 lib/cmake/gnuradio/gnuradio-fecConfig.cmake
 lib/cmake/gnuradio/gnuradio-fecTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-fecTargets.cmake
 lib/libgnuradio-fec.so
-lib/libgnuradio-fec.so.3.8.1
+lib/libgnuradio-fec.so.3.9.1
 lib/libgnuradio-fec.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-fec.pc
 ${PYSITELIB}/gnuradio/fec/LDPC/Generate_LDPC_matrix.py
@@ -71,7 +69,6 @@ ${PYSITELIB}/gnuradio/fec/LDPC/__init__.pyo
 ${PYSITELIB}/gnuradio/fec/__init__.py
 ${PYSITELIB}/gnuradio/fec/__init__.pyc
 ${PYSITELIB}/gnuradio/fec/__init__.pyo
-${PYSITELIB}/gnuradio/fec/_fec_swig.so
 ${PYSITELIB}/gnuradio/fec/bercurve_generator.py
 ${PYSITELIB}/gnuradio/fec/bercurve_generator.pyc
 ${PYSITELIB}/gnuradio/fec/bercurve_generator.pyo
@@ -99,9 +96,7 @@ ${PYSITELIB}/gnuradio/fec/extended_tagged_decoder.pyo
 ${PYSITELIB}/gnuradio/fec/extended_tagged_encoder.py
 ${PYSITELIB}/gnuradio/fec/extended_tagged_encoder.pyc
 ${PYSITELIB}/gnuradio/fec/extended_tagged_encoder.pyo
-${PYSITELIB}/gnuradio/fec/fec_swig.py
-${PYSITELIB}/gnuradio/fec/fec_swig.pyc
-${PYSITELIB}/gnuradio/fec/fec_swig.pyo
+${PYSITELIB}/gnuradio/fec/fec_python.so
 ${PYSITELIB}/gnuradio/fec/fec_test.py
 ${PYSITELIB}/gnuradio/fec/fec_test.pyc
 ${PYSITELIB}/gnuradio/fec/fec_test.pyo
@@ -141,16 +136,22 @@ share/gnuradio/examples/fec/ber_curve_gen_ldpc.grc
 share/gnuradio/examples/fec/ber_test.grc
 share/gnuradio/examples/fec/fecapi_async_decoders.grc
 share/gnuradio/examples/fec/fecapi_async_encoders.grc
+share/gnuradio/examples/fec/fecapi_async_ldpc_decoders.grc
+share/gnuradio/examples/fec/fecapi_async_ldpc_encoders.grc
 share/gnuradio/examples/fec/fecapi_async_packed_decoders.grc
 share/gnuradio/examples/fec/fecapi_async_to_stream.grc
 share/gnuradio/examples/fec/fecapi_cc_decoders.grc
 share/gnuradio/examples/fec/fecapi_decoders.grc
 share/gnuradio/examples/fec/fecapi_encoders.grc
+share/gnuradio/examples/fec/fecapi_ldpc_decoders.grc
+share/gnuradio/examples/fec/fecapi_ldpc_encoders.grc
 share/gnuradio/examples/fec/fecapi_polar_async_packed_decoders.grc
 share/gnuradio/examples/fec/fecapi_polar_decoders.grc
 share/gnuradio/examples/fec/fecapi_polar_encoders.grc
 share/gnuradio/examples/fec/fecapi_tagged_decoders.grc
 share/gnuradio/examples/fec/fecapi_tagged_encoders.grc
+share/gnuradio/examples/fec/fecapi_tagged_ldpc_decoders.grc
+share/gnuradio/examples/fec/fecapi_tagged_ldpc_encoders.grc
 share/gnuradio/examples/fec/polar_ber_curve_gen.grc
 share/gnuradio/examples/fec/polar_code_example.grc
 share/gnuradio/examples/fec/tpc_ber_curve_gen.grc

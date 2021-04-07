@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/30 20:51:34 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 16:14:08 tnn Exp $
 bin/gr-ctrlport-monitor
 bin/gr-perf-monitorx
 include/gnuradio/blocks/ctrlport_probe2_b.h
@@ -28,5 +28,6 @@ share/gnuradio/examples/ctrlport/comparing_resamplers.grc
 share/gnuradio/examples/ctrlport/pfb_sync_test.grc
 share/gnuradio/examples/ctrlport/simple_copy.grc
 share/gnuradio/examples/ctrlport/simple_copy_controller.py
+share/gnuradio/examples/ctrlport/usrp_sink_controller.py
 share/gnuradio/examples/ctrlport/usrp_source_control.grc
 share/gnuradio/examples/ctrlport/usrp_source_controller.py
