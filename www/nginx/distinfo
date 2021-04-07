@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2020/12/16 20:32:01 otis Exp $
+$NetBSD: distinfo,v 1.84 2021/04/07 13:09:13 tpaul Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -52,6 +52,10 @@ SHA1 (ngx_devel_kit-0.3.1.tar.gz) = e15316e13a7b19a3d2502becbb26043a464a135a
 RMD160 (ngx_devel_kit-0.3.1.tar.gz) = 5c52a463544294096611aa9dec1c76e937a1aa23
 SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
 Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
+SHA1 (ngx_http_geoip2_module-3.3.tar.gz) = 6970ae247494c3890e166747752927c6450d0b32
+RMD160 (ngx_http_geoip2_module-3.3.tar.gz) = 7b272aad1a402ae6ca8fac873d4555afbeab7b75
+SHA512 (ngx_http_geoip2_module-3.3.tar.gz) = 06963b598c54e22d75ce837fb222f5aa6c9494c29e558ff46f1205d7159fc305414bfac4ed3288c836dcbf7628d92f26458e1992d34fc2f4b73275a32847bdc0
+Size (ngx_http_geoip2_module-3.3.tar.gz) = 8509 bytes
 SHA1 (njs-0.5.0.tar.gz) = a9cb186dbbfad7901a83f9b267cdf9eee84af374
 RMD160 (njs-0.5.0.tar.gz) = 0cb82b7930bf500e81471b9d44d87924a6043e57
 SHA512 (njs-0.5.0.tar.gz) = 182a64ba519b1a1d29ac71ffe2c9ef8e5a6f9aaf3db9f327ac926114db73b339a424801b558068fc7ae06ae88a4dea0a601c749db4b6f2b579e427181e41d11b
