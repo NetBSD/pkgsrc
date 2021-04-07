@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/08/30 21:16:02 tnn Exp $
-include/gnuradio/swig/zeromq_swig.i
-include/gnuradio/swig/zeromq_swig_doc.i
+@comment $NetBSD: PLIST,v 1.6 2021/04/07 16:14:09 tnn Exp $
 include/gnuradio/zeromq/api.h
 include/gnuradio/zeromq/pub_msg_sink.h
 include/gnuradio/zeromq/pub_sink.h
@@ -18,22 +16,19 @@ lib/cmake/gnuradio/gnuradio-zeromqConfig.cmake
 lib/cmake/gnuradio/gnuradio-zeromqTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-zeromqTargets.cmake
 lib/libgnuradio-zeromq.so
-lib/libgnuradio-zeromq.so.3.8.1
+lib/libgnuradio-zeromq.so.3.9.1
 lib/libgnuradio-zeromq.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-zeromq.pc
 ${PYSITELIB}/gnuradio/zeromq/__init__.py
 ${PYSITELIB}/gnuradio/zeromq/__init__.pyc
 ${PYSITELIB}/gnuradio/zeromq/__init__.pyo
-${PYSITELIB}/gnuradio/zeromq/_zeromq_swig.so
 ${PYSITELIB}/gnuradio/zeromq/probe_manager.py
 ${PYSITELIB}/gnuradio/zeromq/probe_manager.pyc
 ${PYSITELIB}/gnuradio/zeromq/probe_manager.pyo
 ${PYSITELIB}/gnuradio/zeromq/rpc_manager.py
 ${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyc
 ${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyo
-${PYSITELIB}/gnuradio/zeromq/zeromq_swig.py
-${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyc
-${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyo
+${PYSITELIB}/gnuradio/zeromq/zeromq_python.so
 share/gnuradio/examples/zeromq/zeromq_pubsub.grc
 share/gnuradio/examples/zeromq/zeromq_pushpull.grc
 share/gnuradio/examples/zeromq/zeromq_reqrep.grc
