@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20478 2021/04/06 07:54:06 wiz Exp $
+$NetBSD: TODO,v 1.20479 2021/04/07 06:24:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -936,7 +936,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-google-api-python-client-2.0.0
 	o py-hgview-1.9.0
-	o py-hypothesis-6.8.4
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
