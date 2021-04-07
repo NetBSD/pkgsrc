@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:15 markd Exp $
+include/KF5/KLDAP/KLDAP/AddHostDialog
 include/KF5/KLDAP/KLDAP/Ber
+include/KF5/KLDAP/KLDAP/LdapClient
+include/KF5/KLDAP/KLDAP/LdapClientSearch
+include/KF5/KLDAP/KLDAP/LdapClientSearchConfig
 include/KF5/KLDAP/KLDAP/LdapConfigWidget
+include/KF5/KLDAP/KLDAP/LdapConfigureWidget
 include/KF5/KLDAP/KLDAP/LdapConnection
 include/KF5/KLDAP/KLDAP/LdapControl
 include/KF5/KLDAP/KLDAP/LdapDN
@@ -11,8 +16,13 @@ include/KF5/KLDAP/KLDAP/LdapSearch
 include/KF5/KLDAP/KLDAP/LdapServer
 include/KF5/KLDAP/KLDAP/LdapUrl
 include/KF5/KLDAP/KLDAP/Ldif
+include/KF5/KLDAP/kldap/addhostdialog.h
 include/KF5/KLDAP/kldap/ber.h
 include/KF5/KLDAP/kldap/kldap_export.h
+include/KF5/KLDAP/kldap/ldapclient.h
+include/KF5/KLDAP/kldap/ldapclientsearch.h
+include/KF5/KLDAP/kldap/ldapclientsearchconfig.h
+include/KF5/KLDAP/kldap/ldapconfigurewidget.h
 include/KF5/KLDAP/kldap/ldapconfigwidget.h
 include/KF5/KLDAP/kldap/ldapconnection.h
 include/KF5/KLDAP/kldap/ldapcontrol.h
@@ -31,7 +41,7 @@ lib/cmake/KF5Ldap/KF5LdapTargets-noconfig.cmake
 lib/cmake/KF5Ldap/KF5LdapTargets.cmake
 lib/libKF5Ldap.so
 lib/libKF5Ldap.so.5
-lib/libKF5Ldap.so.5.14.1
+lib/libKF5Ldap.so.5.16.3
 qt5/mkspecs/modules/qt_Ldap.pri
 qt5/plugins/kf5/kio/ldap.so
 share/doc/HTML/ca/kioslave5/ldap/index.cache.bz2
@@ -44,8 +54,14 @@ share/doc/HTML/es/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/es/kioslave5/ldap/index.docbook
 share/doc/HTML/et/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/et/kioslave5/ldap/index.docbook
+share/doc/HTML/fr/kioslave5/ldap/index.cache.bz2
+share/doc/HTML/fr/kioslave5/ldap/index.docbook
+share/doc/HTML/gl/kioslave5/ldap/index.cache.bz2
+share/doc/HTML/gl/kioslave5/ldap/index.docbook
 share/doc/HTML/it/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/it/kioslave5/ldap/index.docbook
+share/doc/HTML/ko/kioslave5/ldap/index.cache.bz2
+share/doc/HTML/ko/kioslave5/ldap/index.docbook
 share/doc/HTML/nl/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/nl/kioslave5/ldap/index.docbook
 share/doc/HTML/pt/kioslave5/ldap/index.cache.bz2

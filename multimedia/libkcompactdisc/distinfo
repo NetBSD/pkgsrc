@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/02/25 03:23:49 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/04/07 12:28:29 markd Exp $
 
-SHA1 (libkcompactdisc-20.04.1.tar.xz) = 60edbb0c0eead7111c799441b5de8477b92daa75
-RMD160 (libkcompactdisc-20.04.1.tar.xz) = 4737125fa37b2751fc1764b3de83e65438ed8350
-SHA512 (libkcompactdisc-20.04.1.tar.xz) = a4e6842876d942103925e940a2c57c88541cf47312661f8d996bfc4bbf659ddcd9cd8fb41fbcd1ce4a0e88a2a07a96aa8f242bf5feb265dfbfda661f320c57b5
-Size (libkcompactdisc-20.04.1.tar.xz) = 88784 bytes
+SHA1 (libkcompactdisc-20.12.3.tar.xz) = bcd58fd5c92558e6cab9f9ceedd22ce1b7ac11f6
+RMD160 (libkcompactdisc-20.12.3.tar.xz) = 005b3979f74ae887af684fa179ebf912adf6284e
+SHA512 (libkcompactdisc-20.12.3.tar.xz) = cc586d297970304bd845ac8948912753e22d9de8a22e039c6f0a25083c8601bfd21ff831d863786f6db58c990a75f942fc3ce3d3c49bdb55e9a47a2dfaa6192c
+Size (libkcompactdisc-20.12.3.tar.xz) = 96728 bytes

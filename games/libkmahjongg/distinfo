@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:11 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:22 markd Exp $
 
-SHA1 (libkmahjongg-20.04.1.tar.xz) = e2a7064c33f603c73b79f40eb48afb1cdd1bec51
-RMD160 (libkmahjongg-20.04.1.tar.xz) = f2a195e7f9a95713512297e64c8b59b4fbaea682
-SHA512 (libkmahjongg-20.04.1.tar.xz) = e58e3f3c5d6040d9d770eb9619b34f93c18e2ba88adaf4640445a7188835321792f815e7e107303c581bac6bfb6f898ebafbea2a520eb513403e5813a7002d09
-Size (libkmahjongg-20.04.1.tar.xz) = 1684512 bytes
+SHA1 (libkmahjongg-20.12.3.tar.xz) = ba4d87d816d4bb77377f8a69c1720368b90e4ff8
+RMD160 (libkmahjongg-20.12.3.tar.xz) = bfb817d7d30923974ce729a82d912bd919b9c4f2
+SHA512 (libkmahjongg-20.12.3.tar.xz) = c4e35ec5f60ab6c401ba278e69ff2d46ccf16fd6a5f88b1dd1fa4914c030c52c7a055e473a9fb14e87ce0ca9ba36d2229ff57fe985bb9fdff29285d43e98df0e
+Size (libkmahjongg-20.12.3.tar.xz) = 1691308 bytes

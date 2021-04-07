@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/17 04:01:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/07 12:28:29 markd Exp $
 bin/dragon
 man/ca/man1/dragon.1
 man/de/man1/dragon.1
@@ -34,8 +34,12 @@ share/doc/HTML/fr/dragonplayer/index.cache.bz2
 share/doc/HTML/fr/dragonplayer/index.docbook
 share/doc/HTML/gl/dragonplayer/index.cache.bz2
 share/doc/HTML/gl/dragonplayer/index.docbook
+share/doc/HTML/id/dragonplayer/index.cache.bz2
+share/doc/HTML/id/dragonplayer/index.docbook
 share/doc/HTML/it/dragonplayer/index.cache.bz2
 share/doc/HTML/it/dragonplayer/index.docbook
+share/doc/HTML/it/dragonplayer/main.png
+share/doc/HTML/it/dragonplayer/playmedia.png
 share/doc/HTML/nl/dragonplayer/index.cache.bz2
 share/doc/HTML/nl/dragonplayer/index.docbook
 share/doc/HTML/pl/dragonplayer/index.cache.bz2

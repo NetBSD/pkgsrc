@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/17 02:36:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/04/07 12:28:24 markd Exp $
 include/KF5/KExiv2/KExiv2/KExiv2
 include/KF5/KExiv2/KExiv2/KExiv2Data
 include/KF5/KExiv2/KExiv2/KExiv2Previews
@@ -16,3 +16,4 @@ lib/cmake/KF5KExiv2/KF5KExiv2Targets.cmake
 lib/libKF5KExiv2.so
 lib/libKF5KExiv2.so.15.0.0
 lib/libKF5KExiv2.so.5.0.0
+share/qlogging-categories5/libkexiv2.categories

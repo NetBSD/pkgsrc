@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2021/04/05 05:01:23 markd Exp $
+# $NetBSD: Makefile,v 1.40 2021/04/07 12:28:15 markd Exp $
 
 DISTNAME=	kapptemplate-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/kapptemplate/

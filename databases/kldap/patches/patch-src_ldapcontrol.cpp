@@ -1,7 +1,7 @@
-$NetBSD: patch-src_ldapcontrol.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
+$NetBSD: patch-src_ldapcontrol.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
 
---- src/ldapcontrol.cpp.orig	2020-01-14 16:22:02.256391951 +0000
-+++ src/ldapcontrol.cpp
+--- src/core/ldapcontrol.cpp.orig	2020-01-14 16:22:02.256391951 +0000
++++ src/core/ldapcontrol.cpp
 @@ -123,7 +123,7 @@ int LdapControl::parsePageControl(QByteA
  
      Ber ber(d->mValue);

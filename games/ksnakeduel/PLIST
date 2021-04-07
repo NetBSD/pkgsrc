@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:21 markd Exp $
 bin/ksnakeduel
 share/applications/org.kde.ksnakeduel.desktop
 share/config.kcfg/ksnakeduel.kcfg
@@ -32,7 +32,6 @@ share/doc/HTML/uk/ksnakeduel/index.cache.bz2
 share/doc/HTML/uk/ksnakeduel/index.docbook
 share/doc/HTML/uk/ksnakeduel/settings-general.png
 share/doc/HTML/uk/ksnakeduel/settings-theme.png
-share/examples/kde-xdg/ksnakeduel.knsrc
 share/icons/hicolor/128x128/apps/ksnakeduel.png
 share/icons/hicolor/16x16/apps/ksnakeduel.png
 share/icons/hicolor/22x22/apps/ksnakeduel.png
@@ -40,6 +39,7 @@ share/icons/hicolor/256x256/apps/ksnakeduel.png
 share/icons/hicolor/32x32/apps/ksnakeduel.png
 share/icons/hicolor/48x48/apps/ksnakeduel.png
 share/icons/hicolor/64x64/apps/ksnakeduel.png
+share/knsrcfiles/ksnakeduel.knsrc
 share/ksnakeduel/themes/default.desktop
 share/ksnakeduel/themes/default.png
 share/ksnakeduel/themes/default.svgz

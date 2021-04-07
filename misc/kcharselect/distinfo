@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 11:56:14 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/04/07 12:28:26 markd Exp $
 
-SHA1 (kcharselect-20.04.1.tar.xz) = 27f36a61d818668ed0a65fa463c092dfe9f3fe5b
-RMD160 (kcharselect-20.04.1.tar.xz) = fe3faee80a8f245df5e149c0a9e1c040b10a998b
-SHA512 (kcharselect-20.04.1.tar.xz) = d1981d63b2e650691bbeac7c8e6b1d5f79e082d31ad1a256363f1d9b4cf849dbbe20b35096904f8e9f81d8c89c8e15cda8be74e912b66a0056cf001da59f4f70
-Size (kcharselect-20.04.1.tar.xz) = 335584 bytes
+SHA1 (kcharselect-20.12.3.tar.xz) = c8c4ec42291da7bc6a3c612d8b0c1b663735b791
+RMD160 (kcharselect-20.12.3.tar.xz) = 518a4ca85def443da3a0c05796caa1ae9b4baa60
+SHA512 (kcharselect-20.12.3.tar.xz) = 327eb664516645df72b671fc6a77c70435e5515506a661a40945a760f9b46f027303f97069e04f1695bd4a79009949fdfda70b213edc2415444a7ca0d05912f2
+Size (kcharselect-20.12.3.tar.xz) = 366696 bytes

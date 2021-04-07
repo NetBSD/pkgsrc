@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/06/09 11:56:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/04/07 12:28:23 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/libgwenviewlib.so.4.97.0
@@ -6,8 +6,6 @@ lib/libgwenviewlib.so.5
 qt5/plugins/kf5/parts/gvpart.so
 share/applications/org.kde.gwenview.desktop
 share/doc/HTML/ca/gwenview/browse_mode.png
-share/doc/HTML/ca/gwenview/fullscreen-browse.png
-share/doc/HTML/ca/gwenview/fullscreen-view.png
 share/doc/HTML/ca/gwenview/index.cache.bz2
 share/doc/HTML/ca/gwenview/index.docbook
 share/doc/HTML/ca/gwenview/modified-bar.png
@@ -32,20 +30,29 @@ share/doc/HTML/es/gwenview/index.cache.bz2
 share/doc/HTML/es/gwenview/index.docbook
 share/doc/HTML/id/gwenview/index.cache.bz2
 share/doc/HTML/id/gwenview/index.docbook
+share/doc/HTML/it/gwenview/browse_mode.png
+share/doc/HTML/it/gwenview/fullscreen-browse.png
+share/doc/HTML/it/gwenview/fullscreen-view.png
+share/doc/HTML/it/gwenview/importer-picking-root-folder.png
+share/doc/HTML/it/gwenview/importer.png
 share/doc/HTML/it/gwenview/index.cache.bz2
 share/doc/HTML/it/gwenview/index.docbook
+share/doc/HTML/it/gwenview/modified-bar.png
+share/doc/HTML/it/gwenview/start-page.png
+share/doc/HTML/it/gwenview/view_mode.png
 share/doc/HTML/nl/gwenview/index.cache.bz2
 share/doc/HTML/nl/gwenview/index.docbook
 share/doc/HTML/pt/gwenview/index.cache.bz2
 share/doc/HTML/pt/gwenview/index.docbook
 share/doc/HTML/pt_BR/gwenview/index.cache.bz2
 share/doc/HTML/pt_BR/gwenview/index.docbook
+share/doc/HTML/ru/gwenview/index.cache.bz2
+share/doc/HTML/ru/gwenview/index.docbook
 share/doc/HTML/sr/gwenview/index.cache.bz2
 share/doc/HTML/sr/gwenview/index.docbook
 share/doc/HTML/sv/gwenview/index.cache.bz2
 share/doc/HTML/sv/gwenview/index.docbook
 share/doc/HTML/uk/gwenview/browse_mode.png
-share/doc/HTML/uk/gwenview/fullscreen_mode.png
 share/doc/HTML/uk/gwenview/importer-picking-root-folder.png
 share/doc/HTML/uk/gwenview/importer.png
 share/doc/HTML/uk/gwenview/index.cache.bz2
