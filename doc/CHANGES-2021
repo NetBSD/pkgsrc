@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2017 2021/04/07 13:34:55 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2018 2021/04/07 16:22:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3210,3 +3210,22 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-flask-sqlalchemy to 2.5.1 [kleink 2021-04-07]
 	Updated net/youtube-dl to 20210407 [leot 2021-04-07]
 	Updated net/erlang-idna to 6.1.1nb1 [triaxx 2021-04-07]
+	Updated ham/gnuradio-channels to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-companion to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-core to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-ctrlport to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-digital to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-doxygen to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-dtv to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-fec to 3.9.1.0 [tnn 2021-04-07]
+	Added ham/gnuradio-network version 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-qtgui to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-trellis to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-uhd to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-utils to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-video-sdl to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-vocoder to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-wavelet to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gnuradio-zeromq to 3.9.1.0 [tnn 2021-04-07]
+	Updated ham/gr-osmosdr to 0.2.3.20210128 [tnn 2021-04-07]
+	Updated meta-pkgs/gnuradio to 3.9.1.0 [tnn 2021-04-07]
