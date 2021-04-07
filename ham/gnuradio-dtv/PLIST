@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/08/30 20:59:52 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/04/07 16:14:08 tnn Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -58,28 +58,23 @@ include/gnuradio/dtv/dvbt_reed_solomon_enc.h
 include/gnuradio/dtv/dvbt_reference_signals.h
 include/gnuradio/dtv/dvbt_symbol_inner_interleaver.h
 include/gnuradio/dtv/dvbt_viterbi_decoder.h
-include/gnuradio/swig/dtv_swig.i
-include/gnuradio/swig/dtv_swig_doc.i
 lib/cmake/gnuradio/gnuradio-dtvConfig.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets.cmake
 lib/libgnuradio-dtv.so
-lib/libgnuradio-dtv.so.3.8.1
+lib/libgnuradio-dtv.so.3.9.1
 lib/libgnuradio-dtv.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-dtv.pc
 ${PYSITELIB}/gnuradio/dtv/__init__.py
 ${PYSITELIB}/gnuradio/dtv/__init__.pyc
 ${PYSITELIB}/gnuradio/dtv/__init__.pyo
-${PYSITELIB}/gnuradio/dtv/_dtv_swig.so
 ${PYSITELIB}/gnuradio/dtv/atsc_rx.py
 ${PYSITELIB}/gnuradio/dtv/atsc_rx.pyc
 ${PYSITELIB}/gnuradio/dtv/atsc_rx.pyo
 ${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.py
 ${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.pyc
 ${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.pyo
-${PYSITELIB}/gnuradio/dtv/dtv_swig.py
-${PYSITELIB}/gnuradio/dtv/dtv_swig.pyc
-${PYSITELIB}/gnuradio/dtv/dtv_swig.pyo
+${PYSITELIB}/gnuradio/dtv/dtv_python.so
 share/doc/gnuradio-${PKGVERSION}/README.dtv
 share/gnuradio/examples/dtv/README.atsc
 share/gnuradio/examples/dtv/README.catv
@@ -88,6 +83,7 @@ share/gnuradio/examples/dtv/README.dvbs2
 share/gnuradio/examples/dtv/README.dvbt
 share/gnuradio/examples/dtv/README.dvbt2
 share/gnuradio/examples/dtv/atsc_ctrlport_monitor.py
+share/gnuradio/examples/dtv/catv_tx_256qam.grc
 share/gnuradio/examples/dtv/catv_tx_64qam.grc
 share/gnuradio/examples/dtv/dvbs2_tx.grc
 share/gnuradio/examples/dtv/dvbs_tx.grc
@@ -107,8 +103,8 @@ share/gnuradio/examples/dtv/germany-g7.grc
 share/gnuradio/examples/dtv/germany-g8.grc
 share/gnuradio/examples/dtv/germany-g9.grc
 share/gnuradio/examples/dtv/uhd_atsc_capture.grc
+share/gnuradio/examples/dtv/uhd_atsc_rx.grc
 share/gnuradio/examples/dtv/uhd_atsc_tx.grc
-share/gnuradio/examples/dtv/uhd_rx_atsc.grc
 share/gnuradio/examples/dtv/vv001-cr35.grc
 share/gnuradio/examples/dtv/vv003-cr23.grc
 share/gnuradio/examples/dtv/vv004-8kfft.grc
