@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.31 2021/01/01 08:24:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/07 16:14:09 tnn Exp $
 
-DISTNAME=		gr-osmosdr-0.2.2
-PKGREVISION=		1
+DISTNAME=		gr-osmosdr-0.2.3.20210128
 CATEGORIES=		ham
 # main git repo doesn't allow snapshots to be downloaded
 #MASTER_SITES=		https://git.osmocom.org/gr-osmosdr/snapshot/
 MASTER_SITES=		${MASTER_SITE_GITHUB:=osmocom/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_TAG=		a100eb024c0210b95e4738b6efd836d48225bd03
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://git.osmocom.org/gr-osmosdr
 COMMENT=		SDR Hardware support for OsmoSDR and so many more
 LICENSE=		gnu-gpl-v2
+
+# for docs/doxygen/update_pydoc.py
+BUILD_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
@@ -19,32 +21,27 @@ USE_CMAKE=		yes
 
 # Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
-# --   * Ettus USRP Devices
-CMAKE_ARGS+=	-DGNURADIO_UHD_INCLUDE_DIRS=${PREFIX}/include/uhd
-CMAKE_ARGS+=	-DGNURADIO_BLOCKS_INCLUDE_DIRS=${PREFIX}/include
 # TODO: make it PKG_OPTION
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
+CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
-.include	"../../devel/boost-headers/buildlink3.mk"
-.include	"../../devel/boost-libs/buildlink3.mk"
-.include	"../../devel/libusb1/buildlink3.mk"
-.include	"../../devel/orc/buildlink3.mk"
-
-# \todo Clearly threre is some ordering scheme.  Explain it.
-
-.include	"../../ham/uhd/buildlink3.mk"
-.include	"../../lang/python/application.mk"
-
-.include	"../../ham/rtl-sdr/buildlink3.mk"
-.include	"../../ham/hackrf/buildlink3.mk"
-.include	"../../ham/soapy-sdr/buildlink3.mk"
-
-.include	"../../ham/gnuradio-core/buildlink3.mk"
-.include	"../../ham/gnuradio-uhd/buildlink3.mk"
-
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/orc/buildlink3.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
+.include "../../ham/gnuradio-core/buildlink3.mk"
+.include "../../ham/gnuradio-uhd/buildlink3.mk"
+.include "../../ham/hackrf/buildlink3.mk"
+.include "../../ham/rtl-sdr/buildlink3.mk"
+.include "../../ham/soapy-sdr/buildlink3.mk"
+.include "../../ham/uhd/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

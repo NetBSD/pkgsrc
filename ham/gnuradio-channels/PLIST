@@ -1,29 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/30 20:46:41 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 16:14:07 tnn Exp $
 include/gnuradio/channels/api.h
 include/gnuradio/channels/channel_model.h
 include/gnuradio/channels/channel_model2.h
 include/gnuradio/channels/fading_model.h
 include/gnuradio/channels/selective_fading_model.h
 include/gnuradio/channels/selective_fading_model2.h
-include/gnuradio/swig/channels_swig.i
-include/gnuradio/swig/channels_swig_doc.i
 lib/cmake/gnuradio/gnuradio-channelsConfig.cmake
 lib/cmake/gnuradio/gnuradio-channelsTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-channelsTargets.cmake
 lib/libgnuradio-channels.so
-lib/libgnuradio-channels.so.3.8.1
+lib/libgnuradio-channels.so.3.9.1
 lib/libgnuradio-channels.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-channels.pc
 ${PYSITELIB}/gnuradio/channels/__init__.py
 ${PYSITELIB}/gnuradio/channels/__init__.pyc
 ${PYSITELIB}/gnuradio/channels/__init__.pyo
-${PYSITELIB}/gnuradio/channels/_channels_swig.so
 ${PYSITELIB}/gnuradio/channels/amp_bal.py
 ${PYSITELIB}/gnuradio/channels/amp_bal.pyc
 ${PYSITELIB}/gnuradio/channels/amp_bal.pyo
-${PYSITELIB}/gnuradio/channels/channels_swig.py
-${PYSITELIB}/gnuradio/channels/channels_swig.pyc
-${PYSITELIB}/gnuradio/channels/channels_swig.pyo
+${PYSITELIB}/gnuradio/channels/channels_python.so
 ${PYSITELIB}/gnuradio/channels/conj_fs_iqcorr.py
 ${PYSITELIB}/gnuradio/channels/conj_fs_iqcorr.pyc
 ${PYSITELIB}/gnuradio/channels/conj_fs_iqcorr.pyo
@@ -74,3 +69,66 @@ share/gnuradio/grc/blocks/channels_quantizer.block.yml
 share/gnuradio/grc/blocks/channels_selective_fading_model.block.yml
 share/gnuradio/grc/blocks/channels_selective_fading_model2.block.yml
 share/gnuradio/grc/blocks/channels_sro_model.block.yml
+@pkgdir share/mime/packages
+@pkgdir share/metainfo
+@pkgdir share/icons/hicolor/64x64/apps
+@pkgdir share/icons/hicolor/48x48/apps
+@pkgdir share/icons/hicolor/32x32/apps
+@pkgdir share/icons/hicolor/256x256/apps
+@pkgdir share/icons/hicolor/24x24/apps
+@pkgdir share/icons/hicolor/16x16/apps
+@pkgdir share/icons/hicolor/128x128/apps
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/python/bindings/docstrings
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/lib
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/include/howto
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/grc
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/examples
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/other
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/doxyxml/generated
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/cmake/Modules
+@pkgdir share/gnuradio/modtool/templates/gr-newmod/apps
+@pkgdir share/gnuradio/grc/freedesktop
+@pkgdir share/gnuradio/examples/volk_benchmark
+@pkgdir share/gnuradio/examples/tags
+@pkgdir share/gnuradio/examples/network
+@pkgdir share/gnuradio/examples/mp-sched
+@pkgdir share/gnuradio/examples/metadata
+@pkgdir share/gnuradio/examples/filter
+@pkgdir share/gnuradio/examples/blocks
+@pkgdir share/gnuradio/examples/audio
+@pkgdir share/gnuradio/examples/analog
+@pkgdir share/applications
+@pkgdir libexec/gnuradio
+@pkgdir lib/python3.8/site-packages/pmt
+@pkgdir lib/python3.8/site-packages/gnuradio/modtool/tools
+@pkgdir lib/python3.8/site-packages/gnuradio/modtool/templates
+@pkgdir lib/python3.8/site-packages/gnuradio/modtool/core
+@pkgdir lib/python3.8/site-packages/gnuradio/modtool/cli
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/gui/canvas
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/utils/descriptors
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/utils/backports
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/schema_checker
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/ports
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/params
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/io
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/generator/cpp_templates
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/core/blocks
+@pkgdir lib/python3.8/site-packages/gnuradio/grc/converter
+@pkgdir lib/python3.8/site-packages/gnuradio/gr
+@pkgdir lib/python3.8/site-packages/gnuradio/filter
+@pkgdir lib/python3.8/site-packages/gnuradio/fft
+@pkgdir lib/python3.8/site-packages/gnuradio/blocktool/core
+@pkgdir lib/python3.8/site-packages/gnuradio/blocks
+@pkgdir lib/python3.8/site-packages/gnuradio/bindtool/templates
+@pkgdir lib/python3.8/site-packages/gnuradio/bindtool/core
+@pkgdir lib/python3.8/site-packages/gnuradio/audio
+@pkgdir lib/python3.8/site-packages/gnuradio/analog
+@pkgdir include/pmt
+@pkgdir include/gnuradio/thread
+@pkgdir include/gnuradio/messages
+@pkgdir include/gnuradio/filter
+@pkgdir include/gnuradio/fft
+@pkgdir include/gnuradio/blocks
+@pkgdir include/gnuradio/audio
+@pkgdir include/gnuradio/analog
+@pkgdir bin
