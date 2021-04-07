@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:30 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/04/07 07:00:20 adam Exp $
 
 DISTNAME=	khard-0.17.0
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/scheibler/khard
 COMMENT=	CLI contacts application built around CardDAV
 LICENSE=	gnu-gpl-v3
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-[0-9]*:../../devel/py-ruamel-yaml
@@ -23,10 +24,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # does not support python-2.x any longer
 
 INSTALLATION_DIRS=	share/examples/khard ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	*/*.py
-USE_TOOLS+=		gmake
 
 pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -C doc SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} SPHINXAPIDOC=sphinx-apidoc-${PYVERSSUFFIX} man
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} sphinx-build-${PYVERSSUFFIX} -M man source build
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/source/examples/khard.conf.example ${DESTDIR}${PREFIX}/share/examples/khard
