@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2018 2021/04/07 16:22:28 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.2019 2021/04/07 19:44:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3229,3 +3229,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/gnuradio-zeromq to 3.9.1.0 [tnn 2021-04-07]
 	Updated ham/gr-osmosdr to 0.2.3.20210128 [tnn 2021-04-07]
 	Updated meta-pkgs/gnuradio to 3.9.1.0 [tnn 2021-04-07]
+	Removed misc/libkgeomap [markd 2021-04-07]
