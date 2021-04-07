@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2012 2021/04/07 11:38:35 fox Exp $
+$NetBSD: CHANGES-2021,v 1.2013 2021/04/07 12:09:06 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/lowdown to 0.8.4 [fcambus 2021-04-07]
 	Updated audio/musicpd to 0.22.6nb3 [wiz 2021-04-07]
 	Updated sysutils/exa to 0.10.0 [fox 2021-04-07]
+	Updated math/py-numpy to 1.19.5nb3 [thor 2021-04-07]
