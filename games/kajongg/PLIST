@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/03 08:22:39 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:17 markd Exp $
 bin/kajongg
 bin/kajonggserver
 share/applications/org.kde.kajongg.desktop
@@ -54,6 +54,7 @@ share/icons/hicolor/scalable/apps/kajongg.svgz
 share/kajongg/__pycache__/about.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/altint.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/animation.cpython-${PYPKGVER}.pyc
+share/kajongg/__pycache__/appversion.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/background.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/backgroundselector.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/board.cpython-${PYPKGVER}.pyc
@@ -122,6 +123,7 @@ share/kajongg/__pycache__/wind.cpython-${PYPKGVER}.pyc
 share/kajongg/about.py
 share/kajongg/altint.py
 share/kajongg/animation.py
+share/kajongg/appversion.py
 share/kajongg/background.py
 share/kajongg/backgroundselector.py
 share/kajongg/backgroundselector.ui

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:20 markd Exp $
 bin/klines
 share/applications/org.kde.klines.desktop
 share/config.kcfg/klines.kcfg
@@ -12,6 +12,8 @@ share/doc/HTML/es/klines/index.cache.bz2
 share/doc/HTML/es/klines/index.docbook
 share/doc/HTML/et/klines/index.cache.bz2
 share/doc/HTML/et/klines/index.docbook
+share/doc/HTML/fr/klines/index.cache.bz2
+share/doc/HTML/fr/klines/index.docbook
 share/doc/HTML/it/klines/index.cache.bz2
 share/doc/HTML/it/klines/index.docbook
 share/doc/HTML/nl/klines/index.cache.bz2

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/06/09 11:56:12 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/04/07 12:28:24 markd Exp $
 
-SHA1 (kolourpaint-20.04.1.tar.xz) = 15ff683ee44daacc971febd70c1345dc9150e26d
-RMD160 (kolourpaint-20.04.1.tar.xz) = 32d670fb69d670028682196e5b30ef1e25b103f4
-SHA512 (kolourpaint-20.04.1.tar.xz) = 891a0d28273c289c9ffa7a2efdb7c390c7dcee0de77df500f6e3660d9a868c2132957c1fc1dfbb524086fba4326800a624e3d5e657c09c0fd6aadcf29b11d9a6
-Size (kolourpaint-20.04.1.tar.xz) = 5652164 bytes
+SHA1 (kolourpaint-20.12.3.tar.xz) = 0be0cbc1c9bd538fd704407407a0a3268893ea7b
+RMD160 (kolourpaint-20.12.3.tar.xz) = ffd04996847c40ff34b84748782b262564c1c0ef
+SHA512 (kolourpaint-20.12.3.tar.xz) = 03a2312932fbbb0a22bc2291b12af639c4cf2895068d25efed4f2307fcc124ce6d22f5580eb3ddcb4501c18dbfbf4c88572cce106c9795196afc117099157fc5
+Size (kolourpaint-20.12.3.tar.xz) = 5686472 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:16 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:29 markd Exp $
 
-SHA1 (dragon-20.04.1.tar.xz) = f3ffb8f450f5ff45b7ac448884a05744f4e9988b
-RMD160 (dragon-20.04.1.tar.xz) = 654a3932ba76ccf1f9172e8fb113dab9b858aaca
-SHA512 (dragon-20.04.1.tar.xz) = 3d194e518c6cef32d0d46269faddaf1e82414454c4b527bd6e3f3dfeb4f83ae74ca42803544f7f9e44c6e618e6146655abf2567c316b2cd16e88506dbb54767b
-Size (dragon-20.04.1.tar.xz) = 1352004 bytes
+SHA1 (dragon-20.12.3.tar.xz) = 79c3ce1b9d9645a2fd49d3c060f0cfc5cbcf1073
+RMD160 (dragon-20.12.3.tar.xz) = 840294a305547eca2b2219be9f2d240028c9f7b0
+SHA512 (dragon-20.12.3.tar.xz) = af05801abdf24670286fcfdade58c600b1f0ae4a0316cc95cb8020deafbba7a5b5832e9907b7cc78569d5074d855a348e9aac325305ccb5afd7fdeb0d1e62527
+Size (dragon-20.12.3.tar.xz) = 1656596 bytes

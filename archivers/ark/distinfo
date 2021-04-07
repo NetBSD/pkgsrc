@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/09/20 11:05:31 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/04/07 12:28:14 markd Exp $
 
-SHA1 (ark-20.04.1.tar.xz) = 8749d72169443e38514a64a850aad1f88f616422
-RMD160 (ark-20.04.1.tar.xz) = ec8435d4d5d5aeff657762ba4441acf3f6237bf7
-SHA512 (ark-20.04.1.tar.xz) = 4433b6aee95a88f7a57cca1275a25194cd721b26d38b60059b907c5f7949e75ddc76337f33ed4e07c095622f8e8ee20e9ce1158e02ff620d386fefd6e3472ff1
-Size (ark-20.04.1.tar.xz) = 2587528 bytes
-SHA1 (patch-kerfuffle_jobs.cpp) = 41684c88ef8518e9a06ddcb073cf7251f78b9a79
-SHA1 (patch-plugins_libarchive_libarchiveplugin.cpp) = 1cd5da5873f3e32f79ce0a85a1afabca28b96fcd
+SHA1 (ark-20.12.3.tar.xz) = c420284617af098aedb526c437f19df26c887161
+RMD160 (ark-20.12.3.tar.xz) = 748fc3c5aaee8e4d2acd424d83c7934870a24aa6
+SHA512 (ark-20.12.3.tar.xz) = c6f3da5f3c24ad274891af99dd118d0c852382ce632abbc1273a5b6e216ecb53ef466d49d2279d3e6f0e1b088975584eadb2d2182d3819b888047c0a59ba0a7a
+Size (ark-20.12.3.tar.xz) = 2717324 bytes

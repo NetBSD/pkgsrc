@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 11:56:14 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/04/07 12:28:26 markd Exp $
 
-SHA1 (kalgebra-20.04.1.tar.xz) = fee0fe7c88b524507e1c636aaf85c996e0da4f5b
-RMD160 (kalgebra-20.04.1.tar.xz) = e54f822af96e2941106cadc215cd727ec9d63bc8
-SHA512 (kalgebra-20.04.1.tar.xz) = 9ed48488b448da004d52f49dba28c67a2a0fe83db9f72d37f1beed1751b53cff407e201ba3d72ba90a8082c77ff0a2d57b6524351a171e5631c1fa2bf5d28c30
-Size (kalgebra-20.04.1.tar.xz) = 1158236 bytes
+SHA1 (kalgebra-20.12.3.tar.xz) = dac2a892afdd6d182dd7c068dae54927a5349838
+RMD160 (kalgebra-20.12.3.tar.xz) = eb8e91b0e91e4a6d922270dd1bc86074d8ad5742
+SHA512 (kalgebra-20.12.3.tar.xz) = 75cc1a85253103768486de84526fb3902fe8a269320af0259bdb0c2dc732062a2928b05c8871a74dc0d0563db57fa5d0304e7c0702c928b29d6a40c99a3b9d30
+Size (kalgebra-20.12.3.tar.xz) = 1024612 bytes

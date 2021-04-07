@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:10 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:22 markd Exp $
 
-SHA1 (ksudoku-20.04.1.tar.xz) = a290a815a48707dde6f46baea9daa3ba2934c0ca
-RMD160 (ksudoku-20.04.1.tar.xz) = c702289d9b665e74a84af44f57ee5a67c87a57b9
-SHA512 (ksudoku-20.04.1.tar.xz) = 1aaf7131be27299c6427f0094f06e4edddc94503bb2c0d268810363592b6b6aa666ec19d361a65844de42abe923e57351d0d15b86af2c52a2fa177d5fc84573b
-Size (ksudoku-20.04.1.tar.xz) = 1655784 bytes
+SHA1 (ksudoku-20.12.3.tar.xz) = 8090cb0425661143db8e221c583eac386d7ffc6e
+RMD160 (ksudoku-20.12.3.tar.xz) = 2c28d88b1c0ac35adbe23a8f58293c401d461cf8
+SHA512 (ksudoku-20.12.3.tar.xz) = 3ee16844478ea8e70b606eda689279ae428423ffc758ea6876fb78ee3ad43795a44345c1314f0db0cbe8f98029f48bfeed9dbba1548d3160bf9f34e294e8c550
+Size (ksudoku-20.12.3.tar.xz) = 1676484 bytes
+SHA1 (patch-src_gui_views_ArcBall.h) = 91e128a10235713edb8d7437fff81476ca8b5f17
