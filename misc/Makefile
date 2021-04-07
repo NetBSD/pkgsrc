@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2021/03/04 04:32:30 jnemeth Exp $
+# $NetBSD: Makefile,v 1.547 2021/04/07 19:42:25 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -167,7 +167,6 @@ SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libkdeedu
 SUBDIR+=	libkeduvocdocument
-SUBDIR+=	libkgeomap
 SUBDIR+=	libkkc-data
 SUBDIR+=	libkvkontakte
 SUBDIR+=	libmateweather
