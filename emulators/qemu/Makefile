@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2021/03/31 08:52:27 reinoud Exp $
+# $NetBSD: Makefile,v 1.270 2021/04/07 13:21:28 wiz Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	5
@@ -137,6 +137,8 @@ PLIST.${pvar}=		yes
 
 # different versions of Sphinx generate different static files
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.STATIC
+
+PRINT_PLIST_AWK+=	/\/_static\// { next; }
 
 TEST_TARGET=		check
 
