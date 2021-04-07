@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2016 2021/04/07 13:21:12 leot Exp $
+$NetBSD: CHANGES-2021,v 1.2017 2021/04/07 13:34:55 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3209,3 +3209,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/konsole to 20.12.3 [markd 2021-04-07]
 	Updated www/py-flask-sqlalchemy to 2.5.1 [kleink 2021-04-07]
 	Updated net/youtube-dl to 20210407 [leot 2021-04-07]
+	Updated net/erlang-idna to 6.1.1nb1 [triaxx 2021-04-07]
