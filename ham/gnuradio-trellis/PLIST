@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/08/30 21:05:13 tnn Exp $
-include/gnuradio/swig/trellis_swig0.i
-include/gnuradio/swig/trellis_swig0_doc.i
-include/gnuradio/swig/trellis_swig1.i
-include/gnuradio/swig/trellis_swig1_doc.i
+@comment $NetBSD: PLIST,v 1.11 2021/04/07 16:14:08 tnn Exp $
 include/gnuradio/trellis/api.h
 include/gnuradio/trellis/base.h
 include/gnuradio/trellis/calc_metric.h
@@ -29,26 +25,16 @@ lib/cmake/gnuradio/gnuradio-trellisConfig.cmake
 lib/cmake/gnuradio/gnuradio-trellisTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-trellisTargets.cmake
 lib/libgnuradio-trellis.so
-lib/libgnuradio-trellis.so.3.8.1
+lib/libgnuradio-trellis.so.3.9.1
 lib/libgnuradio-trellis.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-trellis.pc
 ${PYSITELIB}/gnuradio/trellis/__init__.py
 ${PYSITELIB}/gnuradio/trellis/__init__.pyc
 ${PYSITELIB}/gnuradio/trellis/__init__.pyo
-${PYSITELIB}/gnuradio/trellis/_trellis_swig0.so
-${PYSITELIB}/gnuradio/trellis/_trellis_swig1.so
 ${PYSITELIB}/gnuradio/trellis/fsm_utils.py
 ${PYSITELIB}/gnuradio/trellis/fsm_utils.pyc
 ${PYSITELIB}/gnuradio/trellis/fsm_utils.pyo
-${PYSITELIB}/gnuradio/trellis/trellis_swig.py
-${PYSITELIB}/gnuradio/trellis/trellis_swig.pyc
-${PYSITELIB}/gnuradio/trellis/trellis_swig.pyo
-${PYSITELIB}/gnuradio/trellis/trellis_swig0.py
-${PYSITELIB}/gnuradio/trellis/trellis_swig0.pyc
-${PYSITELIB}/gnuradio/trellis/trellis_swig0.pyo
-${PYSITELIB}/gnuradio/trellis/trellis_swig1.py
-${PYSITELIB}/gnuradio/trellis/trellis_swig1.pyc
-${PYSITELIB}/gnuradio/trellis/trellis_swig1.pyo
+${PYSITELIB}/gnuradio/trellis/trellis_python.so
 share/doc/gnuradio-${PKGVERSION}/html/gr-trellis.html
 share/doc/gnuradio-${PKGVERSION}/xml/test_tcm.py.xml
 share/doc/gnuradio-${PKGVERSION}/xml/test_viterbi_equalization1.py.xml
