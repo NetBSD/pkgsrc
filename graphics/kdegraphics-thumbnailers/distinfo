@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/06/09 11:56:12 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/04/07 12:28:23 markd Exp $
 
-SHA1 (kdegraphics-thumbnailers-20.04.1.tar.xz) = 6ba2c252513c637a3b724c635740bf8e6a838a92
-RMD160 (kdegraphics-thumbnailers-20.04.1.tar.xz) = 737f995772420d1a22cf16252e83a81b9a9545aa
-SHA512 (kdegraphics-thumbnailers-20.04.1.tar.xz) = cba5ecac31b561931a77ccc63e274e4b03b4a2b6cc71d2a149fda378ab7f394291c624af89ae71e56e9bac6483af88589f6ba5d420e8e453d19fe394961652d6
-Size (kdegraphics-thumbnailers-20.04.1.tar.xz) = 46480 bytes
+SHA1 (kdegraphics-thumbnailers-20.12.3.tar.xz) = 20ecf4ad6c350098bc9e149a1552e6aac35ea4b8
+RMD160 (kdegraphics-thumbnailers-20.12.3.tar.xz) = 5599a8e6ca01bff95b4ed1253f28dfc9c3b828bc
+SHA512 (kdegraphics-thumbnailers-20.12.3.tar.xz) = f6f31b3ff14f81a9b7d8e25ba7be4c6def72815cf113c0f6d78b5f9568f5fc31d707950d10ec314406bf92ab94284492277046d0d476a8a94542b76b6b0f927a
+Size (kdegraphics-thumbnailers-20.12.3.tar.xz) = 47048 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/21 06:09:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:28 markd Exp $
 bin/kwordquiz
 share/applications/org.kde.kwordquiz.desktop
 share/config.kcfg/kwordquiz.kcfg
@@ -66,6 +66,8 @@ share/doc/HTML/et/kwordquiz/index.cache.bz2
 share/doc/HTML/et/kwordquiz/index.docbook
 share/doc/HTML/it/kwordquiz/index.cache.bz2
 share/doc/HTML/it/kwordquiz/index.docbook
+share/doc/HTML/ko/kwordquiz/index.cache.bz2
+share/doc/HTML/ko/kwordquiz/index.docbook
 share/doc/HTML/nl/kwordquiz/index.cache.bz2
 share/doc/HTML/nl/kwordquiz/index.docbook
 share/doc/HTML/pt/kwordquiz/index.cache.bz2
@@ -107,7 +109,6 @@ share/doc/HTML/uk/kwordquiz/kwq-tutor-popup-native.png
 share/doc/HTML/uk/kwordquiz/kwq-tutor-settings.png
 share/doc/HTML/uk/kwordquiz/kwq-tutor-shortcuts.png
 share/doc/HTML/uk/kwordquiz/kwq-tutor-welcome.png
-share/examples/kde-xdg/kwordquiz.knsrc
 share/icons/hicolor/128x128/apps/kwordquiz.png
 share/icons/hicolor/128x128/mimetypes/application-x-kwordquiz.png
 share/icons/hicolor/16x16/apps/kwordquiz.png
@@ -120,6 +121,7 @@ share/icons/hicolor/48x48/apps/kwordquiz.png
 share/icons/hicolor/48x48/mimetypes/application-x-kwordquiz.png
 share/icons/hicolor/64x64/apps/kwordquiz.png
 share/knotifications5/kwordquiz.notifyrc
+share/knsrcfiles/kwordquiz.knsrc
 share/kwordquiz/examples/example.kvtml
 share/kwordquiz/examples/fill_in_the_blank.kvtml
 share/kwordquiz/examples/french_verbs.kvtml
@@ -295,6 +297,7 @@ share/locale/gl/LC_MESSAGES/kwordquiz.mo
 share/locale/hi/LC_MESSAGES/kwordquiz.mo
 share/locale/hr/LC_MESSAGES/kwordquiz.mo
 share/locale/hu/LC_MESSAGES/kwordquiz.mo
+share/locale/ia/LC_MESSAGES/kwordquiz.mo
 share/locale/it/LC_MESSAGES/kwordquiz.mo
 share/locale/ja/LC_MESSAGES/kwordquiz.mo
 share/locale/kk/LC_MESSAGES/kwordquiz.mo

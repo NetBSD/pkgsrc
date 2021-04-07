@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2021/04/05 12:54:28 markd Exp $
+$NetBSD: distinfo,v 1.29 2021/04/07 12:28:31 markd Exp $
 
 SHA1 (k3b-20.12.3.tar.xz) = 094fb553e92134384beb8a4a3b94dcb600af1870
 RMD160 (k3b-20.12.3.tar.xz) = cbe421ff091c1d51300e64f18c13eeaa84f84768
