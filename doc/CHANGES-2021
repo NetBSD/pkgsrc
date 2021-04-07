@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2014 2021/04/07 12:34:50 markd Exp $
+$NetBSD: CHANGES-2021,v 1.2015 2021/04/07 13:09:07 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/kcalutils to 20.12.3 [markd 2021-04-07]
 	Updated time/ktimer to 20.12.3 [markd 2021-04-07]
 	Updated x11/konsole to 20.12.3 [markd 2021-04-07]
+	Updated www/py-flask-sqlalchemy to 2.5.1 [kleink 2021-04-07]
