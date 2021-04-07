@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/11/29 23:16:29 dbj Exp $
-include/gnuradio/swig/vocoder_swig.i
-include/gnuradio/swig/vocoder_swig_doc.i
+@comment $NetBSD: PLIST,v 1.7 2021/04/07 16:14:09 tnn Exp $
 include/gnuradio/vocoder/alaw_decode_bs.h
 include/gnuradio/vocoder/alaw_encode_sb.h
 include/gnuradio/vocoder/api.h
@@ -26,19 +24,16 @@ lib/cmake/gnuradio/gnuradio-vocoderConfig.cmake
 lib/cmake/gnuradio/gnuradio-vocoderTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-vocoderTargets.cmake
 lib/libgnuradio-vocoder.so
-lib/libgnuradio-vocoder.so.3.8.1
+lib/libgnuradio-vocoder.so.3.9.1
 lib/libgnuradio-vocoder.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-vocoder.pc
 ${PYSITELIB}/gnuradio/vocoder/__init__.py
 ${PYSITELIB}/gnuradio/vocoder/__init__.pyc
 ${PYSITELIB}/gnuradio/vocoder/__init__.pyo
-${PYSITELIB}/gnuradio/vocoder/_vocoder_swig.so
 ${PYSITELIB}/gnuradio/vocoder/cvsd.py
 ${PYSITELIB}/gnuradio/vocoder/cvsd.pyc
 ${PYSITELIB}/gnuradio/vocoder/cvsd.pyo
-${PYSITELIB}/gnuradio/vocoder/vocoder_swig.py
-${PYSITELIB}/gnuradio/vocoder/vocoder_swig.pyc
-${PYSITELIB}/gnuradio/vocoder/vocoder_swig.pyo
+${PYSITELIB}/gnuradio/vocoder/vocoder_python.so
 share/doc/gnuradio-${PKGVERSION}/README.vocoder
 share/gnuradio/examples/vocoder/alaw_audio_loopback.py
 share/gnuradio/examples/vocoder/codec2_audio_loopback.py
@@ -49,7 +44,9 @@ share/gnuradio/examples/vocoder/g723_40_audio_loopback.py
 share/gnuradio/examples/vocoder/grfreedv.grc
 share/gnuradio/examples/vocoder/gsm_audio_loopback.py
 share/gnuradio/examples/vocoder/loopback-codec2.grc
+share/gnuradio/examples/vocoder/loopback-gsmfr.grc
 share/gnuradio/examples/vocoder/ulaw_audio_loopback.py
+share/gnuradio/grc/blocks/vocoder.tree.yml
 share/gnuradio/grc/blocks/vocoder_alaw_decode_bs.block.yml
 share/gnuradio/grc/blocks/vocoder_alaw_encode_sb.block.yml
 share/gnuradio/grc/blocks/vocoder_codec2_decode_ps.block.yml
