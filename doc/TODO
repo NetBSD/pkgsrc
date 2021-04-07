@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20479 2021/04/07 06:24:13 adam Exp $
+$NetBSD: TODO,v 1.20480 2021/04/07 11:23:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -749,6 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-3.2.0
+	o librsvg-2.50.3
 	o libtecla-1.6.3
 	o libvirt-2.3
 	o libvpx-1.10.0
