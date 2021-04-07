@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/08/30 21:18:09 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/07 16:15:08 tnn Exp $
 
 META_PACKAGE=	yes
 
@@ -15,6 +15,7 @@ HOMEPAGE=	https://www.gnu.org/software/gnuradio/
 COMMENT=	Collection of GNU Radio (meta package, easy to install whole thing)
 
 DEPENDS+=	gnuradio-channels-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-channels
+DEPENDS+=	gnuradio-network-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-network
 DEPENDS+=	gnuradio-companion-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-companion
 DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
 DEPENDS+=	gnuradio-ctrlport-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-ctrlport
