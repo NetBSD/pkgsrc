@@ -1,102 +1,78 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.5 2021/03/26 20:34:28 thor Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.6 2021/04/07 11:57:30 thor Exp $
 
-Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
+Introduce new option 'generic' for BLAS and LAPACK
+TODO: The same for 64 bit offset versions, but we'd need repspective BLAS builds
+first in pkgsrc to test.
 
---- numpy/distutils/system_info.py.orig	2020-06-02 05:24:58.000000000 +0000
+--- numpy/distutils/system_info.py.orig	2021-01-04 14:16:38.000000000 +0000
 +++ numpy/distutils/system_info.py
-@@ -1730,34 +1722,18 @@ class lapack_opt_info(system_info):
+@@ -114,6 +114,13 @@ Currently, the following classes are ava
+     x11_info:x11
+     xft_info:xft
+ 
++Note that blas_opt_info and lapack_opt_info honor the NPY_BLAS_ORDER and NPY_LAPACK_ORDER
++environment variables to select a specific implementation. One possible implementation
++is 'generic', which relies on the environment providing BLAS_LIBS and LAPACK_LIBS to
++link to the customary plain f77 interface, supporting any standard-conforming BLAS
++and LAPACK implementation (which might be different between build-time and run-time,
++even).
++
+ Example:
+ ----------
+ [DEFAULT]
+@@ -1651,7 +1658,7 @@ def get_atlas_version(**config):
+ class lapack_opt_info(system_info):
+     notfounderror = LapackNotFoundError
+     # List of all known BLAS libraries, in the default order
+-    lapack_order = ['mkl', 'openblas', 'flame', 'atlas', 'accelerate', 'lapack']
++    lapack_order = ['generic', 'mkl', 'openblas', 'flame', 'atlas', 'accelerate', 'lapack']
+     order_env_var_name = 'NPY_LAPACK_ORDER'
+ 
+     def _calc_info_mkl(self):
+@@ -1744,6 +1751,18 @@ class lapack_opt_info(system_info):
+             return True
+         return False
+ 
++    def _calc_info_generic(self):
++        if 'LAPACK_LIBS' in os.environ:
++            info = {}
++            info['language'] = 'f77'
++            info['libraries'] = []
++            info['include_dirs'] = []
++            info['define_macros'] = []
++            info['extra_link_args'] = os.environ['LAPACK_LIBS'].split()
++            self.set_info(**info)
++            return True
++        return False
++
+     def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
-     def calc_info(self):
--        user_order = os.environ.get(self.order_env_var_name, None)
--        if user_order is None:
--            lapack_order = self.lapack_order
--        else:
--            # the user has requested the order of the
--            # check they are all in the available list, a COMMA SEPARATED list
--            user_order = user_order.lower().split(',')
--            non_existing = []
--            lapack_order = []
--            for order in user_order:
--                if order in self.lapack_order:
--                    lapack_order.append(order)
--                elif len(order) > 0:
--                    non_existing.append(order)
--            if len(non_existing) > 0:
--                raise ValueError("lapack_opt_info user defined "
--                                 "LAPACK order has unacceptable "
--                                 "values: {}".format(non_existing))
--
--        for lapack in lapack_order:
--            if self._calc_info(lapack):
--                return
--
--        if 'lapack' not in lapack_order:
--            # Since the user may request *not* to use any library, we still need
--            # to raise warnings to signal missing packages!
--            warnings.warn(LapackNotFoundError.__doc__ or '', stacklevel=2)
--            warnings.warn(LapackSrcNotFoundError.__doc__ or '', stacklevel=2)
-+        # Fixing usage of LAPACK specified in LAPACK_LIBS.
-+        # Existence of LAPACK_LIBS is mandatory. Things shall break early
-+        # if it is not set.
-+        info = {}
-+        info['language'] = 'f77'
-+        info['libraries'] = []
-+        info['include_dirs'] = []
-+        info['define_macros'] = []
-+        info['extra_link_args'] = os.environ['LAPACK_LIBS'].split()
-+ 
-+        self.set_info(**info)
-+        return
+@@ -1823,7 +1842,7 @@ class lapack64__opt_info(lapack_ilp64_op
+ class blas_opt_info(system_info):
+     notfounderror = BlasNotFoundError
+     # List of all known BLAS libraries, in the default order
+-    blas_order = ['mkl', 'blis', 'openblas', 'atlas', 'accelerate', 'blas']
++    blas_order = ['generic', 'mkl', 'blis', 'openblas', 'atlas', 'accelerate', 'blas']
+     order_env_var_name = 'NPY_BLAS_ORDER'
  
+     def _calc_info_mkl(self):
+@@ -1889,6 +1908,18 @@ class blas_opt_info(system_info):
+         self.set_info(**info)
+         return True
  
- class _ilp64_opt_info_mixin:
-@@ -1875,32 +1848,22 @@ class blas_opt_info(system_info):
++    def _calc_info_generic(self):
++        if 'BLAS_LIBS' in os.environ:
++            info = {}
++            info['language'] = 'f77'
++            info['libraries'] = []
++            info['include_dirs'] = []
++            info['define_macros'] = []
++            info['extra_link_args'] = os.environ['BLAS_LIBS'].split()
++            self.set_info(**info)
++            return True
++        return False
++
+     def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
-     def calc_info(self):
--        user_order = os.environ.get(self.order_env_var_name, None)
--        if user_order is None:
--            blas_order = self.blas_order
--        else:
--            # the user has requested the order of the
--            # check they are all in the available list
--            user_order = user_order.lower().split(',')
--            non_existing = []
--            blas_order = []
--            for order in user_order:
--                if order in self.blas_order:
--                    blas_order.append(order)
--                elif len(order) > 0:
--                    non_existing.append(order)
--            if len(non_existing) > 0:
--                raise ValueError("blas_opt_info user defined BLAS order has unacceptable values: {}".format(non_existing))
--
--        for blas in blas_order:
--            if self._calc_info(blas):
--                return
--
--        if 'blas' not in blas_order:
--            # Since the user may request *not* to use any library, we still need
--            # to raise warnings to signal missing packages!
--            warnings.warn(BlasNotFoundError.__doc__ or '', stacklevel=2)
--            warnings.warn(BlasSrcNotFoundError.__doc__ or '', stacklevel=2)
-+        # Fixing usage of libcblas and the BLAS specified in BLAS_LIBS.
-+        # Existence of BLAS_LIBS is mandatory. Things shall break early
-+        # if it is not set.
-+        info = {}
-+        # We assume a generic BLAS, which is a Fortran lib.
-+        info['language'] = 'f77'
-+        # Try to work without cblas, just link BLAS_LIBS.
-+        #info['libraries'] = ['cblas']
-+        #info['define_macros'] = [('HAVE_CBLAS', None)]
-+        info['libraries'] = []
-+        info['include_dirs'] = []
-+        info['define_macros'] = []
-+        info['extra_link_args'] = os.environ['BLAS_LIBS'].split()
-+ 
-+        self.set_info(**info)
-+        return
- 
- 
- class blas_ilp64_opt_info(blas_opt_info, _ilp64_opt_info_mixin):

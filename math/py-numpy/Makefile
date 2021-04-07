@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2021/03/26 20:34:28 thor Exp $
+# $NetBSD: Makefile,v 1.77 2021/04/07 11:57:30 thor Exp $
 
 DISTNAME=	numpy-1.19.5
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -18,8 +18,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_LANGUAGES=		c99 fortran
-MAKE_ENV+=		ATLAS=None
+# Use our BLAS. The patch adds 'generic' as first entry anyway, but we
+# enforce it to fail early and for the case that upstream accepts the
+# patch, but with changed default order.
 MAKE_ENV+=		BLAS_LIBS=${BLAS_LIBS:Q} LAPACK_LIBS=${LAPACK_LIBS:Q}
+MAKE_ENV+=		NPY_BLAS_ORDER=generic NPY_LAPACK_ORDER=generic
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
