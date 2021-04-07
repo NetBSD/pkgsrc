@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:11 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:22 markd Exp $
 
-SHA1 (lskat-20.04.1.tar.xz) = 387b755a028dacfaa1d31497680b5f9682e62c06
-RMD160 (lskat-20.04.1.tar.xz) = a82449f197af9a6ddefc11495481dfc127dccbbc
-SHA512 (lskat-20.04.1.tar.xz) = 30e150a91ae0eebc13b08e828154dc4c413431399ae6296a43052a5969de8b96b482534eab8b17e2da9e249cf17b849caba22ab60f929056883a7bc079d71edb
-Size (lskat-20.04.1.tar.xz) = 1219992 bytes
+SHA1 (lskat-20.12.3.tar.xz) = ce94e059c2e711015f3fc7624a6f8d2202c5bff4
+RMD160 (lskat-20.12.3.tar.xz) = 62bd0b071c4183197b5a1c380a9c6c24bc763349
+SHA512 (lskat-20.12.3.tar.xz) = 8e06137de8ad315cd0c885c382de0e7f85d76ace3d99a110e7d3f17e9a03011ebfe392c6236a9ca8523079d635421d4fc9fa1bcc0865807fad8a65b1d8093759
+Size (lskat-20.12.3.tar.xz) = 1225308 bytes

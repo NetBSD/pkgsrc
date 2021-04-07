@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:18 markd Exp $
 bin/katomic
 share/applications/org.kde.katomic.desktop
 share/doc/HTML/ca/katomic/index.cache.bz2
@@ -29,7 +29,6 @@ share/doc/HTML/sv/katomic/index.docbook
 share/doc/HTML/uk/katomic/index.cache.bz2
 share/doc/HTML/uk/katomic/index.docbook
 share/doc/HTML/uk/katomic/mainscreen.png
-share/examples/kde-xdg/katomic.knsrc
 share/icons/hicolor/128x128/apps/katomic.png
 share/icons/hicolor/16x16/apps/katomic.png
 share/icons/hicolor/22x22/apps/katomic.png
@@ -40,6 +39,7 @@ share/katomic/levels/default_levels.dat
 share/katomic/pics/default_theme.svgz
 share/kconf_update/katomic-levelset-upd.pl
 share/kconf_update/katomic-levelset.upd
+share/knsrcfiles/katomic.knsrc
 share/kxmlgui5/katomic/katomicui.rc
 share/locale/ar/LC_MESSAGES/katomic.mo
 share/locale/bg/LC_MESSAGES/katomic.mo

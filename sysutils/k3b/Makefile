@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2021/04/05 12:54:28 markd Exp $
+# $NetBSD: Makefile,v 1.123 2021/04/07 12:28:31 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
 CATEGORIES=	sysutils
@@ -7,7 +7,6 @@ HOMEPAGE=	https://userbase.kde.org/K3b
 COMMENT=	DVD and CD authoring program
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-KAPPSVER=	20.12.3
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools

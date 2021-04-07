@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/06/09 11:56:12 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/04/07 12:28:24 markd Exp $
 
-SHA1 (kruler-20.04.1.tar.xz) = ff423231e52b5d04007ec07feb559d1112cb5af3
-RMD160 (kruler-20.04.1.tar.xz) = f7ebe59985b98603c399665b9ae79440b966476a
-SHA512 (kruler-20.04.1.tar.xz) = b2ee3e869a38729cedee86dafec1e0eb860a7fde1aae6ba9bf6625626a23cf2a5f384c3ff4279231bd560315657dbff41c01d4c6ef89dcaa39063714063d93d6
-Size (kruler-20.04.1.tar.xz) = 250488 bytes
+SHA1 (kruler-20.12.3.tar.xz) = 1fec432d5ec8d61b343ce8fa7667bb69aad4fd8f
+RMD160 (kruler-20.12.3.tar.xz) = 95e760c595200766ec30fca472315699df1576c0
+SHA512 (kruler-20.12.3.tar.xz) = 2facf88204295321235b65975a1147b1e8e1d1f1ab9219bea635807bd9e6d3d060adc5a0e44d074132aea4a39cd0aeb4647b4f19692950484bd2b3516ca57b01
+Size (kruler-20.12.3.tar.xz) = 272396 bytes

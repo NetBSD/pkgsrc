@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:44:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/07 12:28:19 markd Exp $
 bin/khangman
 man/ca/man6/khangman.6
 man/de/man6/khangman.6
@@ -60,8 +60,12 @@ share/doc/HTML/et/khangman/index.cache.bz2
 share/doc/HTML/et/khangman/index.docbook
 share/doc/HTML/id/khangman/index.cache.bz2
 share/doc/HTML/id/khangman/index.docbook
+share/doc/HTML/it/khangman/getnewstuff.png
 share/doc/HTML/it/khangman/index.cache.bz2
 share/doc/HTML/it/khangman/index.docbook
+share/doc/HTML/it/khangman/khangman-desert.png
+share/doc/HTML/it/khangman/khangman-main.png
+share/doc/HTML/it/khangman/settings.png
 share/doc/HTML/nl/khangman/index.cache.bz2
 share/doc/HTML/nl/khangman/index.docbook
 share/doc/HTML/pt/khangman/index.cache.bz2
@@ -157,8 +161,8 @@ share/khangman/qml/sounds/splash.ogg
 share/khangman/qml/sounds/splash.wav
 share/khangman/qml/sounds/wrong.ogg
 share/khangman/qml/sounds/wrong.wav
+share/khangman/sk.txt
 share/khangman/sl.txt
-share/khangman/sr@latin.txt
 share/khangman/sv.txt
 share/khangman/themes/khangman_bees.svg
 share/khangman/themes/khangman_desert.svg

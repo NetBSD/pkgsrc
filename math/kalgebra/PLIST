@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/09 11:56:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/07 12:28:26 markd Exp $
 bin/calgebra
 bin/kalgebramobile
 share/applications/org.kde.kalgebramobile.desktop
@@ -7,10 +7,8 @@ share/doc/HTML/ca/kalgebra/index.cache.bz2
 share/doc/HTML/ca/kalgebra/index.docbook
 share/doc/HTML/ca/kalgebra/kalgebra-2dgraph-window.png
 share/doc/HTML/ca/kalgebra/kalgebra-3dgraph-window.png
-share/doc/HTML/ca/kalgebra/kalgebra-console-window.png
 share/doc/HTML/ca/kalgebra/kalgebra-dictionary-window.png
 share/doc/HTML/ca/kalgebra/kalgebra-main-window.png
-share/doc/HTML/ca/kalgebra/view-fullscreen.png
 share/doc/HTML/de/kalgebra/commands.docbook
 share/doc/HTML/de/kalgebra/index.cache.bz2
 share/doc/HTML/de/kalgebra/index.docbook
@@ -44,6 +42,10 @@ share/doc/HTML/pt_BR/kalgebra/commands.docbook
 share/doc/HTML/pt_BR/kalgebra/index.cache.bz2
 share/doc/HTML/pt_BR/kalgebra/index.docbook
 share/doc/HTML/pt_BR/kalgebra/kalgebra-main-window.png
+share/doc/HTML/ru/kalgebra/commands.docbook
+share/doc/HTML/ru/kalgebra/index.cache.bz2
+share/doc/HTML/ru/kalgebra/index.docbook
+share/doc/HTML/ru/kalgebra/kalgebra-main-window.png
 share/doc/HTML/sv/kalgebra/commands.docbook
 share/doc/HTML/sv/kalgebra/index.cache.bz2
 share/doc/HTML/sv/kalgebra/index.docbook
@@ -177,6 +179,7 @@ share/locale/sk/LC_MESSAGES/kalgebra.mo
 share/locale/sk/LC_MESSAGES/kalgebramobile.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_kalgebraplasmoid.mo
 share/locale/sl/LC_MESSAGES/kalgebra.mo
+share/locale/sl/LC_MESSAGES/kalgebramobile.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_kalgebraplasmoid.mo
 share/locale/sv/LC_MESSAGES/kalgebra.mo
 share/locale/sv/LC_MESSAGES/kalgebramobile.mo

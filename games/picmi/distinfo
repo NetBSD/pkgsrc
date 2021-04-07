@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/09 11:56:11 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/04/07 12:28:23 markd Exp $
 
-SHA1 (picmi-20.04.1.tar.xz) = b3eccc0411d1a4c390893ee6129e51e396530d7e
-RMD160 (picmi-20.04.1.tar.xz) = abed4067fc336dcc6d7f08bf887180ca90a8390a
-SHA512 (picmi-20.04.1.tar.xz) = 159a21429216e19f6c6db2d6c360a6146df1860f222234394fce0ae63af2cb85f0744d5b14a47640f69137b1c46b876b1bae67dfceb17ab95368a811d455cd90
-Size (picmi-20.04.1.tar.xz) = 1360824 bytes
+SHA1 (picmi-20.12.3.tar.xz) = e888d00ec7ba6cc0d531abb0f533fadbf68f109b
+RMD160 (picmi-20.12.3.tar.xz) = cbe2a10e2dafa24a7661f2a90106ace721448230
+SHA512 (picmi-20.12.3.tar.xz) = 46b269212a425a62fabe97d06f272bbc050ae7b288629ef4ad0597282a0fe8481016aeadd94e6b9971cd90317308032a6241d8f95bdb1c24a6b6601375aa64c8
+Size (picmi-20.12.3.tar.xz) = 1367556 bytes
