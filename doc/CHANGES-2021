@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2011 2021/04/07 11:18:04 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2012 2021/04/07 11:38:35 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3085,3 +3085,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx-autodoc-typehints to 1.11.1 [adam 2021-04-07]
 	Updated textproc/lowdown to 0.8.4 [fcambus 2021-04-07]
 	Updated audio/musicpd to 0.22.6nb3 [wiz 2021-04-07]
+	Updated sysutils/exa to 0.10.0 [fox 2021-04-07]
