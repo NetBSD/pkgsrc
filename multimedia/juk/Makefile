@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/04/05 06:51:04 markd Exp $
+# $NetBSD: Makefile,v 1.48 2021/04/07 12:28:29 markd Exp $
 
 DISTNAME=	juk-${KAPPSVER}
 CATEGORIES=	multimedia
@@ -7,7 +7,6 @@ HOMEPAGE=	https://kde.org/applications/multimedia/juk/
 COMMENT=	Jukebox, tagger and music collection manager
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-KAPPSVER=	20.12.3
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:22 markd Exp $
 bin/ktuberling
 share/applications/org.kde.ktuberling.desktop
 share/doc/HTML/de/ktuberling/button-new.png
@@ -32,6 +32,29 @@ share/doc/HTML/es/ktuberling/technical-reference.docbook
 share/doc/HTML/et/ktuberling/index.cache.bz2
 share/doc/HTML/et/ktuberling/index.docbook
 share/doc/HTML/et/ktuberling/technical-reference.docbook
+share/doc/HTML/fr/ktuberling/button-new.png
+share/doc/HTML/fr/ktuberling/button-open.png
+share/doc/HTML/fr/ktuberling/button-print.png
+share/doc/HTML/fr/ktuberling/button-redo.png
+share/doc/HTML/fr/ktuberling/button-save.png
+share/doc/HTML/fr/ktuberling/button-undo.png
+share/doc/HTML/fr/ktuberling/gameboard.png
+share/doc/HTML/fr/ktuberling/index.cache.bz2
+share/doc/HTML/fr/ktuberling/index.docbook
+share/doc/HTML/fr/ktuberling/menu-edit.png
+share/doc/HTML/fr/ktuberling/menu-game.png
+share/doc/HTML/fr/ktuberling/menu-help.png
+share/doc/HTML/fr/ktuberling/menu-settings.png
+share/doc/HTML/fr/ktuberling/menu.edit.png
+share/doc/HTML/fr/ktuberling/menu.file.png
+share/doc/HTML/fr/ktuberling/menu.game.png
+share/doc/HTML/fr/ktuberling/menu.help.png
+share/doc/HTML/fr/ktuberling/menu.option.png
+share/doc/HTML/fr/ktuberling/menu.playground.png
+share/doc/HTML/fr/ktuberling/menu.raw.png
+share/doc/HTML/fr/ktuberling/menu.speech.png
+share/doc/HTML/fr/ktuberling/technical-reference.docbook
+share/doc/HTML/fr/ktuberling/toolbar.png
 share/doc/HTML/it/ktuberling/index.cache.bz2
 share/doc/HTML/it/ktuberling/index.docbook
 share/doc/HTML/it/ktuberling/technical-reference.docbook
@@ -51,20 +74,9 @@ share/doc/HTML/sv/ktuberling/menu-game.png
 share/doc/HTML/sv/ktuberling/menu-help.png
 share/doc/HTML/sv/ktuberling/menu-settings.png
 share/doc/HTML/sv/ktuberling/technical-reference.docbook
-share/doc/HTML/uk/ktuberling/button-load.png
-share/doc/HTML/uk/ktuberling/button-new.png
-share/doc/HTML/uk/ktuberling/button-print.png
-share/doc/HTML/uk/ktuberling/button-redo.png
-share/doc/HTML/uk/ktuberling/button-save.png
-share/doc/HTML/uk/ktuberling/button-undo.png
 share/doc/HTML/uk/ktuberling/index.cache.bz2
 share/doc/HTML/uk/ktuberling/index.docbook
-share/doc/HTML/uk/ktuberling/menu-edit.png
-share/doc/HTML/uk/ktuberling/menu-game.png
-share/doc/HTML/uk/ktuberling/menu-help.png
-share/doc/HTML/uk/ktuberling/menu-settings.png
 share/doc/HTML/uk/ktuberling/technical-reference.docbook
-share/doc/HTML/uk/ktuberling/toolbar.png
 share/icons/hicolor/128x128/apps/ktuberling.png
 share/icons/hicolor/128x128/mimetypes/application-x-tuberling.png
 share/icons/hicolor/16x16/apps/ktuberling.png
@@ -1504,9 +1516,6 @@ share/ktuberling/sounds/sr/sesir.ogg
 share/ktuberling/sounds/sr/usta.ogg
 share/ktuberling/sounds/sr/uvo.ogg
 share/ktuberling/sounds/sr/znacka.ogg
-share/ktuberling/sounds/sr@ijekavian.soundtheme
-share/ktuberling/sounds/sr@ijekavianlatin.soundtheme
-share/ktuberling/sounds/sr@latin.soundtheme
 share/ktuberling/sounds/sv.soundtheme
 share/ktuberling/sounds/sv/fluga.wav
 share/ktuberling/sounds/sv/glasogon.wav

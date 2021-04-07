@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/06/09 11:56:11 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/04/07 12:28:23 markd Exp $
 
-SHA1 (kamera-20.04.1.tar.xz) = 4a0b1542301b352f8743151b5181b4d123caa4ca
-RMD160 (kamera-20.04.1.tar.xz) = 23ede24d44c023aeb18d54565d157dfb65066e08
-SHA512 (kamera-20.04.1.tar.xz) = f37d3c5ab786b6883cd97bbce9b877f6367fee308f90a2ae220b2703b76943dcb7b37817cf89a1cec86009cc5df299e8156c06319661069d9b07184b4e3fc49d
-Size (kamera-20.04.1.tar.xz) = 103728 bytes
+SHA1 (kamera-20.12.3.tar.xz) = 7d1622190c28c56556b7c4b15e5fbc9711337565
+RMD160 (kamera-20.12.3.tar.xz) = 183601904563fd8fec78d916d0a9139eba0d98cf
+SHA512 (kamera-20.12.3.tar.xz) = 7abe0ae6e85e270084e608b85fa5982c3b67ebf16a81b9ed3e9690dbf860abbbc8ca1feb885e3cd7dd93faa91622757c16848a26baa4f68f128cc119fe91bd2c
+Size (kamera-20.12.3.tar.xz) = 108696 bytes

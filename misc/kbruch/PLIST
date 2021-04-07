@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/21 06:12:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:26 markd Exp $
 bin/kbruch
 man/ca/man1/kbruch.1
 man/de/man1/kbruch.1
 man/es/man1/kbruch.1
 man/et/man1/kbruch.1
+man/fr/man1/kbruch.1
 man/it/man1/kbruch.1
 man/man1/kbruch.1
 man/nl/man1/kbruch.1
@@ -58,6 +59,20 @@ share/doc/HTML/es/kbruch/settings.png
 share/doc/HTML/es/kbruch/statistics.png
 share/doc/HTML/et/kbruch/index.cache.bz2
 share/doc/HTML/et/kbruch/index.docbook
+share/doc/HTML/fr/kbruch/checked.png
+share/doc/HTML/fr/kbruch/compare.png
+share/doc/HTML/fr/kbruch/convert.png
+share/doc/HTML/fr/kbruch/factorize.png
+share/doc/HTML/fr/kbruch/gui_main.png
+share/doc/HTML/fr/kbruch/gui_mode.png
+share/doc/HTML/fr/kbruch/index.cache.bz2
+share/doc/HTML/fr/kbruch/index.docbook
+share/doc/HTML/fr/kbruch/learning.png
+share/doc/HTML/fr/kbruch/mixed.png
+share/doc/HTML/fr/kbruch/percentage.png
+share/doc/HTML/fr/kbruch/reduced.png
+share/doc/HTML/fr/kbruch/settings.png
+share/doc/HTML/fr/kbruch/statistics.png
 share/doc/HTML/it/kbruch/index.cache.bz2
 share/doc/HTML/it/kbruch/index.docbook
 share/doc/HTML/nl/kbruch/checked.png
