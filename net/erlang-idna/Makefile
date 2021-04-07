@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/01/16 00:02:07 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/07 13:34:41 triaxx Exp $
 
 DISTNAME=	idna-6.1.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benoitc/}
 
@@ -16,7 +17,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 REBAR=		${PREFIX}/bin/rebar3
 
 do-build:
-	cd ${WRKSRC} && ${REBAR} compile
+	cd ${WRKSRC} && REBAR_CACHE_DIR=${WRKDIR}/rebar ${REBAR} compile
 
 pre-install:
 	${MV} ${WRKSRC}/_build/default/lib/idna/ebin ${WRKSRC}
