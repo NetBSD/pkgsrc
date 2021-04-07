@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/07/23 09:35:16 kleink Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/07 13:08:46 kleink Exp $
 
-DISTNAME=	Flask-SQLAlchemy-2.4.4
+DISTNAME=	Flask-SQLAlchemy-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-SQLAlchemy/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/pallets/flask-sqlalchemy
 COMMENT=	Adds SQLAlchemy support to your Flask application
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-flask>=0.10:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.8:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-flask>=1.0.4:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2:../../databases/py-sqlalchemy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
