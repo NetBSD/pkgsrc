@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/20 22:04:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:26 markd Exp $
 include/Analitza5/analitza/abstractexpressionvisitor.h
 include/Analitza5/analitza/abstractlexer.h
 include/Analitza5/analitza/analitzaexport.h
@@ -77,11 +77,13 @@ share/locale/el/LC_MESSAGES/analitza_qt.qm
 share/locale/en_GB/LC_MESSAGES/analitza_qt.qm
 share/locale/es/LC_MESSAGES/analitza_qt.qm
 share/locale/et/LC_MESSAGES/analitza_qt.qm
+share/locale/eu/LC_MESSAGES/analitza_qt.qm
 share/locale/fi/LC_MESSAGES/analitza_qt.qm
 share/locale/fr/LC_MESSAGES/analitza_qt.qm
 share/locale/ga/LC_MESSAGES/analitza_qt.qm
 share/locale/gl/LC_MESSAGES/analitza_qt.qm
 share/locale/hu/LC_MESSAGES/analitza_qt.qm
+share/locale/ia/LC_MESSAGES/analitza_qt.qm
 share/locale/it/LC_MESSAGES/analitza_qt.qm
 share/locale/ja/LC_MESSAGES/analitza_qt.qm
 share/locale/kk/LC_MESSAGES/analitza_qt.qm

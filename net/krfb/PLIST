@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/30 19:35:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:30 markd Exp $
 bin/krfb
 lib/libkrfbprivate.so.5
 lib/libkrfbprivate.so.5.0
@@ -120,3 +120,4 @@ share/locale/uk/LC_MESSAGES/krfb.mo
 share/locale/zh_CN/LC_MESSAGES/krfb.mo
 share/locale/zh_TW/LC_MESSAGES/krfb.mo
 share/metainfo/org.kde.krfb.appdata.xml
+share/qlogging-categories5/krfb.categories

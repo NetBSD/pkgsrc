@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:31 markd Exp $
+include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractMarkupBuilder
 include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractTextToSpeechInterface
 include/KF5/KPIMTextEdit/KPIMTextEdit/EditorUtil
 include/KF5/KPIMTextEdit/KPIMTextEdit/EmoticonUnicodeTab
@@ -14,6 +15,7 @@ include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposerControler
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposerEmailQuoteHighlighter
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposerImages
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposerWidget
+include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextEditFindBar
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextEditor
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextEditorWidget
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextExternalComposer
@@ -28,6 +30,7 @@ include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeechActions
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeechInterface
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeechWidget
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextUtils
+include/KF5/KPIMTextEdit/kpimtextedit/abstractmarkupbuilder.h
 include/KF5/KPIMTextEdit/kpimtextedit/abstracttexttospeechinterface.h
 include/KF5/KPIMTextEdit/kpimtextedit/editorutil.h
 include/KF5/KPIMTextEdit/kpimtextedit/emoticonunicodetab.h
@@ -44,6 +47,7 @@ include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposercontroler.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposeremailquotehighlighter.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposerimages.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposerwidget.h
+include/KF5/KPIMTextEdit/kpimtextedit/richtexteditfindbar.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtexteditor.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtexteditorwidget.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextexternalcomposer.h
@@ -65,7 +69,7 @@ lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-noconfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.5.14.1
+lib/libKF5PimTextEdit.so.5.16.3
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtexteditwidgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo

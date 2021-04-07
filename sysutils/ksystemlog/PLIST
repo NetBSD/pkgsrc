@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/25 10:15:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/07 12:28:31 markd Exp $
 bin/ksystemlog
 share/applications/org.kde.ksystemlog.desktop
-share/doc/HTML/ca/ksystemlog/filter-process.png
-share/doc/HTML/ca/ksystemlog/first-opening.png
 share/doc/HTML/ca/ksystemlog/index.cache.bz2
 share/doc/HTML/ca/ksystemlog/index.docbook
 share/doc/HTML/de/ksystemlog/filter-process.png
@@ -26,6 +24,8 @@ share/doc/HTML/fr/ksystemlog/index.docbook
 share/doc/HTML/fr/ksystemlog/main-screen.png
 share/doc/HTML/it/ksystemlog/index.cache.bz2
 share/doc/HTML/it/ksystemlog/index.docbook
+share/doc/HTML/ko/ksystemlog/index.cache.bz2
+share/doc/HTML/ko/ksystemlog/index.docbook
 share/doc/HTML/nl/ksystemlog/index.cache.bz2
 share/doc/HTML/nl/ksystemlog/index.docbook
 share/doc/HTML/pt/ksystemlog/index.cache.bz2
@@ -35,6 +35,8 @@ share/doc/HTML/pt_BR/ksystemlog/first-opening.png
 share/doc/HTML/pt_BR/ksystemlog/index.cache.bz2
 share/doc/HTML/pt_BR/ksystemlog/index.docbook
 share/doc/HTML/pt_BR/ksystemlog/main-screen.png
+share/doc/HTML/ru/ksystemlog/index.cache.bz2
+share/doc/HTML/ru/ksystemlog/index.docbook
 share/doc/HTML/sv/ksystemlog/index.cache.bz2
 share/doc/HTML/sv/ksystemlog/index.docbook
 share/doc/HTML/uk/ksystemlog/filter-process.png
@@ -42,6 +44,8 @@ share/doc/HTML/uk/ksystemlog/first-opening.png
 share/doc/HTML/uk/ksystemlog/index.cache.bz2
 share/doc/HTML/uk/ksystemlog/index.docbook
 share/doc/HTML/uk/ksystemlog/main-screen.png
+share/doc/HTML/zh_CN/ksystemlog/index.cache.bz2
+share/doc/HTML/zh_CN/ksystemlog/index.docbook
 share/kxmlgui5/ksystemlog/ksystemlogui.rc
 share/locale/ar/LC_MESSAGES/ksystemlog.mo
 share/locale/bg/LC_MESSAGES/ksystemlog.mo
