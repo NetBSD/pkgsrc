@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2015 2021/04/07 13:09:07 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.2016 2021/04/07 13:21:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/ktimer to 20.12.3 [markd 2021-04-07]
 	Updated x11/konsole to 20.12.3 [markd 2021-04-07]
 	Updated www/py-flask-sqlalchemy to 2.5.1 [kleink 2021-04-07]
+	Updated net/youtube-dl to 20210407 [leot 2021-04-07]
