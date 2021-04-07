@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/01/23 15:35:43 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/07 09:17:09 fcambus Exp $
 bin/kodev
 bin/kore
+bin/kore-serve
 include/kore/acme.h
 include/kore/curl.h
 include/kore/hooks.h
