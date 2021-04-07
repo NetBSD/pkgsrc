@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2019 2021/04/07 19:44:26 markd Exp $
+$NetBSD: CHANGES-2021,v 1.2020 2021/04/07 20:21:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3230,3 +3230,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/gr-osmosdr to 0.2.3.20210128 [tnn 2021-04-07]
 	Updated meta-pkgs/gnuradio to 3.9.1.0 [tnn 2021-04-07]
 	Removed misc/libkgeomap [markd 2021-04-07]
+	Updated sysutils/macchina to 0.6.6 [pin 2021-04-07]
