@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2008 2021/04/07 06:24:13 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2009 2021/04/07 06:48:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3081,3 +3081,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs12 to 12.22.1 [adam 2021-04-07]
 	Updated lang/nodejs to 14.16.1 [adam 2021-04-07]
 	Updated devel/py-hypothesis to 6.8.6 [adam 2021-04-07]
+	Updated textproc/py-sphinx-autoapi to 1.7.0 [adam 2021-04-07]
+	Updated textproc/py-sphinx-autodoc-typehints to 1.11.1 [adam 2021-04-07]
