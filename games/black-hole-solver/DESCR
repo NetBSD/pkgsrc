@@ -1,0 +1,7 @@
+This is a solver for the Solitaire/Patience card games "Golf" (3 variants),
+"Black Hole", and "All in a Row" - implemented in C as a command line
+application. For more information about these games, see:
+
+* https://en.wikipedia.org/wiki/Golf_%28patience%29
+* http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29
+* http://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/08 19:51:44 markd Exp $
+bin/black-hole-solve
+include/black-hole-solver/black_hole_solver.h
+include/black-hole-solver/bool.h
+include/black-hole-solver/fcs_dllexport.h
+lib/libblack_hole_solver.so
+lib/libblack_hole_solver.so.1
+lib/libblack_hole_solver.so.1.0.1
+lib/pkgconfig/libblack-hole-solver.pc
+man/man6/black-hole-solve.6
