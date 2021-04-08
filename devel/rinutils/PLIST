@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/08 19:45:30 markd Exp $
+include/rinutils/alloc_wrap.h
+include/rinutils/bit_rw.h
+include/rinutils/count.h
+include/rinutils/dllexport.h
+include/rinutils/exit_error.h
+include/rinutils/likely.h
+include/rinutils/longlong.h
+include/rinutils/min_and_max.h
+include/rinutils/portable_time.h
+include/rinutils/rin_cmocka.h
+include/rinutils/rinutils.h
+include/rinutils/str_utils.h
+include/rinutils/typeof_wrap.h
+include/rinutils/unused.h
+lib/cmake/Rinutils/RinutilsConfig.cmake
+lib/cmake/Rinutils/RinutilsConfigVersion.cmake
+lib/pkgconfig/librinutils.pc
