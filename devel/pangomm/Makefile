@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2020/08/31 18:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2021/04/08 21:15:47 adam Exp $
 
-DISTNAME=	pangomm-2.42.1
-PKGREVISION=	2
+DISTNAME=	pangomm-2.46.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,20 +10,20 @@ HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for pango
 LICENSE=	gnu-lgpl-v2.1
 
-CONFLICTS+=		gtkmm<=2.13.5
+CONFLICTS+=	gtkmm<=2.13.5
 
-USE_LANGUAGES=		c c++11
 GCC_REQD+=		4.9
-USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config perl:run
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		gm4 perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	pango/pangomm.pc.in
 
+.include "../../devel/glibmm/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=      mm-common>=0.9.10
 .include "../../devel/mm-common/buildlink3.mk"
-.include "../../devel/glibmm/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.41.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.48.0
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.14.0
 .include "../../graphics/cairomm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
