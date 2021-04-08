@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/11/20 19:08:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/08 06:14:38 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -42,6 +42,7 @@ CHECK_BUILTIN.iconv:=	no
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 CMAKE_ARGS+=	-DICONV_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.iconv}/include
 CMAKE_ARGS+=	-DICONV_LIBRARIES:PATH=${BUILDLINK_PREFIX.iconv}/lib
+LDFLAGS.Darwin+=-liconv
 .endif
 
 post-install:
