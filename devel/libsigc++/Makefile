@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2020/08/31 18:07:23 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2021/04/08 20:52:15 adam Exp $
 
-DISTNAME=	libsigc++-2.10.3
-PKGREVISION=	1
+DISTNAME=	libsigc++-2.10.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,26 +10,14 @@ HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs (v2)
 LICENSE=	gnu-lgpl-v2.1
 
+CONFLICTS+=	libsigc++2-[0-9]*
+GCC_REQD+=	4.8
+
 USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gm4 gmake perl:build
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		gm4 perl:build pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
-CONFLICTS+=		libsigc++2-[0-9]*
-GCC_REQD+=		4.8
-
-# use something that can extract long filenames in GNU format on NetBSD 1.6.x
-EXTRACT_USING=		bsdtar
-
-TEST_TARGET=		check
-
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CONFIGURE_ARGS+=	--disable-threads
-.endif
-
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
 .include "../../devel/mm-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
