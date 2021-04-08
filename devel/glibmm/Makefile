@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2020/08/31 18:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2021/04/08 21:03:55 adam Exp $
 
-DISTNAME=	glibmm-2.64.2
-PKGREVISION=	1
+DISTNAME=	glibmm-2.66.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,23 +14,21 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 #   error: no matching function for call to 'regex_replace(const char*&, std::regex, const char [3])'
 GCC_REQD+=		4.9
 USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config perl:run
-GNU_CONFIGURE=		yes
-EXTRACT_USING=		bsdtar # added for pkg/42258
-
+USE_TOOLS+=		gm4 perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	gio/giomm.pc.in
 PKGCONFIG_OVERRIDE+=	glib/glibmm.pc.in
 
-# x11/gtkmm needs these tools
-INSTALLATION_DIRS=	share/glibmm-2.4/doctool
+REPLACE_PERL+=	tools/generate_wrap_init.pl.in
+REPLACE_PERL+=	tools/gmmproc.in
 
-post-install:
-.for tool in doc-install.pl doc-postprocess.pl
-	${INSTALL_SCRIPT} ${WRKSRC}/docs/${tool} \
-		${DESTDIR}${PREFIX}/share/glibmm-2.4/doctool/${tool}
-.endfor
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing paths.
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	tools/generate_wrap_init.pl.in
+SUBST_FILES.path+=	tools/gmmproc.in
+SUBST_SED.path=		-e 's,@PERL@,${PERL5},'
+SUBST_VARS.path=	M4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,8 +38,9 @@ PLIST_VARS+=	notmac
 PLIST.notmac=	yes
 .endif
 
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.62.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.66.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.9.1
 .include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/mm-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
