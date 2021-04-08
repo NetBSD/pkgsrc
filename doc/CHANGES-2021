@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2021 2021/04/07 20:23:12 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2022 2021/04/08 07:44:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed misc/libkgeomap [markd 2021-04-07]
 	Updated sysutils/macchina to 0.6.6 [pin 2021-04-07]
 	Updated sysutils/xplr to 0.3.7 [pin 2021-04-07]
+	Updated net/udns to 0.4nb1 [wiz 2021-04-08]
