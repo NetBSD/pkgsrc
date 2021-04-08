@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2020/11/05 09:07:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/08 21:21:38 adam Exp $
 
-DISTNAME=	gtkmm-3.24.2
+DISTNAME=	gtkmm-3.24.4
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,14 +13,11 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
 GCC_REQD+=		4.9
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
-TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
 
 PLIST_VARS+=	x11
@@ -31,10 +27,9 @@ PLIST.x11=	yes
 
 BUILDLINK_API_DEPENDS.atkmm+=	atkmm>=2.24.2
 .include "../../devel/atkmm/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.49.1
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.pangomm+=	pangomm>=2.38.2
 .include "../../devel/pangomm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.12.0
