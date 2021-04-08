@@ -1,13 +1,19 @@
-/* $NetBSD: main.css,v 1.9 2021/04/05 10:30:04 nia Exp $ */
+/* $NetBSD: main.css,v 1.10 2021/04/08 12:03:43 nia Exp $ */
 
 body {
 	font-family: sans-serif;
 	background-color: #fff;
 	color: #000;
+	max-width: 1100px;
+	margin: auto;
 }
 
 body, pre, code, samp {
 	font-size: 16px;
+}
+
+pre {
+	overflow-x: scroll;
 }
 
 h1 {
