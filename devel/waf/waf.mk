@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.11 2020/03/26 15:14:04 nia Exp $
+# $NetBSD: waf.mk,v 1.12 2021/04/08 08:43:34 wiz Exp $
 
 # XXX why does this does not respect the standard pkgsrc variables like
 # CONFIGURE_ENV et al?
@@ -26,7 +26,10 @@ WAF_HAS_MANDIR?=	yes
 WAF_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 .endif
 
+WAF_HAS_LIBDIR?=	yes
+.if !empty(WAF_HAS_LIBDIR:M[yY][eE][sS])
 WAF_ARGS+=		--libdir=${PREFIX}/lib
+.endif
 
 WAF_REPLACE_EXECUTABLE?=	no
 .if !empty(WAF_REPLACE_EXECUTABLE:M[yY][eE][sS])
