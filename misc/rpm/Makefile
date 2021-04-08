@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/08/31 18:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2021/04/08 08:54:30 wiz Exp $
 
 DISTNAME=	rpm-4.13.0.1
 PKGREVISION=	6
@@ -29,6 +29,9 @@ CONFIGURE_ENV+=		MYPATH=/sbin:/bin:/usr/sbin:/usr/bin
 # rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
 CONFIGURE_ENV+=		varprefix=${RPM_DB_PREFIX:Q}
 CONFIGURE_ENV.Darwin+=	ac_cv_func_fdatasync=no
+
+# for detecting nss
+CPPFLAGS+=		-I${PREFIX}/include/nss
 
 PKGCONFIG_OVERRIDE=	rpm.pc.in
 
