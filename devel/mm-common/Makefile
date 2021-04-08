@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:11 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/08 20:49:07 adam Exp $
 
-DISTNAME=	mm-common-1.0.0
-PKGREVISION=	1
+DISTNAME=	mm-common-1.0.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mm-common/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +10,8 @@ HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	Provides build infrastructure utilities for GNOME C++ libraries
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gzip pkg-config
 USE_LANGUAGES=	c++
+USE_TOOLS+=	gzip pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
