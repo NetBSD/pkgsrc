@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/11/20 19:08:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/04/08 06:14:38 adam Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BBoxOutputDev.h
@@ -101,6 +101,7 @@ include/poppler/goo/gmem.h
 include/poppler/goo/grandom.h
 include/poppler/goo/gstrtod.h
 include/poppler/poppler-config.h
+include/poppler/poppler_private_export.h
 include/poppler/splash/Splash.h
 include/poppler/splash/SplashBitmap.h
 include/poppler/splash/SplashClip.h

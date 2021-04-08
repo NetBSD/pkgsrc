@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.149 2021/01/04 17:57:50 wiz Exp $
+$NetBSD: distinfo,v 1.150 2021/04/08 06:14:37 adam Exp $
 
-SHA1 (poppler-21.01.0.tar.xz) = 692697b218efd08ebaeb4ff96861a4d2ad20bdc2
-RMD160 (poppler-21.01.0.tar.xz) = 413dddbde79dbd786e3fa31f96e24e166b02e8d4
-SHA512 (poppler-21.01.0.tar.xz) = aec130446df73a2fc66851a563a14cb40299212a2de4a0d03668b0fecb28312fffa70d0a82431c774d0c0e3f7293788bd2bdf28c8136aa09ad80edbca4cf0ddd
-Size (poppler-21.01.0.tar.xz) = 1680536 bytes
+SHA1 (poppler-21.04.0.tar.xz) = b84cecbfb2aaf3066c473b69c3b57e58f16a76e9
+RMD160 (poppler-21.04.0.tar.xz) = a8747887e80caafa6d920d4584c503dec2eb086c
+SHA512 (poppler-21.04.0.tar.xz) = c3391787456e8a4a3bd6e57f96faa25051bb5e15ae7eeb7072ad6fbc25e3f8a34818945cc49d90a0e6ebc3d38dd4e70d3c60ba0a5cb42c4000bd8c15c947e5bc
+Size (poppler-21.04.0.tar.xz) = 1694132 bytes
 SHA1 (patch-poppler_poppler-config.h.cmake) = d2a67beb1275f10f19468421f203806ead6fa8ff
 SHA1 (patch-qt5_src_poppler-page.cc) = e9f83a7c9d529acb5e3f6db5f112fb6c7eb2800b
