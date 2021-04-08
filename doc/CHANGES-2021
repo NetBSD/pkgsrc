@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2038 2021/04/08 10:57:42 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2039 2021/04/08 11:04:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3250,3 +3250,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/fish to 3.2.2 [nia 2021-04-08]
 	Updated audio/forked-daapd to 27.4 [nia 2021-04-08]
 	Updated fonts/liberation-ttf to 2.1.3 [nia 2021-04-08]
+	Updated games/frotz to 2.53 [nia 2021-04-08]
