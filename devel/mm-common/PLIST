@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/13 14:37:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/08 20:49:07 adam Exp $
 bin/mm-common-get
 bin/mm-common-prepare
 man/man1/mm-common-get.1
@@ -13,6 +13,7 @@ share/aclocal/mm-pkg.m4
 share/aclocal/mm-warnings.m4
 share/doc/mm-common/README
 share/doc/mm-common/skeletonmm.tar.xz
+share/mm-common/build/check-dllexport-usage.py
 share/mm-common/build/compile-binding.am
 share/mm-common/build/dist-build-scripts.py
 share/mm-common/build/dist-changelog.am
