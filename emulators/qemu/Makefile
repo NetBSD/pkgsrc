@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2021/04/08 13:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.274 2021/04/08 15:17:49 nia Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	6
@@ -11,11 +11,11 @@ HOMEPAGE=	http://www.qemu-project.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		bison flex gmake makeinfo perl:build pod2man pkg-config
+USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
