@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2014/02/24 19:29:02 schnoebe Exp $
+$NetBSD: patch-aa,v 1.5 2021/04/08 07:44:03 wiz Exp $
 
 Uniformly use libtool.
 
@@ -46,7 +46,7 @@ Uniformly use libtool.
  ex-rdns.o ex-rdns.lo: ex-rdns.c udns.h
  dnsget: dnsget.o $(LIB)
 -	$(LD) $(LDLAGS) -o $@ dnsget.o $(LIBFL) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDLAGS) -o $@ dnsget.o \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ dnsget.o \
 +		$(LIBFL) $(LIBS)
  dnsget_s: dnsget.o $(SOLIB)
 -	$(LD) $(LDFLAGS) -o $@ dnsget.o $(SOLIBFL)
@@ -54,7 +54,7 @@ Uniformly use libtool.
 +		$(SOLIBFL)
  rblcheck: rblcheck.o $(LIB)
 -	$(LD) $(LDLAGS) -o $@ rblcheck.o $(LIBFL) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDLAGS) -o $@ rblcheck.o \
++	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDFLAGS) -o $@ rblcheck.o \
 +		$(LIBFL) $(LIBS)
  rblcheck_s: rblcheck.o $(SOLIB)
 -	$(LD) $(LDFLAGS) -o $@ rblcheck.o $(SOLIBFL)
@@ -62,7 +62,7 @@ Uniformly use libtool.
 +		$(SOLIBFL)
  ex-rdns: ex-rdns.o $(LIB)
 -	$(LD) $(LDLAGS) -o $@ ex-rdns.o $(LIBFL) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDLAGS) -o $@ ex-rdns.o \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ ex-rdns.o \
 +		$(LIBFL) $(LIBS)
  ex-rdns_s: ex-rdns.o $(SOLIB)
 -	$(LD) $(LDFLAGS) -o $@ ex-rdns.o $(SOLIBFL)
