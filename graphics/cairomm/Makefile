@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2020/08/31 18:09:37 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2021/04/08 21:08:40 adam Exp $
 
-DISTNAME=	cairomm-1.12.2
-PKGREVISION=	6
+DISTNAME=	cairomm-1.14.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/releases/
+MASTER_SITES=	https://cairographics.org/releases/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://cairographics.org/cairomm/
@@ -11,14 +11,8 @@ COMMENT=	C++ API for cairo
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config
-GNU_CONFIGURE=		yes
-# long file name, does not extract correctly with NetBSD tar(1):
-# classhash__load__check__resize__trigger__size__base__inherit__graph.png
-EXTRACT_USING=		bsdtar
-
+USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	data/cairomm-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-ft-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-pdf-1.0.pc.in
@@ -37,14 +31,15 @@ PLIST_VARS+=	x11 quartz
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_ABI_DEPENDS.libsigcpp+=	libsigc++>=2.5.1
 .include "../../devel/libsigc++/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8
+.include "../../devel/meson/build.mk"
+.include "../../devel/mm-common/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12
 .include "../../graphics/cairo/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.cairo:Mx11)
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11}
 PLIST.x11=	yes
 .endif
-.if !empty(PKG_BUILD_OPTIONS.cairo:Mquartz)
+.if ${PKG_BUILD_OPTIONS.cairo:Mquartz}
 PLIST.quartz=	yes
 .endif
 .include "../../mk/bsd.pkg.mk"
