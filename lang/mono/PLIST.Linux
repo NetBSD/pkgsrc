@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Linux,v 1.6 2021/04/08 08:17:29 nia Exp $
+lib/mono/4.5/Microsoft.CodeAnalysis.CSharp.dll.so
+lib/mono/4.5/Microsoft.CodeAnalysis.dll.so
+lib/mono/4.5/System.Collections.Immutable.dll.so
+lib/mono/4.5/System.Reflection.Metadata.dll.so
+lib/mono/4.5/csc.exe.so
+lib/mono/4.5/mcs.exe.so
+lib/mono/4.5/mscorlib.dll.so
