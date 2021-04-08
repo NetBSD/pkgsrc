@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.7 2021/03/12 08:39:10 nia Exp $
+# $NetBSD: build.mk,v 1.8 2021/04/08 12:54:14 nia Exp $
 
 BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -22,8 +22,12 @@ do-configure: meson-configure
 meson-configure:
 .for d in ${CONFIGURE_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} meson \
-		--prefix ${PREFIX} --libdir lib --mandir ${PKGMANDIR} \
-		--sysconfdir ${PKG_SYSCONFDIR} --buildtype=plain ${MESON_ARGS} . output
+		--prefix ${PREFIX} \
+		--libdir lib \
+		--libexecdir libexec \
+		--mandir ${PKGMANDIR} \
+		--sysconfdir ${PKG_SYSCONFDIR} \
+		--buildtype=plain ${MESON_ARGS} . output
 .endfor
 
 do-build: meson-build
