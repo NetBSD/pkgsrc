@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2021/04/08 06:19:47 adam Exp $
+# $NetBSD: Makefile,v 1.79 2021/04/08 08:44:12 wiz Exp $
 
 DISTNAME=	electrix-0.2.0
-PKGREVISION=	73
+PKGREVISION=	74
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=electrix/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,18 +14,10 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	intltool pkg-config
 PYTHON_VERSIONS_ACCEPTED=	27
 
-do-configure:
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./waf configure --prefix=${DESTDIR}${PREFIX}
+WAF_HAS_LIBDIR=	no
+WAF_HAS_MANDIR=	no
 
-do-build:
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./waf build
-
-do-install:
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./waf install
-
+.include "../../devel/waf/waf.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
