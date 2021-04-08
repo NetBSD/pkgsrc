@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/12/31 00:36:35 mef Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/08 08:48:55 wiz Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
 PKGREVISION=	4
@@ -9,6 +9,8 @@ MAINTAINER=	jaapb@NetBSD.org
 #HOMEPAGE=	https://telepathy.freedesktop.org/doc/telepathy-haze/
 COMMENT=	Libpurple connection manager for Telepathy
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	gmake pkg-config
