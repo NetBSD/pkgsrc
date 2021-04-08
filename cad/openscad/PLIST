@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2019/06/22 12:57:50 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/08 10:26:08 bouyer Exp $
 bin/openscad
 man/man1/openscad.1
 share/applications/openscad.desktop
+share/icons/hicolor/128x128/apps/openscad.png
+share/icons/hicolor/256x256/apps/openscad.png
+share/icons/hicolor/48x48/apps/openscad.png
+share/icons/hicolor/512x512/apps/openscad.png
+share/icons/hicolor/64x64/apps/openscad.png
 share/metainfo/org.openscad.OpenSCAD.appdata.xml
 share/mime/packages/openscad.xml
 share/openscad/color-schemes/editor/dark-background.json
@@ -107,8 +112,16 @@ share/openscad/locale/cs/LC_MESSAGES/openscad.mo
 share/openscad/locale/de/LC_MESSAGES/openscad.mo
 share/openscad/locale/es/LC_MESSAGES/openscad.mo
 share/openscad/locale/fr/LC_MESSAGES/openscad.mo
+share/openscad/locale/hy/LC_MESSAGES/openscad.mo
 share/openscad/locale/pl/LC_MESSAGES/openscad.mo
 share/openscad/locale/ru/LC_MESSAGES/openscad.mo
 share/openscad/locale/uk/LC_MESSAGES/openscad.mo
-share/pixmaps/openscad.png
+share/openscad/locale/zh_CN/LC_MESSAGES/openscad.mo
+share/openscad/locale/zh_TW/LC_MESSAGES/openscad.mo
+share/openscad/templates/difference.json
+share/openscad/templates/for.json
+share/openscad/templates/function.json
+share/openscad/templates/module.json
+share/openscad/templates/rotate.json
+share/openscad/templates/translate.json
 @pkgdir share/openscad/libraries/MCAD
