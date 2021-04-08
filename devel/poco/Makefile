@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 21:48:09 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/04/08 08:21:58 wiz Exp $
 
 PKGNAME=	poco-${POCO_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 COMMENT=	POCO C++ Foundation libraries
@@ -20,6 +19,7 @@ CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.openssl}/include
 
 # remove patch backup files.
+# XXX: this should delete in post-install ${DESTDIR}${PREFIX} instead
 pre-install:
 	${RM} -f ${WRKSRC}/Foundation/include/Poco/Platform.h.orig
 
