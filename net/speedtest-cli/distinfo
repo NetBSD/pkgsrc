@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/08/31 14:34:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/04/08 16:53:01 gdt Exp $
 
-SHA1 (speedtest-cli-2.1.2.tar.gz) = 48aee9eb3f4489d220a2a9125068ffbe85f7498d
-RMD160 (speedtest-cli-2.1.2.tar.gz) = 8631e5029d4231fc709b222869780f19347a6966
-SHA512 (speedtest-cli-2.1.2.tar.gz) = f2eb125116f42075d3248e1c0590cce4f822f383ff7c54c158504b16de72bf35b35d55a78014413a95a5f5bafa98c71c3ea011f20f480f1db272d6e8800c40bd
-Size (speedtest-cli-2.1.2.tar.gz) = 24741 bytes
+SHA1 (speedtest-cli-2.1.3.tar.gz) = 0408c3d6466a08dcad442b93cc3b7c340c602f28
+RMD160 (speedtest-cli-2.1.3.tar.gz) = 4c48497b15b9bb67fe15f41f5c29f6cf84808033
+SHA512 (speedtest-cli-2.1.3.tar.gz) = e2ecd9b4eea95e3641045c3da217ec5a39846b26c1f773fdd31c6ffe3cb5e35341320fc1992f865af48afd1a704c4d4224f9ec4048abb69131ee2f32385ae94c
+Size (speedtest-cli-2.1.3.tar.gz) = 24771 bytes
