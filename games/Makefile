@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.502 2021/04/04 11:10:37 nia Exp $
+# $NetBSD: Makefile,v 1.503 2021/04/08 19:53:08 markd Exp $
 #
 
 COMMENT=	Games
@@ -44,6 +44,7 @@ SUBDIR+=	batrachians
 SUBDIR+=	battalion
 SUBDIR+=	battleball
 SUBDIR+=	billardgl
+SUBDIR+=	black-hole-solver
 SUBDIR+=	blindmine
 SUBDIR+=	blinken
 SUBDIR+=	blokus
