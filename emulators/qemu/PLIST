@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2021/04/07 10:32:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.72 2021/04/08 13:05:51 nia Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -29,7 +29,6 @@ ${PLIST.nios2}bin/qemu-nios2
 ${PLIST.or1k}bin/qemu-or1k
 ${PLIST.ppc}bin/qemu-ppc
 ${PLIST.ppc64}bin/qemu-ppc64
-${PLIST.ppc64abi32}bin/qemu-ppc64abi32
 ${PLIST.ppc64le}bin/qemu-ppc64le
 ${PLIST.riscv32}bin/qemu-riscv32
 ${PLIST.riscv64}bin/qemu-riscv64
@@ -71,7 +70,6 @@ bin/qemu-system-tricore
 bin/qemu-system-x86_64
 bin/qemu-system-xtensa
 bin/qemu-system-xtensaeb
-${PLIST.tilegx}bin/qemu-tilegx
 ${PLIST.x86_64}bin/qemu-x86_64
 ${PLIST.xtensa}bin/qemu-xtensa
 ${PLIST.xtensaeb}bin/qemu-xtensaeb
