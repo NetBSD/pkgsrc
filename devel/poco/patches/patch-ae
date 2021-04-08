@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.2 2016/01/18 20:46:52 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2021/04/08 08:21:58 wiz Exp $
 
 # clean up the FreeBSD configuration to fit better with pkgsrc
 
 # Build a full set of shared library search paths, rather than
 # *assuming* everything is under PREFIX.
 
---- build/config/FreeBSD.orig	2010-12-16 05:43:24.000000000 +0000
+--- build/config/FreeBSD.orig	2015-08-04 05:20:55.000000000 +0000
 +++ build/config/FreeBSD
 @@ -20,7 +20,9 @@ CXX     = g++
  LINK    = $(CXX)
@@ -14,10 +14,26 @@ $NetBSD: patch-ae,v 1.2 2016/01/18 20:46:52 joerg Exp $
 -SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
 +SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-rpath,$(POCO_PREFIX)/lib \
 +		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
-+SHLIB   = $(CXX) -Wl,-rpath,$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIB   = $(CXX) $(CXXFLAGS) $(LDFLAGS) -Wl,-rpath,$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
  DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
  STRIP   = strip
+@@ -38,13 +40,13 @@ SHAREDLIBLINKEXT = .so
+ #
+ # Compiler and Linker Flags
+ #
+-CFLAGS          = 
++CFLAGS          ?= 
+ CFLAGS32        =
+ CFLAGS64        =
+ CXXFLAGS        =
+ CXXFLAGS32      =
+ CXXFLAGS64      =
+-LINKFLAGS       =
++LINKFLAGS       = ${LDFLAGS}
+ LINKFLAGS32     =
+ LINKFLAGS64     =
+ STATICOPT_CC    =
 @@ -52,7 +54,7 @@ STATICOPT_CXX   =
  STATICOPT_LINK  = -static
  SHAREDOPT_CC    = -fPIC
