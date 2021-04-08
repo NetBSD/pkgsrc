@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2021/04/08 15:23:31 nia Exp $
+# $NetBSD: Makefile,v 1.276 2021/04/08 15:24:35 nia Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	6
@@ -18,8 +18,6 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
-
-GMAKE_REQD=		4.1 # needed for docs
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
