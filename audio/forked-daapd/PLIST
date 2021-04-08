@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/02 14:00:47 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/08 10:56:28 nia Exp $
 lib/forked-daapd/forked-daapd-sqlext.la
 man/man8/forked-daapd.8
 sbin/forked-daapd
@@ -12,35 +12,6 @@ share/doc/forked-daapd/README_SMARTPL.md
 share/doc/forked-daapd/UPGRADING
 share/doc/forked-daapd/scripts/pairinghelper.sh
 share/examples/forked-daapd/forked-daapd.conf
-share/forked-daapd/htdocs/admin.html
-share/forked-daapd/htdocs/admin/css/forked-daapd.css
-share/forked-daapd/htdocs/admin/js/forked-daapd.js
-share/forked-daapd/htdocs/admin/vendor/axios/axios.js
-share/forked-daapd/htdocs/admin/vendor/axios/axios.map
-share/forked-daapd/htdocs/admin/vendor/axios/axios.min.js
-share/forked-daapd/htdocs/admin/vendor/axios/axios.min.map
-share/forked-daapd/htdocs/admin/vendor/bulma/bulma.css
-share/forked-daapd/htdocs/admin/vendor/bulma/bulma.css.map
-share/forked-daapd/htdocs/admin/vendor/bulma/bulma.min.css
-share/forked-daapd/htdocs/admin/vendor/fontawesome/css/all.css
-share/forked-daapd/htdocs/admin/vendor/fontawesome/css/all.min.css
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-brands-400.eot
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-brands-400.svg
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-brands-400.ttf
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-brands-400.woff
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-brands-400.woff2
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-regular-400.eot
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-regular-400.svg
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-regular-400.ttf
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-regular-400.woff
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-regular-400.woff2
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-solid-900.eot
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-solid-900.svg
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-solid-900.ttf
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-solid-900.woff
-share/forked-daapd/htdocs/admin/vendor/fontawesome/webfonts/fa-solid-900.woff2
-share/forked-daapd/htdocs/admin/vendor/vue/vue.js
-share/forked-daapd/htdocs/admin/vendor/vue/vue.min.js
 share/forked-daapd/htdocs/android-chrome-96x96.png
 share/forked-daapd/htdocs/apple-touch-icon.png
 share/forked-daapd/htdocs/browserconfig.xml
