@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/11/02 20:17:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/04/08 10:56:28 nia Exp $
 
-SHA1 (forked-daapd-27.2.tar.xz) = c4a0a9766ff8e1f7d39f199783b12c2f0c127e04
-RMD160 (forked-daapd-27.2.tar.xz) = ead3319f9ec7c24b6624cff4809253020a08e711
-SHA512 (forked-daapd-27.2.tar.xz) = 67dbb558579706bf69843e7ff7e6186769e7c775e99ea8b7d1a605fe6f3f6deba2fd20ea4ce3a7fb4e2fab07cf900f95233af66555f08a994c493fd73a1a2548
-Size (forked-daapd-27.2.tar.xz) = 3335304 bytes
+SHA1 (forked-daapd-27.4.tar.xz) = 3e529a3b28b0fa667bc93c07a50b30d06c2f8d2e
+RMD160 (forked-daapd-27.4.tar.xz) = 79c6d29837ec6dd4ddd64d3d7cc726991489a218
+SHA512 (forked-daapd-27.4.tar.xz) = 0b35e21b9415bf5e2ddaa7e4cf0400344a449385f574b69a991505b7b8e8d16489f7493d74e3e9ff512cfac7fd858b22964a406108af427ce74b23f9c4d8ff93
+Size (forked-daapd-27.4.tar.xz) = 2429848 bytes
 SHA1 (patch-Makefile.in) = e59e7f81857249953dde6c79a45116e642581b34
-SHA1 (patch-src_player.c) = 070a6f678f3b8da13481a7efde7443f148e09c4d
