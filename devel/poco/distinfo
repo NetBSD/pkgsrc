@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2020/03/27 02:08:11 joerg Exp $
+$NetBSD: distinfo,v 1.15 2021/04/08 08:21:58 wiz Exp $
 
 SHA1 (poco-1.6.1-all.tar.gz) = 38841212a6893d4290909a62b4f310450230fb6d
 RMD160 (poco-1.6.1-all.tar.gz) = a7ab9429db5b4b5fc02c194a208f11f296deb90b
@@ -19,7 +19,7 @@ SHA1 (patch-aa) = be1c72c9c63b65e8d4211abab9dd036255ed6233
 SHA1 (patch-ab) = a5ebcc44e9ab728d9812cefd01188622bfea172f
 SHA1 (patch-ac) = 08fa398b76935082dccbfb81bb69877d10996f6f
 SHA1 (patch-ad) = f6eeb9dc9b3a85525f264edbd1587bc4f124b9e1
-SHA1 (patch-ae) = d168bd1e391992b64555373065fb431ad9c23731
+SHA1 (patch-ae) = 79f9ab433e87a5518efe51133877e7e9f25b0bf1
 SHA1 (patch-ag) = e1ef2677c25d445cdae97c832211e2407fae9af3
 SHA1 (patch-ah) = a4ba890ab2501552bf18b2778f3f3593e4b0abcb
 SHA1 (patch-build_config_Linux) = f1b4eb600a472dfe9dca8d61e9c6ac3c5e4f2f9d
