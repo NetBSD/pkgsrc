@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2036 2021/04/08 10:47:08 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2037 2021/04/08 10:56:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/exaile to 4.1.1 [nia 2021-04-08]
 	Updated sysutils/file to 5.40 [nia 2021-04-08]
 	Updated shells/fish to 3.2.2 [nia 2021-04-08]
+	Updated audio/forked-daapd to 27.4 [nia 2021-04-08]
