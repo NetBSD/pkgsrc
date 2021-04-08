@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/04/08 08:58:40 wiz Exp $
+
+Honor LDFLAGS.
+
+--- Makefile.orig	2007-05-20 14:25:52.000000000 +0000
++++ Makefile
+@@ -46,7 +46,7 @@ install: all
+ 	cp $(PIDGIN_LATEX).so $(LIB_INSTALL_DIR)
+ 
+ $(PIDGIN_LATEX).so: $(PIDGIN_LATEX).o
+-	$(CC) -shared $(CFLAGS) $< -o $@ $(PIDGIN_LIBS) $(GTK_LIBS) -Wl,--export-dynamic -Wl,-soname
++	$(CC) -shared $(CFLAGS) $(LDFLAGS) $< -o $@ $(PIDGIN_LIBS) $(GTK_LIBS) -Wl,--export-dynamic -Wl,-soname
+ 
+ $(PIDGIN_LATEX).o:$(PIDGIN_LATEX).c $(PIDGIN_LATEX).h
+ 	$(CC) $(CFLAGS) -fPIC -c $< -o $@ $(PIDGIN_CFLAGS) $(GTK_CFLAGS) -DHAVE_CONFIG_H
