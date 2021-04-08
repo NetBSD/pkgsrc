@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2021/02/20 22:56:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.341 2021/04/08 15:43:17 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -170,7 +170,6 @@ SUBDIR+=	pearpc
 SUBDIR+=	py-keystone
 SUBDIR+=	py-unicorn
 SUBDIR+=	qemu
-SUBDIR+=	qemu51
 SUBDIR+=	raine
 SUBDIR+=	realboy
 SUBDIR+=	retroarch
