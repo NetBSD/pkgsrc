@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2021/01/19 12:45:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/04/08 08:40:05 adam Exp $
 
 SHA1 (openmw-0.46.0.tar.gz) = f57a87e06c641963d38663df398f882bcacd14de
 RMD160 (openmw-0.46.0.tar.gz) = d52b3725a3a589d84cea2494d80f98ea4e29bc50
 SHA512 (openmw-0.46.0.tar.gz) = da384aead300552817c0d0ce03515a5ccc95dcab4e02d4c1dd0d6c5f1b01ee01209bbaea74e2d12021e3465e49b051823bb018de39675c5a22c6892893624486
 Size (openmw-0.46.0.tar.gz) = 5155004 bytes
-SHA1 (patch-CMakeLists.txt) = 47418042b842c5de85b4cebc4629e9d2b96ab883
+SHA1 (patch-CMakeLists.txt) = 924ed36b1ed17b8a8562a43b05ae8393e6ef1e08
 SHA1 (patch-components_crashcatcher_crashcatcher.cpp) = ecb17b1f5a199ddc8b3bd299e0222ebf88c1fdec
 SHA1 (patch-components_detournavigator_offmeshconnectionsmanager.hpp) = b98d76821b3f533027e46481b2cee43c1ded91d0
 SHA1 (patch-components_files_fixedpath.hpp) = c4047ee90e1771228ce5179d8a082345a0310e03
