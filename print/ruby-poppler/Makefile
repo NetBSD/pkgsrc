@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/11/21 09:34:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/04/08 06:19:48 adam Exp $
 #
 
 DISTNAME=		poppler-${VERSION}
 COMMENT=		Ruby binding of poppler-glib
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
