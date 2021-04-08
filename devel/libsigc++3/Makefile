@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:07:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/08 20:55:18 adam Exp $
 
-DISTNAME=	libsigc++-3.0.3
+DISTNAME=	libsigc++-3.0.6
 PKGNAME=	${DISTNAME:S/-/3-/}
-PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,20 +13,13 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gm4 gmake perl:build
+USE_TOOLS+=		gm4 perl:build pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
-GCC_REQD+=		4.8
+GCC_REQD+=	4.8
 
-TEST_TARGET=		check
-
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CONFIGURE_ARGS+=	--disable-threads
-.endif
-
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
 .include "../../devel/mm-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
