@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/12/10 13:21:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/04/08 10:17:28 nia Exp $
 
-SHA1 (atheme-v7.2.10-r2.tar.xz) = f0ddd1623df545de76e910a8462b3a496f582624
-RMD160 (atheme-v7.2.10-r2.tar.xz) = 0da39746c743ac4b9e1bfaf2094221883a3b3b0e
-SHA512 (atheme-v7.2.10-r2.tar.xz) = c7e6654ddbf515b1565b77f0659cd9a77787d004fb532ecdee638189e823ec65afc283cbeafc6d7625ed6c210835e5546c5e33718e08ad0b280ccc7a2df7be48
-Size (atheme-v7.2.10-r2.tar.xz) = 21061364 bytes
+SHA1 (atheme-services-v7.2.11.tar.xz) = c66e615b0a0532c016b36514d528e115580c7e07
+RMD160 (atheme-services-v7.2.11.tar.xz) = 6cd765aef710470f2d980b0351d61611265b096c
+SHA512 (atheme-services-v7.2.11.tar.xz) = adcc189b61efe295997a7456022a7595df5b14b55c2139794d380e57fe77efd42221316558391b5440f077fd951143905454b0e9893deec89108fa671b44ef2f
+Size (atheme-services-v7.2.11.tar.xz) = 1051436 bytes
