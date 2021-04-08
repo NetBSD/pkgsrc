@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2026 2021/04/08 08:33:44 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2027 2021/04/08 08:39:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3237,3 +3237,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/catdoc to 0.94.4nb1 [wiz 2021-04-08]
 	Updated devel/poco to 1.6.1nb3 [wiz 2021-04-08]
 	Updated chat/carbons-purple to 0.2.1nb5 [wiz 2021-04-08]
+	Updated print/poppler to 21.04.0 [adam 2021-04-08]
+	Updated devel/pango to 1.48.4 [adam 2021-04-08]
