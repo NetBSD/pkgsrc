@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2021/04/07 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.271 2021/04/08 13:02:08 nia Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	5
@@ -98,10 +98,9 @@ UE_ARCHS+=		i386
 UE_ARCHS+=		m68k microblaze microblazeel
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
 UE_ARCHS+=		nios2
-UE_ARCHS+=		or1k ppc ppc64 ppc64le ppc64abi32
+UE_ARCHS+=		or1k ppc ppc64 ppc64le
 UE_ARCHS+=		riscv32 riscv64
 UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
-UE_ARCHS+=		tilegx
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
