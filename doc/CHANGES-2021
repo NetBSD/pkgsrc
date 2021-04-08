@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2046 2021/04/08 18:58:01 cheusov Exp $
+$NetBSD: CHANGES-2021,v 1.2047 2021/04/08 19:59:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3258,3 +3258,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed emulators/qemu51 [nia 2021-04-08]
 	Updated net/speedtest-cli to 2.1.3 [gdt 2021-04-08]
 	Updated devel/mk-configure to 0.37.0 [cheusov 2021-04-08]
+	Added devel/rinutils version 0.8.0 [markd 2021-04-08]
+	Added games/black-hole-solver version 1.10.1 [markd 2021-04-08]
+	Updated games/kpat to 20.12.3 [markd 2021-04-08]
