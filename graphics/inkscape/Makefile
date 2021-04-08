@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.224 2021/01/01 08:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.225 2021/04/08 06:19:46 adam Exp $
 
 DISTNAME=	inkscape-1.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -108,8 +108,9 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../x11/libXext/buildlink3.mk"
-
+.endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
