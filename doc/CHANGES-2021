@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2031 2021/04/08 10:20:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2032 2021/04/08 10:26:58 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/pidgin-latex to 1.2.1nb49 [wiz 2021-04-08]
 	Updated time/gnome-calendar to 40.0 [wiz 2021-04-08]
 	Updated chat/atheme to 7.2.11 [nia 2021-04-08]
+	Updated cad/openscad to 2021.01 [bouyer 2021-04-08]
