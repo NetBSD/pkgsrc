@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/17 06:56:03 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/04/08 11:37:25 nia Exp $
 
-SHA1 (lua-http-0.3.tar.gz) = d658cb7fdeed670455ed69583f9cef529851ffa7
-RMD160 (lua-http-0.3.tar.gz) = 10916716de6adbd388e7fdab8e94a21941075461
-SHA512 (lua-http-0.3.tar.gz) = 5728848849e8d3e99328abdc6aff3034a708f0e5884e8718a9266900a561a37850e2bf911e9cbd0d4d538799e1fd8bb4fd66008f4787011f5802b259d51f8281
-Size (lua-http-0.3.tar.gz) = 141882 bytes
-SHA1 (patch-http_bit.lua) = f8fb9be435e0392aec4c29cdde01da7c33f6be64
+SHA1 (lua-http-0.4.tar.gz) = 9a6f6999924900e86ef4f07d1bbfb4c4031b9e6b
+RMD160 (lua-http-0.4.tar.gz) = 49e4ba9f7c60633f875297bebffc4c7edc80d405
+SHA512 (lua-http-0.4.tar.gz) = 3933c36e2d439c81ba4506d3ab1dd53a85ba3cd641abbd945210bdc6b6edb3e01516adb473cf59c5c194d9f45e7de9196e31265318d01c5b7684bb5e87dbd26a
+Size (lua-http-0.4.tar.gz) = 142623 bytes
