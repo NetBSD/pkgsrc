@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2034 2021/04/08 10:35:10 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2035 2021/04/08 10:40:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3246,3 +3246,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/openscad to 2021.01 [bouyer 2021-04-08]
 	Updated lang/elixir to 1.11.4 [nia 2021-04-08]
 	Updated audio/exaile to 4.1.1 [nia 2021-04-08]
+	Updated sysutils/file to 5.40 [nia 2021-04-08]
