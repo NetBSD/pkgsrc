@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.72 2021/04/08 13:05:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.73 2021/04/08 13:10:18 nia Exp $
 bin/elf2dmp
-${PLIST.ivshmem}bin/ivshmem-client
-${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
 ${PLIST.alpha}bin/qemu-alpha
