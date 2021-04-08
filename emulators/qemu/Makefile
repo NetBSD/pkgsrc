@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2021/04/08 13:02:08 nia Exp $
+# $NetBSD: Makefile,v 1.272 2021/04/08 13:10:18 nia Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	5
@@ -121,15 +121,13 @@ PLIST.nbd=			yes
 USER_EMUL=			${UE_ARCHS}
 PLIST.bridge-helper=		yes
 PLIST.nbd=			yes
-PLIST.ivshmem=			yes
 PLIST.pr-helper=		yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
-PLIST.ivshmem=			yes
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem keymap nbd pr-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper keymap nbd pr-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
