@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/11/20 19:08:06 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2021/04/08 06:14:38 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -35,7 +35,8 @@ CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 CFLAGS.FreeBSD+=	-DLLONG_MAX=__LLONG_MAX
 
 # The result binary of g-ir-scanner cannot find libpoppler-glib.so.
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/glib
+# The second part is for Darwin: libpoppler-glib.dylib has @rpath before being installed.
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/glib:${BUILDLINK_PREFIX.poppler}/lib
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler-${POPPLER_VERS}{,nb*}
 .include "../../print/poppler/buildlink3.mk"

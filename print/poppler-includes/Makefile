@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/11/20 19:08:06 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2021/04/08 06:14:38 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -22,6 +22,7 @@ do-install:
 	    ${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler;		\
 	done };
 	${INSTALL_DATA} ${WRKSRC}/poppler/poppler-config.h ${INCDIR}/poppler
+	${INSTALL_DATA} ${WRKSRC}/poppler_private_export.h ${INCDIR}/poppler
 	for d in goo fofi splash; do					\
 	    ${INSTALL_DATA_DIR} ${INCDIR}/poppler/"$$d";		\
 	    sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt	\
