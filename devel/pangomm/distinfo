@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2020/05/07 08:42:06 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/04/08 21:15:47 adam Exp $
 
-SHA1 (pangomm-2.42.1.tar.xz) = ed87cae8555a3e98f7a76478a6c825f9d475ed13
-RMD160 (pangomm-2.42.1.tar.xz) = f6a26cc1bbdfc388e9df5dad12f75e9c4ec5f24d
-SHA512 (pangomm-2.42.1.tar.xz) = 46ba375e61dd32e268397ecb8e69364b642ea3d9a6c4d9e3e52500e1e1c9fa0c6aa822c6d5046f49a2fe4d9a872c6c2b354134d39c17370abcfc6a1d752223b0
-Size (pangomm-2.42.1.tar.xz) = 882508 bytes
+SHA1 (pangomm-2.46.0.tar.xz) = 04b10887b7af64e27dcbf57115fcbc841fff8799
+RMD160 (pangomm-2.46.0.tar.xz) = 4e3bba7dc2e006f903907803e8d0b7a0b2063cc0
+SHA512 (pangomm-2.46.0.tar.xz) = bd193788b9fd12c637a779c37894336cb0ea37ccd2b173816baacd72e485997b0500cf257e2fb58bb325c74f756245b61509984bd5ff8643ab73355028590ff6
+Size (pangomm-2.46.0.tar.xz) = 672008 bytes
+SHA1 (patch-meson.build) = b09516870f4e33aab8d4039f995aedd4dc236832
