@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/12/10 13:21:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/04/08 10:17:28 nia Exp $
 bin/atheme-dbverify
 bin/atheme-ecdsakeygen
 bin/atheme-services
@@ -1195,4 +1195,5 @@ share/locale/de/LC_MESSAGES/atheme.mo
 share/locale/es/LC_MESSAGES/atheme.mo
 share/locale/fr/LC_MESSAGES/atheme.mo
 share/locale/ru/LC_MESSAGES/atheme.mo
+share/locale/tr/LC_MESSAGES/atheme.mo
 @pkgdir etc/atheme

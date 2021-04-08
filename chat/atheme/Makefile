@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2021/04/08 10:17:28 nia Exp $
 
-DISTNAME=	atheme-v7.2.10-r2
-PKGNAME=	${DISTNAME:S/-v/-/1:S/-r/.r/1}
-PKGREVISION=	1
+DISTNAME=	atheme-services-v7.2.11
+PKGNAME=	${DISTNAME:S/-services//1:S/-v/-/1}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
-EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	atheme
-GITHUB_RELEASE=	v${PKGVERSION_NOREV:S/.r/-r/1}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://atheme.github.io/atheme.html
