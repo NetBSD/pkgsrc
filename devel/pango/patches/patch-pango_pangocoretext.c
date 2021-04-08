@@ -1,4 +1,5 @@
-$NetBSD: patch-pango_pangocoretext.c,v 1.2 2019/08/16 10:43:24 wiz Exp $
+$NetBSD: patch-pango_pangocoretext.c,v 1.3 2021/04/08 08:38:55 adam Exp $
+
 From 60df2b006e5d4553abc7bb5fe9a99539c91b0022 Mon Sep 17 00:00:00 2001
 From: Tom Schoonjans <Tom.Schoonjans%diamond.ac.uk@localhost>
 Date: Fri, 20 Jul 2018 12:30:34 +0100
