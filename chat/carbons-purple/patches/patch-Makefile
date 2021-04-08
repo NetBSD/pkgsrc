@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2018/11/27 19:25:05 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2021/04/08 08:33:36 wiz Exp $
 
 Needs -lpurple.
 
@@ -38,3 +38,12 @@ Needs -lpurple.
  LFLAGS= -ldl -lm $(PKGCFG_L) $(LJABBER)
  
  all: $(BDIR)/carbons.so
+@@ -51,7 +46,7 @@ $(BDIR)/%.o: $(SDIR)/%.c $(BDIR)
+ 	$(CC) $(CFLAGS) $(PLUGIN_CPPFLAGS) -c $(SDIR)/$*.c -o $@
+ 
+ $(BDIR)/carbons.so: $(BDIR)/carbons.o
+-	$(CC) $(CFLAGS) $(PLUGIN_CPPFLAGS) $(BDIR)/carbons.o -o $@ $(LFLAGS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(PLUGIN_CPPFLAGS) $(BDIR)/carbons.o -o $@ $(LFLAGS)
+ $(BDIR)/carbons.a: $(BDIR)/carbons.o
+ 	$(AR) rcs $@ $^
+ 
