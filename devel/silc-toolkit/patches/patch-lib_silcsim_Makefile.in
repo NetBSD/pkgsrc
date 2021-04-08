@@ -1,0 +1,19 @@
+$NetBSD: patch-lib_silcsim_Makefile.in,v 1.1 2021/04/08 08:28:06 wiz Exp $
+
+Honor LDFLAGS/CFLAGS.
+
+--- lib/silcsim/Makefile.in.orig	2021-04-08 08:22:44.550203264 +0000
++++ lib/silcsim/Makefile.in
+@@ -580,10 +580,10 @@ uninstall-am: uninstall-includeHEADERS
+ @SILC_SIM_TRUE@all: $(SIM_CIPHER_OBJS) $(SIM_HASH_OBJS)
+ 
+ $(SIM_CIPHER_OBJS):
+-	@if test '!' -f lib$*.la ; then	  $(LIBTOOL) --mode=link $(CCLD) -rpath $(silc_modulesdir)		../silccrypt/$*.lo -o lib$*.la $(LTFLAGS);	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so		$(srcdir)/$*.sim.so;	fi
++	@if test '!' -f lib$*.la ; then	  $(LIBTOOL) --mode=link $(CCLD) $(LDFLAGS) $(CFLAGS) -rpath $(silc_modulesdir)		../silccrypt/$*.lo -o lib$*.la $(LTFLAGS);	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so		$(srcdir)/$*.sim.so;	fi
+ 
+ $(SIM_HASH_OBJS):
+-	@if test '!' -f lib$*.la ; then	  $(LIBTOOL) --mode=link $(CCLD) -rpath $(silc_modulesdir)		../silccrypt/$*.lo -o lib$*.la $(LTFLAGS);	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so		$(srcdir)/$*.sim.so;	fi
++	@if test '!' -f lib$*.la ; then	  $(LIBTOOL) --mode=link $(CCLD) $(LDFLAGS) $(CFLAGS) -rpath $(silc_modulesdir)		../silccrypt/$*.lo -o lib$*.la $(LTFLAGS);	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so		$(srcdir)/$*.sim.so;	fi
+ 
+ #
+ # Installation
