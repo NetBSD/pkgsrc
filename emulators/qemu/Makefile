@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2021/04/08 15:17:49 nia Exp $
+# $NetBSD: Makefile,v 1.275 2021/04/08 15:23:31 nia Exp $
 
 DISTNAME=	qemu-5.2.0
 PKGREVISION=	6
@@ -149,6 +149,8 @@ PRINT_PLIST_AWK+=	/\/_static\// { next; }
 
 TEST_TARGET=		check
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 post-extract:
 	cp ${WRKDIR}/palcode-clipper ${WRKSRC}/pc-bios/palcode-clipper
 	cp ${FILESDIR}/hw-mips-mipssim_virtio.c ${WRKSRC}/hw/mips/mipssim_virtio.c
@@ -182,7 +184,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
