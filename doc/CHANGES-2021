@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2042 2021/04/08 11:37:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2043 2021/04/08 12:54:08 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/geany to 1.37.1 [nia 2021-04-08]
 	Updated graphics/gexiv2 to 0.12.2 [nia 2021-04-08]
 	Updated www/lua-http to 0.4 [nia 2021-04-08]
+	Updated devel/fossil to 2.15.1 [js 2021-04-08]
