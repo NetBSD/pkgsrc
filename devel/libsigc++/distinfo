@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2020/04/06 09:00:16 wiz Exp $
+$NetBSD: distinfo,v 1.32 2021/04/08 20:52:15 adam Exp $
 
-SHA1 (libsigc++-2.10.3.tar.xz) = fb76ce551efa88e9aa4e84424ca1ab9fe75570bf
-RMD160 (libsigc++-2.10.3.tar.xz) = 92d1c0a29a19a28633d87f61da2f7589025efeb3
-SHA512 (libsigc++-2.10.3.tar.xz) = 3c7f90be84724e39073c05624ad2bee6a5835e2c6cb6cf9e605edc6574eb7cd99ec153aaca6e8fcf7e3a6c031c4e9c334da32d04177d36788e64a17667c70b4e
-Size (libsigc++-2.10.3.tar.xz) = 4558428 bytes
+SHA1 (libsigc++-2.10.6.tar.xz) = d59622d729cf18e507dcd54b317ebd77e0f693a8
+RMD160 (libsigc++-2.10.6.tar.xz) = 6c626e608a0fae6f6db565bc42edb9e8797e89f4
+SHA512 (libsigc++-2.10.6.tar.xz) = 7dd57c061defe323de5721d187145dcf63346311d8993eb6346a33789f26c8509c1bf5a73d55776cc5ebe85fb14d54107553a652dd42f452aed6aed20047b549
+Size (libsigc++-2.10.6.tar.xz) = 4791016 bytes
