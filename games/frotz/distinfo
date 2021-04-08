@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2020/05/17 14:23:08 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/04/08 11:04:02 nia Exp $
 
-SHA1 (frotz-2.52.tar.gz) = 3b230ec12c651b5e073c6111c93c4247c874ca0d
-RMD160 (frotz-2.52.tar.gz) = a74e9bb35832e1375ce6321dfad00c30f1ac0014
-SHA512 (frotz-2.52.tar.gz) = 450b2fa1cc943a63749b18fc9964b157dcad7685928e194afac6049eb4c35dc2914b1848f96d9f4bfc8212e90de50ea65ce149be236be16ce1704f24d0437833
-Size (frotz-2.52.tar.gz) = 353485 bytes
-SHA1 (patch-Makefile) = 84913a2a85ebe4b7780a28bce5f25d0441256baa
+SHA1 (frotz-2.53.tar.gz) = 79c2606b08f448b0a56474e8736c5a57a9dcc931
+RMD160 (frotz-2.53.tar.gz) = 323e24a026b1418713c84ad170ad36f3680d0bb8
+SHA512 (frotz-2.53.tar.gz) = 74c727a8f0355828ebe19185e8e06ca5a633e49d88eccb26ec6500f37371ddfbbf19f1cbef367aa004e0342591e07e67510c17552decd573de0c838399587b5f
+Size (frotz-2.53.tar.gz) = 461585 bytes
+SHA1 (patch-Makefile) = b36192c7f5c4a4956a4836a6b9b426d4fd000529
