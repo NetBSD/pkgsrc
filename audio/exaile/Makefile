@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2021/02/18 18:04:27 nia Exp $
+# $NetBSD: Makefile,v 1.72 2021/04/08 10:34:58 nia Exp $
 
-DISTNAME=	exaile-4.1.0
+DISTNAME=	exaile-4.1.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
 GITHUB_PROJECT=	exaile
