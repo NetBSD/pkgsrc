@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/08 19:45:30 markd Exp $
+
+SHA1 (rinutils-0.8.0.tar.xz) = 95c6ae4d95e6c0555c05a82c342bdb4e67042c23
+RMD160 (rinutils-0.8.0.tar.xz) = fca8525861ea02c061b2d9424d096b4e150092d3
+SHA512 (rinutils-0.8.0.tar.xz) = 06bbcdb5092762bf2ed92d4082eca17e8dc0e822ce8634f8ec8782fe7eccb4b954c081dbba3f1e2f72e0285607a813f020d4277af77accc43135bde50153359d
+Size (rinutils-0.8.0.tar.xz) = 17112 bytes
