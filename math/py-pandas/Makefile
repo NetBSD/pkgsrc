@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/10/12 21:52:03 bacon Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/09 14:41:35 tnn Exp $
 
 DISTNAME=	pandas-0.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
 
 PYSETUPTESTTARGET=	pytest
 
