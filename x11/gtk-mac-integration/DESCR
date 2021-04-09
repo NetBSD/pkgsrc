@@ -1,4 +1,3 @@
-GTK+ Integration for the Mac OS X desktop, like the menubar, dock and app
-bundles. This library provides two implementations: An older Carbon
-implementation (gtk-mac-integration) and a new implementation in Cocoa
-(GtkOSXApplication). PyGtk bindings are provided for both.
+Provides integration for Gtk+ applications into the Mac desktop, with
+support for the Mac menubar, the Dock, and for finding resources in
+bundles. GtkosxApplication is gobject-introspectable.
