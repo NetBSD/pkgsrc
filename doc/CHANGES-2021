@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2056 2021/04/09 10:27:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2057 2021/04/09 10:32:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.3.12 [pin 2021-04-09]
 	Added graphics/qrrs version 0.1.5 [pin 2021-04-09]
 	Updated audio/mpc to 0.33nb2 [wiz 2021-04-09]
+	Updated audio/rubberband to 1.9.1 [nia 2021-04-09]
