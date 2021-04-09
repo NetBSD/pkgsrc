@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.199 2021/03/30 16:34:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.200 2021/04/09 06:40:59 wiz Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.63.0
+PKGREVISION=		1
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -89,25 +90,34 @@ MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
-NSS_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
-NSS_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
-NSS_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
-NSS_DIST_DIR_VERSION=	${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_${NSS_PATCH_VERSION}
+MOD_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
+MOD_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
+MOD_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
+NSS_DIST_DIR_VERSION=	${MOD_MAJOR_VERSION}_${MOD_MINOR_VERSION}_${MOD_PATCH_VERSION}
 
+NSPR_MINIMUM_VERSION=	4.29
+
+PKGCONFIG_OVERRIDE=	nss.pc
 
 SUBST_CLASSES+=		config
-SUBST_VARS.config=	PREFIX
-SUBST_VARS.config+=	NSS_MAJOR_VERSION
-SUBST_VARS.config+=	NSS_MINOR_VERSION
-SUBST_VARS.config+=	NSS_PATCH_VERSION
-SUBST_VARS.config+=	COMPILER_RPATH_FLAG
+# nss.pc
 SUBST_SED.config+=	-e "s,@PTHREAD@,${BUILDLINK_LIBS.pthread:Q},"
+SUBST_SED.config+=	-e "s,%prefix%,${PREFIX},"
+SUBST_SED.config+=	-e "s,%exec_prefix%,${PREFIX},"
+SUBST_SED.config+=	-e "s,%libdir%,${PREFIX}/lib/nss,"
+SUBST_SED.config+=	-e "s,%includedir%,${PREFIX}/include/nss,"
+SUBST_SED.config+=	-e "s,%NSS_VERSION%,${PKGVERSION_NOREV},"
+SUBST_SED.config+=	-e "s,%NSPR_VERSION%,${NSPR_MINIMUM_VERSION},"
+# nss-config
+SUBST_SED.config+=	-e "s,@prefix@,${PREFIX},"
+SUBST_VARS.config+=	MOD_MAJOR_VERSION
+SUBST_VARS.config+=	MOD_MINOR_VERSION
+SUBST_VARS.config+=	MOD_PATCH_VERSION
 SUBST_STAGE.config=	pre-build
 SUBST_MESSAGE.config=	Preparing *-config files.
 SUBST_FILES.config+=	nss.pc nss-config
 
 INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
-DIST=	${WRKSRC}/dist
 
 INSTALL_CMDS+=		certutil cmsutil crlutil derdump makepqg \
 			mangle modutil ocspclnt oidcalc p7content p7env p7sign \
@@ -117,25 +127,25 @@ INSTALL_CMDS+=		certutil cmsutil crlutil derdump makepqg \
 post-extract:
 	find ${WRKSRC} -type f | xargs ${CHMOD} 644
 	find ${WRKSRC} -type d | xargs ${CHMOD} 755
-	${CP} ${FILESDIR}/nss.pc.in ${WRKSRC}/nss.pc
-	${CP} ${FILESDIR}/nss-config.in ${WRKSRC}/nss-config
+	${CP} ${WRKSRC}/nss/pkg/pkg-config/nss.pc.in ${WRKSRC}/nss.pc
+	${CP} ${WRKSRC}/nss/pkg/pkg-config/nss-config.in ${WRKSRC}/nss-config
 
 do-install:
-	(cd ${DIST}/public/nss && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss )
-	(cd ${DIST}/*_OPT.OBJ/lib && \
+	(cd ${WRKSRC}/dist/public/nss && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss )
+	(cd ${WRKSRC}/dist/*_OPT.OBJ/lib && \
 		pax -Lrw *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
-	${INSTALL_DATA} ${DIST}/*_OPT.OBJ/lib/libcrmf.a \
+	${INSTALL_DATA} ${WRKSRC}/dist/*_OPT.OBJ/lib/libcrmf.a \
 		${DESTDIR}${PREFIX}/lib/nss/
 	${INSTALL_DATA} ${WRKSRC}/nss.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 	${INSTALL_SCRIPT} ${WRKSRC}/nss-config ${DESTDIR}${PREFIX}/bin/nss-config
 .for cmd in ${INSTALL_CMDS}
-	${INSTALL_PROGRAM} ${DIST}/*_OPT.OBJ/bin/${cmd} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dist/*_OPT.OBJ/bin/${cmd} ${DESTDIR}${PREFIX}/bin
 .endfor
 
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.29
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=${NSPR_MINIMUM_VERSION}
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
