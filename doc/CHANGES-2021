@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2059 2021/04/09 11:18:42 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2060 2021/04/09 14:05:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3280,3 +3280,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/kissfft version 131.1.0 [nia 2021-04-09]
 	Updated x11/gtk-mac-integration to 3.0.0 [adam 2021-04-09]
 	Updated graphics/inkscape to 1.0.2 [adam 2021-04-09]
+	Updated net/etherape to 0.9.19 [nia 2021-04-09]
