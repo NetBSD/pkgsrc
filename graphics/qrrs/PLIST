@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/09 09:06:53 pin Exp $
+bin/qrrs
