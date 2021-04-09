@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.226 2021/04/09 06:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.227 2021/04/09 11:18:24 adam Exp $
 
-DISTNAME=	inkscape-1.0.1
-PKGREVISION=	6
+DISTNAME=	inkscape-1.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	https://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/inkscape-1.0.1_2020-09-07_3bc2e813f5
+WRKSRC=		${WRKDIR}/inkscape-1.0.2_2021-01-15_e86c870879
 
 .if !exists(/usr/bin/iconv)
 BUILD_DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
@@ -64,6 +63,7 @@ CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
+CMAKE_ARGS+=	-DINKSCAPE_INSTALL_LIBDIR=${PREFIX}/lib
 CMAKE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MANCOMPRESSED=	yes
@@ -75,12 +75,15 @@ MANCOMPRESSED=	yes
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
+post-extract:
+	${RM} -r ${WRKSRC}/share/extensions/.pytest_cache
+
 # There exists some race condition in create_default_templates.py that
 # makes default.es_MX.svg sometimes not get installed.
 # (gettext translation file dependency not correctly expressed in cmake?)
 # Run the script post-build to ensure all files are generated.
 post-build:
-	cd ${WRKSRC} && ${PYTHONBIN} ./share/templates/create_default_templates.py . .
+	cd ${WRKSRC} && ${PYTHONBIN} share/templates/create_default_templates.py . .
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libcdr/buildlink3.mk"
@@ -93,7 +96,6 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -108,10 +110,13 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
-.if ${OPSYS} != "Darwin"
+.if ${PKG_BUILD_OPTIONS.gtk3:Mquartz}
+.include "../../x11/gtk-mac-integration/buildlink3.mk"
+.else
 .include "../../x11/libXext/buildlink3.mk"
 .endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

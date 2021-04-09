@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.31 2020/09/08 13:25:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/04/09 11:18:24 adam Exp $
 bin/inkscape
 bin/inkview
-lib/inkscape/libinkscape_base.so
+lib/libinkscape_base.so
 man/de/man1/inkscape.1
 man/de/man1/inkview.1
 man/es/man1/inkview.1
