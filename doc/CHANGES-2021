@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2049 2021/04/08 21:22:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2050 2021/04/09 06:41:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3269,3 +3269,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/atkmm to 2.28.1 [adam 2021-04-08]
 	Updated devel/pangomm to 2.46.0 [adam 2021-04-08]
 	Updated x11/gtkmm3 to 3.24.4 [adam 2021-04-08]
+	Updated devel/nss to 3.63nb1 [wiz 2021-04-09]
