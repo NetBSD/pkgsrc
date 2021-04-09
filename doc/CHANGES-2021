@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2054 2021/04/09 09:02:38 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2055 2021/04/09 09:08:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3274,3 +3274,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.6.7 [pin 2021-04-09]
 	Updated sysutils/zoxide to 0.6.0 [pin 2021-04-09]
 	Updated sysutils/xplr to 0.3.12 [pin 2021-04-09]
+	Added graphics/qrrs version 0.1.5 [pin 2021-04-09]
