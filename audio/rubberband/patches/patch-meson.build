@@ -1,0 +1,40 @@
+$NetBSD: patch-meson.build,v 1.1 2021/04/09 10:32:28 nia Exp $
+
+- Support systems without sincos.
+- Avoid building JNI interface.
+
+https://todo.sr.ht/~breakfastquay/rubberband/16
+
+--- meson.build.orig	2021-03-12 12:03:24.000000000 +0000
++++ meson.build
+@@ -20,6 +20,7 @@ rubberband_dynamic_library_version = '2.
+ system = build_machine.system()
+ architecture = host_machine.cpu_family()
+ cpp = meson.get_compiler('cpp')
++cc = meson.get_compiler('c')
+ 
+ pkg = import('pkgconfig')
+ 
+@@ -101,7 +102,10 @@ sndfile_dep = dependency('sndfile', vers
+ vamp_dep = dependency('vamp-sdk', version: '>= 2.9', required: false)
+ thread_dep = dependency('threads')
+ have_ladspa = cpp.has_header('ladspa.h', args: extra_include_args)
+-have_jni = cpp.has_header('jni.h', args: extra_include_args)
++have_sincos = cc.has_function('sincos',
++                               prefix: '#define _GNU_SOURCE\n#include <math.h>',
++                               args: '-lm')
++have_jni = false
+ 
+ javac = find_program('javac', required: false)
+ jar = find_program('jar', required: false)
+@@ -223,6 +227,10 @@ else
+ 
+ endif # resampler
+ 
++if not have_sincos
++  feature_defines += [ '-DLACK_SINCOS' ]
++endif
++
+ if ipp_needed
+   feature_defines += [
+     '-DHAVE_IPP',
