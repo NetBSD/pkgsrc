@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/11/24 17:17:53 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/09 10:32:28 nia Exp $
 
-DISTNAME=	rubberband-1.9.0
+DISTNAME=	rubberband-1.9.1
 CATEGORIES=	audio
 MASTER_SITES=	https://breakfastquay.com/files/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,16 +10,22 @@ HOMEPAGE=	https://breakfastquay.com/rubberband/
 COMMENT=	Audio time-stretching and pitch-shifting library
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE+=	rubberband.pc.in
+MESON_ARGS+=	-Dfft=fftw
+MESON_ARGS+=	-Dresampler=libsamplerate
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/rubberband.pc
 
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
