@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2052 2021/04/09 08:59:49 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2053 2021/04/09 09:01:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3272,3 +3272,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nss to 3.63nb1 [wiz 2021-04-09]
 	Updated www/drupal7 to 7.79 [prlw1 2021-04-09]
 	Updated sysutils/macchina to 0.6.7 [pin 2021-04-09]
+	Updated sysutils/zoxide to 0.6.0 [pin 2021-04-09]
