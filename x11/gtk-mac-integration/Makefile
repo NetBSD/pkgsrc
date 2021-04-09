@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/08/17 20:17:50 leot Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/09 11:14:54 adam Exp $
 
-DISTNAME=	gtk-mac-integration-2.0.8
-PKGREVISION=	9
+DISTNAME=	gtk-mac-integration-3.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-mac-integration/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,9 +13,11 @@ LICENSE=	gnu-lgpl-v2.1
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config #gmake
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--with-gtk2
+CONFIGURE_ARGS+=	--with-gtk3
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
