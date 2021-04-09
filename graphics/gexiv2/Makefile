@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/04/08 11:23:35 nia Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/09 20:24:43 nia Exp $
 
 DISTNAME=	gexiv2-0.12.2
 CATEGORIES=	graphics devel
@@ -11,7 +11,8 @@ COMMENT=	GObject-based wrapper around the Exiv2 library
 LICENSE=	gnu-gpl-v2
 
 # uses std::auto_ptr, deprecated in c++11
-USE_LANGUAGES=	c c++03
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+USE_LANGUAGES=	c99 c++03
 USE_TOOLS+=	pkg-config
 
 # workaround for build failure
