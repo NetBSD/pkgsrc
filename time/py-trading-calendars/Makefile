@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/06 23:33:03 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/09 15:42:35 tnn Exp $
 
 DISTNAME=	trading_calendars-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-pandas
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/tcal \
