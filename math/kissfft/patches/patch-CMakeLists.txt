@@ -1,6 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/04/09 11:00:28 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/04/09 11:10:35 nia Exp $
 
 -lm is not GNU/Linux specific...
+
+https://github.com/mborgerding/kissfft/pull/64
 
 --- CMakeLists.txt.orig	2021-04-09 10:52:02.217349618 +0000
 +++ CMakeLists.txt
