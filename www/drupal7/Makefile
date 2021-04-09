@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2021/02/02 15:19:42 taca Exp $
+# $NetBSD: Makefile,v 1.70 2021/04/09 08:34:55 prlw1 Exp $
 
-DISTNAME=	drupal-7.78
+DISTNAME=	drupal-7.79
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.drupal.org/files/projects/
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
-
-PHP_VERSIONS_ACCEPTED=	56 73 74
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
