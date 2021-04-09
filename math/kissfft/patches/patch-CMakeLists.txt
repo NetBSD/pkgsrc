@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/04/09 11:00:28 nia Exp $
+
+-lm is not GNU/Linux specific...
+
+--- CMakeLists.txt.orig	2021-04-09 10:52:02.217349618 +0000
++++ CMakeLists.txt
+@@ -105,7 +105,7 @@ endif()
+ # Add GNUInstallDirs for GNU infrastructure before target)include_directories
+ #
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|kFreeBSD|GNU)$" AND NOT CMAKE_CROSSCOMPILING)
++if(UNIX)
+     include(GNUInstallDirs)
+ endif()
+ 
+@@ -242,7 +242,7 @@ add_library(kissfft::kissfft-${KISSFFT_D
+ # Build with libm (-lm) on Linux and kFreeBSD
+ #
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|kFreeBSD|GNU)$" AND NOT CMAKE_CROSSCOMPILING)
++if(UNIX)
+     target_link_libraries(kissfft PRIVATE m)
+ endif()
+ 
+@@ -258,7 +258,7 @@ function(add_kissfft_executable NAME)
+     # Build with libm (-lm) on Linux and kFreeBSD
+     #
+ 
+-    if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|kFreeBSD|GNU)$" AND NOT CMAKE_CROSSCOMPILING)
++    if(UNIX)
+         target_link_libraries(${NAME} PRIVATE m)
+     endif()
+ 
