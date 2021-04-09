@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/02/25 18:50:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/09 21:19:50 khorben Exp $
 
 DISTNAME=	gtk-4.0.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
-# This packge invokes python3 command.
+# This package invokes python3 command.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
