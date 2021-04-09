@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2021/04/03 05:32:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.74 2021/04/09 07:02:58 adam Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -321,7 +321,7 @@ lib/gimp/2.0/plug-ins/file-wmf/file-wmf
 lib/gimp/2.0/plug-ins/file-xbm/file-xbm
 ${PLIST.remote}lib/gimp/2.0/plug-ins/file-xmc/file-xmc
 ${PLIST.remote}lib/gimp/2.0/plug-ins/file-xpm/file-xpm
-${PLIST.remote}lib/gimp/2.0/plug-ins/file-xwd/file-xwd
+lib/gimp/2.0/plug-ins/file-xwd/file-xwd
 lib/gimp/2.0/plug-ins/film/film
 lib/gimp/2.0/plug-ins/filter-pack/filter-pack
 lib/gimp/2.0/plug-ins/flame/flame
