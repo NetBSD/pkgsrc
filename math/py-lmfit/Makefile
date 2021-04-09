@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/05/13 15:36:27 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/09 14:41:35 tnn Exp $
 
 DISTNAME=	lmfit-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-uncertainties>=3.0.1:../../math/py-uncertainties
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
