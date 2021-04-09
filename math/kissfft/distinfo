@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2021/04/09 11:00:28 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/04/09 11:10:35 nia Exp $
 
 SHA1 (kissfft-131.1.0.tar.gz) = e313f318ed7bf1b2d4226f3ce4434788896fb089
 RMD160 (kissfft-131.1.0.tar.gz) = 3a9022bda35f4b845da93fc679aa8517d146a6e4
 SHA512 (kissfft-131.1.0.tar.gz) = bd715868ce0e93a291a0592fb1f8b960e832fc64efe863755e52b67d5addff9bcb444a1bf2570d1914c52b41dad1023d0d86400f5ea30c9fb84cd6b4f7210708
 Size (kissfft-131.1.0.tar.gz) = 52383 bytes
-SHA1 (patch-CMakeLists.txt) = 630b68eacad245051ffd0350abb09ab3707ca864
+SHA1 (patch-CMakeLists.txt) = e3d5d9927a9d753cb1974c25e98ff0e7c5c7bf70
