@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/07/01 16:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/09 14:41:35 tnn Exp $
 
 DISTNAME=	arviz-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-xarray>=0.11:../../math/py-xarray
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

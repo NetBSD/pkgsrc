@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/10/12 21:52:04 bacon Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/09 14:41:35 tnn Exp $
 
 DISTNAME=	scikit-learn-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ MAKE_ENV+=	SKLEARN_NO_OPENMP=1
 
 USE_LANGUAGES=	c c++ fortran
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
