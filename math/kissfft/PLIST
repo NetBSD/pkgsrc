@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/09 11:00:28 nia Exp $
+bin/fastconv-float
+bin/fastconvr-float
+bin/fft-float
+bin/psdpng-float
+include/kissfft/kiss_fft.h
+include/kissfft/kiss_fftnd.h
+include/kissfft/kiss_fftndr.h
+include/kissfft/kiss_fftr.h
+include/kissfft/kissfft.hh
+lib/cmake/kissfft/kissfft-config-version.cmake
+lib/cmake/kissfft/kissfft-config.cmake
+lib/cmake/kissfft/kissfft-float-shared-targets-noconfig.cmake
+lib/cmake/kissfft/kissfft-float-shared-targets.cmake
+lib/libkissfft-float.so
+lib/libkissfft-float.so.131
+lib/libkissfft-float.so.${PKGVERSION}
+lib/pkgconfig/kissfft-float.pc
