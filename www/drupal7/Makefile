@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2021/04/09 08:34:55 prlw1 Exp $
+# $NetBSD: Makefile,v 1.71 2021/04/09 15:22:13 tnn Exp $
 
 DISTNAME=	drupal-7.79
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,8 +10,11 @@ HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
 
+.include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
+.if ${PKG_PHP_MAJOR_VERS} < 8
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
+.endif
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
@@ -82,5 +85,4 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX}/${DRUPAL} \
 		\( -name '*.jpg' -o -name '*.png' \) | ${XARGS} ${CHMOD} 0644
 
-.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
