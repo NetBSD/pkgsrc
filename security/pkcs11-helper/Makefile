@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2020/07/27 16:20:45 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/09 06:54:58 wiz Exp $
 
 DISTNAME=	pkcs11-helper-1.10
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/downloads/alonbl/pkcs11-helper/
 EXTRACT_SUFX=	.tar.bz2
