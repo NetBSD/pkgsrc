@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.14 2021/03/30 16:47:03 ryoon Exp $
+# $NetBSD: github.mk,v 1.15 2021/04/10 09:03:13 nia Exp $
 #
 # github.com master site handling
 #
@@ -15,7 +15,7 @@
 #			SHA-1 commit ids are also acceptable
 # GITHUB_RELEASE	defaults to not defined, set this to ${DISTNAME}
 #			when packaging a release not based on a git tag.
-# GITHUB_SUBMODULE	manually set submodule information:
+# GITHUB_SUBMODULES	manually set submodule information:
 #			values should be:
 #			GitHub_user GitHub_project tag_or_hash submodule_path
 # GITHUB_TYPE		overrides the autodetected MASTER_SITE URL scheme:
