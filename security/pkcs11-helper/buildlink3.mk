@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2021/04/09 06:54:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2021/04/10 08:39:23 nia Exp $
 
 BUILDLINK_TREE+=	pkcs11-helper
 
@@ -12,13 +12,16 @@ BUILDLINK_PKGSRCDIR.pkcs11-helper?=	../../security/pkcs11-helper
 pkgbase := pkcs11-helper
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.pkcs11-helper:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.pkcs11-helper:Mopenssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.pkcs11-helper:Mgnutls)
+.if ${PKG_BUILD_OPTIONS.pkcs11-helper:Mgnutls}
 .  include "../../security/gnutls/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.pkcs11-helper:Mnss)
+.if ${PKG_BUILD_OPTIONS.pkcs11-helper:Mmbedtls}
+.  include "../../security/mbedtls/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.pkcs11-helper:Mnss}
 .  include "../../devel/nss/buildlink3.mk"
 .endif
 

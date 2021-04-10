@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.26 2021/04/09 06:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/10 08:39:23 nia Exp $
 
-DISTNAME=	pkcs11-helper-1.10
-PKGREVISION=	14
+DISTNAME=	pkcs11-helper-1.27.0
 CATEGORIES=	security
-MASTER_SITES=	https://github.com/downloads/alonbl/pkcs11-helper/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
+GITHUB_RELEASE=	${DISTNAME:R}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://github.com/OpenSC/OpenSC/wiki/pkcs11-helper
-COMMENT=	Library that simplifies the interaction with PKCS\#11
+HOMEPAGE=	https://github.com/OpenSC/pkcs11-helper
+COMMENT=	Library that simplifies the interaction with PKCS11
 LICENSE=	modified-bsd OR gnu-gpl-v2
-
-BROKEN=		"Fails to build with OpenSSL 1.1"
 
 # Not documented, but relatively clear from warnings.
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf autoreconf gmake pkg-config
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-strict
@@ -24,8 +22,6 @@ CONFIGURE_ARGS+=	--enable-pedantic
 
 PKGCONFIG_OVERRIDE+=	lib/libpkcs11-helper-1.pc.in
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf
-
 .include "options.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
