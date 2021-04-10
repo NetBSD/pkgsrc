@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/20 22:55:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2021/04/10 08:43:28 bsiegert Exp $
 
 DISTNAME=	qemu-5.1.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -93,6 +93,16 @@ REPLACE_PERL+=		scripts/texi2pod.pl
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	audio/ossaudio.c
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.endif
+
 UE_ARCHS+=		aarch64 aarch64_be
 UE_ARCHS+=		alpha arm armeb cris
 UE_ARCHS+=		hppa
@@ -160,10 +170,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} share/doc/qemu -path '*/_static/*' -type f -print > ${WRKDIR}/PLIST.STATIC
 
-# On Darwin, qemu uses CoreAudio
-.if ${OPSYS} != "Darwin"
-.include "../../mk/oss.buildlink3.mk"
-.endif
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
