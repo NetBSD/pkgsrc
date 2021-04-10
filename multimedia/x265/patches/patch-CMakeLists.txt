@@ -1,4 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/02/13 13:39:55 fhajny Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/04/10 08:36:03 adam Exp $
+
+Get X265_VERSION and X265_LATEST_TAG from outside.
 
 Solaris ld: Provided assembler is not PIC, so we pass "-mimpure-text"
             to the compiler so it doesn't send "-ztext" to ld.
@@ -7,9 +9,17 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
             requesting a non executable stack. I don't know if Solaris ld
             is complying or just ignoring it.
 
---- CMakeLists.txt.OLD	2017-01-27 02:42:21.295232904 +0000
-+++ CMakeLists.txt	2017-01-27 02:51:32.144600352 +0000
-@@ -523,7 +523,11 @@
+--- CMakeLists.txt.orig	2021-03-16 12:53:00.000000000 +0000
++++ CMakeLists.txt
+@@ -485,7 +485,6 @@ if(POWER)
+     endif()
+ endif()
+ 
+-include(Version) # determine X265_VERSION and X265_LATEST_TAG
+ include_directories(. common encoder "${PROJECT_BINARY_DIR}")
+ 
+ option(ENABLE_PPA "Enable PPA profiling instrumentation" OFF)
+@@ -665,7 +664,11 @@ if(ENABLE_SHARED)
          elseif(CYGWIN)
              # Cygwin is not officially supported or tested. MinGW with msys is recommended.
          else()
