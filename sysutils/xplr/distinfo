@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/04/09 09:02:18 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/10 21:18:15 pin Exp $
 
 SHA1 (anyhow-1.0.40.crate) = 17c0988d0d1b3711efd7a74ba8a50f7bc21bfa96
 RMD160 (anyhow-1.0.40.crate) = 7005f69a9297ee97af418190a14e22fe3fbb4012
@@ -592,10 +592,10 @@ SHA1 (ws2_32-sys-0.2.1.crate) = dae41c117c3746c05852b6ce72f17954e6d6dd8b
 RMD160 (ws2_32-sys-0.2.1.crate) = 883038c3ec6db615e0c96f0788f1a24892a855b2
 SHA512 (ws2_32-sys-0.2.1.crate) = 18356861fc595efe7d0180afb8ce7649da35a4f9ba456271d2068679ab258a861af32a2e016e241fbfbf5f6ef0eb33127b26eabfc11428af39506538faa4821f
 Size (ws2_32-sys-0.2.1.crate) = 4697 bytes
-SHA1 (xplr-0.3.12.tar.gz) = 50a09a9b6b87e9a578276f17776c1616719ad06a
-RMD160 (xplr-0.3.12.tar.gz) = 2e6729f6a4a91ef098293aa5f0d835bdd5f39acc
-SHA512 (xplr-0.3.12.tar.gz) = 064dab12d3f628cdfe4a3d81fdacb14f3902564b7bf4dbe750034086250d7a24b93eef2ca550bccdfdccfc2d157ff2eba4502fc4f2cd8e3deebf61763bee85ac
-Size (xplr-0.3.12.tar.gz) = 36690 bytes
+SHA1 (xplr-0.3.13.tar.gz) = 058060bdb4ada4942df835af7c64d7f3e6f18e0f
+RMD160 (xplr-0.3.13.tar.gz) = 11d841ae2fad4b3a018d65861dcdc48654385025
+SHA512 (xplr-0.3.13.tar.gz) = cf78f7258726cbce8bbbb36504e7dc4eaeb36895de8a0cd9c655d4f8069e0364349d2afe41d856faed4523b1baca0f13615d66660cee197a355509977b3bbb04
+Size (xplr-0.3.13.tar.gz) = 36795 bytes
 SHA1 (yaml-rust-0.4.5.crate) = de9261ecb0d790e56466b6e1c40371b1050a8650
 RMD160 (yaml-rust-0.4.5.crate) = 2148b0245a840e26646ae4b0c5f394fd8203ad5b
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
