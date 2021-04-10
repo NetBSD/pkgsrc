@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2061 2021/04/09 14:18:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2062 2021/04/10 00:40:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3282,3 +3282,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/inkscape to 1.0.2 [adam 2021-04-09]
 	Updated net/etherape to 0.9.19 [nia 2021-04-09]
 	Updated lang/lua54 to 5.4.3 [nia 2021-04-09]
+	Updated ham/chirp to 20210406 [gdt 2021-04-10]
