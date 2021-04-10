@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2021/03/12 17:43:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/10 18:21:44 ryoon Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	openjdk-jdk11u
@@ -18,8 +18,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 JAVA_NAME=	openjdk11
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
-		keytool orbd policytool rmid rmiregistry servertool tnameserv
+JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
+		jdeprscan jdeps jfr jimage jinfo jlink jmap jmod jps \
+		jrunscript jshell jstack jstat jstatd keytool rmid \
+		rmiregistry serialver
 
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
