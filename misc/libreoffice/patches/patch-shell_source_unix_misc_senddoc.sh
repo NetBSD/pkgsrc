@@ -1,4 +1,4 @@
-$NetBSD: patch-shell_source_unix_misc_senddoc.sh,v 1.1 2021/04/05 10:17:21 ryoon Exp $
+$NetBSD: patch-shell_source_unix_misc_senddoc.sh,v 1.2 2021/04/10 13:13:47 ryoon Exp $
 
 * Fix xdg-open path. PR pkg/56092
   https://bugs.documentfoundation.org/show_bug.cgi?id=108591
@@ -9,8 +9,8 @@ $NetBSD: patch-shell_source_unix_misc_senddoc.sh,v 1.1 2021/04/05 10:17:21 ryoon
              MAILER=/usr/bin/kde-open
          elif [ -x /usr/bin/xdg-open ] ; then
              MAILER=/usr/bin/xdg-open
-+        elif type -p xdg-open >/dev/null 2>&1 ; then
-+            MAILER="$(type -p xdg-open)"
++        elif command -v xdg-open >/dev/null 2>&1 ; then
++            MAILER="$(command -v xdg-open)"
          else
              echo "Unsupported mail client: $(basename $MAILER | sed 's/-.*^//')"
              exit 2
