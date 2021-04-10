@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/09/15 20:09:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2021/04/10 18:21:44 ryoon Exp $
 
-DISTNAME=	openjdk-15_linux-x64_bin
+DISTNAME=	openjdk-16_linux-x64_bin
 PKGNAME=	${DISTNAME:S/_linux-x64_bin//:S/openjdk-/openjdk-bin-/}
 CATEGORIES=	lang
-MASTER_SITES=	https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/
+MASTER_SITES=	https://download.java.net/java/GA/jdk16/7863447f0ab643c585b9bdebf67c69db/36/GPL/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://jdk.java.net/
@@ -29,8 +29,10 @@ JAVA_NAME=		openjdk-bin
 JAVA_HOME=		${PREFIX}/java/${JAVA_NAME}
 INSTALLATION_DIRS+=	${JAVA_HOME}
 
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
-		keytool orbd policytool rmid rmiregistry servertool tnameserv
+JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
+		jdeprscan jdeps jfr jimage jinfo jlink jmap jmod jps \
+		jrunscript jshell jstack jstat jstatd keytool rmid \
+		rmiregistry serialver
 
 do-install:
 	cd ${WRKSRC} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
