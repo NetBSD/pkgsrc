@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.34 2020/05/30 06:10:40 adam Exp $
+$NetBSD: distinfo,v 1.35 2021/04/10 08:36:03 adam Exp $
 
-SHA1 (x265_3.4.tar.gz) = 5bc27f7d4504fef1ea429551319c9bab49f6df4a
-RMD160 (x265_3.4.tar.gz) = e97d3fcdcceadeef20bd4287ef0ce3400ade1707
-SHA512 (x265_3.4.tar.gz) = 576b18711935e7da8433b2170d24ed159eb12ff1a18399360afa1b2132db33b463145c65ed918f667528ee954bbdfb5c69e5480f1c1df801515cefc592f3206e
-Size (x265_3.4.tar.gz) = 1469365 bytes
-SHA1 (patch-CMakeLists.txt) = fbf4d08133a48b342a060f1b45bab0253455a1b1
+SHA1 (x265_3.5.tar.gz) = dc8e70f441991289a9a34fd37e1649d59435bfae
+RMD160 (x265_3.5.tar.gz) = 07687818611d34e0fdec3360f905397095fe51d8
+SHA512 (x265_3.5.tar.gz) = 230e683239c3e262096ba96246c6f67229a1625d163f86647a411733bb1cf349685858aee3017bce818bb6992448d0abaa9241615a5b620561ce47ecb164f997
+Size (x265_3.5.tar.gz) = 1537044 bytes
+SHA1 (patch-CMakeLists.txt) = 60cc9452ae7aed5687fb95a75ad8b3aee3bf3624
 SHA1 (patch-common_cpu.cpp) = 86dd8d4a3f9cf51312cd93695beace4c4becb8c6
 SHA1 (patch-common_cpu.h) = 33e3bb9bc9cb60735aa09efa185c474ebd3e6af5
 SHA1 (patch-common_quant.cpp) = 810ba9af4ec6a767af18fe59a10feb0bca626777
+SHA1 (patch-common_version.cpp) = a1120089986e757395fa1d85b77e75d85acbc24f
 SHA1 (patch-encoder_analysis.cpp) = 28b23506e7ffbb3e019eb2ae9f749054cc865c9f
 SHA1 (patch-encoder_encoder.cpp) = 907db18c8e9afd51684ed886da70c23ac3d3652a
