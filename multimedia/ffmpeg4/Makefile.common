@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.22 2021/02/21 14:35:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2021/04/10 08:50:43 adam Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
-DISTNAME=	ffmpeg-4.3.2
+DISTNAME=	ffmpeg-4.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -33,11 +33,8 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg4
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg4
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg4
 
-PLIST_VARS+=		opencl
-
-.if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*)
+.if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
 CONFIGURE_ARGS+=	--enable-opencl
-PLIST.opencl=		yes
 .endif
 
 .if ${OPSYS} == "SunOS"

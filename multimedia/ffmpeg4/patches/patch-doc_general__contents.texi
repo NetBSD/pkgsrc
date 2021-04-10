@@ -1,8 +1,10 @@
-$NetBSD: patch-doc_general.texi,v 1.1 2020/03/20 21:19:54 nia Exp $
+$NetBSD: patch-doc_general__contents.texi,v 1.1 2021/04/10 08:50:43 adam Exp $
 
---- doc/general.texi.orig	2019-12-31 21:35:22.000000000 +0000
-+++ doc/general.texi
-@@ -1354,6 +1354,7 @@ performance on systems without hardware 
+Add Sun Audio.
+
+--- doc/general_contents.texi.orig	2021-04-10 06:55:24.000000000 +0000
++++ doc/general_contents.texi
+@@ -1419,6 +1419,7 @@ performance on systems without hardware 
  @item OSS               @tab X      @tab X
  @item PulseAudio        @tab X      @tab X
  @item SDL               @tab        @tab X
