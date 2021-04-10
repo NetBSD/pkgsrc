@@ -1,7 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.2 2021/04/04 13:24:42 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.3 2021/04/10 08:54:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
 Pullup ticket #6435 - requested by leot
 www/curl: security update
+
+Pullup ticket #6436 - requested by he
+lang/rust: build fixes
+
+Pullup ticket #6437 - requested by leot
+net/youtube-dl: bugfixes
+
+Pullup ticket #6438 - requested by nia
+emulators/qemu: bugfix
+
+Pullup ticket #6439 - requested by nia
+emulators/qemu51: bugfix
 
