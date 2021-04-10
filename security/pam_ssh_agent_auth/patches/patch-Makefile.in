@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/04/10 09:10:11 nia Exp $
+
+Do not install manpages to catpage directories.
+
+--- Makefile.in.orig	2019-07-08 16:36:13.000000000 +0000
++++ Makefile.in
+@@ -148,7 +148,7 @@ install: $(CONFIGFILES) $(MANPAGES) $(PA
+ install-files:
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
+-	$(INSTALL) -m 644 pam_ssh_agent_auth.8 $(DESTDIR)$(mandir)/$(mansubdir)8/pam_ssh_agent_auth.8
++	$(INSTALL) -m 644 pam_ssh_agent_auth.8 $(DESTDIR)$(mandir)/man8/pam_ssh_agent_auth.8
+ 	$(INSTALL) -m 755 pam_ssh_agent_auth.so $(DESTDIR)$(libexecdir)/pam_ssh_agent_auth.so
+ 
+ uninstallall:	uninstall
