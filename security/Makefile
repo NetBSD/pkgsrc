@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.808 2021/04/10 08:17:36 nia Exp $
+# $NetBSD: Makefile,v 1.809 2021/04/10 08:26:42 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -82,7 +82,6 @@ SUBDIR+=	duo-unix
 SUBDIR+=	easy-rsa
 SUBDIR+=	ecap_clamav_adapter
 SUBDIR+=	egd
-SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
 SUBDIR+=	erlang-epam
 SUBDIR+=	erlang-fast_tls
