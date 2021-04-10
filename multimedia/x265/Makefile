@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2020/10/29 23:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/04/10 08:36:03 adam Exp $
 
-DISTNAME=	x265_3.4
+DISTNAME=	x265_3.5
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
-MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/
+MASTER_SITES=	https://bitbucket.org/multicoreware/x265_git/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.x265.org/
@@ -12,8 +12,17 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
-.include "../../mk/bsd.prefs.mk"
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
 
+CMAKE_ARGS+=	-DENABLE_PIC=ON
+# Set version here instead of relying on git; see patch-CMakeLists.txt
+CMAKE_ARGS+=	-DX265_VERSION=${PKGVERSION_NOREV}
+CMAKE_ARGS+=	-DX265_LATEST_TAG=${PKGVERSION_NOREV}
+
+.include "options.mk"
+
+.include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 .  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 # Avoid text relocations
@@ -22,12 +31,5 @@ CMAKE_ARGS+=	-DENABLE_ASSEMBLY=OFF
 TOOL_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
 .  endif
 .endif
-
-CMAKE_ARGS+=	-DENABLE_PIC=ON
-
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
-
-.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
