@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2066 2021/04/10 08:39:34 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2067 2021/04/10 08:45:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libp11 to 0.4.11 [nia 2021-04-10]
 	Removed security/engine-pkcs11 successor security/libp11 [nia 2021-04-10]
 	Updated security/pkcs11-helper to 1.27.0 [nia 2021-04-10]
+	Removed security/qore-asn1-module [nia 2021-04-10]
