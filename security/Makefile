@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.810 2021/04/10 08:44:49 nia Exp $
+# $NetBSD: Makefile,v 1.811 2021/04/10 08:48:25 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -525,7 +525,6 @@ SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qt4-qtkeychain
 SUBDIR+=	qt5-qtkeychain
 SUBDIR+=	racoon2
-SUBDIR+=	rainbowcrack
 SUBDIR+=	rats
 SUBDIR+=	rc5des
 SUBDIR+=	rid
