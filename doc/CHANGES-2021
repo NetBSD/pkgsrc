@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2077 2021/04/10 20:03:54 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2078 2021/04/10 21:18:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/openjdk-bin to 16 [ryoon 2021-04-10]
 	Updated lang/openjdk11 to 1.11.0.10.9nb2 [ryoon 2021-04-10]
 	Updated sysutils/navi to 2.15.0 [pin 2021-04-10]
+	Updated sysutils/xplr to 0.3.13 [pin 2021-04-10]
