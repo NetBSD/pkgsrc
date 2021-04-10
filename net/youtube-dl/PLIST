@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.112 2021/03/28 18:35:29 leot Exp $
+@comment $NetBSD: PLIST,v 1.112.2.1 2021/04/10 08:41:02 bsiegert Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -158,6 +158,9 @@ ${PYSITELIB}/youtube_dl/extractor/ard.pyo
 ${PYSITELIB}/youtube_dl/extractor/arkena.py
 ${PYSITELIB}/youtube_dl/extractor/arkena.pyc
 ${PYSITELIB}/youtube_dl/extractor/arkena.pyo
+${PYSITELIB}/youtube_dl/extractor/arnes.py
+${PYSITELIB}/youtube_dl/extractor/arnes.pyc
+${PYSITELIB}/youtube_dl/extractor/arnes.pyo
 ${PYSITELIB}/youtube_dl/extractor/arte.py
 ${PYSITELIB}/youtube_dl/extractor/arte.pyc
 ${PYSITELIB}/youtube_dl/extractor/arte.pyo
@@ -1385,6 +1388,9 @@ ${PYSITELIB}/youtube_dl/extractor/outsidetv.pyo
 ${PYSITELIB}/youtube_dl/extractor/packtpub.py
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyc
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyo
+${PYSITELIB}/youtube_dl/extractor/palcomp3.py
+${PYSITELIB}/youtube_dl/extractor/palcomp3.pyc
+${PYSITELIB}/youtube_dl/extractor/palcomp3.pyo
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.py
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.pyc
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.pyo
