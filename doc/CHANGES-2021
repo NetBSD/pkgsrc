@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2075 2021/04/10 13:14:39 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2076 2021/04/10 18:22:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3300,3 +3300,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mplayer to 1.4nb2 [ryoon 2021-04-10]
 	Updated misc/libreoffice to 7.1.2.2nb2 [ryoon 2021-04-10]
 	Updated sysutils/macchina to 0.6.8 [pin 2021-04-10]
+	Updated lang/adoptopenjdk11-bin to 11.0.10.9nb1 [ryoon 2021-04-10]
+	Updated lang/openjdk-bin to 16 [ryoon 2021-04-10]
+	Updated lang/openjdk11 to 1.11.0.10.9nb2 [ryoon 2021-04-10]
