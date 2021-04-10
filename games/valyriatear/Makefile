@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/04 11:10:37 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/10 09:38:20 nia Exp $
 
 DISTNAME=	ValyriaTear-src-with-deps-1.1.0
 PKGNAME=	${DISTNAME:tl:S/-src-with-deps//1}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/ValyriaTear/ValyriaTear
 COMMENT=	Single player medieval fantasy 2D JRPG
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND cc-by-sa-v3.0
 
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+
 WRKSRC=		${WRKDIR}/ValyriaTear
 
 USE_CMAKE=	yes
@@ -18,6 +20,9 @@ USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
+
+post-extract:
+	dos2unix src/utils/src/utils/ustring.cpp
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
