@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2064 2021/04/10 08:25:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2065 2021/04/10 08:27:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3285,3 +3285,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/chirp to 20210406 [gdt 2021-04-10]
 	Removed security/credns [nia 2021-04-10]
 	Updated security/libp11 to 0.4.11 [nia 2021-04-10]
+	Removed security/engine-pkcs11 successor security/libp11 [nia 2021-04-10]
