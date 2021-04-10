@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2072 2021/04/10 11:37:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2073 2021/04/10 13:07:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3297,3 +3297,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/librsync to 2.3.2 [adam 2021-04-10]
 	Updated multimedia/mkvtoolnix to 56.1.0 [adam 2021-04-10]
 	Updated pkgtools/pkg_install to 20210410 [nia 2021-04-10]
+	Updated multimedia/mplayer to 1.4nb2 [ryoon 2021-04-10]
