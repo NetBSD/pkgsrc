@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2068 2021/04/10 08:48:55 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2069 2021/04/10 08:51:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3289,3 +3289,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pkcs11-helper to 1.27.0 [nia 2021-04-10]
 	Removed security/qore-asn1-module [nia 2021-04-10]
 	Removed security/rainbowcrack [nia 2021-04-10]
+	Updated devel/cmake to 3.20.1 [adam 2021-04-10]
+	Updated multimedia/x265 to 3.5 [adam 2021-04-10]
+	Updated multimedia/ffmpeg4 to 4.4 [adam 2021-04-10]
+	Updated multimedia/ffplay4 to 4.4 [adam 2021-04-10]
