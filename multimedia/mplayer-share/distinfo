@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2019/06/04 13:39:38 nia Exp $
+$NetBSD: distinfo,v 1.99 2021/04/10 13:06:50 ryoon Exp $
 
 SHA1 (mplayer/MPlayer-1.4.tar.xz) = 0954a7141de7c945d90db234e39a78c27cf73f78
 RMD160 (mplayer/MPlayer-1.4.tar.xz) = 7f94e3e3f127491f70a93a8699a1192c0771e20b
@@ -11,6 +11,7 @@ SHA1 (patch-configure) = 1bba1d39be27c31f2345c8303f252404538c192f
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao__alsa.c) = da568da8b9290f1ed49ecedec7dc9141408698b1
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
+SHA1 (patch-libmpcodecs_ad__spdif.c) = e44131414a599efc5bc0b96ed19b5ad46cb0d381
 SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
 SHA1 (patch-libvo_vo__gif89a.c) = f7ee649bebef4b7f3fd4659613f61667109ee825
 SHA1 (patch-libvo_vo__vdpau.c) = df3de0e079f7047228065bf36390aa3ad01b7f97
