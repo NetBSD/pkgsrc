@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2021/04/09 08:59:30 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2021/04/10 13:14:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -34,10 +34,10 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.0
 CARGO_CRATE_DEPENDS+=	jemalloc-sys-0.3.2
 CARGO_CRATE_DEPENDS+=	jemallocator-0.3.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.91
-CARGO_CRATE_DEPENDS+=	libmacchina-0.2.2
+CARGO_CRATE_DEPENDS+=	libc-0.2.93
+CARGO_CRATE_DEPENDS+=	libmacchina-0.2.3
 CARGO_CRATE_DEPENDS+=	local_ipaddress-0.1.3
-CARGO_CRATE_DEPENDS+=	lock_api-0.4.2
+CARGO_CRATE_DEPENDS+=	lock_api-0.4.3
 CARGO_CRATE_DEPENDS+=	log-0.4.14
 CARGO_CRATE_DEPENDS+=	mach-0.3.2
 CARGO_CRATE_DEPENDS+=	memchr-2.3.4
@@ -55,7 +55,7 @@ CARGO_CRATE_DEPENDS+=	pkg-config-0.3.19
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.24
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.26
 CARGO_CRATE_DEPENDS+=	quote-1.0.9
 CARGO_CRATE_DEPENDS+=	rand-0.8.3
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.0
@@ -77,7 +77,7 @@ CARGO_CRATE_DEPENDS+=	squote-0.1.2
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	structopt-0.3.21
 CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.14
-CARGO_CRATE_DEPENDS+=	syn-1.0.64
+CARGO_CRATE_DEPENDS+=	syn-1.0.69
 CARGO_CRATE_DEPENDS+=	synstructure-0.12.4
 CARGO_CRATE_DEPENDS+=	sysctl-0.4.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
