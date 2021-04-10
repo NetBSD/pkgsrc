@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2069 2021/04/10 08:51:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2070 2021/04/10 09:10:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3293,3 +3293,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/x265 to 3.5 [adam 2021-04-10]
 	Updated multimedia/ffmpeg4 to 4.4 [adam 2021-04-10]
 	Updated multimedia/ffplay4 to 4.4 [adam 2021-04-10]
+	Updated security/pam_ssh_agent_auth to 0.10.4 [nia 2021-04-10]
