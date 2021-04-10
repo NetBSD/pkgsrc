@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.809 2021/04/10 08:26:42 nia Exp $
+# $NetBSD: Makefile,v 1.810 2021/04/10 08:44:49 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -520,7 +520,6 @@ SUBDIR+=	qca2-qt5-ossl
 SUBDIR+=	qgpgme
 SUBDIR+=	qident
 SUBDIR+=	qoauth
-SUBDIR+=	qore-asn1-module
 SUBDIR+=	qore-ssh2-module
 SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qt4-qtkeychain
