@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/16 16:54:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/10 08:50:43 adam Exp $
 bin/ffmpeg4
 bin/ffprobe4
 include/ffmpeg4/libavcodec/ac3_parser.h
@@ -67,6 +67,7 @@ include/ffmpeg4/libavutil/eval.h
 include/ffmpeg4/libavutil/ffversion.h
 include/ffmpeg4/libavutil/fifo.h
 include/ffmpeg4/libavutil/file.h
+include/ffmpeg4/libavutil/film_grain_params.h
 include/ffmpeg4/libavutil/frame.h
 include/ffmpeg4/libavutil/hash.h
 include/ffmpeg4/libavutil/hdr_dynamic_metadata.h
@@ -131,19 +132,19 @@ include/ffmpeg4/libswscale/version.h
 lib/ffmpeg4/libavcodec.a
 lib/ffmpeg4/libavcodec.so
 lib/ffmpeg4/libavcodec.so.58
-lib/ffmpeg4/libavcodec.so.58.91.100
+lib/ffmpeg4/libavcodec.so.58.134.100
 lib/ffmpeg4/libavdevice.a
 lib/ffmpeg4/libavdevice.so
 lib/ffmpeg4/libavdevice.so.58
-lib/ffmpeg4/libavdevice.so.58.10.100
+lib/ffmpeg4/libavdevice.so.58.13.100
 lib/ffmpeg4/libavfilter.a
 lib/ffmpeg4/libavfilter.so
 lib/ffmpeg4/libavfilter.so.7
-lib/ffmpeg4/libavfilter.so.7.85.100
+lib/ffmpeg4/libavfilter.so.7.110.100
 lib/ffmpeg4/libavformat.a
 lib/ffmpeg4/libavformat.so
 lib/ffmpeg4/libavformat.so.58
-lib/ffmpeg4/libavformat.so.58.45.100
+lib/ffmpeg4/libavformat.so.58.76.100
 lib/ffmpeg4/libavresample.a
 lib/ffmpeg4/libavresample.so
 lib/ffmpeg4/libavresample.so.4
@@ -151,19 +152,19 @@ lib/ffmpeg4/libavresample.so.4.0.0
 lib/ffmpeg4/libavutil.a
 lib/ffmpeg4/libavutil.so
 lib/ffmpeg4/libavutil.so.56
-lib/ffmpeg4/libavutil.so.56.51.100
+lib/ffmpeg4/libavutil.so.56.70.100
 lib/ffmpeg4/libpostproc.a
 lib/ffmpeg4/libpostproc.so
 lib/ffmpeg4/libpostproc.so.55
-lib/ffmpeg4/libpostproc.so.55.7.100
+lib/ffmpeg4/libpostproc.so.55.9.100
 lib/ffmpeg4/libswresample.a
 lib/ffmpeg4/libswresample.so
 lib/ffmpeg4/libswresample.so.3
-lib/ffmpeg4/libswresample.so.3.7.100
+lib/ffmpeg4/libswresample.so.3.9.100
 lib/ffmpeg4/libswscale.a
 lib/ffmpeg4/libswscale.so
 lib/ffmpeg4/libswscale.so.5
-lib/ffmpeg4/libswscale.so.5.7.100
+lib/ffmpeg4/libswscale.so.5.9.100
 lib/ffmpeg4/pkgconfig/libavcodec.pc
 lib/ffmpeg4/pkgconfig/libavdevice.pc
 lib/ffmpeg4/pkgconfig/libavfilter.pc
