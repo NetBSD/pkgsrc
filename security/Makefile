@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.807 2021/03/19 08:13:06 adam Exp $
+# $NetBSD: Makefile,v 1.808 2021/04/10 08:17:36 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -50,7 +50,6 @@ SUBDIR+=	codecrypt
 SUBDIR+=	courier-authlib
 SUBDIR+=	crack
 SUBDIR+=	cracklib
-SUBDIR+=	credns
 SUBDIR+=	crypto++
 SUBDIR+=	cvm
 SUBDIR+=	cy2-anonymous
