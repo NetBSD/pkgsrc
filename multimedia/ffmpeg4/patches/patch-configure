@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2020/06/26 21:02:27 nia Exp $
+$NetBSD: patch-configure,v 1.7 2021/04/10 08:50:43 adam Exp $
 
 Sun audio support.
 
@@ -7,11 +7,9 @@ to avoid text relocations.
 
 Do not use 'rsync'.
 
-Portability fixes.
-
---- configure.orig	2020-06-15 18:54:23.000000000 +0000
+--- configure.orig	2021-04-08 21:28:39.000000000 +0000
 +++ configure
-@@ -2131,6 +2131,7 @@ HEADERS_LIST="
+@@ -2139,6 +2139,7 @@ HEADERS_LIST="
      sys_resource_h
      sys_select_h
      sys_soundcard_h
@@ -19,7 +17,7 @@ Portability fixes.
      sys_time_h
      sys_un_h
      sys_videoio_h
-@@ -2272,7 +2273,6 @@ TOOLCHAIN_FEATURES="
+@@ -2280,7 +2281,6 @@ TOOLCHAIN_FEATURES="
      inline_asm_labels
      inline_asm_nonlocal_labels
      pragma_deprecated
@@ -27,7 +25,7 @@ Portability fixes.
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -3394,6 +3394,8 @@ opengl_outdev_deps="opengl"
+@@ -3430,6 +3430,8 @@ opengl_outdev_deps="opengl"
  opengl_outdev_suggest="sdl2"
  oss_indev_deps_any="sys_soundcard_h"
  oss_outdev_deps_any="sys_soundcard_h"
@@ -36,19 +34,7 @@ Portability fixes.
  pulse_indev_deps="libpulse"
  pulse_outdev_deps="libpulse"
  sdl2_outdev_deps="sdl2"
-@@ -5033,9 +5035,9 @@ elif enabled mips; then
-                 disable mipsdsp
-                 disable mipsdspr2
-                 # When gcc version less than 5.3.0, add -fno-expensive-optimizations flag.
--                if [ $cc == gcc ]; then
-+                if [ $cc = gcc ]; then
-                     gcc_version=$(gcc -dumpversion)
--                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" == "$gcc_version" ]; then
-+                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" = "$gcc_version" ]; then
-                         expensive_optimization_flag=""
-                     else
-                         expensive_optimization_flag="-fno-expensive-optimizations"
-@@ -5330,6 +5332,8 @@ case $target_os in
+@@ -5368,6 +5370,8 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -57,7 +43,7 @@ Portability fixes.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5728,10 +5732,13 @@ done
+@@ -5766,10 +5770,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -74,7 +60,7 @@ Portability fixes.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6114,6 +6121,7 @@ check_headers malloc.h
+@@ -6169,6 +6176,7 @@ check_headers malloc.h
  check_headers mftransform.h
  check_headers net/udplite.h
  check_headers poll.h
@@ -82,7 +68,7 @@ Portability fixes.
  check_headers sys/param.h
  check_headers sys/resource.h
  check_headers sys/select.h
-@@ -6537,7 +6545,6 @@ enabled makeinfo \
+@@ -6598,7 +6606,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/08/17 20:17:37 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2021/04/10 08:50:43 adam Exp $
 
 BUILDLINK_TREE+=	ffmpeg4
 
@@ -14,39 +14,39 @@ pkgbase := ffmpeg4
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mav1)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mav1}
 .  include "../../multimedia/libaom/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mfreetype)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mfreetype}
 .  include "../../graphics/freetype2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mfontconfig)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mfontconfig}
 .  include "../../fonts/fontconfig/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mtheora)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mtheora}
 .  include "../../multimedia/libtheora/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mxvid)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mxvid}
 .  include "../../multimedia/xvidcore/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mx264)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mx264}
 .  include "../../multimedia/x264-devel/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mlibvpx)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mlibvpx}
 .  include "../../multimedia/libvpx/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mvaapi)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mvaapi}
 .  include "../../multimedia/libva/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mvdpau)
+.if ${PKG_BUILD_OPTIONS.ffmpeg4:Mvdpau}
 .  include "../../multimedia/libvdpau/buildlink3.mk"
 .endif
 
