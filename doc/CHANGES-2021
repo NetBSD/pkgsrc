@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2063 2021/04/10 08:18:15 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2064 2021/04/10 08:25:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3284,3 +3284,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/lua54 to 5.4.3 [nia 2021-04-09]
 	Updated ham/chirp to 20210406 [gdt 2021-04-10]
 	Removed security/credns [nia 2021-04-10]
+	Updated security/libp11 to 0.4.11 [nia 2021-04-10]
