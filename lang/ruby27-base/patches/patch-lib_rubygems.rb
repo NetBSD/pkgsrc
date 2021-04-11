@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_rubygems.rb,v 1.1 2020/03/15 15:26:22 taca Exp $
+$NetBSD: patch-lib_rubygems.rb,v 1.2 2021/04/11 12:32:03 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems.rb.orig	2018-12-23 00:20:49.000000000 +0000
+--- lib/rubygems.rb.orig	2021-04-05 12:39:38.000000000 +0000
 +++ lib/rubygems.rb
-@@ -317,10 +317,16 @@ module Gem
+@@ -311,10 +311,16 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
@@ -25,16 +25,16 @@ $NetBSD: patch-lib_rubygems.rb,v 1.1 2020/03/15 15:26:22 taca Exp $
    end
  
    ##
-@@ -661,7 +667,7 @@ An Array (#{env.inspect}) was passed in 
+@@ -657,7 +663,7 @@ An Array (#{env.inspect}) was passed in 
        return i if path.instance_variable_defined?(:@gem_prelude_index)
      end
  
 -    index = $LOAD_PATH.index RbConfig::CONFIG['sitelibdir']
 +    index = $LOAD_PATH.index RbConfig::CONFIG['vendordir']
  
-     index
+     index || 0
    end
-@@ -835,6 +841,7 @@ An Array (#{env.inspect}) was passed in 
+@@ -849,6 +855,7 @@ An Array (#{env.inspect}) was passed in 
      prefix = File.dirname RUBYGEMS_DIR
  
      if prefix != File.expand_path(RbConfig::CONFIG['sitelibdir']) and
