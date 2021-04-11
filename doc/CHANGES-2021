@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2079 2021/04/11 00:11:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2080 2021/04/11 04:31:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/navi to 2.15.0 [pin 2021-04-10]
 	Updated sysutils/xplr to 0.3.13 [pin 2021-04-10]
 	Updated security/ruby-rex-exploitation to 0.1.27nb1 [taca 2021-04-11]
+	Updated misc/libreoffice to 7.1.2.2nb3 [gutteridge 2021-04-11]
