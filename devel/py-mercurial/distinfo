@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2021/04/11 22:55:42 wiz Exp $
+$NetBSD: distinfo,v 1.101 2021/04/11 23:07:03 wiz Exp $
 
 SHA1 (mercurial-5.7.1.tar.gz) = 44f2d2dbdbebeb86358d9e6bac0867f43ae06178
 RMD160 (mercurial-5.7.1.tar.gz) = 3f059122baa88a4cbfa0ec16681b07f560b624df
@@ -7,4 +7,5 @@ Size (mercurial-5.7.1.tar.gz) = 7900727 bytes
 SHA1 (patch-D8574) = 56cecc1c83558803186e84d90ef67b4dce68f8e9
 SHA1 (patch-rust_hg-core_src_lib.rs) = 38dc2a8c5f5ba9318cfa89e408cc7322e8429b8f
 SHA1 (patch-tests_test-convert-cvs.t) = 36423cbc58f5fea71f37e3a846fb2144924f6a45
+SHA1 (patch-tests_test-merge-tools.t) = 4d5386e8c3caebc683f73fb0edd26d7c93952c79
 SHA1 (patch-tests_test-transaction-rollback-on-sigpipe.t) = 8d7152cf2c913fa418cd0dfd179358f2f6aa9ed5
