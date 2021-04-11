@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 14:32:41 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/11 12:36:28 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -91,7 +91,7 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 			crlstore.rb echo_cli.rb echo_svr.rb gen_csr.rb \
 			smime_read.rb smime_write.rb wget.rb
 
-REPLACE_RUBY=	\
+REPLACE_RUBY=		\
 	libexec/bundle libexec/bundler libexec/erb libexec/irb \
 	libexec/racc libexec/rdoc libexec/ri \
 	.bundle/gems/power_assert-${RUBY_POWER_ASSERT_VERSION}/bin/console \
@@ -103,16 +103,19 @@ REPLACE_RUBY=	\
 	.bundle/gems/rake-${RUBY_RAKE_VERSION}/exe/rake \
 	.bundle/gems/rbs-${RUBY_RBS_VERSION}/exe/rbs \
 	.bundle/gems/typeprof-${RUBY_TYPEPROF_VERSION}/exe/typeprof
-REPLACE_SH=	\
+REPLACE_SH=		\
 	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/setup
 REPLACE_RUBY_DIRS=	ext lib sample
 INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man1 \
-	${RUBY_DOC}/csv/arguments ${RUBY_DOC}/csv/options/common \
-	${RUBY_DOC}/csv/options/generating \
-	${RUBY_DOC}/csv/options/parsing ${RUBY_DOC}/csv/recipes \
-	${RUBY_DOC}/images ${RUBY_DOC}/irb ${RUBY_DOC}/pty \
-	${RUBY_DOC}/ripper ${RUBY_DOC}/stringio ${RUBY_DOC}/syntax \
-	${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
+			${RUBY_DOC}/csv/arguments \
+			${RUBY_DOC}/csv/options/common \
+			${RUBY_DOC}/csv/options/generating \
+			${RUBY_DOC}/csv/options/parsing \
+			${RUBY_DOC}/csv/recipes \
+			${RUBY_DOC}/images ${RUBY_DOC}/irb ${RUBY_DOC}/pty \
+			${RUBY_DOC}/ripper \
+			${RUBY_DOC}/stringio ${RUBY_DOC}/syntax \
+			${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
 # ${RUBY_ARCHINC} ${RUBY_ARCHLIB}
 EMPTY_DIRS=		generator/template markup/simple_markup
 
