@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/04/01 14:23:20 taca Exp $
+# $NetBSD: Makefile,v 1.61 2021/04/11 15:02:11 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	4.0.7
+RM_VERSION=	4.0.8
 
 GEMS_DISTFILES+=	actioncable-5.2.4.5.gem actionmailer-5.2.4.5.gem
 GEMS_DISTFILES+=	actionpack-5.2.4.5.gem actionpack-xml_parser-2.0.1.gem
@@ -35,7 +35,7 @@ GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-1.1.0.gem
 GEMS_DISTFILES+=	rails-5.2.4.5.gem rails-dom-testing-2.0.3.gem
 GEMS_DISTFILES+=	rails-html-sanitizer-1.2.0.gem railties-5.2.4.5.gem
 GEMS_DISTFILES+=	rake-12.3.3.gem rbpdf-1.19.8.gem
-GEMS_DISTFILES+=	rbpdf-font-1.19.1.gem redcarpet-3.4.0.gem
+GEMS_DISTFILES+=	rbpdf-font-1.19.1.gem redcarpet-3.5.1.gem
 GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.16.0.gem
 GEMS_DISTFILES+=	roadie-3.5.0.gem roadie-rails-1.3.0.gem rouge-3.3.0.gem
 GEMS_DISTFILES+=	ruby-openid-2.9.2.gem rubyzip-1.2.3.gem
@@ -83,7 +83,7 @@ REPLACE_RUBY+=	rake-12.3.3/bin/rake rake-12.3.3/bin/rdoc
 REPLACE_RUBY+=	rake-12.3.3/bin/rubocop rake-12.3.3/exe/rake
 REPLACE_RUBY+=	rbpdf-1.19.8/test/test_helper.rb
 REPLACE_RUBY+=	rbpdf-font-1.19.1/test/test_helper.rb
-REPLACE_RUBY+=	redcarpet-3.4.0/bin/redcarpet ${DISTNAME}/bin/*
+REPLACE_RUBY+=	redcarpet-3.5.1/bin/redcarpet ${DISTNAME}/bin/*
 REPLACE_RUBY+=	${DISTNAME}/extra/mail_handler/rdm-mailhandler.rb
 REPLACE_RUBY+=	${DISTNAME}/extra/svn/reposman.rb
 REPLACE_RUBY+=	${DISTNAME}/public/dispatch.fcgi.example
