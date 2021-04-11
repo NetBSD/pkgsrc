@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/02/28 16:01:05 taca Exp $
+$NetBSD: distinfo,v 1.13 2021/04/11 15:02:11 taca Exp $
 
 SHA1 (actioncable-5.2.4.5.gem) = 002f264c320368bc85cb0329e3e7ad1c6f0fa5d2
 RMD160 (actioncable-5.2.4.5.gem) = 680a62c5c1e92c9fc0ec42bfd1cc58c0decb0c14
@@ -224,14 +224,14 @@ SHA1 (rbpdf-font-1.19.1.gem) = 406a00ab229c382b429980dc6ff9904ac16196c4
 RMD160 (rbpdf-font-1.19.1.gem) = 8c8b00f49ded70c1f62848f5c45a7a7b59dd56a6
 SHA512 (rbpdf-font-1.19.1.gem) = e678df3b58f32f6670bd79e8ebed0856a5fdbab766c32c8667c80358f899625445e9f6829652f13b64d4c79c5af15dd3dde9849dfe86c4f14e45b8750e71e3b7
 Size (rbpdf-font-1.19.1.gem) = 9571840 bytes
-SHA1 (redcarpet-3.4.0.gem) = 5b75e3d781c66e52dbc16c99eddaa1eff067458f
-RMD160 (redcarpet-3.4.0.gem) = b5a087b4bcd6550a9a96d94b19a2471be2e705fd
-SHA512 (redcarpet-3.4.0.gem) = 7cd68a7d6c2dc4d94683e8738e4867b99a98ee135a59041cddb6d4f42a67ba137e56852e7a1701b35fae7b3b825008194f2a7ed818c5a9fe2bab8e904328529f
-Size (redcarpet-3.4.0.gem) = 61440 bytes
-SHA1 (redmine-4.0.7.tar.gz) = eeb26e765313981937677973a6b546dedb22e986
-RMD160 (redmine-4.0.7.tar.gz) = 83a990177a56f84131d48f4021b79b90d12fcd09
-SHA512 (redmine-4.0.7.tar.gz) = 30a3fbb51685463f1ca1a5230752838f08a7536a1c113a69938ff4429ef48f89a138fdab8a3e7c3d4533697d3b84e902a523b9beb7a530d95f50310e5cd5ef5c
-Size (redmine-4.0.7.tar.gz) = 2521740 bytes
+SHA1 (redcarpet-3.5.1.gem) = dd66b993277117ade9e9732748da9a1c839c2664
+RMD160 (redcarpet-3.5.1.gem) = 209c80a704890d2731490536fe448ab6dd19c8ad
+SHA512 (redcarpet-3.5.1.gem) = afab45ca91f85b3aa23c1ac651d6881bd19c93109239466de9aba8472173537b4f6e21335cdbdf21fc462c7beea1b8f0434c47207d82d26fc5534780a522532c
+Size (redcarpet-3.5.1.gem) = 62464 bytes
+SHA1 (redmine-4.0.8.tar.gz) = a443afbcb355af44bdcad00696671639c0dc62cb
+RMD160 (redmine-4.0.8.tar.gz) = 96b3829aeabe5aad055ebe3f592259b883d8098e
+SHA512 (redmine-4.0.8.tar.gz) = 12505e0b8719614c7504377c44c840461492d50e7bcba6b121afa641f783a78b0a19a4dc0b1150a04c7decc90d601093695606ea23968db3e7e206e11523314d
+Size (redmine-4.0.8.tar.gz) = 2526091 bytes
 SHA1 (request_store-1.0.5.gem) = e59267666144a927900c8b46e596c2a9b182d0a9
 RMD160 (request_store-1.0.5.gem) = 0c9fe6f35e889c834a7ef3e62f7a54f7f07d38c0
 SHA512 (request_store-1.0.5.gem) = 0d69ebdb8d3f6df11f89780c250b5fcc702258e19d7fbf8e2273614ecc220ee25e059a596a8a7e39bcc426f8d834cab38c161c0c1a800cc7ebdba3daa810e727
@@ -316,6 +316,5 @@ SHA1 (yard-0.9.20.gem) = 86ff7f1064a21b21957b92efc700b705f970f49b
 RMD160 (yard-0.9.20.gem) = fa7f80200c7aa66a642de137b26c227f836297c1
 SHA512 (yard-0.9.20.gem) = 4269037ba61185c999df9f1195825ec92a76b32ccb18fc2b86b54e34ff2e5efd22a536c3e207304ef47a52905215103a2094634d1bb8d8ab722b11488cf04e13
 Size (yard-0.9.20.gem) = 640512 bytes
-SHA1 (patch-redmine-4.0.7_Gemfile) = 40543c2ed4fcbb40e832fc89e5790460266de7c9
 SHA1 (patch-rmagick-2.16.0_ext_RMagick_extconf.rb) = 227e2f02855019fb8750130af6cb8b10baee5bbf
 SHA1 (patch-rmagick-2.16.0_ext_RMagick_rmpixel.c) = ef9243b90961bdb2435176e70facc4eb89d66b9a
