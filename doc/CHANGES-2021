@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2080 2021/04/11 04:31:17 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2081 2021/04/11 12:30:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3307,3 +3307,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.3.13 [pin 2021-04-10]
 	Updated security/ruby-rex-exploitation to 0.1.27nb1 [taca 2021-04-11]
 	Updated misc/libreoffice to 7.1.2.2nb3 [gutteridge 2021-04-11]
+	Updated lang/ruby26-base to 2.6.7 [taca 2021-04-11]
+	Updated databases/ruby-gdbm to 2.6.7 [taca 2021-04-11]
+	Updated devel/ruby-fiddle to 2.6.7 [taca 2021-04-11]
+	Updated devel/ruby-readline to 2.6.7 [taca 2021-04-11]
+	Updated lang/ruby26 to 2.6.7 [taca 2021-04-11]
