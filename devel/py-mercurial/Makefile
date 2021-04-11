@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/03/17 11:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2021/04/11 22:55:42 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -40,7 +40,7 @@ USE_TOOLS+=		bash:test
 # test-archive.t:
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6499
 #
-# Ran 868 tests, 80 skipped, 3 failed.
+# Ran 868 tests, 80 skipped, 2 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
