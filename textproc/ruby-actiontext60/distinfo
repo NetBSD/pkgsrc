@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/02/11 14:30:08 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/04/11 13:24:57 taca Exp $
 
-SHA1 (actiontext-6.0.3.5.gem) = ab66690b35bd4383ae016b0b988aeb48e06d5122
-RMD160 (actiontext-6.0.3.5.gem) = 0cb24623b3b4f2c703aac1265b3e81cb632b8531
-SHA512 (actiontext-6.0.3.5.gem) = 3c80b3f790c85bda9ea682af665d132ce7c6d7c9bb41c14206baac6524c9f91760fb5535001c40a2caba870a143d2f59bd3c3b92fd7e524aad3e75c11eeea639
-Size (actiontext-6.0.3.5.gem) = 17408 bytes
+SHA1 (actiontext-6.0.3.6.gem) = cbf00a41426361a6df1efd26c865a740efba160b
+RMD160 (actiontext-6.0.3.6.gem) = 4b4ef5782db8a23586dfedf16d940014324ade3e
+SHA512 (actiontext-6.0.3.6.gem) = 19f4faffab44af70719d17899922a26d4467e064d6f3f9e1609b20fd6dc9f6d447b13de3975922652260bd743b77c92a6f7c1cb1586ce91f10bb179e841db1de
+Size (actiontext-6.0.3.6.gem) = 17408 bytes
