@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2021/03/07 03:10:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.86 2021/04/11 14:08:43 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -65,6 +65,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.42.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
@@ -268,6 +269,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/boolean_subsets.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_conflicts.rb
+${GEM_LIBDIR}/lib/sequel/plugins/column_encryption.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_select.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/columns_updated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
