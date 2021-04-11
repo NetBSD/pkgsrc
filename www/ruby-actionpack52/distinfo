@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/11 14:23:41 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/04/11 13:20:08 taca Exp $
 
-SHA1 (actionpack-5.2.4.5.gem) = ea3585ff9cd652566970803f8ecc6d0e513cb602
-RMD160 (actionpack-5.2.4.5.gem) = 0f1b383f15b30b634fd85286ff802360dc20a195
-SHA512 (actionpack-5.2.4.5.gem) = adddd28429564492a5de4c17abd4bfee4927ee5f15cade6e1e141cd87c8fd8f396c26f2f6cef4cf2cdc77ddd4e96fb58c5cde0ba4672cef1d4e31203a84b7bf6
-Size (actionpack-5.2.4.5.gem) = 212992 bytes
+SHA1 (actionpack-5.2.5.gem) = 3958c4798d378ac68b2292e8307ec9dc3eba5762
+RMD160 (actionpack-5.2.5.gem) = 70c93206de6bd00284cc93f1235c342520596a2d
+SHA512 (actionpack-5.2.5.gem) = bf8910d579c36adbdcd008fa3f2fd9d1c1c982607493f2c096e6a440e4bfacd4d36d595d7de0b403d7e6bbf87db29c32e2d3b1b71a1643f63b4def6b03ddcd6a
+Size (actionpack-5.2.5.gem) = 212992 bytes
