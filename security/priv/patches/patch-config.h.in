@@ -1,0 +1,190 @@
+$NetBSD: patch-config.h.in,v 1.1 2021/04/11 06:52:54 kim Exp $
+
+Avoid calling "autoreconf -fi" during pre-configure.
+
+--- config.h.in~	2004-02-09 04:38:54.000000000 +0000
++++ config.h.in	2021-04-11 06:43:25.381737479 +0000
+@@ -1,4 +1,4 @@
+-/* config.h.in.  Generated automatically from configure.in by autoheader.  */
++/* config.h.in.  Generated from configure.in by autoheader.  */
+ /*
+  * Copyright (c) 1996, 1997 Simon Burge <simonb@telstra.com.au>.
+  * All rights reserved.
+@@ -30,83 +30,131 @@
+  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  */
+ 
+-/* Define to empty if the keyword does not work.  */
+-#undef const
+-
+-/* Define if you don't have vprintf but do have _doprnt.  */
++/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
+ #undef HAVE_DOPRNT
+ 
+-/* Define if you have the vprintf function.  */
+-#undef HAVE_VPRINTF
++/* Define to 1 if you have the `err' function. */
++#undef HAVE_ERR
+ 
+-/* Define as the return type of signal handlers (int or void).  */
+-#undef RETSIGTYPE
++/* Define to 1 if you have the <err.h> header file. */
++#undef HAVE_ERR_H
+ 
+-/* Define to `unsigned' if <sys/types.h> doesn't define.  */
+-#undef size_t
++/* Define to 1 if you have the `getcwd' function. */
++#undef HAVE_GETCWD
+ 
+-/* Define if you have the ANSI C header files.  */
+-#undef STDC_HEADERS
++/* Define to 1 if you have the `getdtablesize' function. */
++#undef HAVE_GETDTABLESIZE
+ 
+-/* Define if you can safely include both <sys/time.h> and <time.h>.  */
+-#undef TIME_WITH_SYS_TIME
++/* Define to 1 if you have the `getwd' function. */
++#undef HAVE_GETWD
+ 
+-/* Define if your <sys/time.h> declares struct tm.  */
+-#undef TM_IN_SYS_TIME
++/* Define to 1 if you have the <inttypes.h> header file. */
++#undef HAVE_INTTYPES_H
+ 
+-/* Define if you have the err function.  */
+-#undef HAVE_ERR
++/* Define to 1 if you have the <limits.h> header file. */
++#undef HAVE_LIMITS_H
+ 
+-/* Define if you have the getcwd function.  */
+-#undef HAVE_GETCWD
++/* Define to 1 if you have the <login_cap.h> header file. */
++#undef HAVE_LOGIN_CAP_H
+ 
+-/* Define if you have the getdtablesize function.  */
+-#undef HAVE_GETDTABLESIZE
++/* Define to 1 if you have the <stdarg.h> header file. */
++#undef HAVE_STDARG_H
+ 
+-/* Define if you have the getwd function.  */
+-#undef HAVE_GETWD
++/* Define to 1 if you have the <stdint.h> header file. */
++#undef HAVE_STDINT_H
++
++/* Define to 1 if you have the <stdio.h> header file. */
++#undef HAVE_STDIO_H
++
++/* Define to 1 if you have the <stdlib.h> header file. */
++#undef HAVE_STDLIB_H
+ 
+-/* Define if you have the strdup function.  */
++/* Define to 1 if you have the `strdup' function. */
+ #undef HAVE_STRDUP
+ 
+-/* Define if you have the strerror function.  */
++/* Define to 1 if you have the `strerror' function. */
+ #undef HAVE_STRERROR
+ 
+-/* Define if you have the strsep function.  */
++/* Define to 1 if you have the <stringlist.h> header file. */
++#undef HAVE_STRINGLIST_H
++
++/* Define to 1 if you have the <strings.h> header file. */
++#undef HAVE_STRINGS_H
++
++/* Define to 1 if you have the <string.h> header file. */
++#undef HAVE_STRING_H
++
++/* Define to 1 if you have the `strsep' function. */
+ #undef HAVE_STRSEP
+ 
+-/* Define if you have the strspn function.  */
++/* Define to 1 if you have the `strspn' function. */
+ #undef HAVE_STRSPN
+ 
+-/* Define if you have the strtoul function.  */
++/* Define to 1 if you have the `strtoul' function. */
+ #undef HAVE_STRTOUL
+ 
+-/* Define if you have the syslog function.  */
++/* Define to 1 if you have the `syslog' function. */
+ #undef HAVE_SYSLOG
+ 
+-/* Define if you have the <limits.h> header file.  */
+-#undef HAVE_LIMITS_H
++/* Define to 1 if you have the <syslog.h> header file. */
++#undef HAVE_SYSLOG_H
+ 
+-/* Define if you have the <stdarg.h> header file.  */
+-#undef HAVE_STDARG_H
++/* Define to 1 if you have the <sys/stat.h> header file. */
++#undef HAVE_SYS_STAT_H
+ 
+-/* Define if you have the <stdlib.h> header file.  */
+-#undef HAVE_STDLIB_H
++/* Define to 1 if you have the <sys/syslog.h> header file. */
++#undef HAVE_SYS_SYSLOG_H
+ 
+-/* Define if you have the <string.h> header file.  */
+-#undef HAVE_STRING_H
++/* Define to 1 if you have the <sys/time.h> header file. */
++#undef HAVE_SYS_TIME_H
+ 
+-/* Define if you have the <stringlist.h> header file.  */
+-#undef HAVE_STRINGLIST_H
++/* Define to 1 if you have the <sys/types.h> header file. */
++#undef HAVE_SYS_TYPES_H
+ 
+-/* Define if you have the <sys/syslog.h> header file.  */
+-#undef HAVE_SYS_SYSLOG_H
++/* Define to 1 if you have the <unistd.h> header file. */
++#undef HAVE_UNISTD_H
+ 
+-/* Define if you have the <syslog.h> header file.  */
+-#undef HAVE_SYSLOG_H
++/* Define to 1 if you have the `vprintf' function. */
++#undef HAVE_VPRINTF
+ 
+-/* Define if you have the <unistd.h> header file.  */
+-#undef HAVE_UNISTD_H
++/* Define to the address where bug reports for this package should be sent. */
++#undef PACKAGE_BUGREPORT
++
++/* Define to the full name of this package. */
++#undef PACKAGE_NAME
++
++/* Define to the full name and version of this package. */
++#undef PACKAGE_STRING
++
++/* Define to the one symbol short name of this package. */
++#undef PACKAGE_TARNAME
++
++/* Define to the home page for this package. */
++#undef PACKAGE_URL
++
++/* Define to the version of this package. */
++#undef PACKAGE_VERSION
++
++/* Define as the return type of signal handlers (`int' or `void'). */
++#undef RETSIGTYPE
++
++/* Define to 1 if all of the C90 standard headers exist (not just the ones
++   required in a freestanding environment). This macro is provided for
++   backward compatibility; new code need not use it. */
++#undef STDC_HEADERS
++
++/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. This
++   macro is obsolete. */
++#undef TIME_WITH_SYS_TIME
++
++/* Define to 1 if your <sys/time.h> declares `struct tm'. */
++#undef TM_IN_SYS_TIME
++
++/* Define to empty if `const' does not conform to ANSI C. */
++#undef const
++
++/* Define to `unsigned int' if <sys/types.h> does not define. */
++#undef size_t
+ 
+ /* the path to the su program on your system  */
+ #undef PATH_SU
