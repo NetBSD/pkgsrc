@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/03/01 13:06:38 mef Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/11 05:02:51 mef Exp $
 
 DISTNAME=	rlp-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,9 @@ COMMENT=	Package for Recursive Length Prefix encoding and decoding
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-eth-utils>=1.0.2:../../finance/py-eth-utils
+DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
+DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.19.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.3:../../devel/py-test
