@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/04/10 20:03:35 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/11 18:53:26 pin Exp $
 
 SHA1 (aho-corasick-0.7.15.crate) = f5054e1316a7f59bc37b647faa72a8e800fc17af
 RMD160 (aho-corasick-0.7.15.crate) = 003b3030dbd9c452279e3f01802edff67d4c14d5
@@ -128,10 +128,10 @@ SHA1 (miow-0.3.7.crate) = ab7f3b1fed76bb59e3f3f111398209751d72981f
 RMD160 (miow-0.3.7.crate) = 0e31b78cb90b5487532f3f99bd0d0a79a0e417f5
 SHA512 (miow-0.3.7.crate) = 451073e8913148889493de0373bc0450c8b23e136e151b48b9976292e4e03b7c3f3279ecf49dda5196badfe662a661a998cfa456d2ec340a495d54a4d2382699
 Size (miow-0.3.7.crate) = 24563 bytes
-SHA1 (navi-2.15.0.tar.gz) = c2270f2e221ca675a0d181b1203d4bb2f0e242e2
-RMD160 (navi-2.15.0.tar.gz) = 95170f545de9edf6770ad0fce1a070343172fa1e
-SHA512 (navi-2.15.0.tar.gz) = a78ff1a62477b952ae1ab0b2de83c52484d81faa1acca1e684277af105efe045fe41fbc6ed48a295964c72ff0bf5396c2a869d21c4c398cd7754aa4c276f638c
-Size (navi-2.15.0.tar.gz) = 56733 bytes
+SHA1 (navi-2.15.1.tar.gz) = 8bee41aa1050446150a647b28891e0e23c022044
+RMD160 (navi-2.15.1.tar.gz) = 8dd65d6fbfd08ec82d2b71cfa728678f0ce4500f
+SHA512 (navi-2.15.1.tar.gz) = 3e29533e86cea5a8937dce490df8d1ab384023ed4d018e9190cf2eab9d1069a29e3bf1e7e3ecafad3fe873f099382c519ff0b405e317ec022587a4adec8c4c2d
+Size (navi-2.15.1.tar.gz) = 57140 bytes
 SHA1 (ntapi-0.3.6.crate) = 42a98112154613828d5c8f2a7ecd601460410fc8
 RMD160 (ntapi-0.3.6.crate) = a3534d4afc6e468923dd5f123b04f7d7556ea18b
 SHA512 (ntapi-0.3.6.crate) = c07f2ae51e4fbbe55de9f617d333e4042a93de69e9bfcdd44acc1b342edd88cc2a360fe6710d9568594e2c0990776004400d0741e61d1a2a1cec4a645c4cb035
