@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2084 2021/04/11 12:44:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2085 2021/04/11 13:22:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3317,3 +3317,14 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ruby27 to 2.7.3 [taca 2021-04-11]
 	Updated lang/ruby30-base to 3.0.1 [taca 2021-04-11]
 	Updated lang/ruby30 to 3.0.1 [taca 2021-04-11]
+	Updated devel/ruby-activesupport52 to 5.2.5 [taca 2021-04-11]
+	Updated devel/ruby-activemodel52 to 5.2.5 [taca 2021-04-11]
+	Updated devel/ruby-activejob52 to 5.2.5 [taca 2021-04-11]
+	Updated www/ruby-actionview52 to 5.2.5 [taca 2021-04-11]
+	Updated www/ruby-actionpack52 to 5.2.5 [taca 2021-04-11]
+	Updated www/ruby-actioncable52 to 5.2.5 [taca 2021-04-11]
+	Updated databases/ruby-activerecord52 to 5.2.5 [taca 2021-04-11]
+	Updated devel/ruby-activestorage52 to 5.2.5 [taca 2021-04-11]
+	Updated mail/ruby-actionmailer52 to 5.2.5 [taca 2021-04-11]
+	Updated devel/ruby-railties52 to 5.2.5 [taca 2021-04-11]
+	Updated www/ruby-rails52 to 5.2.5 [taca 2021-04-11]
