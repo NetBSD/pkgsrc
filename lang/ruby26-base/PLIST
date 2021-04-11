@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/01 15:21:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/11 12:28:37 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -910,9 +910,8 @@ ${RUBY_LIB}/rubygems/source_specific_file.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
 ${RUBY_LIB}/rubygems/specification_policy.rb
-${RUBY_LIB}/rubygems/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
-${RUBY_LIB}/rubygems/ssl_certs/rubygems.global.ssl.fastly.net/DigiCertHighAssuranceEVRootCA.pem
-${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/AddTrustExternalCARoot.pem
+${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA.pem
+${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA_R3.pem
 ${RUBY_LIB}/rubygems/stub_specification.rb
 ${RUBY_LIB}/rubygems/syck_hack.rb
 ${RUBY_LIB}/rubygems/test_case.rb
