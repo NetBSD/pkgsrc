@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2092 2021/04/11 18:53:55 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2093 2021/04/11 18:55:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-redmine41 to 4.1.2 [taca 2021-04-11]
 	Updated devel/py-approvaltests to 0.4.1 [schmonz 2021-04-11]
 	Updated sysutils/navi to 2.15.1 [pin 2021-04-11]
+	Updated sysutils/xplr to 0.4.1 [pin 2021-04-11]
