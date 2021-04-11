@@ -1,14 +1,14 @@
-$NetBSD: patch-Gemfile,v 1.1 2021/02/28 16:50:03 taca Exp $
+$NetBSD: patch-Gemfile,v 1.2 2021/04/11 15:03:22 taca Exp $
 
 Relax dependency.
 
---- Gemfile.orig	2020-04-06 17:00:48.000000000 +0000
+--- Gemfile.orig	2021-03-21 08:40:24.000000000 +0000
 +++ Gemfile
 @@ -3,18 +3,18 @@ source 'https://rubygems.org'
  ruby '>= 2.3.0', '< 2.7.0' if Bundler::VERSION >= '1.12.0'
  gem "bundler", ">= 1.5.0"
  
--gem 'rails', '5.2.4.2'
+-gem 'rails', '5.2.4.5'
 +gem "rails", "~> 5.2"
  gem 'sprockets', '~> 3.7.2' if RUBY_VERSION < '2.5'
 -gem "rouge", "~> 3.12.0"
@@ -21,10 +21,9 @@ Relax dependency.
 +gem "roadie-rails", "~> 2.2"
  gem "mimemagic"
  gem "mail", "~> 2.7.1"
- gem "csv", "~> 3.1.1"
--gem "nokogiri", "~> 1.10.0"
+ gem 'csv', (RUBY_VERSION < '2.5' ? ['>= 3.1.1', '<= 3.1.5'] : '~> 3.1.1')
+ gem 'nokogiri', (RUBY_VERSION < '2.5' ? '~> 1.10.0' : '~> 1.11.1')
 -gem "i18n", "~> 1.6.0"
-+gem "nokogiri", "~> 1.11"
 +gem "i18n", ">= 1.6.0"
  gem "rbpdf", "~> 1.20.0"
  
@@ -38,7 +37,7 @@ Relax dependency.
  end
  
  # Optional gem for OpenID authentication
-@@ -33,12 +33,12 @@ end
+@@ -33,7 +33,7 @@ end
  
  # Optional gem for exporting the gantt to a PNG file
  group :minimagick do
@@ -47,12 +46,6 @@ Relax dependency.
  end
  
  # Optional Markdown support, not for JRuby
- group :markdown do
--  gem "redcarpet", "~> 3.5.0"
-+  gem "redcarpet", ">= 3.4.0"
- end
- 
- # Include database gems for the adapters found in the database
 @@ -55,7 +55,7 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]

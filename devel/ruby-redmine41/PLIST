@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/28 16:50:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/11 15:03:22 taca Exp $
 bin/redmine41_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine41_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine41_migrate_db${RUBY_SUFFIX}.sh
@@ -1586,7 +1586,7 @@ share/${RUBY_NAME}-redmine41/public/javascripts/i18n/datepicker-uk.js
 share/${RUBY_NAME}-redmine41/public/javascripts/i18n/datepicker-vi.js
 share/${RUBY_NAME}-redmine41/public/javascripts/i18n/datepicker-zh-CN.js
 share/${RUBY_NAME}-redmine41/public/javascripts/i18n/datepicker-zh-TW.js
-share/${RUBY_NAME}-redmine41/public/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js
+share/${RUBY_NAME}-redmine41/public/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.4.5.js
 share/${RUBY_NAME}-redmine41/public/javascripts/jstoolbar/jstoolbar.js
 share/${RUBY_NAME}-redmine41/public/javascripts/jstoolbar/lang/jstoolbar-ar.js
 share/${RUBY_NAME}-redmine41/public/javascripts/jstoolbar/lang/jstoolbar-az.js
@@ -2005,6 +2005,7 @@ share/${RUBY_NAME}-redmine41/test/mailers/empty
 share/${RUBY_NAME}-redmine41/test/mocks/open_id_authentication_mock.rb
 share/${RUBY_NAME}-redmine41/test/models/empty
 share/${RUBY_NAME}-redmine41/test/object_helpers.rb
+share/${RUBY_NAME}-redmine41/test/system/inline_autocomplete_test.rb
 share/${RUBY_NAME}-redmine41/test/system/issues_import_test.rb
 share/${RUBY_NAME}-redmine41/test/system/issues_test.rb
 share/${RUBY_NAME}-redmine41/test/system/my_page_test.rb
@@ -2128,6 +2129,7 @@ share/${RUBY_NAME}-redmine41/test/unit/role_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/search_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/setting_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/time_entry_activity_test.rb
+share/${RUBY_NAME}-redmine41/test/unit/time_entry_custom_field_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/time_entry_import_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/time_entry_query_test.rb
 share/${RUBY_NAME}-redmine41/test/unit/time_entry_test.rb
