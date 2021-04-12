@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/11/05 09:07:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2021/04/12 11:09:17 nia Exp $
 
 DISTNAME=	gtksourceview-4.8.0
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview4/}
@@ -22,6 +22,8 @@ MESON_ARGS+=		-Dvapi=false
 PKGCONFIG_OVERRIDE+=	gtksourceview.pc.in
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gtksourceview
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "options.mk"
 
