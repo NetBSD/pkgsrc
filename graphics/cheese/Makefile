@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/10/06 19:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2021/04/12 13:34:56 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 PKGREVISION=	5
@@ -36,9 +36,11 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/cheese-gtk.pc
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/clutter-gst/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
