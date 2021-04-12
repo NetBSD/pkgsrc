@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2021/04/02 21:32:59 plunky Exp $
+# $NetBSD: Makefile,v 1.101 2021/04/12 14:17:06 nia Exp $
 #
 
-COMMENT=	CAD tools
+COMMENT=	Computer Aided Design tools
 
 SUBDIR+=	MyHDL-gplcver
 SUBDIR+=	MyHDL-iverilog
