@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/11/05 09:07:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/12 13:12:46 nia Exp $
 
 DISTNAME=	gssdp-1.2.2
 PKGNAME=	${DISTNAME:S/gssdp/gssdp12/}
@@ -19,6 +19,8 @@ MESON_ARGS+=	-Dsniffer=false
 # needs gtk-doc
 MESON_ARGS+=	-Dgtk-doc=false
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 PKGCONFIG_OVERRIDE+=		output/meson-private/gssdp-1.2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/libgssdp
@@ -27,6 +29,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.54.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/meson/build.mk"
