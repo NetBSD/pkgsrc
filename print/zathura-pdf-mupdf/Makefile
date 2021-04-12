@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/10/08 22:51:55 leot Exp $
+# $NetBSD: Makefile,v 1.47 2021/04/12 12:55:40 nia Exp $
 #
 
 DISTNAME=	zathura-pdf-mupdf-0.3.6
@@ -18,6 +18,8 @@ USE_TOOLS+=	pkg-config
 MESON_ARGS+=	-D link-external=true
 
 CPPFLAGS+=	-D_XOPEN_SOURCE=600
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
