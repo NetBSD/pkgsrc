@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/01/24 10:29:39 kamil Exp $
+# $NetBSD: Makefile,v 1.36 2021/04/12 12:37:41 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v2
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 PKGCONFIG_OVERRIDE+=		output/meson-private/vte-2.91.pc
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		msgfmt pkg-config bash
 USE_LANGUAGES=		c c++17
 # for c++17
