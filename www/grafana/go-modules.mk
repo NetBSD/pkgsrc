@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2021/04/03 19:49:19 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.6 2021/04/12 14:04:56 triaxx Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -952,7 +952,8 @@ GO_MODULE_FILES+=	github.com/gosimple/slug/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/grafana/go-mssqldb/@v/v0.0.0-20210326084033-d0ce3c521036.mod
 GO_MODULE_FILES+=	github.com/grafana/go-mssqldb/@v/v0.0.0-20210326084033-d0ce3c521036.zip
 GO_MODULE_FILES+=	github.com/grafana/grafana-aws-sdk/@v/v0.3.0.mod
-GO_MODULE_FILES+=	github.com/grafana/grafana-aws-sdk/@v/v0.3.0.zip
+GO_MODULE_FILES+=	github.com/grafana/grafana-aws-sdk/@v/v0.4.0.mod
+GO_MODULE_FILES+=	github.com/grafana/grafana-aws-sdk/@v/v0.4.0.zip
 GO_MODULE_FILES+=	github.com/grafana/grafana-plugin-model/@v/v0.0.0-20190930120109-1fc953a61fb4.mod
 GO_MODULE_FILES+=	github.com/grafana/grafana-plugin-model/@v/v0.0.0-20190930120109-1fc953a61fb4.zip
 GO_MODULE_FILES+=	github.com/grafana/grafana-plugin-sdk-go/@v/v0.79.0.mod

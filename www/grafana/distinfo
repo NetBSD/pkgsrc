@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/04/03 19:49:19 tnn Exp $
+$NetBSD: distinfo,v 1.14 2021/04/12 14:04:56 triaxx Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -3808,10 +3808,14 @@ SHA1 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.mod) = 371cbdef10f28df5fb1320
 RMD160 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.mod) = f93456530ea9c96f0922159568b15825afe31126
 SHA512 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.mod) = abac50b7eb75a3d11a15eda3cb30e4323cf313394643cbb849b045341383439450c9140fa54c2a83289d950d1738354170d69ec518535f974d00325d984ed9ce
 Size (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.mod) = 253 bytes
-SHA1 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.zip) = 096599143f95b7aeae0299c2312bd39d2cffd75b
-RMD160 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.zip) = c42a7ba97ace1442a2144dd1670442a70ffb74fa
-SHA512 (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.zip) = 0335d8ed60d4b9a4e64af58b9301ce400c0b7f7cd5af93287f1b114ec191d5cf9bfb5240f10673d8b33d832a64918746c808ff428e76fbea7cdc693319974cc1
-Size (github.com_grafana_grafana-aws-sdk_@v_v0.3.0.zip) = 253088 bytes
+SHA1 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.mod) = 371cbdef10f28df5fb13209307554cac1d1f61fd
+RMD160 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.mod) = f93456530ea9c96f0922159568b15825afe31126
+SHA512 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.mod) = abac50b7eb75a3d11a15eda3cb30e4323cf313394643cbb849b045341383439450c9140fa54c2a83289d950d1738354170d69ec518535f974d00325d984ed9ce
+Size (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.mod) = 253 bytes
+SHA1 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.zip) = d3539fde44249e7b4f63dd9c5ba258011b200fa3
+RMD160 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.zip) = 80295d231138071c2557194c2bda4c194373cf39
+SHA512 (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.zip) = 33a67ebbe1bdadd0b275a8ce5c5cc6ab015063d8637bd800f06398b2cc392a802e45f5773526807da69c769db1feb7a0c6da1b62670465d5e241e86a8d2fe30b
+Size (github.com_grafana_grafana-aws-sdk_@v_v0.4.0.zip) = 251901 bytes
 SHA1 (github.com_grafana_grafana-plugin-model_@v_v0.0.0-20190930120109-1fc953a61fb4.mod) = 8fa8e90be802378686e1279f4e3fd797ef198b48
 RMD160 (github.com_grafana_grafana-plugin-model_@v_v0.0.0-20190930120109-1fc953a61fb4.mod) = b82be4d693562ff2fb407d96f1ff0452fd44e0ba
 SHA512 (github.com_grafana_grafana-plugin-model_@v_v0.0.0-20190930120109-1fc953a61fb4.mod) = c76ffe41914f036be0dbc53112710a75ffb703958e6608c858be0abcd582738b19ebfb2be5141d06a4ebdf2d641fe442612f46774e3e6d166973921b09461909
@@ -10632,14 +10636,14 @@ SHA1 (gotest.tools_v3_@v_v3.0.2.zip) = b43ecc234b5f71ea3eedd6fc2a2576741b569e4e
 RMD160 (gotest.tools_v3_@v_v3.0.2.zip) = 7e15b34b67bc08fca41f5009507400fefa96505c
 SHA512 (gotest.tools_v3_@v_v3.0.2.zip) = d85150c7a380874323c46fc493847ee12515ef50fa928da808dc5f03d91f65691dbd06473485afab5f5b5fa7b815bdab9ce19e62f69bad407b267a34397d5c40
 Size (gotest.tools_v3_@v_v3.0.2.zip) = 92950 bytes
-SHA1 (grafana-7.5.2.linux-amd64.tar.gz) = 7effdf454c5aa14204037ee4fe526faeb18dc2f8
-RMD160 (grafana-7.5.2.linux-amd64.tar.gz) = 83a76595885ff718f572e9b39dbde3caad63d172
-SHA512 (grafana-7.5.2.linux-amd64.tar.gz) = 4eeff81371149f22f0c708d467623ace32ef1c9cd812d232c21323eeeb9bfa4e54658bca875b6c40c9b25caa4a56ea43e39b5389753348cc79710228ae135309
-Size (grafana-7.5.2.linux-amd64.tar.gz) = 52181388 bytes
-SHA1 (grafana-7.5.2.tar.gz) = 77ced9c72df12eafec5996c8c4c6848f9aa1d275
-RMD160 (grafana-7.5.2.tar.gz) = 55e806f2008efd5bcbed4ead19794c5e45b384e0
-SHA512 (grafana-7.5.2.tar.gz) = 48cc8ba65962f9aa95bd48b1a40ce8b7b923e14c1e10e1eae639d399b6104c9650cbeba791fe6c4063cd45e3d06b4f109c5120cdd9a44a389dc3a813f81fbac5
-Size (grafana-7.5.2.tar.gz) = 10887710 bytes
+SHA1 (grafana-7.5.3.linux-amd64.tar.gz) = 385a987a94fe5e6ee4d2e63ee2571930ce0a5705
+RMD160 (grafana-7.5.3.linux-amd64.tar.gz) = e1d7ea83bd0486d9fd94012b07946036389662c7
+SHA512 (grafana-7.5.3.linux-amd64.tar.gz) = f92887052416ff2b69ad5724f280110d1fce5744088af5d0e13b06607d0d1a165840abc43dd5f52fb384e4e0e9fecedefdff38593ea108fbf1f0484da06b6553
+Size (grafana-7.5.3.linux-amd64.tar.gz) = 52191814 bytes
+SHA1 (grafana-7.5.3.tar.gz) = 01b5d17d69bdbc93a2c79bb5f4a40f308d0fc974
+RMD160 (grafana-7.5.3.tar.gz) = 546706ca9d4915957bdba7dffe0fcbcf45085c53
+SHA512 (grafana-7.5.3.tar.gz) = bc3a64f2f33ed363ea5edd2f38efd56246b0f23116b5fd00828d1d932ac954ca51824acb8e3235b57d12aa0eaf457602b93fb905328abb222dd253724085507c
+Size (grafana-7.5.3.tar.gz) = 10889722 bytes
 SHA1 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 839eb1204960233bef25be21ade8455e791dc602
 RMD160 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 47531578a08ef258ad78a0e6b558a47285cb248e
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
