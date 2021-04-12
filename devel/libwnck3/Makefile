@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/11/16 12:32:52 nia Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/12 13:00:56 nia Exp $
 
 DISTNAME=	libwnck-3.36.0
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
@@ -25,6 +25,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/libwnck/libwnck-3.map
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/libwnck-3.0.pc
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
