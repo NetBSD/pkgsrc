@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/16 15:48:38 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/12 13:17:17 nia Exp $
 
 DISTNAME=	gstreamer-vaapi-1.16.2
 PKGNAME=	${DISTNAME:S/^gstreamer/gst-plugins1/1}
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 
 MESON_ARGS+=	-Ddisable_doc=true
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
