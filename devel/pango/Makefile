@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2021/04/08 08:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.240 2021/04/12 11:01:13 nia Exp $
 
 DISTNAME=	pango-1.48.4
 CATEGORIES=	devel fonts
@@ -36,6 +36,8 @@ MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 CHECK_FILES_SKIP+=		${PREFIX}/libdata/pango/pango.modules
 CHECK_PORTABILITY_SKIP+=	docs/check.docs
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-fallthrough # clang10svn
 
