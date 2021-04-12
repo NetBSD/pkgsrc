@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/08/17 20:19:12 leot Exp $
+# $NetBSD: Makefile,v 1.21 2021/04/12 12:57:14 nia Exp $
 #
 
 DISTNAME=	zathura-cb-0.1.8
@@ -13,6 +13,8 @@ COMMENT=	Adds comic book support to zathura
 LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
