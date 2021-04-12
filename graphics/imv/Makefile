@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/02/03 10:43:42 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/12 11:02:48 nia Exp $
 
 DISTNAME=	imv-4.2.0
 CATEGORIES=	graphics
@@ -29,6 +29,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/imv.c
 SUBST_VARS.paths=	PKG_SYSCONFDIR
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
