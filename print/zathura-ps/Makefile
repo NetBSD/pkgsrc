@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/08/17 20:19:58 leot Exp $
+# $NetBSD: Makefile,v 1.24 2021/04/12 12:56:27 nia Exp $
 
 DISTNAME=	zathura-ps-0.2.6
 PKGREVISION=	8
@@ -12,6 +12,8 @@ COMMENT=	Add PS support to zathura using libspectre library
 LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
