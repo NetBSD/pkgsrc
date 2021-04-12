@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/10/25 12:45:52 nia Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/12 10:56:27 nia Exp $
 
 DISTNAME=	desktop-file-utils-0.26
 CATEGORIES=	sysutils gnome
@@ -28,6 +28,8 @@ SUBST_VARS.paths=	LOCALBASE
 PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ \
 				{ print "@comment in INSTALL script: " $$0; \
 				  next; }
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
