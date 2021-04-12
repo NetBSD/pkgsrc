@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/04/09 09:06:53 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/12 08:05:22 pin Exp $
 
-DISTNAME=	qrrs-0.1.5
+DISTNAME=	qrrs-0.1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Lenivaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
