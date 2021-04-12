@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2020/12/04 04:56:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.201 2021/04/12 13:03:01 nia Exp $
 
 DISTNAME=		gnome-session-3.38.0
 PKGREVISION=		1
@@ -37,6 +37,8 @@ MESON_ARGS+=		-Dsystemd=false
 MESON_ARGS+=		-Dsystemd_session=disable
 MESON_ARGS+=		-Dsystemd_journal=false
 MESON_ARGS+=		-Dconsolekit=true
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
