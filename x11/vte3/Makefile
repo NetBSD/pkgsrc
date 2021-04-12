@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/04/12 12:52:31 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/04/12 13:14:11 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -40,6 +40,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
