@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/04/09 09:06:53 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/04/12 08:05:22 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -17,7 +17,7 @@ CARGO_CRATE_DEPENDS+=	clap-3.0.0-beta.2
 CARGO_CRATE_DEPENDS+=	clap_derive-3.0.0-beta.2
 CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	crc32fast-1.2.1
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.0
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.0
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.3
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.3
@@ -38,7 +38,7 @@ CARGO_CRATE_DEPENDS+=	image-0.23.14
 CARGO_CRATE_DEPENDS+=	indexmap-1.6.2
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.1.22
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.92
+CARGO_CRATE_DEPENDS+=	libc-0.2.93
 CARGO_CRATE_DEPENDS+=	lru-0.6.5
 CARGO_CRATE_DEPENDS+=	memchr-2.3.4
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.3
@@ -77,7 +77,7 @@ CARGO_CRATE_DEPENDS+=	scoped_threadpool-0.1.9
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-0.15.44
-CARGO_CRATE_DEPENDS+=	syn-1.0.68
+CARGO_CRATE_DEPENDS+=	syn-1.0.69
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.2
 CARGO_CRATE_DEPENDS+=	textwrap-0.12.1
 CARGO_CRATE_DEPENDS+=	tiff-0.6.1
