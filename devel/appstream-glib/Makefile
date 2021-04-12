@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/11/05 22:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/12 11:06:23 nia Exp $
 
 DISTNAME=	appstream-glib-0.7.18
 PKGREVISION=	1
@@ -20,6 +20,8 @@ USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Drpm=false
 
 PKGCONFIG_OVERRIDE+=	libappstream-glib/appstream-glib.pc.in
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
