@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/02/07 06:30:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2021/04/12 13:19:39 nia Exp $
 
 DISTNAME=	gnome-settings-daemon-3.38.1
 PKGREVISION=	3
@@ -68,6 +68,8 @@ CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/org.gnome.SettingsDaemon.Wwa
 		${PKG_SYSCONFDIR}/xdg/autostart/org.gnome.SettingsDaemon.Wwan.desktop
 CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
