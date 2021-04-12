@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/09 06:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/12 13:04:01 nia Exp $
 
 DISTNAME=	gnome-calendar-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -21,6 +21,8 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.msgfmt=
 .endif
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
