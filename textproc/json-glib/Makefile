@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/03/18 18:01:23 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/12 11:16:11 nia Exp $
 
 DISTNAME=	json-glib-1.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,9 +11,11 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/JsonGlib
 COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	gmake msgfmt msgmerge pkg-config xgettext
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-CONFIGURE_ARGS+=	--disable-man
+USE_TOOLS+=	msgfmt pkg-config xgettext
+
+MESON_ARGS+=	-Dman=true
 
 .include "../../mk/compiler.mk"
 
@@ -31,11 +33,13 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/json-glib
 PRINT_PLIST_AWK+= \
 	($$0 ~ /^lib\/girepository-1.0\//) || \
 	($$0 ~ /^share\/gir-1.0\//) \
-	{ $$0 = "$${PLIST.introspection}" $$0; } \
-	($$0 ~ /^${PKGLOCALEDIR:S|/|\/|g}\/locale\//) \
-	{ $$0 = "$${PLIST.nls}" $$0; }
+	{ $$0 = "$${PLIST.introspection}" $$0; }
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
