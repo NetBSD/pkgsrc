@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2094 2021/04/12 00:03:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2095 2021/04/12 06:28:50 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3361,3 +3361,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/navi to 2.15.1 [pin 2021-04-11]
 	Updated sysutils/xplr to 0.4.1 [pin 2021-04-11]
 	Updated devel/ruby-marcel to 1.0.1 [taca 2021-04-12]
+	Updated graphics/ImageMagick to 7.0.11.6 [triaxx 2021-04-12]
