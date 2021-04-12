@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/10/01 11:48:22 prlw1 Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/12 13:08:18 nia Exp $
 
 DISTNAME=	at-spi2-atk-2.38.0
 CATEGORIES=	devel gnome
@@ -14,6 +14,8 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE=		output/meson-private/atk-bridge-2.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 MESON_ARGS+=	-Dtests=false
 
