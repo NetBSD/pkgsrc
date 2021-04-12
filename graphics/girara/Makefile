@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/08/17 20:17:29 leot Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/12 13:24:40 nia Exp $
 
 DISTNAME=	girara-0.3.5
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	zlib
 USE_TOOLS+=	gettext pkg-config
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
