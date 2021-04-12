@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/11/22 11:34:32 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/12 13:21:00 nia Exp $
 
 DISTNAME=	libsecret-0.20.4
 CATEGORIES=	security gnome
@@ -24,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "options.mk"
