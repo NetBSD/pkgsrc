@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/06 13:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/12 13:23:36 nia Exp $
 
 DISTNAME=	graphene-1.10.2
 CATEGORIES=	graphics
@@ -17,6 +17,8 @@ MESON_ARGS+=	-Dgobject_types=true
 MESON_ARGS+=	-Dintrospection=true
 MESON_ARGS+=	-Dtests=false
 MESON_ARGS+=	-Dinstalled_tests=false
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
