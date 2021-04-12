@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/10/01 11:45:46 prlw1 Exp $
+# $NetBSD: Makefile,v 1.39 2021/04/12 13:07:44 nia Exp $
 
 DISTNAME=	at-spi2-core-2.38.0
 CATEGORIES=	devel gnome
@@ -35,6 +35,8 @@ CONF_FILES=	${eg_busconfigdir}/accessibility.conf \
 CONF_FILES+=	${eg_default_sessiondir}/at-spi-dbus-bus.desktop \
 			${default_sessiondir}/at-spi-dbus-bus.desktop
 MAKE_DIRS+=	${busconfigdir} ${default_sessiondir}
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${eg_default_sessiondir}
