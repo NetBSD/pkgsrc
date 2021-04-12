@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/01/15 07:15:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2021/04/12 11:20:27 nia Exp $
 
 DISTNAME=	zziplib-0.13.72
 PKGREVISION=	1
@@ -30,6 +30,8 @@ PLIST_SUBST+=	SOEXT=dylib
 .else
 PLIST_SUBST+=	SOEXT=so
 .endif
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
