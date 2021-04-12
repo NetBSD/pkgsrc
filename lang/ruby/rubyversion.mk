@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.230 2021/04/11 12:36:28 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.231 2021/04/12 14:39:28 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -587,7 +587,7 @@ MAKE_ENV+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 MAKEFLAGS+=		RUBY_VER=${RUBY_VER:Q} \
 			RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 .if !empty(RUBY_RAILS_ACCEPTED)
-MAKEFLAGS+=		RUBY_RAILS_ACCEPTED=${RUBY_RAILS_ACCEPTED}
+MAKEFLAGS+=		RUBY_RAILS_ACCEPTED=${RUBY_RAILS_ACCEPTED:Q}
 .endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
