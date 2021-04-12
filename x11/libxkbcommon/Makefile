@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/04/05 12:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/12 12:53:12 nia Exp $
 
 DISTNAME=	libxkbcommon-1.2.0
 CATEGORIES=	x11
@@ -13,6 +13,8 @@ LICENSE=	mit
 USE_TOOLS+=	bison gmake pkg-config
 
 MESON_ARGS+=	-Denable-wayland=false
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon-x11.pc
