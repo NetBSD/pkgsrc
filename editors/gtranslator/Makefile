@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2020/12/04 20:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.85 2021/04/12 12:52:00 nia Exp $
 
 DISTNAME=	gtranslator-3.32.1
 PKGREVISION=	7
@@ -14,9 +14,11 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		pkg-config
 
 REPLACE_PYTHON+=	build-aux/meson/meson_post_install.py
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/libgda/buildlink3.mk"
