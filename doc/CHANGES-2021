@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2099 2021/04/12 11:16:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2100 2021/04/12 14:11:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/meson to 0.57.2 [adam 2021-04-12]
 	Updated sysutils/xplr to 0.4.2 [pin 2021-04-12]
 	Updated textproc/json-glib to 1.4.4nb2 [nia 2021-04-12]
+	Updated www/grafana to 7.5.3 [triaxx 2021-04-12]
