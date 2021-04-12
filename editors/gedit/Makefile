@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2020/12/04 20:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.158 2021/04/12 12:27:12 nia Exp $
 
 DISTNAME=	gedit-3.36.2
 PKGREVISION=	4
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PREV_PKGPATH=	editors/gedit3
 
-USE_TOOLS+=			gmake gettext msgfmt perl pkg-config
+USE_TOOLS+=			gettext msgfmt perl pkg-config
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
