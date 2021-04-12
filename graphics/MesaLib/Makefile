@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2021/01/06 15:50:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.196 2021/04/12 12:40:01 nia Exp $
 
 DISTNAME=	mesa-20.0.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -14,7 +14,6 @@ LICENSE=	mit
 
 USE_TOOLS+=	bison flex pkg-config xgettext
 USE_LANGUAGES=	c99 c++14
-USE_LIBTOOL=	yes
 
 # ERROR: C++ Compiler does not support -std=c++14
 GCC_REQD+=	5
