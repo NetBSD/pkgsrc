@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/07/16 06:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.105 2021/04/12 11:07:06 nia Exp $
 
 DISTNAME=	atk-2.36.0
 CATEGORIES=	devel gnome
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config msgfmt
 PKGCONFIG_OVERRIDE=		output/meson-private/atk.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
