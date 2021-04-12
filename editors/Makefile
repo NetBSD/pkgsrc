@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.216 2021/01/27 11:27:16 nia Exp $
+# $NetBSD: Makefile,v 1.217 2021/04/12 14:16:42 nia Exp $
 #
 
-COMMENT=	Editors
+COMMENT=	Text and binary editors
 
 SUBDIR+=	OmegaT
 SUBDIR+=	Sigil
