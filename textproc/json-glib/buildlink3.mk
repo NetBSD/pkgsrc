@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2020/03/08 16:48:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2021/04/12 11:16:11 nia Exp $
 #
 
 BUILDLINK_TREE+=	json-glib
@@ -13,11 +13,8 @@ BUILDLINK_PKGSRCDIR.json-glib?=		../../textproc/json-glib
 pkgbase := json-glib
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.json-glib:Mnls)
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.endif
-
 .include "../../devel/glib2/buildlink3.mk"
 .endif # JSON_GLIB_BUILDLINK3_MK
 
