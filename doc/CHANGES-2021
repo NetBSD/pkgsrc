@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2096 2021/04/12 08:05:41 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2097 2021/04/12 10:12:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3363,3 +3363,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-marcel to 1.0.1 [taca 2021-04-12]
 	Updated graphics/ImageMagick to 7.0.11.6 [triaxx 2021-04-12]
 	Updated graphics/qrrs to 0.1.6 [pin 2021-04-12]
+	Updated net/dnsmasq to 2.85 [adam 2021-04-12]
+	Updated devel/meson to 0.57.2 [adam 2021-04-12]
