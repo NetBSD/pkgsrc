@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2021/04/12 11:01:13 nia Exp $
+# $NetBSD: Makefile,v 1.241 2021/04/12 12:16:23 nia Exp $
 
 DISTNAME=	pango-1.48.4
 CATEGORIES=	devel fonts
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		wrksrc
