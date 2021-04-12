@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2097 2021/04/12 10:12:52 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2098 2021/04/12 10:36:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3365,3 +3365,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/qrrs to 0.1.6 [pin 2021-04-12]
 	Updated net/dnsmasq to 2.85 [adam 2021-04-12]
 	Updated devel/meson to 0.57.2 [adam 2021-04-12]
+	Updated sysutils/xplr to 0.4.2 [pin 2021-04-12]
