@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/11/10 11:33:50 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/12 13:10:48 nia Exp $
 
 DISTNAME=	gjs-1.66.1
 CATEGORIES=	lang
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gjs@sha:${WRKSRC}/output/gjs-jsapi@sta:${WRKSRC}/output/gjs-console@exe
 MESON_ARGS+=	-Dinstalled_tests=false
 MESON_ARGS+=	-Dprofiler=disabled
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/gjs-1.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
