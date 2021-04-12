@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/10/06 19:51:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/04/12 13:21:47 nia Exp $
 
 DISTNAME=	gspell-1.8.3
 PKGREVISION=	5
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE+=	gspell.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
