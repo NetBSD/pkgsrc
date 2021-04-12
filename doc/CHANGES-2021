@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2102 2021/04/12 20:22:04 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2103 2021/04/12 22:27:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-thrift to 0.14.1 [adam 2021-04-12]
 	Updated devel/ruby-thrift to 0.14.1 [adam 2021-04-12]
 	Updated sysutils/macchina to 0.6.9 [pin 2021-04-12]
+	Updated mail/spamassassin to 3.4.6 [gdt 2021-04-12]
