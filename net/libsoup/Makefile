@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/11/05 09:07:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2021/04/12 11:29:19 nia Exp $
 
 DISTNAME=	libsoup-2.70.0
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config gmake intltool msgfmt
+USE_TOOLS+=	pkg-config msgfmt
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-2.4.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-gnome-2.4.pc
@@ -30,6 +30,8 @@ MESON_ARGS+=		-Dvapi=disabled
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-nonliteral
 CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 .endif
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "options.mk"
 
