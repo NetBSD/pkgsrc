@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/11/19 11:03:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/12 11:01:56 nia Exp $
 
 DISTNAME=	picom-8.2
 CATEGORIES=	x11
@@ -21,6 +21,8 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 MESON_ARGS+=	-Dwith_docs=true
 
 REPLACE_SH+=		bin/picom-trans
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR} || ${TRUE}
