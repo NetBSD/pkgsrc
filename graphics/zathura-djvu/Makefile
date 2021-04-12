@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/08/17 20:19:12 leot Exp $
+# $NetBSD: Makefile,v 1.20 2021/04/12 12:57:36 nia Exp $
 #
 
 DISTNAME=	zathura-djvu-0.2.9
@@ -13,6 +13,8 @@ COMMENT=	Add DjVu support to zathura using djvulibre library
 LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
