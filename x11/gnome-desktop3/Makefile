@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/11/17 11:35:19 nia Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/12 13:01:46 nia Exp $
 
 DISTNAME=	gnome-desktop-3.38.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
@@ -23,6 +23,8 @@ MESON_ARGS+=		-Ddate_in_gnome_version=false
 MESON_ARGS+=		-Ddesktop_docs=false
 MESON_ARGS+=		-Dgtk_doc=false
 MESON_ARGS+=		-Ddebug_tools=false
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
