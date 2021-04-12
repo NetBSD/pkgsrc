@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.811 2021/04/10 08:48:25 nia Exp $
+# $NetBSD: Makefile,v 1.812 2021/04/12 14:29:46 nia Exp $
 #
 
-COMMENT=	Security tools
+COMMENT=	Security and cryptography tools and libraries
 
 SUBDIR+=	2fa
 SUBDIR+=	Bastille
