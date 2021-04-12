@@ -1,4 +1,4 @@
-/* $NetBSD: main.css,v 1.10 2021/04/08 12:03:43 nia Exp $ */
+/* $NetBSD: main.css,v 1.11 2021/04/12 14:01:33 nia Exp $ */
 
 body {
 	font-family: sans-serif;
@@ -13,7 +13,7 @@ body, pre, code, samp {
 }
 
 pre {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 h1 {
