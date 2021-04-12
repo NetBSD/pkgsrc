@@ -1,6 +1,6 @@
-# $NetBSD: build.mk,v 1.8 2021/04/08 12:54:14 nia Exp $
+# $NetBSD: build.mk,v 1.9 2021/04/12 12:14:03 nia Exp $
 
-BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
+TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
 CONFIGURE_DIRS?=	.
 BUILD_DIRS?=		${CONFIGURE_DIRS}
