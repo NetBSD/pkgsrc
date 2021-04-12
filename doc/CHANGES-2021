@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2100 2021/04/12 14:11:45 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2101 2021/04/12 19:25:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3368,3 +3368,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.4.2 [pin 2021-04-12]
 	Updated textproc/json-glib to 1.4.4nb2 [nia 2021-04-12]
 	Updated www/grafana to 7.5.3 [triaxx 2021-04-12]
+	Updated devel/thrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/libthrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/libthrift_c_glib to 0.14.1 [adam 2021-04-12]
+	Updated devel/lua-thrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/go-thrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/p5-thrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/py-thrift to 0.14.1 [adam 2021-04-12]
+	Updated devel/ruby-thrift to 0.14.1 [adam 2021-04-12]
