@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2106 2021/04/13 03:35:14 fox Exp $
+$NetBSD: CHANGES-2021,v 1.2107 2021/04/13 08:02:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3381,3 +3381,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added archivers/pixz version 1.0.7 [ryoon 2021-04-13]
 	Updated x11/mate-session-manager to 1.24.2 [gutteridge 2021-04-13]
 	Updated sysutils/exa to 0.10.1 [fox 2021-04-13]
+	Updated chat/ejabberd to 21.04 [triaxx 2021-04-13]
