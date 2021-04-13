@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.812 2021/04/12 14:29:46 nia Exp $
+# $NetBSD: Makefile,v 1.813 2021/04/13 15:15:45 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -609,7 +609,6 @@ SUBDIR+=	softhsm2
 SUBDIR+=	spiped
 SUBDIR+=	sqlmap
 SUBDIR+=	srm
-SUBDIR+=	srp_client
 SUBDIR+=	ssdeep
 SUBDIR+=	ssh-askpass
 SUBDIR+=	ssh-ip-tunnel

@@ -1,8 +1,0 @@
-SRP stands for the Secure Remote Password protocol, and it represents
-a new mechanism for performing secure password-based authentication
-and key exchange over any type of network. SRP offers both security
-and convenience improvements over authentication techniques currently
-in use.
-
-This package builds the entire source tree but only installs(/packages) the
-client side programs.
