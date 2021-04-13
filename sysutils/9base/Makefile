@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 21:28:40 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/04/13 08:05:30 nia Exp $
 
 DISTNAME=	9base-6
-PKGREVISION=	2
 PKGNAME=	9base-20100604
+PKGREVISION=	2
 CATEGORIES=	sysutils shells
 MASTER_SITES=	http://dl.suckless.org/tools/
 
@@ -17,6 +17,9 @@ CONFLICTS=		rc-[0-9]*
 
 PKG_SHELL=		bin/rc
 
+# commits utter sins with sprintf() macros; glhf
+FORTIFY_SUPPORTED=	no
+
 .include "../../mk/bsd.prefs.mk"
 
 # Darwin doesn't support static link.
@@ -29,11 +32,6 @@ CFLAGS+=		-DPLAN9PORT
 LDFLAGS+=		-lsocket -lnsl
 .else
 LDFLAGS+=		-static
-.endif
-
-#XXX see http://gnats.netbsd.org/43228
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*)
-BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 
 PREFIX9P=	${PREFIX}/9base
