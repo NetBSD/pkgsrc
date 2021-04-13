@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2134 2021/04/13 17:36:36 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.2135 2021/04/13 17:52:18 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3411,3 +3411,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mp4v2 to 4.1.6 [adam 2021-04-13]
 	Updated www/py-pylint-django to 2.4.3 [adam 2021-04-13]
 	Updated x11/gnome-desktop3 to 40.0 [dan 2021-04-13]
+	Updated pkgtools/pkg_rolling-replace to 0.24.11 [rhialto 2021-04-13]
