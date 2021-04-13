@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/13 03:09:01 ryoon Exp $
+
+SHA1 (pixz-1.0.7.tar.gz) = 24c528c83444ae414249ff75c90c4517a1abd39c
+RMD160 (pixz-1.0.7.tar.gz) = 1825b9cc5ecd27dc328260a63099ac0809f9b9d9
+SHA512 (pixz-1.0.7.tar.gz) = 4811da538931620bf05499912c98a501c2c879f3086cd59c4c67b302ded3547a9d246e7fd01ad36512e361c6c4e206e23f2aaf028b25ad44b74b529547a7f5ab
+Size (pixz-1.0.7.tar.gz) = 165004 bytes
