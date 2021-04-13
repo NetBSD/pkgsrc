@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2020/01/12 23:01:38 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2021/04/13 10:26:57 nia Exp $
 
 * Include sys/filio.h for FIONBIO etc.
 * Drop SSLv2 support
@@ -51,6 +51,23 @@ $NetBSD: patch-ac,v 1.4 2020/01/12 23:01:38 joerg Exp $
  		default:
  			debug("nieznany standard szyfrowania\n");
  	}
+@@ -536,14 +537,14 @@ SSL *init_ssl_socket(int sock)
+ 	return ssl;
+ }
+ 
+-inline int my_read(int fd, char *buf, int size, void *ssl)
++int my_read(int fd, char *buf, int size, void *ssl)
+ {
+ 	return (!ssl) ?
+ 		read(fd, buf, size) :
+ 		SSL_read((SSL*) ssl, buf, size);
+ }
+ 
+-inline int my_write(int fd, char *buf, int size, void *ssl)
++int my_write(int fd, char *buf, int size, void *ssl)
+ {
+ 	int res, one;
+ 	
 @@ -592,7 +593,7 @@ void usage(char *a0)
  "  -s version   set SSL protocol version (default: SSLv2)\n"
  "  -c filename  load certificate file (default: lhs.pem)\n"
