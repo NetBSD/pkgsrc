@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2121 2021/04/13 10:01:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2122 2021/04/13 10:03:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3397,3 +3397,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible-base to 2.10.8 [adam 2021-04-13]
 	Updated print/poppler-glib to 21.04.0nb2 [wiz 2021-04-13]
 	Updated x11/qt5-qtdeclarative to 5.15.2nb2 [wiz 2021-04-13]
+	Updated textproc/yelp-xsl to 3.32.1nb1 [wiz 2021-04-13]
