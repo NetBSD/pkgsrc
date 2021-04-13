@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.8 2017/09/10 01:44:31 dholland Exp $
+$NetBSD: distinfo,v 1.9 2021/04/13 15:42:27 nia Exp $
 
-SHA1 (honeyd-1.5b.tar.gz) = a6cef01ddb0b649442ac60e2a08b226b1634e3f9
-RMD160 (honeyd-1.5b.tar.gz) = 40ebe7d3a2915b5145c5a2eef04b9d1de18fbb09
-SHA512 (honeyd-1.5b.tar.gz) = 13f32d12431afca3bbce40df86ef8830f78281736c83fafadfba3f76e7ee0069285534ee31ecd6ba45006245de5175abb2307a9e2842a22b458f7343a946efa2
-Size (honeyd-1.5b.tar.gz) = 881787 bytes
-SHA1 (patch-aa) = b69d986bd1a5c1847f4f5467216730da020c8686
-SHA1 (patch-ab) = 6f789cae31cc9b38ae68c2d9250dcab67e1a0146
-SHA1 (patch-tagging.h) = 69c19ce9948594010a2db3701453c5ff5d085577
+SHA1 (honeyd-1.5c.tar.gz) = 342cc53e8d23c84ecb91c7b66c6e93e7ed2a992a
+RMD160 (honeyd-1.5c.tar.gz) = 2316c4fb6b74b0ece4429d392c478fcd7516b6a7
+SHA512 (honeyd-1.5c.tar.gz) = b359d915957528f24f043510ea528e1b581c4badccb04e6ad6fc5b1811fb710fa908695dbb8e35089c002b89fd2a31ce1b2c4f491cb926185901198959c70d16
+Size (honeyd-1.5c.tar.gz) = 915465 bytes
+SHA1 (patch-Makefile.in) = 760dc52d634218c10f9c5a136b1f6cc6989f2f98
+SHA1 (patch-configure) = 4528b172fb712b16f831a20d572b8439c3d4aee4
+SHA1 (patch-configure.in) = 94614c411372bf57cba29adb41385651b66efacd
+SHA1 (patch-honeydstats.c) = d6428554d195f743bd469bc0dc89dd512ecc15c2
+SHA1 (patch-tagging.c) = f231b671269696c565da23e00f493b2314197a40
+SHA1 (patch-tagging.h) = e3e180f483960830744ae06da67e3dd53601ada0
+SHA1 (patch-ui.c) = 971c36b35ac66a09a5e59ff8b2e11b4e496b8a45
+SHA1 (patch-untagging.c) = fbbaa1f971f2d82aaf603505bdc6c5a6b663d078
