@@ -1,16 +1,15 @@
-$NetBSD: patch-tagging.h,v 1.1 2017/09/10 01:44:32 dholland Exp $
+$NetBSD: patch-tagging.h,v 1.2 2021/04/13 15:42:27 nia Exp $
 
-Work around namespace conflict from libevent.
+Use libevent2 API. from FreeBSD Ports.
 
---- tagging.h~	2006-08-19 07:10:41.000000000 +0000
+--- tagging.h.orig	2007-05-28 06:12:52.000000000 +0000
 +++ tagging.h
-@@ -33,6 +33,9 @@
- #ifndef _TAGGING_
- #define _TAGGING_
+@@ -86,7 +86,7 @@ void addr_marshal(struct evbuffer *, str
+ void tag_marshal(struct evbuffer *evbuf, uint8_t tag, void *data,
+     uint16_t len);
  
-+/* work around namespace conflict from libevent */
-+#undef encode_int
-+
- void tagging_init(void);
+-void encode_int(struct evbuffer *evbuf, uint32_t number);
++void encode__int(struct evbuffer *evbuf, uint32_t number);
  
- #define SHINGLE_MIN	32
+ void tag_marshal_int(struct evbuffer *evbuf, uint8_t tag, uint32_t integer);
+ 

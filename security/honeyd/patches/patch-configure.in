@@ -1,0 +1,37 @@
+$NetBSD: patch-configure.in,v 1.1 2021/04/13 15:42:27 nia Exp $
+
+Shell portability.
+
+--- configure.in.orig	2007-05-28 06:08:34.000000000 +0000
++++ configure.in
+@@ -27,10 +27,10 @@ libevent, we can only use select on pcap
+     disable_poll=yes
+ esac
+ 
+-if test x"$disable_kqueue" == x"yes"; then
++if test x"$disable_kqueue" = x"yes"; then
+   AC_DEFINE(DISABLE_KQUEUE, 1, [Define kqueue should be disabled for libevent])
+ fi
+-if test x"$disable_poll" == x"yes"; then
++if test x"$disable_poll" = x"yes"; then
+   AC_DEFINE(DISABLE_POLL, 1, [Define poll should be disabled for libevent])
+ fi
+ 
+@@ -88,7 +88,7 @@ CLFAGS=$PCAPINC
+ have_pcap_get_selectable_fd="no"
+ AC_CHECK_LIB([pcap], [pcap_get_selectable_fd],
+ 	[have_pcap_get_selectable_fd="yes"],,)
+-if test x"$have_pcap_get_selectable_fd" == x"yes"; then
++if test x"$have_pcap_get_selectable_fd" = x"yes"; then
+ 	AC_DEFINE(HAVE_PCAP_GET_SELECTABLE_FD, 1,	
+ 		[Define if libpcap has pcap_get_selectable_fd])
+ fi
+@@ -374,7 +374,7 @@ AC_ARG_WITH(python,
+ AC_PATH_PROG(PATH_PYTHON, python)
+ if test x"$PATH_PYTHON" != x -a x"$DO_PYTHON" = xdefine ; then
+    pv_gv=`$PATH_PYTHON -c 'import sys; print sys.version[[:3]] > "2.3.0"'`
+-   if test "$pv_gv" == "False" ; then
++   if test "$pv_gv" = "False" ; then
+       AC_PATH_PROG(PATH_PYTHON24, python2.4)
+       if test x"$PATH_PYTHON24" != x ; then
+         PATH_PYTHON=$PATH_PYTHON24
