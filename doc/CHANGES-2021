@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2133 2021/04/13 16:35:56 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2134 2021/04/13 17:36:36 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3410,3 +3410,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libopenmpt to 0.5.8 [fcambus 2021-04-13]
 	Updated multimedia/mp4v2 to 4.1.6 [adam 2021-04-13]
 	Updated www/py-pylint-django to 2.4.3 [adam 2021-04-13]
+	Updated x11/gnome-desktop3 to 40.0 [dan 2021-04-13]
