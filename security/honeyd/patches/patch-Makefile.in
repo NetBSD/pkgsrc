@@ -1,17 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2006/02/19 17:23:18 adrianp Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2021/04/13 15:42:27 nia Exp $
 
---- Makefile.in.orig	2006-02-12 02:11:06.000000000 +0000
+- Install example configs to share/examples
+- Don't force optimization flags
+
+--- Makefile.in.orig	2007-05-28 06:15:43.000000000 +0000
 +++ Makefile.in
-@@ -169,7 +169,7 @@ AUTOMAKE = @AUTOMAKE@
+@@ -182,7 +182,7 @@ AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
  CC = @CC@
  CCDEPMODE = @CCDEPMODE@
 -CFLAGS = -O2 -Wall -g \
-+CFLAGS += \
++CFLAGS += -Wall \
  	-DPATH_HONEYDINCLUDE="\"$(honeydincludedir)\"" \
  	-DPATH_HONEYDDATA="\"$(honeyddatadir)\"" \
  	-DPATH_HONEYDLIB="\"$(honeydlibdir)\"" \
-@@ -321,10 +321,10 @@ libhoneyddir = $(libdir)/honeyd
+@@ -344,10 +344,10 @@ libhoneyddir = $(libdir)/honeyd
  libhoneyd_DATA = libhoneyd.so
  
  # Configuration files for Honeyd
@@ -24,39 +27,48 @@ $NetBSD: patch-aa,v 1.4 2006/02/19 17:23:18 adrianp Exp $
  		config.ethernet pf.os
  
  honeydplugins = @PLUGINS@
-@@ -364,7 +364,7 @@ honeydstats_LDADD = @LIBOBJS@ @DNETLIB@ 
+@@ -387,7 +387,7 @@ honeydstats_LDADD = @LIBOBJS@ @DNETLIB@ 
  honeydstats_CPPFLAGS = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat \
- 	@EVENTINC@ @DNETINC@ @ZINC@ @DNSRESINC@
+ 	@EVENTINC@ @DNETINC@ @ZINC@
  
 -honeydstats_CFLAGS = -O0 -Wall
-+honeydstats_CFLAGS =
++honeydstats_CFLAGS = -Wall
+ 
+ #
+ # Honeyd stats sniffer
+@@ -400,7 +400,7 @@ hsniff_LDADD = @LIBOBJS@ @PCAPLIB@ @DNET
+ hsniff_CPPFLAGS = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat \
+ 	@EVENTINC@ @PCAPINC@ @DNETINC@ @ZINC@
+ 
+-hsniff_CFLAGS = -O2 -Wall -DPATH_HONEYDDATA="\"$(honeyddatadir)\""
++hsniff_CFLAGS = -Wall -DPATH_HONEYDDATA="\"$(honeyddatadir)\""
  
  #
  # Honeyd control application
-@@ -372,7 +372,7 @@ honeydstats_CFLAGS = -O0 -Wall
+@@ -408,7 +408,7 @@ hsniff_CFLAGS = -O2 -Wall -DPATH_HONEYDD
  honeydctl_SOURCES = honeydctl.c
  honeydctl_LDADD = @LIBOBJS@ @EDITLIB@ @LIBCURSES@
  honeydctl_CPPFLAGS = @EDITINC@
 -honeydctl_CFLAGS = -O2 -Wall
-+honeydctl_CFLAGS =
++honeydctl_CFLAGS = -Wall
  INCLUDES = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat \
  	@PYTHONINC@ @EVENTINC@ @PCAPINC@ @DNETINC@ @ZINC@
  
-@@ -387,7 +387,7 @@ smtp_LDADD = @LIBOBJS@ @EVENTLIB@ @DNETL
+@@ -423,7 +423,7 @@ smtp_LDADD = @LIBOBJS@ @EVENTLIB@ @DNETL
  smtp_CPPFLAGS = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat \
- 	@EVENTINC@ @DNETINC@ @DNSRESINC@ @PCREINC@
+ 	@EVENTINC@ @DNETINC@ @PCREINC@
  
 -smtp_CFLAGS = -O2 -Wall
-+smtp_CFLAGS =
++smtp_CFLAGS = -Wall
  proxy_SOURCES = subsystems/proxy.c subsystems/proxy.h subsystems/proxy_main.c \
  	subsystems/proxy_messages.h subsystems/smtp.c subsystems/smtp.h \
  	subsystems/smtp_messages.h atomicio.c \
-@@ -397,7 +397,7 @@ proxy_LDADD = @LIBOBJS@ @EVENTLIB@ @DNET
+@@ -433,7 +433,7 @@ proxy_LDADD = @LIBOBJS@ @EVENTLIB@ @DNET
  proxy_CPPFLAGS = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat \
- 	@EVENTINC@ @DNETINC@ @DNSRESINC@ @PCREINC@
+ 	@EVENTINC@ @DNETINC@ @PCREINC@
  
 -proxy_CFLAGS = -O2 -Wall
-+proxy_CFLAGS =
++proxy_CFLAGS = -Wall
  
  ########################################################################
  ########################################################################

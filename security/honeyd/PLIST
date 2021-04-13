@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/04/13 15:42:27 nia Exp $
 bin/honeyd
 bin/honeydctl
 bin/honeydstats
+bin/hsniff
 include/honeyd/debug.h
 include/honeyd/hooks.h
 include/honeyd/plugins.h
