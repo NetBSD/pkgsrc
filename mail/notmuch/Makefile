@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2021/02/19 15:37:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2021/04/13 08:36:09 wiz Exp $
 
 DISTNAME=	notmuch-0.31.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +17,8 @@ USE_TOOLS+=	bash gmake makeinfo pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
 #TEST_TARGET=	check
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 REPLACE_BASH+=	emacs/notmuch-emacs-mua
 
@@ -48,7 +51,6 @@ LDFLAGS.SunOS+=	-lnsl
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
 .include "../../mail/gmime3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.4
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5.2
