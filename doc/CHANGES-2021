@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2115 2021/04/13 08:36:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2116 2021/04/13 09:02:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3390,3 +3390,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libsigc++ to 2.10.6nb1 [wiz 2021-04-13]
 	Removed multimedia/tvtime [nia 2021-04-13]
 	Updated mail/notmuch to 0.31.4nb1 [wiz 2021-04-13]
+	Updated devel/doxygen to 1.8.20nb2 [wiz 2021-04-13]
