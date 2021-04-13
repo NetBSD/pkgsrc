@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2119 2021/04/13 09:16:52 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2120 2021/04/13 09:46:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3395,3 +3395,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glibmm to 2.66.0nb1 [wiz 2021-04-13]
 	Updated audio/faudio to 21.04 [adam 2021-04-13]
 	Updated sysutils/ansible-base to 2.10.8 [adam 2021-04-13]
+	Updated print/poppler-glib to 21.04.0nb2 [wiz 2021-04-13]
