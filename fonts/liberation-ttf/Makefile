@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/04/08 10:57:27 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/13 08:20:51 wiz Exp $
 
 DISTNAME=	liberation-fonts-ttf-2.1.3
 PKGNAME=	${DISTNAME:S/-fonts//}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberationfonts/}
 GITHUB_PROJECT=	liberation-fonts
@@ -23,6 +24,7 @@ INSTALLATION_DIRS+=	${DOCSDIR}
 BUILD_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
+PYTHON_FOR_BUILD_ONLY=	tool
 REPLACE_PYTHON+=	scripts/setisFixedPitch-fonttools.py
 
 do-install:
