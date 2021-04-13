@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.11 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.12 2021/04/13 11:01:17 cirnatdan Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -355,14 +355,14 @@ pkgsrc, the easier further updates are.  Those developers in charge of
 issuing major GNOME updates will be grateful if you do that.</para>
 
 <para>The most common places to report bugs are the <ulink
-url="https://bugzilla.gnome.org/">GNOME's Bugzilla</ulink> and the <ulink
-url="https://bugzilla.freedesktop.org/">freedesktop.org's
-Bugzilla</ulink>.  Not all components use these to track bugs, but most
+url="https://gitlab.gnome.org/GNOME">GNOME's GitLab</ulink> and the <ulink
+url="https://gitlab.freedesktop.org/explore/groups">freedesktop.org's
+GitLab</ulink>.  Not all components use these to track bugs, but most
 of them do.  Do not be short on your reports: always provide detailed
 explanations of the current failure, how it can be improved to achieve
-maximum portability and, if at all possible, provide a patch against CVS
-head.  The more verbose you are, the higher chances of your patch being
-accepted.</para>
+maximum portability and, if at all possible, provide a patch against the
+main Git branch.  The more verbose you are, the higher chances of your
+patch being accepted.</para>
 
 <para>Also, please avoid using preprocessor magic to fix portability
 issues.  While the FreeBSD GNOME people are doing a great job in porting
