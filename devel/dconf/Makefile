@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/12/04 20:45:08 nia Exp $
+# $NetBSD: Makefile,v 1.61 2021/04/13 08:08:40 wiz Exp $
 
 DISTNAME=	dconf-0.36.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config
 
+PYTHON_FOR_BUILD_ONLY=	tool
 REPLACE_PYTHON+=	*.py
 
 # gtk-doc wants to run dconf-scan, but that does not find its library libdconf.so.1
