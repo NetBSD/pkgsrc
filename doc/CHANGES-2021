@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2117 2021/04/13 09:04:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2118 2021/04/13 09:10:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/notmuch to 0.31.4nb1 [wiz 2021-04-13]
 	Updated devel/doxygen to 1.8.20nb2 [wiz 2021-04-13]
 	Updated graphics/gexiv2 to 0.12.2nb1 [wiz 2021-04-13]
+	Updated devel/glibmm to 2.66.0nb1 [wiz 2021-04-13]
