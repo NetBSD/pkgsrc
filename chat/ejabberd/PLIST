@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2021/03/10 16:44:21 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.58 2021/04/13 08:02:24 triaxx Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -343,6 +343,7 @@ lib/${PKGNAME}/priv/msgs/pt-br.msg
 lib/${PKGNAME}/priv/msgs/pt.msg
 lib/${PKGNAME}/priv/msgs/ru.msg
 lib/${PKGNAME}/priv/msgs/sk.msg
+lib/${PKGNAME}/priv/msgs/sq.msg
 lib/${PKGNAME}/priv/msgs/sv.msg
 lib/${PKGNAME}/priv/msgs/th.msg
 lib/${PKGNAME}/priv/msgs/tr.msg
