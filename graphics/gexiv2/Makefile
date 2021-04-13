@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/04/09 20:24:43 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/13 09:04:19 wiz Exp $
 
 DISTNAME=	gexiv2-0.12.2
+PKGREVISION=	1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gexiv2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +19,8 @@ USE_TOOLS+=	pkg-config
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gexiv2
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 MESON_ARGS+=	-Dpython2_girdir=no
 MESON_ARGS+=	-Dpython3_girdir=no
