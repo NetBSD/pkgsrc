@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/03/08 08:44:28 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/13 08:55:58 nia Exp $
 
 DISTNAME=	nsm-2.3.10
 CATEGORIES=	www
@@ -27,16 +27,19 @@ SUBST_SED.nift+=	-e 's,/usr/local/lib,${PREFIX}/lib,g'
 SUBST_SED.nift+=	-e 's,CXXFLAGS=-std=c++11,CXXFLAGS+=-std=c++11,g'
 SUBST_SED.nift+=	-e 's,LINK=,LDFLAGS+=,g'
 SUBST_SED.nift+=	-e 's,LINK+=,LDFLAGS+=,g'
+SUBST_SED.nift+=	-e 's,-O3,,g'
 
 MAKE_ENV+=	BUNDLED=0
 MAKE_ENV+=	LUA_VERSION=5.3
 DL_AUTO_VARS=	yes
 
+BUILDLINK_TRANSFORM+=	opt:-llua-5.3:-llua5.3
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s nsm nift
 
 .include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../lang/lua53/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
