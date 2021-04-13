@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/03/27 23:18:59 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/04/13 08:55:58 nia Exp $
 
 SHA1 (nsm-2.3.10.tar.gz) = cc9a04d17a0dc3969241b2ac4758664b335da7d8
 RMD160 (nsm-2.3.10.tar.gz) = 627cbbba3e4bd1e5cfe92768ec2beef8e260ff74
 SHA512 (nsm-2.3.10.tar.gz) = b329b71b4af87820d75ca82c6bb429c82088f2cae24acdfbbb7cf6ededfd54a91ad96ac605b57d359770faa3f9956745d822d08ed1c83a7678f4a2781e904492
 Size (nsm-2.3.10.tar.gz) = 1607394 bytes
+SHA1 (patch-Lua.h) = bc3fd674e8fbb506b168820b688f3c572304e16b
+SHA1 (patch-Makefile) = 4af14ac2df1ce272214322b3f82bc91cd9e005e6
