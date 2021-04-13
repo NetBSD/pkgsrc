@@ -1,10 +1,15 @@
-$NetBSD: distinfo,v 1.6 2020/12/20 13:07:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/04/13 16:32:09 adam Exp $
 
-SHA1 (mp4v2-4.1.5.tar.gz) = a57fb90b4d14b240f90431ba06c450283e0f9d28
-RMD160 (mp4v2-4.1.5.tar.gz) = 58b1b4de372499505447e6854cfe1214881bf813
-SHA512 (mp4v2-4.1.5.tar.gz) = 593071e3e2d48a7bc704d4b32b28de300363d797236cf8904b3c403758fa08fcd9c0a1ebafc462f69d3964493515eeb391e23d5e27366e06c8d65f68c936b65a
-Size (mp4v2-4.1.5.tar.gz) = 2681905 bytes
+SHA1 (mp4v2-4.1.6.tar.gz) = f2ee0853cc7219f1dc4bb09d9cf0cf1327704813
+RMD160 (mp4v2-4.1.6.tar.gz) = 5fc23086c05822c04eefa407076177218ae9a8b7
+SHA512 (mp4v2-4.1.6.tar.gz) = 91f5183d38c9d7fd754ba4b5e149b00600d5b6cb8da063667e5c3a6c8edb4e5efc919d6c4381acd6e011ef56dce3f722a78c51b984066f5c0cc54aae735f3611
+Size (mp4v2-4.1.6.tar.gz) = 4322307 bytes
 SHA1 (patch-include_mp4v2_file.h) = bfb8ed37208a1e04c2cb2ca4a8409e4b2b274065
+SHA1 (patch-libutil_Utility.h) = 982a92307e50061cefb8b979382c227cae144358
 SHA1 (patch-src_mp4.cpp) = 53435290d3f3fd9ecc552357f674c54f5c6ec98d
 SHA1 (patch-src_mp4atom.cpp) = 78a6dce747a8c5cc73f231fa9b81d116b51cf4bb
-SHA1 (patch-src_rtphint.cpp) = 7ccbacb6873a410b6e8b0d376a2ae7ada1c022d5
+SHA1 (patch-util_mp4art.cpp) = e14257a57bb297f158c1d2a9e39023535e558895
+SHA1 (patch-util_mp4chaps.cpp) = c22a9b8b086165d8e65aeb9f470d7c3eabb9adb6
+SHA1 (patch-util_mp4file.cpp) = 7e8ca0b042e96df1bc096f3efb351600432cdfd0
+SHA1 (patch-util_mp4subtitle.cpp) = cbb1848e1c439710e07bd4a21eeb9278a3a240d8
+SHA1 (patch-util_mp4track.cpp) = 70a30ea2d54fa6e5c740d515fd11cbbbc5223063
