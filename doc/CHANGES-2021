@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2136 2021/04/13 18:47:09 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2137 2021/04/13 19:23:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3413,3 +3413,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/gnome-desktop3 to 40.0 [dan 2021-04-13]
 	Updated pkgtools/pkg_rolling-replace to 0.24.11 [rhialto 2021-04-13]
 	Updated x11/modular-xorg-server to 1.20.11 [wiz 2021-04-13]
+	Updated devel/glib2 to 2.68.1 [adam 2021-04-13]
+	Updated devel/glib2-tools to 2.68.1 [adam 2021-04-13]
+	Updated devel/gdbus-codegen to 2.68.1 [adam 2021-04-13]
