@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 21:51:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2021/04/13 10:26:57 nia Exp $
 #
 
 DISTNAME=	lhs-0.1
@@ -19,6 +19,9 @@ MAKE_ENV+=	OPENSSL_ROOT=${BUILDLINK_PREFIX.openssl}
 MAKE_ENV+=	DEFAULT_ROOT_DIR=${PREFIX}/share/httpd/htdocs
 
 LIBS.SunOS+=	-lsocket
+
+# overrides definition of read
+FORTIFY_SUPPORTED=	no
 
 INSTALLATION_DIRS=	sbin
 
