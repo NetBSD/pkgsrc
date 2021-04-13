@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2110 2021/04/13 08:17:17 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2111 2021/04/13 08:20:34 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/dconf to 0.36.0nb4 [wiz 2021-04-13]
 	Removed x11/9term [nia 2021-04-13]
 	Updated net/glib-networking to 2.64.3nb2 [wiz 2021-04-13]
+	Updated net/syncthing to 1.15.1nb1 [triaxx 2021-04-13]
