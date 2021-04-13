@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.21 2021/01/09 19:12:46 rhialto Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.22 2021/04/13 17:51:21 rhialto Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -133,6 +133,9 @@ Use
 to check for mismatched packages, mark them with 'mismatch=YES',
 and replace those too.
 Otherwise, consider packages marked 'mismatch=YES' to be mismatched.
+Marking with 'mismatch=YES' only occurs if the calling user can write
+to the package database. It is not an error if this fails; it just does not
+persist the status.
 .It Fl v
 Verbose output.
 .It Fl X Ar pkgs
