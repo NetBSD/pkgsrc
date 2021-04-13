@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/11/05 09:09:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2021/04/13 10:19:24 nia Exp $
 
 OVTVER=		10.3.0
 DISTNAME=	open-vm-tools-${OVTVER}-8931395
@@ -16,12 +16,14 @@ GITHUB_PROJECT=	open-vm-tools
 GITHUB_RELEASE=	stable-${OVTVER}
 #WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/${GITHUB_PROJECT}
 
-EXTRACT_USING=	bsdtar
-
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
 GCC_REQD+=	4.8
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-Werror
+
+# Workaround for glib2-2.68.0 c++ fallout.
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 USE_LANGUAGES=		c gnu++11
 USE_LIBTOOL=		yes
@@ -51,20 +53,12 @@ SUBST_FILES.fix-etc-path+=	lib/guestApp/guestApp.c
 SUBST_FILES.fix-etc-path+=	lib/procMgr/procMgrPosix.c
 SUBST_VARS.fix-etc-path+=	PREFIX
 
+CHECK_PORTABILITY_SKIP+=	scripts/solaris/network
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f -i
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedef
-CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedef
-.elif !empty(PKGSRC_COMPILER:Mgcc) && empty(CC_VERSION:U:Mgcc-[1-3].*) && empty(CC_VERSION:U:Mgcc-4.[0-7]*)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
-CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
-.endif
-
 .include "options.mk"
-
 .include "../../archivers/libmspack/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
