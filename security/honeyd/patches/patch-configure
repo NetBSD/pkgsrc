@@ -1,0 +1,41 @@
+$NetBSD: patch-configure,v 1.1 2021/04/13 15:42:27 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2007-05-28 06:15:44.000000000 +0000
++++ configure
+@@ -19855,14 +19855,14 @@ libevent, we can only use select on pcap
+     disable_poll=yes
+ esac
+ 
+-if test x"$disable_kqueue" == x"yes"; then
++if test x"$disable_kqueue" = x"yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define DISABLE_KQUEUE 1
+ _ACEOF
+ 
+ fi
+-if test x"$disable_poll" == x"yes"; then
++if test x"$disable_poll" = x"yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define DISABLE_POLL 1
+@@ -21408,7 +21408,7 @@ if test $ac_cv_lib_pcap_pcap_get_selecta
+   have_pcap_get_selectable_fd="yes"
+ fi
+ 
+-if test x"$have_pcap_get_selectable_fd" == x"yes"; then
++if test x"$have_pcap_get_selectable_fd" = x"yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_PCAP_GET_SELECTABLE_FD 1
+@@ -22355,7 +22355,7 @@ fi
+ 
+ if test x"$PATH_PYTHON" != x -a x"$DO_PYTHON" = xdefine ; then
+    pv_gv=`$PATH_PYTHON -c 'import sys; print sys.version[:3] > "2.3.0"'`
+-   if test "$pv_gv" == "False" ; then
++   if test "$pv_gv" = "False" ; then
+       # Extract the first word of "python2.4", so it can be a program name with args.
+ set dummy python2.4; ac_word=$2
+ { echo "$as_me:$LINENO: checking for $ac_word" >&5
