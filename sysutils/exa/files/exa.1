@@ -77,7 +77,8 @@ Use this twice to also show the `\f[C].\f[R]' and `\f[C]..\f[R]'
 directories.
 .TP
 \f[B]\f[CB]-d\f[B]\f[R], \f[B]\f[CB]--list-dirs\f[B]\f[R]
-List directories like regular files.
+List directories as regular files, rather than recursing and listing
+their contents.
 .TP
 \f[B]\f[CB]-L\f[B]\f[R], \f[B]\f[CB]--level=DEPTH\f[B]\f[R]
 Limit the depth of recursion.
@@ -182,6 +183,18 @@ List each file\[cq]s extended attributes and sizes.
 .TP
 \f[B]\f[CB]--git\f[B]\f[R] [if exa was built with git support]
 List each file\[cq]s Git status, if tracked.
+.PP
+This adds a two-character column indicating the staged and unstaged
+statuses respectively.
+The status character can be `\f[C]-\f[R]' for not modified,
+`\f[C]M\f[R]' for a modified file, `\f[C]N\f[R]' for a new file,
+`\f[C]D\f[R]' for deleted, `\f[C]R\f[R]' for renamed, `\f[C]T\f[R]' for
+type-change, `\f[C]I\f[R]' for ignored, and `\f[C]U\f[R]' for
+conflicted.
+.PP
+Directories will be shown to have the status of their contents, which is
+how `deleted' is possible: if a directory contains a file that has a
+certain status, it will be shown to have that status.
 .SH ENVIRONMENT VARIABLES
 .PP
 exa responds to the following environment variables:
