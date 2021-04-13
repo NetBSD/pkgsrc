@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.152 2020/11/05 09:07:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.153 2021/04/13 09:02:25 wiz Exp $
 
 DISTNAME=	doxygen-1.8.20.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://doxygen.nl/files/
 
@@ -28,6 +28,8 @@ MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 CMAKE_ARGS+=		-DDOC_INSTALL_DIR=share/doc/doxygen
 CMAKE_ARGS+=		-DGIT_EXECUTABLE=git # avoid searching for git executable
 TEST_TARGET=		tests
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs
@@ -71,7 +73,6 @@ post-install:
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
