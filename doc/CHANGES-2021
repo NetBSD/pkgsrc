@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2108 2021/04/13 08:08:50 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2109 2021/04/13 08:10:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3383,3 +3383,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/exa to 0.10.1 [fox 2021-04-13]
 	Updated chat/ejabberd to 21.04 [triaxx 2021-04-13]
 	Updated devel/dconf to 0.36.0nb4 [wiz 2021-04-13]
+	Removed x11/9term [nia 2021-04-13]
