@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2112 2021/04/13 08:21:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2113 2021/04/13 08:28:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3387,3 +3387,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/glib-networking to 2.64.3nb2 [wiz 2021-04-13]
 	Updated net/syncthing to 1.15.1nb1 [triaxx 2021-04-13]
 	Updated fonts/liberation-ttf to 2.1.3nb1 [wiz 2021-04-13]
+	Updated devel/libsigc++ to 2.10.6nb1 [wiz 2021-04-13]
