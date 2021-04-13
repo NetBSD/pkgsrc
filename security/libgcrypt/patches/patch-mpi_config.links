@@ -1,0 +1,28 @@
+$NetBSD: patch-mpi_config.links,v 1.3 2021/04/13 17:38:12 dholland Exp $
+
+Extend the m68k assembler syntax probe to match NetBSD targets.
+
+(...probably should just make ELF_SYNTAX the default for pkgsrc, but
+not now)
+
+--- mpi/config.links~	2021-01-28 12:53:52.000000000 +0000
++++ mpi/config.links
+@@ -279,6 +279,18 @@ case "${host}" in
+ 	path="m68k"
+         mpi_cpu_arch="m68k"
+ 	;;
++    m680[234]0*-*-netbsd | \
++    m68k-*-netbsd)
++	echo '#define ELF_SYNTAX'           >>./mpi/asm-syntax.h
++	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
++	path="m68k"
++        mpi_cpu_arch="m68k"
++	;;
++    m68060*-*-netbsd)
++	echo '#define ELF_SYNTAX'           >>./mpi/asm-syntax.h
++	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
++        mpi_cpu_arch="m68k"
++	;;
+     m68k-atari-mint)
+ 	echo '#define MIT_SYNTAX'           >>./mpi/asm-syntax.h
+ 	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
