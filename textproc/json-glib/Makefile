@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/04/12 11:16:11 nia Exp $
+# $NetBSD: Makefile,v 1.34 2021/04/13 06:31:05 wiz Exp $
 
 DISTNAME=	json-glib-1.4.4
 PKGREVISION=	2
@@ -12,6 +12,7 @@ COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	msgfmt pkg-config xgettext
 
