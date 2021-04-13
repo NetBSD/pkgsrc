@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/04/13 08:17:08 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2021/04/13 08:22:16 wiz Exp $
 
 DISTNAME=	glib-networking-2.64.3
 PKGREVISION=	2
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Network-related giomodules for glib
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=	pkg-config gmake gettext
+USE_TOOLS+=	pkg-config gettext
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
