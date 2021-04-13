@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.924 2021/04/06 08:34:00 tnn Exp $
+# $NetBSD: Makefile,v 1.925 2021/04/13 08:09:23 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
 
-SUBDIR+=	9term
 SUBDIR+=	XaoS
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xbae
