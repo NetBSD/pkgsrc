@@ -1,0 +1,38 @@
+$NetBSD: patch-configure,v 1.1 2021/04/13 10:35:27 nia Exp $
+
+Replace use of get-wings-flags with pkg-config, since newer
+WindowMaker no longer has get-wings-flags. from FreeBSD Ports.
+
+--- configure.orig	2005-03-26 13:57:04.000000000 +0000
++++ configure
+@@ -6313,7 +6313,7 @@ fi
+ fi
+ 
+ # Extract the first word of "get-wings-flags", so it can be a program name with args.
+-set dummy get-wings-flags; ac_word=$2
++set dummy pkg-config; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+ echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
+ if test "${ac_cv_prog_GETWINGSFLAGS+set}" = set; then
+@@ -6353,9 +6353,9 @@ echo "$as_me: error: 'get-wings-flags' c
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-WCFLAGS=`get-wings-flags --cflags`
+-WLDFLAGS=`get-wings-flags --ldflags`
+-WLIBS=`get-wings-flags --libs`
++WCFLAGS=`pkg-config WINGs --cflags`
++WLDFLAGS=
++WLIBS=`pkg-config WINGs --libs`
+ 
+ 
+ 
+@@ -6506,7 +6506,7 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define DEF_AUTH_DIR "$DMDIR/authdir"
++#define DEF_AUTH_DIR "$DMDIR"
+ _ACEOF
+ 
+ 
