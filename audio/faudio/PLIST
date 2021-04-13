@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/21 20:02:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/13 09:15:06 adam Exp $
 include/F3DAudio.h
 include/FACT.h
 include/FACT3D.h
@@ -12,5 +12,5 @@ lib/cmake/FAudio/FAudio-targets-release.cmake
 lib/cmake/FAudio/FAudio-targets.cmake
 lib/libFAudio.so
 lib/libFAudio.so.0
-lib/libFAudio.so.0.21.03
+lib/libFAudio.so.0.21.04
 lib/pkgconfig/FAudio.pc
