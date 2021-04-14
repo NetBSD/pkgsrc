@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/15 10:40:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/14 05:03:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,9 +32,6 @@ ${PYSITELIB}/zope/component/factory.pyo
 ${PYSITELIB}/zope/component/globalregistry.py
 ${PYSITELIB}/zope/component/globalregistry.pyc
 ${PYSITELIB}/zope/component/globalregistry.pyo
-${PYSITELIB}/zope/component/hookable.py
-${PYSITELIB}/zope/component/hookable.pyc
-${PYSITELIB}/zope/component/hookable.pyo
 ${PYSITELIB}/zope/component/hooks.py
 ${PYSITELIB}/zope/component/hooks.pyc
 ${PYSITELIB}/zope/component/hooks.pyo
