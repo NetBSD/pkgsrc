@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/07 04:35:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/04/14 11:19:16 nia Exp $
 bin/melt
 include/mlt++/Mlt.h
 include/mlt++/MltAnimation.h
+include/mlt++/MltAudio.h
 include/mlt++/MltConfig.h
 include/mlt++/MltConsumer.h
 include/mlt++/MltDeque.h
@@ -27,6 +28,7 @@ include/mlt++/MltTractor.h
 include/mlt++/MltTransition.h
 include/mlt/framework/mlt.h
 include/mlt/framework/mlt_animation.h
+include/mlt/framework/mlt_audio.h
 include/mlt/framework/mlt_cache.h
 include/mlt/framework/mlt_consumer.h
 include/mlt/framework/mlt_deque.h
@@ -64,9 +66,9 @@ lib/mlt/libmltavformat.so
 lib/mlt/libmltcore.so
 lib/mlt/libmltdecklink.so
 lib/mlt/libmltfrei0r.so
-lib/mlt/libmltgtk2.so
+lib/mlt/libmltgdk.so
+lib/mlt/libmltjackrack.so
 lib/mlt/libmltkdenlive.so
-lib/mlt/libmltlinsys.so
 lib/mlt/libmltmotion_est.so
 lib/mlt/libmltnormalize.so
 lib/mlt/libmltoldfilm.so
@@ -87,12 +89,14 @@ lib/pkgconfig/mlt-framework.pc
 share/mlt/avformat/blacklist.txt
 share/mlt/avformat/consumer_avformat.yml
 share/mlt/avformat/producer_avformat.yml
+share/mlt/avformat/yuv_only.txt
 share/mlt/core/consumer_multi.yml
 share/mlt/core/data_fx.properties
 share/mlt/core/filter_audiomap.yml
 share/mlt/core/filter_audiowave.yml
 share/mlt/core/filter_brightness.yml
 share/mlt/core/filter_channelcopy.yml
+share/mlt/core/filter_choppy.yml
 share/mlt/core/filter_crop.yml
 share/mlt/core/filter_data_show.yml
 share/mlt/core/filter_fieldorder.yml
@@ -141,15 +145,19 @@ share/mlt/frei0r/filter_cairoblend_mode.yml
 share/mlt/frei0r/not_thread_safe.txt
 share/mlt/frei0r/param_name_map.yaml
 share/mlt/frei0r/resolution_scale.yml
-share/mlt/gtk2/consumer_gtk2_preview.yml
-share/mlt/gtk2/filter_rescale.yml
-share/mlt/gtk2/producer_pango.yml
-share/mlt/gtk2/producer_pixbuf.yml
+share/mlt/gdk/filter_rescale.yml
+share/mlt/gdk/producer_pango.yml
+share/mlt/gdk/producer_pixbuf.yml
+share/mlt/jackrack/blacklist.txt
+share/mlt/jackrack/consumer_jack.yml
+share/mlt/jackrack/filter_jack.yml
+share/mlt/jackrack/filter_jackrack.yml
+share/mlt/jackrack/filter_ladspa.yml
+share/mlt/jackrack/producer_ladspa.yml
 share/mlt/kdenlive/filter_boxblur.yml
 share/mlt/kdenlive/filter_freeze.yml
 share/mlt/kdenlive/filter_wave.yml
 share/mlt/kdenlive/producer_framebuffer.yml
-share/mlt/linsys/consumer_sdi.yml
 share/mlt/metaschema.yaml
 share/mlt/motion_est/filter_autotrack_rectangle.yml
 share/mlt/motion_est/filter_motion_est.yml
@@ -201,9 +209,11 @@ share/mlt/plus/filter_lift_gamma_gain.yml
 share/mlt/plus/filter_loudness.yml
 share/mlt/plus/filter_loudness_meter.yml
 share/mlt/plus/filter_lumakey.yml
+share/mlt/plus/filter_pillar_echo.yml
 share/mlt/plus/filter_rgblut.yml
 share/mlt/plus/filter_sepia.yml
 share/mlt/plus/filter_spot_remover.yml
+share/mlt/plus/filter_strobe.yml
 share/mlt/plus/filter_text.yml
 share/mlt/plus/filter_timer.yml
 share/mlt/plus/producer_blipflash.yml
@@ -215,6 +225,7 @@ share/mlt/plusgpl/filter_lumaliftgaingamma.yml
 share/mlt/plusgpl/filter_rotoscoping.yml
 share/mlt/presets/consumer/avformat/AAC
 share/mlt/presets/consumer/avformat/ALAC
+share/mlt/presets/consumer/avformat/AV1
 share/mlt/presets/consumer/avformat/FLAC
 share/mlt/presets/consumer/avformat/Flash
 share/mlt/presets/consumer/avformat/GIF
@@ -223,6 +234,8 @@ share/mlt/presets/consumer/avformat/MP3
 share/mlt/presets/consumer/avformat/MPEG-2
 share/mlt/presets/consumer/avformat/MPEG-4
 share/mlt/presets/consumer/avformat/MPEG-4-ASP
+share/mlt/presets/consumer/avformat/Slide-Deck-H264
+share/mlt/presets/consumer/avformat/Slide-Deck-HEVC
 share/mlt/presets/consumer/avformat/Sony-PSP
 share/mlt/presets/consumer/avformat/Vorbis
 share/mlt/presets/consumer/avformat/WAV
@@ -389,7 +402,9 @@ share/mlt/qt/filter_audiospectrum.yml
 share/mlt/qt/filter_audiowaveform.yml
 share/mlt/qt/filter_lightshow.yml
 share/mlt/qt/filter_qtblend.yml
+share/mlt/qt/filter_qtcrop.yml
 share/mlt/qt/filter_qtext.yml
+share/mlt/qt/filter_typewriter.yml
 share/mlt/qt/producer_kdenlivetitle.yml
 share/mlt/qt/producer_qimage.yml
 share/mlt/qt/producer_qtext.yml
