@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2021/03/06 04:47:37 markd Exp $
+# $NetBSD: Makefile,v 1.53 2021/04/14 22:39:25 markd Exp $
 
 DISTNAME=	konsole-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	http://kde.org/applications/system/konsole/
@@ -14,9 +15,9 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 USE_TOOLS+=	msgmerge
 
 .include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kparts/buildlink3.mk"
 .include "../../devel/kpty/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
