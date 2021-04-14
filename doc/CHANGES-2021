@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2138 2021/04/14 05:04:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2139 2021/04/14 07:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3420,3 +3420,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ZopeTestrunner to 5.3.0 [adam 2021-04-14]
 	Updated devel/py-ZopeSchema to 6.1.0 [adam 2021-04-14]
 	Updated devel/py-ZopeComponent to 5.0.0 [adam 2021-04-14]
+	Updated multimedia/libvpx to 1.10.0 [adam 2021-04-14]
+	Updated devel/py-typed-ast to 1.4.3 [adam 2021-04-14]
