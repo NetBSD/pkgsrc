@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2140 2021/04/14 07:28:06 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2141 2021/04/14 10:53:58 kim Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3423,3 +3423,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/libvpx to 1.10.0 [adam 2021-04-14]
 	Updated devel/py-typed-ast to 1.4.3 [adam 2021-04-14]
 	Updated lang/vala to 0.52.1 [wiz 2021-04-14]
+	Updated textproc/oniguruma to 6.9.7 [kim 2021-04-14]
