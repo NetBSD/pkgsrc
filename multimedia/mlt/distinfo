@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.11 2020/06/07 04:35:25 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/04/14 11:19:16 nia Exp $
 
-SHA1 (mlt-6.20.0.tar.gz) = af70e65d0ee36d096a5b4e1e8f2dc457a49cdab5
-RMD160 (mlt-6.20.0.tar.gz) = 65f2ab8b6890112b5f705f1ebec4bbcd29028931
-SHA512 (mlt-6.20.0.tar.gz) = 939e837fb07ff0eace308987d83913e979f82c6eb156b40fde784f3f2b031b5f6896ac96dcde1627925cbb6fc76725f3fc4e5b2d0616fae11263648bcdbe82e3
-Size (mlt-6.20.0.tar.gz) = 1446137 bytes
+SHA1 (mlt-6.26.1.tar.gz) = 1540b23483cf9c741795321404dac2446d517366
+RMD160 (mlt-6.26.1.tar.gz) = e1181cd38733c89bf7e8be386e15b61fa9700deb
+SHA512 (mlt-6.26.1.tar.gz) = 6a3ef572cddee48c3089b19b2920de84936aa913a3f35b6f06e4bece2dc7a5a168daecfbaa8111c799b5316f967c37b09d485c000a4eba69af4f7ee3dc8db9e4
+Size (mlt-6.26.1.tar.gz) = 1366022 bytes
 SHA1 (patch-src_framework_mlt__properties.c) = 5e8b30cdabb90ed96a122a2654dc254f74a87374
 SHA1 (patch-src_framework_mlt__property.h) = d477cd70b6fecba00f26a5c8f155c9bab73aea03
-SHA1 (patch-src_modules_qt_filter__qtext.cpp) = f164e057bbd7aa320642eef1643d457d347b5f5e
-SHA1 (patch-src_modules_qt_graph.h) = db5b1e1b06c728d565fc4a8f090d30832166460e
-SHA1 (patch-src_modules_qt_producer__qtext.cpp) = ade0b8b1ab1ca6bc6c40d189ddfce18e5bf0f4c1
