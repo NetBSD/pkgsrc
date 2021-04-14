@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2143 2021/04/14 11:22:00 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2144 2021/04/14 11:47:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3424,9 +3424,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-typed-ast to 1.4.3 [adam 2021-04-14]
 	Updated lang/vala to 0.52.1 [wiz 2021-04-14]
 	Updated textproc/oniguruma to 6.9.7 [kim 2021-04-14]
-<<<<<<< CHANGES-2021
-	Updated www/hackernews-tui to 0.4.0 [pin 2021-04-14]
-=======
 	Updated multimedia/mlt to 6.26.1 [nia 2021-04-14]
->>>>>>> 1.2142
 	Updated www/hackernews-tui to 0.4.0 [pin 2021-04-14]
