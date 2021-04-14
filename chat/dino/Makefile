@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/01/19 22:44:26 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/14 07:28:17 wiz Exp $
 
 DISTNAME=	dino-0.2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dino/}
 GITHUB_PROJECT=	dino
