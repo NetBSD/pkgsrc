@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/08/21 12:42:13 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/04/14 04:57:39 adam Exp $
 
-SHA1 (zope.testrunner-5.2.tar.gz) = ec7ca7a1031caf45bdd93e95a8d2c789f9dc9dc8
-RMD160 (zope.testrunner-5.2.tar.gz) = 0173589579763445c4c22cf43b08af57d88f3a0c
-SHA512 (zope.testrunner-5.2.tar.gz) = 8b5bb942f3ca42b6fa4de7db5b7149562aa1047128bbd3498a385f8537335cb0cab1a10934faedcd0a1492a14d57accdeefcb95a57d827ad80fff4e20ffd26ef
-Size (zope.testrunner-5.2.tar.gz) = 141836 bytes
+SHA1 (zope.testrunner-5.3.0.tar.gz) = dd20ace27071ccff5c28998dad5b85a17b42c701
+RMD160 (zope.testrunner-5.3.0.tar.gz) = bda949a118756dce7b539e0717b6986ae5da3741
+SHA512 (zope.testrunner-5.3.0.tar.gz) = 6fd9375c7b58847868aaf04e85722fcc2b1fe7a8e4ae2ec9103dcb091e6f837d649557ba014146876f814345240b20863bf1584f32212b0b1b28c38ed343b87a
+Size (zope.testrunner-5.3.0.tar.gz) = 141406 bytes
