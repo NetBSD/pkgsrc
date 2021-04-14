@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2021/03/24 16:33:46 adam Exp $
+# $NetBSD: Makefile,v 1.118 2021/04/14 19:11:20 adam Exp $
 
-DISTNAME=	samba-4.13.7
+DISTNAME=	samba-4.14.2
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -21,6 +21,7 @@ DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 
 BUILD_DEFS+=		VARBASE
 

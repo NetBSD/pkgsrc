@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/01/28 13:17:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/04/14 19:11:20 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -111,7 +111,6 @@ include/util/genrand.h
 include/util/idtree.h
 include/util/idtree_random.h
 include/util/signal.h
-include/util/string_wrappers.h
 include/util/substitute.h
 include/util/tevent_ntstatus.h
 include/util/tevent_unix.h
@@ -146,13 +145,13 @@ lib/libndr-standard.so.0
 lib/libndr-standard.so.0.0.1
 lib/libndr.so
 lib/libndr.so.1
-lib/libndr.so.1.0.0
+lib/libndr.so.1.0.1
 lib/libnetapi.so
 lib/libnetapi.so.0
 lib/libnss_winbind.so
 lib/libsamba-credentials.so
-lib/libsamba-credentials.so.0
-lib/libsamba-credentials.so.0.0.1
+lib/libsamba-credentials.so.1
+lib/libsamba-credentials.so.1.0.0
 lib/libsamba-errors.so
 lib/libsamba-errors.so.1
 lib/libsamba-hostconfig.so
@@ -172,11 +171,12 @@ lib/libsamdb.so.0
 lib/libsamdb.so.0.0.1
 lib/libsmbclient.so
 lib/libsmbclient.so.0
-lib/libsmbclient.so.0.6.0
+lib/libsmbclient.so.0.7.0
 lib/libsmbconf.so
 lib/libsmbconf.so.0
 ${PLIST.ldap}lib/libsmbldap.so
 ${PLIST.ldap}lib/libsmbldap.so.2
+lib/libsmbldap.so.2.1.0
 lib/libtevent-util.so
 lib/libtevent-util.so.0
 lib/libtevent-util.so.0.0.1
@@ -205,7 +205,6 @@ ${PYSITELIB}/samba/auth.so
 ${PYSITELIB}/samba/auth_util.py
 ${PYSITELIB}/samba/colour.py
 ${PYSITELIB}/samba/common.py
-${PYSITELIB}/samba/compat.py
 ${PYSITELIB}/samba/credentials.so
 ${PYSITELIB}/samba/crypto.so
 ${PYSITELIB}/samba/dbchecker.py
@@ -265,6 +264,7 @@ ${PYSITELIB}/samba/forest_update.py
 ${PYSITELIB}/samba/gensec.so
 ${PYSITELIB}/samba/getopt.py
 ${PYSITELIB}/samba/gp_ext_loader.py
+${PYSITELIB}/samba/gp_msgs_ext.py
 ${PYSITELIB}/samba/gp_parse/__init__.py
 ${PYSITELIB}/samba/gp_parse/gp_aas.py
 ${PYSITELIB}/samba/gp_parse/gp_csv.py
@@ -273,6 +273,8 @@ ${PYSITELIB}/samba/gp_parse/gp_ini.py
 ${PYSITELIB}/samba/gp_parse/gp_pol.py
 ${PYSITELIB}/samba/gp_scripts_ext.py
 ${PYSITELIB}/samba/gp_sec_ext.py
+${PYSITELIB}/samba/gp_smb_conf_ext.py
+${PYSITELIB}/samba/gp_sudoers_ext.py
 ${PYSITELIB}/samba/gpclass.py
 ${PYSITELIB}/samba/gpo.so
 ${PYSITELIB}/samba/graph.py
@@ -338,7 +340,8 @@ ${PYSITELIB}/samba/provision/sambadns.py
 ${PYSITELIB}/samba/registry.so
 ${PYSITELIB}/samba/remove_dc.py
 ${PYSITELIB}/samba/samba3/__init__.py
-${PYSITELIB}/samba/samba3/libsmb_samba_internal.so
+${PYSITELIB}/samba/samba3/libsmb_samba_cwrapper.so
+${PYSITELIB}/samba/samba3/libsmb_samba_internal.py
 ${PYSITELIB}/samba/samba3/mdscli.so
 ${PYSITELIB}/samba/samba3/param.so
 ${PYSITELIB}/samba/samba3/passdb.so
@@ -375,6 +378,8 @@ ${PYSITELIB}/samba/tests/blackbox/netads_json.py
 ${PYSITELIB}/samba/tests/blackbox/samba_dnsupdate.py
 ${PYSITELIB}/samba/tests/blackbox/smbcacls.py
 ${PYSITELIB}/samba/tests/blackbox/smbcacls_basic.py
+${PYSITELIB}/samba/tests/blackbox/smbcacls_dfs_propagate_inherit.py
+${PYSITELIB}/samba/tests/blackbox/smbcacls_propagate_inhertance.py
 ${PYSITELIB}/samba/tests/blackbox/smbcontrol.py
 ${PYSITELIB}/samba/tests/blackbox/smbcontrol_process.py
 ${PYSITELIB}/samba/tests/blackbox/traffic_learner.py
@@ -383,10 +388,13 @@ ${PYSITELIB}/samba/tests/blackbox/traffic_summary.py
 ${PYSITELIB}/samba/tests/common.py
 ${PYSITELIB}/samba/tests/complex_expressions.py
 ${PYSITELIB}/samba/tests/core.py
+${PYSITELIB}/samba/tests/cred_opt.py
 ${PYSITELIB}/samba/tests/credentials.py
 ${PYSITELIB}/samba/tests/dcerpc/__init__.py
 ${PYSITELIB}/samba/tests/dcerpc/array.py
 ${PYSITELIB}/samba/tests/dcerpc/bare.py
+${PYSITELIB}/samba/tests/dcerpc/binding.py
+${PYSITELIB}/samba/tests/dcerpc/createtrustrelax.py
 ${PYSITELIB}/samba/tests/dcerpc/dnsserver.py
 ${PYSITELIB}/samba/tests/dcerpc/integer.py
 ${PYSITELIB}/samba/tests/dcerpc/mdssvc.py
@@ -397,6 +405,7 @@ ${PYSITELIB}/samba/tests/dcerpc/registry.py
 ${PYSITELIB}/samba/tests/dcerpc/rpc_talloc.py
 ${PYSITELIB}/samba/tests/dcerpc/rpcecho.py
 ${PYSITELIB}/samba/tests/dcerpc/sam.py
+${PYSITELIB}/samba/tests/dcerpc/samr_change_password.py
 ${PYSITELIB}/samba/tests/dcerpc/srvsvc.py
 ${PYSITELIB}/samba/tests/dcerpc/string_tests.py
 ${PYSITELIB}/samba/tests/dcerpc/testrpc.py
@@ -434,8 +443,14 @@ ${PYSITELIB}/samba/tests/kcc/graph.py
 ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
+${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
+${PYSITELIB}/samba/tests/krb5/compatability_tests.py
 ${PYSITELIB}/samba/tests/krb5/kcrypto.py
+${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
+${PYSITELIB}/samba/tests/krb5/kdc_tests.py
+${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
+${PYSITELIB}/samba/tests/krb5/rfc4120_constants.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_pyasn1.py
 ${PYSITELIB}/samba/tests/krb5/s4u_tests.py
 ${PYSITELIB}/samba/tests/krb5/simple_tests.py
@@ -523,6 +538,7 @@ ${PYSITELIB}/samba/tests/samdb.py
 ${PYSITELIB}/samba/tests/samdb_api.py
 ${PYSITELIB}/samba/tests/security.py
 ${PYSITELIB}/samba/tests/segfault.py
+${PYSITELIB}/samba/tests/smb-notify.py
 ${PYSITELIB}/samba/tests/smb.py
 ${PYSITELIB}/samba/tests/smbd_base.py
 ${PYSITELIB}/samba/tests/smbd_fuzztest.py
@@ -535,10 +551,11 @@ ${PYSITELIB}/samba/tests/upgradeprovision.py
 ${PYSITELIB}/samba/tests/upgradeprovisionneeddc.py
 ${PYSITELIB}/samba/tests/usage.py
 ${PYSITELIB}/samba/tests/xattr.py
-${PYSITELIB}/samba/third_party/__init__.py
+${PYSITELIB}/samba/trust_utils.py
 ${PYSITELIB}/samba/upgrade.py
 ${PYSITELIB}/samba/upgradehelpers.py
 ${PYSITELIB}/samba/uptodateness.py
+${PYSITELIB}/samba/vgp_sudoers_ext.py
 ${PYSITELIB}/samba/werror.so
 ${PYSITELIB}/samba/xattr.py
 ${PYSITELIB}/samba/xattr_native.so
@@ -558,6 +575,7 @@ ${PLIST.ads}lib/samba/idmap/rfc2307.${SOEXT}
 lib/samba/idmap/rid.${SOEXT}
 lib/samba/idmap/script.${SOEXT}
 lib/samba/idmap/tdb2.${SOEXT}
+lib/samba/krb5/async_dns_krb5_locator.${SOEXT}
 lib/samba/krb5/winbind_krb5_locator.${SOEXT}
 lib/samba/ldb/acl.${SOEXT}
 lib/samba/ldb/aclread.${SOEXT}
