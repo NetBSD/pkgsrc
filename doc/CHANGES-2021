@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2145 2021/04/14 13:44:29 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2146 2021/04/14 19:11:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3427,3 +3427,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mlt to 6.26.1 [nia 2021-04-14]
 	Updated www/hackernews-tui to 0.4.0 [pin 2021-04-14]
 	Updated cad/py-PyRTL to 0.9.0 [ryoon 2021-04-14]
+	Updated databases/ldb to 2.3.0 [adam 2021-04-14]
+	Updated net/samba4 to 4.14.2 [adam 2021-04-14]
