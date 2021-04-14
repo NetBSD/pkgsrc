@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2144 2021/04/14 11:47:53 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2145 2021/04/14 13:44:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3426,3 +3426,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/oniguruma to 6.9.7 [kim 2021-04-14]
 	Updated multimedia/mlt to 6.26.1 [nia 2021-04-14]
 	Updated www/hackernews-tui to 0.4.0 [pin 2021-04-14]
+	Updated cad/py-PyRTL to 0.9.0 [ryoon 2021-04-14]
