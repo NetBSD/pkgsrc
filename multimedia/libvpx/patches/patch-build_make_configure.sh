@@ -1,4 +1,4 @@
-$NetBSD: patch-build_make_configure.sh,v 1.1 2019/02/12 20:47:14 adam Exp $
+$NetBSD: patch-build_make_configure.sh,v 1.2 2021/04/14 07:02:49 adam Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -8,12 +8,6 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
 
 --- build/make/configure.sh.orig	2019-02-04 17:02:33.000000000 +0000
 +++ build/make/configure.sh
-@@ -1,4 +1,4 @@
--#!/bin/sh
-+#!/usr/pkg/bin/bash
- ##
- ##  configure.sh
- ##
 @@ -740,7 +740,7 @@ process_common_toolchain() {
        aarch64*)
          tgt_isa=arm64
