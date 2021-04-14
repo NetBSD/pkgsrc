@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2137 2021/04/13 19:23:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2138 2021/04/14 05:04:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3416,3 +3416,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.68.1 [adam 2021-04-13]
 	Updated devel/glib2-tools to 2.68.1 [adam 2021-04-13]
 	Updated devel/gdbus-codegen to 2.68.1 [adam 2021-04-13]
+	Updated devel/py-ZopeInterface to 5.3.0 [adam 2021-04-14]
+	Updated devel/py-ZopeTestrunner to 5.3.0 [adam 2021-04-14]
+	Updated devel/py-ZopeSchema to 6.1.0 [adam 2021-04-14]
+	Updated devel/py-ZopeComponent to 5.0.0 [adam 2021-04-14]
