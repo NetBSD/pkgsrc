@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/05 06:19:15 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/04/14 13:43:57 ryoon Exp $
 
-SHA1 (PyRTL-0.8.7.tar.gz) = 35e5b6707786846136873c3dbbe620a623a937a6
-RMD160 (PyRTL-0.8.7.tar.gz) = 48ad50e85fe7dc60c2da9388de01f5acd275daba
-SHA512 (PyRTL-0.8.7.tar.gz) = a7a19045b38f9e7aacc50a984e3c3858e03920b70472850638f074d6267f14e2758743aae30fda646cc62e1897a1df60d77a769f41716c7fb136fe1e0a608833
-Size (PyRTL-0.8.7.tar.gz) = 415294 bytes
+SHA1 (pyrtl-0.9.0.tar.gz) = a8417bbc950374df5677cf2c3d8a45ddb1e9de23
+RMD160 (pyrtl-0.9.0.tar.gz) = db9ba014ea8665f08cb3e78a0af1156a34dafe14
+SHA512 (pyrtl-0.9.0.tar.gz) = c52d5374a6e30388bef8a3ba3a41e2a2db2c40ce832ee3d04e4207556c6c52f4bab8e6fc57da00feafddd24339b38d3063c5c90fd4ccb41a3daecea4152e4d74
+Size (pyrtl-0.9.0.tar.gz) = 156984 bytes
