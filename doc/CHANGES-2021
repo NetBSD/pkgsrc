@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2156 2021/04/15 15:29:03 scole Exp $
+$NetBSD: CHANGES-2021,v 1.2157 2021/04/15 18:45:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3461,3 +3461,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/grive successor net/grive2 [wiz 2021-04-15]
 	Added editors/cesium version 0.1.2 [pin 2021-04-15]
 	Updated textproc/split-thai to 2.2 [scole 2021-04-15]
+	Updated textproc/oniguruma to 6.9.7.1 [adam 2021-04-15]
+	Updated devel/py-ZopeInterface to 5.4.0 [adam 2021-04-15]
