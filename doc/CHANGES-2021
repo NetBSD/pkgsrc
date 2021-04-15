@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2151 2021/04/15 07:35:24 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2152 2021/04/15 08:42:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xlrd to 2.0.1 [adam 2021-04-15]
 	Updated databases/py-pypika to 0.48.1 [adam 2021-04-15]
 	Updated chat/ejabberd to 21.04nb1 [triaxx 2021-04-15]
+	Updated net/grive2 to 0.5.1 [wiz 2021-04-15]
