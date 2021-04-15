@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.3 2021/04/10 08:54:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.4 2021/04/15 07:53:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -16,4 +16,22 @@ emulators/qemu: bugfix
 
 Pullup ticket #6439 - requested by nia
 emulators/qemu51: bugfix
+
+Pullup ticket #6440 - requested by taca
+textproc/ruby-rexml: build fix
+
+Pullup ticket #6441 - requested by taca
+security/ruby-rex-exploitation: build fix
+
+Pullup ticket #6442 - requested by taca
+lang/ruby25-base: security fix
+
+Pullup ticket #6443 - requested by taca
+lang/ruby26-base: security fix, bugfix
+
+Pullup ticket #6444 - requested by taca
+lang/ruby27-base: security fix, bugfix
+
+Pullup ticket #6445 - requested by taca
+lang/ruby30-base: security fix
 
