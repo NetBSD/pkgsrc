@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1396 2021/04/01 14:19:16 taca Exp $
+# $NetBSD: Makefile,v 1.1397 2021/04/15 10:45:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -207,7 +207,6 @@ SUBDIR+=	gofish
 SUBDIR+=	gopher
 SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
-SUBDIR+=	grive
 SUBDIR+=	grive2
 SUBDIR+=	grpc
 SUBDIR+=	gsnmp
