@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/12/03 13:24:03 zafer Exp $
+# $NetBSD: Makefile,v 1.41 2021/04/15 05:59:48 nia Exp $
 #
 
 DISTNAME=	bmp-mac-0.1.1
@@ -14,6 +14,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+# Workaround for glib2-2.68.0 c++ fallout.
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../audio/mac/buildlink3.mk"
