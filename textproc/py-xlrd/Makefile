@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/06/05 00:37:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/15 06:44:01 adam Exp $
 
-DISTNAME=	xlrd-1.2.0
+DISTNAME=	xlrd-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xlrd/}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} runxlrd.py runxlrd-${PYVERSSUFFIX}.py || ${TRUE}
+	${MV} runxlrd.py runxlrd-${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
