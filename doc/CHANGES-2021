@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2147 2021/04/14 19:30:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2148 2021/04/15 05:02:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3431,3 +3431,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.14.2 [adam 2021-04-14]
 	Updated devel/py-cython to 0.29.23 [adam 2021-04-14]
 	Updated www/curl to 7.76.1 [adam 2021-04-14]
+	Updated net/py-botocore to 1.20.52 [adam 2021-04-15]
+	Updated net/py-s3transfer to 0.3.7 [adam 2021-04-15]
+	Updated net/py-boto3 to 1.17.52 [adam 2021-04-15]
+	Updated net/py-awscli to 1.19.52 [adam 2021-04-15]
