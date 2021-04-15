@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2021/04/14 07:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2021/04/15 19:55:06 prlw1 Exp $
 
-DISTNAME=	dconf-editor-3.38.2
-PKGREVISION=	2
+DISTNAME=	dconf-editor-3.38.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf-editor/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,8 +13,11 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c99
 USE_TOOLS+=	msgfmt pkg-config
 
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+.include "../../mk/bsd.prefs.mk"
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 .include "../../devel/dconf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.46.0
