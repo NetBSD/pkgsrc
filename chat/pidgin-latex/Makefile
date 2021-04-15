@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/04/09 06:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2021/04/15 11:23:05 ryoon Exp $
 
 DISTNAME=	pidgin-latex-1.2.1
-PKGREVISION=	50
+PKGREVISION=	51
 CATEGORIES=	chat print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-latex/}
 EXTRACT_SUFX=	.tar.bz2
