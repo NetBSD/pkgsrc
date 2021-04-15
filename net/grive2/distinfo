@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/09 14:52:34 abs Exp $
+$NetBSD: distinfo,v 1.4 2021/04/15 08:42:22 wiz Exp $
 
-SHA1 (grive2-0.4.1.tar.gz) = f20da164b63f0acb1d15620d44f5596feed3344b
-RMD160 (grive2-0.4.1.tar.gz) = 46ecbfa294e5e804c8837e3ba2667a13a54a57a8
-SHA512 (grive2-0.4.1.tar.gz) = 55523f09afaad3e249fad6a085bcbb19d785f200bbe4ef45d48e6f6a44a41d13f0b8e77de348def819bf5409f1a995147fbb058191cda991aef023c76f2dbcf0
-Size (grive2-0.4.1.tar.gz) = 158861 bytes
+SHA1 (grive2-0.5.1.tar.gz) = 581915a653fdbd0076c69a4c4aa06eab2fa041cf
+RMD160 (grive2-0.5.1.tar.gz) = 71b0929a252d2a18b8b7b822696a30eedc34d422
+SHA512 (grive2-0.5.1.tar.gz) = 609837fc93ad78d143dcb4d1f558743d413c887fec2e9aaac81edd58549b812db859aab5ce7f664f06564779cff4bae32d43529e47fcc36640f1a9b52c5b5888
+Size (grive2-0.5.1.tar.gz) = 169929 bytes
 SHA1 (patch-libgrive_CMakeLists.txt) = fa81eae7f6c70478c757c897fab3fb1d297b25b0
-SHA1 (patch-libgrive_src_util_OS.cc) = ac5a59b717af6029134eb299b36a5862df193c38
+SHA1 (patch-libgrive_src_util_OS.cc) = 1f8b250000f96ab21e3a75fbaca3ec934cb4b344
+SHA1 (patch-libgrive_src_util_OS.hh) = 113c3661afa302014b3084eaec0c352651b2392c
