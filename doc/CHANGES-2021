@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2154 2021/04/15 10:45:33 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2155 2021/04/15 12:49:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3459,3 +3459,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/grive2 to 0.5.1 [wiz 2021-04-15]
 	Updated devel/nss to 3.63nb2 [wiz 2021-04-15]
 	Removed net/grive successor net/grive2 [wiz 2021-04-15]
+	Added editors/cesium version 0.1.2 [pin 2021-04-15]
