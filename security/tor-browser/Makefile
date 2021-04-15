@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2021/04/09 06:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2021/04/15 11:23:12 ryoon Exp $
 #
 # How to update this package:
 #
@@ -17,7 +17,7 @@
 
 DISTNAME=	src-firefox-tor-browser-78.9.0esr-10.0-1-build3
 PKGNAME=	tor-browser-10.0.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
