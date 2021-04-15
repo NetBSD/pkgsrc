@@ -10,7 +10,7 @@ fi
 name="matrix-synapse"
 rcvar="matrix_synapse"
 ctl_command="@PREFIX@/bin/synctl"
-conf_file="@PKG_SYSCONFDIR@/matrix-synapse/homeserver.yaml"
+conf_file="@PKG_SYSCONFDIR@/homeserver.yaml"
 required_files="$conf_file"
 pidfile="@SYNAPSE_DATA@/homeserver.pid"
 #start_precmd="ulimit -n 2048"
