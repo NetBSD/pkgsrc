@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/11/05 09:07:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2021/04/15 06:00:04 nia Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -37,6 +37,9 @@ MESSAGE_SUBST+=		PKG_JAVA_HOME=${PKG_JAVA_HOME}
 USE_JAVA=	yes
 USE_JAVA2=	yes
 USE_TOOLS+=	unzip:run zip:run
+
+# [javac] error: Source option 1.4 is no longer supported. Use 6 or later.
+PKG_JVMS_ACCEPTED=	openjdk8
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
 		${PREFIX}/share/opengrok/var/opengrok/paths.tsv
