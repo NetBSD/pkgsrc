@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/08/17 20:18:40 leot Exp $
+# $NetBSD: Makefile,v 1.34 2021/04/15 06:19:01 nia Exp $
 
 DISTNAME=		xnp2-0.86
 PKGREVISION=		11
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--enable-build-all
 # XXX audio/SDL2_mixer requires multimedia/smpeg2 but it conflicts with
 #     multimedia/smpeg which is required by audio/SDL_mixer
 CONFIGURE_ARGS+=	--disable-sdl2
+
+# Workaround for glib2-2.68.0 c++ fallout.
+CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 INSTALLATION_DIRS+=	share/doc/xnp2 ${PKGMANDIR}/ja/man1
 
