@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2020/11/09 23:45:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/15 05:36:03 nia Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-terminal-${VERSION:R}.1
 CATEGORIES=	x11
+
+USE_TOOLS+=	perl:run
 
 COMMENT=	MATE terminal emulator application
 
