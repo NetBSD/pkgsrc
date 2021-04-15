@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.95 2021/04/15 07:35:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.96 2021/04/15 08:28:11 wiz Exp $
 
 DISTNAME=	ejabberd-21.04
 PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
+# remove on next update
+# https://github.com/processone/ejabberd/issues/3570
+DIST_SUBDIR=	${DISTNAME}-20210414
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
