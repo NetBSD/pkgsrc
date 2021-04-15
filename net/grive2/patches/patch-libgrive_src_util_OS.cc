@@ -1,6 +1,7 @@
-$NetBSD: patch-libgrive_src_util_OS.cc,v 1.2 2021/04/15 08:42:23 wiz Exp $
+$NetBSD: patch-libgrive_src_util_OS.cc,v 1.3 2021/04/15 10:43:01 wiz Exp $
 
 Add __NetBSD__ to the 64bit Apple ctimespec stat case
+https://github.com/vitalif/grive2/pull/342
 
 --- libgrive/src/util/OS.cc.orig	2019-11-12 22:05:31.000000000 +0000
 +++ libgrive/src/util/OS.cc
