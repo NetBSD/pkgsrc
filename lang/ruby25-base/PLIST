@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/01 15:25:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.4.8.1 2021/04/15 07:04:00 bsiegert Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -676,9 +676,8 @@ ${RUBY_LIB}/rubygems/source_local.rb
 ${RUBY_LIB}/rubygems/source_specific_file.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
-${RUBY_LIB}/rubygems/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
-${RUBY_LIB}/rubygems/ssl_certs/rubygems.global.ssl.fastly.net/DigiCertHighAssuranceEVRootCA.pem
-${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/AddTrustExternalCARoot.pem
+${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA.pem
+${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA_R3.pem
 ${RUBY_LIB}/rubygems/stub_specification.rb
 ${RUBY_LIB}/rubygems/syck_hack.rb
 ${RUBY_LIB}/rubygems/test_case.rb
@@ -1197,7 +1196,7 @@ ${GEM_HOME}/specifications/default/scanf-1.0.0.gemspec
 ${GEM_HOME}/specifications/default/sdbm-1.0.0.gemspec
 ${GEM_HOME}/specifications/default/stringio-0.0.1.gemspec
 ${GEM_HOME}/specifications/default/strscan-1.0.0.gemspec
-${GEM_HOME}/specifications/default/webrick-1.4.2.gemspec
+${GEM_HOME}/specifications/default/webrick-1.4.2.1.gemspec
 ${GEM_HOME}/specifications/default/zlib-1.0.0.gemspec
 ${GEM_HOME}/specifications/did_you_mean-${RUBY_DID_YOU_MEAN_VERSION}.gemspec
 ${GEM_HOME}/specifications/minitest-${RUBY_MINITEST_VERSION}.gemspec
