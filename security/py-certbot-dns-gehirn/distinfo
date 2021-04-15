@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/03/06 13:34:24 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/04/15 05:16:36 adam Exp $
 
-SHA1 (certbot-dns-gehirn-1.13.0.tar.gz) = a4287512821b728f73e20eff48c0bf5d3f5c7ae0
-RMD160 (certbot-dns-gehirn-1.13.0.tar.gz) = 216a56f6f0f879ea5591f3ddcb3941c1b8d7bfb7
-SHA512 (certbot-dns-gehirn-1.13.0.tar.gz) = a477ca24563c222ef37f7fb03ab8d480328eae41362bb3a68407fc0ce779dd944abcce0d44f4fbdb7828d461c65ab48774d9ee84b556beb23a54a9328bb3a266
-Size (certbot-dns-gehirn-1.13.0.tar.gz) = 12453 bytes
+SHA1 (certbot-dns-gehirn-1.14.0.tar.gz) = 79c61b9dff4cf209fb08f019673c0fa2caa2d3cb
+RMD160 (certbot-dns-gehirn-1.14.0.tar.gz) = 749d41f5989e2b25d41fa439713f877310560ab3
+SHA512 (certbot-dns-gehirn-1.14.0.tar.gz) = 17d3b889d90ef0f555c1c2858535f4cad2a54b3f7175fd0811cba1905243b3f7f348bf176a62d2585d9a6066482cd2400e446b9b617b76b9579227e35a8f32ae
+Size (certbot-dns-gehirn-1.14.0.tar.gz) = 12575 bytes
