@@ -5,6 +5,7 @@ bin/gem @PREFIX@/bin/gem@RUBY_SUFFIX@
 bin/irb @PREFIX@/bin/irb@RUBY_SUFFIX@
 bin/racc @PREFIX@/bin/racc@RUBY_SUFFIX@
 bin/racc2y @PREFIX@/bin/racc2y@RUBY_SUFFIX@
+bin/rake @PREFIX@/bin/rake@RUBY_SUFFIX@
 bin/rdoc @PREFIX@/bin/rdoc@RUBY_SUFFIX@
 bin/ri @PREFIX@/bin/ri@RUBY_SUFFIX@
 bin/ruby @PREFIX@/bin/@RUBY_NAME@

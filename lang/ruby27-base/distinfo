@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.3 2020/10/04 03:29:25 taca Exp $
+$NetBSD: distinfo,v 1.3.4.1 2021/04/15 07:38:17 bsiegert Exp $
 
-SHA1 (ruby-2.7.2.tar.xz) = 82a1fe683460caa8edb6199707f2905634e5ffcc
-RMD160 (ruby-2.7.2.tar.xz) = fa7fc107e0c2085bf997d7e4ec78ae5636c6bfe2
-SHA512 (ruby-2.7.2.tar.xz) = 7972278b096aa768c7adf2befd26003e18781a29ca317640317d30d93d6e963ded197724c8e2f1dfe1e838c5647176d414a74732a62e931fb50d6f2e0f777349
-Size (ruby-2.7.2.tar.xz) = 12037052 bytes
-SHA1 (patch-configure) = fd465910fe2cb6d6b1530e1071062591e84a9fd9
+SHA1 (ruby-2.7.3.tar.xz) = ce3d5203d5ab734df01e602c05f68f25249dc3e0
+RMD160 (ruby-2.7.3.tar.xz) = f02628d9137618e6d0833b450cd8e78a06579c31
+SHA512 (ruby-2.7.3.tar.xz) = b755d418b3bab2f9f6a8893afd13869269f17065643dde78b9e85ae3538a6d0617893db6e9c3908e00a40c7577a5c912a7c822d8f245cdcfb857be76dfb66c1e
+Size (ruby-2.7.3.tar.xz) = 12073568 bytes
+SHA1 (patch-configure) = 5ee800f6824b18efd06e56a659235ea784819f2e
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-lib_mkmf.rb) = 4a3cd18548dbdf43a13695d4e76f817c0347e335
 SHA1 (patch-lib_rdoc_encoding.rb) = 0e82d2942d9bfcb67dc7c994889d7bc5ec2ae85a
 SHA1 (patch-lib_rdoc_ri_driver.rb) = f4d3e59e35b608acd4edc17916142c7f033e6198
-SHA1 (patch-lib_rubygems.rb) = b38f58a852e920bed77a4be281d3703d26515ad0
+SHA1 (patch-lib_rubygems.rb) = 6f5ff6ca504c38ec3a521027dc4df8fa9d6683c3
 SHA1 (patch-lib_rubygems_commands_setup__command.rb) = 181bb7554d760182588b0e1b0aafb84c317f41ad
 SHA1 (patch-lib_rubygems_defaults.rb) = 79cc5bb308d5ad4ee88f4fbcbb6f40663c05c05d
 SHA1 (patch-lib_rubygems_dependency__installer.rb) = 1776508907f17547ffe93f637d6f18d335061d76
