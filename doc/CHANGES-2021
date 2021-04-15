@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2153 2021/04/15 08:55:03 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2154 2021/04/15 10:45:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/ejabberd to 21.04nb1 [triaxx 2021-04-15]
 	Updated net/grive2 to 0.5.1 [wiz 2021-04-15]
 	Updated devel/nss to 3.63nb2 [wiz 2021-04-15]
+	Removed net/grive successor net/grive2 [wiz 2021-04-15]
