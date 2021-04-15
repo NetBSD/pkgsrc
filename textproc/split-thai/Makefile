@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2021/03/21 19:42:52 scole Exp $
+# $NetBSD: Makefile,v 1.19 2021/04/15 15:26:30 scole Exp $
 
-ST_VERSION=	2.1
+ST_VERSION=	2.2
 PKGNAME=	split-thai-${ST_VERSION}
 CATEGORIES=	textproc
 
@@ -23,7 +23,7 @@ USE_TOOLS+=	perl:run
 BUILD_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	swath-[0-9]*:../../textproc/swath
-DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
+DEPENDS+=	sox-[0-9]*:../../audio/sox
 
 REPLACE_PERL=	st-wordbreak tgrep
 REPLACE_SH=	st-swath
