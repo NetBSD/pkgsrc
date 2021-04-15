@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2020/09/04 20:34:11 js Exp $
+$NetBSD: MESSAGE,v 1.2 2021/04/15 15:54:00 jperkin Exp $
 
 To generate a Synapse configuration, run:
 
 cd ${SYNAPSE_DATA} &&
 ${PYTHONBIN} -m synapse.app.homeserver \
 	--server-name my.domain.name \
-	--config-path ${PKG_SYSCONFDIR}/matrix-synapse/homeserver.yaml \
-	--config-directory ${PKG_SYSCONFDIR}/matrix-synapse \
+	--config-path ${PKG_SYSCONFDIR}/homeserver.yaml \
+	--config-directory ${PKG_SYSCONFDIR} \
 	--generate-config \
 	--report-stats=no
 
