@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.72 2021/01/12 13:45:08 prlw1 Exp $
+$NetBSD: distinfo,v 1.73 2021/04/16 07:52:38 prlw1 Exp $
 
-SHA1 (cups-filters-1.28.7.tar.xz) = b4096e5aa17d8e398b5cc352490476175af508fd
-RMD160 (cups-filters-1.28.7.tar.xz) = f71d643b3a053f55fe135451312003f6b6bcb6b9
-SHA512 (cups-filters-1.28.7.tar.xz) = fa94f51ca1c208dcacb1814d8b812c9a72dd09475b7cf836b02c72cb5e3290318f37e475ee3ae8d45351715c3a2ccc0df5ac51ae6fc11462f5acdfa303a04727
-Size (cups-filters-1.28.7.tar.xz) = 1503052 bytes
+SHA1 (cups-filters-1.28.8.tar.xz) = da2c4d3c522913317067505ba1e46b65018483cc
+RMD160 (cups-filters-1.28.8.tar.xz) = f1f6973a7d820bf0a3ff7dd3fcefba7ff69dc0f0
+SHA512 (cups-filters-1.28.8.tar.xz) = 77b39ce2a30ad44d50aa58964b389fa5dd75b2b4307ccb25996050fd176e1e794ad0a66ddd4de76e95a671683c3bf448a4f471272c97a752f25ff6234f7d8511
+Size (cups-filters-1.28.8.tar.xz) = 1502456 bytes
 SHA1 (patch-filter_gstoraster.c) = 4eef8d91d8ca26a5a874e29885b836e9670d9e5d
 SHA1 (patch-filter_mupdftoraster.c) = 81a06cbb3be9a7fd3e797a2effa5ef0aecfc2621
 SHA1 (patch-fontembed_test__pdf.c) = 5ffb13a59ed4d860a3ae4355e364059973715290
