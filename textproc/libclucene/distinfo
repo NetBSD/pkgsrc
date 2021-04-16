@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/02/08 07:28:58 mrg Exp $
+$NetBSD: distinfo,v 1.11 2021/04/16 14:55:42 ryoon Exp $
 
 SHA1 (clucene-core-2.3.3.4.tar.gz) = 76d6788e747e78abb5abf8eaad78d3342da5f2a4
 RMD160 (clucene-core-2.3.3.4.tar.gz) = 5acfc9c8acd167b3684cfc731a60fd9c5465cc9b
@@ -12,4 +12,4 @@ SHA1 (patch-src_core_CLucene_queryParser_QueryParserTokenManager.cpp) = 0ee63584
 SHA1 (patch-src_core_CLucene_queryParser_QueryParserTokenManager.h) = 6934ad5e1052850b2aed50d91260bd46801e6274
 SHA1 (patch-src_shared_CLucene_LuceneThreads.h) = a08f4ccc70150510650ba82c64b1dff8495b1f10
 SHA1 (patch-src_shared_CLucene_config_repl__tchar.h) = 465537d5ee226d9831df2da8d87f3dbc5e364d5f
-SHA1 (patch-src_shared_cmake_MacroCheckGccVisibility.cmake) = 90aaa4649ed167afb3a556dbf251f2205e1c348a
+SHA1 (patch-src_shared_cmake_MacroCheckGccVisibility.cmake) = e78152256779e07236b9aabdc68ee9e64122ab0a
