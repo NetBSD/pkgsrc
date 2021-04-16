@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/11/05 09:08:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/16 11:39:24 triaxx Exp $
 
-DISTNAME=	syncthing-gtk-0.9.2.3
-PKGREVISION=	15
+DISTNAME=	syncthing-gtk-0.9.4.4
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kozec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +11,7 @@ COMMENT=	GTK3 & Python based GUI for Syncthing
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
+DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking # GIO GnuTLS support
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc # for killall
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
@@ -28,19 +28,28 @@ SUBST_FILES.path_s=	scripts/syncthing-gtk
 SUBST_FILES.path_s+=	syncthing_gtk/app.py
 SUBST_FILES.path_s+=	syncthing_gtk/uisettingsdialog.py
 SUBST_FILES.path_s+=	syncthing_gtk/wizard.py
-SUBST_SED.path_s=	-e 's|/usr/share/syncthing-gtk|${PREFIX}/share/syncthing-gtk|'
+SUBST_SED.path_s=	-e 's|/usr/share/icons|${PREFIX}/share/icons|'
+SUBST_SED.path_s+=	-e 's|/usr/share/syncthing-gtk|${PREFIX}/share/syncthing-gtk|'
 
 SUBST_CLASSES+=		path_b
 SUBST_STAGE.path_b=	pre-build
 SUBST_MESSAGE.path_b=	Fixing hard-coded paths to /usr/bin
-SUBST_FILES.path_b=	syncthing-gtk.desktop
+SUBST_FILES.path_b=	syncthing_gtk/app.py
 SUBST_FILES.path_b+=	syncthing_gtk/configuration.py
-SUBST_SED.path_b=	-e 's|/usr/bin/syncthing|${PREFIX}/bin/syncthing|'
-# \todo Extend to /usr/bin for command paths in app.py
+SUBST_FILES.path_b+=	syncthing_gtk/uisettingsdialog.py
+SUBST_SED.path_b=	-e 's|/usr/bin/%s|${PREFIX}/bin/%s|'
+SUBST_SED.path_b+=	-e 's|/usr/bin/syncthing|${PREFIX}/bin/syncthing|'
+SUBST_SED.path_b+=	-e 's|"/usr/bin"|"${PREFIX}/bin"|'
 
-BUILDLINK_ABI_DEPENDS.libnotify+=	libnotify>=0.7.6nb4
+SUBST_CLASSES+=		int
+SUBST_STAGE.int=	pre-build
+SUBST_MESSAGE.int=	Replacing hard-coded python interpreter
+SUBST_FILES.int=	syncthing_gtk/tools.py
+SUBST_SED.int=		-e 's|/usr/bin/env python2|${PYTHONBIN}|'
+
+BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.7.8
 .include "../../sysutils/libnotify/buildlink3.mk"
-BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.40.9nb2	# for introspection
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.42.2		# for introspection
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
