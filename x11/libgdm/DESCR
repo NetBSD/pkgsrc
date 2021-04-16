@@ -1,0 +1,3 @@
+The GNOME Display Manager is a system service that is responsible for
+providing graphical log-ins and managing local and remote displays.
+This package installs libgdm, which is the client part of GDM.
