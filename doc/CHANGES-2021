@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2169 2021/04/16 13:06:20 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.2170 2021/04/16 13:19:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3490,3 +3490,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-rdflib to 5.0.0 [adam 2021-04-16]
 	Updated www/py-sparqlwrapper to 1.8.5 [adam 2021-04-16]
 	Updated ham/chirp to 20210416 [gdt 2021-04-16]
+	Updated filesystems/py-fs to 2.4.13 [adam 2021-04-16]
+	Updated devel/py-dulwich to 0.20.21 [adam 2021-04-16]
