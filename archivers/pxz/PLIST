@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/16 16:16:05 ryoon Exp $
+bin/pxz
+man/man1/pxz.1
