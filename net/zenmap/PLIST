@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/28 13:55:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/16 06:55:33 adam Exp $
 bin/zenmap
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/radialnet/__init__.py
@@ -319,9 +319,6 @@ ${PYSITELIB}/zenmapGUI/higwidgets/higtextviewers.pyo
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.py
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.pyc
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.pyo
-${PYSITELIB}/zenmapGUI/higwidgets/utils.py
-${PYSITELIB}/zenmapGUI/higwidgets/utils.pyc
-${PYSITELIB}/zenmapGUI/higwidgets/utils.pyo
 share/zenmap/config/scan_profile.usp
 share/zenmap/config/zenmap.conf
 share/zenmap/config/zenmap_version
