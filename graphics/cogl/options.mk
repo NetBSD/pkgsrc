@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/02/25 13:37:47 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2021/04/16 06:49:24 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cogl
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--with-gl-libname=libGL
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libXfixes+=	libXfixes>=3
 .include "../../x11/libXfixes/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libXcomposite+=	libXcomposite>=0.4
 .include "../../x11/libXcomposite/buildlink3.mk"

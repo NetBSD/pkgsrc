@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/03/08 16:47:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2021/04/16 06:49:24 nia Exp $
 #
 
 BUILDLINK_TREE+=	cogl
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.cogl?=	../../graphics/cogl
 pkgbase := cogl
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.cogl:Mx11)
+.if ${PKG_BUILD_OPTIONS.cogl:Mx11}
 #.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
