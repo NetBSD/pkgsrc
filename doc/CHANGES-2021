@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2163 2021/04/16 07:12:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2164 2021/04/16 07:53:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/zenmap to 7.91 [adam 2021-04-16]
 	Updated www/nginx-devel to 1.19.10 [adam 2021-04-16]
 	Updated archivers/unrar to 6.0.5 [adam 2021-04-16]
+	Updated print/cups-filters to 1.28.8 [prlw1 2021-04-16]
