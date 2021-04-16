@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/14 12:46:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/04/16 08:47:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,8 @@ ${PYSITELIB}/humanize/filesize.pyo
 ${PYSITELIB}/humanize/i18n.py
 ${PYSITELIB}/humanize/i18n.pyc
 ${PYSITELIB}/humanize/i18n.pyo
+${PYSITELIB}/humanize/locale/ca_ES/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/ca_ES/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/de_DE/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/de_DE/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/es_ES/LC_MESSAGES/humanize.mo
