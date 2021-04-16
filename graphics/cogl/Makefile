@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/08/17 20:18:56 leot Exp $
+# $NetBSD: Makefile,v 1.28 2021/04/16 06:49:33 nia Exp $
 
 DISTNAME=	cogl-1.22.0
 PKGREVISION=	11
@@ -19,6 +19,9 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake gsed pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
+
+# error: "_MSC_VER" is not defined [-Werror=undef]
+BUILDLINK_TRANSFORM+=	rm:-Werror=undef
 
 PKGCONFIG_OVERRIDE+=	cogl-gles2/cogl-gles2-experimental.pc.in
 PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango-1.0.pc.in
