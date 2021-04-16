@@ -1,13 +1,13 @@
-$NetBSD: patch-setup.py,v 1.11 2020/12/07 08:01:04 adam Exp $
+$NetBSD: patch-setup.py,v 1.12 2021/04/16 09:20:00 adam Exp $
 
 Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2020-12-01 23:41:42.000000000 +0000
+--- setup.py.orig	2021-04-07 05:49:03.000000000 +0000
 +++ setup.py
-@@ -273,28 +273,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
-                                  UPB_GRPC_GENERATED_INCLUDE +
-                                  UPBDEFS_GRPC_GENERATED_INCLUDE + ZLIB_INCLUDE)
+@@ -303,28 +303,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
+                                  UPBDEFS_GRPC_GENERATED_INCLUDE +
+                                  XXHASH_INCLUDE + ZLIB_INCLUDE)
  
 -EXTENSION_LIBRARIES = ()
 -if "linux" in sys.platform:
@@ -35,7 +35,7 @@ Use dependencies in pkgsrc.
  
  DEFINE_MACROS = (('_WIN32_WINNT', 0x600),)
  asm_files = []
-@@ -372,7 +351,7 @@ def cython_extensions_and_necessity():
+@@ -409,7 +388,7 @@ def cython_extensions_and_necessity():
      ]
      config = os.environ.get('CONFIG', 'opt')
      prefix = 'libs/' + config + '/'
@@ -44,7 +44,7 @@ Use dependencies in pkgsrc.
          extra_objects = [
              prefix + 'libares.a', prefix + 'libboringssl.a',
              prefix + 'libgpr.a', prefix + 'libgrpc.a'
-@@ -384,8 +363,7 @@ def cython_extensions_and_necessity():
+@@ -421,8 +400,7 @@ def cython_extensions_and_necessity():
      extensions = [
          _extension.Extension(
              name=module_name,
