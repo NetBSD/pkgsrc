@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2021/04/12 11:33:16 nia Exp $
+# $NetBSD: Makefile,v 1.47 2021/04/16 06:43:48 nia Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${MSITE_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.gnome.org/gdk-pixbuf
 COMMENT=	Library for image loading and manipulation
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS+=	gtk2+<2.22
 
@@ -21,7 +24,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 MESON_ARGS+=			-D installed_tests=false
 MESON_ARGS+=			-D x11=false
-MESON_ARGS+=			-D man=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
 
