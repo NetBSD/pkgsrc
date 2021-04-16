@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/04/11 12:28:37 taca Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/16 06:45:50 nia Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -13,6 +13,8 @@ RUBY_VERSIONS_ACCEPTED=	26
 
 MAKE_JOBS_SAFE=		no
 USE_GCC_RUNTIME=	yes
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=		c99
 USE_TOOLS+=		pax yacc pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
