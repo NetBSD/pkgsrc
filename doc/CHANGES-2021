@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2159 2021/04/15 20:45:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2160 2021/04/16 05:46:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3465,3 +3465,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ZopeInterface to 5.4.0 [adam 2021-04-15]
 	Updated devel/dconf-editor to 3.38.3 [prlw1 2021-04-15]
 	Updated sysutils/xplr to 0.4.4 [pin 2021-04-15]
+	Updated devel/py-atpublic to 2.3 [adam 2021-04-16]
+	Updated databases/py-apsw to 3.35.4 [adam 2021-04-16]
+	Updated devel/py-astroid to 2.5.3 [adam 2021-04-16]
+	Updated finance/py-braintree to 4.8.0 [adam 2021-04-16]
