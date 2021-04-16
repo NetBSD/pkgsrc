@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/31 16:35:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/16 11:39:24 triaxx Exp $
 bin/syncthing-gtk
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/syncthing_gtk/__init__.py
@@ -79,9 +79,6 @@ ${PYSITELIB}/syncthing_gtk/uibuilder.pyo
 ${PYSITELIB}/syncthing_gtk/uisettingsdialog.py
 ${PYSITELIB}/syncthing_gtk/uisettingsdialog.pyc
 ${PYSITELIB}/syncthing_gtk/uisettingsdialog.pyo
-${PYSITELIB}/syncthing_gtk/watcher.py
-${PYSITELIB}/syncthing_gtk/watcher.pyc
-${PYSITELIB}/syncthing_gtk/watcher.pyo
 ${PYSITELIB}/syncthing_gtk/windows.py
 ${PYSITELIB}/syncthing_gtk/windows.pyc
 ${PYSITELIB}/syncthing_gtk/windows.pyo
@@ -118,8 +115,10 @@ share/icons/hicolor/16x16/status/si-syncthing-black-8.png
 share/icons/hicolor/16x16/status/si-syncthing-black-9.png
 share/icons/hicolor/16x16/status/si-syncthing-black-idle.png
 share/icons/hicolor/16x16/status/si-syncthing-black-unknown.png
+share/icons/hicolor/16x16/status/si-syncthing-black-warning.png
 share/icons/hicolor/16x16/status/si-syncthing-idle.png
 share/icons/hicolor/16x16/status/si-syncthing-unknown.png
+share/icons/hicolor/16x16/status/si-syncthing-warning.png
 share/icons/hicolor/16x16/status/si-syncthing-white-0.png
 share/icons/hicolor/16x16/status/si-syncthing-white-1.png
 share/icons/hicolor/16x16/status/si-syncthing-white-10.png
@@ -134,6 +133,7 @@ share/icons/hicolor/16x16/status/si-syncthing-white-8.png
 share/icons/hicolor/16x16/status/si-syncthing-white-9.png
 share/icons/hicolor/16x16/status/si-syncthing-white-idle.png
 share/icons/hicolor/16x16/status/si-syncthing-white-unknown.png
+share/icons/hicolor/16x16/status/si-syncthing-white-warning.png
 share/icons/hicolor/24x24/apps/syncthing-gtk.png
 share/icons/hicolor/24x24/status/si-syncthing-0.png
 share/icons/hicolor/24x24/status/si-syncthing-1.png
@@ -161,8 +161,10 @@ share/icons/hicolor/24x24/status/si-syncthing-black-8.png
 share/icons/hicolor/24x24/status/si-syncthing-black-9.png
 share/icons/hicolor/24x24/status/si-syncthing-black-idle.png
 share/icons/hicolor/24x24/status/si-syncthing-black-unknown.png
+share/icons/hicolor/24x24/status/si-syncthing-black-warning.png
 share/icons/hicolor/24x24/status/si-syncthing-idle.png
 share/icons/hicolor/24x24/status/si-syncthing-unknown.png
+share/icons/hicolor/24x24/status/si-syncthing-warning.png
 share/icons/hicolor/24x24/status/si-syncthing-white-0.png
 share/icons/hicolor/24x24/status/si-syncthing-white-1.png
 share/icons/hicolor/24x24/status/si-syncthing-white-10.png
@@ -177,6 +179,7 @@ share/icons/hicolor/24x24/status/si-syncthing-white-8.png
 share/icons/hicolor/24x24/status/si-syncthing-white-9.png
 share/icons/hicolor/24x24/status/si-syncthing-white-idle.png
 share/icons/hicolor/24x24/status/si-syncthing-white-unknown.png
+share/icons/hicolor/24x24/status/si-syncthing-white-warning.png
 share/icons/hicolor/256x256/apps/syncthing-gtk.png
 share/icons/hicolor/32x32/apps/syncthing-gtk.png
 share/icons/hicolor/32x32/status/si-syncthing-0.png
@@ -205,8 +208,10 @@ share/icons/hicolor/32x32/status/si-syncthing-black-8.png
 share/icons/hicolor/32x32/status/si-syncthing-black-9.png
 share/icons/hicolor/32x32/status/si-syncthing-black-idle.png
 share/icons/hicolor/32x32/status/si-syncthing-black-unknown.png
+share/icons/hicolor/32x32/status/si-syncthing-black-warning.png
 share/icons/hicolor/32x32/status/si-syncthing-idle.png
 share/icons/hicolor/32x32/status/si-syncthing-unknown.png
+share/icons/hicolor/32x32/status/si-syncthing-warning.png
 share/icons/hicolor/32x32/status/si-syncthing-white-0.png
 share/icons/hicolor/32x32/status/si-syncthing-white-1.png
 share/icons/hicolor/32x32/status/si-syncthing-white-10.png
@@ -221,6 +226,7 @@ share/icons/hicolor/32x32/status/si-syncthing-white-8.png
 share/icons/hicolor/32x32/status/si-syncthing-white-9.png
 share/icons/hicolor/32x32/status/si-syncthing-white-idle.png
 share/icons/hicolor/32x32/status/si-syncthing-white-unknown.png
+share/icons/hicolor/32x32/status/si-syncthing-white-warning.png
 share/icons/hicolor/64x64/apps/syncthing-gtk-error.png
 share/icons/hicolor/64x64/apps/syncthing-gtk.png
 share/icons/hicolor/64x64/emblems/emblem-syncthing-active.png
@@ -232,12 +238,17 @@ share/locale/de/LC_MESSAGES/syncthing-gtk.mo
 share/locale/en/LC_MESSAGES/syncthing-gtk.mo
 share/locale/es/LC_MESSAGES/syncthing-gtk.mo
 share/locale/fr/LC_MESSAGES/syncthing-gtk.mo
+share/locale/hu/LC_MESSAGES/syncthing-gtk.mo
+share/locale/it/LC_MESSAGES/syncthing-gtk.mo
 share/locale/lt/LC_MESSAGES/syncthing-gtk.mo
+share/locale/nl/LC_MESSAGES/syncthing-gtk.mo
+share/locale/pl/LC_MESSAGES/syncthing-gtk.mo
 share/locale/pt/LC_MESSAGES/syncthing-gtk.mo
 share/locale/ru/LC_MESSAGES/syncthing-gtk.mo
 share/locale/sk/LC_MESSAGES/syncthing-gtk.mo
 share/locale/vi/LC_MESSAGES/syncthing-gtk.mo
-share/locale/zh/LC_MESSAGES/syncthing-gtk.mo
+share/locale/zh_CN/LC_MESSAGES/syncthing-gtk.mo
+share/metainfo/me.kozec.syncthingtk.appdata.xml
 share/pixmaps/syncthing-gtk.png
 share/syncthing-gtk/about.glade
 share/syncthing-gtk/app.glade
