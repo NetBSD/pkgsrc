@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2170 2021/04/16 13:19:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2171 2021/04/16 13:59:36 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3492,3 +3492,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/chirp to 20210416 [gdt 2021-04-16]
 	Updated filesystems/py-fs to 2.4.13 [adam 2021-04-16]
 	Updated devel/py-dulwich to 0.20.21 [adam 2021-04-16]
+	Added x11/libgdm version 40.0 [dan 2021-04-16]
