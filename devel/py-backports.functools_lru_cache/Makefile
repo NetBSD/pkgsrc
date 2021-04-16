@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/05/16 08:54:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/16 05:53:37 adam Exp $
 
-DISTNAME=	backports.functools_lru_cache-1.6.1
+DISTNAME=	backports.functools_lru_cache-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.functools_lru_cache/}
