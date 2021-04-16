@@ -1,0 +1,14 @@
+$NetBSD: patch-libgdm_meson.build,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+Remove linux-only systemd dependency
+
+--- libgdm/meson.build.orig	2020-12-15 18:16:43.000000000 +0000
++++ libgdm/meson.build
+@@ -56,7 +56,6 @@ libgdm_deps = [
+   glib_dep,
+   gio_dep,
+   gio_unix_dep,
+-  libsystemd_dep,
+   libgdmcommon_dep,
+ ]
+ 

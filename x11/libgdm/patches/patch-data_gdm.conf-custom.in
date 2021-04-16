@@ -1,0 +1,15 @@
+$NetBSD: patch-data_gdm.conf-custom.in,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+Wayland backend not ported to NetBSD, disable by default
+
+--- data/gdm.conf-custom.in.orig	2020-05-04 20:11:25.000000000 +0000
++++ data/gdm.conf-custom.in
+@@ -2,7 +2,7 @@
+ 
+ [daemon]
+ # Uncomment the line below to force the login screen to use Xorg
+-#WaylandEnable=false
++WaylandEnable=false
+ 
+ [security]
+ 
