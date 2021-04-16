@@ -1,0 +1,80 @@
+$NetBSD: patch-meson.build,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+Remove Linux-only dependencies
+
+--- meson.build.orig	2021-03-16 20:48:04.000000000 +0000
++++ meson.build
+@@ -17,7 +17,6 @@ gdm_prefix = get_option('prefix')
+ 
+ gdmconfdir = (get_option('sysconfsubdir') == '')? gdm_prefix / get_option('sysconfdir') : gdm_prefix / get_option('sysconfdir') / get_option('sysconfsubdir')
+ dmconfdir = (get_option('dmconfdir') != '')? get_option('dmconfdir') : gdm_prefix / get_option('sysconfdir') / 'dm'
+-udev_dir = get_option('udev-dir')
+ at_spi_registryd_dir = (get_option('at-spi-registryd-dir') != '')? get_option('at-spi-registryd-dir') : gdm_prefix / get_option('libexecdir')
+ lang_config_file = (get_option('lang-file') != '')? get_option('lang-file') : gdm_prefix / get_option('sysconfdir') / 'locale.conf'
+ pam_mod_dir = (get_option('pam-mod-dir') != '')? get_option('pam-mod-dir') : gdm_prefix / get_option('libdir') / 'security'
+@@ -37,7 +36,6 @@ gdm_screenshot_dir = (get_option('screen
+ config_h_dir = include_directories('.')
+ 
+ # Dependencies
+-udev_dep = dependency('udev')
+ 
+ glib_min_version = '2.56.0'
+ 
+@@ -52,16 +50,6 @@ xcb_dep = dependency('xcb')
+ keyutils_dep = dependency('libkeyutils', required: false)
+ libselinux_dep = dependency('libselinux', required: get_option('selinux'))
+ 
+-# udev
+-if udev_dir == ''
+-  if udev_dep.found()
+-    udev_prefix = udev_dep.get_pkgconfig_variable('udevdir')
+-  else
+-    udev_prefix = gdm_prefix / 'lib' / 'udev'
+-  endif
+-  udev_dir = udev_prefix / 'rules.d'
+-endif
+-
+ # X11
+ x_deps = declare_dependency(
+   dependencies: [
+@@ -92,21 +80,6 @@ xdmcp_dep = cc.find_library('Xdmcp', req
+ if xdmcp_dep.found() and get_option('tcp-wrappers')
+   libwrap_dep = cc.find_library('libwrap')
+ endif
+-# systemd
+-systemd_dep = dependency('systemd')
+-libsystemd_dep = dependency('libsystemd')
+-if meson.version().version_compare('>= 0.53')
+-  systemd_multiseat_x = find_program('systemd-multi-seat-x',
+-    required: false,
+-    dirs: [
+-      systemd_dep.get_pkgconfig_variable('systemdutildir'),
+-      '/lib/systemd',
+-      '/usr/lib/systemd',
+-    ])
+-else
+-  systemd_multiseat_x = find_program('systemd-multi-seat-x', required: false)
+-endif
+-systemd_x_server = systemd_multiseat_x.found()? systemd_multiseat_x.path() : '/lib/systemd/systemd-multi-seat-x'
+ # Plymouth
+ plymouth_dep = dependency('ply-boot-client', required: get_option('plymouth'))
+ # Check for Solaris auditing API (ADT)
+@@ -236,7 +209,6 @@ conf.set_quoted('GDM_SESSION_DEFAULT_PAT
+ conf.set_quoted('GDM_USERNAME', get_option('user'))
+ conf.set_quoted('GDM_GROUPNAME', get_option('group'))
+ conf.set('HAVE_LIBXDMCP', xdmcp_dep.found())
+-conf.set_quoted('SYSTEMD_X_SERVER', systemd_x_server)
+ conf.set('WITH_PLYMOUTH', plymouth_dep.found())
+ conf.set_quoted('X_SERVER', x_bin)
+ conf.set_quoted('X_PATH', x_path)
+@@ -300,10 +272,8 @@ summary({
+     'AT SPI registryd': at_spi_registryd_dir,
+     'Lang config file': lang_config_file,
+     'Pam MOD': pam_mod_dir,
+-    'Udev rules': udev_dir,
+     'XServer': x_bin,
+     'XPath': x_path,
+-    'Systemd XServer': systemd_x_server,
+   },
+   section: 'Paths',
+ )

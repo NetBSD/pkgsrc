@@ -1,0 +1,20 @@
+$NetBSD: patch-daemon_gdm-display_c,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+$OpenBSD: patch-daemon_gdm-display_c,v 1.8 2019/11/02 15:34:07 ajacoutot Exp $
+
+XXX fix+push upstream
+
+Index: daemon/gdm-display.c
+--- daemon/gdm-display.c.orig
++++ daemon/gdm-display.c
+@@ -242,8 +242,8 @@ setup_xhost_auth (XHostAddress              *host_entr
+         host_entries[1].address   = "localuser\0" GDM_USERNAME;
+         host_entries[1].length    = sizeof ("localuser\0" GDM_USERNAME);
+         host_entries[2].family    = FamilyServerInterpreted;
+-        host_entries[2].address   = "localuser\0gnome-initial-setup";
+-        host_entries[2].length    = sizeof ("localuser\0gnome-initial-setup");
++        host_entries[2].address   = "localuser\0_gnome-initial-setup";
++        host_entries[2].length    = sizeof ("localuser\0_gnome-initial-setup");
+ }
+ 
+ gboolean
