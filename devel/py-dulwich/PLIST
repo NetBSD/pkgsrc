@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/03/03 18:06:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/04/16 13:18:27 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -39,6 +39,12 @@ ${PYSITELIB}/dulwich/cli.pyo
 ${PYSITELIB}/dulwich/client.py
 ${PYSITELIB}/dulwich/client.pyc
 ${PYSITELIB}/dulwich/client.pyo
+${PYSITELIB}/dulwich/cloud/__init__.py
+${PYSITELIB}/dulwich/cloud/__init__.pyc
+${PYSITELIB}/dulwich/cloud/__init__.pyo
+${PYSITELIB}/dulwich/cloud/gcs.py
+${PYSITELIB}/dulwich/cloud/gcs.pyc
+${PYSITELIB}/dulwich/cloud/gcs.pyo
 ${PYSITELIB}/dulwich/config.py
 ${PYSITELIB}/dulwich/config.pyc
 ${PYSITELIB}/dulwich/config.pyo
