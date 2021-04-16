@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2161 2021/04/16 06:06:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2162 2021/04/16 06:56:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3473,3 +3473,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx to 3.5.4 [adam 2021-04-16]
 	Updated textproc/py-sphinx-autoapi to 1.8.0 [adam 2021-04-16]
 	Updated textproc/py-sphinx-autodoc-typehints to 1.12.0 [adam 2021-04-16]
+	Updated math/liblinear to 2.43 [adam 2021-04-16]
+	Updated net/nmap to 7.91 [adam 2021-04-16]
+	Updated net/ndiff to 7.91 [adam 2021-04-16]
+	Updated net/zenmap to 7.91 [adam 2021-04-16]
