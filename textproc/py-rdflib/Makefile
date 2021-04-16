@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2019/09/25 07:27:45 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/16 12:17:43 adam Exp $
 
-DISTNAME=	rdflib-4.2.2
+DISTNAME=	rdflib-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://github.com/RDFLib/rdflib/
+HOMEPAGE=	https://github.com/RDFLib/rdflib
 COMMENT=	Python library for working with RDF
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
-BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-BUILD_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+TEST_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
@@ -28,11 +29,11 @@ REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} csv2rdf csv2rdf${PYVERSSUFFIX} && \
-		${MV} rdf2dot rdf2dot${PYVERSSUFFIX} && \
-		${MV} rdfgraphisomorphism rdfgraphisomorphism${PYVERSSUFFIX} && \
-		${MV} rdfpipe rdfpipe${PYVERSSUFFIX} && \
-		${MV} rdfs2dot rdfs2dot${PYVERSSUFFIX} || ${TRUE}
+	${MV} csv2rdf csv2rdf-${PYVERSSUFFIX} && \
+	${MV} rdf2dot rdf2dot-${PYVERSSUFFIX} && \
+	${MV} rdfgraphisomorphism rdfgraphisomorphism-${PYVERSSUFFIX} && \
+	${MV} rdfpipe rdfpipe-${PYVERSSUFFIX} && \
+	${MV} rdfs2dot rdfs2dot-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
