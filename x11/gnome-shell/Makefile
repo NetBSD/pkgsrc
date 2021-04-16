@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/04/15 11:23:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2021/04/16 14:13:10 cirnatdan Exp $
 
 DISTNAME=	gnome-shell-3.38.1
 PKGREVISION=	5
@@ -21,6 +21,8 @@ MESON_ARGS+=	-Dextensions_tool=false
 TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
+
+DEPENDS+=	libgdm>=40.0:../../x11/libgdm
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
