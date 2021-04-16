@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2021/03/15 07:22:22 adam Exp $
+# $NetBSD: Makefile,v 1.37 2021/04/16 08:52:34 adam Exp $
 
-DISTNAME=	flake8-3.9.0
+DISTNAME=	flake8-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8/}
@@ -34,7 +34,7 @@ post-install:
 	${MV} flake8 flake8-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
