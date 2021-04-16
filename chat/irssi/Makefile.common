@@ -4,11 +4,14 @@
 # used by chat/irssi-xmpp/Makefile
 
 # Specific distribution information.
-IRSSI_VERSION=			1.2.2
+IRSSI_VERSION=			1.2.3
 IRSSI_DISTNAME=			irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=		.tar.gz
-IRSSI_DISTFILE=			${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
-SITES.${IRSSI_DISTFILE}=	https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/
+
+GITHUB_PROJECT=			irssi
+GITHUB_TYPE=			release
+GITHUB_RELEASE=			${IRSSI_VERSION}
+MASTER_SITES=			${MASTER_SITE_GITHUB:=irssi/}
 
 # These files are generated during Irssi's build, but are required by
 # plugins to compile properly.
