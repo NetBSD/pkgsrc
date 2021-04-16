@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/01/08 19:29:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/04/16 17:18:57 ryoon Exp $
 bin/fix-qdf
 bin/qpdf
 bin/zlib-flate
@@ -28,8 +28,12 @@ include/qpdf/QPDFAnnotationObjectHelper.hh
 include/qpdf/QPDFCryptoImpl.hh
 include/qpdf/QPDFCryptoProvider.hh
 include/qpdf/QPDFDocumentHelper.hh
+include/qpdf/QPDFEFStreamObjectHelper.hh
+include/qpdf/QPDFEmbeddedFileDocumentHelper.hh
 include/qpdf/QPDFExc.hh
+include/qpdf/QPDFFileSpecObjectHelper.hh
 include/qpdf/QPDFFormFieldObjectHelper.hh
+include/qpdf/QPDFMatrix.hh
 include/qpdf/QPDFNameTreeObjectHelper.hh
 include/qpdf/QPDFNumberTreeObjectHelper.hh
 include/qpdf/QPDFObjGen.hh
