@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+include/gdm/gdm-client-glue.h
+include/gdm/gdm-client.h
+include/gdm/gdm-sessions.h
+include/gdm/gdm-user-switching.h
+lib/girepository-1.0/Gdm-1.0.typelib
+lib/libgdm.so
+lib/libgdm.so.1
+lib/libgdm.so.1.0.0
+lib/pkgconfig/gdm.pc
+share/gir-1.0/Gdm-1.0.gir
+share/glib-2.0/schemas/org.gnome.login-screen.gschema.xml

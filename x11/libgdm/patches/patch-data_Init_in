@@ -1,0 +1,26 @@
+$NetBSD: patch-data_Init_in,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+$OpenBSD: patch-data_Init_in,v 1.7 2015/04/15 14:47:00 ajacoutot Exp $
+
+--- data/Init.in.orig	2021-03-30 13:25:30.000000000 +0000
++++ data/Init.in
+@@ -6,6 +6,9 @@
+ PATH="@X_PATH@:$PATH"
+ OLD_IFS=$IFS
+ 
++# enhance fade in look
++xsetroot -solid black
++
+ gdmwhich () {
+   COMMAND="$1"
+   OUTPUT=
+@@ -94,4 +97,9 @@ if [ "x$SETXKBMAP" != "x" ] ; then
+   fi
+ fi
+ 
++# /etc/X11/xdm/GiveConsole, fbtab(5)
++if [ -c /dev/drm0 ]; then
++    /sbin/chown _gdm /dev/drm0
++fi
++
+ exit 0

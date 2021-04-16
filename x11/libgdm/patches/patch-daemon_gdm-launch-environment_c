@@ -1,0 +1,49 @@
+$NetBSD: patch-daemon_gdm-launch-environment_c,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+
+$OpenBSD: patch-daemon_gdm-launch-environment_c,v 1.10 2019/11/02 15:34:07 ajacoutot Exp $
+
+XXX fix+push upstream
+
+REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)
+From 1ac67f522f5690c27023d98096ca817f12f7eb88 Mon Sep 17 00:00:00 2001
+From: Ray Strode <rstrode@redhat.com>
+Date: Fri, 12 Jun 2015 13:28:01 -0400
+Subject: drop consolekit support
+
+REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)
+From a9cacb929470eb82582396984c61d5b611bfeb1a Mon Sep 17 00:00:00 2001
+From: Ray Strode <rstrode@redhat.com>
+Date: Fri, 12 Jun 2015 14:33:40 -0400
+Subject: session: drop session-type property
+
+Index: daemon/gdm-launch-environment.c
+--- daemon/gdm-launch-environment.c.orig
++++ daemon/gdm-launch-environment.c
+@@ -50,7 +50,7 @@
+ #include "gdm-settings-direct.h"
+ #include "gdm-settings-keys.h"
+ 
+-#define INITIAL_SETUP_USERNAME "gnome-initial-setup"
++#define INITIAL_SETUP_USERNAME "_gnome-initial-setup"
+ #define GDM_SESSION_MODE "gdm"
+ #define INITIAL_SETUP_SESSION_MODE "initial-setup"
+ #define GNOME_SESSION_SESSIONS_PATH DATADIR "/gnome-session/sessions"
+@@ -212,6 +212,9 @@ build_launch_environment (GdmLaunchEnvironment *launch
+                 char *seat_id;
+ 
+                 seat_id = launch_environment->priv->x11_display_seat_id;
++                if (g_str_has_prefix (seat_id, "/org/freedesktop/ConsoleKit/")) {
++                        seat_id += strlen ("/org/freedesktop/ConsoleKit/");
++                }
+ 
+                 g_hash_table_insert (hash, g_strdup ("GDM_SEAT_ID"), g_strdup (seat_id));
+         }
+@@ -237,6 +240,8 @@ on_session_setup_complete (GdmSession        *session,
+                 gdm_session_set_environment_variable (launch_environment->priv->session, key, value);
+         }
+         g_hash_table_destroy (hash);
++
++        gdm_session_select_session_type (launch_environment->priv->session, "LoginWindow");
+ }
+ 
+ static void
