@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2168 2021/04/16 12:19:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2169 2021/04/16 13:06:20 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3489,3 +3489,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/syncthing-gtk to 0.9.4.4 [triaxx 2021-04-16]
 	Updated textproc/py-rdflib to 5.0.0 [adam 2021-04-16]
 	Updated www/py-sparqlwrapper to 1.8.5 [adam 2021-04-16]
+	Updated ham/chirp to 20210416 [gdt 2021-04-16]
