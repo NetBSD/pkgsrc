@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2020/08/24 08:42:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/16 06:02:44 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/autoapi/__init__.py
 ${PYSITELIB}/autoapi/__init__.pyc
 ${PYSITELIB}/autoapi/__init__.pyo
-${PYSITELIB}/autoapi/_version.py
-${PYSITELIB}/autoapi/_version.pyc
-${PYSITELIB}/autoapi/_version.pyo
 ${PYSITELIB}/autoapi/backends.py
 ${PYSITELIB}/autoapi/backends.pyc
 ${PYSITELIB}/autoapi/backends.pyo
@@ -92,8 +94,3 @@ ${PYSITELIB}/autoapi/templates/python/package.rst
 ${PYSITELIB}/autoapi/toctree.py
 ${PYSITELIB}/autoapi/toctree.pyc
 ${PYSITELIB}/autoapi/toctree.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
