@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/03/19 17:37:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/17 11:07:03 leot Exp $
 
-DISTNAME=	amass-3.11.9
-PKGREVISION=	1
+DISTNAME=	amass-3.11.13
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OWASP/}
 GITHUB_PROJECT=	Amass
