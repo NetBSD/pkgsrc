@@ -1,7 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2007/07/08 18:33:38 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2021/04/17 09:24:50 nia Exp $
 
---- src/audio/au_sun.c.orig	Mon Jan  7 18:25:52 2002
-+++ src/audio/au_sun.c	Sun Apr 20 18:12:34 2003
+- Include missing header
+- Use AUDIO_INITINFO for parameter initialization
+
+--- src/audio/au_sun.c.orig	2020-08-13 00:17:09.000000000 +0000
++++ src/audio/au_sun.c
 @@ -45,6 +45,7 @@
  #include <sys/stat.h>
  #include <fcntl.h>
@@ -10,15 +13,12 @@ $NetBSD: patch-ae,v 1.1 2007/07/08 18:33:38 minskim Exp $
  #include <sys/filio.h>
  #include <sys/audioio.h>
  #include "cst_string.h"
-@@ -76,7 +77,11 @@ cst_audiodev *audio_open_sun(int sps, in
+@@ -76,7 +77,7 @@ cst_audiodev *audio_open_sun(int sps, in
  	    cst_error();
  	}
      }
-+#ifdef __OpenBSD__
+-    ioctl(fd,AUDIO_GETINFO,&ainfo);
 +    AUDIO_INITINFO(&ainfo);
-+#else
-     ioctl(fd,AUDIO_GETINFO,&ainfo);
-+#endif
  
      switch (fmt)
      {
