@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 01:12:28 agc Exp $
+$NetBSD: distinfo,v 1.15 2021/04/17 09:07:46 nia Exp $
 
-SHA1 (darkice-1.2.tar.gz) = 508eb0560a7cdf0990a8793f4b8d324ae74bc343
-RMD160 (darkice-1.2.tar.gz) = cc627a716efc49275f3dc3e56011c4d62d0b176d
-SHA512 (darkice-1.2.tar.gz) = d8959819d70eb9b44a34d087fcf3897be5e4cb23681c049f8d88e251d83dfd86b90fdd37744fe27d861dfcbb6bb6e1521b48c5c7b4967bb061ede75596f0a823
-Size (darkice-1.2.tar.gz) = 357026 bytes
-SHA1 (patch-configure) = cf4b34f3a995cec6256385908a9eeb9dfb870875
-SHA1 (patch-rc.darkice) = c8ea98936ad36768014b3fb1410b9c8a902f3a83
-SHA1 (patch-src_FaacEncoder.cpp) = a3ef45fbe17e8d59c09cc93b20665b4589ddc51b
-SHA1 (patch-src_IceCast.cpp) = 91e1920d9e12e9b317468fe64513cc13b75e9ce4
-SHA1 (patch-src_LameLibEncoder.cpp) = 9202aa7d5219dd24dddb7faa58e5edeeb26d6a18
-SHA1 (patch-src_Makefile.in) = ae028bf6e4616b615c4d1d50eb932077a287379d
-SHA1 (patch-src_SerialUlaw.cpp) = 259b99b7e772f743b32b94ace664451df28f90dd
-SHA1 (patch-src_TwoLameLibEncoder.cpp) = bd9774c98789ccdcd14b843d46ddf30f0c5da047
+SHA1 (darkice-1.4.tar.gz) = b863fcd6f4d46493bea9f419ceeceaec276ce776
+RMD160 (darkice-1.4.tar.gz) = 90db0e17936e92a97009fa5b8781957771eebda1
+SHA512 (darkice-1.4.tar.gz) = 708ab08a45e216dce350f6cd36374e10d4606f77f0cde4dfbf35675d9d0778fb7a013b49fd62d713039d5fcfb9e7d66e6b7ae14acf1e5f142685eecdf7a865bc
+Size (darkice-1.4.tar.gz) = 364782 bytes
+SHA1 (patch-rc.darkice) = fe30eb566c9de2c8ee86ef5b79f4adafb568aed7
+SHA1 (patch-src_FaacEncoder.cpp) = 977a151cad0a1054f380a0d5e00f00b08a8f9a06
+SHA1 (patch-src_IceCast.cpp) = 45a24b7fb7b3b2b3939b76c9e7299fe4580202e6
+SHA1 (patch-src_Makefile.in) = 19934d5d52b58505333fdf25b634b9d84bebd5e8
+SHA1 (patch-src_SerialUlaw.cpp) = 95804c48ace57cb5783f92559f4e4428fbe711d2
