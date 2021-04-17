@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2192 2021/04/17 17:48:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2193 2021/04/17 18:10:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3515,3 +3515,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/amass to 3.11.13 [leot 2021-04-17]
 	Updated news/sfeed_curses to 0.9.10 [leot 2021-04-17]
 	Updated x11/rterm to 0.0.3 [pin 2021-04-17]
+	Updated pkgtools/pkglint to 21.1.1 [rillig 2021-04-16]
