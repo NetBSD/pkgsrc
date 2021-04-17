@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2020/11/23 14:09:06 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/04/17 10:09:45 nia Exp $
 
-SHA1 (hydrogen-1.0.1.tar.gz) = d78c30cdb3938621f10952cd215ae3513e07bb69
-RMD160 (hydrogen-1.0.1.tar.gz) = 29966bb55a57b69094dba4835d8f985a1126b6c0
-SHA512 (hydrogen-1.0.1.tar.gz) = 66f2db3986a00832558432d17aa6c459a099f314daed23a8eeef34d83d894dfec71d96ceb09113d22be58e4bd47265c105cf57024c43fb5d925b18cabfb146f0
-Size (hydrogen-1.0.1.tar.gz) = 11501583 bytes
+SHA1 (hydrogen-1.0.2.tar.gz) = e09f7dbd31f49d9b3ba820e688a34b3606261077
+RMD160 (hydrogen-1.0.2.tar.gz) = 50f681d1dbb416714ba72ae40ecc8e92a362390f
+SHA512 (hydrogen-1.0.2.tar.gz) = 7466b7ef1da4a078d67e1cab8744b2e0c3c048bb55e1febd22023c591ed9e2bf1cea41adc38a775a2ac60978735517a92df404d5ca8bb13603ea68c8da70daa9
+Size (hydrogen-1.0.2.tar.gz) = 11533410 bytes
 SHA1 (patch-cmake_FindHelper.cmake) = 2675d0c3819b2239f5e3285c31b80cb4d31dd3ca

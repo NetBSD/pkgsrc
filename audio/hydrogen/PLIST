@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/11/23 14:09:06 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/04/17 10:09:45 nia Exp $
 bin/h2cli
 bin/h2player
 bin/hydrogen
@@ -49,6 +49,7 @@ include/hydrogen/h2_exception.h
 include/hydrogen/helpers/files.h
 include/hydrogen/helpers/filesystem.h
 include/hydrogen/helpers/legacy.h
+include/hydrogen/helpers/translations.h
 include/hydrogen/helpers/xml.h
 include/hydrogen/hydrogen.h
 include/hydrogen/lilypond/lilypond.h
@@ -190,6 +191,8 @@ share/hydrogen/data/i18n/hydrogen_ca.qm
 share/hydrogen/data/i18n/hydrogen_cs.qm
 share/hydrogen/data/i18n/hydrogen_de.qm
 share/hydrogen/data/i18n/hydrogen_el.qm
+share/hydrogen/data/i18n/hydrogen_en.qm
+share/hydrogen/data/i18n/hydrogen_en_GB.qm
 share/hydrogen/data/i18n/hydrogen_es.qm
 share/hydrogen/data/i18n/hydrogen_fr.qm
 share/hydrogen/data/i18n/hydrogen_gl.qm
