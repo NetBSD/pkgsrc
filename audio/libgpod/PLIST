@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/21 19:39:13 shattered Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/04/17 10:18:48 nia Exp $
 bin/ipod-read-sysinfo-extended
 include/gpod-1.0/gpod/itdb.h
 lib/libgpod.la
@@ -21,7 +21,6 @@ share/gtk-doc/html/libgpod/libgpod-Smart-Playlists.html
 share/gtk-doc/html/libgpod/libgpod-The-Itdb-iTunesDB-structure.html
 share/gtk-doc/html/libgpod/libgpod-Time-handling.html
 share/gtk-doc/html/libgpod/libgpod-Tracks.html
-share/gtk-doc/html/libgpod/libgpod.devhelp
 share/gtk-doc/html/libgpod/libgpod.devhelp2
 share/gtk-doc/html/libgpod/photodb.html
 share/gtk-doc/html/libgpod/right.png
