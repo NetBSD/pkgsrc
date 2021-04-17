@@ -1,6 +1,7 @@
-$NetBSD: patch-rc.darkice,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+$NetBSD: patch-rc.darkice,v 1.2 2021/04/17 09:07:46 nia Exp $
 
 == portability
+
 --- rc.darkice.orig	2013-07-15 05:50:01.000000000 +0000
 +++ rc.darkice
 @@ -40,7 +40,7 @@ case $1 in

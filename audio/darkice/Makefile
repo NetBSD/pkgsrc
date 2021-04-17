@@ -1,33 +1,38 @@
-# $NetBSD: Makefile,v 1.24 2020/08/18 17:57:35 leot Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/17 09:07:46 nia Exp $
 #
 
-DISTNAME=	darkice-1.2
-PKGREVISION=	1
+DISTNAME=	darkice-1.4
 CATEGORIES=	audio
-MASTER_SITES=	https://darkice.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rafael2k/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://darkice.tyrell.hu/
-COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
+HOMEPAGE=	http://www.darkice.org/
+COMMENT=	IceCast, IceCast2, and ShoutCast live audio streamer
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
-
-CHECK_PORTABILITY_SKIP+=	configure.in
-
-CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
-CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
-CONFIGURE_ARGS+=	--with-twolame-prefix=${BUILDLINK_PREFIX.twolame}
-CONFIGURE_ARGS+=	--with-faac-prefix=${BUILDLINK_PREFIX.faac}
-CONFIGURE_ARGS+=	--without-jack
-LIBS+=			${LIBOSSAUDIO:Q}
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pkg-config
 
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/darkice
 
 CONF_FILES=	${EGDIR}/darkice.conf ${PKG_SYSCONFDIR}/darkice.conf
+
+CONFIGURE_ARGS+=	--without-aacplus
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+LIBS+=			${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	darkice.cfg
+SUBST_FILES.oss+=	man/darkice.cfg.5
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
@@ -42,11 +47,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/darkice.conf.5
 
-.include "../../audio/faac/buildlink3.mk"
-.include "../../audio/lame/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/twolame/buildlink3.mk"
-
+.include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
