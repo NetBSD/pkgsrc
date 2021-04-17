@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.113 2021/04/07 13:21:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.114 2021/04/17 09:41:52 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1085,6 +1085,9 @@ ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
 ${PYSITELIB}/youtube_dl/extractor/manyvids.py
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyc
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyo
+${PYSITELIB}/youtube_dl/extractor/maoritv.py
+${PYSITELIB}/youtube_dl/extractor/maoritv.pyc
+${PYSITELIB}/youtube_dl/extractor/maoritv.pyo
 ${PYSITELIB}/youtube_dl/extractor/markiza.py
 ${PYSITELIB}/youtube_dl/extractor/markiza.pyc
 ${PYSITELIB}/youtube_dl/extractor/markiza.pyo
