@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/23 00:02:48 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/17 07:46:52 nia Exp $
 bin/abc2abc
 bin/abc2midi
 bin/abcmatch
@@ -20,6 +20,7 @@ share/doc/abcmidi/abcguide.txt
 share/doc/abcmidi/abcmatch.txt
 share/doc/abcmidi/gpl.txt
 share/doc/abcmidi/history.txt
+share/doc/abcmidi/midi2abc-stats.txt
 share/doc/abcmidi/programming/abc2midi.txt
 share/doc/abcmidi/programming/coding.txt
 share/doc/abcmidi/programming/midi2abc.txt
