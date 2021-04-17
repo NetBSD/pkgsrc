@@ -1,5 +1,3 @@
-DarkIce is an IceCast, IceCast2 and ShoutCast live audio streamer. It takes
-audio input from a sound card, encodes it into mp3 and/or Ogg Vorbis, and sends
-the streams to one or more IceCast, ShoutCast and/or IceCast2 servers. DarkIce
-uses lame as a shared object as its mp3 encoder, and the Ogg Vorbis libs as its
-Ogg Vorbis encoder.
+DarkIce is a live audio streamer. It records audio from an audio interface
+(e.g. sound card), encodes it and sends it to a streaming server using the
+ShoutCast, IceCast (1.3.x and 2.x), or Darwin Streaming Server protocols.
