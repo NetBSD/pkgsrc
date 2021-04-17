@@ -15,11 +15,7 @@ type PatchChecker struct {
 	previousLineEmpty bool
 }
 
-const (
-	rePatchUniFileDel = `^---[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
-	rePatchUniFileAdd = `^\+\+\+[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
-	rePatchUniHunk    = `^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(.*)$`
-)
+const rePatchUniFileDel = `^---[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
 
 func (ck *PatchChecker) Check(pkg *Package) {
 	if ck.lines.CheckCvsID(0, ``, "") {
@@ -35,6 +31,9 @@ func (ck *PatchChecker) Check(pkg *Package) {
 	var patchedFiles []Path
 	for !ck.llex.EOF() {
 		line := ck.llex.CurrentLine()
+
+		const rePatchUniFileAdd = `^\+\+\+[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
+
 		if ck.llex.SkipRegexp(rePatchUniFileDel) {
 			if m := ck.llex.NextRegexp(rePatchUniFileAdd); m != nil {
 				patchedFile := NewPath(m[1])
@@ -104,7 +103,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 	linesDiff := 0
 	hasHunks := false
 	for {
-		m := ck.llex.NextRegexp(rePatchUniHunk)
+		m := ck.llex.NextRegexp(`^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(.*)$`)
 		if m == nil {
 			break
 		}
@@ -396,7 +395,7 @@ func (ck *PatchChecker) checktextCvsID(text string) {
 		return
 	}
 	if m, tagname := match1(text, `\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(?::[^\$]*)?\$`); m {
-		if matches(text, rePatchUniHunk) {
+		if matches(text, `^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(.*)$`) {
 			ck.llex.PreviousLine().Warnf("Found CVS tag \"$%s$\". Please remove it.", tagname)
 		} else {
 			ck.llex.PreviousLine().Warnf("Found CVS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)

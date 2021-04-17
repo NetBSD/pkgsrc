@@ -735,6 +735,8 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 
 	pkg.CheckVarorder(mklines)
 
+	pkg.checkMeson(mklines)
+
 	SaveAutofixChanges(mklines.lines)
 }
 
@@ -1176,6 +1178,65 @@ func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
 			handleInclude(mkline)
 		}
 	})
+}
+
+// checkMeson checks for typical leftover snippets from packages that used
+// GNU autotools or another build system, before being migrated to Meson.
+func (pkg *Package) checkMeson(mklines *MkLines) {
+
+	if pkg.Includes("../../devel/meson/build.mk") == nil {
+		return
+	}
+
+	pkg.checkMesonGnuMake(mklines)
+	pkg.checkMesonConfigureArgs()
+	pkg.checkMesonPython(mklines)
+}
+
+func (pkg *Package) checkMesonGnuMake(mklines *MkLines) {
+	gmake := mklines.Tools.ByName("gmake")
+	if gmake != nil && gmake.UsableAtRunTime() {
+		mkline := NewLineWhole(pkg.File("."))
+		mkline.Warnf("Meson packages usually don't need GNU make.")
+		mkline.Explain(
+			"After migrating a package from GNU make to Meson,",
+			"GNU make is typically not needed anymore.")
+	}
+}
+
+func (pkg *Package) checkMesonConfigureArgs() {
+	if mkline := pkg.vars.FirstDefinition("CONFIGURE_ARGS"); mkline != nil {
+		mkline.Warnf("Meson packages usually don't need CONFIGURE_ARGS.")
+		mkline.Explain(
+			"After migrating a package from GNU make to Meson,",
+			"CONFIGURE_ARGS are typically not needed anymore.")
+	}
+}
+
+func (pkg *Package) checkMesonPython(mklines *MkLines) {
+
+	if mklines.allVars.IsDefined("PYTHON_FOR_BUILD_ONLY") {
+		return
+	}
+
+	for path := range pkg.unconditionalIncludes {
+		if path.ContainsPath("lang/python") {
+			goto warn
+		}
+	}
+	return
+
+warn:
+	mkline := NewLineWhole(pkg.File("."))
+	mkline.Warnf("Meson packages usually need Python only at build time.")
+	mkline.Explain(
+		"The Meson build system is implemented in Python,",
+		"therefore packages that use Meson need Python",
+		"as a build-time dependency.",
+		"After building the package, it is typically independent from Python.",
+		"",
+		"To change the Python dependency to build-time,",
+		"set PYTHON_FOR_BUILD_ONLY=yes in the package Makefile.")
 }
 
 func (pkg *Package) determineEffectivePkgVars() {
