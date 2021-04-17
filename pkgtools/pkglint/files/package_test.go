@@ -2618,6 +2618,77 @@ func (s *Suite) Test_Package_checkUseLanguagesCompilerMk__endian_mk(c *check.C) 
 			"Modifying USE_LANGUAGES after including ../../mk/compiler.mk has no effect.")
 }
 
+func (s *Suite) Test_Package_checkMesonGnuMake(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("devel/meson/build.mk")
+	t.SetUpTool("gmake", "", AtRunTime)
+	t.SetUpPackage("category/package",
+		"USE_TOOLS+=\tgmake",
+		"",
+		".include \"../../devel/meson/build.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// XXX: Giving the line number would be nice.
+	t.CheckOutputLines(
+		"WARN: Meson packages usually don't need GNU make.")
+}
+
+func (s *Suite) Test_Package_checkMesonConfigureArgs(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("devel/meson/build.mk")
+	t.SetUpPackage("category/package",
+		"CONFIGURE_ARGS+=\t--enable-feature",
+		"",
+		".include \"../../devel/meson/build.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: Meson packages usually don't need CONFIGURE_ARGS.")
+}
+
+func (s *Suite) Test_Package_checkMesonPython(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("devel/meson/build.mk")
+	t.CreateFileLines("lang/python/application.mk")
+	t.SetUpPackage("category/package",
+		"PYTHON_FOR_BUILD_ONLY=\ttool",
+		"",
+		".include \"../../lang/python/application.mk\"",
+		".include \"../../devel/meson/build.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkMesonPython__missing_PYTHON_FOR_BUILD_ONLY(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("devel/meson/build.mk")
+	t.CreateFileLines("lang/python/application.mk")
+	t.SetUpPackage("category/package",
+		".include \"../../lang/python/application.mk\"",
+		".include \"../../devel/meson/build.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Meson packages usually need Python only at build time.")
+}
+
 // PKGNAME is stronger than DISTNAME.
 func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 	t := s.Init(c)

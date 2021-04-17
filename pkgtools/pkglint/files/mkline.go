@@ -935,12 +935,13 @@ func (mkline *MkLine) checkFileGlobbing(ch int, str string) {
 		return
 	}
 
-	if !mkline.once.FirstTimeSlice("unintended file globbing", string(ch)) {
+	chStr := string(rune(ch))
+	if !mkline.once.FirstTimeSlice("unintended file globbing", chStr) {
 		return
 	}
 
 	mkline.Warnf("The %q in the word %q may lead to unintended file globbing.",
-		string(ch), str)
+		chStr, str)
 	mkline.Explain(
 		"To fix this, enclose the word in \"double\" or 'single' quotes.")
 }

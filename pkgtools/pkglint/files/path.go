@@ -25,7 +25,7 @@ func (p Path) GoString() string { return sprintf("%q", string(p)) }
 // which is usually a sign of an uninitialized variable.
 func (p Path) IsEmpty() bool { return p == "" }
 
-// Returns the directory of the path, with only minimal cleaning.
+// Dir returns the directory of the path, with only minimal cleaning.
 // Only redundant dots and slashes are removed, and only at the end.
 func (p Path) Dir() Path {
 	s := p.String()
@@ -188,7 +188,8 @@ func (p Path) CleanDot() Path {
 	return NewPath(strings.Join(parts, "/"))
 }
 
-// Differs from path.Clean in that only "../../" is replaced, not "../".
+// CleanPath is similar to path.Clean.
+// The difference is that only "../../" is replaced, not "../".
 // Also, the initial directory is always kept.
 // This is to provide the package path as context in deeply nested .include chains.
 func (p Path) CleanPath() Path {
