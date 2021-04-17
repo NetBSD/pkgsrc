@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.9 2021/04/12 12:14:03 nia Exp $
+# $NetBSD: build.mk,v 1.10 2021/04/17 08:25:15 nia Exp $
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -52,8 +52,6 @@ meson-test:
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
 	    ninja -j ${_MAKE_JOBS_N:U1} -C output test
 .endfor
-
-.include "../../lang/python/application.mk"
 
 _VARGROUPS+=		meson
 _PKG_VARS.meson=	CONFIGURE_DIRS
