@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2179 2021/04/17 09:07:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2180 2021/04/17 09:17:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3502,3 +3502,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/abcmidi to 20210221 [nia 2021-04-17]
 	Updated audio/ezstream to 1.0.2 [nia 2021-04-17]
 	Updated audio/darkice to 1.4 [nia 2021-04-17]
+	Added audio/mpg123-jack version 1.26.5 [nia 2021-04-17]
