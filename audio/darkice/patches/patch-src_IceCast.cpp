@@ -1,6 +1,7 @@
-$NetBSD: patch-src_IceCast.cpp,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+$NetBSD: patch-src_IceCast.cpp,v 1.2 2021/04/17 09:07:46 nia Exp $
 
 Fix "log10(int) is ambigous" on SunOS
+
 --- src/IceCast.cpp.orig	2013-07-15 05:50:42.000000000 +0000
 +++ src/IceCast.cpp
 @@ -145,7 +145,7 @@ IceCast :: sendLogin ( void )
