@@ -1,6 +1,7 @@
-$NetBSD: patch-src_SerialUlaw.cpp,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+$NetBSD: patch-src_SerialUlaw.cpp,v 1.2 2021/04/17 09:07:46 nia Exp $
 
 cfmakeraw is not portable to SunOS
+
 --- src/SerialUlaw.cpp.orig	2013-07-15 05:50:42.000000000 +0000
 +++ src/SerialUlaw.cpp
 @@ -232,7 +232,15 @@ SerialUlaw :: open ( void )
