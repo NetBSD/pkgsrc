@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.73 2020/11/05 09:06:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2021/04/17 10:18:48 nia Exp $
 
-DISTNAME=	libgpod-0.8.2
-PKGREVISION=	47
+DISTNAME=	libgpod-0.8.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	srp@tworoads.net
-#HOMEPAGE=	http://www.gtkpod.org/wiki/Libgpod
+HOMEPAGE=	https://sourceforge.net/projects/gtkpod/
 COMMENT=	Library for accessing iPod onboard databases, playlists, etc
 LICENSE=	gnu-lgpl-v2
 
