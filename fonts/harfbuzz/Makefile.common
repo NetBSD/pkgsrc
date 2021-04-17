@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/01/01 08:58:00 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/04/17 18:42:08 nros Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-2.7.4
@@ -85,3 +85,4 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # graphite2 support breaks graphics/librsvg-c
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
+.include "../../lang/python/tool.mk"
