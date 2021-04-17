@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/17 09:15:05 nia Exp $
-lib/mpg123/output_jack.la
+@comment $NetBSD: PLIST,v 1.4 2021/04/17 09:20:47 nia Exp $
+lib/mpg123/output_nas.la
