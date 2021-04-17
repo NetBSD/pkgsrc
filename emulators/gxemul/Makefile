@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2021/02/20 14:24:58 skrll Exp $
+# $NetBSD: Makefile,v 1.72 2021/04/17 07:36:53 ryoon Exp $
 
-DISTNAME=	gxemul-0.6.3
+DISTNAME=	gxemul-0.6.3.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxemul/}
 
