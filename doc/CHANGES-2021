@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2182 2021/04/17 09:42:02 leot Exp $
+$NetBSD: CHANGES-2021,v 1.2183 2021/04/17 09:44:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/mpg123-jack version 1.26.5 [nia 2021-04-17]
 	Updated audio/flite to 2.2 [nia 2021-04-17]
 	Updated net/youtube-dl to 20210417 [leot 2021-04-17]
+	Updated net/py-rt to 2.1.1 [leot 2021-04-17]
