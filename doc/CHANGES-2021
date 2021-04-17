@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2188 2021/04/17 10:19:00 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2189 2021/04/17 10:33:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3511,3 +3511,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/hydrogen to 1.0.2 [nia 2021-04-17]
 	Updated misc/tmux to 3.2 [leot 2021-04-17]
 	Updated audio/libgpod to 0.8.3 [nia 2021-04-17]
+	Updated security/sqlmap to 1.5.4 [leot 2021-04-17]
