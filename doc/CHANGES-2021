@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2175 2021/04/16 17:19:23 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2176 2021/04/17 07:37:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3498,3 +3498,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/gcc10-libs to 10.3.0nb1 [ryoon 2021-04-16]
 	Added archivers/pxz version 4.999.9beta [ryoon 2021-04-16]
 	Updated print/qpdf to 10.3.1 [ryoon 2021-04-16]
+	Updated emulators/gxemul to 0.6.3.1 [ryoon 2021-04-17]
