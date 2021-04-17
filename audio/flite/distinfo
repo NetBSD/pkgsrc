@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.10 2019/09/07 11:42:49 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/04/17 09:24:50 nia Exp $
 
-SHA1 (flite-2.1-release.tar.bz2) = ed8f1ae3c44dafc2bcc70df4ebf618330f7edec9
-RMD160 (flite-2.1-release.tar.bz2) = ebd73639e65043467dffe5d9e7700f6ced5bfe1b
-SHA512 (flite-2.1-release.tar.bz2) = e9ef9ca4b6920178634d94bbe6e21a8b0ec471b010b07e6cc961ed2d120acb944c8e1d268fe26188f7dfe43fb7bd4bdff7fa53b2d2f12029d37e08d0316620d2
-Size (flite-2.1-release.tar.bz2) = 14816327 bytes
-SHA1 (patch-CVE-2014-0027) = aae5a7e965cfe41af05c3917f6574f223185aeff
+SHA1 (flite-2.2.tar.gz) = 687cace51875b15d2f10dba0732dfc0634571bb8
+RMD160 (flite-2.2.tar.gz) = 86b66adeb328878d5cafb7e67bb203b734edeb66
+SHA512 (flite-2.2.tar.gz) = 1ca2f4145651490ef8405fdb830a3b42e885020a7603d965f6a5581b01bed41047d396b38c2ceab138fc0b28d28078db17acd2b5a84c6444cb99d65c581afa72
+Size (flite-2.2.tar.gz) = 20233792 bytes
 SHA1 (patch-ad) = e75da7826581a1d93d4f5efe75f257cc749358a7
-SHA1 (patch-ae) = c1bd0e1baea7464d3ef0d35481714f92af3da4d8
+SHA1 (patch-ae) = 68bd8745c75143e211966eefcfdc4b094f54e6a3
 SHA1 (patch-config_common__make__rules) = 949ec45c35872fd39c44864b484423ab28467898
