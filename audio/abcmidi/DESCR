@@ -1,3 +1,13 @@
-abcMIDI is a package of programs developed by James Allwright for
-processing ABC music notation files. It consists of several programs:
-abc2midi, abc2abc, yaps, and midi2abc.
+abcmidi contains a collection of command line utilities for working
+with abc music notation files.
+
+- abc2midi converts an abc file into a midi file.
+- abc2abc transposes the contents of an abc file to another key.
+- midi2abc converts a midi file into an abc file.
+- yaps renders the contents of an abc file into common music notation
+  and records it into a PostScript file.
+- mftext presents a textual representation of a midi file.
+- midicopy changes the contents of a midi file and records it in
+  a new midi file.
+- abcmatch searches a database of abc files for certain musical
+  patterns.
