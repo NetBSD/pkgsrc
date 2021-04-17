@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.49 2021/04/17 10:11:04 leot Exp $
+$NetBSD: distinfo,v 1.50 2021/04/17 10:28:22 leot Exp $
 
 SHA1 (tmux-3.2.tar.gz) = 181d726792e0ac3c4b7ebe5befd5f995c57fbc9b
 RMD160 (tmux-3.2.tar.gz) = 25a9c3db68f423d8f828207759f66f785ee10121
 SHA512 (tmux-3.2.tar.gz) = 63165495e838871c7f42ac1a6229ec2404acfa7d42c7a0070c89cb38712ac933676930392b0a10cbdd6059910ae46129257b90135c5846e85142e786482fd75e
 Size (tmux-3.2.tar.gz) = 646457 bytes
 SHA1 (patch-compat_daemon-darwin.c) = e8feeb4b100e73ab197eb2fd776fa648a1da28e4
-SHA1 (patch-configure) = 45515d95ea6fa2672b52463383161bba05d1635a
+SHA1 (patch-configure) = ec61c6a67a8da4b7552bb71643661b48b5e050e1
 SHA1 (patch-osdep-darwin.c) = 715b1e206add7d911edec381942706220ea2fbb6
