@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2177 2021/04/17 07:47:03 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2178 2021/04/17 08:31:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/qpdf to 10.3.1 [ryoon 2021-04-16]
 	Updated emulators/gxemul to 0.6.3.1 [ryoon 2021-04-17]
 	Updated audio/abcmidi to 20210221 [nia 2021-04-17]
+	Updated audio/ezstream to 1.0.2 [nia 2021-04-17]
