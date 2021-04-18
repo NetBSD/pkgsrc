@@ -1,11 +1,10 @@
-$NetBSD: patch-tools_include_xen-sys_NetBSD_evtchn.h,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+$NetBSD: patch-tools_include_xen-sys_NetBSD_evtchn.h,v 1.2 2021/04/18 19:42:19 bouyer Exp $
 
 Use system-provided headers instead of local, outdated definitions
 
 --- tools/include/xen-sys/NetBSD/evtchn.h.orig	2021-04-17 13:48:20.754547947 +0200
 +++ tools/include/xen-sys/NetBSD/evtchn.h	2021-04-17 13:51:39.136816295 +0200
-@@ -1,86 +1,3 @@
--/* $NetBSD: patch-tools_include_xen-sys_NetBSD_evtchn.h,v 1.1 2021/04/18 12:31:26 bouyer Exp $ */
+@@ -2,85 +2,3 @@
 -/******************************************************************************
 - * evtchn.h
 - * 
