@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_bch.c,v 1.1 2020/04/06 15:06:18 tnn Exp $
+$NetBSD: patch-lib_bch.c,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 u-boot: fix build on macos
 
