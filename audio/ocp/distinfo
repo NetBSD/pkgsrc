@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/07/26 14:11:36 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2021/04/18 20:38:37 wiz Exp $
 
 SHA1 (ocp-0.1.21.tar.bz2) = aaa16cf1979c572b09c73e7cc61350bfc4477380
 RMD160 (ocp-0.1.21.tar.bz2) = 6b42e93e9fe5879e844b2d336825a2db156b7e6f
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = f28f3ebc5e3d61858f2f5bed79094fff57130da6
 SHA1 (patch-ad) = 5252050662343fa2575d84e883f8d157b4a2de0e
 SHA1 (patch-ae) = 00f5b6edaf0dcb2200f8e9f14ab6a8e1a9711f65
 SHA1 (patch-af) = dbb7b2d1b7a5f35c14477725ad18e31b2af787b9
-SHA1 (patch-configure) = 823ace11818bc5289636324cdcc3ca09496a690f
+SHA1 (patch-configure) = c26f3be5c102da245f0e0c55d17a34cfdb844a37
 SHA1 (patch-goodies_helpc_Makefile.in) = aeb8f25afa126aa0db50325d2d7daf0eccedaee3
 SHA1 (patch-playay_ayplay.c) = 565efad3e619743fd7260c2957152a0b116674c4
 SHA1 (patch-playym_ympplay.cpp) = d0d5fd0126e30f5036f0267d17ae3524c9afcb34
