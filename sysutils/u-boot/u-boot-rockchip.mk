@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.9 2020/06/13 07:01:32 tnn Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.10 2021/04/18 07:30:28 mrg Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -12,10 +12,6 @@
 #
 
 UBOOT_VERSION?=		2020.01-rc5
-
-# Patches kept in pinebook-pro; first worked there.
-DISTINFO_FILE?=		${.CURDIR}/../../sysutils/u-boot-pinebook-pro/distinfo
-PATCHDIR?=		${.CURDIR}/../../sysutils/u-boot-pinebook-pro/patches
 
 MAKE_ENV+=		BL31=${PREFIX}/share/arm-trusted-firmware/${U_BOOT_IMAGE_TYPE}/bl31.elf
 
