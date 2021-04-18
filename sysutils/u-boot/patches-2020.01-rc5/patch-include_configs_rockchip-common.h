@@ -1,4 +1,4 @@
-$NetBSD: patch-include_configs_rockchip-common.h,v 1.1 2020/01/14 08:44:03 mrg Exp $
+$NetBSD: patch-include_configs_rockchip-common.h,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 Author: dhivael <dhivael.git@eno.space>
 Date:   Sat Jan 11 15:04:04 2020 +0100

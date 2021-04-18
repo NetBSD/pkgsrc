@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_bch.c,v 1.3 2018/02/18 12:27:20 jmcneill Exp $
+$NetBSD: patch-lib_bch.c,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 --- lib/bch.c.orig	2018-01-23 06:50:34.000000000 +0000
 +++ lib/bch.c
