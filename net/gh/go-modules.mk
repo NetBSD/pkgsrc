@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.8 2021/03/21 07:56:18 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.9 2021/04/18 10:54:08 bsiegert Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -66,7 +66,8 @@ GO_MODULE_FILES+=	github.com/cespare/xxhash/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/glamour/@v/v0.2.1-0.20200724174618-1246d13c1684.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/glamour/@v/v0.2.1-0.20200724174618-1246d13c1684.zip
 GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.0.0.mod
-GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/cli/oauth/@v/v0.8.0.mod
 GO_MODULE_FILES+=	github.com/cli/oauth/@v/v0.8.0.zip
 GO_MODULE_FILES+=	github.com/cli/safeexec/@v/v1.0.0.mod
@@ -104,6 +105,8 @@ GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.7.0.zip
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.4.7.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.4.7.zip
+GO_MODULE_FILES+=	github.com/gabriel-vasile/mimetype/@v/v1.1.2.mod
+GO_MODULE_FILES+=	github.com/gabriel-vasile/mimetype/@v/v1.1.2.zip
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/go-gl/glfw/@v/v0.0.0-20190409004039-e6da0acd62b1.mod
@@ -473,7 +476,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20200223170610-d5e6a3e2c0ae.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20200323222414-85ca7c5b95cd.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20200413165638-669c56c373c4.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210113181707-4bcb84eeeb78.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210113181707-4bcb84eeeb78.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210319071255-635bc2c9138d.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210319071255-635bc2c9138d.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.1-0.20180807135948-17ff2d5776d2.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.2.mod
