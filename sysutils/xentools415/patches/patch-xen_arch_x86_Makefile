@@ -1,0 +1,15 @@
+$NetBSD: patch-xen_arch_x86_Makefile,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+
+also filter out flags added by pkgsrc
+
+--- xen/arch/x86/Makefile.orig	2020-12-11 18:09:56.686501836 +0100
++++ xen/arch/x86/Makefile	2020-12-11 18:10:47.737620837 +0100
+@@ -252,7 +252,7 @@
+ 
+ efi.lds: AFLAGS-y += -DEFI
+ xen.lds efi.lds: xen.lds.S
+-	$(CPP) -P $(filter-out -Wa$(comma)%,$(a_flags)) -MQ $@ -o $@ $<
++	$(CPP) -P $(filter-out -Wa$(comma)% -g3,$(a_flags)) -MQ $@ -o $@ $<
+ 
+ boot/mkelf32: boot/mkelf32.c
+ 	$(HOSTCC) $(HOSTCFLAGS) -o $@ $<

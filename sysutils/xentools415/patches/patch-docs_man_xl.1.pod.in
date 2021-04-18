@@ -1,0 +1,17 @@
+$NetBSD: patch-docs_man_xl.1.pod.in,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+
+--- docs/man/xl.1.pod.in.orig	2021-04-06 19:14:18.000000000 +0200
++++ docs/man/xl.1.pod.in	2021-04-17 13:34:37.085288645 +0200
+@@ -33,10 +33,10 @@
+ 
+ =over 4
+ 
+-=item start the script B</etc/init.d/xencommons> at boot time
++=item start the script B</etc/rc.d/xencommons> at boot time
+ 
+ Most B<xl> operations rely upon B<xenstored> and B<xenconsoled>: make
+-sure you start the script B</etc/init.d/xencommons> at boot time to
++sure you start the script B</etc/rc.d/xencommons> at boot time to
+ initialize all the daemons needed by B<xl>.
+ 
+ =item setup a B<xenbr0> bridge in dom0
