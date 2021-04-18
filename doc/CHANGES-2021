@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2195 2021/04/18 10:54:43 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2196 2021/04/18 11:26:34 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.1.1 [rillig 2021-04-16]
 	Updated devel/binaryen to 101 [fcambus 2021-04-17]
 	Updated net/gh to 1.9.1 [bsiegert 2021-04-18]
+	Updated audio/din to 50.2 [fox 2021-04-18]
