@@ -1,0 +1,12 @@
+$NetBSD: patch-tools_examples_Makefile,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+
+--- tools/examples/Makefile.orig	2021-01-10 21:34:35.490019719 +0100
++++ tools/examples/Makefile	2021-01-10 21:35:00.852608954 +0100
+@@ -1,6 +1,7 @@
+ XEN_ROOT = $(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
++XEN_CONFIG_DIR=${XEN_EXAMPLES_DIR}
+ # Xen configuration dir and configs to go there.
+ XEN_READMES = README
+ 
