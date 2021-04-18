@@ -1,4 +1,4 @@
-$NetBSD: patch-include_image.h,v 1.1 2020/06/20 17:42:34 thorpej Exp $
+$NetBSD: patch-include_image.h,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 Ensure the correct byte order macros are used when image.h is included
 in a host tool.

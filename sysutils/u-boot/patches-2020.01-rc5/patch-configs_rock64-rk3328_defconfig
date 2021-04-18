@@ -1,4 +1,4 @@
-$NetBSD: patch-configs_rock64-rk3328_defconfig,v 1.1 2020/01/14 08:44:03 mrg Exp $
+$NetBSD: patch-configs_rock64-rk3328_defconfig,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 Put u-boot at 256KB.
 

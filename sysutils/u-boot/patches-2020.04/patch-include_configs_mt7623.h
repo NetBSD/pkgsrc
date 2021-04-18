@@ -1,4 +1,4 @@
-$NetBSD: patch-include_configs_mt7623.h,v 1.2 2020/06/20 17:42:34 thorpej Exp $
+$NetBSD: patch-include_configs_mt7623.h,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 Set the bootm_size, kernel_addr_r, fdt_addr_r, scriptaddr, pxefile_addr_r,
 ramdisk_addr_r, and fdtfile environment varibles.
