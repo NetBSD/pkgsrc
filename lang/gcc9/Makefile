@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/02/13 15:56:17 maya Exp $
+# $NetBSD: Makefile,v 1.30 2021/04/18 11:52:16 gson Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -62,6 +62,8 @@ BROKEN_ON_PLATFORM+=	SunOS-*-x86_64
 # ...
 # *** Configuration aarch64--netbsd not supported
 NOT_FOR_PLATFORM+=	NetBSD-*-aarch64
+# *** Configuration aarch64-apple-darwin20 not supported
+NOT_FOR_PLATFORM+=	Darwin-*-aarch64
 
 LANGS=			c
 
