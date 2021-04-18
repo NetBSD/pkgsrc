@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/15 09:37:25 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/18 07:30:28 mrg Exp $
 
 UBOOT_TARGET=		rockpro64
 UBOOT_CONFIG=		rockpro64-rk3399_defconfig
@@ -8,8 +8,8 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 U_BOOT_IMAGE_TYPE=	rk3399
 
-DISTINFO_FILE?=         ${.CURDIR}/../../sysutils/u-boot-rockpro64-ayufan/distinfo
-PATCHDIR?=              ${.CURDIR}/../../sysutils/u-boot-rockpro64-ayufan/patches
+DISTINFO_FILE=         ${.CURDIR}/../../sysutils/u-boot-rockpro64-ayufan/distinfo
+PATCHDIR=              ${.CURDIR}/../../sysutils/u-boot-rockpro64-ayufan/patches
 
 UBOOT_VERSION=  2020.01.2014
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=ayufan-rock64/}
