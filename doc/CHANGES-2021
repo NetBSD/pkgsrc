@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2199 2021/04/18 19:46:47 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2200 2021/04/18 19:47:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/xentools415 version 4.15.0 [bouyer 2021-04-18]
 	Updated editors/cesium to 0.2.0 [pin 2021-04-18]
 	Updated www/links to 2.22 [fcambus 2021-04-18]
+	Updated www/links-gui to 2.22 [fcambus 2021-04-18]
