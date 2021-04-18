@@ -1,4 +1,4 @@
-$NetBSD: patch-arch_arm_dts_rk3399-pinebook-pro.dts,v 1.2 2020/01/14 08:44:03 mrg Exp $
+$NetBSD: patch-arch_arm_dts_rk3399-pinebook-pro.dts,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
 

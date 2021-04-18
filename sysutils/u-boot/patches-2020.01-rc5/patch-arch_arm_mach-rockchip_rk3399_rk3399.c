@@ -1,4 +1,4 @@
-$NetBSD: patch-arch_arm_mach-rockchip_rk3399_rk3399.c,v 1.1 2020/01/14 08:44:03 mrg Exp $
+$NetBSD: patch-arch_arm_mach-rockchip_rk3399_rk3399.c,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 adjusted by mrg to restrict to CONFIG_TARGET_PINEBOOK_PRO_RK3399.
 
