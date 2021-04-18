@@ -1,4 +1,4 @@
-$NetBSD: patch-arch_arm_cpu_armv8_Kconfig,v 1.1 2020/04/06 15:06:18 tnn Exp $
+$NetBSD: patch-arch_arm_cpu_armv8_Kconfig,v 1.1 2021/04/18 08:54:55 mrg Exp $
 
 --- arch/arm/cpu/armv8/Kconfig.orig	2018-08-06 22:28:00.000000000 +0000
 +++ arch/arm/cpu/armv8/Kconfig
