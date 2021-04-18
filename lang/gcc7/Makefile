@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/02/13 15:56:16 maya Exp $
+# $NetBSD: Makefile,v 1.38 2021/04/18 11:52:16 gson Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -21,7 +21,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 
-NOT_FOR_PLATFORM=	Interix-*-*
+NOT_FOR_PLATFORM=	Interix-*-* Darwin-*-aarch64
 
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake makeinfo perl sed:run tar:build
