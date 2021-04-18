@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2196 2021/04/18 11:26:34 fox Exp $
+$NetBSD: CHANGES-2021,v 1.2197 2021/04/18 12:33:04 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3519,3 +3519,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/binaryen to 101 [fcambus 2021-04-17]
 	Updated net/gh to 1.9.1 [bsiegert 2021-04-18]
 	Updated audio/din to 50.2 [fox 2021-04-18]
+	Added sysutils/xenkernel415 version 4.15.0 [bouyer 2021-04-18]
+	Added sysutils/xentools415 version 4.15.0 [bouyer 2021-04-18]
