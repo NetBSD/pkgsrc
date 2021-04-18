@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_xl_Makefile,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+
+--- tools/xl/Makefile.orig	2021-01-26 12:35:19.000000000 +0100
++++ tools/xl/Makefile	2021-01-26 19:21:03.038848363 +0100
+@@ -43,9 +43,9 @@
+ .PHONY: install
+ install: all
+ 	$(INSTALL_DIR) $(DESTDIR)$(sbindir)
+-	$(INSTALL_DIR) $(DESTDIR)$(BASH_COMPLETION_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)
+ 	$(INSTALL_PROG) xl $(DESTDIR)$(sbindir)
+-	$(INSTALL_DATA) bash-completion $(DESTDIR)$(BASH_COMPLETION_DIR)/xl
++	$(INSTALL_DATA) bash-completion $(DESTDIR)$(XEN_EXAMPLES_DIR)/xl.bash
+ 
+ .PHONY: uninstall
+ uninstall:
