@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/11/05 09:07:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2021/04/19 13:51:17 pgoyette Exp $
 
 DISTNAME=	hexchat-2.14.3
 PKGREVISION=	7
@@ -12,6 +12,10 @@ COMMENT=	IRC client based on XChat
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
+
+PYTHON_FOR_BUILD_ONLY=    tool
+.include "../../lang/python/tool.mk"
+
 USE_LANGUAGES=	c c++
 
 # XXX fails without GNU msgfmt
