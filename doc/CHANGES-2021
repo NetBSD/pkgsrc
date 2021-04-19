@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2224 2021/04/19 20:06:58 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2225 2021/04/19 20:08:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3547,3 +3547,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rust to 1.50.0 [he 2021-04-19]
 	Updated sysutils/xplr to 0.5.2 [pin 2021-04-19]
 	Updated www/firefox78 to 78.10.0 [nia 2021-04-19]
+	Updated www/firefox78-l10n to 78.10.0 [nia 2021-04-19]
