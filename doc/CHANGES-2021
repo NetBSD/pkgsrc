@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2203 2021/04/19 01:56:44 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2204 2021/04/19 02:14:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Graph to 0.9721 [wen 2021-04-19]
 	Added devel/p5-Test-Lib version 0.002 [wen 2021-04-19]
 	Added devel/p5-CLI-Osprey version 0.08 [wen 2021-04-19]
+	Updated www/p5-Dancer2 to 0.301002 [wen 2021-04-19]
