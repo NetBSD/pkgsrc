@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/04/12 13:10:09 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/19 15:56:31 cirnatdan Exp $
 
 DISTNAME=	libchamplain-0.12.20
 PKGNAME=	${DISTNAME:S/ain/ain012/}
@@ -23,7 +23,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 # TODO:
 # add vala option?
-# add introspection option?
+.include "options.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
