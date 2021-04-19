@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/03/18 01:46:12 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/04/19 10:14:56 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.allegro5
 PKG_SUPPORTED_OPTIONS=		alsa openal pulseaudio x11
@@ -48,7 +48,7 @@ CMAKE_ARGS+=	-DWANT_X11=ON
 .  include "../../x11/libXrandr/buildlink3.mk"
 .  include "../../x11/libXxf86vm/buildlink3.mk"
 .  if ${OPSYS} != "Darwin"
-.    include "../../x11/gtk2/buildlink3.mk" # native_dialog
+.    include "../../x11/gtk3/buildlink3.mk" # native_dialog
 .  endif
 .else
 CMAKE_ARGS+=	-DWANT_X11=OFF
