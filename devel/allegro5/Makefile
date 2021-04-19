@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/02/07 06:30:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/19 10:14:56 nia Exp $
 
-DISTNAME=	allegro-5.2.6.0
+DISTNAME=	allegro-5.2.7.0
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
-PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
 GITHUB_PROJECT=	allegro5
@@ -26,9 +25,14 @@ CMAKE_ARGS+=	-DWANT_EXAMPLES=OFF
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
-LDFLAGS+=	${LIBOSSAUDIO}
+LDFLAGS+=		${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	addons/audio/oss.c
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .else
-CMAKE_ARGS+=	-DWANT_OSS=OFF
+CMAKE_ARGS+=		-DWANT_OSS=OFF
 .endif
 
 PKGCONFIG_OVERRIDE+=	misc/allegro.pc.in
@@ -59,6 +63,7 @@ PKGCONFIG_OVERRIDE+=	misc/allegro_video.pc.in
 .include "../../audio/dumb/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/minimp3/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

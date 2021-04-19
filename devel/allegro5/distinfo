@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/03/18 01:23:01 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/04/19 10:14:56 nia Exp $
 
-SHA1 (allegro-5.2.6.0.tar.gz) = 4d576cae5a490e8084b9b79c432edf115dc318cd
-RMD160 (allegro-5.2.6.0.tar.gz) = 9a00d87207e36b0b97603cb12c8d22866e15ea88
-SHA512 (allegro-5.2.6.0.tar.gz) = a475de67b0e6c727295cc51e113859eb0c57825a240e70bc45cd3b000c40518932b89cecdd13ba957416136db4ee9a9363adb5d3bfa7c8acda04ee95de6ba721
-Size (allegro-5.2.6.0.tar.gz) = 7867726 bytes
+SHA1 (allegro-5.2.7.0.tar.gz) = 5642bb9a34936ddaeaa7ad651b1cf6dea441279d
+RMD160 (allegro-5.2.7.0.tar.gz) = 75c3aa46cd701e68c095f894ff02f4f15a028fcd
+SHA512 (allegro-5.2.7.0.tar.gz) = 300bb951c661e7a220d913cca4116aba99afdcb5346af7c57b09bbdfa892d446cd64fde54397c57edb3c5f57d3380fbc2b6c4d9c9e17f48ff8180cfbf59e7d99
+Size (allegro-5.2.7.0.tar.gz) = 7911231 bytes
 SHA1 (patch-src_unix_uxthread.c) = 70fb118d3441b72e38b90353644a2a1bf567c5b6
