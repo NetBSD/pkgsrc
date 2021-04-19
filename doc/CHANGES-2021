@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2211 2021/04/19 10:52:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2212 2021/04/19 10:59:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Moved meta-pkgs/gnome3 to meta-pkgs/gnome [dan 2021-04-19]
 	Updated games/exult to 1.6 [nia 2021-04-19]
 	Updated graphics/glfw to 3.3.4 [nia 2021-04-19]
+	Updated graphics/jasper to 2.0.32 [nia 2021-04-19]
