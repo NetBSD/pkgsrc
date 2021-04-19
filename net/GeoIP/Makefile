@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/01/08 11:59:43 nia Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/19 07:22:30 maya Exp $
 
 DISTNAME=	GeoIP-1.6.12
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 GITHUB_PROJECT=	geoip-api-c
@@ -15,6 +16,8 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 TEST_TARGET=	check
+
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
