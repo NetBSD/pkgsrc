@@ -1,8 +1,8 @@
-$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.1 2020/07/31 01:26:43 maya Exp $
+$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.2 2021/04/19 13:50:07 ryoon Exp $
 
 No eventfd on netbsd, fix build
 
---- widget/gtk/DMABufSurface.cpp.orig	2020-07-20 20:56:52.000000000 +0000
+--- widget/gtk/DMABufSurface.cpp.orig	2021-04-08 21:20:12.000000000 +0000
 +++ widget/gtk/DMABufSurface.cpp
 @@ -18,7 +18,9 @@
  #include <sys/time.h>
@@ -12,9 +12,9 @@ No eventfd on netbsd, fix build
  #include <sys/eventfd.h>
 +#endif
  #include <poll.h>
+ #include <sys/ioctl.h>
  
- #include "mozilla/widget/gbm.h"
-@@ -91,6 +93,7 @@ void DMABufSurface::GlobalRefAdd() {
+@@ -97,6 +99,7 @@ void DMABufSurface::GlobalRefAdd() {
  }
  
  void DMABufSurface::GlobalRefCountCreate() {
@@ -22,7 +22,7 @@ No eventfd on netbsd, fix build
    MOZ_ASSERT(!mGlobalRefCountFd);
    mGlobalRefCountFd = eventfd(0, EFD_CLOEXEC | EFD_NONBLOCK | EFD_SEMAPHORE);
    if (mGlobalRefCountFd < 0) {
-@@ -98,6 +101,7 @@ void DMABufSurface::GlobalRefCountCreate
+@@ -106,6 +109,7 @@ void DMABufSurface::GlobalRefCountCreate
      mGlobalRefCountFd = 0;
      return;
    }
