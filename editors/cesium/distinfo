@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/04/18 15:25:24 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/04/19 14:41:02 pin Exp $
 
 SHA1 (ahash-0.6.3.crate) = 941e1af4fe692fa26d08a99e22d203bc2152804e
 RMD160 (ahash-0.6.3.crate) = 86e35bbda6cf2a59774d439e6d4e42063b99c9bc
@@ -16,10 +16,10 @@ SHA1 (cc-1.0.67.crate) = cb42ab68a87b36d0c9ea40ec2e86471557a3e0fc
 RMD160 (cc-1.0.67.crate) = 0be373ba090355c617a86bab1b1fe830b1387a11
 SHA512 (cc-1.0.67.crate) = f1ad4abdaad2667b190d1f8df8515f603107be1f69bdbdc02b5159764a6ed18b3f672d6b06af50c7f2fd3e6e3dad5df0fcd0dda762d909ba0922c769f1efbe05
 Size (cc-1.0.67.crate) = 53486 bytes
-SHA1 (cesium-0.2.0.tar.gz) = 42b2e92edf143c9ecc28bf051a0f14215a9e9c40
-RMD160 (cesium-0.2.0.tar.gz) = 235ca47f10e8bd0675e662cc03eb21ff0fce3c77
-SHA512 (cesium-0.2.0.tar.gz) = 7db1f1fc61a51e5c5c83a08a58f2d52a21d4ae4e67071e72fe30e12052784ed8c0ce1a6697f18675eec6209a8a9526cd2061d8c21203885f32c0b437166b3f50
-Size (cesium-0.2.0.tar.gz) = 182370 bytes
+SHA1 (cesium-0.2.1.tar.gz) = f57f96fc566466c6b166fb3457eb00b31c3ed483
+RMD160 (cesium-0.2.1.tar.gz) = c2f8de933ab1e566d2913d96890283d16762acb1
+SHA512 (cesium-0.2.1.tar.gz) = f978ff83bb084b016cc2baf0dd49f465c3d938c3239632044a32d0680d55f09f0ffbaf333cd3d0e3a35adc57e42e5705ce2cc46dfe4661cb9ca1008f0611ce62
+Size (cesium-0.2.1.tar.gz) = 182509 bytes
 SHA1 (cfg-if-1.0.0.crate) = 9b415d94b6c2a84ed31b909e354ba9ac89092174
 RMD160 (cfg-if-1.0.0.crate) = 72507b7a112aaebe5833ade3a7a24ea8c0c6b243
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
