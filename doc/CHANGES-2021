@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2218 2021/04/19 16:00:40 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2219 2021/04/19 16:03:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3541,3 +3541,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libatomic to 10.3.0 [wiz 2021-04-19]
 	Updated editors/cesium to 0.2.1 [pin 2021-04-19]
 	Updated textproc/ruby-asciidoctor to 2.0.14 [fcambus 2021-04-19]
+	Added fonts/cursed_font version 0.1.0 [nia 2021-04-19]
