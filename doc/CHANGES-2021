@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2200 2021/04/18 19:47:08 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2201 2021/04/19 00:03:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/cesium to 0.2.0 [pin 2021-04-18]
 	Updated www/links to 2.22 [fcambus 2021-04-18]
 	Updated www/links-gui to 2.22 [fcambus 2021-04-18]
+	Updated devel/p5-Graph to 0.9721 [wen 2021-04-19]
