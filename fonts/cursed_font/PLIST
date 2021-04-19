@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/19 16:03:10 nia Exp $
+share/doc/cursed_font/README.md
+share/doc/cursed_font/demo.txt
+share/fonts/X11/BDF/cursed.bdf
