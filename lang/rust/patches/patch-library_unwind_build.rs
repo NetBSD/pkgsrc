@@ -1,17 +1,17 @@
-$NetBSD: patch-library_unwind_build.rs,v 1.1 2020/11/13 20:35:58 he Exp $
+$NetBSD: patch-library_unwind_build.rs,v 1.2 2021/04/19 17:08:09 he Exp $
 
-fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
+Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
---- library/unwind/build.rs.orig	2020-10-07 07:53:22.000000000 +0000
+--- library/unwind/build.rs.orig	2021-02-10 17:36:44.000000000 +0000
 +++ library/unwind/build.rs
-@@ -23,7 +23,9 @@ fn main() {
+@@ -21,7 +21,9 @@ fn main() {
      } else if target.contains("rumprun") {
          println!("cargo:rustc-link-lib=unwind");
      } else if target.contains("netbsd") {
 -        println!("cargo:rustc-link-lib=gcc_s");
-+	if !env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
++          if !env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
 +            println!("cargo:rustc-link-lib=gcc_s");
-+	}
++        }
      } else if target.contains("openbsd") {
          if target.contains("sparc64") {
              println!("cargo:rustc-link-lib=gcc");
