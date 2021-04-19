@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/19 10:14:11 nia Exp $
+include/minimp3.h
+include/minimp3_ex.h
+share/doc/minimp3/LICENSE
+share/doc/minimp3/README.md
