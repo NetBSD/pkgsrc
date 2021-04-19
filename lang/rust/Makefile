@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.229 2021/04/16 01:14:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.230 2021/04/19 17:08:09 he Exp $
 
-DISTNAME=	rustc-1.49.0-src
+DISTNAME=	rustc-1.50.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
@@ -49,11 +48,15 @@ CONFIGURE_ARGS+=		--disable-ninja
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
+.if !empty(rust.BUILD_TARGET)
+BUILD_TARGET=	${rust.BUILD_TARGET)
+.endif
+
 .if !empty(TARGET)
 # Use "dist" build target for cross compile of bootstrap
-BUILD_TARGET=		dist
+BUILD_TARGET?=		dist
 .else
-BUILD_TARGET=		build
+BUILD_TARGET?=		build
 .endif
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
@@ -157,7 +160,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 DISTFILES:=		${DEFAULT_DISTFILES}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -165,7 +168,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -173,7 +176,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -186,7 +189,7 @@ pre-build-fix:
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
@@ -199,16 +202,8 @@ CONFIGURE_ARGS+=	--host=${RUST_ARCH}
 CONFIGURE_ARGS+=	--target=${RUST_ARCH}
 pre-build-fix:
 .endif
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
-RUST_ARCH:=		i686-unknown-freebsd
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-pre-build-fix:
-.endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -233,7 +228,7 @@ pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.48.0
+RUST_STAGE0_VER=	1.49.0
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -343,7 +338,7 @@ CKSUMS+=	9e146a847e1f726fa7d7eae224aaa925030287f99770f950a012cb398e088d12
 
 CKSUM_CRATES+=	vendor/openssl-src
 CKSUMS+=	03dcdaac7de880b860ecfe859ba2ac3e46c8f46a7bf948aa674147eebee421b0
-CKSUMS+=	41ab6811d4ffde68f245e5097081ba8052a07a4b86df69a356ba11205e7e2210
+CKSUMS+=	90456c77ade1702fbf116d9cdc57c0c8dba5f059f591d3dffc9b54c7a7088be8
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -370,11 +365,13 @@ post-extract:
 	${RM} -f c++-wrap; \
 	${RM} -f clang++-wrap; \
 	${RM} -f clang-wrap; \
+	${RM} -f ar-wrap; \
 	${CP} ${.CURDIR}/files/gcc-wrap .; \
 	${CHMOD} +x gcc-wrap; \
 	${LN} -s gcc-wrap c++-wrap; \
 	${LN} -s gcc-wrap clang++-wrap; \
-	${LN} -s gcc-wrap clang-wrap
+	${LN} -s gcc-wrap clang-wrap; \
+	${LN} -s gcc-wrap ar-wrap
 .endif
 
 .if ${OPSYS} == "FreeBSD"
@@ -444,7 +441,7 @@ GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 #BOOTSTRAP_NAME=	${PKGNAME_NOREV:C/rust/rust-nightly/}-${RUST_ARCH}
 BOOTSTRAP_NAME=		${PKGNAME_NOREV}-${RUST_ARCH}
 BOOTSTRAP_TMPDIR=	${WRKDIR}/${BOOTSTRAP_NAME}
-USE_TOOLS+=		bsdtar
+USE_TOOLS+=		gtar
 
 # The NetBSD part is so far untested, because I could not convince
 # the rust build to use the gcc wrapper when building natively,

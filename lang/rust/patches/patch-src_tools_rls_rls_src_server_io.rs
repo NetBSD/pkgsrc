@@ -1,11 +1,11 @@
-$NetBSD: patch-src_tools_rls_rls_src_server_io.rs,v 1.2 2019/05/31 14:11:23 jperkin Exp $
+$NetBSD: patch-src_tools_rls_rls_src_server_io.rs,v 1.3 2021/04/19 17:08:09 he Exp $
 
 Use 32-bit atomic instead of 64-bit; latter may not be available on
 32-bit platforms (powerpc, earmv7).
 
---- src/tools/rls/rls/src/server/io.rs.orig	2019-05-20 12:10:32.000000000 +0000
+--- src/tools/rls/rls/src/server/io.rs.orig	2021-02-10 17:37:00.000000000 +0000
 +++ src/tools/rls/rls/src/server/io.rs
-@@ -7,7 +7,7 @@ use crate::lsp_data::{LSPNotification, L
+@@ -5,7 +5,7 @@ use crate::lsp_data::{LSPNotification, L
  
  use std::fmt;
  use std::io::{self, BufRead, Write};
@@ -14,7 +14,7 @@ Use 32-bit atomic instead of 64-bit; latter may not be available on
  use std::sync::Arc;
  
  use jsonrpc_core::{self as jsonrpc, response, version, Id};
-@@ -171,13 +171,13 @@ pub trait Output: Sync + Send + Clone + 
+@@ -169,13 +169,13 @@ pub trait Output: Sync + Send + Clone + 
  /// An output that sends notifications and responses on `stdout`.
  #[derive(Clone)]
  pub(super) struct StdioOutput {
@@ -30,7 +30,7 @@ Use 32-bit atomic instead of 64-bit; latter may not be available on
      }
  }
  
-@@ -194,7 +194,7 @@ impl Output for StdioOutput {
+@@ -192,7 +192,7 @@ impl Output for StdioOutput {
      }
  
      fn provide_id(&self) -> RequestId {

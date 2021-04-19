@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.2 2021/02/14 08:24:31 he Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.3 2021/04/19 17:08:09 he Exp $
 
 Provide defaults for the various NetBSD targets.
 
@@ -12,7 +12,7 @@ Provide defaults for the various NetBSD targets.
              "aarch64-pc-windows-msvc" => "VC-WIN64-ARM",
              "arm-linux-androideabi" => "linux-armv4",
              "armv7-linux-androideabi" => "linux-armv4",
-@@ -178,6 +179,7 @@ impl Build {
+@@ -178,9 +179,11 @@ impl Build {
              "armv7-unknown-freebsd" => "BSD-generic32",
              "armv7-unknown-linux-gnueabihf" => "linux-armv4",
              "armv7-unknown-linux-musleabihf" => "linux-armv4",
@@ -20,7 +20,11 @@ Provide defaults for the various NetBSD targets.
              "asmjs-unknown-emscripten" => "gcc",
              "i586-unknown-linux-gnu" => "linux-elf",
              "i586-unknown-linux-musl" => "linux-elf",
-@@ -188,6 +190,7 @@ impl Build {
++            "i586-unknown-netbsd" => "BSD-x86-elf",
+             "i686-apple-darwin" => "darwin-i386-cc",
+             "i686-linux-android" => "linux-elf",
+             "i686-pc-windows-gnu" => "mingw",
+@@ -188,6 +191,7 @@ impl Build {
              "i686-unknown-freebsd" => "BSD-x86-elf",
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
@@ -28,7 +32,7 @@ Provide defaults for the various NetBSD targets.
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
-@@ -195,12 +198,14 @@ impl Build {
+@@ -195,12 +199,14 @@ impl Build {
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",
