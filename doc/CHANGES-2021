@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2222 2021/04/19 17:08:47 he Exp $
+$NetBSD: CHANGES-2021,v 1.2223 2021/04/19 19:33:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3545,3 +3545,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.5.0 [pin 2021-04-19]
 	Updated sysutils/navi to 2.16.0 [pin 2021-04-19]
 	Updated lang/rust to 1.50.0 [he 2021-04-19]
+	Updated sysutils/xplr to 0.5.2 [pin 2021-04-19]
