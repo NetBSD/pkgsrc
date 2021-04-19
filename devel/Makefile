@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3357 2021/04/08 19:47:05 markd Exp $
+# $NetBSD: Makefile,v 1.3358 2021/04/19 01:43:49 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1955,6 +1955,7 @@ SUBDIR+=	p5-Test-Inter
 SUBDIR+=	p5-Test-Kwalitee
 SUBDIR+=	p5-Test-LeakTrace
 SUBDIR+=	p5-Test-LectroTest
+SUBDIR+=	p5-Test-Lib
 SUBDIR+=	p5-Test-LoadAllModules
 SUBDIR+=	p5-Test-Log4perl
 SUBDIR+=	p5-Test-LongString

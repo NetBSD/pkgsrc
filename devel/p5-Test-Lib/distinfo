@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/19 01:43:49 wen Exp $
+
+SHA1 (Test-Lib-0.002.tar.gz) = 206710ba4ed4f87916d42626ecc9c8380c2c0258
+RMD160 (Test-Lib-0.002.tar.gz) = 197d5d58b228ecffc2ced4b5c65ef063192a8a40
+SHA512 (Test-Lib-0.002.tar.gz) = d7fa4d12df49e51bb110f1bfb6973df7913bbe10335f93bb07774b2d49dcf52bad1807f07e9b053be2f8a2907a49ac638bae676297672e78c8f77824b2d7af62
+Size (Test-Lib-0.002.tar.gz) = 3589 bytes
