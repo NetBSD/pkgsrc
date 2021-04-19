@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2021/03/30 12:01:04 nia Exp $
+# $NetBSD: Makefile,v 1.626 2021/04/19 10:14:10 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -294,6 +294,7 @@ SUBDIR+=	mbrolavox-us2
 SUBDIR+=	mbrolavox-us3
 SUBDIR+=	mikmod
 SUBDIR+=	milkytracker
+SUBDIR+=	minimp3
 SUBDIR+=	mixer.app
 SUBDIR+=	mixxx
 SUBDIR+=	mkcdtoc
@@ -318,6 +319,7 @@ SUBDIR+=	mpc
 SUBDIR+=	mpdas
 SUBDIR+=	mpegaudio
 SUBDIR+=	mpg123
+SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-nas
 SUBDIR+=	mpg123-oss
 SUBDIR+=	mpg123-pulse
