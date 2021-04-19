@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.3 2020/07/16 09:35:37 jperkin Exp $
+# $NetBSD: cross.mk,v 1.4 2021/04/19 17:08:09 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -18,6 +18,7 @@
 #CROSS_ROOT=		/u/9.0-macppc
 #CROSS_ROOT=		/u/evbarm64
 #CROSS_ROOT=		/u/i386
+#CROSS_ROOT=		/
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
@@ -37,6 +38,7 @@
 #TARGET=		powerpc-unknown-netbsd
 #TARGET=		aarch64-unknown-netbsd
 #TARGET=		i686-unknown-netbsd
+#TARGET= 		i586-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
@@ -44,7 +46,9 @@
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/c++-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/gcc-wrap
+# Pick one:
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${SCRIPTS}/ar-wrap
 
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr
@@ -53,15 +57,15 @@
 # Cross-compile illumos target.  The host is identical, it's just the target
 # that is renamed from x86_64-sun-solaris to x86_64-unknown-illumos.
 #
-#TARGET=		x86_64-unknown-illumos
+#TARGET=               x86_64-unknown-illumos
 #
 # Use these variables for "cross-compiling" from x86_64-sun-solaris.
 #
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.llvm-config=${LLVM_CONFIG_PATH}
-#CONFIGURE_ARGS+=	--host=${TARGET}
-#CONFIGURE_ARGS+=	--target=${TARGET}
+#CONFIGURE_ARGS+=      --set=target.${TARGET}.llvm-config=${LLVM_CONFIG_PATH}
+#CONFIGURE_ARGS+=      --host=${TARGET}
+#CONFIGURE_ARGS+=      --target=${TARGET}
 #
 # Set this variable when using a native x86_64-unknown-illumos bootstrap, as
 # the build still defaults to x86_64-sun-solaris based on uname.
 #
-#CONFIGURE_ARGS+=	--build=${TARGET}
+#CONFIGURE_ARGS+=      --build=${TARGET}
