@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/11 10:48:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/19 15:56:31 cirnatdan Exp $
 include/champlain-0.12/champlain-gtk/champlain-gtk.h
 include/champlain-0.12/champlain-gtk/gtk-champlain-embed.h
 include/champlain-0.12/champlain/champlain-adjustment.h
@@ -40,11 +40,13 @@ include/champlain-0.12/champlain/champlain-version.h
 include/champlain-0.12/champlain/champlain-view.h
 include/champlain-0.12/champlain/champlain-viewport.h
 include/champlain-0.12/champlain/champlain.h
-lib/libchamplain-0.12.so
-lib/libchamplain-0.12.so.0
-lib/libchamplain-0.12.so.0.11.10
-lib/libchamplain-gtk-0.12.so
-lib/libchamplain-gtk-0.12.so.0
-lib/libchamplain-gtk-0.12.so.0.11.10
+${PLIST.introspection}lib/girepository-1.0/Champlain-0.12.typelib
+${PLIST.introspection}lib/girepository-1.0/GtkChamplain-0.12.typelib
+lib/libchamplain-0.12.0.dylib
+lib/libchamplain-0.12.dylib
+lib/libchamplain-gtk-0.12.0.dylib
+lib/libchamplain-gtk-0.12.dylib
 lib/pkgconfig/champlain-0.12.pc
 lib/pkgconfig/champlain-gtk-0.12.pc
+${PLIST.introspection}share/gir-1.0/Champlain-0.12.gir
+${PLIST.introspection}share/gir-1.0/GtkChamplain-0.12.gir
