@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2213 2021/04/19 11:05:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2214 2021/04/19 13:50:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/glfw to 3.3.4 [nia 2021-04-19]
 	Updated graphics/jasper to 2.0.32 [nia 2021-04-19]
 	Updated time/libical to 3.0.10 [nia 2021-04-19]
+	Updated www/firefox to 88.0 [ryoon 2021-04-19]
