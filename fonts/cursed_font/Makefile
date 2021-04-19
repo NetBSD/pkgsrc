@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/19 16:03:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/19 16:52:39 nia Exp $
 
 DISTNAME=	cursed-0.1.0
 PKGNAME=	${DISTNAME:S/cursed-/cursed_font-/1}
@@ -15,7 +15,7 @@ LICENSE=	cc-by-v4.0
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-FONTS_DIRS.x11=	cursed
+FONTS_DIRS.x11=	share/fonts/X11/BDF
 
 INSTALLATION_DIRS+=	share/fonts/X11/BDF
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
