@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/04/18 15:25:24 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/19 14:41:02 pin Exp $
 
-DISTNAME=	cesium-0.2.0
+DISTNAME=	cesium-0.2.1
 CATEGORIES=	editors
 MASTER_SITES=	https://gitlab.com/NoahJelen/cesium/-/archive/${PKGVERSION_NOREV}/
 
