@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2207 2021/04/19 10:15:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2208 2021/04/19 10:40:35 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/GeoIP to 1.6.12nb1 [maya 2021-04-19]
 	Added audio/minimp3 version 20200120 [nia 2021-04-19]
 	Updated devel/allegro5 to 5.2.7.0 [nia 2021-04-19]
+	Moved meta-pkgs/gnome to meta-pkgs/gnome [dan 2021-04-19]
