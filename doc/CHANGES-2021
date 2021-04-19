@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2219 2021/04/19 16:03:21 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2220 2021/04/19 16:18:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3542,3 +3542,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/cesium to 0.2.1 [pin 2021-04-19]
 	Updated textproc/ruby-asciidoctor to 2.0.14 [fcambus 2021-04-19]
 	Added fonts/cursed_font version 0.1.0 [nia 2021-04-19]
+	Updated sysutils/xplr to 0.5.0 [pin 2021-04-19]
