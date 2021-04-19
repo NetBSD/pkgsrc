@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/03/20 11:57:40 nia Exp $
+# $NetBSD: Makefile,v 1.29 2021/04/19 10:47:57 nia Exp $
 
-DISTNAME=	exult-1.4.9rc1
-PKGREVISION=	2
+DISTNAME=	exult-1.6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-all-versions/}
 
@@ -11,16 +10,20 @@ COMMENT=	Open-source Ultima 7 engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c gnu++03
-USE_TOOLS+=	yacc flex
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config yacc flex
 
-CFLAGS+=		-fpermissive
-LDFLAGS+=		-lz
-CONFIGURE_ARGS+=	--disable-sdltest --disable-oggtest --disable-vorbistest
+# C++17
+GCC_REQD+=	7
+
+CONFIGURE_ARGS+=	--with-sdl=sdl2
+CONFIGURE_ARGS+=	--disable-timidity-midi
+CONFIGURE_ARGS+=	--disable-alsa
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
