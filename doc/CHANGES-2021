@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2217 2021/04/19 14:41:21 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2218 2021/04/19 16:00:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox-l10n to 88.0 [ryoon 2021-04-19]
 	Updated devel/libatomic to 10.3.0 [wiz 2021-04-19]
 	Updated editors/cesium to 0.2.1 [pin 2021-04-19]
+	Updated textproc/ruby-asciidoctor to 2.0.14 [fcambus 2021-04-19]
