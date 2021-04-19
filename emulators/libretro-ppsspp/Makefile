@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/08/17 20:18:38 leot Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/19 15:55:45 nia Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -68,5 +68,5 @@ post-extract:
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
