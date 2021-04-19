@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/01/18 23:50:45 mef Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/19 15:55:29 cirnatdan Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
@@ -25,6 +25,8 @@ pre-configure:
 	libtoolize --copy; aclocal -I m4; \
 	autoheader ; \
 	automake -a --foreign -i --add-missing; autoconf
+
+.include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
