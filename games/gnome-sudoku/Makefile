@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/04/14 07:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2021/04/19 13:51:17 pgoyette Exp $
 
 DISTNAME=	gnome-sudoku-3.38.0
 PKGREVISION=	1
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pkg-config
+
+PYTHON_FOR_BUILD_ONLY=    tool
+.include "../../lang/python/tool.mk"
 
 # Requires --desktop in msgfmt.
 _TOOLS_USE_PKGSRC.msgfmt=	yes
