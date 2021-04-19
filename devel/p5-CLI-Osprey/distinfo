@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/19 01:53:38 wen Exp $
+
+SHA1 (CLI-Osprey-0.08.tar.gz) = 4b827e1f19b2f1bfe48dd8c0b4964d6e07c29b9a
+RMD160 (CLI-Osprey-0.08.tar.gz) = 2a43df5fd79ac123887dbed0b2ea29a874e067bc
+SHA512 (CLI-Osprey-0.08.tar.gz) = f643cc4981d3140da3bc713e9a12c36fd5b7bcaff493e9f462de59f8dcee18a66fa7be3154fd9dbcf4a5bc63cdf8d3a3896e2efc96dcb4862c7319e38a5de240
+Size (CLI-Osprey-0.08.tar.gz) = 21310 bytes
