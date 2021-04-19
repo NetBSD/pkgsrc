@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2021/04/19 10:49:41 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.148 2021/04/19 10:59:01 cirnatdan Exp $
 
 PKGNAME=	gnome-3.38.1
 CATEGORIES=	meta-pkgs
@@ -9,8 +9,8 @@ COMMENT=	Meta-package for the GNOME desktop environment
 
 META_PACKAGE=	yes
 
-PREV_PKGPATH=	../../meta-pkgs/gnome3
-SUPERCEDES+=	gnome3-[0-9]*
+PREV_PKGPATH=	meta-pkgs/gnome3
+SUPERSEDES+=	gnome3-[0-9]*
 
 # GNOME has a concept of "Core Apps".
 #
