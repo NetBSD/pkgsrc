@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/03 05:05:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/19 16:00:29 fcambus Exp $
 bin/asciidoctor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/README.adoc
 ${GEM_LIBDIR}/asciidoctor.gemspec
 ${GEM_LIBDIR}/bin/asciidoctor
 ${GEM_LIBDIR}/data/locale/attributes-ar.adoc
+${GEM_LIBDIR}/data/locale/attributes-be.adoc
 ${GEM_LIBDIR}/data/locale/attributes-bg.adoc
 ${GEM_LIBDIR}/data/locale/attributes-ca.adoc
 ${GEM_LIBDIR}/data/locale/attributes-cs.adoc
