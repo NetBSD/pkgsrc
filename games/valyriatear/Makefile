@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/10 09:38:20 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/19 15:29:59 nia Exp $
 
 DISTNAME=	ValyriaTear-src-with-deps-1.1.0
 PKGNAME=	${DISTNAME:tl:S/-src-with-deps//1}
@@ -22,7 +22,7 @@ USE_LANGUAGES=	c c++
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
 post-extract:
-	dos2unix src/utils/src/utils/ustring.cpp
+	dos2unix ${WRKSRC}/src/utils/src/utils/ustring.cpp
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
