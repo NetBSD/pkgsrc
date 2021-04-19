@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3358 2021/04/19 01:43:49 wen Exp $
+# $NetBSD: Makefile,v 1.3359 2021/04/19 01:55:49 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1176,6 +1176,7 @@ SUBDIR+=	p5-BackPAN-Index
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-CHI
 SUBDIR+=	p5-CLASS
+SUBDIR+=	p5-CLI-Osprey
 SUBDIR+=	p5-CPAN-Changes
 SUBDIR+=	p5-CPAN-Checksums
 SUBDIR+=	p5-CPAN-Common-Index
