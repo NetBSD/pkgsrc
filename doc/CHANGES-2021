@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2205 2021/04/19 07:22:47 maya Exp $
+$NetBSD: CHANGES-2021,v 1.2206 2021/04/19 10:14:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/p5-CLI-Osprey version 0.08 [wen 2021-04-19]
 	Updated www/p5-Dancer2 to 0.301002 [wen 2021-04-19]
 	Updated net/GeoIP to 1.6.12nb1 [maya 2021-04-19]
+	Added audio/minimp3 version 20200120 [nia 2021-04-19]
