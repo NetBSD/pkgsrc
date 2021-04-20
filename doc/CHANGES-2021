@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2230 2021/04/20 13:13:03 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.2231 2021/04/20 13:47:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3556,3 +3556,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/gjs to 1.68.0 [dan 2021-04-20]
 	Updated devel/mob to 1.5.0 [schmonz 2021-04-20]
 	Updated graphics/tiff to 4.3.0 [gdt 2021-04-20]
+	Updated devel/py-approvaltests to 0.4.2 [schmonz 2021-04-20]
