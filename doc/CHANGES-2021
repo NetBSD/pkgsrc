@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2255 2021/04/20 18:25:24 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2256 2021/04/20 18:27:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-about to 0.17.0 [pin 2021-04-20]
 	Updated security/lxqt-policykit to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-admin to 0.17.0 [pin 2021-04-20]
+	Updated www/py-google-api-python-client to 2.2.0 [wiz 2021-04-20]
