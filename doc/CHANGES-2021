@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2251 2021/04/20 18:18:42 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2252 2021/04/20 18:22:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3577,3 +3577,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/pavucontrol-qt to 0.17.0 [pin 2021-04-20]
 	Updated wm/obconf-qt to 0.16.1 [pin 2021-04-20]
 	Updated graphics/lxqt-themes to 0.17.0 [pin 2021-04-20]
+	Updated x11/lxqt-about to 0.17.0 [pin 2021-04-20]
