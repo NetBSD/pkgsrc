@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/20 20:37:03 thor Exp $
+include/cblas.h
+include/cblas_f77.h
+include/cblas_mangling.h
+include/cblas_test.h
+lib/cmake/cblas-${PKGVERSION}/cblas-config-version.cmake
+lib/cmake/cblas-${PKGVERSION}/cblas-config.cmake
+lib/libcblas.a
+lib/libcblas.so
+lib/libcblas.so.3
+lib/libcblas.so.${PKGVERSION}
+lib/pkgconfig/cblas.pc
