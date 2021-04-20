@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/12/07 11:32:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/20 17:59:40 pin Exp $
 bin/lxqt-backlight_backend
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
@@ -61,6 +61,7 @@ share/lxqt/translations/liblxqt/liblxqt_en_GB.qm
 share/lxqt/translations/liblxqt/liblxqt_eo.qm
 share/lxqt/translations/liblxqt/liblxqt_es.qm
 share/lxqt/translations/liblxqt/liblxqt_es_VE.qm
+share/lxqt/translations/liblxqt/liblxqt_et.qm
 share/lxqt/translations/liblxqt/liblxqt_eu.qm
 share/lxqt/translations/liblxqt/liblxqt_fi.qm
 share/lxqt/translations/liblxqt/liblxqt_fr.qm
@@ -82,6 +83,7 @@ share/lxqt/translations/liblxqt/liblxqt_pt.qm
 share/lxqt/translations/liblxqt/liblxqt_pt_BR.qm
 share/lxqt/translations/liblxqt/liblxqt_ro_RO.qm
 share/lxqt/translations/liblxqt/liblxqt_ru.qm
+share/lxqt/translations/liblxqt/liblxqt_si.qm
 share/lxqt/translations/liblxqt/liblxqt_sk_SK.qm
 share/lxqt/translations/liblxqt/liblxqt_sl.qm
 share/lxqt/translations/liblxqt/liblxqt_sr@latin.qm
