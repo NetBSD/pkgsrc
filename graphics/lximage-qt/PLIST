@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:42:24 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/20 18:06:23 pin Exp $
 bin/lximage-qt
 share/applications/lximage-qt-screenshot.desktop
 share/applications/lximage-qt.desktop
@@ -6,6 +6,7 @@ share/icons/hicolor/48x48/apps/lximage-qt.png
 share/lximage-qt/translations/lximage-qt_ar.qm
 share/lximage-qt/translations/lximage-qt_arn.qm
 share/lximage-qt/translations/lximage-qt_ast.qm
+share/lximage-qt/translations/lximage-qt_bg.qm
 share/lximage-qt/translations/lximage-qt_ca.qm
 share/lximage-qt/translations/lximage-qt_cs.qm
 share/lximage-qt/translations/lximage-qt_cy.qm
@@ -14,6 +15,7 @@ share/lximage-qt/translations/lximage-qt_de.qm
 share/lximage-qt/translations/lximage-qt_el.qm
 share/lximage-qt/translations/lximage-qt_en_GB.qm
 share/lximage-qt/translations/lximage-qt_es.qm
+share/lximage-qt/translations/lximage-qt_et.qm
 share/lximage-qt/translations/lximage-qt_fr.qm
 share/lximage-qt/translations/lximage-qt_gl.qm
 share/lximage-qt/translations/lximage-qt_he.qm
@@ -30,8 +32,8 @@ share/lximage-qt/translations/lximage-qt_pa.qm
 share/lximage-qt/translations/lximage-qt_pl.qm
 share/lximage-qt/translations/lximage-qt_pt.qm
 share/lximage-qt/translations/lximage-qt_pt_BR.qm
-share/lximage-qt/translations/lximage-qt_pt_PT.qm
 share/lximage-qt/translations/lximage-qt_ru.qm
+share/lximage-qt/translations/lximage-qt_si.qm
 share/lximage-qt/translations/lximage-qt_sl.qm
 share/lximage-qt/translations/lximage-qt_sv.qm
 share/lximage-qt/translations/lximage-qt_tr.qm

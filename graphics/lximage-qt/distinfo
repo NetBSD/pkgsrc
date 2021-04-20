@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/07 11:38:12 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/20 18:06:23 pin Exp $
 
-SHA1 (lximage-qt-0.16.0.tar.xz) = cbbdca74097d0991fcec7f88fb60d10f069a9afd
-RMD160 (lximage-qt-0.16.0.tar.xz) = 0165cc318b399edc88397a9ee8f6b240830a1dc2
-SHA512 (lximage-qt-0.16.0.tar.xz) = 2da46d23567cff7044a884e14b30de36b3a19d802768585b7c3332897b0af2fc42993ed9bb9d062db7988a0526cc7357a09fbac5f283a615b109ea8dfbf474b5
-Size (lximage-qt-0.16.0.tar.xz) = 100920 bytes
+SHA1 (lximage-qt-0.17.0.tar.xz) = ab623172c3b8740d2d05e436d24c02b3fa15ac3b
+RMD160 (lximage-qt-0.17.0.tar.xz) = 176aa3ddeef391045a6cbe619756a01573ce2cb8
+SHA512 (lximage-qt-0.17.0.tar.xz) = fb7867f5589fa45f3e2d37dcd0733c49fb5439206b11d2a43020305c5c7d222796aa0cf2dbf19d5fc7829a34d3877241cb4bb36ea2883a41503eadd39deaf8e0
+Size (lximage-qt-0.17.0.tar.xz) = 109772 bytes
