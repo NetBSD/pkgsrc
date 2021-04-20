@@ -1,0 +1,2 @@
+This is the C wrapper to the Linear Algebra PACKage (LAPACKE),
+extracted from the Netlib reference implementation of LAPACK.
