@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/12/07 13:05:37 pin Exp $
+# $NetBSD: options.mk,v 1.4 2021/04/20 18:58:53 pin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lxqt
 PKG_OPTIONS_OPTIONAL_GROUPS=	wm
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=		openbox
 
 .if !empty(PKG_OPTIONS:Mopenbox)
 DEPENDS+=	openbox>=3.6.1:../../wm/openbox
-DEPENDS+=	obconf-qt>=0.16.0:../../wm/obconf-qt
+DEPENDS+=	obconf-qt>=0.16.1:../../wm/obconf-qt
 .endif
 
 .if !empty(PKG_OPTIONS:Mxfce4-wm)
