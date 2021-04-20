@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2020/12/07 13:03:40 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/04/20 18:56:04 pin Exp $
 
-SHA1 (lxqt-session-0.16.0.tar.xz) = d100e3b369dd23d85d8a3f1b2b3a8e4656f04ab4
-RMD160 (lxqt-session-0.16.0.tar.xz) = 2100b6ba5d3dd7fe4036876a203bd94efad77857
-SHA512 (lxqt-session-0.16.0.tar.xz) = ce15b985ac5b11c16f58ba893ee7045aeb4f47fc77c7215a4d4ac0b782ebccf8e8f726d0c463638a5ec0101915ee367cb7d714035c1ea3057c5f3d9b7f0fd3c3
-Size (lxqt-session-0.16.0.tar.xz) = 180084 bytes
+SHA1 (lxqt-session-0.17.1.tar.xz) = e3dc3f0363c0e261c4eb62eb6ffa4023c83c3308
+RMD160 (lxqt-session-0.17.1.tar.xz) = 19ed73a623e0b93aeeef8dc020f49852ce401ee4
+SHA512 (lxqt-session-0.17.1.tar.xz) = a86b2a2f8fafc0e1b706f6a2a44958039c7f324d43357d70c3b13dd4c3197a05e671cb3d4543512ac79cb238ed1386b5de2f76a1aec90b3db870a1c2276153e0
+Size (lxqt-session-0.17.1.tar.xz) = 178976 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = a791cc51e03e794e1bf81bf0d6f8462ba11e2e84
-SHA1 (patch-config_CMakeLists.txt) = b652c3e407388b80dfd6f15bd80fe30219ad9f13
