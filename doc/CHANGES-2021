@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2269 2021/04/20 18:56:27 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2270 2021/04/20 18:59:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3594,3 +3594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-runner to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-panel to 0.17.1 [pin 2021-04-20]
 	Updated x11/lxqt-session to 0.17.1 [pin 2021-04-20]
+	Updated meta-pkgs/lxqt to 0.17.0 [pin 2021-04-20]
