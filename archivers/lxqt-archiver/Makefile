@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/12/07 11:59:16 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/20 18:38:16 pin Exp $
 
-DISTNAME=	lxqt-archiver-0.3.0
+DISTNAME=	lxqt-archiver-0.4.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
+USE_TOOLS+=	pkg-config perl bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
@@ -23,7 +23,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
