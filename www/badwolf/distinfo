@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/04 16:53:02 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/04/20 10:26:38 pin Exp $
 
-SHA1 (badwolf-1.0.3.tar.gz) = 67b848759073508fb3fd44aefe3e9e970bf0383f
-RMD160 (badwolf-1.0.3.tar.gz) = 0d9b664cefa63d28af582fe1620a812f8b76134a
-SHA512 (badwolf-1.0.3.tar.gz) = 8b20560fe48feaeee444208fb315ca8eb8f3d847769a6a5cafd276abb38172f7c67c8ec8496bb1172a9837dce6831cd4fba6518aff50fcdf204e2737b205c31b
-Size (badwolf-1.0.3.tar.gz) = 70969 bytes
+SHA1 (badwolf-1.1.0.tar.gz) = e9e48c927dddee3e22cf9b978eb06727301045da
+RMD160 (badwolf-1.1.0.tar.gz) = 69699e898ac8ddcfdbfca8488ee13b495bb0f948
+SHA512 (badwolf-1.1.0.tar.gz) = dcde764c71519700e225c9a5488bcc092a9008c365b892a60e02bd53031801090d4ec73d0da38078a1c0061cd6be4cc41250f0cdbaf991250557c784f6aac961
+Size (badwolf-1.1.0.tar.gz) = 76314 bytes
