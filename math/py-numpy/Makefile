@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2021/04/07 11:57:30 thor Exp $
+# $NetBSD: Makefile,v 1.78 2021/04/20 20:53:48 thor Exp $
 
 DISTNAME=	numpy-1.19.5
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -18,11 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_LANGUAGES=		c99 fortran
-# Use our BLAS. The patch adds 'generic' as first entry anyway, but we
-# enforce it to fail early and for the case that upstream accepts the
-# patch, but with changed default order.
-MAKE_ENV+=		BLAS_LIBS=${BLAS_LIBS:Q} LAPACK_LIBS=${LAPACK_LIBS:Q}
-MAKE_ENV+=		NPY_BLAS_ORDER=generic NPY_LAPACK_ORDER=generic
+
+.include "../../math/py-numpy/Makefile.make_env"
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
@@ -61,9 +58,6 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.21
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-# Consider allowing mk/blas.buildlink3.mk to handle Accelerate.framework
-.if ${OPSYS} != "Darwin"
-# blas and lapack are not needed; numpy will use Accelerate.framework
-.include "../../mk/blas.buildlink3.mk"
-.endif
+# BLAS with CBLAS is needed for proper acceleration.
+.include "../../math/cblas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
