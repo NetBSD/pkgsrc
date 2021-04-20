@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2021/04/09 11:00:28 nia Exp $
+# $NetBSD: Makefile,v 1.493 2021/04/20 20:37:03 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -140,6 +140,7 @@ SUBDIR+=	calc
 SUBDIR+=	calcoo
 SUBDIR+=	cantor
 SUBDIR+=	capc-calc
+SUBDIR+=	cblas
 SUBDIR+=	cgal
 SUBDIR+=	classias
 SUBDIR+=	clisp-pari
