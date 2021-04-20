@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2226 2021/04/20 06:30:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2227 2021/04/20 10:27:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3552,3 +3552,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-docs to 3.35.5 [adam 2021-04-20]
 	Updated databases/sqlite3-tcl to 3.35.5 [adam 2021-04-20]
 	Updated devel/lemon to 1.0.3.35.5 [adam 2021-04-20]
+	Updated www/badwolf to 1.1.0 [pin 2021-04-20]
