@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2272 2021/04/20 19:50:42 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2273 2021/04/20 20:37:48 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3594,3 +3594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-session to 0.17.1 [pin 2021-04-20]
 	Updated meta-pkgs/lxqt to 0.17.0 [pin 2021-04-20]
 	Updated sysutils/macchina to 0.7.0 [pin 2021-04-20]
+	Added math/cblas version 3.9.0 [thor 2021-04-20]
