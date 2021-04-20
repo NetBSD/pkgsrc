@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2021/04/10 13:14:19 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2021/04/20 19:50:22 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -23,7 +23,6 @@ CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.6.2
 CARGO_CRATE_DEPENDS+=	either-1.6.1
 CARGO_CRATE_DEPENDS+=	failure-0.1.8
 CARGO_CRATE_DEPENDS+=	failure_derive-0.1.8
-CARGO_CRATE_DEPENDS+=	fs_extra-1.2.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.2
 CARGO_CRATE_DEPENDS+=	gimli-0.23.0
 CARGO_CRATE_DEPENDS+=	heck-0.3.2
@@ -31,11 +30,9 @@ CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
 CARGO_CRATE_DEPENDS+=	home-0.5.3
 CARGO_CRATE_DEPENDS+=	instant-0.1.9
 CARGO_CRATE_DEPENDS+=	itertools-0.10.0
-CARGO_CRATE_DEPENDS+=	jemalloc-sys-0.3.2
-CARGO_CRATE_DEPENDS+=	jemallocator-0.3.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.93
-CARGO_CRATE_DEPENDS+=	libmacchina-0.2.3
+CARGO_CRATE_DEPENDS+=	libmacchina-0.2.5
 CARGO_CRATE_DEPENDS+=	local_ipaddress-0.1.3
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.3
 CARGO_CRATE_DEPENDS+=	log-0.4.14
@@ -61,7 +58,7 @@ CARGO_CRATE_DEPENDS+=	rand-0.8.3
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.0
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.2
 CARGO_CRATE_DEPENDS+=	rand_hc-0.3.0
-CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.5
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.6
 CARGO_CRATE_DEPENDS+=	regex-1.4.5
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.23
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.18
