@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/20 20:40:47 thor Exp $
+include/lapack.h
+include/lapacke.h
+include/lapacke_config.h
+include/lapacke_mangling.h
+include/lapacke_utils.h
+lib/cmake/lapacke-${PKGVERSION}/lapacke-config-version.cmake
+lib/cmake/lapacke-${PKGVERSION}/lapacke-config.cmake
+lib/liblapacke.a
+lib/liblapacke.so
+lib/liblapacke.so.3
+lib/liblapacke.so.${PKGVERSION}
+lib/pkgconfig/lapacke.pc
