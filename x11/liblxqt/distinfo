@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/07 11:32:53 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/20 17:59:40 pin Exp $
 
-SHA1 (liblxqt-0.16.0.tar.xz) = 6c2e626389d45b924b362af52dc6921c68bfc393
-RMD160 (liblxqt-0.16.0.tar.xz) = 7ca063018313208461b3d913a0185d4f89418152
-SHA512 (liblxqt-0.16.0.tar.xz) = ef44d046b5c3fe40ee528a9565964814656507395585cc2df4a7debd735bcc81b6e76ed9f91fb846504104182e74b037cbea0c6beecb41ce0003f811f1dd887d
-Size (liblxqt-0.16.0.tar.xz) = 81032 bytes
+SHA1 (liblxqt-0.17.0.tar.xz) = cfa3fa2f230a89b386165ccce9d346e8731720ab
+RMD160 (liblxqt-0.17.0.tar.xz) = cae95dae5b8b774872be6c7e16ae923887966962
+SHA512 (liblxqt-0.17.0.tar.xz) = 72fd06a1bd8cee422432c3eead9ed8bf15f460848b9a3f7cdb4ee1b31c3896e6af00bc62935fe0fd7d70170010c5f128dcf9c3ecb904366818fbbfc2af3dbbf1
+Size (liblxqt-0.17.0.tar.xz) = 82052 bytes
