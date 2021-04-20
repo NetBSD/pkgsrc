@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.102 2021/04/03 06:25:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.103 2021/04/20 06:30:07 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -627,6 +627,7 @@ share/doc/sqlite3/releaselog/3_35_1.html
 share/doc/sqlite3/releaselog/3_35_2.html
 share/doc/sqlite3/releaselog/3_35_3.html
 share/doc/sqlite3/releaselog/3_35_4.html
+share/doc/sqlite3/releaselog/3_35_5.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
