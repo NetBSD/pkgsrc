@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/12/07 12:55:28 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/20 18:50:56 pin Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -25,27 +25,10 @@ share/lxqt/lxqt-panel/taskbar.desktop
 share/lxqt/lxqt-panel/tray.desktop
 share/lxqt/lxqt-panel/volume.desktop
 share/lxqt/lxqt-panel/worldclock.desktop
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_arn.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ast.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ca.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_cs.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_cy.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_da.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_de.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_gl.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_hu.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ja.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_nb_NO.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_nl.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_pl.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_pt_BR.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ru.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sk_SK.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sv.qm
-share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_tr.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_ar.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_arn.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_ast.qm
+share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_bg.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_ca.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_cs.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_cy.qm
@@ -56,6 +39,7 @@ share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_eo.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_es.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_es_UY.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_es_VE.qm
+share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_et.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_eu.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_fi.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_fr.qm
@@ -76,6 +60,7 @@ share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_pt.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_pt_BR.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_ro_RO.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_ru.qm
+share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_si.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_sk_SK.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_sl.qm
 share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_sr@latin.qm
@@ -90,6 +75,7 @@ share/lxqt/translations/lxqt-panel/desktopswitch/desktopswitch_zh_TW.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_ar.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_arn.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_ast.qm
+share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_bg.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_ca.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_cs.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_cy.qm
@@ -97,6 +83,7 @@ share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_da.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_de.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_el.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_es.qm
+share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_et.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_fr.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_gl.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_he.qm
@@ -112,6 +99,7 @@ share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_nl.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_pl.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_pt.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_ru.qm
+share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_si.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_sk_SK.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_sv.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_tr.qm
@@ -120,6 +108,7 @@ share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_zh_CN.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_ar.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_arn.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_ast.qm
+share/lxqt/translations/lxqt-panel/lxqt-panel_bg.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_ca.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_cs.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_cy.qm
@@ -131,6 +120,7 @@ share/lxqt/translations/lxqt-panel/lxqt-panel_eo.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_es.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_es_UY.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_es_VE.qm
+share/lxqt/translations/lxqt-panel/lxqt-panel_et.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_eu.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_fa.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_fi.qm
@@ -152,6 +142,7 @@ share/lxqt/translations/lxqt-panel/lxqt-panel_pt.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_pt_BR.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_ro_RO.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_ru.qm
+share/lxqt/translations/lxqt-panel/lxqt-panel_si.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_sk_SK.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_sl.qm
 share/lxqt/translations/lxqt-panel/lxqt-panel_sr@latin.qm
@@ -166,6 +157,7 @@ share/lxqt/translations/lxqt-panel/lxqt-panel_zh_TW.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ar.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_arn.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ast.qm
+share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_bg.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ca.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_cs.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_cy.qm
@@ -176,6 +168,7 @@ share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_eo.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_es.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_es_UY.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_es_VE.qm
+share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_et.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_eu.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_fi.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_fr.qm
@@ -191,11 +184,13 @@ share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ko.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_lt.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_nb_NO.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_nl.qm
+share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_oc.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_pl.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_pt.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_pt_BR.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ro_RO.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_ru.qm
+share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_si.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_sk_SK.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_sl.qm
 share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_sr@latin.qm
@@ -209,6 +204,7 @@ share/lxqt/translations/lxqt-panel/mainmenu/mainmenu_zh_TW.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ar.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_arn.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ast.qm
+share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_bg.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ca.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_cs.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_cy.qm
@@ -218,6 +214,7 @@ share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_el.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_eo.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_es.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_es_VE.qm
+share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_et.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_eu.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_fi.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_fr.qm
@@ -238,6 +235,7 @@ share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_pt.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_pt_BR.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ro_RO.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ru.qm
+share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_si.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_sk_SK.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_sl.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_sr@latin.qm
@@ -251,6 +249,7 @@ share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_zh_TW.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_ar.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_arn.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_ast.qm
+share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_bg.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_ca.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_cs.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_cy.qm
@@ -260,6 +259,7 @@ share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_el.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_eo.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_es.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_es_VE.qm
+share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_et.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_eu.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_fi.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_fr.qm
@@ -280,6 +280,7 @@ share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_pt.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_pt_BR.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_ro_RO.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_ru.qm
+share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_si.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_sk_SK.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_sl.qm
 share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_sr@latin.qm
@@ -293,6 +294,7 @@ share/lxqt/translations/lxqt-panel/showdesktop/showdesktop_zh_TW.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_ar.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_arn.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_ast.qm
+share/lxqt/translations/lxqt-panel/spacer/spacer_bg.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_ca.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_cs.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_cy.qm
@@ -300,6 +302,7 @@ share/lxqt/translations/lxqt-panel/spacer/spacer_da.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_de.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_el.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_es.qm
+share/lxqt/translations/lxqt-panel/spacer/spacer_et.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_fr.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_gl.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_he.qm
@@ -314,31 +317,40 @@ share/lxqt/translations/lxqt-panel/spacer/spacer_nl.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_pl.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_pt.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_ru.qm
+share/lxqt/translations/lxqt-panel/spacer/spacer_si.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_sk.qm
-share/lxqt/translations/lxqt-panel/spacer/spacer_sk_SK.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_tr.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_uk.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_zh_CN.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_arn.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ast.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_bg.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ca.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_cs.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_cy.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_da.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_de.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_et.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_fr.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_gl.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_he.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_hu.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_it.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ja.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_lt.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_nb_NO.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_nl.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_pl.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_pt.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ru.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_si.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_sk_SK.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_tr.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_zh_TW.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_ar.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_arn.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_ast.qm
+share/lxqt/translations/lxqt-panel/taskbar/taskbar_bg.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_ca.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_cs.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_cy.qm
@@ -348,6 +360,7 @@ share/lxqt/translations/lxqt-panel/taskbar/taskbar_el.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_eo.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_es.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_es_VE.qm
+share/lxqt/translations/lxqt-panel/taskbar/taskbar_et.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_eu.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_fi.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_fr.qm
@@ -368,6 +381,7 @@ share/lxqt/translations/lxqt-panel/taskbar/taskbar_pt.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_pt_BR.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_ro_RO.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_ru.qm
+share/lxqt/translations/lxqt-panel/taskbar/taskbar_si.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_sk_SK.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_sl.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_sr@latin.qm
@@ -380,12 +394,15 @@ share/lxqt/translations/lxqt-panel/taskbar/taskbar_zh_CN.qm
 share/lxqt/translations/lxqt-panel/taskbar/taskbar_zh_TW.qm
 share/lxqt/translations/lxqt-panel/tray/tray_arn.qm
 share/lxqt/translations/lxqt-panel/tray/tray_ast.qm
+share/lxqt/translations/lxqt-panel/tray/tray_bg.qm
 share/lxqt/translations/lxqt-panel/tray/tray_ca.qm
 share/lxqt/translations/lxqt-panel/tray/tray_cs.qm
 share/lxqt/translations/lxqt-panel/tray/tray_cy.qm
 share/lxqt/translations/lxqt-panel/tray/tray_da.qm
 share/lxqt/translations/lxqt-panel/tray/tray_de.qm
 share/lxqt/translations/lxqt-panel/tray/tray_es.qm
+share/lxqt/translations/lxqt-panel/tray/tray_et.qm
+share/lxqt/translations/lxqt-panel/tray/tray_fr.qm
 share/lxqt/translations/lxqt-panel/tray/tray_gl.qm
 share/lxqt/translations/lxqt-panel/tray/tray_he.qm
 share/lxqt/translations/lxqt-panel/tray/tray_hr.qm
@@ -393,16 +410,21 @@ share/lxqt/translations/lxqt-panel/tray/tray_hu.qm
 share/lxqt/translations/lxqt-panel/tray/tray_id.qm
 share/lxqt/translations/lxqt-panel/tray/tray_it.qm
 share/lxqt/translations/lxqt-panel/tray/tray_ja.qm
+share/lxqt/translations/lxqt-panel/tray/tray_lt.qm
 share/lxqt/translations/lxqt-panel/tray/tray_nb_NO.qm
 share/lxqt/translations/lxqt-panel/tray/tray_nl.qm
 share/lxqt/translations/lxqt-panel/tray/tray_pl.qm
+share/lxqt/translations/lxqt-panel/tray/tray_pt.qm
 share/lxqt/translations/lxqt-panel/tray/tray_pt_BR.qm
 share/lxqt/translations/lxqt-panel/tray/tray_ru_RU.qm
+share/lxqt/translations/lxqt-panel/tray/tray_si.qm
 share/lxqt/translations/lxqt-panel/tray/tray_sk_SK.qm
 share/lxqt/translations/lxqt-panel/tray/tray_tr.qm
+share/lxqt/translations/lxqt-panel/tray/tray_zh_Hans.qm
 share/lxqt/translations/lxqt-panel/volume/volume_ar.qm
 share/lxqt/translations/lxqt-panel/volume/volume_arn.qm
 share/lxqt/translations/lxqt-panel/volume/volume_ast.qm
+share/lxqt/translations/lxqt-panel/volume/volume_bg.qm
 share/lxqt/translations/lxqt-panel/volume/volume_ca.qm
 share/lxqt/translations/lxqt-panel/volume/volume_cs.qm
 share/lxqt/translations/lxqt-panel/volume/volume_cy.qm
@@ -412,6 +434,7 @@ share/lxqt/translations/lxqt-panel/volume/volume_el.qm
 share/lxqt/translations/lxqt-panel/volume/volume_eo.qm
 share/lxqt/translations/lxqt-panel/volume/volume_es.qm
 share/lxqt/translations/lxqt-panel/volume/volume_es_VE.qm
+share/lxqt/translations/lxqt-panel/volume/volume_et.qm
 share/lxqt/translations/lxqt-panel/volume/volume_eu.qm
 share/lxqt/translations/lxqt-panel/volume/volume_fi.qm
 share/lxqt/translations/lxqt-panel/volume/volume_fr.qm
@@ -430,6 +453,7 @@ share/lxqt/translations/lxqt-panel/volume/volume_pt.qm
 share/lxqt/translations/lxqt-panel/volume/volume_pt_BR.qm
 share/lxqt/translations/lxqt-panel/volume/volume_ro_RO.qm
 share/lxqt/translations/lxqt-panel/volume/volume_ru.qm
+share/lxqt/translations/lxqt-panel/volume/volume_si.qm
 share/lxqt/translations/lxqt-panel/volume/volume_sk_SK.qm
 share/lxqt/translations/lxqt-panel/volume/volume_sl.qm
 share/lxqt/translations/lxqt-panel/volume/volume_sv.qm
@@ -449,6 +473,7 @@ share/lxqt/translations/lxqt-panel/worldclock/worldclock_da.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_de.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_el.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_es.qm
+share/lxqt/translations/lxqt-panel/worldclock/worldclock_et.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_fr.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_gl.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_he.qm
@@ -464,6 +489,7 @@ share/lxqt/translations/lxqt-panel/worldclock/worldclock_pl.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_pt.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_pt_BR.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_ru.qm
+share/lxqt/translations/lxqt-panel/worldclock/worldclock_si.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_sk_SK.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_tr.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_uk.qm
