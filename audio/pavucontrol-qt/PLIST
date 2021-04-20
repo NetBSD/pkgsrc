@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2020/12/07 12:03:03 pin Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:14:56 pin Exp $
 bin/pavucontrol-qt
 share/applications/pavucontrol-qt.desktop
 share/pavucontrol-qt/translations/pavucontrol-qt_arn.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_as.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ast.qm
+share/pavucontrol-qt/translations/pavucontrol-qt_bg.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_bn_IN.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ca.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_cs.qm
@@ -35,6 +36,7 @@ share/pavucontrol-qt/translations/pavucontrol-qt_pl.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_pt.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_pt_BR.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ru.qm
+share/pavucontrol-qt/translations/pavucontrol-qt_si.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_sk.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_sr.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_sr@latin.qm
