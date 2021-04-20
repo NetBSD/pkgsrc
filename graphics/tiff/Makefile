@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.148 2021/01/04 18:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2021/04/20 13:12:54 gdt Exp $
 
-DISTNAME=	tiff-4.2.0
+DISTNAME=	tiff-4.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://simplesystems.org/libtiff/
 COMMENT=	Library and tools for reading and writing TIFF data files
 LICENSE=	mit
