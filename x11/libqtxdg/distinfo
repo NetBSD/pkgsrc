@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/07 11:29:28 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/20 17:58:03 pin Exp $
 
-SHA1 (libqtxdg-3.6.0.tar.xz) = ad91cb84329308199d228362070ce3e758b8030b
-RMD160 (libqtxdg-3.6.0.tar.xz) = c85378e375e957e003564e86f97cea55d3ec1c4b
-SHA512 (libqtxdg-3.6.0.tar.xz) = 8574bb6834c0a44c983e906c3d84fb5cfd6e2f40ec2ac70f4998ec5fe213aeb0d4439ff294f56c1988cb9d1b311c4e074906ba66b21d24190a911d0e643d1a16
-Size (libqtxdg-3.6.0.tar.xz) = 76028 bytes
+SHA1 (libqtxdg-3.7.1.tar.xz) = d9829d416a6ce9cb31e4fa12732363ae75c0b654
+RMD160 (libqtxdg-3.7.1.tar.xz) = 095d40cd769ea0fef59b6e851e0fa43a1be84e68
+SHA512 (libqtxdg-3.7.1.tar.xz) = 764fb953c5c5564a8f5e189f3fa867b82e1da215e0734d2fb995bb29ba163936a38cf68c6c812ff3c183b7ab4fce59d1189c68885b65f103accb5446e71682e7
+Size (libqtxdg-3.7.1.tar.xz) = 74832 bytes
