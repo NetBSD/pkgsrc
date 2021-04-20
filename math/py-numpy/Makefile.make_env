@@ -1,0 +1,5 @@
+# Use the variables from blas.buildlink3.mk, pulled in via cblas.
+# Dependend python packages possiblly re-use the system_info logic and
+# might need this in the environment.
+MAKE_ENV+=	NPY_BLAS_LIBS=${BLAS_LIBS:Q} NPY_LAPACK_LIBS=${LAPACK_LIBS:Q}
+MAKE_ENV+=	NPY_CBLAS_LIBS=-lcblas

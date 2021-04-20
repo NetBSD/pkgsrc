@@ -1,78 +1,88 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.6 2021/04/07 11:57:30 thor Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Exp $
 
-Introduce new option 'generic' for BLAS and LAPACK
-TODO: The same for 64 bit offset versions, but we'd need repspective BLAS builds
-first in pkgsrc to test.
-
---- numpy/distutils/system_info.py.orig	2021-01-04 14:16:38.000000000 +0000
+--- numpy/distutils/system_info.py.orig	2021-04-20 18:13:28.992593008 +0000
 +++ numpy/distutils/system_info.py
-@@ -114,6 +114,13 @@ Currently, the following classes are ava
+@@ -114,6 +114,19 @@ Currently, the following classes are ava
      x11_info:x11
      xft_info:xft
  
-+Note that blas_opt_info and lapack_opt_info honor the NPY_BLAS_ORDER and NPY_LAPACK_ORDER
-+environment variables to select a specific implementation. One possible implementation
-+is 'generic', which relies on the environment providing BLAS_LIBS and LAPACK_LIBS to
-+link to the customary plain f77 interface, supporting any standard-conforming BLAS
-+and LAPACK implementation (which might be different between build-time and run-time,
-+even).
++Note that blas_opt_info and lapack_opt_info honor the NPY_BLAS_ORDER
++and NPY_LAPACK_ORDER environment variables to determine the order in which
++specific BLAS and LAPACK libraries are searched for.
++
++This search (or autodetection) can be bypassed by defining the environment
++variables NPY_BLAS_LIBS and NPY_LAPACK_LIBS, which should then contain the
++exact linker flags to use (language will be set to F77). Building against
++Netlib BLAS/LAPACK or stub files, in order to be able to switch BLAS and LAPACK
++implementations at runtime. If using this to build NumPy itself, it is
++recommended to also define NPY_CBLAS_LIBS (assuming your BLAS library has a
++CBLAS interface) to enable CBLAS usage for matrix multiplication (unoptimized
++otherwise).
 +
  Example:
  ----------
  [DEFAULT]
-@@ -1651,7 +1658,7 @@ def get_atlas_version(**config):
- class lapack_opt_info(system_info):
-     notfounderror = LapackNotFoundError
-     # List of all known BLAS libraries, in the default order
--    lapack_order = ['mkl', 'openblas', 'flame', 'atlas', 'accelerate', 'lapack']
-+    lapack_order = ['generic', 'mkl', 'openblas', 'flame', 'atlas', 'accelerate', 'lapack']
-     order_env_var_name = 'NPY_LAPACK_ORDER'
- 
-     def _calc_info_mkl(self):
-@@ -1744,6 +1751,18 @@ class lapack_opt_info(system_info):
+@@ -1744,6 +1757,16 @@ class lapack_opt_info(system_info):
              return True
          return False
  
-+    def _calc_info_generic(self):
-+        if 'LAPACK_LIBS' in os.environ:
-+            info = {}
-+            info['language'] = 'f77'
-+            info['libraries'] = []
-+            info['include_dirs'] = []
-+            info['define_macros'] = []
-+            info['extra_link_args'] = os.environ['LAPACK_LIBS'].split()
-+            self.set_info(**info)
-+            return True
-+        return False
++    def _calc_info_from_envvar(self):
++        info = {}
++        info['language'] = 'f77'
++        info['libraries'] = []
++        info['include_dirs'] = []
++        info['define_macros'] = []
++        info['extra_link_args'] = os.environ['NPY_LAPACK_LIBS'].split()
++        self.set_info(**info)
++        return True
 +
      def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
-@@ -1823,7 +1842,7 @@ class lapack64__opt_info(lapack_ilp64_op
- class blas_opt_info(system_info):
-     notfounderror = BlasNotFoundError
-     # List of all known BLAS libraries, in the default order
--    blas_order = ['mkl', 'blis', 'openblas', 'atlas', 'accelerate', 'blas']
-+    blas_order = ['generic', 'mkl', 'blis', 'openblas', 'atlas', 'accelerate', 'blas']
-     order_env_var_name = 'NPY_BLAS_ORDER'
+@@ -1767,6 +1790,12 @@ class lapack_opt_info(system_info):
+                                  "LAPACK order has unacceptable "
+                                  "values: {}".format(non_existing))
  
-     def _calc_info_mkl(self):
-@@ -1889,6 +1908,18 @@ class blas_opt_info(system_info):
++        if 'NPY_LAPACK_LIBS' in os.environ:
++            # Bypass autodetection, set language to F77 and use env var linker
++            # flags directly
++            self._calc_info_from_envvar()
++            return
++
+         for lapack in lapack_order:
+             if self._calc_info(lapack):
+                 return
+@@ -1889,6 +1918,20 @@ class blas_opt_info(system_info):
          self.set_info(**info)
          return True
  
-+    def _calc_info_generic(self):
-+        if 'BLAS_LIBS' in os.environ:
-+            info = {}
-+            info['language'] = 'f77'
-+            info['libraries'] = []
-+            info['include_dirs'] = []
-+            info['define_macros'] = []
-+            info['extra_link_args'] = os.environ['BLAS_LIBS'].split()
-+            self.set_info(**info)
-+            return True
-+        return False
++    def _calc_info_from_envvar(self):
++        info = {}
++        info['language'] = 'f77'
++        info['libraries'] = []
++        info['include_dirs'] = []
++        info['define_macros'] = []
++        info['extra_link_args'] = os.environ['NPY_BLAS_LIBS'].split()
++        if 'NPY_CBLAS_LIBS' in os.environ:
++            info['define_macros'].append(('HAVE_CBLAS', None))
++            info['extra_link_args'].extend(
++                                        os.environ['NPY_CBLAS_LIBS'].split())
++        self.set_info(**info)
++        return True
 +
      def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
+@@ -1910,6 +1953,12 @@ class blas_opt_info(system_info):
+             if len(non_existing) > 0:
+                 raise ValueError("blas_opt_info user defined BLAS order has unacceptable values: {}".format(non_existing))
+ 
++        if 'NPY_BLAS_LIBS' in os.environ:
++            # Bypass autodetection, set language to F77 and use env var linker
++            # flags directly
++            self._calc_info_from_envvar()
++            return
++
+         for blas in blas_order:
+             if self._calc_info(blas):
+                 return
