@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/12/07 13:03:40 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/20 18:56:04 pin Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -16,13 +16,13 @@ share/applications/lxqt-reboot.desktop
 share/applications/lxqt-shutdown.desktop
 share/applications/lxqt-suspend.desktop
 share/examples/autostart/lxqt-xscreensaver-autostart.desktop
-share/examples/openbox/lxqt-rc.xml
 share/kdm/sessions/lxqt.desktop
 share/lxqt/lxqt.conf
 share/lxqt/session.conf
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ar.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_arn.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ast.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_bg.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ca.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_cs.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_cy.qm
@@ -48,11 +48,13 @@ share/lxqt/translations/lxqt-config-session/lxqt-config-session_ko.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_lt.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_nb_NO.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_nl.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_oc.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_pl.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_pt.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_pt_BR.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ro_RO.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ru.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_si.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_sk_SK.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_sl.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_sr@latin.qm
@@ -65,6 +67,7 @@ share/lxqt/translations/lxqt-config-session/lxqt-config-session_zh_TW.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ar.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_arn.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ast.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_bg.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ca.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_cs.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_cy.qm
@@ -88,8 +91,8 @@ share/lxqt/translations/lxqt-leave/lxqt-leave_nl.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_pl.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_pt.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_pt_BR.qm
-share/lxqt/translations/lxqt-leave/lxqt-leave_pt_PT.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ru.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_si.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_sl.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_tr.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_uk.qm
@@ -98,6 +101,7 @@ share/lxqt/translations/lxqt-leave/lxqt-leave_zh_TW.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ar.qm
 share/lxqt/translations/lxqt-session/lxqt-session_arn.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ast.qm
+share/lxqt/translations/lxqt-session/lxqt-session_bg.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ca.qm
 share/lxqt/translations/lxqt-session/lxqt-session_cs.qm
 share/lxqt/translations/lxqt-session/lxqt-session_cy.qm
@@ -129,6 +133,7 @@ share/lxqt/translations/lxqt-session/lxqt-session_pt.qm
 share/lxqt/translations/lxqt-session/lxqt-session_pt_BR.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ro_RO.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ru.qm
+share/lxqt/translations/lxqt-session/lxqt-session_si.qm
 share/lxqt/translations/lxqt-session/lxqt-session_sk_SK.qm
 share/lxqt/translations/lxqt-session/lxqt-session_sl.qm
 share/lxqt/translations/lxqt-session/lxqt-session_sr@latin.qm
