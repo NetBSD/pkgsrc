@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/07 11:50:42 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/20 18:12:57 pin Exp $
 
-SHA1 (qterminal-0.16.1.tar.xz) = 220429db128ff25e89fb0f98f4a077fdb01cbef8
-RMD160 (qterminal-0.16.1.tar.xz) = e404a765708719775ceb82566845d71ca27368b1
-SHA512 (qterminal-0.16.1.tar.xz) = 0d9736cb6e220a019e6a8df9507604c144a9be6cb8702719e489c6868858a4e0ab362f713f697ba7a6f9e8cd9c9a94aa8e6daba1adcd698a52729ca6e8096def
-Size (qterminal-0.16.1.tar.xz) = 185144 bytes
+SHA1 (qterminal-0.17.0.tar.xz) = 36ce947ea76ebbeeb93d2277bc16df83d08167e5
+RMD160 (qterminal-0.17.0.tar.xz) = 76d55eb9aca259f34d58edae9e21dcc384c790ed
+SHA512 (qterminal-0.17.0.tar.xz) = c5d4ead74feeaec19b917389e7ff6fc4630671deb3442335b8e8c96ec6022c3460343475c95cd40cbaab4c0f813236c23557508b10e26e82ddf1546662f1de57
+Size (qterminal-0.17.0.tar.xz) = 194332 bytes
