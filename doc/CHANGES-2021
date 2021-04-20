@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2245 2021/04/20 18:06:58 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2246 2021/04/20 18:08:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3571,3 +3571,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libfm-qt to 0.17.1 [pin 2021-04-20]
 	Updated sysutils/pcmanfm-qt to 0.17.0 [pin 2021-04-20]
 	Updated graphics/lximage-qt to 0.17.0 [pin 2021-04-20]
+	Updated graphics/screengrab to 2.2.0 [pin 2021-04-20]
