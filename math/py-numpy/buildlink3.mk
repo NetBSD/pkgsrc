@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2021/03/25 21:47:50 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2021/04/20 20:53:48 thor Exp $
 
 BUILDLINK_TREE+=	py-numpy
 
@@ -18,13 +18,9 @@ BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# Dependend python packages re-use the BLAS_LIBS logic and
-# need this in the environment.
-MAKE_ENV+=	BLAS_LIBS=${BLAS_LIBS:Q} LAPACK_LIBS=${LAPACK_LIBS:Q}
+.include "../../math/py-numpy/Makefile.make_env"
+.include "../../math/cblas/buildlink3.mk"
 
-.if ${OPSYS} != "Darwin"
-.include "../../mk/blas.buildlink3.mk"
-.endif
 .endif # PY_NUMPY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-numpy
