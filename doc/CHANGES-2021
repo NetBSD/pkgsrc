@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2270 2021/04/20 18:59:12 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2271 2021/04/20 19:10:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3584,12 +3584,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/lxqt-sudo to 0.17.0 [pin 2021-04-20]
 	Updated security/lxqt-openssh-askpass to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-qtplugin to 0.17.0 [pin 2021-04-20]
-	Updated x11/lxqt-qtplugin to 0.17.0 [pin 2021-04-20]
 	Updated sysutils/lxqt-powermanagement to 0.17.0 [pin 2021-04-20]
 	Updated archivers/lxqt-archiver to 0.4.0 [pin 2021-04-20]
 	Updated x11/lxqt-config to 0.17.1 [pin 2021-04-20]
 	Updated x11/lxqt-globalkeys to 0.17.0 [pin 2021-04-20]
-	Updated x11/lxqt-notificationd to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-notificationd to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-runner to 0.17.0 [pin 2021-04-20]
 	Updated x11/lxqt-panel to 0.17.1 [pin 2021-04-20]
