@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 14:44:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/20 14:49:16 joerg Exp $
 bin/wagtail
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -4468,6 +4468,9 @@ ${PYSITELIB}/wagtail/tests/i18n/__init__.pyo
 ${PYSITELIB}/wagtail/tests/i18n/migrations/0001_initial.py
 ${PYSITELIB}/wagtail/tests/i18n/migrations/0001_initial.pyc
 ${PYSITELIB}/wagtail/tests/i18n/migrations/0001_initial.pyo
+${PYSITELIB}/wagtail/tests/i18n/migrations/0002_clusterabletestmodel_clusterabletestmodelchild_clusterabletestmodeltranslatablechild.py
+${PYSITELIB}/wagtail/tests/i18n/migrations/0002_clusterabletestmodel_clusterabletestmodelchild_clusterabletestmodeltranslatablechild.pyc
+${PYSITELIB}/wagtail/tests/i18n/migrations/0002_clusterabletestmodel_clusterabletestmodelchild_clusterabletestmodeltranslatablechild.pyo
 ${PYSITELIB}/wagtail/tests/i18n/migrations/__init__.py
 ${PYSITELIB}/wagtail/tests/i18n/migrations/__init__.pyc
 ${PYSITELIB}/wagtail/tests/i18n/migrations/__init__.pyo
