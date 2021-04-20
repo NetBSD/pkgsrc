@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.4 2021/04/19 17:08:09 he Exp $
+# $NetBSD: cross.mk,v 1.5 2021/04/20 11:54:32 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -38,7 +38,7 @@
 #TARGET=		powerpc-unknown-netbsd
 #TARGET=		aarch64-unknown-netbsd
 #TARGET=		i686-unknown-netbsd
-#TARGET= 		i586-unknown-netbsd
+#TARGET=		i586-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
@@ -57,15 +57,15 @@
 # Cross-compile illumos target.  The host is identical, it's just the target
 # that is renamed from x86_64-sun-solaris to x86_64-unknown-illumos.
 #
-#TARGET=               x86_64-unknown-illumos
+#TARGET=		x86_64-unknown-illumos
 #
 # Use these variables for "cross-compiling" from x86_64-sun-solaris.
 #
-#CONFIGURE_ARGS+=      --set=target.${TARGET}.llvm-config=${LLVM_CONFIG_PATH}
-#CONFIGURE_ARGS+=      --host=${TARGET}
-#CONFIGURE_ARGS+=      --target=${TARGET}
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.llvm-config=${LLVM_CONFIG_PATH}
+#CONFIGURE_ARGS+=	--host=${TARGET}
+#CONFIGURE_ARGS+=	--target=${TARGET}
 #
 # Set this variable when using a native x86_64-unknown-illumos bootstrap, as
 # the build still defaults to x86_64-sun-solaris based on uname.
 #
-#CONFIGURE_ARGS+=      --build=${TARGET}
+#CONFIGURE_ARGS+=	--build=${TARGET}
