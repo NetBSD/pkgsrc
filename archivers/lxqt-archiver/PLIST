@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2020/12/07 11:59:16 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/20 18:38:16 pin Exp $
 bin/lxqt-archiver
-libexec/lxqt-archiver/isoinfo.sh
 share/applications/lxqt-archiver.desktop
 share/icons/hicolor/scalable/apps/lxqt-archiver.svg
 share/lxqt-archiver/translations/lxqt-archiver_ar.qm
 share/lxqt-archiver/translations/lxqt-archiver_arn.qm
 share/lxqt-archiver/translations/lxqt-archiver_ast.qm
+share/lxqt-archiver/translations/lxqt-archiver_bg.qm
 share/lxqt-archiver/translations/lxqt-archiver_ca.qm
 share/lxqt-archiver/translations/lxqt-archiver_cs.qm
 share/lxqt-archiver/translations/lxqt-archiver_cy.qm
@@ -13,6 +13,8 @@ share/lxqt-archiver/translations/lxqt-archiver_de.qm
 share/lxqt-archiver/translations/lxqt-archiver_el.qm
 share/lxqt-archiver/translations/lxqt-archiver_en_GB.qm
 share/lxqt-archiver/translations/lxqt-archiver_es.qm
+share/lxqt-archiver/translations/lxqt-archiver_et.qm
+share/lxqt-archiver/translations/lxqt-archiver_fr.qm
 share/lxqt-archiver/translations/lxqt-archiver_gl.qm
 share/lxqt-archiver/translations/lxqt-archiver_he.qm
 share/lxqt-archiver/translations/lxqt-archiver_hr.qm
@@ -20,11 +22,13 @@ share/lxqt-archiver/translations/lxqt-archiver_hu.qm
 share/lxqt-archiver/translations/lxqt-archiver_id.qm
 share/lxqt-archiver/translations/lxqt-archiver_it.qm
 share/lxqt-archiver/translations/lxqt-archiver_ja.qm
+share/lxqt-archiver/translations/lxqt-archiver_lt.qm
 share/lxqt-archiver/translations/lxqt-archiver_nb_NO.qm
 share/lxqt-archiver/translations/lxqt-archiver_pl.qm
+share/lxqt-archiver/translations/lxqt-archiver_pt.qm
 share/lxqt-archiver/translations/lxqt-archiver_pt_BR.qm
-share/lxqt-archiver/translations/lxqt-archiver_pt_PT.qm
 share/lxqt-archiver/translations/lxqt-archiver_ru.qm
+share/lxqt-archiver/translations/lxqt-archiver_si.qm
 share/lxqt-archiver/translations/lxqt-archiver_sl.qm
 share/lxqt-archiver/translations/lxqt-archiver_sv.qm
 share/lxqt-archiver/translations/lxqt-archiver_tr.qm
