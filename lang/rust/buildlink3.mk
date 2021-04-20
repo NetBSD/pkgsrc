@@ -1,10 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.8 2021/04/19 17:08:09 he Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2021/04/20 11:54:32 he Exp $
+
+BUILDLINK_TREE+=	rust
 
 #
 # DO NOT include this directly! Use rust.mk instead.
 #
-
-BUILDLINK_TREE+=	rust
 
 .if !defined(RUST_BUILDLINK3_MK)
 RUST_BUILDLINK3_MK:=

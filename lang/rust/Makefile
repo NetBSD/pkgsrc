@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2021/04/19 17:08:09 he Exp $
+# $NetBSD: Makefile,v 1.231 2021/04/20 11:54:32 he Exp $
 
 DISTNAME=	rustc-1.50.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=		--disable-ninja
 .include "cross.mk"
 
 .if !empty(rust.BUILD_TARGET)
-BUILD_TARGET=	${rust.BUILD_TARGET)
+BUILD_TARGET=	${rust.BUILD_TARGET}
 .endif
 
 .if !empty(TARGET)
