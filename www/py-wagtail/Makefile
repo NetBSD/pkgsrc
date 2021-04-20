@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/04/06 19:15:02 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/20 14:44:04 joerg Exp $
 
-DISTNAME=	wagtail-2.12.2
+DISTNAME=	wagtail-2.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}

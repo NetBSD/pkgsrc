@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/04/06 19:15:02 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/04/20 14:44:04 joerg Exp $
 
-SHA1 (wagtail-2.12.2.tar.gz) = ffffed2d0ad23d86459f747e6295ca51840116c7
-RMD160 (wagtail-2.12.2.tar.gz) = 71447975489319ff63344d078f9e1adf565064c2
-SHA512 (wagtail-2.12.2.tar.gz) = 5ec0be55ab8fcafb955acce15fa164d61d4a34c54aec84cea4c99e8134d9f19b7c4b35b589c81ea7c3356da0487027ba6c0a048941e600ed1d20492d56a05909
-Size (wagtail-2.12.2.tar.gz) = 8753889 bytes
-SHA1 (patch-setup.py) = 6975ffd6a80b951ab317c706d993fafee0586ac3
+SHA1 (wagtail-2.12.4.tar.gz) = 403ac5ed31c3a01f738bcaa2f98c3d8ba08c39b4
+RMD160 (wagtail-2.12.4.tar.gz) = e268dbabd9c1ee3d27c6758e5ec5d0edffc94854
+SHA512 (wagtail-2.12.4.tar.gz) = d353e0e1383bec8a7b752f6f9a3b6cdd0886db2bac95f9e46a13b2657a97f7bf41a8969626e72e390c8621f21c6509c00dc11422a027bcb73a5eec22cda2e8d7
+Size (wagtail-2.12.4.tar.gz) = 8755733 bytes
+SHA1 (patch-setup.py) = bc698d5fd8b3d163f48df70768323c9e7a96de3c
