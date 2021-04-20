@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2021/01/14 10:04:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/20 17:58:03 pin Exp $
 
-DISTNAME=	libqtxdg-3.6.0
+DISTNAME=	libqtxdg-3.7.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -34,8 +34,13 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-fuse-linker-plugin
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
+DEPENDS+=	xterm-[0-9]*:../../x11/xterm
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
