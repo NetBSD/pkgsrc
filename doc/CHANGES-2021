@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2274 2021/04/20 20:41:32 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2275 2021/04/20 20:54:06 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3596,3 +3596,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.7.0 [pin 2021-04-20]
 	Added math/cblas version 3.9.0 [thor 2021-04-20]
 	Updated math/lapacke to 3.9.0 [thor 2021-04-20]
+	Updated math/py-numpy to 1.19.5nb4 [thor 2021-04-20]
