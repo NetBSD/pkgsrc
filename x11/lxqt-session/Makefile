@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/12/07 13:03:40 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/20 18:56:04 pin Exp $
 
-DISTNAME=	lxqt-session-0.16.0
+DISTNAME=	lxqt-session-0.17.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ COMMENT=	Session manager
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
@@ -21,15 +21,11 @@ CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
 
 AUTOSTART_CONF=		share/examples/autostart
-OPENBOX_CONF=		share/examples/openbox
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS=		${PKG_SYSCONFDIR}/autostart
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/openbox
 
 CONF_FILES+=		${AUTOSTART_CONF}/lxqt-xscreensaver-autostart.desktop \
 			${PKG_SYSCONFDIR}/autostart/lxqt-xscreensaver-autostart.desktop
-CONF_FILES+=		${OPENBOX_CONF}/lxqt-rc.xml \
-			${PKG_SYSCONFDIR}/openbox/lxqt-rc.xml
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -42,7 +38,7 @@ SUBST_SED.prefix=	-e 's,/usr/bin,${PREFIX}/bin,g'
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
 
