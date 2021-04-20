@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.129 2021/04/19 17:08:09 he Exp $
+$NetBSD: distinfo,v 1.130 2021/04/20 08:25:51 he Exp $
 
 SHA1 (rust-1.49.0-aarch64-unknown-netbsd.tar.gz) = 97804c99b787a54bf16c0c13665eb74cab6c7bba
 RMD160 (rust-1.49.0-aarch64-unknown-netbsd.tar.gz) = 5940c473d0655dc50efc10d2a7dc4bb7c0b85590
@@ -104,7 +104,6 @@ SHA1 (patch-compiler_rustc__target_src_spec_netbsd__base.rs) = 877d185e5ca58a3a3
 SHA1 (patch-compiler_rustc__target_src_spec_solaris__base.rs) = f0b41a3a5685ae33d037f8ded0b1fa6f1acb0867
 SHA1 (patch-compiler_rustc__target_src_spec_x86__64__sun__solaris.rs) = f629fcf782c0c915c2921456eb1ffa8e91c244c1
 SHA1 (patch-library_backtrace_crates_backtrace-sys_src_libbacktrace_configure) = 5dc1cfc843894156b513c86453db5032917a5529
-SHA1 (patch-library_std_build.rs) = c69af2a424bca60bc91741b8d4cb5fd633bbacca
 SHA1 (patch-library_std_src_sys_unix_mod.rs) = 927b03f3f34bd21a81bd2a8b6bcf30fe241e2d32
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = c431e3221849e3220fc63b072984ccb1896f83c8
 SHA1 (patch-library_unwind_build.rs) = 2cff0229bfb26445ea3f2e2e5b6e4ea8884df28f
