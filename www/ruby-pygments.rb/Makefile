@@ -4,8 +4,8 @@ DISTNAME=	pygments.rb-2.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/tmm1/pygments.rb
-COMMENT=	Pygments wrapper for ruby
+HOMEPAGE=	https://github.com/pygments/pygments.rb
+COMMENT=	Ruby wrapper for Pygments syntax highlighter
 LICENSE=	mit
 
 REPLACE_PYTHON=	lib/pygments/mentos.py
