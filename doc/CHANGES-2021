@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2232 2021/04/20 15:18:19 joerg Exp $
+$NetBSD: CHANGES-2021,v 1.2233 2021/04/20 16:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3558,3 +3558,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/tiff to 4.3.0 [gdt 2021-04-20]
 	Updated devel/py-approvaltests to 0.4.2 [schmonz 2021-04-20]
 	Updated www/py-wagtail to 2.12.4 [joerg 2021-04-20]
+	Updated devel/apache-ant to 1.10.10 [wiz 2021-04-20]
