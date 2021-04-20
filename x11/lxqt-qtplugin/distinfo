@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/07 12:29:41 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/04/20 18:31:25 pin Exp $
 
-SHA1 (lxqt-qtplugin-0.16.0.tar.xz) = d7ea06c61f5796567d318468e80a9e1720cc0c5a
-RMD160 (lxqt-qtplugin-0.16.0.tar.xz) = a9d67e5335c9713257da37997f5ef7903bdbcb04
-SHA512 (lxqt-qtplugin-0.16.0.tar.xz) = 8dc6174a5b2a43332b40509b466095912d31407e70d5d3487243de3a25fd07e925fae8f46359f6b69f2e4d7e920a7ba0ae5982a8d7ad9129ffacb4d62e108203
-Size (lxqt-qtplugin-0.16.0.tar.xz) = 23640 bytes
+SHA1 (lxqt-qtplugin-0.17.0.tar.xz) = a22aa748d9b724cee74983c390fb2656d83e6b61
+RMD160 (lxqt-qtplugin-0.17.0.tar.xz) = e0f9d6d7de0fad94665c286bce0c0eef9f483e75
+SHA512 (lxqt-qtplugin-0.17.0.tar.xz) = 5fda2858223de1973dede43c4a278c0ff07006b087a19fe9088113d93e968716a6b0ed59624de3d69924961a2dba184955b73b380ea007cf9942e20ec1614fb7
+Size (lxqt-qtplugin-0.17.0.tar.xz) = 23744 bytes
