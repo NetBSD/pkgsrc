@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2236 2021/04/20 16:28:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2237 2021/04/20 16:43:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3562,3 +3562,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/vala to 0.52.2 [wiz 2021-04-20]
 	Updated security/tor-browser-https-everywhere to 2021.4.15 [wiz 2021-04-20]
 	Updated graphics/ImageMagick to 7.0.11.8 [wiz 2021-04-20]
+	Updated devel/py-hypothesis to 6.10.0 [wiz 2021-04-20]
