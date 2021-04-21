@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 11:54:34 asau Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/21 15:40:38 wiz Exp $
 
 DISTNAME=		crafty-doc-18.0
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/
+#MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/
 DISTFILES=		crafty.doc.ps
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
