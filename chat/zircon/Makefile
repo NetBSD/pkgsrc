@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:30:49 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.22 2021/04/21 08:36:10 wiz Exp $
 
 DISTNAME=	zircon-1.18.256
 PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
+MASTER_SITES=	# ftp://catless.ncl.ac.uk/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://catless.ncl.ac.uk/Programs/Zircon/
