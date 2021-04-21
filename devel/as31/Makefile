@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 12:03:59 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2021/04/21 08:41:05 wiz Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.misc/volume10/
+MASTER_SITES=	# ftp://ftp.uu.net/usenet/comp.sources.misc/volume10/
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
