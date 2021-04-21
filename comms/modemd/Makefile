@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2019/11/03 12:04:13 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/21 09:02:45 wiz Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
 PKGREVISION=	2
 CATEGORIES=	comms
-MASTER_SITES=	ftp://ftp.vix.com/pub/modemd/
+MASTER_SITES=	# ftp://ftp.vix.com/pub/modemd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement getty for dialup ttys and a modem server
