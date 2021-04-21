@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:00 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.28 2021/04/21 08:21:44 wiz Exp $
 
 DISTNAME=	lpe-1.2.6
 PKGREVISION=	3
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.twu.net/users/cdsmith/lpe/
+MASTER_SITES=	# ftp://ftp.twu.net/users/cdsmith/lpe/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://cdsmith.twu.net/professional/opensource/lpe.html
