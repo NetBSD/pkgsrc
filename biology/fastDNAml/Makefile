@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2014/12/20 12:02:28 mef Exp $
+# $NetBSD: Makefile,v 1.12 2021/04/21 09:11:13 wiz Exp $
 
 DISTNAME=	fastDNAml_1.2.2
 PKGNAME=	fastDNAml-1.2.2
 CATEGORIES=	biology
-MASTER_SITES=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml/
+#MASTER_SITES=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml/
 
 MAINTAINER=	babafou@babafou.eu.org
-HOMEPAGE=	http://iubio.bio.indiana.edu/soft/molbio/evolve/fastdnaml/fastDNAml.html
+#HOMEPAGE=	http://iubio.bio.indiana.edu/soft/molbio/evolve/fastdnaml/fastDNAml.html
 COMMENT=	Program derived from Joseph Felsenstein's version 3.3 DNAML
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
