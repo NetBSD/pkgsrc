@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/05/18 20:50:36 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.8 2021/04/21 08:03:24 wiz Exp $
 
 DISTNAME=		epstool-3.08
 CATEGORIES=		print
-MASTER_SITES=		ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum/
+MASTER_SITES=		# ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pages.cs.wisc.edu/~ghost/gsview/epstool.htm

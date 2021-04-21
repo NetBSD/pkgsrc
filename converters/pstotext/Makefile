@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/04/24 10:06:48 sbd Exp $
-#
+# $NetBSD: Makefile,v 1.5 2021/04/21 08:03:23 wiz Exp $
 
 DISTNAME=	pstotext-1.9
 PKGREVISION=	2
 CATEGORIES=	converters print
-MASTER_SITES=	ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/contrib/
+MASTER_SITES=	# ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/contrib/
 
 MAINTAINER=	schaecsn@gmx.net
 HOMEPAGE=	http://pages.cs.wisc.edu/~ghost/doc/pstotext.htm
