@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/04/12 11:16:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/04/21 19:52:29 cirnatdan Exp $
 bin/json-glib-format
 bin/json-glib-validate
 include/json-glib-1.0/json-glib/json-builder.h
@@ -17,7 +17,7 @@ include/json-glib-1.0/json-glib/json-version.h
 ${PLIST.introspection}lib/girepository-1.0/Json-1.0.typelib
 lib/libjson-glib-1.0.so
 lib/libjson-glib-1.0.so.0
-lib/libjson-glib-1.0.so.0.400.4
+lib/libjson-glib-1.0.so.0.600.2
 lib/pkgconfig/json-glib-1.0.pc
 libexec/installed-tests/json-glib-1.0/array
 libexec/installed-tests/json-glib-1.0/boxed
@@ -25,6 +25,7 @@ libexec/installed-tests/json-glib-1.0/builder
 libexec/installed-tests/json-glib-1.0/generator
 libexec/installed-tests/json-glib-1.0/gvariant
 libexec/installed-tests/json-glib-1.0/invalid
+libexec/installed-tests/json-glib-1.0/invalid.json
 libexec/installed-tests/json-glib-1.0/node
 libexec/installed-tests/json-glib-1.0/object
 libexec/installed-tests/json-glib-1.0/parser
@@ -33,6 +34,7 @@ libexec/installed-tests/json-glib-1.0/reader
 libexec/installed-tests/json-glib-1.0/serialize-complex
 libexec/installed-tests/json-glib-1.0/serialize-full
 libexec/installed-tests/json-glib-1.0/serialize-simple
+libexec/installed-tests/json-glib-1.0/skip-bom.json
 libexec/installed-tests/json-glib-1.0/stream-load.json
 man/man1/json-glib-format.1
 man/man1/json-glib-validate.1
@@ -52,6 +54,7 @@ share/installed-tests/json-glib-1.0/serialize-complex.test
 share/installed-tests/json-glib-1.0/serialize-full.test
 share/installed-tests/json-glib-1.0/serialize-simple.test
 share/locale/as/LC_MESSAGES/json-glib-1.0.mo
+share/locale/be/LC_MESSAGES/json-glib-1.0.mo
 share/locale/bg/LC_MESSAGES/json-glib-1.0.mo
 share/locale/bn_IN/LC_MESSAGES/json-glib-1.0.mo
 share/locale/bs/LC_MESSAGES/json-glib-1.0.mo
@@ -81,6 +84,7 @@ share/locale/ky/LC_MESSAGES/json-glib-1.0.mo
 share/locale/lt/LC_MESSAGES/json-glib-1.0.mo
 share/locale/lv/LC_MESSAGES/json-glib-1.0.mo
 share/locale/ml/LC_MESSAGES/json-glib-1.0.mo
+share/locale/ms/LC_MESSAGES/json-glib-1.0.mo
 share/locale/nb/LC_MESSAGES/json-glib-1.0.mo
 share/locale/ne/LC_MESSAGES/json-glib-1.0.mo
 share/locale/nl/LC_MESSAGES/json-glib-1.0.mo
