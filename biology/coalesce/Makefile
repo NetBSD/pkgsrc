@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2017/08/01 17:40:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2021/04/21 09:12:23 wiz Exp $
 
 DISTNAME=	coalesce1.5b
 PKGNAME=	coalesce-1.5.0.2
 PKGREVISION=	1
 CATEGORIES=	biology
-MASTER_SITES=	http://evolution.genetics.washington.edu/lamarc/coalesce/
+#MASTER_SITES=	http://evolution.genetics.washington.edu/lamarc/coalesce/
 
 MAINTAINER=	brook@nmsu.edu
 #HOMEPAGE=	http://evolution.genetics.washington.edu/lamarc/coalesce.html
