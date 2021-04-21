@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/01/01 08:19:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/04/21 12:09:49 adam Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -100,6 +100,7 @@ share/boost-build/tools/features/archiveflags-feature.jam
 share/boost-build/tools/features/asmflags-feature.jam
 share/boost-build/tools/features/build-feature.jam
 share/boost-build/tools/features/cflags-feature.jam
+share/boost-build/tools/features/compileflags-feature.jam
 share/boost-build/tools/features/conditional-feature.jam
 share/boost-build/tools/features/coverage-feature.jam
 share/boost-build/tools/features/cxx-template-depth-feature.jam
@@ -131,6 +132,7 @@ share/boost-build/tools/features/objcflags-feature.jam
 share/boost-build/tools/features/optimization-feature.jam
 share/boost-build/tools/features/os-feature.jam
 share/boost-build/tools/features/relevant-feature.jam
+share/boost-build/tools/features/response-file-feature.jam
 share/boost-build/tools/features/rtti-feature.jam
 share/boost-build/tools/features/runtime-feature.jam
 share/boost-build/tools/features/sanitizers-feature.jam
