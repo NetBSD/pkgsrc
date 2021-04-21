@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 11:54:43 asau Exp $
-#
+# $NetBSD: Makefile,v 1.18 2021/04/21 15:44:25 wiz Exp $
 
 DISTNAME=	icbm3d.0.4
 PKGNAME=	${DISTNAME:S/./-/}
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/icbm3d/
+MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/icbm3d/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/icbm3d/
