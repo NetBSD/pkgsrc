@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2291 2021/04/21 13:27:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2292 2021/04/21 16:56:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3622,3 +3622,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/boost to 1.76.0 [adam 2021-04-21]
 	Updated databases/mysql57-client to 5.7.34 [adam 2021-04-21]
 	Updated databases/mysql57-server to 5.7.34 [adam 2021-04-21]
+	Updated geography/osm2pgsql to 1.3.0 [gdt 2021-04-21]
