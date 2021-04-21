@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/21 09:21:25 wiz Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
 CATEGORIES=		archivers
-MASTER_SITES=		ftp://ftp.cwi.nl/pub/dik/
+#MASTER_SITES=		ftp://ftp.cwi.nl/pub/dik/
 EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
