@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/07/28 16:34:49 scole Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/21 15:48:03 wiz Exp $
 
 DISTNAME=	ttf-tlwg-${TLWG_VERSION}
 CATEGORIES=	fonts
-
-MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/fonts-tlwg/fonts/
+#MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/fonts-tlwg/fonts/
 EXTRACT_SUFX=	.tar.xz
 
 TLWG_VERSION=	0.7.2
