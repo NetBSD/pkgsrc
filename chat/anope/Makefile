@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2021/04/21 11:41:04 adam Exp $
+# $NetBSD: Makefile,v 1.37 2021/04/21 13:24:24 adam Exp $
 
 DISTNAME=	anope-2.0.7-source
 PKGNAME=	${DISTNAME:S/-source//1}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anope/}
 GITHUB_PROJECT=	anope

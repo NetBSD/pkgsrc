@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/05/22 10:55:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2021/04/21 13:24:07 adam Exp $
 
 BUILDLINK_TREE+=	libgadu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgadu
 LIBGADU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgadu+=	libgadu>=1.12.2
-BUILDLINK_ABI_DEPENDS.libgadu?=	libgadu>=1.12.2nb4
+BUILDLINK_ABI_DEPENDS.libgadu?=	libgadu>=1.12.2nb9
 BUILDLINK_PKGSRCDIR.libgadu?=	../../chat/libgadu
 
 .include "../../devel/protobuf-c/buildlink3.mk"
