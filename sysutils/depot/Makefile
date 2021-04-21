@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:28:44 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.25 2021/04/21 08:53:30 wiz Exp $
 
 DISTNAME=	depot-5.14
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/depot/alpha/
+MASTER_SITES=	# ftp://ftp.andrew.cmu.edu/pub/depot/alpha/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # "Most of the content here is being removed and archived."
