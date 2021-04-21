@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2021/04/21 08:29:00 wiz Exp $
 
 DISTNAME=		noweb-2.11b
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://www.eecs.harvard.edu/pub/nr/
+MASTER_SITES=		# ftp://www.eecs.harvard.edu/pub/nr/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
