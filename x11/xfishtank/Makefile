@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2016/03/12 21:53:39 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2021/04/21 15:35:13 wiz Exp $
 
 DISTNAME=		xfishtank-2.2
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.uni-koeln.de/windows/xcontrib/
+#MASTER_SITES=		ftp://ftp.uni-koeln.de/windows/xcontrib/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Make fish swim in the background of your screen
