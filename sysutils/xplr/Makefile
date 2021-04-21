@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/04/19 19:32:49 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/21 08:29:54 pin Exp $
 
-DISTNAME=	xplr-0.5.2
+DISTNAME=	xplr-0.5.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +13,7 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=	c
+USE_TOOLS+=	bash:run
 
 INSTALLATION_DIRS=	bin
 
