@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 11:20:33 leot Exp $
-#
+# $NetBSD: Makefile,v 1.3 2021/04/21 15:38:52 wiz Exp $
 
 DISTNAME=	fortune-it-1.99
 PKGNAME=	${DISTNAME:S/fortune/fortunes/}
 CATEGORIES=	games
-MASTER_SITES=	http://www.fortune-it.net/download/ \
-		ftp://sunsite.unc.edu/pub/Linux/games/amusements/fortune/
+MASTER_SITES=	http://www.fortune-it.net/download/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://www.fortune-it.net/
