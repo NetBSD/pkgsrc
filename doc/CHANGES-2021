@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2286 2021/04/21 09:15:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2287 2021/04/21 09:29:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/icu to 69.1 [adam 2021-04-21]
 	Updated security/stunnel to 5.59 [nia 2021-04-21]
 	Removed security/smtpd [wiz 2021-04-21]
+	Updated www/snownews to 1.7 [nia 2021-04-21]
