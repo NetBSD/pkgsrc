@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2020/12/18 23:25:59 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/21 13:24:14 adam Exp $
 #
 
 DISTNAME=		libvncserver-LibVNCServer-0.9.13
 PKGNAME=		libVNCServer-0.9.13
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver

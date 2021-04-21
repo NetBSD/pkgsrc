@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/01/01 08:24:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/21 13:24:06 adam Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	coordgenlibs-1.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schrodinger/}
 
