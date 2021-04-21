@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2021/02/07 06:30:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2021/04/21 09:33:45 nia Exp $
 
-DISTNAME=	strawberry-0.8.5
-PKGREVISION=	1
+DISTNAME=	strawberry-0.9.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -43,14 +42,15 @@ PREFER.sqlite3=	pkgsrc # fts5
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+CHECK_PORTABILITY_SKIP+=	dist/macos/macversion.sh
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 | ${TRUE}
 
 .include "options.mk"
 .include "../../audio/chromaprint/buildlink3.mk"
-# compiles its own copy, but no detection code in cmake
-#.include "../../audio/taglib/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

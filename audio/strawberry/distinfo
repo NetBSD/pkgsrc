@@ -1,16 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/02/20 11:02:41 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/04/21 09:33:45 nia Exp $
 
-SHA1 (strawberry-0.8.5.tar.xz) = 8e0178075632b1c6245369ae6e0e5cc641d2a179
-RMD160 (strawberry-0.8.5.tar.xz) = ffe16fb5adc9f2235f49f66cf3c70fdb0de2dc1b
-SHA512 (strawberry-0.8.5.tar.xz) = 33ab6751e5bd17ff98beed29c179c47bebca92229b94b863a172169704b2fd69d6605cf31db456dee552666b58bcbad867b3cca7bcff2cc6582c4c2c0a2f49c8
-Size (strawberry-0.8.5.tar.xz) = 10801412 bytes
-SHA1 (patch-ext_libstrawberry-tagreader_tagreader.cpp) = 74dc9bd269cd6036e3de8dab77f91a7b713154a8
-SHA1 (patch-ext_libstrawberry-tagreader_tagreader.h) = 999746c50460e9bba07f4cd98c4d257aba52d355
-SHA1 (patch-ext_libstrawberry-tagreader_tagreadermessages.proto) = 68f5414be7218d080f9ea116baefbd15299ba88c
-SHA1 (patch-ext_strawberry-tagreader_tagreaderworker.cpp) = 68f4a3d10d0092bd5daec4a566f9c6aab7085538
-SHA1 (patch-ext_strawberry-tagreader_tagreaderworker.h) = 2542f59b5005cb229bf39a76a0aeed8cd8d22c8b
-SHA1 (patch-src_core_song.cpp) = 45be66132895bd7e4336402aab09e2a312c6e967
-SHA1 (patch-src_core_song.h) = 6e12068faf62d906c91932df4ae37f1a12bed840
-SHA1 (patch-src_core_tagreaderclient.cpp) = 6fa0e2ee043760663613dcb00c56a2c1f42eee18
-SHA1 (patch-src_core_tagreaderclient.h) = 84f4f56698e90a8d962b722c094a2e0bfc6adc78
-SHA1 (patch-tests_src_tagreader__test.cpp) = b959b3db90613be370d2368bb8e55a346201d2b8
+SHA1 (strawberry-0.9.3.tar.xz) = 383ec369a4972986334717b930b5e994bdc51cc3
+RMD160 (strawberry-0.9.3.tar.xz) = 1bbfa2aa229ad7f2a41f8a89960f0d62560e527d
+SHA512 (strawberry-0.9.3.tar.xz) = d253ffaa6cf0412eb135bc792c31458816fc0a1ae7070d6885487da4fb4855ffeeeeddd285b853fd10220c797c3beb73a91059514d76b1b1638350fdff17107c
+Size (strawberry-0.9.3.tar.xz) = 10928116 bytes
