@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/05/25 05:37:37 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/21 08:44:30 wiz Exp $
 
 DISTNAME=	lile-2.0
 PKGNAME=	ile-2.0
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.inria.fr/system/user/
+MASTER_SITES=	# ftp://ftp.inria.fr/system/user/
 EXTRACT_SUFX=	.tar.z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
