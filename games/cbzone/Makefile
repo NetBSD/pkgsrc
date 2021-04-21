@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 11:54:32 asau Exp $
+# $NetBSD: Makefile,v 1.12 2021/04/21 15:46:04 wiz Exp $
 
 DISTNAME=		cbzone-sound
 PKGNAME=		cbzone-2.0c
 PKGREVISION=		2
 CATEGORIES=		games x11
-MASTER_SITES=		ftp://ftp.cdrom.com/pub/X11/R5contrib/
+#MASTER_SITES=		ftp://ftp.cdrom.com/pub/X11/R5contrib/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Simple classic game of 3D tank warfare
