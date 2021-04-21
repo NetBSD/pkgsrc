@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2021/04/21 15:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/21 19:38:07 gdt Exp $
 
-DISTNAME=		proj-pdf-docs
-PKGNAME=		proj-doc-1.1
-PKGREVISION=		1
+DISTNAME=		proj-gh-pages
+PKGNAME=		proj-doc-8.0
 CATEGORIES=		geography
-MASTER_SITES+=		http://dl.maptools.org/dl/proj/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=OSGeo/}
+#MASTER_SITES=		https://github.com/OSGeo/PROJ/blob//
+GITHUB_PROJECT=		proj
+GITHUB_TAG=		1f33284734c33ec14286914673ec02fd40fe3982
 
 MAINTAINER=		gdt@NetBSD.org
-#HOMEPAGE=		http://www.remotesensing.org/proj/
+HOMEPAGE=		https://proj.org/
 COMMENT=		PDF documentation for the PROJ cartographic projection software
+LICENSE=		mit
 
 NO_BUILD=		yes
-
+WRKSRC=			${WRKDIR}/PROJ-1f33284734c33ec14286914673ec02fd40fe3982
+INSTALLATION_DIRS+=	share/doc/proj
 PREV_PKGPATH=		misc/proj-doc
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/proj
-	${INSTALL_DATA} ${WRKDIR}/*.pdf ${DESTDIR}${PREFIX}/share/doc/proj/
+	${INSTALL_DATA} ${WRKSRC}/proj.pdf ${DESTDIR}${PREFIX}/share/doc/proj/
 
 .include "../../mk/bsd.pkg.mk"

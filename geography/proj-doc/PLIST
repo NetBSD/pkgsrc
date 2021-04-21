@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/14 16:26:22 wiz Exp $
-share/doc/proj/OF90-284.pdf
-share/doc/proj/PROJ.4.3.I2.pdf
-share/doc/proj/PROJ.4.3.pdf
-share/doc/proj/SWISS.pdf
+@comment $NetBSD: PLIST,v 1.2 2021/04/21 19:38:07 gdt Exp $
+share/doc/proj/proj.pdf
