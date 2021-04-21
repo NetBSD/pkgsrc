@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/04/16 13:57:52 cirnatdan Exp $
+$NetBSD: distinfo,v 1.2 2021/04/21 12:23:21 cirnatdan Exp $
 
 SHA1 (gdm-40.0.tar.gz) = f16d102b1052ff3ae0b64cac47dd3910b9b2ae74
 RMD160 (gdm-40.0.tar.gz) = aef9fa9d25f92b671166b9b2a56f9f5811e912cc
@@ -32,4 +32,4 @@ SHA1 (patch-data_meson.build) = 51a40a90618dc21f9f0955e590a45b4fe6370189
 SHA1 (patch-libgdm_gdm-user-switching_c) = 91ebba68b5496c1de00108e1609f47c6019eadcc
 SHA1 (patch-libgdm_meson.build) = 6341327da7925597c9f15370faeacfd88a686802
 SHA1 (patch-meson.build) = d2c5bfe7d65b753722409860afc807031f9ee336
-SHA1 (patch-pam__gdm_pam__gdm.c) = a2906c96c8c5dc49e2663123b6dcd39821c7b47d
+SHA1 (patch-pam__gdm_pam__gdm.c) = d136b1f89c935efd51c9f819d9710c9eb22ac2b6
