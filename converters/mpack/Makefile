@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 00:20:12 asau Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/21 08:53:30 wiz Exp $
 
 DISTNAME=	mpack-1.6
 PKGREVISION=	4
 CATEGORIES=	converters mail news
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/mpack/
+MASTER_SITES=	# ftp://ftp.andrew.cmu.edu/pub/mpack/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	External MIME packer/unpacker
