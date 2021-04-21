@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2021/01/01 08:24:59 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2021/04/21 11:40:46 adam Exp $
 
 BUILDLINK_TREE+=	kde-workspace
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kde-workspace
 KDE_WORKSPACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kde-workspace+=	kde-workspace4>=4.0.0
-BUILDLINK_ABI_DEPENDS.kde-workspace+=	kde-workspace4>=4.11.22nb36
+BUILDLINK_ABI_DEPENDS.kde-workspace+=	kde-workspace4>=4.11.22nb37
 BUILDLINK_PKGSRCDIR.kde-workspace?=	../../x11/kde-workspace4
 
 .include "../../graphics/qimageblitz/buildlink3.mk"

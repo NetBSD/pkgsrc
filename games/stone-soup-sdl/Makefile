@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/02/09 21:11:49 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/21 11:41:46 adam Exp $
 
+PKGREVISION= 1
 .include "../../games/stone-soup/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/_/-/:S/-soup/-soup-sdl/:S/-nodeps//1}
