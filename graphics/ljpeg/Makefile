@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:07 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2021/04/21 15:30:41 wiz Exp $
 
 DISTNAME=		ljpg
 PKGNAME=		ljpg-1.0
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.cs.cornell.edu/pub/multimed/
+#MASTER_SITES=		ftp://ftp.cs.cornell.edu/pub/multimed/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.cs.cornell.edu/pub/multimed/
+#HOMEPAGE=		ftp://ftp.cs.cornell.edu/pub/multimed/
 COMMENT=		Lossless JPEG codec
 
 WRKSRC=			${WRKDIR}
