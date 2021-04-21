@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/06/08 10:40:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.23 2021/04/21 08:05:56 wiz Exp $
 
 DISTNAME=	wily-0.13.42
 CATEGORIES=	editors plan9
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wily/} \
-		ftp://ftp.cse.yorku.ca/pub/wily/src/old/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wily/}
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	agc@NetBSD.org
