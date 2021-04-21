@@ -1,34 +1,32 @@
-# $NetBSD: Makefile,v 1.59 2020/11/05 09:09:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2021/04/21 09:28:28 nia Exp $
 
-DISTNAME=	snownews-1.6.10
-PKGREVISION=	3
+DISTNAME=	snownews-1.7
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=kouya/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=msharov/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/kouya/snownews
+HOMEPAGE=	https://github.com/msharov/snownews
 COMMENT=	Small, curses based RSS feed reader
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
-
-USE_TOOLS+=	gmake msgfmt perl pkg-config
+USE_TOOLS+=	gmake msgfmt pkg-config
 HAS_CONFIGURE=	yes
 FAKE_NCURSES=	yes
+USE_CURSES=	wide
 
-REPLACE_PERL+=	opml2snow
+LDFLAGS+=	${BUILDLINK_LDADD.curses}
 
-AUTO_MKDIRS=	yes
+USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
-# AUTO_MKDIRS can't handle this one.
-INSTALLATION_DIRS+=	share/locale/be@latin/LC_MESSAGES
-
-.include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
