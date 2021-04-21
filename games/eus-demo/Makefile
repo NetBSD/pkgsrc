@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:14 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2021/04/21 15:41:51 wiz Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/eus/
-MASTER_SITES+=	ftp://download.linuxlords.com/pub/demos/eus/
-MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/eus/
+#MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/eus/
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://www.lokigames.com/products/eus/
