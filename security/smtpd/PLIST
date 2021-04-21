@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:14 jperkin Exp $
-sbin/smtpd
-sbin/smtpfwdd
-share/doc/smtpd/INSTALL
-share/doc/smtpd/README
-share/examples/smtpd/antirelay_check_rules_example
-share/examples/smtpd/antispam_check_rules.example
-share/examples/smtpd/smtpd_check_rules.example
