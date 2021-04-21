@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2021/04/21 11:41:35 adam Exp $
+# $NetBSD: Makefile,v 1.58 2021/04/21 13:24:37 adam Exp $
 
 DISTNAME=		ckmame-1.0
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		emulators
 MASTER_SITES=		https://www.nih.at/ckmame/
 EXTRACT_SUFX=		.tar.xz

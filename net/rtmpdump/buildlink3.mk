@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/05/22 10:55:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2021/04/21 13:24:14 adam Exp $
 
 BUILDLINK_TREE+=	rtmpdump
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rtmpdump
 RTMPDUMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rtmpdump+=	rtmpdump>=2.3
-BUILDLINK_ABI_DEPENDS.rtmpdump+=	rtmpdump>=2.4.0.0.fa8646daeb19dfd12c181f7d19de708d623704c0nb3
+BUILDLINK_ABI_DEPENDS.rtmpdump+=	rtmpdump>=2.4.0.0.fa8646daeb19dfd12c181f7d19de708d623704c0nb4
 BUILDLINK_PKGSRCDIR.rtmpdump?=		../../net/rtmpdump
 
 .include "../../devel/gmp/buildlink3.mk"

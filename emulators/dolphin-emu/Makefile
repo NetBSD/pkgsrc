@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2021/02/07 06:30:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/21 13:24:37 adam Exp $
 
 DISTNAME=	dolphin-emu-5.0
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dolphin-emu/}
 GITHUB_PROJECT=	dolphin

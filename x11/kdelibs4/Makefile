@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2021/04/21 11:40:46 adam Exp $
+# $NetBSD: Makefile,v 1.124 2021/04/21 13:24:19 adam Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/17.08.3/src/}
