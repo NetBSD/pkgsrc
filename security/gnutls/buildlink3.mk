@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2020/06/09 09:53:11 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2021/04/21 13:24:15 adam Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnutls
 GNUTLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.3.0
-BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls>=3.6.13nb2
+BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls>=3.7.1nb1
 BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 
 .include "../../archivers/lzo/buildlink3.mk"
