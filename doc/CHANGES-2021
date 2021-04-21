@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2281 2021/04/21 08:20:28 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2282 2021/04/21 08:29:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/weechat to 3.1 [nia 2021-04-21]
 	Updated emulators/stella to 6.5.3 [nia 2021-04-21]
 	Updated emulators/libretro-stella to 6.5.3 [nia 2021-04-21]
+	Updated x11/qt5ct to 1.2 [pin 2021-04-21]
