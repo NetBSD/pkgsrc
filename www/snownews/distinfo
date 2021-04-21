@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.18 2019/09/16 18:36:33 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/04/21 09:28:28 nia Exp $
 
-SHA1 (snownews-1.6.10.tar.gz) = 4eda949103a92ea28e5ceff8e25e45b00540adaa
-RMD160 (snownews-1.6.10.tar.gz) = 23b6c18ed8f47381e4fb0886074a9516dae0abcd
-SHA512 (snownews-1.6.10.tar.gz) = df90c3c55da8d11b2936075aab86f66f54f9a6ace0cbe0db54d0e6177ae71e28ab3c700d79b521d55859bb94ef7ecc89e3eb69f215eb9f7286d30cc4e2bec078
-Size (snownews-1.6.10.tar.gz) = 189715 bytes
-SHA1 (patch-Config.mk.in) = 272f80ba5bf0ff6eb89bd30d429835423f45a39d
-SHA1 (patch-config.h.in) = bb2219b1e82fac3dc4e7c7b1526efbffe040d8d3
-SHA1 (patch-configure) = 789dc192a07fab442080e71d929fa17718fb2390
-SHA1 (patch-os-support_c) = 9b843d381c3793bd2f32f72696640a6b005f8a22
+SHA1 (snownews-1.7.tar.gz) = 27bbfb5c55f3505508eaa3287d9bc372b2beb9f7
+RMD160 (snownews-1.7.tar.gz) = 8c75d9ddceb1a1ac6127f5015ee8e002cb848969
+SHA512 (snownews-1.7.tar.gz) = fc8e8aac41b6fe8d0021a5398898f72a26303b10f300fa4f5b47ab5de536002d7b122bc43b1f230f6755e0202ce689acbb07e794b5fd29ba3b12ed988a930727
+Size (snownews-1.7.tar.gz) = 154948 bytes
+SHA1 (patch-Config.mk.in) = d16738359c9072c783612e7e0a2f782f2895e947
+SHA1 (patch-configure) = c48c16124301c490ae07889313de51ccd2cb39f4
