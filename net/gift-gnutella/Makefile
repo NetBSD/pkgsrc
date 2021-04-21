@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/11/05 09:08:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/21 11:42:24 adam Exp $
 #
 
 DISTNAME=		gift-gnutella-0.0.11
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=		.tar.bz2

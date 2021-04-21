@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/03/17 15:32:24 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/21 11:41:08 adam Exp $
 
 DISTNAME=	srain-1.2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SrainApp/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2021/02/07 06:30:09 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2021/04/21 11:40:31 adam Exp $
 
 BUILDLINK_TREE+=	libkeduvocdocument
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkeduvocdocument
 LIBKEDUVOCDOCUMENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkeduvocdocument+=	libkeduvocdocument>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkeduvocdocument?=	libkeduvocdocument>=20.04.1nb6
+BUILDLINK_ABI_DEPENDS.libkeduvocdocument?=	libkeduvocdocument>=20.12.3nb1
 BUILDLINK_PKGSRCDIR.libkeduvocdocument?=	../../misc/libkeduvocdocument
 
 .include "../../devel/kio/buildlink3.mk"

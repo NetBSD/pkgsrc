@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2020/11/05 09:07:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/04/21 11:40:42 adam Exp $
 
 BUILDLINK_TREE+=	libical
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libical
 LIBICAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libical+=	libical>=0.42
-BUILDLINK_ABI_DEPENDS.libical+=	libical>=3.0.8nb3
+BUILDLINK_ABI_DEPENDS.libical+=	libical>=3.0.10nb1
 BUILDLINK_PKGSRCDIR.libical?=	../../time/libical
 
 .include "../../textproc/icu/buildlink3.mk"

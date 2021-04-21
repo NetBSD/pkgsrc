@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/06 10:26:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/21 11:42:36 adam Exp $
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-qt5-/}
+PKGREVISION=		1
 COMMENT=		Applications for entering PINs or Passphrases, qt5 enabled
 CONFLICTS=		pinentry-qt4-[0-9]*
 

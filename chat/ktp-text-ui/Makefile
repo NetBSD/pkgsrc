@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2021/01/01 08:24:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/21 11:41:06 adam Exp $
 
-PKGREVISION= 22
+PKGREVISION= 23
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-text-ui-${KTP_VERSION}
 CATEGORIES=	chat kde

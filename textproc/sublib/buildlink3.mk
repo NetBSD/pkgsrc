@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2020/11/05 09:07:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2021/04/21 11:40:41 adam Exp $
 
 BUILDLINK_TREE+=	sublib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sublib
 SUBLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sublib+=	sublib>=0.9
-BUILDLINK_ABI_DEPENDS.sublib+=	sublib>=0.9nb26
+BUILDLINK_ABI_DEPENDS.sublib+=	sublib>=0.9nb27
 BUILDLINK_PKGSRCDIR.sublib?=	../../textproc/sublib
 
 .include "../../lang/mono/buildlink3.mk"

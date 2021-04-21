@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2020/11/05 09:07:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2021/04/21 11:40:42 adam Exp $
 
 BUILDLINK_TREE+=	kholidays
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kholidays
 KHOLIDAYS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kholidays+=	kholidays>=5.44.0
-BUILDLINK_ABI_DEPENDS.kholidays?=	kholidays>=5.70.0nb3
+BUILDLINK_ABI_DEPENDS.kholidays?=	kholidays>=5.80.0nb1
 BUILDLINK_PKGSRCDIR.kholidays?=		../../time/kholidays
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

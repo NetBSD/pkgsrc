@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2020/11/05 09:07:06 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2021/04/21 11:40:36 adam Exp $
 
 BUILDLINK_TREE+=	packagekit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	packagekit
 PACKAGEKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.packagekit+=	packagekit>=0.4.0
-BUILDLINK_ABI_DEPENDS.packagekit+=	packagekit>=0.4.0nb60
+BUILDLINK_ABI_DEPENDS.packagekit+=	packagekit>=0.4.0nb63
 BUILDLINK_PKGSRCDIR.packagekit?=	../../pkgtools/packagekit
 
 .include "../../databases/sqlite3/buildlink3.mk"

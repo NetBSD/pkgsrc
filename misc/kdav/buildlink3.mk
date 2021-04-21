@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2021/03/30 10:58:26 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2021/04/21 11:40:30 adam Exp $
 
 BUILDLINK_TREE+=	kdav
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdav
 KDAV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdav+=	kdav>=5.80.0
-BUILDLINK_ABI_DEPENDS.kdav?=	kdav>=5.80.0
+BUILDLINK_ABI_DEPENDS.kdav?=	kdav>=5.80.0nb1
 BUILDLINK_PKGSRCDIR.kdav?=	../../misc/kdav
 
 .include "../../devel/kio/buildlink3.mk"

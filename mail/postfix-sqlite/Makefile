@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/11/05 09:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/21 11:42:09 adam Exp $
 #
 
 COMMENT=		Postfix SMTP server SQLite backend module
-PKGREVISION=		1
+PKGREVISION=		2
 
 POSTFIX_LIB=		sqlite
 POSTFIX_LIBDIR=		src/global

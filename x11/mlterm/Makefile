@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.164 2020/11/16 11:58:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.165 2021/04/21 11:43:00 adam Exp $
 
 DISTNAME=	mlterm-3.9.1
 #PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
