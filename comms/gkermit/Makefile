@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:03 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.29 2021/04/21 09:03:45 wiz Exp $
 
 DISTNAME=	gku100
 PKGNAME=	gkermit-1.00
 PKGREVISION=	1
 CATEGORIES=	comms
-MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
+MASTER_SITES=	# ftp://kermit.columbia.edu/kermit/archives/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
