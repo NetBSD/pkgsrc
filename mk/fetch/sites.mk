@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.171 2021/02/14 11:46:13 wiz Exp $
+# $NetBSD: sites.mk,v 1.172 2021/04/21 15:38:17 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -221,8 +221,7 @@ MASTER_SITE_CYGWIN+= \
 
 MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.flavorplex.com/if-archive/ \
-	http://ifarchive.heanet.ie/if-archive/ \
-	ftp://ftp.giga.or.at/pub/ifarchive/
+	http://ifarchive.heanet.ie/if-archive/
 
 MASTER_SITE_PGSQL+=	\
 	http://ftp.postgresql.org/pub/
