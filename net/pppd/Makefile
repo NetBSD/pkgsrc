@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/21 15:37:12 wiz Exp $
 
 DISTNAME=		ppp-${PPPD_VERSION}
 PKGNAME=		${DISTNAME:S/ppp/&d/}
 PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/ppp/
+#MASTER_SITES=		ftp://ftp.samba.org/pub/ppp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://ppp.samba.org/
