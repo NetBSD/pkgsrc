@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2017/01/19 18:52:08 agc Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/21 08:08:07 wiz Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
-MASTER_SITES=	ftp://freebsd.ntu.edu.tw/FreeBSD/woju/source/
-MASTER_SITES+=	ftp://freebsd.csie.nctu.edu.tw/pub/taiwan/NTU/woju/source/
+MASTER_SITES+=	# ftp://freebsd.csie.nctu.edu.tw/pub/taiwan/NTU/woju/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
+HOMEPAGE=	https://github.com/clamtestbbs/ve
 COMMENT=	NTHU-CS Maple BBS 2.36 BBS-like editor
 
 INSTALLATION_DIRS=	bin
