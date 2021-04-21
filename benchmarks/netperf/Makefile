@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 11:55:29 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/21 09:16:32 wiz Exp $
 
 DISTNAME=	netperf-2.7.0
 CATEGORIES=	benchmarks
-MASTER_SITES=	ftp://ftp.netperf.org/netperf/
+#MASTER_SITES=	ftp://ftp.netperf.org/netperf/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
