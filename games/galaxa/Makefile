@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2019/11/03 19:28:47 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.24 2021/04/21 15:44:25 wiz Exp $
 
 DISTNAME=	galaxa.0.1
 PKGNAME=	galaxa-0.1
 PKGREVISION=	3
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/galaxa/
+#MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/galaxa/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/galaxa/
