@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2285 2021/04/21 09:03:04 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2286 2021/04/21 09:15:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3608,3 +3608,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libgcrypt to 1.9.3 [adam 2021-04-21]
 	Updated textproc/icu to 69.1 [adam 2021-04-21]
 	Updated security/stunnel to 5.59 [nia 2021-04-21]
+	Removed security/smtpd [wiz 2021-04-21]
