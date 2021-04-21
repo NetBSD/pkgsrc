@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 11:54:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2021/04/21 15:46:31 wiz Exp $
 
 DISTNAME=	an-0.93
 CATEGORIES=	games
-MASTER_SITES=	ftp://suburbia.net/pub/rmj/
+#MASTER_SITES=	ftp://suburbia.net/pub/rmj/
 
 MAINTAINER=	jonb@NetBSD.org
 COMMENT=	Very fast anagram generator
