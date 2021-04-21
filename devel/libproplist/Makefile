@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:17:19 asau Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/21 08:35:04 wiz Exp $
 
 DISTNAME=		libPropList-0.10.1
 PKGNAME=		libproplist-0.10.1
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.windowmaker.org/pub/libs/
+MASTER_SITES=		# ftp://ftp.windowmaker.org/pub/libs/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNUstep/OPENSTEP property lists compatibility library
