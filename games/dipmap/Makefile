@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/21 15:39:19 wiz Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
 PKGREVISION=		2
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.ugcs.caltech.edu/pub/diplomacy/Sources/
+#MASTER_SITES=		ftp://ftp.ugcs.caltech.edu/pub/diplomacy/Sources/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		njohnston@globaltetrahedron.com
