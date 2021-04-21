@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2021/04/13 06:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/21 19:52:29 cirnatdan Exp $
 
-DISTNAME=	json-glib-1.4.4
-PKGREVISION=	2
+DISTNAME=	json-glib-1.6.2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,7 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_TOOLS+=	msgfmt pkg-config xgettext
 
 MESON_ARGS+=	-Dman=true
+MESON_ARGS+=	-Dgtk_doc=disabled
 
 .include "../../mk/compiler.mk"
 
