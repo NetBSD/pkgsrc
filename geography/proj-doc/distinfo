@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:08:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/04/21 19:38:07 gdt Exp $
 
-SHA1 (proj-pdf-docs.tar.gz) = c83a154ac00058fba5097eb39cfc8d27706be4d8
-RMD160 (proj-pdf-docs.tar.gz) = 9424d98c27690b089ad083c03f5134c2598cf09a
-SHA512 (proj-pdf-docs.tar.gz) = 51d998163701ad5a23a94f940809c7e4bddad30178be6100c18248b07c492be549b15369e8b82718b9d252d9880eeb3a74be333a3d470773294389dca8b96f05
-Size (proj-pdf-docs.tar.gz) = 6918448 bytes
+SHA1 (proj-gh-pages-1f33284734c33ec14286914673ec02fd40fe3982.tar.gz) = b8d3850282624d5b745dda15779aface1c82e5f9
+RMD160 (proj-gh-pages-1f33284734c33ec14286914673ec02fd40fe3982.tar.gz) = e38022c4aaeffa49ad26536a120cf3722a802fd8
+SHA512 (proj-gh-pages-1f33284734c33ec14286914673ec02fd40fe3982.tar.gz) = 8d40cd0c7225dcca53920b0bd0211f0b5a0dd20e8fcf8dfc0dcc48f12d3e51e00b62923b9fdd1d939f5cf4fee9b7205f121d245ef30ac809134ee86a88ed7e5e
+Size (proj-gh-pages-1f33284734c33ec14286914673ec02fd40fe3982.tar.gz) = 60966201 bytes
