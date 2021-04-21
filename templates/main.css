@@ -1,4 +1,4 @@
-/* $NetBSD: main.css,v 1.12 2021/04/13 15:04:03 nia Exp $ */
+/* $NetBSD: main.css,v 1.13 2021/04/21 10:17:16 nia Exp $ */
 
 body {
 	font-family: sans-serif;
@@ -74,6 +74,23 @@ hr {
 	padding-bottom: 1em;
 	border-top: 1px solid #aaa;
 	border-bottom: 1px solid #aaa;
+}
+
+.search-box label {
+	display: none;
+}
+
+.search-box input {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 3px;
+}
+
+.search-box input[type="Submit"] {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 nav {
