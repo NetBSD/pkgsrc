@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2011/03/18 10:39:08 adam Exp $
+$NetBSD: patch-vtund.8,v 1.1 2021/04/21 07:36:24 nia Exp $
 
---- vtund.8.orig	2007-06-29 05:26:43.000000000 +0000
+Allow pkgsrc to substitute actual paths.
+
+--- vtund.8.orig	2016-09-17 20:01:21.000000000 +0000
 +++ vtund.8
-@@ -71,7 +71,7 @@ to any kernel parts. 
+@@ -74,7 +74,7 @@ to any kernel parts. 
  .I -f file 
  Read config information from the
  .I file
@@ -10,8 +12,8 @@ $NetBSD: patch-ab,v 1.2 2011/03/18 10:39:08 adam Exp $
 +(full path required). By default vtund uses @PKG_SYSCONFDIR@/vtund.conf
  .TP
  .I -n 
- Do not become daemon.
-@@ -118,12 +118,12 @@ Address of the server to connect to. Eit
+ Do not become daemon (required on no-MMU systems).
+@@ -124,15 +124,15 @@ Address of the server to connect to. Eit
  specified.
  .SH FILES
  .TP
@@ -22,7 +24,11 @@ $NetBSD: patch-ab,v 1.2 2011/03/18 10:39:08 adam Exp $
  for more information.
  .TP
 -.B /var/lock/vtund/
-+.B /var/run/vtund/
++.B @VARBASE@/run/vtund/
  Session lock files. 
  .TP
- .B /var/log/vtund/
+-.B /var/log/vtund/
++.B @VARBASE@/log/vtund/
+ Connection statistic log files.
+ .br
+ Format:
