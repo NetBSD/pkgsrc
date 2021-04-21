@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/21 09:15:35 wiz Exp $
 
 DISTNAME=	xnodecor
 PKGNAME=	xnodecor-0.1
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.42.org/pub/wmx/contrib/
+#MASTER_SITES=	ftp://ftp.42.org/pub/wmx/contrib/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
