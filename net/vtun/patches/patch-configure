@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2015/01/19 16:10:23 wiedi Exp $
+$NetBSD: patch-configure,v 1.2 2021/04/21 07:36:24 nia Exp $
 
 help configure find blowfish headers from openssl
+
 --- configure.orig	2009-03-29 10:08:48.000000000 +0000
 +++ configure
 @@ -5680,7 +5680,7 @@ echo "$as_me: checking for blowfish Libr

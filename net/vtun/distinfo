@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.15 2019/10/03 12:11:43 kardel Exp $
+$NetBSD: distinfo,v 1.16 2021/04/21 07:36:24 nia Exp $
 
-SHA1 (vtun-3.0.3.tar.gz) = 7937e46420b5c2323f36774ab22e75e11c12da6c
-RMD160 (vtun-3.0.3.tar.gz) = 4df179b523798930927103a4d91b428f941e25ed
-SHA512 (vtun-3.0.3.tar.gz) = 5fa789d08b556f97492b89515a89c2322c4b0a8fa95bd1035f5ed19061b3654a6a36a9911792096ac872ae9ae5451848cab87d0343dc0ffc064affea1f7d0d54
-Size (vtun-3.0.3.tar.gz) = 130051 bytes
+SHA1 (vtun-3.0.4.tar.gz) = 2335c21b56fadf9ce851dd7f342fb0ed4f522c47
+RMD160 (vtun-3.0.4.tar.gz) = 004f2fa3a583b579706a1bc8728108ce9e4bca6e
+SHA512 (vtun-3.0.4.tar.gz) = b1bb7294bd745c2ca888704e2b0f8e05447b5e01bec0f921648afe363d61a19508dea9e26663993cd69c506aa92621e76f36045bddf7c3723d13a72741ca6781
+Size (vtun-3.0.4.tar.gz) = 132691 bytes
 SHA1 (patch-aa) = 2f570c4599923edeef31c6a2e7153f1fe05887c9
-SHA1 (patch-ab) = 0af65f6b6d061d8beb8b2ac6a676ca095c057ccf
 SHA1 (patch-ac) = 0f39700ab729d9481fe29e2d7e53566eff6add96
-SHA1 (patch-configure) = 591ecb4242b0d3bb2eb0087a37315a322222312d
-SHA1 (patch-lfd__encrypt.c) = dfe926ec896cfe913f3a2c75045bb9f3441b0569
+SHA1 (patch-configure) = 61931fea19255c00749b1f768e4657ce8088328a
+SHA1 (patch-lfd__encrypt.c) = d5268b00487ba9da897893eef4a643c82938b76a
 SHA1 (patch-vtun.h) = 832d3b97094885c8a10e752c7c8f5c86e08de967
+SHA1 (patch-vtund.8) = 4082c4e724b4edb5a6d6f7c456d160f86e717f56
