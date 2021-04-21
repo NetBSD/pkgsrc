@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2021/04/21 09:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/04/21 22:23:53 wiz Exp $
 
 DISTNAME=	mousetar-20021217
 PKGREVISION=	1
 CATEGORIES=	sysutils
-#MASTER_SITES=	ftp://sparkle.rodents.montreal.qc.ca/pub/mouse/ftp.netbsd.org/tar/
+MASTER_SITES=	ftp://ftp.rodents-montreal.org/pub/mouse/ftp.netbsd.org/tar/
 DISTFILES=	tar.c tar.man
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
