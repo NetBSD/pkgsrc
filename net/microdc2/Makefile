@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/11/05 09:08:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2021/04/21 11:42:26 adam Exp $
 #
 
 DISTNAME=	microdc2-0.15.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2021/02/06 15:25:17 dbj Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2021/04/21 11:40:47 adam Exp $
 
 BUILDLINK_TREE+=	kwindowsystem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwindowsystem
 KWINDOWSYSTEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwindowsystem+=	kwindowsystem>=5.18.0
-BUILDLINK_ABI_DEPENDS.kwindowsystem?=	kwindowsystem>=5.70.0nb3
+BUILDLINK_ABI_DEPENDS.kwindowsystem?=	kwindowsystem>=5.80.0nb1
 BUILDLINK_PKGSRCDIR.kwindowsystem?=	../../x11/kwindowsystem
 
 
