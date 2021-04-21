@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2020/03/20 11:58:12 nia Exp $
+# $NetBSD: Makefile,v 1.58 2021/04/21 07:36:24 nia Exp $
 
-DISTNAME=	vtun-3.0.3
-PKGREVISION=	4
+DISTNAME=	vtun-3.0.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vtun/}
 
@@ -9,6 +8,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	VARBASE
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -35,9 +38,10 @@ INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
 
 SUBST_CLASSES+=		fix-man
 SUBST_STAGE.fix-man=	pre-configure
-SUBST_MESSAGE.fix-man=	Fixing man pages.
+SUBST_MESSAGE.fix-man=	Fixing paths in man pages.
 SUBST_FILES.fix-man=	vtund.8
-SUBST_VARS.fix-man=	PKG_SYSCONFDIR
+SUBST_VARS.fix-man+=	PKG_SYSCONFDIR
+SUBST_VARS.fix-man+=	VARBASE
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${DESTDIR}${PREFIX}/sbin
@@ -48,7 +52,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 .include "../../net/solaris-tap/buildlink3.mk"
 .endif
