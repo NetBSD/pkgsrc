@@ -1,45 +1,21 @@
-$NetBSD: patch-Config.mk.in,v 1.1 2019/09/16 11:42:50 nia Exp $
+$NetBSD: patch-Config.mk.in,v 1.2 2021/04/21 09:28:28 nia Exp $
 
-hunk 1:
+Do not override CFLAGS.
 
-Use BSD_INSTALL_*.
-
-hunk 2:
-
-Let pkgsrc set CFLAGS/LDFLAGS.
-
---- Config.mk.in.orig	2018-07-30 11:06:03.000000000 +0000
+--- Config.mk.in.orig	2021-04-11 22:41:14.000000000 +0000
 +++ Config.mk.in
-@@ -9,11 +9,11 @@ VERSION		:= @PKG_VERSION@
+@@ -26,13 +26,6 @@ O		:= .o/
  
- CC		:= @CC@
- MSGFMT		:= @MSGFMT@
--INSTALL		:= @INSTALL@
-+INSTALL		:= ${BSD_INSTALL}
- 
--INSTALLEXE	:= ${INSTALL} -D -p -m 755 -s
--INSTALLSCR	:= ${INSTALL} -D -p -m 755
--INSTALLDATA	:= ${INSTALL} -D -p -m 644
-+INSTALLEXE	:= ${BSD_INSTALL_PROGRAM}
-+INSTALLSCR	:= ${BSD_INSTALL_SCRIPT}
-+INSTALLDATA	:= ${BSD_INSTALL_DATA}
- 
- ################ Destination #########################################
- 
-@@ -27,13 +27,12 @@ O		:= .o/
- 
- ################ Compiler options ####################################
- 
--CFLAGS		:= -Wall -Wextra -Wredundant-decls -Wshadow \
-+CFLAGS		+= -Wall -Wextra -Wredundant-decls -Wshadow \
- 		   -std=c11 -I/usr/include/libxml2
--LDFLAGS		:= -liconv -lintl -lxml2 -lncurses -lz
-+LDFLAGS		+= -liconv -lintl -lxml2 -lncurses -lz
- ifdef DEBUG
-     CFLAGS	+= -O0 -ggdb3
-     LDFLAGS	+= -g -rdynamic
- else
--    CFLAGS	+= -Os -g0 -DNDEBUG=1
--    LDFLAGS	+= -s
-+    CFLAGS	+= -DNDEBUG=1
- endif
+ #debug		:= 1
+ libs		:= @pkg_libs@ -liconv -lintl
+-ifdef debug
+-    cflags	:= -O0 -ggdb3
+-    ldflags	:= -g -rdynamic
+-else
+-    cflags	:= -Os -g0 -DNDEBUG=1
+-    ldflags	:= -s
+-endif
+-CFLAGS		:= -Wall -Wextra -Wredundant-decls -Wshadow
++CFLAGS		+= -Wall -Wextra -Wredundant-decls -Wshadow
+ cflags		+= -std=c11 @pkg_cflags@ ${CFLAGS}
+ ldflags		+= @pkg_ldflags@ ${LDFLAGS}
