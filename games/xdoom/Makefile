@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2018/01/14 15:26:49 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2021/04/21 15:34:46 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
 PKGREVISION=	4
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
-MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/doom/
+#MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
+#MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/doom/
 DISTFILES=	doomsrc.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
