@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2017/09/06 10:40:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/04/21 15:32:25 wiz Exp $
 
 DISTNAME=		anthems-1.3
 PKGNAME=		xrmap-anthems-1.3
 CATEGORIES=		geography
-MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/
+#MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
