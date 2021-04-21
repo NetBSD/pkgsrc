@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2288 2021/04/21 09:34:00 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2289 2021/04/21 09:35:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed security/smtpd [wiz 2021-04-21]
 	Updated www/snownews to 1.7 [nia 2021-04-21]
 	Updated audio/strawberry to 0.9.3 [nia 2021-04-21]
+	Removed mail/opensmtpd [nia 2021-04-21]
