@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 19:28:47 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.22 2021/04/21 15:44:25 wiz Exp $
 
 DISTNAME=	finalbattle.0.0
 PKGNAME=	finalbattle-0.0
 PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/}
-MASTER_SITES+=	ftp://ftp.billsgames.com/unix/x/finalbattle/
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/finalbattle/
 PATCHFILES=		finalbattle-jumbo-patch-20161210.gz
