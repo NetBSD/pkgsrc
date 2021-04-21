@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2019/06/08 10:40:56 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/21 08:20:45 wiz Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
 PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.wustl.edu/languages/c/unix-c/editors/
+MASTER_SITES=	# ftp://ftp.wustl.edu/languages/c/unix-c/editors/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
