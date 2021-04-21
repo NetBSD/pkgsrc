@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/12/04 20:45:39 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/21 13:25:19 adam Exp $
 
 PKGNAME=		libpreludedb-python-${VERSION}
-PKGREVISION=		22
+PKGREVISION=		23
 COMMENT=		Python bindings for LibPreludeDB libraries
 
 .include "../../security/libpreludedb/Makefile.common"
