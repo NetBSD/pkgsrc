@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:22:53 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.20 2021/04/21 15:44:26 wiz Exp $
 
 DISTNAME=		circuslinux-1.0.3
 PKGREVISION=		13
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.billsgames.com/unix/x/circus-linux/src/
+MASTER_SITES=		ftp://ftp.tuxpaint.org/unix/x/circus-linux/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.newbreedsoftware.com/circus-linux/

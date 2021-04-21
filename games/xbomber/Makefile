@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:54:59 asau Exp $
-#
+# $NetBSD: Makefile,v 1.20 2021/04/21 15:44:25 wiz Exp $
 
 DISTNAME=	xbomber.0.8
 PKGNAME=	xbomber-0.8
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/xbomber/
+MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/xbomber/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/xbomber/
