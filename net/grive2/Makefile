@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/04/15 08:42:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/21 13:25:08 adam Exp $
 
 DISTNAME=	grive2-0.5.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vitalif/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

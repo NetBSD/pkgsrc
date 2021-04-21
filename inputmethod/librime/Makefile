@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2021/02/20 20:53:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/21 13:24:53 adam Exp $
 
 GITHUB_PROJECT=	librime
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	librime-1.7.2
+PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 

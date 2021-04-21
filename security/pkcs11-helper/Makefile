@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/04/15 11:23:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2021/04/21 13:24:16 adam Exp $
 
 DISTNAME=	pkcs11-helper-1.27.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 GITHUB_RELEASE=	${DISTNAME:R}

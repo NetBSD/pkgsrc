@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2020/10/12 21:52:02 bacon Exp $
+# $NetBSD: Makefile,v 1.69 2021/04/21 13:25:00 adam Exp $
 
 DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	math python
 MASTER_SITES=	http://sourcesup.cru.fr/frs/download.php/4411/
 

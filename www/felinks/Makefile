@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/07/01 09:50:16 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/21 13:25:29 adam Exp $
 
 DISTNAME=	felinks-0.13.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

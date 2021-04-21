@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2021/04/21 11:40:29 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/04/21 13:24:12 adam Exp $
 
 DISTNAME=	libqalculate-3.5.0a
 PKGNAME=	qalculate-3.5.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Qalculate/}
 GITHUB_PROJECT=	libqalculate

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/04/21 11:42:15 adam Exp $
+# $NetBSD: Makefile,v 1.73 2021/04/21 13:25:03 adam Exp $
 
 DISTNAME=	rocs-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/rocs/
