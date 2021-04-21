@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/03/17 15:17:03 nia Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/04/21 08:19:28 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -68,7 +68,6 @@ share/doc/stella/graphics/options_misc_dark.png
 share/doc/stella/graphics/options_misc_light.png
 share/doc/stella/graphics/options_ui.png
 share/doc/stella/graphics/options_video.png
-share/doc/stella/graphics/options_video_dbgcolors.png
 share/doc/stella/graphics/options_video_palettes.png
 share/doc/stella/graphics/options_video_tv.png
 share/doc/stella/graphics/pacman.png
