@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2021/04/13 15:19:55 nia Exp $
+# $NetBSD: Makefile,v 1.815 2021/04/21 09:15:08 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -597,7 +597,6 @@ SUBDIR+=	skey
 SUBDIR+=	sks
 SUBDIR+=	sleuthkit
 SUBDIR+=	smaSHeM
-SUBDIR+=	smtpd
 SUBDIR+=	snallygaster
 SUBDIR+=	sniff
 SUBDIR+=	snoopy
