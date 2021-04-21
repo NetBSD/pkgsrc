@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2276 2021/04/20 20:58:56 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2277 2021/04/21 07:23:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/lapacke to 3.9.0 [thor 2021-04-20]
 	Updated math/py-numpy to 1.19.5nb4 [thor 2021-04-20]
 	Updated math/py-numpy16 to 1.16.6nb2 [thor 2021-04-20]
+	Updated misc/vttest to 20210210 [nia 2021-04-21]
