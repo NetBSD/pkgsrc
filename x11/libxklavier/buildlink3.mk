@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2020/11/05 09:07:18 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2021/04/21 11:40:48 adam Exp $
 
 BUILDLINK_TREE+=	libxklavier
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxklavier
 LIBXKLAVIER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.0
-BUILDLINK_ABI_DEPENDS.libxklavier+=	libxklavier>=5.4nb6
+BUILDLINK_ABI_DEPENDS.libxklavier+=	libxklavier>=5.4nb7
 BUILDLINK_PKGSRCDIR.libxklavier?=	../../x11/libxklavier
 
 .include "../../textproc/libxml2/buildlink3.mk"

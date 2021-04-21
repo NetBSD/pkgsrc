@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/11/05 09:06:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/21 11:40:22 adam Exp $
 
 DISTNAME=	liblcf-0.6.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://easyrpg.org/downloads/player/${PKGVERSION_NOREV}/
 

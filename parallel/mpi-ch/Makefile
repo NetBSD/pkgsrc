@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2020/11/05 09:08:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2021/04/21 11:42:31 adam Exp $
 
 DISTNAME=	mpich-3.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 

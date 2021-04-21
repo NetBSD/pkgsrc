@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2020/11/05 09:06:56 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2021/04/21 11:40:26 adam Exp $
 
 BUILDLINK_TREE+=	coreclr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	coreclr
 CORECLR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.coreclr+=	coreclr>=1.0.0
-BUILDLINK_ABI_DEPENDS.coreclr?=	coreclr>=1.0.0nb12
+BUILDLINK_ABI_DEPENDS.coreclr?=	coreclr>=1.0.0nb14
 BUILDLINK_PKGSRCDIR.coreclr?=	../../lang/coreclr
 
 BUILDLINK_INCDIRS.coreclr+=	CoreCLR/inc

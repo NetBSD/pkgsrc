@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2021/02/07 06:30:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.152 2021/04/21 11:41:53 adam Exp $
 
 DISTNAME=	gnuplot-5.4.1
 CATEGORIES+=	graphics
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnuplot.info/
 COMMENT=	Portable interactive, function plotting utility
-PKGREVISION=	2
+PKGREVISION=	3
 #LICENSE=	gnuplot + BSD
 
 API_VERSION=	${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}

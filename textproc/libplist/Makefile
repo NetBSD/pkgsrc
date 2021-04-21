@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:45 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/04/21 11:40:40 adam Exp $
 
 DISTNAME=	libplist-1.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.libimobiledevice.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

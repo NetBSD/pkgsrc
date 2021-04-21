@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/04/09 14:30:09 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/21 11:41:13 adam Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
@@ -6,7 +6,7 @@
 # and further exists to support net/unifi.
 DISTNAME=	mongodb-src-r3.4.24
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2021/02/27 04:19:46 ryoon Exp $
-# used by inputmethod/fcitx-mozc/Makefile
-#
+# $NetBSD: Makefile.common,v 1.3 2021/04/21 11:42:03 adam Exp $
+# used by inputmethod/fcitx5-mozc/Makefile
 
 # Find version number in src/data/version/mozc_version_template.bzl
 DISTNAME=	fcitx-mozc-2.26.4276.100

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/04/15 11:23:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/21 11:42:41 adam Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker-miners/3.0/}
 EXTRACT_SUFX=	.tar.xz
