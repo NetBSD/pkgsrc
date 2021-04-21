@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.40 2021/02/04 20:26:10 adam Exp $
+$NetBSD: distinfo,v 1.41 2021/04/21 13:26:54 adam Exp $
 
-SHA1 (mysql-5.7.33.tar.gz) = 08d288b77f5450e920272738232c7c20be891772
-RMD160 (mysql-5.7.33.tar.gz) = b041f96c892083f03228eb2e4a24f05cce452f3f
-SHA512 (mysql-5.7.33.tar.gz) = 62349fdf2c2d9078ead383f150ccf52d719df9bb475e90910882595194f8038eb1b0333b2f5f153972a0b7309eab369a9f7d5178f2d71a12816e634df2be059b
-Size (mysql-5.7.33.tar.gz) = 56179381 bytes
+SHA1 (mysql-5.7.34.tar.gz) = d1842baea3abc4b4cd684186e88b123d854d4ed7
+RMD160 (mysql-5.7.34.tar.gz) = f23902a074cb7bcd05dc7ef8c04186021c4d689c
+SHA512 (mysql-5.7.34.tar.gz) = a59b27e56963a8b57f8e3d89890d7ea0e4e157f81f274670ab0416d5fccb0da1b09b7702b58c3c9de726ee03bd1b84a6d2bf309e1e3e3fba285361e5bc3d059c
+Size (mysql-5.7.34.tar.gz) = 56150251 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -24,7 +24,7 @@ SHA1 (patch-include_my__thread__os__id.h) = a51861b791086a0eeb9cb4d64892c5033da8
 SHA1 (patch-libmysql_CMakeLists.txt) = 13b3aa65a82e0e94f097d0092e46b0b9558fdfc6
 SHA1 (patch-mysql-test_CMakeLists.txt) = 8a8e846792077101a01731c4577c37161f70264d
 SHA1 (patch-mysys__ssl_CMakeLists.txt) = 753c4f5ed1884e1a3c79d645af6d5ffd027ff7dd
-SHA1 (patch-mysys_kqueue__timers.c) = 836803e9c7353b813bc22a5b69cc263dea384c9b
+SHA1 (patch-mysys_kqueue__timers.c) = 709c1551b5c62ea5a4441f935a7b0eb67d96074b
 SHA1 (patch-mysys_mf__iocache2.c) = 0c5047cbd4b9fc09d9e5b18bcae324d794fe833d
 SHA1 (patch-mysys_my__symlink.c) = 23b57cd5922357d0bc72f5c15100a9fe1f89cfb2
 SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
@@ -38,7 +38,7 @@ SHA1 (patch-scripts_mysqld_safe.sh) = 0784314227657aa0bc3f4a0b4e21c173a86fa94b
 SHA1 (patch-sql_CMakeLists.txt) = 697add15adb66bf55cf561a6e43e0bf514d1e068
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = 12cf83e061edbe59eb073037b1036903b7ba4b00
 SHA1 (patch-sql_item__geofunc__internal.cc) = 752862c3a30231e694e508ced1a215a610649fc6
-SHA1 (patch-sql_locks_shared__spin__lock.cc) = 0fcdc9db76bb8a25c083e124334245f53cee871d
+SHA1 (patch-sql_locks_shared__spin__lock.cc) = 32777eb07d42a3c5c7cfc331eea4d8218cabe486
 SHA1 (patch-sql_log_event.h) = 311dc7fb04ea832df229dc2a28bcfbf263670ebf
 SHA1 (patch-sql_sys__vars.cc) = 202b8756c20549393d0e2a14952e1f060037b88a
 SHA1 (patch-storage_archive_CMakeLists.txt) = 4cf5ed97a226a3844e184c46958b5202eefb9dd5

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/02/04 20:26:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/04/21 13:26:54 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -898,6 +898,7 @@ share/mysql/test/include/start_slave_sql.inc
 share/mysql/test/include/start_transaction_high_prio.inc
 share/mysql/test/include/stop_dump_threads.inc
 share/mysql/test/include/stop_group_replication.inc
+share/mysql/test/include/stop_mysqld.inc
 share/mysql/test/include/stop_slave.inc
 share/mysql/test/include/stop_slave_io.inc
 share/mysql/test/include/stop_slave_sql.inc
@@ -1555,6 +1556,7 @@ share/mysql/test/r/myisampack.result
 share/mysql/test/r/mysql-bug41486.result
 share/mysql/test/r/mysql-bug45236.result
 share/mysql/test/r/mysql.result
+share/mysql/test/r/mysql_batch_mode.result
 share/mysql/test/r/mysql_binary_mode.result
 share/mysql/test/r/mysql_client_test.result
 share/mysql/test/r/mysql_client_test_embedded.result
@@ -2482,6 +2484,7 @@ share/mysql/test/suite/binlog/r/binlog_gtid_next_partially_failed_stmts.result
 share/mysql/test/suite/binlog/r/binlog_gtid_next_single_stmt_trx_rollback.result
 share/mysql/test/suite/binlog/r/binlog_gtid_next_temporary_table.result
 share/mysql/test/suite/binlog/r/binlog_gtid_next_xa.result
+share/mysql/test/suite/binlog/r/binlog_gtid_purge_binlog_at_startup.result
 share/mysql/test/suite/binlog/r/binlog_gtid_rbr_only_flag.result
 share/mysql/test/suite/binlog/r/binlog_gtid_reset_consistency_violation_on_fail.result
 share/mysql/test/suite/binlog/r/binlog_gtid_row_ctype_ucs.result
@@ -2684,6 +2687,7 @@ share/mysql/test/suite/binlog/t/binlog_gtid_next_partially_failed_stmts.test
 share/mysql/test/suite/binlog/t/binlog_gtid_next_single_stmt_trx_rollback.test
 share/mysql/test/suite/binlog/t/binlog_gtid_next_temporary_table.test
 share/mysql/test/suite/binlog/t/binlog_gtid_next_xa.test
+share/mysql/test/suite/binlog/t/binlog_gtid_purge_binlog_at_startup.test
 share/mysql/test/suite/binlog/t/binlog_gtid_rbr_only_flag.test
 share/mysql/test/suite/binlog/t/binlog_gtid_reset_consistency_violation_on_fail.test
 share/mysql/test/suite/binlog/t/binlog_gtid_row_ctype_ucs.test
@@ -5378,6 +5382,7 @@ share/mysql/test/suite/innodb/r/innodb_prefix_index_restart_server.result
 share/mysql/test/suite/innodb/r/innodb_rename_index.result
 share/mysql/test/suite/innodb/r/innodb_rename_index_err.result
 share/mysql/test/suite/innodb/r/innodb_replace.result
+share/mysql/test/suite/innodb/r/innodb_row_log_read.result
 share/mysql/test/suite/innodb/r/innodb_stats.result
 share/mysql/test/suite/innodb/r/innodb_stats_auto_recalc.result
 share/mysql/test/suite/innodb/r/innodb_stats_auto_recalc_ddl.result
@@ -5797,6 +5802,7 @@ share/mysql/test/suite/innodb/t/innodb_prefix_index_restart_server.test
 share/mysql/test/suite/innodb/t/innodb_rename_index.test
 share/mysql/test/suite/innodb/t/innodb_rename_index_err.test
 share/mysql/test/suite/innodb/t/innodb_replace.test
+share/mysql/test/suite/innodb/t/innodb_row_log_read.test
 share/mysql/test/suite/innodb/t/innodb_stats.test
 share/mysql/test/suite/innodb/t/innodb_stats_auto_recalc.test
 share/mysql/test/suite/innodb/t/innodb_stats_auto_recalc_ddl.test
@@ -10140,6 +10146,7 @@ share/mysql/test/suite/rpl/r/rpl_set_null_innodb.result
 share/mysql/test/suite/rpl/r/rpl_set_null_myisam.result
 share/mysql/test/suite/rpl/r/rpl_show_errors.result
 share/mysql/test/suite/rpl/r/rpl_show_master_info_file.result
+share/mysql/test/suite/rpl/r/rpl_show_processlist_info.result
 share/mysql/test/suite/rpl/r/rpl_show_relaylog_events.result
 share/mysql/test/suite/rpl/r/rpl_show_slave_hosts.result
 share/mysql/test/suite/rpl/r/rpl_show_slave_running.result
@@ -10708,6 +10715,7 @@ share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock_error-
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error.test
+share/mysql/test/suite/rpl/t/rpl_mts_spco_deadlock_hang_on_non_temp_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_spco_deadlock_hang_on_non_temp_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_spco_deadlock_slave_trans_retries_hang.test
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave-slave.opt
@@ -11119,6 +11127,7 @@ share/mysql/test/suite/rpl/t/rpl_set_null_myisam.test
 share/mysql/test/suite/rpl/t/rpl_show_errors.test
 share/mysql/test/suite/rpl/t/rpl_show_master_info_file-master.opt
 share/mysql/test/suite/rpl/t/rpl_show_master_info_file.test
+share/mysql/test/suite/rpl/t/rpl_show_processlist_info.test
 share/mysql/test/suite/rpl/t/rpl_show_relaylog_events.test
 share/mysql/test/suite/rpl/t/rpl_show_slave_hosts.cnf
 share/mysql/test/suite/rpl/t/rpl_show_slave_hosts.test
@@ -14104,6 +14113,7 @@ share/mysql/test/t/myisampack.test
 share/mysql/test/t/mysql-bug41486.test
 share/mysql/test/t/mysql-bug45236.test
 share/mysql/test/t/mysql.test
+share/mysql/test/t/mysql_batch_mode.test
 share/mysql/test/t/mysql_binary_mode.test
 share/mysql/test/t/mysql_client_test-master.opt
 share/mysql/test/t/mysql_client_test.test
