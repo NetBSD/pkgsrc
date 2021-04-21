@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2280 2021/04/21 08:19:51 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2281 2021/04/21 08:20:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3602,3 +3602,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/vtun to 3.0.4 [nia 2021-04-21]
 	Updated chat/weechat to 3.1 [nia 2021-04-21]
 	Updated emulators/stella to 6.5.3 [nia 2021-04-21]
+	Updated emulators/libretro-stella to 6.5.3 [nia 2021-04-21]
