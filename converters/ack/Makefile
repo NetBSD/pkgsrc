@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/12/26 21:21:38 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/21 08:54:35 wiz Exp $
 
 DISTNAME=	ack139
 PKGNAME=	ack-1.39
 PKGREVISION=	1
 CATEGORIES=	japanese converters
-MASTER_SITES=	ftp://ftp.tohoku.ac.jp/pub/unix/ack/
+MASTER_SITES=	# ftp://ftp.tohoku.ac.jp/pub/unix/ack/
 
 MAINTAINER=	kei_sun@ba2.so-net.ne.jp
 COMMENT=	Japanese code converter
