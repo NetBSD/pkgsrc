@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2021/01/12 12:00:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2021/04/21 11:42:20 adam Exp $
 #
 
 DISTNAME=	HandBrake-1.3.3-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2

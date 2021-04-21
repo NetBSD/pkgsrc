@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2020/11/05 09:07:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2021/04/21 11:40:43 adam Exp $
 
 DISTNAME=	rest-0.7.93
 PKGNAME=	${DISTNAME:S/rest/librest07/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rest/0.7/}
 EXTRACT_SUFX=	.tar.xz

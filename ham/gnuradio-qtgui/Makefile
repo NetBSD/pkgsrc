@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/04/07 16:14:08 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/21 11:42:01 adam Exp $
 
 PKGNAME=	gnuradio-qtgui-${VERSION}
+PKGREVISION=	1
 COMMENT=	Qt GUI module of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

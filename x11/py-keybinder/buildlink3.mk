@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/11/05 09:07:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2021/04/21 11:40:49 adam Exp $
 
 BUILDLINK_TREE+=	py-keybinder
 
@@ -8,7 +8,7 @@ PY_KEYBINDER_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-keybinder+=	${PYPKGPREFIX}-keybinder>=0.3.0
-BUILDLINK_ABI_DEPENDS.py-keybinder?=	${PYPKGPREFIX}-keybinder>=0.3.0nb13
+BUILDLINK_ABI_DEPENDS.py-keybinder?=	${PYPKGPREFIX}-keybinder>=0.3.0nb14
 BUILDLINK_PKGSRCDIR.py-keybinder?=	../../x11/py-keybinder
 
 .include "../../x11/py-gtk2/buildlink3.mk"

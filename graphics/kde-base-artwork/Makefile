@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2021/01/01 08:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2021/04/21 11:41:55 adam Exp $
 
 DISTNAME=	kde-base-artwork-15.08.3
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 COMMENT=	KDE KSplash theme
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
