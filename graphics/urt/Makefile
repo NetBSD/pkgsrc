@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2020/01/26 17:31:24 rillig Exp $
+# $NetBSD: Makefile,v 1.66 2021/04/21 15:27:36 wiz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
 PKGREVISION=	17
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.iastate.edu/pub/utah-raster/
+#MASTER_SITES=	ftp://ftp.iastate.edu/pub/utah-raster/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar.Z urt-img.tar.Z
 
 PATCH_SITES=		http://www.funet.fi/pub/graphics/packages/urt/rel2/
