@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.134 2021/01/01 08:19:02 ryoon Exp $
+$NetBSD: distinfo,v 1.135 2021/04/21 12:09:50 adam Exp $
 
-SHA1 (boost_1_75_0.tar.bz2) = 6109efd3bdd8b9220d7d85b5e125f7f28721b9a9
-RMD160 (boost_1_75_0.tar.bz2) = 880b75ade0499c94c909a64b8ddd75c2e41094ea
-SHA512 (boost_1_75_0.tar.bz2) = d86f060245e98dca5c7f3f831c98ea9ccbfa8310f20830dd913d9d4c939fbe7cb94accd35f1128e7c4faf6c27adb6f4bb54e5477a6bde983dfc7aa33c4eed03a
-Size (boost_1_75_0.tar.bz2) = 121849575 bytes
+SHA1 (boost_1_76_0.tar.bz2) = 8064156508312dde1d834fec3dca9b11006555b6
+RMD160 (boost_1_76_0.tar.bz2) = b1da5df10d7e0fd07d864973f106d4376b7e375b
+SHA512 (boost_1_76_0.tar.bz2) = 5d68bed98c57e03b4cb2420d9b856e5f0669561a6142a4b0c9c8a58dc5b6b28e16ccbb16ac559c3a3198c45769a246bf996b96cb7b6a019dd15f05c2270e9429
+Size (boost_1_76_0.tar.bz2) = 110073117 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 1f809170538f83252dc2f368825622f7a9df96f9
 SHA1 (patch-boost_asio_detail_config.hpp) = f3ae1fd0a026c21a89d196c74e02c4d3c8ea0808
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
@@ -21,7 +21,6 @@ SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64d
 SHA1 (patch-boost_process_detail_posix_handles.hpp) = 4084feb75142107244db86ca7d44da8037c5c745
 SHA1 (patch-boost_process_detail_posix_is__running.hpp) = cc9084735774bd33c5ff6ff936a039fa30f989dd
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
-SHA1 (patch-boost_regex_config.hpp) = 6b752c7c23168c591cd391739c7a4539bef44c12
 SHA1 (patch-boost_stacktrace_detail_collect__unwind.ipp) = a5922dffd929f596b6e7d71b11f32d17e0bbd806
 SHA1 (patch-boost_test_impl_execution__monitor.ipp) = ffd449576d00b7e6ea3081421e3e70decf5d7de8
 SHA1 (patch-boost_thread_pthread_thread__data.hpp) = d048867f0ed98720cc375e949e5c92b92f3ce1ac
@@ -31,4 +30,5 @@ SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c69
 SHA1 (patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S) = daaa70c31f2ebc2c357e467585e0b5c6f70963cc
 SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = f4e9912a3101f10a3f7ac0151aac957f80fdc9cc
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 4b4a6698111042a3e54dc181b555516e0685796d
+SHA1 (patch-tools_build_src_engine_build.sh) = 9f6aeb0466f86f0777c7d2f98c133ac9059c76f1
 SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
