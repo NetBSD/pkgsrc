@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2283 2021/04/21 08:30:16 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2284 2021/04/21 08:47:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3605,3 +3605,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-stella to 6.5.3 [nia 2021-04-21]
 	Updated x11/qt5ct to 1.2 [pin 2021-04-21]
 	Updated sysutils/xplr to 0.5.4 [pin 2021-04-21]
+	Updated security/libgcrypt to 1.9.3 [adam 2021-04-21]
+	Updated textproc/icu to 69.1 [adam 2021-04-21]
