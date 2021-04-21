@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/04/12 11:09:17 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/04/21 11:40:45 adam Exp $
 
 DISTNAME=	gtksourceview-4.8.0
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview4/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

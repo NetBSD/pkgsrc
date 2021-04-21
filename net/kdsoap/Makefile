@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/11 19:54:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/21 11:40:34 adam Exp $
 #
 
 DISTNAME=	kdsoap-1.9.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
 GITHUB_PROJECT=	KDSoap

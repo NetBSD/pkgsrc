@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/03/02 03:36:17 mef Exp $
+# $NetBSD: Makefile,v 1.24 2021/04/21 11:42:04 adam Exp $
 
 DISTNAME=	ibus-libpinyin-1.12.0
+PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 

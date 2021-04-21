@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.248 2021/04/05 10:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.249 2021/04/21 11:42:22 adam Exp $
 
 DISTNAME=		vlc-3.0.12
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
