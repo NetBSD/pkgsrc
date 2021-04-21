@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/06 10:40:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2021/04/21 15:32:25 wiz Exp $
 
 DISTNAME=		CIA_WDB2.jpd
 PKGNAME=		xrmap-data-0
