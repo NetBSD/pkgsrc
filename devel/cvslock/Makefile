@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:16:50 asau Exp $
+# $NetBSD: Makefile,v 1.12 2021/04/21 08:37:59 wiz Exp $
 
 DISTNAME=	cvslock-0.2
 CATEGORIES=	devel scm
-MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/users/roessler/cvslock/
+MASTER_SITES=	# ftp://riemann.iam.uni-bonn.de/pub/users/roessler/cvslock/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Safely manipulate and inspect CVS repositories
