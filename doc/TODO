@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20505 2021/04/20 18:27:54 wiz Exp $
+$NetBSD: TODO,v 1.20506 2021/04/21 09:17:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -200,10 +200,6 @@ Suggested new packages
 	sharatype [pkg/36217]
 	http://ftp.45.free.net/pub/fonts/type1/
 	Cyrillic fonts for a2ps (a part of sharatype project)
-
-	xmms-cdread [pkg/36220]
-	ftp://mud.stack.nl/pub/OuterSpace/willem/
-	XMMS input plugin that reads audio data from CDs
 
 	ioquake3-demo [pkg/36367]
 
