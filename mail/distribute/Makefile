@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2020/08/31 18:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/04/21 08:57:09 wiz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
 PKGREVISION=	10
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
+MASTER_SITES=	# ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
 # AWOL
 
-PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/BETA/
+#PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/BETA/
 PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz \
 		patch.24e.gz patch.25e.gz patch.26e.gz
 
