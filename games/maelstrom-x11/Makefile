@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2018/07/18 00:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2021/04/21 15:36:27 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
 PKGREVISION=		4
 CATEGORIES=		games x11
-MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/
-MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Maelstrom-binaries/
-MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Add-Ons/
+#MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/
+#MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Maelstrom-binaries/
+#MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Add-Ons/
 DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
