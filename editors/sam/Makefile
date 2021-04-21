@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2019/06/08 10:40:57 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2021/04/21 08:04:13 wiz Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
 PKGREVISION=		4
 CATEGORIES=		editors plan9
-MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
+MASTER_SITES=		# ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 EXTRACT_SUFX=		.msg.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
