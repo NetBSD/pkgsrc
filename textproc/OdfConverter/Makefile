@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2020/11/05 09:09:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2021/04/21 11:42:45 adam Exp $
 #
 
 DISTNAME=	OdfAddinForOffice-src-3.0
 PKGNAME=	OdfConverter-3.0
-PKGREVISION=	55
+PKGREVISION=	56
 CATEGORIES=	converters textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=odf-converter/}
 EXTRACT_SUFX=	.zip

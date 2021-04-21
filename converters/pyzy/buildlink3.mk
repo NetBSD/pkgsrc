@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2020/11/05 09:06:44 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2021/04/21 11:40:14 adam Exp $
 #
 
 BUILDLINK_TREE+=	pyzy
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	pyzy
 PYZY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pyzy+=	pyzy>=0.1.0
-BUILDLINK_ABI_DEPENDS.pyzy?=	pyzy>=0.1.0nb17
+BUILDLINK_ABI_DEPENDS.pyzy?=	pyzy>=0.1.0nb18
 BUILDLINK_PKGSRCDIR.pyzy?=	../../converters/pyzy
 
 .include "../../mk/bsd.fast.prefs.mk"

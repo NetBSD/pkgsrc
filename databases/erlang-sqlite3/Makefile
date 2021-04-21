@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/01/19 15:47:11 nia Exp $
+# $NetBSD: Makefile,v 1.21 2021/04/21 11:41:11 adam Exp $
 
 DISTNAME=	sqlite3-1.1.9
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 

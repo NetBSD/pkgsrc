@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/11/05 09:07:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/21 11:41:11 adam Exp $
 
 DISTNAME=	mysql-connector-net-8.0.19-noinstall
 PKGNAME=	csharp-mysql-8.0.19
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-Net/}
 EXTRACT_SUFX=	.zip
