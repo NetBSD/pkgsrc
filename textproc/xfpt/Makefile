@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/06/15 13:08:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/21 08:11:17 wiz Exp $
 
 DISTNAME=	xfpt-0.09
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/xfpt/
+MASTER_SITES=	# ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/xfpt/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	prlw1@cam.ac.uk
