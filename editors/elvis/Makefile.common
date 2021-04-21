@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2016/12/30 14:25:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2021/04/21 08:22:42 wiz Exp $
 #
 # used by editors/elvis-x11/Makefile
 # used by editors/elvis/Makefile
@@ -6,10 +6,10 @@
 # Normal package Makefile contents follow.
 DISTNAME=	elvis-2.2_0
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
+MASTER_SITES=	# ftp://ftp.cs.pdx.edu/pub/elvis/
 
 MAINTAINER=	airhead@users.sourceforge.net
-HOMEPAGE=	http://elvis.vi-editor.org/
+#HOMEPAGE=	http://elvis.vi-editor.org/
 LICENSE=	artistic
 
 VERSION=	2.2.0
