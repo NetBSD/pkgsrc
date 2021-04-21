@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2015/07/04 16:18:36 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/21 15:29:42 wiz Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.mpeg.org/pub/mpeg/mssg/
+#MASTER_SITES=	ftp://ftp.mpeg.org/pub/mpeg/mssg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mpeg.org/MSSG/
@@ -13,9 +13,6 @@ COMMENT=	MPEG Software Simulation Group's MPEG-2 Encoder and Decoder
 WRKSRC=		${WRKDIR}/mpeg2
 
 INSTALLATION_DIRS=	bin
-
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} \
@@ -28,4 +25,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mpeg2codec
 	${INSTALL_DATA} ${WRKSRC}/par/* ${DESTDIR}${PREFIX}/share/mpeg2codec
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
