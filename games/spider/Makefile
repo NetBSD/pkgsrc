@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 11:54:55 asau Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/21 15:35:13 wiz Exp $
 
 DISTNAME=	spider
 PKGNAME=	spider-1.1
 PKGREVISION=	3
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.uni-koeln.de/windows/xcontrib/
+#MASTER_SITES=	ftp://ftp.uni-koeln.de/windows/xcontrib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Solitaire card game from xcontrib
