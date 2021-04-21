@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2019/11/03 17:14:26 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2021/04/21 08:51:16 wiz Exp $
 
 DISTNAME=	ChineseCodecs1.2.0
 PKGNAME=	${PYPKGPREFIX}-zhCodecs-1.2.0
 PKGREVISION=	1
 CATEGORIES=	converters devel python
-MASTER_SITES=	ftp://ftp.shellhung.org/pub/OpenBSD/packages/chinese/
-MASTER_SITES+=	ftp://ftp2.python.or.kr/pub/FreeBSD/ports/distfiles/
+MASTER_SITES=	# ftp://ftp.shellhung.org/pub/OpenBSD/packages/chinese/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/python-codecs/
