@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2020/05/02 14:35:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2021/04/21 08:50:07 wiz Exp $
 #
 # used by net/wistumbler2-gtk/Makefile
 
 DISTNAME=	wistumbler2-2.0pre10
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.nopcode.org/prj/wistumbler2/
+MASTER_SITES=	# ftp://ftp.nopcode.org/prj/wistumbler2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nopcode.org/?t=wistumbler2
