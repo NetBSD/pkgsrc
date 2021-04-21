@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2019/11/02 22:38:04 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2021/04/21 15:29:05 wiz Exp $
 
 DISTNAME=	rayshade.4.0.6
 PKGNAME=	rayshade-4.0.6
 PKGREVISION=	5
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://graphics.stanford.edu/pub/rayshade/
+#MASTER_SITES=	ftp://graphics.stanford.edu/pub/rayshade/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
