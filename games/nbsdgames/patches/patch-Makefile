@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile,v 1.1 2021/04/22 18:53:55 nia Exp $
+
+Honor CFLAGS. Don't attempt to create scores files, let pkgsrc do that.
+
+--- Makefile.orig	2021-04-19 07:30:54.000000000 +0000
++++ Makefile
+@@ -1,15 +1,4 @@
+ # -*- Makefile -*-
+-ifndef $(CFLAGS)
+-	CFLAGS= -O3 -lncurses -Wno-unused-result
+-	#-O3 --std=c99 -lcurses -DNO_MOUSE for NetBSD curses
+-	#adding --std=c99 makes warnings in GNU, and the blame is upon glibc feature test macros. my code is correct.
+-endif
+-ifndef $(GAMES_DIR)
+-	GAMES_DIR=/usr/games
+-endif
+-ifndef $(SCORES_DIR)
+-	SCORES_DIR=/usr/games
+-endif
+ all: jewels sudoku mines reversi checkers battleship rabbithole sos pipes fifteen memoblocks fisher muncher miketron redsquare darrt snakeduel
+ scorefiles:
+ 	touch $(SCORES_DIR)/pp_scores
+@@ -64,6 +53,6 @@ clean:
+ 	rm ./jewels ./sudoku ./checkers ./mines ./reversi ./battleship ./rabbithole ./sos ./pipes ./fifteen ./memoblocks ./fisher ./muncher ./miketron ./redsquare ./darrt ./snakeduel
+ uninstall:
+ 	rm $(GAMES_DIR)/jewels $(GAMES_DIR)/sudoku $(GAMES_DIR)/checkers $(GAMES_DIR)/mines $(GAMES_DIR)/reversi $(GAMES_DIR)/battleship $(GAMES_DIR)/rabbithole $(GAMES_DIR)/sos $(GAMES_DIR)/pipes $(GAMES_DIR)/fifteen $(GAMES_DIR)/memoblocks $(GAMES_DIR)/fisher $(GAMES_DIR)/muncher $(GAMES_DIR)/miketron $(GAMES_DIR)/redsquare $(GAMES_DIR)/darrt $(GAMES_DIR)/snakeduel
+-install: scorefiles jewels sudoku mines reversi checkers battleship rabbithole sos pipes fifteen memoblocks fisher muncher miketron redsquare darrt snakeduel
++install: jewels sudoku mines reversi checkers battleship rabbithole sos pipes fifteen memoblocks fisher muncher miketron redsquare darrt snakeduel
+ 	cp jewels sudoku mines reversi checkers battleship rabbithole sos pipes fifteen memoblocks fisher muncher miketron redsquare darrt snakeduel $(GAMES_DIR)
+ 
