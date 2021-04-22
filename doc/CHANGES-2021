@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2300 2021/04/22 16:14:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2301 2021/04/22 18:54:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3636,3 +3636,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.14.3 [adam 2021-04-22]
 	Updated devel/py-xdis to 5.0.9 [adam 2021-04-22]
 	Updated www/py-daphne to 3.0.2 [adam 2021-04-22]
+	Added games/nbsdgames version 4.0 [nia 2021-04-22]
