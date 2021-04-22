@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2021/04/21 08:11:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/22 10:16:38 wiz Exp $
 
 DISTNAME=	ne-3.15
 CATEGORIES=	editors
-MASTER_SITES=	# ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
+#MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
 
 MAINTAINER=	prlw1@cam.ac.uk
-#HOMEPAGE=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
+HOMEPAGE=	http://quercite.dx.am/
 COMMENT=	Terminal text editor
 LICENSE=	gnu-gpl-v2
 
