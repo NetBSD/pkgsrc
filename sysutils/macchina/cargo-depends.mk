@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2021/04/20 19:50:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2021/04/22 08:41:26 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -32,7 +32,7 @@ CARGO_CRATE_DEPENDS+=	instant-0.1.9
 CARGO_CRATE_DEPENDS+=	itertools-0.10.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.93
-CARGO_CRATE_DEPENDS+=	libmacchina-0.2.5
+CARGO_CRATE_DEPENDS+=	libmacchina-0.2.7
 CARGO_CRATE_DEPENDS+=	local_ipaddress-0.1.3
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.3
 CARGO_CRATE_DEPENDS+=	log-0.4.14
