@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/01/01 08:19:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/22 21:41:52 wiz Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
 BOOST_CONFIG=		no
+
+PKGREVISION=		1
 
 CONFLICTS+=		boost-build<=1.33.1
 
@@ -23,7 +25,7 @@ CXXFLAGS+=	${LDFLAGS}
 
 do-build:
 	cd ${WRKSRC}/tools/build/src/engine && \
-		${SETENV} ${MAKE_ENV} ${SH} ./build.sh ${BOOST_TOOLSET}
+		${SETENV} ${MAKE_ENV} ${SH} ./build.sh ${BOOST_TOOLSET} --cxxflags=${CXXFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/src/engine/b2 \
