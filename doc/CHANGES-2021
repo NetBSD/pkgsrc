@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2299 2021/04/22 15:48:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2300 2021/04/22 16:14:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3634,3 +3634,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-google-auth to 1.29.0 [adam 2021-04-22]
 	Updated databases/redis to 6.2.2 [adam 2021-04-22]
 	Updated net/samba4 to 4.14.3 [adam 2021-04-22]
+	Updated devel/py-xdis to 5.0.9 [adam 2021-04-22]
+	Updated www/py-daphne to 3.0.2 [adam 2021-04-22]
