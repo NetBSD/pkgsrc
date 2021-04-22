@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2297 2021/04/22 12:06:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2298 2021/04/22 13:57:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3630,3 +3630,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.7.1 [pin 2021-04-22]
 	Updated math/isl to 0.23 [adam 2021-04-22]
 	Updated devel/py-test-asyncio to 0.15.1 [adam 2021-04-22]
+	Updated net/openvpn to 2.5.2 [adam 2021-04-22]
+	Updated security/py-google-auth to 1.29.0 [adam 2021-04-22]
