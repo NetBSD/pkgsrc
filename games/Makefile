@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2021/04/08 19:53:08 markd Exp $
+# $NetBSD: Makefile,v 1.504 2021/04/22 18:53:55 nia Exp $
 #
 
 COMMENT=	Games
@@ -291,6 +291,7 @@ SUBDIR+=	moria
 SUBDIR+=	mrrescue
 SUBDIR+=	naev
 SUBDIR+=	nagi
+SUBDIR+=	nbsdgames
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
 SUBDIR+=	nethack-tty
