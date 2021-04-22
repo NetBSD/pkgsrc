@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2295 2021/04/22 03:53:53 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.2296 2021/04/22 08:41:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3627,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/json-glib to 1.6.2 [dan 2021-04-21]
 	Added print/tex-hyperxmp version 5.9 [dholland 2021-04-22]
 	Added print/tex-hyperxmp-doc version 5.9 [dholland 2021-04-22]
+	Updated sysutils/macchina to 0.7.1 [pin 2021-04-22]
