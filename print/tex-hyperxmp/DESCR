@@ -1,0 +1,19 @@
+XMP (eXtensible Metadata Platform) is a mechanism proposed by
+Adobe for embedding document metadata within the document
+itself. The metadata is designed to be easy to extract, even by
+programs that are oblivious to the document's file format. Most
+of Adobe's applications store XMP metadata when saving files.
+Now, with the hyperxmp package, it is trivial for LaTeX
+document authors to store XMP metadata in their documents as
+well. The package integrates seamlessly with hyperref and
+requires virtually no modifications to documents that already
+exploit hyperref's mechanisms for specifying PDF metadata. The
+current version of hyperxmp can embed the following metadata as
+XMP: title, authors, primary author's title or position,
+metadata writer, subject/summary, keywords, copyright, license
+URL, document base URL, document identifier and instance
+identifier, language, source file name, PDF generating tool,
+PDF version, and contact telephone number/postal address/email
+address/URL. Hyperxmp currently embeds XMP only within PDF
+documents; it is compatible with pdfLaTeX, XeLaTeX,
+LaTeX+dvipdfm, and LaTeX+dvips+ps2pdf.
