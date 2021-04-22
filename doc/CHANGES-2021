@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2298 2021/04/22 13:57:09 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2299 2021/04/22 15:48:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3632,3 +3632,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-asyncio to 0.15.1 [adam 2021-04-22]
 	Updated net/openvpn to 2.5.2 [adam 2021-04-22]
 	Updated security/py-google-auth to 1.29.0 [adam 2021-04-22]
+	Updated databases/redis to 6.2.2 [adam 2021-04-22]
+	Updated net/samba4 to 4.14.3 [adam 2021-04-22]
