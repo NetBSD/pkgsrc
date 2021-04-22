@@ -1,4 +1,6 @@
-$NetBSD: patch-rts_ProfHeap.c,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+$NetBSD: patch-rts_ProfHeap.c,v 1.2 2021/04/22 14:20:24 pho Exp $
+
+NetBSD does not have uselocale(3).
 
 --- rts/ProfHeap.c.orig	2021-01-25 16:30:28.000000000 +0000
 +++ rts/ProfHeap.c
