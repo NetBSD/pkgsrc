@@ -1,19 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2016/10/06 22:03:56 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2021/04/22 12:03:39 adam Exp $
 
 Fix == in configure script.
 
---- configure.orig	2016-10-06 09:14:39.058506899 +0000
+--- configure.orig	2020-11-01 13:53:55.000000000 +0000
 +++ configure
-@@ -17487,7 +17487,7 @@ else
+@@ -20654,7 +20654,7 @@ else
+   HAVE_CXX11_FALSE=
  fi
- 
  
 - if test "x$with_int" == "ximath-32"; then
 + if test "x$with_int" = "ximath-32"; then
    SMALL_INT_OPT_TRUE=
    SMALL_INT_OPT_FALSE='#'
  else
-@@ -17495,7 +17495,7 @@ else
+@@ -20662,7 +20662,7 @@ else
    SMALL_INT_OPT_FALSE=
  fi
  
