@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2021/04/22 15:52:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.212 2021/04/22 17:33:04 ryoon Exp $
 
 DISTNAME=	node-v14.16.1
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,6 @@ PKGREVISION= 2
 MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 
 CONFIGURE_ARGS+=	--shared-nghttp2
-# ICU 69.1: error: 'createInstance' is a private member of 'icu_69::ListFormatter'
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
 PYTHON_VERSIONS_ACCEPTED=	27
