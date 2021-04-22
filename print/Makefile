@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.802 2021/04/06 20:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.803 2021/04/22 03:53:11 dholland Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -808,6 +808,8 @@ SUBDIR+=	tex-hypernat
 SUBDIR+=	tex-hypernat-doc
 SUBDIR+=	tex-hyperref
 SUBDIR+=	tex-hyperref-doc
+SUBDIR+=	tex-hyperxmp
+SUBDIR+=	tex-hyperxmp-doc
 SUBDIR+=	tex-hyph-utf8
 SUBDIR+=	tex-hyph-utf8-doc
 SUBDIR+=	tex-hyphen-afrikaans
