@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/22 13:53:16 adam Exp $
 
-PKGREVISION= 1
 .include "../../net/openvpn/Makefile.common"
 
 DISTNAME=	openvpn-nagios-20130210
