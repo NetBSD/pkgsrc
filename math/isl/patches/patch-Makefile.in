@@ -1,25 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.3 2016/10/06 22:03:56 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2021/04/22 12:03:39 adam Exp $
 
 '$$libisl' differs between systems, so use 'libisl' instead.
 
---- Makefile.in.orig	2016-05-06 10:14:54.000000000 +0000
+--- Makefile.in.orig	2020-11-01 13:53:55.000000000 +0000
 +++ Makefile.in
-@@ -2194,15 +2194,15 @@ install-data-local: $(srcdir)/isl.py
+@@ -2889,10 +2889,10 @@ install-data-local: $(srcdir)/libisl-gdb
  	case $$libisl in \
  	'') echo Cannot find isl library name. GDB bindings not installed.;; \
- 	*) echo $(INSTALL_DATA) $(srcdir)/isl.py \
+ 	*) echo $(INSTALL_DATA) $(srcdir)/libisl-gdb.py \
 -		$(DESTDIR)$(libdir)/$$libisl-gdb.py; \
 +		$(DESTDIR)$(libdir)/libisl-gdb.py; \
  	test -z "$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"; \
--	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)$(libdir)/$$libisl-gdb.py; esac
-+	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)$(libdir)/libisl-gdb.py; esac
+ 	$(INSTALL_DATA) $(srcdir)/libisl-gdb.py \
+-	    $(DESTDIR)$(libdir)/$$libisl-gdb.py; \
++	    $(DESTDIR)$(libdir)/libisl-gdb.py; \
+ 	esac
  
  uninstall-local:
- 	@libisl=`sed -ne "/^library_names=/{s/.*='//;s/'$$//;s/ .*//;p;}" \
- 		 $(builddir)/libisl.la`; \
- 	if test -n "$${libisl}"; then \
--		rm -f $(DESTDIR)$(libdir)/$$libisl-gdb.py; \
-+		rm -f $(DESTDIR)$(libdir)/libisl-gdb.py; \
- 	fi
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
