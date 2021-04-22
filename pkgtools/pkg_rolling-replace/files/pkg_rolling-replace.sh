@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.43 2021/04/13 17:51:21 rhialto Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.44 2021/04/22 08:54:18 pho Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -162,7 +162,7 @@ check_packages_mismatched()
         for word in $line; do
             if [ "$(echo $word | egrep '^[^/]+-[0-9][^-/]*$')" ]; then
 		if [ -z "$opt_F" ]; then
-		    ${PKG_ADMIN} set mismatch=YES "$word" 2>&1 >/dev/null || {
+		    ${PKG_ADMIN} set mismatch=YES "$word" >/dev/null 2>&1 || {
 			if [ -z "$warned_once" ]; then
 			    echo 1>&2 "$OPC WARNING: mismatch variable not set due to permissions;"
 			    echo 1>&2 "$OPC          mismatch status will not persist."
