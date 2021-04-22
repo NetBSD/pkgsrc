@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 21:50:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2021/04/22 09:43:31 nia Exp $
 #
 
 DISTNAME=	trickle-1.06
@@ -12,6 +12,9 @@ COMMENT=	Portable lightweight userspace bandwidth shaper
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# Redefines read()
+FORTIFY_SUPPORTED=	no
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
