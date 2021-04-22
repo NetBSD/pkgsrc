@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/20 19:08:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/04/22 13:56:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -138,12 +138,18 @@ ${PYSITELIB}/google/oauth2/_id_token_async.pyo
 ${PYSITELIB}/google/oauth2/_service_account_async.py
 ${PYSITELIB}/google/oauth2/_service_account_async.pyc
 ${PYSITELIB}/google/oauth2/_service_account_async.pyo
+${PYSITELIB}/google/oauth2/challenges.py
+${PYSITELIB}/google/oauth2/challenges.pyc
+${PYSITELIB}/google/oauth2/challenges.pyo
 ${PYSITELIB}/google/oauth2/credentials.py
 ${PYSITELIB}/google/oauth2/credentials.pyc
 ${PYSITELIB}/google/oauth2/credentials.pyo
 ${PYSITELIB}/google/oauth2/id_token.py
 ${PYSITELIB}/google/oauth2/id_token.pyc
 ${PYSITELIB}/google/oauth2/id_token.pyo
+${PYSITELIB}/google/oauth2/reauth.py
+${PYSITELIB}/google/oauth2/reauth.pyc
+${PYSITELIB}/google/oauth2/reauth.pyo
 ${PYSITELIB}/google/oauth2/service_account.py
 ${PYSITELIB}/google/oauth2/service_account.pyc
 ${PYSITELIB}/google/oauth2/service_account.pyo
