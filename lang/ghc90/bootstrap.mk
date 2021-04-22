@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2021/04/22 14:20:23 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -13,6 +13,7 @@
 .include "../../mk/bsd.prefs.mk"
 
 # Notes on version dependencies:
+# * GHC 9.0.1 requires 8.8 or later to bootstrap.
 # * GHC 8.8.1 requires 8.4 or later to bootstrap.
 # * GHC 8.4.4 requires 8.0 or later to bootstrap.
 # * GHC 8.0.2 requires 7.8 or later to bootstrap.
@@ -54,7 +55,9 @@
 BOOT_VERSION:=	8.10.4
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99.*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+# XXX: What is this used for? Does extracting libterminfo.so in
+# ${WRKSRC} do anything useful?
 DISTFILES+=	netbsd-9.0-amd64-libterminfo.tar.gz
 EXTRACT_ONLY+=	netbsd-9.0-amd64-libterminfo.tar.gz
 .  endif
