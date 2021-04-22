@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2021/04/22 14:20:23 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2021/04/22 18:15:00 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -14,18 +14,10 @@
 
 # Notes on version dependencies:
 # * GHC 9.0.1 requires 8.8 or later to bootstrap.
-# * GHC 8.8.1 requires 8.4 or later to bootstrap.
+# * GHC 8.8.4 requires 8.4 or later to bootstrap.
 # * GHC 8.4.4 requires 8.0 or later to bootstrap.
 # * GHC 8.0.2 requires 7.8 or later to bootstrap.
 # * GHC 7.10.3 requires 7.6 or later to bootstrap.
-
-########################################################################
-# Please note that GHC 8.8.1 fails to build itself due to this bug:    #
-# https://gitlab.haskell.org/ghc/ghc/issues/17146                      #
-#                                                                      #
-# It is expected to be fixed in 8.8.2 but until that we must bootstrap #
-# it with 8.4.4. WE MUST NOT REMOVE lang/ghc84 UNTIL THAT.             #
-########################################################################
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
 #BOOT_VERSION:=	8.4.4
@@ -114,8 +106,8 @@ pre-configure:
 	${FAIL_MSG}  "Put your trusted bootstrap archive as ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
 
 	@${PHASE_MSG} "Extracting bootstrapping compiler for ${PKGNAME}"
-	${RUN}${MKDIR} ${WRKDIR}/build-extract
-	${RUN}cd ${WRKDIR}/build-extract && \
+	${RUN}${MKDIR} ${WRKDIR}/bootkit-dist
+	${RUN}cd ${WRKDIR}/bootkit-dist && \
 		${XZCAT} ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} | \
 		${GTAR} -xf -
 
@@ -123,7 +115,7 @@ pre-configure:
 # configured, otherwise it will produce executables with no rpath and
 # fail at the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
-	${RUN}cd ${WRKDIR}/build-extract/ghc-${BOOT_VERSION}-boot && \
+	${RUN}cd ${WRKDIR}/bootkit-dist/ghc-${BOOT_VERSION}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
