@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/01/10 14:12:15 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2021/04/22 15:50:51 ryoon Exp $
 
 SHA1 (mozjs78_78.4.0.orig.tar.xz) = b2c1c241f70310d545f8a3c05b9c8c11676e56a8
 RMD160 (mozjs78_78.4.0.orig.tar.xz) = cef93b6116eff9f04beeaf3dda0a42cd811d0b18
 SHA512 (mozjs78_78.4.0.orig.tar.xz) = 05a0dd27cd8f330c69bf798f9025dd560e76a1a14628af4caeeae4f7573aef9371e19edb8a8e4cd28e92e189eb3a159b4ffedb1b1bd4b806e065de433cca6ffd
 Size (mozjs78_78.4.0.orig.tar.xz) = 58319040 bytes
+SHA1 (patch-Cargo.toml) = 842e7519d5d2b6daa9ad8de2e0714c779e5c65ec
 SHA1 (patch-build_moz.configure_rust.configure) = 149301b4a8fb81f6c64d90672b3137ae6d68461f
 SHA1 (patch-build_moz.configure_toolchain.configure) = 930ed1aec1da8c10c80d8f31dfc5acbf2db31c5f
 SHA1 (patch-js_moz.configure) = f3d762b293761e359ac7c389059aa228949a6f0b
