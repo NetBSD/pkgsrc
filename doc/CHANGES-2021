@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2296 2021/04/22 08:41:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2297 2021/04/22 12:06:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3628,3 +3628,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-hyperxmp version 5.9 [dholland 2021-04-22]
 	Added print/tex-hyperxmp-doc version 5.9 [dholland 2021-04-22]
 	Updated sysutils/macchina to 0.7.1 [pin 2021-04-22]
+	Updated math/isl to 0.23 [adam 2021-04-22]
+	Updated devel/py-test-asyncio to 0.15.1 [adam 2021-04-22]
