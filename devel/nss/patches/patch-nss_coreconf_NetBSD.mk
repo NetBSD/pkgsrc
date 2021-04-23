@@ -1,15 +1,19 @@
-$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.1 2020/04/26 21:43:43 tnn Exp $
+$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.2 2021/04/23 16:07:43 rin Exp $
 
-fix wrong value of CPU_ARCH on NetBSD/evbarm-earmv7f
+- fix wrong value of CPU_ARCH on NetBSD/evbarm-earmv7f
+- s/aarch64eb/aarch64/
 
---- nss/coreconf/NetBSD.mk.orig	2020-03-06 18:44:20.000000000 +0000
-+++ nss/coreconf/NetBSD.mk
-@@ -15,6 +15,9 @@ ifeq ($(CPU_ARCH),i386)
+--- nss/coreconf/NetBSD.mk.orig	2021-04-16 01:17:44.000000000 +0900
++++ nss/coreconf/NetBSD.mk	2021-04-24 00:37:05.764452953 +0900
+@@ -15,6 +15,12 @@
  OS_REL_CFLAGS		= -Di386
  CPU_ARCH		= x86
  endif
 +ifeq (,$(filter-out earm%,$(CPU_ARCH)))
 +CPU_ARCH		= arm
++endif
++ifeq ($(CPU_ARCH),aarch64eb)
++CPU_ARCH		= aarch64
 +endif
  
  ifndef OBJECT_FMT
