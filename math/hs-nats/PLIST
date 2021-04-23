@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/09/23 21:40:16 mef Exp $
-${HS_INTF}/package-description
-${HS_INTF}/package-id
-share/doc/x86_64-netbsd-${HASKELL_VERSION}/nats-${PKGVERSION}/LICENSE
+@comment $NetBSD: PLIST,v 1.7 2021/04/23 07:28:02 pho Exp $
+lib/nats-${PKGVERSION}/${HS_VERSION}/package-description
+lib/nats-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/nats-${PKGVERSION}/LICENSE
