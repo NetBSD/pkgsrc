@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:33 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 06:51:27 pho Exp $
 
-SHA1 (random-1.1.tar.gz) = 1cc4907296f83e54587b8aa73e62cd87a7755ca0
-RMD160 (random-1.1.tar.gz) = 483867e6a218fd5aee0ed5156c81b90169de9fd1
-SHA512 (random-1.1.tar.gz) = 7f128b1c88adfe7ee6405578d3c999bb77e9e3c21e16f82a5197c0ad1d6731851e99e08d8169c6a8b1068ad8a1614c1c0ef8c04c1958337a6e325f1de0c718a3
-Size (random-1.1.tar.gz) = 10870 bytes
+SHA1 (random-1.2.0.tar.gz) = 17ab0936460ff825d50268daa2a2a9fafacfe698
+RMD160 (random-1.2.0.tar.gz) = a3ee060e6a3edab13d482ce264b81511a22ac8bb
+SHA512 (random-1.2.0.tar.gz) = e482f318c245d87824d440885c4ecbd1c9bd85a3b3aa4d7fbb4a82da0cfd31749caa9ff7881c94b731035133fd1d550a0cb8bd4da958d3c72519bddcadc6c2e5
+Size (random-1.2.0.tar.gz) = 37889 bytes
