@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/19 01:11:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/04/23 10:38:26 pho Exp $
 
 BUILDLINK_TREE+=	hs-lukko
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lukko
 HS_LUKKO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lukko+=	hs-lukko>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-lukko+=	hs-lukko>=0.1.1.1
+BUILDLINK_ABI_DEPENDS.hs-lukko+=	hs-lukko>=0.1.1.3
 BUILDLINK_PKGSRCDIR.hs-lukko?=		../../devel/hs-lukko
 .endif	# HS_LUKKO_BUILDLINK3_MK
 
