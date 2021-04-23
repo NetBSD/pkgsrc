@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/12/31 07:33:17 pho Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/23 06:06:12 pho Exp $
 
-DISTNAME=	dlist-0.8.0.7
+DISTNAME=	dlist-1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
