@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2014/01/02 07:45:14 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/23 23:44:38 wiz Exp $
 
 DISTNAME=	p2c-1.20
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	ftp://csvax.cs.caltech.edu/pub/
+#MASTER_SITES=	ftp://csvax.cs.caltech.edu/pub/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
