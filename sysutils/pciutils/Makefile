@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2021/03/06 10:30:15 markd Exp $
+# $NetBSD: Makefile,v 1.47 2021/04/23 22:24:04 wiz Exp $
 
 DISTNAME=	pciutils-3.7.0
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
