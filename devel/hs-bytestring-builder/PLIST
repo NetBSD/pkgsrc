@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/23 21:34:45 mef Exp $
-${HS_INTF}/package-description
-${HS_INTF}/package-id
-share/doc/x86_64-netbsd-${HASKELL_VERSION}/bytestring-builder-${PKGVERSION}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2021/04/23 17:51:54 pho Exp $
+lib/bytestring-builder-${PKGVERSION}/${HS_VERSION}/package-description
+lib/bytestring-builder-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/bytestring-builder-${PKGVERSION}/LICENSE
