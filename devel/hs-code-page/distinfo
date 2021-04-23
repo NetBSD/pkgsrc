@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 12:37:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 15:44:40 pho Exp $
 
-SHA1 (code-page-0.2.tar.gz) = f7b55fa521483c69bcccf616deab5546cc5eca1a
-RMD160 (code-page-0.2.tar.gz) = 9c8ccd194fefe1f29d2689e6b7e2fd7fe1ef1f58
-SHA512 (code-page-0.2.tar.gz) = 4c66f52bd9fa107c3ab3f7fe531cb919d856ab04c298fc88dd6a412a8c150b1ea6a72b683c12b8e3b4df87ea7641e09c05f2ddd3bc1f5c67f6bde6c0c4778b94
-Size (code-page-0.2.tar.gz) = 6771 bytes
+SHA1 (code-page-0.2.1.tar.gz) = 5667230f1e0e058a541098d3cce94fb1f7bf7ae7
+RMD160 (code-page-0.2.1.tar.gz) = 832aab4c6dd10fb66bffb0656385755553d67841
+SHA512 (code-page-0.2.1.tar.gz) = 5a1ff550892bb315d2c0645d325e8b8914342d0da9726dd3798eba9655bd79cca7a75927e9312c44d4be1cff8e2c69b8f1734c3662fabb14760036228aedb768
+Size (code-page-0.2.1.tar.gz) = 6859 bytes
