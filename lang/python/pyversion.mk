@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.134 2020/12/19 13:12:00 nia Exp $
+# $NetBSD: pyversion.mk,v 1.135 2021/04/23 19:20:08 nia Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -206,6 +206,19 @@ PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 
 ALL_ENV+=		PYTHON=${PYTHONBIN}
 .if defined(USE_CMAKE)
+# used by FindPython
+CMAKE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+# used by FindPython2
+.  if !empty(_PYTHON_VERSION:M2*)
+CMAKE_ARGS+=		-DPython2_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython2_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+.  endif
+# used by FindPython3
+.  if !empty(_PYTHON_VERSION:M3*)
+CMAKE_ARGS+=		-DPython3_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython3_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+.  endif
 # used by FindPythonInterp.cmake and FindPythonLibs.cmake
 CMAKE_ARGS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 # set this explicitly, as by default it will prefer the built in framework
