@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/01/04 12:09:28 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 11:03:27 pho Exp $
 
 SHA1 (deepseq-generics-0.2.0.0.tar.gz) = 033b92aee8192747a1d0f96410ef72dcdc5db78c
 RMD160 (deepseq-generics-0.2.0.0.tar.gz) = e7311659719a2c71c56d619a4dde51e4d4b29b90
 SHA512 (deepseq-generics-0.2.0.0.tar.gz) = 403d5fd9d8bee827ec2434841d06e78520f6ff5709e4b8e1223d926e819cb99727162d7004f98bff795beaff1dc7d42d07534300c11d453ac559a743a4d70e7e
 Size (deepseq-generics-0.2.0.0.tar.gz) = 5192 bytes
-SHA1 (patch-deepseq-generics.cabal) = cc48c8ab3048ff0a638f3a84b2096274e2146fe2
+SHA1 (patch-deepseq-generics.cabal) = 1d3c838d0b012d17e5780ac5cade84f6d7a616c7
