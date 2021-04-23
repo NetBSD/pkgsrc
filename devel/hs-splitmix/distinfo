@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/01 03:41:02 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 06:50:03 pho Exp $
 
-SHA1 (splitmix-0.0.3.tar.gz) = f6ee5e20c0d7e7c6771e92b7db2422910ecf67c9
-RMD160 (splitmix-0.0.3.tar.gz) = 2f34290b5a72c2a49ac8aed8bfa85bd55111f2e1
-SHA512 (splitmix-0.0.3.tar.gz) = 01d53a606de35c1aef5b4669c19308f63711053a6fee38466e421a7e712bca7cbfa37ffdfcf2a4671fc22354b5e83228255785a808c1b6c3ad941fd550d5560f
-Size (splitmix-0.0.3.tar.gz) = 13616 bytes
+SHA1 (splitmix-0.1.0.3.tar.gz) = 90bad43458c2b9e077491fe44bd9f7f6eda24b78
+RMD160 (splitmix-0.1.0.3.tar.gz) = 94e4253e9cea86cdfbc1fcbb093087a50b203a13
+SHA512 (splitmix-0.1.0.3.tar.gz) = 22a3f0759e1c1150aabde01a77b48087509dfc7ff9614e97e5e06af73f533170993ff2e18101d940e7ddba81b8d6e496795be3851fccfa07b75e9d922f325064
+Size (splitmix-0.1.0.3.tar.gz) = 20754 bytes
