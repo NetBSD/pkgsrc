@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2302 2021/04/22 21:42:02 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2303 2021/04/23 06:10:17 morr Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-daphne to 3.0.2 [adam 2021-04-22]
 	Added games/nbsdgames version 4.0 [nia 2021-04-22]
 	Updated devel/boost-jam to 1.76.0nb1 [wiz 2021-04-22]
+	Updated www/wordpress to 5.7.1 [morr 2021-04-23]
