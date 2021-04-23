@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/12/31 15:34:56 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 06:13:07 pho Exp $
 
-SHA1 (th-abstraction-0.3.1.0.tar.gz) = 5d029b3424985ba3d40a5ca3098d653e1a2657bd
-RMD160 (th-abstraction-0.3.1.0.tar.gz) = 93e265849febb38175121d22c2443e4225bceb6d
-SHA512 (th-abstraction-0.3.1.0.tar.gz) = 2836dabc080ca2ef7c532ef3c49f3e995241c26dc16f326f8463972f7772a18d2c1057eb6c3e7fe0d8c2ad254258576666de76b5b377a17bed5e47fc7f341564
-Size (th-abstraction-0.3.1.0.tar.gz) = 34248 bytes
+SHA1 (th-abstraction-0.4.2.0.tar.gz) = ce411881842df97e4dc40f796c51b822357d355a
+RMD160 (th-abstraction-0.4.2.0.tar.gz) = 040c15c404d2a56dd180ed52acb7b193daf4dc14
+SHA512 (th-abstraction-0.4.2.0.tar.gz) = f67f494c165d7080c45202e58d9e20aa154bf1a7ddaf44643adcfb36d4c62f0b660ab83464a3d06340298b5c7154042d3a956b0ffc5dd99bc5644b52c31e90e4
+Size (th-abstraction-0.4.2.0.tar.gz) = 37848 bytes
