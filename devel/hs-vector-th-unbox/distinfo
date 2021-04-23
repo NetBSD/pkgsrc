@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/02 11:00:30 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 15:31:53 pho Exp $
 
-SHA1 (vector-th-unbox-0.2.1.7.tar.gz) = 6425f4f775c7699982f5d8d4995b1788b2eeaeb3
-RMD160 (vector-th-unbox-0.2.1.7.tar.gz) = dab5cade0ae1d799126d19127c65f7ac2da1304d
-SHA512 (vector-th-unbox-0.2.1.7.tar.gz) = fa65c32eace3ad93f0df69830eca0334519bbdbb2bbdc511db6e6abffe48c78870fef131dc34451873775a037634a87f0cd0d06dc1c4bc9404af2a86d7593ae1
-Size (vector-th-unbox-0.2.1.7.tar.gz) = 4771 bytes
+SHA1 (vector-th-unbox-0.2.1.9.tar.gz) = 6a716a277d8950366a7b6f4fc4d256ae6c15b8c1
+RMD160 (vector-th-unbox-0.2.1.9.tar.gz) = caf9cf19b408f60657b6b2b6ccd59422090b52e6
+SHA512 (vector-th-unbox-0.2.1.9.tar.gz) = 837d5cf4404c3754e737bf472866f48765f08bfa9f8b1022df2272d3a6ea2e33288a696f1aa284139752d9d0a2d7def3e7d5424cdacdf091dc8fc13f4e086487
+Size (vector-th-unbox-0.2.1.9.tar.gz) = 4998 bytes
