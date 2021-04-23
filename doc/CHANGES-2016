@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5178 2017/06/20 15:45:10 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5179 2021/04/23 20:56:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2691,6 +2691,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/mozo version 1.14.0 [youri 2016-05-21]
 	Added print/atril version 1.14.0 [youri 2016-05-21]
 	Added wm/marco version 1.14.0 [youri 2016-05-21]
+	Added devel/libdbusmenu-gtk-doc version 12.10.2 [youri 2016-05-21]
 	Added meta-pkgs/mate version 1.14.0 [youri 2016-05-21]
 	Updated sysutils/etcmanage to 0.9.4 [gdt 2016-05-21]
 	Updated mail/thunderbird to 45.1.0 [ryoon 2016-05-21]
