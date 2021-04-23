@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/01/04 12:22:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/23 12:54:09 pho Exp $
 
-DISTNAME=	utf8-string-1.0.1.1
+DISTNAME=	utf8-string-1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
