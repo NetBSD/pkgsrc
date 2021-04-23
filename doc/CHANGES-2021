@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2311 2021/04/23 16:56:35 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2312 2021/04/23 20:15:24 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3648,3 +3648,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nspr to 4.30.0nb1 [rin 2021-04-23]
 	Updated devel/nss to 3.64.0nb2 [rin 2021-04-23]
 	Updated graphics/cairo to 1.16.0nb3 [thor 2021-04-23]
+	Updated geography/gdal-lib to 3.2.2nb3 [thor 2021-04-23]
