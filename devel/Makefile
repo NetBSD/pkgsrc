@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3361 2021/04/23 07:42:34 pho Exp $
+# $NetBSD: Makefile,v 1.3362 2021/04/23 08:07:51 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -547,6 +547,7 @@ SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-asn1-encoding
 SUBDIR+=	hs-asn1-parse
 SUBDIR+=	hs-asn1-types
+SUBDIR+=	hs-assoc
 SUBDIR+=	hs-async
 SUBDIR+=	hs-base-compat
 SUBDIR+=	hs-base-compat-batteries
