@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/11 08:20:36 pho Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/23 12:27:42 pho Exp $
 
-DISTNAME=	mmorph-1.1.3
+DISTNAME=	mmorph-1.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
