@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/02 11:00:30 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 15:31:53 pho Exp $
 
-DISTNAME=	vector-th-unbox-0.2.1.7
+DISTNAME=	vector-th-unbox-0.2.1.9
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
