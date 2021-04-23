@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2021/04/13 10:26:57 nia Exp $
-#
+# $NetBSD: Makefile,v 1.25 2021/04/23 23:57:29 wiz Exp $
 
 DISTNAME=	lhs-0.1
 PKGREVISION=	10
 CATEGORIES=	www
-MASTER_SITES=	ftp://dev.null.pl/pub/
+#MASTER_SITES=	ftp://dev.null.pl/pub/
 
 MAINTAINER=	dawszy@arhea.net
 #HOMEPAGE=	http://dev.null.pl/
