@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 00:38:57 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 09:26:55 pho Exp $
 
 SHA1 (basement-0.0.11.tar.gz) = 01c7d067b111e999c4a807e78d94b3e71ae03f7f
 RMD160 (basement-0.0.11.tar.gz) = 6f518b332f424c4ae42c727131d7a937325f2641
 SHA512 (basement-0.0.11.tar.gz) = 2396e692fcaa080418eb90c38148dbb2465490ffaa5e35d141573d32729794dffb444bdddd55082878520a22629cfead5fdc1ac98f1d369600cc3165b64730d5
 Size (basement-0.0.11.tar.gz) = 134032 bytes
+SHA1 (patch-Basement_Block_Base.hs) = 579b9cc456cbc60f82f30190ae23d5192ca4dce7
+SHA1 (patch-Basement_BoxedArray.hs) = 29f7348fa84c73b2ae564b011844b0d79a8bfdd7
+SHA1 (patch-Basement_FinalPtr.hs) = d34b03e05117fc64f6cf556023d52f9668b3de71
+SHA1 (patch-Basement_Monad.hs) = 4cf02d67402fdf8481ea2eac7e6a8f6715bb465c
