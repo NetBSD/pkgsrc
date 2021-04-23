@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/12/31 16:26:32 pho Exp $
+$NetBSD: distinfo,v 1.6 2021/04/23 06:28:04 pho Exp $
 
-SHA1 (unordered-containers-0.2.10.0.tar.gz) = 17d0a16aabbb03c91953b24b39cd3432f8c9afd3
-RMD160 (unordered-containers-0.2.10.0.tar.gz) = b0a825c7c5fde3d5cb4136790f59c677e03eef41
-SHA512 (unordered-containers-0.2.10.0.tar.gz) = 450e5e839e0092b2476a0abfc3eb2f45fba634a9e782cddf25b3db3730d16dd2e65673f46678ab4ad23be71525ae5f72888b89b03402cb70e20fc33feb765766
-Size (unordered-containers-0.2.10.0.tar.gz) = 44733 bytes
-SHA1 (patch-unordered-containers.cabal) = bd7765f3b4d041c0e603d3774f42ca4df6f710c2
+SHA1 (unordered-containers-0.2.13.0.tar.gz) = 902b315eaa2fcd4bc5dbd4ad0fbf001392ceb874
+RMD160 (unordered-containers-0.2.13.0.tar.gz) = fea917ec6d341e5a757f3ef6e17168cf05dd198a
+SHA512 (unordered-containers-0.2.13.0.tar.gz) = f32d6e91ba7ef54cc24562e26e8bda147e43b954966bae3f9850b0c57438e5d8af43f7a49106980d1197ff674eca7bb9a50c8895deb0e45588ec123664c6c47d
+Size (unordered-containers-0.2.13.0.tar.gz) = 53379 bytes
