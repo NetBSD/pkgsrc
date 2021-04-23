@@ -1,25 +1,38 @@
-$NetBSD: patch-config_policy.xml,v 1.8 2021/01/04 10:20:15 wiz Exp $
+$NetBSD: patch-config_policy.xml,v 1.9 2021/04/23 07:23:29 nia Exp $
 
-Disable ghostscript coders by default to workaround VU#332928:
-<https://www.kb.cert.org/vuls/id/332928>
+Update default policies for better resistance to untrusted input.
 
---- config/policy.xml.orig	2021-01-02 12:53:07.000000000 +0000
+Discussion:
+http://mail-index.netbsd.org/tech-pkg/2021/04/03/msg024740.html
+
+--- config/policy.xml.orig	2021-04-17 15:26:24.000000000 +0000
 +++ config/policy.xml
-@@ -76,6 +76,18 @@
+@@ -76,6 +76,29 @@
    <!-- <policy domain="cache" name="synchronize" value="True"/> -->
    <!-- <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/> -->
    <!-- <policy domain="system" name="max-memory-request" value="256MiB"/> -->
 +
 +  <!-- 
-+    -- Disable ghostscript coders as suggested by VU#332928
++    -- Disable ghostscript decoders as suggested by VU#332928
 +    --  <https://www.kb.cert.org/vuls/id/332928>
 +    -->
-+  <policy domain="coder" rights="none" pattern="PS" />
-+  <policy domain="coder" rights="none" pattern="PS2" />
-+  <policy domain="coder" rights="none" pattern="PS3" />
-+  <policy domain="coder" rights="none" pattern="EPS" />
-+  <policy domain="coder" rights="none" pattern="PDF" />
-+  <policy domain="coder" rights="none" pattern="XPS" />
++  <policy domain="coder" rights="write" pattern="PS" />
++  <policy domain="coder" rights="write" pattern="PS2" />
++  <policy domain="coder" rights="write" pattern="PS3" />
++  <policy domain="coder" rights="write" pattern="EPS" />
++  <policy domain="coder" rights="write" pattern="PDF" />
++  <policy domain="coder" rights="write" pattern="XPS" />
++
++  <!-- Recommended policies from <https://imagetragick.com/> -->
++  <policy domain="coder" rights="none" pattern="EPHEMERAL" />
++  <policy domain="coder" rights="none" pattern="URL" />
++  <policy domain="coder" rights="none" pattern="HTTPS" />
++  <policy domain="coder" rights="none" pattern="MVG" />
++  <policy domain="coder" rights="none" pattern="MSL" />
++  <policy domain="coder" rights="none" pattern="TEXT" />
++  <policy domain="coder" rights="none" pattern="SHOW" />
++  <policy domain="coder" rights="none" pattern="WIN" />
++  <policy domain="coder" rights="none" pattern="PLT" />
 +
    <!-- <policy domain="system" name="shred" value="2"/> -->
    <!-- <policy domain="system" name="precision" value="6"/> -->
