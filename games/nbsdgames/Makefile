@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/23 06:23:04 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/23 08:13:16 nia Exp $
 
 DISTNAME=	nbsdgames-v4.0
 PKGNAME=	${DISTNAME:S/-v/-/1}
@@ -36,7 +36,7 @@ SUBST_SED.paths+=	-e "s,/usr/games,${VARBASE}/games,g"
 INSTALLATION_DIRS+=	bin
 
 .if empty(UNPRIVILEGED:M[yY][eE][sS])
-.  for game in pewels jewels fisher muncher miketron darrt
+.  for game in pipes jewels fisher muncher miketron darrt
 SPECIAL_PERMS+=		bin/${game} ${SETGID_GAMES_PERMS}
 .  endfor
 REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/pp_scores ${GAMEDATA_PERMS}
