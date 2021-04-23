@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/11 10:41:29 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/23 07:13:57 pho Exp $
 
-DISTNAME=	StateVar-1.2
+DISTNAME=	StateVar-1.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
