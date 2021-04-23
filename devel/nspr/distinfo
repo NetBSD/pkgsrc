@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2021/03/30 16:29:34 ryoon Exp $
+$NetBSD: distinfo,v 1.61 2021/04/23 16:03:15 rin Exp $
 
 SHA1 (nspr-4.30.tar.gz) = 58761ad70dc57f2d5600dd70684791cf36cac02b
 RMD160 (nspr-4.30.tar.gz) = 739d829e6dff607362c9bae7fa563e9ed0814553
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = a3d2cef788393b84e833d9e33bdf40b10d8efbd0
 SHA1 (patch-ae) = 28474b852325a37fb2a30717e9f7ffb77dad5deb
 SHA1 (patch-ag) = 653d4bc8cc4eced8f628cfb738c5d99cc1a6cf24
 SHA1 (patch-ba) = 141b354b9ec0423a9c671d5eaca05cf16daac312
-SHA1 (patch-nspr_pr_include_md___netbsd.cfg) = c7a652afc962e83cca49f451f6692bbc43644403
+SHA1 (patch-nspr_pr_include_md___netbsd.cfg) = d859aed2b165d25bfb1f95903ee7725d1d358097
 SHA1 (patch-nspr_pr_include_md___pth.h) = ef97e3a9c2dbde85a7c36152807217f962d2b4fa
 SHA1 (patch-nspr_pr_src_pthreads_ptsynch.c) = 52e0e2bb1d1ddb282f92ce2df2c69684c0634dbe
 SHA1 (patch-nspr_pr_src_pthreads_ptthread.c) = 1aaa1048399cc7a82a67b98ea2368033cb597ac6
