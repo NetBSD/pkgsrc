@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/11 17:51:58 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/04/23 00:28:26 pho Exp $
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${HS_IMPL}/Codec/Compression/GZip.dyn_hi
 ${HS_IMPL}/Codec/Compression/GZip.hi
@@ -6,6 +6,9 @@ ${HS_IMPL}/Codec/Compression/GZip.p_hi
 ${HS_IMPL}/Codec/Compression/Zlib.dyn_hi
 ${HS_IMPL}/Codec/Compression/Zlib.hi
 ${HS_IMPL}/Codec/Compression/Zlib.p_hi
+${HS_IMPL}/Codec/Compression/Zlib/ByteStringCompat.dyn_hi
+${HS_IMPL}/Codec/Compression/Zlib/ByteStringCompat.hi
+${HS_IMPL}/Codec/Compression/Zlib/ByteStringCompat.p_hi
 ${HS_IMPL}/Codec/Compression/Zlib/Internal.dyn_hi
 ${HS_IMPL}/Codec/Compression/Zlib/Internal.hi
 ${HS_IMPL}/Codec/Compression/Zlib/Internal.p_hi
