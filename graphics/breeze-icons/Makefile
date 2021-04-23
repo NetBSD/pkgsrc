@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/04/21 11:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.30 2021/04/23 19:21:15 nia Exp $
 
 DISTNAME=	breeze-icons-${KF5VER}
 PKGREVISION=	1
@@ -9,6 +9,12 @@ COMMENT=	Breeze icon themes
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3
 
 .include "../../meta-pkgs/kde/kf5.mk"
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
+.include "../../lang/python/tool.mk"
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_TOOLS+=	bash gsed
 
