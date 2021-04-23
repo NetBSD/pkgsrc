@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/12/31 16:09:01 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/23 07:09:50 pho Exp $
 
-SHA1 (transformers-compat-0.6.5.tar.gz) = 87ef9d8699d786599a72eb2eb5f7d6335ee51349
-RMD160 (transformers-compat-0.6.5.tar.gz) = c0af2e8d2fdc91618e48deb573791b0aac778e74
-SHA512 (transformers-compat-0.6.5.tar.gz) = 86ce6e81baf4e71cc4ac854066543a8777628ae67182e8059e582754608b279a053f7f98a539ec5cc07e1771d8173a6de6ebe5df4eee2b4c41278734774c3958
-Size (transformers-compat-0.6.5.tar.gz) = 40421 bytes
+SHA1 (transformers-compat-0.6.6.tar.gz) = 15b18db1f6af31240044311ff5ab148b76989e5f
+RMD160 (transformers-compat-0.6.6.tar.gz) = 406387f16410467562e25e6da07d7230bb114211
+SHA512 (transformers-compat-0.6.6.tar.gz) = 1f34e40e17e7c19c889e58101f5ed6a019b5bb08be4c798a1f233158b27b6a2cd05b9260d2cf7065cd2bdfb4df4cbbda463abee69c4ba00b6f445392659e920d
+Size (transformers-compat-0.6.6.tar.gz) = 41347 bytes
