@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 13:06:20 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 10:06:52 pho Exp $
 
-SHA1 (streaming-commons-0.2.1.2.tar.gz) = 6b3d66192cab1bf6d5ff8125529e212c81b58860
-RMD160 (streaming-commons-0.2.1.2.tar.gz) = 93302143976f3d7b964562011467e7b88c24e244
-SHA512 (streaming-commons-0.2.1.2.tar.gz) = 7b6f39237f9ac13ca2d8205a43fee17c6edfe6609a1119903f8648aed151ef92779af7a8dfdfb108dea679cd26c83dfb5d21285d51f91dec0ad10debd100b8e7
-Size (streaming-commons-0.2.1.2.tar.gz) = 86776 bytes
+SHA1 (streaming-commons-0.2.2.1.tar.gz) = dd5119f1476ac8519261e28db491bcf9141af292
+RMD160 (streaming-commons-0.2.2.1.tar.gz) = 84b4d88ca6af5c9c59ea58f20520431a8c691bb6
+SHA512 (streaming-commons-0.2.2.1.tar.gz) = 6dc1141070f28ca278ea1ec45a2b1b4fca34c06459dfe975dd2787e08a3e875aa22efbbb4ac905d3161e30b9af20df2d5d89325abe9e2181d7e50239388752a1
+Size (streaming-commons-0.2.2.1.tar.gz) = 86559 bytes
