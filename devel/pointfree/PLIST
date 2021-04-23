@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/14 09:15:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/23 15:40:30 pho Exp $
 bin/pointfree
-@pkgdir lib/${PKGNAME}/ghc-8.8.4
