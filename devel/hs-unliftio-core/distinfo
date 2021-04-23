@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/01/08 18:57:25 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/04/23 12:34:06 pho Exp $
 
-SHA1 (unliftio-core-0.1.2.0.tar.gz) = dbaaad9d1f1b4b10f28d66652c54eb92fe1ca69c
-RMD160 (unliftio-core-0.1.2.0.tar.gz) = 30ecaa90118ceb23238349664903c65664d176bc
-SHA512 (unliftio-core-0.1.2.0.tar.gz) = 5bd46d40be031b398b3238a5170f45641861a30c8cf20ca5a202b47367f00bb52e7391a53301edd47f8d688c713c06ebfdc51b1528518e28f8e8d6ad619e10eb
-Size (unliftio-core-0.1.2.0.tar.gz) = 3631 bytes
-SHA1 (patch-unliftio-core.cabal) = 5014b639a9ad548b5e3e78b9141473734620e614
+SHA1 (unliftio-core-0.2.0.1.tar.gz) = 3b100788c9f61e50ff748f170effc28d68aa1ab7
+RMD160 (unliftio-core-0.2.0.1.tar.gz) = c466edcc00e9c575a92207479f059714350f098c
+SHA512 (unliftio-core-0.2.0.1.tar.gz) = 6bb6bbab7336ea460b354e897c7fae236a53e7975af0430abcb2bb9d23374da0340381176d55f827f8a2b17809fa0205c6baf2a2542c72b9557b874c593d1b02
+Size (unliftio-core-0.2.0.1.tar.gz) = 3696 bytes
+SHA1 (patch-unliftio-core.cabal) = a22e4644e2d3975c9fd2cebb7b35680e43ced9e4
