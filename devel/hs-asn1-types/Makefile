@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/16 23:53:58 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 10:18:36 pho Exp $
 
-DISTNAME=	asn1-types-0.3.3
+DISTNAME=	asn1-types-0.3.4
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
