@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/01/01 03:13:39 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 12:47:27 pho Exp $
 
-SHA1 (syb-0.7.1.tar.gz) = 3346c2a2239dc769ca4dd8d383d19d2fbe2249f0
-RMD160 (syb-0.7.1.tar.gz) = ecfdf619adf34107632a6396891083e03ebd2874
-SHA512 (syb-0.7.1.tar.gz) = 63a3138f7f824a9bc611b9d025d4e7adc2da8d420d260b66d56190db683a0afac58e4794e94b13d4aa7b423d949e55a1ed0220c99d368973117b5056fd0f4e65
-Size (syb-0.7.1.tar.gz) = 39594 bytes
+SHA1 (syb-0.7.2.1.tar.gz) = 26d152de6847747d335529c1528a0dbe2e3ae37c
+RMD160 (syb-0.7.2.1.tar.gz) = 19b0619e6a382a42a9911c9b2fd3d81d1810e04f
+SHA512 (syb-0.7.2.1.tar.gz) = 6c356af3cc72f29c362b2859292a96b8107dd3241cff79d717f361e517edf478295f477c0f426fb8d0ae0952cd5c7521114cf1cac1f3faf2b0c96d3b8a335e69
+Size (syb-0.7.2.1.tar.gz) = 39768 bytes
