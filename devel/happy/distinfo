@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/01/01 05:37:22 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/23 04:44:20 pho Exp $
 
-SHA1 (happy-1.19.12.tar.gz) = 0e5bff9bcd1671eefef0ca7029ca590899385fd6
-RMD160 (happy-1.19.12.tar.gz) = 34fff4797b87496a0493960b784df96385d4d6c0
-SHA512 (happy-1.19.12.tar.gz) = 20f36b17adf7330852fd4c05335adbf31e6f19907b4ec247c85a40ee1f8496c6dc432055026696906b149cec7f982b88c9a2eeedf14a11d34b1f6f73272e5208
-Size (happy-1.19.12.tar.gz) = 183254 bytes
+SHA1 (happy-1.20.0.tar.gz) = 7ac1ee4aab8d4abe206ffcaadc8a93d98a346264
+RMD160 (happy-1.20.0.tar.gz) = 6132dd3496fc22363d09dc7e307d93f779bfdc3e
+SHA512 (happy-1.20.0.tar.gz) = 2c19e6e13032ead435495aab232192cf0ad9fe5e3e04c79b40b586272fb0208284815cf5c15d609f75387e7fe91ca0932b675bcaa95552f62ad08a12701649ce
+Size (happy-1.20.0.tar.gz) = 184515 bytes
