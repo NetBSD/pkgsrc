@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/01/09 00:51:03 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 12:44:47 pho Exp $
 
-SHA1 (split-0.2.3.3.tar.gz) = 1c07114307196b4c3f1d94fb9e30485872b01f21
-RMD160 (split-0.2.3.3.tar.gz) = 081190df13c62a04e9bc83fec2097845c32eb1c4
-SHA512 (split-0.2.3.3.tar.gz) = 40283ee2f5e2ab56207b05a1a7bc7de114ae0da52dc37ed32bd4e1dd3a3baa8d3346fed04af979fa5fc263b931c0b830832c0cad69e98d151f5550542af6f475
-Size (split-0.2.3.3.tar.gz) = 15681 bytes
-SHA1 (patch-split.cabal) = 54237ad504dd5672ef5e166ddc190c10f4d97f3d
+SHA1 (split-0.2.3.4.tar.gz) = d4a3f9708e397be90738ec70f8c700baaa8b827b
+RMD160 (split-0.2.3.4.tar.gz) = 40ca8e7a20ad200fe09a0a5f9ab1b0d58b5a0a3d
+SHA512 (split-0.2.3.4.tar.gz) = a60566106a5f285224b0d555d30b2af3315c707012f5c8e9384d4b8216894e6a6263e838b0e367418c4f8bfb5f4f2cc056ca14acb6b27a5ca3446576b057ca15
+Size (split-0.2.3.4.tar.gz) = 15942 bytes
+SHA1 (patch-split.cabal) = a00d99c9ec450a61a951a49bc1d3d3b12bc45f57
