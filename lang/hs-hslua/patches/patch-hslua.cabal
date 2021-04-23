@@ -1,11 +1,11 @@
-$NetBSD: patch-hslua.cabal,v 1.1 2020/01/15 12:40:38 pho Exp $
+$NetBSD: patch-hslua.cabal,v 1.2 2021/04/23 09:47:37 pho Exp $
 
 Correct the pkg-config package name.
 
---- hslua.cabal.orig	2020-01-15 12:38:03.950345594 +0000
+--- hslua.cabal.orig	2001-09-09 01:46:40.000000000 +0000
 +++ hslua.cabal
-@@ -123,7 +123,7 @@ library
- 
+@@ -146,7 +146,7 @@ library
+   include-dirs:        cbits/hslua
    if flag(system-lua) || flag(pkg-config)
      if flag(pkg-config)
 -      pkgconfig-depends: lua5.3
