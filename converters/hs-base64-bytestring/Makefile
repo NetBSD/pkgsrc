@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/12/29 23:26:43 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/23 08:54:21 pho Exp $
 
-DISTNAME=	base64-bytestring-1.0.0.2
+DISTNAME=	base64-bytestring-1.2.0.1
 CATEGORIES=	converters
 
 MAINTAINER=	pho@cielonegro.org
