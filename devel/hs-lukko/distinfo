@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/09/16 17:48:41 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2021/04/23 10:38:26 pho Exp $
 
-SHA1 (lukko-0.1.1.1.tar.gz) = 54cc499574239d41d5e9cf8d7e83ac4171e39055
-RMD160 (lukko-0.1.1.1.tar.gz) = 9b1e7a4806566de0fb1021f759d634f573ce5507
-SHA512 (lukko-0.1.1.1.tar.gz) = 2a307eef1ceb421a6b46854c99b50fd64da02df2e74e662f67fbd179db0880599d40d8b5b8bb8d117e4c52ad114e45d9b1434ecba984f4dea314ff1f840ec37f
-Size (lukko-0.1.1.1.tar.gz) = 28312 bytes
-SHA1 (patch-lukko.cabal) = 3df851f7dcb1b75f1c84ada7daeb54d16311dd53
+SHA1 (lukko-0.1.1.3.tar.gz) = 27a7cf77bda5c6655123dd1060293d7aa1fb50fa
+RMD160 (lukko-0.1.1.3.tar.gz) = 370f05eac2e41c835ec34feb49b79e0fa50d33ec
+SHA512 (lukko-0.1.1.3.tar.gz) = 8bed8b88a101883f642bb9d9d41512436f5c80db5ea1ad0cddb069c6d09257d21b56a60e0f70b57453e91126065fbfdeeb721064763e64de1975dcb51b1a484a
+Size (lukko-0.1.1.3.tar.gz) = 28575 bytes
+SHA1 (patch-lukko.cabal) = 180f9a85ee79038d41ad7d2b1f36dc3334cfa7a9

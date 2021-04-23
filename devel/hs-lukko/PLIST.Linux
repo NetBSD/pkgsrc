@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2020/10/04 21:14:32 mcf Exp $
-${HS_IMPL}/Lukko/OFD.dyn_hi
-${HS_IMPL}/Lukko/OFD.hi
-${HS_IMPL}/Lukko/OFD.p_hi
-${HS_DOCS}/html/Lukko-OFD.html
+@comment $NetBSD: PLIST.Linux,v 1.2 2021/04/23 10:38:26 pho Exp $
+lib/${HS_PLATFORM}/${HS_PKGID}/Lukko/OFD.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Lukko/OFD.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Lukko/OFD.p_hi
+share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/Lukko-OFD.html
