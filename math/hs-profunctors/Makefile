@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/03 05:03:54 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 13:11:36 pho Exp $
 
-DISTNAME=	profunctors-5.5.1
+DISTNAME=	profunctors-5.6.2
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -14,5 +14,4 @@ LICENSE=	modified-bsd
 .include "../../math/hs-contravariant/buildlink3.mk"
 .include "../../math/hs-distributive/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
