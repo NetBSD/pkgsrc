@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/01/08 19:06:44 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/04/23 04:53:25 pho Exp $
 
-SHA1 (integer-logarithms-1.0.3.tar.gz) = cccdce7725227dd7fbad4ed5d8485941bc38bbb7
-RMD160 (integer-logarithms-1.0.3.tar.gz) = ac15eb20926ddbe7e8fb66c1d3239ced8dcae16b
-SHA512 (integer-logarithms-1.0.3.tar.gz) = b211127620bb52398ae7e64281f991d9dd016d5f74ff5d939275afea15689b01f82577efeaa2dfcdf4230cfea841f6c14f731ba16d38192f48e2e7ae90e704f3
-Size (integer-logarithms-1.0.3.tar.gz) = 8840 bytes
-SHA1 (patch-integer-logarithms.cabal) = 117470e89ea684c11ab4457aa12ddf756b11691c
+SHA1 (integer-logarithms-1.0.3.1.tar.gz) = bd44f1e31b204cd965c14a912a38db3cf21e92a7
+RMD160 (integer-logarithms-1.0.3.1.tar.gz) = 5d960498748e2a7a24c252fbb6582aecdd661c3b
+SHA512 (integer-logarithms-1.0.3.1.tar.gz) = 670aff419de8d6afd1b7e1a40b68290bcf7aefad788c3b08aebfa5ca3e709f5d22543fce82fb75dc18b3ba0ef6d8a8f61735cde647a7a6c9392a60ec365534b3
+Size (integer-logarithms-1.0.3.1.tar.gz) = 9023 bytes
