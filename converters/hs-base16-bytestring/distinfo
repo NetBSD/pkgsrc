@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 07:13:44 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 08:59:49 pho Exp $
 
-SHA1 (base16-bytestring-0.1.1.6.tar.gz) = 45affda0206699e3fcd830f8fdafe87ae29472a6
-RMD160 (base16-bytestring-0.1.1.6.tar.gz) = a1dfb191490ac54b7a0a30ab76d77f67d8ce3c4d
-SHA512 (base16-bytestring-0.1.1.6.tar.gz) = 699bc1f7819a1c0cea0154626f8799301bc9360bc997a5e9313a605ec33ea04d77219b100693021fd43e01d8d979374db07e6e3fabef5301c411f335e30a8cba
-Size (base16-bytestring-0.1.1.6.tar.gz) = 3694 bytes
+SHA1 (base16-bytestring-1.0.1.0.tar.gz) = 0d316c1c7cec188c86b062ed80cc877e5dacbaec
+RMD160 (base16-bytestring-1.0.1.0.tar.gz) = 668589e99a02745c70fbde18ee323059b8596d8a
+SHA512 (base16-bytestring-1.0.1.0.tar.gz) = e95f4422c7442c8a8f05b98e0cc8c7ffe67b59f0e1b89e7016bea1cbad351a3766a0193d3499c721614aa4607cacc9aba9ed275b92188980ae67108abd28d6e6
+Size (base16-bytestring-1.0.1.0.tar.gz) = 7256 bytes
