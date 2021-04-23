@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/04/23 08:18:25 pho Exp $
+
+SHA1 (these-1.1.1.1.tar.gz) = 2b6006e1dee3084058ee1cfa8e01a9d711c2992e
+RMD160 (these-1.1.1.1.tar.gz) = 0bf6fc2545a0cb451feca9fa23ffb40b25c4461b
+SHA512 (these-1.1.1.1.tar.gz) = 23246164648bf4cb028719e7cb2e5f450ab55558af9e1dc7f0ddec323ca4ce124afbfd3bf367446c2d69ec91abe42daf77e11a26a13f2898275dafbc095637d5
+Size (these-1.1.1.1.tar.gz) = 9804 bytes
+SHA1 (patch-these.cabal) = 26eb01714f3953b2d3d2b11c1635d434c9ecf9de
