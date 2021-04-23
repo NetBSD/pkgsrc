@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.28 2021/03/14 08:19:24 pho Exp $
+# $NetBSD: haskell.mk,v 1.29 2021/04/23 03:57:16 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -85,6 +85,11 @@ _USE_VARS.haskell= \
 	BUILDLINK_PREFIX.ghc \
 	PKGDIR DESTDIR \
 	WRKSRC
+_LISTED_VARS.haskell= \
+	CONFIGURE_ARGS \
+	PLIST_SUBST \
+	PRINT_PLIST_AWK \
+	FILES_SUBST
 _IGN_VARS.haskell= \
 	USE_TOOLS CONFIGURE_ENV MAKE_ENV WARNINGS _*
 
@@ -150,10 +155,10 @@ CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
 _HS_PLIST_STATUS=	missing
 .elif !${${GREP} "." ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	missing
-.elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
-_HS_PLIST_STATUS=	lib-ok
+.elif ${${GREP} HS_VERSION ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+_HS_PLIST_STATUS=	ok
 .elif !${${GREP} "/package-description" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
-_HS_PLIST_STATUS=	plain
+_HS_PLIST_STATUS=	ok
 .else
 _HS_PLIST_STATUS=	outdated
 .endif
@@ -162,35 +167,33 @@ _HS_PLIST_STATUS=	outdated
 # with a hashed name, which makes it a bit more complicated to generate
 # the PLIST.
 #
-.if ${_HS_PLIST_STATUS} == lib-ok || ${_HS_PLIST_STATUS} == missing
-_HASKELL_PL_INTF=	${_HASKELL_PKG_ID_FILE:H:S,^${PREFIX}/,,}
-_HASKELL_PL_IMPL_AWK=	prev == "import-dirs:" { dir = $$1; exit }
-_HASKELL_PL_IMPL_AWK+=	{ prev = $$0 }
-_HASKELL_PL_IMPL_AWK+=	END { print(dir ? dir : "never_match_this") }
-_HASKELL_PL_IMPL_CMD=	${AWK} '${_HASKELL_PL_IMPL_AWK}' ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}
-_HASKELL_PL_IMPL=	${_HASKELL_PL_IMPL_CMD:sh:S,^${PREFIX}/,,}
-_HASKELL_PL_DOCS=	${_HASKELL_PL_IMPL:S,^lib,share/doc,:C,-[A-Za-z0-9]*$,,}
-_HASKELL_PL_PLATFORM=	${_HASKELL_PL_IMPL:H:T:S,^.$,never_match_this,}
-_HASKELL_PL_PKGID_CMD=	${CAT} ${DESTDIR}${_HASKELL_PKG_ID_FILE}
-_HASKELL_PL_PKGID=	${_HASKELL_PL_PKGID_CMD:sh}
-_HASKELL_PL_VER=	${_HASKELL_VERSION:S,-,,}
 
-_HS_PLIST_SUBST+=	HS_INTF=${_HASKELL_PL_INTF}
-_HS_PLIST_SUBST+=	HS_IMPL=${_HASKELL_PL_IMPL}
-_HS_PLIST_SUBST+=	HS_DOCS=${_HASKELL_PL_DOCS}
-_HS_PLIST_SUBST+=	HS_PLATFORM=${_HASKELL_PL_PLATFORM}
-_HS_PLIST_SUBST+=	HS_PKGID=${_HASKELL_PL_PKGID}
-_HS_PLIST_SUBST+=	HS_VER=${_HASKELL_PL_VER}
-PLIST_SUBST+=		${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}):?${_HS_PLIST_SUBST}:}
+# There is no easy way to obtain a platform string such as
+# "x86_64-netbsd-ghc-9.0.1". If the package contains a library we
+# could extract it from the description file, but if it's
+# executable-only there's no such file. As a workaround we read the
+# description of "base" (which always exists) and extract the platform
+# from it.
+_HS_PLIST.platform.cmd=		${_HASKELL_PKG_BIN} --simple-output field base data-dir
+_HS_PLIST.platform=		${_HS_PLIST.platform.cmd:sh:H:T}
+# Package ID formatted as "{name}-{version}-{hash}": this only exists
+# if the package contains a library.
+_HS_PLIST.lib.pkg-id.cmd=	${CAT} ${DESTDIR}${_HASKELL_PKG_ID_FILE}
+_HS_PLIST.lib.pkg-id=		${exists(${DESTDIR}${_HASKELL_PKG_ID_FILE}):?${_HS_PLIST.lib.pkg-id.cmd:sh}:}
+# Abbreviated compiler version. Used for shared libraries.
+_HS_PLIST.short-ver=		${_HASKELL_VERSION:S,-,,}
 
-_HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_INTF}",       "$${HS_INTF}") }
-_HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_IMPL}",       "$${HS_IMPL}") }
-_HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_DOCS}",       "$${HS_DOCS}") }
-_HS_PRINT_PLIST_AWK+=	{ sub("/${_HASKELL_PL_PLATFORM}/", "/$${HS_PLATFORM}/") }
-_HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_PKGID}",      "$${HS_PKGID}") }
-_HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_VER}",        "$${HS_VER}") }
-PRINT_PLIST_AWK+=	${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}):?${_HS_PRINT_PLIST_AWK}:}
-.endif
+PLIST_SUBST+=		HS_PLATFORM=${_HS_PLIST.platform}
+PLIST_SUBST+=		HS_VERSION=${_HASKELL_VERSION}
+PLIST_SUBST+=		HS_VER=${_HS_PLIST.short-ver}
+_HS_PLIST_SUBST.lib=	HS_PKGID=${_HS_PLIST.lib.pkg-id}
+PLIST_SUBST+=		${!empty(_HS_PLIST.lib.pkg-id):?${_HS_PLIST_SUBST.lib}:}
+
+PRINT_PLIST_AWK+=	{ gsub("${_HS_PLIST.platform}",   "$${HS_PLATFORM}") }
+PRINT_PLIST_AWK+=	{ gsub("${_HASKELL_VERSION}",     "$${HS_VERSION}" ) }
+PRINT_PLIST_AWK+=	{ gsub("${_HS_PLIST.short-ver}",  "$${HS_VER}"     ) }
+_HS_PRINT_PLIST_AWK.lib={ gsub("${_HS_PLIST.lib.pkg-id}", "$${HS_PKGID}"   ) }
+PRINT_PLIST_AWK+=	${!empty(_HS_PLIST.lib.pkg-id):?${_HS_PRINT_PLIST_AWK.lib}:}
 
 .if ${_HS_PLIST_STATUS} == missing || ${_HS_PLIST_STATUS} == outdated
 .  if ${HS_UPDATE_PLIST} == yes
@@ -251,6 +254,11 @@ do-install:
 			${INSTALL_DATA} dist/package-id \
 				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
 		fi
+# Executable-only packages tend to create an empty directory tree in
+# lib/ which results in useless @pkgdir in PLIST.
+	${RUN}${FIND} ${DESTDIR:Q}${PREFIX}/lib -type d | \
+		${TAIL} -n 1 | \
+		${XARGS} ${RMDIR} -p 2>/dev/null || ${TRUE}
 
 # Define test target.
 do-test:
@@ -267,14 +275,8 @@ DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
 
 # Only present these variables if the definitions can be extracted
 # from the files in DESTDIR.
-_HS_DESTDIR_DEF_VARS=	PLIST_SUBST PRINT_PLIST_AWK
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_INTF
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_IMPL
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_DOCS
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_PLATFORM
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_PKGID
-_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_VER
-_DEF_VARS.haskell+=	${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}) :? ${_HS_DESTDIR_DEF_VARS} :}
-_LISTED_VARS.haskell+=	PLIST_SUBST PRINT_PLIST_AWK
+_DEF_VARS.haskell+=	_HS_PLIST.platform
+_DEF_VARS.haskell+=	_HS_PLIST.short-ver
+_DEF_VARS.haskell+=	${!empty(_HS_PLIST.lib.pkg-id):?_HS_PLIST.lib.pkg-id:}
 
 .endif # HASKELL_MK
