@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/04/23 08:07:25 pho Exp $
+
+SHA1 (assoc-1.0.2.tar.gz) = bffae5600300802d131082f2ccc389f6b42ff1e3
+RMD160 (assoc-1.0.2.tar.gz) = bddc57af7707d1e53fff87d0636f5f116fdc0731
+SHA512 (assoc-1.0.2.tar.gz) = 20fd0056dcc2dff9504e090be5c2ef27692a795133620e60b9382cfdfbaf26d1019617acf48f0f762e22d699068bc4dbd35a714177ce3a36761c0065708b9168
+Size (assoc-1.0.2.tar.gz) = 3047 bytes
+SHA1 (patch-assoc.cabal) = 76eb9a7b7b3be8f1391c8a176b78812e0f2b6ef2
