@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 06:48:10 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 13:06:25 pho Exp $
 
-SHA1 (unix-compat-0.5.2.tar.gz) = c85207fc6756eb4e9b2f8c9e820aef2ebbedf872
-RMD160 (unix-compat-0.5.2.tar.gz) = d4320e37c31061ef995ab1c2e7afb16f3ef7de00
-SHA512 (unix-compat-0.5.2.tar.gz) = 0a0a98e03edb7c6ab4401a022c3e90f7598b24930cb22ba04711c3f57b8f87990c6669d5cda07196b61d36cb6e0fa8b281822fa99b199c3b78cfccd0bc3f70be
-Size (unix-compat-0.5.2.tar.gz) = 13281 bytes
+SHA1 (unix-compat-0.5.3.tar.gz) = b4fb9418ba1243b3ae3edec183ab8df0a7e6a440
+RMD160 (unix-compat-0.5.3.tar.gz) = 44112972ed3513ce51f091ad85d50daa685c30da
+SHA512 (unix-compat-0.5.3.tar.gz) = f31b91f0ca45e163bc2a0d4a51722dbe06ac76ffb32065280cff6d0ff345a6265dc0a384f31705cb3f63171c514d5ff0f0b0d066e8fe06d63c5e377d5f814d8d
+Size (unix-compat-0.5.3.tar.gz) = 13582 bytes
