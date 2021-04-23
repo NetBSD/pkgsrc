@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/01/09 06:48:15 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/04/23 06:34:48 pho Exp $
 
-SHA1 (time-compat-1.9.2.2.tar.gz) = eef4651e2ded276321a8f7cae7b5b1766d772b2f
-RMD160 (time-compat-1.9.2.2.tar.gz) = 8999a63b4c62ba9c3adf4f1f2998b2348e22ad71
-SHA512 (time-compat-1.9.2.2.tar.gz) = 210e1d6b6b1dcf30337c72d45dd5f229dfbd023a1612f13dccad23131f16437b2b6a43a46e5e1341751c7b6f88f8ef1a9b5efe91b1328b12ff20552e2a952f44
-Size (time-compat-1.9.2.2.tar.gz) = 49652 bytes
-SHA1 (patch-time-compat.cabal) = ab55031e4ad45ac621509c81efa8b14e595657fd
+SHA1 (time-compat-1.9.5.tar.gz) = cf9afab432638a395759a8648e9ab92f10b2622d
+RMD160 (time-compat-1.9.5.tar.gz) = 5307b8fd61e83d2ebc8bdb8dd8a2b44a2a1bb67f
+SHA512 (time-compat-1.9.5.tar.gz) = c5e61242140c5bca4ca3b8e6f9f1058128cce40ac77ed3009a82d511b3ac9c0a2423bf0de1369c49e65a22fb8d864b1c9351994730951e5e302c5d17f131db83
+Size (time-compat-1.9.5.tar.gz) = 59336 bytes
+SHA1 (patch-time-compat.cabal) = 71cbb0962b885cc007ebcba893d5be0f90686918
