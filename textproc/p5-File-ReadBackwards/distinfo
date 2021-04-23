@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:43 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/04/23 06:56:49 schmonz Exp $
 
-SHA1 (File-ReadBackwards-1.05.tar.gz) = 770703360483684e534fd24137e17f9a5a4eeb4d
-RMD160 (File-ReadBackwards-1.05.tar.gz) = 7583d56b7d475585c1bc02ff3be976e5f6ccb4db
-SHA512 (File-ReadBackwards-1.05.tar.gz) = 8e1eeeda0acfdc0b9e1f5234cac37348890fb962e5edd395804d6cf9ab2c221217e2714025303493cafde7ce77721e6c09b2b53825dadb978fafe68f6d7b8c20
-Size (File-ReadBackwards-1.05.tar.gz) = 8943 bytes
+SHA1 (File-ReadBackwards-1.06.tar.gz) = 3c1579d8d17bf6a866aa4e3997c2b133c84fa763
+RMD160 (File-ReadBackwards-1.06.tar.gz) = cf5aeff1ac6d9d34a336ba65199cfbc7f46a6855
+SHA512 (File-ReadBackwards-1.06.tar.gz) = 43b7ebe58728272fbc0518fe6572b31061ba09665443240558b9035573d075c28b52d6230078f24616110d54e51477ad122c985d4fcdb3c3d288cb24e476fe45
+Size (File-ReadBackwards-1.06.tar.gz) = 9739 bytes
