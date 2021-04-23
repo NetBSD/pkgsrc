@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/17 17:18:15 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 10:29:08 pho Exp $
 
-DISTNAME=	haskell-lexer-1.0.2
+DISTNAME=	haskell-lexer-1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
