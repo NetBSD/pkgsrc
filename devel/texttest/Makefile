@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/12/19 11:03:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/23 07:19:39 schmonz Exp $
 
-DISTNAME=		TextTest-4.0.5
+DISTNAME=		TextTest-4.0.7
 PKGNAME=		${DISTNAME:tl}
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=texttest/}
@@ -11,6 +11,7 @@ COMMENT=		Tool for text-based Approval Testing
 LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=		${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
 USE_LANGUAGES=		# none
 
