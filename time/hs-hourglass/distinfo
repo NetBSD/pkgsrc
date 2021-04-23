@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 23:27:03 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 10:16:06 pho Exp $
 
 SHA1 (hourglass-0.2.12.tar.gz) = a37ea48770c72df30b162db8353e71972a836b48
 RMD160 (hourglass-0.2.12.tar.gz) = 6d5bf3030c392f2c7ba524a0872ba7ac0ace7779
 SHA512 (hourglass-0.2.12.tar.gz) = c748d7f875ca0b1ea9034dba1a5cfa3fc4e51613ce24c90b54856fdc385d9ccc5eda3559f1674abf3ea966cc7851891dfee86bad897062a97a79db8408574bdc
 Size (hourglass-0.2.12.tar.gz) = 25797 bytes
+SHA1 (patch-Data_Hourglass_Internal_Unix.hs) = 9f7c525e231a15fa1f0f4c03a79bcdb46659ad31
