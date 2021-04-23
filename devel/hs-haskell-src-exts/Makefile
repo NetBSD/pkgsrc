@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/01/02 04:52:43 pho Exp $
+# $NetBSD: Makefile,v 1.8 2021/04/23 12:16:15 pho Exp $
 
-DISTNAME=	haskell-src-exts-1.22.0
+DISTNAME=	haskell-src-exts-1.23.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,6 +10,4 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	happy>=1.19:../../devel/happy
 
 .include "../../mk/haskell.mk"
-.include "../../devel/hs-fail/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
