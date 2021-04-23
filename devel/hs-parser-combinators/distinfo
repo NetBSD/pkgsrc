@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 14:41:55 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 16:09:09 pho Exp $
 
-SHA1 (parser-combinators-1.2.1.tar.gz) = 64e1ba84b1c626b1416e02c6b73c6b952e97f4aa
-RMD160 (parser-combinators-1.2.1.tar.gz) = 2750598691a6e2408393fae30aabe761c1e303fb
-SHA512 (parser-combinators-1.2.1.tar.gz) = f40df30e60713909cab46473c04889842da2a6326b1c3d78e2cf40ca60687a3e96a5f3c6fca665d1a5e1da9add382cc35cbd331cb6c9afe8580ce7d18fe4dc8a
-Size (parser-combinators-1.2.1.tar.gz) = 10915 bytes
+SHA1 (parser-combinators-1.3.0.tar.gz) = df23615307e5daf90b5a4d3ba8114b8fa942d206
+RMD160 (parser-combinators-1.3.0.tar.gz) = ff2324af1d3345da59f3eb2d609e19589eacb6df
+SHA512 (parser-combinators-1.3.0.tar.gz) = f7a4581d229b788e841d844003e058a6c63827c5cadeb6fe8f1b94e2a920b11d3b08a8a7a412fa95e1b75bca24f6957f88162f8d1af5bb174ca7f91ef47c0b71
+Size (parser-combinators-1.3.0.tar.gz) = 11699 bytes
