@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/23 07:24:30 pho Exp $
+
+SHA1 (data-fix-0.3.1.tar.gz) = ec8c210621e443a702d53b01d9103488de170deb
+RMD160 (data-fix-0.3.1.tar.gz) = b57301b0584fab716b7bdca3954031fab3ad38fc
+SHA512 (data-fix-0.3.1.tar.gz) = 21eb328137a6e4d52a79c73c351e5a89f04747a5ed8188664408ce0aa544a57ab731e267d1d408bbac047ec6a2e9f73232e42e6aa45fcebf7204b6349eec9143
+Size (data-fix-0.3.1.tar.gz) = 5520 bytes
