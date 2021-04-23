@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/01 02:08:38 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 06:54:13 pho Exp $
 
-SHA1 (uuid-types-1.0.3.tar.gz) = ba2dc845681fcf1cbb1de657e8f889762108e726
-RMD160 (uuid-types-1.0.3.tar.gz) = c308fb6772f4dff0a6a7f561610c5a739b636a12
-SHA512 (uuid-types-1.0.3.tar.gz) = 039bccea9ee22388a50e3e233c95afdd3a59f01aa5f552dcd8e8c1ded8f9da210933c58a4d9cc0913c768b587c24ee27fa0eed15e531846ea841b666f513df9e
-Size (uuid-types-1.0.3.tar.gz) = 11999 bytes
-SHA1 (patch-uuid-types.cabal) = 7d7bb385ef7beb742c2e1db5a7f89da705063929
+SHA1 (uuid-types-1.0.4.tar.gz) = d905602d240b0df61bd75daa0b5e528e2e87365a
+RMD160 (uuid-types-1.0.4.tar.gz) = 84086e226c226b79f489b021f4b499ccf04bf459
+SHA512 (uuid-types-1.0.4.tar.gz) = 7b3e0382c60f67d65edbe62da67e690266cdfceb5128583cb49efdd04845c57a5bbd708663ee7b583dc120c75e468c234f21ab4e6006a5acaa11bc83a8b01e04
+Size (uuid-types-1.0.4.tar.gz) = 11537 bytes
