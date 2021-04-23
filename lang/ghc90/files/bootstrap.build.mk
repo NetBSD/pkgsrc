@@ -9,10 +9,6 @@ BUILD_MAN          = NO
 BUILD_SPHINX_HTML  = NO
 BUILD_SPHINX_PDF   = NO
 
-# Enabling evil-splitter reduces bindist size, which is good. However
-# it introduces a run-time dependency on perl, which is unacceptable.
-SplitObjs          = NO
-
 # We only want vanilla libraries and rts. No profiling, no shared
 # libraries, no debugging, no event logging.
 GhcLibWays         = v
@@ -32,6 +28,8 @@ BIN_DIST_NAME      = ghc-$(ProjectVersion)-boot
 # Don't build or use dynamic Haskell libraries.
 DYNAMIC_GHC_PROGRAMS = NO
 
+# The build system attempts to link GHC with threaded RTS by default,
+# which fails because we only build "vanilla" RTS.
 ghc_stage1_CONFIGURE_OPTS += -f-threaded
 ghc_stage2_CONFIGURE_OPTS += -f-threaded
 ghc_stage3_CONFIGURE_OPTS += -f-threaded

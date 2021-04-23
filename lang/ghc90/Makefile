@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/22 18:15:00 pho Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/23 00:08:02 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -44,18 +44,10 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 # -----------------------------------------------------------------------------
 # Tools
 #
-# The runtime dependency on perl is due to the evil splitter
-# (lib/${PKGNAME_NOREV}/ghc-split).
-USE_TOOLS+=			autoconf gmake perl:run
+USE_TOOLS+=			autoconf gmake
 GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
-
-# TODO: Disable the splitter entirely so that we can drop the runtime
-# dependency on perl. The purpose of the splitter is to perform a dead
-# code elimination by breaking .o files into many pieces. This only
-# makes sense when linking executables statically, which is rarely
-# done these days.
 
 
 # -----------------------------------------------------------------------------
@@ -78,7 +70,6 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
 CONFIGURE_ENV+= \
 	ac_cv_prog_fp_prog_ar=${AR:Q} \
 	ac_cv_prog_LIBTOOL=libtool \
-	PerlCmd=${PERL5:Q} \
 	CC=${CC:Q} \
 	LD=${LD:Q}
 
