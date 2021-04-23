@@ -1,24 +1,7 @@
-$NetBSD: distinfo,v 1.142 2021/04/06 10:25:01 tnn Exp $
+$NetBSD: distinfo,v 1.143 2021/04/23 07:14:44 adam Exp $
 
-SHA1 (wireshark-3.4.4.tar.xz) = fa5c553596dcc6a59735f96a9a0845e3c40abab2
-RMD160 (wireshark-3.4.4.tar.xz) = 677c151b94af472ae3ae390e51781ec0cc371ddd
-SHA512 (wireshark-3.4.4.tar.xz) = 388b5634894f08bb1a0052f989133c2a8457fbf6525d1bb557f3ffce73da8063fd9fe82b50b5ababc30fa36ce154bf9d2a3d91d76e03913d6516ca61b4b6b172
-Size (wireshark-3.4.4.tar.xz) = 32290424 bytes
-SHA1 (patch-CMakeLists.txt) = f00912610e63fa50ccd85ff93382de85b005da98
-SHA1 (patch-caputils_capture__ifinfo.h) = adb4c22accb41b3ac402b458be4efaa258abd4b8
-SHA1 (patch-epan_conversation.h) = b3cdd98602570cbcb33b35e9362ff8802753edd8
-SHA1 (patch-epan_dissectors_dissectors.h) = 9a31c52fbbb97bf44444583a2b787243fbbf74b6
-SHA1 (patch-epan_epan.h) = 6bcd31b572a763092454be57a49c522cbba6824b
-SHA1 (patch-epan_epan__dissect.h) = 9fe4d59c38786c1981ada2dc356f0d01a0703bf0
-SHA1 (patch-epan_prefs.h) = bdb744b3f96ed6965576316bcde121694f0de947
-SHA1 (patch-epan_value__string.h) = b3ffb1931a1e47c664fc50bcd121ec2880ce05ea
-SHA1 (patch-epan_wmem_wmem__user__cb__int.h) = d7a1f31771244521de3291b3a360e34bf47f6fe5
-SHA1 (patch-ui_packet__range.h) = c2dafea7fdebc15e46782e02dce32a00e3f32c98
-SHA1 (patch-ui_qt_CMakeLists.txt) = 7fd755c4c4c2aafbf986751e9ba0ff9d7f4d32dc
-SHA1 (patch-ui_recent.h) = ce8769e82c8a90feed044ca31e363349b02bafcb
-SHA1 (patch-ui_rtp__media.h) = 355f9009107bde38537303cf18c03e2c7017587f
-SHA1 (patch-ui_rtp__stream.h) = ad756a7dff9fcfc637401f4bde0cff05bad87d62
-SHA1 (patch-ui_taps.h) = d8ad1f7568b06bfd55bb8c43303ed6782fba319e
-SHA1 (patch-ui_voip__calls.h) = 516ced815808d25574553de807b12ba08501b328
-SHA1 (patch-wsutil_file__util.h) = 06b284f1626dd1f1eca751f0e2113dacb1123b29
-SHA1 (patch-wsutil_plugins.h) = b663efdc7f78cd6b268321d7b7445585f7119b13
+SHA1 (wireshark-3.4.5.tar.xz) = d01a9b5f58206fb458fe9fc2dac88ad0ea7152ce
+RMD160 (wireshark-3.4.5.tar.xz) = 9f97f8bd34d09cbe6afc2bf655b44940a90154b6
+SHA512 (wireshark-3.4.5.tar.xz) = f54d9287a48f09bbc085170791b5ca2dcc84cda55040f45f2c4a6abbe828548391e4a931536163c781e69843765a598bd29a240ad43276d0d1bb42d1cd23972a
+Size (wireshark-3.4.5.tar.xz) = 32300144 bytes
+SHA1 (patch-CMakeLists.txt) = 371f16d57fd6d33c2c1c8cb4f54cf3c16ca2afce
