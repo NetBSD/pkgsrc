@@ -1,0 +1,3 @@
+Provides generalisations of swap :: (a,b) -> (b,a) and assoc ::
+((a,b),c) -> (a,(b,c)) to Bifunctors supporting similar operations
+(e.g. Either, These).
