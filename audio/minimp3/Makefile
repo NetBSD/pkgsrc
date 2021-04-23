@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/04/19 10:14:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 16:40:29 nia Exp $
 
-DISTNAME=	minimp3-20200120
+DISTNAME=	minimp3-20210120
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lieff/}
 GITHUB_PROJECT=	minimp3
