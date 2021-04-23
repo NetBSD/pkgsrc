@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2309 2021/04/23 16:05:55 rin Exp $
+$NetBSD: CHANGES-2021,v 1.2310 2021/04/23 16:08:32 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/texttest to 4.0.7 [schmonz 2021-04-23]
 	Updated sysutils/xplr to 0.5.6 [pin 2021-04-23]
 	Updated devel/nspr to 4.30.0nb1 [rin 2021-04-23]
+	Updated devel/nss to 3.64.0nb2 [rin 2021-04-23]
