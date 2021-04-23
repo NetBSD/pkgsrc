@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 13:52:56 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 09:38:28 pho Exp $
 
-SHA1 (ipynb-0.1.tar.gz) = 2c400ea7089f867a12576f9d62dcc68b859bd451
-RMD160 (ipynb-0.1.tar.gz) = 6a9c396e7611e12a06c126bfaa5f657d2beff51a
-SHA512 (ipynb-0.1.tar.gz) = 8717dac6496905afc5e8735abc3b3a4a90b171253b035efa0751a6311b901caad563fdfeaa455987c1307d0532273ab80be37256562143db575f13c326843bf4
-Size (ipynb-0.1.tar.gz) = 632774 bytes
+SHA1 (ipynb-0.1.0.1.tar.gz) = 82efd73aad791f68a38f43bbfc43afd4e6edc704
+RMD160 (ipynb-0.1.0.1.tar.gz) = 57982bbd73a87acef989369cb27611c7909e6787
+SHA512 (ipynb-0.1.0.1.tar.gz) = b1e547ac9353c84619832c723586146d2fd72c85c75d11b9ff99c16852ae2dfd1a2d61382ab9cc54bc9ad2bf8e1c3c0a8dc50d49c034d525e7a3393057a0275b
+Size (ipynb-0.1.0.1.tar.gz) = 631919 bytes
