@@ -1,0 +1,17 @@
+This package provides three useful generalizations:
+
+class Functor f => FunctorWithIndex i f | f -> i where
+  imap :: (i -> a -> b) -> f a -> f b
+
+class Foldable f => FoldableWithIndex i f | f -> i where
+  ifoldMap :: Monoid m => (i -> a -> m) -> f a -> m
+
+class (FunctorWithIndex i t, FoldableWithIndex i t, Traversable t)
+      => TraversableWithIndex i t | t -> i where
+  itraverse :: Applicative f => (i -> a -> f b) -> t a -> f (t b)
+
+This package contains instances for types in GHC boot libraries. For
+some additional instances see indexed-traversable-instances.
+
+The keys package provides similar functionality, but uses (associated)
+TypeFamilies instead of FunctionalDependencies.
