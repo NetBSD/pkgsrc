@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/11 17:52:04 rillig Exp $
-${HS_INTF}/package-description
-${HS_INTF}/package-id
-${HS_IMPL}/GHC/Paths.dyn_hi
-${HS_IMPL}/GHC/Paths.hi
-${HS_IMPL}/GHC/Paths.p_hi
-${HS_IMPL}/libHS${HS_PKGID}.a
-${HS_IMPL}/libHS${HS_PKGID}_p.a
+@comment $NetBSD: PLIST,v 1.4 2021/04/23 11:38:22 pho Exp $
+lib/ghc-paths-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ghc-paths-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Paths.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Paths.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Paths.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${HS_DOCS}/LICENSE
-${HS_DOCS}/html/GHC-Paths.html
-${HS_DOCS}/html/doc-index.html
-${HS_DOCS}/html/ghc-paths.haddock
-${HS_DOCS}/html/haddock-bundle.min.js
-${HS_DOCS}/html/index.html
-${HS_DOCS}/html/linuwial.css
-${HS_DOCS}/html/meta.json
-${HS_DOCS}/html/quick-jump.css
-${HS_DOCS}/html/synopsis.png
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/GHC-Paths.html
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/ghc-paths.haddock
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/ghc-paths-${PKGVERSION}/html/synopsis.png
