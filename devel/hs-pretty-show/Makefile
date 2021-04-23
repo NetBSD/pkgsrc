@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/22 00:22:29 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/23 10:31:55 pho Exp $
 
-DISTNAME=	pretty-show-1.9.5
+DISTNAME=	pretty-show-1.10
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
