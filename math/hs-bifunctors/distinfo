@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 04:45:31 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 08:00:24 pho Exp $
 
-SHA1 (bifunctors-5.5.6.tar.gz) = e69258273335874c755c95784790309455124402
-RMD160 (bifunctors-5.5.6.tar.gz) = 1f119cd4de7bbec44f353cd420b7b739208389dd
-SHA512 (bifunctors-5.5.6.tar.gz) = d78471bdf9c83c77d49825321984964e165c77ee4f02f8c4232ce272246057b0064b68553f8d70a11a930fc771dc55a2991ff63d6d7af89bb749f23737ba6a5b
-Size (bifunctors-5.5.6.tar.gz) = 44721 bytes
+SHA1 (bifunctors-5.5.10.tar.gz) = ed4f6b665c19f8c13bfee0eb40966f87dd20aea9
+RMD160 (bifunctors-5.5.10.tar.gz) = 8b8084cd50c0866cb2b88675a0e7705492294f80
+SHA512 (bifunctors-5.5.10.tar.gz) = d2f1db9ce38b6404c9461973d7b977398c746a062443bb12298578ac85d4f9c1b272be2ff7dc5d782dea393b21ee2ad0eefe33aaa9a11233c20d111c615ce7c5
+Size (bifunctors-5.5.10.tar.gz) = 45810 bytes
