@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/08/31 18:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/23 06:56:49 schmonz Exp $
 #
 
-DISTNAME=		File-ReadBackwards-1.05
+DISTNAME=		File-ReadBackwards-1.06
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		10
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 
