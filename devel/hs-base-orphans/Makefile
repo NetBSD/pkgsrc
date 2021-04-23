@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/12/31 17:57:42 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 07:54:05 pho Exp $
 
-DISTNAME=	base-orphans-0.8.1
+DISTNAME=	base-orphans-0.8.4
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
