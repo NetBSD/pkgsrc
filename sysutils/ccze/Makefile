@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 21:28:42 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/23 22:25:03 wiz Exp $
 
 DISTNAME=	ccze-0.2.1
 PKGREVISION=	4
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://bonehunter.rulez.org/pub/ccze/stable/
+#MASTER_SITES=	ftp://bonehunter.rulez.org/pub/ccze/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bonehunter.rulez.org/software/ccze/
