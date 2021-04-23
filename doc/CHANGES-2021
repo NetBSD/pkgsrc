@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2305 2021/04/23 06:56:58 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2306 2021/04/23 07:16:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3641,3 +3641,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/wordpress to 5.7.1 [morr 2021-04-23]
 	Updated editors/vim-share to 8.2.2800 [morr 2021-04-23]
 	Updated textproc/p5-File-ReadBackwards to 1.06 [schmonz 2021-04-23]
+	Updated net/wireshark to 3.4.5 [adam 2021-04-23]
+	Updated lang/npm to 6.14.13 [adam 2021-04-23]
