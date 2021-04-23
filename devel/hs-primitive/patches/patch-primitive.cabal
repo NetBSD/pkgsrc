@@ -1,0 +1,15 @@
+$NetBSD: patch-primitive.cabal,v 1.1 2021/04/23 04:58:10 pho Exp $
+
+Fix build with GHC 9.
+
+--- primitive.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ primitive.cabal
+@@ -53,7 +53,7 @@ Library
+         Data.Primitive.Internal.Compat
+         Data.Primitive.Internal.Operations
+ 
+-  Build-Depends: base >= 4.5 && < 4.15
++  Build-Depends: base >= 4.5 && < 5
+                , deepseq >= 1.1 && < 1.5
+                , transformers >= 0.2 && < 0.6
+   if !impl(ghc >= 8.0)
