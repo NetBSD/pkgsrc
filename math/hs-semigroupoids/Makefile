@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/03 05:15:10 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 13:15:46 pho Exp $
 
-DISTNAME=	semigroupoids-5.3.4
+DISTNAME=	semigroupoids-5.3.5
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,7 +11,6 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-base-orphans/buildlink3.mk"
 .include "../../math/hs-bifunctors/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../math/hs-contravariant/buildlink3.mk"
 .include "../../math/hs-distributive/buildlink3.mk"
 .include "../../math/hs-comonad/buildlink3.mk"

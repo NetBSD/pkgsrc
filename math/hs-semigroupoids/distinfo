@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 05:15:10 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 13:15:46 pho Exp $
 
-SHA1 (semigroupoids-5.3.4.tar.gz) = 18340c81e2895e44ed028fc7e8217ebd60a201f5
-RMD160 (semigroupoids-5.3.4.tar.gz) = f21dd91241a6c9b79ae8d82f7c941814f4e25967
-SHA512 (semigroupoids-5.3.4.tar.gz) = b4053a856e1c2d3f20f984216f008ff264cedd2ccc3cc39ca3b70bc296d81ea8c1e6dd655bb8a6d1b9a44084e02d74a26cd4eb7264e4732e98be3ec351dc6e3a
-Size (semigroupoids-5.3.4.tar.gz) = 26307 bytes
+SHA1 (semigroupoids-5.3.5.tar.gz) = e3965f7254884a8cf024faa5f11e34195c7d1fc1
+RMD160 (semigroupoids-5.3.5.tar.gz) = a86367e3ace8baa7972f75c4c38925741d514230
+SHA512 (semigroupoids-5.3.5.tar.gz) = 472a46ad2721c7007d73db6b560af525c4cf6889d8633486c4330bbb40d1946a1400b21a0fe1b323a7211bf8e9aa1efaf41967e3e578d5ad8e6e79dda2e27d04
+Size (semigroupoids-5.3.5.tar.gz) = 23362 bytes
