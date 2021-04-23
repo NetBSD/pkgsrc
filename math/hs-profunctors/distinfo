@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 05:03:54 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 13:11:36 pho Exp $
 
-SHA1 (profunctors-5.5.1.tar.gz) = 1e690a702f085f6b2f38e951bd4b0ea6a319342c
-RMD160 (profunctors-5.5.1.tar.gz) = 1b8431cac6ea8ab675bd0d2cd6dcaae5cf024722
-SHA512 (profunctors-5.5.1.tar.gz) = 6f2b3cfe7ab629dd224319eef020bf92068a0b6b66019ab11dacb0e3540a2581605849037a9f2c0e1bca4330a4bce63266c9378cdb1bd612cdce52e7dae53481
-Size (profunctors-5.5.1.tar.gz) = 29825 bytes
+SHA1 (profunctors-5.6.2.tar.gz) = 5522ac84971563dd2d9b0687fa9bf6852d0f568e
+RMD160 (profunctors-5.6.2.tar.gz) = 08f99064f84bb517a02e4ba21801e44e2145bcab
+SHA512 (profunctors-5.6.2.tar.gz) = ddf33426fdf52dbe0ffea5c9124e1d35b79696564b8e88bcd7a015b8361634566e5d35135cee69c6dc2fa2bbb870d9f624710f98e122078f7f3a82bbdacad690
+Size (profunctors-5.6.2.tar.gz) = 28522 bytes
