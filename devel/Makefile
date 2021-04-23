@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3359 2021/04/19 01:55:49 wen Exp $
+# $NetBSD: Makefile,v 1.3360 2021/04/23 07:25:20 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -570,6 +570,7 @@ SUBDIR+=	hs-data-default-instances-base
 SUBDIR+=	hs-data-default-instances-containers
 SUBDIR+=	hs-data-default-instances-dlist
 SUBDIR+=	hs-data-default-instances-old-locale
+SUBDIR+=	hs-data-fix
 SUBDIR+=	hs-deepseq-generics
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-echo
