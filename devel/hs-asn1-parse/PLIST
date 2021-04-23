@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:51:59 rillig Exp $
-${HS_INTF}/package-description
-${HS_INTF}/package-id
-${HS_IMPL}/Data/ASN1/Parse.dyn_hi
-${HS_IMPL}/Data/ASN1/Parse.hi
-${HS_IMPL}/Data/ASN1/Parse.p_hi
-${HS_IMPL}/libHS${HS_PKGID}.a
-${HS_IMPL}/libHS${HS_PKGID}_p.a
+@comment $NetBSD: PLIST,v 1.2 2021/04/23 10:24:54 pho Exp $
+lib/asn1-parse-${PKGVERSION}/${HS_VERSION}/package-description
+lib/asn1-parse-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${HS_DOCS}/LICENSE
-${HS_DOCS}/html/Data-ASN1-Parse.html
-${HS_DOCS}/html/asn1-parse.haddock
-${HS_DOCS}/html/doc-index.html
-${HS_DOCS}/html/haddock-bundle.min.js
-${HS_DOCS}/html/index.html
-${HS_DOCS}/html/linuwial.css
-${HS_DOCS}/html/meta.json
-${HS_DOCS}/html/quick-jump.css
-${HS_DOCS}/html/synopsis.png
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/Data-ASN1-Parse.html
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/asn1-parse.haddock
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/synopsis.png
