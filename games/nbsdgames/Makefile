@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/23 06:22:10 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/23 06:23:04 nia Exp $
 
 DISTNAME=	nbsdgames-v4.0
 PKGNAME=	${DISTNAME:S/-v/-/1}
@@ -12,7 +12,6 @@ LICENSE=	public-domain
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c99
 
 BUILD_DEFS+=	VARBASE
