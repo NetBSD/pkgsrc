@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2021/02/18 15:07:27 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/23 04:53:25 pho Exp $
 
-DISTNAME=	integer-logarithms-1.0.3
+DISTNAME=	integer-logarithms-1.0.3.1
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Integer logarithms
 LICENSE=	mit
 
-BUILDLINK_API_DEPENDS.ghc+=	ghc<8.10
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
