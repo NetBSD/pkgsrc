@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/22 18:53:55 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 06:22:10 nia Exp $
 
 DISTNAME=	nbsdgames-v4.0
 PKGNAME=	${DISTNAME:S/-v/-/1}
@@ -21,7 +21,7 @@ BUILD_DEFS+=	VARBASE
 
 CFLAGS+=	${BUILDLINK_LDADD.curses}
 
-.if !empty(CURSES_TYPE:M*ncurses*)
+.if empty(CURSES_TYPE:M*ncurses*)
 CFLAGS+=	-DNO_MOUSE=1
 .endif
 
