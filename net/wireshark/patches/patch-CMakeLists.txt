@@ -1,36 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2021/04/06 10:25:01 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2021/04/23 07:14:44 adam Exp $
 
 Do not make application bundle on Darwin.
-Avoid
-	CMake Error at CMakeLists.txt:3021 (install):
-  	install FILES given directory
-  	"${WRKDIR}/.buildlink/cmake-Modules" to install.
 
-From 6ef6e8f607456e239e5f1a326803846930d34fa8 Mon Sep 17 00:00:00 2001
-From: Gerald Combs <gerald@wireshark.org>
-Date: Fri, 26 Mar 2021 12:52:01 -0700
-Subject: [PATCH] CMake: Enable AUTO{MOC,UIC,RCC} earlier.
-
-Enable CMAKE_AUTOMOC, CMAKE_AUTOUIC, and CMAKE_AUTORCC before searching
-for Qt packages. This is apparently required for CMake 3.20.0 and later.
-Fixes #17314.
-
-(cherry picked from commit be2b0fc810fb2f2a80e471138dc29f0cbe87b209)
-
---- CMakeLists.txt.orig	2021-03-10 18:21:20.000000000 +0000
+--- CMakeLists.txt.orig	2021-04-21 17:14:36.000000000 +0000
 +++ CMakeLists.txt
-@@ -1083,6 +1083,10 @@ ws_find_package(Systemd BUILD_sdjournal 
- 
- # Build the Qt GUI?
- if(BUILD_wireshark)
-+	set(CMAKE_AUTOMOC ON)
-+	set(CMAKE_AUTOUIC ON)
-+	set(CMAKE_AUTORCC ON)
-+
- 	# Untested, may not work if CMAKE_PREFIX_PATH gets overwritten
- 	# somewhere. The if WIN32 in this place is annoying as well.
- 	if(WIN32)
-@@ -1388,7 +1392,7 @@ else ()
+@@ -1425,7 +1425,7 @@ else ()
  	set(EXTCAP_INSTALL_LIBDIR "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/extcap" CACHE INTERNAL "The extcap dir")
  endif()
  
@@ -39,7 +13,7 @@ Fixes #17314.
  	#
  	# As https://developer.apple.com/library/archive/technotes/tn2206/_index.html
  	# says,
-@@ -2345,7 +2349,11 @@ if(BUILD_wireshark AND QT_FOUND)
+@@ -2378,7 +2378,11 @@ if(BUILD_wireshark AND QT_FOUND)
  		${MINIZIP_LIBRARIES}
  	)
  
@@ -52,7 +26,7 @@ Fixes #17314.
  	if(WIN32)
  		set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT wireshark)
  	endif()
-@@ -3284,12 +3292,12 @@ endif()
+@@ -3317,12 +3321,12 @@ endif()
  
  install(
  	FILES
