@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/09/15 15:34:05 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 10:03:01 pho Exp $
 
-SHA1 (network-3.1.1.1.tar.gz) = 21cc751e5ad5aa9902a5ec2f9e87fee8cf9d8a14
-RMD160 (network-3.1.1.1.tar.gz) = 67e11c8f060e42001c95b6e2de5d5498d65d02de
-SHA512 (network-3.1.1.1.tar.gz) = caafd3c0730d0f6378230e0acdf285ca50480f02a44963c1f9ae9dc3d53cd496dd3171d7ff4bf79a1e072b85698d74f82d8075b999d5ba1d17ab1429c8094ca8
-Size (network-3.1.1.1.tar.gz) = 118478 bytes
-SHA1 (patch-include_HsNet.h) = 18eb8ef826a829bf28b53f88c19b87d741d97015
+SHA1 (network-3.1.2.1.tar.gz) = fe5eea5a9b811a7600b4adb147834bb8fb3628b6
+RMD160 (network-3.1.2.1.tar.gz) = f7992326e85ba12dfb7ce2074dfd94e45170d421
+SHA512 (network-3.1.2.1.tar.gz) = 7c9f1a2fd417b5c03d430226ff6641ada06ce5f2a6e0ea90e6d92880a59656d54f186819715f6a4a80bb2a5b1d6c7236b0aa5112d7901d5ef698cc28cc10ce44
+Size (network-3.1.2.1.tar.gz) = 136889 bytes
+SHA1 (patch-Network_Socket_Syscall.hs) = 4a934a45ccd7ef04e9cfad4ef72c644e0bdb4f66
