@@ -1,15 +1,18 @@
-$NetBSD: patch-vector.cabal,v 1.2 2020/01/11 08:50:16 pho Exp $
+$NetBSD: patch-vector.cabal,v 1.3 2021/04/23 07:00:57 pho Exp $
 
-Fix build with GHC 8.8
+Fix build with GHC 9
 
 --- vector.cabal.orig	2001-09-09 01:46:40.000000000 +0000
 +++ vector.cabal
-@@ -144,7 +144,7 @@ Library
+@@ -144,9 +144,9 @@ Library
    Install-Includes:
          vector.h
  
 -  Build-Depends: base >= 4.5 && < 4.13
-+  Build-Depends: base >= 4.5 && < 4.14
++  Build-Depends: base >= 4.5 && < 5
                 , primitive >= 0.5.0.1 && < 0.8
-                , ghc-prim >= 0.2 && < 0.6
+-               , ghc-prim >= 0.2 && < 0.6
++               , ghc-prim >= 0.2 && < 0.8
                 , deepseq >= 1.1 && < 1.5
+   if !impl(ghc > 8.0)
+     Build-Depends: fail == 4.9.*
