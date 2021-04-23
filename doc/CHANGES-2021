@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2312 2021/04/23 20:15:24 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2313 2021/04/23 20:40:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -11,6 +11,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-pkgbuild to 1.2.0 [mef 2021-01-01]
 	Added devel/R-gert version 1.0.2 [mef 2021-01-01]
 	Added devel/R-rappdirs version 0.3.1 [mef 2021-01-01]
+	Added devel/R-testit version 0.12 [mef 2021-01-01]
 	Updated devel/boost-libs to 1.75.0 [ryoon 2021-01-01]
 	Updated devel/boost-build to 1.75.0 [ryoon 2021-01-01]
 	Updated devel/boost-docs to 1.75.0 [ryoon 2021-01-01]
