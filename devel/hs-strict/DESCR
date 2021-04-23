@@ -1,0 +1,14 @@
+This package provides strict versions of some standard Haskell data
+types (pairs, Maybe and Either). It also contains strict IO
+operations.
+
+It is common knowledge that lazy datastructures can lead to
+space-leaks. This problem is particularly prominent, when using lazy
+datastructures to store the state of a long-running application in
+memory. One common solution to this problem is to use seq and its
+variants in every piece of code that updates your state. However a
+much easier solution is to use fully strict types to store such state
+values. By "fully strict types" we mean types for whose values it
+holds that, if they are in weak-head normal form, then they are also
+in normal form. Intuitively, this means that values of fully strict
+types cannot contain unevaluated thunks.
