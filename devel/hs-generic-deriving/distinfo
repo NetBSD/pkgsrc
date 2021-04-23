@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/12/31 15:49:52 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 07:07:30 pho Exp $
 
-SHA1 (generic-deriving-1.13.1.tar.gz) = 3b8629766aba33750dd53c6550f655711530b65d
-RMD160 (generic-deriving-1.13.1.tar.gz) = 3a4d02a6721447d03d44fa0babb457a5575ee8ff
-SHA512 (generic-deriving-1.13.1.tar.gz) = 946e3a4da31141fb1156690e0fb51cd3ef0a4f62c0e5b68d0e0d31953d8999885011acb743edd5d0bf88985422c9c74a727dd7f775316911da57ff49716103e2
-Size (generic-deriving-1.13.1.tar.gz) = 68256 bytes
+SHA1 (generic-deriving-1.14.tar.gz) = 0fbf83112786781558050c3491f145a420e660b6
+RMD160 (generic-deriving-1.14.tar.gz) = e12e055a27fb6e7b16dca0c5f5416e4625d357f9
+SHA512 (generic-deriving-1.14.tar.gz) = 794b4846bbc34981301b3f973d6812cd93c2b777e6938347a10cfbf0a8527d885aa0e5dd4a4be9f2e7a89620d4c9bd2d663b0b9b54ed4bc0e82ccc4bd2712f35
+Size (generic-deriving-1.14.tar.gz) = 69658 bytes
