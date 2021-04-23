@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 01:00:24 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 09:35:56 pho Exp $
 
 SHA1 (memory-0.15.0.tar.gz) = 30305f16ec4b17026da040bcf6a1a9a0de6473a6
 RMD160 (memory-0.15.0.tar.gz) = ac4d2fdeb6a462173b200a721a25b0d2e799e5ad
 SHA512 (memory-0.15.0.tar.gz) = 49aabf5fdaddae597df6d8f30a3e07c4d6d70fcc7b9146452a4ad4e81858786041676bc780e2b048fd683cc7c0d799d4579596c14fae940ea57954e9a7ee9129
 Size (memory-0.15.0.tar.gz) = 42299 bytes
+SHA1 (patch-Data_ByteArray_Bytes.hs) = 771298aac733f10d5ffeaa5243f3c6bfa49bcbfd
+SHA1 (patch-Data_ByteArray_ScrubbedBytes.hs) = 332856ebea1d7bf556a890945def7ef9dbe5d17b
+SHA1 (patch-Data_Memory_MemMap_Posix.hsc) = 97273516ad9731285d18315ab60884ad1c27642e
