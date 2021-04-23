@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/01 03:44:06 pho Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/23 10:46:52 pho Exp $
 
-DISTNAME=	QuickCheck-2.13.2
+DISTNAME=	QuickCheck-2.14.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
