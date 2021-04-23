@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2021/04/22 18:15:00 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2021/04/23 00:08:02 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -79,13 +79,6 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .for i in ${DISTFILES:M*-boot-*} netbsd-9.0-amd64-libterminfo.tar.gz
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
-
-# Existence of libelf makes LeadingUnderscore being "NO", which is
-# incorrect for this platform. See ${WRKSRC}/aclocal.m4
-# (FP_LEADING_UNDERSCORE)
-.if ${OPSYS} == "Darwin"
-CONFLICTS+=	libelf-[0-9]*
-.endif
 
 # current bootstrap binary kit for SmartOS is built with ncurses5
 .if !empty(MACHINE_PLATFORM:MSunOS-*) && ${OS_VARIANT:U} == "SmartOS"
