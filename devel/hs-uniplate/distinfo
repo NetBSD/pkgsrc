@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/01/02 09:18:48 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/23 12:51:29 pho Exp $
 
-SHA1 (uniplate-1.6.12.tar.gz) = a26cd8ff06d8ef2b516ac6a3c1ff39ced278bffa
-RMD160 (uniplate-1.6.12.tar.gz) = 43075b1656cfd53356391a71bc5647030945dfc2
-SHA512 (uniplate-1.6.12.tar.gz) = 049b07e8a57db7e44d91fc9c8dcfb5c49b78a692a730061763cb8bcc4fbc3ed1065bd7a4c337e3d344693df882a0718b6d3bb6a6ea1e7d520a36d252d7038b07
-Size (uniplate-1.6.12.tar.gz) = 30055 bytes
-SHA1 (patch-uniplate.cabal) = c6682f3fca34e74f47d4da9eb9b9799f7aa7dab4
+SHA1 (uniplate-1.6.13.tar.gz) = b199e0edc54136bce1b40d8026522a7d23431d99
+RMD160 (uniplate-1.6.13.tar.gz) = b0fd819306f32029a1f2c969efae84d333fc413e
+SHA512 (uniplate-1.6.13.tar.gz) = 8cab820d40b318c7483319de4174bdbd3637e1c93f42bc6b796c6a8a1fa93331c0a2ff3b7c77f6a2ec0509fb48bb922ef732c7d79e8e6bcf7987bde949459310
+Size (uniplate-1.6.13.tar.gz) = 29787 bytes
