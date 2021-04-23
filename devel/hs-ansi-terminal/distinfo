@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/30 00:03:50 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/23 10:49:00 pho Exp $
 
-SHA1 (ansi-terminal-0.10.2.tar.gz) = 12d8107bf40b9cd7c1ed8730578f23a60e9de961
-RMD160 (ansi-terminal-0.10.2.tar.gz) = b690c07e323a1c5146ffa741f620c15dbc5f67ec
-SHA512 (ansi-terminal-0.10.2.tar.gz) = f2e250cd3558570a463a5d869a7e919bb553ed36a4efb5038645b7db5ab57ccda61fb5b9f7c9b2ff605f684f3ddf5bf8d32918c1c4161106aa67cf6dd8856047
-Size (ansi-terminal-0.10.2.tar.gz) = 35818 bytes
+SHA1 (ansi-terminal-0.11.tar.gz) = 5e0af55d0986ff5c2d8b3cf1467268741298c08e
+RMD160 (ansi-terminal-0.11.tar.gz) = 72fac63242ccad2a93aa6dbeaa72e3b248c717c3
+SHA512 (ansi-terminal-0.11.tar.gz) = 2a608da18bbb3d11373dc0c6ee1bf4c890d5d4e39a2b13e547c7a3a4060eb86789d6afa04d1bd9e5df91f3745ea33adea8b15df213d39e75eca296275a74700d
+Size (ansi-terminal-0.11.tar.gz) = 36074 bytes
