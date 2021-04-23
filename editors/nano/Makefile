@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/04/23 17:05:26 thor Exp $
+# $NetBSD: Makefile,v 1.97 2021/04/23 18:18:02 nia Exp $
 
 DISTNAME=	nano-5.6.1
 CATEGORIES=	editors
@@ -12,14 +12,12 @@ LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt msgmerge xgettext gmake
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-multibuffer
 CONFIGURE_ARGS+=	--enable-nanorc
 CONFIGURE_ARGS+=	--enable-extra
-# Help it find our preferrend ncursesw using pkg-config instead
-# of resorting to outdated ncursesw5-config in host system on SLES 11.
-CONFIGURE_ARGS+=        PKG_CONFIG=pkg-config
 
 INFO_FILES=		yes
 
