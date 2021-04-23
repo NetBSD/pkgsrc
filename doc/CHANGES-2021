@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2303 2021/04/23 06:10:17 morr Exp $
+$NetBSD: CHANGES-2021,v 1.2304 2021/04/23 06:34:30 morr Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3639,3 +3639,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/nbsdgames version 4.0 [nia 2021-04-22]
 	Updated devel/boost-jam to 1.76.0nb1 [wiz 2021-04-22]
 	Updated www/wordpress to 5.7.1 [morr 2021-04-23]
+	Updated editors/vim-share to 8.2.2800 [morr 2021-04-23]
