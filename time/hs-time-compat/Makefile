@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/12/31 18:06:15 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/23 06:34:48 pho Exp $
 
-DISTNAME=	time-compat-1.9.2.2
+DISTNAME=	time-compat-1.9.5
 CATEGORIES=	time
 
 MAINTAINER=	pho@cielonegro.org
