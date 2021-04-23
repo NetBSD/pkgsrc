@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 15:40:14 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/23 16:41:34 pho Exp $
 
-SHA1 (optparse-applicative-0.15.1.0.tar.gz) = e569b5a7db445b1deb2d6de27970676970ffb945
-RMD160 (optparse-applicative-0.15.1.0.tar.gz) = 64c0b3a21740adb2f6dababe87b25a3078387cac
-SHA512 (optparse-applicative-0.15.1.0.tar.gz) = e7ab0a2b4812bbfe7802c2d51a45a4f5a5ea162b094631dc6ee4cd79e5def4101ccb04305cfa16942926809ed656f91aa6f68c4d98e93171ca9be99ba40cc51e
-Size (optparse-applicative-0.15.1.0.tar.gz) = 56203 bytes
+SHA1 (optparse-applicative-0.16.1.0.tar.gz) = 5b6b393768bf51bd9d787811829e20e8e2232d7f
+RMD160 (optparse-applicative-0.16.1.0.tar.gz) = d23e262a230b520204357d73de963b6cd1ec0e8e
+SHA512 (optparse-applicative-0.16.1.0.tar.gz) = 46bdb37b1328a6dbf271dcdb3483266c0c8412fc489e68e32b114745d9cf0108dd49df6cb565df3470121931a769f11996f5fd9fd8e9e38ed6b6853faab56710
+Size (optparse-applicative-0.16.1.0.tar.gz) = 58315 bytes
