@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/01/01 03:44:06 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/23 10:46:52 pho Exp $
 
-SHA1 (QuickCheck-2.13.2.tar.gz) = b9e6f4f5da76373bd72fc8089aecc8b9e2964a8e
-RMD160 (QuickCheck-2.13.2.tar.gz) = 84b1a38c702c3f1f445f597147b3055fc9221748
-SHA512 (QuickCheck-2.13.2.tar.gz) = d2c92caec8bdf9089483b1f256f17f3d50e066f57eddb630f1831a232c4e33a0d4f55a0f927aa433cd3379283fa2615fd2937941e6847b234ea00b0fbeb46b98
-Size (QuickCheck-2.13.2.tar.gz) = 70427 bytes
+SHA1 (QuickCheck-2.14.2.tar.gz) = 392b8376ef4e312eac2589c414f70aa067d714ca
+RMD160 (QuickCheck-2.14.2.tar.gz) = 361c5f6a40d82ac93125b5e754ef562de6693850
+SHA512 (QuickCheck-2.14.2.tar.gz) = 84decd354e6093bc72afd125410499dd4be3ae8fdbf0a3b466011b4dbcb5c5657e51ab75cfe22790e22bf4ac54cbb1203ff7a0d108e872ce60f4831be827a6e5
+Size (QuickCheck-2.14.2.tar.gz) = 75246 bytes
