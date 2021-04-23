@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/01/01 03:01:16 pho Exp $
+$NetBSD: distinfo,v 1.7 2021/04/23 08:49:16 pho Exp $
 
-SHA1 (cmdargs-0.10.20.tar.gz) = ec596ca3c730ee8b05ce1d8a16cad622ed5f43fe
-RMD160 (cmdargs-0.10.20.tar.gz) = cc97260d24977a65cf2a0d19cec1cd5f670e5a66
-SHA512 (cmdargs-0.10.20.tar.gz) = b9e270aa5dabd84eaaa47b95a450ef5b5f43cd19646f2a407579f855857d396e5ab9ca0038e1e876849a596ecb8cdc9964c45970825a0a95021d69b23699da79
-Size (cmdargs-0.10.20.tar.gz) = 64550 bytes
+SHA1 (cmdargs-0.10.21.tar.gz) = eb0df2b00f713f69fd89e834f926167209880de0
+RMD160 (cmdargs-0.10.21.tar.gz) = 1cd29029053a49c5b48792b5bc7cd5ada29ca0f1
+SHA512 (cmdargs-0.10.21.tar.gz) = f17b7f56c9382a4ea3235b2d7669866e0ea366ab7c30984dc3f017f18d25015508f5cbce535eec4a601c09a33cffabe71b8da5cc15d301daf6ed3f3e40dbd2af
+Size (cmdargs-0.10.21.tar.gz) = 64892 bytes
