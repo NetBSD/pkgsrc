@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/03/30 16:40:26 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 04:49:49 pho Exp $
 
-SHA1 (hashtables-1.2.3.4.tar.gz) = ade732dc6025394ddeab7e1293f39d1d71a57ba0
-RMD160 (hashtables-1.2.3.4.tar.gz) = a85658260d2b41bea9a717e08ed3983c601dff0d
-SHA512 (hashtables-1.2.3.4.tar.gz) = 4723540f930edd1d5fd5cf58eadf7ed24fcd7761b90f303d559bc617737ec30cee2e9571ecced61fd369a933ae95b4386e48b122b876e73d0ad4bb65df16b76e
-Size (hashtables-1.2.3.4.tar.gz) = 58458 bytes
+SHA1 (hashtables-1.2.4.1.tar.gz) = b8447fdd3c24eac961aa37d9ba5aa42b2763b3da
+RMD160 (hashtables-1.2.4.1.tar.gz) = cbaa2fe94e853379af59dd51695bdd311952de03
+SHA512 (hashtables-1.2.4.1.tar.gz) = e88fb8f9c8a51be31e5d07ca1fef3d1a05a347942878f84a500d8c224b1118a2be97f9a947f17834a8331f296f302eafeef34d1f151360361675ecf5204b38f6
+Size (hashtables-1.2.4.1.tar.gz) = 58425 bytes
