@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/11/03 11:45:32 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2021/04/24 00:04:27 wiz Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	2
@@ -33,7 +33,7 @@ PATCH_ARCH=	${MACHINE_ARCH}
 DISTNAME=	en.linuxx86
 PKGNAME=	citrix_ica-10.6.115659
 PATCH_ARCH=	i386
-MASTER_SITES=	ftp://download2.citrix.com/FILES/en/products/Linux10/
+#MASTER_SITES=	ftp://download2.citrix.com/FILES/en/products/Linux10/
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	en.solaris
 PKGNAME=	citrix_ica-8.63.165401
