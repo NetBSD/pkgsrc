@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2021/02/23 14:48:11 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/24 19:47:11 pin Exp $
 
 DISTNAME=	kalk-0.3.14
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaddiM8/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kalk.strct.net/
 COMMENT=	CLI calculator supporting user defined variables and functions
 LICENSE=	mit
