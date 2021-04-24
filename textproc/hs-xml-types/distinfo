@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 16:13:21 pho Exp $
+
+SHA1 (xml-types-0.3.8.tar.gz) = 76c3217ddd8d2c1f163ec0b1e48a4e139f2f59a8
+RMD160 (xml-types-0.3.8.tar.gz) = 6e171068cd851789d678c8e07000c1da6832a3b3
+SHA512 (xml-types-0.3.8.tar.gz) = ef54a59de85001919ae4d0c261036b07e8e8462dd0573e7c96d500f6a559f25cb870f41e7b5a008b9fbccde771b28aa9eaba39d7940eeed9350a37fe44a8a90f
+Size (xml-types-0.3.8.tar.gz) = 4054 bytes
