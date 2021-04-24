@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2021/02/06 10:42:51 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 19:56:29 pin Exp $
 
 DISTNAME=	refi-3.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.com/miicat/refi/-/archive/v${PKGVERSION_NOREV}/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/miicat/refi/
 COMMENT=	Rename files in numberic order
 LICENSE=	gnu-gpl-v3
