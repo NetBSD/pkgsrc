@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/03/03 12:16:54 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 19:55:22 pin Exp $
 
 DISTNAME=	rates-0.2.0
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lunush/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lunush/rates/
 COMMENT=	Currency exchange rates in your terminal
 LICENSE=	apache-2.0
