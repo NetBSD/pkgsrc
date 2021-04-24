@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:24 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.24 2021/04/24 00:17:23 wiz Exp $
 
 DISTNAME=		xworld-2.0
 PKGREVISION=		3
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.Uni-Koeln.DE/misc/
+#MASTER_SITES=		ftp://ftp.Uni-Koeln.DE/misc/
 
 MAINTAINER=		wennmach@NetBSD.org
 COMMENT=		Earth as seen from the direction of the sun
