@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/01/11 11:08:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2021/04/24 15:24:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-yaml
 
 .if !defined(HS_YAML_BUILDLINK3_MK)
 HS_YAML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-yaml+=	hs-yaml>=0.11.2
-BUILDLINK_ABI_DEPENDS.hs-yaml+=	hs-yaml>=0.11.2.0
+BUILDLINK_API_DEPENDS.hs-yaml+=	hs-yaml>=0.11.5
+BUILDLINK_ABI_DEPENDS.hs-yaml+=	hs-yaml>=0.11.5.0
 BUILDLINK_PKGSRCDIR.hs-yaml?=	../../textproc/hs-yaml
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -15,6 +15,7 @@ BUILDLINK_PKGSRCDIR.hs-yaml?=	../../textproc/hs-yaml
 .include "../../textproc/hs-libyaml/buildlink3.mk"
 .include "../../devel/hs-resourcet/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .endif	# HS_YAML_BUILDLINK3_MK
 
