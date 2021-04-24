@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:41 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.18 2021/04/24 20:04:28 wiz Exp $
 
 DISTNAME=	mrt-2.2.2a-Aug11
 PKGNAME=	mrt-2.2.2a.20000811
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.merit.edu/net-research/mrt/
+#MASTER_SITES=	ftp://ftp.merit.edu/net-research/mrt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mrtd.net/
+#HOMEPAGE=	http://www.mrtd.net/
 COMMENT=	Multi-threaded Routing Toolkit
 
 MAKE_JOBS_SAFE=		no
