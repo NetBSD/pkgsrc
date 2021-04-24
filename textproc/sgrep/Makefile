@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:32:18 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.5 2021/04/24 10:38:37 wiz Exp $
 
 DISTNAME=	sgrep-1.94a
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.cs.helsinki.fi/pub/Software/Local/Sgrep/
+#MASTER_SITES=	ftp://ftp.cs.helsinki.fi/pub/Software/Local/Sgrep/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cs.helsinki.fi/u/jjaakkol/sgrep.html
