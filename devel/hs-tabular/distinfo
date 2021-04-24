@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/03/30 16:46:47 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 05:01:28 pho Exp $
 
-SHA1 (tabular-0.2.2.7.tar.gz) = e58f9fc68528d2568d29a72560fb07be39295536
-RMD160 (tabular-0.2.2.7.tar.gz) = 2fb895bda7e44699aef517ad8a31d22cb8db0519
-SHA512 (tabular-0.2.2.7.tar.gz) = e56bb8731d325a9b705ce4374431bd72a05f336d0918976d72a664b10ccd4468d99d443914f307d9ee7d89508a5c54e629b7ebbb82f3e7f26b202a82771679c8
-Size (tabular-0.2.2.7.tar.gz) = 6526 bytes
+SHA1 (tabular-0.2.2.8.tar.gz) = a445e3dc5e79963bb315947c2d5076a643f4e367
+RMD160 (tabular-0.2.2.8.tar.gz) = f5c1a4bd186763bb233a8dbcb7250392d93b3fb3
+SHA512 (tabular-0.2.2.8.tar.gz) = 7bff6bfc7f23919a05817140cfc37d9f52626e7f26137d70f9c7b6b83df17eb6d19982ef01aaca8d0fae7a0070614ac3344189b403386810837093bb8d1b7711
+Size (tabular-0.2.2.8.tar.gz) = 6346 bytes
