@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3367 2021/04/24 13:14:41 pho Exp $
+# $NetBSD: Makefile,v 1.3368 2021/04/24 16:10:23 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -563,6 +563,7 @@ SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-code-page
 SUBDIR+=	hs-colour
 SUBDIR+=	hs-conduit
+SUBDIR+=	hs-conduit-extra
 SUBDIR+=	hs-control-monad-free
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
