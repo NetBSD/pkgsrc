@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2020/04/03 07:25:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 10:30:18 pho Exp $
 
-DISTNAME=	shakespeare-2.0.24
+DISTNAME=	shakespeare-2.0.25
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=shakespeare-${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.yesodweb.com/book/shakespearean-templates
 COMMENT=	Toolkit for making compile-time interpolated templates
 LICENSE=	mit
 
-DEPENDS+=	hs-aeson-[0-9]*:../../converters/hs-aeson
-DEPENDS+=	hs-exceptions-[0-9]*:../../devel/hs-exceptions
-
-USE_LANGUAGES=	# none
-
-.include "../../mk/haskell.mk"
+.include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
+.include "../../math/hs-scientific/buildlink3.mk"
+.include "../../devel/hs-th-lift/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
