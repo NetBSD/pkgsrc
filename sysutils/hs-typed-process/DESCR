@@ -1,0 +1,16 @@
+This library provides the ability to launch and interact with external
+processes. It wraps around the process library, and intends to improve
+upon it by:
+
+1. Using type variables to represent the standard streams, making them
+   easier to manipulate
+
+2. Use proper concurrency (e.g., the async library) in place of the
+   weird lazy I/O tricks for such things as consuming output streams
+
+3. Allow for more complex concurrency by providing STM-based functions
+
+4. Using binary I/O correctly
+
+5. Providing a more composable API, designed to be easy to use for
+   both simple and complex use cases
