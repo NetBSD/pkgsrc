@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2323 2021/04/24 11:02:51 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2324 2021/04/24 11:13:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3660,3 +3660,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed misc/molden [wiz 2021-04-24]
 	Removed www/mMosaic [wiz 2021-04-24]
 	Removed security/pam-dbm [wiz 2021-04-24]
+	Removed wm/fvwm-devel successor wm/fvwm [wiz 2021-04-24]
