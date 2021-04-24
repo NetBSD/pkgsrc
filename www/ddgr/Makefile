@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/02/11 11:16:37 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 19:37:33 pin Exp $
 
 DISTNAME=	ddgr-1.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jarun/ddgr
 COMMENT=	DuckDuckGo from the terminal
 LICENSE=	gnu-gpl-v3
