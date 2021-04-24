@@ -1,0 +1,2 @@
+pretty-simple is a pretty printer for Haskell data types that have a
+Show instance.
