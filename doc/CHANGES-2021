@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2328 2021/04/24 18:51:09 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2329 2021/04/24 18:53:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3665,3 +3665,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/hs-cgrep to 6.6.32 [pho 2021-04-24]
 	Updated sysutils/macchina to 0.7.2 [pin 2021-04-24]
 	Updated www/hackernews-tui to 0.5.0 [pin 2021-04-24]
+	Updated security/pleaser to 0.4.0 [pin 2021-04-24]
