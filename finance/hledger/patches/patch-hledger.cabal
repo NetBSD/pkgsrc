@@ -1,0 +1,42 @@
+$NetBSD: patch-hledger.cabal,v 1.1 2021/04/24 11:12:09 pho Exp $
+
+Fix build with GHC 9.
+
+--- hledger.cabal.orig	2021-03-10 16:29:46.000000000 +0000
++++ hledger.cabal
+@@ -142,7 +142,7 @@ library
+     , Diff
+     , aeson >=1
+     , ansi-terminal >=0.9
+-    , base >=4.9 && <4.15
++    , base >=4.9 && <5
+     , base-compat-batteries >=0.10.1 && <0.12
+     , bytestring
+     , cmdargs >=0.10
+@@ -192,7 +192,7 @@ executable hledger
+       Decimal >=0.5.1
+     , aeson >=1
+     , ansi-terminal >=0.9
+-    , base >=4.9 && <4.15
++    , base >=4.9 && <5
+     , base-compat-batteries >=0.10.1 && <0.12
+     , bytestring
+     , cmdargs >=0.10
+@@ -242,7 +242,7 @@ test-suite unittest
+       Decimal >=0.5.1
+     , aeson >=1
+     , ansi-terminal >=0.9
+-    , base >=4.9 && <4.15
++    , base >=4.9 && <5
+     , base-compat-batteries >=0.10.1 && <0.12
+     , bytestring
+     , cmdargs >=0.10
+@@ -289,7 +289,7 @@ benchmark bench
+       Decimal >=0.5.1
+     , aeson >=1
+     , ansi-terminal >=0.9
+-    , base >=4.9 && <4.15
++    , base >=4.9 && <5
+     , base-compat-batteries >=0.10.1 && <0.12
+     , bytestring
+     , cmdargs >=0.10
