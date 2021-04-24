@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2021/03/07 16:46:37 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/24 19:49:05 pin Exp $
 
 DISTNAME=	lsd-0.20.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Peltoche/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Peltoche/lsd/
 COMMENT=	The next gen ls command
 LICENSE=	apache-2.0
