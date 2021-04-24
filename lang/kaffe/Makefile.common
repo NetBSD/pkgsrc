@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.28 2020/01/20 21:54:02 nia Exp $
+# $NetBSD: Makefile.common,v 1.29 2021/04/24 11:49:19 wiz Exp $
 #
 # used by lang/kaffe-x11/Makefile
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
-MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
+#MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
