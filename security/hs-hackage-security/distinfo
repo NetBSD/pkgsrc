@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 01:54:46 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 13:32:21 pho Exp $
 
-SHA1 (hackage-security-0.6.0.0.tar.gz) = 29e05cef02a7764286e469786614fd4458d77c96
-RMD160 (hackage-security-0.6.0.0.tar.gz) = f26cf733a07a6561c8b0833283f3dab78a62458c
-SHA512 (hackage-security-0.6.0.0.tar.gz) = 5bae3a4215328335dd141c1552b8d713748c3080c379e372277eedccd5a9ac47ddccb4015d3b57db4481547ba871612282a513c6f607d33f6881b64d628a856f
-Size (hackage-security-0.6.0.0.tar.gz) = 85927 bytes
+SHA1 (hackage-security-0.6.0.1.tar.gz) = e6da0d9ec82c2e534b567adc07803bfc1a654fd6
+RMD160 (hackage-security-0.6.0.1.tar.gz) = 7490c8bbf2bdef0fb5324bffad7104ddf7d8399c
+SHA512 (hackage-security-0.6.0.1.tar.gz) = b83fdda3712c58bcc4237965e40bea16b9ce08f30c0671f45967e69a2eb85488e78a41c8d12b9f339f78f30cc50770a72e9e9a46e5ddf740a20bce4ea4e96fdb
+Size (hackage-security-0.6.0.1.tar.gz) = 86006 bytes
+SHA1 (patch-hackage-security.cabal) = da4ab58cc5e0ffedccf6886f44253d6cba9590f5
