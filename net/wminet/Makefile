@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/09/06 10:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/24 10:59:57 wiz Exp $
 
 DISTNAME=	wmnet-1.2
 PKGNAME=	wminet-1.2
 PKGREVISION=	1
 CATEGORIES=	net x11
-MASTER_SITES=	ftp://ftp.enteract.com/users/rneswold/
+#MASTER_SITES=	ftp://ftp.enteract.com/users/rneswold/
 
 MAINTAINER=	coto@core.de
 #HOMEPAGE=	http://users.rcn.com/rneswold/
