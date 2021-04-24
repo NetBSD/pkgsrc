@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2016/02/25 17:52:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/24 10:46:24 wiz Exp $
 
 DISTNAME=	rtf2LaTeX.1.5
 PKGNAME=	rtf2latex-1.5
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.dante.de/pub/tex/support/rtf2latex/
+MASTER_SITES=	https://www.ctan.org/tex-archive/support/rtf2latex/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Filter that converts RTF (MS's Rich Text Format) into LaTeX
