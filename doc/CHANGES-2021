@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2321 2021/04/24 08:47:53 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2322 2021/04/24 10:51:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3658,3 +3658,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/irssi-xmpp to 0.54nb2 [nia 2021-04-24]
 	Removed net/radiusd-cistron [wiz 2021-04-24]
 	Removed misc/molden [wiz 2021-04-24]
+	Removed www/mMosaic [wiz 2021-04-24]
