@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:55 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/04/24 20:08:28 wiz Exp $
 
 DISTNAME=	traceroute_991603.tar
 PKGNAME=	traceroute-as-991603
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.nikhef.nl/pub/network/
+#MASTER_SITES=	ftp://ftp.nikhef.nl/pub/network/
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
