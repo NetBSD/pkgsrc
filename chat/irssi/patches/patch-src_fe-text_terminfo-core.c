@@ -1,4 +1,4 @@
-$NetBSD: patch-src_fe-text_terminfo-core.c,v 1.1 2021/04/24 08:32:00 nia Exp $
+$NetBSD: patch-src_fe-text_terminfo-core.c,v 1.2 2021/04/24 08:36:22 nia Exp $
 
 Fix compatibility with NetBSD curses
 
@@ -25,6 +25,8 @@ https://github.com/irssi/irssi/commit/0b82f14151dad5f106c208d25818816a8f782a54
 <term.h> in included, which on systems using NetBSD libcurses, gives
 the X/Open compliant definition of tparm, which does not work with
 a variable number of arguments.
+
+https://github.com/irssi/irssi/pull/1305
 
 --- src/fe-text/terminfo-core.c.orig	2021-04-08 14:42:39.000000000 +0000
 +++ src/fe-text/terminfo-core.c
