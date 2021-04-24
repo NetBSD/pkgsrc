@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2021/02/23 14:47:07 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2021/04/24 18:52:58 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
@@ -11,6 +11,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.19
 CARGO_CRATE_DEPENDS+=	error-chain-0.11.0
 CARGO_CRATE_DEPENDS+=	getopts-0.2.21
+CARGO_CRATE_DEPENDS+=	getrandom-0.1.16
 CARGO_CRATE_DEPENDS+=	gimli-0.23.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.86
 CARGO_CRATE_DEPENDS+=	log-0.4.14
@@ -23,6 +24,11 @@ CARGO_CRATE_DEPENDS+=	object-0.23.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.6.0
 CARGO_CRATE_DEPENDS+=	pam-0.7.0
 CARGO_CRATE_DEPENDS+=	pam-sys-0.5.6
+CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
+CARGO_CRATE_DEPENDS+=	rand-0.7.3
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
+CARGO_CRATE_DEPENDS+=	rand_core-0.5.1
+CARGO_CRATE_DEPENDS+=	rand_hc-0.2.0
 CARGO_CRATE_DEPENDS+=	regex-1.4.3
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.22
 CARGO_CRATE_DEPENDS+=	rpassword-5.0.1
@@ -33,6 +39,7 @@ CARGO_CRATE_DEPENDS+=	time-0.1.44
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.8
 CARGO_CRATE_DEPENDS+=	users-0.8.1
 CARGO_CRATE_DEPENDS+=	users-0.10.0
+CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasi-0.10.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
