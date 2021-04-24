@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/09/02 04:08:11 gutteridge Exp $
+# $NetBSD: Makefile,v 1.86 2021/04/24 03:17:17 gutteridge Exp $
 
 META_PACKAGE=	yes
 
@@ -7,7 +7,7 @@ META_PACKAGE=	yes
 PKGREVISION=	6
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
 CATEGORIES=	meta-pkgs
-COMMENT=	Xfce extras
+COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
 # Applications
 DEPENDS+=	ristretto-[0-9]*:../../graphics/ristretto
