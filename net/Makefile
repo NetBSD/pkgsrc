@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1398 2021/04/24 08:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.1399 2021/04/24 17:54:25 pho Exp $
 #
 
 COMMENT=	Networking tools
@@ -241,6 +241,7 @@ SUBDIR+=	howl
 SUBDIR+=	hping
 SUBDIR+=	hping3
 SUBDIR+=	hs-connection
+SUBDIR+=	hs-iproute
 SUBDIR+=	hs-mime-types
 SUBDIR+=	hs-network
 SUBDIR+=	hs-network-uri
