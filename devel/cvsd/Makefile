@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/24 08:37:49 wiz Exp $
 
 DISTNAME=		cvsd-1.0.23
 PKGREVISION=		10
 CATEGORIES=		devel scm
 MASTER_SITES=		https://arthurdejong.org/cvsd/
 
-MAINTAINER=		eric@cirr.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://arthurdejong.org/cvsd/
 COMMENT=		Run CVS pserver in a chroot-ed environment
 LICENSE=		gnu-gpl-v2
