@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 13:14:20 pho Exp $
+
+SHA1 (th-compat-0.1.2.tar.gz) = e2699f525de41fa20b45c40500d91b896c223a61
+RMD160 (th-compat-0.1.2.tar.gz) = 8c0b05b58305b883a5e7f8e4fcc5bf95b13f2470
+SHA512 (th-compat-0.1.2.tar.gz) = 4910a8fdbd4ec9658205f78be0e5c832deaffe77c51695776563758de9b28e190c6134101c0467a7abc96a51a6ddf02c77943c252d2f3e41f0c4bc1fcb461073
+Size (th-compat-0.1.2.tar.gz) = 11737 bytes

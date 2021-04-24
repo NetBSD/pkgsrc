@@ -1,0 +1,7 @@
+This package defines a Language.Haskell.TH.Syntax.Compat module, which
+backports the Quote and Code types to work across a wide range of
+template-haskell versions. On recent versions of template-haskell
+(2.17.0.0 or later), this module simply reexports Quote and Code from
+Language.Haskell.TH.Syntax. Refer to the Haddocks for
+Language.Haskell.TH.Syntax.Compat for examples of how to use this
+module.
