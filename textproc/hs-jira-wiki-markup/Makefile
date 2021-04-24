@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/17 07:14:22 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 15:40:07 pho Exp $
 
-DISTNAME=	jira-wiki-markup-1.0.0
-PKGREVISION=	1
+DISTNAME=	jira-wiki-markup-1.3.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
