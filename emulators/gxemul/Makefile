@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2021/04/17 07:36:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2021/04/24 07:31:36 fcambus Exp $
 
-DISTNAME=	gxemul-0.6.3.1
+DISTNAME=	gxemul-0.7.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxemul/}
 
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	pax
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 BUILD_TARGET=	build
 
