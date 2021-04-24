@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.6 2020/08/05 21:49:18 maya Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.7 2021/04/24 06:30:28 rin Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -6,14 +6,14 @@ Cast explicitly.
 Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 (PR port-arm/55533)
 
---- deps/v8/src/base/platform/platform-posix.cc.orig	2020-07-20 22:18:45.000000000 +0000
-+++ deps/v8/src/base/platform/platform-posix.cc
+--- deps/v8/src/base/platform/platform-posix.cc.orig	2021-04-07 04:42:14.000000000 +0900
++++ deps/v8/src/base/platform/platform-posix.cc	2021-04-24 07:39:15.080548801 +0900
 @@ -323,6 +323,10 @@ void* OS::GetRandomMmapAddr() {
  #endif
  #endif
  #endif
 +
-+#ifdef __NetBSD__ && V8_TARGET_ARCH_ARM64
++#if V8_OS_NETBSD && V8_TARGET_ARCH_ARM64
 +  raw_addr = 0;
 +#endif
    return reinterpret_cast<void*>(raw_addr);
@@ -32,7 +32,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
      : data_(new PlatformData),
        stack_size_(options.stack_size()),
        start_semaphore_(nullptr) {
-+#if defined(__NetBSD__)
++#if V8_OS_NETBSD
 +  if (stack_size_ > 0 && static_cast<size_t>(stack_size_) < sysconf(_SC_THREAD_STACK_MIN)) {
 +    stack_size_ = sysconf(_SC_THREAD_STACK_MIN);
 +#else
