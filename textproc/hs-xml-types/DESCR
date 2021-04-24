@@ -1,0 +1,11 @@
+Basic types for representing XML.
+
+The idea is to have a full set of appropriate types, which various XML
+libraries can share. Instead of having equivalent-but-incompatible
+types for every binding, parser, or client, they all share the same
+types can can thus interoperate easily.
+
+This library contains complete types for most parts of an XML
+document, including the prologue, node tree, and doctype. Some basic
+combinators are included for common tasks, including traversing the
+node tree and filtering children.
