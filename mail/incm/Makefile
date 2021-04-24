@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:34 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/04/24 20:05:21 wiz Exp $
 
 DISTNAME=	incm-0.5
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
+#MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mew.org/
