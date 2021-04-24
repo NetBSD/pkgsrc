@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2018/04/21 13:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/04/24 11:09:49 wiz Exp $
 
 DISTNAME=	xpdf-latin2-2011-aug-15
 PKGNAME=	xpdf-latin2-20110815
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
+#MASTER_SITES=	https://dl.xpdfreader.com/xpdf-latin2.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.foolabs.com/xpdf/
+HOMEPAGE=	https://www.xpdfreader.com/
 COMMENT=	Xpdf support files for Latin-2
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
