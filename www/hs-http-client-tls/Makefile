@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/17 15:17:55 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 18:01:15 pho Exp $
 
 DISTNAME=	http-client-tls-0.3.5.3
 CATEGORIES=	www security
@@ -11,7 +11,6 @@ LICENSE=	mit
 .include "../../net/hs-connection/buildlink3.mk"
 .include "../../security/hs-cryptonite/buildlink3.mk"
 .include "../../devel/hs-data-default-class/buildlink3.mk"
-.include "../../devel/hs-exceptions/buildlink3.mk"
 .include "../../www/hs-http-client/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
 .include "../../devel/hs-memory/buildlink3.mk"
