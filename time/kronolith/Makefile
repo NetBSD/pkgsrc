@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2019/05/23 19:23:18 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2021/04/24 11:37:29 wiz Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
 PKGREVISION=	3
 CATEGORIES=	www time
-MASTER_SITES=	http://ftp.horde.org/pub/kronolith/
-MASTER_SITES+=	ftp://ftp.horde.org/pub/kronolith/
+#MASTER_SITES+=	ftp://ftp.horde.org/pub/kronolith/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.horde.org/kronolith/
