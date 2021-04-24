@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2020/04/03 07:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 06:18:24 pho Exp $
 
-DISTNAME=	cassava-megaparsec-2.0.1
+DISTNAME=	cassava-megaparsec-2.0.2
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=cassava-megaparsec-${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/stackbuilders/cassava-megaparsec
 COMMENT=	Megaparsec parser of CSV files that plays nicely with Cassava
 LICENSE=	mit
 
-DEPENDS+=	hs-megaparsec-[0-9]*:../../textproc/hs-megaparsec
-
-USE_LANGUAGES=	# none
-
-.include "../../mk/haskell.mk"
 .include "../../textproc/hs-cassava/buildlink3.mk"
+.include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
