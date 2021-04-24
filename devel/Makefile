@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3364 2021/04/23 08:24:57 pho Exp $
+# $NetBSD: Makefile,v 1.3365 2021/04/24 06:46:32 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -606,6 +606,7 @@ SUBDIR+=	hs-old-locale
 SUBDIR+=	hs-optparse-applicative
 SUBDIR+=	hs-parser-combinators
 SUBDIR+=	hs-pretty-show
+SUBDIR+=	hs-pretty-simple
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
 SUBDIR+=	hs-reflection
