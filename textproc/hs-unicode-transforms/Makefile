@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/01/17 18:49:18 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 17:31:23 pho Exp $
 
-DISTNAME=	unicode-transforms-0.3.6
+DISTNAME=	unicode-transforms-0.3.7.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Unicode normalization
 LICENSE=	modified-bsd
 
-.include "../../devel/hs-bitarray/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-unicode-transforms.cabal,v 1.1 2021/04/24 17:31:23 pho Exp $
+
+Fix build with GHC 9.
+
+--- unicode-transforms.cabal.orig	2021-04-24 17:28:43.695292574 +0000
++++ unicode-transforms.cabal
+@@ -98,7 +98,7 @@ library
+       base >=4.7 && <5
+     , bytestring >=0.9 && <0.12
+     , text >=1.1.1 && <1.3
+-    , ghc-prim >= 0.2 && < 0.7
++    , ghc-prim >= 0.2 && < 0.8
+   if flag(dev)
+     ghc-options: -O0
+   else
