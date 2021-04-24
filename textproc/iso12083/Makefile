@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2013/12/23 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/04/24 11:44:50 wiz Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/
+#MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/
 DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
