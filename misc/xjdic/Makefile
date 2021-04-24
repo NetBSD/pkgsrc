@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2017/01/07 21:53:27 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.22 2021/04/24 20:06:35 wiz Exp $
 
 DISTNAME=	xjdic24
 PKGNAME=	xjdic-2.4
 CATEGORIES=	japanese misc
-MASTER_SITES=	ftp://ftp.monash.edu.au/pub/nihongo/
+#MASTER_SITES=	ftp://ftp.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
