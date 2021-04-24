@@ -1,0 +1,15 @@
+$NetBSD: patch-hledger-lib.cabal,v 1.1 2021/04/24 10:06:11 pho Exp $
+
+Fix build with GHC 9.
+
+--- hledger-lib.cabal.orig	2021-03-10 16:29:46.000000000 +0000
++++ hledger-lib.cabal
+@@ -103,7 +103,7 @@ library
+     , aeson-pretty
+     , ansi-terminal >=0.9
+     , array
+-    , base >=4.9 && <4.15
++    , base >=4.9 && <5
+     , base-compat-batteries >=0.10.1 && <0.12
+     , blaze-markup >=0.5.1
+     , bytestring
