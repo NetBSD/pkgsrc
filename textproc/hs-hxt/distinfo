@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 16:21:37 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 15:50:15 pho Exp $
 
-SHA1 (hxt-9.3.1.18.tar.gz) = 18e797ec230b68723f37be5228b862f1dd587493
-RMD160 (hxt-9.3.1.18.tar.gz) = 61a92513f91fed54edcd95a7742c9e1cc38f945e
-SHA512 (hxt-9.3.1.18.tar.gz) = 4b7c57486fe02357a45b5f835dd9f05333ce39578ec84c3c920fdcaa2df8ae1067da3650d3948559ddaf2e6f77f14291e1ddaa28a12ea9dfb62a797d296ec118
-Size (hxt-9.3.1.18.tar.gz) = 223887 bytes
+SHA1 (hxt-9.3.1.22.tar.gz) = 9d4db466fd9742a936f10982ce539b63bdb4b3f2
+RMD160 (hxt-9.3.1.22.tar.gz) = d53dc4340f65f8b1b19e18533420eaedd0816780
+SHA512 (hxt-9.3.1.22.tar.gz) = ac7720a01a7769bfb528aa5de29fff9a993c430af75d1326bd50e845c3b7378be09bdda8c99bdd7e45fc5c09fac10c6fc318ff77cf65b2ad7ea2709aff2c1af8
+Size (hxt-9.3.1.22.tar.gz) = 224934 bytes
