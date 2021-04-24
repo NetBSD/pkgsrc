@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/15 11:35:54 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 15:28:11 pho Exp $
 
-DISTNAME=	doctemplates-0.8.1
+DISTNAME=	doctemplates-0.9
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -14,5 +14,6 @@ LICENSE=	modified-bsd
 .include "../../math/hs-scientific/buildlink3.mk"
 .include "../../converters/hs-text-conversions/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
