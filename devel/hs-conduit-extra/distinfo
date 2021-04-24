@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 16:10:01 pho Exp $
+
+SHA1 (conduit-extra-1.3.5.tar.gz) = 5f5e3cf70c40fe712d83ce500ae11c4a080c9659
+RMD160 (conduit-extra-1.3.5.tar.gz) = c5065a3ce69db9b5805b9d42da3b1affd111fa29
+SHA512 (conduit-extra-1.3.5.tar.gz) = 27cb6e1eba8c01154a1a7002521ce0190028790d1cb3f07d268722da2e2d32cc9ec8a78b897832f3e96fc40a4d6bf1755b7d068ba986178830aea0373b38cb38
+Size (conduit-extra-1.3.5.tar.gz) = 33189 bytes
