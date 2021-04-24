@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/01/02 14:25:33 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/24 17:00:46 pho Exp $
 
 SHA1 (hscolour-1.24.4.tar.gz) = 6b9d64a56dc3436a352824eac367e1e40ae149b3
 RMD160 (hscolour-1.24.4.tar.gz) = 385831baaead9b6dd1d37bcf45a61c53160b3405
 SHA512 (hscolour-1.24.4.tar.gz) = 39b631c0a8346beff1c2e02ca8e72c1b1e3f7dafcedad7dc9de274e6750501de2bc553fe72a7d3459d4f9797e916f27e28ff96f705c2c0f9d3e0eec0ac6182c7
 Size (hscolour-1.24.4.tar.gz) = 28729 bytes
+SHA1 (patch-hscolour.cabal) = bb57b5d665a39451ffbd96f3f9ac3c07308894ca
