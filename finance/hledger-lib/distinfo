@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 10:06:11 pho Exp $
+
+SHA1 (hledger-lib-1.21.tar.gz) = 86f7805b5f3b466d9582df969eee79f73b50eeb6
+RMD160 (hledger-lib-1.21.tar.gz) = 69f57ce9883fba588a08e309974b0dd6391e4bde
+SHA512 (hledger-lib-1.21.tar.gz) = adf51531cefd4108aa4f9c27b6647876a43814876b9617accf0d8ff0fe5cc9757c8a1cbc01aaa497e1806bcfa191860b725c691ccc7c5a3f29197ac1eb436f28
+Size (hledger-lib-1.21.tar.gz) = 247462 bytes
+SHA1 (patch-hledger-lib.cabal) = 826476f1bd481f3ccdf5f8e3e7e5661453c4359b
