@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2015/03/13 16:41:47 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2021/04/24 00:26:13 wiz Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.astart.com/pub/LPRng/LPRng/
+#MASTER_SITES=	ftp://ftp.astart.com/pub/LPRng/LPRng/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
