@@ -1,0 +1,15 @@
+$NetBSD: patch-polyparse.cabal,v 1.1 2021/04/24 17:07:42 pho Exp $
+
+Fix build with GHC 9.
+
+--- polyparse.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ polyparse.cabal
+@@ -47,7 +47,7 @@ source-repository this
+ 
+ library
+   hs-source-dirs:       src
+-  build-depends:        base >= 4.3.1.0 && < 4.14
++  build-depends:        base >= 4.3.1.0 && < 5
+ 
+   if !impl(ghc >= 8.0)
+      build-depends: fail == 4.9.*
