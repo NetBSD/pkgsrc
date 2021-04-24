@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 06:18:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 16:38:04 pho Exp $
 
 SHA1 (regex-pcre-0.95.0.0.tar.gz) = 97e11329e4cc7e742dbf82c89e39fa5353c84ac2
 RMD160 (regex-pcre-0.95.0.0.tar.gz) = 0fa157c65fecf5676b73e12f65853db4dec4d9ca
 SHA512 (regex-pcre-0.95.0.0.tar.gz) = 7c9ed0edd0c44d7118313c298c2658858117dd89eb7956566f5bb2fb75f2aaed70d201fda4102c46206b9951013bafee654ff39ed3c4bf9c5086f6c0cc217bdb
 Size (regex-pcre-0.95.0.0.tar.gz) = 9766 bytes
+SHA1 (patch-regex-pcre.cabal) = 9ecfc72485412437abeb56b1db40da05024f86eb
