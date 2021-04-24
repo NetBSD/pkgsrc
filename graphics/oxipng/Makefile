@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/01/29 11:39:38 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 19:52:59 pin Exp $
 
 DISTNAME=	oxipng-4.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shssoichiro/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/shssoichiro/oxipng/
 COMMENT=	Multithreaded PNG optimizer
 LICENSE=	mit
