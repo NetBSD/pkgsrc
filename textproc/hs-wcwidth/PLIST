@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:52:18 rillig Exp $
-${HS_INTF}/package-description
-${HS_INTF}/package-id
+@comment $NetBSD: PLIST,v 1.2 2021/04/24 05:20:27 pho Exp $
+lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${HS_IMPL}/Data/Char/WCWidth.dyn_hi
-${HS_IMPL}/Data/Char/WCWidth.hi
-${HS_IMPL}/Data/Char/WCWidth.p_hi
-${HS_IMPL}/libHS${HS_PKGID}.a
-${HS_IMPL}/libHS${HS_PKGID}_p.a
-${HS_DOCS}/LICENSE
-${HS_DOCS}/html/Data-Char-WCWidth.html
-${HS_DOCS}/html/doc-index.html
-${HS_DOCS}/html/haddock-bundle.min.js
-${HS_DOCS}/html/index.html
-${HS_DOCS}/html/linuwial.css
-${HS_DOCS}/html/meta.json
-${HS_DOCS}/html/quick-jump.css
-${HS_DOCS}/html/synopsis.png
-${HS_DOCS}/html/wcwidth.haddock
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/Data-Char-WCWidth.html
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/wcwidth.haddock
