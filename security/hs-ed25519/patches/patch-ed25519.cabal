@@ -1,6 +1,6 @@
-$NetBSD: patch-ed25519.cabal,v 1.1 2020/01/18 23:30:04 pho Exp $
+$NetBSD: patch-ed25519.cabal,v 1.2 2021/04/24 13:21:53 pho Exp $
 
-Fix build with GHC 8.8
+Fix build with GHC 9.
 
 --- ed25519.cabal.orig	2015-10-11 23:24:33.000000000 +0000
 +++ ed25519.cabal
@@ -9,7 +9,7 @@ Fix build with GHC 8.8
  library
    build-depends:
 -    ghc-prim    >= 0.1 && < 0.5,
-+    ghc-prim    >= 0.1 && < 0.6,
++    ghc-prim    >= 0.1 && < 0.8,
      base        >= 4   && < 5,
      bytestring  >= 0.9 && < 0.11
  
