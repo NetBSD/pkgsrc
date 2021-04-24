@@ -1,26 +1,41 @@
-# $NetBSD: Makefile,v 1.2 2020/03/30 17:52:39 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 11:12:09 pho Exp $
 
-.include "../../finance/hledger/common.mk"
-
-HASKELL_PKG_NAME=	hledger
-CATEGORIES=		finance
+DISTNAME=	hledger-1.21
+PKGNAME=	${DISTNAME}
+CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/simonmichael/hledger/
 COMMENT=	Plain-text accounting tool
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	# none
-
+.include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../devel/hs-ansi-terminal/buildlink3.mk"
+.include "../../devel/hs-base-compat-batteries/buildlink3.mk"
+.include "../../devel/hs-cmdargs/buildlink3.mk"
+.include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../finance/hs-Decimal/buildlink3.mk"
+.include "../../textproc/hs-Diff/buildlink3.mk"
+.include "../../misc/hs-extra/buildlink3.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../finance/hledger-lib/buildlink3.mk"
+.include "../../textproc/hs-lucid/buildlink3.mk"
+.include "../../math/hs-math-functions/buildlink3.mk"
+.include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../time/hs-old-time/buildlink3.mk"
+.include "../../textproc/hs-regex-tdfa/buildlink3.mk"
+.include "../../devel/hs-safe/buildlink3.mk"
+.include "../../textproc/hs-shakespeare/buildlink3.mk"
+.include "../../devel/hs-split/buildlink3.mk"
+.include "../../devel/hs-tabular/buildlink3.mk"
+.include "../../devel/hs-tasty/buildlink3.mk"
+.include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../devel/hs-timeit/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-utility-ht/buildlink3.mk"
 .include "../../devel/hs-wizards/buildlink3.mk"
-.include "../../finance/hledger-lib/buildlink3.mk"
-.include "../../math/hs-math-functions/buildlink3.mk"
 .include "../../mk/haskell.mk"
-.include "../../sysutils/hs-temporary/buildlink3.mk"
 .include "../../textproc/hs-Diff/buildlink3.mk"
-.include "../../textproc/hs-lucid/buildlink3.mk"
-.include "../../textproc/hs-shakespeare/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # XXX Kludge: We need to run this in a UTF-8 locale; otherwise GHC is

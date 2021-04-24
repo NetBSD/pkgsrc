@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2020/03/30 16:52:48 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 11:12:09 pho Exp $
 
-SHA1 (hledger-1.17.1.1.tar.gz) = c293bf7ef81d3423c13a2c8598d665d6214d5154
-RMD160 (hledger-1.17.1.1.tar.gz) = 6dbd8f4c43cc897830413acd9a7894d96683018d
-SHA512 (hledger-1.17.1.1.tar.gz) = 3d1d34a307ca4687c7740a591047c7e4cda2b8e779e675696cc8cdca3cb669f71f4e15a3c30cbef9ec0784d853b2103f14797e84ea7f2c3002134ab9c50bb3e5
-Size (hledger-1.17.1.1.tar.gz) = 1796221 bytes
+SHA1 (hledger-1.21.tar.gz) = 1ebf07f6c7d551b46e5527602dbf4f6705fa66ff
+RMD160 (hledger-1.21.tar.gz) = 3317f14967ddebbd1ed09567cdcf8ccb8c419132
+SHA512 (hledger-1.21.tar.gz) = 4ae5e9dc0160759f85b5c9d9ae4d4faeb2a63a41dd5376e658ac6fa13ff2b72b5e808ed0d52ed50d83e9bade3ce8839c23aabbbf6baccf236b579b07898dd3ba
+Size (hledger-1.21.tar.gz) = 850008 bytes
+SHA1 (patch-app_hledger-cli.hs) = 068998f7e14360f5da13e9abf568f387ec83de16
+SHA1 (patch-hledger.cabal) = 5b4053ca7fec98b27d787decde37ff536a02ef79
