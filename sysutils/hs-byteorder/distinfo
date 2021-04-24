@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 17:51:16 pho Exp $
+
+SHA1 (byteorder-1.0.4.tar.gz) = 98263a9668a0cb62e3d1835d877e9bce03118b7b
+RMD160 (byteorder-1.0.4.tar.gz) = 22307f1f5b8206559fa6902ae8e27c1ddbdbe956
+SHA512 (byteorder-1.0.4.tar.gz) = 970f74a394947b023ab88fa7bc713478b50565e3e9535479ec641283f18e04cb952788334b2ab38fafe723f2d398b1626af92f349abc11a6c6ca5a6974653025
+Size (byteorder-1.0.4.tar.gz) = 2030 bytes
