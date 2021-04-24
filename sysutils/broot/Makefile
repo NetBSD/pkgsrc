@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2021/02/27 16:22:50 pin Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/24 19:36:41 pin Exp $
 
 DISTNAME=	broot-1.2.4
-# WARNING: Do not update this package!
-# Newer versions require rust-1.50
+# WARNING: Do not update this package!  Newer versions require rust-1.50
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dystroy.org/broot/
 COMMENT=	New way to see and navigate directory trees
 LICENSE=	mit
