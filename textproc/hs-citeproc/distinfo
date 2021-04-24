@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 19:26:26 pho Exp $
+
+SHA1 (citeproc-0.3.0.9.tar.gz) = fe5da003e098d1fbef284a4be003838958608186
+RMD160 (citeproc-0.3.0.9.tar.gz) = 2b656b29dabbf78ed89d9192ac23dd2e5bb5ea60
+SHA512 (citeproc-0.3.0.9.tar.gz) = 48341417e955f8ee4f6ea5e446e37907ed7b75858418c248504d93496b64147d67d7ba5e35ca9033a528982a7650d3013574f5e8686acc085f267e3d6a44b93f
+Size (citeproc-0.3.0.9.tar.gz) = 572112 bytes
