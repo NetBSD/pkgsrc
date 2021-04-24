@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/06/29 18:35:14 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/24 20:03:25 pin Exp $
 
 DISTNAME=	xdo-0.5.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baskerville/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/baskerville/xdo/
 COMMENT=	Small X utility to perform elementary actions on windows
 LICENSE=	2-clause-bsd
