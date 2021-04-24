@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/19 01:54:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/04/24 13:32:21 pho Exp $
 
 BUILDLINK_TREE+=	hs-hackage-security
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hackage-security
 HS_HACKAGE_SECURITY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hackage-security+=	hs-hackage-security>=0.6.0
-BUILDLINK_ABI_DEPENDS.hs-hackage-security+=	hs-hackage-security>=0.6.0.0
+BUILDLINK_ABI_DEPENDS.hs-hackage-security+=	hs-hackage-security>=0.6.0.1
 BUILDLINK_PKGSRCDIR.hs-hackage-security?=	../../security/hs-hackage-security
 
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
