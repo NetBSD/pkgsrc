@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/04/24 00:16:04 wiz Exp $
 
 DISTNAME=	fplsa
 PKGNAME=	gp-fplsa-1.0
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
+#MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
