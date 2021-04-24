@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/02 15:27:23 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 13:16:34 pho Exp $
 
-SHA1 (network-uri-2.6.1.0.tar.gz) = 1b89d8b28e378bd17ea2fd3c96a42a473f468749
-RMD160 (network-uri-2.6.1.0.tar.gz) = 591880177d5a19fad3a62c5b61af3e9e33cea94f
-SHA512 (network-uri-2.6.1.0.tar.gz) = c1b6e516cd19875aab0da325dcb8f5c6b98d43c3952bda4f96bd9c798882357c724b2facbef09e2e98d29b696a9e5518a2de9463fb0af4c5df0734fe2654cc24
-Size (network-uri-2.6.1.0.tar.gz) = 27262 bytes
+SHA1 (network-uri-2.6.4.1.tar.gz) = 2e5498959894859c21078d8152e59397bdf61d39
+RMD160 (network-uri-2.6.4.1.tar.gz) = 74ac6190cfa9bb342a1993dbc483b527aa9a6642
+SHA512 (network-uri-2.6.4.1.tar.gz) = 8e5b01fd11197ac36de9b804d37256662f904f2b94a997a2e262439bb1706d1c460db368e935bf3971fd1581162abbc07439a0bae391e1e616264bd00fe7104e
+Size (network-uri-2.6.4.1.tar.gz) = 32373 bytes
