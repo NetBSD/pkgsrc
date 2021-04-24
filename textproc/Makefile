@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1208 2021/04/24 06:40:38 pho Exp $
+# $NetBSD: Makefile,v 1.1209 2021/04/24 16:13:45 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -342,6 +342,7 @@ SUBDIR+=	hs-unicode-show
 SUBDIR+=	hs-unicode-transforms
 SUBDIR+=	hs-wcwidth
 SUBDIR+=	hs-xml
+SUBDIR+=	hs-xml-types
 SUBDIR+=	hs-yaml
 SUBDIR+=	html
 SUBDIR+=	html2text
