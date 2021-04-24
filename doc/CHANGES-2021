@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2324 2021/04/24 11:13:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2325 2021/04/24 11:15:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3661,3 +3661,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/mMosaic [wiz 2021-04-24]
 	Removed security/pam-dbm [wiz 2021-04-24]
 	Removed wm/fvwm-devel successor wm/fvwm [wiz 2021-04-24]
+	Removed x11/xpmroot successor wm/fvwm [wiz 2021-04-24]

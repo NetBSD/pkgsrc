@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.928 2021/04/22 08:57:59 jnemeth Exp $
+# $NetBSD: Makefile,v 1.929 2021/04/24 11:15:13 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -653,7 +653,6 @@ SUBDIR+=	xpenguins
 SUBDIR+=	xphoon
 SUBDIR+=	xplanet
 SUBDIR+=	xpmicons
-SUBDIR+=	xpmroot
 SUBDIR+=	xpns
 SUBDIR+=	xpostit
 SUBDIR+=	xpr
