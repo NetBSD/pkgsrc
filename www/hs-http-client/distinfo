@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 13:37:14 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 17:57:51 pho Exp $
 
-SHA1 (http-client-0.6.4.tar.gz) = 446afb8c65a99b44082b65fb8f73cfd84e7f8000
-RMD160 (http-client-0.6.4.tar.gz) = e7b2df26918ad2108f147c6222dfba9b6ac0bf8f
-SHA512 (http-client-0.6.4.tar.gz) = 0b7a16ca1932fa3a20d3f44f65a482277486af1319cf9ed3e138e0b9cc838816ee12aa677821a19e8c51f8bf675676233d8a648b3bf2c3c13f3c70a9348be90a
-Size (http-client-0.6.4.tar.gz) = 89810 bytes
+SHA1 (http-client-0.7.8.tar.gz) = b63aa58b5085d1bfd91c51cabb490ea7508fe7eb
+RMD160 (http-client-0.7.8.tar.gz) = 4b9812da52108809424be7797bd20a7e50bc077d
+SHA512 (http-client-0.7.8.tar.gz) = 401e45c00f89153de48548cc37bb998fde3ff6304b5c61304a6955bdc08a820421766e80590ec47c1a7833389568779ac5c02522b85eb648b32df0dad2ec4c5e
+Size (http-client-0.7.8.tar.gz) = 92430 bytes
