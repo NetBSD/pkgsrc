@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.949 2021/04/18 12:31:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.950 2021/04/24 16:07:47 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -330,6 +330,7 @@ SUBDIR+=	heirloom-yes
 SUBDIR+=	hfsutils
 SUBDIR+=	hivex
 SUBDIR+=	hs-temporary
+SUBDIR+=	hs-typed-process
 SUBDIR+=	htop
 SUBDIR+=	hytctl
 SUBDIR+=	i2ocfg
