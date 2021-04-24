@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/01/11 14:19:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2021/04/24 19:02:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-X11
 
 .if !defined(HS_X11_BUILDLINK3_MK)
 HS_X11_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-X11+=	hs-X11>=1.9.1
-BUILDLINK_ABI_DEPENDS.hs-X11+=	hs-X11>=1.9.1
+BUILDLINK_API_DEPENDS.hs-X11+=	hs-X11>=1.9.2
+BUILDLINK_ABI_DEPENDS.hs-X11+=	hs-X11>=1.9.2
 BUILDLINK_PKGSRCDIR.hs-X11?=	../../x11/hs-X11
 
 # Work around a Cabal bug. It ignores "ld-options" in X11.buildinfo
