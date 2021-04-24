@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2322 2021/04/24 10:51:39 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2323 2021/04/24 11:02:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/radiusd-cistron [wiz 2021-04-24]
 	Removed misc/molden [wiz 2021-04-24]
 	Removed www/mMosaic [wiz 2021-04-24]
+	Removed security/pam-dbm [wiz 2021-04-24]
