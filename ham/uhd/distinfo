@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2020/05/14 19:21:04 joerg Exp $
+$NetBSD: distinfo,v 1.26 2021/04/24 16:34:54 tnn Exp $
 
 SHA1 (uhd-3.15.0.0.tar.gz) = 17286a52a591038af16e870962c1767c5935ec2f
 RMD160 (uhd-3.15.0.0.tar.gz) = b05282c4b3f25bd201e9b91b3652fba9b150c7ae
@@ -9,7 +9,8 @@ SHA1 (patch-lib_rfnoc_dma__fifo__block__ctrl__impl.cpp) = 0dcc0ddc231f3f1c2a6a3a
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 350af0f9ed999f64105a42195d2df037faef87c7
 SHA1 (patch-lib_usrp__clock_octoclock_octoclock__impl.cpp) = b77c91c7a202e3c93707dba67bedc9704f77ab56
 SHA1 (patch-lib_usrp_b100_b100__impl.cpp) = 9a53e41b45fdebaf0b56e3030f1c8f9790185046
-SHA1 (patch-lib_usrp_cores_rx__dsp__core__3000.cpp) = d63fd1ab1d48da7e9eb8a7deb33a3803fb6c219d
+SHA1 (patch-lib_usrp_cores_rx__dsp__core__3000.cpp) = 7cb2910d13368e5dbb19bfa4a1d01a325383bd79
+SHA1 (patch-lib_usrp_cores_rx__frontend__core__3000.cpp) = db294105298e598c94525d639f1c2de7e7b22663
 SHA1 (patch-lib_usrp_cores_tx__dsp__core__3000.cpp) = 3812d190f830128046ab39b21ba63b6775f8c764
 SHA1 (patch-lib_usrp_dboard_db__cbx.cpp) = 3b8864f060acaeb262c91433f0dc0fd229f8c458
 SHA1 (patch-lib_usrp_dboard_db__dbsrx.cpp) = 55de5be387fbe59015c4e1c0861313740b9b3088
@@ -29,4 +30,5 @@ SHA1 (patch-lib_usrp_dboard_db__wbx__version4.cpp) = dbbe24a2a755031c06ff74045e2
 SHA1 (patch-lib_usrp_dboard_db__xcvr2450.cpp) = 90d2e4bfe072e84e20c35c256af036da696425c1
 SHA1 (patch-lib_usrp_dboard_eiscat_eiscat__radio__ctrl__impl.cpp) = 54e9e06fd37dd7cc5a9767519148266dd915f4a0
 SHA1 (patch-lib_usrp_multi__usrp.cpp) = ff711af0232cbe92dfe822411ab228b35fa63389
+SHA1 (patch-lib_usrp_usrp2_usrp2__impl.cpp) = 339feabd4ac7af60e6b7b5be28e386e7ca48f11c
 SHA1 (patch-lib_usrp_x300_x300__radio__ctrl__impl.cpp) = 2f0c10f2443b6d2f361ee8a9f339b39c9498d2bb
