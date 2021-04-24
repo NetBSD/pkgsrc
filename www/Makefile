@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1525 2021/03/30 11:00:37 markd Exp $
+# $NetBSD: Makefile,v 1.1526 2021/04/24 10:51:39 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -208,7 +208,6 @@ SUBDIR+=	lua-psl
 SUBDIR+=	lua-web-sanitize
 SUBDIR+=	luakit
 SUBDIR+=	lynx
-SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	matcha-sns
 SUBDIR+=	mediawiki
