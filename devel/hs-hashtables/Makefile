@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2020/04/03 07:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/24 04:49:49 pho Exp $
 
-DISTNAME=	hashtables-1.2.3.4
+DISTNAME=	hashtables-1.2.4.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=hashtables-${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/gregorycollins/hashtables
 COMMENT=	Mutable hash tables in the ST monad
 LICENSE=	modified-bsd
 
-DEPENDS+=	hs-hashable-[0-9]*:../../devel/hs-hashable
-DEPENDS+=	hs-primitive-[0-9]*:../../devel/hs-primitive
-DEPENDS+=	hs-vector-[0-9]*:../../devel/hs-vector
-
 .include "../../mk/haskell.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../devel/hs-primitive/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
