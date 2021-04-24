@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/10/12 20:31:37 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.10 2021/04/24 10:37:33 wiz Exp $
 
 DISTNAME=	udptunnel-1.1
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.cs.columbia.edu/pub/lennox/udptunnel/
+MASTER_SITES=	http://www1.cs.columbia.edu/~lennox/udptunnel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www1.cs.columbia.edu/~lennox/udptunnel/
