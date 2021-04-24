@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 00:17:32 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 12:55:43 pho Exp $
 
-SHA1 (cryptonite-0.26.tar.gz) = 39cfaa6c4378b20c46a8449aa328695a88de130e
-RMD160 (cryptonite-0.26.tar.gz) = 0732fa5c83a88b75766c00ec5741f1b351b8cfd8
-SHA512 (cryptonite-0.26.tar.gz) = 4236d411542fd104e5cace61fbdeda615f7d13e442594d7fa12acc682d917b0494b10b242a88fef19e91e93489797206fee07497bff92e43d3849ebac8ee11b0
-Size (cryptonite-0.26.tar.gz) = 581153 bytes
+SHA1 (cryptonite-0.28.tar.gz) = 1bbbe50a0fb230718b8d5501ae8c6dbeeacf2399
+RMD160 (cryptonite-0.28.tar.gz) = 5fb4103fb30fe3a800ee57b11b6296fbeaf9f782
+SHA512 (cryptonite-0.28.tar.gz) = c1e485522938f94f15910a5b5a4a3e4dfecbb62df463c80faaa51e9d883c2612611b8486bd0fd13660766cfb6d62d366fbbd03df2db874d525514aae247b6242
+Size (cryptonite-0.28.tar.gz) = 616309 bytes
+SHA1 (patch-Crypto_Number_Compat.hs) = 982e568d5f7c7d2d3bf5d6453afa72302c42a383
