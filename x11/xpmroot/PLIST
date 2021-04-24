@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/25 07:59:57 martti Exp $
-bin/xpmroot
-man/man1/xpmroot.1
