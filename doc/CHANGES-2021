@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2318 2021/04/24 08:33:52 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2319 2021/04/24 08:34:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3655,3 +3655,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rust to 1.50.0nb2 [schmonz 2021-04-24]
 	Updated chat/irssi to 1.2.3 [nia 2021-04-24]
 	Updated chat/irssi-icb to 0.15nb7 [nia 2021-04-24]
+	Updated chat/irssi-xmpp to 0.54nb2 [nia 2021-04-24]
