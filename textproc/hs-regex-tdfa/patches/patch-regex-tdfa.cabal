@@ -1,0 +1,15 @@
+$NetBSD: patch-regex-tdfa.cabal,v 1.1 2021/04/24 06:55:17 pho Exp $
+
+Fix build with GHC 9.
+
+--- regex-tdfa.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ regex-tdfa.cabal
+@@ -85,7 +85,7 @@ library
+     build-depends:      fail               == 4.9.*
+                       , semigroups         == 0.18.* || == 0.19.*
+   build-depends:        array              >= 0.4 && < 0.6
+-                      , base               >= 4.5 && < 4.14
++                      , base               >= 4.5 && < 5
+                       , bytestring         >= 0.9.2 && < 0.11
+                       , containers         >= 0.4.2 && < 0.7
+                       , mtl                >= 2.1.3 && < 2.3
