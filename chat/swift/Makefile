@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2021/04/21 13:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.66 2021/04/24 08:37:49 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	48
 CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/${DISTNAME}/
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://swift.im/
 COMMENT=	Graphical XMPP Client
 LICENSE=	gnu-gpl-v3
