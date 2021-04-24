@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.815 2021/04/21 09:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.816 2021/04/24 11:02:51 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -355,7 +355,6 @@ SUBDIR+=	p5-pcsc
 SUBDIR+=	pakchois
 SUBDIR+=	pakemon
 SUBDIR+=	pam-af
-SUBDIR+=	pam-dbm
 SUBDIR+=	pam-fprint
 SUBDIR+=	pam-krb5
 SUBDIR+=	pam-ldap
