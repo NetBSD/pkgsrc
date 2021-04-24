@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:38 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.19 2021/04/24 07:43:10 wiz Exp $
 
 DISTNAME=		su2-1.3
 CATEGORIES=		sysutils security
-MASTER_SITES=		ftp://ftp.ccs.neu.edu/pub/sysadmin/
+#MASTER_SITES=		ftp://ftp.ccs.neu.edu/pub/sysadmin/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.ccs.neu.edu/pub/sysadmin/
+#HOMEPAGE=		ftp://ftp.ccs.neu.edu/pub/sysadmin/
 COMMENT=		Enhanced su, users su with own password + more
 LICENSE=		su2-license
 
