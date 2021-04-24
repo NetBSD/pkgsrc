@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2020/05/25 05:35:35 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/24 08:31:29 wiz Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
 PKGREVISION=	1
 CATEGORIES=	japanese mail
-MASTER_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/
+#MASTER_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/
 
-PATCH_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/mh-6.8.4-JP-3.05-patch/
+#PATCH_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/mh-6.8.4-JP-3.05-patch/
 PATCHFILES=	mh-6.8.4-JP-3.05-20030114.patch.gz \
 		mh-6.8.4-JP-3.05-20030326.patch.gz \
 		mh-6.8.4-JP-3.05-20031023.patch.gz \
