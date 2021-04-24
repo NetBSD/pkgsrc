@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2316 2021/04/24 08:28:10 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2317 2021/04/24 08:32:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3653,3 +3653,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.16.1nb3 [rin 2021-04-24]
 	Updated emulators/gxemul to 0.7.0 [fcambus 2021-04-24]
 	Updated lang/rust to 1.50.0nb2 [schmonz 2021-04-24]
+	Updated chat/irssi to 1.2.3 [nia 2021-04-24]
