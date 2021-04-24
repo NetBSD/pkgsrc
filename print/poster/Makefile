@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/24 19:26:24 wiz Exp $
 
 DISTNAME=	poster-20060221
 PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/printing/
+#MASTER_SITES=	ftp://ftp.kde.org/pub/kde/printing/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
