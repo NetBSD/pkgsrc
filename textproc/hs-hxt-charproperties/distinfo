@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 15:46:39 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 15:42:57 pho Exp $
 
-SHA1 (hxt-charproperties-9.4.0.0.tar.gz) = 5443fb29a76ca5957866f29832fe2fd218d710cb
-RMD160 (hxt-charproperties-9.4.0.0.tar.gz) = 20deb7d4e0ae24fe1700862adb6d72520deea291
-SHA512 (hxt-charproperties-9.4.0.0.tar.gz) = 8885ceb06e402f2e2e31d616eb605ddf380bec771edf4112fdf6875cbbf03cf1a88b5466e4b74270c7ccf0e1c04e335a3ded6867133a951e1070b7635976fba6
-Size (hxt-charproperties-9.4.0.0.tar.gz) = 317043 bytes
+SHA1 (hxt-charproperties-9.5.0.0.tar.gz) = d6338d3ce55ac59bb2cd0830f384033d5fc7c7e9
+RMD160 (hxt-charproperties-9.5.0.0.tar.gz) = 853034e3528d502ba5b56728b98c0a40c49949de
+SHA512 (hxt-charproperties-9.5.0.0.tar.gz) = 67e1d02a6f0c89e902fb210b99784ba4e3689b35d05ab149686f7343695a936b0fbf695e672ed088a8bbb283a0517e4a2580b64e36a8322534f45e7e99aba82d
+Size (hxt-charproperties-9.5.0.0.tar.gz) = 324736 bytes
