@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/24 17:51:16 pho Exp $
+lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-description
+lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/System-ByteOrder.html
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/byteorder.haddock
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/synopsis.png
