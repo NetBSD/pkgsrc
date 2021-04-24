@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.547 2021/04/07 19:42:25 markd Exp $
+# $NetBSD: Makefile,v 1.548 2021/04/24 08:47:53 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -194,7 +194,6 @@ SUBDIR+=	mime-types
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
 SUBDIR+=	mmv
-SUBDIR+=	molden
 SUBDIR+=	moreutils
 SUBDIR+=	most
 SUBDIR+=	mousetweaks
