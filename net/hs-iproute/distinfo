@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 17:53:42 pho Exp $
+
+SHA1 (iproute-1.7.11.tar.gz) = ed3f6a573b0e70deebea8e2cc08c8a21514a18dd
+RMD160 (iproute-1.7.11.tar.gz) = 934812dcac8020be681bc6e26391c3dd9c1d07cb
+SHA512 (iproute-1.7.11.tar.gz) = 47a9e2a08cd70e3e279eb4792ad1e89fa2b7bd966d96acabc5114e0384896a4b1b247787d54c4c11a5b99a5250ed954eff72ec72787dc498ee10d4169f1ae1f5
+Size (iproute-1.7.11.tar.gz) = 17601 bytes
