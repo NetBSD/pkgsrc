@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/01/02 16:48:30 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/04/24 19:02:53 pho Exp $
 
-SHA1 (X11-1.9.1.tar.gz) = 1df01b08c55a3cb697eec03002eaa59a8fdea92c
-RMD160 (X11-1.9.1.tar.gz) = 37bc99faaae7a1f5d2acfa55125eea4a613ed40a
-SHA512 (X11-1.9.1.tar.gz) = 6fc3c8b71681ba45d14c4b709c58760d7bfcb3e6363ef6c79e3d3ecce8f5a30bda877141cea9de73094fc00fa064d23d36f1f8fa61aa65f2d9d75acd1808eaa7
-Size (X11-1.9.1.tar.gz) = 190698 bytes
+SHA1 (X11-1.9.2.tar.gz) = e70b1ea8103b65a6ed450a38b4f7b6bcdfa41ff2
+RMD160 (X11-1.9.2.tar.gz) = 7b08c74ccdb8d4f6538127fe2d89d871d2b579eb
+SHA512 (X11-1.9.2.tar.gz) = e9658c33b6dcbb6a42f1cc4a8976365506af94ddc15c32f73205b453934ef3232f3b383f8365b6aa6e69b51acfda4a0f3a8038f3164523b33781139a80582a41
+Size (X11-1.9.2.tar.gz) = 190757 bytes
+SHA1 (patch-Graphics_X11_Xlib_Event.hsc) = 271c3cc4c3106fa6eaacc36c336e5f3aa73508e4
