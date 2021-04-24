@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/24 19:19:15 pho Exp $
+lib/rfc5051-${PKGVERSION}/${HS_VERSION}/package-description
+lib/rfc5051-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051/UnicodeData.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051/UnicodeData.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/RFC5051/UnicodeData.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/Data-RFC5051.html
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/rfc5051.haddock
+share/doc/${HS_PLATFORM}/rfc5051-${PKGVERSION}/html/synopsis.png
