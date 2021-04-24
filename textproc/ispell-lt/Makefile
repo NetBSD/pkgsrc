@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2020/12/04 20:45:45 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/24 00:24:53 wiz Exp $
 
 DISTNAME=	ispell-lt-1.3
 PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.akl.lt/ispell-lt/
+#MASTER_SITES=	ftp://ftp.akl.lt/ispell-lt/
 
 MAINTAINER=	tomas.furmonavicius@takas.lt
 HOMEPAGE=	https://launchpad.net/ispell-lt
