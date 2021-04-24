@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 19:32:45 pho Exp $
+
+SHA1 (commonmark-0.1.1.4.tar.gz) = 55e51c432ee53e9d8bf87e8c25cc3291ef78ec0b
+RMD160 (commonmark-0.1.1.4.tar.gz) = 643ee0a4d1533ff009777cf08a9d2fe6a144c58d
+SHA512 (commonmark-0.1.1.4.tar.gz) = d8f8f652a78d6fcc0b623f6750f3735c22d623a3a8e423384ff0778993c0ac65e986bfb37ba939d0c4cda3db95af2289520883579d82372af5cf5e5bb0540657
+Size (commonmark-0.1.1.4.tar.gz) = 99102 bytes
