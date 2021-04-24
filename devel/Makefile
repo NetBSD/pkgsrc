@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3365 2021/04/24 06:46:32 pho Exp $
+# $NetBSD: Makefile,v 1.3366 2021/04/24 10:24:16 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -625,6 +625,7 @@ SUBDIR+=	hs-tasty-hunit
 SUBDIR+=	hs-terminal-size
 SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-th-abstraction
+SUBDIR+=	hs-th-lift
 SUBDIR+=	hs-these
 SUBDIR+=	hs-timeit
 SUBDIR+=	hs-transformers-base
