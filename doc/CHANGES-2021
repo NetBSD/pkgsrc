@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2326 2021/04/24 16:49:16 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2327 2021/04/24 18:50:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3663,3 +3663,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed wm/fvwm-devel successor wm/fvwm [wiz 2021-04-24]
 	Removed x11/xpmroot successor wm/fvwm [wiz 2021-04-24]
 	Updated textproc/hs-cgrep to 6.6.32 [pho 2021-04-24]
+	Updated sysutils/macchina to 0.7.2 [pin 2021-04-24]
