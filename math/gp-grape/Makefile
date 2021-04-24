@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/04/24 00:16:04 wiz Exp $
 
 DISTNAME=	grape4r1
 PKGNAME=	gp-grape-4.1
