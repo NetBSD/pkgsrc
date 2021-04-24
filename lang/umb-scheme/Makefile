@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 20:11:56 asau Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/24 10:39:59 wiz Exp $
 
 DISTNAME=		umb-scheme-3.2
 PKGREVISION=		1
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.cs.umb.edu/pub/scheme/
+#MASTER_SITES=		ftp://ftp.cs.umb.edu/pub/scheme/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
