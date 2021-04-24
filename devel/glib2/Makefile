@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.277 2021/03/22 06:54:19 adam Exp $
+# $NetBSD: Makefile,v 1.277.2.1 2021/04/24 13:09:41 bsiegert Exp $
 
 .include "Makefile.common"
+PKGREVISION=1
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
@@ -43,6 +44,7 @@ SUBST_CLASSES+=		dbusdb
 SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
 SUBST_STAGE.dbusdb=	pre-configure
 SUBST_FILES.dbusdb=	gio/gdbusconnection.c
+SUBST_FILES.dbusdb=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
 
