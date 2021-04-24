@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2020/12/04 20:45:46 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/24 19:30:50 wiz Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	12
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
+#MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.xs4all.nl/~jantien/yodl/
