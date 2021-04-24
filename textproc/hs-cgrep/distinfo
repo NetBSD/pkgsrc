@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/01/11 13:10:10 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/24 16:48:46 pho Exp $
 
-SHA1 (cgrep-6.6.30.tar.gz) = 2a7ca412d483539fd21eb30176b4ffd668ed3d08
-RMD160 (cgrep-6.6.30.tar.gz) = 97c76c30efb16b072c749517aa616fc45c2dfb1d
-SHA512 (cgrep-6.6.30.tar.gz) = 72480faf6bbbcf018992be5cb92cb5f23ac0f7b219092e419eedc0007fb142873b6b97a2df42bf43c0d75f00f2c1813d6f8eb5eaf5d070391443f8550111f660
-Size (cgrep-6.6.30.tar.gz) = 35481 bytes
+SHA1 (cgrep-6.6.32.tar.gz) = 8a9453487c1cedd8c8e712455b0d2d06ebdec240
+RMD160 (cgrep-6.6.32.tar.gz) = 9a1693631a76c24cd3d68f4a1ba3f5cd67a88ab1
+SHA512 (cgrep-6.6.32.tar.gz) = 401ca49fbd2903b810c1873a3c52c3863a42b431d1a905a781636386c3ac0aac4e2ed9934fb24f1e9996629a2b578483a7c3a7a8a4d61ecb7ac7cfc9152f43ba
+Size (cgrep-6.6.32.tar.gz) = 35640 bytes
