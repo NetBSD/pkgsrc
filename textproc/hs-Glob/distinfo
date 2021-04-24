@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 12:15:10 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 06:21:41 pho Exp $
 
-SHA1 (Glob-0.10.0.tar.gz) = 9d33a3a31192d9c888e2a4f56e3db714f417c17a
-RMD160 (Glob-0.10.0.tar.gz) = 13b16f3784463b36e94049e53dabedad4b3257be
-SHA512 (Glob-0.10.0.tar.gz) = a7e1fe244cc7f4b74fb9cc74712d0d11679597dc5cb2e4f06540b71d3c9999c6e7e4f5243e8f757bcdcfea7c031b82143b522b378e157ad4a5046bc1e6bea88c
-Size (Glob-0.10.0.tar.gz) = 29500 bytes
+SHA1 (Glob-0.10.1.tar.gz) = dcc0fc178fdb697c9ad25ec6460feed5f8abb07e
+RMD160 (Glob-0.10.1.tar.gz) = 0c26b26e0c14823e2c0be209e1d72e64c7b5d46a
+SHA512 (Glob-0.10.1.tar.gz) = b2b2ee93f2cadf01f8a6828b9e742a241601f5fada1f73388dc0044f8e0985c601bd6a42738c60c54eecb619b6289ac1302751d8e2402f6494aaeb2b2a4abb42
+Size (Glob-0.10.1.tar.gz) = 29763 bytes
