@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2019/11/03 19:04:08 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.27 2021/04/24 09:41:23 wiz Exp $
 
 DISTNAME=		sr233
 PKGNAME=		sr-2.3.3
 PKGREVISION=		10
 CATEGORIES=		lang parallel
-MASTER_SITES=		ftp://ftp.cs.arizona.edu/sr/
+#MASTER_SITES=		ftp://ftp.cs.arizona.edu/sr/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://www.cs.arizona.edu/sr/
+HOMEPAGE=		http://www2.cs.arizona.edu/sr/index.html
 COMMENT=		The SR language compiler and run time system
 
 NOT_FOR_PLATFORM=	*-*-x86_64  # site: "doesn't run on 64-bit/AMD64"
