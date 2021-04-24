@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/24 16:07:12 pho Exp $
+
+SHA1 (typed-process-0.2.6.0.tar.gz) = 36e4ab31819a9ad41a73556851bd00622642e1e8
+RMD160 (typed-process-0.2.6.0.tar.gz) = 6d4ff38f349079b6bec0825f322a0f6b811b4e94
+SHA512 (typed-process-0.2.6.0.tar.gz) = a40b8db4ef2179273943a3aab0200891bd3dffe584bcd51037ddf9cebae88d4d95292883a745a0c31900c7bf2eebe2c71175fbb86dc470b60660b443f8b1e3e0
+Size (typed-process-0.2.6.0.tar.gz) = 17363 bytes
