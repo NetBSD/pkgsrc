@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 17:32:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 16:32:23 pho Exp $
 
-SHA1 (skylighting-0.8.3.tar.gz) = 7ea0bd150213368dadc117fd329a9d7d32158826
-RMD160 (skylighting-0.8.3.tar.gz) = 128cb0ad24a98f154d1a82db6a6161e2a5f9a746
-SHA512 (skylighting-0.8.3.tar.gz) = 20d69de363f17270d7f31843eb10f80a20d23e33c26e82ffc25c597d73edd886d9f2a03acf7d354be932ef443dc4e6a828362996ec8ac2a4ec8590ff7d199397
-Size (skylighting-0.8.3.tar.gz) = 629989 bytes
+SHA1 (skylighting-0.10.5.1.tar.gz) = c7919031acac2031193c0aac1f89546791dd2b8d
+RMD160 (skylighting-0.10.5.1.tar.gz) = be747f4dfe7d0770c8378439bcea0506d235f07e
+SHA512 (skylighting-0.10.5.1.tar.gz) = 03d157469c73e18d262e6eda771aceba12663e1144d754fce959550db9f0cbf3e9f762fa6e05924f0a24b3e25b14c533e17b69265aa00f7bd24bc425e8ce34c7
+Size (skylighting-0.10.5.1.tar.gz) = 648106 bytes
