@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 06:45:04 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 15:21:03 pho Exp $
 
-SHA1 (doclayout-0.3.tar.gz) = 493657595ee839317a4d6aa044b30bf7bff35029
-RMD160 (doclayout-0.3.tar.gz) = 36d1c4c7c5ab21305c7aafb40310bb0febf7f6a7
-SHA512 (doclayout-0.3.tar.gz) = ccb8c41977c5cea47294157c812a31b3be5bddc872915d8baf0d9063d597429606d83e4f7cf9e4aea9b1e1416cbcf732fbbcd71b6659de6510c661f9225d33d0
-Size (doclayout-0.3.tar.gz) = 11968 bytes
+SHA1 (doclayout-0.3.0.2.tar.gz) = 42c3c9451a1c4755f529c10ec3b5e94ae4e6e296
+RMD160 (doclayout-0.3.0.2.tar.gz) = b16e9916916e84ff3a28619ceec07c70a8bdcf3d
+SHA512 (doclayout-0.3.0.2.tar.gz) = 5f777b66c5bb589021ce6f74e4cb4520a5078621cbcc62bc4eb8b73d54771f18523dfe40935f83553a5a4244219a86b6af22e7e3f33d251b3c567f91bb9596c0
+Size (doclayout-0.3.0.2.tar.gz) = 12140 bytes
