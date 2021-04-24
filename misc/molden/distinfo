@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2017/03/23 17:06:56 joerg Exp $
-
-SHA1 (molden-4.6/molden4.6.tar.gz) = 83f17d2079b83cc790689485c139301407313463
-RMD160 (molden-4.6/molden4.6.tar.gz) = b75ec4c23001695044e82d9f8b8542cb45b3009c
-SHA512 (molden-4.6/molden4.6.tar.gz) = 90b0569028e47ae130692c220ed1d49e270b7cce6a9e762e3e42db0c832eaa4fd70d1c51d61ca956a412ae068e8c29b36ba102a379fa80c553bf3dcef00b49e6
-Size (molden-4.6/molden4.6.tar.gz) = 2786093 bytes
-SHA1 (patch-aa) = 6d56ac7e5aa940004b6758164b5eaedbf9694b3c
-SHA1 (patch-ab) = a0dad736707c3228f4934e4888ae0d08cbf61338
