@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/02 11:15:20 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 10:15:50 pho Exp $
 
-SHA1 (math-functions-0.3.3.0.tar.gz) = ab4810679f8cea400ec9e2835124b0fcb954ac8a
-RMD160 (math-functions-0.3.3.0.tar.gz) = 1f46e16ce11d341761d05c60622237bfd7221e53
-SHA512 (math-functions-0.3.3.0.tar.gz) = f6ac6f9fb604207c11d7888fa375a52b544732dd8e811c3b9bf74237bbc0dc83839eb83c11c5ef0dd88666cff4919d4e06236e14d84da7065b4dc75717ceafad
-Size (math-functions-0.3.3.0.tar.gz) = 424169 bytes
+SHA1 (math-functions-0.3.4.2.tar.gz) = f7f9e7bce4ecdcb56da3674acf8e5320000c18d9
+RMD160 (math-functions-0.3.4.2.tar.gz) = 9484d8d03e9f863635d2b0011d52578202203011
+SHA512 (math-functions-0.3.4.2.tar.gz) = cb29901294463edbba37e97445bb9ed039bdc43815c9bbd9b9bb92b87393e6e891f5840d337c6c06c7e30d26107d32a59c39ac51436be43dba00d0e2411a9053
+Size (math-functions-0.3.4.2.tar.gz) = 429223 bytes
