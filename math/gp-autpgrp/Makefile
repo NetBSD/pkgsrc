@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2017/08/01 17:40:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2021/04/24 00:16:04 wiz Exp $
 
 DISTNAME=	autpgrp-1.1
 PKGNAME=	gp-autpgrp-1.1
 PKGREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
+#MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
