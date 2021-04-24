@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2314 2021/04/24 06:33:17 rin Exp $
+$NetBSD: CHANGES-2021,v 1.2315 2021/04/24 07:31:48 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3651,3 +3651,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/cairo to 1.16.0nb3 [thor 2021-04-23]
 	Updated geography/gdal-lib to 3.2.2nb3 [thor 2021-04-23]
 	Updated lang/nodejs to 14.16.1nb3 [rin 2021-04-24]
+	Updated emulators/gxemul to 0.7.0 [fcambus 2021-04-24]
