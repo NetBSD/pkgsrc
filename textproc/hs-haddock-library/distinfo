@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 12:25:43 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/04/24 15:31:23 pho Exp $
 
-SHA1 (haddock-library-1.8.0.tar.gz) = 2b193a4436c994ac99521cef2e37aa56da8ba120
-RMD160 (haddock-library-1.8.0.tar.gz) = 7a5b54b91c23347d195ae9a1e44a8d1489f079c6
-SHA512 (haddock-library-1.8.0.tar.gz) = f84672b67dd4b18402efb8b40eb0e2cb912ecf894cfdedf61b0ada87392e63609cf1101d4fc793686cc4af354665661bf4dc902313bb466efee683a7c64bbe2b
-Size (haddock-library-1.8.0.tar.gz) = 30918 bytes
+SHA1 (haddock-library-1.10.0.tar.gz) = a3cd394e050640ed9bb23bd8102515036fa4931d
+RMD160 (haddock-library-1.10.0.tar.gz) = c8b1c2d457065dc06ab6f6db3454b268d5e95acc
+SHA512 (haddock-library-1.10.0.tar.gz) = dac536a2b8e2764de1a1b1a16fc328e15455656c2992fb3b3bccdeae2bb6ac81fe94e164aa2a70cff7cea3b97347b8510aadb5fa1c0564bb2429947f0aace0d1
+Size (haddock-library-1.10.0.tar.gz) = 32427 bytes
