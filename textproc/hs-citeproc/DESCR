@@ -1,0 +1,3 @@
+citeproc parses CSL style files and uses them to generate a list of
+formatted citations and bibliography entries. For more information
+about CSL, see https://citationstyles.org/
