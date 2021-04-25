@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2020/12/19 12:17:29 nia Exp $
+# $NetBSD: options.mk,v 1.28 2021/04/25 06:09:41 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -161,6 +161,10 @@ WAF_CONFIGURE_ARGS+=	--disable-drm
 ### OpenGL support (video output)
 ###
 .if !empty(PKG_OPTIONS:Mopengl)
+.include "../../graphics/MesaLib/features.mk"
+.  if ${MESALIB_SUPPORTS_EGL:tl} == "no"
+WAF_CONFIGURE_ARGS+=	--disable-egl-x11
+.  endif
 .include "../../graphics/MesaLib/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mrpi)
 BUILD_DEPENDS+=		raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
