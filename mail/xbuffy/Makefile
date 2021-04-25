@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:37 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/04/25 06:25:57 wiz Exp $
 
 DISTNAME=	xbuffy-3.4
 PKGREVISION=	2
 CATEGORIES=	mail x11
-MASTER_SITES=	ftp://ftp.virginia.edu/pub/xbuffy/
+#MASTER_SITES=	ftp://ftp.virginia.edu/pub/xbuffy/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement for xbiff that handles multiple mail files
