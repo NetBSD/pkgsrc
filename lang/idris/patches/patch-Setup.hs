@@ -1,4 +1,4 @@
-$NetBSD: patch-Setup.hs,v 1.2 2020/10/13 16:35:44 pho Exp $
+$NetBSD: patch-Setup.hs,v 1.3 2021/04/25 11:39:03 pho Exp $
 
 * Don't hard-code the gmake command (pkgsrc specific).
 
@@ -20,7 +20,7 @@ $NetBSD: patch-Setup.hs,v 1.2 2020/10/13 16:35:44 pho Exp $
 Be careful not to modify this patch after running "bmake
 configure". It will break the patch.
 
---- Setup.hs.orig	2019-07-22 10:47:26.000000000 +0000
+--- Setup.hs.orig	2020-03-18 21:55:00.000000000 +0000
 +++ Setup.hs
 @@ -42,19 +42,20 @@ import Distribution.Types.UnqualComponen
  (<//>) = (Px.</>)
@@ -61,23 +61,7 @@ configure". It will break the patch.
  
  -- Generate a module that contains extra library directories passed
  -- via command-line to cabal
-@@ -215,6 +214,7 @@ idrisConfigure _ flags pkgdesc local = d
-       autogenComponentModulesDir lbi _ = autogenModulesDir lbi
- #endif
- 
-+#if !MIN_VERSION_Cabal(3,0,0)
- idrisPreSDist args flags = do
-   let dir = S.fromFlag (S.sDistDirectory flags)
-   let verb = S.fromFlag (S.sDistVerbosity flags)
-@@ -244,6 +244,7 @@ idrisPostSDist args flags desc lbi = do
-                               removeFile targetFile)
-              (\e -> let e' = (e :: SomeException) in return ())
-   postSDist simpleUserHooks args flags desc lbi
-+#endif
- 
- #if !(MIN_VERSION_Cabal(2,0,0))
- rewriteFileEx :: Verbosity -> FilePath -> String -> IO ()
-@@ -317,7 +318,7 @@ idrisInstall verbosity copy pkg local
+@@ -287,7 +286,7 @@ idrisInstall verbosity copy pkg local
           makeInstall "rts" target'
  
        installManPage = do
@@ -86,14 +70,3 @@ configure". It will break the patch.
           notice verbosity $ unwords ["Copying man page to", mandest]
           installOrdinaryFiles verbosity mandest [("man", "idris.1")]
  
-@@ -353,8 +354,10 @@ main = defaultMainWithHooks $ simpleUser
-    , postInst = \_ flags pkg local ->
-                   idrisInstall (S.fromFlag $ S.installVerbosity flags)
-                                NoCopyDest pkg local
-+#if !MIN_VERSION_Cabal(3,0,0)
-    , preSDist = idrisPreSDist
-    , sDistHook = idrisSDist (sDistHook simpleUserHooks)
-    , postSDist = idrisPostSDist
-+#endif
-    , testHook = idrisTestHook
-    }
