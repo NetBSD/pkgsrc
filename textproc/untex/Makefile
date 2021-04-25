@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/25 06:57:05 asau Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/04/25 06:34:42 wiz Exp $
 
 DISTNAME=	untex-1.3
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://hal6000.uni-duisburg.de/pub/source/
+#MASTER_SITES=	ftp://hal6000.uni-duisburg.de/pub/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Remove LaTeX commands
