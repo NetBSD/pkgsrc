@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/11/04 19:17:11 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2021/04/25 06:32:55 wiz Exp $
 
 DISTNAME=	xrn-10.11
 CATEGORIES=	news
-MASTER_SITES=	ftp://rtfm.mit.edu/pub/xrn/
+#MASTER_SITES=	ftp://rtfm.mit.edu/pub/xrn/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://stuff.mit.edu/~jik/software/xrn.html
