@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2017/08/19 00:25:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/25 06:47:52 wiz Exp $
 
 DISTNAME=		spegla-1.1p4
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		ftp://subzero.campus.luth.se/pub/spegla/
+#MASTER_SITES=		ftp://subzero.campus.luth.se/pub/spegla/
 
 MAINTAINER=		jnilsson@ludd.luth.se
 COMMENT=		Mirror program for FTP sites (written in C)
