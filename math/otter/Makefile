@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:25 asau Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/25 06:36:52 wiz Exp $
 
 DISTNAME=	otter-3.0.6
 CATEGORIES=	math
-MASTER_SITES=	ftp://info.mcs.anl.gov/pub/Otter/
+MASTER_SITES=	https://www.cs.unm.edu/~mccune/otter/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-unix.mcs.anl.gov/AR/otter/
+HOMEPAGE=	https://www.cs.unm.edu/~mccune/otter/
 COMMENT=	Automated Deduction System
 
 BUILD_TARGET=	otter
