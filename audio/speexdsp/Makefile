@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/11 11:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/25 07:51:24 mrg Exp $
 
 DISTNAME=	speexdsp-1.2.0
 CATEGORIES=	audio
@@ -14,7 +14,9 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speexdsp.pc.in
 USE_TOOLS+=		pkg-config
 
-.if ${MACHINE_ARCH} == "aarch64"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_CPU} == "aarch64"
 CONFIGURE_ARGS+=	--disable-neon
 .endif
 
