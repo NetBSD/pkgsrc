@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2334 2021/04/25 10:51:12 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2335 2021/04/25 11:39:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-timescaledb to 2.2.0 [tnn 2021-04-25]
 	Updated databases/promscale to 0.3.0 [tnn 2021-04-25]
 	Updated lang/rust-bin to 1.50.0 [nia 2021-04-25]
+	Updated lang/idris to 1.3.3 [pho 2021-04-25]
