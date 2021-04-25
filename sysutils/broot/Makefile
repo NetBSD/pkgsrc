@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.15 2021/04/24 19:36:41 pin Exp $
+# $NetBSD: Makefile,v 1.16 2021/04/25 16:16:57 pin Exp $
 
-DISTNAME=	broot-1.2.4
-# WARNING: Do not update this package!  Newer versions require rust-1.50
+DISTNAME=	broot-1.2.10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_PROJECT=	broot
+GITHUB_TAG=	1a2014aa856e95176e4ad16497c81ad76ab2b71c
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://dystroy.org/broot/
 COMMENT=	New way to see and navigate directory trees
 LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=			c	# rust, but needs a toolchain to link
-USE_TOOLS+=			pkg-config
+USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
