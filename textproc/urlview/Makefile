@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:28 agc Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/25 06:19:46 wiz Exp $
 
 DISTNAME=	urlview-0.9
 PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/contrib/
-MASTER_SITES+=	ftp://ftp.uib.no/pub/mutt/contrib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extract URLs from text files and display them in a menu
