@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/04/22 08:13:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/04/25 08:04:13 nia Exp $
 
 SHA1 (caprice32-4.6.0.tar.gz) = 15cf01ea5237260a941d82363677bf61c502e2d5
 RMD160 (caprice32-4.6.0.tar.gz) = 845b37aff8ecacbae43cd90bf181efdee97b2fb6
@@ -7,3 +7,4 @@ Size (caprice32-4.6.0.tar.gz) = 591257 bytes
 SHA1 (patch-doc_man6_cap32.6) = 977a6c1ad050123a342bb370e0a30ae28efc0ac1
 SHA1 (patch-makefile) = 2a4ec14d66d66168c325ed4fbf9a259b4477d8ca
 SHA1 (patch-src_cap32.cpp) = 24a5b40809079b81ff23be3983c20dd0391213d9
+SHA1 (patch-src_configuration.h) = e65afeffc111067e0c00bc57c4f61e587addf700
