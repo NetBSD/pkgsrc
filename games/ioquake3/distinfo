@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2020/01/25 20:13:49 jmcneill Exp $
+$NetBSD: distinfo,v 1.9 2021/04/25 07:51:26 mrg Exp $
 
 SHA1 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 791bc69ea853ced457134ed4759a76b40cd0e008
 RMD160 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 10c18309b358b0b091073f96c3ddaeb7c1535aa5
 SHA512 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 689a0efa6eaf88fcf98616c100df625b77617c55e351455cc25727fea525748855c58e2288f04d86372d392a556f2ef4926e2c808f75e104ac328baa9458c4d1
 Size (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 7691640 bytes
 SHA1 (patch-aa) = b146df4f36fc7f9e0bfece50bd154c24e507dc2f
-SHA1 (patch-ac) = dc32068082c3493eb503811c2577b8fadb2745d3
+SHA1 (patch-ac) = 93f78831bf301a52d2235a004bab7c1d335f3dc0
 SHA1 (patch-code_tools_lcc_cpp_unix.c) = e80699461d92b9a659c88c0f5d66580ecf237f5f

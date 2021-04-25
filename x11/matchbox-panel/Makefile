@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/08/17 20:20:30 leot Exp $
+# $NetBSD: Makefile,v 1.36 2021/04/25 07:51:25 mrg Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -30,7 +30,7 @@ MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 PLIST_VARS=		apm
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS" || \
     (${OPSYS} == "NetBSD" && \
-      (${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "aarch64"))
+      (${MACHINE_ARCH} == "x86_64" || ${MACHINE_CPU} == "aarch64"))
 # Nada
 .else
 PLIST.apm=		yes

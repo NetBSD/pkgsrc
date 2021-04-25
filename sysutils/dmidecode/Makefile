@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/03/20 06:44:11 msaitoh Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/25 07:51:25 mrg Exp $
 #
 
 DISTNAME=	dmidecode-3.3
@@ -21,6 +21,6 @@ PATCH_DIST_STRIP=	-p1
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-aarch64
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-aarch64*
 
 .include "../../mk/bsd.pkg.mk"
