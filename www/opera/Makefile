@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/01/26 17:32:22 rillig Exp $
+# $NetBSD: Makefile,v 1.110 2021/04/25 05:51:00 wiz Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -16,10 +16,7 @@ EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64 \
 
 .include "../../mk/bsd.prefs.mk"
 
-MASTER_SITE_OPERA+=	ftp://ftp.opera.com/pub/opera/ \
-			ftp://ftp.task.gda.pl/pub/opera/ \
-			ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/ \
-			ftp://ftp.opera.com/pub/opera/ \
+MASTER_SITE_OPERA+=	ftp://ftp.task.gda.pl/pub/opera/ \
 			http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 
 USE_LANGUAGES=		# empty
