@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/11 14:37:18 pho Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/25 14:19:34 pho Exp $
 
 DISTNAME=	xmonad-0.15
 PKGNAME=	${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 # TODO: This should probably be reconsidered as the default executable
 # is now capable of loading custom configuration files.
 SUBST_CLASSES+=	1
-SUBST_STAGE.1=	pre-patch
+SUBST_STAGE.1=	post-extract
 SUBST_FILES.1=	xmonad.cabal
 SUBST_SED.1=	-e "s|executable xmonad|executable xmonad+  buildable: False|"
 
