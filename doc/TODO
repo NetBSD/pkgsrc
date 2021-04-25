@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20510 2021/04/24 16:49:17 pho Exp $
+$NetBSD: TODO,v 1.20511 2021/04/25 06:53:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -771,6 +771,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.5.3
 	o google-glog-2.2.2
 	o gopls-0.6.10
 	o gossip-0.31
@@ -1357,6 +1358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-Scientific-doc-2.5.5
+	o py-astroid-2.5.5
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
@@ -1407,7 +1409,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rexx-regina-3.9.0
 	o rio500-0.8.1
 	o robotfindskitten-2.7182818.701
-	o root-6.08.02
+	o root-6.24
 	o root-tail-1.2
 	o rosegarden-14.12
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
