@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/04/02 07:59:35 mrg Exp $
+$NetBSD: distinfo,v 1.6 2021/04/25 07:51:26 mrg Exp $
 
 SHA1 (oneTBB-2020.3.tar.gz) = ae543670251a6d667e6f077ecfab0d5bb09b270c
 RMD160 (oneTBB-2020.3.tar.gz) = 1f3918c0dadfcddd2b38f398299de0d8542f11b4
 SHA512 (oneTBB-2020.3.tar.gz) = ea1ffd22c7234d715b8c46a4e51b40719c7a9b8837ab3166f1da5a2c6061167c2be2126b1d74fd361eec6975b8fce0df26829ca2e7af8029edbb52e40f23d630
 Size (oneTBB-2020.3.tar.gz) = 2639737 bytes
-SHA1 (patch-build-BSD.inc) = 218f46a9037d1ec081fc0bcd5c539d93cc5cfd2a
+SHA1 (patch-build-BSD.inc) = 357d7d76f37c88f2849ddf90970989161094ecfb

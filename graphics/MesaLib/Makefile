@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2021/04/12 12:40:01 nia Exp $
+# $NetBSD: Makefile,v 1.197 2021/04/25 07:51:26 mrg Exp $
 
 DISTNAME=	mesa-20.0.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -57,7 +57,7 @@ MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
 .  if !empty(MACHINE_ARCH:M*arm*) || \
-      ${MACHINE_ARCH} == "aarch64"
+      ${MACHINE_CPU} == "aarch64"
 # ARM Mali Utgard
 GALLIUM_DRIVERS+=	lima
 PLIST.lima=		yes
