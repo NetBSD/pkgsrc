@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2012/10/29 05:07:00 asau Exp $
+# $NetBSD: Makefile,v 1.22 2021/04/25 06:15:39 wiz Exp $
 
 DISTNAME=	xcolors
 PKGNAME=	xcolors-1.3
 PKGREVISION=	5
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.tut.ac.jp/X11/X11R6/contrib/programs/
+#MASTER_SITES=	ftp://ftp.tut.ac.jp/X11/X11R6/contrib/programs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Display all (ok, most of) the colors in the universe
