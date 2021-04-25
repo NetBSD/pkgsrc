@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2013/12/10 17:56:23 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/04/25 06:16:28 wiz Exp $
 
 DISTNAME=		ucarp-1.5.2
 PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.ucarp.org/pub/ucarp/
+#MASTER_SITES=		ftp://ftp.ucarp.org/pub/ucarp/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joel@carnat.net
-HOMEPAGE=		http://www.ucarp.org/project/ucarp
+#HOMEPAGE=		http://www.ucarp.org/project/ucarp
 COMMENT=		Common Address Redundancy Protocol (CARP) for Unix
 
 USE_PKGLOCALEDIR=	YES
