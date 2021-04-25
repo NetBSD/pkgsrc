@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2335 2021/04/25 11:39:28 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2336 2021/04/25 13:43:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3673,3 +3673,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/promscale to 0.3.0 [tnn 2021-04-25]
 	Updated lang/rust-bin to 1.50.0 [nia 2021-04-25]
 	Updated lang/idris to 1.3.3 [pho 2021-04-25]
+	Updated misc/cabal-install to 3.4.0.0 [pho 2021-04-25]
