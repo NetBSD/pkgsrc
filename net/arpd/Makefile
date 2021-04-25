@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2016/02/25 16:20:50 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.20 2021/04/25 06:47:52 wiz Exp $
 
 DISTNAME=	arpd
 PKGNAME=	arpd-1.0
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
+#MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	ARP daemon
