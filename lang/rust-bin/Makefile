@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/01/02 12:43:20 nia Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/25 10:50:57 nia Exp $
 
-DISTNAME=	rust-1.48.0
+DISTNAME=	rust-1.50.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -14,7 +14,6 @@ LICENSE=	mit OR apache-2.0
 CONFLICTS+=	rust-[0-9]*
 
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
-ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-aarch64
@@ -48,16 +47,16 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 RUST_ARCH:=	x86_64-unknown-freebsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	i686-unknown-freebsd
-DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
-.endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i686-unknown-linux-gnu
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 .if (!empty(MACHINE_PLATFORM:MLinux-*-aarch64) && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-linux-gnu
+DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
+.endif
+.if (!empty(MACHINE_PLATFORM:MLinux-*-aarch64) && empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	aarch64-unknown-linux-musl
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 .if (!empty(MACHINE_PLATFORM:MLinux-*-x86_64) && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
@@ -76,6 +75,7 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 do-install:
 	cd ${WRKSRC} && env PKGMANDIR=${PKGMANDIR} bash ./install.sh \
 	--destdir=${DESTDIR} --prefix=${PREFIX}
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/rust-llvm-dwp
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/manifest-*
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/uninstall.sh
@@ -84,7 +84,7 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in clippy-driver rls rustc rustdoc
+.  for bin in clippy-driver miri rls rustc rustdoc
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -92,8 +92,8 @@ fix-darwin-install-name:
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
 	done
 .  endfor
-.  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 		\
-		llvm-profdata llvm-readobj llvm-size llvm-strip
+.  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 	\
+		llvm-profdata llvm-readobj llvm-size llvm-strip	
 	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -129,12 +129,12 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver rls rustc rustdoc
+.  for bin in clippy-driver miri rls rustc rustdoc
 	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
-.  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
-		llvm-readobj llvm-size llvm-strip
+.  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump \
+	llvm-profdata llvm-readobj llvm-size llvm-strip
 	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .  endfor
