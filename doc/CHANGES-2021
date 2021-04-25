@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2341 2021/04/25 21:28:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2342 2021/04/25 22:05:08 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.5.1 [pin 2021-04-25]
 	Updated security/pleaser to 0.4.1 [pin 2021-04-25]
 	Updated devel/gopls to 0.6.10 [wiz 2021-04-25]
+	Updated www/goaccess to 1.4.6 [wiedi 2021-04-25]
