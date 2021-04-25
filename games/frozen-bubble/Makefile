@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/08/31 18:09:34 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2021/04/25 08:30:02 nia Exp $
 
 DISTNAME=	frozen-bubble-2.2.1-beta1
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -34,6 +34,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Games/FrozenBubble/.packlist
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL_Pango=	SDL_Pango>=0.1.2nb8
