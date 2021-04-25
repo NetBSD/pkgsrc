@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:25 asau Exp $
-#
+# $NetBSD: Makefile,v 1.17 2021/04/25 05:58:18 wiz Exp $
 
 DISTNAME=		sysinfo-3.5.1
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.rge.com/pub/admin/sysinfo/
+#MASTER_SITES=		ftp://ftp.rge.com/pub/admin/sysinfo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.magnicomp.com/
