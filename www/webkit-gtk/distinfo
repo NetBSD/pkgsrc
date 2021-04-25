@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.147 2021/03/30 12:47:42 leot Exp $
+$NetBSD: distinfo,v 1.148 2021/04/25 12:00:24 leot Exp $
 
 SHA1 (webkitgtk-2.32.0.tar.xz) = 8abdb3ba2732c892dd06bb2bd63208b090462bf7
 RMD160 (webkitgtk-2.32.0.tar.xz) = c825873ec544e505f84e3b8a900619dac08e01ce
@@ -6,11 +6,16 @@ SHA512 (webkitgtk-2.32.0.tar.xz) = 4832a4614be24481028ca8a6480a8e6cfacd8e22f5ba9
 Size (webkitgtk-2.32.0.tar.xz) = 23315936 bytes
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
+SHA1 (patch-Source_JavaScriptCore_Sources.txt) = 51de2568e6255ee77f6ea7f3ab657eb3c43c8ce6
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 79c282ca90d0ba2ef4769da40d4648f5f709951b
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMv7Assembler.h) = 70975aac175ec4131a4ed26a54dfe51e16ffb7cd
 SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = 709e5dcf4cdb834617c2ef542686bb2aa4aa37b3
 SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = 7f6c0c57d46478e83c4ff21dae2415f44085ba32
 SHA1 (patch-Source_JavaScriptCore_offlineasm_arm64.rb) = 8c05dafa317667bbf55504d05eeb8ae06fba4e93
+SHA1 (patch-Source_JavaScriptCore_runtime_IntlSegmenter.cpp) = 326b0405fc433e579c115e174e516f1c79e8edc5
+SHA1 (patch-Source_JavaScriptCore_runtime_IntlSegmenter.h) = 36abe8dd1cf6fceefc05d8f6fe0d1a6c18f4d0c5
+SHA1 (patch-Source_JavaScriptCore_runtime_IntlSegments.cpp) = 8c357e32a256c06f05c0aeb6bea485f90ef8219d
+SHA1 (patch-Source_JavaScriptCore_runtime_IntlWorkaround.cpp) = b4a793edefa3c500b167d6fe3cdb9244ec38bcf5
 SHA1 (patch-Source_JavaScriptCore_runtime_MachineContext.h) = 23bc86a389f8009ec829c3ee0fe3effe3f20b012
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_third__party_smhasher_src_PMurHash.cpp) = 73dfe781efe7e8aa7d49094af8820a87c501818f
 SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_translator_SymbolTable.h) = 10debffda84bc752ed434657a337a466aad19a3a
