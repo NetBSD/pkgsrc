@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2020/08/17 20:18:55 leot Exp $
+# $NetBSD: Makefile,v 1.72 2021/04/25 10:18:46 nia Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
@@ -10,6 +10,9 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.cinepaint.org/
 COMMENT=	Motion picture painting and image retouching program
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND mit AND modified-bsd
+
+# Workaround for glib2-2.68.0 c++ fallout.
+CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 MAKE_JOBS_SAFE=		no
 
