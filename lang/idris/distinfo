@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.2 2020/10/13 16:35:44 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/04/25 11:39:03 pho Exp $
 
-SHA1 (idris-1.3.2.tar.gz) = fb4ac3904368a3d8c935855873d73a6ffc90beec
-RMD160 (idris-1.3.2.tar.gz) = 6b1ec85978e62c32691920429e0d2f97e3685b63
-SHA512 (idris-1.3.2.tar.gz) = 2db0fbcad6b596b7e34dcbb0c4fbe30ccbbcfbb5f469d4b077bf010391a98bb743162656c608d154f62f78f607662548cc1f00fc710f59d89612a3552a3e037f
-Size (idris-1.3.2.tar.gz) = 2092794 bytes
-SHA1 (patch-Setup.hs) = 4bc32b7e219bfa53151ba3f4b26426b17b0e9e47
-SHA1 (patch-idris.cabal) = 5ba95f0156d634207eb951ef123e8b83598a8c3e
+SHA1 (idris-1.3.3.tar.gz) = dfaf078f6220f7c44e9f052002ec3373b2f51086
+RMD160 (idris-1.3.3.tar.gz) = ceddf815d11098704e40d3d428edb99cc5fbe349
+SHA512 (idris-1.3.3.tar.gz) = 4edcc67b173b5645102520a47b295742b894c2f738f94b8f2183c782aa39c349262a5c62cc01c947bcc366930f9f952632ebc419616cdb06c952ee0134b1ec4b
+Size (idris-1.3.3.tar.gz) = 1720984 bytes
+SHA1 (patch-Setup.hs) = 26b0fe5486434aa5056703abd8041778ff73f385
+SHA1 (patch-idris.cabal) = 4299b8addf9a41615801e201cb9b13716bbd7b74
 SHA1 (patch-rts_Makefile) = fe88269e184aa0d80e13723c9e4fe47aba68eb3e
 SHA1 (patch-rts_idris__net.c) = fcb226e8752c34661fc1a81fff11e41342c3e0f8
 SHA1 (patch-src_IRTS_System.hs) = 4451e03f4e9095fcac9e014eb7ad4b997d5e308d
-SHA1 (patch-src_Idris_CmdOptions.hs) = 01b8ecb9b02c214ebff8c46b74e1e2b82c18e206
-SHA1 (patch-src_Idris_Core_CaseTree.hs) = 273e8335623ff07ccf4206fdb68558a42644c785
-SHA1 (patch-src_Idris_Core_TT.hs) = d80aa0777f443d6487fa3349a3dad54ae4aedb08
+SHA1 (patch-src_Idris_Output.hs) = 75d0f8c8eb96c6110cf5a825cf402d3403da16a6
 SHA1 (patch-src_Idris_Package_Parser.hs) = 3394ec6fbf1323f4331d614426b48377815b7347
 SHA1 (patch-src_Idris_Parser_Data.hs) = 5b6d2d3944233fba22e93d631f92de49e64b35a8
 SHA1 (patch-src_Idris_Parser_Helpers.hs) = bfd9b16dafa0581147c6b22e5d4e43ae2b701f96
 SHA1 (patch-src_Idris_Parser_Ops.hs) = 2ebc3ffc1c909362c4945e556056d5428a8d0a25
-SHA1 (patch-src_Idris_Parser_Stack.hs) = 35c903e02b5ec6f21cc04047d9c474082cd97663
+SHA1 (patch-src_Idris_Parser_Stack.hs) = 60f27654bc720df3830a42ec5d4debb7ca4b73cd
+SHA1 (patch-src_Idris_REPL.hs) = b5096550b15c9fbf01d993da24f1c8bf21817b09
