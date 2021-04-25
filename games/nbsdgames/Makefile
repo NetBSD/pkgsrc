@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2021/04/23 08:13:16 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/25 14:07:02 nia Exp $
 
 DISTNAME=	nbsdgames-v4.0
 PKGNAME=	${DISTNAME:S/-v/-/1}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abakh/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/abakh/nbsdgames
