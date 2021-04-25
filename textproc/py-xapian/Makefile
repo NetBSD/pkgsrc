@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/12/25 12:21:30 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/04/25 09:00:50 nia Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
+PKGREVISION=	1
 COMMENT=	Python bindings for Xapian search engine
 HOMEPAGE=	https://xapian.org/docs/bindings/python/
 
