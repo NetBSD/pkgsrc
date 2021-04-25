@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/09/06 10:40:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/04/25 06:50:24 wiz Exp $
 
 DISTNAME=		wxHTML22
 PKGNAME=		wxWindows-docs-2.2
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/docs/
+#MASTER_SITES=		ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/docs/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
