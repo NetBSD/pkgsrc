@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/11/04 23:21:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/04/25 09:29:58 nia Exp $
 
 SHA1 (paper-icon-theme-1.5.0.tar.gz) = 1a91245113971687a12f8fb2bc2e9ceae1e705f8
 RMD160 (paper-icon-theme-1.5.0.tar.gz) = 73c229340a81311542aa37e22f315c28beabb0d0
 SHA512 (paper-icon-theme-1.5.0.tar.gz) = be84bc332eba0e9c216435a130d3eed180fe1807d81ff7b3aadb3914fc130c9e243fb7fccef8febae1da6655f8e8a1bcf9420afb429e11e4c79bcbbb5bcd291b
 Size (paper-icon-theme-1.5.0.tar.gz) = 48464220 bytes
-SHA1 (patch-Makefile.am) = e226403d94702e043548f75aabd676f460da0404
-SHA1 (patch-autogen.sh) = 8c6ab8f8a622b9c4a3eae3a56263e87a19366390
