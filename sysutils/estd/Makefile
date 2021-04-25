@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/04/29 19:47:46 maya Exp $
+# $NetBSD: Makefile,v 1.38 2021/04/25 07:51:25 mrg Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 \
 			NetBSD-*-powerpc \
 			NetBSD-*-mips64el \
 			NetBSD-*-earm* NetBSD-*-arm* \
-			NetBSD-*-aarch64
+			NetBSD-*-aarch64*
 
 RCD_SCRIPTS=		estd
 RCD_SCRIPT_SRC.estd=	${WRKSRC}/estd.sh

@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2020/02/05 20:18:27 tnn Exp $
+$NetBSD: patch-configure,v 1.6 2021/04/25 07:51:27 mrg Exp $
 
 Use USE_AMD64_IOPL (actually x86_64_iopl) on NetBSD/amd64.
 (c.f. patch-hw_xfree86_os-support_bsd_i386.c)
@@ -12,7 +12,7 @@ for netbsd, force pass pthread configure checks (pthread not needed)
  	GLX_ARCH_DEFINES="-D__GLX_ALIGN64 -mieee"
  	;;
 -  arm*)
-+  *arm*|aarch64)
++  *arm*|aarch64*)
  	ARM_VIDEO=yes
  	DEFAULT_INT10="stub"
  	;;
