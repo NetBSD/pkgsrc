@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.4 2021/04/15 07:53:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.5 2021/04/25 08:15:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -34,4 +34,22 @@ lang/ruby27-base: security fix, bugfix
 
 Pullup ticket #6445 - requested by taca
 lang/ruby30-base: security fix
+
+Pullup ticket #6443 (second part) - requested by taca
+lang/ruby: build fix
+
+Pullup ticket #6446 - requested by gutteridge
+lang/rust: NetBSD/i386 build fix
+
+Pullup ticket #6449 - requested by tsutsui
+devel/glib2: fix for PR pkg/56114
+
+Pullup ticket #6450 - requested by nia
+chat/irssi: security fix
+
+Pullup ticket #6447 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6448 - requested by nia
+www/firefox78-l10n: dependent update
 
