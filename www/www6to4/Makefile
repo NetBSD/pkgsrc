@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/09/06 10:40:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2021/04/25 05:53:28 wiz Exp $
 
 DISTNAME=	www6to4-1.6
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
+#MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 
 MAINTAINER=	feico@pasta.cs.uit.no
 #HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
