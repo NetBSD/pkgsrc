@@ -1,0 +1,18 @@
+$NetBSD: patch-Source_JavaScriptCore_Sources.txt,v 1.1 2021/04/25 12:00:24 leot Exp $
+
+Fix build for ICU >= 69.
+
+From:
+
+ https://trac.webkit.org/changeset/275920/webkit?format=diff&new=275920
+
+--- Source/JavaScriptCore/Sources.txt.orig	2021-02-26 09:57:05.000000000 +0000
++++ Source/JavaScriptCore/Sources.txt
+@@ -848,6 +848,7 @@ runtime/IntlSegmenterConstructor.cpp
+ runtime/IntlSegmenterPrototype.cpp
+ runtime/IntlSegments.cpp
+ runtime/IntlSegmentsPrototype.cpp
++runtime/IntlWorkaround.cpp @no-unify // Confine U_HIDE_DRAFT_API's effect to this file.
+ runtime/IteratorOperations.cpp
+ runtime/IteratorPrototype.cpp
+ runtime/JSArray.cpp
