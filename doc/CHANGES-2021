@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2339 2021/04/25 19:56:43 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2340 2021/04/25 19:58:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3677,3 +3677,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.2.10 [pin 2021-04-25]
 	Updated net/youtube-dl to 20210426 [leot 2021-04-25]
 	Updated www/hackernews-tui to 0.5.1 [pin 2021-04-25]
+	Updated security/pleaser to 0.4.1 [pin 2021-04-25]
