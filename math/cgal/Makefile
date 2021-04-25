@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/04/21 13:24:12 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/04/25 22:07:26 mrg Exp $
 
 DISTNAME=	CGAL-4.14
 PKGNAME=	${DISTNAME:tl}
@@ -15,7 +15,7 @@ COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++11
 CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
