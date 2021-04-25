@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 10:39:32 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/25 07:52:38 nia Exp $
 #
 
 DISTNAME=	zzuf-0.15
@@ -12,6 +12,9 @@ COMMENT=	Transparent application input fuzzer
 USE_LANGUAGES=	c99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+# overrides read() definition
+FORTIFY_SUPPORTED=	no
 
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 SHLIBTOOL_OVERRIDE=	# empty
