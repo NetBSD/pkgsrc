@@ -1,0 +1,39 @@
+$NetBSD: patch-cpphs.cabal,v 1.1 2021/04/25 15:28:44 pho Exp $
+
+This is probably a Cabal bug. When a package defines both a library
+and an executable, and they share the same set of modules, Cabal
+embeds an rpath to the build directory to the executable. We don't
+appreciate that.
+
+--- cpphs.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ cpphs.cabal
+@@ -71,7 +71,7 @@ Library
+         TimeCompat
+ 
+ Executable cpphs
+-    Build-Depends: base>=3&&<6, directory <1.4, polyparse>=1.13 && <1.14
++    Build-Depends: base>=3&&<6, directory <1.4, polyparse>=1.13 && <1.14, cpphs
+     Main-Is: cpphs.hs
+ 
+     if flag(old-locale)
+@@ -84,20 +84,6 @@ Executable cpphs
+       Build-Depends: time >=1.5 && <1.11
+       Hs-Source-Dirs: . new
+ 
+-    Other-Modules:
+-        Language.Preprocessor.Cpphs
+-        Language.Preprocessor.Unlit
+-        Language.Preprocessor.Cpphs.CppIfdef
+-        Language.Preprocessor.Cpphs.HashDefine
+-        Language.Preprocessor.Cpphs.MacroPass
+-        Language.Preprocessor.Cpphs.Options
+-        Language.Preprocessor.Cpphs.Position
+-        Language.Preprocessor.Cpphs.ReadFirst
+-        Language.Preprocessor.Cpphs.RunCpphs
+-        Language.Preprocessor.Cpphs.SymTab
+-        Language.Preprocessor.Cpphs.Tokenise
+-        TimeCompat
+-
+ Source-Repository head
+     Type:     git
+     Location: https://github.com/hackage-trustees/malcolm-wallace-universe
