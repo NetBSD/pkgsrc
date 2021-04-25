@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/08/17 20:20:06 leot Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/25 07:21:17 nia Exp $
 #
 
 DISTNAME=	libfm-1.3.0.2
@@ -27,5 +27,5 @@ post-install:
 	${RUN} ${RM} -f ${DESTDIR}${PREFIX}/include/libfm
 	${RUN} ${CP} -r ${DESTDIR}${PREFIX}/include/libfm-1.0 ${DESTDIR}${PREFIX}/include/libfm
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
