@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2332 2021/04/25 07:50:24 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2333 2021/04/25 10:31:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3669,3 +3669,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed wm/fvwm1 successor wm/fvwm [wiz 2021-04-25]
 	Removed www/opera [wiz 2021-04-25]
 	Updated converters/pandoc to 2.13 [pho 2021-04-25]
+	Updated databases/postgresql-timescaledb to 2.2.0 [tnn 2021-04-25]
+	Updated databases/promscale to 0.3.0 [tnn 2021-04-25]
