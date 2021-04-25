@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2021/04/24 00:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2021/04/25 05:54:07 wiz Exp $
 
 DISTNAME=	pgp50i-unix-src
 PKGNAME=	pgp5-5.0i
 PKGREVISION=	9
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/
+#MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgpi.org/
