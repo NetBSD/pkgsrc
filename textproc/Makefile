@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1215 2021/04/25 04:02:22 pho Exp $
+# $NetBSD: Makefile,v 1.1216 2021/04/25 04:07:33 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -310,6 +310,7 @@ SUBDIR+=	hs-citeproc
 SUBDIR+=	hs-cmark-gfm
 SUBDIR+=	hs-commonmark
 SUBDIR+=	hs-commonmark-extensions
+SUBDIR+=	hs-commonmark-pandoc
 SUBDIR+=	hs-css-text
 SUBDIR+=	hs-csv
 SUBDIR+=	hs-doclayout
