@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2329 2021/04/24 18:53:19 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2330 2021/04/25 04:43:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.7.2 [pin 2021-04-24]
 	Updated www/hackernews-tui to 0.5.0 [pin 2021-04-24]
 	Updated security/pleaser to 0.4.0 [pin 2021-04-24]
+	Removed wm/fvwm1 successor wm/fvwm [wiz 2021-04-25]
