@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2018/01/02 05:37:23 maya Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/25 05:56:29 wiz Exp $
 
 DISTNAME=	libdes-4.04b
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/
+#MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Small DES (Data Encryption Standard) lib & standalone program
