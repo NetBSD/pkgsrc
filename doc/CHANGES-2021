@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2338 2021/04/25 18:58:43 leot Exp $
+$NetBSD: CHANGES-2021,v 1.2339 2021/04/25 19:56:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3676,3 +3676,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/cabal-install to 3.4.0.0 [pho 2021-04-25]
 	Updated sysutils/broot to 1.2.10 [pin 2021-04-25]
 	Updated net/youtube-dl to 20210426 [leot 2021-04-25]
+	Updated www/hackernews-tui to 0.5.1 [pin 2021-04-25]
