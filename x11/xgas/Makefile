@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2012/10/29 05:07:11 asau Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/25 06:15:39 wiz Exp $
 
 DISTNAME=	xgas
 PKGNAME=	xgas-1.0
 PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.tut.ac.jp/.h3/X11/X11R6/contrib/programs/
+#MASTER_SITES=	ftp://ftp.tut.ac.jp/.h3/X11/X11R6/contrib/programs/
 
 MAINTAINER=	nakai@mlab.t.u-tokyo.ac.jp
 COMMENT=	Animated simulation of an ideal gas
