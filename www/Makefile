@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1526 2021/04/24 10:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.1527 2021/04/25 06:56:09 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -243,7 +243,6 @@ SUBDIR+=	ocsigen
 SUBDIR+=	ocsigen-i18n
 SUBDIR+=	ocsigen-start
 SUBDIR+=	ocsigen-toolkit
-SUBDIR+=	opera
 SUBDIR+=	otter-browser
 SUBDIR+=	p5-Alien-GvaScript
 SUBDIR+=	p5-Any-URI-Escape
