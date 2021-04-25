@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 16:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2021/04/25 05:59:36 wiz Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGNAME=		rclock-2.7.10
 CATEGORIES=		x11 time
-MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/
-MASTER_SITES+=		ftp://mason.primenet.com.au/pub/rxvt/
+#MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
