@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/01/10 07:08:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/25 06:48:57 wiz Exp $
 
 DISTNAME=	e16themes-0.1
 PKGREVISION=	5
 CATEGORIES=	wm x11
-MASTER_SITES=	ftp://themes.org/pub/themes/e/
+#MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://e.themes.org/
+#HOMEPAGE=	http://e.themes.org/
 COMMENT=	Themes for the window manager Enlightenment 16
 #LICENSE=	(No licenses are specified for these individual themes.)
 
