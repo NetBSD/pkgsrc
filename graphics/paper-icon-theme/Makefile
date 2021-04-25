@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/08/17 20:19:06 leot Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/25 09:29:58 nia Exp $
 
 DISTNAME=	paper-icon-theme-1.5.0
 PKGREVISION=	3
@@ -13,15 +13,19 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
-REPLACE_PYTHON+=	meson/post_install.py
+ICON_THEMES=	yes
 
-PYTHON_FOR_BUILD_ONLY=	tool
+REPLACE_PYTHON+=	meson/post_install.py
 
 CHECK_WRKREF_SKIP+=		share/icons/*/*/*/*
 CHECK_INTERPRETER_SKIP+=	share/icons/*/*/*/*
 
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../devel/meson/build.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
