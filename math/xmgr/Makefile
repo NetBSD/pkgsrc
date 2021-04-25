@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.67 2021/04/21 13:25:01 adam Exp $
+# $NetBSD: Makefile,v 1.68 2021/04/25 06:43:48 wiz Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		34
 CATEGORIES=		math
-MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/
+#MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
