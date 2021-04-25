@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/04/24 18:50:45 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/04/25 19:56:23 pin Exp $
 
 SHA1 (ahash-0.6.3.crate) = 941e1af4fe692fa26d08a99e22d203bc2152804e
 RMD160 (ahash-0.6.3.crate) = 86e35bbda6cf2a59774d439e6d4e42063b99c9bc
@@ -184,10 +184,10 @@ SHA1 (getrandom-0.2.2.crate) = 621a226cab7f4aa8619ff3cb052448414e931583
 RMD160 (getrandom-0.2.2.crate) = 1b70724e474f717d4c666ae96757049895048f75
 SHA512 (getrandom-0.2.2.crate) = f498fe00c9887748a0be88fbd698a6087ccb79874cfeb35a18f90994603be29cb2aacfbc65fb8ba967190ccbc41ff9ff56bfff1de40811e1bc99a08b0568f59b
 Size (getrandom-0.2.2.crate) = 26010 bytes
-SHA1 (hackernews-TUI-0.5.0.tar.gz) = 462ed0d1abefb0b5005278ae24d680916d67f50e
-RMD160 (hackernews-TUI-0.5.0.tar.gz) = f02821070672562e92936885753a2ace64f9087d
-SHA512 (hackernews-TUI-0.5.0.tar.gz) = 7597a0087bc7353e3147796d866f5ead7487078ba4bcb8070405ded01f905a0b4ef507605b0b729104117bdab15163a3929edaf6e959c9aa3fafe04008c8a0a9
-Size (hackernews-TUI-0.5.0.tar.gz) = 809771 bytes
+SHA1 (hackernews-TUI-0.5.1.tar.gz) = 0d14a3d23b68a063501d9865b038605a32fc490d
+RMD160 (hackernews-TUI-0.5.1.tar.gz) = 8ff06a2ec189e9b611a8c6fd39f5fd911c9d2194
+SHA512 (hackernews-TUI-0.5.1.tar.gz) = 084fcbf34cdc48bba9f21a526012e440ba9b51ec05781d2c3cf23efe89122e53bdc3dc5f76443ab608c6c159356c7ab965f0662325ac864af19dbf34e7873c7b
+Size (hackernews-TUI-0.5.1.tar.gz) = 25458584 bytes
 SHA1 (hermit-abi-0.1.18.crate) = ee6677332b5c19c10d8e19b8da73c3265a3efd6c
 RMD160 (hermit-abi-0.1.18.crate) = 3bccd7ee4d6d12fec60d64949db05811ed7e7fea
 SHA512 (hermit-abi-0.1.18.crate) = 54f060c6c1c80d41f40cec7102345147efb535aff9fa5cc0ed4ccd7f010bfdb6daaf40626fd5069af60ceb42058452803b59d4bbcfbed4c5546c79b57ae0f914
