@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2020/05/13 04:14:48 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2021/04/25 06:46:33 wiz Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
 PKGREVISION=	8
 CATEGORIES=	inputmethod japanese
-MASTER_SITES=	ftp://skk.kuis.kyoto-u.ac.jp/skk/9.6/
+#MASTER_SITES=	ftp://skk.kuis.kyoto-u.ac.jp/skk/9.6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
