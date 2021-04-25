@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/25 04:01:55 pho Exp $
+
+SHA1 (commonmark-extensions-0.2.0.4.tar.gz) = 93d42a029a2b022d34d94a242dea28f18bf49784
+RMD160 (commonmark-extensions-0.2.0.4.tar.gz) = 10d6a087ab6ffefbdd821e0f4adb28ca596f390c
+SHA512 (commonmark-extensions-0.2.0.4.tar.gz) = 2e595dd6bfc582a783d42ae612a64917470b9fa737d9c445e83e30f7cf7500cd4d3ab5f254268cf9d7434dcd03bdaa88cd38bc4fc50d1423a2792e0d21ffe6e3
+Size (commonmark-extensions-0.2.0.4.tar.gz) = 32043 bytes
