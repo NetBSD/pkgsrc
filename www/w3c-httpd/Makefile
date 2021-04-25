@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2020/05/09 19:55:10 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2021/04/25 06:27:36 wiz Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.w3.org/pub/httpd/
+MASTER_SITES=	https://www.w3.org/Daemon/httpd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.w3.org/Daemon/
