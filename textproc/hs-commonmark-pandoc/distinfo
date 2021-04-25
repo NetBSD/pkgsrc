@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/25 04:07:07 pho Exp $
+
+SHA1 (commonmark-pandoc-0.2.0.1.tar.gz) = 744a5a244b0a4bc343d7b745e7c91bd09e7d17b0
+RMD160 (commonmark-pandoc-0.2.0.1.tar.gz) = 06d95434fb97cb91eba6439fc269bf7a3a09c8db
+SHA512 (commonmark-pandoc-0.2.0.1.tar.gz) = 5162a987085d5204af27d4b073fedf4d678f5e0325a12f96c611899f3c484e576d7b667271c480837b9d4593e9950828e9398a33c63b5e829016019ecfc7bb6d
+Size (commonmark-pandoc-0.2.0.1.tar.gz) = 4754 bytes

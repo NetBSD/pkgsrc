@@ -1,0 +1,2 @@
+This library provides typeclasses for rendering commonmark to Pandoc
+types.
