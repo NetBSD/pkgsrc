@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2020/01/25 20:13:49 jmcneill Exp $
+$NetBSD: patch-ac,v 1.5 2021/04/25 07:51:26 mrg Exp $
 
---- Makefile.orig	2019-12-07 13:16:15.000000000 +0000
-+++ Makefile
-@@ -11,6 +11,13 @@ ifeq ($(COMPILE_PLATFORM),sunos)
+--- Makefile.orig	2019-12-07 05:16:15.000000000 -0800
++++ Makefile	2021-04-24 18:01:14.100897227 -0700
+@@ -11,6 +11,16 @@
    COMPILE_ARCH=$(shell uname -p | sed -e 's/i.86/x86/')
  endif
  
@@ -11,12 +11,15 @@ $NetBSD: patch-ac,v 1.4 2020/01/25 20:13:49 jmcneill Exp $
 +  ifeq ($(COMPILE_CPU),aarch64)
 +    COMPILE_ARCH=$(COMPILE_CPU)
 +  endif
++  ifeq ($(COMPILE_CPU),aarch64eb)
++    COMPILE_ARCH=aarch64
++  endif
 +endif
 +
  ifndef BUILD_STANDALONE
    BUILD_STANDALONE =
  endif
-@@ -850,11 +857,38 @@ ifeq ($(PLATFORM),netbsd)
+@@ -850,11 +860,38 @@
  
    BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes
  

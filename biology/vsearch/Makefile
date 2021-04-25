@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/11 14:27:18 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/25 07:51:24 mrg Exp $
 
 DISTNAME=	vsearch-2.13.4
 CATEGORIES=	biology
@@ -11,7 +11,7 @@ COMMENT=	Versatile open-source tool for metagenomics
 LICENSE=	gnu-gpl-v3
 
 # Works on powerpc64, but only in little endian mode
-ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-aarch64* *-*-x86_64
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake autoreconf gmake

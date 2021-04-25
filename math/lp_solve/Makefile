@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/20 11:58:00 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/04/25 07:51:25 mrg Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.3_source
@@ -28,7 +28,7 @@ SUBST_FILES.dl+=	demo/ccc
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64" || \
-	${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "aarch64"
+	${MACHINE_ARCH} == "x86_64" || ${MACHINE_CPU} == "aarch64"
 LPSOLVE_ARCH=	ux64
 .else
 LPSOLVE_ARCH=	ux32
