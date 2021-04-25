@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2020/01/11 14:29:29 pho Exp $
+$NetBSD: distinfo,v 1.6 2021/04/25 14:32:12 pho Exp $
 
 SHA1 (xmonad-contrib-0.16.tar.gz) = 54e7ab28b23773e2c904bd9fe8532c84529f14a9
 RMD160 (xmonad-contrib-0.16.tar.gz) = 1618b5a57ff99c2b53cc0f934d8950adf8874a09
 SHA512 (xmonad-contrib-0.16.tar.gz) = 22a18b4045cbfca0229cbf6c0bf1dfa595cbffbe6b82fd58b1fcf941cbfd306642160995b55859cead3cf574df696d2a3cea6507cac4d5c7c58cf09b3a86bc25
 Size (xmonad-contrib-0.16.tar.gz) = 540237 bytes
+SHA1 (patch-XMonad_Actions_GridSelect.hs) = 36da362f765ee22703966eb609c3e2ff19952b19
+SHA1 (patch-XMonad_Layout_NoBorders.hs) = 329fb7831aa5e38633c97881088735804f2f33ed
