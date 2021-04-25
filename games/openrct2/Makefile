@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/04/21 13:24:42 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/04/25 07:50:03 nia Exp $
 
 DISTNAME=	openrct2-0.2.4
 PKGREVISION=	12
@@ -26,8 +26,10 @@ CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 # XXX it cannot be built without an Internet connection.
-# Fails during install stage: 
+# Fails during install stage:
 # CMake Error at cmake_install.cmake:48 (file):
 #  file DOWNLOAD HASH mismatch
 #
