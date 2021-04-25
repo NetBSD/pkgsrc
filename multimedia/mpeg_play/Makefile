@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/25 06:41:21 wiz Exp $
 
 DISTNAME=	mpeg_play-2.4-patched
 PKGNAME=	mpeg_play-2.4patched
 PKGREVISION=	2
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/play/
+#MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/play/
 EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
