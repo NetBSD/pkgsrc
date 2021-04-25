@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/18 02:16:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/04/25 07:50:13 pho Exp $
 
 BUILDLINK_TREE+=	pandoc
 
 .if !defined(PANDOC_BUILDLINK3_MK)
 PANDOC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.pandoc+=	pandoc>=2.9.1
-BUILDLINK_ABI_DEPENDS.pandoc+=	pandoc>=2.9.1.1
+BUILDLINK_API_DEPENDS.pandoc+=	pandoc>=2.13
+BUILDLINK_ABI_DEPENDS.pandoc+=	pandoc>=2.13
 BUILDLINK_PKGSRCDIR.pandoc?=	../../converters/pandoc
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -16,15 +16,20 @@ BUILDLINK_PKGSRCDIR.pandoc?=	../../converters/pandoc
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
 .include "../../textproc/hs-blaze-markup/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
-.include "../../textproc/hs-cmark-gfm/buildlink3.mk"
+.include "../../textproc/hs-citeproc/buildlink3.mk"
+.include "../../textproc/hs-commonmark/buildlink3.mk"
+.include "../../textproc/hs-commonmark-extensions/buildlink3.mk"
+.include "../../textproc/hs-commonmark-pandoc/buildlink3.mk"
+.include "../../net/hs-connection/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../textproc/hs-doctemplates/buildlink3.mk"
 .include "../../converters/hs-emojis/buildlink3.mk"
-.include "../../devel/hs-exceptions/buildlink3.mk"
+.include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../textproc/hs-haddock-library/buildlink3.mk"
 .include "../../lang/hs-hslua/buildlink3.mk"
+.include "../../sysutils/hs-hslua-module-path/buildlink3.mk"
 .include "../../devel/hs-hslua-module-system/buildlink3.mk"
 .include "../../textproc/hs-hslua-module-text/buildlink3.mk"
 .include "../../textproc/hs-HsYAML/buildlink3.mk"
@@ -52,8 +57,8 @@ BUILDLINK_PKGSRCDIR.pandoc?=	../../converters/pandoc
 .include "../../converters/hs-text-conversions/buildlink3.mk"
 .include "../../textproc/hs-unicode-transforms/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
-.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml/buildlink3.mk"
+.include "../../textproc/hs-xml-conduit/buildlink3.mk"
 .include "../../archivers/hs-zip-archive/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
 .endif	# PANDOC_BUILDLINK3_MK
