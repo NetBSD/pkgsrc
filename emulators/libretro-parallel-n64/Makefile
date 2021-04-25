@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/31 20:04:11 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/25 07:51:24 mrg Exp $
 
 DISTNAME=	libretro-parallel-n64-20200528
 CATEGORIES=	emulators
@@ -19,7 +19,7 @@ LIBRETRO_CORE=	parallel_n64
 MAKE_FLAGS+=	WITH_DYNAREC=x86
 .elif ${MACHINE_ARCH} == "x86_64"
 MAKE_FLAGS+=	WITH_DYNAREC=x86_64
-.elif ${MACHINE_ARCH} == "aarch64"
+.elif ${MACHINE_CPU} == "aarch64"
 MAKE_FLAGS+=	WITH_DYNAREC=aarch64
 MAKE_FLAGS+=	HAVE_NEON=0
 CFLAGS+=	-DNO_ASM -DARM_FIX
