@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.14 2012/10/08 13:45:40 asau Exp $
+# $NetBSD: Makefile.common,v 1.15 2021/04/25 06:34:05 wiz Exp $
 #
 # used by print/ja-vflib-lib/Makefile
 # used by print/ja-vflib-utils/Makefile
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
-MASTER_SITES+=		ftp://gull.se.hiroshima-u.ac.jp/pub/TypeHack/
+MASTER_SITES+=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/download/TypeHack/
 DISTFILES+=		${VFLIB_SRC}
 
 VFLIB_SRC=		${DISTNAME}${EXTRACT_SUFX}
