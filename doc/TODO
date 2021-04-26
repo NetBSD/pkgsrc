@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20530 2021/04/26 14:44:53 wiz Exp $
+$NetBSD: TODO,v 1.20531 2021/04/26 14:46:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1268,7 +1268,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-MetaCPAN-Client-2.029000
 	o p5-Module-Path-0.33
 	o p5-Module-ScanDeps-1.30
-	o p5-Moo-2.005004
 	o p5-MooX-File-ConfigDir-0.008
 	o p5-MooX-HandlesVia-0.001009
 	o p5-MooseX-App-Cmd-0.34
