@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2359 2021/04/26 14:31:59 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2360 2021/04/26 14:35:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3699,3 +3699,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird to 78.10.0 [ryoon 2021-04-26]
 	Updated mail/thunderbird-l10n to 78.10.0 [ryoon 2021-04-26]
 	Updated devel/p5-IO-Async to 0.78 [wiz 2021-04-26]
+	Updated devel/cbindgen to 0.19.0 [ryoon 2021-04-26]
