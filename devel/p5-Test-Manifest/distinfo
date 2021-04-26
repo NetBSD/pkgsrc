@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/05/09 06:37:18 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/04/26 15:08:11 wiz Exp $
 
-SHA1 (Test-Manifest-2.021.tar.gz) = d6d75fe6ea18ff8bb65337f6060fd33c39ca1d75
-RMD160 (Test-Manifest-2.021.tar.gz) = a5f87468d9ed1330c34188246caeaa433a697716
-SHA512 (Test-Manifest-2.021.tar.gz) = dca3bef8373b9de119f5d2fa58c8a5fc4d8c1a914ca982300767f84087f8bdeb49a8a33e41f675c347fccbbab6a81f7eae8bc704e3d24e3088776cd0ea9f932c
-Size (Test-Manifest-2.021.tar.gz) = 14053 bytes
+SHA1 (Test-Manifest-2.022.tar.gz) = 36d66b208eccd5dd78d69a5f07fbc95b9548623d
+RMD160 (Test-Manifest-2.022.tar.gz) = bed8622a97134fdb9e20fb67fa48731112bfeae6
+SHA512 (Test-Manifest-2.022.tar.gz) = e72f5c7c23bac5453afddb81c9175a3b07b9a8f935c37d0fe5ed7e0f6861742c2e9596396b9cb84d62bf2229bc9956bad26c47d7eaab6777ec7628927e294209
+Size (Test-Manifest-2.022.tar.gz) = 14664 bytes
