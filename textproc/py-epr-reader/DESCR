@@ -1,0 +1,12 @@
+Terminal/CLI Epub reader written in Python with features:
+
+- Remembers last read file (just run `epr` without any argument)
+- Remembers last reading state for each file (per file saved state
+  written to `$HOME/.config/epr/config` or `$HOME/.epr` respectively
+  depending on availability)
+- Adjustable text area width
+- Adaptive to terminal resize
+- Supports EPUB3 (no audio support)
+- Secondary vim-like bindings
+- Supports opening images
+- Dark/Light colorscheme (depends on terminal color capability)

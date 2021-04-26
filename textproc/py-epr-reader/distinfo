@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/26 21:19:28 wiz Exp $
+
+SHA1 (epr-reader-2.4.10.tar.gz) = 7443ebc9572f15523079117bd269a08e7e42061f
+RMD160 (epr-reader-2.4.10.tar.gz) = 1c7d52c75022f8fcec42e7011b066d370dc05064
+SHA512 (epr-reader-2.4.10.tar.gz) = 30b147c6f78149a9f8072fe841c98d8eec05e5fe470432f5721445d92507ee00fe6ea7958ff7aa382d5a690b38f4615ff71c85b2eb6fc0e863c99da40023b29c
+Size (epr-reader-2.4.10.tar.gz) = 16315 bytes
