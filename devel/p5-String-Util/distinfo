@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/07 09:56:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/04/26 15:02:32 wiz Exp $
 
-SHA1 (String-Util-1.31.tar.gz) = 96beab0a839e977c4a0f32f7d37630fb61b91c3f
-RMD160 (String-Util-1.31.tar.gz) = 5597258b5f393108847846e67481368bce60634b
-SHA512 (String-Util-1.31.tar.gz) = 75283ea5b8dbf9933c94c96da71ace8380cb74c9848c35c4c5377ae00aeddd0851fbee8f3506ee4110e9f278b725aa0376d261424bd78eec6f6e32e2f3fc8f9b
-Size (String-Util-1.31.tar.gz) = 23401 bytes
+SHA1 (String-Util-1.32.tar.gz) = b58c4433a4eda51741830614102d845923ae2b09
+RMD160 (String-Util-1.32.tar.gz) = 9a74f3199fd260f4b639fc36bb8ca1f3e8d9d495
+SHA512 (String-Util-1.32.tar.gz) = be4c5922afed8f5f5cb9b4e8cd5f7ba9d08fd2ee322b09a7f22fba6aa410febf89d4bfe5ba9dbcece61b48b4a62f15734d3c29c55e121cf784d8295063cfe14c
+Size (String-Util-1.32.tar.gz) = 23870 bytes
