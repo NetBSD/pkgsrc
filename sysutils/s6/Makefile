@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/02/17 19:31:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2021/04/26 15:03:53 schmonz Exp $
 
-DISTNAME=	s6-2.10.0.2
-PKGREVISION=	1
+DISTNAME=	s6-2.10.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -11,8 +10,8 @@ HOMEPAGE=	https://skarnet.org/software/s6/
 COMMENT=	The s6 supervision suite
 LICENSE=	isc
 
-MANPAGES=		v2.10.0.2.1.tar.gz
-SITES.${MANPAGES}=	https://github.com/flexibeast/s6-man-pages/archive/
+MANPAGES=		v2.10.0.3.1.tar.gz
+SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-man-pages/archive/}
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
@@ -34,8 +33,6 @@ do-install-manpages:
 		done \
 	done
 
-BUILDLINK_API_DEPENDS.skalibs+=		skalibs>=2.10.0.2
 .include "../../devel/skalibs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.execline+=	execline>=2.7.0.1
 .include "../../lang/execline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
