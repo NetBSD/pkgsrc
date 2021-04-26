@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2364 2021/04/26 14:39:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2365 2021/04/26 14:40:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/p5-JSON-Parse to 0.61 [wiz 2021-04-26]
 	Updated converters/p5-JSON-XS to 4.03 [wiz 2021-04-26]
 	Updated devel/p5-List-MoreUtils-XS to 0.430 [wiz 2021-04-26]
+	Updated devel/p5-List-MoreUtils to 0.430 [wiz 2021-04-26]
