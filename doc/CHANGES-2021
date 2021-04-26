@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2379 2021/04/26 15:03:01 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2380 2021/04/26 15:04:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3719,3 +3719,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/fdtools to 2020.05.04nb3 [schmonz 2021-04-26]
 	Updated devel/p5-String-Util to 1.32 [wiz 2021-04-26]
 	Updated lang/execline to 2.8.0.1 [schmonz 2021-04-26]
+	Updated sysutils/s6 to 2.10.0.3 [schmonz 2021-04-26]
