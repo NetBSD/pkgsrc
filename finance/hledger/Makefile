@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/24 11:12:09 pho Exp $
+# $NetBSD: Makefile,v 1.4 2021/04/26 07:34:31 pho Exp $
 
 DISTNAME=	hledger-1.21
 PKGNAME=	${DISTNAME}
@@ -46,3 +46,11 @@ LICENSE=	gnu-gpl-v3
 # let's pick a locale that is pretty universally supported even if not
 # exactly appropriate for this.
 MAKE_ENV+=	LC_ALL=en_US.UTF-8
+# The root cause of the problem is in hledger-lib/Hledger/Utils.hs
+# (embedFileRelative). It uses embedStringFile from file-embed
+# (devel/hs-file-embed) but without changing the locale encoding to
+# UTF-8, and the file to be embedded
+# (hledger/embeddedfiles/hledger.info) does contain non-ASCII
+# characters. Using with-utf8
+# (http://hackage.haskell.org/package/with-utf8) is probably the best
+# solution.
