@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20539 2021/04/26 15:00:21 wiz Exp $
+$NetBSD: TODO,v 1.20540 2021/04/26 15:01:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1289,7 +1289,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Search-Elasticsearch-7.712
 	o p5-Search-QueryParser-0.95
 	o p5-Set-Object-1.41
-	o p5-Specio-0.47
 	o p5-String-Util-1.32
 	o p5-Sub-Exporter-ForMethods-0.100054
 	o p5-Sub-HandlesVia-0.016
