@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2388 2021/04/26 15:12:50 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2389 2021/04/26 15:14:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-Manifest to 2.022 [wiz 2021-04-26]
 	Updated devel/p5-Test-Output to 1.033 [wiz 2021-04-26]
 	Updated devel/p5-Test-Script to 1.27 [wiz 2021-04-26]
+	Updated devel/p5-Test2-Suite to 0.000139 [wiz 2021-04-26]
