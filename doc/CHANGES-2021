@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2352 2021/04/26 12:52:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2353 2021/04/26 12:53:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Config-Tiny to 2.26 [wiz 2021-04-26]
 	Updated devel/p5-Date-Manip to 6.85 [wiz 2021-04-26]
 	Updated devel/p5-File-ShareDir to 1.118nb3 [wiz 2021-04-26]
+	Updated devel/p5-File-Which to 1.24 [wiz 2021-04-26]
