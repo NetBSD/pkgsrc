@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20516 2021/04/26 12:45:48 wiz Exp $
+$NetBSD: TODO,v 1.20517 2021/04/26 12:46:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1226,7 +1226,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clone-PP-1.08
 	o p5-Config-MVP-2.200012
-	o p5-Config-Tiny-2.26
 	o p5-Convert-Binary-C-0.84
 	o p5-Convert-Color-1.000001
 	o p5-Cpanel-JSON-XS-4.26
