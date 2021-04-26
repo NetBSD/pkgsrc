@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2371 2021/04/26 14:53:38 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2372 2021/04/26 14:56:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Package-Stash to 0.39 [wiz 2021-04-26]
 	Updated devel/p5-PadWalker to 2.5 [wiz 2021-04-26]
 	Updated devel/p5-Params-Coerce to 0.15 [wiz 2021-04-26]
+	Updated devel/p5-Params-Validate to 1.30 [wiz 2021-04-26]
