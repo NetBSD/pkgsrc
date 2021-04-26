@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2395 2021/04/26 15:50:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2396 2021/04/26 21:20:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3736,3 +3736,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/extra-cmake-modules to 5.81.0 [wiz 2021-04-26]
 	Updated mail/postfix to 3.5.10 [triaxx 2021-04-26]
 	Updated graphics/oxygen-icons to 5.81.0 [wiz 2021-04-26]
+	Added textproc/py-epr-reader version 2.4.10 [wiz 2021-04-26]
