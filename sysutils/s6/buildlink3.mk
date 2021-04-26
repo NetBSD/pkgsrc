@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/11/19 20:00:05 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/04/26 15:03:53 schmonz Exp $
 
 BUILDLINK_TREE+=	s6
 
 .if !defined(S6_BUILDLINK3_MK)
 S6_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.s6+=	s6>=2.9.2.0
+BUILDLINK_API_DEPENDS.s6+=	s6>=2.10.0.3
 BUILDLINK_PKGSRCDIR.s6?=	../../sysutils/s6
 BUILDLINK_INCDIRS.s6+=		include/s6
 BUILDLINK_LIBDIRS.s6+=		lib/s6
