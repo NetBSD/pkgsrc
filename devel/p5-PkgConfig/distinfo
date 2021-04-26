@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/07 20:06:20 otis Exp $
+$NetBSD: distinfo,v 1.2 2021/04/26 15:00:12 wiz Exp $
 
-SHA1 (PkgConfig-0.24026.tar.gz) = 8ba78c4045a36f0c84cdd2fc1d3f7bf2358d1fb4
-RMD160 (PkgConfig-0.24026.tar.gz) = 76a5df9a01af26c4ddfebf8042e3648f4a52cfec
-SHA512 (PkgConfig-0.24026.tar.gz) = d87a2ad8c11032c9ad8db055437390fdebbeffe9131d1f24a27718996a2121b8e67feeabf25dea50d878b9fc15e99bc9dfac3a55fc4d5c2189f10b40c1e48246
-Size (PkgConfig-0.24026.tar.gz) = 139117 bytes
+SHA1 (PkgConfig-0.25026.tar.gz) = d566c5bf448545e436c72938250b70888107390e
+RMD160 (PkgConfig-0.25026.tar.gz) = 7951c498a0adb697510ce4006de85c907968999f
+SHA512 (PkgConfig-0.25026.tar.gz) = 63992267a8dfbac69a36fbc64b40558d0b63cd93f08d46a067812ffb49f2c7faef67d03fc2fe32e0fba22877bf41663ff2debe38d9eacdf87bd187f227698ab7
+Size (PkgConfig-0.25026.tar.gz) = 140854 bytes
