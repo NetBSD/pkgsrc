@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2346 2021/04/26 10:46:59 micha Exp $
+$NetBSD: CHANGES-2021,v 1.2347 2021/04/26 10:54:03 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3684,3 +3684,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-ICU to 2.7.2 [nia 2021-04-26]
 	Updated devel/smake to 1.4 [micha 2021-04-26]
 	Updated shells/bosh to 20210421 [micha 2021-04-26]
+	Updated shells/pbosh to 20210421 [micha 2021-04-26]
