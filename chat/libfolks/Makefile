@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/04/21 11:41:06 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/04/26 13:41:04 cirnatdan Exp $
 
 DISTNAME=	folks-0.14.0
 PKGNAME=	lib${DISTNAME}
@@ -24,6 +24,11 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/folks.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/folks-dummy.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/folks-telepathy.pc
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../devel/meson/build.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
