@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/06/07 00:28:24 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2021/04/26 14:53:28 wiz Exp $
 
-SHA1 (Params-Coerce-0.14.tar.gz) = ec0f8bc9c59e653edc6011e1cdebd0593d2eb919
-RMD160 (Params-Coerce-0.14.tar.gz) = 856b23f83d392068b10053a7cc2203317f86e3b6
-SHA512 (Params-Coerce-0.14.tar.gz) = 48a606a0116e77a13b93b788d714c3204cb912af1d8877604e0dd5029ec2ff6498df3e6c3a9236448071ae7972f4377397712f5710905372522c5c85c2761e80
-Size (Params-Coerce-0.14.tar.gz) = 26566 bytes
-SHA1 (patch-Makefile.PL) = 4ffb94bb9fe0359a8f8199d2d67704e1a1681efe
+SHA1 (Params-Coerce-0.15.tar.gz) = d3b970781373a8ffd87f315c2f74e6fe5eb3d55a
+RMD160 (Params-Coerce-0.15.tar.gz) = 9cb9d737bc19f262d15e9f73f7f6f308fa2da9cf
+SHA512 (Params-Coerce-0.15.tar.gz) = 6d03cd874505d0b29d17028f0c613ba2512a57a6f5eaea24d25d404287da913a6930ea9468b182cc085a0a0f978ddc4eb1b1ec74eac78f28936544535567bc36
+Size (Params-Coerce-0.15.tar.gz) = 31426 bytes
