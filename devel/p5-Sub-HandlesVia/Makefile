@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/09/13 07:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/04/26 15:04:28 wiz Exp $
 
-DISTNAME=	Sub-HandlesVia-0.015
+DISTNAME=	Sub-HandlesVia-0.016
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TOBYINK/}
