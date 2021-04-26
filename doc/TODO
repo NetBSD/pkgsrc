@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20529 2021/04/26 14:40:29 wiz Exp $
+$NetBSD: TODO,v 1.20530 2021/04/26 14:44:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1291,7 +1291,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-PkgConfig-0.25026
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
-	o p5-Role-Tiny-2.002004
 	o p5-Rose-DB-0.819
 	o p5-SMS-Send-1.08
 	o p5-SQL-Abstract-Limit-0.143
