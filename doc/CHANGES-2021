@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2391 2021/04/26 15:18:24 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2392 2021/04/26 15:23:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test2-Suite to 0.000139 [wiz 2021-04-26]
 	Updated devel/p5-Type-Tiny to 1.012001 [wiz 2021-04-26]
 	Updated devel/p5-Types-Serialiser to 1.01 [wiz 2021-04-26]
+	Updated benchmarks/google-benchmark to 1.5.3 [wiz 2021-04-26]
