@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2356 2021/04/26 13:01:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2357 2021/04/26 14:30:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-IO-AIO to 4.75 [wiz 2021-04-26]
 	Updated devel/py-astroid to 2.5.6 [adam 2021-04-26]
 	Updated devel/py-pylint to 2.8.1 [adam 2021-04-26]
+	Updated mail/thunderbird to 78.10.0 [ryoon 2021-04-26]
