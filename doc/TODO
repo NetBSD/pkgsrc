@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20519 2021/04/26 12:52:11 wiz Exp $
+$NetBSD: TODO,v 1.20520 2021/04/26 12:53:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1247,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-File-Path-Tiny-1.0
 	o p5-File-Touch-0.12
 	o p5-File-Valet-1.08
-	o p5-File-Which-1.24
 	o p5-FindBin-libs-2.21.0
 	o p5-Fsdb-2.71
 	o p5-Future-0.47
