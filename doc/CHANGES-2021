@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2369 2021/04/26 14:51:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2370 2021/04/26 14:52:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3709,3 +3709,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Moo to 2.005004 [wiz 2021-04-26]
 	Updated devel/p5-MooX-HandlesVia to 0.001009 [wiz 2021-04-26]
 	Updated devel/p5-Package-Stash to 0.39 [wiz 2021-04-26]
+	Updated devel/p5-PadWalker to 2.5 [wiz 2021-04-26]
