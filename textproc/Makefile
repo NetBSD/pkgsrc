@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1216 2021/04/25 04:07:33 pho Exp $
+# $NetBSD: Makefile,v 1.1217 2021/04/26 21:19:54 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -876,6 +876,7 @@ SUBDIR+=	py-elementpath
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
+SUBDIR+=	py-epr-reader
 SUBDIR+=	py-eradicate
 SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
