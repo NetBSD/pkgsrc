@@ -1,4 +1,4 @@
-$NetBSD: distinfo-2017.09,v 1.1 2021/04/18 07:30:28 mrg Exp $
+$NetBSD: distinfo-2017.09,v 1.2 2021/04/26 00:34:41 mrg Exp $
 
 SHA1 (2017.09-rockchip-ayufan-1063-g29843fbd42.tar.gz) = 139aa96fa9359840677eb25d5e137829138434e5
 RMD160 (2017.09-rockchip-ayufan-1063-g29843fbd42.tar.gz) = 252993f382144312cfa1d5803167d967a1e5f4c3
@@ -12,3 +12,5 @@ SHA1 (rk3328_ddr_333MHz_v1.16.bin) = 2c81c827f8e3a1c443c98cc880a0c9c1a26810de
 RMD160 (rk3328_ddr_333MHz_v1.16.bin) = 983c64ff2c76331bcfb44975641f3560c3c0d905
 SHA512 (rk3328_ddr_333MHz_v1.16.bin) = 29cd6bbd7a0cc78073a5d50cc02676a09ec56298236684142572c465c8c3baccf275d583dcbbe52e5b16929ae09dd4a9772ea96d67deedc904707d8e0ca98ee8
 Size (rk3328_ddr_333MHz_v1.16.bin) = 28532 bytes
+SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 375c79ebe0d593865fbaa7924c8446ea6712fca4
+SHA1 (patch-lib_bch.c) = 151e5f311742a7da919359950ccac2521bcfaaff
