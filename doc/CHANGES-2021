@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2381 2021/04/26 15:04:35 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2382 2021/04/26 15:05:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3721,3 +3721,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/execline to 2.8.0.1 [schmonz 2021-04-26]
 	Updated sysutils/s6 to 2.10.0.3 [schmonz 2021-04-26]
 	Updated misc/s6-portable-utils to 2.2.3.2 [schmonz 2021-04-26]
+	Updated net/s6-dns to 2.3.5.1 [schmonz 2021-04-26]
