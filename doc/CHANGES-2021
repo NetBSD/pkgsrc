@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2392 2021/04/26 15:23:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2393 2021/04/26 15:25:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3733,3 +3733,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Type-Tiny to 1.012001 [wiz 2021-04-26]
 	Updated devel/p5-Types-Serialiser to 1.01 [wiz 2021-04-26]
 	Updated benchmarks/google-benchmark to 1.5.3 [wiz 2021-04-26]
+	Updated devel/extra-cmake-modules to 5.81.0 [wiz 2021-04-26]
