@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2355 2021/04/26 12:56:27 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2356 2021/04/26 13:01:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3694,3 +3694,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-File-Which to 1.24 [wiz 2021-04-26]
 	Updated devel/p5-Future to 0.47 [wiz 2021-04-26]
 	Updated devel/p5-IO-AIO to 4.75 [wiz 2021-04-26]
+	Updated devel/py-astroid to 2.5.6 [adam 2021-04-26]
+	Updated devel/py-pylint to 2.8.1 [adam 2021-04-26]
