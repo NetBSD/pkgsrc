@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/01/19 18:54:51 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/26 00:35:03 mrg Exp $
 
-PKGREVISION=		6
+PKGREVISION=		7
 UBOOT_TARGET=		rock64
 UBOOT_CONFIG=		rock64-rk3328_defconfig
 UBOOT_BIN=		idbloader.img rksd_loader.img rkspi_loader.img u-boot.itb
