@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2376 2021/04/26 15:01:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2377 2021/04/26 15:02:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3716,3 +3716,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/skalibs to 2.10.0.3 [schmonz 2021-04-26]
 	Updated devel/p5-PkgConfig to 0.25026 [wiz 2021-04-26]
 	Updated devel/p5-Specio to 0.47 [wiz 2021-04-26]
+	Updated sysutils/fdtools to 2020.05.04nb3 [schmonz 2021-04-26]
