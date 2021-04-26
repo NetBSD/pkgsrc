@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20533 2021/04/26 14:51:14 wiz Exp $
+$NetBSD: TODO,v 1.20534 2021/04/26 14:52:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1278,7 +1278,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-PAR-1.017
 	o p5-PAR-Dist-0.51
 	o p5-PPIx-Regexp-0.080
-	o p5-PadWalker-2.5
 	o p5-Params-Coerce-0.15
 	o p5-Params-Validate-1.30
 	o p5-Parse-PMFile-0.43
