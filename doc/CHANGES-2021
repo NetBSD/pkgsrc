@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2386 2021/04/26 15:08:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2387 2021/04/26 15:10:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/s6-networking to 2.4.1.1 [schmonz 2021-04-26]
 	Updated devel/p5-Test-LeakTrace to 0.17 [wiz 2021-04-26]
 	Updated devel/p5-Test-Manifest to 2.022 [wiz 2021-04-26]
+	Updated devel/p5-Test-Output to 1.033 [wiz 2021-04-26]
