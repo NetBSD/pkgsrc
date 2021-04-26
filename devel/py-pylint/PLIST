@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/02/22 09:24:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/04/26 13:00:31 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -156,6 +156,9 @@ ${PYSITELIB}/pylint/extensions/check_elif.pyo
 ${PYSITELIB}/pylint/extensions/comparetozero.py
 ${PYSITELIB}/pylint/extensions/comparetozero.pyc
 ${PYSITELIB}/pylint/extensions/comparetozero.pyo
+${PYSITELIB}/pylint/extensions/confusing_elif.py
+${PYSITELIB}/pylint/extensions/confusing_elif.pyc
+${PYSITELIB}/pylint/extensions/confusing_elif.pyo
 ${PYSITELIB}/pylint/extensions/docparams.py
 ${PYSITELIB}/pylint/extensions/docparams.pyc
 ${PYSITELIB}/pylint/extensions/docparams.pyo
@@ -177,6 +180,9 @@ ${PYSITELIB}/pylint/extensions/overlapping_exceptions.pyo
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.py
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.pyc
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.pyo
+${PYSITELIB}/pylint/extensions/typing.py
+${PYSITELIB}/pylint/extensions/typing.pyc
+${PYSITELIB}/pylint/extensions/typing.pyo
 ${PYSITELIB}/pylint/graph.py
 ${PYSITELIB}/pylint/graph.pyc
 ${PYSITELIB}/pylint/graph.pyo
@@ -186,6 +192,9 @@ ${PYSITELIB}/pylint/interfaces.pyo
 ${PYSITELIB}/pylint/lint/__init__.py
 ${PYSITELIB}/pylint/lint/__init__.pyc
 ${PYSITELIB}/pylint/lint/__init__.pyo
+${PYSITELIB}/pylint/lint/expand_modules.py
+${PYSITELIB}/pylint/lint/expand_modules.pyc
+${PYSITELIB}/pylint/lint/expand_modules.pyo
 ${PYSITELIB}/pylint/lint/parallel.py
 ${PYSITELIB}/pylint/lint/parallel.pyc
 ${PYSITELIB}/pylint/lint/parallel.pyo
@@ -321,7 +330,3 @@ ${PYSITELIB}/pylint/utils/pragma_parser.pyo
 ${PYSITELIB}/pylint/utils/utils.py
 ${PYSITELIB}/pylint/utils/utils.pyc
 ${PYSITELIB}/pylint/utils/utils.pyo
-man/man1/epylint-${PYVERSSUFFIX}.1
-man/man1/pylint-${PYVERSSUFFIX}.1
-man/man1/pyreverse-${PYVERSSUFFIX}.1
-man/man1/symilar-${PYVERSSUFFIX}.1
