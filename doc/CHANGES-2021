@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2373 2021/04/26 14:57:36 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2374 2021/04/26 14:59:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3713,3 +3713,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Params-Coerce to 0.15 [wiz 2021-04-26]
 	Updated devel/p5-Params-Validate to 1.30 [wiz 2021-04-26]
 	Updated filesystems/p5-Path-Tiny to 0.118 [wiz 2021-04-26]
+	Updated devel/skalibs to 2.10.0.3 [schmonz 2021-04-26]
