@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/02/16 14:07:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/26 15:05:30 schmonz Exp $
 
-DISTNAME=	s6-networking-2.4.1.0
+DISTNAME=	s6-networking-2.4.1.1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://skarnet.org/software/s6-networking/
 COMMENT=	Suite of small networking utilities
 LICENSE=	isc
 
-MANPAGES=		v2.4.0.0.2.tar.gz
-SITES.${MANPAGES}=	https://github.com/flexibeast/s6-networking-man-pages/archive/
+MANPAGES=		v2.4.1.1.1.tar.gz
+SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-networking-man-pages/archive/}
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
@@ -33,10 +33,7 @@ do-install-manpages:
 		done \
 	done
 
-BUILDLINK_API_DEPENDS.skalibs+=	skalibs>=2.10.0.2
 .include "../../devel/skalibs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.s6-dns+=	s6-dns>=2.3.5.0
 .include "../../net/s6-dns/buildlink3.mk"
-BUILDLINK_API_DEPENDS.s6+=	s6>=2.10.0.2
 .include "../../sysutils/s6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
