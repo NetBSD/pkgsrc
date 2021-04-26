@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2347 2021/04/26 10:54:03 micha Exp $
+$NetBSD: CHANGES-2021,v 1.2348 2021/04/26 11:33:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3685,3 +3685,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/smake to 1.4 [micha 2021-04-26]
 	Updated shells/bosh to 20210421 [micha 2021-04-26]
 	Updated shells/pbosh to 20210421 [micha 2021-04-26]
+	Updated graphics/libjpeg-turbo to 2.1.0 [adam 2021-04-26]
+	Updated net/haproxy to 2.3.10 [adam 2021-04-26]
