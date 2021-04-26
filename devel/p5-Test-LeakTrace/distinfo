@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/09/17 13:14:59 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/04/26 15:07:17 wiz Exp $
 
-SHA1 (Test-LeakTrace-0.16.tar.gz) = ad1d825c838982ea7542af550c5760bb3b34b54b
-RMD160 (Test-LeakTrace-0.16.tar.gz) = 50cfe927559d5cbe7ab15ba70bdac1be9dc5d91d
-SHA512 (Test-LeakTrace-0.16.tar.gz) = 6fa7a5eaae01ca5232f3f297a104553dac5f57e4c6721d7084e5d44b0133206100878c7067b228b1e01b21f7639a97a0ec48ef77198deb0598d94d8861bab049
-Size (Test-LeakTrace-0.16.tar.gz) = 49435 bytes
+SHA1 (Test-LeakTrace-0.17.tar.gz) = 882d5eb1c1ba5efbbc92f9d93568cef8d640a57f
+RMD160 (Test-LeakTrace-0.17.tar.gz) = 5a8f196ef5e6f30f0c36a1c99eb759b231ee599d
+SHA512 (Test-LeakTrace-0.17.tar.gz) = 57ffd8c64ef871427c04419bda239d73e169f3b6ee268e0d4d7a27942c277d4b1f502e82e2e0df415b1050c0aa11944c2c3acb2e9b353855f77c91d1dfcaf00d
+Size (Test-LeakTrace-0.17.tar.gz) = 34126 bytes
