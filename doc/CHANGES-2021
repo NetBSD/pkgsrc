@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2383 2021/04/26 15:05:37 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2384 2021/04/26 15:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3720,6 +3720,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-String-Util to 1.32 [wiz 2021-04-26]
 	Updated lang/execline to 2.8.0.1 [schmonz 2021-04-26]
 	Updated sysutils/s6 to 2.10.0.3 [schmonz 2021-04-26]
+	Updated devel/p5-Sub-HandlesVia to 0.016 [wiz 2021-04-26]
 	Updated misc/s6-portable-utils to 2.2.3.2 [schmonz 2021-04-26]
 	Updated net/s6-dns to 2.3.5.1 [schmonz 2021-04-26]
+	Updated devel/p5-Term-ReadLine-Gnu to 1.40 [wiz 2021-04-26]
 	Updated net/s6-networking to 2.4.1.1 [schmonz 2021-04-26]
