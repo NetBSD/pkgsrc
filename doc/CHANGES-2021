@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2348 2021/04/26 11:33:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2349 2021/04/26 12:45:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/pbosh to 20210421 [micha 2021-04-26]
 	Updated graphics/libjpeg-turbo to 2.1.0 [adam 2021-04-26]
 	Updated net/haproxy to 2.3.10 [adam 2021-04-26]
+	Updated devel/p5-Alien-Build to 2.38 [wiz 2021-04-26]
