@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5232 2019/07/01 22:13:09 rillig Exp $
+$NetBSD: CHANGES-2015,v 1.5233 2021/04/26 15:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7992,6 +7992,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/py-pelican version 3.6.3 [nils 2015-11-27]
 	Updated x11/qt4-qscintilla to 2.9.1 [adam 2015-11-27]
 	Updated x11/py-qt4-qscintilla to 2.9.1 [adam 2015-11-27]
+	Added geography/libspatialite version 4.3.0a [adam 2015-11-27]
 	Added geography/spatialindex version 1.8.5 [adam 2015-11-27]
 	Updated math/glpk to 4.57 [adam 2015-11-27]
 	Added www/p5-Plack-Middleware-MethodOverride version 0.15 [mef 2015-11-27]
