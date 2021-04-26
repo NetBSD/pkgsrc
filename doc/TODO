@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20538 2021/04/26 14:59:55 schmonz Exp $
+$NetBSD: TODO,v 1.20539 2021/04/26 15:00:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Parse-PMFile-0.43
 	o p5-Perl-Critic-1.140
 	o p5-Perl-Tidy-20210402
-	o p5-PkgConfig-0.25026
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
 	o p5-Rose-DB-0.819
