@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2375 2021/04/26 15:00:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2376 2021/04/26 15:01:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3715,3 +3715,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/p5-Path-Tiny to 0.118 [wiz 2021-04-26]
 	Updated devel/skalibs to 2.10.0.3 [schmonz 2021-04-26]
 	Updated devel/p5-PkgConfig to 0.25026 [wiz 2021-04-26]
+	Updated devel/p5-Specio to 0.47 [wiz 2021-04-26]
