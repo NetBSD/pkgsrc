@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2021/02/09 12:34:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.86 2021/04/26 14:30:03 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -4280,6 +4280,7 @@ lib/thunderbird/chrome/newsblog/content/messenger-newsblog/newsblogOverlay.js
 lib/thunderbird/chrome/openpgp/content/openpgp/BondOpenPGP.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/GPGME.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/GPGMELib.jsm
+lib/thunderbird/chrome/openpgp/content/openpgp/modules/OpenPGPAlias.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/RNP.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/RNPLib.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/addrbook.jsm
