@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/04/26 15:18:15 wiz Exp $
 
-SHA1 (Types-Serialiser-1.0.tar.gz) = 72ba9d1d97bb582360c79bcbdb158e73573adb70
-RMD160 (Types-Serialiser-1.0.tar.gz) = 6166d0657c07880473268b2cfd9b406009759a4c
-SHA512 (Types-Serialiser-1.0.tar.gz) = b786bcd3ee976a6ad948cc98a9c71d2cdcd30f485528eff059091f6d86ae7078c10ba2dc2982326fcf0184dbfbdddea84daff324c6ec6a129fe6aac01253c8fb
-Size (Types-Serialiser-1.0.tar.gz) = 6238 bytes
+SHA1 (Types-Serialiser-1.01.tar.gz) = 98817b71588858ada44ef3043bf8b5ccffe3e32b
+RMD160 (Types-Serialiser-1.01.tar.gz) = 9a993e468e50802843bb4abd575973b3d06a0518
+SHA512 (Types-Serialiser-1.01.tar.gz) = 419b24cae85fba045de2f4593e1d17784f2016d5f9cd9ea96d23bbeaa86c1c6b866875871a787cacba1299616d371cc8806760e4c53e4f635deec4bc28fa81b5
+Size (Types-Serialiser-1.01.tar.gz) = 6549 bytes
