@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/07/04 08:05:25 wen Exp $
+$NetBSD: distinfo,v 1.10 2021/04/26 12:52:02 wiz Exp $
 
-SHA1 (File-ShareDir-1.116.tar.gz) = 4b7bc117ff4cbfbe199b3653ab3fe34135b7a0fe
-RMD160 (File-ShareDir-1.116.tar.gz) = b3b466fc9c221fe0735f7553d4c0702196df5c5e
-SHA512 (File-ShareDir-1.116.tar.gz) = 5fcd75254c446f02ee377e6b5848baad95c73779b8525b0ee1699fe675ddd2bd67d0dc057f47b0991ec136de16e06a4891a4b14a78bd96c3e2468640053bbe0e
-Size (File-ShareDir-1.116.tar.gz) = 27487 bytes
+SHA1 (File-ShareDir-1.118.tar.gz) = 4f75c9f86f711228c2ec65c4016b70fd1912138e
+RMD160 (File-ShareDir-1.118.tar.gz) = 963c5dfd23c1c944ed9a88d70291680877e16a6a
+SHA512 (File-ShareDir-1.118.tar.gz) = 890f33e96333f7b07707d722e59e7da9a287112062814ef294594ac67f2f7349f905c009e6cd70d3af3a4de85335b074ec5a61194f9b0495f3e793d6ca635853
+Size (File-ShareDir-1.118.tar.gz) = 29631 bytes
