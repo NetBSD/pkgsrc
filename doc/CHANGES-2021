@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2344 2021/04/26 07:42:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2345 2021/04/26 10:39:26 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/goaccess to 1.4.6 [wiedi 2021-04-25]
 	Updated sysutils/xplr to 0.5.7 [pin 2021-04-26]
 	Updated textproc/py-ICU to 2.7.2 [nia 2021-04-26]
+	Updated devel/smake to 1.4 [micha 2021-04-26]
