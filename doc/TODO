@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20541 2021/04/26 15:02:41 wiz Exp $
+$NetBSD: TODO,v 1.20542 2021/04/26 15:07:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1290,12 +1290,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Search-QueryParser-0.95
 	o p5-Set-Object-1.41
 	o p5-Sub-Exporter-ForMethods-0.100054
-	o p5-Sub-HandlesVia-0.016
-	o p5-Term-ReadLine-Gnu-1.40
 	o p5-Term-Size-0.211
 	o p5-Test-Class-0.52
 	o p5-Test-EOL-2.02
-	o p5-Test-LeakTrace-0.17
 	o p5-Test-Manifest-2.022
 	o p5-Test-MockModule-0.176.0
 	o p5-Test-Output-1.033
