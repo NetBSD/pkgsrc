@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2021/04/21 13:24:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/27 14:39:19 fox Exp $
 
-DISTNAME=	cannonball-0.32
-PKGREVISION=	1
+DISTNAME=	cannonball-0.34
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org

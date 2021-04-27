@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/03/26 08:53:07 fox Exp $
+$NetBSD: distinfo,v 1.5 2021/04/27 14:39:19 fox Exp $
 
-SHA1 (cannonball-0.32.tar.gz) = f5996710cd235a51ccefe8904181a8085291434f
-RMD160 (cannonball-0.32.tar.gz) = b0447eec49fcadc2493c0bc05ced5a9121933cf2
-SHA512 (cannonball-0.32.tar.gz) = 6f843e38e7ef73feb3a517a8488d37aeb809db4372a1da3de7eaa48bcfa1722f6dad64dd0e52b5bde97fade265559f2a5238646e5b95f4a5c0ae7e10d782680f
-Size (cannonball-0.32.tar.gz) = 292602 bytes
+SHA1 (cannonball-0.34.tar.gz) = 1e8e9dabfe96a16ccf523e4fc5b3fb7a6bdfc34b
+RMD160 (cannonball-0.34.tar.gz) = ae81b9f2ee5c2fcd1b1699014dc6207c2fc89a17
+SHA512 (cannonball-0.34.tar.gz) = 13b2b1bcb2b0e6fa63308663e2a63204438bf2852a4bb264505e946af9a173d5f08eb5af4b4dddf73e44980024a015373caa80cc42a0ccf6eefbe67bbd3a8834
+Size (cannonball-0.34.tar.gz) = 326020 bytes
+SHA1 (patch-src_main_sdl2_renderbase.cpp) = cc151bfe7845827733bab2ec9f1605c090abb8fb
