@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/10/20 13:41:54 wen Exp $
+$NetBSD: distinfo,v 1.15 2021/04/27 12:10:12 wiz Exp $
 
-SHA1 (File-Remove-1.58.tar.gz) = cba831c59a5e593a0cbc32b1cf87197a2e1b7e55
-RMD160 (File-Remove-1.58.tar.gz) = d7dc99e84a5c16b0bb23d6fd0e0b5ba49793b62c
-SHA512 (File-Remove-1.58.tar.gz) = 2d616751328d57ff6975775189f92745fb3cb1d69675049ebddd96a2612c11c62c1995a70720efe4e73a9c10b9a2ec5528b90d468815e7c2ee395145241608e2
-Size (File-Remove-1.58.tar.gz) = 25575 bytes
+SHA1 (File-Remove-1.60.tar.gz) = 9d136aa7a5f99e95d2b827a089d408bfbe2abeea
+RMD160 (File-Remove-1.60.tar.gz) = 77ba942572684f588b4a345973435f3f9bbb9aba
+SHA512 (File-Remove-1.60.tar.gz) = 7781629896f16f0b34574a879803473002249c32cf03001f4c1c290edd379571d96d5b1049874f9f71bdb8d7881c3f30a86dcdd0d4f42b4e78998cd6a96de750
+Size (File-Remove-1.60.tar.gz) = 25997 bytes
