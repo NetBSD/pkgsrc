@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2422 2021/04/27 16:26:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2423 2021/04/27 16:28:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3909,3 +3909,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Data-HexDump to 0.04 [wiz 2021-04-27]
 	Updated textproc/p5-Text-Balanced to 2.04 [wiz 2021-04-27]
 	Updated textproc/p5-Text-CSV_XS to 1.46 [wiz 2021-04-27]
+	Updated textproc/p5-XML-LibXML to 2.0207 [wiz 2021-04-27]
