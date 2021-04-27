@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2412 2021/04/27 12:13:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2413 2021/04/27 12:15:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3757,3 +3757,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Digest-HMAC to 1.04nb10 [wiz 2021-04-27]
 	Updated sysutils/p5-File-Remove to 1.60 [wiz 2021-04-27]
 	Updated security/p5-GnuPG-Interface to 1.02 [wiz 2021-04-27]
+	Updated security/p5-IO-Socket-SSL to 2.070 [wiz 2021-04-27]
