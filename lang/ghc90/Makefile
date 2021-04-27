@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2021/04/27 11:59:42 pho Exp $
+# $NetBSD: Makefile,v 1.9 2021/04/27 13:55:25 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.0.1-src
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/-src$//}
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
@@ -187,16 +187,18 @@ GENERATE_PLIST+= \
 # Dynamically linked Haskell executables and libraries have rpaths to
 # dependent Haskell libraries, but the problem is that they are
 # specified with $ORIGIN, which isn't currently supported by
-# ../../mk/check/check-shlibs-elf.awk.
+# ../../mk/check/check-shlibs-elf.awk nor
+# mk/pkgformat/pkg/metadata.mk.
+#
+# This means we need to disable the entire CHECK_SHLIBS machinery
+# because otherwise the resulting binary package would contain
+# REQUIRES lines with $ORIGIN wrongly expanded by ldd(1).
 #
 # Note that arguments like "-Wl,-rpath,$ORIGIN/.." are usually dropped
 # by the "cleanup" phase of wrappers. This is not the case in GHC
 # because GHC uses @file syntax while linking objects, and our
 # wrappers does nothing about it.
-CHECK_SHLIBS_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
-.for f in ghc ghc-iserv-dyn ghc-pkg haddock hpc hsc2hs runghc
-CHECK_SHLIBS_SKIP+=		lib/${PKGNAME_NOREV}/bin/${f}
-.endfor
+CHECK_SHLIBS_SUPPORTED=	no
 
 # ghc57207_0.s: failed to add inputs for merge: Resource temporarily unavailable
 # XXX: On which platform? Is it still an issue?
