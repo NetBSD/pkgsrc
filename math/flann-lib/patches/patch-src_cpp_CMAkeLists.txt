@@ -1,0 +1,28 @@
+$NetBSD: patch-src_cpp_CMAkeLists.txt,v 1.1 2021/04/27 15:16:46 thor Exp $
+
+See https://github.com/mariusmuja/flann/issues/443 .
+
+--- src/cpp/CMakeLists.txt.orig	2016-08-05 01:20:50.000000000 +0200
++++ src/cpp/CMakeLists.txt	2020-04-15 21:19:33.106219724 +0200
+@@ -29,7 +29,7 @@
+ endif()
+ 
+ if(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND CMAKE_COMPILER_IS_GNUCC)
+-    add_library(flann_cpp SHARED "")
++    add_library(flann_cpp SHARED "empty.cpp")
+     set_target_properties(flann_cpp PROPERTIES LINKER_LANGUAGE CXX)
+     target_link_libraries(flann_cpp -Wl,-whole-archive flann_cpp_s -Wl,-no-whole-archive)
+ 
+@@ -83,7 +83,7 @@
+     set_property(TARGET flann_s PROPERTY COMPILE_DEFINITIONS FLANN_STATIC)
+ 
+     if(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND CMAKE_COMPILER_IS_GNUCC)
+-        add_library(flann SHARED "")
++        add_library(flann SHARED "empty.cpp")
+         set_target_properties(flann PROPERTIES LINKER_LANGUAGE CXX)
+         target_link_libraries(flann -Wl,-whole-archive flann_s -Wl,-no-whole-archive)
+     else()
+--- src/cpp/empty.cpp	1970-01-01 01:00:00.000000000 +0100
++++ src/cpp/empty.cpp	2020-04-15 21:46:36.507084559 +0200
+@@ -0,0 +1 @@
++// This is just a dummy to fix the build system.
