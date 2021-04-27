@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_WebKit_CMakeLists.txt,v 1.1 2018/05/16 18:55:45 jperkin Exp $
+$NetBSD: patch-Source_WebKit_CMakeLists.txt,v 1.2 2021/04/27 07:57:06 leot Exp $
 
 SunOS requires libsocket.
 
---- Source/WebKit/CMakeLists.txt.orig	2018-03-05 08:47:55.000000000 +0000
+--- Source/WebKit/CMakeLists.txt.orig	2021-03-25 13:27:32.000000000 +0000
 +++ Source/WebKit/CMakeLists.txt
-@@ -808,6 +808,10 @@ if (UNIX)
+@@ -362,6 +362,10 @@ if (UNIX)
      endif ()
  endif ()
  
