@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:59:50 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/04/27 16:24:32 wiz Exp $
 
-SHA1 (Text-Balanced-2.03.tar.gz) = 5a3664d9871a417a068ce36d47f8f197af68ba95
-RMD160 (Text-Balanced-2.03.tar.gz) = 32ed758f6931de0afe83f7cf03bf74b921c2bba6
-SHA512 (Text-Balanced-2.03.tar.gz) = 28eb95e157e8fe95fcc9395a18ec0a8af188bc99124a018e74f12f5b6e913a413098c0bed7da621c4c6a775bd7d2bb90bc04dfbcf662c45bd4d37742beff090a
-Size (Text-Balanced-2.03.tar.gz) = 48773 bytes
+SHA1 (Text-Balanced-2.04.tar.gz) = dbc332e83deca55d698a9c05f89efa5448a6765e
+RMD160 (Text-Balanced-2.04.tar.gz) = 32d7c16706f0b68d005a987305f162b61b958390
+SHA512 (Text-Balanced-2.04.tar.gz) = 211c454ea1c65562ef354053d89cf78bd82e1b83cfe730e749e04b2eb53dd1151b2eeb4a34a4fae55a44b4edb8b6ade38f3689f22a58988ce6408ed60c7deb41
+Size (Text-Balanced-2.04.tar.gz) = 41631 bytes
