@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2404 2021/04/27 09:03:17 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2405 2021/04/27 09:04:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3749,3 +3749,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/p5-Net-Google [wiz 2021-04-27]
 	Updated misc/p5-Locale-libintl to 1.32 [wiz 2021-04-27]
 	Updated net/p5-Net to 3.13 [wiz 2021-04-27]
+	Updated net/p5-Net-DNS to 1.30 [wiz 2021-04-27]
