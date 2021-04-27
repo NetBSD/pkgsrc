@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20574 2021/04/27 16:26:08 wiz Exp $
+$NetBSD: TODO,v 1.20575 2021/04/27 16:28:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1746,7 +1746,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Weather-PurpleAir-API-0.08
 	o p5-XML-Compile-SOAP-3.27
 	o p5-XML-Encoding-2.11
-	o p5-XML-LibXML-2.0207
 	o p5-XString-0.005
 	o p5-YAML-PP-0.027
 	o p5-ack-3.5.0
