@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20578 2021/04/27 17:14:51 wiz Exp $
+$NetBSD: TODO,v 1.20579 2021/04/27 17:15:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1831,7 +1831,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Twiggy-0.1026
 	o p5-Type-Tiny-XS-0.022
 	o p5-UNIVERSAL-require-0.19
-	o p5-URI-5.09
 	o p5-User-Identity-1.00
 	o p5-WWW-Mechanize-Cached-1.55
 	o p5-WWW-Shorten-3.094
