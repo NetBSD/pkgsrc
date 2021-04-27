@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20560 2021/04/27 10:27:21 wiz Exp $
+$NetBSD: TODO,v 1.20561 2021/04/27 10:51:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1561,7 +1561,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Convert-Binary-C-0.84
 	o p5-Convert-Color-1.000001
 	o p5-Cpanel-JSON-XS-4.26
-	o p5-Crypt-CBC-3.03
 	o p5-Crypt-JWT-0.032
 	o p5-Crypt-OpenSSL-DSA-0.20
 	o p5-Crypt-PasswdMD5-1.41
