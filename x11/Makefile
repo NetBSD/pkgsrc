@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2021/04/27 17:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.931 2021/04/27 17:06:04 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -396,7 +396,6 @@ SUBDIR+=	qwtplot3d-qt4
 SUBDIR+=	ratmen
 SUBDIR+=	redshift
 SUBDIR+=	rendercheck
-SUBDIR+=	renderproto9
 SUBDIR+=	rep-gtk2
 SUBDIR+=	rgb
 SUBDIR+=	rofi
