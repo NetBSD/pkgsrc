@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2424 2021/04/27 17:01:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2425 2021/04/27 17:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3911,3 +3911,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Text-CSV_XS to 1.46 [wiz 2021-04-27]
 	Updated textproc/p5-XML-LibXML to 2.0207 [wiz 2021-04-27]
 	Removed x11/startup-notification010 successor x11/startup-notification [wiz 2021-04-27]
+	Removed x11/renderproto9 [wiz 2021-04-27]
