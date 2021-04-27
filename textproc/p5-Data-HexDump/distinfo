@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/04/27 16:21:13 wiz Exp $
 
-SHA1 (Data-HexDump-0.02.tar.gz) = 183f2f4849ded585f4bfcc758b522090c3046a9c
-RMD160 (Data-HexDump-0.02.tar.gz) = 2e5ea203eaca90c02b1975fa79f838b010a29c68
-SHA512 (Data-HexDump-0.02.tar.gz) = 71e787cf679237cbddffd3eca2576812dca38216a8caf9282f7d56af4e268810f36ebd57e3e5c369ec393e7f0e9ae2edbcbe7fd5ffbe49ef4d7e8ba302a28e47
-Size (Data-HexDump-0.02.tar.gz) = 3525 bytes
+SHA1 (Data-HexDump-0.04.tar.gz) = 85c23630c77d94d766b8490853ec496c2f1f50e6
+RMD160 (Data-HexDump-0.04.tar.gz) = 22c7439f101ee0dc374cea8157113a99eee91367
+SHA512 (Data-HexDump-0.04.tar.gz) = 41f95f0a8ebf23372acd1af737785950663c597d9c76aa2342896967c9b5361a9c29e514c1ef9018461c276978b258649c516c33d3037083a2af0add37589b1f
+Size (Data-HexDump-0.04.tar.gz) = 12434 bytes
