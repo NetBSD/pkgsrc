@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.6 2021/04/27 00:48:17 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.7 2021/04/27 11:59:42 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -19,17 +19,11 @@
 # * GHC 8.0.2 requires 7.8 or later to bootstrap.
 # * GHC 7.10.3 requires 7.6 or later to bootstrap.
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	8.4.4
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-powerpc-apple-darwin.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
+.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	9.0.1
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-apple-darwin.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
-
-#.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	8.4.4
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-apple-darwin.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-#.endif
 
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 BOOT_VERSION:=	9.0.1
