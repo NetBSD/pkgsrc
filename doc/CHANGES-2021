@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2433 2021/04/27 21:53:23 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2434 2021/04/27 22:59:07 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-Mojolicious to 9.17 [wiz 2021-04-27]
 	Updated devel/php-composer to 2.0.13 [tpaul 2021-04-27]
 	Updated net/scapy to 2.4.5 [gutteridge 2021-04-27]
+	Updated devel/metslib to 0.5.3 [thor 2021-04-27]
