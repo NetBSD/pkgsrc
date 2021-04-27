@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2400 2021/04/27 08:20:16 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2401 2021/04/27 08:23:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3745,3 +3745,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed print/py-weasyprint0 successor print/py-weasyprint [adam 2021-04-27]
 	Updated print/py-weasyprint to 52.5 [adam 2021-04-27]
 	Removed math/R-geoRglm [wiz 2021-04-27]
+	Removed math/R-wle [wiz 2021-04-27]
