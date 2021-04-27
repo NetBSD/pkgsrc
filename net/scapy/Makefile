@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2021/03/23 02:03:11 gutteridge Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/27 21:53:11 gutteridge Exp $
 
-DISTNAME=	scapy-2.4.4
-PKGREVISION=	1
+DISTNAME=	scapy-2.4.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,8 +11,6 @@ COMMENT=	Interactive packet manipulation program
 LICENSE=	gnu-gpl-v2
 
 NO_BUILD=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	38 37 36 27 # 3.9 not officially supported yet
 
 INSTALLATION_DIRS+=	share/examples/scapy
 
