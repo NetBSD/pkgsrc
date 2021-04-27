@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2427 2021/04/27 17:14:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2428 2021/04/27 17:14:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed x11/renderproto9 [wiz 2021-04-27]
 	Removed x11/xcb-util036 successor x11/xcb-util [wiz 2021-04-27]
 	Updated www/p5-LWP-Protocol-https to 6.10 [wiz 2021-04-27]
+	Updated www/p5-Net-HTTP to 6.21 [wiz 2021-04-27]
