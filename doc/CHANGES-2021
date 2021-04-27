@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2408 2021/04/27 12:06:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2409 2021/04/27 12:07:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/p5-Crypt-PBKDF2 version 0.161520 [wiz 2021-04-27]
 	Updated security/p5-Crypt-CBC to 3.03 [wiz 2021-04-27]
 	Updated security/p5-Crypt-Rijndael to 1.16 [wiz 2021-04-27]
+	Updated security/p5-Crypt-Twofish to 2.18 [wiz 2021-04-27]
