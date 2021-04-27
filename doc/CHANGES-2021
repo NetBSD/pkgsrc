@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2420 2021/04/27 16:21:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2421 2021/04/27 16:24:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3907,3 +3907,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/flann-lib to 1.9.1 [thor 2021-04-27]
 	Updated textproc/p5-Alien-Libxml2 to 0.17 [wiz 2021-04-27]
 	Updated textproc/p5-Data-HexDump to 0.04 [wiz 2021-04-27]
+	Updated textproc/p5-Text-Balanced to 2.04 [wiz 2021-04-27]
