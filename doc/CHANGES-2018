@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5388 2019/10/03 12:17:39 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5389 2021/04/27 08:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6239,6 +6239,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/seamonkey-l10n to 2.49.4 [maya 2018-10-23]
 	Added net/onionbalance version 0.1.8 [riastradh 2018-10-23]
 	Added net/py-onionbalance version 0.1.8 [riastradh 2018-10-23]
+	Added net/py-sbws version 0.8.0 [riastradh 2018-10-23]
 	Updated databases/repmgr to 4.2.0 [adam 2018-10-24]
 	Updated www/apache24 to 2.4.37 [adam 2018-10-24]
 	Updated devel/py-flake8 to 3.6.0 [adam 2018-10-24]
