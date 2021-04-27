@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/06/08 14:18:15 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2021/04/27 12:13:11 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.p5_GnuPG_Interface
 PKG_OPTIONS_REQUIRED_GROUPS=	gnupg
@@ -13,7 +13,6 @@ DEPENDS+=		gnupg2>=2.2:../../security/gnupg2
 SUBST_CLASSES+=		gpg
 SUBST_SED.gpg+=		-e "s,'gpg','gpg2',g"
 SUBST_FILES.gpg+=	lib/GnuPG/Interface.pm
-SUBST_FILES.gpg+=	t/Interface.t
 SUBST_STAGE.gpg=	pre-configure
 SUBST_MESSAGE.gpg=	Fixing path to gnupg binary.
 
