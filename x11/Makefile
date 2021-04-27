@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.931 2021/04/27 17:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.932 2021/04/27 17:09:59 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -481,7 +481,6 @@ SUBDIR+=	xcb-util-keysyms
 SUBDIR+=	xcb-util-renderutil
 SUBDIR+=	xcb-util-wm
 SUBDIR+=	xcb-util-xrm
-SUBDIR+=	xcb-util036
 SUBDIR+=	xclip
 SUBDIR+=	xclipboard
 SUBDIR+=	xcmsdb
