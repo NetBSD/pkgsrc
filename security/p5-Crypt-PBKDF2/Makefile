@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/27 10:42:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/27 10:43:06 wiz Exp $
 
 DISTNAME=		Crypt-PBKDF2-0.161520
 PKGNAME=		p5-${DISTNAME}
@@ -16,12 +16,7 @@ DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=		p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=		p5-Digest-SHA3-[0-9]*:../../security/p5-Digest-SHA3
 TEST_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-#Warning: prerequisite Try::Tiny 0.04 not found.
-#Warning: prerequisite Types::Standard 1.000005 not found.
 
-#BUILD_DEPENDS+=		p5-Crypt-CBC>=1.25:../../security/p5-Crypt-CBC
-
-#USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Crypt/PBKDF2/.packlist
 
 .include "../../lang/perl5/module.mk"
