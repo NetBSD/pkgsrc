@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20581 2021/04/27 17:20:04 wiz Exp $
+$NetBSD: TODO,v 1.20582 2021/04/27 21:53:23 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -2147,7 +2147,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sc-im-0.8.1
 	o scala-2.13.5
 	o scamper-20210324
-	o scapy-2.4.5
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f3
