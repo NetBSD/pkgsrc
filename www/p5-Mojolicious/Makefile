@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.144 2020/09/20 07:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2021/04/27 17:19:55 wiz Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
 # which is quite often.
 
-DISTNAME=	Mojolicious-8.59
+DISTNAME=	Mojolicious-9.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mojolicious/}
