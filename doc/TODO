@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20552 2021/04/26 15:50:11 wiz Exp $
+$NetBSD: TODO,v 1.20553 2021/04/27 08:16:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o PACK-0.0.4
 	o Pantomime-1.2.2
 	o QuantLib-1.22
+	o R-4.0.5
 	o R-Cairo-1.5.12.2
+	o R-DBI-1.1.1
+	o R-GRASS-0.3.9
 	o R-IRdisplay-1.0
 	o R-IRkernel-1.1.1
 	o R-R6-2.5.0
@@ -416,6 +419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-maptools-1.1.1
 	o R-memoise-2.0.0
+	o R-mime-0.10
 	o R-ncdf-1.6.8
 	o R-osmdata-0.1.5
 	o R-pkgKitten-0.2.1
@@ -523,6 +527,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o autoconvert-0.3.16
 	o autosetup-0.7.0
 	o avant-window-navigator-0.4.2
+	o avenger-0.8.5
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.36.1
@@ -627,6 +632,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dar-2.4.14
 	o darcs-2.16.3
 	o darktable-3.4
+	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o deforaos-configure-0.4.2
@@ -644,6 +650,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o distccmon-gnome-3.3.5
 	o distccmon-gtk-3.3.5
 	o dmalloc-5.6.5
+	o dnsbl-milter-6.78
 	o doclifter-2.16
 	o dolphin-5.0
 	o dosbox-x-0.83.12
@@ -928,7 +935,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
 	o ilmbase-3.0.1
-	o imapsync-1.678
+	o imapfilter-2.7.5
+	o imapsync-1.727
 	o imp-6.2.12
 	o include-what-you-use-0.15
 	o influxdb-2.0.4
@@ -1044,8 +1052,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libkgeomap-4.14.0
 	o liblzo-2.10
 	o libmcs-0.7.2
-	o libmilter-8.16.0.16
+	o libmilter-8.16.1
 	o libmtag-0.3.6
+	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
@@ -1115,6 +1124,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o matrix-synapse-1.32.0
 	o matterircd-0.24.0
 	o mbedtls1-1.3.22
+	o mblaze-1.1
 	o mbuf-20141227
 	o mcollective-2.3.2
 	o mcsim-5.6.5
@@ -1127,7 +1137,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mftrace-1.2.20
 	o mg-20160118
 	o mgetty+sendfax-1.2.1
-	o milter-greylist-4.6
+	o milter-greylist-4.6.4
 	o milter-regex-2.0
 	o mime-construct-1.11
 	o mined-2015.25
@@ -1181,12 +1191,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
 	o nts-82
-	o nuitka-0.5.19
+	o nuitka-0.6.14.4
 	o nut-20.1
 	o nvidia-texture-tools-2.1.1
 	o nxtvepg-2.8.1
 	o oath-toolkit-2.6.5
-	o objc-3.3.1
+	o objc-3.3.24
 	o ocaml-4.12.0
 	o ocaml-astring-0.8.5
 	o ocaml-async-0.14.0
@@ -1260,6 +1270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocrad-0.25
 	o octave-6.1.0
 	o odbc-postgresql-9.06.0500
+	o offlineimap-7.3.3
 	o olvwm-4.5
 	o onscripter-20200722
 	o oo2c-2.1.7
@@ -1277,7 +1288,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmsx-0.16.0
 	o openrct2-0.3.3
 	o openslp-2.0.0
-	o opensmtpd-6.0.0
+	o opensmtpd-6.8.0p2
 	o openssh-8.6
 	o openvas-libraries-8.0.8
 	o opera-26
@@ -1287,6 +1298,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ortp-0.25.0
 	o osm-gps-map-1.2.0
 	o oto-0.5
+	o owl-lisp-0.1.16
 	o p0f-3.08b
 	o p5-App-CLI-0.52
 	o p5-App-Cmd-0.333
@@ -1322,6 +1334,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Devel-PatchPerl-2.08
 	o p5-Dist-Zilla-6.017
 	o p5-Dumbbench-0.501
+	o p5-Email-Folder-2.0
+	o p5-Email-FolderType-1.043
+	o p5-Email-MIME-ContentType-1.026
+	o p5-Email-Sender-1.300035
 	o p5-ExtUtils-F77-1.26
 	o p5-File-Path-Tiny-1.0
 	o p5-File-Touch-0.12
@@ -1349,7 +1365,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Log-Log4perl-1.54
 	o p5-Log-Report-1.32
 	o p5-Log-Report-Optional-1.07
+	o p5-MIME-Types-2.19
 	o p5-Mac-SystemDirectory-0.13
+	o p5-Mail-AuthenticationResults-2.20210112
+	o p5-Mail-Ezmlm-0.16
+	o p5-Mail-IMAPClient-3.43
+	o p5-Mail-Message-3.010
 	o p5-Make-2.011
 	o p5-MetaCPAN-Client-2.029000
 	o p5-Module-Path-0.33
@@ -1387,6 +1408,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Tree-Simple-VisitorFactory-0.16
 	o p5-Type-Tiny-XS-0.022
 	o p5-UNIVERSAL-require-0.19
+	o p5-User-Identity-1.00
 	o p5-XString-0.005
 	o p5-perl-ldap-0.68
 	o packagekit-0.5.3
@@ -1396,9 +1418,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o papirus-folders-1.8.0
 	o paprefs-1.1
 	o pari-2.13.1
-	o parrot-7.11.0
+	o parrot-8.1.0
 	o pcc-1.1.0
-	o pcc-current-20160305
+	o pcc-current-20210421
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
 	o pdp11-aout-binutils-2.36.1
@@ -1459,6 +1481,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o postgres_exporter-0.9.0
 	o postgresql-pgroonga-2.2.9
 	o postgresql-pljava-1.6.2
+	o postgrey-1.37
 	o pound-3.0d
 	o povray-3.7.0.0
 	o powerpc-none-elf-binutils-2.36.1
@@ -1478,6 +1501,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-0.10.1
+	o pst-utils-0.6.76
 	o pt2-clone-1.29
 	o ptex-2.3.2
 	o ptlib-2.16.2
@@ -1516,6 +1540,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-polib-1.1.1
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
+	o py-py3c-1.3.1
 	o py-pydicom-2.1.2
 	o py-pyvex-9.0.6852
 	o py-quixote-3.3
@@ -1544,6 +1569,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qt6-6.0
 	o qtcreator-4.14
 	o quazip-1.1
+	o quickjs-20210327
 	o racket-7.1
 	o radare2-cutter-2.0.1
 	o radiance-4R1
@@ -1598,9 +1624,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sameboy-0.14.3
 	o sarg-2.4.0
 	o sasm-3.12.1
+	o scala-2.13.5
 	o scew-1.1.7
 	o scilab-5.5.2
-	o scm-5f2
+	o scm-5f3
 	o scribus-qt4-1.4.7
 	o scripts-1.0.1
 	o scrollz-2.3
@@ -1610,7 +1637,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o secpanel-0.6.1
 	o send-pr-4.0
 	o sendfile-20010424
-	o sendmail-8.16.0.16
+	o sendmail-8.16.1
 	o sendmail-cidrexpand-8.16.0.16
 	o sendmail-qtool-8.16.0.16
 	o ser-0.9.6
@@ -1620,6 +1647,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o shc-3.8.9b
 	o shotwell-0.30.10
 	o showfont-1.0.4 [wip]
+	o sieve-connect-0.90
+	o sigscheme-0.9.1
 	o silc-1.1.11
 	o silc-client-1.1.11
 	o silc-server-1.1.19
@@ -1632,6 +1661,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o smokeping-2.6.11
 	o smproxy-1.0.3
 	o snd-21.3
+	o snobol-2.1.5
 	o softhsm-2.0.0
 	o sparse-0.6.3
 	o sparsehash-2.0.4
@@ -1654,7 +1684,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o streamtuner-2.2.0
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o swapd-1.0.5
+	o swi-prolog-8.3.22
+	o swi-prolog-jpl-8.3.22
+	o swi-prolog-lite-8.3.22
+	o swi-prolog-packages-8.3.22
 	o swift-4.0.2
+	o sympa-6.2.60
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
