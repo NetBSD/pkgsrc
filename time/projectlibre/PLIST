@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:30:01 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/27 14:14:26 ryoon Exp $
 bin/projectlibre
-share/projectlibre/lib/openproj-contrib.jar
-share/projectlibre/lib/openproj-reports.jar
-share/projectlibre/lib/openproj-script.jar
+share/projectlibre/lib/projectlibre-contrib.jar
+share/projectlibre/lib/projectlibre-reports.jar
+share/projectlibre/lib/projectlibre-script.jar
 share/projectlibre/license/index.html
 share/projectlibre/license/index_html_0.gif
 share/projectlibre/license/license.rtf
+share/projectlibre/license/license.txt
 share/projectlibre/license/third-party/Apache-LICENSE-2.0.txt
 share/projectlibre/license/third-party/CDDL.txt
 share/projectlibre/license/third-party/Jasper-LGPL.txt
