@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/27 22:58:40 thor Exp $
+include/metslib-0.5/metslib/abstract-search.hh
+include/metslib-0.5/metslib/local-search.hh
+include/metslib-0.5/metslib/mets.hh
+include/metslib-0.5/metslib/metslib_ah.hh
+include/metslib-0.5/metslib/metslib_config.hh
+include/metslib-0.5/metslib/model.hh
+include/metslib-0.5/metslib/observer.hh
+include/metslib-0.5/metslib/simulated-annealing.hh
+include/metslib-0.5/metslib/tabu-search.hh
+include/metslib-0.5/metslib/termination-criteria.hh
+lib/pkgconfig/metslib.pc
