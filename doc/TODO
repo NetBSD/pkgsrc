@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20579 2021/04/27 17:15:58 wiz Exp $
+$NetBSD: TODO,v 1.20580 2021/04/27 17:18:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1841,7 +1841,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-YAML-PP-0.027
 	o p5-ack-3.5.0
 	o p5-libapreq2-2.16
-	o p5-libwww-6.53
 	o p5-marisa-0.2.6
 	o p5-perl-ldap-0.68
 	o packagekit-0.5.3
