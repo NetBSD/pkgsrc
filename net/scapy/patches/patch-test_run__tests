@@ -1,0 +1,15 @@
+$NetBSD: patch-test_run__tests,v 1.1 2021/04/27 21:53:11 gutteridge Exp $
+
+Ensure command line arguments are passed to the test script.
+
+--- test/run_tests.orig	2021-04-18 18:36:15.000000000 +0000
++++ test/run_tests
+@@ -27,6 +27,8 @@ then
+     esac
+   done
+   PYTHON=${PYTHON:-python3}
++else
++  ARGS="$@"
+ fi
+ $PYTHON --version > /dev/null 2>&1
+ if [ ! $? -eq 0 ]
