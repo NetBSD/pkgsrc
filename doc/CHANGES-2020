@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6870 2020/12/31 22:40:28 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6871 2021/04/27 10:11:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7005,6 +7005,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.4 [scole 2020-08-17]
 	Updated www/stagit to 0.9.4 [fcambus 2020-08-17]
 	Updated net/stagit-gopher to 0.9.4 [leot 2020-08-17]
+	Added security/py-yubikey-manager to 3.1.1 [riastradh 2020-08-17]
 	Updated www/py-wagtail to 2.10 [joerg 2020-08-18]
 	Updated x11/modeline to 20060729 [tnn 2020-08-18]
 	Updated fonts/go-ttf to 2.008 [tnn 2020-08-18]
