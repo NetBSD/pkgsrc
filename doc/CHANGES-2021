@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2418 2021/04/27 15:17:03 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2419 2021/04/27 16:19:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/projectlibre to 1.9.3 [ryoon 2021-04-27]
 	Updated emulators/cannonball to 0.34 [fox 2021-04-27]
 	Updated math/flann-lib to 1.9.1 [thor 2021-04-27]
+	Updated textproc/p5-Alien-Libxml2 to 0.17 [wiz 2021-04-27]
