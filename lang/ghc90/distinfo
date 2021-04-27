@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/04/26 07:41:21 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/04/27 00:48:17 pho Exp $
 
 SHA1 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 3ff01d768393b3866e7a7543f9f55646aaffce7a
 RMD160 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 39bf10b13054a6316c8477609fb98abe4277fa6c
@@ -8,6 +8,10 @@ SHA1 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 4acbac13308bf08af6711d7e5c23
 RMD160 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = cbd60204d7bfdf3bbc26a0f8c78683560731e070
 SHA512 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = f243d2a091dbaa670ecaac913266e428164064e5c73a2d4e96b603f16af94f3c4af4358e01c04d492de8ddd8c4b6d25ebe8b62b929b6191cd87f0f1d13873fde
 Size (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 48912780 bytes
+SHA1 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = ce024f52886ea3c5af0c51aebfc9824744ee0a14
+RMD160 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = f284af547d6a2e6f31ae78d429d2e093b7e6f2da
+SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 01b196eca0a23b64687cb795601ca02a409ea0a1b2db48f5b9ab90a95a1db05a254ac92db43726f15382f4cc9e54052685959467a2925fb67ebe5f68570c1eca
+Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49644112 bytes
 SHA1 (ghc-9.0.1-src.tar.xz) = adaec1c05cd03d6af02716d59ab5f597434b700b
 RMD160 (ghc-9.0.1-src.tar.xz) = 2bed45072ccb838418ae0405f5cfe64a237315e3
 SHA512 (ghc-9.0.1-src.tar.xz) = bee7950a5118be8d8cefe0db5070139a5a93ca21c5bc6f8bf453429831f0c44f5e0fb5ee569865d6b8b92749044ee4123be06920928ac7a1ec9cffa9404a3e53
