@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2021/04/24 08:27:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.235 2021/04/27 09:10:07 pho Exp $
 
 DISTNAME=	rustc-1.50.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -462,6 +462,12 @@ fix-darwin-install-name:
 	    ${DESTDIR}${PREFIX}/lib/libchalk_derive-*.dylib; do \
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-*-*)
+# MacOS X 10.7 is the oldest supported version. See
+# ${WRKSRC}/src/bootstrap/lib.rs
+MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 .endif
 
 GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
