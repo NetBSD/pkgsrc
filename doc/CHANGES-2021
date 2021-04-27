@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2402 2021/04/27 08:43:02 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2403 2021/04/27 09:01:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3747,3 +3747,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed math/R-geoRglm [wiz 2021-04-27]
 	Removed math/R-wle [wiz 2021-04-27]
 	Removed net/p5-Net-Google [wiz 2021-04-27]
+	Updated misc/p5-Locale-libintl to 1.32 [wiz 2021-04-27]
