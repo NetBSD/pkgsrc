@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20571 2021/04/27 16:19:29 wiz Exp $
+$NetBSD: TODO,v 1.20572 2021/04/27 16:21:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1619,7 +1619,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-DBD-Oracle-1.80
 	o p5-DBD-Sybase-1.16
 	o p5-DBIx-SearchBuilder-1.69
-	o p5-Data-HexDump-0.04
 	o p5-Data-MessagePack-1.05
 	o p5-Data-ObjectDriver-0.21
 	o p5-Data-Peek-0.50
