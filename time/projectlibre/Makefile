@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/01/01 18:16:39 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/04/27 14:14:26 ryoon Exp $
 
-DISTNAME=	projectlibre-1.6.1
+DISTNAME=	projectlibre-1.9.3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=projectlibre/}
 
@@ -8,10 +8,11 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.projectlibre.org/
 COMMENT=	Project management software
 
+USE_TOOLS+=	bash:run
 USE_JAVA=	run
 USE_JAVA2=	7
 
-REPLACE_SH=	projectlibre.sh
+REPLACE_BASH=	projectlibre.sh
 
 SUBST_CLASSES+=			set-java set-base
 
@@ -23,7 +24,7 @@ SUBST_SED.set-java=		-e '/^JAVA_EXE=/s,java,${PKG_JAVA_HOME}/bin/java,'
 SUBST_STAGE.set-base=		post-configure
 SUBST_MESSAGE.set-base=		Setting package base path.
 SUBST_FILES.set-base=		projectlibre.sh
-SUBST_SED.set-base=		-e '/^OPENPROJ_HOME0=/s,^.*$$,OPENPROJ_HOME0=${PREFIX}/share/${PKGBASE},'
+SUBST_SED.set-base=		-e '/^PROJECTLIBRE_HOME0=/s,^.*$$,PROJECTLIBRE_HOME0=${PREFIX}/share/${PKGBASE},'
 
 NO_BUILD=	yes
 
