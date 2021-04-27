@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:17:57 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/04/27 12:08:24 wiz Exp $
 
-SHA1 (Digest-HMAC-1.03.tar.gz) = b3f931032a9a8d9ba42d1c5d4684b06e60e183c7
-RMD160 (Digest-HMAC-1.03.tar.gz) = 76f10c0a4497d1a8c0faf685ed0dd7e3f86e818a
-SHA512 (Digest-HMAC-1.03.tar.gz) = 9863547f8bccdc08e0e3d565b9f0fc3c64cbcc366d92692715a9594e3c02474f7927cb833b5aa0183e7bb757b0ad4d74ea52e481480527a5b1dbcf560b4e4b5b
-Size (Digest-HMAC-1.03.tar.gz) = 7251 bytes
+SHA1 (Digest-HMAC-1.04.tar.gz) = 034de6f4499cede877586cdbc8defd42646c2d65
+RMD160 (Digest-HMAC-1.04.tar.gz) = f6afeaa4abddec8802f74c7415d0f18c0e2e802b
+SHA512 (Digest-HMAC-1.04.tar.gz) = d30b62e60bfa9f6c0f0c058e190938f13a08a70a816771a0641226c24045cb6dbd622756f1f88593fd3690442a45636bdcaf35457e9dfea6de5f8a342a538a6d
+Size (Digest-HMAC-1.04.tar.gz) = 14279 bytes
