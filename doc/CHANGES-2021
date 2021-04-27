@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2405 2021/04/27 09:04:50 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2406 2021/04/27 10:43:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/p5-Locale-libintl to 1.32 [wiz 2021-04-27]
 	Updated net/p5-Net to 3.13 [wiz 2021-04-27]
 	Updated net/p5-Net-DNS to 1.30 [wiz 2021-04-27]
+	Added security/p5-Crypt-PBKDF2 version 0.161520 [wiz 2021-04-27]
