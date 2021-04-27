@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2021/04/27 08:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.496 2021/04/27 08:23:15 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -114,7 +114,6 @@ SUBDIR+=	R-tidyr
 SUBDIR+=	R-units
 SUBDIR+=	R-urca
 SUBDIR+=	R-vctrs
-SUBDIR+=	R-wle
 SUBDIR+=	R-xtable
 SUBDIR+=	R-xts
 SUBDIR+=	R-zeallot
