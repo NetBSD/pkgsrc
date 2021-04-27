@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2431 2021/04/27 17:20:03 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2432 2021/04/27 20:53:30 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3918,3 +3918,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-URI to 5.09 [wiz 2021-04-27]
 	Updated www/p5-libwww to 6.53 [wiz 2021-04-27]
 	Updated www/p5-Mojolicious to 9.17 [wiz 2021-04-27]
+	Updated devel/php-composer to 2.0.13 [tpaul 2021-04-27]
