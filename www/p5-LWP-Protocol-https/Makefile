@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/09/07 20:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/27 17:13:51 wiz Exp $
 
-DISTNAME=	LWP-Protocol-https-6.09
+DISTNAME=	LWP-Protocol-https-6.10
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
@@ -14,8 +14,9 @@ CONFLICTS+=	p5-libwww<6.02
 
 DEPENDS+=	p5-IO-Socket-SSL>=1.38:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Mozilla-CA>=20110101:../../security/p5-Mozilla-CA
+TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
 # needed for tests (as LWP::UserAgent), but p5-libwww depends on this package
-#DEPENDS+=	p5-libwww>=6.06:../../www/p5-libwww
+#TEST_DEPENDS+=	p5-libwww>=6.06:../../www/p5-libwww
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/LWP/Protocol/https/.packlist
