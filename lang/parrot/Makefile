@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2021/04/21 11:40:27 adam Exp $
-#
+# $NetBSD: Makefile,v 1.105 2021/04/27 07:49:45 wiz Exp $
 
 DISTNAME=		parrot-${PARROT_VERSION}
 PKGREVISION=		25
@@ -7,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${PARROT_RTYPE}/${PARROT_VERSION}/
 
 MAINTAINER=		he@NetBSD.org
-HOMEPAGE=		http://www.parrotcode.org/
+HOMEPAGE=		http://www.parrot.org/
 COMMENT=		Virtual machine made to run Perl 6 and other languages
 LICENSE=		artistic-2.0
 
