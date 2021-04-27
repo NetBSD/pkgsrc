@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/04/27 12:10:12 wiz Exp $
 
-DISTNAME=	File-Remove-1.58
+DISTNAME=	File-Remove-1.60
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	perl5 sysutils
+CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
