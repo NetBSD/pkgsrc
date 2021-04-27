@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/06/07 14:56:57 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2021/04/27 12:07:25 wiz Exp $
 
-SHA1 (Crypt-Twofish-2.17.tar.gz) = f2659d7b9e7d7daadb3b2414174bd6ec8ac68eda
-RMD160 (Crypt-Twofish-2.17.tar.gz) = e170199a685f68b3761e9af274790ca422c9f015
-SHA512 (Crypt-Twofish-2.17.tar.gz) = c61d07f2fd3d88bff1e41eaa3008c6717fc21e9acf2e45d45c3a39b15500f71b3bc425a3df988bbbd5b6865085866595240f1574424aa70448d6c8b3f38ee2e2
-Size (Crypt-Twofish-2.17.tar.gz) = 13851 bytes
-SHA1 (patch-Makefile.PL) = 83e486dfc9464f828454fb6b2024bb2b89b74773
+SHA1 (Crypt-Twofish-2.18.tar.gz) = cf97ed3d8ece671f51d3403e926e92aea4c51c25
+RMD160 (Crypt-Twofish-2.18.tar.gz) = 1c7d5b18ea59142be101eda4992a9bd90f972fd9
+SHA512 (Crypt-Twofish-2.18.tar.gz) = e900b066e73237dbad8a9882c28509fcd8516c16478cdc2703883a1801d9ec387c4e43c38f6e50024c47f9fb2812c44f6096f2a2ce298f9d73303a84833b61a2
+Size (Crypt-Twofish-2.18.tar.gz) = 13904 bytes
