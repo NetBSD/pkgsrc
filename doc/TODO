@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20555 2021/04/27 08:56:00 wiz Exp $
+$NetBSD: TODO,v 1.20556 2021/04/27 09:01:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1515,7 +1515,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-JSON-MaybeXS-1.004003
 	o p5-LEOCHARRE-Dir-1.09
 	o p5-Locale-Codes-3.67
-	o p5-Locale-libintl-1.32
 	o p5-Log-Agent-1.005
 	o p5-Log-Any-1.709
 	o p5-Log-Log4perl-1.54
