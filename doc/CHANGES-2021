@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2398 2021/04/27 05:03:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2399 2021/04/27 05:10:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3742,3 +3742,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-pylint-django to 2.4.4 [adam 2021-04-27]
 	Updated textproc/py-pyphen to 0.10.0 [adam 2021-04-27]
 	Updated print/py-reportlab to 3.5.67 [adam 2021-04-27]
+	Removed print/py-weasyprint0 successor print/py-weasyprint [adam 2021-04-27]
+	Updated print/py-weasyprint to 52.5 [adam 2021-04-27]
