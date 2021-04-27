@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1399 2021/04/24 17:54:25 pho Exp $
+# $NetBSD: Makefile,v 1.1400 2021/04/27 08:43:02 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -536,7 +536,6 @@ SUBDIR+=	p5-Net-Frame-Layer-IPv6
 SUBDIR+=	p5-Net-Frame-Simple
 SUBDIR+=	p5-Net-GitHub
 SUBDIR+=	p5-Net-Gnats
-SUBDIR+=	p5-Net-Google
 SUBDIR+=	p5-Net-Google-AuthSub
 SUBDIR+=	p5-Net-Google-Code
 SUBDIR+=	p5-Net-INET6Glue
