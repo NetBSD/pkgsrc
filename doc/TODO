@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20582 2021/04/27 21:53:23 gutteridge Exp $
+$NetBSD: TODO,v 1.20583 2021/04/28 07:36:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1668,7 +1668,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Business-ISMN-1.202
 	o p5-Business-UPS-2.02
 	o p5-CDB_File-1.05
-	o p5-CGI-4.61
 	o p5-CPAN-FindDependencies-3.05
 	o p5-CPAN-Perl-Releases-5.20210320
 	o p5-CPANPLUS-0.9910
@@ -1687,7 +1686,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Crypt-OpenSSL-DSA-0.20
 	o p5-Crypt-PasswdMD5-1.41
 	o p5-Crypt-RIPEMD160-0.08
-	o p5-CryptX-0.071
 	o p5-Curses-1.37
 	o p5-DBD-DB2-1.86
 	o p5-DBD-Mock-1.59
