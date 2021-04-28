@@ -1,0 +1,2 @@
+bin/pisa @PREFIX@/bin/pisa-@PYVERSSUFFIX@
+bin/xhtml2pdf @PREFIX@/bin/xhtml2pdf-@PYVERSSUFFIX@
