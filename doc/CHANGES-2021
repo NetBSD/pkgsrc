@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2450 2021/04/28 23:12:31 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2451 2021/04/28 23:48:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3943,3 +3943,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.32.2 [js 2021-04-28]
 	Updated x11/gtk3 to 3.24.29 [leot 2021-04-28]
 	Updated wm/enlightenment16 to 1.0.23 [gutteridge 2021-04-28]
+	Updated geography/p5-Geo-ShapeFile to 3.01 [wen 2021-04-28]
