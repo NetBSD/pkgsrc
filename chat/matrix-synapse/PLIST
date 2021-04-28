@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/03/14 21:21:13 js Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/04/28 21:25:57 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -259,6 +259,9 @@ ${PYSITELIB}/synapse/events/__init__.pyo
 ${PYSITELIB}/synapse/events/builder.py
 ${PYSITELIB}/synapse/events/builder.pyc
 ${PYSITELIB}/synapse/events/builder.pyo
+${PYSITELIB}/synapse/events/presence_router.py
+${PYSITELIB}/synapse/events/presence_router.pyc
+${PYSITELIB}/synapse/events/presence_router.pyo
 ${PYSITELIB}/synapse/events/snapshot.py
 ${PYSITELIB}/synapse/events/snapshot.pyc
 ${PYSITELIB}/synapse/events/snapshot.pyo
@@ -433,6 +436,9 @@ ${PYSITELIB}/synapse/handlers/search.pyo
 ${PYSITELIB}/synapse/handlers/set_password.py
 ${PYSITELIB}/synapse/handlers/set_password.pyc
 ${PYSITELIB}/synapse/handlers/set_password.pyo
+${PYSITELIB}/synapse/handlers/space_summary.py
+${PYSITELIB}/synapse/handlers/space_summary.pyc
+${PYSITELIB}/synapse/handlers/space_summary.pyo
 ${PYSITELIB}/synapse/handlers/sso.py
 ${PYSITELIB}/synapse/handlers/sso.pyc
 ${PYSITELIB}/synapse/handlers/sso.pyo
@@ -1486,6 +1492,8 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/07shard_account_data
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/08delete_pushers_for_deactivated_accounts.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/08delete_stale_pushers.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/09rejected_events_metadata.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/10delete_purged_chain_cover.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/11drop_thumbnail_constraint.sql.postgres
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
@@ -1692,6 +1700,9 @@ ${PYSITELIB}/synapse/util/logcontext.pyo
 ${PYSITELIB}/synapse/util/logformatter.py
 ${PYSITELIB}/synapse/util/logformatter.pyc
 ${PYSITELIB}/synapse/util/logformatter.pyo
+${PYSITELIB}/synapse/util/macaroons.py
+${PYSITELIB}/synapse/util/macaroons.pyc
+${PYSITELIB}/synapse/util/macaroons.pyo
 ${PYSITELIB}/synapse/util/manhole.py
 ${PYSITELIB}/synapse/util/manhole.pyc
 ${PYSITELIB}/synapse/util/manhole.pyo
