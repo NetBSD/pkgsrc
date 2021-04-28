@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2020/05/27 19:37:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2021/04/28 09:18:55 wiz Exp $
 
-DISTNAME=	pgpool-II-3.6.5
+DISTNAME=	pgpool-II-4.2.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/pgpool-II/pgpool2/}
-PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
+MASTER_SITES=	https://www.pgpool.net/mediawiki/images/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pgpool.net/mediawiki/
+HOMEPAGE=	https://www.pgpool.net/mediawiki/
 COMMENT=	Middleware between PostgreSQL servers and a PostgreSQL database client
 LICENSE=	modified-bsd
 
@@ -49,7 +47,11 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/sample/pgpool.conf.sample src/include/pool.h
 SUBST_VARS.path=	PGPOOL_LOGDIR PGPOOL_PIDDIR
 
-REPLACE_BASH+=		src/tools/pgpool_setup src/tools/watchdog_setup
+SUBST_CLASSES+=		bash
+SUBST_MESSAGE.bash=	Fixing bash path
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash=	src/test/pgpool_setup.in src/test/watchdog_setup.in
+SUBST_SED.bash=		-e 's|/usr/bin/env bash|${PREFIX}/bin/bash|'
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

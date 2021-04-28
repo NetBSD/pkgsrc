@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.3 2017/08/17 07:46:05 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2021/04/28 09:18:55 wiz Exp $
 
-SHA1 (pgpool-II-3.6.5.tar.gz) = 573e5f80691330632ed23648a24c502221175a31
-RMD160 (pgpool-II-3.6.5.tar.gz) = 83b2e8f86bcb7b3fceb57ed6ef485181b43325f9
-SHA512 (pgpool-II-3.6.5.tar.gz) = 12247730f202859c76b0a11ccc485de786e53df7b8e08ffd76d7653c25633d79387f027e7c9d804bf19cd89b9db047b7ca0cf1cf5e914ee74c6efc0b6660eb1d
-Size (pgpool-II-3.6.5.tar.gz) = 2651330 bytes
-SHA1 (patch-configure) = ed04280cf2c02f5491aa20d3478f026a92885f19
-SHA1 (patch-src_include_pool.h) = 74409384d735695d44466468833088959753d9d2
-SHA1 (patch-src_sample_pgpool.conf.sample) = 43f9e481ba3630984c165c609d2aac3d4bbf7c18
-SHA1 (patch-src_watchdog_wd__escalation.c) = 63ac5ea3f8853eb953707e79f351ae1eea3a8b25
+SHA1 (pgpool-II-4.2.2.tar.gz) = 87f917320f4cf790a44a235e2a8854b6fa79d7b3
+RMD160 (pgpool-II-4.2.2.tar.gz) = cc87f747fdf74b5e6628fabab808a474766f8288
+SHA512 (pgpool-II-4.2.2.tar.gz) = a147c810cc691fb27b823a813cbd2eaad66822c7c9f5c0f829cc70d4ac65911bbe827640f2dbd8060913276ed97340b52167e4332e9cdf013b6c9bc144c7b5d8
+Size (pgpool-II-4.2.2.tar.gz) = 4734840 bytes
+SHA1 (patch-configure) = 134f5e55499f762e84e458f59132b0e3d5ce1019
+SHA1 (patch-src_auth_pool__hba.c) = a15a9da84419e44fb9d6dc8eb7b8d2769ecaed4a
+SHA1 (patch-src_include_pool.h) = eae2f78a996e3204d75d23378ad6e95333282926
+SHA1 (patch-src_include_utils_fe__ports.h) = 7aea07d78cf2295844286935a330a90e0e411825
+SHA1 (patch-src_main_pgpool__main.c) = 1e680d9143bc745618ecdc61cb4791a90719a5ff
+SHA1 (patch-src_sample_pgpool.conf.sample) = 477cac9cb29a4b6aeb6fd69df80302c69c8a4a03
+SHA1 (patch-src_tools_pgproto_read.c) = a533898b74eb2c43a8aa24285f8cdd3d1e9ac2e2
+SHA1 (patch-src_watchdog_wd__escalation.c) = ef3e4c8715003d9c1031c923fc55179d7c53631a
