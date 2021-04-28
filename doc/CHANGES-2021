@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2436 2021/04/28 07:36:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2437 2021/04/28 08:33:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3923,3 +3923,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/metslib to 0.5.3 [thor 2021-04-27]
 	Removed databases/p5-DBD-Google [wiz 2021-04-28]
 	Updated security/p5-CryptX to 0.071 [wiz 2021-04-28]
+	Updated audio/spotify-qt to 3.6 [pin 2021-04-28]
