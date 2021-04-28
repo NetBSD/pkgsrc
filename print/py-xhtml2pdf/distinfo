@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/28 09:56:15 adam Exp $
+
+SHA1 (xhtml2pdf-0.2.5.tar.gz) = 4178dd9831b003cd74a246054011f3b8ead768f8
+RMD160 (xhtml2pdf-0.2.5.tar.gz) = 1314366bcddb31344db53b22b1fc1464da9bc376
+SHA512 (xhtml2pdf-0.2.5.tar.gz) = 370a8772ed85e8fddd7bcdd7f116310042294b9cb541b227ff1e1864ad52b9e3af034332fccc86a57260b1ca82bf34dc3327c273cc3bfa05ba2e46708619305c
+Size (xhtml2pdf-0.2.5.tar.gz) = 100124 bytes
