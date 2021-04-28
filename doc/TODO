@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20583 2021/04/28 07:36:48 wiz Exp $
+$NetBSD: TODO,v 1.20584 2021/04/28 09:19:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1866,7 +1866,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgbouncer-1.15.0
 	o pgbuildfarm-12
 	o pgpdump-0.33
-	o pgpool2-4.2.2
 	o phoronix-9.2.1
 	o phoronix-test-suite-10.2.2
 	o php-basercms-4.4.2
