@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2021/04/28 09:52:17 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/arabic_reshaper/__init__.py
+${PYSITELIB}/arabic_reshaper/__init__.pyc
+${PYSITELIB}/arabic_reshaper/__init__.pyo
+${PYSITELIB}/arabic_reshaper/__version__.py
+${PYSITELIB}/arabic_reshaper/__version__.pyc
+${PYSITELIB}/arabic_reshaper/__version__.pyo
+${PYSITELIB}/arabic_reshaper/arabic_reshaper.py
+${PYSITELIB}/arabic_reshaper/arabic_reshaper.pyc
+${PYSITELIB}/arabic_reshaper/arabic_reshaper.pyo
+${PYSITELIB}/arabic_reshaper/letters.py
+${PYSITELIB}/arabic_reshaper/letters.pyc
+${PYSITELIB}/arabic_reshaper/letters.pyo
+${PYSITELIB}/arabic_reshaper/ligatures.py
+${PYSITELIB}/arabic_reshaper/ligatures.pyc
+${PYSITELIB}/arabic_reshaper/ligatures.pyo
+${PYSITELIB}/arabic_reshaper/reshaper_config.py
+${PYSITELIB}/arabic_reshaper/reshaper_config.pyc
+${PYSITELIB}/arabic_reshaper/reshaper_config.pyo
