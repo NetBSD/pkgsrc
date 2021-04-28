@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/04/16 06:02:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/04/28 12:44:52 adam Exp $
 
-SHA1 (sphinx-autoapi-1.8.0.tar.gz) = f1d05e0a944de011f32e647f45be2900ef47d238
-RMD160 (sphinx-autoapi-1.8.0.tar.gz) = 43796cc280a0e719a95fa96ca8eaa67b1cdc05b9
-SHA512 (sphinx-autoapi-1.8.0.tar.gz) = 9a78d67bd926f5aeb64dd6005f5df31dfb38ef360578b473582a5753feba1baecb88d5653b1f1b78476a2ef7b9fdb3d3be174059689ee698039929bac5202af0
-Size (sphinx-autoapi-1.8.0.tar.gz) = 42150679 bytes
+SHA1 (sphinx-autoapi-1.8.1.tar.gz) = 0c4711bc25cb54574622ae7e5ce4ec4bc4041a76
+RMD160 (sphinx-autoapi-1.8.1.tar.gz) = 638f94126a0490659bf7b051a8d7a0875776e333
+SHA512 (sphinx-autoapi-1.8.1.tar.gz) = 7170a016cf38b5f9aa259f489b3d26e22597ba192d21c553af1e11f4ecbfd9a56855f531d5caba2b5dfc1ca781fd9ee8f1505b0b06e84c827df2cbc9f770745f
+Size (sphinx-autoapi-1.8.1.tar.gz) = 42151619 bytes
