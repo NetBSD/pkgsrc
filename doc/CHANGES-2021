@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2442 2021/04/28 09:58:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2443 2021/04/28 10:27:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3933,3 +3933,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added converters/py-bidi version 0.4.2 [adam 2021-04-28]
 	Added print/py-xhtml2pdf version 0.2.5 [adam 2021-04-28]
 	Updated net/py-responses to 0.13.3 [adam 2021-04-28]
+	Updated sysutils/ansible to 3.3.0 [adam 2021-04-28]
+	Updated devel/py-requests-mock to 1.9.0 [adam 2021-04-28]
