@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2446 2021/04/28 15:02:47 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2447 2021/04/28 16:24:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx-autoapi to 1.8.1 [adam 2021-04-28]
 	Updated textproc/py-xlsxwriter to 1.4.0 [adam 2021-04-28]
 	Updated devel/p5-FindBin-libs to 2.21.0 [schmonz 2021-04-28]
+	Updated ham/chirp to 20210428 [gdt 2021-04-28]
