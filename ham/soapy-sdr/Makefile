@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/01 08:17:43 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/04/28 09:11:16 nia Exp $
 
 DISTNAME=	soapy-sdr-0.7.2
 PKGREVISION=	1
@@ -15,6 +15,9 @@ LICENSE=	boost-license
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
+
+# Do not use /lib64
+CMAKE_ARGS+=	-DLIB_SUFFIX=""
 
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
