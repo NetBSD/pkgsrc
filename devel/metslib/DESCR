@@ -1,14 +1,3 @@
-TODO: Adjust the following lines from README
-
-METSlib
-=======
-
-METSlib: a metaheuristic framework.
------------------------------------
-
-This project is under development and, althought useful, must be
-reviewed to be ready for anyone to use.
-
 METSlib is an OO (Object Oriented) metaheuristics optimization
 framework in C++ designed to make easy implementing or adapting
 models. The model is modular: all the implemented search algorithms
@@ -16,8 +5,3 @@ can be applied to the same model.
 
 Once the model is implemented one can test some Tabu Search Strategies
 or Simulated Annealing or other local search based search strategies.
-
-METSlib is Open Source and is covered by the GNU GPL license or, at
-your option, by the Common Public License 1.0. Commercial licensing
-or custom development can be considered by the author upon request.
-...
