@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2021/04/27 13:55:25 pho Exp $
+# $NetBSD: Makefile,v 1.18 2021/04/28 15:39:23 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-8.8.4-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -202,22 +202,6 @@ GENERATE_PLIST+= \
 # There is an unused script which don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 
-# Dynamically linked Haskell executables and libraries have rpaths to
-# dependent Haskell libraries, but the problem is that they are
-# specified with $ORIGIN, which isn't currently supported by
-# ../../mk/check/check-shlibs-elf.awk nor
-# mk/pkgformat/pkg/metadata.mk.
-#
-# This means we need to disable the entire CHECK_SHLIBS machinery
-# because otherwise the resulting binary package would contain
-# REQUIRES lines with $ORIGIN wrongly expanded by ldd(1).
-#
-# Note that arguments like "-Wl,-rpath,$ORIGIN/.." are usually dropped
-# by the "cleanup" phase of wrappers. This is not the case in GHC
-# because GHC uses @file syntax while linking objects, and our
-# wrappers does nothing about it.
-CHECK_SHLIBS_SUPPORTED=	no
-
 # ghc57207_0.s: failed to add inputs for merge: Resource temporarily unavailable
 CTF_FILES_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
 
@@ -242,7 +226,9 @@ BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compat80 adds
 # to the /usr tree can't be applied.
-ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib:${WRKDIR}/lib:${FILESDIR}
+ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib:${WRKDIR}/lib
+# XXX: ${WRKDIR}/lib is a temporary workaround for compat80 not having
+# libterminfo.so.1. See ./bootstrap.mk
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
