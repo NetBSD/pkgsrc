@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2021/04/25 16:16:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2021/04/28 11:18:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -17,7 +17,6 @@ CARGO_CRATE_DEPENDS+=	base64-0.13.0
 CARGO_CRATE_DEPENDS+=	bet-0.4.0
 CARGO_CRATE_DEPENDS+=	bincode-1.3.3
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
-CARGO_CRATE_DEPENDS+=	blake2b_simd-0.5.11
 CARGO_CRATE_DEPENDS+=	bstr-0.2.15
 CARGO_CRATE_DEPENDS+=	bytemuck-1.5.1
 CARGO_CRATE_DEPENDS+=	byteorder-1.4.3
@@ -40,7 +39,6 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.3
 CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
 CARGO_CRATE_DEPENDS+=	csv-1.1.6
-CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	csv2svg-0.1.5
 CARGO_CRATE_DEPENDS+=	custom_error-1.9.2
