@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2447 2021/04/28 16:24:31 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.2448 2021/04/28 21:26:10 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xlsxwriter to 1.4.0 [adam 2021-04-28]
 	Updated devel/p5-FindBin-libs to 2.21.0 [schmonz 2021-04-28]
 	Updated ham/chirp to 20210428 [gdt 2021-04-28]
+	Updated chat/matrix-synapse to 1.32.2 [js 2021-04-28]
