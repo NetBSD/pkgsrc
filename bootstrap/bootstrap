@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.298 2021/03/15 16:22:06 ryoon Exp $
+# $NetBSD: bootstrap,v 1.299 2021/04/28 11:14:51 maya Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -398,19 +398,6 @@ case "$bootstrap_sh" in
 	die "ERROR: The variable SH must contain an absolute path"
 	;;
 esac
-
-# On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
-# whose echo(1) is not BSD-compatible.
-# On all Debian GNU/kFreeBSD 7.0, /bin/sh is a symlink to /bin/dash, and
-# use /bin/bash. bootstrap forces /bin/bash is used.
-dash_echo_test=`$bootstrap_sh -c 'echo "\\100"'`
-if [ "$opsys" != "GNUkFreeBSD" ] && [ "$dash_echo_test" = "@" ]; then
-	{ echo "ERROR: Your shell's echo command is not BSD-compatible."
-	  echo "ERROR: Please select another shell by setting the environment"
-	  echo "ERROR: variable SH."
-	} 1>&2
-	exit 1;
-fi
 
 if [ -n "$PKG_PATH" ]; then
 	die "ERROR: Please unset PKG_PATH before running bootstrap."
@@ -1149,6 +1136,7 @@ esac
 
 # On all Debian GNU/kFreeBSD 7, /bin/sh is a symlink to /bin/dash, and
 # use /bin/bash.
+# Only needed by legacy wrappers.
 if [ "$opsys" = "GNUkFreeBSD" -a "$bootstrap_sh_set" != "set" ]; then
 	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${BOOTSTRAP_MKCONF}
