@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.172 2021/04/21 15:38:17 wiz Exp $
+# $NetBSD: sites.mk,v 1.173 2021/04/28 09:54:24 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -244,7 +244,7 @@ MASTER_SITE_GENTOO+= \
 	http://distfiles.gentoo.org/
 
 MASTER_SITE_XORG+= \
-	http://xorg.freedesktop.org/releases/individual/ \
+	https://xorg.freedesktop.org/releases/individual/ \
 	ftp://ftp.x.org/pub/individual/
 
 MASTER_SITE_FREEBSD+= \
