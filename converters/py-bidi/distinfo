@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/28 09:53:18 adam Exp $
+
+SHA1 (python-bidi-0.4.2.tar.gz) = bdf76478ddba0b0f5397208b110f9963f12c032b
+RMD160 (python-bidi-0.4.2.tar.gz) = e5d154ec19b81a687d1eed0ea00fb5ec23fef68d
+SHA512 (python-bidi-0.4.2.tar.gz) = aa837dc0d0c7c8be690ad0be677816e2204175014df491031f42c6b7d805424ed4405f0d5294596bd67ab23d5e3d701b2e5f979a2073ab43fa7a439eb0ff5552
+Size (python-bidi-0.4.2.tar.gz) = 40373 bytes
