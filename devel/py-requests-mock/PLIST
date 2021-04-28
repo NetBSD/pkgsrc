@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/17 10:30:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/04/28 10:27:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,9 +9,11 @@ ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requests_mock/__init__.py
 ${PYSITELIB}/requests_mock/__init__.pyc
+${PYSITELIB}/requests_mock/__init__.pyi
 ${PYSITELIB}/requests_mock/__init__.pyo
 ${PYSITELIB}/requests_mock/adapter.py
 ${PYSITELIB}/requests_mock/adapter.pyc
+${PYSITELIB}/requests_mock/adapter.pyi
 ${PYSITELIB}/requests_mock/adapter.pyo
 ${PYSITELIB}/requests_mock/compat.py
 ${PYSITELIB}/requests_mock/compat.pyc
@@ -27,13 +29,17 @@ ${PYSITELIB}/requests_mock/contrib/fixture.pyc
 ${PYSITELIB}/requests_mock/contrib/fixture.pyo
 ${PYSITELIB}/requests_mock/exceptions.py
 ${PYSITELIB}/requests_mock/exceptions.pyc
+${PYSITELIB}/requests_mock/exceptions.pyi
 ${PYSITELIB}/requests_mock/exceptions.pyo
 ${PYSITELIB}/requests_mock/mocker.py
 ${PYSITELIB}/requests_mock/mocker.pyc
+${PYSITELIB}/requests_mock/mocker.pyi
 ${PYSITELIB}/requests_mock/mocker.pyo
 ${PYSITELIB}/requests_mock/request.py
 ${PYSITELIB}/requests_mock/request.pyc
+${PYSITELIB}/requests_mock/request.pyi
 ${PYSITELIB}/requests_mock/request.pyo
 ${PYSITELIB}/requests_mock/response.py
 ${PYSITELIB}/requests_mock/response.pyc
+${PYSITELIB}/requests_mock/response.pyi
 ${PYSITELIB}/requests_mock/response.pyo
