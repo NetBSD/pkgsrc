@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2441 2021/04/28 09:19:06 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2442 2021/04/28 09:58:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3929,3 +3929,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-tinycss2 to 1.1.0 [adam 2021-04-28]
 	Updated textproc/py-cssselect2 to 0.4.1 [adam 2021-04-28]
 	Updated databases/pgpool2 to 4.2.2 [wiz 2021-04-28]
+	Added converters/py-arabic-reshaper version 2.1.3 [adam 2021-04-28]
+	Added converters/py-bidi version 0.4.2 [adam 2021-04-28]
+	Added print/py-xhtml2pdf version 0.2.5 [adam 2021-04-28]
+	Updated net/py-responses to 0.13.3 [adam 2021-04-28]
