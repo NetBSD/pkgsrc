@@ -1,7 +1,8 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.19 2020/05/15 10:15:49 jperkin Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.20 2021/04/28 17:32:12 tnn Exp $
 
 BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386) and
 pkg/53223.
+Fix detection of GCC>=10.
 
 --- common/autoconf/generated-configure.sh.orig	2020-04-15 02:42:06.000000000 +0000
 +++ common/autoconf/generated-configure.sh
@@ -231,7 +232,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24937,16 +24934,15 @@ $as_echo_n "checking flags for boot jdk
+@@ -24937,16 +24934,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -267,6 +268,15 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
+@@ -28046,7 +28042,7 @@ $as_echo "$as_me: The result from runnin
+     COMPILER_VERSION_STRING=`$ECHO $COMPILER_VERSION_OUTPUT | \
+         $SED -e 's/ *Copyright .*//'`
+     COMPILER_VERSION_NUMBER=`$ECHO $COMPILER_VERSION_OUTPUT | \
+-        $SED -e 's/^.* \([1-9]\.[0-9.]*\) .*$/\1/'`
++        $SED -e 's/^.* \([1-9][0-9]*\.[0-9.]*\) .*$/\1/'`
+   elif test  "x$TOOLCHAIN_TYPE" = xclang; then
+     # clang --version output typically looks like
+     #    Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 @@ -29221,7 +29217,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
@@ -285,6 +295,15 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
+@@ -29787,7 +29783,7 @@ $as_echo "$as_me: The result from runnin
+     COMPILER_VERSION_STRING=`$ECHO $COMPILER_VERSION_OUTPUT | \
+         $SED -e 's/ *Copyright .*//'`
+     COMPILER_VERSION_NUMBER=`$ECHO $COMPILER_VERSION_OUTPUT | \
+-        $SED -e 's/^.* \([1-9]\.[0-9.]*\) .*$/\1/'`
++        $SED -e 's/^.* \([1-9][0-9]*\.[0-9.]*\) .*$/\1/'`
+   elif test  "x$TOOLCHAIN_TYPE" = xclang; then
+     # clang --version output typically looks like
+     #    Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 @@ -41393,6 +41389,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
        SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
