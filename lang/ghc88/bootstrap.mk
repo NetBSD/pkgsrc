@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2021/02/16 21:13:52 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2021/04/28 15:39:23 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -54,9 +54,12 @@ DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 BOOT_VERSION:=	8.4.4
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99.*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+# XXX: emulators/compat80 appears to lack libterminfo.so.1 used by
+# this bootkit.
 DISTFILES+=	netbsd-9.0-amd64-libterminfo.tar.gz
 EXTRACT_ONLY+=	netbsd-9.0-amd64-libterminfo.tar.gz
+SITES.netbsd-9.0-amd64-libterminfo.tar.gz?=	${MASTER_SITE_LOCAL}
 .  endif
 .endif
 
