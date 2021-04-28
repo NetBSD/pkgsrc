@@ -1,10 +1,10 @@
-$NetBSD: patch-src_sample_pgpool.conf.sample,v 1.2 2017/08/17 07:46:05 fhajny Exp $
+$NetBSD: patch-src_sample_pgpool.conf.sample,v 1.3 2021/04/28 09:18:55 wiz Exp $
 
 Default pid file location.
 
---- src/sample/pgpool.conf.sample.orig	2017-07-10 08:56:18.000000000 +0000
-+++ src/sample/pgpool.conf.sample
-@@ -210,13 +210,13 @@ syslog_ident = 'pgpool'
+--- src/sample/pgpool.conf.sample.orig	2021-04-24 00:45:34.156306546 +0300
++++ src/sample/pgpool.conf.sample	2021-04-24 00:47:55.421086015 +0300
+@@ -286,13 +286,13 @@ syslog_ident = 'pgpool'
  # FILE LOCATIONS
  #------------------------------------------------------------------------------
  
@@ -15,17 +15,17 @@ Default pid file location.
                                     # location of pgpool.conf file or
                                     # as an absolute path
                                     # (change requires restart)
--logdir = '/var/log/pgpool'
+-logdir = '/tmp'
 +logdir = '@PGPOOL_LOGDIR@'
                                     # Directory of pgPool status file
                                     # (change requires restart)
  
-@@ -709,7 +709,7 @@ memqcache_cache_block_size = 1048576
- 								   # Cache block size in bytes. Mandatory if memqcache_method = 'shmem'.
- 								   # Defaults to 1MB.
+@@ -894,7 +894,7 @@ memqcache_cache_block_size = 1MB
+                                    # Cache block size in bytes. Mandatory if memqcache_method = 'shmem'.
+                                    # Defaults to 1MB.
                                     # (change requires restart)
 -memqcache_oiddir = '/var/log/pgpool/oiddir'
 +memqcache_oiddir = '@PGPOOL_LOGDIR@/oiddir'
- 				   				   # Temporary work directory to record table oids
+                                    # Temporary work directory to record table oids
                                     # (change requires restart)
- white_memqcache_table_list = ''
+ cache_safe_memqcache_table_list = ''
