@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2440 2021/04/28 08:53:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2441 2021/04/28 09:19:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/kitty to 0.20.2 [pin 2021-04-28]
 	Updated textproc/py-tinycss2 to 1.1.0 [adam 2021-04-28]
 	Updated textproc/py-cssselect2 to 0.4.1 [adam 2021-04-28]
+	Updated databases/pgpool2 to 4.2.2 [wiz 2021-04-28]
