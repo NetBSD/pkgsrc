@@ -1,0 +1,1 @@
+bin/pybidi @PREFIX@/bin/pybidi-@PYVERSSUFFIX@
