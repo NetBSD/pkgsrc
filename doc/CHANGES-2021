@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2434 2021/04/27 22:59:07 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2435 2021/04/28 06:56:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-composer to 2.0.13 [tpaul 2021-04-27]
 	Updated net/scapy to 2.4.5 [gutteridge 2021-04-27]
 	Updated devel/metslib to 0.5.3 [thor 2021-04-27]
+	Removed databases/p5-DBD-Google [wiz 2021-04-28]
