@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2439 2021/04/28 08:36:18 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2440 2021/04/28 08:53:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3926,3 +3926,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-qt to 3.6 [pin 2021-04-28]
 	Updated sysutils/xplr to 0.5.9 [pin 2021-04-28]
 	Updated x11/kitty to 0.20.2 [pin 2021-04-28]
+	Updated textproc/py-tinycss2 to 1.1.0 [adam 2021-04-28]
+	Updated textproc/py-cssselect2 to 0.4.1 [adam 2021-04-28]
