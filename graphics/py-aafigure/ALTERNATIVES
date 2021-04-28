@@ -1,1 +1,1 @@
-bin/aafigure @PREFIX@/bin/aafigure@PYVERSSUFFIX@
+bin/aafigure @PREFIX@/bin/aafigure-@PYVERSSUFFIX@
