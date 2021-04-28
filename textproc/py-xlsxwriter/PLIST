@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/24 20:27:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/04/28 12:46:20 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/xlsxwriter/exceptions.pyo
 ${PYSITELIB}/xlsxwriter/format.py
 ${PYSITELIB}/xlsxwriter/format.pyc
 ${PYSITELIB}/xlsxwriter/format.pyo
+${PYSITELIB}/xlsxwriter/metadata.py
+${PYSITELIB}/xlsxwriter/metadata.pyc
+${PYSITELIB}/xlsxwriter/metadata.pyo
 ${PYSITELIB}/xlsxwriter/packager.py
 ${PYSITELIB}/xlsxwriter/packager.pyc
 ${PYSITELIB}/xlsxwriter/packager.pyo
