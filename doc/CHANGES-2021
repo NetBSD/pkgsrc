@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2491 2021/04/29 23:39:59 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2492 2021/04/29 23:41:37 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3978,12 +3978,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/rawtherapee to 5.6nb8 [thor 2021-04-29]
 	Updated graphics/pfstools to 2.1.0nb16 [thor 2021-04-29]
 	Updated games/powder-toy to 95.0nb2 [thor 2021-04-29]
-	Updated wip/gromacs to 2019nb1 [thor 2021-04-29]
-	Updated wip/swftools to 0.9.2 [thor 2021-04-29]
-	Updated wip/xmms2 to 0.8nb4 [thor 2021-04-29]
-	Updated wip/wsjtx to 2.3.0nb1 [thor 2021-04-29]
-	Updated wip/supercollider to 3.7.2nb1 [thor 2021-04-29]
-	Updated wip/sonic-visualiser to 2.5nb1 [thor 2021-04-29]
-	Updated wip/gromacs2018 to 2018.4nb1 [thor 2021-04-29]
 	Updated ham/gnuradio-core to 3.9.1.0nb3 [thor 2021-04-29]
 	Updated ham/hackrf to 2021.03.1 [thor 2021-04-29]
