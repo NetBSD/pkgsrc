@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2455 2021/04/29 03:06:41 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2456 2021/04/29 05:09:38 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3948,3 +3948,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/p5-GIS-Distance to 0.19 [wen 2021-04-29]
 	Updated pkgtools/x11-links to 1.33 [gutteridge 2021-04-29]
 	Updated wm/marco to 1.24.2 [gutteridge 2021-04-29]
+	Updated lang/ghc88 to 8.8.4nb4 [pho 2021-04-29]
