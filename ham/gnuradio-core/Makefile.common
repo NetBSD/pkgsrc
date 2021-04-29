@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2021/04/07 16:14:07 tnn Exp $
+# $NetBSD: Makefile.common,v 1.33 2021/04/29 23:30:14 thor Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -143,7 +143,7 @@ BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.6.0
 .include	"../../graphics/cairo-gobject/buildlink3.mk"
 .include	"../../lang/python/application.mk"
 .include	"../../math/py-numpy/buildlink3.mk"
-.include	"../../math/fftwf/buildlink3.mk"
+.include	"../../math/fftw/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
 .include	"../../math/volk/buildlink3.mk"
 .include	"../../textproc/log4cpp/buildlink3.mk"
