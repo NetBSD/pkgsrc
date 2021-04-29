@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2020/04/14 19:30:46 wiz Exp $
+# $NetBSD: builtin.mk,v 1.9 2021/04/29 02:57:08 gutteridge Exp $
 
 BUILTIN_PKG:=	xorgproto
 
@@ -45,11 +45,13 @@ PRE_XORGPROTO_LIST= \
 PRE_XORGPROTO_LIST+= \
 	xproto
 
-# NetBSD-current (with modern xorgproto) has 7.0.32.
+# NetBSD-current (as of 9.99.82) has 7.0.33.
+# NetBSD-9 (with modern xorgproto) has 7.0.32.
 # NetBSD-8 has 7.0.31.
 # NetBSD-7 has 7.0.26.
 # NetBSD-6 has 7.0.22.
 BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?=	${SED} -n \
+					-e 's/Version: 7\.0\.33/2021.3/p' \
 					-e 's/Version: 7\.0\.32/2018.4/p' \
 					-e 's/Version: 7\.0\.31/2018.1/p' \
 					-e 's/Version: 7\.0\.26/2017.1/p' \
