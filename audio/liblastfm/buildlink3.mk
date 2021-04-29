@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2020/08/18 17:57:25 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2021/04/29 23:30:13 thor Exp $
 
 BUILDLINK_TREE+=	liblastfm
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.liblastfm+=	liblastfm>=0.3.3nb28
 BUILDLINK_PKGSRCDIR.liblastfm?=		../../audio/liblastfm
 
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .endif	# LIBLASTFM_BUILDLINK3_MK
