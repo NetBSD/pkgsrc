@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.17 2019/08/21 11:51:46 nia Exp $
+# $NetBSD: xorg.libdrm,v 1.18 2021/04/29 02:58:48 gutteridge Exp $
 #
 include/X11/libsync.h
 include/X11/xf86drm.h
@@ -54,6 +54,7 @@ lib/libdrm.so.3.1
 lib/libdrm.so.3.2
 lib/libdrm.so.3.3
 lib/libdrm.so.3.4
+lib/libdrm.so.3.5
 lib/libdrm.so.4.1
 lib/libdrm.so.5.0
 lib/libdrm.so.6.0
@@ -62,6 +63,7 @@ lib/libdrm_amdgpu.a
 lib/libdrm_amdgpu.so
 lib/libdrm_amdgpu.so.1
 lib/libdrm_amdgpu.so.1.0
+lib/libdrm_amdgpu.so.1.1
 lib/libdrm_intel.a
 lib/libdrm_intel.so
 lib/libdrm_intel.so.0
