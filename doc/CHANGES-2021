@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2503 2021/04/29 23:45:48 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2504 2021/04/29 23:46:01 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/gnuradio-network to 3.9.1.0nb3 [thor 2021-04-29]
 	Updated ham/gnuradio-qtgui to 3.9.1.0nb3 [thor 2021-04-29]
 	Updated ham/gnuradio-trellis to 3.9.1.0nb3 [thor 2021-04-29]
+	Updated ham/gnuradio-uhd to 3.9.1.0nb3 [thor 2021-04-29]
