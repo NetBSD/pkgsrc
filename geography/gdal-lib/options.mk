@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/03/15 21:47:43 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2021/04/29 13:06:04 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
 
@@ -26,3 +26,6 @@ CONFIGURE_ARGS+=	--with-mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
 .endif
+
+# There is no ODBC option, and hence only the "no ODBC" case.
+CONFIGURE_ARGS+=	--without-odbc
