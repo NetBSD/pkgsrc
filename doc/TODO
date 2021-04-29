@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20589 2021/04/29 08:21:14 wen Exp $
+$NetBSD: TODO,v 1.20590 2021/04/29 17:08:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -2254,7 +2254,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o telepathy-logger-0.8.2
 	o telepathy-mission-control5-5.16.6
 	o telepathy-qt-0.9.8
-	o terraform-0.15.1
+	o terraform-0.15.1 [wait for https://github.com/hashicorp/terraform/issues/25813]
 	o terraform-provider-aws-3.37.0
 	o terraform-provider-kubernetes-2.1.0
 	o terraform-provider-local-2.1.0
