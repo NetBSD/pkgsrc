@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2464 2021/04/29 08:24:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2465 2021/04/29 09:57:43 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3959,3 +3959,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-rlang to 0.4.10 [wen 2021-04-29]
 	Updated www/py-furl to 2.1.2 [adam 2021-04-29]
 	Updated www/py-hyperframe to 6.0.1 [adam 2021-04-29]
+	Updated x11/gnome-session to 40.1.1 [dan 2021-04-29]
