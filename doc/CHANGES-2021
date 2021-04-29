@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2457 2021/04/29 05:54:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2458 2021/04/29 05:56:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3950,3 +3950,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/marco to 1.24.2 [gutteridge 2021-04-29]
 	Updated lang/ghc88 to 8.8.4nb4 [pho 2021-04-29]
 	Updated net/bind911 to 9.11.31 [taca 2021-04-29]
+	Updated net/bind916 to 9.16.15 [taca 2021-04-29]
