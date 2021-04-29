@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2466 2021/04/29 11:00:33 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2467 2021/04/29 15:21:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-hyperframe to 6.0.1 [adam 2021-04-29]
 	Updated x11/gnome-session to 40.1.1 [dan 2021-04-29]
 	Updated devel/pkgconf to 1.7.4nb1 [thor 2021-04-29]
+	Updated net/samba4 to 4.14.4 [taca 2021-04-29]
