@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2020/08/18 17:57:25 leot Exp $
+# $NetBSD: Makefile,v 1.40 2021/04/29 23:30:13 thor Exp $
 #
 
 DISTNAME=	mxcl-liblastfm-0.3.3-0-gf0b3239
 PKGNAME=	liblastfm-0.3.3
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	audio net
 MASTER_SITES=	http://download.github.com/
 
@@ -40,7 +40,7 @@ pre-configure:
 .include "../../lang/ruby/replace.mk"
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../lang/ruby/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

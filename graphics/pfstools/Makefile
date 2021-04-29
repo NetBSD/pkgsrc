@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/04/21 13:24:49 adam Exp $
+# $NetBSD: Makefile,v 1.73 2021/04/29 23:30:13 thor Exp $
 
 DISTNAME=	pfstools-2.1.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 EXTRACT_SUFX=	.tgz
@@ -42,6 +42,6 @@ SUBST_SED.perl=		-e 's,@PERL_PATH@,${PERL5},g'
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
