@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/04/21 13:24:13 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/04/29 09:12:44 cirnatdan Exp $
 
 DISTNAME=	libgdata-0.16.1
 PKGREVISION=	34
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	libgdata.pc.in
 #.include "options.mk"
 CONFIGURE_ARGS+=	--disable-gnome
 
-.include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.19.7
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsoup+=	libsoup>=2.26.0
