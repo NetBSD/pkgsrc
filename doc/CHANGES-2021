@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2478 2021/04/29 23:37:17 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2479 2021/04/29 23:37:33 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/lmms to 1.2.2nb10 [thor 2021-04-29]
 	Updated audio/speex to 1.2.0nb1 [thor 2021-04-29]
 	Updated math/octave to 5.2.0nb15 [thor 2021-04-29]
+	Updated graphics/luminance-hdr to 2.6.0nb4 [thor 2021-04-29]
