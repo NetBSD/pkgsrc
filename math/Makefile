@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2021/04/27 15:16:46 thor Exp $
+# $NetBSD: Makefile,v 1.498 2021/04/29 23:31:41 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -166,7 +166,6 @@ SUBDIR+=	fftpack
 SUBDIR+=	ffts
 SUBDIR+=	fftw
 SUBDIR+=	fftw2
-SUBDIR+=	fftwf
 SUBDIR+=	fgmp
 SUBDIR+=	fityk
 SUBDIR+=	flann-lib
