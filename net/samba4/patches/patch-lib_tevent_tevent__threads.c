@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_tevent_tevent__threads.c,v 1.1 2019/09/05 12:39:56 hauke Exp $
+$NetBSD: patch-lib_tevent_tevent__threads.c,v 1.2 2021/04/29 15:21:16 taca Exp $
 
 On SunOS (OpenSolaris), pthread_mutex_init() expects a zeroed-out
 mutex data structure
-    
+
 --- lib/tevent/tevent_threads.c.orig	2019-01-15 10:07:00.000000000 +0000
 +++ lib/tevent/tevent_threads.c
 @@ -234,6 +234,7 @@ struct tevent_thread_proxy *tevent_threa
