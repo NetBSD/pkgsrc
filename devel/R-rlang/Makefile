@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/01/01 03:24:52 mef Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/29 08:16:04 wen Exp $
 
 R_PKGNAME=	rlang
-R_PKGVER=	0.4.9
+R_PKGVER=	0.4.10
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v3
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
-#EST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 
 USE_LANGUAGES=	c
 
