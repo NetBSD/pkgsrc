@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/16 13:47:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/04/29 08:22:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,3 +15,4 @@ ${PYSITELIB}/hyperframe/flags.pyo
 ${PYSITELIB}/hyperframe/frame.py
 ${PYSITELIB}/hyperframe/frame.pyc
 ${PYSITELIB}/hyperframe/frame.pyo
+${PYSITELIB}/hyperframe/py.typed
