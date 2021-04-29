@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2462 2021/04/29 07:45:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2463 2021/04/29 08:21:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3956,3 +3956,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/drupal8 to 8.9.14 [taca 2021-04-29]
 	Updated devel/py-babel to 2.9.1 [adam 2021-04-29]
 	Updated devel/py-requests-mock to 1.9.1 [adam 2021-04-29]
+	Updated devel/R-rlang to 0.4.10 [wen 2021-04-29]
