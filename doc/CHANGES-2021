@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2470 2021/04/29 18:45:05 wiedi Exp $
+$NetBSD: CHANGES-2021,v 1.2471 2021/04/29 23:34:48 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-rope to 0.19.0 [adam 2021-04-29]
 	Updated sysutils/xplr to 0.5.10 [pin 2021-04-29]
 	Updated editors/nano to 5.7 [wiedi 2021-04-29]
+	Removed math/fftwf [thor 2021-04-29]
