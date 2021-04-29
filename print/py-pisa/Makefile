@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/04/29 07:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/04/29 13:10:41 joerg Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,10 @@ COMMENT=	HTML2pdf converter (obsolete, use print/py-weasyprint instead)
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
-DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py-reportlab
+DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py27-reportlab
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
-BROKEN=		"needs python 2.7"
-#PYTHON_VERSIONS_ACCEPTED=	27 # not ported as of 3.0.33
+PYTHON_VERSIONS_ACCEPTED=	27 # not ported as of 3.0.33
 
 # remove CRs: fixes patching on Darwin and stops pkglint from complaining
 pre-patch:
