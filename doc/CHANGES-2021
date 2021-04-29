@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2452 2021/04/28 23:55:57 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2453 2021/04/29 00:02:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3945,3 +3945,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/enlightenment16 to 1.0.23 [gutteridge 2021-04-28]
 	Updated geography/p5-Geo-ShapeFile to 3.01 [wen 2021-04-28]
 	Updated geography/p5-Geo-Ellipsoid to 1.15 [wen 2021-04-28]
+	Updated geography/p5-GIS-Distance to 0.19 [wen 2021-04-29]
