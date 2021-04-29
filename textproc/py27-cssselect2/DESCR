@@ -1,0 +1,5 @@
+cssselect2 is a straightforward implementation of CSS3 Selectors
+for ElementTree-compatible documents (including cElementTree, lxml,
+etc.)  Unlike cssselect, it does not translate selectors to XPath
+and therefore does not have all the correctness corner cases that
+are hard or impossible to fix in cssselect.
