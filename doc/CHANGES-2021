@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2453 2021/04/29 00:02:37 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2454 2021/04/29 02:58:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3946,3 +3946,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/p5-Geo-ShapeFile to 3.01 [wen 2021-04-28]
 	Updated geography/p5-Geo-Ellipsoid to 1.15 [wen 2021-04-28]
 	Updated geography/p5-GIS-Distance to 0.19 [wen 2021-04-29]
+	Updated pkgtools/x11-links to 1.33 [gutteridge 2021-04-29]
