@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/09/20 22:51:47 mef Exp $
+# $NetBSD: Makefile,v 1.10 2021/04/29 05:56:34 wen Exp $
 
 R_PKGNAME=	DBI
-R_PKGVER=	1.1.0
+R_PKGVER=	1.1.1
 CATEGORIES=	math
 
 MAINTAINER=	minskim@NetBSD.org
