@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_tdb_common_mutex.c,v 1.1 2019/09/05 12:39:56 hauke Exp $
+$NetBSD: patch-lib_tdb_common_mutex.c,v 1.2 2021/04/29 15:21:16 taca Exp $
 
 On SunOS (OpenSolaris), pthread_mutex_init() expects a zeroed-out
 mutex data structure
-    
+
 --- lib/tdb/common/mutex.c.orig	2019-01-15 10:07:00.000000000 +0000
 +++ lib/tdb/common/mutex.c
 @@ -567,6 +567,7 @@ int tdb_mutex_init(struct tdb_context *t
