@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2461 2021/04/29 06:14:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2462 2021/04/29 07:45:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3954,3 +3954,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-DBI to 1.1.1 [wen 2021-04-29]
 	Updated www/drupal7 to 7.80 [taca 2021-04-29]
 	Updated www/drupal8 to 8.9.14 [taca 2021-04-29]
+	Updated devel/py-babel to 2.9.1 [adam 2021-04-29]
+	Updated devel/py-requests-mock to 1.9.1 [adam 2021-04-29]
