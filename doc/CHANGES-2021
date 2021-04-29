@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2481 2021/04/29 23:37:59 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2482 2021/04/29 23:38:11 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/luminance-hdr to 2.6.0nb4 [thor 2021-04-29]
 	Updated graphics/rawtherapee to 5.6nb8 [thor 2021-04-29]
 	Updated graphics/pfstools to 2.1.0nb16 [thor 2021-04-29]
+	Updated games/powder-toy to 95.0nb2 [thor 2021-04-29]
