@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.10 2021/04/17 08:25:15 nia Exp $
+# $NetBSD: build.mk,v 1.11 2021/04/29 20:15:59 wiz Exp $
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -62,6 +62,6 @@ _PKG_VARS.meson+=	LLVM_CONFIG_PATH
 _PKG_VARS.meson+=	USE_CMAKE MESON_ARGS
 _USER_VARS.meson=	MAKE_JOBS PKG_SYSCONFDIR
 _USE_VARS.meson=	TOOLS_PATH.false WRKSRC PREFIX PKGMANDIR
-_DEF_VARS.meson=	BUILD_DEPENDS
+_DEF_VARS.meson=	TOOL_DEPENDS
 _LISTED_VARS.meson=	*_ARGS *_DEPENDS
 _SORTED_VARS.meson=	*_ENV
