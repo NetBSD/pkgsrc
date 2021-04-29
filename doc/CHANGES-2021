@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2508 2021/04/29 23:46:54 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2509 2021/04/29 23:47:07 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/gnuradio-video-sdl to 3.9.1.0nb3 [thor 2021-04-29]
 	Updated ham/gnuradio-vocoder to 3.9.1.0nb3 [thor 2021-04-29]
 	Updated ham/gnuradio-wavelet to 3.9.1.0nb3 [thor 2021-04-29]
+	Updated ham/gnuradio-zeromq to 3.9.1.0nb3 [thor 2021-04-29]
