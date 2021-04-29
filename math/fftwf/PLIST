@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2016/04/03 12:45:39 joerg Exp $
-bin/fftwf-wisdom
-lib/libfftw3f.la
-${PLIST.pthreads}lib/libfftw3f_threads.la
-lib/pkgconfig/fftw3f.pc
-man/man1/fftwf-wisdom.1
