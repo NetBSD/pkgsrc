@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/03/21 04:16:17 taca Exp $
+$NetBSD: distinfo,v 1.12 2021/04/29 05:55:54 taca Exp $
 
-SHA1 (bind-9.16.13.tar.xz) = 5120b0e7fcc8b7d3e1c9d1414c5c3888640c3b40
-RMD160 (bind-9.16.13.tar.xz) = 95ca9bcf95ecf996d3bfe97a2bad602f35a63b3e
-SHA512 (bind-9.16.13.tar.xz) = 1f3c8f54dd2c9e18cd9b67cfebb645d0a8e8f566add07fc4690cb8820bf81640c33b2b0685cb8be095e0f9ac84b2cf78176aea841a30c27d547b569b8353b07b
-Size (bind-9.16.13.tar.xz) = 5028340 bytes
+SHA1 (bind-9.16.15.tar.xz) = 5d68bbd1ff452708d45f2d4ef832faa3a1690fc7
+RMD160 (bind-9.16.15.tar.xz) = 5697b6b0a0d67022f1e279f27c413b739fa2de4d
+SHA512 (bind-9.16.15.tar.xz) = 30dad6e2144b3ac53ef0a2d1ed3c8342120f148fc0eb6409113a6d5ed3444eecb917915fdf39c26fd223396fc1e873410a50da305f0b870864f7fbbdccec8033
+Size (bind-9.16.15.tar.xz) = 5025688 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
