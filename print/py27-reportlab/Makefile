@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/29 13:09:19 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2021/04/29 23:43:27 joerg Exp $
 
 DISTNAME=	reportlab-3.5.65
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-pyphen-[0-9]*:../../textproc/py-pyphen
+DEPENDS+=	${PYPKGPREFIX}-pyphen-[0-9]*:../../textproc/py27-pyphen
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_VERSIONED_DEPENDENCIES=	Pillow
