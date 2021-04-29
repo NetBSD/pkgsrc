@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/09/21 13:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/04/29 08:18:59 adam Exp $
 
-DISTNAME=	furl-2.1.0
+DISTNAME=	furl-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/furl/}
