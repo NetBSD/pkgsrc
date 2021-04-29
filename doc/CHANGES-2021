@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2467 2021/04/29 15:21:43 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2468 2021/04/29 17:08:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3962,3 +3962,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/gnome-session to 40.1.1 [dan 2021-04-29]
 	Updated devel/pkgconf to 1.7.4nb1 [thor 2021-04-29]
 	Updated net/samba4 to 4.14.4 [taca 2021-04-29]
+	Updated net/terraform to 0.12.31 [adam 2021-04-29]
+	Updated devel/py-rope to 0.19.0 [adam 2021-04-29]
