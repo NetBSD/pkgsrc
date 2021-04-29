@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/04/05 12:49:22 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/29 23:30:15 thor Exp $
 
 DISTNAME=		hackrf-2021.03.1
 CATEGORIES=		ham
@@ -40,5 +40,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

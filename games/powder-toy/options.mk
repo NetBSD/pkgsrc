@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/04/13 12:08:04 nia Exp $
+# $NetBSD: options.mk,v 1.2 2021/04/29 23:30:13 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powder-toy
 PKG_SUPPORTED_OPTIONS=	debug fftw lua
@@ -23,7 +23,7 @@ SCONS_ARGS+=	--release
 .endif
 
 .if !empty(PKG_OPTIONS:Mfftw)
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .else
 SCONS_ARGS+=	--nofft
 .endif
