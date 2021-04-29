@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2488 2021/04/29 23:39:24 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2489 2021/04/29 23:39:34 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wip/wsjtx to 2.3.0nb1 [thor 2021-04-29]
 	Updated wip/supercollider to 3.7.2nb1 [thor 2021-04-29]
 	Updated wip/sonic-visualiser to 2.5nb1 [thor 2021-04-29]
+	Updated wip/gromacs2018 to 2018.4nb1 [thor 2021-04-29]
