@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2463 2021/04/29 08:21:14 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2464 2021/04/29 08:24:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3957,3 +3957,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-babel to 2.9.1 [adam 2021-04-29]
 	Updated devel/py-requests-mock to 1.9.1 [adam 2021-04-29]
 	Updated devel/R-rlang to 0.4.10 [wen 2021-04-29]
+	Updated www/py-furl to 2.1.2 [adam 2021-04-29]
+	Updated www/py-hyperframe to 6.0.1 [adam 2021-04-29]
