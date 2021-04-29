@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/07 10:56:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/04/29 00:01:32 wen Exp $
 
-SHA1 (GIS-Distance-0.18.tar.gz) = 7cc97cfd2d0f197f1b1cdecfc1ecee8b00fabe9d
-RMD160 (GIS-Distance-0.18.tar.gz) = eed9c19291d1fd651791722b26e97a34e263944b
-SHA512 (GIS-Distance-0.18.tar.gz) = 78bd535d3f73963a1b7a4815c9da8f8473f37eb0898faa1661a7f0e2abfdeb1d458496729c0c4613870bcc8129499622f34d4ea03a0933ad2bd6097a55804029
-Size (GIS-Distance-0.18.tar.gz) = 29392 bytes
+SHA1 (GIS-Distance-0.19.tar.gz) = f81bef130ce6f84c8d868d71fb20d8a891e1c6e3
+RMD160 (GIS-Distance-0.19.tar.gz) = aef4ec14c98acd7fd2604fd2c7353d129413483f
+SHA512 (GIS-Distance-0.19.tar.gz) = fc6a65bf8bde06417f722ec7acf73649d9004ded16e6be8d021225a59d18d76c22ce7b70a69fdbcffca4d7d308163dd2e003bf3ac28687aaa20998044ab52e05
+Size (GIS-Distance-0.19.tar.gz) = 23738 bytes
