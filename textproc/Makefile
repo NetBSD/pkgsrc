@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1217 2021/04/26 21:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.1218 2021/04/29 13:13:08 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1004,6 +1004,7 @@ SUBDIR+=	py-xmlschema
 SUBDIR+=	py-xmltodict
 SUBDIR+=	py-yamcha
 SUBDIR+=	py-yaml
+SUBDIR+=	py27-tinycss2
 SUBDIR+=	qore-json-module
 SUBDIR+=	qore-xml-module
 SUBDIR+=	qore-yaml-module
