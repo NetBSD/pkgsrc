@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/04/29 23:39:14 joerg Exp $
+
+SHA1 (Pyphen-0.9.5.tar.gz) = 98a1c44377fe0b8c44437ac359cb27f589282ad6
+RMD160 (Pyphen-0.9.5.tar.gz) = 9df507b33f25538733d8cb189be83c56b11218b4
+SHA512 (Pyphen-0.9.5.tar.gz) = 15b9a29517df2b873b5b8d4739d8fa48a09ab199ab9246c7a4fd25c46253a74a18a88fd9484978476b3b1c8d88fed7729382b9dbe4f425724fe54bcd6227de96
+Size (Pyphen-0.9.5.tar.gz) = 2971389 bytes
