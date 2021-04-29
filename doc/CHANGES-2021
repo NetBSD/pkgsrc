@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2459 2021/04/29 05:58:23 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2460 2021/04/29 06:13:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3952,3 +3952,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind911 to 9.11.31 [taca 2021-04-29]
 	Updated net/bind916 to 9.16.15 [taca 2021-04-29]
 	Updated math/R-DBI to 1.1.1 [wen 2021-04-29]
+	Updated www/drupal7 to 7.80 [taca 2021-04-29]
