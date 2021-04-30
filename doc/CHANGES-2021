@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2526 2021/04/30 15:03:02 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2527 2021/04/30 18:03:51 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3987,3 +3987,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php74 to 7.4.18 [taca 2021-04-30]
 	Updated lang/php80 to 8.0.5 [taca 2021-04-30]
 	Updated lang/php73 to 7.3.28 [taca 2021-04-30]
+	Updated fonts/recursive-ttf to 1.078 [rhialto 2021-04-30]
