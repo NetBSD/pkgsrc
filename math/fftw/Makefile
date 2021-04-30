@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2021/04/30 09:01:48 thor Exp $
+# $NetBSD: Makefile,v 1.64 2021/04/30 11:13:36 thor Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Collection of fast C routines to compute DFTs
 
@@ -36,7 +36,7 @@ FFTW_PRECISION=	double float
 
 # Test will only use the default build.
 .if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl:test
 .endif
 
 PLIST_VARS+=		pthreads
@@ -53,10 +53,29 @@ CONFIGURE_DIRS+=	build/${p}
 MAKE_DIRS+=		build/${p}
 .endfor
 
+# FFTW offers SIMD runtime detection, but wants explicit build options.
+# These should be generic for all platforms. Compiler needs intrinsics
+# for this, but those have been present for quite some time.
+FFTW_FLOAT_OPTS=	--enable-generic-simd128 --enable-generic-simd256
+FFTW_DOUBLE_OPTS=	--enable-generic-simd128 --enable-generic-simd256
+
+.if ${MACHINE_ARCH} == "x86_64"
+FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2 --enable-avx --enable-avx2
+FFTW_FLOAT_OPTS+=	--enable-avx512 --enable-avx-128-fma
+FFTW_DOUBLE_OPTS+=	--enable-sse2 --enable-avx --enable-avx2
+FFTW_DOUBLE_OPTS+=	--enable-avx512 --enable-avx-128-fma 
+.endif
+
 pre-configure:
 .for d in ${CONFIGURE_DIRS}
 	mkdir -p ${WRKSRC:Q}/${d}
-.if ${d} == "build/quad-precision"
+.if   ${d} == "build/float"
+	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} ${FFTW_FLOAT_OPTS}' \
+	> ${WRKSRC:Q}/${d}/configure
+.elif ${d} == "build/double"
+	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} ${FFTW_DOUBLE_OPTS}' \
+	> ${WRKSRC:Q}/${d}/configure
+.elif ${d} == "build/quad-precision"
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} --disable-mpi\n' \
 	> ${WRKSRC:Q}/${d}/configure
 .else
