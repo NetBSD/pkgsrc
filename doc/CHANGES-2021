@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2513 2021/04/30 09:42:43 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2514 2021/04/30 10:39:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3972,3 +3972,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.20.2 [adam 2021-04-30]
 	Updated sysutils/duplicity to 0.8.19 [adam 2021-04-30]
 	Updated x11/xorgproto to 2021.4 [wiz 2021-04-30]
+	Updated devel/abseil to 20210324.1 [adam 2021-04-30]
+	Updated net/grpc to 1.37.1 [adam 2021-04-30]
+	Updated net/py-grpcio to 1.37.1 [adam 2021-04-30]
+	Updated net/py-grpcio-testing to 1.37.1 [adam 2021-04-30]
+	Updated net/py-grpcio-tools to 1.37.1 [adam 2021-04-30]
