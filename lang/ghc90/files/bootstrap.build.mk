@@ -18,9 +18,9 @@ GhcRTSWays         =
 # but we don't need it anyway.
 GhcWithInterpreter = NO
 
-# We don't want in-place GMP to be statically linked as it increases
+# We don't want in-tree GMP to be statically linked as it increases
 # the bindist size. Dynamic linkage is even worse.
-INTEGER_LIBRARY    = integer-simple
+BIGNUM_BACKEND = native
 
 # We'd like to distinguish bootstrapping bindists from normal ones.
 BIN_DIST_NAME      = ghc-$(ProjectVersion)-boot
