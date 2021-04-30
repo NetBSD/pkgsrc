@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2517 2021/04/30 12:36:03 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2518 2021/04/30 12:39:52 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3978,9 +3978,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-testing to 1.37.1 [adam 2021-04-30]
 	Updated net/py-grpcio-tools to 1.37.1 [adam 2021-04-30]
 	Updated math/fftw to 3.3.9nb5 [thor 2021-04-30]
-<<<<<<< CHANGES-2021
-	Updated graphics/ImageMagick to 7.0.11.10 [triaxx 2021-04-30]
-=======
 	Updated textproc/paperoni to 0.4.0 [pin 2021-04-30]
->>>>>>> 1.2516
+	Updated graphics/ImageMagick to 7.0.11.10 [triaxx 2021-04-30]
 	Updated graphics/ImageMagick to 7.0.11.10 [triaxx 2021-04-30]
