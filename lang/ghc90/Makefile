@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/04/29 07:02:42 pho Exp $
+# $NetBSD: Makefile,v 1.11 2021/04/30 03:05:30 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -27,7 +27,7 @@ BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-x86_64
-#BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64   # Not available yet
+BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64
 
 
 # -----------------------------------------------------------------------------
@@ -213,6 +213,12 @@ BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib:${WRKDIR}/lib
 # XXX: ${WRKDIR}/lib is a temporary workaround for compat80 not having
 # libterminfo.so.1. See ./bootstrap.mk
+.endif
+
+# On Solaris-based platforms our bootkit tends to depend on
+# pkgsrc-installed shlibs.
+.if ${OPSYS} == "SunOS"
+ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
