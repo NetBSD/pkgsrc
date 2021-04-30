@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2523 2021/04/30 14:56:48 micha Exp $
+$NetBSD: CHANGES-2021,v 1.2524 2021/04/30 14:57:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/fdtools to 2021.04.30 [schmonz 2021-04-30]
 	Updated lang/sbcl to 2.1.4 [rjs 2021-04-30]
 	Updated games/woof to 5.0.0 [micha 2021-04-30]
+	Updated lang/php74 to 7.4.18 [taca 2021-04-30]
