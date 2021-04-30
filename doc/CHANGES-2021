@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2522 2021/04/30 13:58:21 rjs Exp $
+$NetBSD: CHANGES-2021,v 1.2523 2021/04/30 14:56:48 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3983,3 +3983,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.5.11 [pin 2021-04-30]
 	Updated sysutils/fdtools to 2021.04.30 [schmonz 2021-04-30]
 	Updated lang/sbcl to 2.1.4 [rjs 2021-04-30]
+	Updated games/woof to 5.0.0 [micha 2021-04-30]
