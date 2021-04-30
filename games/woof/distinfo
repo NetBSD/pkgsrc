@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/03/31 10:09:15 micha Exp $
+$NetBSD: distinfo,v 1.17 2021/04/30 14:55:01 micha Exp $
 
-SHA1 (woof_4.0.2.tar.gz) = 17c666b01503388463bffd9f974592243900f591
-RMD160 (woof_4.0.2.tar.gz) = 5bbdc1963525a62bd1dffaf95d56d12499e9b0f8
-SHA512 (woof_4.0.2.tar.gz) = 719554a4bbcd85a8525513fc99fa48dd373eaae67b3c4590f0da4d735f91a5c958a26fd97a406b8860378fe65f11d7dfe0632c3369e208cab53b15fea012c092
-Size (woof_4.0.2.tar.gz) = 1916427 bytes
+SHA1 (woof_5.0.0.tar.gz) = 77bae38300bcf3e5742fd46508c19880e67b5970
+RMD160 (woof_5.0.0.tar.gz) = d1c60c7e98a746cf2169b29eb90f2aa17664c350
+SHA512 (woof_5.0.0.tar.gz) = fc5306a0feb0469f0231ae1f77b694bff980fe287e116aa873723d6a99296f370f4bd94a72bd5b1b3ff0cacae54208fbf811ef0a077a537db9f4b9de5e491f6b
+Size (woof_5.0.0.tar.gz) = 1940500 bytes
 SHA1 (patch-Source_d__iwad.c) = fc897f508e31653495bfed26152a7e6d70021089
