@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/04/30 11:13:36 thor Exp $
+# $NetBSD: Makefile,v 1.65 2021/04/30 20:51:06 thor Exp $
 
 PKGREVISION=	5
 
@@ -73,7 +73,7 @@ pre-configure:
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} ${FFTW_FLOAT_OPTS}' \
 	> ${WRKSRC:Q}/${d}/configure
 .elif ${d} == "build/double"
-	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} ${FFTW_DOUBLE_OPTS}' \
+	printf '#!/bin/sh\nexec ../../configure "$$@" ${FFTW_DOUBLE_OPTS}' \
 	> ${WRKSRC:Q}/${d}/configure
 .elif ${d} == "build/quad-precision"
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} --disable-mpi\n' \
