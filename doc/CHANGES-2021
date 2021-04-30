@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2514 2021/04/30 10:39:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2515 2021/04/30 11:13:50 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio to 1.37.1 [adam 2021-04-30]
 	Updated net/py-grpcio-testing to 1.37.1 [adam 2021-04-30]
 	Updated net/py-grpcio-tools to 1.37.1 [adam 2021-04-30]
+	Updated math/fftw to 3.3.9nb5 [thor 2021-04-30]
