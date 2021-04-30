@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2021/02/11 10:40:35 adam Exp $
+$NetBSD: distinfo,v 1.27 2021/04/30 07:03:28 adam Exp $
 
-SHA1 (duplicity-0.8.18.tar.gz) = 1213f1475fd071e7e72783c4e40aca91818f2a44
-RMD160 (duplicity-0.8.18.tar.gz) = 7f9633794d21b4f6e0f754823c64aba8727cb938
-SHA512 (duplicity-0.8.18.tar.gz) = d730c7b19f48254759fcb3985e9c64eab4218908fe042743cce256bb701e1969d8648eec78a67c52853840f9dd32ab054099ee7c239b5ab32e2cd06bba2b6c4b
-Size (duplicity-0.8.18.tar.gz) = 1340850 bytes
+SHA1 (duplicity-0.8.19.tar.gz) = 750f0dfd46caff0eea07164041725fced3550a0a
+RMD160 (duplicity-0.8.19.tar.gz) = 406566eb4a756431f3baf650c5d2cd9d2a6d4212
+SHA512 (duplicity-0.8.19.tar.gz) = dc5c60d4a038d19cbd9e60a5af2a0a1980fe3817866352157d85790950d171af3c20adb72af4723a01cee43db968f45ddc25b4c440c8105a1979b500eea2318f
+Size (duplicity-0.8.19.tar.gz) = 1361916 bytes
 SHA1 (patch-duplicity_gpginterface.py) = 3d765f1666f44bbf8cb535cba37b76f914ffdd93
