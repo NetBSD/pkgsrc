@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2532 2021/04/30 23:40:12 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2533 2021/04/30 23:53:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3993,3 +3993,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-File-Path-Tiny to 1.0 [wen 2021-04-30]
 	Updated devel/p5-File-Touch to 0.12 [wen 2021-04-30]
 	Updated devel/p5-File-Valet to 1.08 [wen 2021-04-30]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.109 [wen 2021-04-30]
