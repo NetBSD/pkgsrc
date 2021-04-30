@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/04/30 03:05:30 pho Exp $
+$NetBSD: distinfo,v 1.9 2021/04/30 06:08:19 pho Exp $
 
 SHA1 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 3ff01d768393b3866e7a7543f9f55646aaffce7a
 RMD160 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 39bf10b13054a6316c8477609fb98abe4277fa6c
@@ -8,10 +8,10 @@ SHA1 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 4acbac13308bf08af6711d7e5c23
 RMD160 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = cbd60204d7bfdf3bbc26a0f8c78683560731e070
 SHA512 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = f243d2a091dbaa670ecaac913266e428164064e5c73a2d4e96b603f16af94f3c4af4358e01c04d492de8ddd8c4b6d25ebe8b62b929b6191cd87f0f1d13873fde
 Size (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 48912780 bytes
-SHA1 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 199c1e752366cefe94293ad9012e22912f92a88d
-RMD160 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 693d5d31c4ccc0781c4fdb4770f9fb552195ac02
-SHA512 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = ab7f8abc94d1e1cf1536c6837ef50ddc741eb057da77c941f645cee3e273ab80f4b0c0e81b189d78b197fb3b93a0815b5ebc02c9adced9c14e13ed4446805cd5
-Size (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 57580500 bytes
+SHA1 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = c866b36b83a3f6cae2ac5e606291231abff5d7a7
+RMD160 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 1791435b251b8534ff70cc10e16300298d060375
+SHA512 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 1c2d8e1df4d8545068c453e8437e29f1528015ce056150d98827709c026fc23f5460887467d20321b1d32e3fffefe7081c068d702881184029d1c63c0adb25e4
+Size (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 57551160 bytes
 SHA1 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = ce024f52886ea3c5af0c51aebfc9824744ee0a14
 RMD160 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = f284af547d6a2e6f31ae78d429d2e093b7e6f2da
 SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 01b196eca0a23b64687cb795601ca02a409ea0a1b2db48f5b9ab90a95a1db05a254ac92db43726f15382f4cc9e54052685959467a2925fb67ebe5f68570c1eca
