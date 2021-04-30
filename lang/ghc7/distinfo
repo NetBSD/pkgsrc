@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2020/02/14 23:36:54 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2021/04/30 18:52:05 pho Exp $
 
 SHA1 (ghc-7.10.3-boot-i386-unknown-freebsd.tar.xz) = 95a1c350f25677f0f9fefac66d99589aa6ce5fbe
 RMD160 (ghc-7.10.3-boot-i386-unknown-freebsd.tar.xz) = 0b27558c57a435c76478ea95a94d576a5579f48f
@@ -25,7 +25,7 @@ RMD160 (ghc-7.6.3-boot-x86_64-unknown-solaris2.tar.xz) = 88940a16df7735c95d077b5
 SHA512 (ghc-7.6.3-boot-x86_64-unknown-solaris2.tar.xz) = f253e82beaec3f0f06fdaf48d02d7ceabe43d54582992f0bac68e7be40dd9fbcafee4e84c15a470c3648a3aee16a0ad708a5a409d6c490e5687f9568109e5d46
 Size (ghc-7.6.3-boot-x86_64-unknown-solaris2.tar.xz) = 33541060 bytes
 SHA1 (patch-configure) = dafe8dee52e3e79e1ce9307fb62f283691bdb568
-SHA1 (patch-ghc.mk) = 542e3c8a2cd61eeeee6588ff62203c9c1074025d
+SHA1 (patch-ghc.mk) = d1131c7582a189775b307b830f860089f5afe346
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_Environment.hs) = fd786a7aa2058b5d86d4646e3816fb53ea0bf59f
 SHA1 (patch-libraries_base_configure.ac) = dd6132c5335d7e0421ec2181ebb5a34bb162e255
@@ -36,3 +36,6 @@ SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = a80945863d7bd8f5f65a
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 6a2b9a527730ec593b70e827fdc1aaeccc575dad
 SHA1 (patch-libraries_unix_include_execvpe.h) = a134be89b4bdd49eb5c5ed45756eb3a4ce5951a5
 SHA1 (patch-rts_PosixSource.h) = 604608791f33245d9305dcbd6d9d5979fe162f21
+SHA1 (patch-rts_ghc.mk) = 661fe3b57280809f0f00dc449bd4585fafd3f9c0
+SHA1 (patch-rules_build-package-way.mk) = c161044f44fc8a52726492a52366cff7b394f48c
+SHA1 (patch-rules_distdir-way-opts.mk) = 66b0da62629f251a74ca7ca38dcb996dcb555e59
