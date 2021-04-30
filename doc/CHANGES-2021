@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2518 2021/04/30 12:39:52 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2519 2021/04/30 12:53:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/paperoni to 0.4.0 [pin 2021-04-30]
 	Updated graphics/ImageMagick to 7.0.11.10 [triaxx 2021-04-30]
 	Updated graphics/ImageMagick to 7.0.11.10 [triaxx 2021-04-30]
+	Updated sysutils/xplr to 0.5.11 [pin 2021-04-30]
