@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.17.8.1 2021/04/24 15:58:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17.8.2 2021/04/30 14:45:29 bsiegert Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.54
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
-MASTER_SITES=	https://cybione.org/~irssi-xmpp/files/
 DISTFILES=	${DISTNAME}.tar.gz ${IRSSI_DISTFILE}
+
+# XXX: remove when updating
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+SITES.${DISTNAME}.tar.gz=\
+	-https://github.com/cdidier/irssi-xmpp/archive/refs/tags/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cybione.org/~irssi-xmpp/
