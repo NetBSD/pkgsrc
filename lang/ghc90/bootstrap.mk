@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2021/04/29 07:02:42 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2021/04/30 03:05:30 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -46,21 +46,18 @@ DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 # this bootkit.
 DISTFILES+=	netbsd-9.0-amd64-libterminfo.tar.gz
 EXTRACT_ONLY+=	netbsd-9.0-amd64-libterminfo.tar.gz
+SITES.netbsd-9.0-amd64-libterminfo.tar.gz?=	${MASTER_SITE_LOCAL}
 .  endif
 .endif
 
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	8.4.4
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-solaris2.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-#.endif
-
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=		8.4.4
-#BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+# Built on OmniOS r151036-a13510b579 + gcc10. Hope it works on other
+# Solaris-based platforms as well.
+BOOT_VERSION:=		9.0.1
+BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
 #SITES.${BOOT_ARCHIVE}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
-#DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
-#.endif
+DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
+.endif
 
 .if empty(BOOT_ARCHIVE)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-unknown.tar.xz
@@ -70,13 +67,28 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 # For package developers, please do not upload any bootkits unsafely
 # built. That is, machines shared with someone or on a cloud hosting
 # service should be avoided for building bootkits.
-.for i in ${DISTFILES:M*-boot-*} netbsd-9.0-amd64-libterminfo.tar.gz
+.for i in ${DISTFILES:M*-boot-*}
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
 
-# current bootstrap binary kit for SmartOS is built with ncurses5
-.if !empty(MACHINE_PLATFORM:MSunOS-*) && ${OS_VARIANT:U} == "SmartOS"
-BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
+# Current bootstrap binary kit for SunOS is built with GNU libiconv
+# and ncurses6.
+.if !empty(MACHINE_PLATFORM:MSunOS-*)
+BUILD_DEPENDS+=	libiconv>=1.9.1:../../converters/libiconv
+BUILD_DEPENDS+=	ncurses>=6.0:../../devel/ncurses
+.endif
+
+# On OmniOS, if one tries to create a hard link with the default ln(1)
+# whose target is itself a symbolic link, it creates a hard link to
+# the symbolic link without first resolving it. ${WRKSRC}/configure.ac
+# doesn't work as expected in this case. Maybe we should do this in
+# ../../mk/platform/SunOS.mk but I'm not sure if it's really safe to
+# do.
+.if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"
+TOOLS_PLATFORM.ln=	/usr/xpg4/bin/ln
+# Also cpp is missing from /usr/bin. Why? This leads
+# ${WRKSRC}/libffi/configure to fail.
+TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 .endif
 
 
@@ -86,7 +98,7 @@ BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 # Install a bootstrapping compiler directly into TOOLS_DIR so that
 # ./configure can find it.
 #
-USE_TOOLS+=	gmake xzcat xz gtar
+USE_TOOLS+=	gmake xzcat xz gtar cpp
 
 pre-configure:
 	${RUN}${TEST} -f ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} || \
