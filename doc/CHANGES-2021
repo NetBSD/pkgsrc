@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2530 2021/04/30 23:26:23 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2531 2021/04/30 23:30:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-NYTProf to 6.08 [wen 2021-04-30]
 	Updated devel/p5-Devel-PatchPerl to 2.08 [wen 2021-04-30]
 	Updated devel/p5-File-Path-Tiny to 1.0 [wen 2021-04-30]
+	Updated devel/p5-File-Touch to 0.12 [wen 2021-04-30]
