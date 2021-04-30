@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/04/30 08:10:24 pho Exp $
+$NetBSD: distinfo,v 1.11 2021/04/30 15:14:30 pho Exp $
 
 SHA1 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 3ff01d768393b3866e7a7543f9f55646aaffce7a
 RMD160 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 39bf10b13054a6316c8477609fb98abe4277fa6c
@@ -12,10 +12,10 @@ SHA1 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = c866b36b83a3f6cae2ac5e6062912
 RMD160 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 1791435b251b8534ff70cc10e16300298d060375
 SHA512 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 1c2d8e1df4d8545068c453e8437e29f1528015ce056150d98827709c026fc23f5460887467d20321b1d32e3fffefe7081c068d702881184029d1c63c0adb25e4
 Size (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 57551160 bytes
-SHA1 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = ce024f52886ea3c5af0c51aebfc9824744ee0a14
-RMD160 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = f284af547d6a2e6f31ae78d429d2e093b7e6f2da
-SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 01b196eca0a23b64687cb795601ca02a409ea0a1b2db48f5b9ab90a95a1db05a254ac92db43726f15382f4cc9e54052685959467a2925fb67ebe5f68570c1eca
-Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49644112 bytes
+SHA1 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 893871b70f5eb3cafdd8e6629bcac5d51e89b8c8
+RMD160 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 33e89913fbb6307e229088fa700d78633dfea12e
+SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 1ec81c83e247855e6e67bca3529955a24d8a9213c2d2f22997bb5260e1119edd5a463e4ecd7d3d1ebf85dbd090a12f1c1ac9776ad14395742e1b20ae1e1a45a4
+Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49606768 bytes
 SHA1 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 19fa8860969d332baced6ea281616cdc5ec32d67
 RMD160 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = deb39ae711a2cfa5cec9419e993d2be05e054770
 SHA512 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 92694ef783274f42800d899af4dd558087e3c2ce13e175558a23f5187c944333a2872cee1df9b14683903a0542954a8483c7413343aacaa2b1676d10a6d27a6d
