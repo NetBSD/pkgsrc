@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/02/11 10:40:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/04/30 07:03:28 adam Exp $
 bin/duplicity
 bin/rdiffdir
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -42,6 +42,9 @@ ${PYSITELIB}/duplicity/backends/azurebackend.pyo
 ${PYSITELIB}/duplicity/backends/b2backend.py
 ${PYSITELIB}/duplicity/backends/b2backend.pyc
 ${PYSITELIB}/duplicity/backends/b2backend.pyo
+${PYSITELIB}/duplicity/backends/boxbackend.py
+${PYSITELIB}/duplicity/backends/boxbackend.pyc
+${PYSITELIB}/duplicity/backends/boxbackend.pyo
 ${PYSITELIB}/duplicity/backends/cfbackend.py
 ${PYSITELIB}/duplicity/backends/cfbackend.pyc
 ${PYSITELIB}/duplicity/backends/cfbackend.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/duplicity/backends/dpbxbackend.pyo
 ${PYSITELIB}/duplicity/backends/gdocsbackend.py
 ${PYSITELIB}/duplicity/backends/gdocsbackend.pyc
 ${PYSITELIB}/duplicity/backends/gdocsbackend.pyo
+${PYSITELIB}/duplicity/backends/gdrivebackend.py
+${PYSITELIB}/duplicity/backends/gdrivebackend.pyc
+${PYSITELIB}/duplicity/backends/gdrivebackend.pyo
 ${PYSITELIB}/duplicity/backends/giobackend.py
 ${PYSITELIB}/duplicity/backends/giobackend.pyc
 ${PYSITELIB}/duplicity/backends/giobackend.pyo
@@ -60,6 +66,9 @@ ${PYSITELIB}/duplicity/backends/hsibackend.pyo
 ${PYSITELIB}/duplicity/backends/hubicbackend.py
 ${PYSITELIB}/duplicity/backends/hubicbackend.pyc
 ${PYSITELIB}/duplicity/backends/hubicbackend.pyo
+${PYSITELIB}/duplicity/backends/idrivedbackend.py
+${PYSITELIB}/duplicity/backends/idrivedbackend.pyc
+${PYSITELIB}/duplicity/backends/idrivedbackend.pyo
 ${PYSITELIB}/duplicity/backends/imapbackend.py
 ${PYSITELIB}/duplicity/backends/imapbackend.pyc
 ${PYSITELIB}/duplicity/backends/imapbackend.pyo
@@ -81,6 +90,9 @@ ${PYSITELIB}/duplicity/backends/megabackend.pyo
 ${PYSITELIB}/duplicity/backends/megav2backend.py
 ${PYSITELIB}/duplicity/backends/megav2backend.pyc
 ${PYSITELIB}/duplicity/backends/megav2backend.pyo
+${PYSITELIB}/duplicity/backends/megav3backend.py
+${PYSITELIB}/duplicity/backends/megav3backend.pyc
+${PYSITELIB}/duplicity/backends/megav3backend.pyo
 ${PYSITELIB}/duplicity/backends/multibackend.py
 ${PYSITELIB}/duplicity/backends/multibackend.pyc
 ${PYSITELIB}/duplicity/backends/multibackend.pyo
