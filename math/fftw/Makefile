@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/04/29 23:30:15 thor Exp $
+# $NetBSD: Makefile,v 1.63 2021/04/30 09:01:48 thor Exp $
 
 PKGREVISION=	4
 
@@ -19,6 +19,7 @@ CONFLICTS+=	fftwf-[0-9]*
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 TEST_TARGET=		check
