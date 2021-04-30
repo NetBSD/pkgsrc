@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2020/08/31 18:07:53 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2021/04/30 23:20:19 wen Exp $
 
-DISTNAME=	Devel-NYTProf-6.06
+DISTNAME=	Devel-NYTProf-6.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=	https://metacpan.org/release/Devel-NYTProf
 COMMENT=	Powerful feature-rich Perl 5 source code profiler
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.84}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 BUILD_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
