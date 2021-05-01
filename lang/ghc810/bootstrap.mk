@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2021/02/09 13:16:24 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2021/05/01 04:43:57 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -54,7 +54,7 @@
 BOOT_VERSION:=	8.8.4
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-9.99.*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 DISTFILES+=	netbsd-9.0-amd64-libterminfo.tar.gz
 EXTRACT_ONLY+=	netbsd-9.0-amd64-libterminfo.tar.gz
 .  endif
