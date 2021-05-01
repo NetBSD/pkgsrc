@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2548 2021/05/01 18:13:52 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.2549 2021/05/01 19:09:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4009,3 +4009,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/libmaxminddb to 1.6.0 [fcambus 2021-05-01]
 	Updated emulators/mame to 0.231 [wiz 2021-05-01]
 	Updated net/mikutter to 4.1.5 [tsutsui 2021-05-01]
+	Updated sysutils/xplr to 0.5.12 [pin 2021-05-01]
