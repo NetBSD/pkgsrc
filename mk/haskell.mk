@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.30 2021/05/01 14:10:55 pho Exp $
+# $NetBSD: haskell.mk,v 1.31 2021/05/01 14:24:21 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -221,7 +221,7 @@ do-configure:
 # which is not always available to us. As a result some packages
 # actually lack it. The problem is that its expected content depends
 # on the build-type field in *.cabal so we have to read it.
-	${RUN} if ! ${TEST} -f ${WRKSRC}/Setup.hs -a -f ${WRKSRC}/Setup.lhs; then \
+	${RUN} if ! ${TEST} -f ${WRKSRC}/Setup.hs -o -f ${WRKSRC}/Setup.lhs; then \
 		getBuildType=' \
 			BEGIN { buildTypeLine=0 } \
 			tolower($$1) ~ /^build-type:/ { \
