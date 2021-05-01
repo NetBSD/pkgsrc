@@ -1,17 +1,27 @@
-$NetBSD: patch-rules_distdir-way-opts.mk,v 1.1 2020/02/17 17:22:43 jperkin Exp $
+$NetBSD: patch-rules_distdir-way-opts.mk,v 1.2 2021/05/01 01:24:50 pho Exp $
 
-https://gitlab.haskell.org/ghc/ghc/issues/17385
+Use correct RPATHs. On ELF we replace "$ORIGIN/../{PACKAGE_ID}" with
+the final installation path.
 
---- rules/distdir-way-opts.mk.orig	2017-01-04 04:04:11.000000000 +0000
+On Darwin library paths work differently. If an executable (or a
+library) A depends on a library B, the installation path of B is first
+embedded in B, and then the path propagates to A at the time when A is
+linked. So we remove -rpath to libraries here, and do the other half
+in rules/build-package-way.mk and rts/ghc.mk.
+
+--- rules/distdir-way-opts.mk.orig	2020-07-08 16:43:04.000000000 +0000
 +++ rules/distdir-way-opts.mk
-@@ -196,8 +196,8 @@ $1_$2_$3_ALL_LD_OPTS = \
-  $$($1_$2_$3_LD_OPTS) \
-  $$($1_$2_EXTRA_LD_OPTS) \
-  $$(EXTRA_LD_OPTS) \
-- $$(foreach o,$$(EXTRA_LD_LINKER_OPTS),-optl-Wl$$(comma)$$o) \
-- $$(foreach o,$$(CONF_LD_LINKER_OPTS_STAGE$4),-optl-Wl$$(comma)$$o)
-+ $$(foreach o,$$(EXTRA_LD_LINKER_OPTS),-Wl$$(comma)$$o) \
-+ $$(foreach o,$$(CONF_LD_LINKER_OPTS_STAGE$4),-Wl$$(comma)$$o)
- 
- # Options for passing to GHC when we use it for linking
- $1_$2_$3_GHC_LD_OPTS = \
+@@ -209,11 +209,10 @@ ifneq "$4" "0"
+ ifeq "$$(TargetElf)" "YES"
+ $1_$2_$3_GHC_LD_OPTS += \
+     -fno-use-rpaths \
+-    $$(foreach d,$$($1_$2_TRANSITIVE_DEP_COMPONENT_IDS),-optl-Wl$$(comma)-rpath -optl-Wl$$(comma)'$$$$ORIGIN/../$$d') -optl-Wl,-zorigin
++    $$(foreach d,$$($1_$2_TRANSITIVE_DEP_COMPONENT_IDS),-optl-Wl$$(comma)-rpath -optl-Wl$$(comma)$$(ghclibdir)/$$d)
+ else ifeq "$$(TargetOS_CPP)" "darwin"
+ $1_$2_$3_GHC_LD_OPTS += \
+-    -fno-use-rpaths \
+-    $$(foreach d,$$($1_$2_TRANSITIVE_DEP_COMPONENT_IDS),-optl-Wl$$(comma)-rpath -optl-Wl$$(comma)'@loader_path/../$$d')
++    -fno-use-rpaths
+ endif
+ endif
+ endif
