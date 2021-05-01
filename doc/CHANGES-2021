@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2535 2021/05/01 00:01:29 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2536 2021/05/01 03:54:14 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.109 [wen 2021-04-30]
 	Updated devel/p5-PPIx-Regexp to 0.080 [wen 2021-04-30]
 	Updated devel/p5-Set-Object to 1.41 [wen 2021-05-01]
+	Updated chat/element-web to 1.7.26 [js 2021-05-01]
