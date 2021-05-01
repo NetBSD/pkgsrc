@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2542 2021/05/01 10:54:55 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2543 2021/05/01 11:44:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4003,3 +4003,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.05 [fcambus 2021-05-01]
 	Updated net/dbip-city-lite to 2021.05 [fcambus 2021-05-01]
 	Updated net/dbip-country-lite to 2021.05 [fcambus 2021-05-01]
+	Updated devel/p5-List-AllUtils to 0.19 [fcambus 2021-05-01]
