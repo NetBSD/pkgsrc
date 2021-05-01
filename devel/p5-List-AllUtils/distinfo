@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/09/07 06:56:23 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/05/01 11:44:07 fcambus Exp $
 
-SHA1 (List-AllUtils-0.18.tar.gz) = d131511d4a34116ea0124c264779244a29833bf0
-RMD160 (List-AllUtils-0.18.tar.gz) = b4a76bd213415c6f2f2c619f82d3b77c1e434bc5
-SHA512 (List-AllUtils-0.18.tar.gz) = b2cc560a070f36c339c12c17a17a958f3e9ad40b1981a2631c56c838703c9a9b06fd8bf02ced797cf581215b321faf6c281e5b87368a25515855327bd92db08f
-Size (List-AllUtils-0.18.tar.gz) = 54154 bytes
+SHA1 (List-AllUtils-0.19.tar.gz) = dd0bec049241781454d81c005d060e653f7ad735
+RMD160 (List-AllUtils-0.19.tar.gz) = 1473dbdd10cb934e3e87232ed10f347cbd416acc
+SHA512 (List-AllUtils-0.19.tar.gz) = 3f06165a3f416c75f1dd2364cb111479b053eb0a32e3c6a5823e5e8206f79fd3039599e9521526c0080a009541a86f344d921f6679ba4d7eb930d0c1ca2e25f0
+Size (List-AllUtils-0.19.tar.gz) = 56605 bytes
