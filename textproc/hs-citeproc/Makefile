@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/24 19:26:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/01 14:19:20 pho Exp $
 
 DISTNAME=	citeproc-0.3.0.9
 CATEGORIES=	textproc
@@ -8,10 +8,6 @@ COMMENT=	Generates citations and bibliography from CSL styles
 LICENSE=	2-clause-bsd
 
 CONFIGURE_ARGS+=	-fexecutable
-
-# Setup.hs is missing from the package.
-post-patch:
-	${CP} -f ${FILESDIR}/Setup.hs ${WRKSRC}/Setup.hs
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
