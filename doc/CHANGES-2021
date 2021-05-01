@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2541 2021/05/01 10:52:45 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2542 2021/05/01 10:54:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/dino to 0.2.0nb2 [nia 2021-05-01]
 	Updated net/dbip-asn-lite to 2021.05 [fcambus 2021-05-01]
 	Updated net/dbip-city-lite to 2021.05 [fcambus 2021-05-01]
+	Updated net/dbip-country-lite to 2021.05 [fcambus 2021-05-01]
