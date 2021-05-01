@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.29 2021/04/23 03:57:16 pho Exp $
+# $NetBSD: haskell.mk,v 1.30 2021/05/01 14:10:55 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -215,6 +215,43 @@ WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
 # is much faster, we try it and then fall back to static linkage if
 # that didn't work.
 do-configure:
+# Cabal packages are expected to have either Setup.hs or Setup.lhs,
+# but its existence is not mandatory these days because the standard
+# way to build a cabal package is to use the cabal-install command,
+# which is not always available to us. As a result some packages
+# actually lack it. The problem is that its expected content depends
+# on the build-type field in *.cabal so we have to read it.
+	${RUN} if ! ${TEST} -f ${WRKSRC}/Setup.hs -a -f ${WRKSRC}/Setup.lhs; then \
+		getBuildType=' \
+			BEGIN { buildTypeLine=0 } \
+			tolower($$1) ~ /^build-type:/ { \
+				if ($$2) { \
+					print tolower($$2); exit \
+				} \
+				else { \
+					buildTypeLine=1; next \
+				} \
+			} \
+			buildTypeLine { \
+				print tolower($$1); exit \
+			} \
+		'; \
+		buildType=`${CAT} ${WRKSRC}/*.cabal | ${AWK} "$$getBuildType"`; \
+		case "$$buildType" in \
+			simple) \
+				echo  >${WRKSRC}/Setup.hs 'import Distribution.Simple'; \
+				echo >>${WRKSRC}/Setup.hs 'main = defaultMain';; \
+			configure) \
+				echo  >${WRKSRC}/Setup.hs 'import Distribution.Simple'; \
+				echo >>${WRKSRC}/Setup.hs 'main = defaultMainWithHooks autoconfUserHooks';; \
+			make) \
+				echo  >${WRKSRC}/Setup.hs 'import Distribution.Make'; \
+				echo >>${WRKSRC}/Setup.hs 'main = defaultMain';; \
+			*) \
+				echo >&2 "Unknown Build-Type: $$buildType"; \
+				exit 1;; \
+		esac; \
+	fi
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		( ${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -dynamic || \
 			${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -static )
