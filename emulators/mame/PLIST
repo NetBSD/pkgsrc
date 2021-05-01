@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2021/04/01 12:22:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2021/05/01 18:12:32 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -132,6 +132,7 @@ share/mame/hash/atom_rom.xml
 share/mame/hash/attache.xml
 share/mame/hash/aussiebyte.xml
 share/mame/hash/b2m.xml
+share/mame/hash/basf7100.xml
 share/mame/hash/bbc_cass.xml
 share/mame/hash/bbc_flop_32016.xml
 share/mame/hash/bbc_flop_6502.xml
@@ -566,6 +567,7 @@ share/mame/hash/sg1000.xml
 share/mame/hash/sgi_mips.xml
 share/mame/hash/sgi_mips_hdd.xml
 share/mame/hash/sgx.xml
+share/mame/hash/singingstarkaraoke_cart.xml
 share/mame/hash/sitcom.xml
 share/mame/hash/smarttv_cart.xml
 share/mame/hash/smc777.xml
@@ -638,6 +640,9 @@ share/mame/hash/to7_qd.xml
 share/mame/hash/to8_cass.xml
 share/mame/hash/to8_qd.xml
 share/mame/hash/to_flop.xml
+share/mame/hash/trs80_cass.xml
+share/mame/hash/trs80_flop.xml
+share/mame/hash/trs80_quik.xml
 share/mame/hash/trs80m2.xml
 share/mame/hash/trsm100.xml
 share/mame/hash/tutor.xml
@@ -645,6 +650,7 @@ share/mame/hash/tvc_cart.xml
 share/mame/hash/tvc_cass.xml
 share/mame/hash/tvc_flop.xml
 share/mame/hash/tvgogo.xml
+share/mame/hash/u110_card.xml
 share/mame/hash/unichamp.xml
 share/mame/hash/ut88.xml
 share/mame/hash/uzebox.xml
