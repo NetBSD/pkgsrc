@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20594 2021/05/01 08:07:35 schmonz Exp $
+$NetBSD: TODO,v 1.20595 2021/05/01 10:29:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1692,8 +1692,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Data-Peek-0.50
 	o p5-Data-Validate-IP-0.30
 	o p5-DateTime-Format-W3CDTF-0.08
-	o p5-Devel-NYTProf-6.07
-	o p5-Devel-PatchPerl-2.08
 	o p5-Digest-CRC-0.23
 	o p5-Dist-Zilla-6.017
 	o p5-Dumbbench-0.501
@@ -1702,10 +1700,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Email-MIME-ContentType-1.026
 	o p5-Email-Sender-1.300035
 	o p5-ExtUtils-F77-1.26
-	o p5-File-Path-Tiny-1.0
 	o p5-File-RsyncP-0.76
-	o p5-File-Touch-0.12
-	o p5-File-Valet-1.08
 	o p5-Fsdb-2.71
 	o p5-GD-2.73
 	o p5-GIS-Distance-0.19
@@ -1713,7 +1708,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Geo-Distance-0.25
 	o p5-Geo-Ellipsoid-1.15
 	o p5-Geo-ShapeFile-3.01
-	o p5-Getopt-Long-Descriptive-0.109
 	o p5-GitLab-API-v3-1.06
 	o p5-GitLab-API-v4-0.26
 	o p5-Glib-Object-Introspection-0.049
@@ -1777,7 +1771,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-PAR-Dist-0.51
 	o p5-PDF-API2-2.040
 	o p5-PPIx-QuoteLike-0.017
-	o p5-PPIx-Regexp-0.080
 	o p5-Parse-PMFile-0.43
 	o p5-Parse-Win32Registry-1.1
 	o p5-Perl-Critic-1.140
@@ -1796,7 +1789,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Search-Elasticsearch-7.712
 	o p5-Search-QueryParser-0.95
 	o p5-Session-Storage-Secure-1.000
-	o p5-Set-Object-1.41
 	o p5-Spreadsheet-Read-0.84
 	o p5-Spreadsheet-ReadSXC-0.34
 	o p5-Statistics-Descriptive-3.0800
