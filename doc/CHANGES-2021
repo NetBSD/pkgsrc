@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2547 2021/05/01 18:12:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2548 2021/05/01 18:13:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4008,3 +4008,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/maguro version 0.0.1 [pin 2021-05-01]
 	Updated geography/libmaxminddb to 1.6.0 [fcambus 2021-05-01]
 	Updated emulators/mame to 0.231 [wiz 2021-05-01]
+	Updated net/mikutter to 4.1.5 [tsutsui 2021-05-01]
