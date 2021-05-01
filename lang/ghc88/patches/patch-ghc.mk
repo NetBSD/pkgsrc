@@ -1,4 +1,4 @@
-$NetBSD: patch-ghc.mk,v 1.1 2021/04/28 15:39:23 pho Exp $
+$NetBSD: patch-ghc.mk,v 1.2 2021/05/01 03:00:07 pho Exp $
 
 Use the wrapper scripts for ghc as we can't use the ones from the DESTDIR
 as the libraries are not in the right place yet.
@@ -10,7 +10,7 @@ as the libraries are not in the right place yet.
  INSTALLED_PACKAGE_CONF=$(DESTDIR)$(topdir)/package.conf.d
  
 -ifeq "$(BINDIST) $(CrossCompiling)" "NO YES"
-+ifeq "UseWrappers" "UseWrappers"
++ifeq "$(BINDIST)" "NO"
  # when installing ghc-stage2 we can't run target's
  # 'ghc-pkg' and 'ghc-stage2' but those are needed for registration.
  INSTALLED_GHC_REAL=$(TOP)/inplace/bin/ghc-stage1
