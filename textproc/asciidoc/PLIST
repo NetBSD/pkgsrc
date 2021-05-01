@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/05/03 12:03:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/05/01 10:03:33 nia Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -98,6 +98,8 @@ share/asciidoc/stylesheets/slidy.css
 share/asciidoc/stylesheets/toc2.css
 share/asciidoc/stylesheets/xhtml11-quirks.css
 share/asciidoc/text.conf
+share/asciidoc/themes/flask/flask.css
+share/asciidoc/themes/volnitsky/volnitsky.css
 share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
 share/doc/asciidoc/asciidoc.txt
