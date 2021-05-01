@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20593 2021/05/01 03:54:14 js Exp $
+$NetBSD: TODO,v 1.20594 2021/05/01 08:07:35 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1350,7 +1350,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libredwg-0.12.4
 	o librelp-1.10.0
 	o libressl-3.3.2
-	o libretls-3.3.2
 	o libretro-core-info-1.9.1
 	o libretro-gearboy-3.3.0
 	o libretro-gearsystem-3.3.0
