@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2538 2021/05/01 08:07:35 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2539 2021/05/01 08:54:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -3999,3 +3999,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/element-web to 1.7.26 [js 2021-05-01]
 	Updated shells/oksh to 6.9 [schmonz 2021-05-01]
 	Updated security/libretls to 3.3.2 [schmonz 2021-05-01]
+	Updated chat/dino to 0.2.0nb2 [nia 2021-05-01]
