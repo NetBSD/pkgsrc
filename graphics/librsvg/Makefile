@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2021/04/21 11:40:25 adam Exp $
+# $NetBSD: Makefile,v 1.130 2021/05/02 19:59:58 gutteridge Exp $
 
 DISTNAME=	librsvg-2.50.3
 PKGREVISION=	1
@@ -43,6 +43,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-RUST_REQ=	1.39.0
+RUST_REQ=	1.40.0
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
