@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2021/04/21 11:42:53 adam Exp $
+# $NetBSD: Makefile,v 1.203 2021/05/02 10:24:52 nia Exp $
 
 DISTNAME=	epiphany-3.36.2
 PKGREVISION=	3
@@ -12,9 +12,8 @@ COMMENT=	Web browser for the GNOME desktop
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
-USE_TOOLS+=	pkg-config msgfmt xgettext
+USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
 MESON_ARGS+=	-Dunit_tests=disabled
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2021/04/21 11:41:28 adam Exp $
+# $NetBSD: Makefile,v 1.112 2021/05/02 10:24:48 nia Exp $
 
 DISTNAME=		meld-3.21.0
 PKGREVISION=		8
@@ -11,13 +11,12 @@ HOMEPAGE=		https://meldmerge.org/
 COMMENT=		Visual diff and merge tool
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 BUILD_DEPENDS+=		${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 DEPENDS+=		${PYPKGPREFIX}-gobject3>=3.30:../../devel/py-gobject3
 DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config itstool
 # only used when building the python way (not meson)
 USE_TOOLS+=		intltool
 

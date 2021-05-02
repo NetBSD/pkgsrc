@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/04/15 05:36:03 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/05/02 10:24:53 nia Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -9,7 +9,6 @@ USE_TOOLS+=	perl:run
 
 COMMENT=	MATE terminal emulator application
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 .include "options.mk"

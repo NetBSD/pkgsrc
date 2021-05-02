@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2021/04/21 11:41:33 adam Exp $
+# $NetBSD: Makefile,v 1.87 2021/05/02 10:24:48 nia Exp $
 
 DISTNAME=	gtranslator-3.32.1
 PKGREVISION=	8
@@ -11,10 +11,9 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Gtranslator
 COMMENT=	Gettext po file editor for the GNOME desktop environment
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config itstool
 
 REPLACE_PYTHON+=	build-aux/meson/meson_post_install.py
 

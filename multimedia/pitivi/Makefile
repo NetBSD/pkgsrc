@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/12/04 20:45:31 nia Exp $
+# $NetBSD: Makefile,v 1.61 2021/05/02 10:24:50 nia Exp $
 
 DISTNAME=	pitivi-0.999
 PKGREVISION=	4
@@ -11,9 +11,7 @@ HOMEPAGE=	http://www.pitivi.org/
 COMMENT=	Video editor using GStreamer/GTK
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config intltool msgfmt xgettext
-
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+USE_TOOLS+=	pkg-config intltool msgfmt xgettext itstool
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1

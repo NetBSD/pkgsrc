@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2021/04/21 11:42:16 adam Exp $
+# $NetBSD: Makefile,v 1.76 2021/05/02 10:24:50 nia Exp $
 
 DISTNAME=		yelp-3.32.0
 PKGREVISION=		9
@@ -11,12 +11,10 @@ HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Mallard capable help browser
 LICENSE=		gnu-gpl-v2 AND apache-2.0
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config itstool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 # Requires --desktop in msgfmt.
 _TOOLS_USE_PKGSRC.msgfmt=	yes

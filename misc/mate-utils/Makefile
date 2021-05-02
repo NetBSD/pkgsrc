@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/08/24 04:41:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28 2021/05/02 10:24:50 nia Exp $
 
 PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -10,7 +10,6 @@ COMMENT=	Utilities for MATE Desktop
 
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	mate-dictionary/libgdict/mate-dict.pc.in
