@@ -1,10 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2020/12/03 14:53:19 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2021/05/02 08:40:00 nia Exp $
 
 Fix locale detection.
 
-Don't install headers.
-
---- CMakeLists.txt.orig	2020-10-30 01:25:25.000000000 +0000
+--- CMakeLists.txt.orig	2020-08-04 04:46:14.000000000 +0000
 +++ CMakeLists.txt
 @@ -364,7 +364,9 @@ if(HAVE_LOCALTIME_R)
  	list(APPEND FUNCTION_DEFINES HAVE_LOCALTIME_R)
@@ -17,13 +15,13 @@ Don't install headers.
  	list(APPEND FUNCTION_DEFINES HAVE_LOCALE)
  	if (HAVE_SNPRINTF_L)
  		list(APPEND FUNCTION_DEFINES HAVE_SNPRINTF_L)
-@@ -995,9 +997,6 @@ endif()
+@@ -1033,9 +1035,6 @@ endif()
  
- file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/mgba)
- configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/core/flags.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/mgba/flags.h)
--install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/mgba DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} COMPONENT ${BINARY_NAME}-dev FILES_MATCHING PATTERN "*.h")
--install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/mgba-util DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} COMPONENT ${BINARY_NAME}-dev FILES_MATCHING PATTERN "*.h")
--install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/mgba/flags.h ${CMAKE_CURRENT_BINARY_DIR}/include/mgba-util/dllexports.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/mgba COMPONENT ${BINARY_NAME}-dev)
+ file(GLOB READMES ${CMAKE_CURRENT_SOURCE_DIR}/README*.md)
  
- if(WIN32)
- 	set(BIN_DIR ".\\")
+-find_program(UNIX2DOS NAMES unix2dos)
+-find_program(MARKDOWN NAMES markdown kramdown pandoc)
+-
+ if(UNIX OR NOT UNIX2DOS)
+ 	if(UNIX OR NOT MARKDOWN)
+ 		install(FILES ${READMES} DESTINATION ${CMAKE_INSTALL_DOCDIR} COMPONENT ${BINARY_NAME})

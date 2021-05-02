@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/12/03 14:53:19 nia Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/02 08:40:00 nia Exp $
 
-DISTNAME=	mgba-0.8.4
+DISTNAME=	mgba-0.9.1
 PKGNAME=	libretro-${DISTNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
@@ -50,6 +50,7 @@ INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 # Avoid conflicting with emulators/mgba.
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/mGBA
+	${RM} -rf ${DESTDIR}${PREFIX}/include/mgba*
 
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
