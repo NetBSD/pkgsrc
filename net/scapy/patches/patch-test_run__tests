@@ -1,6 +1,7 @@
-$NetBSD: patch-test_run__tests,v 1.1 2021/04/27 21:53:11 gutteridge Exp $
+$NetBSD: patch-test_run__tests,v 1.2 2021/05/02 19:28:15 gutteridge Exp $
 
 Ensure command line arguments are passed to the test script.
+https://github.com/secdev/scapy/pull/3196
 
 --- test/run_tests.orig	2021-04-18 18:36:15.000000000 +0000
 +++ test/run_tests
