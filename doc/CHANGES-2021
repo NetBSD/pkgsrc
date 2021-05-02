@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2560 2021/05/02 10:05:50 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2561 2021/05/02 10:20:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4021,3 +4021,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/parallel to 20210422 [nia 2021-05-02]
 	Updated www/hackernews-tui to 0.6.0 [pin 2021-05-02]
 	Updated sysutils/zoxide to 0.7.0 [pin 2021-05-02]
+	Updated chat/libpurple to 2.14.4 [nia 2021-05-02]
+	Updated chat/finch to 2.14.4 [nia 2021-05-02]
+	Updated chat/pidgin to 2.14.4 [nia 2021-05-02]
+	Updated chat/pidgin-silc to 2.14.4 [nia 2021-05-02]
+	Updated chat/pidgin-sametime to 2.14.4 [nia 2021-05-02]
