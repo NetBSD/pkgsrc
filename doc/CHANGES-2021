@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2554 2021/05/02 08:07:15 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2555 2021/05/02 08:16:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lua-rocks to 3.7.0 [nia 2021-05-02]
 	Updated converters/libmwaw to 0.3.18 [nia 2021-05-02]
 	Updated games/devilutionx to 1.2.1 [nia 2021-05-02]
+	Updated security/mbedtls to 2.26.0 [nia 2021-05-02]
