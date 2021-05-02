@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/08/27 12:26:13 joerg Exp $
+# $NetBSD: Makefile,v 1.96 2021/05/02 10:24:52 nia Exp $
 
 DISTNAME=	gnome-terminal-3.36.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-terminal/${PKGVERSION_NOREV:R}/}
@@ -12,12 +12,11 @@ COMMENT=	Terminal emulator for GNOME
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--disable-search-provider

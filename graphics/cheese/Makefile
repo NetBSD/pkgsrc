@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2021/04/14 07:28:19 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2021/05/02 10:24:49 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 PKGREVISION=	6
@@ -11,11 +11,9 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Cheese
 COMMENT=	Use your webcam to take photos and videos
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
-
 DEPENDS+=	gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
 
-USE_TOOLS+=	pkg-config msgfmt xgettext
+USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
 MESON_ARGS+=	-Dgtk_doc=false
 MESON_ARGS+=	-Dman=false

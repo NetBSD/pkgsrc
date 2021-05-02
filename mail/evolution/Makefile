@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2021/04/21 11:40:28 adam Exp $
+# $NetBSD: Makefile,v 1.255 2021/05/02 10:24:49 nia Exp $
 
 DISTNAME=	evolution-3.34.1
 PKGREVISION=	10
@@ -12,13 +12,12 @@ COMMENT=	Mail and calendar client from GNOME
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config itstool
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 
 DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/evolution
 

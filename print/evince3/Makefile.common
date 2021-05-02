@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2019/12/12 14:15:50 leot Exp $
+# $NetBSD: Makefile.common,v 1.22 2021/05/02 10:24:51 nia Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -19,7 +19,7 @@ DISTINFO_FILE=		${.CURDIR}/../../print/evince3/distinfo
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config itstool
 USE_LANGUAGES=		c c++
 
 # Requires --desktop in msgfmt.
@@ -31,7 +31,6 @@ CONFIGURE_ARGS+=	--without-gspell
 CONFIGURE_ARGS+=	--disable-libgnome-desktop
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 # XXX fake for "configure" to allow build w/o a gs installed
 # (avoid hard dependency on a specific version)

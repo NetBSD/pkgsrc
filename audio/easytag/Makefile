@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2020/08/17 20:18:05 leot Exp $
+# $NetBSD: Makefile,v 1.117 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	easytag-2.4.3
 PKGREVISION=	6
@@ -11,12 +11,11 @@ HOMEPAGE=	https://projects.gnome.org/easytag/
 COMMENT=	GTK+ tag editor for MP3, Ogg Vorbis files, and others
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
-
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool pkg-config xgettext
+USE_TOOLS+=		itstool
 
 PLIST_VARS+=		man
 

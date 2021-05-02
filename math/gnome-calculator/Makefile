@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/04/21 11:42:10 adam Exp $
+# $NetBSD: Makefile,v 1.52 2021/05/02 10:24:49 nia Exp $
 
 DISTNAME=		gnome-calculator-3.24.0
 PKGREVISION=		29
@@ -12,13 +12,12 @@ COMMENT=		Desktop calculator for GNOME
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbolic
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 CONFLICTS+=		gcalctool-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config
+USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config itstool
 USE_PKGLOCALEDIR=	yes
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

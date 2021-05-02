@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/04/21 11:43:00 adam Exp $
+# $NetBSD: Makefile,v 1.40 2021/05/02 10:24:53 nia Exp $
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
@@ -11,7 +11,6 @@ CATEGORIES=	x11
 COMMENT=	MATE panel applets
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
