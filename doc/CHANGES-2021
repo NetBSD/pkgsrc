@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2564 2021/05/02 11:23:44 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.2565 2021/05/02 13:42:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-XML-Atom to 0.43 [kleink 2021-05-02]
 	Updated www/py-flask-flatpages to 0.7.3 [kleink 2021-05-02]
 	Updated www/py-flask-admin to 1.5.8 [kleink 2021-05-02]
+	Removed devel/hs-exceptions [pho 2021-05-02]
