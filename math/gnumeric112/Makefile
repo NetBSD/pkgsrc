@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/04/21 11:42:10 adam Exp $
+# $NetBSD: Makefile,v 1.74 2021/05/02 10:24:50 nia Exp $
 
 DISTNAME=	gnumeric-1.12.48
 PKGREVISION=	1
@@ -11,12 +11,12 @@ HOMEPAGE=	http://www.gnumeric.org/
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config yacc
+USE_TOOLS+=		itstool
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
