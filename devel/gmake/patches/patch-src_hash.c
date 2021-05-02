@@ -1,10 +1,10 @@
-$NetBSD: patch-src_hash.c,v 1.3 2020/06/12 23:50:16 sevan Exp $
+$NetBSD: patch-src_hash.c,v 1.4 2021/05/02 19:03:52 wiz Exp $
 
 PCC says: hash.c:326: error: Constant "4294967295" is out of range
 
---- hash.c.orig	2006-02-11 21:00:39.000000000 +0100
-+++ hash.c
-@@ -323,7 +323,7 @@ round_up_2 (unsigned long n)
+--- src/hash.c.orig	2020-06-12 14:40:24.838680043 +0000
++++ src/hash.c
+@@ -321,7 +321,7 @@ round_up_2 (unsigned long n)
    n |= (n >> 8);
    n |= (n >> 16);
  
