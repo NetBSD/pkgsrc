@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/04/14 07:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/02 11:06:14 nia Exp $
 
 DISTNAME=	libsecret-0.20.4
 PKGREVISION=	1
@@ -13,12 +13,12 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config gsed
 USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	gdbus-codegen
 
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret-unstable.pc.in
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in

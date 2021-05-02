@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/04/21 11:42:39 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/05/02 11:06:14 nia Exp $
 
 PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 
 COMMENT=	File manager for the MATE desktop
 
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+USE_TOOLS+=	gdbus-codegen
 
 PKGCONFIG_OVERRIDE+=	libcaja-extension/libcaja-extension.pc.in
 
