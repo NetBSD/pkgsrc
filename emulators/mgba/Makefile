@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2021/04/21 13:24:37 adam Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/02 08:39:59 nia Exp $
 
-DISTNAME=	mgba-0.8.4
-PKGREVISION=	2
+DISTNAME=	mgba-0.9.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 
@@ -18,6 +17,7 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	5
 
 CMAKE_ARGS+=	-DUSE_DISCORD_RPC=OFF
+CMAKE_ARGS+=	-DSKIP_GIT=ON
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"
