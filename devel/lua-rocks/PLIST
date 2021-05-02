@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/07/01 11:06:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/02 07:48:22 nia Exp $
 bin/luarocks-${LUADOTVER}
 bin/luarocks-admin-${LUADOTVER}
 ${LUA_EXAMPLESDIR}/config-${LUADOTVER}.lua
@@ -66,6 +66,7 @@ ${LUA_LDIR}/luarocks/fs/freebsd.lua
 ${LUA_LDIR}/luarocks/fs/linux.lua
 ${LUA_LDIR}/luarocks/fs/lua.lua
 ${LUA_LDIR}/luarocks/fs/macosx.lua
+${LUA_LDIR}/luarocks/fs/netbsd.lua
 ${LUA_LDIR}/luarocks/fs/tools.lua
 ${LUA_LDIR}/luarocks/fs/unix.lua
 ${LUA_LDIR}/luarocks/fs/unix/tools.lua
