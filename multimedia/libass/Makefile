@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/10/27 18:07:57 adam Exp $
+# $NetBSD: Makefile,v 1.28 2021/05/02 17:43:54 adam Exp $
 
-DISTNAME=	libass-0.15.0
+DISTNAME=	libass-0.15.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libass/}
-GITHUB_PROJECT=	libass
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
@@ -20,7 +19,6 @@ PKGCONFIG_OVERRIDE+=	libass.pc.in
 
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
-BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.0
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

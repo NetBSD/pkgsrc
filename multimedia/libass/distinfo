@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/10/27 18:07:57 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/05/02 17:43:54 adam Exp $
 
-SHA1 (libass-0.15.0.tar.xz) = be4a19dfa7f62b8243607f28caf9b8a7d2e9aff1
-RMD160 (libass-0.15.0.tar.xz) = 91b469b82de4aa69dd6ccb07f3e195d369de2cb4
-SHA512 (libass-0.15.0.tar.xz) = 067ed519e64da7e2e45436bb09e390f1a77d966aeb9420729f36c9725d89491655ead69eb61b43f3220b8ff8f9de3891911b62757466f843ab13ee7149d88459
-Size (libass-0.15.0.tar.xz) = 367848 bytes
+SHA1 (libass-0.15.1.tar.xz) = ceb7450facf37c825bd6b9747e8b471f2a592b16
+RMD160 (libass-0.15.1.tar.xz) = dc33165b9524de57c6d7eed09dbb017072d28dac
+SHA512 (libass-0.15.1.tar.xz) = e5a1cca7a72b21de7da2f83fc46db6b35e822593b67fa16563451f4121965e16e825a1665996a0e6022992e6b0365fc2b9b898932dd8086d2ee87b48851ef307
+Size (libass-0.15.1.tar.xz) = 369884 bytes
