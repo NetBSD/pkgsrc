@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/04/21 11:42:24 adam Exp $
+# $NetBSD: Makefile,v 1.41 2021/05/02 11:06:13 nia Exp $
 
 DISTNAME=	gnome-online-accounts-3.36.0
 PKGREVISION=	3
@@ -11,12 +11,11 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 COMMENT=	Service that allows online accounts to be used with GNOME
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		gdbus-codegen
 
 CONFIGURE_ENV+=	GLIB_COMPILE_SCHEMAS=glib-compile-schemas
 

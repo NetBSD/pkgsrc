@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.63 2021/05/02 10:24:50 nia Exp $
+# $NetBSD: bsd.tools.mk,v 1.64 2021/05/02 11:06:13 nia Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -154,6 +154,7 @@ post-tools:
 .include "cmake.mk"
 .include "imake.mk"
 .include "itstool.mk"
+.include "gdbus-codegen.mk"
 .include "zip.mk"
 .include "replace.mk"
 .include "perl.mk"

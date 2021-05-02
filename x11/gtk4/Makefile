@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/04/21 13:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:16 nia Exp $
 
 DISTNAME=	gtk-4.0.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -12,14 +12,12 @@ HOMEPAGE=	https://www.gtk.org/
 COMMENT=	Multi-platform toolkit for creating GUIs, version 4
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 # This package invokes python3 command.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gdbus-codegen
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 

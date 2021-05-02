@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/04/21 13:25:22 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:14 nia Exp $
 
 DISTNAME=	gnome-control-center-3.38.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -11,9 +11,8 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-control-center
 COMMENT=	Interface to configure various aspects of the GNOME desktop
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 USE_TOOLS+=	pkg-config msgfmt xgettext
+USE_TOOLS+=	gdbus-codegen
 
 MESON_ARGS+=	-Dcheese=false
 MESON_ARGS+=	-Dtests=false

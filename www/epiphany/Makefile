@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2021/05/02 10:24:52 nia Exp $
+# $NetBSD: Makefile,v 1.204 2021/05/02 11:06:15 nia Exp $
 
 DISTNAME=	epiphany-3.36.2
 PKGREVISION=	3
@@ -11,9 +11,8 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Web
 COMMENT=	Web browser for the GNOME desktop
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
+USE_TOOLS+=	gdbus-codegen
 
 MESON_ARGS+=	-Dunit_tests=disabled
 

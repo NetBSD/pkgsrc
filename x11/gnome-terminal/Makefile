@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/05/02 10:24:52 nia Exp $
+# $NetBSD: Makefile,v 1.97 2021/05/02 11:06:16 nia Exp $
 
 DISTNAME=	gnome-terminal-3.36.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-terminal/${PKGVERSION_NOREV:R}/}
@@ -11,13 +11,13 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Terminal
 COMMENT=	Terminal emulator for GNOME
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	pkg-config gmake itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	gdbus-codegen
 
 CONFIGURE_ARGS+=	--disable-search-provider
 CONFIGURE_ARGS+=	--without-nautilus-extension

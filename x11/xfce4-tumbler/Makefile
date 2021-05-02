@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/04/21 13:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.97 2021/05/02 11:06:16 nia Exp $
 
 PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -12,11 +12,9 @@ MASTER_SITES=	https://archive.xfce.org/src/xfce/tumbler/${VERSION:R}/
 HOMEPAGE=	https://docs.xfce.org/xfce/thunar/tumbler
 COMMENT=	D-Bus thumbnailing service
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gdbus-codegen
 
 CONFIGURE_ARGS=	--disable-raw-thumbnailer \
 			--disable-gstreamer-thumbnailer

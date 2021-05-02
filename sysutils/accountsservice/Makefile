@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 04:56:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:14 nia Exp $
 
 DISTNAME=	accountsservice-0.6.42
 PKGREVISION=	2
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake autoconf autoreconf automake msgfmt
+USE_TOOLS+=	gdbus-codegen
 
 EGDIR=		${PREFIX}/share/examples/accountsservice
 
@@ -38,8 +39,6 @@ SUBST_CLASSES+=		gdm
 SUBST_FILES.gdm=	src/daemon.c
 SUBST_STAGE.gdm=	pre-configure
 SUBST_SED.gdm=		-e 's,/etc/gdm/custom.conf,${PKG_SYSCONFDIR}/gdm/custom.conf,g'
-
-BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
