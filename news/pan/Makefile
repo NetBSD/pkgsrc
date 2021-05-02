@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2021/04/21 13:25:15 adam Exp $
+# $NetBSD: Makefile,v 1.111 2021/05/02 10:24:51 nia Exp $
 
 DISTNAME=		pan-0.146
 PKGREVISION=		6
@@ -11,9 +11,7 @@ HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK2
 LICENSE=		gnu-gpl-v2
 
-TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
-
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

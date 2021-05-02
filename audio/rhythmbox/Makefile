@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2021/04/21 11:41:01 adam Exp $
+# $NetBSD: Makefile,v 1.180 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	rhythmbox-3.4.4
 PKGREVISION=	2
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		itstool
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -28,7 +29,6 @@ CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--with-brasero
 CONFIGURE_ARGS+=	--with-ipod
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss

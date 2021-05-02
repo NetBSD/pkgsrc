@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/04/13 10:02:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/02 10:24:52 nia Exp $
 
 DISTNAME=	yelp-xsl-3.32.1
 PKGREVISION=	1
@@ -11,10 +11,8 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	XSL stylesheets for Yelp help browser
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
-
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config intltool msgfmt
+USE_TOOLS+=		pkg-config intltool msgfmt itstool
 USE_PKGLOCALEDIR=	yes
 PYTHON_FOR_BUILD_ONLY=	tool
 

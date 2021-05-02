@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2021/04/21 11:42:38 adam Exp $
+# $NetBSD: Makefile,v 1.94 2021/05/02 10:24:52 nia Exp $
 
 DISTNAME=	brasero-3.12.2
 PKGREVISION=	7
@@ -14,11 +14,10 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config perl
-USE_TOOLS+=	msgfmt xgettext
+USE_TOOLS+=	msgfmt xgettext itstool
 USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 CONFIGURE_ARGS+=	--disable-nautilus
 CONFIGURE_ARGS+=	--enable-compile-warnings=minimum # Disable Werror

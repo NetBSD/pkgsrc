@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2021/04/21 13:24:23 adam Exp $
+# $NetBSD: Makefile,v 1.118 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	sound-juicer-3.24.0
 PKGREVISION=	9
@@ -11,13 +11,12 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/SoundJuicer
 COMMENT=	CD ripping tool
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	msgfmt msgmerge xgettext itstool
 USE_TOOLS+=	gmake
 
 # XXX fails without GNU msgfmt
