@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1527 2021/04/25 06:56:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1528 2021/05/02 20:03:53 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -82,6 +82,7 @@ SUBDIR+=	clearsilver-base
 SUBDIR+=	clisp-fastcgi
 SUBDIR+=	contao35
 SUBDIR+=	cppcms
+SUBDIR+=	cratuity
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
 SUBDIR+=	curl
