@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3369 2021/04/27 22:58:40 thor Exp $
+# $NetBSD: Makefile,v 1.3370 2021/05/02 13:43:15 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -578,7 +578,6 @@ SUBDIR+=	hs-dlist
 SUBDIR+=	hs-echo
 SUBDIR+=	hs-either
 SUBDIR+=	hs-errors
-SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-fail
 SUBDIR+=	hs-fgl

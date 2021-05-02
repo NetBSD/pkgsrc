@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2020/01/01 04:23:34 pho Exp $
-
-SHA1 (exceptions-0.10.4.tar.gz) = f0e512c639ba31dcd37875702d718ecd4bf009fe
-RMD160 (exceptions-0.10.4.tar.gz) = bcf1a2ba174d645297b54dcb438b044f4f6424d1
-SHA512 (exceptions-0.10.4.tar.gz) = 3df1edb4abab8e2e2dbd7387809d9768efca36c6840225ce33bee8679a4efdcf86d28beafb54a9a40e512163e4d088f94e788341bf614869bbdbd9d701bca4a2
-Size (exceptions-0.10.4.tar.gz) = 20819 bytes
