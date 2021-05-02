@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/04/21 11:40:32 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/02 09:37:50 nia Exp $
 
 DISTNAME=	libbluray-1.3.0
 PKGREVISION=	1
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-bdjava-jar
 CONFIGURE_ARGS+=	--disable-optimizations
 PKGCONFIG_OVERRIDE+=	src/libbluray.pc.in
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 # provide jni_md.h for other architectures
 post-extract:
