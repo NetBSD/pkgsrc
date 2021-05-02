@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20598 2021/05/02 08:17:57 wiz Exp $
+$NetBSD: TODO,v 1.20599 2021/05/02 08:48:44 nia Exp $
 
 Suggested new packages
 ======================
@@ -1836,7 +1836,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
-	o parallel-20210322
 	o pari-2.13.1
 	o parley-20.12.3
 	o parrot-8.1.0
