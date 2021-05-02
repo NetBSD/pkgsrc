@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.91 2021/04/21 11:40:13 adam Exp $
+# $NetBSD: Makefile,v 1.92 2021/05/02 10:19:20 nia Exp $
 
-COMMENT=		Multi-protocol Instant Messaging client GTK frontend
-PKGREVISION=		6
+COMMENT=		Multi-protocol GTK instant messaging client
 
 .include		"../../chat/libpurple/Makefile.common"
 
 USE_TOOLS+=		msgfmt intltool
 
 CONFIGURE_ARGS+=	--enable-gtkui
+CONFIGURE_ARGS+=	--disable-gevolution
 
 BUILD_DIRS=		pidgin
 INSTALLATION_DIRS=	share/applications

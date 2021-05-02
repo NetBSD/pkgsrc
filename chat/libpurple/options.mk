@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2021/03/10 11:50:26 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2021/05/02 10:19:20 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
@@ -60,6 +60,7 @@ REPLACE_SH+=		libpurple/purple-send
 REPLACE_SH+=		libpurple/purple-send-async
 REPLACE_PYTHON+=	libpurple/purple-remote
 REPLACE_PYTHON+=	libpurple/purple-url-handler
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 .  include "../../sysutils/py-dbus/buildlink3.mk"
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
