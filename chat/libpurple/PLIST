@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2020/06/12 11:40:19 nia Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/05/02 10:19:20 nia Exp $
 ${PLIST.dbus}bin/purple-client-example
 ${PLIST.dbus}bin/purple-remote
 ${PLIST.dbus}bin/purple-send
@@ -84,14 +84,11 @@ lib/purple-2/buddynote.la
 ${PLIST.dbus}lib/purple-2/dbus-example.la
 lib/purple-2/idle.la
 lib/purple-2/joinpart.la
-lib/purple-2/libaim.la
 ${PLIST.avahi}lib/purple-2/libbonjour.la
 lib/purple-2/libgg.la
-lib/purple-2/libicq.la
 lib/purple-2/libirc.la
 lib/purple-2/libjabber.la
 lib/purple-2/libnovell.la
-lib/purple-2/liboscar.la
 lib/purple-2/libsimple.la
 lib/purple-2/libxmpp.la
 lib/purple-2/libzephyr.la
