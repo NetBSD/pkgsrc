@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/04/22 12:03:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/02 17:47:30 adam Exp $
 include/isl/aff.h
 include/isl/aff_type.h
 include/isl/arg.h
@@ -50,6 +50,7 @@ include/isl/space_type.h
 include/isl/stdint.h
 include/isl/stream.h
 include/isl/stride_info.h
+include/isl/typed_cpp.h
 include/isl/union_map.h
 include/isl/union_map_type.h
 include/isl/union_set.h
