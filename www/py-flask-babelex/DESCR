@@ -1,3 +1,10 @@
+*DEPRECATION WARNING*
+
+All Flask-BabelEx features were merged into Flask-Babel and
+ithe Flask-BabelEx package should no longer be used in your
+projects. Please migrate.
+
+
 Flask-BabelEx adds i18n/l10n support to Flask applications with
 the help of the Babel library.
 
