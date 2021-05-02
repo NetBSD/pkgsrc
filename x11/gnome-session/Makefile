@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2021/04/29 09:57:26 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.205 2021/05/02 11:06:15 nia Exp $
 
 DISTNAME=		gnome-session-40.1.1
 CATEGORIES=		x11 gnome
@@ -10,11 +10,11 @@ HOMEPAGE=		https://gitlab.gnome.org/GNOME/gnome-session
 COMMENT=		GNOME3 session management utilities
 LICENSE=		gnu-gpl-v2
 
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_TOOLS+=		pkg-config msgfmt xgettext
+USE_TOOLS+=		gdbus-codegen
 
 .include "../../mk/bsd.prefs.mk"
 

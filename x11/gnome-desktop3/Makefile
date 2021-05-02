@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2021/04/13 17:35:45 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.47 2021/05/02 11:06:15 nia Exp $
 
 DISTNAME=	gnome-desktop-40.0
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
@@ -11,9 +11,8 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME3 desktop-wide documents and libgnome-desktop library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+USE_TOOLS+=		pkg-config xgettext gdbus-codegen
 
-USE_TOOLS+=		pkg-config xgettext
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
 MESON_ARGS+=		-Dsystemd=disabled

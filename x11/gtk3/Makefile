@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2021/04/28 22:49:29 leot Exp $
+# $NetBSD: Makefile,v 1.164 2021/05/02 11:06:16 nia Exp $
 
 DISTNAME=	gtk+-3.24.29
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -16,9 +16,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		ggrep gmake perl pkg-config bash xgettext msgmerge
+USE_TOOLS+=		gdbus-codegen
 GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 
 # There is no logic in gettext.mk to detect the native version of xgettext,
