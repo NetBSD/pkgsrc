@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/19 15:31:53 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/02 11:06:16 nia Exp $
 
 DISTNAME=	gdm-40.0
 PKGNAME=	lib${DISTNAME}
@@ -11,14 +11,12 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Gnome Display Manager - client library
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 DEPENDS+=	zenity>=3.32.0:../../x11/zenity
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
 BUILD_DEFS+=		VARBASE
 
 USE_LANGUAGES=		c c++
