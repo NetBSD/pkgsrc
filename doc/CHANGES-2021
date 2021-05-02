@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2550 2021/05/01 21:52:12 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2551 2021/05/02 07:25:44 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mikutter to 4.1.5 [tsutsui 2021-05-01]
 	Updated sysutils/xplr to 0.5.12 [pin 2021-05-01]
 	Updated devel/nss to 3.64nb3 [wiz 2021-05-01]
+	Updated lang/mozjs78 to 78.4.0nb2 [prlw1 2021-05-02]
