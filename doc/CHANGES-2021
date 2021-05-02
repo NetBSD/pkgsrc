@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2561 2021/05/02 10:20:42 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2562 2021/05/02 10:56:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4026,3 +4026,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/pidgin to 2.14.4 [nia 2021-05-02]
 	Updated chat/pidgin-silc to 2.14.4 [nia 2021-05-02]
 	Updated chat/pidgin-sametime to 2.14.4 [nia 2021-05-02]
+	Updated textproc/p5-XML-Atom to 0.43 [kleink 2021-05-02]
