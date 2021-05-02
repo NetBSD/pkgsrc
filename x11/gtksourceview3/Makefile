@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/04/21 11:40:45 adam Exp $
+# $NetBSD: Makefile,v 1.56 2021/05/02 10:24:52 nia Exp $
 
 DISTNAME=	gtksourceview-3.24.11
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config
+USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config itstool
 USE_PKGLOCALEDIR=	yes
 #CONFIGURE_ARGS+=	--disable-deprecations
 CONFIGURE_ARGS+=	--disable-maintainer-mode
@@ -28,8 +28,6 @@ PKG_SUGGESTED_OPTIONS=	introspection
 PLIST_VARS+=		introspection
 
 .include "../../mk/bsd.options.mk"
-
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2021/04/21 11:41:23 adam Exp $
+# $NetBSD: Makefile,v 1.142 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	devhelp-3.34.0
 PKGREVISION=	7
@@ -11,9 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Devhelp
 COMMENT=	Tool for browsing and searching API documentation from GNOME
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config msgfmt xgettext
-
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35

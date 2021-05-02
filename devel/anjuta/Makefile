@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2021/04/21 11:41:22 adam Exp $
+# $NetBSD: Makefile,v 1.158 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	anjuta-3.34.0
 PKGREVISION=	10
@@ -16,14 +16,13 @@ DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
-DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake:run intltool pkg-config:run perl:run sh:run
 USE_TOOLS+=		msgfmt:run msgmerge:run xgettext:run
-USE_TOOLS+=		bash:run bison flex
+USE_TOOLS+=		bash:run bison flex itstool
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-schemas-compile

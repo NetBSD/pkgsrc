@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/04/21 11:41:46 adam Exp $
+# $NetBSD: Makefile,v 1.74 2021/05/02 10:24:49 nia Exp $
 #
 
 DISTNAME=	pioneers-15.6
@@ -11,10 +11,8 @@ HOMEPAGE=	http://pio.sourceforge.net/
 COMMENT=	GNOME version of the Settlers of Catan board game
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
-
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake pkg-config msgfmt intltool
+USE_TOOLS+=		gmake pkg-config msgfmt intltool itstool
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

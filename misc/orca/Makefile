@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/12/04 20:45:30 nia Exp $
+# $NetBSD: Makefile,v 1.56 2021/05/02 10:24:50 nia Exp $
 
 DISTNAME=	orca-3.34.1
 PKGREVISION=	4
@@ -11,8 +11,6 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Orca
 COMMENT=	Screen reader
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
-
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
@@ -21,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 GNU_CONFIGURE=	yes
 PY_PATCHPLIST=	yes
 
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 # XXX msgfmt: unknown option -- desktop

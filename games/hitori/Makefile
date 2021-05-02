@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/04/12 13:17:31 nia Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/02 10:24:48 nia Exp $
 
 DISTNAME=	hitori-3.38.0
 CATEGORIES=	games gnome
@@ -10,9 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Hitori
 COMMENT=	Logic game similar to Sudoku
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 
-USE_TOOLS+=	msgfmt pkg-config xgettext
-
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+USE_TOOLS+=	msgfmt pkg-config xgettext itstool
 
 .include "../../mk/bsd.prefs.mk"
 # msgfmt: unknown option -- desktop
