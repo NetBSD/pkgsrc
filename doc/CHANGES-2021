@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2559 2021/05/02 10:04:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2560 2021/05/02 10:05:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-mgba to 0.9.1 [nia 2021-05-02]
 	Updated parallel/parallel to 20210422 [nia 2021-05-02]
 	Updated www/hackernews-tui to 0.6.0 [pin 2021-05-02]
+	Updated sysutils/zoxide to 0.7.0 [pin 2021-05-02]
