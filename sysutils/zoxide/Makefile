@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/04/09 09:00:57 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/02 10:05:32 pin Exp $
 
-DISTNAME=	zoxide-0.6.0
+DISTNAME=	zoxide-0.7.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ajeetdsouza/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,11 +14,16 @@ LICENSE=	mit
 
 USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 
-INSTALLATION_DIRS=	bin share/doc/zoxide
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zoxide ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/zoxide
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide.1
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide-add.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide-add.1
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide-import.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide-import.1
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide-init.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide-init.1
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide-query.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide-query.1
+	${INSTALL_MAN} ${WRKSRC}/man/zoxide-remove.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zoxide-remove.1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
