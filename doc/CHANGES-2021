@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2569 2021/05/02 19:04:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2570 2021/05/02 19:06:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4035,3 +4035,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/isl to 0.24 [adam 2021-05-02]
 	Updated devel/py-approvaltests to 0.5.0 [schmonz 2021-05-02]
 	Updated devel/gmake to 4.3nb1 [wiz 2021-05-02]
+	Updated www/libmicrohttpd to 0.9.73 [wiz 2021-05-02]
