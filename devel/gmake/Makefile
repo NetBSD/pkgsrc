@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.113 2020/09/12 05:58:40 rillig Exp $
+# $NetBSD: Makefile,v 1.114 2021/05/02 19:03:52 wiz Exp $
 
-# Update to 4.3 is on hold because of failure to build firefox,
-# openjdk and perhaps others.  Upgrading requires a proposal on
-# tech-pkg and consensus that it is safe.
-# See https://lists.gnu.org/archive/html/info-gnu/2020-01/msg00004.html
-DISTNAME=	make-4.2.1
+DISTNAME=	make-4.3
 PKGNAME=	g${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/make/make.html
@@ -22,10 +17,8 @@ GNU_CONFIGURE=		yes
 TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
 
-# NOTE:  the 'test' target requires perl, but since gmake does
-# not otherwise require it, perl is not listed as an explicit
-# dependency
 TEST_TARGET=		check
+USE_TOOLS+=		perl:test
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
@@ -35,6 +28,13 @@ CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 # XXX: Do not install gmake setgid and do not override the owner group
 # XXX: based on possible /dev/kmem permissions.
 CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
+
+.include "../../mk/bsd.prefs.mk"
+
+# kernel bug, fixed in NetBSD 9.99.82
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-9].*)
+CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
+.endif
 
 AUTO_MKDIRS=		yes
 
