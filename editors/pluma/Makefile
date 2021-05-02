@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/04/21 11:41:33 adam Exp $
+# $NetBSD: Makefile,v 1.37 2021/05/02 10:24:48 nia Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -8,8 +8,7 @@ CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
 
-USE_TOOLS+=	bash:run perl
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+USE_TOOLS+=	bash:run perl itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	data/pluma.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/04/29 23:30:12 thor Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/02 10:24:47 nia Exp $
 
 DISTNAME=	Ardour-5.12.0
 PKGNAME=	${DISTNAME:tl}
@@ -17,10 +17,8 @@ LICENSE=	gnu-gpl-v2
 
 UNLIMIT_RESOURCES=	stacksize
 
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	pkg-config perl itstool
 USE_LANGUAGES=	c c++11
-
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 EGDIR=		${PREFIX}/share/examples/ardour5
 

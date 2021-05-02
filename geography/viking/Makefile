@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2021/04/21 13:24:45 adam Exp $
+# $NetBSD: Makefile,v 1.120 2021/05/02 10:24:49 nia Exp $
 #
 
 VERSION=		1.9
@@ -14,13 +14,12 @@ COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
 
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
-
 # viking says it "will" use c++11, and mapnik (not yet included) needs
 # c++11.
 USE_LANGUAGES=		c c++
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		itstool
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2019/06/18 20:11:50 nia Exp $
+# $NetBSD: Makefile.common,v 1.60 2021/05/02 10:24:47 nia Exp $
 #
 # used by databases/libgda/Makefile
 # used by databases/libgda-mysql/Makefile
@@ -17,9 +17,8 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
 
-TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
-
 USE_TOOLS+=		gmake intltool pkg-config msgfmt
+USE_TOOLS+=		itstool
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

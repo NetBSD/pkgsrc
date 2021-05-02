@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/04/21 11:40:48 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/05/02 10:24:53 nia Exp $
 
 PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -7,8 +7,6 @@ DISTNAME=	mate-control-center-${VERSION:R}.0
 CATEGORIES=	sysutils
 
 COMMENT=	MATE Control Center
-
-BUILD_DEPENDS+=	itstool>=0:../../textproc/itstool
 
 PKGCONFIG_OVERRIDE+=	capplets/keybindings/mate-keybindings.pc.in
 PKGCONFIG_OVERRIDE+=	capplets/default-applications/mate-default-applications.pc.in
