@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2021/04/21 13:24:55 adam Exp $
+# $NetBSD: Makefile,v 1.166 2021/05/02 10:24:49 nia Exp $
 
 DISTNAME=	balsa-2.6.2
 PKGREVISION=	2
@@ -12,12 +12,11 @@ COMMENT=	Email client using GTK3
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake intltool perl pkg-config
-USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	msgfmt msgmerge xgettext itstool
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 
