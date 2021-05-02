@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2021/04/21 13:25:22 adam Exp $
+# $NetBSD: Makefile,v 1.81 2021/05/02 11:06:14 nia Exp $
 
 DISTNAME=	gnome-settings-daemon-3.38.1
 PKGREVISION=	5
@@ -11,10 +11,10 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-settings-daemon
 COMMENT=	GNOME settings daemon
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	pkg-config msgfmt xgettext perl
+USE_TOOLS+=	gdbus-codegen
 
 CONFLICTS+=	gnome-control-center<2.22.0
 

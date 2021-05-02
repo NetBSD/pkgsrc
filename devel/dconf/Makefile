@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/04/14 07:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2021/05/02 11:06:12 nia Exp $
 
 DISTNAME=	dconf-0.36.0
 PKGREVISION=	5
@@ -11,12 +11,11 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
 COMMENT=	Backend for gsettings
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gdbus-codegen
 
 PYTHON_FOR_BUILD_ONLY=	tool
 REPLACE_PYTHON+=	*.py

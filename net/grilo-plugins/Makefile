@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2021/05/02 10:24:51 nia Exp $
+# $NetBSD: Makefile,v 1.43 2021/05/02 11:06:13 nia Exp $
 
 DISTNAME=	grilo-plugins-0.3.10
 PKGREVISION=	8
@@ -11,9 +11,8 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Plugins for grilo media browser
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 USE_TOOLS+=	pkg-config xgettext itstool
+USE_TOOLS+=	gdbus-codegen
 
 PYTHON_FOR_BUILD_ONLY=	tool
 

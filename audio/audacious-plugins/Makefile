@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2021/04/21 13:24:20 adam Exp $
+# $NetBSD: Makefile,v 1.123 2021/05/02 11:06:12 nia Exp $
 
 DISTNAME=	audacious-plugins-4.1
 PKGREVISION=	4
@@ -48,7 +48,7 @@ PLIST_VARS+=	dbus
 .include "options.mk"
 .include "../../audio/audacious/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.audacious:Mdbus}
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+USE_TOOLS+=		gdbus-codegen
 PLIST.dbus=		yes
 .else
 CONFIGURE_ARGS+=	--disable-mpris2

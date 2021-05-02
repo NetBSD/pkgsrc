@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/04/14 07:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/02 11:06:14 nia Exp $
 
 DISTNAME=		gcr-3.38.0
 PKGREVISION=		1
@@ -11,13 +11,13 @@ HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Library for crypto UI and related tasks
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=		aclocal autoconf automake autopoint
+USE_TOOLS+=		gdbus-codegen
 
 CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--enable-gtk-doc
