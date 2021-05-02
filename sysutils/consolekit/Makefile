@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/01/30 10:23:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/02 11:06:14 nia Exp $
 
 CONSOLEKIT_VER=	1.2.2
 DISTNAME=	ConsoleKit2-${CONSOLEKIT_VER}
@@ -42,6 +42,7 @@ CONF_FILES+=	${EGDIR}/ConsoleKit/seats.d/00-primary.seat		\
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=	autoconf automake autoreconf autopoint
+USE_TOOLS+=	gdbus-codegen
 USE_LIBTOOL=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}			\
@@ -60,8 +61,6 @@ post-install:
 	${MKDIR} ${DESTDIR}${RULESDIR} &&		\
 	${INSTALL_DATA} ${FILESDIR}/50-shutdown.rules	\
 	${DESTDIR}${RULESDIR}/50-shutdown.rules
-
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ${SH} autogen.sh

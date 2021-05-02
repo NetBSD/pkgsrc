@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/08/31 18:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/05/02 11:06:12 nia Exp $
 
 PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -12,6 +12,8 @@ MASTER_SITES=	https://archive.xfce.org/src/xfce/xfconf/${VERSION:R}/
 HOMEPAGE=	https://docs.xfce.org/xfce/xfconf/start
 COMMENT=	Xfce client-server configuration storage and query system
 
+USE_TOOLS+=	gdbus-codegen
+
 PKGCONFIG_OVERRIDE=	xfconf/libxfconf-0.pc.in
 
 CONFIGURE_ARGS+=	--disable-perl-bindings
@@ -22,8 +24,6 @@ CHECK_PORTABILITY_SKIP=	test-driver
 
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.0.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.72
-
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
