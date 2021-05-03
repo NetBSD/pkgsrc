@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/04/24 16:10:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 19:00:56 pho Exp $
 
 BUILDLINK_TREE+=	hs-conduit-extra
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-conduit-extra
 HS_CONDUIT_EXTRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-conduit-extra+=	hs-conduit-extra>=1.3.5
-BUILDLINK_ABI_DEPENDS.hs-conduit-extra+=	hs-conduit-extra>=1.3.5
+BUILDLINK_ABI_DEPENDS.hs-conduit-extra+=	hs-conduit-extra>=1.3.5nb1
 BUILDLINK_PKGSRCDIR.hs-conduit-extra?=		../../devel/hs-conduit-extra
 
 .include "../../devel/hs-async/buildlink3.mk"
