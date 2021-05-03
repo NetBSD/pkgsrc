@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/05/03 08:34:37 wiz Exp $
+
+This fixes build failure for latest source with autoconf. Add the check
+glib-mkenums and definition of GLIB_MKENUMS to configure.ac
+
+https://gitlab.freedesktop.org/farstream/farstream/-/commit/f047f4f6640146dda90cf9c87565fd61a3edeee8
+
+--- configure.ac.orig	2020-03-11 23:26:39.000000000 +0000
++++ configure.ac
+@@ -264,6 +264,12 @@ FS_PREFIX="`$PKG_CONFIG --variable=prefi
+ AC_SUBST(GLIB_PREFIX)
+ AC_SUBST(FS_PREFIX)
+ 
++dnl Check for glib-2.0 tools
++AC_MSG_CHECKING([for glib-mkenums])
++GLIB_MKENUMS="`$PKG_CONFIG --variable=glib_mkenums glib-2.0`"
++AC_SUBST(GLIB_MKENUMS)
++AC_MSG_RESULT($GLIB_MKENUMS)
++
+ dnl *** set variables based on configure arguments ***
+ 
+ dnl set license and copyright notice
