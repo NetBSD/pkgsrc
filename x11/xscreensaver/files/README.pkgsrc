@@ -1,0 +1,15 @@
+$NetBSD: README.pkgsrc,v 1.1 2021/05/03 23:31:40 gutteridge Exp $
+
+If xscreensaver is built with the non-default "pam" option, on NetBSD, the
+"pam_pwauth_suid.so" module will be used to authenticate against a shadow
+password database. Note that use of this module might allow programs with
+your privileges to get a copy of your plaintext password as typed in for
+unlocking. In order to make unlocking work, you need to add an xscreensaver
+file to your PAM configuration directory (usually /etc/pam.d). On NetBSD,
+you can find a sample pam.d file for xscreensaver in:
+	${PREFIX}/share/examples/pam-pwauth_suid
+
+By default (if the "pam" option isn't set), pkgsrc will set the
+	${PREFIX}/bin/xscreensaver
+executable setuid root. Since this is a relatively complex program,
+there is the risk of other exploits.
