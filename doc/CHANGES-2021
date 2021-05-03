@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2580 2021/05/03 16:17:13 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.2581 2021/05/03 16:17:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.6.2 [adam 2021-05-03]
 	Updated geography/qgis to 3.16.6 [gdt 2021-05-03]
 	Updated geography/gdal-lib to 3.3.0 [gdt 2021-05-03]
+	Updated geography/py-gdal to 3.3.0 [gdt 2021-05-03]
