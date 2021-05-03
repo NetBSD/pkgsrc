@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/04/23 08:18:25 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 19:01:04 pho Exp $
 
 BUILDLINK_TREE+=	hs-these
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-these
 HS_THESE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-these+=	hs-these>=1.1.1
-BUILDLINK_ABI_DEPENDS.hs-these+=	hs-these>=1.1.1.1
+BUILDLINK_ABI_DEPENDS.hs-these+=	hs-these>=1.1.1.1nb1
 BUILDLINK_PKGSRCDIR.hs-these?=		../../devel/hs-these
 
 .include "../../devel/hs-assoc/buildlink3.mk"

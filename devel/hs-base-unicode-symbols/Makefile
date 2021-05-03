@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/04/23 10:50:16 pho Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/03 19:00:55 pho Exp $
 
 DISTNAME=	base-unicode-symbols-0.2.4.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
