@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2584 2021/05/03 18:36:27 jdolecek Exp $
+$NetBSD: CHANGES-2021,v 1.2585 2021/05/03 23:42:30 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-numpy to 1.20.2 [adam 2021-05-03]
 	Updated math/py-scipy to 1.6.3 [adam 2021-05-03]
 	Updated net/freerdp2 to 2.3.2 [jdolecek 2021-05-03]
+	Updated x11/xscreensaver to 5.45nb2 [gutteridge 2021-05-03]
