@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/05/02 08:26:49 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/03 17:41:50 jdolecek Exp $
 
 DISTNAME=	freerdp-2.1.2
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 
@@ -37,8 +37,16 @@ LDFLAGS+=	${LIBOSSAUDIO}
 CMAKE_ARGS+=	-DWITH_OSS=OFF
 .endif
 
-# backtrace
-LDFLAGS.NetBSD+=	-lexecinfo
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# backtrace(3)
+LDFLAGS.${OPSYS}+=	-lexecinfo
+.endif
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+NEED_EPOLLSHIM=		# defined
+LDFLAGS.${OPSYS}+=	-lepoll-shim
+.endif
 
 PKGCONFIG_OVERRIDE+=	freerdp.pc.in
 
@@ -62,4 +70,7 @@ post-install:
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.ifdef NEED_EPOLLSHIM
+.include "../../devel/libepoll-shim/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
