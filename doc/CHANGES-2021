@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2583 2021/05/03 17:55:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2584 2021/05/03 18:36:27 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-FusionInventory-Agent to 2.6 [bouyer 2021-05-03]
 	Updated math/py-numpy to 1.20.2 [adam 2021-05-03]
 	Updated math/py-scipy to 1.6.3 [adam 2021-05-03]
+	Updated net/freerdp2 to 2.3.2 [jdolecek 2021-05-03]
