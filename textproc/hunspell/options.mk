@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2018/05/23 22:06:50 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2021/05/03 09:46:59 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hunspell
 PKG_SUPPORTED_OPTIONS=		wide-curses
-PKG_SUGGESTED_OPTIONS=		# empty
+PKG_SUGGESTED_OPTIONS=		wide-curses
 
 .include "../../mk/bsd.options.mk"
 
