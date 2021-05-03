@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2585 2021/05/03 23:42:30 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2586 2021/05/03 23:49:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4053,3 +4053,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-scipy to 1.6.3 [adam 2021-05-03]
 	Updated net/freerdp2 to 2.3.2 [jdolecek 2021-05-03]
 	Updated x11/xscreensaver to 5.45nb2 [gutteridge 2021-05-03]
+	Updated x11/mate-panel to 1.24.2 [gutteridge 2021-05-03]
