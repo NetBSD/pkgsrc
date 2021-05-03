@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/03/30 11:00:38 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.97 2021/05/03 18:18:31 cirnatdan Exp $
 #
 
 DISTNAME=	zenity-3.32.0
@@ -14,9 +14,8 @@ LICENSE=	gnu-lgpl-v2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf
-USE_TOOLS+=		automake gm4 aclocal xgettext autopoint
+USE_TOOLS+=		automake gm4 aclocal xgettext autopoint itstool
 
-BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
 BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 pre-configure:
