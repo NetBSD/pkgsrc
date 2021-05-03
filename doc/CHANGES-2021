@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2573 2021/05/02 20:04:20 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2574 2021/05/03 06:18:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/vala to 0.52.3 [wiz 2021-05-02]
 	Updated x11/libxkbcommon to 1.3.0 [wiz 2021-05-02]
 	Added www/cratuity version 0.1.4 [pin 2021-05-02]
+	Updated sysutils/macchina to 0.7.3 [pin 2021-05-03]
