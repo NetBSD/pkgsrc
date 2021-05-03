@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2021/04/21 11:40:34 adam Exp $
+# $NetBSD: Makefile,v 1.70 2021/05/03 08:34:06 wiz Exp $
 
 DISTNAME=	gupnp-1.0.3
 PKGREVISION=	11
@@ -41,7 +41,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.90
 .include "../../net/libsoup/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gssdp+=	gssdp>=0.14.15
 .include "../../net/gssdp/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
