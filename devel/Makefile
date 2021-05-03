@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3370 2021/05/02 13:43:15 pho Exp $
+# $NetBSD: Makefile,v 1.3371 2021/05/03 17:17:17 jdolecek Exp $
 #
 
 COMMENT=	Development utilities
@@ -765,6 +765,7 @@ SUBDIR+=	libdstr
 SUBDIR+=	libdwarf
 SUBDIR+=	libebml
 SUBDIR+=	libelf
+SUBDIR+=	libepoll-shim
 SUBDIR+=	libestr
 SUBDIR+=	libetm
 SUBDIR+=	libev
