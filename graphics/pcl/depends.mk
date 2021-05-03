@@ -1,0 +1,11 @@
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../math/flann-lib/buildlink3.mk"
+# waiting for VTK update, not usable yet
+#.include "../../graphics/vtk/buildlink3.mk"
+#.include "../../graphics/glew/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
+.include "../../math/qhull/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/metslib/buildlink3.mk"
