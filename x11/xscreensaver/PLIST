@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2020/04/05 17:30:36 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.52 2021/05/03 23:31:40 gutteridge Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -374,7 +374,7 @@ man/man6/xmatrix.6
 man/man6/xrayswarm.6
 man/man6/xspirograph.6
 man/man6/zoom.6
-share/examples/xscreensaver/pam.d/xscreensaver-NetBSD
+share/doc/xscreensaver/README.pkgsrc
 share/locale/da/LC_MESSAGES/xscreensaver.mo
 share/locale/de/LC_MESSAGES/xscreensaver.mo
 share/locale/es/LC_MESSAGES/xscreensaver.mo
