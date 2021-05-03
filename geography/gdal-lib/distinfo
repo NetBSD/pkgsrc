@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.45 2021/03/13 01:11:40 gdt Exp $
+$NetBSD: distinfo,v 1.46 2021/05/03 16:17:00 gdt Exp $
 
-SHA1 (gdal-3.2.2.tar.gz) = 0410e5dda55a5c0f48e8ef02ce7bab04314ed0bf
-RMD160 (gdal-3.2.2.tar.gz) = 4c7fb5c41a9b48a7306cbb27c3dca71ec572e983
-SHA512 (gdal-3.2.2.tar.gz) = d7ff8773d3f1cb894fce89f56a3d4355769f1113eefb1367a3a543ced750e2c42618a4a1deef3a338ddd4d33b7332ae962b2d793f8c0b97e31ed4b84cb2df2d5
-Size (gdal-3.2.2.tar.gz) = 18959415 bytes
+SHA1 (gdal-3.3.0.tar.xz) = 3b3816a769f4c88ae9f78cf23209c2b07ccd58a4
+RMD160 (gdal-3.3.0.tar.xz) = 9d8da2bf3977a2a7bed1f748146dfee6904b76db
+SHA512 (gdal-3.3.0.tar.xz) = b3f8db22c0010ca2f3d38b9445cb8f8754df1e203a882cc739dee086c3d343a53153cd28e35e9cae6baf4f89554e16c0478f75746144f6f3a02bfb731f5465a0
+Size (gdal-3.3.0.tar.xz) = 12923948 bytes
 SHA1 (patch-frmts_grib_degrib_degrib_myutil.c) = 0e046afa236d7e0d6186fe392cb2da05fa5b42c5
 SHA1 (patch-port_cpl__conv.cpp) = dd309911e85512d2a477d55f33f77f79e62482eb
