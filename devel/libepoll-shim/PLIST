@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/03 17:17:17 jdolecek Exp $
+include/libepoll-shim/epoll-shim/detail/common.h
+include/libepoll-shim/epoll-shim/detail/poll.h
+include/libepoll-shim/epoll-shim/detail/read.h
+include/libepoll-shim/epoll-shim/detail/write.h
+include/libepoll-shim/sys/epoll.h
+include/libepoll-shim/sys/eventfd.h
+include/libepoll-shim/sys/signalfd.h
+include/libepoll-shim/sys/timerfd.h
+lib/cmake/epoll-shim/epoll-shim-config.cmake
+lib/cmake/epoll-shim/epoll-shim-targets-noconfig.cmake
+lib/cmake/epoll-shim/epoll-shim-targets.cmake
+lib/libepoll-shim.so
+lib/libepoll-shim.so.0
+libdata/pkgconfig/epoll-shim.pc

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/03 17:17:17 jdolecek Exp $
+
+SHA1 (epoll-shim-0.0.20210418.tar.gz) = 91d34e8a3e07afc1bfbca4575894f31bc7d3aa70
+RMD160 (epoll-shim-0.0.20210418.tar.gz) = 0e8a136b1b3716eaa4f7b1c7b52219d36522b09d
+SHA512 (epoll-shim-0.0.20210418.tar.gz) = 34272a694165bfb47f8a103d18aec304f7a72b36491b83268ff63dd696f5103ab53dc9e32173ed20ddd7baa36b9d7ca2b3ec6236eef8dc2f02a101819b75eb7b
+Size (epoll-shim-0.0.20210418.tar.gz) = 91936 bytes
