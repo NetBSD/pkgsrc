@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2020/09/12 00:19:28 gdt Exp $
+# $NetBSD: options.mk,v 1.20 2021/05/03 15:32:03 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -30,4 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-gdal-[0-9]*:../../geography/py-gdal
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+
+# py-owslib # metasearch
+# py-yaml # quickosm
+
 .endif
