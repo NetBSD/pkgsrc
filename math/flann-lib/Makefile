@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2021/04/27 15:16:46 thor Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/03 09:26:42 thor Exp $
 
-GITHUB_PROJECT=	flann
-GITHUB_TAG=	1.9.1
-DISTNAME=	1.9.1
-PKGNAME=	${GITHUB_PROJECT}-lib-${DISTNAME}
+DISTNAME=	flann-1.9.1
+PKGNAME=	${DISTNAME:S/-/-lib-/}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mariusmuja/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_PROJECT=	flann
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://github.com/mariusmuja/flann/
 COMMENT=	Fast Library for Approximate Nearest Neighbors
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/flann-1.9.1
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
