@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/03 17:17:17 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/03 17:20:24 jdolecek Exp $
 
 GITHUB_PROJECT=	epoll-shim
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jiixyj/epoll-shim
 COMMENT=	Small epoll implemented using kevent
 LICENSE=	mit
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-*
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
