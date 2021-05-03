@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/02 15:06:00 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/03 19:01:18 pho Exp $
 
 DISTNAME=	stringsearch-0.3.6.6
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

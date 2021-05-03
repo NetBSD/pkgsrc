@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2021/04/24 16:48:46 pho Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/03 19:01:13 pho Exp $
 
 DISTNAME=	cgrep-6.6.32
 #PKGNAME=	${DISTNAME} # This package should be renamed to textproc/cgrep
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org

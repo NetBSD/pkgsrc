@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/04/23 06:18:23 pho Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/03 19:00:58 pho Exp $
 
 DISTNAME=	fail-4.9.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

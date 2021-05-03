@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/01/02 11:40:05 pho Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/03 19:01:10 pho Exp $
 
 DISTNAME=	digest-0.0.1.2
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	zecrazytux@zecrazytux.net

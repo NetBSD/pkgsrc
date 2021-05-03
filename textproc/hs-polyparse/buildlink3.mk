@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/01/11 11:21:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2021/05/03 19:01:16 pho Exp $
 
 BUILDLINK_TREE+=	hs-polyparse
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-polyparse
 HS_POLYPARSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-polyparse+=	hs-polyparse>=1.13
-BUILDLINK_ABI_DEPENDS.hs-polyparse+=	hs-polyparse>=1.13
+BUILDLINK_ABI_DEPENDS.hs-polyparse+=	hs-polyparse>=1.13nb1
 BUILDLINK_PKGSRCDIR.hs-polyparse?=	../../textproc/hs-polyparse
 .endif	# HS_POLYPARSE_BUILDLINK3_MK
 

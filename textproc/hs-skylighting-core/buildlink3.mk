@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/04/24 16:28:50 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-skylighting-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-skylighting-core
 HS_SKYLIGHTING_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-skylighting-core+=	hs-skylighting-core>=0.10.5
-BUILDLINK_ABI_DEPENDS.hs-skylighting-core+=	hs-skylighting-core>=0.10.5.1
+BUILDLINK_ABI_DEPENDS.hs-skylighting-core+=	hs-skylighting-core>=0.10.5.1nb1
 BUILDLINK_PKGSRCDIR.hs-skylighting-core?=	../../textproc/hs-skylighting-core
 
 .include "../../converters/hs-aeson/buildlink3.mk"

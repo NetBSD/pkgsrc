@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/04/24 18:01:15 pho Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/03 19:01:20 pho Exp $
 
 DISTNAME=	http-client-tls-0.3.5.3
+PKGREVISION=	1
 CATEGORIES=	www security
 
 MAINTAINER=	pho@cielonegro.org
