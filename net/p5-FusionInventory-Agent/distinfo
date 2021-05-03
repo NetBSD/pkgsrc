@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2020/09/13 09:13:45 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/05/03 17:12:23 bouyer Exp $
 
-SHA1 (FusionInventory-Agent-2.5.tar.gz) = 782f26d66f9f079cb96463be71bac161bb8600c6
-RMD160 (FusionInventory-Agent-2.5.tar.gz) = 3a100fd9b5506cfb6a39a77cfd7950638552335a
-SHA512 (FusionInventory-Agent-2.5.tar.gz) = 37f0545df716e482fffd018a56b9c7482d7fce64fd0fa277c481a553a2108e7588f34077fb4775bb6352668efc96b3525fe97b1d6331d637401e8db8c0c91333
-Size (FusionInventory-Agent-2.5.tar.gz) = 2638934 bytes
-SHA1 (patch-Makefile.PL) = 932d2075bc8fb67fca393e72409f93ce2a0675ca
+SHA1 (FusionInventory-Agent-2.6.tar.gz) = 288acf5707e550fa10275f8e6fab70b50aa790aa
+RMD160 (FusionInventory-Agent-2.6.tar.gz) = 1d6504f2119bb531c527180c9275bb692b8a1a2a
+SHA512 (FusionInventory-Agent-2.6.tar.gz) = c4d12b17e87f9b7e59c1a7284fb88bb0ab51c22037624f666469c75b993ec5939f3f88752afdab82b5d35972c76fbc36a49c6fd1f5246481efb8adf893b4fa3f
+Size (FusionInventory-Agent-2.6.tar.gz) = 2819730 bytes
+SHA1 (patch-Makefile.PL) = d01414b74fa3bbd9bedb658b39d3a07074274142
