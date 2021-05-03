@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/04/21 13:24:45 adam Exp $
+# $NetBSD: Makefile,v 1.33 2021/05/03 16:17:00 gdt Exp $
 
 #PKGREVISION=	0
-PKGREVISION= 2
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -11,13 +10,15 @@ BUILD_DIRS=	swig/python
 
 MAKE_FILE=	GNUmakefile
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 REPLACE_PYTHON+=	swig/python/scripts/*py
 
 INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.prefs.mk"
 
-EGG_NAME?=		GDAL-${VERSION}
+EGG_NAME?=		GDAL-${VERSION_BASE}
 EGG_INFODIR?=		${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=		EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
