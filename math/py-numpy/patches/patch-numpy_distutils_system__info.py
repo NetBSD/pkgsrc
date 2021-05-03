@@ -1,6 +1,6 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.8 2021/05/03 17:15:22 adam Exp $
 
---- numpy/distutils/system_info.py.orig	2021-04-20 18:13:28.992593008 +0000
+--- numpy/distutils/system_info.py.orig	2021-03-27 09:52:12.000000000 +0000
 +++ numpy/distutils/system_info.py
 @@ -114,6 +114,19 @@ Currently, the following classes are ava
      x11_info:x11
@@ -22,7 +22,7 @@ $NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Ex
  Example:
  ----------
  [DEFAULT]
-@@ -1744,6 +1757,16 @@ class lapack_opt_info(system_info):
+@@ -1845,6 +1858,16 @@ class lapack_opt_info(system_info):
              return True
          return False
  
@@ -39,9 +39,9 @@ $NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Ex
      def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
-@@ -1767,6 +1790,12 @@ class lapack_opt_info(system_info):
-                                  "LAPACK order has unacceptable "
-                                  "values: {}".format(non_existing))
+@@ -1855,6 +1878,12 @@ class lapack_opt_info(system_info):
+                              "LAPACK order has unacceptable "
+                              "values: {}".format(unknown_order))
  
 +        if 'NPY_LAPACK_LIBS' in os.environ:
 +            # Bypass autodetection, set language to F77 and use env var linker
@@ -52,7 +52,7 @@ $NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Ex
          for lapack in lapack_order:
              if self._calc_info(lapack):
                  return
-@@ -1889,6 +1918,20 @@ class blas_opt_info(system_info):
+@@ -1977,6 +2006,20 @@ class blas_opt_info(system_info):
          self.set_info(**info)
          return True
  
@@ -73,9 +73,9 @@ $NetBSD: patch-numpy_distutils_system__info.py,v 1.7 2021/04/20 20:53:49 thor Ex
      def _calc_info(self, name):
          return getattr(self, '_calc_info_{}'.format(name))()
  
-@@ -1910,6 +1953,12 @@ class blas_opt_info(system_info):
-             if len(non_existing) > 0:
-                 raise ValueError("blas_opt_info user defined BLAS order has unacceptable values: {}".format(non_existing))
+@@ -1985,6 +2028,12 @@ class blas_opt_info(system_info):
+         if len(unknown_order) > 0:
+             raise ValueError("blas_opt_info user defined BLAS order has unacceptable values: {}".format(unknown_order))
  
 +        if 'NPY_BLAS_LIBS' in os.environ:
 +            # Bypass autodetection, set language to F77 and use env var linker
