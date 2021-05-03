@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2582 2021/05/03 17:13:01 bouyer Exp $
+$NetBSD: CHANGES-2021,v 1.2583 2021/05/03 17:55:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4049,3 +4049,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gdal-lib to 3.3.0 [gdt 2021-05-03]
 	Updated geography/py-gdal to 3.3.0 [gdt 2021-05-03]
 	Updated net/p5-FusionInventory-Agent to 2.6 [bouyer 2021-05-03]
+	Updated math/py-numpy to 1.20.2 [adam 2021-05-03]
+	Updated math/py-scipy to 1.6.3 [adam 2021-05-03]
