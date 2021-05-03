@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2576 2021/05/03 08:34:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2577 2021/05/03 14:51:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.7.3 [pin 2021-05-03]
 	Added graphics/pcl version 1.11.1 [thor 2021-05-03]
 	Updated chat/farstream to 0.2.9nb7 [wiz 2021-05-03]
+	Updated mail/notmuch to 0.32 [ryoon 2021-05-03]
