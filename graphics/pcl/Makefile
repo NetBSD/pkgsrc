@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/03 06:25:11 thor Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/03 09:15:30 thor Exp $
 
 GITHUB_PROJECT=	pcl
 GITHUB_TAG=	pcl-${PKGVERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/PointCloudLibrary/pcl/
 COMMENT=	2D/3D image and point cloud processing
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/pcl-pcl-${PKGVERSION}
+WRKSRC=		${WRKDIR}/pcl-pcl-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
