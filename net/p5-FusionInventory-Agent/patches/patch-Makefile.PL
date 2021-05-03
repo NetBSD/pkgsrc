@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.PL,v 1.3 2020/09/13 09:13:45 wiz Exp $
+$NetBSD: patch-Makefile.PL,v 1.4 2021/05/03 17:12:23 bouyer Exp $
 
 Fix man page path.
 Install config into examples/ directory.
 
---- Makefile.PL.orig	2019-04-12 15:04:29.000000000 +0000
-+++ Makefile.PL
-@@ -173,12 +173,12 @@ sub constants {
+--- Makefile.PL.orig	2020-09-28 11:55:10.000000000 +0200
++++ Makefile.PL	2021-05-03 18:36:36.841916298 +0200
+@@ -174,12 +174,12 @@
          INSTALLLIB           => '$(DATADIR)/lib',
          INSTALLSITELIB       => '$(DATADIR)/lib',
          INSTALLVENDORLIB     => '$(DATADIR)/lib',
@@ -24,29 +24,27 @@ Install config into examples/ directory.
          SYSCONFDIR           => '$(PREFIX)/etc/fusioninventory',
          DATADIR              => '$(PREFIX)/share/fusioninventory',
          LOCALSTATEDIR        => '$(PREFIX)/var/fusioninventory',
-@@ -239,17 +239,17 @@ sub install {
+@@ -240,18 +240,12 @@
      $install .= <<'EOF';
  
  config_install : pure_install
 -	$(MKPATH) $(DESTDIR)$(SYSCONFDIR)
 -	$(NOECHO) $(CHMOD) $(PERM_DIR) $(DESTDIR)$(SYSCONFDIR)
+-	for config in agent.cfg $(shell cd etc; echo *-plugin.cfg ); \
 +	$(MKPATH) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory
 +	$(NOECHO) $(CHMOD) $(PERM_DIR) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory
- 	for config in agent.cfg inventory-server-plugin.cfg server-test-plugin.cfg ssl-server-plugin.cfg ; \
++	for config in agent.cfg inventory-server-plugin.cfg proxy-server-plugin.cfg proxy2-server-plugin.cfg server-test-plugin.cfg ssl-server-plugin.cfg; \
  	do \
--	  if $(TEST_F) $(DESTDIR)/$(SYSCONFDIR)/$$config; then \
+-	  if $(TEST_F) $(DESTDIR)$(SYSCONFDIR)/$$config; then \
 -	    $(RM_F) $(DESTDIR)$(SYSCONFDIR)/$$config.new; \
--	    $(CP) etc/agent.cfg $(DESTDIR)$(SYSCONFDIR)/$$config.new; \
+-	    $(CP) etc/$$config $(DESTDIR)$(SYSCONFDIR)/$$config.new; \
 -	    $(CHMOD) $(PERM_RW) $(DESTDIR)$(SYSCONFDIR)/$$config.new; \
-+	  if $(TEST_F) $(DESTDIR)/$(PREFIX)/share/examples/fusioninventory/$$config; then \
-+	    $(RM_F) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config.new; \
-+	    $(CP) etc/agent.cfg $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config.new; \
-+	    $(CHMOD) $(PERM_RW) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config.new; \
- 	  else \
--	    $(CP) etc/agent.cfg $(DESTDIR)$(SYSCONFDIR)/$$config; \
+-	  else \
+-	    $(CP) etc/$$config $(DESTDIR)$(SYSCONFDIR)/$$config; \
 -	    $(CHMOD) $(PERM_RW) $(DESTDIR)$(SYSCONFDIR)/$$config; \
-+	    $(CP) etc/agent.cfg $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config; \
-+	    $(CHMOD) $(PERM_RW) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config; \
- 	  fi; \
+-	  fi; \
++	  $(CP) etc/$$config $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config; \
++	  $(CHMOD) $(PERM_RW) $(DESTDIR)$(PREFIX)/share/examples/fusioninventory/$$config; \
  	done
  	$(ABSPERLRUN) -pi \
+ 	    -e "s|=> undef, # SYSCONFDIR.*|=> '$(SYSCONFDIR)',|;" \
