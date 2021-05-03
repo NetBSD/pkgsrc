@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/19 12:31:39 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/03 18:35:07 jdolecek Exp $
 bin/freerdp-proxy
 bin/freerdp-shadow-cli
 bin/winpr-hash
@@ -22,6 +22,7 @@ include/freerdp2/freerdp/channels/audin.h
 include/freerdp2/freerdp/channels/channels.h
 include/freerdp2/freerdp/channels/cliprdr.h
 include/freerdp2/freerdp/channels/disp.h
+include/freerdp2/freerdp/channels/echo.h
 include/freerdp2/freerdp/channels/encomsp.h
 include/freerdp2/freerdp/channels/geometry.h
 include/freerdp2/freerdp/channels/log.h
@@ -97,6 +98,7 @@ include/freerdp2/freerdp/gdi/region.h
 include/freerdp2/freerdp/gdi/shape.h
 include/freerdp2/freerdp/gdi/video.h
 include/freerdp2/freerdp/graphics.h
+include/freerdp2/freerdp/heartbeat.h
 include/freerdp2/freerdp/input.h
 include/freerdp2/freerdp/license.h
 include/freerdp2/freerdp/listener.h
