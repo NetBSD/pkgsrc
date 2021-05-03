@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20605 2021/05/02 19:21:03 wiz Exp $
+$NetBSD: TODO,v 1.20606 2021/05/03 18:36:27 jdolecek Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freemint-binutils-2.30
 	o freemint-gcc-7.1.0
 	o freenet-0.7
-	o freerdp2-2.3.2
 	o freesci-0.6.4
 	o freeswitch-1.2.3
 	o freetds-1.2.9
