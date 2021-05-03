@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/04/23 12:57:15 pho Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/03 19:01:05 pho Exp $
 
 DISTNAME=	vault-0.3.1.5
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
