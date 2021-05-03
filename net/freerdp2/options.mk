@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2020/06/09 12:22:01 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/05/03 18:24:38 jdolecek Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freerdp2
-PKG_SUPPORTED_OPTIONS=		alsa pulseaudio cups x11
-PKG_SUGGESTED_OPTIONS=		x11
+PKG_SUPPORTED_OPTIONS=		alsa pulseaudio cups x11 pcsc
+PKG_SUGGESTED_OPTIONS=		x11 pcsc
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
 .include "../../mk/bsd.options.mk"
@@ -46,4 +46,12 @@ CMAKE_ARGS+=	-DWITH_X11=ON
 .include "../../x11/libXv/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_X11=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcsc)
+.  include "../../security/pcsc-lite/buildlink3.mk"
+CMAKE_ARGS+=   -DWITH_PCSC=ON
+PLIST.pcsc=    yes
+.else
+CMAKE_ARGS+=   -DWITH_PCSC=OFF
 .endif
