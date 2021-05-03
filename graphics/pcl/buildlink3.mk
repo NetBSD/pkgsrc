@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/05/03 06:25:11 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 09:12:58 thor Exp $
 
 BUILDLINK_TREE+=	pcl
 
@@ -7,7 +7,7 @@ PCL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcl+=	pcl>=1.10.0
 BUILDLINK_ABI_DEPENDS.pcl+=	pcl>=1.10.0
-BUILDLINK_PKGSRCDIR.pcl?=	../../wip/pcl
+BUILDLINK_PKGSRCDIR.pcl?=	../../graphics/pcl
 
 .include "../../graphics/pcl/depends.mk"
 
