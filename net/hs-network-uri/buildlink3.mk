@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/04/24 13:16:34 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2021/05/03 19:01:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-network-uri
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-network-uri
 HS_NETWORK_URI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-network-uri+=	hs-network-uri>=2.6.4
-BUILDLINK_ABI_DEPENDS.hs-network-uri+=	hs-network-uri>=2.6.4.1
+BUILDLINK_ABI_DEPENDS.hs-network-uri+=	hs-network-uri>=2.6.4.1nb1
 BUILDLINK_PKGSRCDIR.hs-network-uri?=	../../net/hs-network-uri
 
 .include "../../devel/hs-th-compat/buildlink3.mk"

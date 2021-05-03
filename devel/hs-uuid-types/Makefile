@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/04/23 06:54:13 pho Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/03 19:01:05 pho Exp $
 
 DISTNAME=	uuid-types-1.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
