@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/03 18:24:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/03 18:35:07 jdolecek Exp $
 
-DISTNAME=	freerdp-2.1.2
+DISTNAME=	freerdp-2.3.2
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	6
+PKGREVISION=	# empty
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 
@@ -51,6 +51,8 @@ LDFLAGS.${OPSYS}+=	-lepoll-shim
 PKGCONFIG_OVERRIDE+=	freerdp.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7
+
+WRKSRC=			${WRKDIR}/FreeRDP-${PKGVERSION_NOREV}
 
 post-install:
 .for page in freerdp-shadow-cli.1 winpr-hash.1 winpr-makecert.1 xfreerdp.1
