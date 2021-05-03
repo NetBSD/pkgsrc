@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/19 21:21:55 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/03 19:00:57 pho Exp $
 
 DISTNAME=	data-default-instances-containers-0.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

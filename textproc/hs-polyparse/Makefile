@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/04/24 17:07:42 pho Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/03 19:01:16 pho Exp $
 
 DISTNAME=	polyparse-1.13
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
