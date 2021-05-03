@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2021/05/03 06:25:11 thor Exp $
+
+SHA1 (pcl-1.11.1.tar.gz) = 982a528fa493834e415728357695296c011001b9
+RMD160 (pcl-1.11.1.tar.gz) = 7f0679139ad86db5ae3451a7bfdaaf4ecdf5ceca
+SHA512 (pcl-1.11.1.tar.gz) = 93dd3180443a1a26f019bfd1e34855014619b3b74326ae93806a2711dba392b1c76f2aa682cc3955c651a45ce829a0c89d1cae7cef09cdea60fcb671aefe4da2
+Size (pcl-1.11.1.tar.gz) = 68515312 bytes
+SHA1 (patch-cmake_Modules_FindQhull.cmake) = 466406798e1167e9dec56b62837c503c8b78a0e1
+SHA1 (patch-surface_include_pcl_surface_convex__hull.h) = 89a05102558cc368f5e8d009a50cfd47ea3416d9
+SHA1 (patch-surface_include_pcl_surface_impl_concave__hull.hpp) = 1cb2dc9b2cc7893092eb2619e65d6cc44b710fbc
+SHA1 (patch-surface_include_pcl_surface_impl_convex__hull.hpp) = 73f3252aecc4133a5a01a427e2bf96d5f573bdfa
+SHA1 (patch-surface_include_pcl_surface_qhull.h) = 36b5005120d001020e44035c5a6d8d8d8029a93e
