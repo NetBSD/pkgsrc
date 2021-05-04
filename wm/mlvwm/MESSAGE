@@ -1,14 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2021/05/04 14:09:52 nia Exp $
 
-Before using mlvwm, you'll have to specify the configuration file:
+Before using mlvwm, you'll have to copy the configuration file into place:
 
-	$ mlvwm -f ${PREFIX}/share/examples/Mlvwmrc
-
-	or
-
-	$ cp ${PREFIX}/share/examples/Mlvwmrc ~/.mlvwmrc
-
-Enjoy.
+	$ cp ${PREFIX}/share/examples/mlvwm/Mlvwmrc ~/.mlvwmrc
 
 ===========================================================================
