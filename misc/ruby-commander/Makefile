@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/03/23 16:37:11 taca Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/04 15:30:16 taca Exp $
 
-DISTNAME=	commander-4.5.2
+DISTNAME=	commander-4.6.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
