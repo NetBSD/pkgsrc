@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/01/11 13:28:12 taca Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/04 15:10:45 taca Exp $
 
-DISTNAME=	tty-prompt-0.23.0
+DISTNAME=	tty-prompt-0.23.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
