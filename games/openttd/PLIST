@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/04/05 14:41:21 nia Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/05/04 17:08:05 nia Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
@@ -17,6 +17,7 @@ share/openttd/ai/compat_0.7.nut
 share/openttd/ai/compat_1.0.nut
 share/openttd/ai/compat_1.1.nut
 share/openttd/ai/compat_1.10.nut
+share/openttd/ai/compat_1.11.nut
 share/openttd/ai/compat_1.2.nut
 share/openttd/ai/compat_1.3.nut
 share/openttd/ai/compat_1.4.nut
@@ -27,7 +28,6 @@ share/openttd/ai/compat_1.8.nut
 share/openttd/ai/compat_1.9.nut
 share/openttd/baseset/no_music.obm
 share/openttd/baseset/no_sound.obs
-share/openttd/baseset/openttd.32.bmp
 share/openttd/baseset/openttd.grf
 share/openttd/baseset/opntitle.dat
 share/openttd/baseset/orig_dos.obg
@@ -40,6 +40,7 @@ share/openttd/baseset/orig_win.obg
 share/openttd/baseset/orig_win.obm
 share/openttd/baseset/orig_win.obs
 share/openttd/game/compat_1.10.nut
+share/openttd/game/compat_1.11.nut
 share/openttd/game/compat_1.2.nut
 share/openttd/game/compat_1.3.nut
 share/openttd/game/compat_1.4.nut
@@ -114,3 +115,4 @@ share/openttd/scripts/pre_dedicated.scr.example
 share/openttd/scripts/pre_server.scr.example
 share/openttd/scripts/readme.txt
 share/pixmaps/openttd.32.xpm
+share/pixmaps/openttd.64.xpm

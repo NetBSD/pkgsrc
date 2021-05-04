@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2021/04/21 11:41:45 adam Exp $
+# $NetBSD: Makefile,v 1.98 2021/05/04 17:08:05 nia Exp $
 
-DISTNAME=	openttd-1.10.3-source
+DISTNAME=	openttd-1.11.2-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -13,51 +12,39 @@ COMMENT=	Open source clone of Transport Tycoon Deluxe
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-HAS_CONFIGURE=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+
+# C++17
+GCC_REQD+=	7
+
 BUILD_DEFS+=	VARBASE
-BUILD_TARGET=	bundle
-
-# C++11
-GCC_REQD+=	4.8
-
-CONFIGURE_ARGS+=	--os=UNIX
-CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
-CONFIGURE_ARGS+=	--binary-dir=bin
-CONFIGURE_ARGS+=	--data-dir=share/openttd
-CONFIGURE_ARGS+=	--doc-dir=share/doc/openttd
-CONFIGURE_ARGS+=	--icon-theme-dir=share/icons/hicolor
-CONFIGURE_ARGS+=	--install-dir=${DESTDIR}
-CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
-CONFIGURE_ARGS+=	--menu-dir=share/applications
-CONFIGURE_ARGS+=	--personal-dir=.openttd
-CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
-
-CONFIGURE_ARGS+=	--without-allegro
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-cocoa-quickdraw
-CONFIGURE_ARGS+=	--with-cocoa
-CONFIGURE_ARGS+=	--without-application-bundle
-CONFIGURE_ARGS+=	--without-osx-sysroot
-.else
-CONFIGURE_ARGS+=	--with-sdl=sdl2
-.include "../../devel/SDL2/buildlink3.mk"
-.include "../../x11/libxdg-basedir/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxdg-basedir+=	libxdg-basedir>=1.2.0
-.endif
+CMAKE_ARGS+=	-DPERSONAL_DIR=.openttd
+CMAKE_ARGS+=	-DSHARED_DIR=${VARBASE}/games/openttd
+CMAKE_ARGS+=	-DGLOBAL_DIR=${PREFIX}/share/openttd
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_INSTALL_BINDIR=bin
+CMAKE_ARGS+=	-DCMAKE_INSTALL_DATADIR=share
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Allegro=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Grfcodec=ON
 
-MAKE_FLAGS.NetBSD+=	MD5SUM="/usr/bin/cksum -n -a md5"
+BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17 # alloca
 
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
