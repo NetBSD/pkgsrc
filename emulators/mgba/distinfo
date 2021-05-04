@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/05/02 08:39:59 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/05/04 14:19:17 nia Exp $
 
 SHA1 (mgba-0.9.1.tar.gz) = 78c13b21dfef0d7954a8d2ee7a4725a84fd6b0bf
 RMD160 (mgba-0.9.1.tar.gz) = 218379534fd8562eb7a97cc48b3c20429f6557df
@@ -7,3 +7,4 @@ Size (mgba-0.9.1.tar.gz) = 12795893 bytes
 SHA1 (patch-CMakeLists.txt) = e4bb18352c0d5602084c0674c1b5d6c3cd84b9bc
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
 SHA1 (patch-include_mgba-util_platform_posix_threading.h) = deabb02eda72a4682ad84f263982eb6f8db4699b
+SHA1 (patch-src_platform_qt_InputController.cpp) = 9297dbd0f8ef92f66d89caa77fe6dc03bb60e1cb
