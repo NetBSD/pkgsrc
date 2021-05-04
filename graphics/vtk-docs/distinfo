@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 21:34:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/05/04 14:41:52 prlw1 Exp $
 
-SHA1 (VTKDocHtml-4.2.tar.gz) = 75c6e4c3a07b904ecde11045269764546986390f
-RMD160 (VTKDocHtml-4.2.tar.gz) = c28817c9274ba968a8afc7d775faaa601ecb419d
-SHA512 (VTKDocHtml-4.2.tar.gz) = 3641389db16ed2d5b70dd5083a7b053ce41f8643af99c274058a54c58850e3a8a40008af9dae1811250456add732836b105be002d0f34022af2365c21181ee07
-Size (VTKDocHtml-4.2.tar.gz) = 20973979 bytes
+SHA1 (vtkDocHtml-9.0.1.tar.gz) = 11934ba630fd58a3759a10b8757f10ad4f9e01b2
+RMD160 (vtkDocHtml-9.0.1.tar.gz) = e1a147cfef34bcf5559d65b15aa9cb9c547b7b66
+SHA512 (vtkDocHtml-9.0.1.tar.gz) = 9997fb73ab46d28f107f5a7ef31a86f6948cd3ff88184fd4f1b0cc14dff1b8b6395e420ae2b2a42e772b90b84d8e077cc4543b8b8c9495481c3f8271949f11e4
+Size (vtkDocHtml-9.0.1.tar.gz) = 138707547 bytes
