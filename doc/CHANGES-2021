@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2621 2021/05/04 15:00:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2622 2021/05/04 15:01:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/sndfile-tools to 1.5 [nia 2021-05-04]
 	Updated devel/ruby-rb-kqueue to 0.2.6 [taca 2021-05-04]
 	Updated devel/ruby-test-unit to 3.4.1 [taca 2021-05-04]
+	Updated chat/srain to 1.2.1 [nia 2021-05-04]
