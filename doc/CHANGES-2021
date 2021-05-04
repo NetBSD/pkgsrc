@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2589 2021/05/04 05:23:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2590 2021/05/04 06:20:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4060,3 +4060,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py38-html-docs to 3.8.10 [adam 2021-05-04]
 	Updated lang/python39 to 3.9.5 [adam 2021-05-04]
 	Updated lang/py39-html-docs to 3.9.5 [adam 2021-05-04]
+	Updated devel/py-setuptools to 56.0.0 [adam 2021-05-04]
+	Updated databases/redis to 6.2.3 [adam 2021-05-04]
