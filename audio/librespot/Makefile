@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/02/22 09:37:41 pin Exp $
+# $NetBSD: Makefile,v 1.9 2021/05/04 16:32:55 pin Exp $
 
-DISTNAME=	librespot-0.1.6
+DISTNAME=	librespot-0.2.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=librespot-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
