@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
+$NetBSD: patch-sample__rc_Mlvwmrc,v 1.1 2021/05/04 14:09:52 nia Exp $
 
---- sample_rc/Mlvwmrc.orig	1999-01-23 13:37:52.000000000 +0100
-+++ sample_rc/Mlvwmrc	2005-09-04 08:52:13.000000000 +0200
-@@ -52,7 +52,7 @@
+- Use pkgsrc icon search path.
+- Make this more friendly to NetBSD base X11.
+
+--- sample_rc/Mlvwmrc.orig	2019-08-01 17:02:29.000000000 +0000
++++ sample_rc/Mlvwmrc
+@@ -52,7 +52,7 @@ EdgeResistance 50 50
  Compatible
  
  # Set icon search path. It needs before "Style".
@@ -11,20 +14,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
  IconMenuIcon label2.xpm
  
  # Balloon help Settings
-@@ -80,9 +80,9 @@
+@@ -80,9 +80,9 @@ END
  Menu Apple, Icon label1.xpm, Stick
  "About this Workstation..." NonSelect, Gray, Action About
  "" NonSelect
 -"Terminal"	Icon mini-display.xpm, Action Exec "kterm" exec kterm -ls
 -"Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
 -"calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
-+"Terminal"	Action Exec "kterm" exec kterm -ls
-+"Editor"  Action Exec "mule" exec mule
++"Terminal"	Action Exec "kterm" exec xterm
++"Editor"  Action Exec "mule" exec xedit
 +"calculator" Action Exec "xcal" exec xcalc
  END
  
  Menu def-File, Label "File", Left
-@@ -190,15 +190,15 @@
+@@ -190,15 +190,15 @@ END
  
  # Define the default window decoration
  Style
@@ -46,7 +49,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
  "XMeter" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR, NoTitle, NoCloseR
  "XMeter" NoWinList, Sticky, SkipSelect
  "*biff" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR, NoWinList, NoCloseR
-@@ -208,5 +208,5 @@
+@@ -208,5 +208,5 @@ Style
  END
  
  # Read other configuration

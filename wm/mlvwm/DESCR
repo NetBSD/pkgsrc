@@ -1,2 +1,22 @@
-MLVWM (Macintosh Like Virtual Window Manager) is a Window manager for
-X11 designed to look and feel like the Macintosh 8 environment.
+MLVWM (Macintosh-Like Virtual Window Manager) is an X11 window manager with
+a classic MacOS appearance. Its primary features include:
+
+* Emulation of MacOS 7 & 8 menu bar & window decorations
+* Optional multiple virtual desktops
+* A main menu bar across the top of the screen, with:
+  * Configurable global and per-application menus
+  * Menu items trigger application functionality via keyboard shorcuts or
+    commands
+  * An icon menu which shows all windows and supports:
+    * Switching desktops
+    * Selecting, hiding, and showing windows
+  * A balloon help menu
+  * The ability to "swallow" small windows into the menu bar
+* Windows which support:
+  * Title bars with optional close, zoom, and shade buttons
+  * Resize handle
+  * Optional double-click to toggle window shade
+  * Drag as solid window or just outline
+* Balloon help which shows X window information
+* Global keyboard shortcuts
+* Numerous configuration options to tune functionality
