@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/04 14:05:44 prlw1 Exp $
+
+SHA1 (gl2ps-1.4.2.tgz) = ee1eb8972e9d07bbe325552e4ec15d6828e8197c
+RMD160 (gl2ps-1.4.2.tgz) = 8f680025808a65c217c8dad3be3a524e6c0c337c
+SHA512 (gl2ps-1.4.2.tgz) = 46652e1b3825ace61dbd77c4b0bf451e7671c248eb18bbd3369e2fac00056ea4cd5d2578561984313c239e3b02f78b9d9a76d963c935af65a13bc2abfc538620
+Size (gl2ps-1.4.2.tgz) = 301134 bytes
