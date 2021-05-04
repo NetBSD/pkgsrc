@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2632 2021/05/04 20:30:01 abs Exp $
+$NetBSD: CHANGES-2021,v 1.2633 2021/05/04 22:18:44 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4109,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/qbittorrent to 4.3.5 [adam 2021-05-04]
 	Updated devel/meson to 0.58.0 [adam 2021-05-04]
 	Updated mail/exim to 4.94.2 [abs 2021-05-04]
+	Updated sysutils/py-Glances to 3.1.7 [fox 2021-05-04]
