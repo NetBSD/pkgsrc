@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2606 2021/05/04 14:06:32 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.2607 2021/05/04 14:08:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4082,3 +4082,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ffi-yajl to 2.4.0 [taca 2021-05-04]
 	Updated devel/ruby-equatable to 0.7.0 [taca 2021-05-04]
 	Added graphics/gl2ps version 1.4.2 [prlw1 2021-05-04]
+	Updated devel/ruby-libyajl2 to 2.1.0 [taca 2021-05-04]
