@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/05/04 08:19:42 fcambus Exp $
+
+SHA1 (trader-7.16.tar.gz) = c98d61bf884f0ddd76b87e82552c0e864890cf12
+RMD160 (trader-7.16.tar.gz) = 460e358223a98c966ab109c9ddd1ed234de0407b
+SHA512 (trader-7.16.tar.gz) = a5565f26844c8aa98e18c0e90c75f2e0c4cafb43123b7d6be6228d278912ca76048d41d4d6711a31c9f6e22d5f62b9ba18105366fc4a1ea1cedeac1ba3fec794
+Size (trader-7.16.tar.gz) = 1259294 bytes
+SHA1 (patch-src_utils.c) = 80d5e22f7c01359ba8d881c9c2b1b27fc0882599
