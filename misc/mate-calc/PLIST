@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/05 16:05:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/04 00:07:28 gutteridge Exp $
 bin/mate-calc
 bin/mate-calc-cmd
 bin/mate-calculator
@@ -3237,6 +3237,7 @@ share/locale/is/LC_MESSAGES/mate-calc.mo
 share/locale/it/LC_MESSAGES/mate-calc.mo
 share/locale/ja/LC_MESSAGES/mate-calc.mo
 share/locale/ka/LC_MESSAGES/mate-calc.mo
+share/locale/kab/LC_MESSAGES/mate-calc.mo
 share/locale/kk/LC_MESSAGES/mate-calc.mo
 share/locale/km/LC_MESSAGES/mate-calc.mo
 share/locale/kn/LC_MESSAGES/mate-calc.mo
