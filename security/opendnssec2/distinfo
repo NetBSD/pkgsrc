@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/03/05 21:17:25 he Exp $
+$NetBSD: distinfo,v 1.6 2021/05/04 07:37:19 he Exp $
 
-SHA1 (opendnssec-2.1.8.tar.gz) = d425f79f1378fc78d073097c02faf2b11a7bc2d1
-RMD160 (opendnssec-2.1.8.tar.gz) = ab2500a720a630b807e28c2a156aa3cd67fe17c3
-SHA512 (opendnssec-2.1.8.tar.gz) = 48fa9e1efe54d00bba1c97d42d8680a7b33d90360cbb12e333835384447a9d42ffc6508ee6b455bfa4522907b371d4703068e4fd184fd72ea6d950427029cc1c
-Size (opendnssec-2.1.8.tar.gz) = 1151571 bytes
-SHA1 (patch-conf_Makefile.in) = 83fdf2650bfe63688b072dcb8019d44b62f6f016
+SHA1 (opendnssec-2.1.9.tar.gz) = 2b8a065d0b86d860fdb59af3da377156037ce722
+RMD160 (opendnssec-2.1.9.tar.gz) = c0bfabe67619b09ebbdd9f6cb2818e024ad32974
+SHA512 (opendnssec-2.1.9.tar.gz) = 011a50606559651db1787949dcedbbc8727b8ec5c71e95425bfdae94b6db6b731e662ce4cb9f05b34d4ec3512067227869a72a2b2c8a6c14eb547036e4b6e02e
+Size (opendnssec-2.1.9.tar.gz) = 1155801 bytes
+SHA1 (patch-conf_Makefile.in) = b0a782916a9603138c09b484cc1534b938bf8330
 SHA1 (patch-enforcer_utils_1.4-2.0__db__convert_sqlite__convert.sql) = 6f59b2f7031be04dc3f7776cf2ac4807dee4fba7
