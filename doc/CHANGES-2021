@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2596 2021/05/04 07:47:42 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2597 2021/05/04 07:49:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-algorithms to 1.0.0 [taca 2021-05-04]
 	Updated devel/ruby-backports to 3.21.0 [taca 2021-05-04]
 	Updated devel/ruby-bindata to 2.4.9 [taca 2021-05-04]
+	Updated devel/ruby-bit-struct to 0.17 [taca 2021-05-04]
