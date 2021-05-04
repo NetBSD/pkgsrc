@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/03 19:01:13 pho Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/04 14:32:24 pho Exp $
 
 DISTNAME=	citeproc-0.3.0.9
 PKGREVISION=	1
@@ -11,6 +11,7 @@ LICENSE=	2-clause-bsd
 CONFIGURE_ARGS+=	-fexecutable
 
 .include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
