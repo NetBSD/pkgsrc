@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2021/04/22 18:53:55 nia Exp $
+# $NetBSD: Makefile,v 1.505 2021/05/04 08:21:11 fcambus Exp $
 #
 
 COMMENT=	Games
@@ -399,6 +399,7 @@ SUBDIR+=	tetrinetx
 SUBDIR+=	thew
 SUBDIR+=	tileworld
 SUBDIR+=	toppler
+SUBDIR+=	trader
 SUBDIR+=	tscp
 SUBDIR+=	tuxmath
 SUBDIR+=	tuxracer
