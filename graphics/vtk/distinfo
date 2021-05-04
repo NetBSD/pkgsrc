@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.9 2020/05/14 19:28:08 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/05/04 14:48:34 prlw1 Exp $
 
-SHA1 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 31ab01c16b3d44ce201d8180af431833cf6527d8
-RMD160 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 71a092cf929cfaeeb8f297334cadb829209b9ad7
-SHA512 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = f4c4ef36046ae17733ebca142f2182f9f091a891de7b3de878ff5637d50567dc924ed04de1f9261605ca5969c9a04dd561bf379ac8ce8e7c4f1ac98f39983bc3
-Size (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 6073644 bytes
-SHA1 (patch-Utilities_ftgl_src_FTGL.h) = ba6ccc0e543b78e01ddf39ba294e60192e77c959
-SHA1 (patch-aa) = dbda07f15a60a0e66ce50e50addcf85d4c2b840c
-SHA1 (patch-ab) = 83d063aaf1924daff17a45fb92316743fbb448f3
-SHA1 (patch-ac) = 59977568e92ba01344447c0c0b1c770d26e460bb
-SHA1 (patch-ad) = efc49225d42953bb2fd0e099130e415a78b5b522
-SHA1 (patch-ae) = 1860d6e31bda808aed6340a8493c5e5d17eeef2f
-SHA1 (patch-af) = bdac3992a39dc19b4a231f02cc3eae4cd4b1f403
-SHA1 (patch-ag) = ab904d1c464f2873460b41ab4c78bf0fe70d36d1
+SHA1 (VTK-9.0.1.tar.gz) = 578be3303b6ee5bb7ad23c2a87f02475f407bccb
+RMD160 (VTK-9.0.1.tar.gz) = 1c9eaf59f37ebbdf5871276a61c579a1f00dce6b
+SHA512 (VTK-9.0.1.tar.gz) = eb2508e2409ad302cc5db65282a9c1ff4477ac8a93e0fee898ad8f0974d72decc7d5d444dc825a3c2f7952ebf59853616097ebe0d134649cab0d49a9619065bf
+Size (VTK-9.0.1.tar.gz) = 34687900 bytes
+SHA1 (patch-Rendering_FreeTypeFontConfig_vtkFontConfigFreeTypeTools.cxx) = 4d2b14198d5bf5c8a3251332c28ce290c875848f
+SHA1 (patch-Rendering_FreeType_vtkFreeTypeTools.cxx) = bce6587f9367cff77624283eb5c9f47776246ec1
