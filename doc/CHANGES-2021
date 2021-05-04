@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2609 2021/05/04 14:12:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2610 2021/05/04 14:12:46 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-libyajl2 to 2.1.0 [taca 2021-05-04]
 	Updated wm/mlvwm to 0.9.3 [nia 2021-05-04]
 	Updated devel/ruby-i18n to 1.8.10 [taca 2021-05-04]
+	Added print/libharu version 2.4.0 [prlw1 2021-05-04]
