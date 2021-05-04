@@ -1,13 +1,13 @@
-$NetBSD: patch-config_policy.xml,v 1.9 2021/04/23 07:23:29 nia Exp $
+$NetBSD: patch-config_policy.xml,v 1.10 2021/05/04 14:31:57 nia Exp $
 
 Update default policies for better resistance to untrusted input.
 
 Discussion:
 http://mail-index.netbsd.org/tech-pkg/2021/04/03/msg024740.html
 
---- config/policy.xml.orig	2021-04-17 15:26:24.000000000 +0000
+--- config/policy.xml.orig	2021-04-29 02:01:58.000000000 +0000
 +++ config/policy.xml
-@@ -76,6 +76,29 @@
+@@ -76,6 +76,30 @@
    <!-- <policy domain="cache" name="synchronize" value="True"/> -->
    <!-- <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/> -->
    <!-- <policy domain="system" name="max-memory-request" value="256MiB"/> -->
@@ -27,7 +27,8 @@ http://mail-index.netbsd.org/tech-pkg/2021/04/03/msg024740.html
 +  <policy domain="coder" rights="none" pattern="EPHEMERAL" />
 +  <policy domain="coder" rights="none" pattern="URL" />
 +  <policy domain="coder" rights="none" pattern="HTTPS" />
-+  <policy domain="coder" rights="none" pattern="MVG" />
++  <!-- breaks deforaos-icon-theme package -->
++  <!--<policy domain="coder" rights="none" pattern="MVG" />-->
 +  <policy domain="coder" rights="none" pattern="MSL" />
 +  <policy domain="coder" rights="none" pattern="TEXT" />
 +  <policy domain="coder" rights="none" pattern="SHOW" />
