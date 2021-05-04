@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/04 14:24:33 prlw1 Exp $
+
+SHA1 (utf8-cpp-2.3.4.tar.gz) = 18dcdcbfffffd9f7447b1bc318bacbc370516cfa
+RMD160 (utf8-cpp-2.3.4.tar.gz) = 81fffac81afc989a200eae827135a048237c5c27
+SHA512 (utf8-cpp-2.3.4.tar.gz) = c454513321b22658afe7c2c8fbba3f5d113f230b1f110c6c402f61f7bffa5c51d6442c4783e5d26a5f358c0ee4ee9d7f7fb9573db1c2cd1271ec2ae06666f8c6
+Size (utf8-cpp-2.3.4.tar.gz) = 18083 bytes

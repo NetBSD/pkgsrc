@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1222 2021/05/04 14:19:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1223 2021/05/04 14:24:33 prlw1 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1188,6 +1188,7 @@ SUBDIR+=	untex
 SUBDIR+=	upmendex
 SUBDIR+=	uriparser
 SUBDIR+=	urlview
+SUBDIR+=	utf8-cpp
 SUBDIR+=	verify-synopsis
 SUBDIR+=	vis
 SUBDIR+=	wbxml2
