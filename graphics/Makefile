@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2021/05/04 14:05:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.931 2021/05/04 14:34:46 prlw1 Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -810,7 +810,6 @@ SUBDIR+=	viu
 SUBDIR+=	vnc2swf
 SUBDIR+=	vp
 SUBDIR+=	vtk
-SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
 SUBDIR+=	vulkan-headers
 SUBDIR+=	wcslib
