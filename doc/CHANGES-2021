@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2629 2021/05/04 16:33:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2630 2021/05/04 17:08:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4105,3 +4105,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-commander to 4.6.0 [taca 2021-05-04]
 	Updated misc/ruby-pry to 0.14.1 [taca 2021-05-04]
 	Updated audio/librespot to 0.2.0 [pin 2021-05-04]
+	Updated games/openttd to 1.11.2 [nia 2021-05-04]
