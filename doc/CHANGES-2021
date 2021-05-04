@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2602 2021/05/04 08:35:05 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2603 2021/05/04 09:27:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4077,3 +4077,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-contracts to 0.16.1 [taca 2021-05-04]
 	Added games/trader version 7.16 [fcambus 2021-05-04]
 	Added textproc/py-prettytable version 2.0.0 [fcambus 2021-05-04]
+	Updated lang/py-asttokens to 2.0.5 [adam 2021-05-04]
+	Updated textproc/py-prettytable to 2.1.0 [adam 2021-05-04]
