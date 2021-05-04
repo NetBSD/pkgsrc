@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/04 14:19:51 prlw1 Exp $
+
+SHA1 (PEGTL-2.8.3.tar.gz) = 59e30a3e0a71aa249b099ece5ddfc26b626529c2
+RMD160 (PEGTL-2.8.3.tar.gz) = d7a38686766a0ffbaed41a56698b67c0d78f7734
+SHA512 (PEGTL-2.8.3.tar.gz) = 9f7644b86741dfe61716bbc43b2ea0a02cfc21eaf229c47cc71a49e2f08bf2c1ff37d2b2242a1bcf518b1893be6b82c27b0e9010a1b47ef8df87ffd90d280f71
+Size (PEGTL-2.8.3.tar.gz) = 201531 bytes
