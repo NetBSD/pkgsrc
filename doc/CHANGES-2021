@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2616 2021/05/04 14:36:08 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2617 2021/05/04 14:42:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4092,3 +4092,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-octokit to 4.21.0 [taca 2021-05-04]
 	Removed graphics/vtk-data [prlw1 2021-05-04]
 	Updated devel/ruby-pkg-config to 1.4.6 [taca 2021-05-04]
+	Updated graphics/vtk-docs to 9.0.1 [prlw1 2021-05-04]
