@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:39 leot Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/04 14:49:41 nia Exp $
 
-DISTNAME=	sndfile-tools-1.04
-PKGREVISION=	2
+DISTNAME=	sndfile-tools-1.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mega-nerd.com/libsndfile/tools/
+HOMEPAGE=	https://libsndfile.github.io/sndfile-tools/
 COMMENT=	Small collection of programs that use libsndfile
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
