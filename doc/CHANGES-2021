@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2590 2021/05/04 06:20:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2591 2021/05/04 07:02:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py39-html-docs to 3.9.5 [adam 2021-05-04]
 	Updated devel/py-setuptools to 56.0.0 [adam 2021-05-04]
 	Updated databases/redis to 6.2.3 [adam 2021-05-04]
+	Updated databases/ruby-sequel to 5.44.0 [taca 2021-05-04]
