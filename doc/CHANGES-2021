@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2592 2021/05/04 07:30:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2593 2021/05/04 07:38:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/libdvdread to 6.1.2 [adam 2021-05-04]
 	Updated multimedia/libdvdnav to 6.1.1 [adam 2021-05-04]
 	Updated sysutils/ansible-base to 2.10.9 [adam 2021-05-04]
+	Updated security/opendnssec2 to 2.1.9 [he 2021-05-04]
