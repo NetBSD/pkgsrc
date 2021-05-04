@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20607 2021/05/04 08:11:02 wiz Exp $
+$NetBSD: TODO,v 1.20608 2021/05/04 14:48:54 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -2319,7 +2319,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
 	o vsearch-2.17.0
-	o vtk-5.10.1
 	o vulkan-headers-1.2.170.0
 	o wMosaic-3.8.22
 	o wandio-4.2.3
