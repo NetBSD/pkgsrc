@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:20 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/05/04 07:43:49 taca Exp $
 
-SHA1 (algorithms-0.6.1.gem) = f2f3d8e5416cb9800ccc9eeb470aac81f44e6894
-RMD160 (algorithms-0.6.1.gem) = adbf59fa46bfef346e17bde220ae0981e0431be8
-SHA512 (algorithms-0.6.1.gem) = d963fdbef11d76a07831307b3d8da1ac3c339c7e68a178dfaf1ac37e57163ccfd9f82840ca213bd4ff5350c83f2296491dff61d75939a3811a6b1365b09416f3
-Size (algorithms-0.6.1.gem) = 322560 bytes
+SHA1 (algorithms-1.0.0.gem) = 7210dacd62300b5b9980549e63e6c95dc77d7bcd
+RMD160 (algorithms-1.0.0.gem) = 4793c33fb4165d75f6bccc74c8af7e3b67913dd1
+SHA512 (algorithms-1.0.0.gem) = 9d9141c4b9f79ce159ef02afd93bc862fa3099174620608aa155a7e49845a1249cf7407896c492ab2383a280eba33e067ddca1956831b6efe2320ee47e253bfa
+Size (algorithms-1.0.0.gem) = 324096 bytes
