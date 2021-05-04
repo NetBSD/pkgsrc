@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/03 06:23:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/04 05:17:29 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1419,8 +1419,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.2.3-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-49.2.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-21.1.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-56.0.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3086,6 +3086,7 @@ lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.py
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyc
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyo
 lib/python${PY_VER_SUFFIX}/test/nokia.pem
+lib/python${PY_VER_SUFFIX}/test/nosan.pem
 lib/python${PY_VER_SUFFIX}/test/nullbytecert.pem
 lib/python${PY_VER_SUFFIX}/test/nullcert.pem
 lib/python${PY_VER_SUFFIX}/test/pickletester.py
