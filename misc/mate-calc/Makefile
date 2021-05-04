@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/05/02 10:24:50 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/04 00:07:28 gutteridge Exp $
 
-PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-calc-${VERSION}
+DISTNAME=	mate-calc-${VERSION:R}.2
 CATEGORIES=	misc
 
 COMMENT=	Calculator for MATE Desktop
