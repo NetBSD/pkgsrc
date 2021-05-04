@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2624 2021/05/04 15:18:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2625 2021/05/04 15:21:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4100,3 +4100,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/srain to 1.2.1 [nia 2021-05-04]
 	Updated devel/ruby-tty-prompt to 0.23.1 [taca 2021-05-04]
 	Updated audio/qmmp to 1.4.5 [nia 2021-05-04]
+	Updated finance/ruby-braintree to 3.4.0 [taca 2021-05-04]
