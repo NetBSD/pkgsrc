@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2008/02/23 03:03:10 obache Exp $
+$NetBSD: patch-mlvwm_menus.c,v 1.1 2021/05/04 14:09:52 nia Exp $
 
---- mlvwm/menus.c.orig	2000-06-25 13:26:52.000000000 +0000
+Replace C++ style comments with C style comments for compatibility
+with C89.
+
+--- mlvwm/menus.c.orig	2021-03-23 20:39:27.000000000 +0000
 +++ mlvwm/menus.c
-@@ -505,7 +505,7 @@ Bool ChoiseMenu( MenuLabel *m, Window *e
+@@ -508,7 +508,7 @@ Bool ChoiseMenu( MenuLabel *m, Window *e
  		XMaskEvent( dpy, ExposureMask | ButtonReleaseMask | ButtonPressMask|
  						EnterWindowMask | PointerMotionMask | ButtonMotionMask,
  						&Event );
@@ -11,7 +14,7 @@ $NetBSD: patch-ab,v 1.1 2008/02/23 03:03:10 obache Exp $
  		switch( Event.type ){
  		case Expose:
  			if( XFindContext( dpy, Event.xany.window, MenuContext,
-@@ -628,7 +628,7 @@ void press_menu( MenuLabel *m )
+@@ -631,7 +631,7 @@ void press_menu( MenuLabel *m )
  		XMaskEvent( dpy, ExposureMask | ButtonReleaseMask | ButtonPressMask|
  						EnterWindowMask | PointerMotionMask | ButtonMotionMask,
  						&Event );
@@ -20,7 +23,7 @@ $NetBSD: patch-ab,v 1.1 2008/02/23 03:03:10 obache Exp $
  		switch( Event.type ){
  		case Expose:
  			if( mapped && Event.xany.window==mapped->PullWin &&
-@@ -789,7 +789,7 @@ void CreateMenuLabel( MenuLabel *ml )
+@@ -792,7 +792,7 @@ void CreateMenuLabel( MenuLabel *ml )
  	if( ml->flags&SWALLOW ){
  		if( SwallowMenu( ml ) ){
  			XSetWindowBorderWidth( dpy, ml->LabelWin, 0 );
