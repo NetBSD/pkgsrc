@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/02/05 16:04:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/05/04 07:45:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -437,6 +437,7 @@ ${GEM_LIBDIR}/lib/backports/2.4.0/regexp.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/regexp/match.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/string.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/string/match.rb
+${GEM_LIBDIR}/lib/backports/2.4.0/string/unpack1.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/true_class.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/true_class/dup.rb
 ${GEM_LIBDIR}/lib/backports/2.4.rb
