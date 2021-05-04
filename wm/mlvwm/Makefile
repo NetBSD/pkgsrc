@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2019/05/23 19:23:19 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/04 14:09:52 nia Exp $
 #
 
-DISTNAME=	mlvwm091
-PKGNAME=	mlvwm-0.9.1
-PKGREVISION=	1
+DISTNAME=	mlvwm-0.9.3
 CATEGORIES=	wm
-MASTER_SITES=	http://www2u.biglobe.ne.jp/~y-miyata/mlvwm/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=morgant/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html
 COMMENT=	Macintosh Like Virtual Window Manager
+LICENSE=	mit
 
 USE_IMAKE=	yes
 
