@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1220 2021/04/29 23:42:47 joerg Exp $
+# $NetBSD: Makefile,v 1.1221 2021/05/04 08:34:30 fcambus Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -944,6 +944,7 @@ SUBDIR+=	py-peg2
 SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-poyo
 SUBDIR+=	py-precis-i18n
+SUBDIR+=	py-prettytable
 SUBDIR+=	py-ptable
 SUBDIR+=	py-pyaml
 SUBDIR+=	py-pybtex
