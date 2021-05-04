@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/02/03 14:42:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/04 14:08:30 taca Exp $
 
-DISTNAME=	libyajl2-2.0.0
+DISTNAME=	libyajl2-2.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
