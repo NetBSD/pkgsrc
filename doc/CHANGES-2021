@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2598 2021/05/04 08:11:02 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2599 2021/05/04 08:16:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4073,3 +4073,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-bindata to 2.4.9 [taca 2021-05-04]
 	Updated devel/ruby-bit-struct to 0.17 [taca 2021-05-04]
 	Updated devel/py-hypothesis to 6.10.1 [wiz 2021-05-04]
+	Updated sysutils/macchina to 0.7.4 [pin 2021-05-04]
