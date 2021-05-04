@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.5 2021/05/04 08:33:14 fcambus Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/prettytable/__init__.py
+${PYSITELIB}/prettytable/__init__.pyc
+${PYSITELIB}/prettytable/__init__.pyo
+${PYSITELIB}/prettytable/prettytable.py
+${PYSITELIB}/prettytable/prettytable.pyc
+${PYSITELIB}/prettytable/prettytable.pyo

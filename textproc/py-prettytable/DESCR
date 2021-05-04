@@ -1,0 +1,8 @@
+PrettyTable is a simple Python library designed to make it quick and easy
+to represent tabular data in visually appealing ASCII tables.
+
+PrettyTable lets you control many aspects of the table, like the width of
+the column padding, the alignment of text within columns, which characters
+are used to draw the table border, whether you even want a border, and much
+more. You can control which subsets of the columns and rows are printed, and
+you can sort the rows by the value of a particular column.
