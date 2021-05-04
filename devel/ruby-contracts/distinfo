@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/06/04 15:48:06 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/05/04 08:19:51 taca Exp $
 
-SHA1 (contracts-0.16.0.gem) = fbfdb98a420cfbb82ed706af0519170d62ae92b0
-RMD160 (contracts-0.16.0.gem) = b12cb449e5bcc467ec5704ddee1a062335c4137f
-SHA512 (contracts-0.16.0.gem) = 27d757c3a6d25920ada1b24842a5ed8521bc8902b1840b6060c94dc17e5eecb91501439eb764fa2fec97dedc6591d2c2978630f56d4b38e7b607e9fccfb60ad7
-Size (contracts-0.16.0.gem) = 55296 bytes
+SHA1 (contracts-0.16.1.gem) = 76c317d94abfbdfe09415f66d3642c01626589fd
+RMD160 (contracts-0.16.1.gem) = e04967eee737a01e36150e971649d379532e1e80
+SHA512 (contracts-0.16.1.gem) = bc182431de9efbc6d23603c68a64eddcd3f27ea1ac8c2c9ff00840cf38d2f58ba595304127e6b43e504d3aa387559a5c1429b671dadac175d3a4ad2c02edbf6a
+Size (contracts-0.16.1.gem) = 57856 bytes
