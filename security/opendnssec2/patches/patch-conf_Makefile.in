@@ -1,18 +1,18 @@
-$NetBSD: patch-conf_Makefile.in,v 1.1 2019/11/06 13:44:38 he Exp $
+$NetBSD: patch-conf_Makefile.in,v 1.2 2021/05/04 07:37:19 he Exp $
 
 Install configs in example config directory.
 
 --- conf/Makefile.in.orig	2017-08-10 12:03:23.000000000 +0000
 +++ conf/Makefile.in
-@@ -390,6 +390,7 @@ sbindir = @sbindir@
+@@ -399,6 +399,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@/opendnssec
 +EGDIR=@EGDIR@
+ target = @target@
  target_alias = @target_alias@
- top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
-@@ -663,18 +664,19 @@ regress: $(RNG)
+ target_cpu = @target_cpu@
+@@ -679,18 +680,19 @@ regress: $(RNG)
  		(echo "kasp.xml built")
  
  install-data-hook:
