@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.807 2021/04/29 13:16:00 joerg Exp $
+# $NetBSD: Makefile,v 1.808 2021/05/04 14:12:05 prlw1 Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -81,6 +81,7 @@ SUBDIR+=	latexmk
 SUBDIR+=	lgrind
 SUBDIR+=	libcups
 SUBDIR+=	libgxps
+SUBDIR+=	libharu
 SUBDIR+=	libpaper
 SUBDIR+=	libspectre
 SUBDIR+=	lilypond
