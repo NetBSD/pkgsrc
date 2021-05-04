@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.34 2021/05/02 13:39:25 pho Exp $
+# $NetBSD: haskell.mk,v 1.35 2021/05/04 15:44:33 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -157,6 +157,21 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 .endif
 
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
+
+# Support RELRO. When PKGSRC_USE_RELRO isn't set to "no",
+# mk/compiler/{ghc,clang}.mk add "-Wl,-z,relro" and optionally
+# "-Wl,-z,now" to LDFLAGS. Since Cabal doesn't respect the environment
+# variable LDFLAGS, we need to be explicit about it. Note that -optl
+# is a GHC option which specifies options to be passed to CC, not LD,
+# while linking executables and shared libraries.
+CONFIGURE_ARGS+=	${LDFLAGS:S/^/--ghc-options=-optl\ /}
+# GHC heavily uses "ld -r" to combine multiple .o files but our ld
+# wrapper is going to inject the relro flags. In this case these flags
+# don't make sense so ld(1) emits warnings. Use the original,
+# non-wrapped ld(1) for merging objects as a dirty workaround.
+_HS_ORIG_LD_CMD=	${SETENV} PATH=${_PATH_ORIG} which ld
+CONFIGURE_ARGS+=	--ghc-options=-pgmlm\ ${_HS_ORIG_LD_CMD:sh}
+CONFIGURE_ARGS+=	--ghc-options=-optlm\ -r
 
 .if !exists(${PKGDIR}/PLIST)
 _HS_PLIST_STATUS=	missing
