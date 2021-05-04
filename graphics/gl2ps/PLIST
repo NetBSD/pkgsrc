@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/04 14:05:44 prlw1 Exp $
+include/gl2ps.h
+lib/libgl2ps.a
+lib/libgl2ps.so
+lib/libgl2ps.so.1
+lib/libgl2ps.so.${PKGVERSION}
+share/doc/gl2ps/COPYING.GL2PS
+share/doc/gl2ps/COPYING.LGPL
+share/doc/gl2ps/README.txt
+share/doc/gl2ps/gl2ps.pdf
+share/doc/gl2ps/gl2psTest.c
+share/doc/gl2ps/gl2psTestSimple.c
