@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2619 2021/05/04 14:49:53 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2620 2021/05/04 14:56:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4095,3 +4095,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/vtk-docs to 9.0.1 [prlw1 2021-05-04]
 	Updated graphics/vtk to 9.0.1 [prlw1 2021-05-04]
 	Updated audio/sndfile-tools to 1.5 [nia 2021-05-04]
+	Updated devel/ruby-rb-kqueue to 0.2.6 [taca 2021-05-04]
