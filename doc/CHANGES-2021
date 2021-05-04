@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2604 2021/05/04 13:33:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2605 2021/05/04 13:37:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4080,3 +4080,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py-asttokens to 2.0.5 [adam 2021-05-04]
 	Updated textproc/py-prettytable to 2.1.0 [adam 2021-05-04]
 	Updated devel/ruby-ffi-yajl to 2.4.0 [taca 2021-05-04]
+	Updated devel/ruby-equatable to 0.7.0 [taca 2021-05-04]
