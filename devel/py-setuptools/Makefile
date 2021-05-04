@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.184 2021/04/03 07:32:26 adam Exp $
+# $NetBSD: Makefile,v 1.185 2021/05/04 06:17:59 adam Exp $
 
 # 48.0.0 and newer are broken on NetBSD
 # https://github.com/pypa/setuptools/issues/2364
-DISTNAME=	setuptools-54.2.0
+DISTNAME=	setuptools-56.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
