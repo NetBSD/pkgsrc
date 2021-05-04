@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1221 2021/05/04 08:34:30 fcambus Exp $
+# $NetBSD: Makefile,v 1.1222 2021/05/04 14:19:51 prlw1 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -11,6 +11,7 @@ SUBDIR+=	GutenMark-words
 SUBDIR+=	LDoc
 SUBDIR+=	Markdown
 SUBDIR+=	OdfConverter
+SUBDIR+=	PEGTL
 SUBDIR+=	R-DT
 SUBDIR+=	R-brew
 SUBDIR+=	R-cellranger
