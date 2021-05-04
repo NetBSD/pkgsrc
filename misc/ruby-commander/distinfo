@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2020/03/23 16:37:11 taca Exp $
+$NetBSD: distinfo,v 1.21 2021/05/04 15:30:16 taca Exp $
 
-SHA1 (commander-4.5.2.gem) = d692b08220f7c635481ff331ca1bdbecd40041a5
-RMD160 (commander-4.5.2.gem) = 62b7119db4325cd43e8e7585a08899e9357634a3
-SHA512 (commander-4.5.2.gem) = 22ea0a5c88d4ec03658ca8e0fe12801a5a5918bc09031400e1cde2883bf061b85feb6d77448b256bc21f5ddee00e4afb2c08b99132cd7862f00c7cad13588564
-Size (commander-4.5.2.gem) = 37888 bytes
+SHA1 (commander-4.6.0.gem) = 0e278d338e1692c1504e4efe3b5bd43f0e63db2a
+RMD160 (commander-4.6.0.gem) = 3531136cbb0535bb6dc8a8a12aa056e01fd52ff3
+SHA512 (commander-4.6.0.gem) = 01e7d4076b6ff632f6852e15bf995033034a71d6320c5b3b41751e86894f5eca35b408311e757c555334d220a9a811a0d60c0fc993414961f1050d948cb9f5c7
+Size (commander-4.6.0.gem) = 38400 bytes
