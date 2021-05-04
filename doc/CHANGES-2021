@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2613 2021/05/04 14:25:09 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.2614 2021/05/04 14:30:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-iruby to 0.5.0 [taca 2021-05-04]
 	Added textproc/PEGTL version 2.8.3 [prlw1 2021-05-04]
 	Added textproc/utf8-cpp version 2.3.4 [prlw1 2021-05-04]
+	Updated devel/ruby-octokit to 4.21.0 [taca 2021-05-04]
