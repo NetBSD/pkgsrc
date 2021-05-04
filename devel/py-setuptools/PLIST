@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2021/04/03 07:32:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2021/05/04 06:17:59 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -297,9 +297,6 @@ ${PYSITELIB}/setuptools/command/bdist_egg.pyo
 ${PYSITELIB}/setuptools/command/bdist_rpm.py
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyc
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyo
-${PYSITELIB}/setuptools/command/bdist_wininst.py
-${PYSITELIB}/setuptools/command/bdist_wininst.pyc
-${PYSITELIB}/setuptools/command/bdist_wininst.pyo
 ${PYSITELIB}/setuptools/command/build_clib.py
 ${PYSITELIB}/setuptools/command/build_clib.pyc
 ${PYSITELIB}/setuptools/command/build_clib.pyo
