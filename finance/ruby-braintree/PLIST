@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/05 16:16:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/04 15:20:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -58,6 +58,7 @@ ${GEM_LIBDIR}/lib/braintree/granted_payment_instrument_update.rb
 ${GEM_LIBDIR}/lib/braintree/graphql_client.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_completed.rb
+${GEM_LIBDIR}/lib/braintree/local_payment_reversed.rb
 ${GEM_LIBDIR}/lib/braintree/merchant.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account/address_details.rb
@@ -86,7 +87,6 @@ ${GEM_LIBDIR}/lib/braintree/resource_collection.rb
 ${GEM_LIBDIR}/lib/braintree/revoked_payment_method_metadata.rb
 ${GEM_LIBDIR}/lib/braintree/risk_data.rb
 ${GEM_LIBDIR}/lib/braintree/samsung_pay_card.rb
-${GEM_LIBDIR}/lib/braintree/settlement_batch.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/sha256_digest.rb
