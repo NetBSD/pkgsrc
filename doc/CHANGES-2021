@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2594 2021/05/04 07:44:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2595 2021/05/04 07:46:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4069,3 +4069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible-base to 2.10.9 [adam 2021-05-04]
 	Updated security/opendnssec2 to 2.1.9 [he 2021-05-04]
 	Updated devel/ruby-algorithms to 1.0.0 [taca 2021-05-04]
+	Updated devel/ruby-backports to 3.21.0 [taca 2021-05-04]
