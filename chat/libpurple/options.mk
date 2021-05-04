@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2021/05/02 10:19:20 nia Exp $
+# $NetBSD: options.mk,v 1.34 2021/05/04 13:55:14 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
 
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-python3=${PYTHONBIN}
 PLIST.dbus=		yes
 REPLACE_SH+=		libpurple/purple-send
 REPLACE_SH+=		libpurple/purple-send-async
