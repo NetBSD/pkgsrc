@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2021/05/04 14:12:05 prlw1 Exp $
+
+SHA1 (libharu/157.diff) = afe64b18d45496403871a55ff85d6bdfa9761635
+RMD160 (libharu/157.diff) = 5ad7c01511cd944b2f5aaa594f9d12bfccadd140
+SHA512 (libharu/157.diff) = f2ddb22b54b4eccc79400b6a4b2d245a221898f75456a5a559523eab7a523a87dfc5dfd0ec5fb17a771697e03c7ea6ed4c6095eff73e0a4302cd6eb24584c957
+Size (libharu/157.diff) = 15274 bytes
+SHA1 (libharu/187.diff) = 421a60d6e092c6266bebcfcad51ca8feac28dc7e
+RMD160 (libharu/187.diff) = 54a3f93274c420738fc0732c02fb9897fd6ab153
+SHA512 (libharu/187.diff) = f0d9b0774f108d1dc09b62428ae568c4ca0ed6116209418dbe2d430f2ac6b9ad7fdfb5cf7dd7eec6a45980981be2182c19ed05a44a9d732abe9d79a79c44591f
+Size (libharu/187.diff) = 2416 bytes
+SHA1 (libharu/libharu-2.3.0.tar.gz) = 434177d4baaf2a37b2d2d16467dd786961919e0d
+RMD160 (libharu/libharu-2.3.0.tar.gz) = c90ec08c3cc04e4d93f6aa9565368dd3a31a74bc
+SHA512 (libharu/libharu-2.3.0.tar.gz) = ebcabf1e8488e21185a231e97b4c16f9de742ae0ac2ebc7535b72b6b8e2045c2619bc6a94a820f7f923b0dfeceb217408f4e4c613ef3602104373cdf000d3f41
+Size (libharu/libharu-2.3.0.tar.gz) = 1396413 bytes
