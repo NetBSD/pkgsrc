@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2020/05/16 04:46:18 adam Exp $
+$NetBSD: distinfo,v 1.28 2021/05/04 07:26:13 adam Exp $
 
-SHA1 (libdvdread-6.1.1.tar.bz2) = d2e5056de89fb5fed478c0af5a72e8b781d0c396
-RMD160 (libdvdread-6.1.1.tar.bz2) = 8bb1c8957715135c97244e93739ff5d7f0eb7e46
-SHA512 (libdvdread-6.1.1.tar.bz2) = f02c2d33ec3e79a4efd0b4ed9172935b092c9f827eb6810ed354328c34b5206ee4ffd646239ce50b9401cab1758f1a746113e004461b20df4f44bc7fa6bc2278
-Size (libdvdread-6.1.1.tar.bz2) = 392134 bytes
+SHA1 (libdvdread-6.1.2.tar.bz2) = 789d0780fbdcd7d6dadf0fda3d4a4b6198c16393
+RMD160 (libdvdread-6.1.2.tar.bz2) = 4750acb03431915ce1534110b1705b874e0838de
+SHA512 (libdvdread-6.1.2.tar.bz2) = 5cbee11ec701b7625d71184fd712de48a129f235b08797b499d0f5b06a1c73bfec1d0e52e897585017ab63b1d81b042257eab5ab1f19fb340b05b3e8d794f86c
+Size (libdvdread-6.1.2.tar.bz2) = 391536 bytes
