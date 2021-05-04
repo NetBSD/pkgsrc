@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2631 2021/05/04 18:55:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2632 2021/05/04 20:30:01 abs Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/openttd to 1.11.2 [nia 2021-05-04]
 	Updated net/qbittorrent to 4.3.5 [adam 2021-05-04]
 	Updated devel/meson to 0.58.0 [adam 2021-05-04]
+	Updated mail/exim to 4.94.2 [abs 2021-05-04]
