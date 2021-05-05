@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2634 2021/05/04 23:38:48 tron Exp $
+$NetBSD: CHANGES-2021,v 1.2635 2021/05/05 00:48:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/exim to 4.94.2 [abs 2021-05-04]
 	Updated sysutils/py-Glances to 3.1.7 [fox 2021-05-04]
 	Updated mail/mutt to 2.0.7 [tron 2021-05-04]
+	Updated editors/pluma to 1.24.2 [gutteridge 2021-05-05]
