@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1528 2021/05/02 20:03:53 pin Exp $
+# $NetBSD: Makefile,v 1.1529 2021/05/05 11:19:41 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -156,6 +156,7 @@ SUBDIR+=	hs-HTTP
 SUBDIR+=	hs-cookie
 SUBDIR+=	hs-http-client
 SUBDIR+=	hs-http-client-tls
+SUBDIR+=	hs-http-conduit
 SUBDIR+=	hs-http-types
 SUBDIR+=	hs-xss-sanitize
 SUBDIR+=	htdavlock
