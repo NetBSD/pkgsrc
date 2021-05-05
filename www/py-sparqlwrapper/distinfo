@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/04/16 12:18:42 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/05/05 09:54:42 adam Exp $
 
 SHA1 (SPARQLWrapper-1.8.5.tar.gz) = 00da4da1ef74245faf5d2ce6b7e3903a0bde44c6
 RMD160 (SPARQLWrapper-1.8.5.tar.gz) = b13c7f5875450fe7a41f0dc4c72b787f6a532578
 SHA512 (SPARQLWrapper-1.8.5.tar.gz) = b0cbe9f7f13a8a0a1c88a17b5966b46e7811acada2712ee03be97808dcb17ba4a71990c07df5d213d21815d7deaf3526381a2cc864d839e561e242be797b6bb2
 Size (SPARQLWrapper-1.8.5.tar.gz) = 89117 bytes
+SHA1 (patch-setup.py) = 86a25a988bd419ee276de2cd865b59acf843c212
