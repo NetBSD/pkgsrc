@@ -1,7 +1,10 @@
-$NetBSD: patch-aclocal.m4,v 1.2 2021/04/22 18:15:01 pho Exp $
+$NetBSD: patch-aclocal.m4,v 1.3 2021/05/05 09:18:52 pho Exp $
 
 Remove _AC_PROG_CC_C99 macro that is removed in autoconf-2.71 to fix
 build failure.
+
+Already fixed in the upstream:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/4987
 
 --- aclocal.m4.orig	2021-01-26 14:49:54.000000000 +0000
 +++ aclocal.m4

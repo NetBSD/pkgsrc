@@ -1,8 +1,11 @@
-$NetBSD: patch-rts_posix_GetTime.c,v 1.1 2021/04/30 03:05:31 pho Exp $
+$NetBSD: patch-rts_posix_GetTime.c,v 1.2 2021/05/05 09:18:52 pho Exp $
 
 OmniOS defines CLOCK_THREAD_CPUTIME_ID but it isn't actually usable:
 clock_gettime(2) always returns EINVAL. Use Solaris-specific
 gethrvtime(3) instead.
+
+Sent to the upstream:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5678
 
 --- rts/posix/GetTime.c.orig	2021-04-29 21:06:04.382045075 +0000
 +++ rts/posix/GetTime.c
