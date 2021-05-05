@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2639 2021/05/05 08:48:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2640 2021/05/05 09:30:11 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4122,3 +4122,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httptools to 0.2.0 [adam 2021-05-05]
 	Updated devel/py-prompt_toolkit2 to 3.0.18 [adam 2021-05-05]
 	Updated devel/py-ipython to 7.23.0 [adam 2021-05-05]
+	Added net/hs-network-info version 0.2.0.10 [pho 2021-05-05]
