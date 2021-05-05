@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 12:25:17 pho Exp $
+
+SHA1 (fast-logger-3.0.5.tar.gz) = 083c893ea368a1cc7fe382196049c69d920c1c43
+RMD160 (fast-logger-3.0.5.tar.gz) = dca3e3b3d93db5c77aa643643ca5fef4b26530a9
+SHA512 (fast-logger-3.0.5.tar.gz) = 3a79b7f6e033601ee4c09d0e64fa10d17a7dad221a9002e3452ba90d45b3557e7224060ffe65dbc8904bd60f21011bf7d1db2070449dd2e15ed29b3032b32aa4
+Size (fast-logger-3.0.5.tar.gz) = 12331 bytes
