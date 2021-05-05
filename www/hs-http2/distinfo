@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 15:18:44 pho Exp $
+
+SHA1 (http2-3.0.1.tar.gz) = 2fed2d056e1ba42fb8f5e10d937f5960b5c95a6b
+RMD160 (http2-3.0.1.tar.gz) = 09a4759105aa358094ac601923d7eaed23bc4348
+SHA512 (http2-3.0.1.tar.gz) = aaa32209fb9945cc33c557866acb053df403bbe37c2bd024ac52e7fc6a3e816d0249e48b83e8846017fe0df0998327cf3498f1bc96b57b0fa81ce9c4d35589c6
+Size (http2-3.0.1.tar.gz) = 5556373 bytes
