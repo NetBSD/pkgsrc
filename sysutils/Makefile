@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.953 2021/05/05 09:49:17 pho Exp $
+# $NetBSD: Makefile,v 1.954 2021/05/05 11:47:31 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -332,6 +332,7 @@ SUBDIR+=	hivex
 SUBDIR+=	hs-byteorder
 SUBDIR+=	hs-filepattern
 SUBDIR+=	hs-hslua-module-path
+SUBDIR+=	hs-process-extras
 SUBDIR+=	hs-temporary
 SUBDIR+=	hs-typed-process
 SUBDIR+=	htop
