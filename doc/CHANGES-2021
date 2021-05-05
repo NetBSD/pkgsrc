@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2655 2021/05/05 11:56:08 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2656 2021/05/05 11:59:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4140,3 +4140,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/hs-ListLike version 4.7.4 [pho 2021-05-05]
 	Added sysutils/hs-process-extras version 0.7.4 [pho 2021-05-05]
 	Added devel/hs-storable-record version 0.0.5 [pho 2021-05-05]
+	Added devel/hs-storable-tuple version 0.0.3.3 [pho 2021-05-05]
