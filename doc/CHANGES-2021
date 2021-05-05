@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2635 2021/05/05 00:48:13 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2636 2021/05/05 04:51:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4112,3 +4112,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-Glances to 3.1.7 [fox 2021-05-04]
 	Updated mail/mutt to 2.0.7 [tron 2021-05-04]
 	Updated editors/pluma to 1.24.2 [gutteridge 2021-05-05]
+	Updated textproc/py-ICU to 2.7.3 [adam 2021-05-05]
+	Updated www/py-websocket-client to 0.59.0 [adam 2021-05-05]
+	Updated devel/py-test to 6.2.4 [adam 2021-05-05]
+	Updated devel/py-requests-mock to 1.9.2 [adam 2021-05-05]
