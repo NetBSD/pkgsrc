@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/05 15:48:49 pho Exp $
+lib/word8-${PKGVERSION}/${HS_VERSION}/package-description
+lib/word8-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char8.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char8.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char8.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Word8.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Word8.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Word8.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/Data-Char8.html
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/Data-Word8.html
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/word8.haddock
