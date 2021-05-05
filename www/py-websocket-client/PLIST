@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/11 10:26:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/05 04:45:30 adam Exp $
 bin/wsdump-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -49,9 +49,22 @@ ${PYSITELIB}/websocket/tests/__init__.pyc
 ${PYSITELIB}/websocket/tests/__init__.pyo
 ${PYSITELIB}/websocket/tests/data/header01.txt
 ${PYSITELIB}/websocket/tests/data/header02.txt
+${PYSITELIB}/websocket/tests/data/header03.txt
+${PYSITELIB}/websocket/tests/test_abnf.py
+${PYSITELIB}/websocket/tests/test_abnf.pyc
+${PYSITELIB}/websocket/tests/test_abnf.pyo
+${PYSITELIB}/websocket/tests/test_app.py
+${PYSITELIB}/websocket/tests/test_app.pyc
+${PYSITELIB}/websocket/tests/test_app.pyo
 ${PYSITELIB}/websocket/tests/test_cookiejar.py
 ${PYSITELIB}/websocket/tests/test_cookiejar.pyc
 ${PYSITELIB}/websocket/tests/test_cookiejar.pyo
+${PYSITELIB}/websocket/tests/test_http.py
+${PYSITELIB}/websocket/tests/test_http.pyc
+${PYSITELIB}/websocket/tests/test_http.pyo
+${PYSITELIB}/websocket/tests/test_url.py
+${PYSITELIB}/websocket/tests/test_url.pyc
+${PYSITELIB}/websocket/tests/test_url.pyo
 ${PYSITELIB}/websocket/tests/test_websocket.py
 ${PYSITELIB}/websocket/tests/test_websocket.pyc
 ${PYSITELIB}/websocket/tests/test_websocket.pyo
