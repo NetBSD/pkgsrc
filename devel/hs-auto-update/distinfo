@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 12:13:42 pho Exp $
+
+SHA1 (auto-update-0.1.6.tar.gz) = 2fb9bf2a30cea0d5541c6efb0738185ab7216485
+RMD160 (auto-update-0.1.6.tar.gz) = 964cc4cdd4ca5a58085fadba530ece89ab6bafee
+SHA512 (auto-update-0.1.6.tar.gz) = ff0f4f835d0b24aafbe18dbc42a9c3cc396cea24be3f4b13b5f5dac49b3b21030c941c8b09a5c33ba175c9902d076aa12fc9eb5a6a79c94ee5c9b60935fa047f
+Size (auto-update-0.1.6.tar.gz) = 10929 bytes
