@@ -1,0 +1,2 @@
+Provides for making efficient HTTP/HTTPS requests, providing either a
+simple or streaming interface.
