@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2637 2021/05/05 07:07:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2638 2021/05/05 08:19:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4118,3 +4118,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-requests-mock to 1.9.2 [adam 2021-05-05]
 	Updated www/py-django3 to 3.2.1 [adam 2021-05-05]
 	Updated www/py-django2 to 2.2.21 [adam 2021-05-05]
+	Updated devel/py-fastimport to 0.9.12 [adam 2021-05-05]
+	Updated www/py-httptools to 0.2.0 [adam 2021-05-05]
