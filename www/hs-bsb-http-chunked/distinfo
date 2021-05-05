@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 12:59:16 pho Exp $
+
+SHA1 (bsb-http-chunked-0.0.0.4.tar.gz) = 82182f11a518a2fc5723b5f367a0274aa88a1cce
+RMD160 (bsb-http-chunked-0.0.0.4.tar.gz) = 9a7ede832e3290cd03f40dbca07813597f1e9bdc
+SHA512 (bsb-http-chunked-0.0.0.4.tar.gz) = 74c04c2fd372067c42d3631cdfc2ad7093c0c3af1145833ab307c538dbb936d2042492d4e81c520c3adde8634df29ff8558822f06f226c52d16abb4a35ab1a13
+Size (bsb-http-chunked-0.0.0.4.tar.gz) = 6630 bytes
+SHA1 (patch-bsb-http-chunked.cabal) = 395689e2b5b74943e4a077bb26ea1389fe2318bc

@@ -1,0 +1,15 @@
+$NetBSD: patch-bsb-http-chunked.cabal,v 1.1 2021/05/05 12:59:16 pho Exp $
+
+Fix build with GHC 9.
+
+--- bsb-http-chunked.cabal.orig	2018-09-29 14:22:36.000000000 +0000
++++ bsb-http-chunked.cabal
+@@ -36,7 +36,7 @@ Source-repository head
+ 
+ Library
+   exposed-modules:   Data.ByteString.Builder.HTTP.Chunked
+-  build-depends:     base >= 4.8 && < 4.13,
++  build-depends:     base >= 4.8 && < 5,
+                      bytestring >= 0.10.2 && < 0.11
+   ghc-options:       -Wall -O2
+   if impl(ghc >= 8.0)
