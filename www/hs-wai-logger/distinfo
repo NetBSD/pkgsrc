@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 12:27:41 pho Exp $
+
+SHA1 (wai-logger-2.3.6.tar.gz) = eebe9f7a9c068a152f3fb36e5a67f786ef6bdaf1
+RMD160 (wai-logger-2.3.6.tar.gz) = 0758f6fee77e7298913a43b8d90d2d1d0e47d5bc
+SHA512 (wai-logger-2.3.6.tar.gz) = 0c16120c342321cd686ab7cf9fa7df503a426b0c3d145c16e566013e0df44ef565d9890726d780c1fb73a49507f49bbf5fb886ff4bdccbd19a19b4c00626532e
+Size (wai-logger-2.3.6.tar.gz) = 5823 bytes
