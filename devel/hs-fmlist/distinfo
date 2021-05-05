@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:40:31 pho Exp $
+
+SHA1 (fmlist-0.9.4.tar.gz) = ee79fe5ac2cab4d82e585050b3ca5a658f061c29
+RMD160 (fmlist-0.9.4.tar.gz) = 8cfd377e5fa03bd9aeb8435d8de5d3dcca32c4da
+SHA512 (fmlist-0.9.4.tar.gz) = 68b36503cd895bff5f25f2d24422972537b5ba68439714de257441c14194656b0b84137fa9c45235cdb9291e8a2d132e66e9a1d45f66f91142eef65f07d8c5dc
+Size (fmlist-0.9.4.tar.gz) = 4445 bytes
