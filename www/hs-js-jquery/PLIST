@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/05 11:27:42 pho Exp $
+lib/js-jquery-${PKGVERSION}/${HS_VERSION}/package-description
+lib/js-jquery-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/JQuery.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/JQuery.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/JQuery.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_jquery.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_jquery.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_jquery.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/CHANGES.txt
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/Language-Javascript-JQuery.html
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/README.md
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/js-jquery.haddock
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/js-jquery-${PKGVERSION}/html/synopsis.png
+share/${HS_PLATFORM}/js-jquery-${PKGVERSION}/jquery-${PKGVERSION}.min.js
