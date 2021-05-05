@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 16:00:30 pho Exp $
+
+SHA1 (tls-session-manager-0.0.4.tar.gz) = 6031dd2485a54dbf82114087a1f7f9598e2df725
+RMD160 (tls-session-manager-0.0.4.tar.gz) = 274d443c7a8e32d5ff0063530c202be5ce57f538
+SHA512 (tls-session-manager-0.0.4.tar.gz) = 8516a2a6a12ee33ca3cbfcf33f5108218dcfea54b092a5292cbe0935b1c181d1aa26d171eb1f62d93ac80bebca21221598a07e225be5513743b227ef6908fbec
+Size (tls-session-manager-0.0.4.tar.gz) = 3821 bytes
