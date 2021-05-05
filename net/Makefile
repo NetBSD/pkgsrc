@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1404 2021/05/05 15:44:30 pho Exp $
+# $NetBSD: Makefile,v 1.1405 2021/05/05 16:52:22 pho Exp $
 #
 
 COMMENT=	Networking tools
@@ -236,6 +236,7 @@ SUBDIR+=	hdl-dump
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
 SUBDIR+=	hlfl
+SUBDIR+=	hoogle
 SUBDIR+=	host
 SUBDIR+=	howl
 SUBDIR+=	hping
