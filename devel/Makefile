@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3371 2021/05/03 17:17:17 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3372 2021/05/05 09:28:49 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2280,6 +2280,7 @@ SUBDIR+=	py-cooldict
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
+SUBDIR+=	py-cppy
 SUBDIR+=	py-crayons
 SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
