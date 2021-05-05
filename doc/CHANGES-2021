@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2653 2021/05/05 11:46:14 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2654 2021/05/05 11:47:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/hs-mmap version 0.5.9 [pho 2021-05-05]
 	Added devel/hs-fmlist version 0.9.4 [pho 2021-05-05]
 	Added devel/hs-ListLike version 4.7.4 [pho 2021-05-05]
+	Added sysutils/hs-process-extras version 0.7.4 [pho 2021-05-05]
