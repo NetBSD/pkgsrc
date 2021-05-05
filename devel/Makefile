@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3376 2021/05/05 11:06:44 pho Exp $
+# $NetBSD: Makefile,v 1.3377 2021/05/05 11:31:42 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -602,6 +602,7 @@ SUBDIR+=	hs-libffi
 SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-lukko
 SUBDIR+=	hs-memory
+SUBDIR+=	hs-mmap
 SUBDIR+=	hs-mmorph
 SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mono-traversable
