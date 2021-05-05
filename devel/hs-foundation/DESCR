@@ -1,0 +1,19 @@
+A custom prelude with no dependencies apart from base.
+
+This package has the following goals:
+
+* Provide a base like sets of modules that provide a consistent set of
+  features and bugfixes across multiple versions of GHC (unlike base).
+
+* Provide a better and more efficient prelude than base's prelude.
+
+* Be self-sufficient: no external dependencies apart from base.
+
+* Provide better data-types: packed unicode string by default, arrays.
+
+* Better numerical classes that better represent mathematical thing
+  (No more all-in-one Num).
+
+* Better I/O system with less Lazy IO.
+
+* Usual partial functions distinguished through type system.
