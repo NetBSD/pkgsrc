@@ -1,6 +1,8 @@
-$NetBSD: patch-libraries_unix_include_execvpe.h,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+$NetBSD: patch-libraries_unix_include_execvpe.h,v 1.2 2021/05/05 09:18:52 pho Exp $
 
 Don't conflict with builtin execvpe(3).
+
+Already fixed in the upstream (unix-2.8.0.0).
 
 --- libraries/unix/include/execvpe.h.orig	2016-02-04 16:16:38.000000000 +0000
 +++ libraries/unix/include/execvpe.h
