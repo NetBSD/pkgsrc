@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2650 2021/05/05 11:23:55 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2651 2021/05/05 11:31:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/hs-foundation version 0.0.26 [pho 2021-05-05]
 	Added www/hs-http-conduit version 2.3.8 [pho 2021-05-05]
 	Added www/hs-js-flot version 0.8.3 [pho 2021-05-05]
+	Added devel/hs-mmap version 0.5.9 [pho 2021-05-05]
