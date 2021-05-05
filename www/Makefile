@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1533 2021/05/05 12:28:07 pho Exp $
+# $NetBSD: Makefile,v 1.1534 2021/05/05 12:59:49 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -153,6 +153,7 @@ SUBDIR+=	heel
 SUBDIR+=	hiawatha
 SUBDIR+=	horde
 SUBDIR+=	hs-HTTP
+SUBDIR+=	hs-bsb-http-chunked
 SUBDIR+=	hs-cookie
 SUBDIR+=	hs-http-client
 SUBDIR+=	hs-http-client-tls
