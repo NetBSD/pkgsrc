@@ -1,8 +1,9 @@
-$NetBSD: patch-rts_posix_OSThreads.c,v 1.1 2021/04/22 14:20:24 pho Exp $
+$NetBSD: patch-rts_posix_OSThreads.c,v 1.2 2021/05/05 09:18:52 pho Exp $
 
 Implementation of getNumberOfProcessors() for NetBSD
 
-TODO: Send this to the upstream.
+Sent to the upstream:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5679
 
 --- rts/posix/OSThreads.c.orig	2021-04-22 12:36:33.476115260 +0000
 +++ rts/posix/OSThreads.c
