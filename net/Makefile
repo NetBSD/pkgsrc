@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1402 2021/05/05 09:29:54 pho Exp $
+# $NetBSD: Makefile,v 1.1403 2021/05/05 14:59:32 pho Exp $
 #
 
 COMMENT=	Networking tools
@@ -244,6 +244,7 @@ SUBDIR+=	hs-connection
 SUBDIR+=	hs-iproute
 SUBDIR+=	hs-mime-types
 SUBDIR+=	hs-network
+SUBDIR+=	hs-network-byte-order
 SUBDIR+=	hs-network-info
 SUBDIR+=	hs-network-uri
 SUBDIR+=	hs-resolv
