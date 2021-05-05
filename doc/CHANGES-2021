@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2668 2021/05/05 15:14:49 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2669 2021/05/05 15:18:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/hs-network-byte-order version 0.1.6 [pho 2021-05-05]
 	Added devel/hs-psqueues version 0.2.7.2 [pho 2021-05-05]
 	Added time/hs-time-manager version 0.0.0 [pho 2021-05-05]
+	Added www/hs-http2 version 3.0.1 [pho 2021-05-05]
