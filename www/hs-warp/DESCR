@@ -1,0 +1,4 @@
+warp: A fast, light-weight web server for WAI applications.
+
+HTTP/1.0, HTTP/1.1 and HTTP/2 are supported. For HTTP/2, Warp supports
+direct and ALPN (in TLS) but not upgrade.
