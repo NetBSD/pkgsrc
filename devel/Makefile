@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3375 2021/05/05 10:23:40 pho Exp $
+# $NetBSD: Makefile,v 1.3376 2021/05/05 11:06:44 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -584,6 +584,7 @@ SUBDIR+=	hs-fail
 SUBDIR+=	hs-fgl
 SUBDIR+=	hs-file-embed
 SUBDIR+=	hs-fingertree
+SUBDIR+=	hs-foundation
 SUBDIR+=	hs-fsnotify
 SUBDIR+=	hs-generic-deriving
 SUBDIR+=	hs-ghc-lib-parser-ex
