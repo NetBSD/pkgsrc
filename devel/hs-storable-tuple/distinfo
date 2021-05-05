@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:58:24 pho Exp $
+
+SHA1 (storable-tuple-0.0.3.3.tar.gz) = ed0e6535ae3cbaa2e0ba077ab9cdf3e1fecf5bdd
+RMD160 (storable-tuple-0.0.3.3.tar.gz) = 1aadcffb4cc6ac8a5881873df4bb3da24003b006
+SHA512 (storable-tuple-0.0.3.3.tar.gz) = 046a809d8b6655259f3cb4de55b81d272007cf2d32f0eec3f464924f595f904030102c3fd4f3b193a01b48d2d54582a9206314a2e87cd17ecdc16a159fe73b4d
+Size (storable-tuple-0.0.3.3.tar.gz) = 2383 bytes
