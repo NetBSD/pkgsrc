@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3379 2021/05/05 11:44:06 pho Exp $
+# $NetBSD: Makefile,v 1.3380 2021/05/05 11:56:35 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -622,6 +622,7 @@ SUBDIR+=	hs-safe
 SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-split
 SUBDIR+=	hs-splitmix
+SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-streaming-commons
 SUBDIR+=	hs-strict
 SUBDIR+=	hs-syb
