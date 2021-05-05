@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 12:17:04 pho Exp $
+
+SHA1 (easy-file-0.2.2.tar.gz) = c1d421c16448a3cc341e85333998f59bfee97ad9
+RMD160 (easy-file-0.2.2.tar.gz) = 7f34c35792be3cdf12d2bac685a394e2fcc99715
+SHA512 (easy-file-0.2.2.tar.gz) = 12a11afe54175b21382786b9d7aae59ba068a27857a3ceb934023da7d14a5e9a69e4b4210a97b5e64fbcd6a41251a6a8b5608feb8a3bb212077b08148468576e
+Size (easy-file-0.2.2.tar.gz) = 12667 bytes
