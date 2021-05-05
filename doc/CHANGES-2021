@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2643 2021/05/05 09:57:36 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2644 2021/05/05 10:02:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4127,3 +4127,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-kiwisolver to 1.3.1 [adam 2021-05-05]
 	Added sysutils/hs-filepattern version 0.1.2 [pho 2021-05-05]
 	Added devel/hs-ghc-lib-parser-ex version 9.0.0.4 [pho 2021-05-05]
+	Added devel/hs-refact version 0.3.0.2 [pho 2021-05-05]
