@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2659 2021/05/05 12:17:13 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2660 2021/05/05 12:23:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4144,3 +4144,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/hs-wai version 3.2.3 [pho 2021-05-05]
 	Added devel/hs-auto-update version 0.1.6 [pho 2021-05-05]
 	Added sysutils/hs-easy-file version 0.2.2 [pho 2021-05-05]
+	Added time/hs-unix-time version 0.4.7 [pho 2021-05-05]
