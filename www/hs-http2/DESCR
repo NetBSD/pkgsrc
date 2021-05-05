@@ -1,0 +1,2 @@
+HTTP/2 library including frames, priority queues, HPACK, client and
+server.
