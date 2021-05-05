@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2021/04/29 07:44:58 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/05 04:51:30 adam Exp $
 
-DISTNAME=	requests-mock-1.9.1
+DISTNAME=	requests-mock-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-mock/}
