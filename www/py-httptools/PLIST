@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/18 10:12:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/05 08:18:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,3 +19,5 @@ ${PYSITELIB}/httptools/parser/errors.pyc
 ${PYSITELIB}/httptools/parser/errors.pyo
 ${PYSITELIB}/httptools/parser/parser.c
 ${PYSITELIB}/httptools/parser/parser.so
+${PYSITELIB}/httptools/parser/url_parser.c
+${PYSITELIB}/httptools/parser/url_parser.so
