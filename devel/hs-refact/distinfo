@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 10:01:56 pho Exp $
+
+SHA1 (refact-0.3.0.2.tar.gz) = 778cbc7a147e216246f85e3e824a0215712c3013
+RMD160 (refact-0.3.0.2.tar.gz) = 3dd5bfbb45e0e673cfb15e67fce65ffe01d2d7dc
+SHA512 (refact-0.3.0.2.tar.gz) = 18f35a3f563288815645c4ef8e557a08bd9038aca0b3d9af391f9f71b39bbf779b725f037fa682a23e38e31cf7b8e0f4ae412e2af2ec3639c4b2c47a05a45a6e
+Size (refact-0.3.0.2.tar.gz) = 2345 bytes
