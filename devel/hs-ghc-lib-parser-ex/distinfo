@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 09:57:26 pho Exp $
+
+SHA1 (ghc-lib-parser-ex-9.0.0.4.tar.gz) = 23134e9d34878cdfddd899d774c046a9c40bd010
+RMD160 (ghc-lib-parser-ex-9.0.0.4.tar.gz) = 82022d908c2f15c52a81894f09e98827061f1d2b
+SHA512 (ghc-lib-parser-ex-9.0.0.4.tar.gz) = ba02c5606113ce5b8782c55669ec657cd39462d3e6296cd4c82c21f74c9754b2882fdf77f4c239621656469f6cb1609a6ade2c18083c3d403a834744918f634a
+Size (ghc-lib-parser-ex-9.0.0.4.tar.gz) = 21446 bytes
