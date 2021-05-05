@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 15:43:54 pho Exp $
+
+SHA1 (simple-sendfile-0.2.30.tar.gz) = b69d9e622782a9b7ca7aa5ca7273151551a5676b
+RMD160 (simple-sendfile-0.2.30.tar.gz) = a7fba2e7289d635aedbb5926a28e7cf046aaff62
+SHA512 (simple-sendfile-0.2.30.tar.gz) = ae624939d54bf5ed8aa2c0727a29696730ba6b1d520f28bdc5b42a8e4c4bc03980821639fb8e16702a360dbd0396aea8a997055d22812bef3d22ffaaac53f759
+Size (simple-sendfile-0.2.30.tar.gz) = 343470 bytes
