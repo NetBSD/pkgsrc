@@ -1,9 +1,11 @@
-$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.3 2021/05/01 21:52:02 wiz Exp $
+$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.4 2021/05/05 16:54:03 wiz Exp $
 
 Match more closely to OpenBSD.mk, and in particular, hide symbols (MAPFILE).
 
 - fix wrong value of CPU_ARCH on NetBSD/evbarm-earmv7f
 - s/aarch64eb/aarch64/
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1709654
 
 --- nss/coreconf/NetBSD.mk.orig	2021-04-15 16:17:44.000000000 +0000
 +++ nss/coreconf/NetBSD.mk
