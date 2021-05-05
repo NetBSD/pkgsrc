@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 15:06:16 pho Exp $
+
+SHA1 (psqueues-0.2.7.2.tar.gz) = 857a404ac179258b7b4791834b45fb999830d079
+RMD160 (psqueues-0.2.7.2.tar.gz) = f5eace24fc673ede404c403f8faa6679d835519e
+SHA512 (psqueues-0.2.7.2.tar.gz) = cc70bc22568d24b8618d43be7a2261ab7b55005e7e68a49a4d09b323e03954c05fe8d4de2c344760cdfef26b04bc6937bc331f7e310e1bc9b6b512068eed3be3
+Size (psqueues-0.2.7.2.tar.gz) = 27455 bytes
