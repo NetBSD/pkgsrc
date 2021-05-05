@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1534 2021/05/05 12:59:49 pho Exp $
+# $NetBSD: Makefile,v 1.1535 2021/05/05 13:04:01 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -158,6 +158,7 @@ SUBDIR+=	hs-cookie
 SUBDIR+=	hs-http-client
 SUBDIR+=	hs-http-client-tls
 SUBDIR+=	hs-http-conduit
+SUBDIR+=	hs-http-date
 SUBDIR+=	hs-http-types
 SUBDIR+=	hs-js-flot
 SUBDIR+=	hs-js-jquery
