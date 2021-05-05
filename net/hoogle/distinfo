@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 16:51:43 pho Exp $
+
+SHA1 (hoogle-5.0.18.1.tar.gz) = dc2c9b6dc3a55462295a0f395f7e7e4277e05e72
+RMD160 (hoogle-5.0.18.1.tar.gz) = 33798ac4cb44436c799551209561ecce3fad3de6
+SHA512 (hoogle-5.0.18.1.tar.gz) = 00abbcf557824c604abbd5e9d27a5ca3d4a89e943888b6eef70dea46b8f786dfc851cb1c8f1531c808f4b71b34d3899258f3b009b0a38a385fc5c393a914da17
+Size (hoogle-5.0.18.1.tar.gz) = 97630 bytes
