@@ -1,0 +1,4 @@
+warp-tls: HTTP over TLS support for Warp via the TLS package
+
+SSLv1 and SSLv2 are obsoleted by IETF. We should use TLS 1.2 (or TLS
+1.1 or TLS 1.0 if necessary). HTTP/2 can be negotiated by ALPN.
