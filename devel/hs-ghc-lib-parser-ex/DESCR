@@ -1,0 +1,2 @@
+The ghc-lib-parser-ex package contains GHC API parse tree
+utilities. It works with or without ghc-lib-parser.
