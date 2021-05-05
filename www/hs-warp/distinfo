@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 15:54:00 pho Exp $
+
+SHA1 (warp-3.3.15.tar.gz) = 34bdf8a36f933f6f04201790fc08ec33fb31fab8
+RMD160 (warp-3.3.15.tar.gz) = 5103d99179e086f4c6d017caec311c4449b5690f
+SHA512 (warp-3.3.15.tar.gz) = e2454290aa66e27643e6f74874aa65dec8731b55d5f106262a583563b7d2be8b35d4a222c3cbfbd2f2d61d4a88435fc247c0a469cf2628ebe42a6ff936c78076
+Size (warp-3.3.15.tar.gz) = 65830 bytes
