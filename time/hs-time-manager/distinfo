@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 15:14:41 pho Exp $
+
+SHA1 (time-manager-0.0.0.tar.gz) = 365f3e9abc33d63c8ec43f1f14ab238d690e09c3
+RMD160 (time-manager-0.0.0.tar.gz) = 04a11dae6d3cdab69bc542a7abb0113fea721608
+SHA512 (time-manager-0.0.0.tar.gz) = aa8bd9dc9a66ea097fe2d6a6d9e77eff67debc58a588da7ae1d6fc312b6bb371da58b413b58cdba21623e2da26633595f379ac9e0a7a6dc7281ad42353231054
+Size (time-manager-0.0.0.tar.gz) = 2726 bytes
