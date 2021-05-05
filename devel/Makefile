@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3373 2021/05/05 09:58:14 pho Exp $
+# $NetBSD: Makefile,v 1.3374 2021/05/05 10:02:32 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -610,6 +610,7 @@ SUBDIR+=	hs-pretty-show
 SUBDIR+=	hs-pretty-simple
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
+SUBDIR+=	hs-refact
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-safe
