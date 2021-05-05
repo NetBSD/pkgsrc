@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.others,v 1.1 2021/05/05 15:43:54 pho Exp $
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Fallback.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Fallback.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Fallback.p_hi
