@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/11 06:34:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/05 08:41:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -49,6 +49,9 @@ ${PYSITELIB}/prompt_toolkit/completion/__init__.pyo
 ${PYSITELIB}/prompt_toolkit/completion/base.py
 ${PYSITELIB}/prompt_toolkit/completion/base.pyc
 ${PYSITELIB}/prompt_toolkit/completion/base.pyo
+${PYSITELIB}/prompt_toolkit/completion/deduplicate.py
+${PYSITELIB}/prompt_toolkit/completion/deduplicate.pyc
+${PYSITELIB}/prompt_toolkit/completion/deduplicate.pyo
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.py
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.pyc
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.pyo
@@ -304,6 +307,9 @@ ${PYSITELIB}/prompt_toolkit/layout/processors.pyo
 ${PYSITELIB}/prompt_toolkit/layout/screen.py
 ${PYSITELIB}/prompt_toolkit/layout/screen.pyc
 ${PYSITELIB}/prompt_toolkit/layout/screen.pyo
+${PYSITELIB}/prompt_toolkit/layout/scrollable_pane.py
+${PYSITELIB}/prompt_toolkit/layout/scrollable_pane.pyc
+${PYSITELIB}/prompt_toolkit/layout/scrollable_pane.pyo
 ${PYSITELIB}/prompt_toolkit/layout/utils.py
 ${PYSITELIB}/prompt_toolkit/layout/utils.pyc
 ${PYSITELIB}/prompt_toolkit/layout/utils.pyo
