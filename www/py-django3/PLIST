@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/09/10 09:37:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/05 07:06:29 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 bin/django-admin-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1173,7 +1173,6 @@ ${PYSITELIB}/django/contrib/admin/static/admin/img/tooltag-arrowright.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/js/SelectBox.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/SelectFilter2.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/actions.js
-${PYSITELIB}/django/contrib/admin/static/admin/js/actions.min.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/admin/RelatedObjectLookups.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/autocomplete.js
@@ -1181,15 +1180,12 @@ ${PYSITELIB}/django/contrib/admin/static/admin/js/calendar.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/cancel.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/change_form.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/collapse.js
-${PYSITELIB}/django/contrib/admin/static/admin/js/collapse.min.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/core.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/inlines.js
-${PYSITELIB}/django/contrib/admin/static/admin/js/inlines.min.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/jquery.init.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/nav_sidebar.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/popup_response.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/prepopulate.js
-${PYSITELIB}/django/contrib/admin/static/admin/js/prepopulate.min.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/prepopulate_init.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/urlify.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/LICENSE.txt
@@ -1784,6 +1780,9 @@ ${PYSITELIB}/django/contrib/auth/locale/zh_Hant/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/auth/management/__init__.py
 ${PYSITELIB}/django/contrib/auth/management/__init__.pyc
 ${PYSITELIB}/django/contrib/auth/management/__init__.pyo
+${PYSITELIB}/django/contrib/auth/management/commands/__init__.py
+${PYSITELIB}/django/contrib/auth/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/auth/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/auth/management/commands/changepassword.py
 ${PYSITELIB}/django/contrib/auth/management/commands/changepassword.pyc
 ${PYSITELIB}/django/contrib/auth/management/commands/changepassword.pyo
@@ -2063,6 +2062,9 @@ ${PYSITELIB}/django/contrib/contenttypes/locale/zh_Hant/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/contenttypes/management/__init__.py
 ${PYSITELIB}/django/contrib/contenttypes/management/__init__.pyc
 ${PYSITELIB}/django/contrib/contenttypes/management/__init__.pyo
+${PYSITELIB}/django/contrib/contenttypes/management/commands/__init__.py
+${PYSITELIB}/django/contrib/contenttypes/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/contenttypes/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/contenttypes/management/commands/remove_stale_contenttypes.py
 ${PYSITELIB}/django/contrib/contenttypes/management/commands/remove_stale_contenttypes.pyc
 ${PYSITELIB}/django/contrib/contenttypes/management/commands/remove_stale_contenttypes.pyo
@@ -2821,6 +2823,12 @@ ${PYSITELIB}/django/contrib/gis/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/gis/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/gis/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/gis/locale/zh_Hant/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/gis/management/__init__.py
+${PYSITELIB}/django/contrib/gis/management/__init__.pyc
+${PYSITELIB}/django/contrib/gis/management/__init__.pyo
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.py
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.py
 ${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.pyc
 ${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.pyo
@@ -3541,6 +3549,9 @@ ${PYSITELIB}/django/contrib/redirects/middleware.pyo
 ${PYSITELIB}/django/contrib/redirects/migrations/0001_initial.py
 ${PYSITELIB}/django/contrib/redirects/migrations/0001_initial.pyc
 ${PYSITELIB}/django/contrib/redirects/migrations/0001_initial.pyo
+${PYSITELIB}/django/contrib/redirects/migrations/0002_alter_redirect_new_path_help_text.py
+${PYSITELIB}/django/contrib/redirects/migrations/0002_alter_redirect_new_path_help_text.pyc
+${PYSITELIB}/django/contrib/redirects/migrations/0002_alter_redirect_new_path_help_text.pyo
 ${PYSITELIB}/django/contrib/redirects/migrations/__init__.py
 ${PYSITELIB}/django/contrib/redirects/migrations/__init__.pyc
 ${PYSITELIB}/django/contrib/redirects/migrations/__init__.pyo
@@ -3768,6 +3779,12 @@ ${PYSITELIB}/django/contrib/sessions/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sessions/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sessions/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sessions/locale/zh_Hant/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/sessions/management/__init__.py
+${PYSITELIB}/django/contrib/sessions/management/__init__.pyc
+${PYSITELIB}/django/contrib/sessions/management/__init__.pyo
+${PYSITELIB}/django/contrib/sessions/management/commands/__init__.py
+${PYSITELIB}/django/contrib/sessions/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/sessions/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/sessions/management/commands/clearsessions.py
 ${PYSITELIB}/django/contrib/sessions/management/commands/clearsessions.pyc
 ${PYSITELIB}/django/contrib/sessions/management/commands/clearsessions.pyo
@@ -3792,6 +3809,12 @@ ${PYSITELIB}/django/contrib/sitemaps/__init__.pyo
 ${PYSITELIB}/django/contrib/sitemaps/apps.py
 ${PYSITELIB}/django/contrib/sitemaps/apps.pyc
 ${PYSITELIB}/django/contrib/sitemaps/apps.pyo
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.py
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyc
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyo
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.py
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.py
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyc
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyo
@@ -3809,6 +3832,9 @@ ${PYSITELIB}/django/contrib/sites/admin.pyo
 ${PYSITELIB}/django/contrib/sites/apps.py
 ${PYSITELIB}/django/contrib/sites/apps.pyc
 ${PYSITELIB}/django/contrib/sites/apps.pyo
+${PYSITELIB}/django/contrib/sites/checks.py
+${PYSITELIB}/django/contrib/sites/checks.pyc
+${PYSITELIB}/django/contrib/sites/checks.pyo
 ${PYSITELIB}/django/contrib/sites/locale/af/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sites/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sites/locale/ar/LC_MESSAGES/django.mo
@@ -4039,6 +4065,12 @@ ${PYSITELIB}/django/contrib/staticfiles/finders.pyo
 ${PYSITELIB}/django/contrib/staticfiles/handlers.py
 ${PYSITELIB}/django/contrib/staticfiles/handlers.pyc
 ${PYSITELIB}/django/contrib/staticfiles/handlers.pyo
+${PYSITELIB}/django/contrib/staticfiles/management/__init__.py
+${PYSITELIB}/django/contrib/staticfiles/management/__init__.pyc
+${PYSITELIB}/django/contrib/staticfiles/management/__init__.pyo
+${PYSITELIB}/django/contrib/staticfiles/management/commands/__init__.py
+${PYSITELIB}/django/contrib/staticfiles/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/staticfiles/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/staticfiles/management/commands/collectstatic.py
 ${PYSITELIB}/django/contrib/staticfiles/management/commands/collectstatic.pyc
 ${PYSITELIB}/django/contrib/staticfiles/management/commands/collectstatic.pyo
@@ -4237,6 +4269,9 @@ ${PYSITELIB}/django/core/management/base.pyo
 ${PYSITELIB}/django/core/management/color.py
 ${PYSITELIB}/django/core/management/color.pyc
 ${PYSITELIB}/django/core/management/color.pyo
+${PYSITELIB}/django/core/management/commands/__init__.py
+${PYSITELIB}/django/core/management/commands/__init__.pyc
+${PYSITELIB}/django/core/management/commands/__init__.pyo
 ${PYSITELIB}/django/core/management/commands/check.py
 ${PYSITELIB}/django/core/management/commands/check.pyc
 ${PYSITELIB}/django/core/management/commands/check.pyo
@@ -4330,6 +4365,9 @@ ${PYSITELIB}/django/core/serializers/base.pyo
 ${PYSITELIB}/django/core/serializers/json.py
 ${PYSITELIB}/django/core/serializers/json.pyc
 ${PYSITELIB}/django/core/serializers/json.pyo
+${PYSITELIB}/django/core/serializers/jsonl.py
+${PYSITELIB}/django/core/serializers/jsonl.pyc
+${PYSITELIB}/django/core/serializers/jsonl.pyo
 ${PYSITELIB}/django/core/serializers/python.py
 ${PYSITELIB}/django/core/serializers/python.pyc
 ${PYSITELIB}/django/core/serializers/python.pyo
@@ -4840,6 +4878,9 @@ ${PYSITELIB}/django/shortcuts.pyo
 ${PYSITELIB}/django/template/__init__.py
 ${PYSITELIB}/django/template/__init__.pyc
 ${PYSITELIB}/django/template/__init__.pyo
+${PYSITELIB}/django/template/autoreload.py
+${PYSITELIB}/django/template/autoreload.pyc
+${PYSITELIB}/django/template/autoreload.pyo
 ${PYSITELIB}/django/template/backends/__init__.py
 ${PYSITELIB}/django/template/backends/__init__.pyc
 ${PYSITELIB}/django/template/backends/__init__.pyo
@@ -4999,6 +5040,9 @@ ${PYSITELIB}/django/utils/baseconv.pyo
 ${PYSITELIB}/django/utils/cache.py
 ${PYSITELIB}/django/utils/cache.pyc
 ${PYSITELIB}/django/utils/cache.pyo
+${PYSITELIB}/django/utils/connection.py
+${PYSITELIB}/django/utils/connection.pyc
+${PYSITELIB}/django/utils/connection.pyo
 ${PYSITELIB}/django/utils/crypto.py
 ${PYSITELIB}/django/utils/crypto.pyc
 ${PYSITELIB}/django/utils/crypto.pyo
@@ -5137,6 +5181,9 @@ ${PYSITELIB}/django/views/decorators/cache.pyo
 ${PYSITELIB}/django/views/decorators/clickjacking.py
 ${PYSITELIB}/django/views/decorators/clickjacking.pyc
 ${PYSITELIB}/django/views/decorators/clickjacking.pyo
+${PYSITELIB}/django/views/decorators/common.py
+${PYSITELIB}/django/views/decorators/common.pyc
+${PYSITELIB}/django/views/decorators/common.pyo
 ${PYSITELIB}/django/views/decorators/csrf.py
 ${PYSITELIB}/django/views/decorators/csrf.pyc
 ${PYSITELIB}/django/views/decorators/csrf.pyo
