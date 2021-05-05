@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 14:58:58 pho Exp $
+
+SHA1 (network-byte-order-0.1.6.tar.gz) = 585840e9b8a4ef5922e6d87e8efa9cf606a2945b
+RMD160 (network-byte-order-0.1.6.tar.gz) = 09b3ba3a8f929d90c90b525d2d0a41b04b8f31d4
+SHA512 (network-byte-order-0.1.6.tar.gz) = bfb15f6e1aa863af7f81dc35518273e936d04f5f9decf6a0938a972dc9780ab5c9c10ed062ea027d1e92aa1e61dfb0059dcbc38324dbd4124f89d08017a2ae97
+Size (network-byte-order-0.1.6.tar.gz) = 6648 bytes
