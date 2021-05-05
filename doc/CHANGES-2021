@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2672 2021/05/05 15:54:11 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2673 2021/05/05 16:00:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4157,3 +4157,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/hs-simple-sendfile version 0.2.30 [pho 2021-05-05]
 	Added devel/hs-word8 version 0.1.3 [pho 2021-05-05]
 	Added www/hs-warp version 3.3.15 [pho 2021-05-05]
+	Added security/hs-tls-session-manager version 0.0.4 [pho 2021-05-05]
