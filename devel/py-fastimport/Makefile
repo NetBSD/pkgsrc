@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/04/17 13:24:16 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/05 08:17:38 adam Exp $
 
-DISTNAME=	fastimport-0.9.8
+DISTNAME=	fastimport-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastimport/}
@@ -12,11 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} fast-import-filter fast-import-filter-${PYVERSSUFFIX} && \
-		${MV} fast-import-info fast-import-info-${PYVERSSUFFIX} && \
-		${MV} fast-import-query fast-import-query-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+post-install:
+.for bin in fast-import-filter fast-import-info fast-import-query
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
