@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 10:23:03 pho Exp $
+
+SHA1 (hlint-3.3.1.tar.gz) = de025fdd09afd7a68af7e12f88acb90a2ff164d2
+RMD160 (hlint-3.3.1.tar.gz) = 5a5eeab54af801ae546b912cd1bc44832956e8fe
+SHA512 (hlint-3.3.1.tar.gz) = 46fabb26361cfd71ceda302669fc4f55d28dffc2a98732be48d7b6c244dd5f546bce1a8179a75487753e6113ad062e7840a4e5feee8a432936fdd65a20283a13
+Size (hlint-3.3.1.tar.gz) = 160882 bytes
