@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:46:54 pho Exp $
+
+SHA1 (process-extras-0.7.4.tar.gz) = c78a02b7a0462c51233d4a408b6f1fc63eafd454
+RMD160 (process-extras-0.7.4.tar.gz) = a4c232ce1b4562ac42b7ff04639dafbf39c033e1
+SHA512 (process-extras-0.7.4.tar.gz) = 4747b4bd920796b7b4ddf32d0e72a3af556c9db66c828b725ac7a7467442dad2b0dc85aa66e03d7a8c5afdb02658611e64d390b6c71219b380a986e245495536
+Size (process-extras-0.7.4.tar.gz) = 14256 bytes
