@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:56:00 pho Exp $
+
+SHA1 (storable-record-0.0.5.tar.gz) = cdad90e901912f55bde3d784d68a337099252b22
+RMD160 (storable-record-0.0.5.tar.gz) = da9c26d2dd3d44da2a9745ebbe7a09377ad8c371
+SHA512 (storable-record-0.0.5.tar.gz) = 6c9a71dd4470afc4693026603a7288e6bdff008995cf89e3d6b8f509c515e8b7aa8561e2f8f4b887c622599a7790075c67f5f3c219c89306555bec6a8ab69061
+Size (storable-record-0.0.5.tar.gz) = 8185 bytes
