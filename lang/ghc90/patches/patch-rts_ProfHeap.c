@@ -1,6 +1,9 @@
-$NetBSD: patch-rts_ProfHeap.c,v 1.3 2021/04/26 07:41:21 pho Exp $
+$NetBSD: patch-rts_ProfHeap.c,v 1.4 2021/05/05 09:18:52 pho Exp $
 
 NetBSD does not have uselocale(3).
+
+Sent to the upstream:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5677
 
 --- rts/ProfHeap.c.orig	2021-01-25 16:30:28.000000000 +0000
 +++ rts/ProfHeap.c

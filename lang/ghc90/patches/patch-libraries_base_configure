@@ -1,6 +1,9 @@
-$NetBSD: patch-libraries_base_configure,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+$NetBSD: patch-libraries_base_configure,v 1.2 2021/05/05 09:18:52 pho Exp $
 
 Ensure libiconv can be found at runtime.
+
+XXX: I don't think this is needed because rpath flags are handled by
+Cabal. LDFLAGS is not used anyway. (pho@)
 
 --- libraries/base/configure.orig	2020-09-15 12:39:44.549328929 +0000
 +++ libraries/base/configure
