@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20608 2021/05/04 14:48:54 prlw1 Exp $
+$NetBSD: TODO,v 1.20609 2021/05/05 08:19:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1971,7 +1971,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-django-tagging-0.5.0
 	o py-dpkt-1.9.5
 	o py-ephem3-3.7.6.0
-	o py-fastimport-0.9.11
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
