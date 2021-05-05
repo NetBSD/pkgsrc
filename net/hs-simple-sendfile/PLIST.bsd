@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.bsd,v 1.1 2021/05/05 15:43:54 pho Exp $
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/BSD.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/BSD.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/BSD.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/IOVec.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/IOVec.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/IOVec.p_hi
