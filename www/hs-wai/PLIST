@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/05 12:03:04 pho Exp $
+lib/wai-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wai-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Internal.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Internal.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/Network-Wai-Internal.html
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/Network-Wai.html
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/wai-${PKGVERSION}/html/wai.haddock
