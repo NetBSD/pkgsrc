@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 09:28:50 adam Exp $
+
+SHA1 (cppy-1.1.0.tar.gz) = 3af4f5f14ef1f9b49d7457e2fa5c241c721db29c
+RMD160 (cppy-1.1.0.tar.gz) = 4ff906130cd679a2f5e0781b6f2e3e1fc16b2093
+SHA512 (cppy-1.1.0.tar.gz) = 9ef4db580c963219a111ab10bc263cdf2c4386e27fce8ffe5c785fc7e8f6c6b60cb23ce918959c6f17194fd6977cc65fa64d167a0b62e6cff0cf662154bc734c
+Size (cppy-1.1.0.tar.gz) = 11777 bytes
