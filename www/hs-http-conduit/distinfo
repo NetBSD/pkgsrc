@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:18:51 pho Exp $
+
+SHA1 (http-conduit-2.3.8.tar.gz) = a7b7bc88f3c1c6e46dcefee8343e4e001580408b
+RMD160 (http-conduit-2.3.8.tar.gz) = 567efdb7a0103366e1308222439ae1c37333720e
+SHA512 (http-conduit-2.3.8.tar.gz) = 44c337f1a0a0ec74a5d6e4e28a3aa5a32609c3a4da9424e99aedc2a8db67fc4684ef10cf82d6bda0761c7ffba4f0222e683946ab6dd8de1ab8225a40cc14cf66
+Size (http-conduit-2.3.8.tar.gz) = 28858 bytes
