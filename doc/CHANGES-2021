@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2663 2021/05/05 12:59:24 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2664 2021/05/05 13:03:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4148,3 +4148,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/hs-fast-logger version 3.0.5 [pho 2021-05-05]
 	Added www/hs-wai-logger version 2.3.6 [pho 2021-05-05]
 	Added www/hs-bsb-http-chunked version 0.0.0.4 [pho 2021-05-05]
+	Added www/hs-http-date version 0.0.11 [pho 2021-05-05]
