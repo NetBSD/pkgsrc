@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.817 2021/04/27 10:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.818 2021/05/05 16:01:18 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -134,6 +134,7 @@ SUBDIR+=	hs-ed25519
 SUBDIR+=	hs-hackage-security
 SUBDIR+=	hs-pem
 SUBDIR+=	hs-tls
+SUBDIR+=	hs-tls-session-manager
 SUBDIR+=	hs-x509
 SUBDIR+=	hs-x509-store
 SUBDIR+=	hs-x509-system
