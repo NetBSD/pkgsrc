@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:27:42 pho Exp $
+
+SHA1 (js-jquery-3.3.1.tar.gz) = 1189274b662af49a3f49b31cbf2ab15af17e04fd
+RMD160 (js-jquery-3.3.1.tar.gz) = 48df0e8286a14e14956243c8b73aaa84e0057ee3
+SHA512 (js-jquery-3.3.1.tar.gz) = 3222259a4342bc5156d5360385a478e235def04db0381cc48f342baac5018e91350dce760adb9b9ada796bc6341d5629f807672f629ee127faefe521801d62bb
+Size (js-jquery-3.3.1.tar.gz) = 114431 bytes
