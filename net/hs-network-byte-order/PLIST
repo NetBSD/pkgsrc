@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/05 14:58:58 pho Exp $
+lib/network-byte-order-${PKGVERSION}/${HS_VERSION}/package-description
+lib/network-byte-order-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/ByteOrder.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/ByteOrder.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/ByteOrder.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/Network-ByteOrder.html
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/network-byte-order.haddock
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/network-byte-order-${PKGVERSION}/html/synopsis.png
