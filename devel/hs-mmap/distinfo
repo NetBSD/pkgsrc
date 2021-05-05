@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/05 11:31:11 pho Exp $
+
+SHA1 (mmap-0.5.9.tar.gz) = 924849e409a5ce98bf2f1c4642958eb260273fc7
+RMD160 (mmap-0.5.9.tar.gz) = 3d21d109d94ecb2aaf382176e144cc470b6fbd17
+SHA512 (mmap-0.5.9.tar.gz) = 3b9ac1150050ac9d8e7870610923c8303b5fc74a4fdd796d7b6b411e2ba836111ae8520e16ad345aaf93b4dbcd27abd4c359a89b27d854db8dbd252b90a5298d
+Size (mmap-0.5.9.tar.gz) = 11731 bytes
