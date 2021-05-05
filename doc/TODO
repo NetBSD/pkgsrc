@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20609 2021/05/05 08:19:04 adam Exp $
+$NetBSD: TODO,v 1.20610 2021/05/05 10:50:38 taca Exp $
 
 Suggested new packages
 ======================
@@ -552,9 +552,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-yaml-2.2.1
 	o R-zoo-1.8.9
 	o RE-flex-3.0.2
-	o SOGo-5.0.1
+	o SOGo-2.4.0
+	o SOGo-5.1.0
 	o SOGo4-4.3.2
-	o SOPE-5.0.1
+	o SOPE-2.4.0
+	o SOPE-5.1.0
 	o SOPE4-4.3.2
 	o SQLiteCpp-2.5.0
 	o Sigil-1.5.1 [wip]
