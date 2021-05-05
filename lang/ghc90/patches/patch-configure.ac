@@ -1,7 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2021/05/05 09:18:52 pho Exp $
 
-Don't use non-portable operator ==:
-https://gitlab.haskell.org/ghc/ghc/merge_requests/2497
+Disable DTrace support on solaris2.
+XXX: But why?
 
 --- configure.ac.orig	2021-02-02 21:05:56.000000000 +0000
 +++ configure.ac
