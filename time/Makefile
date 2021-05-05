@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2021/03/31 20:28:04 pin Exp $
+# $NetBSD: Makefile,v 1.221 2021/05/05 12:23:30 pho Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -40,6 +40,7 @@ SUBDIR+=	hs-old-time
 SUBDIR+=	hs-time-compat
 SUBDIR+=	hs-timezone-olson
 SUBDIR+=	hs-timezone-series
+SUBDIR+=	hs-unix-time
 SUBDIR+=	ical
 SUBDIR+=	ical2rem
 SUBDIR+=	jday
