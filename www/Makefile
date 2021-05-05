@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1536 2021/05/05 15:19:24 pho Exp $
+# $NetBSD: Makefile,v 1.1537 2021/05/05 15:54:30 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -165,6 +165,7 @@ SUBDIR+=	hs-js-flot
 SUBDIR+=	hs-js-jquery
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-wai-logger
+SUBDIR+=	hs-warp
 SUBDIR+=	hs-xss-sanitize
 SUBDIR+=	htdavlock
 SUBDIR+=	htdig
