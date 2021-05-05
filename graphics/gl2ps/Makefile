@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/04 14:05:44 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/05 13:00:56 thor Exp $
 
 DISTNAME=	gl2ps-1.4.2
 CATEGORIES=	graphics
@@ -16,6 +16,7 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
