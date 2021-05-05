@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/05 16:03:34 pho Exp $
+lib/warp-tls-${PKGVERSION}/${HS_VERSION}/package-description
+lib/warp-tls-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WarpTLS.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WarpTLS.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WarpTLS.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/Network-Wai-Handler-WarpTLS.html
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/warp-tls-${PKGVERSION}/html/warp-tls.haddock
