@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.6 2021/05/03 17:12:23 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2021/05/06 20:25:15 bouyer Exp $
 
 SHA1 (FusionInventory-Agent-2.6.tar.gz) = 288acf5707e550fa10275f8e6fab70b50aa790aa
 RMD160 (FusionInventory-Agent-2.6.tar.gz) = 1d6504f2119bb531c527180c9275bb692b8a1a2a
 SHA512 (FusionInventory-Agent-2.6.tar.gz) = c4d12b17e87f9b7e59c1a7284fb88bb0ab51c22037624f666469c75b993ec5939f3f88752afdab82b5d35972c76fbc36a49c6fd1f5246481efb8adf893b4fa3f
 Size (FusionInventory-Agent-2.6.tar.gz) = 2819730 bytes
 SHA1 (patch-Makefile.PL) = d01414b74fa3bbd9bedb658b39d3a07074274142
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD.pm) = 7548564a13a16c0f9da9f8d0df5a6fe5e63079f1
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_Alpha.pm) = ba0bd79e697ac5c9a39ffe70ce26575cc88846a2
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_MIPS.pm) = c5449c5181f92984cfe129dbca5e11d69094c424
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_SPARC.pm) = 48fcf497b55efcd17dd34d8807fa6dc091303169
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_Storages.pm) = a2ffacd0b9ee84accc001b2013aa52a0c0dc419f
+SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_Generic_PCI.pm) = 94f5afb7b4277a1729c322c7111c94481e1cbe34
+SHA1 (patch-lib_FusionInventory_Agent_Tools_BSD.pm) = d312bc244889beb7c747a4c8b021590102a8294c
+SHA1 (patch-lib_FusionInventory_Agent_Tools_Generic.pm) = 1e8cc8d8ff4c03ba563c3c63ed348e22bd665e9d
