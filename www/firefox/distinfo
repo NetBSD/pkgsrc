@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.434 2021/05/03 16:31:37 ryoon Exp $
+$NetBSD: distinfo,v 1.435 2021/05/06 13:14:24 ryoon Exp $
 
-SHA1 (firefox-88.0.source.tar.xz) = 7a40f520b5a91b9214debf4674acf553a852bd29
-RMD160 (firefox-88.0.source.tar.xz) = 2e272a4497231a65c6a0fe9ee3550771d05d55fe
-SHA512 (firefox-88.0.source.tar.xz) = f58f44f2f0d0f54eae5ab4fa439205feb8b9209b1bf2ea2ae0c9691e9e583bae2cbd4033edb5bdf4e37eda5b95fca688499bed000fe26ced8ff4bbc49347ce31
-Size (firefox-88.0.source.tar.xz) = 373744508 bytes
+SHA1 (firefox-88.0.1.source.tar.xz) = 4cce4f21eda3fe9982e18358507890c409744549
+RMD160 (firefox-88.0.1.source.tar.xz) = a6602d8717088fccdd7b9a808325643a58252fd2
+SHA512 (firefox-88.0.1.source.tar.xz) = e2d7fc950ba49f225c83ee1d799d6318fcf16c33a3b7f40b85c49d5b7865f7e632c703e5fd227a303b56e2565d0796283ebb12d7fd1a02781dcaa45e84cea934
+Size (firefox-88.0.1.source.tar.xz) = 376465316 bytes
 SHA1 (nodejs-output-88.0.tgz) = e36945e45df7311113f4cd4c44dc76218444f7f8
 RMD160 (nodejs-output-88.0.tgz) = ebde4f6b207b42d997d6791eaf17ab8f8d9310af
 SHA512 (nodejs-output-88.0.tgz) = bdaad8a9ba4c3ad501018a4da0889194d47c0b9321fb265d4f14cee0588672e4ea113b3b3314b40ba0f54e09d8961e0d0732aede511830073180834ede82a1cf
