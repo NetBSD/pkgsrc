@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/05/06 08:16:00 wiz Exp $
+
+This fixes build failure for latest source with autoconf. Add the check
+glib-mkenums and definition of GLIB_MKENUMS to configure.ac
+
+https://gitlab.freedesktop.org/farstream/farstream/-/commit/f047f4f6640146dda90cf9c87565fd61a3edeee8
+
+--- configure.ac.orig	2012-02-20 23:32:56.000000000 +0000
++++ configure.ac
+@@ -235,6 +235,12 @@ dnl Check for FIONREAD ioctl declaration
+ dnl used in gst/tcp
+ GST_CHECK_FIONREAD
+ 
++dnl Check for glib-2.0 tools
++AC_MSG_CHECKING([for glib-mkenums])
++GLIB_MKENUMS="`$PKG_CONFIG --variable=glib_mkenums glib-2.0`"
++AC_SUBST(GLIB_MKENUMS)
++AC_MSG_RESULT($GLIB_MKENUMS)
++
+ dnl *** checks for structures ***
+ 
+ dnl *** checks for compiler characteristics ***

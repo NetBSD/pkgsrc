@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2015/11/03 23:54:25 agc Exp $
+$NetBSD: distinfo,v 1.38 2021/05/06 08:15:59 wiz Exp $
 
 SHA1 (gst-plugins-base-0.10.36.tar.bz2) = e675401b62a6bf2e5ea966e833afd005a585e978
 RMD160 (gst-plugins-base-0.10.36.tar.bz2) = b601372b3a1c04de63f69ba350c5010c99dbc6ae
@@ -6,5 +6,7 @@ SHA512 (gst-plugins-base-0.10.36.tar.bz2) = 881845d3e3cca18028904ac724d529aa3e12
 Size (gst-plugins-base-0.10.36.tar.bz2) = 3036143 bytes
 SHA1 (patch-ab) = 17a44f9b50d4acf9b0effd80911698a2f9813e4d
 SHA1 (patch-ac) = a8a56dc16f3cc908d93aaed810fc5a9c6a875cc2
+SHA1 (patch-common_gst-glib-gen.mak) = 1dc21face8fe3cfb5242f9a21532a008ac0bf571
+SHA1 (patch-configure.ac) = e104b84f2f3c51dafee57c40b5b903de0fc37578
 SHA1 (patch-gst-libs_gst_video_video.h) = ba07c80ab91a0086234073c3fcbf28315502449b
 SHA1 (patch-gst_audioresample_resample.c) = 77a88286c74df80f5f724c922a5ecec0341d4788
