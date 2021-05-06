@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/04/30 05:55:06 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/05/06 06:52:54 pin Exp $
 
-SHA1 (neix-0.1.4.tar.gz) = 725fb9cc40b372e92e5977f9374e66e774a82112
-RMD160 (neix-0.1.4.tar.gz) = 3c835bc992f72626004580a101f0e6cfd4c70cc3
-SHA512 (neix-0.1.4.tar.gz) = ac56998c136d344cd3646b6a84e08a18444487427d71012594a56b6ae7074d2deab8f3f2f4bcf32779ce68cf40347f594108cb874cea847c44d5534ad7f63991
-Size (neix-0.1.4.tar.gz) = 3646239 bytes
-SHA1 (patch-CMakeLists.txt) = e066f38930833a41d30376244abee397c0f11839
+SHA1 (neix-0.1.5.tar.gz) = d94e77ca0770bbb3c25e0fdbe3a4c6a8443bd60d
+RMD160 (neix-0.1.5.tar.gz) = 1586a7df2bf16b5159752b6dc7a5bd409aa6d1fe
+SHA512 (neix-0.1.5.tar.gz) = 85db547eba97b112895abd998f7f597a425aff5e37e917052c7c4fff3d7a8b14bf3c5704abc60ac6b3a9f6d7c25d0d690c64c06407927015036c2b733d18d7db
+Size (neix-0.1.5.tar.gz) = 3646484 bytes
+SHA1 (patch-CMakeLists.txt) = b18398523e982fd96dc7b216ddfa4d1c2ccea637
