@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/05/27 12:14:31 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/06 20:17:28 adam Exp $
 
-DISTNAME=	six-1.15.0
+DISTNAME=	six-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/six/}
@@ -10,13 +10,11 @@ HOMEPAGE=	https://github.com/benjaminp/six
 COMMENT=	Python 2 and 3 compatibility utilities
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
