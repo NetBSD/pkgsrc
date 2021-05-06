@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2018/03/13 03:01:15 dholland Exp $
+$NetBSD: distinfo,v 1.8 2021/05/06 15:31:13 tnn Exp $
 
-SHA1 (openocd-0.10.0.tar.bz2) = 3245d43d60a1a93f8b0f6b1ce20b53e38cab7a4a
-RMD160 (openocd-0.10.0.tar.bz2) = c3ae519d50e0f4185768a7642eefbc954c56d84a
-SHA512 (openocd-0.10.0.tar.bz2) = 6c890c86c3339da49bd529e8674ca62bc7fce4a2a17798dcc5d70b4f7628b640d856651170a3f7e2e2a120989066e84d8439b56ff42ff2bd72446f9af0f28ba2
-Size (openocd-0.10.0.tar.bz2) = 4792636 bytes
+SHA1 (openocd-0.11.0.tar.bz2) = 8d454145a8c22eb9d837ab3ba08dcef06cd10473
+RMD160 (openocd-0.11.0.tar.bz2) = d1e09011ef5e9171529b550b0e90468da178425d
+SHA512 (openocd-0.11.0.tar.bz2) = 4c8d880945083a05a3781b3fe2a39e4055df635faab1cacd78ca51ced75c9a478f4e16e6c6fa35ac117e2e4d6453cdd19818f1d27aae6edf1bda8c0e846d0de8
+Size (openocd-0.11.0.tar.bz2) = 5699972 bytes
+SHA1 (patch-Makefile.in) = 4035163eb0563254dc4f1bc4a0abac9fbea633e1
 SHA1 (patch-src_flash_nor_fm4.c) = b14914ebe08a7c7d9f12c3999c5e6edeae2569e0
