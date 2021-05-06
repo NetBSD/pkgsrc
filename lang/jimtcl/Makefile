@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/02/01 10:38:24 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/06 15:19:39 tnn Exp $
 
 DISTNAME=	jimtcl-0.80
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msteveb/}
 
@@ -25,6 +26,9 @@ REPLACE.jimsh.new=	${PREFIX}/bin/jimsh
 REPLACE_FILES.jimsh=	build-jim-ext.in
 
 TEST_TARGET=	test
+
+post-install:
+	${LN} -sf libjim.so.${PKGVERSION_NOREV} ${DESTDIR}${PREFIX}/lib/libjim.so
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
