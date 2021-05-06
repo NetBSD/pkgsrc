@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/05/06 15:31:13 tnn Exp $
+
+use pkg-config to find libjim.so
+
+--- Makefile.in.orig	2021-03-07 11:02:20.000000000 +0000
++++ Makefile.in
+@@ -97,7 +97,7 @@ bin_PROGRAMS = src/openocd$(EXEEXT)
+ @INTERNAL_JIMTCL_TRUE@			   -I$(top_builddir)/jimtcl
+ 
+ @INTERNAL_JIMTCL_TRUE@am__append_4 = $(top_builddir)/jimtcl/libjim.a
+-@INTERNAL_JIMTCL_FALSE@am__append_5 = -ljim
++@INTERNAL_JIMTCL_FALSE@am__append_5 = $$(pkg-config --libs jimtcl)
+ 
+ # banner output includes RELSTR appended to $VERSION from the configure script
+ # guess-rev.sh returns either a repository version ID or "-snapshot"
