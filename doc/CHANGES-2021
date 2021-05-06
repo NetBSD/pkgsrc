@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2677 2021/05/06 06:53:16 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2678 2021/05/06 07:22:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4165,3 +4165,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.30.0 [adam 2021-05-06]
 	Updated www/py-google-apitools to 0.5.32 [adam 2021-05-06]
 	Updated news/neix to 0.1.5 [pin 2021-05-06]
+	Updated lang/erlang to 23.3.2 [adam 2021-05-06]
+	Updated net/rabbitmq to 3.8.16 [adam 2021-05-06]
