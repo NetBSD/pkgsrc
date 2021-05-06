@@ -1,0 +1,28 @@
+$NetBSD: patch-gst_rtpmanager_Makefile.in,v 1.1 2021/05/06 18:01:31 martin Exp $
+
+GNU Make 4.3 has a backwards incompatible change affecting the use of
+number signs or hashes (ie., #) inside function invocations. See:
+https://lists.gnu.org/archive/html/info-gnu/2020-01/msg00004.html
+
+In this case, it would expand the '\#' in the '\n\#include \"$(h)\"'
+argument to the foreach call to '\#', not '#'. This would lead to
+spurious backslashes in front of the '#include' directives in the
+generated fs-enumtypes.c file.
+
+Spotted by Ernestas Kulik.
+
+https://gitlab.freedesktop.org/farstream/farstream/-/commit/54987d445ea714b467d901b7daf8c09ed0644189
+
+--- ./gst/rtpmanager/Makefile.in.orig	2012-02-21 01:09:01.000000000 +0100
++++ ./gst/rtpmanager/Makefile.in	2021-05-06 19:59:14.809647955 +0200
+@@ -501,7 +501,8 @@
+ glib_enum_define = GST_RTP_BIN
+ glib_gen_prefix = gst_rtp_bin
+ glib_gen_basename = gstrtpbin
+-enum_headers = $(foreach h,$(glib_enum_headers),\n\#include \"$(h)\")
++hash:=\#
++enum_headers=$(foreach h,$(glib_enum_headers),\n$(hash)include \"$(h)\")
+ built_sources = gstrtpbin-marshal.c
+ built_headers = gstrtpbin-marshal.h
+ BUILT_SOURCES = $(built_sources) $(built_headers)
+

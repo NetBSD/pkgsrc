@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2020/09/01 21:44:01 ryoon Exp $
+$NetBSD: distinfo,v 1.45 2021/05/06 18:01:31 martin Exp $
 
 SHA1 (gst-plugins-good-0.10.31.tar.bz2) = b45fc01b133fc23617fa501dd9307a90f467b396
 RMD160 (gst-plugins-good-0.10.31.tar.bz2) = d9fed957ba26d055f7bccb9079bd43faae15b7e5
@@ -7,7 +7,11 @@ Size (gst-plugins-good-0.10.31.tar.bz2) = 3390378 bytes
 SHA1 (patch-ab) = d0d8b7fbd373d300e1808b8b106257d87dd85f7a
 SHA1 (patch-ba) = 0f2cc16c39f8bc2a4854ec928b7c0b60d0559eb5
 SHA1 (patch-bb) = b71b740e106b5fc932cc50a7994e491da27909be
+SHA1 (patch-common_glib-gen.mak) = bba208397034ba010e6b31b05d1504caeb63eef9
+SHA1 (patch-common_gst-glib-gen.mak) = 1dc21face8fe3cfb5242f9a21532a008ac0bf571
 SHA1 (patch-gst_goom_mmx.h) = b940bfcd0599fa83fbe574ca9059c7f626d23663
+SHA1 (patch-gst_rtpmanager_Makefile.in) = 8c42df0ad3a2d1113416f87d4793e4a32a52c67b
+SHA1 (patch-gst_udp_Makefile.in) = d35415c498285d1eb6dff6e269402515ec039fab
 SHA1 (patch-sys_v4l2_gstv4l2bufferpool.c) = c200c8f0a647dd0c74be6d4e68bfac7a910b78a3
 SHA1 (patch-sys_v4l2_gstv4l2object.c) = 2897708371b21cb098e799fa0dd2d288f042374a
 SHA1 (patch-sys_v4l2_v4l2_calls.c) = 4eb5d965a821c6b9e7a6ae84f86b256eb7e56e4c
