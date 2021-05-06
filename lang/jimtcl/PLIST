@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/01 10:38:24 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/06 15:19:39 tnn Exp $
 bin/build-jim-ext
 bin/jimsh
 include/jim-config.h
@@ -9,6 +9,7 @@ include/jim-win32compat.h
 include/jim.h
 lib/jim/README.extensions
 lib/jim/tcltest.tcl
+lib/libjim.so
 lib/libjim.so.${PKGVERSION}
 lib/pkgconfig/jimtcl.pc
 share/doc/jimtcl/Tcl.html
