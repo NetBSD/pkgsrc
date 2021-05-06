@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2675 2021/05/05 16:51:52 pho Exp $
+$NetBSD: CHANGES-2021,v 1.2676 2021/05/06 04:50:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4160,3 +4160,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/hs-tls-session-manager version 0.0.4 [pho 2021-05-05]
 	Added www/hs-warp-tls version 3.3.0 [pho 2021-05-05]
 	Added net/hoogle version 5.0.18.1 [pho 2021-05-05]
+	Updated finance/py-braintree to 4.9.0 [adam 2021-05-06]
+	Updated math/py-pandas to 1.2.4 [adam 2021-05-06]
+	Updated net/py-zeroconf to 0.30.0 [adam 2021-05-06]
+	Updated www/py-google-apitools to 0.5.32 [adam 2021-05-06]
