@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/05/06 15:31:13 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/06 21:15:38 tnn Exp $
 
 DISTNAME=	openocd-0.11.0
 CATEGORIES=	devel
@@ -19,6 +19,7 @@ INFO_FILES=	yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--disable-internal-jimtcl
 BUILDLINK_TRANSFORM+=	rm:-Werror
+OVERRIDE_DIRDEPTH?=	5
 
 .include "options.mk"
 
