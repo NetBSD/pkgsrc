@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.626 2021/04/19 10:14:10 nia Exp $
+# $NetBSD: Makefile,v 1.627 2021/05/06 20:41:22 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -483,7 +483,6 @@ SUBDIR+=	wsoundprefs
 SUBDIR+=	wsoundserver
 SUBDIR+=	xanalyser
 SUBDIR+=	xcdplayer
-SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-xmms-plugin
 SUBDIR+=	xhippo
 SUBDIR+=	xine-alsa
