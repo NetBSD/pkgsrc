@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/04/06 15:27:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/05/06 07:40:56 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/pygments/formatters/latex.pyo
 ${PYSITELIB}/pygments/formatters/other.py
 ${PYSITELIB}/pygments/formatters/other.pyc
 ${PYSITELIB}/pygments/formatters/other.pyo
+${PYSITELIB}/pygments/formatters/pangomarkup.py
+${PYSITELIB}/pygments/formatters/pangomarkup.pyc
+${PYSITELIB}/pygments/formatters/pangomarkup.pyo
 ${PYSITELIB}/pygments/formatters/rtf.py
 ${PYSITELIB}/pygments/formatters/rtf.pyc
 ${PYSITELIB}/pygments/formatters/rtf.pyo
@@ -81,6 +84,9 @@ ${PYSITELIB}/pygments/lexers/_cocoa_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_csound_builtins.py
 ${PYSITELIB}/pygments/lexers/_csound_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_csound_builtins.pyo
+${PYSITELIB}/pygments/lexers/_julia_builtins.py
+${PYSITELIB}/pygments/lexers/_julia_builtins.pyc
+${PYSITELIB}/pygments/lexers/_julia_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_lasso_builtins.py
 ${PYSITELIB}/pygments/lexers/_lasso_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_lasso_builtins.pyo
@@ -147,6 +153,9 @@ ${PYSITELIB}/pygments/lexers/amdgpu.pyo
 ${PYSITELIB}/pygments/lexers/ampl.py
 ${PYSITELIB}/pygments/lexers/ampl.pyc
 ${PYSITELIB}/pygments/lexers/ampl.pyo
+${PYSITELIB}/pygments/lexers/apdlexer.py
+${PYSITELIB}/pygments/lexers/apdlexer.pyc
+${PYSITELIB}/pygments/lexers/apdlexer.pyo
 ${PYSITELIB}/pygments/lexers/apl.py
 ${PYSITELIB}/pygments/lexers/apl.pyc
 ${PYSITELIB}/pygments/lexers/apl.pyo
@@ -288,6 +297,9 @@ ${PYSITELIB}/pygments/lexers/functional.pyo
 ${PYSITELIB}/pygments/lexers/futhark.py
 ${PYSITELIB}/pygments/lexers/futhark.pyc
 ${PYSITELIB}/pygments/lexers/futhark.pyo
+${PYSITELIB}/pygments/lexers/gcodelexer.py
+${PYSITELIB}/pygments/lexers/gcodelexer.pyc
+${PYSITELIB}/pygments/lexers/gcodelexer.pyo
 ${PYSITELIB}/pygments/lexers/gdscript.py
 ${PYSITELIB}/pygments/lexers/gdscript.pyc
 ${PYSITELIB}/pygments/lexers/gdscript.pyo
@@ -351,6 +363,9 @@ ${PYSITELIB}/pygments/lexers/julia.pyo
 ${PYSITELIB}/pygments/lexers/jvm.py
 ${PYSITELIB}/pygments/lexers/jvm.pyc
 ${PYSITELIB}/pygments/lexers/jvm.pyo
+${PYSITELIB}/pygments/lexers/kuin.py
+${PYSITELIB}/pygments/lexers/kuin.pyc
+${PYSITELIB}/pygments/lexers/kuin.pyo
 ${PYSITELIB}/pygments/lexers/lisp.py
 ${PYSITELIB}/pygments/lexers/lisp.pyc
 ${PYSITELIB}/pygments/lexers/lisp.pyo
@@ -525,6 +540,9 @@ ${PYSITELIB}/pygments/lexers/supercollider.pyo
 ${PYSITELIB}/pygments/lexers/tcl.py
 ${PYSITELIB}/pygments/lexers/tcl.pyc
 ${PYSITELIB}/pygments/lexers/tcl.pyo
+${PYSITELIB}/pygments/lexers/teal.py
+${PYSITELIB}/pygments/lexers/teal.pyc
+${PYSITELIB}/pygments/lexers/teal.pyo
 ${PYSITELIB}/pygments/lexers/templates.py
 ${PYSITELIB}/pygments/lexers/templates.pyc
 ${PYSITELIB}/pygments/lexers/templates.pyo
@@ -546,6 +564,9 @@ ${PYSITELIB}/pygments/lexers/textfmts.pyo
 ${PYSITELIB}/pygments/lexers/theorem.py
 ${PYSITELIB}/pygments/lexers/theorem.pyc
 ${PYSITELIB}/pygments/lexers/theorem.pyo
+${PYSITELIB}/pygments/lexers/thingsdb.py
+${PYSITELIB}/pygments/lexers/thingsdb.pyc
+${PYSITELIB}/pygments/lexers/thingsdb.pyo
 ${PYSITELIB}/pygments/lexers/tnt.py
 ${PYSITELIB}/pygments/lexers/tnt.pyc
 ${PYSITELIB}/pygments/lexers/tnt.pyo
@@ -573,6 +594,9 @@ ${PYSITELIB}/pygments/lexers/verification.pyo
 ${PYSITELIB}/pygments/lexers/web.py
 ${PYSITELIB}/pygments/lexers/web.pyc
 ${PYSITELIB}/pygments/lexers/web.pyo
+${PYSITELIB}/pygments/lexers/webassembly.py
+${PYSITELIB}/pygments/lexers/webassembly.pyc
+${PYSITELIB}/pygments/lexers/webassembly.pyo
 ${PYSITELIB}/pygments/lexers/webidl.py
 ${PYSITELIB}/pygments/lexers/webidl.pyc
 ${PYSITELIB}/pygments/lexers/webidl.pyo
@@ -651,6 +675,9 @@ ${PYSITELIB}/pygments/styles/friendly.pyo
 ${PYSITELIB}/pygments/styles/fruity.py
 ${PYSITELIB}/pygments/styles/fruity.pyc
 ${PYSITELIB}/pygments/styles/fruity.pyo
+${PYSITELIB}/pygments/styles/gruvbox.py
+${PYSITELIB}/pygments/styles/gruvbox.pyc
+${PYSITELIB}/pygments/styles/gruvbox.pyo
 ${PYSITELIB}/pygments/styles/igor.py
 ${PYSITELIB}/pygments/styles/igor.pyc
 ${PYSITELIB}/pygments/styles/igor.pyo
