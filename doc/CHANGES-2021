@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2680 2021/05/06 10:36:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2681 2021/05/06 13:15:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-tifffile to 2021.4.8 [adam 2021-05-06]
 	Updated parallel/py-billiard to 3.6.4.0 [adam 2021-05-06]
 	Updated databases/py-mongo to 3.11.4 [adam 2021-05-06]
+	Updated www/firefox to 88.0.1 [ryoon 2021-05-06]
