@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/08/09 19:11:32 joerg Exp $
+$NetBSD: distinfo,v 1.24 2021/05/06 04:39:03 adam Exp $
 
-SHA1 (pandas-0.25.3.tar.gz) = 4123c7452df2662a99ae70821c119f4035f217ba
-RMD160 (pandas-0.25.3.tar.gz) = cb526595c8b38bd4973a49ebebb61c165421628b
-SHA512 (pandas-0.25.3.tar.gz) = ab282e4d3145daafa68d5e3a2e82d692385eb62720d6503ddb3a4f76cf380591cbd32ba3e15fa5ba93725a221d3f74062012ca13a0df8e08c324e706ca35ccf6
-Size (pandas-0.25.3.tar.gz) = 12632585 bytes
-SHA1 (patch-pandas___libs_src_ujson_python_objToJSON.c) = 691a76fae9b28310d08db30c87213b0c5fbf0ad6
+SHA1 (pandas-1.2.4.tar.gz) = c097d55bf7c7d709ca7c6346520f0ac18f2e1366
+RMD160 (pandas-1.2.4.tar.gz) = edb56bddc6f3b1fab9db2fdf4e7f6af1a84ea7a4
+SHA512 (pandas-1.2.4.tar.gz) = 79e7a38b8edad52b70eb81ba821141b928c782009d59c50076e7d1e7c015078d333c0c80bda7ba720f4ccb221a0ba93a02885fe6a573567ee37ffae14ee9b2c3
+Size (pandas-1.2.4.tar.gz) = 5469105 bytes
