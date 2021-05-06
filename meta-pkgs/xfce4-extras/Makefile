@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.86 2021/04/24 03:17:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.87 2021/05/06 20:39:17 wiz Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-PKGREVISION=	6
+PKGREVISION=	7
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
@@ -29,7 +29,6 @@ DEPENDS+=	xfce4-fsguard-plugin>=1.1.1:../../sysutils/xfce4-fsguard-plugin
 DEPENDS+=	xfce4-genmon-plugin>=4.0.2:../../sysutils/xfce4-genmon-plugin
 DEPENDS+=	xfce4-indicator-plugin>=2.3.4:../../x11/xfce4-indicator-plugin
 DEPENDS+=	xfce4-mailwatch-plugin>=1.2.0:../../mail/xfce4-mailwatch-plugin
-DEPENDS+=	xfce4-mixer>=4.11.0:../../audio/xfce4-mixer
 DEPENDS+=	xfce4-mount-plugin>=1.1.3:../../sysutils/xfce4-mount-plugin
 DEPENDS+=	xfce4-mpc-plugin>=0.5.2:../../multimedia/xfce4-mpc-plugin
 DEPENDS+=	xfce4-netload-plugin>=1.3.2:../../sysutils/xfce4-netload-plugin
