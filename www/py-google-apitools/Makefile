@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/06/04 06:25:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/06 04:49:56 adam Exp $
 
-DISTNAME=	google-apitools-0.5.31
+DISTNAME=	google-apitools-0.5.32
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-apitools/}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-oauth2client>=2.1.0:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.0.1:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
 
 USE_LANGUAGES=	# none
 
