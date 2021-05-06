@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2018/02/11 00:55:58 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2021/05/06 15:31:13 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openocd
-PKG_SUPPORTED_OPTIONS=	libhidapi libusb libusb1
+PKG_SUPPORTED_OPTIONS=	libhidapi libusb libusb1 libftdi1 capstone
 PKG_SUGGESTED_OPTIONS+=	${PKG_SUPPORTED_OPTIONS}
 PLIST_VARS+=		libusb1
 
@@ -24,4 +24,12 @@ CONFIGURE_ENV+=		HIDAPI_LIBS=${HIDAPI_LIBS:Q}
 .if !empty(PKG_OPTIONS:Mlibusb1)
 .include "../../devel/libusb1/buildlink3.mk"
 PLIST.libusb1=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibftdi1)
+.include "../../devel/libftdi1/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mcapstone)
+.include "../../devel/capstone/buildlink3.mk"
 .endif
