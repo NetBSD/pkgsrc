@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.69 2020/12/02 00:43:47 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.70 2021/05/06 20:40:49 wiz Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
-# used by audio/xfce4-mixer/Makefile
 # used by audio/xfce4-xmms-plugin/Makefile
 # used by devel/xfce4-conf/Makefile
 # used by devel/xfce4-dev-tools/Makefile
