@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/12/04 04:56:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.60 2021/05/06 08:45:00 wiz Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -19,7 +19,6 @@ CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
 
 USE_LIBTOOL=		yes
-LIBTOOLIZE_PLIST=	yes
 PKG_SYSCONFSUBDIR=	authlib
 
 REPLACE_PERL=		samplepipe.pl sysconftool
@@ -54,8 +53,6 @@ AUTHDOCDIR=		share/doc/courier-authlib
 FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR}
 FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR}
 
-PKG_SYSCONFSUBDIR?=	courier
-
 EGDIR=			${PREFIX}/${AUTHEXAMPLEDIR}
 DOCDIR=			${PREFIX}/${AUTHDOCDIR}
 RCD_SCRIPTS=		authdaemond
@@ -70,8 +67,6 @@ INSTALL_AM_MAKEFLAGS=	authdaemonrc=${EGDIR}/authdaemonrc		\
 			authpgsqlrc=${EGDIR}/authpgsqlrc
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
-
-POST_INSTALL_TARGETS=	post-install-common
 
 .include "options.mk"
 
