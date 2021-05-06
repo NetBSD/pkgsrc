@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2685 2021/05/06 20:19:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2686 2021/05/06 20:26:00 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4177,3 +4177,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/openocd to 0.11.0 [tnn 2021-05-06]
 	Updated lang/py-six to 1.16.0 [adam 2021-05-06]
 	Updated devel/py-bitarray to 2.1.0 [adam 2021-05-06]
+	Updated net/p5-FusionInventory-Agent to 2.6nb1 [bouyer 2021-05-06]
