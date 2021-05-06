@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2676 2021/05/06 04:50:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2677 2021/05/06 06:53:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-pandas to 1.2.4 [adam 2021-05-06]
 	Updated net/py-zeroconf to 0.30.0 [adam 2021-05-06]
 	Updated www/py-google-apitools to 0.5.32 [adam 2021-05-06]
+	Updated news/neix to 0.1.5 [pin 2021-05-06]
