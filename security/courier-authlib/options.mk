@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2020/05/25 05:44:49 rillig Exp $
+# $NetBSD: options.mk,v 1.15 2021/05/06 08:45:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -21,8 +21,9 @@ CONFIGURE_ARGS+=	--with-authpipe
 REPLACE_PERL+=		samplepipe.pl
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpipe.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/samplepipe.pl
-POST_INSTALL_TARGETS+=	post-install-pipe
 
+.PHONY: post-install-pipe
+post-install: post-install-pipe
 post-install-pipe:
 	${INSTALL_SCRIPT} ${WRKSRC}/samplepipe.pl ${DESTDIR}${EGDIR}
 
@@ -68,9 +69,11 @@ AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authldaprc.dist
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authldap.schema
 AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.ldap
 GEN_FILES+=		authldaprc
-POST_INSTALL_TARGETS+=	post-install-ldap
 
+.PHONY: post-install-ldap
+post-install: post-install-ldap
 post-install-ldap:
+	${MV} ${DESTDIR}${PREFIX}/etc/authlib/authldaprc.dist ${DESTDIR}${EGDIR}/authldaprc.dist
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authldaprc.dist
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authldaprc.dist
 	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DESTDIR}${DOCDIR}
@@ -89,8 +92,9 @@ AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthmysql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authmysqlrc.dist
 AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.authmysql.html
 GEN_FILES+=		authmysqlrc
-POST_INSTALL_TARGETS+=	post-install-mysql
 
+.PHONY: post-install-mysql
+post-install: post-install-mysql
 post-install-mysql:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authmysqlrc.dist
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authmysqlrc.dist
@@ -114,8 +118,9 @@ AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpgsql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authpgsqlrc.dist
 AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.authpostgres.html
 GEN_FILES+=		authpgsqlrc
-POST_INSTALL_TARGETS+=	post-install-pgsql
 
+.PHONY: post-install-pgsql
+post-install: post-install-pgsql
 post-install-pgsql:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authpgsqlrc.dist
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authpgsqlrc.dist
