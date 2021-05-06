@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2021/05/06 21:15:38 tnn Exp $
+
+Fix build on Linux.
+CONFIG_SHELL should ensure that "echo -e" works but for some reason this part
+of the script gets executed with the wrong shell.
+
+--- configure.orig	2021-03-07 11:02:04.000000000 +0000
++++ configure
+@@ -14884,7 +14884,7 @@ if test "x$use_internal_jimtcl" = "xyes"
+ subdirs="$subdirs jimtcl"
+ 
+ 
+-echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --disable-install-jim "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
++printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --disable-install-jim "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
+ 
+ 
+ 
+@@ -16703,7 +16703,7 @@ if test "x$enable_jlink" != "xno"; then 
+ subdirs="$subdirs src/jtag/drivers/libjaylink"
+ 
+ 
+-echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --enable-subproject-build "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
++printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --enable-subproject-build "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
+ 
+ 
+ 
