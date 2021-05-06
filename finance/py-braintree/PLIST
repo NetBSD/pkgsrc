@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/04/16 05:45:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/05/06 04:34:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -119,6 +119,9 @@ ${PYSITELIB}/braintree/dispute_details/__init__.pyo
 ${PYSITELIB}/braintree/dispute_details/evidence.py
 ${PYSITELIB}/braintree/dispute_details/evidence.pyc
 ${PYSITELIB}/braintree/dispute_details/evidence.pyo
+${PYSITELIB}/braintree/dispute_details/paypal_message.py
+${PYSITELIB}/braintree/dispute_details/paypal_message.pyc
+${PYSITELIB}/braintree/dispute_details/paypal_message.pyo
 ${PYSITELIB}/braintree/dispute_details/status_history.py
 ${PYSITELIB}/braintree/dispute_details/status_history.pyc
 ${PYSITELIB}/braintree/dispute_details/status_history.pyo
