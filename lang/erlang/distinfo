@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.88 2021/03/31 13:41:58 triaxx Exp $
+$NetBSD: distinfo,v 1.89 2021/05/06 07:09:29 adam Exp $
 
-SHA1 (erlang-23.3.1.tar.gz) = f449f565bd7a706dc4f7d2c71ce706300ecdcfba
-RMD160 (erlang-23.3.1.tar.gz) = ee647dce86efab095297efce895e51456257311c
-SHA512 (erlang-23.3.1.tar.gz) = 03d4be9b25a14359e9f8db52d8e7d8edff1e8c53686a189caae15373c7e15d03f05e1138c549b8b41b8e6b7c55ab154cea47356f6fe79f7b72d5fb4ce759c4b0
-Size (erlang-23.3.1.tar.gz) = 56654422 bytes
+SHA1 (erlang-23.3.2.tar.gz) = f3da06d9bfd1ad15fc2c72a08d45cbf8cb8bed55
+RMD160 (erlang-23.3.2.tar.gz) = 06f228bde22d4ee0bd7c4a5d345619760ba34b11
+SHA512 (erlang-23.3.2.tar.gz) = bb3dc1d827314b71f7e4da2082681e449859a69589d566a810baf554131e239ad3fe0555f352d69506467162016d6c6864abb20926843ee4da5876b26650810e
+Size (erlang-23.3.2.tar.gz) = 56662450 bytes
 SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
 SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_aclocal.m4) = 3812a0feda06eb7c6ff02b5ac7125284ad5df2cb
