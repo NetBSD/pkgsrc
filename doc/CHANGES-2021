@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2687 2021/05/06 20:41:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2688 2021/05/06 21:00:08 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bitarray to 2.1.0 [adam 2021-05-06]
 	Updated net/p5-FusionInventory-Agent to 2.6nb1 [bouyer 2021-05-06]
 	Removed audio/xfce4-mixer [wiz 2021-05-06]
+	Updated lang/erlang-doc to 23.3nb4 [triaxx 2021-05-06]
