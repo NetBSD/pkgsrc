@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2691 2021/05/07 10:46:52 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2692 2021/05/07 11:11:14 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-click-repl version 0.1.6 [adam 2021-05-07]
 	Added www/py-flask-static-digest version 0.2.1 [kleink 2021-05-07]
 	Updated x11/kitty to 0.20.3 [pin 2021-05-07]
+	Updated news/leafnode to 1.11.12 [micha 2021-05-07]
