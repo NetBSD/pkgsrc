@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.261 2021/04/21 13:25:02 adam Exp $
+# $NetBSD: Makefile,v 1.262 2021/05/07 16:33:41 ryoon Exp $
 
-VERREL=		7.1.2
+VERREL=		7.1.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -210,7 +209,7 @@ CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
-CONFIGURE_ARGS+=	--with-tls="openssl"
+CONFIGURE_ARGS+=	--with-tls="nss"
 CONFIGURE_ARGS+=	--without-doxygen
 CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
