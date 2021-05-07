@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/19 17:22:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/05/07 16:30:41 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -2166,6 +2166,7 @@ go115/src/cmd/go/testdata/script/mod_get_legacy.txt
 go115/src/cmd/go/testdata/script/mod_get_local.txt
 go115/src/cmd/go/testdata/script/mod_get_main.txt
 go115/src/cmd/go/testdata/script/mod_get_major.txt
+go115/src/cmd/go/testdata/script/mod_get_missing_ziphash.txt
 go115/src/cmd/go/testdata/script/mod_get_moved.txt
 go115/src/cmd/go/testdata/script/mod_get_newcycle.txt
 go115/src/cmd/go/testdata/script/mod_get_none.txt
@@ -5878,6 +5879,7 @@ go115/src/runtime/cgo/gcc_windows_amd64.c
 go115/src/runtime/cgo/iscgo.go
 go115/src/runtime/cgo/libcgo.h
 go115/src/runtime/cgo/libcgo_unix.h
+go115/src/runtime/cgo/libcgo_windows.h
 go115/src/runtime/cgo/mmap.go
 go115/src/runtime/cgo/netbsd.go
 go115/src/runtime/cgo/openbsd.go
@@ -8993,6 +8995,7 @@ go115/test/fixedbugs/issue4495.go
 go115/test/fixedbugs/issue4510.dir/f1.go
 go115/test/fixedbugs/issue4510.dir/f2.go
 go115/test/fixedbugs/issue4510.go
+go115/test/fixedbugs/issue45175.go
 go115/test/fixedbugs/issue4517a.go
 go115/test/fixedbugs/issue4517b.go
 go115/test/fixedbugs/issue4517c.go
