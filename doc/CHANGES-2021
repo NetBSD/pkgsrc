@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2693 2021/05/07 11:33:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2694 2021/05/07 11:42:01 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4187,3 +4187,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/leafnode to 1.11.12 [micha 2021-05-07]
 	Updated devel/protobuf to 3.16.0 [adam 2021-05-07]
 	Updated devel/py-protobuf to 3.16.0 [adam 2021-05-07]
+	Updated multimedia/ffmpeg4 to 4.4nb4 [rin 2021-05-07]
