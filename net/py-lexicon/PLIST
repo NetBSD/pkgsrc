@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/04/05 16:36:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/05/07 18:45:04 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -63,6 +63,9 @@ ${PYSITELIB}/lexicon/providers/conoha.pyo
 ${PYSITELIB}/lexicon/providers/constellix.py
 ${PYSITELIB}/lexicon/providers/constellix.pyc
 ${PYSITELIB}/lexicon/providers/constellix.pyo
+${PYSITELIB}/lexicon/providers/ddns.py
+${PYSITELIB}/lexicon/providers/ddns.pyc
+${PYSITELIB}/lexicon/providers/ddns.pyo
 ${PYSITELIB}/lexicon/providers/digitalocean.py
 ${PYSITELIB}/lexicon/providers/digitalocean.pyc
 ${PYSITELIB}/lexicon/providers/digitalocean.pyo
@@ -282,6 +285,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_conoha.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_constellix.py
 ${PYSITELIB}/lexicon/tests/providers/test_constellix.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_constellix.pyo
+${PYSITELIB}/lexicon/tests/providers/test_ddns.py
+${PYSITELIB}/lexicon/tests/providers/test_ddns.pyc
+${PYSITELIB}/lexicon/tests/providers/test_ddns.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.py
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.pyo
