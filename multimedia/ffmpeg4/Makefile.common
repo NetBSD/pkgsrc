@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2021/04/10 08:50:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2021/05/07 11:40:11 rin Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -84,5 +84,6 @@ pre-configure:
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
