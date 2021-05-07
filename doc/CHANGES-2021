@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2705 2021/05/07 18:18:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2706 2021/05/07 18:28:20 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ipython to 7.23.1 [adam 2021-05-07]
 	Updated time/py-cftime to 1.4.1 [adam 2021-05-07]
 	Updated devel/py-cachetools to 4.2.2 [adam 2021-05-07]
+	Updated net/p5-FusionInventory-Agent to 2.6nb2 [bouyer 2021-05-07]
