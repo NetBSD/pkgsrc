@@ -1,4 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 17:29:58 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2021/05/07 11:36:29 thor Exp $
+
+# TODO: PKG_BUILD_OPTIONS dance like devel/php-threads or
+# just always enable vtk as hard dependency.
 
 BUILDLINK_TREE+=	pcl
 
