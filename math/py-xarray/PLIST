@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/11 13:47:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/07 19:14:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,9 @@ ${PYSITELIB}/xarray/backends/netCDF4_.pyo
 ${PYSITELIB}/xarray/backends/netcdf3.py
 ${PYSITELIB}/xarray/backends/netcdf3.pyc
 ${PYSITELIB}/xarray/backends/netcdf3.pyo
+${PYSITELIB}/xarray/backends/plugins.py
+${PYSITELIB}/xarray/backends/plugins.pyc
+${PYSITELIB}/xarray/backends/plugins.pyo
 ${PYSITELIB}/xarray/backends/pseudonetcdf_.py
 ${PYSITELIB}/xarray/backends/pseudonetcdf_.pyc
 ${PYSITELIB}/xarray/backends/pseudonetcdf_.pyo
@@ -56,6 +59,9 @@ ${PYSITELIB}/xarray/backends/rasterio_.pyo
 ${PYSITELIB}/xarray/backends/scipy_.py
 ${PYSITELIB}/xarray/backends/scipy_.pyc
 ${PYSITELIB}/xarray/backends/scipy_.pyo
+${PYSITELIB}/xarray/backends/store.py
+${PYSITELIB}/xarray/backends/store.pyc
+${PYSITELIB}/xarray/backends/store.pyo
 ${PYSITELIB}/xarray/backends/zarr.py
 ${PYSITELIB}/xarray/backends/zarr.pyc
 ${PYSITELIB}/xarray/backends/zarr.pyo
@@ -68,6 +74,9 @@ ${PYSITELIB}/xarray/coding/cftime_offsets.pyo
 ${PYSITELIB}/xarray/coding/cftimeindex.py
 ${PYSITELIB}/xarray/coding/cftimeindex.pyc
 ${PYSITELIB}/xarray/coding/cftimeindex.pyo
+${PYSITELIB}/xarray/coding/frequencies.py
+${PYSITELIB}/xarray/coding/frequencies.pyc
+${PYSITELIB}/xarray/coding/frequencies.pyo
 ${PYSITELIB}/xarray/coding/strings.py
 ${PYSITELIB}/xarray/coding/strings.pyc
 ${PYSITELIB}/xarray/coding/strings.pyo
@@ -86,6 +95,10 @@ ${PYSITELIB}/xarray/convert.pyo
 ${PYSITELIB}/xarray/core/__init__.py
 ${PYSITELIB}/xarray/core/__init__.pyc
 ${PYSITELIB}/xarray/core/__init__.pyo
+${PYSITELIB}/xarray/core/_typed_ops.py
+${PYSITELIB}/xarray/core/_typed_ops.pyc
+${PYSITELIB}/xarray/core/_typed_ops.pyi
+${PYSITELIB}/xarray/core/_typed_ops.pyo
 ${PYSITELIB}/xarray/core/accessor_dt.py
 ${PYSITELIB}/xarray/core/accessor_dt.pyc
 ${PYSITELIB}/xarray/core/accessor_dt.pyo
@@ -284,6 +297,9 @@ ${PYSITELIB}/xarray/tests/test_concat.pyo
 ${PYSITELIB}/xarray/tests/test_conventions.py
 ${PYSITELIB}/xarray/tests/test_conventions.pyc
 ${PYSITELIB}/xarray/tests/test_conventions.pyo
+${PYSITELIB}/xarray/tests/test_cupy.py
+${PYSITELIB}/xarray/tests/test_cupy.pyc
+${PYSITELIB}/xarray/tests/test_cupy.pyo
 ${PYSITELIB}/xarray/tests/test_dask.py
 ${PYSITELIB}/xarray/tests/test_dask.pyc
 ${PYSITELIB}/xarray/tests/test_dask.pyo
@@ -335,6 +351,9 @@ ${PYSITELIB}/xarray/tests/test_options.pyo
 ${PYSITELIB}/xarray/tests/test_plot.py
 ${PYSITELIB}/xarray/tests/test_plot.pyc
 ${PYSITELIB}/xarray/tests/test_plot.pyo
+${PYSITELIB}/xarray/tests/test_plugins.py
+${PYSITELIB}/xarray/tests/test_plugins.pyc
+${PYSITELIB}/xarray/tests/test_plugins.pyo
 ${PYSITELIB}/xarray/tests/test_print_versions.py
 ${PYSITELIB}/xarray/tests/test_print_versions.pyc
 ${PYSITELIB}/xarray/tests/test_print_versions.pyo
@@ -371,6 +390,9 @@ ${PYSITELIB}/xarray/ufuncs.pyo
 ${PYSITELIB}/xarray/util/__init__.py
 ${PYSITELIB}/xarray/util/__init__.pyc
 ${PYSITELIB}/xarray/util/__init__.pyo
+${PYSITELIB}/xarray/util/generate_ops.py
+${PYSITELIB}/xarray/util/generate_ops.pyc
+${PYSITELIB}/xarray/util/generate_ops.pyo
 ${PYSITELIB}/xarray/util/print_versions.py
 ${PYSITELIB}/xarray/util/print_versions.pyc
 ${PYSITELIB}/xarray/util/print_versions.pyo
