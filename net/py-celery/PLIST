@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/17 19:36:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/05/07 18:02:57 adam Exp $
 bin/celery-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -25,6 +25,9 @@ ${PYSITELIB}/celery/app/amqp.pyo
 ${PYSITELIB}/celery/app/annotations.py
 ${PYSITELIB}/celery/app/annotations.pyc
 ${PYSITELIB}/celery/app/annotations.pyo
+${PYSITELIB}/celery/app/autoretry.py
+${PYSITELIB}/celery/app/autoretry.pyc
+${PYSITELIB}/celery/app/autoretry.pyo
 ${PYSITELIB}/celery/app/backends.py
 ${PYSITELIB}/celery/app/backends.pyc
 ${PYSITELIB}/celery/app/backends.pyo
@@ -76,9 +79,6 @@ ${PYSITELIB}/celery/apps/worker.pyo
 ${PYSITELIB}/celery/backends/__init__.py
 ${PYSITELIB}/celery/backends/__init__.pyc
 ${PYSITELIB}/celery/backends/__init__.pyo
-${PYSITELIB}/celery/backends/amqp.py
-${PYSITELIB}/celery/backends/amqp.pyc
-${PYSITELIB}/celery/backends/amqp.pyo
 ${PYSITELIB}/celery/backends/arangodb.py
 ${PYSITELIB}/celery/backends/arangodb.pyc
 ${PYSITELIB}/celery/backends/arangodb.pyo
@@ -133,9 +133,6 @@ ${PYSITELIB}/celery/backends/mongodb.pyo
 ${PYSITELIB}/celery/backends/redis.py
 ${PYSITELIB}/celery/backends/redis.pyc
 ${PYSITELIB}/celery/backends/redis.pyo
-${PYSITELIB}/celery/backends/riak.py
-${PYSITELIB}/celery/backends/riak.pyc
-${PYSITELIB}/celery/backends/riak.pyo
 ${PYSITELIB}/celery/backends/rpc.py
 ${PYSITELIB}/celery/backends/rpc.pyc
 ${PYSITELIB}/celery/backends/rpc.pyo
@@ -163,9 +160,6 @@ ${PYSITELIB}/celery/bin/call.pyo
 ${PYSITELIB}/celery/bin/celery.py
 ${PYSITELIB}/celery/bin/celery.pyc
 ${PYSITELIB}/celery/bin/celery.pyo
-${PYSITELIB}/celery/bin/celeryd_detach.py
-${PYSITELIB}/celery/bin/celeryd_detach.pyc
-${PYSITELIB}/celery/bin/celeryd_detach.pyo
 ${PYSITELIB}/celery/bin/control.py
 ${PYSITELIB}/celery/bin/control.pyc
 ${PYSITELIB}/celery/bin/control.pyo
@@ -295,9 +289,6 @@ ${PYSITELIB}/celery/events/state.pyo
 ${PYSITELIB}/celery/exceptions.py
 ${PYSITELIB}/celery/exceptions.pyc
 ${PYSITELIB}/celery/exceptions.pyo
-${PYSITELIB}/celery/five.py
-${PYSITELIB}/celery/five.pyc
-${PYSITELIB}/celery/five.pyo
 ${PYSITELIB}/celery/fixups/__init__.py
 ${PYSITELIB}/celery/fixups/__init__.pyc
 ${PYSITELIB}/celery/fixups/__init__.pyo
@@ -349,12 +340,6 @@ ${PYSITELIB}/celery/signals.pyo
 ${PYSITELIB}/celery/states.py
 ${PYSITELIB}/celery/states.pyc
 ${PYSITELIB}/celery/states.pyo
-${PYSITELIB}/celery/task/__init__.py
-${PYSITELIB}/celery/task/__init__.pyc
-${PYSITELIB}/celery/task/__init__.pyo
-${PYSITELIB}/celery/task/base.py
-${PYSITELIB}/celery/task/base.pyc
-${PYSITELIB}/celery/task/base.pyo
 ${PYSITELIB}/celery/utils/__init__.py
 ${PYSITELIB}/celery/utils/__init__.pyc
 ${PYSITELIB}/celery/utils/__init__.pyo
@@ -376,12 +361,6 @@ ${PYSITELIB}/celery/utils/dispatch/__init__.pyo
 ${PYSITELIB}/celery/utils/dispatch/signal.py
 ${PYSITELIB}/celery/utils/dispatch/signal.pyc
 ${PYSITELIB}/celery/utils/dispatch/signal.pyo
-${PYSITELIB}/celery/utils/dispatch/weakref_backports.py
-${PYSITELIB}/celery/utils/dispatch/weakref_backports.pyc
-${PYSITELIB}/celery/utils/dispatch/weakref_backports.pyo
-${PYSITELIB}/celery/utils/encoding.py
-${PYSITELIB}/celery/utils/encoding.pyc
-${PYSITELIB}/celery/utils/encoding.pyo
 ${PYSITELIB}/celery/utils/functional.py
 ${PYSITELIB}/celery/utils/functional.pyc
 ${PYSITELIB}/celery/utils/functional.pyo
