@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/05/16 18:00:31 adam Exp $
+# $NetBSD: Makefile,v 1.29 2021/05/07 18:00:35 adam Exp $
 
-DISTNAME=	kombu-4.6.8
+DISTNAME=	kombu-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
@@ -10,25 +10,23 @@ HOMEPAGE=	https://kombu.readthedocs.io/
 COMMENT=	Messaging framework for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-amqp>=2.5.2:../../net/py-amqp
+DEPENDS+=	${PYPKGPREFIX}-amqp>=5.0.0:../../net/py-amqp
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.5.2:../../devel/py-case
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.18:../../devel/py-importlib-metadata
 .endif
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	kombu/tests/test_serialization.py
 
-.include "options.mk"
-
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
