@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/13 14:15:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/07 17:58:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,9 +23,6 @@ ${PYSITELIB}/amqp/connection.pyo
 ${PYSITELIB}/amqp/exceptions.py
 ${PYSITELIB}/amqp/exceptions.pyc
 ${PYSITELIB}/amqp/exceptions.pyo
-${PYSITELIB}/amqp/five.py
-${PYSITELIB}/amqp/five.pyc
-${PYSITELIB}/amqp/five.pyo
 ${PYSITELIB}/amqp/method_framing.py
 ${PYSITELIB}/amqp/method_framing.pyc
 ${PYSITELIB}/amqp/method_framing.pyo
