@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2021/04/28 08:35:56 pin Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/07 10:46:26 pin Exp $
 
-DISTNAME=	kitty-0.20.2
+DISTNAME=	kitty-0.20.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -46,7 +46,7 @@ do-install:
 	${FIND} ${DESTDIR} -type d -name __pycache__ -print0 | ${XARGS} -0 ${RM} -rf
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${FALSE}
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.conf.5 \
+	${MV} ${DESTDIR}${PREFIX}/share/man/man5/kitty.conf.5 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
