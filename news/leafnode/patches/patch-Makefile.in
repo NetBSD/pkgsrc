@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.1 2018/09/04 11:00:48 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2021/05/07 11:09:35 micha Exp $
 
 Config data is installed with pkgsrc script.
 Spool directory is created with pkgsrc script.
 
 --- Makefile.in.orig	2015-08-24 22:26:08.000000000 +0000
 +++ Makefile.in
-@@ -954,20 +954,20 @@ uninstall-man8:
+@@ -956,20 +956,20 @@ uninstall-man8:
  	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
  	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
  install-sysconfDATA: $(sysconf_DATA)
@@ -40,7 +40,7 @@ Spool directory is created with pkgsrc script.
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
-@@ -1621,17 +1621,17 @@ rpm:	leafnode.spec
+@@ -1624,17 +1624,17 @@ rpm:	leafnode.spec
  	rpmbuild -ba leafnode.spec || rpm -ba leafnode.spec
  
  install-data-hook: amiroot
