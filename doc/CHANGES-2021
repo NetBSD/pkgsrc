@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2690 2021/05/07 10:39:04 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.2691 2021/05/07 10:46:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4183,3 +4183,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-click-didyoumean version 0.0.3 [adam 2021-05-07]
 	Added devel/py-click-repl version 0.1.6 [adam 2021-05-07]
 	Added www/py-flask-static-digest version 0.2.1 [kleink 2021-05-07]
+	Updated x11/kitty to 0.20.3 [pin 2021-05-07]
