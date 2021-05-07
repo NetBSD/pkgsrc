@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/14 18:15:16 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/07 18:29:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go116/AUTHORS
@@ -280,6 +280,10 @@ go116/misc/cgo/testplugin/testdata/issue25756/main.go
 go116/misc/cgo/testplugin/testdata/issue25756/plugin/c-life.c
 go116/misc/cgo/testplugin/testdata/issue25756/plugin/life.go
 go116/misc/cgo/testplugin/testdata/issue25756/plugin/life.h
+go116/misc/cgo/testplugin/testdata/issue44956/base/base.go
+go116/misc/cgo/testplugin/testdata/issue44956/main.go
+go116/misc/cgo/testplugin/testdata/issue44956/plugin1.go
+go116/misc/cgo/testplugin/testdata/issue44956/plugin2.go
 go116/misc/cgo/testplugin/testdata/method/main.go
 go116/misc/cgo/testplugin/testdata/method/plugin.go
 go116/misc/cgo/testplugin/testdata/method2/main.go
@@ -889,6 +893,7 @@ go116/src/archive/zip/testdata/go-with-datadesc-sig.zip
 go116/src/archive/zip/testdata/gophercolor16x16.png
 go116/src/archive/zip/testdata/readme.notzip
 go116/src/archive/zip/testdata/readme.zip
+go116/src/archive/zip/testdata/subdir.zip
 go116/src/archive/zip/testdata/symlink.zip
 go116/src/archive/zip/testdata/test-trailing-junk.zip
 go116/src/archive/zip/testdata/test.zip
@@ -2115,6 +2120,7 @@ go116/src/cmd/go/testdata/script/mod_get_latest_pseudo.txt
 go116/src/cmd/go/testdata/script/mod_get_local.txt
 go116/src/cmd/go/testdata/script/mod_get_main.txt
 go116/src/cmd/go/testdata/script/mod_get_major.txt
+go116/src/cmd/go/testdata/script/mod_get_missing_ziphash.txt
 go116/src/cmd/go/testdata/script/mod_get_moved.txt
 go116/src/cmd/go/testdata/script/mod_get_newcycle.txt
 go116/src/cmd/go/testdata/script/mod_get_none.txt
@@ -2177,6 +2183,7 @@ go116/src/cmd/go/testdata/script/mod_install_pkg_version.txt
 go116/src/cmd/go/testdata/script/mod_install_versioned.txt
 go116/src/cmd/go/testdata/script/mod_internal.txt
 go116/src/cmd/go/testdata/script/mod_invalid_path.txt
+go116/src/cmd/go/testdata/script/mod_invalid_path_plus.txt
 go116/src/cmd/go/testdata/script/mod_invalid_version.txt
 go116/src/cmd/go/testdata/script/mod_issue35317.txt
 go116/src/cmd/go/testdata/script/mod_lazy_downgrade.txt
@@ -9166,6 +9173,7 @@ go116/test/fixedbugs/issue4495.go
 go116/test/fixedbugs/issue4510.dir/f1.go
 go116/test/fixedbugs/issue4510.dir/f2.go
 go116/test/fixedbugs/issue4510.go
+go116/test/fixedbugs/issue45175.go
 go116/test/fixedbugs/issue4517a.go
 go116/test/fixedbugs/issue4517b.go
 go116/test/fixedbugs/issue4517c.go
