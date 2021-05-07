@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/05/07 10:37:40 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/07 19:25:20 kleink Exp $
 
 DISTNAME=	flask-static-digest-0.2.1
-#PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nickjj/}
 
