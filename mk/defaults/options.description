@@ -223,6 +223,8 @@ ffmpeg			Enable ffmpeg support.
 ffmpegthumbnailer	Enable ffmpeg thumbnailing support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
+fftw-long	Enable long double in FFTW.
+fftw-quad	Enable quad precision in FFTW.
 fido			Enable U2F/FIDO/FIDO2/WebAuthn support.
 filter-design		Adding filter_design capability.
 finger			Enable finger support.
@@ -569,6 +571,7 @@ mp4v2			Enable MP4 support using mp4v2.
 mpcdec			Enable Musepack decoder library support.
 mpcenc			Enable Musepack encoder library support.
 mpeg3			Enable libmpeg3 MPEG decoding library support.
+mpi	Enable use of the Message Passing Interface library.
 mpg123			Enable MP3 support using mpg123.
 mpg123-altivec		Enable altivec optimized dithering code.
 mpg123-fifo		Enable FIFO support for the mpg123 control interface.
@@ -640,6 +643,7 @@ openexr			Use OpenEXR as imaging library.
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source.
 openldap		Enable OpenLDAP support.
+openmp	Enable OpenMP multithreading.
 openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
 opentracker-ipv6-only	Enable IPv6 mode for opentracker (disables IPv4).
