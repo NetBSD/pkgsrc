@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1 2021/05/07 05:13:38 adam Exp $
+
+DISTNAME=	click-repl-0.1.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-repl/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/untitaker/click-repl
+COMMENT=	REPL plugin for Click
+LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
