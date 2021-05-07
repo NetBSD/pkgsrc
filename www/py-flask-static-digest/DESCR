@@ -1,0 +1,5 @@
+Flask-Static-Digest is a Flask extension that will help make your
+static files production ready with very minimal effort on your part.
+It does this by md5 tagging and gzipping your static files after
+running a `flask digest compile` command that this extension adds
+to your Flask app.
