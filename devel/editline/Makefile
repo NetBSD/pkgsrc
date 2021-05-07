@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2021/05/07 07:08:39 nia Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/07 07:13:28 nia Exp $
 #
 
 DISTNAME=		libedit-20210419-3.1
 PKGNAME=		editline-3.1.20210419
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://thrysoee.dk/editline/
 
@@ -19,6 +20,10 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		automake autoreconf
 CONFIGURE_ARGS+=	--enable-widec
 
+post-install:
+	# Avoid conflict with devel/readline.
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/history.3
+
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
@@ -27,6 +32,5 @@ pre-configure:
 .endif
 	cd ${WRKSRC} && autoreconf -fiv
 
-.include "options.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
