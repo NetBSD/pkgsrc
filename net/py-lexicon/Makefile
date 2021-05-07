@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2021/04/05 16:36:17 adam Exp $
+# $NetBSD: Makefile,v 1.58 2021/05/07 18:45:04 adam Exp $
 
-DISTNAME=	dns-lexicon-3.5.6
+DISTNAME=	dns-lexicon-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=3:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
@@ -28,7 +27,7 @@ post-install:
 
 # Do not test providers
 do-test:
-	cd ${WRKSRC}/lexicon && pytest-${PYVERSSUFFIX} tests/test_*
+	cd ${WRKSRC}/lexicon && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/test_*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
