@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2021/04/16 06:38:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.38 2021/05/07 06:58:56 nia Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -83,6 +83,11 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 .endif
+
+# Postgres on Alpha has no spinlock or memory barrier implementation
+# and is "unlikely to work correctly".
+# https://www.postgresql.org/message-id/E1X0yaj-000753-N6%40gemulon.postgresql.org
+BROKEN_ON_PLATFORM+=	*-*-alpha
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
 CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
