@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2688 2021/05/06 21:00:08 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2689 2021/05/07 05:14:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4180,3 +4180,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-FusionInventory-Agent to 2.6nb1 [bouyer 2021-05-06]
 	Removed audio/xfce4-mixer [wiz 2021-05-06]
 	Updated lang/erlang-doc to 23.3nb4 [triaxx 2021-05-06]
+	Added devel/py-click-didyoumean version 0.0.3 [adam 2021-05-07]
+	Added devel/py-click-repl version 0.1.6 [adam 2021-05-07]
