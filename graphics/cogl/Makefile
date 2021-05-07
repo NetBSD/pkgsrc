@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/05/06 08:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/05/07 07:34:10 nia Exp $
 
 DISTNAME=	cogl-1.22.0
 PKGREVISION=	11
@@ -20,6 +20,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake gsed pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
+# Disable -Werror.
 # code is not clean enough for modern compilers
 CONFIGURE_ARGS+=	--enable-maintainer-flags=no
 
