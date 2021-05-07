@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/11/07 21:26:41 he Exp $
+# $NetBSD: Makefile,v 1.61 2021/05/07 07:14:48 nia Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -37,6 +37,9 @@ USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		5.1
 PYTHON_FOR_BUILD_ONLY=	yes
+
+NOT_FOR_PLATFORM+=	*-*-alpha
+NOT_FOR_PLATFORM+=	*-*-vax
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
