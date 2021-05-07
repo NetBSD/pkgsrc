@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/05/17 19:36:41 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/07 18:02:57 adam Exp $
 
-DISTNAME=	celery-4.4.2
+DISTNAME=	celery-5.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
@@ -11,18 +11,23 @@ COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-billiard>=3.6.3.0:../../parallel/py-billiard
-DEPENDS+=	${PYPKGPREFIX}-kombu>=4.6.8:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.0.3:../../devel/py-click-didyoumean
+DEPENDS+=	${PYPKGPREFIX}-click-plugins>=1.1.1:../../devel/py-click-plugins
+DEPENDS+=	${PYPKGPREFIX}-click-repl>=0.1.6:../../devel/py-click-repl
+DEPENDS+=	${PYPKGPREFIX}-kombu>=5.0.0:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-vine>=1.3.0:../../devel/py-vine
+DEPENDS+=	${PYPKGPREFIX}-vine>=5.0.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
-TEST_DEPENDS+=	${PYPKGPREFIX}-mongo-[0-9]*:../../databases/py-mongo
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} celery celery-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
