@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/05/17 19:22:20 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/05/07 17:58:09 adam Exp $
 
-DISTNAME=	amqp-2.5.2
+DISTNAME=	amqp-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://amqp.readthedocs.io/
 COMMENT=	Low-level AMQP client for Python
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-vine>=1.1.3:../../devel/py-vine
+DEPENDS+=	${PYPKGPREFIX}-vine>=5.0.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=6.0:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
