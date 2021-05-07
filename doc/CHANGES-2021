@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2694 2021/05/07 11:42:01 rin Exp $
+$NetBSD: CHANGES-2021,v 1.2695 2021/05/07 13:03:29 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4188,3 +4188,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/protobuf to 3.16.0 [adam 2021-05-07]
 	Updated devel/py-protobuf to 3.16.0 [adam 2021-05-07]
 	Updated multimedia/ffmpeg4 to 4.4nb4 [rin 2021-05-07]
+	Updated devel/gettext-tools to 0.21nb2 [rin 2021-05-07]
