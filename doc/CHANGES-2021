@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2703 2021/05/07 17:42:24 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2704 2021/05/07 18:03:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4197,3 +4197,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78 to 78.10.1 [ryoon 2021-05-07]
 	Updated www/firefox78-l10n to 78.10.1 [ryoon 2021-05-07]
 	Updated print/electrix to 0.2.0nb77 [ryoon 2021-05-07]
+	Updated devel/py-vine to 5.0.0 [adam 2021-05-07]
+	Updated net/py-amqp to 5.0.6 [adam 2021-05-07]
+	Updated net/py-kombu to 5.0.2 [adam 2021-05-07]
+	Updated net/py-celery to 5.0.5 [adam 2021-05-07]
