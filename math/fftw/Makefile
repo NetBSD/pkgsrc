@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.67 2021/05/07 11:59:41 thor Exp $
-
-PKGREVISION=	5
-
-COMMENT=	Collection of fast C routines to compute DFTs
+# $NetBSD: Makefile,v 1.68 2021/05/07 12:31:22 thor Exp $
 
 DISTNAME=	fftw-3.3.9
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
 MASTER_SITES+=	http://www.fftw.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fftw.org/
+COMMENT=	Collection of fast C routines to compute DFTs
 LICENSE=	gnu-gpl-v2
 
-SUPERSEDES=	fftwf
+SUPERSEDES=	fftwf-[0-9]*
 CONFLICTS+=	fftwf-[0-9]*
 
 USE_LANGUAGES=		c
@@ -64,10 +62,10 @@ FFTW_DOUBLE_OPTS=	--enable-generic-simd128 --enable-generic-simd256
 FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2 --enable-avx
 FFTW_DOUBLE_OPTS+=	--enable-sse2 --enable-avx
 # From gcc-4.9 on, these should work trouble-free.
-.if empty(CC_VERSION:Mgcc-4.8.*)
+.  if empty(CC_VERSION:Mgcc-4.8.*)
 FFTW_FLOAT_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
-FFTW_DOUBLE_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma 
-.endif
+FFTW_DOUBLE_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
+.  endif
 .endif
 
 # TODO: Add the above for other architectures.
@@ -82,21 +80,20 @@ SUBST_SED.hardcore=	-e "s,march=core-avx2,march=donotbother,g"
 pre-configure:
 .for d in ${CONFIGURE_DIRS}
 	mkdir -p ${WRKSRC:Q}/${d}
-.if   ${d} == "build/float"
+.  if   ${d} == "build/float"
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} ${FFTW_FLOAT_OPTS}' \
 	> ${WRKSRC:Q}/${d}/configure
-.elif ${d} == "build/double"
+.  elif ${d} == "build/double"
 	printf '#!/bin/sh\nexec ../../configure "$$@" ${FFTW_DOUBLE_OPTS}' \
 	> ${WRKSRC:Q}/${d}/configure
-.elif ${d} == "build/quad-precision"
+.  elif ${d} == "build/quad-precision"
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,} --disable-mpi\n' \
 	> ${WRKSRC:Q}/${d}/configure
-.else
+.  else
 	printf '#!/bin/sh\nexec ../../configure "$$@" --enable-${d:S,build/,,}\n' \
 	> ${WRKSRC:Q}/${d}/configure
-.endif
+.  endif
 	chmod +x ${WRKSRC:Q}/${d}/configure
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
