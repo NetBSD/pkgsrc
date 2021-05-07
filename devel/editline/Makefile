@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2020/05/11 20:52:45 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/07 07:08:39 nia Exp $
 #
 
-DISTNAME=		libedit-20191231-3.1
-PKGNAME=		editline-3.1.20191231
-PKGREVISION=		2
+DISTNAME=		libedit-20210419-3.1
+PKGNAME=		editline-3.1.20210419
 CATEGORIES=		devel
-MASTER_SITES=		http://thrysoee.dk/editline/
+MASTER_SITES=		https://thrysoee.dk/editline/
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		https://www.thrysoee.dk/editline/
+HOMEPAGE=		https://thrysoee.dk/editline/
 COMMENT=		NetBSD Editline library (libedit) for generic line editing
 LICENSE=		modified-bsd
 
@@ -28,21 +27,6 @@ pre-configure:
 .endif
 	cd ${WRKSRC} && autoreconf -fiv
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.editline
-PKG_SUPPORTED_OPTIONS+=	doc
-PKG_SUGGESTED_OPTIONS+=	# empty; conflicts with devel/readline
-
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=	doc
-.if !empty(PKG_OPTIONS:Mdoc)
-PLIST.doc=	yes
-.endif
-
-post-extract:
-.if empty(PKG_OPTIONS:Mdoc)
-	${ECHO} "" > ${WRKSRC}/doc/Makefile.am
-.endif
-
+.include "options.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
