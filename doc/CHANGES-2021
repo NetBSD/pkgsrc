@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2704 2021/05/07 18:03:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2705 2021/05/07 18:18:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4201,3 +4201,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-amqp to 5.0.6 [adam 2021-05-07]
 	Updated net/py-kombu to 5.0.2 [adam 2021-05-07]
 	Updated net/py-celery to 5.0.5 [adam 2021-05-07]
+	Updated textproc/py-relatorio to 0.9.3 [adam 2021-05-07]
+	Updated devel/py-ipython to 7.23.1 [adam 2021-05-07]
+	Updated time/py-cftime to 1.4.1 [adam 2021-05-07]
+	Updated devel/py-cachetools to 4.2.2 [adam 2021-05-07]
