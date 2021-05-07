@@ -1,0 +1,20 @@
+$NetBSD: patch-wscript,v 1.1 2021/05/07 17:41:49 ryoon Exp $
+
+* poppler-cairo.pc is removed from print/poppler.
+  See: https://gitlab.freedesktop.org/poppler/poppler/-/merge_requests/675/diffs?commit_id=85f6354f36d5d4f6bb7c1708f408d7522a9356d6
+
+--- wscript.orig	2011-11-06 16:55:13.000000000 +0000
++++ wscript
+@@ -47,11 +47,9 @@ def configure (conf):
+     try:
+       conf.check_cfg (package = 'poppler-glib', uselib_store = 'POPPLER_GLIB', 
+                       atleast_version='0.12.0', args = '--cflags --libs')
+-      conf.check_cfg (package = 'poppler-cairo', uselib_store = 'POPPLER_CAIRO', 
+-                      args = '--cflags --libs')
+     except:
+       pass
+-    if conf.env['HAVE_POPPLER_GLIB' and 'HAVE_POPPLER_CAIRO']:
++    if conf.env['HAVE_POPPLER_GLIB']:
+       message = 'enabled'
+       conf.define ('ENABLE_PDF', 1)
+       conf.env['ENABLE_PDF'] = 1
