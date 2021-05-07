@@ -1,13 +1,14 @@
 # $NetBSD: Makefile,v 1.16 2020/08/31 18:07:22 wiz Exp $
 #
 
-DISTNAME=	lcov-1.13
-PKGREVISION=	3
+DISTNAME=	lcov-1.15
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ltp/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
+GITHUB_PROJECT=	lcov
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://ltp.sourceforge.net/coverage/lcov.php
+HOMEPAGE=	http://linux-test-project.github.io/
 COMMENT=	Front-end for GCC's coverage testing tool gcov
 
 NO_BUILD=		yes
