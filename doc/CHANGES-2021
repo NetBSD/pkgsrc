@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2706 2021/05/07 18:28:20 bouyer Exp $
+$NetBSD: CHANGES-2021,v 1.2707 2021/05/07 18:46:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4206,3 +4206,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-cftime to 1.4.1 [adam 2021-05-07]
 	Updated devel/py-cachetools to 4.2.2 [adam 2021-05-07]
 	Updated net/p5-FusionInventory-Agent to 2.6nb2 [bouyer 2021-05-07]
+	Updated math/py-netCDF4 to 1.5.6 [adam 2021-05-07]
+	Updated net/py-lexicon to 3.6.0 [adam 2021-05-07]
