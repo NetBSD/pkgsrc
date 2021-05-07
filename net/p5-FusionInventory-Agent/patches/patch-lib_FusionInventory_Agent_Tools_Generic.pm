@@ -1,10 +1,25 @@
-$NetBSD: patch-lib_FusionInventory_Agent_Tools_Generic.pm,v 1.1 2021/05/06 20:25:15 bouyer Exp $
+$NetBSD: patch-lib_FusionInventory_Agent_Tools_Generic.pm,v 1.2 2021/05/07 18:27:20 bouyer Exp $
 
 accept pcictl as alternative to lspci
+Bring in upstream patch for better CPU report
 
 --- lib/FusionInventory/Agent/Tools/Generic.pm.orig	2020-11-09 14:49:31.000000000 +0100
-+++ lib/FusionInventory/Agent/Tools/Generic.pm	2021-05-06 21:25:27.448948334 +0200
-@@ -217,52 +217,103 @@
++++ lib/FusionInventory/Agent/Tools/Generic.pm	2021-05-07 20:08:32.214113753 +0200
+@@ -126,10 +126,12 @@
+             MANUFACTURER => $manufacturer
+         };
+         $cpu->{NAME} =
+-            ($cpu->{MANUFACTURER} =~ /Intel/ ? $info->{'Family'} : undef) ||
+             $info->{'Version'}                                     ||
++	    $info->{'Family'}					   ||
+             $info->{'Processor Family'}                            ||
+             $info->{'Processor Version'};
++	# Cleanup cpu NAME
++	$cpu->{NAME} =~ s/\((R|TM)\)//gi if $cpu->{NAME};
+ 
+        if ($cpu->{ID}) {
+ 
+@@ -217,52 +219,103 @@
  }
  
  sub getPCIDevices {
