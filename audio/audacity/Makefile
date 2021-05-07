@@ -1,5 +1,12 @@
-# $NetBSD: Makefile,v 1.139 2021/02/06 23:21:13 dbj Exp $
+# $NetBSD: Makefile,v 1.140 2021/05/07 07:59:04 nia Exp $
 
+# NOTES ON UPDATING
+# - Upstream is insisting that packages use their internal modified
+#   versions of libraries like wxWidgets. This goes against policy
+#   of not using vendored libraries.
+# - Upstream is introducing telemetry.
+#   This should be disabled by default, Audacity is offline software.
+# - Please test on NetBSD.
 DISTNAME=	audacity-2.4.1
 PKGREVISION=	2
 CATEGORIES=	audio
