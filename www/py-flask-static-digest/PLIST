@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/07 10:37:40 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flask_static_digest/__init__.py
+${PYSITELIB}/flask_static_digest/__init__.pyc
+${PYSITELIB}/flask_static_digest/__init__.pyo
+${PYSITELIB}/flask_static_digest/cli.py
+${PYSITELIB}/flask_static_digest/cli.pyc
+${PYSITELIB}/flask_static_digest/cli.pyo
+${PYSITELIB}/flask_static_digest/digester.py
+${PYSITELIB}/flask_static_digest/digester.pyc
+${PYSITELIB}/flask_static_digest/digester.pyo
