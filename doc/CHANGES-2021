@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2699 2021/05/07 16:34:34 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2700 2021/05/07 16:39:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4193,3 +4193,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/caddy to 2.3.0 [bsiegert 2021-05-07]
 	Updated lang/go115 to 1.15.12 [bsiegert 2021-05-07]
 	Updated misc/libreoffice to 7.1.3.2 [ryoon 2021-05-07]
+	Updated net/remmina to 1.4.13 [ryoon 2021-05-07]
