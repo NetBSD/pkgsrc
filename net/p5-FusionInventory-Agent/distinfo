@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/05/06 20:25:15 bouyer Exp $
+$NetBSD: distinfo,v 1.8 2021/05/07 18:27:20 bouyer Exp $
 
 SHA1 (FusionInventory-Agent-2.6.tar.gz) = 288acf5707e550fa10275f8e6fab70b50aa790aa
 RMD160 (FusionInventory-Agent-2.6.tar.gz) = 1d6504f2119bb531c527180c9275bb692b8a1a2a
@@ -12,4 +12,4 @@ SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_SPARC.pm) = 48fcf497b55
 SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_BSD_Storages.pm) = a2ffacd0b9ee84accc001b2013aa52a0c0dc419f
 SHA1 (patch-lib_FusionInventory_Agent_Task_Inventory_Generic_PCI.pm) = 94f5afb7b4277a1729c322c7111c94481e1cbe34
 SHA1 (patch-lib_FusionInventory_Agent_Tools_BSD.pm) = d312bc244889beb7c747a4c8b021590102a8294c
-SHA1 (patch-lib_FusionInventory_Agent_Tools_Generic.pm) = 1e8cc8d8ff4c03ba563c3c63ed348e22bd665e9d
+SHA1 (patch-lib_FusionInventory_Agent_Tools_Generic.pm) = 415b4c3483b6e322ca04bde01ed048c3640f0741
