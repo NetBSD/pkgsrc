@@ -900,6 +900,7 @@ viewvc-php		Use php to colorize .php and .inc files.
 virtfs-proxy-helper	Enable virtfs-proxy-helper support (Linux only).
 vlc-skins		Enable skins support in VLC.
 vorbis			Enable Ogg Vorbis support.
+vtk			Enable usage of VTK (Visualization Tool Kit).
 vulkan			Enable support for the Vulkan 3D and compute API.
 w3m			Use and enable support for the w3m browser.
 w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
