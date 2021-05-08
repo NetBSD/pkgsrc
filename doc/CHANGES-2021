@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2714 2021/05/08 09:16:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2715 2021/05/08 13:55:30 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx-socks to 0.4.0 [adam 2021-05-08]
 	Added sysutils/py-pid version 3.0.4 [adam 2021-05-08]
 	Updated devel/py-daemon to 2.3.0 [adam 2021-05-08]
+	Updated graphics/vtk to 9.0.1nb1 [thor 2021-05-08]
