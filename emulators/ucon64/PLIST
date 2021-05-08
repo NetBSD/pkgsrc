@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/08 21:39:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/08 15:18:37 nia Exp $
 bin/ucon64
-lib/discmage.${EXT}
 share/doc/ucon64/changes.html
 share/doc/ucon64/developers.html
 share/doc/ucon64/faq.html
