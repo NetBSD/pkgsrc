@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/07 12:59:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/08 06:08:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,9 @@ ${PYSITELIB}/django_celery_beat/admin.pyo
 ${PYSITELIB}/django_celery_beat/apps.py
 ${PYSITELIB}/django_celery_beat/apps.pyc
 ${PYSITELIB}/django_celery_beat/apps.pyo
+${PYSITELIB}/django_celery_beat/clockedschedule.py
+${PYSITELIB}/django_celery_beat/clockedschedule.pyc
+${PYSITELIB}/django_celery_beat/clockedschedule.pyo
 ${PYSITELIB}/django_celery_beat/managers.py
 ${PYSITELIB}/django_celery_beat/managers.pyc
 ${PYSITELIB}/django_celery_beat/managers.pyo
@@ -33,9 +36,6 @@ ${PYSITELIB}/django_celery_beat/migrations/0004_auto_20170221_0000.pyo
 ${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.py
 ${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.pyc
 ${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.pyo
-${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices_squashed_0009_merge_20181012_1416.py
-${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices_squashed_0009_merge_20181012_1416.pyc
-${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices_squashed_0009_merge_20181012_1416.pyo
 ${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.py
 ${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.pyc
 ${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.pyo
@@ -51,6 +51,27 @@ ${PYSITELIB}/django_celery_beat/migrations/0007_auto_20180521_0826.pyo
 ${PYSITELIB}/django_celery_beat/migrations/0008_auto_20180914_1922.py
 ${PYSITELIB}/django_celery_beat/migrations/0008_auto_20180914_1922.pyc
 ${PYSITELIB}/django_celery_beat/migrations/0008_auto_20180914_1922.pyo
+${PYSITELIB}/django_celery_beat/migrations/0009_periodictask_headers.py
+${PYSITELIB}/django_celery_beat/migrations/0009_periodictask_headers.pyc
+${PYSITELIB}/django_celery_beat/migrations/0009_periodictask_headers.pyo
+${PYSITELIB}/django_celery_beat/migrations/0010_auto_20190429_0326.py
+${PYSITELIB}/django_celery_beat/migrations/0010_auto_20190429_0326.pyc
+${PYSITELIB}/django_celery_beat/migrations/0010_auto_20190429_0326.pyo
+${PYSITELIB}/django_celery_beat/migrations/0011_auto_20190508_0153.py
+${PYSITELIB}/django_celery_beat/migrations/0011_auto_20190508_0153.pyc
+${PYSITELIB}/django_celery_beat/migrations/0011_auto_20190508_0153.pyo
+${PYSITELIB}/django_celery_beat/migrations/0012_periodictask_expire_seconds.py
+${PYSITELIB}/django_celery_beat/migrations/0012_periodictask_expire_seconds.pyc
+${PYSITELIB}/django_celery_beat/migrations/0012_periodictask_expire_seconds.pyo
+${PYSITELIB}/django_celery_beat/migrations/0013_auto_20200609_0727.py
+${PYSITELIB}/django_celery_beat/migrations/0013_auto_20200609_0727.pyc
+${PYSITELIB}/django_celery_beat/migrations/0013_auto_20200609_0727.pyo
+${PYSITELIB}/django_celery_beat/migrations/0014_remove_clockedschedule_enabled.py
+${PYSITELIB}/django_celery_beat/migrations/0014_remove_clockedschedule_enabled.pyc
+${PYSITELIB}/django_celery_beat/migrations/0014_remove_clockedschedule_enabled.pyo
+${PYSITELIB}/django_celery_beat/migrations/0015_edit_solarschedule_events_choices.py
+${PYSITELIB}/django_celery_beat/migrations/0015_edit_solarschedule_events_choices.pyc
+${PYSITELIB}/django_celery_beat/migrations/0015_edit_solarschedule_events_choices.pyo
 ${PYSITELIB}/django_celery_beat/migrations/__init__.py
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyc
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyo

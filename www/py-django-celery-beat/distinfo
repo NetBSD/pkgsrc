@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/01/07 12:59:35 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/05/08 06:08:13 adam Exp $
 
-SHA1 (django-celery-beat-1.4.0.tar.gz) = f2e90fa18a06fd6ddcd8d8edaec021148bd133b8
-RMD160 (django-celery-beat-1.4.0.tar.gz) = 7faa022ed3f31dcc8abe695029a1581370cc93bc
-SHA512 (django-celery-beat-1.4.0.tar.gz) = 8fd7881e9f2ffcf7c26adb0f842ef1b4982d9066b16e40dcba408eb684acfcb292ca1c090b32edb2af1f1e40730cbc44efbecd33bb4021ef3a54101011f75278
-Size (django-celery-beat-1.4.0.tar.gz) = 73474 bytes
+SHA1 (django-celery-beat-2.2.0.tar.gz) = 9ce9ae50f283ff5b95604028fd706b7803c4ceaa
+RMD160 (django-celery-beat-2.2.0.tar.gz) = 37d599bacc670da7fec6877941b68f85a3ada206
+SHA512 (django-celery-beat-2.2.0.tar.gz) = 1edb5025a57e800782a6c09c5f0e65bb2b28f2597f32a50c8653398cb6aef724b4d094dc4b458ac04d04445389843d509ea659338cb2e45a5ad01e5e198690ed
+Size (django-celery-beat-2.2.0.tar.gz) = 87003 bytes
