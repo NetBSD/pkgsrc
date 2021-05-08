@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/01/07 12:56:22 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/05/08 06:07:05 adam Exp $
 
-SHA1 (django-timezone-field-3.0.tar.gz) = abbffd71e813eebfb934f148dcbcbdeda497bd77
-RMD160 (django-timezone-field-3.0.tar.gz) = bf33f9e0289db1fdd814cf9b26b302bb577e430e
-SHA512 (django-timezone-field-3.0.tar.gz) = 624e5b1e6b75ec40252ea7137608d9f62a5fbba1a136068c0c4c5e6192afa9756456cfbcba5ae3b00980f8e0ab44e507226815b25196bb58a39789a75036789b
-Size (django-timezone-field-3.0.tar.gz) = 6217 bytes
+SHA1 (django-timezone-field-4.1.2.tar.gz) = f4d210637217fca174756d6dc0caa802a648b421
+RMD160 (django-timezone-field-4.1.2.tar.gz) = bad3746f6c27329b35bb981afa72290503cc6cce
+SHA512 (django-timezone-field-4.1.2.tar.gz) = 8fa9345050c261b73f2cd6b4f37c8269311507009a9ce6a5632d0da4e43eeeb4c5a2adb2179c96d406c70dc282377de59f0afdb646c49e5f2c14313eaa121d40
+Size (django-timezone-field-4.1.2.tar.gz) = 8419 bytes
