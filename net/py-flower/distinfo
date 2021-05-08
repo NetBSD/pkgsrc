@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/10/08 14:48:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/05/08 06:00:00 adam Exp $
 
-SHA1 (flower-0.9.2.tar.gz) = 6a184e966cb58e221aed8bbfc46a2acae187d61f
-RMD160 (flower-0.9.2.tar.gz) = efc89534c920343e49ab8ebeb3c7f10404b3fce9
-SHA512 (flower-0.9.2.tar.gz) = db1ca0ab7a081aabeaf75e2c9dd7e044c33bfd7a944ff1b4b5c58db1e18c6945fbe9aece6a4fbb5248d0046b191c22a08be78e8085c6c4bf0fb01f2cbbc94cd6
-Size (flower-0.9.2.tar.gz) = 1304536 bytes
+SHA1 (flower-0.9.7.tar.gz) = c8b90a6c8b5188e1b617c10d5a2050867b480524
+RMD160 (flower-0.9.7.tar.gz) = 756d3ca383983957fc8312fab12f705afb09c53d
+SHA512 (flower-0.9.7.tar.gz) = ebb74e2b612962839fe4bc774f9bea98da08edf7804a6b7b2bdaafe5c9368312a05f3c9692204e25909dcdd8e9d15e6b6dd3eca829b5440af3e2b60d495602eb
+Size (flower-0.9.7.tar.gz) = 3526930 bytes
