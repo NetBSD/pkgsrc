@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1405 2021/05/05 16:52:22 pho Exp $
+# $NetBSD: Makefile,v 1.1406 2021/05/08 05:43:33 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -696,7 +696,6 @@ SUBDIR+=	py-dns
 SUBDIR+=	py-dnsdiag
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
-SUBDIR+=	py-eventlib
 SUBDIR+=	py-flower
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-gandi.cli
