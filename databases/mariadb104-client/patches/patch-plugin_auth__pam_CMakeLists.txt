@@ -1,0 +1,15 @@
+$NetBSD: patch-plugin_auth__pam_CMakeLists.txt,v 1.1 2021/05/08 19:47:16 jdolecek Exp $
+
+Check for pam_ext.h (not available on NetBSD).
+
+--- plugin/auth_pam/CMakeLists.txt.orig	2021-02-18 23:22:29.000000000 +0000
++++ plugin/auth_pam/CMakeLists.txt
+@@ -43,7 +43,7 @@ IF(HAVE_PAM_APPL_H)
+                      WORKING_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${INSTALL_PLUGINDIR}/)"
+                    COMPONENT Server)
+   ENDIF()
+-  IF(TARGET auth_pam OR TARGET auth_pam_v1)
++  IF(HAVE_PAM_EXT_H AND (TARGET auth_pam OR TARGET auth_pam_v1))
+     ADD_SUBDIRECTORY(testing)
+     ADD_LIBRARY(pam_user_map MODULE mapper/pam_user_map.c)
+     TARGET_LINK_LIBRARIES(pam_user_map pam)

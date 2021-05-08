@@ -1,0 +1,55 @@
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2021/05/08 19:47:16 jdolecek Exp $
+
+Only install client scripts with the client.
+
+--- scripts/CMakeLists.txt.orig	2021-02-18 23:22:29.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -195,15 +195,15 @@ SET(mysqld_locations "$basedir/${INSTALL
+ SET(errmsg_locations "$basedir/${INSTALL_MYSQLSHAREDIR}/english $basedir/share/english $basedir/share/mysql/english")
+ SET(pkgdata_locations "$basedir/${INSTALL_MYSQLSHAREDIR} $basedir/share $basedir/share/mysql")
+ 
+-IF(UNIX)
++IF(UNIX AND NOT WITHOUT_SERVER)
+ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_install_db.sh
+   ${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db ESCAPE_QUOTES @ONLY)
+   EXECUTE_PROCESS(
+   COMMAND chmod +x ${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db
+   )
+ 
+-INSTALL_SCRIPT(
+- "${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db"
++INSTALL(
++  FILES "${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db"
+   DESTINATION ${INSTALL_SCRIPTDIR}
+   COMPONENT Server
+   )
+@@ -319,12 +319,8 @@ ELSE()
+       mysqld_safe
+       mysqldumpslow
+     )
+-  ENDIF()
+-  # Configure this one, for testing, but do not install it.
+-  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_config.pl.in
+-    ${CMAKE_CURRENT_BINARY_DIR}/mysql_config.pl ESCAPE_QUOTES @ONLY)
+-  # On Unix, most of the files end up in the bin directory
+-  SET(BIN_SCRIPTS
++  ELSE()
++    SET(CLIENT_SCRIPTS
+     msql2mysql
+     mysql_config
+     mysql_setpermission
+@@ -334,6 +330,14 @@ ELSE()
+     mysql_find_rows
+     mytop
+     mysqlhotcopy
++    )
++  ENDIF()
++  # Configure this one, for testing, but do not install it.
++  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_config.pl.in
++    ${CMAKE_CURRENT_BINARY_DIR}/mysql_config.pl ESCAPE_QUOTES @ONLY)
++  # On Unix, most of the files end up in the bin directory
++  SET(BIN_SCRIPTS
++    ${CLIENT_SCRIPTS}
+     ${SERVER_SCRIPTS}
+     ${WSREP_SCRIPTS}
+     ${SYSTEMD_SCRIPTS}
