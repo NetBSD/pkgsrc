@@ -1,0 +1,10 @@
++ Build works on NetBSD
+- Build needs testing on illumos
+- Build needs testing on other OSes
+- Server functionality needs testing
+
+Non-essential:
+
+- mroonga fails to build on NetBSD (on illumos too, apparently)
+- tokudb fails to build on NetBSD (this was disabled in older packages, too)
+- dtrace fails to build
