@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2021/03/19 17:36:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/08 15:02:36 bsiegert Exp $
 
 DISTNAME=	go-wordwrap-1.0.0
-PKGREVISION=	10
+PKGREVISION=	11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitchellh/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	go-wordwrap

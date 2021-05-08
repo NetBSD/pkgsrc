@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2021/03/19 17:36:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/08 15:02:36 bsiegert Exp $
 #
 
 NAME=			iochan
 VERSION=		1.0.0
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		16
+PKGREVISION=		17
 GITHUB_PROJECT=		${NAME}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mitchellh/}
