@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/05/04 14:48:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2021/05/08 13:55:19 thor Exp $
 
 DISTNAME=	VTK-9.0.1
 PKGNAME=	${DISTNAME:S/VTK/vtk/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.vtk.org/files/release/9.0/
 
@@ -41,6 +42,8 @@ CMAKE_ARGS+=	-DVTK_WRAP_JAVA=OFF
 CMAKE_ARGS+=	-DVTK_FORBID_DOWNLOADS=ON
 # https://discourse.vtk.org/t/9-0-0-rc1-contextopengl2-not-built/2933
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2=YES
+
+.include "options.mk"
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
