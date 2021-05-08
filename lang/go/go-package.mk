@@ -1,6 +1,10 @@
-# $NetBSD: go-package.mk,v 1.25 2020/03/30 19:33:13 joerg Exp $
+# $NetBSD: go-package.mk,v 1.26 2021/05/08 15:55:04 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
+#
+# PLEASE NOTE: Do not add new uses of this file to pkgsrc, particularly if
+# the package you want to add contains a "go.mod" file. Use go-module.mk
+# instead.
 #
 # === Package-settable variables ===
 #
