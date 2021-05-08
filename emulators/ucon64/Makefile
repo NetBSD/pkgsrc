@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/01/08 21:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/08 15:18:37 nia Exp $
 
 DISTNAME=		ucon64-2.2.1-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
@@ -20,24 +20,19 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CONFIGURE_ARGS+=		--with-libcd64
 .endif
 
+# parallel port I/O cannot work on macOS, even on Intel
 .if ${OPSYS} == "Darwin"
-EXT=	dylib
-.else
-EXT=	so
+CONFIGURE_ARGS+=		--disable-parallel
 .endif
 
-PLIST_SUBST+=			EXT=${EXT}
-
-CONFIGURE_ARGS+=		--with-libdiscmage
 GNU_CONFIGURE=			yes
 USE_TOOLS+=			gmake
 CHECK_PORTABILITY_SKIP+=	install_beos.sh
 
-INSTALLATION_DIRS=	bin lib share/doc/ucon64/images
+INSTALLATION_DIRS=	bin share/doc/ucon64/images
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ucon64 ${DESTDIR}${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/libdiscmage/discmage.${EXT} ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/*.html \
 		${DESTDIR}${PREFIX}/share/doc/ucon64
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/images/* \
