@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/28 18:40:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/05/08 08:58:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/httpx/_auth.pyo
 ${PYSITELIB}/httpx/_client.py
 ${PYSITELIB}/httpx/_client.pyc
 ${PYSITELIB}/httpx/_client.pyo
+${PYSITELIB}/httpx/_compat.py
+${PYSITELIB}/httpx/_compat.pyc
+${PYSITELIB}/httpx/_compat.pyo
 ${PYSITELIB}/httpx/_config.py
 ${PYSITELIB}/httpx/_config.pyc
 ${PYSITELIB}/httpx/_config.pyo
@@ -47,6 +50,9 @@ ${PYSITELIB}/httpx/_transports/__init__.pyo
 ${PYSITELIB}/httpx/_transports/asgi.py
 ${PYSITELIB}/httpx/_transports/asgi.pyc
 ${PYSITELIB}/httpx/_transports/asgi.pyo
+${PYSITELIB}/httpx/_transports/base.py
+${PYSITELIB}/httpx/_transports/base.pyc
+${PYSITELIB}/httpx/_transports/base.pyo
 ${PYSITELIB}/httpx/_transports/default.py
 ${PYSITELIB}/httpx/_transports/default.pyc
 ${PYSITELIB}/httpx/_transports/default.pyo
