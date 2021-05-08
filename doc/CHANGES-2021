@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2708 2021/05/07 19:16:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2709 2021/05/08 06:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4210,3 +4210,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-lexicon to 3.6.0 [adam 2021-05-07]
 	Updated math/py-xarray to 0.18.0 [adam 2021-05-07]
 	Updated textproc/py-xlsxwriter to 1.4.2 [adam 2021-05-07]
+	Removed net/py-eventlib [adam 2021-05-08]
+	Updated net/py-prometheus_client to 0.10.1 [adam 2021-05-08]
+	Updated textproc/py-humanize to 3.5.0 [adam 2021-05-08]
+	Updated net/py-flower to 0.9.7 [adam 2021-05-08]
