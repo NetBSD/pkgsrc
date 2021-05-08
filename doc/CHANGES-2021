@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2721 2021/05/08 22:05:11 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2722 2021/05/08 23:35:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/erlang to 23.3.3 [triaxx 2021-05-08]
 	Updated lang/erlang-doc to 23.3 [triaxx 2021-05-08]
 	Updated graphics/pcl to 1.11.1nb3 [thor 2021-05-08]
+	Updated textproc/p5-Template-Tiny to 1.14 [wen 2021-05-08]
