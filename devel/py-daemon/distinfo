@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/12/05 14:51:01 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/05/08 09:16:15 adam Exp $
 
-SHA1 (python-daemon-2.2.4.tar.gz) = 14a86a2088915edb8f8651629d3ebe94749029eb
-RMD160 (python-daemon-2.2.4.tar.gz) = 2447e4d6f1fe6fa0d4c9b5cd5751d12ba86bc27d
-SHA512 (python-daemon-2.2.4.tar.gz) = 9a7a4e23e126f05e4c1c503f15401cddd758c5f9195c370997060ca1bbfe71cc51d82d3ae16bcf0023c28fa50b0b8d6cd406e515b27725ffa9fec10fde3ed64a
-Size (python-daemon-2.2.4.tar.gz) = 80775 bytes
+SHA1 (python-daemon-2.3.0.tar.gz) = c1a321e0751dfae5a082cd4a0b7924b30bb4d2a1
+RMD160 (python-daemon-2.3.0.tar.gz) = d319b4f9fc17323f724c52dfd5627e8318bc6f0d
+SHA512 (python-daemon-2.3.0.tar.gz) = 30bb70821aae720d09032c8c666524fa9a1a486314ffff73eb161231a1f2b954914295b4ad41f9c8529bc045fb6d0f89256bc59f8979a4f8a6698e9bd4d7441a
+Size (python-daemon-2.3.0.tar.gz) = 82831 bytes
