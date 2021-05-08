@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2021/05/07 11:36:29 thor Exp $
+$NetBSD: distinfo,v 1.3 2021/05/08 22:04:58 thor Exp $
 
 SHA1 (pcl-1.11.1.tar.gz) = 982a528fa493834e415728357695296c011001b9
 RMD160 (pcl-1.11.1.tar.gz) = 7f0679139ad86db5ae3451a7bfdaaf4ecdf5ceca
 SHA512 (pcl-1.11.1.tar.gz) = 93dd3180443a1a26f019bfd1e34855014619b3b74326ae93806a2711dba392b1c76f2aa682cc3955c651a45ce829a0c89d1cae7cef09cdea60fcb671aefe4da2
 Size (pcl-1.11.1.tar.gz) = 68515312 bytes
 SHA1 (patch-2d_CMakeLists.txt) = 2ff5d0943e4171a50d0d5cf0646adc4733e7a2ae
-SHA1 (patch-CMakeLists.txt) = 214b20e8a0d66f92e25acad2d9ef3731c81c60dc
+SHA1 (patch-CMakeLists.txt) = 9a4dbababa9e7e377c587cd73a62ca8702919d5e
 SHA1 (patch-apps_3d__rec__framework_CMakeLists.txt) = 5736b25611b9f549edbe128054f87190e3c9652e
 SHA1 (patch-apps_3d__rec__framework_include_pcl_apps_3d__rec__framework_utils_vtk__model__sampling.h) = 831e810adfc0e8de18751a6d068ccaafbc0145d0
 SHA1 (patch-apps_CMakeLists.txt) = bbe2d7325816a53fdcd9c991ed54c38c2585bf02
@@ -27,6 +27,7 @@ SHA1 (patch-apps_cloud__composer_src_point__selectors_rectangular__frustum__sele
 SHA1 (patch-apps_cloud__composer_src_point__selectors_selected__trackball__interactor__style.cpp) = 17184ad9f55a79f11e18049a4bfc624e75e0f981
 SHA1 (patch-apps_cloud__composer_src_project__model.cpp) = 8f63cd30fe2dcbe909776dc639079eebee6af08c
 SHA1 (patch-apps_include_pcl_apps_manual__registration.h) = 4dd066eb99426bdc73e98799187c78182362da19
+SHA1 (patch-apps_include_pcl_apps_nn__classification.h) = 57974d6d174c40ad8897b4526cbe685c5f036747
 SHA1 (patch-apps_include_pcl_apps_openni__passthrough.h) = 797b2446175d896ddf4c1a4cb8a61a9a20aab771
 SHA1 (patch-apps_include_pcl_apps_organized__segmentation__demo.h) = b018b71752dba847b48585e3f67de166e657d1c3
 SHA1 (patch-apps_include_pcl_apps_pcd__video__player.h) = 3e6299163fa6f16446b07589607c79ebaaf92177
