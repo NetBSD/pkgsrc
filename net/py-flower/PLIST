@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/08 14:48:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/08 06:00:00 adam Exp $
 bin/flower-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,9 +36,13 @@ ${PYSITELIB}/flower/command.pyo
 ${PYSITELIB}/flower/events.py
 ${PYSITELIB}/flower/events.pyc
 ${PYSITELIB}/flower/events.pyo
+${PYSITELIB}/flower/inspector.py
+${PYSITELIB}/flower/inspector.pyc
+${PYSITELIB}/flower/inspector.pyo
 ${PYSITELIB}/flower/options.py
 ${PYSITELIB}/flower/options.pyc
 ${PYSITELIB}/flower/options.pyo
+${PYSITELIB}/flower/static/css/Pipfile.lock
 ${PYSITELIB}/flower/static/css/bootstrap-datetimepicker.min.css
 ${PYSITELIB}/flower/static/css/bootstrap-responsive.css
 ${PYSITELIB}/flower/static/css/bootstrap-responsive.min.css
@@ -64,7 +68,6 @@ ${PYSITELIB}/flower/static/css/jquery.dataTables.colReorder.min.css
 ${PYSITELIB}/flower/static/css/jquery.dataTables.css
 ${PYSITELIB}/flower/static/css/jquery.dataTables.min.css
 ${PYSITELIB}/flower/static/css/jquery.dataTables.select.min.css
-${PYSITELIB}/flower/static/css/rickshaw.min.css
 ${PYSITELIB}/flower/static/favicon.ico
 ${PYSITELIB}/flower/static/img/apple-touch-icon-114-precomposed.png
 ${PYSITELIB}/flower/static/img/apple-touch-icon-144-precomposed.png
@@ -92,8 +95,6 @@ ${PYSITELIB}/flower/static/js/bootstrap-transition.js
 ${PYSITELIB}/flower/static/js/bootstrap-typeahead.js
 ${PYSITELIB}/flower/static/js/bootstrap.js
 ${PYSITELIB}/flower/static/js/bootstrap.min.js
-${PYSITELIB}/flower/static/js/d3.layout.min.js
-${PYSITELIB}/flower/static/js/d3.min.js
 ${PYSITELIB}/flower/static/js/flower.js
 ${PYSITELIB}/flower/static/js/jquery-1.7.2.min.js
 ${PYSITELIB}/flower/static/js/jquery-ui-1-8-15.min.js
@@ -101,15 +102,15 @@ ${PYSITELIB}/flower/static/js/jquery.dataTables.buttons.min.js
 ${PYSITELIB}/flower/static/js/jquery.dataTables.colReorder.min.js
 ${PYSITELIB}/flower/static/js/jquery.dataTables.min.js
 ${PYSITELIB}/flower/static/js/jquery.dataTables.select.min.js
+${PYSITELIB}/flower/static/js/jquery.dataTables.sorting.natural.js
 ${PYSITELIB}/flower/static/js/moment-timezone-with-data.min.js
 ${PYSITELIB}/flower/static/js/moment.min.js
-${PYSITELIB}/flower/static/js/rickshaw.min.js
+${PYSITELIB}/flower/static/swagger.json
 ${PYSITELIB}/flower/templates/404.html
 ${PYSITELIB}/flower/templates/base.html
 ${PYSITELIB}/flower/templates/broker.html
 ${PYSITELIB}/flower/templates/dashboard.html
 ${PYSITELIB}/flower/templates/error.html
-${PYSITELIB}/flower/templates/monitor.html
 ${PYSITELIB}/flower/templates/navbar.html
 ${PYSITELIB}/flower/templates/task.html
 ${PYSITELIB}/flower/templates/tasks.html
@@ -120,12 +121,6 @@ ${PYSITELIB}/flower/urls.pyo
 ${PYSITELIB}/flower/utils/__init__.py
 ${PYSITELIB}/flower/utils/__init__.pyc
 ${PYSITELIB}/flower/utils/__init__.pyo
-${PYSITELIB}/flower/utils/backports/__init__.py
-${PYSITELIB}/flower/utils/backports/__init__.pyc
-${PYSITELIB}/flower/utils/backports/__init__.pyo
-${PYSITELIB}/flower/utils/backports/collections.py
-${PYSITELIB}/flower/utils/backports/collections.pyc
-${PYSITELIB}/flower/utils/backports/collections.pyo
 ${PYSITELIB}/flower/utils/broker.py
 ${PYSITELIB}/flower/utils/broker.pyc
 ${PYSITELIB}/flower/utils/broker.pyo
