@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2719 2021/05/08 20:03:09 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2720 2021/05/08 20:04:34 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4254,3 +4254,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-rails61 to 6.1.3.2 [taca 2021-05-08]
 	Updated devel/go-tools to 0.1.0 [bsiegert 2021-05-08]
 	Updated lang/erlang to 23.3.3 [triaxx 2021-05-08]
+	Updated lang/erlang-doc to 23.3 [triaxx 2021-05-08]
