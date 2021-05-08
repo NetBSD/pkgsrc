@@ -1,0 +1,6 @@
+PidFile class featuring:
+* stale detection
+* pidfile locking (fcntl)
+* chmod (default is 0o644)
+* chown
+* custom exceptions

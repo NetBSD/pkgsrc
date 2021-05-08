@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.956 2021/05/05 12:25:54 pho Exp $
+# $NetBSD: Makefile,v 1.957 2021/05/08 09:14:20 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -545,6 +545,7 @@ SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
 SUBDIR+=	py-pathtools
 SUBDIR+=	py-pefile
+SUBDIR+=	py-pid
 SUBDIR+=	py-psutil
 SUBDIR+=	py-ptyprocess
 SUBDIR+=	py-pyinotify
