@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2715 2021/05/08 13:55:30 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2716 2021/05/08 14:05:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4226,3 +4226,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/py-pid version 3.0.4 [adam 2021-05-08]
 	Updated devel/py-daemon to 2.3.0 [adam 2021-05-08]
 	Updated graphics/vtk to 9.0.1nb1 [thor 2021-05-08]
+	Updated devel/ruby-activesupport60 to 6.0.3.7 [taca 2021-05-08]
+	Updated devel/ruby-activemodel60 to 6.0.3.7 [taca 2021-05-08]
+	Updated devel/ruby-activejob60 to 6.0.3.7 [taca 2021-05-08]
+	Updated www/ruby-actionview60 to 6.0.3.7 [taca 2021-05-08]
+	Updated www/ruby-actionpack60 to 6.0.3.7 [taca 2021-05-08]
+	Updated databases/ruby-activerecord60 to 6.0.3.7 [taca 2021-05-08]
+	Updated mail/ruby-actionmailer60 to 6.0.3.7 [taca 2021-05-08]
+	Updated mail/ruby-actionmailbox60 to 6.0.3.7 [taca 2021-05-08]
+	Updated www/ruby-actioncable60 to 6.0.3.7 [taca 2021-05-08]
+	Updated devel/ruby-railties60 to 6.0.3.7 [taca 2021-05-08]
+	Updated devel/ruby-activestorage60 to 6.0.3.7 [taca 2021-05-08]
+	Updated textproc/ruby-actiontext60 to 6.0.3.7 [taca 2021-05-08]
+	Updated www/ruby-rails60 to 6.0.3.7 [taca 2021-05-08]
