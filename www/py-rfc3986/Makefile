@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/17 20:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/08 06:56:35 adam Exp $
 
-DISTNAME=	rfc3986-1.4.0
+DISTNAME=	rfc3986-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rfc3986/}
@@ -17,7 +17,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	test:test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
