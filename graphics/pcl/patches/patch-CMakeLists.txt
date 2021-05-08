@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/05/07 11:36:29 thor Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/05/08 22:03:14 thor Exp $
 
 Support VTK 9, from PR 4262
 
@@ -9,7 +9,7 @@ Support VTK 9, from PR 4262
  
  ### ---[ Find universal dependencies
 -set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
-+set (CMAKE_MODULE_PATH "/data/pkgwork/graphics/pcl/work/.buildlink/cmake-Modules" "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
++set (CMAKE_MODULE_PATH "/data/pkgwork/graphics/pcl/work/.buildlink/cmake-Modules" "/data/pkgwork/graphics/pcl/work/.buildlink/cmake-Modules" "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
  
  # ---[ Include pkgconfig
  include(FindPkgConfig)
