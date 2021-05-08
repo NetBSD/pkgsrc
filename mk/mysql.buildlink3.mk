@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.28 2020/10/20 21:53:31 otis Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.29 2021/05/08 15:51:28 jdolecek Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -46,29 +46,24 @@ _MYSQL_VERSION_${mv}_OK=	yes
 
 # check what is installed
 .if ${OPSYS} == "Darwin"
-.  if exists(${LOCALBASE}/lib/libmysqlclient.20.dylib)
-_MYSQL_VERSION_57_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	57
-.  endif
-.  if exists(${LOCALBASE}/lib/libmysqlclient.18.dylib)
-.    if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
-_MYSQL_VERSION_56_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	56
-.    endif
-.  endif
+_MYSQL_SO_57=	20.dylib
+_MYSQL_SO_56=	18.dylib
 .else
-.  if exists(${LOCALBASE}/lib/libmysqlclient.so.20)
+_MYSQL_SO_57=	so.20
+_MYSQL_SO_56=	so.18
+.endif
+
+.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_57})
 _MYSQL_VERSION_57_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	57
-.  endif
-.  if exists(${LOCALBASE}/lib/libmysqlclient.so.18)
-.    if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
+.endif
+.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_56})
+.  if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
 _MYSQL_VERSION_56_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	56
-.    elif exists(${LOCALBASE}/share/mariadb)
+.  elif exists(${LOCALBASE}/share/mariadb)
 _MYSQL_VERSION_MARIADB55_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	MARIADB55
-.    endif
 .  endif
 .endif
 
