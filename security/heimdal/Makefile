@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2021/04/21 11:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.146 2021/05/09 16:04:34 thor Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	security
 # Original distfile is unavailable on Github
 #GITHUB_TAG=	${DISTNAME}
@@ -127,6 +127,9 @@ PTHREAD_AUTO_VARS=	yes
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
 .endif
+
+post-install:
+	${LN} -s heimdal-gssapi.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/krb5-gssapi.pc
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
