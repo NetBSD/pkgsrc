@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.820 2021/05/09 10:05:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.821 2021/05/09 14:05:39 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -577,6 +577,7 @@ SUBDIR+=	ruby-rex-sslscan
 SUBDIR+=	ruby-rex-struct2
 SUBDIR+=	ruby-rex-text
 SUBDIR+=	ruby-rex-zip
+SUBDIR+=	ruby-rotp
 SUBDIR+=	ruby-ruby-openid
 SUBDIR+=	ruby-rubyntlm
 SUBDIR+=	ruby-shadow
