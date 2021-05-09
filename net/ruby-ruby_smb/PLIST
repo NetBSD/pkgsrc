@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/11 14:47:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/09 14:00:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.simplecov
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
@@ -38,6 +38,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/client/signing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/tree_connect.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/utils.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/winreg.rb
+${GEM_LIBDIR}/lib/ruby_smb/compression.rb
+${GEM_LIBDIR}/lib/ruby_smb/compression/lznt1.rb
 ${GEM_LIBDIR}/lib/ruby_smb/crypto.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind.rb
@@ -280,6 +282,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/tree.rb
 ${GEM_LIBDIR}/lib/ruby_smb/version.rb
 ${GEM_LIBDIR}/ruby_smb.gemspec
 ${GEM_LIBDIR}/spec/lib/ruby_smb/client_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/compression/lznt1_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/crypto_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_ack_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_spec.rb
