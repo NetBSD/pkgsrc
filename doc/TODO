@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20613 2021/05/06 16:29:17 wiz Exp $
+$NetBSD: TODO,v 1.20614 2021/05/09 07:50:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -366,6 +366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.0.11.11
 	o ImageMagick6-6.9.12.8
 	o Inter-UI-3.18
 	o JBidwatcher-2.5.6 [wants launch4j]
@@ -879,6 +880,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.2.1
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -1058,6 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
+	o gopls-0.6.11
 	o goreman-0.3.7
 	o gossip-0.31
 	o got-0.52
@@ -1325,6 +1328,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
+	o libheif-1.12.0
 	o libhidapi-0.10.1
 	o libiconv-1.16
 	o libisoburn-1.5.4
@@ -1792,13 +1796,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Spreadsheet-Read-0.84
 	o p5-Spreadsheet-ReadSXC-0.34
 	o p5-Statistics-Descriptive-3.0800
-	o p5-String-CRC32-2.100
-	o p5-String-Interpolate-0.33
 	o p5-String-Random-0.31
 	o p5-String-Similarity-1.16
 	o p5-Sub-Exporter-ForMethods-0.100054
 	o p5-Sys-Filesystem-1.408
-	o p5-Template-Tiny-1.13
 	o p5-Term-Size-0.211
 	o p5-Test-Class-0.52
 	o p5-Test-EOL-2.02
@@ -1907,6 +1908,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-21.05.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1980,6 +1982,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-goocalendar-0.7.2
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-hypothesis-6.12.0
 	o py-incremental-21.3.0
 	o py-input-pad-1.4.2
 	o py-jsonrpclib-0.2.1
@@ -1990,6 +1993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-marisa-0.2.6
 	o py-markdown-3.2.2 [drops python-2.x support]
 	o py-mautrix-0.9.1
+	o py-mercurial-5.8
 	o py-moin-1.9.11
 	o py-mpmath-1.2.0
 	o py-munkres-1.1.4
@@ -2166,6 +2170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o slibtool-0.5.33
 	o smokeping-2.6.11
 	o smproxy-1.0.3
+	o snappy-1.1.9
 	o snd-21.3
 	o snobol-2.1.5
 	o snoopy-2.4.14
@@ -2265,6 +2270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-browser-10.0.16
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
