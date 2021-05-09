@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2744 2021/05/09 14:34:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2745 2021/05/09 14:36:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/ruby-rotp version 6.2.0 [taca 2021-05-09]
 	Updated graphics/p5-Image-ExifTool to 12.25 [gdt 2021-05-09]
 	Updated sysutils/puppet to 7.6.1 [taca 2021-05-09]
+	Updated sysutils/ruby-listen to 3.5.1 [taca 2021-05-09]
