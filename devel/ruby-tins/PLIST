@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/01/13 14:39:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/05/09 13:52:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.tool-versions
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/tins/temp_io_enum.rb
 ${GEM_LIBDIR}/lib/tins/terminal.rb
 ${GEM_LIBDIR}/lib/tins/thread_local.rb
 ${GEM_LIBDIR}/lib/tins/time_dummy.rb
+${GEM_LIBDIR}/lib/tins/timed_cache.rb
 ${GEM_LIBDIR}/lib/tins/to.rb
 ${GEM_LIBDIR}/lib/tins/to_proc.rb
 ${GEM_LIBDIR}/lib/tins/token.rb
