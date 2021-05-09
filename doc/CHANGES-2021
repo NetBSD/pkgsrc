@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2733 2021/05/09 08:15:03 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2734 2021/05/09 08:27:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/ossxmix version 4.2.build2019 [nia 2021-05-09]
 	Added audio/ossmix version 4.2.build2019 [nia 2021-05-09]
 	Added audio/osstest version 4.2.build2019 [nia 2021-05-09]
+	Added audio/ossinfo version 4.2.build2019 [nia 2021-05-09]
