@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/09 09:06:58 nia Exp $
+bin/ossplay
+bin/ossrecord
+share/doc/ossplay/COPYING
+share/doc/ossplay/ossplay.man
+share/doc/ossplay/ossrecord.man
