@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2020/08/27 08:22:33 bouyer Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.3 2021/05/09 03:46:24 khorben Exp $
 
 Please ensure that the Xen-specific devices needed by xend(8) exist:
 
@@ -20,6 +20,6 @@ WARNING: this version switches from the unmaintained qemu-xen-traditional
 To switch back to qemu-xen-traditional add
 device_model_version='qemu-xen-traditional'
 to your HVM domain config file.
-Use of qemu-xen-traditional is deprecated and is not recommened. It may have
-security issues.
+Use of qemu-xen-traditional is deprecated and is not recommended. It may
+have security issues.
 ===========================================================================
