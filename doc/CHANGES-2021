@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2751 2021/05/09 15:14:10 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2752 2021/05/09 15:16:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4291,3 +4291,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-inspec-core to 4.37.0 [taca 2021-05-09]
 	Removed security/go-crypto-acme [bsiegert 2021-05-09]
 	Added textproc/ruby-rqrcode_core version 1.0.0 [taca 2021-05-09]
+	Added textproc/ruby-rqrcode version 2.0.0 [taca 2021-05-09]
