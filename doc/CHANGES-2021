@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2727 2021/05/09 04:30:22 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2728 2021/05/09 04:37:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-rb-fsevent to 0.11.0 [taca 2021-05-09]
 	Updated misc/ruby-bundler to 2.2.17 [taca 2021-05-09]
 	Updated misc/ruby-daemons to 1.4.0 [taca 2021-05-09]
+	Updated net/ruby-connection_pool to 2.2.5 [taca 2021-05-09]
