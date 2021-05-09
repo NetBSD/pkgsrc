@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/03/21 13:10:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/05/09 14:42:23 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/facter
@@ -97,10 +97,12 @@ ${GEM_LIBDIR}/lib/facter/facts/aix/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/partitions.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/path.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/processor.rb
+${GEM_LIBDIR}/lib/facter/facts/aix/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/processors/count.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/processors/speed.rb
+${GEM_LIBDIR}/lib/facter/facts/aix/processors/threads.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/ruby/platform.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/ruby/sitedir.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/ruby/version.rb
@@ -326,11 +328,13 @@ ${GEM_LIBDIR}/lib/facter/facts/linux/os/selinux/policy_version.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/partitions.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/path.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processor.rb
+${GEM_LIBDIR}/lib/facter/facts/linux/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/count.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/physicalcount.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/speed.rb
+${GEM_LIBDIR}/lib/facter/facts/linux/processors/threads.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/ruby/platform.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/ruby/sitedir.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/ruby/version.rb
@@ -413,11 +417,13 @@ ${GEM_LIBDIR}/lib/facter/facts/macosx/os/macosx/version.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/os/name.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/path.rb
+${GEM_LIBDIR}/lib/facter/facts/macosx/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/processors/count.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/processors/physicalcount.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/processors/speed.rb
+${GEM_LIBDIR}/lib/facter/facts/macosx/processors/threads.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/ruby/platform.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/ruby/sitedir.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/ruby/version.rb
@@ -553,11 +559,13 @@ ${GEM_LIBDIR}/lib/facter/facts/solaris/os/hardware.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/os/name.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/path.rb
+${GEM_LIBDIR}/lib/facter/facts/solaris/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/processors/count.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/processors/physicalcount.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/processors/speed.rb
+${GEM_LIBDIR}/lib/facter/facts/solaris/processors/threads.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/ruby/platform.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/ruby/sitedir.rb
 ${GEM_LIBDIR}/lib/facter/facts/solaris/ruby/version.rb
@@ -647,10 +655,12 @@ ${GEM_LIBDIR}/lib/facter/facts/windows/os/windows/release_id.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/os/windows/system32.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/path.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/processor.rb
+${GEM_LIBDIR}/lib/facter/facts/windows/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/processors/count.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/processors/physicalcount.rb
+${GEM_LIBDIR}/lib/facter/facts/windows/processors/threads.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/ruby/platform.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/ruby/sitedir.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/ruby/version.rb
@@ -770,6 +780,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/os_release.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/partitions.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/path.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/processors.rb
+${GEM_LIBDIR}/lib/facter/resolvers/processors_lscpu.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/redhat_release.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/release_from_first_line.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/ruby.rb
