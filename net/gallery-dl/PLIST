@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2021/04/02 20:05:39 leot Exp $
+@comment $NetBSD: PLIST,v 1.55 2021/05/09 09:00:32 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -114,6 +114,12 @@ ${PYSITELIB}/gallery_dl/extractor/exhentai.pyo
 ${PYSITELIB}/gallery_dl/extractor/fallenangels.py
 ${PYSITELIB}/gallery_dl/extractor/fallenangels.pyc
 ${PYSITELIB}/gallery_dl/extractor/fallenangels.pyo
+${PYSITELIB}/gallery_dl/extractor/fanbox.py
+${PYSITELIB}/gallery_dl/extractor/fanbox.pyc
+${PYSITELIB}/gallery_dl/extractor/fanbox.pyo
+${PYSITELIB}/gallery_dl/extractor/fantia.py
+${PYSITELIB}/gallery_dl/extractor/fantia.pyc
+${PYSITELIB}/gallery_dl/extractor/fantia.pyo
 ${PYSITELIB}/gallery_dl/extractor/flickr.py
 ${PYSITELIB}/gallery_dl/extractor/flickr.pyc
 ${PYSITELIB}/gallery_dl/extractor/flickr.pyo
@@ -147,6 +153,9 @@ ${PYSITELIB}/gallery_dl/extractor/hbrowse.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.py
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyo
+${PYSITELIB}/gallery_dl/extractor/hentaicosplays.py
+${PYSITELIB}/gallery_dl/extractor/hentaicosplays.pyc
+${PYSITELIB}/gallery_dl/extractor/hentaicosplays.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.py
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyo
@@ -432,9 +441,6 @@ ${PYSITELIB}/gallery_dl/extractor/xhamster.pyo
 ${PYSITELIB}/gallery_dl/extractor/xvideos.py
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyc
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
-${PYSITELIB}/gallery_dl/extractor/yuki.py
-${PYSITELIB}/gallery_dl/extractor/yuki.pyc
-${PYSITELIB}/gallery_dl/extractor/yuki.pyo
 ${PYSITELIB}/gallery_dl/job.py
 ${PYSITELIB}/gallery_dl/job.pyc
 ${PYSITELIB}/gallery_dl/job.pyo
