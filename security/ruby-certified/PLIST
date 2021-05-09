@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/09 04:40:49 taca Exp $
+bin/certified-update${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/certified-update
+${GEM_LIBDIR}/certified.rb
+${GEM_LIBDIR}/certs/ca-bundle.crt
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
