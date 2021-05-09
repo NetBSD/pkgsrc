@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2021/05/09 14:22:33 nia Exp $
+
+Make sure the PERFUSE_BUFSIZE is lowered for NTFS:
+
+# PERFUSE_BUFSIZE=135168 ntfs-3g /dev/dk1 /mnt
+
+===========================================================================
