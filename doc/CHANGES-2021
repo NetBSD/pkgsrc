@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2724 2021/05/09 00:59:01 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2725 2021/05/09 04:19:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4259,3 +4259,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Template-Tiny to 1.14 [wen 2021-05-08]
 	Updated textproc/p5-String-Interpolate to 0.33 [wen 2021-05-08]
 	Updated textproc/p5-String-CRC32 to 2.100 [wen 2021-05-09]
+	Updated devel/ruby-rb-fsevent to 0.11.0 [taca 2021-05-09]
