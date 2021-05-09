@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3385 2021/05/07 05:13:38 adam Exp $
+# $NetBSD: Makefile,v 1.3386 2021/05/09 08:28:36 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -500,7 +500,6 @@ SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golangci-lint
 SUBDIR+=	golint
-SUBDIR+=	google-api-go-client
 SUBDIR+=	google-glog
 SUBDIR+=	googletest
 SUBDIR+=	gopls
