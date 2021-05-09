@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2021/03/21 13:22:01 taca Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/09 14:33:40 taca Exp $
 
-DISTNAME=		puppet-7.5.0
+DISTNAME=		puppet-7.6.1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppet-resource_api
 DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<2:../../devel/ruby-concurrent-ruby
 DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
-DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0:../../devel/ruby-scanf
+DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
 
 # sysutils/ruby-facter dose not support Ruby 3
 RUBY_VERSIONS_INCOMPATIBLE=	30
