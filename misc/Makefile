@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.548 2021/04/24 08:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.549 2021/05/09 08:54:07 bsiegert Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -84,8 +84,6 @@ SUBDIR+=	gkrellm-leds
 SUBDIR+=	gkrellm-moon
 SUBDIR+=	gkrellm-weather
 SUBDIR+=	gnuls
-SUBDIR+=	go-genproto
-SUBDIR+=	go-genproto-googleapis-rpc
 SUBDIR+=	goffice0.10
 SUBDIR+=	goffice0.8
 SUBDIR+=	gone
