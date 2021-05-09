@@ -1,0 +1,6 @@
+Command line mixer application from the Open Sound System.
+
+Compatible with: NetBSD 10, Solaris 11, FreeBSD.
+
+NOTE: On NetBSD, use mixerctl(1) (included in base) instead.
+This package primarily exists for testing OSSv4 compatibility.

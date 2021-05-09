@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/09 08:02:03 nia Exp $
+
+SHA1 (oss-v4.2-build2019-src-bsd.tar.bz2) = f6e03cbb5b5010aa48dd6d963b7e68c991c7d7dc
+RMD160 (oss-v4.2-build2019-src-bsd.tar.bz2) = be04756160843acdaacbb610d5e8ebd9f7acf572
+SHA512 (oss-v4.2-build2019-src-bsd.tar.bz2) = 9d43fa3e3abe4cf006cabfedf2c9fc51372f8cbe499c2e4bee6ba489291c31eb93b66b312054bcf92fc26df329bc3c7ef14a633fece8af38256bc7198d0c1556
+Size (oss-v4.2-build2019-src-bsd.tar.bz2) = 1723557 bytes
