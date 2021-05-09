@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2742 2021/05/09 14:05:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2743 2021/05/09 14:06:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-tins to 1.29.0 [taca 2021-05-09]
 	Updated net/ruby-ruby_smb to 2.0.8 [taca 2021-05-09]
 	Added security/ruby-rotp version 6.2.0 [taca 2021-05-09]
+	Updated graphics/p5-Image-ExifTool to 12.25 [gdt 2021-05-09]
