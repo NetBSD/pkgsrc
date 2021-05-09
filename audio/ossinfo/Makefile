@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/09 09:08:27 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/09 09:10:01 nia Exp $
 
 .include "Makefile.common"
 
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	nia@NetBSD.org
-COMMENT=	Display OSSv4 device information
+COMMENT=	Command line program to display OSSv4 device information
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
