@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.628 2021/05/09 07:54:42 nia Exp $
+# $NetBSD: Makefile,v 1.629 2021/05/09 08:02:03 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -352,6 +352,7 @@ SUBDIR+=	openal-soft
 SUBDIR+=	opencore-amr
 SUBDIR+=	opus-tools
 SUBDIR+=	opusfile
+SUBDIR+=	ossmix
 SUBDIR+=	ossxmix
 SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Scan
