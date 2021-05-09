@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20615 2021/05/09 09:45:44 bsiegert Exp $
+$NetBSD: TODO,v 1.20616 2021/05/09 14:06:06 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1720,7 +1720,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-HTTP-OAI-4.11
 	o p5-IO-Interactive-1.023
 	o p5-IO-Tty-1.16
-	o p5-Image-ExifTool-12.24
 	o p5-JSON-MaybeXS-1.004003
 	o p5-JavaScript-Minifier-XS-0.14
 	o p5-LEOCHARRE-Dir-1.09
