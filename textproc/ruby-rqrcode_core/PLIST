@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/09 15:12:46 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ruby.yml
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/lib/rqrcode_core.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_8bit_byte.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_alphanumeric.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_bit_buffer.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_code.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_math.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_numeric.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_polynomial.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_rs_block.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_util.rb
+${GEM_LIBDIR}/lib/rqrcode_core/version.rb
+${GEM_LIBDIR}/rqrcode_core.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
