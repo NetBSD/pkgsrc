@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/05/09 08:38:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/05/09 09:12:08 nia Exp $
 # Common Makefile logic for commands included with the OSSv4 distribution.
 
 # used by audio/ossinfo/Makefile
@@ -7,6 +7,7 @@
 # used by audio/ossxmix/Makefile
 
 DISTNAME=	oss-v4.2-build2019-src-bsd
+OSS_CMD_VER=	${DISTNAME:S/oss-v//1:S/-src-bsd//1:S/-/./g}
 MASTER_SITES=	http://www.opensound.com/developer/sources/stable/bsd/
 EXTRACT_SUFX=	.tar.bz2
 

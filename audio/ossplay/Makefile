@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/05/09 09:06:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/09 09:12:09 nia Exp $
 
 .include "../../audio/ossinfo/Makefile.common"
 
-PKGNAME=	ossplay-${DISTNAME:S/oss-v//1:S/-src-bsd//1:S/-/./g}
+PKGNAME=	ossplay-${OSS_CMD_VER}
 CATEGORIES=	audio
 
 MAINTAINER=	nia@NetBSD.org
