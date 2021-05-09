@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/09 04:40:49 taca Exp $
+
+SHA1 (certified-1.0.0.gem) = feead498bd85ffccb83e139598816b266fbd412a
+RMD160 (certified-1.0.0.gem) = aa52bfeb8f00dd17ee1d5914c95e343268a5cd03
+SHA512 (certified-1.0.0.gem) = 8a331bb88f68f32c765136fad3f5b130843c8d1d0f3f5988b7ac7e3258a2ae57fe203ffc74996114dd708d017594a033faefc8e6928e24f07cac176aecbbca68
+Size (certified-1.0.0.gem) = 143360 bytes
