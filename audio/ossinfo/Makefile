@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/05/09 09:10:01 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/09 09:12:08 nia Exp $
 
 .include "Makefile.common"
 
-PKGNAME=	ossinfo-${DISTNAME:S/oss-v//1:S/-src-bsd//1:S/-/./g}
+PKGNAME=	ossinfo-${OSS_CMD_VER}
 PKGREVISION=	1
 CATEGORIES=	audio
 
