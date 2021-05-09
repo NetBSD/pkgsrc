@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2021/05/08 15:02:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2021/05/09 14:46:27 bsiegert Exp $
 
 DISTNAME=	hub-2.14.2
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,8 +11,9 @@ HOMEPAGE=	https://hub.github.com/
 COMMENT=	Command-line tool that makes git easier to use with GitHub
 LICENSE=	mit
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/github/hub
+GO_BUILD_PATTERN=	./...
+
+.include "go-modules.mk"
 
 DEPENDS+=		git-base>=1.7.3:../../devel/git-base
 
@@ -46,22 +47,22 @@ HUB_COMMANDS=	alias \
 # Generate hub man pages
 pre-install:
 .for hc in ${HUB_COMMANDS}
-	cd ${WRKDIR} && \
-	    ./bin/hub help ${hc} --plain-text > \
-	        src/github.com/github/hub/share/man/man1/hub-${hc}.1.md
+	cd ${WRKSRC} && \
+	    ../.gopath/bin/hub help ${hc} --plain-text > \
+	        share/man/man1/hub-${hc}.1.md
 .endfor
-	cd ${WRKDIR} && \
-	    ./bin/md2roff-bin --manual="hub manual" \
+	cd ${WRKSRC} && \
+	    ../.gopath/bin/md2roff-bin --manual="hub manual" \
 		--version=${PKGVERSION_NOREV} \
-		--template=src/github.com/github/hub/man-template.html \
-		src/github.com/github/hub/share/man/man1/*.md
+		--template=man-template.html \
+		share/man/man1/*.md
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/hub ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/hub ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/share/man/man1/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .for hc in ${HUB_COMMANDS}
 	${INSTALL_MAN} ${WRKSRC}/share/man/man1/hub-${hc}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
