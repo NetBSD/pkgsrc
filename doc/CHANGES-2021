@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2730 2021/05/09 04:51:18 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2731 2021/05/09 07:55:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-connection_pool to 2.2.5 [taca 2021-05-09]
 	Added security/ruby-certified version 1.0.0 [taca 2021-05-09]
 	Updated net/ruby-train-core to 3.7.0 [taca 2021-05-09]
+	Added audio/ossxmix version 4.2.build2019 [nia 2021-05-09]
