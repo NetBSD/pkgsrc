@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1406 2021/05/08 05:43:33 adam Exp $
+# $NetBSD: Makefile,v 1.1407 2021/05/09 08:54:07 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -198,7 +198,6 @@ SUBDIR+=	gnugk
 SUBDIR+=	go-dns
 SUBDIR+=	go-dnstap
 SUBDIR+=	go-framestream
-SUBDIR+=	go-grpc
 SUBDIR+=	go-net
 SUBDIR+=	go-ovh
 SUBDIR+=	go-tcplisten

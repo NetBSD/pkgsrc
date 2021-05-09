@@ -1,2 +1,0 @@
-This is a subpackage of go-genproto, containing the code required to
-build go-grpc.
