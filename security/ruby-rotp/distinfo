@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/09 14:04:36 taca Exp $
+
+SHA1 (rotp-6.2.0.gem) = d0aafe26ca200636132dea9b70b0d22b9ddcf7b4
+RMD160 (rotp-6.2.0.gem) = 944743b77f40a539800952d99193148eb3de779f
+SHA512 (rotp-6.2.0.gem) = db874073a636a09e855b3e69663405920fc20ec9bf8e3bf3eea6a9db2bc69200763a61699760addb8c6f8fdd70aa5d2dcc2fbce347ab1e953865765811c80822
+Size (rotp-6.2.0.gem) = 63488 bytes
