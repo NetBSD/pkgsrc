@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2746 2021/05/09 14:42:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2747 2021/05/09 14:49:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4284,3 +4284,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/puppet to 7.6.1 [taca 2021-05-09]
 	Updated sysutils/ruby-listen to 3.5.1 [taca 2021-05-09]
 	Updated sysutils/ruby-facter to 4.1.1 [taca 2021-05-09]
+	Updated sysutils/ruby-chef-utils to 16.13.16 [taca 2021-05-09]
+	Updated sysutils/ruby-chef-config to 16.13.16 [taca 2021-05-09]
+	Updated sysutils/ruby-chef to 16.13.16 [taca 2021-05-09]
