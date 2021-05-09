@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2021/04/01 14:10:53 taca Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/09 14:48:09 taca Exp $
 
-DISTNAME=	chef-16.11.7
+DISTNAME=	chef-16.13.16
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,15 +8,15 @@ HOMEPAGE=	https://github.com/opscode/chef
 COMMENT=	Configuration management tool for infrastructure automation
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=16.11.7<16.12:../../sysutils/ruby-chef-config
-#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=16.11.7<16.12:../../sysutils/ruby-chef-utils
+DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=16.13.16<16.14:../../sysutils/ruby-chef-config
+#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=16.13.16<16.14:../../sysutils/ruby-chef-utils
 #DEPENDS+=	${RUBY_PKGPREFIX}-train-core>=3.2<4:../../net/ruby-train-core
 DEPENDS+=	${RUBY_PKGPREFIX}-train-winrm>=0.2.5:../../net/ruby-train-winrm
 #DEPENDS+=	${RUBY_PKGPREFIX}-license-acceptance>=1.0.5:../../misc/ruby-license-acceptance
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=2.1.1:../../devel/ruby-mixlib-cli
 #DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0.3:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-authentication>=2.1:../../devel/ruby-mixlib-authentication
-#DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=3.0.3:../../devel/ruby-mixlib-shellout
+#DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=3.1.1:../../devel/ruby-mixlib-shellout
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-archive>=0.4:../../archivers/ruby-mixlib-archive
 DEPENDS+=	${RUBY_PKGPREFIX}-ohai>=16.0<17:../../misc/ruby-ohai
 DEPENDS+=	${RUBY_PKGPREFIX}-inspec-core>=4.23<5:../../sysutils/ruby-inspec-core
