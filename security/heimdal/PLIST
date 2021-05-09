@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:05:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/05/09 16:04:34 thor Exp $
 bin/afslog
 bin/compile_et
 bin/gsstool
@@ -146,6 +146,7 @@ lib/libroken.la
 lib/libsl.la
 lib/libwind.la
 lib/pkgconfig/heimdal-gssapi.pc
+lib/pkgconfig/krb5-gssapi.pc
 lib/windc.la
 libexec/digest-service
 libexec/heimdal/asn1_compile
