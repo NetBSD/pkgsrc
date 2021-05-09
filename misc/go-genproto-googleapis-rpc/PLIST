@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/11 19:57:37 minskim Exp $
-gopkg/pkg/${GO_PLATFORM}/google.golang.org/genproto/googleapis/rpc/code.a
-gopkg/pkg/${GO_PLATFORM}/google.golang.org/genproto/googleapis/rpc/errdetails.a
-gopkg/pkg/${GO_PLATFORM}/google.golang.org/genproto/googleapis/rpc/status.a
-gopkg/src/google.golang.org/genproto/googleapis/rpc/code/code.pb.go
-gopkg/src/google.golang.org/genproto/googleapis/rpc/errdetails/error_details.pb.go
-gopkg/src/google.golang.org/genproto/googleapis/rpc/status/status.pb.go
