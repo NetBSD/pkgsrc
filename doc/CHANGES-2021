@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2731 2021/05/09 07:55:03 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2732 2021/05/09 08:02:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/ruby-certified version 1.0.0 [taca 2021-05-09]
 	Updated net/ruby-train-core to 3.7.0 [taca 2021-05-09]
 	Added audio/ossxmix version 4.2.build2019 [nia 2021-05-09]
+	Added audio/ossmix version 4.2.build2019 [nia 2021-05-09]
