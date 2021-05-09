@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2018/09/11 20:03:27 minskim Exp $
-
-SHA1 (go-grpc-1.15.0.tar.gz) = 24440149534b34364847675825b88fa95533ee5a
-RMD160 (go-grpc-1.15.0.tar.gz) = 0efe507aa6a0d6917622b632151c5c84dd3ae3de
-SHA512 (go-grpc-1.15.0.tar.gz) = b8cc7c32d52e3a05ccf9ac962c6a1ec436f217d098930d84908ca0c4df54adf4dc595b6779896b80f79458c13029dd5c44fd6c67d07a889037a8e28317687247
-Size (go-grpc-1.15.0.tar.gz) = 506400 bytes
