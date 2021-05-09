@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/18 15:12:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/09 15:01:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -203,6 +203,7 @@ ${GEM_LIBDIR}/lib/inspec/resources/runit_service.rb
 ${GEM_LIBDIR}/lib/inspec/resources/script.rb
 ${GEM_LIBDIR}/lib/inspec/resources/security_identifier.rb
 ${GEM_LIBDIR}/lib/inspec/resources/security_policy.rb
+${GEM_LIBDIR}/lib/inspec/resources/selinux.rb
 ${GEM_LIBDIR}/lib/inspec/resources/service.rb
 ${GEM_LIBDIR}/lib/inspec/resources/shadow.rb
 ${GEM_LIBDIR}/lib/inspec/resources/ssh_config.rb
@@ -328,15 +329,15 @@ ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/l
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/reporter.rb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/version.rb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/README.md
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/attributes.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/controls/example.rb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/inputs.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/inspec.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/azure/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/azure/controls/example.rb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/azure/inspec.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/gcp/README.md
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/gcp/attributes.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/gcp/controls/example.rb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/gcp/inputs.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/gcp/inspec.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/os/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/os/controls/example.rb
