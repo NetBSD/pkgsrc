@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2739 2021/05/09 10:06:07 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2740 2021/05/09 13:53:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4277,3 +4277,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/ossplay version 4.2.build2019 [nia 2021-05-09]
 	Updated devel/asmfmt to 1.3.0 [bsiegert 2021-05-09]
 	Removed security/go-oauth2 [bsiegert 2021-05-09]
+	Updated devel/ruby-tins to 1.29.0 [taca 2021-05-09]
