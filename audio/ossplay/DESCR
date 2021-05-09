@@ -1,0 +1,9 @@
+ossrecord records audio in Microsoft RIFF (wav) format.
+
+ossplay plays raw PCM, Microsoft RIFF (.wav), Sun ULaw (.au), Mac AIFF (.aif)
+and other types of audio files. By default the application will try to
+determine the audio file's format and play audio based on the stored
+inforation about sample format, number of channels and sampling rate.
+
+NOTE: On NetBSD, use audioplay(1) and audiorecord(1) instead.
+This package primarily exists to test OSSv4 compatibility.
