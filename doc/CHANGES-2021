@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2747 2021/05/09 14:49:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2748 2021/05/09 14:56:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-chef-utils to 16.13.16 [taca 2021-05-09]
 	Updated sysutils/ruby-chef-config to 16.13.16 [taca 2021-05-09]
 	Updated sysutils/ruby-chef to 16.13.16 [taca 2021-05-09]
+	Updated misc/ruby-ohai to 16.13.0 [taca 2021-05-09]
