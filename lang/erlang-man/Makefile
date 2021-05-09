@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2019/07/03 07:26:36 nia Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/09 02:04:43 gutteridge Exp $
 
 DISTNAME=		otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_doc_man_/erlang-man-/}
 CATEGORIES=		lang
-MASTER_SITES=		http://www.erlang.org/download/
+MASTER_SITES=		https://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.erlang.org/
