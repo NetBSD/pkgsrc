@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.819 2021/05/09 04:41:27 taca Exp $
+# $NetBSD: Makefile,v 1.820 2021/05/09 10:05:26 bsiegert Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -108,7 +108,6 @@ SUBDIR+=	go-crypt
 SUBDIR+=	go-crypto
 SUBDIR+=	go-crypto-acme
 SUBDIR+=	go-mkcert
-SUBDIR+=	go-oauth2
 SUBDIR+=	go-sftp
 SUBDIR+=	go-xxhash
 SUBDIR+=	google-authenticator
