@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/06/07 09:21:41 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/05/09 04:37:23 taca Exp $
 
-SHA1 (connection_pool-2.2.3.gem) = 781d76a88ac2edede131d85c4d2863f267ecf157
-RMD160 (connection_pool-2.2.3.gem) = 492e7204587d9108b7902d2d6271f1a1462658da
-SHA512 (connection_pool-2.2.3.gem) = a5e54b11073723d5cf5150a47c38b37ef8e58e9adb056eeedc4427207ed1ae5d1844cab925bbbcc8a2a9dd3fe9373593ab735ce4de588b89db97800fb74757ac
-Size (connection_pool-2.2.3.gem) = 13824 bytes
+SHA1 (connection_pool-2.2.5.gem) = a3c0bc371f84408cbecd95074ebe4a640d78e121
+RMD160 (connection_pool-2.2.5.gem) = 5a142387f4fd740970b3572d59262779ccfbc8ec
+SHA512 (connection_pool-2.2.5.gem) = 3bc4e4d241cd4b1adb00d341aafe7795bbf0eff459ace962670d83c20c0eaa0d42f49a1f5e61c2327ff4fcbf3abfbc6f6c910f7a31d4a0f62bc55c782ab20e45
+Size (connection_pool-2.2.5.gem) = 14848 bytes
