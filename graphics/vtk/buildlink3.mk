@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/05/04 14:48:34 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2021/05/09 15:09:23 thor Exp $
 
 BUILDLINK_TREE+=	vtk
 
@@ -25,6 +25,14 @@ BUILDLINK_PKGSRCDIR.vtk?=	../../graphics/vtk
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
+
+pkgbase := vtk
+.include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.vtk:Mqt}
+.  include "../../x11/qt5-qtbase/buildlink3.mk"
+.endif
+
 .endif	# VTK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-vtk
