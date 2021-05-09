@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/03/21 13:22:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/05/09 14:33:40 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -1567,6 +1567,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/provider/service/smf/svcs_fmri.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/service/smf/svcs_instances.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/service/smf/svcs_multiple_fmris.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/service/systemd/list_unit_files_services
+${GEM_LIBDIR}/spec/fixtures/unit/provider/service/systemd/list_unit_files_services_vendor_preset
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/user/aix/aix_passwd_file.out
 ${GEM_LIBDIR}/spec/fixtures/unit/reports/tagmail/tagmail_email.conf
 ${GEM_LIBDIR}/spec/fixtures/unit/reports/tagmail/tagmail_failers.conf
