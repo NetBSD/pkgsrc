@@ -1,0 +1,10 @@
+The osstest applet is a simple test application that can be used to test
+functionality of the sound hardware installed in the system.
+
+osstest performs a playback test for each installed audio device. If there
+are any "machine detectable" problems they will be reported. You will first
+hear an audio sample played on the left speaker, then the right speaker and
+finally in stereo on both speakers.
+
+NOTE: On NetBSD, use `audiocfg test 0` instead. This package primarily
+exists to test OSSv4 compatibility.
