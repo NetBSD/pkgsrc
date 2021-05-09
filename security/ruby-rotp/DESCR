@@ -1,0 +1,12 @@
+The Ruby One Time Password Library
+
+A ruby library for generating and validating one time passwords (HOTP &
+TOTP) according to RFC 4226 and RFC 6238.
+
+ROTP is compatible with Google Authenticator available for Android and
+iPhone and any other TOTP based implementations.
+
+Many websites use this for multi-factor authentication, such as GMail,
+Facebook, Amazon EC2, WordPress, and Salesforce.  You can find a more
+complete list here:
+https://en.wikipedia.org/wiki/Google_Authenticator#Usage.
