@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2741 2021/05/09 14:00:30 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2742 2021/05/09 14:05:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed security/go-oauth2 [bsiegert 2021-05-09]
 	Updated devel/ruby-tins to 1.29.0 [taca 2021-05-09]
 	Updated net/ruby-ruby_smb to 2.0.8 [taca 2021-05-09]
+	Added security/ruby-rotp version 6.2.0 [taca 2021-05-09]
