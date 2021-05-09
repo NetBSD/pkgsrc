@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=ossxmix
+GenericName=Mixer
+Comment=Graphical mixer application from OSSv4
+Icon=audio-card
+Exec=ossxmix
+Terminal=false
+Categories=AudioVideo;Audio;
