@@ -1,0 +1,4 @@
+Display Open Sound System device information.
+
+NOTE: On NetBSD, use audiocfg(1) instead.
+This package primarily exists to test OSSv4 compatibility.
