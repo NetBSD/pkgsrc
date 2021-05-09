@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/09 08:14:51 nia Exp $
+bin/osstest
+share/doc/osstest/COPYING
+share/doc/osstest/osstest.man
