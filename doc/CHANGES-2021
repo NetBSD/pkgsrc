@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2752 2021/05/09 15:16:18 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2753 2021/05/09 16:04:46 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed security/go-crypto-acme [bsiegert 2021-05-09]
 	Added textproc/ruby-rqrcode_core version 1.0.0 [taca 2021-05-09]
 	Added textproc/ruby-rqrcode version 2.0.0 [taca 2021-05-09]
+	Updated security/heimdal to 1.5.3nb29 [thor 2021-05-09]
