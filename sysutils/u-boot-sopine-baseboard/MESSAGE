@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/05/09 08:31:18 mrg Exp $
+
+Examples command to install U-Boot to an empty SD card:
+
+# dd if=${LOCALBASE}/share/u-boot/sopine-baseboard/u-boot-sunxi-with-spl.bin seek=16 of=/dev/rld0d
+
+You should make sure that the space is otherwise cleared of data, as old
+images may fool the boot loader paths.
+
+===========================================================================
