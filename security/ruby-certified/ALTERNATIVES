@@ -1,0 +1,1 @@
+bin/certified-update @PREFIX@/bin/certified-update@RUBY_SUFFIX@
