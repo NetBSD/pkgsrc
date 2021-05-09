@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2735 2021/05/09 08:54:35 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2736 2021/05/09 09:00:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed misc/go-genproto [bsiegert 2021-05-09]
 	Removed misc/go-genproto-googleapis-rpc [bsiegert 2021-05-09]
 	Removed net/go-grpc [bsiegert 2021-05-09]
+	Updated net/gallery-dl to 1.17.4 [leot 2021-05-09]
