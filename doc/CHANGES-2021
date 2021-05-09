@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2723 2021/05/08 23:38:33 wen Exp $
+$NetBSD: CHANGES-2021,v 1.2724 2021/05/09 00:59:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4258,3 +4258,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/pcl to 1.11.1nb3 [thor 2021-05-08]
 	Updated textproc/p5-Template-Tiny to 1.14 [wen 2021-05-08]
 	Updated textproc/p5-String-Interpolate to 0.33 [wen 2021-05-08]
+	Updated textproc/p5-String-CRC32 to 2.100 [wen 2021-05-09]
