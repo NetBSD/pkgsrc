@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2020/10/07 19:53:02 wiz Exp $
+$NetBSD: distinfo,v 1.36 2021/05/10 09:33:33 wiz Exp $
 
-SHA1 (expat-2.2.10.tar.gz) = 042cd99f79d7141e9eec12cc215646aac3f307db
-RMD160 (expat-2.2.10.tar.gz) = 6b62f98ef8bf05cccf2c375f132589e336ddef19
-SHA512 (expat-2.2.10.tar.gz) = b22019832fe1be1ddfea5e5e14f3079ac77803096fbd464699a245d51a4a610d1c9657ad4353868a545290df37ad2a796882922da2a77314b6b34edab67506a7
-Size (expat-2.2.10.tar.gz) = 665590 bytes
+SHA1 (expat-2.3.0.tar.gz) = 8928f1d87b2b475ebf1b0a5b1f27032c0fc99dbc
+RMD160 (expat-2.3.0.tar.gz) = 4d13fc507ae057a3d1620225b59fc09f17eff5b7
+SHA512 (expat-2.3.0.tar.gz) = 5ba6f707d5f2c758ecfa02e43f412e8ab09283f91d06f95fc24ac2b7ffbe2cd3e561390a40ef90448573881a7561622fdfbc5f7bd53cff7abc1ef310f411a16a
+Size (expat-2.3.0.tar.gz) = 676629 bytes
