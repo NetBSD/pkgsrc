@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/05 04:50:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/10 08:18:53 nros Exp $
 
 DISTNAME=	assimp-5.0.1
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE=	assimp.pc.in
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
