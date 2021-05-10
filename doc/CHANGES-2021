@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2757 2021/05/10 09:29:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2758 2021/05/10 09:33:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 0.6.0 [schmonz 2021-05-10]
 	Updated textproc/py-jsbeautifier to 1.13.13 [adam 2021-05-10]
 	Updated graphics/py-matplotlib-venn to 0.11.6 [adam 2021-05-10]
+	Updated textproc/expat to 2.3.0 [wiz 2021-05-10]
