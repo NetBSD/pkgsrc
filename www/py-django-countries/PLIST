@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/05 09:08:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/10 06:06:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,6 +23,12 @@ ${PYSITELIB}/django_countries/fields.pyo
 ${PYSITELIB}/django_countries/filters.py
 ${PYSITELIB}/django_countries/filters.pyc
 ${PYSITELIB}/django_countries/filters.pyo
+${PYSITELIB}/django_countries/graphql/__init__.py
+${PYSITELIB}/django_countries/graphql/__init__.pyc
+${PYSITELIB}/django_countries/graphql/__init__.pyo
+${PYSITELIB}/django_countries/graphql/types.py
+${PYSITELIB}/django_countries/graphql/types.pyc
+${PYSITELIB}/django_countries/graphql/types.pyo
 ${PYSITELIB}/django_countries/ioc_data.py
 ${PYSITELIB}/django_countries/ioc_data.pyc
 ${PYSITELIB}/django_countries/ioc_data.pyo
@@ -36,6 +42,8 @@ ${PYSITELIB}/django_countries/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ca/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/cs/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/da/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.mo
@@ -78,6 +86,8 @@ ${PYSITELIB}/django_countries/locale/lt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/lt/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/lv/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/lv/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/mn/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/mn/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/nb/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/nb/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/nl/LC_MESSAGES/django.mo
@@ -96,6 +106,10 @@ ${PYSITELIB}/django_countries/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sl/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sl/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/sr/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/sr/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/sr@latin/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/sr@latin/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sv/LC_MESSAGES/django.mo
@@ -114,6 +128,7 @@ ${PYSITELIB}/django_countries/makesprite.pyo
 ${PYSITELIB}/django_countries/models.py
 ${PYSITELIB}/django_countries/models.pyc
 ${PYSITELIB}/django_countries/models.pyo
+${PYSITELIB}/django_countries/py.typed
 ${PYSITELIB}/django_countries/release.py
 ${PYSITELIB}/django_countries/release.pyc
 ${PYSITELIB}/django_countries/release.pyo
@@ -373,6 +388,7 @@ ${PYSITELIB}/django_countries/static/flags/vn.gif
 ${PYSITELIB}/django_countries/static/flags/vu.gif
 ${PYSITELIB}/django_countries/static/flags/wf.gif
 ${PYSITELIB}/django_countries/static/flags/ws.gif
+${PYSITELIB}/django_countries/static/flags/xk.gif
 ${PYSITELIB}/django_countries/static/flags/ye.gif
 ${PYSITELIB}/django_countries/static/flags/yt.gif
 ${PYSITELIB}/django_countries/static/flags/za.gif
@@ -396,6 +412,18 @@ ${PYSITELIB}/django_countries/tests/custom_countries.pyo
 ${PYSITELIB}/django_countries/tests/forms.py
 ${PYSITELIB}/django_countries/tests/forms.pyc
 ${PYSITELIB}/django_countries/tests/forms.pyo
+${PYSITELIB}/django_countries/tests/graphql/__init__.py
+${PYSITELIB}/django_countries/tests/graphql/__init__.pyc
+${PYSITELIB}/django_countries/tests/graphql/__init__.pyo
+${PYSITELIB}/django_countries/tests/graphql/schema.py
+${PYSITELIB}/django_countries/tests/graphql/schema.pyc
+${PYSITELIB}/django_countries/tests/graphql/schema.pyo
+${PYSITELIB}/django_countries/tests/graphql/test_country_type.py
+${PYSITELIB}/django_countries/tests/graphql/test_country_type.pyc
+${PYSITELIB}/django_countries/tests/graphql/test_country_type.pyo
+${PYSITELIB}/django_countries/tests/graphql/test_model.py
+${PYSITELIB}/django_countries/tests/graphql/test_model.pyc
+${PYSITELIB}/django_countries/tests/graphql/test_model.pyo
 ${PYSITELIB}/django_countries/tests/models.py
 ${PYSITELIB}/django_countries/tests/models.pyc
 ${PYSITELIB}/django_countries/tests/models.pyo
