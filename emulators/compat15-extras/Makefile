@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:48 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/10 14:24:47 taca Exp $
 
 COMPAT_PKG=		compat15	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.5
-PKGREVISION=		1
+PKGREVISION=		2
 
 HOMEPAGE=		https://www.NetBSD.org/releases/formal-1.5/index.html
 COMMENT=		Additional shared libraries for NetBSD 1.5 compatibility
@@ -24,7 +24,8 @@ NOT_FOR_PLATFORM=	NetBSD-*-${MACHINE_ARCH}
 
 .if ${EMUL_ARCH} == "i386"
 post-extract:
-	cd ${WRKSRC}/usr/lib && mv libtermlib.so.0.0 libtermlib.so.0.4
+	cd ${WRKSRC}/usr/lib && rm -f libtermlib.so.0.0 && \
+		ln -fs libtermcap.so.0.4 libtermlib.so.0.4
 .endif
 
 CHECK_RELRO_SKIP+=	*
