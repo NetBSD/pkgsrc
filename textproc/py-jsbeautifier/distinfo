@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/02/05 22:22:17 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/05/10 09:22:34 adam Exp $
 
-SHA1 (jsbeautifier-1.13.5.tar.gz) = 28bf12455c75522f6c30915bee99992a20093479
-RMD160 (jsbeautifier-1.13.5.tar.gz) = fc91207d14d2a98632eadcd939bbb4f53cbfff2a
-SHA512 (jsbeautifier-1.13.5.tar.gz) = 132725b89f146d41b9f9bfb7e76a0d7053ddf888b16b60bb478b9c2075e41d59fc7b31cf21af99802c177a6b917ec6f4416680ddb5415d313544fbf35542cc32
-Size (jsbeautifier-1.13.5.tar.gz) = 72462 bytes
+SHA1 (jsbeautifier-1.13.13.tar.gz) = 760ae934cc94f22c8546e3ad940d245219532883
+RMD160 (jsbeautifier-1.13.13.tar.gz) = 9f52af20d3140355aeec5d35599cffccc9b4a9b2
+SHA512 (jsbeautifier-1.13.13.tar.gz) = 0ce01816e3d01ec12943fc11785a7ff93c147dc9a4cb451b7ccc352c491f6b81792eb861ebbae9326456ac6ff96d9ff5e3368418fe65ddaf6854ce1d20480111
+Size (jsbeautifier-1.13.13.tar.gz) = 72512 bytes
