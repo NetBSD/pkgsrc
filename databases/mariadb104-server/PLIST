@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/08 19:47:16 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/10 14:15:55 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -293,7 +293,6 @@ lib/mysql/plugin/file_key_management.so
 lib/mysql/plugin/ha_archive.so
 lib/mysql/plugin/ha_blackhole.so
 lib/mysql/plugin/ha_connect.so
-lib/mysql/plugin/ha_example.so
 lib/mysql/plugin/ha_federated.so
 lib/mysql/plugin/ha_federatedx.so
 lib/mysql/plugin/ha_oqgraph.so
