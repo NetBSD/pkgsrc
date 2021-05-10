@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/15 07:58:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/10 14:50:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,3 +23,6 @@ ${PYSITELIB}/lazy_object_proxy/slots.pyo
 ${PYSITELIB}/lazy_object_proxy/utils.py
 ${PYSITELIB}/lazy_object_proxy/utils.pyc
 ${PYSITELIB}/lazy_object_proxy/utils.pyo
+${PYSITELIB}/lazy_object_proxy/utils_py3.py
+${PLIST.py3x}${PYSITELIB}/lazy_object_proxy/utils_py3.pyc
+${PLIST.py3x}${PYSITELIB}/lazy_object_proxy/utils_py3.pyo
