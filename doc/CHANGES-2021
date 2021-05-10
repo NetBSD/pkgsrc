@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2755 2021/05/10 06:06:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2756 2021/05/10 09:00:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4298,3 +4298,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-radon to 4.5.1 [adam 2021-05-10]
 	Updated graphics/py-matplotlib to 3.4.2 [adam 2021-05-10]
 	Updated www/py-django-countries to 7.2 [adam 2021-05-10]
+	Updated devel/py-approvaltests to 0.6.0 [schmonz 2021-05-10]
