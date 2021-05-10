@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/05/09 15:19:10 thor Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/10 22:51:19 wiz Exp $
 
 GITHUB_PROJECT=	pcl
-GITHUB_TAG=	pcl-${PKGVERSION}
+GITHUB_TAG=	pcl-${PKGVERSION_NOREV}
 DISTNAME=	pcl-1.11.1
 PKGREVISION=	3
 CATEGORIES=	graphics
