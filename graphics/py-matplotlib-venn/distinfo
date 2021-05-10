@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/26 21:08:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/05/10 09:29:14 adam Exp $
 
-SHA1 (matplotlib-venn-0.11.5.zip) = 0694608f96ec4960daf5f517d911074bdb94a8d3
-RMD160 (matplotlib-venn-0.11.5.zip) = c9f0e705e5f4919444bc59294950d8fe77b659ae
-SHA512 (matplotlib-venn-0.11.5.zip) = 3a4acfceaf9be21861686979afc14f9785b7dced3616a9bb7a15fbad346804e802a970f9698baa8269e0fb7db8fb06e95fab3fd501652f25755f454557a62f90
-Size (matplotlib-venn-0.11.5.zip) = 40403 bytes
+SHA1 (matplotlib-venn-0.11.6.tar.gz) = c34312bc3e28fea1916936870f5b06075fdafb07
+RMD160 (matplotlib-venn-0.11.6.tar.gz) = e998918a52bb8b3f715a8f1890ea2a7cdc14f94c
+SHA512 (matplotlib-venn-0.11.6.tar.gz) = 1a38d8e5ca171710a6a017eb21e5273f1ad580f8146b953c550610399df4d105ddb2423fdd62e710eafcecbe37f50af16aa9181670a14a3ff46d539bc1abdef1
+Size (matplotlib-venn-0.11.6.tar.gz) = 29610 bytes
