@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2021/05/10 14:22:56 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2021/05/10 17:31:27 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb-client
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-client
 
 PKG_SUPPORTED_OPTIONS+=	ssl
 PKG_SUGGESTED_OPTIONS+=	ssl
