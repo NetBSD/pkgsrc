@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/12/04 20:45:06 nia Exp $
+# $NetBSD: Makefile,v 1.42 2021/05/10 12:47:54 prlw1 Exp $
 
 DISTNAME=	accerciser-3.38.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,16 +13,21 @@ LICENSE=	modified-bsd
 
 PREV_PKGPATH=	devel/accerciser3
 
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake itstool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
 
+.include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
+
 TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
-_TOOLS_USE_PKGSRC.msgfmt= yes
-BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
