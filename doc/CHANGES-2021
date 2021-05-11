@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2762 2021/05/11 00:16:09 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2763 2021/05/11 00:21:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-websockets to 9.0.1 [adam 2021-05-10]
 	Updated devel/py-lazy-object-proxy to 1.6.0 [adam 2021-05-10]
 	Updated x11/mate-screensaver to 1.24.2 [gutteridge 2021-05-11]
+	Updated sysutils/xfce4-battery-plugin to 1.1.4 [gutteridge 2021-05-11]
