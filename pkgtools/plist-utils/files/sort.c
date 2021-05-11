@@ -1,4 +1,4 @@
-/* $NetBSD: sort.c,v 1.2 2018/02/23 06:31:34 adam Exp $ */
+/* $NetBSD: sort.c,v 1.3 2021/05/11 09:24:17 wiz Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,6 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: sort.c,v 1.2 2018/02/23 06:31:34 adam Exp $");
 
 #include <err.h>
 #include <fcntl.h>
