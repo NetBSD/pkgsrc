@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2772 2021/05/11 18:47:58 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.2773 2021/05/11 18:48:16 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.68.2 [dan 2021-05-11]
 	Updated sysutils/broot to 1.4.0 [pin 2021-05-11]
 	Updated devel/gdbus-codegen to 2.68.2 [dan 2021-05-11]
+	Updated devel/glib2-tools to 2.68.2 [dan 2021-05-11]
