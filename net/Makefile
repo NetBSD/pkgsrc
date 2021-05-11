@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1407 2021/05/09 08:54:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1408 2021/05/11 08:56:24 khorben Exp $
 #
 
 COMMENT=	Networking tools
@@ -743,6 +743,7 @@ SUBDIR+=	py-ptt
 SUBDIR+=	py-pychromecast
 SUBDIR+=	py-pyftpdlib
 SUBDIR+=	py-pylint-celery
+SUBDIR+=	py-pynng
 SUBDIR+=	py-pypiserver
 SUBDIR+=	py-pysendfile
 SUBDIR+=	py-python-socks
