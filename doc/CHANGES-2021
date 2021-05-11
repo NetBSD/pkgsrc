@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2768 2021/05/11 08:57:13 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.2769 2021/05/11 10:19:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4314,3 +4314,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-faker to 8.1.3 [adam 2021-05-11]
 	Updated audio/ncspot to 0.7.0 [pin 2021-05-11]
 	Added net/py-pynng version 0.7.1 [khorben 2021-05-11]
+	Updated math/arpack-ng to 3.8.0 [prlw1 2021-05-11]
