@@ -1,4 +1,4 @@
-/* $NetBSD: plist_tree.c,v 1.4 2018/02/23 06:31:34 adam Exp $ */
+/* $NetBSD: plist_tree.c,v 1.5 2021/05/11 09:24:17 wiz Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,6 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: plist_tree.c,v 1.4 2018/02/23 06:31:34 adam Exp $");
 
 #include <sys/param.h>
 #include <sys/types.h>

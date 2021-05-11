@@ -1,4 +1,4 @@
-/* $NetBSD: plist_getline.c,v 1.2 2016/12/16 00:01:04 joerg Exp $ */
+/* $NetBSD: plist_getline.c,v 1.3 2021/05/11 09:24:17 wiz Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,6 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: plist_getline.c,v 1.2 2016/12/16 00:01:04 joerg Exp $");
 
 #include <assert.h>
 #include <err.h>
