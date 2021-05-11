@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/05 16:05:44 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/11 00:15:26 gutteridge Exp $
 bin/mate-screensaver
 bin/mate-screensaver-command
 bin/mate-screensaver-preferences
@@ -86,6 +86,7 @@ share/locale/is/LC_MESSAGES/mate-screensaver.mo
 share/locale/it/LC_MESSAGES/mate-screensaver.mo
 share/locale/ja/LC_MESSAGES/mate-screensaver.mo
 share/locale/ka/LC_MESSAGES/mate-screensaver.mo
+share/locale/kab/LC_MESSAGES/mate-screensaver.mo
 share/locale/kk/LC_MESSAGES/mate-screensaver.mo
 share/locale/kn/LC_MESSAGES/mate-screensaver.mo
 share/locale/ko/LC_MESSAGES/mate-screensaver.mo
@@ -116,6 +117,7 @@ share/locale/pt_BR/LC_MESSAGES/mate-screensaver.mo
 share/locale/ro/LC_MESSAGES/mate-screensaver.mo
 share/locale/ru/LC_MESSAGES/mate-screensaver.mo
 share/locale/rw/LC_MESSAGES/mate-screensaver.mo
+share/locale/sc/LC_MESSAGES/mate-screensaver.mo
 share/locale/si/LC_MESSAGES/mate-screensaver.mo
 share/locale/sk/LC_MESSAGES/mate-screensaver.mo
 share/locale/sl/LC_MESSAGES/mate-screensaver.mo
