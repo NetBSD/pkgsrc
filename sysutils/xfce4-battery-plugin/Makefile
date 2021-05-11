@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2020/08/31 18:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2021/05/11 00:20:51 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.1.3
+VERSION=	1.1.4
 DISTNAME=	xfce4-battery-plugin-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin
 COMMENT=	Xfce battery monitor plugin
