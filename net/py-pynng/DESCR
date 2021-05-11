@@ -1,0 +1,5 @@
+pynng provides a nice interface on top of the full power of nng. nng, and
+therefore pynng, make it easy to communicate between processes on a single
+computer or computers across a network. This library is compatible with Python
+3.5 or newer. nng is the rewriting of Nanomsg, which is the spiritual successor
+to ZeroMQ.

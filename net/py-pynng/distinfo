@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/11 08:56:00 khorben Exp $
+
+SHA1 (pynng-0.7.1.tar.gz) = 306806f168cc064f830e064b2b748550cb726bf9
+RMD160 (pynng-0.7.1.tar.gz) = 79f7e542b2cf2db0c9b93ce67fe3d979a58f55a6
+SHA512 (pynng-0.7.1.tar.gz) = 72fc89902474dee6b2ae31cf8e572cd15deead170d8eacba73716b0df0ae3a24611fc1be9d098910cbe4a47dfff1e4a5f98cf8aeca946c469d80a2ae24c35b5f
+Size (pynng-0.7.1.tar.gz) = 3815296 bytes
