@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2764 2021/05/11 00:35:59 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2765 2021/05/11 01:27:51 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/mate-screensaver to 1.24.2 [gutteridge 2021-05-11]
 	Updated sysutils/xfce4-battery-plugin to 1.1.4 [gutteridge 2021-05-11]
 	Updated sysutils/xfce4-appfinder to 4.14.1 [gutteridge 2021-05-11]
+	Updated textproc/aspell to 0.60.8nb2 [rin 2021-05-11]
