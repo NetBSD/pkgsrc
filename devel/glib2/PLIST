@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.128 2021/05/11 13:25:49 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.129 2021/05/11 17:03:24 cirnatdan Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -283,19 +283,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.6800.1
+lib/libgio-2.0.so.0.6800.2
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.6800.1
+lib/libglib-2.0.so.0.6800.2
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.6800.1
+lib/libgmodule-2.0.so.0.6800.2
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.6800.1
+lib/libgobject-2.0.so.0.6800.2
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.6800.1
+lib/libgthread-2.0.so.0.6800.2
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
