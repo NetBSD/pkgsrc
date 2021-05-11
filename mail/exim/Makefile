@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2021/05/04 20:29:38 abs Exp $
+# $NetBSD: Makefile,v 1.186 2021/05/11 09:53:20 jperkin Exp $
 
 DISTNAME=	exim-4.94.2
 CATEGORIES=	mail net
@@ -67,9 +67,11 @@ SUBST_VARS.exim=	PKGSRC_EXIM_VERSION
 
 SUBST_CLASSES+=		cflags
 SUBST_STAGE.cflags=	pre-configure
-SUBST_MESSAGE.cflags=	Removing hard-coded CFLAGS
+SUBST_MESSAGE.cflags=	Fixing hard-coded CFLAGS
 SUBST_FILES.cflags=	OS/Makefile-*
-SUBST_SED.cflags=	-e 's,^CFLAGS=.*,,'
+SUBST_SED.cflags=	-e '/^CFLAGS=/d'
+SUBST_SED.cflags+=	-e 's/-D_XOPEN_SOURCE /-D_XOPEN_SOURCE=600 /'
+SUBST_SED.cflags+=	-e 's/-D_XOPEN_SOURCE_EXTENDED=1 //'
 
 INSTALL_ARG=		INSTALL_ARG=-no_chown
 INSTALL_ENV+=		${INSTALL_ARG:Q}
