@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/18 21:58:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/05/11 00:20:51 gutteridge Exp $
 lib/xfce4/panel/plugins/libbattery.la
 share/icons/hicolor/16x16/apps/xfce4-battery-critical-charging.png
 share/icons/hicolor/16x16/apps/xfce4-battery-critical.png
@@ -51,8 +51,10 @@ share/locale/da/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/de/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/el/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-battery-plugin.mo
+share/locale/en_CA/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-battery-plugin.mo
+share/locale/et/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/eu/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/fi/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-battery-plugin.mo
@@ -61,7 +63,9 @@ share/locale/he/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/hy_AM/LC_MESSAGES/xfce4-battery-plugin.mo
+share/locale/hye/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-battery-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-battery-plugin.mo
