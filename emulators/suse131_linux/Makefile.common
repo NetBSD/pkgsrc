@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2020/10/08 10:42:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.23 2021/05/11 14:57:56 hauke Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -61,10 +61,12 @@ EMUL_REQD=		suse>=${SUSE_VERSION}
 EMUL_PLATFORMS+=	linux-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-5.99*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[6-9]*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 .endif
 EMUL_PLATFORMS+=	linux-i386
 ONLY_FOR_PLATFORM+=	NetBSD-6.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[7-9]*-x86_64
+ONLY_FOR_PLATFORM+=	FreeBSD-1[0-9]*-x86_64
 
 .include "../../mk/bsd.prefs.mk"
 
