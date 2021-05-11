@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2019/10/19 10:43:28 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/05/11 01:26:25 rin Exp $
 
 SHA1 (aspell-0.60.8.tar.gz) = ae554df297aee676b4d16f261fa5c60e285478f6
 RMD160 (aspell-0.60.8.tar.gz) = 331a10149aa4efe9b6798137d6a56a0a44fcf570
@@ -13,5 +13,6 @@ SHA1 (patch-ag) = 5aabf8d9a9a28db9dee073bdfcd62fbc3e2f38c0
 SHA1 (patch-ai) = 4fbb25e3f09aa97bdcb12f325ef615e5a6f9f626
 SHA1 (patch-an) = 687cf83ad9be083da0a53e7a7b5cbaefe88f63a5
 SHA1 (patch-interfaces_cc_aspell.h) = f824d0bb1e3c55faaf6ecae10b44169d91b41517
+SHA1 (patch-modules_filter_modes_perl.amf) = b41aec9fcd8f9d4aef3e69622425c243279687eb
 SHA1 (patch-prog_aspell.cpp) = 9bc6537cd0b9040fef56be202f0c5f6ab64fdf85
 SHA1 (patch-prog_checker__string.hpp) = b070e776a0998f17e4ff30cd004179585f70f3df
