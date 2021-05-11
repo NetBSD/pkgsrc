@@ -1,0 +1,35 @@
+$NetBSD: patch-wscript,v 1.1 2021/05/11 10:57:34 hauke Exp $
+
+Since the build system does not provide an ldap switch, we patch this script
+from options.mk with sed(1) to disable building with ldap support
+
+Changes make sure not to build any ldap dependencies when that is what we want.
+
+--- wscript.orig	2020-07-09 12:04:50.000000000 +0000
++++ wscript
+@@ -148,6 +148,8 @@ def configure(conf):
+         # we need this for the ldap backend
+         if conf.CHECK_FUNCS_IN('ber_flush ldap_open ldap_initialize', 'lber ldap', headers='lber.h ldap.h'):
+             conf.env.ENABLE_LDAP_BACKEND = True
++        else:
++            conf.env.ENABLE_LDAP_BACKEND = False
+ 
+         # we don't want any libraries or modules to rely on runtime
+         # resolution of symbols
+@@ -534,6 +536,7 @@ def build(bld):
+             bld.SAMBA_BINARY('lldb_ldap_test',
+                              source='tests/lldb_ldap.c',
+                              deps='cmocka talloc lber ldap ldb',
++                             enabled=bld.env.ENABLE_LDAP_BACKEND,
+                              install=False)
+ 
+         if bld.CONFIG_SET('HAVE_LMDB'):
+@@ -640,7 +643,7 @@ def test(ctx):
+ 
+     # if LIB_LDAP and LIB_LBER defined, then we can test ldb_ldap backend
+     # behavior regression for bz#14413
+-    if env.LIB_LDAP and env.LIB_LBER:
++    if bld.env.ENABLE_LDAP_BACKEND and env.LIB_LDAP and env.LIB_LBER:
+         test_exes += ["lldb_ldap_test"]
+ 
+     if env.HAVE_LMDB:
