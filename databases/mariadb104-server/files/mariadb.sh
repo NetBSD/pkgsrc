@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mariadb.sh,v 1.1 2021/05/08 19:47:16 jdolecek Exp $
+# $NetBSD: mariadb.sh,v 1.2 2021/05/11 17:26:50 nia Exp $
 #
 # PROVIDE: mariadb mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -26,7 +26,7 @@ start_precmd="mariadb_prestart"
 pidfile="@VARBASE@/run/mariadb/mariadb.pid"
 
 mariadb_initdb() {
-        if [ -f @MARIADB_DATADIR@/mysql/host.frm ]; then
+        if [ -f @MARIADB_DATADIR@/mysql/user.frm ]; then
                 echo "The MariaDB database has already been initialized."
                 echo "Skipping database initialization."
         else
@@ -43,6 +43,9 @@ mariadb_initdb() {
 }
 
 mariadb_prestart() {
+	if ! [ -f @MARIADB_DATADIR@/mysql/user.frm ]; then
+		mariadb_initdb
+	fi
 	ulimit -n 4096
 }
 
