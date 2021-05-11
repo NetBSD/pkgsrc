@@ -1,0 +1,16 @@
+$NetBSD: patch-modules_filter_modes_perl.amf,v 1.1 2021/05/11 01:26:25 rin Exp $
+
+Fix for regex(3) update for NetBSD 9.99;
+Stop using GNU regex(3) extension \w.
+
+--- modules/filter/modes/perl.amf.orig	2021-05-11 10:16:54.496163627 +0900
++++ modules/filter/modes/perl.amf	2021-05-11 10:17:11.072694968 +0900
+@@ -2,7 +2,7 @@
+ 
+ ASPELL >=0.60.1
+ 
+-MAGIC /0:256:^[ \t]*\#!((\/\w*)+)\/perl/pl/pm
++MAGIC /0:256:^[ \t]*\#!((\/[[:alnum:]_]*)+)\/perl/pl/pm
+ MAGIC /<noregex>/pl/pm
+ 
+ DESCRIPTION mode for checking Perl comments and string literals
