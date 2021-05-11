@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.10 2018/04/30 10:41:35 wiz Exp $
+# $NetBSD: emulator-vars.mk,v 1.11 2021/05/11 14:56:47 hauke Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATFORMS is defined
 # and non-empty.
@@ -94,6 +94,9 @@ _EMUL_PREFER.solaris-x86_64=	solaris-i386
 
 _EMUL_PREFER.linux-sparc64=	linux-sparc
 _EMUL_PREFER.linux-x86_64=	linux-i386
+
+_EMUL_PREFER.freebsd-i386=	linux-i386
+_EMUL_PREFER.freebsd-x86_64=	linux-x86_64 linux-i386
 
 # Prefer "emulating" the native operating system, then fall back to
 # the other preferences listed above.
