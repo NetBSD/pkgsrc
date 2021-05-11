@@ -1,4 +1,4 @@
-/* $NetBSD: del.c,v 1.1 2016/10/01 18:37:15 kamil Exp $ */
+/* $NetBSD: del.c,v 1.2 2021/05/11 09:24:17 wiz Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,6 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: del.c,v 1.1 2016/10/01 18:37:15 kamil Exp $");
 
 #include <err.h>
 #include <fcntl.h>
