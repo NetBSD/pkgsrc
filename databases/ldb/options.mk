@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/05/19 00:21:01 gutteridge Exp $
+# $NetBSD: options.mk,v 1.4 2021/05/11 10:57:34 hauke Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ldb
 PKG_SUPPORTED_OPTIONS=	ldap
@@ -13,9 +13,9 @@ PLIST_VARS+=		ldap
 PLIST.ldap=		yes
 .else
 # No official way to configure without ldap
-CFG_CACHE=	${WRKSRC}/bin/c4che/default_cache.py
-post-configure:
-	${MV} ${CFG_CACHE} ${CFG_CACHE}.orig
+WSCRIPT=	${WRKSRC}/wscript
+pre-configure:
+	${MV} ${WSCRIPT} ${WSCRIPT}.old
 	${SED} -E -e 's/(ENABLE_LDAP_BACKEND =) True/\1 False/g' \
-		${CFG_CACHE}.orig > ${CFG_CACHE}
+		${WSCRIPT}.old > ${WSCRIPT}
 .endif
