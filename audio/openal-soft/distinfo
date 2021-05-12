@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/03/21 20:05:17 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/05/12 05:09:49 mcf Exp $
 
 SHA1 (openal-soft-1.21.1.tar.bz2) = f39b81a9ce22419e106259cf424405291520b8f3
 RMD160 (openal-soft-1.21.1.tar.bz2) = b5b96f0e36d4a29303d62a484d7c6c1fe0798de6
@@ -9,3 +9,4 @@ SHA1 (patch-alc_alconfig.cpp) = 0539016dadf1827e5a86700c2db5a96479a8b70d
 SHA1 (patch-alc_backends_alsa.cpp) = 3ee7f86e544d9b33ccbe9422eb87b9540623053a
 SHA1 (patch-alc_backends_solaris.cpp) = 62e7a5bddb5c4ed7f7e4c4889b2234dd778be960
 SHA1 (patch-include_AL_al.h) = 5545de5f606320b64ddd713569c9a86c8552eb46
+SHA1 (patch-utils_makemhr_loadsofa.cpp) = 907727c5e4a93b879bc840663b51a6bae2bb1230
