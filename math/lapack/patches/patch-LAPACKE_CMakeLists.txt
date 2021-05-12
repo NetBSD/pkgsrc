@@ -1,46 +1,45 @@
-$NetBSD: patch-LAPACKE_CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+$NetBSD: patch-LAPACKE_CMakeLists.txt,v 1.2 2021/05/12 14:32:51 thor Exp $
 
 Support combined build of shared and static libraries.
 
---- LAPACKE/CMakeLists.txt.orig	2020-01-03 19:33:52.766364829 +0100
-+++ LAPACKE/CMakeLists.txt	2020-01-03 19:49:05.115280246 +0100
-@@ -94,6 +94,26 @@
- target_link_libraries(lapacke PRIVATE ${LAPACK_LIBRARIES})
- 
- lapack_install_library(lapacke)
-+
+--- LAPACKE/CMakeLists.txt.orig	2021-03-25 18:25:15.000000000 +0000
++++ LAPACKE/CMakeLists.txt
+@@ -99,6 +99,25 @@ install(
+   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+   COMPONENT Development
+   )
 +if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
-+  add_library(lapacke_static STATIC ${SOURCES})
++  add_library(${LAPACKELIB}_static STATIC ${SOURCES})
 +  set_target_properties(
-+    lapacke_static PROPERTIES
-+    OUTPUT_NAME lapacke
++    ${LAPACKELIB}_static PROPERTIES
++    LINKER_LANGUAGE C
++    OUTPUT_NAME ${LAPACKELIB}
 +    )
-+   target_include_directories(lapacke_static PUBLIC
++   target_include_directories(${LAPACKELIB}_static PUBLIC
 +    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
 +    $<INSTALL_INTERFACE:include>
 +  )
 +
 +  if(LAPACKE_WITH_TMG)
-+    target_link_libraries(lapacke_static PRIVATE tmglib)
++    target_link_libraries(${LAPACKELIB}_static PRIVATE tmglib)
 +  endif()
-+  target_link_libraries(lapacke_static PRIVATE ${LAPACK_LIBRARIES})
++  target_link_libraries(${LAPACKELIB}_static PRIVATE ${LAPACK_LIBRARIES})
 +
-+  lapack_install_library(lapacke_static)
++  lapack_install_library(${LAPACKELIB}_static)
 +endif()
-+
- install(
-   FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h
-   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-@@ -126,7 +146,8 @@
+ 
+ if(BUILD_TESTING)
+   add_subdirectory(example)
+@@ -126,7 +145,8 @@ install(FILES
    COMPONENT Development
    )
  
--install(EXPORT lapacke-targets
--  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
+-install(EXPORT ${LAPACKELIB}-targets
+-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${LAPACKELIB}-${LAPACK_VERSION}
 -  COMPONENT Development
 -  )
-+#install(EXPORT lapacke-targets
-+#  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
++# What is broken here? CMake erros out with unknown lapacke-targets.
++#install(EXPORT ${LAPACKELIB}-targets
++#  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${LAPACKELIB}-${LAPACK_VERSION}
 +#  COMPONENT Development
 +#  )
-+
