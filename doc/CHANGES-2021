@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2776 2021/05/12 05:00:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2777 2021/05/12 06:31:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/xfce4-mousepad to 0.5.4 [gutteridge 2021-05-12]
 	Updated net/coilmq to 1.0.1 [adam 2021-05-12]
 	Removed devel/py-stompclient [adam 2021-05-12]
+	Updated graphics/gimp to 2.10.24nb6 [wiz 2021-05-12]
