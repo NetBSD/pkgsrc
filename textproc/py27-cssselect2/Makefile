@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/04/29 23:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/12 06:28:11 kleink Exp $
 
 DISTNAME=	cssselect2-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssselect2/}
 
-MAINTAINER=	kleink@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Kozea/cssselect2
 COMMENT=	CSS selectors for Python ElementTree
 LICENSE=	modified-bsd
