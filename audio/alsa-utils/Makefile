@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/04/21 13:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/12 14:13:21 ryoon Exp $
 
-DISTNAME=	alsa-utils-1.1.1
-PKGREVISION=	1
+DISTNAME=	alsa-utils-1.2.4
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/utils/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +16,12 @@ USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
+LDFLAGS.NetBSD+=	-lepoll-shim
+LDFLAGS.NetBSD+=	-linotify
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
+CPPFLAGS.NetBSD+=	-Doff64_t=off_t
+CPPFLAGS.NetBSD+=	-Dlseek64=lseek
 
 CFLAGS+=		-g
 
@@ -31,6 +34,8 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
