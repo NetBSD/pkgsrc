@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/10/12 21:51:57 bacon Exp $
+# $NetBSD: Makefile,v 1.39 2021/05/12 14:32:52 thor Exp $
 
 .include "../../math/lapack/Makefile.common"
-
-PKGREVISION=	1
 
 COMMENT=	Basic Linear Algebra System (Netlib reference implementation)
 

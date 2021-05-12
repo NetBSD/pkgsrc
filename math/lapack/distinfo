@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.24 2021/04/21 13:53:18 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2021/05/12 14:32:51 thor Exp $
 
-SHA1 (lapack-3.9.0.tar.gz) = 0451d180eed2b12b94aaae77e772d7573e87bec4
-RMD160 (lapack-3.9.0.tar.gz) = 333bf17b3e2503c26cdd2139566fdc788be1d0c3
-SHA512 (lapack-3.9.0.tar.gz) = 424956ad941a60a4b71e0d451ad48db12a692f8a71a90f3ca7f71d6ecc1922f392746ea84df1c47a46577ed2db32e9e47ec44ad248207c5ac7da179becb712ef
-Size (lapack-3.9.0.tar.gz) = 7534567 bytes
-SHA1 (patch-BLAS_SRC_CMakeLists.txt) = c8c69e6e0c67337af999863c4f5c64618d1374d7
-SHA1 (patch-CBLAS_cblas.pc.in) = 3befb18c1b7f2f82c6da83ea10f913c817acf09f
-SHA1 (patch-CBLAS_src_CMakeLists.txt) = ee309360ff4ad487be60156900c62c960d07daf3
-SHA1 (patch-CMakeLists.txt) = ea2bec54dd2c283a96862ef760826bf6e633613e
-SHA1 (patch-LAPACKE_CMakeLists.txt) = b5d4fb36550e1ae47e7e68ffec0e10afa3ac8864
-SHA1 (patch-LAPACKE_lapacke.pc.in) = 7f0d91aaceac7f9980650ec90dbda95cf09b768f
-SHA1 (patch-SRC_CMakeLists.txt) = 2908cdeb0d94f51ec16b02b8a6426dd6cde7e10f
-SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 84d4cde8fef49c6efc9f50a3219b0299375934d5
+SHA1 (lapack-3.9.1.tar.gz) = ccb1e9cb6e7fa7db8a680292457d7d990f25d286
+RMD160 (lapack-3.9.1.tar.gz) = 380a2072eb7d8358ec8bf100e3d114600fc71444
+SHA512 (lapack-3.9.1.tar.gz) = 1c70892ce22eb1f5c0be1e0384d00dc876622e6254e853616eb7c0379c5d1ecf2f1f94d06389dbfba06b78484daf625d899306a9dc0b31a0646320c814022fdb
+Size (lapack-3.9.1.tar.gz) = 7543209 bytes
+SHA1 (patch-BLAS_SRC_CMakeLists.txt) = 8773f93b1f907ed02d41677a3819f5bb655a331a
+SHA1 (patch-CBLAS_cblas.pc.in) = cc97fbab08024220739929b5ad95c266965da06d
+SHA1 (patch-CBLAS_src_CMakeLists.txt) = c174bb5d790e5f7e50226d0b7a758d0417d90100
+SHA1 (patch-CMakeLists.txt) = 3c8e9125f164625198fb7197982746f43bf4aab5
+SHA1 (patch-LAPACKE_CMakeLists.txt) = 13e4662585088aa53f61f7079d103fdfcf985c4e
+SHA1 (patch-LAPACKE_lapacke.pc.in) = 6bbd72205120501cd60daf0b22b00ef7979fb329
+SHA1 (patch-SRC_CMakeLists.txt) = 4031bb41100f1fde71c70aa53fc55bee7a852fb7
+SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 07946678945dba3a7752849791f12e0666345983
