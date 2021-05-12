@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2779 2021/05/12 08:43:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2780 2021/05/12 09:04:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py-parso to 0.8.2 [adam 2021-05-12]
 	Updated math/py-mpmath to 1.2.1 [adam 2021-05-12]
 	Updated math/py-sympy to 1.8 [adam 2021-05-12]
+	Added graphics/gimp-create-spritesheet version 0.0.2019.11.27 [wiz 2021-05-12]
