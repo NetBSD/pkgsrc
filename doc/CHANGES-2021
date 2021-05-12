@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2794 2021/05/12 18:18:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2795 2021/05/12 20:24:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4352,3 +4352,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-trustme to 0.7.0 [adam 2021-05-12]
 	Updated security/py-google-auth to 1.30.0 [adam 2021-05-12]
 	Updated www/py-google-api-python-client to 2.4.0 [adam 2021-05-12]
+	Updated sysutils/xplr to 0.8.5 [pin 2021-05-12]
