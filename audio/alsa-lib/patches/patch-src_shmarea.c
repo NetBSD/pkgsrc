@@ -1,6 +1,6 @@
-$NetBSD: patch-src_shmarea.c,v 1.2 2016/02/18 15:15:57 wiz Exp $
+$NetBSD: patch-src_shmarea.c,v 1.3 2021/05/12 14:12:13 ryoon Exp $
 
---- src/shmarea.c.orig	2015-11-09 07:39:18.000000000 +0000
+--- src/shmarea.c.orig	2020-06-29 10:51:08.000000000 +0000
 +++ src/shmarea.c
 @@ -24,7 +24,7 @@
  #ifdef HAVE_SYS_SHM_H
@@ -10,4 +10,4 @@ $NetBSD: patch-src_shmarea.c,v 1.2 2016/02/18 15:15:57 wiz Exp $
 +#include <stdlib.h>
  #include <string.h>
  #include <errno.h>
- #include <sys/poll.h>
+ #include <poll.h>
