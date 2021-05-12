@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.343 2021/05/02 11:06:13 nia Exp $
+# $NetBSD: Makefile,v 1.344 2021/05/12 06:30:56 wiz Exp $
 
 DISTNAME=	gimp-2.10.24
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +28,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-alsatest
 CONFIGURE_ARGS+=	--disable-glibtest
 CONFIGURE_ARGS+=	--disable-gtktest
-CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-linux-input
 
