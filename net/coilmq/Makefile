@@ -1,25 +1,28 @@
-# $NetBSD: Makefile,v 1.17 2020/05/14 19:38:45 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/12 04:56:54 adam Exp $
 
-DISTNAME=	CoilMQ-0.6.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	CoilMQ-1.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	net python
-MASTER_SITES=	http://coilmq.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/CoilMQ/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	https://github.com/hozn/coilmq/
-COMMENT=	Lightweight Python STOMP message broker
+HOMEPAGE=	https://github.com/hozn/coilmq
+COMMENT=	Simple, lightweight, and easily extensible STOMP message broker
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6.9:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-stompclient>=0.3.2:../../devel/py-stompclient
-DEPENDS+=	${PYPKGPREFIX}-daemon>=1.5.5:../../devel/py-daemon
-
-PYTHON_VERSIONS_ACCEPTED=	# conflict between py-stompclient and py-daemon
+DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-daemon-[0-9]*:../../devel/py-daemon
+DEPENDS+=	${PYPKGPREFIX}-pid-[0-9]*:../../sysutils/py-pid
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	distribute_setup.py coilmq/start.py
+PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON+=	coilmq/start.py
 
 PKG_SYSCONFSUBDIR=	coilmq
 
@@ -29,9 +32,7 @@ SUBST_FILES.cfg=	coilmq/config/__init__.py
 SUBST_SED.cfg=		-e 's,/path/to/config.cfg,${PKG_SYSCONFDIR}/defaults.cfg,'
 
 EGDIR=			${PREFIX}/share/examples/coilmq
-
 INSTALLATION_DIRS+=	${EGDIR}
-
 CONF_FILES=		${EGDIR}/defaults.cfg				\
 			${PKG_SYSCONFDIR}/defaults.cfg			\
 			${EGDIR}/coilmq.cfg-sample			\
@@ -44,5 +45,5 @@ post-install:
 		${DESTDIR}${EGDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
