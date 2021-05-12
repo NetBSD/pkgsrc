@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20626 2021/05/12 14:34:02 thor Exp $
+$NetBSD: TODO,v 1.20627 2021/05/12 16:14:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1976,7 +1976,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hypothesis-6.12.0
 	o py-incremental-21.3.0
 	o py-input-pad-1.4.2
-	o py-jsonrpclib-0.2.1
 	o py-keybinder-0.3.2
 	o py-lazr.config-2.2.3
 	o py-libtaxii-1.1.119
