@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/03/19 10:13:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/12 08:03:51 adam Exp $
 
-DISTNAME=	queuelib-1.5.0
+DISTNAME=	queuelib-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/queuelib/}
@@ -11,6 +11,8 @@ COMMENT=	Collection of persistent (disk-based) queues
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
