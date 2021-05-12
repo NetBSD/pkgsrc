@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.4 2016/04/15 08:47:50 wiz Exp $
+$NetBSD: patch-aq,v 1.5 2021/05/12 14:12:13 ryoon Exp $
 
---- src/pcm/pcm_hw.c.orig	2013-07-08 12:31:36.000000000 +0000
+--- src/pcm/pcm_hw.c.orig	2020-06-29 10:51:08.000000000 +0000
 +++ src/pcm/pcm_hw.c
-@@ -220,10 +224,11 @@ static int snd_pcm_hw_nonblock(snd_pcm_t
+@@ -278,10 +278,11 @@ static int snd_pcm_hw_nonblock(snd_pcm_t
  
  static int snd_pcm_hw_async(snd_pcm_t *pcm, int sig, pid_t pid)
  {
@@ -15,7 +15,7 @@ $NetBSD: patch-aq,v 1.4 2016/04/15 08:47:50 wiz Exp $
  	if ((flags = fcntl(fd, F_GETFL)) < 0) {
  		err = -errno;
  		SYSMSG("F_GETFL failed (%i)", err);
-@@ -238,13 +243,16 @@ static int snd_pcm_hw_async(snd_pcm_t *p
+@@ -296,13 +297,16 @@ static int snd_pcm_hw_async(snd_pcm_t *p
  		SYSMSG("F_SETFL for O_ASYNC failed (%i)", err);
  		return err;
  	}
@@ -32,7 +32,7 @@ $NetBSD: patch-aq,v 1.4 2016/04/15 08:47:50 wiz Exp $
  	if (fcntl(fd, F_SETOWN, (long)pid) < 0) {
  		err = -errno;
  		SYSMSG("F_SETOWN failed (%i)", err);
-@@ -1407,8 +1415,10 @@ int snd_pcm_hw_open_fd(snd_pcm_t **pcmp,
+@@ -1555,8 +1559,10 @@ int snd_pcm_hw_open_fd(snd_pcm_t **pcmp,
  	mode = 0;
  	if (fmode & O_NONBLOCK)
  		mode |= SND_PCM_NONBLOCK;
@@ -40,10 +40,10 @@ $NetBSD: patch-aq,v 1.4 2016/04/15 08:47:50 wiz Exp $
  	if (fmode & O_ASYNC)
  		mode |= SND_PCM_ASYNC;
 +#endif
+ 	if (fmode & O_APPEND)
+ 		mode |= SND_PCM_APPEND;
  
- 	if (ioctl(fd, SNDRV_PCM_IOCTL_PVERSION, &ver) < 0) {
- 		ret = -errno;
-@@ -1547,8 +1557,10 @@ int snd_pcm_hw_open(snd_pcm_t **pcmp, co
+@@ -1705,8 +1711,10 @@ int snd_pcm_hw_open(snd_pcm_t **pcmp, co
  	fmode = O_RDWR;
  	if (mode & SND_PCM_NONBLOCK)
  		fmode |= O_NONBLOCK;
