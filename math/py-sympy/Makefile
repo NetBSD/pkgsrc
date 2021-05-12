@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/12/09 13:54:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2021/05/12 08:42:42 adam Exp $
 
-DISTNAME=	sympy-1.7
+DISTNAME=	sympy-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
@@ -26,13 +26,12 @@ SUBST_MESSAGE.manpath=	Fix man page installation path.
 
 # advanced.pidigits is broken, don't worry if it fails
 do-test:
-	(cd ${WRKSRC}/examples && ${PYTHONBIN} all.py)
+	cd ${WRKSRC}/examples && ${PYTHONBIN} all.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
-		mv bin/isympy bin/isympy${PYVERSSUFFIX} && \
-		mv ${PKGMANDIR}/man1/isympy.1 \
-			${PKGMANDIR}/man1/isympy${PYVERSSUFFIX}.1
+	${MV} bin/isympy bin/isympy-${PYVERSSUFFIX} && \
+	${MV} ${PKGMANDIR}/man1/isympy.1 ${PKGMANDIR}/man1/isympy-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
