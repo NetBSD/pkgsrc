@@ -1,18 +1,20 @@
-$NetBSD: patch-BLAS_SRC_CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+$NetBSD: patch-BLAS_SRC_CMakeLists.txt,v 1.2 2021/05/12 14:32:51 thor Exp $
 
 Support combined build of shared and static libraries.
 
---- BLAS/SRC/CMakeLists.txt.orig	2017-11-13 04:15:54.000000000 +0000
+--- BLAS/SRC/CMakeLists.txt.orig	2021-03-25 18:25:15.000000000 +0000
 +++ BLAS/SRC/CMakeLists.txt
-@@ -104,3 +104,11 @@ set_target_properties(
+@@ -104,3 +104,13 @@ set_target_properties(
    SOVERSION ${LAPACK_MAJOR_VERSION}
    )
- lapack_install_library(blas)
+ lapack_install_library(${BLASLIB})
 +if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
-+  add_library(blas_static STATIC ${SOURCES})
++  add_library(${BLASLIB}_static STATIC ${SOURCES})
 +  set_target_properties(
-+    blas_static PROPERTIES
-+    OUTPUT_NAME blas
++     ${BLASLIB}_static PROPERTIES
++     OUTPUT_NAME ${BLASLIB}
 +    )
-+  lapack_install_library(blas_static)
++  lapack_install_library(${BLASLIB}_static)
 +endif()
++
++
