@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2793 2021/05/12 16:14:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2794 2021/05/12 18:18:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4350,3 +4350,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/kubectl to 1.20.6 [leot 2021-05-12]
 	Updated textproc/py-jsonrpclib to 0.2.1 [adam 2021-05-12]
 	Updated security/py-trustme to 0.7.0 [adam 2021-05-12]
+	Updated security/py-google-auth to 1.30.0 [adam 2021-05-12]
+	Updated www/py-google-api-python-client to 2.4.0 [adam 2021-05-12]
