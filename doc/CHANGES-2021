@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2774 2021/05/11 22:05:45 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2775 2021/05/12 00:11:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4320,3 +4320,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gdbus-codegen to 2.68.2 [dan 2021-05-11]
 	Updated devel/glib2-tools to 2.68.2 [dan 2021-05-11]
 	Updated devel/mob to 1.6.0 [schmonz 2021-05-11]
+	Updated editors/xfce4-mousepad to 0.5.4 [gutteridge 2021-05-12]
