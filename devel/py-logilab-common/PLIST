@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/06 22:56:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/12 06:55:06 adam Exp $
 bin/logilab-pytest-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/logilab/common/__init__.py
 ${PYSITELIB}/logilab/common/__init__.pyc
 ${PYSITELIB}/logilab/common/__init__.pyo
@@ -57,6 +64,7 @@ ${PYSITELIB}/logilab/common/optparser.pyo
 ${PYSITELIB}/logilab/common/proc.py
 ${PYSITELIB}/logilab/common/proc.pyc
 ${PYSITELIB}/logilab/common/proc.pyo
+${PYSITELIB}/logilab/common/py.typed
 ${PYSITELIB}/logilab/common/pytest.py
 ${PYSITELIB}/logilab/common/pytest.pyc
 ${PYSITELIB}/logilab/common/pytest.pyo
@@ -87,6 +95,9 @@ ${PYSITELIB}/logilab/common/textutils.pyo
 ${PYSITELIB}/logilab/common/tree.py
 ${PYSITELIB}/logilab/common/tree.pyc
 ${PYSITELIB}/logilab/common/tree.pyo
+${PYSITELIB}/logilab/common/types.py
+${PYSITELIB}/logilab/common/types.pyc
+${PYSITELIB}/logilab/common/types.pyo
 ${PYSITELIB}/logilab/common/umessage.py
 ${PYSITELIB}/logilab/common/umessage.pyc
 ${PYSITELIB}/logilab/common/umessage.pyo
@@ -117,11 +128,4 @@ ${PYSITELIB}/logilab/common/visitor.pyo
 ${PYSITELIB}/logilab/common/xmlutils.py
 ${PYSITELIB}/logilab/common/xmlutils.pyc
 ${PYSITELIB}/logilab/common/xmlutils.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/logilab-pytest-${PYVERSSUFFIX}.1
