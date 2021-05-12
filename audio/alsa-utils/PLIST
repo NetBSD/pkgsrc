@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/04/15 08:50:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/12 14:13:21 ryoon Exp $
 bin/aconnect
 bin/alsabat
 bin/alsaloop
@@ -13,6 +13,7 @@ bin/arecord
 bin/arecordmidi
 bin/aseqdump
 bin/aseqnet
+bin/axfer
 bin/iecset
 bin/speaker-test
 man/fr/man8/alsaconf.8
@@ -30,6 +31,9 @@ man/man1/arecord.1
 man/man1/arecordmidi.1
 man/man1/aseqdump.1
 man/man1/aseqnet.1
+man/man1/axfer-list.1
+man/man1/axfer-transfer.1
+man/man1/axfer.1
 man/man1/iecset.1
 man/man1/speaker-test.1
 man/man7/alsactl_init.7
