@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3386 2021/05/09 08:28:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3387 2021/05/12 04:59:46 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2650,7 +2650,6 @@ SUBDIR+=	py-sortedcontainers
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-stem
 SUBDIR+=	py-stevedore
-SUBDIR+=	py-stompclient
 SUBDIR+=	py-stsci.distutils
 SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
