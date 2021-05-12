@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2021/04/09 07:02:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.75 2021/05/12 06:30:56 wiz Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -5438,4 +5438,3 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 share/metainfo/gimp-data-extras.metainfo.xml
 share/metainfo/org.gimp.GIMP.appdata.xml
-@pkgdir share/gimp/2.0/fonts
