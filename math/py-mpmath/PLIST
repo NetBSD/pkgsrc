@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/06 08:48:06 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.8 2021/05/12 08:32:16 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mpmath/__init__.py
 ${PYSITELIB}/mpmath/__init__.pyc
 ${PYSITELIB}/mpmath/__init__.pyo
@@ -120,9 +124,6 @@ ${PYSITELIB}/mpmath/libmp/libmpf.pyo
 ${PYSITELIB}/mpmath/libmp/libmpi.py
 ${PYSITELIB}/mpmath/libmp/libmpi.pyc
 ${PYSITELIB}/mpmath/libmp/libmpi.pyo
-${PYSITELIB}/mpmath/libmp/six.py
-${PYSITELIB}/mpmath/libmp/six.pyc
-${PYSITELIB}/mpmath/libmp/six.pyo
 ${PYSITELIB}/mpmath/math2.py
 ${PYSITELIB}/mpmath/math2.pyc
 ${PYSITELIB}/mpmath/math2.pyo
