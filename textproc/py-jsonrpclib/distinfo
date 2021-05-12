@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/09/02 16:26:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/05/12 15:59:16 adam Exp $
 
-SHA1 (jsonrpclib-0.1.7.tar.gz) = fabeca1d7c60d9f3c7088aa1ec72a746e8f5d0a4
-RMD160 (jsonrpclib-0.1.7.tar.gz) = ee3392d4031e49e0037be44d657d48ed4c7e258c
-SHA512 (jsonrpclib-0.1.7.tar.gz) = 0f63eec0f3e89a4470dd26a9b0df05b4f6128413c42f2f224f6812b30dad919941a33f420bf74f70e65ca3ebd11d4228768eeb4bbde6aefe385707269efe8d26
-Size (jsonrpclib-0.1.7.tar.gz) = 13979 bytes
+SHA1 (jsonrpclib-0.2.1.tar.gz) = ad54b51c90fd94f291c5fdd8e8a671aad9fb5edf
+RMD160 (jsonrpclib-0.2.1.tar.gz) = b01f9a62581a819d230eeb679c42c0147d44a417
+SHA512 (jsonrpclib-0.2.1.tar.gz) = 397c5bce2199451f55c30a6ce3c3af9cc6fb11dcc086b97b5c537f34e85369a39cbbee6d68e3aca5e9627abdf21e5422d5bb9557cc159e416804096f60773e97
+Size (jsonrpclib-0.2.1.tar.gz) = 18096 bytes

@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:46 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/12 15:59:16 adam Exp $
 
-DISTNAME=	jsonrpclib-0.1.7
-PKGNAME=	${PYPKGPREFIX}-jsonrpclib-0.1.7
+DISTNAME=	jsonrpclib-0.2.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc net devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrpclib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/jsonrpclib
+HOMEPAGE=	https://github.com/joshmarshall/jsonrpclib
 COMMENT=	Implementation of the JSON-RPC v2.0 specification
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.1.7
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+PYSETUP=	-c 'from setuptools import setup; setup()'
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
