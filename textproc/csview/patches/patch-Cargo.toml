@@ -1,0 +1,22 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2021/05/12 12:24:41 pin Exp $
+
+Provide unpublished crate
+
+--- Cargo.toml.orig	2021-04-05 03:51:21.000000000 +0000
++++ Cargo.toml
+@@ -23,7 +23,7 @@ csv = "^1.1.6"
+ structopt = { version = "^0.3.21", features = ["wrap_help"] }
+ exitcode = "^1.1.2"
+ anyhow = "^1.0.38"
+-prettytable-rs = "^0.8"
++prettytable-rs = { path = "prettytable-rs-3239b51dbbb449e69cd599b83bfb152441209cc3" }
+ 
+ [build-dependencies]
+ structopt = "^0.3.21"
+@@ -31,6 +31,3 @@ structopt = "^0.3.21"
+ [profile.release]
+ lto = true
+ codegen-units = 1
+-
+-[patch.crates-io]
+-prettytable-rs = { git = "https://github.com/wfxr/prettytable-rs" }
