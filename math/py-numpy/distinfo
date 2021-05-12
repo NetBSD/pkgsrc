@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.61 2021/05/03 17:15:22 adam Exp $
+$NetBSD: distinfo,v 1.62 2021/05/12 08:12:10 adam Exp $
 
-SHA1 (numpy-1.20.2.zip) = 12b7a872c4d2ddcb22b5796f19ba4349e4fe0038
-RMD160 (numpy-1.20.2.zip) = b931f92e9830a79d51f705218b8dd0ded49ae7ba
-SHA512 (numpy-1.20.2.zip) = 337a66d68c965da06f757a89b58d30b83ec0b2f3c7a3bb39496e5031e50fee6c4f2ec090202c3da9a20613864ea46d032ae75af1de5c33eebe515133ef37d40c
-Size (numpy-1.20.2.zip) = 7756879 bytes
+SHA1 (numpy-1.20.3.zip) = 56731f9eedf3bd42de2940515cfe3fadea7dfcca
+RMD160 (numpy-1.20.3.zip) = 1ca729de5134bcc647e5634f1bc0a4edd03ef1b3
+SHA512 (numpy-1.20.3.zip) = 897be1cd6f3880711149dcedd838357e2d937a3c5f36b2a0db6ceed341654acf96b8b775610e1b43bdb6eacb987bbc51aaa8906244ca02cc8c2eae359ccef405
+Size (numpy-1.20.3.zip) = 7761912 bytes
 SHA1 (patch-numpy_core_setup.py) = 70db6193da36d31a085036e2b61b154e990f70de
 SHA1 (patch-numpy_distutils_fcompiler_____init____.py) = 49d070da5b48bd9818b37ac3254341fa68503c53
 SHA1 (patch-numpy_distutils_fcompiler_g95.py) = be73b64a3e551df998b6a904d6db762bf28a98ed
