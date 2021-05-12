@@ -1,13 +1,13 @@
-$NetBSD: patch-CBLAS_cblas.pc.in,v 1.1 2020/10/12 21:51:57 bacon Exp $
+$NetBSD: patch-CBLAS_cblas.pc.in,v 1.2 2021/05/12 14:32:51 thor Exp $
 
 Install BLAS libs here rather than from a separate package
 
---- CBLAS/cblas.pc.in.orig	2019-03-27 14:34:40.823289167 +0000
+--- CBLAS/cblas.pc.in.orig	2021-03-25 18:25:15.000000000 +0000
 +++ CBLAS/cblas.pc.in
 @@ -6,5 +6,5 @@ Description: C Standard Interface to BLA
  Version: @LAPACK_VERSION@
  URL: http://www.netlib.org/blas/#_cblas
- Libs: -L${libdir} -lcblas
+ Libs: -L${libdir} -l@CBLASLIB@
 +Libs.private: @BLAS_LIBRARIES@
  Cflags: -I${includedir}
--Requires.private: blas
+-Requires.private: @BLASLIB@
