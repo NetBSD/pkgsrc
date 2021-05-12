@@ -1,24 +1,28 @@
-$NetBSD: distinfo,v 1.28 2017/06/27 15:51:39 jperkin Exp $
+$NetBSD: distinfo,v 1.29 2021/05/12 14:12:13 ryoon Exp $
 
-SHA1 (alsa-lib-1.1.4.1.tar.bz2) = 628634afbdc19054fca26d714aa6c2f1e41e465d
-RMD160 (alsa-lib-1.1.4.1.tar.bz2) = 703e99f22a6b399fe32419a2ccc95b9b6292db10
-SHA512 (alsa-lib-1.1.4.1.tar.bz2) = 7b548c4ee29c4a1230a0edcd5d19219831290f96a214180a6530628acc05278d1348376195287d188f4f44d6be1914391c63994f1b50985c3eee74352da26b0b
-Size (alsa-lib-1.1.4.1.tar.bz2) = 974584 bytes
+SHA1 (alsa-lib-1.2.4.tar.bz2) = 5404393a44906f92ba87189b6fd7fa0c031a037e
+RMD160 (alsa-lib-1.2.4.tar.bz2) = d59abf8ef810f000df484b4e6cd33db54d8f0b45
+SHA512 (alsa-lib-1.2.4.tar.bz2) = 12086952dc8f16f1cb6946517858e17b1c3276aeda9ff5703a84bb38aa78eb4c4e9cb4485c5b3f21f174fdbd976b3bcbbc481e85cb2460652858490df51ae844
+Size (alsa-lib-1.2.4.tar.bz2) = 1044405 bytes
 SHA1 (patch-ad) = 79a0f048751899247ec12990cd02332b977af248
 SHA1 (patch-ae) = 7ad3a3c3ee4be2c80fa6b0a2ea28563efd399a60
 SHA1 (patch-af) = 257b06f10616c04c2724e30777b027e5e7e443f9
 SHA1 (patch-ah) = 4dd4e27d0dfb6cedf79775b6d01a0b8c6617cdf0
-SHA1 (patch-aq) = 4cfecee96f04bd6efa5c8078916672b0b9623fa4
+SHA1 (patch-aq) = 29fc896b2acad44e5fa9619aca1df5dddd76fa5e
 SHA1 (patch-bg) = b726769272dd214e67f2407ed5a0199189540557
 SHA1 (patch-bi) = 7e74ebe53cc2ab273f5235775e391a6ef28d1006
 SHA1 (patch-bj) = 5b7a36747e57e41eddb05cd1b1d9771a36b0c4f7
 SHA1 (patch-bk) = 55754e4d0ac947c2e7e59b604a21fb5798ae5b39
-SHA1 (patch-configure.ac) = 897ae894de00857ed58553808ba40e24c0666b15
-SHA1 (patch-include_sound_asound.h) = 04e80f66542473b3b858427972046f2de320f871
+SHA1 (patch-configure.ac) = cc034d07eab13caa5ff8748e8eea37ae9dd367f5
+SHA1 (patch-include_sound_asound.h) = 5d85d804fec62250d2a3e5d269397641e13bc957
+SHA1 (patch-include_sound_type__compat.h) = a5dea86a0fd998d35147820269786d2cf8eff5e0
+SHA1 (patch-include_sound_uapi_asoc.h) = 5f1da418a2ad4ae066b34c75c9106108711b5d3d
+SHA1 (patch-include_sound_uapi_asound.h) = 051616bbbab3339d20818ddb40cde8502295a026
 SHA1 (patch-include_type__compat.h) = 3cb245d8ea171f987859e1b5a89b0908c2037492
 SHA1 (patch-src_conf.c) = 432e04179798c54a76f5ce072dd9c0b79221df85
 SHA1 (patch-src_control_control__hw.c) = 07cfe3abe586b32f6b989403cd162599da07e865
-SHA1 (patch-src_pcm_pcm__mmap.c) = 2d0f05aa53b30cef1ec083aa4f5d559d0a679058
-SHA1 (patch-src_seq_seq__midi__event.c) = 2a5de492d6ca19a0f0c564e8f5a065e5fc57ea5c
-SHA1 (patch-src_shmarea.c) = d6d0876ae7911ff16138bb82a3b1c79e795218cf
-SHA1 (patch-src_ucm_parser.c) = 6682d702c5180ecddd1c6c8ecffe6064986ed8b1
+SHA1 (patch-src_dlmisc.c) = 65eff0df7e182992868b75784ee07c797b3fbb4d
+SHA1 (patch-src_pcm_pcm__mmap.c) = 6d2325ebbc029e0b964f3a2de0516705ca8263e2
+SHA1 (patch-src_seq_seq__midi__event.c) = cf4ff866cf2cff3e78dc589b43840e16a1cf40b1
+SHA1 (patch-src_shmarea.c) = 44e21f48c4cb5d8b82888ea92b7f55b73fcee21a
+SHA1 (patch-src_ucm_parser.c) = 57a99eb617eb8e8f290ddd821fe8a4c99506d536
