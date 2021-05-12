@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/27 18:47:09 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/12 14:19:03 ryoon Exp $
 bin/2fa
-@pkgdir gopkg
