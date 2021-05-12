@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2778 2021/05/12 08:04:15 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2779 2021/05/12 08:43:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4326,3 +4326,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/gimp to 2.10.24nb6 [wiz 2021-05-12]
 	Updated devel/py-logilab-common to 1.8.1 [adam 2021-05-12]
 	Updated devel/py-queuelib to 1.6.1 [adam 2021-05-12]
+	Updated math/py-numpy to 1.20.3 [adam 2021-05-12]
+	Updated lang/py-parso to 0.8.2 [adam 2021-05-12]
+	Updated math/py-mpmath to 1.2.1 [adam 2021-05-12]
+	Updated math/py-sympy to 1.8 [adam 2021-05-12]
