@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/08 19:47:16 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/12 11:20:29 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
@@ -11,12 +11,14 @@ bin/mariadb-plugin
 bin/mariadb-show
 bin/mariadb-slap
 bin/mariadb-test
+bin/mariadb-upgrade
 bin/mariadb_config
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
 bin/mysql_find_rows
 bin/mysql_plugin
+bin/mysql_upgrade
 bin/mysqlaccess
 bin/mysqladmin
 bin/mysqlbinlog
