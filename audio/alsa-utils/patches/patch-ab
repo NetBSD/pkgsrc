@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2014/09/24 11:10:38 jperkin Exp $
+$NetBSD: patch-ab,v 1.6 2021/05/12 14:13:22 ryoon Exp $
 
---- aplay/aplay.c.orig	2013-07-09 15:28:37.000000000 +0000
+--- aplay/aplay.c.orig	2020-10-15 11:32:33.000000000 +0000
 +++ aplay/aplay.c
-@@ -48,7 +48,11 @@
+@@ -49,7 +49,11 @@
  #include <sys/time.h>
  #include <sys/stat.h>
  #include <sys/types.h>
@@ -11,10 +11,10 @@ $NetBSD: patch-ab,v 1.5 2014/09/24 11:10:38 jperkin Exp $
 +#elif !defined(__sun)
 +#include <sys/endian.h>
 +#endif
- #include "aconfig.h"
  #include "gettext.h"
  #include "formats.h"
-@@ -70,6 +74,22 @@
+ #include "version.h"
+@@ -72,6 +76,22 @@
  #define be32toh(x) __be32_to_cpu(x)
  #endif
  
