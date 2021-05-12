@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/15 18:03:33 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/12 09:59:22 jperkin Exp $
 bin/influx
 bin/influx_inspect
 bin/influx_stress
+bin/influx_tools
 bin/influx_tsm
 bin/influxd
-bin/stress_test_server
-bin/test_client
 man/man1/influx.1
 man/man1/influx_inspect.1
 man/man1/influx_stress.1

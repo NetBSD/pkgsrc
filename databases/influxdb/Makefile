@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2021/05/08 15:02:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/12 09:59:22 jperkin Exp $
 
-DISTNAME=	influxdb-1.7.6
+DISTNAME=	influxdb-1.8.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-PKGREVISION=	20
 CATEGORIES=	databases
 GITHUB_PROJECT=	influxdb
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,11 +15,6 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_TOOLS+=	gmake
-
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/influxdata/influxdb
-
-PKG_SYSCONFSUBDIR=	influxdb
 
 DATADIR=	${VARBASE}/lib/influxdb
 LOGDIR=		${VARBASE}/log/influxdb
@@ -39,29 +33,31 @@ PKG_USERS_VARS+=	INFLUXDB_USER
 PKG_GROUPS_VARS+=	INFLUXDB_GROUP
 PKG_GROUPS=		${INFLUXDB_GROUP}
 PKG_USERS=		${INFLUXDB_USER}:${INFLUXDB_GROUP}
+PKG_SYSCONFSUBDIR=	influxdb
 RCD_SCRIPTS=		influxdb
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/influxdb share/examples/influxdb
 
 DOC_FILES+=	LICENSE DEPENDENCIES.md QUERIES.md README.md CHANGELOG.md
-BIN_FILES+=	influx influx_inspect influx_stress influx_tsm influxd
-BIN_FILES+=	stress_test_server test_client
+BIN_FILES+=	influx influx_inspect influx_stress influx_tools influx_tsm
+BIN_FILES+=	influxd
 CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/config.sample.toml \
 		${PKG_SYSCONFDIR}/config.toml
 
-.include "go-deps.mk"
+.include "go-modules.mk"
 
 INFLUX_GO_FLAGS=	-s
 INFLUX_GO_FLAGS+=	-X main.version=${PKGVERSION_NOREV}
 INFLUX_GO_FLAGS+=	-X main.commit=${GITHUB_TAG}
+INFLUX_GO_FLAGS+=	-X main.branch=${PKGVERSION_NOREV}
 INFLUX_GO_FLAGS+=	-X main.buildstamp=pkgsrc
 
 do-build:
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} build -ldflags "${INFLUX_GO_FLAGS}" ${GO_BUILD_PATTERN}
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -ldflags "${INFLUX_GO_FLAGS}" ${GO_BUILD_PATTERN}
+.for cmd in ${BIN_FILES}
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${GO} build -ldflags "${INFLUX_GO_FLAGS}" ./cmd/${cmd}
+.endfor
 	${RUN} cd ${WRKSRC}/man && ${PKGSRC_SETENV} ${MAKE_ENV} ${GMAKE}
 	${RUN} ${SED} \
 	    -e 's,/var,${VARBASE},g' \
@@ -69,18 +65,17 @@ do-build:
 		${WRKSRC}/etc/config.sample.toml >${WRKDIR}/.config.toml
 
 do-install:
+.for cmd in ${BIN_FILES}
+	${INSTALL_PROGRAM} ${WRKSRC}/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}
+.endfor
 	for manpage in ${WRKSRC}/man/*.1; do \
 		${INSTALL_MAN} $$manpage ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 	done
-.for x in ${BIN_FILES}
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/${x} \
-		${DESTDIR}${PREFIX}/bin/${x}
-.endfor
-.for x in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${x} \
-		${DESTDIR}${PREFIX}/share/doc/influxdb/${x}
+.for f in ${DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} \
+		${DESTDIR}${PREFIX}/share/doc/influxdb/${f}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/etc/config.sample.toml ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
