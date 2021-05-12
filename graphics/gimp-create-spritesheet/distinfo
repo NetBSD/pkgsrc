@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/12 09:03:12 wiz Exp $
+
+SHA1 (gimp-create-spritesheet-0.0.2019.11.27/create_spritesheet.py) = 9d6d8c294c0ccf3a05103052f15598b8bfcc38d3
+RMD160 (gimp-create-spritesheet-0.0.2019.11.27/create_spritesheet.py) = ced2d6317625310096c17249a1fcef0cca433757
+SHA512 (gimp-create-spritesheet-0.0.2019.11.27/create_spritesheet.py) = 23ef1e41208cb74b18239fada81dfb6017d4a726f940bff659f3f8db8569cae555b8baedd3d373aea2ce2999364914f8c04d9c99abc10d206c447e33afa8dde9
+Size (gimp-create-spritesheet-0.0.2019.11.27/create_spritesheet.py) = 3559 bytes
