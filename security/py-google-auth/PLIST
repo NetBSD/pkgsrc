@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/22 13:56:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/12 18:17:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -135,6 +135,9 @@ ${PYSITELIB}/google/oauth2/_credentials_async.pyo
 ${PYSITELIB}/google/oauth2/_id_token_async.py
 ${PYSITELIB}/google/oauth2/_id_token_async.pyc
 ${PYSITELIB}/google/oauth2/_id_token_async.pyo
+${PYSITELIB}/google/oauth2/_reauth_async.py
+${PYSITELIB}/google/oauth2/_reauth_async.pyc
+${PYSITELIB}/google/oauth2/_reauth_async.pyo
 ${PYSITELIB}/google/oauth2/_service_account_async.py
 ${PYSITELIB}/google/oauth2/_service_account_async.pyc
 ${PYSITELIB}/google/oauth2/_service_account_async.pyo
