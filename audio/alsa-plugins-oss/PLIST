@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 04:03:22 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/12 14:14:38 ryoon Exp $
 lib/alsa-lib/libasound_module_ctl_oss.la
 lib/alsa-lib/libasound_module_pcm_oss.la
+share/alsa/alsa.conf.d/50-oss.conf
+share/alsa/conf.d/50-oss.conf
