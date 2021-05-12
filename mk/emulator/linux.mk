@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.33 2020/10/08 10:42:49 nia Exp $
+# $NetBSD: linux.mk,v 1.34 2021/05/12 10:14:24 hauke Exp $
 #
 # Linux binary emulation framework
 #
@@ -19,6 +19,12 @@ SUSE_PREFER?=	13.1
 # 12.1 under NetBSD 6.*, and 10.0 otherwise.
 .  elif empty(OS_VERSION:M[0-5].*)
 SUSE_PREFER?=	12.1
+.  endif
+.endif
+.if ${OPSYS} == "FreeBSD" && ${EMUL_ARCH} == "x86_64"
+# Use 13.1 under FreeBSD 10.* and newer
+.  if empty(OS_VERSION:M[2-9].*)
+SUSE_PREFER?=	13.1
 .  endif
 .endif
 SUSE_PREFER?=	10.0
