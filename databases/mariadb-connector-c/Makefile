@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 13:24:09 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/13 11:46:13 nia Exp $
 
-DISTNAME=	mariadb-connector-c-3.0.6
-PKGREVISION=	10
+DISTNAME=	mariadb-connector-c-3.1.13-src
+PKGNAME=	${DISTNAME:S/-src//g}
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GITHUB:=MariaDB/}
+MASTER_SITES=	https://archive.mariadb.org/connector-c-${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/MariaDB/mariadb-connector-c/
-COMMENT=	MariaDB Connector/C library
+HOMEPAGE=	https://mariadb.com/kb/en/mariadb-connector-c/
+COMMENT=	MariaDB Connector C library
 LICENSE=	gnu-lgpl-v2.1
-
-GITHUB_PROJECT=	mariadb-connector-c
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "options.mk"
-
 CMAKE_ARGS+=	-DWITH_EXTERNAL_ZLIB=ON
 
+PKGCONFIG_OVERRIDE+=	mariadb_config/libmariadb.pc.in
+
+.include "options.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
