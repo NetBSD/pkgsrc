@@ -1,15 +1,15 @@
-$NetBSD: patch-src_google_protobuf_port__def.inc,v 1.1 2021/03/31 10:18:47 jperkin Exp $
+$NetBSD: patch-src_google_protobuf_port__def.inc,v 1.2 2021/05/13 12:16:54 adam Exp $
 
 SunOS does not support init_priority.
 
---- src/google/protobuf/port_def.inc.orig	2021-03-04 21:39:09.000000000 +0000
+--- src/google/protobuf/port_def.inc.orig	2021-05-12 23:23:56.000000000 +0000
 +++ src/google/protobuf/port_def.inc
-@@ -587,7 +587,7 @@
- #define PROTOBUF_ATTRIBUTE_NO_DESTROY
+@@ -506,7 +506,7 @@
+ #ifdef PROTOBUF_ATTRIBUTE_INIT_PRIORITY
+ #error PROTOBUF_ATTRIBUTE_INIT_PRIORITY was previously defined
  #endif
- 
--#if defined(__GNUC__)
-+#if defined(__GNUC__) && !defined(__sun)
- // Protobuf extensions and reflection require registration of the protos linked
- // in the binary. Not until everything is registered does the runtime have a
- // complete view on all protos. When code is using reflection or extensions
+-#if PROTOBUF_GNUC_MIN(3, 0)
++#if PROTOBUF_GNUC_MIN(3, 0) && !defined(__sun)
+ #define PROTOBUF_ATTRIBUTE_INIT_PRIORITY __attribute__((init_priority((102))))
+ #else
+ #define PROTOBUF_ATTRIBUTE_INIT_PRIORITY
