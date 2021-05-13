@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/10 15:05:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/13 12:28:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -110,6 +110,9 @@ ${PYSITELIB}/git/repo/base.pyo
 ${PYSITELIB}/git/repo/fun.py
 ${PYSITELIB}/git/repo/fun.pyc
 ${PYSITELIB}/git/repo/fun.pyo
+${PYSITELIB}/git/types.py
+${PYSITELIB}/git/types.pyc
+${PYSITELIB}/git/types.pyo
 ${PYSITELIB}/git/util.py
 ${PYSITELIB}/git/util.pyc
 ${PYSITELIB}/git/util.pyo
