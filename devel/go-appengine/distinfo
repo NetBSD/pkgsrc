@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/09/10 22:43:58 minskim Exp $
-
-SHA1 (appengine-1.1.0.tar.gz) = ea4f326f4a42c1116d438c4e2d23dc97a49a4f4e
-RMD160 (appengine-1.1.0.tar.gz) = 7129b3956362c184d098ff01e1c1ae94659adcd5
-SHA512 (appengine-1.1.0.tar.gz) = 81df8879560cb133f893fa91e60897b6e5d54f70808629340a15baa1accf093ece1fdc4c156d9fce42e1499171fedf01e9766adea54b01efff7910e4863c7a31
-Size (appengine-1.1.0.tar.gz) = 302553 bytes
