@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/09/18 08:41:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/13 11:46:13 nia Exp $
 bin/mariadb_config
 include/mariadb/errmsg.h
 include/mariadb/ma_list.h
@@ -8,6 +8,7 @@ include/mariadb/mariadb/ma_io.h
 include/mariadb/mariadb_com.h
 include/mariadb/mariadb_ctype.h
 include/mariadb/mariadb_dyncol.h
+include/mariadb/mariadb_rpl.h
 include/mariadb/mariadb_stmt.h
 include/mariadb/mariadb_version.h
 include/mariadb/mysql.h
@@ -19,7 +20,10 @@ lib/mariadb/libmariadb.so
 lib/mariadb/libmariadb.so.3
 lib/mariadb/libmariadbclient.a
 ${PLIST.gss}lib/mariadb/plugin/auth_gssapi_client.so
+${PLIST.ssl}lib/mariadb/plugin/caching_sha2_password.so
+${PLIST.ssl}lib/mariadb/plugin/client_ed25519.so
 lib/mariadb/plugin/dialog.so
 lib/mariadb/plugin/mysql_clear_password.so
 ${PLIST.curl}lib/mariadb/plugin/remote_io.so
-lib/mariadb/plugin/sha256_password.so
+${PLIST.openssl}lib/mariadb/plugin/sha256_password.so
+lib/pkgconfig/libmariadb.pc
