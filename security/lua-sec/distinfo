@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/02/10 10:20:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/05/13 10:15:47 nia Exp $
 
-SHA1 (luasec-1.0.tar.gz) = 2e0351fc949237ae771d052bd4a89fb7cd5e0c51
-RMD160 (luasec-1.0.tar.gz) = 5c09092091f167faaa56b847f8458e2528ebc0c3
-SHA512 (luasec-1.0.tar.gz) = 70e81291b71111fb4976477d1c8ddbdaace17f017476b4e74b0ed88498e9e016d4ece1658f7fcce30f21aecab8dcf3734ce620940f61f2c70efb911c09a95bb9
-Size (luasec-1.0.tar.gz) = 52264 bytes
+SHA1 (luasec-1.0.1.tar.gz) = dc05d4d06a5aa60cfb59e14d55f09877e822a670
+RMD160 (luasec-1.0.1.tar.gz) = 98dbb95d664515d53fa24b0898e50d65ffd4de4a
+SHA512 (luasec-1.0.1.tar.gz) = 21ae200e40f13a35eebca95cdac25ae13532a3008b2f9ec97a079033b9efde69e81954354453623eb77340368f482d3c69adb26881a6c0d7c4897df31301af93
+Size (luasec-1.0.1.tar.gz) = 52370 bytes
 SHA1 (patch-Makefile) = 17ae13eecf9ce9269e8ef9a826507bd6230c3364
 SHA1 (patch-src_Makefile) = 238809a918f58d9c3fb73aab458dfac346a36165
 SHA1 (patch-src_luasocket_timeout.c) = e648e7e7faf4d98d4c1fe3ae855a0de09323c7ab
