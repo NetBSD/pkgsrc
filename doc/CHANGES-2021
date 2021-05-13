@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2812 2021/05/13 16:11:12 jdolecek Exp $
+$NetBSD: CHANGES-2021,v 1.2813 2021/05/13 17:26:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4373,3 +4373,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-highlight to 4.1 [schmonz 2021-05-13]
 	Added databases/mysql80-client version 8.0.24 [jdolecek 2021-05-13]
 	Added databases/mysql80-server version 8.0.24 [jdolecek 2021-05-13]
+	Updated devel/py-typing to 3.10.0.0 [adam 2021-05-13]
+	Updated devel/py-typing-extensions to 3.10.0.0 [adam 2021-05-13]
