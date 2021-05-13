@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.31 2021/05/13 11:04:43 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.32 2021/05/13 15:29:04 jdolecek Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 57 56 MARIADB104
+#	Possible: 57 56 80 MARIADB104
 #	Default: 57
 #
 # Package-settable variables:
@@ -37,7 +37,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		57
-MYSQL_VERSIONS_ACCEPTED?=	57 56 MARIADB104
+MYSQL_VERSIONS_ACCEPTED?=	57 56 80 MARIADB104
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -46,13 +46,19 @@ _MYSQL_VERSION_${mv}_OK=	yes
 
 # check what is installed
 .if ${OPSYS} == "Darwin"
+_MYSQL_SO_80=	21.dylib
 _MYSQL_SO_57=	20.dylib
 _MYSQL_SO_56=	18.dylib
 .else
+_MYSQL_SO_80=	so.21
 _MYSQL_SO_57=	so.20
 _MYSQL_SO_56=	so.18
 .endif
 
+.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_80})
+_MYSQL_VERSION_80_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	80
+.endif
 .if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_57})
 _MYSQL_VERSION_57_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	57
@@ -102,7 +108,9 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 #
 # set variables for the version we decided to use:
 #
-.if ${_MYSQL_VERSION} == "57"
+.if ${_MYSQL_VERSION} == "80"
+MYSQL_PKGSRCDIR=	../../databases/mysql80-client
+.elif ${_MYSQL_VERSION} == "57"
 MYSQL_PKGSRCDIR=	../../databases/mysql57-client
 .elif ${_MYSQL_VERSION} == "56"
 MYSQL_PKGSRCDIR=	../../databases/mysql56-client
