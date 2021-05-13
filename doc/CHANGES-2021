@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2798 2021/05/13 10:01:01 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2799 2021/05/13 10:11:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4356,3 +4356,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/webkit-gtk to 2.32.1 [leot 2021-05-13]
 	Updated audio/fluidsynth to 2.2.1 [nia 2021-05-13]
 	Updated audio/qmmp to 1.4.6 [nia 2021-05-13]
+	Updated graphics/feh to 3.7 [nia 2021-05-13]
