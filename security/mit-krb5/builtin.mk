@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2019/11/04 21:12:55 rillig Exp $
+# $NetBSD: builtin.mk,v 1.17 2021/05/13 09:06:15 thor Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -10,10 +10,13 @@ BUILTIN_FIND_HEADERS_VAR:=		H_MIT_KRB5
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	kerberosv5/krb5.h
+.elif !empty(MACHINE_PLATFORM:MLinux-*)
+# Assuming mit-krb5 >= 1.5 on GNU/Linux.
+BUILTIN_FIND_HEADERS.H_MIT_KRB5=        krb5/krb5.h
 .else
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5.h
 .endif
-BUILTIN_FIND_GREP.H_MIT_KRB5=		Massachusetts Institute of Technology
+BUILTIN_FIND_GREP.H_MIT_KRB5=		Massachusetts
 BUILTIN_FIND_FILES_VAR:=		SH_KRB5_CONFIG
 BUILTIN_FIND_FILES.SH_KRB5_CONFIG=	/usr/bin/krb5-config
 BUILTIN_FIND_FILES.SH_KRB5_CONFIG+=	/usr/lib/mit/bin/krb5-config
