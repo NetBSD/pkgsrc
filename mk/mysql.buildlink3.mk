@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.30 2021/05/08 19:53:28 jdolecek Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.31 2021/05/13 11:04:43 nia Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 57 56 MARIADB55 MARIADB104
+#	Possible: 57 56 MARIADB104
 #	Default: 57
 #
 # Package-settable variables:
@@ -37,7 +37,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		57
-MYSQL_VERSIONS_ACCEPTED?=	57 56 MARIADB55 MARIADB104
+MYSQL_VERSIONS_ACCEPTED?=	57 56 MARIADB104
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -56,16 +56,10 @@ _MYSQL_SO_56=	so.18
 .if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_57})
 _MYSQL_VERSION_57_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	57
-.endif
-.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_56})
-.  if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
+.elif exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_56})
 _MYSQL_VERSION_56_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	56
-.  elif exists(${LOCALBASE}/share/mariadb)
-_MYSQL_VERSION_MARIADB55_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	MARIADB55
-.  endif
-.elif exists(${LOCALBASE}/include/mysql/mariadb_version.h)
+.elif exists(${LOCALBASE}/lib/libmariadb.so.3)
 _MYSQL_VERSION_MARIADB104_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	MARIADB104
 .endif
@@ -112,8 +106,6 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 MYSQL_PKGSRCDIR=	../../databases/mysql57-client
 .elif ${_MYSQL_VERSION} == "56"
 MYSQL_PKGSRCDIR=	../../databases/mysql56-client
-.elif ${_MYSQL_VERSION} == "MARIADB55"
-MYSQL_PKGSRCDIR=	../../databases/mariadb55-client
 .elif ${_MYSQL_VERSION} == "MARIADB104"
 MYSQL_PKGSRCDIR=	../../databases/mariadb104-client
 .else

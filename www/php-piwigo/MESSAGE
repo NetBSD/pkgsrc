@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2017/07/25 08:37:20 manu Exp $
+$NetBSD: MESSAGE,v 1.5 2021/05/13 11:04:43 nia Exp $
 
 To use Piwigo with Apache 2.4, you will need to perform the following steps.
 
@@ -13,7 +13,7 @@ To use Piwigo with Apache 2.4, you will need to perform the following steps.
 
 2. Install MySQL or MariaDB database server
 
-	# cd databases/mariadb55-server
+	# cd databases/mysql57-server
 	# make install
 
 3. Start MySQL server, and setup MySQL server
