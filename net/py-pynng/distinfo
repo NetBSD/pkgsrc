@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2021/05/11 08:56:00 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/05/13 19:35:54 khorben Exp $
 
 SHA1 (pynng-0.7.1.tar.gz) = 306806f168cc064f830e064b2b748550cb726bf9
 RMD160 (pynng-0.7.1.tar.gz) = 79f7e542b2cf2db0c9b93ce67fe3d979a58f55a6
 SHA512 (pynng-0.7.1.tar.gz) = 72fc89902474dee6b2ae31cf8e572cd15deead170d8eacba73716b0df0ae3a24611fc1be9d098910cbe4a47dfff1e4a5f98cf8aeca946c469d80a2ae24c35b5f
 Size (pynng-0.7.1.tar.gz) = 3815296 bytes
+SHA1 (patch-build__pynng.py) = 9cb7216c90eb795934747272e0a9cf35d01aefee
+SHA1 (patch-mbedtls_library_net__sockets.c) = d4edd8bb86b78254994f7505abd6155ccdd947ce
+SHA1 (patch-nng_src_platform_posix_posix__thread.c) = e7df7ed999a4f9c9681f1456094a1e8dbff04547
+SHA1 (patch-setup.py) = c4dc8905bd304527b75ce53b39b70025be208714
