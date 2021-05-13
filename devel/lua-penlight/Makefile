@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2020/11/23 20:06:46 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/13 10:19:09 nia Exp $
 #
 
-DISTNAME=	penlight-1.9.2
+DISTNAME=	penlight-1.10.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lua
-MASTER_SITES=	${MASTER_SITE_GITHUB:=stevedonovan/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lunarmodules/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	Penlight
 
