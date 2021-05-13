@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2809 2021/05/13 14:08:05 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2810 2021/05/13 15:57:50 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4371,3 +4371,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libhighlight to 4.1 [schmonz 2021-05-13]
 	Updated textproc/highlight to 4.1 [schmonz 2021-05-13]
 	Updated textproc/p5-highlight to 4.1 [schmonz 2021-05-13]
+	Updated databases/mysql80-client to 8.0.24 [jdolecek 2021-05-13]
