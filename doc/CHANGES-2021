@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2800 2021/05/13 10:16:03 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2801 2021/05/13 10:19:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/qmmp to 1.4.6 [nia 2021-05-13]
 	Updated graphics/feh to 3.7 [nia 2021-05-13]
 	Updated security/lua-sec to 1.0.1 [nia 2021-05-13]
+	Updated devel/lua-penlight to 1.10.0 [nia 2021-05-13]
