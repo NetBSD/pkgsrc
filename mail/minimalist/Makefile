@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/05/13 20:59:50 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/13 21:12:33 khorben Exp $
 #
 
 DISTNAME=	minimalist-2.5.4-1
@@ -14,8 +14,8 @@ COMMENT=	Minimalistic Mailing Lists Manager
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	perl
-REPLACE_PERL=	${WRKSRC}/minimalist.pl
-REPLACE_PERL+=	${WRKSRC}/contrib/minimalist_request.pl
+REPLACE_PERL=	minimalist.pl
+REPLACE_PERL+=	contrib/minimalist_request.pl
 
 EGDIR=		${PREFIX}/share/examples/minimalist/
 CONF_FILES=	${EGDIR}/minimalist.conf ${PKG_SYSCONFDIR}/minimalist.conf
