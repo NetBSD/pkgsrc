@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/02/10 12:22:57 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2021/05/13 20:59:50 khorben Exp $
 
 Add these lines to /etc/aliases and update your MTA with 'newaliases'.
 
@@ -11,7 +11,7 @@ To create a new list copy the directory
 
 Edit the files inside and chmod -R to 644
 
-and append to /etc/aliases theses lines:
+and append to /etc/aliases these lines:
 
  listname: "|${PREFIX}/bin/minimalist.pl listname"
  listname-owner: "|${PREFIX}/bin/minimalist.pl listname-owner"
