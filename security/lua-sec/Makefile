@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/02/10 10:20:01 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/13 10:15:47 nia Exp $
 
-VERSION=		1.0
+VERSION=		1.0.1
 DISTNAME=		luasec-${VERSION}
 PKGNAME=		${DISTNAME:S/luasec/${LUA_PKGPREFIX}-sec/}
 CATEGORIES=		security
