@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2015/05/07 12:45:29 fhajny Exp $
-share/mariadb/solaris/postinstall-solaris
