@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 20:48:09 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/13 10:23:10 nia Exp $
 
-DISTNAME=	luv-1.36.0-0
+DISTNAME=	luv-1.41.0-0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-0//1}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luvit/}
