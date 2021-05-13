@@ -1,15 +1,15 @@
-$NetBSD: patch-plugins_auth_CMakeLists.txt,v 1.1 2018/09/18 08:41:34 fhajny Exp $
+$NetBSD: patch-plugins_auth_CMakeLists.txt,v 1.2 2021/05/13 11:46:13 nia Exp $
 
-Make sure Kerberos/GSS support can be turned off.
+Don't peek into Kerberos if we don't want it.
 
---- plugins/auth/CMakeLists.txt.orig	2018-07-31 07:44:20.000000000 +0000
+--- plugins/auth/CMakeLists.txt.orig	2021-05-03 11:58:17.000000000 +0000
 +++ plugins/auth/CMakeLists.txt
-@@ -19,12 +19,12 @@ REGISTER_PLUGIN(TARGET dialog
-                         ${CC_SOURCE_DIR}/libmariadb/get_password.c)
+@@ -94,12 +94,12 @@ IF(CRYPTO_PLUGIN)
+ ENDIF()
  
  #GSSAPI client authentication plugin
 -IF(NOT WIN32)
-+IF(WITH_GSS)
++IF(NOT WIN32 AND NOT AUTH_GSSAPI_PLUGIN_TYPE MATCHES "OFF")
    INCLUDE(${CC_SOURCE_DIR}/cmake/FindGSSAPI.cmake)
    IF(GSSAPI_FOUND)
      SET(GSSAPI_SOURCES ${AUTH_DIR}/auth_gssapi_client.c ${AUTH_DIR}/gssapi_client.c ${AUTH_DIR}/gssapi_errmsg.c)
