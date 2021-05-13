@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2808 2021/05/13 14:06:22 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2809 2021/05/13 14:08:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4369,3 +4369,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-gitpython to 3.1.16 [adam 2021-05-13]
 	Updated sysutils/ansible to 3.4.0 [adam 2021-05-13]
 	Updated textproc/libhighlight to 4.1 [schmonz 2021-05-13]
+	Updated textproc/highlight to 4.1 [schmonz 2021-05-13]
+	Updated textproc/p5-highlight to 4.1 [schmonz 2021-05-13]
