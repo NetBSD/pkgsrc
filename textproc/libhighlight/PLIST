@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/01/01 19:41:37 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/05/13 14:06:09 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -7,10 +7,12 @@ share/doc/highlight/INSTALL
 share/doc/highlight/README.adoc
 share/doc/highlight/README_DE.adoc
 share/doc/highlight/README_LANGLIST.adoc
+share/doc/highlight/README_LSP_CLIENT.adoc
 share/doc/highlight/README_PLUGINS.adoc
 share/doc/highlight/README_REGEX.adoc
 share/doc/highlight/README_RELEASE.adoc
 share/doc/highlight/README_TESTCASES.adoc
+share/doc/highlight/README_V4_MIGRATION.adoc
 share/doc/highlight/extras/highlight_pipe.php
 share/doc/highlight/extras/highlight_pipe.pm
 share/doc/highlight/extras/highlight_pipe.py
@@ -55,13 +57,9 @@ share/doc/highlight/extras/themes-resources/css-themes/UNLICENCE
 share/doc/highlight/extras/themes-resources/css-themes/example.html
 share/doc/highlight/extras/themes-resources/css-themes/hl-theme-boilerplate.css
 share/doc/highlight/extras/themes-resources/css-themes/hl-theme-boilerplate.scss
-share/doc/highlight/extras/web_plugins/dokuwiki/syntax.php
-share/doc/highlight/extras/web_plugins/movabletype/README
-share/doc/highlight/extras/web_plugins/movabletype/highlight.pl
-share/doc/highlight/extras/web_plugins/wordpress/README
-share/doc/highlight/extras/web_plugins/wordpress/highlight.php
 share/examples/highlight/filetypes.conf
-share/highlight/langDefs/abap4.lang
+share/examples/highlight/lsp.conf
+share/highlight/langDefs/abap.lang
 share/highlight/langDefs/abc.lang
 share/highlight/langDefs/abnf.lang
 share/highlight/langDefs/actionscript.lang
@@ -108,7 +106,7 @@ share/highlight/langDefs/clojure.lang
 share/highlight/langDefs/clp.lang
 share/highlight/langDefs/cmake.lang
 share/highlight/langDefs/cobol.lang
-share/highlight/langDefs/coffee.lang
+share/highlight/langDefs/coffeescript.lang
 share/highlight/langDefs/coldfusion.lang
 share/highlight/langDefs/conf.lang
 share/highlight/langDefs/crk.lang
@@ -120,7 +118,7 @@ share/highlight/langDefs/d.lang
 share/highlight/langDefs/dart.lang
 share/highlight/langDefs/delphi.lang
 share/highlight/langDefs/diff.lang
-share/highlight/langDefs/docker.lang
+share/highlight/langDefs/dockerfile.lang
 share/highlight/langDefs/dts.lang
 share/highlight/langDefs/dylan.lang
 share/highlight/langDefs/ebnf.lang
@@ -167,7 +165,7 @@ share/highlight/langDefs/interlis.lang
 share/highlight/langDefs/io.lang
 share/highlight/langDefs/jasmin.lang
 share/highlight/langDefs/java.lang
-share/highlight/langDefs/js.lang
+share/highlight/langDefs/javascript.lang
 share/highlight/langDefs/js_regex.lang
 share/highlight/langDefs/json.lang
 share/highlight/langDefs/jsp.lang
@@ -186,7 +184,7 @@ share/highlight/langDefs/lotos.lang
 share/highlight/langDefs/lotus.lang
 share/highlight/langDefs/lua.lang
 share/highlight/langDefs/luban.lang
-share/highlight/langDefs/make.lang
+share/highlight/langDefs/makefile.lang
 share/highlight/langDefs/maple.lang
 share/highlight/langDefs/markdown.lang
 share/highlight/langDefs/matlab.lang
@@ -234,10 +232,10 @@ share/highlight/langDefs/po.lang
 share/highlight/langDefs/polygen.lang
 share/highlight/langDefs/pony.lang
 share/highlight/langDefs/pov.lang
+share/highlight/langDefs/powershell.lang
 share/highlight/langDefs/pro.lang
 share/highlight/langDefs/progress.lang
 share/highlight/langDefs/ps.lang
-share/highlight/langDefs/ps1.lang
 share/highlight/langDefs/psl.lang
 share/highlight/langDefs/pure.lang
 share/highlight/langDefs/purebasic.lang
@@ -254,9 +252,9 @@ share/highlight/langDefs/rexx.lang
 share/highlight/langDefs/rnc.lang
 share/highlight/langDefs/rpg.lang
 share/highlight/langDefs/rpl.lang
-share/highlight/langDefs/rs.lang
 share/highlight/langDefs/rst.lang
 share/highlight/langDefs/ruby.lang
+share/highlight/langDefs/rust.lang
 share/highlight/langDefs/s.lang
 share/highlight/langDefs/sam.lang
 share/highlight/langDefs/sas.lang
@@ -264,7 +262,7 @@ share/highlight/langDefs/scad.lang
 share/highlight/langDefs/scala.lang
 share/highlight/langDefs/scilab.lang
 share/highlight/langDefs/scss.lang
-share/highlight/langDefs/sh.lang
+share/highlight/langDefs/shellscript.lang
 share/highlight/langDefs/slim.lang
 share/highlight/langDefs/small.lang
 share/highlight/langDefs/smalltalk.lang
@@ -285,11 +283,11 @@ share/highlight/langDefs/tcsh.lang
 share/highlight/langDefs/terraform.lang
 share/highlight/langDefs/tex.lang
 share/highlight/langDefs/toml.lang
-share/highlight/langDefs/ts.lang
 share/highlight/langDefs/tsql.lang
 share/highlight/langDefs/tsx.lang
 share/highlight/langDefs/ttcn3.lang
 share/highlight/langDefs/txt.lang
+share/highlight/langDefs/typescript.lang
 share/highlight/langDefs/upc.lang
 share/highlight/langDefs/vala.lang
 share/highlight/langDefs/vb.lang
@@ -337,7 +335,6 @@ share/highlight/plugins/outhtml_curly_brackets_matcher.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua
 share/highlight/plugins/outhtml_keyword_matcher.lua
 share/highlight/plugins/outhtml_ligature_fonts.lua
-share/highlight/plugins/outhtml_lsp_clangd.lua
 share/highlight/plugins/outhtml_modern_fonts.lua
 share/highlight/plugins/outhtml_parantheses_matcher.lua
 share/highlight/plugins/outhtml_tooltips.lua
@@ -443,7 +440,6 @@ share/highlight/themes/base16/porple.theme
 share/highlight/themes/base16/railscasts.theme
 share/highlight/themes/base16/rebecca.theme
 share/highlight/themes/base16/seti.theme
-share/highlight/themes/base16/shapeshifter.theme
 share/highlight/themes/base16/snazzy.theme
 share/highlight/themes/base16/solarflare.theme
 share/highlight/themes/base16/solarized-dark.theme
@@ -460,7 +456,6 @@ share/highlight/themes/base16/unikitty-light.theme
 share/highlight/themes/base16/unikitty-reversible.theme
 share/highlight/themes/base16/woodland.theme
 share/highlight/themes/base16/xcode-dusk.theme
-share/highlight/themes/base16/zenburn.theme
 share/highlight/themes/baycomb.theme
 share/highlight/themes/bclear.theme
 share/highlight/themes/biogoo.theme
@@ -506,7 +501,7 @@ share/highlight/themes/edit-vim-dark.theme
 share/highlight/themes/edit-vim.theme
 share/highlight/themes/edit-xcode.theme
 share/highlight/themes/ekvoli.theme
-share/highlight/themes/fine_blue.theme
+share/highlight/themes/fineblue.theme
 share/highlight/themes/freya.theme
 share/highlight/themes/fruit.theme
 share/highlight/themes/github.theme
