@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2806 2021/05/13 12:18:12 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2807 2021/05/13 12:38:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4366,3 +4366,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/protobuf to 3.17.0 [adam 2021-05-13]
 	Updated devel/py-protobuf to 3.17.0 [adam 2021-05-13]
 	Removed devel/go-appengine [bsiegert 2021-05-13]
+	Updated devel/py-gitpython to 3.1.16 [adam 2021-05-13]
+	Updated sysutils/ansible to 3.4.0 [adam 2021-05-13]
