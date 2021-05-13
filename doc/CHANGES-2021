@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2805 2021/05/13 12:17:57 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2806 2021/05/13 12:18:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/trafficserver [nia 2021-05-13]
 	Updated devel/protobuf to 3.17.0 [adam 2021-05-13]
 	Updated devel/py-protobuf to 3.17.0 [adam 2021-05-13]
+	Removed devel/go-appengine [bsiegert 2021-05-13]
