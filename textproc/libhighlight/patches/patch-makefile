@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.5 2021/01/01 19:41:37 schmonz Exp $
+$NetBSD: patch-makefile,v 1.6 2021/05/13 14:06:10 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2020-12-21 10:56:19.000000000 +0000
+--- makefile.orig	2021-05-10 17:47:34.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -48,7 +48,7 @@ Use pkgsrc-provided paths and tools.
  
  all cli:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -86,19 +86,12 @@ install:
+@@ -82,19 +82,12 @@ install:
  		${DESTDIR}${data_dir}themes/base16 \
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}plugins
@@ -68,7 +68,7 @@ Use pkgsrc-provided paths and tools.
  
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README* ${DESTDIR}${doc_dir}
-@@ -118,15 +111,27 @@ install:
+@@ -111,15 +104,27 @@ install:
  	${INSTALL_DATA} ./extras/themes-resources/css-themes/* ${DESTDIR}${examples_dir}themes-resources/css-themes
  	${INSTALL_DATA} ./extras/highlight_pipe.* ${DESTDIR}${examples_dir}
  	${INSTALL_DATA} ./extras/*.py ${DESTDIR}${examples_dir}
@@ -77,7 +77,7 @@ Use pkgsrc-provided paths and tools.
  	@echo
  	@echo "Done."
 -	@echo "Type highlight --help or man highlight for instructions."
- 	@echo "Take a look at ${DESTDIR}${examples_dir} for web plugins, SWIG and TCL bindings."
+ 	@echo "Take a look at ${DESTDIR}${examples_dir} for scripts, SWIG and TCL bindings."
 +	@echo "Execute 'make install-cli' to install the highlight CLI ('make cli')."
  	@echo "Execute 'make install-gui' to install the highlight GUI ('make gui')."
  	@echo "Do not hesitate to report problems. Unknown bugs are hard to fix."
@@ -98,7 +98,7 @@ Use pkgsrc-provided paths and tools.
  install-gui:
  	@echo "Installing files for the GUI..."
  	${MKDIR} ${DESTDIR}${data_dir} \
-@@ -148,8 +153,8 @@ uninstall:
+@@ -141,8 +146,8 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
