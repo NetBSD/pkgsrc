@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2802 2021/05/13 10:23:20 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2803 2021/05/13 11:06:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4360,3 +4360,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/lua-sec to 1.0.1 [nia 2021-05-13]
 	Updated devel/lua-penlight to 1.10.0 [nia 2021-05-13]
 	Updated devel/lua-luv to 1.41.0 [nia 2021-05-13]
+	Removed databases/mariadb55-client successor databases/mariadb104-client [nia 2021-05-13]
+	Removed databases/mariadb55-server successor databases/mariadb104-server [nia 2021-05-13]
