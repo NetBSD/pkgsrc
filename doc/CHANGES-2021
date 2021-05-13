@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2814 2021/05/13 17:50:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2815 2021/05/13 18:34:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-typing-extensions to 3.10.0.0 [adam 2021-05-13]
 	Updated security/py-asyncssh to 2.6.0 [adam 2021-05-13]
 	Updated textproc/py-xlsxwriter to 1.4.3 [adam 2021-05-13]
+	Updated sysutils/xplr to 0.9.0 [pin 2021-05-13]
