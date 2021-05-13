@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3388 2021/05/13 12:17:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3389 2021/05/13 12:24:01 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -428,7 +428,6 @@ SUBDIR+=	go-flags-svent
 SUBDIR+=	go-fnmatch
 SUBDIR+=	go-fs
 SUBDIR+=	go-fsnotify
-SUBDIR+=	go-fsync
 SUBDIR+=	go-gitmap
 SUBDIR+=	go-glog
 SUBDIR+=	go-gls
