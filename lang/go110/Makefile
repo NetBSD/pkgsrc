@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/13 09:32:26 nia Exp $
 
 PKGREVISION= 2
 .include "../../lang/go/version.mk"
@@ -8,7 +8,6 @@ DISTNAME=	go${GO110_VERSION}.src
 PKGNAME=	go110-${GO110_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
-EXTRACT_USING=	bsdtar
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://golang.org/
