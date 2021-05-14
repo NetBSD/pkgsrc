@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/04 14:25:52 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/14 11:14:42 nia Exp $
 #
 
 DISTNAME=	qsubst-20010422
@@ -17,4 +17,5 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
