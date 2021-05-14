@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/02/07 06:30:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2021/05/14 13:52:37 nia Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
@@ -49,6 +49,7 @@ pre-configure:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
