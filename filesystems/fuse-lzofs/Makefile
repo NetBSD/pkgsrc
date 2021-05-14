@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/14 14:17:41 nia Exp $
 #
 
 DISTNAME=	LZOlayer_fs-20060306
@@ -20,5 +20,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lzo_fs ${DESTDIR}${PREFIX}/bin/lzo_fs
 
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
