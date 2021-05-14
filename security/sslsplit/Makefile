@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/09/07 07:58:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/14 11:48:28 nia Exp $
 
 DISTNAME=	sslsplit-0.5.5
 PKGREVISION=	1
@@ -27,6 +27,7 @@ do-install:
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libnet11/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
