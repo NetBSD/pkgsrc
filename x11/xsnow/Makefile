@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/04/21 11:43:04 adam Exp $
+# $NetBSD: Makefile,v 1.36 2021/05/14 10:17:11 nia Exp $
 
 DISTNAME=	xsnow-3.2.2
 PKGREVISION=	1
@@ -14,9 +14,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
