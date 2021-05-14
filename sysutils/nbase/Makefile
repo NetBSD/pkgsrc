@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/20 13:22:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 11:27:52 nia Exp $
 #
 
 DISTNAME=	nbase-7.0.0.7
@@ -14,7 +14,7 @@ GITHUB_PROJECT=	nbase
 BUILD_DEPENDS+=	mk-configure>=0.34.0:../../devel/mk-configure
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		lex byacc
+USE_TOOLS+=		flex:run byacc
 
 TEST_TARGET=		test
 
