@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/16 08:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/14 12:28:10 nia Exp $
 
 DISTNAME=	opentracker-0.0.20180526
 PKGREVISION=	1
@@ -28,4 +28,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/opentracker.conf.sample ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../devel/libowfat/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
