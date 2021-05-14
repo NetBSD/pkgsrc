@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 15:49:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/14 10:26:28 nia Exp $
 bin/nb
+share/nanoblogger/COPYING
+share/nanoblogger/ChangeLog
+share/nanoblogger/README
+share/nanoblogger/TODO
 share/nanoblogger/copyright
 share/nanoblogger/default/articles/example.txt
 share/nanoblogger/default/blog.conf
