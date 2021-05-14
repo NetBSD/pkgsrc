@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:32:26 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/14 09:48:59 nia Exp $
 bin/xonotic-dedicated
 bin/xonotic-glx
 bin/xonotic-sdl
@@ -19,6 +19,6 @@ share/xonotic/data/xonotic-20170401-nexcompat.pk3
 share/xonotic/xonotic-linux-dedicated.sh
 share/xonotic/xonotic-linux-glx.sh
 share/xonotic/xonotic-linux-sdl.sh
-share/xonotic/xonotic-linux32-dedicated
-share/xonotic/xonotic-linux32-glx
-share/xonotic/xonotic-linux32-sdl
+share/xonotic/xonotic-${FAKE_PLATFORM}-dedicated
+share/xonotic/xonotic-${FAKE_PLATFORM}-glx
+share/xonotic/xonotic-${FAKE_PLATFORM}-sdl
