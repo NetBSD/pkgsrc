@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 12:15:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/14 11:57:09 nia Exp $
 #
 
 DISTNAME=	duo_unix-1.11.4
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE+=	lib/libduo.pc.in
 
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--enable-lib64=no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/duo-unix
