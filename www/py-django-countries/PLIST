@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/10 06:06:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/14 18:58:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,8 +48,6 @@ ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.po
-${PYSITELIB}/django_countries/locale/en/LC_MESSAGES/django.mo
-${PYSITELIB}/django_countries/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/es/LC_MESSAGES/django.mo
@@ -110,8 +108,10 @@ ${PYSITELIB}/django_countries/locale/sr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sr@latin/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sr@latin/LC_MESSAGES/django.po
-${PYSITELIB}/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.mo
-${PYSITELIB}/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/sr_Latn/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/sr_Latn/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/sr_Latn_BA/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/sr_Latn_BA/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sv/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/tr_TR/LC_MESSAGES/django.mo
