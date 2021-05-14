@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/08/31 18:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2021/05/14 11:34:42 nia Exp $
 #
 
 DISTNAME=	lavaps-2.7
@@ -13,7 +13,7 @@ COMMENT=	Lava lamp of currently running processes
 MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl pod2man pod2html
+USE_TOOLS+=	perl pod2man pod2html gmake
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-tcltk \
