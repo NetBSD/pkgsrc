@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/04/21 11:43:02 adam Exp $
+# $NetBSD: Makefile,v 1.23 2021/05/14 10:21:24 nia Exp $
 
 DISTNAME=	rofi-1.6.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/DaveDavenport/rofi
 COMMENT=	Window switcher, run dialog and dmenu replacement
 LICENSE=	x11
 
-USE_TOOLS+=	pkg-config bash bison
+USE_TOOLS+=	pkg-config bash flex bison
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	YACC='bison -y'
