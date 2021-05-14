@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:19 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/14 11:06:43 nia Exp $
 #
 
 DISTNAME=	xmlindent-0.2.16
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cs.helsinki.fi/u/penberg/xmlindent/src/
 COMMENT=	XML stream reformatter written in ANSI C
 
-USE_TOOLS+=	lex:run
+USE_TOOLS+=	flex:run
 
 GCC_REQD+=	3.0
 
