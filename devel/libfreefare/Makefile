@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/01/19 18:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/14 14:44:27 nia Exp $
 
 DISTNAME=	libfreefare-0.4.0
 CATEGORIES=	devel
@@ -16,5 +16,5 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
 .include "../../devel/libnfc/buildlink3.mk"
-
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
