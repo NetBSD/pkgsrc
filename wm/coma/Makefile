@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/17 20:20:15 leot Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 10:57:51 nia Exp $
 
 DISTNAME=	coma-1.1
 PKGREVISION=	1
@@ -22,6 +22,10 @@ USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../devel/libbsd/buildlink3.mk"
+.endif
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
