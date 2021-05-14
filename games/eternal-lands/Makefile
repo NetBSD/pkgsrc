@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/21 11:41:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/14 07:02:08 nia Exp $
 
 EL_VER=		1.9.5.8
 PKGNAME=	eternal-lands-${EL_VER}
@@ -79,6 +79,7 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/cal3d/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
