@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/22 20:51:31 leot Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/14 11:18:18 nia Exp $
 
 DISTNAME=	DWB3.3
 PKGNAME=	DWB-${GITHUB_TAG}
@@ -14,7 +14,7 @@ LICENSE=	epl-v1.0
 
 MAKE_FILE=	dwb.mk
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	lex yacc
+USE_TOOLS+=	flex yacc
 MAKE_JOBS_SAFE=	no
 
 MAKE_ENV+=	CFLGS=${CFLAGS:Q} LDFLGS=${LDFLAGS:Q}
