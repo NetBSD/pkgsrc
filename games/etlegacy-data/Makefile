@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/26 11:32:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/14 07:18:58 nia Exp $
 
 DISTNAME=	et260b.x86_full
 PKGNAME=	etlegacy-data-2.60b
@@ -31,7 +31,7 @@ PAK3_FILES=		pak0.pk3 pak1.pk3 pak2.pk3
 CHECK_PORTABILITY_SKIP+=	et260b.x86_keygen_V03.run
 
 do-build:
-	cd ${WRKSRC} && ${TAIL} +402 ./et260b.x86_keygen_V03.run | ${TAR} xzf -
+	cd ${WRKSRC} && ${TAIL} -n +402 ./et260b.x86_keygen_V03.run | ${TAR} xzf -
 
 do-install:
 .for file in ${PAK3_FILES}
