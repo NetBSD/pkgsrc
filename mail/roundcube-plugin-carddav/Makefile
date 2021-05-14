@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/03/11 14:35:52 triaxx Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/14 13:44:31 nia Exp $
 
 DISTNAME=	carddav-v4.0.4
 PKGREVISION=	1
@@ -13,6 +13,8 @@ HOMEPAGE=	https://www.benjamin-schieder.de/carddav.html
 MAINTAINER=	triaxx@NetBSD.org
 COMMENT=	CardDAV adapter for Roundcube
 LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,7 +66,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${CDDIR}/carddav.php
 .for i in ${CD_SUBDIRS}
 	cd ${WRKSRC}/${i} && ${FIND} . -type f -print | \
-		pax -rw ${DESTDIR}${PREFIX}/${CDDIR}/${i}
+		${PAX} -rw ${DESTDIR}${PREFIX}/${CDDIR}/${i}
 	${FIND} ${DESTDIR}${PREFIX}/${CDDIR}/${i} -type f | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
 	${FIND} ${DESTDIR}${PREFIX}/${CDDIR}/${i} -type d | \
