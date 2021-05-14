@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/11/26 16:07:11 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/05/14 11:37:07 nia Exp $
 
 DISTNAME=	fdupes-2.1.2
 CATEGORIES=	sysutils
@@ -14,4 +14,5 @@ USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 
 .include "../../devel/pcre2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
