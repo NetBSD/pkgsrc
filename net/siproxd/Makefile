@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/09/15 20:18:47 hauke Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/14 12:10:53 nia Exp $
 
 DISTNAME=	siproxd-0.8.3
 #PKGREVISION=	1
@@ -71,6 +71,7 @@ post-install:
 # siproxd's configure does not check for PTHREAD_LDFLAGS
 PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
