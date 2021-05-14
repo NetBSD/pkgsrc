@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/11/04 21:43:36 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2021/05/14 11:17:34 nia Exp $
 
 DISTNAME=	glimpse-4.18.6
 CATEGORIES=	textproc databases
@@ -14,7 +14,7 @@ CONFLICTS+=	tre>=0.7.5nb6
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake lex
+USE_TOOLS+=		gmake flex
 GNU_CONFIGURE=		yes
 MAKE_FLAGS=		mandir=${PREFIX}/${PKGMANDIR}/man1
 INSTALLATION_DIRS=	share/doc/glimpse
