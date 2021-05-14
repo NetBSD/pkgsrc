@@ -1,0 +1,26 @@
+$NetBSD: patch-build_Makefile,v 1.1 2021/05/14 13:35:47 nia Exp $
+
+Honor environment.
+
+--- build/Makefile.orig	2010-04-27 06:31:00.000000000 +0000
++++ build/Makefile
+@@ -7,17 +7,14 @@ BUILD_DIR = $(addsuffix _build,$(BINARY)
+ DEPEND = $(BUILD_DIR)/depend
+ COMMON_DIR = ../src/common
+ MAIN_DIR = ../src/$(BINARY)
+-LEX = flex
+ LFLAGS = -8
+-YACC = bison
+ YFLAGS = -d
+-CC = gcc
+ IFLAGS = -I$(COMMON_DIR) -I$(MAIN_DIR) -I$(BUILD_DIR) 
+ ifneq ($(strip $(LOCALES)),)
+ MOFLAGS = -DMO_DIR=\"$(MO_DIR)\" 
+ endif
+-CFLAGS = -Wall -D__$(BINARY)__ $(IFLAGS) $(MOFLAGS)
+-LDFLAGS = -lncurses -lreadline -lm
++CFLAGS += -Wall -D__$(BINARY)__ $(IFLAGS) $(MOFLAGS)
++LDFLAGS += -lncurses -lreadline -lm
+ VPATH = $(COMMON_DIR):$(MAIN_DIR):$(BUILD_DIR)
+ 
+ $(BINARY):
