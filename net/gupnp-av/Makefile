@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2021/04/21 11:40:33 adam Exp $
+# $NetBSD: Makefile,v 1.46 2021/05/14 13:12:06 nia Exp $
 
 DISTNAME=	gupnp-av-0.12.7
 PKGREVISION=	19
@@ -18,5 +18,6 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	gupnp-av-1.0.pc.in
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
