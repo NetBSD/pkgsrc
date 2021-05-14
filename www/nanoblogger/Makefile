@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:34 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 10:26:28 nia Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
@@ -30,7 +30,7 @@ INSTALLATION_DIRS=	bin share/nanoblogger
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/nb ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/ && pax -rw -pp [a-z]* \
+	cd ${WRKSRC}/ && ${PAX} -rw -pp [A-Za-z]* \
 		${DESTDIR}${PREFIX}/share/nanoblogger
 
 .include "../../mk/bsd.pkg.mk"
