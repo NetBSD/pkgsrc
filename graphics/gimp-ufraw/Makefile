@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2021/04/21 11:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.125 2021/05/14 14:09:05 nia Exp $
 
 # Note that upstream has replaced tarballs without changing the
 # version number (e.g., 0.19.2 had two different tarballs).
@@ -48,6 +48,7 @@ PKG_SUGGESTED_OPTIONS=	lensfun
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/gtkimageview/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
