@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:50 leot Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/14 07:03:28 nia Exp $
 
 DISTNAME=	endless-sky-0.9.12
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Side-scrolling space trading game
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc-by-sa-v3.0
 
 USE_LANGUAGES=	c++11
-ICON_THEMES=	yes
+USE_TOOLS+=	pax
 BUILD_DIRS+=	. source
 
 post-extract:
@@ -30,7 +30,5 @@ post-extract:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-#.include "../../graphics/libjpeg-turbo.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
