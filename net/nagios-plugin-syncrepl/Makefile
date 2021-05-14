@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 13:05:45 nia Exp $
 #
 
 PKGNAME=	nagios-plugin-syncrepl-${DISTNAME:C/.*-//}
@@ -18,4 +18,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/check_syncrepl \
 	    ${DESTDIR}${PREFIX}/libexec/nagios/
 
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
