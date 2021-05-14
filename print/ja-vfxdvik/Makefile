@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 21:50:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2021/05/14 12:02:10 nia Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -67,6 +67,7 @@ CONFIGURE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/ja-vflib-lib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
