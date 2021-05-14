@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/08/10 13:49:15 nia Exp $
+# $NetBSD: Makefile,v 1.27 2021/05/14 13:16:53 nia Exp $
 
 DISTNAME=	bftpd-5.6
 CATEGORIES=	net
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
+
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 WRKSRC=		${WRKDIR}/bftpd
 
