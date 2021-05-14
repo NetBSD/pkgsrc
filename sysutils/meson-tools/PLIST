@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/16 18:33:22 martin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/14 11:30:26 nia Exp $
 bin/amlbootsig
 bin/amlinfo
 bin/unamlbootsig
-
