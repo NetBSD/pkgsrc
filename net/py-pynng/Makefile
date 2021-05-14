@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/13 19:35:54 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/14 12:31:52 nia Exp $
 
 DISTNAME=	pynng-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,11 +13,12 @@ LICENSE=	mit
 
 USE_TOOLS+=	cmake
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../devel/libatomic/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
