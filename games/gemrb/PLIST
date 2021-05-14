@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/31 12:46:21 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/14 07:40:18 nia Exp $
 bin/extend2da.py
 bin/gemrb
 lib/gemrb/libgemrb_core.so
@@ -8,6 +8,7 @@ lib/gemrb/plugins/ACMReader.so
 lib/gemrb/plugins/AREImporter.so
 lib/gemrb/plugins/BAMImporter.so
 lib/gemrb/plugins/BIFImporter.so
+lib/gemrb/plugins/BIKPlayer.so
 lib/gemrb/plugins/BMPImporter.so
 lib/gemrb/plugins/BMPWriter.so
 lib/gemrb/plugins/CHUImporter.so
