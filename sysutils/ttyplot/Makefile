@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/15 08:43:47 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/14 11:21:51 nia Exp $
 
 DISTNAME=	ttyplot-1.4
 CATEGORIES=	sysutils
@@ -25,4 +25,5 @@ do-install:
 	${RUN}${INSTALL_PROGRAM} ${WRKSRC}/ttyplot ${DESTDIR}${PREFIX}/bin
 	${RUN}${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
