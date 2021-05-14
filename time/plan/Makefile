@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/09/03 08:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/05/14 11:40:39 nia Exp $
 
 DISTNAME=	plan-1.9
 PKGREVISION=	1
@@ -11,6 +11,11 @@ COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	Makefile
+SUBST_SED.paths+=	-e "s,/usr/X11R6,${X11BASE},g"
 
 INSTALLATION_DIRS=	libexec/plan ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 \
 			share/plan/holiday
