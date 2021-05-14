@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/12/03 10:45:54 ast Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/14 10:28:21 nia Exp $
 
 DISTNAME=	nostromo-1.9.9
 PKGREVISION=	3
@@ -16,6 +16,9 @@ MAKE_FILE=	GNUmakefile
 
 RCD_SCRIPTS=	nostromo
 EGDIR=		share/examples/nostromo
+
+# Otherwise, libmy gets linked before it is generated
+MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	sbin share/examples/rc.d ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	${EGDIR}
@@ -37,4 +40,5 @@ SUBST_SED.nostromo+=	-e 's,/var/nostromo,${DESTDIR}${PREFIX}/${EGDIR},g'
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
