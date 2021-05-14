@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2019/12/10 22:22:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/05/14 07:13:14 nia Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
@@ -62,3 +62,4 @@ do-install:
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
