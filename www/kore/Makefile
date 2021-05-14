@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/04/21 13:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/14 10:45:34 nia Exp $
 
 DISTNAME=	kore-4.1.0
 REVISION=	1
@@ -14,6 +14,7 @@ LICENSE=	isc
 USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	gmake
 
+MAKE_FLAGS+=	OPENSSL_PATH=${SSLBASE}
 MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	TASKS=1
 
@@ -27,5 +28,5 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kore-serve ${DESTDIR}${PREFIX}/bin
 
 .include "options.mk"
-
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
