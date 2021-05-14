@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2021/05/02 10:24:49 nia Exp $
+# $NetBSD: Makefile,v 1.121 2021/05/14 14:15:36 nia Exp $
 #
 
 VERSION=		1.9
@@ -11,8 +11,9 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/viking/
 COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
-
 LICENSE=		gnu-gpl-v2
+
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # viking says it "will" use c++11, and mapnik (not yet included) needs
 # c++11.
