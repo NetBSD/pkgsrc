@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/04/21 13:25:12 adam Exp $
+# $NetBSD: Makefile,v 1.49 2021/05/14 12:29:19 nia Exp $
 
 DISTNAME=	ntopng-4.0
 PKGREVISION=	5
@@ -61,4 +61,5 @@ post-build:
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
