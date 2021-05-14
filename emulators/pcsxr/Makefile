@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 12:23:03 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/14 06:58:31 nia Exp $
 
 DISTNAME=	pcsxr-1.9.95.20190306
 CATEGORIES=	emulators
@@ -32,5 +32,6 @@ NOT_PAX_MPROTECT_SAFE=	bin/pcsxr
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
