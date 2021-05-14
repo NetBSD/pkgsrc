@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2017/11/12 15:36:58 khorben Exp $
+# $NetBSD: options.mk,v 1.4 2021/05/14 12:54:18 nia Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--without-kerberos
 
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
-CONFIGURE_ARGS+=       --with-ldap=yes
+CONFIGURE_ARGS+=       --with-ldap=${BUILDLINK_PREFIX.openldap-client}
 .else
 CONFIGURE_ARGS+=       --with-ldap=no
 .endif
