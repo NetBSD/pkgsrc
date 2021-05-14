@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2021/05/14 10:51:45 nia Exp $
+lib/firefox52/fonts/EmojiOneMozilla.ttf
+lib/firefox52/libmozsandbox.so
+lib/firefox52/modules/Profiler.jsm
