@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/05/02 08:16:40 nia Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/14 12:11:55 nia Exp $
 
 DISTNAME=	sayaka-3.5.1
 PKGREVISION=	1
@@ -24,6 +24,10 @@ INSTALLATION_DIRS+=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sayaka ${DESTDIR}${PREFIX}/bin
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../devel/libbsd/buildlink3.mk"
+.endif
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
