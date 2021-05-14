@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2817 2021/05/14 06:56:52 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2818 2021/05/14 07:13:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4381,3 +4381,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ikiwiki to 3.20200202.3nb4 [schmonz 2021-05-14]
 	Updated devel/py-gitpython to 3.1.17 [adam 2021-05-14]
 	Updated devel/py-faker to 8.1.4 [adam 2021-05-14]
+	Updated net/py-botocore to 1.20.72 [adam 2021-05-14]
+	Updated net/py-s3transfer to 0.4.2 [adam 2021-05-14]
+	Updated net/py-boto3 to 1.17.72 [adam 2021-05-14]
+	Updated net/py-awscli to 1.19.72 [adam 2021-05-14]
