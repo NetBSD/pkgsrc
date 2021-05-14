@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/11/26 10:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/14 11:19:37 nia Exp $
 
 DISTNAME=	xfsprogs-2.7.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -27,6 +27,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=
 
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
