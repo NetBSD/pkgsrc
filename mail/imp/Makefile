@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2021/04/24 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2021/05/14 13:49:28 nia Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -102,7 +102,7 @@ do-install:
 		${INSTALL_DATA_DIR} ${DESTDIR}${IMPDIR}/${d}
 .endfor
 .for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${IMPDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${DESTDIR}${IMPDIR}/${d}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${IMPDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${IMPDIR}
