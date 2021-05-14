@@ -1,6 +1,7 @@
-$NetBSD: patch-src_google_protobuf_stubs_port.h,v 1.1 2021/05/14 19:36:47 wiz Exp $
+$NetBSD: patch-src_google_protobuf_stubs_port.h,v 1.2 2021/05/14 20:46:21 wiz Exp $
 
 Fix parentheses.
+https://github.com/protocolbuffers/protobuf/pull/8613/commits/88af5d829c133995b88882370b5813600e4d060c
 
 --- src/google/protobuf/stubs/port.h.orig	2021-05-12 23:23:56.000000000 +0000
 +++ src/google/protobuf/stubs/port.h
