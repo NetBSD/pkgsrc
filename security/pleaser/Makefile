@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/04/25 19:58:20 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/05/14 11:50:31 nia Exp $
 
 DISTNAME=	please-0.4.1
 PKGNAME=	pleaser-0.4.1
@@ -39,4 +39,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/please.ini.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/please.ini.5
 
 .include "../../lang/rust/cargo.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
