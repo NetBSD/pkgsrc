@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/14 14:43:00 nia Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -51,4 +51,5 @@ do-install:
 		${DESTDIR}${PREFIX:Q}/share/nsis
 
 .include "../../devel/scons/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
