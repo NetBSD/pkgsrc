@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/02 10:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/14 10:19:13 nia Exp $
 
 DISTNAME=	wxWidgets-3.1.4
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK31/}
@@ -91,6 +91,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
