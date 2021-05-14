@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/10/05 18:53:37 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/14 09:48:59 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
 PKGREVISION=	3
@@ -24,6 +24,14 @@ INSTALL_ENV+=	LIBDIR=${PREFIX}/share/xonotic
 
 ICON_SIZES=	16 24 32 64 128 256 512
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+PLIST_SUBST+=	FAKE_PLATFORM="linux64"
+.else
+PLIST_SUBST+=	FAKE_PLATFORM="linux32"
+.endif
+
 INSTALLATION_DIRS+=	share/applications
 .for s in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
@@ -37,7 +45,6 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/xonotic.png
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
