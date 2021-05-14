@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/24 19:47:11 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/14 13:30:56 nia Exp $
 
 DISTNAME=	kalk-0.3.14
 CATEGORIES=	math
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kalk.strct.net/
 COMMENT=	CLI calculator supporting user defined variables and functions
 LICENSE=	mit
+
+USE_TOOLS=	m4
 
 .include "cargo-depends.mk"
 
