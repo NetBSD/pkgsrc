@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 16:35:38 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 13:54:01 nia Exp $
 
 DISTNAME=		mopher-0.5.3
 PKGREVISION=		1
@@ -9,6 +9,8 @@ OWNER=			petar@smokva.net
 HOMEPAGE=		http://mopher.org/
 COMMENT=		Versatile mail filter
 LICENSE=		mit
+
+BDB_ACCEPTED=		db1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,5 +70,6 @@ pre-build:
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
