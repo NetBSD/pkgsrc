@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.31 2021/03/09 16:49:12 martin Exp $
+# $NetBSD: u-boot.mk,v 1.32 2021/05/14 11:21:07 nia Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -30,7 +30,7 @@ COMMENT=	Das U-Boot, the Universal Boot Loader (${UBOOT_CONFIG})
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake gsed pkg-config gawk
+USE_TOOLS+=		bison flex gmake gsed pkg-config gawk
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 
