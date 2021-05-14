@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 05:26:26 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/14 11:10:07 nia Exp $
 #
 
 DISTNAME=	mrbs-1.4.11
@@ -10,6 +10,8 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://mrbs.sourceforge.io/
 COMMENT=	Meeting Room Booking System
 LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	pax
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.0:../../converters/php-iconv
 
@@ -94,7 +96,7 @@ do-install:
 		\! -name '*.orig' \! -name config.inc.php  \! -name .htaccess \
 		\! -path './site_faq/*' \
 		-print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/share/mrbs
+		${PAX} -rw -pmp ${DESTDIR}${PREFIX}/share/mrbs
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
