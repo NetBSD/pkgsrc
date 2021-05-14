@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/21 11:41:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/14 06:53:47 nia Exp $
 
 DISTNAME=	bsnes-115
 PKGREVISION=	4
@@ -72,5 +72,6 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXrandr/buildlink3.mk"
+.  include "../../x11/libXv/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
