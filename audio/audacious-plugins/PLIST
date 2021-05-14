@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/03/04 10:57:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/05/14 06:42:48 nia Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -24,6 +24,7 @@ lib/audacious/General/cd-menu-items.so
 lib/audacious/General/delete-files.so
 lib/audacious/General/gtkui.so
 lib/audacious/General/hotkey.so
+${PLIST.lirc}lib/audacious/General/lirc.so
 lib/audacious/General/lyricwiki-qt.so
 ${PLIST.dbus}lib/audacious/General/mpris2.so
 lib/audacious/General/playlist-manager-qt.so
