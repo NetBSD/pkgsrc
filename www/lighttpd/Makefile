@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2021/04/21 11:42:54 adam Exp $
+# $NetBSD: Makefile,v 1.98 2021/05/14 11:11:00 nia Exp $
 
 DISTNAME=	lighttpd-1.4.59
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +17,8 @@ USE_TOOLS+=			pkg-config
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-pcre
+# used for digest auth when no SSL library is available
+CONFIGURE_ARGS+=		--without-nettle
 TEST_TARGET=			check
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}

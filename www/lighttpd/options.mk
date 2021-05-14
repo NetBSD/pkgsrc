@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.25 2020/12/01 09:44:12 schmonz Exp $
+# $NetBSD: options.mk,v 1.26 2021/05/14 11:11:00 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=		brotli bzip2 fam gdbm inet6 ldap libdbi lua mysql ssl memcached geoip gssapi webdav
-PKG_SUGGESTED_OPTIONS=		inet6 ssl
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls nss openssl wolfssl
+PKG_SUPPORTED_OPTIONS+=		brotli bzip2 fam gdbm inet6 ldap libdbi lua
+PKG_SUPPORTED_OPTIONS+=		mysql memcached geoip gssapi webdav
+PKG_SUGGESTED_OPTIONS=		inet6 openssl
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		gdbm geoip gssapi ldap libdbi lua memcached mysql ssl
 
 ###
 ### Allow using brotli as a compression method in the "deflate" module.
@@ -34,15 +35,20 @@ CONFIGURE_ARGS+=	--without-bzip2
 .if !empty(PKG_OPTIONS:Mfam)
 .  include "../../mk/fam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-fam
+.else
+CONFIGURE_ARGS+=	--without-fam
 .endif
 
 ###
 ### Support using GDBM for storage in the "trigger before download" module.
 ###
+PLIST_VARS+=		gdbm
 .if !empty(PKG_OPTIONS:Mgdbm)
 .  include "../../databases/gdbm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gdbm
 PLIST.gdbm=		yes
+.else
+CONFIGURE_ARGS+=	--without-gdbm
 .endif
 
 ###
@@ -57,15 +63,19 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 ### Allow using LDAP for "basic" authentication.
 ###
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
 PLIST.ldap=		yes
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 ###
 ### libdbi
 ###
+PLIST_VARS+=		libdbi
 .if !empty(PKG_OPTIONS:Mlibdbi)
 .  include "../../databases/libdbi/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-dbi
@@ -77,67 +87,124 @@ CONFIGURE_ARGS+=	--without-dbi
 ###
 ### Support enabling the Cache Meta Language module with the Lua engine.
 ###
+PLIST_VARS+=		lua
 .if !empty(PKG_OPTIONS:Mlua)
 .  include "../../lang/lua/buildlink3.mk"
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-lua
+PLIST.lua=		yes
+.else
+CONFIGURE_ARGS+=	--without-lua
 .endif
 
 ###
 ### Support using memcached as an in-memory caching system for the
 ### "trigger before download" and CML modules.
 ###
+PLIST_VARS+=		memcached
 .if !empty(PKG_OPTIONS:Mmemcached)
 .  include "../../devel/libmemcached/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-memcached
 PLIST.memcached=	yes
+.else
+CONFIGURE_ARGS+=	--without-memcached
 .endif
 
 ###
 ### Allow using MySQL for virtual host configuration.
 ###
+PLIST_VARS+=		mysql
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
 MYSQL_CONFIG?=		${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config
 CONFIGURE_ARGS+=	--with-mysql=${MYSQL_CONFIG:Q}
 PLIST.mysql=		yes
+.else
+CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 ###
-### HTTPS support
+### HTTPS support via GnuTLS
 ###
-.if !empty(PKG_OPTIONS:Mssl)
-.  include "../../security/nettle/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-nettle
+PLIST_VARS+=		gnutls
+.if !empty(PKG_OPTIONS:Mgnutls)
+.  include "../../security/gnutls/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gnutls=${BUILDLINK_PREFIX.gnutls}
+PLIST.gnutls=		yes
+.else
+CONFIGURE_ARGS+=	--without-gnutls
+.endif
+
+###
+### HTTPS support via mbedTLS
+###
+PLIST_VARS+=		mbedtls
+.if !empty(PKG_OPTIONS:Mmbedtls)
+.  include "../../security/mbedtls/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mbedtls=${BUILDLINK_PREFIX.mbedtls}
+PLIST.mbedtls=		yes
+.else
+CONFIGURE_ARGS+=	--without-mbedtls
+.endif
+
+###
+### HTTPS support via nss
+###
+PLIST_VARS+=		nss
+.if !empty(PKG_OPTIONS:Mnss)
+.  include "../../devel/nss/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-nss=${BUILDLINK_PREFIX.nss}
+PLIST.nss=		yes
+.else
+CONFIGURE_ARGS+=	--without-nss
+.endif
+
+###
+### HTTPS support via OpenSSL
+###
+PLIST_VARS+=		openssl
+.if !empty(PKG_OPTIONS:Mopenssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-PLIST.ssl=		yes
+PLIST.openssl=		yes
+.else
+CONFIGURE_ARGS+=	--without-openssl
+.endif
+
+###
+### HTTPS support via WolfSSL
+###
+PLIST_VARS+=		wolfssl
+.if !empty(PKG_OPTIONS:Mwolfssl)
+.  include "../../security/wolfssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-wolfssl=${BUILDLINK_PREFIX.wolfssl}
+PLIST.wolfssl=		yes
+.else
+CONFIGURE_ARGS+=	--without-wolfssl
 .endif
 
 ###
 ### GeoIP support
 ###
+PLIST_VARS+=		geoip
 .if !empty(PKG_OPTIONS:Mgeoip)
 .  include "../../geography/libmaxminddb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-maxminddb
 PLIST.geoip=		yes
+.else
+CONFIGURE_ARGS+=	--without-maxminddb
 .endif
 
 ###
 ### gssapi
 ###
+PLIST_VARS+=		gssapi
 .if !empty(PKG_OPTIONS:Mgssapi)
 .include "../../security/mit-krb5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-krb5
 PLIST.gssapi=		yes
-.endif
-
-###
-### lua
-###
-.if !empty(PKG_OPTIONS:Mlua)
-.  include "../../lang/lua/buildlink3.mk"
-PLIST.lua=		yes
+.else
+CONFIGURE_ARGS+=	--without-krb5
 .endif
 
 ###
