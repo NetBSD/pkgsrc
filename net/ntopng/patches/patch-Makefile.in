@@ -1,0 +1,45 @@
+$NetBSD: patch-Makefile.in,v 1.6 2021/05/14 12:57:27 nia Exp $
+
+Don't build an internal copy of Lua...
+
+--- Makefile.in.orig	2020-03-27 16:51:24.000000000 +0000
++++ Makefile.in
+@@ -29,19 +29,6 @@ MONGOOSE_HOME=${PWD}/third-party/mongoos
+ MONGOOSE_INC=-I$(MONGOOSE_HOME)
+ ######
+ 
+-LUA_PLATFORM=generic
+-
+-ifeq ($(OS),Linux)
+-	LUA_PLATFORM=linux
+-else ifeq ($(OS),Darwin)
+-	LUA_PLATFORM=macosx
+-else ifeq ($(OS), $(filter $(OS), FreeBSD))
+-	LUA_PLATFORM=freebsd
+-endif
+-
+-LUA_HOME=${PWD}/third-party/lua-5.3.5
+-LUA_INC=-I$(LUA_HOME)/src
+-LUA_LIB=$(LUA_HOME)/src/liblua.a
+ 
+ ######
+ LIBRRDTOOL_HOME=${PWD}/third-party/rrdtool-1.4.8
+@@ -121,8 +108,6 @@ RPM_PKG = $(TARGET)-$(NTOPNG_VERSION)-@R
+ RPM_DATA_PKG = $(TARGET)-data-$(NTOPNG_VERSION)-@REVISION@.noarch.rpm
+ ######
+ 
+-LIB_TARGETS = $(LUA_LIB)
+-
+ ifneq ($(HAS_ZEROMQ), 0)
+ LIB_TARGETS += $(ZEROMQ_LIB)
+ endif
+@@ -162,9 +147,6 @@ test_alert_engine: $(OBJECTS_NO_MAIN) $(
+ 	$(MAKE) CPPFLAGS="${CPPFLAGS} -DTEST_CHECK_ENGINE" src/AlertCheckLuaEngine.o
+ 	$(GPP) $(OBJECTS_NO_MAIN) -Wall $(NLIBS) -o $@
+ 
+-$(LUA_LIB):
+-	cd $(LUA_HOME); @GMAKE@ $(LUA_PLATFORM)
+-
+ $(ZEROMQ_LIB):
+ 	cd $(ZEROMQ_HOME); ./configure --without-documentation --without-libsodium; @GMAKE@
+ 
