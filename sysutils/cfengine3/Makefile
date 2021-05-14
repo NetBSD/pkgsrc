@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/04/21 13:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.30 2021/05/14 11:38:52 nia Exp $
 
 DISTNAME=	cfengine-3.15.2
 PKGREVISION=	3
@@ -104,5 +104,6 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
