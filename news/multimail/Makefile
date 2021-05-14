@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/06 12:50:28 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/14 12:15:02 nia Exp $
 
 DISTNAME=	mmail-0.52
 CATEGORIES=	news
@@ -14,12 +14,6 @@ DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
-
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Adjust Makefile
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e '/^	OPTS/ s,-O2,$${CXXFLAGS},'
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
