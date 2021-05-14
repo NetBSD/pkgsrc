@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/04/19 01:16:37 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/14 13:18:52 nia Exp $
 
 DISTNAME=	gst-transcoder-1.16.0
 PKGNAME=	${DISTNAME:S/^gst/gst-plugins1/1}
@@ -26,8 +26,11 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output
 
 MESON_ARGS+=	-Ddisable_doc=true
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
