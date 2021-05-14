@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/08/01 16:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/14 13:13:21 nia Exp $
 #
 
 DISTNAME=	giFT-FastTrack-0.8.9
@@ -17,5 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/gift/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
