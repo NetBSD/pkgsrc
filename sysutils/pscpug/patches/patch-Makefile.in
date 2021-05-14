@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/05/14 11:26:47 nia Exp $
+
+- Honor LDFLAGS when linking.
+- Use BSD_INSTALL_xx for installation.
+
+--- Makefile.in.orig	2009-03-11 18:28:57.000000000 +0000
++++ Makefile.in
+@@ -23,11 +23,11 @@ OBJ = ${SRC:.c=.o}
+ all : ${EXE}
+ 
+ ${EXE} : ${OBJ}
+-	@CC@ -o $@ ${OBJ} @LIBS@
++	@CC@ @LDFLAGS@ -o $@ ${OBJ} @LIBS@
+ 
+ install :
+-	@INSTALL_DATA@ ${EXE} @bindir@
+-	@INSTALL@ -m 644 ${MAN} @mandir@/man1/
++	${BSD_INSTALL_PROGRAM} ${EXE} ${DESTDIR}@bindir@
++	${BSD_INSTALL_MAN} ${MAN} ${DESTDIR}@mandir@/man1/
+ 
+ clean :
+ 	-rm -f ${OBJ} ${EXE} config.log config.status configure.lineno Makefile .DS_Store
