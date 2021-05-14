@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/04/10 09:10:11 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/05/14 11:52:15 nia Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.10.4
 CATEGORIES=	security
@@ -20,4 +20,5 @@ CONFIGURE_ARGS+=	--without-openssl-header-check
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
