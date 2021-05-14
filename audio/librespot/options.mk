@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/11/29 22:46:02 nia Exp $
+# $NetBSD: options.mk,v 1.4 2021/05/14 07:07:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.librespot
 PKG_SUPPORTED_OPTIONS=		alsa gstreamer jack portaudio pulseaudio rodio sdl
@@ -8,12 +8,14 @@ PKG_SUGGESTED_OPTIONS=		portaudio
 
 .if !empty(PKG_OPTIONS:Malsa)
 CARGO_FEATURES+=	alsa-backend
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.alsa-lib}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.alsa-lib}/lib
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CARGO_FEATURES+=	gstreamer-backend
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.gstreamer1}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .endif
@@ -27,12 +29,16 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.jack}/lib
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 CARGO_FEATURES+=	portaudio-backend
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.portaudio}/lib
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.portaudio}/${BUILDLINK_LIBDIRS.portaudio}
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.portaudio}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.portaudio}/${BUILDLINK_LIBDIRS.portaudio}
 .include "../../audio/portaudio/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 CARGO_FEATURES+=	pulseaudio-backend
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
