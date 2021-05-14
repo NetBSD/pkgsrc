@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2006/02/02 18:21:00 joerg Exp $
+$NetBSD: patch-src_lib_Makefile.in,v 1.1 2021/05/14 14:13:22 nia Exp $
 
---- src/lib/Makefile.in.orig	2006-02-02 18:13:49.000000000 +0000
+Honor LDFLAGS.
+
+--- src/lib/Makefile.in.orig	2004-07-30 03:29:18.000000000 +0000
 +++ src/lib/Makefile.in
-@@ -92,7 +92,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+@@ -92,7 +92,6 @@ AUTOMAKE_OPTIONS = 1.4 foreign
  # A list of all the files in the current directory which can be regenerated
  MAINTAINERCLEANFILES = Makefile.in
  
 -LDFLAGS = -L/usr/local/lib
-+LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  INCLUDES = -I/usr/local/include 		       -I$(includedir) 		       @my_includes@
  
  
