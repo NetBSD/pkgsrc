@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/04/21 13:24:53 adam Exp $
+# $NetBSD: Makefile,v 1.61 2021/05/14 14:05:06 nia Exp $
 
 DISTNAME=	uhd-3.15.0.0
 PKGREVISION=	4
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
+CMAKE_ARGS+=	-DLIB_SUFFIX=""
 CMAKE_ARGS+=	-DENABLE_MAN_PAGE_COMPRESSION=OFF
 CMAKE_ARGS+=	-DPKG_MAN_DIR=${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
