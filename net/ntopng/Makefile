@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2021/05/14 12:29:44 nia Exp $
+# $NetBSD: Makefile,v 1.51 2021/05/14 12:57:27 nia Exp $
 
 DISTNAME=	ntopng-4.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--with-ndpi-includes=${BUILDLINK_PREFIX.ndpi}/include/ndpi
 RCD_SCRIPTS+=		ntopng
 
 CXXFLAGS+=		-std=c++11  # va_copy()
+
+MAKE_FLAGS+=		LUA_LIB=-llua5.3
 
 # Portable types
 CFLAGS.SunOS+=		-Du_int8_t=uint8_t
@@ -51,7 +53,7 @@ post-build:
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua53/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/ndpi/buildlink3.mk"
