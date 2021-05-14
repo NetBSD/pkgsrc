@@ -1,7 +1,9 @@
-$NetBSD: patch-configure,v 1.4 2019/03/21 21:26:23 adam Exp $
+$NetBSD: patch-configure,v 1.5 2021/05/14 20:52:09 wiz Exp $
 
 Disable Solaris ISA selection.
+
 Fix unportable test(1) operator.
+https://github.com/protocolbuffers/protobuf/pull/8616
 
 --- configure.orig	2019-02-28 21:34:14.000000000 +0000
 +++ configure
