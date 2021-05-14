@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/22 11:58:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/14 11:54:10 nia Exp $
 
 DISTNAME=	libpwquality-1.4.4
 CATEGORIES=	security
@@ -30,5 +30,6 @@ CONF_FILES=	${EGDIR}/security/pwquality.conf \
 		${PKG_SYSCONFDIR}/security/pwquality.conf
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/cracklib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
