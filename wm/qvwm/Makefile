@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/10/10 20:11:51 nia Exp $
+# $NetBSD: Makefile,v 1.43 2021/05/14 10:55:34 nia Exp $
 
 DISTNAME=	qvwm-1.1.12
 CATEGORIES=	wm
@@ -16,17 +16,9 @@ USE_LANGUAGES=	c c++03
 # Avoid embedding relative paths into the binary.
 CONFIGURE_ENV+=		ac_cv_path_PATH_RM=${RM}
 
+CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-imlib
 CONFIGURE_ARGS+=	--without-esd
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--with-alsa
-.  include "../../audio/alsa-lib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-alsa
-.endif
 
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
