@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/01/01 15:37:54 rhialto Exp $
+# $NetBSD: Makefile,v 1.45 2021/05/14 10:20:25 nia Exp $
 
 DISTNAME=	suite3270-4.0ga13-src
 PKGNAME=	x3270-4.0ga13
@@ -40,7 +40,7 @@ post-install:
 	fi
 
 .include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
