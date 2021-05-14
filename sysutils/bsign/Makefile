@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/14 11:43:47 nia Exp $
 
 DISTNAME=	bsign_0.4.5
 PKGNAME=	bsign-0.4.5
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/bsign/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://packages.debian.org/unstable/admin/bsign.html
 COMMENT=	Utility to embed a hash or signature into an executable
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
