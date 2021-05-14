@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/04/24 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2021/05/14 13:42:40 nia Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -93,7 +93,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d:Q} && pax -rwpma . \
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . \
 			${DESTDIR}${TURBADIR}/${d:Q}
 .	endfor
 
