@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/14 14:13:22 nia Exp $
 #
 
 DISTNAME=		epeg-0.9.0
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 MAINTAINER=		Peter.Bex@student.kun.nl
 #HOMEPAGE=		https://www.enlightenment.org/Libraries/Epeg/
 COMMENT=		Fast JPEG scaling library for thumbnail generation
+LICENSE=		original-bsd # ish
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
