@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/17 20:20:13 leot Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/14 11:07:14 nia Exp $
 
 DISTNAME=	gnome-pomodoro-0.17.0
 PKGREVISION=	1
@@ -32,6 +32,7 @@ CONFIGURE_SCRIPT=	autogen.sh
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../databases/gom/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/appstream-glib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
