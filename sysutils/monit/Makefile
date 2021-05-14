@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/14 11:28:31 nia Exp $
 
 DISTNAME=		monit-5.26.0
 PKGREVISION=		1
@@ -71,6 +71,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/monitrc ${DESTDIR}${EGDIR}/monitrc.sample
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
