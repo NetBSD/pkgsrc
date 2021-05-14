@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/02/07 15:42:49 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/14 08:22:34 adam Exp $
 
-DISTNAME=	structlog-20.2.0
+DISTNAME=	structlog-21.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/structlog/}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
@@ -25,8 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
