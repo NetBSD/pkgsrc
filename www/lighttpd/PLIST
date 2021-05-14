@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.23 2021/02/03 08:49:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/05/14 11:11:00 nia Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
+lib/lighttpd/mod_ajp13.la
 lib/lighttpd/mod_alias.la
 lib/lighttpd/mod_auth.la
 ${PLIST.libdbi}lib/lighttpd/mod_authn_dbi.la
@@ -8,7 +9,6 @@ lib/lighttpd/mod_authn_file.la
 ${PLIST.gssapi}lib/lighttpd/mod_authn_gssapi.la
 ${PLIST.ldap}lib/lighttpd/mod_authn_ldap.la
 ${PLIST.mysql}lib/lighttpd/mod_authn_mysql.la
-lib/lighttpd/mod_ajp13.la
 lib/lighttpd/mod_cgi.la
 ${PLIST.lua}lib/lighttpd/mod_cml.la
 lib/lighttpd/mod_deflate.la
@@ -19,11 +19,14 @@ lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
 lib/lighttpd/mod_fastcgi.la
 lib/lighttpd/mod_flv_streaming.la
+${PLIST.gnutls}lib/lighttpd/mod_gnutls.la
 lib/lighttpd/mod_indexfile.la
 ${PLIST.lua}lib/lighttpd/mod_magnet.la
 ${PLIST.geoip}lib/lighttpd/mod_maxminddb.la
+${PLIST.mbedtls}lib/lighttpd/mod_mbedtls.la
 ${PLIST.mysql}lib/lighttpd/mod_mysql_vhost.la
-${PLIST.ssl}lib/lighttpd/mod_openssl.la
+${PLIST.nss}lib/lighttpd/mod_nss.la
+${PLIST.openssl}lib/lighttpd/mod_openssl.la
 lib/lighttpd/mod_proxy.la
 lib/lighttpd/mod_redirect.la
 lib/lighttpd/mod_rewrite.la
@@ -46,6 +49,7 @@ ${PLIST.libdbi}lib/lighttpd/mod_vhostdb_dbi.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.la
 ${PLIST.mysql}lib/lighttpd/mod_vhostdb_mysql.la
 lib/lighttpd/mod_webdav.la
+${PLIST.wolfssl}lib/lighttpd/mod_wolfssl.la
 lib/lighttpd/mod_wstunnel.la
 man/man8/lighttpd-angel.8
 man/man8/lighttpd.8
