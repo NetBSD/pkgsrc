@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/10/23 07:32:58 morr Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/14 14:19:44 nia Exp $
 
 PKGNAME=	vim-lang-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -17,4 +17,5 @@ PLIST_SUBST+=	VIM_SUBDIR=${VIM_SUBDIR}
 BUILDLINK_DEPMETHOD.gettext-lib?=	build
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
