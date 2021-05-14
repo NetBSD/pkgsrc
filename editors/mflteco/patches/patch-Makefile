@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile,v 1.1 2021/05/14 14:31:24 nia Exp $
+
+Add defines for standard things.
+
+--- Makefile.orig	2021-05-14 14:27:30.831013017 +0000
++++ Makefile
+@@ -5,30 +5,30 @@
+ #   te_sunw	makes teco to run in a Sun window
+ #   te_tool	makes teco to run either in its own window (TECOtool) or in a Sun window
+ #   tt		makes TECOtool
+-CDF=-O -DMCH
++CDF=$(CFLAGS) -DMCH -DWAITRET_INT -DPOSIX_TECO
+ 
+ te: te_data.o te_utils.o te_subs.o te_main.o te_rdcmd.o te_exec0.o te_exec1.o te_exec2.o \
+ 	te_srch.o te_chario.o te_window.o te_fxstub.o
+-	cc $(CDF) -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd.o te_exec0.o te_exec1.o te_exec2.o \
++	cc $(LDFLAGS) -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd.o te_exec0.o te_exec1.o te_exec2.o \
+ 	te_srch.o te_chario.o te_window.o te_fxstub.o -ltermcap
+ 
+ te_sun: te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
+ 	te_exec2.o te_srch.o te_chario_sun.o te_window.o te_fxstub.o
+-	cc -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
++	cc $(LDFLAGS) -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
+ 	te_exec2.o te_srch.o te_chario_sun.o te_window.o te_fxstub.o -ltermcap
+ 
+ te_sunw: te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
+ 	te_exec2.o te_srch.o te_chario_sunw.o te_window_sun.o te_fxstub.o
+-	cc -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
++	cc $(LDFLAGS) -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_sun.o te_exec0.o te_exec1.o \
+ 	te_exec2.o te_srch.o te_chario_sunw.o te_window_sun.o te_fxstub.o -ltermcap
+ 
+ te_tool: te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_tt.o te_exec0.o te_exec1.o \
+ 	te_exec2_tt.o te_srch.o te_chario_tt.o te_window_tt.o te_fxstub.o
+-	cc -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_tt.o te_exec0.o te_exec1.o \
++	cc $(LDFLAGS) -o te te_data.o te_utils.o te_subs.o te_main.o te_rdcmd_tt.o te_exec0.o te_exec1.o \
+ 	te_exec2_tt.o te_srch.o te_chario_tt.o te_window_tt.o te_fxstub.o -lsuntool -lsunwindow -lpixrect -ltermcap -ltermcap
+ 
+ tt:	tecotool.c teco.icon
+-	cc -o tt -I/usr/openwin/include -O tecotool.c -lsuntool -lsunwindow -lpixrect -ltermcap
++	cc $(LDFLAGS) -o tt -I/usr/openwin/include -O tecotool.c -lsuntool -lsunwindow -lpixrect -ltermcap
+ 
+ te_chario.o: te_defs.h te_chario.c
+ 	cc -c $(CDF) te_chario.c
