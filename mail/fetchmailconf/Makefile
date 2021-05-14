@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2021/01/27 14:13:20 triaxx Exp $
+# $NetBSD: Makefile,v 1.110 2021/05/14 13:50:02 nia Exp $
 
 DISTNAME=	fetchmail-6.4.15
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -39,4 +39,5 @@ post-install:
 	${LN} -s fetchmail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/fetchmailconf.1
 
 .include "../../lang/python/application.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
