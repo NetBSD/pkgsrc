@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/04/24 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/05/14 13:49:13 nia Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -82,7 +82,7 @@ do-install:
 		${INSTALL_DATA_DIR} ${DESTDIR}${INGODIR}/${d:Q}
 .endfor
 .for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d:Q} && pax -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${INGODIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${INGODIR}
