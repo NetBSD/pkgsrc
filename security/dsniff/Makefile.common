@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2020/04/24 12:45:09 leot Exp $
+# $NetBSD: Makefile.common,v 1.15 2021/05/14 11:59:25 nia Exp $
 #
 # used by security/dsniff/Makefile
 # used by security/dsniff-nox11/Makefile
@@ -15,6 +15,8 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
 
+BDB_ACCEPTED=	db1
+
 PATCHDIR=	${.CURDIR}/../../security/dsniff/patches
 DISTINFO_FILE=	${.CURDIR}/../../security/dsniff/distinfo
 
@@ -27,6 +29,7 @@ SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
 SUBST_MESSAGE.conf=	Fixing configuration script.
 
 .include "../../devel/libnet10/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../net/libnids/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
