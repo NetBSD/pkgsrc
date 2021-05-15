@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2021/04/29 23:30:14 thor Exp $
+# $NetBSD: Makefile.common,v 1.34 2021/05/15 10:09:06 nia Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -83,6 +83,8 @@ CMAKE_ARGS+=	-DENABLE_PYTHON=ON
 CMAKE_ARGS+=	-DENABLE_VOLK=ON -DENABLE_INTERNAL_VOLK=OFF
 CMAKE_ARGS+=	-DCMAKE_HAVE_PTHREADS_CREATE=OFF
 
+CMAKE_ARGS+=	-DLIB_SUFFIX=""
+
 # Default setting (for pkgsrc)
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
@@ -98,7 +100,7 @@ CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 # adhoc setup not to pick non default version (say python3.6)
 # at configure
-#MAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PREFIX}/bin/python${PYVERSSUFFIX}
+#CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PREFIX}/bin/python${PYVERSSUFFIX}
 
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 CMAKE_ARG_PATH=	../
