@@ -1,4 +1,4 @@
-# $NetBSD: available.mk,v 1.4 2020/12/26 23:39:30 nia Exp $
+# $NetBSD: available.mk,v 1.5 2021/05/15 18:00:35 nia Exp $
 #
 # This mk fragment define LIBRSVG_TYPE variable used in other librsvg mk
 # fragments.
@@ -20,7 +20,8 @@ LIBRSVG_AVAILABLE_MK=	defined
 .include "../../lang/rust/platform.mk"
 # https://mail-index.netbsd.org/tech-pkg/2020/06/16/msg023380.html
 .if !empty(PLATFORM_SUPPORTS_RUST:M[Yy][Ee][Ss]) && \
-    empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
+    empty(MACHINE_PLATFORM:MNetBSD-*-earm*) && \
+    empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 LIBRSVG_TYPE?=	rust
 .else
 LIBRSVG_TYPE?=	c
