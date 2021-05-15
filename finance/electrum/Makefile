@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2021/01/30 23:44:41 js Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/15 09:50:08 nia Exp $
 
 VERSION=	4.0.9
 DISTNAME=	Electrum-${VERSION}
 PKGNAME=	electrum-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://download.electrum.org/${VERSION}/
 
@@ -33,5 +34,6 @@ REPLACE_PYTHON+=	lib/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
