@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2020/03/20 11:57:34 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/05/15 12:04:18 nia Exp $
 
 DISTNAME=	hnb-1.9.18
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fraggerfox/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,5 +20,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/hnb ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/hnb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
