@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2020/08/17 20:20:15 leot Exp $
+# $NetBSD: Makefile,v 1.75 2021/05/15 16:42:43 triaxx Exp $
 
 DISTNAME=	awesome-4.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm lua
 EXTRACT_SUFX=	.tar.xz
 MASTER_SITES=	${MASTER_SITE_GITHUB:=awesomeWM/}
@@ -31,6 +31,7 @@ LUA_VERSIONS_ACCEPTED=	53 52 51
 
 .include "../../lang/lua/luaversion.mk"
 
+#CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
 CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
 CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
 CMAKE_ARGS+=	-DOVERRIDE_VERSION=${PKGVERSION_NOREV}
@@ -41,6 +42,8 @@ CMAKE_ARGS+=	-DGENERATE_DOC=OFF
 EGDIR=		${PREFIX}/share/examples/awesome
 CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
 
+.include "../../lang/ruby/rubyversion.mk"
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
 
