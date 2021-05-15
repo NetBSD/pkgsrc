@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2021/04/21 13:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.51 2021/05/15 07:22:39 nia Exp $
 
 CONFIGURE_ARGS+=	--without-gui
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "${.CURDIR}/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
