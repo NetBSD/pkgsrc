@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2021/05/07 12:31:22 thor Exp $
+# $NetBSD: Makefile,v 1.69 2021/05/15 10:12:31 nia Exp $
 
 DISTNAME=	fftw-3.3.9
 PKGREVISION=	5
@@ -62,7 +62,7 @@ FFTW_DOUBLE_OPTS=	--enable-generic-simd128 --enable-generic-simd256
 FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2 --enable-avx
 FFTW_DOUBLE_OPTS+=	--enable-sse2 --enable-avx
 # From gcc-4.9 on, these should work trouble-free.
-.  if empty(CC_VERSION:Mgcc-4.8.*)
+.  if empty(CC_VERSION:Mgcc-4.*) || !empty(CC_VERSION:Mgcc-4.9.*)
 FFTW_FLOAT_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
 FFTW_DOUBLE_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
 .  endif
