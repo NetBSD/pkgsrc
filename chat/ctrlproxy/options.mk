@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2015/11/07 20:28:30 dholland Exp $
+# $NetBSD: options.mk,v 1.3 2021/05/15 11:54:48 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ctrlproxy
 
-PKG_SUPPORTED_OPTIONS=	ssl gssapi
+PKG_SUPPORTED_OPTIONS=	gssapi
 
 .include "../../mk/bsd.options.mk"
-
-###
-### Build in SSL support via gnutls
-###
-.if !empty(PKG_OPTIONS:Mssl)
-.include "../../security/gnutls/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mgssapi)
 .include "../../mk/krb5.buildlink3.mk"
