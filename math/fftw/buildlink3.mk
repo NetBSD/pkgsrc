@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2021/05/15 10:19:33 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2021/05/15 11:05:29 nia Exp $
 
 BUILDLINK_TREE+=	fftw
 
@@ -8,8 +8,6 @@ FFTW_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.fftw+=	fftw>=3.0
 BUILDLINK_ABI_DEPENDS.fftw+=	fftw>=3.1nb1
 BUILDLINK_PKGSRCDIR.fftw?=	../../math/fftw
-
-GCC_REQD+=	4.9
 
 pkgbase := fftw
 .include "../../mk/pkg-build-options.mk"
