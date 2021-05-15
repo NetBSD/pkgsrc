@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/15 07:22:39 nia Exp $
 bin/htmldoc
 man/man1/htmldoc.1
+share/applications/htmldoc.desktop
 share/doc/htmldoc/help.html
 share/doc/htmldoc/htmldoc.pdf
 share/htmldoc/data/cp-1250
@@ -79,3 +80,7 @@ share/htmldoc/fonts/Times-Italic.afm
 share/htmldoc/fonts/Times-Italic.pfa
 share/htmldoc/fonts/Times-Roman.afm
 share/htmldoc/fonts/Times-Roman.pfa
+share/icons/hicolor/128x128/apps/htmldoc.png
+share/icons/hicolor/256x256/apps/htmldoc.png
+share/mime/packages/htmldoc.xml
+share/pixmaps/htmldoc.xpm

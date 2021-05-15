@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2021/02/01 09:33:12 fcambus Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/05/15 07:22:39 nia Exp $
 #
 # used by www/htmldoc/Makefile
 # used by www/htmldoc-x11/Makefile
@@ -31,5 +31,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
