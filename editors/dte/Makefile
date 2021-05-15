@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/23 20:00:47 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/15 12:00:29 nia Exp $
 
 DISTNAME=	dte-1.9.1
 CATEGORIES=	editors
@@ -13,6 +13,8 @@ USE_TOOLS+=	gmake
 
 MAKE_FILE=	GNUmakefile
 
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
