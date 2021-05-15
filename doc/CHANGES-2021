@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2825 2021/05/15 15:13:07 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2826 2021/05/15 15:13:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-gobject to 2.28.7nb3 [triaxx 2021-05-15]
 	Updated sysutils/xplr to 0.9.1 [pin 2021-05-15]
 	Updated sysutils/auto-admin to 0.7.3 [bacon 2021-05-15]
+	Updated audio/ncspot to 0.7.1 [pin 2021-05-15]
