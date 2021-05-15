@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/09/02 20:55:15 minskim Exp $
-
-SHA1 (cobra-0.0.3.tar.gz) = fd2a013531692211925a8529ffdbe1e0314670bf
-RMD160 (cobra-0.0.3.tar.gz) = c74ce03c141427320656e10605733541040ba819
-SHA512 (cobra-0.0.3.tar.gz) = c38db9432a168f913b41a1e1b11d84bedfade82ff70791be9d343a6cc86b8a05b18bae344d67ebd8bae4c98662db7ac664a9dc86fa9b9ad4aa5c96cbf0178efb
-Size (cobra-0.0.3.tar.gz) = 101526 bytes
