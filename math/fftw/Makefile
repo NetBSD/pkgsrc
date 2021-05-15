@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2021/05/15 11:05:29 nia Exp $
+# $NetBSD: Makefile,v 1.72 2021/05/15 11:18:58 nia Exp $
 
 DISTNAME=	fftw-3.3.9
 PKGREVISION=	5
@@ -48,17 +48,6 @@ CONFIGURE_SCRIPT=	./configure
 CONFIGURE_DIRS+=	build/${p}
 MAKE_DIRS+=		build/${p}
 .endfor
-
-# Generic compiler vector abstractions.
-.if !empty(PKGSRC_COMPILER:M*gcc*) || !empty(PKGSRC_COMPILER:M*clang*)
-FFTW_FLOAT_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
-FFTW_DOUBLE_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
-.endif
-
-.if ${MACHINE_ARCH} == "x86_64"
-FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2
-FFTW_DOUBLE_OPTS+=	--enable-sse2
-.endif
 
 pre-configure:
 .for d in ${CONFIGURE_DIRS}
