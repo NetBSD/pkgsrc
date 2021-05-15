@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2021/04/06 12:15:23 nia Exp $
+# $NetBSD: Makefile,v 1.601 2021/05/15 11:08:58 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -186,6 +186,7 @@ SUBDIR+=	oracle-jre8
 SUBDIR+=	ossp-js
 SUBDIR+=	owl-lisp
 SUBDIR+=	p2c
+SUBDIR+=	p5-Perl-LanguageServer
 SUBDIR+=	p5-Switch
 SUBDIR+=	parrot
 SUBDIR+=	pc-lisp
