@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2019/01/02 19:58:39 jmmv Exp $
-
-SHA1 (viper-1.3.1.tar.gz) = 65a8ac07ed1baf6fe478989081d4aa557f0af53b
-RMD160 (viper-1.3.1.tar.gz) = b1c468247e807450b7d3b41a258f8660d51cdbc3
-SHA512 (viper-1.3.1.tar.gz) = 5e2c2b7adb61f15b31ebed197e9054680d84115f188b83d46c4943b36ba96fee59283690aa06a443b52298c06eba413300889c305182bb84da60026efe25b487
-Size (viper-1.3.1.tar.gz) = 37683 bytes
