@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2823 2021/05/15 12:10:36 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2824 2021/05/15 14:56:05 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4410,3 +4410,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed sysutils/cfengine2 successor sysutils/cfengine3 [nia 2021-05-15]
 	Added lang/p5-Perl-LanguageServer version 2.1.0 [wiz 2021-05-15]
 	Updated devel/py-gobject to 2.28.7nb3 [triaxx 2021-05-15]
+	Updated sysutils/auto-admin to 0.7.3 [bacon 2021-05-15]
