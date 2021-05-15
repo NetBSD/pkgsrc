@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2013/03/02 20:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/05/15 07:14:49 nia Exp $
 #
 
 DISTNAME=	xsqlmenu-2.10
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	databases
 MASTER_SITES=	http://www.jlab.org/~saw/xsqlmenu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jlab.org/~saw/xsqlmenu/
 COMMENT=	X based GUI for MySQL
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	MAKE=${MAKE_PROGRAM:Q}
@@ -22,7 +23,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/xsqlmenu
 	${INSTALL_DATA} ${WRKSRC}/xsqlmenu.lsm \
 		${DESTDIR}${PREFIX}/share/doc/xsqlmenu
-	${INSTALL_DATA} ${WRKSRC}/[A-Z][A-Z]* \
+	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS CHANGES COPYING TODO \
 		${DESTDIR}${PREFIX}/share/doc/xsqlmenu
 
 .include "../../mk/mysql.buildlink3.mk"
