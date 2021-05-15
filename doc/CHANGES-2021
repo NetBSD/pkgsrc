@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2822 2021/05/15 11:09:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2823 2021/05/15 12:10:36 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/freerdp successor net/freerdp2 [nia 2021-05-15]
 	Removed sysutils/cfengine2 successor sysutils/cfengine3 [nia 2021-05-15]
 	Added lang/p5-Perl-LanguageServer version 2.1.0 [wiz 2021-05-15]
+	Updated devel/py-gobject to 2.28.7nb3 [triaxx 2021-05-15]
