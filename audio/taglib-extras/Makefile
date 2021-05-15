@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/15 08:12:14 nia Exp $
 #
 
 DISTNAME=	taglib-extras-1.0.1
@@ -24,5 +24,7 @@ SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Add rpath to config script.
 
 BUILDLINK_ABI_DEPENDS.taglib+=	taglib>=1.6
+
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
