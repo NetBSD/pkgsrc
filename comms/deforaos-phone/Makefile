@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/08/17 20:17:17 leot Exp $
+# $NetBSD: Makefile,v 1.41 2021/05/15 08:16:57 nia Exp $
 
 DISTNAME=	Phone-0.6.0
 PKGNAME=	deforaos-phone-0.6.0
@@ -39,6 +39,9 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
 
+.if ${OPSYS} == "Linux"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
