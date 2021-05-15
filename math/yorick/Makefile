@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/04/21 09:17:08 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/15 06:53:50 nia Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yorick.sourceforge.net/
 COMMENT=	Numerical algebra system (similar to Matlab)
+LICENSE=	modified-bsd
 
 MAKE_JOBS_SAFE=		no
 
