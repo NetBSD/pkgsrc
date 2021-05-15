@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/15 20:01:49 bacon Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/15 14:55:51 bacon Exp $
 sbin/auto-ad-adduser
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
@@ -93,6 +93,7 @@ sbin/auto-passwd-user-expiration
 sbin/auto-password-status
 sbin/auto-pkg-branch
 sbin/auto-pkg-latest
+sbin/auto-pkgsrc-branch
 sbin/auto-pkgsrc-delete-all
 sbin/auto-pkgsrc-dir
 sbin/auto-pkgsrc-prefix
@@ -130,6 +131,7 @@ sbin/auto-transfer-pw
 sbin/auto-unlock-local-pw
 sbin/auto-unlock-user
 sbin/auto-update-infiniband-modules
+sbin/auto-update-pkgsrc
 sbin/auto-update-system
 sbin/auto-user-admin
 sbin/auto-useradd
