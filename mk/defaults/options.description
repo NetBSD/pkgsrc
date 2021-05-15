@@ -58,6 +58,7 @@ auth-sqlite		Use SQLite for the jabberd2 authorization database.
 av1			AOmedia Video 1 video codec support
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
+avx			Enable use of x86 Advanced Vector Extensions.
 bacula-static		Enable building of statically linked versions of the Bacula daemons.
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
@@ -550,7 +551,7 @@ mio-select		Use select to watch for incoming messages/connections.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
 mlterm-fb		Enable framebuffer support.
-mmx			Enable MMX support (i386 only).
+mmx			Enable MMX support (x86 only).
 mng			Enable mng (Multiple-image Network Graphics) support.
 modperl			Use modperl to improve speed of Perl scripts in Apache.
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
