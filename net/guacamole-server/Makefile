@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/04/21 13:25:09 adam Exp $
+# $NetBSD: Makefile,v 1.33 2021/05/15 10:26:10 nia Exp $
 
 DISTNAME=	guacamole-server-1.0.0
 PKGREVISION=	12
@@ -56,7 +56,7 @@ post-install:
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../net/freerdp/buildlink3.mk"
+.include "../../net/freerdp2/buildlink3.mk"
 .include "../../net/libtelnet/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
