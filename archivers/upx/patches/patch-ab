@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2014/05/26 01:30:39 rodent Exp $
+$NetBSD: patch-ab,v 1.6 2021/05/15 08:08:28 nia Exp $
 
 Add sparc{,64} support.
 
@@ -8,7 +8,7 @@ Add sparc{,64} support.
  #elif defined(__sparc__) || defined(__sparc) || defined(__sparcv8)
  #  define ACC_ARCH_SPARC            1
  #  define ACC_INFO_ARCH             "sparc"
-+#elif defined(__sparc64__) 
++#elif defined(__sparc64__)
 +#  define ACC_ARCH_SPARC64          1
 +#  define ACC_INFO_ARCH             "sparc64"
  #elif defined(__SPU__)
