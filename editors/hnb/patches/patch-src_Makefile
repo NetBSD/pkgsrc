@@ -1,0 +1,23 @@
+$NetBSD: patch-src_Makefile,v 1.1 2021/05/15 12:04:19 nia Exp $
+
+Use LDFLAGS when linking. Support NetBSD libcurses.
+
+--- src/Makefile.orig	2019-09-26 04:39:01.000000000 +0000
++++ src/Makefile
+@@ -1,5 +1,5 @@
+-LIBS=-lncurses libcli/libcli.a
+-CFLAGS+=-I.. -Ilibcli -DHAVE_CONFIG_H -Wall -pedantic -g
++LIBS=-lcurses libcli/libcli.a
++CFLAGS+=-I.. -Ilibcli -DHAVE_CONFIG_H -Wall
+ 
+ CFILES=$(wildcard *.c)
+ OBJS=$(patsubst %.c,%.o,$(CFILES))
+@@ -8,7 +8,7 @@ OBJS=$(patsubst %.c,%.o,$(CFILES))
+ 	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+ 
+ hnb: libcli/libcli.a Makefile $(OBJS) init_subsystems.c *.h *.inc
+-	$(CC) -o hnb $(OBJS) $(LIBS) $(CFLAGS)
++	$(CC) $(LDFLAGS) -o hnb $(OBJS) $(LIBS)
+ #	strip hnb
+ libcli/libcli.a: libcli/*.c
+ 	(cd libcli;${MAKE} libcli.a)
