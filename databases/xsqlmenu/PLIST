@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/15 07:14:49 nia Exp $
 bin/xsqlmenu
 share/doc/xsqlmenu/AUTHORS
 share/doc/xsqlmenu/CHANGES
 share/doc/xsqlmenu/COPYING
-share/doc/xsqlmenu/INSTALL
 share/doc/xsqlmenu/TODO
 share/doc/xsqlmenu/xsqlmenu.README
 share/doc/xsqlmenu/xsqlmenu.lsm
