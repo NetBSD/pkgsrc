@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/11/30 12:26:07 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/05/15 11:55:45 nia Exp $
 
 DISTNAME=	phone-2.0
 PKGREVISION=	4
@@ -23,4 +23,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/phone.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/phone.1
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
