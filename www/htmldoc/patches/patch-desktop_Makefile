@@ -1,0 +1,22 @@
+$NetBSD: patch-desktop_Makefile,v 1.1 2021/05/15 07:22:39 nia Exp $
+
+Ensure desktop files are always installed, not just on Linux.
+
+--- desktop/Makefile.orig	2020-12-24 21:58:42.000000000 +0000
++++ desktop/Makefile
+@@ -27,7 +27,6 @@ all:
+ #
+ 
+ install:
+-	if test `uname` = Linux; then \
+ 		$(INSTALL_DIR) $(BUILDROOT)$(datadir)/applications; \
+ 		$(INSTALL_DATA) htmldoc.desktop $(BUILDROOT)$(datadir)/applications; \
+ 		$(INSTALL_DIR) $(BUILDROOT)$(datadir)/mime/packages; \
+@@ -38,7 +37,6 @@ install:
+ 		$(INSTALL_DATA) htmldoc-128.png $(BUILDROOT)$(datadir)/icons/hicolor/128x128/apps/htmldoc.png; \
+ 		$(INSTALL_DIR) $(BUILDROOT)$(datadir)/icons/hicolor/256x256/apps; \
+ 		$(INSTALL_DATA) htmldoc-256.png $(BUILDROOT)$(datadir)/icons/hicolor/256x256/apps/htmldoc.png; \
+-	fi
+ 
+ 
+ #
