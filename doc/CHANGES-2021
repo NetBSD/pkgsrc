@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2828 2021/05/15 16:43:03 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2829 2021/05/15 17:39:19 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4415,3 +4415,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncspot to 0.7.1 [pin 2021-05-15]
 	Updated textproc/split-thai to 2.3 [scole 2021-05-15]
 	Updated wm/awesome to 4.3nb5 [triaxx 2021-05-15]
+	Removed devel/go-cobra [bsiegert 2021-05-15]
+	Updated textproc/go-mmark to 2.2.10 [bsiegert 2021-05-15]
