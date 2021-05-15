@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/28 15:56:45 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/15 11:42:24 nia Exp $
 bin/qbs
 bin/qbs-config
 bin/qbs-config-ui
@@ -170,6 +170,7 @@ libexec/qtcreator/qtc-askpass
 libexec/qtcreator/qtcreator_process_stub
 libexec/qtcreator/qtpromaker
 libexec/qtcreator/sdktool
+share/applications/org.qt-project.qtcreator.desktop
 share/doc/qtcreator/qtcreator-dev.qch
 share/doc/qtcreator/qtcreator.qch
 share/icons/hicolor/128x128/apps/QtProject-qtcreator.png
@@ -180,6 +181,7 @@ share/icons/hicolor/32x32/apps/QtProject-qtcreator.png
 share/icons/hicolor/48x48/apps/QtProject-qtcreator.png
 share/icons/hicolor/512x512/apps/QtProject-qtcreator.png
 share/icons/hicolor/64x64/apps/QtProject-qtcreator.png
+share/metainfo/org.qt-project.qtcreator.appdata.xml
 share/qtcreator/android/sdk_definitions.json
 share/qtcreator/cplusplus/examples/CMakeLists.txt
 share/qtcreator/cplusplus/examples/clazy_example.cpp
