@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/01/05 21:46:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/05/15 07:01:31 nia Exp $
 bin/teredo-mire
 include/libteredo/teredo-udp.h
 include/libteredo/teredo.h
@@ -20,3 +20,7 @@ sbin/miredo-server
 share/examples/miredo/client-hook
 share/examples/miredo/miredo-server.conf
 share/examples/miredo/miredo.conf
+share/locale/en/LC_MESSAGES/miredo.mo
+share/locale/en_GB/LC_MESSAGES/miredo.mo
+share/locale/fr/LC_MESSAGES/miredo.mo
+share/locale/zh_CN/LC_MESSAGES/miredo.mo

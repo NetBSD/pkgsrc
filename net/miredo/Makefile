@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/01/06 00:12:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2021/05/15 07:01:31 nia Exp $
 
 DISTNAME=		miredo-1.2.6
 PKGREVISION=		1
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--enable-miredo-user=${MIREDO_USER}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		msgfmt msgmerge xgettext
 
 PKG_SYSCONFSUBDIR?=	miredo
 EGDIR=			${PREFIX}/share/examples/miredo
@@ -40,7 +41,8 @@ PKG_USERS+=		${MIREDO_USER}:${MIREDO_GROUP}
 
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
-.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libjudy/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
