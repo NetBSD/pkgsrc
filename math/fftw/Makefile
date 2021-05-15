@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2021/05/15 10:19:33 nia Exp $
+# $NetBSD: Makefile,v 1.71 2021/05/15 11:05:29 nia Exp $
 
 DISTNAME=	fftw-3.3.9
 PKGREVISION=	5
@@ -49,30 +49,16 @@ CONFIGURE_DIRS+=	build/${p}
 MAKE_DIRS+=		build/${p}
 .endfor
 
-# SIMD stuff needs some baseline.
-GCC_REQD+=	4.9
-
-# FFTW offers SIMD runtime detection, but wants explicit build options.
-# These should be generic for all platforms. Compiler needs intrinsics
-# for this, but those have been present for quite some time.
-FFTW_FLOAT_OPTS=	--enable-generic-simd128 --enable-generic-simd256
-FFTW_DOUBLE_OPTS=	--enable-generic-simd128 --enable-generic-simd256
-
-.if ${MACHINE_ARCH} == "x86_64"
-FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2 --enable-avx
-FFTW_DOUBLE_OPTS+=	--enable-sse2 --enable-avx
-FFTW_FLOAT_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
-FFTW_DOUBLE_OPTS+=	--enable-avx2 --enable-avx512 --enable-avx-128-fma
+# Generic compiler vector abstractions.
+.if !empty(PKGSRC_COMPILER:M*gcc*) || !empty(PKGSRC_COMPILER:M*clang*)
+FFTW_FLOAT_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
+FFTW_DOUBLE_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
 .endif
 
-# TODO: Add the above for other architectures.
-
-# Avoid -march=core-avx2 messing up with user CFLAGS.
-# This rules out gcc 4.8 for AVX2 builds.
-SUBST_CLASSES+=		hardcore
-SUBST_STAGE.hardcore=	pre-configure
-SUBST_FILES.hardcore=	configure configure.ac
-SUBST_SED.hardcore=	-e "s,march=core-avx2,march=donotbother,g"
+.if ${MACHINE_ARCH} == "x86_64"
+FFTW_FLOAT_OPTS+=	--enable-sse --enable-sse2
+FFTW_DOUBLE_OPTS+=	--enable-sse2
+.endif
 
 pre-configure:
 .for d in ${CONFIGURE_DIRS}
