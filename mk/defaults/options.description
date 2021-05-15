@@ -757,7 +757,7 @@ shout			Enable SHOUTcast support.
 sidplay			Enable support for the SID audio file format.
 sieve			Enable sieve support.
 sigver			Enable signature verification for debugging purposes.
-simd			Enable MMX/3DNOW/SSE/Altivec support.
+simd			Enable use of SIMD vector instructions.
 sit			Enable source identity token support.
 sixel			Enable Sixel graphics support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
