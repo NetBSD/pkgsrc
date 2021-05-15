@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2020/09/03 15:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2021/05/15 12:10:22 triaxx Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	2
+PKGREVISION=	3
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cairo
+
+PYTHON_VERSIONS_ACCEPTED=	37 36 27
 
 .include "Makefile.common"
 
