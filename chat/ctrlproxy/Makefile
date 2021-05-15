@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 13:24:25 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/15 11:54:48 nia Exp $
 #
 
 DISTNAME=		ctrlproxy-3.0.8
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		chat
 MASTER_SITES=		http://www.ctrlproxy.org/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ctrlproxy.org/
 COMMENT=		Detachable internet relay chat proxy server
+LICENSE=		gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake
+USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	ctrlproxy
 
@@ -36,4 +38,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/ctrlproxy/config.example
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
