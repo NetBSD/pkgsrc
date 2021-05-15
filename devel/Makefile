@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3390 2021/05/15 17:13:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3391 2021/05/15 17:41:43 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -488,7 +488,6 @@ SUBDIR+=	go-thrift
 SUBDIR+=	go-tmc
 SUBDIR+=	go-tools
 SUBDIR+=	go-try
-SUBDIR+=	go-viper
 SUBDIR+=	go-walker
 SUBDIR+=	go-wordwrap
 SUBDIR+=	go-xerrors
