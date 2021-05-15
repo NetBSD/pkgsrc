@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2019/10/19 14:10:45 fox Exp $
+$NetBSD: distinfo,v 1.9 2021/05/15 12:04:18 nia Exp $
 
 SHA1 (hnb-1.9.18.tar.gz) = c2750b7ea998fd8c7b8dedd83645a5d20c01f61c
 RMD160 (hnb-1.9.18.tar.gz) = 484c539df2ddc82172380329d287427c67f082c5
 SHA512 (hnb-1.9.18.tar.gz) = dc7063a214ad7712bd5d44db34ebfc4982c486b12388b280b149902f8a1a3b6dfa1804846b4dded6a5f843bd2718fe80dbdcdefe45553bcf3b473c8919e27248
 Size (hnb-1.9.18.tar.gz) = 141437 bytes
-SHA1 (patch-ac) = 14d7c3fcdb85d9cf277a402af21139e3748d31eb
+SHA1 (patch-src_Makefile) = 3405249c47bcaa874b85002b7edf527af4e253f1
