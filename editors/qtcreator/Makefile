@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/04/21 11:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/15 11:42:24 nia Exp $
 
 DISTNAME=	qt-creator-opensource-src-4.13.2
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://download.qt.io/archive/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
@@ -79,14 +79,15 @@ do-configure:
 		QMAKE_RPATHDIR+=${LOCALBASE}/lib/qtcreator/plugins \
 		-o Makefile
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/clang/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 # XXX libSqlite.so fails to link but silently resumes without this.
 # XXX Unclear why the conditional doesn't work for NetBSD.
