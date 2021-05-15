@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/04 01:05:46 adrianp Exp $
+$NetBSD: patch-Makefile,v 1.1 2021/05/15 11:54:48 nia Exp $
+
+Allow pkgsrc to take care of installing config files.
 
 --- Makefile.orig	2008-12-06 17:36:33.000000000 +0000
 +++ Makefile
