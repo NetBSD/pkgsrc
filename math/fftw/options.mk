@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2021/05/15 11:18:58 nia Exp $
+# $NetBSD: options.mk,v 1.8 2021/05/15 11:20:52 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 # fftw (double) and fftwf (single) are always built, you can add
@@ -9,11 +9,10 @@ PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi fftw-long fftw-quad
 
 .if !empty(PKGSRC_COMPILER:M*gcc*) || !empty(PKGSRC_COMPILER:M*clang*)
 PKG_SUPPORTED_OPTIONS+=	simd
-PKG_SUGGESTED_OPTIONS+=	simd
-.endif
-
-.if ${MACHINE_ARCH} == "x86_64"
+.  if ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	avx
+.  endif
+PKG_SUGGESTED_OPTIONS+=	simd
 .endif
 
 .include "../../mk/bsd.options.mk"
