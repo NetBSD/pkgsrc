@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2021/05/15 06:51:16 nia Exp $
+man/man8/pppoe-relay.8
+man/man8/pppoe-sniff.8
+sbin/pppoe-relay
+sbin/pppoe-sniff
