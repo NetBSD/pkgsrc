@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2021/05/15 11:05:29 nia Exp $
+# $NetBSD: options.mk,v 1.7 2021/05/15 11:18:58 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 # fftw (double) and fftwf (single) are always built, you can add
@@ -6,6 +6,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi fftw-long fftw-quad
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_COMPILER:M*gcc*) || !empty(PKGSRC_COMPILER:M*clang*)
+PKG_SUPPORTED_OPTIONS+=	simd
+PKG_SUGGESTED_OPTIONS+=	simd
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	avx
@@ -19,6 +24,16 @@ GCC_REQD+=		4.9
 FFTW_FLOAT_OPTS+=	--enable-${opt}
 FFTW_DOUBLE_OPTS+=	--enable-${opt}
 .  endfor
+.endif
+
+.if !empty(PKG_OPTIONS:Msimd)
+# Generic compiler vector abstractions (GCC extension).
+FFTW_FLOAT_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
+FFTW_DOUBLE_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
+.  if ${MACHINE_ARCH} == "x86_64"
+FFTW_FLOAT_OPTS+=	--enable-sse2
+FFTW_DOUBLE_OPTS+=	--enable-sse2
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mfftw-fortran)
