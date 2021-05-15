@@ -1,0 +1,7 @@
+This is a Language Server and Debug Protocol Adapter for Perl.
+
+It implements the Language Server Protocol which provides
+syntax-checking, symbol search, etc. Perl to various editors.
+
+It also implements the Debug Adapter Protocol, which allow debugging
+with various editors/includes
