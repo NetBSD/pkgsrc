@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2830 2021/05/16 05:53:28 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2831 2021/05/16 06:56:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-cobra [bsiegert 2021-05-15]
 	Updated textproc/go-mmark to 2.2.10 [bsiegert 2021-05-15]
 	Updated mail/rss2email to 3.13.1 [schmonz 2021-05-16]
+	Updated sysutils/bacula to 9.6.7nb2 [jnemeth 2021-05-16]
