@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/09/04 03:07:47 minskim Exp $
-
-SHA1 (afero-1.1.1.tar.gz) = 23de9f1ca387d88cacbc748cd6ae947e4c537a2a
-RMD160 (afero-1.1.1.tar.gz) = 0c7ab5a6d6bb1e0e700631f8cc128617fe08722f
-SHA512 (afero-1.1.1.tar.gz) = 95b39158b74629738efe0a72cc625bab99ede931d464d0569311e7e8d970b093d6033f922a6b5c899c47dfb274f2b4a9f54639e0d8ed9f55322f193a379ba23e
-Size (afero-1.1.1.tar.gz) = 45250 bytes
