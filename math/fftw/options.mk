@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2021/05/16 10:14:09 nia Exp $
+# $NetBSD: options.mk,v 1.11 2021/05/16 10:16:26 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi
@@ -27,7 +27,7 @@ FFTW_DOUBLE_OPTS+=	--enable-${opt}
 # Generic compiler vector abstractions (GCC extension).
 FFTW_FLOAT_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
 FFTW_DOUBLE_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
-.  if ${MACHINE_ARCH} == "powerpc"
+.  if !empty(MACHINE_ARCH:Mpowerpc*)
 FFTW_FLOAT_OPTS+=	--enable-altivec
 .  endif
 .  if ${MACHINE_ARCH} == "x86_64"
