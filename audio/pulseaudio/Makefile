@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2021/03/30 18:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2021/05/16 19:01:36 js Exp $
 
 DISTNAME=	pulseaudio-14.2
 PKGREVISION=	2
@@ -135,7 +135,7 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != Linux && ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
 .include "../../audio/libsndfile/buildlink3.mk"
