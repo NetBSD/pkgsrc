@@ -3,5 +3,5 @@ FFTW is a C subroutine library for computing the discrete Fourier transform
 and complex data (as well as of even/odd data, i.e. the discrete cosine/sine
 transforms or DCT/DST).
 
-This package contains the single and double precision floating point FFTW
+This package contains the long double precision floating point FFTW
 libraries.

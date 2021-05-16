@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/16 10:14:09 nia Exp $
+bin/fftwl-wisdom
+lib/cmake/fftw3/FFTW3lConfig.cmake
+lib/cmake/fftw3/FFTW3lConfigVersion.cmake
+lib/libfftw3l.la
+${PLIST.mpi}lib/libfftw3l_mpi.la
+${PLIST.omp}lib/libfftw3l_omp.la
+${PLIST.pthreads}lib/libfftw3l_threads.la
+lib/pkgconfig/fftw3l.pc
+man/man1/fftwl-wisdom.1
