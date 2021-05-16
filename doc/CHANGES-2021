@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2829 2021/05/15 17:39:19 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2830 2021/05/16 05:53:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4417,3 +4417,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/awesome to 4.3nb5 [triaxx 2021-05-15]
 	Removed devel/go-cobra [bsiegert 2021-05-15]
 	Updated textproc/go-mmark to 2.2.10 [bsiegert 2021-05-15]
+	Updated mail/rss2email to 3.13.1 [schmonz 2021-05-16]
