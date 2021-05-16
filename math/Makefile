@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2021/04/29 23:31:41 thor Exp $
+# $NetBSD: Makefile,v 1.499 2021/05/16 10:10:54 nia Exp $
 
 COMMENT=	Mathematics
 
@@ -229,6 +229,7 @@ SUBDIR+=	liblbfgs
 SUBDIR+=	liblinear
 SUBDIR+=	libmatheval
 SUBDIR+=	libnumbertext
+SUBDIR+=	libquadmath
 SUBDIR+=	libshorttext
 SUBDIR+=	libsvm
 SUBDIR+=	linpack
