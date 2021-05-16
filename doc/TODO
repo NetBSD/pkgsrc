@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20630 2021/05/15 11:09:10 wiz Exp $
+$NetBSD: TODO,v 1.20631 2021/05/16 13:29:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.0.11.11
+	o ImageMagick-7.0.11.12
 	o ImageMagick6-6.9.12.8
 	o Inter-UI-3.18
 	o JBidwatcher-2.5.6 [wants launch4j]
@@ -1322,6 +1322,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libheif-1.12.0
 	o libhidapi-0.10.1
 	o libiconv-1.16
+	o libidn2-2.3.1
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1352,6 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-sameboy-0.14.3
 	o libslang-2.2.4
 	o libspatialite-5.0.1
+	o libtasn1-4.17.0
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
@@ -1500,6 +1502,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nnn-4.0
 	o node_exporter-1.1.2
 	o nono-0.1.6
+	o notmuch-0.32.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsd-4.3.6
