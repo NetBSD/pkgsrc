@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2835 2021/05/16 15:29:35 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2836 2021/05/16 17:42:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/libquadmath version 11.1.0 [nia 2021-05-16]
 	Added math/fftw-long version 3.3.9 [nia 2021-05-16]
 	Added math/fftw-quad version 3.3.9 [nia 2021-05-16]
+	Removed devel/go-afero [bsiegert 2021-05-16]
