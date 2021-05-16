@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/05/16 19:57:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/16 20:14:06 gutteridge Exp $
 
 DISTNAME=	link-grammar-5.9.1
 CATEGORIES=	textproc
@@ -24,4 +24,5 @@ PKGCONFIG_OVERRIDE+=	link-grammar.pc.in
 # supports it, but doesn't do so correctly.
 BUILDLINK_TRANSFORM+=	rm:-Wformat-signedness
 
+.include "../../devel/argp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
