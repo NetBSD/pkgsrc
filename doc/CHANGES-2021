@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2832 2021/05/16 10:11:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2833 2021/05/16 10:14:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4420,3 +4420,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/rss2email to 3.13.1 [schmonz 2021-05-16]
 	Updated sysutils/bacula to 9.6.7nb2 [jnemeth 2021-05-16]
 	Added math/libquadmath version 11.1.0 [nia 2021-05-16]
+	Added math/fftw-long version 3.3.9 [nia 2021-05-16]
