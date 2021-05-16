@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2021/05/15 11:20:52 nia Exp $
+# $NetBSD: options.mk,v 1.9 2021/05/16 08:44:33 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 # fftw (double) and fftwf (single) are always built, you can add
@@ -29,6 +29,9 @@ FFTW_DOUBLE_OPTS+=	--enable-${opt}
 # Generic compiler vector abstractions (GCC extension).
 FFTW_FLOAT_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
 FFTW_DOUBLE_OPTS+=	--enable-generic-simd128 --enable-generic-simd256
+.  if ${MACHINE_ARCH} == "powerpc"
+FFTW_FLOAT_OPTS+=	--enable-altivec
+.  endif
 .  if ${MACHINE_ARCH} == "x86_64"
 FFTW_FLOAT_OPTS+=	--enable-sse2
 FFTW_DOUBLE_OPTS+=	--enable-sse2
