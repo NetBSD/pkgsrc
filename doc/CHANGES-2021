@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2838 2021/05/16 19:57:44 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2839 2021/05/16 21:06:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4426,3 +4426,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-afero [bsiegert 2021-05-16]
 	Updated devel/nss to 3.65 [wiz 2021-05-16]
 	Updated textproc/link-grammar to 5.9.1 [gutteridge 2021-05-16]
+	Updated net/tigervnc to 1.11.0.1.20.11 [wiz 2021-05-16]
