@@ -1,16 +1,19 @@
-$NetBSD: distinfo,v 1.17 2020/04/17 11:37:24 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/05/16 21:06:42 wiz Exp $
 
-SHA1 (tigervnc-1.9.0.tar.gz) = c56656c596fb863bb2c4b67fb62b4165011d181f
-RMD160 (tigervnc-1.9.0.tar.gz) = 990e872addf459432584c176b3565504e994899e
-SHA512 (tigervnc-1.9.0.tar.gz) = 333910f567e6b5e4a5a22d898b2d4c3f4b834cb4cc8fc13ff55d31401894c0d5122a127692ec5eb51e412c945ff3ea5b8146f9ab22cbe1e47541e09239ec8c9d
-Size (tigervnc-1.9.0.tar.gz) = 1506520 bytes
-SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
-RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
-SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551
-Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
-SHA1 (patch-CMakeLists.txt) = 42a364f898784a9c4da46bea8ef6bc37838815b9
+SHA1 (tigervnc-1.11.0.tar.gz) = 6f6b621a76b734888748de10c32c2b5b59d40b19
+RMD160 (tigervnc-1.11.0.tar.gz) = 516a6eee866ef221ae52d759b465032a51510dc3
+SHA512 (tigervnc-1.11.0.tar.gz) = 262676f065de6dfb72b1482c0ef1e6d8b764f53360ae6114debbe0986eede45d27e283e1452a72cb9b7540657ab347fd36df5b30b72d6db4a0f8cbea5b591025
+Size (tigervnc-1.11.0.tar.gz) = 1346992 bytes
+SHA1 (xorg-server-1.20.11.tar.bz2) = 86ae4add5719e6026a569f5559d51e8707171d5d
+RMD160 (xorg-server-1.20.11.tar.bz2) = 9b451d5523e9384df37e0e91f52d843090590d23
+SHA512 (xorg-server-1.20.11.tar.bz2) = 1017015b9fd5d53788abe3641d877e6df8609841fa5c1847c0a5e133ddcc1b758a5d695304ebd36828099ec201a85b6b70b46f5ea4f81c5bd3a16fa6e175e3c2
+Size (xorg-server-1.20.11.tar.bz2) = 6476116 bytes
+SHA1 (patch-CMakeLists.txt) = e844bee9fa5e1ce755d65333fadd3654a207aee4
+SHA1 (patch-common_rfb_util.h) = 73d5fc206e192b936c224cedf5857980fca69eb0
 SHA1 (patch-media_CMakeLists.txt) = cd50f9b7a9405aa523412ef823a32437a3c19ffa
-SHA1 (patch-unix_vncserver) = 9c71ad02c6657f537bcb2abaa116a831b555d7c0
-SHA1 (patch-unix_xserver117.patch) = 5e5d2a98f0b765ae0d6bb5f200808126b03dcc51
-SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = 29b33e6d94a070bb0a55a264cd1c4e120c9b1b3c
+SHA1 (patch-unix_vncserver_vncserver.in) = 715f16a4be6806778fd0a9d781e920771e35d0ca
+SHA1 (patch-unix_vncserver_vncsession.c) = 78f623b2ed7e34d9478032a02d20917fdbf2c0ca
+SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = df31836e27bb535b307404adb55e239f10bbe6c4
+SHA1 (patch-unix_xserver_hw_vnc_vncBlockHandler.c) = 534a621aab793625c27737d42c5bf12c9574a414
 SHA1 (patch-unix_xserver_hw_vnc_vncModule.c) = 77aff6c2bb19e6936302c783b72d581e7d6388f5
+SHA1 (patch-unix_xserver_os_inputthread.c) = da8f1a6ab905d2569f61e92d8cf9891ed14ec42a

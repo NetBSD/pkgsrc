@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2021/04/21 13:25:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2021/05/16 21:06:42 wiz Exp $
 
-DISTNAME=		tigervnc-1.9.0
-PKGREVISION=		8
+DISTNAME=		tigervnc-1.11.0
+PKGNAME=		${DISTNAME}.1.20.11
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
-XORG_SERVER_FILE=	xorg-server-1.17.2
+GITHUB_TAG=		v1.11.0
+XORG_SERVER_FILE=	xorg-server-1.20.11
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
@@ -20,12 +20,20 @@ BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
 
+REPLACE_BASH+=	unix/vncserver/vncsession-start.in
+REPLACE_PERL+=	unix/vncserver/vncserver.in
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
+USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash:run
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
+
+# for reallocarray()
+CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
@@ -36,18 +44,35 @@ LIBTOOL_OVERRIDE=		unix/xserver/libtool
 SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure
 SUBST_MESSAGE.hpath=	fixing hardcoded paths
-SUBST_FILES.hpath=	unix/vncserver
+SUBST_FILES.hpath=	unix/vncserver/vncserver.in
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 
 REPLACE_PERL+=	unix/vncserver
+REPLACE_PERL+=	vncserver.pl
 
 post-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.bz2
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
+	cp ${FILESDIR}/vncserver.pl ${WRKSRC}
 
 post-patch:
-	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver117.patch
+	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver120.patch
+
+# suggested by BUILDING.txt:
+#./configure --with-pic --without-dtrace --disable-static --disable-dri \
+#      --disable-xinerama --disable-xvfb --disable-xnest --disable-xorg \
+#      --disable-dmx --disable-xwin --disable-xephyr --disable-kdrive \
+#      --disable-config-dbus --disable-config-hal --disable-config-udev \
+#      --disable-dri2 --enable-install-libxf86config --enable-glx \
+#      --with-default-font-path="catalogue:/etc/X11/fontpath.d,built-ins" \
+#      --with-fontdir=/usr/share/X11/fonts \
+#      --with-xkb-path=/usr/share/X11/xkb \
+#      --with-xkb-output=/var/lib/xkb \
+#      --with-xkb-bin-directory=/usr/bin \
+#      --with-serverconfig-path=/usr/lib[64]/xorg \
+#      --with-dri-driver-path=/usr/lib[64]/dri \
+#      {additional configure options}
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
@@ -56,6 +81,22 @@ XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dm
 XORG_CONFIGURE_ARGS+=	--disable-config-hal --disable-config-udev --with-pic
 XORG_CONFIGURE_ARGS+=	--disable-unit-tests --disable-devel-docs --disable-selective-werror
 XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
+
+EGDIR=			share/examples/tigervnc
+INSTALLATION_DIRS+=	${EGDIR}
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/tigervnc
+CONF_FILES+=		${EGDIR}/tigervnc ${PKG_SYSCONFDIR}/pam.d/tigervnc
+CONF_FILES+=		${EGDIR}/vncserver-config-defaults ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-defaults
+CONF_FILES+=		${EGDIR}/vncserver-config-mandatory ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-mandatory
+CONF_FILES+=		${EGDIR}/vncserver.users ${PKG_SYSCONFDIR}/tigervnc/vncserver.users
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.pl ${DESTDIR}${PREFIX}/bin/vncserver
+	${MV} ${DESTDIR}${PREFIX}/etc/pam.d/tigervnc ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-defaults ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-mandatory ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver.users ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -94,4 +135,5 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
