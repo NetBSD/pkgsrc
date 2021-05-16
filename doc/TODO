@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20631 2021/05/16 13:29:01 wiz Exp $
+$NetBSD: TODO,v 1.20632 2021/05/16 17:42:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1507,7 +1507,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ns-plugger-common-5.1.3
 	o nsd-4.3.6
 	o nsm-2.4.12
-	o nss-3.65
 	o ntop-5.0
 	o ntpsec-1.2.0
 	o nts-82
