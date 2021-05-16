@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/05/15 11:18:58 nia Exp $
+# $NetBSD: Makefile,v 1.73 2021/05/16 08:44:33 nia Exp $
 
 DISTNAME=	fftw-3.3.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
 MASTER_SITES+=	http://www.fftw.org/
