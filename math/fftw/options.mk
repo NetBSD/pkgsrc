@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2021/05/16 08:44:33 nia Exp $
+# $NetBSD: options.mk,v 1.10 2021/05/16 10:14:09 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
-# fftw (double) and fftwf (single) are always built, you can add
-# fftwl (long) and fftwq (quad).
-PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi fftw-long fftw-quad
+PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,16 +53,4 @@ PLIST_VARS+=		mpi
 PLIST.mpi=		yes
 CONFIGURE_ARGS+=	--enable-mpi
 .include "../../mk/mpi.buildlink3.mk"
-.endif
-
-PLIST_VARS+=		long
-.if !empty(PKG_OPTIONS:Mfftw-long)
-FFTW_PRECISION+=	long-double
-PLIST.long=		yes
-.endif
-
-PLIST_VARS+=		quad
-.if !empty(PKG_OPTIONS:Mfftw-quad)
-FFTW_PRECISION+=	quad-precision
-PLIST.quad=		yes
 .endif
