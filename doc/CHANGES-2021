@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2849 2021/05/17 15:55:14 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2850 2021/05/17 15:58:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added geography/pdal-lib version 2.2.0 [thor 2021-05-17]
 	Updated audio/libopenmpt to 0.5.9 [fcambus 2021-05-17]
 	Updated print/qpdf to 10.3.2 [ryoon 2021-05-17]
+	Updated devel/py-approvaltests to 0.7.0 [schmonz 2021-05-17]
