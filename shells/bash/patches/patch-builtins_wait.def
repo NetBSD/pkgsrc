@@ -1,0 +1,21 @@
+$NetBSD: patch-builtins_wait.def,v 1.1 2021/05/17 22:10:43 kre Exp $
+
+Patch from upstream: fix bug when "wait -n pid" is interrupted by
+a trapped signal, which caused any future wait for the same pid
+to claim the proecss does not exist (when it really does).
+
+This patch should be removed on whichever occurs first of the
+next bash version update (5.2 or later), or release of a bash patch
+which fixes this problem.
+
+--- builtins/wait.def.orig	2021-05-05 17:57:33.297675698 +0700
++++ builtins/wait.def	2021-05-18 04:50:15.475943116 +0700
+@@ -180,6 +180,8 @@
+       last_command_exit_signal = wait_signal_received;
+       status = 128 + wait_signal_received;
+       wait_sigint_cleanup ();
++      if (wflags & JWAIT_WAITING)
++	unset_waitlist ();
+       WAIT_RETURN (status);
+     }
+ 
