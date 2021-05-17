@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2841 2021/05/17 07:48:54 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2842 2021/05/17 08:07:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4429,3 +4429,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tigervnc to 1.11.0.1.20.11 [wiz 2021-05-16]
 	Updated finance/rates to 0.3.0 [pin 2021-05-17]
 	Added misc/deckster version 0.2.1 [pin 2021-05-17]
+	Updated devel/py-aiofiles to 0.7.0 [adam 2021-05-17]
+	Updated devel/py-sortedcontainers to 2.4.0 [adam 2021-05-17]
