@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2839 2021/05/16 21:06:53 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2840 2021/05/17 07:45:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nss to 3.65 [wiz 2021-05-16]
 	Updated textproc/link-grammar to 5.9.1 [gutteridge 2021-05-16]
 	Updated net/tigervnc to 1.11.0.1.20.11 [wiz 2021-05-16]
+	Updated finance/rates to 0.3.0 [pin 2021-05-17]
