@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2843 2021/05/17 10:06:12 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2844 2021/05/17 10:23:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4432,3 +4432,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-aiofiles to 0.7.0 [adam 2021-05-17]
 	Updated devel/py-sortedcontainers to 2.4.0 [adam 2021-05-17]
 	Added geography/laszip version 3.4.3 [thor 2021-05-17]
+	Updated www/py-websockets to 9.0.2 [adam 2021-05-17]
+	Updated security/py-libtaxii to 1.1.119 [adam 2021-05-17]
