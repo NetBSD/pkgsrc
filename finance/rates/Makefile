@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2021/04/24 19:55:22 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/17 07:44:49 pin Exp $
 
-DISTNAME=	rates-0.2.0
+DISTNAME=	rates-0.3.0
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lunush/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/lunush/rates/
 COMMENT=	Currency exchange rates in your terminal
 LICENSE=	apache-2.0
@@ -15,13 +15,8 @@ USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rates ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
