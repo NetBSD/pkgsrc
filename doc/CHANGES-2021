@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2848 2021/05/17 14:26:49 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.2849 2021/05/17 15:55:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4438,3 +4438,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/flnews to 1.0.0 [micha 2021-05-17]
 	Added geography/pdal-lib version 2.2.0 [thor 2021-05-17]
 	Updated audio/libopenmpt to 0.5.9 [fcambus 2021-05-17]
+	Updated print/qpdf to 10.3.2 [ryoon 2021-05-17]
