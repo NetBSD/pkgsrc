@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2021/05/05 11:02:59 kre Exp $
+$NetBSD: distinfo,v 1.64 2021/05/17 22:10:43 kre Exp $
 
 SHA1 (bash-5.1.tar.gz) = 063019501ef1f30fad99d2b735a7ae2ce1d11423
 RMD160 (bash-5.1.tar.gz) = 3b968e29e3867e201a781c4dc28f71120dbaeed8
@@ -40,6 +40,7 @@ SHA1 (patch-af) = e26e3209902247263884cfebc11a2f7e43245062
 SHA1 (patch-ag) = cd3b151e3bb045d2bb609c0a03d7d3df2c871f47
 SHA1 (patch-aj) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0
 SHA1 (patch-builtins_ulimit.def) = 1390069344607204eb3abbd6ddeb148ff590c55e
+SHA1 (patch-builtins_wait.def) = 777ed0528fbd66ea20b039a2ab33ce89221c7312
 SHA1 (patch-configure) = c4e1ab53a1ee85f3e6121047f0aca8ceb85e6e5d
 SHA1 (patch-examples_loadables_fdflags.c) = dce409c76b7d6c838eb25c3ccc7a89ee57ca69b8
 SHA1 (patch-lib_malloc_malloc.c) = fc22c2bb45490c57782d34d62336d168875c3609
