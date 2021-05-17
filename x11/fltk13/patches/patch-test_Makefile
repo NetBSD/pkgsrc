@@ -1,41 +1,43 @@
-$NetBSD: patch-test_Makefile,v 1.5 2019/07/16 11:21:25 micha Exp $
+$NetBSD: patch-test_Makefile,v 1.6 2021/05/17 10:38:48 micha Exp $
 
 Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
 
---- test/Makefile.orig	2019-03-03 08:40:23.000000000 +0000
+--- test/Makefile.orig	2021-05-04 17:36:17.000000000 +0000
 +++ test/Makefile
-@@ -308,14 +308,14 @@ buttons$(EXEEXT): buttons.o
+@@ -302,7 +302,7 @@ buttons$(EXEEXT): buttons.o
  
  blocks$(EXEEXT): blocks.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
- 	$(OSX_ONLY) $(RM) -r -f blocks.app/Contents/MacOS
- 	$(OSX_ONLY) mkdir blocks.app/Contents/MacOS
+ 	$(OSX_ONLY) $(RM) -f -r blocks.app
+ 	$(OSX_ONLY) mkdir -p blocks.app/Contents/MacOS blocks.app/Contents/Resources
  	$(OSX_ONLY) $(INSTALL_BIN) blocks$(EXEEXT) blocks.app/Contents/MacOS
+@@ -311,7 +311,7 @@ blocks$(EXEEXT): blocks.o
  
  checkers$(EXEEXT): checkers.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
- 	$(OSX_ONLY) $(RM) -r -f checkers.app/Contents/MacOS
- 	$(OSX_ONLY) mkdir checkers.app/Contents/MacOS
+ 	$(OSX_ONLY) $(RM) -f -r checkers.app
+ 	$(OSX_ONLY) mkdir -p checkers.app/Contents/MacOS checkers.app/Contents/Resources
  	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
-@@ -324,7 +324,7 @@ clock$(EXEEXT): clock.o
+@@ -322,7 +322,7 @@ clock$(EXEEXT): clock.o
  
  colbrowser$(EXEEXT): colbrowser.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTKFORMS) $(LDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTK) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
  	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
-@@ -337,21 +337,21 @@ curve$(EXEEXT): curve.o
+@@ -335,21 +335,21 @@ curve$(EXEEXT): curve.o
  
  demo$(EXEEXT): demo.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTKFORMS) $(LDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTK) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p demo.app/Contents/Resources
  	$(OSX_ONLY) cp -f demo.menu demo.app/Contents/Resources/
@@ -53,9 +55,9 @@ Use libtool.
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) editor.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) editor.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
- 	$(OSX_ONLY) cp -f ../ide/Xcode4/plists/editor-Info.plist editor.app/Contents/Info.plist
+ 	$(OSX_ONLY) cp -f mac-resources/editor.plist editor.app/Contents/Info.plist
  
-@@ -360,21 +360,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+@@ -358,7 +358,7 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
  
  file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -63,7 +65,8 @@ Use libtool.
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) file_chooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
- fonts$(EXEEXT): fonts.o
+ fltk-versions$(EXEEXT): fltk-versions.o
+@@ -367,14 +367,14 @@ fonts$(EXEEXT): fonts.o
  
  forms$(EXEEXT): forms.o
  	echo Linking $@...
@@ -79,7 +82,7 @@ Use libtool.
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) help.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p help.app/Contents/Resources
- 	$(OSX_ONLY) cp -f help-test.html help.app/Contents/Resources/
+ 	$(OSX_ONLY) cp -f help_dialog.html help.app/Contents/Resources/
 @@ -394,14 +394,14 @@ input_choice$(EXEEXT): input_choice.o
  
  keyboard$(EXEEXT): keyboard_ui.o keyboard.o
@@ -92,8 +95,8 @@ Use libtool.
  
  label$(EXEEXT): label.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTKFORMS) $(LDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTK) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
  line_style$(EXEEXT): line_style.o
@@ -119,8 +122,8 @@ Use libtool.
  
  output$(EXEEXT): output.o $(FLLIBNAME)
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTKFORMS) $(LDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTK) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
  overlay$(EXEEXT): overlay.o
@@ -139,10 +142,10 @@ Use libtool.
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
- 	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
- 	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
+ 	$(OSX_ONLY) $(RM) -f -r sudoku.app
+ 	$(OSX_ONLY) mkdir -p sudoku.app/Contents/MacOS sudoku.app/Contents/Resources
  	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
-@@ -475,7 +475,7 @@ sudoku: sudoku.o
+@@ -477,7 +477,7 @@ sudoku: sudoku.o
  sudoku.exe: sudoku.o sudoku.rc
  	echo Linking $@...
  	$(RC) sudoku.rc sudokures.o
@@ -151,7 +154,7 @@ Use libtool.
  
  symbols$(EXEEXT): symbols.o
  
-@@ -507,7 +507,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+@@ -509,7 +509,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
  # OpenGL demos...
  CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
  	echo Linking $@...
@@ -160,7 +163,7 @@ Use libtool.
  		CubeMain.o CubeView.o CubeViewUI.o \
  		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
-@@ -518,37 +518,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+@@ -520,35 +520,35 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
  
  cube$(EXEEXT): cube.o
  	echo Linking $@...
@@ -203,5 +206,3 @@ Use libtool.
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(LINKFLTKCAIRO) $(GLDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(LINKFLTKCAIRO) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
- 
- #
