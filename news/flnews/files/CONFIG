@@ -54,6 +54,7 @@ CFG_TLS_CRLS_DISABLE=0
 CFG_XDG_DISABLE=@XDG@
 
 # [For Apple macOS only] FLTK library must be compiled to use Cocoa backend
+# Note: This option requires FLTK 1.4 (is ignored for FLTK 1.3)
 # Setting this to 1 moves the menu bar to top of desktop
 CFG_COCOA_SYS_MENUBAR=0
 
@@ -61,7 +62,7 @@ CFG_COCOA_SYS_MENUBAR=0
 # The default is 0 and requires TLS encryption for authentication
 # You can set this to 1 to use a local stunnel for the encryption
 # !!! Attention: Setting this to 1 may reveal your login data to the public !!!
-# !!!            An external program must encrypt the network connection !!!
+# !!!            An external program must encrypt the network connection    !!!
 CFG_NNTP_AUTH_UNENCRYPTED=0
 # ==============================================================================
 
@@ -187,9 +188,9 @@ CFG_XDG_DESKTOP_PATH="$CFG_PREFIX/share/applications"
 # (must be an absolute path without trailing slash)
 CFG_XDG_ICON_THEME_PATH="$CFG_PREFIX/share/icons"
 
-# If you need reproducible builds for a binary package of a distribution,
-# set this to '1'.
-CFG_REPRODUCIBLE=1
+# Reproducible builds
+# The SOURCE_DATE_EPOCH specification 1.1 is supported:
+# https://reproducible-builds.org/specs/source-date-epoch/
 # ==============================================================================
 
 
