@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/10/19 17:21:42 khorben Exp $
+$NetBSD: distinfo,v 1.6 2021/05/17 10:23:09 adam Exp $
 
-SHA1 (libtaxii-1.1.118.tar.gz) = 4ddd4b6b00666015b2420b9eed69baf1ba626659
-RMD160 (libtaxii-1.1.118.tar.gz) = cd0764a53bf1714f9e100392b8e967f03c93b4a2
-SHA512 (libtaxii-1.1.118.tar.gz) = 858571d6572c6362dd1a1c9e5d13aee0f341ea13b43ed9c96f6b0dddb5347fefdd580e4ae0ac2f8a85c8f8956b04aa16a15604014d069ef7d95a821f70f5f0bc
-Size (libtaxii-1.1.118.tar.gz) = 122071 bytes
+SHA1 (libtaxii-1.1.119.tar.gz) = 5284969571b0d957c82a76de19eed412a5cd6208
+RMD160 (libtaxii-1.1.119.tar.gz) = 84e1e8311845435ba3295ba6e555b204ce0e8aec
+SHA512 (libtaxii-1.1.119.tar.gz) = 000f4b5660d3f9b162616528db65e01d3a0f78b2d0ba98c85e8901257f412e65eab1eea1cf9559f43be61393f89960ccf94a6f3c3634e7fc78c962e9c2f45cd0
+Size (libtaxii-1.1.119.tar.gz) = 122102 bytes
