@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/19 11:16:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/17 07:59:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,12 @@ ${PYSITELIB}/aiofiles/base.pyo
 ${PYSITELIB}/aiofiles/os.py
 ${PYSITELIB}/aiofiles/os.pyc
 ${PYSITELIB}/aiofiles/os.pyo
+${PYSITELIB}/aiofiles/tempfile/__init__.py
+${PYSITELIB}/aiofiles/tempfile/__init__.pyc
+${PYSITELIB}/aiofiles/tempfile/__init__.pyo
+${PYSITELIB}/aiofiles/tempfile/temptypes.py
+${PYSITELIB}/aiofiles/tempfile/temptypes.pyc
+${PYSITELIB}/aiofiles/tempfile/temptypes.pyo
 ${PYSITELIB}/aiofiles/threadpool/__init__.py
 ${PYSITELIB}/aiofiles/threadpool/__init__.pyc
 ${PYSITELIB}/aiofiles/threadpool/__init__.pyo
