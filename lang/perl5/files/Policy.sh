@@ -1,4 +1,4 @@
-# $NetBSD: Policy.sh,v 1.5 2012/11/07 03:58:00 sbd Exp $
+# $NetBSD: Policy.sh,v 1.6 2021/05/17 15:06:49 nia Exp $
 #
 # Site-wide policy settings for pkgsrc Perl
 #
@@ -89,6 +89,7 @@ cat > UU/pkgsrc.cbu <<EOCBU
 if $test "@OBJECT_FMT@" = "XCOFF"; then
 	ldflags="@COMPILER_RPATH_FLAG@\${shrpdir} \$ldflags"
 	lddlflags="@COMPILER_RPATH_FLAG@\${shrpdir} \$lddlflags"
+	ccdlflags="@COMPILER_RPATH_FLAG@\${shrpdir} \$ccdlflags"
 fi
 
 # Set pkgsrc defaults for library and header search paths:
