@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/04/14 07:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/17 14:51:44 nia Exp $
 
 DISTNAME=	libdazzle-3.38.0
 PKGREVISION=	1
@@ -21,6 +21,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/libdazzle-1.0.pc
+
+# Solaris munmap() uses caddr_t instead of void *
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=incompatible-pointer-types
 
 BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
