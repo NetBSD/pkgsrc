@@ -1,8 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2018/07/13 04:24:39 dbj Exp $
+$NetBSD: patch-configure,v 1.1 2021/05/17 10:38:48 micha Exp $
 
---- configure.orig	2016-11-11 16:04:30.000000000 +0000
+Add libtool support.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- configure.orig	2021-05-04 18:40:48.000000000 +0000
 +++ configure
-@@ -3816,7 +3816,22 @@ if test "${enable_shared+set}" = set; th
+@@ -3830,7 +3830,22 @@ if test "${enable_shared+set}" = set; th
    enableval=$enable_shared;
  fi
  
@@ -26,8 +29,8 @@ $NetBSD: patch-ac,v 1.2 2018/07/13 04:24:39 dbj Exp $
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -4051,6 +4066,20 @@ else
-     LINKSHARED="$LINKFLTKCAIRO ../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
+@@ -4071,6 +4086,20 @@ else
+   FLUID_BUILD="../fluid/fluid$EXEEXT"
  fi
  
 +if test "x$LIBTOOL" != "x"; then

@@ -1,19 +1,20 @@
-$NetBSD: patch-fluid_Makefile,v 1.1 2019/07/16 11:21:25 micha Exp $
+$NetBSD: patch-fluid_Makefile,v 1.2 2021/05/17 10:38:48 micha Exp $
 
 Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
 
---- fluid/Makefile.orig	2019-03-03 08:40:23.000000000 +0000
+--- fluid/Makefile.orig	2021-05-04 17:36:17.000000000 +0000
 +++ fluid/Makefile
-@@ -50,7 +50,7 @@ all:	$(FLUID) fluid$(EXEEXT)
+@@ -48,7 +48,7 @@ all:	$(FLUID) fluid$(EXEEXT)
  fluid$(EXEEXT):		$(OBJECTS) $(LIBNAME) $(FLLIBNAME) \
  			$(IMGLIBNAME)
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
- 	$(OSX_ONLY) $(RM) -r -f fluid.app/Contents/MacOS
- 	$(OSX_ONLY) mkdir fluid.app/Contents/MacOS
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDFLAGS) $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDFLAGS) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -r -f fluid.app
+ 	$(OSX_ONLY) mkdir -p fluid.app/Contents/MacOS fluid.app/Contents/Resources
  	$(OSX_ONLY) $(INSTALL_BIN) fluid fluid.app/Contents/MacOS
-@@ -74,7 +74,7 @@ include makedepend
+@@ -78,7 +78,7 @@ include makedepend
  install: all
  	echo "Installing FLUID in $(DESTDIR)$(bindir)..."
  	-$(INSTALL_DIR) $(DESTDIR)$(bindir)
