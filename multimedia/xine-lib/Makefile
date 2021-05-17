@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.170 2021/04/21 13:25:06 adam Exp $
+# $NetBSD: Makefile,v 1.171 2021/05/17 14:09:39 nia Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--enable-vdpau
 .  include "../../multimedia/libvdpau/buildlink3.mk"
 .endif
 
-CONFIGURE_ARGS+=	--without-dav1d
 CONFIGURE_ARGS+=	--without-esound
 
 SUBST_CLASSES+=		oss
@@ -74,6 +73,7 @@ PLIST.egl=	yes
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
+.include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libbluray/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
