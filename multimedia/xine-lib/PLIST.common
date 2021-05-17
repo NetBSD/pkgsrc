@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.43 2020/12/18 23:33:06 nia Exp $
+@comment $NetBSD: PLIST.common,v 1.44 2021/05/17 14:09:39 nia Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -64,6 +64,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/post/xineplug_post_visualizations.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/post/xineplug_post_visualizations.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_a52.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_a52.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dav1d.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dav1d.so
 ${PLIST.dts}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.a
 ${PLIST.dts}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dvaudio.a
