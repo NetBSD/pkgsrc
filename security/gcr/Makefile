@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/05/02 11:06:14 nia Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/17 14:39:59 wiz Exp $
 
 DISTNAME=		gcr-3.38.0
 PKGREVISION=		1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=		aclocal autoconf automake autopoint
-USE_TOOLS+=		gdbus-codegen
+USE_TOOLS+=		gdbus-codegen readlink
 
 CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--enable-gtk-doc
