@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/11/09 12:02:25 micha Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/17 11:01:34 micha Exp $
 
-FLNEWS_VERSION=	0.18
+FLNEWS_VERSION=	1.0.0
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -17,6 +17,9 @@ LICENSE=	modified-bsd AND 2-clause-bsd AND unicode
 USE_LANGUAGES=	c c++
 
 TEST_TARGET=	test
+
+# https://reproducible-builds.org/specs/source-date-epoch/
+CONFIGURE_ENV+=	SOURCE_DATE_EPOCHE=1620580800
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
