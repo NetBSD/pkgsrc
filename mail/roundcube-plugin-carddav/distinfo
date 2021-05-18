@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2021/02/26 13:17:36 triaxx Exp $
+$NetBSD: distinfo,v 1.3 2021/05/18 07:13:26 triaxx Exp $
 
-SHA1 (carddav-v4.0.4.tgz) = 7035a68b392c7e698f5dbcfe7be7eea1d7dff21a
-RMD160 (carddav-v4.0.4.tgz) = 9b3077fb513eb3c524b9e3ab445d0f56aed97118
-SHA512 (carddav-v4.0.4.tgz) = 73fd9cba53f8d59235447a90d86d764af3c5f1d5affb82d0ccd6c42a7f1fa4ffa081a1c767a698005cb1a0c62100711f8c8d567881f7b68be9fb3cb58be5c7e3
-Size (carddav-v4.0.4.tgz) = 69086 bytes
-SHA1 (patch-carddav.php) = a51378d0381ecc6fee3ac8b39a87925a5acbb7af
+SHA1 (carddav-v4.1.1.tar.gz) = 87b73661b7799b2079c28324311eddb4241242bb
+RMD160 (carddav-v4.1.1.tar.gz) = 7a1330d553b4f145597bc6c66939749ffd56baea
+SHA512 (carddav-v4.1.1.tar.gz) = 22c1baa8e8fcd886f70511b58666c51f9a4246160090bf92178e0d8f46f5ea46f8ad946b8f77e9eaaf5be442486c8cd0dca5bba976ccac7c4cb3a89546897f2b
+Size (carddav-v4.1.1.tar.gz) = 627228 bytes
+SHA1 (patch-carddav.php) = b608f2aa896d2dfde44248af061da209e5a04dac
