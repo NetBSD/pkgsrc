@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2021/05/08 15:02:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2021/05/18 10:37:33 wiz Exp $
 
-DISTNAME=	fzf-0.23.1
-PKGREVISION=	6
+DISTNAME=	fzf-0.27.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 
@@ -12,18 +11,18 @@ LICENSE=	mit
 
 USE_TOOLS+=	bash:run
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/junegunn/fzf
+GO_BUILD_PATTERN=	.
+
+.include "go-modules.mk"
 
 REPLACE_BASH+=	bin/fzf-tmux
 
 FZF_SHELL_FILES+=	completion.bash completion.zsh
 FZF_SHELL_FILES+=	key-bindings.bash key-bindings.fish key-bindings.zsh
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/fzf/plugin share/fzf/shell
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/fzf/plugin share/fzf/shell
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/fzf ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/fzf-tmux ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf-tmux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -32,10 +31,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/shell/${f} ${DESTDIR}${PREFIX}/share/fzf/shell
 .endfor
 
-.include "../../devel/go-isatty/buildlink3.mk"
-.include "../../devel/go-shellwords/buildlink3.mk"
-.include "../../devel/go-walker/buildlink3.mk"
-.include "../../textproc/go-runewidth/buildlink3.mk"
-.include "../../security/go-crypto/buildlink3.mk"
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
