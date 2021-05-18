@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/11 14:35:52 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/18 07:13:26 triaxx Exp $
 share/examples/roundcube/plugins/carddav/config.inc.php
 share/roundcube/plugins/carddav/carddav.php
 share/roundcube/plugins/carddav/dbmigrations/0000-dbinit/mysql.sql
@@ -53,6 +53,10 @@ share/roundcube/plugins/carddav/dbmigrations/0014-unifytimestampdefaultvalue/REA
 share/roundcube/plugins/carddav/dbmigrations/0014-unifytimestampdefaultvalue/mysql.sql
 share/roundcube/plugins/carddav/dbmigrations/0014-unifytimestampdefaultvalue/postgres.sql
 share/roundcube/plugins/carddav/dbmigrations/0014-unifytimestampdefaultvalue/sqlite3.sql
+share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/README.md
+share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/mysql.sql
+share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/postgres.sql
+share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/sqlite3.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/mysql.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/postgres.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/sqlite3.sql
@@ -68,13 +72,20 @@ share/roundcube/plugins/carddav/localization/pl_PL.inc
 share/roundcube/plugins/carddav/localization/ru_RU.inc
 share/roundcube/plugins/carddav/localization/sv_SE.inc
 share/roundcube/plugins/carddav/localization/uk_UK.inc
+share/roundcube/plugins/carddav/localization/zh_TW.inc
 share/roundcube/plugins/carddav/skins/classic/carddav.css
 share/roundcube/plugins/carddav/skins/elastic/carddav.css
 share/roundcube/plugins/carddav/skins/larry/carddav.css
 share/roundcube/plugins/carddav/src/Addressbook.php
-share/roundcube/plugins/carddav/src/DBMigrationInterface.php
-share/roundcube/plugins/carddav/src/Database.php
-share/roundcube/plugins/carddav/src/DatabaseException.php
+share/roundcube/plugins/carddav/src/Config.php
+share/roundcube/plugins/carddav/src/DataConversion.php
+share/roundcube/plugins/carddav/src/Db/AbstractDatabase.php
+share/roundcube/plugins/carddav/src/Db/DBMigrationInterface.php
+share/roundcube/plugins/carddav/src/Db/Database.php
+share/roundcube/plugins/carddav/src/Db/DatabaseException.php
+share/roundcube/plugins/carddav/src/Db/DbAndCondition.php
+share/roundcube/plugins/carddav/src/Db/DbOrCondition.php
+share/roundcube/plugins/carddav/src/DelayedPhotoLoader.php
 share/roundcube/plugins/carddav/src/RoundcubeLogger.php
 share/roundcube/plugins/carddav/src/SyncHandlerRoundcube.php
 share/roundcube/plugins/carddav/vendor/autoload.php
@@ -119,6 +130,7 @@ share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php
+share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php
@@ -135,6 +147,9 @@ share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/TransferStats.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/Utils.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/functions.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/src/functions_include.php
+share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/vendor-bin/php-cs-fixer/composer.json
+share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/vendor-bin/phpstan/composer.json
+share/roundcube/plugins/carddav/vendor/guzzlehttp/guzzle/vendor-bin/psalm/composer.json
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/CHANGELOG.md
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/LICENSE
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/Makefile
@@ -158,6 +173,11 @@ share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/src/TaskQueueInterfac
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/src/Utils.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/src/functions.php
 share/roundcube/plugins/carddav/vendor/guzzlehttp/promises/src/functions_include.php
+share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/.github/workflows/bc.yml
+share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/.github/workflows/ci.yml
+share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/.github/workflows/integration.yml
+share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/.github/workflows/static.yml
+share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/.php_cs.dist
 share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/CHANGELOG.md
 share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/LICENSE
 share/roundcube/plugins/carddav/vendor/guzzlehttp/psr7/README.md
