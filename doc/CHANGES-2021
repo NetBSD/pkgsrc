@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2853 2021/05/18 07:13:54 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2854 2021/05/18 10:06:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/notmuch to 0.32.1 [ryoon 2021-05-17]
 	Updated sysutils/macchina to 0.8.1 [pin 2021-05-18]
 	Updated mail/roundcube-plugin-carddav to 4.1.1 [triaxx 2021-05-18]
+	Updated graphics/png to 1.6.37nb1 [jperkin 2021-05-18]
