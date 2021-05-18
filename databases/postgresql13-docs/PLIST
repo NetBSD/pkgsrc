@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/15 18:58:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/18 11:56:20 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -309,8 +309,10 @@ share/doc/postgresql/html/app-pgconfig.html
 share/doc/postgresql/html/app-pgcontroldata.html
 share/doc/postgresql/html/app-pgdump.html
 share/doc/postgresql/html/app-pgreceivewal.html
+share/doc/postgresql/html/app-pgreceivexlog.html
 share/doc/postgresql/html/app-pgrecvlogical.html
 share/doc/postgresql/html/app-pgresetwal.html
+share/doc/postgresql/html/app-pgresetxlog.html
 share/doc/postgresql/html/app-pgrestore.html
 share/doc/postgresql/html/app-pgrewind.html
 share/doc/postgresql/html/app-pgverifybackup.html
@@ -319,6 +321,7 @@ share/doc/postgresql/html/app-postmaster.html
 share/doc/postgresql/html/app-psql.html
 share/doc/postgresql/html/app-reindexdb.html
 share/doc/postgresql/html/app-vacuumdb.html
+share/doc/postgresql/html/appendix-obsolete.html
 share/doc/postgresql/html/appendixes.html
 share/doc/postgresql/html/applevel-consistency.html
 share/doc/postgresql/html/arrays.html
@@ -493,6 +496,7 @@ share/doc/postgresql/html/datetime-appendix.html
 share/doc/postgresql/html/datetime-config-files.html
 share/doc/postgresql/html/datetime-input-rules.html
 share/doc/postgresql/html/datetime-invalid-input.html
+share/doc/postgresql/html/datetime-julian-dates.html
 share/doc/postgresql/html/datetime-keywords.html
 share/doc/postgresql/html/datetime-posix-timezone-specs.html
 share/doc/postgresql/html/datetime-units-history.html
@@ -870,6 +874,7 @@ share/doc/postgresql/html/pgtrgm.html
 share/doc/postgresql/html/pgupgrade.html
 share/doc/postgresql/html/pgvisibility.html
 share/doc/postgresql/html/pgwaldump.html
+share/doc/postgresql/html/pgxlogdump.html
 share/doc/postgresql/html/planner-optimizer.html
 share/doc/postgresql/html/planner-stats-details.html
 share/doc/postgresql/html/planner-stats-security.html
@@ -951,6 +956,7 @@ share/doc/postgresql/html/queries.html
 share/doc/postgresql/html/query-path.html
 share/doc/postgresql/html/querytree.html
 share/doc/postgresql/html/rangetypes.html
+share/doc/postgresql/html/recovery-config.html
 share/doc/postgresql/html/reference-client.html
 share/doc/postgresql/html/reference-server.html
 share/doc/postgresql/html/reference.html
@@ -962,6 +968,7 @@ share/doc/postgresql/html/regress-variant.html
 share/doc/postgresql/html/regress.html
 share/doc/postgresql/html/release-13-1.html
 share/doc/postgresql/html/release-13-2.html
+share/doc/postgresql/html/release-13-3.html
 share/doc/postgresql/html/release-13.html
 share/doc/postgresql/html/release-prior.html
 share/doc/postgresql/html/release.html
