@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/05/18 18:00:01 nia Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/18 19:29:52 he Exp $
 
 DISTNAME=	rust-1.50.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -27,6 +27,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-earmv7hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
+
+NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
 CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 
@@ -86,37 +88,43 @@ RUST_ARCH:=	x86_64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 
-# NetBSD provided binaries
+# NetBSD provided binaries:
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
-		https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
+		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	armv7-unknown-netbsd-eabihf
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
-		https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
+		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i586-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
-.endif
 SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
-		https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
+		${NETBSD_REPO}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	powerpc-unknown-netbsd90
+DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
+SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
+		${NETBSD_REPO}
+.  if !empty(OS_VERSION:M8.*)
 RUST_ARCH:=	powerpc-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
-		https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
+		${NETBSD_REPO}
+.  endif
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 SITES.${DISTNAME}-${RUST_ARCH}.tar.gz= \
-		https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
+		${NETBSD_REPO}
 .endif
 
 do-install:
@@ -140,7 +148,7 @@ fix-darwin-install-name:
 	done
 .  endfor
 .  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 	\
-		llvm-profdata llvm-readobj llvm-size llvm-strip	
+		llvm-profdata llvm-readobj llvm-size llvm-strip
 	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -178,10 +186,10 @@ RUST_LLVM_RPATH=	${PREFIX}/lib
 FORCE_RPATH=		--force-rpath
 .  endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-.  include "../../devel/libatomic/buildlink3.mk"
-.endif
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.    include "../../devel/libatomic/buildlink3.mk"
+.  endif
 
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
