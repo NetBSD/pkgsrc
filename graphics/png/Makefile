@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.199 2020/04/14 12:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2021/05/18 10:05:18 jperkin Exp $
 
 DISTNAME=	libpng-1.6.37
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
@@ -34,9 +35,8 @@ CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 
 SUBST_CLASSES+=		rpathfix
 SUBST_FILES.rpathfix=	libpng-config.in
-SUBST_MESSAGE.rpathfix=	Adding rpath to libpng-config
-SUBST_SED.rpathfix=	-e 's/-L$${libdir}/${COMPILER_RPATH_FLAG}$${libdir} -L$${libdir}/g'
-SUBST_STAGE.rpathfix=	pre-configure
+SUBST_VARS.rpathfix=	COMPILER_RPATH_FLAG
+SUBST_STAGE.rpathfix=	post-build
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
