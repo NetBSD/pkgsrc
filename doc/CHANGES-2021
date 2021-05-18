@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2855 2021/05/18 10:37:44 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2856 2021/05/18 11:57:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4445,3 +4445,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/roundcube-plugin-carddav to 4.1.1 [triaxx 2021-05-18]
 	Updated graphics/png to 1.6.37nb1 [jperkin 2021-05-18]
 	Updated sysutils/fzf to 0.27.0 [wiz 2021-05-18]
+	Updated databases/postgresql96 to 9.6.22 [adam 2021-05-18]
+	Updated databases/postgresql10 to 10.17 [adam 2021-05-18]
+	Updated databases/postgresql11 to 11.12 [adam 2021-05-18]
+	Updated databases/postgresql12 to 12.7 [adam 2021-05-18]
+	Updated databases/postgresql13 to 13.3 [adam 2021-05-18]
