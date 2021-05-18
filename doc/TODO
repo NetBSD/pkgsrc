@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20637 2021/05/17 16:10:23 ryoon Exp $
+$NetBSD: TODO,v 1.20638 2021/05/18 10:37:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -766,6 +766,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o darktable-3.4
 	o dash-0.5.11.3
 	o dateutils-0.4.8
+	o dav1d-0.9
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -904,7 +905,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fuse-unionfs-2.1
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
-	o fzf-0.27.0
 	o gajim-plugin-omemo-2.8.4
 	o gallery3-3.0.9
 	o gammu-1.42.0
@@ -915,6 +915,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
 	o gcc11-11.1.0
+	o gcc8-8.5
 	o gcin-1.5.5
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
@@ -2104,7 +2105,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-redmine-gitmike-theme-1.2.1
 	o ruby-redmine41-4.2.0
 	o rump-20131213
-	o rust-1.51.0
+	o rust-1.52.1
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -2406,6 +2407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xrmap-flags-2.9
 	o xrmap-hymns-1.4
 	o xsc-1.6
+	o xscreensaver-6.00
 	o xteddy-2.2
 	o xtermcontrol-3.7
 	o xtrace-1.4.0
