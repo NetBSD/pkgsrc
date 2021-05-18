@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/05/18 18:00:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/05/18 19:29:52 he Exp $
 
 SHA1 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-gnu.tar.gz) = 3f078e2e2f55e43ba98cb2acd21d40e5e9cc49a8
 RMD160 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-gnu.tar.gz) = 3847eaaa8072efe27b0e7411795d98aa6fca0003
@@ -28,6 +28,10 @@ SHA1 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 6f58b67c34871
 RMD160 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 60f565681f2cbed690c1551c7648609cfcb5148d
 SHA512 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 4e5db0d3a5aff3b67c5ec988e6d632fd81dc5cc305aa14bba595de28f3154d13fdcfea6fc69f4a5264220bf471fab1add8ae089a87a05427d7a3a936749941bb
 Size (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 313628339 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd90.tar.gz) = 0579809b8f384304ea95112b933edecdaacd083d
+RMD160 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd90.tar.gz) = 141743e14c9bc5fdce35c83b29262f59b5f062a0
+SHA512 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd90.tar.gz) = d0186e7857c5836f260112c1676799816b39b6e424ea20866a9be97b80525f6c0b6f71daacb505844bb600158ca4c7d4c2f6431e198ef7e551a7f400368a2afe
+Size (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd90.tar.gz) = 319094630 bytes
 SHA1 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = 72b6d9e81ea186a049fa83bdcce973faf1bb91db
 RMD160 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = c26dafe0cdf12cce0b9314eacb2fe8a513a4ccdd
 SHA512 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = e990096d3b253522818cdd1fe6624b567e9d679d1e4c55fa1392805128b073d55334bc13c9d48e6a7befabb3673c098332e24b7b6e2a07d82eb4181228ab5d90
