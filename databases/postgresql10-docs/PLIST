@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/02/15 18:58:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/05/18 11:56:17 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -293,8 +293,10 @@ share/doc/postgresql/html/app-pgconfig.html
 share/doc/postgresql/html/app-pgcontroldata.html
 share/doc/postgresql/html/app-pgdump.html
 share/doc/postgresql/html/app-pgreceivewal.html
+share/doc/postgresql/html/app-pgreceivexlog.html
 share/doc/postgresql/html/app-pgrecvlogical.html
 share/doc/postgresql/html/app-pgresetwal.html
+share/doc/postgresql/html/app-pgresetxlog.html
 share/doc/postgresql/html/app-pgrestore.html
 share/doc/postgresql/html/app-pgrewind.html
 share/doc/postgresql/html/app-postgres.html
@@ -302,6 +304,7 @@ share/doc/postgresql/html/app-postmaster.html
 share/doc/postgresql/html/app-psql.html
 share/doc/postgresql/html/app-reindexdb.html
 share/doc/postgresql/html/app-vacuumdb.html
+share/doc/postgresql/html/appendix-obsolete.html
 share/doc/postgresql/html/appendixes.html
 share/doc/postgresql/html/applevel-consistency.html
 share/doc/postgresql/html/archive-recovery-settings.html
@@ -457,6 +460,7 @@ share/doc/postgresql/html/datetime-appendix.html
 share/doc/postgresql/html/datetime-config-files.html
 share/doc/postgresql/html/datetime-input-rules.html
 share/doc/postgresql/html/datetime-invalid-input.html
+share/doc/postgresql/html/datetime-julian-dates.html
 share/doc/postgresql/html/datetime-keywords.html
 share/doc/postgresql/html/datetime-posix-timezone-specs.html
 share/doc/postgresql/html/datetime-units-history.html
@@ -820,6 +824,7 @@ share/doc/postgresql/html/pgtrgm.html
 share/doc/postgresql/html/pgupgrade.html
 share/doc/postgresql/html/pgvisibility.html
 share/doc/postgresql/html/pgwaldump.html
+share/doc/postgresql/html/pgxlogdump.html
 share/doc/postgresql/html/planner-optimizer.html
 share/doc/postgresql/html/planner-stats-details.html
 share/doc/postgresql/html/planner-stats-security.html
@@ -917,6 +922,7 @@ share/doc/postgresql/html/release-10-13.html
 share/doc/postgresql/html/release-10-14.html
 share/doc/postgresql/html/release-10-15.html
 share/doc/postgresql/html/release-10-16.html
+share/doc/postgresql/html/release-10-17.html
 share/doc/postgresql/html/release-10-2.html
 share/doc/postgresql/html/release-10-3.html
 share/doc/postgresql/html/release-10-4.html
