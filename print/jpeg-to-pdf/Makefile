@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/24 10:13:04 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/18 12:33:07 pin Exp $
 
 DISTNAME=	jpeg-to-pdf-0.2.2
 CATEGORIES=	print
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Quantaly/jpeg-to-pdf/
 COMMENT=	Creates pdfs from jpeg images
-LICENSE=	apache-2.0
+LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
