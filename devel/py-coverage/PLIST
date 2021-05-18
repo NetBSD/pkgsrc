@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/12/21 09:33:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/05/18 15:26:46 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/coverage/__main__.pyo
 ${PYSITELIB}/coverage/annotate.py
 ${PYSITELIB}/coverage/annotate.pyc
 ${PYSITELIB}/coverage/annotate.pyo
-${PYSITELIB}/coverage/backunittest.py
-${PYSITELIB}/coverage/backunittest.pyc
-${PYSITELIB}/coverage/backunittest.pyo
 ${PYSITELIB}/coverage/backward.py
 ${PYSITELIB}/coverage/backward.pyc
 ${PYSITELIB}/coverage/backward.pyo
@@ -92,9 +89,6 @@ ${PYSITELIB}/coverage/multiproc.pyo
 ${PYSITELIB}/coverage/numbits.py
 ${PYSITELIB}/coverage/numbits.pyc
 ${PYSITELIB}/coverage/numbits.pyo
-${PYSITELIB}/coverage/optional.py
-${PYSITELIB}/coverage/optional.pyc
-${PYSITELIB}/coverage/optional.pyo
 ${PYSITELIB}/coverage/parser.py
 ${PYSITELIB}/coverage/parser.pyc
 ${PYSITELIB}/coverage/parser.pyo
