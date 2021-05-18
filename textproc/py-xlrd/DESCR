@@ -1,2 +1,19 @@
-Extract data from new and old Excel spreadsheets on any platform. Pure Python
-(2.7 or later). Strong support for Excel dates. Unicode-aware.
+xlrd is a library for reading data and formatting information from
+Excel files in the historical .xls format.
+
+Warning
+
+This library will no longer read anything other than .xls files. For
+alternatives that read newer file formats, please see
+http://www.python-excel.org/.
+
+The following are also not supported but will safely and reliably be ignored:
+
+    Charts, Macros, Pictures, any other embedded object, including embedded worksheets.
+    VBA modules
+    Formulas, but results of formula calculations are extracted.
+    Comments
+    Hyperlinks
+    Autofilters, advanced filters, pivot tables, conditional formatting, data validation
+
+Password-protected files are not supported and cannot be read by this library.
