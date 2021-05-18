@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2856 2021/05/18 11:57:57 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2857 2021/05/18 15:28:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4450,3 +4450,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql11 to 11.12 [adam 2021-05-18]
 	Updated databases/postgresql12 to 12.7 [adam 2021-05-18]
 	Updated databases/postgresql13 to 13.3 [adam 2021-05-18]
+	Updated devel/py-coverage to 5.5 [adam 2021-05-18]
+	Updated devel/py-test-cov to 2.12.0 [adam 2021-05-18]
