@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/05/04 08:16:32 pin Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/18 06:59:13 pin Exp $
 
-DISTNAME=	macchina-0.7.4
+DISTNAME=	macchina-0.8.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,10 +14,11 @@ LICENSE=	mit
 
 USE_LANGUAGES+=	c c++
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/macchina
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/macchina ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/macchina.toml ${DESTDIR}${PREFIX}/share/examples/macchina
 
 DEPENDS+=	wmctrl-[0-9]*:../../wm/wmctrl
 
