@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/04/25 10:50:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/05/18 18:00:01 nia Exp $
 
 SHA1 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-gnu.tar.gz) = 3f078e2e2f55e43ba98cb2acd21d40e5e9cc49a8
 RMD160 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-gnu.tar.gz) = 3847eaaa8072efe27b0e7411795d98aa6fca0003
@@ -8,10 +8,30 @@ SHA1 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-musl.tar.gz) = 5947fc9f4
 RMD160 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-musl.tar.gz) = 7fd519f1d6abca7f3177a47a64d1138d3ef4b617
 SHA512 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-musl.tar.gz) = 8a9d73f3c79546bb80847cf1218f2cbfa77997a409233a69feae5e7221602f37de042fed6c13274f36b27051c92fcf771076a3183f91c4f1fe85c8ceea1e1485
 Size (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-linux-musl.tar.gz) = 314799917 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-netbsd.tar.gz) = bb36673c48642da22f608c091aae54e334c6592c
+RMD160 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-netbsd.tar.gz) = 63c54020bd0b97ad344b0f07e331cd735fc8a375
+SHA512 (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-netbsd.tar.gz) = 76153bf8295de8c994289648c2458492ac0c771696f85a9d1d3ab7c6bb08626f9876cad1fd270000742305f3bd334d294ade76a477149a02c9100807e350a4e2
+Size (rust-bin-1.50.0/rust-1.50.0-aarch64-unknown-netbsd.tar.gz) = 282637715 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-armv7-unknown-netbsd-eabihf.tar.gz) = 8c78af0b9300e738cd44c8d85226bdb4b277db3c
+RMD160 (rust-bin-1.50.0/rust-1.50.0-armv7-unknown-netbsd-eabihf.tar.gz) = b0dc7748ed8315c61ef56e3bdd25ec9ccc8cc12a
+SHA512 (rust-bin-1.50.0/rust-1.50.0-armv7-unknown-netbsd-eabihf.tar.gz) = 14e60642262493cb6492945caa6cd25c179328e7e8e0791fbb887411b28989619d2ea80d8cdf9496de1d2f1bfea280fcd8696357f12ec7cbe496a0c8b76a7c0e
+Size (rust-bin-1.50.0/rust-1.50.0-armv7-unknown-netbsd-eabihf.tar.gz) = 259036239 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-i586-unknown-netbsd.tar.gz) = f0c3693dda70151825777669bf23538e3ceb6367
+RMD160 (rust-bin-1.50.0/rust-1.50.0-i586-unknown-netbsd.tar.gz) = 02995dd3f6dc114162c42a9ad072dffdd2e756b5
+SHA512 (rust-bin-1.50.0/rust-1.50.0-i586-unknown-netbsd.tar.gz) = b51e6e17b4b81c3885450554aff816d7e0264fa09ffc97c66def20a72a0980451a5c26c12cdc52ff077be77656ab5d986ff2b8ebed6a24355fd76b5479faeb41
+Size (rust-bin-1.50.0/rust-1.50.0-i586-unknown-netbsd.tar.gz) = 316871159 bytes
 SHA1 (rust-bin-1.50.0/rust-1.50.0-i686-unknown-linux-gnu.tar.gz) = f946618c821caab5c58dd3eb2a3af42cf486c3dd
 RMD160 (rust-bin-1.50.0/rust-1.50.0-i686-unknown-linux-gnu.tar.gz) = a299095db6fc1a2160415087638a35b0bc02cd95
 SHA512 (rust-bin-1.50.0/rust-1.50.0-i686-unknown-linux-gnu.tar.gz) = 13d3e71bf88fc92ffd7f2c5a59e151dcd0e25e1b9256a107d96ab3110bab698b1294fe7dcbc4f3a847c37666e54a6183c41a8320ddbbcd5ebe907e13e7f5c1bc
 Size (rust-bin-1.50.0/rust-1.50.0-i686-unknown-linux-gnu.tar.gz) = 360543712 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 6f58b67c3487186e47e6cf12b9ab13562a0724b3
+RMD160 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 60f565681f2cbed690c1551c7648609cfcb5148d
+SHA512 (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 4e5db0d3a5aff3b67c5ec988e6d632fd81dc5cc305aa14bba595de28f3154d13fdcfea6fc69f4a5264220bf471fab1add8ae089a87a05427d7a3a936749941bb
+Size (rust-bin-1.50.0/rust-1.50.0-powerpc-unknown-netbsd.tar.gz) = 313628339 bytes
+SHA1 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = 72b6d9e81ea186a049fa83bdcce973faf1bb91db
+RMD160 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = c26dafe0cdf12cce0b9314eacb2fe8a513a4ccdd
+SHA512 (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = e990096d3b253522818cdd1fe6624b567e9d679d1e4c55fa1392805128b073d55334bc13c9d48e6a7befabb3673c098332e24b7b6e2a07d82eb4181228ab5d90
+Size (rust-bin-1.50.0/rust-1.50.0-sparc64-unknown-netbsd.tar.gz) = 298912500 bytes
 SHA1 (rust-bin-1.50.0/rust-1.50.0-x86_64-apple-darwin.tar.gz) = 2f381659e8988f70dbfd593c0e40f69102d1b057
 RMD160 (rust-bin-1.50.0/rust-1.50.0-x86_64-apple-darwin.tar.gz) = 2933afe5b9fee6662b63d6db5fdc81a6618be250
 SHA512 (rust-bin-1.50.0/rust-1.50.0-x86_64-apple-darwin.tar.gz) = 0d1466b3667d48049decf77ce0887b79e4f322a5e48832cefd6f038f67d8868286db2b1d03a2f75012d0e0e663506ef21566877ab625fc047528af617a9b845a
