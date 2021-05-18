@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/05/07 10:37:40 kleink Exp $
+$NetBSD: distinfo,v 1.2 2021/05/18 16:10:50 adam Exp $
 
-SHA1 (flask-static-digest-0.2.1.tar.gz) = 584062e7403baf05743f22ec06fb9db4fe75e71d
-RMD160 (flask-static-digest-0.2.1.tar.gz) = a6c19ca0eb52d8e5e65cdbe4c0dcc742dd18468e
-SHA512 (flask-static-digest-0.2.1.tar.gz) = 5d13ab5b6fce22b9791ab89480c8e6a670991aaba18661fcd17dda5c055a0278487df074aa5190f2b8c297e0d388861cd4a52100d5d9b8f8550b71ac1e8e704a
-Size (flask-static-digest-0.2.1.tar.gz) = 13859 bytes
+SHA1 (Flask-Static-Digest-0.2.1.tar.gz) = 7ca5a1a55a1939aacb6242457066f70bf534569a
+RMD160 (Flask-Static-Digest-0.2.1.tar.gz) = 15fdec0c38cc8e668502eb8af1afca18961ce312
+SHA512 (Flask-Static-Digest-0.2.1.tar.gz) = 7e3b30e3accc0b8ad983e9ec150b1c1593d04c10f11e8d5fe2c6889f66108c4703d03c747dfa015ad664d40eddca24cb561549ae76ccf4f2b960a66a1319310e
+Size (Flask-Static-Digest-0.2.1.tar.gz) = 11754 bytes
