@@ -1,0 +1,33 @@
+$NetBSD: patch-libpng-config.in,v 1.1 2021/05/18 10:05:18 jperkin Exp $
+
+Make --libs behave the same as --ldflags and include all libs.
+
+--- libpng-config.in.orig	2019-04-14 18:10:32.000000000 +0000
++++ libpng-config.in
+@@ -19,7 +19,7 @@ includedir="@includedir@/libpng@PNGLIB_M
+ libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@"
+ all_libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@ @LIBS@"
+ I_opts="-I${includedir}"
+-L_opts="-L${libdir}"
++L_opts="@COMPILER_RPATH_FLAG@${libdir} -L${libdir}"
+ R_opts=""
+ cppflags=""
+ ccopts=""
+@@ -88,7 +88,7 @@ while test $# -gt 0; do
+         ;;
+ 
+     --libs)
+-        echo ${libs}
++        echo ${ldopts} ${L_opts} ${R_opts} ${all_libs}
+         ;;
+ 
+     --I_opts)
+@@ -108,7 +108,7 @@ while test $# -gt 0; do
+         ;;
+ 
+     --ldflags)
+-        echo ${ldopts} ${L_opts} ${R_opts} ${libs}
++        echo ${ldopts} ${L_opts} ${R_opts} ${all_libs}
+         ;;
+ 
+     --static)
