@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/05/18 19:29:52 he Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/19 10:12:34 nia Exp $
 
 DISTNAME=	rust-1.50.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -38,7 +38,6 @@ BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 
 # Bootstraps built for 9.0.
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
 
 NO_BUILD=	yes
 USE_TOOLS+=	bash
