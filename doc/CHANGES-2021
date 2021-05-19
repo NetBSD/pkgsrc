@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2859 2021/05/19 07:02:16 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2860 2021/05/19 09:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4454,3 +4454,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-cov to 2.12.0 [adam 2021-05-18]
 	Updated x11/libX11 to 1.7.1 [wiz 2021-05-18]
 	Updated graphics/ImageMagick to 7.0.11.13 [triaxx 2021-05-19]
+	Updated net/py-zeroconf to 0.31.0 [adam 2021-05-19]
+	Updated databases/py-pypika to 0.48.2 [adam 2021-05-19]
+	Updated databases/py-asyncpg to 0.23.0 [adam 2021-05-19]
+	Updated devel/py-argcomplete to 1.12.3 [adam 2021-05-19]
