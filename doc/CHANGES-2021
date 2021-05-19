@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2863 2021/05/19 11:08:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2864 2021/05/19 12:06:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4462,3 +4462,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/kalk to 0.4.1 [pin 2021-05-19]
 	Updated net/py-aioresponses to 0.7.2 [adam 2021-05-19]
 	Updated time/py-aniso8601 to 9.0.1 [adam 2021-05-19]
+	Updated www/hackernews-tui to 0.6.1 [pin 2021-05-19]
