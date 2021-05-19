@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2860 2021/05/19 09:54:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2861 2021/05/19 10:46:25 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4458,3 +4458,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-pypika to 0.48.2 [adam 2021-05-19]
 	Updated databases/py-asyncpg to 0.23.0 [adam 2021-05-19]
 	Updated devel/py-argcomplete to 1.12.3 [adam 2021-05-19]
+	Updated games/woof to 5.1.0 [micha 2021-05-19]
