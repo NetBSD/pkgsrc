@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.232 2021/04/30 12:34:17 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.233 2021/05/19 07:01:55 triaxx Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
 IM_MAJOR_VER=		7.0.11
-IM_MINOR_VER=		10
+IM_MINOR_VER=		13
 IM_MAJOR_LIB_VER=	7
 
 .if (${IM_MINOR_VER} != NONE)
