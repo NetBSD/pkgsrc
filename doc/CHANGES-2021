@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2861 2021/05/19 10:46:25 micha Exp $
+$NetBSD: CHANGES-2021,v 1.2862 2021/05/19 10:56:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4459,3 +4459,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-asyncpg to 0.23.0 [adam 2021-05-19]
 	Updated devel/py-argcomplete to 1.12.3 [adam 2021-05-19]
 	Updated games/woof to 5.1.0 [micha 2021-05-19]
+	Updated math/kalk to 0.4.1 [pin 2021-05-19]
