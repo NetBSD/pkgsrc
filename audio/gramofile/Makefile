@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:30:42 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/20 19:24:15 nia Exp $
 #
 
-DISTNAME=	gramofile-1.6
-PKGREVISION=	4
+DISTNAME=	gramofile-1.6P
 CATEGORIES=	audio
-MASTER_SITES=	http://www.opensourcepartners.nl/~costar/gramofile/
+MASTER_SITES=	https://www.opensourcepartners.nl/~costar/gramofile/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.opensourcepartners.nl/~costar/gramofile/
