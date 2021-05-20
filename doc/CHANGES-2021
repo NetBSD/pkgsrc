@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2885 2021/05/20 15:05:13 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2886 2021/05/20 15:44:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/erlang-sqlite3 to 1.1.12 [triaxx 2021-05-20]
 	Updated databases/erlang-p1_pgsql to 1.1.11 [triaxx 2021-05-20]
 	Updated databases/erlang-p1_mysql to 1.0.18 [triaxx 2021-05-20]
+	Updated textproc/erlang-yconf to 1.0.11 [triaxx 2021-05-20]
