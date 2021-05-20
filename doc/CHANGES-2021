@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2879 2021/05/20 13:55:08 tonio Exp $
+$NetBSD: CHANGES-2021,v 1.2880 2021/05/20 14:04:30 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4479,3 +4479,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.57.0 [adam 2021-05-20]
 	Updated math/py-xarray to 0.18.2 [adam 2021-05-20]
 	Updated textproc/hevea to 2.35 [tonio 2021-05-20]
+	Updated lang/erlang to 23.3.4 [triaxx 2021-05-20]
