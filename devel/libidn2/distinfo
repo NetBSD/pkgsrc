@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/21 23:32:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/05/20 08:22:37 wiz Exp $
 
-SHA1 (libidn2-2.3.0.tar.gz) = 53f54fd3c305d871ed5716406c0695fad5c34c45
-RMD160 (libidn2-2.3.0.tar.gz) = b14992e57a02ed507f11c8f169370c9c98ea0e08
-SHA512 (libidn2-2.3.0.tar.gz) = a2bf6d2249948bce14fbbc802f8af1c9b427fc9bf64203a2f3d7239d8e6061d0a8e7970a23e8e5889110a654a321e0504c7a6d049bb501e7f6a23d42b50b6187
-Size (libidn2-2.3.0.tar.gz) = 2164993 bytes
+SHA1 (libidn2-2.3.1.tar.gz) = 00664b3e4373154caefb3e85c264e0078f269bc6
+RMD160 (libidn2-2.3.1.tar.gz) = 2c08a855bab9779f6d5c420038faf077a0c46a21
+SHA512 (libidn2-2.3.1.tar.gz) = 4d77a4a79e08a05e46fc14827f987b9e7645ebf5d0c0869eb96f9902c2f6b73ea69fd6f9f97b80a9f07cce84f7aa299834df91485d4e7c16500d31a4b9865fe4
+Size (libidn2-2.3.1.tar.gz) = 2188338 bytes
