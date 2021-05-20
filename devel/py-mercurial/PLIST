@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2021/02/06 08:29:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2021/05/20 09:08:27 wiz Exp $
 bin/hg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgdemandimport/__init__.py
@@ -915,6 +915,9 @@ ${PYSITELIB}/mercurial/revlog.pyo
 ${PYSITELIB}/mercurial/revlogutils/__init__.py
 ${PYSITELIB}/mercurial/revlogutils/__init__.pyc
 ${PYSITELIB}/mercurial/revlogutils/__init__.pyo
+${PYSITELIB}/mercurial/revlogutils/concurrency_checker.py
+${PYSITELIB}/mercurial/revlogutils/concurrency_checker.pyc
+${PYSITELIB}/mercurial/revlogutils/concurrency_checker.pyo
 ${PYSITELIB}/mercurial/revlogutils/constants.py
 ${PYSITELIB}/mercurial/revlogutils/constants.pyc
 ${PYSITELIB}/mercurial/revlogutils/constants.pyo
@@ -1389,6 +1392,9 @@ ${PYSITELIB}/mercurial/utils/storageutil.pyo
 ${PYSITELIB}/mercurial/utils/stringutil.py
 ${PYSITELIB}/mercurial/utils/stringutil.pyc
 ${PYSITELIB}/mercurial/utils/stringutil.pyo
+${PYSITELIB}/mercurial/utils/urlutil.py
+${PYSITELIB}/mercurial/utils/urlutil.pyc
+${PYSITELIB}/mercurial/utils/urlutil.pyo
 ${PYSITELIB}/mercurial/verify.py
 ${PYSITELIB}/mercurial/verify.pyc
 ${PYSITELIB}/mercurial/verify.pyo
