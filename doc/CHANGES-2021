@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2878 2021/05/20 12:58:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2879 2021/05/20 13:55:08 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/zstd to 1.5.0 [wiz 2021-05-20]
 	Updated finance/py-stripe to 2.57.0 [adam 2021-05-20]
 	Updated math/py-xarray to 0.18.2 [adam 2021-05-20]
+	Updated textproc/hevea to 2.35 [tonio 2021-05-20]
