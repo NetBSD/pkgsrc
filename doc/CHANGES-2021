@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2894 2021/05/20 20:41:11 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2895 2021/05/20 20:42:29 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/erlang-fast_xml to 1.1.46 [triaxx 2021-05-20]
 	Added graphics/glad version 0.1.34 [nia 2021-05-20]
 	Updated graphics/erlang-eimp to 1.0.20 [triaxx 2021-05-20]
+	Updated misc/erlang-p1_utils to 1.0.22 [triaxx 2021-05-20]
