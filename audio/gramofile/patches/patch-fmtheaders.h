@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2012/06/27 22:23:42 sbd Exp $
+$NetBSD: patch-fmtheaders.h,v 1.1 2021/05/20 19:24:15 nia Exp $
 
-Use fixed size fields
+Use fixed sizes for fields.
 
 --- fmtheaders.h.orig	2000-03-28 21:07:26.000000000 +0000
 +++ fmtheaders.h
