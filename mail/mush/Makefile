@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/05/20 06:09:07 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/20 19:21:13 christos Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	# ftp://cse.ogi.edu/pub/mush/
 EXTRACT_SUFX=	.tar.Z
