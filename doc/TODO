@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20648 2021/05/20 10:51:51 wiz Exp $
+$NetBSD: TODO,v 1.20649 2021/05/20 11:50:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1896,7 +1896,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-21.05.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
