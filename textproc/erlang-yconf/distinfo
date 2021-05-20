@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/16 18:19:17 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2021/05/20 15:43:59 triaxx Exp $
 
-SHA1 (yconf-1.0.9.tar.gz) = 047bebe5154f0e81e62e8b533562f16f2de1304c
-RMD160 (yconf-1.0.9.tar.gz) = 55a171a11b5ee799da6fc776d2a0cc76291223ce
-SHA512 (yconf-1.0.9.tar.gz) = deda8f65c03d2417e042a49f2aa6a76a5ef3c9d2d8a128c49c84324dcb2f57abb6bb8fb69bc8616cf9465ea762b68322cf0cc0122a02000692cf0ee1fa4841d8
-Size (yconf-1.0.9.tar.gz) = 222572 bytes
+SHA1 (yconf-1.0.11.tar.gz) = c5d5ad91dedc1ad7358f8e5c4355a9f00fc202a0
+RMD160 (yconf-1.0.11.tar.gz) = 6161d7c4992669f08790b83dafb5692755082db8
+SHA512 (yconf-1.0.11.tar.gz) = 3a2edb668cbe4c50cada17e6f261cec4b04a464164edfb2f232ea79b18dc7f91f6c28d90e4001174b689b14947e39ba1bcd3feaed641fa248b2a0925f39a5b14
+Size (yconf-1.0.11.tar.gz) = 222974 bytes
