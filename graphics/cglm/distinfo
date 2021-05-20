@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/20 19:52:31 nia Exp $
+
+SHA1 (cglm-0.8.2.tar.gz) = b2699a9c97df3630aec67776e4884b79e1eb2ecb
+RMD160 (cglm-0.8.2.tar.gz) = 8147d268546531d1664eb07839041cf54e258396
+SHA512 (cglm-0.8.2.tar.gz) = 9ed9661f69fc46c7f0fe8468ec7cdf4071118adaa06b97f99134f5d04a0f7b21158df479f678f78e927c6e4a5d2e6f38c2e8d38ef40ab1f04b2b721af3e7a152
+Size (cglm-0.8.2.tar.gz) = 231038 bytes
