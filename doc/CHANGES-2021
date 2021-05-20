@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2888 2021/05/20 19:24:31 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2889 2021/05/20 19:46:44 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4488,3 +4488,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/erlang-yconf to 1.0.11 [triaxx 2021-05-20]
 	Updated security/erlang-p1_acme to 1.0.12 [triaxx 2021-05-20]
 	Updated audio/gramofile to 1.6P [nia 2021-05-20]
+	Updated devel/erlang-mqtree to 1.0.13 [triaxx 2021-05-20]
