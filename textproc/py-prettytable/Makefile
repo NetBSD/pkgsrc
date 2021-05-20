@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/04 09:27:03 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/20 06:32:40 nia Exp $
 
 DISTNAME=	prettytable-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Display tabular data in a visually appealing ASCII table format
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/pyversion.mk"
