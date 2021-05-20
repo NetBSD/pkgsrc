@@ -1,9 +1,8 @@
 #!@PERL@
 
-# $NetBSD: add_todo.pl,v 1.1.1.1 2009/08/30 10:40:34 wiz Exp $
+# $NetBSD: add_todo.pl,v 1.2 2021/05/20 10:51:42 wiz Exp $
 
 # TODO:
-# fix adding entry after last one (currently broken)
 # check if package was removed
 # check if package was downgraded (e.g. oto)
 # allow multiple command line arguments
@@ -17,7 +16,7 @@ use constant regex_pkgname      => qr"^(.*)-(\d[^-]*)$";
 my ($comment, $entry, $grep_result, $newname, $newpkg, $newprinted,
     $newversion, %opt, $verbose);
 
-my $PKGSRCDIR = "@PKGSRCDIR@";
+ my $PKGSRCDIR = "@PKGSRCDIR@";
 my $input = "$PKGSRCDIR/doc/TODO";
 my $wipinput = "$PKGSRCDIR/wip/TODO";
 my $output = "$input.new";
@@ -90,9 +89,16 @@ if (update_done($newname, $newversion)) {
 open IN, $input or die "can't open input file ``$input''";
 open OUT, ">$output" or die "can't open output file ``$output''";
 
+my $todo_list_found = 0;
 while (<IN>) {
-	if ($newprinted or not m/^	o /) {
+        if ($newprinted or (not m/^	o / and $todo_list_found == 0)) {
 		print OUT $_;
+		next;
+	}
+	if (not m/^	o / and $todo_list_found == 1) {
+		print OUT "	o $newpkg\n";
+		print OUT $_;
+		$newprinted = 1;
 		next;
 	}
 
@@ -106,6 +112,7 @@ while (<IN>) {
 		$comment = "";
 	}
 
+	$todo_list_found = 1;
 	$entry =~ regex_pkgname;
 	my ($entryname, $entryversion) = ($1, $2);
 
