@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/07/20 09:11:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/20 14:58:11 triaxx Exp $
 
-DISTNAME=	p1_pgsql-1.1.6
+DISTNAME=	p1_pgsql-1.1.11
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
