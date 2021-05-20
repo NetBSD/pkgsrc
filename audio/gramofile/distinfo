@@ -1,11 +1,25 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:12:34 agc Exp $
+$NetBSD: distinfo,v 1.13 2021/05/20 19:24:15 nia Exp $
 
-SHA1 (gramofile-1.6.tar.gz) = 6e5365d9e04801725be694fefcff5fc10ea2f912
-RMD160 (gramofile-1.6.tar.gz) = 3f7c8a8e8053e92ece830bbb1138fc7ed1c49967
-SHA512 (gramofile-1.6.tar.gz) = 171a7cff4066d625b9263f5462bf3e8fba30a02b629f20f7b38031cf037eb0940cfb54b73671d10948ac3326e272b3576de785310022007e0d4dca4f164815a5
-Size (gramofile-1.6.tar.gz) = 108596 bytes
-SHA1 (patch-aa) = d9cfec7b0243efeb9785b65dbb5c95725d646bdb
-SHA1 (patch-ab) = 1f599c0dc94dd6d420c7ba59e75a9829180dc4df
-SHA1 (patch-ac) = 9454f027a896d4778977cb126e0b1e82050de7fb
+SHA1 (gramofile-1.6P.tar.gz) = aea717a551c27c9da460d976f5c49802c0409784
+RMD160 (gramofile-1.6P.tar.gz) = f4b81c78e6c6e80e2109d8921de8e03364910d61
+SHA512 (gramofile-1.6P.tar.gz) = 7731cfd360cfcf8615ef5072d6d50423ae7192c7be233b2ad49bb10940ed9edb977f36dccad4c2d239868f3d0c3334feed6dd6f38b34a1ff6bfc144be07be38d
+Size (gramofile-1.6P.tar.gz) = 117822 bytes
+SHA1 (patch-Makefile) = f4fea45e1fd038c9a837c2f63f5d5030d54bc93b
+SHA1 (patch-bplaysrc_Makefile) = 507c689404356f326b7b84a2ffe3f103f4ade0b6
 SHA1 (patch-bplaysrc_bplay_c) = 59f0db9a664245c2d21e791c2910854f5c9ecdce
-SHA1 (patch-gramofile_c) = 8c73c1db912894bc6f7cfc3fa191f1521e5d5b8d
+SHA1 (patch-bplaysrc_shmbuf.c) = a4db34dfb56dba3075c8634cad13d94d5a065208
+SHA1 (patch-clrscr.c) = 3bae1344fa4f068c6d26bc3f4b8ec7c35293b7b1
+SHA1 (patch-errorwindow.c) = 8aeaf23400b3fbf9125b4f5189ff41d2c4551289
+SHA1 (patch-fmtheaders.h) = 573c56418b011b261b354fa46f0622e2dbe6cfff
+SHA1 (patch-gramofile_c) = accf3aee4a05accb1d92165dabb355444cca112e
+SHA1 (patch-playwav.c) = 21087eed0e7e922926ed8435b03641e1028c423c
+SHA1 (patch-reclp__main.c) = abe2a180151455e1ec6e0a9cf5cf7e80a429abd5
+SHA1 (patch-signpr__cmf.c) = 1d19753266a51e838381de22bc33cc89099b2f51
+SHA1 (patch-signpr__cmf2.c) = f3a839f31d114519f4fa8c0f163219fc5fceaf6e
+SHA1 (patch-signpr__doubmed.c) = 23cbeca1fc2a044387e6d80dd64f3ff5c2caaa35
+SHA1 (patch-signpr__mean.c) = a890f6ad682adac617af45f96f4367191a7126de
+SHA1 (patch-signpr__median.c) = 4106e28c9c321037c320986e90ae3142319a290e
+SHA1 (patch-signpr__rms.c) = b787585248cf3fcb5ac86c727ca24c2bf2d373f4
+SHA1 (patch-stringinput.c) = 3614c9ad8f7a4b14885d6103bb8bd4a62e9d77f0
+SHA1 (patch-tracksplit__parammenu.c) = 965aabf58ee36f395a65c24b765dc902152d1d36
+SHA1 (patch-yesnowindow.c) = 41ebf6f74211a2c14d7c97c3e67905d974b2e091
