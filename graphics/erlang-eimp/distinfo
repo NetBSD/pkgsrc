@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/01/16 00:00:48 triaxx Exp $
+$NetBSD: distinfo,v 1.7 2021/05/20 20:40:48 triaxx Exp $
 
-SHA1 (eimp-1.0.18.tar.gz) = 8832290b7f372cf235b1059014344d94b36c7f49
-RMD160 (eimp-1.0.18.tar.gz) = fa16787451f1f814e61a2261594a7ed3fd932636
-SHA512 (eimp-1.0.18.tar.gz) = 17b0738dfc2aa41eddaa388cf76f5a88336984029f6cf77873aa4d9ca5b15ebcb748e855622113d1b50faa1eeab93fc839b88cc5a20ddc476c5c0886fc26d8a2
-Size (eimp-1.0.18.tar.gz) = 3477198 bytes
-SHA1 (patch-rebar.config) = 64d8fe6cea75adc36efad929a60bf4b13243ed11
+SHA1 (eimp-1.0.20.tar.gz) = 567b695102e0fdd157cc600f39c76a9daa15e40a
+RMD160 (eimp-1.0.20.tar.gz) = 6c7578eb26d5c19734acfd5e63e97ec94357e4c7
+SHA512 (eimp-1.0.20.tar.gz) = 466fdff4e9be655a9de6d7c72564fc94f0328d471c691e27bfd839a1671a099dd562636de0f0b3d6432c146081008372591d3f527840390566be1bd3a906666a
+Size (eimp-1.0.20.tar.gz) = 3477544 bytes
+SHA1 (patch-rebar.config) = 15b593e4f714cb8aee210750decaa07a4b424380
