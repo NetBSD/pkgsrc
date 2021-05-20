@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/27 10:10:36 gson Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/20 06:12:14 nia Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/fftw3/__init__.py
 ${PYSITELIB}/fftw3/__init__.pyc
@@ -12,3 +12,15 @@ ${PYSITELIB}/fftw3/planning.pyo
 ${PYSITELIB}/fftw3/wisdom.py
 ${PYSITELIB}/fftw3/wisdom.pyc
 ${PYSITELIB}/fftw3/wisdom.pyo
+${PYSITELIB}/fftw3f/__init__.py
+${PYSITELIB}/fftw3f/__init__.pyc
+${PYSITELIB}/fftw3f/__init__.pyo
+${PYSITELIB}/fftw3f/lib.py
+${PYSITELIB}/fftw3f/lib.pyc
+${PYSITELIB}/fftw3f/lib.pyo
+${PYSITELIB}/fftw3f/planning.py
+${PYSITELIB}/fftw3f/planning.pyc
+${PYSITELIB}/fftw3f/planning.pyo
+${PYSITELIB}/fftw3f/wisdom.py
+${PYSITELIB}/fftw3f/wisdom.pyc
+${PYSITELIB}/fftw3f/wisdom.pyo
