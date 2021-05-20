@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/05/20 09:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/20 09:34:46 wiz Exp $
+#
+# Release notes:
+# https://www.mercurial-scm.org/pipermail/evolve-testers/
 
 DISTNAME=	hg-evolve-10.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
