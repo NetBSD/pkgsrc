@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/05/06 20:45:43 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/20 13:53:28 tonio Exp $
 bin/bibhva
 bin/esponja
 bin/hacha
@@ -16,6 +16,7 @@ share/hevea/cleveref.hva
 share/hevea/comment.hva
 share/hevea/compat.hva
 share/hevea/contents_motif.gif
+share/hevea/contents_motif.svg
 share/hevea/crlang.hva
 share/hevea/czech.hva
 share/hevea/deepcut.hva
@@ -45,11 +46,15 @@ share/hevea/html/gif.hva
 share/hevea/html/graphics.hva
 share/hevea/html/graphicx.hva
 share/hevea/html/hevea.hva
+share/hevea/html/lang.hva
+share/hevea/html/mathjax.hva
+share/hevea/html/mathjaxauto.hva
 share/hevea/html/mathpartir.hva
 share/hevea/html/natbib.hva
 share/hevea/html/png.hva
 share/hevea/html/report.hva
 share/hevea/html/seminar.hva
+share/hevea/html/svg.hva
 share/hevea/html/sword.hva
 share/hevea/html/symb-eng.hva
 share/hevea/html/symb-ent.hva
@@ -60,9 +65,11 @@ share/hevea/html/undersection.hva
 share/hevea/html/urlhref.hva
 share/hevea/html/xypic.hva
 share/hevea/hyperref.hva
+share/hevea/hyphenat.hva
 share/hevea/ifpdf.hva
 share/hevea/ifthen.hva
 share/hevea/imagen
+share/hevea/imakeidx.hva
 share/hevea/import.hva
 share/hevea/index.hva
 share/hevea/info/article.hva
@@ -110,16 +117,19 @@ share/hevea/mappings/windows-1250.map
 share/hevea/mappings/windows-1251.map
 share/hevea/mappings/windows-1252.map
 share/hevea/mappings/windows-1257.map
+share/hevea/mathjax.sty
 share/hevea/mathop.hva
 share/hevea/moreverb.hva
 share/hevea/multibib.hva
 share/hevea/multind.hva
 share/hevea/natbib-common.hva
 share/hevea/next_motif.gif
+share/hevea/next_motif.svg
 share/hevea/packages.hva
 share/hevea/plain.hva
 share/hevea/portuguese.hva
 share/hevea/previous_motif.gif
+share/hevea/previous_motif.svg
 share/hevea/program.hva
 share/hevea/ragged2e.hva
 share/hevea/spaces.hva
