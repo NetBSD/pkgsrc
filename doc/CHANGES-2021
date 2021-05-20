@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2865 2021/05/20 02:43:08 fox Exp $
+$NetBSD: CHANGES-2021,v 1.2866 2021/05/20 06:57:26 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-aniso8601 to 9.0.1 [adam 2021-05-19]
 	Updated www/hackernews-tui to 0.6.1 [pin 2021-05-19]
 	Updated textproc/bat to 0.18.1 [fox 2021-05-20]
+	Updated lang/python39 to 3.9.5nb1 [triaxx 2021-05-20]
