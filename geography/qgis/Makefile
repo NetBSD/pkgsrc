@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2021/05/03 16:28:47 gdt Exp $
+# $NetBSD: Makefile,v 1.117 2021/05/20 23:08:30 gdt Exp $
 
 # This is intentionally 3.16 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -31,8 +31,6 @@ USE_TOOLS+=		gmake
 
 PLIST_SRC=		PLIST
 
-.include "options.mk"
-
 DEPENDS+=		qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 # This is needed to find qca2.
 CMAKE_PREFIX_PATH+=	${QTDIR}
@@ -59,6 +57,21 @@ SUBST_FILES.pyqt=		cmake/PyQtMacros.cmake
 SUBST_SED.pyqt+=		-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=		-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 
+CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
+CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin
+CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
+
+.include "../../lang/python/application.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-gdal-[0-9]*:../../geography/py-gdal
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+# py-owslib # metasearch
+# py-yaml # quickosm
+
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 # Useful for package development:
@@ -79,6 +92,7 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -86,6 +100,9 @@ pre-configure:
 .include "../../geography/spatialindex/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
+.include "../../x11/py-sip/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
+.include "../../x11/py-qt5-qscintilla/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
