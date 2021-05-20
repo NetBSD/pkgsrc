@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 21:28:53 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/20 19:24:13 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.7.0
+PKGVER=		8.1.12.0
 PKGNAME=	${DISTNAME:C/-/8-/}
-#PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v817/
+MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8112/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
+
+# pkgsrc fetch corrupts the distfile download
+FETCH_USING=	wget
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.ibm.com/us-en/marketplace/data-protection-and-recovery
@@ -16,7 +18,7 @@ CONFLICTS+=	tsm-[0-9]*
 
 PKG_SYSCONFSUBDIR=	tsm
 DOC_DIR=		share/doc/tsm
-DOC_SRCDIR=		${WRKDIR}/.destdir/usr/pkg/emul/linux/opt/tivoli/tsm/license/baclient/tsm
+DOC_SRCDIR=		${DESTDIR}${PREFIX}/emul/linux/opt/tivoli/tsm/license/baclient/tsm
 EG_DIR=			share/examples/tsm
 CONF_FILES=		${PREFIX}/${EG_DIR}/dsm.sys.smp ${PKG_SYSCONFDIR}/dsm.sys
 CONF_FILES+=		${PREFIX}/${EG_DIR}/dsm.opt.smp ${PKG_SYSCONFDIR}/dsm.opt
@@ -35,6 +37,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1].*-*
 
 EMUL_PLATFORMS=		linux-x86_64
+#EMUL_REQD=		suse>=13.1
 EMUL_MODULES.linux=	base
 RUN_LDCONFIG=		yes
 
@@ -47,8 +50,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.55.2.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.55.2.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.55.21.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.55.21.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
@@ -63,7 +66,9 @@ PLIST_SUBST+=		TSMCLIENTSUBDIR=${TSMCLIENTSUBDIR:Q}
 
 TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 
-# Build with PKG_OPTIONS.tsm = java for PLIST regen
+LICENSE_TEXTS=		LA_en.txt non_ibm_license.txt notices.txt
+
+# For PLIST regen, build package with PKG_OPTIONS.tsm = java
 PRINT_PLIST_AWK+=	{ gsub(/^.+\.jar$$/, "$${PLIST.java}&"); }
 PRINT_PLIST_AWK+=	{ gsub(/^.+\/dsmj$$/, "$${PLIST.java}&"); }
 
@@ -92,9 +97,13 @@ post-install:
 	for bb in `${SED} -e '/^[$$]{PLIST\\.java}/!d' -e 's/^[$$]{PLIST\\.java}//g' ${PLIST_SRC}`; do \
 	    ${RM} -f ${DESTDIR}${PREFIX}/$${bb}; \
 	done
+.else
+	find ${DESTDIR}${PREFIX} -name \*.jar -exec chmod -x {} \;
 .endif
-	${INSTALL_DATA} ${DOC_SRCDIR}/LA_en.txt ${DESTDIR}${PREFIX}/${DOC_DIR}
-	${INSTALL_DATA} ${DOC_SRCDIR}/notices.txt ${DESTDIR}${PREFIX}/${DOC_DIR}
+	find ${DESTDIR}${PREFIX} -name \*.txt -exec chmod -x {} \;
+.for lt in ${LICENSE_TEXTS}
+	${INSTALL_DATA} ${DOC_SRCDIR}/${lt} ${DESTDIR}${PREFIX}/${DOC_DIR}
+.endfor
 	${INSTALL_DATA} ${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp \
 		${DESTDIR}${PREFIX}/${EG_DIR}
 	${INSTALL_DATA} ${WRKSRC}/tsm_daily.sh ${DESTDIR}${PREFIX}/${EG_DIR}
