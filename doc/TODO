@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20640 2021/05/20 08:11:18 wiz Exp $
+$NetBSD: TODO,v 1.20641 2021/05/20 08:21:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1319,7 +1319,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
-	o libheif-1.12.0
 	o libhidapi-0.10.1
 	o libiconv-1.16
 	o libidn2-2.3.1
