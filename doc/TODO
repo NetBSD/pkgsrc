@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20652 2021/05/20 14:19:11 triaxx Exp $
+$NetBSD: TODO,v 1.20653 2021/05/20 14:43:41 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -833,7 +833,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o erlang-luerl-0.4
 	o erlang-mqtree-1.0.13
 	o erlang-p1_pgsql-1.1.11
-	o erlang-sqlite3-1.1.12
 	o errcheck-1.6.0
 	o es-0.83
 	o esh-0.8.5
