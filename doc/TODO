@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20642 2021/05/20 08:22:45 wiz Exp $
+$NetBSD: TODO,v 1.20643 2021/05/20 09:11:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1955,7 +1955,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-angr-9.0.6852
 	o py-astroplan-0.8
 	o py-astroquery-0.4
-	o py-cairo118-1.20.0
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-claripy-9.0.6852
@@ -1981,7 +1980,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-marisa-0.2.6
 	o py-markdown-3.2.2 [drops python-2.x support]
 	o py-mautrix-0.9.1
-	o py-mercurial-5.8
 	o py-moin-1.9.11
 	o py-munkres-1.1.4
 	o py-musicbrainz-0.7.4
