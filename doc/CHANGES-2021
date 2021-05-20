@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2875 2021/05/20 10:51:51 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2876 2021/05/20 11:50:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gopls to 0.6.11 [wiz 2021-05-20]
 	Updated security/libtasn1 to 4.17.0 [wiz 2021-05-20]
 	Updated pkgtools/pkgsrc-todo to 1.4 [wiz 2021-05-20]
+	Updated print/poppler to 21.05.0 [wiz 2021-05-20]
