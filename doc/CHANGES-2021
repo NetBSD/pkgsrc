@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2887 2021/05/20 15:45:44 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2888 2021/05/20 19:24:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/erlang-p1_mysql to 1.0.18 [triaxx 2021-05-20]
 	Updated textproc/erlang-yconf to 1.0.11 [triaxx 2021-05-20]
 	Updated security/erlang-p1_acme to 1.0.12 [triaxx 2021-05-20]
+	Updated audio/gramofile to 1.6P [nia 2021-05-20]
