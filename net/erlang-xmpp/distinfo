@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/01/16 12:42:47 triaxx Exp $
+$NetBSD: distinfo,v 1.14 2021/05/20 14:18:43 triaxx Exp $
 
-SHA1 (xmpp-1.5.1.tar.gz) = fe38b4dad92fd5dd2b41069714faa6870560af81
-RMD160 (xmpp-1.5.1.tar.gz) = 29bf897c5e0680236fc773a4f9b5b9b523064989
-SHA512 (xmpp-1.5.1.tar.gz) = dd605a687156efddd9bc94f7e4ad0e6c4372ee94412fdbb59d07ccecc7a4e93c7f46805016f499eeb6f89e9439473e60fe09a23ffd6949e6a1716d5286bf6fae
-Size (xmpp-1.5.1.tar.gz) = 507197 bytes
+SHA1 (xmpp-1.5.3.tar.gz) = 56f9bd512ae7a5d68c59299ac518b81ea14af723
+RMD160 (xmpp-1.5.3.tar.gz) = de03659100118943ede6c11e32d483b541a0bb8c
+SHA512 (xmpp-1.5.3.tar.gz) = 44b79eb73143ce3559ec8fe112af5ff22a7ecbffa935c8e76c645f7845005e7459a6ac1b726312be4eff22199eafd27ff5aab06cec1b1d961c80374ce83b7898
+Size (xmpp-1.5.3.tar.gz) = 510756 bytes
