@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/01/16 19:47:57 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/20 15:45:28 triaxx Exp $
 
-DISTNAME=	p1_acme-1.0.10
+DISTNAME=	p1_acme-1.0.12
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 

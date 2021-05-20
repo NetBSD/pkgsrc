@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2021/01/16 19:47:57 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2021/05/20 15:45:28 triaxx Exp $
 
-SHA1 (p1_acme-1.0.10.tar.gz) = 58c84c3d31e6f53530337626efcfb267c869e535
-RMD160 (p1_acme-1.0.10.tar.gz) = 60f609303a14c7db24a7b7a8ec667250e873ecfd
-SHA512 (p1_acme-1.0.10.tar.gz) = 90d164f96f86d36b4bc42e556a195affda21e5c63189d539cc98dd2d49525395875534a945765b1e19ab6a2ed249e3fa8eb506aff54f5ba7ed48b49fc074e15c
-Size (p1_acme-1.0.10.tar.gz) = 221088 bytes
-SHA1 (patch-rebar.config) = 937023962af8c8bfd91007ce854684bae1cb304e
+SHA1 (p1_acme-1.0.12.tar.gz) = f713e8aa337e632a1e0cd59bcffdeda06ed76824
+RMD160 (p1_acme-1.0.12.tar.gz) = 63662c652f1c5a8f3bfa0a154811212b81d9eedd
+SHA512 (p1_acme-1.0.12.tar.gz) = a1a291b5b1f07d6eb3ef67913505f784226208485b11d79d695cc0474fc1660662474f5bc558631e2899a16287caedaf7609fc17ca2d1dee0a700e674d50c764
+Size (p1_acme-1.0.12.tar.gz) = 221422 bytes
+SHA1 (patch-rebar.config) = 1313324d35232b829471233b3e421fda1da6c9cf
 SHA1 (patch-rebar.config.script) = b3923816e84d117e82843b93be9672286b4d9361
