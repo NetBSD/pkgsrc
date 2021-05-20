@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2872 2021/05/20 09:34:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2873 2021/05/20 10:03:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4471,3 +4471,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 5.8 [wiz 2021-05-20]
 	Updated devel/py-tortoisehg to 5.8 [wiz 2021-05-20]
 	Updated devel/py-hg-evolve to 10.3.1 [wiz 2021-05-20]
+	Updated devel/gopls to 0.6.11 [wiz 2021-05-20]
