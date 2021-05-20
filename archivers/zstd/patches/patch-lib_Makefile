@@ -1,13 +1,13 @@
-$NetBSD: patch-lib_Makefile,v 1.12 2021/04/05 10:12:38 ryoon Exp $
+$NetBSD: patch-lib_Makefile,v 1.13 2021/05/20 12:23:24 wiz Exp $
 
 Detect and use third-party libraries (taken from programs/Makefile).
 -fvisibility=hidden makes error when linking.
 Enable the "install" target on all OS.
 Fix pkgconfig installation path.
 
---- lib/Makefile.orig	2021-03-02 22:20:57.000000000 +0000
+--- lib/Makefile.orig	2021-05-14 14:59:34.000000000 +0000
 +++ lib/Makefile
-@@ -195,6 +195,43 @@ endif
+@@ -204,6 +204,43 @@ endif
  endif # BUILD_DIR
  
  
@@ -51,17 +51,7 @@ Fix pkgconfig installation path.
  # macOS linker doesn't support -soname, and use different extension
  # see : https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/DynamicLibraryDesignGuidelines.html
  ifeq ($(UNAME), Darwin)
-@@ -258,7 +295,8 @@ else  # not Windows
- LIBZSTD = libzstd.$(SHARED_EXT_VER)
- .PHONY: $(LIBZSTD)  # must be run every time
- $(LIBZSTD): CFLAGS += -fPIC -fvisibility=hidden
--$(LIBZSTD): LDFLAGS += -shared
-+$(LIBZSTD): CPPFLAGS += $(THREAD_CPP) $(ZLIBCPP) $(LZMACPP) $(LZ4CPP)
-+$(LIBZSTD): LDFLAGS += -shared $(THREAD_LD) $(ZLIBLD) $(LZMALD) $(LZ4LD)
- 
- ifndef BUILD_DIR
- # determine BUILD_DIR from compilation flags
-@@ -349,7 +387,6 @@ clean:
+@@ -374,7 +411,6 @@ clean:
  #-----------------------------------------------------------------------------
  # make install is validated only for below listed environments
  #-----------------------------------------------------------------------------
@@ -69,7 +59,7 @@ Fix pkgconfig installation path.
  
  all: libzstd.pc
  
-@@ -380,11 +417,7 @@ PCLIBPREFIX := $(if $(findstring $(LIBDI
+@@ -405,11 +441,7 @@ PCLIBPREFIX := $(if $(findstring $(LIBDI
  # to PREFIX, rather than as a resolved value.
  PCEXEC_PREFIX := $(if $(HAS_EXPLICIT_EXEC_PREFIX),$(EXEC_PREFIX),$${prefix})
  
@@ -81,7 +71,7 @@ Fix pkgconfig installation path.
  
  ifneq (,$(filter $(UNAME),SunOS))
    INSTALL ?= ginstall
-@@ -450,4 +483,3 @@ uninstall:
+@@ -479,4 +511,3 @@ uninstall:
  	$(RM) $(DESTDIR)$(INCLUDEDIR)/zdict.h
  	@echo zstd libraries successfully uninstalled
  
