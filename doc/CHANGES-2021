@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2866 2021/05/20 06:57:26 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2867 2021/05/20 08:21:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4465,3 +4465,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.6.1 [pin 2021-05-19]
 	Updated textproc/bat to 0.18.1 [fox 2021-05-20]
 	Updated lang/python39 to 3.9.5nb1 [triaxx 2021-05-20]
+	Updated graphics/libheif to 1.12.0 [wiz 2021-05-20]
