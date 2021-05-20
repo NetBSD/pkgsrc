@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2021/05/04 17:08:05 nia Exp $
+# $NetBSD: Makefile,v 1.99 2021/05/20 18:56:10 nia Exp $
 
 DISTNAME=	openttd-1.11.2-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -36,6 +36,7 @@ CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Grfcodec=ON
 
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17 # alloca
+BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z # alloca
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
