@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2870 2021/05/20 09:11:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2871 2021/05/20 09:32:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libidn2 to 2.3.1 [wiz 2021-05-20]
 	Updated chat/matrix-synapse to 1.34.0 [jperkin 2021-05-20]
 	Updated devel/py-mercurial to 5.8 [wiz 2021-05-20]
+	Updated devel/py-tortoisehg to 5.8 [wiz 2021-05-20]
