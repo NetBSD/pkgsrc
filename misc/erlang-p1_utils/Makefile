@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/01/15 23:31:58 triaxx Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/20 20:42:12 triaxx Exp $
 
-DISTNAME=	p1_utils-1.0.21
+DISTNAME=	p1_utils-1.0.22
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
