@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2021/05/16 10:10:54 nia Exp $
+# $NetBSD: Makefile,v 1.500 2021/05/20 07:52:37 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -165,6 +165,8 @@ SUBDIR+=	euler
 SUBDIR+=	fftpack
 SUBDIR+=	ffts
 SUBDIR+=	fftw
+SUBDIR+=	fftw-long
+SUBDIR+=	fftw-quad
 SUBDIR+=	fftw2
 SUBDIR+=	fgmp
 SUBDIR+=	fityk
