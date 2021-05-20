@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2896 2021/05/20 21:02:35 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2897 2021/05/20 21:41:26 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/erlang-eimp to 1.0.20 [triaxx 2021-05-20]
 	Updated misc/erlang-p1_utils to 1.0.22 [triaxx 2021-05-20]
 	Updated sysutils/erlang-lager to 3.9.2 [triaxx 2021-05-20]
+	Updated sysutils/tsm8 to 8.1.12.0 [hauke 2021-05-20]
