@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/05/07 19:14:36 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/05/20 12:58:13 adam Exp $
 
-SHA1 (xarray-0.18.0.tar.gz) = e897551fcf73496b6dce70e5c614351572bc8b0b
-RMD160 (xarray-0.18.0.tar.gz) = 0cded616dc32ca5668cae5c7a77b433094429370
-SHA512 (xarray-0.18.0.tar.gz) = a971db1644a2a5312b1d4749e4df3fbfbadec9c5b5b2d4ea59e7b42b1a3ae2d9290c3afb190a7175097bcdd398589759bee15054f163dbee1871408566c7fb1e
-Size (xarray-0.18.0.tar.gz) = 2843270 bytes
+SHA1 (xarray-0.18.2.tar.gz) = bc15a5ef1d005082841054c1586a45eceee2666a
+RMD160 (xarray-0.18.2.tar.gz) = bdf6a1b4ab94ef82833eb8224a17c35a4173efc4
+SHA512 (xarray-0.18.2.tar.gz) = 3cfd6a3b77c48a73eb72e6c39db33aba266925df7ce9b8270231dd14032a717094073a2c3686b09fcff25313b548a452f9ed902211e254254389d15f025d8d0d
+Size (xarray-0.18.2.tar.gz) = 2850065 bytes
