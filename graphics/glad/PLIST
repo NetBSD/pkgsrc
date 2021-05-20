@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/20 20:19:17 nia Exp $
+include/KHR/khrplatform.h
+include/glad/glad.h
+lib/cmake/glad/gladConfig.cmake
+lib/cmake/glad/gladConfigVersion.cmake
+lib/cmake/glad/gladTargets-noconfig.cmake
+lib/cmake/glad/gladTargets.cmake
+lib/libglad.so

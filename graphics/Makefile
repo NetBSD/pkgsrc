@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.933 2021/05/20 19:52:31 nia Exp $
+# $NetBSD: Makefile,v 1.934 2021/05/20 20:19:17 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -196,6 +196,7 @@ SUBDIR+=	gimp2-wideangle
 SUBDIR+=	giram
 SUBDIR+=	girara
 SUBDIR+=	gl2ps
+SUBDIR+=	glad
 SUBDIR+=	gle
 SUBDIR+=	glew
 SUBDIR+=	glfw
