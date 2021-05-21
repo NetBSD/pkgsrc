@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20659 2021/05/20 20:41:11 triaxx Exp $
+$NetBSD: TODO,v 1.20660 2021/05/21 11:38:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -1484,7 +1484,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netbt-hcidump-5.58
 	o netramet-50
 	o newmail-1.0.2
-	o nginx-1.20.0
 	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o nnn-4.0
