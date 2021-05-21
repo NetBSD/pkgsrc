@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/03/20 11:57:28 nia Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/21 16:40:02 nia Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -10,8 +10,6 @@ MAINTAINER=	flynn@energyhq.es.eu.org
 HOMEPAGE=	http://newfile.sourceforge.net/
 COMMENT=	Tool for creating starter files in various languages
 LICENSE=	modified-bsd
-
-CONFLICTS+=	ruby[1-9][0-9]-newfile-* newfile-*
 
 NO_BUILD=	yes
 GNU_CONFIGURE=	yes
