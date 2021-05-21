@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 01:43:31 taca Exp $
-bin/jcolorc
+@comment $NetBSD: PLIST,v 1.2 2021/05/21 12:40:22 nia Exp $
+bin/jcolorc${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.txt
 ${GEM_LIBDIR}/History.txt
