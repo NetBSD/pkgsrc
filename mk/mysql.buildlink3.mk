@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.32 2021/05/13 15:29:04 jdolecek Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.33 2021/05/21 13:20:43 jperkin Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 57 56 80 MARIADB104
+#	Possible: 57 56 80 mariadb104
 #	Default: 57
 #
 # Package-settable variables:
@@ -27,113 +27,102 @@
 MYSQL_VERSION_MK=	# defined
 
 BUILD_DEFS+=		MYSQL_VERSION_DEFAULT
-BUILD_DEFS_EFFECTS+=	MYSQL_PKGSRCDIR
+BUILD_DEFS_EFFECTS+=	MYSQL_VERSION
 
 _VARGROUPS+=		mysql
 _USER_VARS.mysql=	MYSQL_VERSION_DEFAULT
 _PKG_VARS.mysql=	MYSQL_VERSIONS_ACCEPTED
-_SYS_VARS.mysql=	MYSQL_PKGSRCDIR
+_SYS_VARS.mysql=	MYSQL_VERSION MYSQL_VERSION_REQD MYSQL_VERSIONS_ALL
+
+#
+# Set variables for all possible MySQL variants
+#
+MYSQL_VERSIONS_ALL=		80 57 56 mariadb104
+
+MYSQL_PKGBASE.80=		mysql-client-8.0.*
+MYSQL_PKGSRCDIR.80=		../../databases/mysql80-client
+
+MYSQL_PKGBASE.57=		mysql-client-5.7.*
+MYSQL_PKGSRCDIR.57=		../../databases/mysql57-client
+
+MYSQL_PKGBASE.56=		mysql-client-5.6.*
+MYSQL_PKGSRCDIR.56=		../../databases/mysql56-client
+
+MYSQL_PKGBASE.mariadb104=	mariadb-client-10.4.*
+MYSQL_PKGSRCDIR.mariadb104=	../../databases/mariadb104-client
+
+.for ver in ${MYSQL_VERSIONS_ALL}
+MYSQL_OK.${ver}=		no
+MYSQL_INSTALLED.${ver}=		no
+_SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
+.endfor
 
 .include "../../mk/bsd.prefs.mk"
 
+#
+# Ordering here matters.  Unless a more specific version is requested, or if
+# the default version is installed, the first accepted installed version will
+# be chosen.
+#
 MYSQL_VERSION_DEFAULT?=		57
-MYSQL_VERSIONS_ACCEPTED?=	57 56 80 MARIADB104
+MYSQL_VERSIONS_ACCEPTED?=	57 56 80 mariadb104
 
-# transform the list into individual variables
-.for mv in ${MYSQL_VERSIONS_ACCEPTED}
-_MYSQL_VERSION_${mv}_OK=	yes
+#
+# Previous versions of this file used shouty caps in the version names.  We
+# don't do that any longer, but do still support the older syntax.
+#
+MYSQL_VERSION_DEFAULT:=		${MYSQL_VERSION_DEFAULT:tl}
+MYSQL_VERSIONS_ACCEPTED:=	${MYSQL_VERSIONS_ACCEPTED:tl}
+
+#
+# If version is acceptable, mark as OK and check to see if installed.
+#
+.for ver in ${MYSQL_VERSIONS_ACCEPTED}
+MYSQL_OK.${ver}=		yes
+MYSQL_INSTALLED.${ver}!=					\
+	if ${PKG_INFO} -qe ${MYSQL_PKGBASE.${ver}:Q}; then	\
+		${ECHO} yes;					\
+	else							\
+		${ECHO} no;					\
+	fi
 .endfor
 
-# check what is installed
-.if ${OPSYS} == "Darwin"
-_MYSQL_SO_80=	21.dylib
-_MYSQL_SO_57=	20.dylib
-_MYSQL_SO_56=	18.dylib
-.else
-_MYSQL_SO_80=	so.21
-_MYSQL_SO_57=	so.20
-_MYSQL_SO_56=	so.18
-.endif
-
-.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_80})
-_MYSQL_VERSION_80_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	80
-.endif
-.if exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_57})
-_MYSQL_VERSION_57_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	57
-.elif exists(${LOCALBASE}/lib/libmysqlclient.${_MYSQL_SO_56})
-_MYSQL_VERSION_56_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	56
-.elif exists(${LOCALBASE}/lib/libmariadb.so.3)
-_MYSQL_VERSION_MARIADB104_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	MARIADB104
-.endif
-
-
-# if a version is explicitely required, take it
+#
+# Selection process, first match wins:
+#
+#   - If a specific version is explicitly required, use it.
+#   - Otherwise if the default version is installed, use that.
+#   - Otherwise prefer an already installed version, in order of accepted.
+#
+# If no acceptable package is already installed:
+#
+#   - If the default is acceptable, use it.
+#   - Otherwise require the first version listed as accepted.
+#
 .if defined(MYSQL_VERSION_REQD)
-_MYSQL_VERSION=	${MYSQL_VERSION_REQD}
-.endif
-# if the default is already installed, it is first choice
-.if !defined(_MYSQL_VERSION)
-.  if defined(_MYSQL_VERSION_${MYSQL_VERSION_DEFAULT}_OK)
-.    if defined(_MYSQL_VERSION_${MYSQL_VERSION_DEFAULT}_INSTALLED)
-_MYSQL_VERSION=	${MYSQL_VERSION_DEFAULT}
-.    endif
-.  endif
-.endif
-# prefer an already installed version, in order of "accepted"
-.if !defined(_MYSQL_VERSION)
-.  for mv in ${MYSQL_VERSIONS_ACCEPTED}
-.    if defined(_MYSQL_VERSION_${mv}_INSTALLED)
-_MYSQL_VERSION?=	${mv}
-.    else
-# keep information as last resort - see below
-_MYSQL_VERSION_FIRSTACCEPTED?=	${mv}
+MYSQL_VERSION=	${MYSQL_VERSION_REQD}
+.elif ${MYSQL_OK.${MYSQL_VERSION_DEFAULT}} == "yes" && \
+      ${MYSQL_INSTALLED.${MYSQL_VERSION_DEFAULT}} == "yes"
+MYSQL_VERSION=	${MYSQL_VERSION_DEFAULT}
+.else
+.  for ver in ${MYSQL_VERSIONS_ACCEPTED}
+.    if ${MYSQL_INSTALLED.${ver}} == "yes"
+MYSQL_VERSION?=	${ver}
 .    endif
 .  endfor
 .endif
-# if the default is OK for the addon pkg, take this
-.if !defined(_MYSQL_VERSION)
-.  if defined(_MYSQL_VERSION_${MYSQL_VERSION_DEFAULT}_OK)
-_MYSQL_VERSION=	${MYSQL_VERSION_DEFAULT}
+.if !defined(MYSQL_VERSION)
+.  if ${MYSQL_OK.${MYSQL_VERSION_DEFAULT}} == "yes"
+MYSQL_VERSION=	${MYSQL_VERSION_DEFAULT}
+.  else
+MYSQL_VERSION=	${MYSQL_VERSIONS_ACCEPTED:[1]}
 .  endif
 .endif
-# take the first one accepted by the package
-.if !defined(_MYSQL_VERSION)
-_MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
-.endif
 
-#
-# set variables for the version we decided to use:
-#
-.if ${_MYSQL_VERSION} == "80"
-MYSQL_PKGSRCDIR=	../../databases/mysql80-client
-.elif ${_MYSQL_VERSION} == "57"
-MYSQL_PKGSRCDIR=	../../databases/mysql57-client
-.elif ${_MYSQL_VERSION} == "56"
-MYSQL_PKGSRCDIR=	../../databases/mysql56-client
-.elif ${_MYSQL_VERSION} == "MARIADB104"
-MYSQL_PKGSRCDIR=	../../databases/mariadb104-client
+.if defined(MYSQL_PKGSRCDIR.${MYSQL_VERSION})
+.  include "${MYSQL_PKGSRCDIR.${MYSQL_VERSION}}/buildlink3.mk"
 .else
-# force an error
-PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql package."
+PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] Invalid MySQL version '${MYSQL_VERSION}'."
 .endif
-
-#
-# check installed version aginst required:
-#
-.if defined(_MYSQL_VERSION_INSTALLED)
-.  if ${_MYSQL_VERSION} != ${_MYSQL_VERSION_INSTALLED}
-PKG_FAIL_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYSQL_VERSION_INSTALLED} is already installed."
-.  endif
-.endif
-
-.if defined(MYSQL_PKGSRCDIR)
-.include "${MYSQL_PKGSRCDIR}/buildlink3.mk"
-.endif
-
-MYSQL_VERSION=		${_MYSQL_VERSION}
 
 .endif	# MYSQL_VERSION_MK
