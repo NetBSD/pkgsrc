@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2012/12/17 15:10:57 taca Exp $
-bin/ramaze
+@comment $NetBSD: PLIST,v 1.11 2021/05/21 21:06:19 nia Exp $
+bin/ramaze${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gems
 ${GEM_LIBDIR}/.gitignore
