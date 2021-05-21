@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.9 2021/04/30 03:05:30 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.10 2021/05/21 01:45:00 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -37,7 +37,14 @@ BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-freebsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
+# Cross-compiled from x86_64 on a QEMU guest. It took days to compile...
+BOOT_VERSION:=	9.0.1
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-aarch64-unknown-netbsd.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
 BOOT_VERSION:=	8.10.4
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
