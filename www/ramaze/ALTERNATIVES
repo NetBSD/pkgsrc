@@ -1,0 +1,1 @@
+bin/ramaze @PREFIX@/bin/ramaze@RUBY_SUFFIX@
