@@ -1,0 +1,1 @@
+bin/vaporadmin @PREFIX@/bin/vaporadmin@RUBY_SUFFIX@
