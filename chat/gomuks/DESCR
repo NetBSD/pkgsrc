@@ -1,0 +1,4 @@
+A terminal Matrix client written in Go using mautrix and mauview
+
+Basic usage is possible, but expect bugs and missing features.
+Documentation: https://docs.mau.fi/gomuks/
