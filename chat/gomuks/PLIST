@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/21 15:04:16 bsiegert Exp $
+bin/gomuks
