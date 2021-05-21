@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/05/20 21:02:16 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2021/05/21 11:24:16 triaxx Exp $
 
 SHA1 (lager-3.9.2.tar.gz) = 30a93b3a004285fab7036ca1fc84cc581606d6e0
 RMD160 (lager-3.9.2.tar.gz) = 439094a15c676ae7eddb2d5152cc24bef658cfa4
 SHA512 (lager-3.9.2.tar.gz) = 13b08145ab2316215f95de34838445f2922513e44f6800f338cd6941e6854653a9f8657447b439d5d508cb4569fbf4a0e03dc508d7c5d2ad48c9d4d14e17ca50
 Size (lager-3.9.2.tar.gz) = 273894 bytes
-SHA1 (patch-Makefile) = 8c71466df8a7ea55e4eef9f99ab6de05d32b428f
+SHA1 (patch-Makefile) = 179393d96e6bdee4b2e18f2d9f0f2f1ba9271ac2
 SHA1 (patch-rebar.config) = cc8c5503c026a5610b982773f52a38ee26385a27
