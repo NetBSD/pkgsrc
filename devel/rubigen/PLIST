@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2010/03/08 12:51:45 fhajny Exp $
-bin/install_rubigen_scripts
-bin/rubigen
-bin/ruby_app
+@comment $NetBSD: PLIST,v 1.6 2021/05/21 16:47:03 nia Exp $
+bin/install_rubigen_scripts${RUBY_SUFFIX}
+bin/rubigen${RUBY_SUFFIX}
+bin/ruby_app${RUBY_SUFFIX}
 ${GEM_HOME}/cache/rubigen-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/History.txt
