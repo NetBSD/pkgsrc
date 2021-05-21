@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2911 2021/05/21 16:39:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2912 2021/05/21 21:01:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/py-dnaio to 0.5.1 [adam 2021-05-21]
 	Added chat/gomuks version 0.2.3 [bsiegert 2021-05-21]
 	Removed graphics/x11rec [nia 2021-05-21]
+	Removed www/raggle [nia 2021-05-21]
