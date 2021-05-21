@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2909 2021/05/21 11:38:37 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2910 2021/05/21 15:05:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4513,3 +4513,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/erlang-lager to 3.9.2nb1 [triaxx 2021-05-21]
 	Updated www/nginx to 1.20.0 [adam 2021-05-21]
 	Updated biology/py-dnaio to 0.5.1 [adam 2021-05-21]
+	Added chat/gomuks version 0.2.3 [bsiegert 2021-05-21]
