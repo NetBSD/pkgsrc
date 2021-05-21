@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/08 01:52:24 bacon Exp $
+$NetBSD: distinfo,v 1.2 2021/05/21 11:38:13 adam Exp $
 
-SHA1 (dnaio-0.5.0.tar.gz) = 466b533b83ef34baab0492199264a6d88d34be57
-RMD160 (dnaio-0.5.0.tar.gz) = 731c217d956cf03088851579bd364d510b8222ec
-SHA512 (dnaio-0.5.0.tar.gz) = 2e6a0dd04558b70ee08a81fd1d118525734df52701735cc27bab4c423c2030ec2fb6e83ddf02c491e1eb250c471d230b8fa72993c3a20ae844716c9542059c67
-Size (dnaio-0.5.0.tar.gz) = 126321 bytes
+SHA1 (dnaio-0.5.1.tar.gz) = 7c48b05dcfd7d20267f938123b7ce7c37d59eee8
+RMD160 (dnaio-0.5.1.tar.gz) = fb03fe045f77db1316905e31dc822810f83b1240
+SHA512 (dnaio-0.5.1.tar.gz) = 127e3dcc8291c21e8adce71211692e9c2284d49df336bb923c53fc5fea7dcb9d9b9f047f95642f3300240dac3d43cf6e987b3148b4ffa239d70f3b6c7ef043a5
+Size (dnaio-0.5.1.tar.gz) = 126820 bytes
