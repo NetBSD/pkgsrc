@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 13:24:41 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/21 15:01:51 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ioquake/}
 GITHUB_PROJECT=	ioq3
@@ -13,20 +13,34 @@ HOMEPAGE=	http://www.ioquake3.org/
 COMMENT=	Open source Quake 3 distribution
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	release
 INSTALL_TARGET=	copyfiles
 
 MAKE_FLAGS+=	COPYDIR=${DESTDIR}${PREFIX}/lib/ioquake3
+MAKE_FLAGS+=	PKG_CONFIG=${TOOLS_PATH.pkg-config:Q}
+MAKE_FLAGS+=	USE_INTERNAL_JPEG=0
+MAKE_FLAGS+=	USE_INTERNAL_OGG=0
+MAKE_FLAGS+=	USE_INTERNAL_OPUS=0
+MAKE_FLAGS+=	USE_INTERNAL_VORBIS=0
+MAKE_FLAGS+=	USE_INTERNAL_ZLIB=0
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
-QUAKE_ARCH!=	uname -m
-.elif ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "aarch64"
-QUAKE_ARCH=	${MACHINE_CPU}
+.if !empty(MACHINE_ARCH:M*arm*)
+QUAKE_ARCH=	arm
+.elif !empty(MACHINE_ARCH:M*mips*)
+QUAKE_ARCH=	mips
+.elif !empty(MACHINE_ARCH:M*sh3*)
+QUAKE_ARCH=	sh
 .elif ${MACHINE_ARCH} == "i386"
 QUAKE_ARCH=	x86
+.elif ${MACHINE_ARCH} == "powerpc"
+QUAKE_ARCH=	ppc
+.elif ${MACHINE_ARCH} == "powerpc64"
+QUAKE_ARCH=	ppc64
+.elif ${MACHINE_ARCH} == "sparc64"
+QUAKE_ARCH=	sparc
 .else
 QUAKE_ARCH=	${MACHINE_ARCH}
 .endif
@@ -50,7 +64,12 @@ post-install:
 .endfor
 
 .include "../../audio/openal-soft/buildlink3.mk"
+.include "../../audio/opusfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
