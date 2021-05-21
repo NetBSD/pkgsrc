@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:26 joerg Exp $
-bin/vaporadmin
+@comment $NetBSD: PLIST,v 1.7 2021/05/21 12:20:24 nia Exp $
+bin/vaporadmin${RUBY_SUFFIX}
 ${RUBY_VENDORLIB}/vapor.rb
 ${RUBY_VENDORLIB}/vapor/persistencemgr.rb
 ${RUBY_VENDORLIB}/vapor/queryparser.y
