@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.8 2021/05/07 19:05:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.9 2021/05/21 15:01:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -67,4 +67,10 @@ net/bind916: security fix
 
 Pullup ticket #6455 - requested by abs
 mail/exim: security fix
+
+Pullup ticket #6456 - requested by nia
+multimedia/mpv: performance fix
+
+Pullup ticket #6457 - requested by gdt
+net/speedtest-cli: bugfix
 
