@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:18 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/21 11:18:09 nia Exp $
 
 DISTNAME=	amrita-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc ruby www
 MASTER_SITES=	${MASTER_SITE_OSDN:=amrita/10939/}
 
@@ -9,8 +9,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://amrita.osdn.jp/
 COMMENT=	HTML/XHTML template library for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
-
-CONFLICTS+=	ruby[1-9][0-9]-amrita-*
 
 NO_BUILD=	yes
 DOCS=		ChangeLog README README_ja
@@ -27,7 +25,7 @@ post-patch:
 
 post-install:
 .for f in ${REPLACE_RUBY}
-	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
+	${MV} ${DESTDIR}${PREFIX}/${f} ${DESTDIR}${PREFIX}/${f}${RUBY_SUFFIX}
 .endfor
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/amrita

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:27 joerg Exp $
-bin/ams
-bin/amshandler
-bin/amx
+@comment $NetBSD: PLIST,v 1.6 2021/05/21 11:18:09 nia Exp $
+bin/ams${RUBY_SUFFIX}
+bin/amshandler${RUBY_SUFFIX}
+bin/amx${RUBY_SUFFIX}
 ${RUBY_VENDORLIB}/amrita/ams.rb
 ${RUBY_VENDORLIB}/amrita/amx.rb
 ${RUBY_VENDORLIB}/amrita/cgikit.rb
@@ -31,11 +31,7 @@ ${RUBY_DOC}/amrita/Tour_ja
 ${RUBY_DOC}/amrita/XML
 ${RUBY_DOC}/amrita/XML_ja
 ${RUBY_DOC}/amrita/amritadoc.rb
-${RUBY_DOC}/amrita/index.amx
-${RUBY_DOC}/amrita/index.rd
-${RUBY_DOC}/amrita/index.xml
-${RUBY_DOC}/amrita/index_ja.rd
-${RUBY_DOC}/amrita/index_ja.xml
+${RUBY_DOC}/amrita/html/classes/Amrita.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AmsHandler.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AmsTemplate.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AsIsFormatter.html
@@ -82,11 +78,10 @@ ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateFile.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateFileWithCache.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateText.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/XMLParser.html
-${RUBY_DOC}/amrita/html/classes/Amrita.html
+${RUBY_DOC}/amrita/html/classes/Amx.html
 ${RUBY_DOC}/amrita/html/classes/Amx/AmxContext.html
 ${RUBY_DOC}/amrita/html/classes/Amx/Document.html
 ${RUBY_DOC}/amrita/html/classes/Amx/Template.html
-${RUBY_DOC}/amrita/html/classes/Amx.html
 ${RUBY_DOC}/amrita/html/classes/Array.html
 ${RUBY_DOC}/amrita/html/classes/CKAmritaElement.html
 ${RUBY_DOC}/amrita/html/classes/Integer.html
@@ -131,6 +126,11 @@ ${RUBY_DOC}/amrita/html/fr_file_index.html
 ${RUBY_DOC}/amrita/html/fr_method_index.html
 ${RUBY_DOC}/amrita/html/index.html
 ${RUBY_DOC}/amrita/html/rdoc-style.css
+${RUBY_DOC}/amrita/index.amx
+${RUBY_DOC}/amrita/index.rd
+${RUBY_DOC}/amrita/index.xml
+${RUBY_DOC}/amrita/index_ja.rd
+${RUBY_DOC}/amrita/index_ja.xml
 ${RUBY_EG}/amrita/bbs/README
 ${RUBY_EG}/amrita/bbs/advertize_sample.html
 ${RUBY_EG}/amrita/bbs/bbs.rb
