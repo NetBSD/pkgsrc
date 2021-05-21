@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2904 2021/05/21 08:38:09 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2905 2021/05/21 10:21:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4507,3 +4507,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/erlang-fast_tls to 1.1.12 [triaxx 2021-05-21]
 	Updated net/haproxy to 2.4.0 [adam 2021-05-21]
 	Updated time/py-cftime to 1.5.0 [adam 2021-05-21]
+	Updated net/erlang-stun to 1.0.43 [triaxx 2021-05-21]
