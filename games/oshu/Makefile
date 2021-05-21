@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/03/12 15:02:13 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/21 12:58:43 nia Exp $
 
 DISTNAME=	oshu-2.0.1
 PKGREVISION=	3
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+
+LDFLAGS+=	-lm # fmaf()
 
 CMAKE_ARGS+=	-DOSHU_SKINS="minimal"
 
