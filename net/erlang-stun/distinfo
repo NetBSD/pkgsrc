@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2021/01/16 13:00:27 triaxx Exp $
+$NetBSD: distinfo,v 1.16 2021/05/21 10:20:52 triaxx Exp $
 
-SHA1 (stun-1.0.40.tar.gz) = 12cb94ff435beb2d16b19d18ea1292fd48a190c7
-RMD160 (stun-1.0.40.tar.gz) = 6d1538b3e6b68bd7c0eda5b575f009a0c40730b5
-SHA512 (stun-1.0.40.tar.gz) = cf3fe1b04588a22ef717210e9be4171061d3bcf20c0226a3bb67662001ced7ee16279597c8bc8cad4365cd7e44a7349cc83462893c08bc50e78d5502a1cc7ebe
-Size (stun-1.0.40.tar.gz) = 39372 bytes
+SHA1 (stun-1.0.43.tar.gz) = 2e0ec202b3aa3b38af1b2b438af5e38b7fd971e7
+RMD160 (stun-1.0.43.tar.gz) = ade9a5ed5fc639df1197c83e7cc5f2ffc91eb96e
+SHA512 (stun-1.0.43.tar.gz) = dbd786f4e2a11a1d941d5db92f9ea3ec726b0cdf100d3e8b7badca2e6ba086680707765412d154b2fe4958d3a695984c5be25a73725ef80643dbe57f981f9a02
+Size (stun-1.0.43.tar.gz) = 39788 bytes
+SHA1 (patch-Makefile) = fad2069c7df3d94a69428104c1a6f50b9b350202
