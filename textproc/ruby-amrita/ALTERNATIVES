@@ -1,0 +1,3 @@
+bin/ams @PREFIX@/bin/ams@RUBY_SUFFIX@
+bin/amshandler @PREFIX@/bin/amshandler@RUBY_SUFFIX@
+bin/amx @PREFIX@/bin/amx@RUBY_SUFFIX@
