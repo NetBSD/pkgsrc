@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/04/22 08:38:59 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/21 11:38:13 adam Exp $
 
-DISTNAME=	dnaio-0.5.0
+DISTNAME=	dnaio-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	biology
+CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnaio/}
 
 MAINTAINER=	bacon@NetBSD.org
@@ -11,9 +11,7 @@ COMMENT=	Read and write FASTQ and FASTA files
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-
-# "TypeError: 'encoding' is an invalid keyword argument for this function"
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-xopen>=0.8.2:../../devel/py-xopen
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
