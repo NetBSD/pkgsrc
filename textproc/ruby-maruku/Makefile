@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/03/20 15:35:24 taca Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/21 11:19:22 nia Exp $
 
 DISTNAME=	maruku-0.7.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,8 +10,6 @@ COMMENT=	Markdown-superset interpreter
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-syntax>=1.0.0:../../textproc/ruby-syntax
-
-CONFLICTS+=	ruby[1-9][0-9]-maruku-*
 
 RUBYGEM_OPTIONS+=	--format-executable
 
