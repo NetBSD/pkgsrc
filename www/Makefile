@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1542 2021/05/21 07:06:41 pin Exp $
+# $NetBSD: Makefile,v 1.1543 2021/05/21 21:01:16 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -857,7 +857,6 @@ SUBDIR+=	py-yarl
 SUBDIR+=	py-zope.proxy
 SUBDIR+=	qDecoder
 SUBDIR+=	qutebrowser
-SUBDIR+=	raggle
 SUBDIR+=	ramaze
 SUBDIR+=	rekonq
 SUBDIR+=	ruby-actioncable52
