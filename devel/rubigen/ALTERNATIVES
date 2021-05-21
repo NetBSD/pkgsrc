@@ -1,0 +1,3 @@
+bin/install_rubigen_scripts @PREFIX@/bin/install_rubigen_scripts@RUBY_SUFFIX@
+bin/rubigen @PREFIX@/bin/rubigen@RUBY_SUFFIX@
+bin/ruby_app @PREFIX@/bin/ruby_app@RUBY_SUFFIX@
