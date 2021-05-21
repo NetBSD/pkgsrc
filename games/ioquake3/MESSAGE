@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+$NetBSD: MESSAGE,v 1.2 2021/05/21 15:01:51 nia Exp $
 
-To run ioquake3, you must place the file 'pak0.pk3' from your
+To run Quake III Arena, you must place the file 'pak0.pk3' from your
 Quake 3 CD into:
 
  ${LOCALBASE}/lib/ioquake3/baseq3/
