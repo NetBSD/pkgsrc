@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2901 2021/05/21 07:07:12 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2902 2021/05/21 07:07:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4502,3 +4502,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unrar to 6.0.6 [adam 2021-05-21]
 	Updated sysutils/lsfp to 0.5.0 [pin 2021-05-21]
 	Added www/longboard version 0.0.7 [pin 2021-05-21]
+	Updated www/libsass to 3.6.5 [adam 2021-05-21]
+	Updated www/sassc to 3.6.2 [adam 2021-05-21]
