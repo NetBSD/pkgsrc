@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2906 2021/05/21 10:31:21 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2907 2021/05/21 10:50:26 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4509,3 +4509,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-cftime to 1.5.0 [adam 2021-05-21]
 	Updated net/erlang-stun to 1.0.43 [triaxx 2021-05-21]
 	Updated graphics/erlang-eimp to 1.0.20nb2 [triaxx 2021-05-21]
+	Updated net/erlang-stun to 1.0.43nb1 [triaxx 2021-05-21]
