@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2902 2021/05/21 07:07:37 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2903 2021/05/21 07:50:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4504,3 +4504,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/longboard version 0.0.7 [pin 2021-05-21]
 	Updated www/libsass to 3.6.5 [adam 2021-05-21]
 	Updated www/sassc to 3.6.2 [adam 2021-05-21]
+	Updated security/erlang-fast_tls to 1.1.12 [triaxx 2021-05-21]
