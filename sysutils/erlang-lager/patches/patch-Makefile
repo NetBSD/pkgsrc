@@ -1,27 +1,32 @@
-$NetBSD: patch-Makefile,v 1.1 2021/01/16 00:10:51 triaxx Exp $
+$NetBSD: patch-Makefile,v 1.2 2021/05/21 11:24:16 triaxx Exp $
 
-Use pkgsrc rebar.
+Localize rebar path.
 
---- Makefile.orig	2020-08-28 17:41:26.000000000 +0000
+--- Makefile.orig	2021-05-14 15:02:36.000000000 +0000
 +++ Makefile
-@@ -4,16 +4,16 @@
+@@ -1,19 +1,21 @@
++REBAR ?= ./rebar
++
+ .PHONY: all compile deps clean distclean test check_plt build_plt dialyzer \
+ 	    cleanplt
+ 
  all: deps compile
  
  compile: deps
 -	./rebar compile
-+	@REBAR@ compile
++	$(REBAR) compile
  
  deps:
 -	test -d deps || ./rebar get-deps
-+	test -d deps || @REBAR@ get-deps
++	test -d deps || $(REBAR) get-deps
  
  clean:
 -	./rebar clean
-+	@REBAR@ clean
++	$(REBAR) clean
  
  distclean: clean
 -	./rebar delete-deps
-+	@REBAR@ delete-deps
++	$(REBAR) delete-deps
  
  DIALYZER_APPS = kernel stdlib erts sasl eunit syntax_tools compiler crypto \
  				common_test
