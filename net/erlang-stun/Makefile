@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/01/16 13:00:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/21 10:20:52 triaxx Exp $
 
-DISTNAME=	stun-1.0.40
+DISTNAME=	stun-1.0.43
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,12 +9,13 @@ HOMEPAGE=	https://github.com/processone/stun/
 COMMENT=	STUN and TURN library for Erlang / Elixir
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-fast_tls>=1.1.10:../../security/erlang-fast_tls
-DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-fast_tls>=1.1.12:../../security/erlang-fast_tls
+DEPENDS+=	erlang-p1_utils>=1.0.22:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	stun
 
 BUILD_TARGET=	src
+MAKE_ENV+=	REBAR=${REBAR}
 
 # Leave a non-versioned symlink in place for net/erlang-esip to find
 post-install:
