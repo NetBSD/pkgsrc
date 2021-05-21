@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/04/03 16:34:13 adam Exp $
+# $NetBSD: options.mk,v 1.10 2021/05/21 08:36:57 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.haproxy
 PKG_SUPPORTED_OPTIONS=		lua prometheus ssl
@@ -41,7 +41,7 @@ BUILD_MAKE_FLAGS+=	LUA_LIB_NAME=lua5.3
 ### Use Prometheus
 ###
 .if !empty(PKG_OPTIONS:Mprometheus)
-BUILD_MAKE_FLAGS+=	EXTRA_OBJS="contrib/prometheus-exporter/service-prometheus.o"
+BUILD_MAKE_FLAGS+=	USE_PROMEX=1
 .endif
 
 ###
