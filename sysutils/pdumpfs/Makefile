@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/03/15 17:04:44 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/21 17:06:51 nia Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
-PKGREVISION=	3
+PKGNAME=	pdumpfs-${VER}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
@@ -11,7 +11,8 @@ HOMEPAGE=	http://0xcc.net/pdumpfs/
 COMMENT=	Simple daily backup system similar to Plan9's dumpfs
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	ruby[1-9][0-9]-pdumpfs-[0-9]* pdumpfs-[0-9]*
+CONFLICTS+=	ruby[1-9][0-9]-pdumpfs-[0-9]*
+SUPERSEDES+=	ruby[1-9][0-9]-pdumpfs-[0-9]*
 
 USE_TOOLS+=	pax
 
