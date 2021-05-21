@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1541 2021/05/13 12:01:00 nia Exp $
+# $NetBSD: Makefile,v 1.1542 2021/05/21 07:06:41 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -213,6 +213,7 @@ SUBDIR+=	litmus
 SUBDIR+=	llgal
 SUBDIR+=	loggerhead
 SUBDIR+=	logswan
+SUBDIR+=	longboard
 SUBDIR+=	lua-curl
 SUBDIR+=	lua-http
 SUBDIR+=	lua-psl
