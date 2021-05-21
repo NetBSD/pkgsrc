@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/09/04 18:08:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/05/21 11:11:19 nia Exp $
 
 DISTNAME=	bluecloth-2.2.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,9 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Markdown library for Ruby
 LICENSE=	original-bsd
 
-CONFLICTS+=	ruby[1-9][0-9]-bluecloth-[0-9]*
-
 USE_GCC_RUNTIME=	yes
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/bluecloth \
+	    ${DESTDIR}${PREFIX}/bin/bluecloth${RUBY_SUFFIX}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
