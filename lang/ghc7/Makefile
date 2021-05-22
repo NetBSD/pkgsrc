@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/04/30 18:52:05 pho Exp $
+# $NetBSD: Makefile,v 1.48 2021/05/22 23:10:26 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -13,9 +13,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 7.10 Release Series
 LICENSE=	modified-bsd
-
-# TODO: We should be using the alternatives framework.
-CONFLICTS+=	ghc-[0-9]*
 
 # GHC requires GHC to build itself. Formerly we could work around this
 # bootstrapping problem by creating a special archive containing C
