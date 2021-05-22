@@ -1,13 +1,14 @@
-$NetBSD: patch-configure,v 1.8 2021/05/04 05:16:07 adam Exp $
+$NetBSD: patch-configure,v 1.9 2021/05/22 09:48:02 bouyer Exp $
 
 - Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
 - Fix linking on Darwin; don't use -stack_size.
 - Changes for consistency across pkgsrc platforms.
 - Simplify _sysconfigdata to include only platform name.
+- detect netcan/can.h on NetBSD
 
---- configure.orig	2021-05-03 09:47:56.000000000 +0000
-+++ configure
-@@ -6917,7 +6917,7 @@ UNIVERSAL_ARCH_FLAGS=
+--- configure.orig	2021-05-03 11:47:56.000000000 +0200
++++ configure	2021-05-21 13:07:18.622777201 +0200
+@@ -6917,7 +6917,7 @@
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -16,7 +17,16 @@ $NetBSD: patch-configure,v 1.8 2021/05/04 05:16:07 adam Exp $
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -9564,7 +9569,6 @@ then
+@@ -8253,7 +8253,7 @@
+ 
+ 
+ # On Linux, can.h and can/raw.h require sys/socket.h
+-for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h
++for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h netcan/can.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
+@@ -9564,7 +9564,6 @@
  		# to ensure that tests don't crash
  		# Note: This matches the value of THREAD_STACK_SIZE in
  		# thread_pthread.h
@@ -24,7 +34,7 @@ $NetBSD: patch-configure,v 1.8 2021/05/04 05:16:07 adam Exp $
  
  		if test "$enable_framework"
  		then
-@@ -14356,10 +14385,10 @@ _ACEOF
+@@ -14356,10 +14355,10 @@
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
@@ -37,7 +47,7 @@ $NetBSD: patch-configure,v 1.8 2021/05/04 05:16:07 adam Exp $
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15244,7 +15273,7 @@ _ACEOF
+@@ -15244,7 +15243,7 @@
  fi
  
  
@@ -46,7 +56,7 @@ $NetBSD: patch-configure,v 1.8 2021/05/04 05:16:07 adam Exp $
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  $as_echo_n "checking LDVERSION... " >&6; }
-@@ -15261,11 +15290,7 @@ else
+@@ -15261,11 +15260,7 @@
  fi
  
  
