@@ -1,4 +1,4 @@
-$NetBSD: patch-aclocal.m4,v 1.4 2021/05/21 01:45:00 pho Exp $
+$NetBSD: patch-aclocal.m4,v 1.5 2021/05/22 09:10:36 pho Exp $
 
 Hunk #0:
   Remove _AC_PROG_CC_C99 macro that is removed in autoconf-2.71 to fix
@@ -9,7 +9,7 @@ Hunk #0:
 
 Hunk #1:
   Mark the stack as non-executable on NetBSD/aarch64.
-  TODO: Send this to the upstream.
+  https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5805
 
 --- aclocal.m4.orig	2021-01-26 14:49:54.000000000 +0000
 +++ aclocal.m4
