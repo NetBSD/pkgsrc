@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2913 2021/05/22 00:36:51 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.2914 2021/05/22 09:12:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4517,3 +4517,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed graphics/x11rec [nia 2021-05-21]
 	Removed www/raggle [nia 2021-05-21]
 	Updated emulators/PC6001VX to 3.7.2 [tsutsui 2021-05-22]
+	Updated net/vpnc-script to 20210401 [schmonz 2021-05-22]
