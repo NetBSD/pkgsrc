@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.173 2021/05/22 13:49:16 rin Exp $
+@comment $NetBSD: PLIST,v 1.174 2021/05/22 14:00:05 rin Exp $
 bin/firefox
 lib/firefox/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox/actors/AboutHttpsOnlyErrorParent.jsm
@@ -2884,11 +2884,11 @@ lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/jszip.
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/lodash.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-dev.js
-${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-factories.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
-lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
+lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
