@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/05/20 23:08:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/05/22 13:32:22 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_process
@@ -1622,6 +1622,7 @@ share/qgis/i18n/qgis_ro.qm
 share/qgis/i18n/qgis_ru.qm
 share/qgis/i18n/qgis_sc.qm
 share/qgis/i18n/qgis_sv.qm
+share/qgis/i18n/qgis_tr.qm
 share/qgis/i18n/qgis_uk.qm
 share/qgis/i18n/qgis_vi.qm
 share/qgis/i18n/qgis_zh-Hans.qm
@@ -2834,6 +2835,7 @@ share/qgis/python/plugins/processing/tests/Grass7AlgorithmsVectorTest.py
 share/qgis/python/plugins/processing/tests/GuiTest.py
 share/qgis/python/plugins/processing/tests/ModelerTest.py
 share/qgis/python/plugins/processing/tests/OtbAlgorithmsTest.py
+share/qgis/python/plugins/processing/tests/ParametersTest.py
 share/qgis/python/plugins/processing/tests/ProcessingGeneralTest.py
 share/qgis/python/plugins/processing/tests/ProjectProvider.py
 share/qgis/python/plugins/processing/tests/QgisAlgorithmsTest1.py
