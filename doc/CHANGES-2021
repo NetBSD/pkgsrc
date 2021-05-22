@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2918 2021/05/22 13:46:14 mef Exp $
+$NetBSD: CHANGES-2021,v 1.2919 2021/05/22 14:58:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/librecad to 2.2.0.rc2 [nia 2021-05-22]
 	Updated geography/qgis to 3.16.7 [gdt 2021-05-22]
 	Updated cad/klayout to 0.26.10 [mef 2021-05-22]
+	Updated databases/ruby-moneta to 1.4.2 [taca 2021-05-22]
