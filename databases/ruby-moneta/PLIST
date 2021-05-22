@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/10 14:27:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/22 14:58:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -189,10 +189,8 @@ ${GEM_LIBDIR}/spec/moneta/adapters/lruhash/standard_lruhash_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/lruhash/standard_lruhash_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/adapter_memcached_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/adapter_memcached_dalli_spec.rb
-${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/adapter_memcached_dalli_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/standard_memcached_dalli_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/adapter_memcached_native_spec.rb
-${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/adapter_memcached_native_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/standard_memcached_native_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/standard_memcached_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached_helper.rb
@@ -214,7 +212,6 @@ ${GEM_LIBDIR}/spec/moneta/adapters/pstore/adapter_pstore_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/pstore/standard_pstore_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/pstore/standard_pstore_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/redis/adapter_redis_spec.rb
-${GEM_LIBDIR}/spec/moneta/adapters/redis/adapter_redis_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/redis/standard_redis_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/restclient/adapter_restclient_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/restclient/helper.rb
@@ -259,7 +256,6 @@ ${GEM_LIBDIR}/spec/moneta/proxies/lock/lock_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/optionmerger/optionmerger_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/pool/pool_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/proxy/proxy_expires_memory_spec.rb
-${GEM_LIBDIR}/spec/moneta/proxies/proxy/proxy_redis_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/shared/shared_tcp_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/shared/shared_unix_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_bencode_spec.rb
