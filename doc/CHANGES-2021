@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2915 2021/05/22 09:12:38 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.2916 2021/05/22 10:18:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/PC6001VX to 3.7.2 [tsutsui 2021-05-22]
 	Updated net/vpnc-script to 20210401 [schmonz 2021-05-22]
 	Updated security/libretls to 3.3.3 [schmonz 2021-05-22]
+	Updated cad/librecad to 2.2.0.rc2 [nia 2021-05-22]
