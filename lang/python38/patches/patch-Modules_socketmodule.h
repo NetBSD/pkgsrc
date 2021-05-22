@@ -1,15 +1,13 @@
-$NetBSD: patch-Modules_socketmodule.h,v 1.1 2019/10/15 16:50:11 adam Exp $
+$NetBSD: patch-Modules_socketmodule.h,v 1.2 2021/05/22 09:48:02 bouyer Exp $
 
---- Modules/socketmodule.h.orig	2017-03-21 07:32:38.000000000 +0100
-+++ Modules/socketmodule.h	2017-05-30 12:36:59.254776235 +0200
-@@ -91,6 +91,10 @@
- #include <linux/can/bcm.h>
- #endif
+--- Modules/socketmodule.h.orig	2021-05-03 11:47:56.000000000 +0200
++++ Modules/socketmodule.h	2021-05-21 23:47:53.387781121 +0200
+@@ -90,6 +90,8 @@
  
-+#ifdef HAVE_NETCAN_CAN_H
+ #ifdef HAVE_LINUX_CAN_H
+ # include <linux/can.h>
++#elif defined(HAVE_NETCAN_CAN_H)
 +#include <netcan/can.h>
-+#endif
-+
- #ifdef HAVE_SYS_SYS_DOMAIN_H
- #include <sys/sys_domain.h>
- #endif
+ #else
+ # undef AF_CAN
+ # undef PF_CAN

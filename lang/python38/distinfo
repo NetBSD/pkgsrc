@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2021/05/04 05:16:07 adam Exp $
+$NetBSD: distinfo,v 1.20 2021/05/22 09:48:01 bouyer Exp $
 
 SHA1 (Python-3.8.10.tar.xz) = f6579351d42a81c77b55aa4ca8b1280b4f5b37f9
 RMD160 (Python-3.8.10.tar.xz) = eaffc74bd79021ef7a6309f494ca387860e8af9c
@@ -15,11 +15,11 @@ SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Modules_posixmodule.c) = ea24a1aa19b596b5d4457a4eff761e516406145f
 SHA1 (patch-Modules_socketmodule.c) = e99fd9e30e3feafef1747a2f52446d8fec543362
-SHA1 (patch-Modules_socketmodule.h) = 13a3290eb72078067060d3e71b7baa08f3eb591c
+SHA1 (patch-Modules_socketmodule.h) = 9ba713069aeb4e262d0bf621e3873002a11f97bb
 SHA1 (patch-Modules_timemodule.c) = 10dc2769432bbfd4360f90fedfa6504d8b6f6347
 SHA1 (patch-Python_bootstrap__hash.c) = 2e7d24ded1369624b2983b15784988517a9697a5
 SHA1 (patch-Python_pytime.c) = 41981f821e0b420abcb0334312148deb9a9fed5e
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = 5607f103279127b4465294af1f9601a3c1e3e89e
+SHA1 (patch-configure) = 114060a92a3d6fc20ad4adc12ae396307b5f4c16
 SHA1 (patch-pyconfig.h.in) = dc98ffe351623df2e8453e9350c30d705f4e99bd
 SHA1 (patch-setup.py) = 0b05bdc61289ee75758dcf8e422b988ff2067cba
