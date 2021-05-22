@@ -1,2 +1,8 @@
-This is FFTW, v. 2.1.3.  FFTW is a collection of fast C routines to
+This is FFTW version 2.  FFTW is a collection of fast C routines to
 compute the Discrete Fourier Transform in one or more dimensions.
+
+Uptream says (but apparently there was a relaase in 2003):
+If you are still using FFTW 2.x, please note that FFTW 2.x was last
+updated in 1999 and it is obsolete. Please upgrade to FFTW 3.x. The
+API of FFTW 3.x is incompatible with that of FFTW 2.x, for reasons of
+performance and generality (see the FAQ or the manual).
