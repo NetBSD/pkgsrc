@@ -1,10 +1,19 @@
-$NetBSD: patch-Modules_socketmodule.c,v 1.1 2020/10/10 20:20:12 adam Exp $
+$NetBSD: patch-Modules_socketmodule.c,v 1.2 2021/05/22 11:36:01 bouyer Exp $
 
 Support NetBSD's socketcan implementation
 
---- Modules/socketmodule.c.orig	2020-10-05 15:07:58.000000000 +0000
-+++ Modules/socketmodule.c
-@@ -7826,6 +7826,20 @@ PyInit__socket(void)
+--- Modules/socketmodule.c.orig	2021-05-03 16:54:42.000000000 +0200
++++ Modules/socketmodule.c	2021-05-22 12:11:03.509965978 +0200
+@@ -2157,7 +2157,7 @@
+             PyObject *interfaceName;
+             struct ifreq ifr;
+             Py_ssize_t len;
+-            struct sockaddr_can *addr = &addrbuf->can;
++            struct sockaddr_can *addr = (struct sockaddr_can *)addrbuf;
+ 
+             if (!PyTuple_Check(args)) {
+                 PyErr_Format(PyExc_TypeError,
+@@ -7827,6 +7827,20 @@
  
      PyModule_AddIntMacro(m, J1939_FILTER_MAX);
  #endif
