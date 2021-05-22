@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.117 2021/05/20 23:08:30 gdt Exp $
+# $NetBSD: Makefile,v 1.118 2021/05/22 13:32:22 gdt Exp $
 
 # This is intentionally 3.16 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
-DISTNAME=	qgis-3.16.6
-PKGREVISION=	1
+DISTNAME=	qgis-3.16.7
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -69,8 +68,9 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-gdal-[0-9]*:../../geography/py-gdal
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+# for quickosm
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # py-owslib # metasearch
-# py-yaml # quickosm
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
