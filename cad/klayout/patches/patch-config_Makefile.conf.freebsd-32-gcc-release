@@ -1,4 +1,8 @@
-$NetBSD: patch-config_Makefile.conf.freebsd-32-gcc-release,v 1.1 2018/07/24 13:00:10 ryoon Exp $
+$NetBSD: patch-config_Makefile.conf.freebsd-32-gcc-release,v 1.2 2021/05/22 13:45:52 mef Exp $
+
+# Configuration file for
+# gcc, FreeBSD
+# release build
 
 --- config/Makefile.conf.freebsd-32-gcc-release.orig	2018-07-16 03:52:39.157322134 +0000
 +++ config/Makefile.conf.freebsd-32-gcc-release

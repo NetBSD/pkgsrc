@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tlStream.cc,v 1.4 2020/10/30 15:35:11 mef Exp $
+$NetBSD: patch-src_tl_tl_tlStream.cc,v 1.1 2021/05/22 13:45:52 mef Exp $
 
 date: 2017-02-15 06:33:08 +0900;  author: joerg;  state: Exp;  commitid: BDodrFgUrNgNVXFz;
 Add missing includes.
