@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lay_lay_laySignalHandler.cc,v 1.2 2020/10/30 15:35:11 mef Exp $
+$NetBSD: patch-src_lay_lay_laySignalHandler.cc,v 1.3 2021/05/22 13:45:52 mef Exp $
+
+Add NetBSD
 
 --- src/lay/lay/laySignalHandler.cc.orig	2020-10-25 01:23:18.681179164 +0000
 +++ src/lay/lay/laySignalHandler.cc
