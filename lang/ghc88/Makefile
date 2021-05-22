@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/04/29 05:09:08 pho Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/22 23:10:26 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -15,9 +15,6 @@ COMMENT=	Compiler for the functional language Haskell - 8.8 Release Series
 LICENSE=	modified-bsd
 
 UNLIMIT_RESOURCES=	datasize virtualsize
-
-# TODO: We should be using the alternatives framework.
-CONFLICTS+=	ghc-[0-9]*
 
 # GHC requires GHC to build itself. We have to prepare stripped-down
 # binaries sufficient to bootstrap compilers for each platforms. If
