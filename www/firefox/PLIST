@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.172 2021/04/19 13:50:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.173 2021/05/22 13:49:16 rin Exp $
 bin/firefox
 lib/firefox/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox/actors/AboutHttpsOnlyErrorParent.jsm
@@ -26,6 +26,7 @@ lib/firefox/actors/FormHistoryParent.jsm
 lib/firefox/actors/InlineSpellCheckerChild.jsm
 lib/firefox/actors/InlineSpellCheckerParent.jsm
 lib/firefox/actors/KeyPressEventModelCheckerChild.jsm
+${PLIST.debug}lib/firefox/actors/LayoutDebugChild.jsm
 lib/firefox/actors/PictureInPictureChild.jsm
 lib/firefox/actors/PopupBlockingChild.jsm
 lib/firefox/actors/PopupBlockingParent.jsm
@@ -2883,10 +2884,11 @@ lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/jszip.
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/lodash.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-dev.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-factories.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
-${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
@@ -4244,7 +4246,6 @@ lib/firefox/chrome/en-US/locale/en-US/places/places.properties
 lib/firefox/chrome/en-US/locale/en-US/services/sync.properties
 lib/firefox/chrome/en-US/locale/pdfviewer/chrome.properties
 lib/firefox/chrome/en-US/locale/pdfviewer/viewer.properties
-${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug-helper.js
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.js
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.xhtml
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/locale/en-US/layoutdebug/layoutdebug.dtd
