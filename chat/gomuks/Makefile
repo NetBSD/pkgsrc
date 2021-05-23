@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/05/22 23:35:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/23 07:17:50 ryoon Exp $
 
 GITHUB_PROJECT=	gomuks
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,5 +25,5 @@ GO_BUILD_PATTERN+=	.
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
-#.include "../../wip/olm/buildlink3.mk"
+.include "../../security/olm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
