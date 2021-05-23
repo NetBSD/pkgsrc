@@ -1,4 +1,7 @@
-$NetBSD: patch-roms_qemu-palcode_pal.S,v 1.1 2020/10/04 20:39:25 thorpej Exp $
+$NetBSD: patch-roms_qemu-palcode_pal.S,v 1.2 2021/05/23 13:53:10 thorpej Exp $
+
+In the unaligned access exception vector, fix an apparent typo that
+prevented the return PC from being stored in the trap frame.
 
 In SWPPAL, allow an additional, non-architected argument for the
 switch to OSF/1 PALcode.  This extra argument specifies the desired
@@ -11,8 +14,17 @@ This PALcode was already relying on this UNPREDICTABLE behavior for
 its own purposes; this change merely gives control of this behavior
 to internal SWPPAL callers.
 
---- roms/qemu-palcode/pal.S.orig	2020-10-04 16:32:44.901663159 +0000
-+++ roms/qemu-palcode/pal.S	2020-10-04 16:31:30.356343608 +0000
+--- roms/qemu-palcode/pal.S.orig	2020-12-08 17:00:57.000000000 +0000
++++ roms/qemu-palcode/pal.S	2021-05-23 06:23:53.826566568 +0000
+@@ -278,7 +278,7 @@ Pal_Unalign:
+ 	blbs	p6, MchkBugCheck
+ 	addq	p6, 4, p6		// increment past the faulting insn
+ 
+-	STACK_FRAME p0, p1, p2, 1
++	STACK_FRAME p0, p6, p2, 1
+ 
+ 	mfpr	p0, ptEntUna
+ 	mfpr	$gp, ptKgp
 @@ -566,6 +566,8 @@ ENDFN	CallPal_Cserve_Cont
   *	r17 (a1) = New PC
   *	r18 (a2) = New PCB
