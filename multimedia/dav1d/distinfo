@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/03/14 08:02:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/05/23 11:01:28 wiz Exp $
 
-SHA1 (dav1d-0.8.2.tar.xz) = 6a1651444588ff6544c5fe62269855ee0714c701
-RMD160 (dav1d-0.8.2.tar.xz) = 7e0275285367d20b0ab6543800da01cfdbb4acf6
-SHA512 (dav1d-0.8.2.tar.xz) = c2d69adcc1f26c8700592e08306828aeaa3bf035e90a09bce4f2a494678645f37d4d0c5fc201eb4c369099f8f27e1325ca3421264aa1c2ffdad94868cc0504af
-Size (dav1d-0.8.2.tar.xz) = 591296 bytes
+SHA1 (dav1d-0.9.0.tar.xz) = 4940fd9928f58d663b934a951346de2e66a1d56e
+RMD160 (dav1d-0.9.0.tar.xz) = 730baa42865ac0bef1fbf0840c423f78380ff137
+SHA512 (dav1d-0.9.0.tar.xz) = 46ead83042ab951eb4c79c458e060875174739a8a0efd8d34fdcb6ad3c094093f629d16f467c1dbd37a125bba31d0a7b051933540e38c675eade25fefc80ed75
+Size (dav1d-0.9.0.tar.xz) = 652036 bytes
