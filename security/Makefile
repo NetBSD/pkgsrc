@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.822 2021/05/09 15:10:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.823 2021/05/23 07:16:44 ryoon Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -245,6 +245,7 @@ SUBDIR+=	oath-toolkit
 SUBDIR+=	ocaml-cryptokit
 SUBDIR+=	ocaml-safepass
 SUBDIR+=	ocaml-ssl
+SUBDIR+=	olm
 SUBDIR+=	opencdk
 SUBDIR+=	openct
 SUBDIR+=	opendnssec
