@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2943 2021/05/23 15:35:06 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2944 2021/05/23 16:27:51 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4548,3 +4548,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/qemu to version 5.2.0nb8 [thorpej 2021-05-23]
 	Added databases/mariadb105-client version 10.5.10 [nia 2021-05-23]
 	Added databases/mariadb105-server version 10.5.10 [nia 2021-05-23]
+	Updated pkgtools/url2pkg to 21.1.0 [rillig 2021-05-23]
