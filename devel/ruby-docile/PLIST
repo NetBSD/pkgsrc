@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/10 14:44:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/23 13:25:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/main.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/docile.gemspec
 ${GEM_LIBDIR}/lib/docile.rb
 ${GEM_LIBDIR}/lib/docile/backtrace_filter.rb
@@ -16,5 +19,4 @@ ${GEM_LIBDIR}/lib/docile/chaining_fallback_context_proxy.rb
 ${GEM_LIBDIR}/lib/docile/execution.rb
 ${GEM_LIBDIR}/lib/docile/fallback_context_proxy.rb
 ${GEM_LIBDIR}/lib/docile/version.rb
-${GEM_LIBDIR}/on_what.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
