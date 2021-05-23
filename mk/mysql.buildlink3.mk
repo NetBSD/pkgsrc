@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.33 2021/05/21 13:20:43 jperkin Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.34 2021/05/23 15:36:45 nia Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 57 56 80 mariadb104
+#	Possible: 57 56 80 mariadb105 mariadb104
 #	Default: 57
 #
 # Package-settable variables:
@@ -37,7 +37,7 @@ _SYS_VARS.mysql=	MYSQL_VERSION MYSQL_VERSION_REQD MYSQL_VERSIONS_ALL
 #
 # Set variables for all possible MySQL variants
 #
-MYSQL_VERSIONS_ALL=		80 57 56 mariadb104
+MYSQL_VERSIONS_ALL=		80 57 56 mariadb105 mariadb104
 
 MYSQL_PKGBASE.80=		mysql-client-8.0.*
 MYSQL_PKGSRCDIR.80=		../../databases/mysql80-client
@@ -50,6 +50,9 @@ MYSQL_PKGSRCDIR.56=		../../databases/mysql56-client
 
 MYSQL_PKGBASE.mariadb104=	mariadb-client-10.4.*
 MYSQL_PKGSRCDIR.mariadb104=	../../databases/mariadb104-client
+
+MYSQL_PKGBASE.mariadb105=	mariadb-client-10.5.*
+MYSQL_PKGSRCDIR.mariadb105=	../../databases/mariadb105-client
 
 .for ver in ${MYSQL_VERSIONS_ALL}
 MYSQL_OK.${ver}=		no
@@ -65,7 +68,7 @@ _SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
 # be chosen.
 #
 MYSQL_VERSION_DEFAULT?=		57
-MYSQL_VERSIONS_ACCEPTED?=	57 56 80 mariadb104
+MYSQL_VERSIONS_ACCEPTED?=	57 56 80 mariadb105 mariadb104
 
 #
 # Previous versions of this file used shouty caps in the version names.  We
