@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2942 2021/05/23 15:33:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2943 2021/05/23 15:35:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-parser to 3.16.0 [taca 2021-05-23]
 	Updated emulators/qemu to version 5.2.0nb8 [thorpej 2021-05-23]
 	Added databases/mariadb105-client version 10.5.10 [nia 2021-05-23]
+	Added databases/mariadb105-server version 10.5.10 [nia 2021-05-23]
