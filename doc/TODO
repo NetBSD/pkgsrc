@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20661 2021/05/22 23:11:41 wiz Exp $
+$NetBSD: TODO,v 1.20662 2021/05/23 09:00:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -578,6 +578,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o afterstep-2.2.12
 	o aide-0.16
 	o akonadi-16.08.1
+	o alacritty-0.8.0
 	o album-4.17
 	o alephone-20150620
 	o alevt-1.6.2
@@ -1061,6 +1062,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grep-3.6
 	o gromacs-2021.1
 	o groonga-11.0.1
+	o grpc-1.38.0
 	o gsl-2.6
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
@@ -1133,7 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-3.0.1
+	o ilmbase-3.0.3
 	o imapfilter-2.7.5
 	o imapsync-1.727
 	o imp-6.2.12
@@ -1312,6 +1314,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgphoto2-2.5.16
 	o libhidapi-0.10.1
 	o libiconv-1.16
+	o libidn-1.37
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1350,6 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libwebsockets-4.2.0
 	o libxdg-basedir-1.2.3
 	o libxlsxwriter-1.0.3
+	o libxml2-2.9.12
 	o libyang-1.0.225
 	o libzookeeper-3.7.0
 	o libzrtpcpp-4.6.6
@@ -1460,6 +1464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o multitail-6.4.2
 	o munge-0.5.14
 	o muse-0.9.2
+	o musicpd-0.22.8
 	o mysql-connector-c++-8.0.23
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
@@ -1610,7 +1615,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
 	o opendoas-6.8.1
-	o openexr-3.0.1
+	o openexr-3.0.3
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openimageio-2.2.13.1
@@ -1825,6 +1830,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pdp11-aout-gcc-9.3.0
 	o pdsh-2.32
 	o pear-SOAP-0.14.0
+	o perl5-5.34.0
 	o pessulus-2.30.3
 	o pg_repack-1.4.6
 	o pgadmin4-1.0
@@ -1959,16 +1965,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-goocalendar-0.7.2
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
-	o py-hypothesis-6.12.0
+	o py-hypothesis-6.13.1
 	o py-incremental-21.3.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-lazr.config-2.2.3
+	o py-libxml2-2.9.12
 	o py-lupa-1.9
 	o py-marisa-0.2.6
 	o py-markdown-3.2.2 [drops python-2.x support]
 	o py-mautrix-0.9.1
 	o py-moin-1.9.11
+	o py-more-itertools-8.8.0
 	o py-munkres-1.1.4
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -2222,6 +2230,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-3.0.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadingbuildingblocks-2021.2.0
@@ -2236,9 +2245,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o todoman-4.0.0
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-0.4.5.8
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
