@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/05/21 01:45:00 pho Exp $
+# $NetBSD: options.mk,v 1.2 2021/05/23 06:33:23 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 
@@ -20,12 +20,12 @@ GHC_LLVM_REQUIRED=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mllvm) || ${GHC_LLVM_REQUIRED} == "yes"
-.  include "../../lang/llvm/buildlink3.mk"
-.  include "../../lang/llvm/version.mk"
+DEPENDS+=	llvm-[0-9]*:../../lang/llvm
 CONFIGURE_ENV+=	LLC=${PREFIX:Q}/bin/llc
 CONFIGURE_ENV+=	OPT=${PREFIX:Q}/bin/opt
 
 # Maybe GHC doesn't like this but it's the only option available to us.
+.  include "../../lang/llvm/version.mk"
 SUBST_CLASSES+=		llvm
 SUBST_STAGE.llvm=	post-extract
 SUBST_MESSAGE.llvm=	Accept whichever version of LLVM installed via pkgsrc
@@ -35,7 +35,7 @@ SUBST_SED.llvm=		-e 's/LlvmVersion=[0-9]*/LlvmVersion=${LLVM_VERSION:C/^([0-9]*)
 # Clang is also required on Darwin.
 # See compiler/GHC/SysTools/Tasks.hs (runClang).
 .  if ${OPSYS} == "Darwin"
-.    include "../../lang/clang/buildlink3.mk"
+DEPENDS+=	clang-[0-9]*:../../lang/clang
 CONFIGURE_ENV+=	CLANG=${PREFIX:Q}/bin/clang
 .  else
 CONFIGURE_ENV+=	CLANG=${FALSE}
