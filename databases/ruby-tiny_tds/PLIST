@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/19 15:14:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/05/23 08:12:13 taca Exp $
 bin/defncopy-ttds${RUBY_SUFFIX}
 bin/tsql-ttds${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bin/defncopy-ttds
 ${GEM_LIBDIR}/bin/tsql-ttds
+${GEM_LIBDIR}/docker-compose.yml
 ${GEM_LIBDIR}/exe/.keep
 ${GEM_LIBDIR}/ext/tiny_tds/client.c
 ${GEM_LIBDIR}/ext/tiny_tds/client.h
