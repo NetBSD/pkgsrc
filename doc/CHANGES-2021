@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2946 2021/05/23 17:09:12 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2947 2021/05/23 19:32:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4551,3 +4551,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/url2pkg to 21.1.0 [rillig 2021-05-23]
 	Updated sysutils/macchina to 0.8.21 [pin 2021-05-23]
 	Updated sysutils/xplr to 0.10.2 [pin 2021-05-23]
+	Updated textproc/libxml2 to 2.9.12 [nia 2021-05-23]
