@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2935 2021/05/23 11:14:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2936 2021/05/23 11:17:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4540,3 +4540,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libidn to 1.37 [wiz 2021-05-23]
 	Updated misc/todoman to 4.0.0 [wiz 2021-05-23]
 	Updated net/tor to 0.4.5.8 [wiz 2021-05-23]
+	Updated audio/musicpd to 0.22.8 [wiz 2021-05-23]
