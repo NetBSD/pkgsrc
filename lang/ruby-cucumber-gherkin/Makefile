@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/09/13 16:14:19 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/23 09:37:06 taca Exp $
 
-DISTNAME=	cucumber-gherkin-15.0.2
+DISTNAME=	cucumber-gherkin-19.0.2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/cucumber/gherkin-ruby
 COMMENT=	Gherkin parser/compiler for Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=12.4.0:../../devel/ruby-cucumber-messages
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=16.0.0:../../devel/ruby-cucumber-messages
 
 CONFLICTS+=	${RUBY_PKGPREFIX}-gherkin-[0-9]*
 
