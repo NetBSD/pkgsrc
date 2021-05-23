@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/23 09:41:47 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/cucumber/tag_expressions.rb
+${GEM_LIBDIR}/lib/cucumber/tag_expressions/expressions.rb
+${GEM_LIBDIR}/lib/cucumber/tag_expressions/parser.rb
+${GEM_LIBDIR}/spec/capture_warnings.rb
+${GEM_LIBDIR}/spec/expressions_spec.rb
+${GEM_LIBDIR}/spec/parser_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
