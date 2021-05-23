@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2922 2021/05/23 06:49:51 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.2923 2021/05/23 07:16:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 5.8nb1 [wiz 2021-05-22]
 	Updated mail/thunderbird to 78.10.2 [ryoon 2021-05-23]
 	Updated mail/thunderbird-l10n to 78.10.2 [ryoon 2021-05-23]
+	Added security/olm version 3.2.2 [ryoon 2021-05-23]
