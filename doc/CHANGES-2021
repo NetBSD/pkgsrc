@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2926 2021/05/23 09:34:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2927 2021/05/23 09:35:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-tiny_tds to 2.1.5 [taca 2021-05-23]
 	Updated devel/ruby-bindata to 2.4.10 [taca 2021-05-23]
 	Updated devel/ruby-cucumber-expressions to 12.1.1 [taca 2021-05-23]
+	Updated devel/ruby-cucumber-messages to 16.0.0 [taca 2021-05-23]
