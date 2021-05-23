@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2021/01/13 14:28:02 taca Exp $
+# $NetBSD: Makefile,v 1.36 2021/05/23 13:48:00 taca Exp $
 
-DISTNAME=	ruby_parser-3.15.1
+DISTNAME=	ruby_parser-3.16.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby_//}
 CATEGORIES=	devel
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/seattlerb/ruby_parser
 COMMENT=	Ruby parser written in pure ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-sexp-processor>=4.9<5:../../devel/ruby-sexp-processor
+DEPENDS+=	${RUBY_PKGPREFIX}-sexp-processor>=4.15.1<5:../../devel/ruby-sexp-processor
 
 USE_LANGUAGES=	# none
 
