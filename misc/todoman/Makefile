@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2020/12/06 10:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/23 11:08:39 wiz Exp $
 
-DISTNAME=		todoman-3.9.0
+DISTNAME=		todoman-4.0.0
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/todoman/}
 #MASTER_SITES=		${MASTER_SITE_GITHUB:=pimutils/}
@@ -34,7 +34,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
 REPLACE_PYTHON+=		bin/todo
 USE_LANGUAGES=			# none
 
