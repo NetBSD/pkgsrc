@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/05/15 14:55:48 pin Exp $
+# $NetBSD: Makefile,v 1.23 2021/05/23 17:08:50 pin Exp $
 
-DISTNAME=	xplr-0.9.1
+DISTNAME=	xplr-0.10.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,12 +13,18 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=	c
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	pkg-config bash:run
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/xplr
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
+MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xplr ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/src/init.lua ${DESTDIR}${PREFIX}/share/examples/xplr
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
