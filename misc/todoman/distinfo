@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2020/12/06 10:40:33 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/05/23 11:08:39 wiz Exp $
 
-SHA1 (todoman-3.9.0.tar.gz) = 056f06e8b50fa749bff4b391b06e2d424aab1151
-RMD160 (todoman-3.9.0.tar.gz) = f276537cebdf7737420e91d5a9dc38d4235b6ec8
-SHA512 (todoman-3.9.0.tar.gz) = 4ff8fe5972360cdc587797f1d89045f69678cc22a8a0db42c50b88b4c5a6ff4d0e6d445ccad799e3a6d38888d8d7af29d18d527abf34f262267c54b68763d6ee
-Size (todoman-3.9.0.tar.gz) = 62813 bytes
+SHA1 (todoman-4.0.0.tar.gz) = ede1677620c344fda1775fa45aa694f9ad000e27
+RMD160 (todoman-4.0.0.tar.gz) = 7029ba842e3affdbb4fa71a07578029ce81a2440
+SHA512 (todoman-4.0.0.tar.gz) = 53838682ef4145c4fea57bd7b63ff3322002df032719ab5f397408ac2a4ea72ab172148505fc86393177a3ac4801d0ae986736e98ccb9047313c7e32698529fd
+Size (todoman-4.0.0.tar.gz) = 65974 bytes
