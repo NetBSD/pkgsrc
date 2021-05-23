@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.28 2021/05/23 16:20:46 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.29 2021/05/23 16:27:39 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -440,8 +440,7 @@ def test_Generator_adjust_site_GitHub_archive_tag():
         '',
         'GITHUB_PROJECT= proj',
         'GITHUB_TAG=     refs/tags/1.0.0',
-        # FIXME: DISTNAME must not contain slashes
-        'DISTNAME=       refs/tags/1.0.0',
+        'DISTNAME=       1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
