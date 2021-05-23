@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/09/13 15:38:41 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/23 09:33:50 taca Exp $
 
-DISTNAME=	cucumber-cucumber-expressions-10.3.0
+DISTNAME=	cucumber-cucumber-expressions-12.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
