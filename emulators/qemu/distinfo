@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.176 2021/03/31 08:52:27 reinoud Exp $
+$NetBSD: distinfo,v 1.177 2021/05/23 13:53:10 thorpej Exp $
 
-SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
-RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
-SHA512 (palcode-clipper) = 8d6966e59b59bc17c563bae3648af4ac99108990294edd0398ee91d8e61ec8f890608b9326b175d6a3a5668106b67b019a2c51b79f5b2935d4a516d34490056c
-Size (palcode-clipper) = 156704 bytes
+SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
+RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
+SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
+Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
 SHA1 (qemu-5.2.0.tar.xz) = 146578267387e301423502d19024f8ffe35ab332
 RMD160 (qemu-5.2.0.tar.xz) = 2c33e773f012e333f99237e3d4ff1653ea0bc88f
 SHA512 (qemu-5.2.0.tar.xz) = bddd633ce111471ebc651e03080251515178808556b49a308a724909e55dac0be0cc0c79c536ac12d239678ae94c60100dc124be9b9d9538340c03a2f27177f3
@@ -37,7 +37,7 @@ SHA1 (patch-roms_qemu-palcode_hwrpb.h) = ae7b4c0680367af6f740d62a54dc86352128d76
 SHA1 (patch-roms_qemu-palcode_init.c) = 7a0ebcd86f4106318791e7d90273fb55a424f1b8
 SHA1 (patch-roms_qemu-palcode_memcpy.c) = 7761774ae9092d0f494deaf302d663ba479a09cf
 SHA1 (patch-roms_qemu-palcode_memset.c) = 55fa4e52e03a351eb98475e7c4755e5edc409e6c
-SHA1 (patch-roms_qemu-palcode_pal.S) = 4f41194ffaeaddb39fa7bff953bd75c2f070dfa5
+SHA1 (patch-roms_qemu-palcode_pal.S) = fd13cf4ff7a4ba48a9cbb773d520eacf06615301
 SHA1 (patch-roms_qemu-palcode_pci.c) = 1d5b240fd6c940cbbe8518e4db529adba23d6fec
 SHA1 (patch-roms_qemu-palcode_pci.h) = 081c9d6d9955be24fd19455ae653339cdb133f02
 SHA1 (patch-roms_qemu-palcode_printf.c) = 7fb158f85bd1be9a939850d9d86175013f7a142b
