@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20665 2021/05/23 11:06:15 wiz Exp $
+$NetBSD: TODO,v 1.20666 2021/05/23 11:08:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -2244,7 +2244,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o todoman-4.0.0
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
