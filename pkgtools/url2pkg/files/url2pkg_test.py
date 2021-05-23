@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.27 2020/10/17 22:39:01 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.28 2021/05/23 16:20:46 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -417,6 +417,32 @@ def test_Generator_adjust_site_GitHub_archive():
         'GITHUB_TAG=     v1.0.0',
         'DISTNAME=       v1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
+        'CATEGORIES=     pkgtools',
+        'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'DIST_SUBDIR=    ${GITHUB_PROJECT}',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://github.com/org/proj/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        ".include \"../../mk/bsd.pkg.mk\"",
+    ]
+
+
+def test_Generator_adjust_site_GitHub_archive_tag():
+    url = 'https://github.com/org/proj/archive/refs/tags/1.0.0.tar.gz'
+
+    lines = Generator(url).generate_Makefile()
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'GITHUB_PROJECT= proj',
+        'GITHUB_TAG=     refs/tags/1.0.0',
+        # FIXME: DISTNAME must not contain slashes
+        'DISTNAME=       refs/tags/1.0.0',
+        'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
