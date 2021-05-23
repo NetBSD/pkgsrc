@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/23 07:15:24 ryoon Exp $
+include/olm/inbound_group_session.h
+include/olm/olm.h
+include/olm/outbound_group_session.h
+include/olm/pk.h
+include/olm/sas.h
+lib/cmake/Olm/OlmConfig.cmake
+lib/cmake/Olm/OlmConfigVersion.cmake
+lib/cmake/Olm/OlmTargets-release.cmake
+lib/cmake/Olm/OlmTargets.cmake
+lib/libolm.so
+lib/libolm.so.3
+lib/libolm.so.${PKGVERSION}
+lib/pkgconfig/olm.pc
