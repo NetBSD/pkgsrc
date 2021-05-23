@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2932 2021/05/23 11:01:37 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2933 2021/05/23 11:06:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-core to 9.0.1 [taca 2021-05-23]
 	Updated devel/ruby-cucumber-wire to 5.0.1 [taca 2021-05-23]
 	Updated multimedia/dav1d to 0.9.0 [wiz 2021-05-23]
+	Updated devel/libidn to 1.37 [wiz 2021-05-23]
