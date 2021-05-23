@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2945 2021/05/23 17:06:19 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2946 2021/05/23 17:09:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4550,3 +4550,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added databases/mariadb105-server version 10.5.10 [nia 2021-05-23]
 	Updated pkgtools/url2pkg to 21.1.0 [rillig 2021-05-23]
 	Updated sysutils/macchina to 0.8.21 [pin 2021-05-23]
+	Updated sysutils/xplr to 0.10.2 [pin 2021-05-23]
