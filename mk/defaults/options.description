@@ -967,4 +967,5 @@ ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
 zrtp			Enable ZRTP support.
 zsh-multibyte		Enable multibyte support in Zsh.
+zstd			Enable zstd support.
 zziplib			Enable zip support using zziplib.
