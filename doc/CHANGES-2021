@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2939 2021/05/23 13:46:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2940 2021/05/23 13:48:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed databases/mariadb-connector-c successor databases/mariadb104-client [nia 2021-05-23]
 	Updated devel/ruby-docile to 1.4.0 [taca 2021-05-23]
 	Updated devel/ruby-sexp-processor to 4.15.3 [taca 2021-05-23]
+	Updated devel/ruby-parser to 3.16.0 [taca 2021-05-23]
