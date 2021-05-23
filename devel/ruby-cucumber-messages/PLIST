@@ -1,21 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/27 04:55:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/23 09:34:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/lib/cucumber/messages.pb.rb
 ${GEM_LIBDIR}/lib/cucumber/messages.rb
-${GEM_LIBDIR}/lib/cucumber/messages/binary_to_message_enumerator.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/id_generator.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/ndjson_to_message_enumerator.rb
-${GEM_LIBDIR}/lib/cucumber/messages/protobuf_delimited.rb
-${GEM_LIBDIR}/lib/cucumber/messages/protobuf_ndjson.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/time_conversion.rb
-${GEM_LIBDIR}/lib/cucumber/messages/varint.rb
 ${GEM_LIBDIR}/spec/capture_warnings.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/id_generator_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/ndjson_serialization_spec.rb
-${GEM_LIBDIR}/spec/cucumber/messages/protobuf_serialization_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/time_conversion_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/version_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
