@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/09/13 16:14:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/05/23 09:37:06 taca Exp $
 bin/gherkin-ruby${RUBY_SUFFIX}
 bin/gherkin${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/lib/gherkin/parser.rb
 ${GEM_LIBDIR}/lib/gherkin/pickles/compiler.rb
 ${GEM_LIBDIR}/lib/gherkin/query.rb
 ${GEM_LIBDIR}/lib/gherkin/stream/parser_message_stream.rb
-${GEM_LIBDIR}/lib/gherkin/stream/subprocess_message_stream.rb
 ${GEM_LIBDIR}/lib/gherkin/token.rb
 ${GEM_LIBDIR}/lib/gherkin/token_formatter_builder.rb
 ${GEM_LIBDIR}/lib/gherkin/token_matcher.rb
@@ -29,5 +28,4 @@ ${GEM_LIBDIR}/spec/gherkin/gherkin_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/parser_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/query_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/stream/parser_message_stream_spec.rb
-${GEM_LIBDIR}/spec/gherkin/stream/subprocess_message_stream_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
