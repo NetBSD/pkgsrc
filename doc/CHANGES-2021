@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2928 2021/05/23 09:37:27 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2929 2021/05/23 09:45:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4532,3 +4532,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-expressions to 12.1.1 [taca 2021-05-23]
 	Updated devel/ruby-cucumber-messages to 16.0.0 [taca 2021-05-23]
 	Updated lang/ruby-cucumber-gherkin to 19.0.2 [taca 2021-05-23]
+	Renamed devel/ruby-cucumber-tag_expressions to devel/ruby-cucumber-tag-expressions [taca 2021-05-23]
+	Updated devel/ruby-cucumber-tag-expressions to 3.0.1 [taca 2021-05-23]
