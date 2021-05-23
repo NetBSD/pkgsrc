@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/01/14 14:02:47 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/05/23 13:25:28 taca Exp $
 
-SHA1 (docile-1.3.5.gem) = 7046971bc30cbf71197e34308cef3583a4dbcde5
-RMD160 (docile-1.3.5.gem) = 31f89a114abed3acf973325a6019ff7403cb8aee
-SHA512 (docile-1.3.5.gem) = 3ca3b62e68fb761004e7470558c56dadc645f809f46243d9e9532d91862360b528a956517c91f1f7c830f8b8869a1c8be75adfacafa4d2136d3c54d29fc9fc6b
-Size (docile-1.3.5.gem) = 15872 bytes
+SHA1 (docile-1.4.0.gem) = c0e3ecc6fd3a48ea6b5679addc8585e6f031a006
+RMD160 (docile-1.4.0.gem) = ae50177607e83b8f1aa7f48fc78a67c3b7a4c9dd
+SHA512 (docile-1.4.0.gem) = e2fb8eabe6e8e3bc6cf05354afe91cb75f52701c3b90c0ba36cee20c920c379ca7da8acf49ac0bcb9128a8176a738172c5754fb422e660a107f4615c415bfe15
+Size (docile-1.4.0.gem) = 16384 bytes
