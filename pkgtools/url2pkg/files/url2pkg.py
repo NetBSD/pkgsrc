@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.28 2020/10/17 22:39:01 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.29 2021/05/23 16:27:39 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -410,7 +410,8 @@ class Generator:
             https://github\.com/
             (.+)/               # org
             (.+)/archive/       # proj
-            (.+)                # tag
+            ((?:.+/)?           # tag
+                     (.+))      # distname
             (\.tar\.gz|\.zip)   # ext
             $
             '''
@@ -418,7 +419,7 @@ class Generator:
         if not m:
             return
 
-        org, proj, tag, ext = m.groups()
+        org, proj, tag, distname, ext = m.groups()
 
         self.github_project = proj
         self.github_tag = tag
@@ -427,7 +428,7 @@ class Generator:
         if proj not in tag:
             self.pkgname_prefix = '${GITHUB_PROJECT}-'
             self.dist_subdir = '${GITHUB_PROJECT}'
-        self.distfile = tag + ext
+        self.distfile = distname + ext
 
     def adjust_site_GitHub_release(self):
         pattern = r'''(?x)
