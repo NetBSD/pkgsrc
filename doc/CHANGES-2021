@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2925 2021/05/23 08:19:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.2926 2021/05/23 09:34:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4529,3 +4529,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/olm version 3.2.2 [ryoon 2021-05-23]
 	Updated databases/ruby-tiny_tds to 2.1.5 [taca 2021-05-23]
 	Updated devel/ruby-bindata to 2.4.10 [taca 2021-05-23]
+	Updated devel/ruby-cucumber-expressions to 12.1.1 [taca 2021-05-23]
