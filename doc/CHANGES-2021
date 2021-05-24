@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2949 2021/05/24 06:42:12 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.2950 2021/05/24 08:26:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4554,3 +4554,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libxml2 to 2.9.12 [nia 2021-05-23]
 	Updated textproc/py-libxml2 to 2.9.12 [nia 2021-05-23]
 	Updated devel/php-composer to 2.0.14 [triaxx 2021-05-24]
+	Removed databases/postgresql95 [adam 2021-05-24]
+	Updated multimedia/mkvtoolnix to 57.0.0 [adam 2021-05-24]
