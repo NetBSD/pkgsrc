@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/02/13 01:02:18 gdt Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/24 19:52:29 wiz Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
@@ -6,7 +6,7 @@ DISTNAME=	hamlib-${VERSION}
 VERSION=	4.1
 VERSIOND=	${VERSION}
 VERSIONF=	${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	ham
 MASTER_SITES=	https://github.com/Hamlib/Hamlib/releases/download/${VERSIOND}/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}

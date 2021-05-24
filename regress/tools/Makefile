@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/05/02 08:03:17 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/24 19:53:50 wiz Exp $
 #
 
 PKGNAME=	regress-tools-2020.05.02
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 DISTFILES=	# none
 

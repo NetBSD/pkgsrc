@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/04/26 14:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:50:50 wiz Exp $
 
 DISTNAME=	IO-Async-0.78
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

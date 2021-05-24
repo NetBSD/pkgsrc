@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/09/04 13:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/24 19:50:14 wiz Exp $
 
 DISTNAME=	Check-ISA-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MANWAR/}
 

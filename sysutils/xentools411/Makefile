@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2021/03/08 08:13:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2021/05/24 19:54:21 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
-PKGREVISION=	4
+PKGREVISION=	5
 .include	"version.mk"
 
 DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/03/08 08:12:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.57 2021/05/24 19:49:19 wiz Exp $
 
 DISTNAME=	bibtex2html-1.98
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 

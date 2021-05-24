@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/09/08 13:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/24 19:54:26 wiz Exp $
 
 DISTNAME=	man2html3.0.1
 PKGNAME=	${DISTNAME:S/html/html-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES+=	https://acadix.biz/Ports/distfiles/
 MASTER_SITES+=	http://hydra.nac.uci.edu/indiv/ehood/tar/

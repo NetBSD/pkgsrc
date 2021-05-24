@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/24 19:53:48 wiz Exp $
 #
 
 DISTNAME=		psjoin
 PKGNAME=		psjoin-0.3
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		print
 MASTER_SITES=		http://t-sato.in.coocan.jp/tools/
 EXTRACT_SUFX=		# empty

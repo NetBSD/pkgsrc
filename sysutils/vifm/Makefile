@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2020/11/24 12:15:20 nia Exp $
+# $NetBSD: Makefile,v 1.36 2021/05/24 19:54:21 wiz Exp $
 #
 
 DISTNAME=	vifm-0.11
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2

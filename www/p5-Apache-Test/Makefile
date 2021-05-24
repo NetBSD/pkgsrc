@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/09/07 20:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2021/05/24 19:55:19 wiz Exp $
 
 DISTNAME=		Apache-Test-1.42
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
 

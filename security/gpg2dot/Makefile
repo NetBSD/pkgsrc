@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/08/31 18:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/24 19:53:52 wiz Exp $
 
 DISTNAME=	gpg2dot-1.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty

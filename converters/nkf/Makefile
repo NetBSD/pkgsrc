@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2020/08/31 18:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/05/24 19:49:20 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "${.CURDIR}/Makefile.common"
 
 PKGNAME=	nkf-2.15
