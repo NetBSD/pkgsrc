@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/09/30 19:22:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2021/05/24 19:54:24 wiz Exp $
 
 DISTNAME=	grep-3.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=grep/}
 EXTRACT_SUFX=	.tar.xz

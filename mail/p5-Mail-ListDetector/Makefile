@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/24 19:52:49 wiz Exp $
 
 DISTNAME=		Mail-ListDetector-1.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
 

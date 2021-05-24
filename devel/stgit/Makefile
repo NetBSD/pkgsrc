@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2020/12/04 20:45:13 nia Exp $
+# $NetBSD: Makefile,v 1.45 2021/05/24 19:52:03 wiz Exp $
 
 DISTNAME=	stgit-0.17.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/stgit/
 

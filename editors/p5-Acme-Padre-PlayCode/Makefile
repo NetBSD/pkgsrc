@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/05/24 19:52:06 wiz Exp $
 #
 
 DISTNAME=	Acme-Padre-PlayCode-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Acme/}
 

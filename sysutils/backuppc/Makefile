@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/11/07 14:53:30 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/24 19:54:08 wiz Exp $
 
 DISTNAME=	BackupPC-4.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=backuppc/}

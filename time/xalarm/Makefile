@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2015/12/08 21:02:11 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:55:09 wiz Exp $
 
 DISTNAME=	xalarm-3.06
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 

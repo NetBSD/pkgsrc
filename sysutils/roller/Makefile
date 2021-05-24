@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2020/08/31 18:11:35 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2021/05/24 19:54:19 wiz Exp $
 #
 
 DISTNAME=		roller-1.21
 PKGREVISION=		#
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://software.kimmo.suominen.com/
 

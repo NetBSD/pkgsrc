@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/05/24 19:52:10 wiz Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	emulators
 
 MAINTAINER=	tonio@NetBSD.org

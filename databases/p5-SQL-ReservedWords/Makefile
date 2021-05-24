@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/08/31 18:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/24 19:49:42 wiz Exp $
 
 DISTNAME=	SQL-ReservedWords-0.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 
