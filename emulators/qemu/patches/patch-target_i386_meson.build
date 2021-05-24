@@ -1,15 +1,12 @@
-$NetBSD: patch-target_i386_meson.build,v 1.1 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-target_i386_meson.build,v 1.2 2021/05/24 14:22:08 ryoon Exp $
 
---- target/i386/meson.build.orig	2020-12-08 16:59:44.000000000 +0000
+--- target/i386/meson.build.orig	2021-04-29 17:18:58.000000000 +0000
 +++ target/i386/meson.build
-@@ -34,6 +34,10 @@ i386_softmmu_ss.add(when: 'CONFIG_WHPX',
-   'whpx-all.c',
-   'whpx-cpus.c',
- ))
-+i386_softmmu_ss.add(when: 'CONFIG_NVMM', if_true: files(
-+  'nvmm-all.c',
-+  'nvmm-cpus.c',
-+))
- i386_softmmu_ss.add(when: 'CONFIG_HAX', if_true: files(
-   'hax-all.c',
-   'hax-mem.c',
+@@ -19,6 +19,7 @@ i386_softmmu_ss.add(files(
+ subdir('kvm')
+ subdir('hax')
+ subdir('whpx')
++subdir('nvmm')
+ subdir('hvf')
+ subdir('tcg')
+ 
