@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
+$NetBSD: patch-Configure,v 1.11 2021/05/24 17:46:25 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -8,9 +8,9 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
 * Several other changes.
 * Add rpath for QNX
 
---- Configure.orig	2020-06-14 23:01:24.000000000 +0000
+--- Configure.orig	2021-05-04 06:52:48.000000000 +0000
 +++ Configure
-@@ -3479,13 +3479,14 @@ EOM
+@@ -3482,13 +3482,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -27,7 +27,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3510,8 +3511,11 @@ EOM
+@@ -3513,8 +3514,11 @@ EOM
  		minix)	osname=minix
  			osvers=`$uname -r`
  			;;
@@ -40,7 +40,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3521,7 +3525,7 @@ EOM
+@@ -3524,7 +3528,7 @@ EOM
  			;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -49,7 +49,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  			;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3536,6 +3540,9 @@ EOM
+@@ -3539,6 +3543,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -59,16 +59,16 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4978,7 +4985,7 @@ esac
+@@ -4861,7 +4868,7 @@ esac
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
  # Note that ccname for clang is also gcc.
 -case "$ccname" in
 +case "xx$ccname" in
      gcc)
+ 	realpath=`which realpath 2>/dev/null | sed 's/no realpath in.*//'`
  	$echo 'extern int foo;' > try.c
- 	set X `$cppstdin -v try.c 2>&1 | $awk '/^#include </,/^End of search /'|$cppfilter $grep '/include'`
-@@ -5054,14 +5061,14 @@ case "$plibpth" in
+@@ -4945,14 +4952,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -85,7 +85,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -5177,7 +5184,7 @@ lib_ext=$_a
+@@ -5068,7 +5075,7 @@ lib_ext=$_a
  obj_ext=$_o
  path_sep=$p_
  
@@ -94,16 +94,16 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -5508,7 +5515,7 @@ default|recommended)
- 	# thing. (NWC)
- 	case "$osname" in
- 	amigaos) ;; # -fstack-protector builds but doesn't work
--	*)	case "$gccversion" in
+@@ -5401,7 +5408,7 @@ default|recommended)
+ 	*-fno-stack-protector*)
+ 	    echo "Do not add -fstack-protector nor -fstack-protector-strong" 2>&1
+ 	    ;;
+-	*) case "$gccversion" in
 +	nothing) case "$gccversion" in
- 		?*)	set stack-protector-strong -fstack-protector-strong
- 			eval $checkccflag
- 			case "$dflt" in
-@@ -6492,6 +6499,15 @@ case "$nm_so_opt" in
+ 	   ?*)	set stack-protector-strong -fstack-protector-strong
+ 		eval $checkccflag
+ 		case "$dflt" in
+@@ -6384,6 +6391,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -119,7 +119,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -7619,7 +7635,9 @@ rp='Pathname for the site-specific libra
+@@ -7564,7 +7580,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -130,7 +130,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -8030,7 +8048,9 @@ case "$vendorprefix" in
+@@ -7977,7 +7995,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -141,7 +141,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8530,6 +8550,7 @@ EOM
+@@ -8477,6 +8497,7 @@ EOM
  			  esac
  			  ;;
  		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
@@ -149,7 +149,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8569,7 +8590,7 @@ EOM
+@@ -8516,7 +8537,7 @@ EOM
  	esac
  	for thisflag in $ldflags; do
  	    case "$thisflag" in
@@ -158,7 +158,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		    case " $dflt " in
  			*" $thisflag "*) ;;
  			*) dflt="$dflt $thisflag" ;;
-@@ -8825,7 +8846,7 @@ if "$useshrplib"; then
+@@ -8772,7 +8793,7 @@ if "$useshrplib"; then
  	freebsd|minix|mirbsd|netbsd|openbsd|interix|dragonfly|bitrig)
  		xxx="-Wl,-R$shrpdir"
  		;;
@@ -167,7 +167,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  		xxx="-Wl,-rpath,$shrpdir"
  		;;
  	hpux*)
-@@ -8835,6 +8856,9 @@ if "$useshrplib"; then
+@@ -8782,6 +8803,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -177,7 +177,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9911,6 +9935,13 @@ esac
+@@ -9858,6 +9882,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -191,7 +191,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20114,7 +20145,15 @@ RCAT(Rei,ser)
+@@ -20225,7 +20256,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
@@ -208,7 +208,7 @@ $NetBSD: patch-Configure,v 1.10 2020/09/04 10:08:46 js Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
-@@ -22920,6 +22959,18 @@ eval $inhdr
+@@ -23062,6 +23101,18 @@ eval $inhdr
  set fenv.h i_fenv
  eval $inhdr
  
