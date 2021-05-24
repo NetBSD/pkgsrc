@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2950 2021/05/24 08:26:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2951 2021/05/24 09:25:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4556,3 +4556,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-composer to 2.0.14 [triaxx 2021-05-24]
 	Removed databases/postgresql95 [adam 2021-05-24]
 	Updated multimedia/mkvtoolnix to 57.0.0 [adam 2021-05-24]
+	Updated devel/py-radon to 4.5.2 [adam 2021-05-24]
+	Updated devel/py-dulwich to 0.20.22 [adam 2021-05-24]
+	Updated textproc/py-JWT to 2.1.0 [adam 2021-05-24]
+	Updated devel/py-cpplint to 1.5.5 [adam 2021-05-24]
