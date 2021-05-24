@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.3 2021/05/24 04:18:19 mcf Exp $
+
+Fix incorrect xml2-config usage.
+
+Upstream: https://gitlab.gnome.org/GNOME/libxslt/-/commit/90c34c8bb90e095a8a8fe8b2ce368bd9ff1837cc
+
+--- configure.orig	Mon May 24 04:04:05 2021
++++ configure
+@@ -14860,7 +14860,7 @@ PKG_CONFIG=$_save_PKG_CONFIG
+ fi
+ 
+ 
+-if test "x$LIBXML_LIBS" = "x" && ${XML_CONFIG} --libs print > /dev/null 2>&1
++if test "x$LIBXML_LIBS" = "x" && ${XML_CONFIG} --libs > /dev/null 2>&1
+ then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libxml libraries >= $LIBXML_REQUIRED_VERSION" >&5
+ $as_echo_n "checking for libxml libraries >= $LIBXML_REQUIRED_VERSION... " >&6; }
