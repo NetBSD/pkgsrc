@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/09/07 20:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/05/24 19:56:02 wiz Exp $
 
 DISTNAME=	Clipboard-0.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 

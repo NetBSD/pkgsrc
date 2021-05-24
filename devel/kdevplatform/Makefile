@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2021/04/21 13:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.102 2021/05/24 19:49:59 wiz Exp $
 #
 
 DISTNAME=	kdevplatform-1.7.0
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.7.0/src/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:11:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/05/24 19:54:23 wiz Exp $
 #
 
 DISTNAME=		cdif-2.14
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=kaz-utashiro/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

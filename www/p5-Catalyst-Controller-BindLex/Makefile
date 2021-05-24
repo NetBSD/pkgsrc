@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/09/04 13:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:55:24 wiz Exp $
 
 DISTNAME=	Catalyst-Controller-BindLex-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 

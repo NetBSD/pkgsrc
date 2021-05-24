@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/04/24 08:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/24 19:49:55 wiz Exp $
 
 DISTNAME=		cvsd-1.0.23
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel scm
 MASTER_SITES=		https://arthurdejong.org/cvsd/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/09/07 10:16:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/05/24 19:51:52 wiz Exp $
 
 DISTNAME=		Test2-Plugin-NoWarnings-0.09
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DR/DROLSKY/}
 

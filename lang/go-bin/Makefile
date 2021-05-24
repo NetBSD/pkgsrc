@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/12/19 14:28:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/24 19:52:32 wiz Exp $
 
 PKGNAME=	go-bin-1.14.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.google.com/go/
 

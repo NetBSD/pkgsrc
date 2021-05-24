@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2020/08/31 18:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2021/05/24 19:49:18 wiz Exp $
 #
 
 DISTNAME=	Device-Gsm-1.61
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Device/}
 

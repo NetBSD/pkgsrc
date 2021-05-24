@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/08/31 18:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/24 19:55:50 wiz Exp $
 
 DISTNAME=	Session-Storage-Secure-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
