@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/05/10 05:59:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/24 09:15:46 adam Exp $
 
-DISTNAME=	radon-4.5.1
+DISTNAME=	radon-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/radon/}
