@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2020/09/01 22:56:54 js Exp $
+# $NetBSD: options.mk,v 1.16 2021/05/24 17:46:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
-PKG_OPTIONS_GROUP.perlbits=	64bitauto 64bitint 64bitmore 64bitall 64bitnone
+PKG_OPTIONS_GROUP.perlbits=	perl-64bitauto perl-64bitint perl-64bitmore perl-64bitall perl-64bitnone
 PKG_SUPPORTED_OPTIONS=		debug dtrace threads mstats
 
 CHECK_BUILTIN.pthread:=	yes
@@ -34,16 +34,16 @@ PKG_SUGGESTED_OPTIONS=		threads
 
 .if ${OPSYS} == "IRIX"
 .  if defined(ABI) && ${ABI} == "64"
-PKG_SUGGESTED_OPTIONS+=		64bitint
+PKG_SUGGESTED_OPTIONS+=		perl-64bitint
 .  endif
 .elif ${OPSYS} == "AIX"
 .  if defined(ABI) && ${ABI} == "64"
-PKG_SUGGESTED_OPTIONS+=		64bitall
+PKG_SUGGESTED_OPTIONS+=		perl-64bitall
 .  else
-PKG_SUGGESTED_OPTIONS+=		64bitnone
+PKG_SUGGESTED_OPTIONS+=		perl-64bitnone
 .  endif
 .else
-PKG_SUGGESTED_OPTIONS+=		64bitauto
+PKG_SUGGESTED_OPTIONS+=		perl-64bitauto
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.1[1-9]-*) || \
@@ -84,17 +84,17 @@ CONFIGURE_ARGS+=	-Dusemymalloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 .endif
 
-.if !empty(PKG_OPTIONS:M64bitint)
+.if !empty(PKG_OPTIONS:Mperl-64bitint)
 CONFIGURE_ARGS+=	-Duse64bitint
-.elif !empty(PKG_OPTIONS:M64bitmore)
+.elif !empty(PKG_OPTIONS:Mperl-64bitmore)
 CONFIGURE_ARGS+=	-Dusemorebits
-.elif !empty(PKG_OPTIONS:M64bitall)
+.elif !empty(PKG_OPTIONS:Mperl-64bitall)
 CONFIGURE_ARGS+=	-Duse64bitall
-.elif !empty(PKG_OPTIONS:M64bitnone)
+.elif !empty(PKG_OPTIONS:Mperl-64bitnone)
 CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
 .else
 .  if ${OBJECT_FMT} == "XCOFF"
 BROKEN=			"XCOFF targets need the path specified where libperl.a resides."
-BROKEN+=		"Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this."
+BROKEN+=		"Please choose on of perl-64bitint perl-64bitmore perl-64bitall or perl-64bitnone to allow this."
 .  endif
 .endif
