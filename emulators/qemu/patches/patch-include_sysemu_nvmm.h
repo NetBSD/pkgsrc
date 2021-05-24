@@ -1,6 +1,6 @@
-$NetBSD: patch-include_sysemu_nvmm.h,v 1.3 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-include_sysemu_nvmm.h,v 1.4 2021/05/24 14:22:08 ryoon Exp $
 
---- include/sysemu/nvmm.h.orig	2021-03-05 22:29:22.991663471 +0000
+--- include/sysemu/nvmm.h.orig	2021-05-06 04:47:40.186492405 +0000
 +++ include/sysemu/nvmm.h
 @@ -0,0 +1,26 @@
 +/*
