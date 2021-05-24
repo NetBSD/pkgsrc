@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2020/09/17 08:50:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:54:11 wiz Exp $
 #
 
 DISTNAME=	etckeeper_1.18.14.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig$//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 

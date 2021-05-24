@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2020/09/07 10:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2021/05/24 19:52:13 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.49
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 

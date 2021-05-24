@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/04/21 08:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/24 19:49:24 wiz Exp $
 
 DISTNAME=	smbchartool-2.3a
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	converters japanese
 MASTER_SITES=	# ftp://ftp.samba.gr.jp/pub/samba-jp/tool/
 DIST_SUBDIR=	smbchartool-2.3anb5

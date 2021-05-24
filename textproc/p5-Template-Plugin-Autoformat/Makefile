@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/08/31 18:11:58 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/24 19:54:39 wiz Exp $
 
 DISTNAME=	Template-Plugin-Autoformat-2.77
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
