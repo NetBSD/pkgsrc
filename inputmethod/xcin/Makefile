@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2021/04/25 06:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2021/05/24 19:52:29 wiz Exp $
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	chinese x11
 #MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 

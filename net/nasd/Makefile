@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/08/31 18:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/24 19:53:21 wiz Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL} # original tar file has some trailing base64 checksums
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/05/24 19:52:42 wiz Exp $
 #
 
 DISTNAME=	mailserv
 PKGNAME=	${DISTNAME}-3.29
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	http://www.barelyfitz.com/projects/mailserv/
 

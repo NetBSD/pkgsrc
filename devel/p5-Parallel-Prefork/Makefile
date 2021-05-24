@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:51:21 wiz Exp $
 
 DISTNAME=	Parallel-Prefork-0.18
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parallel/}
 

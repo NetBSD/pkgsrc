@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/24 19:51:53 wiz Exp $
 #
 
 DISTNAME=	Tie-IxHash-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 

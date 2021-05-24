@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.79 2021/04/21 13:24:28 adam Exp $
+# $NetBSD: Makefile,v 1.80 2021/05/24 19:49:17 wiz Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
 DISTNAME=	asterisk-16.17.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/

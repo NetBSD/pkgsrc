@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:06:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/24 19:49:28 wiz Exp $
 
 DISTNAME=	binutils-gdb-xtensa-2.31_20190405
 PKGNAME=	${DISTNAME:C/binutils-gdb-xtensa/xtensa-lx106-elf-binutils/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcmvbkbc/}
 GITHUB_PROJECT=	binutils-gdb-xtensa

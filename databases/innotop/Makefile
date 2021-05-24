@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/08/31 18:06:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/05/24 19:49:28 wiz Exp $
 #
 
 DISTNAME=	innotop-1.9.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	http://innotop.googlecode.com/files/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/12/04 20:45:44 nia Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/24 19:54:21 wiz Exp $
 #
 
 # VERSION is set in xentool411/version.mk
-PKGREVISION=		3
+PKGREVISION=		4
 .include		"../../sysutils/xentools411/version.mk"
 
 DIST_SUBDIR=		xen411

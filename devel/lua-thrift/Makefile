@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/13 03:40:29 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/24 19:50:02 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/thrift/Makefile.common"
 
 PKGNAME=	lua-${DISTNAME}

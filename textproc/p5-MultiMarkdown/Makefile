@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/09/08 13:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/24 19:54:32 wiz Exp $
 
 DISTNAME=	Text-MultiMarkdown-1.000035
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BO/BOBTFISH/}
 

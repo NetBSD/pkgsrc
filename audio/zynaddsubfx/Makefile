@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/10/30 15:47:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/24 19:49:08 wiz Exp $
 
 DISTNAME=	zynaddsubfx-3.0.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zynaddsubfx/}
 EXTRACT_SUFX=	.tar.bz2

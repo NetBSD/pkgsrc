@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/05/24 19:49:06 wiz Exp $
 #
 
 DISTNAME=	mstream-1.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://software.kimmo.suominen.com/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/10 15:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/24 19:53:20 wiz Exp $
 
 DISTNAME=	check_printer
 REVISION=	363
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	nagios-plugin-printer-0.0.${REVISION}
 CATEGORIES=	net sysutils
 # Can this be converted to GITHUB_*?

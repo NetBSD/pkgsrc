@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/08/31 18:09:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/24 19:52:40 wiz Exp $
 
 DISTNAME=	fromto-1.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	#empty

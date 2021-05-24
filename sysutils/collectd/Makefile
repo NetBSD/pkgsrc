@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/10/24 22:39:45 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/05/24 19:54:09 wiz Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/collectd/Makefile.common"
 
 COMMENT=	Statistics collection daemon base

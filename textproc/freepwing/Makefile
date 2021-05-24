@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/08/31 18:11:42 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/05/24 19:54:24 wiz Exp $
 
 DISTNAME=	freepwing-1.4.4
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/freepwing/
 

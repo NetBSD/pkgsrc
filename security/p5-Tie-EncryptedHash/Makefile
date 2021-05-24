@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2020/08/31 18:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2021/05/24 19:54:05 wiz Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.24
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tie/}
 

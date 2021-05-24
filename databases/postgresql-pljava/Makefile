@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 15:07:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/24 19:49:45 wiz Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tada/}
 
