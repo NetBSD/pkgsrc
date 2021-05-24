@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/10/03 21:49:21 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/05/24 09:25:13 adam Exp $
 
-SHA1 (cpplint-1.5.4.tar.gz) = b83b97ed38e6ef3c2dd8d206b629c958e12d35c0
-RMD160 (cpplint-1.5.4.tar.gz) = 4e828a1122f5a6797e23d877378fcef4a1545670
-SHA512 (cpplint-1.5.4.tar.gz) = 13bd71295939c0d3753600df8798f15fb1a3c10f1c7e3d2fda894ef7126d1720bfd15a76dc37520618d793a528cdcf62d4f118d2eb6204cc6b84f70734418839
-Size (cpplint-1.5.4.tar.gz) = 359495 bytes
+SHA1 (cpplint-1.5.5.tar.gz) = 8ef01f10725721a0465cc1eff6a2f3cccebe534e
+RMD160 (cpplint-1.5.5.tar.gz) = d8b6079731245265fdf332a1ee9c959adaba9603
+SHA512 (cpplint-1.5.5.tar.gz) = 6f5148f5be2fba9e290a2e83a13943bed2d5d388f20c1e4efcc4eb832e905e71afc6ac074cd9553a7dbfeeb527c2759c3281a1243a0d8ce93a2082253d83ebf0
+Size (cpplint-1.5.5.tar.gz) = 361348 bytes
