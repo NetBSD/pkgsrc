@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/05/22 13:45:52 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/24 14:27:37 mef Exp $
 bin/klayout
 bin/strm2cif
 bin/strm2dxf
@@ -127,6 +127,10 @@ lib/klayout/libklayout_QtSvg.${RUBY_DLEXT}
 lib/klayout/libklayout_QtSvg.so.0
 lib/klayout/libklayout_QtSvg.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_QtSvg.so.${PKGVERSION}
+lib/klayout/libklayout_QtUiTools.${RUBY_DLEXT}
+lib/klayout/libklayout_QtUiTools.so.0
+lib/klayout/libklayout_QtUiTools.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/libklayout_QtUiTools.so.${PKGVERSION}
 lib/klayout/libklayout_QtWidgets.${RUBY_DLEXT}
 lib/klayout/libklayout_QtWidgets.so.0
 lib/klayout/libklayout_QtWidgets.so.${PKGVERSION_MAJOR_MINOR}
@@ -215,6 +219,7 @@ lib/klayout/pymod/klayout/QtNetwork.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtPrintSupport.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtSql.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtSvg.${RUBY_DLEXT}
+lib/klayout/pymod/klayout/QtUiTools.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtWidgets.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtXml.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/QtXmlPatterns.${RUBY_DLEXT}
