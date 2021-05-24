@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20671 2021/05/23 19:32:34 nia Exp $
+$NetBSD: TODO,v 1.20672 2021/05/24 14:22:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -2027,7 +2027,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qcad-3.26.2.0
 	o qconf-2.5
 	o qdirstat-1.7.1
-	o qemu-6.0.0
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qqc2-desktop-style-5.81.0
 	o qt6-6.0
