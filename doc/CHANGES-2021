@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2948 2021/05/23 19:32:34 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2949 2021/05/24 06:42:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4553,3 +4553,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.10.2 [pin 2021-05-23]
 	Updated textproc/libxml2 to 2.9.12 [nia 2021-05-23]
 	Updated textproc/py-libxml2 to 2.9.12 [nia 2021-05-23]
+	Updated devel/php-composer to 2.0.14 [triaxx 2021-05-24]
