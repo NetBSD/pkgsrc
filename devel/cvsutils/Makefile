@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/01/25 09:23:07 fcambus Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/24 19:49:55 wiz Exp $
 
 DISTNAME=		cvsutils-0.2.6
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://www.red-bean.com/cvsutils/releases/
 

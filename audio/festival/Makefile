@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2020/08/31 18:06:33 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2021/05/24 19:49:04 wiz Exp $
 
 DISTNAME=	festival-2.5.0-release
 PKGNAME=	${DISTNAME:S/-release//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/2.5/
 DISTFILES=	${DISTNAME}.tar.gz \

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/24 19:49:18 wiz Exp $
 #
 
 DISTNAME=	Device-SerialPort-1.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	comms perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Device/}
 

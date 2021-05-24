@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/08/31 18:11:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/24 19:54:17 wiz Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/p5-UPS-Nut/}
 COMMENT=		Network UPS Tools perl binding
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		sysutils perl5
 PATCHDIR=		${.CURDIR}/patches
 

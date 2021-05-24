@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/05/24 19:53:11 wiz Exp $
 #
 
 DISTNAME=	whohas-0.29.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=whohas/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/08/31 18:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/05/24 19:52:52 wiz Exp $
 
 DISTNAME=	User-Identity-0.99
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=User/}
 

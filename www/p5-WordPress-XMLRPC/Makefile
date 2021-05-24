@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/08/31 18:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/05/24 19:55:56 wiz Exp $
 
 DISTNAME=		WordPress-XMLRPC-2.12
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www net
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WordPress/}
 

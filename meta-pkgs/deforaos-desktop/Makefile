@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/01/31 02:13:52 khorben Exp $
+# $NetBSD: Makefile,v 1.14 2021/05/24 19:53:04 wiz Exp $
 #
 
 DISTNAME=	deforaos-desktop-2020.1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 

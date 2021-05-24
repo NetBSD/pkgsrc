@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2020/08/31 18:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2021/05/24 19:56:03 wiz Exp $
 
 DISTNAME=	Wx-Perl-ProcessStream-0.32
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 

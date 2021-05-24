@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2020/09/07 11:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/24 19:53:02 wiz Exp $
 #
 
 DISTNAME=	Spreadsheet-ReadSXC-0.24
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 

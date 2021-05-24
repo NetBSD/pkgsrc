@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/24 19:54:19 wiz Exp $
 #
 
 DISTNAME=	stow-2.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_GNU:=stow/}
 

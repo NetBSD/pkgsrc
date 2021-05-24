@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2021/03/09 08:56:38 kardel Exp $
+# $NetBSD: Makefile,v 1.6 2021/05/24 19:53:17 wiz Exp $
 
 GITHUB_PROJECT=	frr
 VERSION=	7.5.1
 GITHUB_TAG=	frr-${VERSION}
 DISTNAME=	frr-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FRRouting/}
 

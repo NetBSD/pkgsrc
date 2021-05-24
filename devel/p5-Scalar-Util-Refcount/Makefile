@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/09/08 13:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/24 19:51:31 wiz Exp $
 #
 
 DISTNAME=		Scalar-Util-Refcount-1.0.2
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JN/JNIXON/}
 

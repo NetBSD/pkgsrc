@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/08/31 18:11:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/24 19:53:48 wiz Exp $
 
 DISTNAME=	attachfile2
 PKGNAME=	tex-${DISTNAME}-2.11
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	52929
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2020/08/31 18:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/05/24 19:56:06 wiz Exp $
 #
 
 DISTNAME=	xkbset-0.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	http://faculty.missouri.edu/~stephen/software/xkbset/
 

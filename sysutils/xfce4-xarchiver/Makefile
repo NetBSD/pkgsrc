@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2021/01/21 02:32:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.52 2021/05/24 19:54:21 wiz Exp $
 
 DISTNAME=	xarchiver-0.5.4.16
 PKGNAME=	xfce4-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ib/}
 GITHUB_PROJECT=	xarchiver

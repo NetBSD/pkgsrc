@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2020/08/31 18:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2021/05/24 19:50:09 wiz Exp $
 
 DISTNAME=	BSD-Resource-1.2911
 PKGNAME=	p5-${DISTNAME:C/([0-9][0-9])([0-9][0-9])/\1.\2/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=BSD/}
 

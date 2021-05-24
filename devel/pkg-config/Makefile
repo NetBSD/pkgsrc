@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2020/05/21 15:30:48 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2021/05/24 19:52:01 wiz Exp $
 
 DISTNAME=	pkg-config-0.29.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
