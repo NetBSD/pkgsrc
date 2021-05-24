@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/12/04 20:45:13 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/24 19:52:04 wiz Exp $
 
 DISTNAME=	swig-2.0.12
 PKGNAME=	${DISTNAME:S/swig-/swig2-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2020/08/31 18:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/24 19:53:33 wiz Exp $
 #
 
 DISTNAME=	RadiusPerl-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 

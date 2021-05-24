@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2021/05/09 20:35:50 khorben Exp $
+# $NetBSD: Makefile,v 1.48 2021/05/24 19:55:13 wiz Exp $
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=${GITLAB_TAG}
 

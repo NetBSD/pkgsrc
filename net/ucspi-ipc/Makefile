@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/11/19 09:35:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/24 19:53:38 wiz Exp $
 
 DISTNAME=		ucspi-ipc-0.67
+PKGREVISION=		1
 CATEGORIES=		net sysutils
 MASTER_SITES=		${HOMEPAGE}
 

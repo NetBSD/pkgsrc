@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/08/31 18:10:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/24 19:52:54 wiz Exp $
 
 DISTNAME=		sqlgrey-1.8.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlgrey/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/05/24 19:52:30 wiz Exp $
 #
 
 DISTNAME=		asn1c-0.9.24
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		lang
 MASTER_SITES=		http://lionet.info/soft/
 

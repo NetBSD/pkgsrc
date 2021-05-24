@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/02/11 00:31:51 wen Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/24 19:50:04 wiz Exp $
 
 DISTNAME=	Algorithm-C3-0.11
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 

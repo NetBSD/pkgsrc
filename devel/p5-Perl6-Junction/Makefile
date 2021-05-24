@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/09/08 13:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/05/24 19:51:24 wiz Exp $
 
 DISTNAME=	Perl6-Junction-1.60000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl6/}
 

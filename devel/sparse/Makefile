@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/05/24 19:52:03 wiz Exp $
 
 DISTNAME=	sparse-0.4.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel lang
 MASTER_SITES=	https://kernel.org/pub/software/devel/sparse/dist/
 EXTRACT_SUFX=	.tar.xz

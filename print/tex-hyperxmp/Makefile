@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/04/22 03:53:11 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/24 19:53:49 wiz Exp $
 
 DISTNAME=	hyperxmp
 PKGNAME=	tex-${DISTNAME}-5.9
+PKGREVISION=	1
 TEXLIVE_REV=	57004
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

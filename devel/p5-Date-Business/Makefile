@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2020/08/31 18:07:49 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/05/24 19:50:28 wiz Exp $
 
 DISTNAME=	Date-Business-1.2
 PKGNAME=	${DISTNAME:S/Date-Business/p5-Date-Business/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 

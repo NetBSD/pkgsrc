@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2021/04/25 06:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2021/05/24 19:53:38 wiz Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		net x11
 #MASTER_SITES=		ftp://ftp.uk.research.att.com/pub/vnc/dist/
 DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \

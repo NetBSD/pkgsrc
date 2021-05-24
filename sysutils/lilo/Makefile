@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/24 19:54:12 wiz Exp $
 
 DISTNAME=		lilo-22.8.src
-PKGREVISION=		9
+PKGREVISION=		10
 PKGNAME=		${DISTNAME:S/.src//}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/}

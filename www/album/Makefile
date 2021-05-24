@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/08/31 18:12:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/05/24 19:55:11 wiz Exp $
 
 DISTNAME=	album-4.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/album.versions/
 

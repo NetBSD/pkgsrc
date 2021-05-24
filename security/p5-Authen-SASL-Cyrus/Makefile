@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2020/08/31 18:11:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2021/05/24 19:53:56 wiz Exp $
 #
 
 DISTNAME=	Authen-SASL-Cyrus-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 

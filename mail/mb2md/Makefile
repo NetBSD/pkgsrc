@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/05/24 19:52:42 wiz Exp $
 #
 
 DISTNAME=		mb2md-3.20.pl
 PKGNAME=		${DISTNAME:S/.pl$//}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.gz
