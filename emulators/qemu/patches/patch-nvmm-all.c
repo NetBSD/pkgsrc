@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
+$NetBSD: patch-nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 
---- target/i386/nvmm-all.c.orig	2021-03-29 12:28:50.237420268 +0000
-+++ target/i386/nvmm-all.c
-@@ -0,0 +1,1234 @@
+--- nvmm-all.c.orig	2021-05-06 04:47:35.606086411 +0000
++++ nvmm-all.c
+@@ -0,0 +1,1226 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -17,19 +17,18 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +#include "exec/address-spaces.h"
 +#include "exec/ioport.h"
 +#include "qemu-common.h"
-+#include "strings.h"
-+#include "sysemu/accel.h"
++#include "qemu/accel.h"
 +#include "sysemu/nvmm.h"
-+#include "sysemu/runstate.h"
-+#include "sysemu/sysemu.h"
 +#include "sysemu/cpus.h"
++#include "sysemu/runstate.h"
 +#include "qemu/main-loop.h"
 +#include "qemu/error-report.h"
-+#include "qemu/queue.h"
 +#include "qapi/error.h"
++#include "qemu/queue.h"
 +#include "migration/blocker.h"
++#include "strings.h"
 +
-+#include "nvmm-cpus.h"
++#include "nvmm-accel-ops.h"
 +
 +#include <nvmm.h>
 +
@@ -529,7 +528,7 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +{
 +    cpu_physical_memory_rw(mem->gpa, mem->data, mem->size, mem->write);
 +
-+    /* XXX Needed, otherwise infinite loop. */
++    /* Needed, otherwise infinite loop. */
 +    current_cpu->vcpu_dirty = false;
 +}
 +
@@ -756,13 +755,11 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +        nvmm_vcpu_pre_run(cpu);
 +
 +        if (qatomic_read(&cpu->exit_request)) {
-+#if NVMM_USER_VERSION >= 2
 +            nvmm_vcpu_stop(vcpu);
-+#else
-+            qemu_cpu_kick_self();
-+#endif
 +        }
 +
++        /* Read exit_request before the kernel reads the immediate exit flag */
++        smp_rmb();
 +        ret = nvmm_vcpu_run(mach, vcpu);
 +        if (ret == -1) {
 +            error_report("NVMM: Failed to exec a virtual processor,"
@@ -775,11 +772,14 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +        switch (exit->reason) {
 +        case NVMM_VCPU_EXIT_NONE:
 +            break;
-+#if NVMM_USER_VERSION >= 2
 +        case NVMM_VCPU_EXIT_STOPPED:
++            /*
++             * The kernel cleared the immediate exit flag; cpu->exit_request
++             * must be cleared after
++             */
++            smp_wmb();
 +            qcpu->stop = true;
 +            break;
-+#endif
 +        case NVMM_VCPU_EXIT_MEMORY:
 +            ret = nvmm_handle_mem(mach, vcpu);
 +            break;
@@ -822,7 +822,6 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +
 +    cpu_exec_end(cpu);
 +    qemu_mutex_lock_iothread();
-+    current_cpu = cpu;
 +
 +    qatomic_set(&cpu->exit_request, false);
 +
@@ -884,23 +883,24 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +
 +static Error *nvmm_migration_blocker;
 +
-+#if NVMM_USER_VERSION == 1
++/*
++ * The nvmm_vcpu_stop() mechanism breaks races between entering the VMM
++ * and another thread signaling the vCPU thread to exit.
++ */
++
 +static void
 +nvmm_ipi_signal(int sigcpu)
 +{
-+    struct qemu_vcpu *qcpu;
-+
 +    if (current_cpu) {
-+        qcpu = get_qemu_vcpu(current_cpu);
-+        qcpu->stop = true;
++        struct qemu_vcpu *qcpu = get_qemu_vcpu(current_cpu);
++        struct nvmm_vcpu *vcpu = &qcpu->vcpu;
++        nvmm_vcpu_stop(vcpu);
 +    }
 +}
-+#endif
 +
 +static void
 +nvmm_init_cpu_signals(void)
 +{
-+#if NVMM_USER_VERSION == 1
 +    struct sigaction sigact;
 +    sigset_t set;
 +
@@ -913,12 +913,6 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +    sigprocmask(SIG_BLOCK, NULL, &set);
 +    sigdelset(&set, SIG_IPI);
 +    pthread_sigmask(SIG_SETMASK, &set, NULL);
-+#else
-+    /*
-+     * We use the nvmm_vcpu_stop() mechanism, and don't use signals.
-+     * Nothing to do.
-+     */
-+#endif
 +}
 +
 +int
@@ -1202,8 +1196,6 @@ $NetBSD: patch-target_i386_nvmm_all.c,v 1.2 2021/03/31 08:52:27 reinoud Exp $
 +
 +    memory_listener_register(&nvmm_memory_listener, &address_space_memory);
 +    ram_block_notifier_add(&nvmm_ram_notifier);
-+
-+    cpus_register_accel(&nvmm_cpus);
 +
 +    printf("NetBSD Virtual Machine Monitor accelerator is operational\n");
 +    return 0;

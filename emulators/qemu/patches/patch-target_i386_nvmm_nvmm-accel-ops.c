@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_nvmm_cpus.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-target_i386_nvmm_nvmm-accel-ops.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 
---- target/i386/nvmm-cpus.c.orig	2021-03-05 16:55:06.648916883 +0000
-+++ target/i386/nvmm-cpus.c
-@@ -0,0 +1,100 @@
+--- target/i386/nvmm/nvmm-accel-ops.c.orig	2021-05-06 05:09:24.910489458 +0000
++++ target/i386/nvmm/nvmm-accel-ops.c
+@@ -0,0 +1,111 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -19,7 +19,7 @@ $NetBSD: patch-target_i386_nvmm_cpus.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 +#include "qemu/guest-random.h"
 +
 +#include "sysemu/nvmm.h"
-+#include "nvmm-cpus.h"
++#include "nvmm-accel-ops.h"
 +
 +static void *qemu_nvmm_cpu_thread_fn(void *arg)
 +{
@@ -84,22 +84,33 @@ $NetBSD: patch-target_i386_nvmm_cpus.c,v 1.1 2021/03/06 11:19:34 reinoud Exp $
 + */
 +static void nvmm_kick_vcpu_thread(CPUState *cpu)
 +{
-+    /*                                                                                                         
-+     * FIXME: race condition with the exit_request check in 
-+     * hax_vcpu_hax_exec
-+     */
-+
-+    // if (!qemu_cpu_is_self(cpu)) {
 +    cpu->exit_request = 1;
 +    cpus_kick_thread(cpu);
-+    //}
 +}
 +
-+const CpusAccel nvmm_cpus = {
-+    .create_vcpu_thread = nvmm_start_vcpu_thread,
-+    .kick_vcpu_thread = nvmm_kick_vcpu_thread,
-+    .synchronize_post_reset = nvmm_cpu_synchronize_post_reset,
-+    .synchronize_post_init = nvmm_cpu_synchronize_post_init,
-+    .synchronize_state = nvmm_cpu_synchronize_state,
-+    .synchronize_pre_loadvm = nvmm_cpu_synchronize_pre_loadvm,
++static void nvmm_accel_ops_class_init(ObjectClass *oc, void *data)
++{
++    AccelOpsClass *ops = ACCEL_OPS_CLASS(oc);
++
++    ops->create_vcpu_thread = nvmm_start_vcpu_thread;
++    ops->kick_vcpu_thread = nvmm_kick_vcpu_thread;
++
++    ops->synchronize_post_reset = nvmm_cpu_synchronize_post_reset;
++    ops->synchronize_post_init = nvmm_cpu_synchronize_post_init;
++    ops->synchronize_state = nvmm_cpu_synchronize_state;
++    ops->synchronize_pre_loadvm = nvmm_cpu_synchronize_pre_loadvm;
++}
++
++static const TypeInfo nvmm_accel_ops_type = {
++    .name = ACCEL_OPS_NAME("nvmm"),
++
++    .parent = TYPE_ACCEL_OPS,
++    .class_init = nvmm_accel_ops_class_init,
++    .abstract = true,
 +};
++
++static void nvmm_accel_ops_register_types(void)
++{
++    type_register_static(&nvmm_accel_ops_type);
++}
++type_init(nvmm_accel_ops_register_types);
