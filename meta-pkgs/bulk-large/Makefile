@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/02/28 17:12:55 taca Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/24 15:04:56 jperkin Exp $
 
 DISTNAME=	bulk-large-20200228
 CATEGORIES=	meta-pkgs
@@ -56,7 +56,7 @@ BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
 BUILD_DEPENDS+=	mysql-client>=5.7:../../databases/mysql57-client
 BUILD_DEPENDS+=	mysql-server>=5.7:../../databases/mysql57-server
-BUILD_DEPENDS+=	postgresql95-[0-9]*:../../databases/postgresql95
+BUILD_DEPENDS+=	postgresql96-[0-9]*:../../databases/postgresql96
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
