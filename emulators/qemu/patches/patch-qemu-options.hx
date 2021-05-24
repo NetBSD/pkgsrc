@@ -1,8 +1,6 @@
-$NetBSD: patch-qemu-options.hx,v 1.4 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-qemu-options.hx,v 1.5 2021/05/24 14:22:08 ryoon Exp $
 
-Add NVMM support.
-
---- qemu-options.hx.orig	2020-04-28 16:49:25.000000000 +0000
+--- qemu-options.hx.orig	2021-04-29 17:18:59.000000000 +0000
 +++ qemu-options.hx
 @@ -26,7 +26,7 @@ DEF("machine", HAS_ARG, QEMU_OPTION_mach
      "-machine [type=]name[,prop[=value][,...]]\n"
@@ -22,7 +20,7 @@ Add NVMM support.
          By default, tcg is used. If there is more than one accelerator
          specified, the next one is used if the previous one fails to
          initialize.
-@@ -119,7 +119,7 @@ ERST
+@@ -135,7 +135,7 @@ ERST
  
  DEF("accel", HAS_ARG, QEMU_OPTION_accel,
      "-accel [accel=]accelerator[,prop[=value][,...]]\n"
@@ -31,7 +29,7 @@ Add NVMM support.
      "                igd-passthru=on|off (enable Xen integrated Intel graphics passthrough, default=off)\n"
      "                kernel-irqchip=on|off|split controls accelerated irqchip support (default=on)\n"
      "                kvm-shadow-mem=size of KVM shadow MMU in bytes\n"
-@@ -128,7 +128,7 @@ DEF("accel", HAS_ARG, QEMU_OPTION_accel,
+@@ -145,7 +145,7 @@ DEF("accel", HAS_ARG, QEMU_OPTION_accel,
  SRST
  ``-accel name[,prop=value[,...]]``
      This is used to enable an accelerator. Depending on the target

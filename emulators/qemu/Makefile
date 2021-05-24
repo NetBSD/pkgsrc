@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.278 2021/05/23 13:53:10 thorpej Exp $
+# $NetBSD: Makefile,v 1.279 2021/05/24 14:22:08 ryoon Exp $
 
-DISTNAME=	qemu-5.2.0
-PKGREVISION=	8
+DISTNAME=	qemu-6.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -182,6 +181,7 @@ post-install:
 	${FIND} share/doc/qemu -path '*/_static/*' -type f -print > ${WRKDIR}/PLIST.STATIC
 
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
