@@ -1,6 +1,6 @@
-$NetBSD: patch-include_sysemu_hw_accel.h,v 1.1 2021/03/06 11:19:34 reinoud Exp $
+$NetBSD: patch-include_sysemu_hw__accel.h,v 1.4 2021/05/24 14:22:08 ryoon Exp $
 
---- include/sysemu/hw_accel.h.orig	2020-12-08 16:59:44.000000000 +0000
+--- include/sysemu/hw_accel.h.orig	2021-04-29 17:18:58.000000000 +0000
 +++ include/sysemu/hw_accel.h
 @@ -16,6 +16,7 @@
  #include "sysemu/kvm.h"
