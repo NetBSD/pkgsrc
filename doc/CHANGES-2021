@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2963 2021/05/25 05:40:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2964 2021/05/25 05:46:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4582,3 +4582,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-google-auth to 1.30.1 [adam 2021-05-25]
 	Updated devel/py-zconfig to 3.6.0 [adam 2021-05-25]
 	Updated databases/sqlitebrowser to 3.12.2 [adam 2021-05-25]
+	Updated net/grpc to 1.38.0 [adam 2021-05-25]
+	Updated net/py-grpcio to 1.38.0 [adam 2021-05-25]
+	Updated net/py-grpcio-testing to 1.38.0 [adam 2021-05-25]
+	Updated net/py-grpcio-tools to 1.38.0 [adam 2021-05-25]
