@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.29 2021/05/23 16:27:39 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.30 2021/05/25 17:14:44 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any, Callable, Dict, List, NamedTuple, Optional, Set, Tuple, Union
+from typing import Any, Callable, Dict, List, NamedTuple, Optional, Set, \
+    Tuple, Union
 
 
 class Var(NamedTuple):
@@ -112,7 +113,8 @@ class Globals:
         subprocess.check_call([self.make, *args], cwd=self.pkgdir)
 
     def show_var(self, varname: str) -> str:
-        output = subprocess.check_output((self.make, 'show-var', 'VARNAME=' + varname))
+        output = subprocess.check_output(
+            (self.make, 'show-var', 'VARNAME=' + varname))
         return output.decode('utf-8').strip()
 
     def pkgsrc_license(self, license_name: str) -> str:
@@ -129,7 +131,8 @@ class Globals:
 
         known_licenses = (
             ('2-clause-bsd', 'BSD-2', 'bsd2', 'BSD_2_clause'),
-            # ('2-clause-bsd OR modified-bsd OR original-bsd', 'BSD'),  # XXX: questionable
+            # ('2-clause-bsd OR modified-bsd OR original-bsd', 'BSD'),
+            # XXX: the above is questionable since it may be too specific
             ('acm-license', 'ACM'),
             ('apache-1.1 OR apache-2.0', 'APACHE'),
             ('apache-2.0', 'Apache 2', 'Apache 2.0', 'apache2',
@@ -150,7 +153,8 @@ class Globals:
             ('gnu-gpl-v2 AND cc-by-sa-v4.0', 'gpl3+cc-by-sa-4'),
             ('gnu-gpl-v2 AND lppl-1.3c', 'lpplgpl', 'gpl2lppl'),
             ('gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c', 'gplofllppl'),
-            ('gnu-gpl-v2 OR gnu-gpl-v3', 'GPL-2 | GPL-3', 'GPL (>= 2)', 'GPL (>= 2.0)'),
+            ('gnu-gpl-v2 OR gnu-gpl-v3',
+             'GPL-2 | GPL-3', 'GPL (>= 2)', 'GPL (>= 2.0)'),
             ('gnu-gpl-v3', 'gpl3', 'GPL-3',
              'GNU Lesser General Public License (LGPL), Version 3'),
             ('gnu-gpl-v3', 'GPL (>= 3)'),
@@ -165,7 +169,8 @@ class Globals:
             ('lppl-1.3c', 'lppl', 'lppl1.3', 'lppl1.3c'),
             ('lucent', 'LUCENT', 'Lucent Public License'),
             ('mit', 'MIT', 'MIT License'),
-            ('mit\t# + file LICENSE OR unlimited', 'MIT + file LICENSE | Unlimited'),
+            ('mit\t# + file LICENSE OR unlimited',
+             'MIT + file LICENSE | Unlimited'),
             ('mit AND lppl-1.3c', 'mitlppl'),
             ('modified-bsd', 'bsd3', 'BSD 3 clause', 'BSD_3_clause'),
             ('ofl-v1.1', 'ofl'),
@@ -237,7 +242,9 @@ class Lines:
         string.
         """
         varassign = self.unique_varassign(varname)
-        return varassign.value if varassign is not None and varassign.varname == varname else ''
+        if varassign is not None and varassign.varname == varname:
+            return varassign.value
+        return ''
 
     def index(self, pattern: str) -> int:
         """ Returns the first index where the pattern is found, or -1. """
@@ -263,7 +270,8 @@ class Lines:
 
         width = 0
         for var in relevant_vars:
-            name_op_len = (len(var.name) + len(var.op) + len('\t') + 7) // 8 * 8
+            indent_len = len(var.name) + len(var.op) + len('\t')
+            name_op_len = (indent_len + 7) // 8 * 8
             width = max(width, name_op_len)
 
         for var in relevant_vars:
@@ -276,7 +284,8 @@ class Lines:
 
         varassign = self.unique_varassign(varname)
         if varassign is not None:
-            self.lines[varassign.index] = varname + varassign.op + varassign.indent + new_value
+            self.lines[varassign.index] = \
+                varname + varassign.op + varassign.indent + new_value
         return varassign is not None
 
     def append(self, varname: str, value: str) -> bool:
@@ -383,7 +392,8 @@ class Generator:
             self.homepage = self.url[:-len(self.distfile)] + ' # TODO: check'
 
         if varname == 'MASTER_SITE_R_CRAN':
-            sys.exit('url2pkg: to create R packages, use pkgtools/R2pkg instead')
+            sys.exit('url2pkg: to create R packages, '
+                     'use pkgtools/R2pkg instead')
 
     def adjust_site_SourceForge(self):
         pattern = r'''(?x)
@@ -474,7 +484,8 @@ class Generator:
 
         if re.search(r'^v\d+\.', distname):
             self.pkgname_transform = ':S,^v,,'
-        elif re.search(r'-v\d+\.', distname) and not re.search(r'-v.*-v\d+\.', distname):
+        elif re.search(r'-v\d+\.', distname) \
+                and not re.search(r'-v.*-v\d+\.', distname):
             self.pkgname_transform = ':S,-v,-,'
 
         main_category = Path.cwd().parts[-2]
@@ -486,7 +497,8 @@ class Generator:
             extract_sufx = ''
         self.extract_sufx = extract_sufx
 
-        self.pkgname = '' if self.pkgname_prefix == '' and self.pkgname_transform == '' \
+        self.pkgname = '' \
+            if self.pkgname_prefix == '' and self.pkgname_transform == '' \
             else f'{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
 
         self.maintainer = \
@@ -655,10 +667,14 @@ class Adjuster:
         self.regenerate_distinfo = False
         self.descr_lines = []
 
-    def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
-        """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
+    def add_dependency(self, kind: str, pkgbase: str, constraint: str,
+                       dep_dir: str) -> None:
+        """
+        add_dependency('DEPENDS', 'package', '>=1', '../../category/package')
+        """
 
-        self.g.debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
+        self.g.debug('add_dependency: {0} {1} {2} {3}',
+                     kind, pkgbase, constraint, dep_dir)
 
         def bl3_identifier():
             try:
@@ -675,8 +691,10 @@ class Adjuster:
             pkgid = bl3_identifier()
             if pkgid != '':
                 if kind == 'BUILD_DEPENDS':
-                    self.bl3_lines.append(f'BUILDLINK_DEPENDS.{pkgid}+=\tbuild')
-                self.bl3_lines.append(f'BUILDLINK_API_DEPENDS.{pkgid}+=\t{pkgid}{constraint}')
+                    self.bl3_lines.append(
+                        f'BUILDLINK_DEPENDS.{pkgid}+=\tbuild')
+                self.bl3_lines.append(
+                    f'BUILDLINK_API_DEPENDS.{pkgid}+=\t{pkgid}{constraint}')
                 self.bl3_lines.append(f'.include "{dep_dir}/buildlink3.mk"')
                 return
 
@@ -693,12 +711,15 @@ class Adjuster:
         else:
             self.todos.append(f'dependency {kind} {value}')
 
-    def read_dependencies(self, cmd: str, env: Dict[str, str], cwd: Union[Path, Any], pkgname_prefix: str) -> None:
+    def read_dependencies(self, cmd: str, env: Dict[str, str],
+                          cwd: Union[Path, Any], pkgname_prefix: str) -> None:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
-        self.g.debug('reading dependencies: cd {0} && env {1} {2}', str(cwd), env, cmd)
-        output: bytes = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
+        self.g.debug('reading dependencies: cd {0} && env {1} {2}',
+                     str(cwd), env, cmd)
+        output: bytes = subprocess.check_output(args=cmd, shell=True,
+                                                env=effective_env, cwd=cwd)
 
         license_name = ''
         license_default = ''
@@ -706,7 +727,8 @@ class Adjuster:
         dep_lines: List[Tuple[str, str, str, str]] = []
         for line in output.decode('utf-8').splitlines():
             # example: DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
-            m = re.search(r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$', line)
+            depends_re = r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$'
+            m = re.search(depends_re, line)
             if m:
                 dep_lines.append((m[1], m[2], m[3] or '>=0', m[4] or ''))
                 continue
@@ -734,7 +756,8 @@ class Adjuster:
         self.set_license(license_name, license_default)
         self.add_dependencies(pkgname_prefix, dep_lines)
 
-    def add_dependencies(self, pkgname_prefix: str, dep_lines: List[Tuple[str, str, str, str]]):
+    def add_dependencies(self, pkgname_prefix: str,
+                         dep_lines: List[Tuple[str, str, str, str]]):
         for dep_line in dep_lines:
             kind, pkgbase, constraint, dep_dir = dep_line
 
@@ -762,19 +785,22 @@ class Adjuster:
         return (self.abs_wrksrc / relative_pathname).open()
 
     def wrksrc_head(self, relative_pathname: str, n: int):
+        full_name = self.abs_wrksrc / relative_pathname
         try:
-            with (self.abs_wrksrc / relative_pathname).open(encoding="UTF-8") as f:
+            with full_name.open(encoding="UTF-8") as f:
                 return f.read().splitlines()[:n]
         except IOError:
             return []
 
-    def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> List[str]:
+    def wrksrc_find(self,
+                    what: Union[str, Callable[[str], bool]]) -> List[str]:
         def search(f):
             return re.search(what, f) if type(what) == str else what(f)
 
         return list(sorted(filter(search, self.wrksrc_files)))
 
-    def wrksrc_grep(self, filename: str, pattern: str) -> List[Union[str, List[str]]]:
+    def wrksrc_grep(self, filename: str,
+                    pattern: str) -> List[Union[str, List[str]]]:
         with self.wrksrc_open(filename) as f:
             matches = []
             for line in f:
@@ -812,18 +838,22 @@ class Adjuster:
             return
 
         configures = self.wrksrc_find(r'(^|/)configure$')
-        if configures:
-            gnu = any(self.wrksrc_grep(configure, r'\b(Free Software Foundation|autoconf)\b')
-                      for configure in configures)
-            varname = 'GNU_CONFIGURE' if gnu else 'HAS_CONFIGURE'
-            self.build_vars.append(Var(varname, '=', 'yes'))
+        if not configures:
+            return
+
+        gnu = any(self.wrksrc_grep(configure,
+                                   r'\b(Free Software Foundation|autoconf)\b')
+                  for configure in configures)
+        varname = 'GNU_CONFIGURE' if gnu else 'HAS_CONFIGURE'
+        self.build_vars.append(Var(varname, '=', 'yes'))
 
     def adjust_cmake(self):
         if self.wrksrc_isfile('CMakeLists.txt'):
             self.build_vars.append(Var('USE_CMAKE', '=', 'yes'))
 
     def adjust_gnu_make(self):
-        if self.wrksrc_isfile('Makefile') and self.wrksrc_grep('Makefile', r'^(?:ifeq|ifdef)\b'):
+        if self.wrksrc_isfile('Makefile') \
+                and self.wrksrc_grep('Makefile', r'^(?:ifeq|ifdef)\b'):
             self.tools.add('gmake')
 
     def adjust_meson(self):
@@ -836,7 +866,8 @@ class Adjuster:
             self.includes.append('../../devel/GConf/schemas.mk')
 
         for f in gconf2_files:
-            self.extra_vars.append(Var('GCONF_SCHEMAS', '+=', re.sub(r'(\.in)+$', '', f)))
+            self.extra_vars.append(
+                Var('GCONF_SCHEMAS', '+=', re.sub(r'(\.in)+$', '', f)))
 
     def adjust_libtool(self):
         if self.wrksrc_isfile('ltconfig') or self.wrksrc_isfile('ltmain.sh'):
@@ -859,7 +890,8 @@ class Adjuster:
         # devel/p5-Carp-Assert-More (dependencies without version numbers)
         # www/p5-HTML-Quoted (dependency with version number)
 
-        # To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
+        # To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile
+        # first.
         cmd1 = f'{self.g.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
 
@@ -867,7 +899,8 @@ class Adjuster:
         self.read_dependencies(cmd2, {}, self.abs_wrksrc, '')
 
     def adjust_perl_module_homepage(self):
-        if '${MASTER_SITE_PERL_CPAN:' not in self.makefile_lines.get('MASTER_SITES'):
+        if '${MASTER_SITE_PERL_CPAN:' \
+                not in self.makefile_lines.get('MASTER_SITES'):
             return
 
         homepage = self.makefile_lines.get('HOMEPAGE')
@@ -876,7 +909,8 @@ class Adjuster:
 
         distname = self.makefile_lines.get('DISTNAME')
         module_name = re.sub(r'-v?[0-9].*', '', distname).replace('-', '::')
-        self.makefile_lines.set('HOMEPAGE', f'https://metacpan.org/pod/{module_name}')
+        self.makefile_lines.set('HOMEPAGE',
+                                f'https://metacpan.org/pod/{module_name}')
 
     def adjust_perl_module(self):
         if self.wrksrc_isfile('Build.PL'):
@@ -888,7 +922,8 @@ class Adjuster:
 
         distname = self.makefile_lines.get('DISTNAME')
         packlist = re.sub(r'-v?[0-9].*', '', distname).replace('-', '/')
-        self.build_vars.append(Var('PERL5_PACKLIST', '=', f'auto/{packlist}/.packlist'))
+        self.build_vars.append(
+            Var('PERL5_PACKLIST', '=', f'auto/{packlist}/.packlist'))
         self.includes.append('../../lang/perl5/module.mk')
         self.pkgname_prefix = 'p5-'
         self.categories.append('perl5')
@@ -902,7 +937,8 @@ class Adjuster:
     def adjust_python_module(self):
         # Example packages:
         # devel/py-ZopeComponent (dependencies, test dependencies)
-        # devel/py-gflags (uses distutils.core instead of setuptools; BSD license)
+        # devel/py-gflags (uses distutils.core instead of setuptools;
+        #     BSD license)
         # devel/py-gcovr (uses setuptools; BSD license)
 
         if not self.wrksrc_isfile('setup.py'):
@@ -954,7 +990,8 @@ class Adjuster:
 
     def adjust_pkg_config(self):
         def relevant(filename: str) -> bool:
-            return filename.endswith('.pc.in') and not filename.endswith('-uninstalled.pc.in')
+            return filename.endswith('.pc.in') \
+                and not filename.endswith('-uninstalled.pc.in')
 
         pkg_config_files = self.wrksrc_find(relevant)
 
@@ -995,7 +1032,8 @@ class Adjuster:
 
         if len(subdirs) == 1:
             if subdirs[0] != self.makefile_lines.get('DISTNAME'):
-                self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}/' + subdirs[0]))
+                self.build_vars.append(
+                    Var('WRKSRC', '=', '${WRKDIR}/' + subdirs[0]))
             self.abs_wrksrc = self.abs_wrkdir / subdirs[0]
         elif len(subdirs) == 0:
             self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}'))
@@ -1008,8 +1046,8 @@ class Adjuster:
 
     def adjust_lines_python_module(self, lines: Lines):
 
-        initial_lines = self.initial_lines  # as generated by url2pkg
-        edited_lines = self.makefile_lines  # as edited by the package developer
+        initial_lines = self.initial_lines  # generated by url2pkg
+        edited_lines = self.makefile_lines  # edited by the package developer
 
         if 'python' not in lines.get('CATEGORIES'):
             return
@@ -1018,7 +1056,8 @@ class Adjuster:
 
         # don't risk to overwrite any changes made by the package developer.
         if edited_lines.lines != initial_lines.lines:
-            lines.lines.insert(-2, '# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI')
+            lines.lines.insert(-2, '# TODO: Migrate MASTER_SITES '
+                                   'to MASTER_SITE_PYPI')
             return
 
         pkgbase = initial_lines.get('GITHUB_PROJECT')
@@ -1029,7 +1068,9 @@ class Adjuster:
         if not (tx_lines.remove('GITHUB_PROJECT')
                 and tx_lines.set('DISTNAME', f'{pkgbase}-{pkgversion_norev}')
                 and tx_lines.set('PKGNAME', '${PYPKGPREFIX}-${DISTNAME}')
-                and tx_lines.set('MASTER_SITES', f'${{MASTER_SITE_PYPI:={pkgbase1}/{pkgbase}/}}')
+                and tx_lines.set('MASTER_SITES',
+                                 f'${{MASTER_SITE_PYPI:='
+                                 f'{pkgbase1}/{pkgbase}/}}')
                 and tx_lines.remove('DIST_SUBDIR')):
             return
 
@@ -1057,10 +1098,11 @@ class Adjuster:
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
         if lines.get('PKGNAME') == '' and \
-            (self.pkgname_prefix != '' or self.pkgname_transform != ''):
+           (self.pkgname_prefix != '' or self.pkgname_transform != ''):
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
-                pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
+                pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}' \
+                               f'${{DISTNAME{self.pkgname_transform}}}'
                 lines.lines.insert(distname_index + 1, pkgname_line)
 
         if self.todos:
@@ -1069,14 +1111,18 @@ class Adjuster:
             lines.add('')
 
         depend_vars = []
-        depend_vars.extend(Var('BUILD_DEPENDS', '+=', d) for d in self.build_depends)
-        depend_vars.extend(Var('DEPENDS', '+=', d) for d in self.depends)
-        depend_vars.extend(Var('TEST_DEPENDS', '+=', d) for d in self.test_depends)
+        depend_vars.extend(
+            Var('BUILD_DEPENDS', '+=', d) for d in self.build_depends)
+        depend_vars.extend(
+            Var('DEPENDS', '+=', d) for d in self.depends)
+        depend_vars.extend(
+            Var('TEST_DEPENDS', '+=', d) for d in self.test_depends)
         lines.add_vars(*depend_vars)
 
         build_vars = self.build_vars
         if self.tools:
-            build_vars.append(Var('USE_TOOLS', '+=', ' '.join(sorted(self.tools))))
+            build_vars.append(
+                Var('USE_TOOLS', '+=', ' '.join(sorted(self.tools))))
         lines.add_vars(*build_vars)
         lines.add_vars(*self.extra_vars)
 
@@ -1093,7 +1139,8 @@ class Adjuster:
 
     def adjust(self):
 
-        def scan(basedir: Union[Path, Any], only: Callable[[Path], bool]) -> List[str]:
+        def scan(basedir: Union[Path, Any],
+                 only: Callable[[Path], bool]) -> List[str]:
             relevant = (f for f in basedir.rglob('*') if only(f))
             relative = (str(f.relative_to(basedir)) for f in relevant)
             return list(sorted((f for f in relative if not f.startswith('.'))))
@@ -1130,7 +1177,8 @@ class Adjuster:
 
 def main(argv: List[str], g: Globals):
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
-        sys.exit(f'{argv[0]}: must be run from a package directory (.../pkgsrc/category/package)')
+        sys.exit(f'{argv[0]}: must be run from a package directory '
+                 f'(.../pkgsrc/category/package)')
 
     try:
         opts, args = getopt.getopt(argv[1:], 'v', ['verbose'])
