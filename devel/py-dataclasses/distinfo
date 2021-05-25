@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/25 10:08:12 adam Exp $
+
+SHA1 (dataclasses-0.8.tar.gz) = ef25d3e9e2523805baa314a4adcb915ae901740e
+RMD160 (dataclasses-0.8.tar.gz) = 84c33b203979c37df503d9a6393fcd1d1a279daf
+SHA512 (dataclasses-0.8.tar.gz) = 81b27dd10077084ca82b0a3cbbcee428a5c5cb2e6ade5de46a39731507c2d6f93f9038b704e6555c850044683516a0d130b95a14c91881d04b0bd2c496ca8d6a
+Size (dataclasses-0.8.tar.gz) = 36581 bytes
