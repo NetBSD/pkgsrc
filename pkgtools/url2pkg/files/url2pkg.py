@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.31 2021/05/25 17:44:08 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.32 2021/05/25 17:56:24 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -694,7 +694,7 @@ class Adjuster:
                     self.bl3_lines.append(
                         f'BUILDLINK_DEPENDS.{pkgid}+=\tbuild')
                 self.bl3_lines.append(
-                    f'BUILDLINK_API_DEPENDS.{pkgid}+=\t{pkgid}{constraint}')
+                    f'BUILDLINK_API_DEPENDS.{pkgid}+=\t{pkgbase}{constraint}')
                 self.bl3_lines.append(f'.include "{dep_dir}/buildlink3.mk"')
                 return
 
