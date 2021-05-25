@@ -649,6 +649,7 @@ openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
 opentracker-ipv6-only	Enable IPv6 mode for opentracker (disables IPv4).
 opentracker-restrictions	Enable support for whitelisting and restrict statistics in opentracker.
+oqgraph			Enable the Open Query GRAPH computation engine.
 opus			Enable opus support.
 oracle			Enable Oracle support.
 osmesa			Enable off-screen rendering.
