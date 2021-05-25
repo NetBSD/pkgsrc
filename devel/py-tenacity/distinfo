@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/25 10:15:41 adam Exp $
+
+SHA1 (tenacity-7.0.0.tar.gz) = de0c917d072479ec2f356b4e237082cddbcb158d
+RMD160 (tenacity-7.0.0.tar.gz) = 796c7761686f9a06eb9128d3f9d7c14bc7f9b4ac
+SHA512 (tenacity-7.0.0.tar.gz) = a627112df19b9f6d1c53294daad7fe1b0aeaed15e6ec07054228575fbc76ca5c22f560ddd6fc176c5c22141669423547ba17f1e33c7d0e7e92d0188acad065c4
+Size (tenacity-7.0.0.tar.gz) = 33874 bytes
