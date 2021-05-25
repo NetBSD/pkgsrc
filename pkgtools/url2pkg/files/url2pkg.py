@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.30 2021/05/25 17:14:44 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.31 2021/05/25 17:44:08 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -712,7 +712,8 @@ class Adjuster:
             self.todos.append(f'dependency {kind} {value}')
 
     def read_dependencies(self, cmd: str, env: Dict[str, str],
-                          cwd: Union[Path, Any], pkgname_prefix: str) -> None:
+                          cwd: Union[Path, Any], pkgdir_prefix: str,
+                          pkgname_prefix: str) -> None:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
@@ -754,15 +755,15 @@ class Adjuster:
                 self.g.debug('unknown dependency line: {0}', line)
 
         self.set_license(license_name, license_default)
-        self.add_dependencies(pkgname_prefix, dep_lines)
+        self.add_dependencies(pkgdir_prefix, pkgname_prefix, dep_lines)
 
-    def add_dependencies(self, pkgname_prefix: str,
+    def add_dependencies(self, pkgdir_prefix: str, pkgname_prefix: str,
                          dep_lines: List[Tuple[str, str, str, str]]):
         for dep_line in dep_lines:
             kind, pkgbase, constraint, dep_dir = dep_line
 
-            if dep_dir == '' and pkgname_prefix != '':
-                dep_dir = self.g.find_package(pkgname_prefix + pkgbase)
+            if dep_dir == '' and pkgdir_prefix != '':
+                dep_dir = self.g.find_package(pkgdir_prefix + pkgbase)
                 if dep_dir != '':
                     pkgbase = pkgname_prefix + pkgbase
             if dep_dir == '':
@@ -881,7 +882,7 @@ class Adjuster:
         # devel/p5-Algorithm-CheckDigits
 
         cmd = f'{self.g.perl5} -I{self.g.libdir} -I. Build.PL'
-        self.read_dependencies(cmd, {}, self.abs_wrksrc, '')
+        self.read_dependencies(cmd, {}, self.abs_wrksrc, '', '')
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
     def adjust_perl_module_Makefile_PL(self):
@@ -896,7 +897,7 @@ class Adjuster:
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
 
         cmd2 = f'{self.g.perl5} -I{self.g.libdir} -I. Makefile.PL'
-        self.read_dependencies(cmd2, {}, self.abs_wrksrc, '')
+        self.read_dependencies(cmd2, {}, self.abs_wrksrc, '', '')
 
     def adjust_perl_module_homepage(self):
         if '${MASTER_SITE_PERL_CPAN:' \
@@ -949,7 +950,7 @@ class Adjuster:
             'PYTHONDONTWRITEBYTECODE': 'x',
             'PYTHONPATH': self.g.libdir
         }
-        self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-')
+        self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-', '${PYPKGPREFIX}-')
 
         self.pkgname_prefix = '${PYPKGPREFIX}-'
         self.categories.append('python')

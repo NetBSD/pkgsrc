@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.29 2021/05/23 16:27:39 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.30 2021/05/25 17:44:08 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -710,7 +710,7 @@ def test_Adjuster_read_dependencies():
 
     adjuster = Adjuster(g, '', Lines())
     adjuster.makefile_lines.add('# url2pkg-marker')
-    adjuster.read_dependencies(cmd, env, '.', '')
+    adjuster.read_dependencies(cmd, env, '.', '', '')
 
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
     assert adjuster.depends == ['package>=112.0:../../pkgtools/pkglint']
@@ -746,10 +746,10 @@ def test_Adjuster_read_dependencies__lookup_with_prefix():
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
 
     adjuster = Adjuster(g, '', Lines())
-    adjuster.read_dependencies(cmd, env, '.', 'py-')
+    adjuster.read_dependencies(cmd, env, '.', 'py-', '${PYPKGPREFIX}-')
 
     assert adjuster.depends == [
-        'py-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
+        '${PYPKGPREFIX}-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
     ]
 
 
