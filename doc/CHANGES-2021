@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2975 2021/05/25 12:28:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2976 2021/05/25 15:24:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/fetchmail to 6.4.19 [triaxx 2021-05-25]
 	Removed audio/mpg123-sun successor audio/mpg123 [nia 2021-05-25]
 	Removed audio/mpg123-oss successor audio/mpg123 [nia 2021-05-25]
+	Added mail/s-nail version 14.9.22 [nia 2021-05-25]
