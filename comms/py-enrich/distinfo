@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/25 10:18:45 adam Exp $
+
+SHA1 (enrich-1.2.6.tar.gz) = 684d23d7fb4998720f72c88033f1860f3e9825bd
+RMD160 (enrich-1.2.6.tar.gz) = e695a61001c51770df82a932d277534cafd69f8d
+SHA512 (enrich-1.2.6.tar.gz) = 07c280d3526538af9d718c6d423be50d67e8285007a6702b7f3d842725a63cb282192c29481cbea6cbe7da886b630e5694776092dc0ffcaac522ccf1e895b5a9
+Size (enrich-1.2.6.tar.gz) = 15581 bytes
