@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2010/03/14 14:19:19 martin Exp $
-lib/mpg123/output_oss.la
+@comment $NetBSD: PLIST,v 1.2 2021/05/25 10:44:22 thor Exp $
+lib/mpg123/output_oss.so
