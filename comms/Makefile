@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2021/05/25 10:12:32 adam Exp $
+# $NetBSD: Makefile,v 1.123 2021/05/25 10:18:45 adam Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -64,6 +64,7 @@ SUBDIR+=	pilot-link-libs
 SUBDIR+=	pilotmgr
 SUBDIR+=	plp
 SUBDIR+=	py-colorama
+SUBDIR+=	py-enrich
 SUBDIR+=	py-esptool
 SUBDIR+=	py-gammu
 SUBDIR+=	py-nodemcu-uploader

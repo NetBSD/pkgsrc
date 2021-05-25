@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/25 10:18:45 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/enrich/__init__.py
+${PYSITELIB}/enrich/__init__.pyc
+${PYSITELIB}/enrich/__init__.pyo
+${PYSITELIB}/enrich/console.py
+${PYSITELIB}/enrich/console.pyc
+${PYSITELIB}/enrich/console.pyo
+${PYSITELIB}/enrich/logging.py
+${PYSITELIB}/enrich/logging.pyc
+${PYSITELIB}/enrich/logging.pyo
+${PYSITELIB}/enrich/py.typed
+${PYSITELIB}/enrich/test/test_console.py
+${PYSITELIB}/enrich/test/test_console.pyc
+${PYSITELIB}/enrich/test/test_console.pyo
+${PYSITELIB}/enrich/test/test_logging.py
+${PYSITELIB}/enrich/test/test_logging.pyc
+${PYSITELIB}/enrich/test/test_logging.pyo
