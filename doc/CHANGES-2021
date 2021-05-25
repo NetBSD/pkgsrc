@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2965 2021/05/25 06:34:20 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2966 2021/05/25 10:32:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4587,3 +4587,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-testing to 1.38.0 [adam 2021-05-25]
 	Updated net/py-grpcio-tools to 1.38.0 [adam 2021-05-25]
 	Updated textproc/expat to 2.4.1 [nia 2021-05-25]
+	Added devel/py-dataclasses version 0.8 [adam 2021-05-25]
+	Added comms/py-rich version 10.2.2 [adam 2021-05-25]
+	Added devel/py-tenacity version 7.0.0 [adam 2021-05-25]
+	Added comms/py-enrich version 1.2.6 [adam 2021-05-25]
+	Added sysutils/ansible-lint version 5.0.11 [adam 2021-05-25]
+	Updated devel/py-parameterized to 0.8.1 [adam 2021-05-25]
