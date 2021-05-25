@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2973 2021/05/25 10:48:24 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2974 2021/05/25 12:00:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4600,3 +4600,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-jack to 1.27.2 [thor 2021-05-25]
 	Updated audio/mpg123-oss to 1.27.2 [thor 2021-05-25]
 	Updated audio/mpg123-jack to 1.27.2 [thor 2021-05-25]
+	Updated mail/fetchmail to 6.4.19 [triaxx 2021-05-25]
