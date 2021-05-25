@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2021/05/25 10:44:22 thor Exp $
+# $NetBSD: Makefile.common,v 1.59 2021/05/25 18:15:11 thor Exp $
 #
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		modules
 SUBST_STAGE.modules=	pre-configure
 SUBST_MESSAGE.modules=	Avoid static module files with pkgsrc libtool.
 SUBST_FILES.modules=	Makefile.in
-SUBST_SED.modules=	-e 's:\(output_.\+_la_CFLAGS = \)@:\1-shared @:'
+SUBST_SED.modules=	-e 's:\(output_.*_la_CFLAGS = \)@:\1-shared @:'
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/mpg123/distinfo
 
