@@ -770,7 +770,7 @@ slp			Enable Service Location Protocol support.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
-snappy			Enable Snappy support.
+snappy			Enable Snappy (de)compression support.
 sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
 snort-flexresp		Flexible responses on hostile connection attempts.
@@ -967,5 +967,5 @@ ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
 zrtp			Enable ZRTP support.
 zsh-multibyte		Enable multibyte support in Zsh.
-zstd			Enable zstd support.
+zstd			Enable Zstandard (de)compression support.
 zziplib			Enable zip support using zziplib.
