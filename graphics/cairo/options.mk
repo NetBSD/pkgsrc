@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.20 2021/04/23 16:56:21 thor Exp $
+# $NetBSD: options.mk,v 1.21 2021/05/25 09:08:10 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
-PKG_SUPPORTED_OPTIONS=	x11 xcb bfd
+PKG_SUPPORTED_OPTIONS=	x11 xcb
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
@@ -57,12 +57,3 @@ CONFIGURE_ARGS+=	--disable-quartz
 CONFIGURE_ARGS+=	--disable-quartz-font
 CONFIGURE_ARGS+=	--disable-quartz-image
 .endif
-
-# The symbol lookup feature uses libbfd from binutils, which
-# is rather fragile when they decide to change the API again.
-.if !empty(PKG_OPTIONS:Mbfd)
-CONFIGURE_ARGS+=	--enable-symbol-lookup
-.else
-CONFIGURE_ARGS+=	--disable-symbol-lookup
-.endif
-
