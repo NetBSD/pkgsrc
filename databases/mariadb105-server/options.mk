@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/05/25 14:16:14 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/05/25 15:51:21 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
 .include "../../devel/boost-headers/buildlink3.mk"
 CMAKE_ARGS+=	-DPLUGIN_COLUMNSTORE=YES
 .else
-CMAKE_ARGS+=	-DDPLUGIN_COLUMNSTORE=NO
+CMAKE_ARGS+=	-DPLUGIN_COLUMNSTORE=NO
 .endif
 
 PLIST_VARS+=	embedded
