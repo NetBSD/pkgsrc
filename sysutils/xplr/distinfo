@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.23 2021/05/23 17:08:50 pin Exp $
+$NetBSD: distinfo,v 1.24 2021/05/25 16:15:54 pin Exp $
 
+SHA1 (ansi-to-tui-0.2.0.crate) = e6712454fcd541197419e9e0faa422beb4d10343
+RMD160 (ansi-to-tui-0.2.0.crate) = 628a5bd0723f5f379a2817bc7b454523d1d63e1a
+SHA512 (ansi-to-tui-0.2.0.crate) = 4d5332271f814876978f34dfaaebb926171754914b03a79b83b589792a3c36e9ba395313171d14881f01736e33eaf5db473b5affb6eba0d62f17b325dc042cbe
+Size (ansi-to-tui-0.2.0.crate) = 7139 bytes
 SHA1 (anyhow-1.0.40.crate) = 17c0988d0d1b3711efd7a74ba8a50f7bc21bfa96
 RMD160 (anyhow-1.0.40.crate) = 7005f69a9297ee97af418190a14e22fe3fbb4012
 SHA512 (anyhow-1.0.40.crate) = 5efc7347a7fa72abce9a8b3b76649abb00d73c16c5125aa4b6faaa7040eb5138d7d9470b66c186825c9651272f5c359578503d0866ce7242ea7ca9dc05087165
@@ -180,10 +184,10 @@ SHA1 (lazy_static-1.4.0.crate) = 3e8852a6967dc257753fe75a13112a04bc03dfc0
 RMD160 (lazy_static-1.4.0.crate) = 6c74661c140113ff3b1d660bba095259398bbb55
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
-SHA1 (libc-0.2.92.crate) = eee492eb4f6a26ead93c27dcaf3800da0e291fcf
-RMD160 (libc-0.2.92.crate) = 7955843cfee0d41194c63bead5a0e3e21e1c38f9
-SHA512 (libc-0.2.92.crate) = bee1495a75cce8d117d5a565dcd9e2050b9b308aeef40dffe5b970cec4a0840eef07e8d65a64558cb75494a77a6b0023923ee451b29288e02573b54121fc7b34
-Size (libc-0.2.92.crate) = 522480 bytes
+SHA1 (libc-0.2.94.crate) = 27ac5fa7040722f5d52d88291a046bf4bbd1b613
+RMD160 (libc-0.2.94.crate) = 15179d9bd17b7e0de5c89eec9dcdc78000b5354f
+SHA512 (libc-0.2.94.crate) = 316717d2e46b57c200d67d0ebb4fb162cb1f0b688895b9eb6075924cda3be8ba7fae85319692682178b6fc5cb2764e8b3a9d3e7ce234fd8a21a0a9c453ca174c
+Size (libc-0.2.94.crate) = 511713 bytes
 SHA1 (linked-hash-map-0.5.4.crate) = 265f4aed8ca938f39d414913045e6a66cbd38e6f
 RMD160 (linked-hash-map-0.5.4.crate) = 304794122375bb9d88818571f68bf1c498281d06
 SHA512 (linked-hash-map-0.5.4.crate) = 2938883357ec0e7d9c9fc5746063ae419c97250ddceeb8de3480c89e97e0a29d175cc9199bdb3ddf81cd5d6a2a1e319ee1644a7309eea96058221074cf87c0b6
@@ -484,12 +488,12 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-SHA1 (xplr-0.10.2.tar.gz) = 57d59f1eeae4a4cf2d6aaaf31ac47d4ae3518454
-RMD160 (xplr-0.10.2.tar.gz) = 8bb61cb2b8295cc5ce4c5d039e3e557d793dd65a
-SHA512 (xplr-0.10.2.tar.gz) = cd69f6a95dc42885636e1ceba676ca7295682a6e484e6481705ceab7b9f64da55ad6699f98a77c6e91da94f9244aafcfec049c1e645c5e178a97e115d66ad95d
-Size (xplr-0.10.2.tar.gz) = 74537 bytes
+SHA1 (xplr-0.12.1.tar.gz) = 70d54d2db83f696ac1499c8a9e9bcaa53540bff0
+RMD160 (xplr-0.12.1.tar.gz) = 815e3aa68c713a98f26af1790227c9b4dbfd7777
+SHA512 (xplr-0.12.1.tar.gz) = 7081c078fcc0fb6a37ca90564a0d3a056a0d8a03b31927e54282cda8d34d52fab7d234208404c87e0f3cb782256c5fcc069985feca333f8b56942479e804c439
+Size (xplr-0.12.1.tar.gz) = 76073 bytes
 SHA1 (yaml-rust-0.4.5.crate) = de9261ecb0d790e56466b6e1c40371b1050a8650
 RMD160 (yaml-rust-0.4.5.crate) = 2148b0245a840e26646ae4b0c5f394fd8203ad5b
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
-SHA1 (patch-Cargo.toml) = 13ed144fbefc487fc741b0584286a77b57dc5546
+SHA1 (patch-Cargo.toml) = e7f96c69a0e0141f048e76b1fc061839e4569e3c
