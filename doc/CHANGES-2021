@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2976 2021/05/25 15:24:38 nia Exp $
+$NetBSD: CHANGES-2021,v 1.2977 2021/05/25 16:16:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed audio/mpg123-sun successor audio/mpg123 [nia 2021-05-25]
 	Removed audio/mpg123-oss successor audio/mpg123 [nia 2021-05-25]
 	Added mail/s-nail version 14.9.22 [nia 2021-05-25]
+	Updated sysutils/xplr to 0.12.1 [pin 2021-05-25]
