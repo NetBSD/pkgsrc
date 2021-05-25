@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/10 10:23:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/25 04:49:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/rangefilter/apps.pyo
 ${PYSITELIB}/rangefilter/filter.py
 ${PYSITELIB}/rangefilter/filter.pyc
 ${PYSITELIB}/rangefilter/filter.pyo
+${PYSITELIB}/rangefilter/filters.py
+${PYSITELIB}/rangefilter/filters.pyc
+${PYSITELIB}/rangefilter/filters.pyo
 ${PYSITELIB}/rangefilter/locale/cs_CZ/LC_MESSAGES/django.mo
 ${PYSITELIB}/rangefilter/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/rangefilter/locale/de/LC_MESSAGES/django.mo
