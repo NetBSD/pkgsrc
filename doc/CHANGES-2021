@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2969 2021/05/25 10:46:48 thor Exp $
+$NetBSD: CHANGES-2021,v 1.2970 2021/05/25 10:47:02 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123 to 1.27.2 [thor 2021-05-25]
 	Updated audio/mpg123-pulse to 1.27.2nb1 [thor 2021-05-25]
 	Updated audio/mpg123-nas to 1.27.2 [thor 2021-05-25]
+	Updated audio/mpg123-sun to 1.27.2 [thor 2021-05-25]
