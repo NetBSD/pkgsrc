@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.57 2021/03/25 23:53:13 thor Exp $
+# $NetBSD: Makefile.common,v 1.58 2021/05/25 10:44:22 thor Exp $
 #
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.26.5
+DISTNAME=	mpg123-1.27.2
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
@@ -20,9 +20,14 @@ USE_LANGUAGES=		c99
 USE_LIBTOOL?=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE?=		yes
-CONFIGURE_ARGS+=	--enable-modules=yes
-CONFIGURE_ENV+=		BUILD_${MPG123_MODULE:tu}=yes
-CONFIGURE_ENV+=		MPG123_MODULE=${MPG123_MODULE:Q}
+CONFIGURE_ARGS+=	--enable-modules=yes --with-audio=${MPG123_MODULE}
+
+# To be removed on update > 1.27.2.
+SUBST_CLASSES+=		modules
+SUBST_STAGE.modules=	pre-configure
+SUBST_MESSAGE.modules=	Avoid static module files with pkgsrc libtool.
+SUBST_FILES.modules=	Makefile.in
+SUBST_SED.modules=	-e 's:\(output_.\+_la_CFLAGS = \)@:\1-shared @:'
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/mpg123/distinfo
 
@@ -33,11 +38,16 @@ INSTALLATION_DIRS+=	lib/mpg123
 LIBS+=			-lmpg123
 BUILD_TARGET=		src/libout123/modules/output_${MPG123_MODULE}.la
 PATCHDIR=		${.CURDIR}/../../audio/mpg123/patches
+.include "../../mk/bsd.prefs.mk"
+.  if ${OPSYS} == "Darwin"
+SOEXT=  dylib
+.  else
+SOEXT=  so
+.  endif
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/src/libout123/modules/output_${MPG123_MODULE}.la \
-		${DESTDIR}${PREFIX}/lib/mpg123
+	mkdir -p ${DESTDIR}${PREFIX}/lib/mpg123
+	install ${WRKSRC}/src/libout123/modules/.libs/output_${MPG123_MODULE}.${SOEXT} \
+	  ${DESTDIR}${PREFIX}/lib/mpg123
 .endif
 
-#.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
