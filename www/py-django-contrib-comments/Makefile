@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/05/25 04:51:46 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/25 05:01:22 adam Exp $
 
 DISTNAME=	django-contrib-comments-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/django/django-contrib-comments
 COMMENT=	Framework to attach comments to any Django model
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
 
 USE_LANGUAGES=	# none
 
