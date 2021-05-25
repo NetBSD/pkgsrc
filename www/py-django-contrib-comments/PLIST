@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/01/16 10:15:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/05/25 04:51:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/django_comments/abstracts.pyo
 ${PYSITELIB}/django_comments/admin.py
 ${PYSITELIB}/django_comments/admin.pyc
 ${PYSITELIB}/django_comments/admin.pyo
+${PYSITELIB}/django_comments/apps.py
+${PYSITELIB}/django_comments/apps.pyc
+${PYSITELIB}/django_comments/apps.pyo
 ${PYSITELIB}/django_comments/compat.py
 ${PYSITELIB}/django_comments/compat.pyc
 ${PYSITELIB}/django_comments/compat.pyo
@@ -173,6 +176,15 @@ ${PYSITELIB}/django_comments/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_comments/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/django_comments/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_comments/locale/zh_Hant/LC_MESSAGES/django.po
+${PYSITELIB}/django_comments/management/__init__.py
+${PYSITELIB}/django_comments/management/__init__.pyc
+${PYSITELIB}/django_comments/management/__init__.pyo
+${PYSITELIB}/django_comments/management/commands/__init__.py
+${PYSITELIB}/django_comments/management/commands/__init__.pyc
+${PYSITELIB}/django_comments/management/commands/__init__.pyo
+${PYSITELIB}/django_comments/management/commands/delete_stale_comments.py
+${PYSITELIB}/django_comments/management/commands/delete_stale_comments.pyc
+${PYSITELIB}/django_comments/management/commands/delete_stale_comments.pyo
 ${PYSITELIB}/django_comments/managers.py
 ${PYSITELIB}/django_comments/managers.pyc
 ${PYSITELIB}/django_comments/managers.pyo
@@ -185,6 +197,9 @@ ${PYSITELIB}/django_comments/migrations/0002_update_user_email_field_length.pyo
 ${PYSITELIB}/django_comments/migrations/0003_add_submit_date_index.py
 ${PYSITELIB}/django_comments/migrations/0003_add_submit_date_index.pyc
 ${PYSITELIB}/django_comments/migrations/0003_add_submit_date_index.pyo
+${PYSITELIB}/django_comments/migrations/0004_add_object_pk_is_removed_index.py
+${PYSITELIB}/django_comments/migrations/0004_add_object_pk_is_removed_index.pyc
+${PYSITELIB}/django_comments/migrations/0004_add_object_pk_is_removed_index.pyo
 ${PYSITELIB}/django_comments/migrations/__init__.py
 ${PYSITELIB}/django_comments/migrations/__init__.pyc
 ${PYSITELIB}/django_comments/migrations/__init__.pyo
