@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2021/05/25 11:06:41 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/05/25 11:14:54 jperkin Exp $
 #
 # used by databases/mariadb104-client/Makefile
 # used by databases/mariadb104-server/Makefile
@@ -24,32 +24,13 @@ PLIST_SRC=	${PLIST_SRC_DFLT}
 
 .include "../../mk/bsd.prefs.mk"
 
-# home directory (location of the databases)
-.if !empty(MYSQL_DATADIR)
-MARIADB_DATADIR?=	${MYSQL_DATADIR}
-.else
-MARIADB_DATADIR?=	${VARBASE}/db/mariadb
-.endif
-
-# default character set
-.if !empty(MYSQL_CHARSET)
-MARIADB_CHARSET?=	${MYSQL_CHARSET}
-.else
-MARIADB_CHARSET?=	utf8mb4
-.endif
-
-# additional character set to be compiled in
-.if !empty(MYSQL_COLLATION)
-MARIADB_COLLATION?=	${MYSQL_COLLATION}
-.else
-MARIADB_COLLATION?=	utf8mb4_unicode_ci
-.endif
-
-.if !empty(MYSQL_EXTRA_CHARSET)
-MARIADB_EXTRA_CHARSET?=	${MYSQL_EXTRA_CHARSET}
-.else
-MARIADB_EXTRA_CHARSET?=	all
-.endif
+#
+# Use MySQL defaults if set.
+#
+MARIADB_DATADIR?=	${MYSQL_DATADIR:U${VARBASE}/db/mariadb}
+MARIADB_CHARSET?=	${MYSQL_CHARSET:Uutf8mb4}
+MARIADB_COLLATION?=	${MYSQL_COLLATION:Uutf8mb4_unicode_ci}
+MARIADB_EXTRA_CHARSET?=	${MYSQL_EXTRA_CHARSET:Uall}
 
 BUILD_DEFS+=		VARBASE
 
