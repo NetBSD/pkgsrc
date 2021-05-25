@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/25 15:24:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/25 17:29:42 nia Exp $
 
 DISTNAME=		s-nail-14.9.22
 CATEGORIES=		mail
@@ -12,6 +12,7 @@ LICENSE=		original-bsd AND osl AND mpl-1.1
 MAKE_FILE=		makefile
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MAKE_FLAGS+=		VAL_MANDIR=${PREFIX}/${PKGMANDIR}
 BUILD_MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 
