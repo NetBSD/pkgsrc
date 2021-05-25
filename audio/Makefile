@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2021/05/09 09:06:58 nia Exp $
+# $NetBSD: Makefile,v 1.633 2021/05/25 12:27:02 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -321,9 +321,7 @@ SUBDIR+=	mpegaudio
 SUBDIR+=	mpg123
 SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-nas
-SUBDIR+=	mpg123-oss
 SUBDIR+=	mpg123-pulse
-SUBDIR+=	mpg123-sun
 SUBDIR+=	mpg321
 SUBDIR+=	mppenc
 SUBDIR+=	mserv
