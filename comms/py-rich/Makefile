@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1 2021/05/25 10:12:32 adam Exp $
+
+DISTNAME=	rich-10.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	comms python
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/willmcgugan/rich
+COMMENT=	Render rich text, tables, progress bars, syntax highlighting
+LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.0:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.9.0:../../textproc/py-commonmark
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.6.0:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/egg.mk"
+.if ${_PYTHON_VERSION} == 36
+DEPENDS+=	${PYPKGPREFIX}-py-dataclasses>=0.7:../../devel/py-dataclasses
+.endif
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
