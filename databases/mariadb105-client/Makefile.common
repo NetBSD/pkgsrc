@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2021/05/25 11:14:54 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.4 2021/05/25 11:18:26 jperkin Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mariadb105-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mariadb105-client/patches
-MESSAGE_SRC+=	${.CURDIR}/../../databases/mariadb105-client/MESSAGE
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
