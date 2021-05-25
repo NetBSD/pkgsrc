@@ -282,14 +282,27 @@ func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 			ck.pkgbase, value)
 	}
 
-	if varname == "BUILDLINK_PKGSRCDIR."+pkgbase {
-		pkgdir := mkline.Filename().Dir()
-		expected := "../../" + G.Pkgsrc.Rel(pkgdir).String()
-		if value != expected {
-			mkline.Errorf("%s must be set to the package's own path (%s), not %s.",
-				varname, expected, value)
-		}
+	ck.checkVarassignPkgsrcdir(mkline, pkgbase, varname, value)
+}
+
+func (ck *Buildlink3Checker) checkVarassignPkgsrcdir(mkline *MkLine,
+	pkgbase string, varname string, value string) {
+
+	if varname != "BUILDLINK_PKGSRCDIR."+pkgbase {
+		return
 	}
+	if containsVarUse(value) {
+		return
+	}
+
+	pkgdir := mkline.Filename().Dir()
+	expected := "../../" + G.Pkgsrc.Rel(pkgdir).String()
+	if value == expected {
+		return
+	}
+
+	mkline.Errorf("%s must be set to the package's own path (%s), not %s.",
+		varname, expected, value)
 }
 
 func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbaseLine *MkLine) {
