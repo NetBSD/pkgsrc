@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.30 2021/05/25 17:44:08 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.31 2021/05/25 17:56:24 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -715,7 +715,7 @@ def test_Adjuster_read_dependencies():
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
     assert adjuster.depends == ['package>=112.0:../../pkgtools/pkglint']
     assert adjuster.bl3_lines == [
-        'BUILDLINK_API_DEPENDS.x11-links+=\tx11-links>=120.0',
+        'BUILDLINK_API_DEPENDS.x11-links+=\tpackage>=120.0',
         ".include \"../../pkgtools/x11-links/buildlink3.mk\"",
     ]
     assert adjuster.build_depends == [
@@ -732,7 +732,7 @@ def test_Adjuster_read_dependencies():
         'HOMEPAGE=       https://homepage.example.org/',
         '#LICENSE=       BSD # (from Python package)',
         '',
-        'BUILDLINK_API_DEPENDS.x11-links+=       x11-links>=120.0',
+        'BUILDLINK_API_DEPENDS.x11-links+=       package>=120.0',
         '.include "../../pkgtools/x11-links/buildlink3.mk"'
     ]
 
