@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.9 2021/05/21 15:01:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.10 2021/05/25 15:14:37 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -73,4 +73,16 @@ multimedia/mpv: performance fix
 
 Pullup ticket #6457 - requested by gdt
 net/speedtest-cli: bugfix
+
+Pullup ticket #6458 - requested by nia
+textproc/libxml2: security fix
+
+Pullup ticket #6459 - requested by nia
+textproc/libxslt: build fix
+
+Pullup ticket #6460 - requested by nia
+graphics/cairo: security fix
+
+Pullup ticket #6461 - requested by nia
+print/mupdf: security fix
 
