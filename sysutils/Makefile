@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.958 2021/05/15 10:27:16 nia Exp $
+# $NetBSD: Makefile,v 1.959 2021/05/25 10:21:26 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -28,6 +28,7 @@ SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amtterm
 SUBDIR+=	ansible
 SUBDIR+=	ansible-base
+SUBDIR+=	ansible-lint
 SUBDIR+=	apcupsd
 SUBDIR+=	arm-trusted-firmware-fiptool
 SUBDIR+=	arm-trusted-firmware-rk3328
