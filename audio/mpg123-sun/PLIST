@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/25 10:44:23 thor Exp $
-lib/mpg123/output_sun.so
