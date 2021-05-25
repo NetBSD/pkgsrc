@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2959 2021/05/25 00:29:38 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.2960 2021/05/25 05:02:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4568,3 +4568,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/perl5 to 5.34.0 [wiz 2021-05-24]
 	Updated www/caddy to 2.4.1 [bsiegert 2021-05-24]
 	Updated databases/postgresql-postgis2 to 3.1.2 [gdt 2021-05-25]
+	Updated www/py-django-binary-database-files to 1.0.15 [adam 2021-05-25]
+	Updated www/py-django-admin-rangefilter to 0.8.1 [adam 2021-05-25]
+	Updated www/py-django-contrib-comments to 2.1.0 [adam 2021-05-25]
+	Updated www/py-django-taggit to 1.4.0 [adam 2021-05-25]
+	Updated www/py-django-formtools to 2.3 [adam 2021-05-25]
+	Updated www/py-django-admin-sortable2 to 1.0 [adam 2021-05-25]
