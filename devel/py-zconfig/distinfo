@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/13 10:55:19 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/05/25 05:38:30 adam Exp $
 
-SHA1 (ZConfig-3.5.0.tar.gz) = 66531f61c0cf4e7e7140bbcabae3b463da3add81
-RMD160 (ZConfig-3.5.0.tar.gz) = f3b96f6ed0ee737a09a06732a7496cc23439be6d
-SHA512 (ZConfig-3.5.0.tar.gz) = 14af4de2adcb7e5404a4fd8e1a1903758c584898fda7c4d2a660616c37023f0e0b5d4acac789a930c2900eb501528899d51c4ea4c4050535cfbaa629e9159558
-Size (ZConfig-3.5.0.tar.gz) = 127317 bytes
+SHA1 (ZConfig-3.6.0.tar.gz) = bcce1cdd23a275a5f720c869f401a990699cc13f
+RMD160 (ZConfig-3.6.0.tar.gz) = 81caccac00a05bb42e813642f836df0e5720221c
+SHA512 (ZConfig-3.6.0.tar.gz) = a5cca99f324007a14f4738be1c9f7424538d8a13f7171fbfa979ce9273b29679eb18b0e905afc96d38abcf042af222e3e86acad6912b9eb8b71b6c8122c47031
+Size (ZConfig-3.6.0.tar.gz) = 134559 bytes
