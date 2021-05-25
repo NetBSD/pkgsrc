@@ -719,6 +719,7 @@ rc5			Support the hashing algorithm RC5.
 readline		Enable use of GNU readline library.
 redis			Support the Redis database.
 regexp			Enable POSIX.2 regexp support.
+rocksdb			Enable the RocksDB storage engine.
 rodio			Use the rust rodio crate for audio output.
 rpi			Enable Raspberry Pi support.
 rrl			Enable Response Rate Limiting.
