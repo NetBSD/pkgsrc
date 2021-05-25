@@ -103,6 +103,7 @@ clutter			Use Clutter for graphics support.
 cmdliner		Enable cmdliner support.
 cmxs			Produce CMXS files.
 color			Enable color support.
+columnstore		Enable the columnar storage engine.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
 coreaudio		Enable Core Audio library support.
