@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/03/19 10:09:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/25 04:46:40 adam Exp $
 
-DISTNAME=	django-binary-database-files-1.0.14
+DISTNAME=	django-binary-database-files-1.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-binary-database-files/}
