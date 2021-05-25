@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/08/13 10:55:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/05/25 05:38:30 adam Exp $
 bin/zconfig-${PYVERSSUFFIX}
 bin/zconfig_schema2html-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -91,6 +91,9 @@ ${PYSITELIB}/ZConfig/loader.pyo
 ${PYSITELIB}/ZConfig/matcher.py
 ${PYSITELIB}/ZConfig/matcher.pyc
 ${PYSITELIB}/ZConfig/matcher.pyo
+${PYSITELIB}/ZConfig/pygments.py
+${PYSITELIB}/ZConfig/pygments.pyc
+${PYSITELIB}/ZConfig/pygments.pyo
 ${PYSITELIB}/ZConfig/schema.py
 ${PYSITELIB}/ZConfig/schema.pyc
 ${PYSITELIB}/ZConfig/schema.pyo
@@ -170,6 +173,9 @@ ${PYSITELIB}/ZConfig/tests/test_loader.pyo
 ${PYSITELIB}/ZConfig/tests/test_matcher.py
 ${PYSITELIB}/ZConfig/tests/test_matcher.pyc
 ${PYSITELIB}/ZConfig/tests/test_matcher.pyo
+${PYSITELIB}/ZConfig/tests/test_pygments.py
+${PYSITELIB}/ZConfig/tests/test_pygments.pyc
+${PYSITELIB}/ZConfig/tests/test_pygments.pyo
 ${PYSITELIB}/ZConfig/tests/test_readme.py
 ${PYSITELIB}/ZConfig/tests/test_readme.pyc
 ${PYSITELIB}/ZConfig/tests/test_readme.pyo
