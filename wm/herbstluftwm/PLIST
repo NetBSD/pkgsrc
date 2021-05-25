@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/05 08:55:26 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/05/25 16:19:56 pin Exp $
 bin/herbstclient
 bin/herbstluftwm
 man/man1/herbstclient.1
@@ -25,12 +25,13 @@ share/doc/herbstluftwm/examples/q3terminal.sh
 share/doc/herbstluftwm/examples/savestate.sh
 share/doc/herbstluftwm/examples/scratchpad.sh
 share/doc/herbstluftwm/examples/toggledualhead.sh
+share/doc/herbstluftwm/examples/unminimize.sh
 share/doc/herbstluftwm/examples/windowmenu.sh
 share/doc/herbstluftwm/examples/wselect.sh
-share/doc/herbstluftwm/herbstclient.html
-share/doc/herbstluftwm/herbstluftwm-tutorial.html
-share/doc/herbstluftwm/herbstluftwm.html
 share/doc/herbstluftwm/hlwm-doc.json
+share/doc/herbstluftwm/html/herbstclient.html
+share/doc/herbstluftwm/html/herbstluftwm-tutorial.html
+share/doc/herbstluftwm/html/herbstluftwm.html
 share/fish/vendor_completions.d/herbstclient.fish
 share/xsessions/herbstluftwm.desktop
 share/zsh/site-functions/_herbstclient
