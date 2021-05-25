@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2958 2021/05/24 18:56:23 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2959 2021/05/25 00:29:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4567,3 +4567,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/nono to 0.1.6 [ryoon 2021-05-24]
 	Updated lang/perl5 to 5.34.0 [wiz 2021-05-24]
 	Updated www/caddy to 2.4.1 [bsiegert 2021-05-24]
+	Updated databases/postgresql-postgis2 to 3.1.2 [gdt 2021-05-25]
