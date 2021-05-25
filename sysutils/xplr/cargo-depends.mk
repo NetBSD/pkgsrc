@@ -1,5 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2021/05/23 17:08:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2021/05/25 16:15:54 pin Exp $
 
+CARGO_CRATE_DEPENDS+=	ansi-to-tui-0.2.0
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.40
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
 CARGO_CRATE_DEPENDS+=	arrayvec-0.5.2
@@ -45,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.0
 CARGO_CRATE_DEPENDS+=	itoa-0.4.7
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.50
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.92
+CARGO_CRATE_DEPENDS+=	libc-0.2.94
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.4
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.2
 CARGO_CRATE_DEPENDS+=	log-0.4.14
