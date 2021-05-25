@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2964 2021/05/25 05:46:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.2965 2021/05/25 06:34:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4586,3 +4586,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio to 1.38.0 [adam 2021-05-25]
 	Updated net/py-grpcio-testing to 1.38.0 [adam 2021-05-25]
 	Updated net/py-grpcio-tools to 1.38.0 [adam 2021-05-25]
+	Updated textproc/expat to 2.4.1 [nia 2021-05-25]
