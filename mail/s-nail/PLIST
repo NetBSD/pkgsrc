@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/25 15:24:20 nia Exp $
+bin/s-nail
+libexec/s-nail-dotlock
+man/man1/s-nail.1
+share/examples/s-nail/s-nail.rc
