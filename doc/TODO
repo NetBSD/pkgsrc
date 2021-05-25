@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20676 2021/05/25 05:46:40 adam Exp $
+$NetBSD: TODO,v 1.20677 2021/05/25 16:18:48 pin Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o afterstep-2.2.12
 	o aide-0.16
 	o akonadi-16.08.1
-	o alacritty-0.8.0
 	o album-4.17
 	o alephone-20150620
 	o alevt-1.6.2
