@@ -1,0 +1,37 @@
+$NetBSD: patch-make.rc,v 1.1 2021/05/25 15:24:20 nia Exp $
+
+ - fixed VAL_PREFIX, VAL_MANDIR and VAL_SYSCONFDIR for pkgsrc
+ - set OPT_AUTOCC=no to allow LDFLAGS in pkgsrc Makefile
+
+--- make.rc.orig        2021-02-23 18:38:16.000000000 -0700
++++ make.rc     2021-03-26 22:28:52.314771598 -0600
+@@ -62,7 +62,7 @@
+ VAL_PS_DOTLOCK_USER=root
+
+ # General prefix of installation.
+-VAL_PREFIX=/usr/local
++VAL_PREFIX=$PREFIX
+
+ # Fine tune individual locations, normally under $VAL_PREFIX.
+ # . the place of normal binaries.
+@@ -72,9 +72,9 @@
+ #   (Only with: $OPT_DOTLOCK.)
+ VAL_LIBEXECDIR=${VAL_PREFIX}/libexec
+ # . of the manual.
+-VAL_MANDIR=${VAL_PREFIX}/share/man
++VAL_MANDIR=${VAL_PREFIX}/man
+ # . of the exemplary resource file.
+-VAL_SYSCONFDIR=${VAL_PREFIX}/etc
++VAL_SYSCONFDIR=${VAL_PREFIX}/share/examples/s-nail
+
+ # The variable $DESTDIR is prepended to all the paths from above at
+ # installation time; this feature can be used for, e.g., package
+@@ -193,7 +193,7 @@
+ #     $ make EXTRA_CFLAGS=-std=c99 tangerine
+ # Whatever you do, the configuration is fixated and updates will force
+ # rebuilds.
+-OPT_AUTOCC=yes
++OPT_AUTOCC=no
+
+    # With $OPT_AUTOCC we will use stack protector guards shall the
+    # detected compiler support them; this goes in line with our own
