@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/05/25 17:31:08 nia Exp $
+
+SHA1 (s-nail-14.9.22.tar.gz) = 2606294cebff9cb647787c503904ad6a213dddcc
+RMD160 (s-nail-14.9.22.tar.gz) = 2877859073d01e2c7ef10d0c50db6b9359cec9f6
+SHA512 (s-nail-14.9.22.tar.gz) = 502784947ee60720c6dbe353dd87d07fa0a01e69d5d2d406d6f9c79b1fc0ddb5727cc863e879046a762c5386ce2fa3125867261286e33915932b78daa9fc2b4d
+Size (s-nail-14.9.22.tar.gz) = 1090859 bytes
+SHA1 (patch-make.rc) = 383372deed01c34a984c8696c3d15619aa04aafa
