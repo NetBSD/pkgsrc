@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2981 2021/05/25 16:58:04 pin Exp $
+$NetBSD: CHANGES-2021,v 1.2982 2021/05/25 21:48:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/alacritty to 0.8.0 [pin 2021-05-25]
 	Updated wm/herbstluftwm to 0.9.3 [pin 2021-05-25]
 	Updated finance/rates to 0.4.0 [pin 2021-05-25]
+	Updated pkgtools/pkglint to 21.1.2 [rillig 2021-05-25]
