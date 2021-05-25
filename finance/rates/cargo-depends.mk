@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2021/05/17 07:44:49 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2021/05/25 16:57:46 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
@@ -52,6 +52,7 @@ CARGO_CRATE_DEPENDS+=	loom-0.4.0
 CARGO_CRATE_DEPENDS+=	matches-0.1.8
 CARGO_CRATE_DEPENDS+=	memchr-2.3.4
 CARGO_CRATE_DEPENDS+=	mime-0.3.16
+CARGO_CRATE_DEPENDS+=	minidom-0.12.0
 CARGO_CRATE_DEPENDS+=	mio-0.7.8
 CARGO_CRATE_DEPENDS+=	miow-0.3.6
 CARGO_CRATE_DEPENDS+=	ntapi-0.3.6
@@ -69,6 +70,8 @@ CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.19
 CARGO_CRATE_DEPENDS+=	proc-macro-nested-0.1.7
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.24
+CARGO_CRATE_DEPENDS+=	quick-xml-0.17.2
+CARGO_CRATE_DEPENDS+=	quickxml_to_serde-0.4.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.9
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.57
 CARGO_CRATE_DEPENDS+=	redox_users-0.3.5
@@ -81,6 +84,7 @@ CARGO_CRATE_DEPENDS+=	ryu-1.0.5
 CARGO_CRATE_DEPENDS+=	scoped-tls-1.0.0
 CARGO_CRATE_DEPENDS+=	sct-0.6.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.123
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.126
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.62
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.0
 CARGO_CRATE_DEPENDS+=	slab-0.4.2
