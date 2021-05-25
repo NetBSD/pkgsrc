@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/24 19:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/25 11:14:55 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -14,23 +14,8 @@ BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(MYSQL_DATADIR)
-MARIADB_DATADIR?=	${MYSQL_DATADIR}
-.else
-MARIADB_DATADIR?=	${VARBASE}/db/mariadb
-.endif
-
-.if !empty(MYSQL_USER)
-MARIADB_USER?=		${MYSQL_USER}
-.else
-MARIADB_USER?=		mariadb
-.endif
-
-.if !empty(MYSQL_GROUP)
-MARIADB_GROUP?=		${MYSQL_GROUP}
-.else
-MARIADB_GROUP?=		mariadb
-.endif
+MARIADB_USER?=		${MYSQL_USER:Umariadb}
+MARIADB_GROUP?=		${MYSQL_GROUP:Umariadb}
 
 PKG_USERS_VARS+=	MARIADB_USER
 PKG_GROUPS_VARS+=	MARIADB_GROUP
