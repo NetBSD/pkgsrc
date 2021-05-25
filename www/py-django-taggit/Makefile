@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/25 04:55:46 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/25 05:01:46 adam Exp $
 
 DISTNAME=	django-taggit-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jazzband/django-taggit
 COMMENT=	Generic tagging application for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=		# none
