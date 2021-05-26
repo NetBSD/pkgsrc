@@ -1,15 +1,15 @@
-$NetBSD: patch-src_bootstrap_compile.rs,v 1.2 2021/04/19 17:08:09 he Exp $
+$NetBSD: patch-src_bootstrap_compile.rs,v 1.3 2021/05/26 09:21:39 he Exp $
 
 On Darwin, do not use @rpath for internal libraries.
 
---- src/bootstrap/compile.rs.orig	2021-02-10 17:36:44.000000000 +0000
+--- src/bootstrap/compile.rs.orig	2021-03-23 16:15:10.000000000 +0000
 +++ src/bootstrap/compile.rs
-@@ -359,7 +359,7 @@ fn copy_sanitizers(
-             // Update the library install name reflect the fact it has been renamed.
-             let status = Command::new("install_name_tool")
-                 .arg("-id")
--                .arg(format!("@rpath/{}", runtime.name))
-+                .arg(format!("@PREFIX@/lib/{}", runtime.name))
-                 .arg(&dst)
-                 .status()
-                 .expect("failed to execute `install_name_tool`");
+@@ -360,7 +360,7 @@ fn copy_sanitizers(
+ 
+         if target == "x86_64-apple-darwin" || target == "aarch64-apple-darwin" {
+             // Update the library’s install name to reflect that it has has been renamed.
+-            apple_darwin_update_library_name(&dst, &format!("@rpath/{}", &runtime.name));
++            apple_darwin_update_library_name(&dst, &format!("@PREFIX@/lib/{}", &runtime.name));
+             // Upon renaming the install name, the code signature of the file will invalidate,
+             // so we will sign it again.
+             apple_darwin_sign_file(&dst);
