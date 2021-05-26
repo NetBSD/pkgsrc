@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/26 18:49:20 brook Exp $
+
+SHA1 (minimap2/v2.18.tar.gz) = 77a4a1f955f0f8aaab7553b0d1b3bf3c102ea086
+RMD160 (minimap2/v2.18.tar.gz) = 33ff96cbdf5c4bd98a543ab8be644c337060d496
+SHA512 (minimap2/v2.18.tar.gz) = b2521ec453b836330eb6dcf87969e6171e7c1d53cee2767e6a36a0c422a9fa14c83a085b75371343ae119d719829bfe26b5d9f0008ccad1ac0f51b391a984860
+Size (minimap2/v2.18.tar.gz) = 231187 bytes
