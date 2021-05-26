@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2989 2021/05/26 19:14:46 brook Exp $
+$NetBSD: CHANGES-2021,v 1.2990 2021/05/26 23:46:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4617,3 +4617,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/minimap2 version 2.18 [brook 2021-05-26]
 	Added biology/racon version 1.4.3 [brook 2021-05-26]
 	Added biology/beagle version 5.2 [brook 2021-05-26]
+	Updated x11/xfce4-desktop to 4.14.4 [gutteridge 2021-05-26]
