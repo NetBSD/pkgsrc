@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2021/05/24 19:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.281 2021/05/26 00:59:44 mcf Exp $
 
 DISTNAME=	qemu-6.0.0
 PKGREVISION=	1
@@ -107,7 +107,7 @@ SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 
 UE_ARCHS+=		aarch64 aarch64_be
 UE_ARCHS+=		alpha arm armeb cris
-UE_ARCHS+=		hppa
+UE_ARCHS+=		hexagon hppa
 UE_ARCHS+=		i386
 UE_ARCHS+=		m68k microblaze microblazeel
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
