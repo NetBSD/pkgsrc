@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/05/23 20:58:20 thor Exp $
+# $NetBSD: Makefile,v 1.39 2021/05/26 13:03:40 thor Exp $
 
 DISTNAME=	fltk-1.3.6-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -68,8 +68,6 @@ CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
-.  include "../../x11/libxcb/buildlink3.mk"
-.  include "../../x11/libXcursor/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .  include "../../x11/libXt/buildlink3.mk"
 .endif
