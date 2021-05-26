@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2021/05/25 11:14:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2021/05/26 11:24:56 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	MariaDB 10.4, a free MySQL compatible database (server)
 
 CONFLICTS=	mysql-server-[0-9]*
 
 .include "../../databases/mariadb104-client/Makefile.common"
-
-CMAKE_ARGS+=		-DPYTHON_SHEBANG=${PYTHONBIN}
 
 BUILD_DEFS+=		VARBASE
 
@@ -48,15 +46,10 @@ post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/mysql_install_db
 
 .include "options.mk"
-.include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/mariadb104-client/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../devel/libjudy/buildlink3.mk"
-.include "../../devel/msgpack/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
