@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/11/02 12:32:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/26 19:38:28 bouyer Exp $
 
 DISTNAME=	libwebsockets-4.1.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=warmcat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libwebsockets.org/
