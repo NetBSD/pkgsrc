@@ -1,0 +1,22 @@
+Miniasm is a very fast OLC-based *de novo* assembler for noisy long
+reads. It takes all-vs-all read self-mappings (typically by minimap)
+as input and outputs an assembly graph in the GFA format. Different
+from mainstream assemblers, miniasm does not have a consensus step. It
+simply concatenates pieces of read sequences to generate the final
+unitig sequences. Thus the per-base error rate is similar to the raw
+input reads.
+
+So far miniasm is in early development stage. It has only been tested
+on a dozen of PacBio and Oxford Nanopore (ONT) bacterial data
+sets. Including the mapping step, it takes about 3 minutes to assemble
+a bacterial genome. Under the default setting, miniasm assembles 9 out
+of 12 PacBio datasets and 3 out of 4 ONT datasets into a single
+contig.
+
+Miniasm confirms that at least for high-coverage bacterial genomes, it
+is possible to generate long contigs from raw PacBio or ONT reads
+without error correction. It also shows that minimap can be used as a
+read overlapper, even though it is probably not as sensitive as the
+more sophisticated overlapers such as MHAP and DALIGNER.  Coupled with
+long-read error correctors and consensus tools, miniasm may also be
+useful to produce high-quality assemblies.
