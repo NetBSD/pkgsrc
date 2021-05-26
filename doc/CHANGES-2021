@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2988 2021/05/26 18:54:58 brook Exp $
+$NetBSD: CHANGES-2021,v 1.2989 2021/05/26 19:14:46 brook Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4616,3 +4616,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/miniasm version 0.3 [brook 2021-05-26]
 	Added biology/minimap2 version 2.18 [brook 2021-05-26]
 	Added biology/racon version 1.4.3 [brook 2021-05-26]
+	Added biology/beagle version 5.2 [brook 2021-05-26]
