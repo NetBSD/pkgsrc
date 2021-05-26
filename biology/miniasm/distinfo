@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/26 18:44:44 brook Exp $
+
+SHA1 (miniasm/v0.3.tar.gz) = 11aa9dcfdf3d304fbc31d4be0246bb8d2108a70d
+RMD160 (miniasm/v0.3.tar.gz) = f0352ea9952704a1b6df6eda1be5d9631c822a07
+SHA512 (miniasm/v0.3.tar.gz) = e5f622e079283d69bb878cbb9768f7522d279f89fc11f86a2b1fdade9e09e681e742d9e4be46bed4c864e4fef3d0d6760348c85cf1d5e029a36d96c45f885160
+Size (miniasm/v0.3.tar.gz) = 204805 bytes
