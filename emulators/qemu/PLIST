@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2021/05/24 14:22:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.76 2021/05/26 00:59:44 mcf Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -8,6 +8,7 @@ ${PLIST.armeb}bin/qemu-armeb
 ${PLIST.cris}bin/qemu-cris
 bin/qemu-edid
 bin/qemu-ga
+${PLIST.hexagon}bin/qemu-hexagon
 ${PLIST.hppa}bin/qemu-hppa
 ${PLIST.i386}bin/qemu-i386
 bin/qemu-img
