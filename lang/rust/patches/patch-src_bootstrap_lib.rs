@@ -1,11 +1,11 @@
-$NetBSD: patch-src_bootstrap_lib.rs,v 1.8 2021/04/19 17:08:09 he Exp $
+$NetBSD: patch-src_bootstrap_lib.rs,v 1.9 2021/05/26 09:21:39 he Exp $
 
 Don't filter out optimization flags.
 FreeBSD has a particular C++ runtime library name
 
---- src/bootstrap/lib.rs.orig	2021-02-10 17:36:44.000000000 +0000
+--- src/bootstrap/lib.rs.orig	2020-03-09 22:11:17.000000000 +0000
 +++ src/bootstrap/lib.rs
-@@ -836,7 +836,6 @@ impl Build {
+@@ -759,7 +759,6 @@ impl Build {
              .args()
              .iter()
              .map(|s| s.to_string_lossy().into_owned())
@@ -13,7 +13,7 @@ FreeBSD has a particular C++ runtime library name
              .collect::<Vec<String>>();
  
          // If we're compiling on macOS then we add a few unconditional flags
-@@ -847,6 +846,11 @@ impl Build {
+@@ -770,6 +769,11 @@ impl Build {
              base.push("-stdlib=libc++".into());
          }
  

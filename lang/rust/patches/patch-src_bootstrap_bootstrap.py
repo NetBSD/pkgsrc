@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.5 2021/04/19 17:08:09 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.6 2021/05/26 09:21:39 he Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Do not use debuginfo; optimize 'bootstrap' instead.
@@ -6,7 +6,7 @@ Handle earmv7hf for NetBSD.
 
 --- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -228,6 +228,11 @@ def default_build_triple(verbose):
+@@ -229,6 +229,11 @@ def default_build_triple(verbose):
          'OpenBSD': 'unknown-openbsd'
      }
  
@@ -18,7 +18,15 @@ Handle earmv7hf for NetBSD.
      # Consider the direct transformation first and then the special cases
      if ostype in ostype_mapper:
          ostype = ostype_mapper[ostype]
-@@ -314,10 +319,12 @@ def default_build_triple(verbose):
+@@ -279,6 +284,7 @@ def default_build_triple(verbose):
+     cputype_mapper = {
+         'BePC': 'i686',
+         'aarch64': 'aarch64',
++        'aarch64eb': 'aarch64',
+         'amd64': 'x86_64',
+         'arm64': 'aarch64',
+         'i386': 'i686',
+@@ -315,10 +321,12 @@ def default_build_triple(verbose):
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
@@ -32,7 +40,7 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -793,7 +800,7 @@ class RustBuild(object):
+@@ -821,7 +829,7 @@ class RustBuild(object):
              if "LIBRARY_PATH" in env else ""
          # preserve existing RUSTFLAGS
          env.setdefault("RUSTFLAGS", "")
