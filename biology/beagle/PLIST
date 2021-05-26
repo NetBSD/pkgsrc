@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/26 19:13:39 brook Exp $
+bin/beagle
+bin/bref3
+libexec/beagle/beagle.21Apr21.304.jar
+libexec/beagle/bref3.21Apr21.304.jar
+share/examples/beagle/beagle-example.sh
+share/examples/beagle/ref.21Apr21.304.vcf.gz
+share/examples/beagle/target.21Apr21.304.vcf.gz
+share/examples/beagle/test.21Apr21.304.vcf.gz

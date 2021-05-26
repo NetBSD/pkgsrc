@@ -1,0 +1,15 @@
+Beagle is a software package for phasing genotypes and for imputing
+ungenotyped markers.
+
+The Beagle 5.2 genotype imputation method is described in:
+
+B L Browning, Y Zhou, and S R Browning (2018). A one-penny imputed
+genome from next generation reference panels. Am J Hum Genet
+103(3):338-348. doi:10.1016/j.ajhg.2018.07.015
+
+The most recent reference for Beagle's phasing method is:
+
+S R Browning and B L Browning (2007) Rapid and accurate haplotype
+phasing and missing data inference for whole genome association
+studies by use of localized haplotype clustering. Am J Hum Genet
+81:1084-1097. doi:10.1086/521987
