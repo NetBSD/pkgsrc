@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.33 2020/01/29 05:00:58 gutteridge Exp $
+$NetBSD: distinfo,v 1.34 2021/05/26 23:45:58 gutteridge Exp $
 
-SHA1 (xfdesktop-4.14.2.tar.bz2) = e7f9f99049a575f5057e69e140c2be2c035be156
-RMD160 (xfdesktop-4.14.2.tar.bz2) = d578958f051a9d42e2ca8966f91f4d90b89b56de
-SHA512 (xfdesktop-4.14.2.tar.bz2) = 8515fc1c048da50c8c2986ea8590144203fdf3107b81e2d2dd44ee408938fb71281abe52cc098508dc2ae20ef2cbc31903086941206c0cbbc92a661dbfb2c472
-Size (xfdesktop-4.14.2.tar.bz2) = 1513121 bytes
+SHA1 (xfdesktop-4.14.4.tar.bz2) = b86da43a84d16f0122fef030ea9e64bf3e257c91
+RMD160 (xfdesktop-4.14.4.tar.bz2) = 24ab67c3b831edf0a754a3b90a3472e182d8bfa8
+SHA512 (xfdesktop-4.14.4.tar.bz2) = 74584e8f5c25689b4fc2de1093613484f37609fd4546043ec03c1570649e221cb5cd316cd9e800d708f120dae65edd235c60bb1f920ed6bbd7fe5b6ade139c7b
+Size (xfdesktop-4.14.4.tar.bz2) = 1542930 bytes
 SHA1 (patch-common_xfdesktop-common.h) = b32b58bc40c6f328bad54cead10b286f397dcade
