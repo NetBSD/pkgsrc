@@ -48,7 +48,7 @@ To build packages in bulk, tools such as `pkgtools/pbulk` and
 Troubleshooting
 ---------------
 
-- Join the community IRC channel [#pkgsrc @ freenode](https://webchat.freenode.net/?channels=#pkgsrc).
+- Join the community IRC channel [#pkgsrc @ libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/pkgsrc).
 - Subscribe to the [pkgsrc-users](https://netbsd.org/mailinglists/#pkgsrc-users) mailing list
 - Send bugs and patches [via web form](https://www.netbsd.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category).
 
