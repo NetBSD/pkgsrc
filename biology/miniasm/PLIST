@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/26 18:44:44 brook Exp $
+bin/miniasm
+bin/minidot
+man/man1/miniasm.1
+share/doc/miniasm/PAF.md
+share/doc/miniasm/README.md
