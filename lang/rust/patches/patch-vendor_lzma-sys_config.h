@@ -1,8 +1,8 @@
-$NetBSD: patch-vendor_lzma-sys_config.h,v 1.2 2021/04/19 17:08:09 he Exp $
+$NetBSD: patch-vendor_lzma-sys_config.h,v 1.3 2021/05/26 09:21:39 he Exp $
 
 Fix SunOS builds with newer compilers.
 
---- vendor/lzma-sys/config.h.orig	2019-09-23 23:15:03.000000000 +0000
+--- vendor/lzma-sys/config.h.orig	2020-10-07 09:33:31.000000000 +0000
 +++ vendor/lzma-sys/config.h
 @@ -35,7 +35,11 @@
      // change to `MYTHREAD_WIN95` if targeting Windows XP or earlier
@@ -15,4 +15,4 @@ Fix SunOS builds with newer compilers.
 +#endif
      #define MYTHREAD_POSIX 1
  #endif
-
+ 
