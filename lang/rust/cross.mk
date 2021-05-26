@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.5 2021/04/20 11:54:32 he Exp $
+# $NetBSD: cross.mk,v 1.6 2021/05/26 09:21:39 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -17,6 +17,7 @@
 #CROSS_ROOT=		/u/macppc
 #CROSS_ROOT=		/u/9.0-macppc
 #CROSS_ROOT=		/u/evbarm64
+#CROSS_ROOT=		/u/evbarm64eb
 #CROSS_ROOT=		/u/i386
 #CROSS_ROOT=		/
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
@@ -27,6 +28,7 @@
 #GNU_CROSS_TARGET=	i486--netbsdelf
 #GNU_CROSS_TARGET=	powerpc--netbsd
 #GNU_CROSS_TARGET=	aarch64--netbsd
+#GNU_CROSS_TARGET=	aarch64_be--netbsd
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
@@ -37,6 +39,7 @@
 #TARGET=		sparc64-unknown-netbsd
 #TARGET=		powerpc-unknown-netbsd
 #TARGET=		aarch64-unknown-netbsd
+#TARGET=		aarch64_be-unknown-netbsd
 #TARGET=		i686-unknown-netbsd
 #TARGET=		i586-unknown-netbsd
 #
