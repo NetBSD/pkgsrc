@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2987 2021/05/26 18:52:11 brook Exp $
+$NetBSD: CHANGES-2021,v 1.2988 2021/05/26 18:54:58 brook Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rust to 1.51.0 [he 2021-05-26]
 	Added biology/miniasm version 0.3 [brook 2021-05-26]
 	Added biology/minimap2 version 2.18 [brook 2021-05-26]
+	Added biology/racon version 1.4.3 [brook 2021-05-26]
