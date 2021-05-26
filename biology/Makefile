@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/05/26 18:54:29 brook Exp $
+# $NetBSD: Makefile,v 1.74 2021/05/26 19:14:24 brook Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -8,6 +8,7 @@ SUBDIR+=	ad2vcf
 SUBDIR+=	arka
 SUBDIR+=	azara
 SUBDIR+=	bcftools
+SUBDIR+=	beagle
 SUBDIR+=	bedtools
 SUBDIR+=	biolibc
 SUBDIR+=	bioperl
