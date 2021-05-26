@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2985 2021/05/26 10:14:07 he Exp $
+$NetBSD: CHANGES-2021,v 1.2986 2021/05/26 18:47:43 brook Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/fasttracker2 to 1.47 [fox 2021-05-26]
 	Updated www/curl to 7.77.0 [wiz 2021-05-26]
 	Updated lang/rust to 1.51.0 [he 2021-05-26]
+	Added biology/miniasm version 0.3 [brook 2021-05-26]
