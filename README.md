@@ -49,6 +49,7 @@ Troubleshooting
 ---------------
 
 - Join the community IRC channel [#pkgsrc @ libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/pkgsrc).
+- Join the community Matrix room #pkgsrc:nil.im
 - Subscribe to the [pkgsrc-users](https://netbsd.org/mailinglists/#pkgsrc-users) mailing list
 - Send bugs and patches [via web form](https://www.netbsd.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category).
 
