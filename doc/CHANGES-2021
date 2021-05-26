@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2983 2021/05/26 02:34:37 fox Exp $
+$NetBSD: CHANGES-2021,v 1.2984 2021/05/26 07:55:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/rates to 0.4.0 [pin 2021-05-25]
 	Updated pkgtools/pkglint to 21.1.2 [rillig 2021-05-25]
 	Updated audio/fasttracker2 to 1.47 [fox 2021-05-26]
+	Updated www/curl to 7.77.0 [wiz 2021-05-26]
