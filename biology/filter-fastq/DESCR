@@ -1,0 +1,15 @@
+Filter reads from a FASTQ file using a list of identifiers.
+
+Each entry in the input FASTQ file (or files) is checked against all
+entries in the identifier list. Matches are included by default, or
+excluded if the --invert flag is supplied. Paired-end files are kept
+consistent (in order).
+
+This is almost certainly not the most efficient way to implement this
+filtering procedure. I tested a few different strategies and this one
+seemed the fastest. Current timing with 16 processes is about 10
+minutes per 1M paired reads with gzip'd input and output, depending on
+the length of the identifier list to filter by.
+
+usage: filter_fastq.py [-h] [-i INPUT] [-1 READ1] [-2 READ2] [-p NUM_THREADS]
+                       [-o OUTPUT] [-f FILTER_FILE] [-v] [--gzip]
