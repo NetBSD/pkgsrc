@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3001 2021/05/27 20:43:39 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3002 2021/05/27 20:44:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4634,3 +4634,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/opendmarc to 1.4.1.1 [manu 2021-05-27]
 	Added biology/filter-fastq version 0.0.0.20210527 [brook 2021-05-27]
 	Updated sysutils/xplr to 0.13.0 [pin 2021-05-27]
+	Updated math/kalk to 0.5.2 [pin 2021-05-27]
