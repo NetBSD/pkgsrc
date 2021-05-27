@@ -1,4 +1,4 @@
-$NetBSD: patch-RequiredFrom,v 1.1 2021/03/29 09:30:59 manu Exp $
+$NetBSD: patch-RequiredFrom,v 1.2 2021/05/27 16:52:00 manu Exp $
 
 Add RequiredFrom option to reject messages that lack a From header
 from which a valid domain can be extracted
@@ -6,8 +6,8 @@ from which a valid domain can be extracted
 Submitted upstream as 
 https://github.com/trusteddomainproject/OpenDMARC/pull/147
 
---- opendmarc/opendmarc.c.orig	2021-03-29 09:13:11.534047039 +0200
-+++ opendmarc/opendmarc.c	2021-03-29 10:02:01.105977120 +0200
+--- ./opendmarc/opendmarc.c.orig	2021-04-30 18:34:43.000000000 +0200
++++ ./opendmarc/opendmarc.c	2021-05-27 10:20:33.880652427 +0200
 @@ -163,8 +163,9 @@
  /* DMARCF_CONFIG -- configuration object */
  struct dmarcf_config
@@ -18,7 +18,7 @@ https://github.com/trusteddomainproject/OpenDMARC/pull/147
  	_Bool			conf_afrfnone;
  	_Bool			conf_rejectfail;
  	_Bool			conf_dolog;
-@@ -1349,8 +1350,12 @@
+@@ -1422,8 +1423,12 @@
  		(void) config_get(data, "RequiredHeaders",
  		                  &conf->conf_reqhdrs,
  		                  sizeof conf->conf_reqhdrs);
@@ -31,7 +31,7 @@ https://github.com/trusteddomainproject/OpenDMARC/pull/147
  		                  &conf->conf_afrf,
  		                  sizeof conf->conf_afrf);
  
-@@ -2367,13 +2372,17 @@
+@@ -2453,13 +2458,17 @@
  	{
  		if (conf->conf_dolog)
  		{
@@ -50,11 +50,17 @@ https://github.com/trusteddomainproject/OpenDMARC/pull/147
 +			return SMFIS_ACCEPT;
  	}
  
- 	/* extract From: domain */
+ 	/* extract From: addresses */
  	memset(addrbuf, '\0', sizeof addrbuf);
-@@ -2387,9 +2396,9 @@
- 			       "%s: unable to parse From header field",
- 			       dfc->mctx_jobid);
+@@ -2495,13 +2504,13 @@
+ 	{
+ 		if (conf->conf_dolog)
+ 		{
+ 			syslog(LOG_ERR,
+-			       "%s: unable to parse From header field",
+-			       dfc->mctx_jobid);
++			       "%s: unable to parse From header field \"%s\"",
++			       dfc->mctx_jobid, from->hdr_value);
  		}
  
 -		if (conf->conf_reqhdrs)
@@ -63,9 +69,9 @@ https://github.com/trusteddomainproject/OpenDMARC/pull/147
  		else
  			return SMFIS_ACCEPT;
  	}
---- opendmarc/opendmarc.conf.5.in.orig	2021-03-29 09:15:03.877101090 +0200
-+++ opendmarc/opendmarc.conf.5.in	2021-03-29 09:21:56.423837778 +0200
-@@ -258,8 +258,16 @@
+--- ./opendmarc/opendmarc.conf.5.in.orig	2021-04-30 18:34:43.000000000 +0200
++++ ./opendmarc/opendmarc.conf.5.in	2021-05-27 10:20:33.881043733 +0200
+@@ -287,8 +287,16 @@
  failing this test are rejected without further processing.  A From:
  field from which no domain name could be extracted will also be rejected.
  
@@ -82,21 +88,21 @@ https://github.com/trusteddomainproject/OpenDMARC/pull/147
  Specifies the socket that should be established by the filter to receive
  connections from
  .I sendmail(8)
---- opendmarc/opendmarc-config.h.orig	2021-03-29 09:19:21.345035861 +0200
-+++ opendmarc/opendmarc-config.h	2021-03-29 09:19:34.235736167 +0200
-@@ -43,8 +43,9 @@
+--- ./opendmarc/opendmarc-config.h.orig	2021-04-30 18:34:43.000000000 +0200
++++ ./opendmarc/opendmarc-config.h	2021-05-27 10:23:12.866999966 +0200
+@@ -44,8 +44,9 @@
  	{ "PidFile",			CONFIG_TYPE_STRING,	FALSE },
  	{ "PublicSuffixList",		CONFIG_TYPE_STRING,	FALSE },
  	{ "RecordAllMessages",		CONFIG_TYPE_BOOLEAN,	FALSE },
  	{ "RequiredHeaders",		CONFIG_TYPE_BOOLEAN,	FALSE },
 +	{ "RequiredFrom",		CONFIG_TYPE_BOOLEAN,	FALSE },
  	{ "RejectFailures",		CONFIG_TYPE_BOOLEAN,	FALSE },
+ 	{ "RejectMultiValueFrom",	CONFIG_TYPE_BOOLEAN,	FALSE },
  	{ "ReportCommand",		CONFIG_TYPE_STRING,	FALSE },
  	{ "Socket",			CONFIG_TYPE_STRING,	FALSE },
- 	{ "SoftwareHeader",		CONFIG_TYPE_BOOLEAN,	FALSE },
---- opendmarc/opendmarc.conf.sample.orig	2021-03-29 09:19:43.400961620 +0200
-+++ opendmarc/opendmarc.conf.sample	2021-03-29 09:22:23.834032438 +0200
-@@ -303,8 +303,17 @@
+--- ./opendmarc/opendmarc.conf.sample.orig	2021-04-30 18:34:43.000000000 +0200
++++ ./opendmarc/opendmarc.conf.sample	2021-05-27 10:20:33.882715995 +0200
+@@ -343,8 +343,17 @@
  ##  rejected.
  #
  # RequiredHeaders false
