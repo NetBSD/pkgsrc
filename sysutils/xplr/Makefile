@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2021/05/25 16:15:54 pin Exp $
+# $NetBSD: Makefile,v 1.25 2021/05/27 20:43:17 pin Exp $
 
-DISTNAME=	xplr-0.12.1
+DISTNAME=	xplr-0.13.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
