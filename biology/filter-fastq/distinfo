@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/27 17:11:42 brook Exp $
+
+SHA1 (filter-fastq/filter-fastq-d2c9218.zip) = 44b8bbef2690b598a2f06930396fbbf5828e364c
+RMD160 (filter-fastq/filter-fastq-d2c9218.zip) = 715b0e52b5714cea1fa4a64bfe8cbef919cee2ce
+SHA512 (filter-fastq/filter-fastq-d2c9218.zip) = c5ab23b86ac8690f58bf05bd0a16f3b315bd7a71f67bce267fe9f36b5e528ac228c57c2521cad8c547159915cf77433848be58d463100f407693927493ad8f5f
+Size (filter-fastq/filter-fastq-d2c9218.zip) = 4249 bytes
