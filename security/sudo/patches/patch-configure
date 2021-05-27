@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
+$NetBSD: patch-configure,v 1.7 2021/05/27 05:40:45 adam Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,17 +7,17 @@ $NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2021-03-15 16:50:00.000000000 +0000
+--- configure.orig	2021-05-11 20:54:52.000000000 +0000
 +++ configure
-@@ -920,6 +920,7 @@ with_libpath
+@@ -920,6 +920,7 @@ with_incpath
+ with_libpath
  with_libraries
- with_efence
  with_csops
 +with_nbsdops
  with_passwd
  with_skey
  with_opie
-@@ -1652,7 +1653,7 @@ Fine tuning of the installation director
+@@ -1653,7 +1654,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -27,14 +27,14 @@ $NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
 @@ -1776,6 +1777,7 @@ Optional Packages:
+   --with-libpath          additional places to look for libraries
    --with-libraries        additional libraries to link with
-   --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
 +  --with-nbsdops          add NetBSD standard options
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -5203,6 +5205,23 @@ fi
+@@ -5184,6 +5186,23 @@ fi
  
  
  
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
  # Check whether --with-passwd was given.
  if test ${with_passwd+y}
  then :
-@@ -16699,7 +16718,7 @@ fi
+@@ -16373,7 +16392,7 @@ fi
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -67,16 +67,16 @@ $NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
-@@ -18732,7 +18751,7 @@ then :
-   printf "%s\n" "#define HAVE_LOGIN_CAP_H 1" >>confdefs.h
+@@ -18253,7 +18272,7 @@ then :
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
+ 	with_logincap=yes
  	case "$OS" in
 -	    freebsd*|netbsd*)
 +	    dragonfly*|freebsd*|netbsd*)
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -25528,6 +25547,8 @@ fi
+@@ -25171,6 +25190,8 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.beam conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
@@ -85,7 +85,7 @@ $NetBSD: patch-configure,v 1.6 2021/03/18 08:57:48 adam Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      ac_fn_c_check_func "$LINENO" "krb5_verify_user" "ac_cv_func_krb5_verify_user"
-@@ -29695,7 +29716,6 @@ test "$docdir" = '${datarootdir}/doc/${P
+@@ -29359,7 +29380,6 @@ test "$docdir" = '${datarootdir}/doc/${P
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
  test "$runstatedir" = '${localstatedir}/run' && runstatedir='$(localstatedir)/run'
