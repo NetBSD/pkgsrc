@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/04/05 08:49:57 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/27 11:56:24 adam Exp $
 
-DISTNAME=	construct-2.10.66
+DISTNAME=	construct-2.10.67
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/construct/}
