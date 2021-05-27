@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3396 2021/05/27 06:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3397 2021/05/27 13:19:55 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2823,7 +2823,6 @@ SUBDIR+=	ruby-cucumber-core
 SUBDIR+=	ruby-cucumber-expressions
 SUBDIR+=	ruby-cucumber-messages
 SUBDIR+=	ruby-cucumber-tag-expressions
-SUBDIR+=	ruby-cucumber-tag_expressions
 SUBDIR+=	ruby-cucumber-wire
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-daemon_controller
