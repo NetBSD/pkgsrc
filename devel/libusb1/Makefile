@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/01/18 09:22:19 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/05/27 16:55:22 nia Exp $
 
 DISTNAME=	libusb-1.0.24
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://libusb.info/
 COMMENT=	USB Access Library (version 1)
 LICENSE=	gnu-lgpl-v2.1
 
-GCC_REQD+=	4.7 # -std=c11
+GCC_REQD+=	4.9 # -std=c11
 
 # Works on Dragonfly but explicitly not wanted by DragonFly upstream;
 # see PR 47042.
