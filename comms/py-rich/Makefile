@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/05/25 10:13:22 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/27 09:49:31 adam Exp $
 
 DISTNAME=	rich-10.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 36
-DEPENDS+=	${PYPKGPREFIX}-py-dataclasses>=0.7:../../devel/py-dataclasses
+DEPENDS+=	${PYPKGPREFIX}-dataclasses>=0.7:../../devel/py-dataclasses
 .endif
 
 USE_LANGUAGES=	# none
