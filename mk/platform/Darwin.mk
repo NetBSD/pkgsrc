@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.102 2021/02/02 15:47:54 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.103 2021/05/27 18:16:26 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -110,6 +110,7 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 # that happens add a mapping below, but only within the same OS release major.
 #
 OSX_SDK_MAP.11.2=	11.1
+OSX_SDK_MAP.11.4=	11.3
 #
 OSX_SDK_PATH!=	/usr/bin/xcrun \
 		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
