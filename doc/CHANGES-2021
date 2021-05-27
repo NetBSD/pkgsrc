@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2991 2021/05/27 00:13:44 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.2992 2021/05/27 05:41:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4619,3 +4619,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/beagle version 5.2 [brook 2021-05-26]
 	Updated x11/xfce4-desktop to 4.14.4 [gutteridge 2021-05-26]
 	Updated sysutils/xfce4-thunar to 1.8.17 [gutteridge 2021-05-27]
+	Updated audio/faudio to 21.05 [adam 2021-05-27]
+	Updated security/sudo to 1.9.7 [adam 2021-05-27]
