@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3002 2021/05/27 20:44:57 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3003 2021/05/27 22:26:29 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4635,3 +4635,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added biology/filter-fastq version 0.0.0.20210527 [brook 2021-05-27]
 	Updated sysutils/xplr to 0.13.0 [pin 2021-05-27]
 	Updated math/kalk to 0.5.2 [pin 2021-05-27]
+	Added www/py-flask-sendmail version 0.1 [khorben 2021-05-27]
