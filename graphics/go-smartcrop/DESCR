@@ -1,2 +1,0 @@
-smartcrop finds good image crops for arbitrary sizes. It is a pure Go
-implementation, based on Jonas Wagner's smartcrop.js.
