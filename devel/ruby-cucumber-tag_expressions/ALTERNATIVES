@@ -1,1 +1,0 @@
-bin/cucumber-tag-expressions @PREFIX@/bin/cucumber-tag-expressions@RUBY_SUFFIX@
