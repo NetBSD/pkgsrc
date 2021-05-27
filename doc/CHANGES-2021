@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2993 2021/05/27 06:59:35 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.2994 2021/05/27 12:02:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4622,3 +4622,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/faudio to 21.05 [adam 2021-05-27]
 	Updated security/sudo to 1.9.7 [adam 2021-05-27]
 	Updated net/tigervnc to 1.11.0.1.20.11nb2 [wiz 2021-05-27]
+	Updated devel/py-construct to 2.10.67 [adam 2021-05-27]
+	Updated devel/py-cookiecutter to 1.7.3 [adam 2021-05-27]
