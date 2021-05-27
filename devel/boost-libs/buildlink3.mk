@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.55 2021/04/21 12:09:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2021/05/27 17:02:24 nia Exp $
 
 BUILDLINK_TREE+=	boost-libs
 
@@ -11,13 +11,8 @@ BUILDLINK_PKGSRCDIR.boost-libs?=	../../devel/boost-libs
 
 .include "../../mk/bsd.fast.prefs.mk"
 # Sync with meta-pkgs/boost/Makefile.common
-.if ${OPSYS} == "OpenBSD"
-GCC_REQD+=		4.6
-.elif ${LOWER_VENDOR} == "redhat"
-GCC_REQD+=		4.4
-.else
-GCC_REQD+=		4.5
-.endif
+# libstdc++5 is required to build "math" and "nowide".
+GCC_REQD+=		5
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif # BOOST_LIBS_BUILDLINK3_MK
