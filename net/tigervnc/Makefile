@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2021/05/24 19:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2021/05/27 06:59:22 wiz Exp $
 
 DISTNAME=		tigervnc-1.11.0
 PKGNAME=		${DISTNAME}.1.20.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.11.0
@@ -33,6 +33,7 @@ USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
+CMAKE_ARGS+=		CMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 # for reallocarray()
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
@@ -133,7 +134,7 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
-.include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXfont2/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
