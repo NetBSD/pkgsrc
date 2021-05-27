@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/25 05:01:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/27 09:51:25 adam Exp $
 
 DISTNAME=	django-taggit-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,9 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} run -m django test --settings=tests.settings
