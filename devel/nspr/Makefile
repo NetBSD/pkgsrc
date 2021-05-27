@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2021/05/24 19:50:03 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2021/05/27 06:39:35 wiz Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
-NSPR_RELEASE=	4.30.0
-PKGREVISION=	2
+NSPR_RELEASE=	4.31.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE:S/.0$//}/src/}
 
@@ -87,7 +86,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 
 .if ${OPSYS} == "Darwin"
 .  if defined(ABI) && ${ABI} == "64"
-CONFIGURE_ARGS+=	--enable-64bit
+CONFIGURE_ARGS+=		--enable-64bit
 .  endif
 .  if exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	Developer/Headers/FlatCarbon
