@@ -1,0 +1,3 @@
+The Flask-Sendmail extension provides a simple interface to your system's
+sendmail client from within your Flask application and gives you ability to send
+messages from your views and scripts.
