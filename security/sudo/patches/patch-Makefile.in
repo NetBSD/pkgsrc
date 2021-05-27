@@ -1,20 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/12/28 20:43:56 kim Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2021/05/27 05:40:45 adam Exp $
 
 Don't setuid here.
 
---- Makefile.in.orig	2019-10-28 15:51:30.000000000 +0200
-+++ Makefile.in	2019-12-28 21:41:28.028886752 +0200
-@@ -64,7 +64,8 @@
+--- Makefile.in.orig	2021-05-11 20:54:52.000000000 +0000
++++ Makefile.in
+@@ -73,7 +73,7 @@ SHELL = @SHELL@
  SED = @SED@
  
- INSTALL = $(SHELL) $(top_srcdir)/install-sh -c
+ INSTALL = $(SHELL) $(scriptdir)/install-sh -c
 -INSTALL_OWNER = -o $(install_uid) -g $(install_gid)
-+#INSTALL_OWNER = -o $(install_uid) -g $(install_gid)
 +INSTALL_OWNER =
  
  ECHO_N = @ECHO_N@
  ECHO_C = @ECHO_C@
-@@ -165,7 +166,7 @@
+@@ -186,7 +186,7 @@ install-doc: config.status ChangeLog
  	    exit $$?; \
  	done
  
