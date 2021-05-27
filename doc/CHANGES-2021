@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.2996 2021/05/27 15:08:22 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.2997 2021/05/27 15:16:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/isc-dhcpd4 to 4.4.2p1 [taca 2021-05-27]
 	Updated net/isc-dhcrelay4 to 4.4.2p1 [taca 2021-05-27]
 	Removed graphics/go-smartcrop [bsiegert 2021-05-27]
+	Removed graphics/go-resize [bsiegert 2021-05-27]
