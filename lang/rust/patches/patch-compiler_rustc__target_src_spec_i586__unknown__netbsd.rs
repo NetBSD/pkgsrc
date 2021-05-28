@@ -1,8 +1,8 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.2 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.3 2021/05/28 10:32:20 mcf Exp $
 
 Add an i586 / pentium variant, in an effort to support AMD Geode etc.
 
---- compiler/rustc_target/src/speci586_unknown_netbsd.rs.orig	2021-04-11 00:12:43.084770395 +0200
+--- compiler/rustc_target/src/spec/i586_unknown_netbsd.rs.orig	2021-04-11 00:12:43.084770395 +0200
 +++ compiler/rustc_target/src/spec/i586_unknown_netbsd.rs	2021-04-11 00:15:29.313073646 +0200
 @@ -0,0 +1,20 @@
 +use crate::spec::{LinkerFlavor, StackProbeType, Target, TargetOptions};
