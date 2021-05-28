@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3003 2021/05/27 22:26:29 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3004 2021/05/28 04:29:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4636,3 +4636,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.13.0 [pin 2021-05-27]
 	Updated math/kalk to 0.5.2 [pin 2021-05-27]
 	Added www/py-flask-sendmail version 0.1 [khorben 2021-05-27]
+	Added textproc/py-bracex version 2.1.1 [adam 2021-05-28]
+	Added textproc/py-wcmatch version 8.2 [adam 2021-05-28]
