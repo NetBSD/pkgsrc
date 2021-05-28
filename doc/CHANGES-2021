@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3005 2021/05/28 05:24:27 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.3006 2021/05/28 06:22:04 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-bracex version 2.1.1 [adam 2021-05-28]
 	Added textproc/py-wcmatch version 8.2 [adam 2021-05-28]
 	Updated x11/rxvt-unicode to 9.26 [triaxx 2021-05-28]
+	Updated net/radsecproxy to 1.9.0 [he 2021-05-28]
