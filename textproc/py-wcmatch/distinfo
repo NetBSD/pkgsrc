@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/28 04:25:14 adam Exp $
+
+SHA1 (wcmatch-8.2.tar.gz) = 2188944bf1c7e283a56d0070faade62b3fa8cdd5
+RMD160 (wcmatch-8.2.tar.gz) = 66977cd4019aca4119295071e594c8f4d199baed
+SHA512 (wcmatch-8.2.tar.gz) = 9b455f3fc3567b22bac0ef65e61f8c9e32a13a5c7930af83ae085900178515d93b7b95cc18bf42990d71d05787785e7f641e9185cf8577725e175bcc4e168de4
+Size (wcmatch-8.2.tar.gz) = 115943 bytes
