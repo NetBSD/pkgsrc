@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/28 04:22:58 adam Exp $
+
+SHA1 (bracex-2.1.1.tar.gz) = a592635ea4869161b39e62a3e34ac4c22648dfcd
+RMD160 (bracex-2.1.1.tar.gz) = ecb8735123a512686b5b07fa243ecbe7111af276
+SHA512 (bracex-2.1.1.tar.gz) = d34a50e6565e1ecdb1c645d047351d907f57ab73614743be18495eb873449a2604f7dfd528e1221f71f7e709e0651cdb5d19605d24cad578bee85543c4a79c9e
+Size (bracex-2.1.1.tar.gz) = 26628 bytes
