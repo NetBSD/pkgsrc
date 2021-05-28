@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20682 2021/05/27 05:41:05 adam Exp $
+$NetBSD: TODO,v 1.20683 2021/05/28 06:22:04 he Exp $
 
 Suggested new packages
 ======================
@@ -2034,7 +2034,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o racket-7.1
 	o radare2-cutter-2.0.1
 	o radiance-4R1
-	o radsecproxy-1.8.2
 	o ragel-7.0.2
 	o rails-6.1.0
 	o raine-0.64.9
