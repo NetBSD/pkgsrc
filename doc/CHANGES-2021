@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3006 2021/05/28 06:22:04 he Exp $
+$NetBSD: CHANGES-2021,v 1.3007 2021/05/28 07:29:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4640,3 +4640,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-wcmatch version 8.2 [adam 2021-05-28]
 	Updated x11/rxvt-unicode to 9.26 [triaxx 2021-05-28]
 	Updated net/radsecproxy to 1.9.0 [he 2021-05-28]
+	Updated sysutils/xplr to 0.13.1 [pin 2021-05-28]
