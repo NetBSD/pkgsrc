@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3007 2021/05/28 07:29:23 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3008 2021/05/28 07:34:52 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4641,3 +4641,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/rxvt-unicode to 9.26 [triaxx 2021-05-28]
 	Updated net/radsecproxy to 1.9.0 [he 2021-05-28]
 	Updated sysutils/xplr to 0.13.1 [pin 2021-05-28]
+	Updated audio/schismtracker to 20210525 [fcambus 2021-05-28]
