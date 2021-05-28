@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.132 2021/05/26 09:21:39 he Exp $
+$NetBSD: distinfo,v 1.133 2021/05/28 10:32:20 mcf Exp $
 
 SHA1 (rust-1.50.0-aarch64-apple-darwin.tar.gz) = 5c8b553294492eb28d6076a803dd17079a526e15
 RMD160 (rust-1.50.0-aarch64-apple-darwin.tar.gz) = d864fce6a136027868760f965830f53b6c2a0b9a
@@ -131,7 +131,7 @@ Size (rustc-1.51.0-src.tar.gz) = 160954811 bytes
 SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = 72746bbf0fa5e72fe151c95e3876b9eb1e70ae39
 SHA1 (patch-compiler_rustc__llvm_build.rs) = 88b3b4dbafbd9d8e43998a0f19e3212493ca0add
 SHA1 (patch-compiler_rustc__target_src_spec_aarch64__be__unknown__netbsd.rs) = d7cf546dc82bb851c94733b0c2dae988393503b3
-SHA1 (patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs) = 8016df2ef0cf1e82b62d18ef156da9806988cb79
+SHA1 (patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs) = 744ffd30b6b31486fa1c68e468b84688c00b9489
 SHA1 (patch-compiler_rustc__target_src_spec_mod.rs) = cfd6584417d4d07ec6326aaf597aa211eac2645f
 SHA1 (patch-compiler_rustc__target_src_spec_netbsd__base.rs) = 877d185e5ca58a3a3f145558be527185a276c154
 SHA1 (patch-compiler_rustc__target_src_spec_solaris__base.rs) = f0b41a3a5685ae33d037f8ded0b1fa6f1acb0867
