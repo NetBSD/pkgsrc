@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/23 19:22:58 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.10 2021/05/28 14:21:26 wiz Exp $
 
 DISTNAME=	libnet-1.0.2a
 PKGNAME=	${DISTNAME:S/libnet/libnet10/}
@@ -11,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.packetfactory.net/libnet/
 COMMENT=	C library for portable packet creation and injection
 LICENSE=	2-clause-bsd
-
-CONFLICTS=	libnet-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
 
