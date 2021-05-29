@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3037 2021/05/29 16:33:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3038 2021/05/29 17:17:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-iruby to 0.7.0 [taca 2021-05-29]
 	Updated devel/ruby-red-colors to 0.1.2 [taca 2021-05-29]
 	Added meta-pkgs/bulk-test-boost version 20210529 [nia 2021-05-29]
+	Updated graphics/kvantum to 0.20.0 [pin 2021-05-29]
