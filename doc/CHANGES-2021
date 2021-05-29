@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3012 2021/05/29 01:20:03 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3013 2021/05/29 01:33:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4646,3 +4646,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncspot to 0.7.2 [pin 2021-05-28]
 	Updated games/pysolfc to 2.6.4nb3 [dholland 2021-05-29]
 	Updated textproc/p5-PPIx-QuoteLike to 0.017 [wen 2021-05-29]
+	Updated time/p5-DateTime-Format-MySQL to 0.0701 [wen 2021-05-29]
