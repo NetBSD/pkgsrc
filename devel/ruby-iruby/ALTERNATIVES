@@ -1,0 +1,1 @@
+bin/iruby @PREFIX@/bin/iruby@RUBY_SUFFIX@
