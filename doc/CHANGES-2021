@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3025 2021/05/29 10:10:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3026 2021/05/29 10:16:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4660,3 +4660,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rakudo to 2021.05 [mef 2021-05-29]
 	Added math/qrupdate version 1.1.2 [thor 2021-05-29]
 	Updated time/p5-DateTime-Format-Strptime to 1.79 [wen 2021-05-29]
+	Updated time/p5-DateTime-Format-W3CDTF to 0.08 [wen 2021-05-29]
