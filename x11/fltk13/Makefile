@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/05/26 13:03:40 thor Exp $
+# $NetBSD: Makefile,v 1.40 2021/05/29 09:53:58 thor Exp $
 
 DISTNAME=	fltk-1.3.6-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake nroff
+USE_TOOLS+=		gmake nroff pkg-config
 TEST_TARGET=		test
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk13
@@ -68,6 +68,10 @@ CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
+.  include "../../fonts/fontconfig/buildlink3.mk"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXrender/buildlink3.mk"
+.  include "../../x11/libXfixes/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .  include "../../x11/libXt/buildlink3.mk"
 .endif

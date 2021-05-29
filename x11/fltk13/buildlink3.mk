@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/08/17 20:17:49 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2021/05/29 09:53:58 thor Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -26,6 +26,10 @@ pkgbase := fltk
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
+.  include "../../fonts/fontconfig/buildlink3.mk"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXrender/buildlink3.mk"
+.  include "../../x11/libXfixes/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
