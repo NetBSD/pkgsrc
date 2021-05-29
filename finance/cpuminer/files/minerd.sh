@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: minerd.sh,v 1.2 2021/05/29 19:30:57 khorben Exp $
+# $NetBSD: minerd.sh,v 1.3 2021/05/29 20:23:40 khorben Exp $
 #
 # Startup script for cpuminer
 #
@@ -12,7 +12,7 @@
 #
 # minerd=YES
 #
-# Optionally, "minerd_flags" contains options for the , e.g.
+# Optionally, "minerd_flags" contains options for the service, e.g.
 #	minerd_flags="-a scrypt"		# used by Litecoin
 #	minerd_flags="-o URL"			# sets the URL of the server
 #	minerd_flags="-O username:password"	# sets the credentials to use
