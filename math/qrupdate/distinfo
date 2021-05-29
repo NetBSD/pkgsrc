@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2021/05/29 09:55:14 thor Exp $
+$NetBSD: distinfo,v 1.2 2021/05/29 16:04:11 thor Exp $
 
 SHA1 (qrupdate-1.1.2.tar.gz) = f7403b646ace20f4a2b080b4933a1e9152fac526
 RMD160 (qrupdate-1.1.2.tar.gz) = 9d23b2d13278c335f6208ebb6775df4b4049785c
 SHA512 (qrupdate-1.1.2.tar.gz) = cc4e466ea91958e15c66be82b0c4c8ad813fbe4643f21259a9cb3ca8e0a411dd764bb2397ece848a7045f322d30316801d1540c4ebf7912030bef6995b44917c
 Size (qrupdate-1.1.2.tar.gz) = 49734 bytes
+SHA1 (patch-Makefile) = d3f4267d581a582e7aa622a2868c749b5c7abc58
 SHA1 (patch-src_Makefile) = 55be251bc4e6ce1d0760f090c28ed14a7aeecc0e
 SHA1 (patch-test_Makefile) = 85f21cf81834ae9a3301ed79b4b5472981e8a15a
 SHA1 (patch-test_report__results) = f40092414fdd6ec673e051a23d388fdbd1a4708f
