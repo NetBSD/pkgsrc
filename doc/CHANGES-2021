@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3035 2021/05/29 15:05:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3036 2021/05/29 15:10:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/perl5 to 5.34.0nb2 [rin 2021-05-29]
 	Updated devel/ruby-pycall to 1.4.0 [taca 2021-05-29]
 	Updated devel/ruby-iruby to 0.7.0 [taca 2021-05-29]
+	Updated devel/ruby-red-colors to 0.1.2 [taca 2021-05-29]
