@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2021/05/24 14:27:37 mef Exp $
+# $NetBSD: Makefile,v 1.38 2021/05/29 06:08:56 mef Exp $
 
-DISTNAME=	klayout-0.26.11
+DISTNAME=	klayout-0.27
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -32,7 +32,7 @@ INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib/klayout
 REL_DIR=		bin-release
 PLUGINS_DIR=		db_plugins lay_plugins pymod
 
-PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]+/\1/}
+PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]*/\1/}
 
 .include "../../mk/bsd.prefs.mk"
 
