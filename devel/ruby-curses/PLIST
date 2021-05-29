@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/10 14:42:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/29 08:30:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/curses.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -7,14 +7,12 @@ ${GEM_LIBDIR}/.github/workflows/ubuntu.yml
 ${GEM_LIBDIR}/.github/workflows/windows.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/curses.gemspec
 ${GEM_LIBDIR}/ext/curses/curses.c
 ${GEM_LIBDIR}/ext/curses/depend
