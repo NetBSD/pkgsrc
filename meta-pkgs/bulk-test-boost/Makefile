@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/29 16:31:47 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/29 17:07:49 gdt Exp $
 
 DISTNAME=	bulk-boost-test-20210529
 CATEGORIES=	meta-pkgs
@@ -41,6 +41,7 @@ BUILD_DEPENDS+=		musicpd-[0-9]*:../../audio/musicpd
 BUILD_DEPENDS+=		mysql-server>=5.7<8.0:../../databases/mysql57-server
 BUILD_DEPENDS+=		ncmpc-[0-9]*:../../audio/ncmpc
 BUILD_DEPENDS+=		ncmpcpp-[0-9]*:../../audio/ncmpcpp
+BUILD_DEPENDS+=		osm2pgsql-[0-9]*:../../geography/osm2pgsql
 BUILD_DEPENDS+=		openscad-[0-9]*:../../cad/openscad
 BUILD_DEPENDS+=		poppler-glib-[0-9]*:../../print/poppler-glib
 BUILD_DEPENDS+=		powerdns-[0-9]*:../../net/powerdns
