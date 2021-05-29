@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3015 2021/05/29 06:17:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3016 2021/05/29 06:35:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4650,3 +4650,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/klayout to 0.27 [mef 2021-05-29]
 	Updated devel/cmake to 3.20.3 [adam 2021-05-29]
 	Updated net/iperf3 to 3.10 [adam 2021-05-29]
+	Updated devel/MoarVM to 2021.04 [mef 2021-05-29]
