@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3034 2021/05/29 15:01:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3035 2021/05/29 15:05:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4669,3 +4669,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Crypt-PasswdMD5 to 1.41 [wen 2021-05-29]
 	Updated lang/perl5 to 5.34.0nb2 [rin 2021-05-29]
 	Updated devel/ruby-pycall to 1.4.0 [taca 2021-05-29]
+	Updated devel/ruby-iruby to 0.7.0 [taca 2021-05-29]
