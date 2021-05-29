@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/19 06:49:11 wen Exp $
+$NetBSD: distinfo,v 1.2 2021/05/29 10:44:26 wen Exp $
 
-SHA1 (Crypt-OpenSSL-Guess-0.11.tar.gz) = 59d89874357b4fe961f1c7b6426155946c7e26d5
-RMD160 (Crypt-OpenSSL-Guess-0.11.tar.gz) = 97a4f4b9121d7e2ac9927c758694d7445bd10cd3
-SHA512 (Crypt-OpenSSL-Guess-0.11.tar.gz) = cdae7f20a15d24842cf117bfba4f3bc0ec7d1066251e0480cbadd8f0aa28c9c9573905726fc1333ea9fbbb3769a67dbf28043de8487dcce27dab5d14a0848b09
-Size (Crypt-OpenSSL-Guess-0.11.tar.gz) = 11346 bytes
+SHA1 (Crypt-OpenSSL-Guess-0.13.tar.gz) = b04297ecf9d649f09a4b1c7717e87b9c4c1c3d08
+RMD160 (Crypt-OpenSSL-Guess-0.13.tar.gz) = f58c9e48fb7b455c94077c18d9b1d3598cdf25f2
+SHA512 (Crypt-OpenSSL-Guess-0.13.tar.gz) = 1b3286d536bcb7545be636e33b5ff37bf334fbb7f3a99f4fcb32cf1166b1bc7cc179e9d39af1c7ac537630a75066353a1d7a0ab97816757a444dc0068029da97
+Size (Crypt-OpenSSL-Guess-0.13.tar.gz) = 11832 bytes
