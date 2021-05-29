@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3027 2021/05/29 10:23:18 leot Exp $
+$NetBSD: CHANGES-2021,v 1.3028 2021/05/29 10:27:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-Format-Strptime to 1.79 [wen 2021-05-29]
 	Updated time/p5-DateTime-Format-W3CDTF to 0.08 [wen 2021-05-29]
 	Added databases/py-kb version 0.1.6 [leot 2021-05-29]
+	Updated time/p5-DateTime to 1.54 [wen 2021-05-29]
