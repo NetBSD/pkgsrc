@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/10/01 15:07:14 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/05/29 19:30:57 khorben Exp $
 
-SHA1 (cpuminer-2.5.0.tar.gz) = 502e7edfa3ff7fe4300065c68f660acd8fb63476
-RMD160 (cpuminer-2.5.0.tar.gz) = 954d68d8a59665364844d4c1e89e67fdb2ab9124
-SHA512 (cpuminer-2.5.0.tar.gz) = e635e346cc5dd4e5159b5d0c9dd8f44e642c626da934638a73b9da8421b70c97ce0f5671cc35be3f5ad5711c38164e7e7ed94c0b593892b32203f0527b4ffdc1
-Size (cpuminer-2.5.0.tar.gz) = 117655 bytes
+SHA1 (cpuminer-2.5.1.tar.gz) = 07d863e1e88de8387986ea9ef76dd9100d4fb409
+RMD160 (cpuminer-2.5.1.tar.gz) = f408fddd6e16ad8d54115e6b3d8fd0f0a6fae5d1
+SHA512 (cpuminer-2.5.1.tar.gz) = 9b5b34018e1b480aceb3f6e7ebea58800da6bf7f07c8effe0bb65bb4732a24686aa7db14a45f6f595df5b6d0334205c2a43f00fa576d42ef9f108ca3f519393b
+Size (cpuminer-2.5.1.tar.gz) = 118893 bytes
+SHA1 (patch-miner.h) = 58bfef90b3c600e94d5b1ff81d87eb5e6c149dbc
