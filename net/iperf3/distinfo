@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2020/08/18 07:37:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/05/29 06:16:56 adam Exp $
 
-SHA1 (iperf-3.9.tar.gz) = 55bd42d401127400ffc4d013893f1f9450eca6c0
-RMD160 (iperf-3.9.tar.gz) = 2d2e67849f0b1a77a7433b6cf6a8fc1fae89ca2c
-SHA512 (iperf-3.9.tar.gz) = 4a2af8a6028b0f6bded9b3ac51c5463bc7595c9a2d2ac13f28b0e2e8dee0ac0a299e7817125e23e409f12e8e80862ed28d5541eef3cda7cd9f7104bb720165ce
-Size (iperf-3.9.tar.gz) = 622459 bytes
-SHA1 (patch-configure) = 935c259526c0bbd9da9d4da9c62cc462d8a74175
+SHA1 (iperf-3.10.tar.gz) = d6f05f3c57357b47b22134b06753acdc1735e89c
+RMD160 (iperf-3.10.tar.gz) = a7debde0e985a514ce95a84dfe621b2ed99b2c6e
+SHA512 (iperf-3.10.tar.gz) = 9f8827ab6e9f942365ff7938e099cdc2708ec3021578420fdc0749a6613d2e19ea89dfe869cde83d380c8e6b5fec3d766bd2e689c5d9b4d87674ce75eba4d1bf
+Size (iperf-3.10.tar.gz) = 634101 bytes
+SHA1 (patch-configure) = 311360f41815d6da5d6c113b816fe3b118ceaf2f
