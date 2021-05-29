@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2021/05/29 16:04:11 thor Exp $
+
+Mark main phony targets as phony, mainly to avoid conflict
+of install target with the INSTALL file on case-insensitive
+filesystems.
+
+--- Makefile.orig	2021-05-29 15:58:27.808507744 +0000
++++ Makefile
+@@ -21,6 +21,8 @@
+ 
+ include Makeconf
+ 
++.PHONY: help lib solib test clean install install-shlib install-staticlib
++
+ help:
+ 	@echo
+ 	@echo "The following targets are available:"
