@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3039 2021/05/29 17:19:00 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3040 2021/05/29 17:23:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4674,3 +4674,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added meta-pkgs/bulk-test-boost version 20210529 [nia 2021-05-29]
 	Updated graphics/kvantum to 0.20.0 [pin 2021-05-29]
 	Updated www/hackernews-tui to 0.6.2 [pin 2021-05-29]
+	Added textproc/molybdenum version 0.1.3 [pin 2021-05-29]
