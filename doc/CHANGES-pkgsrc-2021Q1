@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.10 2021/05/25 15:14:37 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.11 2021/05/29 19:06:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -85,4 +85,7 @@ graphics/cairo: security fix
 
 Pullup ticket #6461 - requested by nia
 print/mupdf: security fix
+
+Pullup ticket #6462 - requested by gutteridge
+sysutils/xfce4-thunar: security fix
 
