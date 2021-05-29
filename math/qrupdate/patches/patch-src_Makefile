@@ -1,0 +1,37 @@
+$NetBSD: patch-src_Makefile,v 1.1 2021/05/29 09:55:14 thor Exp $
+
+Use LDFLAGS also for the .so library and fix non-portable install -D usage.
+Also … the permissions 644 seem wrong for shared libs.
+
+--- src/Makefile.orig	2010-01-19 11:35:49.000000000 +0000
++++ src/Makefile
+@@ -47,7 +47,7 @@ solib: ../libqrupdate$(SOEXT)
+ 	ar -cr $@ $(OBJS)
+ 
+ ../libqrupdate.so: $(OBJS)
+-	$(FC) $(FFLAGS) -shared -o $@ -Wl,-soname=libqrupdate.so.$(MAJOR) $(OBJS) \
++	$(FC) $(FFLAGS) $(LDFLAGS) -shared -o $@ -Wl,-soname=libqrupdate.so.$(MAJOR) $(OBJS) \
+ 		$(BLAS) $(LAPACK)
+ 
+ ../libqrupdate.dylib: $(OBJS)
+@@ -65,14 +65,17 @@ install: install-shlib install-staticlib
+ install-shlib: ../libqrupdate$(SOEXT) install-lib$(SOEXT)
+ 
+ install-lib.so:
+-	install -D -m644 ../libqrupdate.so $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.so.$(VERSION)
++	install -d -m755 $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	install -m755 ../libqrupdate.so $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.so.$(VERSION)
+ 	ln -s libqrupdate.so.$(VERSION) $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.so.$(MAJOR)
+ 	ln -s libqrupdate.so.$(VERSION) $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.so
+ 
+ install-lib.dylib:
+-	install -D -m644 ../libqrupdate.dylib $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.$(VERSION).dylib
++	install -d -m755 $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	install -m755 ../libqrupdate.dylib $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.$(VERSION).dylib
+ 	ln -s libqrupdate.$(VERSION).dylib $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.$(MAJOR).dylib
+ 	ln -s libqrupdate.$(VERSION).dylib $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.dylib
+ 
+ install-staticlib: ../libqrupdate.a
+-	install -D -m644 ../libqrupdate.a $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.a
++	install -d -m755 $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	install -m644 ../libqrupdate.a $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.a
