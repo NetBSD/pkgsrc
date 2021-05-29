@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/05/29 17:07:49 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/29 17:49:12 nia Exp $
 
-DISTNAME=	bulk-boost-test-20210529
+DISTNAME=	bulk-test-boost-20210529
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
