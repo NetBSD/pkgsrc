@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.633 2021/05/24 08:26:45 adam Exp $
+# $NetBSD: Makefile,v 1.634 2021/05/29 10:22:59 leot Exp $
 
 COMMENT=	Databases
 
@@ -361,6 +361,7 @@ SUBDIR+=	py-datapkg
 SUBDIR+=	py-dbfread
 SUBDIR+=	py-elasticsearch
 SUBDIR+=	py-gdbm
+SUBDIR+=	py-kb
 SUBDIR+=	py-ldap
 SUBDIR+=	py-ldap3
 SUBDIR+=	py-lmdb
