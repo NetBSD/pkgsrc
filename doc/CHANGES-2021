@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3021 2021/05/29 08:31:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3022 2021/05/29 08:32:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-messages to 16.0.1 [taca 2021-05-29]
 	Updated lang/ruby-cucumber-gherkin to 19.0.3 [taca 2021-05-29]
 	Updated devel/ruby-curses to 1.4.1 [taca 2021-05-29]
+	Updated devel/ruby-ffi to 1.15.1 [taca 2021-05-29]
