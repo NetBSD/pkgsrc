@@ -1,0 +1,8 @@
+libpe is the PE library used by pev - the PE file toolkit purely written in C
+and available to many platforms. The features include:
+
+ * Support for both 32 and 64-bits PE files.
+ * ssdeep support (built-in libfuzzy).
+ * Disassemble support (built-in libudis86).
+ * Imphash support.
+ * Crypographic digests calculation (using OpeenSSL).
