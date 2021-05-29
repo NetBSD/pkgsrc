@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3042 2021/05/29 22:39:58 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3043 2021/05/29 23:24:23 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/molybdenum version 0.1.3 [pin 2021-05-29]
 	Updated finance/cpuminer to 2.5.1 [khorben 2021-05-29]
 	Updated net/fwknop to 2.6.10 [khorben 2021-05-29]
+	Added security/libpe version 0.81 [khorben 2021-05-29]
