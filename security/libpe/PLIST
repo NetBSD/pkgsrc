@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/29 23:23:42 khorben Exp $
+include/libpe/dir_import.h
+include/libpe/dir_resources.h
+include/libpe/dir_security.h
+include/libpe/directories.h
+include/libpe/error.h
+include/libpe/exports.h
+include/libpe/hashes.h
+include/libpe/hdr_coff.h
+include/libpe/hdr_dos.h
+include/libpe/hdr_optional.h
+include/libpe/imports.h
+include/libpe/macros.h
+include/libpe/ordlookup.h
+include/libpe/pe.h
+include/libpe/resources.h
+include/libpe/sections.h
+include/libpe/utils.h
+include/libpe/utlist.h
+lib/libpe.so
+lib/libpe.so.1
+lib/libpe.so.1.0
