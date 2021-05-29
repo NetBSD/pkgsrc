@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/29 09:55:14 thor Exp $
+lib/libqrupdate.a
+lib/libqrupdate.so
+lib/libqrupdate.so.1
+lib/libqrupdate.so.1.1

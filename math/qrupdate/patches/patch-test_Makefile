@@ -1,0 +1,15 @@
+$NetBSD: patch-test_Makefile,v 1.1 2021/05/29 09:55:14 thor Exp $
+
+Use LDFLAGS for tests!
+
+--- test/Makefile.orig	2021-05-29 09:14:58.376660614 +0000
++++ test/Makefile
+@@ -35,7 +35,7 @@ $(OUTS): %.out: %
+ 	./$< | tee $@
+ 
+ $(PROGS): % : %.f utils.o ../libqrupdate.a
+-	$(FC) $(FFLAGS) -o $@ $^ $(LIBS)
++	$(FC) $(FFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ utils.o: utils.f
+ 	$(FC) $(FFLAGS) -c $<
