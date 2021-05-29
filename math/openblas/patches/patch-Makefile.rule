@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.rule,v 1.1 2021/05/29 19:57:21 thor Exp $
+
+Stable library names, determined by our choice only.
+
+--- Makefile.rule.orig	2021-05-02 21:50:22.000000000 +0000
++++ Makefile.rule
+@@ -10,6 +10,10 @@ VERSION = 0.3.15
+ # is libopenblas_$(LIBNAMESUFFIX).so.0.
+ # LIBNAMESUFFIX = omp
+ 
++# Set this to cause the primary library name be actually ruled by the above,
++# not just a symlink to a library name determined by chosen CPU etc.
++# FIXED_LIBNAME = 1
++
+ # You can specify the target architecture, otherwise it's
+ # automatically detected.
+ # TARGET = PENRYN
