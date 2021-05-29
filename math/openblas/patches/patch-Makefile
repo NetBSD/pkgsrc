@@ -1,63 +1,83 @@
-$NetBSD: patch-Makefile,v 1.2 2021/03/25 23:22:35 thor Exp $
+$NetBSD: patch-Makefile,v 1.3 2021/05/29 19:57:21 thor Exp $
 
 Remove special library names.
 
---- Makefile.orig	2020-06-14 20:03:04.000000000 +0000
+--- Makefile.orig	2021-05-02 21:50:22.000000000 +0000
 +++ Makefile
-@@ -115,7 +115,6 @@ ifneq ($(NO_SHARED), 1)
+@@ -120,18 +120,28 @@ shared :
+ ifneq ($(NO_SHARED), 1)
  ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku FreeBSD DragonFly))
  	@$(MAKE) -C exports so
++ifneq ($(LIBSONAME), $(LIBPREFIX).so)
  	@ln -fs $(LIBSONAME) $(LIBPREFIX).so
--	@ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
++endif
++ifneq ($(LIBSONAME), $(LIBPREFIX).so.$(MAJOR_VERSION))
+ 	@ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
  endif
++endif
  ifeq ($(OSNAME), $(filter $(OSNAME),OpenBSD NetBSD))
  	@$(MAKE) -C exports so
-@@ -123,8 +122,6 @@ ifeq ($(OSNAME), $(filter $(OSNAME),Open
++ifneq ($(LIBSONAME), $(LIBPREFIX).so)
+ 	@ln -fs $(LIBSONAME) $(LIBPREFIX).so
  endif
++endif
  ifeq ($(OSNAME), Darwin)
  	@$(MAKE) -C exports dyn
--	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib
--	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
++ifneq ($(LIBDYNNAME), $(LIBPREFIX).dylib)
+ 	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib
++endif
++ifneq ($(LIBDYNNAME), $(LIBPREFIX).$(MAJOR_VERSION).dylib)
+ 	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
  endif
++endif
  ifeq ($(OSNAME), WINNT)
  	@$(MAKE) -C exports dll
-@@ -161,7 +158,6 @@ ifeq ($(NO_SHARED), 1)
- 	$(error OpenBLAS: neither static nor shared are enabled.)
  endif
+@@ -195,13 +205,17 @@ endif
+ ifdef USE_THREAD
+ 	@echo USE_THREAD=$(USE_THREAD) >>  Makefile.conf_last
  endif
--	@-ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
- 	@for d in $(SUBDIRS) ; \
- 	do if test -d $$d; then \
- 	  $(MAKE) -C $$d $(@F) || exit 1 ; \
-@@ -195,7 +191,6 @@ endif
++ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
+ 	@-ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++endif
+ 	@touch lib.grd
+ 
  prof : prof_blas prof_lapack
  
  prof_blas :
--	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
++ifneq ($(LIBNAME_P), $(LIBPREFIX)_p.$(LIBSUFFIX))
+ 	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
++endif
  	for d in $(SUBDIRS) ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d prof || exit 1 ; \
-@@ -206,7 +201,6 @@ ifeq ($(DYNAMIC_ARCH), 1)
+@@ -212,7 +226,9 @@ ifeq ($(DYNAMIC_ARCH), 1)
  endif
  
  blas :
--	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
+ 	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++endif
  	for d in $(BLASDIRS) ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d libs || exit 1 ; \
-@@ -214,7 +208,6 @@ blas :
+@@ -220,7 +236,9 @@ blas :
  	done
  
  hpl :
--	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
+ 	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++endif
  	for d in $(BLASDIRS) ../laswp exports ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d $(@F) || exit 1 ; \
-@@ -228,7 +221,6 @@ ifeq ($(DYNAMIC_ARCH), 1)
+@@ -234,7 +252,9 @@ ifeq ($(DYNAMIC_ARCH), 1)
  endif
  
  hpl_p :
--	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
++ifneq ($(LIBNAME_P), $(LIBPREFIX)_p.$(LIBSUFFIX))
+ 	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
++endif
  	for d in $(SUBDIRS) ../laswp exports ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d $(@F) || exit 1 ; \
