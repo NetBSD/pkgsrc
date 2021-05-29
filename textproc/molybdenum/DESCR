@@ -1,0 +1,19 @@
+Recursive _search and replace_ CLI application.
+
+Powerful search can be found without problems, eg, grep, ack, ag, ripgrep
+or broot.
+
+Tools for replacing recursively in a folder are more difficult to find,
+although some exist: fart-it. Typically, people use a combination of searching,
+xargs and a replacement tool like sed or rpl.
+
+I use code searching a lot to investigate a large source code base before
+attempting a replace. Even with 100k files, search is fast and fairly easy.
+Recursively replacing text is much more dangerous, especially if it requires
+the combination of several less frequently used tools; it's difficult to
+remember a search-xargs-replace combination if not used on a daily basis.
+On top of this, the search tool used to filter the set of files and perform a
+dry-run, is not per-se using the same search query as the replace tool.
+After all, these are different tools. It would be better if a single tool could
+be used for every-day searching and replacing.
+This is exactly what The Molybdenum Replacer intends to achieve.
