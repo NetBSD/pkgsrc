@@ -1,0 +1,13 @@
+kb is a text-oriented minimalist command line knowledge base manager.
+kb can be considered a quick note collection and access tool oriented
+toward software developers, penetration testers, hackers, students
+or whoever has to collect and organize notes in a clean way. Although
+kb is mainly targeted on text-based note collection, it supports
+non-text files as well (e.g., images, pdf, videos and others).
+
+The project was born from the frustration of trying to find a good
+way to quickly access my notes, procedures, cheatsheets and lists
+(e.g., payloads) but at the same time, keeping them organized. This
+is particularly useful for any kind of student. I use it in the
+context of penetration testing to organize pentesting procedures,
+cheatsheets, payloads, guides and notes.
