@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2021/05/23 07:16:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.824 2021/05/29 23:24:06 khorben Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -180,6 +180,7 @@ SUBDIR+=	libnetpgpverify
 SUBDIR+=	liboauth
 SUBDIR+=	libp11
 SUBDIR+=	libpbc
+SUBDIR+=	libpe
 SUBDIR+=	libprelude
 SUBDIR+=	libprelude-lua
 SUBDIR+=	libprelude-perl
