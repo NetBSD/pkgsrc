@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.7 2020/03/27 20:56:25 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/05/29 23:28:36 khorben Exp $
 
-SHA1 (pev-0.80.tar.gz) = 18dcb65269344b5047504cca8598477b33532bab
-RMD160 (pev-0.80.tar.gz) = 01ed4fa37c5349397dbd8aa3b592b9657e63acf8
-SHA512 (pev-0.80.tar.gz) = d0c8ff8fcd60470899d5dbccfd7a7e4d960da007f42be9c7eab6b22a3d7cf4dde3c3d5cd9c7d70e369164503fb124640cf508ceda3d4792244cf33d11ab83321
-Size (pev-0.80.tar.gz) = 921102 bytes
-SHA1 (patch-src_Makefile) = f51a9d6afa64de8ba761a9b889911403b0107aad
-SHA1 (patch-src_pehash.c) = c31083fca0d98dc607eb4f8b338bd93dd714f594
-SHA1 (patch-src_pesec.c) = fa302aa9bf2f07558f6cef0c41b0cd9063df7706
-SHA1 (patch-src_plugins.c) = c85c5c3b918850c7383f30d2efdae38985cdd143
-SHA1 (patch-src_plugins_Makefile) = ef5357385db2ac15c4f853b296dfee3703fd62eb
+SHA1 (pev-0.81.tar.gz) = ee889b859f4a79618d552c11f2c0fc3f697a2d3d
+RMD160 (pev-0.81.tar.gz) = 2a249110649aaf328cea72bca95ce6d8b31090bb
+SHA512 (pev-0.81.tar.gz) = a1266c4281018a5e2b185506edd4604ac1e02aad88344d73acc2dc0980f9231e25a38529baaf663721fbc695403b85c2a2a211512659af7b5c08320b9644f4a3
+Size (pev-0.81.tar.gz) = 549225 bytes
+SHA1 (patch-Makefile) = bccdd8d698e72e09de905fc6aecbf8f87239b8af
+SHA1 (patch-src_Makefile) = 3580c8a4feff3b8f7f6525401675ede76f91d848
