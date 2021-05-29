@@ -1,0 +1,18 @@
+Qrupdate is a linear algebra library for fast updating of QR and Cholesky
+decompositions.
+
+Supported operations:
+
+- QR rank-1 update (qr1up)
+- QR column insert (qrinc)
+- QR column delete (qrdec)
+- QR column shift (qrshc)
+- QR row insert (qrinr)
+- QR row delete (qrder)
+- Cholesky rank-1 update (ch1up)
+- Cholesky rank-1 downdate (ch1dn)
+- Cholesky symmetric insert (chinx)
+- Cholesky symmetric insert (chdex)
+- Cholesky symmetric shift (chshx)
+- LU rank-1 update (lu1up)
+- LU pivoted rank-1 update (lup1up)

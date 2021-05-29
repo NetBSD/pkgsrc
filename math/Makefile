@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.500 2021/05/20 07:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.501 2021/05/29 09:55:14 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -405,6 +405,7 @@ SUBDIR+=	py-z3solver
 SUBDIR+=	qalculate
 SUBDIR+=	qalculate-gtk
 SUBDIR+=	qhull
+SUBDIR+=	qrupdate
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
 SUBDIR+=	ranger
