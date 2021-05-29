@@ -1,18 +1,25 @@
-$NetBSD: patch-src_Makefile,v 1.4 2019/10/22 16:37:05 khorben Exp $
+$NetBSD: patch-src_Makefile,v 1.5 2021/05/29 23:28:36 khorben Exp $
 
-Only link with libdl on Linux
+Only link with libdl on Linux.
+Let pkgsrc set the _FORTIFY_SOURCE level.
 
---- src/Makefile.orig	2017-01-07 22:34:07.000000000 +0000
+--- src/Makefile.orig	2021-01-11 23:29:21.000000000 +0000
 +++ src/Makefile
-@@ -52,7 +52,10 @@ endif
+@@ -52,13 +52,14 @@ endif
  
  ####### Compiler options
  
--override LDFLAGS += -L$(LIBPE) -lpe -ldl
-+override LDFLAGS += -L$(LIBPE) -lpe
 +ifeq ($(PLATFORM_OS), Linux)
-+override LDFLAGS += -ldl
+ override LDFLAGS += -L$(LIBPE) -lpe -lcrypto -lssl -ldl -lm
++else
++override LDFLAGS += -L$(LIBPE) -lpe -lcrypto -lssl -lm
 +endif
- override CFLAGS += -I$(LIBPE) -I"../include" -W -Wall -Wextra -std=c99 -pedantic
- override CPPFLAGS += -D_GNU_SOURCE -DSHAREDIR="\"$(SHAREDIR)"\"
+ override CFLAGS += -I$(LIBPE)/include -I"../include" -W -Wall -Wextra -std=c99 -pedantic
+-# Some gcc/clang builds (depends on the distro) already define _FORTIFY_SOURCE internally, so we
+-# undefine it first to avoid redefinition warnings.
+ override CPPFLAGS += \
+ 	-D_GNU_SOURCE \
+-	-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 \
+ 	-DSHAREDIR="\"$(SHAREDIR)"\" \
+ 	-DPLUGINSDIR="\"$(pluginsdir)"\"
  
