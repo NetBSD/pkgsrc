@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2021/03/29 07:38:52 nia Exp $
+# $NetBSD: Makefile,v 1.35 2021/05/29 00:20:15 dholland Exp $
 
 DISTNAME=	PySolFC-2.6.4
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,7 @@ CARDSETS_NAME=	PySolFC-Cardsets-2.0
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	${CARDSETS_NAME}.tar.bz2
 
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 
