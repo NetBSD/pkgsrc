@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/29 10:22:25 leot Exp $
+
+SHA1 (kb-manager-0.1.6.tar.gz) = 79bbec6549cee0bb735e786169a646f725052cd2
+RMD160 (kb-manager-0.1.6.tar.gz) = 307ae755993ca08007d08aa4f71d99d77b9fe081
+SHA512 (kb-manager-0.1.6.tar.gz) = 543d1377675f0bb170b3bc4a95b10dd2edb74301215f9be38100449d833ad97cb867ff8c82991d07bfafc977113b70ee1c1ec3ac34fe8fdf0f2e8261862d2098
+Size (kb-manager-0.1.6.tar.gz) = 86846 bytes
