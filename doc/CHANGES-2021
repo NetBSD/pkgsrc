@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3010 2021/05/28 10:32:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3011 2021/05/29 00:20:45 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/schismtracker to 20210525 [fcambus 2021-05-28]
 	Updated www/stagit to 0.9.6 [fcambus 2021-05-28]
 	Updated audio/ncspot to 0.7.2 [pin 2021-05-28]
+	Updated games/pysolfc to 2.6.4nb3 [dholland 2021-05-29]
