@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1228 2021/05/28 04:25:14 adam Exp $
+# $NetBSD: Makefile,v 1.1229 2021/05/29 17:23:02 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -514,6 +514,7 @@ SUBDIR+=	metauml
 SUBDIR+=	migemo
 SUBDIR+=	migemo-elisp
 SUBDIR+=	miller
+SUBDIR+=	molybdenum
 SUBDIR+=	multimarkdown
 SUBDIR+=	mxml
 SUBDIR+=	mythes
