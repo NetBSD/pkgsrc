@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/20 08:34:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/29 15:00:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pycall.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.github/workflows/windows.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/guard
 ${GEM_LIBDIR}/bin/rspec
@@ -30,6 +29,7 @@ ${GEM_LIBDIR}/examples/hist.rb
 ${GEM_LIBDIR}/examples/notebooks/classifier_comparison.ipynb
 ${GEM_LIBDIR}/examples/notebooks/forest_importances.ipynb
 ${GEM_LIBDIR}/examples/notebooks/iruby_integration.ipynb
+${GEM_LIBDIR}/examples/notebooks/leaflet.ipynb
 ${GEM_LIBDIR}/examples/notebooks/lorenz_attractor.ipynb
 ${GEM_LIBDIR}/examples/notebooks/polar_axes.ipynb
 ${GEM_LIBDIR}/examples/notebooks/sum_benchmarking.ipynb
