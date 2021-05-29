@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/04 14:17:46 taca Exp $
-bin/iruby
+@comment $NetBSD: PLIST,v 1.3 2021/05/29 15:04:31 taca Exp $
+bin/iruby${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ubuntu.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/iruby/backend.rb
 ${GEM_LIBDIR}/lib/iruby/comm.rb
 ${GEM_LIBDIR}/lib/iruby/command.rb
 ${GEM_LIBDIR}/lib/iruby/display.rb
+${GEM_LIBDIR}/lib/iruby/event_manager.rb
 ${GEM_LIBDIR}/lib/iruby/formatter.rb
 ${GEM_LIBDIR}/lib/iruby/input.rb
 ${GEM_LIBDIR}/lib/iruby/input/README.ipynb
@@ -56,6 +57,7 @@ ${GEM_LIBDIR}/lib/iruby/session_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/cztop_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/ffirzmq_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/pyzmq_adapter.rb
+${GEM_LIBDIR}/lib/iruby/session_adapter/test_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/utils.rb
 ${GEM_LIBDIR}/lib/iruby/version.rb
 ${GEM_LIBDIR}/logo/logo-32x32.png
@@ -67,7 +69,9 @@ ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/integration_test.rb
 ${GEM_LIBDIR}/test/iruby/backend_test.rb
 ${GEM_LIBDIR}/test/iruby/command_test.rb
+${GEM_LIBDIR}/test/iruby/event_manager_test.rb
 ${GEM_LIBDIR}/test/iruby/jupyter_test.rb
+${GEM_LIBDIR}/test/iruby/kernel_test.rb
 ${GEM_LIBDIR}/test/iruby/mime_test.rb
 ${GEM_LIBDIR}/test/iruby/multi_logger_test.rb
 ${GEM_LIBDIR}/test/iruby/session_adapter/cztop_adapter_test.rb

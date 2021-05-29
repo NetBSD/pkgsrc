@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/05/04 14:17:46 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/05/29 15:04:31 taca Exp $
 
-DISTNAME=	iruby-0.5.0
+DISTNAME=	iruby-0.7.0
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -20,6 +20,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
 
 USE_LANGUAGES=	# none
+
+RUBYGEM_OPTIONS+=	--format-executable
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
