@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/12 09:40:14 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/29 17:17:17 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
 qt5/plugins/styles/libkvantum.so
@@ -30,6 +30,8 @@ share/Kvantum/KvCurvesLight1/KvCurvesLight1.kvconfig
 share/Kvantum/KvCurvesLight1/KvCurvesLight1.svg
 share/Kvantum/KvCyan/KvCyan.kvconfig
 share/Kvantum/KvCyan/KvCyan.svg
+share/Kvantum/KvDark/KvDark.kvconfig
+share/Kvantum/KvDark/KvDark.svg
 share/Kvantum/KvDarkRed/KvDarkRed.kvconfig
 share/Kvantum/KvDarkRed/KvDarkRed.svg
 share/Kvantum/KvFlat/KvFlat.kvconfig
@@ -64,6 +66,8 @@ share/Kvantum/KvSimplicity/KvSimplicity.kvconfig
 share/Kvantum/KvSimplicity/KvSimplicity.svg
 share/Kvantum/KvSimplicityDark/KvSimplicityDark.kvconfig
 share/Kvantum/KvSimplicityDark/KvSimplicityDark.svg
+share/Kvantum/KvSimplicityDarkLight/KvSimplicityDarkLight.kvconfig
+share/Kvantum/KvSimplicityDarkLight/KvSimplicityDarkLight.svg
 share/Kvantum/KvSimplicityTurquoise/KvSimplicityTurquoise.kvconfig
 share/Kvantum/KvSimplicityTurquoise/KvSimplicityTurquoise.svg
 share/Kvantum/KvYaru/KvYaru.kvconfig
@@ -83,6 +87,7 @@ share/color-schemes/KvBrown.colors
 share/color-schemes/KvCurves.colors
 share/color-schemes/KvCurvesLight.colors
 share/color-schemes/KvCyan.colors
+share/color-schemes/KvDark.colors
 share/color-schemes/KvDarkRed.colors
 share/color-schemes/KvFlat.colors
 share/color-schemes/KvFlatLight.colors
@@ -100,6 +105,7 @@ share/color-schemes/KvOxygen.colors
 share/color-schemes/KvRoughGlass.colors
 share/color-schemes/KvSimplicity.colors
 share/color-schemes/KvSimplicityDark.colors
+share/color-schemes/KvSimplicityDarkLight.colors
 share/color-schemes/KvSimplicityTurquoise.colors
 share/color-schemes/KvYaru.colors
 share/color-schemes/Kvantum.colors
@@ -146,6 +152,7 @@ share/kvantumpreview/translations/kvantumpreview_de.qm
 share/kvantumpreview/translations/kvantumpreview_el.qm
 share/kvantumpreview/translations/kvantumpreview_eo.qm
 share/kvantumpreview/translations/kvantumpreview_es.qm
+share/kvantumpreview/translations/kvantumpreview_et.qm
 share/kvantumpreview/translations/kvantumpreview_fa.qm
 share/kvantumpreview/translations/kvantumpreview_fi.qm
 share/kvantumpreview/translations/kvantumpreview_fr.qm
