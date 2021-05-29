@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3022 2021/05/29 08:32:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3023 2021/05/29 09:53:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ruby-cucumber-gherkin to 19.0.3 [taca 2021-05-29]
 	Updated devel/ruby-curses to 1.4.1 [taca 2021-05-29]
 	Updated devel/ruby-ffi to 1.15.1 [taca 2021-05-29]
+	Updated lang/rakudo to 2021.05 [mef 2021-05-29]
