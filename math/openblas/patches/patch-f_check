@@ -1,10 +1,10 @@
-$NetBSD: patch-f_check,v 1.1 2020/11/05 16:31:45 bacon Exp $
+$NetBSD: patch-f_check,v 1.2 2021/05/29 19:57:21 thor Exp $
 
 Clean up link flags
 
---- f_check.orig	2015-10-27 20:44:50 UTC
+--- f_check.orig	2021-05-02 21:50:22.000000000 +0000
 +++ f_check
-@@ -261,7 +261,7 @@ if ($link ne "") {
+@@ -326,7 +326,7 @@ if ($link ne "") {
  
      foreach $flags (@flags) {
  	if (
@@ -13,12 +13,12 @@ Clean up link flags
  	    && ($flags !~ /^-LIST:/)
  	    && ($flags !~ /^-LANG:/)
  	    ) {
-@@ -292,7 +292,7 @@ if ($link ne "") {
+@@ -358,7 +358,7 @@ if ($link ne "") {
  	}
  
  	if (
 -	    ($flags =~ /^\-l/)
 +	    ($flags =~ /^\-l\S/)
+ 	    && ($flags !~ /ibrary/)
  	    && ($flags !~ /gfortranbegin/)
  	    && ($flags !~ /frtbegin/)
- 	    && ($flags !~ /pathfstart/)
