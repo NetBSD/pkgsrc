@@ -1,0 +1,43 @@
+$NetBSD: patch-test_report__results,v 1.1 2021/05/29 09:55:14 thor Exp $
+
+Drop awk usage and make the test script actually count and evaluate errors
+itself so that the test target has a meaningful result as return value.
+
+--- test/report_results.orig	2010-02-11 10:45:19.000000000 +0000
++++ test/report_results
+@@ -1,22 +1,30 @@
+ #!/bin/sh
+ OUTS=$*
+ passed_total=0
+ failed_total=0
+ cat $OUTS
+ 
+-# if awk exists, use it to print total statistics
+-if which awk > /dev/null ; then
+-	awk '/total:/ { passed += $3; failed += $5; }
+-	END { printf " TOTAL:     PASSED %3d     FAILED %3d\n", passed, failed; }' $OUTS
+-fi
++ret=0
+ for out in $OUTS ; do
+ 	if [ ! -s $out ] ; then
+ 		echo " $out file empty (test crashed)!"
++		ret=1
+ 	else
+ 		if grep -q WARNING $out ; then
+ 			echo " $out produced warnings:"
+ 			grep WARNING $out
++			ret=1
++		fi
++		passed=$(grep total: $out | (read a b num d; echo $num))
++		passed_total=$((passed_total+passed))
++		failed=$(grep total: $out | (read a b c d num f; echo $num))
++		failed_total=$((failed_total+failed))
++		if test "$failed" -gt 0; then
++			echo " $out has failures"
++			ret=1
+ 		fi
+ 	fi
+ done
++printf "\n TOTAL:     PASSED %3d     FAILED %3d\n" "$passed_total" "$failed_total"
+ 
++exit $ret
