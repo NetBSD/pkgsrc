@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3013 2021/05/29 01:33:23 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3014 2021/05/29 06:09:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4647,3 +4647,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/pysolfc to 2.6.4nb3 [dholland 2021-05-29]
 	Updated textproc/p5-PPIx-QuoteLike to 0.017 [wen 2021-05-29]
 	Updated time/p5-DateTime-Format-MySQL to 0.0701 [wen 2021-05-29]
+	Updated cad/klayout to 0.27 [mef 2021-05-29]
