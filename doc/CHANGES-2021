@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3032 2021/05/29 11:00:08 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3033 2021/05/29 13:08:02 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.20 [wen 2021-05-29]
 	Updated security/p5-Crypt-OpenSSL-Guess to 0.13 [wen 2021-05-29]
 	Updated security/p5-Crypt-PasswdMD5 to 1.41 [wen 2021-05-29]
+	Updated lang/perl5 to 5.34.0nb2 [rin 2021-05-29]
