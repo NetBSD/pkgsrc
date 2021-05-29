@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/05/19 12:06:28 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/29 17:18:40 pin Exp $
 
-DISTNAME=	hackernews-TUI-0.6.1
+DISTNAME=	hackernews-TUI-0.6.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
