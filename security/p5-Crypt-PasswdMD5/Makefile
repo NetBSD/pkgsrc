@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/05/29 10:58:31 wen Exp $
 #
 
-DISTNAME=	Crypt-PasswdMD5-1.40
+DISTNAME=	Crypt-PasswdMD5-1.41
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	security perl5
-MASTER_SITES=	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Crypt/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Crypt/
+HOMEPAGE=	https://metacpan.org/release/Crypt-PasswdMD5
 COMMENT=	MD5-based crypt() function
 LICENSE=	${PERL5_LICENSE}
 
