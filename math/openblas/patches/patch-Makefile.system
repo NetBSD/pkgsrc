@@ -1,52 +1,35 @@
-$NetBSD: patch-Makefile.system,v 1.2 2021/03/25 23:22:35 thor Exp $
+$NetBSD: patch-Makefile.system,v 1.3 2021/05/29 19:57:21 thor Exp $
 
-Fully control the library name via LIBNAMESUFFIX
-And a bit of ARCH_
+Stable library names, determined by our choice only.
 
---- Makefile.system.orig	2020-06-14 20:03:04.000000000 +0000
+--- Makefile.system.orig	2021-05-02 21:50:22.000000000 +0000
 +++ Makefile.system
-@@ -1326,31 +1326,15 @@ ifndef LIBSUFFIX
+@@ -1510,6 +1510,10 @@ ifndef LIBSUFFIX
  LIBSUFFIX = a
  endif
  
--ifneq ($(DYNAMIC_ARCH), 1)
--ifndef SMP
--LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
--LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)$(REVISION)_p.$(LIBSUFFIX)
--else
--LIBNAME		= $(LIBPREFIX)_$(LIBCORE)p$(REVISION).$(LIBSUFFIX)
--LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)p$(REVISION)_p.$(LIBSUFFIX)
--endif
--else
--ifndef SMP
--LIBNAME		= $(LIBPREFIX)$(REVISION).$(LIBSUFFIX)
--LIBNAME_P	= $(LIBPREFIX)$(REVISION)_p.$(LIBSUFFIX)
--else
--LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LIBSUFFIX)
--LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
--endif
--endif
--
++ifeq ($(FIXED_LIBNAME), 1)
 +LIBNAME		= $(LIBPREFIX).$(LIBSUFFIX)
 +LIBNAME_P	= $(LIBPREFIX)_p.$(LIBSUFFIX)
++else
+ ifneq ($(DYNAMIC_ARCH), 1)
+ ifndef SMP
+ LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
+@@ -1527,12 +1531,16 @@ LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LI
+ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
+ endif
+ endif
+-
++endif
  
  LIBDLLNAME   = $(LIBPREFIX).dll
  IMPLIBNAME   = lib$(LIBNAMEBASE).dll.a
  ifneq ($(OSNAME), AIX)
--LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)
++ifeq ($(FIXED_LIBNAME), 1)
 +LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so).$(MAJOR_VERSION)
++else
+ LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)
++endif
  else
--LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a)
-+LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a).$(MAJOR_VERSION)
+ LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a)
  endif
- LIBDYNNAME   = $(LIBNAME:.$(LIBSUFFIX)=.dylib)
- LIBDEFNAME   = $(LIBNAME:.$(LIBSUFFIX)=.def)
-@@ -1381,7 +1365,7 @@ LIB_COMPONENTS = CBLAS
- endif
- 
- export OSNAME
--export ARCH
-+export ARCH_
- export CORE
- export LIBCORE
- export __BYTE_ORDER__
