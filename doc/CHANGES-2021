@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3018 2021/05/29 07:22:21 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3019 2021/05/29 08:28:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4653,3 +4653,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/MoarVM to 2021.04 [mef 2021-05-29]
 	Updated devel/MoarVM to 2021.05 [mef 2021-05-29]
 	Updated lang/nqp to 2021.05 [mef 2021-05-29]
+	Updated devel/ruby-cucumber-messages to 16.0.1 [taca 2021-05-29]
