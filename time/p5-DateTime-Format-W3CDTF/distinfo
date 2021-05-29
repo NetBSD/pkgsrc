@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/04/21 23:47:26 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/05/29 10:15:42 wen Exp $
 
-SHA1 (DateTime-Format-W3CDTF-0.07.tar.gz) = d793fc7efc1046c227600cf0281f3d18dfa633fa
-RMD160 (DateTime-Format-W3CDTF-0.07.tar.gz) = bd92107a5448030f89dc581756842261099e84da
-SHA512 (DateTime-Format-W3CDTF-0.07.tar.gz) = f5b8f3437c4e9a7e192900af16e83a567889dbdf1a934d604461c5096c271b497cda9bd4f9359658f536d262232e4521519f92c06bf07712922403baf6429c64
-Size (DateTime-Format-W3CDTF-0.07.tar.gz) = 29598 bytes
+SHA1 (DateTime-Format-W3CDTF-0.08.tar.gz) = 51199d1ab7a7fa3d4db6ddee7dc58530d6bf0492
+RMD160 (DateTime-Format-W3CDTF-0.08.tar.gz) = 593727d896c710f5d3b424c07ed8388eedd22870
+SHA512 (DateTime-Format-W3CDTF-0.08.tar.gz) = d7b04870909432a7a98189dc2239ec201f9132e5a5b6db5d3284351a7db31324c1451538880d215073f8fa1e0f909b99a51354e8e87d6c4cf11d90ea184c9b4e
+Size (DateTime-Format-W3CDTF-0.08.tar.gz) = 32885 bytes
