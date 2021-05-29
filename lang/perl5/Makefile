@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.270 2021/05/24 19:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.271 2021/05/29 13:04:21 rin Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "license.mk"
 .include "Makefile.common"
 
