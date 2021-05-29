@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/05/29 19:35:04 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2021/05/29 20:23:40 khorben Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	cpuminer-2.5.1
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pooler/}
 GITHUB_PROJECT=	cpuminer
