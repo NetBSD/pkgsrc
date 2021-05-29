@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/01 21:10:42 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/05/29 22:39:45 khorben Exp $
 
-SHA1 (fwknop-2.6.9.tar.gz) = d306c206bc0afd26cad3567584d5017348ebc13e
-RMD160 (fwknop-2.6.9.tar.gz) = 6409bc7fa4880070502e3c92ff60bf3aa3968b3f
-SHA512 (fwknop-2.6.9.tar.gz) = 4706560d44c911c8604059d88dded9c1b8c333399d90ec7dc366c0fba96c79680bdbf1b8b5e76cc34aaf3a1e58fff80db8f5f20c96d57481bdb476a9b99f4d1b
-Size (fwknop-2.6.9.tar.gz) = 3043542 bytes
-SHA1 (patch-common_netinet__common.h) = 14aba8c993916b6ce4bd035326e1b74735333c8b
-SHA1 (patch-configure.ac) = a17c487cb4f294f3800b5557ccb8124c64c679c4
+SHA1 (fwknop-2.6.10.tar.gz) = b0a70f5626e6e27a41259fc4f07e19c39da5df73
+RMD160 (fwknop-2.6.10.tar.gz) = ee14efc6e43cc9ac32f489f257ab2b19257092cd
+SHA512 (fwknop-2.6.10.tar.gz) = e6c34dad012921fc0773826c769df322f06fd9310e8f263d8b786d2acda0310763db566324a436ea539b5e0bd6a08ce22e9499f6566d61d6309d84927faa4cf4
+Size (fwknop-2.6.10.tar.gz) = 3030310 bytes
