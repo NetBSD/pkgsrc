@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/03 14:05:15 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/05/29 06:35:23 mef Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -32,6 +32,7 @@ include/moar/6model/reprs/MVMIter.h
 include/moar/6model/reprs/MVMMultiCache.h
 include/moar/6model/reprs/MVMNull.h
 include/moar/6model/reprs/MVMOSHandle.h
+include/moar/6model/reprs/MVMSpeshCandidate.h
 include/moar/6model/reprs/MVMSpeshLog.h
 include/moar/6model/reprs/MVMSpeshPluginState.h
 include/moar/6model/reprs/MVMStaticFrame.h
@@ -148,6 +149,7 @@ include/moar/platform/memmem32.h
 include/moar/platform/mmap.h
 include/moar/platform/random.h
 include/moar/platform/setjmp.h
+include/moar/platform/socket.h
 include/moar/platform/stdint.h
 include/moar/platform/sys.h
 include/moar/platform/threads.h
@@ -160,7 +162,6 @@ include/moar/profiler/profile.h
 include/moar/profiler/telemeh.h
 include/moar/spesh/arg_guard.h
 include/moar/spesh/args.h
-include/moar/spesh/candidate.h
 include/moar/spesh/codegen.h
 include/moar/spesh/dead_bb_elimination.h
 include/moar/spesh/dead_ins_elimination.h
