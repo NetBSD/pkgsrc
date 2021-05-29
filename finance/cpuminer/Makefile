@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2021/05/29 19:30:57 khorben Exp $
+# $NetBSD: Makefile,v 1.16 2021/05/29 19:35:04 khorben Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	cpuminer-2.5.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pooler/}
+GITHUB_PROJECT=	cpuminer
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/pooler/cpuminer/
 COMMENT=	CPU miner for Litecoin and Bitcoin
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	cpuminer
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf autoheader automake
