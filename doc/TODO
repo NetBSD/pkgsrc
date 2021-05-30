@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20691 2021/05/30 01:50:27 mcf Exp $
+$NetBSD: TODO,v 1.20692 2021/05/30 07:02:35 mef Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-gtools-3.8.2
 	o R-haven-2.4.0
 	o R-highr-0.9
-	o R-hms-1.0.0
 	o R-htmlTable-2.1.0
 	o R-htmltools-0.5.1.1
 	o R-htmlwidgets-1.5.3
@@ -482,7 +481,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pixmap-0.4.12
 	o R-pkgKitten-0.2.1
 	o R-pkgcache-1.2.1
-	o R-pkgconfig-2.0.3
 	o R-pkgload-1.2.1
 	o R-poweRlaw-0.70.6
 	o R-prettyunits-1.1.1
