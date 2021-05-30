@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3063 2021/05/30 09:47:30 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3064 2021/05/30 09:55:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ruby-execjs to 2.8.1 [taca 2021-05-30]
 	Updated math/ruby-spreadsheet to 1.2.9 [taca 2021-05-30]
 	Removed misc/ruby-bundler1 [taca 2021-05-30]
+	Updated misc/ruby-slop to 4.9.1 [taca 2021-05-30]
