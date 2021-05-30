@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/03 01:06:10 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/05/30 21:48:19 khorben Exp $
 
-SHA1 (zipstream-1.1.4.tar.gz) = 9c0f52900237ba1593ea4996563ca0ed34e574dc
-RMD160 (zipstream-1.1.4.tar.gz) = 4d3727bc32a7f8a1a237916c8fd80c8dc1c50f31
-SHA512 (zipstream-1.1.4.tar.gz) = db48130cd54f34136e6698ac3eaabee3edbd6e5027c1559ee4d5c3af14b2bf6f8fb46d49541dc492c49d21e95a20e701468273491188f8fc22f5bde4303e2ba6
-Size (zipstream-1.1.4.tar.gz) = 5785 bytes
+SHA1 (zipstream-new-1.1.8.tar.gz) = b20b215b0cfca81212b548341fec8391688bdc50
+RMD160 (zipstream-new-1.1.8.tar.gz) = b8aa987a62b9ee1dba97f64523f99a2f2232bc27
+SHA512 (zipstream-new-1.1.8.tar.gz) = 96dd0931487ee7d43fedb21d0b8f41e48c1e30bcf903df115e40aa6346016ca6b49d012ee3ed882f6d2306f774c90afefa539aa450d22f60cc29a6c338c1e49b
+Size (zipstream-new-1.1.8.tar.gz) = 9377 bytes
