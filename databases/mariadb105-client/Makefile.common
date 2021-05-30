@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/05/25 11:18:26 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/05/30 16:33:30 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -84,9 +84,7 @@ CMAKE_ARGS+=		-DTOKUDB_OK=OFF
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
-CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
-CPPFLAGS.SunOS+=	-fPIC
+CFLAGS.SunOS+=		-fPIC
 
 REPLACE_PERL+=		scripts/mytop.sh
 REPLACE_PERL+=		sql-bench/*.sh
