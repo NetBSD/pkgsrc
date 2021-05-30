@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2021/05/29 23:28:36 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2021/05/30 00:49:51 khorben Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-0.81
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=merces/}
+.include "../../security/libpe/Makefile.common"
+
+DISTNAME=	${GITHUB_PROJECT}-${PEV_VERSION}
 GITHUB_PROJECT=	pev
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://pev.sourceforge.io/
 COMMENT=	The PE analysis toolkit
 LICENSE=	gnu-gpl-v3
-
-USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
