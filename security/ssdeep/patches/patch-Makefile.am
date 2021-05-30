@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2021/05/30 01:41:28 khorben Exp $
+
+Do not build ssdeep statically
+
+--- Makefile.am.orig	2017-11-07 02:31:15.000000000 +0000
++++ Makefile.am
+@@ -2,7 +2,7 @@
+ bin_PROGRAMS=ssdeep
+ 
+ ssdeep_LDADD=libfuzzy.la
+-ssdeep_LDFLAGS=-static
++ssdeep_LDFLAGS=
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
