@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3078 2021/05/30 15:56:35 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3079 2021/05/30 16:54:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4774,3 +4774,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nim to 1.4.8 [ryoon 2021-05-30]
 	Updated security/ruby-oauth to 0.5.6 [taca 2021-05-30]
 	Updated time/R-lubridate to 1.7.10 [mef 2021-05-30]
+	Updated finance/rates to 0.5.0 [pin 2021-05-30]
