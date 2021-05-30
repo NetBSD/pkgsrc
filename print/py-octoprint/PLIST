@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/25 16:35:23 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/30 21:53:10 khorben Exp $
 bin/octoprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -82,6 +82,9 @@ ${PYSITELIB}/octoprint/filemanager/util.pyo
 ${PYSITELIB}/octoprint/logging/__init__.py
 ${PYSITELIB}/octoprint/logging/__init__.pyc
 ${PYSITELIB}/octoprint/logging/__init__.pyo
+${PYSITELIB}/octoprint/logging/filters.py
+${PYSITELIB}/octoprint/logging/filters.pyc
+${PYSITELIB}/octoprint/logging/filters.pyo
 ${PYSITELIB}/octoprint/logging/handlers.py
 ${PYSITELIB}/octoprint/logging/handlers.pyc
 ${PYSITELIB}/octoprint/logging/handlers.pyo
@@ -190,15 +193,6 @@ ${PYSITELIB}/octoprint/plugins/logging/static/less/logging.less
 ${PYSITELIB}/octoprint/plugins/logging/templates/logging_navbar_plugintimingslog.jinja2
 ${PYSITELIB}/octoprint/plugins/logging/templates/logging_navbar_seriallog.jinja2
 ${PYSITELIB}/octoprint/plugins/logging/templates/logging_settings.jinja2
-${PYSITELIB}/octoprint/plugins/pi_support/__init__.py
-${PYSITELIB}/octoprint/plugins/pi_support/__init__.pyc
-${PYSITELIB}/octoprint/plugins/pi_support/__init__.pyo
-${PYSITELIB}/octoprint/plugins/pi_support/static/clientjs/pi_support.js
-${PYSITELIB}/octoprint/plugins/pi_support/static/css/pi_support.css
-${PYSITELIB}/octoprint/plugins/pi_support/static/js/pi_support.js
-${PYSITELIB}/octoprint/plugins/pi_support/templates/pi_support_about_octopi.jinja2
-${PYSITELIB}/octoprint/plugins/pi_support/templates/pi_support_navbar.jinja2
-${PYSITELIB}/octoprint/plugins/pi_support/templates/pi_support_settings.jinja2
 ${PYSITELIB}/octoprint/plugins/pluginmanager/__init__.py
 ${PYSITELIB}/octoprint/plugins/pluginmanager/__init__.pyc
 ${PYSITELIB}/octoprint/plugins/pluginmanager/__init__.pyo
@@ -483,6 +477,7 @@ ${PYSITELIB}/octoprint/static/js/app/viewmodels/wizard.js
 ${PYSITELIB}/octoprint/static/js/lib/README.txt
 ${PYSITELIB}/octoprint/static/js/lib/ResizeSensor.js
 ${PYSITELIB}/octoprint/static/js/lib/avltree.js
+${PYSITELIB}/octoprint/static/js/lib/babel-polyfill.min.js
 ${PYSITELIB}/octoprint/static/js/lib/babel.js
 ${PYSITELIB}/octoprint/static/js/lib/bootstrap-slider-knockout-binding.js
 ${PYSITELIB}/octoprint/static/js/lib/bootstrap/bootstrap-modal.js
@@ -506,7 +501,7 @@ ${PYSITELIB}/octoprint/static/js/lib/jquery/jquery.qrcode.min.js
 ${PYSITELIB}/octoprint/static/js/lib/jquery/jquery.slimscroll.min.js
 ${PYSITELIB}/octoprint/static/js/lib/knockout.js
 ${PYSITELIB}/octoprint/static/js/lib/knockout.mapping-latest.js
-${PYSITELIB}/octoprint/static/js/lib/less.min.js
+${PYSITELIB}/octoprint/static/js/lib/less.js
 ${PYSITELIB}/octoprint/static/js/lib/lodash.js
 ${PYSITELIB}/octoprint/static/js/lib/lodash.min.js
 ${PYSITELIB}/octoprint/static/js/lib/loglevel.min.js
@@ -646,6 +641,7 @@ ${PYSITELIB}/octoprint/templates/javascripts-preload.jinja2
 ${PYSITELIB}/octoprint/templates/javascripts.jinja2
 ${PYSITELIB}/octoprint/templates/login.jinja2
 ${PYSITELIB}/octoprint/templates/navbar/login.jinja2
+${PYSITELIB}/octoprint/templates/navbar/offlineindicator.jinja2
 ${PYSITELIB}/octoprint/templates/navbar/settings.jinja2
 ${PYSITELIB}/octoprint/templates/navbar/systemmenu.jinja2
 ${PYSITELIB}/octoprint/templates/overlays/dragndrop.jinja2
@@ -688,6 +684,7 @@ ${PYSITELIB}/octoprint/templates/snippets/settings/server/serverPluginBlacklistT
 ${PYSITELIB}/octoprint/templates/snippets/settings/server/serverPluginBlacklistUrl.jinja2
 ${PYSITELIB}/octoprint/templates/snippets/settings/server/serverPluginTimings.jinja2
 ${PYSITELIB}/octoprint/templates/snippets/settings/webcam/ffmpegBitrate.jinja2
+${PYSITELIB}/octoprint/templates/snippets/settings/webcam/ffmpegCommandline.jinja2
 ${PYSITELIB}/octoprint/templates/snippets/settings/webcam/ffmpegPath.jinja2
 ${PYSITELIB}/octoprint/templates/snippets/settings/webcam/ffmpegThreads.jinja2
 ${PYSITELIB}/octoprint/templates/snippets/settings/webcam/ffmpegVideoCodec.jinja2
@@ -757,6 +754,9 @@ ${PYSITELIB}/octoprint/util/piptestballoon/setup.pyo
 ${PYSITELIB}/octoprint/util/platform/__init__.py
 ${PYSITELIB}/octoprint/util/platform/__init__.pyc
 ${PYSITELIB}/octoprint/util/platform/__init__.pyo
+${PYSITELIB}/octoprint/util/text.py
+${PYSITELIB}/octoprint/util/text.pyc
+${PYSITELIB}/octoprint/util/text.pyo
 ${PYSITELIB}/octoprint/util/version.py
 ${PYSITELIB}/octoprint/util/version.pyc
 ${PYSITELIB}/octoprint/util/version.pyo
