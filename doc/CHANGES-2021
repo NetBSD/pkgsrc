@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3077 2021/05/30 15:42:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3078 2021/05/30 15:56:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-vctrs to 0.3.8 [mef 2021-05-30]
 	Updated lang/nim to 1.4.8 [ryoon 2021-05-30]
 	Updated security/ruby-oauth to 0.5.6 [taca 2021-05-30]
+	Updated time/R-lubridate to 1.7.10 [mef 2021-05-30]
