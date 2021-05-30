@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/05/27 20:44:36 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/30 06:43:45 pin Exp $
 
-DISTNAME=	kalk-0.5.2
+DISTNAME=	kalk-0.5.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaddiM8/}
-GITHUB_PROJECT=	kalk
-GITHUB_TAG=	5848c36125bb487c0f909faef965437e131e917c
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kalk.strct.net/
