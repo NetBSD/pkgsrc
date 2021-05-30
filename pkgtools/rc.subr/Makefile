@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/03/22 13:21:05 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2021/05/30 23:46:26 khorben Exp $
 #
 
-PKGNAME=		rc.subr-20181226
+PKGNAME=		rc.subr-20210517
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org
@@ -10,27 +10,34 @@ COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 LICENSE=		original-bsd
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-[0-4].*-* Interix-*-* IRIX*-*-*
-ONLY_FOR_PLATFORM+=	Linux-*-* OpenBSD-*-* QNX-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-* NetBSD-*-* OpenBSD-*-* QNX-*-* SunOS-*-*
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
-NOT_FOR_UNPRIVILEGED=	yes
 
 CHECK_FILES_SUPPORTED=	no
+BUILD_DEFS+=		SYSCONFBASE
 BUILD_DEFS+=		RCD_SCRIPTS_DIR
 
+
+SUBST_CLASSES+=		subr
+SUBST_STAGE.subr=	post-extract
+SUBST_FILES.subr=	rc.subr
+SUBST_VARS.subr=	SYSCONFBASE
+
+PLIST_SUBST+=		SYSCONFBASE=${SYSCONFBASE:S/^\///}
 PLIST_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:S/^\///}
 
-CONF_FILES+=		etc/rc.conf.example etc/rc.conf
+CONF_FILES+=		${SYSCONFBASE:S/^\///}/rc.conf.example ${SYSCONFBASE:S/^\///}/rc.conf
 
-INSTALLATION_DIRS=	etc ${RCD_SCRIPTS_DIR:S/^\///}
+INSTALLATION_DIRS=	${SYSCONFBASE:S/^\///} ${RCD_SCRIPTS_DIR:S/^\///}
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/rc.conf.example ${DESTDIR}${PREFIX}etc/rc.conf.example
-	${INSTALL_DATA} ${WRKSRC}/rc.subr ${DESTDIR}${PREFIX}etc/rc.subr
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.example ${DESTDIR}${PREFIX}${SYSCONFBASE}/rc.conf.example
+	${INSTALL_DATA} ${WRKSRC}/rc.subr ${DESTDIR}${PREFIX}${SYSCONFBASE}/rc.subr
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/DAEMON ${DESTDIR}${PREFIX}${RCD_SCRIPTS_DIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/LOGIN ${DESTDIR}${PREFIX}${RCD_SCRIPTS_DIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/NETWORKING ${DESTDIR}${PREFIX}${RCD_SCRIPTS_DIR}
