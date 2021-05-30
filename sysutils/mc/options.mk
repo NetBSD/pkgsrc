@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.15 2019/11/04 21:28:48 rillig Exp $
+# $NetBSD: options.mk,v 1.16 2021/05/30 19:56:38 thor Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses slang
-PKG_SUPPORTED_OPTIONS=		mc-charset x11
+PKG_SUPPORTED_OPTIONS=		mc-charset x11 smb sftp
 PKG_SUGGESTED_OPTIONS=		mc-charset slang
 
 .include "../../mk/bsd.options.mk"
@@ -39,4 +39,18 @@ CONFIGURE_ARGS+=	--with-screen=ncurses
 .include "../../devel/ncurses/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-screen=mcslang
+.endif
+
+.if !empty(PKG_OPTIONS:Msmb)
+CONFIGURE_ARGS+=	--enable-vfs-smb
+.include "../../net/samba4/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-vfs-smb
+.endif
+
+.if !empty(PKG_OPTIONS:Msftp)
+CONFIGURE_ARGS+=	--enable-vfs-sftp
+.include "../../security/libssh2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-vfs-sftp
 .endif
