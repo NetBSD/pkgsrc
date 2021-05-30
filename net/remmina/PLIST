@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/13 04:37:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/05/30 05:09:50 ryoon Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -71,6 +71,7 @@ share/icons/hicolor/scalable/actions/remmina-scale-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-switch-page-symbolic.svg
 share/icons/hicolor/scalable/actions/remmina-system-run-symbolic.svg
 share/icons/hicolor/scalable/actions/view-list.svg
+share/icons/hicolor/scalable/apps/org.remmina.Remmina-symbolic.svg
 share/icons/hicolor/scalable/apps/org.remmina.Remmina.svg
 share/icons/hicolor/scalable/apps/remmina-panel-inverted.svg
 share/icons/hicolor/scalable/apps/remmina-panel.svg
