@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3057 2021/05/30 08:06:08 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3058 2021/05/30 08:58:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-hyphen-ukrainian to 2021 [markd 2021-05-30]
 	Updated print/tex-hyphen-uppersorbian to 2021 [markd 2021-05-30]
 	Updated print/tex-hyphen-welsh to 2021 [markd 2021-05-30]
+	Updated devel/ruby-tins to 1.29.1 [taca 2021-05-30]
