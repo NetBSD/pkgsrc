@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/05/25 16:57:46 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/05/30 16:54:04 pin Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -292,10 +292,10 @@ SHA1 (quote-1.0.9.crate) = 7e27d33619123ef5f370d3ed0b59a6180249823d
 RMD160 (quote-1.0.9.crate) = fb5820ff3e8936a528b67af76d5380f92996840c
 SHA512 (quote-1.0.9.crate) = dd6cdaea183b85400531ef01e56657edbec0d8f7c27898c1e591b72dff755fa5875b33ca320bd65be0e9aecfc6a61ec119a4bd1291e9f2057fca642ab5b198c8
 Size (quote-1.0.9.crate) = 25042 bytes
-SHA1 (rates-0.4.0.tar.gz) = 83fabeced8cb541a66006daf00cb453022cbb3d9
-RMD160 (rates-0.4.0.tar.gz) = ed7ee0213fef8266b2950139a7e1e42d0844804f
-SHA512 (rates-0.4.0.tar.gz) = e4c0fb45520a1793005a4cc2e33bb395b7148395b5ca1308a835df5576b6f4ceb0bafd20fa1769417dcb98dcb24f387edb3d9e8faebf50db4b2737feb721deee
-Size (rates-0.4.0.tar.gz) = 70550 bytes
+SHA1 (rates-0.5.0.tar.gz) = 41b719f6cbed0e78e260431259e920916c804c69
+RMD160 (rates-0.5.0.tar.gz) = b48b97cfb5d9b3649040d16aca2420d5b2205f2e
+SHA512 (rates-0.5.0.tar.gz) = f7c119179174956219126679306c997a709e1f3fad04a4033fdc95a62a7e163cdc9d8847ebc4a6fdacee90050cb0ec1f8ef0ee54d2ff2132c7c7a30fd1d6184c
+Size (rates-0.5.0.tar.gz) = 70676 bytes
 SHA1 (redox_syscall-0.1.57.crate) = 7b7b26dca5b32f54c0ecb5578dae3fffe2f76eab
 RMD160 (redox_syscall-0.1.57.crate) = 759f2cfa7e2a6b6402d35e565527727c7e134090
 SHA512 (redox_syscall-0.1.57.crate) = c6e187087060084b7173ed0d9d0e982e4259d4f76522112268c02ff20751382e3bc8e119da6153170f5c54bd5b9cb028910f2f85c1c842099205dccd44659184
