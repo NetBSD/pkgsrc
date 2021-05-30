@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/12/04 20:45:22 nia Exp $
+# $NetBSD: Makefile,v 1.37 2021/05/30 12:12:29 nia Exp $
 
 DISTNAME=	lensfun-0.3.2
 PKGREVISION=	3
@@ -19,6 +19,11 @@ REPLACE_PYTHON+=	apps/lensfun-add-adapter
 REPLACE_PYTHON+=	apps/lensfun-update-data
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "x86_64"
+CMAKE_ARGS+=		-DBUILD_FOR_SSE=OFF
+CMAKE_ARGS+=		-DBUILD_FOR_SSE2=OFF
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
