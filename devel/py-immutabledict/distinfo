@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/30 21:30:17 khorben Exp $
+
+SHA1 (immutabledict-2.0.0.tar.gz) = 8f03b07d4064e86863a2e8a6e4661a3ddfc4b945
+RMD160 (immutabledict-2.0.0.tar.gz) = 933882be8ab29b6785590daef233eede4e919854
+SHA512 (immutabledict-2.0.0.tar.gz) = 9274f8cf561c3773e32f37d23791a19dbaee3c3d7cdf7589054dc773a0a14b5362c92dcf989530d85eb9410b013179b69a083eebde678dee22e284e610578621
+Size (immutabledict-2.0.0.tar.gz) = 3827 bytes
