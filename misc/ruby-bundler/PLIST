@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/02/03 14:25:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/05/30 11:08:38 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -170,7 +170,9 @@ ${GEM_LIBDIR}/lib/bundler/source/path.rb
 ${GEM_LIBDIR}/lib/bundler/source/path/installer.rb
 ${GEM_LIBDIR}/lib/bundler/source/rubygems.rb
 ${GEM_LIBDIR}/lib/bundler/source/rubygems/remote.rb
+${GEM_LIBDIR}/lib/bundler/source/rubygems_aggregate.rb
 ${GEM_LIBDIR}/lib/bundler/source_list.rb
+${GEM_LIBDIR}/lib/bundler/source_map.rb
 ${GEM_LIBDIR}/lib/bundler/spec_set.rb
 ${GEM_LIBDIR}/lib/bundler/stub_specification.rb
 ${GEM_LIBDIR}/lib/bundler/templates/.document
