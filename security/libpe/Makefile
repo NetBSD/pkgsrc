@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2021/05/29 23:23:42 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2021/05/30 00:49:51 khorben Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-0.81
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=merces/}
+.include "../../security/libpe/Makefile.common"
+
+DISTNAME=	${GITHUB_PROJECT}-${PEV_VERSION}
 GITHUB_PROJECT=	libpe
 GITHUB_TAG=	ce39b127328e3863e08163962f7ecc768eb2555e
 
-MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://pev.sourceforge.io/
 COMMENT=	The PE library used by pev - the PE file toolkit
 LICENSE=	gnu-lgpl-v3
-
-USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	prefix=${PREFIX}
