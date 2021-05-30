@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.16 2019/10/11 11:56:06 triaxx Exp $
+# $NetBSD: rc.subr,v 1.17 2021/05/30 23:46:26 khorben Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,6 +34,7 @@
 #	global variables
 #	----------------
 
+sysconfbase=@SYSCONFBASE@
 _RCCMD_chown="/usr/sbin/chown"
 _RCCMD_chroot="/usr/sbin/chroot"
 _RCCMD_ci="/usr/bin/ci"
@@ -857,14 +858,14 @@ load_rc_config()
 	if ${_rc_conf_loaded:-false}; then
 		:
 	else
-		. /etc/rc.conf
+		. ${sysconfbase}/rc.conf
 		_rc_conf_loaded=true
 	fi
-	if [ "$_osname" = "OpenBSD" ] && [ -f /etc/rc.conf.local ]; then
-		. /etc/rc.conf.local
+	if [ "$_osname" = "OpenBSD" ] && [ -f ${sysconfbase}/rc.conf.local ]; then
+		. ${sysconfbase}/rc.conf.local
 	fi
-	if [ -f /etc/rc.conf.d/"$_command" ]; then
-		. /etc/rc.conf.d/"$_command"
+	if [ -f ${sysconfbase}/rc.conf.d/"$_command" ]; then
+		. ${sysconfbase}/rc.conf.d/"$_command"
 	fi
 }
 
