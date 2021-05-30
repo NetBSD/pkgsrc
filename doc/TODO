@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20693 2021/05/30 09:08:48 wiz Exp $
+$NetBSD: TODO,v 1.20694 2021/05/30 13:19:17 mef Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-usethis-2.0.1
 	o R-utf8-1.2.1
 	o R-uuid-4
-	o R-vctrs-0.3.7
 	o R-viridis-0.6.0
 	o R-viridisLite-0.4.0
 	o R-waldo-0.2.5
