@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3050 2021/05/30 01:53:33 mcf Exp $
+$NetBSD: CHANGES-2021,v 1.3051 2021/05/30 02:40:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/yara to 4.1.1 [khorben 2021-05-30]
 	Updated security/ssdeep to 2.14.1 [khorben 2021-05-30]
 	Updated devel/valgrind to 3.17.0 [mcf 2021-05-30]
+	Added devel/R-disposables version 1.0.3 [mef 2021-05-30]
