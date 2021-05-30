@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/09 19:18:47 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/05/30 15:42:22 taca Exp $
 bin/oauth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -42,6 +42,7 @@ ${GEM_LIBDIR}/lib/oauth/server.rb
 ${GEM_LIBDIR}/lib/oauth/signature.rb
 ${GEM_LIBDIR}/lib/oauth/signature/base.rb
 ${GEM_LIBDIR}/lib/oauth/signature/hmac/sha1.rb
+${GEM_LIBDIR}/lib/oauth/signature/hmac/sha256.rb
 ${GEM_LIBDIR}/lib/oauth/signature/plaintext.rb
 ${GEM_LIBDIR}/lib/oauth/signature/rsa/sha1.rb
 ${GEM_LIBDIR}/lib/oauth/token.rb
