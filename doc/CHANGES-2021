@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3051 2021/05/30 02:40:43 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3052 2021/05/30 05:10:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ssdeep to 2.14.1 [khorben 2021-05-30]
 	Updated devel/valgrind to 3.17.0 [mcf 2021-05-30]
 	Added devel/R-disposables version 1.0.3 [mef 2021-05-30]
+	Updated net/remmina to 1.4.17 [ryoon 2021-05-30]
