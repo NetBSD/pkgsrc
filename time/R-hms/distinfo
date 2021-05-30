@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:56:46 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/05/30 07:02:18 mef Exp $
 
-SHA1 (R/hms_0.5.0.tar.gz) = e5257ca2ee658dfe766f2a62b6570c9c77b7f734
-RMD160 (R/hms_0.5.0.tar.gz) = c07aabbd335fbda91bef9ddc0171494021c9994c
-SHA512 (R/hms_0.5.0.tar.gz) = b4c2ac8bd5425e7ed3607d215d98947d5fb225dbe80fa061306ef6a6803be6c255cfdd196ab273861c2fce84414b65ba5342524fe3e46b111fa10496fd392531
-Size (R/hms_0.5.0.tar.gz) = 136036 bytes
+SHA1 (R/hms_1.1.0.tar.gz) = 27bebd579ad29d663797e4058f3f4f88a9361a38
+RMD160 (R/hms_1.1.0.tar.gz) = dfd03b63c8f356012c7e6a2372cf9e119396182e
+SHA512 (R/hms_1.1.0.tar.gz) = 9d53858655ceb88e0184dfe4fe44da1ee6a3144325add17b3e208202eed976897b8fcf4c2aef0d47af89b86697b71da26fc5ed612a1aa78caae4701d40b62a41
+Size (R/hms_1.1.0.tar.gz) = 43142 bytes
