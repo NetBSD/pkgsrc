@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3048 2021/05/30 01:41:42 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3049 2021/05/30 01:50:27 mcf Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4683,3 +4683,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-yara to 4.1.0 [khorben 2021-05-30]
 	Updated security/yara to 4.1.1 [khorben 2021-05-30]
 	Updated security/ssdeep to 2.14.1 [khorben 2021-05-30]
+	Updated devel/valgrind to 3.17.0 [mcf 2021-05-30]
+	Updated devel/valgrind to 3.17.0 [mcf 2021-05-30]
