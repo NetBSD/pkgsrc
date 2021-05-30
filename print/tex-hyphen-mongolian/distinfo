@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 20:05:53 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:46 markd Exp $
 
-SHA1 (tex-hyphen-mongolian-51186/hyphen-mongolian.tar.xz) = eede7519de7172686f4baf975761020c3e748dc0
-RMD160 (tex-hyphen-mongolian-51186/hyphen-mongolian.tar.xz) = 16ec54333e2ae395c21502af09c3105acf870c26
-SHA512 (tex-hyphen-mongolian-51186/hyphen-mongolian.tar.xz) = 0a4f14b167afc1bb4b017978a61aacc40b27ab13f26aae90f3d970a5ec97f2d8b2ddda992bf83488821d2fc58238c4d4197f91586e36f3812271d2ff5ef66663
-Size (tex-hyphen-mongolian-51186/hyphen-mongolian.tar.xz) = 10400 bytes
+SHA1 (hyphen-mongolian.r58652.tar.xz) = 6ab9dc375dbadaaceec6f7dc5ff07b035e0ec180
+RMD160 (hyphen-mongolian.r58652.tar.xz) = b1967b935ac319788e44011031275f23a8d4ca1d
+SHA512 (hyphen-mongolian.r58652.tar.xz) = 159562a8feb25918bc422e7dc78a46423c7fff2f3c61016a0162761411999a5555be3c6e36cf967d5034f65c12f4b0834ae0c0423c2f3ab17a65034b1803dc72
+Size (hyphen-mongolian.r58652.tar.xz) = 10440 bytes

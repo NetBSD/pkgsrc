@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2020/05/10 04:32:00 markd Exp $
+# $NetBSD: Makefile,v 1.10 2021/05/30 08:04:44 markd Exp $
 
 DISTNAME=	hyphen-english
-PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	58609
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	English hyphenation patterns
 LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 
 TEX_HYPHEN_DAT+=	usenglishmax loadhyph-en-us.tex
 TEX_HYPHEN_DAT+=	ukenglish loadhyph-en-gb.tex
@@ -38,6 +37,5 @@ TEX_HYPHEN_LUA+=	['ukenglish']={ \
 			  hyphenation='hyph-en-gb.hyp.txt', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

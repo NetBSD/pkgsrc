@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 19:53:45 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:45 markd Exp $
 
-SHA1 (tex-hyphen-irish-51186/hyphen-irish.tar.xz) = 7048b784c27380265c70953dc0ea59a5e1a84b20
-RMD160 (tex-hyphen-irish-51186/hyphen-irish.tar.xz) = b845db86e8e9e26db46f6631e61dc061c078c2db
-SHA512 (tex-hyphen-irish-51186/hyphen-irish.tar.xz) = f0f577439fcc997b0b634c7fab538d56438a670f4f08b7189bddef7d5a88fd842c4595332544ea4ff2bec70d55c67a8684de170db0388a13251f3f5b2079847c
-Size (tex-hyphen-irish-51186/hyphen-irish.tar.xz) = 30400 bytes
+SHA1 (hyphen-irish.r58609.tar.xz) = e173a7a869f4ef692d68712e328f52de9b962f7f
+RMD160 (hyphen-irish.r58609.tar.xz) = f86d97bd6cf3e0ff7f37c290ec4b4c92a3aaeb50
+SHA512 (hyphen-irish.r58609.tar.xz) = 478a77c4ab8231a3041c3427075f16c072f58a394eced8ff0cd5da6544f3f2fd65722f33fd8344e18060c96f09bd18b90af71f8508639fc9c59d29d704d9e348
+Size (hyphen-irish.r58609.tar.xz) = 30404 bytes
