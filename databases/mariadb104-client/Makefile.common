@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2021/05/25 11:18:25 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2021/05/30 16:33:29 nia Exp $
 #
 # used by databases/mariadb104-client/Makefile
 # used by databases/mariadb104-server/Makefile
@@ -83,9 +83,7 @@ CMAKE_ARGS+=		-DTOKUDB_OK=OFF
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
-CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
-CPPFLAGS.SunOS+=	-fPIC
+CFLAGS.SunOS+=		-fPIC
 
 REPLACE_PERL+=		scripts/mytop.sh
 REPLACE_PERL+=		sql-bench/*.sh
@@ -107,4 +105,5 @@ PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
