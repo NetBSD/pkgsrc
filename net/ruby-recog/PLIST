@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/05 14:58:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/05/30 11:14:15 taca Exp $
 bin/recog_cleanup${RUBY_SUFFIX}
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
@@ -43,6 +43,7 @@ ${GEM_LIBDIR}/features/support/aruba.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/verify.feature
 ${GEM_LIBDIR}/identifiers/README.md
+${GEM_LIBDIR}/identifiers/fields.txt
 ${GEM_LIBDIR}/identifiers/hw_device.txt
 ${GEM_LIBDIR}/identifiers/hw_family.txt
 ${GEM_LIBDIR}/identifiers/hw_product.txt
