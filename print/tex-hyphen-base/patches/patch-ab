@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.15 2020/05/01 04:51:45 markd Exp $
+$NetBSD: patch-ab,v 1.16 2021/05/30 08:04:42 markd Exp $
 
---- tex/generic/config/language.def.orig	2020-04-15 23:56:28.000000000 +0000
+--- tex/generic/config/language.def.orig	2021-03-22 21:59:21.000000000 +0000
 +++ tex/generic/config/language.def
-@@ -28,165 +28,6 @@
+@@ -28,166 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
 -% from dehyph-exptl:
--\addlanguage{german-x-2019-04-04}{dehypht-x-2019-04-04.tex}{}{2}{2}
--\addlanguage{german-x-latest}{dehypht-x-2019-04-04.tex}{}{2}{2}
--\addlanguage{ngerman-x-2019-04-04}{dehyphn-x-2019-04-04.tex}{}{2}{2}
--\addlanguage{ngerman-x-latest}{dehyphn-x-2019-04-04.tex}{}{2}{2}
+-\addlanguage{german-x-2021-02-26}{dehypht-x-2021-02-26.tex}{}{2}{2}
+-\addlanguage{german-x-latest}{dehypht-x-2021-02-26.tex}{}{2}{2}
+-\addlanguage{ngerman-x-2021-02-26}{dehyphn-x-2021-02-26.tex}{}{2}{2}
+-\addlanguage{ngerman-x-latest}{dehyphn-x-2021-02-26.tex}{}{2}{2}
 -% from hyphen-afrikaans:
 -\addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
 -% from hyphen-ancientgreek:
@@ -60,6 +60,7 @@ $NetBSD: patch-ab,v 1.15 2020/05/01 04:51:45 markd Exp $
 -\addlanguage{persian}{zerohyph.tex}{}{2}{3}
 -% from hyphen-finnish:
 -\addlanguage{finnish}{loadhyph-fi.tex}{}{2}{2}
+-\addlanguage{schoolfinnish}{loadhyph-fi-x-school.tex}{}{1}{1}
 -% from hyphen-french:
 -\addlanguage{french}{loadhyph-fr.tex}{}{2}{2}
 -\addlanguage{patois}{loadhyph-fr.tex}{}{2}{2}

@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2020/05/10 04:32:01 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/05/30 08:04:45 markd Exp $
 
 DISTNAME=	hyphen-greek
-PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	58652
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation for Greek text
 LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 
 TEX_HYPHEN_DAT+=	monogreek loadhyph-el-monoton.tex
 TEX_HYPHEN_DAT+=	greek loadhyph-el-polyton.tex
@@ -35,6 +34,5 @@ TEX_HYPHEN_LUA+=	['greek']={ \
 			  hyphenation='', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
