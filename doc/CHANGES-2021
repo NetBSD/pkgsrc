@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3044 2021/05/29 23:28:51 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3045 2021/05/30 01:16:51 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4679,3 +4679,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/fwknop to 2.6.10 [khorben 2021-05-29]
 	Added security/libpe version 0.81 [khorben 2021-05-29]
 	Updated security/pev to 0.81 [khorben 2021-05-29]
+	Updated security/yara to 4.1.0 [khorben 2021-05-30]
