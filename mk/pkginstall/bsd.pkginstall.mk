@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.74 2020/05/09 16:48:57 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.75 2021/05/30 23:41:05 khorben Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -146,6 +146,7 @@ INSTALL_SRC?=		${_INSTALL_TEMPLATES}
 #
 FILES_SUBST+=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE:Q}
+FILES_SUBST+=		SYSCONFBASE=${SYSCONFBASE:Q}
 FILES_SUBST+=		X11BASE=${X11BASE:Q}
 FILES_SUBST+=		VARBASE=${VARBASE:Q}
 FILES_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}

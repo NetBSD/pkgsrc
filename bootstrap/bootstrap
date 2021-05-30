@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.299 2021/04/28 11:14:51 maya Exp $
+# $NetBSD: bootstrap,v 1.300 2021/05/30 23:41:05 khorben Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -74,6 +74,7 @@ usage="Usage: $0 "'
     [ --prefix <prefix> ]
     [ --preserve-path ]
     [ --quiet ]
+    [ --sysconfbase <sysconfbase> ]
     [ --sysconfdir <sysconfdir> ]
     [ --unprivileged | --ignore-user-check ]
     [ --varbase <varbase> ]
@@ -413,6 +414,7 @@ prefix=
 pkgdbdir=
 pkginfodir=
 pkgmandir=
+sysconfbase=
 sysconfdir=
 varbase=
 
@@ -440,6 +442,8 @@ while [ $# -gt 0 ]; do
 	--pkginfodir)	pkginfodir="$2"; shift ;;
 	--pkgmandir=*)	pkgmandir=`get_optarg "$1"` ;;
 	--pkgmandir)	pkgmandir="$2"; shift ;;
+	--sysconfbase=*)sysconfbase=`get_optarg "$1"` ;;
+	--sysconfbase)	sysconfbase="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--varbase=*)	varbase=`get_optarg "$1"` ;;
@@ -485,6 +489,7 @@ while [ $# -gt 0 ]; do
 done
 
 checkarg_sane_absolute_path "$pkgdbdir" "--pkgdbdir"
+checkarg_sane_absolute_path "$sysconfbase" "--sysconfbase"
 checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
 checkarg_sane_absolute_path "$varbase" "--varbase"
 checkarg_sane_relative_path "$pkginfodir" "--pkginfodir"
@@ -500,6 +505,7 @@ if [ "$unprivileged" = "yes" ]; then
 	[ -z "$prefix" ] && prefix=${HOME}/pkg
 elif [ -z "$prefix" -o "$prefix" = "/usr/pkg" ]; then
 	prefix=/usr/pkg
+	[ -z "$sysconfbase" ] && sysconfbase=/etc
 	[ -z "$varbase" ] && varbase=/var
 fi
 checkarg_sane_absolute_path "$prefix" "--prefix"
@@ -510,9 +516,11 @@ checkarg_sane_absolute_path "$prefix" "--prefix"
 if [ "$prefix" = "/usr" ]; then
 	[ -z "$pkginfodir" ] && pkginfodir=share/info
 	[ -z "$pkgmandir" ] && pkgmandir=share/man
+	[ -z "$sysconfbase" ] && sysconfbase=/etc
 else
 	[ -z "$pkginfodir" ] && pkginfodir=info
 	[ -z "$pkgmandir" ] && pkgmandir=man
+	[ -z "$sysconfbase" ] && sysconfbase=${prefix}/etc
 fi
 infodir=${prefix}/${pkginfodir}
 mandir=${prefix}/${pkgmandir}
@@ -1087,6 +1095,9 @@ fi
 # save environment in example mk.conf
 echo "PKG_DBDIR=		$pkgdbdir" >> ${TARGET_MKCONF}
 echo "LOCALBASE=		$prefix" >> ${TARGET_MKCONF}
+if [ "${sysconfbase}" != "/etc" ]; then
+echo "SYSCONFBASE=		$sysconfbase" >> ${TARGET_MKCONF}
+fi
 echo "VARBASE=		$varbase" >> ${TARGET_MKCONF}
 if [ "${sysconfdir}" != "${prefix}/etc" ]; then
 	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${TARGET_MKCONF}
