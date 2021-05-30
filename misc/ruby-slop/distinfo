@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/09/14 13:21:09 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 09:55:25 taca Exp $
 
-SHA1 (slop-4.8.2.gem) = 2579f6be10995a126c39bcf2d7f4daa4f75347db
-RMD160 (slop-4.8.2.gem) = 5bc091f2cfe35f66538130ecd73d5e7ed813956d
-SHA512 (slop-4.8.2.gem) = 2c395159ca8eb84dc3fc22d2dd866bac0e1311c7936094ab1961f169c5155cf6bb219b2d1fecd029f2cce21e24a96339f9247f2738f77b5cfeabb85731018869
-Size (slop-4.8.2.gem) = 19968 bytes
+SHA1 (slop-4.9.1.gem) = b6cffbadb1116615c62d67c91027a9c7fe8d8489
+RMD160 (slop-4.9.1.gem) = a3dc395fa7c6d994fac3d24d25c261a0ef5eee6f
+SHA512 (slop-4.9.1.gem) = 711d0ccbff1bf49dd63f57112c0d81d85b729d8e08c98ed71441a073ef11ba3710a8da181101f30c159074624287b7db1b2931be82af4c48322085db89e849d1
+Size (slop-4.9.1.gem) = 20480 bytes
