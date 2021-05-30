@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3076 2021/05/30 13:46:31 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3077 2021/05/30 15:42:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-nexpose to 7.3.0 [taca 2021-05-30]
 	Updated math/R-vctrs to 0.3.8 [mef 2021-05-30]
 	Updated lang/nim to 1.4.8 [ryoon 2021-05-30]
+	Updated security/ruby-oauth to 0.5.6 [taca 2021-05-30]
