@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3055 2021/05/30 07:02:35 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3056 2021/05/30 07:05:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4685,12 +4685,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ssdeep to 2.14.1 [khorben 2021-05-30]
 	Updated devel/valgrind to 3.17.0 [mcf 2021-05-30]
 	Added devel/R-disposables version 1.0.3 [mef 2021-05-30]
-<<<<<<< CHANGES-2021
 	Updated devel/R-pkgconfig to 2.0.3 [mef 2021-05-30]
 	Updated math/R-ellipsis to 0.3.2 [mef 2021-05-30]
-=======
 	Updated net/remmina to 1.4.17 [ryoon 2021-05-30]
 	Updated www/php-nextcloud to 21.0.2 [ryoon 2021-05-30]
 	Updated math/kalk to 0.5.3 [pin 2021-05-30]
->>>>>>> 1.3054
 	Updated time/R-hms to 1.1.0 [mef 2021-05-30]
