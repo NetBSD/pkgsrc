@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2020/11/12 06:37:18 adam Exp $
+# $NetBSD: options.mk,v 1.13 2021/05/30 20:02:31 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
@@ -13,6 +13,11 @@ PKG_SUPPORTED_OPTIONS+=	acl
 
 .if empty(MACHINE_PLATFORM:MDarwin-1[1-9].*)
 PKG_SUGGESTED_OPTIONS+=	ads
+.endif
+
+.if ${OPSYS} == "Linux"
+PKG_SUPPORTED_OPTIONS+=	snapper
+PKG_SUGGESTED_OPTIONS+=	snapper
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -107,4 +112,14 @@ CONFIGURE_ARGS+=	--without-winbind
 CONFIGURE_ARGS+=	--enable-avahi
 .else
 CONFIGURE_ARGS+=	--disable-avahi
+.endif
+
+.if ${OPSYS} == "Linux"
+PLIST_VARS+=	snapper
+.  if !empty(PKG_OPTIONS:Msnapper)
+.include "../../sysutils/dbus/buildlink3.mk"
+PLIST.snapper=	yes
+.  else
+CONFIGURE_ARGS+=	--with-shared-modules='!vfs_snapper'
+.  endif
 .endif
