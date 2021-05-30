@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3084 2021/05/30 21:31:33 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3085 2021/05/30 21:48:37 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/py-octoprint-firmwarecheck to 2021.2.4 [khorben 2021-05-30]
 	Updated print/py-octoprint-filecheck to 2021.2.23 [khorben 2021-05-30]
 	Added devel/py-immutabledict version 2.0.0 [khorben 2021-05-30]
+	Updated archivers/py-zipstream to 1.1.8 [khorben 2021-05-30]
