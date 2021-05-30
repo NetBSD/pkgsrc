@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 21:13:01 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/05/30 01:16:28 khorben Exp $
 
-DISTNAME=	yara-python-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-yara-${VERSION}
+DISTNAME=	yara-python-${YARA_VERSION}
+PKGNAME=	${PYPKGPREFIX}-yara-${YARA_VERSION}
 CATEGORIES=	security python
 GITHUB_PROJECT=	yara-python
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 
 COMMENT=	Yara python bindings
-
-PYTHON_VERSIONS_ACCEPTED=	27
+LICENSE=	apache-2.0
 
 .include "../../security/yara/Makefile.common"
 .include "../../security/yara/buildlink3.mk"
