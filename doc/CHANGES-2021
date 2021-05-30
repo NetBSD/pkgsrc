@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3082 2021/05/30 21:27:56 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3083 2021/05/30 21:29:26 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4778,3 +4778,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/vault to 1.6.5 [he 2021-05-30]
 	Added print/py-octoprint-pisupport version 2021.3.26.post2 [khorben 2021-05-30]
 	Updated print/py-octoprint-firmwarecheck to 2021.2.4 [khorben 2021-05-30]
+	Updated print/py-octoprint-filecheck to 2021.2.23 [khorben 2021-05-30]
