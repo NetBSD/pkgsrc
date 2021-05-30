@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/17 18:15:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/30 12:32:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
@@ -7,6 +7,18 @@ ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/README.md
+${GEM_LIBDIR}/lib/eso.rb
+${GEM_LIBDIR}/lib/eso/conductor.rb
+${GEM_LIBDIR}/lib/eso/configuration/configuration.rb
+${GEM_LIBDIR}/lib/eso/configuration/configuration_manager.rb
+${GEM_LIBDIR}/lib/eso/filter.rb
+${GEM_LIBDIR}/lib/eso/integration_option.rb
+${GEM_LIBDIR}/lib/eso/integration_options_manager.rb
+${GEM_LIBDIR}/lib/eso/nexpose.rb
+${GEM_LIBDIR}/lib/eso/service.rb
+${GEM_LIBDIR}/lib/eso/step.rb
+${GEM_LIBDIR}/lib/eso/step_configuration.rb
+${GEM_LIBDIR}/lib/eso/workflow.rb
 ${GEM_LIBDIR}/lib/nexpose.rb
 ${GEM_LIBDIR}/lib/nexpose/ajax.rb
 ${GEM_LIBDIR}/lib/nexpose/alert.rb
