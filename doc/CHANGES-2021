@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3069 2021/05/30 11:37:23 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3070 2021/05/30 11:41:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4765,3 +4765,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-ruby_smb to 2.0.10 [taca 2021-05-30]
 	Updated net/ruby-train-core to 3.7.2 [taca 2021-05-30]
 	Updated security/ruby-metasploit-concern to 4.0.2 [taca 2021-05-30]
+	Updated security/ruby-metasploit-model to 4.0.2 [taca 2021-05-30]
