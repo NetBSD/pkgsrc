@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2020/09/29 03:17:19 khorben Exp $
+# $NetBSD: Makefile.common,v 1.3 2021/05/30 12:17:48 nia Exp $
 #
 # used by devel/deepstate/Makefile
 # used by devel/deepstate-afl/Makefile
@@ -19,3 +19,15 @@ COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
 LICENSE=	apache-2.0
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/deepstate/distinfo
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# Wants to build 32-bit binaries with -m32, which is unsupported on
+# NetBSD/aarch64.
+BROKEN_EXCEPT_ON_PLATFORM=	${LP64PLATFORMS}
+BROKEN_ON_PLATFORM+=		NetBSD-*-aarch64
+BROKEN_ON_PLATFORM+=		NetBSD-*-aarch64eb
+
+.if ${MACHINE_ARCH} != "x86_64"
+BUILDLINK_TRANSFORM+=	rm:-mno-avx
+.endif
