@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3080 2021/05/30 17:38:31 he Exp $
+$NetBSD: CHANGES-2021,v 1.3081 2021/05/30 21:21:12 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/R-lubridate to 1.7.10 [mef 2021-05-30]
 	Updated finance/rates to 0.5.0 [pin 2021-05-30]
 	Updated security/vault to 1.6.5 [he 2021-05-30]
+	Added print/py-octoprint-pisupport version 2021.3.26.post2 [khorben 2021-05-30]
