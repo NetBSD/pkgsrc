@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/30 21:30:17 khorben Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/immutabledict/__init__.py
+${PYSITELIB}/immutabledict/__init__.pyc
+${PYSITELIB}/immutabledict/__init__.pyo
+${PYSITELIB}/immutabledict/py.typed
