@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20688 2021/05/29 19:31:57 khorben Exp $
+$NetBSD: TODO,v 1.20689 2021/05/30 01:16:51 khorben Exp $
 
 Suggested new packages
 ======================
@@ -2396,7 +2396,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yacas-1.6.1
 	o yafc-1.1
 	o yahttp-0.2.1
-	o yara-4.1.0
 	o yaz-5.30.3
 	o yed-3.17.1
 	o yelp-tools-3.38.0
