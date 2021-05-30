@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/08/04 12:04:46 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/05/30 08:04:43 markd Exp $
 
-SHA1 (tex-hyphen-chinese-51186/hyphen-chinese.tar.xz) = 8c45c1f7717fe008c85ae8191393442069d6416d
-RMD160 (tex-hyphen-chinese-51186/hyphen-chinese.tar.xz) = a12d11fcf7cd40c5e7dfd2882c074921aa576260
-SHA512 (tex-hyphen-chinese-51186/hyphen-chinese.tar.xz) = 1b37c95821b46758e2ccb089f3897c1691e76e7c7aa760e45c0305835c8e4719751c53e6a1a28d2153184e6c1aa20bbd4595a4ccd55a7fc196dc36cead9e2f71
-Size (tex-hyphen-chinese-51186/hyphen-chinese.tar.xz) = 3208 bytes
+SHA1 (hyphen-chinese.r58652.tar.xz) = e1a891ff9ed833d5c82c7717b22a795caeb14d7f
+RMD160 (hyphen-chinese.r58652.tar.xz) = e544c9ce5cbda9f4f1d29ef6cb40b6bf1c50c96a
+SHA512 (hyphen-chinese.r58652.tar.xz) = a78b70095fcfe297e2d85a49108affd5d48451ff4740461eed46d395410a665011614c9a89dff37e9477ee3803de6ebaa68595ac39222f2968a4124355ea7fa7
+Size (hyphen-chinese.r58652.tar.xz) = 3216 bytes

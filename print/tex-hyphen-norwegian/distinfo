@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 20:07:57 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:46 markd Exp $
 
-SHA1 (tex-hyphen-norwegian-51186/hyphen-norwegian.tar.xz) = 454989fac11f8525393b7e443bf12ee417ccdac8
-RMD160 (tex-hyphen-norwegian-51186/hyphen-norwegian.tar.xz) = eb0e4fe0c555205d4f34dc3a5580d021aeabf3ba
-SHA512 (tex-hyphen-norwegian-51186/hyphen-norwegian.tar.xz) = 3bb97aef0042c3d863659a3f8921290ec9aab46f731a6908262f7f35f3843a4b2a0caaaa1d373d643e1bea43ddd57ad85b3c0fbb9a576461bcbe21fa8a067759
-Size (tex-hyphen-norwegian-51186/hyphen-norwegian.tar.xz) = 96216 bytes
+SHA1 (hyphen-norwegian.r58609.tar.xz) = 2c2e3a3f190324fa8632fb402390fd41e8c87bf5
+RMD160 (hyphen-norwegian.r58609.tar.xz) = b299461bb2982f57bdf263a098fb832f2c933e9c
+SHA512 (hyphen-norwegian.r58609.tar.xz) = 8b02e90bfcdf3c6d4bd1966b21e0512069f1749c638d537e9553f68e61e0bc325db8d3b462f45650db4376c7a769c2cde3e0c0601d7de272898a23cd2251c064
+Size (hyphen-norwegian.r58609.tar.xz) = 96200 bytes
