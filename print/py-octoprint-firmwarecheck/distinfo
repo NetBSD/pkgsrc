@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/16 18:56:27 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/05/30 21:27:38 khorben Exp $
 
-SHA1 (OctoPrint-FirmwareCheck-2020.09.23.tar.gz) = 66d5afd1a7216545ffc7be6f5ffbc5e66d46d5ad
-RMD160 (OctoPrint-FirmwareCheck-2020.09.23.tar.gz) = ee3f44ae5da164683604d18200cb8481ee77c39e
-SHA512 (OctoPrint-FirmwareCheck-2020.09.23.tar.gz) = 8690d37ef42ab9344d647344fd20160f3cb781a1a73a819dc956658f84d134483f77236fe8af3931c2211ca671f0243ca58511c61c59b73925920160ac342869
-Size (OctoPrint-FirmwareCheck-2020.09.23.tar.gz) = 42952 bytes
+SHA1 (OctoPrint-FirmwareCheck-2021.2.4.tar.gz) = 71572df95d2f26445cc50a5922ab28bb07e4ca35
+RMD160 (OctoPrint-FirmwareCheck-2021.2.4.tar.gz) = ed36b036c6f1f2f40a1b2eb3e73bfb5a702552e1
+SHA512 (OctoPrint-FirmwareCheck-2021.2.4.tar.gz) = 68ab9484da06b8675f180ef4107ff005b9c798c46dc5245d67ea62aff8e4ce4c0356e8a2ef7e251da19dc68fd4e0be74a9a6dc366b7ea4312ddddb5f4ec36528
+Size (OctoPrint-FirmwareCheck-2021.2.4.tar.gz) = 51708 bytes

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/16 18:56:27 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/05/30 21:27:38 khorben Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/octoprint_firmware_check/__init__.py
 ${PYSITELIB}/octoprint_firmware_check/__init__.pyc
@@ -14,6 +15,9 @@ ${PYSITELIB}/octoprint_firmware_check/checks/__init__.pyo
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_broken.py
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_broken.pyc
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_broken.pyo
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.py
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.pyc
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.pyo
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.py
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.pyc
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.pyo
@@ -21,6 +25,8 @@ ${PYSITELIB}/octoprint_firmware_check/static/clientjs/firmware_check.js
 ${PYSITELIB}/octoprint_firmware_check/static/css/firmware_check.css
 ${PYSITELIB}/octoprint_firmware_check/static/js/firmware_check.js
 ${PYSITELIB}/octoprint_firmware_check/static/less/firmware_check.less
-${PYSITELIB}/octoprint_firmware_check/templates/firmware_check_sidebar.jinja2
+${PYSITELIB}/octoprint_firmware_check/templates/firmware_check_settings.jinja2
+${PYSITELIB}/octoprint_firmware_check/templates/firmware_check_sidebar_info.jinja2
+${PYSITELIB}/octoprint_firmware_check/templates/firmware_check_sidebar_warning.jinja2
 ${PYSITELIB}/octoprint_firmware_check/translations/de/LC_MESSAGES/messages.mo
 ${PYSITELIB}/octoprint_firmware_check/translations/de/LC_MESSAGES/messages.po
