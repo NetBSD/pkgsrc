@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3065 2021/05/30 11:09:08 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3066 2021/05/30 11:14:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed misc/ruby-bundler1 [taca 2021-05-30]
 	Updated misc/ruby-slop to 4.9.1 [taca 2021-05-30]
 	Updated misc/ruby-bundler to 2.2.18 [taca 2021-05-30]
+	Updated net/ruby-recog to 2.3.20 [taca 2021-05-30]
