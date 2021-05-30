@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:32:04 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/05/30 08:04:48 markd Exp $
 
 DISTNAME=	hyphen-spanish
-PKGNAME=	tex-${DISTNAME}-5.0
-PKGREVISION=	1
-TEXLIVE_REV=	54857
+PKGNAME=	tex-${DISTNAME}-5.0.2021
+TEXLIVE_REV=	58652
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Spanish hyphenation patterns
 LICENSE=	mit
 
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 
 TEX_HYPHEN_DAT+=	spanish loadhyph-es.tex
 TEX_HYPHEN_DAT+=	= espanol

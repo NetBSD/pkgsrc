@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 20:03:59 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:46 markd Exp $
 
-SHA1 (tex-hyphen-lithuanian-51186/hyphen-lithuanian.tar.xz) = aa422df58bdc7a708fc1bfa29ec33b6be2d39860
-RMD160 (tex-hyphen-lithuanian-51186/hyphen-lithuanian.tar.xz) = 7e4933752a5bd3cc46a343b7f3305de0049b18d7
-SHA512 (tex-hyphen-lithuanian-51186/hyphen-lithuanian.tar.xz) = 7f1fc26d4554abbfeeb1da1f0eda68ee163589f519e3eee958fe1706d2dac7ace451da18e0b1ca8078a00319e2bf6ec6da8a9bd75d5d29824760194c1d9cac87
-Size (tex-hyphen-lithuanian-51186/hyphen-lithuanian.tar.xz) = 7424 bytes
+SHA1 (hyphen-lithuanian.r58652.tar.xz) = 1cdf50bbdf54b8001817179c94b4ff3ba6bcbb1b
+RMD160 (hyphen-lithuanian.r58652.tar.xz) = f8e16bb3d2158c89ce9eee6b4909ef17bee95c6d
+SHA512 (hyphen-lithuanian.r58652.tar.xz) = 7a691e3c55c768b9ea5ef13552dc42025ab613df0a0d5c0d54aad58b63da11a93e59bc53e6a8211d5e054cbea8500846da01e9619bbee723d648e2d369a49d55
+Size (hyphen-lithuanian.r58652.tar.xz) = 7444 bytes

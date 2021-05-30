@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/04 12:30:22 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/05/30 08:04:44 markd Exp $
 
-SHA1 (tex-hyphen-estonian-51186/hyphen-estonian.tar.xz) = f097a86a48c93c36331452f3dc20615daa87f770
-RMD160 (tex-hyphen-estonian-51186/hyphen-estonian.tar.xz) = 877a1a05a80e6c05ae25180418b062e5d485b515
-SHA512 (tex-hyphen-estonian-51186/hyphen-estonian.tar.xz) = 899452321c4d907d7f811f044d9d8552d522ed53446419f59a5f8668dae977a3bad3b1dc02bba05c803cfff9a61b4394fa7bf879e1c85a8ff7400eef672d6d64
-Size (tex-hyphen-estonian-51186/hyphen-estonian.tar.xz) = 14592 bytes
+SHA1 (hyphen-estonian.r58652.tar.xz) = 7b359dc46d6670ba87bbef4db1bb9348f029e508
+RMD160 (hyphen-estonian.r58652.tar.xz) = dfe91e27d1f53135253b15d806ff49515135ff97
+SHA512 (hyphen-estonian.r58652.tar.xz) = 0eb91153214aaca8c3b5816f5315f9afdeb7c19521c87c79ea2b35e82217bfb23c8bb774baf810206f4413fc663e441ebe6b4962880ca0dbcda9209d2acce3b8
+Size (hyphen-estonian.r58652.tar.xz) = 14596 bytes

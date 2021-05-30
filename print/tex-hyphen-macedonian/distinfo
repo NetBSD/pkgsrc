@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/01 04:51:45 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/05/30 08:04:46 markd Exp $
 
-SHA1 (hyphen-macedonian.r54568.tar.xz) = 658a968aee84f4b85503e58ab027fbd38352992e
-RMD160 (hyphen-macedonian.r54568.tar.xz) = 6edf44ce129e86962e16c43afd88c96224cafa08
-SHA512 (hyphen-macedonian.r54568.tar.xz) = 6a57e58f444468da0e5854a3bd10a319ef8767884f2a5153580bc9e145f65d4694a0c0e56fc411db9e9bf088e2746462fa51eff23fd3a49822416fba25caf88f
-Size (hyphen-macedonian.r54568.tar.xz) = 3168 bytes
+SHA1 (hyphen-macedonian.r58652.tar.xz) = 2feace7a00245427ffd67eff898d5a5a88ea7037
+RMD160 (hyphen-macedonian.r58652.tar.xz) = b8cf32f7b1547edb304a89cfa42258babd43936c
+SHA512 (hyphen-macedonian.r58652.tar.xz) = f88208291212874df493151581205d1b270b2d4278176c42e11edac9b344b73c2ee859f93b6947e4a6003a00abc4d3753024add9caf84f114c8a0cec72aa8c8d
+Size (hyphen-macedonian.r58652.tar.xz) = 5508 bytes
