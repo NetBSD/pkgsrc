@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.1 2021/05/30 00:49:51 khorben Exp $
+#
+# used by security/libpe/Makefile
+# used by security/pev/Makefile
+
+PEV_VERSION=	0.81
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_GITHUB:=merces/}
+
+MAINTAINER=	khorben@defora.org
+HOMEPAGE=	https://pev.sourceforge.io/
+
+USE_TOOLS+=	gmake
