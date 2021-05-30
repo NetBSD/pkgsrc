@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.12 2019/12/14 10:46:08 khorben Exp $
+# $NetBSD: Makefile.common,v 1.13 2021/05/30 01:16:28 khorben Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-VERSION=	3.11.0
-GITHUB_TAG=	v${VERSION}
+YARA_VERSION=	4.1.0
+GITHUB_TAG=	v${YARA_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://virustotal.github.io/yara/
-LICENSE=	apache-2.0
