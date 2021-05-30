@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:58 brook Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/30 07:02:18 mef Exp $
 
 R_PKGNAME=	hms
-R_PKGVER=	0.5.0
+R_PKGVER=	1.1.0
 CATEGORIES=	time sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,10 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
-DEPENDS+=	R-vctrs>=0.2.0:../../math/R-vctrs
+DEPENDS+=	R-vctrs>=0.3.8:../../math/R-vctrs
+
+TEST_DEPENDS+=	R-ellipsis>=0.3.2:../../math/R-ellipsis
+TEST_DEPENDS+=	R-lubridate-[0-9]*:../../time/R-lubridate
 
 USE_LANGUAGES=	# none
 
