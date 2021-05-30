@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2020/05/01 04:51:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/05/30 08:04:41 markd Exp $
 share/texmf-dist/doc/generic/hyph-utf8/CHANGES
 share/texmf-dist/doc/generic/hyph-utf8/HISTORY
-share/texmf-dist/doc/generic/hyph-utf8/README.md
 share/texmf-dist/doc/generic/hyph-utf8/hyph-utf8.pdf
 share/texmf-dist/doc/generic/hyph-utf8/hyph-utf8.tex
 share/texmf-dist/doc/generic/hyph-utf8/hyphenation-distribution.pdf

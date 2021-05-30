@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/05/01 04:51:45 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:48 markd Exp $
 
-SHA1 (hyphen-spanish.r54857.tar.xz) = 8cd987ec5b58ebc747c824ad165f58217456457c
-RMD160 (hyphen-spanish.r54857.tar.xz) = 15b31624b9f8aab8a185b91e8c7bbbe53aed5231
-SHA512 (hyphen-spanish.r54857.tar.xz) = 6731eb48d98a7fa6ba651ab2f546d7d36ab7f17ea6d7e34f4a92398a59082bf1ffd12d94fa7b7a09201b2868d5a3676f93ec33986bfc744a0d7de66d2aacbd6c
-Size (hyphen-spanish.r54857.tar.xz) = 16504 bytes
+SHA1 (hyphen-spanish.r58652.tar.xz) = 2fb3152bdeaa55e6472b352883e620652942e78b
+RMD160 (hyphen-spanish.r58652.tar.xz) = ad0993904f5faf10d1b32a95a7cbede219d6425f
+SHA512 (hyphen-spanish.r58652.tar.xz) = d6783537ff44a326b83c2004afd63f5bdbd162fa4865138c2e6d34c9e6a103ac41dd7b382454646b09c74970f8e0d5827a5f4af617936f74fd300b2054a096d4
+Size (hyphen-spanish.r58652.tar.xz) = 16452 bytes

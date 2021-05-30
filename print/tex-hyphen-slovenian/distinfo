@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 20:50:05 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:48 markd Exp $
 
-SHA1 (tex-hyphen-slovenian-51186/hyphen-slovenian.tar.xz) = 653ad0e040c84244ebbfa915dd364632f34f7220
-RMD160 (tex-hyphen-slovenian-51186/hyphen-slovenian.tar.xz) = bbd47a83ff11867180bb122bce3a9a3a007584e8
-SHA512 (tex-hyphen-slovenian-51186/hyphen-slovenian.tar.xz) = 3caab81e3d46b889c1f72bf4a2bbac5a03ae6581eadc919f21eac47af8defab69a7fe3a8e975d8f578cf4ec6c56458f78428ae621fbb2334a605b3480426a833
-Size (tex-hyphen-slovenian-51186/hyphen-slovenian.tar.xz) = 6192 bytes
+SHA1 (hyphen-slovenian.r58652.tar.xz) = 3ef1be564a41387493ba4735a8e69550b7f4fe8c
+RMD160 (hyphen-slovenian.r58652.tar.xz) = 31fbb08c920c8e37dbc1c337dd17e67cb9258cdc
+SHA512 (hyphen-slovenian.r58652.tar.xz) = a605c9149ae452df8b2c25aa0f6bcdde53150e4485147a065f1f56c9740c3544c5c7f9c6049aea913916a62aabaf40777cf6f0f76a858e485c0bd09826a6ef5b
+Size (hyphen-slovenian.r58652.tar.xz) = 6200 bytes

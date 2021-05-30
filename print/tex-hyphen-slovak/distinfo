@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 20:47:51 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:47 markd Exp $
 
-SHA1 (tex-hyphen-slovak-51186/hyphen-slovak.tar.xz) = 0e433cea4e9f38c029dc145cd4969b5c2c96ddba
-RMD160 (tex-hyphen-slovak-51186/hyphen-slovak.tar.xz) = 8f645535bf03b29c62e07218dfbd7975c3535ad7
-SHA512 (tex-hyphen-slovak-51186/hyphen-slovak.tar.xz) = 08ddbdfd97d005f69829477f0f269c168dcf68ac2adc278eb91db91a9e61bd8ddcd3890781ddacd623a12aa6698e6a46651d8e26bf9bff3a817c655448f1747e
-Size (tex-hyphen-slovak-51186/hyphen-slovak.tar.xz) = 10844 bytes
+SHA1 (hyphen-slovak.r58609.tar.xz) = a6937ea22c5ab1ca931e0ca8ea610e214d7c99c0
+RMD160 (hyphen-slovak.r58609.tar.xz) = 92a4a10ab7bd5cf294ede6e5f2b75b632b792e94
+SHA512 (hyphen-slovak.r58609.tar.xz) = a0786980e0cda7029a72075023520acdc998b83226e85deb0b8186ee4293560321517d507f74fbe68f1d68a16cd8af67aae68baead9176f9cc687bcc7d0a72e1
+Size (hyphen-slovak.r58609.tar.xz) = 10848 bytes

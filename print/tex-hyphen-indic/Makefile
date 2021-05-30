@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2020/05/10 04:32:01 markd Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/30 08:04:45 markd Exp $
 
 DISTNAME=	hyphen-indic
-PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	58652
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Indic hyphenation patterns
 LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 
 TEX_HYPHEN_DAT+=	assamese loadhyph-as.tex
 TEX_HYPHEN_DEF+=	\\addlanguage{assamese}{loadhyph-as.tex}{}{1}{1}
@@ -133,6 +132,5 @@ TEX_HYPHEN_LUA+=	['telugu']={ \
 			  hyphenation='', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

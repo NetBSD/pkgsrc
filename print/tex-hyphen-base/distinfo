@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2020/05/01 04:51:45 markd Exp $
+$NetBSD: distinfo,v 1.20 2021/05/30 08:04:41 markd Exp $
 
-SHA1 (hyphen-base.r54763.tar.xz) = 45cd6932868b034974bb59fb23c094f160b094a2
-RMD160 (hyphen-base.r54763.tar.xz) = 594a27d99f0ee5b0ad31fb9cbc8ffdb4158ca0d9
-SHA512 (hyphen-base.r54763.tar.xz) = 74f8fa67630324118f41e65e00b307281ecb1d58e63763c7779452a8aaf090585043fd12cdae3058299544d0f1f610cba79537cd5866b69be2c713ae8bf94592
-Size (hyphen-base.r54763.tar.xz) = 22408 bytes
-SHA1 (patch-aa) = b9d5a151c70ccd6a78b8040c274ad875bd7346d8
-SHA1 (patch-ab) = 03b400c78680f252522034230890131f272071e1
-SHA1 (patch-ac) = df78aded6953850ea286e98e0333c108e938bfe8
+SHA1 (hyphen-base.r58630.tar.xz) = cbbb9fa3be063f7225b768aa38fec36d74b758b1
+RMD160 (hyphen-base.r58630.tar.xz) = 7f764ae91f460de84f1f5403b63afd7e509d1b25
+SHA512 (hyphen-base.r58630.tar.xz) = 15daa4e0004bb55601db85cf796761c1feca5f4668a5894df820a31d107ebefde74fd4d3a997191d9049ecb0fa3f4678a6a0b1fb6506b17bd24546e942d85510
+Size (hyphen-base.r58630.tar.xz) = 22448 bytes
+SHA1 (patch-aa) = c61b754874efbb9a184e72ba194c061e1af4e9b8
+SHA1 (patch-ab) = 3bbb54d73ef1c5f67b03c99479198f467e27d0a8
+SHA1 (patch-ac) = b4476c5de0b008b40fd208ae8c8378cea75ce807

@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2020/05/10 04:32:00 markd Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/30 08:04:44 markd Exp $
 
 DISTNAME=	hyphen-ethiopic
-PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	58652
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hyphenation patterns for Ethiopic scripts
 LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 
 TEX_HYPHEN_DAT+=	ethiopic loadhyph-mul-ethi.tex
 TEX_HYPHEN_DAT+=	= amharic
@@ -27,6 +26,5 @@ TEX_HYPHEN_LUA+=	['ethiopic']={ \
 			  hyphenation='', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

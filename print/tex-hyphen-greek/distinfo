@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/08/04 12:49:35 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/05/30 08:04:45 markd Exp $
 
-SHA1 (tex-hyphen-greek-51186/hyphen-greek.tar.xz) = ea522a360ba4d3c66a081e89904cc8c0fdbf617b
-RMD160 (tex-hyphen-greek-51186/hyphen-greek.tar.xz) = d5e85fce37a55ba0d93960661f2e3b6a7c8ed54c
-SHA512 (tex-hyphen-greek-51186/hyphen-greek.tar.xz) = 7af2a6fe7f302dc537f6087c004fd38ce9269679913765c08820c6d7e060b14ae104ba8ce0ef2c54131c62a3731c926a7c521a5ff9188b622c6fb2bf588b410f
-Size (tex-hyphen-greek-51186/hyphen-greek.tar.xz) = 13276 bytes
+SHA1 (hyphen-greek.r58652.tar.xz) = 8e299d679ce0545d33f98dc6a19d4bb2b491d2b5
+RMD160 (hyphen-greek.r58652.tar.xz) = ee976d6eaf1d4441f7c8821d740767b80ae90037
+SHA512 (hyphen-greek.r58652.tar.xz) = 3da84f41aaf7e5d4be0ce609e4d119e65c9189ff6662051cb7e879e9e373d990ef1c59ac7cfead1bdbc6e55b52d4b3ed28d157b22dbec43e5226f16872d5a7de
+Size (hyphen-greek.r58652.tar.xz) = 13268 bytes
