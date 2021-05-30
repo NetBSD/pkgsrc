@@ -1,0 +1,5 @@
+Create disposable R packages for testing. You can create, install and
+load multiple R packages with a single function call, and then unload,
+uninstall and destroy them with another function call. This is handy
+when testing how some R code or an R package behaves with respect to
+other packages.
