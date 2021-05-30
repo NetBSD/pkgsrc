@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/05/30 21:20:20 khorben Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/octoprint_pi_support/__init__.py
+${PYSITELIB}/octoprint_pi_support/__init__.pyc
+${PYSITELIB}/octoprint_pi_support/__init__.pyo
+${PYSITELIB}/octoprint_pi_support/static/clientjs/pi_support.js
+${PYSITELIB}/octoprint_pi_support/static/css/pi_support.css
+${PYSITELIB}/octoprint_pi_support/static/js/pi_support.js
+${PYSITELIB}/octoprint_pi_support/templates/pi_support_about_octopi.jinja2
+${PYSITELIB}/octoprint_pi_support/templates/pi_support_navbar.jinja2
+${PYSITELIB}/octoprint_pi_support/templates/pi_support_settings.jinja2
+${PYSITELIB}/octoprint_pi_support/translations/de/LC_MESSAGES/messages.mo
+${PYSITELIB}/octoprint_pi_support/translations/de/LC_MESSAGES/messages.po

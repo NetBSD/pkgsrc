@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/30 21:20:20 khorben Exp $
+
+SHA1 (OctoPrint-PiSupport-2021.3.26.post2.tar.gz) = 9ae9be17b6afc7186b352fb59cd7cf98d8524ddb
+RMD160 (OctoPrint-PiSupport-2021.3.26.post2.tar.gz) = 9745e8541b65eefba0a9306f80ad82e78dc64d93
+SHA512 (OctoPrint-PiSupport-2021.3.26.post2.tar.gz) = 61decb729f9c11195336b45bcf9373951861aa26c9dc3a2b1dcbef4882217ba3ed5294dce02c4843efab4a287c8211b6dab7f8e01e1840808f47d63003bdc34c
+Size (OctoPrint-PiSupport-2021.3.26.post2.tar.gz) = 35450 bytes
