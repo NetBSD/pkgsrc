@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 12:10:59 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/05/30 08:04:43 markd Exp $
 
-SHA1 (tex-hyphen-croatian-51186/hyphen-croatian.tar.xz) = d7a8f1d97aa8e21f20b622402813a4c986b6bdc3
-RMD160 (tex-hyphen-croatian-51186/hyphen-croatian.tar.xz) = 3e9a6536e54549f74e497beb038aab7073112075
-SHA512 (tex-hyphen-croatian-51186/hyphen-croatian.tar.xz) = 97c4b047a94488d43a1542ed77ccaefc6d369051707298a3f86926e0170c63647a40e0dd2eb4363a7d5bf526358ba48e5674a386451a41877c9176f4ba49c994
-Size (tex-hyphen-croatian-51186/hyphen-croatian.tar.xz) = 5576 bytes
+SHA1 (hyphen-croatian.r58652.tar.xz) = 9b6a3dc89722e4dffe8fbaf2b6947cecc18c1c88
+RMD160 (hyphen-croatian.r58652.tar.xz) = 6b8ae95b6408773656eb69f765f7fff16422975c
+SHA512 (hyphen-croatian.r58652.tar.xz) = 8355d0aa95bb2e72bfc45015f9ae9f6a138f94441387a4daadfec5be4060878f6e69d05eab15432d99c256c1a3f68c122d5c915164fe343459d658a4543ddf42
+Size (hyphen-croatian.r58652.tar.xz) = 5580 bytes
