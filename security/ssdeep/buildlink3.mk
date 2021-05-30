@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/06/05 19:49:36 khorben Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2021/05/30 01:41:28 khorben Exp $
 
 BUILDLINK_TREE+=	ssdeep
 
