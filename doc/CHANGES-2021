@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3075 2021/05/30 13:19:17 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3076 2021/05/30 13:46:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4771,3 +4771,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.9 [taca 2021-05-30]
 	Updated security/ruby-nexpose to 7.3.0 [taca 2021-05-30]
 	Updated math/R-vctrs to 0.3.8 [mef 2021-05-30]
+	Updated lang/nim to 1.4.8 [ryoon 2021-05-30]
