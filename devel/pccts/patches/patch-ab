@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2011/03/11 14:49:03 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2021/05/31 12:05:52 wiz Exp $
 
 --- dlg/makefile.orig	2000-09-10 00:57:05.000000000 +0000
 +++ dlg/makefile
@@ -13,3 +13,12 @@ $NetBSD: patch-ab,v 1.4 2011/03/11 14:49:03 drochner Exp $
  ANTLR=../bin/antlr
  DLG=../bin/dlg
  CFLAGS= $(COPT) -I. -I$(SET) -I$(PCCTS_H) -DUSER_ZZSYN -DZZLEXBUFSIZE=32000
+@@ -125,7 +125,7 @@ OBJ = dlg_p.o dlg_a.o main.o err.o set.o
+         relabel.o automata.o
+ 
+ dlg : $(OBJ) $(SRC)
+-		$(CC) $(CFLAGS) -o dlg $(OBJ)
++		$(CC) $(CFLAGS) $(LDFLAGS) -o dlg $(OBJ)
+ 		mv dlg ../bin/.
+ 
+ SRC = dlg_p.c dlg_a.c main.c err.c $(SET)/set.c support.c output.c \

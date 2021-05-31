@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:29:01 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/05/31 12:05:52 wiz Exp $
 
 SHA1 (pccts-1.33.33/pccts133mr33.zip) = 5b3417efd5f537434b568114bcda853b4975d851
 RMD160 (pccts-1.33.33/pccts133mr33.zip) = 46a0955aedb263d196dae0054f6249d42b2ac835
 SHA512 (pccts-1.33.33/pccts133mr33.zip) = 8d01433df1502f5c1f6258d5ebb4dc2296239c179b4b62ba016fd890138045069222ff07b948aa194002a00a413a08bb939ab9879ab3821be4c1be61818b3458
 Size (pccts-1.33.33/pccts133mr33.zip) = 738635 bytes
-SHA1 (patch-aa) = 8100e31c4a504efbb27fda047cf4345fcf88df4d
-SHA1 (patch-ab) = 2244e82c6915c2abbb55bbcbafc8df6e835f7e6c
-SHA1 (patch-ac) = 393d5af26e911a845f8f323722e9b70b8f059848
-SHA1 (patch-ad) = 7df54b2b9810ff3c50300b4caf09e43a9f5403fe
+SHA1 (patch-aa) = 497f3613c996b8f431d71c84329fb3a1f3577aac
+SHA1 (patch-ab) = 444269f84c206d5abece7784b3082ce4573b1fe5
+SHA1 (patch-ac) = 81f160fd21d309c867f046f583bb7bd45ad829d9
+SHA1 (patch-ad) = a7bd3f225c04362b0e66b2b761f6a5516bda5179
 SHA1 (patch-ae) = bdfbc276cbf7217bdf48bb1b6df787d61f1d6267
 SHA1 (patch-af) = 5910279eb5d9d216c1051c48038792fc3841c568
 SHA1 (patch-ag) = 6637240de0c79b4f41f34d658ed99001adeab539
