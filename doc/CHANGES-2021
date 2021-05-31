@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3099 2021/05/31 12:06:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3100 2021/05/31 12:33:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4796,3 +4796,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gnutls to 3.7.2 [wiz 2021-05-31]
 	Updated devel/pcre2 to 10.37 [wiz 2021-05-31]
 	Updated devel/pccts to 1.33.33nb1 [wiz 2021-05-31]
+	Updated www/py-urllib3 to 1.26.5 [adam 2021-05-31]
+	Updated devel/py-dulwich to 0.20.23 [adam 2021-05-31]
