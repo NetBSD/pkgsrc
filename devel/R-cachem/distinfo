@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/31 22:33:11 mef Exp $
+
+SHA1 (R/cachem_1.0.5.tar.gz) = 52cb4fa8c7877c61c84db1c7f71e5bb155271899
+RMD160 (R/cachem_1.0.5.tar.gz) = 3e9fa92d32b271c4f14e02c076046cfeaad84853
+SHA512 (R/cachem_1.0.5.tar.gz) = 4b984a0c674f0e33ba2b0209e34206997a2b6c46c1bf72d0d3399a5ea623efe3bf4e764b4fd296e352e45f0b68729d3a7e9d7ec381dafdea8178de4b5dd16c54
+Size (R/cachem_1.0.5.tar.gz) = 24974 bytes
