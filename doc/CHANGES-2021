@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3112 2021/05/31 22:31:40 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3113 2021/05/31 22:32:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4815,3 +4815,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-lifecycle to 1.0.0 [mef 2021-05-31]
 	Added devel/R-fastmap version 1.1.0 [mef 2021-05-31]
 	Added textproc/libxml++5.0 version 5.0.1 [wiz 2021-05-31]
+	Added graphics/cairomm1.16 version 1.16.0 [wiz 2021-05-31]
