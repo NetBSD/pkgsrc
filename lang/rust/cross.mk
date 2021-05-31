@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.6 2021/05/26 09:21:39 he Exp $
+# $NetBSD: cross.mk,v 1.7 2021/05/31 10:17:53 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -25,10 +25,10 @@
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
 #GNU_CROSS_TARGET=	sparc64--netbsd
-#GNU_CROSS_TARGET=	i486--netbsdelf
 #GNU_CROSS_TARGET=	powerpc--netbsd
 #GNU_CROSS_TARGET=	aarch64--netbsd
 #GNU_CROSS_TARGET=	aarch64_be--netbsd
+#GNU_CROSS_TARGET=	i486--netbsdelf
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
