@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2021/05/29 23:24:06 khorben Exp $
+# $NetBSD: Makefile,v 1.825 2021/05/31 07:53:40 pin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -114,6 +114,7 @@ SUBDIR+=	gpa
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
 SUBDIR+=	gpgmepp
+SUBDIR+=	gpg-tui
 SUBDIR+=	gpshell
 SUBDIR+=	gsasl
 SUBDIR+=	gss
