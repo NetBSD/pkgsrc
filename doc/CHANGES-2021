@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3109 2021/05/31 20:54:07 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3110 2021/05/31 21:53:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4809,3 +4809,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.1.5 [pin 2021-05-31]
 	Updated audio/ncspot to 0.7.3 [pin 2021-05-31]
 	Updated math/kalk to 0.5.4 [pin 2021-05-31]
+	Updated devel/R-usethis to 2.0.1 [mef 2021-05-31]
+	Updated devel/R-devtools to 2.4.1 [mef 2021-05-31]
