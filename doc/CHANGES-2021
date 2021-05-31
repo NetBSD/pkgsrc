@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3114 2021/05/31 22:32:24 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3115 2021/05/31 22:32:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4817,3 +4817,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/libxml++5.0 version 5.0.1 [wiz 2021-05-31]
 	Added graphics/cairomm1.16 version 1.16.0 [wiz 2021-05-31]
 	Added devel/glibmm2.68 version 2.68.0 [wiz 2021-05-31]
+	Added devel/atkmm2.36 version 2.36.1 [wiz 2021-05-31]
