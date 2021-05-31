@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3091 2021/05/31 10:13:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3092 2021/05/31 10:22:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-click-threading to 0.5.0 [adam 2021-05-31]
 	Updated devel/py-click-repl to 0.2.0 [adam 2021-05-31]
 	Updated emulators/mame to 0.232 [wiz 2021-05-31]
+	Updated lang/rust to 1.52.1 [he 2021-05-31]
