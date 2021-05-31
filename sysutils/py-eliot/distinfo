@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/08/27 12:32:48 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/05/31 13:49:55 adam Exp $
 
-SHA1 (eliot-1.12.0.tar.gz) = 19ea57fe203d94425a17fa54bf065d5cdd9189c6
-RMD160 (eliot-1.12.0.tar.gz) = 0def7f7939383b901fa76a78e6da7b183a9edad8
-SHA512 (eliot-1.12.0.tar.gz) = d0ca6cf5a1a9ffb615c495a816856bd80880ff2a2ef0cf37ee905ce32e7a81d6e0cb28e107bb38899eb295e86850006f60d036f484663e6c105e4d51a13feb3c
-Size (eliot-1.12.0.tar.gz) = 152125 bytes
-SHA1 (patch-setup.py) = b3e6232c987bf172302124dc9c7e6302ec26cea1
+SHA1 (eliot-1.13.0.tar.gz) = f2e617d9686d21d1a6db2c8d3ebf31752558f1c0
+RMD160 (eliot-1.13.0.tar.gz) = 49c888b3dbf8827c99ea0625f3edc762a5ee5f1b
+SHA512 (eliot-1.13.0.tar.gz) = 95bf72c8cf64cb3dceb1665c244d866759bc0266aed478ba8a28a08f9001a91f7aa6497789c3a58e1416ac6e9c0b0dfc98f4e85f730769473a38a38baba0c473
+Size (eliot-1.13.0.tar.gz) = 153154 bytes
+SHA1 (patch-setup.py) = add6f58e048879446cdae5518f5bc03ee4c82af1
