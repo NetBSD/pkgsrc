@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/12/13 22:24:10 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/05/31 14:26:12 mef Exp $
 
-SHA1 (R/processx_3.4.5.tar.gz) = 6dcba4257d66ed21f8a101d018d838987279c526
-RMD160 (R/processx_3.4.5.tar.gz) = f69954a604bc7fcfeb51bc6d200409f229be7a19
-SHA512 (R/processx_3.4.5.tar.gz) = db234cd7a70da40d456f50deb9ed048380d7938b9c4adcd63ba3128b707a3fd705a3b71410b626723ec0dc9315ddb383a88334d042710bdc1be1ea361d8e4e90
-Size (R/processx_3.4.5.tar.gz) = 135121 bytes
+SHA1 (R/processx_3.5.2.tar.gz) = e76d3f6af2678c8691fc8c0765ea21071ed97f31
+RMD160 (R/processx_3.5.2.tar.gz) = 0faae8fdd3af414fbfa102f81d948e869dc6830a
+SHA512 (R/processx_3.5.2.tar.gz) = 1f7bcbc6acbb28e34286525e4b43979afec077f8ace823516ed8779cbae75f6252363aa4d722e6fad3049f8835190700b4abe094188ccb68ce6436bfa7ad0c7b
+Size (R/processx_3.5.2.tar.gz) = 141424 bytes
