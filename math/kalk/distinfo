@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/05/30 06:43:45 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/05/31 20:53:46 pin Exp $
 
 SHA1 (aho-corasick-0.7.15.crate) = f5054e1316a7f59bc37b647faa72a8e800fc17af
 RMD160 (aho-corasick-0.7.15.crate) = 003b3030dbd9c452279e3f01802edff67d4c14d5
@@ -8,6 +8,10 @@ SHA1 (ansi_term-0.12.1.crate) = fa6af8a593898105594dfb8b057dcbfdf30648a2
 RMD160 (ansi_term-0.12.1.crate) = 747f8ed27409243576d586c9957d9e06837f27bf
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
 Size (ansi_term-0.12.1.crate) = 24838 bytes
+SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
+RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
+SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
+Size (atty-0.2.14.crate) = 5470 bytes
 SHA1 (az-1.0.0.crate) = 3e9a7bb33738a48e15b10b29be9959ad6b392a91
 RMD160 (az-1.0.0.crate) = 461addca986ad5128ac68e993010c6b08419c85d
 SHA512 (az-1.0.0.crate) = b8d3ac35388223f9e2757ac3805b0f762498449b25e1acc39507be7d2149981a1a266602d26903d1d866dde43d133db79b253cd3f4e65f5c3f5022bf2e90b3cb
@@ -56,14 +60,18 @@ SHA1 (gmp-mpfr-sys-1.4.2.crate) = 9990ca09865f0789cd702d07e1d245250749a9b4
 RMD160 (gmp-mpfr-sys-1.4.2.crate) = 62468f2427896490c09b828fbd7e26c10a6fd4cc
 SHA512 (gmp-mpfr-sys-1.4.2.crate) = ea65ac44ec2cae8debb466fa72e2574f4b22c12e70e0dd6dd85ea8fc994add1f2c539e59d704f78da0088c32345b1409666945adec4686e77fa801bbc656c55d
 Size (gmp-mpfr-sys-1.4.2.crate) = 6393728 bytes
+SHA1 (hermit-abi-0.1.18.crate) = ee6677332b5c19c10d8e19b8da73c3265a3efd6c
+RMD160 (hermit-abi-0.1.18.crate) = 3bccd7ee4d6d12fec60d64949db05811ed7e7fea
+SHA512 (hermit-abi-0.1.18.crate) = 54f060c6c1c80d41f40cec7102345147efb535aff9fa5cc0ed4ccd7f010bfdb6daaf40626fd5069af60ceb42058452803b59d4bbcfbed4c5546c79b57ae0f914
+Size (hermit-abi-0.1.18.crate) = 9936 bytes
 SHA1 (js-sys-0.3.46.crate) = c17e1c20dc08332affdbd4216a9d6914e38b95b9
 RMD160 (js-sys-0.3.46.crate) = f859bef53d3a153e81b8e5a59f9bf5c2df3d9901
 SHA512 (js-sys-0.3.46.crate) = 504048b9a2efb42315e351d3a972cbb7474cda1374281e25b26a62c5811a3b34606489b95bfd417b41316569aa33ebbd02af2aa359b576198f3123bf7e9e4d28
 Size (js-sys-0.3.46.crate) = 67064 bytes
-SHA1 (kalk-0.5.3.tar.gz) = 3db17f19ca7f0ac73189ea9b81cee52f16fbc968
-RMD160 (kalk-0.5.3.tar.gz) = 7472e2308a10cb5937639b1a15a088e442c27b5e
-SHA512 (kalk-0.5.3.tar.gz) = ab8e45109b3fd64c78f5c82ca1d46a7ea11fc025d9cae96599e4adc41ff29e0f1b42a609befb6f6492aa78268451ee98193e42def95a3f15645aac49f3b78116
-Size (kalk-0.5.3.tar.gz) = 914984 bytes
+SHA1 (kalk-0.5.4.tar.gz) = 5e37251bc4d03043d1260d5596c3f44108acc04f
+RMD160 (kalk-0.5.4.tar.gz) = ee6a5218ef70893ee03c80b1ac751ddb3c56f65b
+SHA512 (kalk-0.5.4.tar.gz) = 5f458efe25109cd43c0a0ec40b91b27dce1ea2e33986a827b8310740f3e206749283efd2e770996af9662ffb97902394cc2e7f29bb5929f38914d5078d119ad7
+Size (kalk-0.5.4.tar.gz) = 915757 bytes
 SHA1 (lazy_static-1.4.0.crate) = 3e8852a6967dc257753fe75a13112a04bc03dfc0
 RMD160 (lazy_static-1.4.0.crate) = 6c74661c140113ff3b1d660bba095259398bbb55
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
