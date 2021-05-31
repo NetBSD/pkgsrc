@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2021/05/01 18:12:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2021/05/31 10:13:38 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -378,6 +378,8 @@ share/mame/hash/mac_hdd.xml
 share/mame/hash/mac_hdflop.xml
 share/mame/hash/mbc200.xml
 share/mame/hash/mbc55x.xml
+share/mame/hash/mbee_cass.xml
+share/mame/hash/mbee_quik.xml
 share/mame/hash/mc10.xml
 share/mame/hash/mc1000_cass.xml
 share/mame/hash/mc1502_flop.xml
@@ -545,6 +547,7 @@ share/mame/hash/rainbow.xml
 share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78_cart.xml
 share/mame/hash/rx78_cass.xml
+share/mame/hash/sagafox.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
 share/mame/hash/saitek_kso.xml
