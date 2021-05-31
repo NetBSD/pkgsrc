@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3110 2021/05/31 21:53:42 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3111 2021/05/31 22:26:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4811,3 +4811,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/kalk to 0.5.4 [pin 2021-05-31]
 	Updated devel/R-usethis to 2.0.1 [mef 2021-05-31]
 	Updated devel/R-devtools to 2.4.1 [mef 2021-05-31]
+	Updated devel/R-cli to 2.5.0 [mef 2021-05-31]
+	Updated devel/R-lifecycle to 1.0.0 [mef 2021-05-31]
+	Added devel/R-fastmap version 1.1.0 [mef 2021-05-31]
