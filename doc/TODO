@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20708 2021/05/31 22:32:12 wiz Exp $
+$NetBSD: TODO,v 1.20709 2021/05/31 22:43:17 mef Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-maptools-1.1.1
 	o R-markdown-1.1
-	o R-memoise-2.0.0
 	o R-mime-0.10
 	o R-mnormt-2.0.2
 	o R-mvtnorm-1.1.1
