@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/05/24 19:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2021/05/31 20:06:41 wiz Exp $
 
 DISTNAME=	cairomm-1.14.2
 PKGREVISION=	1
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://cairographics.org/cairomm/
-COMMENT=	C++ API for cairo
+COMMENT=	C++ API for cairo (1.0 API)
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
