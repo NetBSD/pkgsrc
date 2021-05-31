@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1 2021/02/25 09:55:55 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/05/31 22:59:23 wiz Exp $
 
-SHA1 (gtk-4.0.3.tar.xz) = 515845f020592cd1aa4bebb70cce662a014d91cd
-RMD160 (gtk-4.0.3.tar.xz) = 89bc3d0189c921609005b8fbf0392aa5ba9827ea
-SHA512 (gtk-4.0.3.tar.xz) = 94683bf03607daf9cb62ef836e5e2bfee3fcfc6a17f7e0d3232da0d7fc07f8d5c0c12479fcd31cbdef50c86777d986ae82e43f291f2cbc2976967820bbfcb982
-Size (gtk-4.0.3.tar.xz) = 19442520 bytes
+SHA1 (gtk-4.2.0.tar.xz) = fa5a15db4e56e9de989543990bbfb82fa44caf84
+RMD160 (gtk-4.2.0.tar.xz) = 4190de064501f2a2ce434492e10a89629f9190f2
+SHA512 (gtk-4.2.0.tar.xz) = 12e825245b92f5dc652530c35b9a48a0bb284641d4128d054a19a35cb7814babe78bfbbdfd7fe3f2472d5028d078ae209a6da5d614b023c2b438223e4c5a04a0
+Size (gtk-4.2.0.tar.xz) = 25772584 bytes
 SHA1 (patch-config.h.meson) = 1e216652695220b0932f7d86eec4e4836b937985
 SHA1 (patch-gdk_wayland_cursor_os-compatibility.c) = 01d26eccf32e6ab4a2ae0da273e9f66d76b3c31d
-SHA1 (patch-meson.build) = 4d82fd17776f0713dc3ed29ea679684d725e9552
