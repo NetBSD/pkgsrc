@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/05/31 22:28:38 wiz Exp $
+
+SHA1 (atkmm-2.36.1.tar.xz) = 99a56720aa85c556e6a32b3d8939c26413f3f1a0
+RMD160 (atkmm-2.36.1.tar.xz) = 398fee7fe410bda10f94ecbe1c6fa03622885c50
+SHA512 (atkmm-2.36.1.tar.xz) = 23c831afac6bb9a0f9f2e622f8f9ffea29445a33b1cd650e0c07ee77e60b28ae5ee978c029e8e0f9b94e9ff4679d69ebde833f15e0a5403d97914cc7ccf98a6a
+Size (atkmm-2.36.1.tar.xz) = 736828 bytes
+SHA1 (patch-meson.build) = b09516870f4e33aab8d4039f995aedd4dc236832
