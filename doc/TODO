@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20711 2021/05/31 23:43:44 mef Exp $
+$NetBSD: TODO,v 1.20712 2021/05/31 23:56:20 mef Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-intervals-0.15.2
 	o R-iterators-1.0.13
 	o R-jsonlite-1.7.2
-	o R-knitr-1.32
 	o R-labeling-0.4.2
 	o R-later-1.1.0.1
 	o R-latex2exp-0.5.0
