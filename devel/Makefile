@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3400 2021/05/31 22:26:59 mef Exp $
+# $NetBSD: Makefile,v 1.3401 2021/05/31 22:30:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -146,6 +146,7 @@ SUBDIR+=	at-spi2-core
 SUBDIR+=	atf
 SUBDIR+=	atk
 SUBDIR+=	atkmm
+SUBDIR+=	atkmm2.36
 SUBDIR+=	autoconf
 SUBDIR+=	autoconf-archive
 SUBDIR+=	autoconf213
@@ -393,6 +394,7 @@ SUBDIR+=	glib
 SUBDIR+=	glib2
 SUBDIR+=	glib2-tools
 SUBDIR+=	glibmm
+SUBDIR+=	glibmm2.68
 SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
@@ -2111,6 +2113,7 @@ SUBDIR+=	p8-platform
 SUBDIR+=	palmpower
 SUBDIR+=	pango
 SUBDIR+=	pangomm
+SUBDIR+=	pangomm2.48
 SUBDIR+=	pangox-compat
 SUBDIR+=	papaya
 SUBDIR+=	pardiff
