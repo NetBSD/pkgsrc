@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3105 2021/05/31 20:28:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3106 2021/05/31 20:49:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unifi to 6.0.45 [gdt 2021-05-31]
 	Updated sysutils/memtester to 4.5.1 [schmonz 2021-05-31]
 	Updated devel/mm-common to 1.0.3 [wiz 2021-05-31]
+	Updated textproc/bk to 0.5.3 [pin 2021-05-31]
