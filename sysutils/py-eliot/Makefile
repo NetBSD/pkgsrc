@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/08/27 12:32:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2021/05/31 13:49:55 adam Exp $
 
-DISTNAME=	eliot-1.12.0
+DISTNAME=	eliot-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eliot/}
