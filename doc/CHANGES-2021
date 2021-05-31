@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3087 2021/05/30 23:46:40 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3088 2021/05/31 07:19:00 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/py-zipstream to 1.1.8 [khorben 2021-05-30]
 	Updated print/py-octoprint to 1.6.1 [khorben 2021-05-30]
 	Updated pkgtools/rc.subr to 20210517 [khorben 2021-05-30]
+	Updated math/octave to 6.2.0 [thor 2021-05-31]
