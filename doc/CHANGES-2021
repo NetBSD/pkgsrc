@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3100 2021/05/31 12:33:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3101 2021/05/31 13:50:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4798,3 +4798,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pccts to 1.33.33nb1 [wiz 2021-05-31]
 	Updated www/py-urllib3 to 1.26.5 [adam 2021-05-31]
 	Updated devel/py-dulwich to 0.20.23 [adam 2021-05-31]
+	Updated devel/py-boltons to 21.0.0 [adam 2021-05-31]
+	Updated sysutils/py-eliot to 1.13.0 [adam 2021-05-31]
