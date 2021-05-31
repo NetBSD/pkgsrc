@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.86 2019/10/30 17:26:49 nia Exp $
+$NetBSD: distinfo,v 1.87 2021/05/31 19:38:38 cirnatdan Exp $
 
 SHA1 (evolution-3.34.1.tar.xz) = a4bdfa2866a887f168a1ef33a4e2161875748400
 RMD160 (evolution-3.34.1.tar.xz) = f0f635dee4d01c8458ad180f247507ee0a7ae6f7
 SHA512 (evolution-3.34.1.tar.xz) = d72329b2dde41724cc8818f843b5530c5465e4fd7fceca3208a26180f9d6e286165d03d33ba4066e959a6e69bd1e5d33759d4287a57bb765bf7143410be6102c
 Size (evolution-3.34.1.tar.xz) = 11919428 bytes
+SHA1 (patch-cmake_modules_PrintableOptions.cmake) = 4f6eca93f9e859730b7abe0b7daceb0b4219b345
