@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/05/07 05:13:38 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/05/31 09:53:22 adam Exp $
 
-SHA1 (click-repl-0.1.6.tar.gz) = 4e6c605588e215e64fb4e4bf4260f2514510c26c
-RMD160 (click-repl-0.1.6.tar.gz) = 6191e2d679e37311e7630da25c561b1faeda4587
-SHA512 (click-repl-0.1.6.tar.gz) = 50576166e8eb61098b8b4e1c7db43101c226d09785a497539830addfd52a2c35b2fa7865d3cbb20559dcf2fea99801f306dcb05c177886f021a1ada188501ced
-Size (click-repl-0.1.6.tar.gz) = 5340 bytes
+SHA1 (click-repl-0.2.0.tar.gz) = 66e26ca6ab71ee8e6979470cdc11822168c106d3
+RMD160 (click-repl-0.2.0.tar.gz) = 498874dfc1a282c3d006ed1a28ce420e1a59e2f7
+SHA512 (click-repl-0.2.0.tar.gz) = b377e1efda7f8dd20b90f531c49dd42a372db789331f8cfcca63169be17fe429dfc66d5a1e5ef7376eacfdb41167f933ec68b63a170aae45af09b086f826edf0
+Size (click-repl-0.2.0.tar.gz) = 5743 bytes
