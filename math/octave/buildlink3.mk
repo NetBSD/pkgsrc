@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2021/05/31 07:16:51 thor Exp $
 
 BUILDLINK_TREE+=	octave
 
@@ -18,12 +18,17 @@ pkgbase := octave
 .  include "../../devel/hdf5/buildlink3.mk"
 .endif
 
+.if ${PKG_BUILD_OPTIONS.octave:Mqhull}
+.  include "../../math/qhull/buildlink3.mk"
+.endif
+
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/blas.buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
+.include "../../math/qrupdate/buildlink3.mk"
 .endif # OCTAVE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-octave
