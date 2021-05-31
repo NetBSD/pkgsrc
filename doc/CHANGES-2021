@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3089 2021/05/31 07:54:09 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3090 2021/05/31 09:53:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4785,3 +4785,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/rc.subr to 20210517 [khorben 2021-05-30]
 	Updated math/octave to 6.2.0 [thor 2021-05-31]
 	Added security/gpg-tui version 0.1.4 [pin 2021-05-31]
+	Updated devel/py-click-threading to 0.5.0 [adam 2021-05-31]
+	Updated devel/py-click-repl to 0.2.0 [adam 2021-05-31]
