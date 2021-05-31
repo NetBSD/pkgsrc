@@ -1,11 +1,11 @@
-$NetBSD: patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h,v 1.1 2019/04/14 12:42:03 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h,v 1.2 2021/05/31 10:17:53 he Exp $
 
 Don't implement sys/regset.h workaround, fix source instead.
 
---- src/llvm-project/llvm/include/llvm-c/DataTypes.h.orig	2018-08-01 16:32:37.000000000 +0000
+--- src/llvm-project/llvm/include/llvm-c/DataTypes.h.orig	2021-04-17 01:50:37.000000000 +0000
 +++ src/llvm-project/llvm/include/llvm-c/DataTypes.h
-@@ -87,4 +87,27 @@ typedef signed int ssize_t;
- #define HUGE_VALF (float)HUGE_VAL
+@@ -77,4 +77,27 @@ typedef signed int ssize_t;
+ # define UINT64_MAX 0xffffffffffffffffULL
  #endif
  
 +#if defined(__sun)
