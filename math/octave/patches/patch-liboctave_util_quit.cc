@@ -1,14 +1,14 @@
-$NetBSD: patch-liboctave_util_quit.cc,v 1.2 2020/04/12 21:24:11 adam Exp $
+$NetBSD: patch-liboctave_util_quit.cc,v 1.3 2021/05/31 07:16:51 thor Exp $
 
 Make sure exit() is defined.
 
---- liboctave/util/quit.cc.orig	2019-06-15 20:18:59.699714202 +0000
+--- liboctave/util/quit.cc.orig	2021-02-19 17:36:34.000000000 +0000
 +++ liboctave/util/quit.cc
-@@ -24,6 +24,7 @@ along with Octave; see the file COPYING.
+@@ -27,6 +27,7 @@
  #  include "config.h"
  #endif
  
 +#include <cstdlib>
  #include <cstring>
  
- #include <new>
+ #include <ostream>
