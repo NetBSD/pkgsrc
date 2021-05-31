@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:16 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/31 22:59:23 wiz Exp $
 
-DISTNAME=	gtk-4.0.3
+DISTNAME=	gtk-4.2.0
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/4.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -41,7 +40,7 @@ PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.47.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
