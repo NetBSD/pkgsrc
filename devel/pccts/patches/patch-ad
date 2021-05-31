@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2011/03/11 14:49:03 drochner Exp $
+$NetBSD: patch-ad,v 1.4 2021/05/31 12:05:52 wiz Exp $
 
 --- support/genmk/makefile.orig	2000-09-10 01:14:18.000000000 +0000
 +++ support/genmk/makefile
-@@ -7,8 +7,8 @@ SRC=genmk.c
+@@ -7,14 +7,14 @@ SRC=genmk.c
  OBJ=genmk.o
  # Define PC if you use a PC OS (changes directory symbol and object file extension)
  # see pccts/h/pcctscfg.h
@@ -13,3 +13,10 @@ $NetBSD: patch-ad,v 1.3 2011/03/11 14:49:03 drochner Exp $
  #CFLAGS=-I../../h -DPC
  CFLAGS=$(COPT) -I../../h
  BAG=../../bin/bag
+ 
+ genmk: $(OBJ) $(SRC) ../../h/pcctscfg.h
+-	$(CC) -o genmk $(OBJ)
++	$(CC) $(LDFLAGS) -o genmk $(OBJ)
+ 
+ clean:
+ 	rm -rf core *.o
