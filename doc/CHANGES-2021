@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3121 2021/05/31 23:39:24 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3122 2021/05/31 23:43:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4824,3 +4824,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-memoise to 2.0.0 [mef 2021-05-31]
 	Updated x11/gtk4 to 4.2.0 [wiz 2021-05-31]
 	Updated devel/R-xfun to 0.23 [mef 2021-05-31]
+	Updated print/R-tinytex to 0.31 [mef 2021-05-31]
