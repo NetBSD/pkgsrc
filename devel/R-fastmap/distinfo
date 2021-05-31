@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/05/31 22:22:32 mef Exp $
+
+SHA1 (R/fastmap_1.1.0.tar.gz) = 215ef0b1fe4b863440755aebbd4927a5fad56288
+RMD160 (R/fastmap_1.1.0.tar.gz) = f0e83013e2e92dcf671e88e32e01146cd008ea22
+SHA512 (R/fastmap_1.1.0.tar.gz) = f61b777f3ac4bf0a5c778bc07bb09a0244955c8bc13a669225a0c70999182af4012af2d9a792f1d861f7b5394c631e1896bf7ac3f3866b0c96e7e33a5635fb87
+Size (R/fastmap_1.1.0.tar.gz) = 44277 bytes
