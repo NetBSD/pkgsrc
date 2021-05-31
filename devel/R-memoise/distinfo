@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/07 20:51:59 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/05/31 22:43:04 mef Exp $
 
-SHA1 (R/memoise_1.1.0.tar.gz) = 202b193c549388fb63f25b6e236721f568d18f4a
-RMD160 (R/memoise_1.1.0.tar.gz) = 2bd0ce53b6ba5146275792ee7812cd92774dcc5d
-SHA512 (R/memoise_1.1.0.tar.gz) = d6bc671997164a48af2d9f72b4ea3713004431f7c1f2bd07a6622e9f8b2c688e03c333f18011bbea87b860a014422decb631c883912729e818709b1e1bbbd9d9
-Size (R/memoise_1.1.0.tar.gz) = 11025 bytes
+SHA1 (R/memoise_2.0.0.tar.gz) = ac07e334e281d20c45745ca381c392a0a8e5f7e4
+RMD160 (R/memoise_2.0.0.tar.gz) = 525ab3ea4ee04244373639179ecf980c965413cb
+SHA512 (R/memoise_2.0.0.tar.gz) = fb1a961131d6621ad7bcf8db6f5488ee44ebf903aa36502f7587d752213d310bea6a4d5cc4db0761661f95d3509fe65c183168df9265ac7aa839051c0e984f48
+Size (R/memoise_2.0.0.tar.gz) = 17337 bytes
