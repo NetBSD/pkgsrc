@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3093 2021/05/31 10:23:14 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3094 2021/05/31 10:27:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mame to 0.232 [wiz 2021-05-31]
 	Updated lang/rust to 1.52.1 [he 2021-05-31]
 	Updated fonts/cascadia-ttf to 2105.24 [wiz 2021-05-31]
+	Updated sysutils/fzf to 0.27.1 [wiz 2021-05-31]
