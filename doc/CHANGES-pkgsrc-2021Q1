@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.11 2021/05/29 19:06:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.12 2021/05/31 13:30:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -88,4 +88,16 @@ print/mupdf: security fix
 
 Pullup ticket #6462 - requested by gutteridge
 sysutils/xfce4-thunar: security fix
+
+Pullup ticket #6463 - requested by nia
+emulators/haxm: build fix
+
+Pullup ticket #6464 - requested by taca
+net/isc-dhcp4: security fix
+
+Pullup ticket #6465 - requested by taca
+www/squid4: security fix
+
+Pullup ticket #6466 - requested by taca
+databases/mysql57-client: security fix
 
