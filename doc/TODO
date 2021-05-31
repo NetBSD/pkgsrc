@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20704 2021/05/31 11:13:12 wiz Exp $
+$NetBSD: TODO,v 1.20705 2021/05/31 14:41:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-blob-1.2.1
 	o R-brio-1.1.1
 	o R-caTools-1.18.2
-	o R-callr-3.7.0
 	o R-cli-2.4.0
 	o R-coda-0.19.4
 	o R-colorspace-2.0.0
@@ -483,7 +482,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pkgload-1.2.1
 	o R-poweRlaw-0.70.6
 	o R-prettyunits-1.1.1
-	o R-processx-3.5.1
 	o R-promises-1.2.0.1
 	o R-ps-1.6.0
 	o R-psych-2.1.3
