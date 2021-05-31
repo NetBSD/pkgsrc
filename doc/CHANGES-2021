@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3103 2021/05/31 17:11:44 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3104 2021/05/31 18:19:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4803,3 +4803,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-callr to 3.7.0 [mef 2021-05-31]
 	Updated sysutils/R-processx to 3.5.2 [mef 2021-05-31]
 	Updated net/unifi to 6.0.45 [gdt 2021-05-31]
+	Updated sysutils/memtester to 4.5.1 [schmonz 2021-05-31]
