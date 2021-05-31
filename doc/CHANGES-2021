@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3090 2021/05/31 09:53:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3091 2021/05/31 10:13:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/gpg-tui version 0.1.4 [pin 2021-05-31]
 	Updated devel/py-click-threading to 0.5.0 [adam 2021-05-31]
 	Updated devel/py-click-repl to 0.2.0 [adam 2021-05-31]
+	Updated emulators/mame to 0.232 [wiz 2021-05-31]
