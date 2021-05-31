@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.24 2021/01/12 15:37:32 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.25 2021/05/31 10:17:53 he Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -51,7 +51,7 @@ cargo-vendor-crates:
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
-	  $$(${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate) \
+	  `$(${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate` \
 	  > ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json
 .endfor
 
