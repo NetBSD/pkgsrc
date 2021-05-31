@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/05/24 19:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/05/31 19:56:37 wiz Exp $
 
 DISTNAME=	libxml++-2.40.1
 PKGREVISION=	9
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://libxmlplusplus.sourceforge.net/
-COMMENT=	C++ wrapper for the libxml XML parser library
+COMMENT=	C++ wrapper for the libxml XML parser library (2.6 API)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
