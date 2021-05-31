@@ -1,20 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2020/08/27 12:32:49 joerg Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/05/31 13:49:55 adam Exp $
 
---- setup.py.orig	2020-08-26 11:49:30.118420576 +0000
+Fix building for Python 3.6.
+
+--- setup.py.orig	2020-12-15 19:13:04.000000000 +0000
 +++ setup.py
-@@ -1,13 +1,13 @@
- from setuptools import setup
- 
- import versioneer
--
-+import sys
- 
- def read(path):
+@@ -7,7 +7,7 @@ def read(path):
      """
      Read the contents of a file.
      """
 -    with open(path) as f:
-+    with open(path, **({'encoding': 'UTF-8'} if sys.version_info.major>=3 else {})) as f:
++    with open(path, encoding='utf-8') as f:
          return f.read()
  
  
