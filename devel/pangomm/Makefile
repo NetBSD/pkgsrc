@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/05/24 19:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2021/05/31 20:04:34 wiz Exp $
 
 DISTNAME=	pangomm-2.46.0
 PKGREVISION=	1
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.gtkmm.org/
-COMMENT=	C++ bindings for pango
+COMMENT=	C++ bindings for pango (1.4 API)
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	gtkmm<=2.13.5
