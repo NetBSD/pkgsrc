@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2021/04/24 19:35:44 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/05/31 20:49:15 pin Exp $
 
-DISTNAME=	bk-0.5.2
-# WARNING: Do not update this package!  Newer versions require rust-1.51
+DISTNAME=	bk-0.5.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aeosynth/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aeosynth/bk/
