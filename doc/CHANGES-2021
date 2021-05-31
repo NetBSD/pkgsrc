@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3097 2021/05/31 11:08:54 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3098 2021/05/31 11:13:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/gsl to 2.6 [wiz 2021-05-31]
 	Updated converters/libetonyek to 0.1.10 [wiz 2021-05-31]
 	Updated security/gnutls to 3.7.2 [wiz 2021-05-31]
+	Updated devel/pcre2 to 10.37 [wiz 2021-05-31]
