@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3119 2021/05/31 22:43:17 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3120 2021/05/31 22:59:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/pangomm2.48 version 2.48.1 [wiz 2021-05-31]
 	Updated x11/gtkmm3 to 3.24.5 [wiz 2021-05-31]
 	Updated devel/R-memoise to 2.0.0 [mef 2021-05-31]
+	Updated x11/gtk4 to 4.2.0 [wiz 2021-05-31]
