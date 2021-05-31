@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3101 2021/05/31 13:50:13 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3102 2021/05/31 14:41:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4800,3 +4800,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-dulwich to 0.20.23 [adam 2021-05-31]
 	Updated devel/py-boltons to 21.0.0 [adam 2021-05-31]
 	Updated sysutils/py-eliot to 1.13.0 [adam 2021-05-31]
+	Updated devel/R-callr to 3.7.0 [mef 2021-05-31]
+	Updated sysutils/R-processx to 3.5.2 [mef 2021-05-31]
