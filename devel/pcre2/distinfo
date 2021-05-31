@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/12/06 10:37:03 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/05/31 11:13:04 wiz Exp $
 
-SHA1 (pcre2-10.36.tar.bz2) = 65958cfc799c1474a272938f5690dff5f10db216
-RMD160 (pcre2-10.36.tar.bz2) = bfef32337552edc06ad66d18ecde40ad4dea998a
-SHA512 (pcre2-10.36.tar.bz2) = fc2a920562c80c3d31cedd94028fab55314ae0fb168cac7178f286c344a11fc514939edc3b83b8e0b57c872db4e595fd5530fd1d4b8c779be629553e9ec965a3
-Size (pcre2-10.36.tar.bz2) = 1722310 bytes
+SHA1 (pcre2-10.37.tar.bz2) = 4fcf6e0b4426b341de40295d2aa70b850ee8748d
+RMD160 (pcre2-10.37.tar.bz2) = 260daa9d31e76ecc428e84ab3f2ed3ba41b7ee37
+SHA512 (pcre2-10.37.tar.bz2) = 69f4bf4736b986e0fc855eedb292efe72a0df2e803bc0e61a6cf47775eed433bb1b2f28d7e641591ef4603d47beb543a64ed0eef9538d00f0746bc3435c143ec
+Size (pcre2-10.37.tar.bz2) = 1729384 bytes
