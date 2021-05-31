@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2020/12/13 23:12:13 mef Exp $
+# $NetBSD: Makefile,v 1.8 2021/05/31 14:39:56 mef Exp $
 
 R_PKGNAME=	callr
-R_PKGVER=	3.5.1
+R_PKGVER=	3.7.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Call R from R
 LICENSE=	mit
 
-DEPENDS+=	R-processx>=3.4.4:../../sysutils/R-processx
+DEPENDS+=	R-processx>=3.5.0:../../sysutils/R-processx
 
 # Packages suggested but not available:
 #  'pingr', 'spelling'
