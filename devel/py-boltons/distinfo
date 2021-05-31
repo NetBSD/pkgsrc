@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/08 18:07:53 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/05/31 13:39:34 adam Exp $
 
-SHA1 (boltons-20.2.1.tar.gz) = a95f1b3306c346f39c61c1876db705c1af91e1cb
-RMD160 (boltons-20.2.1.tar.gz) = 26dbb3437f581226f1b3772b2c0d5bfddec4de04
-SHA512 (boltons-20.2.1.tar.gz) = 88c7a9a85e49c870f965902e03abaa360049b8f19bfa02e2e217ac93dfaf1d40a996a5e043dd464c2ee231a220ddcd7b94b1ed250ce87b8f29185be8a46f48ba
-Size (boltons-20.2.1.tar.gz) = 172910 bytes
+SHA1 (boltons-21.0.0.tar.gz) = 8208662fb4d4b0836c80590258bd37f114c64035
+RMD160 (boltons-21.0.0.tar.gz) = e94fc0fdc8751b66e40031daf36fda914948ca21
+SHA512 (boltons-21.0.0.tar.gz) = 19859542c9fd20094be3ae85874a62164dd691f140f70c1c142d255a401edaf275fc45603b97943f56128fe906b9138e461f3acb7f50f9a33c8aa11a1b6c2f66
+Size (boltons-21.0.0.tar.gz) = 180201 bytes
