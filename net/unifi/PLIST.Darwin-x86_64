@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin-x86_64,v 1.1 2021/05/31 17:11:34 gdt Exp $
+unifi/lib/native/Mac/x86_64/libubnt_webrtc_jni.dylib

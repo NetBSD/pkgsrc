@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/03/21 09:03:04 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2021/05/31 17:11:33 gdt Exp $
 
-DISTNAME=	unifi-5.14.23
-PKGREVISION=	1
+DISTNAME=	unifi-6.0.45
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
@@ -77,6 +76,30 @@ post-extract:
 	find ${WRKSRC} -type f -print0 | xargs -0 chmod -x
 	mkdir ${WRKDIR}/${SNAPPY_JAVA}/target
 	ln -s ${WRKDIR}/${SNAPPY} ${WRKDIR}/${SNAPPY_JAVA}/target
+# drop platform specific binaries
+# as far as we know, these are for cloud access to your controller
+	ls -R ${WRKDIR}/UniFi/lib/native
+	rm -rf ${WRKDIR}/UniFi/lib/native/Windows
+.if (${OPSYS} != "Linux")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Linux
+.else
+.if (${MACHINE_ARCH} != "aarch64")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/aarch64
+.endif
+.if (${MACHINE_ARCH} != "armv7")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/armv7
+.endif
+.if (${MACHINE_ARCH} != "x86_64")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/x86_64
+.endif
+.endif
+.if (${OPSYS} != "Darwin")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Mac
+.else
+.if (${MACHINE_ARCH} != "x86_64")
+	rm -rf ${WRKDIR}/UniFi/lib/native/Mac/x86_64
+.endif
+.endif
 
 do-build:
 # bundled mongod is a linux binary; replace with symlink to native binary
