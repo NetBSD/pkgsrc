@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2021/05/27 15:25:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.939 2021/05/31 22:31:10 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -66,6 +66,7 @@ SUBDIR+=	breeze-icons
 SUBDIR+=	cairo
 SUBDIR+=	cairo-gobject
 SUBDIR+=	cairomm
+SUBDIR+=	cairomm1.16
 SUBDIR+=	cal3d
 SUBDIR+=	cal3d-examples
 SUBDIR+=	cambevao
