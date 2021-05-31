@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2021/04/08 21:21:38 adam Exp $
+$NetBSD: distinfo,v 1.13 2021/05/31 22:38:31 wiz Exp $
 
-SHA1 (gtkmm-3.24.4.tar.xz) = 439cbfb186258f51446a33ecb517404c95b401aa
-RMD160 (gtkmm-3.24.4.tar.xz) = 7acfa7e64bf3a2048cdc3fecf2ef39469aa1e936
-SHA512 (gtkmm-3.24.4.tar.xz) = e3a10aed9cf2df7369b5dac3f1de000b006e08aef6f2d953d2faf2b023bd744ed4c9c2ad5221adc1b0c919bcdc966d0c1c9dc698694d8630ceba56e39f91ac26
-Size (gtkmm-3.24.4.tar.xz) = 13534708 bytes
+SHA1 (gtkmm-3.24.5.tar.xz) = 86bbdc1917a37195c73cad4bbabcf26588ea69ad
+RMD160 (gtkmm-3.24.5.tar.xz) = 55ae41041b9b3137662bcd7c115d5741d9025b6c
+SHA512 (gtkmm-3.24.5.tar.xz) = 8cc5aed26cc631123a5b38bc19643cf9e900beb38681b29ead9049f6b8f930f0b8ace317b8290279ab89cad85075dcb66863174082f77a2b67e4d8bd3c29de49
+Size (gtkmm-3.24.5.tar.xz) = 13540488 bytes
 SHA1 (patch-meson.build) = 3705d3848e3adcbac7567719679627a129a88e28
