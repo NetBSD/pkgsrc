@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3133 2021/06/01 11:28:23 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.3134 2021/06/01 13:19:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4842,3 +4842,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/nginx to 1.20.1 [adam 2021-06-01]
 	Updated www/nginx-devel to 1.21.0 [adam 2021-06-01]
 	Updated archivers/gnome-autoar to 0.3.2 [dan 2021-06-01]
+	Updated devel/R-pkgKitten to 0.2.1 [mef 2021-06-01]
