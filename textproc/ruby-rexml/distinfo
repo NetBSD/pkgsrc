@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/14 14:53:04 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/06/01 15:33:58 taca Exp $
 
-SHA1 (rexml-3.2.4.gem) = d21fcfdfd72008d79772da35a62297d8d551c6ab
-RMD160 (rexml-3.2.4.gem) = 04b4b0f6355d683d149f264fe519371a590cca4f
-SHA512 (rexml-3.2.4.gem) = 05cd28b4b4477c306a07e9eccbc226aabea0a8e5497e04ce55a6f4407cd278acdba754561265dc6f57c48d09e0a1d91e757e7bfaba67fd59bbf4d8eecdaa3459
-Size (rexml-3.2.4.gem) = 77824 bytes
+SHA1 (rexml-3.2.5.gem) = e7f48fa5fb2d92e6cb21d6b1638fe41a5a7c4287
+RMD160 (rexml-3.2.5.gem) = 4fd44c55c7c841dfc9bc05feec97d21713e197c0
+SHA512 (rexml-3.2.5.gem) = 1e3838d4a5befa76137fb8fea6a20195490645aa2b1c5d14d1eeca6c093d7f64eb405f07fd07b00fcafa9606dc78f9f0a488012338f81414623feb6e8cb83931
+Size (rexml-3.2.5.gem) = 93184 bytes
