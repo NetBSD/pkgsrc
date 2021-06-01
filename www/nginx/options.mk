@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.69 2021/04/16 07:09:34 adam Exp $
+# $NetBSD: options.mk,v 1.70 2021/06/01 10:53:46 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -272,7 +272,7 @@ CONFIGURE_ARGS+=	--with-stream --with-stream_ssl_preread_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mrtmp) || make(makesum) || make(mdi) || make(distclean)
-RTMP_VERSION=		1.2.1
+RTMP_VERSION=		1.2.2
 RTMP_DISTNAME=		nginx-rtmp-module-${RTMP_VERSION}
 RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
 SITES.${RTMP_DISTFILE}=	-${MASTER_SITE_GITHUB:=arut/nginx-rtmp-module/archive/}v${RTMP_VERSION}.tar.gz
