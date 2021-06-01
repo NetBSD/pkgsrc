@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2021/05/30 20:02:31 thor Exp $
+# $NetBSD: options.mk,v 1.14 2021/06/01 08:30:17 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
@@ -22,7 +22,7 @@ PKG_SUGGESTED_OPTIONS+=	snapper
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		ads cups fam ldap pam winbind
+PLIST_VARS+=		ads cups fam ldap pam snapper winbind
 
 ###
 ### Access Control List support.
