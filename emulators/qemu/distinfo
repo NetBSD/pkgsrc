@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.178 2021/05/24 14:22:08 ryoon Exp $
+$NetBSD: distinfo,v 1.179 2021/06/01 16:28:05 nia Exp $
 
 SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
@@ -51,5 +51,5 @@ SHA1 (patch-target_i386_meson.build) = 0b6430825e1f5715f6deea556043b7e5063cf10a
 SHA1 (patch-target_i386_nvmm_meson.build) = c773fbed28a87f53263ab5299a63ca77423d164f
 SHA1 (patch-target_i386_nvmm_nvmm-accel-ops.c) = fdc29ccd0fcd47b72e7802655fe92b08f7d22bb9
 SHA1 (patch-target_i386_nvmm_nvmm-accel-ops.h) = 74d6442e1ac1cdf187996f3dd82bb3efddc002ec
-SHA1 (patch-target_i386_nvmm_nvmm-all.c) = cd75f6a584920093407ec254b9276b056f83132e
+SHA1 (patch-target_i386_nvmm_nvmm-all.c) = 6370f1f6336546b24d9c3493cd0b27ca6843f35d
 SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
