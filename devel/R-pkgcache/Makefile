@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/01/11 08:46:36 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/01 13:26:05 mef Exp $
 
 R_PKGNAME=	pkgcache
-R_PKGVER=	1.1.1
+R_PKGVER=	1.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,7 +22,7 @@ DEPENDS+=	R-processx>=3.3.0.9001:../../sysutils/R-processx
 DEPENDS+=	R-curl>=3.2:../../www/R-curl
 DEPENDS+=	R-filelock-[0-9]*:../../devel/R-filelock
 
-# Packages suggested but not available: 'debugme', 'presser'
+# Packages suggested but not available: 'debugme', 'webfakes'
 #TEST_DEPENDS+=	R-debugme-[0-9]*:
 
 
