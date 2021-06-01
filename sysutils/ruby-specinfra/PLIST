@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/09/14 14:53:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/01 14:50:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -422,6 +422,10 @@ ${GEM_LIBDIR}/spec/command/debian/service_spec.rb
 ${GEM_LIBDIR}/spec/command/debian8/port_spec.rb
 ${GEM_LIBDIR}/spec/command/debian9/port_spec.rb
 ${GEM_LIBDIR}/spec/command/debian9/service_spec.rb
+${GEM_LIBDIR}/spec/command/debiantesting/port_spec.rb
+${GEM_LIBDIR}/spec/command/debiantesting/service_spec.rb
+${GEM_LIBDIR}/spec/command/debianunstable/port_spec.rb
+${GEM_LIBDIR}/spec/command/debianunstable/service_spec.rb
 ${GEM_LIBDIR}/spec/command/esxi/package_spec.rb
 ${GEM_LIBDIR}/spec/command/factory_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/file_spec.rb
