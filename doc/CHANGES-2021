@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3131 2021/06/01 08:35:47 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3132 2021/06/01 10:55:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4839,3 +4839,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.06 [fcambus 2021-06-01]
 	Updated net/dbip-city-lite to 2021.06 [fcambus 2021-06-01]
 	Updated net/dbip-country-lite to 2021.06 [fcambus 2021-06-01]
+	Updated www/nginx to 1.20.1 [adam 2021-06-01]
+	Updated www/nginx-devel to 1.21.0 [adam 2021-06-01]
