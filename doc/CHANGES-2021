@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3145 2021/06/01 15:31:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3146 2021/06/01 15:34:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4854,3 +4854,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-asciidoctor to 2.0.15 [taca 2021-06-01]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.4.13 [taca 2021-06-01]
 	Updated textproc/ruby-nokogumbo to 2.0.5 [taca 2021-06-01]
+	Updated textproc/ruby-rexml to 3.2.5 [taca 2021-06-01]
