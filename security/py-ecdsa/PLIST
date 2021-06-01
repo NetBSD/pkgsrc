@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/27 16:55:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/01 05:34:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/ecdsa/ecdsa.pyo
 ${PYSITELIB}/ecdsa/ellipticcurve.py
 ${PYSITELIB}/ecdsa/ellipticcurve.pyc
 ${PYSITELIB}/ecdsa/ellipticcurve.pyo
+${PYSITELIB}/ecdsa/errors.py
+${PYSITELIB}/ecdsa/errors.pyc
+${PYSITELIB}/ecdsa/errors.pyo
 ${PYSITELIB}/ecdsa/keys.py
 ${PYSITELIB}/ecdsa/keys.pyc
 ${PYSITELIB}/ecdsa/keys.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/ecdsa/numbertheory.pyo
 ${PYSITELIB}/ecdsa/rfc6979.py
 ${PYSITELIB}/ecdsa/rfc6979.pyc
 ${PYSITELIB}/ecdsa/rfc6979.pyo
+${PYSITELIB}/ecdsa/test_curves.py
+${PYSITELIB}/ecdsa/test_curves.pyc
+${PYSITELIB}/ecdsa/test_curves.pyo
 ${PYSITELIB}/ecdsa/test_der.py
 ${PYSITELIB}/ecdsa/test_der.pyc
 ${PYSITELIB}/ecdsa/test_der.pyo
