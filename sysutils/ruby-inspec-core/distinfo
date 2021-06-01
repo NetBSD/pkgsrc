@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/05/09 15:01:04 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/06/01 14:48:32 taca Exp $
 
-SHA1 (inspec-core-4.37.0.gem) = c1640544e5386efc7b18eace502668da54b2b6c5
-RMD160 (inspec-core-4.37.0.gem) = 8b0dea27e88381a7b53b2a1df257d602538a6a75
-SHA512 (inspec-core-4.37.0.gem) = 290a3d5f322680ff2abfc19ff36849bd82d5206bea8884cf6f0f58da271c949ffe0cf14db6a3d46707d32182fdb3af82f091d68caff306e3ae0a94db6b619aa6
-Size (inspec-core-4.37.0.gem) = 373760 bytes
+SHA1 (inspec-core-4.37.20.gem) = 877827a016c2dd0870af921c2c2d67b9e2c0bb74
+RMD160 (inspec-core-4.37.20.gem) = 036505a89ea053af52437222dd140e31296a89b6
+SHA512 (inspec-core-4.37.20.gem) = 5135333c8d1151e986daac5ee6ee0d7002ccaaa8cba89499fc8fd11e2f8e6fb8409afde1f75f1690141d24c725dae2d59077816f7e93e74b621643389fe3d3ec
+Size (inspec-core-4.37.20.gem) = 374272 bytes
