@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3150 2021/06/01 21:11:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3151 2021/06/01 22:11:14 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4859,3 +4859,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-toml to 0.3.0 [taca 2021-06-01]
 	Updated www/firefox78 to 78.11.0 [nia 2021-06-01]
 	Updated www/firefox78-l10n to 78.11.0 [nia 2021-06-01]
+	Updated math/openblas to 0.3.15 [thor 2021-06-01]
