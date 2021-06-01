@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3128 2021/06/01 08:30:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3129 2021/06/01 08:34:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4836,3 +4836,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-ecdsa to 0.17.0 [adam 2021-06-01]
 	Updated net/dante to 1.4.3 [adam 2021-06-01]
 	Updated net/samba4 to 4.14.5 [adam 2021-06-01]
+	Updated net/dbip-asn-lite to 2021.06 [fcambus 2021-06-01]
