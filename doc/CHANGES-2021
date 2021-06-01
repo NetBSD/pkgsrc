@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3123 2021/05/31 23:56:20 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3124 2021/06/01 00:10:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4826,3 +4826,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-xfun to 0.23 [mef 2021-05-31]
 	Updated print/R-tinytex to 0.31 [mef 2021-05-31]
 	Updated print/R-knitr to 1.33 [mef 2021-05-31]
+	Updated x11/xfce4-whiskermenu-plugin to 2.5.3 [gutteridge 2021-06-01]

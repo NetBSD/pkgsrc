@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20712 2021/05/31 23:56:20 mef Exp $
+$NetBSD: TODO,v 1.20713 2021/06/01 00:10:19 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -2345,7 +2345,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xfce4-verve-plugin-2.0.1
 	o xfce4-wavelan-plugin-0.6.2
 	o xfce4-weather-plugin-0.11.0
-	o xfce4-whiskermenu-plugin-2.5.3
 	o xfce4-wm-4.16.1
 	o xfe-1.42 [pkg/52968]
 	o xforms-1.2.4
