@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/10/12 21:52:01 bacon Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/01 09:12:26 wiz Exp $
 
 DISTNAME=	lush-1.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lush/}
 

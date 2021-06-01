@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/12/07 00:14:56 wiedi Exp $
-#
+# $NetBSD: Makefile,v 1.7 2021/06/01 09:12:26 wiz Exp $
 
 DISTNAME=	dieharder-3.31.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.phy.duke.edu/~rgb/General/dieharder/
 EXTRACT_SUFX=	.tgz
