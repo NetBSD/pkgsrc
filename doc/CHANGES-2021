@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3146 2021/06/01 15:34:28 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3147 2021/06/01 15:35:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4855,3 +4855,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.4.13 [taca 2021-06-01]
 	Updated textproc/ruby-nokogumbo to 2.0.5 [taca 2021-06-01]
 	Updated textproc/ruby-rexml to 3.2.5 [taca 2021-06-01]
+	Updated textproc/ruby-simplecov_json_formatter to 0.1.3 [taca 2021-06-01]
