@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3127 2021/06/01 05:49:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3128 2021/06/01 08:30:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4834,3 +4834,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-requests-mock to 1.9.3 [adam 2021-06-01]
 	Updated fonts/py-fonttools to 4.24.4 [adam 2021-06-01]
 	Updated security/py-ecdsa to 0.17.0 [adam 2021-06-01]
+	Updated net/dante to 1.4.3 [adam 2021-06-01]
+	Updated net/samba4 to 4.14.5 [adam 2021-06-01]
