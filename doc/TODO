@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20716 2021/06/01 13:19:53 mef Exp $
+$NetBSD: TODO,v 1.20717 2021/06/01 13:26:18 mef Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pbkrtest-0.5.1
 	o R-pillar-1.6.0
 	o R-pixmap-0.4.12
-	o R-pkgcache-1.2.1
 	o R-pkgload-1.2.1
 	o R-poweRlaw-0.70.6
 	o R-prettyunits-1.1.1
