@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
+$NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.2 2021/06/01 16:28:05 nia Exp $
 
---- target/i386/nvmm/nvmm-all.c.orig	2021-05-06 05:09:24.911125954 +0000
+--- target/i386/nvmm/nvmm-all.c.orig	2021-06-01 15:07:31.572325819 +0000
 +++ target/i386/nvmm/nvmm-all.c
-@@ -0,0 +1,1226 @@
+@@ -0,0 +1,1236 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -755,7 +755,11 @@ $NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 +        nvmm_vcpu_pre_run(cpu);
 +
 +        if (qatomic_read(&cpu->exit_request)) {
++#if NVMM_USER_VERSION >= 2
 +            nvmm_vcpu_stop(vcpu);
++#else
++            qemu_cpu_kick_self();
++#endif
 +        }
 +
 +        /* Read exit_request before the kernel reads the immediate exit flag */
@@ -772,6 +776,7 @@ $NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 +        switch (exit->reason) {
 +        case NVMM_VCPU_EXIT_NONE:
 +            break;
++#if NVMM_USER_VERSION >= 2
 +        case NVMM_VCPU_EXIT_STOPPED:
 +            /*
 +             * The kernel cleared the immediate exit flag; cpu->exit_request
@@ -780,6 +785,7 @@ $NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 +            smp_wmb();
 +            qcpu->stop = true;
 +            break;
++#endif
 +        case NVMM_VCPU_EXIT_MEMORY:
 +            ret = nvmm_handle_mem(mach, vcpu);
 +            break;
@@ -893,8 +899,12 @@ $NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.1 2021/05/24 14:22:08 ryoon Exp $
 +{
 +    if (current_cpu) {
 +        struct qemu_vcpu *qcpu = get_qemu_vcpu(current_cpu);
++#if NVMM_USER_VERSION >= 2
 +        struct nvmm_vcpu *vcpu = &qcpu->vcpu;
 +        nvmm_vcpu_stop(vcpu);
++#else
++        qcpu->stop = true;
++#endif
 +    }
 +}
 +
