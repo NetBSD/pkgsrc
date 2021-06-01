@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3142 2021/06/01 14:51:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3143 2021/06/01 14:53:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4851,3 +4851,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-text to 0.2.34 [taca 2021-06-01]
 	Updated sysutils/ruby-inspec-core to 4.37.20 [taca 2021-06-01]
 	Updated sysutils/ruby-specinfra to 2.82.25 [taca 2021-06-01]
+	Updated textproc/ruby-asciidoctor to 2.0.15 [taca 2021-06-01]
