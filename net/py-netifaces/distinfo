@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/01/04 08:00:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/06/01 05:10:05 adam Exp $
 
-SHA1 (netifaces-0.10.9.tar.gz) = 340a91e6cdd03c941a0da464255d6e4b5cbe5512
-RMD160 (netifaces-0.10.9.tar.gz) = 777b974353281b8e3b70549cabb77a6b1f0ee379
-SHA512 (netifaces-0.10.9.tar.gz) = 8fc593de4d2cbda46a3e2430ede031360f1abfc64d47d00fbec09f3395fd83479bf29d97cb6834b1df06850c9ac2745c9344b6814f34be5975d4d5df98e05e87
-Size (netifaces-0.10.9.tar.gz) = 28844 bytes
+SHA1 (netifaces-0.11.0.tar.gz) = c1dd2b481a0101eb518bf47bdf40ea53ab61ca62
+RMD160 (netifaces-0.11.0.tar.gz) = 40b7990e7ea06f6c03d5626519c4164de60da92e
+SHA512 (netifaces-0.11.0.tar.gz) = a53110efb78c89c4d72d002104866253a4c085dd27ff9f41d4cfe3811cc5619e7585ceda4e91e83cdd0645c40c745c61d205708ee9a34427b35f437a48f148e5
+Size (netifaces-0.11.0.tar.gz) = 30106 bytes
 SHA1 (patch-setup.py) = f24d5286744a0aa5bb23fae56610ca7d43dc1fc4
