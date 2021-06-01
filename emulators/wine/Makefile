@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.228 2021/05/24 19:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2021/06/01 05:05:54 adam Exp $
 
-DISTNAME=	wine-4.0.4
-PKGREVISION=	11
+DISTNAME=	wine-5.0.5
 CATEGORIES=	emulators
-MASTER_SITES=	https://dl.winehq.org/wine/source/4.0/
-MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/4.0/
+MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,10 +11,9 @@ HOMEPAGE=	https://www.winehq.org/
 COMMENT=	Compatibility layer for running Microsoft Windows applications
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison flex gmake mktemp msgfmt perl
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bison flex gmake mktemp msgfmt perl pkg-config
+GNU_CONFIGURE=	yes
 
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
@@ -32,7 +30,7 @@ CONFIGURE_ARGS+=	--without-hal
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
 CONFIGURE_ARGS+=	--without-udev
-CONFIGURE_ARGS+=	--without-v4l
+CONFIGURE_ARGS+=	--without-v4l2
 CONFIGURE_ARGS+=	--without-vkd3d
 CONFIGURE_ARGS+=	--without-vulkan
 
