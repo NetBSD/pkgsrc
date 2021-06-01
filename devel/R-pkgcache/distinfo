@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 10:17:46 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/06/01 13:26:05 mef Exp $
 
-SHA1 (R/pkgcache_1.1.1.tar.gz) = 4cbd40032755f7149d5884432f96f09b37ab0a0a
-RMD160 (R/pkgcache_1.1.1.tar.gz) = f83980e5c7fcdd648d642b8cae2dabf4b373e8fe
-SHA512 (R/pkgcache_1.1.1.tar.gz) = 4d7f86c98902e1909376b8b38c15b98a39b815015df54f07082c8d453025eb11374881cf4f928986c819340c1b6467c956038d83ea20afbbd0f60cfc4e492b25
-Size (R/pkgcache_1.1.1.tar.gz) = 131818 bytes
+SHA1 (R/pkgcache_1.2.2.tar.gz) = 301682db6b416342032b1006650c8440cfc6b5d8
+RMD160 (R/pkgcache_1.2.2.tar.gz) = 11404581e56ddd92619f1838b2606a6fb0d8d84a
+SHA512 (R/pkgcache_1.2.2.tar.gz) = 2017dabbd540c46bf0e22524ebe4a45d60f538fc50f0ae54350632b21fa89c0d340ed8b09b1d82309eb075ea95b205cbb4c3181cf128f5a3dcdebd533cec8c38
+Size (R/pkgcache_1.2.2.tar.gz) = 164094 bytes
