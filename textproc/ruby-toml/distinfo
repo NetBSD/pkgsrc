@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/17 16:34:11 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/06/01 15:40:47 taca Exp $
 
-SHA1 (toml-0.2.0.gem) = 9d53c8b919f3aa53c8a71aed538abb086ac4ddb1
-RMD160 (toml-0.2.0.gem) = 584376ec4e5f9d8e542ad69029f1eb1fc5bf3d72
-SHA512 (toml-0.2.0.gem) = f0fc31fda044c4ac83cb101b0b212f59478b311a7ae27f00fc3f8f06d8a4a64aca41f84b8fd98bb5f9caa46140bb2df97e4be7ec6a3cba87cb4424d0c8e3784c
-Size (toml-0.2.0.gem) = 10240 bytes
+SHA1 (toml-0.3.0.gem) = 419a18fc771dc45121173422331c705b248858fb
+RMD160 (toml-0.3.0.gem) = 5fd94d3d2999f8cb0d0ec73e8942a1abebff964f
+SHA512 (toml-0.3.0.gem) = 3528e5ce2abd4a5789913052e9182eb2941dd99f51ca46d320d3969012fc5eb0c4206220415821839683a17521fe6c10931dc22064276929242f8add3230dac7
+Size (toml-0.3.0.gem) = 10240 bytes
