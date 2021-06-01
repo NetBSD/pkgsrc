@@ -1,12 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/14 14:53:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/01 15:33:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/NEWS.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/doc/rexml/context.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/rdoc/child.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/rdoc/document.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/rdoc/element.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/rdoc/node.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/rdoc/parent.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/child_toc.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/document_toc.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/element_toc.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/master_toc.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/node_toc.rdoc
+${GEM_LIBDIR}/doc/rexml/tasks/tocs/parent_toc.rdoc
+${GEM_LIBDIR}/lib/rexml.rb
 ${GEM_LIBDIR}/lib/rexml/attlistdecl.rb
 ${GEM_LIBDIR}/lib/rexml/attribute.rb
 ${GEM_LIBDIR}/lib/rexml/cdata.rb
@@ -56,5 +65,4 @@ ${GEM_LIBDIR}/lib/rexml/xmldecl.rb
 ${GEM_LIBDIR}/lib/rexml/xmltokens.rb
 ${GEM_LIBDIR}/lib/rexml/xpath.rb
 ${GEM_LIBDIR}/lib/rexml/xpath_parser.rb
-${GEM_LIBDIR}/rexml.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
