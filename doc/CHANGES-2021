@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3135 2021/06/01 13:26:18 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3136 2021/06/01 13:31:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4844,3 +4844,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/gnome-autoar to 0.3.2 [dan 2021-06-01]
 	Updated devel/R-pkgKitten to 0.2.1 [mef 2021-06-01]
 	Updated devel/R-pkgcache to 1.2.2 [mef 2021-06-01]
+	Updated devel/R-pkgload to 1.2.1 [mef 2021-06-01]
