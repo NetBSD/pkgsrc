@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/27 05:24:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/01 21:07:21 nia Exp $
 bin/firefox78
 lib/firefox78/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox78/actors/AboutHttpsOnlyErrorParent.jsm
@@ -820,8 +820,9 @@ lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/france/me
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/in/messages.json
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/it/messages.json
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/jp/messages.json
-lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/mx/messages.json
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/nl/messages.json
+lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/spain/messages.json
+lib/firefox78/browser/chrome/browser/search-extensions/amazon/_locales/sweden/messages.json
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/favicon.ico
 lib/firefox78/browser/chrome/browser/search-extensions/amazon/manifest.json
 lib/firefox78/browser/chrome/browser/search-extensions/amazondotcn/_locales/default/messages.json
