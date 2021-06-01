@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2021/05/17 11:31:29 thor Exp $
+$NetBSD: distinfo,v 1.28 2021/06/01 22:14:09 thor Exp $
 
 SHA1 (lapack-3.9.1.tar.gz) = ccb1e9cb6e7fa7db8a680292457d7d990f25d286
 RMD160 (lapack-3.9.1.tar.gz) = 380a2072eb7d8358ec8bf100e3d114600fc71444
@@ -10,5 +10,5 @@ SHA1 (patch-CBLAS_src_CMakeLists.txt) = 64abbfb4458943483fba8897df0c8bf62c3f949e
 SHA1 (patch-CMakeLists.txt) = 3c8e9125f164625198fb7197982746f43bf4aab5
 SHA1 (patch-LAPACKE_CMakeLists.txt) = 13e4662585088aa53f61f7079d103fdfcf985c4e
 SHA1 (patch-LAPACKE_lapacke.pc.in) = 6bbd72205120501cd60daf0b22b00ef7979fb329
-SHA1 (patch-SRC_CMakeLists.txt) = 4031bb41100f1fde71c70aa53fc55bee7a852fb7
+SHA1 (patch-SRC_CMakeLists.txt) = c0e22574e0c7ff6535c95a6f1f85903bbc1751b0
 SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 07946678945dba3a7752849791f12e0666345983
