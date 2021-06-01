@@ -1,12 +1,12 @@
-$NetBSD: patch-dlls_wininet_http.c,v 1.1 2020/05/22 17:44:42 nia Exp $
+$NetBSD: patch-dlls_wininet_http.c,v 1.2 2021/06/01 05:05:54 adam Exp $
 
 Fix headers
 
---- dlls/wininet/http.c.orig	2019-03-15 20:18:31.000000000 +0000
+--- dlls/wininet/http.c.orig	2020-06-02 13:09:41.000000000 +0000
 +++ dlls/wininet/http.c
-@@ -35,14 +35,14 @@
- #  include <zlib.h>
- #endif
+@@ -29,9 +29,6 @@
+ 
+ #include <stdlib.h>
  
 -#include "winsock2.h"
 -#include "ws2ipdef.h"
@@ -14,7 +14,9 @@ Fix headers
  #include <stdarg.h>
  #include <stdio.h>
  #include <time.h>
- #include <assert.h>
+@@ -39,6 +36,9 @@
+ #include <errno.h>
+ #include <limits.h>
  
 +#include "winsock2.h"
 +#include "ws2ipdef.h"
