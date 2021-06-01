@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2015/09/13 21:55:15 leot Exp $
+$NetBSD: patch-capi_Makefile.in,v 1.1 2021/06/01 07:42:08 adam Exp $
+
+Install includes into a subdirectory.
 
 --- capi/Makefile.in.orig	2014-09-03 14:52:37.000000000 +0000
 +++ capi/Makefile.in
