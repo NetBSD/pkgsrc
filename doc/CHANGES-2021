@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3125 2021/06/01 00:32:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3126 2021/06/01 05:22:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4828,3 +4828,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/R-knitr to 1.33 [mef 2021-05-31]
 	Updated x11/xfce4-whiskermenu-plugin to 2.5.3 [gutteridge 2021-06-01]
 	Added x11/gtkmm4 version 4.2.0 [wiz 2021-06-01]
+	Updated emulators/wine to 5.0.5 [adam 2021-06-01]
+	Updated net/py-netifaces to 0.11.0 [adam 2021-06-01]
+	Updated devel/py-astroid to 2.5.7 [adam 2021-06-01]
+	Updated devel/py-requests-mock to 1.9.3 [adam 2021-06-01]
