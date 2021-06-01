@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3139 2021/06/01 14:42:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3140 2021/06/01 14:45:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-testit to 0.13 [mef 2021-06-01]
 	Updated security/ruby-rex-powershell to 0.1.90 [taca 2021-06-01]
 	Updated security/ruby-rex-socket to 0.1.29 [taca 2021-06-01]
+	Updated security/ruby-rex-text to 0.2.34 [taca 2021-06-01]
