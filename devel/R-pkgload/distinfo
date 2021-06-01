@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/20 04:13:53 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/06/01 13:31:23 mef Exp $
 
-SHA1 (R/pkgload_1.1.0.tar.gz) = 453a2e8c8b40cb16fda642eac9fc0ce3330510fd
-RMD160 (R/pkgload_1.1.0.tar.gz) = 937999463ab39f88111dfc9308cf5417ea080327
-SHA512 (R/pkgload_1.1.0.tar.gz) = 0e1fd0954ed303a168d35d99e2cbe2a07f53afa6c16f463aacacecc1364944a3532c505deff0667caa4773204de60c0d9a286d060c7c07b56eb8ae2dff5dc8ee
-Size (R/pkgload_1.1.0.tar.gz) = 58046 bytes
+SHA1 (R/pkgload_1.2.1.tar.gz) = d5a365e3ad0da30e37f2216112544e6c3f83cbaa
+RMD160 (R/pkgload_1.2.1.tar.gz) = b4a54b19c16c9b9378cc1acc4c6d10594b330ed1
+SHA512 (R/pkgload_1.2.1.tar.gz) = c80c532a23db99ffd0624673d6a7debcd12850df78cc669c6a91ddcc3be6085999d200b8d005e8a839ae0d33862af56589e887dff194a375566ae672836ffe57
+Size (R/pkgload_1.2.1.tar.gz) = 60651 bytes
