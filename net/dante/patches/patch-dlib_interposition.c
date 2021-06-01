@@ -1,4 +1,4 @@
-$NetBSD: patch-dlib_interposition.c,v 1.1 2019/02/09 19:51:09 rhialto Exp $
+$NetBSD: patch-dlib_interposition.c,v 1.2 2021/06/01 07:42:08 adam Exp $
 
 o Do not use ssp(3) when compiling interposition.c:
 
@@ -14,10 +14,10 @@ o Do not use ssp(3) when compiling interposition.c:
      __ssp_redirect0(ssize_t, read, (int __fd, void *__buf, size_t __len), \
      ^
 
---- dlib/interposition.c.orig	2017-01-31 08:17:38.000000000 +0000
+--- dlib/interposition.c.orig	2020-11-11 16:11:56.000000000 +0000
 +++ dlib/interposition.c
 @@ -1,3 +1,4 @@
 +#undef _FORTIFY_SOURCE
  /*
   * Copyright (c) 1997, 1998, 1999, 2000, 2001, 2004, 2008, 2009, 2010, 2011,
-  *               2012, 2013, 2016, 2017
+  *               2012, 2013, 2016, 2017, 2020
