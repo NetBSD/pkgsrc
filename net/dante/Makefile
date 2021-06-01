@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2021/06/01 07:42:08 adam Exp $
 
-DISTNAME=	dante-1.4.2
-PKGREVISION=	1
+DISTNAME=	dante-1.4.3
 CATEGORIES=	net security
 MASTER_SITES=	http://www.inet.no/dante/files/
 
