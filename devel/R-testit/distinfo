@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 10:01:01 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/06/01 13:36:08 mef Exp $
 
-SHA1 (R/testit_0.12.tar.gz) = fba7c5a78098b552df7efc26cac1e10ee6cac516
-RMD160 (R/testit_0.12.tar.gz) = b1085e6cb47467bd3f883ea632b255d54c412de3
-SHA512 (R/testit_0.12.tar.gz) = 576aec0c154b7f21c7aac96dd8a797fa7eb1d637500803b4ce2f4a1a20be6c1ccfaa6331097f064ccfab397d35d9518c9177b88f66ef871cf840a43d4f59e21c
-Size (R/testit_0.12.tar.gz) = 10767 bytes
+SHA1 (R/testit_0.13.tar.gz) = 715b4a6b8bbc0d68d550a24df20444067425403d
+RMD160 (R/testit_0.13.tar.gz) = 392d3f3a72394c4e51a24839f81c6b8a3dc9e4cc
+SHA512 (R/testit_0.13.tar.gz) = f48774a055d6eb04523e6c3a7afdbc74698aa11accc13cd66d860feab9a584a816c430196bf7e12999ea20746c9b85b6544af9dc8e16922694968392eab36d3f
+Size (R/testit_0.13.tar.gz) = 8493 bytes
