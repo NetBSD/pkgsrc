@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2020/05/22 17:44:41 nia Exp $
+# $NetBSD: options.mk,v 1.21 2021/06/01 05:05:54 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=		alsa cups dbus pulseaudio sane x11
@@ -46,6 +46,7 @@ PLIST_VARS+=	x11
 PLIST.x11=		yes
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libICE/buildlink3.mk"
+.  include "../../x11/libXcomposite/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXfixes/buildlink3.mk"
