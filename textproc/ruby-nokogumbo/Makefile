@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 16:04:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/01 15:31:18 taca Exp $
 
-DISTNAME=	nokogumbo-2.0.2
+DISTNAME=	nokogumbo-2.0.5
 CATEGORIES=	textproc
 MASTER_SITES=	https://rubygems.org/downloads/
 
