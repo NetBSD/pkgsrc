@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.170 2021/02/08 12:26:20 ryoon Exp $
+$NetBSD: distinfo,v 1.171 2021/06/02 15:39:55 wiz Exp $
 
 SHA1 (seamonkey-2.53.6.source.tar.xz) = ff5cb7701acc7487d094c8d04ecabe0aa486eae9
 RMD160 (seamonkey-2.53.6.source.tar.xz) = fdedcb9419ff598ad9e18e94115ed9d5e3624116
 SHA512 (seamonkey-2.53.6.source.tar.xz) = 1854862b5b4781e21cb14bdb6be95e219195459202f55cde3800594174307a9ff23e8b29304494489e947a2749765cdb75ca56633f2fcff8afaf277da972a573
 Size (seamonkey-2.53.6.source.tar.xz) = 283905464 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 38ba5e8a0e41352afc4e767c25388c3c772b0457
+SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b742b070a45507678f592428110477e484c52659
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 5a5890c5347cdb1a0899eebe4f014584fa460c10
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 5c6074fb8e0baf4e7dc2dd49718bfd285e65e3e1
