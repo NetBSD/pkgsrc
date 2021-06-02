@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3162 2021/06/02 15:22:32 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3163 2021/06/02 15:24:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-raindrops to 0.19.2 [taca 2021-06-02]
 	Updated www/thin to 1.8.1 [taca 2021-06-02]
 	Updated x11/ruby-tk to 0.4.0 [taca 2021-06-02]
+	Updated databases/ruby-sequel to 5.45.0 [taca 2021-06-02]
