@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20721 2021/06/02 20:00:00 wiz Exp $
+$NetBSD: TODO,v 1.20722 2021/06/02 23:28:34 khorben Exp $
 
 Suggested new packages
 ======================
@@ -1938,7 +1938,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-claripy-9.0.6852
-	o py-cle-9.0.6852
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
