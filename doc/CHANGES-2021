@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3167 2021/06/02 15:37:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3168 2021/06/02 15:39:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4891,3 +4891,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/postfix-sqlite to 3.6.0 [taca 2021-06-02]
 	Updated net/bind911 to 9.11.32 [taca 2021-06-02]
 	Updated net/bind916 to 9.16.16 [taca 2021-06-02]
+	Updated net/pear-Net_Sieve to 1.4.5 [taca 2021-06-02]
