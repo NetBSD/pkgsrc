@@ -1,14 +1,12 @@
 # $NetBSD: Makefile,v 1.37 2021/04/21 13:24:24 adam Exp $
 
-DISTNAME=	anope-2.0.7-source
-PKGNAME=	${DISTNAME:S/-source//1}
-PKGREVISION=	9
+DISTNAME=	anope-2.0.9
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anope/}
 GITHUB_PROJECT=	anope
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.anope.org/
 COMMENT=	Modular set of IRC services
 LICENSE=	gnu-gpl-v2
