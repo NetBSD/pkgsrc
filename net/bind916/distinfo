@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2021/04/29 05:55:54 taca Exp $
+$NetBSD: distinfo,v 1.13 2021/06/02 15:37:06 taca Exp $
 
-SHA1 (bind-9.16.15.tar.xz) = 5d68bbd1ff452708d45f2d4ef832faa3a1690fc7
-RMD160 (bind-9.16.15.tar.xz) = 5697b6b0a0d67022f1e279f27c413b739fa2de4d
-SHA512 (bind-9.16.15.tar.xz) = 30dad6e2144b3ac53ef0a2d1ed3c8342120f148fc0eb6409113a6d5ed3444eecb917915fdf39c26fd223396fc1e873410a50da305f0b870864f7fbbdccec8033
-Size (bind-9.16.15.tar.xz) = 5025688 bytes
+SHA1 (bind-9.16.16.tar.xz) = dc37a919ba83674d1ff48558b640907b7a7dd0a7
+RMD160 (bind-9.16.16.tar.xz) = 3e6d92c834b91bd25122278ac6e9f41795040213
+SHA512 (bind-9.16.16.tar.xz) = 264aa70d0d111ddb2a62c65f57e3eeb7eb93afdebcc523166d236e8f23d61d1e4f91b5a2df8dffa49e6f8e3c7101a2689c38dd6d77ecdedb79e2b163990e6093
+Size (bind-9.16.16.tar.xz) = 5016864 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -43,10 +43,10 @@ SHA1 (patch-lib_isc_include_isc_types.h) = bc0cdeb762d974b7be6e602b7dc2aac17fa7f
 SHA1 (patch-lib_isc_netmgr_netmgr.c) = 63168c8901646e7b2079e1dc3324087508bb1e62
 SHA1 (patch-lib_isc_rwlock.c) = 1d114248ddee20db7a7429afab446f8b2f0dca82
 SHA1 (patch-lib_isc_stats.c) = 024a372d9919fa751b894f8fc8267691297f00f4
-SHA1 (patch-lib_isc_task.c) = 103a23c74888edd3ddee0793ce6531cd2e6b87f3
+SHA1 (patch-lib_isc_task.c) = 1947084d986f8e7fda5babd308171c498e20b7ec
 SHA1 (patch-lib_isc_unix_include_isc_align.h) = 1bbd78f1617a40079d1044175cfe037bbd1d95b2
 SHA1 (patch-lib_isc_unix_net.c) = c654f60a1feefdba9bf980dcfa46ce37f46918aa
-SHA1 (patch-lib_isc_unix_socket.c) = a034eebc922a3266fdf5acc5fe849709eccbb6ca
+SHA1 (patch-lib_isc_unix_socket.c) = ed1816b50698107cb2034e0e3c61406ee458e697
 SHA1 (patch-lib_isc_unix_time.c) = fac9e66754e099f53ba8c499f5f179825a0b0fbd
 SHA1 (patch-lib_ns_Makefile.in) = 5d3ecf4d6673cf227635c03779e9969e6eeb8227
 SHA1 (patch-lib_ns_client.c) = c5d9e41f58027bdfa6a1cb43cd2cd35b44e85227

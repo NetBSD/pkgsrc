@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
+$NetBSD: patch-lib_isc_unix_socket.c,v 1.5 2021/06/02 15:37:06 taca Exp $
 
 * Apply fixes from NetBSD base system.
 * Fix build on SmartOS. In this special case, _XOPEN_SOURCE has to be only
   defined on SmartOS.
 
---- lib/isc/unix/socket.c.orig	2020-08-10 09:31:13.000000000 +0000
+--- lib/isc/unix/socket.c.orig	2021-05-12 09:53:16.000000000 +0000
 +++ lib/isc/unix/socket.c
 @@ -11,6 +11,15 @@
  
@@ -22,7 +22,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  #include <inttypes.h>
  #include <stdbool.h>
  #include <sys/param.h>
-@@ -362,7 +371,11 @@ struct isc__socket {
+@@ -360,7 +369,11 @@ struct isc_socket {
  	unsigned char overflow; /* used for MSG_TRUNC fake */
  #endif				/* ifdef ISC_PLATFORM_RECVOVERFLOW */
  
@@ -35,22 +35,22 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  };
  
  #define SOCKET_MANAGER_MAGIC ISC_MAGIC('I', 'O', 'm', 'g')
-@@ -471,6 +484,14 @@ static bool
+@@ -469,6 +482,14 @@ static bool
  process_ctlfd(isc__socketthread_t *thread);
  static void
- setdscp(isc__socket_t *sock, isc_dscp_t dscp);
+ setdscp(isc_socket_t *sock, isc_dscp_t dscp);
 +static void
-+dispatch_recv(isc__socket_t *sock);
++dispatch_recv(isc_socket_t *sock);
 +static void
-+dispatch_send(isc__socket_t *sock);
++dispatch_send(isc_socket_t *sock);
 +static void
-+internal_fdwatch_read(isc__socket_t *sock);
++internal_fdwatch_read(isc_socket_t *sock);
 +static void
-+internal_fdwatch_write(isc__socket_t *sock);
++internal_fdwatch_write(isc_socket_t *sock);
  
  #define SELECT_POKE_SHUTDOWN (-1)
  #define SELECT_POKE_NOTHING  (-2)
-@@ -1558,6 +1579,7 @@ doio_recv(isc__socket_t *sock, isc_socke
+@@ -1573,6 +1594,7 @@ doio_recv(isc_socket_t *sock, isc_socket
  	case isc_sockettype_udp:
  	case isc_sockettype_raw:
  		break;
@@ -58,7 +58,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  	default:
  		INSIST(0);
  		ISC_UNREACHABLE();
-@@ -1766,9 +1788,26 @@ socketclose(isc__socketthread_t *thread,
+@@ -1781,9 +1803,26 @@ socketclose(isc__socketthread_t *thread,
  	 */
  	LOCK(&thread->fdlock[lockid]);
  	thread->fds[fd] = NULL;
@@ -87,7 +87,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  
  	inc_stats(thread->manager->stats, sock->statsindex[STATID_CLOSE]);
  
-@@ -2154,6 +2193,13 @@ again:
+@@ -2164,6 +2203,13 @@ again:
  			}
  #endif /* if defined(PF_ROUTE) */
  			break;
@@ -101,7 +101,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  		}
  	} else {
  		sock->fd = dup(dup_socket->fd);
-@@ -2447,6 +2493,7 @@ socket_create(isc_socketmgr_t *manager0,
+@@ -2456,6 +2502,7 @@ socket_create(isc_socketmgr_t *manager, 
  
  	REQUIRE(VALID_MANAGER(manager));
  	REQUIRE(socketp != NULL && *socketp == NULL);
@@ -109,7 +109,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  
  	result = allocate_socket(manager, type, &sock);
  	if (result != ISC_R_SUCCESS) {
-@@ -2564,6 +2611,7 @@ isc_socket_open(isc_socket_t *sock0) {
+@@ -2570,6 +2617,7 @@ isc_socket_open(isc_socket_t *sock) {
  	REQUIRE(isc_refcount_current(&sock->references) >= 1);
  	REQUIRE(sock->fd == -1);
  	REQUIRE(sock->threadid == -1);
@@ -117,7 +117,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  
  	result = opensocket(sock->manager, sock, NULL);
  
-@@ -2645,6 +2693,7 @@ isc_socket_close(isc_socket_t *sock0) {
+@@ -2648,6 +2696,7 @@ isc_socket_close(isc_socket_t *sock) {
  
  	LOCK(&sock->lock);
  
@@ -125,12 +125,12 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  	REQUIRE(sock->fd >= 0 && sock->fd < (int)sock->manager->maxsocks);
  
  	INSIST(!sock->connecting);
-@@ -2675,6 +2724,24 @@ isc_socket_close(isc_socket_t *sock0) {
+@@ -2678,6 +2727,24 @@ isc_socket_close(isc_socket_t *sock) {
  	return (ISC_R_SUCCESS);
  }
  
 +static void
-+dispatch_recv(isc__socket_t *sock) {
++dispatch_recv(isc_socket_t *sock) {
 +	if (sock->type != isc_sockettype_fdwatch) {
 +		internal_recv(sock);
 +	} else {
@@ -139,7 +139,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +}
 +
 +static void
-+dispatch_send(isc__socket_t *sock) {
++dispatch_send(isc_socket_t *sock) {
 +	if (sock->type != isc_sockettype_fdwatch) {
 +		internal_send(sock);
 +	} else {
@@ -150,12 +150,12 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  /*
   * Dequeue an item off the given socket's read queue, set the result code
   * in the done event to the one provided, and send it to the task it was
-@@ -3115,6 +3182,64 @@ finish:
+@@ -3118,6 +3185,64 @@ finish:
  	}
  }
  
 +static void
-+internal_fdwatch_write(isc__socket_t *sock)
++internal_fdwatch_write(isc_socket_t *sock)
 +{
 +	int more_data;
 +
@@ -184,7 +184,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +}
 +
 +static void
-+internal_fdwatch_read(isc__socket_t *sock)
++internal_fdwatch_read(isc_socket_t *sock)
 +{
 +	int more_data;
 +
@@ -215,7 +215,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  /*
   * Process read/writes on each fd here.  Avoid locking
   * and unlocking twice if both reads and writes are possible.
-@@ -3162,7 +3287,7 @@ process_fd(isc__socketthread_t *thread, 
+@@ -3165,7 +3290,7 @@ process_fd(isc__socketthread_t *thread, 
  		if (sock->connecting) {
  			internal_connect(sock);
  		} else {
@@ -224,7 +224,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  		}
  	}
  
-@@ -3170,7 +3295,7 @@ process_fd(isc__socketthread_t *thread, 
+@@ -3173,7 +3298,7 @@ process_fd(isc__socketthread_t *thread, 
  		if (sock->listener) {
  			internal_accept(sock); /* unlocks sock */
  		} else {
@@ -233,7 +233,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  			UNLOCK(&sock->lock);
  		}
  	} else {
-@@ -5274,7 +5399,7 @@ static isc_once_t hasreuseport_once = IS
+@@ -5238,7 +5363,7 @@ static isc_once_t hasreuseport_once = IS
  static bool hasreuseport = false;
  
  static void
@@ -242,7 +242,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  /*
   * SO_REUSEPORT works very differently on *BSD and on Linux (because why not).
   * We only want to use it on Linux, if it's available. On BSD we want to dup()
-@@ -5328,6 +5453,8 @@ _socktype(isc_sockettype_t type) {
+@@ -5292,6 +5417,8 @@ _socktype(isc_sockettype_t type) {
  		return ("tcp");
  	case isc_sockettype_unix:
  		return ("unix");
@@ -251,16 +251,16 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
  	default:
  		return ("not-initialized");
  	}
-@@ -5340,7 +5467,7 @@ _socktype(isc_sockettype_t type) {
+@@ -5304,7 +5431,7 @@ _socktype(isc_sockettype_t type) {
  		xmlrc = (a);        \
  		if (xmlrc < 0)      \
  			goto error; \
 -	} while (0)
 +	} while (/*CONSTCOND*/0)
  int
- isc_socketmgr_renderxml(isc_socketmgr_t *mgr0, void *writer0) {
- 	isc__socketmgr_t *mgr = (isc__socketmgr_t *)mgr0;
-@@ -5447,7 +5574,7 @@ error:
+ isc_socketmgr_renderxml(isc_socketmgr_t *mgr, void *writer0) {
+ 	isc_socket_t *sock = NULL;
+@@ -5410,7 +5537,7 @@ error:
  			result = ISC_R_NOMEMORY; \
  			goto error;              \
  		}                                \
@@ -268,8 +268,8 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +	} while (/*CONSTCOND*/0)
  
  isc_result_t
- isc_socketmgr_renderjson(isc_socketmgr_t *mgr0, void *stats0) {
-@@ -5569,3 +5696,112 @@ isc_socketmgr_createinctx(isc_mem_t *mct
+ isc_socketmgr_renderjson(isc_socketmgr_t *mgr, void *stats0) {
+@@ -5521,4 +5648,113 @@ error:
  
  	return (result);
  }
@@ -286,7 +286,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +			 isc_task_t *task, isc_socket_t **socketp)
 +{
 +	isc__socketmgr_t *manager = (isc__socketmgr_t *)manager0;
-+	isc__socket_t *sock = NULL;
++	isc_socket_t *sock = NULL;
 +	isc__socketthread_t *thread;
 +	isc_result_t result;
 +	int lockid;
@@ -358,7 +358,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +isc_result_t
 +isc_socket_fdwatchpoke(isc_socket_t *sock0, int flags)
 +{
-+	isc__socket_t *sock = (isc__socket_t *)sock0;
++	isc_socket_t *sock = (isc_socket_t *)sock0;
 +
 +	REQUIRE(VALID_SOCKET(sock));
 +
@@ -382,3 +382,4 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 +
 +	return (ISC_R_SUCCESS);
 +}
+ #endif /* HAVE_JSON_C */
