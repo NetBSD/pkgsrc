@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/02/02 15:33:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/06/02 15:46:53 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -757,6 +757,7 @@ share/drupal/core/lib/Drupal/Component/Transliteration/data/da.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/de.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/eo.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/kg.php
+share/drupal/core/lib/Drupal/Component/Transliteration/data/uk.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/x00.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/x01.php
 share/drupal/core/lib/Drupal/Component/Transliteration/data/x02.php
@@ -2626,6 +2627,7 @@ share/drupal/core/misc/dialog/dialog.js
 share/drupal/core/misc/dialog/dialog.position.es6.js
 share/drupal/core/misc/dialog/dialog.position.js
 share/drupal/core/misc/dialog/off-canvas.base.css
+share/drupal/core/misc/dialog/off-canvas.base.pcss.css
 share/drupal/core/misc/dialog/off-canvas.button.css
 share/drupal/core/misc/dialog/off-canvas.css
 share/drupal/core/misc/dialog/off-canvas.details.css
@@ -2636,6 +2638,7 @@ share/drupal/core/misc/dialog/off-canvas.js
 share/drupal/core/misc/dialog/off-canvas.layout.css
 share/drupal/core/misc/dialog/off-canvas.motion.css
 share/drupal/core/misc/dialog/off-canvas.reset.css
+share/drupal/core/misc/dialog/off-canvas.reset.pcss.css
 share/drupal/core/misc/dialog/off-canvas.table.css
 share/drupal/core/misc/dialog/off-canvas.tabledrag.css
 share/drupal/core/misc/dialog/off-canvas.theme.css
@@ -4640,6 +4643,7 @@ share/drupal/core/modules/editor/tests/modules/editor_test.module
 share/drupal/core/modules/editor/tests/modules/src/EditorXssFilter/Insecure.php
 share/drupal/core/modules/editor/tests/modules/src/Plugin/Editor/TRexEditor.php
 share/drupal/core/modules/editor/tests/modules/src/Plugin/Editor/UnicornEditor.php
+share/drupal/core/modules/editor/tests/modules/src/Plugin/Field/FieldType/EditorTestTextLongItem.php
 share/drupal/core/modules/editor/tests/src/Functional/EditorAdminTest.php
 share/drupal/core/modules/editor/tests/src/Functional/EditorDialogAccessTest.php
 share/drupal/core/modules/editor/tests/src/Functional/EditorLoadingTest.php
@@ -6627,6 +6631,7 @@ share/drupal/core/modules/locale/tests/src/Kernel/LocaleLibraryAlterTest.php
 share/drupal/core/modules/locale/tests/src/Kernel/LocaleStringIsSafeTest.php
 share/drupal/core/modules/locale/tests/src/Kernel/LocaleStringTest.php
 share/drupal/core/modules/locale/tests/src/Kernel/LocaleTranslationProjectsTest.php
+share/drupal/core/modules/locale/tests/src/Kernel/LocaleTranslationTest.php
 share/drupal/core/modules/locale/tests/src/Kernel/LocaleUpdateTest.php
 share/drupal/core/modules/locale/tests/src/Kernel/Migrate/MigrateLocaleConfigsTest.php
 share/drupal/core/modules/locale/tests/src/Unit/LocaleLookupTest.php
@@ -11871,6 +11876,7 @@ share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_menu_link.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_mini_pager.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_mini_pager_ajax.yml
+share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_month_date_plugin.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_page_display.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_page_display_arguments.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_page_display_menu.yml
@@ -12018,6 +12024,7 @@ share/drupal/core/modules/views/tests/src/Functional/Plugin/ExposedFormTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/FilterTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/MenuLinkTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/MiniPagerTest.php
+share/drupal/core/modules/views/tests/src/Functional/Plugin/MonthDatePluginTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/NumericFormatPluralTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/PagerTest.php
 share/drupal/core/modules/views/tests/src/Functional/Plugin/StyleOpmlTest.php
@@ -12046,6 +12053,7 @@ share/drupal/core/modules/views/tests/src/Functional/Update/EntityViewsDataUpdat
 share/drupal/core/modules/views/tests/src/Functional/Update/EntityViewsMultiValueBaseFieldDataUpdateTest.php
 share/drupal/core/modules/views/tests/src/Functional/Update/ExposedFilterBlocksUpdateTest.php
 share/drupal/core/modules/views/tests/src/Functional/Update/FieldHandlersUpdateTest.php
+share/drupal/core/modules/views/tests/src/Functional/Update/GlossaryStatusFilterTest.php
 share/drupal/core/modules/views/tests/src/Functional/Update/ImageStyleDependencyUpdateTest.php
 share/drupal/core/modules/views/tests/src/Functional/Update/LimitOperatorsDefaultsTest.php
 share/drupal/core/modules/views/tests/src/Functional/Update/PlaceholderTextUpdateTest.php
@@ -13721,6 +13729,7 @@ share/drupal/core/tests/Drupal/KernelTests/Core/File/StreamWrapperTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/File/UrlRewritingTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/File/UrlTransformRelativeTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Form/ExternalFormUrlTest.php
+share/drupal/core/tests/Drupal/KernelTests/Core/Form/FormActionXssTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Form/FormCacheTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Form/FormDefaultHandlersTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Form/FormValidationMessageOrderTest.php
@@ -15689,6 +15698,7 @@ share/drupal/core/themes/stable/css/contextual/contextual.module.css
 share/drupal/core/themes/stable/css/contextual/contextual.theme.css
 share/drupal/core/themes/stable/css/contextual/contextual.toolbar.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.base.css
+share/drupal/core/themes/stable/css/core/dialog/off-canvas.base.pcss.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.button.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.details.css
@@ -15697,6 +15707,7 @@ share/drupal/core/themes/stable/css/core/dialog/off-canvas.form.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.layout.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.motion.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.reset.css
+share/drupal/core/themes/stable/css/core/dialog/off-canvas.reset.pcss.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.table.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.tabledrag.css
 share/drupal/core/themes/stable/css/core/dialog/off-canvas.theme.css
@@ -16151,6 +16162,7 @@ share/drupal/vendor/composer/installers/src/Composer/Installers/MantisBTInstalle
 share/drupal/vendor/composer/installers/src/Composer/Installers/MauticInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/MayaInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/MediaWikiInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/MiaoxingInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/MicroweberInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/ModxInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/MoodleInstaller.php
@@ -16186,12 +16198,14 @@ share/drupal/vendor/composer/installers/src/Composer/Installers/Symfony1Installe
 share/drupal/vendor/composer/installers/src/Composer/Installers/TYPO3CmsInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/TYPO3FlowInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/TaoInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/TastyIgniterInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/TheliaInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/TuskInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/UserFrostingInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/VanillaInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/VgmcpInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/WHMCSInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/WinterInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/WolfCMSInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/WordPressInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/YawikInstaller.php
