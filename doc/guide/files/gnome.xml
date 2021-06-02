@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.12 2021/04/13 11:01:17 cirnatdan Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.13 2021/06/02 17:03:10 cirnatdan Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -25,10 +25,7 @@ components.</para>
 <para>Given that pkgsrc is <ulink
 url="https://www.NetBSD.org/">NetBSD</ulink>'s official packaging system,
 the above also means that great efforts are put into making GNOME work
-under this operating system.  Recently, <ulink
-url="https://www.dragonflybsd.org/">DragonFly BSD</ulink> also adopted
-pkgsrc as its preferred packaging system, contributing lots of
-portability fixes to make GNOME build and install under it.</para>
+under this operating system.</para>
 
 <para>This chapter is aimed at pkgsrc developers and other people
 interested in helping our GNOME porting and packaging efforts.  It
