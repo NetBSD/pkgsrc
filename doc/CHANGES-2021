@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3169 2021/06/02 15:41:18 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3170 2021/06/02 15:47:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.16 [taca 2021-06-02]
 	Updated net/pear-Net_Sieve to 1.4.5 [taca 2021-06-02]
 	Updated sysutils/pear-Log to 1.13.3 [taca 2021-06-02]
+	Updated www/drupal8 to 8.9.16 [taca 2021-06-02]
