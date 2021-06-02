@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/05/21 21:06:19 nia Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/02 15:52:04 taca Exp $
 
 DISTNAME=	ramaze-2012.12.08
 PKGREVISION=	1
@@ -11,8 +11,7 @@ LICENSE=	ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-innate>=2012.12:../../www/ruby-innate
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} ramaze ramaze${RUBY_SUFFIX}
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
