@@ -1,14 +1,26 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/05/29 17:21:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/06/02 17:19:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
+CARGO_CRATE_DEPENDS+=	bstr-0.2.16
+CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	colored-2.0.0
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
+CARGO_CRATE_DEPENDS+=	fnv-1.0.7
+CARGO_CRATE_DEPENDS+=	globset-0.4.6
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
+CARGO_CRATE_DEPENDS+=	ignore-0.4.17
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.94
+CARGO_CRATE_DEPENDS+=	log-0.4.14
 CARGO_CRATE_DEPENDS+=	memchr-2.4.0
+CARGO_CRATE_DEPENDS+=	once_cell-1.7.2
 CARGO_CRATE_DEPENDS+=	regex-1.5.4
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.25
+CARGO_CRATE_DEPENDS+=	same-file-1.0.6
+CARGO_CRATE_DEPENDS+=	thread_local-1.1.3
+CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
