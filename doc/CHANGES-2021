@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3172 2021/06/02 16:05:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3173 2021/06/02 16:24:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4896,3 +4896,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/drupal8 to 8.9.16 [taca 2021-06-02]
 	Updated devel/ruby-redmine to 4.0.9 [taca 2021-06-02]
 	Updated devel/ruby-redmine41 to 4.1.3 [taca 2021-06-02]
+	Added devel/ruby-redmine42 version 4.2.1 [taca 2021-06-02]
