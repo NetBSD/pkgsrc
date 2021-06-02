@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2021/06/02 15:33:49 taca Exp $
+# $NetBSD: Makefile,v 1.45 2021/06/02 15:34:30 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 
