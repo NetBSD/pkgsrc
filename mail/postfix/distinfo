@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.192 2021/04/26 15:26:08 triaxx Exp $
+$NetBSD: distinfo,v 1.193 2021/06/02 15:29:56 taca Exp $
 
-SHA1 (postfix-3.5.10.tar.gz) = e6fb1a42f14b9c96859fbd04705dc58a0261502c
-RMD160 (postfix-3.5.10.tar.gz) = 73ef7370ab1bb69b2f87b4dc797034f84480589b
-SHA512 (postfix-3.5.10.tar.gz) = 5845701d3dcdaaea376a44810a84dbe908e96e5ff54921cd40fd2d5c5643ed8e4add5936e149237fea4cb69c1ffb4ceb4171d1e779be096aa21a6e5021b604da
-Size (postfix-3.5.10.tar.gz) = 4621130 bytes
+SHA1 (postfix-3.6.0.tar.gz) = a2cc20a085a6a954059a955455eb8d89894d6bd9
+RMD160 (postfix-3.6.0.tar.gz) = 59dbfb03b8d4efd53e4bfa1ff591ffbf67a4c67e
+SHA512 (postfix-3.6.0.tar.gz) = af326472333935de111d7f7025af53a1dfd84382c2d2891e91624ce665c258831f28d92fd73d1ab68f82192d9848025bd30d16eb48b3912b46e3fb50dbf194bf
+Size (postfix-3.6.0.tar.gz) = 4748506 bytes
 SHA1 (patch-aa) = c8216f133e202a7bb37682b0dbc1448f021e7c1c
-SHA1 (patch-ag) = c126c572e36bf2bcbd3f6e5d8332a3d26e704109
+SHA1 (patch-ag) = feccf4aba580f581953b32e6c3a2c453fcb9131c
 SHA1 (patch-ai) = 51748ccf92da543f7ff640f36906a29b5db3f6e3
-SHA1 (patch-src_dns_dns__lookup.c) = 1e3fbd8e8b900e3fbd7160344c150bf147e4490a
