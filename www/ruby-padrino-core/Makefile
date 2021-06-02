@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/03/17 14:39:09 taca Exp $
+# $NetBSD: Makefile,v 1.10 2021/06/02 15:09:52 taca Exp $
 
 DISTNAME=	padrino-core-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-support>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-support
 DEPENDS+=	${RUBY_PKGPREFIX}-sinatra>=2.0.0:../../www/ruby-sinatra
-DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.18:../../devel/ruby-thor
+DEPENDS+=	${RUBY_PKGPREFIX}-thor>=1.0<2:../../devel/ruby-thor
 
 RUBYGEM_OPTIONS+=	--format-executable
 
