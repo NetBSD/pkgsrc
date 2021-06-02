@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20724 2021/06/02 23:29:05 khorben Exp $
+$NetBSD: TODO,v 1.20725 2021/06/02 23:29:16 khorben Exp $
 
 Suggested new packages
 ======================
@@ -1932,7 +1932,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-Routes-2.5.1
 	o py-Scientific-doc-2.5.5
 	o py-acora-2.3
-	o py-angr-9.0.6852
 	o py-astroplan-0.8
 	o py-astroquery-0.4
 	o py-cares-3.1.1
