@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3164 2021/06/02 15:27:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3165 2021/06/02 15:30:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4881,3 +4881,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/ruby-tk to 0.4.0 [taca 2021-06-02]
 	Updated databases/ruby-sequel to 5.45.0 [taca 2021-06-02]
 	Updated lang/pear to 1.10.12nb4 [taca 2021-06-02]
+	Updated mail/postfix to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-cdb to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-ldap to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-lmdb to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-mysql to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-pcre to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-pgsql to 3.6.0 [taca 2021-06-02]
+	Updated mail/postfix-sqlite to 3.6.0 [taca 2021-06-02]
