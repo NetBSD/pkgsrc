@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3160 2021/06/02 15:16:19 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3161 2021/06/02 15:18:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-padrino to 0.15.1 [taca 2021-06-02]
 	Updated www/ruby-puma to 5.3.2 [taca 2021-06-02]
 	Updated www/ruby-raindrops to 0.19.2 [taca 2021-06-02]
+	Updated www/thin to 1.8.1 [taca 2021-06-02]
