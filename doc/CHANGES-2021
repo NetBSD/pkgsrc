@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3163 2021/06/02 15:24:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3164 2021/06/02 15:27:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4880,3 +4880,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/thin to 1.8.1 [taca 2021-06-02]
 	Updated x11/ruby-tk to 0.4.0 [taca 2021-06-02]
 	Updated databases/ruby-sequel to 5.45.0 [taca 2021-06-02]
+	Updated lang/pear to 1.10.12nb4 [taca 2021-06-02]
