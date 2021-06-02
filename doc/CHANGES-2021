@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3175 2021/06/02 19:54:57 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3176 2021/06/02 20:00:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-redmine42 version 4.2.1 [taca 2021-06-02]
 	Updated textproc/molybdenum to 0.1.4 [pin 2021-06-02]
 	Updated www/monolith to 2.5.0 [pin 2021-06-02]
+	Added net/gunison version 0.1.0 [wiz 2021-06-02]
