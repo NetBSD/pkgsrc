@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/08/18 20:14:07 riastradh Exp $
+$NetBSD: distinfo,v 1.4 2021/06/02 22:21:12 khorben Exp $
 
-SHA1 (pefile-2019.4.18.tar.gz) = 4cadf66db1e8640733054f7b2e1920900dfed704
-RMD160 (pefile-2019.4.18.tar.gz) = b1445655604ec9b0e8aa53f45e4ee27179a77221
-SHA512 (pefile-2019.4.18.tar.gz) = 33c53120fd6a0fde22f4076c19ed8f69fc2b53b16d0c581133446d0d770e290dcb2ddd1e9941e8d8debc28c1cb4ff64ff055c2b8c0958015d9121de72ae20c76
-Size (pefile-2019.4.18.tar.gz) = 62374 bytes
+SHA1 (pefile-2021.5.24.tar.gz) = bfe4157a196e80e4eaf4237f956be20784742ea6
+RMD160 (pefile-2021.5.24.tar.gz) = d6d0cb34caa9e3e387036b5dcf16cc6e70e35cb1
+SHA512 (pefile-2021.5.24.tar.gz) = 614332a6009b5a30682b295272aa4d8fa7eb5eb9cc4981dc2c66887ef8ab17af8c463c1490f0df1a37fc4a9a6d3e8c12dd986657260f98e5b60e771244d791a8
+Size (pefile-2021.5.24.tar.gz) = 66130 bytes
