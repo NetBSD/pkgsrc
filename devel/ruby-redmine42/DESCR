@@ -1,0 +1,22 @@
+Redmine is a flexible project management web application using the
+Ruby on Rails framework, it is cross-platform and cross-database.
+
+Redmine 4.2 introduces these new features in these categories:
+
+Authentication / User accounts
+* two-factor authentication.
+* email domains restriction for user accounts.
+
+Notifications
+* Notify users about high issues (only).
+
+Issues
+* Bulk addition of related issues.
+* Query links for subtasks on issue page.
+
+And more:
+
+Watchers
+Text formatting
+Keyboard shortcuts
+Activity improvements
