@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/03/07 10:12:15 taca Exp $
+$NetBSD: distinfo,v 1.25 2021/06/02 15:13:54 taca Exp $
 
-SHA1 (puma-5.2.2.gem) = a8c0885797e2c431a894670aa1ab8a7b8a9e22f8
-RMD160 (puma-5.2.2.gem) = 44164d6341cbf00923ac850c8cc5dd415ca4a28d
-SHA512 (puma-5.2.2.gem) = 15da8773cfcb96dc69e41c15044b122eff399246691c7ace41031fe98ae8323bdebbb25464bbdabbbb012228829e3d521ed74e8049aa754e57518c5e160c5c8c
-Size (puma-5.2.2.gem) = 198656 bytes
+SHA1 (puma-5.3.2.gem) = 1c4df276d6d26741dd2ab7bc962da90a41d27bfd
+RMD160 (puma-5.3.2.gem) = 88fb92f14d68d11671cfb29acaee71dd1b2abd31
+SHA512 (puma-5.3.2.gem) = cdd69e6ad335ad9806f7c4ae048a6e811b59982637fda9b644350f714b7d2d426061c6c725c98569926c5a94a3dc017ea3e658168492b66294202bbba8d9f09a
+Size (puma-5.3.2.gem) = 201216 bytes
