@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3182 2021/06/02 23:28:22 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3183 2021/06/02 23:28:34 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4906,3 +4906,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-sentry-sdk to 1.1.0 [khorben 2021-06-02]
 	Updated devel/py-ailment to 9.0.7491 [khorben 2021-06-02]
 	Updated devel/py-archinfo to 9.0.7491 [khorben 2021-06-02]
+	Updated devel/py-cle to 9.0.7491 [khorben 2021-06-02]
