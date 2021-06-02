@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3177 2021/06/02 21:15:36 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3178 2021/06/02 22:14:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4901,3 +4901,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/monolith to 2.5.0 [pin 2021-06-02]
 	Added net/gunison version 0.1.0 [wiz 2021-06-02]
 	Updated converters/bdf2psf to 1.203 [fcambus 2021-06-02]
+	Updated sysutils/py-magic to 0.4.23 [khorben 2021-06-02]
