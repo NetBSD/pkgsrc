@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/05/31 20:50:48 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/02 17:17:55 pin Exp $
 
-DISTNAME=	gpg-tui-0.1.5
+DISTNAME=	gpg-tui-0.1.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,11 +16,11 @@ USE_LANGUAGES+=			c
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
+BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
-
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
