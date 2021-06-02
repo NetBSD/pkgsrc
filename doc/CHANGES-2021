@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3179 2021/06/02 22:21:24 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3180 2021/06/02 22:47:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/bdf2psf to 1.203 [fcambus 2021-06-02]
 	Updated sysutils/py-magic to 0.4.23 [khorben 2021-06-02]
 	Updated sysutils/py-pefile to 2021.5.24 [khorben 2021-06-02]
+	Updated devel/py-sentry-sdk to 1.1.0 [khorben 2021-06-02]
