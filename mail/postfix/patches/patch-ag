@@ -1,17 +1,17 @@
-$NetBSD: patch-ag,v 1.40 2019/07/17 13:33:00 triaxx Exp $
+$NetBSD: patch-ag,v 1.41 2021/06/02 15:29:57 taca Exp $
 
-* Add support for NetBSD 8.
+* Add common support for NetBSD.
 * Only define HAS_DB if it hasn't been defined.
 * Add support for FreeBSD 11 and 12.
 
---- src/util/sys_defs.h.orig	2019-03-10 16:58:04.000000000 +0000
+--- src/util/sys_defs.h.orig	2020-05-21 13:34:23.000000000 +0000
 +++ src/util/sys_defs.h
 @@ -30,14 +30,11 @@
  #if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) \
      || defined(FREEBSD5) || defined(FREEBSD6) || defined(FREEBSD7) \
      || defined(FREEBSD8) || defined(FREEBSD9) || defined(FREEBSD10) \
--    || defined(FREEBSD11) \
-+    || defined(FREEBSD11) || defined(FREEBSD12) \
+-    || defined(FREEBSD11) || defined(FREEBSD12) \
++    || defined(FREEBSD11) || defined(FREEBSD12) || defined(FREEBSD13) \
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
      || defined(OPENBSD5) || defined(OPENBSD6) \
