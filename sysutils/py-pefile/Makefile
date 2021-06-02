@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/08/18 20:14:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/02 22:21:12 khorben Exp $
 
-PEFILE_VERSION=	2019.4.18
+PEFILE_VERSION=	2021.5.24
 DISTNAME=	pefile-${PEFILE_VERSION}
 PKGNAME=	${PYPKGPREFIX}-pefile-${PEFILE_VERSION:S/-/./}
 CATEGORIES=	sysutils
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 EGG_NAME=	pefile-${PEFILE_VERSION:S/-/.post/}
 
 DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
