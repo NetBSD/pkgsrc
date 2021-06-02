@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3186 2021/06/02 23:29:05 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3187 2021/06/02 23:29:15 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4910,3 +4910,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-manticore to 0.3.4nb1 [khorben 2021-06-02]
 	Updated devel/py-pyvex to 9.0.7491 [khorben 2021-06-02]
 	Updated math/py-claripy to 9.0.7491 [khorben 2021-06-02]
+	Updated devel/py-angr to 9.0.7491 [khorben 2021-06-02]
