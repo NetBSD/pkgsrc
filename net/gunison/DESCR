@@ -1,0 +1,4 @@
+Gunison is a new GUI (GTK 3) frontend for the Unison file synchronizer.
+Unison already has a built-in GTK 2 frontend, but Gunison is nicer
+and more convenient. Gunison works by wrapping Unison's console
+frontend in an expect-like fashion.
