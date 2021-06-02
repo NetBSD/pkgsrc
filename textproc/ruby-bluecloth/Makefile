@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/21 11:11:19 nia Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/02 15:51:21 taca Exp $
 
 DISTNAME=	bluecloth-2.2.0
 PKGREVISION=	1
@@ -11,9 +11,7 @@ LICENSE=	original-bsd
 
 USE_GCC_RUNTIME=	yes
 
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/bluecloth \
-	    ${DESTDIR}${PREFIX}/bin/bluecloth${RUBY_SUFFIX}
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
