@@ -1,9 +1,9 @@
-# $NetBSD: redmine.mk,v 1.1 2021/02/28 16:01:05 taca Exp $
+# $NetBSD: redmine.mk,v 1.2 2021/06/02 16:00:47 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../lang/ruby/rubyversion.mk"
 
 #
 # === User-settable variables ===
@@ -11,7 +11,7 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSION_DEFAULT
 #	Select default Redmine version.
 #
-#	Possible values: 40 41
+#	Possible values: 40 41 42
 #	Default: 40
 #
 #
@@ -19,7 +19,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
-#	Possible values: 40 41
+#	Possible values: 40 41 42
 #	Default: 40
 #
 #
@@ -27,16 +27,22 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VER
 #	Redmine version.
-#	Possible values: 40 41
+#	Possible values: 40 41 42
 #	Default: 40
 #
 # RM_DIR
 #	Redmine directory.
 #
 
+.if ${RUBY_VER} == "26"
 RM_VERSION_DEFAULT?=	40
-
-RM_VERSIONS_SUPPORTED?=	41 40
+RM_VERSIONS_SUPPORTED?=	42 41 40
+.elif ${RUBY_VER} == "27"
+RM_VERSION_DEFAULT?=	42
+RM_VERSIONS_SUPPORTED?=	42
+.else
+.error "There is no remine support Ruby ${RUBY_VERSION}"
+.endif
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
@@ -62,7 +68,7 @@ REDMINE_DEPENDS=	${RUBY_PKGPREFIX}-redmine${RM_VER}-[0-9]*:../../devel/ruby-redm
 GEM_HOME=		${RM_DIR}/gems
 RM_PLUGINDIR=		${RM_DIR}/app/plugins
 RM_THEMEDIR=		${RM_DIR}/app/public/themes
-.elif "${RM_VER}" == "41"
+.elif "${RM_VER}" == "41" || "${RM_VER}" == "42"
 REDMINE_DEPENDS=	${RUBY_PKGPREFIX}-redmine${RM_VER}-[0-9]*:../../devel/ruby-redmine${RM_VER}
 RM_PLUGINDIR=		${RM_DIR}/plugins
 RM_THEMEDIR=		${RM_DIR}/public/themes
