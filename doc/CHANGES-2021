@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3184 2021/06/02 23:28:45 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3185 2021/06/02 23:28:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-archinfo to 9.0.7491 [khorben 2021-06-02]
 	Updated devel/py-cle to 9.0.7491 [khorben 2021-06-02]
 	Updated devel/py-manticore to 0.3.4nb1 [khorben 2021-06-02]
+	Updated devel/py-pyvex to 9.0.7491 [khorben 2021-06-02]
