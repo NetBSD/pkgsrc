@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/09/28 22:56:38 khorben Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/02 23:27:10 khorben Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,9 +9,15 @@ ${PYSITELIB}/ailment/__init__.pyo
 ${PYSITELIB}/ailment/block.py
 ${PYSITELIB}/ailment/block.pyc
 ${PYSITELIB}/ailment/block.pyo
-${PYSITELIB}/ailment/converter.py
-${PYSITELIB}/ailment/converter.pyc
-${PYSITELIB}/ailment/converter.pyo
+${PYSITELIB}/ailment/converter_common.py
+${PYSITELIB}/ailment/converter_common.pyc
+${PYSITELIB}/ailment/converter_common.pyo
+${PYSITELIB}/ailment/converter_pcode.py
+${PYSITELIB}/ailment/converter_pcode.pyc
+${PYSITELIB}/ailment/converter_pcode.pyo
+${PYSITELIB}/ailment/converter_vex.py
+${PYSITELIB}/ailment/converter_vex.pyc
+${PYSITELIB}/ailment/converter_vex.pyo
 ${PYSITELIB}/ailment/expression.py
 ${PYSITELIB}/ailment/expression.pyc
 ${PYSITELIB}/ailment/expression.pyo
@@ -24,3 +30,6 @@ ${PYSITELIB}/ailment/statement.pyo
 ${PYSITELIB}/ailment/tagged_object.py
 ${PYSITELIB}/ailment/tagged_object.pyc
 ${PYSITELIB}/ailment/tagged_object.pyo
+${PYSITELIB}/ailment/utils.py
+${PYSITELIB}/ailment/utils.pyc
+${PYSITELIB}/ailment/utils.pyo
