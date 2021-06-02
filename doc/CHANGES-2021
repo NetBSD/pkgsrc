@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3154 2021/06/02 15:00:42 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3155 2021/06/02 15:01:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/faudio to 21.06 [adam 2021-06-02]
 	Updated www/ruby-ethon to 0.14.0 [taca 2021-06-02]
 	Updated www/ruby-typhoeus to 1.4.0 [taca 2021-06-02]
+	Updated www/ruby-html-proofer to 3.19.1 [taca 2021-06-02]
