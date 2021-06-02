@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2021/05/24 19:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2021/06/02 16:01:42 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	3
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/
@@ -12,29 +11,29 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	4.0.8
+RM_VERSION=	4.0.9
 
-GEMS_DISTFILES+=	actioncable-5.2.4.5.gem actionmailer-5.2.4.5.gem
-GEMS_DISTFILES+=	actionpack-5.2.4.5.gem actionpack-xml_parser-2.0.1.gem
-GEMS_DISTFILES+=	actionview-5.2.4.5.gem activejob-5.2.4.5.gem
-GEMS_DISTFILES+=	activemodel-5.2.4.5.gem activerecord-5.2.4.5.gem
-GEMS_DISTFILES+=	activestorage-5.2.4.5.gem activesupport-5.2.4.5.gem
+GEMS_DISTFILES+=	actioncable-5.2.5.gem actionmailer-5.2.5.gem
+GEMS_DISTFILES+=	actionpack-5.2.5.gem actionpack-xml_parser-2.0.1.gem
+GEMS_DISTFILES+=	actionview-5.2.5.gem activejob-5.2.5.gem
+GEMS_DISTFILES+=	activemodel-5.2.5.gem activerecord-5.2.5.gem
+GEMS_DISTFILES+=	activestorage-5.2.5.gem activesupport-5.2.5.gem
 GEMS_DISTFILES+=	addressable-2.7.0.gem arel-9.0.0.gem builder-3.2.3.gem
 GEMS_DISTFILES+=	bundler-1.17.3.gem capybara-2.18.0.gem
 GEMS_DISTFILES+=	childprocess-2.0.0.gem concurrent-ruby-1.1.5.gem
 GEMS_DISTFILES+=	crass-1.0.4.gem css_parser-1.7.0.gem csv-3.0.9.gem
 GEMS_DISTFILES+=	docile-1.1.5.gem erubi-1.8.0.gem globalid-0.4.2.gem
 GEMS_DISTFILES+=	htmlentities-4.3.4.gem i18n-0.7.0.gem json-2.2.0.gem
-GEMS_DISTFILES+=	loofah-2.2.3.gem mail-2.7.1.gem marcel-0.3.3.gem
+GEMS_DISTFILES+=	loofah-2.2.3.gem mail-2.7.1.gem marcel-1.0.1.gem
 GEMS_DISTFILES+=	metaclass-0.0.4.gem method_source-0.9.2.gem
-GEMS_DISTFILES+=	mimemagic-0.3.4.gem mini_mime-1.0.2.gem
+GEMS_DISTFILES+=	mini_mime-1.0.2.gem
 GEMS_DISTFILES+=	mini_portile2-2.4.0.gem minitest-5.11.3.gem
 GEMS_DISTFILES+=	mocha-1.9.0.gem net-ldap-0.16.2.gem
 GEMS_DISTFILES+=	nio4r-2.5.1.gem nokogiri-1.10.7.gem
 GEMS_DISTFILES+=	public_suffix-4.0.1.gem puma-3.12.1.gem rack-2.2.3.gem
 GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-1.1.0.gem
-GEMS_DISTFILES+=	rails-5.2.4.5.gem rails-dom-testing-2.0.3.gem
-GEMS_DISTFILES+=	rails-html-sanitizer-1.2.0.gem railties-5.2.4.5.gem
+GEMS_DISTFILES+=	rails-5.2.5.gem rails-dom-testing-2.0.3.gem
+GEMS_DISTFILES+=	rails-html-sanitizer-1.2.0.gem railties-5.2.5.gem
 GEMS_DISTFILES+=	rake-12.3.3.gem rbpdf-1.19.8.gem
 GEMS_DISTFILES+=	rbpdf-font-1.19.1.gem redcarpet-3.5.1.gem
 GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.16.0.gem
@@ -70,14 +69,13 @@ REPLACE_RUBY+=	builder-3.2.3/lib/builder/x*.rb builder-3.2.3/rakelib/tags.rake
 REPLACE_RUBY+=	builder-3.2.3/test/p*.rb builder-3.2.3/test/t*.rb
 REPLACE_RUBY+=	json-2.2.0/install.rb json-2.2.0/tests/json_generator_test.rb
 REPLACE_RUBY+=	json-2.2.0/tools/server.rb loofah-2.2.3/benchmark/benchmark.rb
-REPLACE_RUBY+=	mimemagic-0.3.4/script/generate-mime.rb
 REPLACE_RUBY+=	mini_mime-1.0.2/bin/console mocha-1.9.0/bin/build-matrix
 REPLACE_RUBY+=	nio4r-2.5.1/examples/echo_server.rb nokogiri-1.10.7/bin/nokogiri
 REPLACE_RUBY+=	public_suffix-4.0.1/bin/console
 REPLACE_RUBY+=	puma-3.12.1/bin/puma-wild puma-3.12.1/bin/puma
 REPLACE_RUBY+=	puma-3.12.1/bin/pumactl rack-2.2.3/bin/rackup
 REPLACE_RUBY+=	rack-2.2.3/test/cgi/rackup_stub.rb rack-2.2.3/test/cgi/test
-REPLACE_RUBY+=	rack-2.2.3/test/cgi/test.fcgi railties-5.2.4.5/exe/rails
+REPLACE_RUBY+=	rack-2.2.3/test/cgi/test.fcgi railties-5.2.5/exe/rails
 REPLACE_RUBY+=	raindrops-0.19.1/examples/linux-listener-stats.rb
 REPLACE_RUBY+=	rake-12.3.3/bin/bundle rake-12.3.3/bin/console
 REPLACE_RUBY+=	rake-12.3.3/bin/rake rake-12.3.3/bin/rdoc
