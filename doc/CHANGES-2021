@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3176 2021/06/02 20:00:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3177 2021/06/02 21:15:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4900,3 +4900,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/molybdenum to 0.1.4 [pin 2021-06-02]
 	Updated www/monolith to 2.5.0 [pin 2021-06-02]
 	Added net/gunison version 0.1.0 [wiz 2021-06-02]
+	Updated converters/bdf2psf to 1.203 [fcambus 2021-06-02]
