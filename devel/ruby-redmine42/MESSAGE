@@ -1,0 +1,70 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/06/02 16:23:48 taca Exp $
+
+To use Redmine with nginx, you will need to perform the following steps.
+
+1. If you want to use with MySQL server (by default), install
+   databases/mysql5[6|7]-* and enable it. Then, create the database.
+
+2. Install nginx httpd server, www/nginx.
+
+3. Setup Redmine database:
+
+	$ mysql -u root -p
+	> create database redmine character set utf8;
+	> create database redmine_development character set utf8;
+	> create user 'redmine'@'localhost' identified by 'redmine_password';
+	> grant all privileges on redmine.* to 'redmine'@'localhost';
+	> grant all privileges on redmine_development.* to 'redmine'@'localhost';
+
+4. Set the database password for the redmine and redmine_development databases
+     in ${PREFIX}/${RM_DIR}/config/database.yml;
+
+5. Create secret token and write to
+     ${PREFIX}/${RM_DIR}/config/configuration.yml
+
+	# redmine42_generate_secret_token${RUBY_SUFFIX}.sh
+	# vi config/configuration.yml
+	  [...]
+	  secret_token: 'YOUR_SECRET_KEY'
+	  [...]
+
+6. Import some data to Redmine database, select your locale, and migrate the DB:
+
+	# redmine42_migrate_db${RUBY_SUFFIX}.sh
+
+7. Setup nginx.
+
+	# vi ${PREFIX}/etc/nginx/nginx.conf
+	http {
+	upstream unicorn_redmine {
+		server unix:${PREFIX}/${RM_DIR}/unicorn.redmine.sock fail_timeout=0;
+	}
+	server {
+	listen       80;
+	server_name  localhost;
+
+	root ${PREFIX}/${RM_DIR};
+	try_files $uri @unicorn_redmine;
+
+	location @unicorn_redmine {
+		proxy_set_header Host $http_host;
+		proxy_pass http://unicorn_redmine;
+	}
+
+	error_page   500 502 503 504  /50x.html;
+		location = /50x.html {
+		root   share/examples/nginx/html;
+	}
+	}
+
+8. Start Redmine with Unicorn.
+
+	# ${RCD_SCRIPTS_DIR}/redmine42_unicorn${RUBY_SUFFIX} start
+
+9. Start nginx.
+
+	# ${RCD_SCRIPTS_DIR}/nginx start
+
+10. Access Redmine with username: admin and password: admin.
+===========================================================================
