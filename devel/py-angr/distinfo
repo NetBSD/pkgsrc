@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/09/28 22:56:38 khorben Exp $
+$NetBSD: distinfo,v 1.5 2021/06/02 23:27:11 khorben Exp $
 
-SHA1 (angr-9.0.4378.tar.gz) = c29ad10196b67eb81c7b0c0ff51c762dd9b12da5
-RMD160 (angr-9.0.4378.tar.gz) = 398626530b722861c4203416733dcc7eb9b46a1a
-SHA512 (angr-9.0.4378.tar.gz) = 9aa80e5f303e22c443ecdb8b7ee6a08fb0c178162f7fefd258f6c7f07450f7223a9cffa9f900f3fa621d2fe221a2555dabacdb135f3301eb47e27df8e9e52d9d
-Size (angr-9.0.4378.tar.gz) = 1174851 bytes
-SHA1 (patch-native_Makefile) = 56ccd2df70393a25797a2c35523299e577fa9481
-SHA1 (patch-native_log.c) = deee60432d81962919b4060f13e7d5a1da6ad9d8
-SHA1 (patch-setup.py) = fb99a4987728f429e6c46b06951339cd7293e38e
+SHA1 (angr-9.0.7491.tar.gz) = 86db66a0f41cf677903dd5f1d14352f619123fb9
+RMD160 (angr-9.0.7491.tar.gz) = fefbf4371ee3b70bf31e605e676ecf931061bc00
+SHA512 (angr-9.0.7491.tar.gz) = d3ead1e3926dd7987744947fd27787c019260def915fd4317d3adabe9270bb80ff135047f8a7e547f9f9581fa5167ede11b11a2506c814cca5e2feaf1593290b
+Size (angr-9.0.7491.tar.gz) = 1355985 bytes
+SHA1 (patch-native_Makefile) = ddce91d48fc282c5d3b81071a004456955e57111
+SHA1 (patch-native_log.c) = 2405c26e67141bdb0e8668ed4bea2c6db702f646
+SHA1 (patch-setup.py) = 9fdb541cf868391c2d5d48cda8408eedfa522668

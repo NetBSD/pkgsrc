@@ -1,9 +1,11 @@
-# $NetBSD: vex.mk,v 1.3 2020/09/28 22:56:38 khorben Exp $
+# $NetBSD: vex.mk,v 1.4 2021/06/02 23:27:11 khorben Exp $
+
+.include "../../devel/py-angr/version.mk"
 
 DISTNAME=	vex-0.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
-GITHUB_TAG=	4648030b364608388b33e1cfd90409e981406982
+GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/vex/

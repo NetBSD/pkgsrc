@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/18 20:24:57 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/02 23:27:11 khorben Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/archinfo/arch_amd64.pyo
 ${PYSITELIB}/archinfo/arch_arm.py
 ${PYSITELIB}/archinfo/arch_arm.pyc
 ${PYSITELIB}/archinfo/arch_arm.pyo
+${PYSITELIB}/archinfo/arch_avr.py
+${PYSITELIB}/archinfo/arch_avr.pyc
+${PYSITELIB}/archinfo/arch_avr.pyo
 ${PYSITELIB}/archinfo/arch_mips32.py
 ${PYSITELIB}/archinfo/arch_mips32.pyc
 ${PYSITELIB}/archinfo/arch_mips32.pyo
