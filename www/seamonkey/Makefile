@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2021/05/24 19:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.236 2021/06/02 15:39:55 wiz Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -16,7 +16,7 @@ LICENSE=	mpl-2.0
 BUILD_DEPENDS+=	nasm>=2.13:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
-MOZILLA_DIR=	
+MOZILLA_DIR=
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	unzip pax
@@ -76,6 +76,11 @@ SUBST_SED.cksum+=	-e 's,${from},${to},g'
 INSTALLATION_DIRS+=	lib/seamonkey/extensions
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
+
+# error: Cannot set `RUSTC_BOOTSTRAP=1` from build script of `packed_simd v0.3.4 (https://github.com/hsivonen/packed_simd?rev=0917fe780032a6bbb23d71be545f9c1834128d75#0917fe78)`.
+# note: Crates cannot set `RUSTC_BOOTSTRAP` themselves, as doing so would subvert the stability guarantees of Rust for your project.
+# help: If you're sure you want to do this in your project, set the environment variable `RUSTC_BOOTSTRAP=packed_simd` before running cargo instead.
+MAKE_ENV+=	RUSTC_BOOTSTRAP="packed_simd,encoding_rs"
 
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/${MOZILLA_DIR}/media/libcubeb/src
