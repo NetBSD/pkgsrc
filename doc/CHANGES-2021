@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3156 2021/06/02 15:03:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3157 2021/06/02 15:05:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4866,3 +4866,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-typhoeus to 1.4.0 [taca 2021-06-02]
 	Updated www/ruby-html-proofer to 3.19.1 [taca 2021-06-02]
 	Updated www/ruby-loofah to 2.9.1 [taca 2021-06-02]
+	Updated www/ruby-mechanize to 2.8.1 [taca 2021-06-02]
