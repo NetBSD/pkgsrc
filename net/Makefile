@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1409 2021/05/15 10:26:10 nia Exp $
+# $NetBSD: Makefile,v 1.1410 2021/06/02 19:59:46 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -223,6 +223,7 @@ SUBDIR+=	gtk-gnutella
 SUBDIR+=	gtk-vnc
 SUBDIR+=	gtk_wicontrol
 SUBDIR+=	guacamole-server
+SUBDIR+=	gunison
 SUBDIR+=	gupnp
 SUBDIR+=	gupnp-av
 SUBDIR+=	gupnp-dlna
