@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/11/19 10:36:57 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/06/02 20:01:42 nia Exp $
 
 DISTNAME=	lz4-1.9.3
 CATEGORIES=	archivers
@@ -14,5 +14,7 @@ USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 TEST_TARGET=		test
+
+LDFLAGS.SunOS+=		-lrt
 
 .include "../../mk/bsd.pkg.mk"
