@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 16:10:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/02 15:01:07 taca Exp $
 
-DISTNAME=	html-proofer-3.15.2
+DISTNAME=	html-proofer-3.19.1
 CATEGORIES=	www
 MASTER_SITES=	http://rubygems.org/downloads/
 
