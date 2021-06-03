@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/22 01:50:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/03 06:35:06 markd Exp $
 
-SHA1 (datetime2.r54080.tar.xz) = a8a83a0d0e238d8f0bd238290358f9f7393a230b
-RMD160 (datetime2.r54080.tar.xz) = d7ec8a0897b24d7d72fbac39764d6c6f97491721
-SHA512 (datetime2.r54080.tar.xz) = 25dbed04a91d852eadd3b4055b4eb42a9191cf99ae561b6b170729a10cd02f46f3c00371d2ba456011a9340c3abafbec291131b1b8faa938bd795fd25012bbb7
-Size (datetime2.r54080.tar.xz) = 8848 bytes
+SHA1 (datetime2.r58590.tar.xz) = 64678e8bfcaf12acce9efe483ea4bc2dda68dadf
+RMD160 (datetime2.r58590.tar.xz) = 90587e5ed5204d4dd8477d2c0f234fd8d1983670
+SHA512 (datetime2.r58590.tar.xz) = 88aae0979b3ca9688aff9c5840c93a626e4d652f8fce664e70132dfb3413e8045f816d54ac6aac4477292f655bcb378f89f0f4f09465f2ae536520e3cf68c128
+Size (datetime2.r58590.tar.xz) = 8832 bytes
