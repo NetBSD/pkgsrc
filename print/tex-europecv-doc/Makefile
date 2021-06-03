@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/05/01 02:30:48 markd Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/03 06:53:00 markd Exp $
 
 DISTNAME=	europecv.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54080
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	59162
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	https://ctan.org/pkg/europecv
 COMMENT=	Documentation for tex-europecv
 LICENSE=	lppl-1.3c
