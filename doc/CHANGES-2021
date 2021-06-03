@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3196 2021/06/03 14:09:34 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3197 2021/06/03 14:23:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4971,3 +4971,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed math/kalk successor math/kalker [pin 2021-06-03]
 	Added math/kalker version 1.0.0 [pin 2021-06-03]
 	Updated devel/R-remotes to 2.3.0 [mef 2021-06-03]
+	Added www/ruby-faraday-excon version 1.1.0 [taca 2021-06-03]
