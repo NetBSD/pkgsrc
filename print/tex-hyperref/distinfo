@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/02/13 05:15:43 markd Exp $
+$NetBSD: distinfo,v 1.18 2021/06/03 07:47:21 markd Exp $
 
-SHA1 (hyperref.r57713.tar.xz) = 2539f0c8084e7646cc1bf06d843cb263e6761dd4
-RMD160 (hyperref.r57713.tar.xz) = 63bab2cc0d7585b99c37d23f3a6a470e5afd0f57
-SHA512 (hyperref.r57713.tar.xz) = add5346986b5b0e7b6e558c07d677f88fbd8e0a0059ad32ad5e678a5f9b363bd75704421f55d09ab7236b24a183ba3d88fbf67873d0a2d6e389d5bed2337dcb1
-Size (hyperref.r57713.tar.xz) = 91272 bytes
+SHA1 (hyperref.r58024.tar.xz) = 6cc2c92bf80960b1fc8ac6f13b7acfab5d1e3d60
+RMD160 (hyperref.r58024.tar.xz) = 62ef5cf79f177b132b01b860fdc59fcee54deeb5
+SHA512 (hyperref.r58024.tar.xz) = 00c82f1b64272ee6fd3728e29edf8e399a08eb3ffb9fb4fb011f4d0caa38970a351c132fd7096954a32ce9c730d798ba606f59f0ad6bf1754e43462067dd6c49
+Size (hyperref.r58024.tar.xz) = 91200 bytes
