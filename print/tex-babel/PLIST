@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/02/13 04:21:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/06/03 04:09:47 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -280,6 +280,7 @@ share/texmf-dist/tex/generic/babel/locale/hsb/babel-uppersorbian.tex
 share/texmf-dist/tex/generic/babel/locale/hsb/babel-usorbian.tex
 share/texmf-dist/tex/generic/babel/locale/hu/babel-hu.ini
 share/texmf-dist/tex/generic/babel/locale/hu/babel-hungarian.tex
+share/texmf-dist/tex/generic/babel/locale/hu/babel-magyar.tex
 share/texmf-dist/tex/generic/babel/locale/hy/babel-armenian.tex
 share/texmf-dist/tex/generic/babel/locale/hy/babel-hy.ini
 share/texmf-dist/tex/generic/babel/locale/ia/babel-ia.ini
