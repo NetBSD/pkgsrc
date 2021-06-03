@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:15 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/03 15:04:57 cirnatdan Exp $
 
-DISTNAME=	mutter-3.38.1
+DISTNAME=	mutter-40.1
 CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		msgfmt pkg-config
-USE_TOOLS+=		gdbus-codegen
+USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../graphics/MesaLib/features.mk"
 
@@ -39,22 +39,40 @@ TOOLS_PLATFORM.msgfmt=
 .endif
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-7.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-pango-7.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-7.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-x11-7.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/libmutter-7.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-8.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-cogl-pango-8.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-8.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-x11-8.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/libmutter-8.pc
 
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-7
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-8
 
-PYTHON_FOR_BUILD_ONLY=	tool
+post-extract:
+	${CP} ${FILESDIR}/90-mutter ${WRKSRC}/data
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	data/90-mutter
+SUBST_VARS.paths=	PREFIX
+
+EGDIR=			${PREFIX}/share/examples/mutter
+INSTALLATION_DIRS+=	share/examples/mutter/X11/xinit/xinitrc.d
+
+post-install:
+	${INSTALL_DATA}	${WRKSRC}/data/90-mutter \
+		${DESTDIR}${EGDIR}/X11/xinit/xinitrc.d/90-mutter
+
+REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
+			${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-mutter
 
 .include "../../devel/meson/build.mk"
+BUILDLINK_API_DEPENDS.glib2+=				glib2>=2.67.3
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=       gsettings-desktop-schemas>=40.0
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
