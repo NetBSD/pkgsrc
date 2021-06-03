@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/10 14:22:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 15:11:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.github/workflows/db.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/Gemfile
@@ -10,6 +12,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bench/bench.rb
 ${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/db_pull_request
 ${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/db/content_type_mime.db
 ${GEM_LIBDIR}/lib/db/ext_mime.db
