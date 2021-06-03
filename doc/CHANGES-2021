@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3199 2021/06/03 14:29:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3200 2021/06/03 14:35:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ruby-faraday-excon version 1.1.0 [taca 2021-06-03]
 	Added www/ruby-faraday-net_http version 1.0.1 [taca 2021-06-03]
 	Added www/ruby-faraday-net_http_persistent version 1.1.0 [taca 2021-06-03]
+	Updated www/ruby-faraday to 1.4.2 [taca 2021-06-03]
