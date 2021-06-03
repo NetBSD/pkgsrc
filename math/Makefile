@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2021/05/29 09:55:14 thor Exp $
+# $NetBSD: Makefile,v 1.502 2021/06/03 10:42:11 pin Exp $
 
 COMMENT=	Mathematics
 
@@ -219,7 +219,6 @@ SUBDIR+=	ipopt
 SUBDIR+=	isl
 SUBDIR+=	itpp
 SUBDIR+=	kalgebra
-SUBDIR+=	kalk
 SUBDIR+=	kcalc
 SUBDIR+=	kissfft
 SUBDIR+=	lapack
