@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:18:50 markd Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/03 04:54:57 markd Exp $
 
 DISTNAME=	arabtex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.17
-TEXLIVE_REV=	25711
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.17.59150
+TEXLIVE_REV=	59150
 
 MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://ctan.org/pkg/arabtex
 COMMENT=	Documentation for tex-arabtex
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/15 14:21:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 04:54:57 markd Exp $
 share/texmf-dist/fonts/map/dvips/arabtex/arabtex.map
 share/texmf-dist/fonts/source/public/arabtex/arabsymb.mf
 share/texmf-dist/fonts/source/public/arabtex/hcaption.mf
@@ -66,11 +66,9 @@ share/texmf-dist/tex/latex/arabtex/arabrep.cls
 share/texmf-dist/tex/latex/arabtex/arabrep1.cls
 share/texmf-dist/tex/latex/arabtex/arabskel.sty
 share/texmf-dist/tex/latex/arabtex/arabsymb.sty
-share/texmf-dist/tex/latex/arabtex/arabtex-doc.tex
 share/texmf-dist/tex/latex/arabtex/arabtex.sty
 share/texmf-dist/tex/latex/arabtex/arabtex.tex
 share/texmf-dist/tex/latex/arabtex/arabtoks.sty
-share/texmf-dist/tex/latex/arabtex/arwindoc.tex
 share/texmf-dist/tex/latex/arabtex/ascan.sty
 share/texmf-dist/tex/latex/arabtex/asect.sty
 share/texmf-dist/tex/latex/arabtex/asize10.clo
@@ -88,7 +86,6 @@ share/texmf-dist/tex/latex/arabtex/captions.def
 share/texmf-dist/tex/latex/arabtex/cp1256.sty
 share/texmf-dist/tex/latex/arabtex/etrans.sty
 share/texmf-dist/tex/latex/arabtex/gedalin.sty
-share/texmf-dist/tex/latex/arabtex/guha.tex
 share/texmf-dist/tex/latex/arabtex/hebchrs.sty
 share/texmf-dist/tex/latex/arabtex/hebsymb.sty
 share/texmf-dist/tex/latex/arabtex/hebtex.sty
@@ -106,18 +103,12 @@ share/texmf-dist/tex/latex/arabtex/hewrite.sty
 share/texmf-dist/tex/latex/arabtex/hmac.sty
 share/texmf-dist/tex/latex/arabtex/isiri.sty
 share/texmf-dist/tex/latex/arabtex/iso88596.sty
-share/texmf-dist/tex/latex/arabtex/kashmiri.tex
-share/texmf-dist/tex/latex/arabtex/ligtable.tex
-share/texmf-dist/tex/latex/arabtex/malay.tex
 share/texmf-dist/tex/latex/arabtex/nashbf.sty
-share/texmf-dist/tex/latex/arabtex/omar.tex
 share/texmf-dist/tex/latex/arabtex/raw.sty
 share/texmf-dist/tex/latex/arabtex/saw.sty
-share/texmf-dist/tex/latex/arabtex/sindhi.tex
 share/texmf-dist/tex/latex/arabtex/sotoku.sty
 share/texmf-dist/tex/latex/arabtex/twoblks.sty
 share/texmf-dist/tex/latex/arabtex/uheb.fd
-share/texmf-dist/tex/latex/arabtex/uighur.tex
 share/texmf-dist/tex/latex/arabtex/unash.fd
 share/texmf-dist/tex/latex/arabtex/utf8.sty
 share/texmf-dist/tex/latex/arabtex/utfcode.sty
