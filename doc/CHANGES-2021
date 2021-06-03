@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3194 2021/06/03 10:45:51 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3195 2021/06/03 10:48:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4968,5 +4968,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-kotex-oblivoir-doc to 3.0.1 [markd 2021-06-03]
 	Updated sysutils/broot to 1.5.0 [pin 2021-06-03]
 	Updated security/gpg-tui to 0.2.0 [pin 2021-06-03]
-	Removed math/kalk [pin 2021-06-03]
+	Removed math/kalk successor math/kalker [pin 2021-06-03]
 	Added math/kalker version 1.0.0 [pin 2021-06-03]
