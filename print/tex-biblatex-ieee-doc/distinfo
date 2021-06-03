@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/02/14 21:34:34 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/06/03 05:17:32 markd Exp $
 
-SHA1 (biblatex-ieee.doc.r57256.tar.xz) = cc2f8272fba1b2164499fec9df308957698bc889
-RMD160 (biblatex-ieee.doc.r57256.tar.xz) = fd4e0206cf9cc64cca03d1165578c5d5bf75bfef
-SHA512 (biblatex-ieee.doc.r57256.tar.xz) = 4cbe9498f9a8bf08adae00d3bfd9f86d0c2a33f19d407abc13d025eb568d5e46b83e887d12f56a0d330e67ebdbce5bec6babd8812214750b16e1c854774b9c1c
-Size (biblatex-ieee.doc.r57256.tar.xz) = 558292 bytes
+SHA1 (biblatex-ieee.doc.r58716.tar.xz) = 94384fef92569f171ade72f02f2458302758714d
+RMD160 (biblatex-ieee.doc.r58716.tar.xz) = d2aabebd18547ac14f23861cbfa0995e19d73463
+SHA512 (biblatex-ieee.doc.r58716.tar.xz) = 70efd20bcdc08f1872242e77a389c207e048921b9a9741e11c4e81298fec1ff1a2c724e0485da5e3adf218ddc5171930170f9e4bf6e2503088a1fce5287403fe
+Size (biblatex-ieee.doc.r58716.tar.xz) = 558076 bytes
