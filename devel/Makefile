@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3403 2021/06/02 16:24:31 taca Exp $
+# $NetBSD: Makefile,v 1.3404 2021/06/03 07:43:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -24,8 +24,8 @@ SUBDIR+=	R-bit64
 SUBDIR+=	R-blob
 SUBDIR+=	R-brio
 SUBDIR+=	R-caTools
-SUBDIR+=	R-callr
 SUBDIR+=	R-cachem
+SUBDIR+=	R-callr
 SUBDIR+=	R-checkmate
 SUBDIR+=	R-cli
 SUBDIR+=	R-cliapp
