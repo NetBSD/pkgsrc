@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/22 01:50:57 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/03 06:35:06 markd Exp $
 
 DISTNAME=	datetime2
-PKGNAME=	tex-${DISTNAME}-1.5.6
-TEXLIVE_REV=	54080
+PKGNAME=	tex-${DISTNAME}-1.5.7
+TEXLIVE_REV=	58590
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/datetime2
