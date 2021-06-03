@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3214 2021/06/03 16:32:27 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3215 2021/06/03 19:10:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4989,3 +4989,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php74 to 7.4.20 [taca 2021-06-03]
 	Updated security/clamav to 0.103.2 [taca 2021-06-03]
 	Updated editors/pluma to 1.24.2nb2 [gutteridge 2021-06-03]
+	Updated net/iperf3 to 3.10.1 [adam 2021-06-03]
+	Updated graphics/pngquant to 2.15.1 [adam 2021-06-03]
