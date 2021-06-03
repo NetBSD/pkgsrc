@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/15 14:22:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 04:54:57 markd Exp $
 share/texmf-dist/doc/latex/arabtex/announce.txt
 share/texmf-dist/doc/latex/arabtex/arabtex-doc.pdf
+share/texmf-dist/doc/latex/arabtex/arabtex-doc.tex
 share/texmf-dist/doc/latex/arabtex/arabtex.doc
 share/texmf-dist/doc/latex/arabtex/arabtex.faq
 share/texmf-dist/doc/latex/arabtex/arabtex.gif
 share/texmf-dist/doc/latex/arabtex/arabtex.htm
 share/texmf-dist/doc/latex/arabtex/arabtex1.htm
 share/texmf-dist/doc/latex/arabtex/arabtex2.htm
+share/texmf-dist/doc/latex/arabtex/arwindoc.tex
 share/texmf-dist/doc/latex/arabtex/changes.htm
 share/texmf-dist/doc/latex/arabtex/changes.txt
 share/texmf-dist/doc/latex/arabtex/changes2.txt
@@ -16,19 +18,26 @@ share/texmf-dist/doc/latex/arabtex/chg311b.htm
 share/texmf-dist/doc/latex/arabtex/chg311c.htm
 share/texmf-dist/doc/latex/arabtex/chg311d.htm
 share/texmf-dist/doc/latex/arabtex/guha.ps
+share/texmf-dist/doc/latex/arabtex/guha.tex
 share/texmf-dist/doc/latex/arabtex/hebrew.305
 share/texmf-dist/doc/latex/arabtex/install.txt
+share/texmf-dist/doc/latex/arabtex/kashmiri.tex
+share/texmf-dist/doc/latex/arabtex/ligtable.tex
 share/texmf-dist/doc/latex/arabtex/lppl.txt
 share/texmf-dist/doc/latex/arabtex/malay.ps
+share/texmf-dist/doc/latex/arabtex/malay.tex
 share/texmf-dist/doc/latex/arabtex/manifest.txt
 share/texmf-dist/doc/latex/arabtex/miktex.htm
 share/texmf-dist/doc/latex/arabtex/miktex.mai
 share/texmf-dist/doc/latex/arabtex/new1.gif
 share/texmf-dist/doc/latex/arabtex/new2.gif
+share/texmf-dist/doc/latex/arabtex/omar.tex
 share/texmf-dist/doc/latex/arabtex/readme.305
 share/texmf-dist/doc/latex/arabtex/readme.txt
 share/texmf-dist/doc/latex/arabtex/refer.htm
 share/texmf-dist/doc/latex/arabtex/sindhi.ps
+share/texmf-dist/doc/latex/arabtex/sindhi.tex
 share/texmf-dist/doc/latex/arabtex/tetex.txt
 share/texmf-dist/doc/latex/arabtex/uighur.ps
+share/texmf-dist/doc/latex/arabtex/uighur.tex
 share/texmf-dist/doc/latex/arabtex/xarbsymb.dat
