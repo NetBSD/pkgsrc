@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3202 2021/06/03 14:43:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3203 2021/06/03 14:44:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4977,3 +4977,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-faraday to 1.4.2 [taca 2021-06-03]
 	Updated finance/ruby-activemerchant to 1.120.0 [taca 2021-06-03]
 	Updated security/polkit to 0.119 [wiz 2021-06-03]
+	Updated finance/ruby-braintree to 4.1.0 [taca 2021-06-03]
