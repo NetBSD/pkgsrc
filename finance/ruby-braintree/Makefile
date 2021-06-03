@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/05/04 15:20:44 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/03 14:44:21 taca Exp $
 
-DISTNAME=	braintree-3.4.0
+DISTNAME=	braintree-4.1.0
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,6 @@ COMMENT=	Braintree Gateway Ruby Client Library
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.2.4:../../textproc/ruby-builder
-DEPENDS+=	${RUBY_PKGPREFIX}-libxml>=3.2.0:../../textproc/ruby-libxml
 
 USE_LANGUAGES=	# none
 
