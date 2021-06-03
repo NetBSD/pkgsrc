@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2021/05/09 14:33:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/06/03 15:09:37 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -1706,6 +1706,7 @@ ${GEM_LIBDIR}/spec/shared_behaviours/things_that_declare_options.rb
 ${GEM_LIBDIR}/spec/shared_contexts/checksum.rb
 ${GEM_LIBDIR}/spec/shared_contexts/digests.rb
 ${GEM_LIBDIR}/spec/shared_contexts/https.rb
+${GEM_LIBDIR}/spec/shared_contexts/provider.rb
 ${GEM_LIBDIR}/spec/shared_contexts/types_setup.rb
 ${GEM_LIBDIR}/spec/shared_examples/rhel_package_provider.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb

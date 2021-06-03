@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2021/05/09 14:33:40 taca Exp $
+# $NetBSD: Makefile,v 1.51 2021/06/03 15:09:37 taca Exp $
 
-DISTNAME=		puppet-7.6.1
+DISTNAME=		puppet-7.7.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-facter>=2.0.1:../../sysutils/ruby-facter
+DEPENDS+=	${RUBY_PKGPREFIX}-facter>=4.2.0:../../sysutils/ruby-facter
 DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=3.2.1:../../databases/ruby-hiera
 DEPENDS+=	${RUBY_PKGPREFIX}-semantic_puppet>=1.0<2:../../devel/ruby-semantic_puppet
 DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1:../../devel/ruby-fast_gettext
@@ -19,9 +19,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppe
 DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<2:../../devel/ruby-concurrent-ruby
 DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
-
-# sysutils/ruby-facter dose not support Ruby 3
-RUBY_VERSIONS_INCOMPATIBLE=	30
 
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	fast_gettext>=1.1
