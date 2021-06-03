@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3210 2021/06/03 15:12:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3211 2021/06/03 15:18:46 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4985,3 +4985,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/puppet to 7.7.0 [taca 2021-06-03]
 	Updated cad/gtkwave to 3.3.109 [mef 2021-06-03]
 	Updated mail/ruby-mini_mime to 1.0.3 [taca 2021-06-03]
+	Updated x11/gnome-shell to 40.0 [cirnatdan 2021-06-03]
