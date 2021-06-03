@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3195 2021/06/03 10:48:28 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3196 2021/06/03 14:09:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.2.0 [pin 2021-06-03]
 	Removed math/kalk successor math/kalker [pin 2021-06-03]
 	Added math/kalker version 1.0.0 [pin 2021-06-03]
+	Updated devel/R-remotes to 2.3.0 [mef 2021-06-03]
