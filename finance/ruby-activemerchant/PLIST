@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/05 16:13:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/06/03 14:39:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -182,6 +182,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paystation.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payu_in.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payu_latam.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway_dot_com.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pin.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/plugnpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pro_pay.rb
@@ -230,6 +231,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vanco.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/verifi.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/viaklix.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/visanet_peru.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vpos.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/webpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wepay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wirecard.rb
