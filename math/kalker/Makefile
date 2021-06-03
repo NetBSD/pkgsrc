@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/03 10:44:39 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/03 11:08:51 pin Exp $
 
 DISTNAME=	kalker-1.0.0
 CATEGORIES=	math
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://kalker.strct.net/
-COMMENT=	CLI supporting math-like syntax with user-defined variables
+COMMENT=	CLI calculator supporting math-like syntax with user-defined variables
 LICENSE=	mit
 
 PREV_PKGPATH=	math/kalk
