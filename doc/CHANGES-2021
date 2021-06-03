@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3207 2021/06/03 15:06:05 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.3208 2021/06/03 15:09:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4982,3 +4982,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed misc/ruby-mimemagic [taca 2021-06-03]
 	Updated sysutils/ruby-facter to 4.2.0 [taca 2021-06-03]
 	Updated wm/mutter to 40.1 [cirnatdan 2021-06-03]
+	Updated sysutils/puppet to 7.7.0 [taca 2021-06-03]
