@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/15 23:20:36 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 12:34:28 gdt Exp $
 lib/erlang/lib/idna-${PKGVERSION}/ebin/idna.app
 lib/erlang/lib/idna-${PKGVERSION}/ebin/idna.beam
 lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_bidi.beam
@@ -8,3 +8,6 @@ lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_mapping.beam
 lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_table.beam
 lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_ucs.beam
 lib/erlang/lib/idna-${PKGVERSION}/ebin/punycode.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/string_compat.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/unicode_util_compat.app
+lib/erlang/lib/idna-${PKGVERSION}/ebin/unicode_util_compat.beam
