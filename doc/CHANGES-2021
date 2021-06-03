@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3205 2021/06/03 14:56:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3206 2021/06/03 15:04:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4980,3 +4980,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/ruby-braintree to 4.1.0 [taca 2021-06-03]
 	Updated misc/ruby-bundler to 2.2.19 [taca 2021-06-03]
 	Removed misc/ruby-mimemagic [taca 2021-06-03]
+	Updated sysutils/ruby-facter to 4.2.0 [taca 2021-06-03]
