@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3187 2021/06/02 23:29:15 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.3188 2021/06/03 04:34:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4911,3 +4911,15 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pyvex to 9.0.7491 [khorben 2021-06-02]
 	Updated math/py-claripy to 9.0.7491 [khorben 2021-06-02]
 	Updated devel/py-angr to 9.0.7491 [khorben 2021-06-02]
+	Updated print/tex-babel to 3.59 [markd 2021-06-03]
+	Updated print/tex-babel-doc to 3.59 [markd 2021-06-03]
+	Updated print/tex-babel-danish to 1.3s [markd 2021-06-03]
+	Updated print/tex-babel-german to 2.13 [markd 2021-06-03]
+	Updated print/tex-babel-portuges to 1.2s [markd 2021-06-03]
+	Updated print/tex-babel-romanian to 1.2m [markd 2021-06-03]
+	Updated print/tex-babel-serbian to 2.1 [markd 2021-06-03]
+	Updated print/tex-babel-serbianc to 3.1 [markd 2021-06-03]
+	Updated print/tex-babel-slovenian to 1.2n [markd 2021-06-03]
+	Updated print/tex-babel-sorbian to 1.0i [markd 2021-06-03]
+	Updated print/tex-babel-swedish to 2.3e [markd 2021-06-03]
+	Added print/tex-babel-finnish version 1.3s [markd 2021-06-03]
