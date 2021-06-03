@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/04 15:20:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/03 14:44:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -39,6 +39,7 @@ ${GEM_LIBDIR}/lib/braintree/discount.rb
 ${GEM_LIBDIR}/lib/braintree/discount_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/dispute.rb
 ${GEM_LIBDIR}/lib/braintree/dispute/evidence.rb
+${GEM_LIBDIR}/lib/braintree/dispute/paypal_message.rb
 ${GEM_LIBDIR}/lib/braintree/dispute/status_history.rb
 ${GEM_LIBDIR}/lib/braintree/dispute/transaction.rb
 ${GEM_LIBDIR}/lib/braintree/dispute/transaction_details.rb
@@ -76,6 +77,8 @@ ${GEM_LIBDIR}/lib/braintree/payment_instrument_type.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method_nonce.rb
+${GEM_LIBDIR}/lib/braintree/payment_method_nonce_details.rb
+${GEM_LIBDIR}/lib/braintree/payment_method_nonce_details_payer_info.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method_nonce_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method_parser.rb
 ${GEM_LIBDIR}/lib/braintree/paypal_account.rb
@@ -147,6 +150,7 @@ ${GEM_LIBDIR}/lib/braintree/xml.rb
 ${GEM_LIBDIR}/lib/braintree/xml/generator.rb
 ${GEM_LIBDIR}/lib/braintree/xml/libxml.rb
 ${GEM_LIBDIR}/lib/braintree/xml/parser.rb
+${GEM_LIBDIR}/lib/braintree/xml/rexml.rb
 ${GEM_LIBDIR}/lib/ssl/api_braintreegateway_com.ca.crt
 ${GEM_LIBDIR}/lib/ssl/securetrust_ca.crt
 ${GEM_LIBDIR}/spec/fixtures/files/bt_logo.png
@@ -223,6 +227,8 @@ ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/merchant_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/modification_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_payer_info_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
@@ -250,6 +256,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/validation_error_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/webhook_notification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/libxml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/parser_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/xml/rexml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree_spec.rb
 ${GEM_LIBDIR}/spec/unit/spec_helper.rb
