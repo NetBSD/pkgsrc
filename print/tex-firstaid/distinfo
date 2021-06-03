@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/13 04:44:06 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/03 07:05:18 markd Exp $
 
-SHA1 (firstaid.r57154.tar.xz) = 1dc5e7efdb1dc751a46da3710caebb67f3b412ac
-RMD160 (firstaid.r57154.tar.xz) = c024ffba4e60904dd74fe3663b8b6e02de478aea
-SHA512 (firstaid.r57154.tar.xz) = ab371c6f1a0d7b3850f024c6a1362213c4c53cdbed7d27a019c915c603c52cfd2ea230495ca1bc714f6438dd5edf8f4cbd953f8756cd4367db89924245a3cf8a
-Size (firstaid.r57154.tar.xz) = 2036 bytes
+SHA1 (firstaid.r58440.tar.xz) = 9010f9a06733c0608a1836720dbb8554fb0bb086
+RMD160 (firstaid.r58440.tar.xz) = c5cde6dab8a42648c4842f1933d22379d72adf89
+SHA512 (firstaid.r58440.tar.xz) = 31e74a644d0b2a9b0f659207195cc39b7b0cdfd44c878caf541869a114ca90990637c04b3da74f9f49e2dbcb30863030fe901a67b200d1aa4a9892ff41defe15
+Size (firstaid.r58440.tar.xz) = 2160 bytes
