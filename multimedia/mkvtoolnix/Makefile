@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2021/05/24 08:25:16 adam Exp $
+# $NetBSD: Makefile,v 1.176 2021/06/03 22:27:57 wiz Exp $
 
 DISTNAME=	mkvtoolnix-57.0.0
 CATEGORIES=	multimedia
@@ -29,9 +29,6 @@ CONFIGURE_ARGS+=	--disable-optimization
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-update-check
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
-CONFIGURE_ARGS+=	--with-boost-date-time=boost_date_time
-CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
-CONFIGURE_ARGS+=	--with-boost-system=boost_system
 CONFIGURE_ARGS+=	--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook
 
 REPLACE_LOCALEDIR_PATTERNS=	build-config.in
