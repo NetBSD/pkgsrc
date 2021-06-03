@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/21 10:15:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/03 05:25:16 markd Exp $
 
-SHA1 (bxjscls.r57625.tar.xz) = ea4770ccc80566e9b293b0605b0abcd2ff053a94
-RMD160 (bxjscls.r57625.tar.xz) = 8be2be37ce9ed1d9e51ce5b832c78c148c03aad5
-SHA512 (bxjscls.r57625.tar.xz) = 589b5b44ad6a4743a039b427d8caabae51c070591f808218f432a21df4c442df9878fd5fa882d6e5090ed808c0f689ecb8d9ee11e131415c7dd69ef992e6d898
-Size (bxjscls.r57625.tar.xz) = 32932 bytes
+SHA1 (bxjscls.r59253.tar.xz) = b588bfff1de00ffd98c451ce03d4247a4b53b1a9
+RMD160 (bxjscls.r59253.tar.xz) = c4610897f656f0a993b5e9530a04c6a0d92c9eec
+SHA512 (bxjscls.r59253.tar.xz) = 55dd819a17df692beaeccc41eb9c9258b2ce6df426eb476457eddea117551698ecbfb5a34c339891e276fe0c98f8ee0a676640d7dd066778d0f6e74b6c5fc9cf
+Size (bxjscls.r59253.tar.xz) = 33204 bytes
