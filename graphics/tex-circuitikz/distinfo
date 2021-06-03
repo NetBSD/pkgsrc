@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/02/18 19:42:07 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/06/03 06:00:17 markd Exp $
 
-SHA1 (circuitikz.r57469.tar.xz) = 06301df860570d9093336a8566485d2d5d40325a
-RMD160 (circuitikz.r57469.tar.xz) = b1f9df83c89b4f9118398b9128ae3e59ff169955
-SHA512 (circuitikz.r57469.tar.xz) = 72545d2d6d556dfc1a59f3dd65309aeb6dffda71bcbc6f9f0fc160c31290339580cd7d0087a699e40119e9cca7cebb290bf903b16c8548050116fce3962ae86f
-Size (circuitikz.r57469.tar.xz) = 142384 bytes
+SHA1 (circuitikz.r59421.tar.xz) = 35ef788f5773a2f335ed0d81fb758d0d34ae260f
+RMD160 (circuitikz.r59421.tar.xz) = 6c3b8addafa4f017b01a07f901efd75b0aedd018
+SHA512 (circuitikz.r59421.tar.xz) = c3b2040f2b03c0556af5c47ab0f90c91af77117fac575bb7e259cb228dd8635fdac0f30e7573c6be26bc1cc57834e53f976c9badf482c5eb9a9fdf30cf57d1d7
+Size (circuitikz.r59421.tar.xz) = 149108 bytes
