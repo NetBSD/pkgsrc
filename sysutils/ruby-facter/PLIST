@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/05/09 14:42:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/06/03 15:03:40 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/facter
@@ -611,6 +611,7 @@ ${GEM_LIBDIR}/lib/facter/facts/windows/identity/user.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/interfaces.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/ipaddress6_interfaces.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/ipaddress_interfaces.rb
+${GEM_LIBDIR}/lib/facter/facts/windows/is_virtual.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/kernel.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/kernelmajversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/kernelrelease.rb
@@ -673,8 +674,7 @@ ${GEM_LIBDIR}/lib/facter/facts/windows/system_uptime/hours.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/system_uptime/seconds.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/system_uptime/uptime.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/timezone.rb
-${GEM_LIBDIR}/lib/facter/facts/windows/virtualization/is_virtual.rb
-${GEM_LIBDIR}/lib/facter/facts/windows/virtualization/virtual.rb
+${GEM_LIBDIR}/lib/facter/facts/windows/virtual.rb
 ${GEM_LIBDIR}/lib/facter/framework/benchmarking/timer.rb
 ${GEM_LIBDIR}/lib/facter/framework/cli/cli.rb
 ${GEM_LIBDIR}/lib/facter/framework/cli/cli_launcher.rb
@@ -684,7 +684,6 @@ ${GEM_LIBDIR}/lib/facter/framework/core/cache_manager.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact/external/external_fact_manager.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact/internal/core_fact.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact/internal/internal_fact_manager.rb
-${GEM_LIBDIR}/lib/facter/framework/core/fact_augmenter.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact_filter.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact_loaders/class_discoverer.rb
 ${GEM_LIBDIR}/lib/facter/framework/core/fact_loaders/external_fact_loader.rb
@@ -848,12 +847,13 @@ ${GEM_LIBDIR}/lib/facter/util/aix/info_extractor.rb
 ${GEM_LIBDIR}/lib/facter/util/aix/odm_query.rb
 ${GEM_LIBDIR}/lib/facter/util/api_debugger.rb
 ${GEM_LIBDIR}/lib/facter/util/facts/facts_utils.rb
+${GEM_LIBDIR}/lib/facter/util/facts/posix/virtual_detector.rb
 ${GEM_LIBDIR}/lib/facter/util/facts/unit_converter.rb
 ${GEM_LIBDIR}/lib/facter/util/facts/uptime_parser.rb
-${GEM_LIBDIR}/lib/facter/util/facts/virtual_detector.rb
 ${GEM_LIBDIR}/lib/facter/util/facts/windows_release_finder.rb
 ${GEM_LIBDIR}/lib/facter/util/file_helper.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/dhcp.rb
+${GEM_LIBDIR}/lib/facter/util/linux/if_inet6.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/routing_table.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/socket_parser.rb
 ${GEM_LIBDIR}/lib/facter/util/macosx/system_profile_executor.rb
