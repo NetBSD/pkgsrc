@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3200 2021/06/03 14:35:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3201 2021/06/03 14:39:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4975,3 +4975,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ruby-faraday-net_http version 1.0.1 [taca 2021-06-03]
 	Added www/ruby-faraday-net_http_persistent version 1.1.0 [taca 2021-06-03]
 	Updated www/ruby-faraday to 1.4.2 [taca 2021-06-03]
+	Updated finance/ruby-activemerchant to 1.120.0 [taca 2021-06-03]
