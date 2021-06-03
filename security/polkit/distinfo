@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.11 2020/11/20 17:59:18 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/06/03 14:43:07 wiz Exp $
 
-SHA1 (polkit-0.118.tar.gz) = 1c53d0ccacc6e6afd49ba14cb39d2514b943933d
-RMD160 (polkit-0.118.tar.gz) = 9f849f0952574a239f1dce464e9c1a95c5181bbe
-SHA512 (polkit-0.118.tar.gz) = 3d412f40c903cfaf68530f9c0cb616106f8edf43bec6805de129f8bb9cb4e64c98da6bf02caa3ef5619974f3e2df7a70564f08b92901662453477e9005752b4e
-Size (polkit-0.118.tar.gz) = 1556765 bytes
+SHA1 (polkit-0.119.tar.gz) = 0794825e31a0a6e4859f93596d3f475b9d08f9e1
+RMD160 (polkit-0.119.tar.gz) = 52d66bd2b80e3a1ca52495fd09e307adbd2360a0
+SHA512 (polkit-0.119.tar.gz) = 0260fb15da1c4c1f429e8223260981e64e297f1be8ced42f6910f09ea6581b8205aca06c9c601eb4a128acba2f468de0223118f96862ba769f95721894cf1578
+Size (polkit-0.119.tar.gz) = 1387409 bytes
 SHA1 (patch-src_polkit_polkitunixprocess.c) = 88818b7b64502f64eade34ad379c07f2b0fd1aea
 SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = dd91b4e74e6c39f24e0f5a9b3150fdac12899cb5
 SHA1 (patch-src_polkitbackend_polkitbackendjsauthority.cpp) = 432a3d7d082ba6e596ba164d91408fc521b84422
 SHA1 (patch-src_polkitbackend_polkitd.c) = b8e11b40e2b171d4f030eb4c4cbc6fdc7a96b2c2
 SHA1 (patch-src_programs_pkexec.c) = bfc0414c7a943c8e8b8412566a2519198eab8abd
 SHA1 (patch-src_programs_pkttyagent.c) = 2c249b61501a1ad2c077bc83fd497e45f2db69a8
-SHA1 (patch-test_mocklib_src_netdb.c) = 0fe71068a6261d5e2c8874f2b4507e7e3c002526
 SHA1 (patch-test_mocklibc_src_grp.c) = 435ff94fd4c7f5511d74d03839fad453dd841633
+SHA1 (patch-test_mocklibc_src_netdb.c) = 0fe71068a6261d5e2c8874f2b4507e7e3c002526
 SHA1 (patch-test_mocklibc_src_pwd.c) = c65b02209db1bd1d531444026822fcca73d5027a
