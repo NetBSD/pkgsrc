@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/20 00:08:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/06/03 06:46:11 markd Exp $
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-Bold.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-BoldSlanted.afm
@@ -68,6 +68,7 @@ share/texmf-dist/fonts/enc/dvips/erewhon/zut1_dwvmxx.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_e4qrg7.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_eajfvl.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_eazsup.enc
+share/texmf-dist/fonts/enc/dvips/erewhon/zut1_ecrwth.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_elnhz2.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_erihhu.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_etc5hm.enc
@@ -82,6 +83,7 @@ share/texmf-dist/fonts/enc/dvips/erewhon/zut1_gbmzbk.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_gm2ao2.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_gqji7z.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_gxqdb2.enc
+share/texmf-dist/fonts/enc/dvips/erewhon/zut1_gzlvot.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_hhrib2.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_hl634h.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_i3xnrn.enc
@@ -135,6 +137,7 @@ share/texmf-dist/fonts/enc/dvips/erewhon/zut1_odgoid.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_okacrk.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_orscbj.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_otavqs.enc
+share/texmf-dist/fonts/enc/dvips/erewhon/zut1_papffl.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_peef5q.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_pj2kv6.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_ps4rne.enc
