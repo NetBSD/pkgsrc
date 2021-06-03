@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/05/10 23:16:08 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/06/03 04:15:24 markd Exp $
 
-SHA1 (babel-portuges.r55008.tar.xz) = c0ee5ddf3d212ecfe4ec23a1638ee0d5fa159d9a
-RMD160 (babel-portuges.r55008.tar.xz) = 2b64f0eac317fa8aee52b282cb5abd88e8dfdfb1
-SHA512 (babel-portuges.r55008.tar.xz) = dd8df67c315f44d36019f30203f211a1aab804c9c641ba17367d38fec1eb797bfe58167d52724c5d73c720d564f1445584006e33526e2d0f2f2d2a092f924a00
-Size (babel-portuges.r55008.tar.xz) = 2776 bytes
+SHA1 (babel-portuges.r57644.tar.xz) = 65f9abd747192c62a10b02eb068ffc76fc3b9274
+RMD160 (babel-portuges.r57644.tar.xz) = d64d6bcf4deee6c956bd3d3db75d8f99ef7f47e3
+SHA512 (babel-portuges.r57644.tar.xz) = d415a75ca4504cb219ac55b7a03b9b00667747fa39dfd4650e2f93ef7919cb79c701e52d947823016151b340a66f52550a0903a861540d0d6474e4f4ecda6adf
+Size (babel-portuges.r57644.tar.xz) = 2828 bytes
