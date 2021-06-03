@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/01 02:30:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/03 06:53:00 markd Exp $
 share/texmf-dist/doc/latex/europecv/CHANGELOG.rst
 share/texmf-dist/doc/latex/europecv/CONTRIBUTING.md
 share/texmf-dist/doc/latex/europecv/LICENSE
@@ -25,3 +25,9 @@ share/texmf-dist/doc/latex/europecv/templates/cv_template_academic_en.pdf
 share/texmf-dist/doc/latex/europecv/templates/cv_template_academic_en.tex
 share/texmf-dist/doc/latex/europecv/templates/cv_template_en.pdf
 share/texmf-dist/doc/latex/europecv/templates/cv_template_en.tex
+share/texmf-dist/doc/latex/europecv/templates/cv_template_en_bieber.tex
+share/texmf-dist/doc/latex/europecv/templates/europecv_biber.conf
+share/texmf-dist/doc/latex/europecv/templates/europecv_biber.tex
+share/texmf-dist/doc/latex/europecv/templates/europecv_photo.jpg
+share/texmf-dist/doc/latex/europecv/templates/europecv_pub.bib
+share/texmf-dist/doc/latex/europecv/templates/europecv_thesis.bib
