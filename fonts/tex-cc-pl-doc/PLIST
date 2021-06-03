@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:27:48 markd Exp $
-share/texmf-dist/doc/fonts/cc-pl/README.cc-pl
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 05:33:05 markd Exp $
+share/texmf-dist/doc/fonts/cc-pl/README

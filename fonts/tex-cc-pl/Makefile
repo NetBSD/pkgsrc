@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:40 markd Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/03 05:33:05 markd Exp $
 
 DISTNAME=	cc-pl
-PKGNAME=	tex-${DISTNAME}-1.02.2
-PKGREVISION=	1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.02.3
+TEXLIVE_REV=	58602
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cc-pl
@@ -12,6 +11,5 @@ LICENSE=	public-domain
 
 TEX_MIXEDMAP_FILES+=	ccpl.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
