@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/01 13:26:05 mef Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/03 21:01:07 mef Exp $
 
 R_PKGNAME=	pkgcache
 R_PKGVER=	1.2.2
@@ -21,6 +21,7 @@ DEPENDS+=	R-digest>=0.6.25:../../security/R-digest
 DEPENDS+=	R-processx>=3.3.0.9001:../../sysutils/R-processx
 DEPENDS+=	R-curl>=3.2:../../www/R-curl
 DEPENDS+=	R-filelock-[0-9]*:../../devel/R-filelock
+DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
 
 # Packages suggested but not available: 'debugme', 'webfakes'
 #TEST_DEPENDS+=	R-debugme-[0-9]*:
