@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/05 14:51:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/03 06:26:18 markd Exp $
 share/texmf-dist/fonts/source/public/concrete/cccsc10.mf
 share/texmf-dist/fonts/source/public/concrete/ccmi10.mf
 share/texmf-dist/fonts/source/public/concrete/ccmic9.mf
+share/texmf-dist/fonts/source/public/concrete/ccn10.mf
 share/texmf-dist/fonts/source/public/concrete/ccr10.mf
 share/texmf-dist/fonts/source/public/concrete/ccr5.mf
 share/texmf-dist/fonts/source/public/concrete/ccr6.mf
