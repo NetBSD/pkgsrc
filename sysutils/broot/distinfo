@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2021/06/03 10:06:13 pin Exp $
+$NetBSD: distinfo,v 1.20 2021/06/03 19:44:27 pin Exp $
 
 SHA1 (adler-1.0.2.crate) = 4b3b7b567ba15929c15c0b8f4c498afaefde76db
 RMD160 (adler-1.0.2.crate) = 8a3ccd049edf486e01dd612352816e76176f601c
@@ -68,10 +68,10 @@ SHA1 (bitflags-1.2.1.crate) = b7d3a9b30a05e14231cb55271c6ffa45cc1279cd
 RMD160 (bitflags-1.2.1.crate) = 186b1893055eb415978ca547b0775aaa617a00fd
 SHA512 (bitflags-1.2.1.crate) = ad89b3798845e23737a620bba581c2ff1ff3e15bac12555c765e201d2c0b90ecea0cdbc5b5b1a3fa9858c385e8e041f8226f5acfae5bbbe9925643fff2bf3f0b
 Size (bitflags-1.2.1.crate) = 16745 bytes
-SHA1 (broot-1.5.0.tar.gz) = e87bc4f1bbb807ec47df2e76925f8e248b1d8f73
-RMD160 (broot-1.5.0.tar.gz) = 6541f4f008e6933602bdbc50c5da68418c4e6052
-SHA512 (broot-1.5.0.tar.gz) = 36c8cf6f317492154faf75fb51a3ef91f11cba0eeaaab8e00c189803b4859ea674db957fe464fae55320807cb8bd5e89ae46fcf76bac9075db6914c95badf4fc
-Size (broot-1.5.0.tar.gz) = 8287753 bytes
+SHA1 (broot-1.5.1.tar.gz) = 97d88acfc1b9ef753abafa876ecf2427cadef98d
+RMD160 (broot-1.5.1.tar.gz) = aef8d7aab329c441f207180123789a61aac01681
+SHA512 (broot-1.5.1.tar.gz) = 04bdcb536daf88a5be2b29fb608b4add619c3e8dec361c7928bd7b1baf9f6c31e26c0a69fd37680178dff3bc2c9d4caaad9e985b3a148161e4be2dcb32cc6115
+Size (broot-1.5.1.tar.gz) = 8710603 bytes
 SHA1 (bstr-0.2.15.crate) = d45e6e82477cf06c9fe987c8cfe00ae1c5fa0347
 RMD160 (bstr-0.2.15.crate) = c4a14ea0bfb110fe725b5a0e8d5ca01d07659ad6
 SHA512 (bstr-0.2.15.crate) = 6e464ca1aec722a283759ff6978bab1769dfc8d61aa683f8e4c59bd69c7be2fe86c5470f4c54457871c6640e2d50b6b882747ec567098eb78e62f7cb07cb93a2
@@ -660,10 +660,10 @@ SHA1 (termimad-0.10.3.crate) = 6f58e75c6df705793855eb085ae39e0f1f5f62da
 RMD160 (termimad-0.10.3.crate) = 329366a671a12bf4c257aa68a2b4381036acdcc0
 SHA512 (termimad-0.10.3.crate) = c25aa79fa0053c1e7ac88405b45742d3e34d58f4293405699e601122451e18ac9532b80413df9032850d983e3abcb1b1656de3428bface46efd2505d2a2137bc
 Size (termimad-0.10.3.crate) = 316247 bytes
-SHA1 (termimad-0.11.0.crate) = 5e6412c0b44fd2452f1be147e26c87f9ae2930cc
-RMD160 (termimad-0.11.0.crate) = 4d9bae5860f1c235fa6de2e05fdd7d5d74cd8ac4
-SHA512 (termimad-0.11.0.crate) = 0e4855fadafc2add72f316ac52c65c76dc5315914b93c32877de537e4f15c4798c4ba2a423e56ead362d8b0fdc96ae4f19a18ea4377ca8d70e84663078958932
-Size (termimad-0.11.0.crate) = 316285 bytes
+SHA1 (termimad-0.11.1.crate) = 5b311bc95cd0dad1da4424a0a59dd82086b0d627
+RMD160 (termimad-0.11.1.crate) = 60ab6d44be9dd3d7d96834b70863d0645e048d6a
+SHA512 (termimad-0.11.1.crate) = b930c5b9da286a0754bdf7749cded52aaa4af8c050f88b5aeff2a4f3fd95720ca82ed90d2f4249054ca7f2b1cf31fde8a8808fc5bb1c63649da325c017658433
+Size (termimad-0.11.1.crate) = 316869 bytes
 SHA1 (terminal-clipboard-0.2.1.crate) = 17be7940762fd0c17c23453530eb9393efab153d
 RMD160 (terminal-clipboard-0.2.1.crate) = 9dc7e6bcaeebfd2c68e1bfd63a36575d9a805104
 SHA512 (terminal-clipboard-0.2.1.crate) = 10b6d024b24fb236954a981c17dec25b4d4b8f06c4cef3edb9137cf291099453926b5793c6f19bd3b69a9db88e38ed4ea72bbf8aa6f57434a30974b9fb9ab763
