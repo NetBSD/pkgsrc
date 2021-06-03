@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.825 2021/05/31 07:53:40 pin Exp $
+# $NetBSD: Makefile,v 1.826 2021/06/03 07:43:38 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -111,10 +111,10 @@ SUBDIR+=	go-sftp
 SUBDIR+=	go-xxhash
 SUBDIR+=	google-authenticator
 SUBDIR+=	gpa
+SUBDIR+=	gpg-tui
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
 SUBDIR+=	gpgmepp
-SUBDIR+=	gpg-tui
 SUBDIR+=	gpshell
 SUBDIR+=	gsasl
 SUBDIR+=	gss
