@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/06/03 04:17:15 markd Exp $
 
-SHA1 (tex-babel-romanian-30285/babel-romanian.tar.xz) = 2f9e6f1564d5ed6a8989f191294e22a3c012d967
-RMD160 (tex-babel-romanian-30285/babel-romanian.tar.xz) = b7ae8f844500e66067283156ccce5b71d5f03591
-SHA512 (tex-babel-romanian-30285/babel-romanian.tar.xz) = 237afd7b784f2ba888b861069b3e7b3da63478a1c4631a72a0851993c5db3386327db53ad171e94138e6cb6a380af3d66669597387aaa45355c7ec808682656e
-Size (tex-babel-romanian-30285/babel-romanian.tar.xz) = 2168 bytes
+SHA1 (babel-romanian.r58776.tar.xz) = b07e4a954e78f5a96351abd621b529054a3fd1df
+RMD160 (babel-romanian.r58776.tar.xz) = 4cc682844b348790c5d634fc9f2f1af59b48b632
+SHA512 (babel-romanian.r58776.tar.xz) = ca6318ca8453dae2286b305766c6ced299f18f390c0d0f44e77ddf8eb4b05c31c7a2b01ed52e271f68acd6b127650b370d15ea9bcb3b591fd01e5d3a50b17db5
+Size (babel-romanian.r58776.tar.xz) = 2124 bytes
