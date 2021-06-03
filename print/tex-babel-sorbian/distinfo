@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/06/03 04:24:32 markd Exp $
 
-SHA1 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = b226a1f51000a5df854f4a4865c2555e9e9a2b91
-RMD160 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = f6d817a103dbdee22c071a181d3dcbdf53e1e40e
-SHA512 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = 11f4d1fc6060668cec59cc767dc453093a7640be48633ab5caf59e1d01f188209d1884438e01123252b5d5499061f6e59c0a28a631de13d19548794214f776f6
-Size (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = 3152 bytes
+SHA1 (babel-sorbian.r57646.tar.xz) = 7d016bd2102479bcf3e4693cd2ca2fedf1aded1e
+RMD160 (babel-sorbian.r57646.tar.xz) = c58c02438260f95c348e346ad0c71485735faf5a
+SHA512 (babel-sorbian.r57646.tar.xz) = a19f913f590ea66b411a2215ac555590b3ac9f23480096236ccf9c84714bc7b64c0649c1bbeef36bef4f1e56b0e16f3d2abf6c929992fc4accd708ecd6f54681
+Size (babel-sorbian.r57646.tar.xz) = 3156 bytes
