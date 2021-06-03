@@ -1,4 +1,4 @@
-$NetBSD: patch-test_mocklib_src_netdb.c,v 1.3 2016/12/03 01:58:50 marino Exp $
+$NetBSD: patch-test_mocklibc_src_netdb.c,v 1.1 2021/06/03 14:43:07 wiz Exp $
 
 Darwin has setnetgrent.
 SunOS has endnetgrent.
