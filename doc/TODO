@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20726 2021/06/03 14:09:34 mef Exp $
+$NetBSD: TODO,v 1.20727 2021/06/03 14:43:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o Inter-UI-3.18
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-21.1.1
+	o MesaLib-21.1.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -652,7 +652,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
-	o blender-2.91
+	o blender-2.93
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o boolean-7.1
