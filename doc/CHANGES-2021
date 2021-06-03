@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3198 2021/06/03 14:26:31 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3199 2021/06/03 14:29:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4973,3 +4973,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-remotes to 2.3.0 [mef 2021-06-03]
 	Added www/ruby-faraday-excon version 1.1.0 [taca 2021-06-03]
 	Added www/ruby-faraday-net_http version 1.0.1 [taca 2021-06-03]
+	Added www/ruby-faraday-net_http_persistent version 1.1.0 [taca 2021-06-03]
