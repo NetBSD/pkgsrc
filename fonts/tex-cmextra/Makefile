@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:44 markd Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/03 06:20:26 markd Exp $
 
 DISTNAME=	cmextra
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	32831
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	57866
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/knuth-local
 COMMENT=	Extra Computer Modern fonts
+LICENSE=	public-domain
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
