@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/13 05:15:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/03 07:47:21 markd Exp $
 share/texmf-dist/tex/latex/hyperref/backref.sty
 share/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 share/texmf-dist/tex/latex/hyperref/hdvips.def
@@ -25,7 +25,7 @@ share/texmf-dist/tex/latex/hyperref/pdfmark.def
 share/texmf-dist/tex/latex/hyperref/psdextra.def
 share/texmf-dist/tex/latex/hyperref/puarenc.def
 share/texmf-dist/tex/latex/hyperref/puenc-extra.def
-share/texmf-dist/tex/latex/hyperref/puenc-greek.def
+share/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
 share/texmf-dist/tex/latex/hyperref/puenc.def
 share/texmf-dist/tex/latex/hyperref/puvnenc.def
 share/texmf-dist/tex/latex/hyperref/xr-hyper.sty
