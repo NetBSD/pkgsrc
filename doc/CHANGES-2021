@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3189 2021/06/03 07:14:22 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3190 2021/06/03 08:02:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4958,3 +4958,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-firstaid-doc to 1.0j [markd 2021-06-03]
 	Updated fonts/tex-fontools to 2021 [markd 2021-06-03]
 	Updated fonts/tex-fontools-doc to 2021 [markd 2021-06-03]
+	Updated fonts/tex-haranoaji-extra to 20210410 [markd 2021-06-03]
+	Updated fonts/tex-haranoaji-extra-doc to 20210410 [markd 2021-06-03]
+	Updated print/tex-hyperref to 7.00k [markd 2021-06-03]
+	Updated print/tex-hyperref-doc to 7.00k [markd 2021-06-03]
+	Updated fonts/tex-japanese-otf to 1.7b8.57826 [markd 2021-06-03]
+	Updated fonts/tex-japanese-otf-doc to 1.7b8.57826 [markd 2021-06-03]
+	Updated print/tex-kotex-oblivoir to 3.0.1 [markd 2021-06-03]
+	Updated print/tex-kotex-oblivoir-doc to 3.0.1 [markd 2021-06-03]
