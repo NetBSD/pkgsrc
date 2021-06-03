@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/20 09:50:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/06/03 05:44:56 markd Exp $
 share/texmf-dist/doc/latex/changes/README
 share/texmf-dist/doc/latex/changes/changes.english.pdf
 share/texmf-dist/doc/latex/changes/changes.english.withcode.pdf
@@ -126,6 +126,8 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.markup.nocolor.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.underlined.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.underlined.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.wrong.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.package.hyperref.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.package.hyperref.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.wrong.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.packageoptions.todonotes.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.packageoptions.todonotes.tex
@@ -151,6 +153,8 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.setdeletedmarkup.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.setdeletedmarkup.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.sethighlightmarkup.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.sethighlightmarkup.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.setlocextension.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.setlocextension.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.setsocextension.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.setsocextension.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.setsummarytowidth.pdf
@@ -161,6 +165,8 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.settruncatewidth.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.settruncatewidth.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.simple.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.simple.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.draft.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.final.tex
 share/texmf-dist/doc/latex/changes/userdoc/added_ex.tex
 share/texmf-dist/doc/latex/changes/userdoc/added_in.tex
 share/texmf-dist/doc/latex/changes/userdoc/changes.de.tex
