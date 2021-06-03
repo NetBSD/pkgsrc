@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:35 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/03 04:12:06 markd Exp $
 
 DISTNAME=	babel-danish
-PKGNAME=	tex-${DISTNAME}-1.3r
-TEXLIVE_REV=	30262
+PKGNAME=	tex-${DISTNAME}-1.3s
+TEXLIVE_REV=	57642
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-danish
@@ -11,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
