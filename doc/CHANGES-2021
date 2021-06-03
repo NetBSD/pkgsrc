@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3213 2021/06/03 15:48:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3214 2021/06/03 16:32:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4988,3 +4988,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/gnome-shell to 40.0 [cirnatdan 2021-06-03]
 	Updated lang/php74 to 7.4.20 [taca 2021-06-03]
 	Updated security/clamav to 0.103.2 [taca 2021-06-03]
+	Updated editors/pluma to 1.24.2nb2 [gutteridge 2021-06-03]
