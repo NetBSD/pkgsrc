@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3218 2021/06/04 09:58:12 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3219 2021/06/04 11:27:17 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4994,3 +4994,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.5.1 [pin 2021-06-03]
 	Updated www/apache24 to 2.4.48 [wiz 2021-06-04]
 	Updated devel/nss to 3.66 [wiz 2021-06-04]
+	Updated sysutils/gnome-control-center to 40.0 [cirnatdan 2021-06-04]
