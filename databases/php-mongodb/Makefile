@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/04/21 11:41:13 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/04 14:00:35 taca Exp $
 
 MODNAME=	mongodb
-PECL_VERSION=	1.9.0
+PECL_VERSION=	1.9.1
 CATEGORIES+=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 PHP_VERSIONS_INCOMPATIBLE=	56
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 CONFIGURE_ARGS+=	--with-libbson
 CONFIGURE_ARGS+=	--with-libmongoc
 CONFIGURE_ARGS+=	--with-openssl-dir=${BUILDLINK_PREFIX.openssl}
