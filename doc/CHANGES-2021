@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3224 2021/06/04 14:14:08 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3225 2021/06/04 14:26:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5001,3 +5001,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php80 to 8.0.7 [taca 2021-06-04]
 	Updated databases/php-mongodb to 1.9.1 [taca 2021-06-04]
 	Updated devel/php-xdebug to 3.0.4 [taca 2021-06-04]
+	Updated devel/ruby-test-unit to 3.4.4 [taca 2021-06-04]
