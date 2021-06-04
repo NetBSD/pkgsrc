@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3219 2021/06/04 11:27:17 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.3220 2021/06/04 12:48:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4995,3 +4995,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/apache24 to 2.4.48 [wiz 2021-06-04]
 	Updated devel/nss to 3.66 [wiz 2021-06-04]
 	Updated sysutils/gnome-control-center to 40.0 [cirnatdan 2021-06-04]
+	Updated www/py-websockets to 9.1 [adam 2021-06-04]
+	Updated www/py-uvicorn to 0.14.0 [adam 2021-06-04]
