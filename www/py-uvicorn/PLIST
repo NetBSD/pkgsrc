@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/12/09 09:44:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/06/04 12:47:54 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,9 +12,12 @@ ${PYSITELIB}/uvicorn/__init__.pyo
 ${PYSITELIB}/uvicorn/__main__.py
 ${PYSITELIB}/uvicorn/__main__.pyc
 ${PYSITELIB}/uvicorn/__main__.pyo
-${PYSITELIB}/uvicorn/_types.py
-${PYSITELIB}/uvicorn/_types.pyc
-${PYSITELIB}/uvicorn/_types.pyo
+${PYSITELIB}/uvicorn/_handlers/__init__.py
+${PYSITELIB}/uvicorn/_handlers/__init__.pyc
+${PYSITELIB}/uvicorn/_handlers/__init__.pyo
+${PYSITELIB}/uvicorn/_handlers/http.py
+${PYSITELIB}/uvicorn/_handlers/http.pyc
+${PYSITELIB}/uvicorn/_handlers/http.pyo
 ${PYSITELIB}/uvicorn/config.py
 ${PYSITELIB}/uvicorn/config.pyc
 ${PYSITELIB}/uvicorn/config.pyo
@@ -75,6 +78,9 @@ ${PYSITELIB}/uvicorn/protocols/http/__init__.pyo
 ${PYSITELIB}/uvicorn/protocols/http/auto.py
 ${PYSITELIB}/uvicorn/protocols/http/auto.pyc
 ${PYSITELIB}/uvicorn/protocols/http/auto.pyo
+${PYSITELIB}/uvicorn/protocols/http/flow_control.py
+${PYSITELIB}/uvicorn/protocols/http/flow_control.pyc
+${PYSITELIB}/uvicorn/protocols/http/flow_control.pyo
 ${PYSITELIB}/uvicorn/protocols/http/h11_impl.py
 ${PYSITELIB}/uvicorn/protocols/http/h11_impl.pyc
 ${PYSITELIB}/uvicorn/protocols/http/h11_impl.pyo
