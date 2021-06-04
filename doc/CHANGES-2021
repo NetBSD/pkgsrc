@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3227 2021/06/04 16:43:43 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.3228 2021/06/04 18:58:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5004,3 +5004,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-test-unit to 3.4.4 [taca 2021-06-04]
 	Updated sysutils/ruby-inspec-core to 4.37.23 [taca 2021-06-04]
 	Updated lang/go115 to 1.15.13nb1 [bsiegert 2021-06-04]
+	Updated net/libupnp to 1.14.7 [adam 2021-06-04]
+	Updated net/miniupnpc to 2.2.2 [adam 2021-06-04]
