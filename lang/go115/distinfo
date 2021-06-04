@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/05/07 16:30:41 bsiegert Exp $
+$NetBSD: distinfo,v 1.10 2021/06/04 16:43:21 bsiegert Exp $
 
-SHA1 (go1.15.12.src.tar.gz) = a91d50e0a67572b83c76c11ab9f250d217bd488e
-RMD160 (go1.15.12.src.tar.gz) = 74404f5b7779261c73c920c991df9d60c3cc56b9
-SHA512 (go1.15.12.src.tar.gz) = 9fdb0e74c0b4e8e5d8d45cbdb6f1d4be4d40549ef10629350856c3e045a82567a0418e949dfc229df7eea091ababec6b3e4e12b1bd424e14d7b10ef989e5c232
-Size (go1.15.12.src.tar.gz) = 23035406 bytes
+SHA1 (go1.15.13.src.tar.gz) = 4408218eeefe1367ca8b03a5cc3eb3d3dc164f2d
+RMD160 (go1.15.13.src.tar.gz) = 27a5186dfca92ff95c55ec3652e4af03a6204232
+SHA512 (go1.15.13.src.tar.gz) = 3f77716c9721afacb27daa175e236bb25cfc93602f1531df18938fad94bf4f59e81b81f53fa977c2ebc9a912942275a1106043133fec166965e72766b1638ba1
+Size (go1.15.13.src.tar.gz) = 23039791 bytes
 SHA1 (patch-misc_io_clangwrap.sh) = df5911c430ff6251abab12e5cc233e32fc3cd953
 SHA1 (patch-src_cmd_dist_util.go) = 24e6f1b6ded842a8ce322a40e8766f7d344bc47e
 SHA1 (patch-src_cmd_link_internal_ld_elf.go) = 3dfcb5c824d4201fadda0cfb6b48e5938899baf0

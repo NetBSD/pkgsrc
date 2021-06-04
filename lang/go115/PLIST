@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/05/07 16:30:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/06/04 16:43:21 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -2274,6 +2274,7 @@ go115/src/cmd/go/testdata/script/mod_tidy_error.txt
 go115/src/cmd/go/testdata/script/mod_tidy_quote.txt
 go115/src/cmd/go/testdata/script/mod_tidy_replace.txt
 go115/src/cmd/go/testdata/script/mod_tidy_sum.txt
+go115/src/cmd/go/testdata/script/mod_tidy_too_new.txt
 go115/src/cmd/go/testdata/script/mod_upgrade_patch.txt
 go115/src/cmd/go/testdata/script/mod_vcs_missing.txt
 go115/src/cmd/go/testdata/script/mod_vendor.txt
