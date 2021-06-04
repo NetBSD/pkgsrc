@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/10 18:22:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/04 11:27:01 cirnatdan Exp $
 bin/gnome-control-center
 libexec/cc-remote-login-helper
 libexec/gnome-control-center-print-renderer
@@ -161,7 +161,6 @@ share/locale/ja/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/ja/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/ka/LC_MESSAGES/gnome-control-center-2.0.mo
-share/locale/kab/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/kk/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/km/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/kn/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
