@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.21 2020/05/01 21:12:05 rillig Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.22 2021/06/04 18:59:18 adam Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -12,12 +12,13 @@ MK_FUSE_BUILDLINK3_MK=	# defined
 
 .  if ${OPSYS} == "Darwin"
 
-# On Darwin, we only attempt to support "Fuse for OS X", known as
-# "OSXFUSE".  MacFuse is dead, and fuse4x is merging into OSXFUSE.
+# On Darwin, we only attempt to support macFUSE.
+# https://macfuse.io/
 
-.    if !exists(/usr/local/lib/pkgconfig/osxfuse.pc)
+.    if !exists(/usr/local/lib/pkgconfig/osxfuse.pc) && \
+	!exists(/usr/local/lib/pkgconfig/fuse.pc)
 PKG_FAIL_REASON+=	\
-	"Couldn't find fuse; please install OSXFUSE."
+	"Couldn't find fuse; please install macFUSE."
 .    endif
 
 do-configure-pre-hook: override-fuse-pkgconfig
@@ -27,10 +28,14 @@ override-message-fuse-pkgconfig:
 	@${STEP_MSG} "Setting up usage of native fuse."
 
 override-fuse-pkgconfig:
-	${RUN}						\
-	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
+.if exists(/usr/local/lib/pkgconfig/osxfuse.pc)
 	${LN} -s /usr/local/lib/pkgconfig/osxfuse.pc	\
 	    ${BUILDLINK_DIR}/lib/pkgconfig/fuse.pc
+.elif exists(/usr/local/lib/pkgconfig/fuse.pc)
+	${LN} -s /usr/local/lib/pkgconfig/fuse.pc	\
+	    ${BUILDLINK_DIR}/lib/pkgconfig/fuse.pc
+.endif
 
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/osxfuse
 # Too much!  But allows -losxfuse to work.
