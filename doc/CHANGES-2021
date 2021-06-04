@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3220 2021/06/04 12:48:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3221 2021/06/04 13:32:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4997,3 +4997,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/gnome-control-center to 40.0 [cirnatdan 2021-06-04]
 	Updated www/py-websockets to 9.1 [adam 2021-06-04]
 	Updated www/py-uvicorn to 0.14.0 [adam 2021-06-04]
+	Updated multimedia/vlc to 3.0.14nb2 [wiz 2021-06-04]
