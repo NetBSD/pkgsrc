@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/04 16:06:11 jperkin Exp $
 #
 
 DISTNAME=	nbpatch-20151107
@@ -13,6 +13,7 @@ COMMENT=	Patch files using diff output
 # Allow checkperms and other core dependencies to use patches
 CHECK_PERMS=		no
 
+USE_LANGUAGES=		c99
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES=		nbcompat
 
