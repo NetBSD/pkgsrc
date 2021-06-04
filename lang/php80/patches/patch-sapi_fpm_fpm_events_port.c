@@ -1,28 +1,12 @@
-$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.1 2021/03/07 13:41:36 taca Exp $
+$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.2 2021/06/04 13:56:31 taca Exp $
 
 Similar to upstream bug #65800. We should resubmit this patch and
 get that bugfix intergrated, by changing port_associate() call to
 use the wrapper fpm_event_port_add().
 
---- sapi/fpm/fpm/events/port.c.orig	2015-06-23 17:33:33.000000000 +0000
+--- sapi/fpm/fpm/events/port.c.orig	2021-06-01 18:43:05.000000000 +0000
 +++ sapi/fpm/fpm/events/port.c
-@@ -124,6 +124,7 @@ static int fpm_event_port_wait(struct fp
- 	t.tv_nsec = (timeout % 1000) * 1000 * 1000;
- 
- 	/* wait for inconming event or timeout. We want at least one event or timeout */
-+again:
- 	nget = 1;
- 	ret = port_getn(pfd, events, nevents, &nget, &t);
- 	if (ret < 0) {
-@@ -133,17 +134,31 @@ static int fpm_event_port_wait(struct fp
- 			zlog(ZLOG_WARNING, "poll() returns %d", errno);
- 			return -1;
- 		}
-+
-+		if (errno == EINTR)
-+			goto again;
-+
-+		return 0;
+@@ -145,14 +145,23 @@ static int fpm_event_port_wait(struct fp
  	}
  
  	for (i = 0; i < nget; i++) {
