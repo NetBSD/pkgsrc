@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2017/01/16 12:27:18 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2021/06/04 11:30:35 gdt Exp $
 
 You need to install at least one encoder to use with abcde.  It has support
 for the following encoders in pkgsrc:
@@ -12,11 +12,5 @@ for the following encoders in pkgsrc:
     audio/musepack
     audio/speex
     audio/vorbis-tools
-
-Preferences can be set in ~/.abcde.conf for each user, and for all users in
-${PKG_SYSCONFDIR}/abcde.conf system-wide.
-
-See the man page and ${EGDIR}/abcde.conf for
-configuration options.
 
 ===========================================================================
