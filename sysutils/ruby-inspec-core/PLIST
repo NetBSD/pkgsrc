@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/09 15:01:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/04 14:31:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -323,11 +323,11 @@ ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/L
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/Rakefile
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/inspec-plugin-template.gemspec
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template.rb
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/cli_command.rb
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/plugin.rb
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/reporter.rb
-${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/version.rb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template.erb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/cli_command.erb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/plugin.erb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/reporter.erb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/version.erb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/controls/example.rb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/inputs.yml
