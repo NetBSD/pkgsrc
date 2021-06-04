@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2015/08/10 07:10:55 dholland Exp $
-
-To use ${PKGNAME}, a procfs filesystem must be mounted on /proc.
-
-On some systems this is not possible without a kernel configured to
-support procfs.
-
-===========================================================================
