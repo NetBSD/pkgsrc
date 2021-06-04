@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3221 2021/06/04 13:32:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3222 2021/06/04 13:56:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -4998,3 +4998,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-websockets to 9.1 [adam 2021-06-04]
 	Updated www/py-uvicorn to 0.14.0 [adam 2021-06-04]
 	Updated multimedia/vlc to 3.0.14nb2 [wiz 2021-06-04]
+	Updated lang/php80 to 8.0.7 [taca 2021-06-04]
