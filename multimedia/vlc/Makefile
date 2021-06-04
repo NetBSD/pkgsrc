@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2021/05/24 19:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.253 2021/06/04 12:19:30 wiz Exp $
 
 DISTNAME=		vlc-3.0.14
 PKGREVISION=		1
@@ -27,9 +27,6 @@ PLIST_VARS+=		altivec cdrom egl oss v4l2 x86simd
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
-BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 CONFIGURE_ENV=		LUAC=${PREFIX}/bin/luac5.2
 
@@ -199,6 +196,7 @@ pre-configure:
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
