@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/01/24 16:58:15 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/04 18:57:46 adam Exp $
 
-DISTNAME=	miniupnpc-2.2.1
+DISTNAME=	miniupnpc-2.2.2
 CATEGORIES=	net
 MASTER_SITES=	http://miniupnp.free.fr/files/download.php?file=
 
