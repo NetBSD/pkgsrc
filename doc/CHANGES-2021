@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3226 2021/06/04 14:32:21 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3227 2021/06/04 16:43:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5003,3 +5003,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-xdebug to 3.0.4 [taca 2021-06-04]
 	Updated devel/ruby-test-unit to 3.4.4 [taca 2021-06-04]
 	Updated sysutils/ruby-inspec-core to 4.37.23 [taca 2021-06-04]
+	Updated lang/go115 to 1.15.13nb1 [bsiegert 2021-06-04]
