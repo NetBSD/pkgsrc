@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2021/05/24 19:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2021/06/05 13:05:56 adam Exp $
 
-DISTNAME=	aMule-2.3.2
+DISTNAME=	aMule-2.3.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,10 +17,11 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
+CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK30}/bin/wx-config
 CONFIGURE_ARGS+=	--with-crypto-prefix=${BUILDLINK_PREFIX.cryptopp}
 CONFIGURE_ARGS+=	--with-language=all
 CONFIGURE_ARGS+=	--enable-xas
+TEST_TARGET=		check
 
 CXXFLAGS+=		-Wno-undef
 
@@ -37,11 +37,9 @@ LIBS+=			-lm	# for pow(3)
 
 UNLIMIT_RESOURCES+=	datasize
 
-TEST_TARGET=		check
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/crypto++/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
