@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/25 10:21:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/05 07:12:45 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -89,9 +89,6 @@ ${PYSITELIB}/ansiblelint/rules/GitHasVersionRule.pyo
 ${PYSITELIB}/ansiblelint/rules/IgnoreErrorsRule.py
 ${PYSITELIB}/ansiblelint/rules/IgnoreErrorsRule.pyc
 ${PYSITELIB}/ansiblelint/rules/IgnoreErrorsRule.pyo
-${PYSITELIB}/ansiblelint/rules/IncludeMissingFileRule.py
-${PYSITELIB}/ansiblelint/rules/IncludeMissingFileRule.pyc
-${PYSITELIB}/ansiblelint/rules/IncludeMissingFileRule.pyo
 ${PYSITELIB}/ansiblelint/rules/MercurialHasRevisionRule.py
 ${PYSITELIB}/ansiblelint/rules/MercurialHasRevisionRule.pyc
 ${PYSITELIB}/ansiblelint/rules/MercurialHasRevisionRule.pyo
