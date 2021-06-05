@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/05 07:22:34 markd Exp $
 
 DISTNAME=	knuth-local
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	38627
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	57963
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/knuth-local
 COMMENT=	Knuth's local information
-#LICENSE=	knuth
+LICENSE=	public-domain
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
@@ -16,6 +16,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mft/knuth-local/e.mft \
 		${DESTDIR}${PREFIX}/share/texmf-dist/mft/knuth-local/e.mft
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
