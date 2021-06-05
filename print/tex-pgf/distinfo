@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/18 19:53:42 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/06/05 05:24:41 markd Exp $
 
-SHA1 (pgf.r57240.tar.xz) = e50faa9bf64b8f36bf2d292c58d000adf5d15e30
-RMD160 (pgf.r57240.tar.xz) = 3de59ff08e919e93f9ee3cb406d8fbf137172687
-SHA512 (pgf.r57240.tar.xz) = da45fe7a5b4e9aacf39c64da1596a30ceffc8751ceb6543b20f6d3f2134da75eff7684a72ce15fee9d1e4404efcf98d9fd3354d9c178caa3881a735be87c9073
-Size (pgf.r57240.tar.xz) = 716948 bytes
+SHA1 (pgf.r59210.tar.xz) = 2d6c9564a9db08d874e15689ce9cc1cf8b887475
+RMD160 (pgf.r59210.tar.xz) = 5ea5fe2c17eec343f3bac9ea8daa8dd87f2ddb26
+SHA512 (pgf.r59210.tar.xz) = c02a5b4a0f3aab13d39166c30bd456603de012ce6089662ab0b7c091ac906eb5c1719543246db97ac49cc109ad05c1b1d59330a64a43f82689cddcc86a465d06
+Size (pgf.r59210.tar.xz) = 717748 bytes

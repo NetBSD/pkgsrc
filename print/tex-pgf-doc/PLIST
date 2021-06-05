@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2021/02/18 19:53:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/06/05 05:24:41 markd Exp $
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
 share/texmf-dist/doc/generic/pgf/INSTALL
+share/texmf-dist/doc/generic/pgf/README.md
 share/texmf-dist/doc/generic/pgf/RELEASE_NOTES.md
 share/texmf-dist/doc/generic/pgf/description.html
 share/texmf-dist/doc/generic/pgf/extract.lua
