@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/14 20:09:21 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/06/05 04:14:03 markd Exp $
 
-SHA1 (mcf2graph.doc.r57714.tar.xz) = a78974ce683360f3dcad0b10e7590d089424262b
-RMD160 (mcf2graph.doc.r57714.tar.xz) = 2e879128b1d7f9e1b4a6dbab72da9510863d5c0d
-SHA512 (mcf2graph.doc.r57714.tar.xz) = 9f8dbab82da6b1f6fcfa562444ebe10b2edcd10608f60ea77f6a9434b37995c10835c10bda27b5b6bad503f93d4f3b78047f41139bee22d67ffb159683eba23d
-Size (mcf2graph.doc.r57714.tar.xz) = 1337308 bytes
+SHA1 (mcf2graph.doc.r59314.tar.xz) = 42b69355df5010aa4eb0073623c44d29566d36e7
+RMD160 (mcf2graph.doc.r59314.tar.xz) = f7e24467f033ff9cb7071d119112bdd84af64c6a
+SHA512 (mcf2graph.doc.r59314.tar.xz) = 8c4d12892f2863b5db7239f400f6235ac5cdc1cbc3b28b2052f19d1d02536cff31a878f111705d6a2f93c546c961c7d783d5b0f9d8075d571c01a692b08a6dbb
+Size (mcf2graph.doc.r59314.tar.xz) = 916312 bytes
