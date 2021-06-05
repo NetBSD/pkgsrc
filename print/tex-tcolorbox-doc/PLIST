@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/11 22:22:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/06/05 06:55:25 markd Exp $
 share/texmf-dist/doc/latex/tcolorbox/Basilica_5.png
 share/texmf-dist/doc/latex/tcolorbox/CHANGES
 share/texmf-dist/doc/latex/tcolorbox/README
@@ -35,6 +35,7 @@ share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.references.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.s_main.sty
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.s_snippet.sty
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.sidebyside.tex
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.skincatalog.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.skins.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.technical.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.theorems.tex
