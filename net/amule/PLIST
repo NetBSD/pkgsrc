@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/11/19 20:01:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/06/05 13:05:56 adam Exp $
 ${PLIST.alc}bin/alc
 ${PLIST.alcc}bin/alcc
 ${PLIST.amule}bin/amule
@@ -83,6 +83,7 @@ ${PLIST.amule}man/ro/man1/amule.1
 ${PLIST.cmd}man/ro/man1/amulecmd.1
 ${PLIST.daemon}man/ro/man1/amuled.1
 ${PLIST.gui}man/ro/man1/amulegui.1
+${PLIST.web}man/ro/man1/amuleweb.1
 ${PLIST.cas}man/ro/man1/cas.1
 ${PLIST.ed2k}man/ro/man1/ed2k.1
 ${PLIST.wxcas}man/ro/man1/wxcas.1
@@ -93,6 +94,7 @@ ${PLIST.amule}man/ru/man1/amule.1
 ${PLIST.cmd}man/ru/man1/amulecmd.1
 ${PLIST.daemon}man/ru/man1/amuled.1
 ${PLIST.gui}man/ru/man1/amulegui.1
+${PLIST.web}man/ru/man1/amuleweb.1
 ${PLIST.cas}man/ru/man1/cas.1
 ${PLIST.ed2k}man/ru/man1/ed2k.1
 ${PLIST.wxcas}man/ru/man1/wxcas.1
@@ -103,6 +105,7 @@ ${PLIST.amule}man/tr/man1/amule.1
 ${PLIST.cmd}man/tr/man1/amulecmd.1
 ${PLIST.daemon}man/tr/man1/amuled.1
 ${PLIST.gui}man/tr/man1/amulegui.1
+${PLIST.web}man/tr/man1/amuleweb.1
 ${PLIST.cas}man/tr/man1/cas.1
 ${PLIST.ed2k}man/tr/man1/ed2k.1
 ${PLIST.wxcas}man/tr/man1/wxcas.1
@@ -113,6 +116,7 @@ ${PLIST.amule}man/zh_TW/man1/amule.1
 ${PLIST.cmd}man/zh_TW/man1/amulecmd.1
 ${PLIST.daemon}man/zh_TW/man1/amuled.1
 ${PLIST.gui}man/zh_TW/man1/amulegui.1
+${PLIST.web}man/zh_TW/man1/amuleweb.1
 ${PLIST.cas}man/zh_TW/man1/cas.1
 ${PLIST.ed2k}man/zh_TW/man1/ed2k.1
 ${PLIST.wxcas}man/zh_TW/man1/wxcas.1
@@ -120,6 +124,7 @@ man/zh_TW/man1/xas.1
 ${PLIST.skins}share/amule/skins/Mac_Gray.zip
 ${PLIST.skins}share/amule/skins/gnome.zip
 ${PLIST.skins}share/amule/skins/kde4.zip
+${PLIST.skins}share/amule/skins/papirus.zip
 ${PLIST.skins}share/amule/skins/priscilla.zip
 ${PLIST.skins}share/amule/skins/tango.zip
 ${PLIST.skins}share/amule/skins/xfce.zip
