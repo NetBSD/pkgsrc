@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3249 2021/06/05 19:13:05 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3250 2021/06/05 20:07:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5111,3 +5111,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-pulse to 1.28.0 [thor 2021-06-05]
 	Updated audio/mpg123 to 1.28.0 [thor 2021-06-05]
 	Updated sysutils/xplr to 0.13.7 [pin 2021-06-05]
+	Updated security/gpg-tui to 0.3.0 [pin 2021-06-05]
