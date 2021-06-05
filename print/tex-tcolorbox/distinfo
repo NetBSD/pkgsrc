@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/02/20 10:55:08 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/06/05 06:55:25 markd Exp $
 
-SHA1 (tcolorbox.r56610.tar.xz) = 4b9040553220eaa1e70c57ab8949472bb67fb118
-RMD160 (tcolorbox.r56610.tar.xz) = 139492520649b3f88f91b45be75b31a5871991b8
-SHA512 (tcolorbox.r56610.tar.xz) = 70647656ee420fcb3c832e8552c2340229b0586a638f7c55404f96f20dcb3e8fd2c561a44ece09e6f507a3c4e2be189aa4cb3a3c4d8bc338ca4396e5d4b9416d
-Size (tcolorbox.r56610.tar.xz) = 230544 bytes
+SHA1 (tcolorbox.r59319.tar.xz) = d1d5bca4ca720e398f62762aeccb1f4abbd3d44b
+RMD160 (tcolorbox.r59319.tar.xz) = 6798f49638d0dc5f6aa77619dcad94b90e97839f
+SHA512 (tcolorbox.r59319.tar.xz) = 5084a335fd0f9d4f0c959059537d6faa247d1796c5ca494ebabf64b686e7092c77346ccc2d58c7f4ec5fce7edb43cdead5608c06fa0a57ececdf91bfd4343f5c
+Size (tcolorbox.r59319.tar.xz) = 231064 bytes
