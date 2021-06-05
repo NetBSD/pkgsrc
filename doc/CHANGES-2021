@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3236 2021/06/05 08:50:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3237 2021/06/05 09:14:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5013,6 +5013,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-prettyunits to 1.1.1 [mef 2021-06-05]
 	Updated finance/py-stripe to 2.58.0 [adam 2021-06-05]
 	Updated sysutils/ansible-lint to 5.0.12 [adam 2021-06-05]
+	Updated textproc/R-markdown to 1.1 [mef 2021-06-05]
 	Updated devel/tex-latexbug to 1.0j [markd 2021-06-05]
 	Updated devel/tex-latexbug-doc to 1.0j [markd 2021-06-05]
 	Updated print/tex-lipsum to 2.3 [markd 2021-06-05]
@@ -5084,4 +5085,13 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-tqdm to 4.61.0 [adam 2021-06-05]
 	Updated www/py-django3 to 3.2.4 [adam 2021-06-05]
 	Updated www/py-django2 to 2.2.24 [adam 2021-06-05]
+	Updated print/R-tinytex to 0.32 [mef 2021-06-05]
+	Updated textproc/R-htmltools to 0.5.1.1 [mef 2021-06-05]
+	Updated devel/R-fansi to 0.5.0 [mef 2021-06-05]
+	Updated textproc/R-utf8 to 1.2.1 [mef 2021-06-05]
+	Updated math/R-tibble to 3.1.2 [mef 2021-06-05]
+	Updated textproc/R-highr to 0.9 [mef 2021-06-05]
+	Updated sysutils/R-later to 1.2.0 [mef 2021-06-05]
+	Updated parallel/R-promises to 1.2.0.1 [mef 2021-06-05]
 	Updated x11/xscreensaver to 5.45nb4 [wiz 2021-06-05]
+	Updated www/R-httpuv to 1.6.1 [mef 2021-06-05]
