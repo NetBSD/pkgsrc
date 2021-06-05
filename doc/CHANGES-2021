@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3235 2021/06/05 07:25:56 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3236 2021/06/05 08:50:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-tqdm to 4.61.0 [adam 2021-06-05]
 	Updated www/py-django3 to 3.2.4 [adam 2021-06-05]
 	Updated www/py-django2 to 2.2.24 [adam 2021-06-05]
+	Updated x11/xscreensaver to 5.45nb4 [wiz 2021-06-05]
