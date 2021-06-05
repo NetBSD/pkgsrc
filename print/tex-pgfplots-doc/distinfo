@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/05/03 11:57:34 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/06/05 05:31:03 markd Exp $
 
-SHA1 (pgfplots.doc.r54080.tar.xz) = cb2094f85690a539116894869222513731a693c8
-RMD160 (pgfplots.doc.r54080.tar.xz) = 72599d42ff869c0161c8c2916a3b9b85fb173b1b
-SHA512 (pgfplots.doc.r54080.tar.xz) = 65a01a28b2e9e14f5277f3a6c91fcd1dbcd255bffa7feeb15132aa24013fd59fe5f5feb6b7a2521328ca2060c7eb8d2eb70b1433f32452b2f661c5ee7142f336
-Size (pgfplots.doc.r54080.tar.xz) = 13006532 bytes
+SHA1 (pgfplots.doc.r59243.tar.xz) = 21a26b7e947c20cb78ae84e5d83982331a8d1ace
+RMD160 (pgfplots.doc.r59243.tar.xz) = 5259addd00941b2f50a36bc255b9c2f7848a635c
+SHA512 (pgfplots.doc.r59243.tar.xz) = 998246b7c5415e910ff168ffea064aed80957a9f29b09875f8871c9f04d2a52c50a33f7f3cd490a1195c5566ce310330cfba0a5bb7155eb14b944e05e9d1557c
+Size (pgfplots.doc.r59243.tar.xz) = 13086872 bytes
