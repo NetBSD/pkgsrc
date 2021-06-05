@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/02/20 11:02:30 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/06/05 06:59:38 markd Exp $
 
-SHA1 (todonotes.r56166.tar.xz) = 5d33eb584157950b04644e1f3a36cbe2c3ce3acc
-RMD160 (todonotes.r56166.tar.xz) = 5fee8a6999140a11527fd5304fa588d2d6b13ae3
-SHA512 (todonotes.r56166.tar.xz) = a58ea15caf11a535b1d01114160f28a5df0c81677939355caef22b1639053b2dd4ec716a2a67a6342565e50ad7681d660a84b391fdb8c34278ef0dac3cfcda99
-Size (todonotes.r56166.tar.xz) = 4660 bytes
+SHA1 (todonotes.r58998.tar.xz) = 567dd97e9445431f114e9e55c1ac2c6ffb229b15
+RMD160 (todonotes.r58998.tar.xz) = fed00e48b59a84167ab3d23e8498391b687aabc5
+SHA512 (todonotes.r58998.tar.xz) = 949090dd8738c5a36e2040e25304d423847e94c1bdd7a45f51978bf085c1bd1dc9e274d53b8f671866e9a35d518193579a2c40fd66d3480ac25c9b17232451ee
+Size (todonotes.r58998.tar.xz) = 4760 bytes
