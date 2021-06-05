@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20733 2021/06/05 09:14:48 mef Exp $
+$NetBSD: TODO,v 1.20734 2021/06/05 12:50:54 mef Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-sandwich-3.0.0
 	o R-scales-1.1.1
 	o R-sf-0.9.8
-	o R-shiny-1.6.0
 	o R-shinyjs-2.0.0
 	o R-sp-1.4.5
 	o R-spData-0.3.8
