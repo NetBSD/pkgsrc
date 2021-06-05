@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3232 2021/06/05 06:11:23 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3233 2021/06/05 07:13:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5011,3 +5011,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-brio to 1.1.2 [mef 2021-06-05]
 	Updated devel/R-caTools to 1.18.2 [mef 2021-06-05]
 	Updated math/R-prettyunits to 1.1.1 [mef 2021-06-05]
+	Updated finance/py-stripe to 2.58.0 [adam 2021-06-05]
+	Updated sysutils/ansible-lint to 5.0.12 [adam 2021-06-05]
