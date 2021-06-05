@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2021/01/04 23:51:41 gutteridge Exp $
+$NetBSD: distinfo,v 1.83 2021/06/05 08:50:31 wiz Exp $
 
 SHA1 (xscreensaver/xscreensaver-5.45.tar.gz) = 933cd5451bdfc4a2bf15bc49f629a8c8665cae62
 RMD160 (xscreensaver/xscreensaver-5.45.tar.gz) = 4b7c1488db3f1f07e621fd175d1cb10388acee63
@@ -6,6 +6,7 @@ SHA512 (xscreensaver/xscreensaver-5.45.tar.gz) = 1b21418c591fd99f3caaea9d31ca49a
 Size (xscreensaver/xscreensaver-5.45.tar.gz) = 27729147 bytes
 SHA1 (patch-ad) = 675b8e30b08b64279d0112cdc7b202878736a6d1
 SHA1 (patch-af) = 4ee300a205a0ac448939ac2776087db48d808ad8
+SHA1 (patch-driver_screens.c) = 22d197b0ca42f531cdc4de5222c3e93f2877915a
 SHA1 (patch-hacks_Makefile.in) = 8dbc1c4674c1c10cdaa7954b019384505977cb69
 SHA1 (patch-hacks_images_Makefile.in) = bc071812df74cbb6826cfb65bad4dfcf94e0d68d
 SHA1 (patch-utils_Makefile.in) = 785112970eb71334d89e560b2b251e5053374748
