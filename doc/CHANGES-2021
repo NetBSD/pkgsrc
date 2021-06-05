@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3229 2021/06/05 01:48:05 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3230 2021/06/05 04:28:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/miniupnpc to 2.2.2 [adam 2021-06-04]
 	Updated print/tex-babel to 3.60 [mef 2021-06-05]
 	Updated print/tex-babel-doc to 3.60 [mef 2021-06-05]
+	Updated devel/R-brio to 1.1.2 [mef 2021-06-05]
