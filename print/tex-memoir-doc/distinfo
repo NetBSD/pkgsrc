@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/13 11:13:33 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/06/05 04:21:30 markd Exp $
 
-SHA1 (memoir.doc.r56572.tar.xz) = 248e6f970ac3cdbd6dd03e349039cb0953f28d5a
-RMD160 (memoir.doc.r56572.tar.xz) = 59839fec959da2087fa069a95e04d295584ad417
-SHA512 (memoir.doc.r56572.tar.xz) = bf606654a024cc9b16aab0727f88eb4feea97c26dbed99578fc94dc2d3d188ccf3b5fa656f5e6e2d060de42df6a2eda1c24172f4b3c3a2520794f18b80bee962
-Size (memoir.doc.r56572.tar.xz) = 3101108 bytes
+SHA1 (memoir.doc.r58666.tar.xz) = d36a62b511677076a920500ac6daa92626b7d39d
+RMD160 (memoir.doc.r58666.tar.xz) = 27ffc58a77099f7f81caf62604986ab0f26813c1
+SHA512 (memoir.doc.r58666.tar.xz) = f17446fad66433a0e10287c5c040e6ecb45222c3061dab28d4b2a5541ba1527673e0040e267c8af0bf0e63c45d1d42ebe0e336411e11b8b963caf1147cb5829f
+Size (memoir.doc.r58666.tar.xz) = 3108176 bytes
