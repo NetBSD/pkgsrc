@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2021/03/08 15:25:47 nia Exp $
+# $NetBSD: Makefile,v 1.235 2021/06/05 14:17:32 nia Exp $
 
 # Notes to package maintainers:
 #
@@ -91,8 +91,6 @@ INSTALL_SRC=		${PKGDIR}/INSTALL
 FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR}			\
 			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
 			MKDIR=${MKDIR:Q}
-MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR} \
-			EGDIR=${EGDIR}
 
 .include "../../mk/compiler.mk"
 
