@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/05/25 10:21:26 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/06/05 07:12:45 adam Exp $
 
-SHA1 (ansible-lint-5.0.11.tar.gz) = 8b49f3169cbb1492fafe1c1e283fcdaa350067f9
-RMD160 (ansible-lint-5.0.11.tar.gz) = 64af5f0b23908c5cf56151ca7dd414c3471c3e8d
-SHA512 (ansible-lint-5.0.11.tar.gz) = 484dc6f4296131ca0a0e765323defbabb4c6e4910cf3315d87602c73861b19ca79e838dfe5c4cb35963aceacb91c46b06ce9e99f80062b6d1300099c5173374b
-Size (ansible-lint-5.0.11.tar.gz) = 349133 bytes
+SHA1 (ansible-lint-5.0.12.tar.gz) = 3c665bd62468fe7b74010e6291421adf511f33fe
+RMD160 (ansible-lint-5.0.12.tar.gz) = 9dd060b13adf45b11ff023c86a5455c853034168
+SHA512 (ansible-lint-5.0.12.tar.gz) = 06b84d098253ab70f9c3fb59e1d2ba4d30918f1e7c6f3decc8f73fe8cdb7d697527eff3efcc7238fc952bc07b7179d37582d5fb9968e691e2df5495741802404
+Size (ansible-lint-5.0.12.tar.gz) = 348478 bytes
