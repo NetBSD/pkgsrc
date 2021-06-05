@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:39 markd Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/05 06:41:15 markd Exp $
 
 DISTNAME=	tikz-cd.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.9f
-CATEGORIES=	graphics math print
-TEXLIVE_REV=	49201
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
+TEXLIVE_REV=	59133
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
+HOMEPAGE=	https://ctan.org/pkg/tikz-cd
 COMMENT=	Documentation for tex-tikz-cd
-LICENSE=	gnu-gpl-v3
+LICENSE=	lppl-1.3c
 
-USE_LANGUAGES=	# none
-
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

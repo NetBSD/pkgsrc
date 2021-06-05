@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/27 01:17:05 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/06/05 06:41:15 markd Exp $
 
-SHA1 (tex-tikz-cd-49201/tikz-cd.tar.xz) = b13c2de9a52ae8ac220b957432c1e87d98db59c3
-RMD160 (tex-tikz-cd-49201/tikz-cd.tar.xz) = 2b8f3ba56dba7b7c584139b7c6c85d4f3be8c392
-SHA512 (tex-tikz-cd-49201/tikz-cd.tar.xz) = 4215f42b0763ca959349183ccc2096c1c2d7e0d6f5f633424cb4aec087f07dd5cddb159e5925b22f319354eb92e54c00c1b12ef492d5c0b5dfc84db20559c88f
-Size (tex-tikz-cd-49201/tikz-cd.tar.xz) = 6448 bytes
+SHA1 (tikz-cd.r59133.tar.xz) = 92d82059c9c17ca3df85781a8c954768ed331766
+RMD160 (tikz-cd.r59133.tar.xz) = 5afd65b5f8626ee04c61c3869344a7639d234148
+SHA512 (tikz-cd.r59133.tar.xz) = abe5952a90172dd74ddfd02834ec9fc632f26da00450c310eab2528d5b52750e80225219b75e778d1f87b2279e654bb743804da19ec7da91f12e4105f9ec3447
+Size (tikz-cd.r59133.tar.xz) = 6364 bytes
