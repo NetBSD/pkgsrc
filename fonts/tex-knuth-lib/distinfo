@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/06/05 07:17:56 markd Exp $
 
-SHA1 (tex-knuth-lib-35820/knuth-lib.tar.xz) = 7eec494e5fe17445d46030f90b2ab0caae058971
-RMD160 (tex-knuth-lib-35820/knuth-lib.tar.xz) = bbb7faf9734a03a1e8f76b7e15f568743e93da9e
-SHA512 (tex-knuth-lib-35820/knuth-lib.tar.xz) = 9d0ab88d1c34bba2ee998455c914e47a7dba26d3442d53ee8fc951f3b68f82bc4b462bd2ce83b4b4c07607af533388ddff3fb9bc60ef9625ead41bcf0cd9d5a7
-Size (tex-knuth-lib-35820/knuth-lib.tar.xz) = 30408 bytes
+SHA1 (knuth-lib.r57963.tar.xz) = f18a627db0fd4379b6124022db933cec61ad7147
+RMD160 (knuth-lib.r57963.tar.xz) = e0f412bbe86193bd4081b47899ed40420d46ddcb
+SHA512 (knuth-lib.r57963.tar.xz) = 47d50b1966dc5a3adf4921c297d9ed5917035e917098154fc08d1c72ebd0ba70ebfa41735c7ae52c5087d62242bcfa9b0b49914c6da4f392e2d4c56a6d72807d
+Size (knuth-lib.r57963.tar.xz) = 30508 bytes

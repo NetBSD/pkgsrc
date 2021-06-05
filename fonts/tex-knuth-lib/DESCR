@@ -1,3 +1,3 @@
-A collection of miscellaneous MetaFont source, including the
-means to generate the logo font that is used for MetaFont and
-MetaPost.
+A collection of core TeX and Metafont macro files from DEK,
+apart from the plain format and base. Includes the MF logo
+font(s), webmac.tex, etc.
