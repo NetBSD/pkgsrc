@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/02/20 00:46:24 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/06/05 07:11:25 markd Exp $
 
-SHA1 (xcharter.r57009.tar.xz) = 2c0516cba03077dba3afc74b99b5c82f0d01ab18
-RMD160 (xcharter.r57009.tar.xz) = 35415891f526de4d8c46e0ff86056640430a34b7
-SHA512 (xcharter.r57009.tar.xz) = aa2b679b4396f52297dbd288d9f8aef74c83dc6f4532b1b72781f0544524152e840ac5359064c2a39b2550afcd2ffc43ca5c6009a813a202a486f2ef62e3ba6d
-Size (xcharter.r57009.tar.xz) = 2034264 bytes
+SHA1 (xcharter.r59394.tar.xz) = e73d503ce2769d25da5997ec53f1528dced52dca
+RMD160 (xcharter.r59394.tar.xz) = cacade5b2d17881a00a37997c163172e61ab44a6
+SHA512 (xcharter.r59394.tar.xz) = f3fe57c3615ee5b196ee86eef08e3d1ee95e63524c4012138ea7125da4635a952551caa7d4610f69fa192137c83528aaf20cb573cbec0f8a61685a5316fb2c90
+Size (xcharter.r59394.tar.xz) = 2050588 bytes
