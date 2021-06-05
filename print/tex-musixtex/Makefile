@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2021/02/19 23:59:25 markd Exp $
+# $NetBSD: Makefile,v 1.46 2021/06/05 04:31:51 markd Exp $
 
 DISTNAME=	musixtex
-PKGNAME=	tex-${DISTNAME}-1.31
-TEXLIVE_REV=	57353
+PKGNAME=	tex-${DISTNAME}-1.32a
+TEXLIVE_REV=	59240
 
 MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	https://ctan.org/pkg/musixtex
@@ -24,6 +24,6 @@ post-extract:
 .for f in musixflx musixtex
 	${MV} ${WRKSRC}/texmf-dist/scripts/musixtex/${f}.lua ${WRKSRC}/bin/${f}
 .endfor
-	cd ${WRKSRC}/texmf-dist && ${RMDIR} -p scripts/musixtex
+	cd ${WRKSRC}/texmf-dist && ${RM} scripts/musixtex/*.bat && ${RMDIR} -p scripts/musixtex
 
 .include "../../mk/bsd.pkg.mk"
