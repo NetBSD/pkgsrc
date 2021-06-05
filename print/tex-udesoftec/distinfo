@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/05 12:01:05 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/06/05 07:04:21 markd Exp $
 
-SHA1 (udesoftec.r54215.tar.xz) = 6e92a3a77a00bb3ae6adcc295756782130f7a216
-RMD160 (udesoftec.r54215.tar.xz) = e4412166ab7b6c4df4b505d68668887e41a45943
-SHA512 (udesoftec.r54215.tar.xz) = 08bde26b542ccd94f158fefd864326c62337b319284e3c8ba48b55266556ca060fd3210b94aee23462040751b9b3c1c6d73ad26c51c8f3da0eb174859be46671
-Size (udesoftec.r54215.tar.xz) = 108292 bytes
+SHA1 (udesoftec.r57866.tar.xz) = 8722b3fe7b379987fa9e6b9d3c241fb76115f216
+RMD160 (udesoftec.r57866.tar.xz) = dd25cfd38dda1b6906d6f8d09e1b8996e5f6eb40
+SHA512 (udesoftec.r57866.tar.xz) = 56171faa46267dbd99185807f619a673cc1ace837eea3c0e8659c4d7fb50aab7f8842e259f433070b8eb54390d3426542c3443a62d37a1aa9ae7029f4d7f022a
+Size (udesoftec.r57866.tar.xz) = 108164 bytes
