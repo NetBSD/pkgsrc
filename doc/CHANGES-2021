@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3237 2021/06/05 09:14:48 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3238 2021/06/05 09:17:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5095,3 +5095,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/R-promises to 1.2.0.1 [mef 2021-06-05]
 	Updated x11/xscreensaver to 5.45nb4 [wiz 2021-06-05]
 	Updated www/R-httpuv to 1.6.1 [mef 2021-06-05]
+	Updated textproc/R-stringr to 1.4.0 [mef 2021-06-05]
