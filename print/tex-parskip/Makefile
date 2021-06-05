@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/02/13 11:24:24 markd Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/05 05:03:31 markd Exp $
 
 DISTNAME=	parskip
-PKGNAME=	tex-${DISTNAME}-2.0f
-TEXLIVE_REV=	55560
+PKGNAME=	tex-${DISTNAME}-2.0h
+TEXLIVE_REV=	58358
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/parskip
