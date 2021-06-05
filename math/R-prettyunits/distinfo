@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/13 15:26:31 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/06/05 06:11:08 mef Exp $
 
-SHA1 (R/prettyunits_1.0.2.tar.gz) = 11f63f82e425e00ca7e175b7f61a291d54bbe756
-RMD160 (R/prettyunits_1.0.2.tar.gz) = 0431e58c770e5fa7a6cb8df78c38ba3308a582c2
-SHA512 (R/prettyunits_1.0.2.tar.gz) = 62f934292006734d73388e4e5d1265417e196f9aff40f60561703952e8b5c38f471532f1147df365a351c25df7e1ea21b84639b5923d36f3a2df84ced7ed7172
-Size (R/prettyunits_1.0.2.tar.gz) = 8262 bytes
+SHA1 (R/prettyunits_1.1.1.tar.gz) = 9ffb2fcd5aa20c51478f4428e544ead6739c72ec
+RMD160 (R/prettyunits_1.1.1.tar.gz) = 83b79f097b232122cd27c8144b28d42ec9380c69
+SHA512 (R/prettyunits_1.1.1.tar.gz) = 563feed049b4d6afda31ff162348a2d4467c49e3273c21937b049a7c4f47181a8bc278fa0b02acce014aefc98f9cddfdf8d65aa2960f63fb66dd1606d708c545
+Size (R/prettyunits_1.1.1.tar.gz) = 10366 bytes
