@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 20:52:49 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/05 12:50:41 mef Exp $
 
 R_PKGNAME=	shiny
-R_PKGVER=	1.3.2
+R_PKGVER=	1.6.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +18,15 @@ DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-htmltools>=0.3.6:../../textproc/R-htmltools
 DEPENDS+=	R-jsonlite>=0.9.16:../../textproc/R-jsonlite
 DEPENDS+=	R-httpuv>=1.5.0:../../www/R-httpuv
+DEPENDS+=	R-fastmap-[0-9]*:../../devel/R-fastmap
+DEPENDS+=	R-commonmark-[0-9]*:../../textproc/R-commonmark
+DEPENDS+=	R-bslib-[0-9]*:../../www/R-bslib
+DEPENDS+=	R-cachem-[0-9]*:../../devel/R-cachem
+DEPENDS+=	R-xtable-[0-9]*:../../math/R-xtable
+
+#  'Cairo', 'testthat', 'ggplot2', 'reactlog', 'shinytest', 'future',
+#  'dygraphs', 'ragg', 'showtext'
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	# none
 
