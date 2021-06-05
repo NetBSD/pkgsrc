@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3247 2021/06/05 15:39:45 js Exp $
+$NetBSD: CHANGES-2021,v 1.3248 2021/06/05 17:35:43 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5106,3 +5106,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/wireshark to 3.4.6 [adam 2021-06-05]
 	Updated math/R-generics to 0.1.0 [mef 2021-06-05]
 	Updated chat/matrix-synapse to 1.35.1 [js 2021-06-05]
+	Updated audio/mpg123-nas to 1.28.0 [thor 2021-06-05]
+	Updated audio/mpg123-jack to 1.28.0 [thor 2021-06-05]
+	Updated audio/mpg123-pulse to 1.28.0 [thor 2021-06-05]
+	Updated audio/mpg123 to 1.28.0 [thor 2021-06-05]
