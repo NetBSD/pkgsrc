@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/09 18:31:06 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/06/05 12:55:25 mef Exp $
 
-SHA1 (R/xml2_1.2.2.tar.gz) = b4cccc91fe32a32df19f9beb5361ddffc476bab8
-RMD160 (R/xml2_1.2.2.tar.gz) = 01050856d4a9ebdaedbad80828a54053c77c43ae
-SHA512 (R/xml2_1.2.2.tar.gz) = 69cb2085cc536e68467a1947f107624ef4a561ed63c26fab04dea92f08fa7a740e71629b43e6adb1484ab57b0b494e0f68aa28a9788d54c8b2df05ddd796a92a
-Size (R/xml2_1.2.2.tar.gz) = 261081 bytes
+SHA1 (R/xml2_1.3.2.tar.gz) = 5e4e66ca04954e4190b61698121db4dbc647d3aa
+RMD160 (R/xml2_1.3.2.tar.gz) = 371564ab5430e9da4be2ff3a5607a3a544342836
+SHA512 (R/xml2_1.3.2.tar.gz) = f74ceed824c71870bdf9c9a77818a4abf508d084fca49f570c1028fc74b90a23e59e4cab37649138536341e94b06d01d1e3be6341d8de017e10951e58aea174b
+Size (R/xml2_1.3.2.tar.gz) = 271876 bytes
