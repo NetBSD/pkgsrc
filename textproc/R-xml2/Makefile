@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/05 12:55:25 mef Exp $
 
 R_PKGNAME=	xml2
-R_PKGVER=	1.2.2
-PKGREVISION=	6
+R_PKGVER=	1.3.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Parse XML
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
