@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/07/31 20:54:53 brook Exp $
+$NetBSD: distinfo,v 1.5 2021/06/05 07:17:09 mef Exp $
 
-SHA1 (R/markdown_1.0.tar.gz) = 3f04138e715aa6fc6afa2c7c84f6911592dcd38e
-RMD160 (R/markdown_1.0.tar.gz) = b7beeea282b3361220abe29b435b4246eb8f521c
-SHA512 (R/markdown_1.0.tar.gz) = cab685d152ef3b1ec39103f02eec35a96c60d6b722a3179cde321c14ba8c312257bfa7ddc53d17355bb30f15673173341e6577ecf8780e37d6231688e252011a
-Size (R/markdown_1.0.tar.gz) = 80843 bytes
+SHA1 (R/markdown_1.1.tar.gz) = 1b0bfa0884f7895caadd587256edefbe47d8532d
+RMD160 (R/markdown_1.1.tar.gz) = 7e7824e3cee9c2f9585a5c2acadb6fd8ae97b067
+SHA512 (R/markdown_1.1.tar.gz) = d53da9b7d184154b866e85cad33f1ba836656bca4007486190c1767b7a79f003b86f34ee66c7349c96372c63c5b6762ea00dd5efb731d9b5e9f2aebddeb9b7da
+Size (R/markdown_1.1.tar.gz) = 81050 bytes
