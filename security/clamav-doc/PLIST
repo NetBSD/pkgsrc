@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2020/09/21 08:27:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/05 04:18:55 mef Exp $
 share/doc/clamav/html/UserManual.html
+share/doc/clamav/html/UserManual/Contribute.html
 share/doc/clamav/html/UserManual/Installation-Unix.html
 share/doc/clamav/html/UserManual/Installation-Unix/Steps-Debian-Ubuntu.html
 share/doc/clamav/html/UserManual/Installation-Unix/Steps-Redhat-CentOS.html
