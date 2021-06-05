@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/02/20 00:27:36 markd Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/05 04:38:51 markd Exp $
 
 DISTNAME=	newpx.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.414
-TEXLIVE_REV=	56845
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.424
+TEXLIVE_REV=	59431
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/newpx
