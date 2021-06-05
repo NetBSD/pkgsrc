@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/03 11:57:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/06/05 05:38:31 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -242,10 +242,12 @@ share/texmf-dist/tex/latex/polyglossia/gloss-thai.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-tibetan.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-turkish.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-turkmen.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-ug.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ukrainian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-uppersorbian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-urdu.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-usorbian.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-uyghur.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-vietnamese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-welsh.ldf
 share/texmf-dist/tex/latex/polyglossia/hebrewcal.sty
