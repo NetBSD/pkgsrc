@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/12 01:19:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/06/05 05:31:03 markd Exp $
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.m
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.sh
 share/texmf-dist/scripts/pgfplots/pgf2pdf.sh
@@ -12,6 +12,7 @@ share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolortol.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.colormaps.code.tex
+share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.dateplot.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex
@@ -39,6 +40,8 @@ share/texmf-dist/tex/generic/pgfplots/lua/pgfplots/statistics.lua
 share/texmf-dist/tex/generic/pgfplots/lua/pgfplots/streamer.lua
 share/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/luamath/functions.lua
 share/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/luamath/parser.lua
+share/texmf-dist/tex/generic/pgfplots/lua/prepcontour.lua
+share/texmf-dist/tex/generic/pgfplots/lua/prepcontour_cli.lua
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code.tex
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex
 share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
