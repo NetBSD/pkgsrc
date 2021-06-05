@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/04/27 02:08:15 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/06/05 06:47:48 markd Exp $
 
-SHA1 (tikzmark.doc.r52293.tar.xz) = 2dc15c7e2cefc66ae5295be214e6ba90f9373244
-RMD160 (tikzmark.doc.r52293.tar.xz) = 16e7a7e8553bf67802011c0c6e81daa5d92b3acc
-SHA512 (tikzmark.doc.r52293.tar.xz) = 6575708cf87fc25c080001b6836df3dfa33474b594970a4dd4f2e772a9e3ed8dd6c3ed4f2ecb7866415606c983dfe36184f8ac9fbfb60852f5feae3dc90b98bc
-Size (tikzmark.doc.r52293.tar.xz) = 414492 bytes
+SHA1 (tikzmark.doc.r57843.tar.xz) = af3015645b4778b26e002b1c767825fdaf121477
+RMD160 (tikzmark.doc.r57843.tar.xz) = 44defec45debb29cb1bc3fec1273ca6c5b34861d
+SHA512 (tikzmark.doc.r57843.tar.xz) = 35029b622cf040dab6b6238badcb7f91cdd7e513386d0c34c5bc03845bbb698656abf35c865eb24a32c024f281bacd6ba5eb47ff33a0650eb8986a5698e33d9a
+Size (tikzmark.doc.r57843.tar.xz) = 418444 bytes
