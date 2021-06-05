@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/06/05 04:26:34 markd Exp $
 
-SHA1 (tex-mparhack-15878/mparhack.doc.tar.xz) = 037bc6e4f9cb15f6dbcdb8b6195858a9fecf9032
-RMD160 (tex-mparhack-15878/mparhack.doc.tar.xz) = 20c795fa55f4f730ee8875722145eade5a3f920a
-SHA512 (tex-mparhack-15878/mparhack.doc.tar.xz) = b508dc2d6b9ad40b2d87d9b3c63f3167e8325ff5a4876148f85ed355c21babac9f853318c40ad3241a4c33750322dfbadbc4f5c9b6bf200e0d0fa8efd5131791
-Size (tex-mparhack-15878/mparhack.doc.tar.xz) = 58916 bytes
+SHA1 (mparhack.doc.r59066.tar.xz) = 2a2111f00436d08dfed71bd40d11a27103a1865a
+RMD160 (mparhack.doc.r59066.tar.xz) = 87e7b28a2dd6c8f35b653830aaf2d7f235a9fbfa
+SHA512 (mparhack.doc.r59066.tar.xz) = fc4cff80bbf20460e28f8d5a142e8994cea7e017391b147a47332b444fad0ff8cde1e7bb29159e39f8c14f4c9881ab91dcc0e2f108cca1534d4335f5b6b32a1a
+Size (mparhack.doc.r59066.tar.xz) = 308392 bytes
