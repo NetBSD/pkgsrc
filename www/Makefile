@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1548 2021/06/05 12:04:01 mef Exp $
+# $NetBSD: Makefile,v 1.1549 2021/06/05 12:27:24 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -10,6 +10,7 @@ SUBDIR+=	R-gh
 SUBDIR+=	R-htmlwidgets
 SUBDIR+=	R-httpuv
 SUBDIR+=	R-httr
+SUBDIR+=	R-jquerylib
 SUBDIR+=	R-miniUI
 SUBDIR+=	R-rvest
 SUBDIR+=	R-sass

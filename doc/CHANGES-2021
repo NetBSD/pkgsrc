@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3239 2021/06/05 12:04:01 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3240 2021/06/05 12:27:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5097,3 +5097,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/R-httpuv to 1.6.1 [mef 2021-06-05]
 	Updated textproc/R-stringr to 1.4.0 [mef 2021-06-05]
 	Added www/R-sass version 0.4.0 [mef 2021-06-05]
+	Added www/R-jquerylib version 0.1.4 [mef 2021-06-05]
