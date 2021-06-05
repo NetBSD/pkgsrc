@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/02/05 02:25:48 mef Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/05 08:55:12 mef Exp $
 
 R_PKGNAME=	httpuv
-R_PKGVER=	1.5.1
-PKGREVISION=	1
+R_PKGVER=	1.6.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
