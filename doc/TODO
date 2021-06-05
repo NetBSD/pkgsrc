@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20732 2021/06/05 06:11:23 mef Exp $
+$NetBSD: TODO,v 1.20733 2021/06/05 09:14:48 mef Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-emdbook-1.3.12
 	o R-energy-1.7.8
 	o R-fBasics-3042.89.1
-	o R-fansi-0.4.2
 	o R-farver-2.1.0
 	o R-forcats-0.5.1
 	o R-forecast-8.14
@@ -436,11 +435,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-gstat-2.0.7
 	o R-gtools-3.8.2
 	o R-haven-2.4.0
-	o R-highr-0.9
 	o R-htmlTable-2.1.0
-	o R-htmltools-0.5.1.1
 	o R-htmlwidgets-1.5.3
-	o R-httpuv-1.5.5
 	o R-hunspell-3.0.1
 	o R-igraph-1.2.6
 	o R-inline-0.3.17
@@ -448,7 +444,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-iterators-1.0.13
 	o R-jsonlite-1.7.2
 	o R-labeling-0.4.2
-	o R-later-1.1.0.1
 	o R-latex2exp-0.5.0
 	o R-latticeExtra-0.6.29
 	o R-lme4-1.1.26
@@ -457,7 +452,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-lwgeom-0.2.6
 	o R-mapproj-3
 	o R-maptools-1.1.1
-	o R-markdown-1.1
 	o R-mime-0.10
 	o R-mnormt-2.0.2
 	o R-mvtnorm-1.1.1
@@ -471,7 +465,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pillar-1.6.0
 	o R-pixmap-0.4.12
 	o R-poweRlaw-0.70.6
-	o R-promises-1.2.0.1
 	o R-ps-1.6.0
 	o R-psych-2.1.3
 	o R-quadprog-1.5.8
@@ -510,13 +503,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-sys-3.4
 	o R-tensorA-0.36.2
 	o R-testthat-3.0.2
-	o R-tibble-3.1.1
 	o R-tidyr-1.1.3
 	o R-timeSeries-3062.100
 	o R-tinytest-1.2.4
 	o R-tseries-0.10.48
 	o R-units-0.7.1
-	o R-utf8-1.2.1
 	o R-uuid-4
 	o R-viridis-0.6.0
 	o R-viridisLite-0.4.0
