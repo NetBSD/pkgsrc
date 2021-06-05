@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/02/05 02:25:48 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/06/05 08:55:12 mef Exp $
 
-SHA1 (R/httpuv_1.5.1.tar.gz) = 5dd42f39bfda919ad890eea978089d27b2bc72da
-RMD160 (R/httpuv_1.5.1.tar.gz) = 24558208c04722e5844ccbe87fdcefc8db9aaa29
-SHA512 (R/httpuv_1.5.1.tar.gz) = 17d1d9a922c17ebd738a59d3671e3d29f097937ef60774898f71dcfa0468d73d8c3b32915b6990941c9b7b03929fbdd6405932fa69672b004a0d129d3cded8c0
-Size (R/httpuv_1.5.1.tar.gz) = 1758514 bytes
-SHA1 (patch-src_Makevars) = a0aa2410539aa27894424dffdd3669ce7bbc4053
+SHA1 (R/httpuv_1.6.1.tar.gz) = 6a9bb5913a3fa86700c5c818fd646d8aba55a147
+RMD160 (R/httpuv_1.6.1.tar.gz) = 53475821dab6dc0f66b227254ad856b4d7f0a257
+SHA512 (R/httpuv_1.6.1.tar.gz) = 20c55f461ff44a61834da0dea85531f06286e97321ef365b3d3f0add3ef1bd7db4fae2b928d18910f3c418c7f32aac72281d9ca4662815c1777aac6b4db0b3d9
+Size (R/httpuv_1.6.1.tar.gz) = 1812058 bytes
+SHA1 (patch-src_Makevars) = 64eb03f7bcec11e0e46ab2749dde13b1d7053dbe
