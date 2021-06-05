@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/05 12:25:36 mef Exp $
+
+SHA1 (R/jquerylib_0.1.4.tar.gz) = 4a42002a3679530d0f592a03b55b757410b8f650
+RMD160 (R/jquerylib_0.1.4.tar.gz) = 8a065af4afca5ad378231892350fdcf442fee011
+SHA512 (R/jquerylib_0.1.4.tar.gz) = 42434815ef9faaa7fe7da8c1314ba03c8e454e9bc47d617b1800086d3719fefa9a65d996c08ae3fc652178de30c1630ab9e27af8767663b1494a2f5717be4ff4
+Size (R/jquerylib_0.1.4.tar.gz) = 520207 bytes
