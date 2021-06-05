@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/05/31 23:43:29 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/06/05 07:51:33 mef Exp $
 
-SHA1 (R/tinytex_0.31.tar.gz) = e5be4ec66f61de787f717d824500be6a3b9931c0
-RMD160 (R/tinytex_0.31.tar.gz) = 8606500762140b34603dde6de93b628648c1aee6
-SHA512 (R/tinytex_0.31.tar.gz) = a9123c6a33c4d360c00ae1f9aed19b4869bee18e49ad95441f7ea543d7f10744eca1c7f271b00c5c6d1bdbb85463439e4e1a75ba5767a1e8bf2843e7e9eb3cee
-Size (R/tinytex_0.31.tar.gz) = 29243 bytes
+SHA1 (R/tinytex_0.32.tar.gz) = 7e013d11b28cec17f04bf4db72ca294f7676cc56
+RMD160 (R/tinytex_0.32.tar.gz) = 0afb4d9c36e606b094edd59316db33ae0af399f5
+SHA512 (R/tinytex_0.32.tar.gz) = 3320b79345e3cd8d27ca789bc2ef0efde0a477c4d0460875c3ee6d8494efddbca44774abe2bb50e907a0e4952e1bb1e5cb47d0c11318d6c35c01897d37ac5853
+Size (R/tinytex_0.32.tar.gz) = 30014 bytes
