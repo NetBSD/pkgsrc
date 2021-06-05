@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/05/03 11:57:36 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/06/05 06:20:51 markd Exp $
 
-SHA1 (siunitx.doc.r53914.tar.xz) = 8ff7bcf1edc04efe63ce2c7b6c743a766e0ca0b2
-RMD160 (siunitx.doc.r53914.tar.xz) = 7fd7880695d68fc96dbd9a0d9a84481803fa2d6d
-SHA512 (siunitx.doc.r53914.tar.xz) = e0b8c3dbafa6cebf1aa344c6d99bb17a532201c198bbb6e9f73319e6653bb8ede2243ba0bdaa57074d8c374b31d45659f3e803680eafde37797085a8edada8f9
-Size (siunitx.doc.r53914.tar.xz) = 629508 bytes
+SHA1 (siunitx.doc.r59437.tar.xz) = 7ec894feeb8bb26195f156ed1bb475504352e0c5
+RMD160 (siunitx.doc.r59437.tar.xz) = 3ad18f30a3137bbed56fa15659da46a55abb822c
+SHA512 (siunitx.doc.r59437.tar.xz) = af8023d3bc0d34e73a6a42a5223efdcc74113bb2c21bb3f4eb5f36925d28c33cc196aa6982b2082ddc1f7cce4b8906067ae51a80797b2684f33e04e2e01dcf89
+Size (siunitx.doc.r59437.tar.xz) = 2391164 bytes
