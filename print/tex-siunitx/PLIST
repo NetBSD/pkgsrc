@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/02 21:01:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/05 06:20:51 markd Exp $
 share/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 share/texmf-dist/tex/latex/siunitx/siunitx-binary.cfg
+share/texmf-dist/tex/latex/siunitx/siunitx-v2.sty
 share/texmf-dist/tex/latex/siunitx/siunitx-version-1.cfg
 share/texmf-dist/tex/latex/siunitx/siunitx.sty
