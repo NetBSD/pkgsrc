@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.59 2021/05/25 18:15:11 thor Exp $
+# $NetBSD: Makefile.common,v 1.60 2021/06/05 17:30:01 thor Exp $
 #
+# used by audio/mpg123-jack/Makefile
 # used by audio/mpg123-nas/Makefile
-# used by audio/mpg123-oss/Makefile
 # used by audio/mpg123-pulse/Makefile
-# used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.27.2
+DISTNAME=	mpg123-1.28.0
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
@@ -22,12 +21,12 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-modules=yes --with-audio=${MPG123_MODULE}
 
-# To be removed on update > 1.27.2.
-SUBST_CLASSES+=		modules
-SUBST_STAGE.modules=	pre-configure
-SUBST_MESSAGE.modules=	Avoid static module files with pkgsrc libtool.
-SUBST_FILES.modules=	Makefile.in
-SUBST_SED.modules=	-e 's:\(output_.*_la_CFLAGS = \)@:\1-shared @:'
+# Be prepared for installing things like mpg123-pulse, mpg123-jack,
+# to have the modules picked up automatically. On a system with pulse,
+# you do not want to go through alsa by default.
+.if !empty(MPG123_TRY_MODULES)
+CONFIGURE_ARGS+=	--with-default-audio=${MPG123_TRY_MODULES}
+.endif
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/mpg123/distinfo
 

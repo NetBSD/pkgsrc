@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/05/25 18:11:17 thor Exp $
+# $NetBSD: Makefile,v 1.64 2021/06/05 17:30:01 thor Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -19,6 +19,7 @@ MPG123_DEFAULT_MODULE=	coreaudio
 PLIST.coreaudio=	yes
 .elif ${OPSYS} == "Linux"
 MPG123_DEFAULT_MODULE=	alsa,oss
+MPG123_TRY_MODULES=	pulse,jack,alsa,oss
 PLIST.alsa=		yes
 PLIST.oss=		yes
 .include "../../audio/alsa-lib/buildlink3.mk"
