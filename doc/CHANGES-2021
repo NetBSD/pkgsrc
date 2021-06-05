@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3230 2021/06/05 04:28:50 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3231 2021/06/05 04:45:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-babel to 3.60 [mef 2021-06-05]
 	Updated print/tex-babel-doc to 3.60 [mef 2021-06-05]
 	Updated devel/R-brio to 1.1.2 [mef 2021-06-05]
+	Updated devel/R-caTools to 1.18.2 [mef 2021-06-05]
