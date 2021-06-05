@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/12 03:30:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/05 06:27:38 markd Exp $
 
 DISTNAME=	stix2-otf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.11
-TEXLIVE_REV=	57427
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.12
+TEXLIVE_REV=	58735
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/stix2-otf
