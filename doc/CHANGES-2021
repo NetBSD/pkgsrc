@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3234 2021/06/05 07:24:24 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3235 2021/06/05 07:25:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5080,3 +5080,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/tex-xcharter-doc to 1.221 [markd 2021-06-05]
 	Updated fonts/tex-knuth-lib to 2021 [markd 2021-06-05]
 	Updated fonts/tex-knuth-local to 2021 [markd 2021-06-05]
+	Updated net/py-smb to 1.2.7 [adam 2021-06-05]
+	Updated misc/py-tqdm to 4.61.0 [adam 2021-06-05]
+	Updated www/py-django3 to 3.2.4 [adam 2021-06-05]
+	Updated www/py-django2 to 2.2.24 [adam 2021-06-05]
