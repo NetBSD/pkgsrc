@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/13 05:54:40 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/06/06 10:51:46 markd Exp $
 
-SHA1 (l3experimental.r57669.tar.xz) = 070e1ecc99775189dec400d0cada73b1048eca35
-RMD160 (l3experimental.r57669.tar.xz) = d28743a8db425a43e623a9932eecd30b709ce9bb
-SHA512 (l3experimental.r57669.tar.xz) = 54b71bf0072bb3ff6a15798e8fd64d6914df1f52de75f6211fa6e4487caa9bed997ad97eb24ed21dd475db8e50aafa2f919106baed53c8506b4c53c3802bcfce
-Size (l3experimental.r57669.tar.xz) = 29656 bytes
+SHA1 (l3experimental.r59371.tar.xz) = 9e8bd98406c96ee12c3976d09841d65bb5054eec
+RMD160 (l3experimental.r59371.tar.xz) = 6ef636689a872531348ee3c4a52e409f816e7f07
+SHA512 (l3experimental.r59371.tar.xz) = fb3324052326649ebd0f84e0e3ffc6b291010f1513f26154d3be4695b4ec9689e5201be0ae4ec519aa534860570d58067646ecff11dc7d8536fee9ef7b1e5f98
+Size (l3experimental.r59371.tar.xz) = 22648 bytes
