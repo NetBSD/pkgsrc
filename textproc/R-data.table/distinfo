@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:43:56 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 13:32:51 mef Exp $
 
-SHA1 (R/data.table_1.12.2.tar.gz) = 3583fc54515c8419925098061c7a2add9ecccd4c
-RMD160 (R/data.table_1.12.2.tar.gz) = 5f75feea4718479f1d87eb9cededcf292783e000
-SHA512 (R/data.table_1.12.2.tar.gz) = addfddd432cdda8c37959ed08b30ad0d030938d1ea531e299f8398c895d1da00ba409dcc88ae0677c71e060dcd665e484f9562c791b406e02bc8f68bb2de9e2c
-Size (R/data.table_1.12.2.tar.gz) = 3343698 bytes
+SHA1 (R/data.table_1.14.0.tar.gz) = 6ca317410f49abd751905572e943fb3f09790eb0
+RMD160 (R/data.table_1.14.0.tar.gz) = b724e1a468411d678fbe29806b921e8251fdcdbe
+SHA512 (R/data.table_1.14.0.tar.gz) = db90998904270f42cc654faa0b333f8e720e4044c7f2c82f52efbb69e1ed30c5b2c1b034f7a5baff4543151eda7fb33aa454817889ac95a5d17d6aba364396df
+Size (R/data.table_1.14.0.tar.gz) = 5303849 bytes
