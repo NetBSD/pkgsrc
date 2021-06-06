@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20736 2021/06/05 15:14:13 mef Exp $
+$NetBSD: TODO,v 1.20737 2021/06/06 06:54:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -393,10 +393,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-aplpack-1.3.3
 	o R-bbmle-1.0.23.1
 	o R-bit-4.0.4
-	o R-bit64-4.0.5
 	o R-blob-1.2.1
 	o R-coda-0.19.4
-	o R-colorspace-2.0.0
 	o R-colourpicker-1.1.0
 	o R-compositions-2.0.1
 	o R-countrycode-1.2.0
@@ -473,7 +471,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-raster-3.4.5
 	o R-readr-1.4.0
 	o R-repr-1.1.3
-	o R-reshape2-1.4.4
 	o R-rgdal-1.5.23
 	o R-rgeos-0.5.5
 	o R-rio-0.5.26
