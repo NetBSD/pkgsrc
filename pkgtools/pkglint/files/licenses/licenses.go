@@ -67,7 +67,7 @@ type licenseLexer struct {
 	error  string
 }
 
-var licenseNameChars = textproc.NewByteSet("A-Za-z0-9---._")
+var licenseNameChars = textproc.NewByteSet("A-Za-z0-9-._")
 
 func (lexer *licenseLexer) Lex(llval *liyySymType) int {
 	lex := lexer.lexer

@@ -240,8 +240,8 @@ func (l *Lexer) Copy() *Lexer { return &Lexer{l.rest} }
 func (l *Lexer) Commit(other *Lexer) bool { l.rest = other.rest; return true }
 
 // NewByteSet creates a bit mask out of a string like "0-9A-Za-z_".
-// To add an actual hyphen to the bit mask, write it as "---"
-// (a range from hyphen to hyphen).
+// To add an actual hyphen to the bit mask, write it either at the beginning
+// or at the end of the string, or directly after a range like "a-z".
 //
 // The bit mask can be used with Lexer.NextBytesSet.
 func NewByteSet(chars string) *ByteSet {
