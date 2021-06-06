@@ -21,7 +21,7 @@ type VartypeCheck struct {
 	Varname    string
 	Op         MkOperator
 	Value      string
-	ValueNoVar string
+	ValueNoVar string // The Value with all expressions removed.
 	MkComment  string // The comment including the "#".
 	Guessed    bool   // Whether the type definition is guessed (based on the variable name) or explicitly defined (see vardefs.go).
 }
@@ -676,6 +676,29 @@ func (cv *VartypeCheck) GccReqd() {
 	}
 }
 
+// GitTag checks for a fixed reference to a Git commit.
+//
+// https://git-scm.com/docs/gitrevisions
+func (cv *VartypeCheck) GitTag() {
+	tag := cv.ValueNoVar
+
+	valid := textproc.NewByteSet("0-9A-Za-z-+._/")
+	invalid := invalidCharacters(tag, valid)
+	if invalid != "" {
+		cv.Warnf("Invalid characters %q in Git tag.", invalid)
+		return
+	}
+
+	if tag == "master" || hasPrefix(tag, "refs/heads/") {
+		cv.Warnf("The Git tag %q refers to a moving target.", tag)
+		return
+	}
+
+	if len(tag) < 7 && matches(tag, `^[A-Fa-f0-9]+$`) {
+		cv.Warnf("The git commit name %q is too short to be reliable.", tag)
+	}
+}
+
 func (cv *VartypeCheck) Homepage() {
 	cv.URL()
 
@@ -683,8 +706,8 @@ func (cv *VartypeCheck) Homepage() {
 	ck.Check()
 }
 
-// Identifier checks for valid identifiers in various contexts, limiting the
-// valid characters to A-Za-z0-9_.
+// IdentifierDirect checks for valid identifiers in various contexts,
+// limiting the valid characters to A-Za-z0-9_.
 func (cv *VartypeCheck) IdentifierDirect() {
 	if cv.Op == opUseMatch {
 		if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[\w*\-?\[\]]+$`) {
@@ -703,8 +726,8 @@ func (cv *VartypeCheck) IdentifierDirect() {
 	}
 }
 
-// Identifier checks for valid identifiers in various contexts, limiting the
-// valid characters to A-Za-z0-9_.
+// IdentifierIndirect checks for valid identifiers in various contexts,
+// limiting the valid characters to A-Za-z0-9_.
 func (cv *VartypeCheck) IdentifierIndirect() {
 	if cv.Value == cv.ValueNoVar {
 		cv.IdentifierDirect()
@@ -847,6 +870,16 @@ func (cv *VartypeCheck) MailAddress() {
 	}
 }
 
+func (cv *VartypeCheck) MakeTarget() {
+	if cv.Op == opUseMatch || cv.ValueNoVar != cv.Value {
+		return
+	}
+
+	if !matches(cv.ValueNoVar, `^[+\-.\w/]+$`) {
+		cv.Warnf("Invalid make target %q.", cv.Value)
+	}
+}
+
 // Message is a plain string. When defining a message variable, it should
 // not be enclosed in quotes since that is the job of the code that uses
 // the message.
@@ -980,8 +1013,9 @@ func (cv *VartypeCheck) Pathname() {
 		invalid)
 }
 
-// Like Pathname, but may contain spaces as well.
-// Because the spaces must be quoted, backslashes and quotes are allowed as well.
+// PathnameSpace is like Pathname, but may contain spaces as well.
+// Because the spaces must be quoted, backslashes and quotes are allowed as
+// well.
 func (cv *VartypeCheck) PathnameSpace() {
 	valid := regex.Pattern(condStr(
 		cv.Op == opUseMatch,
@@ -1108,7 +1142,7 @@ func (cv *VartypeCheck) PlistIdentifier() {
 	}
 
 	if cv.Op == opUseMatch {
-		invalidPatternChars := textproc.NewByteSet("A-Za-z0-9---_*?[]")
+		invalidPatternChars := textproc.NewByteSet("A-Za-z0-9-_*?[]")
 		invalid := invalidCharacters(cond, invalidPatternChars)
 		if invalid != "" {
 			cv.Warnf("PLIST identifier pattern %q contains invalid characters (%s).",
@@ -1120,7 +1154,7 @@ func (cv *VartypeCheck) PlistIdentifier() {
 		return
 	}
 
-	invalidChars := textproc.NewByteSet("A-Za-z0-9---_")
+	invalidChars := textproc.NewByteSet("A-Za-z0-9-_")
 	invalid := invalidCharacters(cond, invalidChars)
 	if invalid != "" {
 		cv.Errorf("PLIST identifier %q contains invalid characters (%s).",
@@ -1448,7 +1482,7 @@ func (cv *VartypeCheck) UserGroupName() {
 	if value != cv.ValueNoVar {
 		return
 	}
-	invalid := invalidCharacters(value, textproc.NewByteSet("---0-9_a-z"))
+	invalid := invalidCharacters(value, textproc.NewByteSet("-0-9_a-z"))
 	if invalid != "" {
 		cv.Warnf("User or group name %q contains invalid characters: %s",
 			value, invalid)
