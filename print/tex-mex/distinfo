@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/09/20 13:08:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 21:59:15 markd Exp $
 
-SHA1 (tex-mex-40855/mex.tar.xz) = 7dced25a96c40ebf3e3c1b113a4db12a20880210
-RMD160 (tex-mex-40855/mex.tar.xz) = 85a14ea3e94f878db9bfce6327e7947ffdfd5434
-SHA512 (tex-mex-40855/mex.tar.xz) = ca0bc408c8fc89cd211fa0cbd9d84fde492c9ff655cddc929a2eee751a9e22c29689b9c96199fee8882235aafa510cbc447a7cefecc669e2d866a6aafa453065
-Size (tex-mex-40855/mex.tar.xz) = 11460 bytes
+SHA1 (mex.r58661.tar.xz) = dd37bf2bf179d5b0e77b57164e5ecca0204aff6f
+RMD160 (mex.r58661.tar.xz) = 8d59de55cd0d7d854d7dd66d97d6ecda69556427
+SHA512 (mex.r58661.tar.xz) = a79d6a1ecb15f7962826773d7eab4b1ffd86a5c15f8076f096fecf63df1bd661449eb7d14251a57a1eb2bede030ddf93aac170fc3c59ae0a124da6cef69e55be
+Size (mex.r58661.tar.xz) = 11468 bytes
