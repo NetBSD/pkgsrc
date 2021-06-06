@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3258 2021/06/06 09:04:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3259 2021/06/06 09:18:26 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5163,3 +5163,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/ruby-pdf-reader to 2.5.0 [taca 2021-06-06]
 	Updated net/youtube-dl to 20210606 [leot 2021-06-06]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.4.14 [taca 2021-06-06]
+	Updated chat/element-web to 1.7.29 [js 2021-06-06]
