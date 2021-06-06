@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 16:04:39 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/06/06 14:56:14 mef Exp $
 
-SHA1 (R/ggplot2_3.2.0.tar.gz) = 1338d2160afe1b4da027cb24c000b85a5083f1aa
-RMD160 (R/ggplot2_3.2.0.tar.gz) = cc27dfae9e11f8568f81874eebbce55f331bc077
-SHA512 (R/ggplot2_3.2.0.tar.gz) = 84601b3c07ecbb576c3eb33cd569e38cd640b23433a543ce0402e47896d03d9aa1317217aee5dad957a77b731c83ce88c88b322a7dd41686ea0083393fb7d849
-Size (R/ggplot2_3.2.0.tar.gz) = 3193995 bytes
+SHA1 (R/ggplot2_3.3.3.tar.gz) = b00477c52aed4de5ce2b0e972f5e9bcf62d1175a
+RMD160 (R/ggplot2_3.3.3.tar.gz) = 42e2eaa21ca1f94040ec6fbb41f77a11e1d11e7d
+SHA512 (R/ggplot2_3.3.3.tar.gz) = 6234c2b606bda80b770927975b52c92f9eb7126dcb36889c1d58159c9c2312ff8469a1dd123065c10f77c1f83731285d9a5fdb6d31a1e595169021ece76d717d
+Size (R/ggplot2_3.3.3.tar.gz) = 3058840 bytes
