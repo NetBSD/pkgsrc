@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/15 03:51:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/06 12:18:57 markd Exp $
 bin/make4ht
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-aeneas.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-booktabs.lua
@@ -12,6 +12,7 @@ share/texmf-dist/scripts/make4ht/domfilters/make4ht-odtimagesize.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-odtpartable.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-t4htlinks.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-tablerows.lua
+share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-build_changed.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_domfilters.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_filters.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-detect_engine.lua
@@ -19,6 +20,7 @@ share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-dvisvgm_hashes.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-join_colors.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-latexmk_build.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-mathjaxnode.lua
+share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-mjcli.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-odttemplate.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-preprocess_input.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-staticsite.lua
@@ -33,6 +35,7 @@ share/texmf-dist/scripts/make4ht/filters/make4ht-fix-links.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-fixligatures.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-hruletohr.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-mathjaxnode.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-mjcli.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-odttemplate.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-staticsite.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-svg-height.lua
@@ -53,6 +56,7 @@ share/texmf-dist/scripts/make4ht/make4ht-htlatex.lua
 share/texmf-dist/scripts/make4ht/make4ht-indexing.lua
 share/texmf-dist/scripts/make4ht/make4ht-lib.lua
 share/texmf-dist/scripts/make4ht/make4ht-logging.lua
+share/texmf-dist/scripts/make4ht/make4ht-odtfilter.lua
 share/texmf-dist/scripts/make4ht/make4ht-xtpipes.lua
 share/texmf-dist/scripts/make4ht/mkparams.lua
 share/texmf-dist/scripts/make4ht/mkutils.lua
