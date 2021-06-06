@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/22 10:20:54 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 22:53:07 markd Exp $
 
 DISTNAME=	uplatex
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	57186
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	59450
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/uplatex
@@ -21,6 +21,7 @@ DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-base-dev-[0-9]*:../../print/tex-latex-base-dev
+DEPENDS+=	tex-latex-firstaid-dev-[0-9]*:../../print/tex-latex-firstaid-dev
 DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
