@@ -84,6 +84,15 @@ func (fix *Autofix) Notef(format string, args ...interface{}) {
 	fix.setDiag(Note, format, args)
 }
 
+// Silent removes the need to specify the diagnostic that most fixes need.
+//
+// When a fix is part of a larger "transaction", the diagnostic may already be
+// printed by another fix, and no further diagnostic is needed to inform the
+// pkglint user about all changes that happen.
+func (fix *Autofix) Silent() {
+	fix.setDiag(Note, SilentAutofixFormat, nil)
+}
+
 // Explain remembers the explanation for logging it later when Apply is called.
 func (fix *Autofix) Explain(explanation ...string) {
 	// Since a silent fix doesn't have a diagnostic, its explanation would
