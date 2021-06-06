@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/21 10:39:50 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 22:11:49 markd Exp $
 
-SHA1 (ptex2pdf.r55219.tar.xz) = b2637035be7fd401652d330aafb292e34c4c79d1
-RMD160 (ptex2pdf.r55219.tar.xz) = 10a9b053aaa1d5eb955e41317e197e0a1c4ba7ac
-SHA512 (ptex2pdf.r55219.tar.xz) = 7ec55143e6f4a1824953f73744edb85a4c4c9d6e4f96e2cad5886cf87209d0b2a4bd8d334b51c0ed296441e3ba9a9a870ae3e4dfaa5a7635c2c029181a5e16a8
-Size (ptex2pdf.r55219.tar.xz) = 7832 bytes
+SHA1 (ptex2pdf.r58632.tar.xz) = 63e373b22cd732e063a6ea8f0330a7d6db6f4630
+RMD160 (ptex2pdf.r58632.tar.xz) = a8cc59ef00c5236e3be8a1fe203784010a035b7e
+SHA512 (ptex2pdf.r58632.tar.xz) = fce87deb2ee9477d81d9e7b69c2f934f9918c8a299d3e58ae8e9ba95121eaefedb935c1674ecb8bf1a081f6a21f7359e8cd158b0cfbc7faf234bd33925669939
+Size (ptex2pdf.r58632.tar.xz) = 7844 bytes
