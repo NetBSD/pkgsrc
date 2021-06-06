@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2020/05/10 04:31:49 markd Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/06 21:48:10 markd Exp $
 
 DISTNAME=	metafont
 # should be this instead:
-#PKGNAME=	tex-${DISTNAME}-2.7182818.20140107
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	1
+#PKGNAME=	tex-${DISTNAME}-2.71828182
+PKGNAME=	tex-${DISTNAME}-2021
 CATEGORIES=	fonts
-TEXLIVE_REV=	54276
+TEXLIVE_REV=	57972
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/metafont
