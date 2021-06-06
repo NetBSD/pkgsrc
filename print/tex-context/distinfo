@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/05/01 00:15:11 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/06/06 11:29:00 markd Exp $
 
-SHA1 (context.r54364.tar.xz) = 0f8951f76b5a3533c1b11fd3821c210379e6551c
-RMD160 (context.r54364.tar.xz) = 74f526919c44db3d57c9683a12c97980c7992bde
-SHA512 (context.r54364.tar.xz) = 8ce34324b55de865b99b883bd78c63ac588350b1f2682b16af342b784146d26025d49d21c74b0c60e634d150c6a6497d84bb5edb0b1ef3e4d582f3da98b8d4d2
-Size (context.r54364.tar.xz) = 8462824 bytes
+SHA1 (context.r58167.tar.xz) = ec5dbc6578e49fcba52808e87c04cc4fca8c5bf9
+RMD160 (context.r58167.tar.xz) = 984f3f769691598c9a5875042ea3ef1cc7ba5a54
+SHA512 (context.r58167.tar.xz) = 61fcc778837ecff88bb0e80e39e2acb3ee64e2c26e4069f7634e5dc6c74dc93caab78e4b0088ed58f494d6dcd3a5084bc55cd471baaeb292dc208cf2a241bf69
+Size (context.r58167.tar.xz) = 9617092 bytes
