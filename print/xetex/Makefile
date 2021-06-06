@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2021/05/24 19:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2021/06/06 01:17:20 markd Exp $
 
-PKGREVISION= 11
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	xetex-0.999992
+PKGNAME=	xetex-0.999993
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/xetex/
@@ -13,6 +12,7 @@ LICENSE=	mit
 CONFLICTS+=	web2c<=7.5.7
 DEPENDS+=	dvipdfmx>=20140525:../../print/dvipdfmx
 
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/pplib
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/xpdf
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
@@ -46,7 +46,6 @@ CONFIGURE_ARGS+=	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
 CONFIGURE_ARGS+=	--with-system-graphite2
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-kpathsea
-CONFIGURE_ARGS+=	--with-system-poppler
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
@@ -56,6 +55,7 @@ CONFIGURE_ARGS+=	--with-system-teckit
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--without-x
 
+CONFIGURE_DIRS+=	libs/pplib
 CONFIGURE_DIRS+=	libs/xpdf
 CONFIGURE_DIRS+=	texk/web2c
 
@@ -81,7 +81,5 @@ do-install:
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
-.include "../../print/poppler/buildlink3.mk"
-.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

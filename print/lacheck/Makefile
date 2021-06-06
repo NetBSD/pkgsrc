@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/05/10 03:56:39 markd Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/06 01:17:19 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	lacheck-1.29
+PKGREVISION=	1
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
