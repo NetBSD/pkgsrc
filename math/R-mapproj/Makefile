@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2019/08/08 19:53:51 brook Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/06 07:22:40 mef Exp $
 
 R_PKGNAME=	mapproj
-R_PKGVER=	1.2.6
+R_PKGVER=	1.2.7
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
