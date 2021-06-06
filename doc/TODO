@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20747 2021/06/06 13:57:12 mef Exp $
+$NetBSD: TODO,v 1.20748 2021/06/06 14:45:42 mef Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-lmtest-0.9.38
 	o R-lwgeom-0.2.6
 	o R-mapproj-3
-	o R-maptools-1.1.1
 	o R-mime-0.10
 	o R-mnormt-2.0.2
 	o R-mvtnorm-1.1.1
@@ -474,7 +473,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-rvest-1.0.0
 	o R-sandwich-3.0.0
 	o R-scales-1.1.1
-	o R-sf-0.9.8
 	o R-shinyjs-2.0.0
 	o R-sp-1.4.5
 	o R-spData-0.3.8
@@ -495,7 +493,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-timeSeries-3062.100
 	o R-tinytest-1.2.4
 	o R-tseries-0.10.48
-	o R-units-0.7.1
 	o R-uuid-4
 	o R-viridis-0.6.0
 	o R-viridisLite-0.4.0
