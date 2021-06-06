@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3404 2021/06/03 07:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3405 2021/06/06 10:05:42 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2398,6 +2398,7 @@ SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-hypothesis4
 SUBDIR+=	py-idle
+SUBDIR+=	py-ijson
 SUBDIR+=	py-immutabledict
 SUBDIR+=	py-importlib-metadata
 SUBDIR+=	py-importlib-resources
