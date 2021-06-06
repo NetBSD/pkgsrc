@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3256 2021/06/06 08:58:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3257 2021/06/06 09:03:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5161,3 +5161,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/R-maptools to 1.1.1 [mef 2021-06-06]
 	Added math/R-proxy version 0.4.25 [mef 2021-06-06]
 	Updated print/ruby-pdf-reader to 2.5.0 [taca 2021-06-06]
+	Updated net/youtube-dl to 20210606 [leot 2021-06-06]
