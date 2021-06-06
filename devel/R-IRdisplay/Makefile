@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/08/08 19:53:37 brook Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/06 15:19:02 mef Exp $
 
 R_PKGNAME=	IRdisplay
-R_PKGVER=	0.7.0
+R_PKGVER=	1.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
