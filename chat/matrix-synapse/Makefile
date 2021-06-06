@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/06/05 15:28:02 js Exp $
+# $NetBSD: Makefile,v 1.26 2021/06/06 09:40:34 js Exp $
 
 DISTNAME=	matrix-synapse-1.35.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -73,6 +74,13 @@ FILES_SUBST+=	SYNAPSE_USER=${SYNAPSE_USER:Q}
 FILES_SUBST+=	SYNAPSE_GROUP=${SYNAPSE_GROUP:Q}
 MESSAGE_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 MESSAGE_SUBST+=	SYNAPSE_DATA=${SYNAPSE_DATA:Q}
+
+SYNAPSE_DEFAULT_CREATOR_PL?=	100
+SUBST_CLASSES+=			pl
+SUBST_STAGE.pl=			post-patch
+SUBST_FILES.pl=			synapse/handlers/room.py
+SUBST_VARS.pl=			SYNAPSE_DEFAULT_CREATOR_PL
+BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
