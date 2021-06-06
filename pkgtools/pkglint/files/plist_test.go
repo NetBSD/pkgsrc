@@ -624,6 +624,35 @@ func (s *Suite) Test_PlistChecker_checkPathMisc__python_egg(c *check.C) {
 		"WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
 }
 
+func (s *Suite) Test_PlistChecker_checkPathMisc__python_egg_autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix")
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO",
+		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: PLIST:2: Include \"../../lang/python/egg.mk\" "+
+			"instead of listing .egg-info files directly.",
+		"AUTOFIX: PLIST:2: Replacing "+
+			"\"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info\" "+
+			"with \"${PYSITELIB}/${EGG_INFODIR}\".",
+		"AUTOFIX: Makefile:21: Inserting a line "+
+			"\".include \\\"../../lang/python/egg.mk\\\"\" above this line.",
+		"WARN: PLIST:3: Include \"../../lang/python/egg.mk\" "+
+			"instead of listing .egg-info files directly.",
+		"AUTOFIX: PLIST:3: Replacing "+
+			"\"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info\" "+
+			"with \"${PYSITELIB}/${EGG_INFODIR}\".")
+}
+
 func (s *Suite) Test_PlistChecker_checkPathMisc__unwanted_entries(c *check.C) {
 	t := s.Init(c)
 
