@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/21 10:37:26 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 23:08:24 markd Exp $
 
-SHA1 (plautopatch.r57731.tar.xz) = 908399954c5c1e1b75ef3e5fa539272205f66d4b
-RMD160 (plautopatch.r57731.tar.xz) = b5d064fe345d6015f9890cdc962a05ee2201078d
-SHA512 (plautopatch.r57731.tar.xz) = df8d83e2c12167d32d114c61737bd4b834ddd3f9851c238ce1b07c1aff3469ab2bbd7eb6b90047b75ff36a26ed4ba53c97782dd7462bd559615075cd38517c0e
-Size (plautopatch.r57731.tar.xz) = 6956 bytes
+SHA1 (plautopatch.r59405.tar.xz) = 0650b69eefa6eb2272091c3d0b217e381658eb9e
+RMD160 (plautopatch.r59405.tar.xz) = 6e301ecead01dbc03182db5308310052a3fde704
+SHA512 (plautopatch.r59405.tar.xz) = 2d2ec2dc57e009f52a2e9ac9675f914f2ba76fc0ef27f5ac95ac67e1287d71d14e3063c361eaa61402b064498b762cb6c85cfb4f05c6d592f78e9976eebc049d
+Size (plautopatch.r59405.tar.xz) = 7020 bytes
