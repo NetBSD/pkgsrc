@@ -1,14 +1,13 @@
-$NetBSD: patch-gemrb_core_System_String.cpp,v 1.1 2020/08/31 12:46:21 nia Exp $
+$NetBSD: patch-gemrb_core_System_String.cpp,v 1.2 2021/06/06 16:59:51 nia Exp $
 
 Deal with old NetBSD/SunOS style iconv.
 
---- gemrb/core/System/String.cpp.orig	2020-08-23 18:32:26.000000000 +0000
+--- gemrb/core/System/String.cpp.orig	2021-06-02 16:16:47.000000000 +0000
 +++ gemrb/core/System/String.cpp
-@@ -35,6 +35,15 @@
- #if HAVE_ICONV
+@@ -31,6 +31,16 @@
  #include <iconv.h>
- #include <cerrno>
-+
+ #endif
+ 
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
 +#if __NetBSD_Prereq__(9,99,17)
@@ -17,10 +16,12 @@ Deal with old NetBSD/SunOS style iconv.
 +#define NETBSD_POSIX_ICONV 0
 +#endif /* __NetBSD_Prereq__(9,99,17) */
 +#endif /* defined(__NetBSD__) */
- #endif
- 
++#endif
++
  namespace GemRB {
-@@ -127,7 +136,11 @@ char* ConvertCharEncoding(const char* st
+ 
+ static String* StringFromEncodedData(const ieByte* string, const EncodingStruct& encoded)
+@@ -123,7 +133,11 @@ char* ConvertCharEncoding(const char* st
  	size_t out_len_left = out_len;
  	char* buf = (char*) malloc(out_len);
  	char* buf_out = buf;
