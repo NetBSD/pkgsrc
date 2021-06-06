@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3262 2021/06/06 11:46:56 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.3263 2021/06/06 12:20:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/tig to 2.5.4 [fcambus 2021-06-06]
 	Added devel/py-ijson version 3.1.4 [js 2021-06-06]
 	Updated pkgtools/pkglint to 21.1.4 [rillig 2021-06-06]
+	Updated devel/R-diffobj to 0.3.4 [mef 2021-06-06]
