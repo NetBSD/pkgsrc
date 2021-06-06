@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/20 10:21:56 markd Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/06 12:07:21 markd Exp $
 
 DISTNAME=	latex-base-dev
-PKGNAME=	tex-${DISTNAME}-20210501pre1
-TEXLIVE_REV=	57365
+PKGNAME=	tex-${DISTNAME}-20211201pre0
+TEXLIVE_REV=	59474
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex-base-dev
