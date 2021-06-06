@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/06 20:35:48 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 16:35:42 nia Exp $
 
-SHA1 (manaplus-1.9.3.23.tar.xz) = 5800f1cf11e625097bf8f576c0935a9f91704e97
-RMD160 (manaplus-1.9.3.23.tar.xz) = cb075d4b26d91e81f8d8231762a5f99aea792455
-SHA512 (manaplus-1.9.3.23.tar.xz) = 0e74df08b4e18a826711c090e3ddf38da1b348c34acc1aff675c1f6c4dc523723a07b2b00d135a89ef136f11fe03f0dfc41e5830f0d6c34d5d44eb1414a2d361
-Size (manaplus-1.9.3.23.tar.xz) = 15051860 bytes
-SHA1 (patch-src_mumblemanager.cpp) = 6a330e94b336175355e872617eee4b99b831f50a
+SHA1 (manaplus-2.1.3.17.tar.xz) = 14210ecb244b88cb7dfbcd0a8ed7c6afc77b20e4
+RMD160 (manaplus-2.1.3.17.tar.xz) = 3cac47df59738ebe4e3695a29062ab5109f7d3cd
+SHA512 (manaplus-2.1.3.17.tar.xz) = 8473158f55357e199094bb6c88b6645f0044aadd950ae95f213d4276512bff29c0df58765f7127272961ea2bccb5bdca431cbe125d2a22e9510dc691e509aab7
+Size (manaplus-2.1.3.17.tar.xz) = 14132800 bytes
