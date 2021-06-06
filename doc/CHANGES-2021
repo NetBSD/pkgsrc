@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3273 2021/06/06 13:46:22 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3274 2021/06/06 13:57:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-testthat to 3.0.2 [mef 2021-06-06]
 	Updated lang/janet to 1.16.0 [nia 2021-06-06]
 	Updated math/R-forcats to 0.5.1 [mef 2021-06-06]
+	Updated devel/R-waldo to 0.2.5 [mef 2021-06-06]
