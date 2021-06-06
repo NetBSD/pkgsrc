@@ -19,7 +19,7 @@ func NewMkVarUseChecker(use *MkVarUse, mklines *MkLines, mkline *MkLine) *MkVarU
 	return &MkVarUseChecker{use, vartype, mklines, mkline}
 }
 
-// CheckVaruse checks a single use of a variable in a specific context.
+// Check checks a single use of a variable in a specific context.
 func (ck *MkVarUseChecker) Check(vuc *VarUseContext) {
 	if ck.use.IsExpression() {
 		return
@@ -242,6 +242,10 @@ func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
 		}
 	}
 
+	// TODO: Generalize the following paragraphs
+	if id == "curses" && pkg.Includes("../../mk/curses.buildlink3.mk") != nil {
+		return
+	}
 	if id == "mysql-client" && pkg.Includes("../../mk/mysql.buildlink3.mk") != nil {
 		return
 	}

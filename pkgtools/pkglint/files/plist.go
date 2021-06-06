@@ -228,7 +228,17 @@ func (ck *PlistChecker) checkPathMisc(rel RelPath, pline *PlistLine) {
 			"since its contents depends on more than one package.")
 	}
 	if rel.ContainsText(".egg-info/") {
-		pline.Warnf("Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
+		canFix := ck.pkg != nil && ck.pkg.CanFixAddInclude()
+		fix := pline.Autofix()
+		fix.Warnf("Include \"../../lang/python/egg.mk\" " +
+			"instead of listing .egg-info files directly.")
+		if canFix {
+			fix.Replace(pline.Path().Dir().String(), "${PYSITELIB}/${EGG_INFODIR}")
+		}
+		fix.Apply()
+		if canFix {
+			ck.pkg.FixAddInclude("../../lang/python/egg.mk")
+		}
 	}
 	if rel.ContainsPath("..") {
 		pline.Errorf("Paths in PLIST files must not contain \"..\".")
@@ -534,6 +544,9 @@ type PlistLine struct {
 	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
+// Autofix returns the autofix instance belonging to the line.
+//
+// See Line.Autofix for usage details.
 func (pline *PlistLine) Autofix() *Autofix { return pline.Line.Autofix() }
 
 func (pline *PlistLine) Errorf(format string, args ...interface{}) {

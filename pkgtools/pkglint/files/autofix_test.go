@@ -401,6 +401,23 @@ func (s *Suite) Test_Autofix_Notef(c *check.C) {
 		"NOTE: DESCR:1: Note.")
 }
 
+func (s *Suite) Test_Autofix_Silent(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix")
+
+	line := t.NewLine("DESCR", 1, "Description of the package")
+
+	fix := line.Autofix()
+	fix.Silent()
+	fix.Replace("package", "replaced package")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"AUTOFIX: DESCR:1: Replacing \"package\" with \"replaced package\".")
+	t.CheckEquals(line.fix.texts[0], "Description of the replaced package\n")
+}
+
 func (s *Suite) Test_Autofix_Explain__without_explain_option(c *check.C) {
 	t := s.Init(c)
 
