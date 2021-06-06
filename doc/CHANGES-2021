@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3268 2021/06/06 12:53:29 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3269 2021/06/06 12:59:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-siunitx-doc to 3.0.10 [markd 2021-06-06]
 	Updated devel/R-glue to 1.4.2 [mef 2021-06-06]
 	Updated devel/R-inline to 0.3.19 [mef 2021-06-06]
+	Updated devel/R-rappdirs to 0.3.3 [mef 2021-06-06]
