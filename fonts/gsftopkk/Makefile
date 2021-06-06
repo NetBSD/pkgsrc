@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/05/10 03:56:37 markd Exp $
+# $NetBSD: Makefile,v 1.18 2021/06/06 01:17:17 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	gsftopkk-1.19.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	print
 
 HOMEPAGE=	https://math.berkeley.edu/~vojta/gsftopk.html
