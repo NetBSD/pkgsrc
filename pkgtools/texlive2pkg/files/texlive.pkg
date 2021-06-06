@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.8 2021/02/20 05:08:37 markd Exp $
+# $NetBSD: texlive.pkg,v 1.9 2021/06/06 23:32:40 markd Exp $
 
-$version = "2020";
+$version = "2021";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
 $plist = $other = $maps = "";
 
@@ -35,15 +35,16 @@ $version =~ s:/::g;
 $version =~ s: :_:g; # 5th edition
 $version =~ s:-::g;  # 2013-05-12
 $license =~ s: apache2 : apache-2.0 :;
+$license =~ s: cc0 : cc0-1.0-universal :;
 $license =~ s: cc-by-4 : cc-by-v4.0 :;
 $license =~ s: cc-by-sa-4 : cc-by-sa-v4.0 :;
 $license =~ s: fdl : gnu-fdl-v1.3 :;
 $license =~ s: lgpl : gnu-lgpl-v2 :;
 $license =~ s: gpl : gnu-gpl-v2 :;
 $license =~ s: gpl2 : gnu-gpl-v2 :;
-$license =~ s: gpl2+ : gnu-gpl-v2 :;
+$license =~ s: gpl2\+ : gnu-gpl-v2 :;
 $license =~ s: gpl3 : gnu-gpl-v3 :;
-$license =~ s: gpl3+ : gnu-gpl-v3 :;
+$license =~ s: gpl3\+ : gnu-gpl-v3 :;
 $license =~ s: lppl1 : lppl-1.0 :;
 $license =~ s: lppl1.2 : lppl-1.2 :;
 $license =~ s: lppl : lppl-1.3c :;
