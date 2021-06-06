@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/05/14 07:40:18 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/06 16:59:51 nia Exp $
 
-DISTNAME=	gemrb-0.8.7
-PKGREVISION=	1
+DISTNAME=	gemrb-0.8.8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gemrb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
