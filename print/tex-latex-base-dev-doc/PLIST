@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/20 10:21:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/06 12:07:21 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -38,6 +38,10 @@ share/texmf-dist/doc/latex-dev/base/lppl-1-1.txt
 share/texmf-dist/doc/latex-dev/base/lppl-1-2.txt
 share/texmf-dist/doc/latex-dev/base/lppl.pdf
 share/texmf-dist/doc/latex-dev/base/lppl.txt
+share/texmf-dist/doc/latex-dev/base/ltcmdhooks-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltcmdhooks-code.tex
+share/texmf-dist/doc/latex-dev/base/ltcmdhooks-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltcmdhooks-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltfilehook-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltfilehook-code.tex
 share/texmf-dist/doc/latex-dev/base/ltfilehook-doc.pdf
@@ -115,6 +119,10 @@ share/texmf-dist/doc/latex-dev/base/ltnews32.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews32.tex
 share/texmf-dist/doc/latex-dev/base/ltnews33.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews33.tex
+share/texmf-dist/doc/latex-dev/base/ltpara-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltpara-code.tex
+share/texmf-dist/doc/latex-dev/base/ltpara-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltpara-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltshipout-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltshipout-code.tex
 share/texmf-dist/doc/latex-dev/base/ltshipout-doc.pdf
