@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/05/03 08:57:37 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/06/06 21:48:10 markd Exp $
 
-SHA1 (metafont.r54276.tar.xz) = 30a9a6fca28bee67b3daf3282d10a74259cc8e5a
-RMD160 (metafont.r54276.tar.xz) = 2cbdeadaf586aab4a79ec9dadd5135673fcaa3ec
-SHA512 (metafont.r54276.tar.xz) = 673edc75545fbcff5f94e7d6c7fb6f057016170d3873e9bed1aeaea6cde8e6610e35636a228acd15cfb77da8a0d0c5f952337ba2400213886766469e9bfbc023
-Size (metafont.r54276.tar.xz) = 8756 bytes
+SHA1 (metafont.r57972.tar.xz) = 8425231f0c66c8295bc6b8600a196f20583e2cdf
+RMD160 (metafont.r57972.tar.xz) = 0d5682821808e841e0cbea3b44466aed58ff1301
+SHA512 (metafont.r57972.tar.xz) = 7ea3271c2a9682ae5ee29a05a95e794f4a6dc5a6244a6c243e856aaa857310127d5593b0643d4ca53eae7feb9c205574f5ea216b7c3c0b731e7f98be99bf1588
+Size (metafont.r57972.tar.xz) = 8756 bytes
