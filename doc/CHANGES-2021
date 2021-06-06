@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3280 2021/06/06 16:00:28 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3281 2021/06/06 16:01:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-xts to 0.12.1 [mef 2021-06-06]
 	Updated devel/R-IRdisplay to 1.0 [mef 2021-06-06]
 	Updated sysutils/xplr to 0.14.0 [pin 2021-06-06]
+	Updated sysutils/macchina to 0.9.1 [pin 2021-06-06]
