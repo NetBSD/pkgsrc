@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3251 2021/06/06 02:08:55 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3252 2021/06/06 06:54:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5151,3 +5151,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-graphics-def to 2021 [markd 2021-06-06]
 	Updated print/tex-graphics-def-doc to 2021 [markd 2021-06-06]
 	Updated print/tex-tex to 3.141592653 [markd 2021-06-06]
+	Updated devel/R-bit64 to 4.0.5 [mef 2021-06-06]
+	Updated graphics/R-colorspace to 2.0.1 [mef 2021-06-06]
+	Updated math/R-reshape2 to 1.4.4 [mef 2021-06-06]
+	Added graphics/R-isoband version 0.2.4 [mef 2021-06-06]
