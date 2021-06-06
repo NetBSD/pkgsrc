@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/03/08 08:45:56 fcambus Exp $
+$NetBSD: distinfo,v 1.14 2021/06/06 09:32:23 fcambus Exp $
 
-SHA1 (tig-2.5.3.tar.gz) = a60f1bef9579f0cbbcab974380a8732723b154cf
-RMD160 (tig-2.5.3.tar.gz) = f7e6083f31fac0de05916124bae50efca0f08a56
-SHA512 (tig-2.5.3.tar.gz) = 2339c6c93808b6fbcda4ae29e014e7f4edda5f16df46e466d1d14a9f65dba10bff9df6363f37c369418336f362d5e38dbaf7fc4d99761997cc39722ba6132aec
-Size (tig-2.5.3.tar.gz) = 1165632 bytes
+SHA1 (tig-2.5.4.tar.gz) = 3bde5d6d20fb1616dc12dfa2124b1fe76d72cb6e
+RMD160 (tig-2.5.4.tar.gz) = cb3fd5a5ca5380bfbcf55a528b89cc297ee0cce6
+SHA512 (tig-2.5.4.tar.gz) = 8c2c1d3aa980d3a6619501a770bb5210db445200e46939e2c122db1fd684ae9857eee4a06a8b6622d5d683457f11629522b121e0b429eec6d11dce4f4020dfb3
+Size (tig-2.5.4.tar.gz) = 1167930 bytes
 SHA1 (patch-Makefile) = 91a717c192e5e35999bdff40a73d4b830645f968
-SHA1 (patch-contrib_config.make-Darwin) = f44553e19dacbb6838f876e43c62e9261aa49f77
+SHA1 (patch-contrib_config.make-Darwin) = b340253dc02cf490dba86832f752660209971840
 SHA1 (patch-include_tig_tig.h) = 49c9152bc522eb0d6ceb3ca8933f1cb1958d9ece
