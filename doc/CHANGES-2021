@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3286 2021/06/06 23:37:42 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3287 2021/06/06 23:44:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-texlive-scripts-doc to 2021 [markd 2021-06-06]
 	Updated pkgtools/texlive2pkg to 1.10 [markd 2021-06-06]
 	Updated misc/R-pillar to 1.6.1 [mef 2021-06-06]
+	Updated devel/R-bit to 4.0.4 [mef 2021-06-06]
