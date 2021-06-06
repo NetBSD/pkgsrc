@@ -25,7 +25,7 @@ func CheckdirCategory(dir CurrPath) {
 	if mlex.SkipIf(func(mkline *MkLine) bool { return mkline.IsVarassign() && mkline.Varname() == "COMMENT" }) {
 		mkline := mlex.PreviousMkLine()
 
-		valid := textproc.NewByteSet("--- '(),/0-9A-Za-z")
+		valid := textproc.NewByteSet("- '(),/0-9A-Za-z")
 		invalid := invalidCharacters(mkline.Value(), valid)
 		if invalid != "" {
 			mkline.Warnf("%s contains invalid characters (%s).",
