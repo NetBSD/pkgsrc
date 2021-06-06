@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/02/15 01:21:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/06/06 01:41:37 markd Exp $
 share/texmf-dist/scripts/tex4ht/htcopy.pl
 share/texmf-dist/scripts/tex4ht/htmove.pl
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
@@ -11,6 +11,7 @@ share/texmf-dist/tex/generic/tex4ht/SIunits.4ht
 share/texmf-dist/tex/generic/tex4ht/TextBook.4ht
 share/texmf-dist/tex/generic/tex4ht/aa.4ht
 share/texmf-dist/tex/generic/tex4ht/abidir.4ht
+share/texmf-dist/tex/generic/tex4ht/abstract.4ht
 share/texmf-dist/tex/generic/tex4ht/accents.4ht
 share/texmf-dist/tex/generic/tex4ht/acm_proc_article-sp.4ht
 share/texmf-dist/tex/generic/tex4ht/adjustbox.4ht
@@ -74,6 +75,7 @@ share/texmf-dist/tex/generic/tex4ht/catalan.4ht
 share/texmf-dist/tex/generic/tex4ht/catchfile-sty-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/cgloss4e.4ht
 share/texmf-dist/tex/generic/tex4ht/chapterbib.4ht
+share/texmf-dist/tex/generic/tex4ht/chessboard.4ht
 share/texmf-dist/tex/generic/tex4ht/chicago.4ht
 share/texmf-dist/tex/generic/tex4ht/cleveref-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/cleveref.4ht
@@ -156,6 +158,9 @@ share/texmf-dist/tex/generic/tex4ht/float.4ht
 share/texmf-dist/tex/generic/tex4ht/floatflt.4ht
 share/texmf-dist/tex/generic/tex4ht/floatpag.4ht
 share/texmf-dist/tex/generic/tex4ht/foils.4ht
+share/texmf-dist/tex/generic/tex4ht/fontawesome5-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/fontawesome5-utex-helper-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/fontawesome5.4ht
 share/texmf-dist/tex/generic/tex4ht/fontmath.4ht
 share/texmf-dist/tex/generic/tex4ht/fontspec-4ht.lua
 share/texmf-dist/tex/generic/tex4ht/fontspec-hooks.4ht
@@ -267,6 +272,7 @@ share/texmf-dist/tex/generic/tex4ht/mdwlist.4ht
 share/texmf-dist/tex/generic/tex4ht/mdwtab.4ht
 share/texmf-dist/tex/generic/tex4ht/memoir.4ht
 share/texmf-dist/tex/generic/tex4ht/mempatch.4ht
+share/texmf-dist/tex/generic/tex4ht/menukeys.4ht
 share/texmf-dist/tex/generic/tex4ht/mex.4ht
 share/texmf-dist/tex/generic/tex4ht/mfpic.4ht
 share/texmf-dist/tex/generic/tex4ht/microtype.4ht
@@ -275,7 +281,6 @@ share/texmf-dist/tex/generic/tex4ht/minted-sty-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/minted.4ht
 share/texmf-dist/tex/generic/tex4ht/mkht-scripts.4ht
 share/texmf-dist/tex/generic/tex4ht/mkht.4ht
-share/texmf-dist/tex/generic/tex4ht/mktex4ht.4ht
 share/texmf-dist/tex/generic/tex4ht/mla.4ht
 share/texmf-dist/tex/generic/tex4ht/mls.4ht
 share/texmf-dist/tex/generic/tex4ht/moreverb.4ht
@@ -304,6 +309,7 @@ share/texmf-dist/tex/generic/tex4ht/ot4enc.4ht
 share/texmf-dist/tex/generic/tex4ht/overcite.4ht
 share/texmf-dist/tex/generic/tex4ht/overpic.4ht
 share/texmf-dist/tex/generic/tex4ht/paralist.4ht
+share/texmf-dist/tex/generic/tex4ht/parallel.4ht
 share/texmf-dist/tex/generic/tex4ht/path.4ht
 share/texmf-dist/tex/generic/tex4ht/pb-diagram.4ht
 share/texmf-dist/tex/generic/tex4ht/pctable.4ht
@@ -365,6 +371,7 @@ share/texmf-dist/tex/generic/tex4ht/soul.4ht
 share/texmf-dist/tex/generic/tex4ht/spanish.4ht
 share/texmf-dist/tex/generic/tex4ht/splitidx.4ht
 share/texmf-dist/tex/generic/tex4ht/srcltx.4ht
+share/texmf-dist/tex/generic/tex4ht/subcaption.4ht
 share/texmf-dist/tex/generic/tex4ht/subeqnarray.4ht
 share/texmf-dist/tex/generic/tex4ht/subfigure.4ht
 share/texmf-dist/tex/generic/tex4ht/subscript.4ht
@@ -6693,6 +6700,7 @@ share/texmf-dist/tex4ht/ht-fonts/unicode/ebg/ntxebgmi.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/ebg/ntxebgmia.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/ec/eccc-uni.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/erewMath/zutmia.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/fontawesome5/fa5.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/fourier-orns/futrorn.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/futr-sup/futr-sup.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/futrc9d/futrc9d.htf

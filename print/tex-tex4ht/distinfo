@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/02/15 01:21:57 markd Exp $
+$NetBSD: distinfo,v 1.18 2021/06/06 01:41:37 markd Exp $
 
-SHA1 (tex4ht.r57704.tar.xz) = 34d846a1ebe70ce635186fcdd0c851d370da19c0
-RMD160 (tex4ht.r57704.tar.xz) = 5d9e2d150180825ae4c6e580c638031734430af7
-SHA512 (tex4ht.r57704.tar.xz) = 8f6dc6e4b46f1daf0221c1ba41809cf13bdc3f02a878eb0a06a2ef431ce562538759efae6ab17ec3cb41472395af21b430ec8c7196cdd9a4c448583da19a0c75
-Size (tex4ht.r57704.tar.xz) = 904160 bytes
+SHA1 (tex4ht.r59459.tar.xz) = 514d64e3221603edf1c95c21f1e1d232ee0d5f59
+RMD160 (tex4ht.r59459.tar.xz) = 13ed6cf2776c2c6cc298a5e7e98ec7510d0f6584
+SHA512 (tex4ht.r59459.tar.xz) = 5a51db0b4cfacba33f9cd83b757d45f83c8470bb451a0376f328a1e78ffe39e5f22dcf2be6f9bed5724eed373ff020c8fa4aa38d9bf34bb45a05186e224e144e
+Size (tex4ht.r59459.tar.xz) = 908004 bytes
