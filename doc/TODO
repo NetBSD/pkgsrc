@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20742 2021/06/06 12:53:29 mef Exp $
+$NetBSD: TODO,v 1.20743 2021/06/06 12:59:41 mef Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-quadprog-1.5.8
 	o R-quantmod-0.4.18
 	o R-quantreg-5.85
-	o R-rappdirs-0.3.3
 	o R-raster-3.4.5
 	o R-readr-1.4.0
 	o R-repr-1.1.3
