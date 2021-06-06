@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 06:22:06 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 12:29:26 mef Exp $
 
-SHA1 (R/gert_1.0.2.tar.gz) = f269c72d00851f4d3d56f5af719decc644d5811c
-RMD160 (R/gert_1.0.2.tar.gz) = ed2e31bedf46c1dacf1415d758668732e93771a1
-SHA512 (R/gert_1.0.2.tar.gz) = b2d35a2a6703eabfe6a6bd55d384b3fe033af60b4ca1df452776a716a512f82721f17b2d545c8fc7c9ab85a043f45c6ad21faa83b6f618f569df641aded41450
-Size (R/gert_1.0.2.tar.gz) = 61324 bytes
+SHA1 (R/gert_1.3.0.tar.gz) = 8921effc5072a3d723a19b912405a1a02f8239d3
+RMD160 (R/gert_1.3.0.tar.gz) = 21cd04558c7e4763be9a8981e269a65e6d719f8f
+SHA512 (R/gert_1.3.0.tar.gz) = 50dc087f8cbe70d81996368c908100480f98903da7ed496aa69a47eac02cc90fa40bede5033f21f5e148fa61afd459297de556b59791f602703815e4ead9b768
+Size (R/gert_1.3.0.tar.gz) = 66410 bytes

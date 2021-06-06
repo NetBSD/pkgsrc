@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 06:22:06 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 12:29:26 mef Exp $
 
 R_PKGNAME=	gert
-R_PKGVER=	1.0.2
+R_PKGVER=	1.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +13,8 @@ DEPENDS+=	R-rstudioapi>=0.11:../../math/R-rstudioapi
 DEPENDS+=	R-askpass>=1.1:../../security/R-askpass
 DEPENDS+=	R-openssl>=1.4.1:../../security/R-openssl
 DEPENDS+=	R-credentials-[0-9]*:../../security/R-credentials
+
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c
 
