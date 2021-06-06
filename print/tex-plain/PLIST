@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2017/06/21 11:45:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/06 12:24:14 markd Exp $
 share/texmf-dist/makeindex/plain/plaintex.ist
 share/texmf-dist/tex/plain/base/fontchart.tex
 share/texmf-dist/tex/plain/base/gkpmac.tex
-share/texmf-dist/tex/plain/base/letter.tex
+share/texmf-dist/tex/plain/base/letterformat.tex
 share/texmf-dist/tex/plain/base/list-latin.tex
 share/texmf-dist/tex/plain/base/list.tex
+share/texmf-dist/tex/plain/base/llist-latin.tex
 share/texmf-dist/tex/plain/base/llist.tex
 share/texmf-dist/tex/plain/base/mptmac.tex
 share/texmf-dist/tex/plain/base/picmac.tex
@@ -18,4 +19,3 @@ share/texmf-dist/tex/plain/config/pdfbplain.ini
 share/texmf-dist/tex/plain/config/pdfetex.ini
 share/texmf-dist/tex/plain/config/pdftexmagfix.tex
 share/texmf-dist/tex/plain/config/tex.ini
-share/texmf-dist/tex/plain/config/unicode-letters.def
