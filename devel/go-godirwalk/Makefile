@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/05/08 15:02:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2021/06/06 12:18:49 bsiegert Exp $
 
 DISTNAME=	godirwalk-1.7.3
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=karrick/}
 GITHUB_PROJECT=	godirwalk
