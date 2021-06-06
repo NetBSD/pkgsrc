@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/02/21 05:54:40 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/06 23:00:18 markd Exp $
 
 DISTNAME=	platex
-PKGNAME=	tex-${DISTNAME}-2020.57730
-TEXLIVE_REV=	57730
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	59463
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex
@@ -21,6 +21,7 @@ DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-base-dev-[0-9]*:../../print/tex-latex-base-dev
+DEPENDS+=	tex-latex-firstaid-dev-[0-9]*:../../print/tex-latex-firstaid-dev
 DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
