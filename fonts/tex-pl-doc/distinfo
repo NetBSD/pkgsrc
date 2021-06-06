@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/06/06 22:03:46 markd Exp $
 
-SHA1 (tex-pl-36012/pl.doc.tar.xz) = 051b8c7bf37ea0060041c1a6067efd6dce7c714a
-RMD160 (tex-pl-36012/pl.doc.tar.xz) = 7ba6f2865abb6df7152eb51245f1901209c23003
-SHA512 (tex-pl-36012/pl.doc.tar.xz) = 54428b74d132dedfba08d8ae8bd255dae2df77f3aea6254e77f99f078dbfab1ee58162ba2e767c6dacf1be2b4d81fddb94fb3598416c6d8f3020ed11d19e6234
-Size (tex-pl-36012/pl.doc.tar.xz) = 25044 bytes
+SHA1 (pl.doc.r58661.tar.xz) = c4bb1c0d83659fc019610bf9c9fa912326f395f5
+RMD160 (pl.doc.r58661.tar.xz) = 53f1b60055099cd9faa30e8ea8f4502464f8e169
+SHA512 (pl.doc.r58661.tar.xz) = efde952f17a904492b2c36e49801514b97ac5302b406beca7680a893051bc3821e70cdaad8d01dab479476298154c5ce2db99d43b04cf51cbcc5e16358c9b9f0
+Size (pl.doc.r58661.tar.xz) = 25344 bytes

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/06 22:03:46 markd Exp $
 
 DISTNAME=	pl.doc
-PKGNAME=	tex-pl-doc-1.09
-TEXLIVE_REV=	36012
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.09a
+TEXLIVE_REV=	58661
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.ctan.org/pkg/pl-mf
+HOMEPAGE=	https://ctan.org/pkg/pl-mf
 COMMENT=	Documentation for tex-pl
 LICENSE=	public-domain
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
