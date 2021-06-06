@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2021/02/13 11:02:09 markd Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/06 21:34:16 markd Exp $
 
 DISTNAME=	koma-script
-PKGNAME=	tex-${DISTNAME}-3.32
-TEXLIVE_REV=	56454
+PKGNAME=	tex-${DISTNAME}-3.33
+TEXLIVE_REV=	58585
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/koma-script
