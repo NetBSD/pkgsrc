@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2021/05/23 17:06:00 pin Exp $
+$NetBSD: distinfo,v 1.23 2021/06/06 16:01:15 pin Exp $
 
 SHA1 (aho-corasick-0.7.18.crate) = 0e3f242614a732b703e12fc3c4456c53b0536fb8
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
@@ -112,10 +112,10 @@ SHA1 (libc-0.2.94.crate) = 27ac5fa7040722f5d52d88291a046bf4bbd1b613
 RMD160 (libc-0.2.94.crate) = 15179d9bd17b7e0de5c89eec9dcdc78000b5354f
 SHA512 (libc-0.2.94.crate) = 316717d2e46b57c200d67d0ebb4fb162cb1f0b688895b9eb6075924cda3be8ba7fae85319692682178b6fc5cb2764e8b3a9d3e7ce234fd8a21a0a9c453ca174c
 Size (libc-0.2.94.crate) = 511713 bytes
-SHA1 (libmacchina-0.3.6.crate) = 9d1e64cd17ec3fab6defb092b309c545e2b2dc9b
-RMD160 (libmacchina-0.3.6.crate) = fa8576db0cbd2420c068a90ed84edfbf2e4ba71a
-SHA512 (libmacchina-0.3.6.crate) = c0fab9a9a600caef24b0a4cc4fc2d126f9f2cb7e0103f73cb252db23abf9cba18b1743f1b191bb51fe506c39511d72a338783d4dad2c8dd9275256a704d3ba97
-Size (libmacchina-0.3.6.crate) = 66312 bytes
+SHA1 (libmacchina-0.4.8.crate) = 458b55311f9ace3ce582638dce7a29e460be1dee
+RMD160 (libmacchina-0.4.8.crate) = 79e645ddbc4355426ebd1a0ae6ba24ab563aa091
+SHA512 (libmacchina-0.4.8.crate) = 9fad51be911cf68667bde30339310b19806fd702c3e87cf89441c92de25b705b48038e0ed5c770edeef39cf83a502e78931256165edcf4100ed8ab4df3c48dcb
+Size (libmacchina-0.4.8.crate) = 67929 bytes
 SHA1 (local_ipaddress-0.1.3.crate) = 2bc5ff74983a6ec9a896665f71ec379d637d839f
 RMD160 (local_ipaddress-0.1.3.crate) = 0d17ad819fa36006eed033a6398f0ac5c61e8967
 SHA512 (local_ipaddress-0.1.3.crate) = b63dac8a36821c1eceebfd05019f277c29e40c0bd06f7cf4ea275b5b34710ca9c15b36cb47c02b02e49621d6de813849f6acc104e0ac24acbcefd89b290b8869
@@ -128,10 +128,10 @@ SHA1 (log-0.4.14.crate) = 5e8f22c07bd48b28c2a0605b467cb85336a3db7e
 RMD160 (log-0.4.14.crate) = 91b8b87a9386f54c92b4625d69722c8871eb8b3a
 SHA512 (log-0.4.14.crate) = 796100167663d85a7bc4244cd305e9b3f0a1b1520764b63464698eb136318d0928c40c16f5d19d9f602a5bf769851275bbd48d66b088b0c37be7a6fb62def7cc
 Size (log-0.4.14.crate) = 34582 bytes
-SHA1 (macchina-0.8.21.tar.gz) = 126789466d0edd65d120f6f2165917c6a9224fd1
-RMD160 (macchina-0.8.21.tar.gz) = 0c2c6b1900a6576ffda85c0717632512cede27ba
-SHA512 (macchina-0.8.21.tar.gz) = 34701ce471f7a628bdce7a2b4458aa1874bcdb92237f34c521597c39751b3bab0b9f25c5ed420900ef9b9e5d890713261e78ce1edb670489bd418056a5bcb1d6
-Size (macchina-0.8.21.tar.gz) = 96122 bytes
+SHA1 (macchina-0.9.1.tar.gz) = 4f801dc0b66280ce1dc4cc82ec7e138cfa6b8b37
+RMD160 (macchina-0.9.1.tar.gz) = 239730abaf1940d5f30cbc8f4edd6d6f82f79f1a
+SHA512 (macchina-0.9.1.tar.gz) = 5afaf19b7e9f7f2076b1326840b872a8d20af11b095a767a728043e10b417bd65680439b7ba1dc6009c205993a585b56fa5cefc493ec4323ebdf0b1f86e7b9d0
+Size (macchina-0.9.1.tar.gz) = 96126 bytes
 SHA1 (mach-0.3.2.crate) = f7d5c12da3c8d17d1c86544e4e22320b2ab338b8
 RMD160 (mach-0.3.2.crate) = d15fae9a578ec70b31f078b450c2b645404b5ff0
 SHA512 (mach-0.3.2.crate) = 73622b37915f3445a57cbac5eb378bfee61f5a2383c0dd8bd7c29b5e46447405ebaeb706f3a3274e5afe37b0506afaf1511836cb8897d9d480a3abd41f18fa26
