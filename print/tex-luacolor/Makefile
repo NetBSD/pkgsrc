@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:41 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 10:56:32 markd Exp $
 
 DISTNAME=	luacolor
-PKGNAME=	tex-${DISTNAME}-1.15
-TEXLIVE_REV=	53933
+PKGNAME=	tex-${DISTNAME}-1.17
+TEXLIVE_REV=	57829
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luacolor
