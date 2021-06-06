@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/02/20 10:21:56 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/06/06 12:07:21 markd Exp $
 
-SHA1 (latex-base-dev.r57365.tar.xz) = 9f1a33d5c9f3073662f831bdf27b089bab2d6ce0
-RMD160 (latex-base-dev.r57365.tar.xz) = 732eb65266643983e5143d8dfd7bcc1af06024bc
-SHA512 (latex-base-dev.r57365.tar.xz) = 7b3cc16107a0dc283d7a2580e7f06b2e14636c456af21c7aa227f74751cce8fe744b6392c7fa9396735ee06731043a09865a5af1531d2717d0397c3864ac9f29
-Size (latex-base-dev.r57365.tar.xz) = 195944 bytes
+SHA1 (latex-base-dev.r59474.tar.xz) = 7f31578aef5ec94ee4b28a359455ac948eab55db
+RMD160 (latex-base-dev.r59474.tar.xz) = 3ffb70c3e78d70ddfdeab407e7c2c616e8534a35
+SHA512 (latex-base-dev.r59474.tar.xz) = 45020da589fc42d8a80be76c914724757cc9312a7bee821bfe1bdb54a975583904b01c45fa9dd4d46db962877204a7ace68500b98ce61a8ce75acbb498aa6bb4
+Size (latex-base-dev.r59474.tar.xz) = 215404 bytes
