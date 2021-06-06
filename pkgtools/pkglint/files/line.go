@@ -182,6 +182,7 @@ func (line *Line) String() string {
 //  fix.Errorf("Must not be ...")
 //  fix.Warnf("Should not be ...")
 //  fix.Notef("It is also possible ...")
+//  fix.Silent()
 //
 //  fix.Explain(
 //      "Explanation ...",

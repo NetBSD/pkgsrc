@@ -20,6 +20,8 @@ type Package struct {
 	dir     CurrPath   // The directory of the package, for resolving files
 	Pkgpath PkgsrcPath // e.g. "category/pkgdir"
 
+	Makefile *MkLines
+
 	EffectivePkgname     string  // PKGNAME or DISTNAME from the package Makefile, including nb13, can be empty
 	EffectivePkgbase     string  // EffectivePkgname without the version
 	EffectivePkgversion  string  // The version part of the effective PKGNAME, excluding nb13
@@ -216,6 +218,7 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	if mainLines == nil {
 		return nil, nil
 	}
+	pkg.Makefile = mainLines
 
 	G.checkRegCvsSubst(filename)
 	allLines := NewMkLines(NewLines("", nil), pkg, &pkg.vars)
@@ -1727,6 +1730,49 @@ func (pkg *Package) Includes(filename PackagePath) *MkLine {
 		mkline = pkg.conditionalIncludes[filename]
 	}
 	return mkline
+}
+
+// CanFixAddInclude tests whether the package Makefile follows the standard
+// form and thus allows to add additional '.include' directives.
+func (pkg *Package) CanFixAddInclude() bool {
+	mklines := pkg.Makefile
+	lastLine := mklines.mklines[len(mklines.mklines)-1]
+	return lastLine.Text == ".include \"../../mk/bsd.pkg.mk\""
+}
+
+// FixAddInclude adds an '.include' directive at the end of the package
+// Makefile.
+func (pkg *Package) FixAddInclude(includedFile PackagePath) {
+	mklines := pkg.Makefile
+
+	alreadyThere := false
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsInclude() && mkline.IncludedFile() == includedFile.AsRelPath() {
+			alreadyThere = true
+		}
+
+		// XXX: This low-level code should not be necessary.
+		// Instead, the added '.include' line should be a MkLine of its own.
+		if mkline.fix != nil {
+			expected := ".include \"" + includedFile.String() + "\"\n"
+			for _, rawLine := range mkline.fix.above {
+				if rawLine == expected {
+					alreadyThere = true
+				}
+			}
+		}
+	})
+	if alreadyThere {
+		return
+	}
+
+	lastLine := mklines.mklines[len(mklines.mklines)-1]
+	fix := lastLine.Autofix()
+	fix.Silent()
+	fix.InsertAbove(".include \"" + includedFile.String() + "\"")
+	fix.Apply()
+
+	mklines.SaveAutofixChanges()
 }
 
 // PlistContent lists the directories and files that appear in the

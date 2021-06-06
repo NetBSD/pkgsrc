@@ -399,11 +399,11 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 
 	switch {
 	case
-		action == Added && f[2] == "version",
-		action == Updated && f[2] == "to",
-		action == Downgraded && f[2] == "to",
-		action == Removed && (f[2] == "successor" || f[2] == "version" || n == 4),
-		(action == Renamed || action == Moved) && f[2] == "to":
+		action == Added && f[2] == "version" && n == 6,
+		action == Updated && f[2] == "to" && n == 6,
+		action == Downgraded && f[2] == "to" && n == 6,
+		action == Removed && ((f[2] == "successor" || f[2] == "version") && n == 6 || n == 4),
+		(action == Renamed || action == Moved) && f[2] == "to" && n == 6:
 		return &Change{
 			Location: line.Location,
 			Action:   action,
