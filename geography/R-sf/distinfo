@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/08 23:12:18 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 14:45:22 mef Exp $
 
-SHA1 (R/sf_0.9-5.tar.gz) = 40dc58bc65cd7730dc9f10767ba34f83f6e8d09f
-RMD160 (R/sf_0.9-5.tar.gz) = 7c8b3203f3053a529ba7c8d1ade21eebe6bfd940
-SHA512 (R/sf_0.9-5.tar.gz) = f70fbdeaa2de7fb55444002d2f38ed9eee646dd7fdfd82428a7fd5346c1e493c0b1ac653aa27b8f3661dea0dc3610b22a63199ccd636569ddae8466e83a937a6
-Size (R/sf_0.9-5.tar.gz) = 9001885 bytes
+SHA1 (R/sf_0.9-8.tar.gz) = f473644811645cd79d1a4d0155e446a9ca581e4c
+RMD160 (R/sf_0.9-8.tar.gz) = fc27a7e162db61558a50d09c60a8c344c5bca093
+SHA512 (R/sf_0.9-8.tar.gz) = 97fc24ade2557096e2c5974015683cbcb76b07311ca55ee4aaed860e6962de6793550cc17c24498c4f52e548b4363784b18aeae88f8a7622232375a67bb0afae
+Size (R/sf_0.9-8.tar.gz) = 4213253 bytes
