@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2021/05/24 19:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.162 2021/06/06 13:37:13 nia Exp $
 
 DISTNAME=	gedit-3.36.2
 PKGREVISION=	6
@@ -49,7 +49,7 @@ BUILDLINK_API_DEPENDS.gtksourceview4+=	gtksourceview4>=4.0.2
 .include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
