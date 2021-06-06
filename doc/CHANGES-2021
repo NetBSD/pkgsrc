@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3275 2021/06/06 14:45:42 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3276 2021/06/06 14:56:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-waldo to 0.2.5 [mef 2021-06-06]
 >>>>>>> 1.3274
 	Updated geography/R-sf to 0.9.8 [mef 2021-06-06]
+	Updated graphics/R-ggplot2 to 3.3.3 [mef 2021-06-06]
