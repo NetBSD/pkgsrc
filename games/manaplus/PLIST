@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/06 20:35:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/06 16:35:42 nia Exp $
 bin/dyecmd
 bin/manaplus
 man/man6/manaplus.6
 man/man6/manaplustest.6
-share/appdata/manaplus.appdata.xml
 share/applications/manaplus.desktop
 share/applications/manaplustest.desktop
+share/icons/hicolor/scalable/apps/manaplus.svg
 share/locale/ca/LC_MESSAGES/manaplus.mo
 share/locale/cs/LC_MESSAGES/manaplus.mo
 share/locale/de/LC_MESSAGES/manaplus.mo
@@ -202,7 +202,6 @@ share/manaplus/data/graphics/sprites/manaplus_emote.xml
 share/manaplus/data/graphics/sprites/manaplus_emotes.xml
 share/manaplus/data/graphics/sprites/manaplus_emotions.png
 share/manaplus/data/graphics/sprites/test.xml
-share/manaplus/data/help/about-tmw.txt
 share/manaplus/data/help/about.txt
 share/manaplus/data/help/chatcommands.txt
 share/manaplus/data/help/chatguild.txt
@@ -211,7 +210,6 @@ share/manaplus/data/help/commands.txt
 share/manaplus/data/help/download.txt
 share/manaplus/data/help/footer.txt
 share/manaplus/data/help/header.txt
-share/manaplus/data/help/idx/about-tmw.idx
 share/manaplus/data/help/idx/about.idx
 share/manaplus/data/help/idx/chatcommands.idx
 share/manaplus/data/help/idx/chatguild.idx
@@ -819,4 +817,4 @@ share/manaplus/data/translations/help/pt_BR.po
 share/manaplus/data/translations/help/ru.po
 share/manaplus/data/translations/help/zh_CN.po
 share/manaplus/data/translations/test/test1.po
-share/pixmaps/manaplus.png
+share/metainfo/manaplus.metainfo.xml
