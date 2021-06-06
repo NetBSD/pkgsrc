@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:39:50 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 22:11:49 markd Exp $
 
 DISTNAME=	ptex2pdf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20200520.0
-TEXLIVE_REV=	55219
+PKGNAME=	tex-${DISTNAME:S/./-/}-20200520.0.58632
+TEXLIVE_REV=	58632
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ptex2pdf
