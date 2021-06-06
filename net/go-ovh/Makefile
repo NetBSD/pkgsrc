@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2021/05/08 15:02:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2021/06/06 12:18:54 bsiegert Exp $
 
 DISTNAME=	go-ovh-0.20170102
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ovh/}
 GITHUB_PROJECT=	go-ovh
