@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/13 05:52:46 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/06/06 10:50:05 markd Exp $
 
-SHA1 (l3packages.doc.r57600.tar.xz) = ce697ce669af2716c07f9e4069a619bd5bc390d9
-RMD160 (l3packages.doc.r57600.tar.xz) = 01bd71f65a92e5e921302fefe6f1c2db46c187bc
-SHA512 (l3packages.doc.r57600.tar.xz) = 49fb75da45b418217f9a6b6d680ef4b8b46002948eb4a4d660bd95c1412ad1d88c73832a8a8ba0c2f8b5a795c9a5af5587a6de4c9aa6631ded07b85280c5e7fb
-Size (l3packages.doc.r57600.tar.xz) = 1753052 bytes
+SHA1 (l3packages.doc.r59425.tar.xz) = 32a7039fa95652571bab4e3709a764cacb942ad1
+RMD160 (l3packages.doc.r59425.tar.xz) = 720b81b26230e39b2a7b4b240cb02113d678da78
+SHA512 (l3packages.doc.r59425.tar.xz) = 85f511f59e0430b066a66a1b7e9291c75b0c8e4e38af4e2e424ab40f6a7414665b714ce429d090dab705104fcb4526877967dc703d84b37823edd3ab9c652aec
+Size (l3packages.doc.r59425.tar.xz) = 1807932 bytes
