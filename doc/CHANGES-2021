@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3263 2021/06/06 12:20:32 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3264 2021/06/06 12:25:39 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5168,3 +5168,32 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-ijson version 3.1.4 [js 2021-06-06]
 	Updated pkgtools/pkglint to 21.1.4 [rillig 2021-06-06]
 	Updated devel/R-diffobj to 0.3.4 [mef 2021-06-06]
+	Updated devel/tex-l3backend to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3backend-doc to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3kernel to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3kernel-doc to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3packages to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3packages-doc to 2021 [markd 2021-06-06]
+	Updated devel/tex-l3experimental to 2021 [markd 2021-06-06]
+	Updated print/tex-luacolor to 1.17 [markd 2021-06-06]
+	Updated print/tex-luacolor-doc to 1.17 [markd 2021-06-06]
+	Updated devel/tex-lualibs to 2.74 [markd 2021-06-06]
+	Updated devel/tex-lualibs-doc to 2.74 [markd 2021-06-06]
+	Updated fonts/tex-luaotfload to 3.18 [markd 2021-06-06]
+	Updated fonts/tex-luaotfload-doc to 3.18 [markd 2021-06-06]
+	Updated print/tex-luatexja to 20210521.0 [markd 2021-06-06]
+	Updated print/tex-luatexja-doc to 20210521.0 [markd 2021-06-06]
+	Updated print/tex-context to 2021 [markd 2021-06-06]
+	Updated print/tex-context-doc to 2021 [markd 2021-06-06]
+	Updated print/tex-context-vim to 2021 [markd 2021-06-06]
+	Updated print/tex-context-vim-doc to 2021 [markd 2021-06-06]
+	Updated print/tex-csplain to 2021 [markd 2021-06-06]
+	Updated print/tex-csquotes to 5.2l [markd 2021-06-06]
+	Updated print/tex-csquotes-doc to 5.2l [markd 2021-06-06]
+	Updated print/tex-cweb to 4.2 [markd 2021-06-06]
+	Updated print/tex-cweb-doc to 4.2 [markd 2021-06-06]
+	Updated print/tex-latex-base-dev to 20211201pre0 [markd 2021-06-06]
+	Updated print/tex-latex-base-dev-doc to 20211201pre0 [markd 2021-06-06]
+	Updated print/tex-make4ht to 0.3g [markd 2021-06-06]
+	Updated print/tex-make4ht-doc to 0.3g [markd 2021-06-06]
+	Updated print/tex-plain to 3.141592653.57963 [markd 2021-06-06]
