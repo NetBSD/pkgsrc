@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/21 10:32:46 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 11:14:36 markd Exp $
 
-SHA1 (luatexja.r57741.tar.xz) = 29dac014f98bdf05729c2e08706c9e51f1636bde
-RMD160 (luatexja.r57741.tar.xz) = 9244bae5a99804e9b4993b01d42fa9b87c0cb54e
-SHA512 (luatexja.r57741.tar.xz) = d50fe0fb65141beb9501a5288490be927a76432927a5dfb1b60e5298d2086dd7413e91e54bdc5f5742be9cb499c5a99c259df87e3c60a1d47c4db6d2954a28a3
-Size (luatexja.r57741.tar.xz) = 190120 bytes
+SHA1 (luatexja.r59299.tar.xz) = bc4923297beff7fafe0c946043bcfbd355a2f042
+RMD160 (luatexja.r59299.tar.xz) = 41e846b1320301068edd10746eaa7328d0032bdd
+SHA512 (luatexja.r59299.tar.xz) = f8f833c5d0a7547f10dc6d13cdabb488e009d1cf1cc54f39444d18f050931265473ca9ca346e87ce96a4182344cade85eb595469ed669363c444d006cb2cdf4a
+Size (luatexja.r59299.tar.xz) = 190056 bytes
