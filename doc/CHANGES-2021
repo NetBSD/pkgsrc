@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3265 2021/06/06 12:29:40 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3266 2021/06/06 12:34:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5198,3 +5198,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-make4ht-doc to 0.3g [markd 2021-06-06]
 	Updated print/tex-plain to 3.141592653.57963 [markd 2021-06-06]
 	Updated devel/R-gert to 1.3.0 [mef 2021-06-06]
+	Updated print/tex-siunitx to 3.0.10 [markd 2021-06-06]
+	Updated print/tex-siunitx-doc to 3.0.10 [markd 2021-06-06]
