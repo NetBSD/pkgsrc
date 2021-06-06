@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2021/03/03 10:09:13 mrg Exp $
+# $NetBSD: Makefile,v 1.97 2021/06/06 13:38:43 nia Exp $
 #
 
 DISTNAME=	bozohttpd-20210227
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,13 +10,21 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://www.eterna.com.au/bozohttpd/
 COMMENT=	Bozotic HTTP server; small and secure
+LICENSE=	2-clause-bsd
+
+BOZO_CFLAGS+=		-DNO_BLOCKLIST_SUPPORT
+BOZO_CFLAGS+=		-D_GNU_SOURCE -D_DEFAULT_SOURCE
 
 .include "options.mk"
 
-# This package is IP family agnostic.
-BUILD_DEFS+=		IPV6_READY
-
 MAKE_FILE=		Makefile.boot
+
+# Honor pkgsrc's optimization settings, necessary when
+# combined with FORTIFY_SOURCE on e.g. Linux.
+MAKE_FLAGS+=		OPT=${CFLAGS:Q}
+
+# Apply our settings.
+MAKE_FLAGS+=		LOCAL_CFLAGS=${BOZO_CFLAGS:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths in manual page.
@@ -32,5 +41,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/bozohttpd.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
