@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.12 2021/05/31 13:30:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.13 2021/06/06 09:44:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -100,4 +100,13 @@ www/squid4: security fix
 
 Pullup ticket #6466 - requested by taca
 databases/mysql57-client: security fix
+
+Pullup ticket #6467 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6468 - requested by nia
+www/firefox78-l10n: dependent update
+
+Pullup ticket #6468 - requested by nia
+www/firefox78-l10n: dependent update
 
