@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/06 08:07:17 mef Exp $
+
+SHA1 (R/proxy_0.4-25.tar.gz) = c1470651daacfa0739195e45eaedc7f222785df5
+RMD160 (R/proxy_0.4-25.tar.gz) = b213684b7ed087f4b08c6f06472a8cdf156fca68
+SHA512 (R/proxy_0.4-25.tar.gz) = c9bd65fb0901892b4bf405a301cc5ce9abcee0000afd1fbbb9bf310d3e9f0cc5a5a711b1c430f4c4c34c98e5b08be0405dc4545ec063f1655715eb365d49bce7
+Size (R/proxy_0.4-25.tar.gz) = 116070 bytes
