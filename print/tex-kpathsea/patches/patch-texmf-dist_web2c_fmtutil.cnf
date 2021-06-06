@@ -1,16 +1,15 @@
-$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.5 2020/05/10 03:56:41 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.6 2021/06/06 01:20:41 markd Exp $
 
 start with nothing set. populated by TEX_FORMATS
 
---- texmf-dist/web2c/fmtutil.cnf.orig	2020-04-15 23:56:36.000000000 +0000
+--- texmf-dist/web2c/fmtutil.cnf.orig	2020-10-03 00:49:48.000000000 +0000
 +++ texmf-dist/web2c/fmtutil.cnf
-@@ -41,120 +41,3 @@
+@@ -41,119 +41,3 @@
  # 5) The entries in the main TeX Live fmtutil.cnf are created from the
  #    AddFormat directives in (ultimately) the *.tlpsrc files. Don't edit here.
  #
 -# from aleph:
 -aleph aleph - *aleph.ini
--lamed aleph language.dat *lambda.ini
 -#
 -# from amstex:
 -amstex pdftex - -translate-file=cp227.tcx *amstex.ini
