@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/02/15 04:25:53 markd Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/06 11:34:20 markd Exp $
 
 DISTNAME=	context-vim.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56356
-TEXLIVE_REV=	56356
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	59432
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-vim

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/02/15 04:25:53 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/06/06 11:34:20 markd Exp $
 
-SHA1 (context-vim.doc.r56356.tar.xz) = 3867e2e3f6e0c76509009d4954b11d89e76d79ed
-RMD160 (context-vim.doc.r56356.tar.xz) = da8a1d08d52aaeb6c23ec949b2b9c546d74e772f
-SHA512 (context-vim.doc.r56356.tar.xz) = 296efd4abe29b99f51fa6cecc7b1dfbd894cf7ed769a6e65daa45c2f85c14fab6f2ca967cf3900cd76e847cab355114d8404ba1a3195d8a4de98a9f16af335a4
-Size (context-vim.doc.r56356.tar.xz) = 10780 bytes
+SHA1 (context-vim.doc.r59432.tar.xz) = 362293a5a99d333a6bd14600c24042c2f47b363d
+RMD160 (context-vim.doc.r59432.tar.xz) = d9e3bfa775dde82e2677a594add991696ee1219c
+SHA512 (context-vim.doc.r59432.tar.xz) = e624a8792675006a323e3ac8683fb98a831c0d0da32111b16fea5026ba0bd626fdc010c9480d2278856e08274d85319a7c8eb83ea6f0acd8936dddb9254627d1
+Size (context-vim.doc.r59432.tar.xz) = 10808 bytes
