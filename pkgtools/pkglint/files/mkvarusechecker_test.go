@@ -524,6 +524,42 @@ func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__no_buildlink3_data(c
 		"WARN: module.mk:2: Buildlink identifier \"package\" is not known in this package.")
 }
 
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__curses_ok(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/curses.buildlink3.mk")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.curses}",
+		".include \"../../mk/curses.buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__curses_bad(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/curses.buildlink3.mk")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.curses}",
+		// does not include mk/curses.buildlink3.mk
+	)
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: module.mk:2: Buildlink identifier \"curses\" is not known in this package.")
+}
+
 func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__mysql_ok(c *check.C) {
 	t := s.Init(c)
 
