@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/13 05:54:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/06/06 10:51:46 markd Exp $
 share/texmf-dist/tex/latex/l3experimental/l3benchmark/l3benchmark.sty
 share/texmf-dist/tex/latex/l3experimental/l3bitset/l3bitset.sty
-share/texmf-dist/tex/latex/l3experimental/l3color/l3color.sty
 share/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
 share/texmf-dist/tex/latex/l3experimental/l3graphics/l3graphics.sty
-share/texmf-dist/tex/latex/l3experimental/l3pdf/l3pdf.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-format.sty
 share/texmf-dist/tex/latex/l3experimental/l3sys-shell/l3sys-shell.sty
 share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
