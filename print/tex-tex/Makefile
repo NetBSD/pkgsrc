@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/05/10 04:32:06 markd Exp $
+# $NetBSD: Makefile,v 1.14 2021/06/06 02:04:52 markd Exp $
 
 DISTNAME=	tex
-PKGNAME=	tex-${DISTNAME}-3.14159265
-PKGREVISION=	1
-TEXLIVE_REV=	33736
+PKGNAME=	tex-${DISTNAME}-3.141592653
+TEXLIVE_REV=	57972
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tex
@@ -17,6 +16,5 @@ SUPERSEDES=	tex-bin-tex<2009
 TEX_FORMATS+=	"tex tex - tex.ini\\n"
 TEX_TEXMF_DIRS=	# empty
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
