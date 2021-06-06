@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/06 10:05:42 js Exp $
+
+SHA1 (ijson-3.1.4.tar.gz) = 80412301b01447a83a6bcb263d86c29510b4ffee
+RMD160 (ijson-3.1.4.tar.gz) = 834e7309a93a8e799b13577120964f7ae3e7a0c1
+SHA512 (ijson-3.1.4.tar.gz) = 7e64c4fec84fd6942c83809849eefc1c299c597524c0fe73e2cdc542e113faad8f35cc5219b0bc4e05842ac69d8608089d7cbb2dc006e404c184505392b21baa
+Size (ijson-3.1.4.tar.gz) = 125725 bytes
