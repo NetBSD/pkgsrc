@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/06 02:33:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/06 01:33:13 markd Exp $
 bin/texindy
 bin/xindy
 share/texmf-dist/scripts/xindy/texindy.pl
@@ -279,17 +279,19 @@ share/texmf-dist/xindy/modules/lang/norwegian/utf8-lang.xdy
 share/texmf-dist/xindy/modules/lang/norwegian/utf8-test.xdy
 share/texmf-dist/xindy/modules/lang/norwegian/utf8.xdy
 share/texmf-dist/xindy/modules/lang/persian/README
+share/texmf-dist/xindy/modules/lang/persian/source/make-rules.pl
+share/texmf-dist/xindy/modules/lang/persian/source/test.xdy
+share/texmf-dist/xindy/modules/lang/persian/source/variant1-utf8.pl.in
+share/texmf-dist/xindy/modules/lang/persian/source/variant2-utf8.pl.in
+share/texmf-dist/xindy/modules/lang/persian/source/variant3-utf8.pl.in
 share/texmf-dist/xindy/modules/lang/persian/variant1-utf8-lang.xdy
 share/texmf-dist/xindy/modules/lang/persian/variant1-utf8-test.xdy
-share/texmf-dist/xindy/modules/lang/persian/variant1-utf8.pl.in
 share/texmf-dist/xindy/modules/lang/persian/variant1-utf8.xdy
 share/texmf-dist/xindy/modules/lang/persian/variant2-utf8-lang.xdy
 share/texmf-dist/xindy/modules/lang/persian/variant2-utf8-test.xdy
-share/texmf-dist/xindy/modules/lang/persian/variant2-utf8.pl.in
 share/texmf-dist/xindy/modules/lang/persian/variant2-utf8.xdy
 share/texmf-dist/xindy/modules/lang/persian/variant3-utf8-lang.xdy
 share/texmf-dist/xindy/modules/lang/persian/variant3-utf8-test.xdy
-share/texmf-dist/xindy/modules/lang/persian/variant3-utf8.pl.in
 share/texmf-dist/xindy/modules/lang/persian/variant3-utf8.xdy
 share/texmf-dist/xindy/modules/lang/polish/cp1250-lang.xdy
 share/texmf-dist/xindy/modules/lang/polish/cp1250-test.xdy

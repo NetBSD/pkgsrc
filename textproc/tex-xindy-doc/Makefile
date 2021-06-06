@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/15 04:03:20 markd Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/06 01:33:13 markd Exp $
 
 DISTNAME=	xindy.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.5.1.55330
-TEXLIVE_REV=	55330
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.5.1.59003
+TEXLIVE_REV=	59003
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xindy
