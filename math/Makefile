@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2021/06/03 10:45:23 pin Exp $
+# $NetBSD: Makefile,v 1.504 2021/06/06 08:09:58 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -89,6 +89,7 @@ SUBDIR+=	R-plyr
 SUBDIR+=	R-poweRlaw
 SUBDIR+=	R-prettyunits
 SUBDIR+=	R-prob
+SUBDIR+=	R-proxy
 SUBDIR+=	R-psych
 SUBDIR+=	R-quadprog
 SUBDIR+=	R-quantreg
