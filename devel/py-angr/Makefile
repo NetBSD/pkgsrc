@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/09/29 04:06:46 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/06 01:36:13 mef Exp $
 
 .include "version.mk"
 
@@ -32,6 +32,7 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	LIBDIR=${LIBDIR:Q}
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB:Q}/pyvex/lib
 
 DEPENDS+=	${PYPKGPREFIX}-CppHeaderParser-[0-9]*:../../devel/py-CppHeaderParser
 DEPENDS+=	${PYPKGPREFIX}-archinfo>=${ANGR_VERSION}:../../devel/py-archinfo
