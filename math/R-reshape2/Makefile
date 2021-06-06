@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:53 brook Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/06 06:38:29 mef Exp $
 
 R_PKGNAME=	reshape2
-R_PKGVER=	1.4.3
-CATEGORIES=	math
+R_PKGVER=	1.4.4
+#CATEGORIES=	math
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Flexibly reshape data: a reboot of the reshape package
