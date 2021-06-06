@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/06/06 15:40:28 mef Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/06 23:48:13 mef Exp $
 
 R_PKGNAME=	htmltools
 R_PKGVER=	0.5.1.1
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
+DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
 
 # Packages suggested but not available:  'ragg'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
