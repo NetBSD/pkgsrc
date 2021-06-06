@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/07/31 20:39:14 brook Exp $
+$NetBSD: distinfo,v 1.11 2021/06/06 15:12:59 mef Exp $
 
-SHA1 (R/xts_0.11-2.tar.gz) = 6da46e0ef460bcd45b7913a18179074b6443dae5
-RMD160 (R/xts_0.11-2.tar.gz) = 78cd00f608fbda7df93017b1b54b5068c30cf0b0
-SHA512 (R/xts_0.11-2.tar.gz) = d8c2008d9e91dbbaa66564040383ebc135bfd9cd05a7d2bb43e585484ad50695d67d9e51a611c159d77f6887ddc2677f26b9479c63ec2f139c7fb9c84842ddae
-Size (R/xts_0.11-2.tar.gz) = 537024 bytes
+SHA1 (R/xts_0.12.1.tar.gz) = a6d7d51851fbb99faf965d04cebd1e72febe8f05
+RMD160 (R/xts_0.12.1.tar.gz) = b7924812705d7255b88c8ac13613b1c0640b35ec
+SHA512 (R/xts_0.12.1.tar.gz) = ede6128a3222e8979a5dc2786c08b28061d3c475343b9124f866ac8b5bb84763db41ec56b8d158afb5db6396bdec43aadda9bba1929e6eba6b0f33d14efda94d
+Size (R/xts_0.12.1.tar.gz) = 517875 bytes
