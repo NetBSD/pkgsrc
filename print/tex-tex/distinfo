@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:02:49 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/06/06 02:04:52 markd Exp $
 
-SHA1 (tex-tex-33736/tex.tar.xz) = 1b34d5d50b554b6d1ea8259dbbc9620b6954815d
-RMD160 (tex-tex-33736/tex.tar.xz) = 2a962fe544aec8ba9da986ed4e503ee1a6ad5125
-SHA512 (tex-tex-33736/tex.tar.xz) = e39889fd28d8f03e6fba44445230001f8b3ea36f15b2bd13f89c2734fece2c5f7f8f95b9a26bc045d5e48bf5a693314f2677973062d4a61f2fbbc2074fc73fea
-Size (tex-tex-33736/tex.tar.xz) = 792 bytes
+SHA1 (tex.r57972.tar.xz) = ecaea3978f3e6be704f3c586d76040d4190a687e
+RMD160 (tex.r57972.tar.xz) = df7f63d1f068e7260bb5b08cbdbca0e3571df350
+SHA512 (tex.r57972.tar.xz) = e38f62fcc5ccee22a909eae5ea196e055eae59eedc652ce9788a3b4520995e97f64c683f1ba940853a06030a7ea6f1d749ed4dda1cb30433f87f5f9cdce5a9a7
+Size (tex.r57972.tar.xz) = 896 bytes
