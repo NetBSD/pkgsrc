@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.114 2021/04/17 09:41:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.115 2021/06/06 09:03:31 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -251,9 +251,6 @@ ${PYSITELIB}/youtube_dl/extractor/bitchute.pyo
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.py
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.pyc
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.pyo
-${PYSITELIB}/youtube_dl/extractor/blinkx.py
-${PYSITELIB}/youtube_dl/extractor/blinkx.pyc
-${PYSITELIB}/youtube_dl/extractor/blinkx.pyo
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.py
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.pyc
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.pyo
@@ -1457,6 +1454,9 @@ ${PYSITELIB}/youtube_dl/extractor/playplustv.pyo
 ${PYSITELIB}/youtube_dl/extractor/plays.py
 ${PYSITELIB}/youtube_dl/extractor/plays.pyc
 ${PYSITELIB}/youtube_dl/extractor/plays.pyo
+${PYSITELIB}/youtube_dl/extractor/playstuff.py
+${PYSITELIB}/youtube_dl/extractor/playstuff.pyc
+${PYSITELIB}/youtube_dl/extractor/playstuff.pyo
 ${PYSITELIB}/youtube_dl/extractor/playtvak.py
 ${PYSITELIB}/youtube_dl/extractor/playtvak.pyc
 ${PYSITELIB}/youtube_dl/extractor/playtvak.pyo
