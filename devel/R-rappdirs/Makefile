@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 12:05:31 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 12:59:29 mef Exp $
 
 R_PKGNAME=	rappdirs
-R_PKGVER=	0.3.1
+R_PKGVER=	0.3.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
