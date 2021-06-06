@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/22 10:20:54 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 22:53:07 markd Exp $
 
-SHA1 (uplatex.r57186.tar.xz) = 34900a5bff8cd0d9d51001fe0bc584de462546ff
-RMD160 (uplatex.r57186.tar.xz) = 2eea16e5b32e9acd13aede8761319744fb612221
-SHA512 (uplatex.r57186.tar.xz) = e3fe867719f3e9dffba2d93de857e96e7db105c02aafb7cb5484fb19f4862c4e84a658930bd236dfd3693d829bf312c57665a554622b0aace50ed20ef14fd968
-Size (uplatex.r57186.tar.xz) = 14748 bytes
+SHA1 (uplatex.r59450.tar.xz) = be2df8db942d94125807effd9a0fd3007e00e0e7
+RMD160 (uplatex.r59450.tar.xz) = 44050c344bb9525bf68e7af9801cd49738ddbe8f
+SHA512 (uplatex.r59450.tar.xz) = 6d9c990c0458138c3753cb8ef1d0ae075ed8322cfdd1e4173374fc37f6918b951152f3e2385b3d24f0278e20c6d0da9a256fda2db3d0a3869cb000ee9f8a99a2
+Size (uplatex.r59450.tar.xz) = 14828 bytes
