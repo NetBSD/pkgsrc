@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3260 2021/06/06 09:32:36 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3261 2021/06/06 10:06:04 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5165,3 +5165,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.4.14 [taca 2021-06-06]
 	Updated chat/element-web to 1.7.29 [js 2021-06-06]
 	Updated devel/tig to 2.5.4 [fcambus 2021-06-06]
+	Added devel/py-ijson version 3.1.4 [js 2021-06-06]
