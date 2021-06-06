@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 12:05:31 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 12:59:29 mef Exp $
 
-SHA1 (R/rappdirs_0.3.1.tar.gz) = 0c39acd92eead9747f7c6847a661bf96ac1d19c4
-RMD160 (R/rappdirs_0.3.1.tar.gz) = ff88b3d548e368c9d02f03180bf1d8626cdd57b0
-SHA512 (R/rappdirs_0.3.1.tar.gz) = 76c9752d82561b9eda8fc3d604f32fff9b785c3a9c210b167a7e131abe7a955c106e8ea664c304953008a88e21e25a382c4b02972311698e6525e119a3ed8360
-Size (R/rappdirs_0.3.1.tar.gz) = 12838 bytes
+SHA1 (R/rappdirs_0.3.3.tar.gz) = 2eda06993448439d374a71358a71cba353b61acf
+RMD160 (R/rappdirs_0.3.3.tar.gz) = 04583420476472a116c94bd2ade1db5b0a15428a
+SHA512 (R/rappdirs_0.3.3.tar.gz) = e44bbcf2d113d92751660c73fc2023270097dc7da7ef15ab7ae70ed8f9709f14646b5b6ea90af465f728db55936736015959bab19692b3e4ca45a5c5ca62fb7b
+Size (R/rappdirs_0.3.3.tar.gz) = 12288 bytes
