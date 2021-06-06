@@ -359,18 +359,81 @@ func (s *Suite) Test_NewByteSet(c *check.C) {
 }
 
 // Demonstrates how to specify a byte set that includes a hyphen,
-// since that is also used for byte ranges.
-// The hyphen must be written as ---, which is a range from hyphen to hyphen.
-func (s *Suite) Test_NewByteSet__range_hyphen(c *check.C) {
+// since that character is also used for byte ranges.
+// The hyphen is written as ---, which is a range from hyphen to hyphen.
+func (s *Suite) Test_NewByteSet__range_hyphen_beginning(c *check.C) {
 	set := NewByteSet("---a-z")
 
-	expected := "abcdefghijklmnopqrstuvwxyz-"
+	var actual strings.Builder
 	for i := 0; i < 256; i++ {
-		c.Check(
-			set.Contains(byte(i)),
-			equals,
-			strings.IndexByte(expected, byte(i)) != -1)
+		if set.Contains(byte(i)) {
+			actual.WriteByte(byte(i))
+		}
 	}
+
+	c.Check(actual.String(), equals, "-abcdefghijklmnopqrstuvwxyz")
+}
+
+// The byte set "x---a" is interpreted as 3 parts: "x--", "-", "a".
+//
+// The range "x--" is empty since U+0078 'x' comes later in Unicode than
+// U+002D '-'.
+func (s *Suite) Test_NewByteSet__range_hyphen_middle(c *check.C) {
+	set := NewByteSet("x---a")
+
+	var actual strings.Builder
+	for i := 0; i < 256; i++ {
+		if set.Contains(byte(i)) {
+			actual.WriteByte(byte(i))
+		}
+	}
+
+	c.Check(actual.String(), equals, "-a")
+}
+
+// When a hyphen is listed at the very beginning, it is not considered part
+// of a byte range but interpreted literally.
+func (s *Suite) Test_NewByteSet__hyphen_beginning(c *check.C) {
+	set := NewByteSet("-ax")
+
+	var actual strings.Builder
+	for i := 0; i < 256; i++ {
+		if set.Contains(byte(i)) {
+			actual.WriteByte(byte(i))
+		}
+	}
+
+	c.Check(actual.String(), equals, "-ax")
+}
+
+// When a hyphen is listed directly after a range ('+-+' in this case),
+// it is interpreted literally.
+func (s *Suite) Test_NewByteSet__hyphen_after_range(c *check.C) {
+	set := NewByteSet("+-+-")
+
+	var actual strings.Builder
+	for i := 0; i < 256; i++ {
+		if set.Contains(byte(i)) {
+			actual.WriteByte(byte(i))
+		}
+	}
+
+	c.Check(actual.String(), equals, "+-")
+}
+
+// When a hyphen is listed at the very end, it is not considered part
+// of a byte range but interpreted literally.
+func (s *Suite) Test_NewByteSet__hyphen_end(c *check.C) {
+	set := NewByteSet("ax-")
+
+	var actual strings.Builder
+	for i := 0; i < 256; i++ {
+		if set.Contains(byte(i)) {
+			actual.WriteByte(byte(i))
+		}
+	}
+
+	c.Check(actual.String(), equals, "-ax")
 }
 
 func (s *Suite) Test_ByteSet_Inverse(c *check.C) {

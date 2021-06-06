@@ -700,7 +700,7 @@ func (mkline *MkLine) RelMkLine(other *MkLine) string {
 }
 
 var (
-	LowerDash                  = textproc.NewByteSet("a-z---")
+	LowerDash                  = textproc.NewByteSet("a-z-")
 	AlnumDot                   = textproc.NewByteSet("A-Za-z0-9_.")
 	unescapeMkCommentSafeChars = textproc.NewByteSet("\\#[\n").Inverse()
 )
@@ -1327,8 +1327,10 @@ func (ind *Indentation) CheckFinish(filename CurrPath) {
 // TODO: The allowed characters differ between the basename and the parameter
 //  of the variable. The square bracket is only allowed in the parameter part.
 var (
-	VarbaseBytes  = textproc.NewByteSet("A-Za-z_0-9+---")
-	VarparamBytes = textproc.NewByteSet("A-Za-z_0-9#*+---./[")
+	// TODO: remove the ','
+	VarbaseBytes = textproc.NewByteSet("A-Za-z_0-9-+,")
+	// TODO: Check whether the ',' really needs to be here.
+	VarparamBytes = textproc.NewByteSet("A-Za-z_0-9-#*+,./[")
 )
 
 func MatchMkInclude(text string) (m bool, indentation, directive string, filename RelPath) {
