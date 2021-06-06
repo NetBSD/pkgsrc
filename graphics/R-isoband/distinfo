@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/06 06:50:17 mef Exp $
+
+SHA1 (R/isoband_0.2.4.tar.gz) = eb52858f54c9142ddc0bb8b9a52c2e244a271275
+RMD160 (R/isoband_0.2.4.tar.gz) = b35a929bae4ae75c446e896f36e49f6f2990349b
+SHA512 (R/isoband_0.2.4.tar.gz) = 8d83afd3b5cecc33721e52b9241fd7cb1fde6b8d9e35da6ca8afbda63e603f71d4208fdb22777d6a992bf26eb66680d85d44ad267cdf89a2a6007afbe2ee8cde
+Size (R/isoband_0.2.4.tar.gz) = 2010708 bytes
