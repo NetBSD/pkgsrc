@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3283 2021/06/06 17:00:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3284 2021/06/06 21:05:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 0.9.1 [pin 2021-06-06]
 	Updated games/manaplus to 2.1.3.17 [nia 2021-06-06]
 	Updated games/gemrb to 0.8.8 [nia 2021-06-06]
+	Updated x11/libX11 to 1.7.2 [wiz 2021-06-06]
