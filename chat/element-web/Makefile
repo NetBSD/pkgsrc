@@ -1,10 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2021/05/01 03:54:04 js Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/06 09:17:49 js Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
-PKGNAME=	element-web-1.7.26
+PKGNAME=	element-web-1.7.29
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vector-im/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+# GPG key:
+#   https://packages.riot.im/element-release-key.asc
+#   712B FBEE 92DC A452 52DB  17D7 C7BE 97EF A179 B100
+#   
+# GPG signature:
+#   https://github.com/vector-im/element-web/releases/download/v${PKGVERSION_NOREV}/element-v${PKGVERSION_NOREV}.tar.gz.asc
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://element.io/
