@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/07 03:15:22 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 07:57:48 mef Exp $
 
-SHA1 (R/rgeos_0.5-2.tar.gz) = 0eeda0189516f93dde387986a79ea400c76c33f3
-RMD160 (R/rgeos_0.5-2.tar.gz) = 0178e7677a348f2257a1b95acf421ada1d567d3c
-SHA512 (R/rgeos_0.5-2.tar.gz) = 91aadf718e0e7e0dcfd96e0222acc86765e34e46732cc4d1820d530dc86ce3815b9585375cd82104899a2c564dee62b0f9c43b00161a99c8f9a750255f928551
-Size (R/rgeos_0.5-2.tar.gz) = 258710 bytes
+SHA1 (R/rgeos_0.5-5.tar.gz) = d2ed2105f925a0219665655fc66467815d0f5365
+RMD160 (R/rgeos_0.5-5.tar.gz) = 93d9054d591385fedcc684cc49b269cbf4fea872
+SHA512 (R/rgeos_0.5-5.tar.gz) = 4f440547c85a9515b1872bda1298592869dec6a83ec99c22beddb004468d8ae87cbc425170d57749c2a0ea76cc8542ea99b28901b989eed43c67a661af71231a
+Size (R/rgeos_0.5-5.tar.gz) = 259567 bytes
