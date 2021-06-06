@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3278 2021/06/06 15:13:12 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3279 2021/06/06 15:19:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5216,3 +5216,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/R-ggplot2 to 3.3.3 [mef 2021-06-06]
 	Updated math/R-zoo to 1.8.9 [mef 2021-06-06]
 	Updated math/R-xts to 0.12.1 [mef 2021-06-06]
+	Updated devel/R-IRdisplay to 1.0 [mef 2021-06-06]
