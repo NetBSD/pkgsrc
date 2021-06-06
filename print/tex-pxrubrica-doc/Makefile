@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:48:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/06 22:23:49 markd Exp $
 
 DISTNAME=	pxrubrica.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3c
-TEXLIVE_REV=	48421
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3d
+TEXLIVE_REV=	58168
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxrubrica

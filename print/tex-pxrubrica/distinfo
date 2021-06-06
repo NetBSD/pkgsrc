@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/21 10:48:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/06/06 22:23:49 markd Exp $
 
-SHA1 (pxrubrica.r48421.tar.xz) = 028fed3d536b1700f280d9babea0aa2002825130
-RMD160 (pxrubrica.r48421.tar.xz) = dcbc8e1004073c15fe2ca41dbe3db03338f829a1
-SHA512 (pxrubrica.r48421.tar.xz) = 42de048a96a4d552726de6abea4e8903f7c952c02259001d66655f449bc4edc7bb25b351be594bca205177f31f09525c9b986629c6a964e8a2b50c66aa01e1e5
-Size (pxrubrica.r48421.tar.xz) = 13696 bytes
+SHA1 (pxrubrica.r58168.tar.xz) = 746ee90f12b00a70616941868c5f4e71543bd822
+RMD160 (pxrubrica.r58168.tar.xz) = 144b9188db508d45387dc91036343ef57ac0a10b
+SHA512 (pxrubrica.r58168.tar.xz) = bde5699cc92196e844b052c9116bd081960a34b239bd9fe5271f0866be3c4edf0a8bf8932a99c440dc58db7624c58fc3af4e2d2c0f76230f1248da21ce4410a9
+Size (pxrubrica.r58168.tar.xz) = 13660 bytes
