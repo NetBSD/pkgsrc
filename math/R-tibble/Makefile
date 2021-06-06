@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/06/06 15:38:02 mef Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/06 23:39:26 mef Exp $
 
 R_PKGNAME=	tibble
 R_PKGVER=	3.1.2
@@ -13,10 +13,9 @@ DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-fansi>=0.4.0:../../devel/R-fansi
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang
-DEPENDS+=	R-pillar>=1.3.1:../../misc/R-pillar
+DEPENDS+=	R-pillar>=1.4.0:../../misc/R-pillar
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr-[0-9]*:../../devel/R-magrittr
-
 
 #Packages suggested but not available:
 #  'bench', 'bit64', 'blob', 'DiagrammeR', 'dplyr', 'formattable',
