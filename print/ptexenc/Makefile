@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/05/10 03:56:39 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/06 01:17:19 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	ptexenc-1.3.8
+PKGNAME=	ptexenc-1.3.9
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/texlive/
