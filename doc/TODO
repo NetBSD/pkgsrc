@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20737 2021/06/06 06:54:32 mef Exp $
+$NetBSD: TODO,v 1.20738 2021/06/06 11:57:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,6 +365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.0.11.14
 	o ImageMagick6-6.9.12.8
 	o Inter-UI-3.18
 	o JBidwatcher-2.5.6 [wants launch4j]
@@ -544,6 +545,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o album-4.17
 	o alephone-20150620
 	o alevt-1.6.2
+	o alsa-lib-1.2.5
 	o alsa-plugins-1.1.0
 	o amass-3.12.2
 	o amavis-perl-0.3.12 [called just amavis]
@@ -1005,6 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.5.4
 	o google-glog-2.2.2
 	o goreman-0.3.7
 	o gossip-0.31
@@ -1131,6 +1134,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ipw-firmware-1.3
 	o iroffer-1.4b01
 	o irrtoolset5-5.1.3
+	o ispell-3.4.04
 	o ispell-de-20161207
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
@@ -1301,6 +1305,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmilter-8.16.1
 	o libmtag-0.3.6
 	o libobjc2-2.1
+	o libogg-1.3.5
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpcap-1.10.0
@@ -1608,6 +1613,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oto-0.5
 	o owl-lisp-0.1.16
 	o p0f-3.09b
+	o p11-kit-0.24.0
 	o p5-Alien-Hunspell-0.17
 	o p5-App-CLI-0.52
 	o p5-App-Cmd-0.333
@@ -1781,7 +1787,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-yubico-2.21
-	o pandoc-2.14
+	o pandoc-2.14.0.1
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
@@ -1859,6 +1865,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-21.06.1
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1896,7 +1903,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o proftpd-sqlite-1.3.7a
 	o proj-8.0.0
 	o prosody-0.11.8
-	o protobuf-3.17.1
+	o protobuf-3.17.2
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1915,6 +1922,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-acora-2.3
 	o py-astroplan-0.8
 	o py-astroquery-0.4
+	o py-cairo-1.20.1
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
@@ -2177,7 +2185,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
-	o texlab-3.0.1
+	o texlab-3.1.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadingbuildingblocks-2021.2.0
@@ -2225,6 +2233,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.52.4
 	o varnish-5.1.3
 	o varnish-6.0
 	o vault-1.7.1
@@ -2379,6 +2388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.7.0
 	o zopeedit-0.8
+	o zsh-autosuggestions-0.7.0
 
 Licenses of packages
 ====================
