@@ -358,6 +358,7 @@ func (bt *BasicType) NeedsQ() bool {
 		BtEmulPlatform,
 		BtFileMode,
 		BtFilename,
+		BtGitTag,
 		BtIdentifierDirect,
 		BtIdentifierIndirect,
 		BtInteger,
@@ -428,6 +429,7 @@ var (
 	BtFilePattern            = &BasicType{"FilePattern", (*VartypeCheck).FilePattern}
 	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
 	BtGccReqd                = &BasicType{"GccReqd", (*VartypeCheck).GccReqd}
+	BtGitTag                 = &BasicType{"GitTag", (*VartypeCheck).GitTag}
 	BtHomepage               = &BasicType{"Homepage", (*VartypeCheck).Homepage}
 	BtIdentifierDirect       = &BasicType{"Identifier", (*VartypeCheck).IdentifierDirect}
 	BtIdentifierIndirect     = &BasicType{"Identifier", (*VartypeCheck).IdentifierIndirect}
@@ -438,6 +440,7 @@ var (
 	BtMachinePlatform        = &BasicType{"MachinePlatform", (*VartypeCheck).MachinePlatform}
 	BtMachinePlatformPattern = &BasicType{"MachinePlatformPattern", (*VartypeCheck).MachinePlatformPattern}
 	BtMailAddress            = &BasicType{"MailAddress", (*VartypeCheck).MailAddress}
+	BtMakeTarget             = &BasicType{"MakeTarget", (*VartypeCheck).MakeTarget}
 	BtMessage                = &BasicType{"Message", (*VartypeCheck).Message}
 	BtOption                 = &BasicType{"Option", (*VartypeCheck).Option}
 	BtPathlist               = &BasicType{"Pathlist", (*VartypeCheck).Pathlist}

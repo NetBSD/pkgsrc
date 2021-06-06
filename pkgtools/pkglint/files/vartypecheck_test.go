@@ -1126,6 +1126,32 @@ func (s *Suite) Test_VartypeCheck_GccReqd(c *check.C) {
 		"WARN: filename.mk:7: GCC version numbers should only contain the major version (7).")
 }
 
+func (s *Suite) Test_VartypeCheck_GitTag(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtGitTag)
+
+	vt.Varname("GITHUB_TAG")
+	vt.Values(
+		"master", // Bad since it is a moving target.
+		"v1.2.3",
+		"refs/heads/devel", // Bad since it is a moving target.
+		"refs/tags/v1.2.3",
+		"v${PKGVERSION_NOREV}",
+		"1234567812345678123456781234567812345678",
+		"1234567",
+		"123456", // Too short in practice.
+		"${DISTNAME}",
+		"invalid:char",  // Bad since ':' is not supported.
+		"invalid:;char", // Bad since neither ':' nor ';' is supported.
+		"jdk-11.0.10+9-1",
+	)
+	vt.Output(
+		"WARN: filename.mk:1: The Git tag \"master\" refers to a moving target.",
+		"WARN: filename.mk:3: The Git tag \"refs/heads/devel\" refers to a moving target.",
+		"WARN: filename.mk:8: The git commit name \"123456\" is too short to be reliable.",
+		"WARN: filename.mk:10: Invalid characters \":\" in Git tag.",
+		"WARN: filename.mk:11: Invalid characters \": ;\" in Git tag.")
+}
+
 func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, BtHomepage)
@@ -1446,6 +1472,33 @@ func (s *Suite) Test_VartypeCheck_MailAddress(c *check.C) {
 		"ERROR: filename.mk:2: This mailing list address is obsolete. Use pkgsrc-users@NetBSD.org instead.",
 		"ERROR: filename.mk:3: This mailing list address is obsolete. Use pkgsrc-users@NetBSD.org instead.",
 		"WARN: filename.mk:4: \"user1@example.org,user2@example.org\" is not a valid mail address.")
+}
+
+func (s *Suite) Test_VartypeCheck_MakeTarget(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtMakeTarget)
+
+	vt.Varname("BUILD_TARGET")
+	vt.Values(
+		"${OTHER_VAR}",
+		"spaces in target lists are ok",
+		"target/may/contain/slashes",
+		"target:must:not:contain:colons",
+		"id-${OTHER_VAR}",
+		"")
+
+	vt.Output(
+		"WARN: filename.mk:4: Invalid make target " +
+			"\"target:must:not:contain:colons\".")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"[A-Z]",
+		"[A-Z.]",
+		"${PKG_OPTIONS:Moption}",
+		"A*B")
+
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_Message(c *check.C) {

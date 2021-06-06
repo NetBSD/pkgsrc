@@ -152,11 +152,13 @@ func (ck *MkCondChecker) checkEmptyType(varuse *MkVarUse) {
 // mkCondStringLiteralUnquoted contains a safe subset of the characters
 // that may be used without surrounding quotes in a comparison such as
 // ${PKGPATH} == category/package.
-var mkCondStringLiteralUnquoted = textproc.NewByteSet("+---./0-9@A-Z_a-z")
+// TODO: Check whether the ',' really needs to be here.
+var mkCondStringLiteralUnquoted = textproc.NewByteSet("-+,./0-9@A-Z_a-z")
 
 // mkCondModifierPatternLiteral contains a safe subset of the characters
 // that are interpreted literally in the :M and :N modifiers.
-var mkCondModifierPatternLiteral = textproc.NewByteSet("+---./0-9<=>@A-Z_a-z")
+// TODO: Check whether the ',' really needs to be here.
+var mkCondModifierPatternLiteral = textproc.NewByteSet("-+,./0-9<=>@A-Z_a-z")
 
 // simplify replaces an unnecessarily complex condition with
 // a simpler condition that's still equivalent.
