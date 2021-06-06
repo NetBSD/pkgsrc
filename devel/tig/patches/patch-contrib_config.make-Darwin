@@ -1,12 +1,12 @@
-$NetBSD: patch-contrib_config.make-Darwin,v 1.2 2021/01/26 14:11:03 fcambus Exp $
+$NetBSD: patch-contrib_config.make-Darwin,v 1.3 2021/06/06 09:32:23 fcambus Exp $
 
 Do not override XML_CATALOG_FILES on Darwin. That will only make
 xmllint try to find a wrong catalog.
 
---- contrib/config.make-Darwin.orig	2020-04-08 16:17:38.000000000 +0000
+--- contrib/config.make-Darwin.orig	2021-06-05 16:08:31.000000000 +0000
 +++ contrib/config.make-Darwin
 @@ -1,8 +1,5 @@
- # Example configuration for Darwin / Mac OS X.
+ # Example configuration for Darwin / macOS.
  
 -# Work-around for Homebrew-based xmlto.
 -export XML_CATALOG_FILES=/usr/local/etc/xml/catalog
