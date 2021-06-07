@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.813 2021/06/07 01:02:15 markd Exp $
+# $NetBSD: Makefile,v 1.814 2021/06/07 01:12:38 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -749,6 +749,8 @@ SUBDIR+=	tex-fwlw
 SUBDIR+=	tex-fwlw-doc
 SUBDIR+=	tex-g-brief
 SUBDIR+=	tex-g-brief-doc
+SUBDIR+=	tex-gckanbun
+SUBDIR+=	tex-gckanbun-doc
 SUBDIR+=	tex-gentle-doc
 SUBDIR+=	tex-gentombow
 SUBDIR+=	tex-gentombow-doc
