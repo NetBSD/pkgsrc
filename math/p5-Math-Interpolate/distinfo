@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2016/02/14 12:01:24 wen Exp $
-
-SHA1 (Math-Interpolate-1.06.tar.gz) = 9350ac34b3dff29be6f9fb160bae0e6aa6157081
-RMD160 (Math-Interpolate-1.06.tar.gz) = 3513cf704b921dca3ba0aa40c537b1be2e94352d
-SHA512 (Math-Interpolate-1.06.tar.gz) = c573ac238d169449390db6b54303e94a93f7459b24bb8bfaf6aa765d6ce1b0d25a8c876ea530e10fb7eb271093c853c28f185ec805ca1f54751204ab469c64db
-Size (Math-Interpolate-1.06.tar.gz) = 47283 bytes
