@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2021/02/20 01:03:47 markd Exp $
+# $NetBSD: Makefile,v 1.24 2021/06/07 00:15:26 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2020pre3
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57478
+TEXLIVE_REV=	58253
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -17,6 +17,7 @@ DEPENDS+=	tex-academicons-[0-9]*:../../fonts/tex-academicons
 DEPENDS+=	tex-accanthis-[0-9]*:../../fonts/tex-accanthis
 DEPENDS+=	tex-adforn-[0-9]*:../../fonts/tex-adforn
 DEPENDS+=	tex-adfsymbols-[0-9]*:../../fonts/tex-adfsymbols
+# depend aesupp
 DEPENDS+=	tex-alegreya-[0-9]*:../../fonts/tex-alegreya
 # depend alfaslabone
 # depend algolrevived
@@ -35,6 +36,7 @@ DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
 DEPENDS+=	tex-ascii-font-[0-9]*:../../fonts/tex-ascii-font
 DEPENDS+=	tex-aspectratio-[0-9]*:../../fonts/tex-aspectratio
 DEPENDS+=	tex-astro-[0-9]*:../../fonts/tex-astro
+# depend atkinson
 DEPENDS+=	tex-augie-[0-9]*:../../fonts/tex-augie
 DEPENDS+=	tex-auncial-new-[0-9]*:../../fonts/tex-auncial-new
 DEPENDS+=	tex-aurical-[0-9]*:../../fonts/tex-aurical
@@ -125,6 +127,7 @@ DEPENDS+=	tex-ebgaramond-[0-9]*:../../fonts/tex-ebgaramond
 DEPENDS+=	tex-ebgaramond-maths-[0-9]*:../../fonts/tex-ebgaramond-maths
 DEPENDS+=	tex-ecc-[0-9]*:../../fonts/tex-ecc
 DEPENDS+=	tex-eco-[0-9]*:../../fonts/tex-eco
+# depend eczar
 DEPENDS+=	tex-eiad-[0-9]*:../../fonts/tex-eiad
 DEPENDS+=	tex-eiad-ltx-[0-9]*:../../fonts/tex-eiad-ltx
 # depend ektype-tanka
@@ -270,6 +273,7 @@ DEPENDS+=	tex-paratype-[0-9]*:../../fonts/tex-paratype
 DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
 DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
+# depend play-font
 # depend play-font
 DEPENDS+=	tex-playfair-[0-9]*:../../fonts/tex-playfair
 DEPENDS+=	tex-plex-[0-9]*:../../fonts/tex-plex
