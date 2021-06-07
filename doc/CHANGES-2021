@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3289 2021/06/07 01:18:52 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3290 2021/06/07 08:36:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5279,3 +5279,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-gckanbun version 1.2 [markd 2021-06-07]
 	Added print/tex-gckanbun-doc version 1.2 [markd 2021-06-07]
 	Updated meta-pkgs/texlive-collection-langjapanese to 2021 [markd 2021-06-07]
+	Updated security/py-authlib to 0.15.4 [adam 2021-06-07]
+	Updated multimedia/py-m3u8 to 0.9.0 [adam 2021-06-07]
+	Updated sysutils/py-magic to 0.4.24 [adam 2021-06-07]
+	Updated textproc/py-docx to 0.8.11 [adam 2021-06-07]
