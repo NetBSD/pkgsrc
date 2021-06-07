@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/05 12:02:02 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/07 15:37:39 mef Exp $
 
 R_PKGNAME=	sass
 R_PKGVER=	0.4.0
@@ -14,6 +14,7 @@ DEPENDS+=	R-rlang>=0.4.10:../../devel/R-rlang
 DEPENDS+=	R-htmltools>=0.5.1:../../textproc/R-htmltools
 DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
 DEPENDS+=	R-rappdirs-[0-9]*:../../devel/R-rappdirs
+DEPENDS+=	R-R6-[0-9]*:../../devel/R-R6
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
