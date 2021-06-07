@@ -1,5 +1,0 @@
-TOML stands for Tom's Obvious, Minimal Language. This Go package provides a
-reflection interface similar to Go's standard library json and xml packages.
-This package also supports the encoding.TextUnmarshaler and
-encoding.TextMarshaler interfaces so that you can define custom data
-representations.
