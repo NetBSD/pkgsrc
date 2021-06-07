@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/08 17:00:03 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/07 11:53:31 nia Exp $
 
-DISTNAME=	lua-rapidjson-0.6.1
+DISTNAME=	lua-rapidjson-0.7.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
 CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xpol/}
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DLUA_RAPIDJSON_VERSION=${PKGVERSION}
 
 # C++11
 GCC_REQD+=	4.7
