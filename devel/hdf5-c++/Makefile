@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/03/14 23:09:48 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/07 11:52:48 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
-PKGREVISION=	1
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
 
 USE_LANGUAGES=		c c++
