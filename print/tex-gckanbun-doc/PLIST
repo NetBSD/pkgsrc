@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/07 01:11:30 markd Exp $
+share/texmf-dist/doc/latex/gckanbun/LICENSE
+share/texmf-dist/doc/latex/gckanbun/README.md
+share/texmf-dist/doc/latex/gckanbun/gckanbun.pdf
+share/texmf-dist/doc/latex/gckanbun/gckanbun.tex
+share/texmf-dist/doc/latex/gckanbun/test-gckanbun.tex
