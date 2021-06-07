@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2021/03/18 03:50:53 markd Exp $
+# $NetBSD: Makefile,v 1.16 2021/06/07 00:43:36 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57535
+TEXLIVE_REV=	59247
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -153,6 +153,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend nicematrix
 # depend nuc
 # depend nucleardata
+# depend numerica
 # depend objectz
 # depend oplotsymbl
 # depend ot-tableau
@@ -218,6 +219,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend textgreek
 # depend textopo
 # depend thmbox
+# depend tiscreen
 # depend turnstile
 # depend ulqda
 # depend unitsdef
