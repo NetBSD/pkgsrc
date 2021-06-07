@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3305 2021/06/07 18:59:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3306 2021/06/07 19:56:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5313,3 +5313,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/rubigen [taca 2021-06-07]
 	Updated security/nettle to 3.7.3 [adam 2021-06-07]
 	Updated devel/meson to 0.58.1 [adam 2021-06-07]
+	Added devel/ruby-approvaltests version 0.0.25 [schmonz 2021-06-07]
