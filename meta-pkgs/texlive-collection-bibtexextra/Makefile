@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2021/05/24 19:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/06/07 00:12:47 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2020pre1
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	55339
+TEXLIVE_REV=	58437
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -59,6 +58,7 @@ DEPENDS+=	tex-biblatex-ieee-[0-9]*:../../print/tex-biblatex-ieee
 # depend biblatex-iso690
 # depend biblatex-jura2
 # depend biblatex-juradiss
+# depend biblatex-license
 # depend biblatex-lni
 # depend biblatex-luh-ipw
 # depend biblatex-manuscripts-philology
