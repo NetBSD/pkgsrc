@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1549 2021/06/05 12:27:24 mef Exp $
+# $NetBSD: Makefile,v 1.1550 2021/06/07 09:48:57 bsiegert Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -138,7 +138,6 @@ SUBDIR+=	go-mux
 SUBDIR+=	go-parse
 SUBDIR+=	go-spritewell
 SUBDIR+=	go-tocss
-SUBDIR+=	go-toml-burntsushi
 SUBDIR+=	go-toml-pelletier
 SUBDIR+=	go-urlesc
 SUBDIR+=	go-webhooks
