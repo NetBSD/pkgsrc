@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3293 2021/06/07 11:39:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3294 2021/06/07 11:42:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5297,3 +5297,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/go-cssmin [bsiegert 2021-06-07]
 	Removed www/go-webhooks [bsiegert 2021-06-07]
 	Updated devel/lua-compat53 to 0.10 [nia 2021-06-07]
+	Updated www/lua-curl to 0.3.13 [nia 2021-06-07]
