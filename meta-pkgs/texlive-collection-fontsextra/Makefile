@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/06/07 00:15:26 markd Exp $
+# $NetBSD: Makefile,v 1.25 2021/06/07 11:33:49 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2021pre1
@@ -273,8 +273,6 @@ DEPENDS+=	tex-paratype-[0-9]*:../../fonts/tex-paratype
 DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
 DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
-# depend play-font
-# depend play-font
 DEPENDS+=	tex-playfair-[0-9]*:../../fonts/tex-playfair
 DEPENDS+=	tex-plex-[0-9]*:../../fonts/tex-plex
 # depend plex-otf
