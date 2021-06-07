@@ -1,9 +1,0 @@
-go-i18n is a Go package and a command that helps you translate Go programs into
-multiple languages.
-
- * Supports pluralized strings for all 200+ languages in the Unicode Common
-   Locale Data Repository (CLDR).
- * Code and tests are automatically generated from CLDR data
- * Supports strings with named variables using text/template syntax.
- * Translation files are simple JSON, TOML or YAML.
- * Documented and tested!
