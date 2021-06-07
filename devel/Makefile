@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3407 2021/06/07 09:54:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3408 2021/06/07 15:13:19 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2786,7 +2786,6 @@ SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
 SUBDIR+=	rt4
 SUBDIR+=	rttr
-SUBDIR+=	rubigen
 SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activejob52
