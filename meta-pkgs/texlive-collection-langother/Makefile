@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/02/14 22:48:54 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/07 00:29:14 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57462
+TEXLIVE_REV=	57757
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -37,6 +37,7 @@ DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
 DEPENDS+=	tex-ethiop-t1-[0-9]*:../../fonts/tex-ethiop-t1
 DEPENDS+=	tex-fc-[0-9]*:../../fonts/tex-fc
 DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
+# hindawi-latex-template is documentation only
 DEPENDS+=	tex-hyphen-afrikaans-[0-9]*:../../print/tex-hyphen-afrikaans
 DEPENDS+=	tex-hyphen-armenian-[0-9]*:../../print/tex-hyphen-armenian
 DEPENDS+=	tex-hyphen-coptic-[0-9]*:../../print/tex-hyphen-coptic
@@ -57,6 +58,7 @@ DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # depend marathi
 # ntheorem-vn is documentation only
 # depend padauk
+# depend quran-bn
 # depend quran-ur
 # depend sanskrit
 # depend sanskrit-t1
