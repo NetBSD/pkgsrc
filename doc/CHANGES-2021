@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3291 2021/06/07 09:13:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3292 2021/06/07 10:05:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5285,3 +5285,14 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-docx to 0.8.11 [adam 2021-06-07]
 	Updated multimedia/libogg to 1.3.5 [adam 2021-06-07]
 	Updated net/libtorrent-rasterbar to 1.2.14 [adam 2021-06-07]
+	Removed textproc/go-prose [bsiegert 2021-06-07]
+	Removed math/go-stats [bsiegert 2021-06-07]
+	Removed devel/go-cli [bsiegert 2021-06-07]
+	Removed www/go-toml-burntsushi [bsiegert 2021-06-07]
+	Removed textproc/go-org [bsiegert 2021-06-07]
+	Removed textproc/go-chroma [bsiegert 2021-06-07]
+	Removed devel/go-i18n [bsiegert 2021-06-07]
+	Removed devel/go-kingpin.v3-unstable [bsiegert 2021-06-07]
+	Removed www/go-toml-pelletier [bsiegert 2021-06-07]
+	Removed www/go-cssmin [bsiegert 2021-06-07]
+	Removed www/go-webhooks [bsiegert 2021-06-07]
