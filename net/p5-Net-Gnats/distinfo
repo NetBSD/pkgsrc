@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2017/09/17 20:43:35 wiz Exp $
-
-SHA1 (Net-Gnats-0.22.tar.gz) = 1485342665828efbe8f709c57913ecea162f58b1
-RMD160 (Net-Gnats-0.22.tar.gz) = 2596a970ff54e353efcbdaa4acab7b08e1cf954e
-SHA512 (Net-Gnats-0.22.tar.gz) = 7c1a23d7b85b8857b5a599fca85dff647a16ed85d1c6da63d449a713d4047a2adde376308eb9993cf46dfb47e60baff5352c469caf532cb19dd05602717f38a2
-Size (Net-Gnats-0.22.tar.gz) = 55791 bytes
