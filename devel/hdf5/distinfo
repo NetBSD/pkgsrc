@@ -1,18 +1,8 @@
-$NetBSD: distinfo,v 1.44 2020/01/08 12:30:34 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/06/07 11:52:48 adam Exp $
 
-SHA1 (hdf5-1.10.6.tar.bz2) = 5e11d91abe071858b0d9a4f3a202c1e6a0d27290
-RMD160 (hdf5-1.10.6.tar.bz2) = c31216cd83187e69509fa36c6ae7015cee331ea1
-SHA512 (hdf5-1.10.6.tar.bz2) = 821392718605e3f7a287d4729d022a55fd7b91ddaa2e9a3f35ab8fce3d3d4871a0cc88215be3052887cbac3615cc8953569c7f131217962103c98151c0ab58d4
-Size (hdf5-1.10.6.tar.bz2) = 8813699 bytes
-SHA1 (patch-c++_examples_Makefile.in) = 2b62c0b30258fcce5e22b5932bd400ca5897e0c3
-SHA1 (patch-c++_examples_run-c++-ex.sh.in) = 2575d749930773fbe58dd1394cc451ad88fd4ed3
+SHA1 (hdf5-1.10.7.tar.bz2) = 125b2dacb4fdac33f7bfbc7dfdeeb000ff68466b
+RMD160 (hdf5-1.10.7.tar.bz2) = 6da25b3aee83ad2aba421ac7b7026aa1f8c1d38f
+SHA512 (hdf5-1.10.7.tar.bz2) = bfbd045ea5d7940ac1d0f9aef964dad2e9f22d78b49c90668021106259c9612352fbcb4e89085a7fa189f58142ef83a363c6220ea89aa0d57bdfed245df0ab57
+Size (hdf5-1.10.7.tar.bz2) = 8957844 bytes
 SHA1 (patch-configure) = e7f141d54c39cbee2f7d703ab7d6ff582158904e
-SHA1 (patch-examples_Makefile.in) = af9cf68a50544312a759b7732aea9297a6881582
-SHA1 (patch-examples_run-c-ex.sh.in) = bafcd2157606858a2fa1bc6aaf0dee74a44ee640
-SHA1 (patch-hl_c++_examples_Makefile.in) = a65d0461a6e1ac464e089703f9f5ab6c1dcf1666
-SHA1 (patch-hl_c++_examples_run-hlc++-ex.sh.in) = 166d7c570e93948e68308d9e0584df8d19bdfec9
-SHA1 (patch-hl_examples_Makefile.in) = df3650c121152471a045e1fec169eedeea757377
-SHA1 (patch-hl_examples_run-hlc-ex.sh.in) = 43bf6c28fb667f3ae39145be08e0a3a75f370b47
-SHA1 (patch-src_H5private.h) = dbf7e44248b653274fbe1e0f7429d723107c6cdd
-SHA1 (patch-tools_test_h5jam_testh5jam.sh.in) = 17c93dcd36556667383d8def13450a09b75d5623
-SHA1 (patch-tools_test_h5repack_h5repack.sh.in) = 03bfd89a55f618fcc7719ff0bb122419f562f598
+SHA1 (patch-tools_test_h5repack_h5repack.sh.in) = b31bef7a47e15647fa6090cf1590c9dbb606d8e6
