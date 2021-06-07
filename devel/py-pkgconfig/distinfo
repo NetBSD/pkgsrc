@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/02/19 05:51:51 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/06/07 11:56:11 adam Exp $
 
-SHA1 (pkgconfig-1.5.2.tar.gz) = 9db3e565c5bd85ceee16cbc162ab4f2f5019153c
-RMD160 (pkgconfig-1.5.2.tar.gz) = 48ac2124884a188bc3c85ba0c7ece24889609833
-SHA512 (pkgconfig-1.5.2.tar.gz) = 1661219e423801ada5a8f9bb53c360b93c5b6d16cad73e448b4a450765f6fad59f9b2502b9f4c234f5fcc2b452380c1ee11f7368b6ebcd8525892ee140423d2c
-Size (pkgconfig-1.5.2.tar.gz) = 5763 bytes
+SHA1 (pkgconfig-1.5.4.tar.gz) = 6c24c1ba6dacd9fe60936bb9f90cec6417576c47
+RMD160 (pkgconfig-1.5.4.tar.gz) = 6f417b211531b34db498b8cd9830441395f3fee2
+SHA512 (pkgconfig-1.5.4.tar.gz) = 56779390d2312508bc22ae44b05fa242f929005d6a96e485d6fa594ba160b4b44cfeed8c76feb196e7a2fae37bf3780917e544db97783dc024c3bdeace5623c3
+Size (pkgconfig-1.5.4.tar.gz) = 6071 bytes
