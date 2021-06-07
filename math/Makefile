@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2021/06/06 08:09:58 mef Exp $
+# $NetBSD: Makefile,v 1.505 2021/06/07 09:46:03 bsiegert Exp $
 
 COMMENT=	Mathematics
 
@@ -184,7 +184,6 @@ SUBDIR+=	genius
 SUBDIR+=	glpk
 SUBDIR+=	gnome-calculator
 SUBDIR+=	gnumeric112
-SUBDIR+=	go-stats
 SUBDIR+=	go-units
 SUBDIR+=	gp-autpgrp
 SUBDIR+=	gp-factint
