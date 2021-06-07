@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.811 2021/06/06 22:45:02 markd Exp $
+# $NetBSD: Makefile,v 1.812 2021/06/07 00:04:34 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1462,7 +1462,6 @@ SUBDIR+=	tex-texdoctk
 SUBDIR+=	tex-texdoctk-doc
 SUBDIR+=	tex-texinfo
 SUBDIR+=	tex-texlive-common-doc
-SUBDIR+=	tex-texlive-docindex-doc
 SUBDIR+=	tex-texlive-en-doc
 SUBDIR+=	tex-texlive-scripts
 SUBDIR+=	tex-texlive-scripts-doc
