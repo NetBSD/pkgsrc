@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/06/06 23:37:31 mef Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/07 15:35:24 mef Exp $
 
 R_PKGNAME=	pillar
 R_PKGVER=	1.6.1
@@ -15,6 +15,7 @@ DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang
 DEPENDS+=	R-vctrs>=0.2.0:../../math/R-vctrs
 DEPENDS+=	R-utf8>=1.1.0:../../textproc/R-utf8
 DEPENDS+=	R-utf8>=1.1.3:../../textproc/R-utf8
+DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 
 # Packages suggested but not available:
 #  'debugme', 'DiagrammeR','formattable', 'nycflights13',
