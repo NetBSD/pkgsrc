@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2021/02/12 03:03:18 markd Exp $
+# $NetBSD: Makefile,v 1.31 2021/06/07 00:48:07 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57485
+TEXLIVE_REV=	59115
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -29,12 +29,14 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend bondgraphs
 # depend braids
 # depend bxeepic
+# depend byo-twemojis
 # depend cachepic
 # depend callouts
 # depend celtic
 DEPENDS+=	tex-chemfig-[0-9]*:../../graphics/tex-chemfig
 # depend circuit-macros
 DEPENDS+=	tex-circuitikz-[0-9]*:../../graphics/tex-circuitikz
+# depend coffeestains
 # depend combinedgraphics
 # depend curve
 # depend curve2e
@@ -60,6 +62,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend euflag
 # depend fast-diagram
 # depend fig4latex
+# depend figchild
 # depend fitbox
 # depend flowchart
 # depend forest
@@ -98,6 +101,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend mkpic
 # depend modiagram
 # depend neuralnetwork
+# depend nl-interval
 # depend numericplots
 DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
 # depend penrose
@@ -212,9 +216,11 @@ DEPENDS+=	tex-tkz-fct-[0-9]*:../../graphics/tex-tkz-fct
 # depend tqft
 # depend tsemlines
 DEPENDS+=	tex-tufte-latex-[0-9]*:../../print/tex-tufte-latex
+# depend tzplot
 # depend utfsym
 DEPENDS+=	tex-venndiagram-[0-9]*:../../graphics/tex-venndiagram
 # depend visualpstricks
+# depend worldflags
 # depend xpicture
 DEPENDS+=	tex-xypic-[0-9]*:../../graphics/tex-xypic
 
