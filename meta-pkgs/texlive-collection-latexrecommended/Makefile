@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2021/02/13 11:41:17 markd Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/07 01:04:08 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2020.57472
+PKGNAME=	texlive-${DISTNAME}-2021
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57472
+TEXLIVE_REV=	57862
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -65,6 +65,7 @@ DEPENDS+=	tex-newfloat-[0-9]*:../../print/tex-newfloat
 DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
 DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
 DEPENDS+=	tex-pdflscape-[0-9]*:../../print/tex-pdflscape
+DEPENDS+=	tex-pdfmanagement-testphase-[0-9]*:../../print/tex-pdfmanagement-testphase
 DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-polyglossia-[0-9]*:../../print/tex-polyglossia
