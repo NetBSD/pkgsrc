@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/05/17 21:38:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/07 08:36:00 adam Exp $
 
-DISTNAME=	python-docx-0.8.10
+DISTNAME=	python-docx-0.8.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-docx/}
