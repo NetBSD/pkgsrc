@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/07 19:55:27 schmonz Exp $
+
+SHA1 (approvals-0.0.25.gem) = f05c4f0063ddca04a42ce99809f1386d0390cffc
+RMD160 (approvals-0.0.25.gem) = d3ee14441cd74888fc52a7ce48d2c9c8d658aafa
+SHA512 (approvals-0.0.25.gem) = 53c989bb91588de5fe656133291844a4f2614fbd9c8c05aff96b3dc19fb2ef3e6f31eb0fa62b05199e7ebeb3995dd507c02ac6e9d22d17b998977b1112e4fef8
+Size (approvals-0.0.25.gem) = 35840 bytes
