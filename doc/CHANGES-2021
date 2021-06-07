@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3297 2021/06/07 11:59:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3298 2021/06/07 12:03:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/hdf5-c++ to 1.10.7 [adam 2021-06-07]
 	Updated devel/py-pkgconfig to 1.5.4 [adam 2021-06-07]
 	Updated devel/py-h5py to 3.2.1 [adam 2021-06-07]
+	Updated games/nbsdgames to 4.1.1 [nia 2021-06-07]
