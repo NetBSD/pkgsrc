@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/07/17 03:51:22 minskim Exp $
-
-SHA1 (go-i18n-1.10.0.tar.gz) = 15bdf28983afca6d4b6dbdafd4004ec157d27205
-RMD160 (go-i18n-1.10.0.tar.gz) = 94bdedfc3d2128953d69472c14bdd6ed0c339fbe
-SHA512 (go-i18n-1.10.0.tar.gz) = b9dd6f64066cd2184dcbd9d5795b8c7e8c296cb889bd264580bfc5981e9e11fe9b91189991c3c7a005c957bbe1ab1e8c8ef52a00fab24bd25d8056d467e41cae
-Size (go-i18n-1.10.0.tar.gz) = 39648 bytes
