@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/07/14 22:20:10 minskim Exp $
-
-SHA1 (webhooks-3.12.0.tar.gz) = f9192218a173130d68073c1b3c43d489f077c3db
-RMD160 (webhooks-3.12.0.tar.gz) = b65e2c7d2eaf4e159cfe21743002f1244745eeca
-SHA512 (webhooks-3.12.0.tar.gz) = b3dd18b316be54ba0234b750ab97da2cdbdf9ae5c37f3682b3f8c2c3df4ca7adc95b1ccc6b747db1082142231998c8ae27d2930c609fd0b67334065e9eb3dd3f
-Size (webhooks-3.12.0.tar.gz) = 55116 bytes
