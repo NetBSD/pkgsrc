@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3288 2021/06/07 01:15:54 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3289 2021/06/07 01:18:52 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5167,9 +5167,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/tig to 2.5.4 [fcambus 2021-06-06]
 	Added devel/py-ijson version 3.1.4 [js 2021-06-06]
 	Updated pkgtools/pkglint to 21.1.4 [rillig 2021-06-06]
-<<<<<<< CHANGES-2021
 	Updated math/R-units to 0.7.1 [mef 2021-06-06]
-=======
 	Updated devel/R-diffobj to 0.3.4 [mef 2021-06-06]
 	Updated devel/tex-l3backend to 2021 [markd 2021-06-06]
 	Updated devel/tex-l3backend-doc to 2021 [markd 2021-06-06]
@@ -5211,7 +5209,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/janet to 1.16.0 [nia 2021-06-06]
 	Updated math/R-forcats to 0.5.1 [mef 2021-06-06]
 	Updated devel/R-waldo to 0.2.5 [mef 2021-06-06]
->>>>>>> 1.3274
 	Updated geography/R-sf to 0.9.8 [mef 2021-06-06]
 	Updated graphics/R-ggplot2 to 3.3.3 [mef 2021-06-06]
 	Updated math/R-zoo to 1.8.9 [mef 2021-06-06]
