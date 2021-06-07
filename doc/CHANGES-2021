@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3303 2021/06/07 14:13:07 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3304 2021/06/07 15:15:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-CLI-Osprey to 0.08nb2 [wiz 2021-06-07]
 	Removed math/p5-Math-Interpolate [wiz 2021-06-07]
 	Removed net/p5-Net-Gnats [wiz 2021-06-07]
+	Removed devel/rubigen [taca 2021-06-07]
