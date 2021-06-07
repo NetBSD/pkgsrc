@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/03/31 21:58:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/06/07 14:02:16 wiz Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -847,8 +847,9 @@ lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/france/
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/in/messages.json
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/it/messages.json
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/jp/messages.json
-lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/mx/messages.json
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/nl/messages.json
+lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/spain/messages.json
+lib/tor-browser/browser/chrome/browser/search-extensions/amazon/_locales/sweden/messages.json
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/favicon.ico
 lib/tor-browser/browser/chrome/browser/search-extensions/amazon/manifest.json
 lib/tor-browser/browser/chrome/browser/search-extensions/amazondotcn/_locales/default/messages.json
@@ -5178,6 +5179,15 @@ lib/tor-browser/chrome/torbutton/locale/ms/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ms/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ms/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/ms/torbutton.properties
+lib/tor-browser/chrome/torbutton/locale/my/aboutDialog.dtd
+lib/tor-browser/chrome/torbutton/locale/my/aboutTBUpdate.dtd
+lib/tor-browser/chrome/torbutton/locale/my/aboutTor.dtd
+lib/tor-browser/chrome/torbutton/locale/my/brand.dtd
+lib/tor-browser/chrome/torbutton/locale/my/brand.properties
+lib/tor-browser/chrome/torbutton/locale/my/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/my/browserOnboarding.properties
+lib/tor-browser/chrome/torbutton/locale/my/torbutton.dtd
+lib/tor-browser/chrome/torbutton/locale/my/torbutton.properties
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutDialog.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTor.dtd
@@ -5310,6 +5320,7 @@ lib/tor-browser/chrome/torbutton/skin/icon-newsletter.png
 lib/tor-browser/chrome/torbutton/skin/preferences-mobile.css
 lib/tor-browser/chrome/torbutton/skin/preferences.css
 lib/tor-browser/chrome/torbutton/skin/searchLogo.png
+lib/tor-browser/chrome/torbutton/skin/tor-banner-warning-icon.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
