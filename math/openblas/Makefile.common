@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2021/05/29 19:57:21 thor Exp $
+# $NetBSD: Makefile.common,v 1.4 2021/06/07 15:52:04 adam Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -26,10 +26,6 @@ PATCHDIR=	${.CURDIR}/../../math/openblas/patches
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 LICENSE=	modified-bsd
-
-# Darwin has a .so/.dylib PLIST issue
-# Untested on other platforms
-ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
