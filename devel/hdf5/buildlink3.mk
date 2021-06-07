@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2019/05/01 22:39:29 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2021/06/07 11:52:48 adam Exp $
 
 BUILDLINK_TREE+=	hdf5
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 pkgbase := hdf5
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.hdf5:Mszip)
+.if ${PKG_BUILD_OPTIONS.hdf5:Mszip}
 .include "../../archivers/libaec/buildlink3.mk"
 .endif
 
