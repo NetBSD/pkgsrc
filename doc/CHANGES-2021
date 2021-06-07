@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3304 2021/06/07 15:15:27 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3305 2021/06/07 18:59:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5311,3 +5311,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed math/p5-Math-Interpolate [wiz 2021-06-07]
 	Removed net/p5-Net-Gnats [wiz 2021-06-07]
 	Removed devel/rubigen [taca 2021-06-07]
+	Updated security/nettle to 3.7.3 [adam 2021-06-07]
+	Updated devel/meson to 0.58.1 [adam 2021-06-07]
