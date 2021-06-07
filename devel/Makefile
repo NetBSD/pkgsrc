@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3406 2021/06/07 09:47:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3407 2021/06/07 09:54:25 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,14 +447,12 @@ SUBDIR+=	go-gox
 SUBDIR+=	go-hashstructure
 SUBDIR+=	go-homedir
 SUBDIR+=	go-humanize
-SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
 SUBDIR+=	go-iochan
 SUBDIR+=	go-isatty
 SUBDIR+=	go-jwalterweatherman
 SUBDIR+=	go-jwt-go
-SUBDIR+=	go-kingpin.v3-unstable
 SUBDIR+=	go-kr-pretty
 SUBDIR+=	go-levenshtein
 SUBDIR+=	go-locker
