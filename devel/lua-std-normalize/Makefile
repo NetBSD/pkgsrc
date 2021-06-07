@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/07/02 10:26:18 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/07 11:49:23 nia Exp $
 
-DISTNAME=		std.normalize-2.0.2
+DISTNAME=		std.normalize-2.0.3
 PKGNAME=		${DISTNAME:S/std.normalize/${LUA_PKGPREFIX}-std-normalize/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
