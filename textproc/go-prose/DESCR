@@ -1,4 +1,0 @@
-prose is Go library for text (primarily English at the moment) processing that
-supports tokenization, part-of-speech tagging, named-entity extraction, and
-more. The library's functionality is split into subpackages designed for
-modular use. See the documentation for more information.
