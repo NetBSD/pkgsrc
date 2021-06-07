@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2021/02/14 03:17:10 markd Exp $
+# $NetBSD: Makefile,v 1.16 2021/06/07 00:23:57 markd Exp $
 
 DISTNAME=	collection-langenglish
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2021
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57292
+TEXLIVE_REV=	58290
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -33,7 +33,8 @@ DEPENDS+=	tex-guide-to-latex-[0-9]*:../../print/tex-guide-to-latex
 DEPENDS+=	tex-hyphen-english-[0-9]*:../../print/tex-hyphen-english
 # impatient is documentation only
 # intro-scientific is documentation only
-# knuth is documentation only
+# knuth-errata is documentation only
+# knuth-pdf is documentation only
 # l2tabu-english is documentation only
 # latex-brochure is documentation only
 # latex-course is documentation only
