@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3405 2021/06/06 10:05:42 js Exp $
+# $NetBSD: Makefile,v 1.3406 2021/06/07 09:47:32 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -415,7 +415,6 @@ SUBDIR+=	go-buffruneio
 SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-cast
 SUBDIR+=	go-check
-SUBDIR+=	go-cli
 SUBDIR+=	go-cmp
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
