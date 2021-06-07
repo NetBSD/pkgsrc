@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3295 2021/06/07 11:49:35 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3296 2021/06/07 11:53:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5299,3 +5299,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lua-compat53 to 0.10 [nia 2021-06-07]
 	Updated www/lua-curl to 0.3.13 [nia 2021-06-07]
 	Updated devel/lua-std-normalize to 2.0.3 [nia 2021-06-07]
+	Updated textproc/lua-rapidjson to 0.7.1 [nia 2021-06-07]
