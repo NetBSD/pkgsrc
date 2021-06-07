@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2021/05/24 19:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2021/06/07 06:35:16 wiz Exp $
 #
 DISTNAME=	dinotrace-9.4f
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Tool for viewing the output of digital simulators
 LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
-BUILD_DEPENDS+=	web2c-2020{,nb*}:../../print/web2c
+BUILD_DEPENDS+=	web2c>=2020:../../print/web2c
 BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 
 GNU_CONFIGURE=		YES
