@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1230 2021/05/31 22:31:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1231 2021/06/07 09:44:53 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -242,7 +242,6 @@ SUBDIR+=	go-kr-text
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
 SUBDIR+=	go-org
-SUBDIR+=	go-prose
 SUBDIR+=	go-regexp2
 SUBDIR+=	go-runewidth
 SUBDIR+=	go-sentences
