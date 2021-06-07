@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2019/09/02 08:58:57 adam Exp $
+$NetBSD: patch-configure,v 1.2 2021/06/07 09:12:32 adam Exp $
 
 Do not force compiler optimization flags.
 
---- configure.orig	2019-09-02 08:48:15.000000000 +0000
+--- configure.orig	2021-06-04 03:21:11.000000000 +0000
 +++ configure
-@@ -12781,17 +12781,17 @@ if test -z "$GCC"; then
+@@ -12804,17 +12804,17 @@ if test -z "$GCC"; then
          case $host in
          *-*-irix*)
                  DEBUG="-g -signed"
@@ -25,19 +25,19 @@ Do not force compiler optimization flags.
                  PROFILE="-g -p"
  		;;
          esac
-@@ -12799,22 +12799,22 @@ else
+@@ -12822,22 +12822,22 @@ else
          case $host in
          *-*-linux*)
                  DEBUG="-g -Wall -fsigned-char"
--                CFLAGS="-O20 -Wall -ffast-math -fsigned-char"
+-                CFLAGS="-O2 -Wall -ffast-math -fsigned-char"
 +                CFLAGS="-Wall -ffast-math -fsigned-char"
-                 PROFILE="-Wall -W -pg -g -O20 -ffast-math -fsigned-char"
+                 PROFILE="-Wall -W -pg -g -O2 -ffast-math -fsigned-char"
  		;;
          sparc-sun-*)
                  DEBUG="-g -Wall -fsigned-char"
--                CFLAGS="-O20 -ffast-math -fsigned-char"
+-                CFLAGS="-O2 -ffast-math -fsigned-char"
 +                CFLAGS="-ffast-math -fsigned-char"
-                 PROFILE="-pg -g -O20 -fsigned-char"
+                 PROFILE="-pg -g -O2 -fsigned-char"
  		;;
  	*-*-darwin*)
  		DEBUG="-fno-common -g -Wall -fsigned-char"
@@ -47,8 +47,8 @@ Do not force compiler optimization flags.
  		;;
          *)
                  DEBUG="-g -Wall -fsigned-char"
--                CFLAGS="-O20 -fsigned-char"
+-                CFLAGS="-O2 -fsigned-char"
 +                CFLAGS="-fsigned-char"
-                 PROFILE="-O20 -g -pg -fsigned-char"
+                 PROFILE="-O2 -g -pg -fsigned-char"
  		;;
          esac
