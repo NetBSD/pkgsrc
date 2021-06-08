@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/07 06:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/08 02:00:14 mef Exp $
 
 R_PKGNAME=	shiny
 R_PKGVER=	1.6.0
@@ -20,7 +20,7 @@ DEPENDS+=	R-jsonlite>=0.9.16:../../textproc/R-jsonlite
 DEPENDS+=	R-httpuv>=1.5.0:../../www/R-httpuv
 DEPENDS+=	R-fastmap-[0-9]*:../../devel/R-fastmap
 DEPENDS+=	R-commonmark-[0-9]*:../../textproc/R-commonmark
-#DEPENDS+=	R-bslib-[0-9]*:../../www/R-bslib
+DEPENDS+=	R-bslib-[0-9]*:../../www/R-bslib
 DEPENDS+=	R-cachem-[0-9]*:../../devel/R-cachem
 DEPENDS+=	R-xtable-[0-9]*:../../math/R-xtable
 
