@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3312 2021/06/08 10:20:57 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3313 2021/06/08 10:22:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/cy2-saml to 1.10 [manu 2021-06-08]
 	Updated security/pam-saml to 1.10 [manu 2021-06-08]
 	Updated security/gpg-tui to 0.4.0 [pin 2021-06-08]
+	Updated sysutils/macchina to 0.9.2 [pin 2021-06-08]
