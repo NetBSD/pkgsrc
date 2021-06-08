@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2021/04/13 18:46:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2021/06/08 22:51:11 khorben Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c99
+USE_FEATURES+=	strnlen err
 
 CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/mk_bundke.sh
 
