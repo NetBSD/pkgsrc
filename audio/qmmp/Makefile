@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2021/05/13 10:00:50 nia Exp $
+# $NetBSD: Makefile,v 1.27 2021/06/08 16:20:12 nia Exp $
 
-DISTNAME=	qmmp-1.4.6
+DISTNAME=	qmmp-1.5.0
 CATEGORIES=	audio
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,8 @@ CMAKE_ARGS+=	-DUSE_MAD=OFF
 
 # ??? seems to break playing some files
 CMAKE_ARGS+=	-DUSE_MPLAYER=OFF
+
+CMAKE_ARGS+=	-DUSE_PIPEWIRE=OFF
 
 .include "../../mk/oss.buildlink3.mk"
 
