@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3310 2021/06/08 07:34:47 manu Exp $
+$NetBSD: CHANGES-2021,v 1.3311 2021/06/08 07:38:18 manu Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5318,3 +5318,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/R-bslib version 0.2.5.1 [mef 2021-06-08]
 	Updated www/ap2-auth-mellon to 0.17.0 [manu 2021-06-08]
 	Updated security/lasso to 2.7.0 [manu 2021-06-08]
+	Updated security/crudesaml to 1.10 [manu 2021-06-08]
+	Updated security/cy2-saml to 1.10 [manu 2021-06-08]
+	Updated security/pam-saml to 1.10 [manu 2021-06-08]
