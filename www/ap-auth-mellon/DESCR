@@ -1,3 +1,0 @@
-mod_auth_mellon is a authentication module for Apache. It authenticates
-the user against a SAML 2.0 IdP, and grants access to directories
-depending on attributes received from the IdP.
