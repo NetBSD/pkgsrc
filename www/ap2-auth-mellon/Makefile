@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.63 2021/04/21 13:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.64 2021/06/08 07:26:52 manu Exp $
 
-DISTNAME=	mod_auth_mellon-0.14.2
+DISTNAME=	mod_auth_mellon-0.17.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
-PKGREVISION=	12
 #PKGREVISION=	1
 CATEGORIES=	www security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=UNINETT/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=latchset/}
 GITHUB_PROJECT=	mod_auth_mellon
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	https://github.com/UNINETT/mod_auth_mellon
+HOMEPAGE=	https://github.com/latchset/mod_auth_mellon
 COMMENT=	SAML 2.0 authentication for Apache
 LICENSE=	gnu-gpl-v2 # or later
 
