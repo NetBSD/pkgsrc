@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3313 2021/06/08 10:22:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3314 2021/06/08 15:53:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5323,3 +5323,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pam-saml to 1.10 [manu 2021-06-08]
 	Updated security/gpg-tui to 0.4.0 [pin 2021-06-08]
 	Updated sysutils/macchina to 0.9.2 [pin 2021-06-08]
+	Updated audio/rubberband to 1.9.2 [nia 2021-06-08]
