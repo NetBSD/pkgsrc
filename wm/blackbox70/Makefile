@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/09/30 03:07:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2021/06/08 21:42:33 gutteridge Exp $
 
-VERSION=	0.76
+VERSION=	0.77
 DISTNAME=	blackbox-${VERSION}
 PKGNAME=	blackbox70-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_PROJECT=	blackboxwm
