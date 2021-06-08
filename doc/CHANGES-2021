@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3311 2021/06/08 07:38:18 manu Exp $
+$NetBSD: CHANGES-2021,v 1.3312 2021/06/08 10:20:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/crudesaml to 1.10 [manu 2021-06-08]
 	Updated security/cy2-saml to 1.10 [manu 2021-06-08]
 	Updated security/pam-saml to 1.10 [manu 2021-06-08]
+	Updated security/gpg-tui to 0.4.0 [pin 2021-06-08]
