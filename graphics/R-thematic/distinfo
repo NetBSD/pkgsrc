@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/08 01:40:35 mef Exp $
+
+SHA1 (R/thematic_0.1.2.tar.gz) = f72bce16ce40e55764e1717c8b02af0822e5b857
+RMD160 (R/thematic_0.1.2.tar.gz) = 702cc12538030e5592950e14297b49a7a49507d4
+SHA512 (R/thematic_0.1.2.tar.gz) = a7c04e813f205aff1503dd9ad49c255e4f203a1f7d20ba390d8d817ce305d7a96a9b88a12b33ff179611314908dfc6e56ea86396c65003a52942aa6ed060543f
+Size (R/thematic_0.1.2.tar.gz) = 2774264 bytes
