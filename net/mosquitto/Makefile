@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2021/04/06 13:16:22 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/08 10:12:55 bouyer Exp $
 
 DISTNAME=	mosquitto-2.0.10
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
+PKGREVISION=	1
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://mosquitto.org/
@@ -53,6 +54,7 @@ FILES_SUBST+= VARBASE=${VARBASE}
 TEST_TARGET=	test
 .include "../../devel/cunit/buildlink3.mk"
 
+.include "options.mk"   
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"
 # ?needed
