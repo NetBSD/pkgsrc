@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3308 2021/06/08 01:58:06 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3309 2021/06/08 07:26:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5316,3 +5316,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-approvaltests version 0.0.25 [schmonz 2021-06-07]
 	Added graphics/R-thematic version 0.1.2 [mef 2021-06-08]
 	Added www/R-bslib version 0.2.5.1 [mef 2021-06-08]
+	Updated www/ap2-auth-mellon to 0.17.0 [manu 2021-06-08]
