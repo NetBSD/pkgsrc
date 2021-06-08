@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.940 2021/06/06 06:54:32 mef Exp $
+# $NetBSD: Makefile,v 1.941 2021/06/08 01:43:55 mef Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -38,6 +38,7 @@ SUBDIR+=	R-munsell
 SUBDIR+=	R-png
 SUBDIR+=	R-polyclip
 SUBDIR+=	R-scales
+SUBDIR+=	R-thematic
 SUBDIR+=	R-viridis
 SUBDIR+=	R-viridisLite
 SUBDIR+=	SDL2_gfx

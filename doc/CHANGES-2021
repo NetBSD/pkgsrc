@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3306 2021/06/07 19:56:29 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3307 2021/06/08 01:43:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/nettle to 3.7.3 [adam 2021-06-07]
 	Updated devel/meson to 0.58.1 [adam 2021-06-07]
 	Added devel/ruby-approvaltests version 0.0.25 [schmonz 2021-06-07]
+	Added graphics/R-thematic version 0.1.2 [mef 2021-06-08]
