@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/04/09 10:32:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/06/08 15:52:59 nia Exp $
 
-SHA1 (rubberband-1.9.1.tar.bz2) = f612b25ba76138f720fe64a8f300510989534927
-RMD160 (rubberband-1.9.1.tar.bz2) = ee2e37b8b7b442b6601f5c5cd93728456566ad07
-SHA512 (rubberband-1.9.1.tar.bz2) = cb20ef8fb717a9e6b5b0b921541bd701e94326e12cdb20d50bed344d12fa1b4fd731335c3a0a7f2d2a5ce96031d965b209e7667c4d55fd8494b8e20d3409f0d3
-Size (rubberband-1.9.1.tar.bz2) = 164644 bytes
-SHA1 (patch-meson.build) = 065ee7b50549924c16d3d76c78aad8603e562d28
+SHA1 (rubberband-1.9.2.tar.bz2) = 30bbab99c3f4d9928948a00996e3faeab2069cbb
+RMD160 (rubberband-1.9.2.tar.bz2) = 22c0989df070d4c52151cae64b9afef3c6911d56
+SHA512 (rubberband-1.9.2.tar.bz2) = b1c763ab2a428aa2f1f8e5d0be6e9eb669808059ee5389e94f12de25f1a05cd89022656d98906c90b616773da11ab1f596ae2c5a9d300118e88049e1443121f2
+Size (rubberband-1.9.2.tar.bz2) = 164178 bytes
+SHA1 (patch-meson.build) = a267d9f150491f381e3bfd546334c15991a9ee06
