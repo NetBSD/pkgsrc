@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3314 2021/06/08 15:53:15 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3315 2021/06/08 16:20:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5324,3 +5324,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.4.0 [pin 2021-06-08]
 	Updated sysutils/macchina to 0.9.2 [pin 2021-06-08]
 	Updated audio/rubberband to 1.9.2 [nia 2021-06-08]
+	Updated audio/qmmp to 1.5.0 [nia 2021-06-08]
