@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1553 2021/06/08 01:58:06 mef Exp $
+# $NetBSD: Makefile,v 1.1554 2021/06/08 15:59:35 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -27,7 +27,6 @@ SUBDIR+=	album
 SUBDIR+=	album_themes
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
-SUBDIR+=	ap-auth-mellon
 SUBDIR+=	ap-authnz-crowd
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-php
@@ -128,7 +127,6 @@ SUBDIR+=	gitea
 SUBDIR+=	gitweb
 SUBDIR+=	gnurl
 SUBDIR+=	go-ace
-SUBDIR+=	go-cssmin
 SUBDIR+=	go-fasthttp
 SUBDIR+=	go-ffuf
 SUBDIR+=	go-gogs-client
