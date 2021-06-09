@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1 2021/06/09 20:49:58 nia Exp $
+
+DISTNAME=	OpenCL-CLHPP-v2.0.14
+PKGNAME=	${DISTNAME:tl:S/-v/-/1}
+CATEGORIES=	parallel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
+GITHUB_PROJECT=	OpenCL-CLHPP
+GITHUB_TAG=	${DISTNAME:S/^OpenCL-CLHPP-//1}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/KhronosGroup/OpenCL-CLHPP
+COMMENT=	OpenCL C++ header files
+LICENSE=	apache-2.0
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DBUILD_DOCS=OFF
+CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
+CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+
+.include "../../mk/bsd.pkg.mk"
