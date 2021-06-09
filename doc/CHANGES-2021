@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3327 2021/06/09 17:04:47 abs Exp $
+$NetBSD: CHANGES-2021,v 1.3328 2021/06/09 20:22:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5339,3 +5339,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added parallel/opencl-headers version 2021.04.29 [nia 2021-06-09]
 	Updated databases/R-RSQLite to 2.2.7 [mef 2021-06-09]
 	Added security/age version 1.0.0rc2 [abs 2021-06-09]
+	Updated chat/dino to 0.2.1 [nia 2021-06-09]
