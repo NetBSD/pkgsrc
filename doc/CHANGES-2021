@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3325 2021/06/09 15:20:12 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3326 2021/06/09 15:21:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added parallel/opencl-clang version 10.0.0.1 [nia 2021-06-09]
 	Updated graphics/gnome-backgrounds to 40.1 [dan 2021-06-09]
 	Added parallel/opencl-headers version 2021.04.29 [nia 2021-06-09]
+	Updated databases/R-RSQLite to 2.2.7 [mef 2021-06-09]
