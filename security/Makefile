@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.826 2021/06/03 07:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.827 2021/06/09 17:04:26 abs Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -20,6 +20,7 @@ SUBDIR+=	R-getPass
 SUBDIR+=	R-openssl
 SUBDIR+=	TweetNaCl
 SUBDIR+=	acmesh
+SUBDIR+=	age
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
