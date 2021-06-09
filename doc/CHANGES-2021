@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3321 2021/06/09 14:21:28 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3322 2021/06/09 14:55:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5333,3 +5333,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/monolith to 2.6.0 [pin 2021-06-09]
 	Updated net/rabbitmq to 3.8.17 [adam 2021-06-09]
 	Updated devel/py-fastimport to 0.9.13 [adam 2021-06-09]
+	Added parallel/spirv-llvm-translator version 10.0.0 [nia 2021-06-09]
