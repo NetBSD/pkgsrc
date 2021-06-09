@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/06/09 14:55:10 nia Exp $
+
+We don't want the package finding ccache because pkgsrc handles
+ccache on its own.
+
+--- CMakeLists.txt.orig	2020-03-20 19:52:42.000000000 +0000
++++ CMakeLists.txt
+@@ -49,7 +49,6 @@ if(LLVM_SPIRV_BUILD_EXTERNAL)
+ 
+   message(STATUS "Found LLVM: ${LLVM_VERSION}")
+ 
+-  find_program(CCACHE_EXE_FOUND ccache)
+   if(CCACHE_EXE_FOUND)
+     message(STATUS "Found ccache: ${CCACHE_EXE_FOUND}")
+     set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
