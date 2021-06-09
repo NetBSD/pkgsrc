@@ -1,0 +1,7 @@
+The LLVM/SPIR-V Bi-Directional Translator is a library and tool for translation
+between LLVM IR and SPIR-V.
+
+SPIR-V is a binary intermediate language for representing graphical-shader
+stages and compute kernels for multiple Khronos APIs, including OpenCL,
+OpenGL, and Vulkan. SPIR-V defines a new language and is a successor to the
+original Khronos SPIR, which supported only OpenCL device programs.
