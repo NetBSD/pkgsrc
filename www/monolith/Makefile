@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/06/02 19:54:37 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/09 07:55:29 pin Exp $
 
-DISTNAME=	monolith-2.5.0
+DISTNAME=	monolith-2.6.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Y2Z/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
