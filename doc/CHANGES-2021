@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3318 2021/06/09 04:57:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3319 2021/06/09 07:54:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/blackbox70 to 0.77 [gutteridge 2021-06-08]
 	Updated devel/protobuf to 3.17.3 [adam 2021-06-09]
 	Updated devel/py-protobuf to 3.17.3 [adam 2021-06-09]
+	Updated sysutils/xplr to 0.14.1 [pin 2021-06-09]
