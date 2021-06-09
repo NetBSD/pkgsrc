@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/09 15:19:57 nia Exp $
+
+SHA1 (OpenCL-Headers-v2021.04.29.tar.gz) = bf4ae62f2014b81aadf05502b49e0f1a3eb9aa50
+RMD160 (OpenCL-Headers-v2021.04.29.tar.gz) = 9ee0750fcaf93dbc160465ed1e38071ecda3e21c
+SHA512 (OpenCL-Headers-v2021.04.29.tar.gz) = 370d02044c61f2394e9a8a9772b30b996074e3b51461387a570aaf1c29488844fe9090d873b2679eb4a472135bac7a9ba5590daf9d79c006de17f709afcb74e1
+Size (OpenCL-Headers-v2021.04.29.tar.gz) = 59775 bytes
