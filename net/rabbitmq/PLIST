@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2021/05/06 07:22:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2021/06/09 14:12:23 adam Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -35,7 +35,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp10_client-${PKGVERSION}
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp10_common-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/aten-0.5.5.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/base64url-0.0.1.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/base64url-1.0.1.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-2.8.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-2.9.1.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/credentials_obfuscation-2.4.0.ez
