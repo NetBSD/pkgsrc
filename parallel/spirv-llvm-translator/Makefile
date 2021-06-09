@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/09 14:55:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/09 14:56:51 nia Exp $
 
 DISTNAME=	SPIRV-LLVM-Translator-v10.0.0
 PKGNAME=	${DISTNAME:tl:S/-v/-/1}
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+GCC_REQD+=	5 # C++14
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
