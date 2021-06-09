@@ -1,0 +1,4 @@
+opencl-clang is a thin wrapper library around clang.
+
+The library has a OpenCL-oriented API and is capable to compile OpenCL C
+kernels to SPIR-V modules.
