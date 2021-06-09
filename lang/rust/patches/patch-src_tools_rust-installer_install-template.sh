@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.4 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.5 2021/06/09 13:42:30 adam Exp $
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
@@ -8,7 +8,7 @@ pattern matching and substitution in the install phase using "grep"
 and "sed" when shell builtin "case" and "omit shortest match" ops
 should do just fine.
 
---- src/tools/rust-installer/install-template.sh.orig	2021-03-23 16:15:29.000000000 +0000
+--- src/tools/rust-installer/install-template.sh.orig	2021-05-09 02:52:58.000000000 +0000
 +++ src/tools/rust-installer/install-template.sh
 @@ -15,20 +15,12 @@ set -u
  init_logging() {
@@ -53,7 +53,7 @@ should do just fine.
  
  	    # Sanity checks
  	    if [ ! -n "$_command" ]; then critical_err "malformed installation directive"; fi
-@@ -559,54 +551,45 @@ install_components() {
+@@ -559,36 +551,24 @@ install_components() {
  	    # Decide the destination of the file
  	    local _file_install_path="$_dest_prefix/$_file"
  
@@ -86,6 +86,7 @@ should do just fine.
 -		local _f="$(echo "$_file" | sed 's/^share\/man\///')"
 -		_file_install_path="$CFG_MANDIR/$_f"
 -	    fi
+-
 +	    case "$_file" in
 +		etc/*)
 +		    local _f=${_file#"etc/"}
@@ -104,37 +105,13 @@ should do just fine.
 +		    _file_install_path="$CFG_MANDIR/$_f"
 +		    ;;
 +		share/doc/*)
-+        # HACK: Try to support overriding --docdir.  Paths with the form
-+        # "share/doc/$product/" can be redirected to a single --docdir
-+        # path. If the following detects that --docdir has been specified
-+        # then it will replace everything preceeding the "$product" path
-+        # component. The problem here is that the combined rust installer
-+        # contains two "products": rust and cargo; so the contents of those
-+        # directories will both be dumped into the same directory; and the
-+        # contents of those directories are _not_ disjoint. Since this feature
-+        # is almost entirely to support 'make install' anyway I don't expect
-+        # this problem to be a big deal in practice.
-+		    if [ "$CFG_DOCDIR" != "<default>" ]; then
-+			local _f=${_file#"share/doc/"}
-+			_file_install_path="$CFG_DOCDIR/$_f"
-+		    fi
-+		    ;;
-+		share/*)
-+		    local _f=${_file#"share/"}
-+		    _file_install_path="$CFG_DATADIR/$_f"
-+		    ;;
-+	    esac
- 
--            # HACK: Try to support overriding --docdir.  Paths with the form
--            # "share/doc/$product/" can be redirected to a single --docdir
--            # path. If the following detects that --docdir has been specified
--            # then it will replace everything preceeding the "$product" path
--            # component. The problem here is that the combined rust installer
--            # contains two "products": rust and cargo; so the contents of those
--            # directories will both be dumped into the same directory; and the
--            # contents of those directories are _not_ disjoint. Since this feature
--            # is almost entirely to support 'make install' anyway I don't expect
--            # this problem to be a big deal in practice.
+             # HACK: Try to support overriding --docdir.  Paths with the form
+             # "share/doc/$product/" can be redirected to a single --docdir
+             # path. If the following detects that --docdir has been specified
+@@ -599,14 +579,17 @@ install_components() {
+             # contents of those directories are _not_ disjoint. Since this feature
+             # is almost entirely to support 'make install' anyway I don't expect
+             # this problem to be a big deal in practice.
 -            if [ "$CFG_DOCDIR" != "<default>" ]
 -            then
 -	        if echo "$_file" | grep "^share/doc/" > /dev/null
@@ -143,6 +120,17 @@ should do just fine.
 -		    _file_install_path="$CFG_DOCDIR/$_f"
 -	        fi
 -            fi
++		    if [ "$CFG_DOCDIR" != "<default>" ]; then
++			local _f=${_file#"share/doc/"*/}
++			_file_install_path="$CFG_DOCDIR/$_f"
++		    fi
++		    ;;
++		share/*)
++		    local _f=${_file#"share/"}
++		    _file_install_path="$CFG_DATADIR/$_f"
++		    ;;
++	    esac
++
  
  	    # Make sure there's a directory for it
  	    make_dir_recursive "$(dirname "$_file_install_path")"
