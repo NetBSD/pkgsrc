@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3320 2021/06/09 07:55:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3321 2021/06/09 14:21:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5331,3 +5331,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-protobuf to 3.17.3 [adam 2021-06-09]
 	Updated sysutils/xplr to 0.14.1 [pin 2021-06-09]
 	Updated www/monolith to 2.6.0 [pin 2021-06-09]
+	Updated net/rabbitmq to 3.8.17 [adam 2021-06-09]
+	Updated devel/py-fastimport to 0.9.13 [adam 2021-06-09]
