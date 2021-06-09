@@ -1,13 +1,10 @@
-$NetBSD: patch-configure,v 1.5 2021/05/14 20:52:09 wiz Exp $
+$NetBSD: patch-configure,v 1.6 2021/06/09 04:57:10 adam Exp $
 
 Disable Solaris ISA selection.
 
-Fix unportable test(1) operator.
-https://github.com/protocolbuffers/protobuf/pull/8616
-
---- configure.orig	2019-02-28 21:34:14.000000000 +0000
+--- configure.orig	2021-06-08 14:11:47.000000000 +0000
 +++ configure
-@@ -7601,7 +7589,7 @@ fi
+@@ -7640,7 +7640,7 @@ fi
  fi
  
    case $host_os in
@@ -16,12 +13,3 @@ https://github.com/protocolbuffers/protobuf/pull/8616
        for ac_prog in isainfo
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
-@@ -18667,7 +18624,7 @@ fi
- rm -f core conftest.err conftest.$ac_objext \
-     conftest$ac_exeext conftest.$ac_ext
- LDFLAGS=$save_LDFLAGS
-- if test "$have_ld_version_script" == "yes"; then
-+ if test "$have_ld_version_script" = "yes"; then
-   HAVE_LD_VERSION_SCRIPT_TRUE=
-   HAVE_LD_VERSION_SCRIPT_FALSE='#'
- else
