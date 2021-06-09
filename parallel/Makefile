@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/06/09 15:11:46 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/06/09 15:19:57 nia Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -15,6 +15,7 @@ SUBDIR+=	linda
 SUBDIR+=	lua-lanes
 SUBDIR+=	mpi-ch
 SUBDIR+=	opencl-clang
+SUBDIR+=	opencl-headers
 SUBDIR+=	openmp
 SUBDIR+=	openmpi
 SUBDIR+=	openpa
