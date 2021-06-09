@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20757 2021/06/09 04:57:39 adam Exp $
+$NetBSD: TODO,v 1.20758 2021/06/09 09:20:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -642,7 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-5.19.0
+	o calibre-5.20.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-714
@@ -1000,7 +1000,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gperiodic-3.0.2
 	o gps-17.0
 	o gradle-7.0
-	o grafana-7.5.4
+	o grafana-8.0
 	o grafx2-2.8.3097
 	o grantlee-5.0.0
 	o graphene-1.10.6
@@ -1008,6 +1008,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grep-3.6
 	o gromacs-2021.1
 	o groonga-11.0.1
+	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
 	o gst-plugins1-omx-1.10.0
@@ -1836,7 +1837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pinfo-0.6.10
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.11
+	o plasma-5.22
 	o plasma-framework-5.81.0
 	o plasma-wayland-protocols-1.2.0
 	o ploticus-examples-230
@@ -2160,6 +2161,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o telepathy-mission-control5-5.16.6
 	o telepathy-qt-0.9.8
 	o terraform-0.15.1 [wait for https://github.com/hashicorp/terraform/issues/25813]
+	o terraform-1.0
 	o terraform-provider-aws-3.37.0
 	o terraform-provider-kubernetes-2.1.0
 	o terraform-provider-local-2.1.0
@@ -2250,7 +2252,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wgetpaste-2.30
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-6.6
+	o wine-6.0.1
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.5
