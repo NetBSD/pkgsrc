@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/09 20:49:58 nia Exp $
+include/CL/cl2.hpp
+include/CL/opencl.hpp
