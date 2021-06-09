@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3328 2021/06/09 20:22:32 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3329 2021/06/09 20:22:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5340,3 +5340,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/R-RSQLite to 2.2.7 [mef 2021-06-09]
 	Added security/age version 1.0.0rc2 [abs 2021-06-09]
 	Updated chat/dino to 0.2.1 [nia 2021-06-09]
+	Updated print/ghostscript-agpl to 9.54.0 [adam 2021-06-09]
+	Updated devel/py-cachelib to 0.1.1 [adam 2021-06-09]
