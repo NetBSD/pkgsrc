@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/09/20 14:34:25 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/06/09 15:20:49 mef Exp $
 
-SHA1 (R/RSQLite_2.2.0.tar.gz) = 6a1024ba27d9980af695cb030a49916c80b08ce5
-RMD160 (R/RSQLite_2.2.0.tar.gz) = ddb06cd6f788a16c64461b672e8c184c9494f3ff
-SHA512 (R/RSQLite_2.2.0.tar.gz) = 4059fa9b0d33457ff5500c3257d4b1ea73c6b5cd546e33797574de36f11adf3f109b05fe8e8b31fb181b984685fca1123b09a07617c8a97a5b42508425618a5d
-Size (R/RSQLite_2.2.0.tar.gz) = 2373785 bytes
+SHA1 (R/RSQLite_2.2.7.tar.gz) = 41c83bc3dff11111cfc2389cd0d66cf5dae8cadc
+RMD160 (R/RSQLite_2.2.7.tar.gz) = 0d71a89d288e73fa0488505d36cee5d0b8b19da8
+SHA512 (R/RSQLite_2.2.7.tar.gz) = acc608a4e360b3f738a28a23e92fad8da43135b1d3f808c076eb235809f192b4e3773facfb732b730403fc66e6001ce9f553b01b0ba5be1c930c512da30a18d2
+Size (R/RSQLite_2.2.7.tar.gz) = 3616162 bytes
