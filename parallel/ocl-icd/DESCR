@@ -1,0 +1,7 @@
+This package aims at creating an Open Source alternative to vendor specific
+OpenCL ICD loaders.
+
+The main difficulties to create such software is that the order of function
+pointers in a structure is not publicy available.
+
+This software maintains a YAML database of all known and guessed entries.
