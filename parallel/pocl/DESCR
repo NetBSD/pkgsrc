@@ -1,0 +1,11 @@
+OpenCL (Open Computing Language) is an open, royalty-free standard for
+cross-platform, parallel programming of diverse accelerators found in
+supercomputers, cloud servers, personal computers, mobile devices and embedded
+platforms.
+
+PoCL is a portable open source (MIT-licensed) implementation of the OpenCL
+standard (1.2 with some 2.0 features supported). In addition to being an easily
+portable multi-device (truly heterogeneous) open-source OpenCL implementation,
+a major goal of this project is improving interoperability of diversity of
+OpenCL-capable devices by integrating them to a single centrally orchestrated
+platform.
