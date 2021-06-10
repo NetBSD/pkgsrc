@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/04/06 14:47:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/06/10 07:33:32 adam Exp $
 
-DISTNAME=	SoftLayer-5.9.3
+DISTNAME=	SoftLayer-5.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SoftLayer/softlayer/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SoftLayer/}
@@ -11,7 +11,7 @@ COMMENT=	SoftLayer API bindings for Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-click>=7:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-ptable>=0.9.2:../../textproc/py-ptable
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
