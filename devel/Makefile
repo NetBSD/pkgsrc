@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3409 2021/06/07 19:56:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.3410 2021/06/10 05:43:23 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2499,6 +2499,7 @@ SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
 SUBDIR+=	py-progressbar2
 SUBDIR+=	py-prompt_toolkit
+SUBDIR+=	py-prompt_toolkit1
 SUBDIR+=	py-prompt_toolkit2
 SUBDIR+=	py-proteus
 SUBDIR+=	py-protobuf
@@ -2700,6 +2701,7 @@ SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-tox
 SUBDIR+=	py-traceback2
 SUBDIR+=	py-traitlets
+SUBDIR+=	py-traitlets4
 SUBDIR+=	py-treq
 SUBDIR+=	py-tryton
 SUBDIR+=	py-trytond
