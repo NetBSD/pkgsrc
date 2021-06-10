@@ -1,6 +1,8 @@
-$NetBSD: patch-lib_CL_devices_cpuinfo.c,v 1.1 2021/06/10 11:18:06 nia Exp $
+$NetBSD: patch-lib_CL_devices_cpuinfo.c,v 1.2 2021/06/10 12:26:26 nia Exp $
 
 Do not segfault if /sys/bus/pci/devices/0000:00:00.0/vendor does not exist.
+
+https://github.com/pocl/pocl/pull/948
 
 --- lib/CL/devices/cpuinfo.c.orig	2021-05-19 08:12:19.000000000 +0000
 +++ lib/CL/devices/cpuinfo.c
