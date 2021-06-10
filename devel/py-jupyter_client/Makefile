@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/08/26 11:37:24 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/06/10 18:46:05 adam Exp $
 
-DISTNAME=	jupyter_client-6.1.7
+DISTNAME=	jupyter_client-6.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -34,7 +34,7 @@ post-install:
 	${MV} jupyter-run jupyter-run-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
