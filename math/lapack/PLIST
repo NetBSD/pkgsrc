@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/10/12 21:51:57 bacon Exp $
-lib/cmake/lapack-${PKGVERSION}/lapack-config-version.cmake
-lib/cmake/lapack-${PKGVERSION}/lapack-config.cmake
-lib/cmake/lapack-${PKGVERSION}/lapack-targets-release.cmake
-lib/cmake/lapack-${PKGVERSION}/lapack-targets.cmake
+@comment $NetBSD: PLIST,v 1.6 2021/06/10 00:18:52 thor Exp $
 lib/liblapack.a
 lib/liblapack.so
 lib/liblapack.so.3

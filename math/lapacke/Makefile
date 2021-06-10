@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/04/20 20:40:47 thor Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/10 00:18:52 thor Exp $
 
-COMMENT=		C interface to a LAPACK library
+COMMENT=	C interface to a LAPACK library
+PKGREVISION=	1
+
 LAPACK_COMPONENT=	lapacke
 LAPACK_COMPONENT_CMAKE_ARGS=	\
 	-DUSE_OPTIMIZED_BLAS=ON \
