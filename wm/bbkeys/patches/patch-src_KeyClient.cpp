@@ -1,4 +1,4 @@
-$NetBSD: patch-src_KeyClient.cpp,v 1.2 2015/11/17 15:59:13 he Exp $
+$NetBSD: patch-src_KeyClient.cpp,v 1.1 2021/06/10 12:48:49 nia Exp $
 
 Include strings.h too.
 Initialize all pointers.
