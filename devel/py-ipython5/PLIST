@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/16 18:10:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/10 05:48:26 adam Exp $
+bin/iptest-${PYVERSSUFFIX}
 ${PLIST.py2x}bin/iptest2
 ${PLIST.py3x}bin/iptest3
-bin/iptest${PYVERSSUFFIX}
+bin/ipython-${PYVERSSUFFIX}
 ${PLIST.py2x}bin/ipython2
 ${PLIST.py3x}bin/ipython3
-bin/ipython${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
@@ -925,5 +926,4 @@ ${PYSITELIB}/IPython/utils/warn.pyo
 ${PYSITELIB}/IPython/utils/wildcard.py
 ${PYSITELIB}/IPython/utils/wildcard.pyc
 ${PYSITELIB}/IPython/utils/wildcard.pyo
-${PYSITELIB}/${EGG_FILE}
-man/man1/ipython${PYVERSSUFFIX}.1
+man/man1/ipython-${PYVERSSUFFIX}.1
