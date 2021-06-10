@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2021/01/24 15:53:02 nia Exp $
-#
+# $NetBSD: Makefile,v 1.30 2021/06/10 10:10:47 wiz Exp $
 
-DISTNAME=	ispell-3.4.02
+DISTNAME=	ispell-3.4.04
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.cs.hmc.edu/~geoff/tars/
 
