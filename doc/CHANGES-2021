@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3333 2021/06/10 00:20:11 thor Exp $
+$NetBSD: CHANGES-2021,v 1.3334 2021/06/10 02:02:55 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5346,3 +5346,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/lapack to 3.9.1nb1 [thor 2021-06-10]
 	Updated math/lapacke to 3.9.1nb1 [thor 2021-06-10]
 	Updated math/cblas to 3.9.1nb1 [thor 2021-06-10]
+	Updated sysutils/intel-microcode-netbsd to 20210608 [msaitoh 2021-06-08]
