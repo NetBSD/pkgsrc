@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3332 2021/06/10 00:19:50 thor Exp $
+$NetBSD: CHANGES-2021,v 1.3333 2021/06/10 00:20:11 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5345,3 +5345,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added parallel/opencl-clhpp version 2.0.14 [nia 2021-06-09]
 	Updated math/lapack to 3.9.1nb1 [thor 2021-06-10]
 	Updated math/lapacke to 3.9.1nb1 [thor 2021-06-10]
+	Updated math/cblas to 3.9.1nb1 [thor 2021-06-10]
