@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2021/04/25 04:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2021/06/10 12:48:49 nia Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -11,13 +11,10 @@ SUBDIR+=	afterstep
 SUBDIR+=	amiwm
 SUBDIR+=	awesome
 SUBDIR+=	bbkeys
-SUBDIR+=	bbkeys09
 SUBDIR+=	bbpager
-SUBDIR+=	bbpager04
 SUBDIR+=	bbrun
 SUBDIR+=	berry
 SUBDIR+=	blackbox
-SUBDIR+=	blackbox70
 SUBDIR+=	bmpanel2
 SUBDIR+=	bsetroot
 SUBDIR+=	bspwm

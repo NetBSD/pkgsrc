@@ -1,4 +1,4 @@
-$NetBSD: patch-src_resource.cxx,v 1.1 2011/11/25 22:22:05 joerg Exp $
+$NetBSD: patch-src_resource.cxx,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 --- src/resource.cxx.orig	2011-11-25 17:02:49.000000000 +0000
 +++ src/resource.cxx

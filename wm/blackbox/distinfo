@@ -1,14 +1,17 @@
-$NetBSD: distinfo,v 1.14 2015/11/02 23:42:51 agc Exp $
+$NetBSD: distinfo,v 1.15 2021/06/10 12:48:50 nia Exp $
 
-SHA1 (blackbox-0.65.0.tar.gz) = 903a35526b1c29912ca500b7f8c205368e60fc38
-RMD160 (blackbox-0.65.0.tar.gz) = d88d9c5d9375274da149c77d3c63bb9c92470f26
-SHA512 (blackbox-0.65.0.tar.gz) = 337f6155674403869c527a70f3a399dfef8291533ec96a02424ecd9d1c43dd004651997f83b6916d273815f25b2434dd3ec181d440988c7932f139b14c9040c9
-Size (blackbox-0.65.0.tar.gz) = 292950 bytes
-SHA1 (patch-aa) = 265249c3e27da0d7dd9b2b85da1c417684c57e0f
-SHA1 (patch-ab) = 6081da04f0dbab0f711523114e130c176a0f1f05
-SHA1 (patch-ac) = 5f249a2e6d75e5d88605d6d8a1675d003b1cb52f
-SHA1 (patch-ad) = 0906aa36c45b1e9ebd8c10e166ac1ba8e345fd9e
-SHA1 (patch-ae) = 0e919952cd5209e787807548ca7ce45c5ed03497
-SHA1 (patch-src_GCCache.cc) = 7bb4d013160d677a448a964cd2280200e50fceba
-SHA1 (patch-src_Image.cc) = fa9ad93eae4fa6e21b8e9f2811298e87a4901c15
-SHA1 (patch-src_ImageControl.cc) = cd72e47a768f71ad26c76f4268e1c6f0e5f1e12c
+SHA1 (blackbox-0.77.tar.lz) = 4a8c17b3ab885ff417df26bd9f9b7c5163fdd7df
+RMD160 (blackbox-0.77.tar.lz) = c21ede6822115b9163d6bf6482b4a0864f0b0927
+SHA512 (blackbox-0.77.tar.lz) = d33c611ae019ab37b936566470f318b7a9de601da6586f2b7485882e2da2c9a22cfaa6dd4850b9a749791f33a9dbb8bcb84c88cb10a890080eb437131f19c593
+Size (blackbox-0.77.tar.lz) = 566397 bytes
+SHA1 (patch-doc_fr__FR_Makefile.in) = 39af7e28c397bd4201f85d4d13a48892024d274b
+SHA1 (patch-doc_ja__JP_Makefile.in) = bd79553e6bd5368a8b21cf463056a35c84e2e8e0
+SHA1 (patch-doc_nl__NL_Makefile.in) = 5f7df3158b59633fd9633656237f4fd5cdace897
+SHA1 (patch-doc_sl__SI_Makefile.in) = d116093a717a14d8e0b252f0254f7fb03e37f0a1
+SHA1 (patch-lib_Image.cc) = ab49da02853b670843f4884517f0727d4569d50a
+SHA1 (patch-lib_Menu.cc) = b16a7439fa5db1d287e5353ec5986a9c3ffd6cfb
+SHA1 (patch-lib_Unicode.cc) = 7a13e7822a9af71c97b24e167394d87a65e8be73
+SHA1 (patch-src_Screen.cc) = 7a75160a66eb6317930af063514688c6e5028569
+SHA1 (patch-src_Toolbar.cc) = 2fdcea33eff7b6a99f22ce7a77c9b713b4f005b5
+SHA1 (patch-src_main.cc) = 24f43276e20f8fb89c6cb478e5e1bf52ea3eb659
+SHA1 (patch-util_bsetbg) = 2e5ea600ef842ff677591220398fb7300d210397
