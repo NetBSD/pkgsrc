@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:40:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/10 12:48:50 nia Exp $
 bin/bbpager
 man/man1/bbpager.1
 man/man5/bbpager.bb.5
 share/bbtools/README.bbpager
-share/bbtools/bbpager.bb
-share/bbtools/bbpager.nobb
+share/bbtools/bbpager.rc
