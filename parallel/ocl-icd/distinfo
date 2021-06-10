@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2021/06/10 05:55:42 nia Exp $
+
+SHA1 (ocl-icd-2.3.0.tar.gz) = 4ccf5706c8cf09c63dd56fef57c2bf9c70a5288f
+RMD160 (ocl-icd-2.3.0.tar.gz) = d72a75a2ff12c9cf30f8b91c65782473947ee633
+SHA512 (ocl-icd-2.3.0.tar.gz) = 003f3661b7086a7364e79d1058591f12a7095aa2c3decfc4b496f00a0863a91cd81080f33b9308e3948045f8aca5856868ed2725f478654230e51a60d654e613
+Size (ocl-icd-2.3.0.tar.gz) = 100848 bytes
+SHA1 (patch-icd__generator.rb) = d4522e8b264a3eb944f019e7139598e3ac6dc371
+SHA1 (patch-khronos-headers_CL_cl.h) = 016b3e07fc529b104530d29826b1375e8b0c4745
+SHA1 (patch-khronos-headers_CL_cl__d3d10.h) = efbd00d2ffae3e24a2d5671835d474f7c813da20
+SHA1 (patch-khronos-headers_CL_cl__d3d11.h) = 8865f5e4fafbf7216a212fc91e372a0f76772025
+SHA1 (patch-khronos-headers_CL_cl__dx9__media__sharing.h) = c70eec07f90db0b034c4c8e8761051a6967606c3
+SHA1 (patch-khronos-headers_CL_cl__egl.h) = 2426e022486e39f5e418d7d509fb7fe98c3c8697
+SHA1 (patch-khronos-headers_CL_cl__ext.h) = aa19f68954d390348dc4c85058d8b78e91d943c3
+SHA1 (patch-khronos-headers_CL_cl__gl.h) = 21707229aea5e2268af6ff49e5fc9ac834f7579b
+SHA1 (patch-khronos-headers_CL_cl__gl__ext.h) = 6daced51363b5157f66025c119ec9a08d68bfb2d
+SHA1 (patch-khronos-headers_CL_cl__icd.h) = ed0a46b8c1260b43f1578e07e34e0a5dbe53b5e6
+SHA1 (patch-khronos-headers_CL_cl__layer.h) = d1b0ae935c4eed12076d7e4da956626e38e93841
+SHA1 (patch-khronos-headers_CL_cl__platform.h) = 4010d874b9c25a8701c52460c8de822cf579c8c2
+SHA1 (patch-khronos-headers_CL_cl__va__api__media__sharing__intel.h) = 98a6605f15a7e583eacae59fd522f94ca01a51e6
+SHA1 (patch-khronos-headers_CL_opencl.h) = 2aa2d9b484252906f0ed82d176a95bb86614c617
+SHA1 (patch-ocl__interface.yaml) = 41a400fdb541220de5a296e099bb646b00f189a3
+SHA1 (patch-run__dummy__icd.c) = b60c3b48730402ed8434dd2434e013dd1c26388e
