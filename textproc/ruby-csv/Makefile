@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/14 14:38:40 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/10 14:25:42 taca Exp $
 
 DISTNAME=	csv-3.1.9
 CATEGORIES=	textproc
@@ -7,6 +7,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ruby/csv/
 COMMENT=	CSV Reading and Writing
 LICENSE=	2-clause-bsd
+
+# Ruby 3.0 contain the same version of rexml.
+RUBY_VERSIONS_ACCEPTED=	26 27
 
 USE_LANGUAGES=	# none
 
