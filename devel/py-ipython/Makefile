@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2021/05/07 18:09:15 adam Exp $
+# $NetBSD: Makefile,v 1.60 2021/06/10 07:19:46 adam Exp $
 
-DISTNAME=	ipython-7.23.1
+DISTNAME=	ipython-7.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -15,11 +15,12 @@ DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.2:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.2:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
+# TODO: matplotlib-inline
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == Darwin
 DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
