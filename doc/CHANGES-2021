@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3348 2021/06/10 11:48:43 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3349 2021/06/10 12:51:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5365,3 +5365,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/poppler to 21.06.1 [wiz 2021-06-10]
 	Updated security/gpg-tui to 0.4.1 [pin 2021-06-10]
 	Updated sysutils/zoxide to 0.7.2 [pin 2021-06-10]
+	Updated wm/blackbox to 0.77 [nia 2021-06-10]
+	Updated wm/bbpager to 0.4.7 [nia 2021-06-10]
+	Updated wm/bbkeys to 0.9.1 [nia 2021-06-10]
+	Removed wm/blackbox70 successor wm/blackbox [nia 2021-06-10]
+	Removed wm/bbpager04 successor wm/bbpager [nia 2021-06-10]
+	Removed wm/bbkeys09 successor wm/bbkeys [nia 2021-06-10]
