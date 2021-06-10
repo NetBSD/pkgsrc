@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/06/10 06:02:14 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/10 10:26:07 nia Exp $
 
 DISTNAME=	ocl-icd-2.3.0
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OCL-dev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,6 +23,8 @@ TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 .include "../../lang/ruby/rubyversion.mk"
 
 TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+
+CONFIGURE_ARGS+=	--enable-custom-vendordir=${PKG_SYSCONFDIR}/OpenCL/vendors
 
 PKGCONFIG_OVERRIDE+=	OpenCL.pc.in
 PKGCONFIG_OVERRIDE+=	ocl-icd.pc.in
