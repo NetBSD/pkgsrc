@@ -1,2 +1,2 @@
-bin/iptest @PREFIX@/bin/iptest@PYVERSSUFFIX@
-bin/ipython @PREFIX@/bin/ipython@PYVERSSUFFIX@
+bin/iptest @PREFIX@/bin/iptest-@PYVERSSUFFIX@
+bin/ipython @PREFIX@/bin/ipython-@PYVERSSUFFIX@
