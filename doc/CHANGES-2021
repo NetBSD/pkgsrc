@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3352 2021/06/10 15:49:47 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3353 2021/06/10 18:54:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5374,3 +5374,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Added meta-pkgs/bulk-test-llvm version 20210610 [nia 2021-06-10]
 	Added devel/ruby-red-datasets version 0.1.2 [taca 2021-06-10]
 	Updated devel/ruby-gettext to 3.3.8 [taca 2021-06-10]
+	Updated devel/py-ipython to 7.24.1 [adam 2021-06-10]
+	Updated net/py-softlayer to 5.9.5 [adam 2021-06-10]
+	Updated devel/py-jupyter_core to 4.7.1 [adam 2021-06-10]
+	Updated devel/py-jupyter_client to 6.1.12 [adam 2021-06-10]
+	Updated devel/py-ipykernel to 5.5.5 [adam 2021-06-10]
+	Updated devel/py-jupyter-console to 6.4.0 [adam 2021-06-10]
