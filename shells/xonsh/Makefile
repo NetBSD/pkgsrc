@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:40 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/10 07:34:52 adam Exp $
 
 DISTNAME=	xonsh-0.8.8
 PKGREVISION=	2
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 PKG_SHELL=	${PREFIX}/bin/xon.sh
