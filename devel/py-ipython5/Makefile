@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/06/10 05:48:26 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/06/10 07:03:53 adam Exp $
 
 DISTNAME=	ipython-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,10 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools44
 DEPENDS+=	${PYPKGPREFIX}-simplegeneric>0.8:../../devel/py-simplegeneric
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets4
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == Darwin
+DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
+.endif
 
 USE_LANGUAGES=	# none
 
