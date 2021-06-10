@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Toolbar.cc,v 1.1 2018/10/12 18:00:55 he Exp $
+$NetBSD: patch-src_Toolbar.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 Fix build failure when time_t is 64 bits on a 32-bit machine.
 

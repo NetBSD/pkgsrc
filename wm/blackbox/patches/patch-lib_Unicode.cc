@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Unicode.cc,v 1.2 2020/03/18 18:02:41 joerg Exp $
+$NetBSD: patch-lib_Unicode.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 --- lib/Unicode.cc.orig	2014-08-30 08:23:20.000000000 +0000
 +++ lib/Unicode.cc

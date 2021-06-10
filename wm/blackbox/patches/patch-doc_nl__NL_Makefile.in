@@ -1,9 +1,9 @@
-$NetBSD: patch-doc_fr__FR_Makefile.in,v 1.1 2019/10/08 02:59:59 gutteridge Exp $
+$NetBSD: patch-doc_nl__NL_Makefile.in,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 Avoid a variable specific to GNU make.
 
---- doc/fr_FR/Makefile.in.orig	2019-09-06 09:55:03.000000000 +0000
-+++ doc/fr_FR/Makefile.in
+--- doc/nl_NL/Makefile.in.orig	2019-09-06 09:55:04.000000000 +0000
++++ doc/nl_NL/Makefile.in
 @@ -588,7 +588,7 @@ blackbox.1: blackbox.1.in
  	$(SED) -e "s,@defaultmenu@,$(DEFAULT_MENU)," \
  		-e "s,@pkgdatadir@,$(pkgdatadir)," \

@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Image.cc,v 1.1 2018/10/12 18:00:55 he Exp $
+$NetBSD: patch-lib_Image.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 Sunpro cannot resolve sqrt(int) to either sqrt(double) or
 sqrt(long double).
