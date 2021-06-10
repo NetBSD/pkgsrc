@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/10 14:31:04 taca Exp $
+
+SHA1 (red-datasets-0.1.2.gem) = cbb1db0a38bf5dcb0e2398d25591353c301e228f
+RMD160 (red-datasets-0.1.2.gem) = b1b8e5a2f2bd5e760f64c88a42f901eea4c65ccc
+SHA512 (red-datasets-0.1.2.gem) = 4ca4e111685bd40ae5ee5f055dbb1791558524ce2dfab825dd621396b32ac105569a081070a7a0dfce4dea929743c9e272ed195d7d4519d677300c9ecd9f3ad4
+Size (red-datasets-0.1.2.gem) = 45056 bytes
