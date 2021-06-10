@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/10 08:16:49 leot Exp $
+
+SHA1 (ec2instanceconnectcli-1.0.2.tar.gz) = 90aeec19493ad27bde4524cff799c1c1330c1d2a
+RMD160 (ec2instanceconnectcli-1.0.2.tar.gz) = 202af4db6bb3ac5f45bf463dbabe893247ec6a26
+SHA512 (ec2instanceconnectcli-1.0.2.tar.gz) = 3d74d1ea04f4d948a619c835c9bd2595fd0c1957b20a1aa77f77f2e789c2dfe94550c563f852dcbd9106abb6b7fab392d8c681fa6671e38d5c8cbbee25ba1e42
+Size (ec2instanceconnectcli-1.0.2.tar.gz) = 22569 bytes
