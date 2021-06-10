@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3349 2021/06/10 12:51:29 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3350 2021/06/10 13:02:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5371,3 +5371,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed wm/blackbox70 successor wm/blackbox [nia 2021-06-10]
 	Removed wm/bbpager04 successor wm/bbpager [nia 2021-06-10]
 	Removed wm/bbkeys09 successor wm/bbkeys [nia 2021-06-10]
+	Added meta-pkgs/bulk-test-llvm version 20210610 [nia 2021-06-10]
