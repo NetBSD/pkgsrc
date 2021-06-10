@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.13 2021/06/06 09:44:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q1,v 1.1.2.14 2021/06/10 08:52:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q1 branch:
 
@@ -109,4 +109,10 @@ www/firefox78-l10n: dependent update
 
 Pullup ticket #6468 - requested by nia
 www/firefox78-l10n: dependent update
+
+Pullup ticket #6470 - requested by simonb
+x11/xorgproto: NetBSD-current build fix
+
+Pullup ticket #6469 - requested by nia
+chat/dino: security fix
 
