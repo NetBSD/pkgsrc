@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3351 2021/06/10 14:32:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3352 2021/06/10 15:49:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5373,3 +5373,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed wm/bbkeys09 successor wm/bbkeys [nia 2021-06-10]
 	Added meta-pkgs/bulk-test-llvm version 20210610 [nia 2021-06-10]
 	Added devel/ruby-red-datasets version 0.1.2 [taca 2021-06-10]
+	Updated devel/ruby-gettext to 3.3.8 [taca 2021-06-10]
