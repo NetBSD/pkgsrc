@@ -1,0 +1,7 @@
+Red Datasets
+
+Red Datasets provides classes that provide common datasets such as iris
+dataset.
+
+You can use datasets easily because you can access each dataset with
+multiple ways such as #each and Apache Arrow Record Batch.
