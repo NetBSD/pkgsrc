@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3330 2021/06/09 20:50:12 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3331 2021/06/10 00:19:26 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/ghostscript-agpl to 9.54.0 [adam 2021-06-09]
 	Updated devel/py-cachelib to 0.1.1 [adam 2021-06-09]
 	Added parallel/opencl-clhpp version 2.0.14 [nia 2021-06-09]
+	Updated math/lapack to 3.9.1nb1 [thor 2021-06-10]
