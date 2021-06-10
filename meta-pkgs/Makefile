@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2021/05/29 16:31:46 nia Exp $
+# $NetBSD: Makefile,v 1.114 2021/06/10 13:02:09 nia Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -8,6 +8,7 @@ SUBDIR+=	bulk-large
 SUBDIR+=	bulk-medium
 SUBDIR+=	bulk-small
 SUBDIR+=	bulk-test-boost
+SUBDIR+=	bulk-test-llvm
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	deforaos-desktop
