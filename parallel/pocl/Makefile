@@ -1,0 +1,55 @@
+# $NetBSD: Makefile,v 1.1 2021/06/10 09:57:40 nia Exp $
+
+DISTNAME=	pocl-1.7
+CATEGORIES=	parallel
+MASTER_SITES=	http://portablecl.org/downloads/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://portablecl.org/
+COMMENT=	Portable implementation of the OpenCL standard
+LICENSE=	mit
+
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+# C++11
+GCC_REQD+=	4.7
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR="lib"
+CMAKE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendor"
+CMAKE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/pocl
+
+# The PLIST includes target-specific files so needs to be generated.
+GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+
+.include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+.if empty(PKGSRC_COMPILER:M*clang*)
+# XXX: When using GCC, pkgsrc provides 'clang' wrappers that are actually gcc.
+# XXX: This is copied from Firefox, which also needs this hack...
+	${LN} -sf ${PREFIX}/bin/clang ${WRKDIR}/.cwrapper/bin/clang
+	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
+	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
+.endif
+
+OWN_DIRS+=	${PKG_SYSCONFDIR}/OpenCL/vendor
+
+CONF_FILES+=	${PREFIX}/share/examples/OpenCL/vendor/pocl.icd \
+		${PKG_SYSCONFDIR}/OpenCL/vendor/pocl.icd
+
+PKGCONFIG_OVERRIDE+=	pocl.pc.in.cmake
+
+.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
+.include "../../parallel/hwloc/buildlink3.mk"
+.include "../../parallel/ocl-icd/buildlink3.mk"
+.include "../../parallel/opencl-headers/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
