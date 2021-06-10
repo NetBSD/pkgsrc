@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3337 2021/06/10 08:17:58 leot Exp $
+$NetBSD: CHANGES-2021,v 1.3338 2021/06/10 09:57:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5354,3 +5354,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ipython5 to 5.10.0 [adam 2021-06-10]
 	Added parallel/ocl-icd version 2.3.0 [nia 2021-06-10]
 	Added net/py-ec2instanceconnectcli version 1.0.2 [leot 2021-06-10]
+	Added parallel/pocl version 1.7 [nia 2021-06-10]
