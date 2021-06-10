@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3346 2021/06/10 10:59:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3347 2021/06/10 11:47:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5363,3 +5363,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-cairo to 1.20.1 [wiz 2021-06-10]
 	Updated security/p11-kit to 0.24.0 [wiz 2021-06-10]
 	Updated print/poppler to 21.06.1 [wiz 2021-06-10]
+	Updated security/gpg-tui to 0.4.1 [pin 2021-06-10]
