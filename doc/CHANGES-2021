@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3335 2021/06/10 05:49:14 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3336 2021/06/10 05:55:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Moved devel/py-traitlets to devel/py-traitlets4 [adam 2021-06-10]
 	Updated devel/py-traitlets to 5.0.5 [adam 2021-06-10]
 	Updated devel/py-ipython5 to 5.10.0 [adam 2021-06-10]
+	Added parallel/ocl-icd version 2.3.0 [nia 2021-06-10]
