@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/06/09 20:49:58 nia Exp $
+# $NetBSD: Makefile,v 1.34 2021/06/10 09:57:39 nia Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -14,6 +14,7 @@ SUBDIR+=	hwloc
 SUBDIR+=	linda
 SUBDIR+=	lua-lanes
 SUBDIR+=	mpi-ch
+SUBDIR+=	ocl-icd
 SUBDIR+=	opencl-clang
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
@@ -24,6 +25,7 @@ SUBDIR+=	p5-Parallel-Pvm
 SUBDIR+=	paexec
 SUBDIR+=	parallel
 SUBDIR+=	pdsh
+SUBDIR+=	pocl
 SUBDIR+=	pvm3
 SUBDIR+=	py-billiard
 SUBDIR+=	sge
