@@ -1,4 +1,4 @@
-$NetBSD: patch-src_main.cc,v 1.1 2018/12/27 15:10:17 joerg Exp $
+$NetBSD: patch-src_main.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
 
 Uses LC_ALL.
 

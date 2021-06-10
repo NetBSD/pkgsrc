@@ -1,4 +1,4 @@
-$NetBSD: patch-src_ScreenHandler.cpp,v 1.1 2015/11/17 15:59:13 he Exp $
+$NetBSD: patch-src_ScreenHandler.cpp,v 1.1 2021/06/10 12:48:49 nia Exp $
 
 Debug output for missing active window.
 Used while debugging what turned out to be an LP64 problem,
