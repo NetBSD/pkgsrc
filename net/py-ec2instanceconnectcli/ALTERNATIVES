@@ -1,0 +1,2 @@
+bin/msftp @PREFIX@/bin/msftp@PYVERSSUFFIX@
+bin/mssh @PREFIX@/bin/mssh@PYVERSSUFFIX@
