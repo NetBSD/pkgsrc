@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.14 2021/01/08 21:09:08 triaxx Exp $
+$NetBSD: distinfo,v 1.15 2021/06/10 10:20:50 wiz Exp $
 
-SHA1 (p11-kit-0.23.22.tar.xz) = 339e5163ed50a9984a74739b9207ea8cd77fa7e2
-RMD160 (p11-kit-0.23.22.tar.xz) = 35bc18cde9610ceb1a4c1c167360b7ef4a81288d
-SHA512 (p11-kit-0.23.22.tar.xz) = 098819e6ca4ad9cc2a0bc2e478aea67354d051a4f03e6c7d75d13d2469b6dc7654f26b15530052f6ed51acb35531c2539e0f971b31e29e6673e857c903afb080
-Size (p11-kit-0.23.22.tar.xz) = 830016 bytes
-SHA1 (patch-common_compat.c) = bdcb10cebe5e7755c81f88ef033b9dfecd7a1aad
+SHA1 (p11-kit-0.24.0.tar.xz) = 66380b519caa58d49f31f7fb4aae7b14e91b1a40
+RMD160 (p11-kit-0.24.0.tar.xz) = 5dab40899e748c0879f1a30fc7e06811898159a7
+SHA512 (p11-kit-0.24.0.tar.xz) = 48369d6fdae79b8c5a255c821fbdb982f0c649cce07c0d92f0ff0c16322fea8919faa94067cae2efede2da3646c0e69a71a3e399b769dc2327f247bcb113eb3c
+Size (p11-kit-0.24.0.tar.xz) = 834392 bytes
 SHA1 (patch-Makefile.in) = 1393b1c8892e90362575d5d325a583921f629b3c
-SHA1 (patch-p11-kit_lists.c) = 5834dd7cb09de7776205dac0a21a31a5ad5f3dae
+SHA1 (patch-common_compat.c) = bdcb10cebe5e7755c81f88ef033b9dfecd7a1aad
