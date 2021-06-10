@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/08/26 11:37:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/06/10 18:46:05 adam Exp $
 bin/jupyter-kernel-${PYVERSSUFFIX}
 bin/jupyter-kernelspec-${PYVERSSUFFIX}
 bin/jupyter-run-${PYVERSSUFFIX}
@@ -110,6 +110,9 @@ ${PYSITELIB}/jupyter_client/ssh/tunnel.pyo
 ${PYSITELIB}/jupyter_client/tests/__init__.py
 ${PYSITELIB}/jupyter_client/tests/__init__.pyc
 ${PYSITELIB}/jupyter_client/tests/__init__.pyo
+${PYSITELIB}/jupyter_client/tests/conftest.py
+${PYSITELIB}/jupyter_client/tests/conftest.pyc
+${PYSITELIB}/jupyter_client/tests/conftest.pyo
 ${PYSITELIB}/jupyter_client/tests/signalkernel.py
 ${PYSITELIB}/jupyter_client/tests/signalkernel.pyc
 ${PYSITELIB}/jupyter_client/tests/signalkernel.pyo
@@ -158,6 +161,9 @@ ${PYSITELIB}/jupyter_client/tests/utils.pyo
 ${PYSITELIB}/jupyter_client/threaded.py
 ${PYSITELIB}/jupyter_client/threaded.pyc
 ${PYSITELIB}/jupyter_client/threaded.pyo
+${PYSITELIB}/jupyter_client/utils.py
+${PYSITELIB}/jupyter_client/utils.pyc
+${PYSITELIB}/jupyter_client/utils.pyo
 ${PYSITELIB}/jupyter_client/win_interrupt.py
 ${PYSITELIB}/jupyter_client/win_interrupt.pyc
 ${PYSITELIB}/jupyter_client/win_interrupt.pyo
