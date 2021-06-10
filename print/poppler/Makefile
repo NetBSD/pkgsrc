@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.84 2021/05/20 11:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2021/06/10 10:59:29 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=	PDF rendering library
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.cmake
+PKGCONFIG_OVERRIDE+=	poppler.pc.cmake
 
 INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
