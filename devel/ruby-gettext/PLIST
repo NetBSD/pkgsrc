@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/08/09 15:26:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/06/10 15:49:25 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1385,7 +1385,8 @@ ${GEM_LIBDIR}/test/fixtures/erb/ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rxml
 ${GEM_LIBDIR}/test/fixtures/erb/minus.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/non_ascii.rhtml
-${GEM_LIBDIR}/test/fixtures/gladeparser.glade
+${GEM_LIBDIR}/test/fixtures/glade/2.glade
+${GEM_LIBDIR}/test/fixtures/glade/3.glade
 ${GEM_LIBDIR}/test/fixtures/gtk_builder_ui_definitions.ui
 ${GEM_LIBDIR}/test/fixtures/gtk_builder_ui_definitions.ui~
 ${GEM_LIBDIR}/test/fixtures/hello.rb
@@ -1396,15 +1397,16 @@ ${GEM_LIBDIR}/test/fixtures/np_.rb
 ${GEM_LIBDIR}/test/fixtures/ns_.rb
 ${GEM_LIBDIR}/test/fixtures/ns_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/p_.rb
-${GEM_LIBDIR}/test/fixtures/ruby/percent_I.rb
-${GEM_LIBDIR}/test/fixtures/ruby/percent_W.rb
-${GEM_LIBDIR}/test/fixtures/ruby/percent_i.rb
-${GEM_LIBDIR}/test/fixtures/ruby/percent_w.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_lower_i.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_lower_w.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_upper_i.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_upper_w.rb
 ${GEM_LIBDIR}/test/fixtures/s_.rb
 ${GEM_LIBDIR}/test/fixtures/s_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/simple.rb
 ${GEM_LIBDIR}/test/fixtures/untranslated.rb
 ${GEM_LIBDIR}/test/fixtures/upper_n_.rb
+${GEM_LIBDIR}/test/fixtures/upper_nn_.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/locale/cr/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural.mo
@@ -1516,6 +1518,7 @@ ${GEM_LIBDIR}/test/tools/files/simple_1.po
 ${GEM_LIBDIR}/test/tools/files/simple_2.po
 ${GEM_LIBDIR}/test/tools/files/simple_translation.rb
 ${GEM_LIBDIR}/test/tools/files/version.po
+${GEM_LIBDIR}/test/tools/parser/test_glade.rb
 ${GEM_LIBDIR}/test/tools/parser/test_gtk_builder_ui_definitions.rb
 ${GEM_LIBDIR}/test/tools/parser/test_ruby.rb
 ${GEM_LIBDIR}/test/tools/test.pot
