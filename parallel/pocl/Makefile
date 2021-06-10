@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/06/10 09:57:40 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/10 10:26:32 nia Exp $
 
 DISTNAME=	pocl-1.7
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://portablecl.org/downloads/
 
@@ -18,7 +19,7 @@ GCC_REQD+=	4.7
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR="lib"
-CMAKE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendor"
+CMAKE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendors"
 CMAKE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 
@@ -39,10 +40,10 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
 .endif
 
-OWN_DIRS+=	${PKG_SYSCONFDIR}/OpenCL/vendor
+OWN_DIRS+=	${PKG_SYSCONFDIR}/OpenCL/vendors
 
-CONF_FILES+=	${PREFIX}/share/examples/OpenCL/vendor/pocl.icd \
-		${PKG_SYSCONFDIR}/OpenCL/vendor/pocl.icd
+CONF_FILES+=	${PREFIX}/share/examples/OpenCL/vendors/pocl.icd \
+		${PKG_SYSCONFDIR}/OpenCL/vendors/pocl.icd
 
 PKGCONFIG_OVERRIDE+=	pocl.pc.in.cmake
 
