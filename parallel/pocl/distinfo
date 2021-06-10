@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/06/10 09:57:40 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/06/10 11:18:06 nia Exp $
 
 SHA1 (pocl-1.7.tar.gz) = 7f28546ac51d89ba699cc5adce1ddf2e91bdf230
 RMD160 (pocl-1.7.tar.gz) = 75555c802bf133298d615f5c146174dc0f959a72
@@ -8,6 +8,7 @@ SHA1 (patch-CMakeLists.txt) = 314c492b03d66ab373cc59c926fe3d27aeb3a5a3
 SHA1 (patch-config.h.in.cmake) = 974fad1f19516ef0b73f7db5b3948e677f4aaf98
 SHA1 (patch-lib_CL_devices_basic_basic.c) = 9110d868a305cefc2e19fd7d7482f6ce2b8a6164
 SHA1 (patch-lib_CL_devices_common.c) = c276aa967a1cc79b2bd6029b287b887bdb2b0010
+SHA1 (patch-lib_CL_devices_cpuinfo.c) = 70c4948c4948134e05d165ca0e8f6bd6fa68754b
 SHA1 (patch-lib_CL_devices_devices.c) = 17a5bb001086befdf88452b7e1126d2f5f4b1fc1
 SHA1 (patch-lib_CL_devices_hsa_pocl-hsa.c) = b7b4798b6f47f4d60a914f45ba64fe8448accdb9
 SHA1 (patch-lib_CL_devices_pthread_pthread.c) = afc0ab5544300d141d1fbfe5b7fe18af281365fa
