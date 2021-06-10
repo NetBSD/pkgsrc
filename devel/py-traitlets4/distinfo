@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/10 05:43:23 adam Exp $
+
+SHA1 (traitlets-4.3.3.tar.gz) = 1bfff63fcf608ae57202774015b7448e85f650b6
+RMD160 (traitlets-4.3.3.tar.gz) = 10275bb52f8ada23aa771d27f7ba8282bb364cdb
+SHA512 (traitlets-4.3.3.tar.gz) = a7ae0276e5234d6d428908e1ec74c0b92f2b1b73e37402ad154151c41ef6e4aaaad53e8990d4233d8023c31d919e4ea66f100a82324abcb0e6ffb92283fd3c9e
+Size (traitlets-4.3.3.tar.gz) = 89838 bytes
