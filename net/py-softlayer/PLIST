@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/06 14:47:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/06/10 07:33:32 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -434,6 +434,9 @@ ${PYSITELIB}/SoftLayer/CLI/globalip/unassign.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/authorize_storage.py
+${PYSITELIB}/SoftLayer/CLI/hardware/authorize_storage.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/authorize_storage.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/bandwidth.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/bandwidth.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/bandwidth.pyo
@@ -491,6 +494,9 @@ ${PYSITELIB}/SoftLayer/CLI/hardware/toggle_ipmi.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/update_firmware.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/update_firmware.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/update_firmware.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.py
+${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.pyo
 ${PYSITELIB}/SoftLayer/CLI/helpers.py
 ${PYSITELIB}/SoftLayer/CLI/helpers.pyc
 ${PYSITELIB}/SoftLayer/CLI/helpers.pyo
@@ -617,6 +623,9 @@ ${PYSITELIB}/SoftLayer/CLI/order/quote_detail.pyo
 ${PYSITELIB}/SoftLayer/CLI/order/quote_list.py
 ${PYSITELIB}/SoftLayer/CLI/order/quote_list.pyc
 ${PYSITELIB}/SoftLayer/CLI/order/quote_list.pyo
+${PYSITELIB}/SoftLayer/CLI/order/quote_save.py
+${PYSITELIB}/SoftLayer/CLI/order/quote_save.pyc
+${PYSITELIB}/SoftLayer/CLI/order/quote_save.pyo
 ${PYSITELIB}/SoftLayer/CLI/report/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/report/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/report/__init__.pyo
@@ -626,15 +635,6 @@ ${PYSITELIB}/SoftLayer/CLI/report/bandwidth.pyo
 ${PYSITELIB}/SoftLayer/CLI/routes.py
 ${PYSITELIB}/SoftLayer/CLI/routes.pyc
 ${PYSITELIB}/SoftLayer/CLI/routes.pyo
-${PYSITELIB}/SoftLayer/CLI/rwhois/__init__.py
-${PYSITELIB}/SoftLayer/CLI/rwhois/__init__.pyc
-${PYSITELIB}/SoftLayer/CLI/rwhois/__init__.pyo
-${PYSITELIB}/SoftLayer/CLI/rwhois/edit.py
-${PYSITELIB}/SoftLayer/CLI/rwhois/edit.pyc
-${PYSITELIB}/SoftLayer/CLI/rwhois/edit.pyo
-${PYSITELIB}/SoftLayer/CLI/rwhois/show.py
-${PYSITELIB}/SoftLayer/CLI/rwhois/show.pyc
-${PYSITELIB}/SoftLayer/CLI/rwhois/show.pyo
 ${PYSITELIB}/SoftLayer/CLI/securitygroup/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/securitygroup/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/securitygroup/__init__.pyo
@@ -821,6 +821,9 @@ ${PYSITELIB}/SoftLayer/CLI/user/vpn_subnet.pyo
 ${PYSITELIB}/SoftLayer/CLI/virt/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/virt/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/virt/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/authorize_storage.py
+${PYSITELIB}/SoftLayer/CLI/virt/authorize_storage.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/authorize_storage.pyo
 ${PYSITELIB}/SoftLayer/CLI/virt/bandwidth.py
 ${PYSITELIB}/SoftLayer/CLI/virt/bandwidth.pyc
 ${PYSITELIB}/SoftLayer/CLI/virt/bandwidth.pyo
