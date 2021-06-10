@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/11/19 01:12:39 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/06/10 02:01:33 msaitoh Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
@@ -269,6 +269,12 @@ libdata/firmware/cpu_x86_intel1/00050654-2
 libdata/firmware/cpu_x86_intel1/00050654-4
 libdata/firmware/cpu_x86_intel1/00050654-5
 libdata/firmware/cpu_x86_intel1/00050654-7
+libdata/firmware/cpu_x86_intel1/00050655-0
+libdata/firmware/cpu_x86_intel1/00050655-1
+libdata/firmware/cpu_x86_intel1/00050655-2
+libdata/firmware/cpu_x86_intel1/00050655-4
+libdata/firmware/cpu_x86_intel1/00050655-5
+libdata/firmware/cpu_x86_intel1/00050655-7
 libdata/firmware/cpu_x86_intel1/00050656-0
 libdata/firmware/cpu_x86_intel1/00050656-1
 libdata/firmware/cpu_x86_intel1/00050656-2
@@ -305,10 +311,27 @@ libdata/firmware/cpu_x86_intel1/000506e3-4
 libdata/firmware/cpu_x86_intel1/000506e3-5
 libdata/firmware/cpu_x86_intel1/000506f1-0
 libdata/firmware/cpu_x86_intel1/00060663-7
+libdata/firmware/cpu_x86_intel1/000606a5-0
+libdata/firmware/cpu_x86_intel1/000606a5-1
+libdata/firmware/cpu_x86_intel1/000606a5-2
+libdata/firmware/cpu_x86_intel1/000606a5-7
+libdata/firmware/cpu_x86_intel1/000606a6-0
+libdata/firmware/cpu_x86_intel1/000606a6-1
+libdata/firmware/cpu_x86_intel1/000606a6-2
+libdata/firmware/cpu_x86_intel1/000606a6-7
 libdata/firmware/cpu_x86_intel1/000706a1-0
 libdata/firmware/cpu_x86_intel1/000706a8-0
 libdata/firmware/cpu_x86_intel1/000706e5-7
+libdata/firmware/cpu_x86_intel1/00080664-0
+libdata/firmware/cpu_x86_intel1/00080665-0
 libdata/firmware/cpu_x86_intel1/000806a1-4
+libdata/firmware/cpu_x86_intel1/000806c1-7
+libdata/firmware/cpu_x86_intel1/000806c2-1
+libdata/firmware/cpu_x86_intel1/000806c2-6
+libdata/firmware/cpu_x86_intel1/000806c2-7
+libdata/firmware/cpu_x86_intel1/000806d1-1
+libdata/firmware/cpu_x86_intel1/000806d1-6
+libdata/firmware/cpu_x86_intel1/000806d1-7
 libdata/firmware/cpu_x86_intel1/000806e9-4
 libdata/firmware/cpu_x86_intel1/000806e9-6
 libdata/firmware/cpu_x86_intel1/000806e9-7
@@ -320,6 +343,8 @@ libdata/firmware/cpu_x86_intel1/000806eb-7
 libdata/firmware/cpu_x86_intel1/000806ec-2
 libdata/firmware/cpu_x86_intel1/000806ec-4
 libdata/firmware/cpu_x86_intel1/000806ec-7
+libdata/firmware/cpu_x86_intel1/00090661-0
+libdata/firmware/cpu_x86_intel1/000906c0-0
 libdata/firmware/cpu_x86_intel1/000906e9-1
 libdata/firmware/cpu_x86_intel1/000906e9-3
 libdata/firmware/cpu_x86_intel1/000906e9-5
@@ -337,3 +362,4 @@ libdata/firmware/cpu_x86_intel1/000a0655-1
 libdata/firmware/cpu_x86_intel1/000a0655-5
 libdata/firmware/cpu_x86_intel1/000a0660-7
 libdata/firmware/cpu_x86_intel1/000a0661-7
+libdata/firmware/cpu_x86_intel1/000a0671-1
