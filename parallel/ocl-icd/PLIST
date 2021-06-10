@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/10 05:55:42 nia Exp $
+include/ocl_icd.h
+lib/libOpenCL.la
+lib/pkgconfig/OpenCL.pc
+lib/pkgconfig/ocl-icd.pc
+man/man7/libOpenCL.7
+man/man7/libOpenCL.so.7
+share/doc/ocl-icd/examples/ocl_icd_bindings.c
+share/doc/ocl-icd/html/libOpenCL.html
