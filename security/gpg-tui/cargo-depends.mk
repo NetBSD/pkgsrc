@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/05/31 07:52:43 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/06/10 11:47:17 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -81,6 +81,7 @@ CARGO_CRATE_DEPENDS+=	rust-embed-utils-5.1.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scoped-tls-1.0.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
+CARGO_CRATE_DEPENDS+=	shellexpand-2.1.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.1.16
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.2.2
 CARGO_CRATE_DEPENDS+=	smallvec-1.5.1
