@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/10 11:18:06 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/11 15:09:23 nia Exp $
 
 DISTNAME=	pocl-1.7
 PKGREVISION=	2
@@ -13,6 +13,8 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+TEST_TARGET=	check
 
 # C++11
 GCC_REQD+=	4.7
