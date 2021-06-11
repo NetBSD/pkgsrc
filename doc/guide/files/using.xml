@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.51 2020/05/22 20:57:15 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.52 2021/06/11 14:45:08 nia Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -13,8 +13,7 @@ and you can still use binary packages from someone else.</para>
 <sect1 id="using-pkg">
   <title>Using binary packages</title>
 
-  <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
-  <para>On the <ulink url="http://cdn.NetBSD.org/">cdn.NetBSD.org</ulink>
+  <para>On the <ulink url="https://cdn.NetBSD.org/">cdn.NetBSD.org</ulink>
   site and mirrors, there are collections of binary packages,
   ready to be installed. These binary packages have been built using the
   default settings for the directories, that is:</para>
@@ -35,9 +34,8 @@ and you can still use binary packages from someone else.</para>
 
     <para>To install binary packages, you first need to know from where
     to get them. The first place where you should look is on the main
-    <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
-    pkgsrc FTP server in the directory <ulink
-    url="http://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
+    pkgsrc CDN in the directory <ulink
+    url="https://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
     <para>This directory contains binary packages for multiple
     platforms. First, select your operating system. (Ignore the
@@ -60,19 +58,18 @@ and you can still use binary packages from someone else.</para>
     <para>In the directory from the last section, there is a
     subdirectory called <filename>All/</filename>, which contains all the
     binary packages that are available for the platform, excluding those
-    that may not be distributed via FTP or CDROM (depending on which
-    medium you are using).</para>
+    that may not be distributed via HTTP or FTP.</para>
 
     <para>To install packages directly from an FTP or HTTP server, run
     the following commands in a Bourne-compatible shell (be sure to
     <command>su</command> to root first):</para>
 
 <screen>
-&rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-<!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
-&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
+&rprompt; <userinput>PATH="/usr/pkg/sbin:/usr/pkg/bin:$PATH"</userinput>
+&rprompt; <userinput>PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
 &rprompt; <userinput>PKG_PATH="$PKG_PATH/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
+&rprompt; <userinput>pkg_add pkgin</userinput>
 </screen>
 
     <para>Instead of URLs, you can also use local paths, for example if
@@ -85,18 +82,18 @@ and you can still use binary packages from someone else.</para>
     easy:</para>
 
 <screen>
-&rprompt; <userinput>pkg_add libreoffice</userinput>
-&rprompt; <userinput>pkg_add ap24-php71-*</userinput>
+&rprompt; <userinput>pkgin search nginx</userinput>
+nginx-1.19.6         Lightweight HTTP server and mail proxy server
+nginx-1.18.0nb8      Lightweight HTTP server and mail proxy server
+&rprompt; <userinput>pkgin install zsh nginx-1.19.6 vim</userinput>
 </screen>
 
-    <para>Note that any prerequisite packages needed to run the
-    package in question will be installed, too, assuming they are
-    present where you install from.</para>
+    <para>Note that <command>pkgin</command> is a user-friendly frontend
+    to the <command>pkg_*</command> tools.</para>
 
-    <para>Adding packages might install vulnerable packages.
-    Thus you should run <command>pkg_admin audit</command>
-    regularly, especially after installing new packages, and verify
-    that the vulnerabilities are acceptable for your configuration.</para>
+    <para>Any prerequisite packages needed to run the
+    package in question will be installed, too, assuming they are
+    present in the repository.</para>
 
     <para>After you've installed packages, be sure to have
     <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your
@@ -104,38 +101,40 @@ and you can still use binary packages from someone else.</para>
     installed program.</para>
   </sect2>
 
+  <sect2 id="using.pkgin_update">
+    <title>Updating packages</title>
+
+    <para>To update binary packages, it is recommended that you use
+    <command>pkgin upgrade</command>.  This will compare the remote
+    package repository to your locally installed packages and safely
+    replace any older packages.</para>
+
+    <para>Note that pkgsrc is released as quarterly branches.
+    If you are updating to a newer quarterly branch of pkgsrc, you may
+    need to adjust the repository in
+    <filename>/usr/pkg/etc/pkgin/repositories.conf</filename>.</para>
+  </sect2>
+
   <sect2 id="using.pkg_delete">
     <title>Deinstalling packages</title>
 
     <para>To deinstall a package, it does not matter whether it was
-    installed from source code or from a binary package. The
-    <command>pkg_delete</command> command does not know it anyway.
-    To delete a package, you can just run <command>pkg_delete
+    installed from source code or from a binary package. Neither the
+    <command>pkgin</command> or the <command>pkg_delete</command>
+    command need to know.</para>
+
+    <para>To delete a package, you can just run <command>pkgin remove
     <replaceable>package-name</replaceable></command>. The package
-    name can be given with or without version number. Wildcards can
-    also be used to deinstall a set of packages, for example
-    <literal>*emacs*</literal>. Be sure to include them in quotes,
-    so that the shell does not expand them before
-    <literal>pkg_delete</literal> sees them.</para>
-
-    <para>The <option>-r</option> option is very powerful: it
-    removes all the packages that require the package in question
-    and then removes the package itself. For example:
-
-    <screen>
-&rprompt; <userinput>pkg_delete -r jpeg</userinput>
-    </screen>
-
-    will remove jpeg and all the packages that used it; this allows
-    upgrading the jpeg package.</para>
-
+    name can be given with or without version number.</para>
   </sect2>
 
   <sect2 id="using.pkg_info">
     <title>Getting information about installed packages</title>
 
     <para>The <command>pkg_info</command> shows information about
-    installed packages or binary package files.</para>
+    installed packages or binary package files.
+    As with other management tools, it works with packages installed
+    from source or binaries.</para>
 
   </sect2>
 
@@ -144,10 +143,18 @@ and you can still use binary packages from someone else.</para>
 
     <para>
       The pkgsrc Security Team and Packages Groups maintain a list of
-      known security vulnerabilities to packages which are (or have been)
+      known vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
-      FTP site at <ulink url="http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
+      CDN at <ulink url="https://cdn.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
+    </para>
+
+    <para>
+      Please note that not every "vulnerability" with a CVE assignment is
+      exploitable in every configuration.
+      Some bugs are marked as active simply because an fix was not
+      marked as such.
+      Operating system specific hardening and mitigation features may also
+      reduce the impact of bugs.
     </para>
 
     <para>
@@ -172,8 +179,7 @@ and you can still use binary packages from someone else.</para>
 
     <para>
       You may wish to have the
-      <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
-      <ulink url="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
+      <ulink url="https://cdn.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
       to the root users &man.crontab.5; entry.  For example the entry
@@ -208,16 +214,13 @@ check_pkg_vulnerabilities=YES
     <para>
       Install <filename role="pkg">pkgtools/lintpkgsrc</filename> and run
       <command>lintpkgsrc</command> with the <quote>-i</quote>
-      argument to check if your packages are up-to-date, e.g.
+      argument to check if any packages are stale, e.g.
     </para>
     <screen>
 &cprompt; <userinput>lintpkgsrc -i</userinput>
 ...
 Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     </screen>
-    <para>You can then use <command>make update</command> to update the
-    package on your system and rebuild any dependencies.
-    </para>
   </sect2>
 
   <sect2 id="using.pkg_admin">
