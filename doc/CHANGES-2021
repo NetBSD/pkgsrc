@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3357 2021/06/11 05:24:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3358 2021/06/11 16:55:09 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/libxtend version 0.1.2.4 [bacon 2021-06-11]
 	Updated www/py-terminado to 0.10.1 [adam 2021-06-11]
 	Updated textproc/py-xmlschema to 1.6.4 [adam 2021-06-11]
+	Updated biology/ncbi-blast+ to 2.11.0 [bacon 2021-06-11]
