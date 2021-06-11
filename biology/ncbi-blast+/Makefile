@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/05/24 19:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/06/11 13:47:39 bacon Exp $
 
-DISTNAME=	ncbi-blast-2.8.1+-src
+DISTNAME=	ncbi-blast-2.11.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	15
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -19,7 +18,7 @@ SUBST_STAGE.configure=	pre-configure
 SUBST_SED.configure+=	-e 's|-D_THREAD_SAFE|-D_THREAD_SAFE -D__RUNETYPE_INTERNAL|'
 SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
-SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
+SUBST_FILES.configure+=	src/build-system/configure
 
 USE_TOOLS+=		bash gmake perl
 USE_LANGUAGES=		c c++
@@ -29,6 +28,7 @@ REPLACE_BASH=		scripts/common/impl/define_random_macros.sh
 REPLACE_BASH+=		src/app/blast/get_species_taxids.sh
 REPLACE_PERL=		src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
 REPLACE_PYTHON=		src/app/winmasker/windowmasker_2.2.22_adapter.py
+REPLACE_PYTHON+=	src/app/blast/cleanup-blastdb-volumes.py
 
 # The test for amq can hang, but amq is not needed so just avoid the test
 # configure chooses /usr/local/bin/ar with no flags
@@ -54,7 +54,9 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
+.if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
