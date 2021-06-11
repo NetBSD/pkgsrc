@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.160 2020/12/12 21:45:41 fcambus Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.161 2021/06/11 15:09:51 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1414,9 +1414,9 @@ pre-configure:
   </sect2>
 
   <sect2 id="perl-scripts">
-    <title>Packages containing perl scripts</title>
+    <title>Packages containing Perl scripts</title>
 
-    <para>If your package contains interpreted perl scripts, add
+    <para>If your package contains interpreted Perl scripts, add
     <quote>perl</quote> to the <varname>USE_TOOLS</varname> variable
     and set <varname>REPLACE_PERL</varname> to ensure that the proper
     interpreter path is set. <varname>REPLACE_PERL</varname> should
@@ -1960,7 +1960,7 @@ SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
     <title>Packages with hardcoded paths to other interpreters</title>
 
     <para>Your package may also contain scripts with hardcoded paths to
-      other interpreters besides (or as well as) perl.  To correct the
+      other interpreters besides (or as well as) Perl.  To correct the
       full pathname to the script interpreter, you need to set the
       following definitions in your <filename>Makefile</filename> (we
     shall use <command>tclsh</command> in this example):</para>
@@ -1981,7 +1981,7 @@ REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 
 
   <sect2 id="perl-modules">
-    <title>Packages installing perl modules</title>
+    <title>Packages installing Perl modules</title>
 
     <para>Makefiles of packages providing perl5 modules should include
     the Makefile fragment
@@ -2120,89 +2120,6 @@ PERL5_PACKLIST= auto/Pg/.packlist
 
   </sect2>
 
-  <sect2 id="gconf-data-files">
-    <title>Packages installing GConf data files</title>
-
-    <para>If a package installs <filename>.schemas</filename> or
-    <filename>.entries</filename> files, used by GConf,
-    you need to take some extra steps to make sure they get registered
-    in the database:</para>
-
-    <orderedlist>
-      <listitem>
-	<para>Include <filename>../../devel/GConf/schemas.mk</filename>
-	instead of its <filename>buildlink3.mk</filename> file.  This
-	takes care of rebuilding the GConf database at installation and
-	deinstallation time, and tells the package where to install
-	GConf data files using some standard configure arguments.  It
-	also disallows any access to the database directly from the
-	package.</para>
-      </listitem>
-
-      <listitem>
-	<para>Ensure that the package installs its
-	<filename>.schemas</filename> files under
-	<filename>${PREFIX}/share/gconf/schemas</filename>.  If they get
-	installed under <filename>${PREFIX}/etc</filename>, you will
-	need to manually patch the package.</para>
-      </listitem>
-
-      <listitem>
-	<para>Check the PLIST and remove any entries under the etc/gconf
-	directory, as they will be handled automatically.  See
-	<xref linkend="faq.conf"/> for more information.</para>
-      </listitem>
-
-      <listitem>
-	<para>Define the <varname>GCONF_SCHEMAS</varname> variable in
-	your <filename>Makefile</filename> with a list of all
-	<filename>.schemas</filename> files installed by the package, if
-	any.  Names must not contain any directories in them.</para>
-      </listitem>
-
-      <listitem>
-	<para>Define the <varname>GCONF_ENTRIES</varname> variable in
-	your <filename>Makefile</filename> with a
-	list of all <filename>.entries</filename> files installed by the
-	package, if any. Names must not contain any directories in
-	them.</para>
-      </listitem>
-    </orderedlist>
-  </sect2>
-
-
-  <sect2 id="scrollkeeper-data-files">
-    <title>Packages installing scrollkeeper/rarian data files</title>
-
-    <para>If a package installs <filename>.omf</filename> files, used by
-    scrollkeeper/rarian, you need to take some extra steps to make sure they
-    get registered in the database:</para>
-
-    <orderedlist>
-      <listitem>
-	<para>Include
-	<filename>../../mk/omf-scrollkeeper.mk</filename>
-	instead of rarian's <filename>buildlink3.mk</filename> file.  This
-	takes care of rebuilding the scrollkeeper database at
-	installation and deinstallation time, and disallows any access
-	to it directly from the package.</para>
-      </listitem>
-
-      <listitem>
-	<para>Check the PLIST and remove any entries under the
-	<filename>libdata/scrollkeeper</filename> directory, as they
-	will be handled automatically.</para>
-      </listitem>
-
-      <listitem>
-	<para>Remove the <filename>share/omf</filename> directory from
-	the PLIST.  It will be handled by rarian. (<command>make
-	print-PLIST</command> does this automatically.)</para>
-      </listitem>
-    </orderedlist>
-  </sect2>
-
-
   <sect2 id="x11-fonts">
     <title>Packages installing X11 fonts</title>
 
@@ -2222,47 +2139,6 @@ PERL5_PACKLIST= auto/Pg/.packlist
     instead use the standard ones to avoid that the user needs to
     manually configure his X server to find them.</para>
   </sect2>
-
-
-  <sect2 id="gtk2-modules">
-    <title>Packages installing GTK2 modules</title>
-
-    <para>If a package installs GTK2 immodules or loaders, you need to
-    take some extra steps to get them registered in the GTK2 database
-    properly:</para>
-
-    <orderedlist>
-      <listitem><para>Include
-      <filename>../../x11/gtk2/modules.mk</filename> instead of its
-      <filename>buildlink3.mk</filename> file.  This takes care of
-      rebuilding the database at installation and deinstallation time.</para>
-      </listitem>
-
-      <listitem><para>Set <varname>GTK2_IMMODULES=YES</varname> if
-      your package installs GTK2 immodules.</para>
-      </listitem>
-
-      <listitem><para>Set <varname>GTK2_LOADERS=YES</varname> if your package installs
-      GTK2 loaders.</para>
-      </listitem>
-
-      <listitem><para>Patch the package to not touch any of the GTK2
-      databases directly.  These are:</para>
-
-	<itemizedlist>
-	  <listitem><para><filename>libdata/gtk-2.0/gdk-pixbuf.loaders</filename></para></listitem>
-	  <listitem><para><filename>libdata/gtk-2.0/gtk.immodules</filename></para></listitem>
-	</itemizedlist>
-
-      </listitem>
-
-      <listitem><para>Check the <filename>PLIST</filename> and remove
-      any entries under the <filename>libdata/gtk-2.0</filename>
-      directory, as they will be handled automatically.</para>
-      </listitem>
-    </orderedlist>
-  </sect2>
-
 
   <sect2 id="sgml-xml-data">
     <title>Packages installing SGML or XML data</title>
@@ -2437,7 +2313,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
   </sect2>
 
   <sect2 id="hicolor-theme">
-    <title>Packages installing hicolor theme icons</title>
+    <title>Packages installing hicolor icons</title>
 
     <para>If a package installs images under the
     <filename>share/icons/hicolor</filename> and/or updates the

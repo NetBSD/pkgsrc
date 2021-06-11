@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.13 2021/06/02 17:03:10 cirnatdan Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.14 2021/06/11 15:09:51 nia Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -187,11 +187,6 @@ solution is given.  After applying the solution be sure to
     </thead>
 
     <tbody>
-      <row>
-        <entry>Installs OMF files under <filename>share/omf</filename>.</entry>
-        <entry>See <xref linkend="scrollkeeper-data-files" />.</entry>
-      </row>
-
       <row>
         <entry>Installs icons under the
         <filename>share/icons/hicolor</filename> hierarchy or updates
