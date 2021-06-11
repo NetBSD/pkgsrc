@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/03/24 18:19:21 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/11 17:06:54 bacon Exp $
 
-DISTNAME=	ad2vcf-0.1.2
+DISTNAME=	ad2vcf-0.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 
@@ -15,5 +15,6 @@ pre-build:
 do-test:
 	cd ${WRKSRC}/Test && ./run-test.sh
 
+.include "../../devel/libxtend/buildlink3.mk"
 .include "../../biology/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
