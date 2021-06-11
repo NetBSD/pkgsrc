@@ -1,7 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/24 15:20:08 bacon Exp $
-include/biostring.h
-include/dsvio.h
-include/samio.h
-include/vcfio.h
+@comment $NetBSD: PLIST,v 1.2 2021/06/11 17:04:55 bacon Exp $
+include/biolibc/bed.h
+include/biolibc/biolibc.h
+include/biolibc/dsv.h
+include/biolibc/gff.h
+include/biolibc/plist.h
+include/biolibc/sam-buff.h
+include/biolibc/sam.h
+include/biolibc/vcf.h
 lib/libbiolibc.a
-man/man1/biolibc.1
+lib/libbiolibc.so
+lib/libbiolibc.so.2
+lib/libbiolibc.so.2.0
+man/man3/bed_check_order.3
+man/man3/bed_gff_cmp.3
+man/man3/bed_read_feature.3
+man/man3/bed_set_chromosome.3
+man/man3/bed_set_end_pos.3
+man/man3/bed_set_fields.3
+man/man3/bed_set_name.3
+man/man3/bed_set_rgb_str.3
+man/man3/bed_set_score.3
+man/man3/bed_set_start_pos.3
+man/man3/bed_set_strand.3
+man/man3/bed_set_thick_end_pos.3
+man/man3/bed_set_thick_start_pos.3
+man/man3/bed_skip_header.3
+man/man3/bed_write_feature.3
+man/man3/biolibc.3
