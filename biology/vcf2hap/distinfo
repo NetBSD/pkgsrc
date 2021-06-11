@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/03/24 18:22:53 bacon Exp $
+$NetBSD: distinfo,v 1.2 2021/06/11 17:09:40 bacon Exp $
 
-SHA1 (vcf2hap-0.1.2.tar.gz) = a18bc1746ec4df4be88d635c18b0a6b240d2c309
-RMD160 (vcf2hap-0.1.2.tar.gz) = a7ec7f863888e005b84f59db7c2787ec19e960de
-SHA512 (vcf2hap-0.1.2.tar.gz) = 4a4b3c0c63e711f7f9a57706c675bb02f9d55976b6ee3aee1e1d1eeb14f2d92a62ad952e2c03fbe5ab525174b01260b5cb305c9980b48411618bf7e9669ae7f6
-Size (vcf2hap-0.1.2.tar.gz) = 197782 bytes
+SHA1 (vcf2hap-0.1.3.tar.gz) = 20df7279310b3ca3a22920fe56e1ab9533bae9e6
+RMD160 (vcf2hap-0.1.3.tar.gz) = 0907219e943391cd5657b980ee1a54d506762cd4
+SHA512 (vcf2hap-0.1.3.tar.gz) = d5dbba976f0e9b6d7b6d3c176780297a87fa4c753b7776fb72024452dfa35ef45e822f974f2825b60836b82d16af267cf3aee11cb7ab8171187fe8977b23a28d
+Size (vcf2hap-0.1.3.tar.gz) = 198981 bytes
