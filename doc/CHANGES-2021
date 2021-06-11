@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3362 2021/06/11 17:23:41 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3363 2021/06/11 20:33:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5391,3 +5391,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/ad2vcf to 0.1.3 [bacon 2021-06-11]
 	Updated biology/vcf2hap to 0.1.3 [bacon 2021-06-11]
 	Updated biology/vcf-split to 0.1.2 [bacon 2021-06-11]
+	Updated textproc/molybdenum to 0.1.5 [pin 2021-06-11]
