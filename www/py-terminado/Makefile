@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/04/11 16:24:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/11 05:19:05 adam Exp $
 
-DISTNAME=	terminado-0.8.3
+DISTNAME=	terminado-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/terminado/}
@@ -12,8 +12,14 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
