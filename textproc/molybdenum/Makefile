@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/06/02 17:19:02 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/11 20:33:13 pin Exp $
 
-DISTNAME=	molybdenum-0.1.4
+DISTNAME=	molybdenum-0.1.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gfannes/}
 #GITHUB_TAG=	refs/tags/release-v${PKGVERSION_NOREV}
