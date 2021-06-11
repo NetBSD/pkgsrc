@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.78 2020/06/06 19:09:37 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.79 2021/06/11 20:21:01 gutteridge Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -53,7 +53,7 @@
 #		A list of options implied by deprecated variables
 #		used.  This can be used for cases that neither
 #		PKG_OPTIONS_LEGACY_VARS nor PKG_OPTIONS_LEGACY_OPTS
-#		can handle, e. g. when PKG_OPTIONS_VAR is renamed.
+#		can handle, e.g., when PKG_OPTIONS_VAR is renamed.
 #
 #	PKG_OPTIONS_DEPRECATED_WARNINGS
 #		A list of warnings about deprecated variables or
