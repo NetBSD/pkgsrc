@@ -85,11 +85,12 @@
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">5.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">5.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_delete">5.1.3. Deinstalling packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_info">5.1.4. Getting information about installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#vulnerabilities">5.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#pkg_versions">5.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_admin">5.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkgin_update">5.1.3. Updating packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">5.1.4. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">5.1.5. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">5.1.6. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">5.1.7. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">5.1.8. Other administrative functions</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">5.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -842,11 +843,12 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">5.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">5.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_delete">5.1.3. Deinstalling packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_info">5.1.4. Getting information about installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#vulnerabilities">5.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#pkg_versions">5.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_admin">5.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkgin_update">5.1.3. Updating packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">5.1.4. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">5.1.5. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">5.1.6. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">5.1.7. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">5.1.8. Other administrative functions</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">5.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -1222,11 +1224,12 @@ release -d
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">5.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">5.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_delete">5.1.3. Deinstalling packages</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_info">5.1.4. Getting information about installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#vulnerabilities">5.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
-<dt><span class="sect2"><a href="#pkg_versions">5.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
-<dt><span class="sect2"><a href="#using.pkg_admin">5.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkgin_update">5.1.3. Updating packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">5.1.4. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">5.1.5. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">5.1.6. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">5.1.7. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">5.1.8. Other administrative functions</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">5.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -1245,7 +1248,7 @@ and you can still use binary packages from someone else.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-pkg"></a>5.1. Using binary packages</h2></div></div></div>
-<p>On the <a class="ulink" href="http://cdn.NetBSD.org/" target="_top">cdn.NetBSD.org</a>
+<p>On the <a class="ulink" href="https://cdn.NetBSD.org/" target="_top">cdn.NetBSD.org</a>
   site and mirrors, there are collections of binary packages,
   ready to be installed. These binary packages have been built using the
   default settings for the directories, that is:</p>
@@ -1262,8 +1265,7 @@ and you can still use binary packages from someone else.</p>
 <a name="finding-binary-packages"></a>5.1.1. Finding binary packages</h3></div></div></div>
 <p>To install binary packages, you first need to know from where
     to get them. The first place where you should look is on the main
-    
-    pkgsrc FTP server in the directory <a class="ulink" href="http://cdn.NetBSD.org/pub/pkgsrc/packages/" target="_top"><code class="filename">/pub/pkgsrc/packages</code></a>.</p>
+    pkgsrc CDN in the directory <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/packages/" target="_top"><code class="filename">/pub/pkgsrc/packages</code></a>.</p>
 <p>This directory contains binary packages for multiple
     platforms. First, select your operating system. (Ignore the
     directories with version numbers attached to it, they just exist for
@@ -1283,17 +1285,16 @@ and you can still use binary packages from someone else.</p>
 <p>In the directory from the last section, there is a
     subdirectory called <code class="filename">All/</code>, which contains all the
     binary packages that are available for the platform, excluding those
-    that may not be distributed via FTP or CDROM (depending on which
-    medium you are using).</p>
+    that may not be distributed via HTTP or FTP.</p>
 <p>To install packages directly from an FTP or HTTP server, run
     the following commands in a Bourne-compatible shell (be sure to
     <span class="command"><strong>su</strong></span> to root first):</p>
 <pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>PATH="/usr/pkg/sbin:$PATH"</code></strong>
-
-<code class="prompt">#</code> <strong class="userinput"><code>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>PATH="/usr/pkg/sbin:/usr/pkg/bin:$PATH"</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>PKG_PATH="$PKG_PATH/<em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>VERSIONS</code></em>/All/"</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>export PATH PKG_PATH</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_add pkgin</code></strong>
 </pre>
 <p>Instead of URLs, you can also use local paths, for example if
     you are installing from a set of CDROMs, DVDs or an NFS-mounted
@@ -1303,16 +1304,16 @@ and you can still use binary packages from someone else.</p>
 <p>After these preparations, installing a package is very
     easy:</p>
 <pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>pkg_add libreoffice</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>pkg_add ap24-php71-*</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>pkgin search nginx</code></strong>
+nginx-1.19.6         Lightweight HTTP server and mail proxy server
+nginx-1.18.0nb8      Lightweight HTTP server and mail proxy server
+<code class="prompt">#</code> <strong class="userinput"><code>pkgin install zsh nginx-1.19.6 vim</code></strong>
 </pre>
-<p>Note that any prerequisite packages needed to run the
+<p>Note that <span class="command"><strong>pkgin</strong></span> is a user-friendly frontend
+    to the <span class="command"><strong>pkg_*</strong></span> tools.</p>
+<p>Any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
-    present where you install from.</p>
-<p>Adding packages might install vulnerable packages.
-    Thus you should run <span class="command"><strong>pkg_admin audit</strong></span>
-    regularly, especially after installing new packages, and verify
-    that the vulnerabilities are acceptable for your configuration.</p>
+    present in the repository.</p>
 <p>After you've installed packages, be sure to have
     <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
     <code class="varname">PATH</code> so you can actually start the just
@@ -1320,45 +1321,51 @@ and you can still use binary packages from someone else.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="using.pkg_delete"></a>5.1.3. Deinstalling packages</h3></div></div></div>
+<a name="using.pkgin_update"></a>5.1.3. Updating packages</h3></div></div></div>
+<p>To update binary packages, it is recommended that you use
+    <span class="command"><strong>pkgin upgrade</strong></span>.  This will compare the remote
+    package repository to your locally installed packages and safely
+    replace any older packages.</p>
+<p>Note that pkgsrc is released as quarterly branches.
+    If you are updating to a newer quarterly branch of pkgsrc, you may
+    need to adjust the repository in
+    <code class="filename">/usr/pkg/etc/pkgin/repositories.conf</code>.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="using.pkg_delete"></a>5.1.4. Deinstalling packages</h3></div></div></div>
 <p>To deinstall a package, it does not matter whether it was
-    installed from source code or from a binary package. The
-    <span class="command"><strong>pkg_delete</strong></span> command does not know it anyway.
-    To delete a package, you can just run <span class="command"><strong>pkg_delete
+    installed from source code or from a binary package. Neither the
+    <span class="command"><strong>pkgin</strong></span> or the <span class="command"><strong>pkg_delete</strong></span>
+    command need to know.</p>
+<p>To delete a package, you can just run <span class="command"><strong>pkgin remove
     <em class="replaceable"><code>package-name</code></em></strong></span>. The package
-    name can be given with or without version number. Wildcards can
-    also be used to deinstall a set of packages, for example
-    <code class="literal">*emacs*</code>. Be sure to include them in quotes,
-    so that the shell does not expand them before
-    <code class="literal">pkg_delete</code> sees them.</p>
-<p>The <code class="option">-r</code> option is very powerful: it
-    removes all the packages that require the package in question
-    and then removes the package itself. For example:
-
-    </p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>pkg_delete -r jpeg</code></strong>
-    </pre>
-<p>
-
-    will remove jpeg and all the packages that used it; this allows
-    upgrading the jpeg package.</p>
+    name can be given with or without version number.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="using.pkg_info"></a>5.1.4. Getting information about installed packages</h3></div></div></div>
+<a name="using.pkg_info"></a>5.1.5. Getting information about installed packages</h3></div></div></div>
 <p>The <span class="command"><strong>pkg_info</strong></span> shows information about
-    installed packages or binary package files.</p>
+    installed packages or binary package files.
+    As with other management tools, it works with packages installed
+    from source or binaries.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="vulnerabilities"></a>5.1.5. Checking for security vulnerabilities in installed packages</h3></div></div></div>
+<a name="vulnerabilities"></a>5.1.6. Checking for security vulnerabilities in installed packages</h3></div></div></div>
 <p>
       The pkgsrc Security Team and Packages Groups maintain a list of
-      known security vulnerabilities to packages which are (or have been)
+      known vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      
-      FTP site at <a class="ulink" href="http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities" target="_top">http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities</a>.
+      CDN at <a class="ulink" href="https://cdn.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities" target="_top">https://cdn.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities</a>.
+    </p>
+<p>
+      Please note that not every "vulnerability" with a CVE assignment is
+      exploitable in every configuration.
+      Some bugs are marked as active simply because an fix was not
+      marked as such.
+      Operating system specific hardening and mitigation features may also
+      reduce the impact of bugs.
     </p>
 <p>
       Through <span class="command"><strong>pkg_admin fetch-pkg-vulnerabilities</strong></span>,
@@ -1379,8 +1386,7 @@ and you can still use binary packages from someone else.</p>
     https://www.samba.org/samba/whatsnew/macroexploit.html</pre>
 <p>
       You may wish to have the
-      
-      <a class="ulink" href="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
+      <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
       to the root users <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.1/i386/crontab.5"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
@@ -1417,24 +1423,21 @@ check_pkg_vulnerabilities=YES
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="pkg_versions"></a>5.1.6. Finding if newer versions of your installed packages are in pkgsrc</h3></div></div></div>
+<a name="pkg_versions"></a>5.1.7. Finding if newer versions of your installed packages are in pkgsrc</h3></div></div></div>
 <p>
       Install <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/lintpkgsrc/README.html" target="_top"><code class="filename">pkgtools/lintpkgsrc</code></a> and run
       <span class="command"><strong>lintpkgsrc</strong></span> with the <span class="quote">&#8220;<span class="quote">-i</span>&#8221;</span>
-      argument to check if your packages are up-to-date, e.g.
+      argument to check if any packages are stale, e.g.
     </p>
 <pre class="screen">
 <code class="prompt">%</code> <strong class="userinput"><code>lintpkgsrc -i</code></strong>
 ...
 Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     </pre>
-<p>You can then use <span class="command"><strong>make update</strong></span> to update the
-    package on your system and rebuild any dependencies.
-    </p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="using.pkg_admin"></a>5.1.7. Other administrative functions</h3></div></div></div>
+<a name="using.pkg_admin"></a>5.1.8. Other administrative functions</h3></div></div></div>
 <p>The <span class="command"><strong>pkg_admin</strong></span> executes various
     administrative functions on the package system.</p>
 </div>
@@ -3017,7 +3020,7 @@ do this, refer to the following two tools (installed as part of the
     containing more information.</p></li>
 </ol></div>
 <p>Use of these tools is strongly recommended!
-See <a class="xref" href="#vulnerabilities" title="5.1.5. Checking for security vulnerabilities in installed packages">Section 5.1.5, &#8220;Checking for security vulnerabilities in installed packages&#8221;</a> for instructions on how to automate checking and
+See <a class="xref" href="#vulnerabilities" title="5.1.6. Checking for security vulnerabilities in installed packages">Section 5.1.6, &#8220;Checking for security vulnerabilities in installed packages&#8221;</a> for instructions on how to automate checking and
 reporting.</p>
 <p>If this database is installed, pkgsrc builds will use it to
 perform a security check before building any package.</p>

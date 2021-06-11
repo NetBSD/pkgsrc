@@ -67,12 +67,13 @@ I. The pkgsrc user's guide
 
             5.1.1. Finding binary packages
             5.1.2. Installing binary packages
-            5.1.3. Deinstalling packages
-            5.1.4. Getting information about installed packages
-            5.1.5. Checking for security vulnerabilities in installed packages
-            5.1.6. Finding if newer versions of your installed packages are in
+            5.1.3. Updating packages
+            5.1.4. Deinstalling packages
+            5.1.5. Getting information about installed packages
+            5.1.6. Checking for security vulnerabilities in installed packages
+            5.1.7. Finding if newer versions of your installed packages are in
                 pkgsrc
-            5.1.7. Other administrative functions
+            5.1.8. Other administrative functions
 
         5.2. Building packages from source
 
@@ -721,12 +722,13 @@ Table of Contents
 
         5.1.1. Finding binary packages
         5.1.2. Installing binary packages
-        5.1.3. Deinstalling packages
-        5.1.4. Getting information about installed packages
-        5.1.5. Checking for security vulnerabilities in installed packages
-        5.1.6. Finding if newer versions of your installed packages are in
+        5.1.3. Updating packages
+        5.1.4. Deinstalling packages
+        5.1.5. Getting information about installed packages
+        5.1.6. Checking for security vulnerabilities in installed packages
+        5.1.7. Finding if newer versions of your installed packages are in
             pkgsrc
-        5.1.7. Other administrative functions
+        5.1.8. Other administrative functions
 
     5.2. Building packages from source
 
@@ -1053,11 +1055,12 @@ Table of Contents
 
     5.1.1. Finding binary packages
     5.1.2. Installing binary packages
-    5.1.3. Deinstalling packages
-    5.1.4. Getting information about installed packages
-    5.1.5. Checking for security vulnerabilities in installed packages
-    5.1.6. Finding if newer versions of your installed packages are in pkgsrc
-    5.1.7. Other administrative functions
+    5.1.3. Updating packages
+    5.1.4. Deinstalling packages
+    5.1.5. Getting information about installed packages
+    5.1.6. Checking for security vulnerabilities in installed packages
+    5.1.7. Finding if newer versions of your installed packages are in pkgsrc
+    5.1.8. Other administrative functions
 
 5.2. Building packages from source
 
@@ -1091,8 +1094,8 @@ yourself, which is explained in Section 4.2, "Bootstrapping pkgsrc".
 5.1.1. Finding binary packages
 
 To install binary packages, you first need to know from where to get them. The
-first place where you should look is on the main pkgsrc FTP server in the
-directory /pub/pkgsrc/packages.
+first place where you should look is on the main pkgsrc CDN in the directory /
+pub/pkgsrc/packages.
 
 This directory contains binary packages for multiple platforms. First, select
 your operating system. (Ignore the directories with version numbers attached to
@@ -1110,17 +1113,16 @@ tools for managing binary packages and the database of installed packages).
 
 In the directory from the last section, there is a subdirectory called All/,
 which contains all the binary packages that are available for the platform,
-excluding those that may not be distributed via FTP or CDROM (depending on
-which medium you are using).
+excluding those that may not be distributed via HTTP or FTP.
 
 To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
 
-# PATH="/usr/pkg/sbin:$PATH"
-
-# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"
+# PATH="/usr/pkg/sbin:/usr/pkg/bin:$PATH"
+# PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"
 # PKG_PATH="$PKG_PATH/OPSYS/ARCH/VERSIONS/All/"
 # export PATH PKG_PATH
+# pkg_add pkgin
 
 Instead of URLs, you can also use local paths, for example if you are
 installing from a set of CDROMs, DVDs or an NFS-mounted repository. If you want
@@ -1129,48 +1131,55 @@ in PKG_PATH.
 
 After these preparations, installing a package is very easy:
 
-# pkg_add libreoffice
-# pkg_add ap24-php71-*
+# pkgin search nginx
+nginx-1.19.6         Lightweight HTTP server and mail proxy server
+nginx-1.18.0nb8      Lightweight HTTP server and mail proxy server
+# pkgin install zsh nginx-1.19.6 vim
 
-Note that any prerequisite packages needed to run the package in question will
-be installed, too, assuming they are present where you install from.
+Note that pkgin is a user-friendly frontend to the pkg_* tools.
 
-Adding packages might install vulnerable packages. Thus you should run 
-pkg_admin audit regularly, especially after installing new packages, and verify
-that the vulnerabilities are acceptable for your configuration.
+Any prerequisite packages needed to run the package in question will be
+installed, too, assuming they are present in the repository.
 
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
 
-5.1.3. Deinstalling packages
+5.1.3. Updating packages
+
+To update binary packages, it is recommended that you use pkgin upgrade. This
+will compare the remote package repository to your locally installed packages
+and safely replace any older packages.
+
+Note that pkgsrc is released as quarterly branches. If you are updating to a
+newer quarterly branch of pkgsrc, you may need to adjust the repository in /usr
+/pkg/etc/pkgin/repositories.conf.
+
+5.1.4. Deinstalling packages
 
 To deinstall a package, it does not matter whether it was installed from source
-code or from a binary package. The pkg_delete command does not know it anyway.
-To delete a package, you can just run pkg_delete package-name. The package name
-can be given with or without version number. Wildcards can also be used to
-deinstall a set of packages, for example *emacs*. Be sure to include them in
-quotes, so that the shell does not expand them before pkg_delete sees them.
+code or from a binary package. Neither the pkgin or the pkg_delete command need
+to know.
 
-The -r option is very powerful: it removes all the packages that require the
-package in question and then removes the package itself. For example:
+To delete a package, you can just run pkgin remove package-name. The package
+name can be given with or without version number.
 
-# pkg_delete -r jpeg
-
-
-will remove jpeg and all the packages that used it; this allows upgrading the
-jpeg package.
-
-5.1.4. Getting information about installed packages
+5.1.5. Getting information about installed packages
 
 The pkg_info shows information about installed packages or binary package
-files.
+files. As with other management tools, it works with packages installed from
+source or binaries.
 
-5.1.5. Checking for security vulnerabilities in installed packages
+5.1.6. Checking for security vulnerabilities in installed packages
 
-The pkgsrc Security Team and Packages Groups maintain a list of known security
+The pkgsrc Security Team and Packages Groups maintain a list of known
 vulnerabilities to packages which are (or have been) included in pkgsrc. The
-list is available from the NetBSD FTP site at http://ftp.NetBSD.org/pub/NetBSD/
+list is available from the NetBSD CDN at https://cdn.NetBSD.org/pub/NetBSD/
 packages/vulns/pkg-vulnerabilities.
+
+Please note that not every "vulnerability" with a CVE assignment is exploitable
+in every configuration. Some bugs are marked as active simply because an fix
+was not marked as such. Operating system specific hardening and mitigation
+features may also reduce the impact of bugs.
 
 Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
 automatically, and a security audit of all packages installed on a system can
@@ -1212,20 +1221,17 @@ check_pkg_vulnerabilities=YES
 
 see daily.conf(5) and security.conf(5) for more details.
 
-5.1.6. Finding if newer versions of your installed packages are in pkgsrc
+5.1.7. Finding if newer versions of your installed packages are in pkgsrc
 
 Install pkgtools/lintpkgsrc and run lintpkgsrc with the "-i" argument to check
-if your packages are up-to-date, e.g.
+if any packages are stale, e.g.
 
 % lintpkgsrc -i
 ...
 Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 
 
-You can then use make update to update the package on your system and rebuild
-any dependencies.
-
-5.1.7. Other administrative functions
+5.1.8. Other administrative functions
 
 The pkg_admin executes various administrative functions on the package system.
 
@@ -2575,7 +2581,7 @@ following two tools (installed as part of the pkgtools/pkg_install package):
     by output to stdout, including a description of the type of vulnerability,
     and a URL containing more information.
 
-Use of these tools is strongly recommended! See Section 5.1.5, "Checking for
+Use of these tools is strongly recommended! See Section 5.1.6, "Checking for
 security vulnerabilities in installed packages" for instructions on how to
 automate checking and reporting.
 
