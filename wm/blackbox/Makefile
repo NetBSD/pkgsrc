@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/06/10 12:48:50 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/06/11 21:20:09 gutteridge Exp $
 
 DISTNAME=	blackbox-0.77
 CATEGORIES=	wm x11
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
+
+REPLACE_SH=	util/bsetbg
 
 CXXFLAGS.Linux+=	-fpermissive
 CXXFLAGS.SunOS+=	-fpermissive
