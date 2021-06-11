@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/06/08 10:12:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2021/06/11 23:13:41 gdt Exp $
 
-DISTNAME=	mosquitto-2.0.10
+DISTNAME=	mosquitto-2.0.11
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
-PKGREVISION=	1
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://mosquitto.org/
@@ -44,6 +43,9 @@ FILES_SUBST+=	MOSQUITTO_GROUP=${MOSQUITTO_GROUP}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+= VARBASE=${VARBASE}
 
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
+
 # mosquitto's build system is very troubled, and the tests do not
 # currently work.
 #   https://github.com/eclipse/mosquitto/issues/1242
@@ -57,7 +59,6 @@ TEST_TARGET=	test
 .include "options.mk"   
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"
-# ?needed
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
