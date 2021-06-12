@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2021/05/24 19:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/06/12 23:10:47 wen Exp $
 
-DISTNAME=	App-CLI-0.50
+DISTNAME=	App-CLI-0.52
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/App-CLI
 COMMENT=	Dispatcher module for command line interface programs
-LICENSE=	${PERL5_LICENSE}
+LICENSE=	artistic
 
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Class-Load-[0-9]*:../../devel/p5-Class-Load
