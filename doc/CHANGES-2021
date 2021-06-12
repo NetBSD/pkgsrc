@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3380 2021/06/12 08:26:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3381 2021/06/12 08:38:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5409,3 +5409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/acmesh to 2.9.0 [nia 2021-06-12]
 	Updated net/bftpd to 5.7 [nia 2021-06-12]
 	Removed www/cherokee [nia 2021-06-12]
+	Updated net/chrony to 4.1 [nia 2021-06-12]
