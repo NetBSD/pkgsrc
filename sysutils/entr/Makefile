@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2021/03/04 10:02:02 leot Exp $
+# $NetBSD: Makefile,v 1.19 2021/06/12 09:29:37 nia Exp $
 #
 
-DISTNAME=	entr-4.8
+DISTNAME=	entr-4.9
 CATEGORIES=	sysutils
-MASTER_SITES=	http://eradman.com/entrproject/code/
+MASTER_SITES=	https://eradman.com/entrproject/code/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://eradman.com/entrproject/
+HOMEPAGE=	https://eradman.com/entrproject/
 COMMENT=	Run arbitrary commands when files change
 LICENSE=	isc AND 2-clause-bsd
 
