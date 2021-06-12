@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3373 2021/06/12 06:09:54 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3374 2021/06/12 06:22:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5402,3 +5402,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-devtools to 2.4.2 [mef 2021-06-12]
 	Removed archivers/go-xz [nia 2021-06-12]
 	Updated graphics/lcms2 to 2.12 [nia 2021-06-12]
+	Updated net/tcpreplay to 4.3.4 [nia 2021-06-12]
