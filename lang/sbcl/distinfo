@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.67 2021/04/30 13:55:29 rjs Exp $
+$NetBSD: distinfo,v 1.68 2021/06/12 02:09:29 rjs Exp $
 
-SHA1 (sbcl-2.1.4-source.tar.bz2) = c6ee0ebe02955e3e7d63562f1ff5ec4b204666ff
-RMD160 (sbcl-2.1.4-source.tar.bz2) = 1583d2477bf42a91d23dc25d36435d111bb8e49f
-SHA512 (sbcl-2.1.4-source.tar.bz2) = ed24fdfb1ab5bfbad5c22f938e2450e16ee558defc458ac4dfe24fbc7d57b9eade052ea119544e6e123979eb5048b6c776dada8c5aa6dba459c582a60fc7d943
-Size (sbcl-2.1.4-source.tar.bz2) = 6550812 bytes
+SHA1 (sbcl-2.1.5-source.tar.bz2) = 00634f2ede9860ea9a0f8927fc51638bed6e9e15
+RMD160 (sbcl-2.1.5-source.tar.bz2) = 97f2278ad424f605953caf66eadc7742e81f3728
+SHA512 (sbcl-2.1.5-source.tar.bz2) = 5e208b3a1b3ff1a589c9ae0398e40086d979342c11fa7bb251797d0266618801b525dddb6998cebae3fc2a88547f7a71bdc43c5418f5edc2cf9bf699ed725334
+Size (sbcl-2.1.5-source.tar.bz2) = 6566902 bytes
 SHA1 (patch-ab) = b272bee6fc39ede638cbf71106150044a2977596
 SHA1 (patch-clean.sh) = 8dd795727c2e2cba2c4b5ca8cc4972c89eb6ecaa
 SHA1 (patch-make-genesis-2.sh) = 5d61f2662795c93aabfaa18ef686725d2ed9384a
