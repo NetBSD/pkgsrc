@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/12/04 20:45:49 nia Exp $
+# $NetBSD: Makefile,v 1.39 2021/06/12 07:03:53 nia Exp $
 
-DISTNAME=	viewvc-1.2.0
-PKGREVISION=	1
+DISTNAME=	viewvc-1.2.1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewvc/}
 
