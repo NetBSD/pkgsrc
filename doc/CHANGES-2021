@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3389 2021/06/12 17:03:14 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3390 2021/06/12 17:14:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5418,3 +5418,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/p5-Mail-AuthenticationResults to 2.20210112 [wen 2021-06-12]
 	Removed lang/go-hcl [bsiegert 2021-06-12]
 	Updated textproc/py-libxml2 to 2.9.12nb1 [gutteridge 2021-06-12]
+	Updated www/hackernews-tui to 0.7.0 [pin 2021-06-12]
