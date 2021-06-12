@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3383 2021/06/12 09:25:39 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3384 2021/06/12 09:29:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5412,3 +5412,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/chrony to 4.1 [nia 2021-06-12]
 	Updated shells/dash to 0.5.11.4 [nia 2021-06-12]
 	Updated lang/elixir to 1.12.1 [nia 2021-06-12]
+	Updated sysutils/entr to 4.9 [nia 2021-06-12]
