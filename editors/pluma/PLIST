@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/06/03 16:31:13 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/06/12 17:30:59 gutteridge Exp $
 bin/pluma
 include/pluma/pluma-app.h
 include/pluma/pluma-commands.h
@@ -514,6 +514,10 @@ share/help/xh/pluma/figures/pluma_recent_files_menu_icon.png
 share/help/xh/pluma/figures/pluma_window.png
 share/help/xh/pluma/index.docbook
 share/help/xh/pluma/legal.xml
+share/help/zh_CN/pluma/figures/pluma_recent_files_menu_icon.png
+share/help/zh_CN/pluma/figures/pluma_window.png
+share/help/zh_CN/pluma/index.docbook
+share/help/zh_CN/pluma/legal.xml
 share/help/zh_HK/pluma/figures/pluma_recent_files_menu_icon.png
 share/help/zh_HK/pluma/figures/pluma_window.png
 share/help/zh_HK/pluma/index.docbook
