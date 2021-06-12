@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20774 2021/06/12 08:48:15 nia Exp $
+$NetBSD: TODO,v 1.20775 2021/06/12 22:01:53 mef Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-colourpicker-1.1.0
 	o R-compositions-2.0.1
 	o R-countrycode-1.2.0
-	o R-cpp11-0.2.7
 	o R-crayon-1.4.1
 	o R-crosstalk-1.1.1
 	o R-data.table-1.14.0
