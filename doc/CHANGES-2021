@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3381 2021/06/12 08:38:14 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3382 2021/06/12 08:48:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bftpd to 5.7 [nia 2021-06-12]
 	Removed www/cherokee [nia 2021-06-12]
 	Updated net/chrony to 4.1 [nia 2021-06-12]
+	Updated shells/dash to 0.5.11.4 [nia 2021-06-12]
