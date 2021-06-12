@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/05/01 23:17:34 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2021/06/12 06:32:02 nia Exp $
 
-DISTNAME=	tinc-1.0.32
-PKGREVISION=	2
+DISTNAME=	tinc-1.0.36
 CATEGORIES=	net
-MASTER_SITES=	http://www.tinc-vpn.org/packages/
+MASTER_SITES=	https://www.tinc-vpn.org/packages/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tinc-vpn.org/
