@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3396 2021/06/12 23:13:13 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3397 2021/06/12 23:30:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/R-cpp11 to 0.2.7 [mef 2021-06-12]
 	Updated math/R-dplyr to 1.0.6 [mef 2021-06-12]
 	Updated devel/p5-App-CLI to 0.52 [wen 2021-06-12]
+	Updated devel/p5-App-Cmd to 0.333 [wen 2021-06-12]
