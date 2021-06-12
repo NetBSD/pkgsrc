@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/04/10 08:36:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/06/12 08:18:14 cirnatdan Exp $
 
 DISTNAME=	x265_3.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -24,7 +24,7 @@ CMAKE_ARGS+=	-DX265_LATEST_TAG=${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+.  if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && ${MACHINE_ARCH} == "i386" 
 # Avoid text relocations
 CMAKE_ARGS+=	-DENABLE_ASSEMBLY=OFF
 .  else
