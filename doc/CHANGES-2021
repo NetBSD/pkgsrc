@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3378 2021/06/12 07:04:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3379 2021/06/12 08:11:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/abcmidi to 20210525 [nia 2021-06-12]
 	Updated www/viewvc to 1.2.1 [nia 2021-06-12]
 	Updated security/acmesh to 2.9.0 [nia 2021-06-12]
+	Updated net/bftpd to 5.7 [nia 2021-06-12]
