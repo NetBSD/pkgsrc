@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20772 2021/06/12 06:32:13 nia Exp $
+$NetBSD: TODO,v 1.20773 2021/06/12 07:04:05 nia Exp $
 
 Suggested new packages
 ======================
@@ -2212,7 +2212,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o verifast-21.04
 	o vfu-4.09
 	o vicq-0.4.2
-	o viewvc-1.2.1
 	o vim-8.2.2792
 	o vinagre-3.16.1
 	o vino-3.16.0
