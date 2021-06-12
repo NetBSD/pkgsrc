@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3391 2021/06/12 17:15:48 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3392 2021/06/12 17:31:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5420,3 +5420,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-libxml2 to 2.9.12nb1 [gutteridge 2021-06-12]
 	Updated www/hackernews-tui to 0.7.0 [pin 2021-06-12]
 	Updated textproc/ripgrep to 13.0.0 [pin 2021-06-12]
+	Updated editors/pluma to 1.24.2nb3 [gutteridge 2021-06-12]
