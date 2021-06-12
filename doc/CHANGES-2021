@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3388 2021/06/12 14:30:39 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.3389 2021/06/12 17:03:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5417,3 +5417,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-File-Which to 1.27 [wen 2021-06-12]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20210112 [wen 2021-06-12]
 	Removed lang/go-hcl [bsiegert 2021-06-12]
+	Updated textproc/py-libxml2 to 2.9.12nb1 [gutteridge 2021-06-12]
