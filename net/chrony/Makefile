@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2021/04/21 13:25:07 adam Exp $
+# $NetBSD: Makefile,v 1.46 2021/06/12 08:38:01 nia Exp $
 
-DISTNAME=	chrony-4.0
-PKGREVISION=	1
+DISTNAME=	chrony-4.1
 CATEGORIES=	net
 MASTER_SITES=	https://download.tuxfamily.org/chrony/
 
@@ -35,6 +34,9 @@ post-install:
 	    "${DESTDIR}${EGDIR}/chrony.conf.example";
 	${INSTALL_DATA} "${WRKSRC}/examples/chrony.keys.example" \
 	    "${DESTDIR}${EGDIR}/chrony.keys.example";
+
+CONF_FILES+=	${EGDIR}/chrony.conf.example \
+		${PKG_SYSCONFDIR}/chrony.conf
 
 .include "options.mk"
 .include "../../devel/editline/buildlink3.mk"
