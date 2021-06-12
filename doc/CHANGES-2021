@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3392 2021/06/12 17:31:19 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3393 2021/06/12 20:44:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.7.0 [pin 2021-06-12]
 	Updated textproc/ripgrep to 13.0.0 [pin 2021-06-12]
 	Updated editors/pluma to 1.24.2nb3 [gutteridge 2021-06-12]
+	Updated lang/rust-bin to 1.52.1nb1 [he 2021-06-12]
