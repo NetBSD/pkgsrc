@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/07/31 20:44:49 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/06/12 22:36:14 mef Exp $
 
-SHA1 (R/dplyr_1.0.0.tar.gz) = 0df596b6320af07815a948d27aa830ee80b0483f
-RMD160 (R/dplyr_1.0.0.tar.gz) = 60c81fb32a749a67c3c93980b3a23d9877fddef8
-SHA512 (R/dplyr_1.0.0.tar.gz) = af69a47d2c39ea101f35aeb652057d649c29636dcab70c51222f91646d24ca4159b8eca2ed061b845fce56a45c1d9902b9f6b605c603580b0c5bf36fa2443f95
-Size (R/dplyr_1.0.0.tar.gz) = 836651 bytes
+SHA1 (R/dplyr_1.0.6.tar.gz) = 6bb9c20041ad35d346f7d7966206789815f1da02
+RMD160 (R/dplyr_1.0.6.tar.gz) = d44187ab611255edd2b4e475e0001ad50c75099d
+SHA512 (R/dplyr_1.0.6.tar.gz) = e09f5c3b5e215926f7c96eeb705e79db73eae147f557c386bc18e47f0407bac4c1c795c842aa1e152707ae3f2d7de21f8e9984ea9fc9a59addb1cb04a6f65d89
+Size (R/dplyr_1.0.6.tar.gz) = 954401 bytes
