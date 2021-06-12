@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3385 2021/06/12 09:40:20 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3386 2021/06/12 13:52:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/elixir to 1.12.1 [nia 2021-06-12]
 	Updated sysutils/entr to 4.9 [nia 2021-06-12]
 	Updated graphics/drawing to 0.8.0 [nia 2021-06-12]
+	Updated devel/p5-File-Which to 1.27 [wen 2021-06-12]
