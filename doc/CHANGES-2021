@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3365 2021/06/12 01:37:37 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3366 2021/06/12 01:43:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5394,3 +5394,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/molybdenum to 0.1.5 [pin 2021-06-11]
 	Updated net/mosquitto to 2.0.11 [gdt 2021-06-11]
 	Updated devel/R-withr to 2.4.2 [mef 2021-06-12]
+	Updated devel/R-remotes to 2.4.0 [mef 2021-06-12]
