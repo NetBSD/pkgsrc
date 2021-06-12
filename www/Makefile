@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1554 2021/06/08 15:59:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1555 2021/06/12 08:26:01 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -78,7 +78,6 @@ SUBDIR+=	cgicc
 SUBDIR+=	cgilib
 SUBDIR+=	cgit
 SUBDIR+=	checkbot
-SUBDIR+=	cherokee
 SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
 SUBDIR+=	clisp-fastcgi
