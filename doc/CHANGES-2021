@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3393 2021/06/12 20:44:25 he Exp $
+$NetBSD: CHANGES-2021,v 1.3394 2021/06/12 22:01:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5422,3 +5422,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ripgrep to 13.0.0 [pin 2021-06-12]
 	Updated editors/pluma to 1.24.2nb3 [gutteridge 2021-06-12]
 	Updated lang/rust-bin to 1.52.1nb1 [he 2021-06-12]
+	Updated lang/R-cpp11 to 0.2.7 [mef 2021-06-12]
