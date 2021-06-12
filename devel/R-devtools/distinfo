@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/05/31 21:52:19 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/06/12 03:01:22 mef Exp $
 
-SHA1 (R/devtools_2.4.1.tar.gz) = 98ee2b35f5daa58c6b70aec754fd0e1221fdb1fe
-RMD160 (R/devtools_2.4.1.tar.gz) = 656060d86c10f1a73f49ec2af30f7a624bbec67f
-SHA512 (R/devtools_2.4.1.tar.gz) = dff67583addbb54777bcdd4a9dfe1fc5279d803d1a7b862bf51f1306892442b236d87d766dd77b82f5ebdfb006104ab775a1df5901cf6e8793808660e7676b16
-Size (R/devtools_2.4.1.tar.gz) = 370717 bytes
+SHA1 (R/devtools_2.4.2.tar.gz) = ba069ac55a876243d914a50ee78d58a5db27af1e
+RMD160 (R/devtools_2.4.2.tar.gz) = 1febc3910a75f56b28e2d071cb64c3792f6b4839
+SHA512 (R/devtools_2.4.2.tar.gz) = 483309ebaeab38c850fb470b66c030c359a045621f4fe86a6284bb48884defcf348bd5a62ba592fb1b168a230097adbac1d3e8141c22b4aae97d968f06bb1913
+Size (R/devtools_2.4.2.tar.gz) = 371298 bytes
