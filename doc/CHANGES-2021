@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3370 2021/06/12 02:55:36 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3371 2021/06/12 03:01:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/sbcl to 2.1.5 [rjs 2021-06-12]
 	Updated devel/R-desc to 1.3.0 [mef 2021-06-12]
 	Updated textproc/R-rmarkdown to 2.8 [mef 2021-06-12]
+	Updated devel/R-devtools to 2.4.2 [mef 2021-06-12]
