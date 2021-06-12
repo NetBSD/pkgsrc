@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20773 2021/06/12 07:04:05 nia Exp $
+$NetBSD: TODO,v 1.20774 2021/06/12 08:48:15 nia Exp $
 
 Suggested new packages
 ======================
@@ -704,7 +704,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dar-2.4.14
 	o darcs-2.16.3
 	o darktable-3.4
-	o dash-0.5.11.3
 	o dateutils-0.4.8
 	o dcc-2.3.167
 	o dd_rescue-1.46
