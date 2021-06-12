@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3394 2021/06/12 22:01:53 mef Exp $
+$NetBSD: CHANGES-2021,v 1.3395 2021/06/12 22:36:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/pluma to 1.24.2nb3 [gutteridge 2021-06-12]
 	Updated lang/rust-bin to 1.52.1nb1 [he 2021-06-12]
 	Updated lang/R-cpp11 to 0.2.7 [mef 2021-06-12]
+	Updated math/R-dplyr to 1.0.6 [mef 2021-06-12]
