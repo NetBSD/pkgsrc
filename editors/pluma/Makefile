@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2021/06/03 16:31:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.41 2021/06/12 17:30:59 gutteridge Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	pluma-${VERSION:R}.2
