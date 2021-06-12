@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3387 2021/06/12 13:59:26 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3388 2021/06/12 14:30:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5416,3 +5416,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/drawing to 0.8.0 [nia 2021-06-12]
 	Updated devel/p5-File-Which to 1.27 [wen 2021-06-12]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20210112 [wen 2021-06-12]
+	Removed lang/go-hcl [bsiegert 2021-06-12]
