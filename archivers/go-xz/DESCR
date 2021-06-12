@@ -1,4 +1,0 @@
-This Go language package supports the reading and writing of xz
-compressed streams. It includes also a gxz command for compressing and
-decompressing data. The package is completely written in Go and
-doesn't have any dependency on any C code.
