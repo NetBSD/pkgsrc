@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/10/19 17:48:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/12 09:25:24 nia Exp $
 bin/elixir
 bin/elixirc
 bin/iex
@@ -206,6 +206,7 @@ lib/elixir/lib/elixir/ebin/Elixir.Supervisor.Default.beam
 lib/elixir/lib/elixir/ebin/Elixir.Supervisor.Spec.beam
 lib/elixir/lib/elixir/ebin/Elixir.Supervisor.beam
 lib/elixir/lib/elixir/ebin/Elixir.SyntaxError.beam
+lib/elixir/lib/elixir/ebin/Elixir.System.SignalHandler.beam
 lib/elixir/lib/elixir/ebin/Elixir.System.beam
 lib/elixir/lib/elixir/ebin/Elixir.SystemLimitError.beam
 lib/elixir/lib/elixir/ebin/Elixir.Task.Supervised.beam
@@ -322,7 +323,6 @@ lib/elixir/lib/logger/ebin/Elixir.Logger.App.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.BackendSupervisor.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Backends.Console.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Config.beam
-lib/elixir/lib/logger/ebin/Elixir.Logger.Counter.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Filter.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Formatter.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Handler.beam
@@ -331,6 +331,7 @@ lib/elixir/lib/logger/ebin/Elixir.Logger.Utils.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.Watcher.beam
 lib/elixir/lib/logger/ebin/Elixir.Logger.beam
 lib/elixir/lib/logger/ebin/logger.app
+lib/elixir/lib/mix/ebin/Elixir.Collectable.Mix.Shell.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.CLI.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Compilers.ApplicationTracer.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Compilers.Elixir.beam
