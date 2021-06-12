@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/02/18 17:20:59 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/12 09:40:09 nia Exp $
 
-DISTNAME=	drawing-0.6.5
+DISTNAME=	drawing-0.8.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maoschanz/}
 

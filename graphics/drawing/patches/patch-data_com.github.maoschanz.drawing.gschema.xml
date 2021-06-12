@@ -1,12 +1,12 @@
-$NetBSD: patch-data_com.github.maoschanz.drawing.gschema.xml,v 1.2 2020/11/26 15:26:20 nia Exp $
+$NetBSD: patch-data_com.github.maoschanz.drawing.gschema.xml,v 1.3 2021/06/12 09:40:09 nia Exp $
 
 pkgsrc users are probably more likely to be using a desktop where
 server-side decorations are the norm.
 
---- data/com.github.maoschanz.drawing.gschema.xml.orig	2020-10-31 19:12:11.000000000 +0000
+--- data/com.github.maoschanz.drawing.gschema.xml.orig	2021-04-24 22:58:18.000000000 +0000
 +++ data/com.github.maoschanz.drawing.gschema.xml
-@@ -4,7 +4,7 @@
-   <schema id="com.github.maoschanz.drawing" path="/com/github/maoschanz/drawing/">
+@@ -6,7 +6,7 @@
+ 
      <!-- Actual options -->
      <key type="s" name="deco-type">
 -      <default>''</default>
