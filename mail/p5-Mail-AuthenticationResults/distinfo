@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/07 11:31:59 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/06/12 13:58:12 wen Exp $
 
-SHA1 (Mail-AuthenticationResults-1.20200824.1.tar.gz) = e6b69c3c9d7473a54c1996cd3e79b5640ef7bb19
-RMD160 (Mail-AuthenticationResults-1.20200824.1.tar.gz) = 4ad1489932ee21b34eb93e4a1b04d02a75d162ec
-SHA512 (Mail-AuthenticationResults-1.20200824.1.tar.gz) = bbb444b5138d4a894716fd3cd8f5698b60f1d8b62121b88832ecc7bca8054e1d1591254c54bb4833745390052daa3c93bfd1e64e760857d76c8697bdcdb695d6
-Size (Mail-AuthenticationResults-1.20200824.1.tar.gz) = 30880 bytes
+SHA1 (Mail-AuthenticationResults-2.20210112.tar.gz) = 4296956590f5b65173a9ea01a0dafdac5ac8167e
+RMD160 (Mail-AuthenticationResults-2.20210112.tar.gz) = f587d6679e89d44f47a69ea615fc80e009cb81ba
+SHA512 (Mail-AuthenticationResults-2.20210112.tar.gz) = 2168e8761947008670840ac1b534e2c374399120197d907b8d5c654bcb00baa5f7075caffa00a06eac5628a7583d96aeb9f077a1103266ad774aaff05f8f0130
+Size (Mail-AuthenticationResults-2.20210112.tar.gz) = 30919 bytes
