@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/13 10:25:37 nia Exp $
+bin/xrectsel
