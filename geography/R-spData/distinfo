@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/08 23:35:17 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/06/13 12:59:08 wen Exp $
 
-SHA1 (R/spData_0.3.3.tar.gz) = f69a27c85c0d8c4ad237b77163641ff563b28a8b
-RMD160 (R/spData_0.3.3.tar.gz) = 12cf2914839b8d952104de8b68ad76ac1dd96611
-SHA512 (R/spData_0.3.3.tar.gz) = 608dc84576520907a0f925fe857dbab923b53ebfeb051e853f416b358b8e67c0694fcd40bf7aeb9c70dbd27b6847b8b7b991f66928864864350eed9cb498a58c
-Size (R/spData_0.3.3.tar.gz) = 3484033 bytes
+SHA1 (R/spData_0.3.8.tar.gz) = d4628cc27984250bfe49996799514e90552714e0
+RMD160 (R/spData_0.3.8.tar.gz) = 854cae2a46c63ec873eee40b4dc88a950972b66c
+SHA512 (R/spData_0.3.8.tar.gz) = 73209545c6a84ab825b44b9f2d117d3620ee6c289a68b20d1503afc79567dee5f7d7858bd27e7a8c00d0e0049515695c7cf2db7c7cc594ecd1fb7c32c82ae8fa
+Size (R/spData_0.3.8.tar.gz) = 3819066 bytes
