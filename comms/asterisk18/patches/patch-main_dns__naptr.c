@@ -1,4 +1,4 @@
-$NetBSD: patch-main_dns__naptr.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_dns__naptr.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/dns_naptr.c.orig	2018-05-07 17:26:59.602834230 +0000
 +++ main/dns_naptr.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-res_res__calendar__icalendar.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_res__calendar__icalendar.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/res_calendar_icalendar.c.orig	2015-10-09 21:48:48.000000000 +0000
 +++ res/res_calendar_icalendar.c
