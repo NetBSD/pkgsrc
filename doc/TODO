@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20780 2021/06/13 12:24:05 wen Exp $
+$NetBSD: TODO,v 1.20781 2021/06/13 12:32:33 wen Exp $
 
 Suggested new packages
 ======================
@@ -1683,7 +1683,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Module-ScanDeps-1.30
 	o p5-MooX-File-ConfigDir-0.008
 	o p5-MooseX-Types-DateTime-0.16
-	o p5-MooseX-Types-URI-0.09
 	o p5-Net-Amazon-S3-0.98
 	o p5-Net-CIDR-0.21
 	o p5-Net-CIDR-Lite-0.22
