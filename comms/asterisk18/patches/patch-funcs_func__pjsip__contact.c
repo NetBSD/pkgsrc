@@ -1,4 +1,4 @@
-$NetBSD: patch-funcs_func__pjsip__contact.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-funcs_func__pjsip__contact.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- funcs/func_pjsip_contact.c.orig	2018-06-20 14:41:26.963425573 +0000
 +++ funcs/func_pjsip_contact.c
