@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/07/23 13:56:16 wen Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/13 12:46:04 wen Exp $
 
 R_PKGNAME=	sp
-R_PKGVER=	1.4-2
+R_PKGVER=	1.4-5
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
