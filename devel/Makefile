@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3419 2021/06/13 08:39:53 nia Exp $
+# $NetBSD: Makefile,v 1.3420 2021/06/13 08:42:21 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -456,7 +456,6 @@ SUBDIR+=	go-levenshtein
 SUBDIR+=	go-locker
 SUBDIR+=	go-logrus
 SUBDIR+=	go-mod
-SUBDIR+=	go-mow-cli
 SUBDIR+=	go-nbreader
 SUBDIR+=	go-osext
 SUBDIR+=	go-pflag
