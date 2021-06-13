@@ -9,12 +9,7 @@ Interactive Voice Response, Call Queuing. It has support for
 three-way calling, caller ID services, ADSI, SIP and H.323 (as both
 client and gateway).
 
-NOTE:  This version does not work with the zaptel drivers.  It
-requires the newer DAHDI drivers which are still being ported.
-So, there is no hardware support available at this moment.
-
-Asterisk 1.8 is a long term support version (i.e. it will be
-supported for four years with an additional year of security only
-fixes).  See:
-
+This is a long term support version.  It is scheduled to go to
+security fixes only on October 20th, 2024, and EOL on October 20th,
+2025.  See here for more information about Asterisk versions:
 https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions

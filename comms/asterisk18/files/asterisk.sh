@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: asterisk.sh,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+# $NetBSD: asterisk.sh,v 1.1.1.2 2021/06/13 07:47:18 jnemeth Exp $
 #
 # PROVIDE: asterisk
 # REQUIRE: DAEMON
