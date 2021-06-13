@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3416 2021/06/13 08:27:56 nia Exp $
+# $NetBSD: Makefile,v 1.3417 2021/06/13 08:29:39 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,7 +469,6 @@ SUBDIR+=	go-pty
 SUBDIR+=	go-purell
 SUBDIR+=	go-quicktest
 SUBDIR+=	go-radix
-SUBDIR+=	go-ratelimit
 SUBDIR+=	go-repr
 SUBDIR+=	go-review
 SUBDIR+=	go-sanitized_anchor_name
