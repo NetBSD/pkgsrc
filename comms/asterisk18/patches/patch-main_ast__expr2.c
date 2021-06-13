@@ -1,4 +1,4 @@
-$NetBSD: patch-main_ast__expr2.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_ast__expr2.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/ast_expr2.c.orig	2018-05-07 17:49:06.171631311 +0000
 +++ main/ast_expr2.c

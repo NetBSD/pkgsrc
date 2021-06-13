@@ -1,4 +1,4 @@
-$NetBSD: patch-cdr_cdr__pgsql.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-cdr_cdr__pgsql.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- cdr/cdr_pgsql.c.orig	2016-09-30 20:36:17.000000000 +0000
 +++ cdr/cdr_pgsql.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-tests_test__locale.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-tests_test__locale.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- tests/test_locale.c.orig	2015-10-09 21:48:48.000000000 +0000
 +++ tests/test_locale.c

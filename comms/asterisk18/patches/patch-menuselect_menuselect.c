@@ -1,4 +1,4 @@
-$NetBSD: patch-menuselect_menuselect.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-menuselect_menuselect.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- menuselect/menuselect.c.orig	2018-05-07 17:13:49.312815875 +0000
 +++ menuselect/menuselect.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-include_asterisk_lock.h,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-include_asterisk_lock.h,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- include/asterisk/lock.h.orig	2021-03-04 16:46:08.000000000 +0000
 +++ include/asterisk/lock.h

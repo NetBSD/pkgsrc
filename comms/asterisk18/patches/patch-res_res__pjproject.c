@@ -1,4 +1,4 @@
-$NetBSD: patch-res_res__pjproject.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_res__pjproject.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/res_pjproject.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ res/res_pjproject.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-channels_pjsip_dialplan__functions.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-channels_pjsip_dialplan__functions.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- channels/pjsip/dialplan_functions.c.orig	2018-06-20 14:39:31.934736437 +0000
 +++ channels/pjsip/dialplan_functions.c

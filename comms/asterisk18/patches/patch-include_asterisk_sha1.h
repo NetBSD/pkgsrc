@@ -1,4 +1,4 @@
-$NetBSD: patch-include_asterisk_sha1.h,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-include_asterisk_sha1.h,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- include/asterisk/sha1.h.orig	2016-09-09 16:14:37.000000000 +0000
 +++ include/asterisk/sha1.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-res_res__hep__pjsip.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_res__hep__pjsip.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/res_hep_pjsip.c.orig	2018-06-20 15:24:25.999288749 +0000
 +++ res/res_hep_pjsip.c

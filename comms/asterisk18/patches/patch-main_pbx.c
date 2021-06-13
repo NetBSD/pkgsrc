@@ -1,4 +1,4 @@
-$NetBSD: patch-main_pbx.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_pbx.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/pbx.c.orig	2016-04-20 10:46:18.000000000 +0000
 +++ main/pbx.c

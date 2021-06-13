@@ -1,4 +1,4 @@
-$NetBSD: patch-res_ael_pval.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_ael_pval.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/ael/pval.c.orig	2018-05-07 17:37:44.116772314 +0000
 +++ res/ael/pval.c

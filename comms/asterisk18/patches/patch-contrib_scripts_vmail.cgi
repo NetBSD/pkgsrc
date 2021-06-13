@@ -1,4 +1,4 @@
-$NetBSD: patch-contrib_scripts_vmail.cgi,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-contrib_scripts_vmail.cgi,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- contrib/scripts/vmail.cgi.orig	2015-10-09 21:48:48.000000000 +0000
 +++ contrib/scripts/vmail.cgi
