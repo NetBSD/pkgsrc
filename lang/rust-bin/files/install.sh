@@ -569,18 +569,18 @@ install_components() {
 		    _file_install_path="$CFG_DESTDIR_PREFIX/$PKGMANDIR/$_f"
 		    ;;
 		share/doc/*)
-        # HACK: Try to support overriding --docdir.  Paths with the form
-        # "share/doc/$product/" can be redirected to a single --docdir
-        # path. If the following detects that --docdir has been specified
-        # then it will replace everything preceeding the "$product" path
-        # component. The problem here is that the combined rust installer
-        # contains two "products": rust and cargo; so the contents of those
-        # directories will both be dumped into the same directory; and the
-        # contents of those directories are _not_ disjoint. Since this feature
-        # is almost entirely to support 'make install' anyway I don't expect
-        # this problem to be a big deal in practice.
+            # HACK: Try to support overriding --docdir.  Paths with the form
+            # "share/doc/$product/" can be redirected to a single --docdir
+            # path. If the following detects that --docdir has been specified
+            # then it will replace everything preceeding the "$product" path
+            # component. The problem here is that the combined rust installer
+            # contains two "products": rust and cargo; so the contents of those
+            # directories will both be dumped into the same directory; and the
+            # contents of those directories are _not_ disjoint. Since this feature
+            # is almost entirely to support 'make install' anyway I don't expect
+            # this problem to be a big deal in practice.
 		    if [ "$CFG_DOCDIR" != "<default>" ]; then
-			local _f=${_file#"share/doc/"}
+			local _f=${_file#"share/doc/"*/}
 			_file_install_path="$CFG_DOCDIR/$_f"
 		    fi
 		    ;;
