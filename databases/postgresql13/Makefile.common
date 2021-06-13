@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2021/05/18 11:56:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2021/06/13 08:56:26 nia Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -87,6 +87,10 @@ CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 # and is "unlikely to work correctly".
 # https://www.postgresql.org/message-id/E1X0yaj-000753-N6%40gemulon.postgresql.org
 BROKEN_ON_PLATFORM+=	*-*-alpha
+
+.if ${MACHINE_ARCH} == "sparc"
+CFLAGS.NetBSD+=		-D__sparc_v8__
+.endif
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
 CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
