@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2020/10/18 15:51:09 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2021/06/13 19:02:59 wiz Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -9,6 +9,8 @@ BUILDLINK_API_DEPENDS.llvm+=	llvm>=10.0.1
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
+
+BUILDLINK_FILES.llvm+=		bin/*
 
 pkgbase := llvm
 .include "../../mk/pkg-build-options.mk"
