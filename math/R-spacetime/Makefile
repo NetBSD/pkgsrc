@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:54 brook Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/13 13:04:37 wen Exp $
 
 R_PKGNAME=	spacetime
-R_PKGVER=	1.2-2
+R_PKGVER=	1.2-4
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
