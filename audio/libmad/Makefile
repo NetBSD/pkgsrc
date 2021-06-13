@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/10 20:01:57 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/13 06:40:48 nia Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
@@ -18,6 +18,15 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	lib/pkgconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_ARCH:Mmips64*)
+# Disable MIPS-specific ASM on MIPS64 due to:
+# error: impossible constraint in 'asm'
+CONFIGURE_ARGS+=	--enable-fpm=64bit
+CONFIGURE_ARGS+=	--disable-aso
+.endif
 
 post-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\
