@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3423 2021/06/13 13:06:15 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3424 2021/06/13 13:12:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5452,3 +5452,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-sp to 1.4.5 [wen 2021-06-13]
 	Updated geography/R-spData to 0.3.8 [wen 2021-06-13]
 	Updated math/R-spacetime to 1.2.4 [wen 2021-06-13]
+	Updated math/R to 4.1.0 [wen 2021-06-13]
