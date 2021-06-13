@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/10 10:26:07 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/13 12:04:56 nia Exp $
 
 DISTNAME=	ocl-icd-2.3.0
 PKGREVISION=	1
@@ -21,6 +21,8 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 .include "../../lang/ruby/rubyversion.mk"
+
+MAKE_FLAGS+=	RUBY=${RUBY:Q}
 
 TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
