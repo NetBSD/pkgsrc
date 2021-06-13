@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2020/01/15 14:24:03 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2021/06/13 06:55:17 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace
@@ -20,7 +20,9 @@ CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-glx
+.  if ${MESALIB_SUPPORTS_EGL:tl} == "yes"
 CONFIGURE_ARGS+=	--enable-glamor
+.  endif
 CONFIGURE_ARGS+=	--enable-present
 .else
 ###
