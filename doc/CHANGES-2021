@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3420 2021/06/13 12:32:32 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3421 2021/06/13 12:47:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5449,3 +5449,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-MooseX-Getopt to 0.75 [wen 2021-06-13]
 	Updated lang/rust-bin to 1.52.1nb2 [he 2021-06-13]
 	Updated devel/p5-MooseX-Types-URI to 0.09 [wen 2021-06-13]
+	Updated math/R-sp to 1.4.5 [wen 2021-06-13]
