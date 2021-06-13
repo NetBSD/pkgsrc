@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3415 2021/06/13 10:25:50 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3416 2021/06/13 12:04:57 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5444,3 +5444,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-goorgeous [nia 2021-06-13]
 	Removed devel/go-mow-cli [nia 2021-06-13]
 	Added x11/xrectsel version 0.3.2 [nia 2021-06-13]
+	Updated net/sslh to 1.21c [rhialto 2021-06-13]
