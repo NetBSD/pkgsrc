@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20777 2021/06/13 07:56:25 wiz Exp $
+$NetBSD: TODO,v 1.20778 2021/06/13 08:27:39 wen Exp $
 
 Suggested new packages
 ======================
@@ -1592,13 +1592,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o owl-lisp-0.1.16
 	o p0f-3.09b
 	o p5-Alien-Hunspell-0.17
-	o p5-App-CLI-0.52
-	o p5-App-Cmd-0.333
-	o p5-App-perlbrew-0.92
 	o p5-Archive-Peek-0.38
-	o p5-Array-Compare-3.0.8
 	o p5-Authen-Simple-0.6
-	o p5-B-Keywords-1.22
 	o p5-BerkeleyDB-1.1
 	o p5-Business-ISBN-3.006
 	o p5-Business-ISBN-Data-20210112.006
@@ -1609,7 +1604,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-CPAN-Perl-Releases-5.20210320
 	o p5-CPANPLUS-0.9910
 	o p5-CSS-Minifier-XS-0.13
-	o p5-Cache-FastMmap-1.56
 	o p5-Carp-Assert-More-1.26
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Class-Measure-0.09
@@ -1688,7 +1682,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Module-Path-0.33
 	o p5-Module-ScanDeps-1.30
 	o p5-MooX-File-ConfigDir-0.008
-	o p5-MooseX-App-Cmd-0.34
 	o p5-MooseX-Getopt-0.75
 	o p5-MooseX-Types-DateTime-0.16
 	o p5-MooseX-Types-URI-0.09
