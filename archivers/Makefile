@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2021/06/12 06:03:56 nia Exp $
+# $NetBSD: Makefile,v 1.185 2021/06/13 08:15:50 nia Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -141,6 +141,7 @@ SUBDIR+=	unshield
 SUBDIR+=	unzip
 SUBDIR+=	unzoo
 SUBDIR+=	upx
+SUBDIR+=	xarchiver
 SUBDIR+=	xbin
 SUBDIR+=	xfce4-thunar-archive
 SUBDIR+=	xmill
