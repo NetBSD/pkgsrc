@@ -1,4 +1,4 @@
-$NetBSD: patch-res_res__limit.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_res__limit.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/res_limit.c.orig	2018-05-07 17:38:31.944908572 +0000
 +++ res/res_limit.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_stdtime_localtime.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/stdtime/localtime.c.orig	2018-05-01 20:12:26.000000000 +0000
 +++ main/stdtime/localtime.c

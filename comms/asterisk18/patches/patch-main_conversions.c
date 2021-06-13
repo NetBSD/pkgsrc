@@ -1,4 +1,4 @@
-$NetBSD: patch-main_conversions.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_conversions.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/conversions.c.orig	2021-03-04 16:46:08.000000000 +0000
 +++ main/conversions.c

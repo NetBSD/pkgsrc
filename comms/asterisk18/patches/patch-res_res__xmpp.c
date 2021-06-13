@@ -1,4 +1,4 @@
-$NetBSD: patch-res_res__xmpp.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-res_res__xmpp.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- res/res_xmpp.c.orig	2018-06-19 21:29:29.310245367 +0000
 +++ res/res_xmpp.c

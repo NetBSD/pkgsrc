@@ -1,4 +1,4 @@
-$NetBSD: patch-utils_db1-ast_include_db.h,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-utils_db1-ast_include_db.h,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- utils/db1-ast/include/db.h.orig	2015-10-09 21:48:48.000000000 +0000
 +++ utils/db1-ast/include/db.h
