@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20782 2021/06/13 12:47:18 wen Exp $
+$NetBSD: TODO,v 1.20783 2021/06/13 13:00:36 wen Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-sandwich-3.0.0
 	o R-scales-1.1.1
 	o R-shinyjs-2.0.0
-	o R-spData-0.3.8
 	o R-spacetime-1.2.4
 	o R-spatstat-2.1.0
 	o R-spatstat.data-2.1.0
