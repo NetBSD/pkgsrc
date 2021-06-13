@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3409 2021/06/13 08:28:20 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3410 2021/06/13 08:30:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Cache-FastMmap to 1.56 [wen 2021-06-13]
 	Removed devel/go-mapstructure [nia 2021-06-13]
 	Removed devel/go-mapstructure-bep [nia 2021-06-13]
+	Removed devel/go-ratelimit [nia 2021-06-13]
