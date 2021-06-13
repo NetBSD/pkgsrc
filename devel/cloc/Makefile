@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2021/05/24 19:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/13 19:51:23 fcambus Exp $
 
 DISTNAME=	cloc-1.90
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlDanial/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -19,6 +19,8 @@ DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 
 REPLACE_PERL+=	Unix/cloc
+
+MAKE_ENV+=	PODDATE=`stat -t %Y-%m-%d -f %Sm ${WRKSRC}/cloc`
 
 NO_BUILD=	yes
 BUILD_DIRS=	Unix
