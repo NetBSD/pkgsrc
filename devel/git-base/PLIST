@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/03/31 08:04:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/06/13 18:36:31 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -44,6 +44,7 @@ libexec/git-core/git-check-ignore
 libexec/git-core/git-check-mailmap
 libexec/git-core/git-check-ref-format
 libexec/git-core/git-checkout
+libexec/git-core/git-checkout--worker
 libexec/git-core/git-checkout-index
 libexec/git-core/git-cherry
 libexec/git-core/git-cherry-pick
