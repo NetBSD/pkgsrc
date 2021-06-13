@@ -1,2 +1,0 @@
-Buffruneio is a wrapper around bufio to provide buffered runes access with
-unlimited unreads.
