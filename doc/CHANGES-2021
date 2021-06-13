@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3407 2021/06/13 08:24:32 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3408 2021/06/13 08:27:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5436,3 +5436,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-MooseX-App-Cmd to 0.34 [wen 2021-06-13]
 	Removed devel/go-buffruneio [nia 2021-06-13]
 	Updated devel/p5-Cache-FastMmap to 1.56 [wen 2021-06-13]
+	Removed devel/go-mapstructure [nia 2021-06-13]
