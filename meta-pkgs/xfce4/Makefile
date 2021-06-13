@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2021/05/24 19:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2021/06/13 08:15:50 nia Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
@@ -22,7 +22,6 @@ DEPENDS+=	xfce4-terminal>=0.8.8:../../x11/xfce4-terminal
 DEPENDS+=	xfce4-thunar>=1.8.9:../../sysutils/xfce4-thunar
 DEPENDS+=	xfce4-wm>=4.14.0:../../wm/xfce4-wm
 DEPENDS+=	xfce4-wm-themes>=4.10.0:../../wm/xfce4-wm-themes
-DEPENDS+=	xfce4-xarchiver>=0.5.4:../../sysutils/xfce4-xarchiver
 DEPENDS+=	elementary-xfce-icon-theme>=0.5:../../graphics/elementary-xfce-icon-theme
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 

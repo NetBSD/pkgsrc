@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/01/21 02:32:05 gutteridge Exp $
-
-SHA1 (xarchiver-0.5.4.16.tar.gz) = e8d1033032aba56a9fd6ea0d3d81dd8c2554fa2f
-RMD160 (xarchiver-0.5.4.16.tar.gz) = 1a71a9e720ee38a5e4fd3c7d060ec8d0a7826d7e
-SHA512 (xarchiver-0.5.4.16.tar.gz) = 794027cbbc33371008fa259c07c5821ffa63a110a130c2ee6d5fbc40177823af25777d07a0522cd809feb4122b1b741f24f6108dffdda330e54f6402ef97ae4a
-Size (xarchiver-0.5.4.16.tar.gz) = 1071484 bytes
