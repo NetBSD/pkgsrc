@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3427 2021/06/13 18:08:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3428 2021/06/13 18:28:07 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5460,3 +5460,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/py-email_validator to 1.1.3 [adam 2021-06-13]
 	Updated time/py-vdirsyncer to 0.18.0 [adam 2021-06-13]
 	Updated devel/py-hypothesis to 6.14.0 [adam 2021-06-13]
+	Updated fonts/spleen to 1.9.1 [fcambus 2021-06-13]
