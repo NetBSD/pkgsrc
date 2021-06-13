@@ -1,4 +1,4 @@
-$NetBSD: patch-main_bridge__basic.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_bridge__basic.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/bridge_basic.c.orig	2018-05-07 17:25:08.340535041 +0000
 +++ main/bridge_basic.c

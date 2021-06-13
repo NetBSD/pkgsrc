@@ -1,4 +1,4 @@
-$NetBSD: patch-cel_cel__pgsql.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-cel_cel__pgsql.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- cel/cel_pgsql.c.orig	2015-10-09 21:48:48.000000000 +0000
 +++ cel/cel_pgsql.c
