@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3403 2021/06/13 08:16:18 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3404 2021/06/13 08:17:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5432,3 +5432,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/mutt to 2.1.0 [tron 2021-06-13]
 	Added comms/asterisk18 version 18.4.0 [jnemeth 2021-06-13]
 	Added archivers/xarchiver version 0.5.4.17 [nia 2021-06-13]
+	Removed sysutils/xfce4-xarchiver successor archivers/xarchiver [nia 2021-06-13]
