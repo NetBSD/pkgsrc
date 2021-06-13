@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/24 10:43:25 nia Exp $
+@comment $NetBSD: PLIST,v 1.1 2021/06/13 08:15:50 nia Exp $
 bin/xarchiver
 libexec/thunar-archive-plugin/xarchiver.tap
 man/man1/xarchiver.1

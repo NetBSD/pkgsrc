@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.959 2021/05/25 10:21:26 adam Exp $
+# $NetBSD: Makefile,v 1.960 2021/06/13 08:15:50 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -868,7 +868,6 @@ SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xfce4-thunar
 SUBDIR+=	xfce4-thunar-vcs
 SUBDIR+=	xfce4-verve-plugin
-SUBDIR+=	xfce4-xarchiver
 SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xfe
 SUBDIR+=	xfm
