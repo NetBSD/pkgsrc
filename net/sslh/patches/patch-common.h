@@ -1,10 +1,10 @@
-$NetBSD: patch-common.h,v 1.1 2017/08/15 13:13:36 jperkin Exp $
+$NetBSD: patch-common.h,v 1.2 2021/06/13 12:04:21 rhialto Exp $
 
 Avoid queue variable conflict.
 
---- common.h.orig	2016-03-29 19:19:05.000000000 +0000
+--- common.h.orig	2020-07-30 07:45:50.000000000 +0000
 +++ common.h
-@@ -69,7 +69,7 @@ enum connection_state {
+@@ -85,7 +85,7 @@ enum connection_state {
  
  /* A 'queue' is composed of a file descriptor (which can be read from or
   * written to), and a queue for deferred write data */
@@ -13,7 +13,7 @@ Avoid queue variable conflict.
      int fd;
      void *begin_deferred_data;
      void *deferred_data;
-@@ -84,7 +84,7 @@ struct connection {
+@@ -100,7 +100,7 @@ struct connection {
      /* q[0]: queue for external connection (client);
       * q[1]: queue for internal connection (httpd or sshd);
       * */
@@ -22,7 +22,7 @@ Avoid queue variable conflict.
  };
  
  #define FD_CNXCLOSED    0
-@@ -95,7 +95,7 @@ struct connection {
+@@ -118,7 +118,7 @@ struct connection_desc {
  /* common.c */
  void init_cnx(struct connection *cnx);
  int connect_addr(struct connection *cnx, int fd_from);
@@ -30,8 +30,8 @@ Avoid queue variable conflict.
 +int fd2fd(struct sslhqueue *target, struct sslhqueue *from);
  char* sprintaddr(char* buf, size_t size, struct addrinfo *a);
  void resolve_name(struct addrinfo **out, char* fullname);
- void log_connection(struct connection *cnx);
-@@ -110,8 +110,8 @@ int resolve_split_name(struct addrinfo *
+ int get_connection_desc(struct connection_desc* desc, const struct connection *cnx);
+@@ -135,8 +135,8 @@ int resolve_split_name(struct addrinfo *
  
  int start_listen_sockets(int *sockfd[], struct addrinfo *addr_list);
  
@@ -40,5 +40,5 @@ Avoid queue variable conflict.
 +int defer_write(struct sslhqueue *q, void* data, int data_size);
 +int flush_deferred(struct sslhqueue *q);
  
- extern int probing_timeout, verbose, inetd, foreground, 
-        background, transparent, numeric;
+ extern struct sslhcfg_item cfg;
+ extern struct addrinfo *addr_listen;
