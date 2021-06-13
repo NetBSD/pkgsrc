@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3398 2021/06/12 23:56:53 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3399 2021/06/13 00:13:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5427,3 +5427,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-App-CLI to 0.52 [wen 2021-06-12]
 	Updated devel/p5-App-Cmd to 0.333 [wen 2021-06-12]
 	Updated devel/p5-App-perlbrew to 0.92 [wen 2021-06-12]
+	Updated devel/p5-Array-Compare to 3.0.8 [wen 2021-06-13]
