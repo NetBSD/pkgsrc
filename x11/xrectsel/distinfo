@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/13 10:25:37 nia Exp $
+
+SHA1 (xrectsel-0.3.2.tar.gz) = 745e026e7ea22d2ac6d492c96e6ed28f583e5f31
+RMD160 (xrectsel-0.3.2.tar.gz) = 56dc2c58e89026f2135c70a4944ce8b8e96ea11c
+SHA512 (xrectsel-0.3.2.tar.gz) = 56e87002dba1858c900ceba4d6cf1613fa92a5a8f59fb5c4852e65835bde9478bf92c160ca398cd19e99543ed0ab94ad4ac8ba2d60a7dbaf95bc2826f8953fcc
+Size (xrectsel-0.3.2.tar.gz) = 14834 bytes

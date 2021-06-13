@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.933 2021/06/01 00:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.934 2021/06/13 10:25:37 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -657,6 +657,7 @@ SUBDIR+=	xpr
 SUBDIR+=	xprop
 SUBDIR+=	xrandr
 SUBDIR+=	xrdb
+SUBDIR+=	xrectsel
 SUBDIR+=	xrefresh
 SUBDIR+=	xrestop
 SUBDIR+=	xrootconsole
