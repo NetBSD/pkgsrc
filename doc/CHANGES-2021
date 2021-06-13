@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3405 2021/06/13 08:19:59 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3406 2021/06/13 08:23:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5434,3 +5434,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added archivers/xarchiver version 0.5.4.17 [nia 2021-06-13]
 	Removed sysutils/xfce4-xarchiver successor archivers/xarchiver [nia 2021-06-13]
 	Updated devel/p5-MooseX-App-Cmd to 0.34 [wen 2021-06-13]
+	Removed devel/go-buffruneio [nia 2021-06-13]
