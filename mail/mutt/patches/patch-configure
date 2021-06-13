@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2020/11/08 17:42:45 tron Exp $
+$NetBSD: patch-configure,v 1.2 2021/06/13 07:55:28 tron Exp $
 
 - Allow build as an unpriviliged user
 - Fix Kerberos related build failure under Solaris
 
---- configure.orig	2020-11-07 20:18:30.000000000 +0000
-+++ configure	2020-11-08 15:02:04.178022629 +0000
-@@ -10072,7 +10072,7 @@
+--- configure.orig	2021-06-12 18:49:12.000000000 +0100
++++ configure	2021-06-13 08:48:19.007592143 +0100
+@@ -9785,7 +9785,7 @@
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -14,17 +14,17 @@ $NetBSD: patch-configure,v 1.1 2020/11/08 17:42:45 tron Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
-@@ -10382,6 +10382,7 @@
+@@ -10096,6 +10096,7 @@
      case "`$KRB5CFGPATH --version`" in
        "Kerberos 5 "*)	GSSAPI_IMPL="MIT";;
        ?eimdal*)		GSSAPI_IMPL="Heimdal";;
 +      Solaris*)		GSSAPI_IMPL="Solaris";;
        *)		GSSAPI_IMPL="Unknown";;
-    esac
-   else
-@@ -10631,7 +10632,7 @@
-       { $as_echo "$as_me:${as_lineno-$LINENO}: result: GSSAPI libraries not found" >&5
- $as_echo "GSSAPI libraries not found" >&6; }
+     esac
+         LIBS="$saved_LIBS $GSSAPI_LIBS"
+@@ -10377,7 +10378,7 @@
+ rm -f confcache
+       as_fn_error $? "GSSAPI libraries not found" "$LINENO" 5
      fi
 -    if test "$GSSAPI_IMPL" = "Heimdal"
 +    if test "$GSSAPI_IMPL" = "Heimdal" || test "$GSSAPI_IMPL" = "Solaris"
