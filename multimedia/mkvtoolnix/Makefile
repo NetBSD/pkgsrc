@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.176 2021/06/03 22:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2021/06/13 18:47:47 adam Exp $
 
-DISTNAME=	mkvtoolnix-57.0.0
+DISTNAME=	mkvtoolnix-58.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
-
 
 # 'The following features of the C++17 standards are not supported by c++:
 #  * file system library (C++17)
