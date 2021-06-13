@@ -1,0 +1,6 @@
+Desktop Environment independent archiver front end. All common archive
+formats are supported, deb and RPM packages are handled without their package
+managers being installed. Xarchiver only depends on the GTK+ libraries and
+utilizes various (un)compressor/(un)archiver command line programs at runtime.
+Installation of xdg-utils is optional but installing it will allow Xarchiver
+to support opening more file types directly from inside an archive.
