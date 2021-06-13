@@ -1,3 +1,0 @@
-Nitro is a quick and easy performance analyzer library for golang.  It is
-useful for comparing A/B against different drafts of functions or different
-functions.
