@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/06/13 06:28:17 nia Exp $
+# $NetBSD: Makefile,v 1.78 2021/06/13 06:31:50 nia Exp $
 
 DISTNAME=	x264-snapshot-20191217-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
@@ -14,18 +14,16 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-# Assembler code still needs to be disabled on at least SunOS
-# Also needs to avoid text relocations caused by non-pie x86 asm on NetBSD/i386
+# Assembler code still needs to be disabled on at least SunOS.
+# NetBSD/i386 needs ASM disabled to avoid text relocations.
+# NetBSD/mips needs ASM disabled because it uses the MSA extension
+# (requires MIPS64 revision 2) and fails to build.
 .if ${OPSYS} == "SunOS" || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-mips*)
 CONFIGURE_ARGS+=	--disable-asm
 .elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-mips*)
-# error: unknown type name 'v8i16'
-CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 USE_TOOLS+=		bash gmake
