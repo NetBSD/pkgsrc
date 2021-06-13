@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/06/12 20:43:41 he Exp $
+$NetBSD: distinfo,v 1.11 2021/06/13 11:48:48 he Exp $
 
 SHA1 (rust-bin-1.52.1/rust-1.52.1-aarch64-unknown-linux-gnu.tar.gz) = ed140baee577a96b162a163f07f13b37229eda8e
 RMD160 (rust-bin-1.52.1/rust-1.52.1-aarch64-unknown-linux-gnu.tar.gz) = 84eeea0d870663d092ca5666fc21237ce8fa8628
@@ -56,4 +56,3 @@ SHA1 (rust-bin-1.52.1/rust-1.52.1nb1-sparc64-unknown-netbsd.tar.gz) = ffd0edec58
 RMD160 (rust-bin-1.52.1/rust-1.52.1nb1-sparc64-unknown-netbsd.tar.gz) = 7f6aaf7c8207b061bdf258cede8e9a1cc9b82647
 SHA512 (rust-bin-1.52.1/rust-1.52.1nb1-sparc64-unknown-netbsd.tar.gz) = 5602c5a00b4cacb254fea76fcd346f0c4ff4aec6b317e760870252048e444440e501c219278e6b37da71a26cce2a598c97be9b99e9bf3b30cae177004c79b355
 Size (rust-bin-1.52.1/rust-1.52.1nb1-sparc64-unknown-netbsd.tar.gz) = 253026549 bytes
-SHA1 (patch-install.sh) = 4dc4edcbda3c9d2b60ea51b5f83cadd5992ba786
