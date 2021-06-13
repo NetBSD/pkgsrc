@@ -1,4 +1,4 @@
-$NetBSD: patch-main_cli.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-main_cli.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- main/cli.c.orig	2018-05-07 17:26:06.732494913 +0000
 +++ main/cli.c

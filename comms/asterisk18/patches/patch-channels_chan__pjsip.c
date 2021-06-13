@@ -1,4 +1,4 @@
-$NetBSD: patch-channels_chan__pjsip.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-channels_chan__pjsip.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- channels/chan_pjsip.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ channels/chan_pjsip.c
