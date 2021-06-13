@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3413 2021/06/11 00:42:41 bacon Exp $
+# $NetBSD: Makefile,v 1.3414 2021/06/13 08:22:45 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -411,7 +411,6 @@ SUBDIR+=	go-amber
 SUBDIR+=	go-argv
 SUBDIR+=	go-assert
 SUBDIR+=	go-blackfriday
-SUBDIR+=	go-buffruneio
 SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-cast
 SUBDIR+=	go-check
