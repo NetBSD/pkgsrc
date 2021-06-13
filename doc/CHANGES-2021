@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3428 2021/06/13 18:28:07 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3429 2021/06/13 18:52:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5461,3 +5461,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-vdirsyncer to 0.18.0 [adam 2021-06-13]
 	Updated devel/py-hypothesis to 6.14.0 [adam 2021-06-13]
 	Updated fonts/spleen to 1.9.1 [fcambus 2021-06-13]
+	Updated devel/git to 2.32.0 [adam 2021-06-13]
+	Updated graphics/py-tifffile to 2021.6.6 [adam 2021-06-13]
+	Updated security/py-trustme to 0.8.0 [adam 2021-06-13]
+	Updated multimedia/mkvtoolnix to 58.0.0 [adam 2021-06-13]
