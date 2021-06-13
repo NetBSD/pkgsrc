@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2021/06/06 01:17:19 markd Exp $
+# $NetBSD: Makefile,v 1.107 2021/06/13 07:27:42 nia Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -10,7 +10,6 @@ COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/lua53
-EXTRACT_ELEMENTS+=	${DISTNAME}/libs/luajit
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/pplib
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
@@ -58,7 +57,6 @@ CONFIGURE_ARGS+=	--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 CONFIGURE_ARGS+=	--without-x
 
 CONFIGURE_DIRS=		libs/lua53
-CONFIGURE_DIRS+=	libs/luajit
 CONFIGURE_DIRS+=	libs/pplib
 CONFIGURE_DIRS+=	texk/web2c
 
@@ -68,9 +66,6 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix=	libs/lua53/lua53-src/src/luaconf.h
 SUBST_VARS.prefix=	PREFIX
-
-# patched in Makefile.in
-CHECK_PORTABILITY_SKIP+=	libs/luajit/Makefile.am
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE_EXTENDED=0
 
