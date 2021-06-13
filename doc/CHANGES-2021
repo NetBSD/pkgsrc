@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3401 2021/06/13 07:55:50 tron Exp $
+$NetBSD: CHANGES-2021,v 1.3402 2021/06/13 07:58:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5430,3 +5430,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Array-Compare to 3.0.8 [wen 2021-06-13]
 	Updated devel/p5-B-Keywords to 1.22 [wen 2021-06-13]
 	Updated mail/mutt to 2.1.0 [tron 2021-06-13]
+	Added comms/asterisk18 version 18.4.0 [jnemeth 2021-06-13]
