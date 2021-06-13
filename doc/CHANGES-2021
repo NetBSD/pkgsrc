@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3418 2021/06/13 12:24:05 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3419 2021/06/13 12:25:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5447,3 +5447,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/sslh to 1.21c [rhialto 2021-06-13]
 	Updated lang/rust to 1.52.1nb4 [he 2021-06-13]
 	Updated devel/p5-MooseX-Getopt to 0.75 [wen 2021-06-13]
+	Updated lang/rust-bin to 1.52.1nb2 [he 2021-06-13]
