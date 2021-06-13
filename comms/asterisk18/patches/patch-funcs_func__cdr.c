@@ -1,4 +1,4 @@
-$NetBSD: patch-funcs_func__cdr.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-funcs_func__cdr.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- funcs/func_cdr.c.orig	2018-05-07 17:23:06.705808560 +0000
 +++ funcs/func_cdr.c

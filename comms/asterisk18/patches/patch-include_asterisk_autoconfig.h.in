@@ -1,4 +1,4 @@
-$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- include/asterisk/autoconfig.h.in.orig	2016-10-25 19:27:49.000000000 +0000
 +++ include/asterisk/autoconfig.h.in

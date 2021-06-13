@@ -1,4 +1,4 @@
-$NetBSD: patch-pbx_pbx__dundi.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-pbx_pbx__dundi.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- pbx/pbx_dundi.c.orig	2015-10-09 21:48:48.000000000 +0000
 +++ pbx/pbx_dundi.c

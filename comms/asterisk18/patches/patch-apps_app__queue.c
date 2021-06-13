@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_app__queue.c,v 1.1.1.1 2021/06/13 07:47:18 jnemeth Exp $
+$NetBSD: patch-apps_app__queue.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
 
 --- apps/app_queue.c.orig	2021-03-25 17:34:21.000000000 +0000
 +++ apps/app_queue.c
