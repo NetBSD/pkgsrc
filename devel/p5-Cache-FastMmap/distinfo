@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2020/04/11 11:34:58 mef Exp $
+$NetBSD: distinfo,v 1.17 2021/06/13 08:22:13 wen Exp $
 
-SHA1 (Cache-FastMmap-1.49.tar.gz) = 9645f68e98a9c471cbe4494496a55b07a814d5fe
-RMD160 (Cache-FastMmap-1.49.tar.gz) = c7e21d34ca514f4077d240fb26524096e932daf3
-SHA512 (Cache-FastMmap-1.49.tar.gz) = 686f4cc360b6106f87c6068e99eaee708f6045d1651cfdfcd2819f7fedeb7563b185df6e3ae6e99c079b3993ada9a356cce69ad4e95659c664f5bfe78ada7939
-Size (Cache-FastMmap-1.49.tar.gz) = 52512 bytes
+SHA1 (Cache-FastMmap-1.56.tar.gz) = a1865f4a0dc751432a1196ce20166f244c795d4f
+RMD160 (Cache-FastMmap-1.56.tar.gz) = d054135d5d1181c1982218e44518a049ef9df26b
+SHA512 (Cache-FastMmap-1.56.tar.gz) = 742b2657007ce944ab636494a03ce7bfb6ea52663d1e4d3b10928f534f4fa4c564831e50737e7d6b79903f49b434fcdd441e664fe8afe156cc0468c2319cd0fe
+Size (Cache-FastMmap-1.56.tar.gz) = 56713 bytes
