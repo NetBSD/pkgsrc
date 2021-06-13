@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/05/07 10:46:26 pin Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/06/13 06:56:09 nia Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/kittens/__init__.py
@@ -87,7 +87,7 @@ lib/kitty/kitty/fonts/core_text.py
 lib/kitty/kitty/fonts/fontconfig.py
 lib/kitty/kitty/fonts/list.py
 lib/kitty/kitty/fonts/render.py
-lib/kitty/kitty/glfw-wayland.so
+${PLIST.wayland}lib/kitty/kitty/glfw-wayland.so
 lib/kitty/kitty/glfw-x11.so
 lib/kitty/kitty/graphics_fragment.glsl
 lib/kitty/kitty/graphics_vertex.glsl
