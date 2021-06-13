@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20776 2021/06/12 22:36:26 mef Exp $
+$NetBSD: TODO,v 1.20777 2021/06/13 07:56:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bareos-clientonly-20.0.1
 	o basket-2.11b
 	o bbcim-1.0
-	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o bc-gh-4.0.1
@@ -834,6 +833,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fuse-unionfs-2.1
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
+	o fzf-0.27.2
 	o gajim-plugin-omemo-2.8.4
 	o gallery3-3.0.9
 	o gammu-1.42.0
@@ -982,7 +982,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.5.5
 	o google-glog-2.2.2
+	o googletest-1.11.0
+	o gopls-0.7.0
 	o goreman-0.3.7
 	o gossip-0.31
 	o got-0.52
@@ -1087,7 +1090,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-3.0.3
+	o ilmbase-3.0.4
 	o imapfilter-2.7.5
 	o imapsync-1.727
 	o imp-6.2.12
@@ -1171,6 +1174,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdnssd-5.81.0
 	o kdoctools-5.81.0
 	o kdsoap-1.10.0
+	o keepassxc-2.6.6
 	o kemoticons-5.81.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
@@ -1260,6 +1264,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdwarf-20210305
 	o libepoxy-1.5.5
 	o libextractor-1.11
+	o libffcall-2.3
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -1369,6 +1374,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o md-whois-5.5.9
 	o mdd-20201207
 	o mecab-ipadic-2.7.0.20070801
+	o mednafen-1.27.1
 	o memached-1.5.6
 	o memtestplus-5.31b
 	o merkaator-0.18.3
@@ -1562,7 +1568,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
 	o opendoas-6.8.1
-	o openexr-3.0.3
+	o openexr-3.0.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openimageio-2.2.13.1
@@ -2154,7 +2160,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
-	o texlab-3.1.0
+	o texlab-3.2.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadingbuildingblocks-2021.2.0
