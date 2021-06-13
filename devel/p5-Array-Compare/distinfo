@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/09/13 08:36:09 wen Exp $
+$NetBSD: distinfo,v 1.18 2021/06/13 00:11:52 wen Exp $
 
-SHA1 (Array-Compare-v3.0.3.tar.gz) = a3f0d28a8901638a6cdb9f570d47120ad7906362
-RMD160 (Array-Compare-v3.0.3.tar.gz) = 5163b9b969023c9d991c920243864e9018e35c45
-SHA512 (Array-Compare-v3.0.3.tar.gz) = a2b3b7c7f153c30548d3e90bbe77ad8d609cd0abcb6a0f188c90b4f09f9be457906694cdd3d819a75a33aeab088586c0636d3f212dd5354d0cbcbe713897c867
-Size (Array-Compare-v3.0.3.tar.gz) = 9831 bytes
+SHA1 (Array-Compare-v3.0.8.tar.gz) = 3285846a0d286aa3bdc996919885bfc5f104a9e2
+RMD160 (Array-Compare-v3.0.8.tar.gz) = 2192029562ab1f7d67128e465c36932fcc1fd7d1
+SHA512 (Array-Compare-v3.0.8.tar.gz) = 648dbf2a65d94c3bfaab34ec765d0ad7e86f5c0b704078278f43a28a668cb70606a039cceab96f31af439f661c2c6538571b142ec938738f3cb94438b40e2838
+Size (Array-Compare-v3.0.8.tar.gz) = 9977 bytes
