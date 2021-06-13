@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:55 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/13 12:04:21 rhialto Exp $
 
-DISTNAME=	sslh-1.20
+DISTNAME=	sslh-1.21c
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://www.rutschle.net/tech/sslh.shtml
+HOMEPAGE=	https://www.rutschle.net/tech/sslh/README.html
 COMMENT=	Multiplex ssl, ssh, and other connections on the same port
 LICENSE=	gnu-gpl-v2
 
@@ -36,7 +36,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/basic.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.MacOSX ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../devel/libconfig/buildlink3.mk"
