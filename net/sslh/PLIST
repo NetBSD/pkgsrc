@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2015/05/11 10:39:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/06/13 12:04:21 rhialto Exp $
 man/man8/sslh.8
 sbin/sslh
 sbin/sslh-select
 share/doc/sslh/ChangeLog
-share/doc/sslh/README.MacOSX
 share/doc/sslh/README.md
 share/examples/sslh/basic.cfg
 share/examples/sslh/example.cfg
