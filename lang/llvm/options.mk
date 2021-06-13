@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2020/07/06 07:16:00 he Exp $
+# $NetBSD: options.mk,v 1.8 2021/06/13 19:02:30 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -23,20 +23,20 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 # Probably safe to assume that only x86 users are interested in
 # cross-compilation for now. This saves some build time for everyone else.
 .if !empty(MACHINE_ARCH:Msparc*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-sparc
+PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
 .elif !empty(MACHINE_ARCH:Mpowerpc*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-powerpc
+PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
-CFLAGS+=	-mlongcall
-CXXFLAGS+=	-mlongcall
+CFLAGS+=		-mlongcall
+CXXFLAGS+=		-mlongcall
 .elif !empty(MACHINE_ARCH:Mearm*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-arm
+PKG_SUGGESTED_OPTIONS+=	llvm-target-arm
 .elif !empty(MACHINE_ARCH:M*mips*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-mips
+PKG_SUGGESTED_OPTIONS+=	llvm-target-mips
 .else
 # X86 and everyone else get all targets by default.
 .  for tgt in ${LLVM_TARGETS}
-PKG_SUGGESTED_OPTIONS+=		llvm-target-${tgt:tl}
+PKG_SUGGESTED_OPTIONS+=	llvm-target-${tgt:tl}
 .  endfor
 .endif
 
