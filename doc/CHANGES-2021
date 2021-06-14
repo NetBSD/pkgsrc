@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3431 2021/06/14 05:30:46 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.3432 2021/06/14 07:39:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5467,3 +5467,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mkvtoolnix to 58.0.0 [adam 2021-06-13]
 	Updated editors/emacs27 to 27.2nb4 [wiz 2021-06-13]
 	Updated comms/hylafax to 6.0.7 [jnemeth 2021-06-14]
+	Updated security/gpg-tui to 0.5.0 [pin 2021-06-14]
