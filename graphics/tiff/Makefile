@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2021/04/20 13:12:54 gdt Exp $
+# $NetBSD: Makefile,v 1.150 2021/06/14 20:45:03 schmonz Exp $
 
 DISTNAME=	tiff-4.3.0
 CATEGORIES=	graphics
@@ -24,11 +24,17 @@ PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
 TEST_TARGET=		check
 
+post-extract:
+	cd ${WRKSRC} && \
+	${MV} -f VERSION VERSION.txt
+
 post-install:
 	cd ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
 		target=`${ECHO} $$file | sed "s/3tiff/3/"`; \
 		${MV} $$file $$target; \
 	done
+	cd ${DESTDIR}/${PREFIX}/share/doc/${PKGBASE} && \
+	${MV} -f VERSION.txt VERSION
 
 .include "options.mk"
 
