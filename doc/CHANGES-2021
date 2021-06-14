@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3449 2021/06/14 16:07:56 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3450 2021/06/14 16:37:15 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.4.15 [taca 2021-06-14]
 	Updated www/ruby-loofah to 2.10.0 [taca 2021-06-14]
 	Updated www/ruby-http-cookie to 1.0.4 [taca 2021-06-14]
+	Updated devel/libxtend to 0.1.2.27 [bacon 2021-06-14]
