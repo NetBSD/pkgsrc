@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3452 2021/06/14 17:23:18 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3453 2021/06/14 17:46:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5514,3 +5514,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libxtend to 0.1.2.27 [bacon 2021-06-14]
 	Added devel/SOPE5 version 5.1.1 [gdt 2021-06-14]
 	Updated lang/go-bin to 1.16.beta1nb3 [schmonz 2021-06-14]
+	Updated net/tor to 0.4.5.9 [wiz 2021-06-14]
