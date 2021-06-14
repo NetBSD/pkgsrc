@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/06/09 02:37:09 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2021/06/14 09:04:23 adam Exp $
 
 .include "../../databases/openldap/Makefile.version"
 
@@ -27,7 +27,7 @@ TEST_TARGET=		test
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" && (${OS_VERSION} == "5.9" || ${OS_VERSION} == "5.10")
-LDFLAGS+=              -lrt
+LDFLAGS+=	-lrt
 .endif
 
 .if ${OPSYS} == "Darwin"
