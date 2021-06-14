@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3437 2021/06/14 15:10:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3438 2021/06/14 15:12:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/postfix-pgsql to 3.6.1 [taca 2021-06-14]
 	Updated mail/postfix-sqlite to 3.6.1 [taca 2021-06-14]
 	Updated devel/ruby-concurrent-ruby to 1.1.9 [taca 2021-06-14]
+	Updated devel/ruby-kgio to 2.11.4 [taca 2021-06-14]
