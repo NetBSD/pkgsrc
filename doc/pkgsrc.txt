@@ -2955,7 +2955,10 @@ mostly historical and has no further meaning.
     Usually it is the pkgsrc directory name together with the version number.
     It must match the regular expression ^[A-Za-z0-9][A-Za-z0-9-_.+]*$, that
     is, it starts with a letter or digit, and contains only letters, digits,
-    dashes, underscores, dots and plus signs.
+    dashes, underscores, dots and plus signs. New packages should have entirely
+    lower-case names, with the exception of some that must follow pre-existing
+    conventions (e.g. R packages begin with R-). You can use the :tl variable
+    modifier to lower-case the package name.
 
   * CATEGORIES is a list of categories which the package fits in. You can
     choose any of the top-level directories of pkgsrc for it.
