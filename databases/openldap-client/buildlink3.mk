@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2020/01/18 21:48:00 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2021/06/14 09:04:23 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -22,8 +22,8 @@ CHECK_BUILTIN.openldap-client:=	no
 pkgbase := openldap-client
 .  include "../../mk/pkg-build-options.mk"
 
-.  if !empty(PKG_BUILD_OPTIONS.openldap-client:Mkerberos) || \
-        !empty(PKG_BUILD_OPTIONS.openldap-client:Msasl)
+.  if ${PKG_BUILD_OPTIONS.openldap-client:Mkerberos} || \
+        ${PKG_BUILD_OPTIONS.openldap-client:Msasl}
 .    include "../../security/cyrus-sasl/buildlink3.mk"
 .  endif
 .endif
