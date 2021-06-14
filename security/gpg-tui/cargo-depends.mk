@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2021/06/10 11:47:17 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2021/06/14 07:39:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.40
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.41
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
@@ -22,7 +22,9 @@ CARGO_CRATE_DEPENDS+=	conv-0.3.3
 CARGO_CRATE_DEPENDS+=	copypasta-0.7.1
 CARGO_CRATE_DEPENDS+=	copypasta-ext-0.3.4
 CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
+CARGO_CRATE_DEPENDS+=	crossterm-0.20.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
+CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.8.0
 CARGO_CRATE_DEPENDS+=	cstr-argument-0.1.1
 CARGO_CRATE_DEPENDS+=	ctor-0.1.16
 CARGO_CRATE_DEPENDS+=	custom_derive-0.1.7
@@ -82,8 +84,10 @@ CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scoped-tls-1.0.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	shellexpand-2.1.0
-CARGO_CRATE_DEPENDS+=	signal-hook-0.1.16
-CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.2.2
+CARGO_CRATE_DEPENDS+=	signal-hook-0.1.17
+CARGO_CRATE_DEPENDS+=	signal-hook-0.3.9
+CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.1
+CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.5.1
 CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.12.2
 CARGO_CRATE_DEPENDS+=	smithay-clipboard-0.6.3
