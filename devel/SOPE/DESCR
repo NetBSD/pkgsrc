@@ -4,6 +4,5 @@ that is, the web. A lot of ideas in SOPE are actually inspired by
 ZOPE (the Z Object Publishing Environment), but the implementation
 and details are quite different.
 
-This version is obviously ancient and unmaintained and a candidate for
-deletion.
+This is an old version still maintained by upstream.
 
