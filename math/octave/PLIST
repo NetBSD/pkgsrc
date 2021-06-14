@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/05/31 07:16:51 thor Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/06/14 22:16:33 nros Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -773,23 +773,23 @@ lib/octave/${PKGVERSION}/gzip.a
 lib/octave/${PKGVERSION}/liboctave.la
 lib/octave/${PKGVERSION}/liboctgui.la
 lib/octave/${PKGVERSION}/liboctinterp.la
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/PKG_ADD
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__delaunayn__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__fltk_uigetfile__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__glpk__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__init_fltk__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__init_gnuplot__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__ode15__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/__voronoi__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/audiodevinfo.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/audioread.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/convhulln.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/fftw.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}-gnu/gzip.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/PKG_ADD
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__delaunayn__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__fltk_uigetfile__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_fltk__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_gnuplot__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__ode15__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__voronoi__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audiodevinfo.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audioread.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/convhulln.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fftw.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gzip.oct
 lib/pkgconfig/octave.pc
 lib/pkgconfig/octinterp.pc
-libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}-gnu/octave-gui
-libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}-gnu/octave-svgconvert
+libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-gui
+libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-svgconvert
 man/man1/mkoctfile.1
 man/man1/octave-cli.1
 man/man1/octave-config.1
@@ -2380,9 +2380,9 @@ share/octave/${PKGVERSION}/m/web/webwrite.m
 share/octave/site/m/startup/octaverc
 @pkgdir share/octave/site/api-v55/m
 @pkgdir share/octave/${PKGVERSION}/site/m
-@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}-gnu
-@pkgdir lib/octave/site/oct/api-v55/${MACHINE_GNU_PLATFORM}-gnu
-@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}-gnu
-@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}-gnu
-@pkgdir libexec/octave/api-v55/site/exec/${MACHINE_GNU_PLATFORM}-gnu
-@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}-gnu
+@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v55/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v55/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}

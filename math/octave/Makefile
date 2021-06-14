@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.220 2021/05/31 07:16:51 thor Exp $
+# $NetBSD: Makefile,v 1.221 2021/06/14 22:16:33 nros Exp $
 
 DISTNAME=	octave-6.2.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,7 +23,7 @@ DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gsed gmake:run perl pkg-config bison bsdtar:run
+USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
 USE_TOOLS+=		makeinfo:test
 GNU_CONFIGURE=		yes
 
@@ -33,6 +34,7 @@ CONFIGURE_ARGS+=	--enable-shared
 #CONFIGURE_ARGS+=	--without-opengl
 #CONFIGURE_ARGS+=	--with-framework-opengl=no
 CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-docs
 TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-blas=${BLAS_LIBS:Q}
@@ -59,8 +61,14 @@ INFO_FILES=	yes
 OCTAVE_DOC=	doc/interpreter/octave.pdf doc/liboctave/liboctave.pdf \
 		doc/refcard/refcard-a4.pdf doc/refcard/refcard-legal.pdf \
 		doc/refcard/refcard-letter.pdf
+OCTAVE_INFO=	doc/interpreter/octave.info doc/liboctave/liboctave.info
+OCTAVE_MAN=	doc/interpreter/mkoctfile.1 doc/interpreter/octave.1 \
+		doc/interpreter/octave-cli.1 doc/interpreter/octave-config.1
+
 
 INSTALLATION_DIRS+=	share/octave/${PKGVERSION_NOREV}/doc
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PKGINFODIR}
 
 PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
 CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp*.${SHLIB_TYPE}* \
@@ -88,10 +96,20 @@ PREPEND_PATH+=		${QTDIR}/bin
 
 CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp.so*
 
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 post-install:
 .for f in ${OCTAVE_DOC}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/octave/${PKGVERSION_NOREV}/doc
 .endfor
+.for f in ${OCTAVE_MAN}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
+.for f in ${OCTAVE_INFO}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGINFODIR}
+.endfor
+
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
 
 .include "../../audio/libsndfile/buildlink3.mk"
