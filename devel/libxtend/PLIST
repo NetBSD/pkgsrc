@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/11 00:40:59 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/14 16:37:04 bacon Exp $
 include/xtend-protos.h
 include/xtend.h
 lib/libxtend.a
