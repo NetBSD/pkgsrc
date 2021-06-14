@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3420 2021/06/13 08:42:21 nia Exp $
+# $NetBSD: Makefile,v 1.3421 2021/06/14 17:00:13 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -102,6 +102,7 @@ SUBDIR+=	SDL_ttf
 SUBDIR+=	SDLmm
 SUBDIR+=	SOPE
 SUBDIR+=	SOPE4
+SUBDIR+=	SOPE5
 SUBDIR+=	ZenTest
 SUBDIR+=	abseil
 SUBDIR+=	accerciser
