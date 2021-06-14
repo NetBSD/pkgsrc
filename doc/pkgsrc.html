@@ -3437,7 +3437,12 @@ sections.</p>
     regular expression
     <code class="varname">^[A-Za-z0-9][A-Za-z0-9-_.+]*$</code>, that is, it
     starts with a letter or digit, and contains only letters, digits,
-    dashes, underscores, dots and plus signs.</p></li>
+    dashes, underscores, dots and plus signs.
+    New packages should have entirely lower-case names, with the exception
+    of some that must follow pre-existing conventions
+    (e.g. R packages begin with <code class="varname">R-</code>).
+    You can use the <code class="code">:tl</code> variable modifier to lower-case
+    the package name.</p></li>
 <li class="listitem">
 <p><code class="varname">CATEGORIES</code> is a list of categories
     which the package fits in. You can choose any of the top-level
