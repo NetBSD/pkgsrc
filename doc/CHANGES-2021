@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3453 2021/06/14 17:46:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3454 2021/06/14 22:55:15 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5515,3 +5515,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/SOPE5 version 5.1.1 [gdt 2021-06-14]
 	Updated lang/go-bin to 1.16.beta1nb3 [schmonz 2021-06-14]
 	Updated net/tor to 0.4.5.9 [wiz 2021-06-14]
+	Updated net/unison-snapshot to 2.51.3.72.90 [gdt 2021-06-14]
