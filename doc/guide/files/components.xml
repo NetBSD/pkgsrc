@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.60 2021/03/26 17:43:20 gdt Exp $ -->
+<!-- $NetBSD: components.xml,v 1.61 2021/06/14 22:53:02 nia Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -38,7 +38,12 @@ sections.</para>
     regular expression
     <varname>^[A-Za-z0-9][A-Za-z0-9-_.+]*$</varname>, that is, it
     starts with a letter or digit, and contains only letters, digits,
-    dashes, underscores, dots and plus signs.</para></listitem>
+    dashes, underscores, dots and plus signs.
+    New packages should have entirely lower-case names, with the exception
+    of some that must follow pre-existing conventions
+    (e.g. R packages begin with <varname>R-</varname>).
+    You can use the <code>:tl</code> variable modifier to lower-case
+    the package name.</para></listitem>
 
     <listitem><para><varname>CATEGORIES</varname> is a list of categories
     which the package fits in. You can choose any of the top-level
