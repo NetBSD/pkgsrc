@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3434 2021/06/14 12:19:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3435 2021/06/14 13:29:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5486,3 +5486,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-route53 to 1.16.0 [adam 2021-06-14]
 	Updated security/py-certbot-dns-sakuracloud to 1.16.0 [adam 2021-06-14]
 	Updated security/py-certbot-nginx to 1.16.0 [adam 2021-06-14]
+	Updated net/py-botocore to 1.20.93 [adam 2021-06-14]
+	Updated net/py-boto3 to 1.17.93 [adam 2021-06-14]
+	Updated net/py-awscli to 1.19.93 [adam 2021-06-14]
+	Updated security/py-certifi to 2021.5.30 [adam 2021-06-14]
