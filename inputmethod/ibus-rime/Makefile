@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/02/20 21:11:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/14 21:08:06 nia Exp $
 
 GITHUB_PROJECT=	ibus-rime
 $GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rime.im/
-COMMENT=	Rime Input Method Engine for Linux/IBus
+COMMENT=	Rime Input Method Engine for IBus
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	rime-luna-pinyin-[0-9]*:../../inputmethod/rime-luna-pinyin
