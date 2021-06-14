@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/06/11 00:40:59 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/06/14 16:37:04 bacon Exp $
 
 BUILDLINK_TREE+=		libxtend
 
