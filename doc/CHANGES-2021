@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3435 2021/06/14 13:29:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3436 2021/06/14 14:31:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5490,3 +5490,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-boto3 to 1.17.93 [adam 2021-06-14]
 	Updated net/py-awscli to 1.19.93 [adam 2021-06-14]
 	Updated security/py-certifi to 2021.5.30 [adam 2021-06-14]
+	Updated mail/postfix to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-cdb to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-ldap to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-lmdb to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-mysql to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-pcre to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-pgsql to 3.6.1 [taca 2021-06-14]
+	Updated mail/postfix-sqlite to 3.6.1 [taca 2021-06-14]
