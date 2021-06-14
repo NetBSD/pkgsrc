@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/11/16 12:31:52 leot Exp $
+# $NetBSD: Makefile,v 1.13 2021/06/14 21:08:06 nia Exp $
 
 DISTNAME=	geomyidae-v0.34
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/geomyidae
-COMMENT=	Gopher daemon for Linux/BSD
+COMMENT=	Gopher daemon
 LICENSE=	mit
 
 BUILD_DEFS+=	VARBASE GEOMYIDAE_USER GEOMYIDAE_GROUP GEOMYIDAE_ROOTDIR

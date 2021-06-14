@@ -1,2 +1,1 @@
-This is the xmix sound mixer for the sound drivers in the FreeBSD
-It was originally written for Linux by Hal Brand (brand@netcom.com).
+X11 sound mixer for the Open Sound System.
