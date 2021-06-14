@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2021/05/31 07:16:51 thor Exp $
+$NetBSD: distinfo,v 1.60 2021/06/14 22:16:33 nros Exp $
 
 SHA1 (octave-6.2.0.tar.xz) = 0b6826ebf4174fee1f3dd87907e5cd0fa9a3d481
 RMD160 (octave-6.2.0.tar.xz) = 0dd692760091d1144f157209c5af3aa893d34ff6
@@ -8,11 +8,10 @@ SHA1 (patch-configure.ac) = 48a2dee11b33ce80a477367479ad348056c2c1f9
 SHA1 (patch-doc_interpreter_module.mk) = 66389cceddbe71fca0c8197275a839170d64ad5b
 SHA1 (patch-fseeko-fpos_t.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
 SHA1 (patch-libgnu_stdio.in.h) = 952e8683a70615b5219d034b9232420998cef44a
-SHA1 (patch-libinterp_corefcn_input.cc) = 865fe4e50f2658d2d221cf8d30d778fa9a632f5f
 SHA1 (patch-libinterp_dldfcn_config-module.awk) = 54b64357b1ef80c5e55eb5eccf742d2267eb277d
 SHA1 (patch-libinterp_dldfcn_module.mk) = 2362d824497a8892078437c24757ae1e40e2e556
 SHA1 (patch-liboctave_util_quit.cc) = 17ace431c53de1e5b72b86bb2bf4e15bdc6d4db9
-SHA1 (patch-liboctave_wrappers_iconv-wrappers.h) = 9995e784844ae2c2d7a77f975cd8b8954ab8a773
+SHA1 (patch-liboctave_wrappers_iconv-wrappers.c) = bbc8d18a230e59d5ac5ae6951b14fc3a2bd0b924
 SHA1 (patch-m4_acinclude.m4) = 2c5b2fc9bfe3b9b1e1feec805338ed92ed3953e1
 SHA1 (patch-scripts_miscellaneous_unpack.m) = 82c9ca170762e223c8e5a6f88a7dd9fe2a2a33d0
 SHA1 (patch-scripts_pkg_private_configure__make.m) = 7d4b620f889faa66c4c9c581ef8a7e7692b68c94
