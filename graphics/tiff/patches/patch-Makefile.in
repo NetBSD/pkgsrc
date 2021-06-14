@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/06/14 20:45:22 schmonz Exp $
+
+From MacPorts:
+Rename VERSION to VERSION.txt so that it does not collide with the C++
+version header on case-insensitive filesystems.
+
+<https://gitlab.com/libtiff/libtiff/-/issues/252>
+
+--- Makefile.in.orig	2021-04-16 10:56:02.000000000 +0000
++++ Makefile.in
+@@ -424,7 +424,7 @@ docfiles = \
+ 	README.md \
+ 	RELEASE-DATE \
+ 	TODO \
+-	VERSION
++	VERSION.txt
+ 
+ EXTRA_DIST = \
+ 	cmake \
+@@ -992,7 +992,7 @@ distcheck-hook:
+ 
+ release:
+ 	(rm -f $(top_srcdir)/RELEASE-DATE && echo $(LIBTIFF_RELEASE_DATE) > $(top_srcdir)/RELEASE-DATE)
+-	(rm -f $(top_srcdir)/VERSION && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION)
++	(rm -f $(top_srcdir)/VERSION.txt && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION.txt)
+ 	(rm -f $(top_srcdir)/libtiff/tiffvers.h && sed 's,LIBTIFF_VERSION,$(LIBTIFF_VERSION),;s,LIBTIFF_RELEASE_DATE,$(LIBTIFF_RELEASE_DATE),' $(top_srcdir)/libtiff/tiffvers.h.in > $(top_srcdir)/libtiff/tiffvers.h)
+ coverity:
+ 	$(MAKE) clean
