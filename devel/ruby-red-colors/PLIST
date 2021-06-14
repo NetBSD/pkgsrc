@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/29 15:10:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/14 15:19:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -9,14 +9,18 @@ ${GEM_LIBDIR}/lib/colors.rb
 ${GEM_LIBDIR}/lib/colors/abstract_color.rb
 ${GEM_LIBDIR}/lib/colors/alpha_component.rb
 ${GEM_LIBDIR}/lib/colors/color_data.rb
+${GEM_LIBDIR}/lib/colors/colormap.rb
 ${GEM_LIBDIR}/lib/colors/convert.rb
 ${GEM_LIBDIR}/lib/colors/helper.rb
 ${GEM_LIBDIR}/lib/colors/hsl.rb
 ${GEM_LIBDIR}/lib/colors/hsla.rb
 ${GEM_LIBDIR}/lib/colors/husl.rb
+${GEM_LIBDIR}/lib/colors/linear_segmented_colormap.rb
+${GEM_LIBDIR}/lib/colors/listed_colormap.rb
 ${GEM_LIBDIR}/lib/colors/named_colors.rb
 ${GEM_LIBDIR}/lib/colors/rgb.rb
 ${GEM_LIBDIR}/lib/colors/rgba.rb
+${GEM_LIBDIR}/lib/colors/utils.rb
 ${GEM_LIBDIR}/lib/colors/version.rb
 ${GEM_LIBDIR}/lib/colors/xterm256.rb
 ${GEM_LIBDIR}/lib/colors/xyy.rb
@@ -27,6 +31,8 @@ ${GEM_LIBDIR}/test/run.rb
 ${GEM_LIBDIR}/test/test-hsl.rb
 ${GEM_LIBDIR}/test/test-hsla.rb
 ${GEM_LIBDIR}/test/test-husl.rb
+${GEM_LIBDIR}/test/test-linear-segmented-colormap.rb
+${GEM_LIBDIR}/test/test-listed-colormap.rb
 ${GEM_LIBDIR}/test/test-named-color.rb
 ${GEM_LIBDIR}/test/test-rgb.rb
 ${GEM_LIBDIR}/test/test-rgba.rb
