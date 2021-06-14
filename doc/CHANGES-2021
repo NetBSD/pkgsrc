@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3444 2021/06/14 15:34:50 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3445 2021/06/14 15:37:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5506,3 +5506,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit-payloads to 2.0.47 [taca 2021-06-14]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.10 [taca 2021-06-14]
 	Updated sysutils/ruby-facter to 4.2.1 [taca 2021-06-14]
+	Updated sysutils/ruby-inspec-core to 4.37.25 [taca 2021-06-14]
