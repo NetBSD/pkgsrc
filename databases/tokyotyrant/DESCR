@@ -12,5 +12,3 @@ Protocols compatible with memcached and HTTP/1.1 are also supported so that
 almost all principal platforms and programming languages can use Tokyo Tyrant.
 High availability and high integrity are also featured due to hot such
 mechanisms as hot backup, update logging, and replication.
-
-As for now, the server works on Linux, FreeBSD, Mac OS X only.
