@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3446 2021/06/14 15:40:16 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3447 2021/06/14 15:42:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5508,3 +5508,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-facter to 4.2.1 [taca 2021-06-14]
 	Updated sysutils/ruby-inspec-core to 4.37.25 [taca 2021-06-14]
 	Updated sysutils/ruby-puppet-resource_api to 1.8.14 [taca 2021-06-14]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.4.15 [taca 2021-06-14]
