@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3441 2021/06/14 15:23:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3442 2021/06/14 15:27:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5503,3 +5503,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-red-colors to 0.2.0 [taca 2021-06-14]
 	Updated devel/ruby-semantic_puppet to 1.0.4 [taca 2021-06-14]
 	Updated finance/ruby-activemerchant to 1.121.0 [taca 2021-06-14]
+	Updated security/ruby-metasploit-payloads to 2.0.47 [taca 2021-06-14]
