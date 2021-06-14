@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3439 2021/06/14 15:19:29 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3440 2021/06/14 15:21:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-concurrent-ruby to 1.1.9 [taca 2021-06-14]
 	Updated devel/ruby-kgio to 2.11.4 [taca 2021-06-14]
 	Updated devel/ruby-red-colors to 0.2.0 [taca 2021-06-14]
+	Updated devel/ruby-semantic_puppet to 1.0.4 [taca 2021-06-14]
