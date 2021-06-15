@@ -1,0 +1,22 @@
+The BLAS (Basic Linear Algebra Subprograms) are high quality "building
+block" routines for performing basic vector and matrix
+operations. Level 1 BLAS do vector-vector operations, Level 2 BLAS do
+matrix-vector operations, and Level 3 BLAS do matrix-matrix
+operations. Because the BLAS are efficient, portable, and widely
+available, they're commonly used in the development of high quality
+linear algebra software, LINPACK and LAPACK for example.
+
+LAPACK is a highly portable Fortran 77 library which provides routines
+for solving systems of simultaneous linear equations, least-squares
+solutions of linear systems of equations, eigenvalue problems, and
+singular value problems. The associated matrix factorizations (LU,
+Cholesky, QR, SVD, Schur, generalized Schur) are also provided, as are
+related computations such as reordering of the Schur factorizations
+and estimating condition numbers. Dense and banded matrices are
+handled, but not general sparse matrices. In all areas, similar
+functionality is provided for real and complex matrices, in both
+single and double precision.
+
+This package contains the Fortran 77 reference implementation of BLAS
+and LAPACK from Netlib. The C wrappers CBLAS and LAPACKE are provided
+in separate packages.
