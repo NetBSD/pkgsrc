@@ -1,0 +1,9 @@
+This is a command-line utility for doing set operations on files considered as
+sets of lines. For instance, `zet union x y z` outputs the lines that occur in
+any of `x`, `y`, or `z`.
+Two notes:
+-Each output line occurs only once, because we're treating the files as sets
+ and the lines as their elements.
+-We do take the file structure into account in one respect: the lines are
+ output in the same order as they are encountered. So `zet union x` prints
+ out the lines of `x`, in order, with duplicates removed.
