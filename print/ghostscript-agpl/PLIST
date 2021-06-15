@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/06/09 20:20:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/06/15 12:39:31 mef Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -347,6 +347,7 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWGothic-Demi
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWGothic-DemiOblique
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/Z003-MediumItalic
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/Pscript5Idiom
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/PPI_CUtils
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIcidfmap
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIconfig
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIfontmap
