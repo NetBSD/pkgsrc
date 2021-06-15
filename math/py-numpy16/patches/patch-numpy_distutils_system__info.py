@@ -1,4 +1,6 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.3 2021/04/20 20:58:39 thor Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.4 2021/06/15 02:48:30 thor Exp $
+
+Our BLAS choice in build system (merged upstream for next release).
 
 --- numpy/distutils/system_info.py.orig	2021-04-20 20:11:02.731971594 +0000
 +++ numpy/distutils/system_info.py
