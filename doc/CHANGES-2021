@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3454 2021/06/14 22:55:15 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3455 2021/06/15 04:07:33 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go-bin to 1.16.beta1nb3 [schmonz 2021-06-14]
 	Updated net/tor to 0.4.5.9 [wiz 2021-06-14]
 	Updated net/unison-snapshot to 2.51.3.72.90 [gdt 2021-06-14]
+	Updated math/qhull to 2020.2nb1 [thor 2021-06-15]
