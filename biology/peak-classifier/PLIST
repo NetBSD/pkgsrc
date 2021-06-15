@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/15 13:54:14 bacon Exp $
+bin/extract-genes
+bin/feature-view
+bin/filter-overlaps
+bin/peak-classifier
+libexec/extract-genes.awk
+man/man1/extract-genes.1
+man/man1/feature-view.1
+man/man1/filter-overlaps.1
+man/man1/peak-classifier.1
