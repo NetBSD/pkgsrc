@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.506 2021/06/07 14:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.507 2021/06/15 06:55:40 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -140,6 +140,7 @@ SUBDIR+=	calcoo
 SUBDIR+=	cantor
 SUBDIR+=	capc-calc
 SUBDIR+=	cblas
+SUBDIR+=	cblas64
 SUBDIR+=	cgal
 SUBDIR+=	classias
 SUBDIR+=	clisp-pari
@@ -223,7 +224,9 @@ SUBDIR+=	kalker
 SUBDIR+=	kcalc
 SUBDIR+=	kissfft
 SUBDIR+=	lapack
+SUBDIR+=	lapack64
 SUBDIR+=	lapacke
+SUBDIR+=	lapacke64
 SUBDIR+=	libffm
 SUBDIR+=	libint
 SUBDIR+=	libixion
@@ -263,6 +266,9 @@ SUBDIR+=	octave
 SUBDIR+=	odepack
 SUBDIR+=	openaxiom
 SUBDIR+=	openblas
+SUBDIR+=	openblas64
+SUBDIR+=	openblas64_openmp
+SUBDIR+=	openblas64_pthread
 SUBDIR+=	openblas_openmp
 SUBDIR+=	openblas_pthread
 SUBDIR+=	openfst
