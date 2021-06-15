@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3455 2021/06/15 04:07:33 thor Exp $
+$NetBSD: CHANGES-2021,v 1.3456 2021/06/15 04:45:51 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5517,3 +5517,18 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tor to 0.4.5.9 [wiz 2021-06-14]
 	Updated net/unison-snapshot to 2.51.3.72.90 [gdt 2021-06-14]
 	Updated math/qhull to 2020.2nb1 [thor 2021-06-15]
+	Updated math/blas64 to 3.9.1 [thor 2021-06-15]
+	Updated math/cblas64 to 3.9.1 [thor 2021-06-15]
+	Updated math/lapack64 to 3.9.1 [thor 2021-06-15]
+	Updated math/lapacke64 to 3.9.1 [thor 2021-06-15]
+	Updated math/openblas64 to 0.3.15 [thor 2021-06-15]
+	Updated math/openblas64_openmp to 0.3.15 [thor 2021-06-15]
+	Updated math/openblas64_pthread to 0.3.15 [thor 2021-06-15]
+	Updated math/cblas to 3.9.1nb1 [thor 2021-06-15]
+	Updated math/lapack to 3.9.1nb1 [thor 2021-06-15]
+	Updated math/lapacke to 3.9.1nb2 [thor 2021-06-15]
+	Updated math/openblas to 0.3.15nb1 [thor 2021-06-15]
+	Updated math/openblas_openmp to 0.3.15nb1 [thor 2021-06-15]
+	Updated math/openblas_pthread to 0.3.15nb1 [thor 2021-06-15]
+	Updated math/py-numpy to 1.20.3nb1 [thor 2021-06-15]
+	Updated math/py-numpy16 to 1.16.6nb3 [thor 2021-06-15]
