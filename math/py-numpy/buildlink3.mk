@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2021/04/20 20:53:48 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/06/15 04:41:53 thor Exp $
 
 BUILDLINK_TREE+=	py-numpy
 
@@ -9,17 +9,22 @@ PY_NUMPY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .if ${_PYTHON_VERSION} == 27
-BUILDLINK_ABI_DEPENDS.py-numpy?=	${PYPKGPREFIX}-numpy>=1.16.6nb1
+BUILDLINK_ABI_DEPENDS.py-numpy?=	${PYPKGPREFIX}-numpy>=1.16.6nb3
 BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy16
 .else
-BUILDLINK_ABI_DEPENDS.py-numpy?=	${PYPKGPREFIX}-numpy>=1.19.2nb1
+BUILDLINK_ABI_DEPENDS.py-numpy?=	${PYPKGPREFIX}-numpy>=1.20.3nb1
 BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../math/py-numpy/Makefile.make_env"
-.include "../../math/cblas/buildlink3.mk"
+
+# Mimick the choice from Makefile. Or better store/load build choice?
+BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
+BLAS_C_INTERFACE=	yes
+CPPFLAGS+=		${BLAS_INCLUDES}
+.include "../../mk/blas.buildlink3.mk"
 
 .endif # PY_NUMPY_BUILDLINK3_MK
 
