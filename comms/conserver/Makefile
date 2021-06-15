@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/06/24 10:59:41 nia Exp $
+# $NetBSD: Makefile,v 1.33 2021/06/15 12:35:11 nia Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -22,10 +22,11 @@ CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
-	${MACHINE_ARCH} == x86_64
+.for arch in ${LP64PLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${arch})
 CONFIGURE_ARGS+=	--with-64bit
-.endif
+.  endif
+.endfor
 
 BUILD_DEFS+=	VARBASE CONSERVER_DEFAULTPORT CONSERVER_DEFAULTHOST
 
