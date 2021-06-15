@@ -1,7 +1,0 @@
-djmount is a UPnP AV client.  It mounts the media content of
-compatible UPnP AV devices as a Unix filesystem.
-
-Djmount automatically discovers all UPnP AV Media Servers on the
-network, and makes the content available in a directory tree.  All
-shared files (e.g.  Audio or Video files) are directly visible and can
-be played using your favorite media player.
