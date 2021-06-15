@@ -1,8 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2021/06/07 15:52:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/06/15 04:41:52 thor Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
 # used by math/openblas/Makefile
+# used by math/openblas64_pthread/Makefile
+# used by math/openblas64_openmp/Makefile
+# used by math/openblas64/Makefile
 #
 # This is the common Makefile for OpenBLAS builds. It depends on
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
@@ -24,8 +27,12 @@ DISTINFO_FILE=	${.CURDIR}/../../math/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../math/openblas/patches
 
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
-COMMENT=	Optimized BLAS library based on GotoBLAS2
+COMMENT=	Optimized BLAS library based on GotoBLAS2 (variant ${OPENBLAS_VARIANT})
 LICENSE=	modified-bsd
+
+# Darwin has a .so/.dylib PLIST issue
+# Untested on other platforms
+ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
@@ -45,9 +52,11 @@ BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
 .include "../../mk/bsd.prefs.mk"
 
-# Default checks number of cores of build host.
-# Do we want a pkgsrc-wide default?
-OPENBLAS_THREAD_LIMIT?=	# empty
+# Using conservative default of 32 threads as that matches the
+# limit for related stack arrays in OpenBLAS. Might raise it
+# in future, anyway. There some memory usage/efficiency tradeoff
+# when this number is excessively high.
+OPENBLAS_THREAD_LIMIT?=	32
 .if !empty(OPENBLAS_THREAD_LIMIT)
 MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
@@ -55,12 +64,15 @@ BENCHMARK_MAXTHREADS?=	8
 
 .if ${MACHINE_ARCH:M*64} == ""
 MAKE_FLAGS+=		BINARY32=1
+.  if !empty(OPENBLAS_VARIANT:M*64*)
+PKG_FAIL_REASON+=	"${OPENBLAS_VARIANT} incompatible with non-64-bit platform"
+.  endif
 .else
 MAKE_FLAGS+=		BINARY64=1
 .endif
-# Those come in separate BLAS-agnostic packages.
-# ... except we start headaches about ILP64?
-MAKE_FLAGS+=		NO_CBLAS=1 NO_LAPACKE=1
+
+# Build with the C APIs, as do other optimized libraries.
+#MAKE_FLAGS+=		NO_CBLAS=0 NO_LAPACKE=0
 
 # Separate headers and cmake stuff.
 MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}
@@ -70,17 +82,21 @@ MAKE_FLAGS+=	OPENBLAS_CMAKE_DIR=${PREFIX}/lib/cmake/${OPENBLAS_VARIANT}
 # Need to settle on a convention for SYMBOLSUFFIX first, see
 # https://github.com/xianyi/OpenBLAS/issues/646 .
 MAKE_FLAGS+=	FIXED_LIBNAME=1
-.if ${OPENBLAS_VARIANT} == openblas
+.if ${OPENBLAS_VARIANT} == openblas || ${OPENBLAS_VARIANT} == openblas64
 MAKE_FLAGS+=	USE_OPENMP=0 USE_THREAD=0 USE_LOCKING=1
 BENCHMARK_ENV=	USE_SIMPLE_THREADED_LEVEL3=1
-.elif ${OPENBLAS_VARIANT} == openblas_pthread
+.elif !empty(OPENBLAS_VARIANT:Mopenblas*_pthread)
 MAKE_FLAGS+=	LIBNAMESUFFIX=pthread
 MAKE_FLAGS+=	USE_OPENMP=0 USE_THREAD=1
 BENCHMARK_ENV=	OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
-.elif ${OPENBLAS_VARIANT} == openblas_openmp
+.elif !empty(OPENBLAS_VARIANT:Mopenblas*_openmp)
 MAKE_FLAGS+=	LIBNAMESUFFIX=openmp
 MAKE_FLAGS+=	USE_OPENMP=1 NO_AFFINITY=1
 BENCHMARK_ENV=	OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+.endif
+
+.if !empty(OPENBLAS_VARIANT:M*64*)
+MAKE_FLAGS+=	INTERFACE64=1 LIBSONAMEBASE=openblas64
 .endif
 
 SUBST_CLASSES+=		threads

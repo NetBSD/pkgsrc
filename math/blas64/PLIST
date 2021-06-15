@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/15 04:41:51 thor Exp $
+lib/libblas64.a
+lib/libblas64.so
+lib/libblas64.so.3
+lib/libblas64.so.${PKGVERSION}
+lib/pkgconfig/blas64.pc

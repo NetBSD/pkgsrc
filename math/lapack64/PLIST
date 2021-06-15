@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/15 04:41:52 thor Exp $
+lib/liblapack64.a
+lib/liblapack64.so
+lib/liblapack64.so.3
+lib/liblapack64.so.${PKGVERSION}
+lib/pkgconfig/lapack64.pc

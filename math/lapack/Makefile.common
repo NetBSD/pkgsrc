@@ -1,13 +1,18 @@
-# $NetBSD: Makefile.common,v 1.13 2021/06/10 00:18:52 thor Exp $
+# $NetBSD: Makefile.common,v 1.14 2021/06/15 04:41:52 thor Exp $
 # used by math/blas/Makefile
 # used by math/cblas/Makefile
 # used by math/lapacke/Makefile
 # used by math/lapack/Makefile
+# used by math/blas64/Makefile
+# used by math/cblas64/Makefile
+# used by math/lapacke64/Makefile
+# used by math/lapack64/Makefile
 
 # Common Makefile for packages derived from the Netlib BLAS/LAPACK sources.
 # Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_ARGS to
 # choose the library to install.
-# LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas"
+# LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas",
+# or any of those with 64 suffix for ILP64 mode (64 bit indexing).
 
 DISTNAME=	lapack-${NETLIB_BLAS_VERSION}
 PKGNAME=	${LAPACK_COMPONENT}-${NETLIB_BLAS_VERSION}
@@ -30,18 +35,38 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
+.if !empty(LAPACK_COMPONENT:M*64)
+.  if empty(MACHINE_ARCH:M*64)
+PKG_FAIL_REASON+=	"${LAPACK_COMPONENT} incompatible with non-64-bit platform"
+.  endif
+HEADERDIR=		netlib64
+.else
+HEADERDIR=		netlib
+.endif
+
 # Note: We patch the build to install both static and
 # shared libraries.
 CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 		-DBUILD_SHARED_LIBS=ON \
 		-DBUILD_STATIC_LIBS=ON \
+		-DCMAKE_INSTALL_INCLUDEDIR=${PREFIX}/include/${HEADERDIR} \
 		${LAPACK_COMPONENT_CMAKE_ARGS}
+
+# The cmake files are not ready for prime time.
+post-install:
+	rm -rf "${DESTDIR}${PREFIX}/lib/cmake"
+.if ${HEADERDIR} == netlib
+# Install all headers into subdirectories netlib or netlib64, link
+# the default ones to include, so that simple #include <cblas.h> works
+# as before, as well as with matching -Iincludedir.
+# This also gives us the option of selecting a different symlinked
+# default on the next reworking of BLAS stuff.
+	if ${TEST} -e "${DESTDIR}${PREFIX}/include/${HEADERDIR}"; then \
+	  cd "${DESTDIR}${PREFIX}/include"; for f in ${HEADERDIR}/*.h; do ln -s $$f .; done \
+	fi
+.endif
 
 .include "../../math/lapack/version.mk"
 
 post-extract:
 	${RUN} ${MKDIR} ${WRKSRC}/build
-
-# The cmake files are not ready for prime time.
-post-install:
-	rm -rf "${DESTDIR}${PREFIX}/lib/cmake"
