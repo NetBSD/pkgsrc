@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/29 07:02:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/06/15 10:26:48 adam Exp $
 bin/convertfilestopdf
 bin/convertfilestops
 bin/convertformat
@@ -24,6 +24,7 @@ include/leptonica/dewarp.h
 include/leptonica/endianness.h
 include/leptonica/environ.h
 include/leptonica/gplot.h
+include/leptonica/hashmap.h
 include/leptonica/heap.h
 include/leptonica/imageio.h
 include/leptonica/jbclass.h
