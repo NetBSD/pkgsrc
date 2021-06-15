@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/04/20 20:37:03 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/06/15 04:41:52 thor Exp $
 
 BUILDLINK_TREE+=	cblas
 
@@ -6,10 +6,10 @@ BUILDLINK_TREE+=	cblas
 CBLAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cblas+=	cblas>=3.9.0
+BUILDLINK_ABI_DEPENDS.cblas?=	cblas>=3.9.1nb1
 BUILDLINK_PKGSRCDIR.cblas?=	../../math/cblas
 
-.include	"../../mk/blas.buildlink3.mk"
+.include	"../../math/blas/buildlink3.mk"
 .endif
-
 
 BUILDLINK_TREE+=	-cblas
