@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/23 23:19:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/06/15 04:07:20 thor Exp $
 bin/qconvex
 bin/qdelaunay
 bin/qhalf
@@ -58,9 +58,12 @@ lib/cmake/Qhull/QhullConfig.cmake
 lib/cmake/Qhull/QhullConfigVersion.cmake
 lib/cmake/Qhull/QhullTargets-noconfig.cmake
 lib/cmake/Qhull/QhullTargets.cmake
+lib/libqhull.so
+lib/libqhull.so.${LIBMAJOR}
+lib/libqhull.so.${LIBVERSION}
 lib/libqhull_r.so
-lib/libqhull_r.so.8.0
-lib/libqhull_r.so.8.0.2
+lib/libqhull_r.so.${LIBMAJOR}
+lib/libqhull_r.so.${LIBVERSION}
 lib/libqhullcpp.a
 lib/libqhullstatic.a
 lib/libqhullstatic_r.a
