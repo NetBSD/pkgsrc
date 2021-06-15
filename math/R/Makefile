@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.223 2021/06/13 13:10:46 wen Exp $
+# $NetBSD: Makefile,v 1.224 2021/06/15 06:51:42 thor Exp $
 
 DISTNAME=	R-4.1.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -27,7 +28,6 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-readline
-CONFIGURE_ARGS+=	--with-lapack
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
@@ -54,12 +54,21 @@ CONFIGURE_ARGS+=	--with-x
 PLIST.x11=		yes
 .endif
 
-# Use BLAS
+# Think about making this consistent with Numpy, using a full
+# BLAS/LAPACK by default and only on request accelerate. Just
+# BLAS_ACCEPTED=	${_BLAS_TYPES} accelerate.framework
+# (here and in buildlink3.mk) and deleting the first conditional
+# branch might work, given that R knows what todo with 
+# -framework Accelerate. Someone on Darwin really needs to test.
 .if exists(/System/Library/Frameworks/Accelerate.framework)
 CONFIGURE_ARGS+=	--with-blas="-framework Accelerate"
+CONFIGURE_ARGS+=	--with-lapack # contained in the above
 .else
+# Could be two distinct libraries. Note that, at least int the past,
+# R folks were not fond of linking external lapack.
 CONFIGURE_ARGS+=	--disable-BLAS-shlib
-CONFIGURE_ARGS+=	--with-blas
+CONFIGURE_ARGS+=	--with-blas=${BLAS_LIBS:Q}
+CONFIGURE_ARGS+=	--with-lapack=${LAPACK_LIBS:Q}
 .endif
 
 # Work around missing MAIN__() definition used in -lF77 by AC_CHECK_LIB.
