@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/06/13 17:34:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/06/15 09:11:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -52,8 +52,8 @@ ${PYSITELIB}/humanize/locale/tr_TR/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/tr_TR/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/uk_UA/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/uk_UA/LC_MESSAGES/humanize.po
-${PYSITELIB}/humanize/locale/vi_VI/LC_MESSAGES/humanize.mo
-${PYSITELIB}/humanize/locale/vi_VI/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/vi_VN/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/vi_VN/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/zh_CN/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/zh_CN/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/number.py
