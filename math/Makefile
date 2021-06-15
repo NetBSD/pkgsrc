@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2021/06/15 06:55:40 thor Exp $
+# $NetBSD: Makefile,v 1.508 2021/06/15 14:32:04 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -133,6 +133,7 @@ SUBDIR+=	bc
 SUBDIR+=	bc-gh
 SUBDIR+=	bcal
 SUBDIR+=	blas
+SUBDIR+=	blas64
 SUBDIR+=	blitz++
 SUBDIR+=	boolstuff
 SUBDIR+=	calc
