@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2021/06/15 04:41:52 thor Exp $
+# $NetBSD: Makefile.common,v 1.15 2021/06/15 15:06:23 thor Exp $
 # used by math/blas/Makefile
 # used by math/cblas/Makefile
 # used by math/lapacke/Makefile
@@ -35,8 +35,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
+.include "../../mk/bsd.prefs.mk"
+
 .if !empty(LAPACK_COMPONENT:M*64)
-.  if empty(MACHINE_ARCH:M*64)
+.  if empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@)
 PKG_FAIL_REASON+=	"${LAPACK_COMPONENT} incompatible with non-64-bit platform"
 .  endif
 HEADERDIR=		netlib64
