@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:12 maya Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/15 15:28:22 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../net/py-nyx/Makefile.common"
 
 PKGNAME=	nyx-${VERSION}
@@ -13,6 +13,7 @@ HOMEPAGE=	https://nyx.torproject.org/
 COMMENT=	Command-line monitor for the tor daemon
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-nyx>=${VERSION}:../../net/py-nyx
 
 META_PACKAGE=	yes
