@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3460 2021/06/15 10:25:41 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3461 2021/06/15 10:28:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5536,4 +5536,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/zet version 0.1.1 [pin 2021-06-15]
 	Removed filesystems/fuse-djmount [adam 2021-06-15]
 	Updated textproc/py-humanize to 3.9.0 [adam 2021-06-15]
+	Updated graphics/leptonica to 1.81.1 [adam 2021-06-15]
+	Updated devel/cmake to 3.20.4 [adam 2021-06-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q2 branch [gdt 2021-06-15]
