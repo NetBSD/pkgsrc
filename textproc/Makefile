@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1232 2021/06/07 09:52:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1233 2021/06/15 08:30:35 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1231,6 +1231,7 @@ SUBDIR+=	yelp-tools
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
 SUBDIR+=	yq
+SUBDIR+=	zet
 SUBDIR+=	zoem
 
 .include "../mk/misc/category.mk"
