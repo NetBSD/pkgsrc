@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2021/02/07 15:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/15 04:07:20 thor Exp $
 
-DISTNAME=	qhull-2020-src-8.0.2
+DISTNAME=	qhull-2020-src-${LIBVERSION}
 PKGNAME=	qhull-2020.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.qhull.org/download/
 EXTRACT_SUFX=	.tgz
+
+LIBVERSION=	${LIBMAJOR}.2
+LIBMAJOR=	8.0
+PLIST_SUBST+=	LIBVERSION=${LIBVERSION} LIBMAJOR=${LIBMAJOR}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qhull.org/
@@ -22,5 +27,11 @@ CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PREFIX}/${PKGMANDIR}/man1
 # Remove non-portable file not used in build or test.
 post-extract:
 	rm -f ${WRKSRC}/eg/q_benchmark ${WRKSRC}/eg/qhull-zip.sh
+
+post-build:
+	cd ${WRKSRC} && make libqhull
+
+post-install:
+	cp ${WRKSRC}/libqhull.* ${DESTDIR}${PREFIX}/lib/
 
 .include "../../mk/bsd.pkg.mk"
