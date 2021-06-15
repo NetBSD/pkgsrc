@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2021/06/15 04:41:52 thor Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/06/15 15:06:23 thor Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -62,7 +62,7 @@ MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
 BENCHMARK_MAXTHREADS?=	8
 
-.if ${MACHINE_ARCH:M*64} == ""
+.if empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@)
 MAKE_FLAGS+=		BINARY32=1
 .  if !empty(OPENBLAS_VARIANT:M*64*)
 PKG_FAIL_REASON+=	"${OPENBLAS_VARIANT} incompatible with non-64-bit platform"
@@ -78,9 +78,7 @@ MAKE_FLAGS+=		BINARY64=1
 MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}
 MAKE_FLAGS+=	OPENBLAS_CMAKE_DIR=${PREFIX}/lib/cmake/${OPENBLAS_VARIANT}
 
-# TODO: Set INTERFACE64=1 with additional OPENBLAS_VARIANTs.
-# Need to settle on a convention for SYMBOLSUFFIX first, see
-# https://github.com/xianyi/OpenBLAS/issues/646 .
+# Settled on no sumbol suffix for 64 bit.
 MAKE_FLAGS+=	FIXED_LIBNAME=1
 .if ${OPENBLAS_VARIANT} == openblas || ${OPENBLAS_VARIANT} == openblas64
 MAKE_FLAGS+=	USE_OPENMP=0 USE_THREAD=0 USE_LOCKING=1
