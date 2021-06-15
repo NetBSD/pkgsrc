@@ -1,0 +1,30 @@
+$NetBSD: patch-bin_pdfjam,v 1.1 2021/06/15 13:12:29 leot Exp $
+
+Remove a problematic extra backslash `\'.
+
+--- bin/pdfjam.orig	2010-11-14 23:39:18.000000000 +0000
++++ bin/pdfjam
+@@ -1143,19 +1143,19 @@ EndTemplate
+     )  > $texFile
+ if test "$hyperref" = false; then  ## we don't need hyperref
+     cp $texFile $tempFile
+-    sed '/\\\usepackage{hyperref}/d' $tempFile | \
+-	sed '/\\\hypersetup.*/d' > "${texFile}"
++    sed '/\\usepackage{hyperref}/d' $tempFile | \
++	sed '/\\hypersetup.*/d' > "${texFile}"
+     rm $tempFile
+ fi
+ if test -z "$geometry" ; then geometry=false ; fi
+ if test "$geometry" = false; then   ## geometry package is not to be used
+     cp $texFile $tempFile
+-    cat $tempFile | sed '/\\\usepackage.*{geometry}/d' > $texFile
++    cat $tempFile | sed '/\\usepackage.*{geometry}/d' > $texFile
+     rm $tempFile
+ fi
+ if test -z "$pagecolor"; then   ## color package is not needed
+     cp $texFile $tempFile
+-    cat $tempFile | sed '/\\\usepackage.*{color}/d' > $texFile
++    cat $tempFile | sed '/\\usepackage.*{color}/d' > $texFile
+     rm $tempFile
+ fi
+ ##
