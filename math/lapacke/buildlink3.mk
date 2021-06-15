@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/04/20 20:40:47 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/06/15 04:41:52 thor Exp $
 
 BUILDLINK_TREE+=	lapacke
 
@@ -6,9 +6,10 @@ BUILDLINK_TREE+=	lapacke
 LAPACKE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lapacke+=	lapacke>=3.9.0
+BUILDLINK_ABI_DEPENDS.lapacke?=	lapacke>=3.9.1nb2
 BUILDLINK_PKGSRCDIR.lapacke?=	../../math/lapacke
 
-.include	"../../mk/blas.buildlink3.mk"
+.include	"../../math/lapack/buildlink3.mk"
 .endif
 
 BUILDLINK_TREE+=	-lapacke

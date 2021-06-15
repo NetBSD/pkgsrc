@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2021/06/15 04:41:52 thor Exp $
+
+BUILDLINK_TREE+=	openblas64
+
+.if !defined(OPENBLAS64_BUILDLINK3_MK)
+OPENBLAS64_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.openblas64+=	openblas64>=0.3.5
+BUILDLINK_PKGSRCDIR.openblas64?=	../../math/openblas64
+.endif	# OPENBLAS64_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-openblas64
