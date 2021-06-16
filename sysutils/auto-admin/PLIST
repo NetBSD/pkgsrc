@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/15 14:55:51 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/06/16 21:15:55 bacon Exp $
 sbin/auto-ad-adduser
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
@@ -11,7 +11,6 @@ sbin/auto-admin-banner
 sbin/auto-amend-fstab
 sbin/auto-append-line
 sbin/auto-ask
-sbin/auto-autofs-media-setup
 sbin/auto-autofs-nfs-setup
 sbin/auto-automount-setup
 sbin/auto-backup-file
