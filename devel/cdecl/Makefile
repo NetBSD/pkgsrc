@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/04/21 08:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/06/16 23:08:42 dholland Exp $
 
 DISTNAME=	cdecl-2.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	# ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/
 
