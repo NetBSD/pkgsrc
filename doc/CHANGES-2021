@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3465 2021/06/15 15:28:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3466 2021/06/16 00:08:04 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5543,3 +5543,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/biolibc to 0.1.3.2 [bacon 2021-06-15]
 	Added biology/peak-classifier version 0.1.1 [bacon 2021-06-15]
 	Updated net/nyx to 2.1.0nb2 [wiz 2021-06-15]
+	Updated devel/fossil to 2.15.2 [js 2021-06-16]
