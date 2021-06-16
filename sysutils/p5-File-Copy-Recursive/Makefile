@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/05/24 19:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2021/06/16 15:39:16 wiz Exp $
 
 DISTNAME=	File-Copy-Recursive-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ PERL5_PACKLIST=	auto/File/Copy/Recursive/.packlist
 
 DEPENDS+=	p5-Path-Iter-[0-9]*:../../devel/p5-Path-Iter
 
-# TEST_DEPENDS
 TEST_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
