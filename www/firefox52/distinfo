@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/04/01 15:28:10 martin Exp $
+$NetBSD: distinfo,v 1.27 2021/06/16 22:21:12 nia Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -22,6 +22,13 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = fd0cb4d2061af1eaa34313370a57720ed693607f
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-dom_base_moz.build) = 5200cbfcf7b781324dca4c55d01bc8559a56aa4c
+SHA1 (patch-dom_indexedDB_ActorsParent.cpp) = 5eeafe1639727cfb956b335f75c6b9d5dd4843e8
+SHA1 (patch-dom_indexedDB_IDBCursor.cpp) = 41bc07e0861c89a674cc8b9fad23f031da7629c4
+SHA1 (patch-dom_indexedDB_IDBDatabase.cpp) = 8e60c01d30b5a206a62c68a87ee4976999201e6f
+SHA1 (patch-dom_indexedDB_IDBObjectStore.cpp) = 0ce3c975feed6a7eb7e981130263c36bce40b652
+SHA1 (patch-dom_indexedDB_IDBTransaction.cpp) = f823117c34c83796c322bd0a8910e3acd3af693a
+SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 3dc33da5ccaec983154bc1fae681954976e45f2c
+SHA1 (patch-dom_indexedDB_ProfilerHelpers.h) = 951d8752a3c6dd1c8d1104c0e813ce5914273dcd
 SHA1 (patch-dom_media_AudioStream.cpp) = 3d2e3d92849a355c05d7ec0ded61d551ffe0c581
 SHA1 (patch-dom_media_AudioStream.h) = 26f70000cc4810834204d15b45e1469dd5f23617
 SHA1 (patch-dom_media_moz.build) = 844dbb94463b8aab11649a5aa11142de0179d86c
