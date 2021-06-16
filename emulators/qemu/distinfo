@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.179 2021/06/01 16:28:05 nia Exp $
+$NetBSD: distinfo,v 1.180 2021/06/16 09:39:17 jperkin Exp $
 
 SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
@@ -18,6 +18,7 @@ SHA1 (patch-hw_alpha_dp264.c) = 856304784f098863728ecac3d0a9287aa22190d7
 SHA1 (patch-hw_alpha_typhoon.c) = 1bed5cd6f355c4163585c5331356ebf38c5c3a16
 SHA1 (patch-hw_core_uboot__image.h) = 17eef02349343c5fcfb7a4069cb6f8fd11efcb59
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
+SHA1 (patch-hw_i386_acpi-build.c) = 7d23d09f71917cedca4226fd22baa45bcb0f7d33
 SHA1 (patch-hw_mips_meson.build) = ff4bec33d9d2f86a425e02928aa3b6963c22da68
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
