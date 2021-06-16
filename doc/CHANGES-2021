@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3468 2021/06/16 21:16:03 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3469 2021/06/16 23:09:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/fossil to 2.15.2 [js 2021-06-16]
 	Updated shells/bash to 5.1.8nb2 [jperkin 2021-06-16]
 	Updated sysutils/auto-admin to 0.7.5 [bacon 2021-06-16]
+	Updated devel/cdecl to 2.5nb3 [dholland 2021-06-16]
