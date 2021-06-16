@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2021/05/17 22:10:43 kre Exp $
+# $NetBSD: Makefile,v 1.100 2021/06/16 12:30:04 jperkin Exp $
 
 BASH_VERSION=		5.1
 BASH_PATCHLEVEL=	8
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
@@ -33,20 +33,20 @@ INFO_FILES=		YES # PLIST
 PKG_SHELL=		bin/bash
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-# All features enabled by default.
-CONFIGURE_ARGS+=	--enable-readline
-CONFIGURE_ARGS+=	--enable-progcomp
-CONFIGURE_ARGS+=	--enable-process-substitution
-CONFIGURE_ARGS+=	--enable-history
-CONFIGURE_ARGS+=	--enable-help-builtin
-CONFIGURE_ARGS+=	--enable-extended-glob
-CONFIGURE_ARGS+=	--enable-dparen-arithmetic
-CONFIGURE_ARGS+=	--enable-directory-stack
-CONFIGURE_ARGS+=	--enable-debugger
-CONFIGURE_ARGS+=	--enable-cond-regexp
 CONFIGURE_ARGS+=	--enable-alias
-CONFIGURE_ARGS+=	--enable-brace-expansion
 CONFIGURE_ARGS+=	--enable-array-variables
+CONFIGURE_ARGS+=	--enable-brace-expansion
+CONFIGURE_ARGS+=	--enable-cond-regexp
+CONFIGURE_ARGS+=	--enable-debugger
+CONFIGURE_ARGS+=	--enable-directory-stack
+CONFIGURE_ARGS+=	--enable-dparen-arithmetic
+CONFIGURE_ARGS+=	--enable-extended-glob
+CONFIGURE_ARGS+=	--enable-function-import
+CONFIGURE_ARGS+=	--enable-help-builtin
+CONFIGURE_ARGS+=	--enable-history
+CONFIGURE_ARGS+=	--enable-process-substitution
+CONFIGURE_ARGS+=	--enable-progcomp
+CONFIGURE_ARGS+=	--enable-readline
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
