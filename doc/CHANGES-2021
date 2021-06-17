@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3472 2021/06/17 12:14:56 otis Exp $
+$NetBSD: CHANGES-2021,v 1.3473 2021/06/17 20:26:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5550,3 +5550,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.17 [otis 2021-06-17]
 	Updated pkgtools/pkglint to 21.2.0 [rillig 2021-06-17]
 	Updated net/bind911 to 9.11.33 [otis 2021-06-17]
+	Updated sysutils/xplr to 0.14.2 [pin 2021-06-17]
