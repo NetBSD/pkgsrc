@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/03/30 19:46:01 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/06/17 11:01:19 nia Exp $
 
 SHA1 (thunderbird-52.9.1.source.tar.xz) = 9970d78084fe979f568ea00bf06b8e81a738e630
 RMD160 (thunderbird-52.9.1.source.tar.xz) = b3169a0154fa85648a98ba0d74f264abd224b323
@@ -30,6 +30,13 @@ SHA1 (patch-mozilla_config_stl__wrappers_ostream) = b36e7e199e355a0950e0db51c45f
 SHA1 (patch-mozilla_config_system-headers) = 4665d754c8e498b3a34f877836287c7723ce930f
 SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 81752c113fcbef0a4ead18be1fbab1660c7d2fa9
 SHA1 (patch-mozilla_dom_base_moz.build) = ea955077112082d25be57c7ad58102670e117821
+SHA1 (patch-mozilla_dom_indexedDB_ActorsParent.cpp) = f0d2b9715805d81c2d8d13fa22cc4a1c5a3e332a
+SHA1 (patch-mozilla_dom_indexedDB_IDBCursor.cpp) = 8dfcd7f3fff72ecc11b02c62b53e45b8e2eba2db
+SHA1 (patch-mozilla_dom_indexedDB_IDBDatabase.cpp) = e935263937701fe8e0d4cc3a008d0193ca7910da
+SHA1 (patch-mozilla_dom_indexedDB_IDBObjectStore.cpp) = 03d094a632efb939a7ee1c47bc35c70f8d2df176
+SHA1 (patch-mozilla_dom_indexedDB_IDBTransaction.cpp) = 004fd423d61d937ec00918484650e8140f2bf529
+SHA1 (patch-mozilla_dom_indexedDB_IDBTransaction.h) = bf2e8eb705794d1d6db2524124f0ec017cbe7c8a
+SHA1 (patch-mozilla_dom_indexedDB_ProfilerHelpers.h) = b8657b1cb06be091518c4c65e961bbc1f4383e87
 SHA1 (patch-mozilla_dom_media_AudioStream.cpp) = c44bd89b7246ef9a5770b826967f342ce6fe18ae
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = a8f4160cc59c0cc92144dffb8fd468ad4d8ca70d
 SHA1 (patch-mozilla_dom_media_moz.build) = 3d9719c07eed295f5054a59c1bffefa71df774f1
@@ -68,6 +75,7 @@ SHA1 (patch-mozilla_js_src_jit_none_AtomicOperations-sparc.h) = e85996849acce279
 SHA1 (patch-mozilla_js_src_moz.build) = 9220c6c618b1db6f88fd58b27b9ae9f742d2602a
 SHA1 (patch-mozilla_js_src_old-configure.in) = 8349fe3c700404c2c2d9512068edab9b097508c9
 SHA1 (patch-mozilla_js_xpconnect_src_XPCConvert.cpp) = fb20844c866045677ce7b14099cf7a748d430f64
+SHA1 (patch-mozilla_js_xpconnect_src_XPCWrappedNative.cpp) = c188ceff949cfc83a1da047f3cdbc6fac506d57f
 SHA1 (patch-mozilla_js_xpconnect_src_xpcprivate.h) = 4dc5838b1fe482aca023ce992ebf414ee39d0aef
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = 993d921016d126a3fbd139b212c35a09606d184c
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 8139652f4d101135efe6ec379cbf89e83061c488
@@ -95,7 +103,7 @@ SHA1 (patch-mozilla_mozglue_build_arm.cpp) = fcaf79cb25eef5d36e793d54ce5c1fff188
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 40d8d2039c68fc825857a3c970eec2f296275cc5
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = 4ee9fa2a3b33a0fb9ad4c0f883b084f6417b993f
 SHA1 (patch-mozilla_nsprpub_pr_src_pthreads_ptsynch.c) = 389f94db5adf882d43c5cb601ec00659b460584b
-SHA1 (patch-mozilla_old-configure.in) = 651bc7aed6cea83ae21a1ac8febf13374ae8c854
+SHA1 (patch-mozilla_old-configure.in) = dcc972f0745cc93ba86712b09384f8040ecf3d73
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = ba8e6e427374dbf9f5de695ead6014f560fb305e
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 005ad5608501fdcdeb042715a69ea3073d62fc75
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = bf5dc4c221f5822e38a62c6a848c01c65e65dd4d

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.1 2018/12/16 08:29:48 ryoon Exp $
+$NetBSD: patch-mozilla_old-configure.in,v 1.2 2021/06/17 11:01:19 nia Exp $
 
---- mozilla/old-configure.in.orig	2017-04-14 04:53:22.000000000 +0000
+--- mozilla/old-configure.in.orig	2018-07-09 19:54:54.000000000 +0000
 +++ mozilla/old-configure.in
 @@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
@@ -242,3 +242,12 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.1 2018/12/16 08:29:48 ryoon Exp $
  dnl Check for pixman and cairo
  dnl ========================================================
  
+@@ -5916,7 +6102,7 @@ ac_configure_args="$_SUBDIR_CONFIG_ARGS"
+ 
+ # --with-system-nspr will have been converted into the relevant $NSPR_CFLAGS
+ # and $NSPR_LIBS.
+-ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr\S* *//'`"
++ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr[[^[:space:]]]* *//'`"
+ 
+ if test "$_INTL_API" = no; then
+     ac_configure_args="$ac_configure_args --without-intl-api"
