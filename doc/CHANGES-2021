@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3469 2021/06/16 23:09:32 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.3470 2021/06/17 09:04:57 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/bash to 5.1.8nb2 [jperkin 2021-06-16]
 	Updated sysutils/auto-admin to 0.7.5 [bacon 2021-06-16]
 	Updated devel/cdecl to 2.5nb3 [dholland 2021-06-16]
+	Updated net/bind916 to 9.16.17 [otis 2021-06-17]
