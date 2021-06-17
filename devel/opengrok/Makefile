@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/04/21 11:41:29 adam Exp $
+# $NetBSD: Makefile,v 1.61 2021/06/17 14:31:13 mef Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -29,6 +29,12 @@ SUBST_FILES.conf+=	web/WEB-INF/web.xml
 SUBST_MESSAGE.conf=	Set configuration.xml location
 SUBST_STAGE.conf=	pre-configure
 SUBST_VARS.conf=	PREFIX
+
+SUBST_CLASSES+=		https
+SUBST_FILES.https+=	build.xml
+SUBST_MESSAGE.https=	convert http to https
+SUBST_STAGE.https=	post-configure
+SUBST_SED.https=	's|http://repo1|https://repo1|'
 
 MESSAGE_SUBST+=		PKG_JAVA_HOME=${PKG_JAVA_HOME}
 
