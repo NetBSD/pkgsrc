@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/02/11 08:22:44 adam Exp $
+# $NetBSD: options.mk,v 1.8 2021/06/17 08:59:10 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
 PKG_SUPPORTED_OPTIONS=	lua tcl
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-tcl
 .if !empty(PKG_OPTIONS:Mlua)
 CONFIGURE_ARGS+=	--enable-lua
 CONFIGURE_ENV+=		ac_cv_path_LUA=${LUA_INTERPRETER}
+LUA_LINKER_MAGIC=	no
 PLIST.lua=		yes
 .include "../../lang/lua/module.mk"
 .else
