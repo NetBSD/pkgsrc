@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20795 2021/06/15 15:28:32 wiz Exp $
+$NetBSD: TODO,v 1.20796 2021/06/18 09:50:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1447,6 +1447,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ns-plugger-common-5.1.3
 	o nsd-4.3.6
 	o nsm-2.4.12
+	o nss-3.67
 	o ntop-5.0
 	o ntpsec-1.2.0
 	o nts-82
@@ -2006,6 +2007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-marisa-0.2.6
 	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
+	o rust-1.53
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
