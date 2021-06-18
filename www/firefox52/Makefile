@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2021/05/24 19:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2021/06/18 18:29:57 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -69,8 +69,8 @@ post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/js/src && autoconf
+	cd ${WRKSRC} && autoconf-2.13
+	cd ${WRKSRC}/js/src && autoconf-2.13
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 
