@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2021/04/21 13:24:24 adam Exp $
+# $NetBSD: Makefile,v 1.80 2021/06/18 12:26:25 nia Exp $
 
 VERSION=	2021.01
 DISTNAME=	openscad-${VERSION}
@@ -13,7 +13,7 @@ COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison gettext pkg-config
+USE_TOOLS+=	bison gettext pkg-config itstool
 USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
