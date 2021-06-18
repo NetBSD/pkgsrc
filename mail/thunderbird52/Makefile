@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/02/07 06:30:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2021/06/18 19:23:11 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
@@ -58,9 +58,9 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
 	touch ${WRKSRC}/.mozconfig
 
 do-build:
