@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2021/06/02 15:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2021/06/18 19:35:13 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -87,9 +87,9 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
-##	cd ${WRKSRC}/${MOZILLA_DIR} && ${SETENV} ${CONFIGURE_ENV} autoconf
-#	cd ${WRKSRC}/${MOZILLA_DIR}/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+##	cd ${WRKSRC}/${MOZILLA_DIR} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+#	cd ${WRKSRC}/${MOZILLA_DIR}/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
 	${SED}	-e 's/@MOZ_APP_DISPLAYNAME@/SeaMonkey/g' \
 		-e 's/@MOZ_APP_NAME@/seamonkey/g' \
 		${WRKSRC}/${MOZILLA_DIR}/toolkit/mozapps/installer/linux/rpm/mozilla.desktop > \
