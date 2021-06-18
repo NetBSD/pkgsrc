@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.17 2020/12/31 20:04:14 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.18 2021/06/18 13:31:32 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -53,8 +53,7 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[7-8].*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 .if ${MACHINE_ARCH} == "i386"
