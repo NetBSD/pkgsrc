@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2021/06/15 13:54:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.482 2021/06/18 18:08:05 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		88.0
@@ -129,8 +129,8 @@ MOZILLA_NAME=	Browser
 #.endfor
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/js/src && autoconf
+	cd ${WRKSRC} && autoconf-2.13
+	cd ${WRKSRC}/js/src && autoconf-2.13
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 	# Do not fetch Rust Cargo file via network during build
