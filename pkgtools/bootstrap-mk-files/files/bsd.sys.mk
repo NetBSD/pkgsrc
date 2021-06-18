@@ -1,25 +1,6 @@
-#	$NetBSD: bsd.sys.mk,v 1.4 2017/08/02 09:38:06 maya Exp $
+#	$NetBSD: bsd.sys.mk,v 1.5 2021/06/18 12:17:34 nia Exp $
 #
 # Overrides used for NetBSD source tree builds.
-
-.if defined(WARNS)
-.if ${WARNS} > 0
-CFLAGS+= -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith
-# XXX Delete -Wuninitialized by default for now -- the compiler doesn't
-# XXX always get it right.
-CFLAGS+= -Wno-uninitialized
-.endif
-.if ${WARNS} > 1
-CFLAGS+=-Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings
-CFLAGS+=-Wswitch -Wshadow
-.endif
-.endif
-
-.if defined(WFORMAT) && defined(FORMAT_AUDIT)
-.if ${WFORMAT} > 1
-CFLAGS+=-Wnetbsd-format-audit -Wno-format-extra-args
-.endif
-.endif
 
 CFLAGS+= ${CWARNFLAGS}
 
