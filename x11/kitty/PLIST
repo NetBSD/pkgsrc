@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/06/18 08:39:32 pin Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/06/18 10:07:01 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/kittens/__init__.py
@@ -276,5 +276,3 @@ share/doc/kitty/html/searchindex.js
 share/doc/kitty/html/support.html
 share/icons/hicolor/256x256/apps/kitty.png
 share/terminfo/x/xterm-kitty
-@pkgdir share/man/man5
-@pkgdir share/man/man1
