@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2020/08/29 18:39:34 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/06/18 13:30:31 nia Exp $
 
 SHA1 (firefox-68.12.0esr.source.tar.xz) = 976fae5c3cdee8b7929e4f17eca6cf44513d08b4
 RMD160 (firefox-68.12.0esr.source.tar.xz) = c7871e1d9f8eaff2c0eaff7c70f49c2488e616f8
@@ -10,6 +10,13 @@ SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05f
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 11b45e0c7a9399c5b74b170648280a388dd67d89
 SHA1 (patch-config_makefiles_rust.mk) = 564169b2a1ef7f378caa8ba8962b9cf3baf01735
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
+SHA1 (patch-dom_indexedDB_ActorsParent.cpp) = ebc9890d2973bcb59d387033509cb158799d4778
+SHA1 (patch-dom_indexedDB_IDBCursor.cpp) = 5a4120964c983526c877d19d9b2bdacb1b1f951a
+SHA1 (patch-dom_indexedDB_IDBDatabase.cpp) = a617b2ed89809b7026580e315329114b1e87a939
+SHA1 (patch-dom_indexedDB_IDBObjectStore.cpp) = cf2bcb19bf24f82a0bab181999ad44f5d297e16e
+SHA1 (patch-dom_indexedDB_IDBTransaction.cpp) = c07207e5c95425f5f291857a4fa130879463d09a
+SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7a8f72531abd14a7763e21898135aa3032b41d00
+SHA1 (patch-dom_indexedDB_ProfilerHelpers.h) = 755a20c5d4c84968e1759f189d24bd9b3c8c7d30
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
 SHA1 (patch-dom_webauthn_u2f-hid-rs_src_lib.rs) = c0dfe8b1e7ebbc7c1d6066c204030f13b063b8d7
 SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_device.rs) = 091ffab5bd6a15425acb2ab023cc26f6b23324c6
