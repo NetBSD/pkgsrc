@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/06/08 10:21:55 pin Exp $
+# $NetBSD: Makefile,v 1.26 2021/06/18 10:44:29 tnn Exp $
 
 DISTNAME=	macchina-0.9.2
 CATEGORIES=	sysutils
@@ -22,6 +22,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXdmcp}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXau}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
+
+BUILDLINK_TRANSFORM+=	opt:-pie:-fPIC
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/macchina ${DESTDIR}${PREFIX}/bin
