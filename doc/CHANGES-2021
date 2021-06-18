@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3475 2021/06/18 08:39:57 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3476 2021/06/18 12:04:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.14.2 [pin 2021-06-17]
 	Updated sysutils/broot to 1.6.0 [pin 2021-06-17]
 	Updated x11/kitty to 0.21.1 [pin 2021-06-18]
+	Updated textproc/py-feedparser to 6.0.6 [schmonz 2021-06-18]
