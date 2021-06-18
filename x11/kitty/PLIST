@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/06/13 06:56:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/06/18 08:39:32 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/kittens/__init__.py
@@ -14,10 +14,14 @@ lib/kitty/kittens/clipboard/main.py
 lib/kitty/kittens/diff/__init__.py
 lib/kitty/kittens/diff/collect.py
 lib/kitty/kittens/diff/config.py
-lib/kitty/kittens/diff/config_data.py
 lib/kitty/kittens/diff/diff_speedup.so
 lib/kitty/kittens/diff/highlight.py
 lib/kitty/kittens/diff/main.py
+lib/kitty/kittens/diff/options/__init__.py
+lib/kitty/kittens/diff/options/definition.py
+lib/kitty/kittens/diff/options/parse.py
+lib/kitty/kittens/diff/options/types.py
+lib/kitty/kittens/diff/options/utils.py
 lib/kitty/kittens/diff/patch.py
 lib/kitty/kittens/diff/render.py
 lib/kitty/kittens/diff/search.py
@@ -75,11 +79,11 @@ lib/kitty/kitty/cli_stub.py
 lib/kitty/kitty/client.py
 lib/kitty/kitty/complete.py
 lib/kitty/kitty/conf/__init__.py
-lib/kitty/kitty/conf/definition.py
+lib/kitty/kitty/conf/types.py
 lib/kitty/kitty/conf/utils.py
 lib/kitty/kitty/config.py
-lib/kitty/kitty/config_data.py
 lib/kitty/kitty/constants.py
+lib/kitty/kitty/debug_config.py
 lib/kitty/kitty/fast_data_types.so
 lib/kitty/kitty/fonts/__init__.py
 lib/kitty/kitty/fonts/box_drawing.py
@@ -110,7 +114,11 @@ lib/kitty/kitty/marks.py
 lib/kitty/kitty/multiprocessing.py
 lib/kitty/kitty/notify.py
 lib/kitty/kitty/open_actions.py
-lib/kitty/kitty/options_stub.py
+lib/kitty/kitty/options/__init__.py
+lib/kitty/kitty/options/definition.py
+lib/kitty/kitty/options/parse.py
+lib/kitty/kitty/options/types.py
+lib/kitty/kitty/options/utils.py
 lib/kitty/kitty/os_window_size.py
 lib/kitty/kitty/rc/__init__.py
 lib/kitty/kitty/rc/base.py
@@ -226,6 +234,7 @@ share/doc/kitty/html/_static/plus.png
 share/doc/kitty/html/_static/pygments.css
 share/doc/kitty/html/_static/searchtools.js
 share/doc/kitty/html/_static/underscore-1.12.0.js
+share/doc/kitty/html/_static/underscore-1.13.1.js
 share/doc/kitty/html/_static/underscore.js
 share/doc/kitty/html/basic.html
 share/doc/kitty/html/binary.html
@@ -267,3 +276,5 @@ share/doc/kitty/html/searchindex.js
 share/doc/kitty/html/support.html
 share/icons/hicolor/256x256/apps/kitty.png
 share/terminfo/x/xterm-kitty
+@pkgdir share/man/man5
+@pkgdir share/man/man1
