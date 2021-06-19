@@ -1,4 +1,7 @@
-$NetBSD: patch-src_emu_state.h,v 1.2 2020/05/30 20:36:15 nia Exp $
+$NetBSD: patch-src_emu_state.h,v 1.3 2021/06/19 07:23:31 nia Exp $
+
+Consistently build as C++11 source, but ignore narrow issues.
+Don't depend on ordering of pointers relative to zero. Avoid UDL.
 
 --- src/emu/state.h.orig	2020-05-25 02:01:22.000000000 +0000
 +++ src/emu/state.h
