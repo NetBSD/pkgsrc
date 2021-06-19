@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3477 2021/06/19 07:48:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3478 2021/06/19 13:18:30 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/kitty to 0.21.1 [pin 2021-06-18]
 	Updated textproc/py-feedparser to 6.0.6 [schmonz 2021-06-18]
 	Updated textproc/ruby-terminal-table to 2.0.0nb1 [taca 2021-06-19]
+	Updated net/bind916 to 9.16.18 [otis 2021-06-19]
