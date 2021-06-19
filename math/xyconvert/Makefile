@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/04/21 11:42:11 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/19 13:38:23 mef Exp $
 #
 
 PKGREVISION= 6
@@ -10,6 +10,8 @@ BUILD_TARGET=	gui/xyconvert
 
 DISTINFO_FILE=	../../math/xylib/distinfo
 PATCHDIR=	../../math/xylib/patches
+
+USE_LANGUAGES+=	c++11
 
 GNU_CONFIGURE_WX_VERSION=	no
 
