@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/05/21 08:36:57 adam Exp $
+# $NetBSD: Makefile,v 1.78 2021/06/19 12:08:58 tnn Exp $
 
 DISTNAME=	haproxy-2.4.0
 CATEGORIES=	net www
@@ -56,4 +56,7 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.if ${MACHINE_ARCH} == "aarch64"
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
