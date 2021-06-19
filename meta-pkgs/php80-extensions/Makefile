@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/07 14:03:16 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/19 06:06:12 nia Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
 CATEGORIES=	meta-pkgs www
@@ -36,7 +36,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_VERSION}<${NEXT_VERS}:../../databases/
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-pcntl
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_dblib>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_dblib
+# freetds seems x86-64 only
+# DEPENDS+=	${PHP_PKG_PREFIX}-pdo_dblib>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_dblib
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-sqlite3>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-sqlite3
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_pgsql
