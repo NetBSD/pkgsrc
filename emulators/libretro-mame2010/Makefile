@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/31 18:34:56 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/19 07:23:31 nia Exp $
 
 DISTNAME=	libretro-mame2010-20200525
 CATEGORIES=	emulators
@@ -13,6 +13,8 @@ LICENSE=	mame-license
 USE_LANGUAGES=	c c++
 
 LIBRETRO_CORE=	mame2010
+
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 MAKE_FLAGS+=	BUILD_ZLIB=0
 
@@ -31,8 +33,6 @@ CFLAGS+=	-DSDLMAME_BSD
 .if ${OPSYS} != "Linux"
 CFLAGS+=	-DNO_AFFINITY_NP
 .endif
-
-CFLAGS+=	-Wno-narrowing
 
 .if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "i386"
 MAKE_FLAGS+=	FORCE_DRC_C_BACKEND=1
@@ -56,6 +56,11 @@ MAKE_FLAGS+=	PTR64=1
 
 MAKE_FLAGS+=	CC=${CXX:Q}
 MAKE_FLAGS+=	LD=${CXX:Q}
+
+post-extract:
+	cd ${WRKSRC} && dos2unix Makefile
+	cd ${WRKSRC} && dos2unix src/emu/*.c src/emu/*.h
+	cd ${WRKSRC} && dos2unix src/osd/retro/osinline.h
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
