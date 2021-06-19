@@ -1,4 +1,7 @@
-$NetBSD: patch-src_emu_romload.c,v 1.1 2020/05/14 19:35:59 joerg Exp $
+$NetBSD: patch-src_emu_romload.c,v 1.2 2021/06/19 07:23:31 nia Exp $
+
+Consistently build as C++11 source, but ignore narrow issues.
+Don't depend on ordering of pointers relative to zero. Avoid UDL.
 
 --- src/emu/romload.c.orig	2020-05-13 15:21:49.756367021 +0000
 +++ src/emu/romload.c
