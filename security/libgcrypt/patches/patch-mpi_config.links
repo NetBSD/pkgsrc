@@ -1,4 +1,4 @@
-$NetBSD: patch-mpi_config.links,v 1.3 2021/04/13 17:38:12 dholland Exp $
+$NetBSD: patch-mpi_config.links,v 1.4 2021/06/19 11:17:53 spz Exp $
 
 Extend the m68k assembler syntax probe to match NetBSD targets.
 
@@ -11,14 +11,14 @@ not now)
  	path="m68k"
          mpi_cpu_arch="m68k"
  	;;
-+    m680[234]0*-*-netbsd | \
-+    m68k-*-netbsd)
++    m680[234]0*-*-netbsd* | \
++    m68k-*-netbsd*)
 +	echo '#define ELF_SYNTAX'           >>./mpi/asm-syntax.h
 +	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
 +	path="m68k"
 +        mpi_cpu_arch="m68k"
 +	;;
-+    m68060*-*-netbsd)
++    m68060*-*-netbsd*)
 +	echo '#define ELF_SYNTAX'           >>./mpi/asm-syntax.h
 +	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
 +        mpi_cpu_arch="m68k"
