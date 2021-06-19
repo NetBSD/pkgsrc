@@ -1,4 +1,4 @@
-$NetBSD: patch-src_emu_emucore.h,v 1.1 2019/01/02 13:24:29 nia Exp $
+$NetBSD: patch-src_emu_emucore.h,v 1.2 2021/06/19 07:23:31 nia Exp $
 
 Avoid colliding with libc symbols on NetBSD.
 
