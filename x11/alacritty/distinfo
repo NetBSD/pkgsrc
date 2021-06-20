@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/05/25 16:18:27 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/06/20 08:51:19 tnn Exp $
 
 SHA1 (ab_glyph_rasterizer-0.1.4.crate) = 0ef50d98583486c91fc4d40f2bc819ac2873b139
 RMD160 (ab_glyph_rasterizer-0.1.4.crate) = c3bfaccc51e6d20119128cac07d4a98474fca22f
@@ -764,3 +764,4 @@ SHA1 (yaml-rust-0.4.5.crate) = de9261ecb0d790e56466b6e1c40371b1050a8650
 RMD160 (yaml-rust-0.4.5.crate) = 2148b0245a840e26646ae4b0c5f394fd8203ad5b
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
+SHA1 (patch-vendor_x11-dl_src_link.rs) = 773a9ad0ffdbc852a0fbc375475f1a6fa8101e73
