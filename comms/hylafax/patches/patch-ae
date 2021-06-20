@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.21 2021/02/28 22:16:52 gutteridge Exp $
+$NetBSD: patch-ae,v 1.22 2021/06/20 06:38:55 jnemeth Exp $
 
 * Customize paths.
 * Configure for pkgsrc.
@@ -152,7 +152,7 @@ symbols aren't resolved at link time.
  				tiff_bytecount_t="uint32"
  				;;
 -		4.[0])		tiff_runlen_t="uint32"
-+		4.[012])	tiff_runlen_t="uint32"
++		4.[0123])	tiff_runlen_t="uint32"
  				tiff_offset_t="uint64"
  				tiff_bytecount_t="uint64"
  				echo '#define TIFFHeader	TIFFHeaderClassic'
