@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20797 2021/06/19 12:02:38 wiz Exp $
+$NetBSD: TODO,v 1.20798 2021/06/20 07:43:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,6 +365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.0
 	o ImageMagick6-6.9.12.8
 	o Inter-UI-3.18
 	o JBidwatcher-2.5.6 [wants launch4j]
@@ -845,6 +846,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gdb7-7.12
+	o gdbm-1.20
 	o gdm-2.32.2
 	o gdm-3.0.3
 	o gearboy-3.3.0
@@ -1257,7 +1259,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdwarf-20210305
 	o libepoxy-1.5.5
 	o libextractor-1.11
-	o libffcall-2.3
+	o libffcall-2.4
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -1339,6 +1341,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o maelstrom-sdl-3.0.7
 	o magic-8.3.154
 	o magit-3.0
+	o maim-5.7.4
 	o man-pages-5.11
 	o mapcode-2.5.5
 	o mapserver-7.6.2
@@ -1748,7 +1751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-yubico-2.21
-	o pandoc-2.14.0.1
+	o pandoc-2.14.0.2
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
@@ -1757,6 +1760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o parrot-8.1.0
 	o pcc-1.1.0
 	o pcc-current-20210421
+	o pcre-8.45
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
@@ -2161,6 +2165,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-0.4.6.5
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
