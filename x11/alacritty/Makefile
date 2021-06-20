@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/06/20 08:51:19 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/20 10:09:35 tnn Exp $
 
 DISTNAME=	alacritty-0.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +24,18 @@ MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
+# This works around XIM errors when RTLD local-binding libX11.
+# But it might also break GPU accelerated mode.
+SUBST_CLASSES+=		rtld
+SUBST_MESSAGE.rtld=	amend RTLD_GLOBAL
+SUBST_STAGE.rtld=	pre-configure
+SUBST_FILES.rtld=	../vendor/x11-dl-2.18.5/src/link.rs
+SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
+.endif
 
 # The xcb crate depends on any version of python 3.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
