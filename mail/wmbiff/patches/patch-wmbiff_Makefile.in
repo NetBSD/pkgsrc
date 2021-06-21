@@ -1,0 +1,36 @@
+$NetBSD: patch-wmbiff_Makefile.in,v 1.1 2021/06/21 15:07:06 nia Exp $
+
+Avoid building test programs. They do nasty things like override
+read() and select() that conflicts with SSP.
+
+--- wmbiff/Makefile.in.orig	2004-10-11 00:34:02.000000000 +0000
++++ wmbiff/Makefile.in
+@@ -121,8 +121,8 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-TESTS = test_wmbiff test_tlscomm
+-noinst_PROGRAMS = test_wmbiff test_tlscomm
++TESTS =
++noinst_PROGRAMS =
+ bin_PROGRAMS = wmbiff
+ wmbiff_SOURCES = wmbiff.c socket.c Pop3Client.c LicqClient.c mboxClient.c \
+ 	maildirClient.c Imap4Client.c tlsComm.c tlsComm.h ShellClient.c  \
+@@ -154,7 +154,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/a
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES = wmbiffrc.5
+ bin_PROGRAMS = wmbiff$(EXEEXT)
+-noinst_PROGRAMS = test_wmbiff$(EXEEXT) test_tlscomm$(EXEEXT)
++noinst_PROGRAMS =
+ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
+ 
+ am_test_tlscomm_OBJECTS = test_tlscomm.$(OBJEXT) tlsComm.$(OBJEXT)
+@@ -205,7 +205,7 @@ MANS = $(man_MANS)
+ DATA = $(skin_DATA)
+ 
+ DIST_COMMON = $(srcdir)/Makefile.in Makefile.am wmbiffrc.5.in
+-SOURCES = $(test_tlscomm_SOURCES) $(test_wmbiff_SOURCES) $(EXTRA_test_wmbiff_SOURCES) $(wmbiff_SOURCES) $(EXTRA_wmbiff_SOURCES)
++SOURCES = $(wmbiff_SOURCES) $(EXTRA_wmbiff_SOURCES)
+ 
+ all: all-am
+ 
