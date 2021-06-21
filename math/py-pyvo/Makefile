@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/21 09:02:04 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/21 10:08:39 nia Exp $
 
 DISTNAME=	pyvo-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyvo.readthedocs.io/en/latest/
 COMMENT=	Astropy affiliated Python module for accessing virtual observatories
 LICENSE=	modified-bsd
+
+BROKEN+=	"Dependency missing from pkgsrc: astropy-helpers"
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
