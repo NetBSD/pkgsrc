@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2021/06/16 22:21:12 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/06/21 14:21:28 martin Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -45,6 +45,7 @@ SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 9b357196b795f7698f0763cb6cfcd39b4aea64
 SHA1 (patch-gfx_moz.build) = 0d669ac6dc1af17ea8ed7e84e4915947c2a6b1ca
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = fba2f212f84e6cc20a4269e21ed654c348ae8fee
 SHA1 (patch-gfx_skia_moz.build) = 7363e76ac75e27cffe5ee1194741d444a625b871
+SHA1 (patch-gfx_thebes_gfxFont.cpp) = 5e244e242d169203b806244a382840ca72780f27
 SHA1 (patch-gfx_thebes_moz.build) = 0435f36d573fee1bb300612e4b7dc6fcda2d5456
 SHA1 (patch-gfx_ycbcr_moz.build) = 705c36b972ef1533330e4a180002cef1c22755bf
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = 79587891c2a1716a27d4dca0e5b5880069a430eb
