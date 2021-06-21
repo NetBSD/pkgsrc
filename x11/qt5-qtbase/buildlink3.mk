@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2021/04/21 11:40:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2021/06/21 12:44:39 nia Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -27,7 +27,18 @@ PTHREAD_OPTS+=	require
 pkgbase := qt5-qtbase
 .include "../../mk/pkg-build-options.mk"
 
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/moc
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/qlalr
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/qmake
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/qvkgen
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/rcc
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/syncqt.pl
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/tracegen
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/uic
+
 .if ${PKG_BUILD_OPTIONS.qt5-qtbase:Mdbus}
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/qdbuscpp2xml
+BUILDLINK_FILES.qt5-qtbase+=	qt5/bin/qdbusxml2cpp
 .include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
