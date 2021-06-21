@@ -1,9 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2021/02/07 15:23:47 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2021/06/21 10:49:20 adam Exp $
 
+Also install libqhull.
 Fix library name on Darwin.
 
---- CMakeLists.txt.orig	2021-02-07 15:06:02.000000000 +0000
+--- CMakeLists.txt.orig	2020-09-04 01:23:31.000000000 +0000
 +++ CMakeLists.txt
+@@ -344,7 +344,7 @@ set(qhull_SHAREDP qhull_p)  # libqhull a
+ 
+ set(qhull_TARGETS_APPLICATIONS qhull rbox qconvex qdelaunay qvoronoi qhalf)
+ set(qhull_TARGETS_STATIC ${qhull_CPP} ${qhull_STATIC} ${qhull_STATICR})
+-set(qhull_TARGETS_SHARED ${qhull_SHAREDR})
++set(qhull_TARGETS_SHARED ${qhull_SHARED} ${qhull_SHAREDR})
+ 
+ set(
+     qhull_TARGETS_TEST   # Unused
 @@ -370,8 +370,6 @@ set_target_properties(${qhull_SHAREDR} P
  if(UNIX)
      target_link_libraries(${qhull_SHAREDR} m)
@@ -12,4 +22,13 @@ Fix library name on Darwin.
 -            INSTALL_NAME_DIR "${LIB_INSTALL_DIR}")
      else()
          set_target_properties(${qhull_SHAREDR} PROPERTIES 
+             INSTALL_RPATH "${LIB_INSTALL_DIR}"
+@@ -397,8 +395,6 @@ set_target_properties(${qhull_SHARED} PR
+ if(UNIX)
+     target_link_libraries(${qhull_SHARED} m)
+     if(APPLE)
+-        set_target_properties(${qhull_SHARED} PROPERTIES 
+-            INSTALL_NAME_DIR "${LIB_INSTALL_DIR}")
+     else()
+         set_target_properties(${qhull_SHARED} PROPERTIES 
              INSTALL_RPATH "${LIB_INSTALL_DIR}"
