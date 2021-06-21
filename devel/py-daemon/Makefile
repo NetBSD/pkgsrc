@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/06/02 11:42:17 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/06/21 13:59:56 nia Exp $
 
 DISTNAME=	python-daemon-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -11,6 +11,7 @@ COMMENT=	Library to implement a well-behaved Unix daemon process
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.10:../../devel/py-lockfile
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
