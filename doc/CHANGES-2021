@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3480 2021/06/21 13:54:21 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3481 2021/06/21 15:34:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5558,3 +5558,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.18 [otis 2021-06-19]
 	Updated net/yaydl to 0.6.6 [pin 2021-06-21]
 	Updated www/hackernews-tui to 0.7.1 [pin 2021-06-21]
+	Updated mail/dovecot2 to 2.3.15 [taca 2021-06-21]
+	Updated mail/dovecot2-gssapi to 2.3.15 [taca 2021-06-21]
+	Updated mail/dovecot2-ldap to 2.3.15 [taca 2021-06-21]
+	Updated mail/dovecot2-mysql to 2.3.15 [taca 2021-06-21]
+	Updated mail/dovecot2-pgsql to 2.3.15 [taca 2021-06-21]
+	Updated mail/dovecot2-sqlite to 2.3.15 [taca 2021-06-21]
