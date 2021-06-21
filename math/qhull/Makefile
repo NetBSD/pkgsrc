@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/06/15 04:07:20 thor Exp $
+# $NetBSD: Makefile,v 1.10 2021/06/21 10:49:20 adam Exp $
 
 DISTNAME=	qhull-2020-src-${LIBVERSION}
 PKGNAME=	qhull-2020.2
@@ -28,10 +28,8 @@ CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PREFIX}/${PKGMANDIR}/man1
 post-extract:
 	rm -f ${WRKSRC}/eg/q_benchmark ${WRKSRC}/eg/qhull-zip.sh
 
+# libqhull is deprecated
 post-build:
 	cd ${WRKSRC} && make libqhull
-
-post-install:
-	cp ${WRKSRC}/libqhull.* ${DESTDIR}${PREFIX}/lib/
 
 .include "../../mk/bsd.pkg.mk"
