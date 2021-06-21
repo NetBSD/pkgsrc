@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2021/04/21 11:40:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2021/06/21 12:44:39 nia Exp $
 
 BUILDLINK_TREE+=	qt5-qttools
 
@@ -12,6 +12,46 @@ BUILDLINK_PKGSRCDIR.qt5-qttools?=	../../x11/qt5-qttools
 BUILDLINK_INCDIRS.qt5-qttools+=	qt5/include
 BUILDLINK_LIBDIRS.qt5-qttools+=	qt5/lib
 BUILDLINK_LIBDIRS.qt5-qttools+=	qt5/plugins
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/assistant
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/designer
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/linguist
+.endif
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+
+.if ${PKG_BUILD_OPTIONS.qt5-qtbase:Mdbus}
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qdbus
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qdbusviewer
+.endif
+
+
+pkgbase:= qt5-qttools
+
+.include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.qt5-qttools:Mllvm}
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qdoc
+.endif
+
+
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lconvert
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lprodump
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lrelease
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lrelease-pro
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lupdate
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/lupdate-pro
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/pixeltool
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qcollectiongenerator
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qdistancefieldgenerator
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qhelpgenerator
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qtattributionsscanner
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qtdiag
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qtpaths
+BUILDLINK_FILES.qt5-qttools+=	qt5/bin/qtplugininfo
 
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 #.include "../../x11/qt5-qtwebkit/buildlink3.mk"
