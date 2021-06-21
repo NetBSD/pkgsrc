@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.174 2021/06/21 17:14:22 nia Exp $
+# $NetBSD: sites.mk,v 1.175 2021/06/21 17:15:15 nia Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -141,8 +141,6 @@ MASTER_SITE_MYSQL+=	\
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/ \
 	http://mirrors.dotsrc.org/mysql/Downloads/ \
 	ftp://mirrors.dotsrc.org/mysql/Downloads/ \
-	http://mirrors.ircam.fr/pub/mysql/Downloads/ \
-	ftp://mirrors.ircam.fr/pub/mysql/Downloads/ \
 	http://ftp.gwdg.de/pub/misc/mysql/Downloads/ \
 	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/ \
 	http://sunsite.informatik.rwth-aachen.de/mysql/Downloads/ \
