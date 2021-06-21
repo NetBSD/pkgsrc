@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.175 2021/06/21 17:15:15 nia Exp $
+# $NetBSD: sites.mk,v 1.176 2021/06/21 17:22:18 nia Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -143,30 +143,13 @@ MASTER_SITE_MYSQL+=	\
 	ftp://mirrors.dotsrc.org/mysql/Downloads/ \
 	http://ftp.gwdg.de/pub/misc/mysql/Downloads/ \
 	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/ \
-	http://sunsite.informatik.rwth-aachen.de/mysql/Downloads/ \
-	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/www.mysql.com/Downloads/ \
 	ftp://ftp.fu-berlin.de/unix/databases/mysql/Downloads/ \
-	http://mysql.mirrors.crysys.hit.bme.hu/Downloads/ \
-	ftp://ftp.crysys.hu/pub/mysql/Downloads/ \
-	http://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
-	ftp://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
-	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
-	http://mirrors.xservers.ro/mysql/Downloads/ \
-	http://mysql.infocom.ua/Downloads/ \
-	http://mirrors.dedipower.com/www.mysql.com/Downloads/ \
 	http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
 	http://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
-	http://mirror.trouble-free.net/mysql_mirror/Downloads/ \
-	http://mysql.he.net/Downloads/ \
-	http://mysql.mirrors.arminco.com/Downloads/ \
-	http://mysql.spd.co.il/Downloads/ \
 	http://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
 	ftp://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
-	ftp://mysql.cdpa.nsysu.edu.tw/Unix/Database/MySQL/Downloads/ \
-	http://mirror-fpt-telecom.fpt.net/mysql/Downloads/ \
-	http://mysql.mirror.ac.za/Downloads/ \
 	http://mysql.inspire.net.nz/Downloads/ \
 	ftp://mysql.inspire.net.nz/mysql/Downloads/
 
