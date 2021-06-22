@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/04/21 11:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/06/22 15:09:00 nia Exp $
 
 DISTNAME=	colord-1.3.5
 PKGREVISION=	10
@@ -23,6 +23,9 @@ BUILD_DEFS+=	VARBASE
 
 PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
 PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
+
+# XXX dependency for man pages missing from pkgsrc
+CONFIGURE_ENV+=		ac_cv_path_DOCBOOK2MAN=no
 
 CONFIGURE_ARGS+=	--disable-gusb
 CONFIGURE_ARGS+=	--disable-udev
