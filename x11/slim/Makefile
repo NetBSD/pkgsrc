@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2021/06/11 10:37:12 abs Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/22 08:29:55 nia Exp $
 
 DISTNAME=	slim-1.3.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim.berlios/}
 
