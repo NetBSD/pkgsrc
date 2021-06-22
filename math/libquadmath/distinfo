@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2021/05/16 10:10:54 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/06/22 14:00:47 nia Exp $
 
 SHA1 (gcc-11.1.0.tar.xz) = 9db7917f4ce337026335430814de0a5e991ec6c1
 RMD160 (gcc-11.1.0.tar.xz) = 083384ca351ea1cb6e04d15425af2103c908edf4
 SHA512 (gcc-11.1.0.tar.xz) = fd6bba0f67ff48069d03073d1a9b5e896383b1cfc9dde008e868e60a9ec5014a837d56af0ecbf467b3fb9b37ec74a676e819a18b44393a0a3c4280175b5d7ad8
 Size (gcc-11.1.0.tar.xz) = 78877216 bytes
+SHA1 (patch-libquadmath_configure) = 81e49265a8cfed3c31d43246a2fb5f96e1030582
