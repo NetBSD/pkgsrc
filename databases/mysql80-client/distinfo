@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+$NetBSD: distinfo,v 1.2 2021/06/22 10:12:36 nia Exp $
 
 SHA1 (mysql-boost-8.0.24.tar.gz) = e640d9851c1721a0550bdca38f03cb8681d61862
 RMD160 (mysql-boost-8.0.24.tar.gz) = 2577eb94d5b8651f3520706be9c40c3e924980d4
@@ -11,7 +11,7 @@ SHA1 (patch-cmake_boost.cmake) = 7452d5ef84c63bb0bd34313aa0cedafee5f41618
 SHA1 (patch-cmake_os_SunOS.cmake) = 15cf67c136c2b6e608d9379290d235d71d6b769e
 SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
 SHA1 (patch-config.h.cmake) = e6debea316c5bb8338afb693d704007d45b3941f
-SHA1 (patch-configure.cmake) = 659b93e5a1eeaf32a2937b8201050d34e83f6b5d
+SHA1 (patch-configure.cmake) = b03de49ecb8d6ce58ef24f5dcd8f0a8c95eab592
 SHA1 (patch-include_CMakeLists.txt) = 289c1454d1b7e7fe8566187b3cefc722260993b6
 SHA1 (patch-include_my__compare.h) = e6b3146252d1ebf2e2423ed3682621aa68cce6bd
 SHA1 (patch-include_my__thread.h) = 176134a238c5c2f983aadb6d1cd620165f4057bb
@@ -25,12 +25,11 @@ SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_impl_netif.h) = 4daf
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019236423aaa77b71b273d009404e4fbafe73
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_local.h) = d2149f9840dc8b65a4d9d8332bcd5088b4f9b919
 SHA1 (patch-router_src_harness_include_mysql_harness_tty.h) = ca883b2ed83b623922b58cf96f896de9847d37cb
-SHA1 (patch-router_src_harness_src_stdx_io_file_handle.cc) = 0004dfb6a65b8774096ad58825ab5fa04858e6bf
+SHA1 (patch-router_src_harness_src_stdx_io_file_handle.cc) = 5349b05663179e4ef049cfb1532514e48a3885c9
 SHA1 (patch-scripts_CMakeLists.txt) = 15be14619275f0dc39c216901b2cabc6ee517300
 SHA1 (patch-scripts_mysqld_safe.sh) = 0784314227657aa0bc3f4a0b4e21c173a86fa94b
 SHA1 (patch-sql_CMakeLists.txt) = 84af2f2e58a17bde292a665a726489b8f56f4132
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = b414e0d499f51750e1aa6e9dd7b4e7006456a079
 SHA1 (patch-sql_item_geofunc_relchecks_bgwrap.h) = d20896bfe2391d30aa9e95834c77e7de03377d76
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = e08ed53790ac8b03b38d566fee3a2688ca6065b3
-SHA1 (patch-storage_ndb_include_ndb__global.h) = 03adf28cbd965869a0e8ea312ae719d7772e63da
-SHA1 (patch-vio_viosocket.cc) = 76dfaf9c8feb39fc3043cfd83d51a47aa8a8352d
+SHA1 (patch-vio_viosocket.cc) = 15dcc0dee88e736a844aacc02e9dbc6beeb915e4
