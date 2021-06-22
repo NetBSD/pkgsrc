@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2021/06/22 12:29:45 nia Exp $
+# $NetBSD: options.mk,v 1.7 2021/06/22 12:34:23 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qt5-qtmultimedia
 PKG_SUPPORTED_OPTIONS=		alsa gstreamer openal pulseaudio
@@ -8,7 +8,8 @@ PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		gstreamer openal
-# Only enable pulseaudio on platforms where mozjs is likely to build
+# Only enable PulseAudio on platforms where mozjs is likely to build.
+# PulseAudio is enabled because Qt5 applications need it to play sounds.
 .  include "../../lang/rust/platform.mk"
 .  if (${MACHINE_ARCH} == "i386" || \
       ${MACHINE_ARCH} == "x86_64" || \
