@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2021/06/11 10:37:12 abs Exp $
+# $NetBSD: options.mk,v 1.2 2021/06/22 08:29:36 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.slim
 PKG_SUPPORTED_OPTIONS=	consolekit
-PKG_SUGGESTED_OPTIONS=	consolekit
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
