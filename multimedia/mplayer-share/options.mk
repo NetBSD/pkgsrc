@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.67 2020/01/20 21:34:01 nia Exp $
+# $NetBSD: options.mk,v 1.68 2021/06/22 12:35:45 nia Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -83,7 +83,7 @@ PKG_SUPPORTED_OPTIONS+=	xvid
 .  for o in   dvdread dvdnav gif jpeg \
 	    mplayer-menu \
 	    mplayer-default-cflags mplayer-runtime-cpudetection \
-	    oss png pulseaudio sdl vdpau lirc
+	    oss png sdl vdpau lirc
 .    if !empty(PKG_SUPPORTED_OPTIONS:M${o})
 PKG_SUGGESTED_OPTIONS+=		${o}
 .    endif
