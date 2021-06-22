@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3484 2021/06/22 11:25:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3485 2021/06/22 17:43:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5567,3 +5567,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/dovecot2-pigeonhole to 0.5.15 [taca 2021-06-21]
 	Updated emulators/qemu to 6.0.0nb2 [thorpej 2021-06-21]
 	Updated security/tor-browser to 10.0.18 [wiz 2021-06-22]
+	Updated textproc/py-feedparser to 6.0.7 [schmonz 2021-06-22]
