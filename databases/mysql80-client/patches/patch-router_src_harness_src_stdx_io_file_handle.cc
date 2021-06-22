@@ -1,4 +1,4 @@
-$NetBSD: patch-router_src_harness_src_stdx_io_file_handle.cc,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+$NetBSD: patch-router_src_harness_src_stdx_io_file_handle.cc,v 1.2 2021/06/22 10:12:37 nia Exp $
 
 Support for NetBSD - reuses F_GETPATH code originally for macOS. Also
 use correct constant for the fcntl() code - PATH_MAX, not MAXPATHLEN
@@ -14,7 +14,28 @@ use correct constant for the fcntl() code - PATH_MAX, not MAXPATHLEN
  #endif
  
  #include "mysql/harness/stdx/expected.h"
-@@ -233,9 +230,9 @@ file_handle::current_path() const noexce
+@@ -169,14 +167,15 @@ file_handle::current_path() const noexce
+         make_error_code(std::errc::bad_file_descriptor));
+   }
+ 
+-#if defined(__linux__) || defined(__sun)
++#if defined(__linux__) || defined(__sun) || \
++   (defined(__NetBSD__) && !defined(F_GETPATH))
+   const std::string in =
+-#if defined(__linux__)
+-      // /proc/self/fd/<id> is a symlink to the actual file
+-      "/proc/self/fd/"s
+-#else
++#if defined(__sun)
+       // /proc/<pid>/path/<id> is a symlink to the actual file
+       "/proc/"s + std::to_string(getpid()) + "/path/"s
++#else
++      // /proc/self/fd/<id> is a symlink to the actual file
++      "/proc/self/fd/"s
+ #endif
+       + std::to_string(handle_);
+ 
+@@ -233,9 +232,9 @@ file_handle::current_path() const noexce
    }
  
    return {std::string{path.data(), std::next(path.data(), sz)}};
