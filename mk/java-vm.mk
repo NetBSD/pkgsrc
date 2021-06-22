@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.124 2021/06/22 11:51:30 nia Exp $
+# $NetBSD: java-vm.mk,v 1.125 2021/06/22 12:02:23 nia Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -108,12 +108,12 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
         (!empty(MACHINE_PLATFORM:MNetBSD-9.*-aarch64) && \
           empty(MACHINE_PLATFORM:MNetBSD-9.99.*-aarch64))
 _PKG_JVM_DEFAULT?=	openjdk8
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) || \
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
 _PKG_JVM_DEFAULT?=	openjdk11
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf)
 _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
         !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || \
