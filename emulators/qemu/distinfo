@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.180 2021/06/16 09:39:17 jperkin Exp $
+$NetBSD: distinfo,v 1.181 2021/06/22 04:09:06 thorpej Exp $
 
 SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
@@ -48,6 +48,7 @@ SHA1 (patch-roms_qemu-palcode_sys-clipper.h) = 8983d7072b1c1e66bf0a18d2e49e50374
 SHA1 (patch-roms_qemu-palcode_vgaio.c) = c8d7adc053cd6655f005527d16647611040c09d2
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
+SHA1 (patch-target_alpha_translate.c) = c4dc5053122a5a76ba2e7f0b27076f2b42247953
 SHA1 (patch-target_i386_meson.build) = 0b6430825e1f5715f6deea556043b7e5063cf10a
 SHA1 (patch-target_i386_nvmm_meson.build) = c773fbed28a87f53263ab5299a63ca77423d164f
 SHA1 (patch-target_i386_nvmm_nvmm-accel-ops.c) = fdc29ccd0fcd47b72e7802655fe92b08f7d22bb9
