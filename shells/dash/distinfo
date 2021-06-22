@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/06/12 08:48:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/06/22 15:16:59 schmonz Exp $
 
 SHA1 (dash-0.5.11.4.tar.gz) = 7db380af711c64d2864657f33aa3cccbfaf88de3
 RMD160 (dash-0.5.11.4.tar.gz) = 0960de99180e8a668827a58256c23d9bef0615a1
 SHA512 (dash-0.5.11.4.tar.gz) = 2344782b80f69b74d00eb153a918c2293eec2316825bf83c1eb4ff787eddf78f67ca3026cfce39b1db8d5ede69c7268951eec1e5711903f2306714b665f84160
 Size (dash-0.5.11.4.tar.gz) = 240652 bytes
-SHA1 (patch-configure) = 2876f5f8221ec26595cd8ad85ec4c4c0eacf9c45
+SHA1 (patch-configure) = 0346ce553f3971ded5821553486f26a96bc6be18
