@@ -1,8 +1,7 @@
-$NetBSD: patch-configure.cmake,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+$NetBSD: patch-configure.cmake,v 1.2 2021/06/22 10:12:37 nia Exp $
 
 * check for ffsll and provide a portable version if not found
-
-$NetBSD: patch-configure.cmake,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+* check for EVFILT_USER, if missing disable kqueue (necessary on NetBSD 9.x)
 
 --- configure.cmake.orig	2021-03-22 08:44:50.000000000 +0000
 +++ configure.cmake
@@ -29,3 +28,26 @@ $NetBSD: patch-configure.cmake,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
  CHECK_FUNCTION_EXISTS (fsync HAVE_FSYNC)
  CHECK_FUNCTION_EXISTS (gethrtime HAVE_GETHRTIME)
  CHECK_FUNCTION_EXISTS (getpass HAVE_GETPASS)
+@@ -300,6 +297,7 @@ CHECK_SYMBOL_EXISTS(TIOCGWINSZ "sys/ioct
+ CHECK_SYMBOL_EXISTS(FIONREAD "sys/ioctl.h" FIONREAD_IN_SYS_IOCTL)
+ CHECK_SYMBOL_EXISTS(FIONREAD "sys/filio.h" FIONREAD_IN_SYS_FILIO)
+ CHECK_SYMBOL_EXISTS(MADV_DONTDUMP "sys/mman.h" HAVE_MADV_DONTDUMP)
++CHECK_SYMBOL_EXISTS(EVFILT_USER "sys/event.h" HAVE_EVFILT_USER)
+ CHECK_CXX_SOURCE_COMPILES(
+ "#include <sys/types.h>
+  #include <sys/stat.h>
+@@ -332,6 +330,14 @@ ELSEIF(HAVE_TIMER_CREATE AND HAVE_TIMER_
+   SET(HAVE_POSIX_TIMERS 1 CACHE INTERNAL "Have POSIX timer-related functions")
+ ENDIF()
+ 
++IF (NOT HAVE_EVFILT_USER)
++  SET(HAVE_KQUEUE 0)
++  SET(HAVE_KQUEUE_TIMERS 0)
++  IF(HAVE_TIMER_CREATE AND HAVE_TIMER_SETTIME)
++    SET(HAVE_POSIX_TIMERS 1 CACHE INTERNAL "Have POSIX timer-related functions")
++  ENDIF()
++ENDIF()
++
+ IF(NOT HAVE_POSIX_TIMERS AND NOT HAVE_KQUEUE_TIMERS AND NOT WIN32)
+   MESSAGE(FATAL_ERROR "No mysys timer support detected!")
+ ENDIF()
