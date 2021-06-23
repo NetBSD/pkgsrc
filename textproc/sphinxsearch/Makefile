@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/05/27 19:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/23 20:33:17 nia Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
 PKGNAME=	${DISTNAME:S/-/search-/:S/-release//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://sphinxsearch.com/files/
 
