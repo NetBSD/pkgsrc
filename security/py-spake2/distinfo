@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/23 21:07:29 wiz Exp $
+
+SHA1 (spake2-0.8.tar.gz) = 8269dd1fbc97ef1bb3ecceefcf8495abf3c1f972
+RMD160 (spake2-0.8.tar.gz) = 556627a21bcaa79d01698c3d82f22b00d578cc9e
+SHA512 (spake2-0.8.tar.gz) = 406719ebb9731f7900a8a5c913dd63a81dd6d48da8b8d1f8ebc903fcfca01a8638032a1a757fe402a701a65ecca6be91a42b2271db251c06adfa8bf0daa35973
+Size (spake2-0.8.tar.gz) = 58088 bytes
