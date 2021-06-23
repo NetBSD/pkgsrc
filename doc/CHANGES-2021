@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3498 2021/06/23 19:57:39 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3499 2021/06/23 19:59:19 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5584,3 +5584,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/ganglia-monitor-core to 3.7.2nb16 [bacon 2021-06-23]
 	Updated math/udunits to 2.2.26 [bacon 2021-06-23]
 	Updated textproc/man2html to 3.0.1nb4 [bacon 2021-06-23]
+	Updated textproc/R-data.table to 1.14.0 [bacon 2021-06-23]
