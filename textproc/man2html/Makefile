@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/23 19:57:31 bacon Exp $
 
 DISTNAME=	man2html3.0.1
 PKGNAME=	${DISTNAME:S/html/html-/}
@@ -9,7 +9,7 @@ MASTER_SITES+=	http://hydra.nac.uci.edu/indiv/ehood/tar/
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/Earl_Hood/}
 MASTER_SITES+=	http://people.freebsd.org/~demon/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/man2html/
 COMMENT=	Convert nroff(1) man pages to HTML
 LICENSE=	gnu-gpl-v2
