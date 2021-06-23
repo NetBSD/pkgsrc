@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3500 2021/06/23 20:00:38 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3501 2021/06/23 20:02:20 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/man2html to 3.0.1nb4 [bacon 2021-06-23]
 	Updated textproc/R-data.table to 1.14.0 [bacon 2021-06-23]
 	Updated textproc/R-cellranger to 1.1.0 [bacon 2021-06-23]
+	Updated devel/libctl to 3.2.2nb2 [bacon 2021-06-23]
