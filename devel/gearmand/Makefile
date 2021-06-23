@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2021/04/21 13:24:09 adam Exp $
+# $NetBSD: Makefile,v 1.56 2021/06/23 20:33:11 nia Exp $
 
 DISTNAME=	gearmand-1.1.19.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gearman/}
 GITHUB_PROJECT=	gearmand
