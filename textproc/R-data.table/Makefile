@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2021/06/06 13:32:51 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/23 19:59:11 bacon Exp $
 
 R_PKGNAME=	data.table
 R_PKGVER=	1.14.0
 CATEGORIES=	textproc
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extension of 'data.frame'
 LICENSE=	mpl-2.0
 
