@@ -1,37 +1,29 @@
-$NetBSD: patch-Makefile,v 1.7 2020/03/22 18:20:11 wiz Exp $
+$NetBSD: patch-Makefile,v 1.8 2021/06/23 19:35:44 adam Exp $
 
-use libtool
+Use libtool
 
---- Makefile.orig	2020-03-14 18:46:35.000000000 +0000
+--- Makefile.orig	2020-08-03 18:18:07.000000000 +0000
 +++ Makefile
-@@ -51,13 +51,14 @@ DYLIB_MAJOR_NAME=$(LIBNAME).$(DYLIBSUFFI
- DYLIBNAME=$(LIBNAME).$(DYLIBSUFFIX)
- DYLIB_MAKE_CMD=$(CC) -shared -Wl,-soname,$(DYLIB_MINOR_NAME) -o $(DYLIBNAME) $(LDFLAGS)
+@@ -58,6 +58,7 @@ DYLIBNAME=$(LIBNAME).$(DYLIBSUFFIX)
+ 
+ DYLIB_MAKE_CMD=$(CC) -shared -Wl,-soname,$(DYLIB_MINOR_NAME)
  STLIBNAME=$(LIBNAME).$(STLIBSUFFIX)
 +LANAME=$(LIBNAME).la
- STLIB_MAKE_CMD=ar rcs $(STLIBNAME)
+ STLIB_MAKE_CMD=$(AR) rcs
  
- # Platform-specific overrides
- uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
- ifeq ($(uname_S),SunOS)
-   REAL_LDFLAGS+= -ldl -lnsl -lsocket
--  DYLIB_MAKE_CMD=$(CC) -G -o $(DYLIBNAME) -h $(DYLIB_MINOR_NAME) $(LDFLAGS)
-+  DYLIB_MAKE_CMD=$(CC) -shared -o $(DYLIBNAME) -Wl,-h,$(DYLIB_MINOR_NAME) $(LDFLAGS)
- endif
- ifeq ($(uname_S),Darwin)
-   DYLIBSUFFIX=dylib
-@@ -65,7 +66,7 @@ ifeq ($(uname_S),Darwin)
-   DYLIB_MAKE_CMD=$(CC) -dynamiclib -Wl,-install_name,$(PREFIX)/$(LIBRARY_PATH)/$(DYLIB_MINOR_NAME) -o $(DYLIBNAME) $(LDFLAGS)
+ SSL_DYLIB_MINOR_NAME=$(SSL_LIBNAME).$(DYLIBSUFFIX).$(HIREDIS_SONAME)
+@@ -103,7 +104,7 @@ ifeq ($(uname_S),Darwin)
+   DYLIB_PLUGIN=-Wl,-undefined -Wl,dynamic_lookup
  endif
  
 -all: $(DYLIBNAME) $(STLIBNAME) hiredis-test $(PKGCONFNAME)
 +all: $(LANAME) $(PKGCONFNAME)
- 
- # Deps (use make dep to generate this)
- alloc.o: alloc.c fmacros.h alloc.h
-@@ -83,6 +84,11 @@ $(DYLIBNAME): $(OBJ)
- $(STLIBNAME): $(OBJ)
- 	$(STLIB_MAKE_CMD) $(OBJ)
+ ifeq ($(USE_SSL),1)
+ all: $(SSL_DYLIBNAME) $(SSL_STLIBNAME) $(SSL_PKGCONFNAME)
+ endif
+@@ -132,6 +133,11 @@ $(SSL_DYLIBNAME): $(SSL_OBJ)
+ $(SSL_STLIBNAME): $(SSL_OBJ)
+ 	$(STLIB_MAKE_CMD) $(SSL_STLIBNAME) $(SSL_OBJ)
  
 +$(LANAME): $(OBJ)
 +	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $(LANAME) $(OBJ:.o=.lo) \
@@ -40,17 +32,17 @@ use libtool
 +
  dynamic: $(DYLIBNAME)
  static: $(STLIBNAME)
- 
-@@ -153,7 +159,7 @@ check: hiredis-test
- 	kill `cat /tmp/hiredis-test-redis.pid`
+ ifeq ($(USE_SSL),1)
+@@ -220,7 +226,7 @@ check: hiredis-test
+ 	TEST_SSL=$(USE_SSL) ./test.sh
  
  .c.o:
 -	$(CC) -std=c99 -pedantic -c $(REAL_CFLAGS) $<
 +	$(LIBTOOL) --mode=compile $(CC) -std=c99 -pedantic -c $(REAL_CFLAGS) $<
  
  clean:
- 	rm -rf $(DYLIBNAME) $(STLIBNAME) $(TESTS) $(PKGCONFNAME) examples/hiredis-example* *.o *.gcda *.gcno *.gcov
-@@ -180,9 +186,7 @@ install: $(DYLIBNAME) $(STLIBNAME) $(PKG
+ 	rm -rf $(DYLIBNAME) $(STLIBNAME) $(SSL_DYLIBNAME) $(SSL_STLIBNAME) $(TESTS) $(PKGCONFNAME) examples/hiredis-example* *.o *.gcda *.gcno *.gcov
+@@ -261,9 +267,7 @@ install: $(DYLIBNAME) $(STLIBNAME) $(PKG
  	mkdir -p $(INSTALL_INCLUDE_PATH) $(INSTALL_INCLUDE_PATH)/adapters $(INSTALL_LIBRARY_PATH)
  	$(INSTALL) hiredis.h async.h read.h sds.h alloc.h $(INSTALL_INCLUDE_PATH)
  	$(INSTALL) adapters/*.h $(INSTALL_INCLUDE_PATH)/adapters
