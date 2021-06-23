@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3491 2021/06/23 19:05:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3492 2021/06/23 19:41:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5574,3 +5574,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 1.0.0 [schmonz 2021-06-23]
 	Updated security/cvm to 0.97nb3 [schmonz 2021-06-23]
 	Updated devel/libffcall to 2.4 [wiz 2021-06-23]
+	Updated net/ndpi to 3.4 [adam 2021-06-23]
+	Updated net/ntopng to 4.2 [adam 2021-06-23]
+	Updated databases/hiredis to 1.0.0 [adam 2021-06-23]
+	Updated sysutils/ansible-base to 2.10.11 [adam 2021-06-23]
