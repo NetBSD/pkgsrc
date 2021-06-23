@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/05/24 19:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/06/23 19:44:16 bacon Exp $
 
 DISTNAME=	munge-0.5.13
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 LICENSE=	gnu-gpl-v3
