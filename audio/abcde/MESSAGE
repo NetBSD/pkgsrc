@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2021/06/04 11:30:35 gdt Exp $
+$NetBSD: MESSAGE,v 1.6 2021/06/23 13:10:28 gdt Exp $
 
 You need to install at least one encoder to use with abcde.  It has support
 for the following encoders in pkgsrc:
@@ -7,7 +7,6 @@ for the following encoders in pkgsrc:
     audio/bladeenc
     audio/fdk-aac
     audio/flac
-    audio/gogo
     audio/lame
     audio/musepack
     audio/speex
