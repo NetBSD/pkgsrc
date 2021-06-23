@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.34 2021/05/23 15:36:45 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.35 2021/06/23 19:55:39 nia Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -67,7 +67,7 @@ _SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
 # the default version is installed, the first accepted installed version will
 # be chosen.
 #
-MYSQL_VERSION_DEFAULT?=		57
+MYSQL_VERSION_DEFAULT?=		mariadb105
 MYSQL_VERSIONS_ACCEPTED?=	57 56 80 mariadb105 mariadb104
 
 #
