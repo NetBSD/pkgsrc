@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/03/19 13:35:57 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/23 21:08:34 wiz Exp $
 
 DISTNAME=	magic-wormhole-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-humanize-[0-9]*:../../textproc/py-humanize
 #DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../security/py-hkdf
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-#DEPENDS+=	${PYPKGPREFIX}-spake2>=0.8:../../security/py-spake2
+DEPENDS+=	${PYPKGPREFIX}-spake2>=0.8:../../security/py-spake2
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.13.0:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.5.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=18.0.2:../../net/py-txtorcon
