@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:35:42 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/23 20:33:17 nia Exp $
 #
 
 DISTNAME=	roller-release-${ROLLER_VER}-standard
 PKGNAME=	apache-roller-${ROLLER_VER}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-standard//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=roller/roller-5.1/v${ROLLER_VER}/}

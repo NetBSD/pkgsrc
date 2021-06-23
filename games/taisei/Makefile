@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/05/20 19:55:47 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/06/23 20:33:11 nia Exp $
 
 DISTNAME=	taisei-v1.3.2
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -13,6 +13,7 @@ COMMENT=	Open source Touhou Project fan game
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
 
 # C++14
 GCC_REQD+=	5
@@ -51,6 +52,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/cglm/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glad/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
