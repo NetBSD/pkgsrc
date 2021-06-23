@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3487 2021/06/23 18:10:35 thor Exp $
+$NetBSD: CHANGES-2021,v 1.3488 2021/06/23 18:18:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-feedparser to 6.0.7 [schmonz 2021-06-22]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q2 branch [gdt 2021-06-23]
 	Updated math/arpack-ng to 3.8.0nb1 [thor 2021-06-23]
+	Updated textproc/py-feedparser to 6.0.8 [schmonz 2021-06-23]
