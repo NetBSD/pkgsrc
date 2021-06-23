@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3489 2021/06/23 18:20:23 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3490 2021/06/23 18:51:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5572,3 +5572,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/arpack-ng to 3.8.0nb1 [thor 2021-06-23]
 	Updated textproc/py-feedparser to 6.0.8 [schmonz 2021-06-23]
 	Updated devel/py-approvaltests to 1.0.0 [schmonz 2021-06-23]
+	Updated security/cvm to 0.97nb3 [schmonz 2021-06-23]
