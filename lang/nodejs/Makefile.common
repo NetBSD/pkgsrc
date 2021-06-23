@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2020/12/16 07:43:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.42 2021/06/23 08:20:20 nia Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs8/Makefile
 # used by lang/nodejs10/Makefile
@@ -30,6 +30,10 @@ PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
 MAKE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
+
+.if ${MACHINE_ARCH} == "powerpc"
+CONFIGURE_ARGS+=	--dest-cpu=ppc
+.endif
 
 .if ${OPSYS} == "Linux" && !exists(/usr/bin/gold)
 CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
