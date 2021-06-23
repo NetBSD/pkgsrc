@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3504 2021/06/23 20:44:46 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3505 2021/06/23 21:00:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5595,3 +5595,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/grafana to 8.0.3 [tnn 2021-06-23]
 	Updated devel/git-filter-repo to 2.32.0 [tnn 2021-06-23]
 	Updated x11/tint2 to 17.0.1 [tnn 2021-06-23]
+	Updated security/age to 1.0.0rc3 [wiz 2021-06-23]
