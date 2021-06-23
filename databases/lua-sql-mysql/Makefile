@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/10/26 11:11:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/23 20:33:07 nia Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-mysql/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MySQL bindings for Lua

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/10/24 22:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/23 20:33:17 nia Exp $
 
 COLLECTD_PACKAGE=	mysql
 
 PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${MYSQL_VERSION}/}
+PKGREVISION=		1
 COMMENT=		Statistics collection daemon - mysql plugin
 
 .include "../../mk/mysql.buildlink3.mk"

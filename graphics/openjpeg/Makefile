@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2021/01/06 12:32:34 adam Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/23 20:33:11 nia Exp $
 
 DISTNAME=	openjpeg-2.4.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uclouvain/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

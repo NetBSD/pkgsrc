@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/09/18 02:36:01 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/23 20:33:10 nia Exp $
 #
 
 DISTNAME=	mysql-ruby-2.8.2
 PKGNAME=	${RUBY_PKGPREFIX}-mysql28-2.8.2
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 
