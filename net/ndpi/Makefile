@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/05/25 20:25:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/23 19:31:49 adam Exp $
 
-DISTNAME=	nDPI-3.2
+DISTNAME=	nDPI-3.4
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
