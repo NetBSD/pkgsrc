@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2019/04/08 16:41:45 adam Exp $
-${PYSITELIB}/numba/npyufunc/omppool.so
+@comment $NetBSD: PLIST.Linux,v 1.3 2021/06/23 15:36:26 thor Exp $
+${PYSITELIB}/numba/np/ufunc/omppool.so
