@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3485 2021/06/22 17:43:09 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3486 2021/06/23 17:37:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/qemu to 6.0.0nb2 [thorpej 2021-06-21]
 	Updated security/tor-browser to 10.0.18 [wiz 2021-06-22]
 	Updated textproc/py-feedparser to 6.0.7 [schmonz 2021-06-22]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q2 branch [gdt 2021-06-23]
