@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3496 2021/06/23 19:50:40 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3497 2021/06/23 19:54:10 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5582,3 +5582,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/slurm-wlm to 19.05.5nb10 [bacon 2021-06-23]
 	Updated devel/swig2 to 2.0.12nb4 [bacon 2021-06-23]
 	Updated parallel/ganglia-monitor-core to 3.7.2nb16 [bacon 2021-06-23]
+	Updated math/udunits to 2.2.26 [bacon 2021-06-23]
