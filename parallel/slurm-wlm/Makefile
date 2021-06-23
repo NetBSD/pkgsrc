@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/05/24 19:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/06/23 19:45:36 bacon Exp $
 
 DISTNAME=	slurm-19.05.5
 PKGNAME=	${DISTNAME:S/-/-wlm-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 
