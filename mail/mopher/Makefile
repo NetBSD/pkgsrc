@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/05/14 13:54:01 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/23 20:33:12 nia Exp $
 
 DISTNAME=		mopher-0.5.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://mopher.org/download/
 

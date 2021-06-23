@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:25 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/23 20:33:13 nia Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	WS 23xx weather station MySQL support
 LICENSE=	gnu-gpl-v2
 
