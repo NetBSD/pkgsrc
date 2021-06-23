@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2021/05/14 12:57:27 nia Exp $
+# $NetBSD: Makefile,v 1.52 2021/06/23 19:34:15 adam Exp $
 
-DISTNAME=	ntopng-4.0
-PKGREVISION=	6
+DISTNAME=	ntopng-4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -44,10 +43,10 @@ SUBST_SED.fix-vers+=	-e 's,@SHORT_VERSION@,${PKGVERSION_NOREV},g'
 CHECK_PORTABILITY_SKIP=	third-party/zeromq-4.1.7/configure
 
 pre-configure:
-	cd ${WRKSRC} && cp configure.seed configure.ac && autoreconf -fiv
+	cd ${WRKSRC} && ${CP} configure.seed configure.ac && autoreconf -fiv
 
 post-build:
-	find ${WRKSRC}/httpdocs -type f -print0 | xargs -0 chmod a-x
+	${FIND} ${WRKSRC}/httpdocs -type f -print0 | xargs -0 chmod a-x
 
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
