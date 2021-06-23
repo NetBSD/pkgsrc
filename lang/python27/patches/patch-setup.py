@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2018/06/17 19:21:21 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/06/23 18:30:24 schmonz Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
@@ -10,11 +10,21 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
 
 Build the _ssl module with pkgsrc choiced OpenSSL.
 
+macOS arm64 support, via MacPorts.
+
 cygwin 2.7.3-no-libm.patch
 
---- setup.py.orig	2018-04-29 22:47:33.000000000 +0000
+--- setup.py.orig	2021-06-22 19:20:43.000000000 +0000
 +++ setup.py
-@@ -33,7 +33,7 @@ host_platform = get_platform()
+@@ -16,6 +16,7 @@ from distutils.command.build_ext import 
+ from distutils.command.install import install
+ from distutils.command.install_lib import install_lib
+ from distutils.spawn import find_executable
++import distutils.command.config
+ 
+ cross_compiling = "_PYTHON_HOST_PLATFORM" in os.environ
+ 
+@@ -33,7 +34,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -23,7 +33,7 @@ cygwin 2.7.3-no-libm.patch
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -454,10 +454,15 @@ class PyBuildExt(build_ext):
+@@ -500,10 +501,15 @@ class PyBuildExt(build_ext):
              os.unlink(tmpfile)
  
      def detect_modules(self):
@@ -43,7 +53,7 @@ cygwin 2.7.3-no-libm.patch
          if cross_compiling:
              self.add_gcc_paths()
          self.add_multiarch_paths()
-@@ -569,7 +574,7 @@ class PyBuildExt(build_ext):
+@@ -615,7 +621,7 @@ class PyBuildExt(build_ext):
  
          # Check for MacOS X, which doesn't need libm.a at all
          math_libs = ['m']
@@ -52,7 +62,7 @@ cygwin 2.7.3-no-libm.patch
              math_libs = []
  
          # XXX Omitted modules: gl, pure, dl, SGI-specific modules
-@@ -745,8 +750,6 @@ class PyBuildExt(build_ext):
+@@ -791,8 +797,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -61,7 +71,7 @@ cygwin 2.7.3-no-libm.patch
          elif self.compiler.find_library_file(lib_dirs, 'ncurses'):
              curses_library = 'ncurses'
          elif self.compiler.find_library_file(lib_dirs, 'curses'):
-@@ -809,11 +812,10 @@ class PyBuildExt(build_ext):
+@@ -855,11 +859,10 @@ class PyBuildExt(build_ext):
                                 libraries=math_libs) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -76,7 +86,7 @@ cygwin 2.7.3-no-libm.patch
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -821,9 +823,7 @@ class PyBuildExt(build_ext):
+@@ -867,9 +870,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -87,7 +97,7 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -842,7 +842,7 @@ class PyBuildExt(build_ext):
+@@ -888,7 +889,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -96,7 +106,7 @@ cygwin 2.7.3-no-libm.patch
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -942,175 +942,6 @@ class PyBuildExt(build_ext):
+@@ -988,175 +989,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -272,7 +282,7 @@ cygwin 2.7.3-no-libm.patch
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1216,46 +1047,32 @@ class PyBuildExt(build_ext):
+@@ -1262,46 +1094,32 @@ class PyBuildExt(build_ext):
          else:
              missing.append('_sqlite3')
  
@@ -342,7 +352,7 @@ cygwin 2.7.3-no-libm.patch
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1267,7 +1084,7 @@ class PyBuildExt(build_ext):
+@@ -1313,7 +1131,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -351,7 +361,7 @@ cygwin 2.7.3-no-libm.patch
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1311,18 +1128,14 @@ class PyBuildExt(build_ext):
+@@ -1357,18 +1175,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -378,7 +388,7 @@ cygwin 2.7.3-no-libm.patch
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -1383,8 +1196,7 @@ class PyBuildExt(build_ext):
+@@ -1429,8 +1243,7 @@ class PyBuildExt(build_ext):
              missing.append('_curses')
  
          # If the curses module is enabled, check for the panel module
@@ -388,7 +398,32 @@ cygwin 2.7.3-no-libm.patch
              exts.append( Extension('_curses_panel', ['_curses_panel.c'],
                                     include_dirs = curses_incs,
                                     libraries = [panel_library] + curses_libs) )
-@@ -2296,9 +2108,9 @@ def main():
+@@ -2129,6 +1942,7 @@ class PyBuildExt(build_ext):
+ 
+         if host_platform == 'darwin':
+             sources.append('_ctypes/malloc_closure.c')
++            extra_compile_args.append('-DUSING_MALLOC_CLOSURE_DOT_C=1')
+             sources.append('_ctypes/darwin/dlfcn_simple.c')
+             extra_compile_args.append('-DMACOSX')
+             include_dirs.append('_ctypes/darwin')
+@@ -2191,6 +2005,16 @@ class PyBuildExt(build_ext):
+                     break
+ 
+         if ffi_inc and ffi_lib:
++            config = distutils.command.config.config(self.distribution)
++            config._check_compiler()
++            if any(cc in config.compiler.compiler_so for cc in ('gcc', 'clang')):
++                config.compiler.compiler_so += ["-Wno-unguarded-availability-new", "-Wno-unused-value"]
++            if config.check_func("ffi_prep_closure_loc", headers=['ffi.h'], include_dirs=[ffi_inc]):
++                ext.extra_compile_args.append("-DHAVE_FFI_PREP_CLOSURE_LOC=1")
++            if config.check_func("ffi_prep_cif_var", headers=['ffi.h'], include_dirs=[ffi_inc]):
++                ext.extra_compile_args.append("-DHAVE_FFI_PREP_CIF_VAR=1")
++            if host_platform == 'darwin' and config.check_func("ffi_closure_alloc", headers=['ffi.h'], include_dirs=[ffi_inc]):
++                ext.extra_compile_args.append("-DHAVE_FFI_CLOSURE_ALLOC=1")
+             ext.include_dirs.extend(ffi_inc)
+             ext.libraries.append(ffi_lib)
+             self.use_system_libffi = True
+@@ -2342,9 +2166,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install

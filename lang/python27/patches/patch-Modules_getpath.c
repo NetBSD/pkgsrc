@@ -1,10 +1,18 @@
-$NetBSD: patch-Modules_getpath.c,v 1.3 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Modules_getpath.c,v 1.4 2021/06/23 18:30:24 schmonz Exp $
 
 * from cygport 2.7.3-getpath-exe-extension.patch
 
---- Modules/getpath.c.orig	2014-12-10 15:59:55.000000000 +0000
+--- Modules/getpath.c.orig	2021-06-22 19:20:43.000000000 +0000
 +++ Modules/getpath.c
-@@ -451,6 +451,28 @@ calculate_path(void)
+@@ -8,6 +8,7 @@
+ 
+ #ifdef __APPLE__
+ #include <mach-o/dyld.h>
++#include <AvailabilityMacros.h>
+ #endif
+ 
+ /* Search in some common locations for the associated Python libraries.
+@@ -428,6 +429,28 @@ calculate_path(void)
                          if (isxfile(progpath))
                                  break;
  
