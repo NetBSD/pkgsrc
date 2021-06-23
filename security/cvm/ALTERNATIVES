@@ -1,1 +1,1 @@
-bin/nbcheckpassword @PREFIX@/bin/cvm-checkpassword
+bin/nbcheckpassword @PREFIX@/bin/cvm-checkpassword @PREFIX@/bin/cvm-unix
