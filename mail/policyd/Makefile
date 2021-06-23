@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/04/13 07:55:06 ghen Exp $
+# $NetBSD: Makefile,v 1.11 2021/06/23 20:33:13 nia Exp $
 
 DISTNAME=		policyd-1.82
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=policyd/}
 

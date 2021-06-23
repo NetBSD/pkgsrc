@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/01 14:16:48 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/23 20:33:11 nia Exp $
 
 DISTNAME=	ftgl-2.1.3-rc5
 PKGNAME=	${DISTNAME:S/-r/r/1}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ftgl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/ftgl/
+HOMEPAGE=	https://github.com/frankheckenbach/ftgl
 COMMENT=	C++ library of Freetype2 in OpenGL applications
 LICENSE=	2-clause-bsd
 
