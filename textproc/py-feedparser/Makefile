@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/06/22 17:43:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2021/06/23 18:18:42 schmonz Exp $
 
-DISTNAME=		feedparser-6.0.7
+DISTNAME=		feedparser-6.0.8
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_PYPI:=f/feedparser/}
