@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 21:12:55 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/23 20:27:16 nia Exp $
 #
 
 DISTNAME=	lynis-2.6.2
@@ -7,7 +7,7 @@ MASTER_SITES=	https://cisofy.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cisofy.com/solutions/
-COMMENT=	Perform security health scans for Linux, macOS, and Unix
+COMMENT=	Perform security health scans
 LICENSE=	gnu-gpl-v3
 
 NO_BUILD=	yes
