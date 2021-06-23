@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.22 2021/06/04 18:59:18 adam Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.23 2021/06/23 19:08:10 schmonz Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -38,6 +38,7 @@ override-fuse-pkgconfig:
 .endif
 
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/osxfuse
+BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/fuse
 # Too much!  But allows -losxfuse to work.
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/lib
 
