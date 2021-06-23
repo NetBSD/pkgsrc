@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3503 2021/06/23 20:16:42 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3504 2021/06/23 20:44:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5590,3 +5590,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-rematch to 1.0.1 [bacon 2021-06-23]
 	Updated devel/py-xdis to 5.0.10 [adam 2021-06-23]
 	Updated textproc/py-ICU to 2.7.4 [adam 2021-06-23]
+	Updated databases/postgresql-timescaledb to 2.3.0 [tnn 2021-06-23]
+	Updated databases/promscale to 0.4.1 [tnn 2021-06-23]
+	Updated www/grafana to 8.0.3 [tnn 2021-06-23]
+	Updated devel/git-filter-repo to 2.32.0 [tnn 2021-06-23]
+	Updated x11/tint2 to 17.0.1 [tnn 2021-06-23]
