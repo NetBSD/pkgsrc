@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/06/07 09:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/06/23 08:34:39 nia Exp $
 
 DISTNAME=	libtorrent-rasterbar-1.2.14
 CATEGORIES=	net
@@ -25,4 +25,5 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
