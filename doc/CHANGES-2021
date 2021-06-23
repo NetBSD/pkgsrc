@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3493 2021/06/23 19:44:27 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3494 2021/06/23 19:45:44 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5579,3 +5579,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/hiredis to 1.0.0 [adam 2021-06-23]
 	Updated sysutils/ansible-base to 2.10.11 [adam 2021-06-23]
 	Updated security/munge to 0.5.13nb6 [bacon 2021-06-23]
+	Updated parallel/slurm-wlm to 19.05.5nb10 [bacon 2021-06-23]
