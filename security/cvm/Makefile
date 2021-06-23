@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/11/19 09:35:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2021/06/23 18:51:03 schmonz Exp $
 #
 
 DISTNAME=		cvm-0.97
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
