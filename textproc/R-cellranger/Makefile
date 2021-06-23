@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:56 brook Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/23 20:00:32 bacon Exp $
 
 R_PKGNAME=	cellranger
 R_PKGVER=	1.1.0
 CATEGORIES=	textproc
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Translate spreadsheet cell ranges to rows and columns
 LICENSE=	mit
 
