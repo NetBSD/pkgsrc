@@ -1,22 +1,22 @@
-$NetBSD: patch-configure.seed,v 1.5 2020/05/25 20:26:51 adam Exp $
+$NetBSD: patch-configure.seed,v 1.6 2021/06/23 19:34:15 adam Exp $
 
 Portability fix.
 Detect system hiredis.
 Link against dynamkc libndpi (-Bstatic is not portable).
 On Darwin, install into man/.
 
---- configure.seed.orig	2020-03-27 16:51:24.000000000 +0000
+--- configure.seed.orig	2020-11-02 21:27:19.000000000 +0000
 +++ configure.seed
-@@ -89,7 +89,7 @@ fi
+@@ -99,7 +99,7 @@ fi
  
  if [ test -f /usr/bin/lsb_release ]; then
-    CODENAME=`/usr/bin/lsb_release -c|cut -f 2`
--   if [[ $CODENAME == "wheezy" ]]; then :
-+   if [[ $CODENAME = "wheezy" ]]; then :
-      CPPFLAGS="${CPPFLAGS} -DOLD_NETFILTER_INTERFACE=1"
-    fi
+   CODENAME=`/usr/bin/lsb_release -c|cut -f 2`
+-  if [[ $CODENAME == "wheezy" ]]; then :
++  if [[ $CODENAME = "wheezy" ]]; then :
+     CPPFLAGS="${CPPFLAGS} -DOLD_NETFILTER_INTERFACE=1"
+   fi
  fi
-@@ -133,8 +133,7 @@ AC_ARG_WITH(ndpi-includes,
+@@ -143,8 +143,7 @@ AC_ARG_WITH(ndpi-includes,
  
  PKG_CHECK_MODULES([NDPI], [libndpi >= 2.0], [
     NDPI_INC=`echo $NDPI_CFLAGS | sed -e "s/[ ]*$//"`
@@ -26,17 +26,17 @@ On Darwin, install into man/.
     NDPI_LIB_DEP=
     ], [
        AC_MSG_CHECKING(for nDPI source)
-@@ -332,7 +331,7 @@ fi
+@@ -360,7 +359,7 @@ fi
  
  DATE=`date +"%Y-%m-%d"`
  
 -if test -d "/usr/include/hiredis"; then
 +if `pkg-config --exists hiredis`; then
-  AC_DEFINE_UNQUOTED(HAVE_HIREDIS, 1, [Local hiredis package present])
-  HIREDIS_INC="`pkg-config --cflags hiredis` -I/usr/include/hiredis"
-  HIREDIS_LIB="`pkg-config --libs hiredis` -lhiredis"
-@@ -629,11 +628,7 @@ then
-  INSTALL_DIR=${ac_default_prefix}
+   AC_DEFINE_UNQUOTED(HAVE_HIREDIS, 1, [Local hiredis package present])
+   HIREDIS_INC="`pkg-config --cflags hiredis` -I/usr/include/hiredis"
+   HIREDIS_LIB="`pkg-config --libs hiredis` -lhiredis"
+@@ -697,11 +696,7 @@ if test $INSTALL_DIR = "NONE"; then
+   INSTALL_DIR=${ac_default_prefix}
  fi
  
 -if test $SYSTEM = "Darwin"; then
@@ -46,4 +46,4 @@ On Darwin, install into man/.
 -fi
  
  if test $SYSTEM = "OpenBSD"; then
- INSTALL_DIR=${prefix}
+   INSTALL_DIR=${prefix}
