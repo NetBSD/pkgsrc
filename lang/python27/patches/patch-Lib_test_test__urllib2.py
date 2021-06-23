@@ -1,11 +1,11 @@
-$NetBSD: patch-Lib_test_test__urllib2.py,v 1.2 2020/09/20 12:10:27 mgorny Exp $
+$NetBSD: patch-Lib_test_test__urllib2.py,v 1.3 2021/06/23 18:30:24 schmonz Exp $
 
 bpo-39503 (CVE-2020-8492): ReDoS on AbstractBasicAuthHandler
 
 taken from:
 https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e65e11dd0234f2f51ebaef61fc6e848d4059
 
---- Lib/test/test_urllib2.py.orig	2020-04-19 21:13:39.000000000 +0000
+--- Lib/test/test_urllib2.py.orig	2021-06-22 19:20:43.000000000 +0000
 +++ Lib/test/test_urllib2.py
 @@ -1128,42 +1128,67 @@ class HandlerTests(unittest.TestCase):
          self.assertEqual(req.get_host(), "proxy.example.com:3128")
@@ -29,26 +29,10 @@ https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e
                                "http://acme.example.com/protected",
 -                              "http://acme.example.com/protected"
 -                             )
-+                              "http://acme.example.com/protected")
- 
+-
 -    def test_basic_auth_with_single_quoted_realm(self):
 -        self.test_basic_auth(quote_char="'")
-+    def test_basic_auth(self):
-+        realm = "realm2@example.com"
-+        realm2 = "realm2@example.com"
-+        basic = 'Basic realm="{realm}"'.format(realm=realm)
-+        basic2 = 'Basic realm="{realm2}"'.format(realm2=realm2)
-+        other_no_realm = 'Otherscheme xxx'
-+        digest = ('Digest realm="{realm2}", '
-+                  'qop="auth, auth-int", '
-+                  'nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093", '
-+                  'opaque="5ccc069c403ebaf9f0171e9517f40e41"'
-+                  .format(realm2=realm2))
-+        for realm_str in (
-+            # test "quote" and 'quote'
-+            'Basic realm="{realm}"'.format(realm=realm),
-+            "Basic realm='{realm}'".format(realm=realm),
- 
+-
 -    def test_basic_auth_with_unquoted_realm(self):
 -        opener = OpenerDirector()
 -        password_manager = MockPasswordManager()
@@ -65,6 +49,24 @@ https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e
 -                                  "http://acme.example.com/protected",
 -                                  "http://acme.example.com/protected"
 -                                 )
++                              "http://acme.example.com/protected")
+ 
++    def test_basic_auth(self):
++        realm = "realm2@example.com"
++        realm2 = "realm2@example.com"
++        basic = 'Basic realm="{realm}"'.format(realm=realm)
++        basic2 = 'Basic realm="{realm2}"'.format(realm2=realm2)
++        other_no_realm = 'Otherscheme xxx'
++        digest = ('Digest realm="{realm2}", '
++                  'qop="auth, auth-int", '
++                  'nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093", '
++                  'opaque="5ccc069c403ebaf9f0171e9517f40e41"'
++                  .format(realm2=realm2))
++        for realm_str in (
++            # test "quote" and 'quote'
++            'Basic realm="{realm}"'.format(realm=realm),
++            "Basic realm='{realm}'".format(realm=realm),
++
 +            # charset is ignored
 +            'Basic realm="{realm}", charset="UTF-8"'.format(realm=realm),
 +
@@ -85,7 +87,7 @@ https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e
 +            headers = ['WWW-Authenticate: Basic realm={realm}'
 +                       .format(realm=realm)]
 +            self.check_basic_auth(headers, realm)
- 
++
 +        # Multiple headers: one challenge per header.
 +        # Use the first Basic realm.
 +        for challenges in (
