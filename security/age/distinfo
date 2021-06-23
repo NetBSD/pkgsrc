@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2021/06/09 17:03:49 abs Exp $
+$NetBSD: distinfo,v 1.2 2021/06/23 21:00:24 wiz Exp $
 
-SHA1 (age-1.0.0rc2.tar.gz) = 2d41898766718aff00dbe540fbc1155c47cb0900
-RMD160 (age-1.0.0rc2.tar.gz) = 1fb32ed7087194c446b016e36cd8ba90b57a4468
-SHA512 (age-1.0.0rc2.tar.gz) = 488255ccf268a45f304d3fdcacbf32e214835516900b61e0554fe586bf61161e3bba2b1ee88e732490cdf82118a922c372133c888753d51f4d7afcb80421c088
-Size (age-1.0.0rc2.tar.gz) = 56579 bytes
+SHA1 (age-1.0.0rc3.tar.gz) = 5ad094e4b777ce87af01931a202662bcb32ddd28
+RMD160 (age-1.0.0rc3.tar.gz) = 8e1bf0687152111cf9740e032ef08454a2463067
+SHA512 (age-1.0.0rc3.tar.gz) = d5fe881255d07a174b3e325bf58631a4a45c50cc8bbdf0d0711fa6de23c6b3eeb31fc21c549b2921f8f4b1031d0984a2d30f1664a4a483ee604f86dd419c9518
+Size (age-1.0.0rc3.tar.gz) = 59002 bytes
 SHA1 (filippo.io_edwards25519_@v_v1.0.0-beta.3.mod) = 3931fbb258c9d652e14382b37bb98fdfb13d1a53
 RMD160 (filippo.io_edwards25519_@v_v1.0.0-beta.3.mod) = a77d46e3a0756cc75eea67d6910d07d501bf67c5
 SHA512 (filippo.io_edwards25519_@v_v1.0.0-beta.3.mod) = 8cbfb9981941ccdb0f1c0848e267a7c4e9b14fbe6d0507e2f4faf3cb1b494657f33eb70bdf07602ed90f39c1d9b3713b7be95cd761f0d7a8f04fa99ece99386e
@@ -28,6 +28,10 @@ SHA1 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.mod) = 6ef6a99d8189
 RMD160 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.mod) = afd75680a7f105a82833b8ce7c412fd2c478ff29
 SHA512 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.mod) = 26b6c92eecd2208967336d4d23f8a71f77f9a73643ad1e5cd84dee36b2f626fffc806e4dd33acc284831a0961e2b363d898a747903235945fbfb665c5b4d5ef2
 Size (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.mod) = 119 bytes
+SHA1 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.zip) = e11950aa16878d4d151f72e4944540533d629914
+RMD160 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.zip) = 87f82c0cab1b8297d2d57c1e0ed70ad376c81a5c
+SHA512 (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.zip) = 0d740cd05300d902cf60f54692cbdf91758457ac21a66738beac133b3a31930b3833b10978750efb59450d75f0b750985e28218d04e1d8e3e68c4c883fadab58
+Size (golang.org_x_net_@v_v0.0.0-20190404232315-eb5bcb51f2a3.zip) = 1277629 bytes
 SHA1 (golang.org_x_sys_@v_v0.0.0-20190215142949-d0b11bdaac8a.mod) = 536a84fdba3fc4d815d54fbe7255aa493fbd3ecb
 RMD160 (golang.org_x_sys_@v_v0.0.0-20190215142949-d0b11bdaac8a.mod) = d0b39e9f156ac4a72364d57c54e08d92f91000c0
 SHA512 (golang.org_x_sys_@v_v0.0.0-20190215142949-d0b11bdaac8a.mod) = ffe50fccf7f1d200f2ebc805b190e3f10c5a3184458a38f4590e520d7ce115e1520fbabe56651bbdc2e08da4a8db5ac86d0e88728efde3ab26c64ab4e0cd604c
@@ -52,3 +56,7 @@ SHA1 (golang.org_x_text_@v_v0.3.0.mod) = f3a33d4b075f49232516e483aeb74d4015994c8
 RMD160 (golang.org_x_text_@v_v0.3.0.mod) = 2954886f81bdca9d743aac213cd223e1ec7f8484
 SHA512 (golang.org_x_text_@v_v0.3.0.mod) = ca081ef7cccd7bbedc6843fbe0c452352661a07e1298cd02ff338ed79d807c6401d613a3cf20011189d2f98a794ffa410547b3e352eb58a6f0a84822285d391d
 Size (golang.org_x_text_@v_v0.3.0.mod) = 25 bytes
+SHA1 (golang.org_x_text_@v_v0.3.0.zip) = 6d55d1ba31d50719f91c77cd1fe44553f9ce07e0
+RMD160 (golang.org_x_text_@v_v0.3.0.zip) = 6e5ab0fad42b4bac5d765044b4d03aae57aaf7bd
+SHA512 (golang.org_x_text_@v_v0.3.0.zip) = 982d78f580a7eac99a0c51e6f1fd2b2c3b91f56cd5e2b96fe960510049f7daf5915264f73f55f05675eee232a52998f9667fa84a9ccba15ed7819e4c93f583a7
+Size (golang.org_x_text_@v_v0.3.0.zip) = 6349244 bytes
