@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.7 2019/04/30 13:22:09 mef Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.8 2021/06/24 00:09:06 gdt Exp $
 
 (1)
 Avoid following error (interim, only valid with db5)
@@ -10,14 +10,9 @@ gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
 tqsl-2.0.1/apps/tqsl.cpp:2963:10: error: #pragma GCC diagnostic not allowed inside functions
 tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed inside functions
 
-(3) Trial code for wxGTK30
-
-(4) Avoid error with wxGTK30
- error: cannot pass objects of non-trivially-copyable type 'class wxCStrData' through '...'
-
---- apps/tqsl.cpp.orig	2018-11-24 07:35:22.000000000 +0900
-+++ apps/tqsl.cpp	2019-01-23 22:37:52.667485645 +0900
-@@ -67,7 +67,7 @@
+--- apps/tqsl.cpp.orig	2020-11-18 19:03:28.000000000 +0000
++++ apps/tqsl.cpp
+@@ -70,7 +70,7 @@
  #ifdef USE_LMDB
  #include <lmdb.h> //only for version info!
  #else
@@ -26,12 +21,3 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
  #endif
  
  #include <iostream>
-@@ -3628,7 +3628,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
- // The macro for declaring a hash map defines a couple of typedefs
- // that it never uses. Current GCC warns about those. The pragma
- // below suppresses those warnings for those.
--#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__clang__)
-+#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__clang__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
- 	#pragma GCC diagnostic ignored "-Wunused-local-typedefs"
- #endif
- void
