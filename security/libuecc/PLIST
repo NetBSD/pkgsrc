@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/24 13:55:26 nia Exp $
+include/${PKGNAME}/libuecc/ecc.h
+lib/libuecc.a
+lib/libuecc.so
+lib/libuecc.so.0
+lib/libuecc.so.0.${PKGVERSION}
+lib/pkgconfig/libuecc.pc
