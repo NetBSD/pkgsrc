@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2021/06/24 15:38:41 tnn Exp $
+# $NetBSD: Makefile.common,v 1.42 2021/06/24 18:43:08 tnn Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
@@ -39,13 +39,7 @@ DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
 DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-# XXX this brings in libnbcompat and it's namespace pollution that
-# can cause all sorts of problems. In particular it causes strlcpy
-# conflicts on Linux.
-# (since modular-xorg-server ships with it's own strlcpy replacement)
-USE_FEATURES+=	strnlen err
-.endif
+
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-D_OPENBSD_SOURCE	# for reallocarray(3)
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
