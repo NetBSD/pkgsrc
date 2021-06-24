@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2021/05/04 06:17:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2021/06/24 17:19:54 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -237,6 +237,15 @@ ${PYSITELIB}/setuptools/_imp.pyo
 ${PYSITELIB}/setuptools/_vendor/__init__.py
 ${PYSITELIB}/setuptools/_vendor/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.py
+${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/more_itertools/more.py
+${PYSITELIB}/setuptools/_vendor/more_itertools/more.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/more.pyo
+${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.py
+${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyo
 ${PYSITELIB}/setuptools/_vendor/ordered_set.py
 ${PYSITELIB}/setuptools/_vendor/ordered_set.pyc
 ${PYSITELIB}/setuptools/_vendor/ordered_set.pyo
