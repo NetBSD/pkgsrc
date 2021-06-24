@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3522 2021/06/24 15:24:00 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3523 2021/06/24 15:25:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5617,3 +5617,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-braintree to 4.10.0 [adam 2021-06-24]
 	Updated net/unison-snapshot to 2.51.3.99 [gdt 2021-06-24]
 	Updated sysutils/xplr to 0.14.3 [pin 2021-06-24]
+	Updated net/unison2.51 to 2.51.4 [gdt 2021-06-24]
