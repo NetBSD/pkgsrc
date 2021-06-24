@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/07/11 10:26:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/06/24 21:40:06 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptool
@@ -10,7 +10,7 @@ lib/cmake/libzip/libzip-targets-noconfig.cmake
 lib/cmake/libzip/libzip-targets.cmake
 lib/libzip.so
 lib/libzip.so.5
-lib/libzip.so.5.3
+lib/libzip.so.5.4
 lib/pkgconfig/libzip.pc
 man/man1/zipcmp.1
 man/man1/zipmerge.1
@@ -81,6 +81,7 @@ man/man3/zip_libzip_version.3
 man/man3/zip_name_locate.3
 man/man3/zip_open.3
 man/man3/zip_open_from_source.3
+man/man3/zip_register_cancel_callback_with_state.3
 man/man3/zip_register_progress_callback.3
 man/man3/zip_register_progress_callback_with_state.3
 man/man3/zip_rename.3
@@ -125,6 +126,7 @@ man/man3/zip_source_win32handle.3
 man/man3/zip_source_win32handle_create.3
 man/man3/zip_source_win32w.3
 man/man3/zip_source_win32w_create.3
+man/man3/zip_source_window.3
 man/man3/zip_source_write.3
 man/man3/zip_source_zip.3
 man/man3/zip_stat.3
