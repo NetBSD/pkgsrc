@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1556 2021/06/24 02:33:57 triaxx Exp $
+# $NetBSD: Makefile,v 1.1557 2021/06/24 10:38:20 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1048,6 +1048,7 @@ SUBDIR+=	wslay
 SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
+SUBDIR+=	xurl
 SUBDIR+=	yahttp
 SUBDIR+=	yaws
 SUBDIR+=	z-push
