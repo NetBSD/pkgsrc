@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.108 2021/06/08 22:51:11 khorben Exp $
+$NetBSD: distinfo,v 1.109 2021/06/24 18:43:08 tnn Exp $
 
 SHA1 (xorg-server-1.20.11.tar.bz2) = 86ae4add5719e6026a569f5559d51e8707171d5d
 RMD160 (xorg-server-1.20.11.tar.bz2) = 9b451d5523e9384df37e0e91f52d843090590d23
 SHA512 (xorg-server-1.20.11.tar.bz2) = 1017015b9fd5d53788abe3641d877e6df8609841fa5c1847c0a5e133ddcc1b758a5d695304ebd36828099ec201a85b6b70b46f5ea4f81c5bd3a16fa6e175e3c2
 Size (xorg-server-1.20.11.tar.bz2) = 6476116 bytes
 SHA1 (patch-configure) = 4c2d439e622ec14ec2f8a3a2f556c67e60259f82
-SHA1 (patch-hw_kdrive_ephyr_hostx.c) = ec8b6128a26d605e50e8d1be3477558eda17a096
+SHA1 (patch-hw_kdrive_ephyr_hostx.c) = b681ee28bc7af06774f10bc882d355d42ac965d3
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 70adf85be9fc6222a335686e7e9e9f385aca02f9
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
@@ -17,7 +17,5 @@ SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060e
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
-SHA1 (patch-hw_xwayland_xwayland-input.c) = 4e34681371f7fc66f462ff00f4775aa6411d0282
-SHA1 (patch-os_backtrace.c) = 090ceba8a7f0fa61a1953d0f79603af6254b6fed
+SHA1 (patch-hw_xwayland_xwayland-input.c) = b876642a56f4930dfaa88cff77d4518cfe9d73e0
 SHA1 (patch-test_xtest.c) = 77622ef481e91e64b3a6dd64b8579404f33ec88f
-SHA1 (patch-xkb_XKBAlloc.c) = 099c2617b759d3ef115174610fe80a17d021c784
