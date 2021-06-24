@@ -1,0 +1,2 @@
+libuecc is a very small generic-purpose Elliptic Curve Cryptography library
+compatible with Ed25519.
