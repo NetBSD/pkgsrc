@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3519 2021/06/24 14:01:49 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3520 2021/06/24 14:43:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5613,3 +5613,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/xurl version 0.1.0 [pin 2021-06-24]
 	Added security/libuecc version 7 [nia 2021-06-24]
 	Added net/fastd version 21 [nia 2021-06-24]
+	Updated devel/pcre to 8.45 [adam 2021-06-24]
+	Updated finance/py-braintree to 4.10.0 [adam 2021-06-24]
