@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/06/24 02:32:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/24 19:35:17 triaxx Exp $
 
 DISTNAME=	dotclear-2.18.1
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
@@ -11,9 +12,12 @@ HOMEPAGE=	https://dotclear.org/
 COMMENT=	Open-source web publising software
 LICENSE=	gnu-gpl-v2
 
+.include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+.if ${PKG_PHP_MAJOR_VERS} < 8	
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 NO_BUILD=	yes
@@ -21,7 +25,6 @@ USE_TOOLS+=	find pax sed
 WRKSRC=		${WRKDIR}/dotclear
 BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
-.include "../../lang/php/phpversion.mk"
 .include "options.mk"
 
 PHP_VERSIONS_ACCEPTED=	74 73 56
