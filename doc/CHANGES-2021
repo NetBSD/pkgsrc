@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3514 2021/06/24 08:48:44 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3515 2021/06/24 09:36:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5605,3 +5605,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/dust to 0.6.0 [pin 2021-06-24]
 	Updated textproc/paperoni to 0.5.0 [pin 2021-06-24]
 	Updated fonts/montserrat to 7.220 [pin 2021-06-24]
+	Updated lang/nodejs to 14.17.1 [adam 2021-06-24]
+	Updated devel/cmake to 3.20.5 [adam 2021-06-24]
+	Updated net/haproxy to 2.4.1 [adam 2021-06-24]
+	Updated comms/py-rich to 10.4.0 [adam 2021-06-24]
