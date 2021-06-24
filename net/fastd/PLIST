@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/24 14:01:31 nia Exp $
+bin/fastd
+man/man1/fastd.1
+share/examples/fastd/fastd.conf
