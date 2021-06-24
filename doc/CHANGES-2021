@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3526 2021/06/24 19:35:37 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.3527 2021/06/24 19:40:51 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5578,16 +5578,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ntopng to 4.2 [adam 2021-06-23]
 	Updated databases/hiredis to 1.0.0 [adam 2021-06-23]
 	Updated sysutils/ansible-base to 2.10.11 [adam 2021-06-23]
-	Updated security/munge to 0.5.13nb6 [bacon 2021-06-23]
-	Updated parallel/slurm-wlm to 19.05.5nb10 [bacon 2021-06-23]
-	Updated devel/swig2 to 2.0.12nb4 [bacon 2021-06-23]
-	Updated parallel/ganglia-monitor-core to 3.7.2nb16 [bacon 2021-06-23]
-	Updated math/udunits to 2.2.26 [bacon 2021-06-23]
-	Updated textproc/man2html to 3.0.1nb4 [bacon 2021-06-23]
-	Updated textproc/R-data.table to 1.14.0 [bacon 2021-06-23]
-	Updated textproc/R-cellranger to 1.1.0 [bacon 2021-06-23]
-	Updated devel/libctl to 3.2.2nb2 [bacon 2021-06-23]
-	Updated devel/R-rematch to 1.0.1 [bacon 2021-06-23]
 	Updated devel/py-xdis to 5.0.10 [adam 2021-06-23]
 	Updated textproc/py-ICU to 2.7.4 [adam 2021-06-23]
 	Updated databases/postgresql-timescaledb to 2.3.0 [tnn 2021-06-23]
