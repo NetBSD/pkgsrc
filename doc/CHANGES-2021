@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3527 2021/06/24 19:40:51 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.3528 2021/06/24 21:40:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5613,3 +5613,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-pypika to 0.48.5 [adam 2021-06-24]
 	Updated sysutils/py-sh to 1.14.2 [adam 2021-06-24]
 	Updated www/php-dotclear to 2.18.1nb1 [triaxx 2021-06-24]
+	Updated archivers/libzip to 1.8.0 [wiz 2021-06-24]
