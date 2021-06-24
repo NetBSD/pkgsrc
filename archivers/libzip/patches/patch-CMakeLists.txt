@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/06/24 21:40:06 wiz Exp $
+
+Upstream commit ca61524e05d785f0d14f40802c6a1a54a46b74bb
+
+--- CMakeLists.txt.orig	2021-06-18 16:08:29.000000000 +0000
++++ CMakeLists.txt
+@@ -299,6 +299,7 @@ foreach(LIB ${LIBS_PRIVATE})
+ endforeach()
+ string(REGEX REPLACE "-lBZip2::BZip2" "-lbz2" LIBS ${LIBS})
+ string(REGEX REPLACE "-lLibLZMA::LibLZMA" "-llzma" LIBS ${LIBS})
++string(REGEX REPLACE "-lZstd::Zstd" "-lzstd" LIBS ${LIBS})
+ string(REGEX REPLACE "-lOpenSSL::Crypto" "-lssl -lcrypto" LIBS ${LIBS})
+ string(REGEX REPLACE "-lZLIB::ZLIB" "-lz" LIBS ${LIBS})
+ string(REGEX REPLACE "-lGnuTLS::GnuTLS" "-lgnutls" LIBS ${LIBS})
