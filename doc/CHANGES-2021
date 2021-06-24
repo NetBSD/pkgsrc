@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3509 2021/06/24 00:09:13 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3510 2021/06/24 02:32:53 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/py-spake2 version 0.8 [wiz 2021-06-23]
 	Updated net/py-magic-wormhole to 0.12.0nb2 [wiz 2021-06-23]
 	Updated ham/trustedQSL to 2.5.7 [gdt 2021-06-24]
+	Added www/php-dotclear version 2.18.1 [triaxx 2021-06-24]
