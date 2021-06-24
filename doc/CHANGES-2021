@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3524 2021/06/24 17:21:56 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3525 2021/06/24 17:33:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5620,3 +5620,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unison2.51 to 2.51.4 [gdt 2021-06-24]
 	Updated devel/py-setuptools to 57.0.0 [adam 2021-06-24]
 	Updated devel/py-gitpython to 3.1.18 [adam 2021-06-24]
+	Updated databases/py-pypika to 0.48.5 [adam 2021-06-24]
+	Updated sysutils/py-sh to 1.14.2 [adam 2021-06-24]
