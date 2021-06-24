@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3421 2021/06/14 17:00:13 gdt Exp $
+# $NetBSD: Makefile,v 1.3422 2021/06/24 10:34:14 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -3119,6 +3119,7 @@ SUBDIR+=	tvision
 SUBDIR+=	ucl
 SUBDIR+=	ucommon
 SUBDIR+=	ucpp
+SUBDIR+=	ugdb
 SUBDIR+=	umbrello
 SUBDIR+=	undebt
 SUBDIR+=	unidiff
