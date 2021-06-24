@@ -1,5 +1,4 @@
-(Locally modified Makefile moved to .#Makefile.1.13)
-# $NetBSD: Makefile,v 1.15 2021/06/24 07:42:51 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/06/24 07:43:43 nia Exp $
 
 DISTNAME=	taisei-v1.3.2
 PKGNAME=	${DISTNAME:S/-v/-/}
