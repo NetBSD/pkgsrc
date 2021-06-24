@@ -1,0 +1,40 @@
+$NetBSD: patch-inc_config.php.in,v 1.1 2021/06/24 02:32:28 triaxx Exp $
+
+Set pkgsrc compliant directories for plugins, cache, var and logs.
+Disable update checking.
+
+--- inc/config.php.in.orig	2021-02-13 10:31:06.000000000 +0000
++++ inc/config.php.in
+@@ -45,13 +45,13 @@ define('DC_SESSION_NAME', 'dcxd');
+ //define('DC_SESSION_TTL','120 seconds');
+ 
+ // Plugins root
+-define('DC_PLUGINS_ROOT', dirname(__FILE__) . '/../plugins');
++define('DC_PLUGINS_ROOT', '@DOTCLEAR_SHAREDIR@/plugins' . PATH_SEPARATOR . '@DOTCLEAR_PLUGDIR@');
+ 
+ // Template cache directory
+-define('DC_TPL_CACHE', path::real(dirname(__FILE__) . '/..') . '/cache');
++define('DC_TPL_CACHE', '@DOTCLEAR_CACHEDIR@');
+ 
+ // Var directory
+-define('DC_VAR', path::real(dirname(__FILE__) . '/..') . '/var');
++define('DC_VAR', '@DOTCLEAR_DBDIR@');
+ 
+ // Cryptographic algorithm
+ define('DC_CRYPT_ALGO', 'sha512');
+@@ -60,7 +60,7 @@ define('DC_CRYPT_ALGO', 'sha512');
+ //define('DC_VENDOR_NAME', 'Dotclear');
+ 
+ // Do not check for update
+-//define('DC_NOT_UPDATE', false);
++define('DC_NOT_UPDATE', true);
+ 
+ // Update URL
+ //define('DC_UPDATE_URL','https://download.dotclear.org/versions.xml');
+@@ -91,3 +91,6 @@ define('DC_CRYPT_ALGO', 'sha512');
+ //    socketMail::$smtp_relay = 'my.smtp.relay.org';
+ //    socketMail::mail($to, $subject, $message, $headers);
+ //}
++
++// CSP report
++define('LOGFILE', '@DOTCLEAR_LOGDIR@/csp/csp_report.json');
