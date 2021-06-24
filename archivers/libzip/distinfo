@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2020/07/15 08:15:39 wiz Exp $
+$NetBSD: distinfo,v 1.39 2021/06/24 21:40:06 wiz Exp $
 
-SHA1 (libzip-1.7.3.tar.xz) = 2a2e2fb4f18a65a996252dfa247b38a6519af712
-RMD160 (libzip-1.7.3.tar.xz) = 51efb3e8b7b219e05b9146604cd6398a6ab391ff
-SHA512 (libzip-1.7.3.tar.xz) = 488866348a0c859f6f995c50e956bd51b4105278f07b63fe019cb44ab36c09ef958cc0684fd5444c474d83874b999e8ed1aa9b2da51b74caa37bbe7934b9c870
-Size (libzip-1.7.3.tar.xz) = 747372 bytes
+SHA1 (libzip-1.8.0.tar.xz) = cfe0c5cdaa6c3bc4986464797de8fd4359d2d4d5
+RMD160 (libzip-1.8.0.tar.xz) = 2041a081ad92828d98ce1ec39199e80a57d52dd7
+SHA512 (libzip-1.8.0.tar.xz) = fe94a26a2797dff7c9b27334f29982f8e523dd5095bf32ebcadc6443726864f0ff7b2e8bf243e52cad8f79297bc7a87d73fdbc35edae4ffc8ab6aa0bcc93b03e
+Size (libzip-1.8.0.tar.xz) = 760604 bytes
+SHA1 (patch-CMakeLists.txt) = 17745d56f98cd4a6298c54b8562b463207c5a7ee
