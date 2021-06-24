@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2021/04/21 11:42:30 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/06/24 15:24:56 gdt Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
 # When the next unison branch is released, we will likely again have
 # multiple unison packages, with whichever is the standard approach
 # using the unversioned name.
-DISTNAME=	unison-2.51.3
-PKGREVISION=	3
+DISTNAME=	unison-2.51.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,10 +14,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
-
-# \todo Explain
-# docs: unison-manual.pdf/html/ps/dvi
-#WRKSRC=	${WRKDIR}/src
 
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
@@ -42,8 +37,6 @@ MAKE_FLAGS+=	NATIVE=false
 MAKE_FLAGS+=	THREADS=true
 .endif
 
-#BUILD_TARGET=	buildexecutable
-
 TEST_TARGET=		test
 
 INSTALLATION_DIRS=	bin
@@ -51,7 +44,6 @@ INSTALLATION_DIRS+=	share/doc/unison
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unison ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/BUGS.txt ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/CONTRIB ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/NEWS ${DESTDIR}${PREFIX}/share/doc/unison
