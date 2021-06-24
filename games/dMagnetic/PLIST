@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/17 10:43:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/24 07:28:54 wiz Exp $
 bin/dMagnetic
-man/man1/dMagnetic.1
 man/man5/dMagneticini.5
+man/man6/dMagnetic.6
 share/doc/dMagnetic/README.txt
 share/doc/dMagnetic/dMagnetic.ini
