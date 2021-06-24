@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3512 2021/06/24 08:46:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3513 2021/06/24 08:47:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5603,3 +5603,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/php-dotclear version 2.18.1 [triaxx 2021-06-24]
 	Updated games/dMagnetic to 0.31 [wiz 2021-06-24]
 	Updated sysutils/dust to 0.6.0 [pin 2021-06-24]
+	Updated textproc/paperoni to 0.5.0 [pin 2021-06-24]
