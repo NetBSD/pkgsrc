@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/06 11:06:42 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/06/24 08:48:25 pin Exp $
 
-SHA1 (Montserrat-7.210.tar.gz) = f1774f2e6b85ae32cb8dafeb0d36e6f2838d240c
-RMD160 (Montserrat-7.210.tar.gz) = eb538be9867d1f0e8388321fc87aff7f73095ee2
-SHA512 (Montserrat-7.210.tar.gz) = 0b3c1d0bbf2cbb360361cdca94353d61706b20944fcf2e0f83401d842dbd083d9db0db6f48fef585afb013f727538b6978c212544bbc486fc3c585387d0cfe88
-Size (Montserrat-7.210.tar.gz) = 15876941 bytes
+SHA1 (Montserrat-7.220.tar.gz) = 5e1b5cc4d4c9411e2e4f21e319b610618b739a41
+RMD160 (Montserrat-7.220.tar.gz) = 49e1d5fae5fb742c7c328cc7d0c0003da1c4c727
+SHA512 (Montserrat-7.220.tar.gz) = 4ea274678f0bb6e61f17078096fc0b4c6884267126e00f721487693a347ed5d96a8e05f7f72b7f96c73c925a4f5cf20fbd72c92dbaba11074ab0548f434d26da
+Size (Montserrat-7.220.tar.gz) = 15897107 bytes
