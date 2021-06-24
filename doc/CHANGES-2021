@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3518 2021/06/24 13:55:41 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3519 2021/06/24 14:01:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ugdb version 0.1.10 [pin 2021-06-24]
 	Added www/xurl version 0.1.0 [pin 2021-06-24]
 	Added security/libuecc version 7 [nia 2021-06-24]
+	Added net/fastd version 21 [nia 2021-06-24]
