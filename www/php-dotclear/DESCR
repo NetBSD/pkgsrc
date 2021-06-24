@@ -1,0 +1,6 @@
+Dotclear's proposed aim is to develop a software that fully respects web
+standards based on open source solutions, with multilingual interface and
+publishing capabilities. It is written in PHP.
+Notable features include handling many blogs, using Wiki or XHTML syntax for
+entries, adding pages that are independent from the flow of entries and support
+for several database types: (MySQL, PostgreSQL, SQLite).
