@@ -1,22 +1,13 @@
-$NetBSD: patch-hw_xwayland_xwayland-input.c,v 1.3 2021/06/08 22:51:11 khorben Exp $
+$NetBSD: patch-hw_xwayland_xwayland-input.c,v 1.4 2021/06/24 18:43:08 tnn Exp $
 
-Fix build on Solaris 10/amd64 (from pkg/56169)
 Support non-evdev platforms.
 
---- hw/xwayland/xwayland-input.c.orig	2021-04-13 14:11:40.000000000 +0000
+--- hw/xwayland/xwayland-input.c.orig	2019-02-26 19:28:50.000000000 +0000
 +++ hw/xwayland/xwayland-input.c
-@@ -26,7 +26,22 @@
+@@ -26,7 +26,14 @@
  
  #include "xwayland.h"
  
-+#if defined(HAVE_NBCOMPAT_H)
-+#include <nbcompat/config.h>
-+#include <nbcompat/cdefs.h>
-+#include <nbcompat/string.h>
-+#else
-+#include <string.h>
-+#endif
-+
 +#if defined(__linux__) || defined(__FreeBSD__)
  #include <linux/input.h>
 +#else
