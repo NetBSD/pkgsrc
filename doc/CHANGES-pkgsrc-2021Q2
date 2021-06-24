@@ -1,3 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.1 2021/06/23 17:49:37 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.2 2021/06/24 18:02:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
+
+Pullup ticket #6471 - requested by tnn
+devel/cpu_features: build fix
+
