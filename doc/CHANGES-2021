@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3515 2021/06/24 09:36:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3516 2021/06/24 10:34:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5609,3 +5609,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.20.5 [adam 2021-06-24]
 	Updated net/haproxy to 2.4.1 [adam 2021-06-24]
 	Updated comms/py-rich to 10.4.0 [adam 2021-06-24]
+	Added devel/ugdb version 0.1.10 [pin 2021-06-24]
