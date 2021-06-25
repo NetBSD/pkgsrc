@@ -1,4 +1,4 @@
-$NetBSD: patch-main_util.c,v 1.2 2019/07/04 07:44:52 adam Exp $
+$NetBSD: patch-src_main_util.c,v 1.1 2021/06/25 11:42:48 adam Exp $
 
 O_DIRECTORY to open(2) is a Linuxism.
 
