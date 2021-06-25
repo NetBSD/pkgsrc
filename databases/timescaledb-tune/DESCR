@@ -1,0 +1,5 @@
+timescaledb-tune is a program for tuning a TimescaleDB database to perform its
+best based on the host's resources such as memory and number of CPUs. It parses
+the existing postgresql.conf file to ensure that the TimescaleDB extension is
+appropriately installed and provides recommendations for memory, parallelism,
+WAL, and other settings.
