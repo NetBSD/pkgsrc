@@ -515,7 +515,6 @@ func (s *Suite) Test_Pkglint_Check__invalid_files_before_import(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile.orig: Must be cleaned up before committing the package.",
 		"ERROR: ~/category/package/Makefile.rej: Must be cleaned up before committing the package.",
-		"ERROR: ~/category/package/Makefile~: Must be cleaned up before committing the package.",
 		"ERROR: ~/category/package/work: Must be cleaned up before committing the package.")
 }
 
@@ -1117,9 +1116,11 @@ func (s *Suite) Test_Pkglint_checkReg__unknown_file_in_patches(c *check.C) {
 			"Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 }
 
-func (s *Suite) Test_Pkglint_checkReg__patch_for_Makefile_fragment(c *check.C) {
+func (s *Suite) Test_Pkglint_checkReg__patch_for_makefile_fragment(c *check.C) {
 	t := s.Init(c)
 
+	// This is a patch file, and even though its name ends with ".mk", it must
+	// not be interpreted as a makefile fragment.
 	t.CreateFileDummyPatch("category/package/patches/patch-compiler.mk")
 	t.Chdir("category/package")
 
@@ -1194,6 +1195,25 @@ func (s *Suite) Test_Pkglint_checkReg__wip_commit_message(c *check.C) {
 
 	G.Check(".")
 
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkglint_checkReg__file_ignored_by_CVS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"bin/program")
+	t.CreateFileLines("PLIST.~1.7.~",
+		PlistCvsID,
+		"bin/program")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// Files ending in "~" should be ignored since CVS ignores them as well.
 	t.CheckOutputEmpty()
 }
 

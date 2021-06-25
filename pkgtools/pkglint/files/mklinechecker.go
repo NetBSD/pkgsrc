@@ -112,7 +112,8 @@ func (ck MkLineChecker) checkTextWrksrcDotDot(text string) {
 func (ck MkLineChecker) checkTextRpath(text string) {
 	mkline := ck.MkLine
 
-	if mkline.IsVarassign() && mkline.Varname() == "BUILDLINK_TRANSFORM" &&
+	if mkline.IsVarassign() &&
+		varnameBase(mkline.Varname()) == "BUILDLINK_TRANSFORM" &&
 		hasPrefix(mkline.Value(), "rm:") {
 
 		return
