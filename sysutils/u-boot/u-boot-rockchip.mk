@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.10 2021/04/18 07:30:28 mrg Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.11 2021/06/25 08:28:57 mrg Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -8,12 +8,12 @@
 #
 # Set these variables:
 #
-#	U_BOOT_IMAGE_TYPE	("rk3399", "rk3328")
+#	UBOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
 UBOOT_VERSION?=		2020.01-rc5
 
-MAKE_ENV+=		BL31=${PREFIX}/share/arm-trusted-firmware/${U_BOOT_IMAGE_TYPE}/bl31.elf
+MAKE_ENV+=		BL31=${PREFIX}/share/arm-trusted-firmware/${UBOOT_IMAGE_TYPE}/bl31.elf
 
 post-build:
 # wrap everything up into a single file that can be written to an SD card
@@ -27,5 +27,5 @@ post-build:
 	done < ${WRKSRC}/idbloader.img > ${WRKSRC}/rkspi_loader.img 2> /dev/null
 	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
 
-.include "../../sysutils/arm-trusted-firmware-${U_BOOT_IMAGE_TYPE}/buildlink3.mk"
+.include "../../sysutils/arm-trusted-firmware-${UBOOT_IMAGE_TYPE}/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
