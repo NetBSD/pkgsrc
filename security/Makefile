@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.829 2021/06/23 21:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.830 2021/06/25 10:13:57 micha Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -224,6 +224,7 @@ SUBDIR+=	mbedtls
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
+SUBDIR+=	mdigest
 SUBDIR+=	merkletree
 SUBDIR+=	mhash
 SUBDIR+=	minisign
