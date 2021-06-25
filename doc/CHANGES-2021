@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3533 2021/06/25 10:44:31 micha Exp $
+$NetBSD: CHANGES-2021,v 1.3534 2021/06/25 10:59:25 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/wesnoth to 1.14.17 [adam 2021-06-25]
 	Updated finance/py-ofxparse to 0.21 [adam 2021-06-25]
 	Updated devel/smake to 1.5 [micha 2021-06-25]
+	Updated shells/bosh to 20210607 [micha 2021-06-25]
