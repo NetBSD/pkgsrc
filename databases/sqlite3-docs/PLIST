@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2021/04/20 06:30:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.104 2021/06/25 21:21:31 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -152,7 +152,7 @@ share/doc/sqlite3/c3ref/pcache.html
 share/doc/sqlite3/c3ref/pcache_methods2.html
 share/doc/sqlite3/c3ref/pcache_page.html
 share/doc/sqlite3/c3ref/prepare.html
-share/doc/sqlite3/c3ref/preupdate_count.html
+share/doc/sqlite3/c3ref/preupdate_blobwrite.html
 share/doc/sqlite3/c3ref/profile.html
 share/doc/sqlite3/c3ref/progress_handler.html
 share/doc/sqlite3/c3ref/randomness.html
@@ -430,6 +430,7 @@ share/doc/sqlite3/images/nw.png
 share/doc/sqlite3/images/powered_by_sqlite.gif
 share/doc/sqlite3/images/private_branch.gif
 share/doc/sqlite3/images/qp/fqp1.gif
+share/doc/sqlite3/images/qp/fqp1.pikchr
 share/doc/sqlite3/images/qp/fruitobstate.gif
 share/doc/sqlite3/images/qp/fruitobstate0.gif
 share/doc/sqlite3/images/qp/fullscan.gif
@@ -453,6 +454,7 @@ share/doc/sqlite3/images/qp/partial-sort.gif
 share/doc/sqlite3/images/qp/rowidlu.gif
 share/doc/sqlite3/images/qp/tab.gif
 share/doc/sqlite3/images/qp/tpchq8.gif
+share/doc/sqlite3/images/qp/tpchq8.pikchr
 share/doc/sqlite3/images/se.gif
 share/doc/sqlite3/images/se.png
 share/doc/sqlite3/images/shane1.jpg
@@ -628,6 +630,7 @@ share/doc/sqlite3/releaselog/3_35_2.html
 share/doc/sqlite3/releaselog/3_35_3.html
 share/doc/sqlite3/releaselog/3_35_4.html
 share/doc/sqlite3/releaselog/3_35_5.html
+share/doc/sqlite3/releaselog/3_36_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -802,6 +805,7 @@ share/doc/sqlite3/session/sqlite3rebaser_delete.html
 share/doc/sqlite3/session/sqlite3rebaser_rebase.html
 share/doc/sqlite3/session/sqlite3session_attach.html
 share/doc/sqlite3/session/sqlite3session_changeset.html
+share/doc/sqlite3/session/sqlite3session_changeset_size.html
 share/doc/sqlite3/session/sqlite3session_config.html
 share/doc/sqlite3/session/sqlite3session_create.html
 share/doc/sqlite3/session/sqlite3session_delete.html
