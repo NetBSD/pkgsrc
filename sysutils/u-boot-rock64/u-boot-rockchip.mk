@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.2 2020/04/06 15:06:17 tnn Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.3 2021/06/25 08:28:57 mrg Exp $
 #
 # used by sysutils/u-boot-rock64/Makefile
 
@@ -6,7 +6,7 @@
 #
 # Set these variables:
 #
-#	U_BOOT_IMAGE_TYPE	("rk3399", "rk3328")
+#	UBOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
 UBOOT_VERSION=	${GITHUB_TAG:C/-.*$//}
@@ -31,7 +31,7 @@ post-build:
 # build stage 3 package
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} u-boot.itb
 # build stage 1 loader
-	${WRKSRC}/tools/mkimage -n ${U_BOOT_IMAGE_TYPE} -T rksd -d ${WRKDIR}/${DDR_BIN} ${WRKSRC}/idbloader.img
+	${WRKSRC}/tools/mkimage -n ${UBOOT_IMAGE_TYPE} -T rksd -d ${WRKDIR}/${DDR_BIN} ${WRKSRC}/idbloader.img
 # append stage2 loader
 	cat ${WRKSRC}/spl/u-boot-spl.bin >> ${WRKSRC}/idbloader.img
 # wrap everything up into a single file that can be written to an SD card
