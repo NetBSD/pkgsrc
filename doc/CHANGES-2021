@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3543 2021/06/25 16:05:32 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3544 2021/06/25 21:08:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5633,3 +5633,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/woof to 6.0.0 [micha 2021-06-25]
 	Updated pkgtools/pkglint to 21.2.1 [rillig 2021-06-25]
 	Updated databases/prometheus to 2.28.0 [tnn 2021-06-25]
+	Updated security/py-oauthlib to 3.1.1 [adam 2021-06-25]
+	Updated lang/py-mypy to 0.910 [adam 2021-06-25]
