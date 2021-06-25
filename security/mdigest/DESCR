@@ -1,0 +1,4 @@
+mdigest reads the files from the argument list and computes a message
+digest hash for the file content.
+
+If the argument list is empty mdigest reads from standard in.
