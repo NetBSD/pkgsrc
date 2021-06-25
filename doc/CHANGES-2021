@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3530 2021/06/25 09:50:18 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3531 2021/06/25 10:29:32 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5619,3 +5619,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gdbus-codegen to 2.68.3 [adam 2021-06-25]
 	Updated misc/py-tqdm to 4.61.1 [adam 2021-06-25]
 	Updated net/synergy to 1.14.0.4 [tnn 2021-06-25]
+	Added security/mdigest version 1.6 [micha 2021-06-25]
