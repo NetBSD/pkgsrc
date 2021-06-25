@@ -23,6 +23,22 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 	cond.Walk(lc.checkNode)
 }
 
+func (lc *LicenseChecker) checkNode(cond *licenses.Condition) {
+	if name := cond.Name; name != "" && name != "append-placeholder" {
+		lc.checkName(name)
+		return
+	}
+
+	if cond.And && cond.Or {
+		lc.MkLine.Errorf("AND and OR operators in license conditions can only be combined using parentheses.")
+		lc.MkLine.Explain(
+			"Examples for valid license conditions are:",
+			"",
+			"\tlicense1 AND license2 AND (license3 OR license4)",
+			"\t(((license1 OR license2) AND (license3 OR license4)))")
+	}
+}
+
 func (lc *LicenseChecker) checkName(license string) {
 	licenseFile := NewCurrPath("")
 	pkg := lc.MkLines.pkg
@@ -52,21 +68,5 @@ func (lc *LicenseChecker) checkName(license string) {
 			"",
 			sprintf("For more information about licenses, %s.",
 				seeGuide("Handling licenses", "handling-licenses")))
-	}
-}
-
-func (lc *LicenseChecker) checkNode(cond *licenses.Condition) {
-	if name := cond.Name; name != "" && name != "append-placeholder" {
-		lc.checkName(name)
-		return
-	}
-
-	if cond.And && cond.Or {
-		lc.MkLine.Errorf("AND and OR operators in license conditions can only be combined using parentheses.")
-		lc.MkLine.Explain(
-			"Examples for valid license conditions are:",
-			"",
-			"\tlicense1 AND license2 AND (license3 OR license4)",
-			"\t(((license1 OR license2) AND (license3 OR license4)))")
 	}
 }

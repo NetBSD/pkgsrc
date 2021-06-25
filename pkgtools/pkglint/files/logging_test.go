@@ -286,6 +286,48 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 			"category/package1", "category/package2"))
 }
 
+func (s *Suite) Test_Logger_FirstTime__not_verbose(c *check.C) {
+	t := s.Init(c)
+
+	G.Logger.verbose = false // as in a realistic run
+
+	t.CheckEquals(G.Logger.FirstTime("filename", "123", "Message."), true)
+	t.CheckEquals(G.Logger.FirstTime("filename", "123", "Message."), false)
+	t.CheckEquals(G.Logger.FirstTime("filename", "124", "Message."), true)
+	t.CheckEquals(G.Logger.FirstTime("filename", "124", "Message."), false)
+	t.CheckEquals(G.Logger.FirstTime("filename", "124", "Message."), false)
+}
+
+func (s *Suite) Test_Logger_Relevant(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine(nil...)
+
+	t.CheckEquals(G.Logger.Relevant("Options should not contain whitespace."), true)
+	t.CheckEquals(G.Logger.suppressDiag, false)
+	t.CheckEquals(G.Logger.suppressExpl, false) // XXX: Why not true?
+
+	t.SetUpCommandLine("--only", "whitespace")
+
+	t.CheckEquals(G.Logger.Relevant("Options should not contain whitespace."), true)
+	t.CheckEquals(G.Logger.suppressDiag, false)
+	t.CheckEquals(G.Logger.suppressExpl, false) // XXX: Why not true?
+
+	t.CheckEquals(G.Logger.Relevant("Options should not contain space."), false)
+	t.CheckEquals(G.Logger.suppressDiag, true)
+	t.CheckEquals(G.Logger.suppressExpl, true)
+
+	t.SetUpCommandLine("--explain")
+
+	t.CheckEquals(G.Logger.Relevant("Options should not contain whitespace."), true)
+	t.CheckEquals(G.Logger.suppressDiag, false)
+	t.CheckEquals(G.Logger.suppressExpl, false)
+
+	t.CheckEquals(G.Logger.Relevant("Options should not contain space."), true)
+	t.CheckEquals(G.Logger.suppressDiag, false)
+	t.CheckEquals(G.Logger.suppressExpl, false)
+}
+
 func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 	t := s.Init(c)
 
@@ -640,6 +682,61 @@ func (s *Suite) Test_Logger_writeSource__first_warn_then_autofix(c *check.C) {
 		"AUTOFIX: ~/DESCR:2: Replacing \"second\" with \"last\".",
 		"-\tThe second line",
 		"+\tThe last line")
+}
+
+func (s *Suite) Test_Logger_writeDiff(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix")
+	line := t.NewLine("filename", 123, "before")
+	fix := line.Autofix()
+	fix.Silent()
+	fix.Replace("before", "after")
+	fix.Apply()
+
+	G.Logger.writeDiff(line)
+
+	// The diff lines are indented with a tab so that the indentation
+	// from the actual lines is properly represented in the output.
+	// If a space had been used here instead of the tab, the output
+	// would become garbled.
+	t.CheckOutputLines(
+		"AUTOFIX: filename:123: Replacing \"before\" with \"after\".",
+		"-\tbefore",
+		"+\tafter")
+}
+
+func (s *Suite) Test_Logger_writeLine(c *check.C) {
+	t := s.Init(c)
+
+	G.Logger.writeLine("> ", "\u0007\u00FC text")
+
+	t.CheckOutputLines(
+		"> <U+0007><U+00FC> text")
+}
+
+func (s *Suite) Test_Logger_IsAutofix__default(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall")
+
+	t.CheckEquals(G.Logger.IsAutofix(), false)
+}
+
+func (s *Suite) Test_Logger_IsAutofix__show_autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--show-autofix")
+
+	t.CheckEquals(G.Logger.IsAutofix(), true)
+}
+
+func (s *Suite) Test_Logger_IsAutofix__autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+
+	t.CheckEquals(G.Logger.IsAutofix(), true)
 }
 
 // Calling Logf without further preparation just logs the message.
@@ -1162,6 +1259,58 @@ func (s *Suite) Test_SeparatorWriter(c *check.C) {
 	t.CheckEquals(sb.String(), "a\nb\n\nc\n")
 }
 
+func (s *Suite) Test_NewSeparatorWriter(c *check.C) {
+	t := s.Init(c)
+
+	var sb strings.Builder
+	wr := NewSeparatorWriter(&sb)
+
+	t.CheckEquals(wr.out, &sb)
+	t.CheckEquals(wr.state, uint8(3))
+	t.CheckEquals(wr.line.Len(), 0)
+}
+
+func (s *Suite) Test_SeparatorWriter_WriteLine(c *check.C) {
+	t := s.Init(c)
+
+	var sb strings.Builder
+	wr := NewSeparatorWriter(&sb)
+
+	wr.WriteLine("first")
+	wr.Separate()
+
+	t.CheckEquals(sb.String(), "first\n")
+
+	wr.WriteLine("second")
+
+	t.CheckEquals(sb.String(), "first\n\nsecond\n")
+}
+
+func (s *Suite) Test_SeparatorWriter_Write(c *check.C) {
+	t := s.Init(c)
+
+	var sb strings.Builder
+	wr := NewSeparatorWriter(&sb)
+
+	wr.Write("first")
+	wr.Write("")
+
+	t.CheckEquals(wr.line.String(), "first")
+
+	wr.Write("\n")
+
+	t.CheckEquals(wr.line.String(), "")
+	t.CheckEquals(sb.String(), "first\n")
+
+	wr.Separate()
+
+	t.CheckEquals(sb.String(), "first\n")
+
+	wr.WriteLine("second")
+
+	t.CheckEquals(sb.String(), "first\n\nsecond\n")
+}
+
 func (s *Suite) Test_SeparatorWriter_Separate(c *check.C) {
 	t := s.Init(c)
 
@@ -1197,6 +1346,31 @@ func (s *Suite) Test_SeparatorWriter_Separate__at_the_beginning(c *check.C) {
 	wr.WriteLine("a")
 
 	t.CheckEquals(sb.String(), "a\n")
+}
+
+func (s *Suite) Test_SeparatorWriter_write(c *check.C) {
+	t := s.Init(c)
+
+	var sb strings.Builder
+	wr := NewSeparatorWriter(&sb)
+
+	t.CheckEquals(wr.state, uint8(3))
+
+	wr.write('a')
+
+	t.CheckEquals(wr.state, uint8(1))
+
+	wr.write('\n')
+
+	t.CheckEquals(wr.state, uint8(0))
+
+	wr.Separate()
+
+	t.CheckEquals(wr.state, uint8(2))
+
+	wr.write('\n')
+
+	t.CheckEquals(wr.state, uint8(3))
 }
 
 func (s *Suite) Test_SeparatorWriter_Flush(c *check.C) {

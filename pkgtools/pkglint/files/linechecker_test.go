@@ -17,6 +17,20 @@ func (s *Suite) Test_LineChecker_CheckLength(c *check.C) {
 		"WARN: DESCR:1: Line too long (should be no more than 20 characters).")
 }
 
+func (s *Suite) Test_LineChecker_CheckValidCharacters(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(autofix bool) {
+		line := t.NewLine("filename", 32, "The letter \u00DC is an umlaut.")
+
+		LineChecker{line}.CheckValidCharacters()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"WARN: filename:32: Line contains invalid characters (U+00DC).")
+}
+
 func (s *Suite) Test_LineChecker_CheckTrailingWhitespace(c *check.C) {
 	t := s.Init(c)
 
