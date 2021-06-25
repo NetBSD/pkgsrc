@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/07 11:51:12 micha Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/25 14:25:00 micha Exp $
 
 DISTNAME=		sigil_v1_21
 PKGNAME=		doom-pwad-sigil-1.21
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.fu-berlin.de/pc/games/idgames/levels/doom/Ports/s-u/
 MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom/Ports/s-u/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		micha@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.romerogames.ie/si6il/
 COMMENT=		Doom mod
 LICENSE=		doom-pwad-license
