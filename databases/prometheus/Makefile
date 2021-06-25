@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2021/06/06 12:18:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2021/06/25 15:25:48 tnn Exp $
 
-# Important: UI has to be manually built. See instructions below.
+# Important: UI has to be manually built when updating. See instructions below.
 
-DISTNAME=	prometheus-2.26.0
+DISTNAME=	prometheus-2.28.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	2
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -15,17 +14,29 @@ LICENSE=	apache-2.0
 
 .include "go-modules.mk"
 
-# To generate UI distfile, install devel/yarn, and:
-# tar zxf ${DISTNAME}${EXTRACT_SUFX}
-# cd ${DISTNAME}/web/ui/react-app
-# yarn --frozen-lockfile
-# env PUBLIC_URL=. yarn build
-# chmod -x build/favicon.ico build/manifest.json
-# mv build ../static/react
-# cd ../../../..
-# tar zcf ${DISTNAME}-react-ui.tar.gz ${DISTNAME}/web/ui/static/react
+# How to rebuild UI after bumping version:
+# 1. install devel/yarn
+# 2. comment out the DISTFILES=... line
+# 3. run "make distinfo extract update-ui"
+# 4. publish the resulting distfile on MASTER_SITE_LOCAL
+# 5. uncomment the DISTFILES=... line and regen distinfo
+.PHONY: update-ui
+update-ui:
+	cd ${WRKSRC}/web/ui/react-app &&				\
+	  ${PREFIX}/bin/yarn --frozen-lockfile &&			\
+	  env PUBLIC_URL=. yarn build &&				\
+	  chmod -x build/favicon.ico build/manifest.json &&		\
+	  rm -rf ../static/react &&					\
+	  mv build ../static/react &&					\
+	  cd ../../../.. &&						\
+	  tar czf ${REACT_UI_DIST} ${DISTNAME}/web/ui/static/react &&	\
+	  cp ${REACT_UI_DIST} ${DISTDIR}/${REACT_UI_DIST} &&		\
+	  ${ECHO} "UI built. Run this command:"  &&			\
+	  ${ECHO} "# scp ${DISTDIR}/${REACT_UI_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
+
 REACT_UI_DIST=		${DISTNAME}-react-ui.tar.gz
 SITES.${REACT_UI_DIST}=	${MASTER_SITE_LOCAL}
+# comment out this when running make update-ui
 DISTFILES=		${DEFAULT_DISTFILES} ${REACT_UI_DIST}
 
 GO_DIST_BASE=	${DISTNAME}
