@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2020/07/17 11:41:42 micha Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/06/25 10:43:03 micha Exp $
 # used by archivers/star/Makefile
 # used by devel/smake/Makefile
+# used by security/mdigest/Makefile
 # used by shells/bosh/Makefile
 # used by shells/pbosh/Makefile
 
@@ -25,7 +26,7 @@ pre-configure:
 	cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
 	printf "Create pkgsrc OS rules...\n"
 	cd ${WRKSRC}/RULES && unset r ;					\
-	for i in arm mipsel x86_64 sparc64 powerpc ;			\
+	for i in arm mipsel mips64eb x86_64 sparc64 powerpc ;		\
 	do								\
 		r="$$r i386-netbsd-gcc.rul@$$i-netbsd-gcc.rul" ;	\
 		r="$$r i386-netbsd-cc.rul@$$i-netbsd-cc.rul" ;		\
