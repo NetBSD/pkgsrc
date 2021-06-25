@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/25 10:13:58 micha Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/25 13:50:45 micha Exp $
 
 DISTNAME=	schily-2021-06-07
 PKGNAME=	mdigest-1.6
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/schilytools/
 COMMENT=	Calculates a message digest
-LICENSE=	cddl-1.0
+LICENSE=	cddl-1.0 AND 2-clause-bsd AND mit AND public-domain
 
 MAKE_JOBS_SAFE=	no
 
