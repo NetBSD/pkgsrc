@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/03 12:08:06 micha Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/25 14:25:00 micha Exp $
 
 DISTNAME=		sgnsym
 PKGNAME=		doom-pwad-shotgun-symphony-1.0
@@ -8,7 +8,7 @@ MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom/Ports/s-u/
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-MAINTAINER=		micha@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Doom mod
 LICENSE=		doom-pwad-license
 
