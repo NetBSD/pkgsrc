@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3544 2021/06/25 21:08:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3545 2021/06/25 21:22:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5635,3 +5635,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/prometheus to 2.28.0 [tnn 2021-06-25]
 	Updated security/py-oauthlib to 3.1.1 [adam 2021-06-25]
 	Updated lang/py-mypy to 0.910 [adam 2021-06-25]
+	Updated databases/sqlite3 to 3.36.0 [adam 2021-06-25]
+	Updated databases/sqlite3-docs to 3.36.0 [adam 2021-06-25]
+	Updated databases/sqlite3-tcl to 3.36.0 [adam 2021-06-25]
+	Updated devel/lemon to 1.0.3.36.0 [adam 2021-06-25]
