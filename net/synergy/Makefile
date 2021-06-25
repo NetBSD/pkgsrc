@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.66 2021/04/21 13:25:13 adam Exp $
+# $NetBSD: Makefile,v 1.67 2021/06/25 09:49:23 tnn Exp $
 
-DISTNAME=		synergy-core-1.12.0
+DISTNAME=		synergy-core-1.14.0.4
 PKGNAME=		${DISTNAME:S/-core//}
-PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
-GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
+GITHUB_TAG=		${PKGVERSION_NOREV}-stable
 DISTFILES=		${DEFAULT_DISTFILES} googletest-1.10.0.tar.gz
 SITES.googletest-1.10.0.tar.gz=	\
 	-${MASTER_SITE_GITHUB:=google/}googletest/archive/release-1.10.0.tar.gz
@@ -20,7 +19,7 @@ USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
 
-CONFIGURE_ENV+=		GIT_COMMIT=cb8064e8
+CONFIGURE_ENV+=		GIT_COMMIT=67d824b8
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
