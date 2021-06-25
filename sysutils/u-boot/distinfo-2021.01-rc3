@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/12/01 06:52:30 riastradh Exp $
+$NetBSD: distinfo-2021.01-rc3,v 1.1 2021/06/25 08:47:32 mrg Exp $
 
 SHA1 (u-boot-2021.01-rc3.tar.bz2) = be748544928dec0117608cdbf067da2ec9fa2dce
 RMD160 (u-boot-2021.01-rc3.tar.bz2) = ce12dd23023829fe671a502e4cbaf5fd8cf34097
