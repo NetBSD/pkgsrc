@@ -15,7 +15,8 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 			"LICENSE=\t"+licenseValue)
 
 		mklines.ForEach(func(mkline *MkLine) {
-			(&LicenseChecker{mklines, mkline}).Check(mkline.Value(), opAssign)
+			ck := LicenseChecker{mklines, mkline}
+			ck.Check(mkline.Value(), mkline.Op())
 		})
 
 		t.CheckOutput(diagnostics)
@@ -47,6 +48,31 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 
 	test("gnu-gpl-v2 OR (gnu-gpl-v2 AND gnu-gpl-v2)",
 		nil...)
+}
+
+func (s *Suite) Test_LicenseChecker_checkNode(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("licenses/gnu-gpl-v2",
+		"The licenses for most software are designed to take away ...")
+
+	test := func(assignment string, diagnostics ...string) {
+		mklines := t.SetUpFileMkLines("Makefile",
+			assignment)
+
+		mklines.ForEach(func(mkline *MkLine) {
+			ck := LicenseChecker{mklines, mkline}
+			ck.Check(mkline.Value(), mkline.Op())
+		})
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("LICENSE=\tfirst second",
+		"ERROR: ~/Makefile:1: Parse error for license condition \"first second\".")
+
+	test("LICENSE+=\tadded",
+		"ERROR: ~/Makefile:1: Parse error for appended license condition \"added\".")
 }
 
 func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {

@@ -21,25 +21,27 @@ const (
 	ENone Error = iota + 1
 	EAll
 
-	// A function or method does not have a corresponding test.
+	// EMissingTest complains if a function or method does not have a
+	// corresponding test.
 	EMissingTest
 
-	// The name of a test function does not correspond to a program
-	// element to be tested.
+	// EMissingTestee complains if the name of a test function does not
+	// correspond to a program element to be tested.
 	EMissingTestee
 
-	// The tests are not in the same order as their corresponding
-	// testees in the main code.
+	// EOrder complains if the tests are not in the same order as their
+	// corresponding testees in the main code.
 	EOrder
 
-	// The test method does not have a valid name.
+	// EName complains if the test method does not have a valid name.
 	EName
 
-	// The file of the test method does not correspond to the
-	// file of the testee.
+	// EFile complains if the file of the test method does not correspond
+	// to the file of the testee.
 	EFile
 
-	// All methods of a type must be in the same file as the type definition.
+	// EMethodsSameFile complains if a method of a type is in a different
+	// file than its corresponding type definition.
 	EMethodsSameFile
 )
 

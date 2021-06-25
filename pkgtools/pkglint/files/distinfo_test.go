@@ -877,6 +877,63 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 		"ERROR: ~/category/package/distinfo:5: Patch patch-nonexistent does not exist.")
 }
 
+func (s *Suite) Test_distinfoFileInfo_filename(c *check.C) {
+	t := s.Init(c)
+
+	info := distinfoFileInfo{
+		isPatch: no,
+		hashes: []distinfoHash{{
+			line:      t.NewLine("irrelevant", 12345, "irrelevant"),
+			filename:  "distinfo",
+			algorithm: "irrelevant",
+			hash:      "irrelevant",
+		}},
+	}
+
+	t.CheckEquals(info.filename(), RelPath("distinfo"))
+}
+
+func (s *Suite) Test_distinfoFileInfo_line(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("irrelevant", 12345, "irrelevant")
+	info := distinfoFileInfo{
+		isPatch: no,
+		hashes: []distinfoHash{{
+			line:      line,
+			filename:  "irrelevant",
+			algorithm: "irrelevant",
+			hash:      "irrelevant",
+		}},
+	}
+
+	t.CheckEquals(info.line(), line)
+}
+
+func (s *Suite) Test_distinfoFileInfo_algorithms(c *check.C) {
+	t := s.Init(c)
+
+	info := distinfoFileInfo{
+		isPatch: no,
+		hashes: []distinfoHash{
+			{
+				line:      t.NewLine("irrelevant", 12345, "irrelevant"),
+				filename:  "irrelevant",
+				algorithm: "SHA1",
+				hash:      "irrelevant",
+			},
+			{
+				line:      t.NewLine("irrelevant", 12346, "irrelevant"),
+				filename:  "irrelevant",
+				algorithm: "Size",
+				hash:      "irrelevant",
+			},
+		},
+	}
+
+	t.CheckEquals(info.algorithms(), "SHA1, Size")
+}
+
 // The check for versioned distfiles only makes sense if the file
 // has the usual hashes for distfiles.
 func (s *Suite) Test_distinfoFileInfo_hasDistfileAlgorithms__code_coverage(c *check.C) {
@@ -919,4 +976,42 @@ func (s *Suite) Test_distinfoFileInfo_hasDistfileAlgorithms__code_coverage(c *ch
 			"\"dist-c.tar.gz\", got SHA1, RMD160, other, Size.",
 		"ERROR: distinfo:15: Expected SHA1, RMD160, SHA512, Size checksums for "+
 			"\"dist-d.tar.gz\", got SHA1, RMD160, SHA512, other.")
+}
+
+func (s *Suite) Test_computePatchSha1Hex(c *check.C) {
+	t := s.Init(c)
+
+	test := func(expectedHash string, lines ...string) {
+		fileLines := t.NewLines("irrelevant", lines...)
+
+		hash := computePatchSha1Hex(fileLines)
+
+		t.CheckEquals(hash, expectedHash)
+	}
+
+	// The well-known hash for an empty string.
+	test(
+		"da39a3ee5e6b4b0d3255bfef95601890afd80709",
+		nil...,
+	)
+
+	// Any line containing "$" + "NetBSD" is ignored for computing
+	// the hash since the CVS IDs are irrelevant.  This assumes that
+	// the patch hunks themselves do not contain CVS IDs, and this
+	// is checked in PatchChecker.checktextCvsID.
+	test(
+		"da39a3ee5e6b4b0d3255bfef95601890afd80709",
+		CvsID,
+		CvsID+"$",
+		// This is not a CVS ID since the final '$' is missing, but it is
+		// close enough. See mk/checksum/distinfo.awk, function patchsum.
+		"Some text $"+"NetBSD-2020",
+	)
+
+	test(
+		// == sha1Hex("--- old\n+++ new\n")
+		"bb5a3903635415d367f47c02990e031469ab0346",
+		"--- old",
+		"+++ new",
+	)
 }

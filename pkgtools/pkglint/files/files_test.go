@@ -4,6 +4,23 @@ import (
 	"gopkg.in/check.v1"
 )
 
+func (s *Suite) Test_LoadMk(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+	t.CreateFileLines("filename.mk",
+		"# line 1 \\",
+		"# continues in line 2")
+
+	mklines := LoadMk("filename.mk", nil, 0)
+
+	t.CheckEquals(len(mklines.mklines), 1)
+	// The '#' from line 2 is discarded in nextLogicalLine, to properly
+	// parse multi-line variable assignments that are commented out.
+	// See Test_MkLineParser_MatchVarassign, 'multi-line variable'.
+	t.CheckEquals(mklines.mklines[0].Text, "# line 1  continues in line 2")
+}
+
 func (s *Suite) Test_Load(c *check.C) {
 	t := s.Init(c)
 
