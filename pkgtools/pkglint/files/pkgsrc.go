@@ -471,7 +471,7 @@ func (src *Pkgsrc) parseSuggestedUpdates(lines *Lines) []SuggestedUpdate {
 		llex.Skip()
 
 		if m, pkgname, comment := match2(text, `^\to[\t ]([^\t ]+)(?:[\t ]*(.+))?$`); m {
-			if m, pkgbase, pkgversion := match2(pkgname, rePkgname); m {
+			if m, pkgbase, pkgversion := matchPkgname(pkgname); m {
 				if hasPrefix(comment, "[") && hasSuffix(comment, "]") {
 					comment = comment[1 : len(comment)-1]
 				}
