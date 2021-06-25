@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.58 2021/03/22 09:45:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2021/06/25 10:38:01 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/ca/man6/wesnoth.6
 man/ca/man6/wesnothd.6
+man/cs/man6/wesnoth.6
 man/cs/man6/wesnothd.6
 man/de/man6/wesnoth.6
 man/de/man6/wesnothd.6
@@ -23,7 +24,6 @@ man/it/man6/wesnothd.6
 man/ja/man6/wesnoth.6
 man/ja/man6/wesnothd.6
 man/lt/man6/wesnoth.6
-man/lt/man6/wesnothd.6
 man/man6/wesnoth.6
 man/man6/wesnothd.6
 man/pl/man6/wesnothd.6
