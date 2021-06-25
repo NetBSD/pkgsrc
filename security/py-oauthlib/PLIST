@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/12 07:45:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/06/25 21:00:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -178,9 +178,6 @@ ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/base.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/dispatchers.py
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/dispatchers.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/dispatchers.pyo
-${PYSITELIB}/oauthlib/openid/connect/core/grant_types/exceptions.py
-${PYSITELIB}/oauthlib/openid/connect/core/grant_types/exceptions.pyc
-${PYSITELIB}/oauthlib/openid/connect/core/grant_types/exceptions.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/hybrid.py
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/hybrid.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/hybrid.pyo
