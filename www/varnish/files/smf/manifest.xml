@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
-<service_bundle type="manifest" name="export">
+<service_bundle type="manifest" name="varnish">
   <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
     <create_default_instance enabled="false" />
     <single_instance />
@@ -11,11 +11,12 @@
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
     <method_context>
+      <method_credential user='@VRNUSER@' group='@VRNGROUP@' privileges='basic,net_privaddr' />
       <method_environment>
         <envvar name='PATH' value='@PREFIX@/sbin:@PREFIX@/bin:/sbin:/usr/sbin:/usr/bin' />
       </method_environment>
     </method_context>
-    <exec_method type="method" name="start" exec="@PREFIX@/sbin/varnishd -a %{listen} -l %{size} -f %{config_file} -u @VRNUSER@ -g @VRNGROUP@" timeout_seconds="60" />
+    <exec_method type="method" name="start" exec="@PREFIX@/sbin/varnishd -j solaris -a %{listen} -l %{size} -f %{config_file}" timeout_seconds="60" />
     <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
     <property_group name="startd" type="framework">
       <propval name="duration" type="astring" value="contract" />
@@ -23,9 +24,10 @@
     </property_group>
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/default.vcl" />
-      <propval name="listen" type="astring" value="127.0.0.1:8080" />
+      <propval name="listen" type="astring" value="0.0.0.0:8080" />
       <propval name="size" type="astring" value="64M" />
     </property_group>
+    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">Varnish daemon</loctext>
