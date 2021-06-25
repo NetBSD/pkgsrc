@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/30 14:55:01 micha Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/06/25 13:42:51 micha Exp $
 bin/woof
 share/applications/woof.desktop
 share/doc/woof/COPYING
@@ -28,6 +28,7 @@ share/doc/woof/examples/touchy.deh
 share/doc/woof/mapcolors_vanilla.cfg
 share/doc/woof/mbf-bugs.html
 share/doc/woof/mbf.txt
+share/doc/woof/mbf21.md
 share/doc/woof/mbfedit.txt
 share/doc/woof/mbffaq.txt
 share/doc/woof/options.txt
@@ -35,6 +36,10 @@ share/doc/woof/umapinfo.txt
 share/doc/woof/winmbf02.txt
 share/doc/woof/winmbf02s.txt
 share/icons/hicolor/128x128/apps/woof.png
+share/woof/autoload/e1m4b.wad/umapinfo.lmp
+share/woof/autoload/e1m8b.wad/umapinfo.lmp
+share/woof/autoload/masterlevels.wad/umapinfo.lmp
+share/woof/autoload/nerve.wad/umapinfo.lmp
 share/woof/betagrph.wad
 share/woof/betalevl.wad
 share/woof/watermap.wad
