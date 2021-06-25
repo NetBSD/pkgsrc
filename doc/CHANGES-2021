@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3542 2021/06/25 15:26:25 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3543 2021/06/25 16:05:32 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5629,7 +5629,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.2.3 [adam 2021-06-25]
 	Updated www/varnish to 6.6.0 [tnn 2021-06-25]
 	Added archivers/tartest version 1.23 [micha 2021-06-25]
-	Added databases/timescaledb-tune version 0.11.0git [tnn 2021-06-25]
+	Added databases/timescaledb-tune version 0.11.0.20210308 [tnn 2021-06-25]
 	Updated games/woof to 6.0.0 [micha 2021-06-25]
 	Updated pkgtools/pkglint to 21.2.1 [rillig 2021-06-25]
 	Updated databases/prometheus to 2.28.0 [tnn 2021-06-25]
