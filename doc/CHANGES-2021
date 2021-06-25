@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3528 2021/06/24 21:40:17 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3529 2021/06/25 07:26:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5614,3 +5614,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-sh to 1.14.2 [adam 2021-06-24]
 	Updated www/php-dotclear to 2.18.1nb1 [triaxx 2021-06-24]
 	Updated archivers/libzip to 1.8.0 [wiz 2021-06-24]
+	Updated devel/glib2 to 2.68.3 [adam 2021-06-25]
+	Updated devel/glib2-tools to 2.68.3 [adam 2021-06-25]
+	Updated devel/gdbus-codegen to 2.68.3 [adam 2021-06-25]
+	Updated misc/py-tqdm to 4.61.1 [adam 2021-06-25]
