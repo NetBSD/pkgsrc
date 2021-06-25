@@ -2,6 +2,83 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_NewLines(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename",
+		"text")
+
+	t.CheckEquals(lines.Filename, NewCurrPathString("filename"))
+}
+
+func (s *Suite) Test_Lines_Len(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename",
+		"one",
+		"two",
+		"three")
+
+	t.CheckEquals(lines.Len(), 3)
+}
+
+func (s *Suite) Test_Lines_LastLine(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename",
+		"text")
+
+	whole := lines.LastLine()
+
+	t.CheckEquals(whole.String(), "filename:1: text")
+}
+
+func (s *Suite) Test_Lines_EOFLine(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename",
+		"text")
+
+	whole := lines.EOFLine()
+
+	// The text of the line after the ': ' is empty.
+	t.CheckEquals(whole.String(), "filename:EOF: ")
+}
+
+func (s *Suite) Test_Lines_Whole(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename",
+		"text")
+
+	whole := lines.Whole()
+
+	// The lineno between the '::' is empty.
+	// The text of the line after the ': ' is empty as well.
+	t.CheckEquals(whole.String(), "filename:: ")
+}
+
+func (s *Suite) Test_Lines_SaveAutofixChanges(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(autofix bool) {
+		lines := t.SetUpFileLines("filename",
+			"before")
+
+		fix := lines.Lines[0].Autofix()
+		fix.Notef("Replacing.")
+		fix.Replace("before", "after")
+		fix.Apply()
+
+		lines.SaveAutofixChanges()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"NOTE: ~/filename:1: Replacing.",
+		"AUTOFIX: ~/filename:1: Replacing \"before\" with \"after\".")
+}
+
 func (s *Suite) Test_Lines_CheckCvsID(c *check.C) {
 	t := s.Init(c)
 

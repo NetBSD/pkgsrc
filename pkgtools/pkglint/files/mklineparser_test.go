@@ -402,6 +402,9 @@ func (s *Suite) Test_MkLineParser_MatchVarassign(c *check.C) {
 		"",
 		"")
 
+	// A multi-line variable assignment that is commented out.
+	// The '#' from the continued lines are discarded since they are not
+	// part of the variable value.
 	testLine(
 		lines(
 			"#VAR=\t\t\t\\",

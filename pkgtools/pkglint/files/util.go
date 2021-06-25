@@ -341,7 +341,9 @@ func isIgnoredFilename(filename string) bool {
 	case "CVS", ".svn", ".git", ".hg", ".idea":
 		return true
 	}
-	return hasPrefix(filename, ".#")
+
+	// https://www.gnu.org/software/trans-coord/manual/cvs/cvs.html#cvsignore
+	return hasPrefix(filename, ".#") || hasSuffix(filename, "~")
 }
 
 // Checks whether a file is already committed to the CVS repository.

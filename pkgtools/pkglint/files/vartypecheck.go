@@ -1054,7 +1054,7 @@ func (cv *VartypeCheck) Perms() {
 func (cv *VartypeCheck) Pkgname() {
 	value := cv.Value
 
-	if cv.Op != opUseMatch && value == cv.ValueNoVar && !matches(value, rePkgname) {
+	if cv.Op != opUseMatch && value == cv.ValueNoVar && !matchesPkgname(value) {
 		cv.Warnf("%q is not a valid package name.", value)
 		cv.Explain(
 			"A valid package name has the form packagename-version, where version",

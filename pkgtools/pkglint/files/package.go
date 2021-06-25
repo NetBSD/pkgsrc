@@ -7,10 +7,6 @@ import (
 	"strings"
 )
 
-// TODO: What about package names that refer to other variables?
-// TODO: Allow a hyphen in the middle of a version number.
-const rePkgname = `^([\w\-.+]+)-([0-9][.0-9A-Z_a-z]*)$`
-
 // Package is the pkgsrc package that is currently checked.
 //
 // Most of the information is loaded first, and after loading the actual checks take place.
@@ -1266,7 +1262,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 
 	pkg.checkPkgnameRedundant(pkgnameLine, pkgname, distname)
 
-	if pkgname == "" && distnameLine != nil && !containsVarUse(distname) && !matches(distname, rePkgname) {
+	if pkgname == "" && distnameLine != nil && !containsVarUse(distname) && !matchesPkgname(distname) {
 		distnameLine.Warnf("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
 	}
 
@@ -1275,7 +1271,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 	}
 
 	if effname != "" && !containsVarUse(effname) {
-		if m, m1, m2 := match2(effname, rePkgname); m {
+		if m, m1, m2 := matchPkgname(effname); m {
 			pkg.EffectivePkgname = effname + pkg.nbPart()
 			pkg.EffectivePkgnameLine = pkgnameLine
 			pkg.EffectivePkgbase = m1
@@ -1284,7 +1280,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 	}
 
 	if pkg.EffectivePkgnameLine == nil && distname != "" && !containsVarUse(distname) {
-		if m, m1, m2 := match2(distname, rePkgname); m {
+		if m, m1, m2 := matchPkgname(distname); m {
 			pkg.EffectivePkgname = distname + pkg.nbPart()
 			pkg.EffectivePkgnameLine = distnameLine
 			pkg.EffectivePkgbase = m1
@@ -1371,7 +1367,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 		defer trace.Call0()()
 	}
 
-	m, _, pkgversion := match2(pkg.EffectivePkgname, rePkgname)
+	m, _, pkgversion := matchPkgname(pkg.EffectivePkgname)
 	if !m {
 		return
 	}
@@ -1794,4 +1790,18 @@ func NewPlistContent() PlistContent {
 		make(map[RelPath]*PlistLine),
 		make(map[RelPath]*PlistLine),
 		make(map[string]bool)}
+}
+
+// matchPkgname tests whether the string has the form of a package name that
+// does not contain any variable expressions.
+func matchPkgname(s string) (m bool, base string, version string) {
+	// TODO: Allow a hyphen in the middle of a version number.
+	return match2(s, `^([\w\-.+]+)-([0-9][.0-9A-Z_a-z]*)$`)
+}
+
+// matchPkgname tests whether the string has the form of a package name that
+// does not contain any variable expressions.
+func matchesPkgname(s string) bool {
+	m, _, _ := matchPkgname(s)
+	return m
 }

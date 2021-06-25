@@ -181,14 +181,18 @@ func (s *Suite) Test_MkLineChecker_checkTextRpath(c *check.C) {
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
-		"BUILDLINK_TRANSFORM+=\trm:-Wl,-R/usr/lib",
-		"BUILDLINK_TRANSFORM+=\trm:-Wl,-rpath,/usr/lib",
-		"BUILDLINK_TRANSFORM+=\topt:-Wl,-rpath,/usr/lib")
+		"BUILDLINK_TRANSFORM+=\t\trm:-Wl,-R/usr/lib",
+		"BUILDLINK_TRANSFORM+=\t\trm:-Wl,-rpath,/usr/lib",
+		"BUILDLINK_TRANSFORM+=\t\topt:-Wl,-rpath,/usr/lib",
+		"BUILDLINK_TRANSFORM.pkgbase+=\trm:-Wl,-R/usr/lib",
+		"BUILDLINK_TRANSFORM.pkgbase+=\trm:-Wl,-rpath,/usr/lib",
+		"BUILDLINK_TRANSFORM.pkgbase+=\topt:-Wl,-rpath,/usr/lib")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: filename.mk:4: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".")
+		"WARN: filename.mk:4: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".",
+		"WARN: filename.mk:7: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {
