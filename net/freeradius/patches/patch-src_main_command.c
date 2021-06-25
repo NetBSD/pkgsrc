@@ -1,4 +1,4 @@
-$NetBSD: patch-main_command.c,v 1.1 2017/08/26 10:07:28 fhajny Exp $
+$NetBSD: patch-src_main_command.c,v 1.1 2021/06/25 11:42:48 adam Exp $
 
 O_DIRECTORY is a Linuxism and O_NOFOLLOW is a BSDism ported to Linux
 
