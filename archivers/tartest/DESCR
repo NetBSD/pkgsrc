@@ -1,0 +1,2 @@
+Tartest reads a tar archive from stdin and checks this archive for
+compliance with POSIX.1-1990.

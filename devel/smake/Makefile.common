@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2021/06/25 10:43:03 micha Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/06/25 13:41:48 micha Exp $
 # used by archivers/star/Makefile
+# used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
 # used by security/mdigest/Makefile
 # used by shells/bosh/Makefile
