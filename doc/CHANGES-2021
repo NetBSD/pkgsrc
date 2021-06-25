@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3531 2021/06/25 10:29:32 micha Exp $
+$NetBSD: CHANGES-2021,v 1.3532 2021/06/25 10:42:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5620,3 +5620,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-tqdm to 4.61.1 [adam 2021-06-25]
 	Updated net/synergy to 1.14.0.4 [tnn 2021-06-25]
 	Added security/mdigest version 1.6 [micha 2021-06-25]
+	Updated games/wesnoth to 1.14.17 [adam 2021-06-25]
+	Updated finance/py-ofxparse to 0.21 [adam 2021-06-25]
