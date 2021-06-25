@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2021/05/29 10:22:59 leot Exp $
+# $NetBSD: Makefile,v 1.635 2021/06/25 13:36:57 tnn Exp $
 
 COMMENT=	Databases
 
@@ -506,6 +506,7 @@ SUBDIR+=	squirrelsql
 SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tdb
+SUBDIR+=	timescaledb-tune
 SUBDIR+=	tinycdb
 SUBDIR+=	tokyocabinet
 SUBDIR+=	tokyotyrant
