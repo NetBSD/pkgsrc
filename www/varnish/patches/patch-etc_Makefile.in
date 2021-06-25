@@ -1,0 +1,48 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2021/06/25 12:21:08 tnn Exp $
+
+Use standard sysconfdir for vcl files.
+
+--- etc/Makefile.in.orig	2021-03-15 11:36:30.000000000 +0000
++++ etc/Makefile.in
+@@ -157,7 +157,7 @@ am__uninstall_files_from_dir = { \
+     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+          $(am__cd) "$$dir" && rm -f $$files; }; \
+   }
+-am__installdirs = "$(DESTDIR)$(docdir)" "$(DESTDIR)$(vcldir)"
++am__installdirs = "$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(vcldir)"
+ DATA = $(dist_doc_DATA) $(dist_vcl_DATA)
+ am__extra_recursive_targets = recheck-recursive
+ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
+@@ -380,18 +380,18 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-dist_docDATA: $(dist_doc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_doc_DATA)'; test -n "$(docdir)" || list=; \
++	@list='$(dist_doc_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(docdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(docdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(docdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(docdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_docDATA:
+@@ -465,7 +465,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(docdir)" "$(DESTDIR)$(vcldir)"; do \
++	for dir in "$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(vcldir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
