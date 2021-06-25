@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3537 2021/06/25 12:22:36 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3538 2021/06/25 13:33:58 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/freeradius to 3.0.23 [adam 2021-06-25]
 	Updated textproc/py-elementpath to 2.2.3 [adam 2021-06-25]
 	Updated www/varnish to 6.6.0 [tnn 2021-06-25]
+	Added archivers/tartest version 1.23 [micha 2021-06-25]
