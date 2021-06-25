@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/12/04 13:18:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/25 10:41:52 adam Exp $
 
-DISTNAME=	ofxparse-0.20
+DISTNAME=	ofxparse-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/ofxparse/}
