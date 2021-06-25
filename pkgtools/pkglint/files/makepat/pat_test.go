@@ -175,6 +175,7 @@ func Test_Intersect(t *testing.T) {
 		{"N-*", "N-*", "N-*", true, true},
 		{"N-9.99.*", "N-[1-9].*", "", false, true},
 		{"N-9.99.*", "N-[1-9][0-9].*", "", false, false},
+		{"*.c", "*.h", "", false, false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.str, func(t *testing.T) {
