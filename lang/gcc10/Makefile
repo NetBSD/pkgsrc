@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/24 19:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/26 17:42:23 tnn Exp $
 
 GCC_PKGNAME=		gcc10
 PKGREVISION=		1
@@ -121,6 +121,9 @@ MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
+.if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ARGS+=	--disable-bootstrap
+.endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
