@@ -1,37 +1,49 @@
-# $NetBSD: Makefile,v 1.40 2021/06/01 09:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2021/06/26 21:21:32 rhialto Exp $
 
-DISTNAME=		xaos-3.6
-PKGREVISION=		2
+DISTNAME=		xaos-4.2.1
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=xaos-project/}
+GITHUB_PROJECT=		XaoS
+GITHUB_TAG=		refs/tags/release-${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matek.hu/xaos/
 COMMENT=		Zoomable fractal rendering doodad
 LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		gmake msgfmt
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
-INFO_FILES=		yes
+USE_TOOLS+=		gmake
+USE_LANGUAGES+=		c c++
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	configure
-SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'
+SUBST_CLASSES+=		strip
+SUBST_MESSAGE.strip=	Filling in missing path to strip
+SUBST_STAGE.strip=	post-configure
+SUBST_FILES.strip=	Makefile
+SUBST_SED.strip=	-e 's,^STRIP .*=.*,STRIP = ${TOOLS_PLATFORM.strip},'
 
-INSTALLATION_DIRS=	${PKGINFODIR}
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing path to data files
+SUBST_STAGE.path=	post-configure
+SUBST_FILES.path=	src/include/config.h
+SUBST_SED.path=		-e '/^.define DATAPATH/s,".*","${PREFIX}/share/XaoS",'
 
-CHECK_PORTABILITY_SKIP+=	help/applehelpconv
-CHECK_PORTABILITY_SKIP+=	help/.svn/text-base/applehelpconv.svn-base
+WRKSRC=			${WRKDIR}/XaoS-release-${PKGVERSION_NOREV}
 
-LDFLAGS.SunOS+=		-liconv
+INSTALLATION_DIRS+=	${PREFIX}/bin
+INSTALLATION_DIRS+=	${PREFIX}/share/XaoS
 
-.include "../../math/gsl/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXt=	build
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+do-configure:
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
+
+# The upstream package has no working install target any more.
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/xaos  ${DESTDIR}${PREFIX}/bin/
+.for dir in catalogs examples tutorial
+	cd ${WRKSRC} && pax -wr ${dir} ${DESTDIR}${PREFIX}/share/XaoS/
+.endfor
+	cd ${DESTDIR}${PREFIX}/share/XaoS/examples && \
+		mv */* . && \
+		rmdir 0rfelyus Hubicka Langston Malczak ZKovacs ZsKovacs
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
