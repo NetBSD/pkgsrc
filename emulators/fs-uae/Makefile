@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/08/18 17:57:46 leot Exp $
+# $NetBSD: Makefile,v 1.17 2021/06/26 14:08:44 rhialto Exp $
 
 DISTNAME=	fs-uae-3.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -21,13 +21,13 @@ CONFIGURE_ARGS+=	--with-libmpeg2
 # the JIT is supported.
 #error JIT is only supported on x86/x86-64
 #error no JIT on OpenBSD/FreeBSD right now
-.if ${MACHINE_ARCH} != "i386" || \
-    ${MACHINE_ARCH} != "x86_64" || \
-    ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+.if (${MACHINE_ARCH} != "i386" && \
+     ${MACHINE_ARCH} != "x86_64") || \
+    ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-jit
-.else
-NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
 .endif
+# Requires paxctl +m even without jit.
+NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
 
 # src/debug.cpp: In function 'void debug()':
 # src/debug.cpp:5361:188: error: array subscript has type 'char' [-Werror=char-subscripts]
