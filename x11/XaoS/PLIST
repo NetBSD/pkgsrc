@@ -1,24 +1,17 @@
-@comment $NetBSD: PLIST,v 1.13 2014/07/13 09:17:04 mbalmer Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/06/26 21:21:32 rhialto Exp $
 bin/xaos
-info/xaos.info
-man/man6/xaos.6
 share/XaoS/catalogs/README
-share/XaoS/catalogs/cesky.cat
-share/XaoS/catalogs/deutsch.cat
-share/XaoS/catalogs/english.cat
-share/XaoS/catalogs/espanhol.cat
-share/XaoS/catalogs/francais.cat
-share/XaoS/catalogs/italiano.cat
-share/XaoS/catalogs/magyar.cat
-share/XaoS/catalogs/portuguese.cat
-share/XaoS/catalogs/romanian.cat
-share/XaoS/doc/AUTHORS
-share/XaoS/doc/COPYING
-share/XaoS/doc/ChangeLog
-share/XaoS/doc/ChangeLog.old
-share/XaoS/doc/INSTALL
-share/XaoS/doc/NEWS
-share/XaoS/doc/TODO
+share/XaoS/catalogs/README.i18n
+share/XaoS/catalogs/cs.cat
+share/XaoS/catalogs/de.cat
+share/XaoS/catalogs/en.cat
+share/XaoS/catalogs/es.cat
+share/XaoS/catalogs/fr.cat
+share/XaoS/catalogs/hu.cat
+share/XaoS/catalogs/it.cat
+share/XaoS/catalogs/pt.cat
+share/XaoS/catalogs/ro.cat
+share/XaoS/catalogs/ru.cat
 share/XaoS/examples/0rfel1.xpf
 share/XaoS/examples/0rfel2.xpf
 share/XaoS/examples/2spirals.xpf
@@ -190,7 +183,6 @@ share/XaoS/examples/ufo.xpf
 share/XaoS/examples/warriormask.xpf
 share/XaoS/examples/whisp.xpf
 share/XaoS/examples/zsigapro.xpf
-share/XaoS/help/xaos.hlp
 share/XaoS/tutorial/3dtutor.xaf
 share/XaoS/tutorial/Bclosing.xaf
 share/XaoS/tutorial/Bintro.xaf
@@ -218,6 +210,7 @@ share/XaoS/tutorial/head.xhf
 share/XaoS/tutorial/incolor.xaf
 share/XaoS/tutorial/innew.xhf
 share/XaoS/tutorial/intro.xaf
+share/XaoS/tutorial/iter.xaf
 share/XaoS/tutorial/julia.xaf
 share/XaoS/tutorial/keys.xhf
 share/XaoS/tutorial/line1.xhf
@@ -225,6 +218,7 @@ share/XaoS/tutorial/magnet.xaf
 share/XaoS/tutorial/mset.xaf
 share/XaoS/tutorial/msetren.xaf
 share/XaoS/tutorial/new30.xaf
+share/XaoS/tutorial/new40.xaf
 share/XaoS/tutorial/newton.xaf
 share/XaoS/tutorial/octo.xaf
 share/XaoS/tutorial/other.xaf
@@ -245,11 +239,3 @@ share/XaoS/tutorial/tree.xhf
 share/XaoS/tutorial/trice.xaf
 share/XaoS/tutorial/truecol.xaf
 share/XaoS/tutorial/truecol.xhf
-share/locale/cs/LC_MESSAGES/xaos.mo
-share/locale/de/LC_MESSAGES/xaos.mo
-share/locale/es/LC_MESSAGES/xaos.mo
-share/locale/fr/LC_MESSAGES/xaos.mo
-share/locale/hu/LC_MESSAGES/xaos.mo
-share/locale/it/LC_MESSAGES/xaos.mo
-share/locale/pt/LC_MESSAGES/xaos.mo
-share/locale/ro/LC_MESSAGES/xaos.mo
