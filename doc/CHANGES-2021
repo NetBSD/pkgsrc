@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3546 2021/06/26 13:51:55 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.3547 2021/06/26 21:22:00 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5640,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3-tcl to 3.36.0 [adam 2021-06-25]
 	Updated devel/lemon to 1.0.3.36.0 [adam 2021-06-25]
 	Updated x11/x3270 to 4.0ga14 [rhialto 2021-06-26]
+	Updated x11/XaoS to 4.2.1 [rhialto 2021-06-26]
