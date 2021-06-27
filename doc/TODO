@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20809 2021/06/27 21:18:48 wiz Exp $
+$NetBSD: TODO,v 1.20810 2021/06/27 21:31:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1417,7 +1417,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o multitail-6.4.2
 	o munge-0.5.14
 	o muse-0.9.2
-	o musicpd-0.22.9
 	o mysql-connector-c++-8.0.23
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
