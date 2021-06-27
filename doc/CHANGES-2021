@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3553 2021/06/27 11:30:08 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.3554 2021/06/27 14:55:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5666,3 +5666,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/caddy to 2.4.3 [bsiegert 2021-06-27]
 	Updated security/hitch to 1.7.0 [tnn 2021-06-27]
 	Updated textproc/enchant2 to 2.3.0 [bsiegert 2021-06-27]
+	Updated lang/openjdk8 to 1.8.292 [tnn 2021-06-27]
