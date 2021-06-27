@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2021/02/06 13:02:45 tnn Exp $
+$NetBSD: distinfo,v 1.23 2021/06/27 08:53:54 tnn Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -12,12 +12,12 @@ SHA1 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = a1339a72f399
 RMD160 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = edf0054b7c2fa2eff641b2c385a4f9de07eb0247
 SHA512 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = 735f47d7398a48f0963c5d629c6c319dfe22d84bacd45f84a34f4784433c8cf6bfe6b356363a4591f035bec4a32e2e38d0a9c6be361aa57e5f0170ad4e16a1ad
 Size (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = 99673444 bytes
-SHA1 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 793f282501163f717b7df4305cceae3e283c6896
-RMD160 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 1ee3361c24ff183ee580c82e446680da14506bf1
-SHA512 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = b8d684dad251a7625d2a98286eb85b984a6e0d860e98de845e1adda22ce53e7dba7fce12160ed1fc6a6a0c9bab1d43531174d141e2d7e1e5467b38e06a723bfb
-Size (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 122486444 bytes
+SHA1 (openjdk-jdk11u-jdk-11.0.11-9-1.tar.gz) = 71c1216e4664a4467c21663977d7fa0644ed92b4
+RMD160 (openjdk-jdk11u-jdk-11.0.11-9-1.tar.gz) = b89fca5544808d9ca96cfe0c049386fae53e875a
+SHA512 (openjdk-jdk11u-jdk-11.0.11-9-1.tar.gz) = 6d38b807e981657cc232d93e13efe9d1cb1b85d349135360f75d4658e40b7ed4b86a68c8467528030773f3edd7db7df6a65918cfa52b4e417876f35515de65f4
+Size (openjdk-jdk11u-jdk-11.0.11-9-1.tar.gz) = 122607262 bytes
 SHA1 (patch-make_autoconf_basics.m4) = 5a8d3cd229f73eef34fb3860dfae1a813ec39ab5
-SHA1 (patch-make_autoconf_flags-cflags.m4) = 7ec010eb62a1e4f057b7886caf0d0efaae4b6b63
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 3b37853298805e2ffb92d3babd700d0048f24d8d
 SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b07618
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
 SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7a7d54
