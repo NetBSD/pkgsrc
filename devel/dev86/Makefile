@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/06/27 07:09:56 nia Exp $
 #
 
 VER=		0.16.21
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${VER}
 
 MAINTAINER=	pierrick@bs-network.net
 HOMEPAGE=	https://www.debath.co.uk/
-COMMENT=	Linux 8086 development environment
+COMMENT=	C compiler, assembler and linker for 8086 executables
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS=	bcc-[0-9]*
