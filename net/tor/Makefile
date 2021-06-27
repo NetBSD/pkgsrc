@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.169 2021/06/14 17:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2021/06/27 21:18:38 wiz Exp $
 
-DISTNAME=	tor-0.4.5.9
+DISTNAME=	tor-0.4.6.5
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -11,18 +11,24 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl:test pkg-config
-# There are multiple reports of failure to build with BSD make, due to
-# an apparent lack of firing the rule to create micro-revision.i.
-# Work around this by using gmake, which is tiny compared to the
-# existing perl dependency, and unlikely to be needed on any given
-# system just for tor.
-USE_TOOLS+=		gmake bash:test
+USE_TOOLS+=		perl:test pkg-config bash:test
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ENV+=		CPP=${CPP:Q}
+CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 
+#============================================================================
+#Testsuite summary for tor 0.4.6.5
+#============================================================================
+## TOTAL: 33
+## PASS:  29
+## SKIP:  4
+## XFAIL: 0
+## FAIL:  0
+## XPASS: 0
+## ERROR: 0
+#============================================================================
 TEST_TARGET=		check
 
 TOR_USER?=		tor
@@ -56,7 +62,12 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
+REPLACE_BASH+=		scripts/maint/checkShellScripts.sh
+REPLACE_BASH+=		scripts/maint/run_check_subsystem_order.sh
+
+REPLACE_PERL+=		scripts/maint/checkOptionDocs.pl.in
 REPLACE_PERL+=		scripts/maint/checkSpace.pl
+REPLACE_PERL+=		scripts/coccinelle/test-operator-cleanup
 
 .include "options.mk"
 
@@ -66,9 +77,9 @@ REPLACE_PERL+=		scripts/maint/checkSpace.pl
 CFLAGS+=		-c99
 .endif
 
+.include "../../archivers/zstd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2021/02/15 19:01:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/06/27 21:18:38 wiz Exp $
 bin/tor
-${PLIST.gencert}bin/tor-gencert
+${PLIST.openssl}bin/tor-gencert
 bin/tor-print-ed-signing-cert
 bin/tor-resolve
 bin/torify
@@ -14,7 +14,6 @@ ${PLIST.doc}share/doc/tor/tor-print-ed-signing-cert.html
 ${PLIST.doc}share/doc/tor/tor-resolve.html
 ${PLIST.doc}share/doc/tor/tor.html
 ${PLIST.doc}share/doc/tor/torify.html
-share/examples/rc.d/tor
 share/examples/tor/torrc.sample
 share/tor/geoip
 share/tor/geoip6
