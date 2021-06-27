@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/27 16:25:23 wiz Exp $
+
+SHA1 (magic-wormhole-transit-relay-0.2.1.tar.gz) = d8491d5a4376c225f9147e91ff7f213f2b15d944
+RMD160 (magic-wormhole-transit-relay-0.2.1.tar.gz) = c9c27c0fb61eed58573959790f934d6d871935c8
+SHA512 (magic-wormhole-transit-relay-0.2.1.tar.gz) = 07eccfe4b5224d66cf31990adabf92e7057b186c509d454896073b3939508f7a3959979f9f1fe6d7423c95612e3bc472ff87995caf6df73b533bbeabc4313955
+Size (magic-wormhole-transit-relay-0.2.1.tar.gz) = 39621 bytes
