@@ -1,8 +1,8 @@
-$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.1 2019/10/01 12:36:34 tnn Exp $
+$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.2 2021/06/27 08:53:54 tnn Exp $
 
 We prefer to use explicit run paths.
 
---- make/autoconf/flags-cflags.m4.orig	2019-09-19 12:22:38.000000000 +0000
+--- make/autoconf/flags-cflags.m4.orig	2021-04-24 02:47:22.000000000 +0000
 +++ make/autoconf/flags-cflags.m4
 @@ -39,8 +39,8 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
  
@@ -15,7 +15,7 @@ We prefer to use explicit run paths.
      SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
      SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
  
-@@ -58,17 +58,10 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
+@@ -58,17 +58,11 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
@@ -24,9 +24,9 @@ We prefer to use explicit run paths.
 +      SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
        SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
--
+ 
 -      # arm specific settings
--      if test "x$OPENJDK_TARGET_CPU" = "xarm"; then
+-      if test "x$OPENJDK_TARGET_CPU" = "xarm" && test "x$OPENJDK_TARGET_OS" = xlinux; then
 -        # '-Wl,-z,origin' isn't used on arm.
 -        SET_SHARED_LIBRARY_ORIGIN='-Wl,-rpath,\$$$$ORIGIN[$]1'
 -      else
