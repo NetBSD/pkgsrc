@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2021/06/25 09:49:23 tnn Exp $
+$NetBSD: distinfo,v 1.35 2021/06/27 08:51:34 tnn Exp $
 
 SHA1 (googletest-1.10.0.tar.gz) = 9c89be7df9c5e8cb0bc20b3c4b39bf7e82686770
 RMD160 (googletest-1.10.0.tar.gz) = f2f7f96adf1ab8aae3f6204fdba3ff150fd4396b
@@ -8,5 +8,6 @@ SHA1 (synergy-core-1.14.0.4.tar.gz) = 7eade0b84b983968b2c4f859cd878765519498cf
 RMD160 (synergy-core-1.14.0.4.tar.gz) = 1de0d7b0a298e00354dbf67fe682a8c95e7b2cfa
 SHA512 (synergy-core-1.14.0.4.tar.gz) = 278ff319c5d308052e9f89a8ae53a99aacaa2b394d28e353b3779a4ee672cb09d91f37a4b0564788456d8e0bed90936d924739e74f7aa2a85482926164dc2fc8
 Size (synergy-core-1.14.0.4.tar.gz) = 8835907 bytes
+SHA1 (patch-CMakeLists.txt) = 81d4c3bfd26c9912898e30c7be2930e4bfed65b3
 SHA1 (patch-src_lib_arch_unix_ArchNetworkBSD.cpp) = 17e0e3253ddc47c662a836aa4d01836c31ab588b
 SHA1 (patch-src_lib_server_Config.cpp) = dc6a00fd33e71480a5f002cf15b8f876143f82a3
