@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2021/06/27 14:54:40 tnn Exp $
+$NetBSD: distinfo,v 1.83 2021/06/27 18:30:26 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -66,8 +66,13 @@ SHA1 (patch-hotspot_make_solaris_makefiles_optimized.make) = 78d64fe6cb7c3420889
 SHA1 (patch-hotspot_make_solaris_makefiles_product.make) = c41b360302bffd9fbfaa34ee7a4d5d1a756ae0e2
 SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 0ca85ba72d154643b934815a0a2deb1e77371ff9
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = 787e0c68cf976fc0df3e19fb2a22b1b7e3662c07
+SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.cpp) = b02d08302974a923e19875c4fa30057580629f14
+SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.hpp) = 6a766abe3c53ee3b15ad9636527d0e4b61942d4d
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = 446b96a91a2e4fa76f43ac653d1608f037c64af9
+SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_bytes__bsd__aarch64.inline.hpp) = acc0b870113ffc279d089da385e564f3ffd87f89
+SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp) = 10cab6ac79e57d6a36b9183ea62ff8b3965d68bb
+SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_vm__version__bsd__aarch64.cpp) = d6762bb2a9fe6e158ccf23f7d04aa0cba588e78e
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = f46713855507654be42707b1f80a779796929069
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
