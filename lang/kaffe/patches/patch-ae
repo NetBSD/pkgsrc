@@ -1,9 +1,19 @@
-$NetBSD: patch-ae,v 1.7 2006/10/05 11:22:35 rillig Exp $
+$NetBSD: patch-ae,v 1.8 2021/06/27 01:22:52 dholland Exp $
 
-Using the ">" operator conflicts with "set -C".
+- \JNIEXPORT is an invalid regexp; it appears the backslash is just a stray
+- Using the ">" operator conflicts with "set -C".
 
---- libraries/javalib/external/classpath/scripts/check_jni_methods.sh.orig	2005-09-05 20:46:16.000000000 +0200
-+++ libraries/javalib/external/classpath/scripts/check_jni_methods.sh	2006-10-05 13:21:27.000000000 +0200
+--- libraries/javalib/external/classpath/scripts/check_jni_methods.sh.orig	2005-09-05 18:46:16.000000000 +0000
++++ libraries/javalib/external/classpath/scripts/check_jni_methods.sh
+@@ -27,7 +27,7 @@ find native/jni -name \*.cpp | \
+ find native/jni -name \*.cpp | \
+ 	xargs egrep -h '^(JNIEXPORT .* JNICALL )?Java_' | \
+ 	cut -f4 -d\  | \
+-        LC_ALL=C sed -e 's,^\JNIEXPORT .* JNICALL \(Java_[a-z_A-Z0-9]*\) *(.*$,\1,' >> $TMPFILE2
++        LC_ALL=C sed -e 's,^JNIEXPORT .* JNICALL \(Java_[a-z_A-Z0-9]*\) *(.*$,\1,' >> $TMPFILE2
+ mv $TMPFILE2 $TMPFILE3
+ sort $TMPFILE3 > $TMPFILE2
+ rm $TMPFILE3
 @@ -43,7 +43,7 @@ EOF
  # Use fgrep and direct the output to /dev/null for compatibility with older
  # grep instead of using the non portable -q.
