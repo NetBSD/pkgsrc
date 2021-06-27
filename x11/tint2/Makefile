@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/06/23 20:21:37 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2021/06/27 07:13:47 nia Exp $
 
 DISTNAME=		tint2-v17.0.1
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fernandotcl@gmail.com
 HOMEPAGE=		https://gitlab.com/o9000/tint2
-COMMENT=		Lightweight panel/taskbar for Linux and BSD
+COMMENT=		Lightweight panel/taskbar for X11
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
