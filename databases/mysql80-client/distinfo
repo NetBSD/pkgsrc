@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/06/22 10:12:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/06/27 06:41:55 nia Exp $
 
 SHA1 (mysql-boost-8.0.24.tar.gz) = e640d9851c1721a0550bdca38f03cb8681d61862
 RMD160 (mysql-boost-8.0.24.tar.gz) = 2577eb94d5b8651f3520706be9c40c3e924980d4
@@ -31,5 +31,6 @@ SHA1 (patch-scripts_mysqld_safe.sh) = 0784314227657aa0bc3f4a0b4e21c173a86fa94b
 SHA1 (patch-sql_CMakeLists.txt) = 84af2f2e58a17bde292a665a726489b8f56f4132
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = b414e0d499f51750e1aa6e9dd7b4e7006456a079
 SHA1 (patch-sql_item_geofunc_relchecks_bgwrap.h) = d20896bfe2391d30aa9e95834c77e7de03377d76
+SHA1 (patch-sql_join__optimizer_bit__utils.h) = 3e75331da6b50935f082b2f738e6c6964afef5f7
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = e08ed53790ac8b03b38d566fee3a2688ca6065b3
 SHA1 (patch-vio_viosocket.cc) = 15dcc0dee88e736a844aacc02e9dbc6beeb915e4
