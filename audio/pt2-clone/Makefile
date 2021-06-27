@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/01/29 09:11:40 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/27 07:07:44 nia Exp $
 
 DISTNAME=	pt2-clone-1.28
 CATEGORIES=	audio
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/8bitbubsy/pt2-clone/
-COMMENT=	ProTracker 2 clone for Windows/macOS/Linux
+COMMENT=	ProTracker 2 clone
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
