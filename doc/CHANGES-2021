@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3557 2021/06/27 21:18:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3558 2021/06/27 21:31:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/py-magic-wormhole-transit-relay version 0.2.1 [wiz 2021-06-27]
 	Added net/py-magic-wormhole-mailbox-server version 0.4.1 [wiz 2021-06-27]
 	Updated net/tor to 0.4.6.5 [wiz 2021-06-27]
+	Updated audio/musicpd to 0.22.9 [wiz 2021-06-27]
