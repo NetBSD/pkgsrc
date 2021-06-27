@@ -1,8 +1,8 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.2 2015/07/18 07:07:42 fhajny Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.3 2021/06/27 14:54:41 tnn Exp $
 
 GCC support.
 
---- hotspot/make/solaris/makefiles/gcc.make.orig	2015-06-10 10:31:44.000000000 +0000
+--- hotspot/make/solaris/makefiles/gcc.make.orig	2021-05-14 21:52:06.000000000 +0000
 +++ hotspot/make/solaris/makefiles/gcc.make
 @@ -70,11 +70,23 @@ VM_PICFLAG/LIBJVM = $(PICFLAG)
  VM_PICFLAG/AOUT   =
@@ -67,7 +67,7 @@ GCC support.
  # Compiler warnings are treated as errors 
  WARNINGS_ARE_ERRORS = -Werror 
 -# Enable these warnings. See 'info gcc' about details on these options
--WARNING_FLAGS = -Wpointer-arith -Wconversion -Wsign-compare -Wundef
+-WARNING_FLAGS = -Wpointer-arith -Wconversion -Wsign-compare -Wundef -Wformat=2
 -CFLAGS_WARN/DEFAULT = $(WARNINGS_ARE_ERRORS) $(WARNING_FLAGS)
 +
 +# Except for a few acceptable ones
@@ -77,14 +77,14 @@ GCC support.
 +ifneq "$(shell expr \( $(CC_VER_MAJOR) \> 4 \) \| \( \( $(CC_VER_MAJOR) = 4 \) \& \( $(CC_VER_MINOR) \>= 3 \) \))" "0"
 +  ACCEPTABLE_WARNINGS = -Wpointer-arith -Wsign-compare
 +else
-+  ACCEPTABLE_WARNINGS = -Wpointer-arith -Wconversion -Wsign-compare -Wundef
++  ACCEPTABLE_WARNINGS = -Wpointer-arith -Wconversion -Wsign-compare -Wundef -Wformat=2
 +endif
 +
 +CFLAGS_WARN/DEFAULT = $(WARNINGS_ARE_ERRORS) $(ACCEPTABLE_WARNINGS)
  # Special cases 
  CFLAGS_WARN/BYFILE = $(CFLAGS_WARN/$@)$(CFLAGS_WARN/DEFAULT$(CFLAGS_WARN/$@))  
  
-@@ -177,7 +203,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME
+@@ -177,7 +203,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME 
  endif 
  
  # Use $(SONAMEFLAG:SONAME=soname) to specify the intrinsic name of a shared obj

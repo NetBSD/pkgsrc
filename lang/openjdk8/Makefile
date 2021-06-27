@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.106 2021/04/21 13:24:54 adam Exp $
+# $NetBSD: Makefile,v 1.107 2021/06/27 14:54:40 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
-PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
 GITHUB_PROJECT=	openjdk-jdk8u
-GITHUB_TAG=	jdk8u252-b09.1
+GITHUB_TAG=	jdk8u292-b10.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
@@ -70,7 +69,7 @@ CONFIGURE_ARGS+=	--with-update-version=${PKGVERSION_NOREV:S/1.8.//}
 CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
-CHECK_PORTABILITY_SKIP+=	hotspot/test/compiler/criticalnatives/argumentcorruption/Test8167409.sh
+CHECK_PORTABILITY_SKIP+=	hotspot/test/compiler/*/*/*.sh
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
