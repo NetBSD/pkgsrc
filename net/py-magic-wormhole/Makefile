@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/23 21:17:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/27 16:37:18 wiz Exp $
 
 DISTNAME=	magic-wormhole-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,9 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.13.0:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.5.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=18.0.2:../../net/py-txtorcon
 
-# 7 test failures as of 0.12.0
-# https://github.com/magic-wormhole/magic-wormhole/issues/421
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay-[0-9]*:../../net/py-magic-wormhole-transit-relay
+TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server-[0-9]*:../../net/py-magic-wormhole-mailbox-server
 
 USE_LANGUAGES=	# none
 
