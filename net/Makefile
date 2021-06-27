@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1414 2021/06/27 16:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.1415 2021/06/27 16:33:38 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -721,6 +721,7 @@ SUBDIR+=	py-lexicon
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-magic-wormhole
+SUBDIR+=	py-magic-wormhole-mailbox-server
 SUBDIR+=	py-magic-wormhole-transit-relay
 SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
