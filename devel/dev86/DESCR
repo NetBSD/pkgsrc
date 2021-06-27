@@ -1,6 +1,7 @@
-Linux 8086 development environment.
-This is based on Bruce Evans's C compiler with additonal code, including
-a reasonable C library for ELKS DOS or standalone, written by myself and
-others.
+C compiler, assembler and linker environment for the production of 8086
+executables.
+
+This is based on Bruce Evans's C compiler with additonal code, including a
+reasonable C library for ELKS DOS or standalone.
 
 This is a replacement for devel/bcc.
