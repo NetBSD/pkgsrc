@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3548 2021/06/27 08:15:27 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3549 2021/06/27 08:51:47 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/gnuradio-zeromq to 3.9.2.0 [tnn 2021-06-27]
 	Added ham/gnuradio-soapy-sdr version 3.9.2.0 [tnn 2021-06-27]
 	Updated meta-pkgs/gnuradio to 3.9.2.0 [tnn 2021-06-27]
+	Removed comms/asterisk15 [jnemeth 2021-06-27]
