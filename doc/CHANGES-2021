@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3550 2021/06/27 08:55:07 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3551 2021/06/27 10:02:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5663,3 +5663,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/gnuradio to 3.9.2.0 [tnn 2021-06-27]
 	Removed comms/asterisk15 [jnemeth 2021-06-27]
 	Updated lang/openjdk11 to 1.11.0.11.9 [tnn 2021-06-27]
+	Updated www/caddy to 2.4.3 [bsiegert 2021-06-27]
