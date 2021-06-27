@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/06/27 16:33:17 wiz Exp $
+
+SHA1 (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 8730b1ac5fe9f5fd36535de85b246e0e19e998a2
+RMD160 (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 4cecbb06bae48adf0f1478964fa686168ea916c2
+SHA512 (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 17e66d61589b2a9620d56a4df82489d0c9aad40b6d61ff89c6b44e2ab96f8f4f12849879d5950025cbc7a657a2cd6f1afb36505adad52566f57571de645b70a4
+Size (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 64830 bytes
