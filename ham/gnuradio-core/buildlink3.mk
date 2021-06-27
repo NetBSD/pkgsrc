@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.31 2021/04/07 16:14:07 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2021/06/27 08:08:59 tnn Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
 .if !defined(GNURADIO_CORE_BUILDLINK3_MK)
 GNURADIO_CORE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.9.1.0
-BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.9.1.0
+BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.9.2.0
+BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.9.2.0
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 
 .include "../../devel/gmp/buildlink3.mk"

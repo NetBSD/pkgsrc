@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/04/07 16:14:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/06/27 08:08:59 tnn Exp $
 include/gnuradio/digital/adaptive_algorithm.h
 include/gnuradio/digital/adaptive_algorithm_cma.h
 include/gnuradio/digital/adaptive_algorithm_lms.h
@@ -90,7 +90,7 @@ lib/cmake/gnuradio/gnuradio-digitalConfig.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets.cmake
 lib/libgnuradio-digital.so
-lib/libgnuradio-digital.so.3.9.1
+lib/libgnuradio-digital.so.3.9.2
 lib/libgnuradio-digital.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-digital.pc
 ${PYSITELIB}/gnuradio/digital/__init__.py
