@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3554 2021/06/27 14:55:25 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3555 2021/06/27 16:26:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/hitch to 1.7.0 [tnn 2021-06-27]
 	Updated textproc/enchant2 to 2.3.0 [bsiegert 2021-06-27]
 	Updated lang/openjdk8 to 1.8.292 [tnn 2021-06-27]
+	Added net/py-magic-wormhole-transit-relay version 0.2.1 [wiz 2021-06-27]
