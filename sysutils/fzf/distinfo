@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/05/31 10:27:42 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/06/28 07:44:31 wiz Exp $
 
-SHA1 (fzf-0.27.1.tar.gz) = 0e0937a57f500dfc0f678626a4a2571fd1db9fa3
-RMD160 (fzf-0.27.1.tar.gz) = 4f754b1a64928b2bc2144d78ca68fe47aae8af17
-SHA512 (fzf-0.27.1.tar.gz) = ad2752cbfd6da396bf1984a94271966c0358b408af9efc6b8f5c53e2fd08d11ff1c0ee46ccff3087035c1a7f8b6e807b7961fb302ff1ee661f847ebf84deb2e8
-Size (fzf-0.27.1.tar.gz) = 191586 bytes
+SHA1 (fzf-0.27.2.tar.gz) = 1bf77b90cb3d8ea3188d8a0832fa05aa07f0485d
+RMD160 (fzf-0.27.2.tar.gz) = 17f3cbe0b4a892fc300cce921e49e6ef0a9ac96f
+SHA512 (fzf-0.27.2.tar.gz) = 8ca27b61b6b2a66bdfd06dc8ad9e5163f3b69d64a44e1a99df5a2af35a63ccf7a9a77f9faed27fead373f5c212396327a3c0300b31f22583a35a1ae2aeac9865
+Size (fzf-0.27.2.tar.gz) = 191941 bytes
 SHA1 (github.com_gdamore_encoding_@v_v1.0.0.mod) = 563ec20894ceafe1f75f27b4f513c52e4f50893f
 RMD160 (github.com_gdamore_encoding_@v_v1.0.0.mod) = 5328d8b8c05a80049e749251c59ecc674210c303
 SHA512 (github.com_gdamore_encoding_@v_v1.0.0.mod) = fb153c4e481c073133f0c933c67eba8a1f160ab146921f2c77125b6ff5c348cea57e3a5701a557c8db2212d32e3cba1c09b9509210660c17b66c2a45ba97cb75
