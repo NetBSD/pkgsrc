@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2021/04/21 11:42:35 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/06/28 08:37:22 wiz Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
-GITHUB_RELEASE=	2.6.4
-GITHUB_PROJECT=	keepassxc
+GITHUB_RELEASE=	2.6.6
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

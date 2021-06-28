@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/08 10:12:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/06/28 08:37:22 wiz Exp $
 bin/keepassxc
 bin/keepassxc-cli
 lib/keepassxc/libkeepassx-autotype-xcb.so
@@ -19,6 +19,7 @@ share/keepassxc/translations/keepassx_ca.qm
 share/keepassxc/translations/keepassx_cs.qm
 share/keepassxc/translations/keepassx_da.qm
 share/keepassxc/translations/keepassx_de.qm
+share/keepassxc/translations/keepassx_el.qm
 share/keepassxc/translations/keepassx_en.qm
 share/keepassxc/translations/keepassx_en_GB.qm
 share/keepassxc/translations/keepassx_en_US.qm
@@ -26,6 +27,7 @@ share/keepassxc/translations/keepassx_es.qm
 share/keepassxc/translations/keepassx_et.qm
 share/keepassxc/translations/keepassx_fi.qm
 share/keepassxc/translations/keepassx_fr.qm
+share/keepassxc/translations/keepassx_fr_CA.qm
 share/keepassxc/translations/keepassx_hr_HR.qm
 share/keepassxc/translations/keepassx_hu.qm
 share/keepassxc/translations/keepassx_id.qm
@@ -42,6 +44,7 @@ share/keepassxc/translations/keepassx_ro.qm
 share/keepassxc/translations/keepassx_ru.qm
 share/keepassxc/translations/keepassx_sk.qm
 share/keepassxc/translations/keepassx_sl_SI.qm
+share/keepassxc/translations/keepassx_sr.qm
 share/keepassxc/translations/keepassx_sv.qm
 share/keepassxc/translations/keepassx_th.qm
 share/keepassxc/translations/keepassx_tr.qm
