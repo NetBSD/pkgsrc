@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20818 2021/06/28 08:48:29 wiz Exp $
+$NetBSD: TODO,v 1.20819 2021/06/28 08:50:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -656,7 +656,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clang-11.1.0
+	o clang-12.0.0
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clawsker-0.7.13
@@ -1304,7 +1304,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-11.1.0
+	o llvm-12.0.0
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
