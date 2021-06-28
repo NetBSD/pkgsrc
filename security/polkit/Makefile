@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/06/03 14:43:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/06/28 12:38:46 nia Exp $
 
 DISTNAME=	polkit-0.119
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
@@ -9,8 +10,9 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/polkit
 COMMENT=	Authorization Manager
 LICENSE=	gnu-lgpl-v2
 
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd
 
@@ -19,7 +21,9 @@ GNU_CONFIGURE_STRICT=	no # has sub-configures
 USE_LANGUAGES=		c c++14
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config intltool gmake msgfmt perl
+USE_TOOLS+=		pkg-config gmake perl
+USE_TOOLS+=		intltool msgfmt msgmerge xgettext
+USE_TOOLS+=		autoconf autoreconf automake
 
 # configure: error: *** A compiler with support for C++17 language features is required.
 GCC_REQD+=	7
@@ -31,6 +35,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
 CONFIGURE_ARGS+=	--disable-libsystemd-login
 CONFIGURE_ARGS+=	--disable-libelogind
+CONFIGURE_ARGS+=	--with-duktape
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,8 +74,10 @@ SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
-.include "../../lang/mozjs78/buildlink3.mk"
+.include "../../lang/libduktape/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
