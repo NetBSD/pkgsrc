@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20823 2021/06/28 10:43:00 wiz Exp $
+$NetBSD: TODO,v 1.20824 2021/06/28 15:32:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -491,8 +491,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOPE-2.4.0
 	o SOPE4-4.3.2
 	o SQLiteCpp-2.5.0
-	o Sigil-1.5.1 [wip]
-	o Sigil-1.6.0
+	o Sigil-1.6.0 [wip, waiting for qt5-qtwebengine import]
 	o TeXmacs-1.99.19
 	o TiffIO-140a
 	o YoSucker-81
