@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20813 2021/06/28 07:50:53 wiz Exp $
+$NetBSD: TODO,v 1.20814 2021/06/28 07:51:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -844,7 +844,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gdb7-7.12
-	o gdbm-1.20
 	o gdm-2.32.2
 	o gdm-3.0.3
 	o gearboy-3.3.0
