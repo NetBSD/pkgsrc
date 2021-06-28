@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
+$NetBSD: patch-aa,v 1.10 2021/06/28 15:53:57 tnn Exp $
 
 -DragonFly support.
 -Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2020-01-16 18:18:12.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2021-05-14 21:52:06.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
 @@ -110,7 +110,7 @@
  # include <vm/vm_param.h>
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
  # include <elf.h>
  #endif
  
-@@ -294,6 +294,7 @@ void os::Bsd::initialize_system_info() {
+@@ -296,6 +296,7 @@ void os::Bsd::initialize_system_info() {
    size_t len;
    int cpu_val;
    julong mem_val;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -332,14 +333,11 @@ void os::Bsd::initialize_system_info() {
+@@ -334,14 +335,11 @@ void os::Bsd::initialize_system_info() {
         _physical_memory = 256*1024*1024;       // fallback (XXXBSD?)
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
  #endif
  }
  
-@@ -391,7 +389,7 @@ void os::init_system_properties_values()
+@@ -393,7 +391,7 @@ void os::init_system_properties_values()
  //        ...
  //        7: The default directories, normally /lib and /usr/lib.
  #ifndef DEFAULT_LIBPATH
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
  #endif
  
  // Base path of extensions installed on the system.
-@@ -1603,8 +1601,15 @@ void * os::dll_load(const char *filename
+@@ -1605,8 +1603,15 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -67,7 +67,24 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
      {EM_PARISC,      EM_PARISC,  ELFCLASS32, ELFDATA2MSB, (char*)"PARISC"},
-@@ -2135,6 +2140,33 @@ bool Semaphore::timedwait(unsigned int s
+@@ -2108,11 +2113,15 @@ class Semaphore : public StackObj {
+ };
+ 
+ Semaphore::Semaphore() {
++  _semaphore = NULL;
+   SEM_INIT(_semaphore, 0);
+ }
+ 
+ Semaphore::~Semaphore() {
+-  SEM_DESTROY(_semaphore);
++  if (_semaphore != NULL) {
++    SEM_DESTROY(_semaphore);
++    _semaphore = NULL;
++  }
+ }
+ 
+ void Semaphore::signal() {
+@@ -2166,6 +2175,33 @@ bool Semaphore::timedwait(unsigned int s
  
  #else
  
@@ -101,7 +118,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
  bool Semaphore::trywait() {
    return sem_trywait(&_semaphore) == 0;
  }
-@@ -2285,7 +2317,7 @@ static void warn_fail_commit_memory(char
+@@ -2316,7 +2352,7 @@ static void warn_fail_commit_memory(char
  //       problem.
  bool os::pd_commit_memory(char* addr, size_t size, bool exec) {
    int prot = exec ? PROT_READ|PROT_WRITE|PROT_EXEC : PROT_READ|PROT_WRITE;
@@ -110,7 +127,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
    // XXX: Work-around mmap/MAP_FIXED bug temporarily on OpenBSD
    if (::mprotect(addr, size, prot) == 0) {
      return true;
-@@ -2980,7 +3012,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3017,7 +3053,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -119,7 +136,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
    return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -3009,7 +3041,7 @@ OSReturn os::get_native_priority(const T
+@@ -3046,7 +3082,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;
@@ -128,7 +145,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
    *priority_ptr = pthread_getprio(thread->osthread()->pthread_id());
  #elif defined(__APPLE__) || defined(__NetBSD__)
    int policy;
-@@ -3696,7 +3728,11 @@ void os::Bsd::check_signal_handler(int s
+@@ -3733,7 +3769,11 @@ void os::Bsd::check_signal_handler(int s
    struct sigaction act;
    if (os_sigaction == NULL) {
      // only trust the default sigaction, in case it has been interposed
@@ -140,7 +157,7 @@ $NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
      if (os_sigaction == NULL) return;
    }
  
-@@ -4028,7 +4064,7 @@ void os::set_native_thread_name(const ch
+@@ -4065,7 +4105,7 @@ void os::set_native_thread_name(const ch
  #elif defined(__FreeBSD__) || defined(__OpenBSD__)
      pthread_set_name_np(pthread_self(), name);
  #elif defined(__NetBSD__)
