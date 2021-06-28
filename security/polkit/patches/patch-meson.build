@@ -1,0 +1,32 @@
+$NetBSD: patch-meson.build,v 1.1 2021/06/28 12:38:46 nia Exp $
+
+Add duktape as javascript engine.
+https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
+
+--- meson.build.orig	2021-06-03 13:56:35.000000000 +0000
++++ meson.build
+@@ -126,7 +126,13 @@ expat_dep = dependency('expat')
+ assert(cc.has_header('expat.h', dependencies: expat_dep), 'Can\'t find expat.h. Please install expat.')
+ assert(cc.has_function('XML_ParserCreate', dependencies: expat_dep), 'Can\'t find expat library. Please install expat.')
+ 
+-mozjs_dep = dependency('mozjs-78')
++js_engine = get_option('js_engine')
++if js_engine == 'duktape'
++  js_dep = dependency('duktape')
++  libm_dep = cc.find_library('m')
++elif js_engine == 'mozjs'
++  js_dep = dependency('mozjs-78')
++endif
+ 
+ dbus_dep = dependency('dbus-1')
+ dbus_confdir = dbus_dep.get_pkgconfig_variable('datadir', define_variable: ['datadir', pk_prefix / pk_datadir])   #changed from sysconfdir with respect to commit#8eada3836465838
+@@ -350,6 +356,9 @@ if enable_logind
+   output += '        systemdsystemunitdir:     ' + systemd_systemdsystemunitdir + '\n'
+ endif
+ output += '        polkitd user:             ' + polkitd_user + ' \n'
++output += '        Javascript engine:        ' + js_engine + '\n'
++if enable_logind
++endif
+ output += '        PAM support:              ' + enable_pam.to_string() + '\n\n'
+ if enable_pam
+   output += '        PAM file auth:            ' + pam_conf['PAM_FILE_INCLUDE_AUTH'] + '\n'
