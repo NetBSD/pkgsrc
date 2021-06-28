@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/09/22 14:42:47 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2021/06/28 16:29:12 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -18,6 +18,9 @@ PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
 #PKG_SUGGESTED_OPTIONS+		jdk-zeroshark-vm
 .else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
+.endif
+.if ${MACHINE_ARCH} == "aarch64"
+PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 .endif
 
 .include "../../mk/bsd.options.mk"
