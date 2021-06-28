@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/06/13 06:22:12 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/06/28 11:52:41 nia Exp $
 
 PKGNAME=	libaom-1.0.0
 PKGREVISION=	4
@@ -49,6 +49,7 @@ CMAKE_ARGS+=	-DAOM_TARGET_CPU="mips"
 .elif !empty(MACHINE_ARCH:Mpowerpc*)
 CMAKE_ARGS+=	-DAOM_TARGET_CPU="ppc"
 .elif ${MACHINE_ARCH} == "earmv7hf"
+CFLAGS+=	-mfpu=neon
 CMAKE_ARGS+=	-DAOM_TARGET_CPU="armv7"
 .elif ${MACHINE_ARCH} == "aarch64"
 CMAKE_ARGS+=	-DAOM_TARGET_CPU="arm64"
