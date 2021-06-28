@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.13 2015/11/06 11:19:48 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2021/06/28 08:30:05 wiz Exp $
 
 Make sure the rpath gets set.
 MirBSD support.
 
---- configure.orig	2015-10-31 18:42:32.000000000 +0000
+--- configure.orig	2021-06-01 14:31:12.000000000 +0000
 +++ configure
-@@ -12040,7 +12040,7 @@ fi
+@@ -13368,7 +13368,7 @@ fi
  
  
  GSL_CFLAGS="-I$includedir"
@@ -14,16 +14,16 @@ MirBSD support.
  LIBM=
  case $host in
  *-*-beos* | *-*-cegcc* | *-*-cygwin* | *-*-haiku* | *-*-pw32* | *-*-darwin*)
-@@ -12641,7 +12641,7 @@ _ACEOF
+@@ -14035,7 +14035,7 @@ printf "%s\n" "#define HAVE_DECL_ISNAN $
  
  
  case "$host" in
 -    *-*-*openbsd*)
 +    *-*-*openbsd*|*-*-*mirbsd*)
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: avoiding OpenBSD system log1p - using gsl version" >&5
- $as_echo "avoiding OpenBSD system log1p - using gsl version" >&6; }
+        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: avoiding OpenBSD system log1p - using gsl version" >&5
+ printf "%s\n" "avoiding OpenBSD system log1p - using gsl version" >&6; }
         ;;
-@@ -12791,7 +12791,7 @@ else
+@@ -14188,7 +14188,7 @@ else $as_nop
      *-*-*netbsd*)
          ac_cv_c_ieee_interface=netbsd
          ;;
