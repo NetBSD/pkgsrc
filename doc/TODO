@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20827 2021/06/28 18:31:06 wiz Exp $
+$NetBSD: TODO,v 1.20828 2021/06/28 18:46:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -2046,7 +2046,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o slibtool-0.5.33
 	o smokeping-2.6.11
 	o smproxy-1.0.3
-	o snappy-1.1.9
 	o snd-21.3
 	o snobol-2.1.5
 	o snoopy-2.4.14
