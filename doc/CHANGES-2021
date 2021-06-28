@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3577 2021/06/28 12:33:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3578 2021/06/28 15:21:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5691,3 +5691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/texlab to 3.2.0 [wiz 2021-06-28]
 	Updated audio/SDL2_mixer to 2.0.4nb5 [micha 2021-06-28]
 	Updated emulators/ckmame to 1.1 [wiz 2021-06-28]
+	Updated mail/notmuch to 0.32.2 [ryoon 2021-06-28]
