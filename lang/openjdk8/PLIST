@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/05/29 10:51:23 abs Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/06/28 15:59:49 tnn Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -37,6 +37,7 @@ java/openjdk8/bin/jcmd
 java/openjdk8/bin/jconsole
 java/openjdk8/bin/jdb
 java/openjdk8/bin/jdeps
+${PLIST.native}java/openjdk8/bin/jfr
 java/openjdk8/bin/jhat
 java/openjdk8/bin/jinfo
 java/openjdk8/bin/jjs
@@ -423,6 +424,9 @@ java/openjdk8/jre/lib/images/cursors/motif_LinkNoDrop32x32.gif
 java/openjdk8/jre/lib/images/cursors/motif_MoveDrop32x32.gif
 java/openjdk8/jre/lib/images/cursors/motif_MoveNoDrop32x32.gif
 java/openjdk8/jre/lib/jce.jar
+${PLIST.native}java/openjdk8/jre/lib/jfr.jar
+${PLIST.native}java/openjdk8/jre/lib/jfr/default.jfc
+${PLIST.native}java/openjdk8/jre/lib/jfr/profile.jfc
 java/openjdk8/jre/lib/jsse.jar
 java/openjdk8/jre/lib/jvm.hprof.txt
 java/openjdk8/jre/lib/logging.properties
