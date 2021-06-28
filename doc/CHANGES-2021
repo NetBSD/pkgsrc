@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3589 2021/06/28 20:32:16 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3590 2021/06/28 20:38:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5703,3 +5703,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/cchmod version 0.1.2 [pin 2021-06-28]
 	Updated devel/mob to 1.7.0 [schmonz 2021-06-28]
 	Updated devel/py-approvaltests to 1.0.1 [schmonz 2021-06-28]
+	Updated lang/libduktape to 2.6.0nb2 [wiz 2021-06-28]
