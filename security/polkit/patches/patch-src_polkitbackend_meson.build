@@ -1,0 +1,38 @@
+$NetBSD: patch-src_polkitbackend_meson.build,v 1.1 2021/06/28 12:38:46 nia Exp $
+
+Add duktape as javascript engine.
+https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
+
+--- src/polkitbackend/meson.build.orig	2021-05-19 07:47:09.000000000 +0000
++++ src/polkitbackend/meson.build
+@@ -5,7 +5,6 @@ sources = files(
+   'polkitbackendactionpool.c',
+   'polkitbackendauthority.c',
+   'polkitbackendinteractiveauthority.c',
+-  'polkitbackendjsauthority.cpp',
+ )
+ 
+ output = 'initjs.h'
+@@ -21,7 +20,7 @@ sources += custom_target(
+ deps = [
+   expat_dep,
+   libpolkit_gobject_dep,
+-  mozjs_dep,
++  js_dep,
+ ]
+ 
+ c_flags = [
+@@ -31,6 +30,13 @@ c_flags = [
+   '-DPACKAGE_SYSCONF_DIR="@0@"'.format(pk_prefix / pk_sysconfdir),
+ ]
+ 
++if js_engine == 'duktape'
++  sources += files('polkitbackendduktapeauthority.c')
++  deps += libm_dep
++elif js_engine == 'mozjs'
++  sources += files('polkitbackendjsauthority.cpp')
++endif
++
+ if enable_logind
+   sources += files('polkitbackendsessionmonitor-systemd.c')
+ 
