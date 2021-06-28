@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.44 2021/04/22 08:54:18 pho Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.45 2021/06/28 19:33:23 mcf Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -345,29 +345,23 @@ EXCLUDE=
 MAKE_VAR="IN_PKG_ROLLING_REPLACE=1"
 MAKE_VAR_SEP=" "
 
-args=$(getopt BFhknursvD:x:X:L: $*)
-if [ $? -ne 0 ]; then
-    opt_h=1
-fi
-set -- $args
-while [ $# -gt 0 ]; do
-    case "$1" in
-        -B) opt_B=-B ;;
-        -F) opt_F=1 ;;
-        -h) opt_h=1 ;;
-        -k) opt_k=1 ;;
-        -n) opt_n=1 ;;
-        -r) opt_r=1 ;;
-        -s) opt_s=1 ;;
-        -u) opt_u=1 ;;
-        -v) opt_v=1 ;;
-	-D) MAKE_VAR="${MAKE_VAR}${MAKE_VAR_SEP}$2"; MAKE_VAR_SEP=" "; shift ;;
-        -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
-        -X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
-        -L) LOGPATH="$2"; shift ;;
-        --) shift; break ;;
+while getopts BFhknursvD:x:X:L: opt; do
+    case "$opt" in
+        B) opt_B=-B ;;
+        F) opt_F=1 ;;
+        h) opt_h=1 ;;
+        k) opt_k=1 ;;
+        n) opt_n=1 ;;
+        r) opt_r=1 ;;
+        s) opt_s=1 ;;
+        u) opt_u=1 ;;
+        v) opt_v=1 ;;
+        D) MAKE_VAR="${MAKE_VAR}${MAKE_VAR_SEP}$OPTARG"; MAKE_VAR_SEP=" " ;;
+        x) EXCLUDE="$EXCLUDE $(echo $OPTARG | sed 's/,/ /g')" ;;
+        X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $OPTARG | sed 's/,/ /g')" ;;
+        L) LOGPATH="$OPTARG" ;;
+        ?) opt_h=1 ;;
     esac
-    shift
 done
 
 if [ -n "$opt_h" ]; then
