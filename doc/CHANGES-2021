@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3559 2021/06/27 23:29:38 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.3560 2021/06/28 06:52:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5672,3 +5672,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tor to 0.4.6.5 [wiz 2021-06-27]
 	Updated audio/musicpd to 0.22.9 [wiz 2021-06-27]
 	Updated comms/asterisk18 to 18.5.0 [jnemeth 2021-06-27]
+	Updated devel/py-prompt_toolkit to 3.0.19 [adam 2021-06-28]
+	Updated devel/py-ipython to 7.25.0 [adam 2021-06-28]
