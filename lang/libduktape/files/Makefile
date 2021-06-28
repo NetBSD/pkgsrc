@@ -24,10 +24,11 @@ ${OBJS}: duktape.c duktape.h duk_config.h
 	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c duktape.c
 
 install: $(LIBS)
-	mkdir -p ${DESTDIR}$(LIBDIR) ${DESTDIR}$(INCDIR)
+	mkdir -p ${DESTDIR}$(LIBDIR)/pkgconfig ${DESTDIR}$(INCDIR)
 	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBS:.a=.la} ${DESTDIR}${PREFIX}/lib
 	$(BSD_INSTALL_DATA) duktape.h ${DESTDIR}$(INCDIR)
 	$(BSD_INSTALL_DATA) duk_config.h ${DESTDIR}$(INCDIR)
+	$(BSD_INSTALL_DATA) duktape.pc ${DESTDIR}$(LIBDIR)/pkgconfig
 
 clean:
 	rm -f $(OBJS) $(LIBS)

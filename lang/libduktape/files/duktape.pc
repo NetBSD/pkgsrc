@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: duktape
+Description: Embeddable Javascript engine
+Version: 2.6.0
+Libs: @COMPILER_RPATH_FLAG@${libdir} -L${libdir} -lduktape
+Cflags: -I${includedir}
