@@ -1,4 +1,4 @@
-$NetBSD: patch-src_ucm_parser.c,v 1.8 2021/05/12 14:12:13 ryoon Exp $
+$NetBSD: patch-src_ucm_parser.c,v 1.9 2021/06/28 10:10:50 wiz Exp $
 
 * SunOS has no dirent d_type
 
@@ -18,14 +18,3 @@ $NetBSD: patch-src_ucm_parser.c,v 1.8 2021/05/12 14:12:13 ryoon Exp $
  		if (dirent->d_name[0] == '.') {
  			if (dirent->d_name[1] == '\0')
  				return 0;
-@@ -2316,8 +2322,10 @@ int uc_mgr_scan_master_configs(const cha
- 
- 		snprintf(fn, sizeof(fn), "%s.conf", d_name);
- 		ucm_filename(filename, sizeof(filename), 2, d_name, fn);
-+#if defined(__linux__)
- 		if (eaccess(filename, R_OK))
- 			continue;
-+#endif
- 
- 		err = uc_mgr_config_load(2, filename, &cfg);
- 		if (err < 0)
