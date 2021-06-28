@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/06/28 20:14:09 pin Exp $
+bin/cchmod
