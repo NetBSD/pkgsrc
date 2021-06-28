@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.2 2021/04/12 06:28:32 triaxx Exp $
+@comment $NetBSD: PLIST.doc,v 1.3 2021/06/28 18:07:26 wiz Exp $
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/MagickCore-config.1
@@ -295,6 +295,7 @@ share/doc/ImageMagick-7/www/jp2.html
 share/doc/ImageMagick-7/www/license.html
 share/doc/ImageMagick-7/www/links.html
 share/doc/ImageMagick-7/www/magick++.html
+share/doc/ImageMagick-7/www/magick-cache.html
 share/doc/ImageMagick-7/www/magick-core.html
 share/doc/ImageMagick-7/www/magick-script.html
 share/doc/ImageMagick-7/www/magick-vector-graphics.html
