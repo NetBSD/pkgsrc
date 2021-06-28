@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3561 2021/06/28 07:33:09 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3562 2021/06/28 07:35:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5675,3 +5675,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-prompt_toolkit to 3.0.19 [adam 2021-06-28]
 	Updated devel/py-ipython to 7.25.0 [adam 2021-06-28]
 	Updated finance/gnucash to 4.6 [wiz 2021-06-28]
+	Updated finance/gnucash-docs to 4.6 [wiz 2021-06-28]
