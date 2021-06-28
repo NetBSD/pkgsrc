@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20822 2021/06/28 10:10:59 wiz Exp $
+$NetBSD: TODO,v 1.20823 2021/06/28 10:43:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -2133,7 +2133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
-	o texlab-3.2.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadingbuildingblocks-2021.2.0
