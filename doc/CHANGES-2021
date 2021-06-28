@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3584 2021/06/28 19:33:44 mcf Exp $
+$NetBSD: CHANGES-2021,v 1.3585 2021/06/28 20:02:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5698,3 +5698,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/m4 to 1.4.19 [wiz 2021-06-28]
 	Updated devel/snappy to 1.1.9 [wiz 2021-06-28]
 	Updated pkgtools/pkg_rolling-replace to 0.24.13 [mcf 2021-06-28]
+	Updated www/hackernews-tui to 0.7.2 [pin 2021-06-28]
