@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/05/11 22:05:35 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2021/06/28 20:29:52 schmonz Exp $
 
-SHA1 (mob-1.6.0.tar.gz) = bedf39a30c4b03bd9eed82fd7b7c30241c71bc72
-RMD160 (mob-1.6.0.tar.gz) = 16d4f3912ffbfc70aaf2845fcafa7035197bb6c7
-SHA512 (mob-1.6.0.tar.gz) = 36d3ce219b324def2e5ae4d630204ef8204de77b154e6966286f90120c75faa83bcc6d5346cc207e8f0efa5a9f1d402138ba520a13a6597b3b5db46f8a4e2a4b
-Size (mob-1.6.0.tar.gz) = 35407 bytes
+SHA1 (mob-1.7.0.tar.gz) = aa600fed4bcb18ae8cecd4a1142d213008218a85
+RMD160 (mob-1.7.0.tar.gz) = b6c3da0e2c0988f6b3e0909d3c222d1da688d9c2
+SHA512 (mob-1.7.0.tar.gz) = 4610d25c5aadc5f28b3ea19e11b347c15b5f1c051c465d099820786cd8b0635ef079eb829d80ca56825fd3580fcddb1dfdfa114ec5ed3e31ef5043d33ef63593
+Size (mob-1.7.0.tar.gz) = 36447 bytes
