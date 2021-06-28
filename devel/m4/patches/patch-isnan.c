@@ -1,4 +1,6 @@
-$NetBSD: patch-isnan.c,v 1.1 2013/10/29 17:34:04 jklos Exp $
+$NetBSD: patch-isnan.c,v 1.2 2021/06/28 18:30:57 wiz Exp $
+
+Skip NaN on VAX.
 
 --- lib/isnan.c.orig	2013-09-22 06:15:20.000000000 +0000
 +++ lib/isnan.c
