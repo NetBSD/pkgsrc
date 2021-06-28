@@ -1,0 +1,2 @@
+cchmod is a mode and permission calculator/converter for chmod.
+Convert permissions from the symbolic form to the octal form or vice versa.
