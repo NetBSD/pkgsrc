@@ -1,10 +1,10 @@
-$NetBSD: patch-fortune_fortune.c,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+$NetBSD: patch-fortune_fortune.c,v 1.2 2021/06/28 11:20:55 tnn Exp $
 
 Make fortune compatible with BSD strfile datfiles.
 
 --- fortune/fortune.c.orig	1997-08-28 19:43:52.000000000 +0000
 +++ fortune/fortune.c
-@@ -142,6 +142,15 @@ static char rcsid[] = "$NetBSD: fortune.
+@@ -142,6 +142,20 @@ static char rcsid[] = "$NetBSD: fortune.
  #define	NDEBUG	1
  #endif
  
@@ -15,12 +15,17 @@ Make fortune compatible with BSD strfile datfiles.
 +#elif defined __sun
 +#define BE32TOH(x) x = BE_IN32(&(x))
 +#define BE64TOH(x) x = BE_IN64(&(x))
++#elif defined __linux__
++#define _BSD_SOURCE
++#include <endian.h>
++#define BE32TOH(x) x = be32toh(x)
++#define BE64TOH(x) x = be64toh(x)
 +#endif
 +
  typedef struct fd
  {
      int percent;
-@@ -925,10 +934,10 @@ void get_tbl(FILEDESC * fp)
+@@ -925,10 +939,10 @@ void get_tbl(FILEDESC * fp)
  	    exit(1);
  	}
  	/* fp->tbl.str_version = ntohl(fp->tbl.str_version); */
@@ -35,7 +40,7 @@ Make fortune compatible with BSD strfile datfiles.
  	close(fd);
      }
      else
-@@ -1098,8 +1107,8 @@ void get_fort(void)
+@@ -1098,8 +1112,8 @@ void get_fort(void)
      lseek(fp->datfd,
  	  (off_t) (sizeof fp->tbl + fp->pos * sizeof Seekpts[0]), 0);
      read(fp->datfd, Seekpts, sizeof Seekpts);
