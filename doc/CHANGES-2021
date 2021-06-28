@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3586 2021/06/28 20:04:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3587 2021/06/28 20:15:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkg_rolling-replace to 0.24.13 [mcf 2021-06-28]
 	Updated www/hackernews-tui to 0.7.2 [pin 2021-06-28]
 	Updated security/gpg-tui to 0.6.2 [pin 2021-06-28]
+	Added sysutils/cchmod version 0.1.2 [pin 2021-06-28]
