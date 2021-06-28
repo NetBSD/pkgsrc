@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3564 2021/06/28 07:42:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3565 2021/06/28 07:44:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5678,3 +5678,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/gnucash-docs to 4.6 [wiz 2021-06-28]
 	Updated devel/gopls to 0.7.0 [wiz 2021-06-28]
 	Updated graphics/cairomm1.16 to 1.16.1 [wiz 2021-06-28]
+	Updated sysutils/fzf to 0.27.2 [wiz 2021-06-28]
