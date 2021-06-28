@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3575 2021/06/28 10:43:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3576 2021/06/28 12:12:59 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5689,3 +5689,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mednafen to 1.27.1 [wiz 2021-06-28]
 	Updated audio/alsa-lib to 1.2.5.1 [wiz 2021-06-28]
 	Updated print/texlab to 3.2.0 [wiz 2021-06-28]
+	Updated audio/SDL2_mixer to 2.0.4nb5 [micha 2021-06-28]
