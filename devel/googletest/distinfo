@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/04/07 21:36:58 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/06/28 09:07:53 wiz Exp $
 
-SHA1 (googletest-1.10.0.tar.gz) = 9c89be7df9c5e8cb0bc20b3c4b39bf7e82686770
-RMD160 (googletest-1.10.0.tar.gz) = f2f7f96adf1ab8aae3f6204fdba3ff150fd4396b
-SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
-Size (googletest-1.10.0.tar.gz) = 904349 bytes
+SHA1 (googletest-1.11.0.tar.gz) = 7b100bb68db8df1060e178c495f3cbe941c9b058
+RMD160 (googletest-1.11.0.tar.gz) = 4a1a53c93848c3e80cfd857b0eb2c2aa5029e38b
+SHA512 (googletest-1.11.0.tar.gz) = 6fcc7827e4c4d95e3ae643dd65e6c4fc0e3d04e1778b84f6e06e390410fe3d18026c131d828d949d2f20dde6327d30ecee24dcd3ef919e21c91e010d149f3a28
+Size (googletest-1.11.0.tar.gz) = 886330 bytes
