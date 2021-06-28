@@ -1,0 +1,12 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2021/06/28 12:38:46 nia Exp $
+
+Add duktape as javascript engine.
+https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
+
+--- meson_options.txt.orig	2021-02-22 16:36:29.000000000 +0000
++++ meson_options.txt
+@@ -16,3 +16,4 @@ option('introspection', type: 'boolean',
+ 
+ option('gtk_doc', type: 'boolean', value: false, description: 'use gtk-doc to build documentation')
+ option('man', type: 'boolean', value: false, description: 'build manual pages')
++option('js_engine', type: 'combo', choices: ['mozjs', 'duktape'], value: 'duktape', description: 'javascript engine')
