@@ -18,7 +18,7 @@ ARFLAGS= crv
 all:	${LIBS}
 
 $(LIBS) : $(OBJS)
-	${LIBTOOL} --mode=link --tag=CC cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:0
+	${LIBTOOL} --mode=link --tag=CC cc ${LDFLAGS} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:0
 
 ${OBJS}: duktape.c duktape.h duk_config.h
 	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c duktape.c
