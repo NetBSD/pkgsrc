@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_strerror_override.c,v 1.1 2020/08/29 21:39:14 js Exp $
+$NetBSD: patch-lib_strerror_override.c,v 1.2 2021/06/28 18:30:57 wiz Exp $
+
+Fix build on QNX.
 
 --- lib/strerror-override.c.orig	2016-12-31 13:54:42.000000000 +0000
 +++ lib/strerror-override.c
