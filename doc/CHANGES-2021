@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3583 2021/06/28 18:46:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3584 2021/06/28 19:33:44 mcf Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5697,3 +5697,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/grpc to 1.38.1 [wiz 2021-06-28]
 	Updated devel/m4 to 1.4.19 [wiz 2021-06-28]
 	Updated devel/snappy to 1.1.9 [wiz 2021-06-28]
+	Updated pkgtools/pkg_rolling-replace to 0.24.13 [mcf 2021-06-28]
