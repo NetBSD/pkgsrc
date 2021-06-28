@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2021/06/13 08:15:50 nia Exp $
+# $NetBSD: Makefile,v 1.961 2021/06/28 20:15:00 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -80,6 +80,7 @@ SUBDIR+=	caja-dropbox
 SUBDIR+=	caja-extensions
 SUBDIR+=	capistrano
 SUBDIR+=	ccd2iso
+SUBDIR+=	cchmod
 SUBDIR+=	ccze
 SUBDIR+=	cdbkup
 SUBDIR+=	cdirip
