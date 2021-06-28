@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/01/04 10:41:13 wiz Exp $
+$NetBSD: distinfo,v 1.17 2021/06/28 07:51:44 wiz Exp $
 
-SHA1 (gdbm-1.19.tar.gz) = 2b6cc7453341904432b457fb8a2450e5f2aaf331
-RMD160 (gdbm-1.19.tar.gz) = f0dda04ed1c25eacb1da96a887c0157d66993fee
-SHA512 (gdbm-1.19.tar.gz) = 118c5b8cdf74898bfb7c2100302fedf80096be017bf08e80a44486563cad5d93b93567622f2e7c7aceb72f30460504bd0b4ddfccf34df994ed65166e12ecd495
-Size (gdbm-1.19.tar.gz) = 967861 bytes
+SHA1 (gdbm-1.20.tar.gz) = f3200c9c4e5c7de4978f838bbabeaa7c5b857bd7
+RMD160 (gdbm-1.20.tar.gz) = 6fab4bf0948c178ef23905bbb10c3655513961da
+SHA512 (gdbm-1.20.tar.gz) = 5f2fbd4318259e5b879ea2bff09e22defbb4e566ebbe11c44ac5b5369fd00745d7ed9f72ec1206153027eba245c4ee4a515a8ec6d67f84ec477483e72753590b
+Size (gdbm-1.20.tar.gz) = 987628 bytes
 SHA1 (patch-src_Makefile.in) = 52b47f3dcd381143d1cdae40f1972bd989dcce1f
