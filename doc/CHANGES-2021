@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3566 2021/06/28 07:50:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3567 2021/06/28 07:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5680,3 +5680,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/cairomm1.16 to 1.16.1 [wiz 2021-06-28]
 	Updated sysutils/fzf to 0.27.2 [wiz 2021-06-28]
 	Updated graphics/exiv2 to 0.27.4 [wiz 2021-06-28]
+	Updated databases/gdbm to 1.20 [wiz 2021-06-28]
