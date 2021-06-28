@@ -1,7 +1,6 @@
-$NetBSD: patch-include_grpc_event__engine_port.h,v 1.1 2021/05/25 05:45:53 adam Exp $
+$NetBSD: patch-include_grpc_event__engine_port.h,v 1.2 2021/06/28 18:20:30 wiz Exp $
 
 Support NetBSD.
-https://github.com/grpc/grpc/issues/26357
 
 --- include/grpc/event_engine/port.h.orig	2021-05-25 05:21:42.595878017 +0000
 +++ include/grpc/event_engine/port.h
