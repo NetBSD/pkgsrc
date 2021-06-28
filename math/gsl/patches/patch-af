@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.5 2015/11/06 11:19:48 wiz Exp $
+$NetBSD: patch-af,v 1.6 2021/06/28 08:30:05 wiz Exp $
 
 Tags: not-for-upstream
 
---- siman/Makefile.in.orig	2015-10-31 18:42:35.000000000 +0000
+--- siman/Makefile.in.orig	2021-06-01 14:31:14.000000000 +0000
 +++ siman/Makefile.in
-@@ -95,7 +95,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES =
+@@ -105,7 +105,7 @@ CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
+ PROGRAMS = $(noinst_PROGRAMS)
  LTLIBRARIES = $(noinst_LTLIBRARIES)
 -libgslsiman_la_LIBADD =
 +libgslsiman_la_LIBADD = -lm
