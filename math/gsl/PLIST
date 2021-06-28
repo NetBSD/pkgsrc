@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/05/31 10:35:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/06/28 08:30:05 wiz Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -267,6 +267,7 @@ include/gsl/gsl_vector_ushort.h
 include/gsl/gsl_version.h
 include/gsl/gsl_wavelet.h
 include/gsl/gsl_wavelet2d.h
+include/gsl/test_source.c
 info/gsl-ref.info
 lib/libgsl.la
 lib/libgslcblas.la
