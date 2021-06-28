@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20815 2021/06/28 08:11:08 wiz Exp $
+$NetBSD: TODO,v 1.20816 2021/06/28 08:30:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -994,7 +994,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o groonga-11.0.1
 	o grpc-1.38.1
 	o grub2-2.06
-	o gsl-2.7
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
 	o gst-plugins1-omx-1.10.0
