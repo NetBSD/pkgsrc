@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/27 16:33:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/06/28 07:09:54 wiz Exp $
 
 DISTNAME=	magic-wormhole-mailbox-server-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.5.0:../../net/py-twisted
 TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-autobahn
 
 USE_LANGUAGES=	# none
 
