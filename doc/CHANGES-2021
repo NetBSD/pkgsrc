@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3581 2021/06/28 18:20:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3582 2021/06/28 18:31:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.1.0.2 [wiz 2021-06-28]
 	Updated graphics/p5-PerlMagick to 7.1.0.2 [wiz 2021-06-28]
 	Updated net/grpc to 1.38.1 [wiz 2021-06-28]
+	Updated devel/m4 to 1.4.19 [wiz 2021-06-28]
