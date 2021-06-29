@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2021/06/25 11:42:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2021/06/29 08:27:17 nia Exp $
 # used by net/freeradius/Makefile.module
 
 DISTNAME=	freeradius-server-3.0.23
@@ -11,7 +11,7 @@ HOMEPAGE=	https://freeradius.org/
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl-include-dir=${BUILDLINK_PREFIX.openssl}/include
 CONFIGURE_ARGS+=	--with-openssl-lib-dir=${BUILDLINK_PREFIX.openssl}/lib
