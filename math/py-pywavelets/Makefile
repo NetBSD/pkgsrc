@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/10/12 21:52:03 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/29 08:42:01 nia Exp $
 
 DISTNAME=	PyWavelets-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,6 +15,8 @@ REPLACE_PYTHON+=	pywt/tests/*.py
 
 do-test:
 	${PYTHONBIN} -c 'import pywt; pywt.test()'
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"

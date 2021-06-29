@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/21 08:37:49 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/29 08:42:02 nia Exp $
 
 DISTNAME=	cftime-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/10/12 21:52:02 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2021/06/29 08:42:01 nia Exp $
 
 DISTNAME=	Bottleneck-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
