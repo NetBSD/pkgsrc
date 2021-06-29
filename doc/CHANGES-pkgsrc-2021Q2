@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.3 2021/06/27 10:17:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.4 2021/06/29 12:44:06 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -10,4 +10,7 @@ databases/mysql80-client: NetBSD build fix
 
 Pullup ticket #6473 - requested by nia
 shells/eltclsh: build fix
+
+Pullup ticket #6474 - requested by nia
+multimedia/libaom: arm build fix
 
