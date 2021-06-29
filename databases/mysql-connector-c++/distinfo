@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/01/12 12:24:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/06/29 06:43:30 wiz Exp $
 
-SHA1 (mysql-connector-c++-1.1.8.tar.gz) = 7ddd5437f16f8f656c10317891cfa3d848dc2d8e
-RMD160 (mysql-connector-c++-1.1.8.tar.gz) = 2469ebacb4885af3d22e45d9ca64c410b176d9ec
-SHA512 (mysql-connector-c++-1.1.8.tar.gz) = c3ab5c1e805598d557a449c44f77ce44cc110e5b529075e38b4f775d3726ebd16a2155f61e47a378a375a9d9362d1520334ea25376636151ddd087291aafd85d
-Size (mysql-connector-c++-1.1.8.tar.gz) = 528954 bytes
-SHA1 (patch-driver_mysql__resultbind.cpp) = 77842cd61dd3a57956dcc5e3f382270d2e218ec1
+SHA1 (mysql-connector-c++-8.0.25-src.tar.gz) = 6a2d8cddef9c0562b3a4bf05138a30fc6f22a40f
+RMD160 (mysql-connector-c++-8.0.25-src.tar.gz) = 9ccb8deacf3fa3ba283c4933c6ec70f1d1a9b8af
+SHA512 (mysql-connector-c++-8.0.25-src.tar.gz) = 44dd7f4296d666801be55642e53cb5181d9b5c3b080306975a48eb6280e555d9b924b42b14b44dffee4c54fab3f662a7b6bb6584d9a1ed710f0026788611c525
+Size (mysql-connector-c++-8.0.25-src.tar.gz) = 3800065 bytes
