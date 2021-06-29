@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2021/06/27 14:54:40 tnn Exp $
+# $NetBSD: Makefile,v 1.108 2021/06/29 17:32:52 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
@@ -160,6 +161,16 @@ SUBST_FILES.zlibpath=		jdk/make/CompileLaunchers.gmk jdk/make/lib/CoreLibraries.
 SUBST_FILES.zlibpath+=		jdk/make/lib/Awt2dLibraries.gmk
 SUBST_VARS.zlibpath=		COMPILER_RPATH_FLAG BUILDLINK_PREFIX.zlib
 SUBST_VARS.zlibpath+=		BUILDLINK_PREFIX.iconv
+
+.if ${OPSYS} == "NetBSD"
+# NetBSD's EVFILT_* are different from FreeBSD/OpenBSD's values.
+SUBST_CLASSES+=			kqueue
+SUBST_STAGE.kqueue=		pre-configure
+SUBST_MESSAGE.kqueue=		fixing kqueue filter values
+SUBST_FILES.kqueue=		jdk/src/solaris/classes/sun/nio/ch/KQueue.java
+SUBST_SED.kqueue=		-e 's/static final int EVFILT_READ  = -1;/static final int EVFILT_READ  = 0;/'
+SUBST_SED.kqueue+=		-e 's/static final int EVFILT_WRITE = -2;/static final int EVFILT_WRITE = 1;/'
+.endif
 
 PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
