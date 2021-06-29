@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/06/29 08:34:18 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/06/29 09:23:30 nia Exp $
 
 DISTNAME=	jupyter_client-6.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
