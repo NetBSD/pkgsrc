@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/05/03 16:28:47 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2021/06/29 08:41:59 nia Exp $
 
 #PKGREVISION=	0
 PKGREVISION= 1
@@ -12,6 +12,7 @@ BUILD_DIRS=	swig/python
 MAKE_FILE=	GNUmakefile
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 REPLACE_PYTHON+=	swig/python/scripts/*py
 
