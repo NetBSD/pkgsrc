@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3427 2021/06/29 10:02:11 nia Exp $
+# $NetBSD: Makefile,v 1.3428 2021/06/29 10:03:42 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -432,7 +432,6 @@ SUBDIR+=	go-glog
 SUBDIR+=	go-gls
 SUBDIR+=	go-gocode
 SUBDIR+=	go-godef
-SUBDIR+=	go-godirwalk
 SUBDIR+=	go-godotenv
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-gopkgs

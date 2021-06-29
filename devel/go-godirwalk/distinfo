@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/09/11 15:55:24 minskim Exp $
-
-SHA1 (godirwalk-1.7.3.tar.gz) = 891989640898a914fc802f968af98adc744f598d
-RMD160 (godirwalk-1.7.3.tar.gz) = 36f5be323be0e0e8dfd560f19bd9b87d23bdb6c7
-SHA512 (godirwalk-1.7.3.tar.gz) = 97bed56c1946c61dd07915f4059dc26b2caf0014d1f77e72d7df5649653a02b4319fd26bc853a1c60ab4682582825b706cba585f5a7454c64c66c023c50ae389
-Size (godirwalk-1.7.3.tar.gz) = 16200 bytes
