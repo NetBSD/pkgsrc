@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1558 2021/06/29 09:55:23 nia Exp $
+# $NetBSD: Makefile,v 1.1559 2021/06/29 10:00:17 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -126,7 +126,6 @@ SUBDIR+=	gitea
 SUBDIR+=	gitweb
 SUBDIR+=	gnurl
 SUBDIR+=	go-ace
-SUBDIR+=	go-fasthttp
 SUBDIR+=	go-ffuf
 SUBDIR+=	go-gogs-client
 SUBDIR+=	go-gohtml
