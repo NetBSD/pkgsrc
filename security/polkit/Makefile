@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/06/28 12:38:46 nia Exp $
+# $NetBSD: Makefile,v 1.36 2021/06/29 01:58:55 gutteridge Exp $
 
 DISTNAME=	polkit-0.119
 PKGREVISION=	1
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+# autoreconf processing requires gtkdocize
+TOOL_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd
 
