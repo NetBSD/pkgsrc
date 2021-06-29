@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2016/07/03 10:58:03 leot Exp $
+$NetBSD: patch-configure,v 1.1 2021/06/29 15:13:24 fcambus Exp $
 
---- configure.orig	2016-06-26 22:49:47.000000000 +0000
+--- configure.orig	2021-05-21 18:46:59.000000000 +0000
 +++ configure
-@@ -838,10 +838,10 @@ fi
+@@ -850,10 +850,10 @@ fi
  
  
  
