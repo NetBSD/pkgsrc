@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/10/12 21:51:59 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2021/06/29 08:41:59 nia Exp $
 
 DISTNAME=	bcolz-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 
 MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-numpy
 
 .include "../../devel/blosc/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"

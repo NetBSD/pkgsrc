@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/10/12 21:52:00 bacon Exp $
+# $NetBSD: Makefile,v 1.32 2021/06/29 08:41:59 nia Exp $
 
 DISTNAME=	PyOpenGL-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/test_core.py
