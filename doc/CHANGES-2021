@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3598 2021/06/29 15:13:35 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3599 2021/06/29 15:15:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-asyncssh to 2.7.0 [adam 2021-06-29]
 	Added math/smath-studio version 0.99.7822 [hauke 2021-06-29]
 	Updated www/links to 2.23 [fcambus 2021-06-29]
+	Updated www/links-gui to 2.23 [fcambus 2021-06-29]
