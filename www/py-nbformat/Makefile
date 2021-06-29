@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/06/10 18:57:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/29 08:34:18 nia Exp $
 
 DISTNAME=	nbformat-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
