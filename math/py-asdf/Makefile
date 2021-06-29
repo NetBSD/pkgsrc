@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/05 19:45:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/29 08:42:00 nia Exp $
 
 DISTNAME=	asdf-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,7 @@ REPLACE_PYTHON+=	asdf-standard/reference_files/generate/generate
 REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
