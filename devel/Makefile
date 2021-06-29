@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3422 2021/06/24 10:34:14 pin Exp $
+# $NetBSD: Makefile,v 1.3423 2021/06/29 09:54:25 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -464,7 +464,6 @@ SUBDIR+=	go-pkgconfig
 SUBDIR+=	go-properties
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-pty
-SUBDIR+=	go-purell
 SUBDIR+=	go-quicktest
 SUBDIR+=	go-radix
 SUBDIR+=	go-repr
