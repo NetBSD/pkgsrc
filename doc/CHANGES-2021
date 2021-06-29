@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3596 2021/06/29 13:36:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3597 2021/06/29 14:29:26 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5729,3 +5729,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-testing to 1.38.1 [adam 2021-06-29]
 	Updated net/py-grpcio-tools to 1.38.1 [adam 2021-06-29]
 	Updated security/py-asyncssh to 2.7.0 [adam 2021-06-29]
+	Added math/smath-studio version 0.99.7822 [hauke 2021-06-29]
