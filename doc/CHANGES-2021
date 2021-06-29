@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3594 2021/06/29 10:09:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3595 2021/06/29 12:44:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5717,3 +5717,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-shellwords [nia 2021-06-29]
 	Removed devel/go-urlesc [nia 2021-06-29]
 	Removed devel/go-purell [nia 2021-06-29]
+	Updated lang/python36 to 3.6.14 [adam 2021-06-29]
+	Updated lang/py36-html-docs to 3.6.14 [adam 2021-06-29]
+	Updated lang/python37 to 3.7.11 [adam 2021-06-29]
+	Updated lang/py37-html-docs to 3.7.11 [adam 2021-06-29]
+	Updated lang/python38 to 3.8.11 [adam 2021-06-29]
+	Updated lang/py38-html-docs to 3.8.11 [adam 2021-06-29]
+	Updated lang/python39 to 3.9.6 [adam 2021-06-29]
+	Updated lang/py39-html-docs to 3.9.6 [adam 2021-06-29]
