@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.48 2021/06/28 18:30:57 wiz Exp $
+$NetBSD: distinfo,v 1.49 2021/06/29 05:19:46 wiz Exp $
 
 SHA1 (m4-1.4.19.tar.gz) = 1b9141800f481353b8bcfafe8ec03d3d95f03f64
 RMD160 (m4-1.4.19.tar.gz) = e42a1d0bcec2f27e3e2b64055e7890ff0144f038
 SHA512 (m4-1.4.19.tar.gz) = f5dd0f02fcae65a176a16af9a8e1747c26e9440c6c224003ba458d3298b777a75ffb189aee9051fb0c4840b2a48278be4a51d959381af0b1d627570f478c58f2
 Size (m4-1.4.19.tar.gz) = 2953876 bytes
-SHA1 (patch-isnan.c) = ced386b73e5fbace021fe5d2e9abb5025e3a90be
 SHA1 (patch-lib_strerror_override.c) = 29905fecf6c92f75c4999f1e3cb56e14fe2f4aae
