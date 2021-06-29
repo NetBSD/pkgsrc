@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/11/26 10:57:23 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/29 08:42:02 nia Exp $
 
 DISTNAME=	uncertainties-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Transparent calculations with uncertainties on the quantities involved
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
