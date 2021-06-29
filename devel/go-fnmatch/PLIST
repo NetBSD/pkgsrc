@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/05 04:34:02 minskim Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/danwakefield/fnmatch.a
-gopkg/src/github.com/danwakefield/fnmatch/LICENSE
-gopkg/src/github.com/danwakefield/fnmatch/README.md
-gopkg/src/github.com/danwakefield/fnmatch/fnmatch.go
-gopkg/src/github.com/danwakefield/fnmatch/fnmatch_test.go
