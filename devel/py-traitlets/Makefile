@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/06/10 05:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/06/29 08:34:19 nia Exp $
 
 DISTNAME=	traitlets-5.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# Traitlets 5.0+ supports Python 3.7 and above, following NEP 29.
+# For any earlier version of Python use traitlets 4.x
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
