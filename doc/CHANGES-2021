@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3593 2021/06/29 06:50:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3594 2021/06/29 10:09:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5708,3 +5708,12 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-incremental to 21.3.0 [wiz 2021-06-29]
 	Updated net/rabbitmq to 3.8.18 [adam 2021-06-29]
 	Updated www/py-urllib3 to 1.26.6 [adam 2021-06-29]
+	Removed devel/go-godef [nia 2021-06-29]
+	Removed devel/go-godirwalk [nia 2021-06-29]
+	Removed devel/go-amber [nia 2021-06-29]
+	Removed devel/go-compress [nia 2021-06-29]
+	Removed devel/go-fasthttp [nia 2021-06-29]
+	Removed devel/go-fnmatch [nia 2021-06-29]
+	Removed devel/go-shellwords [nia 2021-06-29]
+	Removed devel/go-urlesc [nia 2021-06-29]
+	Removed devel/go-purell [nia 2021-06-29]
