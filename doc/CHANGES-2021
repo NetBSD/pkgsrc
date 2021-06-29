@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3590 2021/06/28 20:38:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3591 2021/06/29 06:43:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5704,3 +5704,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 1.7.0 [schmonz 2021-06-28]
 	Updated devel/py-approvaltests to 1.0.1 [schmonz 2021-06-28]
 	Updated lang/libduktape to 2.6.0nb2 [wiz 2021-06-28]
+	Updated databases/mysql-connector-c++ to 8.0.25 [wiz 2021-06-29]
