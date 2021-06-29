@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3425 2021/06/29 09:58:34 nia Exp $
+# $NetBSD: Makefile,v 1.3426 2021/06/29 10:01:11 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -419,7 +419,6 @@ SUBDIR+=	go-cmp
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
 SUBDIR+=	go-colour
-SUBDIR+=	go-compress
 SUBDIR+=	go-consul-api
 SUBDIR+=	go-cpuid
 SUBDIR+=	go-debounce
