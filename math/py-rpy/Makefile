@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/10/12 21:52:03 bacon Exp $
+# $NetBSD: Makefile,v 1.48 2021/06/29 08:42:01 nia Exp $
 
 DISTNAME=	rpy2-2.9.1
 PKGREVISION=	2
@@ -24,6 +24,7 @@ LDFLAGS.SunOS+=		-mimpure-text
 REPLACE_PYTHON=		rpy/tests.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/application.mk"

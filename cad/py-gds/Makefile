@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/10/12 21:51:59 bacon Exp $
+# $NetBSD: Makefile,v 1.15 2021/06/29 08:41:59 nia Exp $
 
 DISTNAME=	gdspy-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 .endif
 
 USE_LANGUAGES+=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-numpy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

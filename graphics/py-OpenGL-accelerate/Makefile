@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/12 21:52:00 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2021/06/29 08:42:00 nia Exp $
 
 DISTNAME=	PyOpenGL-accelerate-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://pyopengl.sourceforge.net/
 COMMENT=	Acceleration code for PyOpenGL
 # There are many similar licenses, see license.txt
 LICENSE=	modified-bsd AND mit
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
