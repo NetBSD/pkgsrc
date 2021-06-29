@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/24 06:53:26 maya Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/mattn/go-shellwords.a
-gopkg/src/github.com/mattn/go-shellwords/LICENSE
-gopkg/src/github.com/mattn/go-shellwords/README.md
-gopkg/src/github.com/mattn/go-shellwords/shellwords.go
-gopkg/src/github.com/mattn/go-shellwords/shellwords_test.go
-gopkg/src/github.com/mattn/go-shellwords/util_posix.go
-gopkg/src/github.com/mattn/go-shellwords/util_windows.go
-@pkgdir bin
