@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/06/29 00:08:50 tnn Exp $
 #
 
 PKGNAME=	nagios-plugin-raidctl-${DISTNAME:C/.*-//}
@@ -12,6 +12,8 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	https://ftp.espci.fr/pub/nagios-local/
 COMMENT=	RAIDframe monitoring plugin for Nagios
 LICENSE=	modified-bsd
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 
 INSTALLATION_DIRS+=	libexec/nagios
 
