@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/10 20:19:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/06/29 12:43:42 adam Exp $
 share/doc/python3.9/.buildinfo
 share/doc/python3.9/_downloads/6b45dc135219d1404be49d606589a11d/tzinfo_examples.py
 share/doc/python3.9/_images/hashlib-blake2-tree.png
@@ -66,6 +66,7 @@ share/doc/python3.9/_sources/c-api/structures.rst.txt
 share/doc/python3.9/_sources/c-api/sys.rst.txt
 share/doc/python3.9/_sources/c-api/tuple.rst.txt
 share/doc/python3.9/_sources/c-api/type.rst.txt
+share/doc/python3.9/_sources/c-api/typehints.rst.txt
 share/doc/python3.9/_sources/c-api/typeobj.rst.txt
 share/doc/python3.9/_sources/c-api/unicode.rst.txt
 share/doc/python3.9/_sources/c-api/utilities.rst.txt
@@ -576,6 +577,7 @@ share/doc/python3.9/c-api/structures.html
 share/doc/python3.9/c-api/sys.html
 share/doc/python3.9/c-api/tuple.html
 share/doc/python3.9/c-api/type.html
+share/doc/python3.9/c-api/typehints.html
 share/doc/python3.9/c-api/typeobj.html
 share/doc/python3.9/c-api/unicode.html
 share/doc/python3.9/c-api/utilities.html
