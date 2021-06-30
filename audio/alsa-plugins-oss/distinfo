@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/05/12 14:14:38 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2021/06/30 15:41:54 ryoon Exp $
 
-SHA1 (alsa-plugins-1.2.2.tar.bz2) = d6baf41c0aa10104b4963fe95f46aaca534def35
-RMD160 (alsa-plugins-1.2.2.tar.bz2) = 93daa0c1d7b86af580366eb289ba1f799bec00d9
-SHA512 (alsa-plugins-1.2.2.tar.bz2) = 25a7dfaa64be024447d889b5cde668f1308d197f54880548a82d50beb4ac0dbff33b415da1e26dc5229408c934247a9bd38acfb0f82ca388deac0d77ab3cdadb
-Size (alsa-plugins-1.2.2.tar.bz2) = 406494 bytes
+SHA1 (alsa-plugins-1.2.5.tar.bz2) = fde4b9188deff0ae49b4e049f7094d3366a25cea
+RMD160 (alsa-plugins-1.2.5.tar.bz2) = 6d8d4e6802911b5e531bb1e8d8fd7905fd2c90c3
+SHA512 (alsa-plugins-1.2.5.tar.bz2) = 32aa475ec4af040861c2bfb01eac71042242d2109d3c5102d0111f3327e3f6c9031c32cbb50eb4b6568a6bd9408691a047a39972f09d6087e31ec11f19ddc9cf
+Size (alsa-plugins-1.2.5.tar.bz2) = 406134 bytes
 SHA1 (patch-aa) = ac2169b0a069bcf6ed60ca7ccd199ccd1988357f
 SHA1 (patch-ab) = 9cf0bda9f1928f46d0d5eac9464b790710ea2fda
 SHA1 (patch-ac) = 13da103ce3daad29d3c715f8f7d58dcd7bb9a72c
