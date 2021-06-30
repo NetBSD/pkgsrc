@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/04/26 13:00:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/06/30 06:02:15 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -153,6 +153,9 @@ ${PYSITELIB}/pylint/extensions/check_docs.pyo
 ${PYSITELIB}/pylint/extensions/check_elif.py
 ${PYSITELIB}/pylint/extensions/check_elif.pyc
 ${PYSITELIB}/pylint/extensions/check_elif.pyo
+${PYSITELIB}/pylint/extensions/code_style.py
+${PYSITELIB}/pylint/extensions/code_style.pyc
+${PYSITELIB}/pylint/extensions/code_style.pyo
 ${PYSITELIB}/pylint/extensions/comparetozero.py
 ${PYSITELIB}/pylint/extensions/comparetozero.pyc
 ${PYSITELIB}/pylint/extensions/comparetozero.pyo
@@ -264,6 +267,9 @@ ${PYSITELIB}/pylint/reporters/collecting_reporter.pyo
 ${PYSITELIB}/pylint/reporters/json_reporter.py
 ${PYSITELIB}/pylint/reporters/json_reporter.pyc
 ${PYSITELIB}/pylint/reporters/json_reporter.pyo
+${PYSITELIB}/pylint/reporters/multi_reporter.py
+${PYSITELIB}/pylint/reporters/multi_reporter.pyc
+${PYSITELIB}/pylint/reporters/multi_reporter.pyo
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.py
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.pyc
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.pyo
