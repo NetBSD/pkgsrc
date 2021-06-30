@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2021/05/02 11:06:15 nia Exp $
+# $NetBSD: Makefile,v 1.48 2021/06/30 09:36:33 cirnatdan Exp $
 
-DISTNAME=	gnome-desktop-40.0
+DISTNAME=	gnome-desktop-40.2
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
