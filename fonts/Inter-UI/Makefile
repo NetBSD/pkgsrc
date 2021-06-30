@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/12/15 20:47:15 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/06/30 08:52:47 fcambus Exp $
 
-VERSION=	3.11
+VERSION=	3.19
 DISTNAME=	Inter-${VERSION}
 PKGNAME=	Inter-UI-${VERSION}
 CATEGORIES=	fonts
