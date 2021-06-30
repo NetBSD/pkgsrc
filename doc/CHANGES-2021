@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3605 2021/06/30 11:33:59 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3606 2021/06/30 14:32:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5739,3 +5739,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cvsgraph to 1.7.2 [fcambus 2021-06-30]
 	Updated x11/gnome-desktop3 to 40.2 [dan 2021-06-30]
 	Updated www/so to 0.4.5 [pin 2021-06-30]
+	Updated misc/stellarium to 0.21.1 [adam 2021-06-30]
+	Updated databases/mongo-tools to 4.2.14 [adam 2021-06-30]
