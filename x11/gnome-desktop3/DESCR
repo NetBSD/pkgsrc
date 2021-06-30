@@ -1,2 +1,2 @@
-gnome-desktop contains the libgnome-desktop library, the gnome-about
-program as well as some desktop-wide documents for GNOME 3.
+gnome-desktop is an unstable backend library for sharing code
+between GNOME desktop components.
