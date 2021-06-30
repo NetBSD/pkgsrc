@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3599 2021/06/29 15:15:28 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3600 2021/06/30 06:02:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5732,3 +5732,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/smath-studio version 0.99.7822 [hauke 2021-06-29]
 	Updated www/links to 2.23 [fcambus 2021-06-29]
 	Updated www/links-gui to 2.23 [fcambus 2021-06-29]
+	Updated devel/py-astroid to 2.6.1 [adam 2021-06-30]
+	Updated devel/py-pylint to 2.9.0 [adam 2021-06-30]
