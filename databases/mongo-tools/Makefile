@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/02/24 19:38:33 adam Exp $
+# $NetBSD: Makefile,v 1.22 2021/06/30 14:31:46 adam Exp $
 
-DISTNAME=	mongo-tools-4.2.12
+DISTNAME=	mongo-tools-4.2.14
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	r${PKGVERSION_NOREV}
@@ -37,6 +37,7 @@ post-extract:
 	${LN} -s ${WRKSRC}/vendor/${site} ${WRKSRC}/vendor/src/${site}
 .endfor
 
+MAKE_ENV+=	GO111MODULE=off
 MAKE_ENV+=	GOPATH=${WRKSRC}:${WRKSRC}/vendor:${PREFIX}/gopkg
 
 do-build:
