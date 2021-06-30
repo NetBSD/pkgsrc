@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3606 2021/06/30 14:32:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3607 2021/06/30 15:10:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5741,3 +5741,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/so to 0.4.5 [pin 2021-06-30]
 	Updated misc/stellarium to 0.21.1 [adam 2021-06-30]
 	Updated databases/mongo-tools to 4.2.14 [adam 2021-06-30]
+	Updated www/firefox to 89.0.2 [ryoon 2021-06-30]
