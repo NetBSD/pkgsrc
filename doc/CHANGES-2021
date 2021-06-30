@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3601 2021/06/30 07:56:10 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3602 2021/06/30 08:52:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5735,3 +5735,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-astroid to 2.6.1 [adam 2021-06-30]
 	Updated devel/py-pylint to 2.9.0 [adam 2021-06-30]
 	Updated devel/py-codespell to 2.1.0 [fcambus 2021-06-30]
+	Updated fonts/Inter-UI to 3.19 [fcambus 2021-06-30]
