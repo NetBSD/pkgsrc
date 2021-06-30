@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/05/12 14:13:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2021/06/30 15:40:37 ryoon Exp $
 
-DISTNAME=	alsa-utils-1.2.4
+DISTNAME=	alsa-utils-1.2.5.1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/utils/
 EXTRACT_SUFX=	.tar.bz2
