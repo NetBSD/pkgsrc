@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/01/26 20:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/06/30 07:55:58 fcambus Exp $
 
-DISTNAME=	codespell-2.0.0
+DISTNAME=	codespell-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
