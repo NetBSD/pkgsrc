@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/12/13 14:41:31 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/06/30 08:52:47 fcambus Exp $
 
-SHA1 (Inter-3.11.tar.gz) = e28198e9252823f2806a619f3fbd370380da7386
-RMD160 (Inter-3.11.tar.gz) = 011956accaa39151ab30df6e64e3380b8919f7b2
-SHA512 (Inter-3.11.tar.gz) = 4c154f224b630ef3ca585111be6e7172ca4ba970ae358bb1ba305f1de24af71cf68f16c0009cc277c113edb4997b924a638b5714d4b44d0470a2e05640ee2749
-Size (Inter-3.11.tar.gz) = 44850353 bytes
+SHA1 (Inter-3.19.tar.gz) = 007a2b055a9aec6cff6cca32c14193685a2e4ec0
+RMD160 (Inter-3.19.tar.gz) = b4875b1227d269eb1f784fc7d87c05b442a00747
+SHA512 (Inter-3.19.tar.gz) = e35db3fd73b679e99a21c3166c19c37f91548ebb0fe338c933b58a3cd925709f3f134b83cc387e1d0f15773da104f99635859bd28162075780a947d4eb9d6fca
+Size (Inter-3.19.tar.gz) = 55636676 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/13 14:41:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/06/30 08:52:47 fcambus Exp $
 share/fonts/X11/TTF/Inter-Black.otf
 share/fonts/X11/TTF/Inter-BlackItalic.otf
 share/fonts/X11/TTF/Inter-Bold.otf
@@ -17,7 +17,21 @@ share/fonts/X11/TTF/Inter-SemiBold.otf
 share/fonts/X11/TTF/Inter-SemiBoldItalic.otf
 share/fonts/X11/TTF/Inter-Thin.otf
 share/fonts/X11/TTF/Inter-ThinItalic.otf
-share/fonts/X11/TTF/Inter-V.var.otf
-share/fonts/X11/TTF/Inter-italic.var.otf
-share/fonts/X11/TTF/Inter-roman.var.otf
-share/fonts/X11/TTF/Inter.var.otf
+share/fonts/X11/TTF/InterDisplay-Black.otf
+share/fonts/X11/TTF/InterDisplay-BlackItalic.otf
+share/fonts/X11/TTF/InterDisplay-Bold.otf
+share/fonts/X11/TTF/InterDisplay-BoldItalic.otf
+share/fonts/X11/TTF/InterDisplay-ExtraBold.otf
+share/fonts/X11/TTF/InterDisplay-ExtraBoldItalic.otf
+share/fonts/X11/TTF/InterDisplay-ExtraLight.otf
+share/fonts/X11/TTF/InterDisplay-ExtraLightItalic.otf
+share/fonts/X11/TTF/InterDisplay-Italic.otf
+share/fonts/X11/TTF/InterDisplay-Light.otf
+share/fonts/X11/TTF/InterDisplay-LightItalic.otf
+share/fonts/X11/TTF/InterDisplay-Medium.otf
+share/fonts/X11/TTF/InterDisplay-MediumItalic.otf
+share/fonts/X11/TTF/InterDisplay-Regular.otf
+share/fonts/X11/TTF/InterDisplay-SemiBold.otf
+share/fonts/X11/TTF/InterDisplay-SemiBoldItalic.otf
+share/fonts/X11/TTF/InterDisplay-Thin.otf
+share/fonts/X11/TTF/InterDisplay-ThinItalic.otf
