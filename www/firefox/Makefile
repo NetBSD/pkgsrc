@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.482 2021/06/18 18:08:05 nia Exp $
+# $NetBSD: Makefile,v 1.483 2021/06/30 15:09:55 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		88.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=		89.0
+MOZ_BRANCH_MINOR=	.2
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-DISTFILES=	${DEFAULT_DISTFILES} nodejs-output-88.0.1.tgz
-SITES.nodejs-output-88.0.1.tgz=	${MASTER_SITE_LOCAL}
+DISTFILES=	${DEFAULT_DISTFILES} nodejs-output-89.0.2.tgz
+SITES.nodejs-output-89.0.2.tgz=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.mozilla.org/en-US/firefox/
@@ -129,8 +128,8 @@ MOZILLA_NAME=	Browser
 #.endfor
 
 pre-configure:
-	cd ${WRKSRC} && autoconf-2.13
-	cd ${WRKSRC}/js/src && autoconf-2.13
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 	# Do not fetch Rust Cargo file via network during build
