@@ -1,13 +1,13 @@
-$NetBSD: patch-js_src_vm_ArrayBufferObject.cpp,v 1.1 2020/11/06 08:56:37 maya Exp $
+$NetBSD: patch-js_src_vm_ArrayBufferObject.cpp,v 1.2 2021/06/30 15:09:56 ryoon Exp $
 
 PaX MPROTECT safety for NetBSD.
 
---- js/src/vm/ArrayBufferObject.cpp.orig	2020-10-27 23:48:08.000000000 +0000
+--- js/src/vm/ArrayBufferObject.cpp.orig	2021-05-20 21:29:34.000000000 +0000
 +++ js/src/vm/ArrayBufferObject.cpp
-@@ -165,9 +165,17 @@ void* js::MapBufferMemory(size_t mappedS
-     return nullptr;
-   }
- #else   // XP_WIN
+@@ -189,9 +189,17 @@ void* js::MapBufferMemory(size_t mappedS
+   MOZ_ASSERT(data);
+   memset(data, 0, mappedSize);
+ #else   // !XP_WIN && !__wasi__
 +
 +#ifdef PROT_MPROTECT
 +  void* data =
