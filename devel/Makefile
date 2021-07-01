@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3430 2021/07/01 06:06:32 nia Exp $
+# $NetBSD: Makefile,v 1.3431 2021/07/01 06:08:51 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -448,7 +448,6 @@ SUBDIR+=	go-jwalterweatherman
 SUBDIR+=	go-jwt-go
 SUBDIR+=	go-kr-pretty
 SUBDIR+=	go-levenshtein
-SUBDIR+=	go-locker
 SUBDIR+=	go-logrus
 SUBDIR+=	go-mod
 SUBDIR+=	go-nbreader
