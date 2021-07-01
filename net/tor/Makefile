@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.170 2021/06/27 21:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2021/07/01 07:42:38 wiz Exp $
 
-DISTNAME=	tor-0.4.6.5
+DISTNAME=	tor-0.4.6.6
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -19,7 +19,7 @@ CONFIGURE_ENV+=		CPP=${CPP:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 
 #============================================================================
-#Testsuite summary for tor 0.4.6.5
+#Testsuite summary for tor 0.4.6.6
 #============================================================================
 ## TOTAL: 33
 ## PASS:  29
