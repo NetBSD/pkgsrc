@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2021/04/21 13:24:29 adam Exp $
+# $NetBSD: Makefile,v 1.66 2021/07/01 22:40:03 adam Exp $
 
-DISTNAME=	mongodb-src-r4.2.12
+DISTNAME=	mongodb-src-r4.2.14
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -21,7 +20,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 BUILD_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-NO_CONFIGURE=	yes
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=	c99 c++17
 # Note that USE_LANGUAGES should contain c11, per SConstruct, but
@@ -106,11 +104,7 @@ SUBST_FILES.varbase=	debian/mongod.conf
 SUBST_SED.varbase=	-e 's,/var/lib/mongodb,${VARBASE}/mongodb,g'
 SUBST_SED.varbase+=	-e 's,/var/log/mongodb,${VARBASE}/mongodb,g'
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-build
-SUBST_MESSAGE.python=	Replacing Python interpreter.
-SUBST_FILES.python=	src/mongo/installer/compass/install_compass.in
-SUBST_SED.python=	-e 's,@python_interpreter@,${PYTHONBIN},'
+REPLACE_PYTHON+=	src/mongo/installer/compass/install_compass
 
 NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongod
 
@@ -120,6 +114,8 @@ INSTALLATION_DIRS+=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
 
 CONF_FILES+=		share/examples/mongodb/mongod.conf \
 			${PKG_SYSCONFDIR}/mongod.conf
+
+CHECK_PORTABILITY_SKIP=	src/mongo/gotools/src/github.com/mongodb/mongo-tools/vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
 
 # Copy system specific files for NetBSD and DragonFly
 post-extract:
@@ -144,6 +140,10 @@ post-extract:
 		${WRKSRC}/src/third_party/wiredtiger/build_netbsd
 	${CP} -R ${WRKSRC}/src/third_party/wiredtiger/build_freebsd \
 		${WRKSRC}/src/third_party/wiredtiger/build_dragonfly
+
+# let REPLACE_INTERPRETER kick in
+do-configure:
+	${DO_NADA}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
@@ -173,7 +173,7 @@ post-install:
 .include "../../devel/scons/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
