@@ -1,19 +1,12 @@
-$NetBSD: distinfo,v 1.62 2021/05/27 06:39:35 wiz Exp $
+$NetBSD: distinfo,v 1.63 2021/07/01 07:23:00 wiz Exp $
 
-SHA1 (nspr-4.31.tar.gz) = 3001e873da7535e03a91339e7b55aca6f9f83914
-RMD160 (nspr-4.31.tar.gz) = 0e3f74690de98a45d2efc8f6172488667c1c99e8
-SHA512 (nspr-4.31.tar.gz) = 1f37d04721335288dd8a5cf700ead5a56cee73365e619f3da90f6067830b78a050a525950686bcdd14fcf61faffd1141ec46d4180a0dd10375f7e9fef6eac6ed
-Size (nspr-4.31.tar.gz) = 1078163 bytes
-SHA1 (patch-ab) = a24f80c2bab73c12b02d0aad7649da0ce4ca8d4f
-SHA1 (patch-ac) = a3d2cef788393b84e833d9e33bdf40b10d8efbd0
-SHA1 (patch-ae) = 28474b852325a37fb2a30717e9f7ffb77dad5deb
-SHA1 (patch-ag) = 653d4bc8cc4eced8f628cfb738c5d99cc1a6cf24
-SHA1 (patch-ba) = 141b354b9ec0423a9c671d5eaca05cf16daac312
-SHA1 (patch-nspr_pr_include_md___netbsd.cfg) = d859aed2b165d25bfb1f95903ee7725d1d358097
-SHA1 (patch-nspr_pr_include_md___pth.h) = ef97e3a9c2dbde85a7c36152807217f962d2b4fa
-SHA1 (patch-nspr_pr_src_pthreads_ptsynch.c) = 52e0e2bb1d1ddb282f92ce2df2c69684c0634dbe
-SHA1 (patch-nspr_pr_src_pthreads_ptthread.c) = 1aaa1048399cc7a82a67b98ea2368033cb597ac6
-SHA1 (patch-nsprpub_pr_include_md__dragonfly.cfg) = 54d3fbd4c515290395b66f6b9e736a01a8318244
-SHA1 (patch-nsprpub_pr_include_md_prosdep.h) = dd90cda6251aeeb10f02ef594c02484237195155
-SHA1 (patch-nsprpub_pr_src_md_unix_uxrng.c) = 2fda72f511abb003685c9c48413d92c82b63f992
-SHA1 (patch-nsprpub_pr_src_pthreads_ptio.c) = 027da3827c393bfb91842bc4da45196493c17393
+SHA1 (nspr-4.32.tar.gz) = 28e05ef5cbe6e7cde239d3cdcccabf571ec73f69
+RMD160 (nspr-4.32.tar.gz) = e7b4a6903ac891161149b59142fccf29c11eb58f
+SHA512 (nspr-4.32.tar.gz) = da9b65b374783d20a2e589211b411816d899e296e91175d376e59df1919144c1808c155a234d6ceefdf7b8ae8f47cec98d92a5aa3150a579513251860e50dcb7
+Size (nspr-4.32.tar.gz) = 1079004 bytes
+SHA1 (patch-ab) = 008f5b84994ad20e3b1a0de1e0f7a028932d03d2
+SHA1 (patch-ac) = c751b8397744c969e6141f609cb3914db6e699e3
+SHA1 (patch-ba) = 35f7cc7bbe7fa0f72eb7b506094ad1812b754aa5
+SHA1 (patch-nspr_pr_include_md___netbsd.cfg) = a3aba89d02cd61f748862ebb3b76050873ccdd69
+SHA1 (patch-nspr_pr_src_pthreads_ptsynch.c) = 77fc5653bcfaf39f55f26b301992aaeb2ff2401c
+SHA1 (patch-nspr_pr_src_pthreads_ptthread.c) = 187fdad28d0407c440154a614d38d860b71bfad1
