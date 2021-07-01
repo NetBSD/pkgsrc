@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2021/07/01 13:42:59 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/07/01 21:13:04 js Exp $
 
 DISTNAME=	matrix-synapse-1.37.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -35,7 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.8.0:../../net/py-prometheus_client
-DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
