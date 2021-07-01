@@ -1,8 +1,10 @@
-$NetBSD: patch-nspr_pr_src_pthreads_ptsynch.c,v 1.1 2020/02/05 03:26:52 ryoon Exp $
+$NetBSD: patch-nspr_pr_src_pthreads_ptsynch.c,v 1.2 2021/07/01 07:23:00 wiz Exp $
 
 * Do not use pthread_equal() for non-valid thread pointers.
   From kamin@ on source-changes-d@NetBSD.org.
   https://mail-index.netbsd.org/source-changes-d/2020/02/03/msg012143.html
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1718838
 
 --- nspr/pr/src/pthreads/ptsynch.c.orig	2020-01-31 20:37:50.000000000 +0000
 +++ nspr/pr/src/pthreads/ptsynch.c
