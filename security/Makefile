@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.830 2021/06/25 10:13:57 micha Exp $
+# $NetBSD: Makefile,v 1.831 2021/07/01 05:54:12 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -205,6 +205,7 @@ SUBDIR+=	libstark
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	libtomcrypt
+SUBDIR+=	libuecc
 SUBDIR+=	libykneomgr
 SUBDIR+=	libyubikey
 SUBDIR+=	log2timeline
