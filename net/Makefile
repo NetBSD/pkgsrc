@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1416 2021/07/01 05:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.1417 2021/07/01 06:03:40 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -197,7 +197,6 @@ SUBDIR+=	gnome-vfs-smb
 SUBDIR+=	gnugk
 SUBDIR+=	go-dns
 SUBDIR+=	go-dnstap
-SUBDIR+=	go-framestream
 SUBDIR+=	go-net
 SUBDIR+=	go-tcplisten
 SUBDIR+=	go-websocket
