@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3614 2021/07/01 07:34:47 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3615 2021/07/01 07:42:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-fs [nia 2021-07-01]
 	Updated net/gh to 1.12.1 [bsiegert 2021-07-01]
 	Updated devel/nspr to 4.32 [wiz 2021-07-01]
+	Updated net/tor to 0.4.6.6 [wiz 2021-07-01]
