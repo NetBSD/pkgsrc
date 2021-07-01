@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/07/01 08:40:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/07/01 13:42:59 wiz Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -178,8 +178,8 @@ ${PYSITELIB}/synapse/config/logger.pyo
 ${PYSITELIB}/synapse/config/metrics.py
 ${PYSITELIB}/synapse/config/metrics.pyc
 ${PYSITELIB}/synapse/config/metrics.pyo
-${PYSITELIB}/synapse/config/modules.pyc
 ${PYSITELIB}/synapse/config/modules.py
+${PYSITELIB}/synapse/config/modules.pyc
 ${PYSITELIB}/synapse/config/modules.pyo
 ${PYSITELIB}/synapse/config/oidc.py
 ${PYSITELIB}/synapse/config/oidc.pyc
@@ -897,9 +897,9 @@ ${PYSITELIB}/synapse/rest/client/v2_alpha/groups.pyo
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.pyo
-${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyo
-${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/knock.py
+${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyc
+${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyo
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.pyo
@@ -1172,6 +1172,9 @@ ${PYSITELIB}/synapse/storage/databases/main/group_server.pyo
 ${PYSITELIB}/synapse/storage/databases/main/keys.py
 ${PYSITELIB}/synapse/storage/databases/main/keys.pyc
 ${PYSITELIB}/synapse/storage/databases/main/keys.pyo
+${PYSITELIB}/synapse/storage/databases/main/lock.py
+${PYSITELIB}/synapse/storage/databases/main/lock.pyc
+${PYSITELIB}/synapse/storage/databases/main/lock.pyo
 ${PYSITELIB}/synapse/storage/databases/main/media_repository.py
 ${PYSITELIB}/synapse/storage/databases/main/media_repository.pyc
 ${PYSITELIB}/synapse/storage/databases/main/media_repository.pyo
@@ -1587,6 +1590,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/59/12account_validity_token_used_
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/12presence_stream_instance.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/12presence_stream_instance_seq.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/13users_to_send_full_presence_to.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/59/15locks.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/59/16federation_inbound_staging.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
