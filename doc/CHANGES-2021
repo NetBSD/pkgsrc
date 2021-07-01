@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3611 2021/06/30 15:42:42 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3612 2021/07/01 06:16:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5747,3 +5747,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/alsa-utils to 1.2.5.1 [ryoon 2021-06-30]
 	Updated audio/alsa-plugins-oss to 1.2.5 [ryoon 2021-06-30]
 	Updated audio/alsa-plugins-pulse to 1.2.5 [ryoon 2021-06-30]
+	Removed net/go-framestream [nia 2021-07-01]
+	Removed textproc/go-inflect [nia 2021-07-01]
+	Removed security/go-sftp [nia 2021-07-01]
+	Removed devel/go-immutable-radix [nia 2021-07-01]
+	Removed devel/go-locker [nia 2021-07-01]
+	Removed devel/go-fs [nia 2021-07-01]
