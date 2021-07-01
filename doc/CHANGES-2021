@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3620 2021/07/01 17:10:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3621 2021/07/01 21:47:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5761,3 +5761,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.07 [fcambus 2021-07-01]
 	Updated net/dbip-city-lite to 2021.07 [fcambus 2021-07-01]
 	Updated net/dbip-country-lite to 2021.07 [fcambus 2021-07-01]
+	Updated devel/py-astroid to 2.6.2 [adam 2021-07-01]
+	Updated devel/py-pylint to 2.9.3 [adam 2021-07-01]
