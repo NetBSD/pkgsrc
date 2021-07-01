@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/01/16 15:15:49 he Exp $
-
-SHA1 (go-framestream-0.1.0.tar.gz) = 507e5557ec0fa663e2d28d4b9748f716f58addc3
-RMD160 (go-framestream-0.1.0.tar.gz) = 38d0402509f957632959383ddb8f4e6e4f491822
-SHA512 (go-framestream-0.1.0.tar.gz) = ab2ab4111d05b37ea3849eb7a8ce0c12023ab3394b69ab87fef76a599b468c7c53a31c941192e8761e62c897814f284032e7c8ba7971c63e7dec7ae254cd00b2
-Size (go-framestream-0.1.0.tar.gz) = 8998 bytes
