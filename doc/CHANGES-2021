@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3615 2021/07/01 07:42:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3616 2021/07/01 08:40:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5756,3 +5756,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gh to 1.12.1 [bsiegert 2021-07-01]
 	Updated devel/nspr to 4.32 [wiz 2021-07-01]
 	Updated net/tor to 0.4.6.6 [wiz 2021-07-01]
+	Updated chat/matrix-synapse to 1.37.0 [wiz 2021-07-01]
