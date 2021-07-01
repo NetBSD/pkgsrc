@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.14 2017/10/04 12:52:43 jperkin Exp $
+$NetBSD: patch-ac,v 1.15 2021/07/01 07:23:00 wiz Exp $
 
 add runpath to Linux caught during check-shlibs-elf
 
---- nspr/configure.in.orig	2017-07-27 12:31:27.000000000 +0000
+--- nspr/configure.in.orig	2021-06-30 21:43:23.000000000 +0000
 +++ nspr/configure.in
 @@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -13,41 +13,17 @@ add runpath to Linux caught during check-shlibs-elf
  LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
  CYGWIN_WRAPPER=
  MACOS_SDK_DIR=
-@@ -1573,6 +1573,33 @@ tools are selected during the Xcode/Deve
+@@ -1486,6 +1486,9 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
 +    if test "$LIBRUNPATH"; then
 +        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
 +    fi
-+    ;;
-+
-+*-dragonfly*)
-+    if test -z "$USE_NSPR_THREADS"; then
-+        USE_PTHREADS=1
-+    fi
-+    AC_DEFINE(XP_UNIX)
-+    AC_DEFINE(HAVE_BSD_FLOCK)
-+    AC_DEFINE(HAVE_SOCKLEN_T)
-+    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
-+    MOZ_OBJFORMAT=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-+    if test "$MOZ_OBJFORMAT" = "elf"; then
-+        DLL_SUFFIX=so
-+    else
-+        DLL_SUFFIX=so.1.0
-+    fi
-+    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
-+    DSO_CFLAGS=-fPIC
-+    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
-+    MDCPUCFG_H=_dragonfly.cfg
-+    PR_MD_CSRCS=freebsd.c
-+    if test "$LIBRUNPATH"; then
-+        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
-+    fi
      ;;
  
  *-hpux*)
-@@ -1848,6 +1875,9 @@ tools are selected during the Xcode/Deve
+@@ -1662,6 +1665,9 @@ tools are selected during the Xcode/Deve
      MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
      DSO_CFLAGS=-fPIC
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
@@ -57,7 +33,7 @@ add runpath to Linux caught during check-shlibs-elf
      _OPTIMIZE_FLAGS=-O2
      _DEBUG_FLAGS="-g -fno-inline"  # most people on linux use gcc/gdb, and that
                                     # combo is not yet good at debugging inlined
-@@ -2173,7 +2203,7 @@ tools are selected during the Xcode/Deve
+@@ -1991,7 +1997,7 @@ tools are selected during the Xcode/Deve
      AC_DEFINE(HAVE_POINTER_LOCALTIME_R)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
@@ -66,7 +42,7 @@ add runpath to Linux caught during check-shlibs-elf
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -2293,7 +2323,7 @@ tools are selected during the Xcode/Deve
+@@ -2070,7 +2076,7 @@ tools are selected during the Xcode/Deve
          if `$CC -print-prog-name=ld` -v 2>&1 | grep -c GNU >/dev/null; then
              GCC_USE_GNU_LD=1
          fi
@@ -75,30 +51,3 @@ add runpath to Linux caught during check-shlibs-elf
          if test -n "$USE_B_DIRECT"; then
              DSO_LDOPTS="$DSO_LDOPTS,-Bdirect"
          fi
-@@ -2760,7 +2790,7 @@ if test -n "$USE_PTHREADS"; then
- 	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
- 	    ac_cv_have_dash_pthread=yes
- 		case "$target_os" in
--	    freebsd*)
-+	    freebsd* | dragonfly*)
- # Freebsd doesn't use -pthread for compiles, it uses them for linking
-             ;;
- 	    *)
-@@ -2798,7 +2828,7 @@ if test -n "$USE_PTHREADS"; then
-             _PTHREAD_LDFLAGS=
-         fi
- 	    ;;
--    *-freebsd*)
-+    *-freebsd* | *-dragonfly*)
- 	    AC_DEFINE(_REENTRANT)
- 	    AC_DEFINE(_THREAD_SAFE)
- 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2879,7 +2909,7 @@ case "$target" in
-         AC_DEFINE(_PR_NEED_PTHREAD_INIT)
-     fi
-     ;;
--*-freebsd*)
-+*-freebsd* | *-dragonfly*)
-     if test -n "$USE_NSPR_THREADS"; then
-         AC_DEFINE(_PR_LOCAL_THREADS_ONLY)
-     fi
