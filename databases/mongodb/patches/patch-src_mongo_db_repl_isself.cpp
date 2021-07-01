@@ -1,6 +1,6 @@
-$NetBSD: patch-src_mongo_db_repl_isself.c,v 1.4 2017/05/29 14:44:47 ryoon Exp $
+$NetBSD: patch-src_mongo_db_repl_isself.cpp,v 1.1 2021/07/01 22:40:03 adam Exp $
 
-* Add NetBSD support.
+Add NetBSD support.
 
 --- src/mongo/db/repl/isself.cpp.orig	2017-04-20 21:43:42.000000000 +0000
 +++ src/mongo/db/repl/isself.cpp
