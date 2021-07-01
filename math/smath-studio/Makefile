@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/29 14:28:12 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/01 20:03:39 hauke Exp $
 
 DISTNAME=	SMathStudioDesktop.${PKGVERSION_NOREV:S/./_/g}.Mono
 PKGNAME=	smath-studio-${PKGVER}
@@ -14,6 +14,7 @@ COMMENT=	Tiny, powerful, free mathematical program with WYSIWYG editor
 
 LICENSE=		smath-license
 RESTRICTED=		Redistribution of repackaged binaries not permitted
+NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
