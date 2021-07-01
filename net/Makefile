@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1415 2021/06/27 16:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1416 2021/07/01 05:54:00 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -137,6 +137,7 @@ SUBDIR+=	ettercap-gtk
 SUBDIR+=	exabgp
 SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
+SUBDIR+=	fastd
 SUBDIR+=	fehqlibs
 SUBDIR+=	fetch
 SUBDIR+=	filezilla
