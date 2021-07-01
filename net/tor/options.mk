@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2021/06/28 07:03:44 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2021/07/01 07:42:38 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=		doc
@@ -38,17 +38,17 @@ CONFIGURE_ARGS+=	--enable-nss
 # instead
 #.if !empty(PKG_OPTIONS:Mrust)
 #CONFIGURE_ARGS+=	--enable-rust
-#CONFIGURE_ENV+=		TOR_RUST_DEPENDENCIES=${WRKDIR}/vendor
+#CONFIGURE_ENV+=	TOR_RUST_DEPENDENCIES=${WRKDIR}/vendor
 ##CONFIGURE_ARGS+=	--enable-cargo-online-mode
 ## needed to override cargo.mk
 #do-build:
 #	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} all
-#CARGO_CRATE_DEPENDS+=   digest-0.7.2
-#CARGO_CRATE_DEPENDS+=   generic-array-0.9.0
-#CARGO_CRATE_DEPENDS+=   libc-0.2.39
-#CARGO_CRATE_DEPENDS+=   rand-0.5.0-pre.2
-#CARGO_CRATE_DEPENDS+=   rand_core-0.2.0-pre.0
-#CARGO_CRATE_DEPENDS+=   typenum-1.9.0
+#CARGO_CRATE_DEPENDS+=	digest-0.7.2
+#CARGO_CRATE_DEPENDS+=	generic-array-0.9.0
+#CARGO_CRATE_DEPENDS+=	libc-0.2.39
+#CARGO_CRATE_DEPENDS+=	rand-0.5.0-pre.2
+#CARGO_CRATE_DEPENDS+=	rand_core-0.2.0-pre.0
+#CARGO_CRATE_DEPENDS+=	typenum-1.9.0
 #.include "../../lang/rust/buildlink3.mk"
 #.include "../../lang/rust/cargo.mk"
 #.endif
