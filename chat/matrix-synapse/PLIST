@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/06/05 15:28:02 js Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/07/01 08:40:13 wiz Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -178,6 +178,9 @@ ${PYSITELIB}/synapse/config/logger.pyo
 ${PYSITELIB}/synapse/config/metrics.py
 ${PYSITELIB}/synapse/config/metrics.pyc
 ${PYSITELIB}/synapse/config/metrics.pyo
+${PYSITELIB}/synapse/config/modules.pyc
+${PYSITELIB}/synapse/config/modules.py
+${PYSITELIB}/synapse/config/modules.pyo
 ${PYSITELIB}/synapse/config/oidc.py
 ${PYSITELIB}/synapse/config/oidc.pyc
 ${PYSITELIB}/synapse/config/oidc.pyo
@@ -340,12 +343,6 @@ ${PYSITELIB}/synapse/handlers/account_data.pyo
 ${PYSITELIB}/synapse/handlers/account_validity.py
 ${PYSITELIB}/synapse/handlers/account_validity.pyc
 ${PYSITELIB}/synapse/handlers/account_validity.pyo
-${PYSITELIB}/synapse/handlers/acme.py
-${PYSITELIB}/synapse/handlers/acme.pyc
-${PYSITELIB}/synapse/handlers/acme.pyo
-${PYSITELIB}/synapse/handlers/acme_issuing_service.py
-${PYSITELIB}/synapse/handlers/acme_issuing_service.pyc
-${PYSITELIB}/synapse/handlers/acme_issuing_service.pyo
 ${PYSITELIB}/synapse/handlers/admin.py
 ${PYSITELIB}/synapse/handlers/admin.pyc
 ${PYSITELIB}/synapse/handlers/admin.pyo
@@ -900,6 +897,9 @@ ${PYSITELIB}/synapse/rest/client/v2_alpha/groups.pyo
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/keys.pyo
+${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyo
+${PYSITELIB}/synapse/rest/client/v2_alpha/knock.pyc
+${PYSITELIB}/synapse/rest/client/v2_alpha/knock.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/notifications.pyo
@@ -1581,6 +1581,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/59/08delete_pushers_for_deactivat
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/08delete_stale_pushers.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/09rejected_events_metadata.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/10delete_purged_chain_cover.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/59/11add_knock_members_to_stats.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/11drop_thumbnail_constraint.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/12account_validity_token_used_ts_ms.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/59/12presence_stream_instance.sql
