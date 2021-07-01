@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3429 2021/06/29 10:04:40 nia Exp $
+# $NetBSD: Makefile,v 1.3430 2021/07/01 06:06:32 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -441,7 +441,6 @@ SUBDIR+=	go-gox
 SUBDIR+=	go-hashstructure
 SUBDIR+=	go-homedir
 SUBDIR+=	go-humanize
-SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
 SUBDIR+=	go-iochan
 SUBDIR+=	go-isatty
