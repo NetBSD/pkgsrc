@@ -1,4 +1,7 @@
-$NetBSD: patch-nspr_pr_src_pthreads_ptthread.c,v 1.1 2018/01/24 16:21:42 ryoon Exp $
+$NetBSD: patch-nspr_pr_src_pthreads_ptthread.c,v 1.2 2021/07/01 07:23:00 wiz Exp $
+
+pthread_t may be 64-bit, avoid casting it.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1718835
 
 --- nspr/pr/src/pthreads/ptthread.c.orig	2018-01-18 12:37:14.000000000 +0000
 +++ nspr/pr/src/pthreads/ptthread.c
