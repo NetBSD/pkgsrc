@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/06/06 10:12:20 js Exp $
+# $NetBSD: Makefile,v 1.28 2021/07/01 08:40:13 wiz Exp $
 
-DISTNAME=	matrix-synapse-1.35.1
-PKGREVISION=	2
+DISTNAME=	matrix-synapse-1.37.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
