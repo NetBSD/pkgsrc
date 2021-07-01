@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3618 2021/07/01 17:07:56 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3619 2021/07/01 17:08:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5759,3 +5759,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.37.0 [wiz 2021-07-01]
 	Updated chat/matrix-synapse to 1.37.1 [wiz 2021-07-01]
 	Updated net/dbip-asn-lite to 2021.07 [fcambus 2021-07-01]
+	Updated net/dbip-city-lite to 2021.07 [fcambus 2021-07-01]
