@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3621 2021/07/01 21:47:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3622 2021/07/01 22:40:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5763,3 +5763,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-country-lite to 2021.07 [fcambus 2021-07-01]
 	Updated devel/py-astroid to 2.6.2 [adam 2021-07-01]
 	Updated devel/py-pylint to 2.9.3 [adam 2021-07-01]
+	Updated databases/mongo-c-driver to 1.17.6 [adam 2021-07-01]
+	Updated databases/mongodb to 4.2.14 [adam 2021-07-01]
