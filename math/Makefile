@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.508 2021/06/15 14:32:04 thor Exp $
+# $NetBSD: Makefile,v 1.509 2021/07/01 05:53:49 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -423,6 +423,7 @@ SUBDIR+=	sc
 SUBDIR+=	sc-im
 SUBDIR+=	scilab
 SUBDIR+=	slatec
+SUBDIR+=	smath-studio
 SUBDIR+=	snns
 SUBDIR+=	sollya
 SUBDIR+=	speedcrunch
