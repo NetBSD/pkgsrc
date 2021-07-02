@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.408 2020/06/07 05:59:30 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.409 2021/07/02 12:03:24 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -837,9 +837,19 @@ _USER_VARS.dirs+=	PKG_DBDIR
 _PKG_VARS.dirs=		WRKSRC PATCHDIR FILESDIR PKGDIR
 _SYS_VARS.dirs=		WRKDIR DESTDIR PREFIX PKG_SYSCONFBASEDIR
 
-# List of 64bit operating systems with sizeof(int) != sizeof(void *).
+# List of 32-bit operating systems
 # This can be used with BROKEN_ON_PLATFORM for software that is not
-# 64bit clean.
+# 32-bit clean.
+#
+# Keywords: BROKEN_ON_PLATFORM 32bit
+#
+LP32PLATFORMS=		*-*-earm* *-*-hppa *-*-i386 *-*-m68000 *-*-m68k \
+			*-*-mipseb *-*-mipsel *-*-powerpc *-*-riscv32 \
+			*-*-sparc *-*-vax
+
+# List of 64-bit operating systems with sizeof(int) != sizeof(void *).
+# This can be used with BROKEN_ON_PLATFORM for software that is not
+# 64-bit clean.
 #
 # Keywords: BROKEN_ON_PLATFORM 64bit
 #
