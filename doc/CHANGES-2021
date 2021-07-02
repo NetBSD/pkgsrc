@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3627 2021/07/02 11:27:42 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3628 2021/07/02 11:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5777,3 +5777,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-lexicon to 3.6.1 [adam 2021-07-02]
 	Updated net/py-zeroconf to 0.32.0 [adam 2021-07-02]
 	Updated security/p5-Crypt-CBC to 3.04 [nia 2021-07-02]
+	Updated emulators/mame to 0.233 [wiz 2021-07-02]
