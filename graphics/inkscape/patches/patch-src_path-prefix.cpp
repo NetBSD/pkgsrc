@@ -1,8 +1,8 @@
-$NetBSD: patch-src_path-prefix.cpp,v 1.1 2020/08/05 19:59:19 kamil Exp $
+$NetBSD: patch-src_path-prefix.cpp,v 1.2 2021/07/02 06:59:15 wiz Exp $
 
 Add NetBSD support in get_program_name().
 
---- src/path-prefix.cpp.orig	2020-05-01 13:17:42.000000000 +0000
+--- src/path-prefix.cpp.orig	2021-05-17 19:25:49.000000000 +0000
 +++ src/path-prefix.cpp
 @@ -20,6 +20,11 @@
  #include <mach-o/dyld.h> // for _NSGetExecutablePath
@@ -13,10 +13,10 @@ Add NetBSD support in get_program_name().
 +#include <sys/sysctl.h>
 +#endif
 +
+ #include <cassert>
  #include <glib.h>
- 
- #include "path-prefix.h"
-@@ -114,6 +119,15 @@ gchar *get_program_name()
+ #include <glibmm.h>
+@@ -123,6 +128,15 @@ char const *get_program_name()
          if (!program_name) {
              g_warning("get_program_name() - g_file_read_link failed");
          }
