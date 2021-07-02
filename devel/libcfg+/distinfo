@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2016/11/27 09:04:27 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/07/02 22:49:39 thor Exp $
 
 SHA1 (libcfg+-0.7.0.tar.gz) = ebcba4033b3c5451a1e485ce129488298aa19a9f
 RMD160 (libcfg+-0.7.0.tar.gz) = 51f632cb9578e67eaf968bb1c27f625ff90b1224
 SHA512 (libcfg+-0.7.0.tar.gz) = 73444c89aab9e835ecc630b8fee5e83717fccc3d78736b1e9055b2404cbac7caf9b9fb84709b48800e2409bd40a8727e74db77eeb796079cd435aec8e3bdcc2b
 Size (libcfg+-0.7.0.tar.gz) = 248406 bytes
 SHA1 (patch-aa) = ba63ccc5c031a893b111caac1ba9ddf13c18b4fc
-SHA1 (patch-ab) = dd2afd5a7491bb195c0e688a6c5b7a2ac610fbe1
+SHA1 (patch-ab) = 96732574c5036883e62286f6f9c6ea34dd202442
