@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/07/02 15:21:12 nia Exp $
+# $NetBSD: Makefile,v 1.22 2021/07/02 15:21:35 nia Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 MODNAME=		pdo_mysql
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (MySQL)
