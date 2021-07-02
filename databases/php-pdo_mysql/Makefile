@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/06/23 20:33:09 nia Exp $
+# $NetBSD: Makefile,v 1.21 2021/07/02 15:21:12 nia Exp $
 
 PKGREVISION=		1
 MODNAME=		pdo_mysql
@@ -7,22 +7,7 @@ COMMENT=		PHP extension for PHP Data Objects (MySQL)
 
 USE_PHP_EXT_PATCHES=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../lang/php/ext.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.php-pdo_mysql
-PKG_SUPPORTED_OPTIONS=	mysqlnd
-PKG_SUGGESTED_OPTIONS=	# empty
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmysqlnd)
-CONFIGURE_ARGS+=	--with-${MODNAME}=shared,mysqlnd
-.else
-CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.mysql-client}
-.include "../../mk/mysql.buildlink3.mk"
-.endif
-
+.include "options.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
+.include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
