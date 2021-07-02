@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3630 2021/07/02 17:28:58 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3631 2021/07/02 17:31:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5781,3 +5781,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-fasteners to 0.16.3 [adam 2021-07-02]
 	Updated x11/gtk-mac-integration to 3.0.1 [adam 2021-07-02]
 	Updated lang/php74 to 7.4.21 [taca 2021-07-02]
+	Updated lang/php80 to 8.0.8 [taca 2021-07-02]
