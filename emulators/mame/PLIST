@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2021/05/31 10:13:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2021/07/02 11:47:16 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -116,7 +116,8 @@ share/mame/hash/apple2_cass.xml
 share/mame/hash/apple2_flop_clcracked.xml
 share/mame/hash/apple2_flop_misc.xml
 share/mame/hash/apple2_flop_orig.xml
-share/mame/hash/apple2gs.xml
+share/mame/hash/apple2gs_flop_misc.xml
+share/mame/hash/apple2gs_flop_orig.xml
 share/mame/hash/apple3.xml
 share/mame/hash/applix_flop.xml
 share/mame/hash/apricot_flop.xml
@@ -360,12 +361,12 @@ share/mame/hash/leapfrog_iquest_cart.xml
 share/mame/hash/leapfrog_leappad_cart.xml
 share/mame/hash/leapfrog_ltleappad_cart.xml
 share/mame/hash/leapfrog_mfleappad_cart.xml
-share/mame/hash/leapfrog_turboextreme_cart.xml
-share/mame/hash/leapfrog_turbotwistbrainquest_cart.xml
 share/mame/hash/leapfrog_zippity_cart.xml
 share/mame/hash/leapster.xml
+share/mame/hash/leapster_explorer_cart.xml
 share/mame/hash/lisa.xml
 share/mame/hash/lisa2.xml
+share/mame/hash/lk3000.xml
 share/mame/hash/lviv.xml
 share/mame/hash/lynx.xml
 share/mame/hash/m20.xml
@@ -378,7 +379,9 @@ share/mame/hash/mac_hdd.xml
 share/mame/hash/mac_hdflop.xml
 share/mame/hash/mbc200.xml
 share/mame/hash/mbc55x.xml
+share/mame/hash/mbee_cart.xml
 share/mame/hash/mbee_cass.xml
+share/mame/hash/mbee_flop.xml
 share/mame/hash/mbee_quik.xml
 share/mame/hash/mc10.xml
 share/mame/hash/mc1000_cass.xml
@@ -648,6 +651,8 @@ share/mame/hash/trs80_flop.xml
 share/mame/hash/trs80_quik.xml
 share/mame/hash/trs80m2.xml
 share/mame/hash/trsm100.xml
+share/mame/hash/ttwist_brainquest_cart.xml
+share/mame/hash/turboextreme_cart.xml
 share/mame/hash/tutor.xml
 share/mame/hash/tvc_cart.xml
 share/mame/hash/tvc_cass.xml
@@ -683,7 +688,7 @@ share/mame/hash/vsmile_cd.xml
 share/mame/hash/vsmileb_cart.xml
 share/mame/hash/vsmilem_cart.xml
 share/mame/hash/vtech_innotab_cart.xml
-share/mame/hash/vtech_innotv_innotabmax_cart.xml
+share/mame/hash/vtech_innotv_cart.xml
 share/mame/hash/vtech_storio_cart.xml
 share/mame/hash/vz_cass.xml
 share/mame/hash/vz_snap.xml
