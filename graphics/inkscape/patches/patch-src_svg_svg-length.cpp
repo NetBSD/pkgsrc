@@ -1,6 +1,7 @@
-$NetBSD: patch-src_svg_svg-length.cpp,v 1.3 2021/01/13 11:43:34 jperkin Exp $
+$NetBSD: patch-src_svg_svg-length.cpp,v 1.4 2021/07/02 14:04:06 wiz Exp $
 
 Use correct pow().
+https://gitlab.com/inkscape/inkscape/-/merge_requests/3376
 
 --- src/svg/svg-length.cpp.orig	2020-09-07 08:57:41.000000000 +0000
 +++ src/svg/svg-length.cpp
