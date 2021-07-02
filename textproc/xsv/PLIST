@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/02 21:59:54 pin Exp $
+bin/xsv
