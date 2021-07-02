@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.202 2021/05/03 16:31:37 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.203 2021/07/02 10:51:16 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -24,6 +24,7 @@ TOOL_DEPENDS+=		cbindgen>=0.16.0:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
+USE_TOOLS+=		diff
 .else
 CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
 .endif
