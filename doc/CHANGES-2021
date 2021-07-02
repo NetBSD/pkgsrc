@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3623 2021/07/02 06:59:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3624 2021/07/02 09:02:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5766,3 +5766,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mongo-c-driver to 1.17.6 [adam 2021-07-01]
 	Updated databases/mongodb to 4.2.14 [adam 2021-07-01]
 	Updated graphics/inkscape to 1.1 [wiz 2021-07-02]
+	Updated devel/libsigc++ to 2.10.7 [adam 2021-07-02]
+	Updated devel/glibmm to 2.66.1 [adam 2021-07-02]
+	Updated graphics/cairomm to 1.14.3 [adam 2021-07-02]
+	Updated devel/pangomm to 2.46.1 [adam 2021-07-02]
