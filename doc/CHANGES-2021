@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3625 2021/07/02 09:24:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3626 2021/07/02 09:54:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5774,3 +5774,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libsigc++3 to 3.0.7 [adam 2021-07-02]
 	Updated devel/glibmm2.68 to 2.68.1 [adam 2021-07-02]
 	Updated net/qbittorrent to 4.3.6 [adam 2021-07-02]
+	Updated net/py-lexicon to 3.6.1 [adam 2021-07-02]
+	Updated net/py-zeroconf to 0.32.0 [adam 2021-07-02]
