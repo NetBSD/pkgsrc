@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1234 2021/07/01 06:05:31 nia Exp $
+# $NetBSD: Makefile,v 1.1235 2021/07/02 22:00:55 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1221,6 +1221,7 @@ SUBDIR+=	xmltooling
 SUBDIR+=	xp
 SUBDIR+=	xqilla
 SUBDIR+=	xslide
+SUBDIR+=	xsv
 SUBDIR+=	xt
 SUBDIR+=	xxdiff
 SUBDIR+=	xxdiff-scripts
