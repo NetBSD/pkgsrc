@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.235 2021/06/10 11:06:22 wiz Exp $
+# $NetBSD: Makefile,v 1.236 2021/07/02 06:59:15 wiz Exp $
 
-DISTNAME=	inkscape-1.0.2
-PKGREVISION=	7
+DISTNAME=	inkscape-1.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	https://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/inkscape-1.0.2_2021-01-15_e86c870879
+WRKSRC=		${WRKDIR}/inkscape-1.1_2021-05-24_c4e8f9ed74
 
 .if !exists(/usr/bin/iconv)
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
@@ -31,7 +30,7 @@ GCC_REQD+=		4.5.2
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt msgmerge perl pkg-config
@@ -41,8 +40,6 @@ REPLACE_PERL+=		share/extensions/*.p[lm]
 REPLACE_PERL+=		share/templates/create_defaults.pl
 
 UNLIMIT_RESOURCES=	datasize
-
-LDFLAGS.DragonFly=	-lX11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -57,6 +54,12 @@ SUBST_MESSAGE.pycmd=	Replacing COMMAND python in CMakeFiles.
 SUBST_FILES.pycmd+=	share/*/CMakeLists.txt
 SUBST_SED.pycmd=	-e "s,COMMAND python3,COMMAND ${PYTHONBIN},g"
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Replacing xdg search path.
+SUBST_FILES.xdg+=	src/inkscape-main.cpp
+SUBST_SED.xdg=		-e 's,xdg_data_dirs = "/usr/local/share/:/usr/share/",xdg_data_dirs = "'${PREFIX}'/share/",'
+
 REPLACE_PYTHON+=	share/extensions/*.py
 
 CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
@@ -69,15 +72,10 @@ CMAKE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MANCOMPRESSED=	yes
 
-.include "options.mk"
-
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
-
-post-extract:
-	${RM} -r ${WRKSRC}/share/extensions/.pytest_cache
 
 # There exists some race condition in create_default_templates.py that
 # makes default.es_MX.svg sometimes not get installed.
@@ -93,10 +91,14 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/gdl/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.0.12
 .include "../../devel/libsigc++/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.42
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.2
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -108,14 +110,8 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/gtkspell3/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24
 .include "../../x11/gtkmm3/buildlink3.mk"
-.if ${PKG_BUILD_OPTIONS.gtk3:Mquartz}
-.include "../../x11/gtk-mac-integration/buildlink3.mk"
-.else
-.include "../../x11/libXext/buildlink3.mk"
-.endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
