@@ -1,6 +1,7 @@
-$NetBSD: patch-src_display_cairo-utils.cpp,v 1.1 2021/07/02 06:59:15 wiz Exp $
+$NetBSD: patch-src_display_cairo-utils.cpp,v 1.2 2021/07/02 14:04:06 wiz Exp $
 
 Fix isnan() not defined.
+https://gitlab.com/inkscape/inkscape/-/merge_requests/3376
 
 --- src/display/cairo-utils.cpp.orig	2021-05-17 19:26:40.000000000 +0000
 +++ src/display/cairo-utils.cpp

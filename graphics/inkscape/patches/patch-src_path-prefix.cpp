@@ -1,6 +1,7 @@
-$NetBSD: patch-src_path-prefix.cpp,v 1.2 2021/07/02 06:59:15 wiz Exp $
+$NetBSD: patch-src_path-prefix.cpp,v 1.3 2021/07/02 14:04:06 wiz Exp $
 
 Add NetBSD support in get_program_name().
+https://gitlab.com/inkscape/inkscape/-/merge_requests/3376
 
 --- src/path-prefix.cpp.orig	2021-05-17 19:25:49.000000000 +0000
 +++ src/path-prefix.cpp
