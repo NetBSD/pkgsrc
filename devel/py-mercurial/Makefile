@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/05/22 23:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2021/07/02 15:51:17 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -13,15 +13,15 @@ HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
-# with this dependency, two zip test cases start working
-# https://bz.mercurial-scm.org/show_bug.cgi?id=4483
-# https://bz.mercurial-scm.org/show_bug.cgi?id=4485
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 # via xmlrpc from python itself, used in mercurial/pycompat.py
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+# with this dependency, two zip test cases start working
+# https://bz.mercurial-scm.org/show_bug.cgi?id=4483
+# https://bz.mercurial-scm.org/show_bug.cgi?id=4485
+TEST_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 USE_TOOLS+=	gmake msgfmt
 
