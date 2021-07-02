@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3628 2021/07/02 11:47:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3629 2021/07/02 12:17:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5778,3 +5778,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.32.0 [adam 2021-07-02]
 	Updated security/p5-Crypt-CBC to 3.04 [nia 2021-07-02]
 	Updated emulators/mame to 0.233 [wiz 2021-07-02]
+	Updated devel/py-fasteners to 0.16.3 [adam 2021-07-02]
+	Updated x11/gtk-mac-integration to 3.0.1 [adam 2021-07-02]
