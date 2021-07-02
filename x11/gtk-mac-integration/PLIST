@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/09 11:14:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/07/02 12:17:31 adam Exp $
 include/gtkmacintegration/gtkosxapplication.h
 lib/libgtkmacintegration-gtk2.la
 lib/libgtkmacintegration-gtk3.la
@@ -17,6 +17,7 @@ share/locale/fa/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/fi/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/fr/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/fur/LC_MESSAGES/gtk-mac-integration.mo
+share/locale/gl/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/he/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/hr/LC_MESSAGES/gtk-mac-integration.mo
 share/locale/hu/LC_MESSAGES/gtk-mac-integration.mo
