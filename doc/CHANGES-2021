@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3624 2021/07/02 09:02:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3625 2021/07/02 09:24:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5770,3 +5770,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glibmm to 2.66.1 [adam 2021-07-02]
 	Updated graphics/cairomm to 1.14.3 [adam 2021-07-02]
 	Updated devel/pangomm to 2.46.1 [adam 2021-07-02]
+	Updated devel/atkmm to 2.28.2 [adam 2021-07-02]
+	Updated devel/libsigc++3 to 3.0.7 [adam 2021-07-02]
+	Updated devel/glibmm2.68 to 2.68.1 [adam 2021-07-02]
+	Updated net/qbittorrent to 4.3.6 [adam 2021-07-02]
