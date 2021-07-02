@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/01/18 23:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2021/07/02 17:04:09 nia Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
@@ -49,18 +49,15 @@ DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
+.endif
 .if ${OPSYS} != "SunOS"
 DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
 .endif
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-input-mutouch-[0-9]*:../../x11/xf86-input-mutouch
-# does not work with 1.17 server
-.if !empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
-DEPENDS+=	xf86-video-modesetting-[0-9]*:../../x11/xf86-video-modesetting
-DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
-.endif
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-nouveau-[0-9]*:../../x11/xf86-video-nouveau
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
