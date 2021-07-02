@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2021/07/02 06:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2021/07/02 12:42:59 adam Exp $
 
 DISTNAME=	inkscape-1.1
 CATEGORIES=	graphics
@@ -67,7 +67,6 @@ CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
-CMAKE_ARGS+=	-DINKSCAPE_INSTALL_LIBDIR=${PREFIX}/lib
 CMAKE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MANCOMPRESSED=	yes
@@ -83,6 +82,15 @@ CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 # Run the script post-build to ensure all files are generated.
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} share/templates/create_default_templates.py . .
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -change ${PREFIX}/lib/libinkscape_base.dylib \
+		${PREFIX}/lib/inkscape/libinkscape_base.dylib \
+		${DESTDIR}${PREFIX}/bin/inkscape
+.endif
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libcdr/buildlink3.mk"
@@ -112,6 +120,9 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.2
 .include "../../textproc/gtkspell3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24
 .include "../../x11/gtkmm3/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.gtk3:Mquartz}
+.include "../../x11/gtk-mac-integration/buildlink3.mk"
+.endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
