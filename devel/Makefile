@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3440 2021/07/03 09:47:00 nia Exp $
+# $NetBSD: Makefile,v 1.3441 2021/07/03 09:48:44 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -414,7 +414,6 @@ SUBDIR+=	go-cmp
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
 SUBDIR+=	go-ed25519
-SUBDIR+=	go-emoji
 SUBDIR+=	go-errors
 SUBDIR+=	go-flags-svent
 SUBDIR+=	go-fsnotify
