@@ -1,4 +1,0 @@
-A debouncer written in Go. This may seem like a fairly narrow library,
-so why not copy-and-paste it when needed? Sure, but this is, however,
-slightly more usable than left-pad, and as I move my client code into
-the GopherJS world, a debounce function is a must-have.

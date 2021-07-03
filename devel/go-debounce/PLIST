@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/11 03:46:04 ryoon Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/bep/debounce.a
-gopkg/src/github.com/bep/debounce/LICENSE
-gopkg/src/github.com/bep/debounce/README.md
-gopkg/src/github.com/bep/debounce/debounce.go
-gopkg/src/github.com/bep/debounce/debounce_test.go
-gopkg/src/github.com/bep/debounce/go.mod
-gopkg/src/github.com/bep/debounce/go.sum
