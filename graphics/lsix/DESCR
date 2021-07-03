@@ -1,0 +1,7 @@
+Like ls, but for images. Shows thumbnails in terminal using sixel graphics.
+
+Just typing lsix will show images in the current working directory.
+You can also specify filenames and, of course, use shell wild cards.
+Because lsix uses ImageMagick pretty much any image format will be supported.
+However, some may be slow to render (like PDF), so lsix doesn't show them
+unless you ask specifically.
