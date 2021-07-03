@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3637 2021/07/03 18:07:56 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.3638 2021/07/03 19:12:43 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/lsix version 1.7.4 [pin 2021-07-03]
 	Removed databases/gramps3 successor databases/gramps5 [wiz 2021-07-03]
 	Updated wm/mutter to 40.2 [cirnatdan 2021-07-03]
+	Updated x11/gnome-shell to 40.2 [cirnatdan 2021-07-03]
