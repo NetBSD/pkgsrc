@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/06/29 12:40:53 nikita Exp $
-
-SHA1 (go-gift-1.2.1.tar.gz) = 14c3de9be82f6dbec5e7d8f285d6d70bb8c6a017
-RMD160 (go-gift-1.2.1.tar.gz) = 88340d933049be9da021a3969dc8c01f4d3c7189
-SHA512 (go-gift-1.2.1.tar.gz) = 01b797a326c299c623dd2ee3215ab7c791cd0342e834fa49da662d8c97b9e237754e68f21f0200908ee1b251c72a32d6a0e969203346f86e478e74922611c879
-Size (go-gift-1.2.1.tar.gz) = 1098337 bytes
