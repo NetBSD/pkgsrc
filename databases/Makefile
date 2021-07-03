@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2021/06/25 13:36:57 tnn Exp $
+# $NetBSD: Makefile,v 1.636 2021/07/03 14:36:11 wiz Exp $
 
 COMMENT=	Databases
 
@@ -46,7 +46,6 @@ SUBDIR+=	go-sqlite3
 SUBDIR+=	go-tiedot
 SUBDIR+=	gom
 SUBDIR+=	gourmet
-SUBDIR+=	gramps3
 SUBDIR+=	gramps5
 SUBDIR+=	gtkdbfeditor
 SUBDIR+=	gtksql
