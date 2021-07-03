@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2021/04/24 20:02:34 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/03 10:08:42 pin Exp $
 
 DISTNAME=	viu-1.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atanunq/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/atanunq/viu/
 COMMENT=	Simple terminal image viewer written in Rust
 LICENSE=	mit
