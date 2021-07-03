@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2021/06/03 15:04:57 cirnatdan Exp $
+$NetBSD: distinfo,v 1.3 2021/07/03 17:47:03 cirnatdan Exp $
 
-SHA1 (mutter-40.1.tar.xz) = 695bcedee8b2462359b33bdae06a132a1c666d73
-RMD160 (mutter-40.1.tar.xz) = a99888904705fb184c5f7cf5ee5b6accdfff9a30
-SHA512 (mutter-40.1.tar.xz) = c2b6603e1d55492916f742f9cb8e15588cb30e78c37de987404ac40d3befa65e417184305ad87fdffc41052a094790f9e324a1ea7482e5de4f0439dceefed118
-Size (mutter-40.1.tar.xz) = 2680816 bytes
+SHA1 (mutter-40.2.tar.xz) = 553d8085d707430042a6476672cfebb8ecc64d9c
+RMD160 (mutter-40.2.tar.xz) = e1499436706aac9f7436813dca2eca3311cc97c4
+SHA512 (mutter-40.2.tar.xz) = 9582004efde7a4b2ad21c390f4a4558c99709e21bdcac3f161f185612de9aaeb60cbfcf5dd1684726ae18244540aa4b6bcd2b9f362b92eb8c74304c43c9e1113
+Size (mutter-40.2.tar.xz) = 2681840 bytes
 SHA1 (patch-clutter_clutter_clutter-stage-view.c) = abba7a702a612457ba56acf1ecfd9396d28d1a2c
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.c) = 75547ffc2560860b6101a19165a3659bf799104e
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.h) = 311de2a52624c081bd5baf4a6f878a6f1ebd4015
