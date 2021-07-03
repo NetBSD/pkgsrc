@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/11/18 07:29:52 ryoon Exp $
-
-SHA1 (errors-0.8.0.tar.gz) = 6256e89cb3c94189180096eb804d9c8c90088fb5
-RMD160 (errors-0.8.0.tar.gz) = 473ecf6cada7287f2e27c90509d351f98895ecf3
-SHA512 (errors-0.8.0.tar.gz) = 82055b10c02f13a8ce497388729568ddde7ae61e9fb2592b9acb11c61dfe94d5554432aee168e7c7adbd8345511c3e4ce0ba4c1b23cf253480e199a95316c443
-Size (errors-0.8.0.tar.gz) = 11344 bytes
