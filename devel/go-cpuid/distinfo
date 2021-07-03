@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/11/06 11:08:14 ng0 Exp $
-
-SHA1 (go-cpuid-1.2.1.tar.gz) = 34957fc8918a0a7568d98df9c641511d88d5dd30
-RMD160 (go-cpuid-1.2.1.tar.gz) = e76cc3db1a88541f829d8454e6f5d1d07d394faa
-SHA512 (go-cpuid-1.2.1.tar.gz) = d5d1cc22f6e43619dd64f86057385fb8080e85903983937be7282aed6c88a3686d7e1ce58a641ba753dacb6fcc54715343521a85cb1bdf074afbacc91b8f8ad8
-Size (go-cpuid-1.2.1.tar.gz) = 279083 bytes
