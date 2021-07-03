@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3633 2021/07/02 22:01:27 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3634 2021/07/03 09:56:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5784,3 +5784,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php80 to 8.0.8 [taca 2021-07-02]
 	Updated lang/php73 to 7.3.29 [taca 2021-07-02]
 	Added textproc/xsv version 0.13.0 [pin 2021-07-02]
+	Removed devel/go-assert [nia 2021-07-03]
+	Removed devel/go-ace [nia 2021-07-03]
+	Removed devel/go-argv [nia 2021-07-03]
+	Removed devel/go-bytebufferpool [nia 2021-07-03]
+	Removed devel/go-cast [nia 2021-07-03]
+	Removed devel/go-colour [nia 2021-07-03]
+	Removed devel/go-cpuid [nia 2021-07-03]
+	Removed security/go-crypt [nia 2021-07-03]
+	Removed devel/go-consul-api [nia 2021-07-03]
+	Removed devel/go-debounce [nia 2021-07-03]
+	Removed devel/go-emoji [nia 2021-07-03]
+	Removed devel/go-errors [nia 2021-07-03]
+	Removed graphics/go-gift [nia 2021-07-03]
