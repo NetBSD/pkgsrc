@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/11/06 10:45:25 ng0 Exp $
-
-SHA1 (go-argv-0.0.1.tar.gz) = 847731c48d51e5550970899f0d4c4fae88cc9e08
-RMD160 (go-argv-0.0.1.tar.gz) = c488ae8f3c0a51fda4261c170c55fe3bd7141ef6
-SHA512 (go-argv-0.0.1.tar.gz) = 6e027334f8a07b1c2700ab3dc2b871e411ab45d42a3037785cecfe116790ac131cd780687fcd95f271f387e6fc5ad297c2e2cb782ea4ef76f64119c661ae8115
-Size (go-argv-0.0.1.tar.gz) = 6344 bytes
