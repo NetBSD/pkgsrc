@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/04/21 13:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/07/03 21:00:31 manu Exp $
 #
 
 DISTNAME=	SOGo-4.0.8
@@ -68,6 +68,39 @@ FIX_PERMS= \
 	UI/Templates/SOGoFolderLithuanianAdditionAdvisory.wox \
 	UI/Templates/SOGoFolderLithuanianRemovalAdvisory.wox \
 	UI/WebServerResources/css/icons.css
+
+# Binary files embed compiler command invoked, which includes 
+# harmless build directory references.
+CHECK_WRKREF_SKIP+=lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/SOGo
+CHECK_WRKREF_SKIP+=lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/libSOGo.so
+CHECK_WRKREF_SKIP+=lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/libSOGo.so.4.0.8
+CHECK_WRKREF_SKIP+=lib/GNUstep/Frameworks/SOGo.framework/sogo/SOGo
+CHECK_WRKREF_SKIP+=lib/GNUstep/Frameworks/SOGo.framework/sogo/libSOGo.so
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/AdministrationUI.SOGo/AdministrationUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/Appointments.SOGo/Appointments
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/CommonUI.SOGo/CommonUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/Contacts.SOGo/Contacts
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/ContactsUI.SOGo/ContactsUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/MailPartViewers.SOGo/MailPartViewers
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/Mailer.SOGo/Mailer
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/MailerUI.SOGo/MailerUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/MainUI.SOGo/MainUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/PreferencesUI.SOGo/PreferencesUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SOGo/SchedulerUI.SOGo/SchedulerUI
+CHECK_WRKREF_SKIP+=lib/GNUstep/SaxDrivers-4.9/versitCardsSaxDriver.sax/versitCardsSaxDriver
+CHECK_WRKREF_SKIP+=lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/SOGoElements
+CHECK_WRKREF_SKIP+=lib/sogo/libGDLContentStore.so
+CHECK_WRKREF_SKIP+=lib/sogo/libGDLContentStore.so.4.9.0
+CHECK_WRKREF_SKIP+=lib/sogo/libNGCards.so
+CHECK_WRKREF_SKIP+=lib/sogo/libNGCards.so.4.9.0
+CHECK_WRKREF_SKIP+=lib/sogo/libSOGo.so
+CHECK_WRKREF_SKIP+=lib/sogo/libSOGo.so.4.0.8
+CHECK_WRKREF_SKIP+=lib/sogo/libSOGoUI.so
+CHECK_WRKREF_SKIP+=lib/sogo/libSOGoUI.so.4.0.0
+CHECK_WRKREF_SKIP+=sbin/sogo-ealarms-notify
+CHECK_WRKREF_SKIP+=sbin/sogo-slapd-sockd
+CHECK_WRKREF_SKIP+=sbin/sogo-tool
+CHECK_WRKREF_SKIP+=sbin/sogod
 
 pre-install:
 .for f in ${FIX_PERMS}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/11 12:01:54 tm Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/03 21:00:31 manu Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
@@ -126,7 +126,6 @@ lib/GNUstep/Frameworks/SOGo.framework/Versions/4/Resources/Info-gnustep.plist
 lib/GNUstep/Frameworks/SOGo.framework/Versions/4/Resources/SOGoDefaults.plist
 lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/SOGo
 lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/libSOGo.so
-lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/libSOGo.so.4
 lib/GNUstep/Frameworks/SOGo.framework/Versions/4/sogo/libSOGo.so.${PKGVERSION}
 lib/GNUstep/Frameworks/SOGo.framework/Versions/Current
 lib/GNUstep/Frameworks/SOGo.framework/sogo/SOGo
@@ -1928,16 +1927,12 @@ lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/SOGoElements
 lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/bundle-info.plist
 lib/GNUstep/WOxElemBuilders-4.9/SOGoElements.wox/stamp.make
 lib/sogo/libGDLContentStore.so
-lib/sogo/libGDLContentStore.so.4.9
 lib/sogo/libGDLContentStore.so.4.9.0
 lib/sogo/libNGCards.so
-lib/sogo/libNGCards.so.4.9
 lib/sogo/libNGCards.so.4.9.0
 lib/sogo/libSOGo.so
-lib/sogo/libSOGo.so.4
 lib/sogo/libSOGo.so.${PKGVERSION}
 lib/sogo/libSOGoUI.so
-lib/sogo/libSOGoUI.so.4.0
 lib/sogo/libSOGoUI.so.4.0.0
 sbin/sogo-ealarms-notify
 sbin/sogo-slapd-sockd
