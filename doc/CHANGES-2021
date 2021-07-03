@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3635 2021/07/03 10:07:40 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3636 2021/07/03 14:36:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5798,3 +5798,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-errors [nia 2021-07-03]
 	Removed graphics/go-gift [nia 2021-07-03]
 	Added graphics/lsix version 1.7.4 [pin 2021-07-03]
+	Removed databases/gramps3 successor databases/gramps5 [wiz 2021-07-03]
