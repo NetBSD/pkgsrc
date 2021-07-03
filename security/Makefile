@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.832 2021/07/01 06:04:47 nia Exp $
+# $NetBSD: Makefile,v 1.833 2021/07/03 09:43:05 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -105,7 +105,6 @@ SUBDIR+=	gnupg-pkcs11-scd
 SUBDIR+=	gnupg2
 SUBDIR+=	gnutls
 SUBDIR+=	go-asn1-ber
-SUBDIR+=	go-crypt
 SUBDIR+=	go-crypto
 SUBDIR+=	go-mkcert
 SUBDIR+=	go-xxhash
