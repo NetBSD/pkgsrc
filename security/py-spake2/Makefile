@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/23 21:07:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/03 21:02:54 wiz Exp $
 
 DISTNAME=	spake2-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,9 @@ LICENSE=	mit
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../security/py-hkdf
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
