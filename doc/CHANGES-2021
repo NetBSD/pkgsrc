@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3636 2021/07/03 14:36:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3637 2021/07/03 18:07:56 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5799,3 +5799,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed graphics/go-gift [nia 2021-07-03]
 	Added graphics/lsix version 1.7.4 [pin 2021-07-03]
 	Removed databases/gramps3 successor databases/gramps5 [wiz 2021-07-03]
+	Updated wm/mutter to 40.2 [cirnatdan 2021-07-03]
