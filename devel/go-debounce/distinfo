@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2019/05/11 03:46:04 ryoon Exp $
-
-SHA1 (debounce-1.2.0.tar.gz) = 22ff959f91c21b746b89bc28e7ccc112ecfba0d8
-RMD160 (debounce-1.2.0.tar.gz) = daf2b2a5b24aee63bfcd10fe3c51792ecc666958
-SHA512 (debounce-1.2.0.tar.gz) = 258db70a33286fa2b8e737a4ada350f11ce5050aa11b38886527bd8b9913d938029036f8fb61b19fa810b413512887e6f7cbe7168c5849f98acb195e092a64d4
-Size (debounce-1.2.0.tar.gz) = 2845 bytes
