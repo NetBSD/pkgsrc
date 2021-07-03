@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.942 2021/07/03 09:51:23 nia Exp $
+# $NetBSD: Makefile,v 1.943 2021/07/03 10:07:03 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -357,6 +357,7 @@ SUBDIR+=	libwebp
 SUBDIR+=	libwmf
 SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
+SUBDIR+=	lsix
 SUBDIR+=	luminance-hdr
 SUBDIR+=	luv-icon-theme
 SUBDIR+=	lxde-icon-theme
