@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2020/11/24 00:33:39 nikita Exp $
-
-SHA1 (ace-0.0.5.tar.gz) = defb5bb4adff084f84afbf3105af695c15dd7275
-RMD160 (ace-0.0.5.tar.gz) = 9ca2f38abe507083e4d464d5dc2fa7b44e90794e
-SHA512 (ace-0.0.5.tar.gz) = 1bc93544fb64088271ffca5c2ec4bd136a18527968b4341c2108c6b7156d78292e6d0c5c50fe80cda24bcd17c2d1204af597c0c3281248c3842d1fdc4838b54f
-Size (ace-0.0.5.tar.gz) = 23277 bytes
