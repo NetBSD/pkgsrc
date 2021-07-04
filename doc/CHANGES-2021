@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3661 2021/07/04 08:48:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3662 2021/07/04 08:51:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5861,3 +5861,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-EOL to 2.02 [wen 2021-07-04]
 	Updated devel/p5-Test-Differences to 0.68 [wen 2021-07-04]
 	Updated devel/p5-Test-Compile to 2.4.2 [wen 2021-07-04]
+	Updated devel/p5-Test-Class to 0.52 [wen 2021-07-04]
