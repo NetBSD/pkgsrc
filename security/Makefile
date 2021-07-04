@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2021/07/03 09:43:05 nia Exp $
+# $NetBSD: Makefile,v 1.834 2021/07/04 12:41:23 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -493,6 +493,7 @@ SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-prewikka
 SUBDIR+=	py-pydeep
+SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-ntlm
 SUBDIR+=	py-requests-oauthlib
