@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.138 2020/05/16 15:36:24 rillig Exp $
+# $NetBSD: Makefile,v 1.139 2021/07/04 07:57:13 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	9
+#PKGREVISION=	9
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -55,10 +55,11 @@ SUBST_STAGE.cf-paths=	pre-build
 	cf/feature/msp.m4 cf/feature/smrsh.m4 cf/m4/proto.m4		\
 	cf/mailer/pop.m4 cf/mailer/usenet.m4 cf/ostype/a-ux.m4		\
 	cf/ostype/aix3.m4 cf/ostype/aix4.m4 cf/ostype/aix5.m4		\
-	cf/ostype/amdahl-uts.m4 cf/ostype/darwin.m4 cf/ostype/dgux.m4	\
-	cf/ostype/domainos.m4 cf/ostype/dragonfly.m4			\
-	cf/ostype/dynix3.2.m4 cf/ostype/freebsd4.m4			\
-	cf/ostype/freebsd5.m4 cf/ostype/freebsd6.m4 cf/ostype/hpux10.m4	\
+	cf/ostype/altos.m4 cf/ostype/amdahl-uts.m4 cf/ostype/bsd4.4.m4	\
+	cf/ostype/darwin.m4 cf/ostype/dgux.m4 cf/ostype/domainos.m4	\
+	cf/ostype/dragonfly.m4 cf/ostype/dynix3.2.m4			\
+	cf/ostype/freebsd4.m4 cf/ostype/freebsd5.m4			\
+	cf/ostype/freebsd6.m4 cf/ostype/hpux10.m4 cf/ostype/hpux9.m4	\
 	cf/ostype/irix4.m4 cf/ostype/irix5.m4 cf/ostype/irix6.m4	\
 	cf/ostype/isc4.1.m4 cf/ostype/maxion.m4 cf/ostype/nextstep.m4	\
 	cf/ostype/openbsd.m4 cf/ostype/ptx2.m4 cf/ostype/riscos4.5.m4	\
@@ -75,7 +76,6 @@ SUBST_SED.cf-paths+=	-e "s|/var/spool|${VARBASE}/spool|g"
 SUBST_SED.cf-paths+=	-e "s|/var/run|${VARBASE}/run|g"
 SUBST_SED.cf-paths+=	-e "s|/usr/libexec|${PREFIX}/libexec/sendmail|g"
 SUBST_SED.cf-paths+=	-e "s|/usr/lib|${PREFIX}/libexec/sendmail|g"
-SUBST_SED.cf-paths+=	-e "s|/system/volatile|${VARBASE}/run|g"
 SUBST_NOOP_OK.cf-paths=	yes # some files contain only /var
 
 REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl

@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
+$NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/main.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/main.c.orig	2020-06-02 09:41:43.000000000 +0000
 +++ sendmail/main.c
-@@ -148,6 +148,10 @@ int		SyslogPrefixLen; /* estimated lengt
+@@ -153,6 +153,10 @@ int		SyslogPrefixLen; /* estimated lengt
  	}								\
  }
  
@@ -13,9 +13,9 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
  int
  main(argc, argv, envp)
  	int argc;
-@@ -210,6 +214,15 @@ main(argc, argv, envp)
+@@ -215,6 +219,15 @@ main(argc, argv, envp)
  	envp = environ;
- #endif /* USE_ENVIRON */
+ #endif
  
 +#if NAMED_BIND
 +# if NAMED_RESN
@@ -29,7 +29,7 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
  	/* turn off profiling */
  	SM_PROF(0);
  
-@@ -683,21 +696,25 @@ main(argc, argv, envp)
+@@ -697,21 +710,25 @@ main(argc, argv, envp)
  	*/
  
  #if NAMED_BIND
@@ -49,7 +49,7 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
  # ifdef RES_NOALIASES
 -	_res.options |= RES_NOALIASES;
 +	sm_res.options |= RES_NOALIASES;
- # endif /* RES_NOALIASES */
+ # endif
 -	TimeOuts.res_retry[RES_TO_DEFAULT] = _res.retry;
 -	TimeOuts.res_retry[RES_TO_FIRST] = _res.retry;
 -	TimeOuts.res_retry[RES_TO_NORMAL] = _res.retry;
@@ -65,7 +65,7 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
  #endif /* NAMED_BIND */
  
  	errno = 0;
-@@ -1380,8 +1397,8 @@ main(argc, argv, envp)
+@@ -1394,8 +1411,8 @@ main(argc, argv, envp)
  	}
  
  #if NAMED_BIND
@@ -73,10 +73,10 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
 -	_res.retrans = TimeOuts.res_retrans[RES_TO_DEFAULT];
 +	sm_res.retry = TimeOuts.res_retry[RES_TO_DEFAULT];
 +	sm_res.retrans = TimeOuts.res_retrans[RES_TO_DEFAULT];
- #endif /* NAMED_BIND */
+ #endif
  
  	/*
-@@ -2884,8 +2901,8 @@ main(argc, argv, envp)
+@@ -2944,8 +2961,8 @@ main(argc, argv, envp)
  		sm_getla();
  		GrabTo = false;
  #if NAMED_BIND
@@ -84,6 +84,6 @@ $NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
 -		_res.retrans = TimeOuts.res_retrans[RES_TO_FIRST];
 +		sm_res.retry = TimeOuts.res_retry[RES_TO_FIRST];
 +		sm_res.retrans = TimeOuts.res_retrans[RES_TO_FIRST];
- #endif /* NAMED_BIND */
+ #endif
  		next = e->e_sibling;
  		e->e_sibling = NULL;

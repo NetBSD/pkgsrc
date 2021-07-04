@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/deliver.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/deliver.c.orig	2020-06-03 05:48:46.000000000 +0000
 +++ sendmail/deliver.c
-@@ -28,6 +28,10 @@ SM_RCSID("@(#)$Id: deliver.c,v 8.1030 20
- # include "sfsasl.h"
- #endif /* STARTTLS || SASL */
+@@ -29,6 +29,10 @@ SM_RCSID("@(#)$Id: deliver.c,v 8.1030 20
+ # include "tls.h"
+ #endif
  
 +#if NAMED_BIND
 +extern struct __res_state sm_res;
@@ -13,25 +13,25 @@ $NetBSD: patch-as,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  static int	deliver __P((ENVELOPE *, ADDRESS *));
  static void	dup_queue_file __P((ENVELOPE *, ENVELOPE *, int));
  static void	mailfiletimeout __P((int));
-@@ -1858,7 +1862,7 @@ deliver(e, firstto)
+@@ -1909,7 +1913,7 @@ deliver(e, firstto)
  
  #if NAMED_BIND
  	if (ConfigLevel < 2)
 -		_res.options &= ~(RES_DEFNAMES | RES_DNSRCH);	/* XXX */
 +		sm_res.options &= ~(RES_DEFNAMES | RES_DNSRCH);	/* XXX */
- #endif /* NAMED_BIND */
+ #endif
  
  	if (tTd(11, 1))
-@@ -3438,7 +3442,7 @@ do_transfer:
+@@ -3621,7 +3625,7 @@ do_transfer:
  	}
  #if NAMED_BIND
  	if (ConfigLevel < 2)
 -		_res.options |= RES_DEFNAMES | RES_DNSRCH;	/* XXX */
 +		sm_res.options |= RES_DEFNAMES | RES_DNSRCH;	/* XXX */
- #endif /* NAMED_BIND */
+ #endif
  
  	if (tTd(62, 1))
-@@ -5710,7 +5714,7 @@ hostsignature(m, host)
+@@ -6017,7 +6021,7 @@ hostsignature(m, host, ad)
  	int hl;
  	char *hp;
  	char *endp;
@@ -40,7 +40,7 @@ $NetBSD: patch-as,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  	char *mxhosts[MAXMXHOSTS + 1];
  	unsigned short mxprefs[MAXMXHOSTS + 1];
  #endif /* NAMED_BIND */
-@@ -5780,7 +5784,7 @@ hostsignature(m, host)
+@@ -6087,7 +6091,7 @@ hostsignature(m, host, ad)
  
  #if NAMED_BIND
  	if (ConfigLevel < 2)
@@ -49,7 +49,7 @@ $NetBSD: patch-as,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  
  	for (hp = host; hp != NULL; hp = endp)
  	{
-@@ -5908,7 +5912,7 @@ hostsignature(m, host)
+@@ -6220,7 +6224,7 @@ hostsignature(m, host, ad)
  	}
  	makelower(s->s_hostsig.hs_sig);
  	if (ConfigLevel < 2)

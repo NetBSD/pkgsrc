@@ -1,0 +1,12 @@
+$NetBSD: patch-bs,v 1.1 2021/07/04 07:57:13 jnemeth Exp $
+
+--- libsm/notify.c.orig	2020-05-19 19:54:32.000000000 +0000
++++ libsm/notify.c
+@@ -15,6 +15,7 @@
+ #include <sm/assert.h>
+ #include <sm/notify.h>
+ 
++#include <sys/select.h>
+ #include <sys/types.h>
+ #include <signal.h>
+ #include <stdio.h>
