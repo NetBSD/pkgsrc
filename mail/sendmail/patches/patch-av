@@ -1,10 +1,10 @@
-$NetBSD: patch-av,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-av,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/queue.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/queue.c.orig	2020-05-27 16:32:09.000000000 +0000
 +++ sendmail/queue.c
 @@ -34,6 +34,10 @@ SM_RCSID("@(#)$Id: queue.c,v 8.1000 2013
  # define SM_OPEN_EXLOCK 0
- #endif /* ! SM_OPEN_EXLOCK */
+ #endif
  
 +#if NAMED_BIND
 +extern struct __res_state sm_res;
@@ -13,7 +13,7 @@ $NetBSD: patch-av,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  /*
  **  Historical notes:
  **	QF_VERSION == 4 was sendmail 8.10/8.11 without _FFR_QUEUEDELAY
-@@ -4360,13 +4364,13 @@ readqf(e, openonly)
+@@ -4394,13 +4398,13 @@ readqf(e, openonly)
  			/* adjust BIND parameters immediately */
  			if (e->e_ntries == 0)
  			{

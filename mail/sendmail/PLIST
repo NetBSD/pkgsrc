@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/07/11 10:08:32 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/07/04 07:57:13 jnemeth Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -101,6 +101,8 @@ share/sendmail/feature/bestmx_is_local.m4
 share/sendmail/feature/bitdomain.m4
 share/sendmail/feature/blacklist_recipients.m4
 share/sendmail/feature/block_bad_helo.m4
+share/sendmail/feature/blocklist_recipients.m4
+share/sendmail/feature/check_cert_altnames.m4
 share/sendmail/feature/compat_check.m4
 share/sendmail/feature/conncontrol.m4
 share/sendmail/feature/delay_checks.m4
@@ -143,6 +145,7 @@ share/sendmail/feature/relay_mail_from.m4
 share/sendmail/feature/require_rdns.m4
 share/sendmail/feature/smrsh.m4
 share/sendmail/feature/stickyhost.m4
+share/sendmail/feature/tls_failures.m4
 share/sendmail/feature/tls_session_features.m4
 share/sendmail/feature/use_client_ptr.m4
 share/sendmail/feature/use_ct_file.m4

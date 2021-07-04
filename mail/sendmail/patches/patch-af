@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-af,v 1.13 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/conf.c.orig	2014-05-20 17:24:39.000000000 +0000
+--- sendmail/conf.c.orig	2020-06-04 06:27:49.000000000 +0000
 +++ sendmail/conf.c
-@@ -43,6 +43,10 @@ SM_RCSID("@(#)$Id: conf.c,v 8.1191 2014-
- # include <ulimit.h>
- #endif /* HASULIMIT && defined(HPUX11) */
+@@ -47,6 +47,10 @@ SM_RCSID("@(#)$Id: conf.c,v 8.1192 2014-
+ # include "tls.h"
+ #endif
  
 +#if !HAS_GETHOSTBYNAME2
 +extern struct __res_state sm_res;
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
  static void	setupmaps __P((void));
  static void	setupmailers __P((void));
  static void	setupqueues __P((void));
-@@ -4242,13 +4246,13 @@ sm_getipnodebyname(name, family, flags, 
+@@ -4312,15 +4316,15 @@ sm_getipnodebyname(name, family, flags, 
  	if (family == AF_INET6)
  	{
  		/* From RFC2133, section 6.1 */
@@ -22,15 +22,17 @@ $NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
 +		resv6 = bitset(RES_USE_INET6, sm_res.options);
 +		sm_res.options |= RES_USE_INET6;
  	}
+ #  endif /* RES_USE_INET6 */
  	SM_SET_H_ERRNO(0);
  	h = gethostbyname(name);
+ #  ifdef RES_USE_INET6
  	if (!resv6)
 -		_res.options &= ~RES_USE_INET6;
 +		sm_res.options &= ~RES_USE_INET6;
+ #  endif
  
  	/* the function is supposed to return only the requested family */
- 	if (h != NULL && h->h_addrtype != family)
-@@ -4463,7 +4467,8 @@ sm_gethostbyaddr(addr, len, type)
+@@ -4536,7 +4540,8 @@ sm_gethostbyaddr(addr, len, type)
  
  #if NETINET6
  	if (type == AF_INET6 &&
@@ -40,3 +42,20 @@ $NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
  	{
  		/* Avoid reverse lookup for IPv6 unspecified address */
  		SM_SET_H_ERRNO(HOST_NOT_FOUND);
+@@ -5690,13 +5695,13 @@ local_hostname_length(hostname)
+ {
+ 	size_t len_host, len_domain;
+ 
+-	if (!*_res.defdname)
++	if (!*sm_res.defdname)
+ 		res_init();
+ 	len_host = strlen(hostname);
+-	len_domain = strlen(_res.defdname);
++	len_domain = strlen(sm_res.defdname);
+ 	if (len_host > len_domain &&
+ 	    (sm_strcasecmp(hostname + len_host - len_domain,
+-			_res.defdname) == 0) &&
++			sm_res.defdname) == 0) &&
+ 	    hostname[len_host - len_domain - 1] == '.')
+ 		return len_host - len_domain - 1;
+ 	else
