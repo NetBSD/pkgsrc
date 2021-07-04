@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.934 2021/06/13 10:25:37 nia Exp $
+# $NetBSD: Makefile,v 1.935 2021/07/04 07:13:45 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -60,7 +60,6 @@ SUBDIR+=	fspanel
 SUBDIR+=	ftmenu
 SUBDIR+=	fvwm-wharf
 SUBDIR+=	gcolor2
-SUBDIR+=	gdm
 SUBDIR+=	ggiterm
 SUBDIR+=	gnome-desktop
 SUBDIR+=	gnome-desktop3
