@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/29 00:08:50 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.4 2021/07/04 10:56:48 wiz Exp $
 
 DISTNAME=	nagios-4.0.8
 PKGREVISION=	1
@@ -9,6 +8,8 @@ MASTER_SITES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Meta package for Nagios
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd
+
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +30,5 @@ DEPENDS+=	nagios-plugin-raidctl>=0.1:../../net/nagios-plugin-raidctl
 DEPENDS+=	nagios-plugin-spamd>=1.6.0:../../net/nagios-plugin-spamd
 DEPENDS+=	nagios-plugin-snmp>=2.0.3:../../net/nagios-plugin-snmp
 DEPENDS+=	nagios-plugin-syncrepl>=0.1:../../net/nagios-plugin-syncrepl
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
