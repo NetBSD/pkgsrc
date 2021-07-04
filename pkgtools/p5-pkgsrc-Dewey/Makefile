@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/05/24 19:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/07/04 17:43:27 dholland Exp $
 
 PKGNAME=	p5-pkgsrc-Dewey-1.1
 PKGREVISION=	12
@@ -13,9 +13,15 @@ CPPFLAGS+=		-DHAVE_CTYPE_H -DHAVE_STDLIB_H -DHAVE_STRING_H
 CPPFLAGS.NetBSD+=	-DHAVE_ERR_H
 CPPFLAGS.Linux+=	-fPIC
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c99
 USE_FEATURES+=		err
 MAKE_ENV+=		LIBS=${LIBS:Q}
+
+.include "../../mk/compiler.mk"
+
+.if ${PKGSRC_COMPILER:Msunpro}
+CPPFLAGS+=		-xcode=pic32
+.endif
 
 PERL5_PACKLIST=		auto/pkgsrc/Dewey/.packlist
 
