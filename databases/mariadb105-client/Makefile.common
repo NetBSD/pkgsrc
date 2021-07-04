@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2021/06/28 20:42:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/07/04 08:58:30 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -45,7 +45,7 @@ CMAKE_ARGS+=		-DINSTALL_INFODIR="${PKGINFODIR}"
 CMAKE_ARGS+=		-DINSTALL_LIBDIR="lib"
 CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
 CMAKE_ARGS+=		-DINSTALL_MYSQLSHAREDIR="share/mysql"
-CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR="share/mysql/test"
+CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR=""
 CMAKE_ARGS+=		-DINSTALL_PLUGINDIR="lib/mysql/plugin"
 CMAKE_ARGS+=		-DINSTALL_SBINDIR="sbin"
 CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
