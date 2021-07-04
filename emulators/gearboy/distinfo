@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/06/02 13:24:32 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/07/04 07:47:20 nia Exp $
 
-SHA1 (gearboy-3.1.1.tar.gz) = 0f4f89c9cc4c12075002cff5137da51a46139944
-RMD160 (gearboy-3.1.1.tar.gz) = bb1d003fb01eead0e24ff4743af210d4ae9552af
-SHA512 (gearboy-3.1.1.tar.gz) = 6ac9a76514ed83fb4d48ffa9f2b12286f21c82a693976899a7f9546d7424634e0a14201456f3b9800074baa323a5b3bd995140de794b8fb808a55b61d15feaaf
-Size (gearboy-3.1.1.tar.gz) = 16734766 bytes
-SHA1 (patch-platforms_desktop-shared_Makefile.common) = a22b4d53d1bf6e4e47cfafcc0e65747ef1fbe33d
+SHA1 (gearboy-3.3.0.tar.gz) = 4c141b1e065b06f8fd3253ad25d788a647c099fd
+RMD160 (gearboy-3.3.0.tar.gz) = 0f450fd86daffeb05f8971b1a7631b6696c3a930
+SHA512 (gearboy-3.3.0.tar.gz) = daaee4d1e89d9645aceb19a3e646e4d2bcbb07829d0b62bc9a4e9465c66926e9ff725efb4341692caff4a9139db7b8480127ad7eb6a0895eeeb4ab29293e7480
+Size (gearboy-3.3.0.tar.gz) = 19934754 bytes
+SHA1 (patch-platforms_desktop-shared_Makefile.common) = 49386c76f76d31f91afd4fc0a4a0cd327f85006e
