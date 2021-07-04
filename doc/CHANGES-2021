@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3638 2021/07/03 19:12:43 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.3639 2021/07/04 06:27:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5801,3 +5801,14 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed databases/gramps3 successor databases/gramps5 [wiz 2021-07-03]
 	Updated wm/mutter to 40.2 [cirnatdan 2021-07-03]
 	Updated x11/gnome-shell to 40.2 [cirnatdan 2021-07-03]
+	Updated devel/ruby-activesupport52 to 5.2.6 [taca 2021-07-04]
+	Updated devel/ruby-activemodel52 to 5.2.6 [taca 2021-07-04]
+	Updated devel/ruby-activejob52 to 5.2.6 [taca 2021-07-04]
+	Updated www/ruby-actionview52 to 5.2.6 [taca 2021-07-04]
+	Updated www/ruby-actionpack52 to 5.2.6 [taca 2021-07-04]
+	Updated www/ruby-actioncable52 to 5.2.6 [taca 2021-07-04]
+	Updated databases/ruby-activerecord52 to 5.2.6 [taca 2021-07-04]
+	Updated devel/ruby-activestorage52 to 5.2.6 [taca 2021-07-04]
+	Updated mail/ruby-actionmailer52 to 5.2.6 [taca 2021-07-04]
+	Updated devel/ruby-railties52 to 5.2.6 [taca 2021-07-04]
+	Updated www/ruby-rails52 to 5.2.6 [taca 2021-07-04]
