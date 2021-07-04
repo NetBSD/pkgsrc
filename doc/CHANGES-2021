@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3656 2021/07/04 08:31:26 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3657 2021/07/04 08:34:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Type-Tiny to 1.012003 [wen 2021-07-04]
 	Updated devel/p5-UNIVERSAL-require to 0.19 [wen 2021-07-04]
 	Updated devel/p5-XString to 0.005 [wen 2021-07-04]
+	Updated devel/p5-XXX to 0.38 [wen 2021-07-04]
