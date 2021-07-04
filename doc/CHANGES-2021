@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3664 2021/07/04 08:58:13 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3665 2021/07/04 09:01:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5864,3 +5864,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-Class to 0.52 [wen 2021-07-04]
 	Updated devel/p5-Term-Size to 0.211 [wen 2021-07-04]
 	Updated devel/p5-Term-Shell to 0.12 [wen 2021-07-04]
+	Updated devel/p5-Term-ReadLine-Gnu to 1.42 [wen 2021-07-04]
