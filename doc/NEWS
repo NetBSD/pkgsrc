@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.18 2021/06/24 14:16:36 nia Exp $
+# $NetBSD: NEWS,v 1.19 2021/07/04 08:56:47 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -7,12 +7,17 @@ PKGSRC NEWS
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
 
+Default PostgreSQL changed to 13 [nia 2021-06-28]
+
 Default MySQL implementation changed to MariaDB [nia 2021-06-24]
 
 	The default version of MySQL as set by the pkgsrc infrastructure
 	was changed from MySQL 5.7 to MariaDB 10.5.
 
 	This is configurable by setting MYSQL_VERSION_DEFAULT in mk.conf.
+
+	PHP packages are no longer tied to a specific MySQL version
+	due to the native driver being enabled by default.
 
 Python 3.8 default [nia 2020-12-04]
 	The default Python version was switched to 3.8.
