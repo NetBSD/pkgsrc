@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.4 2021/06/29 12:44:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.5 2021/07/04 19:36:17 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -13,4 +13,25 @@ shells/eltclsh: build fix
 
 Pullup ticket #6474 - requested by nia
 multimedia/libaom: arm build fix
+
+Pullup ticket #6475 - requested by nia
+x11/qt5-qtwebkit: arm build fix
+
+Pullup ticket #6476 - requested by nia
+security/p5-Crypt-CBC: 32-bit build fix
+
+Pullup ticket #6477 - requested by nia
+databases/mariadb105-client: NetBSD/aarch64 build fix
+
+Pullup ticket #6478 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6479 - requested by taca
+lang/php80: security fix
+
+Pullup ticket #6480 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6481 - requested by nia
+graphics/glew: packaging fix
 
