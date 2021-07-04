@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/05/25 00:29:33 gdt Exp $
+$NetBSD: distinfo,v 1.26 2021/07/04 12:02:09 gdt Exp $
 
-SHA1 (postgis-3.1.2.tar.gz) = 622f52f3bf338c8e51ea6d73d30d6a5d3140c517
-RMD160 (postgis-3.1.2.tar.gz) = 237468e8c3dd12f6e96103c0be6f52cbf67639f5
-SHA512 (postgis-3.1.2.tar.gz) = df9d2fa118987e29acd635912a708e643770ad3df82c098f8129f11ab07a9eafde969302d2d2e59a68fea6fc7312fe768a231dd4cb5de7002c418725da75848a
-Size (postgis-3.1.2.tar.gz) = 17266501 bytes
+SHA1 (postgis-3.1.3.tar.gz) = 6aec193dc10f79b4ca2d46b1e488f0e83bd11118
+RMD160 (postgis-3.1.3.tar.gz) = 01542d4351c39c67b88837d8ac6c98133d8a7bdc
+SHA512 (postgis-3.1.3.tar.gz) = 525c982de6b5888d1f4a4f6d2cca5dfa945d8899d8038b1d62ce222e0149c4ab26a2a3602bb8c85e89ce22b3d5b20d278fc4f841144f4b0d19e6de4f48d819ad
+Size (postgis-3.1.3.tar.gz) = 17273487 bytes
