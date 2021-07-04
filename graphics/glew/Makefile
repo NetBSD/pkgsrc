@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2021/02/17 14:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27.4.1 2021/07/04 19:34:57 bsiegert Exp $
 
 DISTNAME=	glew-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nigels-com/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -15,7 +15,10 @@ LICENSE=	modified-bsd AND mit
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	glew.pc.in
-MAKEFLAGS+=		CC=${CC:Q} GLEW_DEST=${PREFIX} POPT=${CFLAGS:Q}
+MAKE_FLAGS+=		CC=${CC:Q}
+MAKE_FLAGS+=		GLEW_DEST=${PREFIX}
+MAKE_FLAGS+=		GLEW_PREFIX=${PREFIX}
+MAKE_FLAGS+=		POPT=${CFLAGS:Q}
 INSTALL_TARGET=		install.all
 INSTALLATION_DIRS+=	lib/pkgconfig
 
@@ -31,9 +34,9 @@ MAKE_ENV.SunOS+=	SYSTEM=solaris-gcc
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-MAKEFLAGS+=	LD=${LD:Q}
+MAKE_FLAGS+=	LD=${LD:Q}
 .else
-MAKEFLAGS+=	LD=${CC:Q}
+MAKE_FLAGS+=	LD=${CC:Q}
 .endif
 
 SUBST_CLASSES+=		x11path
