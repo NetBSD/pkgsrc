@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3650 2021/07/04 08:00:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3651 2021/07/04 08:04:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5838,3 +5838,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Tree-DAG_Node to 1.32 [wen 2021-07-04]
 	Updated mail/sendmail to 8.16.1 [jnemeth 2021-07-04]
 	Updated devel/p5-Tree-Simple-VisitorFactory to 0.16 [wen 2021-07-04]
+	Updated devel/p5-Tree-Simple to 1.34 [wen 2021-07-04]
