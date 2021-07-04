@@ -1,63 +1,121 @@
-$NetBSD: patch-ay,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
+$NetBSD: patch-ay,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/sm_resolve.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/sm_resolve.c.orig	2020-06-08 08:35:03.000000000 +0000
 +++ sendmail/sm_resolve.c
-@@ -54,2 +54,6 @@ SM_RCSID("$Id: sm_resolve.c,v 8.40 2013-
+@@ -57,2 +57,6 @@ SM_RCSID("$Id: sm_resolve.c,v 8.40 2013-
  
 +#if NAMED_BIND
 +extern struct __res_state sm_res;
 +#endif
 +
  static struct stot
-@@ -410,4 +414,4 @@ dns_lookup_int(domain, rr_class, rr_type
+@@ -771,3 +775,3 @@ nsportip(p)
  	{
--		old_options = _res.options;
+-		if ((_res.options & RES_INIT) == 0)
++		if ((sm_res.options & RES_INIT) == 0)
+ 			(void) res_init();
+@@ -796,7 +800,7 @@ dns_setns(ns, port)
+ {
+-	_res.nsaddr_list[0].sin_family = AF_INET;
+-	_res.nsaddr_list[0].sin_addr = *ns;
++	sm_res.nsaddr_list[0].sin_family = AF_INET;
++	sm_res.nsaddr_list[0].sin_addr = *ns;
+ 	if (port != 0)
+-		_res.nsaddr_list[0].sin_port = htons(port);
+-	_res.nscount = 1;
++		sm_res.nsaddr_list[0].sin_port = htons(port);
++	sm_res.nscount = 1;
+ 	if (tTd(8, 61))
+@@ -945,3 +949,3 @@ dnscrtrr(domain, query, qtype, value, rr
+ 
+-			adflag = (_res.options & RES_USE_DNSSEC) != 0;
++			adflag = (sm_res.options & RES_USE_DNSSEC) != 0;
+ 
+@@ -1289,3 +1293,2 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	unsigned char *reply;
+-	int (*resfunc) __P((const char *, int, int, u_char *, int));
+ 
+@@ -1296,10 +1299,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 
+-	resfunc = res_search;
+-#  if DNSSEC_TEST
+-	if (tTd(8, 110))
+-		resfunc = tstdns_search;
+-#  endif
+-
+-	old_options = _res.options;
+-	_res.options |= options;
++	old_options = sm_res.options;
++	sm_res.options |= options;
+ 	if (err != NULL)
+@@ -1310,3 +1307,3 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	{
 -		_res.options |= RES_DEBUG;
-+		old_options = sm_res.options;
 +		sm_res.options |= RES_DEBUG;
- 		sm_dprintf("dns_lookup(%s, %d, %s)\n", domain,
-@@ -417,4 +421,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 		sm_dprintf("dns_lookup_int(%s, %d, %s, %x)\n", domain,
+@@ -1317,4 +1314,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 		sm_dprintf("NS=%s, port=%d\n",
+-			inet_ntoa(_res.nsaddr_list[0].sin_addr),
+-			ntohs(_res.nsaddr_list[0].sin_port));
++			inet_ntoa(sm_res.nsaddr_list[0].sin_addr),
++			ntohs(sm_res.nsaddr_list[0].sin_port));
+ #  endif
+@@ -1322,4 +1319,4 @@ dns_lookup_int(domain, rr_class, rr_type
  	{
 -		save_retrans = _res.retrans;
 -		_res.retrans = retrans;
 +		save_retrans = sm_res.retrans;
 +		sm_res.retrans = retrans;
  	}
-@@ -422,4 +426,4 @@ dns_lookup_int(domain, rr_class, rr_type
+@@ -1327,4 +1324,4 @@ dns_lookup_int(domain, rr_class, rr_type
  	{
 -		save_retry = _res.retry;
 -		_res.retry = retry;
 +		save_retry = sm_res.retry;
 +		sm_res.retry = retry;
  	}
-@@ -428,3 +432,7 @@ dns_lookup_int(domain, rr_class, rr_type
+@@ -1333,3 +1330,12 @@ dns_lookup_int(domain, rr_class, rr_type
  	reply = (unsigned char *)&reply_buf;
-+#if NAMED_RESN
+-	len = (*resfunc)(domain, rr_class, rr_type, reply, SMRBSIZE);
++#  if DNSSEC_TEST
++	if (tTd(8, 110))
++		len = tstdns_search(domain, rr_class, rr_type, reply, SMRBSIZE);
++	else
++#  endif
++#  if NAMED_RESN
 +	len = res_nsearch(&sm_res, domain, rr_class, rr_type, reply, SMRBSIZE);
-+#else
- 	len = res_search(domain, rr_class, rr_type, reply, SMRBSIZE);
-+#endif
++#  else
++	len = res_search(domain, rr_class, rr_type, reply, SMRBSIZE);
++#  endif
  	if (len >= SMRBSIZE)
-@@ -448,4 +456,9 @@ dns_lookup_int(domain, rr_class, rr_type
- 			else
-+#if NAMED_RESN
+@@ -1353,4 +1359,15 @@ dns_lookup_int(domain, rr_class, rr_type
+ 				SM_SET_H_ERRNO(0);
+-				len = (*resfunc)(domain, rr_class, rr_type,
+-						 reply, IP_MAXPACKET);
++#  if DNSSEC_TEST
++				if (tTd(8, 110))
++					len = tstdns_search(domain, rr_class,
++					    rr_type, reply, IP_MAXPACKET);
++				else
++#  endif
++#  if NAMED_RESN
 +				len = res_nsearch(&sm_res, domain, rr_class,
-+						 rr_type, reply, IP_MAXPACKET);
-+#else
- 				len = res_search(domain, rr_class, rr_type,
- 						 reply, IP_MAXPACKET);
-+#endif
- 		}
-@@ -454,3 +467,3 @@ dns_lookup_int(domain, rr_class, rr_type
- 	{
--		_res.options = old_options;
-+		sm_res.options = old_options;
- 		sm_dprintf("dns_lookup(%s, %d, %s) --> %d\n",
-@@ -466,5 +479,5 @@ dns_lookup_int(domain, rr_class, rr_type
++				    rr_type, reply, IP_MAXPACKET);
++#  else
++				len = res_search(domain, rr_class, rr_type,
++				    reply, IP_MAXPACKET);
++#  endif
+ 			}
+@@ -1358,3 +1375,3 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	}
+-	_res.options = old_options;
++	sm_res.options = old_options;
+ 	if (len < 0)
+@@ -1394,5 +1411,5 @@ dns_lookup_int(domain, rr_class, rr_type
  	if (retrans > 0)
 -		_res.retrans = save_retrans;
 +		sm_res.retrans = save_retrans;
  	if (retry > 0)
 -		_res.retry = save_retry;
 +		sm_res.retry = save_retry;
- 	return r;
+ 	return dr;
