@@ -1,10 +1,17 @@
-# $NetBSD: options.mk,v 1.3 2021/05/25 15:51:21 nia Exp $
+# $NetBSD: options.mk,v 1.4 2021/07/04 10:14:54 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
 PKG_SUPPORTED_OPTIONS+=	columnstore embedded-server lzo lz4 oqgraph rocksdb
 PKG_SUPPORTED_OPTIONS+=	snappy ssl zstd
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
+.else
+PKG_SUGGESTED_OPTIONS+=	ssl
+.endif
 
 .include "../../mk/bsd.options.mk"
 
