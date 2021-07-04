@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3645 2021/07/04 07:47:47 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3646 2021/07/04 07:48:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5830,3 +5830,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-Script to 1.29 [wen 2021-07-04]
 	Updated devel/p5-Test2-Suite to 0.000140 [wen 2021-07-04]
 	Updated devel/p5-Throwable to 1.000 [wen 2021-07-04]
+	Updated emulators/gearboy to 3.3.0 [nia 2021-07-04]
+	Updated emulators/gearsystem to 3.3.0 [nia 2021-07-04]
+	Updated emulators/libretro-gearboy to 3.3.0 [nia 2021-07-04]
+	Updated emulators/libretro-gearsystem to 3.3.0 [nia 2021-07-04]
