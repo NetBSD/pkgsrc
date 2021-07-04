@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3652 2021/07/04 08:07:17 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3653 2021/07/04 08:08:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5840,3 +5840,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Tree-Simple-VisitorFactory to 0.16 [wen 2021-07-04]
 	Updated devel/p5-Tree-Simple to 1.34 [wen 2021-07-04]
 	Updated devel/p5-Type-Tiny-XS to 0.022 [wen 2021-07-04]
+	Updated devel/ruby-activesupport61 to 6.1.4 [taca 2021-07-04]
+	Updated devel/ruby-activemodel61 to 6.1.4 [taca 2021-07-04]
+	Updated devel/ruby-activejob61 to 6.1.4 [taca 2021-07-04]
+	Updated www/ruby-actionview61 to 6.1.4 [taca 2021-07-04]
+	Updated www/ruby-actionpack61 to 6.1.4 [taca 2021-07-04]
+	Updated databases/ruby-activerecord61 to 6.1.4 [taca 2021-07-04]
+	Updated devel/ruby-activestorage61 to 6.1.4 [taca 2021-07-04]
+	Updated mail/ruby-actionmailer61 to 6.1.4 [taca 2021-07-04]
+	Updated mail/ruby-actionmailbox61 to 6.1.4 [taca 2021-07-04]
+	Updated www/ruby-actioncable61 to 6.1.4 [taca 2021-07-04]
+	Updated devel/ruby-railties61 to 6.1.4 [taca 2021-07-04]
+	Updated textproc/ruby-actiontext61 to 6.1.4 [taca 2021-07-04]
+	Updated www/ruby-rails61 to 6.1.4 [taca 2021-07-04]
