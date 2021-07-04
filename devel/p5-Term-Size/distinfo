@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/08/24 09:31:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/07/04 08:53:46 wen Exp $
 
-SHA1 (Term-Size-0.209.tar.gz) = 714f010f227bd32b27735a09bac4ab42a3261473
-RMD160 (Term-Size-0.209.tar.gz) = f378d2f15f289852a0b279445debf57bb5763f0c
-SHA512 (Term-Size-0.209.tar.gz) = bedd8afcbeac69ee90705c079eed734ecbff9f63a70a5507f3c06cd1b4d2e580612b563bb84b7714307ad5a15d8194d9831e09b3b2ff07f82e3c3802750e6b3c
-Size (Term-Size-0.209.tar.gz) = 4945 bytes
+SHA1 (Term-Size-0.211.tar.gz) = cc6e0cdf222cba445f042f983f77876852fcb2e9
+RMD160 (Term-Size-0.211.tar.gz) = 9827eab186081965d0d689a99dc7f0a6466911ca
+SHA512 (Term-Size-0.211.tar.gz) = 0762951a6125dace8c67548667b8ca353b34199412fbd4c05d417a49a6d3f5bb93172736fcef98e049f094f2fdc62efd334e64f9357c7778665f2aa2bb775e0f
+Size (Term-Size-0.211.tar.gz) = 5416 bytes
