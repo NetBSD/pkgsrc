@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2021/03/30 07:57:53 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.26 2021/07/04 14:31:54 cirnatdan Exp $
 
-DISTNAME=		adwaita-icon-theme-3.38.0
+DISTNAME=		adwaita-icon-theme-40.1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/adwaita-icon-theme/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
