@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3647 2021/07/04 07:52:10 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3648 2021/07/04 07:55:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5835,3 +5835,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-gearboy to 3.3.0 [nia 2021-07-04]
 	Updated emulators/libretro-gearsystem to 3.3.0 [nia 2021-07-04]
 	Updated devel/p5-Tie-Cycle to 1.226 [wen 2021-07-04]
+	Updated devel/p5-Tree-DAG_Node to 1.32 [wen 2021-07-04]
