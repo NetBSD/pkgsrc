@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/04/27 10:51:00 wiz Exp $
+$NetBSD: distinfo,v 1.18.2.1 2021/07/04 19:07:42 bsiegert Exp $
 
-SHA1 (Crypt-CBC-3.03.tar.gz) = 08f15a7d0a8e78078cbd7e932be3cafb6ed83ded
-RMD160 (Crypt-CBC-3.03.tar.gz) = b9c477ef9d0ce2a43c18d93caf341472e4557c68
-SHA512 (Crypt-CBC-3.03.tar.gz) = c1c55dd5fae83d45893f47319323f6d0ad8295ec480b8ab034beeb33bb7d16f26bbedaeef6613a3495849f5034e7502b01c88ab75dd4d69234151d3b674929e6
-Size (Crypt-CBC-3.03.tar.gz) = 40174 bytes
+SHA1 (Crypt-CBC-3.04.tar.gz) = fcc0b2a836f1148b91fd17e6e2f36509978f6877
+RMD160 (Crypt-CBC-3.04.tar.gz) = 79a7ada687c38b38a93bddb1e80a920bdad1f8e6
+SHA512 (Crypt-CBC-3.04.tar.gz) = e1d972d2e7865b9799b289d3633342dae6b942295e3a63ad9edaf6c25c30d6691366a6a27896b39a1ef1a25ad83ebb25545c71e31b04a978377da4db5edf2f25
+Size (Crypt-CBC-3.04.tar.gz) = 40237 bytes
