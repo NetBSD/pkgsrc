@@ -1,10 +1,10 @@
-$NetBSD: patch-aw,v 1.6 2020/04/12 09:11:42 jnemeth Exp $
+$NetBSD: patch-aw,v 1.7 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/readcf.c.orig	2015-06-17 16:51:58.000000000 +0000
+--- sendmail/readcf.c.orig	2020-06-02 09:41:43.000000000 +0000
 +++ sendmail/readcf.c
-@@ -20,6 +20,10 @@ SM_RCSID("@(#)$Id: readcf.c,v 8.692 2013
+@@ -26,6 +26,10 @@ SM_RCSID("@(#)$Id: readcf.c,v 8.692 2013
  # include <arpa/inet.h>
- #endif /* NETINET || NETINET6 */
+ #endif
  
 +#if NAMED_BIND
 +extern struct __res_state sm_res;
@@ -13,16 +13,16 @@ $NetBSD: patch-aw,v 1.6 2020/04/12 09:11:42 jnemeth Exp $
  
  #define SECONDS
  #define MINUTES	* 60
-@@ -2910,6 +2914,8 @@ static struct optioninfo
+@@ -2979,6 +2983,8 @@ static struct optioninfo
+ 	{ "SetCertAltnames",			O_CHECKALTNAMES, OI_NONE },
  #endif
- #define O_USECOMPRESSEDIPV6ADDRESSES 0xec
- 	{ "UseCompressedIPv6Addresses",	O_USECOMPRESSEDIPV6ADDRESSES, OI_NONE },
-+# define O_BLACKLIST	0xf2
-+	{ "UseBlacklist",             O_BLACKLIST,    OI_NONE },
  
++# define O_BLACKLIST   0xf8
++	{ "UseBlacklist",		O_BLACKLIST,	OI_NONE },
  	{ NULL,				'\0',		OI_NONE	}
  };
-@@ -3318,13 +3324,13 @@ setoption(opt, val, safe, sticky, e)
+ 
+@@ -3386,13 +3392,13 @@ setoption(opt, val, safe, sticky, e)
  			if (rfp->rf_name == NULL)
  				syserr("readcf: I option value %s unrecognized", q);
  			else if (clearmode)
@@ -33,15 +33,16 @@ $NetBSD: patch-aw,v 1.6 2020/04/12 09:11:42 jnemeth Exp $
 +				sm_res.options |= rfp->rf_bits;
  		}
  		if (tTd(8, 2))
- 			sm_dprintf("_res.options = %x, HasWildcardMX = %d\n",
+-			sm_dprintf("_res.options = %x, HasWildcardMX = %d\n",
 -				   (unsigned int) _res.options, HasWildcardMX);
++			sm_dprintf("sm_res.options = %x, HasWildcardMX = %d\n",
 +				   (unsigned int) sm_res.options, HasWildcardMX);
  #else /* NAMED_BIND */
  		usrerr("name server (I option) specified but BIND not compiled in");
  #endif /* NAMED_BIND */
-@@ -4540,6 +4546,10 @@ setoption(opt, val, safe, sticky, e)
- 		UseCompressedIPv6Addresses = atobool(val);
+@@ -4679,6 +4685,10 @@ setoption(opt, val, safe, sticky, e)
  		break;
+ # endif
  
 +	  case O_BLACKLIST:
 +		UseBlacklist = atobool(val);

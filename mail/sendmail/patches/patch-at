@@ -1,77 +1,63 @@
-$NetBSD: patch-at,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-at,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/domain.c.orig	2014-03-06 17:31:31.000000000 +0000
+--- sendmail/domain.c.orig	2020-06-02 09:41:43.000000000 +0000
 +++ sendmail/domain.c
-@@ -39,7 +39,7 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
- # endif /* ! MAXDNSRCH */
+@@ -25,6 +25,8 @@ SM_RCSID("@(#)$Id: domain.c,v 8.205 2013
+ 
+ #if NAMED_BIND
+ 
++extern struct __res_state sm_res;
++
+ # include <arpa/inet.h>
+ # include <sm_resolve.h>
+ # if DANE
+@@ -49,7 +51,7 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
+ # endif
  
  # ifndef RES_DNSRCH_VARIABLE
 -#  define RES_DNSRCH_VARIABLE	_res.dnsrch
 +#  define RES_DNSRCH_VARIABLE	sm_res.dnsrch
- # endif /* ! RES_DNSRCH_VARIABLE */
+ # endif
  
  # ifndef NO_DATA
-@@ -58,6 +58,8 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
- #  define RES_UNC_T	unsigned char *
- # endif /* defined(__RES) && (__RES >= 19940415) */
+@@ -573,9 +575,9 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+ # if DANE
+ 	cname2mx = false;
+ 	qname[0] = '\0';
+-	old_options = _res.options;
++	old_options = sm_res.options;
+ 	if (ad)
+-		_res.options |= SM_RES_DNSSEC;
++		sm_res.options |= SM_RES_DNSSEC;
+ # endif
  
-+extern struct __res_state sm_res;
-+
- static int	mxrand __P((char *));
- static int	fallbackmxrr __P((int, unsigned short *, char **));
- 
-@@ -205,11 +207,9 @@ getmxrr(host, mxhosts, mxprefs, droploca
- 	char *fallbackMX = FallbackMX;
- 	bool trycanon = false;
- 	unsigned short *prefs;
--	int (*resfunc) __P((const char *, int, int, u_char *, int));
- 	unsigned short prefer[MAXMXHOSTS];
- 	int weight[MAXMXHOSTS];
- 	int ttl = 0;
--	extern int res_query(), res_search();
- 
- 	if (tTd(8, 2))
- 		sm_dprintf("getmxrr(%s, droplocalhost=%d)\n",
-@@ -246,14 +246,24 @@ getmxrr(host, mxhosts, mxprefs, droploca
- 
- 	if (!UseNameServer)
- 		goto punt;
--	if (HasWildcardMX && ConfigLevel >= 6)
--		resfunc = res_query;
--	else
--		resfunc = res_search;
- 
- 	errno = 0;
--	n = (*resfunc)(host, C_IN, T_MX, (unsigned char *) &answer,
-+	if (HasWildcardMX && ConfigLevel >= 6)
-+#if NAMED_RESN
-+		n = res_nquery(&sm_res, host, C_IN, T_MX,
-+		       (unsigned char *) &answer, sizeof(answer));
-+#else
-+		n = res_query(host, C_IN, T_MX, (unsigned char *) &answer,
-+		       sizeof(answer));
-+#endif
-+	else
-+#if NAMED_RESN
-+		n = res_nsearch(&sm_res, host, C_IN, T_MX,
-+		       (unsigned char *) &answer, sizeof(answer));
-+#else
-+		n = res_search(host, C_IN, T_MX, (unsigned char *) &answer,
- 		       sizeof(answer));
-+#endif
- 	if (n < 0)
- 	{
- 		if (tTd(8, 1))
-@@ -337,7 +347,7 @@ getmxrr(host, mxhosts, mxprefs, droploca
- 		GETSHORT(n, cp);	/* rdlength */
+ 	if ((fallbackMX != NULL && (flags & DROPLOCALHOST) != 0 &&
+@@ -743,7 +745,7 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+ # endif
  		if (type != T_MX)
  		{
--			if (tTd(8, 8) || _res.options & RES_DEBUG)
-+			if (tTd(8, 8) || sm_res.options & RES_DEBUG)
- 				sm_dprintf("unexpected answer type %d, size %d\n",
- 					type, n);
- 			cp += n;
-@@ -635,7 +645,7 @@ bestmx_map_lookup(map, name, av, statp)
+-			if ((tTd(8, 8) || _res.options & RES_DEBUG)
++			if ((tTd(8, 8) || sm_res.options & RES_DEBUG)
+ # if DANE
+ 			    && type != T_RRSIG
+ # endif
+@@ -1042,13 +1044,13 @@ punt:
+ 	}
+     done:
+ # if DANE
+-	_res.options = old_options;
++	sm_res.options = old_options;
+ # endif
+ 	return nmx;
+ 
+    error:
+ # if DANE
+-	_res.options = old_options;
++	sm_res.options = old_options;
+ # endif
+ 	return -1;
+ }
+@@ -1118,7 +1120,7 @@ bestmx_map_lookup(map, name, av, statp)
  	int *statp;
  {
  	int nmx;
@@ -80,27 +66,27 @@ $NetBSD: patch-at,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  	int i;
  	ssize_t len = 0;
  	char *result;
-@@ -647,9 +657,9 @@ bestmx_map_lookup(map, name, av, statp)
+@@ -1130,9 +1132,9 @@ bestmx_map_lookup(map, name, av, statp)
  	char buf[PSBUFSIZE / 2];
- #endif /* _FFR_BESTMX_BETTER_TRUNCATION */
+ # endif
  
 -	_res.options &= ~(RES_DNSRCH|RES_DEFNAMES);
 +	sm_res.options &= ~(RES_DNSRCH|RES_DEFNAMES);
- 	nmx = getmxrr(name, mxhosts, NULL, false, statp, false, NULL);
+ 	nmx = getmxrr(name, mxhosts, NULL, 0, statp, NULL, -1);
 -	_res.options = saveopts;
 +	sm_res.options = saveopts;
  	if (nmx <= 0)
  		return NULL;
  	if (bitset(MF_MATCHONLY, map->map_mflags))
-@@ -793,10 +803,15 @@ dns_getcanonname(host, hbsize, trymx, st
+@@ -1282,16 +1284,22 @@ dns_getcanonname(host, hbsize, trymx, st
  	if (tTd(8, 2))
  		sm_dprintf("dns_getcanonname(%s, trymx=%d)\n", host, trymx);
  
 -	if ((_res.options & RES_INIT) == 0 && res_init() == -1)
 -	{
 -		*statp = EX_UNAVAILABLE;
--		return false;
-+	if ((sm_res.options & RES_INIT) == 0)
+-		return HOST_NOTFOUND;
++	if ((sm_res.options & RES_INIT) == 0) {
 +# if NAMED_RESN
 +		memset(&sm_res, 0, sizeof(sm_res));
 +		if (res_ninit(&sm_res) == -1) {
@@ -109,41 +95,53 @@ $NetBSD: patch-at,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
 +# endif
 +			*statp = EX_UNAVAILABLE;
 +			return false;
++		}
  	}
  
+ # if DANE
+-	old_options = _res.options;
++	old_options = sm_res.options;
+ 	if (DANE_SECURE == Dane)
+-		_res.options |= SM_RES_DNSSEC;
++		sm_res.options |= SM_RES_DNSSEC;
+ # endif
+ 
  	*statp = EX_OK;
-@@ -834,7 +849,7 @@ cnameloop:
- 	dp = searchlist;
- 	if (n > 0)
- 		*dp++ = "";
+@@ -1341,7 +1349,7 @@ cnameloop:
+ 		searchlist[sli++] = NameSearchList;
+ 	}
+ # endif
 -	if (n >= 0 && *--cp != '.' && bitset(RES_DNSRCH, _res.options))
 +	if (n >= 0 && *--cp != '.' && bitset(RES_DNSRCH, sm_res.options))
  	{
  		/* make sure there are less than MAXDNSRCH domains */
  		for (domain = RES_DNSRCH_VARIABLE, ret = 0;
-@@ -842,9 +857,9 @@ cnameloop:
+@@ -1349,10 +1357,10 @@ cnameloop:
  		     ret++)
- 			*dp++ = *domain++;
+ 			searchlist[sli++] = *domain++;
  	}
 -	else if (n == 0 && bitset(RES_DEFNAMES, _res.options))
 +	else if (n == 0 && bitset(RES_DEFNAMES, sm_res.options))
  	{
--		*dp++ = _res.defdname;
-+		*dp++ = sm_res.defdname;
+ 		SM_ASSERT(sli < SLSIZE);
+-		searchlist[sli++] = _res.defdname;
++		searchlist[sli++] = sm_res.defdname;
  	}
  	else if (*cp == '.')
  	{
-@@ -879,8 +894,13 @@ cnameloop:
- 				qtype == T_MX ? "MX" :
- 				"???");
- 		errno = 0;
-+# if NAMED_RESN
-+		ret = res_nquerydomain(&sm_res, host, *dp, C_IN, qtype,
-+				      answer.qb2, sizeof(answer.qb2));
-+# else
- 		ret = res_querydomain(host, *dp, C_IN, qtype,
- 				      answer.qb2, sizeof(answer.qb2));
-+# endif
- 		if (ret <= 0)
- 		{
- 			int save_errno = errno;
+@@ -1658,13 +1666,13 @@ nexttype:
+ 	if (ttl > 0 && pttl != NULL)
+ 		*pttl = ttl;
+ # if DANE
+-	_res.options = old_options;
++	sm_res.options = old_options;
+ # endif
+ 	return ad ? HOST_SECURE : HOST_OK;
+ 
+   error:
+ # if DANE
+-	_res.options = old_options;
++	sm_res.options = old_options;
+ # endif
+ 	return HOST_NOTFOUND;
+ }

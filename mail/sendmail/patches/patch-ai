@@ -1,16 +1,16 @@
-$NetBSD: patch-ai,v 1.9 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-ai,v 1.10 2021/07/04 07:57:13 jnemeth Exp $
 
---- sendmail/mci.c.orig	2014-03-06 17:31:31.000000000 +0000
+--- sendmail/mci.c.orig	2020-05-19 19:54:33.000000000 +0000
 +++ sendmail/mci.c
 @@ -20,6 +20,7 @@ SM_RCSID("@(#)$Id: mci.c,v 8.225 2013-11
- #endif /* NETINET || NETINET6 */
+ #endif
  
  #include <dirent.h>
 +#include <limits.h>
- 
- static int	mci_generate_persistent_path __P((const char *, char *,
- 						  int, bool));
-@@ -744,7 +745,11 @@ mci_lock_host_statfile(mci)
+ #if STARTTLS
+ # include <tls.h>
+ #endif
+@@ -788,7 +789,11 @@ mci_lock_host_statfile(mci)
  {
  	int save_errno = errno;
  	int retVal = EX_OK;
