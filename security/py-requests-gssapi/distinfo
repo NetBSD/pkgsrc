@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/04 12:40:40 wiz Exp $
+
+SHA1 (requests-gssapi-1.2.3.tar.gz) = 1d8120ef56f3401da5df2d9e23b96d9adc3e1456
+RMD160 (requests-gssapi-1.2.3.tar.gz) = 1976698494e7991f98aaead1e265d212c6f01378
+SHA512 (requests-gssapi-1.2.3.tar.gz) = 5645785e4d96e935fde73395386f3622b1463e91cafddc07e9b55a990c977b136ccd440cbc190801b966e9c0ec083d2a270f06cb6e4f754093cc7343b0935994
+Size (requests-gssapi-1.2.3.tar.gz) = 19007 bytes
