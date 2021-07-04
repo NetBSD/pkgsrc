@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/05/24 19:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/07/04 07:45:49 wen Exp $
 
-DISTNAME=	Throwable-0.200013
+DISTNAME=	Throwable-1.000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
 
