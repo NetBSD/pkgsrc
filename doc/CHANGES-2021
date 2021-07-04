@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3640 2021/07/04 07:00:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3641 2021/07/04 07:14:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5825,3 +5825,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-activestorage60 to 6.0.4 [taca 2021-07-04]
 	Updated textproc/ruby-actiontext60 to 6.0.4 [taca 2021-07-04]
 	Updated www/ruby-rails60 to 6.0.4 [taca 2021-07-04]
+	Removed x11/gdm [nia 2021-07-04]
