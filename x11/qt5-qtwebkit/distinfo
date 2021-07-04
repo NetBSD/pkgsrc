@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.19 2021/06/23 08:33:03 nia Exp $
+$NetBSD: distinfo,v 1.19.2.1 2021/07/04 18:57:57 bsiegert Exp $
 
 SHA1 (qtwebkit-5.212.0-alpha4.tar.xz) = a2e2840cd751013f6e9fd0d15601d1ea4beb81d5
 RMD160 (qtwebkit-5.212.0-alpha4.tar.xz) = af000947daa429945d80e3c23e5cfd0eb13793be
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
 Size (qtwebkit-5.212.0-alpha4.tar.xz) = 12528508 bytes
-SHA1 (patch-CMakeLists.txt) = 270ad649dcbebe582aeea74cfd0a40e5e73e8330
+SHA1 (patch-CMakeLists.txt) = 6b0d295ed4ec40c6364b0a86c94d19966977f7d7
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = be77c4b19f5f97c12180c1b7d3b72968364f3229
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 8b502d6960e5b52000dd6e67f65c2fbaf6e9d1f2
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 7bbb0a59a0c087abaaddda08fc31aa24809acb70
