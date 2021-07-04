@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/07/04 09:08:24 wen Exp $
 
-DISTNAME=	Sub-Exporter-ForMethods-0.100052
+DISTNAME=	Sub-Exporter-ForMethods-0.100054
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
@@ -12,7 +11,6 @@ COMMENT=	Perl 5 helper routines for using Sub::Exporter to build methods
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Sub-Exporter>=0.978:../../devel/p5-Sub-Exporter
-DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Sub/Exporter/ForMethods/.packlist
