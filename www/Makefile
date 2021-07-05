@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1560 2021/07/03 09:35:09 nia Exp $
+# $NetBSD: Makefile,v 1.1561 2021/07/05 14:27:29 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -133,7 +133,6 @@ SUBDIR+=	go-minify
 SUBDIR+=	go-mux
 SUBDIR+=	go-parse
 SUBDIR+=	go-spritewell
-SUBDIR+=	go-tocss
 SUBDIR+=	goaccess
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
