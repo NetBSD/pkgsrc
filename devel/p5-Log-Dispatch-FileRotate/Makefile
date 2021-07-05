@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/05/24 19:50:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/07/05 07:35:45 wen Exp $
 
-DISTNAME=	Log-Dispatch-FileRotate-1.36
+DISTNAME=	Log-Dispatch-FileRotate-1.38
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
@@ -11,7 +10,7 @@ COMMENT=	Perl5 module to log to files which archive/rotate themselves
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Date-Manip>=5.0:../../devel/p5-Date-Manip
-DEPENDS+=	p5-Log-Dispatch>=2.08:../../devel/p5-Log-Dispatch
+DEPENDS+=	p5-Log-Dispatch>=2.59:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-Params-Validate>=0.15:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Log-Log4perl>=1:../../devel/p5-Log-Log4perl
 # for make test
