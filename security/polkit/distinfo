@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/06/28 12:38:46 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/07/05 13:22:39 nia Exp $
 
 SHA1 (polkit-0.119.tar.gz) = 0794825e31a0a6e4859f93596d3f475b9d08f9e1
 RMD160 (polkit-0.119.tar.gz) = 52d66bd2b80e3a1ca52495fd09e307adbd2360a0
@@ -10,7 +10,7 @@ SHA1 (patch-meson__options.txt) = cb8d920382f3b2dca0d5992abb0adf979a729a1f
 SHA1 (patch-src_polkit_polkitunixprocess.c) = 88818b7b64502f64eade34ad379c07f2b0fd1aea
 SHA1 (patch-src_polkitbackend_Makefile.am) = 3e821914e54ce5d3dc31275cd05d5266a3edc9ba
 SHA1 (patch-src_polkitbackend_meson.build) = 8f4788a5080902eaae949d1c026046d6a3321259
-SHA1 (patch-src_polkitbackend_polkitbackendduktapeauthority.c) = 33cc276888d48422b8239bee5532a9811cca9d21
+SHA1 (patch-src_polkitbackend_polkitbackendduktapeauthority.c) = a80ba55ecd4726f28c02bd0add0a454b7597519a
 SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = dd91b4e74e6c39f24e0f5a9b3150fdac12899cb5
 SHA1 (patch-src_polkitbackend_polkitbackendjsauthority.cpp) = 432a3d7d082ba6e596ba164d91408fc521b84422
 SHA1 (patch-src_polkitbackend_polkitd.c) = b8e11b40e2b171d4f030eb4c4cbc6fdc7a96b2c2
