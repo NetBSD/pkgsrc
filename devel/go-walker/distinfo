@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/10/13 02:33:10 maya Exp $
-
-SHA1 (walker/go-walker-0.1.1.tar.gz) = 97b1499bee82622470549f95a555e13753462bdb
-RMD160 (walker/go-walker-0.1.1.tar.gz) = 1d1d8245ee66a42a846ccaf6057cd48efbf49312
-SHA512 (walker/go-walker-0.1.1.tar.gz) = 2f9c32296487e0da7c28fcac9c85720176b219d840cab4e240aa9a927043976d87eb12bcf22e6425a80623f7e2583f268833c2daf9bc6fbf6b29562b63c77ed5
-Size (walker/go-walker-0.1.1.tar.gz) = 10707 bytes
