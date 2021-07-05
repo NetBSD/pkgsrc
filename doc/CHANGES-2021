@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3676 2021/07/05 07:47:16 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3677 2021/07/05 08:07:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Log-Dispatchouli to 2.023 [wen 2021-07-05]
 	Updated devel/p5-Log-Log4perl to 1.54 [wen 2021-07-05]
 	Updated devel/p5-Log-Report-Optional to 1.07 [wen 2021-07-05]
+	Updated net/gallery-dl to 1.18.1 [leot 2021-07-05]
