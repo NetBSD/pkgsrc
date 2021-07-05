@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/11/24 11:50:06 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/07/05 13:53:18 wen Exp $
 
-SHA1 (Object-Declare-0.24.tar.gz) = 2e934acba77f3b654076eeacca3cb2cfb5d18d6c
-RMD160 (Object-Declare-0.24.tar.gz) = f2405be1c5fde362a34627401e3a32342ee24c47
-SHA512 (Object-Declare-0.24.tar.gz) = c5057af0171fae88aef0eaaf38f823ada03b92692f5a19c5381ebdc571470c7cac4652cc10c16e3579b2dbe1f746121b91a10df7382f0d37172ac127d23de953
-Size (Object-Declare-0.24.tar.gz) = 14394 bytes
+SHA1 (Object-Declare-0.25.tar.gz) = f7f268c1eb03f0e87723205c746177b4745f733d
+RMD160 (Object-Declare-0.25.tar.gz) = 09a4a54a06af05b3e524d2fde59b0493231554f6
+SHA512 (Object-Declare-0.25.tar.gz) = 0c474378b9dc721ef4ed3e80fa31c3668c7d7d3cb24091dca0b35a79d51c836981ea63993bf56af0eb19f67417da5f0bb7acfb48df2f9f84181f9103418cb971
+Size (Object-Declare-0.25.tar.gz) = 15317 bytes
