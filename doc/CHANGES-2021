@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3689 2021/07/05 10:51:52 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3690 2021/07/05 12:02:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5890,3 +5890,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Mixin-Linewise to 0.110 [wen 2021-07-05]
 	Updated devel/p5-Module-ScanDeps to 1.31 [wen 2021-07-05]
 	Updated www/lariza to 21.06 [pin 2021-07-05]
+	Updated devel/py-greenlet to 1.1.0 [adam 2021-07-05]
+	Updated security/py-gssapi to 1.6.14 [adam 2021-07-05]
