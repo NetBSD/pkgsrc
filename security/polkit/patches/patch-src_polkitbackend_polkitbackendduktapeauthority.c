@@ -1,11 +1,11 @@
-$NetBSD: patch-src_polkitbackend_polkitbackendduktapeauthority.c,v 1.1 2021/06/28 12:38:46 nia Exp $
+$NetBSD: patch-src_polkitbackend_polkitbackendduktapeauthority.c,v 1.2 2021/07/05 13:22:39 nia Exp $
 
 Add duktape as javascript engine.
 https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
 
---- src/polkitbackend/polkitbackendduktapeauthority.c.orig	2021-06-28 12:18:53.849178838 +0000
+--- src/polkitbackend/polkitbackendduktapeauthority.c.orig	2021-07-05 13:20:22.211263229 +0000
 +++ src/polkitbackend/polkitbackendduktapeauthority.c
-@@ -0,0 +1,1428 @@
+@@ -0,0 +1,1468 @@
 +/*
 + * Copyright (C) 2008-2012 Red Hat, Inc.
 + * Copyright (C) 2015 Tangent Space <jstpierre@mecheye.net>
@@ -135,6 +135,46 @@ https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
 +static duk_ret_t js_polkit_log (duk_context *cx);
 +static duk_ret_t js_polkit_spawn (duk_context *cx);
 +static duk_ret_t js_polkit_user_is_in_netgroup (duk_context *cx);
++
++#ifdef __sun
++int
++getgrouplist(const char *uname, gid_t agroup, gid_t *groups, int *grpcnt)
++{
++	const struct group *grp;
++	int i, maxgroups, ngroups, ret;
++
++	ret = 0;
++	ngroups = 0;
++	maxgroups = *grpcnt;
++	groups ? groups[ngroups++] = agroup : ngroups++;
++	if (maxgroups > 1)
++		groups ? groups[ngroups++] = agroup : ngroups++;
++	setgrent();
++	while ((grp = getgrent()) != NULL) {
++		if (groups) {
++			for (i = 0; i < ngroups; i++) {
++				if (grp->gr_gid == groups[i])
++					goto skip;
++			}
++		}
++		for (i = 0; grp->gr_mem[i]; i++) {
++			if (!strcmp(grp->gr_mem[i], uname)) {
++				if (ngroups >= maxgroups) {
++					ret = -1;
++					break;
++				}
++				groups ? groups[ngroups++] = grp->gr_gid : ngroups++;
++				break;
++			}
++		}
++skip:
++		;
++	}
++	endgrent();
++	*grpcnt = ngroups;
++	return (ret);
++}
++#endif
 +
 +static const duk_function_list_entry js_polkit_functions[] =
 +{
