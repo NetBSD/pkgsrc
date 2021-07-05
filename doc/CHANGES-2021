@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3672 2021/07/05 07:31:55 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3673 2021/07/05 07:36:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5872,3 +5872,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libopenmpt to 0.5.10 [fcambus 2021-07-05]
 	Updated devel/p5-Log-Agent to 1.005 [wen 2021-07-05]
 	Updated devel/p5-Log-Any to 1.709 [wen 2021-07-05]
+	Updated devel/p5-Log-Dispatch-FileRotate to 1.38 [wen 2021-07-05]
