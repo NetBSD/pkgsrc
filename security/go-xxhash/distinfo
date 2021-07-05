@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/11/06 11:26:49 ng0 Exp $
-
-SHA1 (go-xxhash-2.1.0.tar.gz) = 6d3fd375f297d4509337dbf58c006feae9537084
-RMD160 (go-xxhash-2.1.0.tar.gz) = f3720a3d42e28c2c5a40b89dafe47924e983624e
-SHA512 (go-xxhash-2.1.0.tar.gz) = 6a44b29efe90fda8cdb267d1419673a577e231398480add90e7afb7eab92ecb375c947ce68c2221ed94b1fc7032a497703ec8026bff62386f52d22cac89ae2ab
-Size (go-xxhash-2.1.0.tar.gz) = 9198 bytes
