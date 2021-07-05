@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3445 2021/07/05 14:35:16 nia Exp $
+# $NetBSD: Makefile,v 1.3446 2021/07/05 14:38:09 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -425,7 +425,6 @@ SUBDIR+=	go-golang-lru
 SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
 SUBDIR+=	go-goreturns
-SUBDIR+=	go-gospel
 SUBDIR+=	go-gox
 SUBDIR+=	go-hashstructure
 SUBDIR+=	go-homedir
