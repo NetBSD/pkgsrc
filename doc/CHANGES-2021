@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3691 2021/07/05 13:21:11 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3692 2021/07/05 13:23:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5893,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-greenlet to 1.1.0 [adam 2021-07-05]
 	Updated security/py-gssapi to 1.6.14 [adam 2021-07-05]
 	Updated devel/p5-MooX-File-ConfigDir to 0.008 [wen 2021-07-05]
+	Updated devel/p5-Net-CIDR to 0.21 [wen 2021-07-05]
