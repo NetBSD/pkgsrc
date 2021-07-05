@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3699 2021/07/05 19:09:00 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3700 2021/07/05 20:14:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-humanize to 3.10.0 [adam 2021-07-05]
 	Updated comms/py-rich to 10.5.0 [adam 2021-07-05]
 	Updated geography/libgeotiff to 1.7.0 [gdt 2021-07-05]
+	Updated www/snownews to 1.8 [fcambus 2021-07-05]
