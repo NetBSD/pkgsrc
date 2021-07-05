@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2021/06/24 15:23:42 pin Exp $
+$NetBSD: distinfo,v 1.32 2021/07/05 09:50:34 pin Exp $
 
 SHA1 (ansi-to-tui-0.3.0.crate) = 28b14193dbf25ab8562d7bf5e498f3bae0616475
 RMD160 (ansi-to-tui-0.3.0.crate) = 7e6cc40d0fa74b635fe36dc98aa5ae90fff04be1
@@ -488,10 +488,10 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-SHA1 (xplr-0.14.3.tar.gz) = ce94fa61068f2638d6565961704cfdab630f95a2
-RMD160 (xplr-0.14.3.tar.gz) = bc5a2b273ac0ff8dced2ff4bd3a24420e00e945a
-SHA512 (xplr-0.14.3.tar.gz) = 4ed5a323f935634758b8bc6a6708bdeafdcd4e5ec39d8c99a3c7ea36bd13d1cc359673baa2eff87af0ae1edd3c53bf688a5ee88305c0f1cbad792ed51482c226
-Size (xplr-0.14.3.tar.gz) = 100283 bytes
+SHA1 (xplr-0.14.4.tar.gz) = 695792472cd0206eacb545e8b259c81d15caaea7
+RMD160 (xplr-0.14.4.tar.gz) = a3b9b41f3f883d8901e85614afc4ea626a56191a
+SHA512 (xplr-0.14.4.tar.gz) = 6efcca5c17b83f48b219b83fe5b609ff60a9915c592d275773fa0fed41b6a9397e9f38251b9088d53ffe57c9d62b8945eb9443916df659fb2c31953a7307cc8a
+Size (xplr-0.14.4.tar.gz) = 107474 bytes
 SHA1 (yaml-rust-0.4.5.crate) = de9261ecb0d790e56466b6e1c40371b1050a8650
 RMD160 (yaml-rust-0.4.5.crate) = 2148b0245a840e26646ae4b0c5f394fd8203ad5b
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
