@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3697 2021/07/05 17:25:48 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3698 2021/07/05 19:08:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5910,3 +5910,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-jwalterweatherman [nia 2021-07-05]
 	Updated geography/gdal-lib to 3.3.1 [gdt 2021-07-05]
 	Updated geography/py-gdal to 3.3.1nb1 [gdt 2021-07-05]
+	Updated net/py-dpkt to 1.9.6 [adam 2021-07-05]
+	Updated net/py-zeroconf to 0.32.1 [adam 2021-07-05]
+	Updated textproc/py-humanize to 3.10.0 [adam 2021-07-05]
+	Updated comms/py-rich to 10.5.0 [adam 2021-07-05]
