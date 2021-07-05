@@ -1,3 +1,0 @@
-go-units provides helpful unit multipliers and functions in Go. The
-goal of this package is to have functionality similar to the time
-package.
