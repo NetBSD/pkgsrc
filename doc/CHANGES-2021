@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3693 2021/07/05 13:27:52 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3694 2021/07/05 13:55:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-MooX-File-ConfigDir to 0.008 [wen 2021-07-05]
 	Updated devel/p5-Net-CIDR to 0.21 [wen 2021-07-05]
 	Updated devel/p5-Net-Netmask to 2.0001 [wen 2021-07-05]
+	Updated devel/p5-Object-Declare to 0.25 [wen 2021-07-05]
