@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/07/04 12:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/05 00:45:19 gutteridge Exp $
 
 DISTNAME=	requests-gssapi-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	isc
 
 DEPENDS+=	${PYPKGPREFIX}-gssapi-[0-9]*:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-gssapi
 
 USE_LANGUAGES=	# none
 
