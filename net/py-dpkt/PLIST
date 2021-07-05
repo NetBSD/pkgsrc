@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/29 02:40:24 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/05 19:01:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -181,6 +181,9 @@ ${PYSITELIB}/dpkt/sip.pyo
 ${PYSITELIB}/dpkt/sll.py
 ${PYSITELIB}/dpkt/sll.pyc
 ${PYSITELIB}/dpkt/sll.pyo
+${PYSITELIB}/dpkt/sll2.py
+${PYSITELIB}/dpkt/sll2.pyc
+${PYSITELIB}/dpkt/sll2.pyo
 ${PYSITELIB}/dpkt/smb.py
 ${PYSITELIB}/dpkt/smb.pyc
 ${PYSITELIB}/dpkt/smb.pyo
@@ -217,6 +220,9 @@ ${PYSITELIB}/dpkt/tpkt.pyo
 ${PYSITELIB}/dpkt/udp.py
 ${PYSITELIB}/dpkt/udp.pyc
 ${PYSITELIB}/dpkt/udp.pyo
+${PYSITELIB}/dpkt/utils.py
+${PYSITELIB}/dpkt/utils.pyc
+${PYSITELIB}/dpkt/utils.pyo
 ${PYSITELIB}/dpkt/vrrp.py
 ${PYSITELIB}/dpkt/vrrp.pyc
 ${PYSITELIB}/dpkt/vrrp.pyo
