@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/07/29 06:28:52 wen Exp $
+$NetBSD: distinfo,v 1.11 2021/07/05 13:26:55 wen Exp $
 
-SHA1 (Net-Netmask-1.9104.tar.gz) = 5495f94207a37ad73cff8be5615cef0e2a1bbb66
-RMD160 (Net-Netmask-1.9104.tar.gz) = 290d24c2775183ed00a06b968d2b171a47ba3f26
-SHA512 (Net-Netmask-1.9104.tar.gz) = 4bec48c8ba8b19baaa5cbfc6c17a539a663f3da8899f6dbdfbf455f7c6b8f00f102ff841e47656e83571cc44cec3d2665f5f29c827448b76f9424faafac8d1a3
-Size (Net-Netmask-1.9104.tar.gz) = 41853 bytes
+SHA1 (Net-Netmask-2.0001.tar.gz) = 03e0c75dbcbcf064093203e7a2719ab002ca8c72
+RMD160 (Net-Netmask-2.0001.tar.gz) = 366b16462c82d5ef1174f96e0ba84ec8dee69c1e
+SHA512 (Net-Netmask-2.0001.tar.gz) = 87f4f875dc1f07968a71d558bb02b8443d63601e8414a109ddfdd47c5d8616ed0678ea950426ec646bf3b06035ff1dabf067dafb18cb66291b882b9364c0de0b
+Size (Net-Netmask-2.0001.tar.gz) = 44676 bytes
