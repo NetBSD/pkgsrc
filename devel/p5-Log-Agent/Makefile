@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/05/24 19:50:57 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/07/05 07:27:37 wen Exp $
 
-DISTNAME=	Log-Agent-1.003
+DISTNAME=	Log-Agent-1.005
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 EXTRACT_USING=	gtar
