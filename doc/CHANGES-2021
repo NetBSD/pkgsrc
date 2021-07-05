@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3680 2021/07/05 08:28:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3681 2021/07/05 08:43:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/onefetch to 2.10.2 [pin 2021-07-05]
 	Updated devel/py-setuptools to 57.1.0 [adam 2021-07-05]
 	Updated devel/py-bitarray to 2.2.0 [adam 2021-07-05]
+	Updated x11/rterm to 0.0.4 [pin 2021-07-05]
