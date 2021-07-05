@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3670 2021/07/05 07:22:27 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3671 2021/07/05 07:28:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5870,3 +5870,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-postgis2 to 3.1.3 [gdt 2021-07-04]
 	Added security/py-requests-gssapi version 1.2.3 [wiz 2021-07-04]
 	Updated audio/libopenmpt to 0.5.10 [fcambus 2021-07-05]
+	Updated devel/p5-Log-Agent to 1.005 [wen 2021-07-05]
