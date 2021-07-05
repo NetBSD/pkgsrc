@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2021/05/09 09:00:32 leot Exp $
+@comment $NetBSD: PLIST,v 1.56 2021/07/05 08:07:48 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -252,6 +252,9 @@ ${PYSITELIB}/gallery_dl/extractor/manganelo.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangapark.py
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyo
+${PYSITELIB}/gallery_dl/extractor/mangasee.py
+${PYSITELIB}/gallery_dl/extractor/mangasee.pyc
+${PYSITELIB}/gallery_dl/extractor/mangasee.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangoxo.py
 ${PYSITELIB}/gallery_dl/extractor/mangoxo.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangoxo.pyo
@@ -360,6 +363,9 @@ ${PYSITELIB}/gallery_dl/extractor/sankakucomplex.pyo
 ${PYSITELIB}/gallery_dl/extractor/seiga.py
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyc
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyo
+${PYSITELIB}/gallery_dl/extractor/seisoparty.py
+${PYSITELIB}/gallery_dl/extractor/seisoparty.pyc
+${PYSITELIB}/gallery_dl/extractor/seisoparty.pyo
 ${PYSITELIB}/gallery_dl/extractor/senmanga.py
 ${PYSITELIB}/gallery_dl/extractor/senmanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/senmanga.pyo
