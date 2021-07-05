@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/17 01:11:11 minskim Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/alecthomas/units.a
-gopkg/src/github.com/alecthomas/units/COPYING
-gopkg/src/github.com/alecthomas/units/README.md
-gopkg/src/github.com/alecthomas/units/bytes.go
-gopkg/src/github.com/alecthomas/units/bytes_test.go
-gopkg/src/github.com/alecthomas/units/doc.go
-gopkg/src/github.com/alecthomas/units/si.go
-gopkg/src/github.com/alecthomas/units/util.go
