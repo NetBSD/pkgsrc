@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.12 2021/05/03 16:17:00 gdt Exp $
+# $NetBSD: Makefile.common,v 1.13 2021/07/05 17:25:29 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
 
 # Accomodate testing unreleased versions.
-VERSION_BASE=	3.3.0
+VERSION_BASE=	3.3.1
 #VERSION_RC=	rc1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	gdal-${VERSION}
