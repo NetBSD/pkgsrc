@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3685 2021/07/05 10:23:07 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3686 2021/07/05 10:34:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5886,3 +5886,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/prose version 0.3.1 [pin 2021-07-05]
 	Updated sysutils/xplr to 0.14.4 [pin 2021-07-05]
 	Updated www/p5-Dancer2 to 0.301004 [wen 2021-07-05]
+	Updated devel/p5-Log-Report to 1.32 [wen 2021-07-05]
