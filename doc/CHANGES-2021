@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3695 2021/07/05 14:48:06 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3696 2021/07/05 17:25:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed graphics/go-image [nia 2021-07-05]
 	Removed devel/go-ini [nia 2021-07-05]
 	Removed devel/go-jwalterweatherman [nia 2021-07-05]
+	Updated geography/gdal-lib to 3.3.1 [gdt 2021-07-05]
