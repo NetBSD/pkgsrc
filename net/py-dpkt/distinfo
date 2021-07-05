@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/09/29 02:40:24 khorben Exp $
+$NetBSD: distinfo,v 1.5 2021/07/05 19:01:17 adam Exp $
 
-SHA1 (dpkt-1.9.4.tar.gz) = 021c8596f699f63019c1512f5fc60cb91e780113
-RMD160 (dpkt-1.9.4.tar.gz) = e71ccee2d4063ef672960c3161f3e1e183eb9d89
-SHA512 (dpkt-1.9.4.tar.gz) = 52698c8933f25c5a15b9d871ec5f892e6e515110aaaf6ea4625cd26227b041b959f96c3b17f0e16fab0a3e5a5d2d4ac24fe8b5921b69bd094ff8f9926eb1fb2f
-Size (dpkt-1.9.4.tar.gz) = 147123 bytes
+SHA1 (dpkt-1.9.6.tar.gz) = f0ba8625d58418b67879a355dd9450a447a6a32c
+RMD160 (dpkt-1.9.6.tar.gz) = 7d2f522cfe045a44be5390d584056c14bb8d3bf9
+SHA512 (dpkt-1.9.6.tar.gz) = de7260df24c6e9a4872ecf80f621102ef3ba78cabe66a8c4eaf5f2dd79fdf1c4135fd2614d65c33d0c8d2e505b9dd7e523a0b29f7048e1a24eb9f924ce207b43
+Size (dpkt-1.9.6.tar.gz) = 160693 bytes
