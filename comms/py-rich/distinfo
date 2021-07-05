@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/06/24 09:35:37 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/07/05 19:07:59 adam Exp $
 
-SHA1 (rich-10.4.0.tar.gz) = 67b3d9740793e6b7e2accd0778bdda351a605520
-RMD160 (rich-10.4.0.tar.gz) = 12e97204e1475adf9d0863aea7961c06190e2ebb
-SHA512 (rich-10.4.0.tar.gz) = 1d617d2ce1da71f6af4ca65a7fd0fabda674bc745fb036be339a5e08dda0f454a9b432242f2c83afcfebd0f0fd0058b432e21484fa5e4664510ecd23197f7589
-Size (rich-10.4.0.tar.gz) = 189857 bytes
+SHA1 (rich-10.5.0.tar.gz) = 6b261f6fef8ee271e97e8a2bdcf5f77bcdc04474
+RMD160 (rich-10.5.0.tar.gz) = 7826be89a3e58addb40baa2ca15a85dd2fe05cbb
+SHA512 (rich-10.5.0.tar.gz) = af3d18c4d73e7b0ca36001757fbd1e3bb50bea7afc36d28d2e39ce97033097d9c80879f3947c91f436731b2d3aa35e9444bf6bfcb28e168cfd995c3f821e40e1
+Size (rich-10.5.0.tar.gz) = 191025 bytes
