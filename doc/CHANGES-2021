@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3678 2021/07/05 08:21:22 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3679 2021/07/05 08:23:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5878,3 +5878,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Log-Report-Optional to 1.07 [wen 2021-07-05]
 	Updated net/gallery-dl to 1.18.1 [leot 2021-07-05]
 	Updated www/monolith to 2.6.1 [pin 2021-07-05]
+	Updated devel/py-setuptools to 57.1.0 [adam 2021-07-05]
+	Updated devel/py-bitarray to 2.2.0 [adam 2021-07-05]
