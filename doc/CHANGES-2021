@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3674 2021/07/05 07:40:14 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3675 2021/07/05 07:43:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5874,3 +5874,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Log-Any to 1.709 [wen 2021-07-05]
 	Updated devel/p5-Log-Dispatch-FileRotate to 1.38 [wen 2021-07-05]
 	Updated devel/p5-Log-Dispatchouli to 2.023 [wen 2021-07-05]
+	Updated devel/p5-Log-Log4perl to 1.54 [wen 2021-07-05]
