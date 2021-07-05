@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3694 2021/07/05 13:55:09 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3695 2021/07/05 14:48:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5896,3 +5896,15 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Net-CIDR to 0.21 [wen 2021-07-05]
 	Updated devel/p5-Net-Netmask to 2.0001 [wen 2021-07-05]
 	Updated devel/p5-Object-Declare to 0.25 [wen 2021-07-05]
+	Removed devel/go-tmc [nia 2021-07-05]
+	Removed www/go-tocss [nia 2021-07-05]
+	Removed math/go-units [nia 2021-07-05]
+	Removed devel/go-walker [nia 2021-07-05]
+	Removed devel/go-wordwrap [nia 2021-07-05]
+	Removed security/go-xxhash [nia 2021-07-05]
+	Removed devel/go-gospel [nia 2021-07-05]
+	Removed devel/go-hashstructure [nia 2021-07-05]
+	Removed devel/go-homedir [nia 2021-07-05]
+	Removed graphics/go-image [nia 2021-07-05]
+	Removed devel/go-ini [nia 2021-07-05]
+	Removed devel/go-jwalterweatherman [nia 2021-07-05]
