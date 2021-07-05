@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/03 16:17:00 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/05 17:25:29 gdt Exp $
 bin/gdal2tiles.py
 bin/gdal2xyz.py
 bin/gdal_calc.py
@@ -50,6 +50,8 @@ ${PYSITELIB}/osgeo_utils/__init__.py
 ${PYSITELIB}/osgeo_utils/__init__.pyc
 ${PYSITELIB}/osgeo_utils/auxiliary/__init__.py
 ${PYSITELIB}/osgeo_utils/auxiliary/__init__.pyc
+${PYSITELIB}/osgeo_utils/auxiliary/array_util.py
+${PYSITELIB}/osgeo_utils/auxiliary/array_util.pyc
 ${PYSITELIB}/osgeo_utils/auxiliary/base.py
 ${PYSITELIB}/osgeo_utils/auxiliary/base.pyc
 ${PYSITELIB}/osgeo_utils/auxiliary/batch_creator.py
