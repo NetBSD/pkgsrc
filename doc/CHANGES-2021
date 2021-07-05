@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3698 2021/07/05 19:08:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3699 2021/07/05 19:09:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.32.1 [adam 2021-07-05]
 	Updated textproc/py-humanize to 3.10.0 [adam 2021-07-05]
 	Updated comms/py-rich to 10.5.0 [adam 2021-07-05]
+	Updated geography/libgeotiff to 1.7.0 [gdt 2021-07-05]
