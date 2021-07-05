@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3688 2021/07/05 10:42:23 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3689 2021/07/05 10:51:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5889,3 +5889,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Log-Report to 1.32 [wen 2021-07-05]
 	Updated devel/p5-Mixin-Linewise to 0.110 [wen 2021-07-05]
 	Updated devel/p5-Module-ScanDeps to 1.31 [wen 2021-07-05]
+	Updated www/lariza to 21.06 [pin 2021-07-05]
