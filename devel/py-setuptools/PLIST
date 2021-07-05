@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2021/06/24 17:19:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2021/07/05 08:21:54 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -423,9 +423,6 @@ ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
 ${PYSITELIB}/setuptools/script (dev).tmpl
 ${PYSITELIB}/setuptools/script.tmpl
-${PYSITELIB}/setuptools/ssl_support.py
-${PYSITELIB}/setuptools/ssl_support.pyc
-${PYSITELIB}/setuptools/ssl_support.pyo
 ${PYSITELIB}/setuptools/unicode_utils.py
 ${PYSITELIB}/setuptools/unicode_utils.pyc
 ${PYSITELIB}/setuptools/unicode_utils.pyo
