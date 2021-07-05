@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20845 2021/07/04 10:06:33 wiz Exp $
+$NetBSD: TODO,v 1.20846 2021/07/05 14:48:05 nia Exp $
 
 Suggested new packages
 ======================
@@ -916,11 +916,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-godotenv-1.3.0
 	o go-goldmark-1.3.5
 	o go-grpc-1.37.0
-	o go-hashstructure-2.0.1
-	o go-homedir-1.1.0
 	o go-i18n-2.1.2
 	o go-imaging-1.6.2
-	o go-ini-1.62.0
 	o go-isatty-0.0.12
 	o go-kr-pretty-0.2.1
 	o go-ldap-3.3.0
@@ -942,14 +939,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-testify-1.7.0
 	o go-text-0.3.6
 	o go-textseg-13.0.0
-	o go-tocss-0.6.0
 	o go-toml-pelletier-1.9.0
 	o go-viper-1.7.1
-	o go-walker-0.1.2
 	o go-webhooks-5.17.0
 	o go-websocket-1.4.2
-	o go-wordwrap-1.0.1
-	o go-xxhash-2.1.1
 	o go-xz-0.5.10
 	o gobby-0.6.0
 	o gok-2.30.1
