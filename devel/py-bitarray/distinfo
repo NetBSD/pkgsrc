@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/06/14 09:05:47 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/07/05 08:22:44 adam Exp $
 
-SHA1 (bitarray-2.1.2.tar.gz) = 091c8d3a2b3b7a18ab1ea255326115f6122492a4
-RMD160 (bitarray-2.1.2.tar.gz) = 5c00d0832d4834b7317f145280f38c5a6d04755a
-SHA512 (bitarray-2.1.2.tar.gz) = 1db9d54a2721741732cf6d455b36d3fdeb550a3a6370e14d794c2d67a1a0d39ca6ddc8db939ec391b33dc86962db51cc4291d8d04db878758fdb411fff377819
-Size (bitarray-2.1.2.tar.gz) = 72530 bytes
+SHA1 (bitarray-2.2.0.tar.gz) = 15a872f5d38089e35ce33cb0527a5a48e2e19791
+RMD160 (bitarray-2.2.0.tar.gz) = 3db3c24c704c52acd06dae8e9629ebe4f2a90d4d
+SHA512 (bitarray-2.2.0.tar.gz) = 74d7f05a9d03adf660f17883782eb1f2bbd08922c3f6a9a7a44eb86cfb29ab8e3b7c2aa7acc27656d04713396e956771b3f9b429630b74f0dc39a6bad869fe25
+Size (bitarray-2.2.0.tar.gz) = 75776 bytes
