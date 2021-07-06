@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3729 2021/07/06 13:15:12 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3730 2021/07/06 13:19:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5947,3 +5947,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-CheckOS to 1.87 [wen 2021-07-06]
 	Updated devel/p5-Devel-Hide to 0.0014 [wen 2021-07-06]
 	Updated devel/p5-Devel-NYTProf to 6.10 [wen 2021-07-06]
+	Updated devel/p5-Clone-PP to 1.08 [wen 2021-07-06]
