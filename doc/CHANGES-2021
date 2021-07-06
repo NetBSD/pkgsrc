@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3725 2021/07/06 12:40:00 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3726 2021/07/06 12:46:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/qrrs to 0.1.7 [pin 2021-07-06]
 	Updated net/go-websocket to 1.4.2 [nia 2021-07-06]
 	Updated devel/p5-Data-Printer to 1.000004 [wen 2021-07-06]
+	Updated devel/p5-Data-Validate-IP to 0.30 [wen 2021-07-06]
