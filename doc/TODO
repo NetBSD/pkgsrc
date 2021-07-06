@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20850 2021/07/06 12:09:39 nia Exp $
+$NetBSD: TODO,v 1.20851 2021/07/06 13:19:49 wen Exp $
 
 Suggested new packages
 ======================
@@ -1557,7 +1557,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Class-Measure-0.09
 	o p5-Clipboard-0.28
-	o p5-Clone-PP-1.08
 	o p5-Config-MVP-2.200012
 	o p5-Convert-Binary-C-0.84
 	o p5-Convert-Color-1.000001
