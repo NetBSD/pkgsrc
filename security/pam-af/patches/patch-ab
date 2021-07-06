@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2012/04/07 01:53:18 obache Exp $
+$NetBSD: patch-ab,v 1.5 2021/07/06 20:01:17 rhialto Exp $
 
 * LOG_AUTHPRIV is not in Solaris, use LOG_AUTH instead.
 * Allow to build with non-native PAM on *BSD.
+* Hacky workaround for http://gnats.netbsd.org/39313
 
 --- pam_af.c.orig	2011-08-24 07:53:32.000000000 +0000
 +++ pam_af.c
@@ -15,11 +16,12 @@ $NetBSD: patch-ab,v 1.4 2012/04/07 01:53:18 obache Exp $
  #include <assert.h>
  #include <ndbm.h>
  
-@@ -444,6 +447,6 @@ pam_sm_setcred(pamh, flags, argc, argv)
+@@ -444,6 +447,7 @@ pam_sm_setcred(pamh, flags, argc, argv)
  	PAM_RETURN(PAM_SUCCESS);
  }
  
 -#ifdef _USE_MODULE_ENTRY_
 +#ifdef PAM_MODULE_ENTRY
++#define static
  PAM_MODULE_ENTRY("pam_af");
  #endif
