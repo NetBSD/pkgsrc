@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/06 17:18:31 schmonz Exp $
+bin/lazygit
