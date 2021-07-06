@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3710 2021/07/06 03:39:54 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3711 2021/07/06 05:58:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5926,3 +5926,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/p5-LaTeX-Driver to 1.2.0 [wen 2021-07-06]
 	Updated security/p5-Digest-CRC to 0.23 [wen 2021-07-06]
 	Updated security/p5-IO-Socket-SSL to 2.071 [wen 2021-07-06]
+	Updated www/py-asgiref to 3.4.1 [adam 2021-07-06]
+	Updated www/py-django3 to 3.2.5 [adam 2021-07-06]
