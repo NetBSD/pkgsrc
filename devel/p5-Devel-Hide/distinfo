@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/02/22 14:14:59 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/07/06 12:52:27 wen Exp $
 
-SHA1 (Devel-Hide-0.0013.tar.gz) = 92c56e0e5d51bb44da213a521cd7b07b7f4d6dcc
-RMD160 (Devel-Hide-0.0013.tar.gz) = b2aa950c3d63724b32b48a3fc5f6310cd358d04b
-SHA512 (Devel-Hide-0.0013.tar.gz) = acaa190dcc046ddc6c5bfb300ab2042b87bc43e67d1766cde07a83380ea3989461cec9527e0f7c1881ae7e9ac4aeb75b6255cdda287c280dabb2d5b7b9b785d6
-Size (Devel-Hide-0.0013.tar.gz) = 9787 bytes
+SHA1 (Devel-Hide-0.0014.tar.gz) = 0352998adf4fc5da5a5823f0b4f3380464f174e8
+RMD160 (Devel-Hide-0.0014.tar.gz) = 0b79bfcea388fa2e436d6beb0f136217b963f8e3
+SHA512 (Devel-Hide-0.0014.tar.gz) = 395d2c9ca4090398f31a50fe4970b6c4349424c11eaac407c5d2860bdf95c7d00844be9333bd62671baa82e668f6589c5bf61e7da7f99a2a03385e2dfc23cd78
+Size (Devel-Hide-0.0014.tar.gz) = 10036 bytes
