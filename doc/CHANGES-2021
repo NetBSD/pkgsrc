@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3730 2021/07/06 13:19:48 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3731 2021/07/06 17:19:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-Hide to 0.0014 [wen 2021-07-06]
 	Updated devel/p5-Devel-NYTProf to 6.10 [wen 2021-07-06]
 	Updated devel/p5-Clone-PP to 1.08 [wen 2021-07-06]
+	Added devel/lazygit version 0.28.2 [schmonz 2021-07-06]
