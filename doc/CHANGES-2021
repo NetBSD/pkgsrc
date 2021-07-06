@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3704 2021/07/06 01:50:33 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3705 2021/07/06 01:53:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5920,3 +5920,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Crypt-JWT to 0.033 [wen 2021-07-05]
 	Updated textproc/split-thai to 2.4 [scole 2021-07-05]
 	Updated security/p5-Crypt-Random to 1.54 [wen 2021-07-06]
+	Updated security/p5-Crypt-RandPasswd to 0.07 [wen 2021-07-06]
