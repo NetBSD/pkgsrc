@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.161 2021/06/11 15:09:51 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.162 2021/07/06 16:57:09 schmonz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1411,6 +1411,29 @@ pre-configure:
       <!-- XXX: describe PKG_JVM_DEFAULT and PKG_JVMS_ACCEPTED, but
 	   not here -->
     </itemizedlist>
+  </sect2>
+
+  <sect2 id="go-programming-language">
+    <title>Go</title>
+
+    <para>If a program is written in Go and has any dependencies on
+    other Go modules, have the package include
+    <filename>../../lang/go/go-module.mk</filename>.</para>
+
+
+    <orderedlist>
+      <listitem><para>Generate a list of those dependencies with
+      <command>make clean && make patch && make show-go-modules >
+      go-modules.mk</command>.</para></listitem>
+
+      <listitem><para>Prepend <programlisting>.include
+      "go-modules.mk"</programlisting> to any other
+      <programlisting>.include</programlisting>s.</para></listitem>
+
+      <listitem><para>Incorporate these modules in
+      <filename>distinfo</filename> with <command>make
+      makesum</command>.</para></listitem>
+    </orderedlist>
   </sect2>
 
   <sect2 id="perl-scripts">
