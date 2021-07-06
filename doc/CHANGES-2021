@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3733 2021/07/06 19:50:49 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.3734 2021/07/06 22:41:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5951,3 +5951,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/lazygit version 0.28.2 [schmonz 2021-07-06]
 	Updated www/hugo to 0.85.0 [bsiegert 2021-07-06]
 	Updated x11/qt5-qtbase to 5.15.2nb6 [rhialto 2021-07-06]
+	Updated ham/chirp to 20210706 [gdt 2021-07-06]
