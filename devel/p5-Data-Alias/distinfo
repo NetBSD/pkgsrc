@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/12/30 13:22:19 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/07/06 08:16:20 wen Exp $
 
-SHA1 (Data-Alias-1.21.tar.gz) = e267ade7ccba11b552408f294719c42f24545cbc
-RMD160 (Data-Alias-1.21.tar.gz) = cd8a5e02ea451ad582cff27feb93165f4c202070
-SHA512 (Data-Alias-1.21.tar.gz) = 19714402da3b0930c23407872d8122fb3f45a4d4a974a8afd4c4edf4d452748529619bfed3be592daa511f91e145084d177383937ef17dfc7c3a3b87512b5831
-Size (Data-Alias-1.21.tar.gz) = 64332 bytes
+SHA1 (Data-Alias-1.25.tar.gz) = 33fedc1b00aed60368a8ce05faa0c4b67eb38b15
+RMD160 (Data-Alias-1.25.tar.gz) = 876577c6f7ae0dda4b8bb1cd57c477bdfa786e7d
+SHA512 (Data-Alias-1.25.tar.gz) = aa6b98fa5fb46a9f0b9281a2451a52cda151be8090b84c6c696d4e7bb9c42685ceb4dac69711026975c27ffac7b64eb489b512d6704c01cfe4f15b6e4189e286
+Size (Data-Alias-1.25.tar.gz) = 56288 bytes
