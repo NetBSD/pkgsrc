@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/13 15:28:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/07/06 22:40:54 gdt Exp $
 @pkgdir share/chirp/images
 bin/chirpw
 bin/rpttool
@@ -75,6 +75,9 @@ ${PYSITELIB}/chirp/drivers/baofeng_wp970i.pyo
 ${PYSITELIB}/chirp/drivers/bf-t1.py
 ${PYSITELIB}/chirp/drivers/bf-t1.pyc
 ${PYSITELIB}/chirp/drivers/bf-t1.pyo
+${PYSITELIB}/chirp/drivers/bf-t8.py
+${PYSITELIB}/chirp/drivers/bf-t8.pyc
+${PYSITELIB}/chirp/drivers/bf-t8.pyo
 ${PYSITELIB}/chirp/drivers/bj9900.py
 ${PYSITELIB}/chirp/drivers/bj9900.pyc
 ${PYSITELIB}/chirp/drivers/bj9900.pyo
@@ -327,6 +330,12 @@ ${PYSITELIB}/chirp/drivers/retevis_rt23.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt26.py
 ${PYSITELIB}/chirp/drivers/retevis_rt26.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt26.pyo
+${PYSITELIB}/chirp/drivers/retevis_rt76p.py
+${PYSITELIB}/chirp/drivers/retevis_rt76p.pyc
+${PYSITELIB}/chirp/drivers/retevis_rt76p.pyo
+${PYSITELIB}/chirp/drivers/retevis_rt98.py
+${PYSITELIB}/chirp/drivers/retevis_rt98.pyc
+${PYSITELIB}/chirp/drivers/retevis_rt98.pyo
 ${PYSITELIB}/chirp/drivers/rfinder.py
 ${PYSITELIB}/chirp/drivers/rfinder.pyc
 ${PYSITELIB}/chirp/drivers/rfinder.pyo
