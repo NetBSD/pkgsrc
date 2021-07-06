@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3711 2021/07/06 05:58:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3712 2021/07/06 07:06:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5928,3 +5928,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-IO-Socket-SSL to 2.071 [wen 2021-07-06]
 	Updated www/py-asgiref to 3.4.1 [adam 2021-07-06]
 	Updated www/py-django3 to 3.2.5 [adam 2021-07-06]
+	Updated lang/nodejs12 to 12.22.3 [adam 2021-07-06]
+	Updated lang/nodejs to 14.17.3 [adam 2021-07-06]
