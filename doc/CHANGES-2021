@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3707 2021/07/06 02:08:48 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3708 2021/07/06 03:30:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5923,3 +5923,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Crypt-RandPasswd to 0.07 [wen 2021-07-06]
 	Updated security/p5-Crypt-X509 to 0.54 [wen 2021-07-06]
 	Updated security/p5-CryptX to 0.072 [wen 2021-07-06]
+	Updated print/p5-LaTeX-Driver to 1.2.0 [wen 2021-07-06]
