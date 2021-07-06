@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.198 2021/06/24 09:29:21 adam Exp $
+$NetBSD: distinfo,v 1.199 2021/07/06 07:05:39 adam Exp $
 
-SHA1 (node-v14.17.1.tar.xz) = c96b0ccc7b69dec45599c7614099079d87035794
-RMD160 (node-v14.17.1.tar.xz) = e46ea519532f7e4486389290d9a9d8926c2b37fd
-SHA512 (node-v14.17.1.tar.xz) = 354f9f215a4915ca3dbccdbb90c14fb8bfb8b0ed8ece4f95106d7b068affdeab65a79db0beb2c7d6af03dc15567edc5250629deedd38a9de7d581f76716315f8
-Size (node-v14.17.1.tar.xz) = 33580416 bytes
+SHA1 (node-v14.17.3.tar.xz) = 248ddc0f050c7fc1396f2d2e83a503a64b4e0eaa
+RMD160 (node-v14.17.3.tar.xz) = 5f392a980922dfab4b608ab010bea572e07885b8
+SHA512 (node-v14.17.3.tar.xz) = c6096715299f155b96df873976da91e854da7e99cde635cdb65d5c962abc5283dac86b8ddce4f5a9f7498f9793ff08943645b5e5b0b23395dfe035f7295218bb
+Size (node-v14.17.3.tar.xz) = 33585080 bytes
 SHA1 (patch-common.gypi) = f0bd2962bf7c8466db24b35a35154897ecad6316
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
@@ -16,11 +16,9 @@ SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c6
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
 SHA1 (patch-deps_v8_src_compiler_types.h) = 2a212282ab9d71e98ae56827fdb1d9778a6047a5
-SHA1 (patch-deps_v8_src_objects_js-list-format.cc) = b1acf2f9890f04aba58f82012528f9a425751896
 SHA1 (patch-deps_v8_src_zone_zone.h) = 651b49d242dac8f713cccc101147ccf61f828ecb
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
-SHA1 (patch-src_cares__wrap.h) = 6eeb5397daaa1255a09f7e36cfd1724c395bd4b2
 SHA1 (patch-src_inspector__agent.cc) = 2ec2a7be459648700488096f467a4ae6af5a9d91
 SHA1 (patch-src_node__postmortem__metadata.cc) = 9938482d724ad6636af5dc3fa719ec26ed8539ff
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = 34d4f113d85b4502bc8240fac50dc37554ab4ebb
