@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3722 2021/07/06 08:42:35 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3723 2021/07/06 08:52:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5940,3 +5940,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Data-ObjectDriver to 0.21 [wen 2021-07-06]
 	Updated devel/p5-Data-OptList to 0.112 [wen 2021-07-06]
 	Updated devel/p5-Data-Peek to 0.50 [wen 2021-07-06]
+	Updated graphics/qrrs to 0.1.7 [pin 2021-07-06]
