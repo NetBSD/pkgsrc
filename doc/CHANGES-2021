@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3715 2021/07/06 08:03:39 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3716 2021/07/06 08:17:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5933,3 +5933,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-Net-DNS-SEC to 1.18 [wen 2021-07-06]
 	Updated security/p5-Net-OpenSSH to 0.80 [wen 2021-07-06]
 	Updated security/p5-String-Random to 0.31 [wen 2021-07-06]
+	Updated devel/p5-Data-Alias to 1.25 [wen 2021-07-06]
