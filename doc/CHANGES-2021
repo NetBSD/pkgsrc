@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3713 2021/07/06 07:53:56 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3714 2021/07/06 07:56:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5931,3 +5931,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs12 to 12.22.3 [adam 2021-07-06]
 	Updated lang/nodejs to 14.17.3 [adam 2021-07-06]
 	Updated security/p5-Net-DNS-SEC to 1.18 [wen 2021-07-06]
+	Updated security/p5-Net-OpenSSH to 0.80 [wen 2021-07-06]
