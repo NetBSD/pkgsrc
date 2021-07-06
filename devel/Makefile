@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3450 2021/07/05 14:43:49 nia Exp $
+# $NetBSD: Makefile,v 1.3451 2021/07/06 17:19:04 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -688,6 +688,7 @@ SUBDIR+=	kservice
 SUBDIR+=	ktexteditor
 SUBDIR+=	kwayland
 SUBDIR+=	kyua
+SUBDIR+=	lazygit
 SUBDIR+=	lcc
 SUBDIR+=	lcdis
 SUBDIR+=	lcov
