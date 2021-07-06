@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/06/06 12:18:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2021/07/06 12:09:23 nia Exp $
 
-DISTNAME=	websocket-1.0.0
+DISTNAME=	websocket-1.4.2
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	29
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gorilla/}
 CATEGORIES=	net
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,11 +9,8 @@ GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gorilla/websocket
-COMMENT=	WebSocket implementation for Go
+COMMENT=	Go implementation of the WebSocket protocol
 LICENSE=	2-clause-bsd
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/gorilla/websocket
-
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
