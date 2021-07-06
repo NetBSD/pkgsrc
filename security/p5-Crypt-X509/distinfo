@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/07 13:54:48 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/07/06 01:58:24 wen Exp $
 
-SHA1 (Crypt-X509-0.53.tar.gz) = 807ff6f4f66a1f2973feb5a1b476a2bae2b9a405
-RMD160 (Crypt-X509-0.53.tar.gz) = 74b5f67e579da6569957f58d66edf7767f004ef6
-SHA512 (Crypt-X509-0.53.tar.gz) = 316c6147ddcc2ee1e11f951a8c62a14ce723fc2ca6402f141cd1972828f94a3d5ceab29d57b2bca75925261410ca4cc37ee83ca8e158fa66da2ab0ebd29ced0c
-Size (Crypt-X509-0.53.tar.gz) = 22811 bytes
+SHA1 (Crypt-X509-0.54.tar.gz) = 00112a848c8694cebcb2b0491d50b6c5ced47bbe
+RMD160 (Crypt-X509-0.54.tar.gz) = b959e3404ff309a636e77fb8ff6200889e3b317f
+SHA512 (Crypt-X509-0.54.tar.gz) = df5b155322432e0a9cae2a9ef2408a2692891f1ccb8ca438d38a4671a16df367c860ed549eb307342a5e74b88ea75a4e78386f86092ee87f5b897c11987ee771
+Size (Crypt-X509-0.54.tar.gz) = 23235 bytes
