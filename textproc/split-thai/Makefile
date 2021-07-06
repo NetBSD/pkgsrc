@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2021/05/24 19:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/07/06 01:42:17 scole Exp $
 
-ST_VERSION=	2.3
+ST_VERSION=	2.4
 PKGNAME=	split-thai-${ST_VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	scole@NetBSD.org
@@ -56,7 +55,7 @@ pre-build:
 	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
 		--eval='(setq pthai-bootstrap t)' \
 		--eval='(load-file "pthai.el")' \
-		--eval='(pthai-twt-table-save "thai-word-dict")'
+		--eval='(pthai-twt-save "thai-word-dict")'
 	cp ${WRKDIR}/thaidict-${GITHUB_ICU_TAG}.txt ${WRKSRC}/icu-dict
 	cd ${PREFIX}/share/swath && \
 		${UTF8_ENV} trietool swathdic list | \
