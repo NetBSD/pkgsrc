@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3717 2021/07/06 08:21:22 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3718 2021/07/06 08:26:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5935,3 +5935,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-String-Random to 0.31 [wen 2021-07-06]
 	Updated devel/p5-Data-Alias to 1.25 [wen 2021-07-06]
 	Updated devel/p5-Data-Dump to 1.25 [wen 2021-07-06]
+	Updated devel/p5-Data-Dumper to 2.183 [wen 2021-07-06]
