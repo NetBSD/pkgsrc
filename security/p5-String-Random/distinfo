@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/06/01 07:14:45 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/07/06 08:02:41 wen Exp $
 
-SHA1 (String-Random-0.30.tar.gz) = 051dbaa14e6170fecfa813a600468cbcc93ef9fa
-RMD160 (String-Random-0.30.tar.gz) = e1decc981951b1604b2e1e8230f0b69da10e0d58
-SHA512 (String-Random-0.30.tar.gz) = 1c520d124f2937c86970aa29c4189ba420fb936509bf067de2bbf7fac232b94ef7d7307f3c96b3eea3ecd2a11e8da92fd0d700288c431d87c3869127a1e17b7e
-Size (String-Random-0.30.tar.gz) = 23589 bytes
+SHA1 (String-Random-0.31.tar.gz) = 6455ef6fb8c3329a67843108df34a2902323c4de
+RMD160 (String-Random-0.31.tar.gz) = 8eece5dde6d88371f0ebe6c5a0fb2090570c716b
+SHA512 (String-Random-0.31.tar.gz) = 6430fee321ff92142bd24df02145984979cdae2f6cd21c4570fc2ea498b1f308080b25b576cc62dff5d07a7dcb6c61e2108badbe93d41989d6ea92a13ceae6a2
+Size (String-Random-0.31.tar.gz) = 23558 bytes
