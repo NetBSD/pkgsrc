@@ -14,7 +14,7 @@ QMAKE_COMPILER_DEFINES += TARGET_OS_MAC
 
 include(../common/gcc-base-mac.conf)
 include(../common/g++-unix.conf)
-include(../common/unix.conf)
+include(../common/bsd/bsd.conf)
 
 QMAKE_COMPILER		= @CC@
 
