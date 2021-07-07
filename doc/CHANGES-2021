@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3735 2021/07/07 00:26:58 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3736 2021/07/07 05:59:39 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/qt5-qtbase to 5.15.2nb6 [rhialto 2021-07-06]
 	Updated ham/chirp to 20210706 [gdt 2021-07-06]
 	Updated geography/qgis to 3.16.8 [gdt 2021-07-07]
+	Updated devel/gettext-tools to 0.21nb3 [rin 2021-07-07]
