@@ -1,5 +1,0 @@
-Quicktest provides a collection of Go helpers for writing tests.
-
-The library provides some base checkers like Equals, DeepEquals,
-Matches, ErrorMatches, IsNil and others. More can be added by
-implementing the Checker interface.
