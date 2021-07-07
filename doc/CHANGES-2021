@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3738 2021/07/07 07:33:41 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3739 2021/07/07 07:47:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5956,3 +5956,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gettext-tools to 0.21nb3 [rin 2021-07-07]
 	Updated mail/p5-Email-Abstract to 3.009 [wen 2021-07-07]
 	Updated mail/p5-Email-MIME-ContentType to 1.026 [wen 2021-07-07]
+	Updated mail/p5-Email-Sender to 2.500 [wen 2021-07-07]
