@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/04/25 23:49:20 nikita Exp $
-
-SHA1 (goldmark-1.1.30.tar.gz) = fd359cf605ab77466204c97d6d541fe2036f8c69
-RMD160 (goldmark-1.1.30.tar.gz) = d6cb209d6835d00661f4c7693d8fb78c3d00d6ee
-SHA512 (goldmark-1.1.30.tar.gz) = 2b3010eafc0daf4e2fe27b0bea38eff38025c145db1806324e341224b31e494c10ffd167d89b4cf02fff120d4b9507e3afe69ea1e218c8fc1e74d16490479357
-Size (goldmark-1.1.30.tar.gz) = 225425 bytes
