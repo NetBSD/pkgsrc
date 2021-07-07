@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3743 2021/07/07 08:11:58 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3744 2021/07/07 08:17:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5961,3 +5961,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/p5-Mail-IMAPClient to 3.43 [wen 2021-07-07]
 	Updated mail/p5-Mail-Message to 3.010 [wen 2021-07-07]
 	Updated mail/p5-MIME-Lite to 3.033 [wen 2021-07-07]
+	Updated mail/p5-MIME-Types to 2.21 [wen 2021-07-07]
