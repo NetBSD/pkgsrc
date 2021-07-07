@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/11/06 13:40:23 ng0 Exp $
-
-SHA1 (go-spew-1.1.1.tar.gz) = cd32904655193c5a09ed27d7918c0c1db07130c6
-RMD160 (go-spew-1.1.1.tar.gz) = a374263b7f7081ef8dd0bf17fd367ab1b108f2a3
-SHA512 (go-spew-1.1.1.tar.gz) = b00621d2f11c4cc858e69fda3e6975f910deb375c4f2305a45b230e2d9be73f183db5d2ce4f5e30a14b27e11e79380233ee68fceeef0d855c64fca966e68111e
-Size (go-spew-1.1.1.tar.gz) = 42152 bytes
