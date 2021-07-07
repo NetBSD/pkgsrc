@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1240 2021/07/07 13:05:52 nia Exp $
+# $NetBSD: Makefile,v 1.1241 2021/07/07 13:15:17 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -233,7 +233,7 @@ SUBDIR+=	git-delta
 SUBDIR+=	glimpse
 SUBDIR+=	gnome-dictionary
 SUBDIR+=	gnome-doc-utils
-SUBDIR+=	Go-diff
+SUBDIR+=	go-diff
 SUBDIR+=	go-glob
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-md2man
