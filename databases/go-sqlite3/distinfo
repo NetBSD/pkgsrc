@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/11/10 14:42:43 ng0 Exp $
-
-SHA1 (go-sqlite3-1.11.0.tar.gz) = 01b77fa14f0ba2b94bbf51fb72f48695ad4afc75
-RMD160 (go-sqlite3-1.11.0.tar.gz) = b18750ee5c89ebc7627eb4b848811b042f460ec7
-SHA512 (go-sqlite3-1.11.0.tar.gz) = 91c31fd06c61a28f1aa0ecd96a199c679979e37722ca8ea9f846e6090408580af0b89670434eadbca69428ff8727446e97eb052893aa632ef2c096abb51db089
-Size (go-sqlite3-1.11.0.tar.gz) = 2278788 bytes
