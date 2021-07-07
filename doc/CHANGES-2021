@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3736 2021/07/07 05:59:39 rin Exp $
+$NetBSD: CHANGES-2021,v 1.3737 2021/07/07 07:30:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5954,3 +5954,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/chirp to 20210706 [gdt 2021-07-06]
 	Updated geography/qgis to 3.16.8 [gdt 2021-07-07]
 	Updated devel/gettext-tools to 0.21nb3 [rin 2021-07-07]
+	Updated mail/p5-Email-Abstract to 3.009 [wen 2021-07-07]
