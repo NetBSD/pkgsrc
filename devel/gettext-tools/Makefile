@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2021/05/07 13:01:58 rin Exp $
+# $NetBSD: Makefile,v 1.43 2021/07/07 05:57:30 rin Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
 COMMENT=	Tools for providing messages in different languages
-PKGREVISION=	2
+PKGREVISION=	3
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
