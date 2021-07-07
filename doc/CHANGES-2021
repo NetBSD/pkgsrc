@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3752 2021/07/07 15:24:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3753 2021/07/07 16:12:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5991,3 +5991,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ruby26 to 2.6.8 [taca 2021-07-07]
 	Updated lang/ruby27-base to 2.7.4 [taca 2021-07-07]
 	Updated lang/ruby27 to 2.7.4 [taca 2021-07-07]
+	Updated lang/ruby30-base to 3.0.2 [taca 2021-07-07]
+	Updated lang/ruby30 to 3.0.2 [taca 2021-07-07]
