@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3748 2021/07/07 09:53:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3749 2021/07/07 10:12:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5968,3 +5968,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unrar to 6.0.7 [adam 2021-07-07]
 	Updated graphics/py-Pillow to 8.3.1 [adam 2021-07-07]
 	Updated www/py-httpx-socks to 0.4.1 [adam 2021-07-07]
+	Updated net/rabbitmq to 3.8.19 [adam 2021-07-07]
+	Updated devel/py-xdis to 5.0.11 [adam 2021-07-07]
