@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2021/05/24 19:52:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/07/07 07:51:08 wen Exp $
 #
 
-DISTNAME=	Mail-DeliveryStatus-BounceParser-1.542
+DISTNAME=	Mail-DeliveryStatus-BounceParser-1.543
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://metacpan.org/pod/release/RJBS/Mail-DeliveryStatus-BounceParser-1.540/lib/Mail/DeliveryStatus/BounceParser.pm
+HOMEPAGE=	https://metacpan.org/dist/Mail-DeliveryStatus-BounceParser
 COMMENT=	Perl extension to analyze bounce messages
 LICENSE=	${PERL5_LICENSE}
 
