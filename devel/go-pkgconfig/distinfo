@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/04/28 13:28:04 nikita Exp $
-
-SHA1 (go-pkgconfig-0.0.0.20170226-cea12a0fd2454f031cbce19aec911c1e92af25da.tar.gz) = b897df36b9ecee717d33ae74da0c7e3740a898e1
-RMD160 (go-pkgconfig-0.0.0.20170226-cea12a0fd2454f031cbce19aec911c1e92af25da.tar.gz) = 9a5d416d6570650839bde3f85b81acebfc11aba5
-SHA512 (go-pkgconfig-0.0.0.20170226-cea12a0fd2454f031cbce19aec911c1e92af25da.tar.gz) = 6e96c8480fafd3591f1d3486e39b49db59ce26e8b55443192e2a8ee756fee342797d3656b1ad3c97241258f0b7764e24ca7013c094805fb175a94cb893bdaa3a
-Size (go-pkgconfig-0.0.0.20170226-cea12a0fd2454f031cbce19aec911c1e92af25da.tar.gz) = 5711 bytes
