@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3747 2021/07/07 08:50:29 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3748 2021/07/07 09:53:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5966,3 +5966,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-WWW-Shorten to 3.094 [wen 2021-07-07]
 	Updated www/nginx-devel to 1.21.1 [adam 2021-07-07]
 	Updated archivers/unrar to 6.0.7 [adam 2021-07-07]
+	Updated graphics/py-Pillow to 8.3.1 [adam 2021-07-07]
+	Updated www/py-httpx-socks to 0.4.1 [adam 2021-07-07]
