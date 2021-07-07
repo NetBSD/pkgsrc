@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3749 2021/07/07 10:12:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3750 2021/07/07 13:12:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5970,3 +5970,17 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx-socks to 0.4.1 [adam 2021-07-07]
 	Updated net/rabbitmq to 3.8.19 [adam 2021-07-07]
 	Updated devel/py-xdis to 5.0.11 [adam 2021-07-07]
+	Removed devel/go-pkgconfig [nia 2021-07-07]
+	Removed net/go-tcplisten [nia 2021-07-07]
+	Removed devel/go-spew [nia 2021-07-07]
+	Removed textproc/go-goldmark [nia 2021-07-07]
+	Removed databases/go-sqlite3 [nia 2021-07-07]
+	Removed devel/go-textseg [nia 2021-07-07]
+	Removed textproc/go-tablewriter [nia 2021-07-07]
+	Removed devel/go-sync [nia 2021-07-07]
+	Removed devel/go-shuffle [nia 2021-07-07]
+	Removed textproc/go-sentences [nia 2021-07-07]
+	Removed devel/go-repr [nia 2021-07-07]
+	Removed textproc/go-regexp2 [nia 2021-07-07]
+	Removed devel/go-radix [nia 2021-07-07]
+	Removed devel/go-quicktest [nia 2021-07-07]
