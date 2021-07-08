@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2021/04/21 13:24:19 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2021/07/08 21:32:16 markd Exp $
 
 BUILDLINK_TREE+=	kdelibs
 
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs4
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
+#.include "../../graphics/openexr/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
