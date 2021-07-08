@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.5 2021/07/04 19:36:17 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.6 2021/07/08 08:05:13 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -34,4 +34,7 @@ lang/php73: security fix
 
 Pullup ticket #6481 - requested by nia
 graphics/glew: packaging fix
+
+Pullup ticket #6482 - requested by maya
+mk: Linux bootstrap fix
 
