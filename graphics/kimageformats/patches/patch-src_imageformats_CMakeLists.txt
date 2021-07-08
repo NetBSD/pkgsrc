@@ -1,0 +1,15 @@
+$NetBSD: patch-src_imageformats_CMakeLists.txt,v 1.1 2021/07/08 21:31:49 markd Exp $
+
+use openexr 3.x
+
+--- src/imageformats/CMakeLists.txt.orig	2021-03-04 21:57:23.000000000 +0000
++++ src/imageformats/CMakeLists.txt
+@@ -58,7 +58,7 @@ install(FILES jp2.desktop DESTINATION ${
+ 
+ if(OpenEXR_FOUND)
+     kimageformats_add_plugin(kimg_exr JSON "exr.json" SOURCES exr.cpp)
+-    target_link_libraries(kimg_exr OpenEXR::IlmImf)
++    target_link_libraries(kimg_exr OpenEXR::OpenEXR)
+     kde_target_enable_exceptions(kimg_exr PRIVATE)
+ 
+     install(FILES exr.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/qimageioplugins/)
