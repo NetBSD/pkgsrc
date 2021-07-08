@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2021/04/21 13:24:12 adam Exp $
+# $NetBSD: Makefile,v 1.76 2021/07/08 21:19:47 markd Exp $
 
-DISTNAME=	oiio-2.2.10.1
+DISTNAME=	oiio-2.2.15.1
 PKGNAME=	${DISTNAME:S/oiio/openimageio/}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
 GITHUB_PROJECT=	oiio
@@ -26,7 +25,6 @@ CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=OFF
 CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
 CMAKE_ARGS+=		-DROBINMAP_INCLUDE_DIR=${BUILDLINK_PREFIX.robin-map}/include
 CMAKE_ARGS+=		-DOpenJpeg_ROOT=${BUILDLINK_PREFIX.openjpeg}
-CMAKE_ARGS+=		-DIlmbase_ROOT=${BUILDLINK_PREFIX.ilmbase}
 CMAKE_ARGS+=		-DOpenEXR_ROOT=${BUILDLINK_PREFIX.openexr}
 
 # none of these are available in pkgsrc yet
@@ -60,7 +58,6 @@ pre-configure:
 .include "../../devel/robin-map/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
