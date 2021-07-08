@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/07 09:53:36 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/08 08:37:16 adam Exp $
 
 DISTNAME=	httpx-socks-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-python-socks>=1.2.4:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-httpcore, py-anyio, py-uvloop
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
