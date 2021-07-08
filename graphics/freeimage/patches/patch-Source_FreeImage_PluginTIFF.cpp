@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_FreeImage_PluginTIFF.cpp,v 1.1 2020/05/14 16:42:14 nia Exp $
+$NetBSD: patch-Source_FreeImage_PluginTIFF.cpp,v 1.2 2021/07/08 21:26:12 markd Exp $
 
 Unbundle image libraries.
 
@@ -12,24 +12,7 @@ Unbundle image libraries.
 +#include <tiffio.h>
  #include "../Metadata/FreeImageTag.h"
 -#include "../OpenEXR/Half/half.h"
-+#include <OpenEXR/half.h>
++#include <Imath/half.h>
  
  #include "FreeImageIO.h"
  #include "PSDParser.h"
-@@ -194,16 +194,6 @@ TIFFFdOpen(thandle_t handle, const char 
- 	return tif;
- }
- 
--/**
--Open a TIFF file for reading or writing
--@param name
--@param mode
--*/
--TIFF*
--TIFFOpen(const char* name, const char* mode) {
--	return 0;
--}
--
- // ----------------------------------------------------------
- //   TIFF library FreeImage-specific routines.
- // ----------------------------------------------------------
