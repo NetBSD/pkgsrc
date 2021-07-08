@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_FreeImage_PluginEXR.cpp,v 1.1 2020/05/14 16:42:14 nia Exp $
+$NetBSD: patch-Source_FreeImage_PluginEXR.cpp,v 1.2 2021/07/08 21:26:12 markd Exp $
 
 Unbundle image libraries.
 
 --- Source/FreeImage/PluginEXR.cpp.orig	2015-03-04 00:07:08.000000000 +0000
 +++ Source/FreeImage/PluginEXR.cpp
-@@ -28,16 +28,16 @@
+@@ -28,16 +28,17 @@
  #pragma warning (disable : 4800) // ImfVersion.h - 'const int' : forcing value to bool 'true' or 'false' (performance warning)
  #endif 
  
@@ -27,7 +27,8 @@ Unbundle image libraries.
 +#include <OpenEXR/ImfRgba.h>
 +#include <OpenEXR/ImfArray.h>
 +#include <OpenEXR/ImfPreviewImage.h>
-+#include <OpenEXR/half.h>
++#include <Imath/half.h>
++#include <Imath/ImathInt64.h>
  
  
  // ==========================================================
