@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3755 2021/07/08 12:29:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3756 2021/07/08 13:20:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6000,3 +6000,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/faudio to 21.07 [adam 2021-07-08]
 	Updated net/haproxy to 2.4.2 [adam 2021-07-08]
 	Updated devel/libuv to 1.41.1 [adam 2021-07-08]
+	Updated security/gpg-tui to 0.7.0 [pin 2021-07-08]
