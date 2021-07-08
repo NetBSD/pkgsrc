@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/03 11:00:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/08 08:41:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -17,6 +18,9 @@ ${PYSITELIB}/respx/api.pyo
 ${PYSITELIB}/respx/fixtures.py
 ${PYSITELIB}/respx/fixtures.pyc
 ${PYSITELIB}/respx/fixtures.pyo
+${PYSITELIB}/respx/handlers.py
+${PYSITELIB}/respx/handlers.pyc
+${PYSITELIB}/respx/handlers.pyo
 ${PYSITELIB}/respx/mocks.py
 ${PYSITELIB}/respx/mocks.pyc
 ${PYSITELIB}/respx/mocks.pyo
@@ -26,6 +30,9 @@ ${PYSITELIB}/respx/models.pyo
 ${PYSITELIB}/respx/patterns.py
 ${PYSITELIB}/respx/patterns.pyc
 ${PYSITELIB}/respx/patterns.pyo
+${PYSITELIB}/respx/plugin.py
+${PYSITELIB}/respx/plugin.pyc
+${PYSITELIB}/respx/plugin.pyo
 ${PYSITELIB}/respx/py.typed
 ${PYSITELIB}/respx/router.py
 ${PYSITELIB}/respx/router.pyc
