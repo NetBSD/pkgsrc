@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/04/24 19:46:03 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/07/08 13:34:49 pin Exp $
 
 DISTNAME=	heliocron-0.5.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mfreeborn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/mfreeborn/heliocron/
 COMMENT=	Execute tasks relative to sunset, sunrise and other solar events
 LICENSE=	apache-2.0
