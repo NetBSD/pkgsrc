@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/08 21:09:04 markd Exp $
+
+SHA1 (imath-3.0.5.tar.gz) = 52b330d90873debbaa343931adbe734337cccada
+RMD160 (imath-3.0.5.tar.gz) = 92ec5f1c6e2765518c3250cdd9dded0e640c77d8
+SHA512 (imath-3.0.5.tar.gz) = df206315d822266cf32a5a4399abff7ad1dd0bd1f0372d61f61516e2acdefd13e3cfd9cf54373a3fb49bb28c9f80915ca5ecaec2a068a1d6ea231d71a5316da2
+Size (imath-3.0.5.tar.gz) = 528503 bytes
