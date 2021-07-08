@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2016/02/18 23:24:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/07/08 21:32:16 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1924,7 +1924,6 @@ lib/kde4/plugins/designer/kdewebkitwidgets.so
 lib/kde4/plugins/designer/kdewidgets.so
 lib/kde4/plugins/imageformats/kimg_dds.so
 lib/kde4/plugins/imageformats/kimg_eps.so
-lib/kde4/plugins/imageformats/kimg_exr.so
 lib/kde4/plugins/imageformats/kimg_jp2.so
 lib/kde4/plugins/imageformats/kimg_pcx.so
 lib/kde4/plugins/imageformats/kimg_pic.so
@@ -3354,7 +3353,6 @@ share/kde4/services/pnm.protocol
 share/kde4/services/qimageioplugins/bmp.desktop
 share/kde4/services/qimageioplugins/dds.desktop
 share/kde4/services/qimageioplugins/eps.desktop
-share/kde4/services/qimageioplugins/exr.desktop
 share/kde4/services/qimageioplugins/gif.desktop
 share/kde4/services/qimageioplugins/hdr.desktop
 share/kde4/services/qimageioplugins/ico.desktop
