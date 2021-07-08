@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/06/28 20:03:47 pin Exp $
+$NetBSD: distinfo,v 1.9 2021/07/08 13:19:50 pin Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -140,10 +140,10 @@ SHA1 (gpg-error-0.5.2.crate) = a1eb17a06226712f4c9babec665de8613a7134ae
 RMD160 (gpg-error-0.5.2.crate) = c1c5f183936f062a6146c6a80dd14071e279f3d6
 SHA512 (gpg-error-0.5.2.crate) = 69138c1c712aec6b2c5e8b919b146445137ff62ada0d4437393764dac18167197d06fd60cf77550f628762a9411c4b3a051cb4515fedad726a63810f80b8b1e6
 Size (gpg-error-0.5.2.crate) = 16410 bytes
-SHA1 (gpg-tui-0.6.2.tar.gz) = cda51e1b3b968c25a9fb0b40eb49ef85d21ee12b
-RMD160 (gpg-tui-0.6.2.tar.gz) = 937b193be3b02c423810ce35839a9c0b60d5b772
-SHA512 (gpg-tui-0.6.2.tar.gz) = 3c5ea4cb89ffa9bc600be62816472cabde1b121f32b212609fa8b878a873c384469151328b4130ce72f1167f968a0754f2f99cec87bc9ead9605b4cf74e3ca45
-Size (gpg-tui-0.6.2.tar.gz) = 11269015 bytes
+SHA1 (gpg-tui-0.7.0.tar.gz) = 9d9493b87766738da0878539eb9f03695086d75d
+RMD160 (gpg-tui-0.7.0.tar.gz) = 24ad7af8d97dbfeecd9f8b128d8c2d36f9b5777c
+SHA512 (gpg-tui-0.7.0.tar.gz) = 1261279b4bb0765ed03a0f2eefeed7263d6ee92784b9ebeba5669002955121b05776bf6f3b70a8cf9ed7e07d70a660401fcde9876ccae21df88c4ac8142cad1e
+Size (gpg-tui-0.7.0.tar.gz) = 11621703 bytes
 SHA1 (gpgme-0.9.2.crate) = 8c9fbbe3b5401b4ce9a85c0fc4b925f9aef62a1a
 RMD160 (gpgme-0.9.2.crate) = d3ff4e66c48059f656a9c4f860198fd2795605f3
 SHA512 (gpgme-0.9.2.crate) = 9f0808cd4a18b334f8ef935dc6740bc9f5c4a25286f7d3b921000965183a1528f75128481aa47558a75cf6ff3d75ae3b2fbf98d0692bff6ee377bae0e9d2e09f
@@ -380,14 +380,14 @@ SHA1 (strsim-0.8.0.crate) = 9a09b5df624d5e5cc4f9ae9f6d45e49b27e18834
 RMD160 (strsim-0.8.0.crate) = 980ec0eecba085ca6419d089af3743e23b27cd16
 SHA512 (strsim-0.8.0.crate) = 1d55a8d946cd55f5f37d06aea536549ded95739fa58c0f2da285a0041154c181f663682bdcac643aa198b3e762d694a04f058db985c62ebe22b5c16327ba6d34
 Size (strsim-0.8.0.crate) = 9309 bytes
-SHA1 (structopt-0.3.21.crate) = 4c33e49d9465a9188fad581fa6643d39bce524cb
-RMD160 (structopt-0.3.21.crate) = 50b1ffa231b4520210e2f84fe0de2990cfba5a1f
-SHA512 (structopt-0.3.21.crate) = df8592f10456a5b1a7bc7b290357c069ce4eba14d2558ecd6face231e49c748a8892c31ffad000b426e8180d3e4dd607329db91f4b5617e971b2edda5bab42f1
-Size (structopt-0.3.21.crate) = 50761 bytes
-SHA1 (structopt-derive-0.4.14.crate) = a46c0bd42e6f77be47213bc5c629cf40cc3c81a9
-RMD160 (structopt-derive-0.4.14.crate) = 44b6bfd254430ef143b6bf2799729a5a512fb163
-SHA512 (structopt-derive-0.4.14.crate) = bc20dd9d10c6dc1f5975b074a63eb84b49385ad272b62d8526962e88b28cada3998c3944dedaf8560d6577871747b875cd399dfe06851472c0a1c81fced429a0
-Size (structopt-derive-0.4.14.crate) = 20116 bytes
+SHA1 (structopt-0.3.22.crate) = ee252d8cea90ad182ad2be14025cdece2ad18461
+RMD160 (structopt-0.3.22.crate) = e4dbab734ae73177f57b938ff19b2efab123f1d8
+SHA512 (structopt-0.3.22.crate) = fcd37107dc6cff85e30345c816ec6ef9bca57f05e9b67d8dce196a94fa18d79d33e953036b394521e76534fd5cc9e4fbbe14588d7cd4ccb01076f4c8ae8f5739
+Size (structopt-0.3.22.crate) = 51665 bytes
+SHA1 (structopt-derive-0.4.15.crate) = 9ffc3a362dc95c64f29ae8fbd9e99601b3e822b1
+RMD160 (structopt-derive-0.4.15.crate) = df2860e4b7732f76897d88966f418946f4d0d655
+SHA512 (structopt-derive-0.4.15.crate) = a241cd02ee91195548759e6143f4c08eac70466d6e13fc5af59a09c15dec27816cfb766c7f2024d4a678a1a1fc8fe5d78b858b3ac0f53fda914ec9ec1d8abc8d
+Size (structopt-derive-0.4.15.crate) = 20861 bytes
 SHA1 (syn-1.0.55.crate) = 9d388bf6669e33af136c0562fdcf05d7fe0fe2a5
 RMD160 (syn-1.0.55.crate) = cf4b2d6c42b5b16d32039748d3a1277d2c882159
 SHA512 (syn-1.0.55.crate) = 9c3e5087db4819141994470c912e5f4d09d22a8e7ea9179b575f9601ce78ed501cf76f8303237e519c17e8628764d5f547141f97cea88ce7daf4c2982b7c1399

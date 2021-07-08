@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2021/06/14 07:39:02 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2021/07/08 13:19:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -94,8 +94,8 @@ CARGO_CRATE_DEPENDS+=	smithay-clipboard-0.6.3
 CARGO_CRATE_DEPENDS+=	socket2-0.3.19
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
-CARGO_CRATE_DEPENDS+=	structopt-0.3.21
-CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.14
+CARGO_CRATE_DEPENDS+=	structopt-0.3.22
+CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.15
 CARGO_CRATE_DEPENDS+=	syn-1.0.55
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
