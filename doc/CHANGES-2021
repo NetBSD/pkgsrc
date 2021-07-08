@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3756 2021/07/08 13:20:11 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3757 2021/07/08 14:54:38 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/haproxy to 2.4.2 [adam 2021-07-08]
 	Updated devel/libuv to 1.41.1 [adam 2021-07-08]
 	Updated security/gpg-tui to 0.7.0 [pin 2021-07-08]
+	Updated print/cups-filters to 1.28.9 [prlw1 2021-07-08]
