@@ -1,0 +1,33 @@
+$NetBSD: patch-thumbnail_CMakeLists.txt,v 1.1 2021/07/08 21:28:32 markd Exp $
+
+openexr3
+
+--- thumbnail/CMakeLists.txt.orig	2021-02-24 23:05:55.000000000 +0000
++++ thumbnail/CMakeLists.txt
+@@ -1,6 +1,9 @@
+ add_definitions(-DTRANSLATION_DOMAIN=\"kio5_thumbnail\")
+ 
+-find_package(OpenEXR)
++find_package(OpenEXR 3.0 CONFIG)
++if(NOT OpenEXR_FOUND)
++    find_package(OpenEXR)
++endif()
+ set_package_properties(OpenEXR PROPERTIES DESCRIPTION "API for accessing OpenEXR formatted images"
+                        URL "https://www.openexr.com"
+                        TYPE OPTIONAL
+@@ -144,9 +147,13 @@ if(OpenEXR_FOUND)
+     target_link_libraries(exrthumbnail
+             KF5::KIOCore
+             KF5::KIOWidgets
+-            ${OpenEXR_LIBRARIES}
+     )
+-    target_include_directories(exrthumbnail SYSTEM PRIVATE ${OpenEXR_INCLUDE_DIRS})
++    if(TARGET OpenEXR::OpenEXR)
++        target_link_libraries(exrthumbnail OpenEXR::OpenEXR)
++    else()
++        target_include_directories(exrthumbnail SYSTEM PRIVATE ${OpenEXR_INCLUDE_DIRS})
++        target_link_libraries(exrthumbnail OpenEXR::OpenEXR)
++    endif()
+ 
+     # OpenEXR headers use exceptions; at least clang refuses to build the target
+     # when exceptions are not enabled.
