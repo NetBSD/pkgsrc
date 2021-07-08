@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2021/06/01 09:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2021/07/08 21:30:44 markd Exp $
 
 DISTNAME=	enblend-enfuse-4.2
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GNUPLOT=false
+CFLAGS+=		-DCMS_NO_REGISTER_KEYWORD
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
