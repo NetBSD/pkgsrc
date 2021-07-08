@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.23 2021/03/17 11:46:08 wiz Exp $
-
-SHA1 (openexr-2.5.5.tar.gz) = f55bb2051b409fef1c983cbfa37c72be79038568
-RMD160 (openexr-2.5.5.tar.gz) = 9674c852e2efe80a84968e0e53164dd713baa49d
-SHA512 (openexr-2.5.5.tar.gz) = e511af26a8fe2175a641fd25d2dcc6ef807e00bee2aff06a4784125f916ffd47fe376fe0621d385b604180a239bbfee063f8ceee3f7b731fde3c38558e9fdcdf
-Size (openexr-2.5.5.tar.gz) = 27536865 bytes
-SHA1 (patch-IlmBase_configure.ac) = 563b483c24c1fa75f7fd203082ff872266d48d50
-SHA1 (patch-IlmBase_m4_threads.m4) = 7b1f38dbc733a2f324fd5800e9def6f040f33393
