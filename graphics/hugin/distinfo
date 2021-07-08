@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.24 2021/01/09 21:17:37 adam Exp $
+$NetBSD: distinfo,v 1.25 2021/07/08 21:27:07 markd Exp $
 
 SHA1 (hugin-2020.0.0.tar.bz2) = 20e39ab82e1d8208a7eee2f216ab1271c95f583f
 RMD160 (hugin-2020.0.0.tar.bz2) = 499c24bf2dd0eb0b1e223183004dd00f9ced61c2
 SHA512 (hugin-2020.0.0.tar.bz2) = 4c55767c630ea03faf359bda606e5e9e7709a47ab41e821772da8c6da0cf658b1d31d7d8e96ea1c41ec61bdeb2da8c86c92b5d6964a9301732a13137178ec04e
 Size (hugin-2020.0.0.tar.bz2) = 10371301 bytes
 SHA1 (patch-CMakeLists.txt) = 94e087f3eeab899a6dad701cc4d8a95414a980df
+SHA1 (patch-CMakeModules_FindOpenEXR.cmake) = 74be9d83d98c50ea0cce05b8c2cafbb2ea2dc601
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
+SHA1 (patch-CMakeModules_FindVIGRA.cmake) = 12faefe589ef9e237473243e88398d2c90f2ae93
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
 SHA1 (patch-src_hugin1_base__wx_wxPanoCommand.cpp) = d5bf8f747ae86338e728c472d3dc04bf4c84f182
 SHA1 (patch-src_hugin1_calibrate__lens_LensCalFrame.cpp) = 9b815a681317cb19880e7bb6ef170bc14d01b28b
