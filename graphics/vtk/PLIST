@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/05/08 13:55:19 thor Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/07/08 14:59:24 prlw1 Exp $
 bin/vtkProbeOpenGLVersion-9.0
 include/vtk-9.0/DICOMAppHelper.h
 include/vtk-9.0/DICOMCMakeConfig.h
@@ -566,6 +566,7 @@ include/vtk-9.0/vtkDistanceWidget.h
 include/vtk-9.0/vtkDistributedDataFilter.h
 include/vtk-9.0/vtkDistributedGraphHelper.h
 include/vtk-9.0/vtkDomainsChemistryModule.h
+include/vtk-9.0/vtkDomainsChemistryOpenGL2Module.h
 include/vtk-9.0/vtkDotProductSimilarity.h
 include/vtk-9.0/vtkDoubleArray.h
 include/vtk-9.0/vtkDoubleDispatcher.h
@@ -1048,6 +1049,7 @@ include/vtk-9.0/vtkImagePermute.h
 include/vtk-9.0/vtkImagePlaneWidget.h
 include/vtk-9.0/vtkImagePointDataIterator.h
 include/vtk-9.0/vtkImagePointIterator.h
+include/vtk-9.0/vtkImageProbeFilter.h
 include/vtk-9.0/vtkImageProcessingPass.h
 include/vtk-9.0/vtkImageProgressIterator.h
 include/vtk-9.0/vtkImageProperty.h
@@ -1479,6 +1481,7 @@ include/vtk-9.0/vtkOpenGLIndexBufferObject.h
 include/vtk-9.0/vtkOpenGLInstanceCulling.h
 include/vtk-9.0/vtkOpenGLLabeledContourMapper.h
 include/vtk-9.0/vtkOpenGLLight.h
+include/vtk-9.0/vtkOpenGLMoleculeMapper.h
 include/vtk-9.0/vtkOpenGLPointGaussianMapper.h
 include/vtk-9.0/vtkOpenGLPolyDataMapper.h
 include/vtk-9.0/vtkOpenGLPolyDataMapper2D.h
@@ -2693,10 +2696,6 @@ include/vtk-9.0/vtksys/String.hxx
 include/vtk-9.0/vtksys/System.h
 include/vtk-9.0/vtksys/SystemInformation.hxx
 include/vtk-9.0/vtksys/SystemTools.hxx
-include/vtk-9.0/vtksys/hash_fun.hxx
-include/vtk-9.0/vtksys/hash_map.hxx
-include/vtk-9.0/vtksys/hash_set.hxx
-include/vtk-9.0/vtksys/hashtable.hxx
 lib/cmake/vtk-9.0/FindEXPAT.cmake
 lib/cmake/vtk-9.0/FindEigen3.cmake
 lib/cmake/vtk-9.0/FindFFMPEG.cmake
@@ -2806,6 +2805,9 @@ lib/libvtkDICOMParser-9.0.so.${PKGVERSION}
 lib/libvtkDomainsChemistry-9.0.so
 lib/libvtkDomainsChemistry-9.0.so.1
 lib/libvtkDomainsChemistry-9.0.so.${PKGVERSION}
+lib/libvtkDomainsChemistryOpenGL2-9.0.so
+lib/libvtkDomainsChemistryOpenGL2-9.0.so.1
+lib/libvtkDomainsChemistryOpenGL2-9.0.so.${PKGVERSION}
 lib/libvtkFiltersAMR-9.0.so
 lib/libvtkFiltersAMR-9.0.so.1
 lib/libvtkFiltersAMR-9.0.so.${PKGVERSION}
@@ -3100,6 +3102,7 @@ ${PLIST.qt}include/vtk-9.0/QVTKInteractor.h
 ${PLIST.qt}include/vtk-9.0/QVTKOpenGLNativeWidget.h
 ${PLIST.qt}include/vtk-9.0/QVTKOpenGLStereoWidget.h
 ${PLIST.qt}include/vtk-9.0/QVTKOpenGLWindow.h
+${PLIST.qt}include/vtk-9.0/QVTKRenderWidget.h
 ${PLIST.qt}include/vtk-9.0/QVTKRenderWindowAdapter.h
 ${PLIST.qt}include/vtk-9.0/QVTKWin32Header.h
 ${PLIST.qt}include/vtk-9.0/vtkEventQtSlotConnect.h
@@ -3130,10 +3133,10 @@ ${PLIST.qt}include/vtk-9.0/vtkRenderingQtModule.h
 ${PLIST.qt}include/vtk-9.0/vtkViewsQtModule.h
 ${PLIST.qt}lib/libvtkGUISupportQt-9.0.so
 ${PLIST.qt}lib/libvtkGUISupportQt-9.0.so.1
-${PLIST.qt}lib/libvtkGUISupportQt-9.0.so.9.0.1
+${PLIST.qt}lib/libvtkGUISupportQt-9.0.so.${PKGVERSION}
 ${PLIST.qt}lib/libvtkRenderingQt-9.0.so
 ${PLIST.qt}lib/libvtkRenderingQt-9.0.so.1
-${PLIST.qt}lib/libvtkRenderingQt-9.0.so.9.0.1
+${PLIST.qt}lib/libvtkRenderingQt-9.0.so.${PKGVERSION}
 ${PLIST.qt}lib/libvtkViewsQt-9.0.so
 ${PLIST.qt}lib/libvtkViewsQt-9.0.so.1
-${PLIST.qt}lib/libvtkViewsQt-9.0.so.9.0.1
+${PLIST.qt}lib/libvtkViewsQt-9.0.so.${PKGVERSION}
