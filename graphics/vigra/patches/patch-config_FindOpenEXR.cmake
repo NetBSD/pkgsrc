@@ -1,0 +1,23 @@
+$NetBSD: patch-config_FindOpenEXR.cmake,v 1.1 2021/07/08 21:31:13 markd Exp $
+
+openexr3 patch
+
+--- config/FindOpenEXR.cmake.orig	2017-05-19 15:01:08.000000000 +0000
++++ config/FindOpenEXR.cmake
+@@ -23,6 +23,16 @@
+ # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
++find_package(OpenEXR 3.0 CONFIG QUIET)
++if(TARGET OpenEXR::OpenEXR)
++    find_package(Threads)
++    SET(OPENEXR_FOUND TRUE)
++    SET(OPENEXR_INCLUDE_DIR OpenEXR::OpenEXR)
++    SET(OPENEXR_LIBRARIES OpenEXR::OpenEXR)
++    SET(OPENEXR_VERSION ${OpenEXR_VERSION})
++    return()
++endif()
++
+ FIND_PATH(OPENEXR_INCLUDE_DIR ImfRgbaFile.h PATH_SUFFIXES OpenEXR)
+ 
+ FOREACH(V "" -2_2 -2_1 -2_0 -1_7)
