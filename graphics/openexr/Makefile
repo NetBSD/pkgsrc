@@ -1,20 +1,33 @@
-# $NetBSD: Makefile,v 1.40 2019/09/21 21:34:44 nia Exp $
+# $NetBSD: Makefile,v 1.41 2021/07/08 21:13:06 markd Exp $
 
-.include "Makefile.common"
+DISTNAME=	openexr-3.0.5
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
+GITHUB_PROJECT=	openexr
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-CONFIGURE_DIRS=	OpenEXR
-BUILD_DIRS=	OpenEXR
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	https://www.openexr.com/
+COMMENT=	High dynamic-range (HDR) image file format library and tools
+LICENSE=	modified-bsd
 
-USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++14
 
-LIBS.IRIX+=		-lmx
+# C++14
+GCC_REQD+=	6
 
-PKGCONFIG_OVERRIDE=	OpenEXR.pc.in
+PKGCONFIG_OVERRIDE=	cmake/OpenEXR.pc.in
 
-pre-configure:
-	cd ${WRKSRC}/OpenEXR && ./bootstrap
+PTHREAD_OPTS=	require
+
+CHECK_PORTABILITY_SKIP+=	Contrib/DtexToExr/bootstrap
+
+.include "../../mk/pthread.buildlink3.mk"
+
+#LIBS.SunOS+=	-lm
+#LIBS.IRIX+=	-lmx
 
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ilmbase+=	ilmbase>=1.0.2nb1
-.include "../../graphics/ilmbase/buildlink3.mk"
+.include "../../math/imath/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
