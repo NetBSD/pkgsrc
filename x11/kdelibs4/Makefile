@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.124 2021/04/21 13:24:19 adam Exp $
+# $NetBSD: Makefile,v 1.125 2021/07/08 21:32:16 markd Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/17.08.3/src/}
@@ -109,7 +109,7 @@ BUILDLINK_API_DEPENDS.strigi+=		strigi>=0.5.11
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
+#.include "../../graphics/openexr/buildlink3.mk"
 .include "../../misc/attica/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 
