@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2021/01/19 16:02:25 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/07/08 21:19:47 markd Exp $
 
-SHA1 (oiio-2.2.10.1.tar.gz) = 2b01150b5979c9a8a46b6614e34f43d050721318
-RMD160 (oiio-2.2.10.1.tar.gz) = 9bf34ffc436e09ed5f290abbcccea7e2b6ec7aab
-SHA512 (oiio-2.2.10.1.tar.gz) = 01ffd86795050b57179e80e6803fd66944bb2e1a7c92fab1601005f5e0cbd1863dd1b94bb00f0c7d648f00e6af54ef6aa3dd6cbfc1e788b7a4da74358c02269c
-Size (oiio-2.2.10.1.tar.gz) = 29214767 bytes
+SHA1 (oiio-2.2.15.1.tar.gz) = cc16950a425ff8ced7810ac70573cc4bccf469f7
+RMD160 (oiio-2.2.15.1.tar.gz) = 6e8072ab24973e5a71c5de5712f8055bbf1872f2
+SHA512 (oiio-2.2.15.1.tar.gz) = a137fe003dc37de0a192fed5f6f354be3fbe543570eefd19f854a8324bee317abbc52e1a520f433194bd481dad22aa315523b65685b94f7f86105fb6870d2f21
+Size (oiio-2.2.15.1.tar.gz) = 29237129 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = 8c06e8e22eb927bbdec288c166a5dc44fbef5acb
 SHA1 (patch-src_libutil_sysutil.cpp) = f828232fed737ede5013e926630e29efa63c8f04
