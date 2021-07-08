@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3754 2021/07/08 08:41:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3755 2021/07/08 12:29:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -5997,3 +5997,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpcore to 0.13.6 [adam 2021-07-08]
 	Updated www/py-httpx to 0.18.2 [adam 2021-07-08]
 	Updated www/py-respx to 0.17.1 [adam 2021-07-08]
+	Updated audio/faudio to 21.07 [adam 2021-07-08]
+	Updated net/haproxy to 2.4.2 [adam 2021-07-08]
+	Updated devel/libuv to 1.41.1 [adam 2021-07-08]
