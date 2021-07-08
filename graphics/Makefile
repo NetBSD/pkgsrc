@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.944 2021/07/05 14:41:29 nia Exp $
+# $NetBSD: Makefile,v 1.945 2021/07/08 21:22:34 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -260,7 +260,6 @@ SUBDIR+=	hugin
 SUBDIR+=	iGMT
 SUBDIR+=	icon-naming-utils
 SUBDIR+=	icoutils
-SUBDIR+=	ilmbase
 SUBDIR+=	imlib
 SUBDIR+=	imlib-gtk
 SUBDIR+=	imlib2
