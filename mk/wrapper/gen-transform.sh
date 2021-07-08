@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.12 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: gen-transform.sh,v 1.12.24.1 2021/07/08 08:04:56 bsiegert Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -33,7 +33,6 @@ shell_lib="@_WRAP_SHELL_LIB@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 debug="${WRAPPER_DEBUG-no}"
 
-echo="@ECHO@"
 test="@TEST@"
 
 . $shell_lib
@@ -135,16 +134,16 @@ gen()
 		case $_action in
 		transform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|^$1\(/[^$_sep]*\.la[$_sep]\)|$2\1|g"
-			$echo "s|^$1\(/[^$_sep]*\.la\)$|$2\1|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\.la[$_sep]\)|$2\1|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\.la\)$|$2\1|g"
 			;;
 		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\.la[$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\.la[$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\.la\)$|\1$2\2|g"
-			$echo "s|^$1\(/[^$_sep]*\.la[$_sep]\)|$2\1|g"
-			$echo "s|^$1\(/[^$_sep]*\.la\)$|$2\1|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\.la[$_sep]\)|\1$2\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\.la[$_sep]\)|\1$2\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\.la\)$|\1$2\2|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\.la[$_sep]\)|$2\1|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\.la\)$|$2\1|g"
 			;;
 		esac
 		;;
@@ -197,16 +196,16 @@ gen()
 		case $_action in
 		transform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|^$1\([$_sep]\)|$2\1|g"
-			$echo "s|^$1$|$2|g"
+			printf "%s\n" "s|^$1\([$_sep]\)|$2\1|g"
+			printf "%s\n" "s|^$1$|$2|g"
 			;;
 		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|\([$_sep]\)$1\([$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1\([$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1$|\1$2|g"
-			$echo "s|^$1\([$_sep]\)|$2\1|g"
-			$echo "s|^$1$|$2|g"
+			printf "%s\n" "s|\([$_sep]\)$1\([$_sep]\)|\1$2\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1\([$_sep]\)|\1$2\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1$|\1$2|g"
+			printf "%s\n" "s|^$1\([$_sep]\)|$2\1|g"
+			printf "%s\n" "s|^$1$|$2|g"
 			;;
 		esac
 		;;
@@ -227,16 +226,16 @@ gen()
 		case $_action in
 		transform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|^$1\(/[^$_sep]*\)$2\([$_sep]\)|$3\1$4|g"
-			$echo "s|^$1\(/[^$_sep]*\)$2$|$3\1$4|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\)$2\([$_sep]\)|$3\1$4|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\)$2$|$3\1$4|g"
 			;;
 		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\)$2\([$_sep]\)|\1$3\2$4\3|g"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\)$2\([$_sep]\)|\1$3\2$4\3|g"
-			$echo "s|\([$_sep]\)$1\(/[^$_sep]*\)$2$|\1$3\2$4|g"
-			$echo "s|^$1\(/[^$_sep]*\)$2\([$_sep]\)|$3\1$4|g"
-			$echo "s|^$1\(/[^$_sep]*\)$2$|$3\1$4|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\)$2\([$_sep]\)|\1$3\2$4\3|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\)$2\([$_sep]\)|\1$3\2$4\3|g"
+			printf "%s\n" "s|\([$_sep]\)$1\(/[^$_sep]*\)$2$|\1$3\2$4|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\)$2\([$_sep]\)|$3\1$4|g"
+			printf "%s\n" "s|^$1\(/[^$_sep]*\)$2$|$3\1$4|g"
 			;;
 		esac
 		;;
@@ -282,16 +281,16 @@ gen()
 		case $_action in
 		transform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|^$1[^$_sep]*\([$_sep]\)|\1|g"
-			$echo "s|^$1[^$_sep]*$||g"
+			printf "%s\n" "s|^$1[^$_sep]*\([$_sep]\)|\1|g"
+			printf "%s\n" "s|^$1[^$_sep]*$||g"
 			;;
 		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|\([$_sep]\)$1[^$_sep]*\([$_sep]\)|\1\2|g"
-			$echo "s|\([$_sep]\)$1[^$_sep]*\([$_sep]\)|\1\2|g"
-			$echo "s|\([$_sep]\)$1[^$_sep]*$|\1|g"
-			$echo "s|^$1[^$_sep]*\([$_sep]\)|\1|g"
-			$echo "s|^$1[^$_sep]*$||g"
+			printf "%s\n" "s|\([$_sep]\)$1[^$_sep]*\([$_sep]\)|\1\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1[^$_sep]*\([$_sep]\)|\1\2|g"
+			printf "%s\n" "s|\([$_sep]\)$1[^$_sep]*$|\1|g"
+			printf "%s\n" "s|^$1[^$_sep]*\([$_sep]\)|\1|g"
+			printf "%s\n" "s|^$1[^$_sep]*$||g"
 			;;
 		esac
 		;;
