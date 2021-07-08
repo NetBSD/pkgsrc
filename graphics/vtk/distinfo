@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/05/04 14:48:34 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2021/07/08 14:59:24 prlw1 Exp $
 
-SHA1 (VTK-9.0.1.tar.gz) = 578be3303b6ee5bb7ad23c2a87f02475f407bccb
-RMD160 (VTK-9.0.1.tar.gz) = 1c9eaf59f37ebbdf5871276a61c579a1f00dce6b
-SHA512 (VTK-9.0.1.tar.gz) = eb2508e2409ad302cc5db65282a9c1ff4477ac8a93e0fee898ad8f0974d72decc7d5d444dc825a3c2f7952ebf59853616097ebe0d134649cab0d49a9619065bf
-Size (VTK-9.0.1.tar.gz) = 34687900 bytes
-SHA1 (patch-Rendering_FreeTypeFontConfig_vtkFontConfigFreeTypeTools.cxx) = 4d2b14198d5bf5c8a3251332c28ce290c875848f
-SHA1 (patch-Rendering_FreeType_vtkFreeTypeTools.cxx) = bce6587f9367cff77624283eb5c9f47776246ec1
+SHA1 (VTK-9.0.3.tar.gz) = ccba6377369f43f5811c96384092eb7d6d40634d
+RMD160 (VTK-9.0.3.tar.gz) = 50bf13836ebd4d3ca7dce8de77382ef222980257
+SHA512 (VTK-9.0.3.tar.gz) = 00528011f9206444d09fc6cea05c46930745bb70ea02be6244ab3eb510ae82af772157c025157b1761dc4c6a9ab538b57f814c03a708f30aa3598a421fdc6ae2
+Size (VTK-9.0.3.tar.gz) = 34684378 bytes
