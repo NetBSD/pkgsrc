@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3759 2021/07/08 21:36:17 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3760 2021/07/09 10:10:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6007,3 +6007,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/openexr to 3.0.5 [markd 2021-07-08]
 	Updated graphics/openimageio to 2.2.15.1 [markd 2021-07-08]
 	Removed graphics/ilmbase [markd 2021-07-08]
+	Updated www/webkit-gtk to 2.32.2 [leot 2021-07-09]
