@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2021/06/18 02:21:32 thor Exp $
+$NetBSD: distinfo,v 1.65 2021/07/09 22:48:46 markd Exp $
 
 SHA1 (qtbase-everywhere-src-5.15.2.tar.xz) = b5ad67fc6381ad7fae0296944734198488d096a3
 RMD160 (qtbase-everywhere-src-5.15.2.tar.xz) = ee53f1b7dadc0b96a2f79fe7f54467b46894b12b
@@ -14,17 +14,22 @@ SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf9
 SHA1 (patch-src_3rdparty_double-conversion_include_double-conversion_utils.h) = 88cd4ab81fd480c5dd28cc0a4ac0560c9565a0bc
 SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = e050b334cecc56259bd1755cd2de8c5bbf1409c0
 SHA1 (patch-src_corelib_configure.json) = 7a83a356330e602cbc65256dd345a107004a67cb
+SHA1 (patch-src_corelib_global_qendian.h) = bd8385a250ed59904de742251a99426924861e5a
+SHA1 (patch-src_corelib_global_qfloat16.h) = a5ac74fee2f08074a59003074570acb294423eaa
 SHA1 (patch-src_corelib_global_qrandom.cpp) = d910579df42d5b01583b88fa19f514b230596ca7
 SHA1 (patch-src_corelib_io_io.pri) = b2c1057e20c3150162695947bab958a2644df7dc
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf80714a37e8c46278f9
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
+SHA1 (patch-src_corelib_text_qbytearraymatcher.h) = 809a02c98cc6360d74fdcf42edddd0c32a5e8684
 SHA1 (patch-src_corelib_thread_qmutex__p.h) = 093089b8a37baa3071257c99bbde5f6295bd2eec
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
+SHA1 (patch-src_corelib_tools_qsharedpointer__impl.h) = 91755dcdd0e13bfc047167db918b9a4d7a172165
 SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
 SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
 SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection__basic.h) = e369001cba31e865adf010ab714ad132b96c1bef
+SHA1 (patch-src_plugins_platforms_xcb_qxcbwindow.cpp) = 4f32b1cfd555613acc136f0f4e5849176987afb6
 SHA1 (patch-src_tools_moc_main.cpp) = ebdddd657ba1c24657a9ca5624907e31a5d0c8bb
 SHA1 (patch-src_widgets_graphicsview_qgraphicsitem__p.h) = fd55d5ef6fde506849aab07f7ba23e856373b3a1
 SHA1 (patch-tests_auto_corelib_io_qprocess_qprocess.pro) = 1dbb08e5ec6715cbe239efdfb45389959b179ea3
