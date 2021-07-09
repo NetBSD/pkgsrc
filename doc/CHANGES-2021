@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3765 2021/07/09 19:24:05 scole Exp $
+$NetBSD: CHANGES-2021,v 1.3766 2021/07/09 20:02:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6015,3 +6015,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ordered-set to 4.0.2 [adam 2021-07-09]
 	Updated textproc/py-deepdiff to 5.5.0 [adam 2021-07-09]
 	Updated textproc/split-thai to 2.5 [scole 2021-07-09]
+	Updated devel/py-pathlib2 to 2.3.6 [adam 2021-07-09]
+	Updated textproc/py-xlsxwriter to 1.4.4 [adam 2021-07-09]
+	Updated devel/py-test-cov to 2.12.1 [adam 2021-07-09]
+	Updated devel/py-test-assume to 2.4.3 [adam 2021-07-09]
