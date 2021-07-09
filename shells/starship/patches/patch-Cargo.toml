@@ -1,0 +1,14 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2021/07/09 18:51:23 pin Exp $
+
+Use libc that contains improved NetBSD support
+
+--- Cargo.toml.orig	2021-06-20 18:25:33.000000000 +0000
++++ Cargo.toml
+@@ -30,6 +30,7 @@ tls-vendored = ["native-tls/vendored"]
+ 
+ 
+ [dependencies]
++libc = "0.2.98"
+ clap = "2.33.3"
+ ansi_term = "0.12.1"
+ dirs-next = "2.0.0"
