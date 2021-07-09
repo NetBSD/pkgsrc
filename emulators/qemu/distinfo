@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.181 2021/06/22 04:09:06 thorpej Exp $
+$NetBSD: distinfo,v 1.182 2021/07/09 21:08:33 schmonz Exp $
 
 SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
@@ -28,7 +28,7 @@ SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
 SHA1 (patch-include_sysemu_hw__accel.h) = a3cd022368a074e30dd3958932a006fa0fe011a6
 SHA1 (patch-include_sysemu_kvm.h) = 9847abe3be70bd708a521310f5d5515e45a1a5a0
 SHA1 (patch-include_sysemu_nvmm.h) = 7e49abdc7dc6a03f293780c63ac6c242d3914d15
-SHA1 (patch-meson.build) = fe1ef65033aa387a8b029d3db206a04e341644d5
+SHA1 (patch-meson.build) = ec26f7df6789ac6880ac2ac1f8b0f22ec9bb31f5
 SHA1 (patch-meson__options.txt) = 050adf1d5c07dc211fdafde7a21e2afe52db9169
 SHA1 (patch-net_tap-solaris.c) = cc953c9a624dd55ace4e130d0b31bbfb956c17d5
 SHA1 (patch-nvmm-accel-ops.c) = 23ef13420a61d8bfa78f36ed7eae2e1523464617
