@@ -1,16 +1,21 @@
-# $NetBSD: options.mk,v 1.3 2021/02/03 10:43:42 nia Exp $
+# $NetBSD: options.mk,v 1.4 2021/07/09 18:33:36 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.imv
-PKG_SUPPORTED_OPTIONS=		svg
 
 PKG_OPTIONS_NONEMPTY_SETS=	display
 PKG_OPTIONS_SET.display=	wayland x11
 
 .include "../../devel/wayland/platform.mk"
-.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
-PKG_SUGGESTED_OPTIONS=	svg wayland x11
+.if ${PLATFORM_SUPPORTS_WAYLAND:tl} == "yes"
+PKG_SUGGESTED_OPTIONS=	wayland x11
 .else
-PKG_SUGGESTED_OPTIONS=	svg x11
+PKG_SUGGESTED_OPTIONS=	x11
+.endif
+
+.include "../../graphics/librsvg/available.mk"
+.if ${LIBRSVG_TYPE:tl} == "rust"
+PKG_SUPPORTED_OPTIONS+=	svg
+PKG_SUGGESTED_OPTIONS+=	svg
 .endif
 
 .include "../../mk/bsd.options.mk"
