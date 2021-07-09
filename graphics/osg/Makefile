@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2021/07/09 08:59:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.132 2021/07/09 10:30:11 markd Exp $
 
 DISTNAME=	osg-3.6.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscenegraph/}
 GITHUB_PROJECT=	OpenSceneGraph
@@ -58,7 +58,6 @@ CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/lua52/buildlink3.mk"
-.include "../../math/imath/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
