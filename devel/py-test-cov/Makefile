@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/05/18 15:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/07/09 20:00:30 adam Exp $
 
-DISTNAME=	pytest-cov-2.12.0
+DISTNAME=	pytest-cov-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-cov/}
@@ -11,6 +11,7 @@ COMMENT=	Pytest plugin for measuring coverage
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 PYTHON_VERSIONED_DEPENDENCIES=	test
 
