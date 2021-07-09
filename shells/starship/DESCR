@@ -1,0 +1,19 @@
+The minimal, blazing-fast, and infinitely customizable prompt for any
+shell.
+
+Features:
+o Fast: it's fast - really really fast!
+o Customizable: configure every aspect of your prompt.
+o Universal: works on any shell, on any operating system.
+o Intelligent: shows relevant information at a glance.
+o Feature rich: support for all your favorite tools.
+o Easy: quick to install - start using it in minutes.
+
+The following shells are currently supported:
+o Bash
+o Elvish
+o Fish
+o Ion
+o Powershell
+o Tcsh
+o Zsh

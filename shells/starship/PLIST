@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/09 18:51:23 pin Exp $
+bin/starship
+share/examples/starship/auto-completion/_starship
+share/examples/starship/auto-completion/starship.bash
+share/examples/starship/auto-completion/starship.fish

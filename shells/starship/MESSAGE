@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/07/09 18:51:23 pin Exp $
+
+Starship currently supports the following shells:
+Bash, Elvish, Fish, Ion, Powershell, Tcsh, Zsh
+
+If your current shell is not supported (for example, if you use C shell or
+KornShell), you'll need to install a supported shell before you can use it.
+
+===========================================================================
