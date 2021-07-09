@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/06/13 12:04:56 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/09 18:30:29 nia Exp $
 
 DISTNAME=	ocl-icd-2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OCL-dev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,6 +30,9 @@ CONFIGURE_ARGS+=	--enable-custom-vendordir=${PKG_SYSCONFDIR}/OpenCL/vendors
 
 PKGCONFIG_OVERRIDE+=	OpenCL.pc.in
 PKGCONFIG_OVERRIDE+=	ocl-icd.pc.in
+
+MAKE_FLAGS.SunOS+=	USE_MAP_TRUE='#'
+MAKE_FLAGS.SunOS+=	USE_MAP_FALSE=
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
