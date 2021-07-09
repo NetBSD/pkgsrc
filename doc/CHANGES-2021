@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3762 2021/07/09 18:34:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3763 2021/07/09 18:52:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6011,3 +6011,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/suckit version 0.1.2 [pin 2021-07-09]
 	Updated devel/py-ruamel-yaml-clib to 0.2.6 [adam 2021-07-09]
 	Updated devel/py-ruamel-yaml to 0.17.10 [adam 2021-07-09]
+	Added shells/starship version 0.55.0 [pin 2021-07-09]
