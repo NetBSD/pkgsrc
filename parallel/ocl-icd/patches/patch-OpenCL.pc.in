@@ -1,0 +1,13 @@
+$NetBSD: patch-OpenCL.pc.in,v 1.1 2021/07/09 18:30:29 nia Exp $
+
+Link with libpthread in order to unbreak pocl on NetBSD.
+
+--- OpenCL.pc.in.orig	2021-03-30 16:10:38.000000000 +0000
++++ OpenCL.pc.in
+@@ -6,5 +6,5 @@ includedir=@includedir@
+ Name: OpenCL
+ Description: Open Computing Language generic Installable Client Driver Loader
+ Version: @OPENCL_VERSION@
+-Libs: -L${libdir} -lOpenCL
++Libs: -L${libdir} -lOpenCL -pthread
+ Cflags: -I${includedir}
