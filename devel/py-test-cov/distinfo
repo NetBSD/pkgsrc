@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/05/18 15:28:01 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/07/09 20:00:30 adam Exp $
 
-SHA1 (pytest-cov-2.12.0.tar.gz) = 1820d510d3c45e997565ab3247f58ae2e1013baa
-RMD160 (pytest-cov-2.12.0.tar.gz) = 7791f538dfe5a2e2ca54a9fef5c63f3fc7486611
-SHA512 (pytest-cov-2.12.0.tar.gz) = fc94abd8c38ff4015bad4f9f23ee4691f376d436c16f4951021afadfb94dd359a46924d3c7c43dc3193641943f88e0eab04429aa57d26a65bc95622e512639e1
-Size (pytest-cov-2.12.0.tar.gz) = 59596 bytes
+SHA1 (pytest-cov-2.12.1.tar.gz) = d9c0eeb472423bd8407e026d9c425b2f11c05307
+RMD160 (pytest-cov-2.12.1.tar.gz) = bb56cc50c1244d00934b584f0b7b3a9270619c4d
+SHA512 (pytest-cov-2.12.1.tar.gz) = 4c234178febeba1ce93ec0804c3efe181d5d88db9ac02effe14e62eb3b0f7ca1f8757fb4f360551e0d3e35a3b6207892afea85611a49db6c71a2dbaacabc5375
+Size (pytest-cov-2.12.1.tar.gz) = 60395 bytes
