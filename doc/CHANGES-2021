@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3767 2021/07/09 20:25:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3768 2021/07/09 23:16:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6021,3 +6021,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-assume to 2.4.3 [adam 2021-07-09]
 	Updated devel/py-cffi to 1.14.6 [adam 2021-07-09]
 	Updated devel/py-bitarray to 2.2.1 [adam 2021-07-09]
+	Updated fonts/harfbuzz to 2.8.1 [markd 2021-07-09]
+	Updated fonts/harfbuzz-icu to 2.8.1 [markd 2021-07-09]
