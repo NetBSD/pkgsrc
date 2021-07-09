@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.6 2021/05/24 14:22:08 ryoon Exp $
+$NetBSD: patch-meson.build,v 1.7 2021/07/09 21:08:33 schmonz Exp $
 
 * Add NetBSD support.
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
@@ -66,7 +66,15 @@ $NetBSD: patch-meson.build,v 1.6 2021/05/24 14:22:08 ryoon Exp $
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
        # We need to use libiconv if available because mixing libiconv's headers with
        # the system libc does not work.
-@@ -2576,6 +2589,7 @@ if have_system
+@@ -2129,6 +2142,7 @@ common_all = common_ss.apply(config_all,
+ common_all = static_library('common',
+                             build_by_default: false,
+                             sources: common_all.sources() + genh,
++                            implicit_include_directories: false,
+                             dependencies: common_all.dependencies(),
+                             name_suffix: 'fa')
+ 
+@@ -2576,6 +2590,7 @@ if have_system
    summary_info += {'HAX support':       config_all.has_key('CONFIG_HAX')}
    summary_info += {'HVF support':       config_all.has_key('CONFIG_HVF')}
    summary_info += {'WHPX support':      config_all.has_key('CONFIG_WHPX')}
