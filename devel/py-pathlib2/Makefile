@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/10/07 20:30:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/09 19:49:32 adam Exp $
 
-DISTNAME=	pathlib2-2.3.5
+DISTNAME=	pathlib2-2.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathlib2/}
