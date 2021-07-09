@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3763 2021/07/09 18:52:43 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3764 2021/07/09 19:08:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6012,3 +6012,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ruamel-yaml-clib to 0.2.6 [adam 2021-07-09]
 	Updated devel/py-ruamel-yaml to 0.17.10 [adam 2021-07-09]
 	Added shells/starship version 0.55.0 [pin 2021-07-09]
+	Updated devel/py-ordered-set to 4.0.2 [adam 2021-07-09]
+	Updated textproc/py-deepdiff to 5.5.0 [adam 2021-07-09]
