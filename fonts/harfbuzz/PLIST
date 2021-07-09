@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2021/01/01 08:58:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.47 2021/07/09 23:14:12 markd Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -42,13 +42,13 @@ lib/cmake/harfbuzz/harfbuzz-config.cmake
 ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.20704.0
+lib/libharfbuzz-gobject.so.0.20801.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.20704.0
+lib/libharfbuzz-subset.so.0.20801.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.20704.0
+lib/libharfbuzz.so.0.20801.0
 lib/pkgconfig/harfbuzz-gobject.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
@@ -56,21 +56,17 @@ ${PLIST.introspection}share/gir-1.0/HarfBuzz-0.0.gir
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/HarfBuzz.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/HarfBuzz.svg
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/a-clustering-example-for-levels-0-and-1.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/a-simple-shaping-example.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/aat-shaping.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/adding-text-to-the-buffer.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/annotation-glossary.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/building.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch01s03.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch03s02.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch03s03.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch12.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch13.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch14.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch15.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/clusters.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/complex-scripts.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/core-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-custom-functions.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-native-opentype.html
@@ -90,7 +86,6 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-font.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gdi.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-glib.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gobject.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-graphite2.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-icu.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-map.html
@@ -113,6 +108,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz.devhelp2
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/home.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/index.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/install-harfbuzz.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-coretext.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-freetype.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-icu.html
@@ -127,9 +123,9 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/object-model-lifecycle.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/object-model-object-types.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/object-model-user-data.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/object-model.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/opentype-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/opentype-shaping-models.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/pt01.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/pt02.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/reference-manual.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/reordering-in-levels-0-and-1.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right.png
@@ -141,14 +137,16 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-operations.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-plans-and-caching.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-shaper-selection.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/style.css
+${PLIST.doc}share/gtk-doc/html/harfbuzz/terminology.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/text-runs.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/the-distinction-between-levels-0-and-1.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/unicode-character-categories.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/up-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/up.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/user-manual.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/utilities-common-types-apis.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/utilities-ucdn.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/utilities.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/what-does-harfbuzz-do.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/what-harfbuzz-doesnt-do.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/what-is-harfbuzz.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/why-do-i-need-a-shaping-engine.html
