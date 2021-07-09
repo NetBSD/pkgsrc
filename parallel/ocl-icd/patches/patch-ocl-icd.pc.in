@@ -1,0 +1,13 @@
+$NetBSD: patch-ocl-icd.pc.in,v 1.1 2021/07/09 18:30:29 nia Exp $
+
+Link with libpthread in order to unbreak pocl on NetBSD.
+
+--- ocl-icd.pc.in.orig	2021-03-30 16:10:38.000000000 +0000
++++ ocl-icd.pc.in
+@@ -6,5 +6,5 @@ includedir=@includedir@
+ Name: ocl-icd
+ Description: Open Computing Language generic Installable Client Driver support
+ Version: @VERSION@
+-Libs: -L${libdir}
++Libs: -L${libdir} -pthread
+ Cflags: -I${includedir}
