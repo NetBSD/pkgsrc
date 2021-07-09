@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/07/06 01:42:17 scole Exp $
+$NetBSD: distinfo,v 1.8 2021/07/09 19:21:55 scole Exp $
 
-SHA1 (split-thai-2.4.tgz) = 2ab23c31cc2592a1301df6d5567d5f428b034e4a
-RMD160 (split-thai-2.4.tgz) = 8bb6c9a3a3e71d9b6af783599bc8764533e6a50f
-SHA512 (split-thai-2.4.tgz) = 9bb6e21c474b9bc38d8fdd0033425fbcbd7ff5ae54f69a5042f40eef054e65c2e8b7e295edb7287d708b932a2221be7ce710f158ed4fe4c5f0142b86b3dc5d06
-Size (split-thai-2.4.tgz) = 29718 bytes
+SHA1 (split-thai-2.5.tgz) = f4c5ead36715e3db863bbd5f464ef78fdc019b31
+RMD160 (split-thai-2.5.tgz) = 1a343e63a03654ff911cdba2743241e647af2f7d
+SHA512 (split-thai-2.5.tgz) = 3c3eaa5d85fdf13c6adbc09ecd177b535859dfe5a1acff57006bf579d2bec8ca512c2f6080fb2aed80a5da2b47f0fc330721f792b04867079030664cb221177f
+Size (split-thai-2.5.tgz) = 29726 bytes
 SHA1 (thaidict-61607c27732906d36c5bd4d23ecc092f89f53a2b.txt) = 2a2ad127cc279835cb4df04eb69401a0d4927774
 RMD160 (thaidict-61607c27732906d36c5bd4d23ecc092f89f53a2b.txt) = 0a6df7b7dd6ef502c5dd20020e37b2ca1a5514a2
 SHA512 (thaidict-61607c27732906d36c5bd4d23ecc092f89f53a2b.txt) = 88800fe2a453fc40f16ff54c21c852a8ea8e1496e42d5d187e5b5ac0ff58050830fc0816239e4f88cb23ed301f894d1ca52eb4676fd85c13c285cec815ae7c42
