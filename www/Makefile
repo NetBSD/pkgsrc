@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1561 2021/07/05 14:27:29 nia Exp $
+# $NetBSD: Makefile,v 1.1562 2021/07/09 16:13:23 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -992,6 +992,7 @@ SUBDIR+=	squidpurge
 SUBDIR+=	squidview
 SUBDIR+=	squirm
 SUBDIR+=	stagit
+SUBDIR+=	suckit
 SUBDIR+=	surfraw
 SUBDIR+=	swiftsurf
 SUBDIR+=	swiggle
