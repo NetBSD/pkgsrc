@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3761 2021/07/09 16:13:50 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3762 2021/07/09 18:34:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6009,3 +6009,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed graphics/ilmbase [markd 2021-07-08]
 	Updated www/webkit-gtk to 2.32.2 [leot 2021-07-09]
 	Added www/suckit version 0.1.2 [pin 2021-07-09]
+	Updated devel/py-ruamel-yaml-clib to 0.2.6 [adam 2021-07-09]
+	Updated devel/py-ruamel-yaml to 0.17.10 [adam 2021-07-09]
