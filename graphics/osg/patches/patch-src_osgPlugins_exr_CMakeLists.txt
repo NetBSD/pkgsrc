@@ -1,0 +1,12 @@
+$NetBSD: patch-src_osgPlugins_exr_CMakeLists.txt,v 1.1 2021/07/09 10:30:11 markd Exp $
+
+openexr3 fix
+
+--- src/osgPlugins/exr/CMakeLists.txt.orig	2020-01-31 11:03:07.000000000 +0000
++++ src/osgPlugins/exr/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-INCLUDE_DIRECTORIES( ${ILMBASE_INCLUDE_DIR}/OpenEXR )
++INCLUDE_DIRECTORIES( ${ILMBASE_INCLUDE_DIR}/Imath )
+ INCLUDE_DIRECTORIES( ${OPENEXR_INCLUDE_DIR}/OpenEXR )
+ 
+ SET(TARGET_SRC ReaderWriterEXR.cpp )
