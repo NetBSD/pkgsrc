@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/05/13 21:48:05 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/09 18:58:29 adam Exp $
 
 DISTNAME=	cybox-2.1.0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-mixbox>=1.0.2:../../devel/py-mixbox
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mixbox, py-ordered-set
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
