@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2021/05/24 19:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2021/07/09 18:22:56 schmonz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it 
 # is not possible for users who have bootstrapped without OpenSSL
@@ -31,6 +31,11 @@ CONFIGURE_ARGS+=	shared
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
 # No {get,make,set}context support before Darwin 9
 CONFIGURE_ARGS+=	no-async
+.endif
+
+# Fix 64-bit build on at least Mac OS X Snow Leopard
+.if ${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ENV+=		KERNEL_BITS=${ABI}
 .endif
 
 .include "options.mk"
