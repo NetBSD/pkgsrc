@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.16 2020/06/29 13:06:51 wiz Exp $
+$NetBSD: distinfo,v 1.17 2021/07/09 10:50:37 markd Exp $
 
 SHA1 (cppcheck-2.1.tar.bz2) = 3cf4c1bc20d25f8876fdc78cdb19586561dda470
 RMD160 (cppcheck-2.1.tar.bz2) = b35d3e49ab0b833f7a7a5e6dba796702975c8866
 SHA512 (cppcheck-2.1.tar.bz2) = ddf10ea394fc7e862fefb4380e5aa4cdece4d9b135dc959c6e37c6dbdd85c77c4e3f4eac3af1b51415543eb16d3e225694963658530241250835586983dba4ae
 Size (cppcheck-2.1.tar.bz2) = 2480943 bytes
+SHA1 (patch-lib_programmemory.cpp) = 8ff73bfbfc6227697a7c0c06f4ad72b5aff54e24
+SHA1 (patch-lib_symboldatabase.cpp) = fc25ee06f9c0388214547b762c1b24740e4a4bb5
+SHA1 (patch-test_testsymboldatabase.cpp) = 3fbd081cba3ad3d0f0e41df0c78f41d92ba5da77
