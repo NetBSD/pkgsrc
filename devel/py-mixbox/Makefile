@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/11 14:05:20 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/09 18:57:44 adam Exp $
 
 DISTNAME=	mixbox-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-ordered-set-[0-9]*:../../devel/py-ordered-set
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-ordered-set
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
