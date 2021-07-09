@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/07/21 10:59:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/09 19:07:45 adam Exp $
+bin/deep-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
@@ -14,6 +16,9 @@ ${PYSITELIB}/deepdiff/anyset.pyo
 ${PYSITELIB}/deepdiff/base.py
 ${PYSITELIB}/deepdiff/base.pyc
 ${PYSITELIB}/deepdiff/base.pyo
+${PYSITELIB}/deepdiff/commands.py
+${PYSITELIB}/deepdiff/commands.pyc
+${PYSITELIB}/deepdiff/commands.pyo
 ${PYSITELIB}/deepdiff/deephash.py
 ${PYSITELIB}/deepdiff/deephash.pyc
 ${PYSITELIB}/deepdiff/deephash.pyo
