@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/11/07 13:06:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/07/10 05:42:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/simplejson/scanner.pyo
 ${PYSITELIB}/simplejson/tests/__init__.py
 ${PYSITELIB}/simplejson/tests/__init__.pyc
 ${PYSITELIB}/simplejson/tests/__init__.pyo
+${PYSITELIB}/simplejson/tests/_cibw_runner.py
+${PYSITELIB}/simplejson/tests/_cibw_runner.pyc
+${PYSITELIB}/simplejson/tests/_cibw_runner.pyo
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.py
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyc
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyo
