@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/06/05 07:09:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/07/10 05:44:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -224,6 +224,9 @@ ${PYSITELIB}/stripe/api_resources/product.pyo
 ${PYSITELIB}/stripe/api_resources/promotion_code.py
 ${PYSITELIB}/stripe/api_resources/promotion_code.pyc
 ${PYSITELIB}/stripe/api_resources/promotion_code.pyo
+${PYSITELIB}/stripe/api_resources/quote.py
+${PYSITELIB}/stripe/api_resources/quote.pyc
+${PYSITELIB}/stripe/api_resources/quote.pyo
 ${PYSITELIB}/stripe/api_resources/radar/__init__.py
 ${PYSITELIB}/stripe/api_resources/radar/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/radar/__init__.pyo
