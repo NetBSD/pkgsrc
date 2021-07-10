@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 19:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2021/07/10 16:48:00 dholland Exp $
 
 DISTNAME=		rtl-sdr-0.6.0
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=steve-m/}
 GITHUB_PROJECT=		librtlsdr
@@ -22,9 +23,18 @@ CMAKE_ARG_PATH=	..
 PKGCONFIG_OVERRIDE+=	librtlsdr.pc.in
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
+
+
+PAGES=		rtl_adsb.1 rtl_eeprom.1 rtl_fm.1 rtl_power.1 rtl_sdr.1 \
+		rtl_tcp.1 rtl_test.1
+post-install:
+.for i in ${PAGES}
+	${INSTALL} ${WRKSRC}/debian/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
