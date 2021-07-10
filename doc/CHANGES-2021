@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3768 2021/07/09 23:16:03 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3769 2021/07/10 01:45:23 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bitarray to 2.2.1 [adam 2021-07-09]
 	Updated fonts/harfbuzz to 2.8.1 [markd 2021-07-09]
 	Updated fonts/harfbuzz-icu to 2.8.1 [markd 2021-07-09]
+	Updated benchmarks/bonnie++ to 1.98 [markd 2021-07-10]
