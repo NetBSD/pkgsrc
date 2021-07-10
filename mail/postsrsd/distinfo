@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/02/25 15:29:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/07/10 08:41:56 spz Exp $
 
-SHA1 (postsrsd-1.4.tar.gz) = 9b71bc8bbd40dab7d545cd2ec98cf69e4ff50450
-RMD160 (postsrsd-1.4.tar.gz) = 9402c4b9ab9f4bb356a07c67a74fd270c9c56655
-SHA512 (postsrsd-1.4.tar.gz) = e5b9d2091d562030dd8d35117a3c5fb7d99c0613120fc90f74be57af5e88a3fe0ce73a5ce702708047ae37f70c6aedb4a0df018dccbe480048ccb6ed4debbcef
-Size (postsrsd-1.4.tar.gz) = 26555 bytes
+SHA1 (postsrsd-1.11.tar.gz) = 664478941995a05166dc2bc73d744de48ecd8827
+RMD160 (postsrsd-1.11.tar.gz) = 8c94d4fdd5bc47566bcda83e968892204962e6a6
+SHA512 (postsrsd-1.11.tar.gz) = cc041bbbd0277dd416a19e427d63eace3489dc518ebe3a61a022b3e2e159bcb09731a0eb5547eb85bd55887821726b66e828326c109c2ebe26b27dbd062a8d89
+Size (postsrsd-1.11.tar.gz) = 36309 bytes
+SHA1 (patch-postsrsd.c) = 06a9e294279e6ec17491d2b612473948bb92ef4c

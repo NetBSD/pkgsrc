@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/07/10 08:41:56 spz Exp $
+
+When using postsrsd with its rc.d script, at the minimum set
+postsrsd_flags="-dyour.domain"
+in rc.conf. See the manpage for more options.
+
+You must store at least one secret key in ${PKG_SYSCONFDIR}/postsrsd.secret.
+Be careful that no one can guess your secret, because anyone who knows it
+can use your mail server as open relay.
+Each line of ${PKG_SYSCONFDIR}/postsrsd.secret is used as secret.
+The first secret is used for signing and verification, the others for
+verification only.
+
+PostSRSd exposes its functionality via two TCP lookup tables.
+Add or amend the following variables in your main.cf:
+
+    sender_canonical_maps = tcp:localhost:10001
+    sender_canonical_classes = envelope_sender
+    recipient_canonical_maps = tcp:localhost:10002
+    recipient_canonical_classes= envelope_recipient,header_recipient
+
+This will transparently rewrite incoming and outgoing envelope addresses,
+and additionally undo SRS rewrites in the To: header of bounce notifications
+and vacation autoreplies.
+
+===========================================================================
