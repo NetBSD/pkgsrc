@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2021/06/13 18:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.90 2021/07/10 19:06:01 dholland Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=	scmgit-base-[0-9]*
@@ -20,6 +21,7 @@ USE_TOOLS+=		perl:run sh:run msgfmt bash:test
 REPLACE_PERL+=		*.perl */*.perl */*/*.perl
 REPLACE_PERL+=		contrib/hooks/update-paranoid
 
+CFLAGS+=		-DHAVE_DEV_TTY
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
