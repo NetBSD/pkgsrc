@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.9 2020/12/02 01:03:40 gutteridge Exp $
+# $NetBSD: verifypc.sh,v 1.10 2021/07/10 23:02:09 dholland Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -137,6 +137,7 @@ main() {
 
     error=0
     lines=$(sort < ${log} | uniq | awk '
+	NF==2 && $2 == "NOT-FOUND" { print; next }
 	NF==2 {
 	    # make current syntax resemble old syntax
 	    print $1, "(any)", "_", $2;
