@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2021/04/21 13:24:49 adam Exp $
+# $NetBSD: Makefile,v 1.109 2021/07/10 10:25:36 markd Exp $
 
-DISTNAME=	pstoedit-3.70
-PKGREVISION=	23
+DISTNAME=	pstoedit-3.75
 CATEGORIES=	converters graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 
@@ -31,6 +30,11 @@ LIBS.SunOS+=	-ldl
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
+SUBST_CLASSES+=		magick
+SUBST_STAGE.magick=	pre-configure
+SUBST_FILES.magick=	configure
+SUBST_SED.magick+=	-e 's|ImageMagick|Magick|g'
+
 INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
@@ -42,9 +46,7 @@ post-install:
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/GraphicsMagick/buildlink3.mk"
-# ImageMagick's v7 API is incompatible
-#.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
