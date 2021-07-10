@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.300 2021/05/30 23:41:05 khorben Exp $
+# $NetBSD: bootstrap,v 1.301 2021/07/10 15:49:21 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -64,6 +64,7 @@ usage="Usage: $0 "'
     [ --full ]
     [ --gzip-binary-kit <tarball> ]
     [ --help ]
+    [ --machine-arch <arch> ]
     [ --make-jobs <num> ]
     [ --mk-fragment <mk.conf> ]
     [ --pkgdbdir <pkgdbdir> ]
@@ -421,6 +422,7 @@ varbase=
 compiler=""
 cwrappers=auto
 full=no
+march=
 make_jobs=1
 mk_fragment=
 quiet=no
@@ -476,6 +478,9 @@ while [ $# -gt 0 ]; do
 			binary_gzip_kit=`get_optarg "$1"` ;;
 	--gzip-binary-kit)
 			binary_gzip_kit="$2"; shift ;;
+	--machine-arch=*)
+			march=`get_optarg "$1"` ;;
+	--machine-arch)	march="$2"; shift ;;
 	--make-jobs=*)	make_jobs=`get_optarg "$1"` ;;
 	--make-jobs)	make_jobs="$2"; shift ;;
 	--full)		full=yes ;;
@@ -840,6 +845,11 @@ UnixWare)
 	need_sed=yes
 	;;
 esac
+
+# Override if the user explicitly requests it.
+if [ -n "${march}" ]; then
+	machine_arch="${march}"
+fi
 
 # Fixup MACHINE_ARCH to use canonical pkgsrc variants, and support multiarch
 # systems via --abi, setting a default $abi based on MACHINE_ARCH if not set.
