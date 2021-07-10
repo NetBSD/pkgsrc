@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.12 2018/06/01 10:55:52 maya Exp $
+$NetBSD: distinfo,v 1.13 2021/07/10 01:43:57 markd Exp $
 
-SHA1 (bonnie++-1.97.3.tgz) = 47ce25f21146a63bb007ba94e26adb49c4c15de7
-RMD160 (bonnie++-1.97.3.tgz) = 227f0e6b8e643bdd120e013c4f9f35426b3a7475
-SHA512 (bonnie++-1.97.3.tgz) = 44de20b5e46aeaf7f7214766b3c555b8799138f6fd92f87fe9b7dfa6f19815c629d6122c2ef4e4d98a5528dbfcd4c70b3b850eeba05739f6dd20251bf8d7c893
-Size (bonnie++-1.97.3.tgz) = 100166 bytes
+SHA1 (bonnie++-1.98.tgz) = 0a6066c0aca248ce241d0b3637d4642ee9023801
+RMD160 (bonnie++-1.98.tgz) = c70149db5cba5bdf433ca556f72e4e1d98e5a435
+SHA512 (bonnie++-1.98.tgz) = 3cf70be4a20c58c80e29a140ec6d3c3884f1b4101e0fb63da0ea831fe4a5eb4e275bda2ce4eaf7d9c2bfb65742e985249b491cda8bdad85984a62f2fc19756c0
+Size (bonnie++-1.98.tgz) = 100339 bytes
 SHA1 (patch-ab) = 18756a4f3efaf8d478c3edc5be424c099c47e374
 SHA1 (patch-bon__io.cpp) = 2ce4504424c8fbf88ee5d1eb21e3556f541a05f4
+SHA1 (patch-bon_csv2html.cpp) = 98a9336418b38b8ff56824155e370bd294c251fd
 SHA1 (patch-port.h.in) = 089d93456efab27a91d5574ed6b8f5956a734620
