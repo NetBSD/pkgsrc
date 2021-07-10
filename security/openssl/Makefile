@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2021/07/09 18:22:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.273 2021/07/10 15:40:52 jperkin Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it 
 # is not possible for users who have bootstrapped without OpenSSL
@@ -40,7 +40,6 @@ CONFIGURE_ENV+=		KERNEL_BITS=${ABI}
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
 # If the config script cannot guess the host system correctly then we need to
