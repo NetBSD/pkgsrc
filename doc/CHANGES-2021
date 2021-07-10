@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3772 2021/07/10 10:26:55 markd Exp $
+$NetBSD: CHANGES-2021,v 1.3773 2021/07/10 10:27:42 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6030,3 +6030,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-pypika to 0.48.7 [adam 2021-07-10]
 	Updated mail/postsrsd to 1.11 [spz 2021-07-10]
 	Updated graphics/pstoedit to 3.75 [markd 2021-07-10]
+	Updated devel/fossil to 2.16 [js 2021-07-10]
