@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2021/05/27 06:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2021/07/10 23:19:36 dholland Exp $
 
 DISTNAME=		tigervnc-1.11.0
 PKGNAME=		${DISTNAME}.1.20.11
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.11.0
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
 BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
+DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 
 REPLACE_BASH+=	unix/vncserver/vncsession-start.in
 REPLACE_PERL+=	unix/vncserver/vncserver.in
