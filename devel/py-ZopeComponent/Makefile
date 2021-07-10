@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/04/14 05:03:53 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/07/10 05:47:18 adam Exp $
 
-DISTNAME=	zope.component-5.0.0
+DISTNAME=	zope.component-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.c/ZopeC/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.component/}
