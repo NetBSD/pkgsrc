@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.135 2021/04/23 19:20:08 nia Exp $
+# $NetBSD: pyversion.mk,v 1.136 2021/07/10 05:24:33 gutteridge Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -100,7 +100,7 @@ _PYTHON_VERSIONS_ACCEPTED+=	${pv}
 # choose a python version where to add,
 # try to be intelligent
 #
-# if a version is explicitely required, take it
+# if a version is explicitly required, take it
 .if defined(PYTHON_VERSION_REQD)
 # but check if it is acceptable first, error out otherwise
 .  if defined(_PYTHON_VERSION_${PYTHON_VERSION_REQD}_OK)
