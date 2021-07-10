@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3773 2021/07/10 10:27:42 js Exp $
+$NetBSD: CHANGES-2021,v 1.3774 2021/07/10 16:48:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6031,3 +6031,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/postsrsd to 1.11 [spz 2021-07-10]
 	Updated graphics/pstoedit to 3.75 [markd 2021-07-10]
 	Updated devel/fossil to 2.16 [js 2021-07-10]
+	Updated ham/rtl-sdr to 0.6.0nb1 [dholland 2021-07-10]
