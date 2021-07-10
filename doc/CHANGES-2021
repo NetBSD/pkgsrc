@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3770 2021/07/10 05:50:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3771 2021/07/10 08:43:22 spz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.59.0 [adam 2021-07-10]
 	Updated devel/py-ZopeComponent to 5.0.1 [adam 2021-07-10]
 	Updated databases/py-pypika to 0.48.7 [adam 2021-07-10]
+	Updated mail/postsrsd to 1.11 [spz 2021-07-10]
