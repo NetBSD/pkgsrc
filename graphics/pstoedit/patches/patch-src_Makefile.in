@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2016/05/16 20:17:10 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2021/07/10 10:25:36 markd Exp $
 
 Do not force linking with libdl.
 
---- src/Makefile.in.orig	2011-08-27 15:27:38.000000000 +0000
+--- src/Makefile.in.orig	2019-12-08 12:32:08.000000000 +0000
 +++ src/Makefile.in
-@@ -412,7 +412,7 @@ libpstoedit_la_SOURCES = \
- 	genericints.h 				\
- 	version.h
+@@ -576,7 +576,7 @@ libpstoedit_la_SOURCES = \
+ 	psfront.h				\
+ 	genericints.h
  
 -libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB} -ldl -lm
 +libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB} -lm

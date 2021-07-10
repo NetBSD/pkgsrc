@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/05/16 20:17:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/07/10 10:25:36 markd Exp $
 bin/pstoedit
 include/pstoedit/base64writer.h
 include/pstoedit/cppcomp.h
@@ -25,6 +25,7 @@ man/man1/pstoedit.1
 share/aclocal/pstoedit.m4
 share/doc/pstoedit/changelog.htm
 share/doc/pstoedit/pstoedit.htm
+share/doc/pstoedit/pstoedit.pdf
 share/doc/pstoedit/readme.txt
 share/pstoedit/drvhpgl.pencolors
 share/pstoedit/examplefigmap.fmp
