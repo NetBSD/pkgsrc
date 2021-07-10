@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/05/23 19:23:13 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/07/10 23:02:09 dholland Exp $
 #
 
-PKGNAME=	verifypc-1.7
+PKGNAME=	verifypc-1.8
 CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org
