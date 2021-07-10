@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/04/14 05:03:53 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/07/10 05:47:18 adam Exp $
 
-SHA1 (zope.component-5.0.0.tar.gz) = c0d649f5517cd268d3aa17baaaa2c0d991f12688
-RMD160 (zope.component-5.0.0.tar.gz) = 7a515791079c2a4b64cadc0d204fec8857381317
-SHA512 (zope.component-5.0.0.tar.gz) = 88d98795b3bf6c0f2fb4f83928bc50152a1bd36f48f78bc13131da428fdadf1959843237ce7a651c35acad3095c1477b16a0ddfa2a8dc8d61dd4ac89ebb40e49
-Size (zope.component-5.0.0.tar.gz) = 90768 bytes
+SHA1 (zope.component-5.0.1.tar.gz) = 6851814347d674995bf4681f1034aa10d4d7474c
+RMD160 (zope.component-5.0.1.tar.gz) = ed565d05f197bcb4d41937e754134ba82b7e2b76
+SHA512 (zope.component-5.0.1.tar.gz) = fad011816fe5bb869bb2e43e11a66841a6be2abf9002e41207ef1dfe69b1afb5ca486d275daeddf71d2a0e79e1a9c839c4735190dddcd118b675a976bde07a64
+Size (zope.component-5.0.1.tar.gz) = 91130 bytes
