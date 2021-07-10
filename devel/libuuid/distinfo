@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2020/03/12 10:11:34 ryoon Exp $
+$NetBSD: distinfo,v 1.22 2021/07/10 23:11:22 dholland Exp $
 
 SHA1 (util-linux-2.32.1.tar.xz) = de9271fb93fb651d21c027e2efb0cf0ac80f2e9a
 RMD160 (util-linux-2.32.1.tar.xz) = bf61cb460eabcfdb90909dbcfd8e64bb9097ce65
@@ -10,6 +10,7 @@ SHA1 (patch-configure) = 400904ae2e58b717e990ba26c111b90bc8f240d1
 SHA1 (patch-include_c.h) = 4596369e4b742329be513952c66d1fa3705de017
 SHA1 (patch-include_ttyutils.h) = fa2b253d568e5aface99727c397d3c4c892b2c93
 SHA1 (patch-lib_ismounted.c) = 11f5148020dba2a22e1fbe4882fe423dfb11ad73
+SHA1 (patch-lib_pager.c) = 3d4b65f9ccb6437bcc0777634660b5ae3150d14e
 SHA1 (patch-lib_randutils.c) = 422e94d9bdaf6a77894b79d67285fd8a0cb1d05a
 SHA1 (patch-libblkid_docs_Makefile.in) = 97a1559dad77e32d78bd504d8d3523b9cc403c36
 SHA1 (patch-libfdisk_docs_Makefile.in) = def97b85e8760cd18af736ab331e2f476f0c9c67
