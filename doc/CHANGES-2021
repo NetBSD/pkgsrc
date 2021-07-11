@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3782 2021/07/11 05:22:45 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3783 2021/07/11 10:37:21 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6040,3 +6040,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/marco to 1.24.2nb1 [gutteridge 2021-07-11]
 	Updated archivers/arqiver to 0.8.0 [pin 2021-07-11]
 	Updated www/hackernews-tui to 0.7.3 [pin 2021-07-11]
+	Updated www/py-moin to 1.9.11 [bsiegert 2021-07-11]
