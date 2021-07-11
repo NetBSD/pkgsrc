@@ -1,9 +1,9 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2021/06/21 13:54:03 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2021/07/11 05:22:25 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.6.3
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.41
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.42
 CARGO_CRATE_DEPENDS+=	array-macro-1.0.5
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
@@ -24,7 +24,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
 CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
 CARGO_CRATE_DEPENDS+=	cursive-0.16.3
-CARGO_CRATE_DEPENDS+=	cursive-aligned-view-0.4.0
+CARGO_CRATE_DEPENDS+=	cursive-aligned-view-0.5.0
 CARGO_CRATE_DEPENDS+=	cursive-async-view-0.5.0
 CARGO_CRATE_DEPENDS+=	cursive_buffered_backend-0.5.0
 CARGO_CRATE_DEPENDS+=	cursive_core-0.2.2
