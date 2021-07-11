@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2021/05/02 10:24:53 nia Exp $
+# $NetBSD: Makefile,v 1.41 2021/07/11 00:27:10 gutteridge Exp $
 
-PYTHON_VERSIONS_ACCEPTED=	27
-
-PKGREVISION= 7
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-applets-${VERSION}
+DISTNAME=	mate-applets-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE panel applets
-
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/mate-applets
@@ -43,9 +37,11 @@ PLIST.batt=	yes
 .include "../../x11/mate-settings-daemon/buildlink3.mk"
 .include "../../misc/libmateweather/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
-.include "../../fonts/gucharmap/buildlink3.mk"
+# XXX The charpick applet includes optional gucharmap support, but the version
+# presently in pkgsrc (2.32.1) is too old to be accepted, so its presence is
+# ignored.
+#.include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
@@ -53,8 +49,4 @@ PLIST.batt=	yes
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
-.include "../../x11/libxklavier/buildlink3.mk"
-PY_PATCHPLIST=	yes
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
