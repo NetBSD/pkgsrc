@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/04/29 03:06:02 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2021/07/11 03:32:48 gutteridge Exp $
 
 SHA1 (marco-1.24.2.tar.xz) = 387a367a11f20b4cc6357aff6154bd654e861f87
 RMD160 (marco-1.24.2.tar.xz) = 913782192c1e778c8381ebbf5a3101067cced584
@@ -9,3 +9,4 @@ SHA1 (patch-src_core_delete.c) = ace180e80d63bbf0a35abc18bf6501061e09d158
 SHA1 (patch-src_core_keybindings.c) = 98235897926d017994e1fa01c754419d14432b08
 SHA1 (patch-src_core_main.c) = 2ca845168633a2856a86453407b3a165f66e8863
 SHA1 (patch-src_core_window-props.c) = 23d7c68e3e2c89004c610046378bd855d1d6358a
+SHA1 (patch-src_ui_draw-workspace.c) = e48653b9143e14a3ba9ed2582dee10751db30278
