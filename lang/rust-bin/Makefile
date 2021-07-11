@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/06/13 12:25:02 he Exp $
+# $NetBSD: Makefile,v 1.24 2021/07/11 22:25:09 he Exp $
 
 DISTNAME=	rust-1.52.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -90,36 +90,39 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 
 # NetBSD provided binaries:
 
+# Suffix for re-generated binary bootstrap
+NBSUF=nb1
+
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	armv7-unknown-netbsd-eabihf
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i586-unknown-netbsd
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	powerpc-unknown-netbsd90
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
 .  if !empty(OS_VERSION:M8.*)
 RUST_ARCH:=	powerpc-unknown-netbsd
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
@@ -127,7 +130,7 @@ SITES.${DN}-${RUST_ARCH}.tar.gz= \
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
-DN:=		${DISTNAME}nb${PKGREVISION}
+DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
