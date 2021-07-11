@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3780 2021/07/11 03:33:02 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3781 2021/07/11 05:21:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/verifypc to 1.8 [dholland 2021-07-10]
 	Updated x11/mate-applets to 1.24.1 [gutteridge 2021-07-11]
 	Updated wm/marco to 1.24.2nb1 [gutteridge 2021-07-11]
+	Updated archivers/arqiver to 0.8.0 [pin 2021-07-11]
