@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20856 2021/07/11 10:37:21 bsiegert Exp $
+$NetBSD: TODO,v 1.20857 2021/07/11 12:16:15 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -506,7 +506,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aewm++-1.1.5
 	o afbinit-1.0.1
 	o afl++-3.12c
-	o afterstep-2.2.12
 	o aide-0.16
 	o akonadi-16.08.1
 	o album-4.17
