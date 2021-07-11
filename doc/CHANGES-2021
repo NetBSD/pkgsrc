@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3784 2021/07/11 12:16:15 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.3785 2021/07/11 13:18:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6042,3 +6042,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.7.3 [pin 2021-07-11]
 	Updated www/py-moin to 1.9.11 [bsiegert 2021-07-11]
 	Updated wm/afterstep to 2.2.12 [bsiegert 2021-07-11]
+	Updated misc/libreoffice to 7.1.4.2 [ryoon 2021-07-11]
