@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2013/04/07 10:36:53 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/07/11 12:13:17 bsiegert Exp $
 bin/ASFileBrowser
+bin/ASMount
 bin/ASRun
 bin/ASWallpaper
 bin/Animate
@@ -209,6 +210,7 @@ share/afterstep/applications/system.desktop
 share/afterstep/applications/terminals.desktop
 share/afterstep/applications/text_editors.desktop
 share/afterstep/applications/xtools.desktop
+share/afterstep/asmount
 share/afterstep/autoexec
 share/afterstep/backgrounds/.Cell
 share/afterstep/backgrounds/.CloudsOfDoubt
@@ -507,6 +509,9 @@ share/afterstep/desktop/buttons/default-switchwindow-dark
 share/afterstep/desktop/buttons/default-switchwindow-dark-pressed
 share/afterstep/desktop/buttons/default-switchwindow-light
 share/afterstep/desktop/buttons/default-switchwindow-light-pressed
+share/afterstep/desktop/buttons/eject-red
+share/afterstep/desktop/buttons/eject-red-pressed
+share/afterstep/desktop/buttons/eject-white
 share/afterstep/desktop/buttons/fuf-iconify-pressed.xpm
 share/afterstep/desktop/buttons/fuf-iconify.xpm
 share/afterstep/desktop/buttons/fuf-kill-pressed.xpm
@@ -533,6 +538,8 @@ share/afterstep/desktop/buttons/glass-switchwindow
 share/afterstep/desktop/buttons/glass-switchwindow-pressed
 share/afterstep/desktop/buttons/menu_smooth
 share/afterstep/desktop/buttons/minmax_smooth
+share/afterstep/desktop/buttons/mount-green-pressed
+share/afterstep/desktop/buttons/mount-white
 share/afterstep/desktop/buttons/qnx-close
 share/afterstep/desktop/buttons/qnx-close-pressed
 share/afterstep/desktop/buttons/qnx-iconify
@@ -555,6 +562,8 @@ share/afterstep/desktop/buttons/unity-maxmin
 share/afterstep/desktop/buttons/unity-menu
 share/afterstep/desktop/buttons/unity-shade
 share/afterstep/desktop/buttons/unity-switchwindow
+share/afterstep/desktop/buttons/unmount-red-pressed
+share/afterstep/desktop/buttons/unmount-white
 share/afterstep/desktop/cursors/cursor.xbm
 share/afterstep/desktop/cursors/cursor.xbm.mask
 share/afterstep/desktop/cursors/iconify.xbm
@@ -583,6 +592,9 @@ share/afterstep/desktop/fonts/DefaultSans.ttf
 share/afterstep/desktop/fonts/DefaultSansBold.ttf
 share/afterstep/desktop/fonts/DefaultSansBoldOblique.ttf
 share/afterstep/desktop/fonts/DefaultSansOblique.ttf
+share/afterstep/desktop/icons/128x128/Logout
+share/afterstep/desktop/icons/128x128/MusicalNote
+share/afterstep/desktop/icons/128x128/SpeechBubble
 share/afterstep/desktop/icons/3_dots.xpm
 share/afterstep/desktop/icons/3dpaint.xpm
 share/afterstep/desktop/icons/ASBBlockBlue.xpm
@@ -752,6 +764,7 @@ share/afterstep/desktop/icons/dots/arrow_tiny
 share/afterstep/desktop/icons/dots/bar_medium
 share/afterstep/desktop/icons/dots/circle_medium
 share/afterstep/desktop/icons/dots/close_smooth_white
+share/afterstep/desktop/icons/dots/eject
 share/afterstep/desktop/icons/dots/lined_arrow
 share/afterstep/desktop/icons/dots/maxmin_unity
 share/afterstep/desktop/icons/dots/menu_medium
@@ -767,6 +780,7 @@ share/afterstep/desktop/icons/dots/shade_smooth_white
 share/afterstep/desktop/icons/dots/shade_unity
 share/afterstep/desktop/icons/dots/square_medium
 share/afterstep/desktop/icons/dots/square_small
+share/afterstep/desktop/icons/dots/synchronize
 share/afterstep/desktop/icons/dots/triangle_medium
 share/afterstep/desktop/icons/dots/triangle_squared_medium
 share/afterstep/desktop/icons/dots/triangle_squared_small
@@ -868,6 +882,7 @@ share/afterstep/desktop/icons/logos/XWindow3
 share/afterstep/desktop/icons/logos/Xmms
 share/afterstep/desktop/icons/logos/aterm
 share/afterstep/desktop/icons/logos/aterm2
+share/afterstep/desktop/icons/logos/aterm3
 share/afterstep/desktop/icons/logos/gimp
 share/afterstep/desktop/icons/logos/konqueror
 share/afterstep/desktop/icons/logos/linux-penguin
@@ -896,6 +911,7 @@ share/afterstep/desktop/icons/mini/GNOMESearchTool
 share/afterstep/desktop/icons/mini/Info
 share/afterstep/desktop/icons/mini/KDESearchTool
 share/afterstep/desktop/icons/mini/KDEWallpapers
+share/afterstep/desktop/icons/mini/Logout
 share/afterstep/desktop/icons/mini/Menu
 share/afterstep/desktop/icons/mini/Mona
 share/afterstep/desktop/icons/mini/MoonInMonitor
@@ -903,8 +919,10 @@ share/afterstep/desktop/icons/mini/Mouse
 share/afterstep/desktop/icons/mini/Puzzle
 share/afterstep/desktop/icons/mini/Recycler
 share/afterstep/desktop/icons/mini/RemoteControl
+share/afterstep/desktop/icons/mini/Shutdown
 share/afterstep/desktop/icons/mini/Stopsign
 share/afterstep/desktop/icons/mini/Windows
+share/afterstep/desktop/icons/mini/ZZZ
 share/afterstep/desktop/icons/mini/applications
 share/afterstep/desktop/icons/mini/feel
 share/afterstep/desktop/icons/mini/look
@@ -1010,7 +1028,6 @@ share/afterstep/desktop/icons/normal/House2
 share/afterstep/desktop/icons/normal/House3
 share/afterstep/desktop/icons/normal/IRC
 share/afterstep/desktop/icons/normal/IRCTransparent
-share/afterstep/desktop/icons/normal/IRC_Transp
 share/afterstep/desktop/icons/normal/Info
 share/afterstep/desktop/icons/normal/InkJetPrinter
 share/afterstep/desktop/icons/normal/JFK
@@ -1029,6 +1046,7 @@ share/afterstep/desktop/icons/normal/Lightbulb
 share/afterstep/desktop/icons/normal/Lightswitch
 share/afterstep/desktop/icons/normal/LockClosed
 share/afterstep/desktop/icons/normal/LockOpen
+share/afterstep/desktop/icons/normal/Logout
 share/afterstep/desktop/icons/normal/MCInMonitor
 share/afterstep/desktop/icons/normal/MCInMonitorShadow
 share/afterstep/desktop/icons/normal/MagnifyingGlass
@@ -1351,6 +1369,7 @@ share/afterstep/doc/html/winlist_intro.html
 share/afterstep/doc/html/winlist_sticky.html
 share/afterstep/doc/html/winlist_unfocused.html
 share/afterstep/feels/feel.DEFAULT
+share/afterstep/feels/feel.Debian
 share/afterstep/feels/feel.ICCCM
 share/afterstep/gtkrc-2.0_template
 share/afterstep/gtkrc_template
@@ -1412,31 +1431,13 @@ share/afterstep/start/1_Desktop/Menu_Options/4_txtitemsind
 share/afterstep/start/1_Desktop/Menu_Options/5_recentitems
 share/afterstep/start/1_Desktop/Pictures/.include
 share/afterstep/start/1_Desktop/Pictures/AfterStep_Images/.include
-share/afterstep/start/1_Desktop/Pictures/GNOME_Images/.include
-share/afterstep/start/1_Desktop/Pictures/GNOME_Images/GNOME_Branded/.include
-share/afterstep/start/1_Desktop/Pictures/GNOME_Images/GNOME_Nature/.include
-share/afterstep/start/1_Desktop/Pictures/GNOME_Images/GNOME_Tiles/.include
-share/afterstep/start/1_Desktop/Pictures/GNOME_Images/GNOME_Translucent/.include
-share/afterstep/start/1_Desktop/Pictures/KDE_Wallpapers/.include
-share/afterstep/start/1_Desktop/Pictures/Nautilus_Patterns/.include
 share/afterstep/start/1_Desktop/Pictures/Other/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/For-E/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_01/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_02/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_03/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_04/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_05/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_06/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_07/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_08/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_09/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_10/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_11/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_12/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_13/.include
-share/afterstep/start/1_Desktop/Pictures/Propaganda_Images/Volume_14/.include
 share/afterstep/start/1_Desktop/Pictures/User_Backgrounds/.include
+share/afterstep/start/1_Desktop/Pictures/Web/Digital_Blasphemy
+share/afterstep/start/1_Desktop/Pictures/Web/Mountains
+share/afterstep/start/1_Desktop/Pictures/Web/Vladstudio_com
+share/afterstep/start/1_Desktop/Pictures/Web/Walk_In_Clouds
+share/afterstep/start/1_Desktop/Pictures/Web/Water
 share/afterstep/start/1_Desktop/Theme/.include
 share/afterstep/start/1_Desktop/X_Tools/.include
 share/afterstep/start/1_Desktop/X_Tools/Mouse/.include
@@ -1457,6 +1458,10 @@ share/afterstep/start/3_Screen_savers/.include
 share/afterstep/start/3_Screen_savers/With_password/.include
 share/afterstep/start/3_Screen_savers/Without_password/.include
 share/afterstep/start/3_System_Settings/.include
+share/afterstep/start/3_System_Settings/Gnome_Hardware_Settings/.include
+share/afterstep/start/3_System_Settings/Gnome_Settings_Panel/.include
+share/afterstep/start/3_System_Settings/Gnome_Settings_Panel/Other/.include
+share/afterstep/start/3_System_Settings/XFCE_Settings/.include
 share/afterstep/start/3_run
 share/afterstep/start/4_Windows/.include
 share/afterstep/start/4_Windows/0_Arrange/.include
@@ -1473,10 +1478,17 @@ share/afterstep/start/4_Windows/4_delete
 share/afterstep/start/4_Windows/5_destroy
 share/afterstep/start/4_Windows/6_winprop
 share/afterstep/start/4_Windows/7_fullscreen
+share/afterstep/start/4_xterminal
 share/afterstep/start/4_zzznop
 share/afterstep/start/5_Quit/.include
 share/afterstep/start/5_Quit/0_close
+share/afterstep/start/5_Quit/0_nop
+share/afterstep/start/5_Quit/1_shutdown
+share/afterstep/start/5_Quit/2_hibernate
+share/afterstep/start/5_Quit/2_suspend
+share/afterstep/start/5_Quit/3_nop
 share/afterstep/start/5_Quit/3_restartsession
+share/afterstep/start/5_Quit/4_quit
 share/afterstep/start/7_About_AfterStep/.include
 share/afterstep/themes/DEFAULT.tar.gz
 share/afterstep/themes/Default
@@ -1484,4 +1496,3 @@ share/afterstep/wharf
 share/afterstep/winlist
 share/afterstep/wintabs
 share/gnome/wm-properties/AfterStep.desktop
-share/xsessions/AfterStep.desktop
