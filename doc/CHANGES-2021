@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3785 2021/07/11 13:18:37 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3786 2021/07/11 14:19:01 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6043,3 +6043,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-moin to 1.9.11 [bsiegert 2021-07-11]
 	Updated wm/afterstep to 2.2.12 [bsiegert 2021-07-11]
 	Updated misc/libreoffice to 7.1.4.2 [ryoon 2021-07-11]
+	Updated textproc/lowdown to 0.8.5 [fcambus 2021-07-11]
