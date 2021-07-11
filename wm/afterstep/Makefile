@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2021/05/24 19:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2021/07/11 12:13:17 bsiegert Exp $
 
-DISTNAME=	AfterStep-2.2.11
+DISTNAME=	AfterStep-2.2.12
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	30
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,8 @@ COMMENT=	Window manager based on the look and feel of the NeXTStep interface
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
+
+WRKSRC=		${WRKDIR}/afterstep-devel-${PKGVERSION_NOREV}
 
 USE_TOOLS+=		bash:run gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
@@ -35,6 +36,7 @@ MAKE_ENV+=	EXTRA_LIBRARIES=-lexecinfo
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
