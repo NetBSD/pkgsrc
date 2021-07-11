@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2016/05/01 19:30:58 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2021/07/11 12:13:17 bsiegert Exp $
 
 Don't declare own errno.
 
---- src/afterstep/module.c.orig	2005-12-06 12:58:56.000000000 +0000
+--- src/afterstep/module.c.orig	2013-05-01 13:34:11.000000000 +0000
 +++ src/afterstep/module.c
 @@ -33,6 +33,7 @@
  
@@ -12,19 +12,19 @@ Don't declare own errno.
  #include <fcntl.h>
  #include <unistd.h>
  #include <sys/file.h>
-@@ -380,7 +381,6 @@ LOCAL_DEBUG_OUT( "deleting buffer %p sen
- int
- FlushQueue (module_t *module)
- {
--	extern int    errno;
-     int           fd;
-     register struct queue_buff_struct *curr;
+@@ -415,7 +416,6 @@ static void DeleteQueueBuff (module_t * 
  
-@@ -471,7 +471,6 @@ FlushAllQueues()
+ int FlushQueue (module_t * module)
+ {
+-	extern int errno;
+ 	int fd;
+ 	register struct queue_buff_struct *curr;
+ LOCAL_DEBUG_OUT ("module \"%s\", active= %d, out_queue = %p", module->name, module->active, module->output_queue);
+@@ -500,7 +500,6 @@ void FlushAllQueues ()
  
  
  
 -#include <sys/errno.h>
  static inline int
- PositiveWrite (unsigned int channel, send_data_type *ptr, int size)
+ PositiveWrite (unsigned int channel, send_data_type * ptr, int size)
  {
