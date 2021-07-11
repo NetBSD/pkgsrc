@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3781 2021/07/11 05:21:41 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3782 2021/07/11 05:22:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6039,3 +6039,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/mate-applets to 1.24.1 [gutteridge 2021-07-11]
 	Updated wm/marco to 1.24.2nb1 [gutteridge 2021-07-11]
 	Updated archivers/arqiver to 0.8.0 [pin 2021-07-11]
+	Updated www/hackernews-tui to 0.7.3 [pin 2021-07-11]
