@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3778 2021/07/10 23:02:28 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.3779 2021/07/11 00:28:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6036,3 +6036,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/openntpd to 6.0p1nb1 [dholland 2021-07-10]
 	Updated devel/git-base to 2.32.0nb1 [dholland 2021-07-10]
 	Updated pkgtools/verifypc to 1.8 [dholland 2021-07-10]
+	Updated x11/mate-applets to 1.24.1 [gutteridge 2021-07-11]
