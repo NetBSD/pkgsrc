@@ -1,11 +1,11 @@
-$NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
+$NetBSD: patch-libAfterImage_import.c,v 1.4 2021/07/11 12:13:17 bsiegert Exp $
 
 - use ctype.h correctly
 - fix for png-1.5
 
---- libAfterImage/import.c.orig	2010-09-23 20:57:57.000000000 +0000
+--- libAfterImage/import.c.orig	2013-05-01 13:34:11.000000000 +0000
 +++ libAfterImage/import.c
-@@ -221,7 +221,7 @@ char *locate_image_file_in_path( const c
+@@ -216,7 +216,7 @@ char *locate_image_file_in_path( const c
  		if( realfilename == NULL )
  		{ /* let's try and see if we have subimage number appended */
  			for( i = filename_len-1 ; i > 0; i-- )
@@ -14,7 +14,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  					break;
  			if( i < filename_len-1 && i > 0 )
  				if( tmp[i] == '.' )                 /* we have possible subimage number */
-@@ -878,7 +878,7 @@ load_asimage_list_entry_data( ASImageLis
+@@ -1023,7 +1023,7 @@ load_asimage_list_entry_data( ASImageLis
  		int i = entry->buffer->size ; 
  		register char *ptr = entry->buffer->data ;
  		while ( --i >= 0 )	
@@ -23,7 +23,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  				break;
  		binary = (i >= 0);				
  	}else
-@@ -980,7 +980,7 @@ check_image_type( const char *realfilena
+@@ -1125,7 +1125,7 @@ check_image_type( const char *realfilena
  				type = ASIT_Gif;
  			else if (head[0] == head[1] && (head[0] == 'I' || head[0] == 'M'))
  				type = ASIT_Tiff;
@@ -32,7 +32,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  				type = (head[1]!='5' && head[1]!='6')?ASIT_Pnm:ASIT_Ppm;
  			else if (head[0] == 0xa && head[1] <= 5 && head[2] == 1)
  				type = ASIT_Pcx;
-@@ -1014,13 +1014,13 @@ check_image_type( const char *realfilena
+@@ -1159,13 +1159,13 @@ check_image_type( const char *realfilena
  				int i ;
  
  				type = ASIT_XMLScript ;
@@ -48,7 +48,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  					}
  					else if( head[i] != '<' )
  						type = ASIT_Unknown ;
-@@ -1030,7 +1030,7 @@ check_image_type( const char *realfilena
+@@ -1175,7 +1175,7 @@ check_image_type( const char *realfilena
  					}else if( mystrncasecmp( &(head[i]), "<!DOCTYPE ", 10 ) == 0 ) 
  					{	
  						type = ASIT_XML ;
@@ -57,7 +57,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  						if( i < bytes_in ) 
  						{
  					 		if( mystrncasecmp( &(head[i]), "afterstep-image-xml", 19 ) == 0 ) 			
-@@ -1044,9 +1044,9 @@ check_image_type( const char *realfilena
+@@ -1189,9 +1189,9 @@ check_image_type( const char *realfilena
  						while( bytes_in > 0 && type == ASIT_XMLScript )
  						{
  							while( ++i < bytes_in )
@@ -69,16 +69,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  									{
  										type = ASIT_Unknown ;
  										break ;
-@@ -1251,7 +1251,7 @@ png2ASImage_int( void *data, png_rw_ptr 
- 			 * the normal method of doing things with libpng).  REQUIRED unless you
- 			 * set up your own error handlers in the png_create_read_struct() earlier.
- 			 */
--			if ( !setjmp (png_ptr->jmpbuf))
-+			if ( !setjmp (png_jmpbuf(png_ptr)))
- 			{
- 				ASFlagType rgb_flags = ASStorage_RLEDiffCompress|ASStorage_32Bit ;
- 
-@@ -1447,8 +1447,8 @@ png2ASImage_int( void *data, png_rw_ptr 
+@@ -1592,8 +1592,8 @@ png2ASImage_int( void *data, png_rw_ptr 
  		}
  		/* clean up after the read, and free any memory allocated - REQUIRED */
  		png_destroy_read_struct (&png_ptr, &info_ptr, (png_infopp) NULL);
@@ -89,16 +80,7 @@ $NetBSD: patch-libAfterImage_import.c,v 1.3 2016/05/01 19:26:35 dholland Exp $
  	}
  
  #if defined(LOCAL_DEBUG) && !defined(NO_DEBUG_OUTPUT)
-@@ -1468,7 +1468,7 @@ typedef struct ASImPNGReadBuffer
- 
- static void asim_png_read_data(png_structp png_ptr, png_bytep data, png_size_t length)
- {
--   ASImPNGReadBuffer *buf = (ASImPNGReadBuffer *)png_ptr->io_ptr;
-+   ASImPNGReadBuffer *buf = (ASImPNGReadBuffer *)png_get_io_ptr(png_ptr);
-    memcpy(data, buf->buffer, length);
-    buf->buffer += length;
- }
-@@ -1828,8 +1828,8 @@ ppm2ASImage( const char * path, ASImageI
+@@ -1973,8 +1973,8 @@ ppm2ASImage( const char * path, ASImageI
  						break;
  					}
  					width = atoi( &(buffer[i]) );
