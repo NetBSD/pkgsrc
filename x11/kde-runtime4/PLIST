@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/06/20 07:35:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/07/11 20:53:12 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -36,7 +36,6 @@ lib/kconf_update_bin/phonon_deviceuids_update
 lib/kde4/comicbookthumbnail.so
 ${PLIST.x11}lib/kde4/cursorthumbnail.so
 lib/kde4/djvuthumbnail.so
-lib/kde4/exrthumbnail.so
 lib/kde4/fixhosturifilter.so
 lib/kde4/htmlthumbnail.so
 lib/kde4/imagethumbnail.so
@@ -813,7 +812,6 @@ share/kde4/services/device_automounter_kcm.desktop
 share/kde4/services/directorythumbnail.desktop
 share/kde4/services/djvuthumbnail.desktop
 share/kde4/services/emoticons.desktop
-share/kde4/services/exrthumbnail.desktop
 share/kde4/services/filetypes.desktop
 share/kde4/services/finger.protocol
 ${PLIST.md5}share/kde4/services/fish.protocol
