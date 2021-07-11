@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3786 2021/07/11 14:19:01 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3787 2021/07/11 21:24:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/afterstep to 2.2.12 [bsiegert 2021-07-11]
 	Updated misc/libreoffice to 7.1.4.2 [ryoon 2021-07-11]
 	Updated textproc/lowdown to 0.8.5 [fcambus 2021-07-11]
+	Updated graphics/pastel to 0.8.1 [pin 2021-07-11]
