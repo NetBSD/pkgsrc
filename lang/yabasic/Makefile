@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2021/02/01 10:35:00 fcambus Exp $
+# $NetBSD: Makefile,v 1.37 2021/07/12 13:17:51 fcambus Exp $
 
-DISTNAME=		yabasic-2.89.1
+DISTNAME=		yabasic-2.90.1
 CATEGORIES=		lang
-MASTER_SITES=		http://www.yabasic.de/download/
+MASTER_SITES=		https://2484.de/yabasic/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.yabasic.de/
+HOMEPAGE=		https://2484.de/yabasic/
 COMMENT=		Yet another Basic for Unix and Windows
 LICENSE=		mit
 
