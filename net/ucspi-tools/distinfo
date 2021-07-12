@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/11/30 12:41:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/07/12 21:32:49 schmonz Exp $
 
-SHA1 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 9c090e9105e9211e89b033b11a804999c1de06c1
-RMD160 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 634ff34878c201bb9d8d72dca5ff544c717beb83
-SHA512 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = f9d241dc63b2c8aa3f1b51a8c9f85c9408e6f888e1d02a7504c8654eb8fa2161842319683325c0a0f74c4ca0247584dd293aa07ffbcb1e4b81c02c63058c6dec
-Size (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 21718 bytes
-SHA1 (patch-Makefile) = 03cb1edea0b8fa182833b3c411c35f3ecc74e74b
-SHA1 (patch-config.mk) = d846758b9e3449b469c1b8a110bd9650ccda8321
-SHA1 (patch-fdprintf.c) = 665c1c8c99a6dd31bc227aa1f9ab4abb75fb693d
-SHA1 (patch-fdprintf.h) = 68d57e66c0ce75bd0a9cdec9c5135474ff7b4cfe
-SHA1 (patch-httppc.c) = 4c2c36a8b7ad4755aba2be2aaea0c9e4c045aa45
+SHA1 (ucspi-tools-1.7-329110310c71a08a942b4a36613b6db090df65f4.tar.gz) = 5e7c0c4eeacb5e3c3519676b7fd3026066528186
+RMD160 (ucspi-tools-1.7-329110310c71a08a942b4a36613b6db090df65f4.tar.gz) = bcf81a2685756e1f5e1ae1aa607c5413dc30f694
+SHA512 (ucspi-tools-1.7-329110310c71a08a942b4a36613b6db090df65f4.tar.gz) = 233464655db10580e61b094c619bb5d24ac325729c5a1f68773dfe1be862e760a1f8cd1b64171d9f419db56d56b9e2ac8597508f352ebc8cab928a2916f3fdce
+Size (ucspi-tools-1.7-329110310c71a08a942b4a36613b6db090df65f4.tar.gz) = 24083 bytes
+SHA1 (patch-Makefile) = 2ac060090aac2052a963f9726663b40aee369823
+SHA1 (patch-https.c) = 463319786e06e987262b0d3a3e6d7112ff115276
+SHA1 (patch-tests.mk) = 4d8444121da5c07527ed1939d86e2303cc99e49d
 SHA1 (patch-tlsc.c) = 3ae01739e614b2b8008e7bc4d5b01130edec2ff9

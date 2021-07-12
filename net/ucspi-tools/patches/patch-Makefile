@@ -1,51 +1,15 @@
-$NetBSD: patch-Makefile,v 1.4 2020/11/30 12:41:41 nia Exp $
+$NetBSD: patch-Makefile,v 1.5 2021/07/12 21:32:49 schmonz Exp $
 
 Make sure openssl headers get found.
-Use LDFLAGS so pkgsrc library paths are picked up.
-Not all systems have dprintf(); use ours for portability.
 
---- Makefile.orig	2016-09-21 22:05:29.000000000 +0000
+--- Makefile.orig	2021-07-03 15:04:54.000000000 +0000
 +++ Makefile
-@@ -5,14 +5,16 @@ TARBALL := ${DISTNAME}.tar.gz
+@@ -3,7 +3,7 @@ include config.mk
+ DISTNAME := ucspi-tools-${VERSION}
+ TARBALL := ${DISTNAME}.tar.gz
  
- DEFINES += -D_XOPEN_SOURCE=700
- DEFINES += -D_BSD_SOURCE
-+DEFINES += -Ddprintf=fdprintf
- CFLAGS_SSL=`pkg-config --cflags libssl`
 -LIBS_TLS ?= -ltls `pkg-config --libs libssl`
-+CFLAGS += $(CFLAGS_SSL)
 +LIBS_TLS ?= -ltls `pkg-config --libs libssl openssl`
- LIBS_SSL = `pkg-config --libs libssl openssl`
  
  .PHONY: all test clean install
  .SUFFIXES: .c .o
- 
--all: sockc tlsc tlss httppc httpc
-+all: sockc tlsc tlss httppc
- 
- # SOCKS 5
- sockc: sockc.o
-@@ -28,18 +30,18 @@ http_parser.o: http_parser.h
- httpc: httpc.o http_parser.o
- 	$(CC) -o $@ httpc.o http_parser.o
- 
--httppc: httppc.o http_parser.o
--	$(CC) -o $@ httppc.o http_parser.o
-+httppc: httppc.o http_parser.o fdprintf.o
-+	$(CC) -o $@ httppc.o http_parser.o fdprintf.o
- 
- # SSL/TLS
- tlsc: tlsc.o
--	$(CC) -o tlsc tlsc.o $(LIBS_TLS) $(LIBS_BSD)
-+	$(CC) $(LDFLAGS) -o tlsc tlsc.o $(LIBS_TLS) $(LIBS_BSD)
- 
- tlss: tlss.o
--	$(CC) -o tlss tlss.o $(LIBS_TLS) $(LIBS_BSD)
-+	$(CC) $(LDFLAGS) -o tlss tlss.o $(LIBS_TLS) $(LIBS_BSD)
- 
- sslc: sslc.o
--	$(CC) -o sslc sslc.o $(LIBS_SSL) $(LIBS_BSD)
-+	$(CC) $(LDFLAGS) -o sslc sslc.o $(LIBS_SSL) $(LIBS_BSD)
- 
- sslc.o: sslc.c
- 	$(CC) $(CFLAGS) $(DEFINES) `pkg-config --cflags libssl` -o $@ -c sslc.c
