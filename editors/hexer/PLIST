@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/12 13:32:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/12 22:45:34 nia Exp $
 bin/hexer
-man/hexer.1
+man/man1/hexer.1
