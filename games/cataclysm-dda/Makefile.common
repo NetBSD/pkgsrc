@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.5 2020/12/19 10:54:28 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/07/12 20:54:02 nia Exp $
 # used by games/cataclysm-dda/Makefile
 # used by games/cataclysm-dda-sdl/Makefile
 
-DISTNAME=	cataclysm-dda-0.E.3
+DISTNAME=	cataclysm-dda-0.F
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CleverRaven/}
 GITHUB_PROJECT=	Cataclysm-DDA
-GITHUB_TAG=	0.E-3
+GITHUB_TAG=	0.F
 
 HOMEPAGE=	https://cataclysmdda.org/
 LICENSE=	cc-by-sa-v3.0
@@ -36,8 +36,7 @@ MAKE_FLAGS+=	LANGUAGES=all
 MAKE_FLAGS+=	RELEASE=1
 MAKE_FLAGS+=	RUNTESTS=0
 MAKE_FLAGS+=	USE_XDG_DIR=1
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
+MAKE_FLAGS+=	PCH=0
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/cataclysm-dda
