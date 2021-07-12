@@ -1,39 +1,27 @@
-# $NetBSD: Makefile,v 1.30 2019/11/03 19:04:09 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2021/07/12 14:03:11 ryoon Exp $
 
-DISTNAME=	ucblogo
-PKGNAME=	${DISTNAME}-6.0
-PKGREVISION=	2
+GITHUB_PROJECT=	ucblogo-code
+GITHUB_RELEASE=	version_${PKGVERSION_NOREV}
+DISTNAME=	ucblogo-6.2.1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.cs.berkeley.edu/~bh/downloads/
-# Not at GNU mirrors yet
-# ${MASTER_SITE_GNU:=non-gnu/ucblogo/}
-DIST_SUBDIR=	${PKGNAME_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jrincayc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://http.cs.berkeley.edu/~bh/logo.html
-COMMENT=	Brian Harvey's logo language interpreter
+HOMEPAGE=	https://people.eecs.berkeley.edu/~bh/logo.html
+COMMENT=	UCB (Berkeley) Logo interpreter
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+USE_LANGUAGES+=		c c++
 
-MAKE_FILE=		makefile
-BUILD_TARGET=		# empty
 GNU_CONFIGURE=		yes
-# otherwise ./configure might find wxgtk
-CONFIGURE_ARGS+=	--wx-disable
-# otherwise ./configure guesses -L incorrectly
-LIBS+=			-L${X11BASE}/lib
 
-USE_TOOLS+=		makeinfo
-INSTALLATION_DIRS=	info
+# Enable object oriented Logo features
+CONFIGURE_ARGS+=	--enable-objects
+
+USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-post-extract:
-	${RM} ${WRKSRC}/config.cache
-	${RM} -rf ${WRKSRC}/csls/CVS
-
-BUILDLINK_DEPMETHOD.libXt=	build
-
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
