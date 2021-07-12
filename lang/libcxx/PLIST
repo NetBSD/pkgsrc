@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/18 08:03:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/07/12 18:46:07 adam Exp $
+include/c++/v1/__availability
 include/c++/v1/__bit_reference
+include/c++/v1/__bits
 include/c++/v1/__bsd_locale_defaults.h
 include/c++/v1/__bsd_locale_fallbacks.h
 include/c++/v1/__config
@@ -12,6 +14,10 @@ include/c++/v1/__functional_base_03
 include/c++/v1/__hash_table
 include/c++/v1/__libcpp_version
 include/c++/v1/__locale
+include/c++/v1/__memory/allocator_traits.h
+include/c++/v1/__memory/base.h
+include/c++/v1/__memory/pointer_traits.h
+include/c++/v1/__memory/utilities.h
 include/c++/v1/__mutex_base
 include/c++/v1/__node_handle
 include/c++/v1/__nullptr
@@ -19,6 +25,25 @@ include/c++/v1/__split_buffer
 include/c++/v1/__sso_allocator
 include/c++/v1/__std_stream
 include/c++/v1/__string
+include/c++/v1/__support/android/locale_bionic.h
+include/c++/v1/__support/fuchsia/xlocale.h
+include/c++/v1/__support/ibm/limits.h
+include/c++/v1/__support/ibm/locale_mgmt_aix.h
+include/c++/v1/__support/ibm/nanosleep.h
+include/c++/v1/__support/ibm/support.h
+include/c++/v1/__support/ibm/xlocale.h
+include/c++/v1/__support/musl/xlocale.h
+include/c++/v1/__support/newlib/xlocale.h
+include/c++/v1/__support/nuttx/xlocale.h
+include/c++/v1/__support/openbsd/xlocale.h
+include/c++/v1/__support/solaris/floatingpoint.h
+include/c++/v1/__support/solaris/wchar.h
+include/c++/v1/__support/solaris/xlocale.h
+include/c++/v1/__support/win32/limits_msvc_win32.h
+include/c++/v1/__support/win32/locale_win32.h
+include/c++/v1/__support/xlocale/__nop_locale_mgmt.h
+include/c++/v1/__support/xlocale/__posix_l_fallback.h
+include/c++/v1/__support/xlocale/__strtonum_fallback.h
 include/c++/v1/__threading_support
 include/c++/v1/__tree
 include/c++/v1/__tuple
@@ -27,6 +52,7 @@ include/c++/v1/algorithm
 include/c++/v1/any
 include/c++/v1/array
 include/c++/v1/atomic
+include/c++/v1/barrier
 include/c++/v1/bit
 include/c++/v1/bitset
 include/c++/v1/cassert
@@ -46,6 +72,7 @@ include/c++/v1/codecvt
 include/c++/v1/compare
 include/c++/v1/complex
 include/c++/v1/complex.h
+include/c++/v1/concepts
 include/c++/v1/condition_variable
 include/c++/v1/csetjmp
 include/c++/v1/csignal
@@ -106,6 +133,7 @@ include/c++/v1/iosfwd
 include/c++/v1/iostream
 include/c++/v1/istream
 include/c++/v1/iterator
+include/c++/v1/latch
 include/c++/v1/limits
 include/c++/v1/limits.h
 include/c++/v1/list
@@ -117,6 +145,7 @@ include/c++/v1/memory
 include/c++/v1/module.modulemap
 include/c++/v1/mutex
 include/c++/v1/new
+include/c++/v1/numbers
 include/c++/v1/numeric
 include/c++/v1/optional
 include/c++/v1/ostream
@@ -125,6 +154,7 @@ include/c++/v1/random
 include/c++/v1/ratio
 include/c++/v1/regex
 include/c++/v1/scoped_allocator
+include/c++/v1/semaphore
 include/c++/v1/set
 include/c++/v1/setjmp.h
 include/c++/v1/shared_mutex
@@ -142,22 +172,6 @@ include/c++/v1/string
 include/c++/v1/string.h
 include/c++/v1/string_view
 include/c++/v1/strstream
-include/c++/v1/support/android/locale_bionic.h
-include/c++/v1/support/fuchsia/xlocale.h
-include/c++/v1/support/ibm/limits.h
-include/c++/v1/support/ibm/locale_mgmt_aix.h
-include/c++/v1/support/ibm/support.h
-include/c++/v1/support/ibm/xlocale.h
-include/c++/v1/support/musl/xlocale.h
-include/c++/v1/support/newlib/xlocale.h
-include/c++/v1/support/solaris/floatingpoint.h
-include/c++/v1/support/solaris/wchar.h
-include/c++/v1/support/solaris/xlocale.h
-include/c++/v1/support/win32/limits_msvc_win32.h
-include/c++/v1/support/win32/locale_win32.h
-include/c++/v1/support/xlocale/__nop_locale_mgmt.h
-include/c++/v1/support/xlocale/__posix_l_fallback.h
-include/c++/v1/support/xlocale/__strtonum_fallback.h
 include/c++/v1/system_error
 include/c++/v1/tgmath.h
 include/c++/v1/thread
@@ -178,3 +192,4 @@ lib/libc++.a
 lib/libc++.so
 lib/libc++.so.1
 lib/libc++.so.1.0
+lib/libc++experimental.a
