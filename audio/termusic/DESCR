@@ -1,0 +1,5 @@
+Terminal Music Player written in Rust.
+
+As a contributor of gomu, https://github.com/issadarkthing/gomu I met serious
+problems during development. The main problem is data race condition.
+So I basically rewrite the player in rust, and hope to solve the problem.
