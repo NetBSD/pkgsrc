@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2021/06/21 10:09:10 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2021/07/12 18:42:06 adam Exp $
 
 BUILDLINK_TREE+=	clang
 
@@ -6,13 +6,13 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=9.0.1
-BUILDLINK_ABI_DEPENDS.clang?=	clang>=10.0.1nb2
+BUILDLINK_ABI_DEPENDS.clang?=	clang>=12.0.0
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 BUILDLINK_FILES.clang+=		bin/c-index-test
 BUILDLINK_FILES.clang+=		bin/clang
 BUILDLINK_FILES.clang+=		bin/clang++
-BUILDLINK_FILES.clang+=		bin/clang-10
+BUILDLINK_FILES.clang+=		bin/clang-12
 BUILDLINK_FILES.clang+=		bin/clang-check
 BUILDLINK_FILES.clang+=		bin/clang-cl
 BUILDLINK_FILES.clang+=		bin/clang-cpp
