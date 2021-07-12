@@ -1,12 +1,15 @@
-$NetBSD: distinfo,v 1.10 2020/07/26 19:20:13 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/07/12 18:46:07 adam Exp $
 
-SHA1 (libcxx-10.0.1.src.tar.xz) = 2e80b595ed9e99a69682b425263df7390aa472ee
-RMD160 (libcxx-10.0.1.src.tar.xz) = b8aca0058eb455a37b5e91e40d3f99b56fc058ae
-SHA512 (libcxx-10.0.1.src.tar.xz) = edc756751c8386f1868582d1974ef817ca5de34283474e0df3ce5df8ae213ca0601a5a1e089d09bdbfa8fca6c3f2fb2daa5cca8ca134f47dad738cc90f3c3f71
-Size (libcxx-10.0.1.src.tar.xz) = 1839172 bytes
-SHA1 (libcxxabi-10.0.1.src.tar.xz) = c1c20d296fba332344662f3876a6d1c05f1ce933
-RMD160 (libcxxabi-10.0.1.src.tar.xz) = cc18830b692e2002e35236e3dc3c1d52ec2082eb
-SHA512 (libcxxabi-10.0.1.src.tar.xz) = 1c58081e11746d5b63123dfb81b562eba925b31dc1a09413663c622a2cd56e8d17a2f184f6c3d78be292719fcc13f08aecaf9442f15b50682bd031416fe58a45
-Size (libcxxabi-10.0.1.src.tar.xz) = 552940 bytes
-SHA1 (patch-src_experimental_memory__resource.cpp) = 15e2431f92b41d814008e83d918e27248db065e1
+SHA1 (libcxx-12.0.1.src.tar.xz) = 84b27abcb3de60d1fd41826cf80e90ca974139c2
+RMD160 (libcxx-12.0.1.src.tar.xz) = ad12f967c54a55e9f403c5c134f74e6689defeb7
+SHA512 (libcxx-12.0.1.src.tar.xz) = c9f9a546d6a312ff6e7c85a044ce801fe7bfca1c349767b3f3c5ea16656b8906a8078f25de38138c9844c4b2646238fd17d890438cd10391cd9e4a430f9064a0
+Size (libcxx-12.0.1.src.tar.xz) = 1882840 bytes
+SHA1 (libcxxabi-12.0.1.src.tar.xz) = ed140d4df79e334b17a1e7d6adfed9ca2e11449b
+RMD160 (libcxxabi-12.0.1.src.tar.xz) = 981c416f6d12b911d684e31631d2f6b9a03ae7c5
+SHA512 (libcxxabi-12.0.1.src.tar.xz) = c7b236e9afe8d6bba297e1eca12ca0e03fbd1b028b9627154186d27eb2e035cd33eddb72511a38d0827de347a487e180c32c1798759c4283b9fbbf338a015bb9
+Size (libcxxabi-12.0.1.src.tar.xz) = 552980 bytes
+SHA1 (llvm-12.0.1.src.tar.xz) = 619fe668e0972d11d0fa2db670a57a42d02fb8ca
+RMD160 (llvm-12.0.1.src.tar.xz) = 678910782ceac9bcd7234fca9d6e358ffbe7a660
+SHA512 (llvm-12.0.1.src.tar.xz) = ff674afb4c8eea699a4756f1bb463f15098a7fa354c733de83c024f8f0cf238cd5f19ae3ec446831c7109235e293e2bf31d8562567ede163c8ec53af7306ba0f
+Size (llvm-12.0.1.src.tar.xz) = 42898504 bytes
 SHA1 (patch-src_filesystem_directory__iterator.cpp) = 90ebbb80e4ec161405397d6d7c5d1d19a7284325
