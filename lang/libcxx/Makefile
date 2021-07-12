@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:29 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/07/12 18:46:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -15,9 +15,11 @@ LICENSE=	apache-2.0
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-LIBCXXABI=		${DISTNAME:S/cxx/cxxabi/}
-_EXTRA_DIST=		${LIBCXXABI}${EXTRACT_SUFX}
-SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+LIBCXXABI=	libcxxabi-${LLVM_VERSION}.src
+LLVMDIST=	llvm-${LLVM_VERSION}.src
+_EXTRA_DIST=	${LIBCXXABI}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
+SITES.${LIBCXXABI}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${LLLVMDIST}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
 
@@ -35,6 +37,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${LIBCXXABI}/include
+CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=ON
 CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 
 # avoid conflict with stddef.h
@@ -42,7 +45,8 @@ CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
+	${LN} -f -s ${WRKDIR}/${LIBCXXABI} ${WRKDIR}/libcxxabi
+	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
 
 .include "../../lang/libcxxabi/buildlink3.mk"
-.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
