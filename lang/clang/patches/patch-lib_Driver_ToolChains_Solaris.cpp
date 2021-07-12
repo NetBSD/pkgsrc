@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.6 2020/06/05 15:28:54 jperkin Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.7 2021/07/12 18:42:06 adam Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -7,9 +7,9 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2020-03-23 15:01:02.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2020-10-07 10:10:48.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
-@@ -49,8 +49,29 @@ void solaris::Linker::ConstructJob(Compi
+@@ -50,8 +50,28 @@ void solaris::Linker::ConstructJob(Compi
                                     const InputInfoList &Inputs,
                                     const ArgList &Args,
                                     const char *LinkingOutput) const {
@@ -17,8 +17,7 @@ Test removing -Bdynamic for golang.
    ArgStringList CmdArgs;
  
 +  // XXX: assumes pkgsrc layout
-+  std::string LibPath;
-+  LibPath = llvm::sys::path::parent_path(D.getInstalledDir());
++  std::string LibPath = llvm::sys::path::parent_path(D.getInstalledDir()).str();
 +  LibPath += "/lib/";
 +
 +  std::string SysPath = "/usr/lib/";
@@ -39,7 +38,7 @@ Test removing -Bdynamic for golang.
    // Demangle C++ names in errors
    CmdArgs.push_back("-C");
  
-@@ -63,7 +84,6 @@ void solaris::Linker::ConstructJob(Compi
+@@ -64,7 +84,6 @@ void solaris::Linker::ConstructJob(Compi
      CmdArgs.push_back("-Bstatic");
      CmdArgs.push_back("-dn");
    } else {
@@ -47,7 +46,7 @@ Test removing -Bdynamic for golang.
      if (Args.hasArg(options::OPT_shared)) {
        CmdArgs.push_back("-shared");
      }
-@@ -84,9 +104,9 @@ void solaris::Linker::ConstructJob(Compi
+@@ -85,9 +104,9 @@ void solaris::Linker::ConstructJob(Compi
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared))
        CmdArgs.push_back(
@@ -59,7 +58,7 @@ Test removing -Bdynamic for golang.
  
      const Arg *Std = Args.getLastArg(options::OPT_std_EQ, options::OPT_ansi);
      bool HaveAnsi = false;
-@@ -101,16 +121,14 @@ void solaris::Linker::ConstructJob(Compi
+@@ -102,16 +121,14 @@ void solaris::Linker::ConstructJob(Compi
      // Use values-Xc.o for -ansi, -std=c*, -std=iso9899:199409.
      if (HaveAnsi || (LangStd && !LangStd->isGNUMode()))
        values_X = "values-Xc.o";
@@ -78,7 +77,7 @@ Test removing -Bdynamic for golang.
    }
  
    getToolChain().AddFilePathLibArgs(Args, CmdArgs);
-@@ -122,30 +140,23 @@ void solaris::Linker::ConstructJob(Compi
+@@ -123,30 +140,23 @@ void solaris::Linker::ConstructJob(Compi
    AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
  
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
@@ -120,7 +119,7 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -174,26 +185,9 @@ Solaris::Solaris(const Driver &D, const 
+@@ -176,26 +186,9 @@ Solaris::Solaris(const Driver &D, const 
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -150,7 +149,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -218,6 +212,32 @@ Tool *Solaris::buildAssembler() const {
+@@ -220,6 +213,31 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -160,8 +159,7 @@ Test removing -Bdynamic for golang.
 +
 +  // Currently assumes pkgsrc layout where libcxx and libcxxabi are installed
 +  // in the same prefixed directory that we are.
-+  std::string LibPath;
-+  LibPath = llvm::sys::path::parent_path(getDriver().getInstalledDir());
++  std::string LibPath = llvm::sys::path::parent_path(getDriver().getInstalledDir()).str();
 +  LibPath += "/lib";
 +
 +  switch (Type) {
@@ -183,7 +181,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -250,40 +270,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -252,40 +270,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  
