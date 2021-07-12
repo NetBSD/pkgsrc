@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/18 08:08:07 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/07/12 18:58:25 adam Exp $
 
-SHA1 (zig-0.6.0.tar.xz) = 5bafb82d28d058add63b106dfa6119f511faae8e
-RMD160 (zig-0.6.0.tar.xz) = beb56f6c688687711e01ab67bf0791584f8af3e6
-SHA512 (zig-0.6.0.tar.xz) = 19ba77675d783a03ffcc260ec3ffdbb29211baa61db392c0c39c2ce9339c6e36434c99129b7455e497a0547337b2ad15bcaf49ad0a7d081fd00cc0e11681e042
-Size (zig-0.6.0.tar.xz) = 10349552 bytes
+SHA1 (zig-0.8.0.tar.xz) = 4b13041588cbe8809d71e5c6cbdb9bc6edce2dac
+RMD160 (zig-0.8.0.tar.xz) = 41d7d130ff7b8e05e94d94c1198b8d2a2cf9fa48
+SHA512 (zig-0.8.0.tar.xz) = c4eb4f946d197f4eaafe1868c30c75fda1c1743431b39cf738bc0a97f0fecf9ead62f8fb5c6dcc7ea0c9eafc47c480d441904956a236b2fbb2650a3acaa198f7
+Size (zig-0.8.0.tar.xz) = 12614896 bytes
