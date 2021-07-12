@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/03/05 10:26:36 nia Exp $
+# $NetBSD: Makefile,v 1.44 2021/07/12 22:34:55 nia Exp $
 
 DISTNAME=	ncmpc-0.45
 CATEGORIES=	audio
@@ -41,7 +41,9 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 .include "options.mk"
 .include "../../devel/meson/build.mk"
 .include "../../audio/libmpdclient/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/versioned_dependencies.mk"
