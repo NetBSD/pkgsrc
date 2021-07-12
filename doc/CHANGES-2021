@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3787 2021/07/11 21:24:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3788 2021/07/12 03:55:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6045,3 +6045,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/libreoffice to 7.1.4.2 [ryoon 2021-07-11]
 	Updated textproc/lowdown to 0.8.5 [fcambus 2021-07-11]
 	Updated graphics/pastel to 0.8.1 [pin 2021-07-11]
+	Updated net/remmina to 1.4.20 [ryoon 2021-07-12]
