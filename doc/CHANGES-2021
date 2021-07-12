@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3798 2021/07/12 20:55:00 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3799 2021/07/12 21:32:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6069,3 +6069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/zig to 0.8.0 [adam 2021-07-12]
 	Updated games/cataclysm-dda to 0.F [nia 2021-07-12]
 	Updated games/cataclysm-dda-sdl to 0.F [nia 2021-07-12]
+	Updated net/ucspi-tools to 1.7 [schmonz 2021-07-12]
