@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3796 2021/07/12 18:59:29 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.3797 2021/07/12 19:32:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6054,3 +6054,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/termusic version 0.2.6 [pin 2021-07-12]
 	Added textproc/py-patiencediff version 0.2.2 [rhialto 2021-07-12]
 	Updated devel/breezy to 3.2.1 [rhialto 2021-07-12]
+	Updated lang/llvm to 12.0.1 [adam 2021-07-12]
+	Updated lang/clang to 12.0.1 [adam 2021-07-12]
+	Updated lang/clang-tools-extra to 12.0.1 [adam 2021-07-12]
+	Updated lang/compiler-rt to 12.0.1 [adam 2021-07-12]
+	Updated lang/libunwind to 12.0.1 [adam 2021-07-12]
+	Updated lang/libcxxabi to 12.0.1 [adam 2021-07-12]
+	Updated lang/libcxx to 12.0.1 [adam 2021-07-12]
+	Updated devel/lld to 12.0.1 [adam 2021-07-12]
+	Updated devel/lldb to 12.0.1 [adam 2021-07-12]
+	Updated devel/polly to 12.0.1 [adam 2021-07-12]
+	Updated parallel/openmp to 12.0.1 [adam 2021-07-12]
+	Updated devel/include-what-you-use to 0.16 [adam 2021-07-12]
+	Updated lang/zig to 0.8.0 [adam 2021-07-12]
