@@ -1,11 +1,11 @@
-$NetBSD: patch-src_translations.cpp,v 1.1 2020/04/30 14:57:30 nia Exp $
+$NetBSD: patch-src_translations.cpp,v 1.2 2021/07/12 20:54:02 nia Exp $
 
 Avoid overriding gettext functions with incompatible versions.
 
---- src/translations.cpp.orig	2020-04-01 05:39:38.000000000 +0000
+--- src/translations.cpp.orig	2021-07-03 05:00:06.000000000 +0000
 +++ src/translations.cpp
-@@ -59,45 +59,6 @@ static bool sanity_checked_genders = fal
- std::string getOSXSystemLang();
+@@ -75,45 +75,6 @@ static std::string getAppleSystemLanguag
+ static std::string getAndroidSystemLanguage();
  #endif
  
 -const char *pgettext( const char *context, const char *msgid )
@@ -47,6 +47,6 @@ Avoid overriding gettext functions with incompatible versions.
 -    }
 -}
 -
- bool isValidLanguage( const std::string &lang )
+ void select_language()
  {
-     const auto languages = get_options().get_option( "USE_LANG" ).getItems();
+     auto languages = get_options().get_option( "USE_LANG" ).getItems();

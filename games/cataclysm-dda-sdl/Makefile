@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/12/08 12:08:20 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/12 20:54:02 nia Exp $
 
 .include "../../games/cataclysm-dda/Makefile.common"
 
@@ -40,14 +40,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt \
 	    ${DESTDIR}${PREFIX}/share/cataclysm-dda
 	cd ${WRKSRC} && LOCALE_DIR=${DESTDIR}${PREFIX}/share/locale ${SH} lang/compile_mo.sh
-	${INSTALL_DATA} ${WRKSRC}/data/xdg/cataclysm-dda.desktop \
+	${INSTALL_DATA} ${WRKSRC}/data/xdg/org.cataclysmdda.CataclysmDDA.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/data/xdg/cataclysm-dda.appdata.xml \
+	${INSTALL_DATA} ${WRKSRC}/data/xdg/org.cataclysmdda.CataclysmDDA.appdata.xml \
 	    ${DESTDIR}${PREFIX}/share/appdata
-	${INSTALL_DATA} ${WRKSRC}/data/xdg/cataclysm-dda.svg \
+	${INSTALL_DATA} ${WRKSRC}/data/xdg/org.cataclysmdda.CataclysmDDA.svg \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 .for s in ${ICON_SIZES}
-	${INSTALL_DATA} ${WRKSRC}/data/osx/AppIcon.iconset/icon_${s}x${s}.png \
+	${INSTALL_DATA} ${WRKSRC}/build-data/osx/AppIcon.iconset/icon_${s}x${s}.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/cataclysm-dda.png
 .endfor
 
