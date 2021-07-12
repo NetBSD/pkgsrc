@@ -1,14 +1,13 @@
-$NetBSD: patch-src_translations.h,v 1.1 2020/04/30 14:57:30 nia Exp $
+$NetBSD: patch-src_translations.h,v 1.2 2021/07/12 20:54:02 nia Exp $
 
 Avoid overriding gettext functions with incompatible versions.
 
---- src/translations.h.orig	2020-04-01 05:39:38.000000000 +0000
+--- src/translations.h.orig	2021-07-03 05:00:06.000000000 +0000
 +++ src/translations.h
-@@ -56,26 +56,6 @@ inline std::string _( const std::string 
- {
-     return _( msg.c_str() );
- }
--
+@@ -144,25 +144,6 @@ static inline local_translation_cache<st
+         return cache( arg ); \
+     } )( msg ) )
+ 
 -// ngettext overload taking an unsigned long long so that people don't need
 -// to cast at call sites.  This is particularly relevant on 64-bit Windows where
 -// size_t is bigger than unsigned long, so MSVC will try to encourage you to
