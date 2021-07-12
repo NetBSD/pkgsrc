@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/06/20 10:09:35 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/12 14:10:10 tnn Exp $
 
 DISTNAME=	alacritty-0.8.0
 PKGREVISION=	2
@@ -29,6 +29,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
 
 .if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
 # This works around XIM errors when RTLD local-binding libX11.
+# See: https://mail-index.netbsd.org/tech-x11/2021/07/12/msg002222.html
 # But it might also break GPU accelerated mode.
 SUBST_CLASSES+=		rtld
 SUBST_MESSAGE.rtld=	amend RTLD_GLOBAL
