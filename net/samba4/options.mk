@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2021/06/02 20:05:20 nia Exp $
+# $NetBSD: options.mk,v 1.16 2021/07/12 22:30:44 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--with-ads
 PLIST.ads=		yes
 .else
 CONFIGURE_ARGS+=	--without-ads
+CONFIGURE_ARGS+=	--without-ad-dc
 .endif
 
 ###
