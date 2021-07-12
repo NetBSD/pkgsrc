@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2021/06/18 19:40:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2021/07/12 18:41:02 adam Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -22,6 +22,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-addr2line
 BUILDLINK_FILES.llvm+=		bin/llvm-ar
 BUILDLINK_FILES.llvm+=		bin/llvm-as
 BUILDLINK_FILES.llvm+=		bin/llvm-bcanalyzer
+BUILDLINK_FILES.llvm+=		bin/llvm-bitcode-strip
 BUILDLINK_FILES.llvm+=		bin/llvm-c-test
 BUILDLINK_FILES.llvm+=		bin/llvm-cat
 BUILDLINK_FILES.llvm+=		bin/llvm-cfi-verify
@@ -39,16 +40,20 @@ BUILDLINK_FILES.llvm+=		bin/llvm-dwp
 BUILDLINK_FILES.llvm+=		bin/llvm-elfabi
 BUILDLINK_FILES.llvm+=		bin/llvm-exegesis
 BUILDLINK_FILES.llvm+=		bin/llvm-extract
+BUILDLINK_FILES.llvm+=		bin/llvm-gsymutil
 BUILDLINK_FILES.llvm+=		bin/llvm-ifs
 BUILDLINK_FILES.llvm+=		bin/llvm-install-name-tool
 BUILDLINK_FILES.llvm+=		bin/llvm-jitlink
+BUILDLINK_FILES.llvm+=		bin/llvm-jitlink-executor
 BUILDLINK_FILES.llvm+=		bin/llvm-lib
+BUILDLINK_FILES.llvm+=		bin/llvm-libtool-darwin
 BUILDLINK_FILES.llvm+=		bin/llvm-link
 BUILDLINK_FILES.llvm+=		bin/llvm-lipo
 BUILDLINK_FILES.llvm+=		bin/llvm-lto
 BUILDLINK_FILES.llvm+=		bin/llvm-lto2
 BUILDLINK_FILES.llvm+=		bin/llvm-mc
 BUILDLINK_FILES.llvm+=		bin/llvm-mca
+BUILDLINK_FILES.llvm+=		bin/llvm-ml
 BUILDLINK_FILES.llvm+=		bin/llvm-modextract
 BUILDLINK_FILES.llvm+=		bin/llvm-mt
 BUILDLINK_FILES.llvm+=		bin/llvm-nm
@@ -57,6 +62,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-objdump
 BUILDLINK_FILES.llvm+=		bin/llvm-opt-report
 BUILDLINK_FILES.llvm+=		bin/llvm-pdbutil
 BUILDLINK_FILES.llvm+=		bin/llvm-profdata
+BUILDLINK_FILES.llvm+=		bin/llvm-profgen
 BUILDLINK_FILES.llvm+=		bin/llvm-ranlib
 BUILDLINK_FILES.llvm+=		bin/llvm-rc
 BUILDLINK_FILES.llvm+=		bin/llvm-readelf
@@ -77,6 +83,7 @@ BUILDLINK_FILES.llvm+=		bin/obj2yaml
 BUILDLINK_FILES.llvm+=		bin/opt
 BUILDLINK_FILES.llvm+=		bin/sancov
 BUILDLINK_FILES.llvm+=		bin/sanstats
+BUILDLINK_FILES.llvm+=		bin/split-file
 BUILDLINK_FILES.llvm+=		bin/verify-uselistorder
 BUILDLINK_FILES.llvm+=		bin/yaml-bench
 BUILDLINK_FILES.llvm+=		bin/yaml2obj
