@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/04/18 07:59:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/07/12 18:47:15 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
@@ -13,6 +13,7 @@ include/lldb/API/SBBreakpointLocation.h
 include/lldb/API/SBBreakpointName.h
 include/lldb/API/SBBroadcaster.h
 include/lldb/API/SBCommandInterpreter.h
+include/lldb/API/SBCommandInterpreterRunOptions.h
 include/lldb/API/SBCommandReturnObject.h
 include/lldb/API/SBCommunication.h
 include/lldb/API/SBCompileUnit.h
@@ -20,6 +21,7 @@ include/lldb/API/SBData.h
 include/lldb/API/SBDebugger.h
 include/lldb/API/SBDeclaration.h
 include/lldb/API/SBDefines.h
+include/lldb/API/SBEnvironment.h
 include/lldb/API/SBError.h
 include/lldb/API/SBEvent.h
 include/lldb/API/SBExecutionContext.h
@@ -93,7 +95,8 @@ include/lldb/Breakpoint/BreakpointSite.h
 include/lldb/Breakpoint/BreakpointSiteList.h
 include/lldb/Breakpoint/Stoppoint.h
 include/lldb/Breakpoint/StoppointCallbackContext.h
-include/lldb/Breakpoint/StoppointLocation.h
+include/lldb/Breakpoint/StoppointHitCounter.h
+include/lldb/Breakpoint/StoppointSite.h
 include/lldb/Breakpoint/Watchpoint.h
 include/lldb/Breakpoint/WatchpointList.h
 include/lldb/Breakpoint/WatchpointOptions.h
@@ -103,7 +106,6 @@ include/lldb/Core/AddressResolver.h
 include/lldb/Core/AddressResolverFileLine.h
 include/lldb/Core/AddressResolverName.h
 include/lldb/Core/Architecture.h
-include/lldb/Core/ClangForward.h
 include/lldb/Core/Communication.h
 include/lldb/Core/Debugger.h
 include/lldb/Core/Disassembler.h
@@ -227,7 +229,6 @@ include/lldb/Host/SafeMachO.h
 include/lldb/Host/Socket.h
 include/lldb/Host/SocketAddress.h
 include/lldb/Host/StringConvert.h
-include/lldb/Host/TaskPool.h
 include/lldb/Host/Terminal.h
 include/lldb/Host/ThreadLauncher.h
 include/lldb/Host/Time.h
@@ -280,7 +281,6 @@ include/lldb/Interpreter/CommandHistory.h
 include/lldb/Interpreter/CommandInterpreter.h
 include/lldb/Interpreter/CommandObject.h
 include/lldb/Interpreter/CommandObjectMultiword.h
-include/lldb/Interpreter/CommandObjectRegexCommand.h
 include/lldb/Interpreter/CommandOptionValidators.h
 include/lldb/Interpreter/CommandReturnObject.h
 include/lldb/Interpreter/OptionArgParser.h
@@ -305,6 +305,7 @@ include/lldb/Interpreter/OptionValueBoolean.h
 include/lldb/Interpreter/OptionValueChar.h
 include/lldb/Interpreter/OptionValueDictionary.h
 include/lldb/Interpreter/OptionValueEnumeration.h
+include/lldb/Interpreter/OptionValueFileColonLine.h
 include/lldb/Interpreter/OptionValueFileSpec.h
 include/lldb/Interpreter/OptionValueFileSpecList.h
 include/lldb/Interpreter/OptionValueFormat.h
@@ -324,17 +325,11 @@ include/lldb/Interpreter/ScriptInterpreter.h
 include/lldb/Symbol/ArmUnwindInfo.h
 include/lldb/Symbol/Block.h
 include/lldb/Symbol/CallFrameInfo.h
-include/lldb/Symbol/ClangASTContext.h
-include/lldb/Symbol/ClangASTImporter.h
-include/lldb/Symbol/ClangASTMetadata.h
-include/lldb/Symbol/ClangExternalASTSourceCallbacks.h
-include/lldb/Symbol/ClangUtil.h
 include/lldb/Symbol/CompactUnwindInfo.h
 include/lldb/Symbol/CompileUnit.h
 include/lldb/Symbol/CompilerDecl.h
 include/lldb/Symbol/CompilerDeclContext.h
 include/lldb/Symbol/CompilerType.h
-include/lldb/Symbol/CxxModuleHandler.h
 include/lldb/Symbol/DWARFCallFrameInfo.h
 include/lldb/Symbol/DebugMacros.h
 include/lldb/Symbol/DeclVendor.h
@@ -364,6 +359,7 @@ include/lldb/Symbol/UnwindTable.h
 include/lldb/Symbol/Variable.h
 include/lldb/Symbol/VariableList.h
 include/lldb/Target/ABI.h
+include/lldb/Target/AssertFrameRecognizer.h
 include/lldb/Target/DynamicLoader.h
 include/lldb/Target/ExecutionContext.h
 include/lldb/Target/ExecutionContextScope.h
@@ -380,15 +376,19 @@ include/lldb/Target/ModuleCache.h
 include/lldb/Target/OperatingSystem.h
 include/lldb/Target/PathMappingList.h
 include/lldb/Target/Platform.h
+include/lldb/Target/PostMortemProcess.h
 include/lldb/Target/Process.h
 include/lldb/Target/ProcessStructReader.h
+include/lldb/Target/ProcessTrace.h
 include/lldb/Target/Queue.h
 include/lldb/Target/QueueItem.h
 include/lldb/Target/QueueList.h
 include/lldb/Target/RegisterCheckpoint.h
 include/lldb/Target/RegisterContext.h
+include/lldb/Target/RegisterContextUnwind.h
 include/lldb/Target/RegisterNumber.h
 include/lldb/Target/RemoteAwarePlatform.h
+include/lldb/Target/Runtime.h
 include/lldb/Target/SectionLoadHistory.h
 include/lldb/Target/SectionLoadList.h
 include/lldb/Target/StackFrame.h
@@ -412,6 +412,7 @@ include/lldb/Target/ThreadPlanCallUserExpression.h
 include/lldb/Target/ThreadPlanPython.h
 include/lldb/Target/ThreadPlanRunToAddress.h
 include/lldb/Target/ThreadPlanShouldStopHere.h
+include/lldb/Target/ThreadPlanStack.h
 include/lldb/Target/ThreadPlanStepInRange.h
 include/lldb/Target/ThreadPlanStepInstruction.h
 include/lldb/Target/ThreadPlanStepOut.h
@@ -422,9 +423,13 @@ include/lldb/Target/ThreadPlanStepThrough.h
 include/lldb/Target/ThreadPlanStepUntil.h
 include/lldb/Target/ThreadPlanTracer.h
 include/lldb/Target/ThreadSpec.h
+include/lldb/Target/ThreadTrace.h
+include/lldb/Target/Trace.h
+include/lldb/Target/TraceSessionFileParser.h
 include/lldb/Target/UnixSignals.h
 include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
+include/lldb/Target/UnwindLLDB.h
 include/lldb/Utility/AnsiTerminal.h
 include/lldb/Utility/ArchSpec.h
 include/lldb/Utility/Args.h
@@ -451,6 +456,7 @@ include/lldb/Utility/Listener.h
 include/lldb/Utility/Log.h
 include/lldb/Utility/Logging.h
 include/lldb/Utility/NameMatches.h
+include/lldb/Utility/OptionDefinition.h
 include/lldb/Utility/Predicate.h
 include/lldb/Utility/ProcessInfo.h
 include/lldb/Utility/RangeMap.h
@@ -458,10 +464,10 @@ include/lldb/Utility/RegisterValue.h
 include/lldb/Utility/RegularExpression.h
 include/lldb/Utility/Reproducer.h
 include/lldb/Utility/ReproducerInstrumentation.h
+include/lldb/Utility/ReproducerProvider.h
 include/lldb/Utility/Scalar.h
 include/lldb/Utility/SelectHelper.h
 include/lldb/Utility/SharedCluster.h
-include/lldb/Utility/SharingPtr.h
 include/lldb/Utility/State.h
 include/lldb/Utility/Status.h
 include/lldb/Utility/Stream.h
@@ -478,11 +484,13 @@ include/lldb/Utility/Timeout.h
 include/lldb/Utility/Timer.h
 include/lldb/Utility/TraceOptions.h
 include/lldb/Utility/UUID.h
+include/lldb/Utility/UnimplementedError.h
 include/lldb/Utility/UriParser.h
 include/lldb/Utility/UserID.h
 include/lldb/Utility/UserIDResolver.h
 include/lldb/Utility/VASPrintf.h
 include/lldb/Utility/VMRange.h
+include/lldb/Utility/XcodeSDK.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
 include/lldb/lldb-forward.h
@@ -497,7 +505,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-${PLIST.posix}lib/liblldb.so.10
+${PLIST.posix}lib/liblldb.so.12
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py

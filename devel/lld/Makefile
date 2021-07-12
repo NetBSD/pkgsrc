@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/04/18 08:00:49 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/07/12 18:47:15 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -29,5 +29,6 @@ post-extract:
 
 .include "options.mk"
 .include "../../lang/llvm/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
