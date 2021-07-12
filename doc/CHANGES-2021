@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3794 2021/07/12 15:07:45 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3795 2021/07/12 18:43:57 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6052,3 +6052,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/din to 51.1 [fox 2021-07-12]
 	Updated graphics/oxipng to 5.0.0 [pin 2021-07-12]
 	Added audio/termusic version 0.2.6 [pin 2021-07-12]
+	Added textproc/py-patiencediff version 0.2.2 [rhialto 2021-07-12]
