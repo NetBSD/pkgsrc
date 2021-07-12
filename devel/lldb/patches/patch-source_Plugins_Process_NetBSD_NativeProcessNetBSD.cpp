@@ -1,10 +1,10 @@
-$NetBSD: patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp,v 1.1 2020/09/19 17:25:02 he Exp $
+$NetBSD: patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp,v 1.2 2021/07/12 18:47:16 adam Exp $
 
 Provide StopProcess.
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2020-07-07 16:21:37.000000000 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2021-04-06 16:38:18.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -344,6 +344,29 @@ void NativeProcessNetBSD::MonitorSignal(
+@@ -346,6 +346,29 @@ void NativeProcessNetBSD::MonitorSignal(
    SetState(StateType::eStateStopped, true);
  }
  
@@ -34,15 +34,15 @@ Provide StopProcess.
  Status NativeProcessNetBSD::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
                                            int data, int *result) {
    Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PTRACE));
-@@ -497,7 +520,7 @@ Status NativeProcessNetBSD::Resume(const
+@@ -498,7 +521,7 @@ Status NativeProcessNetBSD::Resume(const
+   return ret;
  }
  
- Status NativeProcessNetBSD::Halt() {
--  return PtraceWrapper(PT_STOP, GetID());
-+  return StopProcess(GetID());
- }
+-Status NativeProcessNetBSD::Halt() { return PtraceWrapper(PT_STOP, GetID()); }
++Status NativeProcessNetBSD::Halt() { return StopProcess(GetID()); }
  
  Status NativeProcessNetBSD::Detach() {
+   Status error;
 @@ -523,7 +546,7 @@ Status NativeProcessNetBSD::Signal(int s
  }
  
