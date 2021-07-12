@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/18 08:00:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/12 18:47:15 adam Exp $
 bin/ld.lld
 bin/ld64.lld
+bin/ld64.lld.darwinnew
 bin/lld
 bin/lld-link
-bin/nb.lld
 bin/wasm-ld
 include/lld/Common/Args.h
 include/lld/Common/DWARF.h
@@ -15,7 +15,6 @@ include/lld/Common/Memory.h
 include/lld/Common/Reproduce.h
 include/lld/Common/Strings.h
 include/lld/Common/TargetOptionsCommandFlags.h
-include/lld/Common/Threads.h
 include/lld/Common/Timer.h
 include/lld/Common/Version.h
 include/lld/Core/AbsoluteAtom.h
@@ -40,12 +39,16 @@ include/lld/Core/UndefinedAtom.h
 include/lld/Core/Writer.h
 include/lld/ReaderWriter/MachOLinkingContext.h
 include/lld/ReaderWriter/YamlContext.h
+lib/cmake/lld/LLDConfig.cmake
+lib/cmake/lld/LLDTargets-release.cmake
+lib/cmake/lld/LLDTargets.cmake
 lib/liblldCOFF.a
 lib/liblldCommon.a
 lib/liblldCore.a
 lib/liblldDriver.a
 lib/liblldELF.a
 lib/liblldMachO.a
+lib/liblldMachO2.a
 lib/liblldMinGW.a
 lib/liblldReaderWriter.a
 lib/liblldWasm.a
