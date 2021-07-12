@@ -1,9 +1,17 @@
-$NetBSD: distinfo,v 1.19 2020/10/18 17:06:35 he Exp $
+$NetBSD: distinfo,v 1.20 2021/07/12 18:46:07 adam Exp $
 
-SHA1 (libunwind-10.0.1.src.tar.xz) = f5c9398aedd1a41c7667208abdabc9274b7a19ae
-RMD160 (libunwind-10.0.1.src.tar.xz) = 9602856d899cf8681c7baabbb17765fa07849093
-SHA512 (libunwind-10.0.1.src.tar.xz) = 8d717ba951ca25ca133a5d204cd7cca693402003a5a91cd2bc2bb0427486ccd37beac45aa54a6e7830c5358ecb64d1d674f7522e3192be7f9dba8384ad757f26
-Size (libunwind-10.0.1.src.tar.xz) = 92724 bytes
+SHA1 (libcxx-12.0.1.src.tar.xz) = 84b27abcb3de60d1fd41826cf80e90ca974139c2
+RMD160 (libcxx-12.0.1.src.tar.xz) = ad12f967c54a55e9f403c5c134f74e6689defeb7
+SHA512 (libcxx-12.0.1.src.tar.xz) = c9f9a546d6a312ff6e7c85a044ce801fe7bfca1c349767b3f3c5ea16656b8906a8078f25de38138c9844c4b2646238fd17d890438cd10391cd9e4a430f9064a0
+Size (libcxx-12.0.1.src.tar.xz) = 1882840 bytes
+SHA1 (libunwind-12.0.1.src.tar.xz) = e9b7a365ed8a75652b27b32e209e7515b0e55181
+RMD160 (libunwind-12.0.1.src.tar.xz) = a34693f899e1971cb1104a2187a9ea7e9d9f9962
+SHA512 (libunwind-12.0.1.src.tar.xz) = 847b6ba03010a43f4fdbfdc49bf16d18fd18474d01584712e651b11191814bf7c1cf53475021d9ee447ed78413202b4ed97973d7bdd851d3e49f8d06f55a7af4
+Size (libunwind-12.0.1.src.tar.xz) = 98348 bytes
+SHA1 (llvm-12.0.1.src.tar.xz) = 619fe668e0972d11d0fa2db670a57a42d02fb8ca
+RMD160 (llvm-12.0.1.src.tar.xz) = 678910782ceac9bcd7234fca9d6e358ffbe7a660
+SHA512 (llvm-12.0.1.src.tar.xz) = ff674afb4c8eea699a4756f1bb463f15098a7fa354c733de83c024f8f0cf238cd5f19ae3ec446831c7109235e293e2bf31d8562567ede163c8ec53af7306ba0f
+Size (llvm-12.0.1.src.tar.xz) = 42898504 bytes
 SHA1 (patch-include_____libunwind__config.h) = b1727e79e7a00e4e5c412584dcfc357a696e2d6a
 SHA1 (patch-src_UnwindRegistersRestore.S) = bd8aa0754a87315efbe6cedcb81febcb32c8a020
 SHA1 (patch-src_UnwindRegistersSave.S) = 6c976325c8d871550d75fa51047e6a0b92f00f52
