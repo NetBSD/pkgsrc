@@ -1,15 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/03 12:10:29 kamil Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2021/07/12 18:47:15 adam Exp $
 
 LLD 7.0.1 is incompatible with gtest version in pkgsrc.  Remove
 the condition that prevents it from building its own copy when system
 version is installed.
 
-[LLD] Add NetBSD support as a new flavor of LLD (nb.lld)
-https://reviews.llvm.org/D69755
-
---- CMakeLists.txt.orig	2019-08-26 12:32:18.000000000 +0000
+--- CMakeLists.txt.orig	2021-04-06 16:38:18.000000000 +0000
 +++ CMakeLists.txt
-@@ -85,7 +85,6 @@ Please install Python or specify the PYT
+@@ -76,7 +76,6 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRE
        endif()
        set(UNITTEST_DIR ${LLVM_MAIN_SRC_DIR}/utils/unittest)
        if(EXISTS ${UNITTEST_DIR}/googletest/include/gtest/gtest.h
@@ -17,11 +14,3 @@ https://reviews.llvm.org/D69755
            AND EXISTS ${UNITTEST_DIR}/CMakeLists.txt)
          add_subdirectory(${UNITTEST_DIR} utils/unittest)
        endif()
-@@ -212,6 +211,7 @@ endif()
- add_subdirectory(Common)
- add_subdirectory(lib)
- add_subdirectory(tools/lld)
-+add_subdirectory(tools/nb.lld)
- 
- if (LLVM_INCLUDE_TESTS)
-   add_subdirectory(test)
