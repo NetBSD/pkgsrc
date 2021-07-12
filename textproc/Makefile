@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1241 2021/07/07 13:15:17 nia Exp $
+# $NetBSD: Makefile,v 1.1242 2021/07/12 18:43:05 rhialto Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -936,6 +936,7 @@ SUBDIR+=	py-pandocfilters
 SUBDIR+=	py-parse
 SUBDIR+=	py-parse_type
 SUBDIR+=	py-parsimonious
+SUBDIR+=	py-patiencediff
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-pdfrw
 SUBDIR+=	py-peg2
