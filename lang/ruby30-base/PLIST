@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/11 12:36:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2021/07/12 12:54:47 bsiegert Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -370,7 +370,9 @@ ${RUBY_LIB}/bundler/source/path.rb
 ${RUBY_LIB}/bundler/source/path/installer.rb
 ${RUBY_LIB}/bundler/source/rubygems.rb
 ${RUBY_LIB}/bundler/source/rubygems/remote.rb
+${RUBY_LIB}/bundler/source/rubygems_aggregate.rb
 ${RUBY_LIB}/bundler/source_list.rb
+${RUBY_LIB}/bundler/source_map.rb
 ${RUBY_LIB}/bundler/spec_set.rb
 ${RUBY_LIB}/bundler/stub_specification.rb
 ${RUBY_LIB}/bundler/templates/Executable
@@ -860,6 +862,7 @@ ${RUBY_LIB}/rdoc/markup/pre_process.rb
 ${RUBY_LIB}/rdoc/markup/raw.rb
 ${RUBY_LIB}/rdoc/markup/regexp_handling.rb
 ${RUBY_LIB}/rdoc/markup/rule.rb
+${RUBY_LIB}/rdoc/markup/table.rb
 ${RUBY_LIB}/rdoc/markup/to_ansi.rb
 ${RUBY_LIB}/rdoc/markup/to_bs.rb
 ${RUBY_LIB}/rdoc/markup/to_html.rb
@@ -2255,7 +2258,7 @@ ${GEM_HOME}/specifications/default/json-${RUBY_JSON_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/logger-${RUBY_LOGGER_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/matrix-${RUBY_MATRIX_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/mutex_m-${RUBY_MUTEX_M_VERSION}.gemspec
-${GEM_HOME}/specifications/default/net-ftp-0.1.1.gemspec
+${GEM_HOME}/specifications/default/net-ftp-${RUBY_NET_FTP_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/net-http-0.1.1.gemspec
 ${GEM_HOME}/specifications/default/net-imap-0.1.1.gemspec
 ${GEM_HOME}/specifications/default/net-pop-0.1.1.gemspec
