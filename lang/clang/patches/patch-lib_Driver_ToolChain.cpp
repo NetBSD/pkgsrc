@@ -1,7 +1,7 @@
-$NetBSD: patch-lib_Driver_ToolChain.cpp,v 1.1 2019/11/03 11:55:53 kamil Exp $
+$NetBSD: patch-lib_Driver_ToolChain.cpp,v 1.2 2021/07/12 18:42:06 adam Exp $
 
 [LLD] Add NetBSD support as a new flavor of LLD (nb.lld)
-https://reviews.llvm.org/D69755
+https://reviews.llvm.org/D70048
 
 --- lib/Driver/ToolChain.cpp.orig	2019-07-11 19:06:38.000000000 +0000
 +++ lib/Driver/ToolChain.cpp
