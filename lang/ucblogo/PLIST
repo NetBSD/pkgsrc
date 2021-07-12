@@ -1,31 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2015/10/11 07:02:39 ryoon Exp $
-bin/logo
+@comment $NetBSD: PLIST,v 1.5 2021/07/12 14:03:11 ryoon Exp $
+bin/ucblogo
 info/ucblogo.info
-share/doc/ucblogo/html/usermanual.html
-share/doc/ucblogo/html/usermanual_1.html
-share/doc/ucblogo/html/usermanual_10.html
-share/doc/ucblogo/html/usermanual_11.html
-share/doc/ucblogo/html/usermanual_12.html
-share/doc/ucblogo/html/usermanual_13.html
-share/doc/ucblogo/html/usermanual_14.html
-share/doc/ucblogo/html/usermanual_15.html
-share/doc/ucblogo/html/usermanual_16.html
-share/doc/ucblogo/html/usermanual_2.html
-share/doc/ucblogo/html/usermanual_3.html
-share/doc/ucblogo/html/usermanual_4.html
-share/doc/ucblogo/html/usermanual_5.html
-share/doc/ucblogo/html/usermanual_6.html
-share/doc/ucblogo/html/usermanual_7.html
-share/doc/ucblogo/html/usermanual_8.html
-share/doc/ucblogo/html/usermanual_9.html
-share/doc/ucblogo/html/usermanual_abt.html
-share/doc/ucblogo/html/usermanual_fot.html
-share/doc/ucblogo/html/usermanual_ovr.html
-share/doc/ucblogo/html/usermanual_toc.html
-share/doc/ucblogo/usermanual
-share/doc/ucblogo/usermanual.pdf
-share/doc/ucblogo/usermanual.ps
-share/doc/ucblogo/usermanual.texi
+man/man1/ucblogo.1
+share/applications/ucblogo.desktop
+share/doc/ucblogo/ucblogo.html
+share/doc/ucblogo/ucblogo.pdf
+share/icons/hicolor/256x256/apps/ucblogo.png
+share/pixmaps/ucblogo.xpm
 share/ucblogo/csls/algs
 share/ucblogo/csls/basic
 share/ucblogo/csls/buttons
@@ -211,6 +192,7 @@ share/ucblogo/helpfiles/last
 share/ucblogo/helpfiles/left
 share/ucblogo/helpfiles/lessequalp
 share/ucblogo/helpfiles/lessp
+share/ucblogo/helpfiles/linep
 share/ucblogo/helpfiles/list
 share/ucblogo/helpfiles/listp
 share/ucblogo/helpfiles/listtoarray
