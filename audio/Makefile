@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.633 2021/05/25 12:27:02 nia Exp $
+# $NetBSD: Makefile,v 1.634 2021/07/12 15:07:13 pin Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -459,6 +459,7 @@ SUBDIR+=	tap-plugins
 SUBDIR+=	tcd
 SUBDIR+=	tcl-snack
 SUBDIR+=	terminatorx
+SUBDIR+=	termusic
 SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
 SUBDIR+=	toolame
