@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3797 2021/07/12 19:32:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3798 2021/07/12 20:55:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6067,3 +6067,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/openmp to 12.0.1 [adam 2021-07-12]
 	Updated devel/include-what-you-use to 0.16 [adam 2021-07-12]
 	Updated lang/zig to 0.8.0 [adam 2021-07-12]
+	Updated games/cataclysm-dda to 0.F [nia 2021-07-12]
+	Updated games/cataclysm-dda-sdl to 0.F [nia 2021-07-12]
