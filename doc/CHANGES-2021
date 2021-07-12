@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3799 2021/07/12 21:32:55 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3800 2021/07/12 22:49:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6070,3 +6070,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/cataclysm-dda to 0.F [nia 2021-07-12]
 	Updated games/cataclysm-dda-sdl to 0.F [nia 2021-07-12]
 	Updated net/ucspi-tools to 1.7 [schmonz 2021-07-12]
+	Updated mail/mutt to 2.1.1 [tron 2021-07-12]
