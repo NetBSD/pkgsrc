@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/02 09:41:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/07/12 21:06:42 nia Exp $
 bin/osgarchive
 bin/osgconv
 bin/osgfilecache
@@ -702,7 +702,6 @@ lib/osgPlugins-${PKGVERSION}/osgdb_deprecated_osgvolume.so
 lib/osgPlugins-${PKGVERSION}/osgdb_deprecated_osgwidget.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dot.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dxf.so
-lib/osgPlugins-${PKGVERSION}/osgdb_exr.so
 lib/osgPlugins-${PKGVERSION}/osgdb_ffmpeg.so
 lib/osgPlugins-${PKGVERSION}/osgdb_freetype.so
 ${PLIST.gdal}lib/osgPlugins-${PKGVERSION}/osgdb_gdal.so
