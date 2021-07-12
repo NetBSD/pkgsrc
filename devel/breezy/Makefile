@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:06 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/12 18:46:50 rhialto Exp $
 
 DISTNAME=	breezy-3.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -16,6 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-dulwich>0:../../devel/py-dulwich
 DEPENDS+=		${PYPKGPREFIX}-fastimport>0:../../devel/py-fastimport
 DEPENDS+=		${PYPKGPREFIX}-six>0:../../lang/py-six
+DEPENDS+=		${PYPKGPREFIX}-patiencediff>=0.2.2:../../textproc/py-patiencediff
 # Not yet packaged; only needed for lp: shortcuts.
 #DEPENDS+=		${PYPKGPREFIX}-launchpadlib>=1.6.3:../../devel/py-launchpadlib
 TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
