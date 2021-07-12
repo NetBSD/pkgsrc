@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/05/18 16:45:36 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/07/12 18:49:29 adam Exp $
 
-SHA1 (include-what-you-use-0.14.src.tar.gz) = a67e9a48f18c70c6f3cb6fed5357a21c708187c6
-RMD160 (include-what-you-use-0.14.src.tar.gz) = 284cb5d5cfe20bf10f979db4aab036197971a12a
-SHA512 (include-what-you-use-0.14.src.tar.gz) = ac328c6bdf834fde58bbf14c662fdf97aac22a24a85bce4a6475c73027b3ec1c558925efb5f0ac3addf446f21d29e37a70a7c5773c178f9ab7f12e90be7d69b4
-Size (include-what-you-use-0.14.src.tar.gz) = 598485 bytes
+SHA1 (include-what-you-use-0.16.src.tar.gz) = a3b0acff986273e674391b3737f9f04e47b623f0
+RMD160 (include-what-you-use-0.16.src.tar.gz) = 210252eaa28cf4dbd5a380464eb54347fb0e140e
+SHA512 (include-what-you-use-0.16.src.tar.gz) = 337abe14d6ead33daededd4e532557abc5783ab36cbc35f43ac5f155d1cf1162baeaa78e1c246f7e11dab83a345f89ef9104f3cfeb019ad30770e8f48b407f45
+Size (include-what-you-use-0.16.src.tar.gz) = 742464 bytes
