@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3795 2021/07/12 18:43:57 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.3796 2021/07/12 18:59:29 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6053,3 +6053,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/oxipng to 5.0.0 [pin 2021-07-12]
 	Added audio/termusic version 0.2.6 [pin 2021-07-12]
 	Added textproc/py-patiencediff version 0.2.2 [rhialto 2021-07-12]
+	Updated devel/breezy to 3.2.1 [rhialto 2021-07-12]
