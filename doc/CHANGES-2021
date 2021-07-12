@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3789 2021/07/12 10:18:52 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3790 2021/07/12 13:18:14 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6047,3 +6047,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/pastel to 0.8.1 [pin 2021-07-11]
 	Updated net/remmina to 1.4.20 [ryoon 2021-07-12]
 	Updated converters/bdf2psf to 1.204 [fcambus 2021-07-12]
+	Updated lang/yabasic to 2.90.1 [fcambus 2021-07-12]
