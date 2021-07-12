@@ -1,0 +1,11 @@
+Implementation of the patiencediff algorithm, as first described by Bram
+Cohen: https://bramcohen.livejournal.com/73318.html
+
+Like Python's difflib, this module provides both a convenience
+unified_diff function for the generation of unified diffs of text files
+as well as a SequenceMatcher that can be used on arbitrary lists.
+
+Patiencediff provides a good balance of performance, nice output for
+humans, and implementation simplicity.
+
+The code in this package was extracted from the Bazaar code base.
