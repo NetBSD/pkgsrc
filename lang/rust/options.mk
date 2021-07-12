@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2021/04/04 08:51:20 he Exp $
+# $NetBSD: options.mk,v 1.14.2.1 2021/07/12 12:56:13 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
@@ -26,10 +26,7 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 # Use the internal copy of LLVM.
 # This contains some extra optimizations.
 #
-.if !empty(PKG_OPTIONS:Mrust-llvm)
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-.include "../../devel/cmake/buildlink3.mk"
-.else
+.if empty(PKG_OPTIONS:Mrust-llvm)
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
