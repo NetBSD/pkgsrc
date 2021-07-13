@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2021/05/24 19:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2021/07/13 15:35:42 schmonz Exp $
 
 DISTNAME=	libvpx-1.10.0
 PKGREVISION=	1
@@ -56,6 +56,8 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
 .    else
 CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 .    endif
+.  elif ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .  endif
 .elif ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc*)
 .  if ${MACHINE_ARCH} == "x86_64"
