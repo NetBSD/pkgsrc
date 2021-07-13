@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2021/07/04 08:58:30 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2021/07/13 07:44:14 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -18,6 +18,7 @@ PATCHDIR?=	${.CURDIR}/../../databases/mariadb105-client/patches
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run pkg-config bison
+USE_CURSES=	wide
 
 PLIST_SRC=	${PLIST_SRC_DFLT}
 
