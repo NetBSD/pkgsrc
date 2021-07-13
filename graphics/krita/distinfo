@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.10 2021/04/05 10:53:38 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/07/13 11:28:27 markd Exp $
 
 SHA1 (krita-4.4.3.tar.gz) = 55aee39c931503cf44c881d18926d70bdb59dd78
 RMD160 (krita-4.4.3.tar.gz) = 627a984e7b78a45b03b48e526d04c666ccb2f8d6
 SHA512 (krita-4.4.3.tar.gz) = 44052f5bc02c31b8e5eb7990192c1b1d6a4ca9d91117b0b8e9ddf794df83cfdde233754064ad6692516bc8d756871bf4b34190653f04956cb851333b8d15645f
 Size (krita-4.4.3.tar.gz) = 254855083 bytes
+SHA1 (patch-CMakeLists.txt) = 6cc4be72fbfe76dd66b34c14a10a6ed20695ab65
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
+SHA1 (patch-libs_image_CMakeLists.txt) = 42d0c1777f54aadeab4462b0f576a14e9c627146
+SHA1 (patch-libs_pigment_CMakeLists.txt) = c5c95326b6090f152ee54e8e7e629bf1df043fae
+SHA1 (patch-plugins_color_lcms2engine_CMakeLists.txt) = 5b9a84c2db4f7c5f5876b60061a0950be484ac84
+SHA1 (patch-plugins_color_lcms2engine_tests_CMakeLists.txt) = aec29d538aef1247c9ac69c60d965677c1c16a96
+SHA1 (patch-plugins_impex_CMakeLists.txt) = 95e6fe736e2c2151a6ad4b5ef490c0777ca098fa
+SHA1 (patch-plugins_impex_exr_exr__converter.cc) = 1bfcbdea7f748900f48c5e070d7f5d5984a9b3bf
+SHA1 (patch-plugins_impex_raw_CMakeLists.txt) = 3a94be6cb488fb8b8b2667dfb7a9b0dfa4496ef5
 SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
