@@ -1,6 +1,7 @@
-$NetBSD: patch-src_Makefile,v 1.6 2020/05/26 11:28:04 joerg Exp $
+$NetBSD: patch-src_Makefile,v 1.7 2021/07/13 21:06:03 markd Exp $
 
 * Install man pages for pkgsrc.
+* openexr3
 
 --- src/Makefile.orig	2020-03-28 13:25:12.000000000 +0000
 +++ src/Makefile
@@ -13,6 +14,17 @@ $NetBSD: patch-src_Makefile,v 1.6 2020/05/26 11:28:04 joerg Exp $
  
  # Enable software debugging.
  # (Use address sanitizer and thus slows down the code)
+@@ -302,8 +302,8 @@ MAGICK_LIBS = $(shell pkg-config --libs 
+ 
+ # Enable native support of EXR image files, using the OpenEXR library.
+ # (http://www.openexr.com/)
+-OPENEXR_CFLAGS = -Dcimg_use_openexr -I$(USR)/$(INCLUDE)/OpenEXR
+-OPENEXR_LIBS = -lIlmImf -lHalf
++OPENEXR_CFLAGS = -Dcimg_use_openexr -I$(USR)/$(INCLUDE)/Imath -I$(USR)/$(INCLUDE)/OpenEXR
++OPENEXR_LIBS = -lOpenEXR -lImath
+ 
+ # Enable Fast Fourier Transforms, using the FFTW3 library.
+ # (http://www.fftw.org/)
 @@ -727,12 +727,12 @@ ifneq ($(OS),Darwin)
            ln -fs libcgmic.so.$(VERSION1) $(DESTDIR)$(USR)/$(LIB)/libcgmic.so; \
          fi
