@@ -1,0 +1,19 @@
+$NetBSD: patch-src_imageio_format_CMakeLists.txt,v 1.1 2021/07/13 12:36:30 markd Exp $
+
+openexr3 fix
+
+--- src/imageio/format/CMakeLists.txt.orig	2019-12-21 09:57:37.000000000 +0000
++++ src/imageio/format/CMakeLists.txt
+@@ -21,10 +21,10 @@ if(WEBP_FOUND)
+         add_library(webp MODULE "webp.c")
+ endif(WEBP_FOUND)
+ 
+-if(OPENEXR_FOUND)
++if(OpenEXR_FOUND)
+ 	list(APPEND MODULES "exr")
+ 	add_library(exr MODULE "exr.cc")
+-endif(OPENEXR_FOUND)
++endif(OpenEXR_FOUND)
+ 
+ if(OpenJPEG_FOUND)
+ 	list(APPEND MODULES "j2k")
