@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3804 2021/07/13 08:16:55 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3805 2021/07/13 08:23:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6077,3 +6077,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/byacc to 20210619 [fcambus 2021-07-13]
 	Updated audio/abcmidi to 20210627 [nia 2021-07-13]
 	Updated wm/amiwm to 0.21pl2 [nia 2021-07-13]
+	Updated textproc/ansifilter to 2.18 [nia 2021-07-13]
