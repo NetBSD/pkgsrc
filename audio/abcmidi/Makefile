@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2021/06/12 06:58:47 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/07/13 07:57:13 nia Exp $
 #
 
-DISTNAME=	abcMIDI-2021.05.25
+DISTNAME=	abcMIDI-2021.06.27
 PKGNAME=	${DISTNAME:tl:S/.//g}
 CATEGORIES=	audio
 MASTER_SITES=	https://ifdo.ca/~seymour/runabc/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ifdo.ca/~seymour/runabc/
+HOMEPAGE=	https://ifdo.ca/~seymour/runabc/top.html
 COMMENT=	Command line utilities for working with abc music notation files
 LICENSE=	gnu-gpl-v2
 
