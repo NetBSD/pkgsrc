@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.204 2021/04/29 02:58:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.205 2021/07/13 00:32:22 mrg Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-PKGNAME=	x11-links-1.33
+PKGNAME=	x11-links-1.34
 CATEGORIES=	pkgtools x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
