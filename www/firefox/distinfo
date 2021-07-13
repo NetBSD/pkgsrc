@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.438 2021/06/30 15:09:55 ryoon Exp $
+$NetBSD: distinfo,v 1.439 2021/07/13 14:52:22 ryoon Exp $
 
-SHA1 (firefox-89.0.2.source.tar.xz) = ad349142db06c4220e97fa26be847027a78c92ea
-RMD160 (firefox-89.0.2.source.tar.xz) = 2d19c6b7d439bf94ce03009a7a58e88e2a61ed3a
-SHA512 (firefox-89.0.2.source.tar.xz) = ffd98ab0887611c5b4aba68346c49a7a31a58150fd8bbae610a4d941c4cff0acef0daaebfbb577787a759b4c1ef3c1199f02681148612f4f5b709983e07e0ccb
-Size (firefox-89.0.2.source.tar.xz) = 371053016 bytes
+SHA1 (firefox-90.0.source.tar.xz) = 2c15dd098ac1b9fb22db8fa5047911f144996a30
+RMD160 (firefox-90.0.source.tar.xz) = 5d842967672204689774bddd3967d2b04592711a
+SHA512 (firefox-90.0.source.tar.xz) = 233ad59e4ab2f08d2253b49235b51b26fa32fb7c285928110573ccbe67c79965d9401a6c58a3af2ad22b8a58ca5d9b3154e3e8c9d29b153acd16152d9b75442c
+Size (firefox-90.0.source.tar.xz) = 378743212 bytes
 SHA1 (nodejs-output-89.0.2.tgz) = 4b8bd0e1c398a4b02b254d8d6aa919a340e77af2
 RMD160 (nodejs-output-89.0.2.tgz) = 88826c7e23cda74efd4e2c699c8787ffda087e10
 SHA512 (nodejs-output-89.0.2.tgz) = 19046c2d1a150b0c9049005f2bc3e181e548e5a4a6bb1fa4baca1d18f73d8257e7032fe69220b4e4a49e1949cba4315103fb766c4b79e8a328d09c246d156906
@@ -22,9 +22,7 @@ SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = f6f8996f0818a1b890698c7cc5054d49cb1e89
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 4a6606da590cfb8d855bde58b9c6f90e98d0870c
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
-SHA1 (patch-js_public_ErrorReport.h) = 6b96a09acb9d7ee2a85539d827ba46e7a1a062e8
 SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f742231984ec2bc27605
-SHA1 (patch-js_src_jit_arm64_Architecture-arm64.h) = 7b83b343f80a572c96298ca56294643370cbe704
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_jsfriendapi.h) = b5cb687dbbda314fe0f16521c1c042c105c4bbe4
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
