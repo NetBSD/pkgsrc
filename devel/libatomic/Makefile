@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/19 14:07:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/13 07:53:38 nia Exp $
 
 DISTNAME=	gcc-10.3.0
 PKGNAME=	${DISTNAME:S/gcc/libatomic/}
@@ -21,6 +21,8 @@ GNU_CONFIGURE_STRICT=	no
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/libatomic/configure
+
+CONFIGURE_ARGS+=	--disable-multilib
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
