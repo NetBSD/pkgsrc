@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2020/01/26 17:32:20 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2021/07/13 08:16:17 nia Exp $
 #
 
-DISTNAME=	amiwm0.20pl48
-PKGNAME=	amiwm-0.20p48
-PKGREVISION=	3
-CATEGORIES=	x11 wm
+DISTNAME=	amiwm0.21pl2
+PKGNAME=	amiwm-0.21pl2
+CATEGORIES=	wm x11
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,29 +11,16 @@ HOMEPAGE=	https://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
 LICENSE=	amiwm-license
 
-RESTRICTED=		Distribution limited to non-commercial purposes, unmodified binaries only.
+RESTRICTED=		Distribution limited to non-commercial purposes, unmodified source only.
+NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-
-# Extensive use of 32-bit values to hold pointers
-BROKEN_ON_PLATFORM+=	${LP64PLATFORMS}
 
 USE_TOOLS+=	ksh:run yacc lex
 REPLACE_KSH=	Xsession.in Xsession2.in
 
-.include "../../mk/bsd.prefs.mk"
-
 GNU_CONFIGURE=	yes
-CFLAGS+=	-DHAVE_X11_EXTENSIONS_SHAPE_H=1
-CFLAGS+=	-O
-CONFIGURE_ENV+=	CFLAGS=${CFLAGS:M*:Q}
-CONFIGURE_ENV+=	X_PRE_LIBS=${X_PRE_LIBS:Q}
-CONFIGURE_ENV+=	X_EXTRA_LIBS=-lXt
-
-X_PRE_LIBS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
-
-INSTALLATION_DIRS=	bin
+MAKE_JOBS_SAFE=	no
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
