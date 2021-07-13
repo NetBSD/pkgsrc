@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3811 2021/07/13 12:05:34 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3812 2021/07/13 13:12:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6084,3 +6084,25 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go115 to 1.15.14 [bsiegert 2021-07-13]
 	Updated lang/go116 to 1.16.6 [bsiegert 2021-07-13]
 	Added x11/libxcvt version 0.1.0 [wiz 2021-07-13]
+	Updated mail/claws-mail to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-archive to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-attachwarner to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-attremover to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-bogofilter to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-fetchinfo to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-mailmbox to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-managesieve to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-newmail to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-notification to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-pgp to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-pgpcore to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-pgpinline to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-pgpmime to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-rssyl to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-smime to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-spamassassin to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-spamreport to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-tnef to 4.0.0 [nia 2021-07-13]
+	Updated mail/claws-mail-vcalendar to 4.0.0 [nia 2021-07-13]
+	Added mail/claws-mail-dillo version 4.0.0 [nia 2021-07-13]
+	Added mail/claws-mail-libravatar version 4.0.0 [nia 2021-07-13]
