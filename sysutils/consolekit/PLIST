@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/01/01 15:33:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/07/13 08:54:48 nia Exp $
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions
@@ -36,6 +36,7 @@ share/examples/consolekit/logrotate.d/consolekit
 share/locale/bg/LC_MESSAGES/ConsoleKit2.mo
 share/locale/es/LC_MESSAGES/ConsoleKit2.mo
 share/locale/es_419/LC_MESSAGES/ConsoleKit2.mo
+share/locale/fr/LC_MESSAGES/ConsoleKit2.mo
 share/locale/ru/LC_MESSAGES/ConsoleKit2.mo
 share/polkit-1/actions/org.freedesktop.consolekit.policy
 share/polkit-1/rules.d/50-shutdown.rules
