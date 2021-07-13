@@ -1,4 +1,4 @@
-# $NetBSD: xorg.Xfixes,v 1.6 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.Xfixes,v 1.7 2021/07/13 01:38:02 gutteridge Exp $
 #
 include/X11/extensions/Xfixes.h
 lib/libXfixes.3.1.0.dylib
@@ -12,6 +12,7 @@ lib/libXfixes.so.3.0
 lib/libXfixes.so.3.1
 lib/libXfixes.so.4
 lib/libXfixes.so.4.0
+lib/libXfixes.so.4.1
 lib/libXfixes.so.5.0
 lib/libXfixes.so.5.1
 lib/pkgconfig/xfixes.pc
