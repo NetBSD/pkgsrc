@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2020/01/05 02:30:08 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2021/07/13 12:36:30 markd Exp $
 
 SHA1 (darktable-3.0.0.tar.xz) = 468ea6cbc313ec899b448f5c9c8ce4144d5f35c7
 RMD160 (darktable-3.0.0.tar.xz) = b7d1c358250a950548a01d2de9bee9f551cf5dee
@@ -6,6 +6,7 @@ SHA512 (darktable-3.0.0.tar.xz) = de154cc19281f61316363243db3e531be33ac4c4632d62
 Size (darktable-3.0.0.tar.xz) = 3827412 bytes
 SHA1 (patch-CMakeLists.txt) = 2b2c6c0733af56e61e5be598a59644b40e8f26a6
 SHA1 (patch-cmake_compiler-warnings.cmake) = b65fbb5222cca791088137e823402df6b9423121
-SHA1 (patch-src_CMakeLists.txt) = 4535599cf1d0f6aae1909bd4dc09281311e23e0c
+SHA1 (patch-src_CMakeLists.txt) = cfab8ea6b70400f9d9234ddbbca9cc1ecbd6e782
 SHA1 (patch-src_common_system__signal__handling.c) = 296f5618c618a9b16af2ca5a1d9ff408c437c220
+SHA1 (patch-src_imageio_format_CMakeLists.txt) = c292604a1b92262af874af6b806488ad27d9a4df
 SHA1 (patch-tools_noise_benchmark.sh) = 1e26ebbbc73e44ec41c092297d681f33fb55155d
