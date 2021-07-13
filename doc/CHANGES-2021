@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3818 2021/07/13 15:10:06 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3819 2021/07/13 20:20:54 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6114,3 +6114,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox-l10n to 90.0 [ryoon 2021-07-13]
 	Updated mail/thunderbird to 78.11.0 [ryoon 2021-07-13]
 	Updated mail/thunderbird-l10n to 78.11.0 [ryoon 2021-07-13]
+	Updated sysutils/py-borgbackup to 1.1.17 [bsiegert 2021-07-13]
