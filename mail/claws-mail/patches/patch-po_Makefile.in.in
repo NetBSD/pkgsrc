@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2014/01/15 17:19:30 drochner Exp $
+$NetBSD: patch-po_Makefile.in.in,v 1.1 2021/07/13 12:35:09 nia Exp $
 
---- po/Makefile.in.in.orig	2013-12-14 10:15:08.000000000 +0000
+--- po/Makefile.in.in.orig	2021-07-10 08:47:06.000000000 +0000
 +++ po/Makefile.in.in
 @@ -40,8 +40,8 @@ INSTALL_DATA = @INSTALL_DATA@
  # In automake >= 1.10, @mkdir_p@ is derived from ${MKDIR_P}, which is defined
