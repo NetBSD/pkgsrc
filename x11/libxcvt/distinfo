@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/13 12:05:08 wiz Exp $
+
+SHA1 (libxcvt-0.1.0.tar.xz) = 78020d861f50ff85aba704c3b96d53811fa9d235
+RMD160 (libxcvt-0.1.0.tar.xz) = d4239ed4e1c7f61be148bd03824b909ecd0b5f9f
+SHA512 (libxcvt-0.1.0.tar.xz) = c2ca7abfc2954cf4427e0b3c3e302aad438525118dc9fa2047fce2bce6578863696387af8eb7adfad40af6313d9d9c87a9dcaf7e026e8049d48118063f6f0088
+Size (libxcvt-0.1.0.tar.xz) = 7912 bytes

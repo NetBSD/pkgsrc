@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/13 12:05:08 wiz Exp $
+bin/cvt
+include/libxcvt/libxcvt.h
+include/libxcvt/libxcvt_mode.h
+lib/libxcvt.so
+lib/pkgconfig/libxcvt.pc
+man/man1/cvt.1
