@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/11/26 18:54:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/07/13 08:34:33 nia Exp $
 
-SHA1 (burgerspace-1.9.3.tar.gz) = ca465874dfc0e2f067f3da1450bc7086fc789a5f
-RMD160 (burgerspace-1.9.3.tar.gz) = 5e4704f5353f9025a845d84157f5f52d7a468e63
-SHA512 (burgerspace-1.9.3.tar.gz) = 59629ca497a0a379858ba69bb444182f935b58be6554109fb9b309713bd6bde0d771e63858802f9153a4e46bbfe63b5edf58f857bb94ca337dbba89ff3c610cb
-Size (burgerspace-1.9.3.tar.gz) = 517492 bytes
+SHA1 (burgerspace-1.9.4.tar.gz) = 01289ccadefcb7d8d5e8f0569737097b6e36633b
+RMD160 (burgerspace-1.9.4.tar.gz) = 81ce4eaf159aa2b5127234b1be8a1ddf39a229c8
+SHA512 (burgerspace-1.9.4.tar.gz) = e4ba9b2421aa3db18ed0b99ecc23c114fe9146a248028064c5d477b99674d7d7ea4bb1de01041de1ddcc186242e346d186a155a6cdb3db28cca518349dcaa1b2
+Size (burgerspace-1.9.4.tar.gz) = 542060 bytes
