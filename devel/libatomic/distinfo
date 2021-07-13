@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/04/19 14:07:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/07/13 07:53:38 nia Exp $
 
 SHA1 (gcc-10.3.0.tar.xz) = fb51ed1660c065898c75951fb38e1ebad7d49feb
 RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
 Size (gcc-10.3.0.tar.xz) = 76692288 bytes
+SHA1 (patch-libatomic_configure) = 9ca952bc6e48dc37dd79d3fb050194de460f0898
