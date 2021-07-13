@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/01/03 18:52:31 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/07/13 11:48:58 markd Exp $
 
 SHA1 (luminance-hdr-2.6.0.tar.bz2) = 18333410173cbc3680d3b7313a6b0a2cf68e043d
 RMD160 (luminance-hdr-2.6.0.tar.bz2) = b1ad15d37434524c5793685e035692c5fff579d6
 SHA512 (luminance-hdr-2.6.0.tar.bz2) = 6cfb21b1ddc9cac612e3d176323e34c5181333f1b52953c02ad5aec28cc86bf519ecede248847082085879c5c2fd2c5570b05f5d3bffa96ba3781ff8cd1967d1
 Size (luminance-hdr-2.6.0.tar.bz2) = 11556372 bytes
+SHA1 (patch-CMakeLists.txt) = c181636a243f5d6ee3dccbe28947eb365ce781ae
+SHA1 (patch-src_Libpfs_CMakeLists.txt) = 6cf7b440fdf22d72e2d9abbc328c715e711a15a6
