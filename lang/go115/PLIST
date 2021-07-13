@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/06/04 16:43:21 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/07/13 10:05:08 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -9016,6 +9016,9 @@ go115/test/fixedbugs/issue4618.go
 go115/test/fixedbugs/issue4620.go
 go115/test/fixedbugs/issue4654.go
 go115/test/fixedbugs/issue4663.go
+go115/test/fixedbugs/issue46653.dir/bad/bad.go
+go115/test/fixedbugs/issue46653.dir/main.go
+go115/test/fixedbugs/issue46653.go
 go115/test/fixedbugs/issue4667.go
 go115/test/fixedbugs/issue4734.go
 go115/test/fixedbugs/issue4748.go
