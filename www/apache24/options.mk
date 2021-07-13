@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2020/06/29 13:58:53 ryoon Exp $
+# $NetBSD: options.mk,v 1.18 2021/07/13 13:12:44 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		apache-mpm-event apache-mpm-prefork apache-mpm-worker \
@@ -134,4 +134,6 @@ PLIST.brotli=          yes
 .include "../../textproc/jansson/buildlink3.mk"
 CONFIGURE_ARGS+=       --enable-md
 PLIST.md= 	         yes
+.else
+CONFIGURE_ARGS+=       --disable-md
 .endif
