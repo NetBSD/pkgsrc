@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/06/01 09:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2021/07/13 11:48:58 markd Exp $
 
 DISTNAME=	luminance-hdr-2.6.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtpfsgui/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,5 +30,6 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
+CMAKE_ARGS+=	-DQt5WebEngineCore_FOUND=FALSE
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
