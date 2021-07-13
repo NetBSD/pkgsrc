@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/06/06 12:19:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2021/07/13 11:36:33 bsiegert Exp $
 
 DISTNAME=	go-diff-1.0.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	25
+PKGREVISION=	26
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sergi/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	go-diff
