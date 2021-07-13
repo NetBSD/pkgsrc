@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.103 2021/07/04 07:55:12 taca Exp $
+# $NetBSD: rails.mk,v 1.104 2021/07/13 11:53:25 markd Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -126,6 +126,7 @@ MULTI+=		RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
 		RUBY_RAILS_ACCEPTED=${RUBY_RAILS}
 
 PLIST_SUBST+=	RUBY_RAILS=${RUBY_RAILS}
+FILES_SUBST+=	RUBY_RAILS=${RUBY_RAILS}
 
 RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
