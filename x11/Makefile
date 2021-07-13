@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.935 2021/07/04 07:13:45 nia Exp $
+# $NetBSD: Makefile,v 1.936 2021/07/13 12:05:24 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -242,6 +242,7 @@ SUBDIR+=	libqtxdg
 SUBDIR+=	libunique
 SUBDIR+=	libunique3
 SUBDIR+=	libxcb
+SUBDIR+=	libxcvt
 SUBDIR+=	libxdg-basedir
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4ui
