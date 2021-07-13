@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Libpfs_CMakeLists.txt,v 1.1 2021/07/13 11:48:58 markd Exp $
+
+openexr3 fix
+
+--- src/Libpfs/CMakeLists.txt.orig	2019-06-09 19:18:38.000000000 +0000
++++ src/Libpfs/CMakeLists.txt
+@@ -12,7 +12,7 @@ ADD_SUBDIRECTORY(colorspace)
+ ADD_SUBDIRECTORY(io)
+ 
+ ADD_LIBRARY(pfs STATIC ${LIBPFS_H} ${LIBPFS_HXX} ${LIBPFS_CPP})
+-TARGET_LINK_LIBRARIES(pfs Qt5::Core Qt5::Gui Qt5::Widgets)
++TARGET_LINK_LIBRARIES(pfs Qt5::Core Qt5::Gui Qt5::Widgets OpenEXR::OpenEXR)
+ 
+ SET(LUMINANCE_MODULES_GUI ${LUMINANCE_MODULES_GUI} pfs PARENT_SCOPE)
+ SET(LUMINANCE_MODULES_CLI ${LUMINANCE_MODULES_CLI} pfs PARENT_SCOPE)
