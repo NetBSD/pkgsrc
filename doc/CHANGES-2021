@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3801 2021/07/13 04:26:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3802 2021/07/13 07:51:29 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6074,3 +6074,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-llvmlite to 0.36.0 [adam 2021-07-12]
 	Updated editors/py-editor to 1.0.4 [adam 2021-07-13]
 	Updated comms/py-rich to 10.6.0 [adam 2021-07-13]
+	Updated devel/byacc to 20210619 [fcambus 2021-07-13]
