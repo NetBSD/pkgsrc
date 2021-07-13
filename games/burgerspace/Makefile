@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:13 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/13 08:34:33 nia Exp $
 
-DISTNAME=	burgerspace-1.9.3
+DISTNAME=	burgerspace-1.9.4
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
