@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3812 2021/07/13 13:12:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3813 2021/07/13 13:18:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6106,3 +6106,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/claws-mail-vcalendar to 4.0.0 [nia 2021-07-13]
 	Added mail/claws-mail-dillo version 4.0.0 [nia 2021-07-13]
 	Added mail/claws-mail-libravatar version 4.0.0 [nia 2021-07-13]
+	Removed mail/claws-mail-cachesaver [nia 2021-07-13]
+	Removed mail/claws-mail-synce [nia 2021-07-13]
