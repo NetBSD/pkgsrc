@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.205 2021/04/21 13:24:10 adam Exp $
+# $NetBSD: Makefile,v 1.206 2021/07/13 13:24:43 nia Exp $
 
-PKGREVISION= 	12
 .include 	"Makefile.common"
 
 DISTNAME=	abiword-${ABIVERSION}
