@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.81 2020/03/26 02:36:02 joerg Exp $
+$NetBSD: distinfo,v 1.82 2021/07/13 13:24:43 nia Exp $
 
-SHA1 (abiword-3.0.4.tar.gz) = eb6c18e649fe8ca185c8d09f2c7869a27c9942db
-RMD160 (abiword-3.0.4.tar.gz) = cd7eaf6c89b44f094c70b1700158b3ef2844c5a4
-SHA512 (abiword-3.0.4.tar.gz) = 121708e010cef6722cab5622dc762f2f92c46e43b65b90b881b4f25ff32c1696fa2d281a3a6f2c04d5b9231bbbd0040281e9d4d7e594ec0ace6caae9c9021ec4
-Size (abiword-3.0.4.tar.gz) = 11064305 bytes
+SHA1 (abiword-3.0.5.tar.gz) = d6999f95eb270604c4c47966545a7a2d667836aa
+RMD160 (abiword-3.0.5.tar.gz) = 69cd7b59e6880c8e205d99165227879284be9f09
+SHA512 (abiword-3.0.5.tar.gz) = a2484268901ff47307c9d1f1928622e364f1006f22ce38257c585144df9411dfe3c2dea28c1f1f50a6e545e8cc579cce34117a89dfa771e20312e3ea1a9989d6
+Size (abiword-3.0.5.tar.gz) = 11084159 bytes
 SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
 SHA1 (patch-plugin-configure.m4) = 396c7ec04298b5af3807248f94f2c8630f3579ac
 SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
