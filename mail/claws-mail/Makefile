@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.117 2021/05/24 19:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2021/07/13 08:44:11 nia Exp $
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	X based e-mail and netnews client
+COMMENT=	Email client and news reader based on GTK+
 
 CONFLICTS+=	sylpheed-claws-[0-9]*
 
@@ -34,33 +33,6 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 EGDIR=		${PREFIX}/share/examples/claws-mail
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.claws-mail
-PKG_SUPPORTED_OPTIONS=	claws-mail-jpilot ldap inet6
-PKG_SUGGESTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mclaws-mail-jpilot)
-CONFIGURE_ARGS+=	--enable-jpilot
-.  include "../../comms/pilot-link-libs/buildlink3.mk"
-.  include "../../comms/jpilot/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-jpilot
-.endif
-
-.if !empty(PKG_OPTIONS:Mldap)
-CONFIGURE_ARGS+=	--enable-ldap
-.  include "../../databases/openldap-client/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-ldap
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
 INSTALLATION_DIRS+=	share/applications
 
 post-install:
@@ -76,6 +48,7 @@ PLIST_SRC=	PLIST
 PLIST_SRC+=	PLIST.shred
 .endif
 
+.include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
