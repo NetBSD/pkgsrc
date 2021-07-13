@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3807 2021/07/13 08:39:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3808 2021/07/13 08:54:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6080,3 +6080,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ansifilter to 2.18 [nia 2021-07-13]
 	Updated games/burgerspace to 1.9.4 [nia 2021-07-13]
 	Updated devel/cdk to 5.0.20210324 [nia 2021-07-13]
+	Updated sysutils/consolekit to 1.2.4 [nia 2021-07-13]
