@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/01/01 15:33:51 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/07/13 08:54:48 nia Exp $
 
-SHA1 (ConsoleKit2-1.2.2.tar.gz) = dd12671c830d6d340785ad20fac38f30afbca393
-RMD160 (ConsoleKit2-1.2.2.tar.gz) = 3550c46db232ccfdc12eadd6afe5dfa41602c236
-SHA512 (ConsoleKit2-1.2.2.tar.gz) = 7f9a4c77c7991b7a3751605f58f12bb079660fe974aeec385a9753dc4b33241052153b9a9261effc91e86323e8a9dcbc9269c4829b871ab91ef286506ff3b18b
-Size (ConsoleKit2-1.2.2.tar.gz) = 254783 bytes
+SHA1 (ConsoleKit2-1.2.4.tar.gz) = a41c22f2173554f4cf1d5566e2168012b4b3f0a6
+RMD160 (ConsoleKit2-1.2.4.tar.gz) = ba9d3d8bee1cf9e3abd7cd2b801a0f944b902164
+SHA512 (ConsoleKit2-1.2.4.tar.gz) = ac92391d6b171158f55d9974b56bf5d81b9c6c1e8aa3961e9d0f77475e9b99fa2d291bfb243686288a9a060ff2d8cb96751310e55fdd4299f4c003eefc146ae8
+Size (ConsoleKit2-1.2.4.tar.gz) = 256924 bytes
