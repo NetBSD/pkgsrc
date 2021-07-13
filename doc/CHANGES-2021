@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3814 2021/07/13 13:26:54 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3815 2021/07/13 14:53:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6110,3 +6110,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed mail/claws-mail-synce [nia 2021-07-13]
 	Updated editors/abiword to 3.0.5 [nia 2021-07-13]
 	Updated editors/abiword-plugins to 3.0.5 [nia 2021-07-13]
+	Updated www/firefox to 90.0 [ryoon 2021-07-13]
