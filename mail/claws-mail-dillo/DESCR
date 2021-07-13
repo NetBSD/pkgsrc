@@ -1,0 +1,2 @@
+Enables the viewing of html messages using the Dillo web browser, version
+3.0.0 or newer. It uses Dillo's --local option by default for safe browsing.
