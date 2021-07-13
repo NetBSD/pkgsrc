@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2020/08/26 10:28:39 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2021/07/13 12:05:48 wiz Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}
@@ -9,6 +9,8 @@ COMMENT=	Modular X11 server from modular X.org
 SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 
 NOT_FOR_PLATFORM=	Darwin-*-*
+
+CONFLICTS+=		libxcvt-[0-9]*
 
 .include "Makefile.common"
 
