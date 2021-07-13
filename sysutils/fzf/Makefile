@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2021/06/28 07:44:31 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2021/07/13 11:36:38 bsiegert Exp $
 
 DISTNAME=	fzf-0.27.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 
