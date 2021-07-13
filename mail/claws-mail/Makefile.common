@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2020/12/08 09:22:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.24 2021/07/13 12:35:09 nia Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -43,9 +43,11 @@ CONFIGURE_ARGS+=	--disable-att_remover-plugin
 CONFIGURE_ARGS+=	--disable-attachwarner-plugin
 CONFIGURE_ARGS+=	--disable-bsfilter-plugin
 CONFIGURE_ARGS+=	--disable-clamd-plugin
+CONFIGURE_ARGS+=	--disable-dillo-plugin
 CONFIGURE_ARGS+=	--disable-fancy-plugin
 CONFIGURE_ARGS+=	--disable-fetchinfo-plugin
 CONFIGURE_ARGS+=	--disable-gdata-plugin
+CONFIGURE_ARGS+=	--disable-libravatar-plugin
 CONFIGURE_ARGS+=	--disable-litehtml_viewer-plugin
 CONFIGURE_ARGS+=	--disable-mailmbox-plugin
 CONFIGURE_ARGS+=	--disable-managesieve-plugin
@@ -65,4 +67,4 @@ CONFIGURE_ARGS+=	--disable-vcalendar-plugin
 #.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
