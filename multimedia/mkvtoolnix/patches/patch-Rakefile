@@ -1,19 +1,19 @@
-$NetBSD: patch-Rakefile,v 1.5 2019/11/05 18:01:48 adam Exp $
+$NetBSD: patch-Rakefile,v 1.6 2021/07/14 07:39:05 adam Exp $
 
 Leave pkgsrc to handle security features and optimization.
 
---- Rakefile.orig	2019-11-04 20:54:12.000000000 +0000
+--- Rakefile.orig	2021-07-10 10:32:55.000000000 +0000
 +++ Rakefile
-@@ -128,8 +128,6 @@ def setup_globals
-   cflags_common           += " #{c(:WNO_INCONSISTENT_MISSING_OVERRIDE)} #{c(:WNO_POTENTIALLY_EVALUATED_EXPRESSION)}"
+@@ -131,8 +131,6 @@ def setup_globals
    cflags_common           += " #{c(:OPTIMIZATION_CFLAGS)} -D_FILE_OFFSET_BITS=64"
+   cflags_common           += " -DQT_NO_KEYWORDS"
    cflags_common           += " -DMTX_LOCALE_DIR=\\\"#{c(:localedir)}\\\" -DMTX_PKG_DATA_DIR=\\\"#{c(:pkgdatadir)}\\\" -DMTX_DOC_DIR=\\\"#{c(:docdir)}\\\""
 -  cflags_common           += determine_stack_protector_flags
 -  cflags_common           += determine_optimization_cflags
    cflags_common           += " -g3 -DDEBUG"                                              if c?(:USE_DEBUG)
    cflags_common           += " -pg"                                                      if c?(:USE_PROFILING)
    cflags_common           += " -fsanitize=undefined"                                     if c?(:USE_UBSAN)
-@@ -160,7 +158,6 @@ def setup_globals
+@@ -162,7 +160,6 @@ def setup_globals
    cxxflags                += " #{c(:QT_CFLAGS)} #{c(:BOOST_CPPFLAGS)} #{c(:USER_CXXFLAGS)}"
  
    ldflags                  = ""
