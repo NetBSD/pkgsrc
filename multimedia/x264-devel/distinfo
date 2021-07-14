@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.53 2020/03/04 15:53:24 wiz Exp $
+$NetBSD: distinfo,v 1.54 2021/07/14 13:19:41 schmonz Exp $
 
 SHA1 (x264-snapshot-20191217-2245.tar.bz2) = f2c36c5a2e81eb0456af4e1f06b827d98ccc6c18
 RMD160 (x264-snapshot-20191217-2245.tar.bz2) = 8565a3af522b47430cfc1527968e8ae851fc05c4
 SHA512 (x264-snapshot-20191217-2245.tar.bz2) = 89061f66fa86dfb868759e5b1dabbb6d1cd9d1240b1bf16afc789f1aa080b3940df5766ddb25e0f0faf0bc8b2603bc35b932848426eeaa4b603199066368f5f0
 Size (x264-snapshot-20191217-2245.tar.bz2) = 774081 bytes
 SHA1 (patch-common_cpu.c) = ef15bae000163e9c10d2e414e841486dd2920b80
-SHA1 (patch-configure) = 101800ee97242ab4f42da8fc6f83b8a6209a1993
+SHA1 (patch-config.guess) = 0ea57f57cdc5c2b98c9fa1a865274b08a8136b07
+SHA1 (patch-config.sub) = bb6303f5200128fb65a7f9ae90653a2dc6876877
+SHA1 (patch-configure) = a55a26beef54352ae8d4b30bddcd9afe664cb8e4
 SHA1 (patch-encoder_analyse.c) = 2057583899e029a4c2173c511293e6a35cf80f78
