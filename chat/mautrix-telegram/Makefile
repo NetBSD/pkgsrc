@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:02 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/14 08:29:19 wiz Exp $
 
 DISTNAME=	mautrix-telegram-0.9.0
 PKGREVISION=	2
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2<2:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35<0.17:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
