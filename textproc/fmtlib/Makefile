@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/11/26 09:31:18 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/14 07:31:10 adam Exp $
 
-DISTNAME=	fmt-7.1.3
+DISTNAME=	fmt-8.0.1
 PKGNAME=	${DISTNAME:S/fmt/fmtlib/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fmtlib/}
