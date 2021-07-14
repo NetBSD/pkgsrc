@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/04 20:45:02 nia Exp $
+# $NetBSD: Makefile,v 1.12 2021/07/14 08:29:19 wiz Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.4
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2<2:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.94<0.17:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.94:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-hangups>=0.4.12<0.5:../../chat/py-hangups
