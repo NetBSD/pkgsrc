@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20863 2021/07/13 12:05:34 wiz Exp $
+$NetBSD: TODO,v 1.20864 2021/07/14 01:35:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -944,7 +944,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gossip-0.31
 	o got-0.52
 	o gourmet-0.13.3
-	o gpac-1.0.1
 	o gperiodic-3.0.2
 	o gps-17.0
 	o gradle-7.0
