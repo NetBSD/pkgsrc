@@ -1,14 +1,15 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2021/07/09 18:51:23 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2021/07/14 20:44:47 pin Exp $
 
-Use libc that contains improved NetBSD support
+Use latest process_control supporting NetBSD
 
---- Cargo.toml.orig	2021-06-20 18:25:33.000000000 +0000
+--- Cargo.toml.orig	2021-07-13 21:59:46.000000000 +0000
 +++ Cargo.toml
-@@ -30,6 +30,7 @@ tls-vendored = ["native-tls/vendored"]
+@@ -70,7 +70,7 @@ shadow-rs = "0.6.2"
+ versions = "3.0.2"
+ strsim = "0.10.0"
  
+-process_control = { version = "3.0.1", features = ["crossbeam-channel"] }
++process_control = { version = "3.1.0", features = ["crossbeam-channel"] }
  
- [dependencies]
-+libc = "0.2.98"
- clap = "2.33.3"
- ansi_term = "0.12.1"
- dirs-next = "2.0.0"
+ # Optional/http:
+ attohttpc = { version = "0.17.0", optional = true, default-features = false, features = ["tls", "form"] }
