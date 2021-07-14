@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2021/07/08 21:19:47 markd Exp $
+# $NetBSD: Makefile,v 1.77 2021/07/14 17:58:21 adam Exp $
 
-DISTNAME=	oiio-2.2.15.1
+DISTNAME=	oiio-2.2.16.0
 PKGNAME=	${DISTNAME:S/oiio/openimageio/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
@@ -17,11 +17,12 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
+TEST_TARGET=		test
 
 CMAKE_ARGS+=		-DSTOP_ON_WARNING=OFF # Disable -Werror
 CMAKE_ARGS+=		-DBUILD_MISSING_FMT=OFF
 CMAKE_ARGS+=		-DBUILD_MISSING_ROBINMAP=OFF
-CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=OFF
+CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=ON
 CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
 CMAKE_ARGS+=		-DROBINMAP_INCLUDE_DIR=${BUILDLINK_PREFIX.robin-map}/include
 CMAKE_ARGS+=		-DOpenJpeg_ROOT=${BUILDLINK_PREFIX.openjpeg}
@@ -57,6 +58,7 @@ pre-configure:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/robin-map/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
@@ -64,9 +66,8 @@ pre-configure:
 .include "../../graphics/opencolorio/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/giflib/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
