@@ -1,0 +1,16 @@
+$NetBSD: patch-config.guess,v 1.1 2021/07/14 13:19:42 schmonz Exp $
+
+Apply upstream eb95c29 to fix macOS M1 build.
+
+--- config.guess.orig	2019-12-17 21:45:04.000000000 +0000
++++ config.guess
+@@ -1238,6 +1238,9 @@ EOF
+     *:Rhapsody:*:*)
+ 	echo ${UNAME_MACHINE}-apple-rhapsody${UNAME_RELEASE}
+ 	exit ;;
++    arm64:Darwin:*:*)
++	echo arm64-apple-darwin${UNAME_RELEASE}
++	exit ;;
+     *:Darwin:*:*)
+ 	UNAME_PROCESSOR=`uname -p` || UNAME_PROCESSOR=unknown
+ 	case $UNAME_PROCESSOR in

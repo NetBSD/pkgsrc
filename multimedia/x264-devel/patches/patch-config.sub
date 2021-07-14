@@ -1,0 +1,24 @@
+$NetBSD: patch-config.sub,v 1.1 2021/07/14 13:19:42 schmonz Exp $
+
+Apply upstream eb95c29 to fix macOS M1 build.
+
+--- config.sub.orig	2019-12-17 21:45:04.000000000 +0000
++++ config.sub
+@@ -255,7 +255,7 @@ case $basic_machine in
+ 	# Some are omitted here because they have special meanings below.
+ 	1750a | 580 \
+ 	| a29k \
+-	| aarch64 | aarch64_be \
++	| aarch64 | aarch64_be | arm64 \
+ 	| alpha | alphaev[4-8] | alphaev56 | alphaev6[78] | alphapca5[67] \
+ 	| alpha64 | alpha64ev[4-8] | alpha64ev56 | alpha64ev6[78] | alpha64pca5[67] \
+ 	| am33_2.0 \
+@@ -369,7 +369,7 @@ case $basic_machine in
+ 	# Recognize the basic CPU types with company name.
+ 	580-* \
+ 	| a29k-* \
+-	| aarch64-* | aarch64_be-* \
++	| aarch64-* | aarch64_be-* | arm64*-* \
+ 	| alpha-* | alphaev[4-8]-* | alphaev56-* | alphaev6[78]-* \
+ 	| alpha64-* | alpha64ev[4-8]-* | alpha64ev56-* | alpha64ev6[78]-* \
+ 	| alphapca5[67]-* | alpha64pca5[67]-* | arc-* \
