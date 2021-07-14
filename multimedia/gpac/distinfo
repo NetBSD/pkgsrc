@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2020/09/19 03:38:07 schmonz Exp $
+$NetBSD: distinfo,v 1.18 2021/07/14 01:35:23 schmonz Exp $
 
-SHA1 (gpac-0.8.1.tar.gz) = 6025c420dad5b957c8aae2703ecd516f2ef4b4c5
-RMD160 (gpac-0.8.1.tar.gz) = 9f90f5989735a97b96b2eea9522c21a254a5c151
-SHA512 (gpac-0.8.1.tar.gz) = f2039fe91a502ea8c54330abf893d52d10fb57d4459f5f3aae28122f565ab8964011b67e6af0d79c170fa55b125ac1385fd1d280021da7d1d37b27c74ee5b6c1
-Size (gpac-0.8.1.tar.gz) = 11432459 bytes
-SHA1 (patch-Makefile) = 9f6cf58175ab3d95cbcf1c9fdd7b024432f6d08c
+SHA1 (gpac-1.0.1.tar.gz) = ceda4a9ffc2fb51958fa292b432d1f0f9a457a60
+RMD160 (gpac-1.0.1.tar.gz) = 1e19dba1a2770268f64947f6ba34fb458028764f
+SHA512 (gpac-1.0.1.tar.gz) = 533371d59e72250bef315be03ec3437cd66782d0fb6bdb6486a6f4d57d06a6a7deff1b31fe8bfd360be1d1c848b33b5d25e7268f56f27f8e92cbcb7da1aba82b
+Size (gpac-1.0.1.tar.gz) = 10352926 bytes
+SHA1 (patch-Makefile) = 4fa2a8034ef1e01bc3c716f8b3b60be976e620f1
 SHA1 (patch-configure) = b76d24b134b7e10c613411f08d8374f0e0202599
