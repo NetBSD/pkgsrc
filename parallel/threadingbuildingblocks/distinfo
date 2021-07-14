@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/04/25 07:51:26 mrg Exp $
+$NetBSD: distinfo,v 1.7 2021/07/14 17:56:16 adam Exp $
 
-SHA1 (oneTBB-2020.3.tar.gz) = ae543670251a6d667e6f077ecfab0d5bb09b270c
-RMD160 (oneTBB-2020.3.tar.gz) = 1f3918c0dadfcddd2b38f398299de0d8542f11b4
-SHA512 (oneTBB-2020.3.tar.gz) = ea1ffd22c7234d715b8c46a4e51b40719c7a9b8837ab3166f1da5a2c6061167c2be2126b1d74fd361eec6975b8fce0df26829ca2e7af8029edbb52e40f23d630
-Size (oneTBB-2020.3.tar.gz) = 2639737 bytes
-SHA1 (patch-build-BSD.inc) = 357d7d76f37c88f2849ddf90970989161094ecfb
+SHA1 (oneTBB-2021.3.0.tar.gz) = 4335ea0dc87d1ead91998e90e7de3045704c1fda
+RMD160 (oneTBB-2021.3.0.tar.gz) = f09caab75e92914edfad977d499beb35b87cef48
+SHA512 (oneTBB-2021.3.0.tar.gz) = 969bc8d1dcf50bd12f70633d0319e46308eb1667cdc6f0503b373a35dcb2fe6b2adf59c26bd3c8e2a99a8d2d8b9f64088db5a43e784218b163b3661d12908c0e
+Size (oneTBB-2021.3.0.tar.gz) = 1651329 bytes
+SHA1 (patch-cmake_compilers_Clang.cmake) = 85e2df7336b12839d9a60f374c31835ee86ca7ac
+SHA1 (patch-cmake_compilers_GNU.cmake) = 2673e6f9c0a7f8d99399c6f645b9ce30d9f95d06
