@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3820 2021/07/14 01:35:30 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3821 2021/07/14 07:39:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6116,3 +6116,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird-l10n to 78.11.0 [ryoon 2021-07-13]
 	Updated sysutils/py-borgbackup to 1.1.17 [bsiegert 2021-07-13]
 	Updated multimedia/gpac to 1.0.1 [schmonz 2021-07-14]
+	Updated textproc/fmtlib to 8.0.1 [adam 2021-07-14]
+	Updated multimedia/mkvtoolnix to 59.0.0 [adam 2021-07-14]
