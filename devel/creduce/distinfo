@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.8 2020/04/20 16:33:51 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/07/14 09:08:48 wiz Exp $
 
 SHA1 (creduce-2.10.0.tar.gz) = 77c3dafb2446133ca2f2aeae34b2e4b79de5231d
 RMD160 (creduce-2.10.0.tar.gz) = 183be95aec282812724ec66204952ad33dbc923b
 SHA512 (creduce-2.10.0.tar.gz) = f2f2cc498cbf78331ea62e533579c84042ddc1ad8eb146adeae6b3a833e0ea4bb26a4ab5f1f61a30500a5a0c9c89cc1d4e4c8547aa9e4a14d3b5d744aeb4f6a7
 Size (creduce-2.10.0.tar.gz) = 779318 bytes
-SHA1 (patch-clang__delta_Makefile.am) = 6eac9443bb954c9fb54a922d6da909cf0a45d25d
-SHA1 (patch-clang__delta_Makefile.in) = c650aab0534268a67615d9360934534ea1d36b90
-SHA1 (patch-clang__delta_TransformationManager.cpp) = 40171540ed976c14ec3a9d249e8e8ed96d3e8a88
+SHA1 (patch-clang__delta_CommonRenameClassRewriteVisitor.h) = 66527a9c3e0bf8ff778c9a57eb20cda596223300
+SHA1 (patch-clang__delta_RemoveNamespace.cpp) = 82eb6a625a27edfac93d5727c5dde7d1382d68bb
+SHA1 (patch-clang__delta_RewriteUtils.cpp) = 56b8f4d19189019c4dcc83b315a1cfd2ff459955
+SHA1 (patch-clang__delta_Transformation.cpp) = b04a80569552639c529251dc450defefbd8f2e93
+SHA1 (patch-clang__delta_TransformationManager.cpp) = 322e64726dc0301832824caf228da6faf8bb6ae8
