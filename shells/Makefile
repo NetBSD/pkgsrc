@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/07/09 18:52:15 pin Exp $
+# $NetBSD: Makefile,v 1.65 2021/07/14 20:52:07 pin Exp $
 #
 
 COMMENT=	Shells
@@ -12,6 +12,7 @@ SUBDIR+=	bash2-doc
 SUBDIR+=	bosh
 SUBDIR+=	dash
 SUBDIR+=	eltclsh
+SUBDIR+=	elvish
 SUBDIR+=	es
 SUBDIR+=	esh
 SUBDIR+=	fish
