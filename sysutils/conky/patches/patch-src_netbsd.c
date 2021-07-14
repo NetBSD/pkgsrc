@@ -1,10 +1,10 @@
-$NetBSD: patch-src_netbsd.c,v 1.5 2020/08/30 11:04:48 nia Exp $
+$NetBSD: patch-src_netbsd.c,v 1.6 2021/07/14 22:21:32 nia Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
-@@ -30,337 +30,815 @@
+@@ -30,337 +30,806 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -138,33 +138,22 @@ Many fixes and addons for conky to work on NetBSD.
  	}
  
 -	sep = (struct swapent *) malloc(n * (sizeof(*sep)));
-+	info.memmax = uvmexp.npages * uvmexp.pagesize / 1024;
-+	info.memfree = uvmexp.free * uvmexp.pagesize / 1024;
-+	info.memeasyfree = uvmexp.inactive * uvmexp.pagesize / 1024;
++	info.mem = ((uvmexp.active + uvmexp.wired) * uvmexp.pagesize) / 1024;
++	info.memmax = (uvmexp.npages * uvmexp.pagesize) / 1024;
++	info.cached = ((uvmexp.filepages + uvmexp.execpages) * uvmexp.pagesize) / 1024;
 +
-+	info.swapmax = uvmexp.swpages * uvmexp.pagesize / 1024;
-+	info.swapfree = (uvmexp.swpages - uvmexp.swpginuse) * \
-+		uvmexp.pagesize / 1024;
++	info.mem += info.cached;
 +
-+	info.buffers = uvmexp.filepages * uvmexp.pagesize / 1024;
-+	info.cached = uvmexp.execpages * uvmexp.pagesize / 1024;
++	info.memfree = info.memmax - info.mem;
++	info.memeasyfree = info.memfree;
 +
-+	info.mem = info.memmax - info.memfree;
++	info.swapmax = (uvmexp.swpages * uvmexp.pagesize) / 1024;
++	info.swapfree = ((uvmexp.swpages - uvmexp.swpginuse) * \
++		uvmexp.pagesize) / 1024;
++
 +	info.bufmem = info.cached + info.buffers;
 +	info.swap = info.swapmax - info.swapfree;
 +
-+	/*
-+	 * Counter-adjust for the adjustment in update_stuff in common.c so
-+	 * that memeasyfree is the inactive memory.  Since inactive memory
-+	 * partially overlaps with buffer memory, but the size of the
-+	 * overlap is not measured, attempting to split it into non-bufmem
-+	 * and bufmem parts, as common.c does, can't work.  So instead we
-+	 * report inactive memory as memeasyfree.
-+	 */
-+	info.memeasyfree -= info.bufmem;
- 
--	if (sep == NULL) {
--		warn("memory allocation failed");
 +	return 0;
 +}
 +
@@ -176,7 +165,9 @@ Many fixes and addons for conky to work on NetBSD.
 +	long long r, t, last_recv, last_trans;
 +	struct ifaddrs *ifap, *ifa;
 +	struct if_data *ifd;
-+
+ 
+-	if (sep == NULL) {
+-		warn("memory allocation failed");
 +	/* get delta */
 +	delta = current_update_time - last_update_time;
 +	if (delta <= 0.0001) {
@@ -450,8 +441,7 @@ Many fixes and addons for conky to work on NetBSD.
 +		total += cp_time[j];
 +
 +	used = total - cp_time[CP_IDLE];
- 
--		ns->last_read_recv = ifnet.if_ibytes;
++
 +	if ((total - cpu[0].oldtotal) != 0) {
 +		info.cpu_usage[0] = ((double) (used - cpu[0].oldused)) /
 +		(double) (total - cpu[0].oldtotal);
@@ -467,7 +457,8 @@ Many fixes and addons for conky to work on NetBSD.
 +	/* per-core stats */
 +	cp_len = CPUSTATES * sizeof(uint64_t) * info.cpu_count;
 +	cp_time = malloc(cp_len);
-+
+ 
+-		ns->last_read_recv = ifnet.if_ibytes;
 +	/* on e.g. i386 SMP we may have more values than actual cpus; this will just drop extra values */
 +	if (sysctlbyname("kern.cp_time", cp_time, &cp_len, NULL, 0) < 0 && errno != ENOMEM) {
 +		fprintf(stderr, "Cannot get kern.cp_time SMP\n");
@@ -496,22 +487,22 @@ Many fixes and addons for conky to work on NetBSD.
 +		cpu[i+1].oldused = used;
 +		cpu[i+1].oldtotal = total;
 +	}
-+
-+	free(cp_time);
-+	return 0;
-+}
  
 -		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
 -		ns->last_read_recv = ifnet.if_ibytes;
 -		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
 -		ns->last_read_trans = ifnet.if_obytes;
-+int update_load_average(void)
-+{
-+	double v[3];
++	free(cp_time);
++	return 0;
++}
  
 -		ns->recv_speed = (ns->recv - last_recv) / delta;
 -		ns->trans_speed = (ns->trans - last_trans) / delta;
 -	}
++int update_load_average(void)
++{
++	double v[3];
++
 +	getloadavg(v, 3);
 +
 +	info.loadavg[0] = (float) v[0];
@@ -711,7 +702,12 @@ Many fixes and addons for conky to work on NetBSD.
 +				free(ttmp);
 +			}
 +        }
-+
+ 
+-	fresh.load[0] = cp_time[CP_USER];
+-	fresh.load[1] = cp_time[CP_NICE];
+-	fresh.load[2] = cp_time[CP_SYS];
+-	fresh.load[3] = cp_time[CP_IDLE];
+-	fresh.load[4] = cp_time[CP_IDLE];
 +        for (i = 0; i < j; i++) {
 +			free(processes[i].name);
 +        }
@@ -724,23 +720,18 @@ Many fixes and addons for conky to work on NetBSD.
 +	Devquery dq_tz = { P_INT64, "acpitz0", "temperature", "cur-value" };
 +	int64_t temp;
  
--	fresh.load[0] = cp_time[CP_USER];
--	fresh.load[1] = cp_time[CP_NICE];
--	fresh.load[2] = cp_time[CP_SYS];
--	fresh.load[3] = cp_time[CP_IDLE];
--	fresh.load[4] = cp_time[CP_IDLE];
-+	(void)fd;
- 
 -	used = fresh.load[0] + fresh.load[1] + fresh.load[2];
 -	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
-+	if (envsys_get_val(dq_tz, (void *)&temp) < 0)
-+		return 0.0;
++	(void)fd;
  
 -	if ((total - oldtotal) != 0) {
 -		info.cpu_usage = ((double) (used - oldused)) /
 -			(double) (total - oldtotal);
 -	} else {
 -		info.cpu_usage = 0;
++	if (envsys_get_val(dq_tz, (void *)&temp) < 0)
++		return 0.0;
++
 +	return (temp / 1000000.0) - 273.15;
 +}
 +
