@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2017/07/22 13:07:42 adam Exp $
-lib/gpac/gm_vtb_decode.${LIBEXT}
