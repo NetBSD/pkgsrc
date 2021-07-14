@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/20 08:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/07/14 17:24:54 adam Exp $
 
 DISTNAME=	libheif-1.12.0
 CATEGORIES=	graphics
@@ -18,13 +18,16 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-go
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
 CXXFLAGS.NetBSD+=	-Wno-error=maybe-uninitialized
+.endif
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
