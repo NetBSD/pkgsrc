@@ -1,6 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2021/05/23 06:33:23 pho Exp $
+# $NetBSD: options.mk,v 1.3 2021/07/14 09:15:35 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
+
+.include "../../mk/bsd.prefs.mk"
 
 # GHC has a native implementation of codegen for some platforms. On
 # those platforms LLVM is optional. It's a requirement anywhere else.
