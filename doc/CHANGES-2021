@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3824 2021/07/14 14:31:29 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.3825 2021/07/14 16:52:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-uvloop to 0.15.3 [adam 2021-07-14]
 	Updated devel/creduce to 2.10.0nb8 [wiz 2021-07-14]
 	Updated lang/go-bin to 1.14.2nb4 [jperkin 2021-07-14]
+	Updated games/gnuchess to 6.2.9 [fcambus 2021-07-14]
