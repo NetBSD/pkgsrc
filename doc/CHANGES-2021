@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3826 2021/07/14 17:58:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3827 2021/07/14 20:45:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6125,3 +6125,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/gnuchess to 6.2.9 [fcambus 2021-07-14]
 	Updated parallel/threadingbuildingblocks to 2021.3.0 [adam 2021-07-14]
 	Updated graphics/openimageio to 2.2.16.0 [adam 2021-07-14]
+	Updated shells/starship to 0.56.0 [pin 2021-07-14]
