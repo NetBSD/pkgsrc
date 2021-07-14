@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:02 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/14 08:29:19 wiz Exp $
 
 DISTNAME=	maubot-0.1.0
 PKGREVISION=	2
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1<2:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.9<1:../../textproc/py-commonmark
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35<0.17:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3<4:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-packaging>=10:../../devel/py-packaging
