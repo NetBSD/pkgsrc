@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/07/14 14:31:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/14 18:38:58 jperkin Exp $
 
 PKGNAME=	go-bin-1.14.2
 PKGREVISION=	4
@@ -85,7 +85,12 @@ INSTALLATION_DIRS+=	go-bin
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/go-bin
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+#
+# Removing the signatures is required to operate inside a chroot, but breaks
+# running them outside.  We're left with no choice but to make it configurable
+# by the user.
+#
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) && defined(DARWIN_CHROOTED)
 	for f in ${DESTDIR}${PREFIX}/go-bin/bin/* \
 		 ${DESTDIR}${PREFIX}/go-bin/pkg/tool/darwin_arm64/*; do \
 		/usr/bin/codesign --remove-signature $$f; \
