@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3822 2021/07/14 08:08:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3823 2021/07/14 09:09:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6120,3 +6120,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mkvtoolnix to 59.0.0 [adam 2021-07-14]
 	Updated devel/py-cython to 0.29.24 [adam 2021-07-14]
 	Updated devel/py-uvloop to 0.15.3 [adam 2021-07-14]
+	Updated devel/creduce to 2.10.0nb8 [wiz 2021-07-14]
