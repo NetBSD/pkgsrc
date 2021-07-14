@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/06/14 17:23:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/14 14:31:21 jperkin Exp $
 
 PKGNAME=	go-bin-1.14.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.google.com/go/
 
@@ -85,6 +85,12 @@ INSTALLATION_DIRS+=	go-bin
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/go-bin
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+	for f in ${DESTDIR}${PREFIX}/go-bin/bin/* \
+		 ${DESTDIR}${PREFIX}/go-bin/pkg/tool/darwin_arm64/*; do \
+		/usr/bin/codesign --remove-signature $$f; \
+	done
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && find go-bin -type f -print	\
