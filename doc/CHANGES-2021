@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3840 2021/07/15 10:56:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3841 2021/07/15 11:31:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6143,3 +6143,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/adwaita-icon-theme to 40.1.1 [wiz 2021-07-15]
 	Updated devel/gtexinfo to 6.8 [wiz 2021-07-15]
 	Updated x11/xkeyboard-config to 2.32 [wiz 2021-07-15]
+	Updated print/poppler to 21.07.0 [wiz 2021-07-15]
