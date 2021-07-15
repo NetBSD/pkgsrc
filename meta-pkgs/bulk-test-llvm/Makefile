@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/06/10 13:02:09 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/15 16:55:00 nia Exp $
 
-DISTNAME=	bulk-test-llvm-20210610
+DISTNAME=	bulk-test-llvm-20210715
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,6 +22,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 .include "../../lang/python/pyversion.mk"
 
 BUILD_DEPENDS+=		clang-[0-9]*:../../lang/clang
+BUILD_DEPENDS+=		creduce-[0-9]*:../../devel/creduce
 BUILD_DEPENDS+=		firefox-[0-9]*:../../www/firefox
 BUILD_DEPENDS+=		firefox-esr-[0-9]*:../../www/firefox-esr
 BUILD_DEPENDS+=		include-what-you-use-[0-9]*:../../devel/include-what-you-use
