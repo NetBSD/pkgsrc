@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/10/08 14:30:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/07/15 10:50:32 wiz Exp $
 bin/info
 bin/install-info
 bin/makeinfo
@@ -60,8 +60,12 @@ share/texinfo/Texinfo/XSLoader.pm
 share/texinfo/htmlxref.cnf
 share/texinfo/init/book.pm
 share/texinfo/init/chm.pm
+share/texinfo/init/highlight_syntax.pm
 share/texinfo/init/html32.pm
 share/texinfo/init/latex2html.pm
 share/texinfo/init/tex4ht.pm
+share/texinfo/js/info.css
+share/texinfo/js/info.js
+share/texinfo/js/modernizr.js
 share/texinfo/texindex.awk
 share/texinfo/texinfo.dtd
