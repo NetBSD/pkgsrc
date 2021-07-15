@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.6 2021/07/08 08:05:13 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.7 2021/07/15 15:44:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -37,4 +37,25 @@ graphics/glew: packaging fix
 
 Pullup ticket #6482 - requested by maya
 mk: Linux bootstrap fix
+
+Pullup ticket #6483 - requested by taca
+lang/ruby26: security fix
+
+Pullup ticket #6484 - requested by taca
+lang/ruby27-base: security fix
+
+Pullup ticket #6485 - requested by taca
+lang/ruby30-base: security fix
+
+Pullup ticket #6486 - requested by he
+lang/rust: build fix
+
+Pullup ticket #6487 - requested by he
+lang/rust-bin: build fix
+
+Pullup ticket #6488 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6489 - requested by nia
+www/firefox78-l10n: dependent update
 
