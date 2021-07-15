@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.3 2021/07/15 04:39:32 fox Exp $
+
+Make the script portable.
+
+--- configure.orig	2021-07-14 09:15:23.305160342 +0000
++++ configure
+@@ -15487,7 +15487,7 @@ then
+         AM_CFLAGS="$AM_CFLAGS -DWOLFSSL_VALIDATE_ECC_IMPORT"
+     fi
+ 
+-    if test "$ENABLED_FIPS" == "no"
++    if test "$ENABLED_FIPS" = "no"
+     then
+         test "$enable_xchacha" = "" && enable_xchacha=yes
+         test "$enable_ed25519" = "" && enable_ed25519=yes
+@@ -23716,7 +23716,7 @@ then
+     AM_CFLAGS="$AM_CFLAGS -DWOLFSSL_TRACK_MEMORY -DWOLFSSL_DEBUG_MEMORY"
+ fi
+ 
+-if test "x$ENABLED_MEMTEST" == "xfail"
++if test "x$ENABLED_MEMTEST" = "xfail"
+ then
+     AM_CFLAGS="$AM_CFLAGS -DWOLFSSL_FORCE_MALLOC_FAIL_TEST"
+ fi
