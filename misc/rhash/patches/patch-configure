@@ -1,11 +1,22 @@
-$NetBSD: patch-configure,v 1.1 2020/08/24 12:58:52 schmonz Exp $
+$NetBSD: patch-configure,v 1.2 2021/07/15 09:39:17 adam Exp $
+
+Skip compiler detection magic.
 
 Avoid choosing aligned_alloc() when it's not present, such as CentOS 6
 with lang/gcc7.
 
---- configure.orig	2020-07-14 19:35:11.000000000 +0000
+--- configure.orig	2021-07-14 20:55:34.000000000 +0000
 +++ configure
-@@ -655,6 +655,16 @@ elif test "$OPT_OPENSSL" = "auto" || tes
+@@ -563,8 +563,6 @@ else
+     fi
+   done
+ fi # icc
+-test -z "$cc_vendor" && die "compiler not found"
+-test "$cc_fail" = "yes" && die "unsupported compiler version"
+ 
+ log_start "compiler working with default options"
+ if ! cc_check_cflag; then
+@@ -660,6 +658,16 @@ elif test "$OPT_OPENSSL" = "auto" || tes
    finish_check "$ALLOW_RUNTIME_LINKING"
  fi
  
