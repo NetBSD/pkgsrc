@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3836 2021/07/15 10:15:58 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3837 2021/07/15 10:31:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6139,3 +6139,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/wireshark to 3.4.7 [adam 2021-07-15]
 	Updated chat/unrealircd to 5.2.1.1 [nia 2021-07-15]
 	Updated multimedia/vlc to 3.0.16 [nia 2021-07-15]
+	Updated net/syncthing to 1.18.0 [nia 2021-07-15]
