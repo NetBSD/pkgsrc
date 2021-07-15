@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3837 2021/07/15 10:31:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3838 2021/07/15 10:46:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6140,3 +6140,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/unrealircd to 5.2.1.1 [nia 2021-07-15]
 	Updated multimedia/vlc to 3.0.16 [nia 2021-07-15]
 	Updated net/syncthing to 1.18.0 [nia 2021-07-15]
+	Updated graphics/adwaita-icon-theme to 40.1.1 [wiz 2021-07-15]
