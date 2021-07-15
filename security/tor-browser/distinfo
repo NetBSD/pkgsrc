@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.40 2021/06/22 11:25:07 wiz Exp $
+$NetBSD: distinfo,v 1.41 2021/07/15 13:50:16 wiz Exp $
 
-SHA1 (src-firefox-tor-browser-78.11.0esr-10.0-1-build1.tar.xz) = 3f800bdc03097494eb07936d6e9af356c79aa77d
-RMD160 (src-firefox-tor-browser-78.11.0esr-10.0-1-build1.tar.xz) = bbef9d281423d725092883dc921666048bbbf738
-SHA512 (src-firefox-tor-browser-78.11.0esr-10.0-1-build1.tar.xz) = 45e87bfa20192aa55597f0330bada06a72422565de7f02b1f181784f55c65586019dee7412a5b6e2940f7f85c2efd522b22eabc16a9678c589f5e2846e67ca25
-Size (src-firefox-tor-browser-78.11.0esr-10.0-1-build1.tar.xz) = 364712956 bytes
-SHA1 (tor-browser-linux64-10.0.18_en-US.tar.xz) = b5b7dc52a881a346ae05ea9c6878d04ceee8c5f1
-RMD160 (tor-browser-linux64-10.0.18_en-US.tar.xz) = fe11d6bd2a418875b5410fa20705a4c3039c7970
-SHA512 (tor-browser-linux64-10.0.18_en-US.tar.xz) = 630ed50d26ada30a220d3a40ccd150cf99bca14b14c6f34ac74b312756bcd3d611743412baabba0303fccca5a37e41ef4654b4e36caa7fcce8ae75989c2210bb
-Size (tor-browser-linux64-10.0.18_en-US.tar.xz) = 85417212 bytes
+SHA1 (src-firefox-tor-browser-78.12.0esr-10.5-1-build1.tar.xz) = 6251b770edca1796c30407cbea1f1ab8ba1ba122
+RMD160 (src-firefox-tor-browser-78.12.0esr-10.5-1-build1.tar.xz) = 734310d3131a91a35105f20d315f7a11530f64f8
+SHA512 (src-firefox-tor-browser-78.12.0esr-10.5-1-build1.tar.xz) = 8a33bb8a3f0769505e935400c7ea19ac038dcf7080cfd4217654ee153dcf47bb8aaef763f199f83ea45386b20563da09f3da763a1073c98833a81152b9000be8
+Size (src-firefox-tor-browser-78.12.0esr-10.5-1-build1.tar.xz) = 364761440 bytes
+SHA1 (tor-browser-linux64-10.5.2_en-US.tar.xz) = 62fa36fe1b2f77cec7e96f4e09c6c57206ca9f44
+RMD160 (tor-browser-linux64-10.5.2_en-US.tar.xz) = bf15fd9d9fafff0e738ca678aa6e5b672e3d0f04
+SHA512 (tor-browser-linux64-10.5.2_en-US.tar.xz) = 00d607b20b6f1f18da229463ae49557f888403e2d68359346924b9eb32ccf772e177068daf91a4d5a24d0b909863396c1bd564aab98df51376b18566d17e7850
+Size (tor-browser-linux64-10.5.2_en-US.tar.xz) = 83586008 bytes
 SHA1 (patch-.mozconfig) = 949472d011d40b02146c06e90ed07673667d192b
 SHA1 (patch-aa) = 458ee59cec3d2d1d52b222ab2031720e7a11fc02
 SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce901a296fc920280
