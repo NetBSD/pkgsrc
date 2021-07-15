@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/11/13 22:07:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/07/15 10:56:21 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -7,6 +7,7 @@ share/X11/xkb/compat/complete
 share/X11/xkb/compat/iso9995
 share/X11/xkb/compat/japan
 share/X11/xkb/compat/ledcaps
+share/X11/xkb/compat/ledcompose
 share/X11/xkb/compat/lednum
 share/X11/xkb/compat/ledscroll
 share/X11/xkb/compat/level5
@@ -83,7 +84,6 @@ share/X11/xkb/rules/xfree86.lst
 share/X11/xkb/rules/xfree86.xml
 share/X11/xkb/rules/xfree98
 share/X11/xkb/rules/xkb.dtd
-share/X11/xkb/rules/xkb.its
 share/X11/xkb/rules/xorg
 share/X11/xkb/rules/xorg.lst
 share/X11/xkb/rules/xorg.xml
@@ -122,6 +122,7 @@ share/X11/xkb/symbols/digital_vndr/vt
 share/X11/xkb/symbols/dk
 share/X11/xkb/symbols/dz
 share/X11/xkb/symbols/ee
+share/X11/xkb/symbols/eg
 share/X11/xkb/symbols/empty
 share/X11/xkb/symbols/epo
 share/X11/xkb/symbols/es
@@ -153,6 +154,7 @@ share/X11/xkb/symbols/is
 share/X11/xkb/symbols/it
 share/X11/xkb/symbols/jolla_vndr/sbj
 share/X11/xkb/symbols/jp
+share/X11/xkb/symbols/jv
 share/X11/xkb/symbols/ke
 share/X11/xkb/symbols/keypad
 share/X11/xkb/symbols/kg
@@ -163,6 +165,7 @@ share/X11/xkb/symbols/kz
 share/X11/xkb/symbols/la
 share/X11/xkb/symbols/latam
 share/X11/xkb/symbols/latin
+share/X11/xkb/symbols/level2
 share/X11/xkb/symbols/level3
 share/X11/xkb/symbols/level5
 share/X11/xkb/symbols/lk
