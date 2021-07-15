@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3846 2021/07/15 16:27:08 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3847 2021/07/15 16:27:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6149,3 +6149,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/cantarell-fonts to 0.301 [fcambus 2021-07-15]
 	Updated security/tor-browser to 10.5.2 [wiz 2021-07-15]
 	Updated mail/thunderbird to 78.12.0 [ryoon 2021-07-15]
+	Updated mail/thunderbird-l10n to 78.12.0 [ryoon 2021-07-15]
