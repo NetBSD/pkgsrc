@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/01/25 11:17:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/07/15 09:57:47 nia Exp $
 bin/unrealircd
 lib/unrealircd/modules/account-notify.so
 lib/unrealircd/modules/account-tag.so
@@ -11,6 +11,7 @@ lib/unrealircd/modules/authprompt.so
 lib/unrealircd/modules/away.so
 lib/unrealircd/modules/batch.so
 lib/unrealircd/modules/blacklist.so
+lib/unrealircd/modules/bot-tag.so
 lib/unrealircd/modules/botmotd.so
 lib/unrealircd/modules/cap.so
 lib/unrealircd/modules/certfp.so
@@ -35,6 +36,7 @@ lib/unrealircd/modules/chanmodes/secureonly.so
 lib/unrealircd/modules/chanmodes/stripcolor.so
 lib/unrealircd/modules/channeldb.so
 lib/unrealircd/modules/charsys.so
+lib/unrealircd/modules/chathistory.so
 lib/unrealircd/modules/chghost.so
 lib/unrealircd/modules/chgident.so
 lib/unrealircd/modules/chgname.so
@@ -104,6 +106,7 @@ lib/unrealircd/modules/pingpong.so
 lib/unrealircd/modules/plaintext-policy.so
 lib/unrealircd/modules/protoctl.so
 lib/unrealircd/modules/quit.so
+lib/unrealircd/modules/reply-tag.so
 lib/unrealircd/modules/reputation.so
 lib/unrealircd/modules/require-module.so
 lib/unrealircd/modules/restrict-commands.so

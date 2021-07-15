@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2021/04/21 13:24:28 adam Exp $
+# $NetBSD: Makefile,v 1.78 2021/07/15 09:57:47 nia Exp $
 
-DISTNAME=	unrealircd-5.0.8
-PKGREVISION=	1
+DISTNAME=	unrealircd-5.2.1.1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.unrealircd.org/downloads/
 
@@ -131,5 +130,6 @@ do-install:
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
