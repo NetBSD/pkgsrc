@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3832 2021/07/15 06:18:02 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3833 2021/07/15 06:22:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6134,3 +6134,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-channels to 3.0.4 [adam 2021-07-14]
 	Updated security/wolfssl to 4.8.0 [fox 2021-07-15]
 	Updated www/firefox78 to 78.12.0 [nia 2021-07-15]
+	Updated www/firefox78-l10n to 78.12.0 [nia 2021-07-15]
