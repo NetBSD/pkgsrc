@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/06/07 14:02:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/07/15 13:50:16 wiz Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -73,6 +73,8 @@ lib/tor-browser/browser/actors/ContentSearchChild.jsm
 lib/tor-browser/browser/actors/ContentSearchParent.jsm
 lib/tor-browser/browser/actors/ContextMenuChild.jsm
 lib/tor-browser/browser/actors/ContextMenuParent.jsm
+lib/tor-browser/browser/actors/CryptoSafetyChild.jsm
+lib/tor-browser/browser/actors/CryptoSafetyParent.jsm
 lib/tor-browser/browser/actors/DOMFullscreenChild.jsm
 lib/tor-browser/browser/actors/DOMFullscreenParent.jsm
 lib/tor-browser/browser/actors/FormValidationChild.jsm
@@ -379,6 +381,8 @@ lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/ne
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionNetError.css
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionNetError.js
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionsite.svg
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/v2Deprecated.css
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/v2Deprecated.js
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionlocation.svg
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionlocationPreferences.js
 lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionservices.css
@@ -540,6 +544,12 @@ lib/tor-browser/browser/chrome/browser/content/browser/tabbrowser-tab.js
 lib/tor-browser/browser/chrome/browser/content/browser/tabbrowser-tabs.js
 lib/tor-browser/browser/chrome/browser/content/browser/tabbrowser.css
 lib/tor-browser/browser/chrome/browser/content/browser/tabbrowser.js
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/aboutTorConnect.css
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/aboutTorConnect.js
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/aboutTorConnect.xhtml
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/onion-slash.svg
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/onion.svg
+lib/tor-browser/browser/chrome/browser/content/browser/torconnect/torBootstrapUrlbar.js
 lib/tor-browser/browser/chrome/browser/content/browser/torpreferences/parseFunctions.jsm
 lib/tor-browser/browser/chrome/browser/content/browser/torpreferences/requestBridgeDialog.jsm
 lib/tor-browser/browser/chrome/browser/content/browser/torpreferences/requestBridgeDialog.xhtml
@@ -1227,6 +1237,7 @@ lib/tor-browser/browser/chrome/browser/skin/classic/browser/notification-icons/x
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-slash.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-warning.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion.svg
+lib/tor-browser/browser/chrome/browser/skin/classic/browser/onionPattern.css
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/open-in-new.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/open.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/pageInfo.css
@@ -4144,6 +4155,10 @@ lib/tor-browser/browser/modules/TabUnloader.jsm
 lib/tor-browser/browser/modules/TabsList.jsm
 lib/tor-browser/browser/modules/ThemeVariableMap.jsm
 lib/tor-browser/browser/modules/TopSiteAttribution.jsm
+lib/tor-browser/browser/modules/TorConnect.jsm
+lib/tor-browser/browser/modules/TorConnectChild.jsm
+lib/tor-browser/browser/modules/TorConnectParent.jsm
+lib/tor-browser/browser/modules/TorProcessService.jsm
 lib/tor-browser/browser/modules/TorProtocolService.jsm
 lib/tor-browser/browser/modules/TorStrings.jsm
 lib/tor-browser/browser/modules/TransientPrefs.jsm
@@ -4954,7 +4969,7 @@ lib/tor-browser/chrome/torbutton/locale/ar/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ar/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ar/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ar/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ar/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ar/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ar/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ar/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ar/torbutton.dtd
@@ -4964,7 +4979,7 @@ lib/tor-browser/chrome/torbutton/locale/ca/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ca/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ca/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ca/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ca/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ca/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ca/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ca/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ca/torbutton.dtd
@@ -4974,7 +4989,7 @@ lib/tor-browser/chrome/torbutton/locale/cs/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/cs/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/cs/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/cs/brand.properties
-lib/tor-browser/chrome/torbutton/locale/cs/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/cs/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/cs/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/cs/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/cs/torbutton.dtd
@@ -4984,7 +4999,7 @@ lib/tor-browser/chrome/torbutton/locale/da/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/da/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/da/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/da/brand.properties
-lib/tor-browser/chrome/torbutton/locale/da/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/da/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/da/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/da/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/da/torbutton.dtd
@@ -4994,7 +5009,7 @@ lib/tor-browser/chrome/torbutton/locale/de/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/de/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/de/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/de/brand.properties
-lib/tor-browser/chrome/torbutton/locale/de/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/de/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/de/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/de/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/de/torbutton.dtd
@@ -5004,7 +5019,7 @@ lib/tor-browser/chrome/torbutton/locale/el/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/el/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/el/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/el/brand.properties
-lib/tor-browser/chrome/torbutton/locale/el/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/el/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/el/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/el/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/el/torbutton.dtd
@@ -5014,7 +5029,7 @@ lib/tor-browser/chrome/torbutton/locale/en-US/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/en-US/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/en-US/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/en-US/brand.properties
-lib/tor-browser/chrome/torbutton/locale/en-US/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/en-US/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/en-US/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/en-US/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/en-US/torbutton.dtd
@@ -5024,7 +5039,7 @@ lib/tor-browser/chrome/torbutton/locale/es-AR/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/es-AR/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/es-AR/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/es-AR/brand.properties
-lib/tor-browser/chrome/torbutton/locale/es-AR/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/es-AR/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/es-AR/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/es-AR/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/es-AR/torbutton.dtd
@@ -5034,7 +5049,7 @@ lib/tor-browser/chrome/torbutton/locale/es-ES/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/es-ES/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/es-ES/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/es-ES/brand.properties
-lib/tor-browser/chrome/torbutton/locale/es-ES/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/es-ES/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/es-ES/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/es-ES/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/es-ES/torbutton.dtd
@@ -5044,7 +5059,7 @@ lib/tor-browser/chrome/torbutton/locale/fa/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/fa/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/fa/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/fa/brand.properties
-lib/tor-browser/chrome/torbutton/locale/fa/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/fa/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/fa/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/fa/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/fa/torbutton.dtd
@@ -5054,7 +5069,7 @@ lib/tor-browser/chrome/torbutton/locale/fr/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/fr/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/fr/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/fr/brand.properties
-lib/tor-browser/chrome/torbutton/locale/fr/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/fr/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/fr/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/fr/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/fr/torbutton.dtd
@@ -5064,7 +5079,7 @@ lib/tor-browser/chrome/torbutton/locale/ga-IE/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ga-IE/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ga-IE/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ga-IE/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ga-IE/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ga-IE/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ga-IE/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ga-IE/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ga-IE/torbutton.dtd
@@ -5074,7 +5089,7 @@ lib/tor-browser/chrome/torbutton/locale/he/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/he/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/he/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/he/brand.properties
-lib/tor-browser/chrome/torbutton/locale/he/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/he/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/he/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/he/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/he/torbutton.dtd
@@ -5084,7 +5099,7 @@ lib/tor-browser/chrome/torbutton/locale/hu/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/hu/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/hu/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/hu/brand.properties
-lib/tor-browser/chrome/torbutton/locale/hu/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/hu/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/hu/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/hu/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/hu/torbutton.dtd
@@ -5094,7 +5109,7 @@ lib/tor-browser/chrome/torbutton/locale/id/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/id/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/id/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/id/brand.properties
-lib/tor-browser/chrome/torbutton/locale/id/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/id/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/id/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/id/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/id/torbutton.dtd
@@ -5104,7 +5119,7 @@ lib/tor-browser/chrome/torbutton/locale/is/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/is/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/is/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/is/brand.properties
-lib/tor-browser/chrome/torbutton/locale/is/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/is/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/is/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/is/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/is/torbutton.dtd
@@ -5114,7 +5129,7 @@ lib/tor-browser/chrome/torbutton/locale/it/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/it/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/it/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/it/brand.properties
-lib/tor-browser/chrome/torbutton/locale/it/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/it/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/it/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/it/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/it/torbutton.dtd
@@ -5124,7 +5139,7 @@ lib/tor-browser/chrome/torbutton/locale/ja/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ja/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ja/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ja/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ja/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ja/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ja/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ja/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ja/torbutton.dtd
@@ -5134,7 +5149,7 @@ lib/tor-browser/chrome/torbutton/locale/ka/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ka/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ka/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ka/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ka/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ka/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ka/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ka/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ka/torbutton.dtd
@@ -5144,7 +5159,7 @@ lib/tor-browser/chrome/torbutton/locale/ko/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ko/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ko/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ko/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ko/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ko/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ko/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ko/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ko/torbutton.dtd
@@ -5154,7 +5169,7 @@ lib/tor-browser/chrome/torbutton/locale/lt/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/lt/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/lt/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/lt/brand.properties
-lib/tor-browser/chrome/torbutton/locale/lt/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/lt/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/lt/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/lt/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/lt/torbutton.dtd
@@ -5164,7 +5179,7 @@ lib/tor-browser/chrome/torbutton/locale/mk/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/brand.properties
-lib/tor-browser/chrome/torbutton/locale/mk/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/mk/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/mk/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/mk/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/mk/torbutton.dtd
@@ -5174,7 +5189,7 @@ lib/tor-browser/chrome/torbutton/locale/ms/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ms/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ms/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ms/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ms/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ms/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ms/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ms/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ms/torbutton.dtd
@@ -5184,7 +5199,7 @@ lib/tor-browser/chrome/torbutton/locale/my/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/my/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/my/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/my/brand.properties
-lib/tor-browser/chrome/torbutton/locale/my/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/my/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/my/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/my/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/my/torbutton.properties
@@ -5193,7 +5208,7 @@ lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/brand.properties
-lib/tor-browser/chrome/torbutton/locale/nb-NO/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/nb-NO/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/nb-NO/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/nb-NO/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/nb-NO/torbutton.dtd
@@ -5203,7 +5218,7 @@ lib/tor-browser/chrome/torbutton/locale/nl/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/nl/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/nl/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/nl/brand.properties
-lib/tor-browser/chrome/torbutton/locale/nl/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/nl/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/nl/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/nl/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/nl/torbutton.dtd
@@ -5213,7 +5228,7 @@ lib/tor-browser/chrome/torbutton/locale/pl/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/pl/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/pl/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/pl/brand.properties
-lib/tor-browser/chrome/torbutton/locale/pl/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/pl/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/pl/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/pl/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/pl/torbutton.dtd
@@ -5223,7 +5238,7 @@ lib/tor-browser/chrome/torbutton/locale/pt-BR/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/pt-BR/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/pt-BR/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/pt-BR/brand.properties
-lib/tor-browser/chrome/torbutton/locale/pt-BR/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/pt-BR/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/pt-BR/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/pt-BR/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/pt-BR/torbutton.dtd
@@ -5233,7 +5248,7 @@ lib/tor-browser/chrome/torbutton/locale/ro/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ro/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ro/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ro/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ro/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ro/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ro/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ro/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ro/torbutton.dtd
@@ -5243,7 +5258,7 @@ lib/tor-browser/chrome/torbutton/locale/ru/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ru/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/ru/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/ru/brand.properties
-lib/tor-browser/chrome/torbutton/locale/ru/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ru/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/ru/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ru/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ru/torbutton.dtd
@@ -5253,7 +5268,7 @@ lib/tor-browser/chrome/torbutton/locale/sv-SE/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/sv-SE/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/sv-SE/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/sv-SE/brand.properties
-lib/tor-browser/chrome/torbutton/locale/sv-SE/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/sv-SE/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/sv-SE/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/sv-SE/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/sv-SE/torbutton.dtd
@@ -5263,7 +5278,7 @@ lib/tor-browser/chrome/torbutton/locale/th/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/th/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/th/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/th/brand.properties
-lib/tor-browser/chrome/torbutton/locale/th/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/th/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/th/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/th/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/th/torbutton.dtd
@@ -5273,7 +5288,7 @@ lib/tor-browser/chrome/torbutton/locale/tr/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/tr/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/tr/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/tr/brand.properties
-lib/tor-browser/chrome/torbutton/locale/tr/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/tr/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/tr/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/tr/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/tr/torbutton.dtd
@@ -5283,7 +5298,7 @@ lib/tor-browser/chrome/torbutton/locale/vi/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/vi/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/vi/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/vi/brand.properties
-lib/tor-browser/chrome/torbutton/locale/vi/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/vi/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/vi/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/vi/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/vi/torbutton.dtd
@@ -5293,7 +5308,7 @@ lib/tor-browser/chrome/torbutton/locale/zh-CN/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-CN/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-CN/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-CN/brand.properties
-lib/tor-browser/chrome/torbutton/locale/zh-CN/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/zh-CN/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/zh-CN/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-CN/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-CN/torbutton.dtd
@@ -5303,7 +5318,7 @@ lib/tor-browser/chrome/torbutton/locale/zh-TW/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-TW/aboutTor.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-TW/brand.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-TW/brand.properties
-lib/tor-browser/chrome/torbutton/locale/zh-TW/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/zh-TW/branding/brand.ftl
 lib/tor-browser/chrome/torbutton/locale/zh-TW/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-TW/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-TW/torbutton.dtd
@@ -5315,11 +5330,10 @@ lib/tor-browser/chrome/torbutton/modules/utils.js
 lib/tor-browser/chrome/torbutton/skin/about-wordmark.png
 lib/tor-browser/chrome/torbutton/skin/aboutDialog.css
 lib/tor-browser/chrome/torbutton/skin/aboutTor.css
-lib/tor-browser/chrome/torbutton/skin/forwardArrow.png
+lib/tor-browser/chrome/torbutton/skin/dax-logo.svg
 lib/tor-browser/chrome/torbutton/skin/icon-newsletter.png
 lib/tor-browser/chrome/torbutton/skin/preferences-mobile.css
 lib/tor-browser/chrome/torbutton/skin/preferences.css
-lib/tor-browser/chrome/torbutton/skin/searchLogo.png
 lib/tor-browser/chrome/torbutton/skin/tor-banner-warning-icon.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
@@ -5327,7 +5341,6 @@ lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line.svg
 lib/tor-browser/chrome/torbutton/skin/tor.png
 lib/tor-browser/chrome/torbutton/skin/torbrowser_mobile_logo.png
-lib/tor-browser/chrome/torbutton/skin/torbutton-update-needed.svg
 lib/tor-browser/chrome/torbutton/skin/torbutton.css
 lib/tor-browser/chrome/torbutton/skin/torbutton.svg
 lib/tor-browser/components/EnterprisePolicies.js
@@ -5444,6 +5457,7 @@ lib/tor-browser/modules/AppMenuNotifications.jsm
 lib/tor-browser/modules/AsyncPrefs.jsm
 lib/tor-browser/modules/AsyncShutdown.jsm
 lib/tor-browser/modules/BackgroundPageThumbs.jsm
+lib/tor-browser/modules/Bech32Decode.jsm
 lib/tor-browser/modules/BinarySearch.jsm
 lib/tor-browser/modules/Bits.jsm
 lib/tor-browser/modules/Blocklist.jsm
