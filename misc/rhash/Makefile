@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/01/07 22:00:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/07/15 09:39:17 adam Exp $
 
-DISTNAME=	rhash-1.4.1
+DISTNAME=	rhash-1.4.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
@@ -15,7 +15,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/rh/RH/}
 HAS_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
 CONFIGURE_ARGS+=	--disable-symlinks
-CONFIGURE_ARGS+=	--disable-openssl-runtime
 CONFIGURE_ARGS+=	--enable-lib-shared
 CONFIGURE_ARGS+=	--enable-lib-static
 CONFIGURE_ARGS+=	--enable-openssl
