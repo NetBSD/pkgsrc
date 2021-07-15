@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.156 2021/01/06 15:50:02 triaxx Exp $
+$NetBSD: distinfo,v 1.157 2021/07/15 14:06:56 schmonz Exp $
 
 SHA1 (mesa-20.0.6.tar.xz) = 5bf6d97770c7f010db3ea27944cfdcda079d39c8
 RMD160 (mesa-20.0.6.tar.xz) = 00da0ca66f22ce929798ee9ad81456d5fa052837
@@ -28,10 +28,10 @@ SHA1 (patch-src_glx_glxext.c) = 15c2c5e0c6b5095ce849fb86ad148aa05d7d907a
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_genxml_gen__sort__tags.py) = e50d30fe74b09b100049e61660aa3606469a4047
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
-SHA1 (patch-src_mapi_entry__x86__tls.h) = d85680aa658d159017e8bad1589f95f3830ac577
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = cbbb95b96414609a9cd05af75c9544f8e6938280
-SHA1 (patch-src_mapi_glapi_gen_gl__XML.py) = 505ba3d98f8b0b05d652c05dd52997bf5323d0fb
+SHA1 (patch-src_mapi_entry__x86__tls.h) = d85680aa658d159017e8bad1589f95f3830ac577
 SHA1 (patch-src_mapi_glapi_gen_glX__XML.py) = 5b71960652c8bd1038695a51366635d00761aeeb
+SHA1 (patch-src_mapi_glapi_gen_gl__XML.py) = 505ba3d98f8b0b05d652c05dd52997bf5323d0fb
 SHA1 (patch-src_mapi_u__current.c) = 4e3ec6e253af3737f77ecd43e56044ba2b81e699
 SHA1 (patch-src_mapi_u__current.h) = 9f4744681381a0959fda2926a436f296c89577f3
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
