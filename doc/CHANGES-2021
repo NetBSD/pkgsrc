@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3849 2021/07/16 04:24:53 fox Exp $
+$NetBSD: CHANGES-2021,v 1.3850 2021/07/16 06:36:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6152,3 +6152,13 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird-l10n to 78.12.0 [ryoon 2021-07-15]
 	Updated textproc/bat to 0.18.2 [fox 2021-07-16]
 	Updated sysutils/py-Glances to 3.2.1 [fox 2021-07-16]
+	Removed devel/go-levenshtein [nia 2021-07-16]
+	Removed www/go-mux [nia 2021-07-16]
+	Removed devel/go-gls [nia 2021-07-16]
+	Removed textproc/go-glob [nia 2021-07-16]
+	Removed www/go-libsass [nia 2021-07-16]
+	Removed www/go-spritewell [nia 2021-07-16]
+	Removed devel/go-gitmap [nia 2021-07-16]
+	Removed devel/go-cmp [nia 2021-07-16]
+	Removed devel/go-properties [nia 2021-07-16]
+	Removed devel/go-osext [nia 2021-07-16]
