@@ -1,6 +1,0 @@
-A fairly fast way to create a map from all the filenames to info objects for a
-given revision of a Git repo.
-
-This library uses os/exec to talk to Git. There are faster ways to do this by
-using some Go Git-lib or C bindings, but that adds dependencies I really don't
-want or need.
