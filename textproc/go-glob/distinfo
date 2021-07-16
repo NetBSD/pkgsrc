@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/06/12 23:50:02 minskim Exp $
-
-SHA1 (glob-0.2.3.tar.gz) = 398b16755a8faf4632c1a44356a5d86c443e9c67
-RMD160 (glob-0.2.3.tar.gz) = aac0825b085ffaafbf548a8651a3bad8f9dcfce4
-SHA512 (glob-0.2.3.tar.gz) = b91b27389e1f172d7c2c181f19ebc27d566e6bd6397cc6ad924ecf5f2ace98ecca639e020e05c9e281fb8549f9065610f7eb6070c63e3f9e7c6fd190c457e42b
-Size (glob-0.2.3.tar.gz) = 25962 bytes
