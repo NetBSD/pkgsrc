@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/07/16 09:16:27 jperkin Exp $
+
+Avoid C++ <version> issue on case-insensitive file systems.
+
+--- CMakeLists.txt.orig	2019-12-26 14:21:51.000000000 +0000
++++ CMakeLists.txt
+@@ -41,7 +41,7 @@ set_property(GLOBAL PROPERTY PREDEFINED_
+ project(tesseract C CXX)
+ 
+ # Get version with components from VERSION file.
+-file(STRINGS "VERSION" VERSION_PLAIN)
++file(STRINGS "VERSION.txt" VERSION_PLAIN)
+ string(REGEX REPLACE "^([^.]*)\\..*" "\\1" VERSION_MAJOR ${VERSION_PLAIN})
+ string(REGEX REPLACE "^[^.]*\\.([^.]*)\\..*" "\\1" VERSION_MINOR ${VERSION_PLAIN})
+ string(REGEX REPLACE "^[^.]*\\.[^.]*\\.([0-9]*).*" "\\1" VERSION_PATCH ${VERSION_PLAIN})
