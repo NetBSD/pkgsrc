@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3855 2021/07/16 15:40:48 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3856 2021/07/16 16:00:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6168,3 +6168,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/goreman to 0.3.7 [nia 2021-07-16]
 	Updated shells/fish to 3.3.1 [jperkin 2021-07-16]
 	Added fonts/tamzen-font version 1.11.5 [nia 2021-07-16]
+	Added net/lagrange version 1.5.2 [nia 2021-07-16]
