@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/02/16 19:39:53 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/07/16 09:48:45 jperkin Exp $
 
 .include "dist.mk"
 
@@ -74,6 +74,11 @@ PLIST.oss=	yes
 # certain modules will not be built.
 .if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH:Q}/usr/include)
 CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
+.endif
+
+# Avoid universal build on macOS/aarch64, _decimal fails.
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+MAKE_ENV+=	PYTHON_DECIMAL_WITH_MACHINE=uint128
 .endif
 
 PLIST_VARS+=	nis
