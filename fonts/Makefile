@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2021/04/19 16:03:10 nia Exp $
+# $NetBSD: Makefile,v 1.363 2021/07/16 15:40:33 nia Exp $
 #
 
 COMMENT=	Fonts
@@ -223,6 +223,7 @@ SUBDIR+=	t1utils
 SUBDIR+=	takao-ex-fonts-ttf
 SUBDIR+=	takao-fonts-ttf
 SUBDIR+=	tamsyn-font
+SUBDIR+=	tamzen-font
 SUBDIR+=	terminus-font
 SUBDIR+=	tex-Asana-Math
 SUBDIR+=	tex-Asana-Math-doc
