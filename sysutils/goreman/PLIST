@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/11 00:30:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/16 06:46:18 nia Exp $
 bin/goreman
+share/examples/go-goreman/Gemfile
+share/examples/go-goreman/Procfile
+share/examples/go-goreman/app.psgi
+share/examples/go-goreman/web.go
+share/examples/go-goreman/web.rb
