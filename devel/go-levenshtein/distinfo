@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/04/27 16:31:22 nikita Exp $
-
-SHA1 (go-levenshtein-1.2.3.tar.gz) = 635f8637542d26f8f54116b7929bceaac437683a
-RMD160 (go-levenshtein-1.2.3.tar.gz) = 19d9a2761f7c7efa779fe2171c2b259e640b9866
-SHA512 (go-levenshtein-1.2.3.tar.gz) = 5914acc0d15aa2ea516a2c9827cbf52724b5028fc6fe8073304685885c71306e4d8e81a47ddde71758ef352650eb41526fc81be558f280b9a3afb47f7b0ae082
-Size (go-levenshtein-1.2.3.tar.gz) = 13227 bytes
