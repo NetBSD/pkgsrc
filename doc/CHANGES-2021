@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3850 2021/07/16 06:36:14 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3851 2021/07/16 06:38:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6162,3 +6162,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-cmp [nia 2021-07-16]
 	Removed devel/go-properties [nia 2021-07-16]
 	Removed devel/go-osext [nia 2021-07-16]
+	Updated devel/go-review to 1.0.2 [nia 2021-07-16]
