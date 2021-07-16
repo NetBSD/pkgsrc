@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3463 2021/07/16 06:21:20 nia Exp $
+# $NetBSD: Makefile,v 1.3464 2021/07/16 06:26:42 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -410,7 +410,6 @@ SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
 SUBDIR+=	go-blackfriday
 SUBDIR+=	go-check
-SUBDIR+=	go-cmp
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
 SUBDIR+=	go-ed25519
