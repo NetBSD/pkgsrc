@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2021/07/12 21:06:42 nia Exp $
+# $NetBSD: Makefile,v 1.134 2021/07/16 08:41:31 nia Exp $
 
 DISTNAME=	osg-3.6.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscenegraph/}
 GITHUB_PROJECT=	OpenSceneGraph
@@ -33,7 +33,6 @@ CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_GLIB=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_GStreamer=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_GtkGl=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_OpenCascade=TRUE
-CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_OpenEXR=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_DCMTK=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_NVTT=TRUE
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_ZeroConf=TRUE
@@ -56,6 +55,7 @@ CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/lua52/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
