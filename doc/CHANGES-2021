@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3852 2021/07/16 06:41:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3853 2021/07/16 06:46:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6165,3 +6165,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/go-review to 1.0.2 [nia 2021-07-16]
 	Updated finance/py-stripe to 2.60.0 [adam 2021-07-16]
 	Updated finance/py-braintree to 4.11.0 [adam 2021-07-16]
+	Updated sysutils/goreman to 0.3.7 [nia 2021-07-16]
