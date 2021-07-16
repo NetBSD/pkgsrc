@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/16 16:00:33 nia Exp $
+bin/lagrange
+share/applications/fi.skyjake.Lagrange.desktop
+share/icons/hicolor/256x256/apps/fi.skyjake.Lagrange.png
+share/lagrange/resources.lgr
+share/metainfo/fi.skyjake.Lagrange.appdata.xml
