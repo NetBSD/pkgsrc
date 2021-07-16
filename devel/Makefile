@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3461 2021/07/16 06:09:57 nia Exp $
+# $NetBSD: Makefile,v 1.3462 2021/07/16 06:17:10 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -418,7 +418,6 @@ SUBDIR+=	go-flags-svent
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-gitmap
 SUBDIR+=	go-glog
-SUBDIR+=	go-gls
 SUBDIR+=	go-gocode
 SUBDIR+=	go-godotenv
 SUBDIR+=	go-golang-lru
