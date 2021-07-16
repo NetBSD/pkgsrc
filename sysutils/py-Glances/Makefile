@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/05/04 22:18:17 fox Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/16 04:24:16 fox Exp $
 
-DISTNAME=	Glances-3.1.7
+DISTNAME=	Glances-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=5.3.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
+DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 
 USE_LANGUAGES=	# none
 
