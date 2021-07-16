@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/07/13 11:36:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2021/07/16 06:46:18 nia Exp $
 
-DISTNAME=	goreman-0.1.1
+DISTNAME=	goreman-0.3.7
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	27
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
 GITHUB_PROJECT=	goreman
@@ -13,13 +12,15 @@ HOMEPAGE=	https://github.com/mattn/goreman
 COMMENT=	Foreman clone written in Go language
 LICENSE=	mit
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-GO_SRCPATH=	github.com/mattn/goreman
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
-GO_BUILD_PATTERN=	${GO_SRCPATH}
+post-install:
+	# Remove binaries installed by dependent modules.
+	${RM} -f ${DESTDIR}${PREFIX}/bin/colorable
+	${RM} -f ${DESTDIR}${PREFIX}/bin/godotenv
+	${RM} -f ${DESTDIR}${PREFIX}/bin/mkwinsyscall
+	${INSTALL_DATA} ${WRKSRC}/_example/* ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
-.include "../../devel/go-colortext/buildlink3.mk"
-.include "../../devel/go-godotenv/buildlink3.mk"
-.include "../../devel/go-yaml/buildlink3.mk"
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
