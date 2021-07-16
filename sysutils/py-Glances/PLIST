@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/04 22:18:17 fox Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/07/16 04:24:16 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -81,6 +81,9 @@ ${PYSITELIB}/glances/exports/glances_export.pyo
 ${PYSITELIB}/glances/exports/glances_graph.py
 ${PYSITELIB}/glances/exports/glances_graph.pyc
 ${PYSITELIB}/glances/exports/glances_graph.pyo
+${PYSITELIB}/glances/exports/glances_graphite.py
+${PYSITELIB}/glances/exports/glances_graphite.pyc
+${PYSITELIB}/glances/exports/glances_graphite.pyo
 ${PYSITELIB}/glances/exports/glances_influxdb.py
 ${PYSITELIB}/glances/exports/glances_influxdb.pyc
 ${PYSITELIB}/glances/exports/glances_influxdb.pyo
