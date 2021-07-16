@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3854 2021/07/16 08:50:59 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.3855 2021/07/16 15:40:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-braintree to 4.11.0 [adam 2021-07-16]
 	Updated sysutils/goreman to 0.3.7 [nia 2021-07-16]
 	Updated shells/fish to 3.3.1 [jperkin 2021-07-16]
+	Added fonts/tamzen-font version 1.11.5 [nia 2021-07-16]
