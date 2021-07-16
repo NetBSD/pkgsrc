@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3465 2021/07/16 06:28:03 nia Exp $
+# $NetBSD: Makefile,v 1.3466 2021/07/16 06:31:00 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -431,7 +431,6 @@ SUBDIR+=	go-kr-pretty
 SUBDIR+=	go-logrus
 SUBDIR+=	go-mod
 SUBDIR+=	go-nbreader
-SUBDIR+=	go-osext
 SUBDIR+=	go-pflag
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-pty
