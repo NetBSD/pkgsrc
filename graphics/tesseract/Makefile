@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/04/21 11:41:59 adam Exp $
+# $NetBSD: Makefile,v 1.58 2021/07/16 09:16:27 jperkin Exp $
 
 DISTNAME=	tesseract-4.1.1
 PKGREVISION=	8
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
 
 INSTALL_TARGET=		install training-install
-REPLACE_BASH+=		${WRKSRC}/src/training/*.sh
+REPLACE_BASH+=		src/training/*.sh
 
 post-extract:
 	${MV} ${WRKDIR}/tessdata-${LANGVER}/* ${WRKSRC}/tessdata
@@ -32,6 +32,7 @@ post-extract:
 # For some reason this release tarball lacks these
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
+	${MV} ${WRKSRC}/VERSION ${WRKSRC}/VERSION.txt
 
 # Building the training tools requires that the base build is done
 post-build:
