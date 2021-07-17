@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/07/07 19:13:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.78 2021/07/17 08:10:48 dholland Exp $
 
 DISTNAME=	xosview-1.22
 PKGREVISION=	1
@@ -32,6 +32,7 @@ BUILD_TARGET=		xosview
 MAKE_ENV+=		LDLIBS=${LIBS:Q}
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 LIBS.NetBSD+=		-lkvm -lprop
+LIBS.FreeBSD+=		-lkvm -ldevstat
 LIBS.SunOS+=		-lsocket -lnsl
 CPPFLAGS.SunOS+=	-I${X11BASE}/include
 ICON_THEMES=		yes
