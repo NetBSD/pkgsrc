@@ -1,17 +1,19 @@
-# $NetBSD: options.mk,v 1.15 2021/07/11 22:13:38 he Exp $
+# $NetBSD: options.mk,v 1.16 2021/07/17 13:16:38 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
+PKG_SUPPORTED_OPTIONS+=	rust-llvm
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# The bundled LLVM current has issues building on SunOS.
-.if ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
-PKG_SUPPORTED_OPTIONS+=		rust-llvm
 # There may be compatibility issues with base LLVM.
-.  if !empty(HAVE_LLVM)
-PKG_SUGGESTED_OPTIONS+=		rust-llvm
-.  endif
+.if !empty(HAVE_LLVM)
+PKG_SUGGESTED_OPTIONS+=	rust-llvm
+.endif
+
+# macOS/arm64 currently cannot used shared llvm
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+PKG_SUGGESTED_OPTIONS+=	rust-llvm
 .endif
 
 # Bundle OpenSSL and curl into the cargo binary when producing
