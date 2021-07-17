@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3856 2021/07/16 16:00:47 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3857 2021/07/17 07:23:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6169,3 +6169,14 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/fish to 3.3.1 [jperkin 2021-07-16]
 	Added fonts/tamzen-font version 1.11.5 [nia 2021-07-16]
 	Added net/lagrange version 1.5.2 [nia 2021-07-16]
+	Removed devel/go-thrift [nia 2021-07-17]
+	Removed devel/go-glog [nia 2021-07-17]
+	Removed devel/go-colortext [nia 2021-07-17]
+	Removed databases/go-etcd [nia 2021-07-17]
+	Removed devel/go-colorable [nia 2021-07-17]
+	Removed devel/go-mod [nia 2021-07-17]
+	Removed www/go-gogs-client [nia 2021-07-17]
+	Removed devel/go-godotenv [nia 2021-07-17]
+	Removed net/aws-sdk-go [nia 2021-07-17]
+	Removed devel/go-testify [nia 2021-07-17]
+	Removed devel/go-yaml [nia 2021-07-17]
