@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/09/10 23:48:54 minskim Exp $
-
-SHA1 (go-colortext-1.0.0.tar.gz) = d810531e5249a8728ffacdfb612b5d42adbbb14c
-RMD160 (go-colortext-1.0.0.tar.gz) = d9b8b5d68528d36be28bfe937a7a333c0f9f6fb2
-SHA512 (go-colortext-1.0.0.tar.gz) = 9c54313e35a76bd4bf4fe6346a5fc59a277a75d920c9ba0555ae1909db69b29e0e3e6fecf95b236f498ae11b96f61669978630d503b31dd65d22ff74b1d435bc
-Size (go-colortext-1.0.0.tar.gz) = 4205 bytes
