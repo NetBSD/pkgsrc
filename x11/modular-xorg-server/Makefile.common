@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.42 2021/06/24 18:43:08 tnn Exp $
+# $NetBSD: Makefile.common,v 1.43 2021/07/17 15:58:02 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
 
-XORG_VERSION=	1.20.11
+XORG_VERSION=	1.20.12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://xorg.freedesktop.org/
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
@@ -108,12 +108,6 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
-BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0
-BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
-BUILDLINK_API_DEPENDS.dri+=		dri>=7.8
-BUILDLINK_API_DEPENDS.xfont+=		xfont>=1.4.2
-BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.21.8
-
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
@@ -145,5 +139,6 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
