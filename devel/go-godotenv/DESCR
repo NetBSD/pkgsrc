@@ -1,3 +1,0 @@
-A Go port of the Ruby dotenv project, which loads env vars from a .env
-file. It can be used as a library (for loading in env for your own
-daemons etc) or as a bin command.
