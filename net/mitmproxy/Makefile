@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2021/02/26 08:47:03 leot Exp $
+# $NetBSD: Makefile,v 1.35 2021/07/17 14:14:47 leot Exp $
 
-DISTNAME=	mitmproxy-6.0.2
-PKGREVISION=	1
+DISTNAME=	mitmproxy-7.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=20.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
-DEPENDS+=	${PYPKGPREFIX}-asn1>=0.3.1:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
@@ -34,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.0:../../devel/py-urwid
+DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11.0:../../archivers/py-zstandard
 
