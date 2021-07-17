@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/17 16:01:34 adam Exp $
 
-DISTNAME=	knock-0.7
+DISTNAME=	knock-0.8
 CATEGORIES=	net
 MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/
 
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
 BUILD_DEFS+=	VARBASE
+
+CHECK_PORTABILITY_SKIP=	src/knock_helper_ipt.sh
 
 EGDIR=		${PREFIX}/share/examples/knock
 CONF_FILES=	${EGDIR}/knockd.conf ${PKG_SYSCONFDIR}/knockd.conf
