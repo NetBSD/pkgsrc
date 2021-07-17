@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/12/04 09:25:33 bsiegert Exp $
-
-SHA1 (mod-0.4.0.tar.gz) = 4ac1a785bc7210d25df2153b82ec928a20f61e4e
-RMD160 (mod-0.4.0.tar.gz) = 44f6d319b64083c0e277a0f7210ace6d95b3cd57
-SHA512 (mod-0.4.0.tar.gz) = 90c1e3857aba03df889f152a26026a0deb8353a3b78c813b2ac091fdcb4ec92c2d8dc0e450613a3e79bca342601ee0202239ec69ea8f505b3e1b5d553ba2edd7
-Size (mod-0.4.0.tar.gz) = 102301 bytes
