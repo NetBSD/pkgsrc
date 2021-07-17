@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3862 2021/07/17 15:58:12 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3863 2021/07/17 16:30:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6185,3 +6185,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/surf version 2.1 [leot 2021-07-17]
 	Updated www/wordpress to 5.7.2 [morr 2021-07-17]
 	Updated x11/modular-xorg-server to 1.20.12 [wiz 2021-07-17]
+	Updated net/knock to 0.8 [adam 2021-07-17]
+	Updated textproc/cmark to 0.30.1 [adam 2021-07-17]
