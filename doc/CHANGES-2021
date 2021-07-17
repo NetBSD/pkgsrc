@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3865 2021/07/17 20:39:30 js Exp $
+$NetBSD: CHANGES-2021,v 1.3866 2021/07/17 20:41:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6189,3 +6189,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/cmark to 0.30.1 [adam 2021-07-17]
 	Updated editors/vim-share to 8.2.3172 [morr 2021-07-17]
 	Updated chat/matrix-synapse to 1.38.0 [js 2021-07-17]
+	Updated devel/py-setuptools to 57.2.0 [adam 2021-07-17]
+	Updated textproc/py-rapidjson to 1.4 [adam 2021-07-17]
