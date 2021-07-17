@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.9 2021/07/17 16:29:31 adam Exp $
 
-DISTNAME=	cmark-0.29.0
-PKGREVISION=	1
+DISTNAME=	cmark-0.30.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
 

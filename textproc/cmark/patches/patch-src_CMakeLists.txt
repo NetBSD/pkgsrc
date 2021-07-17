@@ -1,22 +1,23 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/04/11 10:55:05 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2021/07/17 16:29:31 adam Exp $
 
 Dynamically link the executable.
 
---- src/CMakeLists.txt.orig	2020-04-11 10:31:40.000000000 +0000
+--- src/CMakeLists.txt.orig	2021-07-17 01:45:36.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -47,7 +47,6 @@ set(LIBRARY_SOURCES
+@@ -57,13 +57,13 @@ cmark_add_compile_options(${PROGRAM})
+ set_target_properties(${PROGRAM} PROPERTIES
+   OUTPUT_NAME "cmark")
  
- set(PROGRAM "cmark")
- set(PROGRAM_SOURCES
--  ${LIBRARY_SOURCES}
-   main.c
-   )
- 
-@@ -93,6 +92,7 @@ if (CMARK_SHARED)
-     BASE_NAME ${PROJECT_NAME})
- 
-   list(APPEND CMARK_INSTALL ${LIBRARY})
+-if (CMARK_STATIC)
++if (CMARK_SHARED)
 +  target_link_libraries(${PROGRAM} ${LIBRARY})
++elseif (CMARK_STATIC)
+   target_link_libraries(${PROGRAM} ${STATICLIBRARY})
+   # Disable the PUBLIC declarations when compiling the executable:
+   set_target_properties(${PROGRAM} PROPERTIES
+     COMPILE_FLAGS -DCMARK_STATIC_DEFINE)
+-elseif (CMARK_SHARED)
+-  target_link_libraries(${PROGRAM} ${LIBRARY})
  endif()
  
- if (CMARK_STATIC)
+ # -fvisibility=hidden
