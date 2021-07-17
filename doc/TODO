@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20873 2021/07/16 06:36:13 nia Exp $
+$NetBSD: TODO,v 1.20874 2021/07/17 07:23:27 nia Exp $
 
 Suggested new packages
 ======================
@@ -900,13 +900,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-chroma-0.8.2
 	o go-cli-2.3.0
 	o go-cobra-1.1.3
-	o go-colorable-0.1.8
 	o go-diff-1.2.0
 	o go-dns-1.1.41
 	o go-errors-0.9.1
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
-	o go-godotenv-1.3.0
 	o go-grpc-1.37.0
 	o go-i18n-2.1.2
 	o go-imaging-1.6.2
@@ -917,13 +915,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-md2man-2.0.0
 	o go-minify-2.9.16
 	o go-mkcert-1.4.3
-	o go-mod-0.4.2
 	o go-org-1.5.0
 	o go-parse-2.5.15
 	o go-protobuf-1.5.2
 	o go-runewidth-0.0.12
 	o go-siphash-1.2.2
-	o go-testify-1.7.0
 	o go-text-0.3.6
 	o go-toml-pelletier-1.9.0
 	o go-viper-1.7.1
