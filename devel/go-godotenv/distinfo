@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/09/10 23:54:31 minskim Exp $
-
-SHA1 (godotenv-1.2.0.tar.gz) = b4846138ed82cdca55ac920c68d7919e941de5b4
-RMD160 (godotenv-1.2.0.tar.gz) = 53af708fc0234b78e7a7c3f4206c26cc7c4c32a2
-SHA512 (godotenv-1.2.0.tar.gz) = fc5df01d7c73ba3979b0a9abedf915460ea37f6e9e722bc9e16172fab368d31501f779cf2250d99cffdcc0c8932056f6c7c38d86fba90f762911b2cf2bbe260d
-Size (godotenv-1.2.0.tar.gz) = 9239 bytes
