@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/17 14:50:48 leot Exp $
+
+SHA1 (surf-2.1.tar.gz) = ea5f398f305fcef331d9ab58345038f9239ccaa5
+RMD160 (surf-2.1.tar.gz) = 76d6a7090c276c946ce50c73a70bb986ffdda3bc
+SHA512 (surf-2.1.tar.gz) = 06f31f683a941d9a587d908ae7f6949255937b0b0c9c133a18c6fa753c7da75de267adda1c83dd9ba0a8535e2b6d4ff2b5408cc5e8a2e315d4198fe68df5db12
+Size (surf-2.1.tar.gz) = 22555 bytes
