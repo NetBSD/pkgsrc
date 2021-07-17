@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3471 2021/07/17 07:12:40 nia Exp $
+# $NetBSD: Makefile,v 1.3472 2021/07/17 07:15:18 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -414,7 +414,6 @@ SUBDIR+=	go-ed25519
 SUBDIR+=	go-flags-svent
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-gocode
-SUBDIR+=	go-godotenv
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
