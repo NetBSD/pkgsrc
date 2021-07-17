@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2021/07/07 12:55:52 nia Exp $
+# $NetBSD: Makefile,v 1.638 2021/07/17 07:06:21 nia Exp $
 
 COMMENT=	Databases
 
@@ -40,7 +40,6 @@ SUBDIR+=	geneweb
 SUBDIR+=	gigabase
 SUBDIR+=	gnats
 SUBDIR+=	gnome-mime-data
-SUBDIR+=	go-etcd
 SUBDIR+=	go-ldap
 SUBDIR+=	go-tiedot
 SUBDIR+=	gom
