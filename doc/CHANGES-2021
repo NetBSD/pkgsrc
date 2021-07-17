@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3866 2021/07/17 20:41:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3867 2021/07/17 20:54:28 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6191,3 +6191,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.38.0 [js 2021-07-17]
 	Updated devel/py-setuptools to 57.2.0 [adam 2021-07-17]
 	Updated textproc/py-rapidjson to 1.4 [adam 2021-07-17]
+	Updated chat/element-web to 1.7.32 [js 2021-07-17]
