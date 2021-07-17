@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/10 23:48:54 minskim Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/daviddengcn/go-colortext.a
-gopkg/src/github.com/daviddengcn/go-colortext/LICENSE
-gopkg/src/github.com/daviddengcn/go-colortext/README.md
-gopkg/src/github.com/daviddengcn/go-colortext/ct.go
-gopkg/src/github.com/daviddengcn/go-colortext/ct_ansi.go
-gopkg/src/github.com/daviddengcn/go-colortext/ct_ansi_test.go
-gopkg/src/github.com/daviddengcn/go-colortext/ct_test.go
-gopkg/src/github.com/daviddengcn/go-colortext/ct_win.go
