@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.20 2020/08/12 14:10:11 schmonz Exp $
+# $NetBSD: cmake.mk,v 1.21 2021/07/17 06:34:20 jperkin Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -70,6 +70,9 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_INFODIR:PATH=${PKGINFODIR}
 .  if defined(USE_PKGLOCALEDIR) && empty(USE_PKGLOCALEDIR:M[nN][oO])
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR:PATH=${PKGLOCALEDIR}/locale
 .  endif
+.endif
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+CMAKE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
 .endif
 
 .if defined(CMAKE_PREFIX_PATH)
