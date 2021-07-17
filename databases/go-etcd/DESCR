@@ -1,7 +1,0 @@
-Go client for etcd.
-
-etcd now has an official Go client, which has a nicer API and better support.
-
-We strongly suggest you use the official Go client instead of go-etcd in your
-new projects. For existing projects, we suggest you migrate to the official Go
-client.
