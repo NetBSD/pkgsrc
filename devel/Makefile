@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3473 2021/07/17 07:18:48 nia Exp $
+# $NetBSD: Makefile,v 1.3474 2021/07/17 07:19:42 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -437,7 +437,6 @@ SUBDIR+=	go-termbox
 SUBDIR+=	go-tools
 SUBDIR+=	go-try
 SUBDIR+=	go-xerrors
-SUBDIR+=	go-yaml
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golangci-lint
