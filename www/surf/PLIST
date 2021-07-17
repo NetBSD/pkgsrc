@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/17 14:50:48 leot Exp $
+bin/surf
+lib/surf/webext-surf.so
+man/man1/surf.1
