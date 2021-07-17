@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3861 2021/07/17 15:56:01 morr Exp $
+$NetBSD: CHANGES-2021,v 1.3862 2021/07/17 15:58:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6184,3 +6184,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mitmproxy to 7.0.0 [leot 2021-07-17]
 	Added www/surf version 2.1 [leot 2021-07-17]
 	Updated www/wordpress to 5.7.2 [morr 2021-07-17]
+	Updated x11/modular-xorg-server to 1.20.12 [wiz 2021-07-17]
