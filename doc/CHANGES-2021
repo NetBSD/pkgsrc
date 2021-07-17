@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3864 2021/07/17 17:50:07 morr Exp $
+$NetBSD: CHANGES-2021,v 1.3865 2021/07/17 20:39:30 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/knock to 0.8 [adam 2021-07-17]
 	Updated textproc/cmark to 0.30.1 [adam 2021-07-17]
 	Updated editors/vim-share to 8.2.3172 [morr 2021-07-17]
+	Updated chat/matrix-synapse to 1.38.0 [js 2021-07-17]
