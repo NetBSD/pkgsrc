@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3859 2021/07/17 14:14:53 leot Exp $
+$NetBSD: CHANGES-2021,v 1.3860 2021/07/17 14:51:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6182,3 +6182,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-testify [nia 2021-07-17]
 	Removed devel/go-yaml [nia 2021-07-17]
 	Updated net/mitmproxy to 7.0.0 [leot 2021-07-17]
+	Added www/surf version 2.1 [leot 2021-07-17]
