@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/18 18:06:39 gutteridge Exp $
+bin/scour
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/scour/__init__.py
+${PYSITELIB}/scour/__init__.pyc
+${PYSITELIB}/scour/__init__.pyo
+${PYSITELIB}/scour/scour.py
+${PYSITELIB}/scour/scour.pyc
+${PYSITELIB}/scour/scour.pyo
+${PYSITELIB}/scour/svg_regex.py
+${PYSITELIB}/scour/svg_regex.pyc
+${PYSITELIB}/scour/svg_regex.pyo
+${PYSITELIB}/scour/svg_transform.py
+${PYSITELIB}/scour/svg_transform.pyc
+${PYSITELIB}/scour/svg_transform.pyo
+${PYSITELIB}/scour/yocto_css.py
+${PYSITELIB}/scour/yocto_css.pyc
+${PYSITELIB}/scour/yocto_css.pyo
