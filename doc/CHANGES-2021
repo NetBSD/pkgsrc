@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3867 2021/07/17 20:54:28 js Exp $
+$NetBSD: CHANGES-2021,v 1.3868 2021/07/18 11:49:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6192,3 +6192,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 57.2.0 [adam 2021-07-17]
 	Updated textproc/py-rapidjson to 1.4 [adam 2021-07-17]
 	Updated chat/element-web to 1.7.32 [js 2021-07-17]
+	Added x11/cool-retro-term version 1.1.1 [nia 2021-07-18]
