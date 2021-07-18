@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/14 20:53:21 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/18 18:19:43 js Exp $
 gg/bin/ppc-morphos-addr2line
 gg/bin/ppc-morphos-ar
 gg/bin/ppc-morphos-as
@@ -15,6 +15,7 @@ gg/bin/ppc-morphos-readelf
 gg/bin/ppc-morphos-size
 gg/bin/ppc-morphos-strings
 gg/bin/ppc-morphos-strip
+gg/lib/bfd-plugins/libdep.so
 gg/man/man1/ppc-morphos-addr2line.1
 gg/man/man1/ppc-morphos-ar.1
 gg/man/man1/ppc-morphos-as.1
