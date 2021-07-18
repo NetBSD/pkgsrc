@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.945 2021/07/08 21:22:34 markd Exp $
+# $NetBSD: Makefile,v 1.946 2021/07/18 18:08:43 gutteridge Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -511,6 +511,7 @@ SUBDIR+=	py-pycha
 SUBDIR+=	py-pygal
 SUBDIR+=	py-pygraphviz
 SUBDIR+=	py-qrcode
+SUBDIR+=	py-scour
 SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
