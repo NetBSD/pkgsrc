@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/06/20 19:30:48 js Exp $
+$NetBSD: distinfo,v 1.4 2021/07/18 18:19:43 js Exp $
 
-SHA1 (sdk-source-20200422.tar.xz) = f10941f8141e63be76bc563748e97b493eadb156
-RMD160 (sdk-source-20200422.tar.xz) = 4885799f9ae1457a5a03cd797a4dc296d6bb2993
-SHA512 (sdk-source-20200422.tar.xz) = 25dc6f35c373adbe84f5789e5c6e20a2bb2dd0abdf629870c25892f207dd8823120d8218746f057e73a9477f16db61fa36fe72cb4f1de09033d5a6df4f070a02
-Size (sdk-source-20200422.tar.xz) = 505669100 bytes
+SHA1 (sdk-source-20210211.tar.xz) = 9c62a1a4a405f0d85ddf0fc8e6a2f2b26d4976b0
+RMD160 (sdk-source-20210211.tar.xz) = a62da15faa14cd40c9437196dd79b69a3adcda57
+SHA512 (sdk-source-20210211.tar.xz) = 7f4fcd370c2b57765ae81807ef66a54de4f44ef2bcc5659902e3097f7f834bfd29bc608e72c738c82b446d903c578f49f2fe7c0c22d62ef60a5cef8911944a33
+Size (sdk-source-20210211.tar.xz) = 565963672 bytes
 SHA1 (patch-bfd_sysdep.h) = 03c20efe391160b2a7e3b6fb01e6bdc1107ee49c
