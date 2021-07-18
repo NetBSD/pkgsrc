@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2021/06/07 01:12:38 markd Exp $
+# $NetBSD: Makefile,v 1.815 2021/07/18 22:02:19 schmonz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -20,6 +20,7 @@ SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
 SUBDIR+=	bg5ps
 SUBDIR+=	bibtool
+SUBDIR+=	brlaser
 SUBDIR+=	bww2tex
 SUBDIR+=	chktex
 SUBDIR+=	cjkutils
