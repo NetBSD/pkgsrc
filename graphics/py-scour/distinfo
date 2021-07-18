@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/18 18:06:39 gutteridge Exp $
+
+SHA1 (scour-0.38.2.tar.gz) = 9b48c246ce13dea640ab6beca810797182f26591
+RMD160 (scour-0.38.2.tar.gz) = 138e33fb4a0ce7add2bff0804484fa0bf5879680
+SHA512 (scour-0.38.2.tar.gz) = d4aec9d95f1ef706182f0da8ce1c6314174ef00cfa3276255dac55cf23f9f707ed372494f8f800a69247e82e3db476f7781816c4a9126c142e2cfffdc679e094
+Size (scour-0.38.2.tar.gz) = 52947 bytes
