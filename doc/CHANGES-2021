@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3873 2021/07/18 19:05:57 js Exp $
+$NetBSD: CHANGES-2021,v 1.3874 2021/07/18 21:38:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6198,3 +6198,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/ppc-morphos-binutils to 2.36.1 [js 2021-07-18]
 	Updated graphics/inkscape to 1.1nb1 [gutteridge 2021-07-18]
 	Updated cross/ppc-morphos-sdk to 20210211 [js 2021-07-18]
+	Updated lang/nqp to 2021.06 [mef 2021-07-18]
+	Updated devel/MoarVM to 2021.06 [mef 2021-07-18]
+	Updated lang/rakudo to 2021.06 [mef 2021-07-18]
