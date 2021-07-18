@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.237 2021/07/02 12:42:59 adam Exp $
+# $NetBSD: Makefile,v 1.238 2021/07/18 18:54:31 gutteridge Exp $
 
 DISTNAME=	inkscape-1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +20,8 @@ DEPENDS+=		adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # for inkex.py, needed by most python extension scripts
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 # for desktop
 TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOLS_PLATFORM.msgfmt=	# empty
@@ -113,6 +116,7 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.2
 .include "../../graphics/potrace/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/double-conversion/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
