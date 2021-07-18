@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2021/07/18 11:49:26 nia Exp $
+
+SHA1 (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = 8e25e7f5acaf16e4a6c16dcf494d91bc87eb4e82
+RMD160 (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = 29ec890deb7fa0d96ff6de04fc74a49d907dd3ad
+SHA512 (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = f3d57b480f5ec6edee45f6198787320920bb8c5dc8bd067fffc421ad3a3de232e79c9b0eb20625e312ec21e56d6f52ab306a78158f12da0062531a3752afd46e
+Size (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = 235234 bytes
+SHA1 (cool-retro-term-1.1.1.tar.gz) = 581809e75c70b42c6bac3e65f89428e79b5ff3b1
+RMD160 (cool-retro-term-1.1.1.tar.gz) = 61d6b1bd96a1c498638e414acef22a238940ff17
+SHA512 (cool-retro-term-1.1.1.tar.gz) = 59da4b5d18ad64b917caebbc63ea9e3d562ed2a2dc9eae00f36cf434df44d17adca084b448f860f24a74ee6b59cd083d6a81e2217df1fb5e9f2731eaf1752148
+Size (cool-retro-term-1.1.1.tar.gz) = 1975853 bytes
