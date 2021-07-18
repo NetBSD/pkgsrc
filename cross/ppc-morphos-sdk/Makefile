@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/05/24 19:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/18 19:05:46 js Exp $
 
 PKGNAME=	ppc-morphos-${DISTNAME}
-PKGREVISION=	2
-DISTNAME=	sdk-20200422
+DISTNAME=	sdk-20210211
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/
 EXTRACT_SUFX=	.lha
@@ -24,9 +23,6 @@ WRKSRC=		${WRKDIR}/morphossdk
 USE_TOOLS+=	xzcat gtar gsed
 USE_LANGUAGES=	# none
 
-# These are wrong all over the place.
-CHECK_PERMS_SKIP=	*
-
 do-build:
 
 do-install:
@@ -46,5 +42,8 @@ do-install:
 	gsed -i 's,/usr/bin/perl,${PERL5},g' \
 		${DESTDIR}${PREFIX}/gg/bin/cvinclude.pl \
 		${DESTDIR}${PREFIX}/gg/bin/genfd.pl
+	# No files should be executable other than those in ${PREFIX}/gg/bin.
+	find ${DESTDIR}${PREFIX}/gg -type f -exec chmod 644 {} ';'
+	find ${DESTDIR}${PREFIX}/gg/bin -type f -exec chmod 755 {} ';'
 
 .include "../../mk/bsd.pkg.mk"
