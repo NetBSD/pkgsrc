@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3871 2021/07/18 18:19:53 js Exp $
+$NetBSD: CHANGES-2021,v 1.3872 2021/07/18 18:55:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/cascadia-ttf to 2106.17 [fcambus 2021-07-18]
 	Added graphics/py-scour version 0.38.2 [gutteridge 2021-07-18]
 	Updated cross/ppc-morphos-binutils to 2.36.1 [js 2021-07-18]
+	Updated graphics/inkscape to 1.1nb1 [gutteridge 2021-07-18]
