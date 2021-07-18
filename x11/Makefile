@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.936 2021/07/13 12:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.937 2021/07/18 11:49:26 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -27,6 +27,7 @@ SUBDIR+=	clipnotify
 SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
+SUBDIR+=	cool-retro-term
 SUBDIR+=	deforaos-integration
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
