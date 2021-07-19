@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mariadb.sh,v 1.1 2021/05/23 15:32:48 nia Exp $
+# $NetBSD: mariadb.sh,v 1.2 2021/07/19 14:41:44 taca Exp $
 #
 # PROVIDE: mariadb mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -45,6 +45,11 @@ mariadb_initdb() {
 mariadb_prestart() {
 	if ! [ -f @MARIADB_DATADIR@/mysql/user.frm ]; then
 		mariadb_initdb
+	fi
+	rundir=$(dirname "${pidfile}")
+	if ! [ -d "${rundir}" ]; then
+		mkdir -p "${rundir}"
+		chown @MARIADB_USER@:@MARIADB_GROUP@ "${rundir}"
 	fi
 	ulimit -n 4096
 }
