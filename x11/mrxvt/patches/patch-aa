@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2017/11/27 08:05:24 maya Exp $
+$NetBSD: patch-aa,v 1.7 2021/07/19 13:03:39 tnn Exp $
+
+Don't error out (skipping utmp logging) when using Unix98 ptys.
 
 --- src/logging.c.orig	2008-02-17 22:04:50.000000000 +0000
 +++ src/logging.c
