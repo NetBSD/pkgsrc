@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3883 2021/07/19 15:20:06 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3884 2021/07/19 15:21:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6214,3 +6214,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb105-server to 10.5.10nb6 [taca 2021-07-19]
 	Updated sysutils/dust to 0.6.1 [pin 2021-07-19]
 	Updated security/gpg-tui to 0.7.1 [pin 2021-07-19]
+	Updated audio/termusic to 0.2.11 [pin 2021-07-19]
