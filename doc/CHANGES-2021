@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3881 2021/07/19 14:42:23 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3882 2021/07/19 15:18:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6212,3 +6212,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-intervals to 0.9.2 [adam 2021-07-19]
 	Updated www/varnish to 6.6.1 [tnn 2021-07-19]
 	Updated databases/mariadb105-server to 10.5.10nb6 [taca 2021-07-19]
+	Updated sysutils/dust to 0.6.1 [pin 2021-07-19]
