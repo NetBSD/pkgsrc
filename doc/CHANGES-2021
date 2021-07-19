@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3886 2021/07/19 19:14:41 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3887 2021/07/19 19:56:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6217,3 +6217,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.2.11 [pin 2021-07-19]
 	Added shells/nushell version 0.34.0 [pin 2021-07-19]
 	Updated net/unison-snapshot to 2.51.4.70.1 [gdt 2021-07-19]
+	Updated devel/py-pathspec to 0.9.0 [adam 2021-07-19]
+	Updated time/py-iso8601 to 0.1.16 [adam 2021-07-19]
