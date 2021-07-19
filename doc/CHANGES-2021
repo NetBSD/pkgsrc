@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3876 2021/07/19 07:07:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3877 2021/07/19 11:08:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6204,3 +6204,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/brlaser version 6 [schmonz 2021-07-18]
 	Updated databases/py-ldap3 to 2.9.1 [adam 2021-07-19]
 	Updated devel/py-pep517 to 0.11.0 [adam 2021-07-19]
+	Updated www/nghttp2 to 1.44.0 [adam 2021-07-19]
+	Updated devel/py-dulwich to 0.20.24 [adam 2021-07-19]
