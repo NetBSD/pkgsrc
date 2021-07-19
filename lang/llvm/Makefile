@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/07/19 13:55:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2021/07/19 16:18:48 tnn Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -100,6 +100,12 @@ PLIST_SUBST+=	SOEXT=${SOEXT}
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"
 CXXFLAGS+=	-march=i586
+.endif
+
+.if !empty(MACHINE_ARCH:Mpowerpc*)
+# Needed to avoid "relocation truncated to fit: R_PPC_REL24"
+CFLAGS+=	-mlongcall
+CXXFLAGS+=	-mlongcall
 .endif
 
 .include "options.mk"
