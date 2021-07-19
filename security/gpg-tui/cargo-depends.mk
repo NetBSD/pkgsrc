@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2021/07/08 13:19:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2021/07/19 15:19:45 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.41
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.42
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
