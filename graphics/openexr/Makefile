@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/07/08 21:13:06 markd Exp $
+# $NetBSD: Makefile,v 1.42 2021/07/19 17:52:15 tnn Exp $
 
 DISTNAME=	openexr-3.0.5
 CATEGORIES=	graphics
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE=	cmake/OpenEXR.pc.in
 PTHREAD_OPTS=	require
 
 CHECK_PORTABILITY_SKIP+=	Contrib/DtexToExr/bootstrap
+CHECK_PORTABILITY_SKIP+=	util/reformat.sh
 
 .include "../../mk/pthread.buildlink3.mk"
 
