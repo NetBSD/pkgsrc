@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/07/08 13:19:50 pin Exp $
+$NetBSD: distinfo,v 1.10 2021/07/19 15:19:45 pin Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -8,10 +8,10 @@ SHA1 (ansi_term-0.12.1.crate) = fa6af8a593898105594dfb8b057dcbfdf30648a2
 RMD160 (ansi_term-0.12.1.crate) = 747f8ed27409243576d586c9957d9e06837f27bf
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
 Size (ansi_term-0.12.1.crate) = 24838 bytes
-SHA1 (anyhow-1.0.41.crate) = b8bc2d1e1581f284eacbeeedd469a9f799d269f0
-RMD160 (anyhow-1.0.41.crate) = 1236c6a73e3c23a882f8c28921a880349a3c31f5
-SHA512 (anyhow-1.0.41.crate) = c6fba5fbb5646d195fdbda65003a8741188d49db02b805a84e695c81a054d9d5265b1c296c23d65cf089af35ce470083de88e1b65aadcc3ce33c8fb22b9cb91f
-Size (anyhow-1.0.41.crate) = 34561 bytes
+SHA1 (anyhow-1.0.42.crate) = f5d3c34ccb62a91418e5003768d143f446a7406c
+RMD160 (anyhow-1.0.42.crate) = 7b74f703096f1198f1392727d7d3b0d5f83152ed
+SHA512 (anyhow-1.0.42.crate) = 7bbafa2fc5d78a6d8e68b44b104fd8d6a7882fc127b39e04c5a76240ee24ccf311004b754d93836d6daf1918be9c33fdb68a6baf55eab8f1e921b7aec3a35455
+Size (anyhow-1.0.42.crate) = 34827 bytes
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -140,10 +140,10 @@ SHA1 (gpg-error-0.5.2.crate) = a1eb17a06226712f4c9babec665de8613a7134ae
 RMD160 (gpg-error-0.5.2.crate) = c1c5f183936f062a6146c6a80dd14071e279f3d6
 SHA512 (gpg-error-0.5.2.crate) = 69138c1c712aec6b2c5e8b919b146445137ff62ada0d4437393764dac18167197d06fd60cf77550f628762a9411c4b3a051cb4515fedad726a63810f80b8b1e6
 Size (gpg-error-0.5.2.crate) = 16410 bytes
-SHA1 (gpg-tui-0.7.0.tar.gz) = 9d9493b87766738da0878539eb9f03695086d75d
-RMD160 (gpg-tui-0.7.0.tar.gz) = 24ad7af8d97dbfeecd9f8b128d8c2d36f9b5777c
-SHA512 (gpg-tui-0.7.0.tar.gz) = 1261279b4bb0765ed03a0f2eefeed7263d6ee92784b9ebeba5669002955121b05776bf6f3b70a8cf9ed7e07d70a660401fcde9876ccae21df88c4ac8142cad1e
-Size (gpg-tui-0.7.0.tar.gz) = 11621703 bytes
+SHA1 (gpg-tui-0.7.1.tar.gz) = 696fd860d8ce7eac883bda4615d5d2f8335aa4e3
+RMD160 (gpg-tui-0.7.1.tar.gz) = e942392140274855025332508bbfe547a3fca517
+SHA512 (gpg-tui-0.7.1.tar.gz) = 6e97498e6a3061223e9d77347da8b3cb0137607e832718535e16592d2d81181c9410aced7fe67febeb5bdda27533c329ea2be9a5f28d743d45c09222efeaa744
+Size (gpg-tui-0.7.1.tar.gz) = 11621922 bytes
 SHA1 (gpgme-0.9.2.crate) = 8c9fbbe3b5401b4ce9a85c0fc4b925f9aef62a1a
 RMD160 (gpgme-0.9.2.crate) = d3ff4e66c48059f656a9c4f860198fd2795605f3
 SHA512 (gpgme-0.9.2.crate) = 9f0808cd4a18b334f8ef935dc6740bc9f5c4a25286f7d3b921000965183a1528f75128481aa47558a75cf6ff3d75ae3b2fbf98d0692bff6ee377bae0e9d2e09f
