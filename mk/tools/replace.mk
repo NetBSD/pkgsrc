@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.291 2020/10/06 17:36:50 rillig Exp $
+# $NetBSD: replace.mk,v 1.292 2021/07/19 09:55:04 triaxx Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1276,6 +1276,16 @@ TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 ######################################################################
 
 .for _t_ in ${_USE_TOOLS}
+###
+### For each tool that depends on X11 for its native version, make
+### sure it is really installed (i.e. xbase has been installed).
+###
+.  if defined(TOOLS_PATH.${_t_}) && !empty(X11_TYPE:Mnative)
+.    if !exists(${TOOLS_PATH.${_t_}}) && !empty(TOOLS_PATH.${_t_}:M${X11BASE}*)
+_tmiss_+=	${_t_}
+.    endif
+.  endif
+
 .  if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS]) && \
       !defined(TOOLS_IGNORE.${_t_})
 #####
@@ -1335,6 +1345,10 @@ ${_v_}?=	${TOOLS_CMDLINE_${_TOOLS_VARNAME.${_t_}}}
 .    endif
 .  endif
 .endfor
+
+.if !empty(_tmiss_)
+PKG_FAIL_REASON+=	"${X11BASE}: X11_TYPE=native but xbase set is not installed (missing: ${_tmiss_}).  Either set X11_TYPE to modular or install xbase."
+.endif
 
 ######################################################################
 
