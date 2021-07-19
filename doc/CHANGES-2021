@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3880 2021/07/19 12:48:01 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.3881 2021/07/19 14:42:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6211,3 +6211,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-infinity to 1.5 [adam 2021-07-19]
 	Updated math/py-intervals to 0.9.2 [adam 2021-07-19]
 	Updated www/varnish to 6.6.1 [tnn 2021-07-19]
+	Updated databases/mariadb105-server to 10.5.10nb6 [taca 2021-07-19]
