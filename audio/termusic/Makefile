@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/07/14 20:46:13 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/07/19 15:21:09 pin Exp $
 
-DISTNAME=	termusic-0.2.7
+DISTNAME=	termusic-0.2.11
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tramhao/termusic/
 COMMENT=	Music Player TUI written in Rust
-LICENSE=	mit
+LICENSE=	mit AND gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
