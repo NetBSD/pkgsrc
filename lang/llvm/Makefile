@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/07/12 18:41:02 adam Exp $
+# $NetBSD: Makefile,v 1.65 2021/07/19 13:55:37 jperkin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -83,6 +83,8 @@ SUBST_STAGE.linkmap=	pre-configure
 SUBST_FILES.linkmap=	tools/lto/lto.exports
 SUBST_FILES.linkmap+=	tools/remarks-shlib/Remarks.exports
 SUBST_SED.linkmap=	-e '/^LLVM/d'
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
