@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2020/08/17 20:20:32 leot Exp $
+# $NetBSD: Makefile,v 1.39 2021/07/19 13:03:38 tnn Exp $
 #
 
 DISTNAME=	mrxvt-0.5.4
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 PATCH_SITES=	${MASTER_SITES}
@@ -11,6 +11,7 @@ PATCHFILES=	mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/mrxvt/
 COMMENT=	Multi-tabbed terminal emulator with Xft support
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
