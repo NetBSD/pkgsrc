@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/07/14 20:52:07 pin Exp $
+# $NetBSD: Makefile,v 1.66 2021/07/19 15:27:00 pin Exp $
 #
 
 COMMENT=	Shells
@@ -22,6 +22,7 @@ SUBDIR+=	heirloom-sh
 SUBDIR+=	lshell
 SUBDIR+=	mksh
 SUBDIR+=	nologinmsg
+SUBDIR+=	nushell
 SUBDIR+=	oksh
 SUBDIR+=	osh
 SUBDIR+=	pbosh
