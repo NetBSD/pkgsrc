@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/04/06 14:36:48 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/19 11:45:34 adam Exp $
 
-DISTNAME=	intervals-0.8.1
+DISTNAME=	intervals-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/intervals/}
@@ -13,14 +13,15 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-infinity>=0.1.3:../../math/py-infinity
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=2.4.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.2:../../devel/py-isort
-
-PYTHON_VERSIONED_DEPENDENCIES=	pygments:test test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.2.3:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
