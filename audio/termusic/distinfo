@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/07/14 20:46:13 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/07/19 15:21:09 pin Exp $
 
 SHA1 (adler-1.0.2.crate) = 4b3b7b567ba15929c15c0b8f4c498afaefde76db
 RMD160 (adler-1.0.2.crate) = 8a3ccd049edf486e01dd612352816e76176f601c
@@ -672,10 +672,10 @@ SHA1 (terminal_size-0.1.17.crate) = f9a2c1a849fa9736589c3c4e1b129c107411adad
 RMD160 (terminal_size-0.1.17.crate) = 5bc2e37ea82cd23669384aec1fcf4ba971abf136
 SHA512 (terminal_size-0.1.17.crate) = 96ec1bc8abd597f01ae59da567036d5d40b422764a4da662e2030c3ef4ce80a983c8b6a4ef1f34d88e649e0b1ea27b206d56a31924bcd2d31ff7e5a2e96d4201
 Size (terminal_size-0.1.17.crate) = 9141 bytes
-SHA1 (termusic-0.2.7.tar.gz) = 0cc9b5327d500bf04a8874b78668726629aa1386
-RMD160 (termusic-0.2.7.tar.gz) = 5a1c6af3c16448de230858db81bdd266faea9219
-SHA512 (termusic-0.2.7.tar.gz) = 250cfb9c80ba78cbd2762ea06ba288600fe7ffc5cd008cc7eaf660f2d8daa6127f1aba98f1da17008a5bd09e9f91e7385cc432c3c3ff1cdd721d72002d3cbda4
-Size (termusic-0.2.7.tar.gz) = 2195747 bytes
+SHA1 (termusic-0.2.11.tar.gz) = 2d030ebeb51d72ca1813ddfbf3c94af67dc05483
+RMD160 (termusic-0.2.11.tar.gz) = 3a52034ff7d4ac96a808b72fe969d57cb2d2cd1e
+SHA512 (termusic-0.2.11.tar.gz) = c57a1f40e72f38548ff1bcb62cd427c94ecfe337cda5d323f82ef377a45c53751464aefc42cc0e6065f75ff1294c0714830c15577c4cbdd9a934d009d537af79
+Size (termusic-0.2.11.tar.gz) = 2209320 bytes
 SHA1 (textwrap-0.14.2.crate) = be2df3adfeacfdc7ed842042c80fd0d448a34db0
 RMD160 (textwrap-0.14.2.crate) = 930984cf417d217431563882e3c2b90070c61170
 SHA512 (textwrap-0.14.2.crate) = 521ab37e03aae8fcce5b909541399fc90a23020e353f95102c658fa94ffc56b9bdff43f47fb3da6e30f5c9cc9447fab72fe21d7276dfa21fe5a1a5a1c874e371
