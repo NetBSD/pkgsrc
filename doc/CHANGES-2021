@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3879 2021/07/19 11:45:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3880 2021/07/19 12:48:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6210,3 +6210,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pygit2 to 1.6.1 [adam 2021-07-19]
 	Updated math/py-infinity to 1.5 [adam 2021-07-19]
 	Updated math/py-intervals to 0.9.2 [adam 2021-07-19]
+	Updated www/varnish to 6.6.1 [tnn 2021-07-19]
