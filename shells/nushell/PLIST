@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/19 15:26:20 pin Exp $
+bin/nu
+bin/nu_plugin_core_fetch
+bin/nu_plugin_core_match
+bin/nu_plugin_core_post
+bin/nu_plugin_core_ps
+bin/nu_plugin_core_sys
