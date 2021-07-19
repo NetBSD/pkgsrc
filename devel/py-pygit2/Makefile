@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/02/01 09:46:33 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/07/19 11:32:31 adam Exp $
 
-DISTNAME=	pygit2-1.5.0
+DISTNAME=	pygit2-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -11,10 +11,13 @@ COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
-DEPENDS+=	${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
+.endif
 
 PYSETUPTESTTARGET=	pytest
 
