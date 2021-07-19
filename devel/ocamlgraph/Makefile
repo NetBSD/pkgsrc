@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2021/04/21 11:41:29 adam Exp $
+# $NetBSD: Makefile,v 1.55 2021/07/19 10:43:05 adam Exp $
 
 DISTNAME=	ocamlgraph-1.8.8
 PKGREVISION=	30
@@ -33,8 +33,8 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/editor/editor.opt ${DESTDIR}${PREFIX}/bin/graph-editor
 	${INSTALL_PROGRAM} ${WRKSRC}/dgraph/dgraph.opt ${DESTDIR}${PREFIX}/bin/graph-viewer
 .  else
-	${INSTALL_PROGRAM} ${WKRSRC}/editor/editor.byte ${DESTDIR}${PREFIX}/bin/graph-editor
-	${INSTALL_PROGRAM} ${WKRSRC}/dgraph/dgraph.byte ${DESTDIR}${PREFIX}/bin/graph-viewer
+	${INSTALL_PROGRAM} ${WRKSRC}/editor/editor.byte ${DESTDIR}${PREFIX}/bin/graph-editor
+	${INSTALL_PROGRAM} ${WRKSRC}/dgraph/dgraph.byte ${DESTDIR}${PREFIX}/bin/graph-viewer
 .  endif
 .endif
 
