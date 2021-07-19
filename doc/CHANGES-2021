@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3885 2021/07/19 15:27:29 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3886 2021/07/19 19:14:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6216,3 +6216,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.7.1 [pin 2021-07-19]
 	Updated audio/termusic to 0.2.11 [pin 2021-07-19]
 	Added shells/nushell version 0.34.0 [pin 2021-07-19]
+	Updated net/unison-snapshot to 2.51.4.70.1 [gdt 2021-07-19]
