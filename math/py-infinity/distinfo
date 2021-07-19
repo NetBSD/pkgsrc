@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/09/27 20:21:54 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/07/19 11:44:35 adam Exp $
 
-SHA1 (infinity-1.4.tar.gz) = 4041bf5620bbb4e80feeecc18fabf16e917be82a
-RMD160 (infinity-1.4.tar.gz) = b9822c0d2148c3211ba27f199412b1b69af25f46
-SHA512 (infinity-1.4.tar.gz) = 57ce539d861a47d02b570f997a0b1ee6c631a1d9825b68692e9edfac789ec3069b754abb64bb4128dbfcf2eea231067c61a287315ec130a301f18c0e65387acb
-Size (infinity-1.4.tar.gz) = 5410 bytes
+SHA1 (infinity-1.5.tar.gz) = 890ddaea6f6be1ecb0d111b971579aba44270861
+RMD160 (infinity-1.5.tar.gz) = e42d892c3914e14c39e713b4c316b27896b8718b
+SHA512 (infinity-1.5.tar.gz) = d61c16fe08749dab050ffb17f8cb392b22ef0c409d736625820419859a0533e067d04a3244e937cf968b40eb02d6bcecb0f80525797dc372eba7205836bad9cb
+Size (infinity-1.5.tar.gz) = 5378 bytes
