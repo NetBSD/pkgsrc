@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3875 2021/07/18 22:02:34 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3876 2021/07/19 07:07:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6202,3 +6202,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/MoarVM to 2021.06 [mef 2021-07-18]
 	Updated lang/rakudo to 2021.06 [mef 2021-07-18]
 	Added print/brlaser version 6 [schmonz 2021-07-18]
+	Updated databases/py-ldap3 to 2.9.1 [adam 2021-07-19]
+	Updated devel/py-pep517 to 0.11.0 [adam 2021-07-19]
