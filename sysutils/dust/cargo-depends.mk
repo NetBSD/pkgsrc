@@ -1,9 +1,9 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2021/06/24 08:45:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2021/07/19 15:18:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
-CARGO_CRATE_DEPENDS+=	assert_cmd-1.0.5
+CARGO_CRATE_DEPENDS+=	assert_cmd-1.0.7
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
@@ -14,19 +14,20 @@ CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.0
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
-CARGO_CRATE_DEPENDS+=	difference-2.0.0
+CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	either-1.6.1
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
-CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
+CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
+CARGO_CRATE_DEPENDS+=	itertools-0.10.1
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.97
+CARGO_CRATE_DEPENDS+=	libc-0.2.98
 CARGO_CRATE_DEPENDS+=	lscolors-0.7.1
 CARGO_CRATE_DEPENDS+=	memchr-2.4.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.4
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.0
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
-CARGO_CRATE_DEPENDS+=	predicates-1.0.8
+CARGO_CRATE_DEPENDS+=	predicates-2.0.0
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.2
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.2
 CARGO_CRATE_DEPENDS+=	rand-0.8.4
