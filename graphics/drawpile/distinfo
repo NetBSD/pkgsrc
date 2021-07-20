@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2021/07/20 10:54:18 nia Exp $
+
+SHA1 (Drawpile-2.1.17.tar.gz) = e436db084d903b891d0703abf46d04126b0cdcd5
+RMD160 (Drawpile-2.1.17.tar.gz) = fdc6dc5bcc63d8f84e8a2a7b09e5bbd91b69c932
+SHA512 (Drawpile-2.1.17.tar.gz) = 57fb472ea885c1a4844a9e56d3d8eab6dfac59b63118f23671799cbe9110940885546e96be9d0444f1b023d5c9527156990b043e109880896c87a0e1476e68aa
+Size (Drawpile-2.1.17.tar.gz) = 2521569 bytes
+SHA1 (patch-doc_CMakeLists.txt) = 5cefd3f4b354d60784b0681730a4f30dacd54f73
+SHA1 (patch-src_desktop_bundled_QtColorWidgets_color__wheel.cpp) = 8740f0d7bb1cceeaa8bae7d82d59a6a681cef3f4
+SHA1 (patch-src_desktop_widgets_popupmessage.h) = 29da8b8f19f30c6bcc188c68c44a9faf095ef372
+SHA1 (patch-src_thinsrv_webadmin_qmhttp.cpp) = ede288361c38c124ee427cf501f73721f6196f7d
