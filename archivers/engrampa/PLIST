@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/05 16:05:40 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/07/20 23:51:33 gutteridge Exp $
 bin/engrampa
 lib/caja/extensions-2.0/libcaja-engrampa.la
 libexec/engrampa-server
@@ -762,6 +762,7 @@ share/locale/it/LC_MESSAGES/engrampa.mo
 share/locale/ja/LC_MESSAGES/engrampa.mo
 share/locale/jv/LC_MESSAGES/engrampa.mo
 share/locale/ka/LC_MESSAGES/engrampa.mo
+share/locale/kab/LC_MESSAGES/engrampa.mo
 share/locale/kk/LC_MESSAGES/engrampa.mo
 share/locale/kn/LC_MESSAGES/engrampa.mo
 share/locale/ko/LC_MESSAGES/engrampa.mo
