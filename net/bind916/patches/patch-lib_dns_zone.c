@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_dns_zone.c,v 1.3 2021/07/20 06:39:45 rin Exp $
+$NetBSD: patch-lib_dns_zone.c,v 1.4 2021/07/20 07:23:04 rin Exp $
 
 No need to use atomic 64-bit integers for flags fit within 32-bit width.
 
@@ -34,7 +34,7 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
  	 * support 64-bit enum values. Currently they fail on
  	 * Windows.
  	 */
-+#if 1
++#if 0
  	DNS_ZONEFLG___MAX = UINT64_MAX, /* trick to make the ENUM 64-bit wide */
 +#endif
  } dns_zoneflg_t;

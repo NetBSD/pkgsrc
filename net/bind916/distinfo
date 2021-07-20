@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2021/07/20 06:39:45 rin Exp $
+$NetBSD: distinfo,v 1.18 2021/07/20 07:23:04 rin Exp $
 
 SHA1 (bind-9.16.18.tar.xz) = d4d5dc9097647a75732ff3fdd9ed370bb3bca7d4
 RMD160 (bind-9.16.18.tar.xz) = c26ba6a638f4dafe766fff7c45ee22d3fe56c049
@@ -35,7 +35,7 @@ SHA1 (patch-lib_dns_sdb.c) = ed447ec7a134e620765b25ee36124a19dfd9fab0
 SHA1 (patch-lib_dns_sdlz.c) = 4fc15a577c64501c10c144eab147e54686e80309
 SHA1 (patch-lib_dns_validator.c) = 03dd60d4c38be7248d1e07f2c29ddd543b5f7454
 SHA1 (patch-lib_dns_view.c) = 5b092f0344b92d003f1fe1f28e4cc4c76b2505cf
-SHA1 (patch-lib_dns_zone.c) = e8f7062204818df36de80c4856821b05d7f61968
+SHA1 (patch-lib_dns_zone.c) = 04a224863c8860c5f1b5bf4291b1af920c57fcd2
 SHA1 (patch-lib_isc_backtrace.c) = 1b6bca9b3de7f7298882c6c88274b0baf1dad507
 SHA1 (patch-lib_isc_include_isc_netmgr.h) = 48ac44c6a9b81e6b442deba6c075653d3691464b
 SHA1 (patch-lib_isc_include_isc_socket.h) = dc6376cd9e8391fa96efd805faee1a5d0647a142
