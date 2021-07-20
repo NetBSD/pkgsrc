@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/07/19 15:19:45 pin Exp $
+$NetBSD: distinfo,v 1.11 2021/07/20 20:22:26 pin Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -140,10 +140,10 @@ SHA1 (gpg-error-0.5.2.crate) = a1eb17a06226712f4c9babec665de8613a7134ae
 RMD160 (gpg-error-0.5.2.crate) = c1c5f183936f062a6146c6a80dd14071e279f3d6
 SHA512 (gpg-error-0.5.2.crate) = 69138c1c712aec6b2c5e8b919b146445137ff62ada0d4437393764dac18167197d06fd60cf77550f628762a9411c4b3a051cb4515fedad726a63810f80b8b1e6
 Size (gpg-error-0.5.2.crate) = 16410 bytes
-SHA1 (gpg-tui-0.7.1.tar.gz) = 696fd860d8ce7eac883bda4615d5d2f8335aa4e3
-RMD160 (gpg-tui-0.7.1.tar.gz) = e942392140274855025332508bbfe547a3fca517
-SHA512 (gpg-tui-0.7.1.tar.gz) = 6e97498e6a3061223e9d77347da8b3cb0137607e832718535e16592d2d81181c9410aced7fe67febeb5bdda27533c329ea2be9a5f28d743d45c09222efeaa744
-Size (gpg-tui-0.7.1.tar.gz) = 11621922 bytes
+SHA1 (gpg-tui-0.7.2.tar.gz) = 9ebbb8c3fd5b978006e46237b0b968bb2af6e0ad
+RMD160 (gpg-tui-0.7.2.tar.gz) = 78b3ab8d7700ae82898386383001f42701dee045
+SHA512 (gpg-tui-0.7.2.tar.gz) = 99d2485db57c0b846c627fb9b6732f33c9218cb1108eda0ce161f30fc58fbb0b129cf5761bf572b80f83455b9c2248de64840b6193306993a2486faadd2adc8c
+Size (gpg-tui-0.7.2.tar.gz) = 11622157 bytes
 SHA1 (gpgme-0.9.2.crate) = 8c9fbbe3b5401b4ce9a85c0fc4b925f9aef62a1a
 RMD160 (gpgme-0.9.2.crate) = d3ff4e66c48059f656a9c4f860198fd2795605f3
 SHA512 (gpgme-0.9.2.crate) = 9f0808cd4a18b334f8ef935dc6740bc9f5c4a25286f7d3b921000965183a1528f75128481aa47558a75cf6ff3d75ae3b2fbf98d0692bff6ee377bae0e9d2e09f
