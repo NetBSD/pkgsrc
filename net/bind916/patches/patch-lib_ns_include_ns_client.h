@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_ns_include_ns_client.h,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_ns_include_ns_client.h,v 1.2 2021/07/20 06:39:45 rin Exp $
 
-* Take from NetBSD base.
+Use 32-bit atomic integers for !_LP64 platforms.
 
 --- lib/ns/include/ns/client.h.orig	2020-05-06 09:59:35.000000000 +0000
 +++ lib/ns/include/ns/client.h
