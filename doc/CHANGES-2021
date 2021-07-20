@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3889 2021/07/20 06:43:21 rin Exp $
+$NetBSD: CHANGES-2021,v 1.3890 2021/07/20 10:54:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6221,3 +6221,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-iso8601 to 0.1.16 [adam 2021-07-19]
 	Added audio/ympd version 1.3.0 [nia 2021-07-20]
 	Updated net/bind916 to 9.16.18nb2 [rin 2021-07-20]
+	Added graphics/drawpile version 2.1.17 [nia 2021-07-20]
