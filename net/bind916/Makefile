@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/07/20 06:39:45 rin Exp $
+# $NetBSD: Makefile,v 1.21 2021/07/20 06:41:46 rin Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -37,12 +37,6 @@ CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=		--with-python=no
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-CONFIGURE_ARGS+=		--disable-atomic
-.endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 CONFIGURE_ARGS.SunOS+=		--disable-epoll
 
