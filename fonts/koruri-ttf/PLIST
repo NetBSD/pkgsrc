@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/07/27 14:52:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/20 15:35:23 nonaka Exp $
+share/doc/koruri-ttf/LICENSE
+share/doc/koruri-ttf/README.md
+share/doc/koruri-ttf/README_EN.md
 share/fonts/X11/TTF/Koruri-Bold.ttf
 share/fonts/X11/TTF/Koruri-Extrabold.ttf
 share/fonts/X11/TTF/Koruri-Light.ttf
