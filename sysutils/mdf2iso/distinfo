@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:21 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/07/20 21:27:08 fcambus Exp $
 
-SHA1 (mdf2iso-0.3.0-src.tar.bz2) = d424bd84a2c45834d7b7060306aa9ee1926c9215
-RMD160 (mdf2iso-0.3.0-src.tar.bz2) = ffb295133265197846758ea6746711a260969cef
-SHA512 (mdf2iso-0.3.0-src.tar.bz2) = fa5360095824b6c833bcd04649f6dc864fa43196a5e737d24babd521fb6600fb60ea1129f53ba481255e79b31fa9e54f11662a37c6c8619f782c0c2c8e05f019
-Size (mdf2iso-0.3.0-src.tar.bz2) = 97723 bytes
+SHA1 (mdf2iso_0.3.1.orig.tar.gz) = 625d85addc458c884b80c9073f1ca0d839abfcf7
+RMD160 (mdf2iso_0.3.1.orig.tar.gz) = d07bf6d072486382c71dc06ab04d529f769db180
+SHA512 (mdf2iso_0.3.1.orig.tar.gz) = 0a18badb5b226c0184457daa6bc2ce497f559e57d53ff97374154a0c81881b7139197480a131b4e46aa7ab32cba610000f390244e61974edeffccd498fef2d64
+Size (mdf2iso_0.3.1.orig.tar.gz) = 193860 bytes
