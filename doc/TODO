@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20877 2021/07/20 12:52:04 wiz Exp $
+$NetBSD: TODO,v 1.20878 2021/07/20 17:36:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1707,7 +1707,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgpdump-0.33
 	o phoronix-9.2.1
 	o phoronix-test-suite-10.2.2
-	o php-baikal-0.8.0
 	o php-basercms-4.4.2
 	o php-concrete5-8.5.4
 	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
