@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/07/20 06:37:18 nia Exp $
+
+SHA1 (ympd-1.3.0.tar.gz) = 588df4e0622fa292e42074d357a4d09e37e308a3
+RMD160 (ympd-1.3.0.tar.gz) = b78cba8aa05dcd7bf7244af1b8e1d6360486b8c5
+SHA512 (ympd-1.3.0.tar.gz) = 7e2bd4124b0e7692e2528e9fc50955d1b357ba042d8c97941160ad31ee0c89bc53b349195b45d27ce77aaa954bc01aceba1a30cdb89d9f58644a0b4934498a16
+Size (ympd-1.3.0.tar.gz) = 350115 bytes
+SHA1 (patch-CMakeLists.txt) = 727b742ffc579575b00d0a185f071b67805f1ef8
