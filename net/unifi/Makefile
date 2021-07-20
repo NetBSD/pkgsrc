@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/06/01 15:04:12 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2021/07/20 16:01:03 abs Exp $
 
 # Update to 6.2 (wip) is on hold pending reports that the greater
 # Unifi world thinks it is stable enough. -- gdt, 2021-06-01
@@ -47,7 +47,8 @@ INSTALLATION_DIRS=	unifi
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
 # native libaries.
-PKG_JVMS_ACCEPTED=	openjdk11 openjdk8
+# NetBSD openjdk11 fails to listen to https, so disable for now
+PKG_JVMS_ACCEPTED=	openjdk8
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
