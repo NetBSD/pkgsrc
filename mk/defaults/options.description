@@ -507,6 +507,7 @@ links			Use and enable support for the links browser.
 lirc			Enable LIRC receiving and sending IR signals support.
 live			Enable live555 support.
 llvm			Enable run time generation with Low Level Virtual Machine.
+llvm-target-aarch64	Support code generation for 64-bit ARM CPUs.
 llvm-target-amdgpu	Support code generation for AMD GPUs.
 llvm-target-arm		Support code generation for ARM CPUs.
 llvm-target-mips	Support code generation for MIPS CPUs.
