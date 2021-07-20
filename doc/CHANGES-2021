@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3891 2021/07/20 15:40:34 nonaka Exp $
+$NetBSD: CHANGES-2021,v 1.3892 2021/07/20 17:36:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6223,3 +6223,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.18nb2 [rin 2021-07-20]
 	Added graphics/drawpile version 2.1.17 [nia 2021-07-20]
 	Updated fonts/koruri-ttf to 20210720 [nonaka 2021-07-21]
+	Updated net/php-baikal to 0.8.0 [wiz 2021-07-20]
