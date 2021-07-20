@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/09/02 08:34:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/07/20 09:43:22 tnn Exp $
 ${PLIST.arm}include/freedreno/freedreno_drmif.h
 ${PLIST.arm}include/freedreno/freedreno_ringbuffer.h
 include/libdrm/amdgpu.h
@@ -43,6 +43,7 @@ ${PLIST.arm}include/libdrm/vc4_qpu_defines.h
 include/libdrm/via_drm.h
 include/libdrm/virtgpu_drm.h
 include/libdrm/vmwgfx_drm.h
+${PLIST.kms}include/libkms/libkms.h
 include/libsync.h
 include/xf86drm.h
 include/xf86drmMode.h
@@ -52,11 +53,13 @@ ${PLIST.arm}lib/libdrm_freedreno.la
 ${PLIST.intel}lib/libdrm_intel.la
 lib/libdrm_nouveau.la
 lib/libdrm_radeon.la
+${PLIST.kms}lib/libkms.la
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_amdgpu.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_freedreno.pc
 ${PLIST.intel}lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
+${PLIST.kms}lib/pkgconfig/libkms.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_vc4.pc
 share/libdrm/amdgpu.ids

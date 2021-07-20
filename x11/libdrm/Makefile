@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/10/18 09:04:16 nia Exp $
+# $NetBSD: Makefile,v 1.96 2021/07/20 09:43:22 tnn Exp $
 
 DISTNAME=		libdrm-2.4.100
 CATEGORIES=		x11 graphics
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--disable-valgrind
 
 LDFLAGS.NetBSD+=	-lpci
 
-PLIST_VARS+=	intel arm
+PLIST_VARS+=	intel arm kms
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 # libpciaccess is needed to build support for the intel KMS API,
 # libdrm_intel.so.
@@ -55,4 +55,9 @@ PLIST.arm=	yes
 #.else
 #CONFIGURE_ARGS+=	--disable-intel
 .endif
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
+PLIST.kms=	yes
+.endif
+
 .include "../../mk/bsd.pkg.mk"
