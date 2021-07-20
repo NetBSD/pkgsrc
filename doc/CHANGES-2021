@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3897 2021/07/20 21:44:15 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3898 2021/07/20 23:16:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6229,3 +6229,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/nbsdgames to 4.1.2 [fcambus 2021-07-20]
 	Updated sysutils/mdf2iso to 0.3.1 [fcambus 2021-07-20]
 	Updated graphics/gifsicle to 1.93 [fcambus 2021-07-20]
+	Updated print/atril to 1.24.1 [gutteridge 2021-07-20]
