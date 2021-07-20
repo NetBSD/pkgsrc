@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2020/12/04 20:45:37 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/07/20 21:38:59 fcambus Exp $
 
 DISTNAME=	lottanzb-0.4.1
 PKGREVISION=	3
 CATEGORIES=	news
-MASTER_SITES=	http://www.lottanzb.org/releases/
+#MASTER_SITES=	http://www.lottanzb.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lottanzb.org/
+#HOMEPAGE=	http://www.lottanzb.org/
 COMMENT=	GNOME front-end for HellaNZB
 LICENSE=	gnu-gpl-v3
 
