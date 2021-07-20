@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/20 06:37:18 nia Exp $
+bin/ympd
+man/man1/ympd.1
