@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.946 2021/07/18 18:08:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.947 2021/07/20 10:54:18 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -106,6 +106,7 @@ SUBDIR+=	djview4
 SUBDIR+=	djvulibre-lib
 SUBDIR+=	djvulibre-tools
 SUBDIR+=	drawing
+SUBDIR+=	drawpile
 SUBDIR+=	dvipng
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
