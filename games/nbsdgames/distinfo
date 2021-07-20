@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/06/07 12:03:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/07/20 21:04:28 fcambus Exp $
 
-SHA1 (nbsdgames-v4.1.1.tar.gz) = c608ea48ac10e4b70b28f2bc772d05dcd0cf12ab
-RMD160 (nbsdgames-v4.1.1.tar.gz) = 4ffbd75b8ccedba95769132554aa504bf7eb94c5
-SHA512 (nbsdgames-v4.1.1.tar.gz) = e5621a0dec82edf40c93b4c6f2e4b292d223e9df99518eeed3bad3d2509c968993849d18422d6d56edf1c6036edef138578bdaf23790363b118dc231c755c0ba
-Size (nbsdgames-v4.1.1.tar.gz) = 49596 bytes
+SHA1 (nbsdgames-v4.1.2.tar.gz) = 66156a57e9c594b7a902e317c09f1bc4f7a2f7ec
+RMD160 (nbsdgames-v4.1.2.tar.gz) = 629a4349426083a8ce4b07c40af79f93ebf52d8c
+SHA512 (nbsdgames-v4.1.2.tar.gz) = 080fc09ada8c30c117c3b04440956c3df60e8eac407e0816d3bf7fe269a184275b0cfa15572bde6815bd0ba1adb73a04a2d52c4e05d7f348ae4939ac73f6a08c
+Size (nbsdgames-v4.1.2.tar.gz) = 49789 bytes

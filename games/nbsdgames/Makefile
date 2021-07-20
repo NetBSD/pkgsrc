@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/06/07 12:03:12 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/20 21:04:28 fcambus Exp $
 
-DISTNAME=	nbsdgames-v4.1.1
+DISTNAME=	nbsdgames-v4.1.2
 PKGNAME=	${DISTNAME:S/-v/-/1}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abakh/}
