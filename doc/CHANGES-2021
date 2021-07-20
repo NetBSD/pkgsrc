@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3894 2021/07/20 20:22:48 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3895 2021/07/20 21:04:41 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/php-baikal to 0.8.0 [wiz 2021-07-20]
 	Updated security/py-kerberos to 1.3.1nb1 [wiz 2021-07-20]
 	Updated security/gpg-tui to 0.7.2 [pin 2021-07-20]
+	Updated games/nbsdgames to 4.1.2 [fcambus 2021-07-20]
