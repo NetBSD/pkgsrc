@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3896 2021/07/20 21:27:20 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3897 2021/07/20 21:44:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.7.2 [pin 2021-07-20]
 	Updated games/nbsdgames to 4.1.2 [fcambus 2021-07-20]
 	Updated sysutils/mdf2iso to 0.3.1 [fcambus 2021-07-20]
+	Updated graphics/gifsicle to 1.93 [fcambus 2021-07-20]
