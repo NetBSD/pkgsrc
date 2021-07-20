@@ -1,7 +1,12 @@
 This package provides the certificates distributed by the Mozilla
 Project and will, by default, install certificates trusted by the
-Mozilla Project in the system certificate store.
+Mozilla Project in the system OpenSSL certificate store.  Modification
+of system configuration files is very irregular as pkgsrc should not
+write anything outside of ${PREFIX}.
 
 The sysadmin can configure the list of trusted certificates and also
 add local certificates as needed by editing ca-certificates.conf and
 re-running update-ca-certificates.
+
+See also the mozilla-rootcerts and mozilla-rootcerts-openssl packages
+for an alternative approach.
