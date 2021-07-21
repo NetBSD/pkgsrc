@@ -1,15 +1,15 @@
-$NetBSD: patch-docs_man8_tinyproxy.txt.in,v 1.1 2012/12/12 13:01:23 wiz Exp $
+$NetBSD: patch-docs_man8_tinyproxy.txt.in,v 1.2 2021/07/21 10:05:26 yhardy Exp $
 
 Adapt path for pkgsrc.
 
---- docs/man8/tinyproxy.txt.in.orig	2012-10-04 11:35:55.807186000 +0000
+--- docs/man8/tinyproxy.txt.in.orig	2021-04-16 12:31:11.000000000 +0000
 +++ docs/man8/tinyproxy.txt.in
-@@ -130,7 +130,7 @@ configuration variable `StatFile`.
- FILES
- -----
+@@ -156,7 +156,7 @@ configuration variable `StatFile`.
+ 
+ =head1 FILES
  
 -`/etc/tinyproxy/tinyproxy.conf`, `/var/run/tinyproxy/tinyproxy.pid`, `/var/log/tinyproxy/tinyproxy.log`
 +`@PKG_SYSCONFDIR@/tinyproxy.conf`, `@VARBASE@/run/tinyproxy/tinyproxy.pid`, `@VARBASE@/log/tinyproxy/tinyproxy.log`
  
- BUGS
- ----
+ =head1 BUGS
+ 
