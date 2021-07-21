@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/05/31 17:35:39 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2021/07/21 10:05:26 yhardy Exp $
 
-DISTNAME=	tinyproxy-1.10.0
-PKGREVISION=	2
+DISTNAME=	tinyproxy-1.11.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinyproxy/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,11 +12,13 @@ COMMENT=	Lightweight HTTP/SSL proxy
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+USE_TOOLS+=		gmake
 
 RCD_SCRIPTS=		tinyproxy
 
@@ -43,7 +44,7 @@ SUBST_VARS.docs+=	TINYPROXY_GROUP
 SUBST_VARS.docs+=	PKG_SYSCONFDIR
 SUBST_VARS.docs+=	VARBASE
 
-INSTALLATION_DIRS=	${EGDIR} share/doc/tinyproxy
+INSTALLATION_DIRS=	${EGDIR}
 
 PLIST_SUBST+=		VARBASE=${VARBASE}
 PLIST_SUBST+=		TINYPROXY_USER=${TINYPROXY_USER:Q}
@@ -54,8 +55,6 @@ PLIST_SUBST+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/tinyproxy.conf \
 		${DESTDIR}${EGDIR}/tinyproxy.conf.default
-	${INSTALL_DATA} ${WRKSRC}/docs/filter-howto.txt \
-		${DESTDIR}${PREFIX}/share/doc/tinyproxy/
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
