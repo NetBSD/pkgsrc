@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.source,v 1.1 2020/07/26 05:21:20 dholland Exp $
+# $NetBSD: Makefile.source,v 1.2 2021/07/21 12:29:44 yhardy Exp $
 
 #
 # As of 0.9.12 the package's native build uses scons, and naturally it
@@ -31,7 +31,7 @@ SRCS!=find . -name '*.cpp' -print | sed -e 's,\./,,'
 
 all: $(PROG)
 
-$(PROG): $(SRCS:T:.cpp=.o)
+$(PROG): $(SRCS:.cpp=.o)
 	$(CXX) $(LDFLAGS) $(SRCS:T:.cpp=.o) $(LIBS) -o $(PROG)
 
 .cpp.o:
