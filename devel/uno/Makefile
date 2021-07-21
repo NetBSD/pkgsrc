@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:32 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2021/07/21 04:47:41 fcambus Exp $
 #
 
 DISTNAME=		uno_v213
 PKGNAME=		uno-2.13
 CATEGORIES=		devel
-MASTER_SITES=		http://spinroot.com/uno/
+MASTER_SITES=		https://spinroot.com/uno/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://spinroot.com/uno/
+HOMEPAGE=		https://spinroot.com/uno/
 COMMENT=		Tool for source code analysis
 
 WRKSRC=			${WRKDIR}/uno/src
