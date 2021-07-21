@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2021/02/14 15:33:02 taca Exp $
+# $NetBSD: Makefile,v 1.50 2021/07/21 14:40:29 taca Exp $
 #
 
 DISTNAME=	milter-manager-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=milter-manager/}
 GITHUB_RELEASE=	${VERSION}
