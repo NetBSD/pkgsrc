@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2021/06/02 15:26:43 taca Exp $
+# $NetBSD: Makefile,v 1.59 2021/07/21 13:51:35 taca Exp $
 #
 
 DISTNAME=	PEAR-1.10.12
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
@@ -33,7 +33,7 @@ PEAR_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${PEAR_SRCS}
 EXTRACT_ONLY+=		${PEAR_SRCS}
 
-ARCHIVE_SRCS=		Archive_Tar-1.4.13${EXTRACT_SUFX}
+ARCHIVE_SRCS=		Archive_Tar-1.4.14${EXTRACT_SUFX}
 ARCHIVE_WRKSRC=		${WRKDIR}/${ARCHIVE_SRCS:S/${EXTRACT_SUFX}//}
 DISTFILES+=		${ARCHIVE_SRCS}
 EXTRACT_ONLY+=		${ARCHIVE_SRCS}
@@ -84,7 +84,4 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/pear/pear.conf
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
-
-BUILDLINK_API_DEPENDS.php+=	php>=5.2.1nb2
-
 .include "../../mk/bsd.pkg.mk"

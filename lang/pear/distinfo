@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.42 2021/06/02 15:26:43 taca Exp $
+$NetBSD: distinfo,v 1.43 2021/07/21 13:51:35 taca Exp $
 
-SHA1 (Archive_Tar-1.4.13.tgz) = 68ce4a2c2b53dabd3d302bc01e821ef5544237c9
-RMD160 (Archive_Tar-1.4.13.tgz) = 11a440c113a73e3c281f9a15685f7a7607ed71e9
-SHA512 (Archive_Tar-1.4.13.tgz) = 3ee3dd8c8c8af018eb6c6d32409f2867c49f5a8ef21efecd8fb0a36207ca211eb49aaef02806b2df35aa6613d5dd69c8d81c72f97d4297dee3f732a9ab6ff9a7
-Size (Archive_Tar-1.4.13.tgz) = 21836 bytes
+SHA1 (Archive_Tar-1.4.14.tgz) = ef023e94c632e80ef78ddfee19e4af6abc54eed4
+RMD160 (Archive_Tar-1.4.14.tgz) = 83826082315dfde8963c9825149e336aba6aa794
+SHA512 (Archive_Tar-1.4.14.tgz) = a0277086221acf0cd01ec342af5afd62f01055a8b3bb4942d7a96d3517cce466a0c8a086411671a18d0f7a0a5e4187a76bad0d5c410c93fefe8cc58992327789
+Size (Archive_Tar-1.4.14.tgz) = 21992 bytes
 SHA1 (Console_Getopt-1.4.3.tgz) = 88b7bfce2f71cd99b922fa5eff5247bd754a3bc1
 RMD160 (Console_Getopt-1.4.3.tgz) = 05dbb1aad76fc53cd25ee282df0bd2112310fbc5
 SHA512 (Console_Getopt-1.4.3.tgz) = 7803e063576e9dac6833064b5a1479d22ca31c2a8ef8036ae530271e4e824fedb94e54d63266be8929f90f8df745b3ada7185dc98319b331f8dc5e9cac5445a0
