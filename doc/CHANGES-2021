@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3903 2021/07/21 05:33:10 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3904 2021/07/21 05:35:20 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6234,3 +6234,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/engrampa to 1.24.2 [gutteridge 2021-07-20]
 	Updated graphics/eom to 1.24.2 [gutteridge 2021-07-21]
 	Updated print/fig2dev to 3.2.8a [fcambus 2021-07-20]
+	Updated graphics/xfig to 3.2.8a [fcambus 2021-07-20]
