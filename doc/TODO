@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20880 2021/07/21 08:46:40 yhardy Exp $
+$NetBSD: TODO,v 1.20881 2021/07/21 10:05:45 yhardy Exp $
 
 Suggested new packages
 ======================
@@ -2078,7 +2078,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o threadweaver-5.81.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
-	o tinyproxy-1.11.0
 	o tkcon-2.7.3
 	o tkhylafax-3.2
 	o tkinfo-2.11
