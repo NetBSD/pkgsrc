@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2021/05/15 07:22:39 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/07/21 05:57:54 fcambus Exp $
 
-SHA1 (htmldoc/v1.9.11.tar.gz) = 6366646f9d548e1bb1d17f36f07f212ffdac7600
-RMD160 (htmldoc/v1.9.11.tar.gz) = 4bb448518ca2957df8c16600c8b77e9e3e85bdc7
-SHA512 (htmldoc/v1.9.11.tar.gz) = 008e0af36a05c1f358ddc344643e75e85dafc0b5213ffa693a3958a00082a935a957caf8f9790f4c2f0631436048f70e6c2ff2bb320977a9ba2c6d26d59ff0ed
-Size (htmldoc/v1.9.11.tar.gz) = 4505305 bytes
+SHA1 (htmldoc/v1.9.12.tar.gz) = 464e4bee133d1d7b5d08b7f99c7e14d5c4d280ad
+RMD160 (htmldoc/v1.9.12.tar.gz) = c740e8d5a7be996c3e04be2715fe4bf28495cc47
+SHA512 (htmldoc/v1.9.12.tar.gz) = bd388f2cad335e2ecc12892f951edb164389f583458f14f8fcc85a0bfca01f2c620465889522574155d00b65e3b28d8ecbde65b87d883136044493d3d5839280
+Size (htmldoc/v1.9.12.tar.gz) = 3422902 bytes
 SHA1 (patch-desktop_Makefile) = 687b416d6b4189aa4b0242b23858daabd54a76ed
 SHA1 (patch-htmldoc_http-addrlist.c) = 5c36f78655838e633f805b6529a2a3183e10288a
