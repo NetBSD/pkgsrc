@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.3 2020/06/01 10:30:03 js Exp $
+$NetBSD: distinfo,v 1.4 2021/07/21 12:53:20 yhardy Exp $
 
-SHA1 (arx-libertatis-1.1.2.tar.xz) = 3b14a55553c564fd33caafb3a5bdb2d328e1fde8
-RMD160 (arx-libertatis-1.1.2.tar.xz) = 94145d36664d8d747c0abc3ced9c9055fd642690
-SHA512 (arx-libertatis-1.1.2.tar.xz) = d4cb8187e7f63934408e38a51a44b7da03c8628820d43139507ff97ebd463b9cd7baf6cc4e85a3d4191d6e5f56850d77d07cfffc33d8f5a51378dfb41f719fb8
-Size (arx-libertatis-1.1.2.tar.xz) = 970608 bytes
-SHA1 (patch-CMakeLists.txt) = f905b3b51e39dff8bf2e24d4de76b677495fad00
-SHA1 (patch-cmake_CompileCheck.cmake) = b954b0115666741ffbd5686e997d24bae72a3196
-SHA1 (patch-cmake_VersionString.cmake) = afff2ae36425f3ffe0e1679d28e48ff4b6fc3d6f
-SHA1 (patch-src_graphics_opengl_OpenGLRenderer.cpp) = 410769fea6b911dcb283b1da85bebd2861de8d94
-SHA1 (patch-src_io_fs_FilesystemPOSIX.cpp) = 96f1938038c667997350f51a2bb201de0c9843e3
-SHA1 (patch-src_platform_Thread.cpp) = 38e31c77c9e6e795cb37842da82b5ed6681f6aea
-SHA1 (patch-src_platform_Time.cpp) = c67f1bd2a3bdaec7426970b8f72020667abeb8ed
-SHA1 (patch-src_script_Script.cpp) = 29a923b5254077e2dc2cd73f69afb89025ef7012
+SHA1 (arx-libertatis-1.2.tar.xz) = afec697725d2cffee4c5ba04479cd5ba78502408
+RMD160 (arx-libertatis-1.2.tar.xz) = 5465f98f0a56abbbef9eb33b40e164ce2971acb2
+SHA512 (arx-libertatis-1.2.tar.xz) = faa838469ed65346e660eda5af95626bd140fa589f6d46917cd567782969f47080214bc98e99b3b7c85b5a150d610fb8712f261ac84799d504e4dda75533f67c
+Size (arx-libertatis-1.2.tar.xz) = 2478640 bytes
+SHA1 (patch-CMakeLists.txt) = 61ec31c85ef4b775f9467b343e6b9e1516e146a1
+SHA1 (patch-cmake_CompileCheck.cmake) = ca205e24c331f84765bf1bc29e0d7db9213250cc
+SHA1 (patch-src_platform_Thread.cpp) = a1ef75e2e9e9c9981aee992ade0713eecdf538b2
