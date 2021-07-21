@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/10/12 13:57:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/07/21 10:05:26 yhardy Exp $
 bin/tinyproxy
 man/man5/tinyproxy.conf.5
 man/man8/tinyproxy.8
@@ -6,7 +6,6 @@ share/doc/tinyproxy/AUTHORS
 share/doc/tinyproxy/NEWS
 share/doc/tinyproxy/README
 share/doc/tinyproxy/README.md
-share/doc/tinyproxy/filter-howto.txt
 share/examples/tinyproxy/tinyproxy.conf.default
 share/tinyproxy/debug.html
 share/tinyproxy/default.html
