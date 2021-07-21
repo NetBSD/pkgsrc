@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/04/02 19:26:24 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/21 05:32:49 fcambus Exp $
 
-DISTNAME=	fig2dev-3.2.8
+DISTNAME=	fig2dev-3.2.8a
 CATEGORIES=	graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 EXTRACT_SUFX=	.tar.xz
