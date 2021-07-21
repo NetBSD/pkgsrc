@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3905 2021/07/21 05:58:05 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3906 2021/07/21 05:58:59 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6236,3 +6236,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/fig2dev to 3.2.8a [fcambus 2021-07-20]
 	Updated graphics/xfig to 3.2.8a [fcambus 2021-07-20]
 	Updated www/htmldoc to 1.9.12 [fcambus 2021-07-20]
+	Updated www/htmldoc-x11 to 1.9.12 [fcambus 2021-07-20]
