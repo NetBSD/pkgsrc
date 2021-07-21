@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/07/21 15:58:35 hauke Exp $
+# $NetBSD: Makefile,v 1.78 2021/07/21 16:22:50 hauke Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.18
@@ -172,7 +172,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 
 .include "../../mk/bsd.options.mk"
 
-# Only attemppt to register fonts if we have X11 support
+# Only attempt to register fonts if we have X11 support (mkfontdir)
 .if !empty(PKG_OPTIONS:Mx11)
 FONTS_DIRS.x11+=	${PREFIX}/${XEPKGDIR}/etc/x-symbol/fonts
 FONTS_DIRS.x11+=	${PREFIX}/${XEPKGDIR}/etc/x-symbol/origfonts
