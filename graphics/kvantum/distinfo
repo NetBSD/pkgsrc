@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/05/29 17:17:17 pin Exp $
+$NetBSD: distinfo,v 1.9 2021/07/21 15:07:35 pin Exp $
 
-SHA1 (Kvantum-0.20.0.tar.gz) = 8a3cd7f9834fb1fa1f16918109f37d96474e922f
-RMD160 (Kvantum-0.20.0.tar.gz) = f80dfa09382d57ace5db23c9f00202079d9ec95f
-SHA512 (Kvantum-0.20.0.tar.gz) = 698e047ab75448756f3a37e16c72c55bac8333386c14bd859061fdcb6d16aca746b0ca08bb7f4b84dcbbd19e157764b0ca987a44d8cdfb8e2e5df28b34b310d9
-Size (Kvantum-0.20.0.tar.gz) = 2884552 bytes
+SHA1 (Kvantum-0.20.1.tar.gz) = 1671832c56ada2ecee051176431bdc9421367a69
+RMD160 (Kvantum-0.20.1.tar.gz) = ac8393c7bdcb374246df61d83f3b698459613bd6
+SHA512 (Kvantum-0.20.1.tar.gz) = 0e5c3778468c07e6f447116962ae3b36721cf4f4d661f2fc558a92b24af90b63cb8f954c352b667420199cf322334b73a229a9a38f0540a47ea86c635c05758e
+Size (Kvantum-0.20.1.tar.gz) = 2888326 bytes
