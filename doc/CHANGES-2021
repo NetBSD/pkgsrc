@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3916 2021/07/21 12:53:43 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3917 2021/07/21 12:59:35 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6249,3 +6249,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/streamlink to 2.2.0 [yhardy 2021-07-21]
 	Updated games/endless-sky to 0.9.14 [yhardy 2021-07-21]
 	Updated games/arx-libertatis to 1.2 [yhardy 2021-07-21]
+	Updated games/REminiscence to 0.4.8 [yhardy 2021-07-21]
