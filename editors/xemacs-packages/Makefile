@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2021/05/24 19:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2021/07/21 15:58:35 hauke Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.18
-PKGREVISION=	6
+PKGREVISION=	7
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${XEMACSPKG_PATH}/}
@@ -166,9 +166,18 @@ XEPKGDIR=	lib/xemacs/xemacs-packages
 
 INSTALLATION_DIRS+=	${XEPKGDIR}
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xemacs-packages
+PKG_SUPPORTED_OPTIONS+=	x11
+PKG_SUGGESTED_OPTIONS+=	x11
+
+.include "../../mk/bsd.options.mk"
+
+# Only attemppt to register fonts if we have X11 support
+.if !empty(PKG_OPTIONS:Mx11)
 FONTS_DIRS.x11+=	${PREFIX}/${XEPKGDIR}/etc/x-symbol/fonts
 FONTS_DIRS.x11+=	${PREFIX}/${XEPKGDIR}/etc/x-symbol/origfonts
 FONTS_DIRS.x11+=	${PREFIX}/${XEPKGDIR}/etc/x-symbol/pcf
+.endif
 
 REPLACE_PERL=		etc/bbdb/bbdb-areacode-split.pl
 REPLACE_PERL+=		etc/bbdb/bbdb-cid.pl
@@ -233,8 +242,11 @@ pre-configure:
 	${CHMOD} ugo-x ${WRKSRC}/lisp/erc/ChangeLog.2005.upstream
 	${FIND} ${WRKSRC} -type f -and -perm -100 \
 		-and \( -name "*.el" -or -name "*.gif" -or -name "*.jar" \) \
-		-exec ${CHMOD} ugo-x \{\} \;
+		-exec ${CHMOD} ugo-x \{\} \+
 	@${ECHO_MSG} "done"
+.if empty(PKG_OPTIONS:Mx11)
+	${RM} ${WRKSRC}/etc/x-symbol/pcf/fonts.dir
+.endif
 	@${ECHO_MSG} "Re-compiling patched elisp files ... "
 	for ff in `cat ${PATCHDIR}/*.el | awk '/^\\+\\+\\+/ { print $$2 }'` ; do \
 		${RM} -f ${WRKSRC}/$${ff}.orig ; \
