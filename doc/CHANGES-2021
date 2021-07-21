@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3912 2021/07/21 10:05:45 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3913 2021/07/21 10:24:26 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6245,3 +6245,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/sdlpop to 1.22 [yhardy 2021-07-21]
 	Updated www/curl to 7.78.0 [leot 2021-07-21]
 	Updated www/tinyproxy to 1.11.0 [yhardy 2021-07-21]
+	Updated shells/bash to 5.1.8nb3 [jperkin 2021-07-21]
