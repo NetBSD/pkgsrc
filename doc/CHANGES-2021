@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3909 2021/07/21 08:46:40 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3910 2021/07/21 09:20:11 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6242,3 +6242,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.33.1 [adam 2021-07-21]
 	Updated devel/py-singledispatch to 3.6.2 [adam 2021-07-21]
 	Updated lang/ecl to 21.2.1 [yhardy 2021-07-21]
+	Updated games/sdlpop to 1.22 [yhardy 2021-07-21]
