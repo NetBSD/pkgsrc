@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/21 14:40:31 taca Exp $
 #
 
 DISTNAME=	mcollective-2.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.puppetlabs.com/mcollective/
 EXTRACT_SUFX=	.tgz

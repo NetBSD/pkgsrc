@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:19:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/21 14:40:30 taca Exp $
 
 DISTNAME=	convbkmk
 PKGNAME=	tex-${DISTNAME}-0.30
+PKGREVISION=	1
 TEXLIVE_REV=	49252
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
