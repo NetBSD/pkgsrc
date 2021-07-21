@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3911 2021/07/21 09:32:14 leot Exp $
+$NetBSD: CHANGES-2021,v 1.3912 2021/07/21 10:05:45 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ecl to 21.2.1 [yhardy 2021-07-21]
 	Updated games/sdlpop to 1.22 [yhardy 2021-07-21]
 	Updated www/curl to 7.78.0 [leot 2021-07-21]
+	Updated www/tinyproxy to 1.11.0 [yhardy 2021-07-21]
