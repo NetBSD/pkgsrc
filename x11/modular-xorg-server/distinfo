@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.111 2021/07/21 21:50:29 tnn Exp $
+$NetBSD: distinfo,v 1.112 2021/07/21 21:56:10 tnn Exp $
 
 SHA1 (xorg-server-1.20.12.tar.xz) = 2ff90fdccfe285e03ebb4805067bcdae557861ea
 RMD160 (xorg-server-1.20.12.tar.xz) = 04c946f6243ebb0d96f0ab4a9c53b982d2285a71
@@ -15,7 +15,6 @@ SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e11676
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__init.c) = b58ce2005251c1b3f723ee87c759f75bcb27e230
 SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453aff9c2c082526b1b
 SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060ec4df3a60
-SHA1 (patch-hw_xfree86_os-support_bus_bsd__pci.c) = 62b410e1777c7bb95386b8510b3738fff5e088f1
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
