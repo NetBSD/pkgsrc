@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/06/01 10:30:03 js Exp $
+# $NetBSD: Makefile,v 1.6 2021/07/21 12:53:20 yhardy Exp $
 
-DISTNAME=	arx-libertatis-1.1.2
-PKGREVISION=	1
+DISTNAME=	arx-libertatis-1.2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=project/arx/arx-libertatis-1.1.2/}
+MASTER_SITES=	https://arx-libertatis.org/files/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,8 +30,11 @@ post-patch:
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
