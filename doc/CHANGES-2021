@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3920 2021/07/21 13:51:57 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3921 2021/07/21 14:59:34 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6253,3 +6253,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-BDD-Cucumber to 0.81 [schmonz 2021-07-21]
 	Updated devel/py-approvaltests to 1.1.0 [schmonz 2021-07-21]
 	Updated lang/pear to 1.10.12nb5 [taca 2021-07-21]
+	Updated games/woof to 6.2.0 [micha 2021-07-21]
