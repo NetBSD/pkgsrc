@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.19 2020/08/18 17:57:48 leot Exp $ 
-DISTNAME=		REminiscence-0.4.6
-PKGREVISION=		2
+# $NetBSD: Makefile,v 1.20 2021/07/21 12:59:10 yhardy Exp $
+DISTNAME=		REminiscence-0.4.8
 CATEGORIES=		games
 MASTER_SITES=		http://cyxdown.free.fr/reminiscence/
 EXTRACT_SUFX=		.tar.bz2
