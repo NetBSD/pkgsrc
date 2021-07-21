@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3900 2021/07/20 23:51:50 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3901 2021/07/21 00:06:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6232,3 +6232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/atril to 1.24.1 [gutteridge 2021-07-20]
 	Updated multimedia/mate-media to 1.24.1 [gutteridge 2021-07-20]
 	Updated archivers/engrampa to 1.24.2 [gutteridge 2021-07-20]
+	Updated graphics/eom to 1.24.2 [gutteridge 2021-07-21]
