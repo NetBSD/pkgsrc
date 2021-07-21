@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2021/07/06 19:50:09 rhialto Exp $
+# $NetBSD: Makefile,v 1.112 2021/07/21 15:31:28 tnn Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -97,10 +97,14 @@ CONFIGURE_ARGS+=		-no-framework
 # so give it a direct path to them if they aren't installed
 # in /usr/include
 .  if !exists(/usr/include)
-CONFIGURE_ARGS+=	-I "$$(xcrun --show-sdk-path)"/usr/include
+CONFIGURE_ARGS+=	-I ${OSX_SDK_PATH}/usr/include
 .  endif
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=			-lresolv
+.  endif
+# -lexecinfo is bundled in libc
+.  if exists(${OSX_SDK_PATH}/usr/include/execinfo.h)
+BUILDLINK_TRANSFORM+=		rm:-lexecinfo
 .  endif
 .elif ${OPSYS} == "Linux"
 LDFLAGS+=			-ldl
