@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:32 nia Exp $
+# $NetBSD: Makefile,v 1.22 2021/07/21 10:57:39 yhardy Exp $
 
-DISTNAME=	streamlink-1.4.1
-PKGREVISION=	1
+DISTNAME=	streamlink-2.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -22,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-iso-639-[0-9]*:../../devel/py-iso-639
 DEPENDS+=	${PYPKGPREFIX}-iso3166-[0-9]*:../../devel/py-iso3166
 DEPENDS+=	${PYPKGPREFIX}-websocket-client-[0-9]*:../../www/py-websocket-client
-DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
