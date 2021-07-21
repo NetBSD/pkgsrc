@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3919 2021/07/21 13:42:20 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.3920 2021/07/21 13:51:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/REminiscence to 0.4.8 [yhardy 2021-07-21]
 	Updated devel/p5-Test-BDD-Cucumber to 0.81 [schmonz 2021-07-21]
 	Updated devel/py-approvaltests to 1.1.0 [schmonz 2021-07-21]
+	Updated lang/pear to 1.10.12nb5 [taca 2021-07-21]
