@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3914 2021/07/21 10:58:03 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3915 2021/07/21 12:30:05 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6247,3 +6247,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/tinyproxy to 1.11.0 [yhardy 2021-07-21]
 	Updated shells/bash to 5.1.8nb3 [jperkin 2021-07-21]
 	Updated multimedia/streamlink to 2.2.0 [yhardy 2021-07-21]
+	Updated games/endless-sky to 0.9.14 [yhardy 2021-07-21]
