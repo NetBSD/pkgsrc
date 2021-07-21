@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/04/01 19:15:00 plunky Exp $
+# $NetBSD: Makefile,v 1.3 2021/07/21 14:40:29 taca Exp $
 
 DISTNAME=	congen-1.7
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://flaterco.com/files/xtide/
 EXTRACT_SUFX=	.tar.xz
