@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3907 2021/07/21 06:49:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3908 2021/07/21 07:12:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6239,3 +6239,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/htmldoc-x11 to 1.9.12 [fcambus 2021-07-20]
 	Updated devel/py-flexmock to 0.10.5 [adam 2021-07-21]
 	Updated devel/py-google-i18n-address to 2.5.0 [adam 2021-07-21]
+	Updated net/py-zeroconf to 0.33.1 [adam 2021-07-21]
+	Updated devel/py-singledispatch to 3.6.2 [adam 2021-07-21]
