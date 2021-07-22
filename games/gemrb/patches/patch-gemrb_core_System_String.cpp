@@ -1,10 +1,10 @@
-$NetBSD: patch-gemrb_core_System_String.cpp,v 1.3 2021/06/21 14:02:47 nia Exp $
+$NetBSD: patch-gemrb_core_System_String.cpp,v 1.4 2021/07/22 21:19:43 yhardy Exp $
 
 Deal with old NetBSD/SunOS style iconv.
 
---- gemrb/core/System/String.cpp.orig	2021-06-02 16:16:47.000000000 +0000
+--- gemrb/core/System/String.cpp.orig	2021-06-18 12:08:06.000000000 +0000
 +++ gemrb/core/System/String.cpp
-@@ -31,6 +31,15 @@
+@@ -30,6 +30,15 @@
  #include <iconv.h>
  #endif
  
@@ -20,7 +20,7 @@ Deal with old NetBSD/SunOS style iconv.
  namespace GemRB {
  
  static String* StringFromEncodedData(const ieByte* string, const EncodingStruct& encoded)
-@@ -123,7 +132,11 @@ char* ConvertCharEncoding(const char* st
+@@ -122,7 +131,11 @@ char* ConvertCharEncoding(const char* st
  	size_t out_len_left = out_len;
  	char* buf = (char*) malloc(out_len);
  	char* buf_out = buf;
