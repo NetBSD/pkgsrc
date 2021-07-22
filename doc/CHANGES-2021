@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3925 2021/07/22 12:11:10 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3926 2021/07/22 13:31:11 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6260,3 +6260,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/py-minio version 7.1.0 [adam 2021-07-22]
 	Updated databases/redis to 6.2.5 [adam 2021-07-22]
 	Updated editors/xournalpp to 1.1.0 [yhardy 2021-07-22]
+	Updated net/bind916 to 9.16.19 [he 2021-07-22]
