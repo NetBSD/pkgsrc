@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/05 08:43:27 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/22 16:16:38 tnn Exp $
 
 DISTNAME=	rterm-0.0.4
 CATEGORIES=	x11
@@ -21,7 +21,6 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXft}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libXft}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rterm ${DESTDIR}${PREFIX}/bin

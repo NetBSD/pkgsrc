@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/07/12 14:10:10 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2021/07/22 16:16:38 tnn Exp $
 
 DISTNAME=	alacritty-0.8.0
 PKGREVISION=	2
@@ -20,7 +20,6 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
