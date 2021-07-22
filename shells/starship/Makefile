@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/14 20:44:47 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	starship-0.56.0
 CATEGORIES=	shells
@@ -20,7 +20,6 @@ USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 # Disable rust-battery crate on NetBSD
 # See https://github.com/svartalf/rust-battery/issues/20

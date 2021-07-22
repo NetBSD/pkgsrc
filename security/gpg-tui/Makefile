@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/07/20 20:22:26 pin Exp $
+# $NetBSD: Makefile,v 1.14 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	gpg-tui-0.7.2
 CATEGORIES=	security
@@ -20,7 +20,6 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

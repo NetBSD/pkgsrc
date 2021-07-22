@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/19 14:41:02 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	cesium-0.2.1
 CATEGORIES=	editors
@@ -18,7 +18,6 @@ USE_NCURSES=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cesium ${DESTDIR}${PREFIX}/bin

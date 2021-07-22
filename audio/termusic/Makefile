@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/19 15:21:09 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	termusic-0.2.11
 CATEGORIES=	audio
@@ -21,7 +21,6 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mpv}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.mpv}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/termusic ${DESTDIR}${PREFIX}/bin
