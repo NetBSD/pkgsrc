@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2021/07/22 15:58:49 jperkin Exp $
+
+Shell portability.
+
+--- configure.orig	2021-06-02 06:20:17.000000000 +0000
++++ configure
+@@ -4181,7 +4181,7 @@ fi
+ 
+ case "$with_hiredis" in #(
+   yes) :
+-    if test "$HIREDIS_LIBS" == ""; then
++    if test "$HIREDIS_LIBS" = ""; then
+ pkg_failed=no
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for hiredis" >&5
+ printf %s "checking for hiredis... " >&6; }

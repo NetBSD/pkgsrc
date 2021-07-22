@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/07/22 15:58:49 jperkin Exp $
+
+SHA1 (mod_auth_openidc-2.4.8.4.tar.gz) = 3e45db5c6b02076fc7979797968a6306c9653078
+RMD160 (mod_auth_openidc-2.4.8.4.tar.gz) = 85aa8b086b8b720a04b9e16a631a84546d8746fb
+SHA512 (mod_auth_openidc-2.4.8.4.tar.gz) = fcba4a26944d4173b4ab33f9171441046ad106b707fc6e296a9abddf582bc97573c7aab2a2d74317be05a10156b87e24f82bd665c2961aa2d896f3ab317f2834
+Size (mod_auth_openidc-2.4.8.4.tar.gz) = 287237 bytes
+SHA1 (patch-configure) = 98afe179c3f8f6126f5a8c70d36337953573eb26
