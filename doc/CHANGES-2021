@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3928 2021/07/22 14:47:54 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.3929 2021/07/22 15:59:21 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6264,3 +6264,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-minidump to 0.0.18 [adam 2021-07-22]
 	Updated www/py-django-celery-beat to 2.2.1 [adam 2021-07-22]
 	Updated pkgtools/pkgin to 21.7.0 [jperkin 2021-07-22]
+	Added www/ap-auth-openidc version 2.4.8.4 [jperkin 2021-07-22]
