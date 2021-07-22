@@ -1,30 +1,21 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/10 21:42:15 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2021/07/22 12:10:46 yhardy Exp $
 
 Find pkgsrc lua with pkg-config.
 
 Unconditionally install desktop files and make dependencies explicit.
 
---- CMakeLists.txt.orig	2019-10-15 17:47:34.000000000 +0000
+--- CMakeLists.txt.orig	2021-07-18 21:18:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -50,7 +50,7 @@ else ()
- endif ()
+@@ -15,7 +15,7 @@ set (PROJECT_STRING "${PROJECT_NAME} ${P
+ set (PROJECT_URL "https://github.com/xournalpp/xournalpp")
  
- ## For touch workaround, may need to be disabled for a Wayland Build
--if (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-+if (TRUE)
-     set (xournalpp_LDFLAGS ${xournalpp_LDFLAGS} "-lX11 -lXi")
- endif ()
- 
-@@ -130,7 +130,7 @@ if (MacIntegration_FOUND)
- endif ()
- 
- # Plugins / scripting
--pkg_check_modules (Lua "lua5.3")
-+pkg_check_modules (Lua "lua-5.3")
- if (NOT Lua_FOUND)
- 	pkg_check_modules (Lua "lua >= 5.3")
- endif()
-@@ -238,7 +238,7 @@ install (DIRECTORY plugins
+ ## CMAKE_Variables
+-set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/find" "${PROJECT_SOURCE_DIR}/cmake/include")
++set (CMAKE_MODULE_PATH "/tmp/pkgsrc/editors/xournalpp/work/.buildlink/cmake-Modules" "${PROJECT_SOURCE_DIR}/cmake/find" "${PROJECT_SOURCE_DIR}/cmake/include")
+ set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+@@ -273,7 +273,7 @@ install (DIRECTORY resources
  )
  
  # Install desktop shortcuts for Linux

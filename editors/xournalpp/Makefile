@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/06/10 11:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/07/22 12:10:46 yhardy Exp $
 
-DISTNAME=	xournalpp-1.0.20
-PKGREVISION=	7
+DISTNAME=	xournalpp-1.1.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_PROJECT=	xournalpp
@@ -21,6 +20,7 @@ BUILD_TARGET=	translations xournalpp
 # C++11
 GCC_REQD+=	4.7
 
+BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
@@ -31,6 +31,7 @@ DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
