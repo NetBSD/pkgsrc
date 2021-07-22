@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1567 2021/07/17 14:51:28 leot Exp $
+# $NetBSD: Makefile,v 1.1568 2021/07/22 15:59:06 jperkin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -27,6 +27,7 @@ SUBDIR+=	album
 SUBDIR+=	album_themes
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
+SUBDIR+=	ap-auth-openidc
 SUBDIR+=	ap-authnz-crowd
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-php
