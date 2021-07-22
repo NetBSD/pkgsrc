@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3931 2021/07/22 22:48:21 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3932 2021/07/22 22:51:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ap-auth-openidc version 2.4.8.4 [jperkin 2021-07-22]
 	Updated games/gemrb to 0.9.0 [yhardy 2021-07-22]
 	Updated www/squid4 to 4.16 [taca 2021-07-22]
+	Updated net/bind911 to 9.11.34 [taca 2021-07-22]
