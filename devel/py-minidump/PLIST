@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/18 20:13:58 riastradh Exp $
-bin/minidump
+@comment $NetBSD: PLIST,v 1.2 2021/07/22 12:31:58 adam Exp $
+bin/minidump-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/minidump/__amain__.py
+${PYSITELIB}/minidump/__amain__.pyc
+${PYSITELIB}/minidump/__amain__.pyo
 ${PYSITELIB}/minidump/__init__.py
 ${PYSITELIB}/minidump/__init__.pyc
 ${PYSITELIB}/minidump/__init__.pyo
@@ -15,6 +19,12 @@ ${PYSITELIB}/minidump/__main__.pyo
 ${PYSITELIB}/minidump/_version.py
 ${PYSITELIB}/minidump/_version.pyc
 ${PYSITELIB}/minidump/_version.pyo
+${PYSITELIB}/minidump/aminidumpfile.py
+${PYSITELIB}/minidump/aminidumpfile.pyc
+${PYSITELIB}/minidump/aminidumpfile.pyo
+${PYSITELIB}/minidump/aminidumpreader.py
+${PYSITELIB}/minidump/aminidumpreader.pyc
+${PYSITELIB}/minidump/aminidumpreader.pyo
 ${PYSITELIB}/minidump/common_structs.py
 ${PYSITELIB}/minidump/common_structs.pyc
 ${PYSITELIB}/minidump/common_structs.pyo
@@ -45,6 +55,9 @@ ${PYSITELIB}/minidump/streams/CommentStreamA.pyo
 ${PYSITELIB}/minidump/streams/CommentStreamW.py
 ${PYSITELIB}/minidump/streams/CommentStreamW.pyc
 ${PYSITELIB}/minidump/streams/CommentStreamW.pyo
+${PYSITELIB}/minidump/streams/ContextStream.py
+${PYSITELIB}/minidump/streams/ContextStream.pyc
+${PYSITELIB}/minidump/streams/ContextStream.pyo
 ${PYSITELIB}/minidump/streams/ExceptionStream.py
 ${PYSITELIB}/minidump/streams/ExceptionStream.pyc
 ${PYSITELIB}/minidump/streams/ExceptionStream.pyo
