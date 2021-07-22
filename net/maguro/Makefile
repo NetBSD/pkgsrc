@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/01 14:40:11 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	maguro-0.0.1
 CATEGORIES=	net
@@ -18,7 +18,6 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/maguro ${DESTDIR}${PREFIX}/bin
