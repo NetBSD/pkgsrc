@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3927 2021/07/22 13:38:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3928 2021/07/22 14:47:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6263,3 +6263,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.19 [he 2021-07-22]
 	Updated devel/py-minidump to 0.0.18 [adam 2021-07-22]
 	Updated www/py-django-celery-beat to 2.2.1 [adam 2021-07-22]
+	Updated pkgtools/pkgin to 21.7.0 [jperkin 2021-07-22]
