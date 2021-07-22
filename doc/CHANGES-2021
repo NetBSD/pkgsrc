@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3922 2021/07/21 15:07:57 pin Exp $
+$NetBSD: CHANGES-2021,v 1.3923 2021/07/22 08:42:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6255,3 +6255,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/pear to 1.10.12nb5 [taca 2021-07-21]
 	Updated games/woof to 6.2.0 [micha 2021-07-21]
 	Updated graphics/kvantum to 0.20.1 [pin 2021-07-21]
+	Updated devel/py-astroid to 2.6.5 [adam 2021-07-22]
+	Updated devel/py-pylint to 2.9.5 [adam 2021-07-22]
