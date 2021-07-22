@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/05/04 16:32:55 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/22 16:16:35 tnn Exp $
 
 DISTNAME=	librespot-0.2.0
 CATEGORIES=	audio
@@ -16,8 +16,6 @@ USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
-
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 CARGO_NO_DEFAULT_FEATURES=	yes
 

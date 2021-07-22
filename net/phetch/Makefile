@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/17 11:52:41 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	phetch-1.1.0
 CATEGORIES=	net
@@ -18,7 +18,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/phetch ${DESTDIR}${PREFIX}/bin
