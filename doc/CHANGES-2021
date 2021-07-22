@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3930 2021/07/22 21:20:10 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3931 2021/07/22 22:48:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6266,3 +6266,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkgin to 21.7.0 [jperkin 2021-07-22]
 	Added www/ap-auth-openidc version 2.4.8.4 [jperkin 2021-07-22]
 	Updated games/gemrb to 0.9.0 [yhardy 2021-07-22]
+	Updated www/squid4 to 4.16 [taca 2021-07-22]
