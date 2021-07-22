@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3926 2021/07/22 13:31:11 he Exp $
+$NetBSD: CHANGES-2021,v 1.3927 2021/07/22 13:38:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6261,3 +6261,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/redis to 6.2.5 [adam 2021-07-22]
 	Updated editors/xournalpp to 1.1.0 [yhardy 2021-07-22]
 	Updated net/bind916 to 9.16.19 [he 2021-07-22]
+	Updated devel/py-minidump to 0.0.18 [adam 2021-07-22]
+	Updated www/py-django-celery-beat to 2.2.1 [adam 2021-07-22]
