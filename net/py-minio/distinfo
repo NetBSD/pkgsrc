@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/22 09:54:17 adam Exp $
+
+SHA1 (minio-7.1.0.tar.gz) = 736a04fac34d58b58cc74aa377c0530d395c8e60
+RMD160 (minio-7.1.0.tar.gz) = 935f693b8f7afcc8e13122e9e1213378750428db
+SHA512 (minio-7.1.0.tar.gz) = f43d35ad7ffd342aabb5bff9e8e60a68de86724f6e315f9862c84d1100d5497ef957078c2ff7b01f5d846581c7252ee92f9fcde77503e5151ca256ce05469dfb
+Size (minio-7.1.0.tar.gz) = 115020 bytes
