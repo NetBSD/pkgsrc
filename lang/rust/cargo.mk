@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.26 2021/05/31 14:33:02 ryoon Exp $
+# $NetBSD: cargo.mk,v 1.27 2021/07/22 16:09:46 tnn Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -73,6 +73,8 @@ DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
 			  ${CARGO_FEATURES:C/.*/--features/W}	\
 			  ${CARGO_FEATURES:S/ /,/Wg}
 CARGO_ARGS?=		${DEFAULT_CARGO_ARGS}
+
+MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
 
 .if !target(do-build)
 do-build: do-cargo-build
