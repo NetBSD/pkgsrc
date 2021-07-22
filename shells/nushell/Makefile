@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/07/19 15:26:20 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:36 tnn Exp $
 
 DISTNAME=	nushell-0.34.0
 CATEGORIES=	shells
@@ -20,7 +20,6 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu ${DESTDIR}${PREFIX}/bin
