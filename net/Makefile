@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1420 2021/07/17 07:17:09 nia Exp $
+# $NetBSD: Makefile,v 1.1421 2021/07/22 09:54:17 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -724,6 +724,7 @@ SUBDIR+=	py-magic-wormhole-mailbox-server
 SUBDIR+=	py-magic-wormhole-transit-relay
 SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
+SUBDIR+=	py-minio
 SUBDIR+=	py-moto
 SUBDIR+=	py-namecheap
 SUBDIR+=	py-ncclient
