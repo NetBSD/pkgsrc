@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/07/22 21:19:43 yhardy Exp $
+# $NetBSD: Makefile,v 1.10 2021/07/22 21:48:03 yhardy Exp $
 
 DISTNAME=	gemrb-0.9.0
 CATEGORIES=	games
@@ -30,7 +30,8 @@ CONFIGURE_DIRS=	build
 
 REPLACE_PYTHON=	admin/extend2da.py
 
-# https://github.com/gemrb/gemrb/issues/101
+# https://github.com/gemrb/gemrb/issues/101 (closed)
+# https://github.com/gemrb/gemrb/issues/1289
 PYTHON_VERSIONS_ACCEPTED=	27
 
 pre-configure:
