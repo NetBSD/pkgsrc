@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/24 08:47:13 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/22 16:16:37 tnn Exp $
 
 DISTNAME=	v0.5.0-alpha1
 PKGNAME=	paperoni-0.5.0
@@ -20,7 +20,6 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/paperoni ${DESTDIR}${PREFIX}/bin

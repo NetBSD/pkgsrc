@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/07/05 09:50:34 pin Exp $
+# $NetBSD: Makefile,v 1.33 2021/07/22 16:16:37 tnn Exp $
 
 DISTNAME=	xplr-0.14.4
 CATEGORIES=	sysutils
@@ -19,7 +19,6 @@ INSTALLATION_DIRS=	bin share/examples/xplr
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
-MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xplr ${DESTDIR}${PREFIX}/bin
