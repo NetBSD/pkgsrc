@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/08 06:08:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/22 13:36:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,10 @@ ${PYSITELIB}/django_celery_beat/apps.pyo
 ${PYSITELIB}/django_celery_beat/clockedschedule.py
 ${PYSITELIB}/django_celery_beat/clockedschedule.pyc
 ${PYSITELIB}/django_celery_beat/clockedschedule.pyo
+${PYSITELIB}/django_celery_beat/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/django_celery_beat/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/django_celery_beat/locale/ru/LC_MESSAGES/django.po
+${PYSITELIB}/django_celery_beat/locale/zh_hans/LC_MESSAGES/django.po
 ${PYSITELIB}/django_celery_beat/managers.py
 ${PYSITELIB}/django_celery_beat/managers.pyc
 ${PYSITELIB}/django_celery_beat/managers.pyo
@@ -81,6 +85,7 @@ ${PYSITELIB}/django_celery_beat/models.pyo
 ${PYSITELIB}/django_celery_beat/schedulers.py
 ${PYSITELIB}/django_celery_beat/schedulers.pyc
 ${PYSITELIB}/django_celery_beat/schedulers.pyo
+${PYSITELIB}/django_celery_beat/templates/admin/djcelery/change_list.html
 ${PYSITELIB}/django_celery_beat/tzcrontab.py
 ${PYSITELIB}/django_celery_beat/tzcrontab.pyc
 ${PYSITELIB}/django_celery_beat/tzcrontab.pyo
