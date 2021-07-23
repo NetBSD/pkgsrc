@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/23 11:16:03 wiz Exp $
+bin/unifdef
+bin/unifdefall
+man/man1/unifdef.1
+man/man1/unifdefall.1

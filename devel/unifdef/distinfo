@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/07/23 11:16:03 wiz Exp $
+
+SHA1 (unifdef-2.12.tar.xz) = 30fb15f14a31a9a6ea7eb579c81e46c7fc6572e9
+RMD160 (unifdef-2.12.tar.xz) = e4d95adb821c3f195b6ba783ea407f555e983b48
+SHA512 (unifdef-2.12.tar.xz) = df78cf931989b5e604e68e0bf00490782d385a575b51584e4be44535b6bde5f9e2abff14510f8f426670d9f6f1abfb5768da5e108bdefd6c9d0c8356a05164b5
+Size (unifdef-2.12.tar.xz) = 66912 bytes
