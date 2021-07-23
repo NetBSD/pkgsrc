@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2021/07/23 10:20:30 hauke Exp $
+# $NetBSD: Makefile,v 1.26 2021/07/23 12:25:59 hauke Exp $
 
 DISTNAME=	dejavu-fonts-ttf-2.37
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/fonts-//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
@@ -15,22 +14,12 @@ COMMENT=	DejaVu family of TrueType fonts
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-TTFDIR=		${PREFIX}/share/fonts/X11/TTF
 FCEGDIR=	${EGDIR}/fontconfig-conf.d
 FCCFDIR=	${PKG_SYSCONFDIR}/fontconfig/conf.d
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dejavu-fonts-ttf
-PKG_SUPPORTED_OPTIONS+=	x11
-PKG_SUGGESTED_OPTIONS+=	x11
-
-.include "../../mk/bsd.options.mk"
-
-# Only attempt to register fonts if we have X11 support (mkfontdir)
-.if !empty(PKG_OPTIONS:Mx11)
-FONTS_DIRS.ttf=	${TTFDIR}
-.endif
 
 MAKE_DIRS+=	${FCCFDIR}
 
@@ -54,7 +43,7 @@ REQD_DIRS+=	${FCEGDIR}
 INSTALLATION_DIRS=	share/fonts/X11/TTF ${DOCSDIR} ${FCEGDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${DESTDIR}${TTFDIR}
+	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/fontconfig/*.conf ${DESTDIR}${FCEGDIR}
 .for docfile in AUTHORS BUGS LICENSE NEWS README.md
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
