@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/08 08:31:06 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/07/23 14:06:31 adam Exp $
 
-SHA1 (eth-account-0.5.4.tar.gz) = da9b21c034211ab79f38ddc33952d1450c7ef88d
-RMD160 (eth-account-0.5.4.tar.gz) = dc7d67216a764eada688abecd9392a9bbd9a8ec4
-SHA512 (eth-account-0.5.4.tar.gz) = fc298ca4eb8d96f32c6967242125fde195dc4aad08b8d400e68b4dd4878f9a8d153cc1fcbdf8fb0c6903d82c11386131980572e61b19e2211da82132dcaa5642
-Size (eth-account-0.5.4.tar.gz) = 176738 bytes
+SHA1 (eth-account-0.5.5.tar.gz) = 95843a0c9cedf058816f75a0c7c32abd23c37487
+RMD160 (eth-account-0.5.5.tar.gz) = 2f5051c310613f4ad6d11f5803492bc41835758f
+SHA512 (eth-account-0.5.5.tar.gz) = 7c926ffa0c084b03c25e607a196ec95cc01c8977c4f8bc10488ed761ac6d4b5244f49bed83fcddf4c334cec2d236183319f7ac9133697443bfa126da2c65b220
+Size (eth-account-0.5.5.tar.gz) = 5379123 bytes
