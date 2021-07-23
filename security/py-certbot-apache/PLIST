@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/09 14:48:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/07/23 07:26:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,6 +69,9 @@ ${PYSITELIB}/certbot_apache/_internal/override_gentoo.pyo
 ${PYSITELIB}/certbot_apache/_internal/override_suse.py
 ${PYSITELIB}/certbot_apache/_internal/override_suse.pyc
 ${PYSITELIB}/certbot_apache/_internal/override_suse.pyo
+${PYSITELIB}/certbot_apache/_internal/override_void.py
+${PYSITELIB}/certbot_apache/_internal/override_void.pyc
+${PYSITELIB}/certbot_apache/_internal/override_void.pyo
 ${PYSITELIB}/certbot_apache/_internal/parser.py
 ${PYSITELIB}/certbot_apache/_internal/parser.pyc
 ${PYSITELIB}/certbot_apache/_internal/parser.pyo
