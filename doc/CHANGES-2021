@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3937 2021/07/23 11:18:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3938 2021/07/23 11:30:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6288,3 +6288,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-sakuracloud to 1.17.0 [adam 2021-07-23]
 	Updated security/py-certbot-nginx to 1.17.0 [adam 2021-07-23]
 	Added devel/unifdef version 2.12 [wiz 2021-07-23]
+	Added devel/cvise version 2.3.0 [wiz 2021-07-23]
