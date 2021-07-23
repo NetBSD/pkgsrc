@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3474 2021/07/17 07:19:42 nia Exp $
+# $NetBSD: Makefile,v 1.3475 2021/07/23 11:17:56 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3075,6 +3075,7 @@ SUBDIR+=	ugdb
 SUBDIR+=	umbrello
 SUBDIR+=	undebt
 SUBDIR+=	unidiff
+SUBDIR+=	unifdef
 SUBDIR+=	unittest-cpp
 SUBDIR+=	uno
 SUBDIR+=	userspace-rcu
