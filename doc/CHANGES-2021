@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3938 2021/07/23 11:30:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3939 2021/07/23 14:06:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6289,3 +6289,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-nginx to 1.17.0 [adam 2021-07-23]
 	Added devel/unifdef version 2.12 [wiz 2021-07-23]
 	Added devel/cvise version 2.3.0 [wiz 2021-07-23]
+	Updated www/py-django-timezone-field to 4.2.1 [adam 2021-07-23]
+	Updated finance/py-eth-account to 0.5.5 [adam 2021-07-23]
