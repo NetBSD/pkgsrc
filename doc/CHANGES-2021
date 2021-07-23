@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3932 2021/07/22 22:51:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3933 2021/07/23 07:50:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6268,3 +6268,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/gemrb to 0.9.0 [yhardy 2021-07-22]
 	Updated www/squid4 to 4.16 [taca 2021-07-22]
 	Updated net/bind911 to 9.11.34 [taca 2021-07-22]
+	Updated www/firefox to 90.0.2 [ryoon 2021-07-23]
