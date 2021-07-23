@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/07/12 18:46:07 adam Exp $
+$NetBSD: distinfo,v 1.12 2021/07/23 09:39:34 jperkin Exp $
 
 SHA1 (libcxx-12.0.1.src.tar.xz) = 84b27abcb3de60d1fd41826cf80e90ca974139c2
 RMD160 (libcxx-12.0.1.src.tar.xz) = ad12f967c54a55e9f403c5c134f74e6689defeb7
@@ -12,4 +12,5 @@ SHA1 (llvm-12.0.1.src.tar.xz) = 619fe668e0972d11d0fa2db670a57a42d02fb8ca
 RMD160 (llvm-12.0.1.src.tar.xz) = 678910782ceac9bcd7234fca9d6e358ffbe7a660
 SHA512 (llvm-12.0.1.src.tar.xz) = ff674afb4c8eea699a4756f1bb463f15098a7fa354c733de83c024f8f0cf238cd5f19ae3ec446831c7109235e293e2bf31d8562567ede163c8ec53af7306ba0f
 Size (llvm-12.0.1.src.tar.xz) = 42898504 bytes
+SHA1 (patch-include_____config) = ff0d5a0fcc1431f21ce25667cbc01c2307542212
 SHA1 (patch-src_filesystem_directory__iterator.cpp) = 90ebbb80e4ec161405397d6d7c5d1d19a7284325
