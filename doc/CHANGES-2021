@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3935 2021/07/23 11:04:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.3936 2021/07/23 11:06:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6271,3 +6271,19 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 90.0.2 [ryoon 2021-07-23]
 	Updated www/firefox-l10n to 90.0.2 [ryoon 2021-07-23]
 	Updated games/dMagnetic to 0.32 [wiz 2021-07-23]
+	Updated security/py-acme to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-apache to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-digitalocean to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-dnsimple to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-gehirn to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-google to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-linode to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-luadns to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-nsone to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-ovh to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-rfc2136 to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-route53 to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-dns-sakuracloud to 1.17.0 [adam 2021-07-23]
+	Updated security/py-certbot-nginx to 1.17.0 [adam 2021-07-23]
