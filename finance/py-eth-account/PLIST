@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/08 08:31:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/23 14:06:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/eth_account/__init__.pyo
 ${PYSITELIB}/eth_account/_utils/__init__.py
 ${PYSITELIB}/eth_account/_utils/__init__.pyc
 ${PYSITELIB}/eth_account/_utils/__init__.pyo
+${PYSITELIB}/eth_account/_utils/legacy_transactions.py
+${PYSITELIB}/eth_account/_utils/legacy_transactions.pyc
+${PYSITELIB}/eth_account/_utils/legacy_transactions.pyo
 ${PYSITELIB}/eth_account/_utils/signing.py
 ${PYSITELIB}/eth_account/_utils/signing.pyc
 ${PYSITELIB}/eth_account/_utils/signing.pyo
@@ -23,9 +26,9 @@ ${PYSITELIB}/eth_account/_utils/structured_data/hashing.pyo
 ${PYSITELIB}/eth_account/_utils/structured_data/validation.py
 ${PYSITELIB}/eth_account/_utils/structured_data/validation.pyc
 ${PYSITELIB}/eth_account/_utils/structured_data/validation.pyo
-${PYSITELIB}/eth_account/_utils/transactions.py
-${PYSITELIB}/eth_account/_utils/transactions.pyc
-${PYSITELIB}/eth_account/_utils/transactions.pyo
+${PYSITELIB}/eth_account/_utils/typed_transactions.py
+${PYSITELIB}/eth_account/_utils/typed_transactions.pyc
+${PYSITELIB}/eth_account/_utils/typed_transactions.pyo
 ${PYSITELIB}/eth_account/_utils/validation.py
 ${PYSITELIB}/eth_account/_utils/validation.pyc
 ${PYSITELIB}/eth_account/_utils/validation.pyo
