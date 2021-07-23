@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3933 2021/07/23 07:50:20 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.3934 2021/07/23 07:50:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6269,3 +6269,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/squid4 to 4.16 [taca 2021-07-22]
 	Updated net/bind911 to 9.11.34 [taca 2021-07-22]
 	Updated www/firefox to 90.0.2 [ryoon 2021-07-23]
+	Updated www/firefox-l10n to 90.0.2 [ryoon 2021-07-23]
