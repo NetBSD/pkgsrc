@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3945 2021/07/24 14:51:00 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.3946 2021/07/24 14:55:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6299,3 +6299,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb104-client to 10.4.20 [nia 2021-07-24]
 	Updated databases/mariadb104-server to 10.4.20 [nia 2021-07-24]
 	Updated lang/gauche to 0.9.10 [yhardy 2021-07-24]
+	Updated security/putty to 0.76 [ryoon 2021-07-24]
