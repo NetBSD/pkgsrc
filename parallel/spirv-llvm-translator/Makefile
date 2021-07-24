@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/06/09 14:56:51 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/07/24 11:00:13 nia Exp $
 
-DISTNAME=	SPIRV-LLVM-Translator-v10.0.0
+DISTNAME=	SPIRV-LLVM-Translator-v12.0.0
 PKGNAME=	${DISTNAME:tl:S/-v/-/1}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
