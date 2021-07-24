@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3941 2021/07/24 04:45:53 fox Exp $
+$NetBSD: CHANGES-2021,v 1.3942 2021/07/24 10:11:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6293,3 +6293,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-eth-account to 0.5.5 [adam 2021-07-23]
 	Updated www/webkit-gtk to 2.32.3 [leot 2021-07-23]
 	Updated security/wolfssl to 4.8.1 [fox 2021-07-24]
+	Updated databases/mariadb105-client to 10.5.11 [nia 2021-07-24]
+	Updated databases/mariadb105-server to 10.5.11 [nia 2021-07-24]
