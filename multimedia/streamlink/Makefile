@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/07/21 10:57:39 yhardy Exp $
+# $NetBSD: Makefile,v 1.23 2021/07/24 20:42:26 mef Exp $
 
 DISTNAME=	streamlink-2.2.0
 CATEGORIES=	multimedia
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://streamlink.github.io/
 COMMENT=	Tool that pipes video streams into a video player
 LICENSE=	2-clause-bsd
+DIST_SUBDIR=	streamlink-2.2.0
 
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
