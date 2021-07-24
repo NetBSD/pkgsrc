@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/03/22 10:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.76 2021/07/24 14:50:42 yhardy Exp $
 #
 
-DISTNAME=	Gauche-0.9.6
+DISTNAME=	Gauche-0.9.10
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
@@ -28,6 +28,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake gzip makeinfo
 TEST_TARGET=	check
 INFO_FILES=	yes
+TEXINFO_REQD=	5.0
 
 # refer %install in ${WRKSRC}/Gauche.spec
 INSTALL_TARGET=	install-pkg install-doc
