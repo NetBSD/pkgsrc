@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/07/04 10:58:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/07/24 11:49:44 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -332,7 +332,6 @@ sbin/mariadbd
 sbin/mysqld
 share/doc/mysql/COPYING
 share/doc/mysql/CREDITS
-share/doc/mysql/EXCEPTIONS-CLIENT
 share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
@@ -386,7 +385,6 @@ share/mysql/mysql_system_tables.sql
 share/mysql/mysql_system_tables_data.sql
 share/mysql/mysql_test_data_timezone.sql
 share/mysql/mysql_test_db.sql
-share/mysql/mysql_to_mariadb.sql
 share/mysql/norwegian-ny/errmsg.sys
 share/mysql/norwegian/errmsg.sys
 share/mysql/polish/errmsg.sys
