@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2018/07/26 16:55:29 jperkin Exp $
+$NetBSD: distinfo,v 1.40 2021/07/24 14:50:42 yhardy Exp $
 
-SHA1 (Gauche-0.9.6.tgz) = 20f2a0a4b37c40ce0175e627d5767b32d8f4eb5d
-RMD160 (Gauche-0.9.6.tgz) = 36d77c87881978c408daf7958bc41048aa4b2edd
-SHA512 (Gauche-0.9.6.tgz) = 1d8a7f56fd9ca183d6dce1dedadfaec7c7150c29540e5158f2a61977f7406d7d7a8ab753ef1912865a7d7e9a9e2fa845d86b2eb4c5e07a176f1c60276bc1908f
-Size (Gauche-0.9.6.tgz) = 6927530 bytes
+SHA1 (Gauche-0.9.10.tgz) = a1a35944db9b71d9117cf0d9f7806aa34711b636
+RMD160 (Gauche-0.9.10.tgz) = 0b21bea6aead08b4274605f7fa0ac6ae9efd2f87
+SHA512 (Gauche-0.9.10.tgz) = f014ec00903fc91b90da8dbdaace04a64d12695c631e923d5cdca3574aaf6701374f5adbed20c395881b047bb5a448352614d4ce7f16b6e38f69382bf8e66ed0
+Size (Gauche-0.9.10.tgz) = 7701616 bytes
 SHA1 (patch-aa) = 41f2160ffdb8ad66e77d9d30950e820dd07b18a8
 SHA1 (patch-af) = 0962445f5eab8d788283455f60386aa1cfd70230
 SHA1 (patch-ag) = 524048e151225dc73d00c31623be25e84206920a
