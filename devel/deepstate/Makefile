@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/30 12:26:02 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/24 10:44:05 nia Exp $
 
 PKGREVISION=	1
 
@@ -23,6 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
 DEPENDS+=	${PYPKGPREFIX}-mulpyplexer-[0-9]*:../../devel/py-mulpyplexer
 DEPENDS+=	${PYPKGPREFIX}-progressbar2-[0-9]*:../../devel/py-progressbar2
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
+DEPENDS+=	${PYPKGPREFIX}-smt-[0-9]*:../../devel/py-smt
 DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
