@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3943 2021/07/24 11:00:30 nia Exp $
+$NetBSD: CHANGES-2021,v 1.3944 2021/07/24 11:50:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6296,3 +6296,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb105-client to 10.5.11 [nia 2021-07-24]
 	Updated databases/mariadb105-server to 10.5.11 [nia 2021-07-24]
 	Updated parallel/spirv-llvm-translator to 12.0.0 [nia 2021-07-24]
+	Updated databases/mariadb104-client to 10.4.20 [nia 2021-07-24]
+	Updated databases/mariadb104-server to 10.4.20 [nia 2021-07-24]
