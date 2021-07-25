@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/02/13 11:33:24 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/07/25 16:45:55 tnn Exp $
 
 pkgsrc postgresql-server is definitely built --with-openssl but for some reason it is not
 expressed in pg_config --configure, so override the check.
 
---- CMakeLists.txt.orig	2021-01-28 16:29:12.000000000 +0000
+--- CMakeLists.txt.orig	2021-07-06 06:37:21.000000000 +0000
 +++ CMakeLists.txt
-@@ -404,6 +404,7 @@ execute_process(
+@@ -534,6 +534,7 @@ execute_process(
    OUTPUT_VARIABLE PG_CONFIGURE_FLAGS
    OUTPUT_STRIP_TRAILING_WHITESPACE)
  string(REGEX MATCH "--with-openssl" PG_USE_OPENSSL "${PG_CONFIGURE_FLAGS}")
 +set(PG_USE_OPENSSL true)
  
- if (USE_OPENSSL AND (NOT PG_USE_OPENSSL))
-     message(FATAL_ERROR "PostgreSQL was built without OpenSSL support, which TimescaleDB needs for full compatibility. Please rebuild PostgreSQL using `--with-openssl` or if you want to continue without OpenSSL, re-run bootstrap with `-DUSE_OPENSSL=0`")
+ if(USE_OPENSSL AND (NOT PG_USE_OPENSSL))
+   message(
