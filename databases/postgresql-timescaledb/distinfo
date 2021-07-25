@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/06/23 19:11:01 tnn Exp $
+$NetBSD: distinfo,v 1.6 2021/07/25 16:45:55 tnn Exp $
 
-SHA1 (timescaledb-2.3.0.tar.gz) = f5fa5eed4ffe3747cc1fa04a7b061a53cbde35c3
-RMD160 (timescaledb-2.3.0.tar.gz) = 5131789b12622db6b52bde8775827154cd8df12d
-SHA512 (timescaledb-2.3.0.tar.gz) = 1dac0969fb90840ccf5e3e458643903c56ded6028b6be32a6d0a02088333404f20d02509a22a80e0aad4903b61d7be9d4b9fe17cd4f60e8ba055620b15e8d6f3
-Size (timescaledb-2.3.0.tar.gz) = 2688931 bytes
-SHA1 (patch-CMakeLists.txt) = 75585489fde773d0cad310f33fa03a978b852b51
+SHA1 (timescaledb-2.3.1.tar.gz) = 79aca86ef93a25597488ecc5aca95319614bbc00
+RMD160 (timescaledb-2.3.1.tar.gz) = ab0677f1b83e043ba81fe52731885954cb425b8c
+SHA512 (timescaledb-2.3.1.tar.gz) = 431f716ecd98504ce8e5b85e6fd10bf87ed39aac0244b7e968383537caae965ece09f016fed8ea010f5d42b392aed2d75b012deafd807d107f3dc75cbde287ec
+Size (timescaledb-2.3.1.tar.gz) = 2699256 bytes
+SHA1 (patch-CMakeLists.txt) = e486505c1523a79b264c78495682a9c1913f199a
