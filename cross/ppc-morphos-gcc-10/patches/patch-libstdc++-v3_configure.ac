@@ -1,0 +1,17 @@
+$NetBSD: patch-libstdc++-v3_configure.ac,v 1.1 2021/07/25 15:06:25 js Exp $
+
+Don't check for dlopen in libstdc++-v3 - it causes a link test after
+GCC_NO_EXECUTABLES.
+
+--- libstdc++-v3/configure.ac.orig	2020-07-23 06:35:19.188404867 +0000
++++ libstdc++-v3/configure.ac
+@@ -90,9 +90,6 @@ AC_SYS_LARGEFILE
+ GLIBCXX_CONFIGURE
+ 
+ # Libtool setup.
+-if test "x${with_newlib}" != "xyes"; then
+-  AC_LIBTOOL_DLOPEN
+-fi
+ AM_PROG_LIBTOOL
+ ACX_LT_HOST_FLAGS
+ AC_SUBST(enable_shared)
