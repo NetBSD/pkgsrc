@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3952 2021/07/25 15:06:41 js Exp $
+$NetBSD: CHANGES-2021,v 1.3953 2021/07/25 15:57:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6307,3 +6307,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/munin-node to 2.0.67 [tm 2021-07-25]
 	Updated sysutils/munin-master to 2.0.67 [tm 2021-07-25]
 	Added cross/ppc-morphos-gcc-10 version 10.2.0 [js 2021-07-25]
+	Updated emulators/PC6001VX to 3.8.0 [tsutsui 2021-07-25]
