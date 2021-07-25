@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3955 2021/07/25 16:48:12 fox Exp $
+$NetBSD: CHANGES-2021,v 1.3956 2021/07/25 17:11:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6310,3 +6310,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/PC6001VX to 3.8.0 [tsutsui 2021-07-25]
 	Updated net/samba4 to 4.13.10 [taca 2021-07-25]
 	Updated sysutils/py-Glances to 3.2.2 [fox 2021-07-25]
+	Updated databases/postgresql-timescaledb to 2.3.1 [tnn 2021-07-25]
+	Updated databases/timescaledb-tune to 0.11.1 [tnn 2021-07-25]
+	Updated databases/promscale to 0.5.1 [tnn 2021-07-25]
