@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/06/25 16:01:46 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/07/25 16:46:45 tnn Exp $
 
 SHA1 (github.com_fatih_color_@v_v1.9.0.mod) = 2b09ecf037a16955fea5df8b527dfb95ed5e12c8
 RMD160 (github.com_fatih_color_@v_v1.9.0.mod) = 1b5e0e5a5c709ebf33ce2dbc8d3d97aedb82a30a
@@ -48,7 +48,7 @@ SHA1 (golang.org_x_sys_@v_v0.0.0-20191026070338-33540a1f6037.zip) = c2c93cca3791
 RMD160 (golang.org_x_sys_@v_v0.0.0-20191026070338-33540a1f6037.zip) = bf965abbc86435138354934c62fe507f60131f56
 SHA512 (golang.org_x_sys_@v_v0.0.0-20191026070338-33540a1f6037.zip) = 59a4db96e438a1f03af9b00070f4d3772f1eeeff72334e6bc8ad1774bf202d39f7129572cd75fb9e1ecdfc7a532c5cd91bfdbfab3ebd10228bc6733e9556f70c
 Size (golang.org_x_sys_@v_v0.0.0-20191026070338-33540a1f6037.zip) = 1867927 bytes
-SHA1 (timescaledb-tune-0.11.0.20210308-f6b74b85e3378b1b07e363daf89a8fe1d388c665.tar.gz) = 9aeb31373ddabb01466e36a32b823d3cdd3bf412
-RMD160 (timescaledb-tune-0.11.0.20210308-f6b74b85e3378b1b07e363daf89a8fe1d388c665.tar.gz) = faf835ce32533db91a097789aee2fbb29673af2c
-SHA512 (timescaledb-tune-0.11.0.20210308-f6b74b85e3378b1b07e363daf89a8fe1d388c665.tar.gz) = 169db2bbb78e78200a4c421c5487026cbd9157de80aa11144fb41de81817725061b792a7d6215ab2522d0bb4a58935ea068f1da6839e6f17b13a151c9ed6e99a
-Size (timescaledb-tune-0.11.0.20210308-f6b74b85e3378b1b07e363daf89a8fe1d388c665.tar.gz) = 51119 bytes
+SHA1 (timescaledb-tune-0.11.1.tar.gz) = bf0a076109350b461b169526a73fed1d4e562d46
+RMD160 (timescaledb-tune-0.11.1.tar.gz) = baa3618408d23dfaf198945a8ae1e8495f4d3751
+SHA512 (timescaledb-tune-0.11.1.tar.gz) = c25b55cef7d534b4ed9fafb5fbf355903ce72ac68b02782b61926ce61b33b748f587eaf93df048032eebad89ecdd254b50bb53924134c5606f14327d1daa57df
+Size (timescaledb-tune-0.11.1.tar.gz) = 51095 bytes
