@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/11/06 18:04:25 maya Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/25 20:13:01 fcambus Exp $
 
-PKGNAME=	ibm-plex-ttf-4.0.2
+PKGNAME=	ibm-plex-ttf-5.2.1
 GITHUB_PROJECT=	plex
 DISTNAME=	TrueType
 CATEGORIES=	fonts
