@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/06/21 10:21:00 mef Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/07/25 13:26:36 tm Exp $
 bin/munin-get
 bin/munindoc
 lib/munin/plugins/amavis
@@ -7,14 +7,6 @@ lib/munin/plugins/apache_processes
 lib/munin/plugins/apache_volume
 lib/munin/plugins/apc_envunit_
 lib/munin/plugins/apc_nis
-lib/munin/plugins/asterisk_channels
-lib/munin/plugins/asterisk_channelstypes
-lib/munin/plugins/asterisk_codecs
-lib/munin/plugins/asterisk_meetme
-lib/munin/plugins/asterisk_meetmeusers
-lib/munin/plugins/asterisk_sipchannels
-lib/munin/plugins/asterisk_sippeers
-lib/munin/plugins/asterisk_voicemail
 lib/munin/plugins/bind9
 lib/munin/plugins/bind9_rndc
 lib/munin/plugins/cmc_tc_sensor_
