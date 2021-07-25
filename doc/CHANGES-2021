@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3959 2021/07/25 20:12:14 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3960 2021/07/25 20:13:11 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6316,3 +6316,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ccid to 1.4.35 [gdt 2021-07-25]
 	Updated chat/matrix-synapse to 1.38.1 [js 2021-07-25]
 	Updated fonts/ibm-plex-otf to 5.2.1 [fcambus 2021-07-25]
+	Updated fonts/ibm-plex-ttf to 5.2.1 [fcambus 2021-07-25]
