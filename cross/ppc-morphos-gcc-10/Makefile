@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/07/25 15:06:25 js Exp $
+# $NetBSD: Makefile,v 1.2 2021/07/25 17:31:10 js Exp $
 
 DISTNAME=	sdk-source-20210211
 PKGNAME=	ppc-morphos-gcc-10-10.2.0
@@ -51,7 +51,7 @@ pre-patch:
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../morphos-std-filesystem-path.diff
 	# The diff for libstdc++-v3/configure is strangely large for the
 	# minimal changes that are there to the .ac file. Better to throw it
-	# away and regenerate it (regenerated in pre-configure).
+	# away and regenerate it (regenerated in post-patch).
 	${RUN} rm ${WRKSRC}/libstdc++-v3/configure
 
 post-patch:
