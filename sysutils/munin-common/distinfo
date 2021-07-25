@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/04/09 15:00:47 tm Exp $
+$NetBSD: distinfo,v 1.5 2021/07/25 13:26:35 tm Exp $
 
-SHA1 (munin-2.0.56.tar.gz) = 8753d2b6b2ed2a10e48f2b880951d969a70c6d93
-RMD160 (munin-2.0.56.tar.gz) = 36ff9fa559d0b0e45612a2f8ad1ddcacaf7b05b8
-SHA512 (munin-2.0.56.tar.gz) = b7012cadac0658902ba04a62a7b51ac86e0e47f496451044926aaa0cb69cafdc5b89ef25e99a80658659a93da6532fc85626c195b04d10c0babe696b204f67ca
-Size (munin-2.0.56.tar.gz) = 2264291 bytes
+SHA1 (munin-2.0.67.tar.gz) = ed36bacd1558672ba27f7bc8ebc2da1c7dedefe9
+RMD160 (munin-2.0.67.tar.gz) = 7c1171c7ce03b9bbc11bc0bac801726d2487b967
+SHA512 (munin-2.0.67.tar.gz) = 1f3766b52b99f625ff9cf4d3748a8935abed32b129d2a4714e37118e0116019bee3c1fd0e95da416fb3e39c9be9df17d11bca7f5a835be65ac5147e8b9858417
+Size (munin-2.0.67.tar.gz) = 2252301 bytes
 SHA1 (patch-MANIFEST) = 538cec30723a6d41b732c9dc4a175472fb821609
 SHA1 (patch-Makefile) = f3fd52b56fcddda3efca61453c23243fac35568a
 SHA1 (patch-Makefile.config) = aeaae9374c58c6baf1901ddb9b55a8fac77cf30c
