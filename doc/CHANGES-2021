@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3950 2021/07/25 13:30:15 tm Exp $
+$NetBSD: CHANGES-2021,v 1.3951 2021/07/25 14:27:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6292,6 +6292,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-django-timezone-field to 4.2.1 [adam 2021-07-23]
 	Updated finance/py-eth-account to 0.5.5 [adam 2021-07-23]
 	Updated www/webkit-gtk to 2.32.3 [leot 2021-07-23]
+	Updated net/sayaka to 3.5.2 [tsutsui 2021-07-23]
 	Updated security/wolfssl to 4.8.1 [fox 2021-07-24]
 	Updated databases/mariadb105-client to 10.5.11 [nia 2021-07-24]
 	Updated databases/mariadb105-server to 10.5.11 [nia 2021-07-24]
