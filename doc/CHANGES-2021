@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3948 2021/07/25 11:49:40 morr Exp $
+$NetBSD: CHANGES-2021,v 1.3949 2021/07/25 13:15:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/putty to 0.76 [ryoon 2021-07-24]
 	Updated x11/mozo to 1.24.1 [gutteridge 2021-07-24]
 	Updated www/wordpress to 5.8 [morr 2021-07-25]
+	Updated ham/chirp to 20210724 [gdt 2021-07-25]
