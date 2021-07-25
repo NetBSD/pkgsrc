@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20883 2021/07/22 22:54:38 taca Exp $
+$NetBSD: TODO,v 1.20884 2021/07/25 06:53:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.3
+	o ImageMagick-7.1.0.4
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -490,6 +490,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOPE-5.1.1
 	o SQLiteCpp-2.5.0
 	o Sigil-1.6.0 [wip, waiting for qt5-qtwebengine import]
+	o Sigil-1.7.0
 	o TeXmacs-1.99.19
 	o TiffIO-140a
 	o YoSucker-81
@@ -691,6 +692,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o darcs-2.16.3
 	o darktable-3.6
 	o dateutils-0.4.8
+	o dbus-python-common-1.2.18
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -949,6 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grep-3.6
 	o gromacs-2021.1
 	o groonga-11.0.1
+	o grpc-1.39.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
@@ -1036,7 +1039,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.7.5
 	o imapsync-1.727
-	o imath-3.1.0
+	o imath-3.1.1
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o inetutils-2.0
@@ -1214,6 +1217,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgphoto2-2.5.16
 	o libhidapi-0.10.1
 	o libiconv-1.16
+	o libidn-1.38
+	o libidn2-2.3.2
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1246,6 +1251,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libunit-1.23.0
+	o libuv-1.42.0
 	o libvirt-2.3
 	o libwebsockets-4.2.0
 	o libxdg-basedir-1.2.3
@@ -1816,6 +1822,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
+	o py-dbus-1.2.18
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
 	o py-ephem3-3.7.6.0
@@ -2000,6 +2007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sparsehash-2.0.4
 	o spatialindex-1.9.3
 	o spcaview-20060501
+	o spdlog-1.9.0
 	o spin-649
 	o spiped-1.6.1b
 	o spl-1.0pre6
