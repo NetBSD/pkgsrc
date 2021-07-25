@@ -1,9 +1,10 @@
-$NetBSD: patch-libuuid_src_gen__uuid.c,v 1.1 2017/12/08 08:03:35 adam Exp $
+$NetBSD: patch-libuuid_src_gen__uuid.c,v 1.2 2021/07/25 04:00:34 dholland Exp $
 
 fcntl is portable, flock is not.
 Solaris does not have ifr.ifr_hwaddr.
+Rename random_get_bytes to avoid symbol name conflict on Solaris.
 
---- libuuid/src/gen_uuid.c.orig	2017-09-27 09:05:13.000000000 +0000
+--- libuuid/src/gen_uuid.c.orig	2018-06-04 07:57:02.805445789 +0000
 +++ libuuid/src/gen_uuid.c
 @@ -172,7 +172,7 @@ static int get_node_id(unsigned char *no
  	for (i = 0; i < n; i+= ifreq_size(*ifrp) ) {
@@ -42,6 +43,15 @@ Solaris does not have ifr.ifr_hwaddr.
  			if ((errno == EAGAIN) || (errno == EINTR))
  				continue;
  			fclose(state_f);
+@@ -278,7 +284,7 @@ static int get_clock(uint32_t *clock_hig
+ 	}
+ 
+ 	if ((last.tv_sec == 0) && (last.tv_usec == 0)) {
+-		random_get_bytes(&clock_seq, sizeof(clock_seq));
++		my_random_get_bytes(&clock_seq, sizeof(clock_seq));
+ 		clock_seq &= 0x3FFF;
+ 		gettimeofday(&last, NULL);
+ 		last.tv_sec--;
 @@ -325,7 +331,8 @@ try_again:
  			fflush(state_f);
  		}
@@ -52,3 +62,21 @@ Solaris does not have ifr.ifr_hwaddr.
  	}
  
  	*clock_high = clock_reg >> 32;
+@@ -416,7 +423,7 @@ int __uuid_generate_time(uuid_t out, int
+ 
+ 	if (!has_init) {
+ 		if (get_node_id(node_id) <= 0) {
+-			random_get_bytes(node_id, 6);
++			my_random_get_bytes(node_id, 6);
+ 			/*
+ 			 * Set multicast bit, to prevent conflicts
+ 			 * with IEEE 802 addresses obtained from
+@@ -514,7 +521,7 @@ void __uuid_generate_random(uuid_t out, 
+ 		n = *num;
+ 
+ 	for (i = 0; i < n; i++) {
+-		random_get_bytes(buf, sizeof(buf));
++		my_random_get_bytes(buf, sizeof(buf));
+ 		uuid_unpack(buf, &uu);
+ 
+ 		uu.clock_seq = (uu.clock_seq & 0x3FFF) | 0x8000;
