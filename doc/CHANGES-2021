@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3954 2021/07/25 15:58:32 taca Exp $
+$NetBSD: CHANGES-2021,v 1.3955 2021/07/25 16:48:12 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6309,3 +6309,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added cross/ppc-morphos-gcc-10 version 10.2.0 [js 2021-07-25]
 	Updated emulators/PC6001VX to 3.8.0 [tsutsui 2021-07-25]
 	Updated net/samba4 to 4.13.10 [taca 2021-07-25]
+	Updated sysutils/py-Glances to 3.2.2 [fox 2021-07-25]
