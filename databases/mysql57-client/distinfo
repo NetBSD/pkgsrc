@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.42 2021/04/29 16:50:32 adam Exp $
+$NetBSD: distinfo,v 1.43 2021/07/25 20:29:14 adam Exp $
 
-SHA1 (mysql-5.7.34.tar.gz) = d1842baea3abc4b4cd684186e88b123d854d4ed7
-RMD160 (mysql-5.7.34.tar.gz) = f23902a074cb7bcd05dc7ef8c04186021c4d689c
-SHA512 (mysql-5.7.34.tar.gz) = a59b27e56963a8b57f8e3d89890d7ea0e4e157f81f274670ab0416d5fccb0da1b09b7702b58c3c9de726ee03bd1b84a6d2bf309e1e3e3fba285361e5bc3d059c
-Size (mysql-5.7.34.tar.gz) = 56150251 bytes
+SHA1 (mysql-5.7.35.tar.gz) = 73e64bfa96c8982e54f6c44348f233419d582e8f
+RMD160 (mysql-5.7.35.tar.gz) = 3193e5c3d9ec916229d0050acf37af2a4d4c8d5e
+SHA512 (mysql-5.7.35.tar.gz) = ec22599b67d5826fcc04c146f06fdd18080003a95b366bef133af0ea772b0b0fc2f613f17699cd3c8d461acb71b7e94af856a4574e644ec25b70db29abac509d
+Size (mysql-5.7.35.tar.gz) = 56228901 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -36,7 +36,7 @@ SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = ff0679ed644d79abe52b
 SHA1 (patch-rapid_plugin_x_CMakeLists.txt) = 65853fea39a88811cdd8af28ef3c659a0ccbc0e1
 SHA1 (patch-scripts_CMakeLists.txt) = b149f40f65c4ce8f6f4a7adf75f5ec4be44319f1
 SHA1 (patch-scripts_mysqld_safe.sh) = 0784314227657aa0bc3f4a0b4e21c173a86fa94b
-SHA1 (patch-sql_CMakeLists.txt) = 697add15adb66bf55cf561a6e43e0bf514d1e068
+SHA1 (patch-sql_CMakeLists.txt) = 9bfb708542dadd8885f27f1345a6e66a37bf9142
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = 12cf83e061edbe59eb073037b1036903b7ba4b00
 SHA1 (patch-sql_item__geofunc__internal.cc) = 752862c3a30231e694e508ced1a215a610649fc6
 SHA1 (patch-sql_locks_shared__spin__lock.cc) = 32777eb07d42a3c5c7cfc331eea4d8218cabe486
