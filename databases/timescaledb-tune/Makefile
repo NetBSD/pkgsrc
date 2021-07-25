@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2021/07/13 11:36:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2021/07/25 16:46:45 tnn Exp $
 
-DISTNAME=	timescaledb-tune-0.11.0.20210308
+DISTNAME=	timescaledb-tune-0.11.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
-PKGREVISION=	1
 CATEGORIES=	databases
 # need git master for proper PostgreSQL 13 support
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	f6b74b85e3378b1b07e363daf89a8fe1d388c665
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/timescale/timescaledb-tune
