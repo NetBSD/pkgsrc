@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/12/22 13:04:41 ng0 Exp $
+$NetBSD: distinfo,v 1.4 2021/07/25 20:12:01 fcambus Exp $
 
-SHA1 (ibm-plex-otf-4.0.2/OpenType.zip) = dad399b82db9d0e1f25b1f0f1659f1f56221d3f1
-RMD160 (ibm-plex-otf-4.0.2/OpenType.zip) = 0e443503f72adcbcfd3ee3bcb96adfb9c27c45e8
-SHA512 (ibm-plex-otf-4.0.2/OpenType.zip) = 31a1ae34f3b1b8b2e189bc2ef31a9f574d98980bbf10cb28ed74ac2a27373159ce7de7c3196ffb8e2325e70824fc34bb402032d2adcef2d14cc381e3e5b77d5d
-Size (ibm-plex-otf-4.0.2/OpenType.zip) = 6586340 bytes
+SHA1 (ibm-plex-otf-5.2.1/OpenType.zip) = 22fab4a5ee8955582cf9e742d02b974c25a2f7f4
+RMD160 (ibm-plex-otf-5.2.1/OpenType.zip) = dbe81e4cde9300a3c37af066fb11be2b0d499e98
+SHA512 (ibm-plex-otf-5.2.1/OpenType.zip) = 2238a0fafd3dfe6d93f90976cbfd00d0ee8b8db9be49e3b58d3e56603d2854017902b9c44a5f81f929767a527ca02eda2424d5f49c5ce875ccb8716e8985a072
+Size (ibm-plex-otf-5.2.1/OpenType.zip) = 36015690 bytes
