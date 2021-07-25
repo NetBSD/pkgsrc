@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2021/05/24 19:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/07/25 18:03:38 gdt Exp $
 #
 
-DISTNAME=	ccid-1.4.34
-PKGREVISION=	2
+DISTNAME=	ccid-1.4.35
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,6 @@ BUILD_DEFS=	VARBASE
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	autoconf automake aclocal autoheader
 USE_TOOLS+=	flex perl
 USE_LANGUAGES=	c c++
 
@@ -34,9 +32,6 @@ REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	sbin share/doc/ccid
-
-pre-configure:
-	cd ${WRKSRC} && ${SH} bootstrap
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ccid/README.md
