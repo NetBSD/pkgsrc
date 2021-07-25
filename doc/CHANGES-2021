@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3949 2021/07/25 13:15:39 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.3950 2021/07/25 13:30:15 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6303,3 +6303,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/mozo to 1.24.1 [gutteridge 2021-07-24]
 	Updated www/wordpress to 5.8 [morr 2021-07-25]
 	Updated ham/chirp to 20210724 [gdt 2021-07-25]
+	Updated sysutils/munin-node to 2.0.67 [tm 2021-07-25]
+	Updated sysutils/munin-master to 2.0.67 [tm 2021-07-25]
