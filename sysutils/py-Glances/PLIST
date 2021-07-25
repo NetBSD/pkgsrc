@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/07/16 04:24:16 fox Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/07/25 16:47:46 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -162,6 +162,9 @@ ${PYSITELIB}/glances/outputs/glances_sparklines.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout.py
 ${PYSITELIB}/glances/outputs/glances_stdout.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout.pyo
+${PYSITELIB}/glances/outputs/glances_stdout_apidoc.py
+${PYSITELIB}/glances/outputs/glances_stdout_apidoc.pyc
+${PYSITELIB}/glances/outputs/glances_stdout_apidoc.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.py
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.pyo
