@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/07/20 16:01:03 abs Exp $
+# $NetBSD: Makefile,v 1.24 2021/07/25 13:20:47 gdt Exp $
 
 # Update to 6.2 (wip) is on hold pending reports that the greater
 # Unifi world thinks it is stable enough. -- gdt, 2021-06-01
@@ -8,7 +8,7 @@ MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
 
 # Updates must be tested to not only build but actually function under
-# at least NetBSD 8/amd64 with actual UBNT hardware.
+# at least NetBSD 9/amd64 with actual UBNT hardware.
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
 # The content that belongs in NEWS are often in a blog.
