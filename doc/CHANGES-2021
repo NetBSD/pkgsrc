@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3961 2021/07/25 20:29:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3962 2021/07/25 20:42:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6319,3 +6319,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/ibm-plex-ttf to 5.2.1 [fcambus 2021-07-25]
 	Updated databases/mysql57-client to 5.7.35 [adam 2021-07-25]
 	Updated databases/mysql57-server to 5.7.35 [adam 2021-07-25]
+	Updated net/gallery-dl to 1.18.2 [leot 2021-07-25]
