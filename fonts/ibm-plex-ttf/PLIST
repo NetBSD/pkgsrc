@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/19 23:57:21 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/07/25 20:13:01 fcambus Exp $
 @pkgdir share/fonts/X11/OTF
 share/fonts/X11/TTF/IBMPlexMono-Bold.ttf
 share/fonts/X11/TTF/IBMPlexMono-BoldItalic.ttf
@@ -72,6 +72,22 @@ share/fonts/X11/TTF/IBMPlexSansHebrew-Regular.ttf
 share/fonts/X11/TTF/IBMPlexSansHebrew-SemiBold.ttf
 share/fonts/X11/TTF/IBMPlexSansHebrew-Text.ttf
 share/fonts/X11/TTF/IBMPlexSansHebrew-Thin.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Bold.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-ExtraLight.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Light.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Medium.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Regular.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-SemiBold.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Text.ttf
+share/fonts/X11/TTF/IBMPlexSansJP-Thin.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Bold.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-ExtraLight.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Light.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Medium.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Regular.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-SemiBold.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Text.ttf
+share/fonts/X11/TTF/IBMPlexSansKR-Thin.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-Bold.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-ExtraLight.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-Light.ttf
