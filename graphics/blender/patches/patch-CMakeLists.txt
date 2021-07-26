@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/07/26 05:15:15 mrg Exp $
+
+Switch from -std=c++17 to -std=gnu++17 as alloca(3) is used.
+
+--- CMakeLists.txt.orig	2021-04-23 19:00:19.000000000 -0700
++++ CMakeLists.txt	2021-07-24 21:33:20.005271077 -0700
+@@ -1718,7 +1718,7 @@ elseif(
+   CMAKE_C_COMPILER_ID MATCHES "Clang" OR
+   CMAKE_C_COMPILER_ID MATCHES "Intel"
+ )
+-  string(APPEND CMAKE_CXX_FLAGS " -std=c++17")
++  string(APPEND CMAKE_CXX_FLAGS " -std=gnu++17")
+ else()
+   message(FATAL_ERROR "Unknown compiler ${CMAKE_C_COMPILER_ID}, can't enable C++17 build")
+ endif()
