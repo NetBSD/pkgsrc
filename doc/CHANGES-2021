@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3964 2021/07/26 00:04:14 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.3965 2021/07/26 01:02:27 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6322,3 +6322,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gallery-dl to 1.18.2 [leot 2021-07-25]
 	Updated multimedia/nostt to 1.2.1 [sjmulder 2021-07-26]
 	Updated sysutils/within to 1.1.4 [sjmulder 2021-07-26]
+	Updated textproc/libxlsxwriter to 1.1.1 [sjmulder 2021-07-26]
