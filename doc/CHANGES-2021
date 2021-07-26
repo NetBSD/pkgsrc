@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3966 2021/07/26 01:03:57 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.3967 2021/07/26 01:38:19 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6324,3 +6324,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/within to 1.1.4 [sjmulder 2021-07-26]
 	Updated textproc/libxlsxwriter to 1.1.1 [sjmulder 2021-07-26]
 	Updated math/sc-im to 0.8.0nb3 [sjmulder 2021-07-26]
+	Updated math/sc-im to 0.8.2 [sjmulder 2021-07-26]
