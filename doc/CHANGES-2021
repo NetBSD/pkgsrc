@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3968 2021/07/26 05:16:43 mrg Exp $
+$NetBSD: CHANGES-2021,v 1.3969 2021/07/26 06:37:28 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6326,3 +6326,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/sc-im to 0.8.0nb3 [sjmulder 2021-07-26]
 	Updated math/sc-im to 0.8.2 [sjmulder 2021-07-26]
 	Updated graphics/blender to 2.93.1 [mrg 2021-07-26]
+	Updated sysutils/u-boot-pinebook-pro to 2021.07 [mrg 2021-07-26]
+	Updated sysutils/u-boot-rockpro64 to 2021.07 [mrg 2021-07-26]
