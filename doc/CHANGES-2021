@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3977 2021/07/26 17:36:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3978 2021/07/26 17:55:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6346,3 +6346,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-mongo to 3.12.0 [adam 2021-07-26]
 	Updated devel/py-pkginfo to 1.7.1 [adam 2021-07-26]
 	Updated net/py-scp to 0.13.6 [adam 2021-07-26]
+	Updated sysutils/ansible-base to 2.10.12 [adam 2021-07-26]
+	Updated devel/py-configargparse to 1.5.1 [adam 2021-07-26]
