@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3973 2021/07/26 13:24:20 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.3974 2021/07/26 14:21:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6332,3 +6332,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/libreoffice to 7.1.5.2 [ryoon 2021-07-26]
 	Updated www/php-nextcloud to 22.0.0 [ryoon 2021-07-26]
 	Updated graphics/p5-cairo to 1.109 [bsiegert 2021-07-26]
+	Added x11/p5-gtk3 version 0.038 [bsiegert 2021-07-26]
