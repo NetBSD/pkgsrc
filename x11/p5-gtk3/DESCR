@@ -1,0 +1,4 @@
+Perl bindings to the 3.x series of the gtk+ toolkit.  This module allows you to
+write graphical user interfaces in a Perlish and object-oriented way, freeing
+you from the casting and memory management in C, yet remaining very close in
+spirit to original API.
