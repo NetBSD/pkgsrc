@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2021/06/25 08:28:57 mrg Exp $
-
-PKGREVISION=		5
+# $NetBSD: Makefile,v 1.12 2021/07/26 06:36:41 mrg Exp $
 
 UBOOT_TARGET=		pinebook-pro
-UBOOT_CONFIG=		pinebook_pro-rk3399_defconfig
+UBOOT_CONFIG=		pinebook-pro-rk3399_defconfig
 UBOOT_BIN=		idbloader.img rksd_loader.img rkspi_loader.img u-boot.itb
+UBOOT_IMAGE_TYPE=	rk3399
+UBOOT_VERSION?=		2021.07
 
 UBOOT_INSTALLBOOT_PLIST=	installboot.plist
-
-UBOOT_IMAGE_TYPE=	rk3399
 
 .include "../../sysutils/u-boot/u-boot-rockchip.mk"

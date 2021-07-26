@@ -1,0 +1,14 @@
+$NetBSD: patch-configs_pinebook-pro-rk3399_defconfig,v 1.1 2021/07/26 06:36:41 mrg Exp $
+
+Load u-boot from 256KB.
+
+--- configs/pinebook-pro-rk3399_defconfig.orig	2021-07-05 08:11:28.000000000 -0700
++++ configs/pinebook-pro-rk3399_defconfig	2021-07-25 14:05:30.629973309 -0700
+@@ -3,6 +3,7 @@
+ CONFIG_SYS_TEXT_BASE=0x00200000
+ CONFIG_NR_DRAM_BANKS=1
+ CONFIG_ENV_SIZE=0x8000
++CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_SECTOR=0x200
+ CONFIG_DEFAULT_DEVICE_TREE="rk3399-pinebook-pro"
+ CONFIG_ROCKCHIP_RK3399=y
+ CONFIG_TARGET_PINEBOOK_PRO_RK3399=y
