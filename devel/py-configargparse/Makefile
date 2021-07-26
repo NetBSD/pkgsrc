@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/05/11 04:57:59 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/07/26 17:55:41 adam Exp $
 
-DISTNAME=	ConfigArgParse-1.4.1
+DISTNAME=	ConfigArgParse-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ConfigArgParse/}
@@ -15,5 +15,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
