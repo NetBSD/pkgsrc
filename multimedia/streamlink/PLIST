@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/07/21 10:57:39 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/07/26 18:51:49 yhardy Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -166,9 +166,6 @@ ${PYSITELIB}/streamlink/plugins/brightcove.pyo
 ${PYSITELIB}/streamlink/plugins/btv.py
 ${PYSITELIB}/streamlink/plugins/btv.pyc
 ${PYSITELIB}/streamlink/plugins/btv.pyo
-${PYSITELIB}/streamlink/plugins/canalplus.py
-${PYSITELIB}/streamlink/plugins/canalplus.pyc
-${PYSITELIB}/streamlink/plugins/canalplus.pyo
 ${PYSITELIB}/streamlink/plugins/cbsnews.py
 ${PYSITELIB}/streamlink/plugins/cbsnews.pyc
 ${PYSITELIB}/streamlink/plugins/cbsnews.pyo
@@ -217,9 +214,6 @@ ${PYSITELIB}/streamlink/plugins/dogan.pyo
 ${PYSITELIB}/streamlink/plugins/dogus.py
 ${PYSITELIB}/streamlink/plugins/dogus.pyc
 ${PYSITELIB}/streamlink/plugins/dogus.pyo
-${PYSITELIB}/streamlink/plugins/dommune.py
-${PYSITELIB}/streamlink/plugins/dommune.pyc
-${PYSITELIB}/streamlink/plugins/dommune.pyo
 ${PYSITELIB}/streamlink/plugins/drdk.py
 ${PYSITELIB}/streamlink/plugins/drdk.pyc
 ${PYSITELIB}/streamlink/plugins/drdk.pyo
@@ -304,9 +298,6 @@ ${PYSITELIB}/streamlink/plugins/linelive.pyo
 ${PYSITELIB}/streamlink/plugins/live_russia_tv.py
 ${PYSITELIB}/streamlink/plugins/live_russia_tv.pyc
 ${PYSITELIB}/streamlink/plugins/live_russia_tv.pyo
-${PYSITELIB}/streamlink/plugins/liveedu.py
-${PYSITELIB}/streamlink/plugins/liveedu.pyc
-${PYSITELIB}/streamlink/plugins/liveedu.pyo
 ${PYSITELIB}/streamlink/plugins/liveme.py
 ${PYSITELIB}/streamlink/plugins/liveme.pyc
 ${PYSITELIB}/streamlink/plugins/liveme.pyo
@@ -388,9 +379,6 @@ ${PYSITELIB}/streamlink/plugins/openrectv.pyo
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.py
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.pyc
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.pyo
-${PYSITELIB}/streamlink/plugins/periscope.py
-${PYSITELIB}/streamlink/plugins/periscope.pyc
-${PYSITELIB}/streamlink/plugins/periscope.pyo
 ${PYSITELIB}/streamlink/plugins/picarto.py
 ${PYSITELIB}/streamlink/plugins/picarto.pyc
 ${PYSITELIB}/streamlink/plugins/picarto.pyo
@@ -406,9 +394,6 @@ ${PYSITELIB}/streamlink/plugins/pluto.pyo
 ${PYSITELIB}/streamlink/plugins/pluzz.py
 ${PYSITELIB}/streamlink/plugins/pluzz.pyc
 ${PYSITELIB}/streamlink/plugins/pluzz.pyo
-${PYSITELIB}/streamlink/plugins/powerapp.py
-${PYSITELIB}/streamlink/plugins/powerapp.pyc
-${PYSITELIB}/streamlink/plugins/powerapp.pyo
 ${PYSITELIB}/streamlink/plugins/qq.py
 ${PYSITELIB}/streamlink/plugins/qq.pyc
 ${PYSITELIB}/streamlink/plugins/qq.pyo
@@ -430,9 +415,6 @@ ${PYSITELIB}/streamlink/plugins/rotana.pyo
 ${PYSITELIB}/streamlink/plugins/rtbf.py
 ${PYSITELIB}/streamlink/plugins/rtbf.pyc
 ${PYSITELIB}/streamlink/plugins/rtbf.pyo
-${PYSITELIB}/streamlink/plugins/rtlxl.py
-${PYSITELIB}/streamlink/plugins/rtlxl.pyc
-${PYSITELIB}/streamlink/plugins/rtlxl.pyo
 ${PYSITELIB}/streamlink/plugins/rtmp.py
 ${PYSITELIB}/streamlink/plugins/rtmp.pyc
 ${PYSITELIB}/streamlink/plugins/rtmp.pyo
@@ -478,9 +460,6 @@ ${PYSITELIB}/streamlink/plugins/steam.pyo
 ${PYSITELIB}/streamlink/plugins/streamable.py
 ${PYSITELIB}/streamlink/plugins/streamable.pyc
 ${PYSITELIB}/streamlink/plugins/streamable.pyo
-${PYSITELIB}/streamlink/plugins/streamingvideoprovider.py
-${PYSITELIB}/streamlink/plugins/streamingvideoprovider.pyc
-${PYSITELIB}/streamlink/plugins/streamingvideoprovider.pyo
 ${PYSITELIB}/streamlink/plugins/streann.py
 ${PYSITELIB}/streamlink/plugins/streann.pyc
 ${PYSITELIB}/streamlink/plugins/streann.pyo
@@ -496,9 +475,6 @@ ${PYSITELIB}/streamlink/plugins/swisstxt.pyo
 ${PYSITELIB}/streamlink/plugins/teamliquid.py
 ${PYSITELIB}/streamlink/plugins/teamliquid.pyc
 ${PYSITELIB}/streamlink/plugins/teamliquid.pyo
-${PYSITELIB}/streamlink/plugins/teleclubzoom.py
-${PYSITELIB}/streamlink/plugins/teleclubzoom.pyc
-${PYSITELIB}/streamlink/plugins/teleclubzoom.pyo
 ${PYSITELIB}/streamlink/plugins/telefe.py
 ${PYSITELIB}/streamlink/plugins/telefe.pyc
 ${PYSITELIB}/streamlink/plugins/telefe.pyo
@@ -511,9 +487,6 @@ ${PYSITELIB}/streamlink/plugins/tga.pyo
 ${PYSITELIB}/streamlink/plugins/theplatform.py
 ${PYSITELIB}/streamlink/plugins/theplatform.pyc
 ${PYSITELIB}/streamlink/plugins/theplatform.pyo
-${PYSITELIB}/streamlink/plugins/tigerdile.py
-${PYSITELIB}/streamlink/plugins/tigerdile.pyc
-${PYSITELIB}/streamlink/plugins/tigerdile.pyo
 ${PYSITELIB}/streamlink/plugins/tlctr.py
 ${PYSITELIB}/streamlink/plugins/tlctr.pyc
 ${PYSITELIB}/streamlink/plugins/tlctr.pyo
