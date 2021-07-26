@@ -1,0 +1,3 @@
+This module provides a helper module for Gtk3.
+
+It is based on Gtk2::SimpleList.
