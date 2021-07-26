@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2021/07/26 14:18:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.939 2021/07/26 16:38:46 bsiegert Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -312,6 +312,7 @@ SUBDIR+=	oneko
 SUBDIR+=	p5-Alien-wxWidgets
 SUBDIR+=	p5-Clipboard
 SUBDIR+=	p5-Gtk2-Ex-FormFactory
+SUBDIR+=	p5-Gtk3-SimpleList
 SUBDIR+=	p5-Tk
 SUBDIR+=	p5-Wx
 SUBDIR+=	p5-Wx-Perl-ProcessStream
