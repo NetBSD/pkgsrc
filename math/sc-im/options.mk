@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/06/10 10:40:52 sjmulder Exp $
+# $NetBSD: options.mk,v 1.4 2021/07/26 01:03:28 sjmulder Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sc-im
 PKG_SUPPORTED_OPTIONS+=	color xls xlsx lua
@@ -18,7 +18,7 @@ LDLIBS+=	-lxlsreader
 
 .if !empty(PKG_OPTIONS:Mxlsx)
 CFLAGS+=	-DXLSX -DXLSX_EXPORT
-LDLIBS+=	-lxlsxwriter
+LDLIBS+=	-lxlsxwriter -lcrypto -lminizip
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxlsxwriter/buildlink3.mk"
