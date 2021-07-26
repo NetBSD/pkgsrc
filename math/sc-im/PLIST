@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/30 12:58:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/07/26 01:38:05 sjmulder Exp $
 bin/sc-im
+bin/scopen
 man/man1/sc-im.1
 share/sc-im/plot_bar
 share/sc-im/plot_line
