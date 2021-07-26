@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/06/23 20:33:13 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/07/26 15:38:10 taca Exp $
 #
 
-PKGREVISION=		1
 COMMENT=		Postfix SMTP server MySQL backend module
 
 POSTFIX_LIB=		mysql
