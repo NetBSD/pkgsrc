@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2021/02/06 06:47:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2021/07/26 12:42:23 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -8669,7 +8669,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_zu.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/writer.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/xsltfilter.xcd
 ${PKGNAME}/lib/libreoffice/share/skia/skia_denylist_vulkan.xml
-${PKGNAME}/lib/libreoffice/share/template/common/draw/bpmn.ott
+${PKGNAME}/lib/libreoffice/share/template/common/draw/bpmn.otg
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/html.stw
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/idxexample.odt
 ${PKGNAME}/lib/libreoffice/share/template/common/officorr/Modern_business_letter_sans_serif.ott
