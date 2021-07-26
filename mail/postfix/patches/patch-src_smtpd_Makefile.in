@@ -1,0 +1,24 @@
+$NetBSD: patch-src_smtpd_Makefile.in,v 1.1 2021/07/26 15:38:10 taca Exp $
+
+Add blocklist(3) support.
+
+--- src/smtpd/Makefile.in.orig	2021-04-18 20:45:05.000000000 +0000
++++ src/smtpd/Makefile.in
+@@ -2,14 +2,14 @@ SHELL	= /bin/sh
+ SRCS	= smtpd.c smtpd_token.c smtpd_check.c smtpd_chat.c smtpd_state.c \
+ 	smtpd_peer.c smtpd_sasl_proto.c smtpd_sasl_glue.c smtpd_proxy.c \
+ 	smtpd_xforward.c smtpd_dsn_fix.c smtpd_milter.c smtpd_resolve.c \
+-	smtpd_expand.c smtpd_haproxy.c
++	smtpd_expand.c smtpd_haproxy.c pfilter.c
+ OBJS	= smtpd.o smtpd_token.o smtpd_check.o smtpd_chat.o smtpd_state.o \
+ 	smtpd_peer.o smtpd_sasl_proto.o smtpd_sasl_glue.o smtpd_proxy.o \
+ 	smtpd_xforward.o smtpd_dsn_fix.o smtpd_milter.o smtpd_resolve.o \
+-	smtpd_expand.o smtpd_haproxy.o
++	smtpd_expand.o smtpd_haproxy.o pfilter.o
+ HDRS	= smtpd_token.h smtpd_check.h smtpd_chat.h smtpd_sasl_proto.h \
+ 	smtpd_sasl_glue.h smtpd_proxy.h smtpd_dsn_fix.h smtpd_milter.h \
+-	smtpd_resolve.h smtpd_expand.h
++	smtpd_resolve.h smtpd_expand.h pfilter.h
+ TESTSRC	= smtpd_token_test.c
+ DEFS	= -I. -I$(INC_DIR) -D$(SYSTYPE)
+ CFLAGS	= $(DEBUG) $(OPT) $(DEFS)
