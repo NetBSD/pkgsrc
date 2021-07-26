@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/12/09 09:46:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/07/26 17:30:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/pymongo/__init__.py
 ${PYSITELIB}/pymongo/__init__.pyc
 ${PYSITELIB}/pymongo/__init__.pyo
 ${PYSITELIB}/pymongo/_cmessage.so
+${PYSITELIB}/pymongo/_ipaddress.py
+${PYSITELIB}/pymongo/_ipaddress.pyc
+${PYSITELIB}/pymongo/_ipaddress.pyo
 ${PYSITELIB}/pymongo/aggregation.py
 ${PYSITELIB}/pymongo/aggregation.pyc
 ${PYSITELIB}/pymongo/aggregation.pyo
@@ -135,6 +138,12 @@ ${PYSITELIB}/pymongo/errors.pyo
 ${PYSITELIB}/pymongo/event_loggers.py
 ${PYSITELIB}/pymongo/event_loggers.pyc
 ${PYSITELIB}/pymongo/event_loggers.pyo
+${PYSITELIB}/pymongo/hello.py
+${PYSITELIB}/pymongo/hello.pyc
+${PYSITELIB}/pymongo/hello.pyo
+${PYSITELIB}/pymongo/hello_compat.py
+${PYSITELIB}/pymongo/hello_compat.pyc
+${PYSITELIB}/pymongo/hello_compat.pyo
 ${PYSITELIB}/pymongo/helpers.py
 ${PYSITELIB}/pymongo/helpers.pyc
 ${PYSITELIB}/pymongo/helpers.pyo
@@ -201,6 +210,9 @@ ${PYSITELIB}/pymongo/saslprep.pyo
 ${PYSITELIB}/pymongo/server.py
 ${PYSITELIB}/pymongo/server.pyc
 ${PYSITELIB}/pymongo/server.pyo
+${PYSITELIB}/pymongo/server_api.py
+${PYSITELIB}/pymongo/server_api.pyc
+${PYSITELIB}/pymongo/server_api.pyo
 ${PYSITELIB}/pymongo/server_description.py
 ${PYSITELIB}/pymongo/server_description.pyc
 ${PYSITELIB}/pymongo/server_description.pyo
