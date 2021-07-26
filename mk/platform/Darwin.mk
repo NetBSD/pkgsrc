@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.103 2021/05/27 18:16:26 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.104 2021/07/26 11:58:24 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -25,8 +25,7 @@
 # High Sierra	10.13.x	17.x.y	9.3  (llvm clang 9.0)
 # Mojave	10.14.x	18.x.y	10.2 (llvm clang 10.0)
 # Catalina	10.15.x 19.x.y
-# Big Sur	11.0*   20.0    12.0 (llvm clang 12.0)
-#  *) 11.0 on ARM, 10.16 on Intel Macs, for now
+# Big Sur	11.x    20.x.y  12.0 (llvm clang 12.0)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
@@ -111,6 +110,7 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 #
 OSX_SDK_MAP.11.2=	11.1
 OSX_SDK_MAP.11.4=	11.3
+OSX_SDK_MAP.11.5=	11.3
 #
 OSX_SDK_PATH!=	/usr/bin/xcrun \
 		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
