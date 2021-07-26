@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3979 2021/07/26 18:12:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3980 2021/07/26 19:19:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6350,3 +6350,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-configargparse to 1.5.1 [adam 2021-07-26]
 	Updated devel/libuv to 1.42.0 [adam 2021-07-26]
 	Updated www/py-bleach to 3.3.1 [adam 2021-07-26]
+	Added graphics/p5-goocanvas2 version 0.06 [bsiegert 2021-07-26]
