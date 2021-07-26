@@ -1,15 +1,18 @@
-$NetBSD: distinfo,v 1.61 2021/07/08 21:25:30 markd Exp $
+$NetBSD: distinfo,v 1.62 2021/07/26 05:15:15 mrg Exp $
 
-SHA1 (blender-2.90.0.tar.xz) = cbc234b048294ebec34a89116f05663be00f91f2
-RMD160 (blender-2.90.0.tar.xz) = 747c96c2453d8203c7df6d80ef246e4834d43984
-SHA512 (blender-2.90.0.tar.xz) = 9fc3e423bb13f3b983deba130febf8cc870a65c7d87fff8d9536a54ab606d097cccf46cdd518b15ab483fdf85551fde607b28801c3dbe681c841d7594fcbc57e
-Size (blender-2.90.0.tar.xz) = 38831704 bytes
+SHA1 (blender-2.93.1.tar.xz) = ae43f42a13e03baa37457a8e6a6c4e64c4579285
+RMD160 (blender-2.93.1.tar.xz) = 8b609530e464931c166f6dd1bc4564107ba1e881
+SHA512 (blender-2.93.1.tar.xz) = b14e8cca248c53e4a93976d7fa1cd1ab92a7d18a3809b2a535881731aad2f68d8d155ad175b27aa1890714b81aa6648604a614cacc90e95b7269569661e393b1
+Size (blender-2.93.1.tar.xz) = 42960100 bytes
+SHA1 (patch-CMakeLists.txt) = bf304a9e3e31038e869df90b1c35cba6e40360de
 SHA1 (patch-build__files_cmake_Modules_FindOpenEXR.cmake) = b663c44b2ba1c641542318936526a0523b607f30
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
-SHA1 (patch-extern_glog_src_base_mutex.h) = 5fceceefe83400967a59080eeb930d0f3a4b8e88
+SHA1 (patch-extern_glog_src_base_mutex.h) = 74ac81e33ac824b5653de3d6c7860b7551bb780a
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
 SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
 SHA1 (patch-intern_cycles_kernel_svm_svm__sky.h) = bc672c23ea5f7c837d6a1f34bae87b9ef093309e
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
+SHA1 (patch-source_blender_gpu_intern_gpu_matrix.cc) = 107866999d07a8bf74af722aa26f8b438c76ed39
+SHA1 (patch-source_blender_imbuf_intern_anim_movie.c) = 1529f84515395a4764c826b90191f87131601881
 SHA1 (patch-source_blender_imbuf_intern_openexr_openexr__api.cpp) = 936590a84bc5c2a25567b89fbb8f03467e41d198
