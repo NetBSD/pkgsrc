@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.174 2021/07/08 21:25:30 markd Exp $
+# $NetBSD: Makefile,v 1.175 2021/07/26 05:15:15 mrg Exp $
 
-DISTNAME=	blender-2.90.0
-PKGREVISION=	7
+DISTNAME=	blender-2.93.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -12,10 +11,10 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c gnu++17
 
-# C++11
-GCC_REQD+=	4.7
+# C++17
+GCC_REQD+=	7
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
@@ -47,13 +46,16 @@ CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
 PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:C/[a-z]//}
 
-REPLACE_PYTHON=		release/bin/blender-thumbnailer.py
+REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		     \
+			release/scripts/addons/io_curve_svg/svg_util_test.py \
+			release/scripts/addons/io_scene_fbx/fbx2json.py	     \
+			release/scripts/addons/io_scene_fbx/json2fbx.py	     \
+			release/scripts/modules/bl_i18n_utils/merge_po.py    \
+			release/scripts/modules/blend_render_info.py
 
 INSTALLATION_DIRS=	bin share/blender
 
-CHECK_PORTABILITY_SKIP+=	doc/python_api/sphinx_doc_gen.sh
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_ACCEPTED?=	39
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
@@ -64,6 +66,7 @@ pre-configure:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
