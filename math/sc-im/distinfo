@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/03/28 12:28:00 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2021/07/26 01:38:05 sjmulder Exp $
 
-SHA1 (sc-im-0.8.0.tar.gz) = a603402d0e15e642c677e43be08794f3231aa407
-RMD160 (sc-im-0.8.0.tar.gz) = a5684587c8e594d8df108212cbaf002c66c4b76e
-SHA512 (sc-im-0.8.0.tar.gz) = 616178d9ca4b169fb2849a9f8554452e39279b68507132d77007435b57e205c9f24961778e6178867b996575eaa80242de8757a9fb927e0c2d8cd63513436ec9
-Size (sc-im-0.8.0.tar.gz) = 1386374 bytes
-SHA1 (patch-src_Makefile) = d691b9b6de32aff4cc69807dada655cb691ee147
+SHA1 (sc-im-0.8.2.tar.gz) = 3dde8f1e4d95e7b6e121cbdfa680955773a6eedd
+RMD160 (sc-im-0.8.2.tar.gz) = afabf063feda1800fd07e6ee13b4036c7d5a200f
+SHA512 (sc-im-0.8.2.tar.gz) = ae02fd31eb7254208de26802ed6d8b21d77ce2d6997f4a2de5bd2f0a002c763f67f53e6c8e49d66ded096ecd8bf50b1117015e9a0356eaf11c3caef22cf4552c
+Size (sc-im-0.8.2.tar.gz) = 1619617 bytes
+SHA1 (patch-src_Makefile) = a8775db5d5a91cb1ee53946e4eff4fe3390a9dc5
