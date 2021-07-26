@@ -1,0 +1,14 @@
+$NetBSD: distinfo-2021.07,v 1.1 2021/07/26 06:36:41 mrg Exp $
+
+SHA1 (u-boot-2021.07.tar.bz2) = fc997c4efbb93df340c41e0c7b8a4137ab8b6ee3
+RMD160 (u-boot-2021.07.tar.bz2) = cffcaf0b1600b76da8176c2f7495ee8a15c86c6e
+SHA512 (u-boot-2021.07.tar.bz2) = 210b206a4626feb0985580d9448a97b499b09bf9b9313ca847a66624785e9e9b0fae8f2e329acd344f5f75cb722d2093dd0ee394311ddd1fde05e400ee71a24d
+Size (u-boot-2021.07.tar.bz2) = 17275746 bytes
+SHA1 (patch-arch_arm_mach-rockchip_rk3399_rk3399.c) = caa4068c635eaef5997501e154ec5cb11dcbf490
+SHA1 (patch-board_pine64_pinebook-pro-rk3399_pinebook-pro-rk3399.c) = 49954716240e93b33e13288f92b14f527ba15bdf
+SHA1 (patch-configs_pinebook-pro-rk3399_defconfig) = 6f9ddd87ef1486fa0785b2f00c6819ace1436853
+SHA1 (patch-configs_rock64-rk3328_defconfig) = 59076a9934c1ec0a492d600b3179209769753fd1
+SHA1 (patch-configs_rockpro64-rk3399_defconfig) = 4d355140bc2b70667827fde7165ce2541612572c
+SHA1 (patch-drivers_usb_host_usb-uclass.c) = 0e90ccfbc908d0bd1d35eff31c2d1a2ed52e9dd0
+SHA1 (patch-include_configs_rockchip-common.h) = 8d2fcde173fd6f5c2b27c8fe6eb9994b2b40e099
+SHA1 (patch-include_configs_rockpro64_rk3399.h) = 7efd0b09cbf627dc59d2a23a76dd6506c9efc4c9
