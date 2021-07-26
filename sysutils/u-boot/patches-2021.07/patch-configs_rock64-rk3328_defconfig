@@ -1,0 +1,13 @@
+$NetBSD: patch-configs_rock64-rk3328_defconfig,v 1.1 2021/07/26 06:36:41 mrg Exp $
+
+Load u-boot from 256KB.
+
+--- configs/rock64-rk3328_defconfig.orig	2021-04-05 08:03:29.000000000 -0700
++++ configs/rock64-rk3328_defconfig	2021-05-08 00:27:17.257028102 -0700
+@@ -1,5 +1,6 @@
+ CONFIG_ARM=y
+ CONFIG_ARCH_ROCKCHIP=y
++CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_SECTOR=0x200
+ CONFIG_SYS_TEXT_BASE=0x00200000
+ CONFIG_SPL_GPIO_SUPPORT=y
+ CONFIG_NR_DRAM_BANKS=1
