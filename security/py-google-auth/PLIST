@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/05/12 18:17:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/07/27 05:24:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/google/auth/crypt/es256.pyo
 ${PYSITELIB}/google/auth/crypt/rsa.py
 ${PYSITELIB}/google/auth/crypt/rsa.pyc
 ${PYSITELIB}/google/auth/crypt/rsa.pyo
+${PYSITELIB}/google/auth/downscoped.py
+${PYSITELIB}/google/auth/downscoped.pyc
+${PYSITELIB}/google/auth/downscoped.pyo
 ${PYSITELIB}/google/auth/environment_vars.py
 ${PYSITELIB}/google/auth/environment_vars.pyc
 ${PYSITELIB}/google/auth/environment_vars.pyo
