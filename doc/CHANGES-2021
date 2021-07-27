@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3983 2021/07/27 05:24:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3984 2021/07/27 08:10:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6355,3 +6355,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/mate-desktop to 1.24.1 [gutteridge 2021-07-27]
 	Updated devel/yarn to 1.22.11 [adam 2021-07-27]
 	Updated security/py-google-auth to 1.33.1 [adam 2021-07-27]
+	Updated net/openvpn to 2.5.3 [adam 2021-07-27]
+	Updated devel/py-setuptools to 57.4.0 [adam 2021-07-27]
