@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3988 2021/07/27 15:56:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3989 2021/07/27 23:22:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-tools to 1.39.0 [adam 2021-07-27]
 	Updated devel/py-google-api-core to 1.31.0 [adam 2021-07-27]
 	Updated www/py-google-api-python-client to 2.15.0 [adam 2021-07-27]
+	Updated databases/py-mysqldb to 1.2.5nb2 [tron 2021-07-27]
