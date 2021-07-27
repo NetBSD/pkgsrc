@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3982 2021/07/27 03:12:17 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.3983 2021/07/27 05:24:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6353,3 +6353,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/p5-goocanvas2 version 0.06 [bsiegert 2021-07-26]
 	Updated sysutils/nnn to 4.2 [fcambus 2021-07-26]
 	Updated x11/mate-desktop to 1.24.1 [gutteridge 2021-07-27]
+	Updated devel/yarn to 1.22.11 [adam 2021-07-27]
+	Updated security/py-google-auth to 1.33.1 [adam 2021-07-27]
