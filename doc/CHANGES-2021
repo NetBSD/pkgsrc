@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3981 2021/07/26 20:12:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3982 2021/07/27 03:12:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6352,3 +6352,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-bleach to 3.3.1 [adam 2021-07-26]
 	Added graphics/p5-goocanvas2 version 0.06 [bsiegert 2021-07-26]
 	Updated sysutils/nnn to 4.2 [fcambus 2021-07-26]
+	Updated x11/mate-desktop to 1.24.1 [gutteridge 2021-07-27]
