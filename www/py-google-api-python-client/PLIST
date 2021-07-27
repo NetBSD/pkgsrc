@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/12 18:18:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/07/27 15:55:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -39,9 +39,6 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/accesscontextmanager.v1be
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.4.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v12.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v13.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v14.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer2.v2beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexperiencereport.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/admin.datatransfer_v1.json
@@ -53,10 +50,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/admin.reportsv1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/admob.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/admob.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsense.v1.4.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/adsense.v14.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsense.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v4.1.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v41.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/alertcenter.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analytics.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsadmin.v1alpha.json
@@ -82,6 +77,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta1.
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/assuredworkloads.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquery.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatatransfer.v1.json
@@ -152,8 +148,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/containeranalysis.v1alpha
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/containeranalysis.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v21.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataflow.v1b3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1.json
@@ -171,8 +167,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/deploymentmanager.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/deploymentmanager.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.4.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v33.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v34.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.5.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v2beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3.json
@@ -192,7 +187,6 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/domains.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/domainsrdap.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/doubleclickbidmanager.v1.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/doubleclickbidmanager.v1.json
-${PYSITELIB}/googleapiclient/discovery_cache/documents/doubleclickbidmanager.v11.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/doubleclicksearch.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/drive.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/drive.v3.json
@@ -202,9 +196,11 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/eventarc.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/eventarc.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/factchecktools.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/fcm.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/fcmdata.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/file.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/file.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebase.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedatabase.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedynamiclinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1.json
@@ -242,6 +238,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/iam.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iamcredentials.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iap.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iap.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/ideahub.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/identitytoolkit.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/index.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/indexing.v3.json
@@ -249,6 +246,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v3p1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v4.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/keep.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/kgsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/language.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/language.v1beta1.json
@@ -271,16 +269,19 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/monitoring.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/monitoring.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessaccountmanagement.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinesslodging.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessnotifications.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessplaceactions.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkconnectivity.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkmanagement.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkmanagement.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/networksecurity.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/notebooks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oauth2.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/orgpolicy.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1alpha.json
@@ -295,6 +296,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta1.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/poly.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/prod_tt_sasportal.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/pubsub.v1.json
@@ -303,6 +305,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/pubsub.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/pubsublite.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/realtimebidding.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/realtimebidding.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/recaptchaenterprise.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/recommendationengine.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/recommender.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/recommender.v1beta1.json
@@ -312,6 +315,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/remotebuildexecution.v1.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/remotebuildexecution.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/remotebuildexecution.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/reseller.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/resourcesettings.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/retail.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/retail.v2alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/retail.v2beta.json
@@ -349,6 +353,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/spanner.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/speech.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/speech.v1p1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/speech.v2beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/sqladmin.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sqladmin.v1beta4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/storage.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/storagetransfer.v1.json
