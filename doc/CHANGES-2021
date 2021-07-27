@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3985 2021/07/27 09:31:34 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.3986 2021/07/27 10:07:04 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6358,3 +6358,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/openvpn to 2.5.3 [adam 2021-07-27]
 	Updated devel/py-setuptools to 57.4.0 [adam 2021-07-27]
 	Added devel/mimalloc version 2.0.2 [fcambus 2021-07-27]
+	Updated converters/bdf2psf to 1.205 [fcambus 2021-07-27]
