@@ -1,15 +1,17 @@
-$NetBSD: patch-drivers_pci_pcie__rockchip.c,v 1.1 2021/07/27 19:23:43 tnn Exp $
+$NetBSD: patch-drivers_pci_pcie__rockchip.c,v 1.2 2021/07/27 19:39:38 tnn Exp $
 
-u-boot-rockpro64: fix broken PCI config space handling
+u-boot-rockpro64: fix broken PCI config space handling:
 
 - Program bus number into the ECAM decoder for each access
 - Use type 1 PCI config cycles for config spaces behind bridge
 - Add a platform specific hack to the synchronous exception handler
   to deal with PCI-e subsystem triggering data aborts when probing
   nonexistent PCI devices.
+- properly delay after deasserting reset for downstream devices to
+  have time to initialize.
 
 Allows booting from PCI devices behind bridges and probing
-devices other than 0:0:0 and 0:1:0.
+devices other than 0:0:0 and 1:0:0.
 
 --- drivers/pci/pcie_rockchip.c.orig	2021-07-05 15:11:28.000000000 +0000
 +++ drivers/pci/pcie_rockchip.c
