@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/22 12:31:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/07/27 15:05:49 adam Exp $
 bin/minidump-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,7 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/minidump/__amain__.py
 ${PYSITELIB}/minidump/__amain__.pyc
 ${PYSITELIB}/minidump/__amain__.pyo
