@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2021/05/02 10:24:53 nia Exp $
+# $NetBSD: Makefile,v 1.31 2021/07/27 03:12:00 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-desktop-${VERSION:R}.0
+DISTNAME=	mate-desktop-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE desktop library
