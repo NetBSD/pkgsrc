@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3984 2021/07/27 08:10:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3985 2021/07/27 09:31:34 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6357,3 +6357,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-google-auth to 1.33.1 [adam 2021-07-27]
 	Updated net/openvpn to 2.5.3 [adam 2021-07-27]
 	Updated devel/py-setuptools to 57.4.0 [adam 2021-07-27]
+	Added devel/mimalloc version 2.0.2 [fcambus 2021-07-27]
