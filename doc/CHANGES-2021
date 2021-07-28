@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3991 2021/07/28 03:29:40 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3992 2021/07/28 03:41:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6369,3 +6369,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-mysqldb to 1.2.5nb2 [tron 2021-07-27]
 	Updated devel/p5-IO-Pager to 2.10 [wen 2021-07-28]
 	Updated devel/p5-IO-Tty to 1.16 [wen 2021-07-28]
+	Updated devel/p5-IPC-Shareable to 1.05 [wen 2021-07-28]
