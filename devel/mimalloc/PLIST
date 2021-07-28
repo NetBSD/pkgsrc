@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/28 14:23:13 fcambus Exp $
-cmake/mimalloc-config-version.cmake
-cmake/mimalloc-config.cmake
-cmake/mimalloc-release.cmake
-cmake/mimalloc.cmake
+@comment $NetBSD: PLIST,v 1.3 2021/07/28 21:34:03 fcambus Exp $
 include/mimalloc-new-delete.h
 include/mimalloc-override.h
 include/mimalloc.h
+lib/cmake/mimalloc/mimalloc-config-version.cmake
+lib/cmake/mimalloc/mimalloc-config.cmake
+lib/cmake/mimalloc/mimalloc-release.cmake
+lib/cmake/mimalloc/mimalloc.cmake
 lib/libmimalloc.a
 lib/libmimalloc.so
 lib/libmimalloc.so.2.0
-lib/mimalloc.o
