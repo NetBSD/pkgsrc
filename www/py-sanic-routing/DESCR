@@ -1,0 +1,4 @@
+Beginning in v21.3, Sanic makes use of this new AST-style router in two use
+cases: routing paths and routing signals. Therefore, this package comes with a
+BaseRouter that needs to be subclassed in order to be used for its specific
+needs.
