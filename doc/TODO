@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20893 2021/07/28 07:15:15 wen Exp $
+$NetBSD: TODO,v 1.20894 2021/07/28 14:03:28 wen Exp $
 
 Suggested new packages
 ======================
@@ -1568,7 +1568,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-GD-2.73
 	o p5-GIS-Distance-0.19
 	o p5-GStreamer-0.21
-	o p5-Geo-Distance-0.25
 	o p5-Geo-Ellipsoid-1.15
 	o p5-Geo-ShapeFile-3.01
 	o p5-GitLab-API-v3-1.06

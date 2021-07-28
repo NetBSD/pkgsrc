@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3999 2021/07/28 12:44:36 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4000 2021/07/28 14:03:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6378,3 +6378,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-sanic to 21.6.1 [adam 2021-07-28]
 	Updated devel/p5-Perl-MinimumVersion to 1.40 [wen 2021-07-28]
 	Updated devel/p5-Perl-PrereqScanner to 1.024 [wen 2021-07-28]
+	Updated geography/p5-Geo-Distance to 0.25 [wen 2021-07-28]
