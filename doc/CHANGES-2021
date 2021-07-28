@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4000 2021/07/28 14:03:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4001 2021/07/28 14:04:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6379,3 +6379,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Perl-MinimumVersion to 1.40 [wen 2021-07-28]
 	Updated devel/p5-Perl-PrereqScanner to 1.024 [wen 2021-07-28]
 	Updated geography/p5-Geo-Distance to 0.25 [wen 2021-07-28]
+	Updated devel/mob to 1.8.0 [schmonz 2021-07-28]
