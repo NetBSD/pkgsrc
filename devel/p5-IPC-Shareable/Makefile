@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/05/24 19:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/07/28 03:41:00 wen Exp $
 
-DISTNAME=	IPC-Shareable-0.61
+DISTNAME=	IPC-Shareable-1.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
@@ -11,14 +10,14 @@ HOMEPAGE=	https://metacpan.org/release/IPC-Shareable
 COMMENT=	Tie a variable to shared memory
 LICENSE=	gnu-gpl-v2
 
-#DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable
+DEPENDS+=	p5-String-CRC32>=0:../../textproc/p5-String-CRC32
 
 PERL5_PACKLIST=		auto/IPC/Shareable/.packlist
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-# The tests hang on NetBSD 3.0, both as unprivileged user and as root.
+# The tests hang on NetBSD 9.2, both as unprivileged user and as root.
 # The last words are:
 #
 # t/25ipc.......Could not create semaphore set: No space left on device
