@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3992 2021/07/28 03:41:56 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3993 2021/07/28 03:45:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6370,3 +6370,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-IO-Pager to 2.10 [wen 2021-07-28]
 	Updated devel/p5-IO-Tty to 1.16 [wen 2021-07-28]
 	Updated devel/p5-IPC-Shareable to 1.05 [wen 2021-07-28]
+	Updated devel/p5-LEOCHARRE-Dir to 1.09 [wen 2021-07-28]
