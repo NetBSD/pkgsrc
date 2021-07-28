@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/02/16 18:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/07/28 12:14:16 adam Exp $
 
-DISTNAME=	sanic-20.12.2
+DISTNAME=	sanic-21.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -12,12 +12,11 @@ LICENSE=	mit AND apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.15.4:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
-DEPENDS+=	${PYPKGPREFIX}-websockets>=8.1:../../www/py-websockets
-TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
+DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=0.7.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-websockets>=9.0:../../www/py-websockets
 
 USE_LANGUAGES=	# none
 
