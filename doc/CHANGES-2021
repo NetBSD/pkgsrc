@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3998 2021/07/28 12:32:13 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3999 2021/07/28 12:44:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6377,3 +6377,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/py-sanic-routing version 0.7.1 [adam 2021-07-28]
 	Updated www/py-sanic to 21.6.1 [adam 2021-07-28]
 	Updated devel/p5-Perl-MinimumVersion to 1.40 [wen 2021-07-28]
+	Updated devel/p5-Perl-PrereqScanner to 1.024 [wen 2021-07-28]
