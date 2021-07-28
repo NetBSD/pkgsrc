@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3997 2021/07/28 12:14:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.3998 2021/07/28 12:32:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6376,3 +6376,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/p5-PPIx-Utils version 0.003 [wen 2021-07-28]
 	Added www/py-sanic-routing version 0.7.1 [adam 2021-07-28]
 	Updated www/py-sanic to 21.6.1 [adam 2021-07-28]
+	Updated devel/p5-Perl-MinimumVersion to 1.40 [wen 2021-07-28]
