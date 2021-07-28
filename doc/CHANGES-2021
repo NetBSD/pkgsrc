@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3994 2021/07/28 03:48:19 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3995 2021/07/28 07:15:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6372,3 +6372,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-IPC-Shareable to 1.05 [wen 2021-07-28]
 	Updated devel/p5-LEOCHARRE-Dir to 1.09 [wen 2021-07-28]
 	Updated devel/p5-Log-Report to 1.33 [wen 2021-07-28]
+	Updated devel/p5-Perl-Critic to 1.140 [wen 2021-07-28]
