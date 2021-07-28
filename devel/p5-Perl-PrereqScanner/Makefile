@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2021/05/24 19:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/07/28 12:43:49 wen Exp $
 #
 
-DISTNAME=	Perl-PrereqScanner-1.023
+DISTNAME=	Perl-PrereqScanner-1.024
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta-Requirements>=2.120.630}:../../devel/p5-CPAN-Meta-Requirements
 DEPENDS+=	p5-Getopt-Long-Descriptive-[0-9]*:../../devel/p5-Getopt-Long-Descriptive
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Module-Path-[0-9]*:../../filesystems/p5-Module-Path
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-PPI>=1.205:../../devel/p5-PPI
