@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.3990 2021/07/28 03:24:34 wen Exp $
+$NetBSD: CHANGES-2021,v 1.3991 2021/07/28 03:29:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6368,3 +6368,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-google-api-python-client to 2.15.0 [adam 2021-07-27]
 	Updated databases/py-mysqldb to 1.2.5nb2 [tron 2021-07-27]
 	Updated devel/p5-IO-Pager to 2.10 [wen 2021-07-28]
+	Updated devel/p5-IO-Tty to 1.16 [wen 2021-07-28]
