@@ -1,0 +1,6 @@
+mold is a new linker that is optimized for modern multi-core machines.
+
+mold is command-line compatible with the other major linkers, GNU ld, GNU gold
+and LLVM lld, yet it is several times faster than them. Its goal is to increase
+programmer productivity by speeding up program build time, especially for rapid
+edit-build-test-debug cycles.
