@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/04/20 16:23:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/29 10:08:41 wiz Exp $
+#
+# Changelog:
+# https://www.eff.org/files/Changelog.txt
 
-VERSION=	2021.4.15
+VERSION=	2021.7.13
 DISTNAME=	https-everywhere-${VERSION}-eff
 PKGNAME=	tor-browser-${DISTNAME:S/-eff//}
 CATEGORIES=	security www
