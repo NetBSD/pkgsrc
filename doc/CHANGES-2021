@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4010 2021/07/29 10:08:51 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4011 2021/07/29 10:19:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6389,3 +6389,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/apache-ant to 1.10.11 [wiz 2021-07-29]
 	Updated x11/xkeyboard-config to 2.33 [wiz 2021-07-29]
 	Updated security/tor-browser-https-everywhere to 2021.7.13 [wiz 2021-07-29]
+	Updated devel/talloc to 2.3.3 [wiz 2021-07-29]
