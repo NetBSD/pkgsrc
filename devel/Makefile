@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3477 2021/07/27 09:30:54 fcambus Exp $
+# $NetBSD: Makefile,v 1.3478 2021/07/29 21:18:37 fcambus Exp $
 #
 
 COMMENT=	Development utilities
@@ -928,6 +928,7 @@ SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
 SUBDIR+=	mob
+SUBDIR+=	mold
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
