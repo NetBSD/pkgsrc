@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2021/07/29 11:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2021/07/29 14:00:57 wiz Exp $
 
 VERSION=	3.55.0
 DISTNAME=	FileZilla_${VERSION}_src
@@ -17,6 +17,11 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	gmake pkg-config msgfmt msgmerge xgettext
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+# remove on next update, when patch-src_commonui_Makefile.am is included
+USE_TOOLS+=	aclocal automake
+pre-configure:
+	cd ${WRKSRC} && aclocal && automake
 
 CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
