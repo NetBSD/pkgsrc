@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/06/18 07:40:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/07/29 19:32:17 adam Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -109,6 +109,7 @@ include/gtk-3.0/gtk/a11y/gtkcontaineraccessible.h
 include/gtk-3.0/gtk/a11y/gtkcontainercellaccessible.h
 include/gtk-3.0/gtk/a11y/gtkentryaccessible.h
 include/gtk-3.0/gtk/a11y/gtkexpanderaccessible.h
+include/gtk-3.0/gtk/a11y/gtkfilechooserwidgetaccessible.h
 include/gtk-3.0/gtk/a11y/gtkflowboxaccessible.h
 include/gtk-3.0/gtk/a11y/gtkflowboxchildaccessible.h
 include/gtk-3.0/gtk/a11y/gtkframeaccessible.h
