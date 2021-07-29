@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/03/12 10:35:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/07/29 10:28:47 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -9,11 +9,15 @@ include/libfilezilla/event_loop.hpp
 include/libfilezilla/file.hpp
 include/libfilezilla/format.hpp
 include/libfilezilla/glue/unix.hpp
+include/libfilezilla/glue/windows.hpp
 include/libfilezilla/glue/wx.hpp
 include/libfilezilla/glue/wxinvoker.hpp
 include/libfilezilla/hash.hpp
+include/libfilezilla/hostname_lookup.hpp
 include/libfilezilla/invoker.hpp
 include/libfilezilla/iputils.hpp
+include/libfilezilla/json.hpp
+include/libfilezilla/jws.hpp
 include/libfilezilla/libfilezilla.hpp
 include/libfilezilla/local_filesys.hpp
 include/libfilezilla/logger.hpp
@@ -22,7 +26,6 @@ include/libfilezilla/nonowning_buffer.hpp
 include/libfilezilla/optional.hpp
 include/libfilezilla/private/defs.hpp
 include/libfilezilla/private/visibility.hpp
-include/libfilezilla/private/windows.hpp
 include/libfilezilla/process.hpp
 include/libfilezilla/rate_limited_layer.hpp
 include/libfilezilla/rate_limiter.hpp
