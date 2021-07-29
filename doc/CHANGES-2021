@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4003 2021/07/28 17:48:46 scole Exp $
+$NetBSD: CHANGES-2021,v 1.4004 2021/07/29 09:46:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6382,3 +6382,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 1.8.0 [schmonz 2021-07-28]
 	Updated textproc/p5-PDF-API2 to 2.041 [wen 2021-07-28]
 	Updated textproc/split-thai to 2.6 [scole 2021-07-28]
+	Updated emulators/mame to 0.234 [wiz 2021-07-29]
