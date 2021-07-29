@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/29 21:17:17 fcambus Exp $
+bin/mold
+lib/mold/mold-wrapper.so
+man/man1/mold.1
