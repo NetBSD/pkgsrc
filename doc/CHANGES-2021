@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4017 2021/07/29 11:38:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4018 2021/07/29 19:16:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6397,3 +6397,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.1.0.4 [wiz 2021-07-29]
 	Updated devel/cmake to 3.21.1 [adam 2021-07-29]
 	Updated devel/cmake-gui to 3.21.1 [adam 2021-07-29]
+	Added audio/ykchorus version 0.2.2 [nia 2021-07-29]
