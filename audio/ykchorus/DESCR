@@ -1,0 +1,5 @@
+A chorus effect inspired by the one found in certain well-known Japanese
+vintage analog synthesizers (You Know which).
+
+This audio effect supports a variety of audio and plug-in frameworks: DSSI,
+JACK (stand-alone command line program), LADSPA, LV2, VST2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2021/07/20 06:37:18 nia Exp $
+# $NetBSD: Makefile,v 1.636 2021/07/29 19:16:08 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -511,6 +511,7 @@ SUBDIR+=	xmms-wma
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
 SUBDIR+=	xwave
+SUBDIR+=	ykchorus
 SUBDIR+=	ympd
 SUBDIR+=	zynaddsubfx
 

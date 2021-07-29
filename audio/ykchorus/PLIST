@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/07/29 19:16:08 nia Exp $
+bin/ykchorus
+lib/dssi/ykchorus-dssi.so
+lib/ladspa/ykchorus-ladspa.so
+lib/lv2/ykchorus.lv2/manifest.ttl
+lib/lv2/ykchorus.lv2/presets.ttl
+lib/lv2/ykchorus.lv2/ykchorus_dsp.so
+lib/lv2/ykchorus.lv2/ykchorus_dsp.ttl
+lib/lv2/ykchorus.lv2/ykchorus_ui.so
+lib/lv2/ykchorus.lv2/ykchorus_ui.ttl
+lib/vst/ykchorus-vst.so
