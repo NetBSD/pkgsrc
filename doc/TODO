@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20894 2021/07/28 14:03:28 wen Exp $
+$NetBSD: TODO,v 1.20895 2021/07/29 09:46:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -785,6 +785,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felinks-0.14.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o fetchmail-6.4.20
 	o filerunner-14.06.18.10
 	o filezilla-3.55.0
 	o flashplayer-0.4.13
