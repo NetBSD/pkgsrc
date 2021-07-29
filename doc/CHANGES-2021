@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4018 2021/07/29 19:16:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4019 2021/07/29 19:32:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6398,3 +6398,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.21.1 [adam 2021-07-29]
 	Updated devel/cmake-gui to 3.21.1 [adam 2021-07-29]
 	Added audio/ykchorus version 0.2.2 [nia 2021-07-29]
+	Updated devel/pango to 1.48.7 [adam 2021-07-29]
+	Updated x11/gtk3 to 3.24.30 [adam 2021-07-29]
