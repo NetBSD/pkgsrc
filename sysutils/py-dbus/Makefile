@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2020/03/08 16:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2021/07/29 10:00:06 wiz Exp $
 
-DISTNAME=	dbus-python-1.2.16
+DISTNAME=	dbus-python-1.2.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
@@ -13,6 +12,7 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN}
 
 PY_PATCHPLIST=			YES
 
