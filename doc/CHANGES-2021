@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4016 2021/07/29 11:18:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4017 2021/07/29 11:38:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6395,3 +6395,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/libfilezilla to 0.31.0 [wiz 2021-07-29]
 	Updated net/filezilla to 3.55.0 [wiz 2021-07-29]
 	Updated graphics/ImageMagick to 7.1.0.4 [wiz 2021-07-29]
+	Updated devel/cmake to 3.21.1 [adam 2021-07-29]
+	Updated devel/cmake-gui to 3.21.1 [adam 2021-07-29]
