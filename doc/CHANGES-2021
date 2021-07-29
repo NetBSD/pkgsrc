@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4006 2021/07/29 10:00:15 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4007 2021/07/29 10:02:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6385,3 +6385,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mame to 0.234 [wiz 2021-07-29]
 	Updated sysutils/dbus-python-common to 1.2.18 [wiz 2021-07-29]
 	Updated sysutils/py-dbus to 1.2.18 [wiz 2021-07-29]
+	Updated devel/libidn to 1.38 [wiz 2021-07-29]
