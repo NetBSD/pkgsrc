@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4014 2021/07/29 10:28:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4015 2021/07/29 11:10:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6393,3 +6393,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/fluidsynth to 2.2.2 [wiz 2021-07-29]
 	Updated devel/libidn2 to 2.3.2 [wiz 2021-07-29]
 	Updated net/libfilezilla to 0.31.0 [wiz 2021-07-29]
+	Updated net/filezilla to 3.55.0 [wiz 2021-07-29]
