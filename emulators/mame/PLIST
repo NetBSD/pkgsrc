@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2021/07/02 11:47:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2021/07/29 09:46:06 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -107,6 +107,7 @@ share/mame/hash/amigaecs_flop.xml
 share/mame/hash/amigaocs_flop.xml
 share/mame/hash/ampro.xml
 share/mame/hash/apc.xml
+share/mame/hash/apexc_cyl.xml
 share/mame/hash/apfimag_cass.xml
 share/mame/hash/apfm1000.xml
 share/mame/hash/apogee.xml
@@ -495,6 +496,7 @@ share/mame/hash/pcfx.xml
 share/mame/hash/pcw.xml
 share/mame/hash/pcw16.xml
 share/mame/hash/pcx_flop.xml
+share/mame/hash/pdp1_ptp.xml
 share/mame/hash/pecom_cass.xml
 share/mame/hash/pegasus_cart.xml
 share/mame/hash/pencil2.xml
@@ -687,6 +689,7 @@ share/mame/hash/vsmile_cart.xml
 share/mame/hash/vsmile_cd.xml
 share/mame/hash/vsmileb_cart.xml
 share/mame/hash/vsmilem_cart.xml
+share/mame/hash/vtech2_cass.xml
 share/mame/hash/vtech_innotab_cart.xml
 share/mame/hash/vtech_innotv_cart.xml
 share/mame/hash/vtech_storio_cart.xml
