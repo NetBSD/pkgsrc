@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile,v 1.1 2021/07/29 19:16:08 nia Exp $
+
+Avoid GNU-install-isms.
+
+--- Makefile.orig	2018-12-18 15:27:20.000000000 +0000
++++ Makefile
+@@ -55,13 +55,17 @@ clean:
+ 	rm -rf bin build
+ 
+ install:
+-	@install -Dm755 bin/ykchorus-dssi$(LIB_EXT) -t $(DESTDIR)$(DSSI_DIR)
+-	@install -Dm755 bin/ykchorus-ladspa$(LIB_EXT) -t $(DESTDIR)$(LADSPA_DIR)
+-	@install -Dm755 bin/ykchorus-vst$(LIB_EXT) -t $(DESTDIR)$(VST_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(DSSI_DIR)
++	$(BSD_INSTALL_LIB) bin/ykchorus-dssi$(LIB_EXT) $(DESTDIR)$(DSSI_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LADSPA_DIR)
++	$(BSD_INSTALL_LIB) bin/ykchorus-ladspa$(LIB_EXT) $(DESTDIR)$(LADSPA_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(VST_DIR)
++	$(BSD_INSTALL_LIB) bin/ykchorus-vst$(LIB_EXT) $(DESTDIR)$(VST_DIR)
+ 	@install -dm755 $(DESTDIR)$(LV2_DIR) && \
+ 		cp -rf bin/ykchorus.lv2 $(DESTDIR)$(LV2_DIR)
+ ifeq ($(HAVE_JACK),true)
+-	@install -Dm755 bin/ykchorus$(APP_EXT) -t $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) bin/ykchorus$(APP_EXT) $(DESTDIR)$(BINDIR)
+ endif
+ 
+ install-user:
