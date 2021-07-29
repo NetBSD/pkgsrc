@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/07/29 21:17:17 fcambus Exp $
+
+SHA1 (mold-0.9.3.tar.gz) = 1de86f59f5944394ecd1fdbd9f649273d6154f49
+RMD160 (mold-0.9.3.tar.gz) = ca0b058e579db04040f51d1ad669d2911d64b5e1
+SHA512 (mold-0.9.3.tar.gz) = 5b4850a00a5b2cb63c1aff13ef8d2cfdd79088187e1d82c6c0abad81d0c81866253533c67164db03a5d663fc48f5246f930a286ed6ca5b47ef658587be930fd0
+Size (mold-0.9.3.tar.gz) = 3374270 bytes
+SHA1 (patch-Makefile) = c1d3e55b6413df800cf92301d6e9726ff7e81569
