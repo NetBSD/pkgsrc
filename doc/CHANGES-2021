@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4004 2021/07/29 09:46:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4005 2021/07/29 09:59:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6383,3 +6383,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-PDF-API2 to 2.041 [wen 2021-07-28]
 	Updated textproc/split-thai to 2.6 [scole 2021-07-28]
 	Updated emulators/mame to 0.234 [wiz 2021-07-29]
+	Updated sysutils/dbus-python-common to 1.2.18 [wiz 2021-07-29]
