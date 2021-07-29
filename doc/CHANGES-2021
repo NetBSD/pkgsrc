@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4008 2021/07/29 10:04:39 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4009 2021/07/29 10:07:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6387,3 +6387,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-dbus to 1.2.18 [wiz 2021-07-29]
 	Updated devel/libidn to 1.38 [wiz 2021-07-29]
 	Updated devel/apache-ant to 1.10.11 [wiz 2021-07-29]
+	Updated x11/xkeyboard-config to 2.33 [wiz 2021-07-29]
