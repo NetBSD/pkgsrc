@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.24 2021/03/12 10:44:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/07/29 11:10:31 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
+lib/libfzclient-commonui-private.la
 lib/libfzclient-private.la
 man/man1/filezilla.1
 man/man1/fzputtygen.1
