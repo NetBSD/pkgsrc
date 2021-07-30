@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.53 2021/04/21 13:24:24 adam Exp $
+# $NetBSD: Makefile,v 1.54 2021/07/30 22:47:18 tnn Exp $
 #
 
-V=		5.1.9
+V=		5.1.10
 DISTNAME=	kicad-${V}
-PKGREVISION=	1
 CATEGORIES=	cad
-MASTER_SITES=	https://launchpad.net/kicad/5.0/${V}/+download/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	https://gitlab.com/kicad/code/kicad/-/archive/${V}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.kicad-pcb.org/
+HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Schematic and PCB CAD software (stable branch)
 LICENSE=	gnu-gpl-v3
 
