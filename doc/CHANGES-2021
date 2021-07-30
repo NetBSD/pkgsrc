@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4024 2021/07/30 12:55:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4025 2021/07/30 17:39:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6408,3 +6408,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/pulseaudio to 15.0 [ryoon 2021-07-30]
 	Updated devel/py-pylint to 2.9.6 [adam 2021-07-30]
 	Updated fonts/py-fonttools to 4.25.2 [adam 2021-07-30]
+	Updated devel/py-isort to 5.9.3 [adam 2021-07-30]
+	Added devel/py-isort4 version 4.3.21 [adam 2021-07-30]
