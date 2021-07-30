@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2020/12/18 08:22:39 adam Exp $
+# $NetBSD: Makefile,v 1.50 2021/07/30 04:19:22 adam Exp $
 
-DISTNAME=	requests-2.25.1
+DISTNAME=	requests-2.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://requests.readthedocs.io/
 COMMENT=	HTTP library, written in Python, for human beings
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.3.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.12.1:../../www/py-urllib3
@@ -29,8 +27,11 @@ REPLACE_PYTHON+=	requests/certs.py
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
 TEST_DEPENDS=	# none; py-test-httpbin is incompatible with py27
 do-test:
+.else
+DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2.0.0:../../converters/py-charset-normalizer
 .endif
 
 .include "../../lang/python/application.mk"
