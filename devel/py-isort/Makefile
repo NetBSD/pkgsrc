@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/05/16 17:13:40 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/07/30 17:39:01 adam Exp $
 
-DISTNAME=	isort-4.3.21
+DISTNAME=	isort-5.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -10,25 +10,21 @@ HOMEPAGE=	https://github.com/timothycrosley/isort
 COMMENT=	Python utility / library to sort imports
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-backports.functools_lru_cache
-DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
-.endif
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.3:../../comms/py-colorama
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
+.for bin in isort isort-identify-imports
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} isort isort-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test_isort.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test_isort.py
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

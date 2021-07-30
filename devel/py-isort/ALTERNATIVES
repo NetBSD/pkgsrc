@@ -1,1 +1,2 @@
 bin/isort @PREFIX@/bin/isort-@PYVERSSUFFIX@
+bin/isort-identify-imports @PREFIX@/bin/isort-identify-imports-@PYVERSSUFFIX@
