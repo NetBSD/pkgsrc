@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4022 2021/07/30 05:46:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4023 2021/07/30 12:21:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6405,3 +6405,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-requests to 2.26.0 [adam 2021-07-30]
 	Updated time/khal to 0.10.4 [adam 2021-07-30]
 	Updated net/py-softlayer to 5.9.6 [adam 2021-07-30]
+	Updated audio/pulseaudio to 15.0 [ryoon 2021-07-30]
