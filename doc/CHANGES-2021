@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4020 2021/07/29 21:18:59 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4021 2021/07/30 04:19:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6401,3 +6401,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pango to 1.48.7 [adam 2021-07-29]
 	Updated x11/gtk3 to 3.24.30 [adam 2021-07-29]
 	Added devel/mold version 0.9.3 [fcambus 2021-07-29]
+	Added converters/py-charset-normalizer version 2.0.3 [adam 2021-07-30]
+	Updated devel/py-requests to 2.26.0 [adam 2021-07-30]
