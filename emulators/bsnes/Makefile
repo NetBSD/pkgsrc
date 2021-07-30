@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 06:53:47 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/07/30 12:26:47 ryoon Exp $
 
 DISTNAME=	bsnes-115
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bsnes-emu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
