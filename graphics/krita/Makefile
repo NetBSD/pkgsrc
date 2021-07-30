@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2021/07/13 11:28:27 markd Exp $
+# $NetBSD: Makefile,v 1.76 2021/07/30 12:26:56 ryoon Exp $
 
 DISTNAME=		krita-4.4.3
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 

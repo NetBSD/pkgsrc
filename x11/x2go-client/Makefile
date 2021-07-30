@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/04/21 13:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/07/30 12:27:14 ryoon Exp $
 
 DISTNAME=	x2goclient-${PKGVER}
 PKGVER=		4.1.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 net
 MASTER_SITES=	http://code.x2go.org/releases/source/x2goclient/
 

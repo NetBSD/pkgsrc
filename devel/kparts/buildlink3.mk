@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2021/04/21 11:40:18 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2021/07/30 12:26:46 ryoon Exp $
 
 BUILDLINK_TREE+=	kparts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kparts
 KPARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kparts+=	kparts>=5.21.0
-BUILDLINK_ABI_DEPENDS.kparts?=	kparts>=5.80.0nb1
+BUILDLINK_ABI_DEPENDS.kparts?=	kparts>=5.80.0nb2
 BUILDLINK_PKGSRCDIR.kparts?=	../../devel/kparts
 
 .include "../../devel/kio/buildlink3.mk"

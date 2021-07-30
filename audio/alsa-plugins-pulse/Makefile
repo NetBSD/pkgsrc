@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/06/30 15:41:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2021/07/30 12:26:37 ryoon Exp $
 
 DISTNAME=	alsa-plugins-1.2.5
 PKGNAME=	${DISTNAME:S/plugins/plugins-pulse/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/plugins/
 EXTRACT_SUFX=	.tar.bz2
