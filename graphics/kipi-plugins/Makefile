@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2021/04/21 11:40:24 adam Exp $
+# $NetBSD: Makefile,v 1.148 2021/07/30 12:26:56 ryoon Exp $
 
 DISTNAME=	kipi-plugins-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://userbase.kde.org/KIPI/
