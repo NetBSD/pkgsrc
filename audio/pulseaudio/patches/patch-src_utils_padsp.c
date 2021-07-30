@@ -1,4 +1,4 @@
-$NetBSD: patch-src_utils_padsp.c,v 1.2 2018/09/11 16:39:42 jperkin Exp $
+$NetBSD: patch-src_utils_padsp.c,v 1.3 2021/07/30 12:21:06 ryoon Exp $
 
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
@@ -6,7 +6,7 @@ stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
 SOUND_PCM_* is not available on SunOS.
 
---- src/utils/padsp.c.orig	2018-07-13 19:06:13.000000000 +0000
+--- src/utils/padsp.c.orig	2021-07-27 20:02:27.853869700 +0000
 +++ src/utils/padsp.c
 @@ -48,6 +48,10 @@
  #include <linux/sockios.h>
@@ -105,42 +105,16 @@ SOUND_PCM_* is not available on SunOS.
          case SOUND_PCM_READ_BITS:
              debug(DEBUG_LEVEL_NORMAL, __FILE__": SOUND_PCM_READ_BITS\n");
  
-@@ -2394,21 +2422,33 @@ fail:
+@@ -2394,7 +2422,7 @@ fail:
      return ret;
  }
  
--#ifndef __GLIBC__
-+/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 600000000 ||  \
-+    (__NetBSD_Version__ > 699000000 && __NetBSD_Version__ < 699000700) )
-+# define OLD_NETBSD_IOCTL_CALL
-+#endif
-+
-+#if !defined(__GLIBC__) && !defined(__NetBSD__)
+-#if !defined(__GLIBC__) && !defined(__FreeBSD__)
++#if !defined(__GLIBC__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
  int ioctl(int fd, int request, ...) {
-+#elif defined(OLD_NETBSD_IOCTL_CALL)
-+int ioctl(int fd, u_long request, void *_argp) {
  #else
  int ioctl(int fd, unsigned long request, ...) {
- #endif
-     fd_info *i;
-+#if !defined(OLD_NETBSD_IOCTL_CALL)
-     va_list args;
-+#endif
-     void *argp;
-     int r, _errno = 0;
- 
-     debug(DEBUG_LEVEL_VERBOSE, __FILE__": ioctl()\n");
- 
-+#if defined(OLD_NETBSD_IOCTL_CALL)
-     va_start(args, request);
-     argp = va_arg(args, void *);
-     va_end(args);
-+#endif
- 
-     if (!function_enter()) {
-         LOAD_IOCTL_FUNC();
-@@ -2536,7 +2576,7 @@ int stat(const char *pathname, struct st
+@@ -2536,7 +2564,7 @@ int stat(const char *pathname, struct st
  }
  #ifdef HAVE_OPEN64
  #undef stat64
