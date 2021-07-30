@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2021/07/30 12:21:06 ryoon Exp $
+
+* Non-MS Windows case uses libintl for dgettext.
+  Fix build under NetBSD.
+
+--- meson.build.orig	2021-07-27 20:02:27.711868000 +0000
++++ meson.build
+@@ -348,7 +349,7 @@ if cc.has_header_symbol('sys/syscall.h',
+ endif
+ 
+ if cc.has_function('dgettext')
+-  if host_machine.system() != 'windows'
++  if host_machine.system() == 'windows'
+     libintl_dep = []
+   else
+     libintl_dep = cc.find_library('intl')
