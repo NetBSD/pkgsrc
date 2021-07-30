@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/06/01 05:29:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/07/30 12:55:42 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -231,6 +231,15 @@ ${PYSITELIB}/fontTools/otlLib/error.pyo
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.py
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyc
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyo
+${PYSITELIB}/fontTools/otlLib/optimize/__init__.py
+${PYSITELIB}/fontTools/otlLib/optimize/__init__.pyc
+${PYSITELIB}/fontTools/otlLib/optimize/__init__.pyo
+${PYSITELIB}/fontTools/otlLib/optimize/__main__.py
+${PYSITELIB}/fontTools/otlLib/optimize/__main__.pyc
+${PYSITELIB}/fontTools/otlLib/optimize/__main__.pyo
+${PYSITELIB}/fontTools/otlLib/optimize/gpos.py
+${PYSITELIB}/fontTools/otlLib/optimize/gpos.pyc
+${PYSITELIB}/fontTools/otlLib/optimize/gpos.pyo
 ${PYSITELIB}/fontTools/pens/__init__.py
 ${PYSITELIB}/fontTools/pens/__init__.pyc
 ${PYSITELIB}/fontTools/pens/__init__.pyo
@@ -333,6 +342,9 @@ ${PYSITELIB}/fontTools/svgLib/path/shapes.pyo
 ${PYSITELIB}/fontTools/t1Lib/__init__.py
 ${PYSITELIB}/fontTools/t1Lib/__init__.pyc
 ${PYSITELIB}/fontTools/t1Lib/__init__.pyo
+${PYSITELIB}/fontTools/tfmLib.py
+${PYSITELIB}/fontTools/tfmLib.pyc
+${PYSITELIB}/fontTools/tfmLib.pyo
 ${PYSITELIB}/fontTools/ttLib/__init__.py
 ${PYSITELIB}/fontTools/ttLib/__init__.pyc
 ${PYSITELIB}/fontTools/ttLib/__init__.pyo
