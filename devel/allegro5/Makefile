@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/04/19 10:14:56 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/07/30 12:26:43 ryoon Exp $
 
 DISTNAME=	allegro-5.2.7.0
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
 GITHUB_PROJECT=	allegro5
