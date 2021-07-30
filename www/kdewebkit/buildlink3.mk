@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2021/04/21 11:40:42 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2021/07/30 12:27:10 ryoon Exp $
 
 BUILDLINK_TREE+=	kdewebkit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdewebkit
 KDEWEBKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdewebkit+=	kdewebkit>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdewebkit?=	kdewebkit>=5.80.0nb1
+BUILDLINK_ABI_DEPENDS.kdewebkit?=	kdewebkit>=5.80.0nb2
 BUILDLINK_PKGSRCDIR.kdewebkit?=		../../www/kdewebkit
 
 .include "../../devel/kparts/buildlink3.mk"

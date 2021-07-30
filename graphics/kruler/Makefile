@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/04/21 11:41:56 adam Exp $
+# $NetBSD: Makefile,v 1.57 2021/07/30 12:26:56 ryoon Exp $
 
 DISTNAME=	kruler-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/kruler/
