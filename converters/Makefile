@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2021/04/28 09:53:18 adam Exp $
+# $NetBSD: Makefile,v 1.188 2021/07/30 04:14:49 adam Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -114,6 +114,7 @@ SUBDIR+=	py-base58
 SUBDIR+=	py-bidi
 SUBDIR+=	py-cairosvg
 SUBDIR+=	py-chardet
+SUBDIR+=	py-charset-normalizer
 SUBDIR+=	py-confusable_homoglyphs
 SUBDIR+=	py-emoji
 SUBDIR+=	py-jpCodecs
