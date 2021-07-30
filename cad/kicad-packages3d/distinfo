@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/02/21 18:56:36 bouyer Exp $
+$NetBSD: distinfo,v 1.4 2021/07/30 22:47:18 tnn Exp $
 
-SHA1 (kicad-packages3D-5.1.9.tar.gz) = 94b7af4874587ee67e17260fb1c5743384f8a99e
-RMD160 (kicad-packages3D-5.1.9.tar.gz) = ee2bb4191c089ea4e7634a0534d9a716bed50ba0
-SHA512 (kicad-packages3D-5.1.9.tar.gz) = 1c939bdd0385375e2e585702bd258a0d6f75413e6f60c4804164c08f44706e2ffe1fce5d7f74e30249b3440a440161dc5b11afb3a64052503e15fe201b7ba5ba
-Size (kicad-packages3D-5.1.9.tar.gz) = 942608847 bytes
+SHA1 (kicad-packages3D-5.1.10.tar.bz2) = 1a7fae847f14c0bfa5f1f36aa6321052779a276c
+RMD160 (kicad-packages3D-5.1.10.tar.bz2) = 692e75b5c0641f5f13d87db41707b752e6c32007
+SHA512 (kicad-packages3D-5.1.10.tar.bz2) = 95c25fe94f3e198208f073c121d234508aa8e67a621d17bc1737d14fe860c9a8cece6e7b66037f9a9c7f1a06f104b942dc2ff59f318e8b6854bdddb1d238faf4
+Size (kicad-packages3D-5.1.10.tar.bz2) = 727194444 bytes
