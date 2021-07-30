@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/21 18:56:35 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/07/30 22:47:18 tnn Exp $
 bin/_cvpcb.kiface
 bin/_eeschema.kiface
 bin/_gerbview.kiface
@@ -218,6 +218,7 @@ share/kicad/demos/simulation/pspice/pspice.sch
 share/kicad/demos/simulation/pspice/schematic_libspice.dcm
 share/kicad/demos/simulation/pspice/schematic_libspice.lib
 share/kicad/demos/simulation/pspice/sym-lib-table
+share/kicad/demos/simulation/rectifier/diode.mod
 share/kicad/demos/simulation/rectifier/rectifier-cache.lib
 share/kicad/demos/simulation/rectifier/rectifier.pro
 share/kicad/demos/simulation/rectifier/rectifier.sch
