@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2021/02/21 18:56:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2021/07/30 22:47:18 tnn Exp $
 #
 
-V=		5.1.9
+V=		5.1.10
 DISTNAME=	kicad-packages3D-${V}
 PKGNAME=	kicad-packages3d-${V}
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/${V}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kicad-pcb.org/
