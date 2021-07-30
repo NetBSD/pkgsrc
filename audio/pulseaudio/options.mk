@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2019/10/27 12:44:28 kamil Exp $
+# $NetBSD: options.mk,v 1.14 2021/07/30 12:21:06 ryoon Exp $
 
 .include "../../comms/lirc/available.mk"
 
@@ -16,7 +16,7 @@ PLIST_VARS+=		avahi gsettings x11 lirc
 .include "../../net/avahi/buildlink3.mk"
 PLIST.avahi=		yes
 .else
-CONFIGURE_ARGS+=	--disable-avahi
+MESON_ARGS+=		-Davahi=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mgsettings)

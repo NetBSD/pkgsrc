@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.160 2021/07/13 16:18:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.161 2021/07/30 12:21:06 ryoon Exp $
 
-DISTNAME=	pulseaudio-14.2
-PKGREVISION=	3
+DISTNAME=	pulseaudio-15.0
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +19,13 @@ SUBST_FILES.oss+=	src/modules/oss/module-oss.c
 SUBST_FILES.oss+=	src/modules/module-detect.c
 SUBST_VARS.oss+=	DEVOSSAUDIO
 
+SUBST_CLASSES+=		egdir
+SUBST_STAGE.egdir=	pre-configure
+SUBST_MESSAGE.egdir=	Set EGDIR for config file installation for pkgsrc
+SUBST_FILES.egdir+=	src/pulse/meson.build
+SUBST_FILES.egdir+=	src/daemon/meson.build
+SUBST_VARS.egdir+=	EGDIR
+
 # Requires --desktop in msgfmt.
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
@@ -29,13 +35,13 @@ GCC_REQD+=	4.8
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoheader autoconf automake bash:run gmake gm4
+USE_TOOLS+=		bash:run gmake gm4
 USE_TOOLS+=		msgfmt perl:build pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tcpwrap
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--without-fftw
+MESON_ARGS+=		-Dtcpwrap=disabled
+MESON_ARGS+=		--localstatedir=${VARBASE}
+MESON_ARGS+=		--sysconfdir=${PKG_SYSCONFBASEDIR}
+MESON_ARGS+=		-Dfftw=disabled
+MESON_ARGS+=		-Ddoxygen=false
 CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
@@ -49,7 +55,9 @@ REPLACE_BASH+=	src/utils/pa-info
 .include "../../mk/bsd.prefs.mk"
 
 # Some tests are incompatible for NetBSD at least
-CONFIGURE_ARGS.NetBSD+=	--disable-default-build-tests
+.if ${OPSYS} == "NetBSD"
+MESON_ARGS+=		-Dtests=false
+.endif
 
 # broken test for TLS
 .if ((${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)) || \
@@ -58,18 +66,10 @@ CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
-CONFIGURE_ARGS.FreeBSD+=	--without-caps
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
-MAKE_ENV+=		EGDIR=${EGDIR}
 
 MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
-
-# Disable NEON on NetBSD/aarch64 (does not build with pulseaudio 11.1)
-# use of q0 register in aarch64 is considered not valid
-.if !empty(PKGSRC_COMPILER:Mclang) && (${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin") && ${MACHINE_CPU} == "aarch64"
-CONFIGURE_ARGS+=	--disable-neon-opt
-.endif
 
 # Use native atomic ops on NetBSD >= 5.0, otherwise
 # fallback to libatomic_ops
@@ -78,7 +78,7 @@ CONFIGURE_ARGS+=	--disable-neon-opt
 .endif
 
 # Version number in patch-configure.ac.must be changed too.
-PLIST_SUBST+=		PULSELIBVER=14.2
+PLIST_SUBST+=		PULSELIBVER=15.0
 PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
 # Build module-mmkbd-evdev.so under Linux
@@ -106,7 +106,12 @@ PLIST.oss=		yes
 
 .include "options.mk"
 
-LIBS.NetBSD+=		${LIBOSSAUDIO}
+# LIBS is not passed to meson build system. Use LDFLAGS instead.
+LDFLAGS.NetBSD+=	${LIBOSSAUDIO}
+
+# Do not depend on RPATH $ORIGIN.
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulse-${PKGVERSION_NOREV}/modules
 
 INSTALLATION_DIRS=	share/examples/pulse
 
@@ -123,7 +128,7 @@ CONF_FILES=		${EGDIR}/client.conf ${PKG_SYSCONFDIR}/client.conf
 CONF_FILES+=		${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
 CONF_FILES+=		${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
 CONF_FILES+=		${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
-CONF_FILES+=		${EGDIR}/pulseaudio-system.conf \
+CONF_FILES+=		${EGDIR}/dbus-1/system.d/pulseaudio-system.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
 PKG_GROUPS=		${PULSE_GROUP}
@@ -131,16 +136,14 @@ PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
 PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
 PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
-
+.include "../../devel/meson/build.mk"
 .if ${OPSYS} != Linux && ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
-.include "../../databases/gdbm/buildlink3.mk"
+.include "../../databases/tdb/buildlink3.mk"
+.include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

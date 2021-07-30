@@ -1,0 +1,11 @@
+$NetBSD: patch-src_pulse_meson.build,v 1.1 2021/07/30 12:21:06 ryoon Exp $
+
+--- src/pulse/meson.build.orig	2021-07-27 20:02:27.811869100 +0000
++++ src/pulse/meson.build
+@@ -134,5 +134,5 @@ client_conf_file = configure_file(
+   input : 'client.conf.in',
+   output : 'client.conf',
+   configuration : client_conf,
+-  install_dir : pulsesysconfdir,
++  install_dir : '@EGDIR@',
+ )
