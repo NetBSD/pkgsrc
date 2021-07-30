@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/06/10 07:33:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/07/30 05:46:34 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -38,6 +38,9 @@ ${PYSITELIB}/SoftLayer/CLI/account/invoices.pyo
 ${PYSITELIB}/SoftLayer/CLI/account/item_detail.py
 ${PYSITELIB}/SoftLayer/CLI/account/item_detail.pyc
 ${PYSITELIB}/SoftLayer/CLI/account/item_detail.pyo
+${PYSITELIB}/SoftLayer/CLI/account/licenses.py
+${PYSITELIB}/SoftLayer/CLI/account/licenses.pyc
+${PYSITELIB}/SoftLayer/CLI/account/licenses.pyo
 ${PYSITELIB}/SoftLayer/CLI/account/orders.py
 ${PYSITELIB}/SoftLayer/CLI/account/orders.pyc
 ${PYSITELIB}/SoftLayer/CLI/account/orders.pyo
@@ -278,6 +281,18 @@ ${PYSITELIB}/SoftLayer/CLI/dns/zone_list.pyo
 ${PYSITELIB}/SoftLayer/CLI/dns/zone_print.py
 ${PYSITELIB}/SoftLayer/CLI/dns/zone_print.pyc
 ${PYSITELIB}/SoftLayer/CLI/dns/zone_print.pyo
+${PYSITELIB}/SoftLayer/CLI/email/__init__.py
+${PYSITELIB}/SoftLayer/CLI/email/__init__.pyc
+${PYSITELIB}/SoftLayer/CLI/email/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/email/detail.py
+${PYSITELIB}/SoftLayer/CLI/email/detail.pyc
+${PYSITELIB}/SoftLayer/CLI/email/detail.pyo
+${PYSITELIB}/SoftLayer/CLI/email/edit.py
+${PYSITELIB}/SoftLayer/CLI/email/edit.pyc
+${PYSITELIB}/SoftLayer/CLI/email/edit.pyo
+${PYSITELIB}/SoftLayer/CLI/email/list.py
+${PYSITELIB}/SoftLayer/CLI/email/list.pyc
+${PYSITELIB}/SoftLayer/CLI/email/list.pyo
 ${PYSITELIB}/SoftLayer/CLI/environment.py
 ${PYSITELIB}/SoftLayer/CLI/environment.pyc
 ${PYSITELIB}/SoftLayer/CLI/environment.pyo
@@ -524,6 +539,18 @@ ${PYSITELIB}/SoftLayer/CLI/image/import.pyo
 ${PYSITELIB}/SoftLayer/CLI/image/list.py
 ${PYSITELIB}/SoftLayer/CLI/image/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/image/list.pyo
+${PYSITELIB}/SoftLayer/CLI/licenses/__init__.py
+${PYSITELIB}/SoftLayer/CLI/licenses/__init__.pyc
+${PYSITELIB}/SoftLayer/CLI/licenses/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/licenses/cancel.py
+${PYSITELIB}/SoftLayer/CLI/licenses/cancel.pyc
+${PYSITELIB}/SoftLayer/CLI/licenses/cancel.pyo
+${PYSITELIB}/SoftLayer/CLI/licenses/create.py
+${PYSITELIB}/SoftLayer/CLI/licenses/create.pyc
+${PYSITELIB}/SoftLayer/CLI/licenses/create.pyo
+${PYSITELIB}/SoftLayer/CLI/licenses/create_options.py
+${PYSITELIB}/SoftLayer/CLI/licenses/create_options.pyc
+${PYSITELIB}/SoftLayer/CLI/licenses/create_options.pyo
 ${PYSITELIB}/SoftLayer/CLI/loadbal/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/loadbal/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/loadbal/__init__.pyo
@@ -917,6 +944,9 @@ ${PYSITELIB}/SoftLayer/CLI/virt/usage.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/vlan/cancel.py
+${PYSITELIB}/SoftLayer/CLI/vlan/cancel.pyc
+${PYSITELIB}/SoftLayer/CLI/vlan/cancel.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyo
@@ -1088,6 +1118,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_LBaaS_LoadBalancer.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_LBaaS_Member.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_LBaaS_Member.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_LBaaS_Member.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Message_Delivery_Email_Sendgrid.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Message_Delivery_Email_Sendgrid.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Message_Delivery_Email_Sendgrid.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.pyo
@@ -1139,6 +1172,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Product_Package.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Product_Package_Preset.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Product_Package_Preset.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Product_Package_Preset.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Provisioning_Maintenance_Window.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Provisioning_Maintenance_Window.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Provisioning_Maintenance_Window.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Resource_Metadata.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Resource_Metadata.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Resource_Metadata.pyo
@@ -1157,6 +1193,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Security_Certificate.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Security_Ssh_Key.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Security_Ssh_Key.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Security_Ssh_Key.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Software_AccountLicense.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Software_AccountLicense.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Software_AccountLicense.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Tag.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Tag.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Tag.pyo
@@ -1217,6 +1256,9 @@ ${PYSITELIB}/SoftLayer/managers/dedicated_host.pyo
 ${PYSITELIB}/SoftLayer/managers/dns.py
 ${PYSITELIB}/SoftLayer/managers/dns.pyc
 ${PYSITELIB}/SoftLayer/managers/dns.pyo
+${PYSITELIB}/SoftLayer/managers/email.py
+${PYSITELIB}/SoftLayer/managers/email.pyc
+${PYSITELIB}/SoftLayer/managers/email.pyo
 ${PYSITELIB}/SoftLayer/managers/event_log.py
 ${PYSITELIB}/SoftLayer/managers/event_log.pyc
 ${PYSITELIB}/SoftLayer/managers/event_log.pyo
@@ -1235,6 +1277,12 @@ ${PYSITELIB}/SoftLayer/managers/image.pyo
 ${PYSITELIB}/SoftLayer/managers/ipsec.py
 ${PYSITELIB}/SoftLayer/managers/ipsec.pyc
 ${PYSITELIB}/SoftLayer/managers/ipsec.pyo
+${PYSITELIB}/SoftLayer/managers/license.py
+${PYSITELIB}/SoftLayer/managers/license.pyc
+${PYSITELIB}/SoftLayer/managers/license.pyo
+${PYSITELIB}/SoftLayer/managers/licenses.py
+${PYSITELIB}/SoftLayer/managers/licenses.pyc
+${PYSITELIB}/SoftLayer/managers/licenses.pyo
 ${PYSITELIB}/SoftLayer/managers/load_balancer.py
 ${PYSITELIB}/SoftLayer/managers/load_balancer.pyc
 ${PYSITELIB}/SoftLayer/managers/load_balancer.pyo
