@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4026 2021/07/30 22:49:58 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.4027 2021/07/31 08:12:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6417,3 +6417,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/kicad-packages3d to 5.1.10 [tnn 2021-07-30]
 	Updated cad/kicad-symbols to 5.1.10 [tnn 2021-07-30]
 	Updated cad/kicad-templates to 5.1.10 [tnn 2021-07-30]
+	Updated x11/modular-xorg-server to 1.20.13 [wiz 2021-07-31]
