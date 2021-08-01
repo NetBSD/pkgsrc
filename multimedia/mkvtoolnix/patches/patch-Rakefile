@@ -1,10 +1,10 @@
-$NetBSD: patch-Rakefile,v 1.6 2021/07/14 07:39:05 adam Exp $
+$NetBSD: patch-Rakefile,v 1.7 2021/08/01 18:09:38 adam Exp $
 
 Leave pkgsrc to handle security features and optimization.
 
---- Rakefile.orig	2021-07-10 10:32:55.000000000 +0000
+--- Rakefile.orig	2021-07-31 12:27:41.000000000 +0000
 +++ Rakefile
-@@ -131,8 +131,6 @@ def setup_globals
+@@ -132,8 +132,6 @@ def setup_globals
    cflags_common           += " #{c(:OPTIMIZATION_CFLAGS)} -D_FILE_OFFSET_BITS=64"
    cflags_common           += " -DQT_NO_KEYWORDS"
    cflags_common           += " -DMTX_LOCALE_DIR=\\\"#{c(:localedir)}\\\" -DMTX_PKG_DATA_DIR=\\\"#{c(:pkgdatadir)}\\\" -DMTX_DOC_DIR=\\\"#{c(:docdir)}\\\""
@@ -13,11 +13,11 @@ Leave pkgsrc to handle security features and optimization.
    cflags_common           += " -g3 -DDEBUG"                                              if c?(:USE_DEBUG)
    cflags_common           += " -pg"                                                      if c?(:USE_PROFILING)
    cflags_common           += " -fsanitize=undefined"                                     if c?(:USE_UBSAN)
-@@ -162,7 +160,6 @@ def setup_globals
+@@ -163,7 +161,6 @@ def setup_globals
    cxxflags                += " #{c(:QT_CFLAGS)} #{c(:BOOST_CPPFLAGS)} #{c(:USER_CXXFLAGS)}"
  
    ldflags                  = ""
 -  ldflags                 += determine_stack_protector_flags
    ldflags                 += " -pg"                                     if c?(:USE_PROFILING)
-   ldflags                 += " -fuse-ld=lld"                            if is_clang? && !c(:LLVM_LLD).empty?
+   ldflags                 += " -fuse-ld=lld"                            if is_clang? && !c(:LLVM_LLD).empty? && !$building_for[:macos]
    ldflags                 += " -Llib/libebml/src -Llib/libmatroska/src" if c?(:EBML_MATROSKA_INTERNAL)
