@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4033 2021/08/01 18:10:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4034 2021/08/01 18:17:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6427,3 +6427,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ipython to 7.26.0 [adam 2021-08-01]
 	Updated textproc/py-sphinx-autoapi to 1.8.3 [adam 2021-08-01]
 	Updated multimedia/mkvtoolnix to 60.0.0 [adam 2021-08-01]
+	Updated textproc/py-xlsxwriter to 1.4.5 [adam 2021-08-01]
+	Updated devel/py-bitarray to 2.2.4 [adam 2021-08-01]
