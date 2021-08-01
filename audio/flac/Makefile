@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/12/17 13:59:50 nros Exp $
+# $NetBSD: Makefile,v 1.56 2021/08/01 05:07:54 nia Exp $
 
 DISTNAME=	flac-1.3.3
 CATEGORIES=	audio archivers
@@ -19,10 +19,16 @@ CONFIGURE_ARGS+=	--disable-xmms-plugin
 PKGCONFIG_OVERRIDE+=	src/libFLAC++/flac++.pc.in
 PKGCONFIG_OVERRIDE+=	src/libFLAC/flac.pc.in
 
+BUILD_DEFS+=		PKGSRC_MKPIE
+
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+.if ${MACHINE_ARCH} == "i386"
+.  if ${PKGSRC_MKPIE:tl} == "yes"
+CONFIGURE_ARGS+=	--disable-asm-optimizations
+.  else
+TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
+.  endif
 .endif
 
 .if !empty(MACHINE_PLATFORM:M*-*-powerpc)
