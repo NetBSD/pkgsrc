@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4031 2021/08/01 09:03:14 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4032 2021/08/01 09:04:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6422,3 +6422,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk13 to 13.38.3 [jnemeth 2021-08-01]
 	Updated net/dbip-asn-lite to 2021.08 [fcambus 2021-08-01]
 	Updated net/dbip-city-lite to 2021.08 [fcambus 2021-08-01]
+	Updated net/dbip-country-lite to 2021.08 [fcambus 2021-08-01]
