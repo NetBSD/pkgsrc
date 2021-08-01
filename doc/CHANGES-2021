@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4028 2021/08/01 02:42:07 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.4029 2021/08/01 02:57:20 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6419,3 +6419,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/kicad-templates to 5.1.10 [tnn 2021-07-30]
 	Updated x11/modular-xorg-server to 1.20.13 [wiz 2021-07-31]
 	Updated comms/asterisk18 to 18.5.1 [jnemeth 2021-08-01]
+	Updated comms/asterisk13 to 13.38.3 [jnemeth 2021-08-01]
