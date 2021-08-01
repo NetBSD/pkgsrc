@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/07/26 18:51:49 yhardy Exp $
+$NetBSD: distinfo,v 1.18 2021/08/01 10:57:54 mef Exp $
 
-SHA1 (streamlink-2.3.0/streamlink-2.3.0.tar.gz) = c9413f1a633be9e8d83848436e269c7c709c8782
-RMD160 (streamlink-2.3.0/streamlink-2.3.0.tar.gz) = ed6be4178135a0f92ac666733713282ded8fa2ed
-SHA512 (streamlink-2.3.0/streamlink-2.3.0.tar.gz) = f52766df5e417ab951022f4a0656b1e8213120ef55f2db6237bfd504b3e4ed0e18e180363e4966fcfe32d42f9f1aecb93107572ad23c122366c8ecb3359fc732
-Size (streamlink-2.3.0/streamlink-2.3.0.tar.gz) = 489431 bytes
+SHA1 (streamlink-2.3.0.tar.gz) = c4757bf7987d75a76b4d042e71e44017a4894750
+RMD160 (streamlink-2.3.0.tar.gz) = 329b0fb7e87c25fd65a8a487034523a681d45ad0
+SHA512 (streamlink-2.3.0.tar.gz) = 4658b9c2b90f6d7deebb5ef639bc679c20233907db7b24727189191b573be0e34eac9cda06e14999cff360f1a3e4ec739df31d2a97e0821609a06ab178fe3bc8
+Size (streamlink-2.3.0.tar.gz) = 489420 bytes
