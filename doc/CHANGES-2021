@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4035 2021/08/02 05:58:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4036 2021/08/02 10:38:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6431,3 +6431,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-bitarray to 2.2.4 [adam 2021-08-01]
 	Updated graphics/jasper to 2.0.33 [adam 2021-08-02]
 	Updated devel/memcached to 1.6.10 [adam 2021-08-02]
+	Updated x11/xeyes to 1.2.0 [wiz 2021-08-02]
