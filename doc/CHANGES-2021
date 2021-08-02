@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4040 2021/08/02 10:48:34 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4041 2021/08/02 12:24:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6436,3 +6436,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libXfont2 to 2.0.5 [wiz 2021-08-02]
 	Updated x11/libXft to 2.3.4 [wiz 2021-08-02]
 	Updated x11/xorg-cf-files to 1.0.7 [wiz 2021-08-02]
+	Updated textproc/p5-Text-Markdown-Discount to 0.13 [schmonz 2021-08-02]
