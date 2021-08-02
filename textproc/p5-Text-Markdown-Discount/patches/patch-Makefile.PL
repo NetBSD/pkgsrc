@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.PL,v 1.4 2020/01/21 10:28:51 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.5 2021/08/02 12:24:08 schmonz Exp $
 
 Remove build instructions for the local copy of libdiscount.
 
---- Makefile.PL.orig	2020-01-21 00:16:59.000000000 +0000
+--- Makefile.PL.orig	2021-08-02 00:38:11.000000000 +0000
 +++ Makefile.PL
 @@ -4,66 +4,6 @@ use warnings;
  use ExtUtils::MakeMaker;
@@ -65,7 +65,7 @@ Remove build instructions for the local copy of libdiscount.
 -    return sprintf('
 -$(MYEXTLIB):
 -	%s
--', qq{( cd $extdir; CC='cc -fPIC' sh configure.sh; make )\n});
+-', qq{( cd $extdir; CC='cc -fPIC' sh configure.sh --with-fenced-code --with-dl=both; make )\n});
 -}
 -
  WriteMakefile(
