@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/22 16:16:37 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/02 15:40:34 pin Exp $
 
 DISTNAME=	so-0.4.5
 CATEGORIES=	www
@@ -11,8 +11,6 @@ COMMENT=	Terminal interface for Stack Overflow
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES=	c # rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
