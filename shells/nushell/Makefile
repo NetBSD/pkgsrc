@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/02 15:20:33 pin Exp $
 
 DISTNAME=	nushell-0.34.0
 CATEGORIES=	shells
@@ -11,7 +11,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
