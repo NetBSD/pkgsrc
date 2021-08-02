@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/06/24 08:47:13 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/08/02 15:02:29 pin Exp $
 
 SHA1 (addr2line-0.14.1.crate) = 5e02a34c470fcb872eee8ee11037f0dce619404a
 RMD160 (addr2line-0.14.1.crate) = a152b28f56c4bcf8fcbb9575764b2d85fe0d6256
@@ -1064,10 +1064,10 @@ SHA1 (uuid-0.8.2.crate) = 536cb0f788e03a22854974c7423b040c7e2891e0
 RMD160 (uuid-0.8.2.crate) = 31d3432fe08a91a716782bbbfb7776acc5d34f39
 SHA512 (uuid-0.8.2.crate) = 5a1f5ead9a920b9bbc120c02049c24b62ec215765e486d3a15c5015ef49fa506206efb737e6f6555cf6e2eddddfe55f0ca1d7dcfa9aa8bcf3e0ef570a54fa2d8
 Size (uuid-0.8.2.crate) = 37909 bytes
-SHA1 (v0.5.0-alpha1.tar.gz) = af8a7d7b5545df96af57825e7695b53f79172dc1
-RMD160 (v0.5.0-alpha1.tar.gz) = 3df6ced0af42f449bb0e41dcef0b3dd17f4bcfaa
-SHA512 (v0.5.0-alpha1.tar.gz) = ba96dc01f2424715a3f0cdfcb437cec64e307124f7fc383489bc2877d47a8dae840d642d0779f31b1d3a53b425cbf48f7387645d10621868caf42d317e3fa3c1
-Size (v0.5.0-alpha1.tar.gz) = 76877 bytes
+SHA1 (v0.6.0-alpha1.tar.gz) = e192577159faa73302e7ec559da472d923f43ffe
+RMD160 (v0.6.0-alpha1.tar.gz) = 3f0e1a9c61cfd72a3154cc7a2d7111eb4f81e1e1
+SHA512 (v0.6.0-alpha1.tar.gz) = 939ef26690f30343606f78c380b4c8ca8440de818bf0b202f573a0f1b2274d6b502d86f5fda1c158e2302e1f78f1492f5b389c968d5d3fb14a9f923bacca9fa4
+Size (v0.6.0-alpha1.tar.gz) = 82348 bytes
 SHA1 (value-bag-1.0.0-alpha.6.crate) = a20be35e56ce129fbc1b04473450f77a6fe4721d
 RMD160 (value-bag-1.0.0-alpha.6.crate) = 6e1f7a2046ba87835264703d0e02bd4ca987a817
 SHA512 (value-bag-1.0.0-alpha.6.crate) = 1723a8e7698b832b288845b466ae7efb5ee1cf90d7510ece286774fc71e8f322596c05e03732d9e51af2db460b689b3e473cc11a94f97c9015972d6db3c6ba80
@@ -1140,6 +1140,10 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
+SHA1 (yaml-rust-0.3.5.crate) = ce826110990fc010ef46a56331cd38410bab9ba8
+RMD160 (yaml-rust-0.3.5.crate) = bd42d0b20164b16ec0411dd3c8ec6842163e0177
+SHA512 (yaml-rust-0.3.5.crate) = 0cc2a0f0b308e13c16bb2c3fc797eb1a0bcbfc285f0b42446359099c58a290a545d1589c09a2c779d5dde4f8c1f4261bc117f2df0359e281b995c7a115e5994b
+Size (yaml-rust-0.3.5.crate) = 42087 bytes
 SHA1 (yansi-0.5.0.crate) = 870223a9e019e20fc6e44d7e861116dd2a4bbe95
 RMD160 (yansi-0.5.0.crate) = 7cf63cb77b734921816491a3bec77e0afa8e0602
 SHA512 (yansi-0.5.0.crate) = 43cd9003962d63d308b42a1788be2612e8d69d5acbcde68d0a8e17df9899123be4e6381aa6c485d060183dfbd08a0c689e8be7430754b26909e4e95db552f6ce
