@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/06/24 08:44:50 pin Exp $
+# $NetBSD: Makefile,v 1.25 2021/08/02 15:37:32 pin Exp $
 
 DISTNAME=	broot-1.6.0
 # Do not update this package. Newer versions require Rust-1.53.0
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
