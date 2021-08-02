@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:38 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/02 15:39:35 pin Exp $
 
 DISTNAME=	suckit-0.1.2
 CATEGORIES=	www
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
