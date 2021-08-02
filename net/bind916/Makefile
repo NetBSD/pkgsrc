@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/07/22 13:30:24 he Exp $
+# $NetBSD: Makefile,v 1.23 2021/08/02 18:45:35 jklos Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/software/bind/
-COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.14
+COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.16
 LICENSE=	mpl-2.0
 
 CONFLICTS+=	host-[0-9]*
