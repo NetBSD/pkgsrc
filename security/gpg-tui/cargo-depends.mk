@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2021/07/19 15:19:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2021/08/02 14:54:56 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -20,7 +20,7 @@ CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	colorsys-0.6.3
 CARGO_CRATE_DEPENDS+=	conv-0.3.3
 CARGO_CRATE_DEPENDS+=	copypasta-0.7.1
-CARGO_CRATE_DEPENDS+=	copypasta-ext-0.3.4
+CARGO_CRATE_DEPENDS+=	copypasta-ext-0.3.7
 CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
 CARGO_CRATE_DEPENDS+=	crossterm-0.20.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
