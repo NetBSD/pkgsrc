@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/19 15:18:16 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/02 15:18:44 pin Exp $
 
 DISTNAME=	dust-0.6.1
 CATEGORIES=	sysutils
@@ -11,8 +11,6 @@ COMMENT=	More intuitive version of du in rust
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
