@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4048 2021/08/02 15:05:06 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4049 2021/08/02 15:07:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/git-delta to 0.8.3 [wiz 2021-08-02]
 	Updated textproc/paperoni to 0.6.0 [pin 2021-08-02]
 	Updated security/pleaser to 0.4.2 [pin 2021-08-02]
+	Updated sysutils/xplr to 0.14.5 [pin 2021-08-02]
