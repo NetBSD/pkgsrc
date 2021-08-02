@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4036 2021/08/02 10:38:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4037 2021/08/02 10:40:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/jasper to 2.0.33 [adam 2021-08-02]
 	Updated devel/memcached to 1.6.10 [adam 2021-08-02]
 	Updated x11/xeyes to 1.2.0 [wiz 2021-08-02]
+	Updated x11/xwd to 1.0.8 [wiz 2021-08-02]
