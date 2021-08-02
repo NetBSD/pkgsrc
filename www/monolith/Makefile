@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/07/22 16:16:38 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/02 15:41:21 pin Exp $
 
 DISTNAME=	monolith-2.6.1
 CATEGORIES=	www
@@ -11,8 +11,6 @@ COMMENT=	CLI tool for saving complete web pages as a single HTML file
 LICENSE=	cc0-1.0-universal
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
