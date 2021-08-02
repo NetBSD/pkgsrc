@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:37 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/02 15:42:09 pin Exp $
 
 DISTNAME=	longboard-0.0.7
 CATEGORIES=	www
@@ -11,8 +11,6 @@ COMMENT=	Longboard: The easy way to surf
 LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
