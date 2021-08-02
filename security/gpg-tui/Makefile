@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2021/08/02 14:54:56 pin Exp $
 
-DISTNAME=	gpg-tui-0.7.2
+DISTNAME=	gpg-tui-0.7.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=			c
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
