@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/04/05 18:31:56 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/08/02 20:35:42 adam Exp $
 
-SHA1 (pybind11-2.6.2.tar.gz) = 3782868ebaa3a156153e4ea676757d90430022ef
-RMD160 (pybind11-2.6.2.tar.gz) = 1ccbbea54460edc2d9559c1277e1d719d6a9d289
-SHA512 (pybind11-2.6.2.tar.gz) = 8b76250817ced714445982f936f801b33a9184664f1f9a43ac18c81116361581a0475eda228620c3f3a3f9bd2c681aaa41e8dea0139039c6164332481937d3cb
-Size (pybind11-2.6.2.tar.gz) = 174597 bytes
+SHA1 (pybind11-2.7.0.tar.gz) = 72e6f26b75aad23cf769abfc04d3259ee9c1b2d3
+RMD160 (pybind11-2.7.0.tar.gz) = b0bf55851ef79d6a0520f1477924df6d95899cc4
+SHA512 (pybind11-2.7.0.tar.gz) = 6664be885581f5a7184f1cc16ea80a34feee8a7aaab0e6e4bee36ebf7692bd0067dd711e106620fd63554b5d34c992d243f07030a0b2b3fe5f4c7e76694bc2a6
+Size (pybind11-2.7.0.tar.gz) = 179214 bytes
