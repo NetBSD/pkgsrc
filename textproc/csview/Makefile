@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/12 12:24:41 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/02 15:17:40 pin Exp $
 
 DISTNAME=	csview-0.3.8
 CATEGORIES=	textproc
@@ -18,7 +18,6 @@ DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		prettytable-rs-${PRETTYTABLE-RS_REV}.tar.gz
 SITES.prettytable-rs-${PRETTYTABLE-RS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=wfxr/}prettytable-rs/archive/${PRETTYTABLE-RS_REV}.tar.gz
 
-USE_LANGUAGES=		c	# Rust, but needs toolchain for linking
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
