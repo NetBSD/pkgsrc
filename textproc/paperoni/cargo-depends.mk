@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2021/06/24 08:47:13 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2021/08/02 15:02:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.14.1
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -285,5 +285,6 @@ CARGO_CRATE_DEPENDS+=	wepoll-sys-3.0.1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	yaml-rust-0.3.5
 CARGO_CRATE_DEPENDS+=	yansi-0.5.0
 CARGO_CRATE_DEPENDS+=	zip-0.5.12
