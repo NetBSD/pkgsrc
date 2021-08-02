@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4045 2021/08/02 14:57:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4046 2021/08/02 15:01:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6440,4 +6440,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php74 to 7.4.22 [taca 2021-08-02]
 	Updated lang/php80 to 8.0.9 [taca 2021-08-02]
 	Updated security/gpg-tui to 0.7.3 [pin 2021-08-02]
+	Updated audio/ncspot to 0.8.1 [pin 2021-08-02]
 	Updated textproc/git-delta to 0.8.3 [wiz 2021-08-02]
