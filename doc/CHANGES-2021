@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4042 2021/08/02 14:08:32 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4043 2021/08/02 14:10:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6438,3 +6438,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xorg-cf-files to 1.0.7 [wiz 2021-08-02]
 	Updated textproc/p5-Text-Markdown-Discount to 0.13 [schmonz 2021-08-02]
 	Updated lang/php74 to 7.4.22 [taca 2021-08-02]
+	Updated lang/php80 to 8.0.9 [taca 2021-08-02]
