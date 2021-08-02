@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/04/25 19:58:20 pin Exp $
+$NetBSD: distinfo,v 1.12 2021/08/02 15:04:48 pin Exp $
 
 SHA1 (aho-corasick-0.7.15.crate) = f5054e1316a7f59bc37b647faa72a8e800fc17af
 RMD160 (aho-corasick-0.7.15.crate) = 003b3030dbd9c452279e3f01802edff67d4c14d5
@@ -72,10 +72,10 @@ SHA1 (pam-sys-0.5.6.crate) = 026da526179fe07837aa221581426c817fb0d1cf
 RMD160 (pam-sys-0.5.6.crate) = c9ce1a53a6fff2c79da80d83acf068130494afbc
 SHA512 (pam-sys-0.5.6.crate) = f1aeb09fe4ed8a2a330d5a176c3f6a8b10c7fde6215f09212485b9170c3738686193b306c658d38373bff622522d58e319517613c2778db6e08c729cef8d5a07
 Size (pam-sys-0.5.6.crate) = 12738 bytes
-SHA1 (please-0.4.1.tar.gz) = e2e5523a8cdc236b137890bc620f1784d4bd3b29
-RMD160 (please-0.4.1.tar.gz) = 99e64d50603846ecc84c077f2c12c4c501c0a6e7
-SHA512 (please-0.4.1.tar.gz) = 63fabf0a648a17473e3aac83b34b0bad8c62f691ed2a337cf9628f48bd24fe5f78f36491770d273d5837c0c72c6c5ffe8f13923054a120df9c8ee4cc490011b2
-Size (please-0.4.1.tar.gz) = 44670 bytes
+SHA1 (please-0.4.2.tar.gz) = ac58a48beb658dfbd28b0e3cfaf834e344954e95
+RMD160 (please-0.4.2.tar.gz) = b5b01846b042491281e2bd0ae52f092a369ab47b
+SHA512 (please-0.4.2.tar.gz) = ce48f5a69fd911e042b78d9ea3c75db8d3bdb04cfada8518bc9af8e737ddae096afd3a3834796a8be69b7537dd0d8c196907969e4c35be5f9626167a7ab41575
+Size (please-0.4.2.tar.gz) = 46938 bytes
 SHA1 (ppv-lite86-0.2.10.crate) = 7a665cbfcc1d0a172d7d1d05a9596b7f3d6b83aa
 RMD160 (ppv-lite86-0.2.10.crate) = 01d542acbb34f9c86111d6be7a2195dd95011fe6
 SHA512 (ppv-lite86-0.2.10.crate) = c9941052e504b9b310024064026e4b1d540dd877705ef450a833d9ff6dee70ba874cdad68c46381a71d5b54482cd80b3dbb8e0c225758fd339069031a55195f1
