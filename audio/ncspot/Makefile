@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2021/07/30 12:26:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2021/08/02 14:56:46 pin Exp $
 
-DISTNAME=	ncspot-0.7.3
-PKGREVISION=	1
+DISTNAME=	ncspot-0.8.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=			c c++	# rust, but needs a toolchain to link
+USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
