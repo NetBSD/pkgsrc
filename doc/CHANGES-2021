@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4043 2021/08/02 14:10:02 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4044 2021/08/02 14:55:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6439,3 +6439,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Text-Markdown-Discount to 0.13 [schmonz 2021-08-02]
 	Updated lang/php74 to 7.4.22 [taca 2021-08-02]
 	Updated lang/php80 to 8.0.9 [taca 2021-08-02]
+	Updated security/gpg-tui to 0.7.3 [pin 2021-08-02]
