@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/27 04:53:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/08/02 20:30:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyphen/__init__.py
 ${PYSITELIB}/pyphen/__init__.pyc
 ${PYSITELIB}/pyphen/__init__.pyo
 ${PYSITELIB}/pyphen/dictionaries/hyph_af_ZA.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_be_BY.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_bg_BG.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_cs_CZ.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_da_DK.dic
@@ -17,6 +18,7 @@ ${PYSITELIB}/pyphen/dictionaries/hyph_de_DE.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_el_GR.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_en_GB.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_en_US.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_eo.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_es.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_et_EE.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_fr.dic
@@ -28,6 +30,7 @@ ${PYSITELIB}/pyphen/dictionaries/hyph_is.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_it_IT.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_lt.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_lv_LV.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_mn_MN.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_nb_NO.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_nl_NL.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_nn_NO.dic
@@ -38,6 +41,7 @@ ${PYSITELIB}/pyphen/dictionaries/hyph_ro_RO.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_ru_RU.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sk_SK.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sl_SI.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_sq_AL.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sr.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sr_Latn.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sv.dic
