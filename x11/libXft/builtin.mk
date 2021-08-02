@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:11 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2021/08/02 10:47:05 wiz Exp $
 
 BUILTIN_PKG:=	libXft
 
@@ -31,7 +31,7 @@ MAKEVARS+=		IS_BUILTIN.libXft
 # Extract the version number from the header file, but if it's not
 # there, then pretend it's from version 2.0.
 #
-BUILTIN_VERSION.libXft!=							\
+BUILTIN_VERSION.libXft!=						\
 	${AWK} 'BEGIN { M = 2; m = ".0"; r = "" }			\
 		/\#define[ 	]*XFT_MAJOR/ { M = $$3 }		\
 		/\#define[ 	]*XFT_MINOR/ { m = "."$$3 }		\
