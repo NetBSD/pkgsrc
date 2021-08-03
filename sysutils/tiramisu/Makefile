@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2021/05/02 20:06:33 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/03 17:59:00 pin Exp $
 
-DISTNAME=	tiramisu-1.0
+DISTNAME=	tiramisu-2.0alpha
+PKGNAME=	tiramisu-2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sweets/}
-#Build from a specific commit until upstream provides a new release
-#Patch by Leonardo Taccari upstreamed and merged but, not included
-#in the tag release
 GITHUB_PROJECT=	tiramisu
-GITHUB_TAG=	8eb946dae0e2f98d3850d89e1bb535640e8c3266
+GITHUB_TAG=	v2.0alpha
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Sweets/tiramisu/
