@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.26 2020/09/21 13:09:21 schmonz Exp $
+# $NetBSD: clang.mk,v 1.27 2021/08/03 07:28:15 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -65,6 +65,8 @@ _RELRO_LDFLAGS=		-Wl,-z,relro -Wl,-z,now
 # The user can choose the level of stack smashing protection.
 .if ${PKGSRC_USE_SSP} == "all"
 _SSP_CFLAGS=		-fstack-protector-all
+.elif ${PKGSRC_USE_SSP} == "strong"
+_SSP_CFLAGS=		-fstack-protector-strong
 .else
 _SSP_CFLAGS=		-fstack-protector
 .endif
