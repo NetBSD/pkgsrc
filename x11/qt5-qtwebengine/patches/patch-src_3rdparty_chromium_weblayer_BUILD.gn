@@ -1,0 +1,27 @@
+$NetBSD: patch-src_3rdparty_chromium_weblayer_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/weblayer/BUILD.gn.orig	2020-07-15 18:56:49.000000000 +0000
++++ src/3rdparty/chromium/weblayer/BUILD.gn
+@@ -586,13 +586,21 @@ source_set("weblayer_lib_base") {
+     }
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [
+       "//build/config/freetype",
+       "//third_party/fontconfig",
+     ]
+   }
+ 
++  if (is_bsd) {
++    deps -= [
++      "//components/crash/content/browser",
++      "//components/crash/core/app",
++      "//components/crash/core/common",
++    ]
++  }
++
+   if (toolkit_views) {
+     deps += [ "//ui/views" ]
+   }

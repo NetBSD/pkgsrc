@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_tools_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/perfetto/tools/BUILD.gn.orig	2020-07-15 19:01:39.000000000 +0000
++++ src/3rdparty/chromium/third_party/perfetto/tools/BUILD.gn
+@@ -27,7 +27,7 @@ group("tools") {
+     "ftrace_proto_gen",
+     "protoprofile",
+   ]
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     deps += [
+       "busy_threads",
+       "cpu_utilization",
+@@ -43,7 +43,7 @@ group("tools") {
+   }
+ }
+ 
+-if (is_linux && enable_perfetto_heapprofd) {
++if ((is_linux || is_bsd) && enable_perfetto_heapprofd) {
+   executable("profiling_sample_distribution") {
+     sources = [ "profiling_sample_distribution.cc" ]
+     deps = [

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_extensions_common_api_runtime.json,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/extensions/common/api/runtime.json.orig	2020-07-08 21:40:43.000000000 +0000
++++ src/3rdparty/chromium/extensions/common/api/runtime.json
+@@ -68,7 +68,7 @@
+         "id": "PlatformOs",
+         "type": "string",
+         "description": "The operating system chrome is running on.",
+-        "enum": ["mac", "win", "android", "cros", "linux", "openbsd"]
++        "enum": ["mac", "win", "android", "cros", "linux", "openbsd", "freebsd", "netbsd"]
+       },
+       {
+         "id": "PlatformArch",

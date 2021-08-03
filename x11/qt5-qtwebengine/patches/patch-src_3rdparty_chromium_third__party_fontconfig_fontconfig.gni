@@ -1,0 +1,15 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_fontconfig_fontconfig.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/fontconfig/fontconfig.gni.orig	2020-07-15 18:56:30.000000000 +0000
++++ src/3rdparty/chromium/third_party/fontconfig/fontconfig.gni
+@@ -5,8 +5,8 @@
+ import("//build/config/chromeos/args.gni")
+ import("//build/config/features.gni")
+ 
+-assert(is_linux)
++assert(is_linux || is_bsd)
+ 
+ declare_args() {
+-  use_bundled_fontconfig = is_linux && !is_chromeos_device
++  use_bundled_fontconfig = (is_linux || is_bsd) && !is_chromeos_device
+ }

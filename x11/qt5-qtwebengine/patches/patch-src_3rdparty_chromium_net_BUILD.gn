@@ -1,0 +1,62 @@
+$NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/net/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ src/3rdparty/chromium/net/BUILD.gn
+@@ -1234,7 +1234,7 @@ component("net") {
+       ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "base/network_change_notifier_linux.cc",
+         "base/network_change_notifier_linux.h",
+@@ -1253,6 +1253,12 @@ component("net") {
+       ]
+     }
+ 
++    if (is_bsd) {
++      sources += [
++        "base/platform_mime_util_linux.cc",
++      ]
++    }
++
+     if (is_mac) {
+       sources += [
+         "base/network_notification_thread_mac.cc",
+@@ -1383,7 +1389,7 @@ component("net") {
+       }
+     }
+ 
+-    if (is_android || is_chromeos) {
++    if (is_android || is_chromeos || is_bsd) {
+       sources += [
+         "base/network_change_notifier_posix.cc",
+         "base/network_change_notifier_posix.h",
+@@ -1416,7 +1422,7 @@ component("net") {
+     }
+ 
+     # Use getifaddrs() on POSIX platforms, except Linux and Android.
+-    if (is_posix && !is_linux && !is_android) {
++    if (is_posix && ((!is_linux && !is_android) || is_bsd)) {
+       sources += [
+         "base/network_interfaces_getifaddrs.cc",
+         "base/network_interfaces_getifaddrs.h",
+@@ -4545,7 +4551,7 @@ test("net_unittests") {
+     sources += [ "socket/udp_socket_posix_unittest.cc" ]
+   }
+ 
+-  if (is_android || is_chromeos) {
++  if (is_android || is_chromeos || is_bsd) {
+     sources += [ "base/network_change_notifier_posix_unittest.cc" ]
+   }
+ 
+@@ -4750,7 +4756,7 @@ test("net_unittests") {
+   }
+ 
+   # Use getifaddrs() on POSIX platforms, except Linux and Android.
+-  if (is_posix && !is_linux && !is_android) {
++  if (is_posix && ((!is_linux && !is_android) || is_bsd)) {
+     sources += [ "base/network_interfaces_getifaddrs_unittest.cc" ]
+   }
+ 

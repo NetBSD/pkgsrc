@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_crashpad_crashpad_client_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/crashpad/crashpad/client/BUILD.gn.orig	2020-07-15 18:56:49.000000000 +0000
++++ src/3rdparty/chromium/third_party/crashpad/crashpad/client/BUILD.gn
+@@ -78,6 +78,12 @@ static_library("client") {
+     sources += [ "crashpad_client_fuchsia.cc" ]
+   }
+ 
++  if (crashpad_is_posix) {
++    sources += [
++      "crashpad_client_posix.cc",
++    ]
++  }
++
+   if (crashpad_is_linux || crashpad_is_android || crashpad_is_fuchsia) {
+     sources += [ "crash_report_database_generic.cc" ]
+   }
