@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/07/17 20:54:16 js Exp $
+$NetBSD: distinfo,v 1.6 2021/08/03 19:51:56 js Exp $
 
-SHA1 (element-v1.7.32.tar.gz) = 0959dfbe3155764513c72e39d16197f9aa43eefa
-RMD160 (element-v1.7.32.tar.gz) = c82ef90b4549b028f8b4e20be4832fcbf054bb77
-SHA512 (element-v1.7.32.tar.gz) = 2928f9de3bb1de52bdab6214cfba4d10600f0dff6febb0c9bcf84fd09628c10dfe65bb885b98e9828208ff79ef7cba2849929262147bc95a63f8bb3ca54451ed
-Size (element-v1.7.32.tar.gz) = 15365521 bytes
+SHA1 (element-v1.7.34.tar.gz) = cc2f5d2f9d61b46a7b4150cf4ded2919d70d333e
+RMD160 (element-v1.7.34.tar.gz) = c3f0fff50e0cb579aa566999648927d6ccd2ab95
+SHA512 (element-v1.7.34.tar.gz) = 96bc96d98677e7154790accd7fca8314aada7352d8b8c1a9cc1b18c65b78705db766e5238feda6a3601aabd1f487b115dbaaecd0f55354b752ea07730e2d2312
+Size (element-v1.7.34.tar.gz) = 15635182 bytes
