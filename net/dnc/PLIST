@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/03 17:23:46 fcambus Exp $
+bin/dnc
+man/man1/dnc.1
