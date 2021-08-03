@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4053 2021/08/03 10:06:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4054 2021/08/03 12:19:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6452,3 +6452,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pybind11 to 2.7.0 [adam 2021-08-02]
 	Updated x11/xeyes to 1.2.0nb1 [ryoon 2021-08-03]
 	Updated x11/xrestop to 0.5 [wiz 2021-08-03]
+	Updated devel/byacc to 20210802 [fcambus 2021-08-03]
