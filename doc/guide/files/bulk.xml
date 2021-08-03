@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.33 2020/06/07 23:11:16 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.34 2021/08/03 08:11:34 nia Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -174,9 +174,9 @@ temporary filesystems, others must survive a sudden reboot.</para>
 
 <itemizedlist>
 
-<listitem><para>40 GB for the distfiles (read-write, remote, temporary)</para></listitem>
+<listitem><para>70 GB for the distfiles (read-write, remote, temporary)</para></listitem>
 
-<listitem><para>30 GB for the binary packages (read-write, remote, permanent)</para></listitem>
+<listitem><para>60 GB for the binary packages (read-write, remote, permanent)</para></listitem>
 
 <listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
 
