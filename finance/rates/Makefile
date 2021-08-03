@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/05/30 16:54:04 pin Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/03 09:00:37 pin Exp $
 
 DISTNAME=	rates-0.5.0
 CATEGORIES=	finance
@@ -10,8 +10,6 @@ COMMENT=	Currency exchange rates in your terminal
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
