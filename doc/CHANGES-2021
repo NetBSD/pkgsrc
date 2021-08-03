@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4059 2021/08/03 17:59:21 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4060 2021/08/03 18:09:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6458,3 +6458,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/dnc version 0.2.0 [fcambus 2021-08-03]
 	Updated shells/nushell to 0.35.0 [pin 2021-08-03]
 	Updated sysutils/tiramisu to 2.0 [pin 2021-08-03]
+	Updated games/warzone2100 to 4.1.2 [triaxx 2021-08-03]
