@@ -1,0 +1,15 @@
+$NetBSD: patch-dnc,v 1.1 2021/08/03 17:23:47 fcambus Exp $
+
+Fix for Dnspython 1.16.
+
+--- dnc.orig	2021-08-03 16:56:24.295024780 +0000
++++ dnc
+@@ -44,7 +44,7 @@ def usage():
+ 
+ def query(domain: str, rrtype: str) -> str:
+     try:
+-        answers = dns.resolver.resolve(domain, rrtype)
++        answers = dns.resolver.query(domain, rrtype)
+     except dns.exception.DNSException:
+         return ""
+ 
