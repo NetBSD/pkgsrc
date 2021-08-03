@@ -1,0 +1,34 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__features.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/dawn/scripts/dawn_features.gni.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/third_party/dawn/scripts/dawn_features.gni
+@@ -49,11 +49,11 @@ declare_args() {
+ 
+   # Enables the compilation of Dawn's OpenGL backend
+   # (best effort, non-conformant)
+-  dawn_enable_opengl = is_linux && !is_chromeos
++  dawn_enable_opengl = (is_linux || is_bsd) && !is_chromeos
+ 
+   # Enables the compilation of Dawn's Vulkan backend
+   dawn_enable_vulkan =
+-      is_linux || is_win || is_fuchsia || is_android || dawn_use_swiftshader
++      is_linux || is_win || is_fuchsia || is_android || dawn_use_swiftshader || is_bsd
+ 
+   # Enable use of reflection compiler in spirv-cross. This is needed
+   # if performing reflection on systems that the platform language
+@@ -67,7 +67,7 @@ declare_args() {
+       is_debug || (build_with_chromium && use_fuzzing_engine)
+ 
+   # Whether Dawn should enable X11 support.
+-  dawn_use_x11 = is_linux && !is_chromeos
++  dawn_use_x11 = (is_linux || is_bsd) && !is_chromeos
+ }
+ 
+ # GN does not allow reading a variable defined in the same declare_args().
+@@ -76,5 +76,5 @@ declare_args() {
+ declare_args() {
+   # Uses our built version of Vulkan validation layers
+   dawn_enable_vulkan_validation_layers =
+-      dawn_enable_vulkan && ((is_linux && !is_chromeos) || is_win)
++      dawn_enable_vulkan && ((is_linux && !is_chromeos) || is_win || is_bsd)
+ }

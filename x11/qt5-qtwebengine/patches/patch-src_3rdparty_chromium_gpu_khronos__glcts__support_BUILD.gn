@@ -1,0 +1,76 @@
+$NetBSD: patch-src_3rdparty_chromium_gpu_khronos__glcts__support_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/gpu/khronos_glcts_support/BUILD.gn.orig	2020-07-15 18:55:58.000000000 +0000
++++ src/3rdparty/chromium/gpu/khronos_glcts_support/BUILD.gn
+@@ -79,7 +79,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":debase_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_c = [ "-Wno-implicit-function-declaration" ]
+     }
+   }
+@@ -147,7 +147,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":dethread_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "//third_party/khronos_glcts/framework/delibs/dethread/unix/deMutexUnix.c",
+         "//third_party/khronos_glcts/framework/delibs/dethread/unix/deSemaphoreUnix.c",
+@@ -194,7 +194,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":deutil_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_c = [ "-Wno-string-conversion" ]
+     }
+   }
+@@ -306,7 +306,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":qphelper_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_c = [ "-Wno-string-conversion" ]
+     }
+   }
+@@ -394,7 +394,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":tcutil_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_cc = [ "-Wno-int-to-pointer-cast" ]
+     }
+   }
+@@ -532,7 +532,7 @@ if (internal_khronos_glcts_tests) {
+       "//third_party/khronos:khronos_headers",
+     ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_cc = [ "-Wno-int-to-void-pointer-cast" ]
+     }
+   }
+@@ -611,7 +611,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":glcts_common_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_cc = [ "-Wno-string-conversion" ]
+     }
+   }
+@@ -819,7 +819,7 @@ if (internal_khronos_glcts_tests) {
+ 
+     public_configs = [ ":gtf_es_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_c = [
+         "-Wno-pointer-sign",
+         "-Wno-incompatible-pointer-types",

@@ -1,0 +1,26 @@
+$NetBSD: patch-src_3rdparty_chromium_content_common_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/content/common/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ src/3rdparty/chromium/content/common/BUILD.gn
+@@ -319,6 +319,12 @@ source_set("common") {
+     set_sources_assignment_filter(sources_assignment_filter)
+   }
+ 
++#  if (is_bsd) {
++#    sources -= [
++#      "common_sandbox_support_linux.cc",
++#    ]
++#  }
++
+   if (is_mac) {
+     deps += [
+       ":mac_helpers",
+@@ -471,7 +477,7 @@ mojom("mojo_bindings") {
+   if (enable_ipc_logging) {
+     enabled_features += [ "ipc_logging" ]
+   }
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     enabled_features += [ "supports_thread_priorities" ]
+   }
+   if (use_clang_profiling_inside_sandbox) {

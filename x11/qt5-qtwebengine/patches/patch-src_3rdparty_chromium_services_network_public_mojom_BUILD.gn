@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_services_network_public_mojom_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/services/network/public/mojom/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ src/3rdparty/chromium/services/network/public/mojom/BUILD.gn
+@@ -506,7 +506,7 @@ mojom("mojom") {
+ 
+   # This is only needed on desktop linux, but the defines make this difficult
+   # because IS_CHROMECAST is not available in build/build_config.h.
+-  if (is_linux && !is_chromeos) {
++  if ((is_linux || is_bsd) && !is_chromeos) {
+     enabled_features += [ "needs_crypt_config" ]
+   }
+ 

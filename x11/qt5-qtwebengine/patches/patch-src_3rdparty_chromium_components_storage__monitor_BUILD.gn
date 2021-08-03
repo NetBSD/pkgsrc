@@ -1,0 +1,25 @@
+$NetBSD: patch-src_3rdparty_chromium_components_storage__monitor_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/components/storage_monitor/BUILD.gn.orig	2020-06-25 09:31:28.000000000 +0000
++++ src/3rdparty/chromium/components/storage_monitor/BUILD.gn
+@@ -79,6 +79,11 @@ static_library("storage_monitor") {
+     } else {
+       sources += [ "storage_monitor_dummy.cc" ]
+     }
++  } else if (is_netbsd) {
++    sources += [
++      "storage_monitor_netbsd.cc",
++      "storage_monitor_netbsd.h",
++    ]
+   }
+ 
+   if (use_udev) {
+@@ -154,7 +159,7 @@ source_set("unit_tests") {
+         "mtp_manager_client_chromeos_unittest.cc",
+         "storage_monitor_chromeos_unittest.cc",
+       ]
+-    } else if (is_linux) {
++    } else if (is_linux || is_bsd) {
+       sources += [ "storage_monitor_linux_unittest.cc" ]
+     }
+   }
