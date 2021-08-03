@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_services_network_network__service.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/services/network/network_service.cc.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/services/network/network_service.cc
+@@ -67,7 +67,7 @@
+ #include "third_party/boringssl/src/include/openssl/cpu.h"
+ #endif
+ 
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)
+ #include "components/os_crypt/key_storage_config_linux.h"
+ #endif
+ 
+@@ -636,7 +636,7 @@ void NetworkService::OnCertDBChanged() {
+   net::CertDatabase::GetInstance()->NotifyObserversCertDBChanged();
+ }
+ 
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ void NetworkService::SetCryptConfig(mojom::CryptConfigPtr crypt_config) {
+ #if !BUILDFLAG(IS_CHROMECAST) && !defined(TOOLKIT_QT)
+   DCHECK(!os_crypt_config_set_);

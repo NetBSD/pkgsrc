@@ -1,0 +1,39 @@
+$NetBSD: patch-mkspecs_features_functions.prf,v 1.1 2021/08/03 21:04:34 markd Exp $
+
+teach about openbsd and netbsd
+
+--- mkspecs/features/functions.prf.orig	2020-11-07 01:22:36.000000000 +0000
++++ mkspecs/features/functions.prf
+@@ -84,6 +84,14 @@ defineReplace(gnWebEngineArgs) {
+         include($$QTWEBENGINE_ROOT/src/buildtools/config/windows.pri)
+         include($$QTWEBENGINE_ROOT/src/core/config/windows.pri)
+     }
++    netbsd: {
++        include($$QTWEBENGINE_ROOT/src/buildtools/config/netbsd.pri)
++        include($$QTWEBENGINE_ROOT/src/core/config/netbsd.pri)
++    }
++    openbsd: {
++        include($$QTWEBENGINE_ROOT/src/buildtools/config/openbsd.pri)
++        include($$QTWEBENGINE_ROOT/src/core/config/openbsd.pri)
++    }
+     isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
+     return($$gn_args)
+ }
+@@ -93,6 +101,8 @@ defineReplace(gnPdfArgs) {
+     macos: include($$QTWEBENGINE_ROOT/src/buildtools/config/mac_osx.pri)
+     ios: include($$QTWEBENGINE_ROOT/src/pdf/config/ios.pri)
+     win32: include($$QTWEBENGINE_ROOT/src/buildtools/config/windows.pri)
++    netbsd: include($$QTWEBENGINE_ROOT/src/buildtools/config/netbsd.pri)
++    openbsd: include($$QTWEBENGINE_ROOT/src/buildtools/config/openbsd.pri)
+     include($$QTWEBENGINE_ROOT/src/pdf/config/common.pri)
+     isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
+     return($$gn_args)
+@@ -113,6 +123,8 @@ defineReplace(gnOS) {
+     macos: return(mac)
+     win32: return(win)
+     linux: return(linux)
++    netbsd: return(netbsd)
++    openbsd: return(openbsd)
+     error(Unsupported platform)
+     return(unknown)
+ }

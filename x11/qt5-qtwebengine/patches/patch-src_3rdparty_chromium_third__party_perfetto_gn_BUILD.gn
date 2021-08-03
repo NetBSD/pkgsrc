@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_gn_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/perfetto/gn/BUILD.gn.orig	2020-07-15 19:01:38.000000000 +0000
++++ src/3rdparty/chromium/third_party/perfetto/gn/BUILD.gn
+@@ -291,7 +291,7 @@ if (enable_perfetto_benchmarks) {
+ 
+ # Libbacktrace, used for printing stack traces from crash handler, only in
+ # standalone debug builds.
+-if (perfetto_build_standalone && (is_linux || is_android)) {
++if (perfetto_build_standalone && (is_linux || is_android || is_bsd)) {
+   group("libbacktrace") {
+     public_deps = [ "//buildtools:libbacktrace" ]
+   }

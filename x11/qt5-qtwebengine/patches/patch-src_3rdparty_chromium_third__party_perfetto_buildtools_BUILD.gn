@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_buildtools_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/perfetto/buildtools/BUILD.gn.orig	2020-07-15 19:01:38.000000000 +0000
++++ src/3rdparty/chromium/third_party/perfetto/buildtools/BUILD.gn
+@@ -678,7 +678,7 @@ if (use_custom_libcxx) {
+       "//gn/standalone/sanitizers:sanitizer_options_link_helper",
+     ]
+     defines = [ "_LIBCPP_BUILDING_LIBRARY" ]
+-    if ((is_linux || is_android) && (is_asan || is_tsan || is_msan)) {
++    if ((is_linux || is_android || is_bsd) && (is_asan || is_tsan || is_msan)) {
+       # In {a,t,m}san configurations, operator new and operator delete will be
+       # provided by the sanitizer runtime library.  Since libc++ defines these
+       # symbols with weak linkage, and the *san runtime uses strong linkage, it
+@@ -748,7 +748,7 @@ source_set("benchmark") {
+ }
+ 
+ # On Linux/Android use libbacktrace in debug builds for better stacktraces.
+-if (is_linux || is_android) {
++if (is_linux || is_android || is_bsd) {
+   config("libbacktrace_config") {
+     visibility = _buildtools_visibility
+     include_dirs = [
