@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/05 08:40:19 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/03 09:01:26 pin Exp $
 
 DISTNAME=	sd-0.7.6
 CATEGORIES=	textproc
@@ -11,8 +11,6 @@ COMMENT=	Intuitive find and replace CLI
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
