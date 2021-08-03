@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2021/07/30 12:26:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2021/08/03 18:09:27 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-3.4.1
-PKGREVISION=	9
+PKGNAME=	warzone2100-4.1.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DIST_SUBDIR=	wz2100_${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -63,6 +63,7 @@ BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsodium+=	libsodium>=1.0.13
