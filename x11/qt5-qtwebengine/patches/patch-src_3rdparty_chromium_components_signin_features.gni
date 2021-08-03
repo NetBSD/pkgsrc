@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_components_signin_features.gni,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/components/signin/features.gni.orig	2020-07-15 18:55:55.000000000 +0000
++++ src/3rdparty/chromium/components/signin/features.gni
+@@ -3,7 +3,7 @@
+ # found in the LICENSE file.
+ 
+ # Dice is supported on the platform (but not necessarily enabled).
+-enable_dice_support = (is_linux && !is_chromeos) || is_mac || is_win
++enable_dice_support = ((is_linux || is_bsd) && !is_chromeos) || is_mac || is_win
+ 
+ # Mirror is enabled and other account consistency mechanisms are not available.
+ enable_mirror = is_android || is_ios

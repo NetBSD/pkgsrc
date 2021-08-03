@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_fontconfig_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/fontconfig/BUILD.gn.orig	2020-07-15 18:56:30.000000000 +0000
++++ src/3rdparty/chromium/third_party/fontconfig/BUILD.gn
+@@ -5,7 +5,7 @@
+ import("//build/config/sanitizers/sanitizers.gni")
+ import("//third_party/fontconfig/fontconfig.gni")
+ 
+-assert(is_linux)
++assert(is_linux || is_bsd)
+ 
+ if (use_bundled_fontconfig) {
+   config("fontconfig_config") {

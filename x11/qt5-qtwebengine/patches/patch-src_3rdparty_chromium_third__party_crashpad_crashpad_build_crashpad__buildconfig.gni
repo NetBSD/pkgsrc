@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_crashpad_crashpad_build_crashpad__buildconfig.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/crashpad/crashpad/build/crashpad_buildconfig.gni.orig	2020-07-15 18:56:49.000000000 +0000
++++ src/3rdparty/chromium/third_party/crashpad/crashpad/build/crashpad_buildconfig.gni
+@@ -41,6 +41,8 @@ if (crashpad_is_in_chromium) {
+   crashpad_is_linux = is_linux
+   crashpad_is_android = is_android
+   crashpad_is_fuchsia = is_fuchsia
++  crashpad_is_bsd = is_bsd
++  crashpad_is_netbsd = is_netbsd
+ 
+   crashpad_is_posix = is_posix
+ 
+@@ -62,6 +64,8 @@ if (crashpad_is_in_chromium) {
+   crashpad_is_linux = mini_chromium_is_linux
+   crashpad_is_android = mini_chromium_is_android
+   crashpad_is_fuchsia = mini_chromium_is_fuchsia
++  crashpad_is_bsd = mini_chromium_is_bsd
++  crashpad_is_netbsd = is_netbsd
+ 
+   crashpad_is_posix = mini_chromium_is_posix
+ 

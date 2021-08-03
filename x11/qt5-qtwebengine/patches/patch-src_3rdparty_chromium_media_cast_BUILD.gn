@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_media_cast_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/media/cast/BUILD.gn.orig	2020-06-25 09:31:32.000000000 +0000
++++ src/3rdparty/chromium/media/cast/BUILD.gn
+@@ -369,7 +369,7 @@ test("cast_unittests") {
+   }
+ }
+ 
+-if (is_win || is_mac || (is_linux && !is_chromeos)) {
++if (is_win || is_mac || (is_linux && !is_chromeos) || is_bsd) {
+   # This is a target for the collection of cast development tools.  They are
+   # not built/linked into the Chromium browser.
+   group("testing_tools") {
+@@ -503,7 +503,7 @@ if (is_win || is_mac || (is_linux && !is
+   }
+ }
+ 
+-if (is_linux && !is_chromeos) {
++if ((is_linux && !is_chromeos) || is_bsd) {
+   test("tap_proxy") {
+     sources = [ "test/utility/tap_proxy.cc" ]
+ 

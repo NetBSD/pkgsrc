@@ -1,0 +1,25 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_openscreen_src_build_config_BUILDCONFIG.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/openscreen/src/build/config/BUILDCONFIG.gn.orig	2020-07-15 19:01:37.000000000 +0000
++++ src/3rdparty/chromium/third_party/openscreen/src/build/config/BUILDCONFIG.gn
+@@ -131,10 +131,20 @@ if (current_os == "chromeos" || current_
+   is_linux = true
+   is_mac = false
+   is_posix = true
++  is_bsd = false
++  is_netbsd = false
++} else if (current_os == "netbsd") {
++  is_linux = false
++  is_mac = false
++  is_posix = true
++  is_bsd = true
++  is_netbsd = true
+ } else if (current_os == "mac") {
+   is_linux = false
+   is_mac = true
+   is_posix = true
++  is_bsd = false
++  is_netbsd = false
+ } else {
+   # TODO(miu): Windows, and others.
+   assert(false, "is_FOO booleans not defined for current_os.")

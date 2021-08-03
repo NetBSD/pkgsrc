@@ -1,0 +1,18 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_third__party_llvm-subzero_build_NetBSD_include_llvm_module.modulemap,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-subzero/build/NetBSD/include/llvm/module.modulemap.orig	2020-07-23 08:46:21.676308616 +0000
++++ src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-subzero/build/NetBSD/include/llvm/module.modulemap
+@@ -0,0 +1,13 @@
++// This is copied into the build area for a $src != $build compilation.
++module LLVM_Support_DataTypes {
++  header "Support/DataTypes.h"
++  export *
++}
++module LLVM_Config_ABI_Breaking {
++  header "Config/abi-breaking.h"
++  export *
++}
++module LLVM_Config_Config {
++  header "Config/llvm-config.h"
++  export *
++}

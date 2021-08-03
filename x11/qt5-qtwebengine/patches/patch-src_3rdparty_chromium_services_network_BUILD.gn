@@ -1,0 +1,25 @@
+$NetBSD: patch-src_3rdparty_chromium_services_network_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/services/network/BUILD.gn.orig	2020-06-25 09:31:34.000000000 +0000
++++ src/3rdparty/chromium/services/network/BUILD.gn
+@@ -256,13 +256,19 @@ jumbo_component("network_service") {
+     deps += [ "//components/certificate_transparency" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [
+       "//sandbox/linux:sandbox_services",
+       "//services/service_manager/sandbox:sandbox",
+     ]
+   }
+ 
++  if (is_bsd) {
++    deps -= [
++      "//sandbox/linux:sandbox_services",
++    ]
++  }
++
+   if (is_android) {
+     deps += [
+       "//crypto",

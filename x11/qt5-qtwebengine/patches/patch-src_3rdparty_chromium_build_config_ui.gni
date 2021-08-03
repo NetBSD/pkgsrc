@@ -1,0 +1,34 @@
+$NetBSD: patch-src_3rdparty_chromium_build_config_ui.gni,v 1.1 2021/08/03 21:04:34 markd Exp $
+
+--- src/3rdparty/chromium/build/config/ui.gni.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/build/config/ui.gni
+@@ -27,17 +27,17 @@ declare_args() {
+ 
+   # Indicates if Aura is enabled. Aura is a low-level windowing library, sort
+   # of a replacement for GDI or GTK.
+-  use_aura = is_win || is_linux || is_fuchsia
++  use_aura = is_win || is_linux || is_fuchsia || is_bsd
+ }
+ 
+ declare_args() {
+   # Indicates if the UI toolkit depends on X11.
+-  use_x11 = is_linux && !use_ozone
++  use_x11 = (is_linux || is_bsd) && !use_ozone
+ }
+ 
+ declare_args() {
+   # True means the UI is built using the "views" framework.
+-  toolkit_views = is_mac || is_win || is_linux || (is_fuchsia && is_chromecast)
++  toolkit_views = is_mac || is_win || is_linux || (is_fuchsia && is_chromecast) || is_bsd
+ 
+   # Whether we should use glib, a low level C utility library.
+   use_glib = is_desktop_linux && !is_chromecast
+@@ -50,7 +50,7 @@ declare_args() {
+ # These variables depend on other variables and can't be set externally.
+ 
+ # Make sure glib is not used if building for ChromeOS/Chromecast
+-assert(!use_glib || (is_linux && !is_chromeos && !is_chromecast))
++assert(!use_glib || ((is_linux || is_bsd) && !is_chromeos && !is_chromecast))
+ 
+ # Whether to use atk, the Accessibility ToolKit library
+ use_atk = is_desktop_linux && !use_qt

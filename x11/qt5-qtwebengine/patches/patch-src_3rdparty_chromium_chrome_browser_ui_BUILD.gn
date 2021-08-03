@@ -1,0 +1,60 @@
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_ui_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+
+--- src/3rdparty/chromium/chrome/browser/ui/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/chrome/browser/ui/BUILD.gn
+@@ -628,13 +628,18 @@ jumbo_static_library("ui") {
+     deps += [ "//components/autofill/content/browser/webauthn" ]
+   }
+ 
+-  if (!is_fuchsia) {
++  if (!is_fuchsia && !is_bsd) {
+     # TODO(crbug.com/753619): Enable crash reporting on Fuchsia.
+     deps += [
+       "//components/crash/core/app",
+       "//components/crash/core/browser",
+     ]
+   }
++  if (is_bsd) {
++    deps += [
++      "//components/crash/core/browser",
++    ]
++  }
+ 
+   if (is_win || is_android || is_linux) {
+     sources += [
+@@ -1490,7 +1495,7 @@ jumbo_static_library("ui") {
+       deps += [ "//ui/ozone" ]
+     }
+ 
+-    if (is_linux && !is_chromeos) {
++    if ((is_linux || is_bsd) && !is_chromeos) {
+       deps += [ "//ui/base/ime/linux" ]
+     }
+ 
+@@ -2617,7 +2622,7 @@ jumbo_static_library("ui") {
+     # to fail on this variant. Since this target is only referenced (but not
+     # compiled) on this variant, it's okay to add this "incorrect" dependency
+     # to Cast Linux builds so that `gn check` passes.
+-    if (toolkit_views || (is_chromecast && is_linux)) {
++    if (toolkit_views || (is_chromecast && (is_linux || is_bsd))) {
+       public_deps += [
+         "//ui/views",
+         "//ui/views/controls/webview",
+@@ -2704,7 +2709,7 @@ jumbo_static_library("ui") {
+     }
+   }
+ 
+-  if (is_linux) {  # Both desktop Linux and ChromeOS.
++  if (is_linux || is_bsd) {  # Both desktop Linux and ChromeOS.
+     sources += [
+       "certificate_dialogs.cc",
+       "certificate_dialogs.h",
+@@ -3516,7 +3521,7 @@ jumbo_static_library("ui") {
+       sources += [ "views/chrome_views_delegate_linux.cc" ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "views/process_singleton_dialog_linux.cc",
+         "views/status_icons/status_tray_linux.cc",

@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_gn_perfetto.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/perfetto/gn/perfetto.gni.orig	2020-07-15 19:01:38.000000000 +0000
++++ src/3rdparty/chromium/third_party/perfetto/gn/perfetto.gni
+@@ -149,7 +149,7 @@ declare_args() {
+   enable_perfetto_heapprofd =
+       perfetto_build_with_android ||
+       (perfetto_build_standalone && is_clang &&
+-       (is_linux || (is_android && android_api_level >= 26)))
++       (is_linux || is_bsd || (is_android && android_api_level >= 26)))
+ 
+   # Build the perf event profiler (traced_perf).
+   # TODO(b/144281346): under development.
+@@ -222,7 +222,7 @@ declare_args() {
+   # Enables the REPL interactive prompt in the trace processor.
+   enable_perfetto_trace_processor_linenoise =
+       perfetto_build_standalone && enable_perfetto_trace_processor &&
+-      (is_linux || is_android || is_mac)
++      (is_linux || is_android || is_mac || is_bsd)
+ 
+   # Enables JSON support in the trace processor. Required for JSON trace import
+   # and export.
