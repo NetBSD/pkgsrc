@@ -1,0 +1,31 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_gn_standalone_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/third_party/perfetto/gn/standalone/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/third_party/perfetto/gn/standalone/BUILD.gn
+@@ -138,7 +138,7 @@ config("default") {
+     cflags += [ "-fno-omit-frame-pointer" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     libs += [
+       "pthread",
+       "rt",
+@@ -233,7 +233,7 @@ config("release") {
+ }
+ 
+ config("shared_library") {
+-  if (is_android || is_linux) {
++  if (is_android || is_linux || is_bsd) {
+     ldflags = [ "-fPIC" ]
+   }
+ }
+@@ -254,7 +254,7 @@ config("executable") {
+   # supported only by Linux, not Android. But concretely we need this only when
+   # use_custom_libcxx=true && custom_libcxx_is_static=false, which happens only
+   # on Linux right now.
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     ldflags += [
+       "-Wl,-rpath=\$ORIGIN/.",
+       "-Wl,-rpath-link=.",
