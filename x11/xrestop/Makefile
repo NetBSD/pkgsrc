@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:36:12 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.13 2021/08/03 10:06:03 wiz Exp $
 
-DISTNAME=		xrestop-0.4
-PKGREVISION=		2
+DISTNAME=		xrestop-0.5
 CATEGORIES=		x11
-MASTER_SITES=		http://labs.o-hand.com/sources/xrestop/
+MASTER_SITES=		https://xorg.freedesktop.org/archive/individual/app/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		https://www.freedesktop.org/wiki/Software/xrestop

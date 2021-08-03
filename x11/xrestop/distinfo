@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 03:29:11 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/08/03 10:06:03 wiz Exp $
 
-SHA1 (xrestop-0.4.tar.gz) = 040b0ac561f4de0a04e9db42a2cfab918801c452
-RMD160 (xrestop-0.4.tar.gz) = 13113e1de0d2206106a274917fd9a0decd301837
-SHA512 (xrestop-0.4.tar.gz) = eb7bf2f3ab7b73708c96d56fd466cb362d711242dd46992fa3e693af2d26995e9baa91075eb445ef227e1342deec5e0e22b37139e80399e4051c9f5cad8fd9b6
-Size (xrestop-0.4.tar.gz) = 92308 bytes
+SHA1 (xrestop-0.5.tar.bz2) = a8c7a115864678058eecacdfcdfb4faf131ef104
+RMD160 (xrestop-0.5.tar.bz2) = efa9477b06bc1b56fcd512b1906df18b05927747
+SHA512 (xrestop-0.5.tar.bz2) = f50e1fcba2fdb6167f93b9edae721556bc411232a9d7cc1df853e588cd92608c9ca652bee1aaf5cfe3750d6c60db6c6cd1c6797e282841cc535051e78b2c4c1d
+Size (xrestop-0.5.tar.bz2) = 135537 bytes
