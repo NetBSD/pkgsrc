@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4056 2021/08/03 16:02:43 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.4057 2021/08/03 17:25:51 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6455,3 +6455,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/byacc to 20210802 [fcambus 2021-08-03]
 	Updated net/minitube to 3.9 [ryoon 2021-08-03]
 	Updated graphics/vulkan-headers to 1.2.182.0 [triaxx 2021-08-03]
+	Added net/dnc version 0.2.0 [fcambus 2021-08-03]
