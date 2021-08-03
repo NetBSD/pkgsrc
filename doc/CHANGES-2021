@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4051 2021/08/02 20:36:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4052 2021/08/03 08:49:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6450,3 +6450,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/py-reportlab to 3.5.68 [adam 2021-08-02]
 	Updated www/py-django3 to 3.2.6 [adam 2021-08-02]
 	Updated devel/py-pybind11 to 2.7.0 [adam 2021-08-02]
+	Updated x11/xeyes to 1.2.0nb1 [ryoon 2021-08-03]
