@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/21 07:00:59 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/03 08:56:40 pin Exp $
 
 DISTNAME=	lsfp-0.5.0
 CATEGORIES=	sysutils
@@ -9,8 +9,6 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/The-Noah/lsfp/
 COMMENT=	Cross-platform alternative to ls
 LICENSE=	mit
-
-USE_LANGUAGES=	c	# rust, but needs a toolchain to link
 
 CARGO_CRATE_DEPENDS+=	cc-1.0.66
 
