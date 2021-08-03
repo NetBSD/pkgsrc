@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 17:18:06 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/03 09:02:49 pin Exp $
 
 DISTNAME=	Stitchy-0.1.3
 PKGNAME=	${DISTNAME:tl}
@@ -13,8 +13,6 @@ COMMENT=	Simple command line tool to stitch multiple images into one
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
