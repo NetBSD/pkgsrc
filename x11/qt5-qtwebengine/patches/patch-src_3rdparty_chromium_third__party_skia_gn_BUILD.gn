@@ -1,0 +1,33 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_skia_gn_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+https://skia-review.googlesource.com/c/skia/+/310856
+
+--- src/3rdparty/chromium/third_party/skia/gn/BUILD.gn.orig	2020-07-15 19:01:39.000000000 +0000
++++ src/3rdparty/chromium/third_party/skia/gn/BUILD.gn
+@@ -211,7 +211,7 @@ config("default") {
+     libs += [ "objc" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     libs += [ "pthread" ]
+   }
+ 
+@@ -287,7 +287,7 @@ config("default") {
+       ldflags += [ "-fsanitize=$sanitizers" ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags_cc += [ "-stdlib=libc++" ]
+       ldflags += [ "-stdlib=libc++" ]
+     }
+@@ -572,7 +572,7 @@ config("executable") {
+     ]
+   } else if (is_mac) {
+     ldflags = [ "-Wl,-rpath,@loader_path/." ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_bsd) {
+     ldflags = [
+       "-rdynamic",
+       "-Wl,-rpath,\$ORIGIN",

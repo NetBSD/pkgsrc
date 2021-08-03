@@ -1,0 +1,31 @@
+$NetBSD: patch-src_3rdparty_chromium_build_toolchain_gcc__toolchain.gni,v 1.1 2021/08/03 21:04:34 markd Exp $
+
+--- src/3rdparty/chromium/build/toolchain/gcc_toolchain.gni.orig	2020-07-15 18:55:48.000000000 +0000
++++ src/3rdparty/chromium/build/toolchain/gcc_toolchain.gni
+@@ -28,6 +28,9 @@ declare_args() {
+       # Don't enable for Android-on-Chrome OS so that they can build with
+       # symbol_level=0 without this failing (crbug.com/891164).
+       (target_os == "android" || target_os == "win")
++
++  extra_cxxflags = ""
++  extra_ldflags = ""
+ }
+ 
+ # When the arg is set via args.gn, it applies to all toolchains. In order to not
+@@ -589,12 +592,12 @@ template("clang_toolchain") {
+   }
+ 
+   gcc_toolchain(target_name) {
+-    prefix = rebase_path("$clang_base_path/bin", root_build_dir)
+-    cc = "$prefix/clang"
+-    cxx = "$prefix/clang++"
++    #prefix = rebase_path("$clang_base_path/bin", root_build_dir)
++    cc = "clang"
++    cxx = "clang++"
+     ld = cxx
+     readelf = "${toolprefix}readelf"
+-    ar = "${prefix}/llvm-ar"
++    ar = "llvm-ar"
+     nm = "${toolprefix}nm"
+ 
+     forward_variables_from(invoker,
