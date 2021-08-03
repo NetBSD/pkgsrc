@@ -1,0 +1,83 @@
+$NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+--- src/3rdparty/chromium/v8/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/v8/BUILD.gn
+@@ -1333,6 +1333,23 @@ action("generate_bytecode_builtins_list"
+   ]
+ }
+ 
++action("run_paxctl_mksnapshot") {
++    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++
++    script = "tools/run-paxctl.py"
++    stamp = "$target_gen_dir/paxctl_stamp"
++    outputs = [ stamp ]
++
++    sources = []
++    data = []
++
++    args = [
++      rebase_path(stamp, root_build_dir), "paxctl", "+m", "./" + rebase_path(get_label_info(":mksnapshot($v8_snapshot_toolchain)",
++                                        "root_out_dir") + "/mksnapshot",
++                         root_build_dir),
++    ]
++}
++
+ # Template to generate different V8 snapshots based on different runtime flags.
+ # Can be invoked with run_mksnapshot(<name>). The target will resolve to
+ # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
+@@ -1353,7 +1370,7 @@ template("run_mksnapshot") {
+   action("run_mksnapshot_" + name) {
+     visibility = [ ":*" ]  # Only targets in this file can depend on this.
+ 
+-    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++    deps = [ ":mksnapshot($v8_snapshot_toolchain)", ":run_paxctl_mksnapshot" ]
+ 
+     script = "tools/run.py"
+ 
+@@ -3206,7 +3223,7 @@ v8_source_set("v8_base_without_compiler"
+ 
+     # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+     # based on Darwin and thus POSIX-compliant to a similar degree.
+-    if (is_linux || is_mac || is_ios || target_os == "freebsd") {
++    if (is_linux || is_mac || is_ios || target_os == "freebsd" || is_bsd) {
+       sources += [
+         "src/trap-handler/handler-inside-posix.cc",
+         "src/trap-handler/handler-inside-posix.h",
+@@ -3552,7 +3569,7 @@ v8_source_set("v8_base_without_compiler"
+     v8_add_configs += [ "//build/config/compiler:no_symbols" ]
+   }
+ 
+-  if (v8_enable_vtunetracemark && (is_linux || is_win)) {
++  if (v8_enable_vtunetracemark && (is_linux || is_win || is_bsd)) {
+     sources += [
+       "src/extensions/vtunedomain-support-extension.cc",
+       "src/extensions/vtunedomain-support-extension.h",
+@@ -3800,6 +3817,16 @@ v8_component("v8_libbase") {
+       "dl",
+       "rt",
+     ]
++  } else if (is_netbsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-openbsd.cc",
++    ]
++
++    libs = [
++      "rt",
++      "execinfo",
++    ]
+   } else if (current_os == "aix") {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+@@ -4113,6 +4140,10 @@ if (current_toolchain == v8_snapshot_too
+       "src/snapshot/snapshot-empty.cc",
+     ]
+ 
++    if (is_bsd) {
++      libs = ["execinfo"]
++    }
++
+     configs = [ ":internal_config" ]
+ 
+     deps = [

@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_mojo_core_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/mojo/core/BUILD.gn.orig	2020-06-25 09:31:32.000000000 +0000
++++ src/3rdparty/chromium/mojo/core/BUILD.gn
+@@ -178,7 +178,7 @@ core_impl_source_set("impl_for_embedder"
+   for_shared_library = false
+ }
+ 
+-if (is_chromeos || is_linux || is_android || is_win) {
++if (is_chromeos || is_linux || is_android || is_win || is_bsd) {
+   core_impl_source_set("impl_for_shared_library") {
+     for_shared_library = true
+   }
+@@ -239,7 +239,7 @@ if (is_chromeos || is_linux || is_androi
+                             root_build_dir) ]
+   }
+ 
+-  if (is_chromeos || is_linux || is_win) {
++  if (is_chromeos || is_linux || is_win || is_bsd) {
+     test("mojo_core_unittests") {
+       sources = [
+         "mojo_core_unittest.cc",

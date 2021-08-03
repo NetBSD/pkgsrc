@@ -1,0 +1,26 @@
+$NetBSD: patch-src_3rdparty_gn_build_build_netbsd.ninja.template,v 1.1 2021/08/03 21:04:36 markd Exp $
+
+ninja.template file for netbsd
+
+--- /dev/null	2021-03-07 00:21:14.148802294 +0000
++++ src/3rdparty/gn/build/build_netbsd.ninja.template
+@@ -0,0 +1,19 @@
++rule cc
++  command = $cc -MMD -MF $out.d $defines $includes $cflags $cflags_c -c $in -o $out
++  description = CC $out
++  depfile = $out.d
++  deps = gcc
++
++rule cxx
++  command = $cxx -MMD -MF $out.d $defines $includes $cflags $cflags_cc -c $in -o $out
++  description = CXX $out
++  depfile = $out.d
++  deps = gcc
++
++rule alink_thin
++  command = rm -f $out && $ar rcs $out $in
++  description = AR $out
++
++rule link
++  command = $ld $ldflags -o $out -Wl,--start-group $in $libs -Wl,--end-group $solibs
++  description = LINK $out

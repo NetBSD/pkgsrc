@@ -1,0 +1,24 @@
+$NetBSD: patch-src_3rdparty_chromium_services_service__manager_public_cpp_service__executable_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ src/3rdparty/chromium/services/service_manager/public/cpp/service_executable/BUILD.gn
+@@ -22,13 +22,18 @@ source_set("support") {
+     "//services/service_manager/public/mojom",
+   ]
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [
+       "//sandbox/linux:sandbox",
+       "//sandbox/linux:sandbox_services",
+       "//sandbox/linux:seccomp_bpf",
+     ]
+   }
++  if (is_bsd) {
++    deps -= [
++      "//sandbox/linux:seccomp_bpf"
++    ]
++  }
+ }
+ 
+ source_set("switches") {

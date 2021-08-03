@@ -1,0 +1,40 @@
+$NetBSD: patch-src_3rdparty_chromium_remoting_host_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/remoting/host/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/remoting/host/BUILD.gn
+@@ -359,7 +359,7 @@ static_library("common") {
+     deps += [ "//components/policy:generated" ]
+   }
+ 
+-  if (is_linux && !is_chromeos) {
++  if ((is_linux || is_bsd) && !is_chromeos) {
+     public_deps += [ "//remoting/host/linux" ]
+     libs += [ "pam" ]
+   }
+@@ -561,7 +561,7 @@ source_set("unit_tests") {
+     "//third_party/grpc:grpcpp",
+   ]
+ 
+-  if (is_linux && !is_chromeos) {
++  if ((is_linux || is_bsd) && !is_chromeos) {
+     deps += [ "//remoting/host/linux:unit_tests" ]
+   }
+ 
+@@ -766,7 +766,7 @@ if (enable_me2me_host) {
+     if (use_gtk) {
+       deps += [ "//build/config/linux/gtk" ]
+     }
+-    if ((is_linux && !is_chromeos) || is_mac) {
++    if (((is_linux || is_bsd) && !is_chromeos) || is_mac) {
+       libs = [ "pam" ]
+     }
+ 
+@@ -826,7 +826,7 @@ if (enable_me2me_host) {
+       }
+     }
+   }
+-  if (is_chrome_branded && enable_me2me_host && is_linux && !is_chromeos) {
++  if (is_chrome_branded && enable_me2me_host && (is_linux || is_bsd) && !is_chromeos) {
+     group("remoting_me2me_host_archive") {
+       deps = [ "//remoting/host/installer/linux:remoting_me2me_host_archive" ]
+     }

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_remoting_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/remoting/BUILD.gn.orig	2020-07-15 18:56:00.000000000 +0000
++++ src/3rdparty/chromium/remoting/BUILD.gn
+@@ -56,7 +56,7 @@ group("remoting_all") {
+       deps += [ "//remoting/host:remoting_native_messaging_host" ]
+     }
+ 
+-    if (is_linux && !is_chromeos) {
++    if ((is_linux || is_bsd) && !is_chromeos) {
+       deps += [
+         "//remoting/host/linux:remoting_dev_me2me_host",
+         "//remoting/host/linux:remoting_user_session",

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_components_autofill__payments__strings.grdp,v 1.1 2021/08/03 21:04:35 markd Exp $
+
+--- src/3rdparty/chromium/components/autofill_payments_strings.grdp.orig	2020-07-15 18:55:54.000000000 +0000
++++ src/3rdparty/chromium/components/autofill_payments_strings.grdp
+@@ -116,7 +116,7 @@
+   <message name="IDS_AUTOFILL_FIX_FLOW_PROMPT_SAVE_CARD_LABEL" desc="Text to show on the button to save the card to Google when the fix flow dialog is shown after the Autofill save card prompt." formatter_data="android_java">
+     Save card
+   </message>
+-  <if expr="is_linux and not chromeos">
++  <if expr="is_posix and not chromeos">
+     <then>
+       <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_TITLE_TO_CLOUD" desc="Title text for the Autofill save card prompt when the card is to be saved by uploading it to Google Payments and also saved locally. The prompt can be either a bubble or an infobar.">
+         Do you want to save this card to your Google Account?
