@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4060 2021/08/03 18:09:56 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.4061 2021/08/03 19:52:05 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6459,3 +6459,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/nushell to 0.35.0 [pin 2021-08-03]
 	Updated sysutils/tiramisu to 2.0 [pin 2021-08-03]
 	Updated games/warzone2100 to 4.1.2 [triaxx 2021-08-03]
+	Updated chat/element-web to 1.7.34 [js 2021-08-03]
