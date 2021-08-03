@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/28 20:54:51 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/03 09:02:05 pin Exp $
 
 DISTNAME=	stava-0.6.2
 CATEGORIES=	textproc
@@ -11,8 +11,6 @@ COMMENT=	CLI spell checker
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
