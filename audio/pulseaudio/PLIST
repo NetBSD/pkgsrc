@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2021/07/30 12:21:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.37 2021/08/03 20:18:19 js Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -249,6 +249,7 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-tvtuner.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-video.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input.conf.common
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-chat.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-headphones-2.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
@@ -259,12 +260,15 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-0.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-1.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-10.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-2.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-3.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-5.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-8.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-9.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-output.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-chat-common.conf
@@ -272,22 +276,29 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-game-co
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-mono.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-stereo.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/virtual-surround-7.1.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/audigy.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/behringer-umc22.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/cmedia-high-speed-true-hdaudio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker-and-int-mic.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/hp-tbt-dock-120w-g2.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/hp-tbt-dock-audio-module.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/kinect-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/maudio-fasttrack-pro.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-audio4dj.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-audio8dj.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-komplete-audio6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-korecontroller.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio10.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio2.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sennheiser-gsx.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/simple-headphones-mic.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-common-usb-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/usb-gaming-headset.conf
 share/vala/vapi/libpulse-mainloop-glib.deps
