@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/08 13:34:49 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/03 08:57:48 pin Exp $
 
 DISTNAME=	heliocron-0.5.0
 CATEGORIES=	time
@@ -11,8 +11,6 @@ COMMENT=	Execute tasks relative to sunset, sunrise and other solar events
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
