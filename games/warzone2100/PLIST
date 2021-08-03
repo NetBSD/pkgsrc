@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/20 20:21:26 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/08/03 18:09:27 triaxx Exp $
+bin/.portable
 bin/warzone2100
 man/man6/warzone2100.6
 share/applications/warzone2100.desktop
@@ -65,6 +66,8 @@ share/doc/warzone2100/js-objects.md
 share/doc/warzone2100/quickstartguide.html
 share/doc/warzone2100/warzone2100.6.html
 share/icons/warzone2100.png
+share/locale/af_ZA/LC_MESSAGES/warzone2100.mo
+share/locale/bg_BG/LC_MESSAGES/warzone2100.mo
 share/locale/ca_ES/LC_MESSAGES/warzone2100.mo
 share/locale/cs/LC_MESSAGES/warzone2100.mo
 share/locale/da/LC_MESSAGES/warzone2100.mo
@@ -74,13 +77,16 @@ share/locale/en_GB/LC_MESSAGES/warzone2100.mo
 share/locale/eo/LC_MESSAGES/warzone2100.mo
 share/locale/es/LC_MESSAGES/warzone2100.mo
 share/locale/et_EE/LC_MESSAGES/warzone2100.mo
+share/locale/fa_IR/LC_MESSAGES/warzone2100.mo
 share/locale/fi/LC_MESSAGES/warzone2100.mo
 share/locale/fr/LC_MESSAGES/warzone2100.mo
 share/locale/fy/LC_MESSAGES/warzone2100.mo
 share/locale/ga/LC_MESSAGES/warzone2100.mo
+share/locale/he_IL/LC_MESSAGES/warzone2100.mo
 share/locale/hr/LC_MESSAGES/warzone2100.mo
 share/locale/hu/LC_MESSAGES/warzone2100.mo
 share/locale/id/LC_MESSAGES/warzone2100.mo
+share/locale/id_ID/LC_MESSAGES/warzone2100.mo
 share/locale/it/LC_MESSAGES/warzone2100.mo
 share/locale/ko/LC_MESSAGES/warzone2100.mo
 share/locale/la/LC_MESSAGES/warzone2100.mo
@@ -95,6 +101,7 @@ share/locale/ru/LC_MESSAGES/warzone2100.mo
 share/locale/sk/LC_MESSAGES/warzone2100.mo
 share/locale/sl/LC_MESSAGES/warzone2100.mo
 share/locale/tr/LC_MESSAGES/warzone2100.mo
+share/locale/tt_RU/LC_MESSAGES/warzone2100.mo
 share/locale/uk_UA/LC_MESSAGES/warzone2100.mo
 share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
 share/locale/zh_TW/LC_MESSAGES/warzone2100.mo
@@ -104,8 +111,25 @@ share/warzone2100/fonts/DejaVu.LICENSE.txt
 share/warzone2100/fonts/DejaVuSans-Bold.ttf
 share/warzone2100/fonts/DejaVuSans.ttf
 share/warzone2100/mp.wz
+share/warzone2100/music/albums/legacy_soundtrack/album.json
+share/warzone2100/music/albums/legacy_soundtrack/albumcover.png
+share/warzone2100/music/albums/legacy_soundtrack/license.txt
+share/warzone2100/music/albums/legacy_soundtrack/track10.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track11.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track12.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track13.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track14.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track15.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track16.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track4.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track5.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track6.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track7.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track8.ogg
+share/warzone2100/music/albums/legacy_soundtrack/track9.ogg
+share/warzone2100/music/albums/original_soundtrack/album.json
+share/warzone2100/music/albums/original_soundtrack/albumcover.png
+share/warzone2100/music/albums/original_soundtrack/track1.ogg
+share/warzone2100/music/albums/original_soundtrack/track2.ogg
+share/warzone2100/music/albums/original_soundtrack/track3.ogg
 share/warzone2100/music/menu.ogg
-share/warzone2100/music/music.wpl
-share/warzone2100/music/track1.ogg
-share/warzone2100/music/track2.ogg
-share/warzone2100/music/track3.ogg
