@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/24 19:49:05 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/03 08:55:54 pin Exp $
 
 DISTNAME=	lsd-0.20.1
 CATEGORIES=	sysutils
@@ -10,8 +10,6 @@ COMMENT=	The next gen ls command
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin share/doc/lsd
 
