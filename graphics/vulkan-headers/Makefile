@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/24 18:57:46 maya Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/03 16:00:26 triaxx Exp $
 
 GITHUB_PROJECT=	Vulkan-Headers
-DISTNAME=	sdk-1.1.126.0
+DISTNAME=	sdk-1.2.182.0
 PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/sdk-//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
