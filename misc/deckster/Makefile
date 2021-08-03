@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/17 07:47:42 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/03 08:53:47 pin Exp $
 
 DISTNAME=	deckster-0.2.1
 CATEGORIES=	misc
@@ -12,8 +12,6 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/deckster-v0.2.1-36735a7ca9698e48541da981ef5ccc8978fe9f58
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
