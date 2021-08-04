@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2021/06/28 22:53:05 tnn Exp $
+$NetBSD: distinfo,v 1.25 2021/08/04 17:06:35 ryoon Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -19,6 +19,7 @@ Size (openjdk-jdk11u-jdk-11.0.11-9-1.tar.gz) = 122607262 bytes
 SHA1 (patch-make_autoconf_basics.m4) = 5a8d3cd229f73eef34fb3860dfae1a813ec39ab5
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 3b37853298805e2ffb92d3babd700d0048f24d8d
 SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b07618
+SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
 SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7a7d54
 SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
