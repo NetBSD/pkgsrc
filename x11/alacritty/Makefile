@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/07/22 18:46:27 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/04 00:02:32 tnn Exp $
 
-DISTNAME=	alacritty-0.8.0
-PKGREVISION=	3
+DISTNAME=	alacritty-0.9.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -53,4 +52,5 @@ do-install:
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
