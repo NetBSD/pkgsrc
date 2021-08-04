@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4066 2021/08/04 13:33:26 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4067 2021/08/04 15:47:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6466,3 +6466,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.17.4 [adam 2021-08-04]
 	Updated net/fehqlibs to 18 [schmonz 2021-08-04]
 	Updated net/djbdnscurve6 to 38 [schmonz 2021-08-04]
+	Added databases/mariadb106-client version 10.6.3 [nia 2021-08-04]
