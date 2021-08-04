@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/04 15:47:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/04 16:01:28 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -60,12 +60,12 @@ include/mysql/server/private/create_options.h
 include/mysql/server/private/create_tmp_table.h
 include/mysql/server/private/custom_conf.h
 include/mysql/server/private/datadict.h
+include/mysql/server/private/ddl_log.h
 include/mysql/server/private/debug.h
 include/mysql/server/private/debug_sync.h
 include/mysql/server/private/derived_handler.h
 include/mysql/server/private/derror.h
 include/mysql/server/private/des_key_file.h
-include/mysql/server/private/ddl_log.h
 include/mysql/server/private/discover.h
 ${PLIST.embedded}include/mysql/server/private/embedded_priv.h
 include/mysql/server/private/event_data_objects.h
