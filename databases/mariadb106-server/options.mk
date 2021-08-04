@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2021/08/04 15:47:24 nia Exp $
+# $NetBSD: options.mk,v 1.2 2021/08/04 16:01:28 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
 #PKG_SUPPORTED_OPTIONS+=	columnstore
+
 PKG_SUPPORTED_OPTIONS+=	embedded-server lzo lz4 oqgraph rocksdb
 PKG_SUPPORTED_OPTIONS+=	snappy ssl zstd
 
