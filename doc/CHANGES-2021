@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4067 2021/08/04 15:47:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4068 2021/08/04 15:48:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6467,3 +6467,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/fehqlibs to 18 [schmonz 2021-08-04]
 	Updated net/djbdnscurve6 to 38 [schmonz 2021-08-04]
 	Added databases/mariadb106-client version 10.6.3 [nia 2021-08-04]
+	Added databases/mariadb106-server version 10.6.3 [nia 2021-08-04]
