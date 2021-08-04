@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4065 2021/08/04 13:32:13 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4066 2021/08/04 13:33:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6465,3 +6465,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-astroid to 2.6.6 [adam 2021-08-04]
 	Updated lang/nodejs to 14.17.4 [adam 2021-08-04]
 	Updated net/fehqlibs to 18 [schmonz 2021-08-04]
+	Updated net/djbdnscurve6 to 38 [schmonz 2021-08-04]
