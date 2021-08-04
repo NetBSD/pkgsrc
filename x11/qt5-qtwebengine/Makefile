@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/03 21:04:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/04 08:22:30 nia Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -15,7 +15,7 @@ BUILD_TARGET=	first
 QMAKE_ARGS+=	-- -webengine-icu
 
 USE_TOOLS+=	bison bash
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 #TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 #TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
