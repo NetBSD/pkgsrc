@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2021/06/27 08:53:54 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2021/08/04 17:06:35 ryoon Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	openjdk-jdk11u
@@ -59,7 +60,8 @@ CONFIGURE_ARGS+=	--with-num-cores=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-javac-server
-CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
+# Do not include ${PREFIX} (/usr/pkg) for internal libraries.
+#CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--with-extra-cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--with-extra-cxxflags=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	--disable-warnings-as-errors
