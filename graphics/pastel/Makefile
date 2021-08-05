@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/11 21:23:53 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:53:21 pin Exp $
 
 DISTNAME=	pastel-0.8.1
 CATEGORIES=	graphics
@@ -11,8 +11,6 @@ COMMENT=	Command-line tool to generate, analyze, convert and manipulate colors
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
