@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:42:25 pin Exp $
 
 DISTNAME=	cesium-0.2.1
 CATEGORIES=	editors
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes
 
