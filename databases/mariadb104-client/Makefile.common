@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2021/08/05 11:19:40 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2021/08/05 11:21:23 nia Exp $
 #
 # used by databases/mariadb104-client/Makefile
 # used by databases/mariadb104-server/Makefile
@@ -110,5 +110,6 @@ PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
