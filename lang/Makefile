@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.602 2021/06/12 14:29:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.603 2021/08/05 08:01:18 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -37,7 +37,6 @@ SUBDIR+=	clisp
 SUBDIR+=	clojure
 SUBDIR+=	compiler-rt
 SUBDIR+=	coq
-SUBDIR+=	coreclr
 SUBDIR+=	cparser
 SUBDIR+=	cu-prolog
 SUBDIR+=	duktape
