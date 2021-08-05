@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/05 08:43:00 pin Exp $
 
 DISTNAME=	maguro-0.0.1
 CATEGORIES=	net
@@ -11,7 +11,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
