@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4073 2021/08/05 10:00:33 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4074 2021/08/05 10:53:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6474,3 +6474,21 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/coreclr [adam 2021-08-05]
 	Updated sysutils/duplicity to 0.8.20 [adam 2021-08-05]
 	Updated sysutils/dust to 0.6.2 [pin 2021-08-05]
+	Updated devel/py-distro to 1.6.0 [adam 2021-08-05]
+	Updated math/py-uncertainties to 3.1.6 [adam 2021-08-05]
+	Updated security/py-acme to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-apache to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-digitalocean to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-dnsimple to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-gehirn to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-google to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-linode to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-luadns to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-nsone to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-ovh to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-rfc2136 to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-route53 to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-dns-sakuracloud to 1.18.0 [adam 2021-08-05]
+	Updated security/py-certbot-nginx to 1.18.0 [adam 2021-08-05]
