@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/03/13 22:37:10 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/08/05 08:55:55 pin Exp $
 
 DISTNAME=	sfm-0.5.0
 CATEGORIES=	sysutils
@@ -11,8 +11,6 @@ COMMENT=	Simple file manager
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin share/doc/sfm
 
