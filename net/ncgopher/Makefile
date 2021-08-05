@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/05 08:43:42 pin Exp $
 
 DISTNAME=	ncgopher-0.2.0
 PKGREVISION=	1
@@ -13,7 +13,6 @@ LICENSE=	2-clause-bsd
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes
 
