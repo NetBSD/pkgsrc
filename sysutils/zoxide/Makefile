@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/10 11:48:25 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:46:37 pin Exp $
 
 DISTNAME=	zoxide-0.7.2
 CATEGORIES=	sysutils
@@ -11,8 +11,6 @@ COMMENT=	Faster way to navigate your filesystem
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c # rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
