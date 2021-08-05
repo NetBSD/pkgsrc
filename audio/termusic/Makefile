@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/22 16:16:36 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:41:42 pin Exp $
 
 DISTNAME=	termusic-0.2.11
 CATEGORIES=	audio
@@ -12,7 +12,6 @@ LICENSE=	mit AND gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
