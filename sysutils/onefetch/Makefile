@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/07/05 08:23:25 pin Exp $
+# $NetBSD: Makefile,v 1.13 2021/08/05 08:52:03 pin Exp $
 
 DISTNAME=	onefetch-2.10.2
 CATEGORIES=	sysutils
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
