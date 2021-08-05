@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/18 12:13:06 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/05 08:49:16 pin Exp $
 
 DISTNAME=	kibi-0.2.2
 CATEGORIES=	editors
@@ -11,8 +11,6 @@ COMMENT=	Text editor in less than 1024 lines of code, written in Rust
 LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
