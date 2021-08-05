@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/03 10:08:42 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:54:37 pin Exp $
 
 DISTNAME=	viu-1.3.0
 CATEGORIES=	graphics
@@ -11,8 +11,6 @@ COMMENT=	Simple terminal image viewer written in Rust
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=			c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
