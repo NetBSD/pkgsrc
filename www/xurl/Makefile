@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/24 10:37:30 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/05 08:57:47 pin Exp $
 
 DISTNAME=	xurl-0.1.0
 CATEGORIES=	www
@@ -10,8 +10,6 @@ COMMENT=	Little tool to manipulate urls
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
