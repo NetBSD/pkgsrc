@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/08/04 15:47:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/08/05 11:19:40 nia Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
@@ -54,6 +54,10 @@ CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DINSTALL_SYSCONFDIR="${PKG_SYSCONFDIR}"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MARIADB_DATADIR}
+
+.if ${OPSYS} == "SunOS"
+CMAKE_ARGS+=		-DWITH_MARIABACKUP=OFF
+.endif
 
 CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
 CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
