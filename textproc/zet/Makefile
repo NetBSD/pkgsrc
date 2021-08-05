@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/05 08:45:08 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/05 08:58:31 pin Exp $
 
 DISTNAME=	zet-0.2.0
 CATEGORIES=	textproc
@@ -10,8 +10,6 @@ COMMENT=	CLI utility to find the union, intersection, etc of files
 LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
