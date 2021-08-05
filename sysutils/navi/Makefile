@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/07/05 09:08:22 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/05 08:51:27 pin Exp $
 
 DISTNAME=	navi-2.16.0
 CATEGORIES=	sysutils
@@ -11,8 +11,6 @@ COMMENT=	Interactive cheatsheet tool for the CLI and application launchers
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
 DEPENDS+=	fzf-[0-9]*:../../sysutils/fzf
 
