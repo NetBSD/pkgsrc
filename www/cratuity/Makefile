@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/22 16:16:37 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/05 08:45:42 pin Exp $
 
 DISTNAME=	cratuity-0.1.4
 CATEGORIES=	www
@@ -12,8 +12,6 @@ COMMENT=	TUI for quickly searching crates.io
 LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
