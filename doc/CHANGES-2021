@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4072 2021/08/05 08:26:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4073 2021/08/05 10:00:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6473,3 +6473,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/upower to 0.99.12 [gutteridge 2021-08-05]
 	Removed lang/coreclr [adam 2021-08-05]
 	Updated sysutils/duplicity to 0.8.20 [adam 2021-08-05]
+	Updated sysutils/dust to 0.6.2 [pin 2021-08-05]
