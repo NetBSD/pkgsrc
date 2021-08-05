@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/06/21 07:11:55 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/05 08:47:25 pin Exp $
 
 DISTNAME=	yaydl-0.6.6
 CATEGORIES=	net
@@ -12,7 +12,6 @@ LICENSE=	cddl-1.0
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
