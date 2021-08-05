@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/29 09:15:40 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/05 08:50:35 pin Exp $
 
 DISTNAME=	hyperfine-1.11.0
 CATEGORIES=	benchmarks
@@ -11,8 +11,6 @@ COMMENT=	Command-line benchmarking tool
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
