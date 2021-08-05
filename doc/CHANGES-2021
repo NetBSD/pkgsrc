@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4075 2021/08/05 11:12:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4076 2021/08/05 13:24:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6493,3 +6493,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-sakuracloud to 1.18.0 [adam 2021-08-05]
 	Updated security/py-certbot-nginx to 1.18.0 [adam 2021-08-05]
 	Added sysutils/dua-cli version 2.14.4 [pin 2021-08-05]
+	Updated www/py-uwsgi to 2.0.19.1 [adam 2021-08-05]
+	Updated devel/py-cachelib to 0.2.0 [adam 2021-08-05]
