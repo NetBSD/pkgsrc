@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4076 2021/08/05 13:24:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4077 2021/08/05 18:40:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6495,3 +6495,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/dua-cli version 2.14.4 [pin 2021-08-05]
 	Updated www/py-uwsgi to 2.0.19.1 [adam 2021-08-05]
 	Updated devel/py-cachelib to 0.2.0 [adam 2021-08-05]
+	Updated www/py-sanic to 21.6.2 [adam 2021-08-05]
+	Updated textproc/py-sphinxcontrib-serializinghtml to 1.1.5 [adam 2021-08-05]
