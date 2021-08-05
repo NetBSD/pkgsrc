@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4071 2021/08/05 01:53:02 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4072 2021/08/05 08:26:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6471,3 +6471,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/openjdk11 to 1.11.0.11.9nb1 [ryoon 2021-08-04]
 	Updated math/sc-im to 0.8.2nb1 [sjmulder 2021-08-04]
 	Updated sysutils/upower to 0.99.12 [gutteridge 2021-08-05]
+	Removed lang/coreclr [adam 2021-08-05]
+	Updated sysutils/duplicity to 0.8.20 [adam 2021-08-05]
