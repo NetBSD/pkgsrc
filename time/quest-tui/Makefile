@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/31 20:26:41 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/05 08:55:18 pin Exp $
 
 DISTNAME=	quest-tui-0.2.0
 CATEGORIES=	time
@@ -12,8 +12,6 @@ COMMENT=	Rust todo TUI
 LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
