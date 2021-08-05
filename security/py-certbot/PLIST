@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/02/09 10:06:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/08/05 10:52:00 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,9 +51,6 @@ ${PYSITELIB}/certbot/_internal/cli/verb_help.pyo
 ${PYSITELIB}/certbot/_internal/client.py
 ${PYSITELIB}/certbot/_internal/client.pyc
 ${PYSITELIB}/certbot/_internal/client.pyo
-${PYSITELIB}/certbot/_internal/configuration.py
-${PYSITELIB}/certbot/_internal/configuration.pyc
-${PYSITELIB}/certbot/_internal/configuration.pyo
 ${PYSITELIB}/certbot/_internal/constants.py
 ${PYSITELIB}/certbot/_internal/constants.pyc
 ${PYSITELIB}/certbot/_internal/constants.pyo
@@ -66,6 +63,9 @@ ${PYSITELIB}/certbot/_internal/display/completer.pyo
 ${PYSITELIB}/certbot/_internal/display/dummy_readline.py
 ${PYSITELIB}/certbot/_internal/display/dummy_readline.pyc
 ${PYSITELIB}/certbot/_internal/display/dummy_readline.pyo
+${PYSITELIB}/certbot/_internal/display/obj.py
+${PYSITELIB}/certbot/_internal/display/obj.pyc
+${PYSITELIB}/certbot/_internal/display/obj.pyo
 ${PYSITELIB}/certbot/_internal/eff.py
 ${PYSITELIB}/certbot/_internal/eff.pyc
 ${PYSITELIB}/certbot/_internal/eff.pyo
@@ -138,6 +138,9 @@ ${PYSITELIB}/certbot/compat/misc.pyo
 ${PYSITELIB}/certbot/compat/os.py
 ${PYSITELIB}/certbot/compat/os.pyc
 ${PYSITELIB}/certbot/compat/os.pyo
+${PYSITELIB}/certbot/configuration.py
+${PYSITELIB}/certbot/configuration.pyc
+${PYSITELIB}/certbot/configuration.pyo
 ${PYSITELIB}/certbot/crypto_util.py
 ${PYSITELIB}/certbot/crypto_util.pyc
 ${PYSITELIB}/certbot/crypto_util.pyo
