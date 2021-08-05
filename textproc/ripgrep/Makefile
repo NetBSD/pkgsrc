@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/07/22 16:16:37 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2021/08/05 08:44:56 pin Exp $
 
 DISTNAME=	ripgrep-13.0.0
 CATEGORIES=	textproc
@@ -11,7 +11,6 @@ LICENSE=	unlicense
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
