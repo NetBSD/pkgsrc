@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/31 20:20:55 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/05 08:56:47 pin Exp $
 
 DISTNAME=	tre-command-0.3.6
 CATEGORIES=	sysutils
@@ -12,8 +12,6 @@ COMMENT=	Tree command, improved
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	bin
 
