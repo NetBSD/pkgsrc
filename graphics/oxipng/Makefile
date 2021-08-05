@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/12 15:03:54 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/05 08:52:48 pin Exp $
 
 DISTNAME=	oxipng-5.0.0
 CATEGORIES=	graphics
@@ -11,8 +11,6 @@ COMMENT=	Multithreaded PNG optimizer
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 
 INSTALLATION_DIRS=	bin
 
