@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/06 12:29:23 nia Exp $
+include/cyaml/cyaml.h
+lib/libcyaml.a
+lib/libcyaml.so
+lib/libcyaml.so.${PKGVERSION}
+lib/libcyaml.so.1
+lib/pkgconfig/libcyaml.pc
