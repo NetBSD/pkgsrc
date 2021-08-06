@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/05 16:05:44 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/08/06 01:17:18 gutteridge Exp $
 include/mate-sensors-applet/sensors-applet-plugin.h
 include/mate-sensors-applet/sensors-applet-sensor.h
 lib/libmate-sensors-applet-plugin.la
@@ -202,6 +202,9 @@ share/help/jv/mate-sensors-applet/legal.xml
 share/help/ka/mate-sensors-applet/figures/applet_in_panel.png
 share/help/ka/mate-sensors-applet/index.docbook
 share/help/ka/mate-sensors-applet/legal.xml
+share/help/kab/mate-sensors-applet/figures/applet_in_panel.png
+share/help/kab/mate-sensors-applet/index.docbook
+share/help/kab/mate-sensors-applet/legal.xml
 share/help/kk/mate-sensors-applet/figures/applet_in_panel.png
 share/help/kk/mate-sensors-applet/index.docbook
 share/help/kk/mate-sensors-applet/legal.xml
@@ -453,6 +456,7 @@ share/locale/it/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/ja/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/jv/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/ka/LC_MESSAGES/mate-sensors-applet.mo
+share/locale/kab/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/kk/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/km/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/kn/LC_MESSAGES/mate-sensors-applet.mo
