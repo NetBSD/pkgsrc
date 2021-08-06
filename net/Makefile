@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1422 2021/08/03 17:25:03 fcambus Exp $
+# $NetBSD: Makefile,v 1.1423 2021/08/06 01:53:45 sjmulder Exp $
 #
 
 COMMENT=	Networking tools
@@ -442,6 +442,7 @@ SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
 SUBDIR+=	netpipes
+SUBDIR+=	netwake
 SUBDIR+=	nfdump
 SUBDIR+=	ngrep
 SUBDIR+=	nicotine-plus
