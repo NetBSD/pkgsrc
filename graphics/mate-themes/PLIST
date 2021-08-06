@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/08/06 01:11:50 gutteridge Exp $
 share/icons/ContrastHigh/16x16/actions/action-unavailable.png
 share/icons/ContrastHigh/16x16/actions/bookmark-add.png
 share/icons/ContrastHigh/16x16/actions/bookmark-new.png
@@ -3721,14 +3721,6 @@ share/themes/BlackMATE/unity/unmaximize_focused_pressed.png
 share/themes/BlackMATE/unity/unmaximize_unfocused.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_prelight.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_pressed.png
-share/themes/Blue-Submarine-border/metacity-1/icon_close.png
-share/themes/Blue-Submarine-border/metacity-1/icon_close_u.png
-share/themes/Blue-Submarine-border/metacity-1/icon_maximize.png
-share/themes/Blue-Submarine-border/metacity-1/icon_maximize_u.png
-share/themes/Blue-Submarine-border/metacity-1/icon_minimize.png
-share/themes/Blue-Submarine-border/metacity-1/icon_minimize_u.png
-share/themes/Blue-Submarine-border/metacity-1/icon_restore.png
-share/themes/Blue-Submarine-border/metacity-1/icon_restore_u.png
 share/themes/Blue-Submarine-border/metacity-1/metacity-theme-1.xml
 share/themes/Blue-Submarine-border/metacity-1/stripes.png
 share/themes/Blue-Submarine/cinnamon/add-workspace.png
@@ -3880,14 +3872,6 @@ share/themes/Blue-Submarine/gtk-3.0/scrollbar.css
 share/themes/Blue-Submarine/gtk-3.0/settings.ini
 share/themes/Blue-Submarine/gtk-3.0/sidebar.css
 share/themes/Blue-Submarine/index.theme
-share/themes/Blue-Submarine/metacity-1/icon_close.png
-share/themes/Blue-Submarine/metacity-1/icon_close_u.png
-share/themes/Blue-Submarine/metacity-1/icon_maximize.png
-share/themes/Blue-Submarine/metacity-1/icon_maximize_u.png
-share/themes/Blue-Submarine/metacity-1/icon_minimize.png
-share/themes/Blue-Submarine/metacity-1/icon_minimize_u.png
-share/themes/Blue-Submarine/metacity-1/icon_restore.png
-share/themes/Blue-Submarine/metacity-1/icon_restore_u.png
 share/themes/Blue-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Blue-Submarine/metacity-1/stripes.png
 share/themes/BlueMenta-border/COPYING
@@ -4217,14 +4201,6 @@ share/themes/BlueMenta/xfwm4/top-right-active-shaded.xpm
 share/themes/BlueMenta/xfwm4/top-right-active.xpm
 share/themes/BlueMenta/xfwm4/top-right-inactive.xpm
 share/themes/ContrastHigh/index.theme
-share/themes/Green-Submarine-border/metacity-1/icon_close.png
-share/themes/Green-Submarine-border/metacity-1/icon_close_u.png
-share/themes/Green-Submarine-border/metacity-1/icon_maximize.png
-share/themes/Green-Submarine-border/metacity-1/icon_maximize_u.png
-share/themes/Green-Submarine-border/metacity-1/icon_minimize.png
-share/themes/Green-Submarine-border/metacity-1/icon_minimize_u.png
-share/themes/Green-Submarine-border/metacity-1/icon_restore.png
-share/themes/Green-Submarine-border/metacity-1/icon_restore_u.png
 share/themes/Green-Submarine-border/metacity-1/metacity-theme-1.xml
 share/themes/Green-Submarine-border/metacity-1/stripes.png
 share/themes/Green-Submarine/cinnamon/add-workspace.png
@@ -4376,14 +4352,6 @@ share/themes/Green-Submarine/gtk-3.0/scrollbar.css
 share/themes/Green-Submarine/gtk-3.0/settings.ini
 share/themes/Green-Submarine/gtk-3.0/sidebar.css
 share/themes/Green-Submarine/index.theme
-share/themes/Green-Submarine/metacity-1/icon_close.png
-share/themes/Green-Submarine/metacity-1/icon_close_u.png
-share/themes/Green-Submarine/metacity-1/icon_maximize.png
-share/themes/Green-Submarine/metacity-1/icon_maximize_u.png
-share/themes/Green-Submarine/metacity-1/icon_minimize.png
-share/themes/Green-Submarine/metacity-1/icon_minimize_u.png
-share/themes/Green-Submarine/metacity-1/icon_restore.png
-share/themes/Green-Submarine/metacity-1/icon_restore_u.png
 share/themes/Green-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Green-Submarine/metacity-1/stripes.png
 share/themes/GreenLaguna-border/COPYING
