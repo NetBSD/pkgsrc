@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4101 2021/08/06 10:25:11 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4102 2021/08/06 12:29:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6521,3 +6521,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/star to 1.6.1nb15 [micha 2021-08-06]
 	Updated shells/bosh to 20210729 [micha 2021-08-06]
 	Updated shells/pbosh to 20210729 [micha 2021-08-06]
+	Added textproc/libcyaml version 1.2.0 [nia 2021-08-06]
