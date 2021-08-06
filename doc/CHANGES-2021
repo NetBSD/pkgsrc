@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4094 2021/08/06 01:54:14 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4095 2021/08/06 02:12:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6514,3 +6514,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/mate-notification-daemon to 1.24.2 [gutteridge 2021-08-06]
 	Updated sysutils/nnn to 4.2nb1 [sjmulder 2021-08-06]
 	Added net/netwake version 0.2.1 [sjmulder 2021-08-06]
+	Updated meta-pkgs/mate to 1.24.1 [gutteridge 2021-08-06]
