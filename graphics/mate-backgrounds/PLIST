@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/05 16:05:42 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/08/06 01:12:53 gutteridge Exp $
 share/backgrounds/mate/abstract/Arc-Colors-Transparent-Wallpaper.png
+share/backgrounds/mate/abstract/Elephants.jpg
+share/backgrounds/mate/abstract/Elephants_3840x2160.jpg
+share/backgrounds/mate/abstract/Elephants_5640x3172.jpg
 share/backgrounds/mate/abstract/Flow.png
 share/backgrounds/mate/abstract/Gulp.png
 share/backgrounds/mate/abstract/Silk.png
