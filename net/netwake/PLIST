@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/06 01:53:09 sjmulder Exp $
+bin/netwake
+man/man1/netwake.1
