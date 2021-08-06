@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/04/21 11:40:48 adam Exp $
+# $NetBSD: Makefile,v 1.25 2021/08/06 01:13:32 gutteridge Exp $
 
-PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	libmatekbd-${VERSION:R}.0
+DISTNAME=	libmatekbd-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE keyboard configuration library
