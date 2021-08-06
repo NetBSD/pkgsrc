@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4097 2021/08/06 09:50:46 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4098 2021/08/06 09:52:10 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6517,3 +6517,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/mate to 1.24.1 [gutteridge 2021-08-06]
 	Updated net/netwake to 0.4 [sjmulder 2021-08-06]
 	Updated sysutils/zoxide to 0.7.3 [pin 2021-08-06]
+	Updated devel/smake to 1.5nb1 [micha 2021-08-06]
