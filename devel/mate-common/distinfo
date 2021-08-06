@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/05/31 23:24:16 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2021/08/06 01:14:12 gutteridge Exp $
 
-SHA1 (mate-common-1.24.1.tar.xz) = c6ca0253c27dbdf41028fe60373b89b54f30b17c
-RMD160 (mate-common-1.24.1.tar.xz) = ff08a07197ee8726a05bd33a486c1643e3031562
-SHA512 (mate-common-1.24.1.tar.xz) = da3e670e5b4f566bf1893692b34b63d94cb5bd993ce94d0d8245a54c12b2cc2c6af7c29edd184b09ce5296566dbe34112bc318e740a8a7910e4767569e64d623
-Size (mate-common-1.24.1.tar.xz) = 69316 bytes
+SHA1 (mate-common-1.24.2.tar.xz) = 62a10b5954e9443b690b92eec01cf8df45d62b24
+RMD160 (mate-common-1.24.2.tar.xz) = cd433e3433b51aa4d6c64506a9ff956a6dbe193f
+SHA512 (mate-common-1.24.2.tar.xz) = aae7cf6f4537b125d363e7be1f349cb4ba9515405d1e48704f87c647b2489647cfa14399f41b65a8c1b2a8851dfe8077ce47a3b618355767cc61a6e0037ba3d0
+Size (mate-common-1.24.2.tar.xz) = 69612 bytes
