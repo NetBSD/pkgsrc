@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4081 2021/08/06 00:49:32 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4082 2021/08/06 01:07:21 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6501,3 +6501,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/caja-extensions to 1.24.1 [gutteridge 2021-08-06]
 	Updated misc/libmateweather to 1.24.1 [gutteridge 2021-08-06]
 	Updated devel/mustach to 1.1.0 [sjmulder 2021-08-06]
+	Updated editors/micro to 2.0.9 [sjmulder 2021-08-06]
