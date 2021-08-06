@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/08/04 21:09:51 sjmulder Exp $
+# $NetBSD: Makefile,v 1.29 2021/08/06 01:38:57 sjmulder Exp $
 
 DISTNAME=	sc-im-0.8.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andmarti1424/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/andmarti1424/sc-im/
 COMMENT=	Curses-based spreadsheet program based on sc
 LICENSE=	original-bsd
