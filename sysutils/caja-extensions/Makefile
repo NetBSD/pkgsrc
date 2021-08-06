@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/04/21 11:42:39 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/08/06 00:03:07 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	caja-extensions-${VERSION}
+DISTNAME=	caja-extensions-${VERSION:R}.1
 CATEGORIES=	sysutils
 
 COMMENT=	Set of extensions for Caja
