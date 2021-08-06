@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.636 2021/07/29 19:16:08 nia Exp $
+# $NetBSD: Makefile,v 1.637 2021/08/06 13:50:24 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -221,6 +221,7 @@ SUBDIR+=	libao-nas
 SUBDIR+=	libao-oss
 SUBDIR+=	libao-pulse
 SUBDIR+=	libao-sun
+SUBDIR+=	libaudec
 SUBDIR+=	libaudiofile
 SUBDIR+=	libcanberra
 SUBDIR+=	libcdaudio

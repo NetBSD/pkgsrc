@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/06 13:50:24 nia Exp $
+bin/audec
+include/audec/audec.h
+lib/libaudec.a
+lib/libaudec.so
+lib/pkgconfig/audec.pc
