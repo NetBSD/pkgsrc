@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/06 12:29:23 nia Exp $
+
+SHA1 (libcyaml-1.2.0.tar.gz) = 63db82c5a9f13c5aaaaaee460f8f1f1aba778f54
+RMD160 (libcyaml-1.2.0.tar.gz) = 36d0a748beb7ad0abc054f9a3cd2186a3ae39e4c
+SHA512 (libcyaml-1.2.0.tar.gz) = 3f8722f7e814ea3d7eb0c2c51602bb150cee7e36eef8ec2f74056590504f25d19c50529ea77ebe9f1ed1ff6dc45d520f9bb43de63921b12dd921b3938330285e
+Size (libcyaml-1.2.0.tar.gz) = 83631 bytes
