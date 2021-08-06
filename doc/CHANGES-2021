@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4077 2021/08/05 18:40:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4078 2021/08/06 00:02:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6497,3 +6497,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-cachelib to 0.2.0 [adam 2021-08-05]
 	Updated www/py-sanic to 21.6.2 [adam 2021-08-05]
 	Updated textproc/py-sphinxcontrib-serializinghtml to 1.1.5 [adam 2021-08-05]
+	Updated sysutils/caja to 1.24.1 [gutteridge 2021-08-06]
