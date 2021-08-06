@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4090 2021/08/06 01:17:27 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4091 2021/08/06 01:18:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6510,3 +6510,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/mate-menus to 1.24.1 [gutteridge 2021-08-06]
 	Updated sysutils/mate-power-manager to 1.24.3 [gutteridge 2021-08-06]
 	Updated sysutils/mate-sensors-applet to 1.24.1 [gutteridge 2021-08-06]
+	Updated x11/mate-settings-daemon to 1.24.2 [gutteridge 2021-08-06]
