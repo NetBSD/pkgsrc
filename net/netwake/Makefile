@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/08/06 01:53:09 sjmulder Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/06 04:04:59 sjmulder Exp $
 
-DISTNAME=	netwake-0.2.1
+DISTNAME=	netwake-0.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sjmulder/}
 
