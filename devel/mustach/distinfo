@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/12/26 12:32:16 sjmulder Exp $
+$NetBSD: distinfo,v 1.3 2021/08/06 00:49:20 sjmulder Exp $
 
-SHA1 (mustach-0.99.tar.gz) = 6b0fbd5064f7f7cc2913c9fdf5bfc30a67bec186
-RMD160 (mustach-0.99.tar.gz) = 0a0559d6758fbd8a5fefb30739c837f7e6e72d43
-SHA512 (mustach-0.99.tar.gz) = 432cb6c72487bfba4103c0925271bdc7c3e7f38ed19bfec09d7ef9f9af16ecac3885ff037e94ca5d3023ffd3d5c526fcb102218d4c3ad13563406cab10e7a4b2
-Size (mustach-0.99.tar.gz) = 22100 bytes
-SHA1 (patch-mustach-json-c.c) = 4baf8f2f573bd32b096b58c0b2d4e7fbab61b2d3
-SHA1 (patch-mustach.c) = 798fb878bfca7c1a7d39dee3fee30306cdfd743d
+SHA1 (mustach-1.1.0.tar.gz) = 5c921d7aad5ecafd050a97774b019ba84928afd6
+RMD160 (mustach-1.1.0.tar.gz) = e8833dfe7daabe4795cc38091d36ac1602d9ceef
+SHA512 (mustach-1.1.0.tar.gz) = 4ca164bf40fd64c2127878f5f4a43066c299c7522e2099677206e60001db71c3eaac7c3bc33fff7ceb33bd1abf74f21c3367665b7791e05c77da16233d0cb00d
+Size (mustach-1.1.0.tar.gz) = 27343 bytes
