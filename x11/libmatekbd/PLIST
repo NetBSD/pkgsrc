@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/05 16:05:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/06 01:13:32 gutteridge Exp $
 include/libmatekbd/matekbd-desktop-config.h
 include/libmatekbd/matekbd-indicator-config.h
 include/libmatekbd/matekbd-indicator.h
@@ -126,6 +126,7 @@ share/locale/om/LC_MESSAGES/libmatekbd.mo
 share/locale/or/LC_MESSAGES/libmatekbd.mo
 share/locale/pa/LC_MESSAGES/libmatekbd.mo
 share/locale/pl/LC_MESSAGES/libmatekbd.mo
+share/locale/pms/LC_MESSAGES/libmatekbd.mo
 share/locale/ps/LC_MESSAGES/libmatekbd.mo
 share/locale/pt/LC_MESSAGES/libmatekbd.mo
 share/locale/pt_BR/LC_MESSAGES/libmatekbd.mo
