@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2021/07/26 20:11:50 fcambus Exp $
+# $NetBSD: Makefile,v 1.27 2021/08/06 01:36:38 sjmulder Exp $
 
 DISTNAME=	nnn-4.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/jarun/nnn/
 COMMENT=	Optimized, feature-packed terminal file manager
 LICENSE=	2-clause-bsd
