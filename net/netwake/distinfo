@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/08/06 01:53:09 sjmulder Exp $
+$NetBSD: distinfo,v 1.2 2021/08/06 04:04:59 sjmulder Exp $
 
-SHA1 (netwake-0.2.1.tar.gz) = 63d0d12be16a6c0a21275b6d6fa56eca52e60c49
-RMD160 (netwake-0.2.1.tar.gz) = 01958eed704049518fa71c6155834b164bbac1a3
-SHA512 (netwake-0.2.1.tar.gz) = 8f870c211b5f098b7d4fb81674a12dea719dfd451cfa2612758c736f1edb2864d551d8dcca27cc5f1376d169a720eefa5db38a734ab1731c0c0e1c670fa221ee
-Size (netwake-0.2.1.tar.gz) = 79096 bytes
+SHA1 (netwake-0.4.tar.gz) = 10a92dcc455c81d8f8403780631add2d6cf85b03
+RMD160 (netwake-0.4.tar.gz) = e808987930967476c79fff8dc0925727ca4c7838
+SHA512 (netwake-0.4.tar.gz) = 66de4e600d8b9a1e22463acba9577393a41d2ab8c64bb63548acd0c9344d37c0bd97d8a26ecaee0cab8ad56518135a90a8058251df8b7afe9d77e12e4b47eb0e
+Size (netwake-0.4.tar.gz) = 79499 bytes
