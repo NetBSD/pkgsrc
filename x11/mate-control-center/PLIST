@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/04/05 16:05:42 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/08/06 01:14:48 gutteridge Exp $
 bin/mate-about-me
 bin/mate-appearance-properties
 bin/mate-at-properties
@@ -928,6 +928,21 @@ share/help/ka/mate-control-center/config-screensaver.xml
 share/help/ka/mate-control-center/config-themes.xml
 share/help/ka/mate-control-center/index.docbook
 share/help/ka/mate-control-center/legal.xml
+share/help/kab/mate-control-center/config-accessibility-keyboard.xml
+share/help/kab/mate-control-center/config-background.xml
+share/help/kab/mate-control-center/config-behavior.xml
+share/help/kab/mate-control-center/config-cds.xml
+share/help/kab/mate-control-center/config-default-apps.xml
+share/help/kab/mate-control-center/config-file-type.xml
+share/help/kab/mate-control-center/config-hints.xml
+share/help/kab/mate-control-center/config-html.xml
+share/help/kab/mate-control-center/config-kbd.xml
+share/help/kab/mate-control-center/config-keybindings.xml
+share/help/kab/mate-control-center/config-mouse.xml
+share/help/kab/mate-control-center/config-screensaver.xml
+share/help/kab/mate-control-center/config-themes.xml
+share/help/kab/mate-control-center/index.docbook
+share/help/kab/mate-control-center/legal.xml
 share/help/kk/mate-control-center/config-accessibility-keyboard.xml
 share/help/kk/mate-control-center/config-background.xml
 share/help/kk/mate-control-center/config-behavior.xml
