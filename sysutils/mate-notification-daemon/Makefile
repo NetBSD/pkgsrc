@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/08/24 04:41:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.22 2021/08/06 01:20:52 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-notification-daemon-${VERSION:R}.0
+DISTNAME=	mate-notification-daemon-${VERSION:R}.2
 CATEGORIES=	sysutils
 
 COMMENT=	Notification daemon for MATE desktop
@@ -17,4 +16,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
