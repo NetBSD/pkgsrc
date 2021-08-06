@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4084 2021/08/06 01:13:03 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4085 2021/08/06 01:13:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/micro to 2.0.9 [sjmulder 2021-08-06]
 	Updated graphics/mate-themes to 3.22.22 [gutteridge 2021-08-06]
 	Updated graphics/mate-backgrounds to 1.24.2 [gutteridge 2021-08-06]
+	Updated x11/libmatekbd to 1.24.1 [gutteridge 2021-08-06]
