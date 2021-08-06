@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/08/24 04:41:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2021/08/06 01:11:50 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-VERSION=	3.22.21
+VERSION=	3.22.22
 DISTNAME=	mate-themes-${VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pub.mate-desktop.org/releases/themes/${VERSION:R}/
