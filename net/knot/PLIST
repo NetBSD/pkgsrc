@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/10/01 03:37:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/08/07 16:36:18 ryoon Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -8,6 +8,7 @@ bin/kzonesign
 include/knot/module.h
 include/libdnssec/binary.h
 include/libdnssec/crypto.h
+include/libdnssec/digest.h
 include/libdnssec/dnssec.h
 include/libdnssec/error.h
 include/libdnssec/key.h
@@ -30,6 +31,7 @@ include/libknot/db/db_lmdb.h
 include/libknot/db/db_trie.h
 include/libknot/descriptor.h
 include/libknot/dname.h
+include/libknot/dynarray.h
 include/libknot/endian.h
 include/libknot/errcode.h
 include/libknot/error.h
@@ -40,6 +42,8 @@ include/libknot/packet/compr.h
 include/libknot/packet/pkt.h
 include/libknot/packet/rrset-wire.h
 include/libknot/packet/wire.h
+include/libknot/probe/data.h
+include/libknot/probe/probe.h
 include/libknot/rdata.h
 include/libknot/rdataset.h
 include/libknot/rrset-dump.h
@@ -55,10 +59,12 @@ include/libknot/rrtype/rdname.h
 include/libknot/rrtype/rrsig.h
 include/libknot/rrtype/soa.h
 include/libknot/rrtype/tsig.h
+include/libknot/rrtype/zonemd.h
 include/libknot/tsig-op.h
 include/libknot/tsig.h
 include/libknot/version.h
 include/libknot/wire.h
+include/libknot/xdp.h
 include/libknot/yparser/yparser.h
 include/libknot/yparser/ypformat.h
 include/libknot/yparser/ypschema.h
@@ -92,4 +98,3 @@ sbin/knotc
 sbin/knotd
 share/examples/knot/example.com.zone
 share/examples/knot/knot.sample.conf
-@pkgdir etc/knot
