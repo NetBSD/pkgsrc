@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2018/06/06 14:53:04 prlw1 Exp $
+$NetBSD: distinfo,v 1.10 2021/08/07 12:20:17 prlw1 Exp $
 
-SHA1 (ne-3.15.tar.gz) = 141fbfd001080bd54fe2de8356eb5c24fb4e7630
-RMD160 (ne-3.15.tar.gz) = 05d9c8ee9e27256448ea66232732a297471cfa14
-SHA512 (ne-3.15.tar.gz) = d4bd74d255649e3805d2fc497b4ef73ef26c0b4ba857e0fd05da2ffebd16943196da3d0dd6a18c32a4afa841cc72b989c3f40db7d9b9f49c60675646a525c048
-Size (ne-3.15.tar.gz) = 664978 bytes
+SHA1 (ne-3.18.tar.gz) = 365603be30905aa132a5c2563a8f3024e06e8902
+RMD160 (ne-3.18.tar.gz) = 4f856bb07e86657b7fa7a40e1aba1499f5ff0fa7
+SHA512 (ne-3.18.tar.gz) = 56509124c4d4836a367564e086b02bb453cf6a12e236631cf9f1781672b832f2c6204e4886cacaed0c9d0a60c34ba0920fc87ba578b9deaf0b63443396cc2a6b
+Size (ne-3.18.tar.gz) = 665893 bytes
 SHA1 (patch-Makefile.in) = 994359a495cb24b0ca7073c30f7664bff145c445
+SHA1 (patch-src_unixhdr.h) = 936dfa4e567ad8b7a0c0270795edfbe8a1f7247d
