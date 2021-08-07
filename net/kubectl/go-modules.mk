@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2021/05/12 15:05:34 leot Exp $
+# $NetBSD: go-modules.mk,v 1.3 2021/08/07 10:55:50 leot Exp $
 
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.mod
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.zip
@@ -720,11 +720,11 @@ GO_MODULE_FILES+=	rsc.io/quote/v3/@v/v3.1.0.mod
 GO_MODULE_FILES+=	rsc.io/quote/v3/@v/v3.1.0.zip
 GO_MODULE_FILES+=	rsc.io/sampler/@v/v1.3.0.mod
 GO_MODULE_FILES+=	rsc.io/sampler/@v/v1.3.0.zip
-GO_MODULE_FILES+=	sigs.k8s.io/apiserver-network-proxy/konnectivity-client/@v/v0.0.15.mod
-GO_MODULE_FILES+=	sigs.k8s.io/apiserver-network-proxy/konnectivity-client/@v/v0.0.15.zip
+GO_MODULE_FILES+=	sigs.k8s.io/apiserver-network-proxy/konnectivity-client/@v/v0.0.19.mod
+GO_MODULE_FILES+=	sigs.k8s.io/apiserver-network-proxy/konnectivity-client/@v/v0.0.19.zip
 GO_MODULE_FILES+=	sigs.k8s.io/kustomize/@v/v2.0.3+incompatible.mod
 GO_MODULE_FILES+=	sigs.k8s.io/kustomize/@v/v2.0.3+incompatible.zip
-GO_MODULE_FILES+=	sigs.k8s.io/structured-merge-diff/v4/@v/v4.0.3.mod
-GO_MODULE_FILES+=	sigs.k8s.io/structured-merge-diff/v4/@v/v4.0.3.zip
+GO_MODULE_FILES+=	sigs.k8s.io/structured-merge-diff/v4/@v/v4.1.2.mod
+GO_MODULE_FILES+=	sigs.k8s.io/structured-merge-diff/v4/@v/v4.1.2.zip
 GO_MODULE_FILES+=	sigs.k8s.io/yaml/@v/v1.2.0.mod
 GO_MODULE_FILES+=	sigs.k8s.io/yaml/@v/v1.2.0.zip
