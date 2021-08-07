@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4111 2021/08/07 14:34:47 rjs Exp $
+$NetBSD: CHANGES-2021,v 1.4112 2021/08/07 14:38:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6534,3 +6534,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/ne to 3.18 [prlw1 2021-08-07]
 	Updated print/pmw to 4.51 [prlw1 2021-08-07]
 	Updated lang/sbcl to 2.1.7 [rjs 2021-08-07]
+	Updated security/gpg-tui to 0.7.4 [pin 2021-08-07]
