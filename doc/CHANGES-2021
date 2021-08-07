@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4110 2021/08/07 13:39:41 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4111 2021/08/07 14:34:47 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/kubectl to 1.20.9 [leot 2021-08-07]
 	Updated editors/ne to 3.18 [prlw1 2021-08-07]
 	Updated print/pmw to 4.51 [prlw1 2021-08-07]
+	Updated lang/sbcl to 2.1.7 [rjs 2021-08-07]
