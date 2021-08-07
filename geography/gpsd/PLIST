@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2021/01/09 19:42:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/08/07 23:22:48 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
 bin/gpscat
 bin/gpscsv
 bin/gpsctl
+bin/gpsdebuginfo
 bin/gpsdecode
 bin/gpsfake
 bin/gpsmon
@@ -12,6 +13,7 @@ bin/gpspipe
 bin/gpsplot
 bin/gpsprof
 bin/gpsrinex
+bin/gpssnmp
 bin/gpssubframe
 bin/gpxlogger
 bin/lcdgps
@@ -22,12 +24,12 @@ bin/xgpsspeed
 bin/zerk
 include/gps.h
 include/libgpsmm.h
-lib/libgps.so
-lib/libgps.so.28
-lib/libgps.so.28.0.0
-lib/libgpsdpacket.so
-lib/libgpsdpacket.so.28
-lib/libgpsdpacket.so.28.0.0
+lib/libgps.${RUBY_DLEXT}
+lib/libgps.so.29
+lib/libgps.so.29.0.0
+lib/libgpsdpacket.${RUBY_DLEXT}
+lib/libgpsdpacket.so.29
+lib/libgpsdpacket.so.29.0.0
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
@@ -47,6 +49,7 @@ man/man1/gps2udp.1
 man/man1/gpscat.1
 man/man1/gpscsv.1
 man/man1/gpsctl.1
+man/man1/gpsdebuginfo.1
 man/man1/gpsdecode.1
 man/man1/gpsfake.1
 man/man1/gpsmon.1
@@ -54,6 +57,7 @@ man/man1/gpspipe.1
 man/man1/gpsplot.1
 man/man1/gpsprof.1
 man/man1/gpsrinex.1
+man/man1/gpssnmp.1
 man/man1/gpssubframe.1
 man/man1/gpxlogger.1
 man/man1/lcdgps.1
@@ -76,5 +80,7 @@ share/doc/gpsd/AUTHORS
 share/doc/gpsd/COPYING
 share/doc/gpsd/NEWS
 share/doc/gpsd/README.adoc
+share/doc/gpsd/SUPPORT.adoc
 share/doc/gpsd/build.adoc
+share/doc/gpsd/example1.c.txt
 share/gpsd/icons/gpsd-logo.png
