@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2021/04/24 19:56:29 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/07 20:45:32 pin Exp $
 
-DISTNAME=	refi-3.0.0
+DISTNAME=	refi-3.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.com/miicat/refi/-/archive/v${PKGVERSION_NOREV}/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/miicat/refi/
 COMMENT=	Rename files in numberic order
 LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/refi-v3.0.0-99f2926da4561439c0ce95248344cd5c4f21de4d
-USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
+WRKSRC=		${WRKDIR}/refi-v3.1.0-7e9296b5259eefce9d46255219d004bfa7cb083d
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/refi ${DESTDIR}${PREFIX}/bin
