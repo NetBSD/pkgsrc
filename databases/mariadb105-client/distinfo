@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/08/07 07:48:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/08/07 09:24:07 nia Exp $
 
 SHA1 (mariadb-10.5.12.tar.gz) = 0e2ca328fdd2821c7a4400f7759cd6882a2c5840
 RMD160 (mariadb-10.5.12.tar.gz) = cfac6715b84ce1ed8e073fefad90c47875a0346b
@@ -15,14 +15,11 @@ SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 00cfaf5826cc97084bc77033985e66
 SHA1 (patch-plugin_auth__socket_auth__socket.c) = 850e94faff382a7e962f6d4d6ff960ddddc624c4
 SHA1 (patch-scripts_CMakeLists.txt) = b11f36e845716fccd455832b648f20413cd9de1f
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
+SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
 SHA1 (patch-storage_connect_ioapi.c) = 804e2d9d3722fbe4d5ed773cc98a4114fe4cf8a3
 SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
 SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
 SHA1 (patch-storage_rocksdb_rocksdb_build__tools_fb__compile__mongo.sh) = 3b632521c23765c39f4638dc7a80d04b9e1d58bd
-SHA1 (patch-storage_tokudb_PerconaFT_portability_file.cc) = 830b4c6b20713c811fcd847c1e1abfd8441d0d4a
-SHA1 (patch-storage_tokudb_PerconaFT_portability_toku__htod.h) = 66635f0f79310bb3b2975c64ba6432e9a40ece70
-SHA1 (patch-storage_tokudb_PerconaFT_portability_toku__portability.h) = 75ede1251371eb467901a59672d39443d8c28031
-SHA1 (patch-storage_tokudb_PerconaFT_src_CMakeLists.txt) = 3a9fb10c8515d256a9d58f18605733840bba1039
 SHA1 (patch-support-files_mysql.server.sh) = a98d82cdda1dbd5ef8ebb7e457bb51661b5fd275
