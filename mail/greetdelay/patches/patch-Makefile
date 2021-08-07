@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/08/07 12:57:20 schmonz Exp $
+
+Honor CFLAGS and LDFLAGS.
+
+--- Makefile.orig	2007-01-30 19:25:05.000000000 +0000
++++ Makefile
+@@ -1,7 +1,7 @@
+ default: greetdelay greetdelay.0
+ 
+ greetdelay: greetdelay.c Makefile
+-	gcc -O2 -o greetdelay greetdelay.c
++	gcc ${CFLAGS} ${LDFLAGS} -o greetdelay greetdelay.c
+ 
+ greetdelay.0: greetdelay.1 Makefile
+ 	nroff -man greetdelay.1 > greetdelay.0
