@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4107 2021/08/07 08:56:39 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4108 2021/08/07 10:56:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6530,3 +6530,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/micro to 2.0.10 [sjmulder 2021-08-07]
 	Updated databases/mariadb106-client to 10.6.4 [nia 2021-08-07]
 	Updated databases/mariadb106-server to 10.6.4 [nia 2021-08-07]
+	Updated net/kubectl to 1.20.9 [leot 2021-08-07]
