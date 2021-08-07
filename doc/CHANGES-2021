@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4109 2021/08/07 12:20:38 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4110 2021/08/07 13:39:41 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6532,3 +6532,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb106-server to 10.6.4 [nia 2021-08-07]
 	Updated net/kubectl to 1.20.9 [leot 2021-08-07]
 	Updated editors/ne to 3.18 [prlw1 2021-08-07]
+	Updated print/pmw to 4.51 [prlw1 2021-08-07]
