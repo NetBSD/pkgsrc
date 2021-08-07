@@ -1,12 +1,12 @@
-$NetBSD: patch-SConscript,v 1.1 2021/03/23 10:49:44 jperkin Exp $
+$NetBSD: patch-SConscript,v 1.2 2021/08/07 23:22:48 gdt Exp $
 
 gpspipe requires libgpsd for serial.c cfmakeraw() compat.
 
---- SConscript.orig	2021-01-09 02:35:30.000000000 +0000
+--- SConscript.orig	2021-07-31 00:09:29.000000000 +0000
 +++ SConscript
-@@ -1975,7 +1975,7 @@ gpsdctl = env.Program('clients/gpsdctl',
-                       LIBS=[libgps_static],
-                       parse_flags=gpsflags)
+@@ -1901,7 +1901,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
+                      LIBS=[libgpsd_static, libgps_static],
+                      parse_flags=gpsdflags + gpsflags + ncurseslibs)
  gpspipe = env.Program('clients/gpspipe', ['clients/gpspipe.c'],
 -                      LIBS=[libgps_static],
 +                      LIBS=[libgpsd_static, libgps_static],
