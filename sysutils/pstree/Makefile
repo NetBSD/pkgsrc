@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/02/09 14:27:57 mef Exp $
+# $NetBSD: Makefile,v 1.29 2021/08/07 13:11:19 schmonz Exp $
 #
 
 DISTNAME=	pstree-2.39
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}
 INSTALLATION_DIRS=	bin share/doc/proctree
 
 do-build:
-	cd ${WRKSRC}; ${CC} ${CFLAGS} -o pstree pstree.c
+	cd ${WRKSRC}; ${CC} ${CFLAGS} ${LDFLAGS} -o pstree pstree.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pstree ${DESTDIR}${PREFIX}/bin/proctree
