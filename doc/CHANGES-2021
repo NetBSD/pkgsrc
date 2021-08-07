@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4115 2021/08/07 20:45:52 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4116 2021/08/07 23:23:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6538,3 +6538,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/nsd to 4.3.7 [ryoon 2021-08-07]
 	Updated net/knot to 3.1.0 [ryoon 2021-08-07]
 	Updated sysutils/refi to 3.1.0 [pin 2021-08-07]
+	Updated geography/gpsd to 3.23 [gdt 2021-08-07]
