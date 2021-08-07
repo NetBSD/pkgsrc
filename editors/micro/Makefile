@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/08/06 01:06:44 sjmulder Exp $
+# $NetBSD: Makefile,v 1.17 2021/08/07 08:42:24 sjmulder Exp $
 
-DISTNAME=	micro-2.0.9
+DISTNAME=	micro-2.0.10
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zyedidia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -77,10 +77,10 @@ GO_MODULE_FILES+=	github.com/zyedidia/json5/@v/v0.0.0-20200102012142-2da050b1a98
 GO_MODULE_FILES+=	github.com/zyedidia/json5/@v/v0.0.0-20200102012142-2da050b1a98d.zip
 GO_MODULE_FILES+=	github.com/zyedidia/poller/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/zyedidia/poller/@v/v1.0.1.zip
-GO_MODULE_FILES+=	github.com/zyedidia/pty/@v/v2.0.0+incompatible.mod
-GO_MODULE_FILES+=	github.com/zyedidia/pty/@v/v2.0.0+incompatible.zip
-GO_MODULE_FILES+=	github.com/zyedidia/tcell/v2/@v/v2.0.7.mod
-GO_MODULE_FILES+=	github.com/zyedidia/tcell/v2/@v/v2.0.7.zip
+GO_MODULE_FILES+=	github.com/zyedidia/pty/@v/v1.1.15.mod
+GO_MODULE_FILES+=	github.com/zyedidia/pty/@v/v1.1.15.zip
+GO_MODULE_FILES+=	github.com/zyedidia/tcell/v2/@v/v2.0.8.mod
+GO_MODULE_FILES+=	github.com/zyedidia/tcell/v2/@v/v2.0.8.zip
 GO_MODULE_FILES+=	github.com/zyedidia/terminal/@v/v0.0.0-20180726154117-533c623e2415.mod
 GO_MODULE_FILES+=	github.com/zyedidia/terminal/@v/v0.0.0-20180726154117-533c623e2415.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190204203706-41f3e6584952.mod
