@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/29 15:53:11 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/07 13:39:05 prlw1 Exp $
 bin/pmw
 man/man1/pmw.1
 share/doc/pmw/spec.pdf
@@ -29,11 +29,13 @@ share/pmw/fontmetrics/NewCenturySchlbk-Italic.afm
 share/pmw/fontmetrics/NewCenturySchlbk-Roman.afm
 share/pmw/fontmetrics/PMW-Alpha.afm
 share/pmw/fontmetrics/PMW-Music.afm
+share/pmw/fontmetrics/PMW-Music.utr
 share/pmw/fontmetrics/Palatino-Bold.afm
 share/pmw/fontmetrics/Palatino-BoldItalic.afm
 share/pmw/fontmetrics/Palatino-Italic.afm
 share/pmw/fontmetrics/Palatino-Roman.afm
 share/pmw/fontmetrics/Symbol.afm
+share/pmw/fontmetrics/Symbol.utr
 share/pmw/fontmetrics/Times-Bold.afm
 share/pmw/fontmetrics/Times-BoldItalic.afm
 share/pmw/fontmetrics/Times-Italic.afm
