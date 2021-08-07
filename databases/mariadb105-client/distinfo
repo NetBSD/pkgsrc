@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.4 2021/08/04 15:52:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/08/07 07:48:28 nia Exp $
 
-SHA1 (mariadb-10.5.11.tar.gz) = f62668be013b1ab51ab7e001d026e17257ad8d30
-RMD160 (mariadb-10.5.11.tar.gz) = 9f0cbcfdc07c7015d4b054e40b08f93179aa3b0c
-SHA512 (mariadb-10.5.11.tar.gz) = 5ccb3f3d7cedf5ff79dd8d9304f0b7f3eb99a5558b446d1baf24cabe20c709360e2c99a737024793918fd6c23fc5a9bb83ffddfb5549310774d07294a3bbddf4
-Size (mariadb-10.5.11.tar.gz) = 99037098 bytes
+SHA1 (mariadb-10.5.12.tar.gz) = 0e2ca328fdd2821c7a4400f7759cd6882a2c5840
+RMD160 (mariadb-10.5.12.tar.gz) = cfac6715b84ce1ed8e073fefad90c47875a0346b
+SHA512 (mariadb-10.5.12.tar.gz) = c732c2033304f273900b3dcf21936e28aebb147316fcabc7efdc43b75bc47c198daacfaaae082b997d4e695139d2aeaa2619bd29935f1b6f0aa25b9b9cde9ae5
+Size (mariadb-10.5.12.tar.gz) = 101914615 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = 893f329ed03e01144df166debb4d902ad0304811
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a982889b88f811c3e14ebdf9795b0fa5d1fad
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
-SHA1 (patch-mysys_crc32_crc32__arm64.c) = 0a479d4e9c6a186c631f3c0f99d15f633c8a484a
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-plugin_auth__pam_CMakeLists.txt) = 033f01c64014c0e61bc635d5fbe686f7a4b7f317
 SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 00cfaf5826cc97084bc77033985e6686e1ce1628
