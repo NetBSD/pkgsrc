@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4106 2021/08/07 08:43:01 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4107 2021/08/07 08:56:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6528,3 +6528,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb105-client to 10.5.12 [nia 2021-08-07]
 	Updated databases/mariadb105-server to 10.5.12 [nia 2021-08-07]
 	Updated editors/micro to 2.0.10 [sjmulder 2021-08-07]
+	Updated databases/mariadb106-client to 10.6.4 [nia 2021-08-07]
+	Updated databases/mariadb106-server to 10.6.4 [nia 2021-08-07]
