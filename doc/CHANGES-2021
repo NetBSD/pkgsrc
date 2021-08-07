@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4113 2021/08/07 16:25:55 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4114 2021/08/07 16:37:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6536,3 +6536,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/sbcl to 2.1.7 [rjs 2021-08-07]
 	Updated security/gpg-tui to 0.7.4 [pin 2021-08-07]
 	Updated net/nsd to 4.3.7 [ryoon 2021-08-07]
+	Updated net/knot to 3.1.0 [ryoon 2021-08-07]
