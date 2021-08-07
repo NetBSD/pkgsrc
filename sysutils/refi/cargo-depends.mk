@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/02/06 10:35:18 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/08/07 20:45:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.15
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -7,8 +7,9 @@ CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.0.0-beta.2
 CARGO_CRATE_DEPENDS+=	clap_derive-3.0.0-beta.2
-CARGO_CRATE_DEPENDS+=	console-0.13.0
-CARGO_CRATE_DEPENDS+=	dialoguer-0.7.1
+CARGO_CRATE_DEPENDS+=	colored-2.0.0
+CARGO_CRATE_DEPENDS+=	console-0.14.1
+CARGO_CRATE_DEPENDS+=	dialoguer-0.8.0
 CARGO_CRATE_DEPENDS+=	encode_unicode-0.3.6
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.2
 CARGO_CRATE_DEPENDS+=	hashbrown-0.9.1
@@ -47,10 +48,10 @@ CARGO_CRATE_DEPENDS+=	unicode-width-0.1.8
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.1
 CARGO_CRATE_DEPENDS+=	vec_map-0.8.2
 CARGO_CRATE_DEPENDS+=	version_check-0.9.2
-CARGO_CRATE_DEPENDS+=	vfs-0.4.0
+CARGO_CRATE_DEPENDS+=	vfs-0.5.1
 CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	zeroize-0.9.3
+CARGO_CRATE_DEPENDS+=	zeroize-1.4.1
