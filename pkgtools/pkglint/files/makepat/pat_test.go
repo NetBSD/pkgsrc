@@ -44,10 +44,11 @@ func Test_compileCharClass(t *testing.T) {
 			p, err := Compile(tt.pattern)
 			if err != nil {
 				t.Fail()
-			}
-			got := p.Match(tt.str)
-			if got != tt.want {
-				t.Errorf("got %v, want %v", got, tt.want)
+			} else {
+				got := p.Match(tt.str)
+				if got != tt.want {
+					t.Errorf("got %v, want %v", got, tt.want)
+				}
 			}
 		})
 	}
@@ -176,6 +177,8 @@ func Test_Intersect(t *testing.T) {
 		{"N-9.99.*", "N-[1-9].*", "", false, true},
 		{"N-9.99.*", "N-[1-9][0-9].*", "", false, false},
 		{"*.c", "*.h", "", false, false},
+		{"a*", "*b", "ab", true, true},
+		{"a*bc", "ab*c", "abc", true, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.str, func(t *testing.T) {
@@ -217,6 +220,48 @@ func Test_Pattern_optimized(t *testing.T) {
 		{nil, true}}}
 	if !reflect.DeepEqual(opt, &expected) {
 		t.Errorf("%#v", p)
+	}
+}
+
+func Test_Pattern_reachable(t *testing.T) {
+	p, err := Compile("N-*")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	reachable := p.reachable()
+
+	if !reflect.DeepEqual(reachable, []bool{true, true, true}) {
+		t.Errorf("%#v", reachable)
+	}
+}
+
+func Test_Pattern_relevant(t *testing.T) {
+	p, err := Compile("N-*")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	reachable := p.reachable()
+	relevant := p.relevant(reachable)
+
+	if !reflect.DeepEqual(relevant, []bool{true, true, true}) {
+		t.Errorf("%#v", relevant)
+	}
+}
+
+func Test_Pattern_compressed(t *testing.T) {
+	p, err := Compile("N-*")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	reachable := p.reachable()
+	relevant := p.relevant(reachable)
+	compressed := p.compressed(relevant)
+
+	if !reflect.DeepEqual(compressed, p) {
+		t.Errorf("%#v", compressed)
 	}
 }
 
