@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4117 2021/08/08 09:23:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4118 2021/08/08 10:52:03 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6540,3 +6540,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/refi to 3.1.0 [pin 2021-08-07]
 	Updated geography/gpsd to 3.23 [gdt 2021-08-07]
 	Updated textproc/lowdown to 0.8.6 [fcambus 2021-08-08]
+	Updated news/sfeed to 1.0 [leot 2021-08-08]
