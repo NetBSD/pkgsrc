@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/08/08 15:20:14 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2021/08/08 23:14:46 gdt Exp $
 
 DISTNAME=	gpsd-3.23
 PKGREVISION=	1
@@ -72,6 +72,15 @@ do-test:
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SCONSBIN} \
 	${SCONS_ARGS} \
 	check
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	PLIST_SO=
+PLIST_SUBST+=	PLIST_DYLIB=.dylib
+.else
+PLIST_SUBST+=	PLIST_SO=.so
+PLIST_SUBST+=	PLIST_DYLIB=
+.endif
 
 # \todo Consider not including this and using the pre-built man pages.
 .include "../../lang/ruby/rubyversion.mk"
