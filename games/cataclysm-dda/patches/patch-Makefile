@@ -1,0 +1,111 @@
+$NetBSD: patch-Makefile,v 1.1 2021/08/08 20:40:42 nia Exp $
+
+Just use optimization flags from pkgsrc.
+Don't use -Werror.
+
+--- Makefile.orig	2021-07-03 05:00:06.000000000 +0000
++++ Makefile
+@@ -97,7 +97,7 @@
+ # RELEASE_FLAGS is flags for release builds.
+ RELEASE_FLAGS =
+ WARNINGS = \
+-  -Werror -Wall -Wextra \
++  -Wall -Wextra \
+   -Wformat-signedness \
+   -Wlogical-op \
+   -Wmissing-declarations \
+@@ -112,7 +112,7 @@ WARNINGS = \
+   -Wno-unknown-warning-option
+ # Uncomment below to disable warnings
+ #WARNINGS = -w
+-DEBUGSYMS = -g
++DEBUGSYMS =
+ #PROFILE = -pg
+ #OTHERS = -O3
+ #DEFINES = -DNDEBUG
+@@ -337,85 +337,6 @@ ifneq ($(SANITIZE),)
+   LDFLAGS += $(SANITIZE_FLAGS)
+ endif
+ 
+-# enable optimizations. slow to build
+-ifeq ($(RELEASE), 1)
+-  ifeq ($(NATIVE), osx)
+-    ifeq ($(shell $(CXX) -E -Os - < /dev/null > /dev/null 2>&1 && echo fos),fos)
+-      OPTLEVEL = -Os
+-    else
+-      OPTLEVEL = -O3
+-    endif
+-  else
+-    # MXE ICE Workaround
+-    # known bad on 4.9.3 and 4.9.4, if it gets fixed this could include a version test too
+-    ifeq ($(CXXMACHINE), x86_64-w64-mingw32.static)
+-      OPTLEVEL = -O3
+-    else
+-      OPTLEVEL = -Os
+-    endif
+-  endif
+-
+-  ifeq ($(LTO), 1)
+-    ifneq ($(CLANG), 0)
+-      # LLVM's LTO will complain if the optimization level isn't between O0 and
+-      # O3 (inclusive)
+-      OPTLEVEL = -O3
+-    endif
+-  endif
+-  CXXFLAGS += $(OPTLEVEL)
+-
+-  ifeq ($(LTO), 1)
+-    ifeq ($(NATIVE), osx)
+-      ifneq ($(CLANG), 0)
+-        LTOFLAGS += -flto=full
+-      endif
+-    else
+-      LDFLAGS += -fuse-ld=gold # This breaks in OS X because gold can only produce ELF binaries, not Mach
+-    endif
+-
+-    ifneq ($(CLANG), 0)
+-      LTOFLAGS += -flto
+-    else
+-      LTOFLAGS += -flto=jobserver -flto-odr-type-merging
+-    endif
+-  endif
+-  LTOFLAGS += -Wodr
+-  CXXFLAGS += $(LTOFLAGS)
+-
+-  # OTHERS += -mmmx -m3dnow -msse -msse2 -msse3 -mfpmath=sse -mtune=native
+-  # OTHERS += -march=native # Uncomment this to build an optimized binary for your machine only
+-
+-  # Strip symbols, generates smaller executable.
+-  OTHERS += $(RELEASE_FLAGS)
+-  DEBUG =
+-  ifndef DEBUG_SYMBOLS
+-    DEBUGSYMS =
+-  endif
+-  DEFINES += -DRELEASE
+-  # Check for astyle or JSON regressions on release builds.
+-  ifeq ($(ASTYLE), 1)
+-    CHECKS += astyle-check
+-  endif
+-  ifeq ($(LINTJSON), 1)
+-    CHECKS += style-json
+-  endif
+-else
+-  ifeq ($(NOOPT), 1)
+-    # While gcc claims to include all information required for
+-    # debugging at -Og, at least with gcc 8.3, control flow
+-    # doesn't move line-by-line at -Og.  Provide a command-line
+-    # way to turn off optimization (make NOOPT=1) entirely.
+-    OPTLEVEL = -O0
+-  else
+-    ifeq ($(shell $(CXX) -E -Og - < /dev/null > /dev/null 2>&1 && echo fog),fog)
+-      OPTLEVEL = -Og
+-    else
+-      OPTLEVEL = -O0
+-    endif
+-  endif
+-  CXXFLAGS += $(OPTLEVEL)
+-endif
+-
+ ifeq ($(shell sh -c 'uname -o 2>/dev/null || echo not'),Cygwin)
+   OTHERS += -std=gnu++14
+ else
