@@ -200,6 +200,36 @@ func (s *Suite) Test_MkAssignChecker_checkLeftNotUsed__infra(c *check.C) {
 		"WARN: ~/category/package/Makefile:22: UNDOCUMENTED is used but not defined.")
 }
 
+// https://gnats.netbsd.org/56352
+func (s *Suite) Test_MkAssignChecker_checkLeftOpsys(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"CPPFLAGS.mumble+=\t-DMACRO",
+		"CPPFLAGS.Linux+=\t-DMACRO",
+		"CFLAGS.NebTSD+=\t\t-Wall",
+		"CFLAGS.NetBSD+=\t\t-Wall",
+		"CXXFLAGS.DragonFly=\t-Wall",
+		"CXXFLAGS.DragonFlyBSD=\t-Wall",
+		"LDFLAGS.SunOS+=\t\t-lX11 -lm",
+		"LDFLAGS.SunOS+=\t\t-lX11 -lm",
+		"LDFLAGS.*+=\t\t-lfallback")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:5: Since CFLAGS is an OPSYS variable, "+
+			"its parameter \"NebTSD\" should be one of "+
+			"Cygwin DragonFly FreeBSD Linux NetBSD SunOS.",
+		"WARN: filename.mk:8: Since CXXFLAGS is an OPSYS variable, "+
+			"its parameter \"DragonFlyBSD\" should be one of "+
+			"Cygwin DragonFly FreeBSD Linux NetBSD SunOS.")
+}
+
 func (s *Suite) Test_MkAssignChecker_checkLeftDeprecated(c *check.C) {
 	t := s.Init(c)
 
@@ -723,6 +753,23 @@ func (s *Suite) Test_MkAssignChecker_checkOpShell(c *check.C) {
 		"",
 		"WARN: ~/category/package/standalone.mk:14: Please use \"${ECHO}\" instead of \"echo\".",
 		"WARN: ~/category/package/standalone.mk:15: Please use \"${ECHO}\" instead of \"echo\".")
+}
+
+func (s *Suite) Test_MkAssignChecker_checkOpAppendOnly(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"CFLAGS=\t\t-O2",
+		"CFLAGS.SunOS=\t-O0")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:3: " +
+			"Assignments to \"CFLAGS\" should use \"+=\", not \"=\".")
 }
 
 func (s *Suite) Test_MkAssignChecker_checkRight(c *check.C) {

@@ -1,6 +1,7 @@
 package pkglint
 
 import (
+	"netbsd.org/pkglint/textproc"
 	"strconv"
 	"strings"
 )
@@ -29,6 +30,7 @@ func (ck *MkAssignChecker) checkLeft() {
 	}
 
 	ck.checkLeftNotUsed()
+	ck.checkLeftOpsys()
 	ck.checkLeftDeprecated()
 	ck.checkLeftBsdPrefs()
 	if !ck.checkLeftUserSettable() {
@@ -38,7 +40,7 @@ func (ck *MkAssignChecker) checkLeft() {
 	ck.checkLeftRationale()
 
 	NewMkLineChecker(ck.MkLines, ck.MkLine).checkTextVarUse(
-		ck.MkLine.Varname(),
+		varname,
 		NewVartype(BtVariableName, NoVartypeOptions, NewACLEntry("*", aclpAll)),
 		VucLoadTime)
 }
@@ -89,6 +91,33 @@ func (ck *MkAssignChecker) checkLeftNotUsed() {
 		"variables that look unused since they are only used by other packages.",
 		"These variables should be documented at the head of the file;",
 		"see mk/subst.mk for an example of such a documentation comment.")
+}
+
+// checkLeftOpsys checks whether the variable name is one of the OPSYS
+// variables, which get merged with their corresponding VAR.${OPSYS} in
+// bsd.pkg.mk.
+func (ck *MkAssignChecker) checkLeftOpsys() {
+	varname := ck.MkLine.Varname()
+	varbase := varnameBase(varname)
+	if !G.Pkgsrc.IsOpsysVar(varbase) {
+		return
+	}
+
+	varparam := varnameParam(varname)
+	if varparam == "" || varparam == "*" ||
+		textproc.Lower.Contains(varparam[0]) {
+		return
+	}
+
+	platforms := G.Pkgsrc.VariableType(ck.MkLines, "OPSYS").basicType
+	if platforms.HasEnum(varparam) {
+		return
+	}
+
+	ck.MkLine.Warnf(
+		"Since %s is an OPSYS variable, "+
+			"its parameter %q should be one of %s.",
+		varbase, varparam, platforms.AllowedEnums())
 }
 
 func (ck *MkAssignChecker) checkLeftDeprecated() {
@@ -344,6 +373,7 @@ func (ck *MkAssignChecker) checkLeftRationale() {
 
 func (ck *MkAssignChecker) checkOp() {
 	ck.checkOpShell()
+	ck.checkOpAppendOnly()
 }
 
 func (ck *MkAssignChecker) checkOpShell() {
@@ -391,6 +421,51 @@ func (ck *MkAssignChecker) checkOpShell() {
 		"of the line, or force the variable to be evaluated at load time,",
 		"by using it at the right-hand side of the := operator, or in an .if",
 		"or .for directive.")
+}
+
+// https://gnats.netbsd.org/56352
+func (ck *MkAssignChecker) checkOpAppendOnly() {
+
+	if ck.MkLine.Op() != opAssign {
+		return
+	}
+
+	varname := ck.MkLine.Varname()
+	varbase := varnameBase(varname)
+
+	// See pkgtools/bootstrap-mk-files/files/sys.mk
+	switch varbase {
+	case
+		"CFLAGS",    // C
+		"OBJCFLAGS", // Objective C
+		"FFLAGS",    // Fortran
+		"RFLAGS",    // Ratfor
+		"LFLAGS",    // Lex
+		"LDFLAGS",   // Linker
+		"LINTFLAGS", // Lint
+		"PFLAGS",    // Pascal
+		"YFLAGS",    // Yacc
+		"LDADD":     // Just for symmetry
+		break
+	default:
+		return
+	}
+
+	// At this point, it does not matter whether bsd.prefs.mk has been
+	// included or not since the above variables get their default values
+	// in sys.mk already, which is loaded even before the very first line
+	// of the package Makefile.
+
+	// The parameterized OPSYS variants do not get any default values before
+	// the package Makefile is included.  Therefore, as long as bsd.prefs.mk
+	// has not been included, the operator '=' can still be used.  Testing for
+	// bsd.prefs.mk is only half the story, any other accidental overwrites
+	// are caught by RedundantScope.
+	if varbase != varname && !ck.MkLines.Tools.SeenPrefs {
+		return
+	}
+
+	ck.MkLine.Warnf("Assignments to %q should use \"+=\", not \"=\".", varname)
 }
 
 // checkLeft checks everything to the right of the assignment operator.
