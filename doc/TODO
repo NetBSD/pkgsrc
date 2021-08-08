@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20920 2021/08/08 12:07:20 wiz Exp $
+$NetBSD: TODO,v 1.20921 2021/08/08 15:53:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -718,7 +718,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o doclifter-2.19
 	o dolphin-5.0
 	o dosbox-x-0.83.12
-	o dovecot2-pigeonhole-0.5.16
 	o dpkg-1.20.9
 	o drivel-3.0.5
 	o dtc-1.6.0
