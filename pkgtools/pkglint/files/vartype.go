@@ -29,22 +29,26 @@ const (
 	// and as lists of arbitrary things.
 	List vartypeOptions = 1 << iota
 
-	// The variable is not defined by the pkgsrc infrastructure.
+	// Guessed means that the variable is not defined by the pkgsrc
+	// infrastructure.
 	// It follows the common naming convention, therefore its type can be guessed.
 	// Sometimes, with files and paths, this leads to wrong decisions.
 	Guessed
 
-	// The variable can, or in some cases must, be defined by the package.
+	// PackageSettable means that the variable can, or in some cases must,
+	// be defined by the package.
 	// For several of these variables, the pkgsrc infrastructure provides
 	// a reasonable default value, either in bsd.prefs.mk or in bsd.pkg.mk.
 	PackageSettable
 
-	// The variable can be defined by the pkgsrc user in mk.conf.
+	// UserSettable means that the variable can be defined by the pkgsrc
+	// user in mk.conf.
 	// Its value is available at load time after bsd.prefs.mk has been included.
 	UserSettable
 
-	// This variable is provided by either the pkgsrc infrastructure in
-	// mk/*, or by <sys.mk>, which is included at the very beginning.
+	// SystemProvided means that this variable is provided by either the
+	// pkgsrc infrastructure in mk/*, or by <sys.mk>, which is included
+	// at the very beginning.
 	//
 	// TODO: Clearly distinguish between:
 	//  * sys.mk
@@ -56,14 +60,14 @@ const (
 	//  expressive enough. This is related to the scope and lifetime of
 	//  variables and should be modelled separately.
 	//
-	// See DefinedInSysMk.
+	// See DefinedIfInScope.
 	SystemProvided
 
-	// This variable may be provided in the command line by the pkgsrc
-	// user when building a package.
+	// CommandLineProvided means that this variable may be provided in the
+	// command line by the pkgsrc user when building a package.
 	//
-	// Since the values of these variables are not written down in any
-	// file, they must not influence the generated binary packages.
+	// Since the values of these variables are not recorded in any file,
+	// they must not influence the generated binary packages.
 	//
 	// See UserSettable.
 	CommandLineProvided
@@ -72,8 +76,8 @@ const (
 	// describing why they are set. Typical examples are NOT_FOR_* variables.
 	NeedsRationale
 
-	// When something is appended to this variable, each additional
-	// value should be on a line of its own.
+	// OnePerLine means that when something is appended to this variable,
+	// each additional value should be on a line of its own.
 	OnePerLine
 
 	// AlwaysInScope is true when the variable is always available.
@@ -134,8 +138,8 @@ const (
 	//  X11_TYPE (user-settable)
 	NonemptyIfDefined
 
-	// Unique is true if it doesn't make sense to append the same
-	// value more than once to the variable.
+	// Unique marks variables where it doesn't make sense to append the same
+	// value more than once.
 	//
 	// A typical example is CATEGORIES.
 	Unique

@@ -76,7 +76,7 @@ func (l *Lexer) NextString(prefix string) string {
 	return ""
 }
 
-// SkipText skips over the given string, if the remaining string starts
+// SkipString skips over the given string, if the remaining string starts
 // with it. It returns whether it actually skipped.
 func (l *Lexer) SkipString(prefix string) bool {
 	skipped := strings.HasPrefix(l.rest, prefix)
@@ -199,8 +199,8 @@ func (l *Lexer) SkipRegexp(re *regexp.Regexp) bool {
 }
 
 // NextRegexp tests whether the remaining string matches the given regular
-// expression, and in that case, skips over it and returns the matched substrings,
-// as in regexp.FindStringSubmatch.
+// expression, and in that case, chops it off and returns the matched
+// substrings, as in regexp.FindStringSubmatch.
 // If the regular expression does not match, returns nil.
 func (l *Lexer) NextRegexp(re *regexp.Regexp) []string {
 	if !strings.HasPrefix(re.String(), "^") {
