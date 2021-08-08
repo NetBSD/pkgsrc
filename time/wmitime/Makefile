@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/11/24 11:18:21 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/08 09:40:43 nia Exp $
 
 DISTNAME=	wmitime-0.5
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	https://www.dockapps.net/download/
 
