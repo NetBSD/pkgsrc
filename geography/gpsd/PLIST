@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/08/08 15:36:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/08/08 23:14:46 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -24,12 +24,12 @@ bin/xgpsspeed
 bin/zerk
 include/gps.h
 include/libgpsmm.h
-lib/libgps.so
-lib/libgps.so.29
-lib/libgps.so.29.0.0
-lib/libgpsdpacket.so
-lib/libgpsdpacket.so.29
-lib/libgpsdpacket.so.29.0.0
+lib/libgps${PLIST_SO}${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.29${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.29.0.0${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.29${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.29.0.0${PLIST_DYLIB}
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
