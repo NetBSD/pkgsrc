@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/08/04 16:01:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/08/08 21:18:30 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -6,8 +6,8 @@ bin/aria_pack
 bin/aria_read_log
 bin/aria_s3_copy
 bin/innochecksum
-bin/mariabackup
-bin/mariadb-backup
+${PLIST.mariabackup}bin/mariabackup
+${PLIST.mariabackup}bin/mariadb-backup
 bin/mariadb-client-test
 ${PLIST.embedded}bin/mariadb-client-test-embedded
 ${PLIST.embedded}bin/mariadb-embedded
@@ -20,7 +20,7 @@ bin/mariadb-waitpid
 bin/mariadbd-multi
 bin/mariadbd-safe
 bin/mariadbd-safe-helper
-bin/mbstream
+${PLIST.mariabackup}bin/mbstream
 bin/my_print_defaults
 bin/myisam_ftdump
 bin/myisamchk
