@@ -1169,6 +1169,19 @@ func (src *Pkgsrc) IsBuildDef(varname string) bool {
 	return src.buildDefs[varname]
 }
 
+func (src *Pkgsrc) IsOpsysVar(varbase string) bool {
+	// See mk/bsd.pkg.mk, "OPSYSVARS".
+	switch varbase {
+	case "CFLAGS", "CXXFLAGS", "CPPFLAGS", "LDFLAGS", "LIBS",
+		"CMAKE_ARGS", "CONFIGURE_ARGS", "CONFIGURE_ENV",
+		"BUILDLINK_TRANSFORM", "SUBST_CLASSES",
+		"BUILD_TARGET", "MAKE_ENV", "MAKE_FLAGS", "USE_TOOLS":
+		return true
+	}
+	// TODO: Packages can add their own variables to OPSYSVARS as well.
+	return false
+}
+
 // ReadDir lists the files and subdirectories from the given directory
 // (relative to the pkgsrc root).
 //
