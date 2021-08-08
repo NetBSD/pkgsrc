@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4122 2021/08/08 18:40:22 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.4123 2021/08/08 22:04:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6544,3 +6544,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed_curses to 1.0 [leot 2021-08-08]
 	Updated mail/dovecot2 to 2.3.16 [schmonz 2021-08-08]
 	Updated mail/dovecot2-pigeonhole to 0.5.16 [schmonz 2021-08-08]
+	Updated pkgtools/pkglint to 21.2.2 [rillig 2021-08-08]
