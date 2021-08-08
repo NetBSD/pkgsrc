@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/08/07 23:22:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/08/08 15:36:22 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -24,10 +24,10 @@ bin/xgpsspeed
 bin/zerk
 include/gps.h
 include/libgpsmm.h
-lib/libgps.${RUBY_DLEXT}
+lib/libgps.so
 lib/libgps.so.29
 lib/libgps.so.29.0.0
-lib/libgpsdpacket.${RUBY_DLEXT}
+lib/libgpsdpacket.so
 lib/libgpsdpacket.so.29
 lib/libgpsdpacket.so.29.0.0
 lib/pkgconfig/libgps.pc
