@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/07/06 03:28:56 wen Exp $
+# $NetBSD: Makefile,v 1.29 2021/08/08 04:48:31 wiz Exp $
 
 DISTNAME=	LaTeX-Driver-1.2.0
 PKGNAME=	p5-${DISTNAME}
@@ -29,8 +29,10 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
+# test dependency, but build fails if it's not there
+BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+
 TEST_DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
-TEST_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 TEST_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 TEST_DEPENDS+=	p5-Test-Spelling-[0-9]*:../../devel/p5-Test-Spelling
 
