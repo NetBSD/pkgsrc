@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4116 2021/08/07 23:23:03 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4117 2021/08/08 09:23:04 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6539,3 +6539,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/knot to 3.1.0 [ryoon 2021-08-07]
 	Updated sysutils/refi to 3.1.0 [pin 2021-08-07]
 	Updated geography/gpsd to 3.23 [gdt 2021-08-07]
+	Updated textproc/lowdown to 0.8.6 [fcambus 2021-08-08]
