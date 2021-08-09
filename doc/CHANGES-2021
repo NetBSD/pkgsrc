@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4132 2021/08/09 14:58:13 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.4133 2021/08/09 17:29:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6555,3 +6555,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/lyx to 2.3.6.1 [rhialto 2021-08-09]
 	Updated sysutils/mtools to 4.0.35 [rhialto 2021-08-09]
 	Updated textproc/ruby-asciidoctor to 2.0.16 [rhialto 2021-08-09]
+	Updated sysutils/navi to 2.17.0 [pin 2021-08-09]
