@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2021/03/08 23:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2021/08/09 11:09:04 nia Exp $
 
-DISTNAME=	bulk-medium-20210309
+DISTNAME=	bulk-medium-20210809
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,8 +54,8 @@ BUILD_DEPENDS+=	jabberd>=2:../../chat/jabberd2
 BUILD_DEPENDS+=	sirc-[0-9]*:../../chat/sirc
 BUILD_DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
 BUILD_DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
-BUILD_DEPENDS+=	mysql-client>=5.6<5.7:../../databases/mysql56-client
-BUILD_DEPENDS+=	mysql-client>=5.7:../../databases/mysql57-client
+BUILD_DEPENDS+=	mariadb-client>=10.5<10.6:../../databases/mariadb105-client
+BUILD_DEPENDS+=	mariadb-client>=10.6<10.7:../../databases/mariadb106-client
 BUILD_DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 BUILD_DEPENDS+=	git-[0-9]*:../../devel/git
 BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
@@ -82,7 +82,7 @@ BUILD_DEPENDS+=	ruby27-base-[0-9]*:../../lang/ruby27-base
 BUILD_DEPENDS+=	ruby30-base-[0-9]*:../../lang/ruby30-base
 BUILD_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 BUILD_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-BUILD_DEPENDS+=	python37-[0-9]*:../../lang/python37
+BUILD_DEPENDS+=	python38-[0-9]*:../../lang/python38
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 BUILD_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
