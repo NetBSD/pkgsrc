@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2021/05/24 15:04:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2021/08/09 11:09:03 nia Exp $
 
-DISTNAME=	bulk-large-20200228
+DISTNAME=	bulk-large-20210809
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,11 +54,11 @@ BUILD_DEPENDS+=	asterisk>=16:../../comms/asterisk16
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-BUILD_DEPENDS+=	mysql-client>=5.7:../../databases/mysql57-client
-BUILD_DEPENDS+=	mysql-server>=5.7:../../databases/mysql57-server
-BUILD_DEPENDS+=	postgresql96-[0-9]*:../../databases/postgresql96
+BUILD_DEPENDS+=	mariadb-server>=10.5<10.6:../../databases/mariadb105-server
+BUILD_DEPENDS+=	mariadb-server>=10.6<10.7../../databases/mariadb106-server
+BUILD_DEPENDS+=	postgresql13-[0-9]*:../../databases/postgresql13
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
-BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
+BUILD_DEPENDS+=	emacs26>=26<27:../../editors/emacs26
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 BUILD_DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
