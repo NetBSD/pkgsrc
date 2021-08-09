@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/07/26 01:02:12 sjmulder Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/09 07:05:23 sjmulder Exp $
 include/xlsxwriter.h
 include/xlsxwriter/app.h
 include/xlsxwriter/chart.h
@@ -31,5 +31,5 @@ include/xlsxwriter/worksheet.h
 include/xlsxwriter/xmlwriter.h
 lib/libxlsxwriter.a
 lib/libxlsxwriter.so
-lib/libxlsxwriter.so.2.1
+lib/libxlsxwriter.so.3
 lib/pkgconfig/xlsxwriter.pc
