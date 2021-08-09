@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/07/05 12:23:06 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/08/09 13:40:28 rhialto Exp $
 ${BIN_DIR}/lyx
 ${BIN_DIR}/lyxclient
 ${BIN_DIR}/tex2lyx
@@ -488,6 +488,7 @@ ${SHARE_DIR}/fonts/cmex10.ttf
 ${SHARE_DIR}/fonts/cmmi10.ttf
 ${SHARE_DIR}/fonts/cmr10.ttf
 ${SHARE_DIR}/fonts/cmsy10.ttf
+${SHARE_DIR}/fonts/dsrom10.ttf
 ${SHARE_DIR}/fonts/esint10.ttf
 ${SHARE_DIR}/fonts/eufm10.ttf
 ${SHARE_DIR}/fonts/msam10.ttf
@@ -2197,6 +2198,8 @@ ${SHARE_DIR}/layouts/amsbook.layout
 ${SHARE_DIR}/layouts/amsdefs.inc
 ${SHARE_DIR}/layouts/apa.layout
 ${SHARE_DIR}/layouts/apa6.layout
+${SHARE_DIR}/layouts/apa7.layout
+${SHARE_DIR}/layouts/apax.inc
 ${SHARE_DIR}/layouts/arab-article.layout
 ${SHARE_DIR}/layouts/article-beamer.layout
 ${SHARE_DIR}/layouts/article.layout
