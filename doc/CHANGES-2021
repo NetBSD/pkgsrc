@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4123 2021/08/08 22:04:26 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.4124 2021/08/09 04:46:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6545,3 +6545,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/dovecot2 to 2.3.16 [schmonz 2021-08-08]
 	Updated mail/dovecot2-pigeonhole to 0.5.16 [schmonz 2021-08-08]
 	Updated pkgtools/pkglint to 21.2.2 [rillig 2021-08-08]
+	Updated audio/py-music21 to 6.7.1nb1 [gutteridge 2021-08-09]
