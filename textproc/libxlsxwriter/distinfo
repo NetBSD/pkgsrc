@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/07/26 01:02:12 sjmulder Exp $
+$NetBSD: distinfo,v 1.14 2021/08/09 07:05:23 sjmulder Exp $
 
-SHA1 (libxlsxwriter-1.1.1.tar.gz) = 6fe0f4d2a5a3c362bc728debde9b0b1db488e1f6
-RMD160 (libxlsxwriter-1.1.1.tar.gz) = 6575683358049760b70fdc82e4b0e3d82d45f96c
-SHA512 (libxlsxwriter-1.1.1.tar.gz) = 6284c1af5238a37d9d2b498da2def20f935ba64ffd63c3a96064a73d3a344a923e1945e44e615bb584ae77ed396580f5da3faf9540aff7e4d453bcc4d6a0dc1b
-Size (libxlsxwriter-1.1.1.tar.gz) = 18754615 bytes
+SHA1 (libxlsxwriter-1.1.2.tar.gz) = ee5abfe541d43c23fe1ce841a95274cf18c55a67
+RMD160 (libxlsxwriter-1.1.2.tar.gz) = 264b580e51933130ac1683e760b646680ee1a3a8
+SHA512 (libxlsxwriter-1.1.2.tar.gz) = 4959255ccb507f64fdffad03b23875d2f864969c4a91a58bff56486c02f376cad0885df1af2a5d33751d21fe93035b542aa9d64286b79b3bb5627ea69922781a
+Size (libxlsxwriter-1.1.2.tar.gz) = 19165484 bytes
