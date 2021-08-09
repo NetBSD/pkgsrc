@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2021/07/19 11:15:49 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/08/09 13:06:44 adam Exp $
 
-DISTNAME=	regex-2021.7.6
+DISTNAME=	regex-2021.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
