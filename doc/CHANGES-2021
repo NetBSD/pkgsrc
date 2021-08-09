@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4127 2021/08/09 07:54:57 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4128 2021/08/09 13:07:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6549,3 +6549,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libxlsxwriter to 1.1.2 [sjmulder 2021-08-09]
 	Updated math/sc-im to 0.8.2nb2 [sjmulder 2021-08-09]
 	Updated devel/nss to 3.69 [wiz 2021-08-09]
+	Updated textproc/py-regex to 2021.8.3 [adam 2021-08-09]
+	Updated time/py-ciso8601 to 2.2.0 [adam 2021-08-09]
