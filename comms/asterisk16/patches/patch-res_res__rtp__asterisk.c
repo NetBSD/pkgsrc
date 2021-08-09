@@ -1,6 +1,6 @@
-$NetBSD: patch-res_res__rtp__asterisk.c,v 1.3 2020/12/10 13:52:30 gdt Exp $
+$NetBSD: patch-res_res__rtp__asterisk.c,v 1.4 2021/08/09 13:13:14 ryoon Exp $
 
---- res/res_rtp_asterisk.c.orig	2020-11-19 12:34:40.000000000 +0000
+--- res/res_rtp_asterisk.c.orig	2021-06-24 12:48:56.000000000 +0000
 +++ res/res_rtp_asterisk.c
 @@ -63,6 +63,10 @@
  #include <ifaddrs.h>
@@ -10,10 +10,10 @@ $NetBSD: patch-res_res__rtp__asterisk.c,v 1.3 2020/12/10 13:52:30 gdt Exp $
 +  return !addr->s_addr;
 +}
 +
+ #include "asterisk/conversions.h"
  #include "asterisk/options.h"
  #include "asterisk/logger_category.h"
- #include "asterisk/stun.h"
-@@ -3623,7 +3627,7 @@ static void rtp_add_candidates_to_ice(st
+@@ -3638,7 +3642,7 @@ static void rtp_add_candidates_to_ice(st
  	}
  
  	/* If configured to use a STUN server to get our external mapped address do so */
