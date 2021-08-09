@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/09/05 00:07:17 gutteridge Exp $
+# $NetBSD: options.mk,v 1.4 2021/08/09 04:46:26 gutteridge Exp $
 
 # print/lilypond and devel/py-game are optional because they pull in
 # large and complex dependency chains that don't presently build in
@@ -10,7 +10,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-music21
 PKG_SUPPORTED_OPTIONS=	lilypond py-game
-PKG_SUGGESTED_OPTIONS=	lilypond py-game
+PKG_SUGGESTED_OPTIONS=	py-game
 
 .include "../../mk/bsd.options.mk"
 
