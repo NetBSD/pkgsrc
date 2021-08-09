@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4128 2021/08/09 13:07:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4129 2021/08/09 13:17:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6551,3 +6551,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nss to 3.69 [wiz 2021-08-09]
 	Updated textproc/py-regex to 2021.8.3 [adam 2021-08-09]
 	Updated time/py-ciso8601 to 2.2.0 [adam 2021-08-09]
+	Updated comms/asterisk16 to 16.19.0 [ryoon 2021-08-09]
