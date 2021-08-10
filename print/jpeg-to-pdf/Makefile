@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/08/03 08:55:03 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/10 05:35:28 pin Exp $
 
-DISTNAME=	jpeg-to-pdf-0.2.2
+DISTNAME=	jpeg-to-pdf-0.2.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Quantaly/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0 OR mit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cli ${DESTDIR}${PREFIX}/bin/jpeg-to-pdf
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jpeg-to-pdf ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
