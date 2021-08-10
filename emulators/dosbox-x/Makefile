@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/04/05 10:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/08/10 11:03:50 nia Exp $
 
-DISTNAME=	dosbox-x-0.83.8
-PKGREVISION=	2
+DISTNAME=	dosbox-x-0.83.16
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -83,9 +82,11 @@ do-install:
 .include "options.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../net/SDL2_net/buildlink3.mk"
+.include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../net/libslirp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
