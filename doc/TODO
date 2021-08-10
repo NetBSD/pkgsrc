@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20930 2021/08/10 19:29:49 wiz Exp $
+$NetBSD: TODO,v 1.20931 2021/08/10 19:34:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1891,7 +1891,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rbldnsd-0.998
 	o rcs-5.10.0
 	o rdp-1.6
-	o re2c-2.2
 	o rebar-3.13.2
 	o regionset-0.2
 	o remind-3.03.06
