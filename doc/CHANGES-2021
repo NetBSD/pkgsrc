@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4137 2021/08/10 07:27:33 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4138 2021/08/10 09:20:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6560,3 +6560,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/jpeg-to-pdf to 0.2.3 [pin 2021-08-10]
 	Updated x11/rterm to 0.0.6 [pin 2021-08-10]
 	Updated net/libcares to 1.17.2 [wiz 2021-08-10]
+	Updated graphics/libjpeg-turbo to 2.1.1 [adam 2021-08-10]
+	Updated databases/py-asyncpg to 0.24.0 [adam 2021-08-10]
