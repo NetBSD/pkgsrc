@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/02/03 10:43:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/08/10 11:40:40 nia Exp $
 
-SHA1 (imv-4.2.0.tar.gz) = b1c087469780287a3e78233004194ef3a78e1676
-RMD160 (imv-4.2.0.tar.gz) = 28b918f037d154486c86f1a334d9be1e195f632e
-SHA512 (imv-4.2.0.tar.gz) = 7b64c6d4e5e484fd2ef4e28e2ba5cc74e4d28f8e2fa329ae7c744bd77ce8a345123f9cc3c77e015ff780938d5add97cfe9ed4e5a3a52b03a91b7bb6bb50e7115
-Size (imv-4.2.0.tar.gz) = 77809 bytes
+SHA1 (imv-4.3.0.tar.gz) = ba213b40a2953532ac54dea76b8f28df31cfefbc
+RMD160 (imv-4.3.0.tar.gz) = f96bc28f4cd4889e1f25725660d7964611410763
+SHA512 (imv-4.3.0.tar.gz) = 1735c03c48888004b11b3aaf0215a9530c035468a8efdb210d856551ebb75030c906eee2b6ab80e5d3646206e6051a73a8c5e15c010dd09bca7f9e90f9b0e34b
+Size (imv-4.3.0.tar.gz) = 79031 bytes
 SHA1 (patch-meson.build) = bd0ae99fc71416486f6ba855ff3635540e5916cf
 SHA1 (patch-src_imv.c) = 75c3931a5b315174cb66d78e1c62593e8bacc96a

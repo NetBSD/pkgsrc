@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/04/21 11:41:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/10 11:40:40 nia Exp $
 
-DISTNAME=	imv-4.2.0
-PKGREVISION=	1
+DISTNAME=	imv-4.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eXeC64/}
 GITHUB_PROJECT=	imv
@@ -14,8 +13,10 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c99
+
+REPLACE_BASH+=	contrib/imv-folder
 
 # alphasort
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
@@ -42,5 +43,6 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/inih/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
