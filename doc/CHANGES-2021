@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4154 2021/08/10 12:37:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4155 2021/08/10 12:40:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6582,3 +6582,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-sameboy to 0.14.5 [nia 2021-08-10]
 	Updated emulators/sameboy to 0.14.5 [nia 2021-08-10]
 	Updated net/fastd to 22 [nia 2021-08-10]
+	Updated net/syncthing to 1.18.1 [nia 2021-08-10]
