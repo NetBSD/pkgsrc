@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2021/06/28 10:10:50 wiz Exp $
+$NetBSD: distinfo,v 1.31 2021/08/10 20:39:51 triaxx Exp $
 
 SHA1 (alsa-lib-1.2.5.1.tar.bz2) = 842612c57e47c36b6f0f9f08de8255f6ba7ba065
 RMD160 (alsa-lib-1.2.5.1.tar.bz2) = bdffee4ce2f51f643a7264d475c1ec1c475ebc8e
@@ -14,6 +14,8 @@ SHA1 (patch-bi) = 7e74ebe53cc2ab273f5235775e391a6ef28d1006
 SHA1 (patch-bj) = 5b7a36747e57e41eddb05cd1b1d9771a36b0c4f7
 SHA1 (patch-bk) = 55754e4d0ac947c2e7e59b604a21fb5798ae5b39
 SHA1 (patch-configure.ac) = cc034d07eab13caa5ff8748e8eea37ae9dd367f5
+SHA1 (patch-include_error.h) = 9e92d4a51badda1d46305d1e5e36b8197788aa89
+SHA1 (patch-include_output.h) = 0a073b53c40293aa7cfa250586c087084002eefe
 SHA1 (patch-include_sound_asound.h) = 5d85d804fec62250d2a3e5d269397641e13bc957
 SHA1 (patch-include_sound_type__compat.h) = a5dea86a0fd998d35147820269786d2cf8eff5e0
 SHA1 (patch-include_sound_uapi_asoc.h) = 5f1da418a2ad4ae066b34c75c9106108711b5d3d
