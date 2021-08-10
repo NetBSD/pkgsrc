@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/04/29 11:00:15 thor Exp $
+# $NetBSD: Makefile,v 1.18 2021/08/10 19:40:22 wiz Exp $
 
-DISTNAME=	pkgconf-1.7.4
+DISTNAME=	pkgconf-1.8.0
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
-
-PKGREVISION=	1
 
 MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	https://github.com/pkgconf/pkgconf
@@ -12,8 +10,6 @@ COMMENT=	API-driven pkg-config replacement
 LICENSE=	modified-bsd
 
 CONFLICTS+=	pkg-config-[0-9]*
-
-.include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -24,6 +20,8 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
 PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${LOCALBASE} != ${X11BASE}
 PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
