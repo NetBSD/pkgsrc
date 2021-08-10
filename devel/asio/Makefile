@@ -1,19 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 21:48:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/10 19:24:22 prlw1 Exp $
 
-DISTNAME=	asio-1.10.8
-PKGREVISION=	2
+DISTNAME=	asio-1.19.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asio/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://think-async.com/
-COMMENT=	Library for asynchronous programming
+COMMENT=	Header-only C++ library for asynchronous programming
 LICENSE=	boost-license
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	# none
+USE_TOOLS=	pax
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
-.include "../../devel/boost-headers/buildlink3.mk"
+INSTALLATION_DIRS=	include
+
+do-install:
+	cd ${WRKSRC} && \
+	${FIND} include -name "*.*pp" | ${PAX} -r -w  ${DESTDIR}${PREFIX}
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
