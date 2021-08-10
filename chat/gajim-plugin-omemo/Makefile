@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:01 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/08/10 12:03:37 nia Exp $
 
-PKGNAME=	gajim-plugin-omemo-2.6.28
-PKGREVISION=	1
+PKGNAME=	gajim-plugin-omemo-2.7.14
 DISTNAME=	omemo_${PKGVERSION_NOREV}
 CATEGORIES=	chat security python
 MASTER_SITES=	https://ftp.gajim.org/plugins_releases/
@@ -24,16 +23,19 @@ NO_BUILD=	yes
 PY_PATCHPLIST=	yes
 
 INSTALLATION_DIRS+=	${PYSITELIB}/gajim/data/plugins/omemo
+INSTALLATION_DIRS+=	${PYSITELIB}/gajim/data/plugins/omemo/backend
 INSTALLATION_DIRS+=	${PYSITELIB}/gajim/data/plugins/omemo/gtk
-INSTALLATION_DIRS+=	${PYSITELIB}/gajim/data/plugins/omemo/omemo
+INSTALLATION_DIRS+=	${PYSITELIB}/gajim/data/plugins/omemo/modules
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.py ${WRKSRC}/*.png ${WRKSRC}/*.ini \
 	    ${DESTDIR}${PREFIX}/${PYSITELIB}/gajim/data/plugins/omemo
+	${INSTALL_DATA} ${WRKSRC}/backend/* \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/gajim/data/plugins/omemo/backend
 	${INSTALL_DATA} ${WRKSRC}/gtk/*.ui ${WRKSRC}/gtk/*.css ${WRKSRC}/gtk/*.py \
 	    ${DESTDIR}${PREFIX}/${PYSITELIB}/gajim/data/plugins/omemo/gtk
-	${INSTALL_DATA} ${WRKSRC}/omemo/* \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/gajim/data/plugins/omemo/omemo
+	${INSTALL_DATA} ${WRKSRC}/modules/* \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/gajim/data/plugins/omemo/modules
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
