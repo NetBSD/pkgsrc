@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4151 2021/08/10 12:06:10 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4152 2021/08/10 12:11:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6578,3 +6578,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/gajim to 1.3.2 [nia 2021-08-10]
 	Updated chat/gajim-plugin-omemo to 2.7.14 [nia 2021-08-10]
 	Updated textproc/libxlsxwriter to 1.1.3 [sjmulder 2021-08-10]
+	Updated x11/sakura to 3.8.3 [nia 2021-08-10]
