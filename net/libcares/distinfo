@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2020/11/23 15:47:19 wiz Exp $
+$NetBSD: distinfo,v 1.23 2021/08/10 07:27:23 wiz Exp $
 
-SHA1 (c-ares-1.17.1.tar.gz) = 431d5ff705db752f5d25e610827b7cb3653fc7ff
-RMD160 (c-ares-1.17.1.tar.gz) = 4e7f83785735951f2c22145743c238d78332f4cf
-SHA512 (c-ares-1.17.1.tar.gz) = b11887bcc9274d368088e1a8b6aca62414f20675cf0bc58e948f54fa04c327c39dd23cefe7509eec6397db14b550a3f6b77f5c18b3d735b3eef48ce2da1dcd00
-Size (c-ares-1.17.1.tar.gz) = 1518701 bytes
+SHA1 (c-ares-1.17.2.tar.gz) = 933d862f5877625003a212a7f825309af6517dea
+RMD160 (c-ares-1.17.2.tar.gz) = facbdff9395ab01e313d21565c87ee5e06aed1ab
+SHA512 (c-ares-1.17.2.tar.gz) = f625e0ef8508af6475d3e83b51ab29be8a4878e2a87e7f518bea046b76a74bfde7043ca6ec2a9e714c898ab9e5d4a5a678c3347a9f9eb68980438f7ca8ae3fc8
+Size (c-ares-1.17.2.tar.gz) = 1538276 bytes
