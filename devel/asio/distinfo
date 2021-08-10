@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/17 01:58:24 gutteridge Exp $
+$NetBSD: distinfo,v 1.5 2021/08/10 19:24:22 prlw1 Exp $
 
-SHA1 (asio-1.10.8.tar.bz2) = 07dde049a1bb975decccf499b08c2bf03e966895
-RMD160 (asio-1.10.8.tar.bz2) = 938970e6c001393e4822d5aa89db36d24929dc9a
-SHA512 (asio-1.10.8.tar.bz2) = d870686d2b19bec9925c311f2f0fd370e9797bbad252176a80a998f9c322ecd502b5081826105712e7caf87c03c3e6b70a0e219019e5bff46077d6e8c3c6db09
-Size (asio-1.10.8.tar.bz2) = 1270332 bytes
-SHA1 (patch-include_asio_detail_impl_kqueue__reactor.ipp) = 74d0dc164117c5b684a1bdfa2faad1dff57302b3
+SHA1 (asio-1.19.2.tar.bz2) = eebec63847aeeea18091177fd787c7c9c33c4632
+RMD160 (asio-1.19.2.tar.bz2) = 650d893e0f43dbb506451029bd7e85cdba9499a1
+SHA512 (asio-1.19.2.tar.bz2) = 07f9c29d8f02090b4d4b6a1867bcc07a8e9f3388556dff787ca3ba143022eeb63bfac0b5bc264076fed4db3b2e5ec6b7ff0ebefde40ba4753c832032a72d54cc
+Size (asio-1.19.2.tar.bz2) = 1842597 bytes
