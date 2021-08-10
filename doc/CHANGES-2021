@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4145 2021/08/10 11:32:06 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.4146 2021/08/10 11:40:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6569,3 +6569,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/twemoji-color-font-ttf to 13.1.0 [nia 2021-08-10]
 	Updated lang/elixir to 1.12.2 [nia 2021-08-10]
 	Updated devel/patchelf to 0.13 [rhialto 2021-08-10]
+	Updated graphics/imv to 4.3.0 [nia 2021-08-10]
