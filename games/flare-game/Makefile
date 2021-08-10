@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/12/04 20:45:19 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/10 11:53:16 nia Exp $
 
-DISTNAME=	flare-game-1.11
-PKGREVISION=	1
+DISTNAME=	flare-game-1.12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flareteam/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
