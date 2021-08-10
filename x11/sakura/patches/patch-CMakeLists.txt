@@ -1,19 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2016/04/21 11:12:20 jperkin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2021/08/10 12:11:34 nia Exp $
 
 Use CMAKE_INSTALL_MANDIR.
 
---- CMakeLists.txt.orig	2013-12-13 19:31:31.000000000 +0000
+--- CMakeLists.txt.orig	2021-07-22 17:05:41.000000000 +0000
 +++ CMakeLists.txt
-@@ -53,7 +53,7 @@ INSTALL (TARGETS sakura RUNTIME DESTINAT
+@@ -55,7 +55,7 @@ INSTALL (TARGETS sakura RUNTIME DESTINAT
  INSTALL (FILES sakura.desktop DESTINATION share/applications)
  INSTALL (FILES terminal-tango.svg DESTINATION share/pixmaps)
  IF (POD2MAN)	
 -	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION share/man/man1)	
-+	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
++	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)	
  ENDIF (POD2MAN)
- INSTALL (FILES INSTALL DESTINATION share/doc/sakura)	
+ INSTALL (FILES README.md DESTINATION share/doc/sakura)	
  
-@@ -70,5 +70,5 @@ ADD_CUSTOM_TARGET (distclean
+@@ -72,5 +72,5 @@ ADD_CUSTOM_TARGET (distclean
  
  IF (POD2MAN) 
  ADD_CUSTOM_TARGET(man ALL
