@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2021/05/02 10:24:48 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/08/10 15:41:50 prlw1 Exp $
 
-DISTNAME=	gnome-sudoku-3.38.0
-PKGREVISION=	1
+DISTNAME=	gnome-sudoku-40.2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sudoku/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +18,10 @@ PYTHON_FOR_BUILD_ONLY=    tool
 .include "../../lang/python/tool.mk"
 
 # Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 post-extract:
 	cd ${WRKSRC}/help/C && ${CHMOD} 0644 *.page legal.xml figures/*.png
@@ -37,7 +39,7 @@ BUILDLINK_DEPMETHOD.vala:= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.19.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
