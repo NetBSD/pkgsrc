@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4141 2021/08/10 11:09:46 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4142 2021/08/10 11:12:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6565,3 +6565,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/dav1d to 0.9.1 [nia 2021-08-10]
 	Updated chat/eggdrop to 1.9.1 [nia 2021-08-10]
 	Updated graphics/feh to 3.7.1 [nia 2021-08-10]
+	Updated net/etherape to 0.9.20 [nia 2021-08-10]
