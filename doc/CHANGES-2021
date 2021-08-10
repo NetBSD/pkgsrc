@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4155 2021/08/10 12:40:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4156 2021/08/10 14:04:13 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6583,3 +6583,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/sameboy to 0.14.5 [nia 2021-08-10]
 	Updated net/fastd to 22 [nia 2021-08-10]
 	Updated net/syncthing to 1.18.1 [nia 2021-08-10]
+	Updated devel/byacc to 20210808 [fcambus 2021-08-10]
