@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4146 2021/08/10 11:40:50 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4147 2021/08/10 11:42:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6570,3 +6570,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/elixir to 1.12.2 [nia 2021-08-10]
 	Updated devel/patchelf to 0.13 [rhialto 2021-08-10]
 	Updated graphics/imv to 4.3.0 [nia 2021-08-10]
+	Updated graphics/imlib2 to 1.7.2 [nia 2021-08-10]
