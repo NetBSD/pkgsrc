@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/04/09 14:03:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/08/10 11:12:38 nia Exp $
 
-SHA1 (etherape-0.9.19.tar.gz) = a4c40eec8f77d9981bde3d12e374612f6e595869
-RMD160 (etherape-0.9.19.tar.gz) = 701c6df4b3e5407d8f108929f90ca61a56b6e193
-SHA512 (etherape-0.9.19.tar.gz) = 3819c36a6ea5b1ec6fc675563ab0264d180824343344bf4f2da834db39547b721c1565b6edb882d55ce4e0ca93e4b34e3a544996a988584aaf7fe8b8d5ca265e
-Size (etherape-0.9.19.tar.gz) = 1452435 bytes
+SHA1 (etherape-0.9.20.tar.gz) = 333652b935f44d83c6f7da668477180b50c3817d
+RMD160 (etherape-0.9.20.tar.gz) = 2c6aae91fa136d3cc4a25921b31b31ad69297548
+SHA512 (etherape-0.9.20.tar.gz) = 1dbfbb0efff7871a4b78ca90f81ac2155b57ace217b72e443cdc8b3d3807f7ab881c876bec12d93673500026a9dbf1111417a419891df62230e664af9b54b636
+Size (etherape-0.9.20.tar.gz) = 1480790 bytes
 SHA1 (patch-Makefile.in) = 6f83887002b4c72a96104928412cf0e5ef497acf
 SHA1 (patch-src_names_eth__resolv.c) = 63cedcefe32ddd1b1d476d8e9471a86b6a46e28e
