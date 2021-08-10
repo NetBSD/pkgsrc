@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2018/08/28 13:57:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/08/10 12:11:34 nia Exp $
 bin/sakura
 man/man1/sakura.1
 share/applications/sakura.desktop
-share/doc/sakura/INSTALL
+share/doc/sakura/README.md
 share/locale/ca/LC_MESSAGES/sakura.mo
 share/locale/cs/LC_MESSAGES/sakura.mo
 share/locale/de/LC_MESSAGES/sakura.mo
