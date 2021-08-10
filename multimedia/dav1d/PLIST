@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/23 11:01:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/10 09:35:37 nia Exp $
 bin/dav1d
 include/dav1d/common.h
 include/dav1d/data.h
@@ -8,7 +8,7 @@ include/dav1d/picture.h
 include/dav1d/version.h
 lib/libdav1d.so
 lib/libdav1d.so.5
-lib/libdav1d.so.5.1.0
+lib/libdav1d.so.5.1.1
 lib/pkgconfig/dav1d.pc
 share/doc/dav1d/AOM-PATENT-LICENSE
 share/doc/dav1d/LICENSE
