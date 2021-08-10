@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/02/20 15:14:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/08/10 11:42:07 nia Exp $
 bin/imlib2-config
 ${PLIST.x11}bin/imlib2_bumpmap
 ${PLIST.x11}bin/imlib2_colorspace
@@ -15,7 +15,6 @@ lib/imlib2/filters/colormod.la
 lib/imlib2/filters/testfilter.la
 lib/imlib2/loaders/argb.la
 lib/imlib2/loaders/bmp.la
-lib/imlib2/loaders/bz2.la
 lib/imlib2/loaders/ff.la
 lib/imlib2/loaders/gif.la
 lib/imlib2/loaders/ico.la
@@ -25,6 +24,7 @@ lib/imlib2/loaders/png.la
 lib/imlib2/loaders/pnm.la
 lib/imlib2/loaders/tga.la
 lib/imlib2/loaders/tiff.la
+lib/imlib2/loaders/xbm.la
 lib/imlib2/loaders/xpm.la
 lib/imlib2/loaders/zlib.la
 lib/libImlib2.la
