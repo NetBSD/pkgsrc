@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.12 2021/03/19 12:18:56 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2021/08/10 12:20:41 nia Exp $
 # used by emulators/sameboy/Makefile
 # used by emulators/libretro-sameboy/Makefile
 
-DISTNAME=	sameboy-0.14.2
+DISTNAME=	sameboy-0.14.5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LIJI32/}
 GITHUB_PROJECT=	SameBoy
@@ -15,6 +15,7 @@ USE_TOOLS+=	gmake pkg-config
 TOOL_DEPENDS+=	rgbds-[0-9]*:../../devel/rgbds
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/sameboy/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/sameboy/patches
 
 # sh: /tmp/emulators/libretro-sameboy/work/SameBoy-0.13.2/build/pb12: text busy
 MAKE_JOBS_SAFE=	no
