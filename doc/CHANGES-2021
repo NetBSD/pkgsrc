@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4143 2021/08/10 11:15:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4144 2021/08/10 11:19:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6567,3 +6567,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/feh to 3.7.1 [nia 2021-08-10]
 	Updated net/etherape to 0.9.20 [nia 2021-08-10]
 	Updated fonts/twemoji-color-font-ttf to 13.1.0 [nia 2021-08-10]
+	Updated lang/elixir to 1.12.2 [nia 2021-08-10]
