@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4159 2021/08/10 19:24:40 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4160 2021/08/10 19:28:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6588,3 +6588,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/stone-soup to 0.27.0 [nia 2021-08-10]
 	Updated games/gnome-sudoku to 40.2 [prlw1 2021-08-10]
 	Updated devel/asio to 1.19.2 [prlw1 2021-08-10]
+	Updated devel/gopls to 0.7.1 [wiz 2021-08-10]
