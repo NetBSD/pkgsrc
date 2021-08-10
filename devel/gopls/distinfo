@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/06/28 07:38:06 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/08/10 19:28:33 wiz Exp $
 
 SHA1 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 0937ac1d493b480c07bf48073bffe60c2ba902f1
 RMD160 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 722a12078a5d845bfcf238c63a7b7d3a563b48be
@@ -288,14 +288,14 @@ SHA1 (golang.org_x_tools_@v_v0.1.0.mod) = 7658f8e26cb2ade36c558b584af6bbe8d4e613
 RMD160 (golang.org_x_tools_@v_v0.1.0.mod) = ff461f1013c14b495807a83f1d5613aee23b6e1e
 SHA512 (golang.org_x_tools_@v_v0.1.0.mod) = 13d4c5dc1bb206cae17c38b6e387386573b402a3679054c12a53acf384e15d5d77ebbb77ad374993b1bba547faf34f4189fe5d77b80d57f0831dac1ee54a98c0
 Size (golang.org_x_tools_@v_v0.1.0.mod) = 323 bytes
-SHA1 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.mod) = 3cd9735517447728ee84712593bffda46409818c
-RMD160 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.mod) = b9bbf6aad052558c7b0d45c620c19838f7f7d255
-SHA512 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.mod) = 6fa4c11d23d3c08fed7331586d9e8da5299602dc97e861d74ce68f248c2e8b1d9ba5e55d2acbb96eaa3e1484f9d287b7d8c2f0e96f75109c957bfee88776996f
-Size (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.mod) = 323 bytes
-SHA1 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.zip) = 7084853ba6d6b9d6bad13fe5669b43616d0b51d7
-RMD160 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.zip) = daaadab7f8da2c4b6a218b6b5a26c74d9605084d
-SHA512 (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.zip) = 0839d65ebae1f192cc133fca8c8103fcef660ff2ef6e76048d9e7530434564256ac262ab2ebccd95d4e8641db04ed3359ef0d3609bf6638bc46b0070d2924b5f
-Size (golang.org_x_tools_@v_v0.1.3-0.20210608163600-9ed039809d4c.zip) = 3547092 bytes
+SHA1 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.mod) = 3cd9735517447728ee84712593bffda46409818c
+RMD160 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.mod) = b9bbf6aad052558c7b0d45c620c19838f7f7d255
+SHA512 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.mod) = 6fa4c11d23d3c08fed7331586d9e8da5299602dc97e861d74ce68f248c2e8b1d9ba5e55d2acbb96eaa3e1484f9d287b7d8c2f0e96f75109c957bfee88776996f
+Size (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.mod) = 323 bytes
+SHA1 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.zip) = af6a079121a3b8a60af7302f0da62a8db4b45fdf
+RMD160 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.zip) = d75ddd5243f2de2cc08129940d03fc79a299c912
+SHA512 (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.zip) = dc9f73061c0ac2b20fa60f84b40a9585015ba76140bb7eea94e9f1694d02b4dd3618973538efb50f1893fdfad1398e4b44e3fb5224347222f58ce41126f6f56c
+Size (golang.org_x_tools_@v_v0.1.6-0.20210802203754-9b21a8868e16.zip) = 3623163 bytes
 SHA1 (golang.org_x_xerrors_@v_v0.0.0-20190717185122-a985d3407aa7.mod) = 8d7e758a07d4abc4637100ab62d3e41c1b87b79d
 RMD160 (golang.org_x_xerrors_@v_v0.0.0-20190717185122-a985d3407aa7.mod) = 5199856d86a07427d7c628e06cb792a3f6ab4f08
 SHA512 (golang.org_x_xerrors_@v_v0.0.0-20190717185122-a985d3407aa7.mod) = 659d18a7a3a1be45ff6dc9e7475276b82ee7f11c47d39b0c237d7f872836a1dbdfff0902f21d6cd8093663997865da92e3e5a4acf1ad6129f972dc5e667b4f05
@@ -352,10 +352,10 @@ SHA1 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = c5522ade8691550e5dc841c84809180b4a12b8d0
 RMD160 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = 7022398f8f84a9194506a17fbc7d812a36565027
 SHA512 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = a8fa21d2f84f8c6f28250e9ec7d678ae160963eaa0a373f345fe67804925b2647239a6117ad6f253f458f34ec9f62bc21e8f2071fc9dfe76dbd2a7ded1e1a0e0
 Size (gopkg.in_yaml.v2_@v_v2.2.4.zip) = 80160 bytes
-SHA1 (gopls-0.7.0.tar.gz) = 4daa5d25e3b80827d6c9a8643875be7c01ed2613
-RMD160 (gopls-0.7.0.tar.gz) = a0a46bbae98b8fcacf926b6f8d5ba3e98bad55ef
-SHA512 (gopls-0.7.0.tar.gz) = 0855cc3ff8af21364a48f105b3d33e6de409d8c13f2e601f980f1470ed8281edcda3ccb317067b6bac28af8999d267eb1fea9b132b3e5c8743ad92fd94adee3e
-Size (gopls-0.7.0.tar.gz) = 2799083 bytes
+SHA1 (gopls-0.7.1.tar.gz) = 9b8c38ce12e0fdff29b040be635c4882dc042b82
+RMD160 (gopls-0.7.1.tar.gz) = 7aa97d05c2757376b03220e8e983d1689d19fcb6
+SHA512 (gopls-0.7.1.tar.gz) = b2d595137ddebd434db08877ca33bea27f9467937cc9e626992b09b3af3b7760fc85f3cb5592c0c088be14a08aea5bce6da8b00f3ede57386437065aabb19440
+Size (gopls-0.7.1.tar.gz) = 2848287 bytes
 SHA1 (honnef.co_go_tools_@v_v0.2.0.mod) = 3d7e774092879bd6a85c2123c170d22b30c70a04
 RMD160 (honnef.co_go_tools_@v_v0.2.0.mod) = 1fecab286ce3481fd1a087e0720b1c1e62e690a4
 SHA512 (honnef.co_go_tools_@v_v0.2.0.mod) = 53e3bb59aa6a5af629950db1c08c42249448b01830fb18856fa2e3c8f2e1c50a944ad8eeb1a34200c69fecb3bd045b75e5dea05ed5c3c4889ef0f36e0542df29
