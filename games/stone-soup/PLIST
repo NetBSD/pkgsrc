@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/09 21:11:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/10 14:46:36 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -37,6 +37,7 @@ share/stone-soup/dat/defaults/standard_colours.txt
 share/stone-soup/dat/des/00init.des
 share/stone-soup/dat/des/altar/altar.des
 share/stone-soup/dat/des/altar/ashenzari_visionary.des
+share/stone-soup/dat/des/altar/ecumenical.des
 share/stone-soup/dat/des/altar/kiku_cage.des
 share/stone-soup/dat/des/altar/lugonu_bribe.des
 share/stone-soup/dat/des/altar/nemelex_the_gamble.des
@@ -63,6 +64,7 @@ share/stone-soup/dat/des/branches/dis.des
 share/stone-soup/dat/des/branches/elf.des
 share/stone-soup/dat/des/branches/geh.des
 share/stone-soup/dat/des/branches/hell.des
+share/stone-soup/dat/des/branches/hilbert_zone.des
 share/stone-soup/dat/des/branches/lair.des
 share/stone-soup/dat/des/branches/orc.des
 share/stone-soup/dat/des/branches/pan.des
@@ -70,6 +72,7 @@ share/stone-soup/dat/des/branches/shoals.des
 share/stone-soup/dat/des/branches/slime.des
 share/stone-soup/dat/des/branches/snake.des
 share/stone-soup/dat/des/branches/spider.des
+share/stone-soup/dat/des/branches/spider_jumping.des
 share/stone-soup/dat/des/branches/swamp.des
 share/stone-soup/dat/des/branches/tar.des
 share/stone-soup/dat/des/branches/temple.des
@@ -85,7 +88,6 @@ share/stone-soup/dat/des/builder/alphashops.des
 share/stone-soup/dat/des/builder/arena.des
 share/stone-soup/dat/des/builder/decor.des
 share/stone-soup/dat/des/builder/dummy.des
-share/stone-soup/dat/des/builder/food.des
 share/stone-soup/dat/des/builder/layout.des
 share/stone-soup/dat/des/builder/layout_caves.des
 share/stone-soup/dat/des/builder/layout_cc.des
@@ -421,6 +423,7 @@ share/stone-soup/dat/descript/zh/ability.txt
 share/stone-soup/dat/descript/zh/backgrounds.txt
 share/stone-soup/dat/descript/zh/branches.txt
 share/stone-soup/dat/descript/zh/cards.txt
+share/stone-soup/dat/descript/zh/clouds.txt
 share/stone-soup/dat/descript/zh/commands.txt
 share/stone-soup/dat/descript/zh/features.txt
 share/stone-soup/dat/descript/zh/gods.txt
@@ -553,7 +556,6 @@ share/stone-soup/docs/develop/IRC.txt
 share/stone-soup/docs/develop/android.txt
 share/stone-soup/docs/develop/arena.txt
 share/stone-soup/docs/develop/background_creation.txt
-share/stone-soup/docs/develop/coding_conventions.txt
 share/stone-soup/docs/develop/ctags.txt
 share/stone-soup/docs/develop/editor_tips.txt
 share/stone-soup/docs/develop/gdb_tips.txt
