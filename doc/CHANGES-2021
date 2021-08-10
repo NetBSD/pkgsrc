@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4139 2021/08/10 09:35:48 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4140 2021/08/10 11:02:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6563,3 +6563,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libjpeg-turbo to 2.1.1 [adam 2021-08-10]
 	Updated databases/py-asyncpg to 0.24.0 [adam 2021-08-10]
 	Updated multimedia/dav1d to 0.9.1 [nia 2021-08-10]
+	Updated chat/eggdrop to 1.9.1 [nia 2021-08-10]
