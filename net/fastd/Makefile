@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/06/24 14:01:31 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/10 12:36:58 nia Exp $
 
-DISTNAME=	fastd-21
+DISTNAME=	fastd-22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NeoRaider/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
