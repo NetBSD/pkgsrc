@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4162 2021/08/10 19:34:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4163 2021/08/10 19:37:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gopls to 0.7.1 [wiz 2021-08-10]
 	Updated devel/automake to 1.16.4 [wiz 2021-08-10]
 	Updated devel/re2c to 2.2 [wiz 2021-08-10]
+	Updated audio/musicpd to 0.22.10 [wiz 2021-08-10]
