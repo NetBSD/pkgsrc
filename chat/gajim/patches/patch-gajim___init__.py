@@ -1,13 +1,13 @@
-$NetBSD: patch-gajim___init__.py,v 1.1 2020/08/01 12:40:10 js Exp $
+$NetBSD: patch-gajim___init__.py,v 1.2 2021/08/10 12:03:37 nia Exp $
 
 Make Gajim not pick up the pkgsrc revision when pkgsrc is checked out via Git.
 
---- gajim/__init__.py.orig	2020-08-01 12:32:50.000000000 +0000
+--- gajim/__init__.py.orig	2021-04-24 11:27:40.000000000 +0000
 +++ gajim/__init__.py
-@@ -11,12 +11,3 @@ IS_PORTABLE = False
- portable_path = os.path.join(os.getcwd(), 'is_portable')
- if os.path.exists(portable_path):
-     IS_PORTABLE = True
+@@ -8,12 +8,3 @@ IS_FLATPAK = Path('/app/share/run-as-fla
+ 
+ portable_path = Path(sys.executable).parent / 'is_portable'
+ IS_PORTABLE = portable_path.exists()
 -
 -try:
 -    p = subprocess.Popen('git rev-parse --short=12 HEAD', shell=True,
