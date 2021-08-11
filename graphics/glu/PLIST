@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/04/02 23:03:00 tnn Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/08/11 20:40:55 nia Exp $
 include/GL/glu.h
-include/GL/glu_mangle.h
 lib/libGLU.la
 lib/pkgconfig/glu.pc
