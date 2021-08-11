@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2019/08/31 12:43:20 nia Exp $
+# $NetBSD: Makefile,v 1.69 2021/08/11 20:40:55 nia Exp $
 
-DISTNAME=	glu-9.0.1
+DISTNAME=	glu-9.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/glu/
 EXTRACT_SUFX=	.tar.xz
