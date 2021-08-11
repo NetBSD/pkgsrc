@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/10/02 11:59:37 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/08/11 12:09:40 wen Exp $
 
-SHA1 (HTTP-CookieJar-0.010.tar.gz) = 8ac76f845e90ffdbf94b5cf4595a17b98c76875c
-RMD160 (HTTP-CookieJar-0.010.tar.gz) = 0453b4f3a38003d0241d06842283303e16fe622e
-SHA512 (HTTP-CookieJar-0.010.tar.gz) = 5e7d6222b9128441c506f1554de327af9695cb07bb6db9a772386752a6815b7e8ff1d02185429f9cd25a11085860867d42f6e209175c68cbeb9daa6547d83eac
-Size (HTTP-CookieJar-0.010.tar.gz) = 27883 bytes
+SHA1 (HTTP-CookieJar-0.012.tar.gz) = f575a851d5e22e9dfc9f779ef8272ab100f2ed71
+RMD160 (HTTP-CookieJar-0.012.tar.gz) = 073292edc7058bc0caf48e73fad5d79c7df5b638
+SHA512 (HTTP-CookieJar-0.012.tar.gz) = 3b4b0cd2228d53dfa9c1a75cf108f9b2a328c3bf054f0c7d8308bc0a71375340684b165ab05cb7868cdbeb232e4ceb4b465177a43c7573863e9274f8aa4034af
+Size (HTTP-CookieJar-0.012.tar.gz) = 28223 bytes
