@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4169 2021/08/11 09:39:33 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4170 2021/08/11 09:53:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6601,3 +6601,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mongodb to 4.2.15 [adam 2021-08-11]
 	Updated databases/mongo-tools to 4.2.15 [adam 2021-08-11]
 	Updated math/R to 4.1.1 [wen 2021-08-11]
+	Updated devel/py-configargparse to 1.5.2 [adam 2021-08-11]
+	Updated devel/py-greenlet to 1.1.1 [adam 2021-08-11]
+	Updated net/py-responses to 0.13.4 [adam 2021-08-11]
+	Updated security/py-google-auth to 1.34.0 [adam 2021-08-11]
+	Updated security/py-google-auth-oauthlib to 0.4.5 [adam 2021-08-11]
+	Updated devel/py-google-api-core to 1.31.1 [adam 2021-08-11]
