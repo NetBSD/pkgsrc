@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4167 2021/08/11 07:06:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4168 2021/08/11 07:24:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6597,3 +6597,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/librsvg to 2.50.7 [gutteridge 2021-08-11]
 	Updated devel/py-uvloop to 0.16.0 [adam 2021-08-11]
 	Updated devel/py-anyio to 3.3.0 [adam 2021-08-11]
+	Updated databases/mongo-c-driver to 1.17.7 [adam 2021-08-11]
+	Updated databases/mongodb to 4.2.15 [adam 2021-08-11]
+	Updated databases/mongo-tools to 4.2.15 [adam 2021-08-11]
