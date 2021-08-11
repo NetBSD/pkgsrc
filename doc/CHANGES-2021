@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4166 2021/08/11 00:19:11 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4167 2021/08/11 07:06:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6595,3 +6595,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pkgconf to 1.8.0 [wiz 2021-08-10]
 	Updated audio/alsa-lib to 1.2.5.1nb1 [triaxx 2021-08-10]
 	Updated graphics/librsvg to 2.50.7 [gutteridge 2021-08-11]
+	Updated devel/py-uvloop to 0.16.0 [adam 2021-08-11]
+	Updated devel/py-anyio to 3.3.0 [adam 2021-08-11]
