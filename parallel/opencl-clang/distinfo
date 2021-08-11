@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/06/09 15:11:46 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/08/11 20:49:25 nia Exp $
 
-SHA1 (opencl-clang-v10.0.0-1.tar.gz) = 7571470bd2248cf038cddec14c4e787066ac3254
-RMD160 (opencl-clang-v10.0.0-1.tar.gz) = 39f02ad0a788167e4ecd1f17d6588f08fb6b2927
-SHA512 (opencl-clang-v10.0.0-1.tar.gz) = 406e27d90ae26a2f8ade04172bf680f8786011c7e8357a40b15c8bbfd933d0f1c5e0c114e371036318439fcab999ec5f141dab2df4b498eb9d2548bf175f8502
-Size (opencl-clang-v10.0.0-1.tar.gz) = 23549 bytes
+SHA1 (opencl-clang-v12.0.0.tar.gz) = 1c52022d6d4e059f37371cf1ed9c529822195458
+RMD160 (opencl-clang-v12.0.0.tar.gz) = 371d4426eda6d6dd1bc70db5de3f79f7a17e5b84
+SHA512 (opencl-clang-v12.0.0.tar.gz) = 7fa05480b10be97dd784b8fb7579a2471cf3a904facd9949a980602085515bb3d42a042c74db80381771ad18f78bed2efdcb09538a865ac4a600d6190b8f9c31
+Size (opencl-clang-v12.0.0.tar.gz) = 25292 bytes
