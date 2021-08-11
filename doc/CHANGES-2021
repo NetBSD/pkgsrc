@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4183 2021/08/11 20:49:38 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4184 2021/08/11 20:52:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6620,3 +6620,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/nano to 5.8 [nia 2021-08-11]
 	Updated graphics/glu to 9.0.2 [nia 2021-08-11]
 	Updated parallel/opencl-clang to 12.0.0 [nia 2021-08-11]
+	Updated multimedia/lightspark to 0.8.5 [nia 2021-08-11]
