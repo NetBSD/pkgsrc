@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2021/02/11 06:56:35 kardel Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/08/11 10:24:05 kardel Exp $
 # used by sysutils/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
-VERSION=	20.0.0
+VERSION=	20.0.2
 GITHUB_TAG=	Release/${VERSION}
 
 DISTNAME=	bareos-${VERSION}
@@ -32,9 +32,10 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths+=	core/src/cats/make_catalog_backup.pl.in
 SUBST_FILES.paths+=	core/scripts/bareos-config-lib.sh.in
+SUBST_FILES.paths+=	core/platforms/netbsd/chio-changer
 SUBST_SED.paths=	-e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.paths+=	-e 's,"/var/log,"${VARBASE}/log,g'
-SUBST_VARS.paths=	LOCALBASE PREFIX PKGVERSION
+SUBST_VARS.paths=	LOCALBASE PREFIX PKGVERSION TOOLS_PLATFORM.sh TOOLS_PLATFORM.awk
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/core/_build
