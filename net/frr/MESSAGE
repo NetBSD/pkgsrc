@@ -1,11 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2020/12/10 16:43:24 kardel Exp $
+$NetBSD: MESSAGE,v 1.2 2021/08/11 10:09:54 kardel Exp $
 
 IMPORTANT:
 To complete the installation you need to add
 the user "${FRR_USER}" to the (secondary) group "${FRR_VTY_GROUP}".
-
-You can find some example config files in
-${PREFIX}/share/examples/frr
 
 ===========================================================================
