@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/15 11:04:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/11 20:52:18 nia Exp $
 bin/lightspark
 lib/PepperFlash/libpepflashplayer.so
 lib/PepperFlash/manifest.json
 lib/liblightspark.so
 lib/liblightspark.so.0.8
-lib/liblightspark.so.0.8.4
+lib/liblightspark.so.${PKGVERSION}
 lib/mozilla/plugins/liblightsparkplugin.so
 man/man1/lightspark.1
 share/applications/lightspark.desktop
