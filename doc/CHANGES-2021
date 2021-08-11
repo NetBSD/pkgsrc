@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4165 2021/08/10 20:40:44 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.4166 2021/08/11 00:19:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6594,3 +6594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/musicpd to 0.22.10 [wiz 2021-08-10]
 	Updated devel/pkgconf to 1.8.0 [wiz 2021-08-10]
 	Updated audio/alsa-lib to 1.2.5.1nb1 [triaxx 2021-08-10]
+	Updated graphics/librsvg to 2.50.7 [gutteridge 2021-08-11]
