@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4171 2021/08/11 12:11:13 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4172 2021/08/11 12:14:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6608,3 +6608,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-google-auth-oauthlib to 0.4.5 [adam 2021-08-11]
 	Updated devel/py-google-api-core to 1.31.1 [adam 2021-08-11]
 	Updated www/p5-HTTP-CookieJar to 0.012 [wen 2021-08-11]
+	Updated www/p5-HTTP-Message to 6.33 [wen 2021-08-11]
