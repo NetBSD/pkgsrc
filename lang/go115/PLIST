@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/07/13 10:05:08 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/08/11 16:46:48 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -2087,6 +2087,7 @@ go115/src/cmd/go/testdata/script/list_case_collision.txt
 go115/src/cmd/go/testdata/script/list_compiled_imports.txt
 go115/src/cmd/go/testdata/script/list_constraints.txt
 go115/src/cmd/go/testdata/script/list_dedup_packages.txt
+go115/src/cmd/go/testdata/script/list_err_cycle.txt
 go115/src/cmd/go/testdata/script/list_err_stack.txt
 go115/src/cmd/go/testdata/script/list_find.txt
 go115/src/cmd/go/testdata/script/list_gofile_in_goroot.txt
