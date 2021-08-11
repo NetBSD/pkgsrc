@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4168 2021/08/11 07:24:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4169 2021/08/11 09:39:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6600,3 +6600,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mongo-c-driver to 1.17.7 [adam 2021-08-11]
 	Updated databases/mongodb to 4.2.15 [adam 2021-08-11]
 	Updated databases/mongo-tools to 4.2.15 [adam 2021-08-11]
+	Updated math/R to 4.1.1 [wen 2021-08-11]
