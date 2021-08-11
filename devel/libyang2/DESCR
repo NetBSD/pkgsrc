@@ -1,0 +1,7 @@
+libyang is a YANG data modelling language parser and toolkit written (and
+providing API) in C. The library is used e.g. in
+
+* Parsing (and validating) schemas in YANG format.
+* Parsing (and validating) schemas in YIN format.
+* Parsing, validating and printing instance data in XML format.
+* Parsing, validating and printing instance data in JSON format
