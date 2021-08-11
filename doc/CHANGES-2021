@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4179 2021/08/11 20:12:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4180 2021/08/11 20:20:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6616,3 +6616,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go115 to 1.15.15 [bsiegert 2021-08-11]
 	Updated lang/go116 to 1.16.7 [bsiegert 2021-08-11]
 	Updated devel/SDL2 to 2.0.16 [nia 2021-08-11]
+	Updated editors/neatvi to 09 [nia 2021-08-11]
