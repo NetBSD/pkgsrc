@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/07/13 10:12:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/08/11 19:00:24 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go116/AUTHORS
@@ -2031,6 +2031,7 @@ go116/src/cmd/go/testdata/script/list_case_collision.txt
 go116/src/cmd/go/testdata/script/list_compiled_imports.txt
 go116/src/cmd/go/testdata/script/list_constraints.txt
 go116/src/cmd/go/testdata/script/list_dedup_packages.txt
+go116/src/cmd/go/testdata/script/list_err_cycle.txt
 go116/src/cmd/go/testdata/script/list_err_stack.txt
 go116/src/cmd/go/testdata/script/list_find.txt
 go116/src/cmd/go/testdata/script/list_gofile_in_goroot.txt
@@ -2179,6 +2180,7 @@ go116/src/cmd/go/testdata/script/mod_init_empty.txt
 go116/src/cmd/go/testdata/script/mod_init_glide.txt
 go116/src/cmd/go/testdata/script/mod_init_path.txt
 go116/src/cmd/go/testdata/script/mod_init_tidy.txt
+go116/src/cmd/go/testdata/script/mod_install_hint.txt
 go116/src/cmd/go/testdata/script/mod_install_pkg_version.txt
 go116/src/cmd/go/testdata/script/mod_install_versioned.txt
 go116/src/cmd/go/testdata/script/mod_internal.txt
@@ -9198,6 +9200,9 @@ go116/test/fixedbugs/issue46653.dir/bad/bad.go
 go116/test/fixedbugs/issue46653.dir/main.go
 go116/test/fixedbugs/issue46653.go
 go116/test/fixedbugs/issue4667.go
+go116/test/fixedbugs/issue47185.dir/bad/bad.go
+go116/test/fixedbugs/issue47185.dir/main.go
+go116/test/fixedbugs/issue47185.go
 go116/test/fixedbugs/issue4734.go
 go116/test/fixedbugs/issue4748.go
 go116/test/fixedbugs/issue4752.go
