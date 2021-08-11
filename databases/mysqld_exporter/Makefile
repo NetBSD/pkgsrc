@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/07/13 11:36:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/11 19:35:09 bsiegert Exp $
 
 DISTNAME=	mysqld_exporter-0.12.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
