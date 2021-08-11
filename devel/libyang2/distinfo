@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/11 09:49:42 kardel Exp $
+
+SHA1 (libyang/v2.0.7.tar.gz) = 3882fb9a6e40f1a6bdfbce21546ff8aec3f6144c
+RMD160 (libyang/v2.0.7.tar.gz) = 2298fe0aa9915c0360737c52d166aa5ff545e513
+SHA512 (libyang/v2.0.7.tar.gz) = edb1d8d372b25ed820fa312e0dc96d4af7c8cd5ddeb785964de73f64774062ea7a5586bb27e2039ad24189d4a2ba04268921ca86e82423fc48647d1d10a2a0a7
+Size (libyang/v2.0.7.tar.gz) = 1031818 bytes
