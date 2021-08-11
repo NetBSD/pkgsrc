@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4176 2021/08/11 12:39:36 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4177 2021/08/11 16:47:03 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6613,3 +6613,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-CGI to 4.53 [wen 2021-08-11]
 	Updated www/p5-CGI-Lite to 3.03 [wen 2021-08-11]
 	Updated www/p5-FCGI to 0.82 [wen 2021-08-11]
+	Updated lang/go115 to 1.15.15 [bsiegert 2021-08-11]
