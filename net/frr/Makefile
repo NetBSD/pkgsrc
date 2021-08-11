@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/11 10:09:54 kardel Exp $
 
 GITHUB_PROJECT=	frr
-VERSION=	7.5.1
+VERSION=	8.0
 GITHUB_TAG=	frr-${VERSION}
 DISTNAME=	frr-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FRRouting/}
 
@@ -51,8 +50,6 @@ RCD_SCRIPTS=	${RCD_SUPPLIED} staticd
 RCD_SCRIPT_SRC.${f}=	${WRKSRC}/pkgsrc/${f}.sh
 .endfor
 
-CONFIG_TEMPLATE_PATH=	share/examples/${PKG_SYSCONFSUBDIR}/configsamples
-
 USE_TOOLS+=	bash:run
 REPLACE_BASH=	tools/frr.in tools/*.sh.in
 
@@ -74,10 +71,16 @@ SUBST_FILES.workdir=	lib/version.h
 SUBST_SED.workdir=	-e "s,${WRKDIR},"'{WRKDIR},g'
 SUBST_VARS.workdir=
 
+.if ${OPSYS} == "NetBSD"
+# prohibit cluttering NetBSD executables with notes
+# that are not recognized by the kernel leading to
+# confusing but harmless warning messages
+CFLAGS+=		-DFRR_XREF_NO_NOTE
+.endif
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-user=${FRR_USER}
 CONFIGURE_ARGS+=	--enable-group=${FRR_GROUP}
-CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run/frr
 CONFIGURE_ARGS+=	--enable-multipath=64
 CONFIGURE_ARGS+=	--enable-vty-group=${FRR_VTY_GROUP}
@@ -91,23 +94,11 @@ CONFIGURE_ARGS+=	--with-pkg-extra-version=/${DISTNAME}
 pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap.sh
 
-.include "../../devel/libyang/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../devel/libyang2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../net/libcares/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# needs to be here to have ${EGREP} defined
-CONFIG_TEMPLATES!=	${EGREP} ${CONFIG_TEMPLATE_PATH:Q} PLIST 2>/dev/null
-CONF_FILES?=
-
-.for l in ${CONFIG_TEMPLATES}
-.  if ${l:C,^${CONFIG_TEMPLATE_PATH}/(.*)\.sample,\1,} == "vtysh.conf"
-CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
-			${FRR_USER} ${FRR_VTY_GROUP} ${FRR_CONF_MODE}
-.  else
-CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
-			${FRR_USER} ${FRR_GROUP} ${FRR_CONF_MODE}
-.  endif
-.endfor
