@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2021/07/11 22:13:38 he Exp $
+# $NetBSD: Makefile,v 1.243 2021/08/11 12:28:53 ryoon Exp $
 
 DISTNAME=	rustc-1.52.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -271,6 +271,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 #DIST_SUBDIR=		${PKGNAME}
 # For atomic ops
 CFLAGS+=		-march=i586
+CONFIGURE_ARGS+=	--build=${RUST_ARCH}
 pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
