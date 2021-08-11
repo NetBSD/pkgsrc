@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4181 2021/08/11 20:22:05 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4182 2021/08/11 20:41:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6618,3 +6618,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/SDL2 to 2.0.16 [nia 2021-08-11]
 	Updated editors/neatvi to 09 [nia 2021-08-11]
 	Updated editors/nano to 5.8 [nia 2021-08-11]
+	Updated graphics/glu to 9.0.2 [nia 2021-08-11]
