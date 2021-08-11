@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3479 2021/07/30 17:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.3480 2021/08/11 10:00:41 kardel Exp $
 #
 
 COMMENT=	Development utilities
@@ -837,6 +837,7 @@ SUBDIR+=	libwnck3
 SUBDIR+=	libxenserver
 SUBDIR+=	libxtend
 SUBDIR+=	libyang
+SUBDIR+=	libyang2
 SUBDIR+=	libzen
 SUBDIR+=	libzookeeper
 SUBDIR+=	linenoise
