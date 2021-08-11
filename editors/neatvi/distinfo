@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/12/18 23:03:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/08/11 20:20:28 nia Exp $
 
-SHA1 (neatvi-08.tar.gz) = 438c662a0a04e54c250187d0a29bcd786ceb2048
-RMD160 (neatvi-08.tar.gz) = d402301780bed9ec3c1a8fe4b8f616fc42c090da
-SHA512 (neatvi-08.tar.gz) = c883e06e215143498a04ece5cacee745fda3cc16a3b31b2a3e70cd559c1dffaddb2c6e98960e0293e37ea55a72a805564cc7e69d86f1e1689303a06244be929d
-Size (neatvi-08.tar.gz) = 43389 bytes
+SHA1 (neatvi-09.tar.gz) = 89453680b937689658cc8a85e8b3449bf61f1088
+RMD160 (neatvi-09.tar.gz) = 92149255faedd069c6c25a63867eb1d25eca9ce9
+SHA512 (neatvi-09.tar.gz) = 11b0c34525210bcb96fc0128056a0c350cdea3318cc26b3c3aac5bce59809d8eab0dd63b410d5f91d2965ce5030ee104f614f829264854df6f26ef05a605d876
+Size (neatvi-09.tar.gz) = 44088 bytes
