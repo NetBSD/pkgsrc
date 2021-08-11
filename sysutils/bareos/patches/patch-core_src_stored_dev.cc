@@ -1,4 +1,4 @@
-$NetBSD: patch-core_src_stored_dev.cc,v 1.1 2021/02/01 09:08:44 kardel Exp $
+$NetBSD: patch-core_src_stored_dev.cc,v 1.2 2021/08/11 10:24:05 kardel Exp $
 
 	spool.cc makes use of a ficticious temporary device that
 	has .device_resource set - ~Device() did not
@@ -24,16 +24,3 @@ $NetBSD: patch-core_src_stored_dev.cc,v 1.1 2021/02/01 09:08:44 kardel Exp $
    OpenDevice(dcr, omode);
  
    /*
-@@ -1278,7 +1283,11 @@ Device::~Device()
-   pthread_mutex_destroy(&spool_mutex);
-   // RwlDestroy(&lock);
-   attached_dcrs.clear();
--  if (device_resource) { device_resource->dev = nullptr; }
-+  // drop device_resource link only if it references us
-+  if (device_resource && device_resource->dev == this) {
-+    Dmsg1(900, "term dev: link from device_resource cleared\n");
-+    device_resource->dev = nullptr;
-+  }
- }
- 
- bool Device::CanStealLock() const

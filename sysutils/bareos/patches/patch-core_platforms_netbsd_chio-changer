@@ -1,11 +1,11 @@
-$NetBSD: patch-core_platforms_netbsd_chio-changer,v 1.2 2021/02/01 09:08:43 kardel Exp $
+$NetBSD: patch-core_platforms_netbsd_chio-changer,v 1.3 2021/08/11 10:24:05 kardel Exp $
 
 	NetBSD changer script using NetBSD chio command
 
 --- core/platforms/netbsd/chio-changer.orig	2021-01-21 10:16:11.945124363 +0000
 +++ core/platforms/netbsd/chio-changer
 @@ -0,0 +1,134 @@
-+#!/bin/sh
++#!@TOOLS_PLATFORM.sh@
 +#
 +# Bareos interface to chio autoloader
 +#
@@ -25,7 +25,7 @@ $NetBSD: patch-core_platforms_netbsd_chio-changer,v 1.2 2021/02/01 09:08:43 kard
 +#   exit code, Bareos will assume the request failed.
 +
 +CHIO=chio
-+AWK=awk
++AWK=@TOOLS_PLATFORM.awk@
 +
 +# check parameter count on commandline
 +check_parm_count() {
