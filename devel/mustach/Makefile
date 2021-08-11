@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/08/06 00:49:20 sjmulder Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/11 10:19:22 mef Exp $
 
 DISTNAME=	mustach-1.1.0
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE=	https://gitlab.com/jobol/mustach
 COMMENT=	C implementation of mustache templating
 LICENSE=	apache-2.0
 
-USE_TOOLS+=	gmake gsed
+USE_TOOLS+=	gmake gsed pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
