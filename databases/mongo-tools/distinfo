@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/06/30 14:31:46 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/08/11 07:23:18 adam Exp $
 
-SHA1 (mongo-tools-4.2.14.tar.gz) = afe0731349869d4f9e84804255504da743248cd9
-RMD160 (mongo-tools-4.2.14.tar.gz) = e43fb39fc49205114093a93ead3903ef9b769986
-SHA512 (mongo-tools-4.2.14.tar.gz) = ddddf8340788635d5be60457460830f4f8be47f7e90b61e0a498a95f46d0e1671b4e1482049d761c5d5f36c63d01277753d74f6a51446340a3dd2e2e3e0de546
-Size (mongo-tools-4.2.14.tar.gz) = 15029404 bytes
+SHA1 (mongo-tools-4.2.15.tar.gz) = 24cadb40017570b692e68e0c5dd22a0091d087d7
+RMD160 (mongo-tools-4.2.15.tar.gz) = 43a7d9239f2e8ac43ae57e542f99f6278d7ad330
+SHA512 (mongo-tools-4.2.15.tar.gz) = f613ab61a4cf029548aa0e5623fef3798642ced791bf52f229e7d14d31de9472bfc3c8bfb3fa7b4542555a17c79ff9a514480c674cb3e45fb99c4f1745fdb9f0
+Size (mongo-tools-4.2.15.tar.gz) = 15028734 bytes
 SHA1 (patch-vendor_github.com_howeyc_gopass_nix.go) = 3eae07c84c7c4c08a9076f9f91ae0b56e7e1183b
 SHA1 (patch-vendor_github.com_spacemonkeygo_spacelog_capture__other.go) = 5af1e27b7bc791b9d0d2c8b69089cdb964826851
 SHA1 (patch-vendor_gopkg.in_mgo.v2_internal_sasl_sasl.go) = 20cd357bc6175415a52b3f4d3adf568ed8fdc206
