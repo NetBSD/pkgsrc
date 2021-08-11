@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4174 2021/08/11 12:23:30 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4175 2021/08/11 12:31:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6611,3 +6611,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTTP-Message to 6.33 [wen 2021-08-11]
 	Updated devel/p5-Test-Warnings to 0.031 [wen 2021-08-11]
 	Updated www/p5-CGI to 4.53 [wen 2021-08-11]
+	Updated www/p5-CGI-Lite to 3.03 [wen 2021-08-11]
