@@ -1,12 +1,12 @@
-# $NetBSD: available.mk,v 1.5 2021/05/15 18:00:35 nia Exp $
+# $NetBSD: available.mk,v 1.6 2021/08/11 00:25:35 gutteridge Exp $
 #
-# This mk fragment define LIBRSVG_TYPE variable used in other librsvg mk
+# This mk fragment defines the LIBRSVG_TYPE variable used in other librsvg mk
 # fragments.
 #
 # User-settable variables:
 #
 # LIBRSVG_TYPE
-#	Type of used librsvg implementation.
+#	Type of librsvg implementation used.
 #
 #	Possible values: c rust
 #	Default: rust on platforms were Rust is supported
