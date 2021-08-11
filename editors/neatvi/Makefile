@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/12/18 23:03:37 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/11 20:20:28 nia Exp $
 
-DISTNAME=	neatvi-08
+DISTNAME=	neatvi-09
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aligrudi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/aligrudi/neatvi/
+HOMEPAGE=	https://github.com/aligrudi/neatvi
 COMMENT=	Small vi/ex editor for editing bidirectional UTF-8 text
 LICENSE=	isc
 
