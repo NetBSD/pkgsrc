@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/06/09 15:11:46 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/11 20:49:25 nia Exp $
 
-DISTNAME=	opencl-clang-v10.0.0-1
+DISTNAME=	opencl-clang-v12.0.0
 PKGNAME=	${DISTNAME:S/-v/-/1:S/-1$/.1/g}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
