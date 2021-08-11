@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/02/01 09:08:43 kardel Exp $
+$NetBSD: distinfo,v 1.6 2021/08/11 10:24:05 kardel Exp $
 
-SHA1 (bareos-20.0.0.tar.gz) = e0ad526ec2d740943892b391a2f0286414c678de
-RMD160 (bareos-20.0.0.tar.gz) = 183d779c1b7b7c5146522c67add9d38dea60a520
-SHA512 (bareos-20.0.0.tar.gz) = 14961ed5db7d169e1e529eded47299129cd92fe29974bd457863756cdee47aa0731fe65ece8439e71a7c474b483c2cfc1a95dd6d8419bf9ae3d3690db52bc3cf
-Size (bareos-20.0.0.tar.gz) = 13325939 bytes
+SHA1 (bareos-20.0.2.tar.gz) = 3c478df0515d341e6ef39e9a4534c1699d1094e5
+RMD160 (bareos-20.0.2.tar.gz) = 8c365c9b363df521dfc4bea16bf1eacf00fe958e
+SHA512 (bareos-20.0.2.tar.gz) = f3a0f481a2c9b3a422f4db3e094587c97fe10e2ea5e7a8ba44e9971b0a11746ae4ad598ea469d5c8ec0dfb962e4104c00931397905aebbf3e22af49834043994
+Size (bareos-20.0.2.tar.gz) = 13333946 bytes
 SHA1 (patch-core_CMakeLists.txt) = e59c94620769db0b26d6255830753bdc3b42ad77
 SHA1 (patch-core_cmake_BareosCheckIncludes.cmake) = bb3703ee083b3aa6ea8d5819c0064324037c560a
 SHA1 (patch-core_cmake_BareosFindAllLibraries.cmake) = 35ddd7c2f95f56aa5f65c5f6f2d39700c350e492
@@ -12,7 +12,7 @@ SHA1 (patch-core_cmake_BareosInstallConfigFiles.cmake) = a0110766eee99c19bda4de5
 SHA1 (patch-core_cmake_BareosSetVariableDefaults.cmake) = 1dcdfb5a1a3b6494bb101b4b810646d58bfeb662
 SHA1 (patch-core_cmake_BareosTimeFunctions.cmake) = 237c1237712b361135c0f6e6a1c15b9832c105c5
 SHA1 (patch-core_platforms_netbsd_CMakeLists.txt) = c9d656ed5d51dd9a668186ea7c06c7767c732e4f
-SHA1 (patch-core_platforms_netbsd_chio-changer) = 882dbe658f587362fb5616f5d1ad1abec4763871
+SHA1 (patch-core_platforms_netbsd_chio-changer) = 6b1451b2aa464b7f31f3d957bc62531c3a2946b2
 SHA1 (patch-core_scripts_CMakeLists.txt) = bb2c8d62d085c22813490137c467443b7c024e70
 SHA1 (patch-core_scripts_bareos-config-lib.sh.in) = 4aa83a53dc9e8383ed79a0258dbaab6d0110366a
 SHA1 (patch-core_src_cats_make__catalog__backup.pl.in) = ac17b314b16dced9be81580af9fa385f99baeebd
@@ -28,5 +28,5 @@ SHA1 (patch-core_src_lmdb_mdb.c) = 8f83c89fb7bad04b53ebebd416f6080f650e695e
 SHA1 (patch-core_src_plugins_stored_scsicrypto_scsicrypto-sd.cc) = e934004e0e71ffb7df7c342abd88e927e6e894ca
 SHA1 (patch-core_src_plugins_stored_scsitapealert_scsitapealert-sd.cc) = b43f8ba6152532d11e0154dc74d2df393a98d888
 SHA1 (patch-core_src_stored_btape.cc) = c1f0637e649d3d1220105e36d616850b338fafae
-SHA1 (patch-core_src_stored_dev.cc) = 8ad73c6e3ff923dc56f4b070a904d886af175f8a
+SHA1 (patch-core_src_stored_dev.cc) = 8b74e35806a58c0fdb68a23c4817448e2cc75af1
 SHA1 (patch-systemtests_tests_droplet-s3_testrunner) = 42f760df63beca850ab7a4b9c2d5995f09299a4e
