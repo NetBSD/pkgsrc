@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/08/12 07:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/08/12 07:36:39 wiz Exp $
 
 UBOOT_TARGET=		pine-h64
 UBOOT_CONFIG=		pine_h64_defconfig
@@ -7,7 +7,6 @@ UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 UBOOT_VERSION=		2021.01
-PKGREVISION=		0
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
