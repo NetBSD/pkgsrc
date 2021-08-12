@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4191 2021/08/12 15:06:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4192 2021/08/12 21:48:06 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6628,3 +6628,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-sequel to 5.47.0 [taca 2021-08-12]
 	Updated devel/ruby-curses to 1.4.2 [taca 2021-08-12]
 	Updated devel/ruby-ffi to 1.15.3 [taca 2021-08-12]
+	Updated devel/php-composer to 2.1.5 [tpaul 2021-08-12]
