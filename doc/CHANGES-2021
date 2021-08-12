@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4186 2021/08/12 14:30:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4187 2021/08/12 14:32:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6623,3 +6623,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/lightspark to 0.8.5 [nia 2021-08-11]
 	Updated pkgtools/pkglint to 21.2.3 [rillig 2021-08-12]
 	Updated lang/pear to 1.10.13 [taca 2021-08-12]
+	Updated databases/pear-DB to 1.11.0 [taca 2021-08-12]
