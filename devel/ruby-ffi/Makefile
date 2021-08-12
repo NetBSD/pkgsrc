@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2021/05/29 08:32:13 taca Exp $
+# $NetBSD: Makefile,v 1.30 2021/08/12 15:05:44 taca Exp $
 
-DISTNAME=	ffi-1.15.1
+DISTNAME=	ffi-1.15.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
