@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2021/06/02 15:23:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.89 2021/08/12 14:58:31 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -68,6 +68,8 @@ ${GEM_LIBDIR}/doc/release_notes/5.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.45.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.46.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.47.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
@@ -334,6 +336,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/touch.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/tree.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/typecast_on_load.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/unlimited_update.rb
+${GEM_LIBDIR}/lib/sequel/plugins/unused_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_or_create.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_primary_key.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_refresh.rb
