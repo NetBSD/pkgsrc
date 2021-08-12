@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/08/12 07:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/12 07:35:06 wiz Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
@@ -21,31 +21,31 @@ BL1_BIN=		${ODROID}-${xBL1_BIN}
 DISTFILES+=		${BL1_BIN}
 UBOOT_BIN+=		${xBL1_BIN}
 SITES.${BL1_BIN}=	${MASTER_SITE_GITHUB:@url@ \
-	-${url}hardkernel/u-boot/raw/${ODROID}/sd_fuse/${xBL1_BIN} @}
+			-${url}hardkernel/u-boot/raw/${ODROID}/sd_fuse/${xBL1_BIN} @}
 
 xBL2_PKG=		bl2.package
 BL2_PKG=		${ODROID}-${xBL2_PKG}
 DISTFILES+=		${BL2_PKG}
 SITES.${BL2_PKG}=	${MASTER_SITE_GITHUB:@url@ \
-	-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL2_PKG} @}
+			-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL2_PKG} @}
 
 xBL30_BIN=		bl30.bin
 BL30_BIN=		${ODROID}-${xBL30_BIN}
 DISTFILES+=		${BL30_BIN}
 SITES.${BL30_BIN}=	${MASTER_SITE_GITHUB:@url@ \
-	-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL30_BIN} @}
+			-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL30_BIN} @}
 
 xBL301_BIN=		bl301.bin
 BL301_BIN=		${ODROID}-${xBL301_BIN}
 DISTFILES+=		${BL301_BIN}
 SITES.${BL301_BIN}=	${MASTER_SITE_GITHUB:@url@ \
-	-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL301_BIN} @}
+			-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL301_BIN} @}
 
 xBL31_BIN=		bl31.bin
 BL31_BIN=		${ODROID}-${xBL31_BIN}
 DISTFILES+=		${BL31_BIN}
 SITES.${BL31_BIN}=	${MASTER_SITE_GITHUB:@url@ \
-	-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL31_BIN} @}
+			-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL31_BIN} @}
 
 # pkgsrc tries to run distfiles that end in .bin; handle manually
 EXTRACT_ONLY=		${DISTFILES:N*.bin}
