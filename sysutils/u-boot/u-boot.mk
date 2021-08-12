@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.32 2021/05/14 11:21:07 nia Exp $
+# $NetBSD: u-boot.mk,v 1.33 2021/08/12 07:25:54 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -39,7 +39,7 @@ ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .else
 ALL_ENV+= 		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .endif
-ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
+ALL_ENV+=		PYTHONLIBPATH=-L${LOCALBASE}/lib
 
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
