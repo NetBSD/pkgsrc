@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4187 2021/08/12 14:32:30 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4188 2021/08/12 14:56:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.2.3 [rillig 2021-08-12]
 	Updated lang/pear to 1.10.13 [taca 2021-08-12]
 	Updated databases/pear-DB to 1.11.0 [taca 2021-08-12]
+	Updated archivers/ruby-zip to 2.3.2 [taca 2021-08-12]
