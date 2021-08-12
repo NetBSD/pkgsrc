@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/07 18:27:46 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/12 07:25:59 wiz Exp $
 
 UBOOT_TARGET=		tinker
 UBOOT_CONFIG=		tinker-rk3288_defconfig
@@ -9,3 +9,4 @@ post-build:
 	cd ${WRKSRC} && cat ./u-boot-dtb.bin >> u-boot-tinker-sd.bin
 
 .include "../../sysutils/u-boot/u-boot-arm.mk"
+.include "../../mk/bsd.pkg.mk"
