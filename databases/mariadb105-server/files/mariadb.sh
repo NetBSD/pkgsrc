@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mariadb.sh,v 1.2 2021/07/19 14:41:44 taca Exp $
+# $NetBSD: mariadb.sh,v 1.3 2021/08/12 10:51:31 nia Exp $
 #
 # PROVIDE: mariadb mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -32,7 +32,6 @@ mariadb_initdb() {
         else
 		echo "Initializing MariaDB database system tables."
 		sh @PREFIX@/bin/mysql_install_db --force \
-			--auth-root-authentication-method=normal \
 			--user=@MARIADB_USER@ \
 			--datadir=@MARIADB_DATADIR@
 		if [ -d @MARIADB_DATADIR@ ]; then
