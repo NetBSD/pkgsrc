@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2021/08/12 07:25:58 wiz Exp $
 
 UBOOT_TARGET=		orangepi-one
 UBOOT_CONFIG=		orangepi_one_defconfig
@@ -9,3 +9,4 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 PKGREVISION=		4
 
 .include "../../sysutils/u-boot/u-boot-arm.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2021/03/06 20:19:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.33 2021/08/12 07:25:54 wiz Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
 PKGREVISION=	11
-CATEGORIES=	meta-pkgs sysutils u-boot
+CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
 MAINTAINER=	jmcneill@NetBSD.org
