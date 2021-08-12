@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 20:17:39 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/12 07:30:21 wiz Exp $
 
 UBOOT_TARGET=		apple-m1
 UBOOT_CONFIG=		apple_m1_defconfig
@@ -27,3 +27,4 @@ post-build:
 	    ${PREFIX}/share/dtb/arm64/apple/apple-m1-j274.dtb@0x803060000
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

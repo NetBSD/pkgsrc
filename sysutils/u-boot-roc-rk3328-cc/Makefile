@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/06/25 08:40:54 mrg Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/12 07:30:23 wiz Exp $
 
 UBOOT_TARGET=		roc-rk3328-cc
 UBOOT_CONFIG=		roc-cc-rk3328_defconfig
@@ -20,3 +20,4 @@ post-extract:
 
 .include "../../sysutils/arm-trusted-firmware-rk3328/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

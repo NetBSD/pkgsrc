@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:57 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/12 07:30:23 wiz Exp $
 
 UBOOT_TARGET=		sopine-baseboard
 UBOOT_CONFIG=		sopine_baseboard_defconfig
@@ -26,3 +26,4 @@ post-build:
 
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"
