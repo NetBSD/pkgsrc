@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.33 2021/08/12 07:25:54 wiz Exp $
+# $NetBSD: u-boot.mk,v 1.34 2021/08/12 07:33:49 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -13,15 +13,15 @@ MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/
 
 .if !empty(UBOOT_VERSION:M202[0-9].*)
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-UBOOT_SWIG_VERSION=	3
+UBOOT_SWIG_VERSION=		3
 .else
-UBOOT_SWIG_VERSION=	3
+UBOOT_SWIG_VERSION=		3
 PYTHON_VERSIONS_ACCEPTED?=	27
 .endif
 
 TOOL_DEPENDS+=	dtc>=1.4.2:../../sysutils/dtc
 .if !empty(UBOOT_SWIG_VERSION:M3)
-TOOL_DEPENDS+=	swig3>=swig-3.0.12:../../devel/swig3
+TOOL_DEPENDS+=	swig3>=3.0.12:../../devel/swig3
 .else
 TOOL_DEPENDS+=	swig>=1.3:../../devel/swig
 .endif
@@ -35,11 +35,11 @@ PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
+ALL_ENV+=		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .else
-ALL_ENV+= 		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
+ALL_ENV+=		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .endif
-ALL_ENV+=		PYTHONLIBPATH=-L${LOCALBASE}/lib
+ALL_ENV+=		PYTHONLIBPATH=-L${PREFIX}/lib
 
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
@@ -47,10 +47,12 @@ UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
 
 MAKE_ENV+=	${UBOOT_ENV}
 
+INSTALLATION_DIRS+=	share/u-boot/${UBOOT_TARGET}
+
 post-patch:
 .for opt in ${UBOOT_OPTIONS}
-	@echo "=> Adding ${opt} to configs/${UBOOT_CONFIG}"
-	@echo ${opt} >> ${WRKSRC}/configs/${UBOOT_CONFIG}
+	${ECHO} "=> Adding ${opt} to configs/${UBOOT_CONFIG}"
+	${ECHO} ${opt} >> ${WRKSRC}/configs/${UBOOT_CONFIG}
 .endfor
 
 do-configure:
@@ -65,7 +67,6 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${_MAKE_JOBS} ${BUILD_TARGET}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
 .for bin in ${UBOOT_BIN}
 	${INSTALL_DATA} ${WRKSRC}/${bin} \
 	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
