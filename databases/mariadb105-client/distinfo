@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/08/07 09:24:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/08/12 10:50:19 nia Exp $
 
 SHA1 (mariadb-10.5.12.tar.gz) = 0e2ca328fdd2821c7a4400f7759cd6882a2c5840
 RMD160 (mariadb-10.5.12.tar.gz) = cfac6715b84ce1ed8e073fefad90c47875a0346b
@@ -13,7 +13,7 @@ SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-plugin_auth__pam_CMakeLists.txt) = 033f01c64014c0e61bc635d5fbe686f7a4b7f317
 SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 00cfaf5826cc97084bc77033985e6686e1ce1628
 SHA1 (patch-plugin_auth__socket_auth__socket.c) = 850e94faff382a7e962f6d4d6ff960ddddc624c4
-SHA1 (patch-scripts_CMakeLists.txt) = b11f36e845716fccd455832b648f20413cd9de1f
+SHA1 (patch-scripts_CMakeLists.txt) = bc55b8de1eb44e5516eed9ce4b5b1d0cc1a8f0af
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
 SHA1 (patch-storage_connect_ioapi.c) = 804e2d9d3722fbe4d5ed773cc98a4114fe4cf8a3

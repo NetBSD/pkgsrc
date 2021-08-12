@@ -1,8 +1,8 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2021/05/23 15:32:47 nia Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2021/08/12 10:50:20 nia Exp $
 
 Allow building a server-only configuration.
 
---- scripts/CMakeLists.txt.orig	2021-05-05 21:00:19.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2021-08-03 08:29:08.000000000 +0000
 +++ scripts/CMakeLists.txt
 @@ -208,7 +208,7 @@ SET(pkgdata_locations "$basedir/${INSTAL
  # install mysql_install_db.sh at this point since it needs
@@ -13,7 +13,18 @@ Allow building a server-only configuration.
    CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_install_db.sh
      ${CMAKE_CURRENT_BINARY_DIR}/mariadb-install-db ESCAPE_QUOTES @ONLY)
    EXECUTE_PROCESS(COMMAND chmod +x ${CMAKE_CURRENT_BINARY_DIR}/mariadb-install-db)
-@@ -314,21 +314,21 @@ ELSE()
+@@ -251,7 +251,10 @@ ENDIF()
+ 
+ SET(mysql_config_COMPONENT Development)
+ SET(msql2mysql_COMPONENT Client)
++SET(mariadb-setpermission_COMPONENT Client)
++SET(mariadb-secure-installation_COMPONENT Client)
+ SET(mariadb-access_COMPONENT Client)
++SET(mariadb-convert-table-format_COMPONENT Client)
+ SET(mariadb-find-rows_COMPONENT Client)
+ SET(mytop_COMPONENT Mytop)
+ 
+@@ -314,21 +317,21 @@ ELSE()
        mariadbd-safe
        mariadb-dumpslow
      )
