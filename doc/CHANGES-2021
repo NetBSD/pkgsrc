@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4189 2021/08/12 14:58:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4190 2021/08/12 15:04:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6626,3 +6626,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/pear-DB to 1.11.0 [taca 2021-08-12]
 	Updated archivers/ruby-zip to 2.3.2 [taca 2021-08-12]
 	Updated databases/ruby-sequel to 5.47.0 [taca 2021-08-12]
+	Updated devel/ruby-curses to 1.4.2 [taca 2021-08-12]
