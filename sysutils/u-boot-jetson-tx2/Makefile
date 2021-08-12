@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/02/18 14:55:32 martin Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/12 07:30:21 wiz Exp $
 
 UBOOT_TARGET=		jetson-tx2
 UBOOT_CONFIG=		p2771-0000-500_defconfig
@@ -10,3 +10,4 @@ PKGREVISION=		3
 # PKG_DEFAULT_OPTIONS+=	el1
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/06/21 14:05:12 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/12 07:30:22 wiz Exp $
 
 UBOOT_TARGET=		pine-h64
 UBOOT_CONFIG=		pine_h64_defconfig
@@ -16,3 +16,4 @@ post-extract:
 
 .include "../../sysutils/arm-trusted-firmware-sun50i-h6/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

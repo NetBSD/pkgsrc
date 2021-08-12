@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/20 22:29:12 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/12 07:30:21 wiz Exp $
 
 UBOOT_TARGET=		jetson-nano
 UBOOT_CONFIG=		p3450-0000_defconfig
@@ -18,3 +18,4 @@ CHECK_PORTABILITY_SKIP+=	tools/imx8m_image.sh
 PKG_DEFAULT_OPTIONS+=	el1
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

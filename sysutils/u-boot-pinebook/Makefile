@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/04 21:28:57 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2021/08/12 07:30:22 wiz Exp $
 
 UBOOT_VERSION=		2018.11rc3
 UBOOT_TARGET=		pinebook
@@ -18,6 +18,8 @@ PKGREVISION=		3
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-pinebook/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-pinebook/patches
 
+CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh
+
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}
 
@@ -26,5 +28,4 @@ post-build:
 
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
-
-CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh
+.include "../../mk/bsd.pkg.mk"
