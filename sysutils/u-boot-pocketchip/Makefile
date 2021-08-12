@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/04 21:28:57 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2021/08/12 07:25:59 wiz Exp $
 
 UBOOT_TARGET=		pocketchip
 UBOOT_CONFIG=		CHIP_defconfig
@@ -20,3 +20,4 @@ UBOOT_OPTIONS+=		CONFIG_VIDEO_CHRONTEL_CH7033=y
 UBOOT_OPTIONS+=		CONFIG_VIDEO_CHRONTEL_CH7033_I2C_BUS=1
 
 .include "../../sysutils/u-boot/u-boot-arm.mk"
+.include "../../mk/bsd.pkg.mk"
