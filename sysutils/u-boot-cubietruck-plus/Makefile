@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:55 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/12 07:25:56 wiz Exp $
 
 UBOOT_TARGET=		cubietruck-plus
 UBOOT_CONFIG=		Cubietruck_plus_defconfig
@@ -9,3 +9,4 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 PKGREVISION=		2
 
 .include "../../sysutils/u-boot/u-boot-arm.mk"
+.include "../../mk/bsd.pkg.mk"
