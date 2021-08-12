@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/20 17:46:28 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/12 07:30:21 wiz Exp $
 
 UBOOT_TARGET=		ci20
 UBOOT_CONFIG=		ci20_mmc_defconfig
@@ -18,3 +18,4 @@ post-build:
 	cp ${WRKSRC}/spl/u-boot-spl.bin ${WRKSRC}/u-boot-spl.bin
 
 .include "../../sysutils/u-boot/u-boot-mipsel.mk"
+.include "../../mk/bsd.pkg.mk"
