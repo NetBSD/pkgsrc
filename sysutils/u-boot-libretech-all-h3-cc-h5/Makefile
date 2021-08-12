@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/21 19:43:48 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/12 07:30:21 wiz Exp $
 
 UBOOT_TARGET=		libretech-all-h3-cc-h5
 UBOOT_CONFIG=		libretech_all_h3_cc_h5_defconfig
@@ -17,3 +17,4 @@ post-build:
 
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"

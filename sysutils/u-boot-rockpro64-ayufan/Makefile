@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/07/27 20:47:35 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/12 07:30:23 wiz Exp $
 
 PKGREVISION=		1
 UBOOT_TARGET=		rockpro64
@@ -21,3 +21,5 @@ EXTRACT_SUFX=	.tar.gz	# keep this
 PKGNAME=	u-boot-rockpro64-ayufan-${UBOOT_VERSION}
 
 .include "../../sysutils/u-boot/u-boot-rockchip.mk"
+.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
