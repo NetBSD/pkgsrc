@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/06/25 08:28:57 mrg Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/12 07:30:23 wiz Exp $
 
 PKGREVISION=		7
 UBOOT_TARGET=		rock64
@@ -31,3 +31,4 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"
