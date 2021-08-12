@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/08 05:06:48 thorpej Exp $
-share/u-boot/bananapi-r2/BPI-R2-HEAD440-0k.img
+@comment $NetBSD: PLIST,v 1.5 2021/08/12 07:35:06 wiz Exp $
 share/u-boot/bananapi-r2/BPI-R2-HEAD1-512b.img
+share/u-boot/bananapi-r2/BPI-R2-HEAD440-0k.img
 share/u-boot/bananapi-r2/bpi-r2-sdmmc.img
 share/u-boot/bananapi-r2/installboot.plist
 share/u-boot/bananapi-r2/preloader_iotg7623Np1_sd_1600M.bin
