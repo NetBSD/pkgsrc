@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4190 2021/08/12 15:04:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4191 2021/08/12 15:06:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6627,3 +6627,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/ruby-zip to 2.3.2 [taca 2021-08-12]
 	Updated databases/ruby-sequel to 5.47.0 [taca 2021-08-12]
 	Updated devel/ruby-curses to 1.4.2 [taca 2021-08-12]
+	Updated devel/ruby-ffi to 1.15.3 [taca 2021-08-12]
