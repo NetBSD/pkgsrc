@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/23 15:32:47 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/12 10:50:19 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
 bin/mariadb-binlog
 bin/mariadb-check
 bin/mariadb-conv
+bin/mariadb-convert-table-format
 bin/mariadb-dump
 bin/mariadb-find-rows
 bin/mariadb-import
 bin/mariadb-plugin
+bin/mariadb-secure-installation
+bin/mariadb-setpermission
 bin/mariadb-show
 bin/mariadb-slap
 bin/mariadb-test
