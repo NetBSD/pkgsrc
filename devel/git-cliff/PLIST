@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/13 04:34:04 pin Exp $
+bin/git-cliff
