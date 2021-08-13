@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4194 2021/08/13 04:35:32 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4195 2021/08/13 11:56:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6631,3 +6631,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-composer to 2.1.5 [tpaul 2021-08-12]
 	Updated fonts/montserrat to 7.222 [pin 2021-08-13]
 	Added devel/git-cliff version 0.1.0 [pin 2021-08-13]
+	Updated databases/postgresql96 to 9.6.23 [adam 2021-08-13]
+	Updated databases/postgresql10 to 10.18 [adam 2021-08-13]
+	Updated databases/postgresql11 to 11.13 [adam 2021-08-13]
+	Updated databases/postgresql12 to 12.8 [adam 2021-08-13]
+	Updated databases/postgresql13 to 13.4 [adam 2021-08-13]
