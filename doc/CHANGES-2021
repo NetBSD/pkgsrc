@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4205 2021/08/13 17:39:55 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4206 2021/08/13 19:01:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6646,3 +6646,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78-l10n to 78.13.0 [ryoon 2021-08-13]
 	Updated sysutils/neb-wipe to 1.0nb1 [wiz 2021-08-13]
 	Updated games/hitori to 3.38.2 [prlw1 2021-08-13]
+	Updated geography/qgis to 3.16.9 [gdt 2021-08-13]
