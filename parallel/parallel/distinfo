@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/05/02 08:48:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/08/13 12:46:09 nia Exp $
 
-SHA1 (parallel-20210422.tar.bz2) = efea13ddcff96cc6d4d6c14917924c04da090ebe
-RMD160 (parallel-20210422.tar.bz2) = b1b24e2d28502a57df86be16d932b8e231d60030
-SHA512 (parallel-20210422.tar.bz2) = 175b17b97bd0693e6cd9a69c525a43e030f6425f59237d0c0fb51153edf3043b8afa764be43059359dc1b1769f1368aa187685f9dda23e0136f56b04522de707
-Size (parallel-20210422.tar.bz2) = 2239130 bytes
+SHA1 (parallel-20210722.tar.bz2) = 1e7b66b946cbdffdd5e039633e5c4a7ec228d46a
+RMD160 (parallel-20210722.tar.bz2) = 7af024fb92bb237dfd9dcdaff8dc8a86f947667c
+SHA512 (parallel-20210722.tar.bz2) = 2b5bec76ca6db090bc93f57bd09771d264a761677adbd6f4b93256776cf65a62a5a3a4641c450b68044cb7e86c5e7202d9455d2f9b0ad0cb8ad64d6da6955f89
+Size (parallel-20210722.tar.bz2) = 2248893 bytes
