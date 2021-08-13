@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/12 09:40:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/13 12:08:58 nia Exp $
 bin/drawing
 share/applications/com.github.maoschanz.drawing.desktop
 share/drawing/drawing.gresource
@@ -12,7 +12,7 @@ share/drawing/drawing/abstract_tool.py
 share/drawing/drawing/abstract_transform_tool.py
 share/drawing/drawing/brush_airbrush.py
 share/drawing/drawing/brush_hairy.py
-share/drawing/drawing/brush_nip.py
+share/drawing/drawing/brush_nib.py
 share/drawing/drawing/brush_simple.py
 share/drawing/drawing/deco_manager.py
 share/drawing/drawing/filter_blur.py
@@ -22,6 +22,7 @@ share/drawing/drawing/filter_emboss.py
 share/drawing/drawing/filter_saturation.py
 share/drawing/drawing/filter_transparency.py
 share/drawing/drawing/filter_veil.py
+share/drawing/drawing/gi_composites.py
 share/drawing/drawing/history_manager.py
 share/drawing/drawing/image.py
 share/drawing/drawing/main.py
@@ -112,6 +113,7 @@ share/locale/hu/LC_MESSAGES/drawing.mo
 share/locale/id/LC_MESSAGES/drawing.mo
 share/locale/it/LC_MESSAGES/drawing.mo
 share/locale/ja/LC_MESSAGES/drawing.mo
+share/locale/ko/LC_MESSAGES/drawing.mo
 share/locale/nl/LC_MESSAGES/drawing.mo
 share/locale/pl/LC_MESSAGES/drawing.mo
 share/locale/pt_BR/LC_MESSAGES/drawing.mo
