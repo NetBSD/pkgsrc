@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/07/25 13:20:47 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2021/08/13 14:45:53 abs Exp $
 
 # Update to 6.2 (wip) is on hold pending reports that the greater
 # Unifi world thinks it is stable enough. -- gdt, 2021-06-01
@@ -67,6 +67,7 @@ PKG_USERS_VARS=		UNIFI_USER
 PKG_GROUPS_VARS=	UNIFI_GROUP
 PKG_GROUPS=		${UNIFI_GROUP}
 PKG_USERS=		${UNIFI_USER}:${UNIFI_GROUP}
+RELRO_SUPPORTED=	no
 
 .for d in data logs run work
 OWN_DIRS_PERMS+=	${PREFIX}/unifi/${d} ${UNIFI_USER} ${UNIFI_GROUP} 0700
