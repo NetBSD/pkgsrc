@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2021/06/12 09:40:09 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/13 12:08:58 nia Exp $
 
-DISTNAME=	drawing-0.8.0
+DISTNAME=	drawing-0.8.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maoschanz/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/maoschanz/drawing
-COMMENT=	Application for drawing for the GNOME desktop
+COMMENT=	Basic image editor, similar to Microsoft Paint
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	appstream-glib-[0-9]*:../../devel/appstream-glib
