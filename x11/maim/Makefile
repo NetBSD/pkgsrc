@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/04/21 11:42:59 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/08/13 12:42:02 nia Exp $
 
-DISTNAME=	maim-5.6.3
-PKGREVISION=	3
+DISTNAME=	maim-5.7.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,6 +18,7 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../graphics/glm/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
