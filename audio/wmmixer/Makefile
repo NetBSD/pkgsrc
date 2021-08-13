@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/11/24 11:28:29 nia Exp $
+# $NetBSD: Makefile,v 1.22 2021/08/13 13:01:51 nia Exp $
 
 DISTNAME=	wmmixer-1.8
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://www.dockapps.net/download/
 
