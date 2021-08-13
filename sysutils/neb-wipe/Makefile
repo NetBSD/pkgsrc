@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:22 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/13 14:42:23 abs Exp $
 
 DISTNAME=		neb-wipe-src-1.0
 PKGNAME=		neb-wipe-1.0
@@ -14,6 +14,7 @@ NO_CONFIGURE=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 LICENSE=		original-bsd
+RELRO_SUPPORTED=	no
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
