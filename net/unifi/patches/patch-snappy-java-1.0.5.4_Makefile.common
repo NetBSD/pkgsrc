@@ -1,9 +1,9 @@
-$NetBSD: patch-snappy-java_Makefile.common,v 1.1 2017/06/24 14:16:37 tnn Exp $
+$NetBSD: patch-snappy-java-1.0.5.4_Makefile.common,v 1.1 2021/08/13 17:25:06 wiz Exp $
 
 Don't produce a broken shared library.
 
---- ../snappy-java-1.0.5.4/Makefile.common.orig	2014-07-04 05:20:00.000000000 +0000
-+++ ../snappy-java-1.0.5.4/Makefile.common
+--- snappy-java-1.0.5.4/Makefile.common.orig	2014-07-04 05:20:00.000000000 +0000
++++ snappy-java-1.0.5.4/Makefile.common
 @@ -54,7 +54,7 @@ CROSS_PREFIX :=
  Default_CXX          := $(CROSS_PREFIX)g++
  Default_STRIP        := $(CROSS_PREFIX)strip
