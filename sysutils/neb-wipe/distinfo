@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/08/13 15:41:23 wiz Exp $
 
 SHA1 (neb-wipe-src-1.0.tgz) = 7e77554271a055b3c2e943831d21a0a71f88cee6
 RMD160 (neb-wipe-src-1.0.tgz) = f004cc85f1284924c91d452e3df9eba68946b0b6
 SHA512 (neb-wipe-src-1.0.tgz) = 24912070efa80d876c38ce817e8ca6253fa0a8308edee54b132694e16bdb06f40ba8a4dffd5174d2b21aa420aa953a8bb4b065c82daf552959c2b2e6cb44cf40
 Size (neb-wipe-src-1.0.tgz) = 4518 bytes
+SHA1 (patch-Makefile) = 74f4688385329424e721a8af5827511e709fe61e
