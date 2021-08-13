@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4196 2021/08/13 12:09:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4197 2021/08/13 12:40:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6637,3 +6637,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql12 to 12.8 [adam 2021-08-13]
 	Updated databases/postgresql13 to 13.4 [adam 2021-08-13]
 	Updated graphics/drawing to 0.8.3 [nia 2021-08-13]
+	Updated net/lagrange to 1.6.2 [nia 2021-08-13]
