@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4193 2021/08/13 04:30:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4194 2021/08/13 04:35:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6630,3 +6630,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ffi to 1.15.3 [taca 2021-08-12]
 	Updated devel/php-composer to 2.1.5 [tpaul 2021-08-12]
 	Updated fonts/montserrat to 7.222 [pin 2021-08-13]
+	Added devel/git-cliff version 0.1.0 [pin 2021-08-13]
