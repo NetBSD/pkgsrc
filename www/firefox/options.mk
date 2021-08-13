@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.62 2020/11/18 22:38:21 riastradh Exp $
+# $NetBSD: options.mk,v 1.63 2021/08/13 14:57:52 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
-PLIST_VARS+=		debug
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
@@ -38,7 +37,6 @@ CONFIGURE_ARGS+=	--enable-debug="-g -Og"
 CONFIGURE_ARGS+=	--disable-optimize
 CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
-PLIST.debug=		yes
 .else
 .  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
@@ -74,11 +72,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .endif
 
-PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc
-PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
 .endif

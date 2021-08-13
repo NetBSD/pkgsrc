@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.203 2021/07/02 10:51:16 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.204 2021/08/13 14:57:52 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -37,9 +37,16 @@ TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
-# For rustc/cargo detection
+# This is to work around build failures where an upstream configuration script
+# is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
+# "i486" when attempting to select the Rust compiler target.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
+CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
+.else
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+.endif
 
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
@@ -54,9 +61,11 @@ TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
 
+PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
+PLIST.i386=		yes
 .endif
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
@@ -87,7 +96,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
-CONFIGURE_ARGS+=	--enable-chrome-format=flat
+CONFIGURE_ARGS+=	--enable-chrome-format=omni
 CONFIGURE_ARGS+=	--with-system-webp
 
 #CONFIGURE_ARGS+=	--enable-readline
