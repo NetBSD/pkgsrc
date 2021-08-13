@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20936 2021/08/13 12:42:13 nia Exp $
+$NetBSD: TODO,v 1.20937 2021/08/13 13:10:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-5.20.0
+	o calibre-5.25.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-714
@@ -2053,6 +2053,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadweaver-5.81.0
+	o thunderbird-91
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tkcon-2.7.3
