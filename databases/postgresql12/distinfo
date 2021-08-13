@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2021/07/12 09:06:21 mlelstv Exp $
+$NetBSD: distinfo,v 1.11 2021/08/13 11:54:45 adam Exp $
 
-SHA1 (postgresql-12.7.tar.bz2) = e7071caed1f31a0b6d7579ea66e00342e8ebe146
-RMD160 (postgresql-12.7.tar.bz2) = 7a8e2a19b372076498782ae7f8285826d5f5fdc7
-SHA512 (postgresql-12.7.tar.bz2) = 47ca347df63a441e52e52442074e85d0ebd3a89f7eb037022c4690cbe88b21a6a959092a812b79bb30db47b5975a5d7908318c73b2685683d48b4789d4ae6a44
-Size (postgresql-12.7.tar.bz2) = 20819005 bytes
+SHA1 (postgresql-12.8.tar.bz2) = f3f4ae778036795bdc8f493cc7d0d15d409061e9
+RMD160 (postgresql-12.8.tar.bz2) = 10e70f2d366d6d52e6b33a8685f2e3721705ffcc
+SHA512 (postgresql-12.8.tar.bz2) = 970fe1041e427ac1c8a786c93e2079b0a9c8b3fcaf9d38877894eb02e8a9afc7cd73d7ac28078c455845a922a1b7d9c1e22cb7990d8d523dd6496af9442fba01
+Size (postgresql-12.8.tar.bz2) = 20849478 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
 SHA1 (patch-config_perl.m4) = b3393d0f28e97f89ae20297d85553c508b3896bb
 SHA1 (patch-configure) = b0a758023b3b263ff51b154d0da32cf02520c6cd
