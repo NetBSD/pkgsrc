@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/07/06 22:40:54 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/08/14 14:38:59 gdt Exp $
 @pkgdir share/chirp/images
 bin/chirpw
 bin/rpttool
@@ -147,6 +147,9 @@ ${PYSITELIB}/chirp/drivers/ft857.pyo
 ${PYSITELIB}/chirp/drivers/ft90.py
 ${PYSITELIB}/chirp/drivers/ft90.pyc
 ${PYSITELIB}/chirp/drivers/ft90.pyo
+${PYSITELIB}/chirp/drivers/ftlx011.py
+${PYSITELIB}/chirp/drivers/ftlx011.pyc
+${PYSITELIB}/chirp/drivers/ftlx011.pyo
 ${PYSITELIB}/chirp/drivers/ftm3200d.py
 ${PYSITELIB}/chirp/drivers/ftm3200d.pyc
 ${PYSITELIB}/chirp/drivers/ftm3200d.pyo
@@ -333,6 +336,9 @@ ${PYSITELIB}/chirp/drivers/retevis_rt26.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt76p.py
 ${PYSITELIB}/chirp/drivers/retevis_rt76p.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt76p.pyo
+${PYSITELIB}/chirp/drivers/retevis_rt87.py
+${PYSITELIB}/chirp/drivers/retevis_rt87.pyc
+${PYSITELIB}/chirp/drivers/retevis_rt87.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt98.py
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyo
