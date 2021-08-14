@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20937 2021/08/13 13:10:47 wiz Exp $
+$NetBSD: TODO,v 1.20938 2021/08/14 08:19:26 nia Exp $
 
 Suggested new packages
 ======================
@@ -1896,7 +1896,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o resize_image-0.7
 	o restic-0.12.0
 	o rexx-regina-3.9.0
-	o rgbds-0.5.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
 	o rmtrash-1.14

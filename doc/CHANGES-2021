@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4210 2021/08/14 08:13:21 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4211 2021/08/14 08:19:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6654,3 +6654,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/zathura-cb to 0.1.9 [nia 2021-08-14]
 	Updated chat/srain to 1.2.4 [nia 2021-08-14]
 	Updated graphics/scrot to 1.6 [nia 2021-08-14]
+	Updated devel/rgbds to 0.5.1 [nia 2021-08-14]
