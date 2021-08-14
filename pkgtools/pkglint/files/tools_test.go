@@ -44,7 +44,7 @@ func (s *Suite) Test_Tool_UsableAtLoadTime__pkgconfig_builtin_mk(c *check.C) {
 			"To use the tool ${TOOL1} at load time, " +
 			"bsd.prefs.mk has to be included before.")
 	// Maybe an explanation might help here.
-	// There is surprisingly few feedback on any of the explanations
+	// There is surprisingly little feedback on any of the explanations
 	// though (about 0 in 10 years), therefore I don't even know
 	// whether anyone reads them.
 }
@@ -447,7 +447,7 @@ func (s *Suite) Test_Tools__aliases_in_for_loop(c *check.C) {
 		"TOOLS_ALIASES.ggrep+=\t${t}",
 		".endfor")
 
-	mklines.collectVariables() // calls ParseToolLine internally
+	mklines.collectVariables(false, true) // calls ParseToolLine internally
 
 	t.CheckDeepEquals(
 		mklines.Tools.ByName("ggrep").Aliases,
@@ -592,7 +592,7 @@ func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
 		"_TOOLS.${t}=\t${t}",
 		".endfor")
 
-	mklines.collectVariables()
+	mklines.collectVariables(false, true)
 	t.Check(mklines.Tools.byName, check.HasLen, 1)
 	t.CheckEquals(mklines.Tools.ByName("tool").String(), "tool:::Nowhere:abc")
 

@@ -842,7 +842,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 
 	handleMkFile := func(path CurrPath) {
 		mklines := LoadMk(path, nil, MustSucceed)
-		mklines.collectVariables()
+		mklines.collectVariables(false, true) // FIXME
 		mklines.collectUsedVariables()
 		mklines.allVars.forEach(func(varname string, data *scopeVar) {
 			if data.firstDef != nil {

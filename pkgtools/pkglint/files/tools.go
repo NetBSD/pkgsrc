@@ -245,7 +245,11 @@ func (tr *Tools) ParseToolLine(mklines *MkLines, mkline *MkLine, fromInfrastruct
 		case "TOOLS_CREATE":
 			for _, name := range mkline.ValueFields(value) {
 				if tr.IsValidToolName(name) {
-					tr.def(name, "", false, AtRunTime, nil)
+					validity := AtRunTime
+					if mklines.indentation.DependsOn("_USE_TOOLS") {
+						validity = Nowhere // see mk/tools/replace.mk
+					}
+					tr.def(name, "", false, validity, nil)
 				}
 			}
 
