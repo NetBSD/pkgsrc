@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.79 2020/07/08 12:37:13 jperkin Exp $
+# $NetBSD: install.mk,v 1.80 2021/08/14 08:38:01 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -278,12 +278,11 @@ install-makedirs:
 	done
 .endif	# INSTALLATION_DIRS
 
-# Creates the directories for all files that are mentioned in the static
-# PLIST files of the package, to make the declaration of
+# Creates the directories for all files that are listed unconditionally
+# in the static PLIST files of the package, to make the declaration of
 # INSTALLATION_DIRS redundant in some cases.
 #
-# To enable this, the variable INSTALLATION_DIRS_FROM_PLIST must be set
-# to "yes".
+# To enable this, set AUTO_MKDIRS to "yes".
 #
 .PHONY: install-dirs-from-PLIST
 install-dirs-from-PLIST:
@@ -298,6 +297,7 @@ install-dirs-from-PLIST:
 		-e 's,^info/,${PKGINFODIR}/,'				\
 		-e 's,^share/locale/,${PKGLOCALEDIR}/locale/,'		\
 		-e 's,^\([^$$@]*\)/[^/]*$$,\1,p'			\
+	| ${TOOLS_PLATFORM.uniq:Uuniq}					\
 	| while read dir; do						\
 		${_INSTALL_ONE_DIR_CMD};				\
 	done
