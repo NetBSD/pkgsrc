@@ -719,7 +719,7 @@ func (s *Suite) Test_resolveVariableRefs__scope_precedence(c *check.C) {
 	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
 		"ORIGIN=\tfilename.mk")
-	mklines.collectVariables()
+	mklines.collectVariables(false, false)
 	pkg := NewPackage(t.File("category/package"))
 	pkg.vars.Define("ORIGIN", t.NewMkLine("other.mk", 123, "ORIGIN=\tpackage"))
 
@@ -750,7 +750,7 @@ func (s *Suite) Test_resolveVariableRefs__indeterminate(c *check.C) {
 	pkg.vars.Define("PKGVAR", t.NewMkLine("filename.mk", 123, "PKGVAR!=\tcommand"))
 	mklines := t.NewMkLinesPkg("filename.mk", pkg,
 		"VAR!=\tcommand")
-	mklines.collectVariables()
+	mklines.collectVariables(false, false)
 
 	resolved := resolveVariableRefs("${VAR} ${PKGVAR}", mklines, nil)
 

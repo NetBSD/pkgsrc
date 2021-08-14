@@ -2619,14 +2619,6 @@ func (s *Suite) Test_Package_checkUseLanguagesCompilerMk__endian_mk(c *check.C) 
 }
 
 func (s *Suite) Test_Package_checkMesonGnuMake(c *check.C) {
-
-	// False positive in x11/libxkbcommon, 2021-08-12.
-	//
-	// It seems that the Tools registry is not initialized properly since
-	// x11/libxkbcommon does not mention gmake at all, and 'bmake show-all'
-	// also does not contain 'gmake'.
-	G.Experimental = true
-
 	t := s.Init(c)
 
 	t.CreateFileLines("devel/meson/build.mk")
