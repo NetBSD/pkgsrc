@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.204 2021/08/13 14:57:52 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.205 2021/08/14 14:30:12 tsutsui Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -177,10 +177,10 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.26
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.32
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.63
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.68
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
