@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4214 2021/08/14 08:58:45 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4215 2021/08/14 14:39:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6658,3 +6658,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.2.4 [rillig 2021-08-14]
 	Updated audio/qmmp to 1.5.1 [nia 2021-08-14]
 	Updated mail/postfix to 3.6.2nb1 [taca 2021-08-14]
+	Updated ham/chirp to 20210814 [gdt 2021-08-14]
