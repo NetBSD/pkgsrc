@@ -277,7 +277,7 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 
 		autoMkdirs := false
 		if scc.mklines.pkg != nil {
-			plistLine := scc.mklines.pkg.Plist.Dirs[prefixRel]
+			plistLine := scc.mklines.pkg.Plist.UnconditionalDirs[prefixRel]
 			if plistLine != nil && !containsVarUse(plistLine.Line.Text) {
 				autoMkdirs = true
 			}

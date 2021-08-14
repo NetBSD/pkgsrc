@@ -399,14 +399,10 @@ func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
 		pline.Warnf("Preformatted manual page without unformatted one.")
 	}
 
-	if catOrMan == "cat" {
-		if ext != "0" {
-			pline.Warnf("Preformatted manual pages should end in \".0\".")
-		}
-	} else {
-		if !hasPrefix(ext, section) {
-			pline.Warnf("Mismatch between the section (%s) and extension (%s) of the manual page.", section, ext)
-		}
+	if catOrMan == "man" && !hasPrefix(ext, section) {
+		pline.Warnf("Mismatch between the section (%s) "+
+			"and extension (%s) of the manual page.",
+			section, ext)
 	}
 
 	if gz != "" {

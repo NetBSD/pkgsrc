@@ -1265,12 +1265,12 @@ func (s *Suite) Test_Package_loadPlistDirs__empty(c *check.C) {
 	pkg.load()
 
 	var dirs []RelPath
-	for dir := range pkg.Plist.Dirs {
+	for dir := range pkg.Plist.UnconditionalDirs {
 		dirs = append(dirs, dir)
 	}
 	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []RelPath{"bin"})
+	t.CheckDeepEquals(dirs, []RelPath{"bin"}) // see t.SetUpPackage
 }
 
 func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
@@ -1281,6 +1281,8 @@ func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
 		PlistCvsID,
 		"@exec echo hello",
 		"${PLIST.condition}dir/subdir/file",
+		"${PLIST.condition}mixed/conditional-file",
+		"mixed/unconditional-file",
 		"@unexec echo bye")
 	t.FinishSetUp()
 
@@ -1288,12 +1290,16 @@ func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
 	pkg.load()
 
 	var dirs []RelPath
-	for dir := range pkg.Plist.Dirs {
+	for dir := range pkg.Plist.UnconditionalDirs {
 		dirs = append(dirs, dir)
 	}
 	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []RelPath{"bin", "dir", "dir/subdir"})
+	t.CheckDeepEquals(dirs, []RelPath{
+		"bin", // from t.SetUpPackage
+		// dir is not listed because it is conditional.
+		// dir/subdir is not listed because it is conditional.
+		"mixed"})
 }
 
 func (s *Suite) Test_Package_check__files_Makefile(c *check.C) {
