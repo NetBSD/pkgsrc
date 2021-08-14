@@ -391,7 +391,7 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= second\" instead of \"${INSTALL} -d\".")
 
 	pkg = NewPackage(t.File("category/pkgbase"))
-	pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+	pkg.Plist.UnconditionalDirs["share/pkgbase"] = &PlistLine{
 		t.NewLine("PLIST", 123, "share/pkgbase/file"),
 		nil,
 		"share/pkgbase/file"}
@@ -978,7 +978,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 		"WARN: filename.mk:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	pkg = NewPackage(t.File("category/pkgbase"))
-	pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+	pkg.Plist.UnconditionalDirs["share/pkgbase"] = &PlistLine{
 		t.NewLine("PLIST", 123, "share/pkgbase/file"),
 		nil,
 		"share/pkgbase/file"}
