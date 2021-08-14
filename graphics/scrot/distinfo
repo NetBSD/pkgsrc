@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/02/10 11:23:13 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/08/14 08:12:46 nia Exp $
 
-SHA1 (scrot-1.5.tar.gz) = fd6294bcb775611bb66b6a79b8d323c2c533c511
-RMD160 (scrot-1.5.tar.gz) = 230638bbe9b0670ccb6b134b61a53d2e1bedb2df
-SHA512 (scrot-1.5.tar.gz) = 1b0c6875ba1a4ed764653e30795389cbfd7cfd32d8ca1791c166efb0da63f2fb85c20840d03a8e4995facce7612bfbd3923fee6e1eb871821f590371ed51b6b4
-Size (scrot-1.5.tar.gz) = 178534 bytes
+SHA1 (scrot-1.6.tar.gz) = fd148523bcf64fef00c6e01543f23fb5d19d7195
+RMD160 (scrot-1.6.tar.gz) = 4c03d3eccad07a7c4522bb6b942a92cd96e74503
+SHA512 (scrot-1.6.tar.gz) = 5ecdefe2a8dce5150ef7d7af0cc8cc8a8396dccff2a321c02d633629a60ac6fc90286268b74afad7987ca16ccce30d0b1f87e7b7217738af52d1a6003c316606
+Size (scrot-1.6.tar.gz) = 182032 bytes
