@@ -1,4 +1,4 @@
-$NetBSD: patch-src_smtpd_smtpd.c,v 1.1 2021/07/26 15:38:10 taca Exp $
+$NetBSD: patch-src_smtpd_smtpd.c,v 1.2 2021/08/14 08:58:20 taca Exp $
 
 Add blocklist(3) support.
 
@@ -13,12 +13,14 @@ Add blocklist(3) support.
   /*
    * Tunable parameters. Make sure that there is some bound on the length of
    * an SMTP command, so that the mail system stays in control even when a
-@@ -5804,6 +5806,8 @@ static void smtpd_proto(SMTPD_STATE *sta
+@@ -5804,6 +5806,10 @@ static void smtpd_proto(SMTPD_STATE *sta
  		   || strcmp(state->reason, REASON_LOST_CONNECTION)) {
  	    msg_info("%s after %s from %s",
  		     state->reason, state->where, state->namaddr);
++#if defined(HAVE_BLOCKLIST) || defined(HAVE_BLACKLIST)
 +	    if (strcmp(state->where, SMTPD_CMD_AUTH) == 0)
 +		pfilter_notify(1, vstream_fileno(state->client));
++#endif
  	}
      }
  
