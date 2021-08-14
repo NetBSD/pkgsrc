@@ -116,7 +116,7 @@ func (mklines *MkLines) Check() {
 	// are collected to make the order of the definitions irrelevant.
 	mklines.collectRationale()
 	mklines.collectUsedVariables()
-	mklines.collectVariables()
+	mklines.collectVariables(false, true)
 	mklines.collectPlistVars()
 	if mklines.pkg != nil {
 		mklines.pkg.collectConditionalIncludes(mklines)
@@ -249,12 +249,14 @@ func (mklines *MkLines) collectDocumentedVariables() {
 	finish()
 }
 
-func (mklines *MkLines) collectVariables() {
-	mklines.ForEach(mklines.collectVariable)
+func (mklines *MkLines) collectVariables(infrastructure bool, addToUseTools bool) {
+	mklines.ForEach(func(mkline *MkLine) {
+		mklines.collectVariable(mkline, infrastructure, addToUseTools)
+	})
 }
 
-func (mklines *MkLines) collectVariable(mkline *MkLine) {
-	mklines.Tools.ParseToolLine(mklines, mkline, false, true)
+func (mklines *MkLines) collectVariable(mkline *MkLine, infrastructure bool, addToUseTools bool) {
+	mklines.Tools.ParseToolLine(mklines, mkline, infrastructure, addToUseTools)
 
 	if !mkline.IsVarassignMaybeCommented() {
 		return

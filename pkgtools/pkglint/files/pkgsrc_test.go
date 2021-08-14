@@ -934,7 +934,7 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars__badly_named_directory(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_Pkgsrc_loadUntypedVars__loop_variable(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadUntypedVars__local_varnames(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/check/check-files.mk",
@@ -967,6 +967,41 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars__loop_variable(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/mk/check/check-files.mk:3: " +
 			"Invalid part \"/\" after variable name \"\".")
+}
+
+// An optional tool is not available by default.
+// A package can choose to include a tool by adding it to USE_TOOLS.
+func (s *Suite) Test_Pkgsrc_loadUntypedVars__tools(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"do-configure:",
+		"\tlinux-tool",
+		"\toptional-tool")
+	t.CreateFileLines("mk/tools/default.mk",
+		MkCvsID,
+		"",
+		// This tool is available by default.
+		".if ${OPSYS} == Linux",
+		"TOOLS_CREATE+=\tlinux-tool",
+		".endif",
+		"",
+		// This tool is only available if it is listed in USE_TOOLS.
+		".if ${_USE_TOOLS:Moptional-tool}",
+		"TOOLS_CREATE+=\toptional-tool",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	// FIXME: The command names must be recognized.
+	// TODO: linux-tool must be available to the package.
+	// TODO: optional-tool must not be available to the package.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:21: "+
+			"Unknown shell command \"linux-tool\".",
+		"WARN: ~/category/package/Makefile:22: "+
+			"Unknown shell command \"optional-tool\".")
 }
 
 func (s *Suite) Test_Pkgsrc_Latest__multiple_candidates(c *check.C) {

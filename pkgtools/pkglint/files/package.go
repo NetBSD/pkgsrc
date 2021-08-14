@@ -710,8 +710,8 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	//  though.
 	// pkg.collectConditionalIncludes(allLines)
 
-	allLines.collectVariables()    // To get the tool definitions
-	mklines.Tools = allLines.Tools // TODO: also copy the other collected data
+	allLines.collectVariables(false, true) // To get the tool definitions
+	mklines.Tools = allLines.Tools         // TODO: also copy the other collected data
 
 	// TODO: Checking only mklines instead of allLines ignores the
 	//  .include lines. For example, including "options.mk" does not
@@ -1194,7 +1194,7 @@ func (pkg *Package) checkMeson(mklines *MkLines) {
 
 func (pkg *Package) checkMesonGnuMake(mklines *MkLines) {
 	gmake := mklines.Tools.ByName("gmake")
-	if G.Experimental && gmake != nil && gmake.UsableAtRunTime() {
+	if gmake != nil && gmake.UsableAtRunTime() {
 		mkline := NewLineWhole(pkg.File("."))
 		mkline.Warnf("Meson packages usually don't need GNU make.")
 		mkline.Explain(
