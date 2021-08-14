@@ -39,7 +39,6 @@ func (s *Suite) Test_CheckLinesPlist(c *check.C) {
 		"WARN: PLIST:9: \"lib/libc.la\" should be sorted before \"lib/libc.so.6\".",
 		"WARN: PLIST:9: Packages that install libtool libraries should define USE_LIBTOOL.",
 		"WARN: PLIST:10: Preformatted manual page without unformatted one.",
-		"WARN: PLIST:10: Preformatted manual pages should end in \".0\".",
 		"WARN: PLIST:11: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.",
 		"WARN: PLIST:12: Please remove this line. It is no longer necessary.",
 		"ERROR: PLIST:14: The package Makefile must include \"../../graphics/gnome-icon-theme/buildlink3.mk\".",
