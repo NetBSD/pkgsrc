@@ -549,6 +549,10 @@ func (cv *VartypeCheck) FetchURL() {
 		if !hasPrefix(trimURL, trimSiteURL) {
 			continue
 		}
+		if siteName == "MASTER_SITE_GITHUB" &&
+			hasPrefix(cv.Varname, "SITES.") {
+			continue
+		}
 
 		subdir := trimURL[len(trimSiteURL):]
 		if hasPrefix(trimURL, "github.com/") {

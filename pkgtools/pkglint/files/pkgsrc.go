@@ -363,30 +363,32 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 		author = f[n-2]
 	}
 
-	parseAuthorAndDate := func(author *string, date *string) bool {
-		alex := textproc.NewLexer(*author)
+	parseAuthorAndDate := func(authorPtr *string, datePtr *string) bool {
+		alex := textproc.NewLexer(*authorPtr)
 		if !alex.SkipByte('[') {
 			return false
 		}
-		*author = alex.NextBytesSet(textproc.AlnumU)
+		*authorPtr = alex.NextBytesSet(textproc.AlnumU)
 		if !alex.EOF() {
 			return false
 		}
-		dlex := textproc.NewLexer(*date)
-		if len(*date) == 11 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.SkipByte('-') &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.SkipByte('-') &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.NextByteSet(textproc.Digit) != -1 &&
-			dlex.SkipByte(']') &&
-			dlex.EOF() {
-			*date = (*date)[:10]
+
+		isDigit := func(b byte) bool { return '0' <= b && b <= '9' }
+
+		date := *datePtr
+		if len(date) == 11 &&
+			isDigit(date[0]) &&
+			isDigit(date[1]) &&
+			isDigit(date[2]) &&
+			isDigit(date[3]) &&
+			date[4] == '-' &&
+			isDigit(date[5]) &&
+			isDigit(date[6]) &&
+			date[7] == '-' &&
+			isDigit(date[8]) &&
+			isDigit(date[9]) &&
+			date[10] == ']' {
+			*datePtr = date[:10]
 			return true
 		}
 
