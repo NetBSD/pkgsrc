@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2021/02/10 11:23:13 nia Exp $
+# $NetBSD: Makefile,v 1.42 2021/08/14 08:12:46 nia Exp $
 
-DISTNAME=	scrot-1.5
+DISTNAME=	scrot-1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=resurrecting-open-source-projects/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,9 +11,11 @@ COMMENT=	Command line screen capture util like "import", but using imlib2
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
-.include "../../devel/giblib/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
