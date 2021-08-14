@@ -537,7 +537,9 @@ func (pkg *Package) loadPlistDirs(plistFilename CurrPath) {
 		pkg.Plist.Files[filename] = pline
 	}
 	for dirname, pline := range ck.allDirs {
-		pkg.Plist.Dirs[dirname] = pline
+		if len(pline.conditions) == 0 {
+			pkg.Plist.UnconditionalDirs[dirname] = pline
+		}
 	}
 	for _, plistLine := range plistLines {
 		if plistLine.HasPath() {
@@ -1787,9 +1789,9 @@ func (pkg *Package) FixAddInclude(includedFile PackagePath) {
 // 2. Ensure that the entries mentioned in the ALTERNATIVES file
 // also appear in the PLIST files.
 type PlistContent struct {
-	Dirs       map[RelPath]*PlistLine
-	Files      map[RelPath]*PlistLine
-	Conditions map[string]bool // each ${PLIST.id} sets ["id"] = true.
+	UnconditionalDirs map[RelPath]*PlistLine
+	Files             map[RelPath]*PlistLine
+	Conditions        map[string]bool // each ${PLIST.id} sets ["id"] = true.
 }
 
 func NewPlistContent() PlistContent {
