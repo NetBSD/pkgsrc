@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4217 2021/08/14 15:11:41 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.4218 2021/08/14 20:59:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6661,3 +6661,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/chirp to 20210814 [gdt 2021-08-14]
 	Added graphics/p5-Image-Sane version 5 [bsiegert 2021-08-14]
 	Updated pkgtools/pkglint to 21.2.6 [rillig 2021-08-14]
+	Updated devel/git-cliff to 0.1.2 [pin 2021-08-14]
