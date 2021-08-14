@@ -607,7 +607,7 @@ func (ck *MkAssignChecker) checkMiscRedundantInstallationDirs() {
 		}
 
 		rel := NewRelPathString(dir)
-		if pkg.Plist.Dirs[rel] != nil {
+		if pkg.Plist.UnconditionalDirs[rel] != nil {
 			mkline.Notef("The directory %q is redundant in %s.", rel, varname)
 			mkline.Explain(
 				"This package defines AUTO_MKDIR, and the directory is contained in the PLIST.",
