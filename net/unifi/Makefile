@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/08/14 14:30:45 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2021/08/14 14:33:09 gdt Exp $
 
 # Update to 6.2 (wip) is on hold pending reports that the greater
 # Unifi world thinks it is stable enough. -- gdt, 2021-06-01
@@ -91,7 +91,7 @@ post-extract:
 .  if (${MACHINE_ARCH} != "aarch64")
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/aarch64
 .  endif
-.  if (${MACHINE_ARCH} != "armv7")
+.  if (${MACHINE_ARCH} != "earmv7")
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/armv7
 .  endif
 .  if (${MACHINE_ARCH} != "x86_64")
