@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4208 2021/08/14 07:40:12 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4209 2021/08/14 07:54:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6652,3 +6652,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/zathura-pdf-mupdf to 0.3.7 [nia 2021-08-14]
 	Updated print/zathura-ps to 0.2.7 [nia 2021-08-14]
 	Updated graphics/zathura-cb to 0.1.9 [nia 2021-08-14]
+	Updated chat/srain to 1.2.4 [nia 2021-08-14]
