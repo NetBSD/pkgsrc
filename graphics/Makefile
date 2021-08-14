@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.948 2021/07/26 19:19:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.949 2021/08/14 14:58:27 bsiegert Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -425,6 +425,7 @@ SUBDIR+=	p5-Image-ExifTool
 SUBDIR+=	p5-Image-Imlib2
 SUBDIR+=	p5-Image-Info
 SUBDIR+=	p5-Image-JpegTran-AutoRotate
+SUBDIR+=	p5-Image-Sane
 SUBDIR+=	p5-Image-Size
 SUBDIR+=	p5-PerlMagick
 SUBDIR+=	p5-RRDTool-OO
