@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2021/08/09 07:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2021/08/14 00:32:17 tnn Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.69.0
@@ -10,8 +10,7 @@ HOMEPAGE=		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
 COMMENT=		Libraries to support development of security-enabled applications
 LICENSE=		mpl-2.0
 
-CHECK_PORTABILITY_SKIP+=	nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=	nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	nss/tests/*/*.sh
 CHECK_PORTABILITY_SKIP+=	js/src/configure
 CHECK_PORTABILITY_SKIP+=	configure
 
