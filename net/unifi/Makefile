@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/08/13 17:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/08/14 14:30:45 gdt Exp $
 
 # Update to 6.2 (wip) is on hold pending reports that the greater
 # Unifi world thinks it is stable enough. -- gdt, 2021-06-01
@@ -31,6 +31,8 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 # because it only ship linux binaries. The rcd script takes care of loading the
 # correct library.
 SNAPPY_JAVA=		snappy-java-1.0.5.4
+# github.mk only works for the main MASTER_SITES definition and does
+# not support SITES
 SITES.${SNAPPY_JAVA}.tar.gz=	-https://github.com/xerial/snappy-java/archive/${SNAPPY_JAVA:S/snappy-java-//}.tar.gz
 DISTFILES+=		${SNAPPY_JAVA}.tar.gz
 EXTRACT_ONLY+=		${SNAPPY_JAVA}.tar.gz
