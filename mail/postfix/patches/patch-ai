@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.42 2021/07/26 15:38:10 taca Exp $
+$NetBSD: patch-ai,v 1.43 2021/08/14 08:58:20 taca Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
@@ -169,19 +169,23 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
      dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
-@@ -746,6 +675,17 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -746,6 +675,21 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  esac
  
  #
 +# Support for blocklist(3) or blacklist(3).
 +#
-+if test -f /usr/include/blocklist.h; then
-+   CCARGS="$CCARGS -DHAVE_BLOCKLIST"
-+   SYSLIBS="$SYSLIBS -lblocklist"
-+elif test -f /usr/include/blacklist.h; then
-+   CCARGS="$CCARGS -DHAVE_BLACKLIST"
-+   SYSLIBS="$SYSLIBS -lblacklist"
-+fi
++case "$CCARGS" in
++    *-DUSE_BLOCKLIST*)
++	if test -f /usr/include/blocklist.h; then
++	    CCARGS="$CCARGS -DHAVE_BLOCKLIST"
++	    SYSLIBS="$SYSLIBS -lblocklist"
++	elif test -f /usr/include/blacklist.h; then
++	    CCARGS="$CCARGS -DHAVE_BLACKLIST"
++	    SYSLIBS="$SYSLIBS -lblacklist"
++	fi
++	;;
++esac
 +
 +#
  # sigsetjmp()/siglongjmp() can be "better" than setjmp()/longjmp()
