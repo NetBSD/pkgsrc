@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4218 2021/08/14 20:59:40 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4219 2021/08/15 03:29:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6662,3 +6662,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/p5-Image-Sane version 5 [bsiegert 2021-08-14]
 	Updated pkgtools/pkglint to 21.2.6 [rillig 2021-08-14]
 	Updated devel/git-cliff to 0.1.2 [pin 2021-08-14]
+	Updated cad/klayout to 0.27.3 [mef 2021-08-15]
