@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2021/07/29 19:30:35 adam Exp $
+# $NetBSD: Makefile,v 1.243 2021/08/15 09:28:57 rillig Exp $
 
 DISTNAME=	pango-1.48.7
 CATEGORIES=	devel fonts
@@ -21,6 +21,7 @@ SUBST_STAGE.wrksrc=	pre-configure
 SUBST_FILES.wrksrc=	output/utils/pango-view.sh
 SUBST_VARS.wrksrc=	WRKSRC
 
+MESON_REQD+=		0.55.3
 MESON_ARGS+=		-Dcairo=enabled
 MESON_ARGS+=		-Dfontconfig=enabled
 MESON_ARGS+=		-Dintrospection=enabled
