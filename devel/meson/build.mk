@@ -1,6 +1,9 @@
-# $NetBSD: build.mk,v 1.11 2021/04/29 20:15:59 wiz Exp $
+# $NetBSD: build.mk,v 1.12 2021/08/15 09:28:57 rillig Exp $
 
-TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
+MESON_REQD?=	0
+.for version in ${MESON_REQD}
+TOOL_DEPENDS+=	meson>=${version}:../../devel/meson
+.endfor
 
 CONFIGURE_DIRS?=	.
 BUILD_DIRS?=		${CONFIGURE_DIRS}
