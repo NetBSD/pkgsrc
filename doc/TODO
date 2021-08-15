@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20939 2021/08/14 10:02:17 wiz Exp $
+$NetBSD: TODO,v 1.20940 2021/08/15 05:44:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -742,6 +742,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elscreen-1.5.3
 	o emerillon-0.1.90
 	o emulationstation-2.9.4
+	o enchant2-2.3.1
 	o enlightenment-0.23.1
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
@@ -931,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.5.6
 	o google-glog-2.2.2
 	o goreman-0.3.7
 	o gossip-0.31
@@ -947,6 +949,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grep-3.6
 	o gromacs-2021.1
 	o groonga-11.0.1
+	o grpc-1.39.1
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
@@ -989,6 +992,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o haxm-7.6.6
 	o hdf-4.2.14
 	o heimdal-7.7.0
+	o help2man-1.48.4
 	o herisvm-0.8.2
 	o hesiod-3.2.1
 	o heyu-2.9.0
@@ -1871,6 +1875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qdirstat-1.7.1
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qqc2-desktop-style-5.81.0
+	o qr-code-generator-1.7.0
 	o qt6-6.0
 	o qtcreator-4.14
 	o quazip-1.1
@@ -1979,7 +1984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sparsehash-2.0.4
 	o spatialindex-1.9.3
 	o spcaview-20060501
-	o spdlog-1.9.1
+	o spdlog-1.9.2
 	o spin-649
 	o spiped-1.6.1b
 	o spl-1.0pre6
