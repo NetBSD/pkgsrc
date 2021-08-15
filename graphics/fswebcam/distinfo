@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/08/15 06:57:48 nia Exp $
+
+SHA1 (fswebcam-20200725.tar.gz) = f0f15bc3fe266f02e9a9f984779ac322a9d20697
+RMD160 (fswebcam-20200725.tar.gz) = ef7cf6b3c103614a8d94dbb42e21f7a29d9104f1
+SHA512 (fswebcam-20200725.tar.gz) = 8fd7e575de50564bf6b124d2456be9ace3d2662425d8099a3b0e596955b192fd4ff13d40dd3963fb1907a66cf91b209094472466afe3766677ce6ef7af1ccc93
+Size (fswebcam-20200725.tar.gz) = 122110 bytes
+SHA1 (patch-Makefile.in) = 9c7f353d96666dc7c2746c63e0db7e34056d8b4d
+SHA1 (patch-configure) = 0e8435c0340c466c4388c8ef4ca9d05bf19c11b6
