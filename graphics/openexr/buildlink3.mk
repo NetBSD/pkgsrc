@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2021/07/08 21:13:06 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2021/08/15 14:15:03 wiz Exp $
 
 BUILDLINK_TREE+=	openexr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openexr
 OPENEXR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openexr+=	openexr>=3.0.5
-BUILDLINK_ABI_DEPENDS.openexr+=	openexr>=3.0.5
+BUILDLINK_ABI_DEPENDS.openexr+=	openexr>=3.1
 BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
 
 PTHREAD_OPTS+=	require
