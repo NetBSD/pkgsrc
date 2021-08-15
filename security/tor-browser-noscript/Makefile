@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2021/06/07 14:03:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/08/15 13:20:11 wiz Exp $
+#
+# Changelog:
+# https://noscript.net/changelog
 
-VERSION=	11.2.8
+VERSION=	11.2.11
 DISTNAME=	noscript-${VERSION}
 PKGNAME=	tor-browser-${DISTNAME}
 CATEGORIES=	security www
@@ -10,7 +13,7 @@ EXTRACT_SUFX=	.xpi
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://noscript.net/
 COMMENT=	Noscript plugin for tor-browser
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS+=	lib/tor-browser/distribution/extensions
 
