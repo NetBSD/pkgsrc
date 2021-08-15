@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/15 06:57:48 nia Exp $
+bin/fswebcam
+man/man1/fswebcam.1
