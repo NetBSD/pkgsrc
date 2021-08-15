@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:46:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/08/15 06:10:45 dholland Exp $
 
 SHA1 (ocurl-0.5.3.tgz) = d074946ad61663aaed8a95bcdaee5bb6849fa163
 RMD160 (ocurl-0.5.3.tgz) = 588c88adcf6d304f3a1acc8d8fef53c16d4cadcf
 SHA512 (ocurl-0.5.3.tgz) = 29ec901bd47ab0a26123fabdd4a447a30f8170c462aed7079c634bc6993b6e9140eb2a4d42d3d0b2aa65666dbe8a4ff7082ed08daf2e1605da0f552cb5802802
 Size (ocurl-0.5.3.tgz) = 87849 bytes
 SHA1 (patch-Makefile.in) = 2dcf2d6f8ccb12b15dea8cf27cf31e13bbfed8be
+SHA1 (patch-examples_oput.ml) = 0c8c02813703bece478188ab4bea599f45f106cf
