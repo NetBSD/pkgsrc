@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4220 2021/08/15 06:58:05 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4221 2021/08/15 13:20:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6664,3 +6664,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/git-cliff to 0.1.2 [pin 2021-08-14]
 	Updated cad/klayout to 0.27.3 [mef 2021-08-15]
 	Added graphics/fswebcam version 20200725 [nia 2021-08-15]
+	Updated security/tor-browser-noscript to 11.2.11 [wiz 2021-08-15]
