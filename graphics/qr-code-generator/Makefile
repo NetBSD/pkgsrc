@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/22 18:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/15 13:36:40 wiz Exp $
 
-DISTNAME=	QR-Code-generator-1.6.0
+DISTNAME=	QR-Code-generator-1.7.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nayuki/}
@@ -29,11 +29,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/c/*.h ${DESTDIR}${PREFIX}/include/qrcodegen
 	${INSTALL_PROGRAM} ${WRKSRC}/c/qrcodegen-demo ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/c/qrcodegen-test ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/c/qrcodegen-worker ${DESTDIR}${PREFIX}/bin
 
-	${INSTALL_LIB} ${WRKSRC}/cpp/libqrcodegen.a ${DESTDIR}${PREFIX}/lib/libqrcodegencpp.a
+	${INSTALL_LIB} ${WRKSRC}/cpp/libqrcodegencpp.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/cpp/QrCodeGeneratorDemo ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/cpp/QrCodeGeneratorWorker ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/cpp/*.hpp ${DESTDIR}${PREFIX}/include/qrcodegen
 
 .include "../../mk/bsd.pkg.mk"
