@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2021/07/08 21:30:44 markd Exp $
+# $NetBSD: Makefile,v 1.66 2021/08/15 14:24:00 wiz Exp $
 
 DISTNAME=	enblend-enfuse-4.2
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
