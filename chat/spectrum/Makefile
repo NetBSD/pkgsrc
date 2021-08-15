@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2021/06/23 20:33:07 nia Exp $
+# $NetBSD: Makefile,v 1.101 2021/08/15 14:23:58 wiz Exp $
 
 DISTNAME=		spectrum-1.4.8
-PKGREVISION=		70
+PKGREVISION=		71
 CATEGORIES=		chat
 MASTER_SITES=		https://cloud.github.com/downloads/hanzz/libtransport/
 
