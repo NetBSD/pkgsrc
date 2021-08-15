@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/08/11 10:09:54 kardel Exp $
+$NetBSD: distinfo,v 1.4 2021/08/15 14:54:31 kardel Exp $
 
 SHA1 (frr-8.0.tar.gz) = dc3fc27d812394817ddf8946e58b0c5bbd61a146
 RMD160 (frr-8.0.tar.gz) = a6f0e77baf7d4c66ff9956c311b0b52cdb7b40fd
@@ -6,4 +6,4 @@ SHA512 (frr-8.0.tar.gz) = fdf1e68c16e266a74221fb194851ef47c888e90324de2e42a4ca68
 Size (frr-8.0.tar.gz) = 8195258 bytes
 SHA1 (patch-lib_elf__py.c) = a766923c906f1b0f9fa80a9e16e5275bae165187
 SHA1 (patch-pkgsrc_zebra.sh.in) = d458e74a1f3319f6e075d3d3a81414bc7d7022f2
-SHA1 (patch-zebra_kernel__socket.c) = 8238f389efd4d3fbfefa29b8292132aafc56cdac
+SHA1 (patch-zebra_kernel__socket.c) = 845c3132d21aefcff5c41fa9aa9a31f2bf2ac5af
