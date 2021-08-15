@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/03/22 18:33:29 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/08/15 13:36:40 wiz Exp $
 
-SHA1 (QR-Code-generator-1.6.0.tar.gz) = 1af4cdb3228fa47bc0a36747b05e0ac554f0ae7c
-RMD160 (QR-Code-generator-1.6.0.tar.gz) = b4b48603ced5734a388b3c91d3a288a5c499f8de
-SHA512 (QR-Code-generator-1.6.0.tar.gz) = 7cf62d29ba7706eab7982bea9f022e5739b38a8c37f6b01e6c8f63458db1b05ad56ba17cd4382639eb60603ce4dd3aff1ee94f993b430d312cdee9b9204af16e
-Size (QR-Code-generator-1.6.0.tar.gz) = 135432 bytes
-SHA1 (patch-c_Makefile) = 926022217e9bf1021416debeba60092cbc3bc3aa
-SHA1 (patch-cpp_Makefile) = 8822a8c6004a30d16b6ae8965b81f952c2d8ad96
+SHA1 (QR-Code-generator-1.7.0.tar.gz) = 006ea1f7779228932dab1a050d76dccf6df822dc
+RMD160 (QR-Code-generator-1.7.0.tar.gz) = c9279af5cc30b5fe9bdad4e48e5d4398d103cf3f
+SHA512 (QR-Code-generator-1.7.0.tar.gz) = 34efa40c382b6e7d060a764936c4e2faa4fbbecd5ea4730492a2cb1960656ed67242d84e20a42400ffdee063ed6bcf3b860fef309d09ee71303f44abaafe9328
+Size (QR-Code-generator-1.7.0.tar.gz) = 130540 bytes
