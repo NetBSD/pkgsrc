@@ -1,0 +1,35 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/08/15 06:57:49 nia Exp $
+
+Do not compress man pages.
+
+--- Makefile.in.orig	2018-06-03 12:33:23.000000000 +0000
++++ Makefile.in
+@@ -17,13 +17,13 @@ OBJS  = fswebcam.o log.o effects.o parse
+ OBJS += dec_rgb.o dec_yuv.o dec_grey.o dec_bayer.o dec_jpeg.o dec_png.o
+ OBJS += dec_s561.o
+ 
+-all: fswebcam fswebcam.1.gz
++all: fswebcam fswebcam.1
+ 
+ install: all
+ 	mkdir -p ${DESTDIR}${bindir}
+ 	mkdir -p ${DESTDIR}${mandir}/man1
+ 	install -m 755 fswebcam ${DESTDIR}${bindir}
+-	install -m 644 fswebcam.1.gz ${DESTDIR}${mandir}/man1
++	install -m 644 fswebcam.1 ${DESTDIR}${mandir}/man1
+ 
+ fswebcam: $(OBJS)
+ 	$(CC) -o fswebcam $(OBJS) $(LDFLAGS)
+@@ -31,11 +31,8 @@ fswebcam: $(OBJS)
+ .c.o:
+ 	${CC} ${CFLAGS} -c $< -o $@
+ 
+-fswebcam.1.gz: fswebcam.1
+-	gzip -c --best fswebcam.1 > fswebcam.1.gz
+-
+ clean:
+-	rm -f core* *.o fswebcam fswebcam.1.gz
++	rm -f core* *.o fswebcam fswebcam.1
+ 
+ distclean: clean
+ 	rm -rf config.h *.cache config.log config.status Makefile *.jp*g *.png *~
