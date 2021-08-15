@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/15 06:57:48 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/15 07:09:40 nia Exp $
 
 DISTNAME=	fswebcam-20200725
 CATEGORIES=	graphics
@@ -10,8 +10,6 @@ COMMENT=	Simple app to capture images from a webcam
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-
-MANCOMPRESSED=	yes
 
 CONFIGURE_ARGS+=	--disable-v4l1
 
