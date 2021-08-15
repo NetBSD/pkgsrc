@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/07/03 10:05:54 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/15 14:24:01 wiz Exp $
 
 DISTNAME=	lsix-1.7.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hackerb9/}
 
