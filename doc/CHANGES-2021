@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4229 2021/08/15 14:35:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4230 2021/08/15 15:22:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6673,3 +6673,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/imath to 3.1.2 [wiz 2021-08-15]
 	Updated graphics/openexr to 3.1.1 [wiz 2021-08-15]
 	Updated math/cgal to 4.14nb21 [wiz 2021-08-15]
+	Updated audio/termusic to 0.2.12 [pin 2021-08-15]
