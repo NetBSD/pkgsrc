@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20944 2021/08/15 13:30:37 wiz Exp $
+$NetBSD: TODO,v 1.20945 2021/08/15 13:36:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1872,7 +1872,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qdirstat-1.7.1
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qqc2-desktop-style-5.81.0
-	o qr-code-generator-1.7.0
 	o qt6-6.0
 	o qtcreator-4.14
 	o quazip-1.1
