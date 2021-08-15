@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.64 2021/07/30 12:26:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2021/08/15 14:35:08 wiz Exp $
 
 DISTNAME=	CGAL-4.14
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
 GITHUB_RELEASE=	releases/${DISTNAME}
-
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reinoud@NetBSD.org
@@ -20,6 +19,12 @@ CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
 REPLACE_SH+=	scripts/cgal_create_cmake_script
+
+SUBST_CLASSES+=			cmakeworkdir
+SUBST_STAGE.cmakeworkdir=	post-install
+SUBST_MESSAGE.cmakeworkdir=	Removing $$WRKDIR from cmake files
+SUBST_FILES.cmakeworkdir=	${DESTDIR}${PREFIX}/lib/cmake/CGAL/*.cmake
+SUBST_SED.cmakeworkdir=		-e 's%${WRKDIR}/.buildlink%${PREFIX}%g'
 
 pre-install:
 	find ${WRKSRC} -name \*.orig -exec rm {} \;
