@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/08/11 10:09:54 kardel Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/15 14:54:31 kardel Exp $
 
 GITHUB_PROJECT=	frr
 VERSION=	8.0
@@ -93,6 +93,12 @@ CONFIGURE_ARGS+=	--with-pkg-extra-version=/${DISTNAME}
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap.sh
+
+#
+# remove dynamically acquired .js files
+#
+post-build:
+	cd ${WRKSRC} && rm -f doc/user/_build/html/_static/jquery-*.js doc/user/_build/html/_static/underscore-*.js
 
 .include "../../devel/libyang2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
