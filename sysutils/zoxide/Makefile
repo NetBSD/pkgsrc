@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/08/06 09:50:27 pin Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/15 15:18:31 pin Exp $
 
 DISTNAME=	zoxide-0.7.3
+# Do not update this package. Newer versions require Rust>=1.53.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ajeetdsouza/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
