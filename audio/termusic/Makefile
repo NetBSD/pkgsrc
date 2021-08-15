@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/08/05 08:41:42 pin Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/15 15:22:00 pin Exp $
 
-DISTNAME=	termusic-0.2.11
+DISTNAME=	termusic-0.2.12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,15 +18,18 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mpv}/lib
-RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.mpv}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/termusic ${DESTDIR}${PREFIX}/bin
 
-DEPENDS+=	youtube-dl-[0-9]*:../../net/youtube-dl
+DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../multimedia/mpv/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-ugly/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
