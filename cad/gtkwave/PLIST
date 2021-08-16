@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2019/01/05 14:44:46 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/08/16 11:58:06 mef Exp $
 bin/evcd2vcd
 bin/fst2vcd
 bin/fstminer
-bin/ghwdump
 bin/gtkwave
 bin/lxt2miner
 bin/lxt2vcd
@@ -19,7 +18,6 @@ bin/xml2stems
 man/man1/evcd2vcd.1
 man/man1/fst2vcd.1
 man/man1/fstminer.1
-man/man1/ghwdump.1
 man/man1/gtkwave.1
 man/man1/lxt2miner.1
 man/man1/lxt2vcd.1
