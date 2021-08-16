@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4236 2021/08/16 13:44:07 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4237 2021/08/16 19:19:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6682,3 +6682,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/gtkwave to 3.3.110 [mef 2021-08-16]
 	Updated ham/xlog to 2.0.23 [mef 2021-08-16]
 	Updated ham/xnec2c to 4.1.5 [mef 2021-08-16]
+	Updated sysutils/py-Glances to 3.2.3 [fox 2021-08-16]
