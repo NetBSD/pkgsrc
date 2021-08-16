@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2018/07/13 17:28:46 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/08/16 01:29:37 dholland Exp $
 
 SHA1 (mirrormagic-3.0.0.tar.gz) = 44f401ae883edb7cdc981cdde8807f18ec342bdc
 RMD160 (mirrormagic-3.0.0.tar.gz) = 69db03f025d57bb921d4b0143db06f37bb6371d7
 SHA512 (mirrormagic-3.0.0.tar.gz) = 4cec053bc78a10090a5f9cf678429fd3c927637c3299652de9914b4d8a19518c2e5e10d72bba56aff6a545bbf30e95874576be5b08978060cd59cdba1903de2a
 Size (mirrormagic-3.0.0.tar.gz) = 4052452 bytes
-SHA1 (patch-src_Makefile) = 702af16aeb41f10d3ea995ad8c5c2a43f3ce9a0e
+SHA1 (patch-src_Makefile) = 765b7a450384e420ca0e8726bef8e276183111d4
 SHA1 (patch-src_libgame_joystick.c) = 152bfcca101d5b66838d68532fbd76599297a6ef
 SHA1 (patch-src_libgame_joystick.h) = a6bae0443a6285b9e4179119f1101ba7bf8d6727
 SHA1 (patch-src_libgame_system.c) = 5e45cba46865f43c7f7d9de3a1f5b44aebb185d0
