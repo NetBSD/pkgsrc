@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4232 2021/08/16 11:04:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4233 2021/08/16 11:29:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6675,4 +6675,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/cgal to 4.14nb21 [wiz 2021-08-15]
 	Updated audio/termusic to 0.2.12 [pin 2021-08-15]
 	Updated textproc/grep to 3.7 [wiz 2021-08-15]
+	Updated devel/MoarVM to 2021.07 [mef 2021-08-16]
 	Updated audio/spotify-qt to 3.7 [pin 2021-08-16]
+	Updated lang/nqp to 2021.07 [mef 2021-08-16]
+	Updated lang/rakudo to 2021.07 [mef 2021-08-16]
