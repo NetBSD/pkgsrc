@@ -1,16 +1,17 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2018/02/02 10:37:44 jperkin Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2021/08/16 13:43:49 mef Exp $
 
 Leave pkgsrc to handle security features.
 
---- src/Makefile.in.orig	2016-11-10 04:56:58.000000000 +0000
-+++ src/Makefile.in
-@@ -296,8 +296,7 @@ top_build_prefix = @top_build_prefix@
+--- src/Makefile.in.orig	2021-06-02 15:34:20.000000000 +0900
++++ src/Makefile.in	2021-08-16 22:31:52.404087618 +0900
+@@ -315,9 +315,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- AM_LDFLAGS = -Wl,--as-needed
--AM_CFLAGS = --pedantic -Wall -std=gnu99 -O2 -D_FORTIFY_SOURCE=2 \
--		 -fstack-protector -Wformat -Werror=format-security -fpie
-+AM_CFLAGS = 
+ AM_LDFLAGS = -Wl,--export-dynamic -Wl,--as-needed
+-AM_CFLAGS = --pedantic -Wall -std=gnu11 -O2 -D_FORTIFY_SOURCE=2 \
+-            -fstack-protector-strong -Wformat -Werror=format-security -fpie \
+-            -DGTK_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED \
++AM_CFLAGS = -DGTK_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED \
+             -DGTK_DISABLE_DEPRECATED -DGSEAL_ENABLE \
+             -DGDK_PIXBUF_DISABLE_DEPRECATED -DG_DISABLE_DEPRECATED
  
- AM_CPPFLAGS = \
- 	-DPROGRAMNAME_LOCALEDIR=\""$(PROGRAMNAME_LOCALEDIR)"\" \

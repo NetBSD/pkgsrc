@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2016/07/14 11:59:06 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/16 13:43:49 mef Exp $
 bin/xnec2c
+man/man1/xnec2c.1
+share/applications/xnec2c.desktop
 share/doc/xnec2c/NEC2-bug.txt
 share/doc/xnec2c/NearFieldCalcs.txt
-share/doc/xnec2c/images/charges.png
 share/doc/xnec2c/images/currents.png
 share/doc/xnec2c/images/excitation.png
 share/doc/xnec2c/images/freq_plots.png
@@ -12,3 +13,8 @@ share/doc/xnec2c/images/wire.png
 share/doc/xnec2c/nec2c.txt
 share/doc/xnec2c/xnec2c.1.gz
 share/doc/xnec2c/xnec2c.html
+share/examples/xnec2c/link.svg
+share/examples/xnec2c/unlink.svg
+share/examples/xnec2c/xnec2c.glade
+share/examples/xnec2c/xnec2c.svg
+share/pixmaps/xnec2c.svg
