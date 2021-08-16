@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2021/07/18 21:35:42 mef Exp $
+# $NetBSD: Makefile,v 1.19 2021/08/16 11:27:05 mef Exp $
 
-DISTNAME=	rakudo-2021.06
+DISTNAME=	rakudo-2021.07
 CATEGORIES=	lang perl6
 MASTER_SITES=	https://rakudo.org/dl/rakudo/
 
