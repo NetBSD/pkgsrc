@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4233 2021/08/16 11:29:19 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4234 2021/08/16 11:58:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6679,3 +6679,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-qt to 3.7 [pin 2021-08-16]
 	Updated lang/nqp to 2021.07 [mef 2021-08-16]
 	Updated lang/rakudo to 2021.07 [mef 2021-08-16]
+	Updated cad/gtkwave to 3.3.110 [mef 2021-08-16]
