@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2021/05/02 19:59:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.130.2.1 2021/08/16 19:27:53 bsiegert Exp $
 
-DISTNAME=	librsvg-2.50.3
-PKGREVISION=	1
+DISTNAME=	librsvg-2.50.7
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -32,7 +31,7 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.38
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.44
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
