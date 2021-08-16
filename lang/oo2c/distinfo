@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2020/05/14 03:02:31 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2021/08/16 01:47:24 dholland Exp $
 
 SHA1 (oo2c_32-2.0.11.tar.bz2) = b8962b7fdf9505dc1769602ade44d8e56eda8d45
 RMD160 (oo2c_32-2.0.11.tar.bz2) = c51dc82ec09c9d2f82cb1f10ee7814b3cce38502
@@ -14,3 +14,4 @@ SHA1 (patch-ab) = 246c0edabfefac3406dbce46baee4ddd8c90f2fe
 SHA1 (patch-ac) = d31a5920d189a0201f10fc0526330c903ae0abc5
 SHA1 (patch-ad) = ff9564734be4774d1b57edfdc349c860f5063b55
 SHA1 (patch-lib_src_Exception_c) = 5b758bd3df40d40b302b1a8eeac79a45b3c14b9b
+SHA1 (patch-lib_src____libc.h) = 7c4f3ce663b7a7ecf8f4e1fd5ffe575dc914e017
