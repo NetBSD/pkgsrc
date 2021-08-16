@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4234 2021/08/16 11:58:30 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4235 2021/08/16 13:28:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6680,3 +6680,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nqp to 2021.07 [mef 2021-08-16]
 	Updated lang/rakudo to 2021.07 [mef 2021-08-16]
 	Updated cad/gtkwave to 3.3.110 [mef 2021-08-16]
+	Updated ham/xlog to 2.0.23 [mef 2021-08-16]
