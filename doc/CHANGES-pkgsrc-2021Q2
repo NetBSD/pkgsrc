@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.8 2021/07/24 18:12:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.9 2021/08/16 19:28:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -67,4 +67,7 @@ databases/postgresql10: build fix
 databases/postgresql11: build fix
 databases/postgresql12: build fix
 databases/postgresql13: build fix
+
+Pullup ticket #6492 - requested by gutteridge
+graphics/librsvg: security fix
 
