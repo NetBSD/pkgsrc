@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/08/15 15:18:31 pin Exp $
+# $NetBSD: Makefile,v 1.8 2021/08/16 13:03:35 pin Exp $
 
 DISTNAME=	zoxide-0.7.3
-# Do not update this package. Newer versions require Rust>=1.53.0
+# Do not update this package. Newer versions require Rust>=1.54.0
+# in order to build dependency clap-3.0.0-beta.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ajeetdsouza/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
