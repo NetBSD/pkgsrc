@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/08/17 20:19:14 leot Exp $
+# $NetBSD: Makefile,v 1.26 2021/08/16 13:43:49 mef Exp $
 
-DISTNAME=	xnec2c-3.5.1
-PKGREVISION=	10
+DISTNAME=	xnec2c-4.1.5
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/5b4az/pkg/nec2/xnec2c/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,5 +19,5 @@ INSTALLATION_DIRS=	share/doc/xnec2c
 post-install:
 	cd ${WRKSRC}/doc && ${PAX} -pp -rw * ${DESTDIR}${PREFIX}/share/doc/xnec2c
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
