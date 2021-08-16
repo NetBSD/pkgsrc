@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/05/24 19:52:34 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2021/08/16 01:47:24 dholland Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -17,6 +17,7 @@ DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
 USE_LIBTOOL=		yes
+NOT_FOR_COMPILER=	clang # uses nested functions extensively
 
 TEST_TARGET=		test
 
