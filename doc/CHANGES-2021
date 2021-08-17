@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4241 2021/08/17 08:13:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4242 2021/08/17 11:13:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6687,3 +6687,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/qr-code-generator16 version 1.6.0 [wiz 2021-08-17]
 	Updated misc/libreoffice to 7.1.5.2nb1 [wiz 2021-08-17]
 	Updated net/tor to 0.4.6.7 [wiz 2021-08-17]
+	Added meta-pkgs/gstreamer1-default-backend version 1.0 [wiz 2021-08-17]
