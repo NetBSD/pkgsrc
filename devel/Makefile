@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3481 2021/08/13 04:35:00 pin Exp $
+# $NetBSD: Makefile,v 1.3482 2021/08/17 14:04:17 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -70,6 +70,7 @@ SUBDIR+=	R-rcmdcheck
 SUBDIR+=	R-rematch
 SUBDIR+=	R-rematch2
 SUBDIR+=	R-remotes
+SUBDIR+=	R-renv
 SUBDIR+=	R-repr
 SUBDIR+=	R-rex
 SUBDIR+=	R-rio
