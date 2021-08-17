@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4244 2021/08/17 14:10:28 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4245 2021/08/17 15:25:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6690,3 +6690,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added meta-pkgs/gstreamer1-default-backend version 1.0 [wiz 2021-08-17]
 	Added devel/R-renv version 0.14.0 [mef 2021-08-17]
 	Updated devel/R-xfun to 0.25 [mef 2021-08-17]
+	Updated devel/R-testthat to 3.0.4 [mef 2021-08-17]
