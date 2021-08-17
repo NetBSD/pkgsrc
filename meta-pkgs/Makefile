@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2021/06/10 13:02:09 nia Exp $
+# $NetBSD: Makefile,v 1.115 2021/08/17 11:13:15 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -18,6 +18,7 @@ SUBDIR+=	gnome
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
+SUBDIR+=	gstreamer1-default-backend
 SUBDIR+=	kde-telepathy
 SUBDIR+=	kde4
 SUBDIR+=	kf5
