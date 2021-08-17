@@ -1,0 +1,2 @@
+This meta package provides the default audio backend for gstreamer1
+that is best suited to your operating system.
