@@ -5,7 +5,3 @@ problems during development. The main problem is data race condition.
 So I basically rewrite the player in rust, and hope to solve the problem.
 
 If you wish to download mp3 from youtube, install youtube-dl.
-
-Upstream recently changed the default audio-backend to GStreamer.
-To play audio on BSD install gst-plugins1-oss.
-To play audio on Linux install gst-plugins1-alsa or gst-plugins1-pulse.
