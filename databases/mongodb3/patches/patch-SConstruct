@@ -1,14 +1,15 @@
-$NetBSD: patch-SConstruct,v 1.3 2019/07/10 17:45:58 adam Exp $
+$NetBSD: patch-SConstruct,v 1.4 2021/08/17 04:09:48 mrg Exp $
 
 Add support for NetBSD/Dragonfly.
+Add support for aarch64 big-endian.
 Fix locations.
 Don't compile with debug info.
 Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS
 
---- SConstruct.orig	2019-05-21 17:07:37.000000000 +0000
-+++ SConstruct
-@@ -30,7 +30,7 @@ EnsureSConsVersion( 2, 3, 0 )
+--- SConstruct.orig	2020-01-08 08:30:41.000000000 -0800
++++ SConstruct	2021-04-24 20:15:17.493198495 -0700
+@@ -30,7 +30,7 @@
  def print_build_failures():
      from SCons.Script import GetBuildFailures
      for bf in GetBuildFailures():
@@ -17,7 +18,7 @@ Respect LDFLAGS and CXXFLAGS
  atexit.register(print_build_failures)
  
  def versiontuple(v):
-@@ -49,8 +49,12 @@ def get_running_os_name():
+@@ -49,8 +49,12 @@
      running_os = os.sys.platform
      if running_os.startswith('linux'):
          running_os = 'linux'
@@ -30,7 +31,7 @@ Respect LDFLAGS and CXXFLAGS
      elif running_os.startswith('openbsd'):
          running_os = 'openbsd'
      elif running_os == 'sunos5':
-@@ -68,7 +72,7 @@ def env_get_os_name_wrapper(self):
+@@ -68,7 +72,7 @@
  
  def is_os_raw(target_os, os_list_to_check):
      okay = False
@@ -39,7 +40,7 @@ Respect LDFLAGS and CXXFLAGS
  
      for p in os_list_to_check:
          if p == 'posix' and target_os in posix_os_list:
-@@ -511,7 +515,7 @@ try:
+@@ -511,7 +515,7 @@
          version_data = json.load(version_fp)
  
      if 'version' not in version_data:
@@ -48,7 +49,7 @@ Respect LDFLAGS and CXXFLAGS
          Exit(1)
      if 'githash' not in version_data:
          version_data['githash'] = utils.getGitVersion()
-@@ -519,7 +523,7 @@ try:
+@@ -519,7 +523,7 @@
  except IOError as e:
      # If the file error wasn't because the file is missing, error out
      if e.errno != errno.ENOENT:
@@ -57,7 +58,7 @@ Respect LDFLAGS and CXXFLAGS
          Exit(1)
  
      version_data = {
-@@ -528,7 +532,7 @@ except IOError as e:
+@@ -528,7 +532,7 @@
      }
  
  except ValueError as e:
@@ -66,7 +67,7 @@ Respect LDFLAGS and CXXFLAGS
      Exit(1)
  
  # Setup the command-line variables
-@@ -598,7 +602,7 @@ def variable_distsrc_converter(val):
+@@ -598,7 +602,7 @@
  
  variables_files = variable_shlex_converter(get_option('variables-files'))
  for file in variables_files:
@@ -75,7 +76,7 @@ Respect LDFLAGS and CXXFLAGS
  
  env_vars = Variables(
      files=variables_files,
-@@ -899,6 +903,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -899,6 +903,7 @@
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -83,7 +84,7 @@ Respect LDFLAGS and CXXFLAGS
                 )
  
  env = Environment(variables=env_vars, **envDict)
-@@ -908,12 +913,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
+@@ -908,12 +913,12 @@
  env.AddMethod(env_get_os_name_wrapper, 'GetTargetOSName')
  
  def fatal_error(env, msg, *args):
@@ -99,7 +100,7 @@ Respect LDFLAGS and CXXFLAGS
  
      Exit(1)
  
-@@ -933,7 +938,7 @@ else:
+@@ -933,7 +938,7 @@
  env.AddMethod(lambda env: env['VERBOSE'], 'Verbose')
  
  if has_option('variables-help'):
@@ -108,7 +109,15 @@ Respect LDFLAGS and CXXFLAGS
      Exit(0)
  
  unknown_vars = env_vars.UnknownVariables()
-@@ -1036,7 +1041,9 @@ def CheckForProcessor(context, which_arc
+@@ -993,6 +998,7 @@
+ processor_macros = {
+     'arm'     : { 'endian': 'little', 'defines': ('__arm__',) },
+     'aarch64' : { 'endian': 'little', 'defines': ('__arm64__', '__aarch64__')},
++    'aarch64eb' : { 'endian': 'big',  'defines': ('__arm64__', '__aarch64__')},
+     'i386'    : { 'endian': 'little', 'defines': ('__i386', '_M_IX86')},
+     'ppc64le' : { 'endian': 'little', 'defines': ('__powerpc64__',)},
+     's390x'   : { 'endian': 'big',    'defines': ('__s390x__',)},
+@@ -1036,7 +1042,9 @@
  os_macros = {
      "windows": "_WIN32",
      "solaris": "__sun",
@@ -118,7 +127,7 @@ Respect LDFLAGS and CXXFLAGS
      "openbsd": "__OpenBSD__",
      "osx": "__APPLE__",
      "linux": "__linux__",
-@@ -1131,7 +1138,7 @@ else:
+@@ -1131,7 +1139,7 @@
      env['TARGET_ARCH'] = detected_processor
  
  if env['TARGET_OS'] not in os_macros:
@@ -127,7 +136,7 @@ Respect LDFLAGS and CXXFLAGS
  elif not detectConf.CheckForOS(env['TARGET_OS']):
      env.ConfError("TARGET_OS ({0}) is not supported by compiler", env['TARGET_OS'])
  
-@@ -1367,7 +1374,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
+@@ -1367,7 +1375,7 @@
  
  libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
  
@@ -136,7 +145,7 @@ Respect LDFLAGS and CXXFLAGS
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
-@@ -1395,10 +1402,24 @@ if env.TargetOSIs('linux'):
+@@ -1395,10 +1403,24 @@
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -161,7 +170,7 @@ Respect LDFLAGS and CXXFLAGS
  elif env.TargetOSIs('openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1564,7 +1585,6 @@ if env.TargetOSIs('posix'):
+@@ -1564,7 +1586,6 @@
      # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
      env.Append( CCFLAGS=["-fno-omit-frame-pointer",
                           "-fno-strict-aliasing",
@@ -169,7 +178,7 @@ Respect LDFLAGS and CXXFLAGS
                           "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -2165,9 +2188,9 @@ def doConfigure(myenv):
+@@ -2174,9 +2195,9 @@
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -182,7 +191,7 @@ Respect LDFLAGS and CXXFLAGS
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -2375,7 +2398,7 @@ def doConfigure(myenv):
+@@ -2384,7 +2405,7 @@
          #
          myenv.Append( CCFLAGS=["/Zc:inline"])
  
@@ -191,7 +200,7 @@ Respect LDFLAGS and CXXFLAGS
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster.
          AddToLINKFLAGSIfSupported(myenv, '-fuse-ld=gold')
-@@ -2800,6 +2823,7 @@ def doConfigure(myenv):
+@@ -2809,6 +2830,7 @@
              "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
              "BOOST_SYSTEM_NO_DEPRECATED",
              "BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS",
@@ -199,7 +208,7 @@ Respect LDFLAGS and CXXFLAGS
          ]
      )
  
-@@ -2866,7 +2890,7 @@ def doConfigure(myenv):
+@@ -2875,7 +2897,7 @@
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed
