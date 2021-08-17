@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4245 2021/08/17 15:25:54 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4246 2021/08/17 16:40:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6691,3 +6691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/R-renv version 0.14.0 [mef 2021-08-17]
 	Updated devel/R-xfun to 0.25 [mef 2021-08-17]
 	Updated devel/R-testthat to 3.0.4 [mef 2021-08-17]
+	Updated audio/termusic to 0.3.0 [pin 2021-08-17]
