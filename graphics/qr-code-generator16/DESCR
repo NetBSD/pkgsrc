@@ -1,0 +1,4 @@
+QR Code generator library written in C/C++.
+The aim of this library is the best and clearest QR Code generation.
+
+This is an old version needed for API compatibility by libreoffice.
