@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/17 07:59:19 wiz Exp $
+bin/QrCodeGeneratorDemo
+bin/QrCodeGeneratorWorker
+bin/qrcodegen-demo
+bin/qrcodegen-test
+bin/qrcodegen-worker
+include/qrcodegen/QrCode.hpp
+include/qrcodegen/qrcodegen.h
+lib/libqrcodegen.a
+lib/libqrcodegencpp.a
