@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/04/09 14:30:09 tnn Exp $
+$NetBSD: distinfo,v 1.11 2021/08/17 04:09:48 mrg Exp $
 
 SHA1 (mongodb-src-r3.4.24.tar.gz) = 86909b211998f0cbc8104df774aecb3d00a01763
 RMD160 (mongodb-src-r3.4.24.tar.gz) = f7e4bfe1e2bd046f1a6c0f2695762076ffee5ae5
 SHA512 (mongodb-src-r3.4.24.tar.gz) = c19d5215f514ad0c1bd33f17f9d79198e07657260c0a8399c9a84bbf274ec4f6e61a94b36bb132e93a46e96ee8b4d994a1bed70b2d26f906ffe8e78343394226
 Size (mongodb-src-r3.4.24.tar.gz) = 40232175 bytes
-SHA1 (patch-SConstruct) = b6c2893d82d9b954c889d867ec909a05728af83d
+SHA1 (patch-SConstruct) = 1c5b49997571949143939ca04088d27d5601e53d
 SHA1 (patch-src_mongo_base_initializer.h) = f82d58895251f7be08a09012ed7db64e3863a1fe
 SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = 52064034fabb5de63eccf87ddd140303c54f0312
 SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = 43c94a970fb91d45441a206b5d774e9e7ea55ad5
@@ -22,6 +22,7 @@ SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 6c01ad839ff31e7500d76af662
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_dpml__exception.c) = ef3b260e8a49227cbbabf427500b7c70bce15083
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 39f6fba82e2870ee4a5d99785033621225a72a16
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = d3a85d3a3b33691466c65cdf51c56f221429aea9
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_SConscript) = e87f507c4585050bed5ff47fb1a07113d5690fd5
 SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = b942286acd85ca8cf5fd03bc9f70a5dff0943243
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = c2ad1041b5c1ff9fac9085d2a8963781f51873a8
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01

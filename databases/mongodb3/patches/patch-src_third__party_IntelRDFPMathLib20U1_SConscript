@@ -1,0 +1,17 @@
+$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_SConscript,v 1.1 2021/08/17 04:09:48 mrg Exp $
+
+Add aarch64 big endian support.
+
+--- src/third_party/IntelRDFPMathLib20U1/SConscript.orig	2020-01-08 08:30:41.000000000 -0800
++++ src/third_party/IntelRDFPMathLib20U1/SConscript	2021-04-24 20:18:19.305122166 -0700
+@@ -304,6 +304,10 @@
+ elif processor == "aarch64":
+     cpp_defines['efi2'] = '1'
+     cpp_defines['EFI2'] = '1'
++elif processor == "aarch64eb":
++    cpp_defines['efi2'] = '1'
++    cpp_defines['EFI2'] = '1'
++    cpp_defines['BID_BIG_ENDIAN'] = '1'
+ # Using 64 bit little endian
+ elif processor == 'x86_64' or processor == 'ppc64le':
+     cpp_defines['efi2'] = '1'
