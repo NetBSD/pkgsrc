@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.950 2021/08/15 06:57:48 nia Exp $
+# $NetBSD: Makefile,v 1.951 2021/08/17 08:01:33 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -528,6 +528,7 @@ SUBDIR+=	qiv
 SUBDIR+=	qore-glut-module
 SUBDIR+=	qore-opengl-module
 SUBDIR+=	qr-code-generator
+SUBDIR+=	qr-code-generator16
 SUBDIR+=	qrrs
 SUBDIR+=	quesoglc
 SUBDIR+=	qvplay
