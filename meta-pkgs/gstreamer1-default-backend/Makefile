@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/17 11:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/17 14:36:36 nia Exp $
 
 DISTNAME=	gstreamer1-default-backend-1.0
 CATEGORIES=	meta-pkgs audio multimedia
@@ -15,11 +15,11 @@ PKG_SUPPORTED_OPTIONS=	alsa oss pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+.include "../../mk/oss.buildlink3.mk"
+
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS=	alsa
-.endif
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.elif ${OSS_TYPE:tl} != "none"
 PKG_SUGGESTED_OPTIONS=	oss
 .endif
 
