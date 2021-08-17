@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4239 2021/08/17 08:01:45 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4240 2021/08/17 08:02:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6685,3 +6685,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-Glances to 3.2.3 [fox 2021-08-16]
 	Updated chat/ircd-hybrid to 8.2.39 [fox 2021-08-16]
 	Added graphics/qr-code-generator16 version 1.6.0 [wiz 2021-08-17]
+	Updated misc/libreoffice to 7.1.5.2nb1 [wiz 2021-08-17]
