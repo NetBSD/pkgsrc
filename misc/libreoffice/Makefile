@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.267 2021/07/26 12:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.268 2021/08/17 08:02:17 wiz Exp $
 
 VERREL=		7.1.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -361,7 +362,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/qr-code-generator/buildlink3.mk"
+.include "../../graphics/qr-code-generator16/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
