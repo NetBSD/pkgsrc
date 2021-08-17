@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/08/17 14:10:15 mef Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/17 14:37:59 mef Exp $
 
 R_PKGNAME=	xfun
 R_PKGVER=	0.25
@@ -7,9 +7,6 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Miscellaneous functions by 'Yihui Xie'
 LICENSE=	mit
-
-
-# Packages suggested but not available: 'rstudioapi', 'remotes', 'renv'
 
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
