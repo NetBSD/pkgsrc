@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.940 2021/08/03 21:06:38 markd Exp $
+# $NetBSD: Makefile,v 1.941 2021/08/17 17:45:18 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -489,6 +489,7 @@ SUBDIR+=	xcb-util-xrm
 SUBDIR+=	xclip
 SUBDIR+=	xclipboard
 SUBDIR+=	xcmsdb
+SUBDIR+=	xcolor
 SUBDIR+=	xcolors
 SUBDIR+=	xcolorsel
 SUBDIR+=	xcompmgr
