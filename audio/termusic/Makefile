@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/15 15:22:00 pin Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/17 16:40:15 pin Exp $
 
-DISTNAME=	termusic-0.2.12
+DISTNAME=	termusic-0.3.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +24,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/termusic ${DESTDIR}${PREFIX}/bin
 
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
+DEPENDS+=	gstreamer1-default-backend-[0-9]*:../../meta-pkgs/gstreamer1-default-backend
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
