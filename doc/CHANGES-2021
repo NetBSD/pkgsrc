@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4255 2021/08/18 21:02:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4256 2021/08/18 23:58:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6701,3 +6701,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rclone to 1.56.0 [leot 2021-08-18]
 	Updated misc/rlwrap to 0.45.2 [leot 2021-08-18]
 	Updated textproc/molybdenum to 0.1.6 [pin 2021-08-18]
+	Updated devel/mob to 1.9.0 [schmonz 2021-08-18]
