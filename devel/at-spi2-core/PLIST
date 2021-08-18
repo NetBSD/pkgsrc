@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.15 2019/07/18 14:48:08 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/08/18 09:51:21 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
 include/at-spi-2.0/atspi/atspi-collection.h
 include/at-spi-2.0/atspi/atspi-component.h
 include/at-spi-2.0/atspi/atspi-constants.h
+include/at-spi-2.0/atspi/atspi-device-legacy.h
 include/at-spi-2.0/atspi/atspi-device-listener.h
+include/at-spi-2.0/atspi/atspi-device-x11.h
+include/at-spi-2.0/atspi/atspi-device.h
 include/at-spi-2.0/atspi/atspi-document.h
 include/at-spi-2.0/atspi/atspi-editabletext.h
 include/at-spi-2.0/atspi/atspi-enum-types.h
@@ -111,3 +114,4 @@ share/locale/vi/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
+@pkgdir etc/xdg/autostart

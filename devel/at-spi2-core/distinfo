@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2020/10/01 11:45:46 prlw1 Exp $
+$NetBSD: distinfo,v 1.28 2021/08/18 09:51:21 prlw1 Exp $
 
-SHA1 (at-spi2-core-2.38.0.tar.xz) = c03c5767e19baa42016b496329675125d183e266
-RMD160 (at-spi2-core-2.38.0.tar.xz) = 0dbb814bd39676adb7484742ed0944f7bdda07a3
-SHA512 (at-spi2-core-2.38.0.tar.xz) = 3a1eb27cff6e0dd03119b4f8361a3b6037b26c511e80e2d003d1d5c41fede6d49eb5e0ac1ee45cfb4f3ca8e53292a7e2da67df80be28e77014775e41777a96c1
-Size (at-spi2-core-2.38.0.tar.xz) = 190540 bytes
+SHA1 (at-spi2-core-2.40.3.tar.xz) = f6830b2a618f61b4ace5f47104d87cd0697536d6
+RMD160 (at-spi2-core-2.40.3.tar.xz) = 202aac871b0a3d7e148c8e069c10d3a98a73cbf4
+SHA512 (at-spi2-core-2.40.3.tar.xz) = 85adf3da0a369d7f3481646a495a9c4c3337da3ae6a20ce8c924f8621d3d6ed1d9461bfac0e821dfe86e4ad6b930e4fd65d24c26401cbea644ef4951e5dda5ce
+Size (at-spi2-core-2.40.3.tar.xz) = 197528 bytes
