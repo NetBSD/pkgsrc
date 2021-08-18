@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/17 17:44:25 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/18 21:03:43 pin Exp $
 
 DISTNAME=	xcolor-0.5.0
 CATEGORIES=	x11
@@ -11,17 +11,21 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=			pkg-config
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
-RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xcolor ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/xcolor.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xcolor.1
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
