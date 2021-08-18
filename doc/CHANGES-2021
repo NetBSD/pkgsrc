@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4251 2021/08/18 16:14:18 leot Exp $
+$NetBSD: CHANGES-2021,v 1.4252 2021/08/18 16:38:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-at-spi2 to 2.38.1 [prlw1 2021-08-18]
 	Updated net/gallery-dl to 1.18.3 [leot 2021-08-18]
 	Updated sysutils/entr to 5.0 [leot 2021-08-18]
+	Updated www/py-MechanicalSoup to 1.1.0 [leot 2021-08-18]
