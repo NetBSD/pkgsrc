@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4248 2021/08/18 09:51:40 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4249 2021/08/18 09:53:33 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6694,3 +6694,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.0 [pin 2021-08-17]
 	Added x11/xcolor version 0.5.0 [pin 2021-08-17]
 	Updated devel/at-spi2-core to 2.40.3 [prlw1 2021-08-18]
+	Updated devel/py-at-spi2 to 2.38.1 [prlw1 2021-08-18]
