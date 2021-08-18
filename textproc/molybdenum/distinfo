@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/06/11 20:33:13 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/08/18 21:01:43 pin Exp $
 
 SHA1 (aho-corasick-0.7.18.crate) = 0e3f242614a732b703e12fc3c4456c53b0536fb8
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
@@ -56,10 +56,10 @@ SHA1 (memchr-2.4.0.crate) = f2846cf56edc7a10d2d422fdc008bbe569abdef9
 RMD160 (memchr-2.4.0.crate) = d0c86b970afcfac3f735ec87a0dc2e4b500a2856
 SHA512 (memchr-2.4.0.crate) = b142e308a5aef8e45910411789031e194349ee540c4ced0e2384d864dc1913299fb63a161ceb5228256e97d0949661b7f83a169ef9d4b78afbd9004cb7b8a2fb
 Size (memchr-2.4.0.crate) = 63392 bytes
-SHA1 (molybdenum-0.1.5.tar.gz) = 1ae1aa692badcbde0c729211bddc1d61c5f3635d
-RMD160 (molybdenum-0.1.5.tar.gz) = f888b8d9a1e762ef4f3ab89e9d698ec2ce006070
-SHA512 (molybdenum-0.1.5.tar.gz) = 216039d0bbab2dd555629f7e7a34fd0ead397bcb34332231f8ad100722cb5241c56d8b70bc7742b3006accf749e9f37541963ad96f70193905d7b1bf5f9da6fa
-Size (molybdenum-0.1.5.tar.gz) = 14244 bytes
+SHA1 (molybdenum-0.1.6.tar.gz) = f9779ec6525cbff0ef8ed3bd96e4868995c7c807
+RMD160 (molybdenum-0.1.6.tar.gz) = 6e550a08ef8e31dc7288e90ef4b3f1571449c0b2
+SHA512 (molybdenum-0.1.6.tar.gz) = fd129f0067a3b805d04765eff1b8a859aa115c02ffcc8e239948f2216845465dfc44b6a07d67ad13f9f1e44b6668fc631c77d653a39ee8c0de218b159f3968ff
+Size (molybdenum-0.1.6.tar.gz) = 14634 bytes
 SHA1 (once_cell-1.7.2.crate) = 3661ac1182cef532a8fe57c80fc6cae890630663
 RMD160 (once_cell-1.7.2.crate) = 135bd93f53c3e54094826c9794b2ca6307c08635
 SHA512 (once_cell-1.7.2.crate) = 30cf51249bb73e9881cfbc6a54ead7a3db709d560da8d420fd85cf248e66c727b92e8351b7c0c682913cff12b3f984684a272a69c965c56f8343948eb5a194d6
