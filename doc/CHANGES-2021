@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4259 2021/08/19 09:37:57 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4260 2021/08/19 14:07:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6705,3 +6705,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind911 to 9.11.35 [taca 2021-08-19]
 	Updated net/bind916 to 9.16.20 [taca 2021-08-19]
 	Updated devel/mustach to 1.1.1 [sjmulder 2021-08-19]
+	Updated devel/R-gert to 1.3.2 [mef 2021-08-19]
