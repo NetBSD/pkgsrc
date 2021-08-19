@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4256 2021/08/18 23:58:02 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4257 2021/08/19 02:59:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6702,3 +6702,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/rlwrap to 0.45.2 [leot 2021-08-18]
 	Updated textproc/molybdenum to 0.1.6 [pin 2021-08-18]
 	Updated devel/mob to 1.9.0 [schmonz 2021-08-18]
+	Updated net/bind911 to 9.11.35 [taca 2021-08-19]
