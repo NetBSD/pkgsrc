@@ -1,11 +1,25 @@
-$NetBSD: patch-Makefile.in,v 1.4 2018/09/27 18:06:36 tnn Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2021/08/19 12:56:22 manu Exp $
 
 Install examples into pkgsrc example directory.
 Avoid non-portable use of readlink(1) in Makefile.
+Since libp11-kit installs pthread_atfork() callback, make sure
+it cannot be unloaded.
 
---- Makefile.in.orig	2018-08-28 14:02:02.000000000 +0000
-+++ Makefile.in
-@@ -1730,7 +1730,7 @@ libp11_kit_pkcs11_gnu_la_CFLAGS = -DCRYP
+--- Makefile.in.orig	2021-06-03 16:51:18.000000000 +0200
++++ Makefile.in	2021-08-17 10:49:29.475741852 +0200
+@@ -1906,9 +1906,9 @@
+ 	$(LTLIBINTL) \
+ 	$(NULL)
+ 
+ libp11_kit_la_CFLAGS = $(COMMON_CFLAGS)
+-libp11_kit_la_LDFLAGS = -no-undefined -version-info \
++libp11_kit_la_LDFLAGS = -Wl,-z -Wl,nodelete -no-undefined -version-info \
+ 	$(P11KIT_LT_RELEASE) $(am__append_3) $(am__append_4)
+ libp11_kit_la_SOURCES = \
+ 	p11-kit/proxy.c p11-kit/proxy.h p11-kit/proxy-init.c \
+ 	p11-kit/rpc-server.c \
+@@ -1971,9 +1971,9 @@
+ 
  @OS_WIN32_FALSE@p11_kit_client_la_LIBADD = $(libp11_kit_la_LIBADD)
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = p11-kit/p11-kit-1.pc
@@ -14,7 +28,9 @@ Avoid non-portable use of readlink(1) in Makefile.
  example_DATA = p11-kit/pkcs11.conf.example
  p11_kit_p11_kit_SOURCES = \
  	p11-kit/lists.c \
-@@ -5494,7 +5494,7 @@ p11-kit/pin.gnu.c: p11-kit/pin.h
+ 	p11-kit/p11-kit.c \
+@@ -6258,9 +6258,9 @@
+ # Proxy module is actually same as library, so install a link
  @OS_WIN32_FALSE@install-exec-hook:
  @OS_WIN32_FALSE@	for i in so dylib; do \
  @OS_WIN32_FALSE@		test -f $(DESTDIR)$(libdir)/libp11-kit.$$i && \
@@ -23,3 +39,4 @@ Avoid non-portable use of readlink(1) in Makefile.
  @OS_WIN32_FALSE@	done
  @OS_WIN32_FALSE@	$(MKDIR_P) $(DESTDIR)$(p11_package_config_modules)
  
+ @OS_WIN32_FALSE@uninstall-local:
