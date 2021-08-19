@@ -1,0 +1,17 @@
+$NetBSD: patch-p11-kit_Makefile.am,v 1.1 2021/08/19 12:56:22 manu Exp $
+
+Since libp11-kit installs pthread_atfork() callback, make sure
+it cannot be unloaded. 
+
+--- p11-kit/Makefile.am.orig	2021-08-17 10:42:09.913595860 +0200
++++ p11-kit/Makefile.am	2021-08-17 10:42:27.522236458 +0200
+@@ -86,8 +86,9 @@
+ 
+ libp11_kit_la_CFLAGS = $(COMMON_CFLAGS)
+ 
+ libp11_kit_la_LDFLAGS = \
++	-Wl,-z -Wl,nodelete \
+ 	-no-undefined \
+ 	-version-info $(P11KIT_LT_RELEASE)
+ 
+ if HAVE_LD_VERSION_SCRIPT
