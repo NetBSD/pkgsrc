@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/11 10:19:22 mef Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/19 09:37:50 sjmulder Exp $
 
-DISTNAME=	mustach-1.1.0
+DISTNAME=	mustach-1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/jobol/mustach/-/archive/${PKGVERSION_NOREV}/
 
