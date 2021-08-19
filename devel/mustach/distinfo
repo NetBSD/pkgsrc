@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/08/06 00:49:20 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2021/08/19 09:37:50 sjmulder Exp $
 
-SHA1 (mustach-1.1.0.tar.gz) = 5c921d7aad5ecafd050a97774b019ba84928afd6
-RMD160 (mustach-1.1.0.tar.gz) = e8833dfe7daabe4795cc38091d36ac1602d9ceef
-SHA512 (mustach-1.1.0.tar.gz) = 4ca164bf40fd64c2127878f5f4a43066c299c7522e2099677206e60001db71c3eaac7c3bc33fff7ceb33bd1abf74f21c3367665b7791e05c77da16233d0cb00d
-Size (mustach-1.1.0.tar.gz) = 27343 bytes
+SHA1 (mustach-1.1.1.tar.gz) = f1c0a58f0e3d78d1e9936ec170a796a2c255565b
+RMD160 (mustach-1.1.1.tar.gz) = 7d3f0a39941e7191fc5034d09d2624bba9bd5c86
+SHA512 (mustach-1.1.1.tar.gz) = 7210e418533a168a3e6f3948c78e84077b38e3d96aa25b21ed6013f3c42f068d1eb2a5790ebf8bc0fa5a206fc0e79e0c14228ec5e662d41697222fc902084aaa
+Size (mustach-1.1.1.tar.gz) = 28676 bytes
