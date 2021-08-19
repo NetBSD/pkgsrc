@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/10/13 12:16:39 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/08/19 19:21:00 nia Exp $
 
 SHA1 (feedparser-5.2.1.tar.gz) = 84f05bf1d1443cc55b9893e2cb5aa2b16ab55dec
 RMD160 (feedparser-5.2.1.tar.gz) = d48648b794bdd8af38e77b8337ac2241d79bca4c
 SHA512 (feedparser-5.2.1.tar.gz) = 1fd0c4324e2eff8ef4b15e3793c767290bca562af4a5056fdbdfa12411095530c87a113bb1b9757e532ff63aecb399b18f1e6b753884798eb6b8d3fdf575af81
 Size (feedparser-5.2.1.tar.gz) = 252956 bytes
+SHA1 (patch-feedparser_feedparser.py) = dd96707b0a85cd0d2f40dea2e7cd14f3235a905c
