@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.25 2021/07/28 17:45:59 scole Exp $
+# $NetBSD: Makefile,v 1.26 2021/08/19 20:42:26 scole Exp $
 
-ST_VERSION=	2.6
+ST_VERSION=	2.7
 PKGNAME=	split-thai-${ST_VERSION}
 CATEGORIES=	textproc
 
 MAINTAINER=	scole@NetBSD.org
 HOMEPAGE=	https://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/
 COMMENT=	Utilities and an emacs library to split UTF-8 Thai text into words
-# pthai.el, other code, icu dict, swath dict
-LICENSE=	2-clause-bsd AND public-domain AND mit AND gnu-gpl-v2
+# pthai.el, other code, icu dict, swath dict, libreoffice dict
+LICENSE=	2-clause-bsd AND public-domain AND mit AND gnu-gpl-v2 AND gnu-lgpl-v3
 
-GITHUB_ICU_TAG=	61607c27732906d36c5bd4d23ecc092f89f53a2b
-DISTFILES=	split-thai-${ST_VERSION}.tgz thaidict-${GITHUB_ICU_TAG}.txt
+GITHUB_ICU_TAG=		61607c27732906d36c5bd4d23ecc092f89f53a2b
+LIBREOFFICE_VERSION=	7-2-0
+LIBREOFFICE_SITE=	https://cgit.freedesktop.org/libreoffice/dictionaries/plain/th_TH/th_TH.dic?h=libreoffice-${LIBREOFFICE_VERSION}
+DISTFILES=		split-thai-${ST_VERSION}.tgz thaidict-${GITHUB_ICU_TAG}.txt th_TH-${LIBREOFFICE_VERSION}.dic
 
 SITES.split-thai-${ST_VERSION}.tgz=	${MASTER_SITE_LOCAL}
 SITES.thaidict-${GITHUB_ICU_TAG}.txt=	-${MASTER_SITE_GITHUB:=unicode-org/}/icu/raw/${GITHUB_ICU_TAG}/icu4c/source/data/brkitr/dictionaries/thaidict.txt
+SITES.th_TH-${LIBREOFFICE_VERSION}.dic=	-${LIBREOFFICE_SITE}
 
 # darwin needed 11 to compile icu program?
 USE_LANGUAGES=	c++11
@@ -51,21 +54,25 @@ SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak pthai.el
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
 SUBST_SED.dictionary-app+=	-e 's,ST_SHARE_BIN,${PREFIX}/${ST_SHARE_BIN},g'
 
+# there are some dictionary entries with '/' and '"' that emacs
+# puthash doesn't like.  skip them with grep so consoles without utf8
+# understanding won't be munged when the failure to add prints out an error
 pre-build:
 	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
 		--eval='(setq pthai-bootstrap t)' \
 		--eval='(load-file "pthai.el")' \
 		--eval='(pthai-twt-save "thai-word-dict")'
 	cp ${WRKDIR}/thaidict-${GITHUB_ICU_TAG}.txt ${WRKSRC}/icu-dict
+	cp ${WRKDIR}/th_TH-${LIBREOFFICE_VERSION}.dic ${WRKSRC}/th_TH.dic
 	cd ${PREFIX}/share/swath && \
 		${UTF8_ENV} trietool swathdic list | \
 		awk '{print $$1}' > ${WRKSRC}/swath-dict
 	cd ${WRKSRC} && \
-		${UTF8_ENV} cat icu-dict swath-dict thai-word-dict | \
-			grep -v '#' | sort | uniq > words
+		${UTF8_ENV} cat icu-dict swath-dict th_TH.dic thai-word-dict | \
+			grep -v '[#0123456789/"]' | sort | uniq > words
 	cd ${WRKSRC} && \
 		${UTF8_ENV} trietool words add-list -e utf-8 words
-.for i in thai-word-dict icu-dict swath-dict
+.for i in icu-dict thai-word-dict th_TH.dic swath-dict
 	@${ECHO} `wc -l ${WRKSRC}/${i} | awk '{print $$1}'` words in ${i}
 .endfor
 	@${ECHO} `wc -l ${WRKSRC}/words | awk '{print $$1}'` \
