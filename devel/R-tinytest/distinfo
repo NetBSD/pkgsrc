@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/01 21:48:17 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/08/19 14:45:48 mef Exp $
 
-SHA1 (R/tinytest_1.2.2.tar.gz) = 5eda44ad2835386dfcafb72cd30213d14bb2b9e0
-RMD160 (R/tinytest_1.2.2.tar.gz) = be67da336e3ece37d017203285f403f64c2c3371
-SHA512 (R/tinytest_1.2.2.tar.gz) = 2a7cbc070d40b8d3562a1aee69c02436613d29ea94b2a08bddd825b8ae4d6de4476c50acab01e54b198458d10f0fbf7f82e416c72e1d9e6013ef86e51938e332
-Size (R/tinytest_1.2.2.tar.gz) = 436173 bytes
+SHA1 (R/tinytest_1.3.1.tar.gz) = 72ddb99a021584799aa42f735c22d3563a83e5f5
+RMD160 (R/tinytest_1.3.1.tar.gz) = 3a3b7b0ed7da281f12292c7901290ad5abc0108b
+SHA512 (R/tinytest_1.3.1.tar.gz) = bb580f42f47375e730a698072645c1cb8c5e6d46c8ab2e69b2fbd4c0f9edd5c97ddbbc0d4d3cc35d3d785e937f10d74a4c2c41f86777add8c81ec43c884bc019
+Size (R/tinytest_1.3.1.tar.gz) = 445398 bytes
