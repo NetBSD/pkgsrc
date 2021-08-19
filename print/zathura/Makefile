@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/08/18 06:25:50 nia Exp $
+# $NetBSD: Makefile,v 1.45 2021/08/19 12:46:44 mef Exp $
 
 DISTNAME=	zathura-0.4.8
 CATEGORIES=	print
@@ -34,6 +34,7 @@ TOOLS_PLATFORM.msgfmt=
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.girara?=	girara>=0.3.6
 .include "../../graphics/girara/buildlink3.mk"
