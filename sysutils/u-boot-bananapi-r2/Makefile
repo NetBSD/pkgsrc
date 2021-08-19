@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/08/19 07:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/08/19 07:47:49 wiz Exp $
 
 UBOOT_TARGET=		bananapi-r2
 UBOOT_CONFIG=		mt7623n_bpir2_defconfig
@@ -9,7 +9,7 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 UBOOT_VERSION=		2020.04
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-bananapi-r2/distinfo
-#PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-bananapi-r2/patches
+PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-bananapi-r2/patches
 DISTFILES=		${DEFAULT_DISTFILES}
 
 # This could be moved to u-boot.mk as long as we don't have support for
