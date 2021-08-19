@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4258 2021/08/19 03:34:26 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4259 2021/08/19 09:37:57 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 1.9.0 [schmonz 2021-08-18]
 	Updated net/bind911 to 9.11.35 [taca 2021-08-19]
 	Updated net/bind916 to 9.16.20 [taca 2021-08-19]
+	Updated devel/mustach to 1.1.1 [sjmulder 2021-08-19]
