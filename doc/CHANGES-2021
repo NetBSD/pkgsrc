@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4262 2021/08/19 16:29:09 leot Exp $
+$NetBSD: CHANGES-2021,v 1.4263 2021/08/19 20:46:04 scole Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6708,3 +6708,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-gert to 1.3.2 [mef 2021-08-19]
 	Updated devel/R-tinytest to 1.3.1 [mef 2021-08-19]
 	Updated net/gh to 1.14.0 [leot 2021-08-19]
+	Updated textproc/split-thai to 2.7 [scole 2021-08-19]
