@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4257 2021/08/19 02:59:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4258 2021/08/19 03:34:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6703,3 +6703,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/molybdenum to 0.1.6 [pin 2021-08-18]
 	Updated devel/mob to 1.9.0 [schmonz 2021-08-18]
 	Updated net/bind911 to 9.11.35 [taca 2021-08-19]
+	Updated net/bind916 to 9.16.20 [taca 2021-08-19]
