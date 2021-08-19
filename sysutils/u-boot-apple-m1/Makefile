@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/08/19 07:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/19 07:47:48 wiz Exp $
 
 UBOOT_TARGET=		apple-m1
 UBOOT_CONFIG=		apple_m1_defconfig
 UBOOT_BIN=		u-boot-nodtb.bin u-boot.macho
 
 DISTINFO_FILE?=		${.CURDIR}/../../sysutils/u-boot-apple-m1/distinfo
-#PATCHDIR?=		${.CURDIR}/../../sysutils/u-boot-apple-m1/patches
+PATCHDIR?=		${.CURDIR}/../../sysutils/u-boot-apple-m1/patches
 
 UBOOT_VERSION=	2021.01
 GITHUB_PROJECT=	u-boot
