@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2020/09/13 07:54:02 wiz Exp $
+$NetBSD: distinfo,v 1.27 2021/08/20 23:58:06 wen Exp $
 
-SHA1 (Perl-Tidy-20200907.tar.gz) = 6c7fcda3a6dd2bcc15cb82168d108503d5d2b00c
-RMD160 (Perl-Tidy-20200907.tar.gz) = 7f3ec3f4788ec50a260a2d99b1b608e5101d400e
-SHA512 (Perl-Tidy-20200907.tar.gz) = 047a724b8fabc32ab2db3b3ba7f64fb244de4dbb55eb2c0df7cd4991876791c9e6bff238662f8c103ea180a7231f393211fe1649456b7c0b5d62fac14c349f37
-Size (Perl-Tidy-20200907.tar.gz) = 666105 bytes
+SHA1 (Perl-Tidy-20210717.tar.gz) = 2fa7559ba750f7b58ce182a10ebfccadeba803f9
+RMD160 (Perl-Tidy-20210717.tar.gz) = 2af844f7fc911e40347e0a5526740f556ee5eef4
+SHA512 (Perl-Tidy-20210717.tar.gz) = ccc090cb6ffbd803fbaddde3a99391bd07a97fb47d20515c3f3e58c69a1404824a5bb9aa3cbfea6b2119f7140552fde3bc2361d3ea8904a875973817446578b1
+Size (Perl-Tidy-20210717.tar.gz) = 814449 bytes
