@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4270 2021/08/20 15:24:31 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4271 2021/08/20 18:08:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6719,3 +6719,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/lsix to 1.8 [pin 2021-08-20]
 	Updated audio/termusic to 0.3.2 [pin 2021-08-20]
 	Updated games/woof to 6.3.1 [micha 2021-08-20]
+	Updated wm/fvwm3 to 1.0.4 [nia 2021-08-20]
