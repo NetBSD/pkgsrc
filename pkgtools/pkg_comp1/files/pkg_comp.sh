@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.2 2020/04/23 11:28:09 sborrill Exp $
+# $NetBSD: pkg_comp.sh,v 1.3 2021/08/20 06:39:41 nia Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -98,7 +98,7 @@ env_setdefaults()
     : ${USE_AUDIT_PACKAGES:=yes}
     : ${PKGVULNDIR:=/usr/pkg/share}
     : ${PKGSRC_COMPILER:=gcc}
-    : ${PKG_DBDIR:=/var/db/pkg}
+    : ${PKG_DBDIR:=/usr/pkg/pkgdb}
 
     # Default values for global variables used in the script.
     : ${DISTRIB_EXT:=tgz}
