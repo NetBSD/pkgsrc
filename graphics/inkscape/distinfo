@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.81 2021/07/02 14:04:06 wiz Exp $
+$NetBSD: distinfo,v 1.82 2021/08/20 11:40:15 nia Exp $
 
 SHA1 (inkscape-1.1.tar.xz) = e61dc54dd15c79eeabc9cc04cc8ecaf15ead42b2
 RMD160 (inkscape-1.1.tar.xz) = f10f34fcb06675ec00360a36a8efe46d2864ac49
 SHA512 (inkscape-1.1.tar.xz) = 54b75f8794d748ef59d5b719ea04e3debadc1a5cf3f62f14254502567973bbd634850edd0a3bc082be878dacf041e9bd10982c4846bf154f89aa5319eda4ee80
 Size (inkscape-1.1.tar.xz) = 34203156 bytes
+SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 26351c300629e28f6523fe2167a2eed5802435cf
 SHA1 (patch-src_display_cairo-utils.cpp) = dc2ca383c1050b40bb500b522e789c1f6e8f42b7
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
+SHA1 (patch-src_object_sp-use-reference.h) = f642f27dea75e29fd55bef39e37f8a98000a33a0
 SHA1 (patch-src_path-prefix.cpp) = d927b859d75422fc42ee16bbbbdaa1a8321df7e8
 SHA1 (patch-src_svg_svg-length.cpp) = 39fe19a500a73d0a58ba84d08aba0c6ae47dda04
