@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.172 2021/08/20 22:06:23 kim Exp $
+$NetBSD: distinfo,v 1.173 2021/08/20 22:37:34 kim Exp $
 
 SHA1 (perl-5.34.0.tar.xz) = d461e206a1dca5e79d39e77debf0b564f6d77d37
 RMD160 (perl-5.34.0.tar.xz) = ea671a6789db48db0036f763b5068db67be951d0
@@ -8,7 +8,7 @@ SHA1 (patch-Configure) = a72983dba63f32f57418f2702b039585ba7236a7
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-caretx.c) = b76b4175a58123fa4dfd2adf36b2207dcb6cf65a
 SHA1 (patch-cflags.SH) = e940e4452768ccc1bdf21d435094e7efffceb925
-SHA1 (patch-cpan_Encode_Encode.pm) = fa49f95e79825a716d4e24995e23cea59a20b7ba
+SHA1 (patch-cpan_Encode_Encode.pm) = 2254ec5c3dd57a2e3dd587f18924d58dc972462d
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 7b1caaea7327ebf492f8cde6b459286ecf7dd5ad
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
