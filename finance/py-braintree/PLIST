@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/05/06 04:34:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/08/20 05:50:22 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -233,6 +233,12 @@ ${PYSITELIB}/braintree/local_payment.pyo
 ${PYSITELIB}/braintree/local_payment_completed.py
 ${PYSITELIB}/braintree/local_payment_completed.pyc
 ${PYSITELIB}/braintree/local_payment_completed.pyo
+${PYSITELIB}/braintree/local_payment_expired.py
+${PYSITELIB}/braintree/local_payment_expired.pyc
+${PYSITELIB}/braintree/local_payment_expired.pyo
+${PYSITELIB}/braintree/local_payment_funded.py
+${PYSITELIB}/braintree/local_payment_funded.pyc
+${PYSITELIB}/braintree/local_payment_funded.pyo
 ${PYSITELIB}/braintree/local_payment_reversed.py
 ${PYSITELIB}/braintree/local_payment_reversed.pyc
 ${PYSITELIB}/braintree/local_payment_reversed.pyo
