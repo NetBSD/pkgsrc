@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4266 2021/08/20 05:55:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4267 2021/08/20 11:22:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6715,3 +6715,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libwebp to 1.2.1 [adam 2021-08-20]
 	Updated finance/py-braintree to 4.12.0 [adam 2021-08-20]
 	Updated devel/py-bitarray to 2.3.0 [adam 2021-08-20]
+	Updated devel/git-cliff to 0.2.3 [pin 2021-08-20]
