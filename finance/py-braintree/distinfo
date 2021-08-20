@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2021/07/16 06:41:31 adam Exp $
+$NetBSD: distinfo,v 1.37 2021/08/20 05:50:22 adam Exp $
 
-SHA1 (braintree-4.11.0.tar.gz) = 6c3e4dfd481edaf0460f141ee84b293196424b35
-RMD160 (braintree-4.11.0.tar.gz) = d9993c48aca3707274ec58fb3c3ce724e0d43b95
-SHA512 (braintree-4.11.0.tar.gz) = 9a80dae6191deccf72054af6add60a272af2f8c242d283335d03e0c92be76572a6cfc0f9282e9da9f0a9809e5a7562b5fc21aa3b747588bb4414967abe1b0a4e
-Size (braintree-4.11.0.tar.gz) = 77132 bytes
+SHA1 (braintree-4.12.0.tar.gz) = 3d3c0092a15deee15f83ca0a212ebfef492fbe9d
+RMD160 (braintree-4.12.0.tar.gz) = 6e88abf5a6c22577e2aae659d6e17f14d9a4c0c8
+SHA512 (braintree-4.12.0.tar.gz) = d77e9c6ccd636df501d62f1af51f307fd56d7479c4d6517b9440b00d127aa1e21bd30589dd66e1b8f324cf582894fe25ab3803b880b18c4e41b349142150986b
+Size (braintree-4.12.0.tar.gz) = 77385 bytes
