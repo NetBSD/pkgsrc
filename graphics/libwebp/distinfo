@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/02/15 21:18:38 adam Exp $
+$NetBSD: distinfo,v 1.20 2021/08/20 05:44:26 adam Exp $
 
-SHA1 (libwebp-1.2.0.tar.gz) = 350503d8ffea6cb1cb3ac1eaa9bc371458de10ae
-RMD160 (libwebp-1.2.0.tar.gz) = 7748942f41c2350778d8c8e9d77dac212b88406d
-SHA512 (libwebp-1.2.0.tar.gz) = c46b41899a543cc80914c89646dd607dbb5d025a9727dd83ef70994b9310eedc697666bd812141a90aa16632a9a354a031d9360a9ee1112295c7e154e69f0b74
-Size (libwebp-1.2.0.tar.gz) = 4092120 bytes
+SHA1 (libwebp-1.2.1.tar.gz) = 9bbc3cb6f90dccafbd3e39325c28f24ac3f6e041
+RMD160 (libwebp-1.2.1.tar.gz) = b61c09060f9772e39aa4ad4c018ea9618b657f06
+SHA512 (libwebp-1.2.1.tar.gz) = 5208ac9532c89ea9fec01122cb307afacdbf5c501ed1c6056e9ffc98e2a3386e637224e0301da88ae3a32aa0c210364e1e4eac79487e465ef9e54eb9b1af80aa
+Size (libwebp-1.2.1.tar.gz) = 4100806 bytes
