@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/07/03 10:05:54 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/08/20 11:23:44 pin Exp $
 
-SHA1 (lsix-1.7.4.tar.gz) = 86c299dd840e74390dbb30bd478504e7ae9030f7
-RMD160 (lsix-1.7.4.tar.gz) = a27bac525e44836c41d8510470a655444b1cab29
-SHA512 (lsix-1.7.4.tar.gz) = 0915e8db57ce379440816b2b3944c883916242fd4f7d65ba8e3ed73e48cd15670b701c7cb7aa710bc8316db16e5147ceace62c8021a2b20d672a70590999ea15
-Size (lsix-1.7.4.tar.gz) = 554379 bytes
+SHA1 (lsix-1.8.tar.gz) = 3d04c25e911be27b17ecbba1ec733278a2e0c360
+RMD160 (lsix-1.8.tar.gz) = 90b6057d90d54573c228a96e1d2a0dedb973f0ac
+SHA512 (lsix-1.8.tar.gz) = 2bc670c408563923f28b291c6247e73a3e183e7ccd3b56f48065ce98f2703b62aa3f7287ef30ffffa05de91a22725a1986193800d75892db516a84a4f7a97d8a
+Size (lsix-1.8.tar.gz) = 554423 bytes
