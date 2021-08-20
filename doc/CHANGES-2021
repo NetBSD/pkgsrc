@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4264 2021/08/20 05:39:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4265 2021/08/20 05:44:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6711,3 +6711,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/split-thai to 2.7 [scole 2021-08-19]
 	Updated converters/py-simplejson to 3.17.4 [adam 2021-08-20]
 	Updated devel/py-macholib to 1.15 [adam 2021-08-20]
+	Updated net/haproxy to 2.4.3 [adam 2021-08-20]
+	Updated graphics/libwebp to 1.2.1 [adam 2021-08-20]
