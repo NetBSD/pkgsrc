@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2021/02/15 21:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/08/20 05:44:26 adam Exp $
 
-DISTNAME=	libwebp-1.2.0
+DISTNAME=	libwebp-1.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/downloads.webmproject.org/releases/webp/
 
