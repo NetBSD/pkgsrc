@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/07/11 22:25:09 he Exp $
+# $NetBSD: Makefile,v 1.25 2021/08/21 22:06:29 gutteridge Exp $
 
 DISTNAME=	rust-1.52.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -41,7 +41,7 @@ BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
 
 NO_BUILD=	yes
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash pax
 WRKSRC=		${WRKDIR}/${DISTFILES:S/.tar.gz//}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
