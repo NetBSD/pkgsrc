@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/08/05 01:57:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2021/08/21 21:29:52 gutteridge Exp $
 
-DISTNAME=	upower-0.99.12
+DISTNAME=	upower-0.99.13
 CATEGORIES=	sysutils
-MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/uploads/244f5966c58773bbd3b4c507c549560f/
+MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/uploads/177df5b9f9b76f25a2ad9da41aa0c1fa/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
