@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/06/01 13:19:41 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/08/21 07:10:16 mef Exp $
 
-SHA1 (R/pkgKitten_0.2.1.tar.gz) = 7290824f65413991f14b22aa91fed44f48cd3158
-RMD160 (R/pkgKitten_0.2.1.tar.gz) = ffc0b375c8b02d1b320ff13b91f8a5071722f688
-SHA512 (R/pkgKitten_0.2.1.tar.gz) = a7668b7b7bdc7eee408487619ef038ac6a547f713f83e69cc956cd2d51e507d7e9addfda7000e70c0e78491da0f3fec2bdb07f69d1d75f5a792aa5e6d45aec05
-Size (R/pkgKitten_0.2.1.tar.gz) = 9585 bytes
+SHA1 (R/pkgKitten_0.2.2.tar.gz) = bd00002eddc074e5cf4472841fbdd347f7757ce9
+RMD160 (R/pkgKitten_0.2.2.tar.gz) = 20bd0773c8d794f7d49cfefec8092b6ffbb6688f
+SHA512 (R/pkgKitten_0.2.2.tar.gz) = 8514aa96981c9ef7e014b973971c992d59b0f598003eb61431196fd69b617e4f0cc11842ac2bb723e6156663940be9fc517b6f45c492337e77138a0ae8726d99
+Size (R/pkgKitten_0.2.2.tar.gz) = 9799 bytes
