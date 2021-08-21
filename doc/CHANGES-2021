@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4290 2021/08/21 21:38:29 fox Exp $
+$NetBSD: CHANGES-2021,v 1.4291 2021/08/21 21:46:30 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6740,3 +6740,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-nokogiri to 1.12.3 [tsutsui 2021-08-21]
 	Updated sysutils/upower to 0.99.13 [gutteridge 2021-08-21]
 	Updated audio/din to 51.1.1 [fox 2021-08-21]
+	Updated sysutils/py-Glances to 3.2.3.1 [fox 2021-08-21]
