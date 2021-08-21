@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4286 2021/08/21 17:41:07 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.4287 2021/08/21 18:24:44 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6736,3 +6736,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-prompt_toolkit to 3.0.20 [adam 2021-08-21]
 	Updated print/cups-filters to 1.28.10 [prlw1 2021-08-21]
 	Updated inputmethod/ibus to 1.5.25 [tsutsui 2021-08-21]
+	Updated misc/ruby-mini_portile2 to 2.6.1 [tsutsui 2021-08-21]
