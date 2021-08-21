@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:40 brook Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/21 07:02:41 mef Exp $
 
 R_PKGNAME=	rio
-R_PKGVER=	0.5.16
+R_PKGVER=	0.5.27
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +14,12 @@ DEPENDS+=	R-haven>=1.1.0:../../textproc/R-haven
 DEPENDS+=	R-openxlsx>=4.1.0.1:../../textproc/R-openxlsx
 DEPENDS+=	R-readxl>=0.1.1:../../textproc/R-readxl
 DEPENDS+=	R-curl>=0.6:../../www/R-curl
+
+# Packages suggested but not available:
+#  'arrow', 'feather', 'fst', 'hexView', 'pzfx', 'readODS',
+#  'rmatio'
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
+
 
 USE_LANGUAGES=	# none
 
