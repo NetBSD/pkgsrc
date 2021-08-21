@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4275 2021/08/21 01:28:08 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4276 2021/08/21 03:56:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6724,3 +6724,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-Compile to 3.0.0 [wen 2021-08-21]
 	Updated textproc/p5-Pod-Strip to 1.100 [wen 2021-08-21]
 	Updated textproc/p5-Text-CSV to 2.01 [wen 2021-08-21]
+	Updated net/bind916 to 9.16.20nb1 [taca 2021-08-21]
