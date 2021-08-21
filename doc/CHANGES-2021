@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4288 2021/08/21 18:27:28 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.4289 2021/08/21 21:30:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6738,3 +6738,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated inputmethod/ibus to 1.5.25 [tsutsui 2021-08-21]
 	Updated misc/ruby-mini_portile2 to 2.6.1 [tsutsui 2021-08-21]
 	Updated textproc/ruby-nokogiri to 1.12.3 [tsutsui 2021-08-21]
+	Updated sysutils/upower to 0.99.13 [gutteridge 2021-08-21]
