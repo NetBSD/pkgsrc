@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4284 2021/08/21 16:59:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4285 2021/08/21 17:08:25 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6734,3 +6734,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-Rcpp to 1.0.7 [mef 2021-08-21]
 	Updated net/qbittorrent to 4.3.7 [adam 2021-08-21]
 	Updated devel/py-prompt_toolkit to 3.0.20 [adam 2021-08-21]
+	Updated print/cups-filters to 1.28.10 [prlw1 2021-08-21]
