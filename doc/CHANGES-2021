@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4272 2021/08/20 23:59:03 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4273 2021/08/21 00:10:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6721,3 +6721,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/woof to 6.3.1 [micha 2021-08-20]
 	Updated wm/fvwm3 to 1.0.4 [nia 2021-08-20]
 	Updated devel/p5-Perl-Tidy to 20210717 [wen 2021-08-20]
+	Updated devel/p5-Test-Compile to 3.0.0 [wen 2021-08-21]
