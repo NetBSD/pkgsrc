@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4285 2021/08/21 17:08:25 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.4286 2021/08/21 17:41:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6735,3 +6735,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/qbittorrent to 4.3.7 [adam 2021-08-21]
 	Updated devel/py-prompt_toolkit to 3.0.20 [adam 2021-08-21]
 	Updated print/cups-filters to 1.28.10 [prlw1 2021-08-21]
+	Updated inputmethod/ibus to 1.5.25 [tsutsui 2021-08-21]
