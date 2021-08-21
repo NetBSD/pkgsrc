@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4282 2021/08/21 11:51:47 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4283 2021/08/21 13:37:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6731,3 +6731,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-rio to 0.5.27 [mef 2021-08-21]
 	Updated devel/R-pkgKitten to 0.2.2 [mef 2021-08-21]
 	Updated devel/R-iterators to 1.0.13 [mef 2021-08-21]
+	Updated devel/R-Rcpp to 1.0.7 [mef 2021-08-21]
