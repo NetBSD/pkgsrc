@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/22 08:06:19 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/08/21 05:47:19 mef Exp $
 
-SHA1 (R/rversions_2.0.2.tar.gz) = 401a2301023c01973f3c30f108af4f8b942f5f55
-RMD160 (R/rversions_2.0.2.tar.gz) = cfd5cd7fbbe635a95d05e297e4334ed4235b1046
-SHA512 (R/rversions_2.0.2.tar.gz) = f0ed8990fb1753ed54972528d1f6d609616d7c3747b1574dc1dc5cc1bd599acc91e0047297a840ffdaa1196ecdfd6bc16324ead7ed564f961b4e993c2dd384c1
-Size (R/rversions_2.0.2.tar.gz) = 41558 bytes
+SHA1 (R/rversions_2.1.1.tar.gz) = 1c2a77b820926ba1e4bd07ddd262bd42247a3159
+RMD160 (R/rversions_2.1.1.tar.gz) = 0e0207b5904f107b81e71f7ae1c652996f0301a5
+SHA512 (R/rversions_2.1.1.tar.gz) = fbcfd84bd2a8aef9341c6db19961ff4671e6f526eae2bf91867e4a80946248bdd8b4747de96f8c4e26ea4c27fdc88ee3c2da2d955d4dd79eef8662c35a5ebc7b
+Size (R/rversions_2.1.1.tar.gz) = 42064 bytes
