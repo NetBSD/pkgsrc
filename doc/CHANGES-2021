@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4283 2021/08/21 13:37:44 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4284 2021/08/21 16:59:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6732,3 +6732,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-pkgKitten to 0.2.2 [mef 2021-08-21]
 	Updated devel/R-iterators to 1.0.13 [mef 2021-08-21]
 	Updated devel/R-Rcpp to 1.0.7 [mef 2021-08-21]
+	Updated net/qbittorrent to 4.3.7 [adam 2021-08-21]
+	Updated devel/py-prompt_toolkit to 3.0.20 [adam 2021-08-21]
