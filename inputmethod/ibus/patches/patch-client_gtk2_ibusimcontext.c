@@ -1,11 +1,11 @@
-$NetBSD: patch-client_gtk2_ibusimcontext.c,v 1.2 2017/11/05 04:19:15 tsutsui Exp $
+$NetBSD: patch-client_gtk2_ibusimcontext.c,v 1.3 2021/08/21 17:40:17 tsutsui Exp $
 
 NetBSD 6.99.25's gcc says:
    error: #pragma GCC diagnostic not allowed inside functions
 
---- client/gtk2/ibusimcontext.c.orig	2017-10-22 10:31:49.000000000 +0000
+--- client/gtk2/ibusimcontext.c.orig	2021-08-20 00:48:40.000000000 +0000
 +++ client/gtk2/ibusimcontext.c
-@@ -559,6 +559,9 @@ daemon_name_vanished (GDBusConnection *c
+@@ -714,6 +714,9 @@ daemon_name_vanished (GDBusConnection *c
      _daemon_is_running = FALSE;
  }
  
@@ -15,8 +15,8 @@ NetBSD 6.99.25's gcc says:
  static void
  ibus_im_context_class_init (IBusIMContextClass *class)
  {
-@@ -642,10 +645,7 @@ ibus_im_context_class_init (IBusIMContex
- 
+@@ -834,10 +837,7 @@ ibus_im_context_class_init (IBusIMContex
+ #if !GTK_CHECK_VERSION (3, 98, 4)
      /* always install snooper */
      if (_key_snooper_id == 0) {
 -#pragma GCC diagnostic push
@@ -24,9 +24,9 @@ NetBSD 6.99.25's gcc says:
          _key_snooper_id = gtk_key_snooper_install (_key_snooper_cb, NULL);
 -#pragma GCC diagnostic pop
      }
+ #endif
  
-     _daemon_name_watch_id = g_bus_watch_name (G_BUS_TYPE_SESSION,
-@@ -656,21 +656,22 @@ ibus_im_context_class_init (IBusIMContex
+@@ -849,23 +849,24 @@ ibus_im_context_class_init (IBusIMContex
                                                NULL,
                                                NULL);
  }
@@ -37,6 +37,7 @@ NetBSD 6.99.25's gcc says:
  static void
  ibus_im_context_class_fini (IBusIMContextClass *class)
  {
+ #if !GTK_CHECK_VERSION (3, 98, 4)
      if (_key_snooper_id != 0) {
          IDEBUG ("snooper is terminated.");
 -#pragma GCC diagnostic push
@@ -45,6 +46,7 @@ NetBSD 6.99.25's gcc says:
 -#pragma GCC diagnostic pop
          _key_snooper_id = 0;
      }
+ #endif
  
      g_bus_unwatch_name (_daemon_name_watch_id);
  }
