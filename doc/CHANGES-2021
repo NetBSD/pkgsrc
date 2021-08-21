@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4276 2021/08/21 03:56:21 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4277 2021/08/21 05:44:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6725,3 +6725,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Pod-Strip to 1.100 [wen 2021-08-21]
 	Updated textproc/p5-Text-CSV to 2.01 [wen 2021-08-21]
 	Updated net/bind916 to 9.16.20nb1 [taca 2021-08-21]
+	Updated devel/R-tidyselect to 1.1.1 [mef 2021-08-21]
