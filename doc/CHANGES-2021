@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4279 2021/08/21 05:47:51 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4280 2021/08/21 07:02:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6728,3 +6728,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-tidyselect to 1.1.1 [mef 2021-08-21]
 	Updated security/tor-browser to 10.5.5 [wiz 2021-08-21]
 	Updated devel/R-rversions to 2.1.1 [mef 2021-08-21]
+	Updated devel/R-rio to 0.5.27 [mef 2021-08-21]
