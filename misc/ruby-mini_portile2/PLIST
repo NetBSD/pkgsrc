@@ -1,23 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2020/03/10 14:42:54 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/21 18:24:28 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.concourse.yml
+${GEM_LIBDIR}/.github/FUNDING.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/concourse/common_prelude.rb
-${GEM_LIBDIR}/concourse/common_resources.yml
-${GEM_LIBDIR}/concourse/docker-compose.yml
-${GEM_LIBDIR}/concourse/mini_portile-pr.yml
-${GEM_LIBDIR}/concourse/mini_portile-pr.yml.generated
-${GEM_LIBDIR}/concourse/mini_portile.yml
-${GEM_LIBDIR}/concourse/mini_portile.yml.generated
-${GEM_LIBDIR}/concourse/tasks/rake-test/task.ps1
-${GEM_LIBDIR}/concourse/tasks/rake-test/task.sh
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/mini_portile2.rb
 ${GEM_LIBDIR}/lib/mini_portile2/mini_portile.rb
 ${GEM_LIBDIR}/lib/mini_portile2/mini_portile_cmake.rb
@@ -37,5 +28,6 @@ ${GEM_LIBDIR}/test/test_cmake.rb
 ${GEM_LIBDIR}/test/test_cook.rb
 ${GEM_LIBDIR}/test/test_digest.rb
 ${GEM_LIBDIR}/test/test_download.rb
+${GEM_LIBDIR}/test/test_execute.rb
 ${GEM_LIBDIR}/test/test_proxy.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
