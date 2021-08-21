@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.24 2020/09/15 10:59:49 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/08/21 17:08:01 prlw1 Exp $
 bin/driverless
 bin/driverless-fax
 bin/foomatic-rip
-bin/ttfread
 include/cupsfilters/colord.h
 include/cupsfilters/colormanager.h
 include/cupsfilters/driver.h
