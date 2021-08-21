@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4292 2021/08/21 22:13:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4293 2021/08/21 22:14:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6742,3 +6742,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/din to 51.1.1 [fox 2021-08-21]
 	Updated sysutils/py-Glances to 3.2.3.1 [fox 2021-08-21]
 	Updated devel/git-cliff to 0.2.5 [pin 2021-08-21]
+	Updated audio/termusic to 0.3.3 [pin 2021-08-21]
