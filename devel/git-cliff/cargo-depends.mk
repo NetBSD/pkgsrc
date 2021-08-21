@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2021/08/20 11:22:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2021/08/21 22:12:49 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
@@ -38,7 +38,7 @@ CARGO_CRATE_DEPENDS+=	funty-1.1.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.12.4
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.4
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
-CARGO_CRATE_DEPENDS+=	git-conventional-0.9.2
+CARGO_CRATE_DEPENDS+=	git-conventional-0.10.0
 CARGO_CRATE_DEPENDS+=	git2-0.13.21
 CARGO_CRATE_DEPENDS+=	globset-0.4.8
 CARGO_CRATE_DEPENDS+=	globwalk-0.8.1
