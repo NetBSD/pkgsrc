@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/08/18 21:03:43 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/21 11:23:11 pin Exp $
 
 DISTNAME=	xcolor-0.5.0
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Soft/xcolor/
 COMMENT=	Lightweight color picker for X11
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
