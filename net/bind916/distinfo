@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.20 2021/08/19 03:33:49 taca Exp $
+$NetBSD: distinfo,v 1.21 2021/08/21 03:55:54 taca Exp $
 
+SHA1 (bind-9.16.20-map-format-fix.patch) = 8c3a0b8f5c375c798563ae597a23f4be482ab68f
+RMD160 (bind-9.16.20-map-format-fix.patch) = 7a1beddce439359117f7b94befafacfd3e9a9121
+SHA512 (bind-9.16.20-map-format-fix.patch) = d9224712ee2c6f6d0ff483ed253497548935fe35f45e5bdf26c9bd25c6234adde00727df7eb49fbfbfb34aad9d9fa0f112e900804794ad90a5cd8a64e9db61c6
+Size (bind-9.16.20-map-format-fix.patch) = 258 bytes
 SHA1 (bind-9.16.20.tar.xz) = 771bbb31ab0bfcf3f50effa0af4df6014853ac86
 RMD160 (bind-9.16.20.tar.xz) = d8104c704a599b9d3bd4247bfe22ea0f8f60e559
 SHA512 (bind-9.16.20.tar.xz) = bd4ffcc2589ca8f1ac228576ec11e86f317d5a78d7964a0a7ae70b2fa38831d5bd65c2e8c35d8190502de7139f85d8b080b3b8ee968811a8df78e5761781525d
