@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.12 2020/08/11 16:07:38 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.13 2021/08/22 02:41:50 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -6,7 +6,6 @@ ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForJava.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForJavaScript.jar
 ${PKGNAME}/lib/libreoffice/program/classes/XMergeBridge.jar
 ${PKGNAME}/lib/libreoffice/program/classes/bsh.jar
-${PKGNAME}/lib/libreoffice/program/classes/commons-logging-1.2.jar
 ${PKGNAME}/lib/libreoffice/program/classes/commonwizards.jar
 ${PKGNAME}/lib/libreoffice/program/classes/flow-engine.jar
 ${PKGNAME}/lib/libreoffice/program/classes/flute-1.1.6.jar
