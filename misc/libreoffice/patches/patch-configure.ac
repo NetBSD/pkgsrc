@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
 * Include header files from security/gpgme correctly.
 * Find devel/apache-ant.
 
---- configure.ac.orig	2020-07-29 19:29:17.000000000 +0000
+--- configure.ac.orig	2021-08-16 19:56:28.000000000 +0000
 +++ configure.ac
-@@ -4593,6 +4593,11 @@ linux-android*)
+@@ -5107,6 +5107,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,15 +21,7 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -4992,6 +4997,7 @@ fi
- AC_SUBST(ENABLE_CUPS)
- 
- # fontconfig checks
-+#test_fontconfig=no
- if test "$test_fontconfig" = "yes"; then
-     PKG_CHECK_MODULES([FONTCONFIG], [fontconfig >= 2.4.1])
-     SYSTEM_FONTCONFIG=TRUE
-@@ -8287,7 +8293,7 @@ else
+@@ -9001,7 +9006,7 @@ else
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
@@ -38,16 +30,8 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
      fi
  
      case "$host_cpu" in
-@@ -8599,6 +8605,7 @@ fi
- dnl ===================================================================
- dnl Check whether freetype is available
- dnl ===================================================================
-+#test_freetype=no
- if test  "$test_freetype" = "yes"; then
-     AC_MSG_CHECKING([whether freetype is available])
-     # FreeType has 3 different kinds of versions
-@@ -8616,9 +8623,9 @@ if test  "$test_freetype" = "yes"; then
- else
+@@ -9334,9 +9339,9 @@ elif test "$using_freetype_fontconfig" =
+     AC_MSG_RESULT([internal])
      FREETYPE_CFLAGS="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
      if test "x$ac_config_site_64bit_host" = xYES; then
 -        FREETYPE_LIBS="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib64 -lfreetype"
@@ -56,9 +40,9 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
 -        FREETYPE_LIBS="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib -lfreetype"
 +        FREETYPE_LIBS="${WORKDIR}/UnpackedTarball/freetype/instdir/lib/libfreetype.a"
      fi
+     BUILD_TYPE="$BUILD_TYPE FREETYPE"
  fi
- AC_SUBST(FREETYPE_CFLAGS)
-@@ -9884,11 +9891,11 @@ dnl HarfBuzz
+@@ -10634,11 +10639,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -72,7 +56,7 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -11387,7 +11394,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -12259,7 +12264,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -81,7 +65,7 @@ $NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -12454,8 +12461,8 @@ EOF
+@@ -13330,8 +13335,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else
