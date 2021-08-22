@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4311 2021/08/22 13:58:27 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4312 2021/08/22 14:02:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6785,3 +6785,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-pycall to 1.4.1 [taca 2021-08-22]
 	Updated devel/ruby-red-colors to 0.3.0 [taca 2021-08-22]
 	Updated devel/ruby-red-datasets to 0.1.4 [taca 2021-08-22]
+	Updated devel/ruby-rspec-rails to 5.0.2 [taca 2021-08-22]
