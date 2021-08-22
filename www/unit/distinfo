@@ -1,16 +1,12 @@
-$NetBSD: distinfo,v 1.1 2021/02/14 11:56:57 otis Exp $
+$NetBSD: distinfo,v 1.2 2021/08/22 04:00:43 gutteridge Exp $
 
-SHA1 (unit-1.22.0.tar.gz) = ab38a89c12d15a56fdc1a51dd6fa8a689e02abae
-RMD160 (unit-1.22.0.tar.gz) = a658f1c8f898e381a017303264b0d7202627cdbb
-SHA512 (unit-1.22.0.tar.gz) = 7418e9dd86c10d64184f5a2f3e26c27bacc53b90ba35658fba6af00a57df89645c16c16b510d3e570eee6f8fdeef4ec7f92971f7231093e3da118e858ed386f5
-Size (unit-1.22.0.tar.gz) = 824763 bytes
+SHA1 (unit-1.25.0.tar.gz) = f235f96f7f51f169bae85222dbc8c93ece69d589
+RMD160 (unit-1.25.0.tar.gz) = d08da7f6404e3fad4a69f31ba203cc9a3b69024c
+SHA512 (unit-1.25.0.tar.gz) = fc001ab21c5aa6c07b092f7b1f44be3b88636f9e2059c8bc4049a06d863daae1bbfa2531a4a24bdd5976250d7a0e260dcf0dbb0dec63efcc008b5398c6bb4bbd
+Size (unit-1.25.0.tar.gz) = 853280 bytes
 SHA1 (patch-auto_events) = 0347dfefbedaacd206c8c2bfd8ea38b18995dd9f
 SHA1 (patch-auto_os_conf) = 6d1cd7aef662a60d4288014eb6fadbe8c1268e55
-SHA1 (patch-src_nxt__cert.c) = c91e45f148a079b543a0d3cb277388bffb3e2854
-SHA1 (patch-src_nxt__conf__validation.c) = bc00a598fc3e8a6bb9ccee3b773b603e788b426f
 SHA1 (patch-src_nxt__kqueue__engine.c) = c341425f4b21d4cff6e003958f88a04b53dc4ee1
 SHA1 (patch-src_nxt__php__sapi.c) = 2d5e557ff2066bec78f5bfbca6a64688f60da01b
-SHA1 (patch-src_nxt__router.c) = cc679af06fce1589d555c001574cd4cbd1af53b7
-SHA1 (patch-src_nxt__unit.c) = fd9a43fc2cbcd342cd5e82e074c3c5a3d6a090cb
 SHA1 (patch-src_nxt__unix.h) = c0db5bc4d9c45a3ead48627567284d8b3041b0a0
 SHA1 (patch-src_nxt__websocket__header.h) = 1b50405b187cc8a662372a1c20ab7737278135ae
