@@ -1,16 +1,17 @@
-$NetBSD: patch-Gemfile,v 1.3 2021/06/02 16:04:39 taca Exp $
+$NetBSD: patch-Gemfile,v 1.4 2021/08/22 06:36:30 taca Exp $
 
 Relax dependency.
 
---- Gemfile.orig	2021-04-26 14:40:21.000000000 +0000
+--- Gemfile.orig	2021-08-01 08:00:11.000000000 +0000
 +++ Gemfile
-@@ -3,18 +3,18 @@ source 'https://rubygems.org'
+@@ -3,19 +3,19 @@ source 'https://rubygems.org'
  ruby '>= 2.3.0', '< 2.7.0' if Bundler::VERSION >= '1.12.0'
  gem "bundler", ">= 1.5.0"
  
--gem 'rails', '5.2.5'
-+gem "rails", ">= 5.2.5"
+-gem 'rails', '5.2.6'
++gem 'rails', '~> 5.2.6'
  gem 'sprockets', '~> 3.7.2' if RUBY_VERSION < '2.5'
+ gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 -gem "rouge", "~> 3.12.0"
 -gem "request_store", "~> 1.4.1"
 +gem "rouge", ">= 3.12.0"
@@ -28,7 +29,7 @@ Relax dependency.
  gem "rbpdf", "~> 1.20.0"
  
  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-@@ -22,7 +22,7 @@ gem 'tzinfo-data', platforms: [:mingw, :
+@@ -23,7 +23,7 @@ gem 'tzinfo-data', platforms: [:mingw, :
  
  # Optional gem for LDAP authentication
  group :ldap do
@@ -37,7 +38,7 @@ Relax dependency.
  end
  
  # Optional gem for OpenID authentication
-@@ -33,7 +33,7 @@ end
+@@ -34,7 +34,7 @@ end
  
  # Optional gem for exporting the gantt to a PNG file
  group :minimagick do
@@ -46,7 +47,7 @@ Relax dependency.
  end
  
  # Optional Markdown support, not for JRuby
-@@ -55,7 +55,7 @@ if File.exist?(database_file)
+@@ -56,7 +56,7 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /postgresql/
@@ -55,7 +56,7 @@ Relax dependency.
        when /sqlite3/
          gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlserver/
-@@ -72,25 +72,6 @@ else
+@@ -73,25 +73,6 @@ else
    warn("Please configure your config/database.yml first")
  end
  
