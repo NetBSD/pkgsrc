@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2021/08/22 04:00:43 gutteridge Exp $
-sbin/unitd
+@comment $NetBSD: PLIST,v 1.3 2021/08/22 04:04:14 gutteridge Exp $
 man/man8/unitd.8
+sbin/unitd
