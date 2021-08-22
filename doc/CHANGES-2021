@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4317 2021/08/22 14:47:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4318 2021/08/22 14:49:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6791,3 +6791,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ruby2_keywords to 0.0.5 [taca 2021-08-22]
 	Updated devel/ruby-rugged to 1.1.1 [taca 2021-08-22]
 	Updated devel/ruby-shoulda-matchers to 5.0.0 [taca 2021-08-22]
+	Updated meta-pkgs/ruby-shoulda to 4.0.0nb1 [taca 2021-08-22]
