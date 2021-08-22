@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/29 15:00:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/08/22 13:52:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pycall.${RUBY_DLEXT}
@@ -55,6 +55,7 @@ ${GEM_LIBDIR}/lib/pycall/gc_guard.rb
 ${GEM_LIBDIR}/lib/pycall/import.rb
 ${GEM_LIBDIR}/lib/pycall/init.rb
 ${GEM_LIBDIR}/lib/pycall/iruby_helper.rb
+${GEM_LIBDIR}/lib/pycall/iterable_wrapper.rb
 ${GEM_LIBDIR}/lib/pycall/libpython.rb
 ${GEM_LIBDIR}/lib/pycall/libpython/finder.rb
 ${GEM_LIBDIR}/lib/pycall/libpython/pyobject_struct.rb
