@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/14 18:11:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/22 17:02:43 tsutsui Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome-${VERSION}
@@ -27,12 +27,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-clutter-gstreamer>=${VERSION}:../../multimedia/ruby-
 DEPENDS+=	${RUBY_PKGPREFIX}-gstreamer>=${VERSION}:../../multimedia/ruby-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-poppler>=${VERSION}:../../print/ruby-poppler
 DEPENDS+=	${RUBY_PKGPREFIX}-webkit-gtk>=${VERSION}:../../www/ruby-webkit-gtk
-DEPENDS+=	${RUBY_PKGPREFIX}-webkit-gtk2>=${VERSION}:../../www/ruby-webkit-gtk2
-DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=${VERSION}:../../x11/ruby-gtk2
 DEPENDS+=	${RUBY_PKGPREFIX}-gtk3>=${VERSION}:../../x11/ruby-gtk3
-DEPENDS+=	${RUBY_PKGPREFIX}-gtksourceview2>=${VERSION}:../../x11/ruby-gtksourceview2
 DEPENDS+=	${RUBY_PKGPREFIX}-gtksourceview3>=${VERSION}:../../x11/ruby-gtksourceview3
-DEPENDS+=	${RUBY_PKGPREFIX}-vte>=${VERSION}:../../x11/ruby-vte
 
 META_PACKAGE=	yes
 
