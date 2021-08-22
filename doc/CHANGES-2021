@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4303 2021/08/22 07:14:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4304 2021/08/22 07:17:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6765,3 +6765,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-activestorage60 to 6.0.4.1 [taca 2021-08-22]
 	Updated textproc/ruby-actiontext60 to 6.0.4.1 [taca 2021-08-22]
 	Updated www/ruby-rails60 to 6.0.4.1 [taca 2021-08-22]
+	Updated devel/ruby-activesupport61 to 6.1.4.1 [taca 2021-08-22]
+	Updated devel/ruby-activemodel61 to 6.1.4.1 [taca 2021-08-22]
+	Updated devel/ruby-activejob61 to 6.1.4.1 [taca 2021-08-22]
+	Updated www/ruby-actionview61 to 6.1.4.1 [taca 2021-08-22]
+	Updated www/ruby-actionpack61 to 6.1.4.1 [taca 2021-08-22]
+	Updated databases/ruby-activerecord61 to 6.1.4.1 [taca 2021-08-22]
+	Updated devel/ruby-activestorage61 to 6.1.4.1 [taca 2021-08-22]
+	Updated mail/ruby-actionmailer61 to 6.1.4.1 [taca 2021-08-22]
+	Updated mail/ruby-actionmailbox61 to 6.1.4.1 [taca 2021-08-22]
+	Updated www/ruby-actioncable61 to 6.1.4.1 [taca 2021-08-22]
+	Updated devel/ruby-railties61 to 6.1.4.1 [taca 2021-08-22]
+	Updated textproc/ruby-actiontext61 to 6.1.4.1 [taca 2021-08-22]
+	Updated www/ruby-rails61 to 6.1.4.1 [taca 2021-08-22]
