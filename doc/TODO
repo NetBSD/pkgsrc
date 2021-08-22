@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20957 2021/08/22 01:43:54 mef Exp $
+$NetBSD: TODO,v 1.20958 2021/08/22 01:50:17 mef Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-IRkernel-1.1.1
 	o R-MatrixModels-0.5.0
 	o R-R6-2.5.0
-	o R-RCurl-1.98.1.3
 	o R-RSQLite-2.6
 	o R-RcppArmadillo-0.10.4.0.0
 	o R-SparseM-1.81
