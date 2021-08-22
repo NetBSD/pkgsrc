@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4304 2021/08/22 07:17:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4305 2021/08/22 13:41:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6778,3 +6778,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-railties61 to 6.1.4.1 [taca 2021-08-22]
 	Updated textproc/ruby-actiontext61 to 6.1.4.1 [taca 2021-08-22]
 	Updated www/ruby-rails61 to 6.1.4.1 [taca 2021-08-22]
+	Updated devel/ruby-globalid to 0.5.2 [taca 2021-08-22]
