@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/23 15:42:31 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/08/22 13:45:39 taca Exp $
 
-SHA1 (metasm-1.0.4.gem) = 10631d06ffcd6ace20b255b59ca20fcd69030a8c
-RMD160 (metasm-1.0.4.gem) = 99170fd862d946f75904ecbdc22e1a497d797235
-SHA512 (metasm-1.0.4.gem) = 35fe98bfd9d8b2f0d6a69cce409319288d9a54458f22a308682c3ea432e2c34d50d33a3849c08f773e87ee0a67aa5cc6bb337ec99045f23b6aca43c9f5ce70cc
-Size (metasm-1.0.4.gem) = 802816 bytes
+SHA1 (metasm-1.0.5.gem) = 044af72e67e9e3093974ddf7a2de74ae8c089eeb
+RMD160 (metasm-1.0.5.gem) = fae2117ac32f014ebac6891e4256d6a341988d12
+SHA512 (metasm-1.0.5.gem) = 74a6eac47c06e7ff53f4e400fec6c6c73981bc58d09520ce7cdd657b6b74819fc5b9d6168edaf90eeb5c9b2087fd4924df1e21743809065cc1433428efbe1dd8
+Size (metasm-1.0.5.gem) = 803328 bytes
