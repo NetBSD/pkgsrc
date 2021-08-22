@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/08/22 06:36:30 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/22 06:40:24 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -18,7 +18,7 @@ RUBY_VERSIONS_ACCEPTED=	26
 
 RUBY_RAILS_ACCEPTED=	52
 
-OVERRIDE_GEMSPEC+=	net-ldap>=0.16.0 nokogiri>=1.10.0 roadie-rails>=2.1.0
+OVERRIDE_GEMSPEC+=	net-ldap>=0.16.0 nokogiri>=1.11.0 roadie-rails>=2.1.0
 
 .include "../../lang/ruby/modules.mk"
 
