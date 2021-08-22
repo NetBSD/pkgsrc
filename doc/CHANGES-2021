@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4299 2021/08/22 04:00:59 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4300 2021/08/22 04:06:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6749,3 +6749,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox-l10n to 91.0.1 [ryoon 2021-08-22]
 	Updated misc/libreoffice to 7.2.0.4 [ryoon 2021-08-22]
 	Updated devel/libunit to 1.25.0 [gutteridge 2021-08-22]
+	Updated www/unit to 1.25.0 [gutteridge 2021-08-22]
