@@ -1,15 +1,15 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.6 2021/01/01 13:17:44 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.7 2021/08/22 02:41:50 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2020-12-18 15:40:32.141745268 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2021-08-19 17:48:05.038930162 +0000
 +++ external/pdfium/pkgsrc.patch.1
 @@ -0,0 +1,30 @@
-+--- pdfium/core/fxcrt/cfx_datetime.cpp.orig	2020-10-26 18:26:04.000000000 +0000
++--- pdfium/core/fxcrt/cfx_datetime.cpp.orig	2021-05-03 04:55:56.000000000 +0000
 ++++ pdfium/core/fxcrt/cfx_datetime.cpp
-+@@ -10,7 +10,7 @@
-+ #include "core/fxcrt/fx_system.h"
++@@ -11,7 +11,7 @@
++ #include "third_party/base/check.h"
 + 
 + #if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || \
 +-    defined(OS_APPLE) || defined(OS_ASMJS)
@@ -17,10 +17,10 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.6 2021/01/01 13:17:44 ryoon Ex
 + #include <sys/time.h>
 + #include <time.h>
 + #endif
-+--- pdfium/core/fxge/fx_ge_linux.cpp.orig	2020-10-26 18:26:04.000000000 +0000
-++++ pdfium/core/fxge/fx_ge_linux.cpp
-+@@ -16,7 +16,7 @@
-+ #include "core/fxge/systemfontinfo_iface.h"
++--- pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2021-05-03 04:55:56.000000000 +0000
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp
++@@ -17,7 +17,7 @@
++ #include "third_party/base/check.h"
 + #include "third_party/base/stl_util.h"
 + 
 +-#if !defined(OS_LINUX) && !defined(OS_CHROMEOS) && !defined(OS_ASMJS)
@@ -28,7 +28,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.6 2021/01/01 13:17:44 ryoon Ex
 + #error "Included on the wrong platform"
 + #endif
 + 
-+@@ -169,6 +169,7 @@ class CLinuxPlatform : public CFX_GEModu
++@@ -170,6 +170,7 @@ class CLinuxPlatform : public CFX_GEModu
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
 +       pInfo->AddPath("/usr/local/share/fonts");

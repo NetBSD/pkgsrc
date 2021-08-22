@@ -1,8 +1,12 @@
-$NetBSD: patch-external_skia_netbsd.patch.0,v 1.1 2020/08/11 16:07:39 ryoon Exp $
+$NetBSD: patch-external_skia_netbsd.patch.0,v 1.2 2021/08/22 02:41:50 ryoon Exp $
 
---- external/skia/netbsd.patch.0.orig	2020-08-10 05:53:36.561427096 +0000
+* Support NetBSD.
+* Fix build failure (isnan etc. are not defined) under NetBSD/amd64 9.99.88
+  (GCC 10.3.0) at least.
+
+--- external/skia/netbsd.patch.0.orig	2021-08-19 23:46:10.790195547 +0000
 +++ external/skia/netbsd.patch.0
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,29 @@
 +NetBSD has no uselocale(3).
 +
 +--- src/gpu/GrAutoLocaleSetter.h.orig	2020-05-18 08:42:43.094191883 +0000
@@ -16,3 +20,19 @@ $NetBSD: patch-external_skia_netbsd.patch.0,v 1.1 2020/08/11 16:07:39 ryoon Exp 
 + #define HAVE_LOCALE_T 0
 + #else
 + #define HAVE_LOCALE_T 1
++--- src/sksl/dsl/DSLExpression.cpp.orig	2021-03-01 14:53:20.790708027 +0000
+++++ src/sksl/dsl/DSLExpression.cpp
++@@ -41,10 +41,10 @@ DSLExpression::DSLExpression(float value
++     : fExpression(std::make_unique<SkSL::FloatLiteral>(DSLWriter::Context(),
++                                                        /*offset=*/-1,
++                                                        value)) {
++-    if (!isfinite(value)) {
++-        if (isinf(value)) {
+++    if (!std::isfinite(value)) {
+++        if (std::isinf(value)) {
++             DSLWriter::ReportError("error: floating point value is infinite\n");
++-        } else if (isnan(value)) {
+++        } else if (std::isnan(value)) {
++             DSLWriter::ReportError("error: floating point value is NaN\n");
++         }
++     }

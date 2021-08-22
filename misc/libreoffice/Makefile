@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.268 2021/08/17 08:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.269 2021/08/22 02:41:50 ryoon Exp $
 
-VERREL=		7.1.5
-VERRC=		2
+VERREL=		7.2.0
+VERRC=		4
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,13 +21,13 @@ USE_LANGUAGES=	c gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
 BUILDLINK_TRANSFORM+=	opt:-std=c++2a:-std=gnu++2a
+CONFIG_SHELL=		${BASH}
 
 SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
 SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
 SUBST_VARS.use-bash+=		BASH
-SUBST_VARS.use-bash+=		PREFIX
 
 SUBST_CLASSES+=			font-path
 SUBST_STAGE.font-path=		pre-configure
@@ -68,19 +67,18 @@ EXTRACT_ONLY+=		libreoffice-${component}-${VER}.tar.xz
 .endfor
 
 MORE_DISTFILES= \
-	breakpad.zip \
+	breakpad-b324760c7f53667af128a6b77b790323da04fcb9.tar.xz \
 	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
 	liberation-narrow-fonts-ttf-1.07.6.tar.gz \
 	liberation-fonts-ttf-2.00.4.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.30.tar.gz \
+	xmlsec1-1.2.32.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
 	3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip \
-	commons-logging-1.2-src.tar.gz \
 	a8c2c5b8f09e7ede322d5c602ff6a4b6-mythes-1.2.4.tar.gz \
 	8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip \
 	97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip \
@@ -95,19 +93,19 @@ MORE_DISTFILES= \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
-	a233181e03d3c307668b4c722d881661-mariadb_client-2.0.0-src.tar.gz \
+	mariadb-connector-c-3.1.8-src.tar.gz \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
-	language-subtag-registry-2018-04-23.tar.bz2 \
+	language-subtag-registry-2021-03-05.tar.bz2 \
 	libeot-0.01.tar.bz2 \
 	postgresql-13.1.tar.bz2 \
-	graphite2-minimal-1.3.10.tgz \
+	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
 	libjpeg-turbo-1.5.3.tar.gz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
-	culmus-0.131.tar.gz \
+	culmus-0.133.tar.gz \
 	ttf-kacst_2.01+mry.tar.gz \
 	libre-hebrew-1.0.tar.gz \
 	noto-fonts-20171024.tar.gz \
@@ -115,9 +113,11 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-4306.tar.bz2 \
+	pdfium-4500.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m88-59bafeeaa7de9eb753e3778c414e01dcf013dcd8.tar.xz
+	skia-m90-45c57e116ee0ce214bdf78405a4762722e4507d9.tar.xz \
+	zxing-cpp-1.1.1.tar.gz \
+	libcmis-0.5.2.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -200,7 +200,11 @@ CONFIGURE_ARGS+=	--enable-ext-nlpsolver
 CONFIGURE_ARGS+=	--with-system-gpgmepp
 CONFIGURE_ARGS+=	--without-system-jpeg
 CONFIGURE_ARGS+=	--without-system-postgresql
+CONFIGURE_ARGS+=	--without-system-mariadb
 CONFIGURE_ARGS+=	--without-system-xmlsec
+CONFIGURE_ARGS+=	--without-system-zxing
+# Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
+CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--with-compat-oowrappers
 CONFIGURE_ARGS+=	--with-external-tar=${WRKSRC}/src
 CONFIGURE_ARGS+=	--with-fonts
@@ -215,7 +219,6 @@ CONFIGURE_ARGS+=	--without-doxygen
 CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-gssapi
-CONFIGURE_ARGS+=	--without-system-apache-commons
 CONFIGURE_ARGS+=	--with-system-cppunit
 # gengal.bin segfault, in runtime same problem causes application error.
 #CONFIGURE_ARGS+=	--without-galleries
@@ -328,7 +331,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/libzmf/buildlink3.mk"
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
+#.include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
@@ -362,7 +365,6 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/qr-code-generator16/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -376,7 +378,8 @@ BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/lp_solve/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/libcmis/buildlink3.mk"
+# Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
+#.include "../../net/libcmis/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 #.include "../../print/poppler-cpp/buildlink3.mk"
