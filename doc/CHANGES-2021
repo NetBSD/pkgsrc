@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4315 2021/08/22 14:27:19 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4316 2021/08/22 14:41:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6789,3 +6789,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/go117 version 1.17 [bsiegert 2021-08-22]
 	Removed lang/go115 successor lang/go117 [bsiegert 2021-08-22]
 	Updated devel/ruby-ruby2_keywords to 0.0.5 [taca 2021-08-22]
+	Updated devel/ruby-rugged to 1.1.1 [taca 2021-08-22]
