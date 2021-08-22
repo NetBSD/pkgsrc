@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4301 2021/08/22 06:36:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4302 2021/08/22 06:44:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6751,3 +6751,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libunit to 1.25.0 [gutteridge 2021-08-22]
 	Updated www/unit to 1.25.0 [gutteridge 2021-08-22]
 	Updated devel/ruby-redmine41 to 4.1.4 [taca 2021-08-22]
+	Updated devel/ruby-redmine42 to 4.2.2 [taca 2021-08-22]
