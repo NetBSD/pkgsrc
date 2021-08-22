@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4320 2021/08/22 17:07:07 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.4321 2021/08/22 18:25:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6815,3 +6815,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/ruby-gtksourceview2 to 3.4.3 [tsutsui 2021-08-22]
 	Updated x11/ruby-gtksourceview3 to 3.4.3 [tsutsui 2021-08-22]
 	Updated x11/ruby-vte to 3.4.3 [tsutsui 2021-08-22]
+	Updated www/hugo to 0.87.0 [bsiegert 2021-08-22]
