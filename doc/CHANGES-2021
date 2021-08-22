@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4314 2021/08/22 14:19:39 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.4315 2021/08/22 14:27:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6788,3 +6788,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-rspec-rails to 5.0.2 [taca 2021-08-22]
 	Added lang/go117 version 1.17 [bsiegert 2021-08-22]
 	Removed lang/go115 successor lang/go117 [bsiegert 2021-08-22]
+	Updated devel/ruby-ruby2_keywords to 0.0.5 [taca 2021-08-22]
