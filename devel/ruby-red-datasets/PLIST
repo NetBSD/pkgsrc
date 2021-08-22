@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/10 14:31:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/22 13:58:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -28,8 +28,10 @@ ${GEM_LIBDIR}/lib/datasets/penguins.rb
 ${GEM_LIBDIR}/lib/datasets/penn-treebank.rb
 ${GEM_LIBDIR}/lib/datasets/postal-code-japan.rb
 ${GEM_LIBDIR}/lib/datasets/rdatasets.rb
+${GEM_LIBDIR}/lib/datasets/seaborn-data.rb
+${GEM_LIBDIR}/lib/datasets/sudachi-synonym-dictionary.rb
 ${GEM_LIBDIR}/lib/datasets/table.rb
-${GEM_LIBDIR}/lib/datasets/tar_gz_readable.rb
+${GEM_LIBDIR}/lib/datasets/tar-gz-readable.rb
 ${GEM_LIBDIR}/lib/datasets/version.rb
 ${GEM_LIBDIR}/lib/datasets/wikipedia.rb
 ${GEM_LIBDIR}/lib/datasets/wine.rb
@@ -55,6 +57,8 @@ ${GEM_LIBDIR}/test/test-penguins.rb
 ${GEM_LIBDIR}/test/test-penn-treebank.rb
 ${GEM_LIBDIR}/test/test-postal-code-japan.rb
 ${GEM_LIBDIR}/test/test-rdatasets.rb
+${GEM_LIBDIR}/test/test-seaborn-data.rb
+${GEM_LIBDIR}/test/test-sudachi-synonym-dictionary.rb
 ${GEM_LIBDIR}/test/test-table.rb
 ${GEM_LIBDIR}/test/test-wikipedia.rb
 ${GEM_LIBDIR}/test/test-wine.rb
