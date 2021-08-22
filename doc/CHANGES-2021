@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4319 2021/08/22 14:53:58 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4320 2021/08/22 17:07:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6793,3 +6793,25 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-shoulda-matchers to 5.0.0 [taca 2021-08-22]
 	Updated meta-pkgs/ruby-shoulda to 4.0.0nb1 [taca 2021-08-22]
 	Updated finance/ruby-braintree to 4.4.0 [taca 2021-08-22]
+	Updated devel/ruby-atk to 3.4.3 [tsutsui 2021-08-22]
+	Updated devel/ruby-gio2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated devel/ruby-glib2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated devel/ruby-gobject-introspection to 3.4.3 [tsutsui 2021-08-22]
+	Updated devel/ruby-pango to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-cairo-gobject to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-clutter to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-clutter-gdk to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-clutter-gtk to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-gdk3 to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-gdk_pixbuf2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated graphics/ruby-rsvg2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated multimedia/ruby-clutter-gstreamer to 3.4.3 [tsutsui 2021-08-22]
+	Updated multimedia/ruby-gstreamer to 3.4.3 [tsutsui 2021-08-22]
+	Updated print/ruby-poppler to 3.4.3 [tsutsui 2021-08-22]
+	Updated www/ruby-webkit-gtk to 3.4.3 [tsutsui 2021-08-22]
+	Updated www/ruby-webkit-gtk2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated x11/ruby-gtk2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated x11/ruby-gtk3 to 3.4.3 [tsutsui 2021-08-22]
+	Updated x11/ruby-gtksourceview2 to 3.4.3 [tsutsui 2021-08-22]
+	Updated x11/ruby-gtksourceview3 to 3.4.3 [tsutsui 2021-08-22]
+	Updated x11/ruby-vte to 3.4.3 [tsutsui 2021-08-22]
