@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/05/02 18:05:05 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/08/22 17:02:43 tsutsui Exp $
 #
 # used by devel/ruby-atk/Makefile
 # used by devel/ruby-gio2/Makefile
@@ -16,16 +16,10 @@
 # used by multimedia/ruby-gstreamer/Makefile
 # used by print/ruby-poppler/Makefile
 # used by www/ruby-webkit-gtk/Makefile
-# used by www/ruby-webkit-gtk2/Makefile
-# used by x11/ruby-gtk2/Makefile
 # used by x11/ruby-gtk3/Makefile
-# used by x11/ruby-gtksourceview2/Makefile
 # used by x11/ruby-gtksourceview3/Makefile
-# used by x11/ruby-vte/Makefile
-
-CATEGORIES+=		ruby
 
 HOMEPAGE=		https://ruby-gnome2.osdn.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		3.4.2
+VERSION=		3.4.3
