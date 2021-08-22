@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/01/26 15:26:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/22 14:26:58 taca Exp $
 
-DISTNAME=	ruby2_keywords-0.0.4
+DISTNAME=	ruby2_keywords-0.0.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
