@@ -1,10 +1,10 @@
-$NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.1 2018/02/03 00:39:50 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.2 2021/08/22 02:41:50 ryoon Exp $
 
 --- external/mariadb-connector-c/netbsd.patch.orig	2018-02-01 04:59:29.711564554 +0000
 +++ external/mariadb-connector-c/netbsd.patch
 @@ -0,0 +1,11 @@
-+--- mariadb/include/my_global.h.orig	2014-04-04 10:21:01.000000000 +0000
-++++ mariadb/include/my_global.h
++--- mariadb/include/ma_global.h.orig	2014-04-04 10:21:01.000000000 +0000
+++++ mariadb/include/ma_global.h
 +@@ -190,7 +190,7 @@ double my_ulonglong2double(unsigned long
 + #ifdef HAVE_UNISTD_H
 + #include <unistd.h>

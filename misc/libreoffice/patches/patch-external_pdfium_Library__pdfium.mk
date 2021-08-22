@@ -1,10 +1,10 @@
-$NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.2 2021/01/01 13:17:44 ryoon Exp $
+$NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.3 2021/08/22 02:41:50 ryoon Exp $
 
 * Do not conflict with external freetype2 on NetBSD etc.
 
---- external/pdfium/Library_pdfium.mk.orig	2020-12-09 18:56:14.000000000 +0000
+--- external/pdfium/Library_pdfium.mk.orig	2021-08-16 19:56:28.000000000 +0000
 +++ external/pdfium/Library_pdfium.mk
-@@ -577,9 +577,9 @@ $(eval $(call gb_Library_use_externals,p
+@@ -566,9 +566,9 @@ $(eval $(call gb_Library_use_externals,p
      icuuc \
  ))
  
@@ -16,7 +16,7 @@ $NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.2 2021/01/01 13:17:44 ryoo
      -lrt \
  ))
  
-@@ -682,7 +682,7 @@ $(eval $(call gb_Library_add_generated_e
+@@ -685,7 +685,7 @@ $(eval $(call gb_Library_add_generated_e
  ))
  endif
  
@@ -24,4 +24,4 @@ $NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.2 2021/01/01 13:17:44 ryoo
 +ifeq ($(OS), $(filter LINUX %BSD SOLARIS, $(OS)))
  # fxge
  $(eval $(call gb_Library_add_generated_exception_objects,pdfium,\
-     UnpackedTarball/pdfium/core/fxge/fx_ge_linux \
+     UnpackedTarball/pdfium/core/fxge/linux/fx_linux_impl \
