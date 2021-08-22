@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20958 2021/08/22 01:50:17 mef Exp $
+$NetBSD: TODO,v 1.20959 2021/08/22 04:00:59 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1231,7 +1231,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
-	o libunit-1.23.0
 	o libvirt-2.3
 	o libwebsockets-4.2.0
 	o libxdg-basedir-1.2.3
