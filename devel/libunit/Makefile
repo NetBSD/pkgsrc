@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/14 13:44:34 otis Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/22 04:02:23 gutteridge Exp $
 
 PKGNAME=	libunit-${UNIT_VERSION}
 DISTNAME=	unit-${UNIT_VERSION}
@@ -20,5 +20,4 @@ do-install:
 
 .include "../../www/unit/version.mk"
 .include "../../www/unit/Makefile.common"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
