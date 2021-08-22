@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/06/03 14:44:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/08/22 14:53:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -59,6 +59,8 @@ ${GEM_LIBDIR}/lib/braintree/granted_payment_instrument_update.rb
 ${GEM_LIBDIR}/lib/braintree/graphql_client.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_completed.rb
+${GEM_LIBDIR}/lib/braintree/local_payment_expired.rb
+${GEM_LIBDIR}/lib/braintree/local_payment_funded.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_reversed.rb
 ${GEM_LIBDIR}/lib/braintree/merchant.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account.rb
@@ -225,10 +227,13 @@ ${GEM_LIBDIR}/spec/unit/braintree/error_result_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/errors_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/local_payment_funded_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/merchant_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/modification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_payer_info_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
