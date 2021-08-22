@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4308 2021/08/22 13:50:31 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4309 2021/08/22 13:52:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-metasm to 1.0.5 [taca 2021-08-22]
 	Updated devel/ruby-mocha to 1.13.0 [taca 2021-08-22]
 	Updated devel/ruby-parser to 3.17.0 [taca 2021-08-22]
+	Updated devel/ruby-pycall to 1.4.1 [taca 2021-08-22]
