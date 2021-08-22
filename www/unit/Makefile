@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/08/22 04:00:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/22 05:10:19 gutteridge Exp $
 
 .include "../../www/unit/version.mk"
 
@@ -10,5 +10,7 @@ MAINTAINER=	osa@FreeBSD.org
 
 RCD_SCRIPTS=	unit
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror
+	
 .include "../../www/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
