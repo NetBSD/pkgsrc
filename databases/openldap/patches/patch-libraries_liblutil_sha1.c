@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2006/05/18 05:14:11 taca Exp $
+$NetBSD: patch-libraries_liblutil_sha1.c,v 1.1 2021/08/23 09:58:58 adam Exp $
 
---- libraries/liblutil/sha1.c.orig	2006-01-04 07:16:11.000000000 +0900
+--- libraries/liblutil/sha1.c.orig	2021-07-27 17:44:47.000000000 +0000
 +++ libraries/liblutil/sha1.c
 @@ -50,10 +50,16 @@
  #define SHA1HANDSOFF		/* Copies data before messing with it. */
