@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/08/11 19:35:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/23 07:55:07 tnn Exp $
 
 DISTNAME=	elvish-0.15.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-GO_VERSION_DEFAULT=	115
+#GO_VERSION_DEFAULT=	115
 
 INSTALLATION_DIRS=	bin
 PKG_SHELL=		bin/elvish
