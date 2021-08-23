@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.1 2021/07/14 20:51:27 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/08/23 13:15:06 bsiegert Exp $
 
-SHA1 (elvish-0.15.0.tar.gz) = 09e999ce32e0d6eea6b03ffab05e41eefb9c74e0
-RMD160 (elvish-0.15.0.tar.gz) = 4c9c4bc15974c4428abb77633357f6afcce8115d
-SHA512 (elvish-0.15.0.tar.gz) = fad60c44710c919384624e680cf22379c90126bd304b21fe12ff4f0fc8d5288456568c14e20d23a24cc5e96a2b90055a92b9741a0c40dda52edeaed1b6a8a9f7
-Size (elvish-0.15.0.tar.gz) = 603715 bytes
-SHA1 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 0937ac1d493b480c07bf48073bffe60c2ba902f1
-RMD160 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 722a12078a5d845bfcf238c63a7b7d3a563b48be
-SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 320941bc3b7fb8bc595e6135cbc513a7583d129f0cd92508055291e141191066303cf75148e25198c21f6c6c539a790ea3210f3ecf5de6a2a03b70c753091146
-Size (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 34 bytes
-SHA1 (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = 5c870c5cbf65bb55d76313cdd27933198b37a582
-RMD160 (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = e626b6d983287297f9bd907c23fcd3f040798eeb
-SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = 43ed64ae515738487e9b75a2290d0b2bc25e83c021a9f29b21487c37adbf34e74e1e7d3d5ec0dfe678c8396356f95c3993a5f5610d1791ff62056cd182a4272f
-Size (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = 56132 bytes
+SHA1 (elvish-0.16.1.tar.gz) = 06a7aa2ff43646e8f5fa7b95e770b9600e6c70a9
+RMD160 (elvish-0.16.1.tar.gz) = a37537df08ad9b216c3bda8a512786feccf7ca66
+SHA512 (elvish-0.16.1.tar.gz) = a8173bea79547d6c261eda9f22eebcbd1c33977cadd998a6ecf270bb8df70550330ed4305390c4310916e6e4762d0596cc8eab616b3bc17711bba1852c4516d1
+Size (elvish-0.16.1.tar.gz) = 664779 bytes
 SHA1 (github.com_creack_pty_@v_v1.1.11.mod) = 344487e7982e8c229f9057c72f48e274d9c0fa37
 RMD160 (github.com_creack_pty_@v_v1.1.11.mod) = 7b5b86f88d61dd46632402e7567ee4e636c6c654
 SHA512 (github.com_creack_pty_@v_v1.1.11.mod) = 9cf1687520933d3d6bbec9d7c51472998d3bdbe1b3d2a7478fca80f9e7944f9040a2b8ec7d49f1458bd46a5121bae4810d314725add41efd413319a5006b944a
@@ -28,14 +20,6 @@ SHA1 (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 5fab916c3edf3c971e6b17feeab5f
 RMD160 (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 4a697bb087dd8e784a3d18d25e6b29dd880a2799
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 79ba14a04838c509500e6098553e8aadcd7105445387160a8aa1a6d7b0e70f0e807c99036c31faf51920544da2156195174c8530e317a72728719cb0a9a66098
 Size (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 8902 bytes
-SHA1 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.mod) = d68475e206c5789aa249602a62bd4049ab23c10b
-RMD160 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.mod) = 2e2e15cc16b26a159306721bff735ceb1b063ff0
-SHA512 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.mod) = 768262771f2e79947436c5e3a7a88accb79ef30f6244071c0520667a852d2b7aa570e79a35f1ad7c5ede40df7372f7fafd71241d3a253ee053022093a55a5fea
-Size (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.mod) = 43 bytes
-SHA1 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.zip) = e6f2b3878bd589dfc5b34aaddcdfbcb09a897456
-RMD160 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.zip) = 7a191a4b41f39490af820bd6b2618a958722dc75
-SHA512 (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.zip) = c027a4b3953d9105708c47af5702580567e128804b3806810c3be37c5d664858e84787a161f4a6d9975694f224bebc3743a3e1468a920e4313e87bf7ce4435a8
-Size (github.com_xiaq_persistent_@v_v0.0.0-20200820214153-3175cfb92e14.zip) = 24550 bytes
 SHA1 (go.etcd.io_bbolt_@v_v1.3.5.mod) = a373a3ea4cad6b1531ece5912b6ab33c8afed549
 RMD160 (go.etcd.io_bbolt_@v_v1.3.5.mod) = 1ea084da2a99fce17399f8d11b0b70a615c86248
 SHA512 (go.etcd.io_bbolt_@v_v1.3.5.mod) = d3cfb7a75e321d2a6fc145b727dea76002189ae2caa8dd3162e5e6903a1acbe5bd55be81d7f112c71b47e61351534ff991be30993632be9c9d7443111600fe39
