@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4325 2021/08/23 10:02:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4326 2021/08/23 10:41:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6822,3 +6822,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 2.0.0 [schmonz 2021-08-23]
 	Updated databases/openldap to 2.5.7 [adam 2021-08-23]
 	Updated www/py-uvicorn to 0.15.0 [adam 2021-08-23]
+	Updated devel/git to 2.33.0 [adam 2021-08-23]
