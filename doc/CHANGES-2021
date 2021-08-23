@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4327 2021/08/23 13:28:56 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.4328 2021/08/23 15:00:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6824,3 +6824,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-uvicorn to 0.15.0 [adam 2021-08-23]
 	Updated devel/git to 2.33.0 [adam 2021-08-23]
 	Updated shells/elvish to 0.16.1 [bsiegert 2021-08-23]
+	Updated security/acmesh to 3.0.0 [ryoon 2021-08-23]
