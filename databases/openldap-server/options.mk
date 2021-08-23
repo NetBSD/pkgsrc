@@ -1,30 +1,14 @@
-# $NetBSD: options.mk,v 1.24 2020/04/03 10:56:40 jperkin Exp $
+# $NetBSD: options.mk,v 1.25 2021/08/23 09:58:59 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=		bdb dso inet6 sasl slapi slp smbk5pwd
+PKG_SUPPORTED_OPTIONS=		dso inet6 sasl slapi slp
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
-PKG_SUGGESTED_OPTIONS=		bdb dso inet6
+PKG_SUGGESTED_OPTIONS=		dso inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	slapi bdb
-
-###
-### Whether to build with the Berkeley DB based slapd backends.
-###
-### NOTE: that option is enabled, because the openldap server needs
-### 	  to have local storage support to work as standalone.
-###
-.if !empty(PKG_OPTIONS:Mbdb)
-BDB_ACCEPTED=		db4 db5
-CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
-PLIST.bdb=		yes
-TEST_TARGET=		test
-.  include "../../mk/bdb.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
-.endif
+PLIST_VARS+=	slapi
 
 ###
 ### Whether to build with iODBC to enable SQL based slapd backends
@@ -74,14 +58,6 @@ CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-###
-### smbk5pwd support (sync samba and kerberos passwords on password changes)
-###
-.if !empty(PKG_OPTIONS:Msmbk5pwd)
-PKG_FAIL_REASON+=	"smbk5pwd option to openldap-server is now " \
-			"available through the openldap-smbk5pwd package"
 .endif
 
 ###

@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.5 2012/08/06 13:33:38 adam Exp $
+$NetBSD: patch-libraries_libldap_ldap-int.h,v 1.1 2021/08/23 09:58:58 adam Exp $
 
---- libraries/libldap/ldap-int.h.orig	2005-10-11 21:10:47.000000000 -0400
+--- libraries/libldap/ldap-int.h.orig	2021-07-27 17:44:47.000000000 +0000
 +++ libraries/libldap/ldap-int.h
-@@ -743,7 +743,7 @@ LDAP_F (int) ldap_int_sasl_close LDAP_P(
+@@ -866,7 +866,7 @@ LDAP_F (int) ldap_int_sasl_close LDAP_P(
  
  LDAP_F (int) ldap_int_sasl_external LDAP_P((
  	LDAP *ld, LDAPConn *conn,

@@ -1,6 +1,6 @@
-$NetBSD: patch-dd,v 1.3 2012/03/13 19:57:11 adam Exp $
+$NetBSD: patch-contrib_slapd-modules_nops_nops.c,v 1.1 2021/08/23 09:58:58 adam Exp $
 
---- contrib/slapd-modules/nops/nops.c.orig	2009-04-28 02:51:12.000000000 +0200
+--- contrib/slapd-modules/nops/nops.c.orig	2021-07-27 17:44:47.000000000 +0000
 +++ contrib/slapd-modules/nops/nops.c
 @@ -69,10 +69,15 @@ nops_modify( Operation *op, SlapReply *r
  	int rc;

@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
+$NetBSD: patch-libraries_libldap_cyrus.c,v 1.1 2021/08/23 09:58:58 adam Exp $
 
---- libraries/libldap/cyrus.c.orig	2012-02-29 17:37:09.000000000 +0000
+--- libraries/libldap/cyrus.c.orig	2021-07-27 17:44:47.000000000 +0000
 +++ libraries/libldap/cyrus.c
-@@ -680,7 +680,7 @@ ldap_int_sasl_external(
+@@ -767,7 +767,7 @@ ldap_int_sasl_external(
  	LDAP *ld,
  	LDAPConn *conn,
  	const char * authid,
@@ -11,7 +11,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  {
  	int sc;
  	sasl_conn_t *ctx;
-@@ -824,6 +824,7 @@ int ldap_pvt_sasl_secprops(
+@@ -911,6 +911,7 @@ int ldap_pvt_sasl_secprops(
  	char **props;
  	unsigned sflags = 0;
  	int got_sflags = 0;
@@ -19,7 +19,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  	sasl_ssf_t max_ssf = 0;
  	int got_max_ssf = 0;
  	sasl_ssf_t min_ssf = 0;
-@@ -854,9 +855,9 @@ int ldap_pvt_sasl_secprops(
+@@ -941,9 +942,9 @@ int ldap_pvt_sasl_secprops(
  				if ( next == &props[i][sprops[j].key.bv_len] || next[0] != '\0' ) continue;
  				switch( sprops[j].ival ) {
  				case GOT_MINSSF:
@@ -31,7 +31,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  				case GOT_MAXBUF:
  					maxbufsize = v; got_maxbufsize++; break;
  				}
-@@ -960,7 +961,7 @@ ldap_int_sasl_get_option( LDAP *ld, int 
+@@ -1053,7 +1054,7 @@ ldap_int_sasl_get_option( LDAP *ld, int 
  				return -1;
  			}
  
@@ -40,7 +40,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  		} break;
  
  		case LDAP_OPT_X_SASL_SSF_EXTERNAL:
-@@ -968,13 +969,13 @@ ldap_int_sasl_get_option( LDAP *ld, int 
+@@ -1061,13 +1062,13 @@ ldap_int_sasl_get_option( LDAP *ld, int 
  			return -1;
  
  		case LDAP_OPT_X_SASL_SSF_MIN:
@@ -57,7 +57,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  			break;
  		case LDAP_OPT_X_SASL_NOCANON:
  			*(int *)arg = (int) LDAP_BOOL_GET(&ld->ld_options, LDAP_BOOL_SASL_NOCANON );
-@@ -1074,7 +1075,7 @@ ldap_int_sasl_set_option( LDAP *ld, int 
+@@ -1171,7 +1172,7 @@ ldap_int_sasl_set_option( LDAP *ld, int 
  #else
  		memset(&extprops, 0L, sizeof(extprops));
  
@@ -66,7 +66,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  
  		sc = sasl_setprop( ctx, SASL_SSF_EXTERNAL,
  			(void *) &extprops );
-@@ -1086,13 +1087,13 @@ ldap_int_sasl_set_option( LDAP *ld, int 
+@@ -1183,13 +1184,13 @@ ldap_int_sasl_set_option( LDAP *ld, int 
  		} break;
  
  	case LDAP_OPT_X_SASL_SSF_MIN:
@@ -83,7 +83,7 @@ $NetBSD: patch-am,v 1.7 2012/03/13 19:57:11 adam Exp $
  		break;
  	case LDAP_OPT_X_SASL_NOCANON:
  		if ( arg == LDAP_OPT_OFF ) {
-@@ -1220,7 +1221,7 @@ ldap_int_sasl_external(
+@@ -1329,7 +1330,7 @@ ldap_int_sasl_external(
  	LDAP *ld,
  	LDAPConn *conn,
  	const char * authid,
