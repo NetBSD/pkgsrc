@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/06/04 12:47:54 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/08/23 10:02:34 adam Exp $
 
-DISTNAME=	uvicorn-0.14.0
+DISTNAME=	uvicorn-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.uvicorn.org/
 COMMENT=	The lightning-fast ASGI server
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.3.4:../../www/py-asgiref
+DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.4.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.8:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.2.0:../../www/py-httptools
