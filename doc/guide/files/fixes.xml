@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.163 2021/08/22 16:27:50 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.164 2021/08/23 18:38:16 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -580,7 +580,7 @@ CONFLICTS=      libXaw3d-[0-9]*
     problems due unrelated <varname>PKGREVISION</varname> bumps not
     related to security fixes. Lower bounds can be added too, using
     '&gt;' or '&gt;='. For example,
-    <quote><literal>foo&gt;'=1&lt;1.2</literal></quote> would mark
+    <quote><literal>foo&gt;=1&lt;1.2</literal></quote> would mark
     versions 1.0 (included) to 1.2 (excluded) of
     <quote><literal>foo</literal></quote> as affected by the security
     issue.</para>
@@ -590,7 +590,7 @@ CONFLICTS=      libXaw3d-[0-9]*
     <para>When fixing packages, please modify the upper bound of the
     corresponding entry. To continue the previous example, if a fix
     was backported to version 1.1nb2, change the previous pattern to
-    <quote><literal>foo&gt;'=1&lt;1.1nb2</literal></quote>.</para>
+    <quote><literal>foo&gt;=1&lt;1.1nb2</literal></quote>.</para>
 
     <para>To locally test a package version pattern against a
     <varname>PKGNAME</varname> you can use the <command>pkg_admin
