@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/08/12 08:31:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/08/23 09:58:58 adam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -8,6 +8,7 @@ bin/ldapmodrdn
 bin/ldappasswd
 bin/ldapsearch
 bin/ldapurl
+bin/ldapvc
 bin/ldapwhoami
 include/lber.h
 include/lber_types.h
@@ -21,7 +22,8 @@ include/openldap.h
 include/slapi-plugin.h
 lib/liblber.la
 lib/libldap.la
-lib/libldap_r.la
+lib/pkgconfig/lber.pc
+lib/pkgconfig/ldap.pc
 man/man1/ldapadd.1
 man/man1/ldapcompare.1
 man/man1/ldapdelete.1
@@ -31,6 +33,7 @@ man/man1/ldapmodrdn.1
 man/man1/ldappasswd.1
 man/man1/ldapsearch.1
 man/man1/ldapurl.1
+man/man1/ldapvc.1
 man/man1/ldapwhoami.1
 man/man3/ber_alloc_t.3
 man/man3/ber_bvarray_add.3
@@ -125,6 +128,7 @@ man/man3/ldap_first_entry.3
 man/man3/ldap_first_message.3
 man/man3/ldap_first_reference.3
 man/man3/ldap_free_urldesc.3
+man/man3/ldap_get_attribute_ber.3
 man/man3/ldap_get_dn.3
 man/man3/ldap_get_option.3
 man/man3/ldap_get_values.3
@@ -217,10 +221,10 @@ man/man3/ldap_value_free.3
 man/man3/ldap_value_free_len.3
 man/man5/ldap.conf.5
 man/man5/ldif.5
-man/man5/slapd-bdb.5
+man/man5/lloadd.conf.5
+man/man5/slapd-asyncmeta.5
 man/man5/slapd-config.5
 man/man5/slapd-dnssrv.5
-man/man5/slapd-hdb.5
 man/man5/slapd-ldap.5
 man/man5/slapd-ldif.5
 man/man5/slapd-mdb.5
@@ -231,9 +235,9 @@ man/man5/slapd-null.5
 man/man5/slapd-passwd.5
 man/man5/slapd-perl.5
 man/man5/slapd-relay.5
-man/man5/slapd-shell.5
 man/man5/slapd-sock.5
 man/man5/slapd-sql.5
+man/man5/slapd-wt.5
 man/man5/slapd.access.5
 man/man5/slapd.backends.5
 man/man5/slapd.conf.5
@@ -241,17 +245,22 @@ man/man5/slapd.overlays.5
 man/man5/slapd.plugin.5
 man/man5/slapo-accesslog.5
 man/man5/slapo-auditlog.5
+man/man5/slapo-autoca.5
 man/man5/slapo-chain.5
 man/man5/slapo-collect.5
 man/man5/slapo-constraint.5
 man/man5/slapo-dds.5
+man/man5/slapo-deref.5
 man/man5/slapo-dyngroup.5
 man/man5/slapo-dynlist.5
+man/man5/slapo-homedir.5
 man/man5/slapo-memberof.5
+man/man5/slapo-otp.5
 man/man5/slapo-pbind.5
 man/man5/slapo-pcache.5
 man/man5/slapo-ppolicy.5
 man/man5/slapo-refint.5
+man/man5/slapo-remoteauth.5
 man/man5/slapo-retcode.5
 man/man5/slapo-rwm.5
 man/man5/slapo-sock.5
@@ -260,6 +269,8 @@ man/man5/slapo-syncprov.5
 man/man5/slapo-translucent.5
 man/man5/slapo-unique.5
 man/man5/slapo-valsort.5
+man/man5/slappw-argon2.5
+man/man8/lloadd.8
 man/man8/slapacl.8
 man/man8/slapadd.8
 man/man8/slapauth.8
@@ -267,6 +278,7 @@ man/man8/slapcat.8
 man/man8/slapd.8
 man/man8/slapdn.8
 man/man8/slapindex.8
+man/man8/slapmodify.8
 man/man8/slappasswd.8
 man/man8/slapschema.8
 man/man8/slaptest.8
