@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4322 2021/08/23 03:25:16 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4323 2021/08/23 08:22:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6817,3 +6817,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/ruby-vte to 3.4.3 [tsutsui 2021-08-22]
 	Updated www/hugo to 0.87.0 [bsiegert 2021-08-22]
 	Updated mail/notmuch to 0.32.3 [ryoon 2021-08-23]
+	Updated converters/help2man to 1.48.5 [adam 2021-08-23]
+	Updated databases/py-apsw to 3.36.0 [adam 2021-08-23]
