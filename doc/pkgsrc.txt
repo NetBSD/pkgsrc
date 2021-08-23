@@ -6445,14 +6445,14 @@ advisories/pkg-vulnerabilities. Entries in that file consist of three parts:
 For the package version pattern please always use `<' to mark an upper bound
 (not `<='!). This will avoid possible problems due unrelated PKGREVISION bumps
 not related to security fixes. Lower bounds can be added too, using '>' or '>=
-'. For example, "foo>'=1<1.2" would mark versions 1.0 (included) to 1.2
+'. For example, "foo>=1<1.2" would mark versions 1.0 (included) to 1.2
 (excluded) of "foo" as affected by the security issue.
 
 Entries should always be added at the bottom of the file.
 
 When fixing packages, please modify the upper bound of the corresponding entry.
 To continue the previous example, if a fix was backported to version 1.1nb2,
-change the previous pattern to "foo>'=1<1.1nb2".
+change the previous pattern to "foo>=1<1.1nb2".
 
 To locally test a package version pattern against a PKGNAME you can use the 
 pkg_admin pmatch command.
