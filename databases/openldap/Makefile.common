@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2019/05/02 10:59:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.44 2021/08/23 09:58:58 adam Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -12,16 +12,16 @@ CATEGORIES=	databases
 
 MAINTAINER=	adam@NetBSD.org
 
-CONFLICTS+=		ldapsdk-[0-9]*
+CONFLICTS+=	ldapsdk-[0-9]*
 
-DISTINFO_FILE=		${.CURDIR}/../../databases/openldap/distinfo
-PATCHDIR=		${.CURDIR}/../../databases/openldap/patches
+DISTINFO_FILE=	${.CURDIR}/../../databases/openldap/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/openldap/patches
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		soelim
-GNU_CONFIGURE=		yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake soelim
+GNU_CONFIGURE=	yes
 
-MAKE_ENV+=		LIBMODE=${LIBMODE}
+MAKE_ENV+=	LIBMODE=${LIBMODE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -80,7 +80,7 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--without-fetch
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
+#.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "native"

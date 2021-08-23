@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2020/02/10 15:13:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/08/23 09:58:58 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-cloak-/}
 COMMENT=	Hide specific attributes unless explicitely requested for OpenLDAP
 
 CONFLICTS+=	openldap<2.3.23nb1
 DEPENDS+=	openldap-server>=2.4.13nb1:../../databases/openldap-server
-
-USE_LIBTOOL=		yes
 
 BUILD_DIRS=		include contrib/slapd-modules/cloak
 INSTALLATION_DIRS=	lib/openldap ${PKGMANDIR}/man5

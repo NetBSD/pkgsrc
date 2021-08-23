@@ -1,23 +1,21 @@
-$NetBSD: distinfo,v 1.124 2021/06/14 09:04:23 adam Exp $
+$NetBSD: distinfo,v 1.125 2021/08/23 09:58:58 adam Exp $
 
-SHA1 (openldap-2.4.59.tgz) = b154d06bbf40fafafb34fffc4b116946d931efef
-RMD160 (openldap-2.4.59.tgz) = 8374bba331c1effa3328ae1517dba388a323357e
-SHA512 (openldap-2.4.59.tgz) = 233459ab446da6e107a7fc4ecd5668d6b08c11a11359ee76449550393e8f586a29b59d7ae09a050a1fca4fcf388ea61438ef60831b3ae802d92c048365ae3968
-Size (openldap-2.4.59.tgz) = 5886272 bytes
-SHA1 (patch-ac) = 2995c518278b363bf9657e181c2340d3024d5980
-SHA1 (patch-ad) = 24e7ec27d592dd76bdec1e4805801c5304951daf
-SHA1 (patch-af) = 2e00b01bd813e73bdc1fb764a02e98d7755703de
-SHA1 (patch-ag) = 380336d8b50dd6b3a277f2ea6a03eb88cc5919b8
-SHA1 (patch-ah) = 7b5a9d042df36f17bcb503372e301a0c6554af68
-SHA1 (patch-aj) = 857bbf14855d7d2a2911457bc6373d8beb69b751
-SHA1 (patch-am) = fb8f3e7699f8b2ef55c066cdc6216522c101c7f3
-SHA1 (patch-an) = 3e904d05a3e69930259329ca821d3bbf7dd54eb2
-SHA1 (patch-ao) = 4fcbbfd4d6be792392e3646123022aeaf25923e3
-SHA1 (patch-contrib_slapd-modules_cloak_Makefile) = 47c81def0c013a360acb549ed69e9042f0bc1be3
-SHA1 (patch-contrib_slapd-modules_nops_Makefile) = c51bccf34c3f3112232a134038622d31b6315628
+SHA1 (openldap-2.5.7.tgz) = c7cdc392a7c6006b82699f669a88597fe41820f0
+RMD160 (openldap-2.5.7.tgz) = 06be7fba0ce57c3a8ee260da244d2dc8935ea0f5
+SHA512 (openldap-2.5.7.tgz) = c849b9f9515cf458acbaef0dc21b8a53ab7b27e4288af6f69433f909f2939878c94cd641d24abc88d4351725b80829d342d446933fa5cba52cde4b9f095dcea0
+Size (openldap-2.5.7.tgz) = 6426051 bytes
+SHA1 (patch-configure) = d17685e195dbde0fd36ddd593da1c3877bf022d9
+SHA1 (patch-contrib_slapd-modules_cloak_Makefile) = f64c16aebd1b5f6ab069fc22b785f066f0b1c143
+SHA1 (patch-contrib_slapd-modules_nops_Makefile) = 96c072cde836ea96710ddf0dc96b7f9fe78d81d8
+SHA1 (patch-contrib_slapd-modules_nops_nops.c) = 72c28de4b09cbac7e793828dfcf04820643dcbec
 SHA1 (patch-contrib_slapd-modules_nops_slapo-nops.5) = f32352f19361b7e9aa5b038ae8578def7c08fa47
-SHA1 (patch-da) = 75e26bd08c6e66b69192ebfbb36db974d391ec3e
-SHA1 (patch-dd) = 9c74118ff0b2232bda729c9917082fceef41dd16
-SHA1 (patch-its8885) = f70666e1a44499013c93fe9bd0d8198b5bffe11c
+SHA1 (patch-contrib_slapd-modules_smbk5pwd_Makefile) = a57b327bdf680fe60b58c07075a0602afeb556fa
+SHA1 (patch-libraries_libldap_Makefile.in) = 2a259ca83c6f9ce0661e6ba1f91c0ca2db535695
+SHA1 (patch-libraries_libldap_cyrus.c) = 1e47cdf4b1f1cc4eef36cf40a6beec1bed167f85
+SHA1 (patch-libraries_libldap_init.c) = 884d102d7c02cf85b36635b2ac5d6925ec17420f
+SHA1 (patch-libraries_libldap_ldap-int.h) = 967499db16d31cbf47deff330d97efd0a360ac7f
 SHA1 (patch-libraries_libldap_os-local.c) = 7cd4f8638456fae12499de0d36d7802e47d3d688
-SHA1 (patch-libraries_libldap_tls__m.c) = 91dab1dcfa6560c30093094586ea9eabf2e977b8
+SHA1 (patch-libraries_libldap_thr__posix.c) = d9e6ff44bd3885ab4a83fd5e9915e74aaace237e
+SHA1 (patch-libraries_liblutil_sha1.c) = 10deca5c2f0431dd51d9137f14b5070be1264dcd
+SHA1 (patch-servers_slapd_Makefile.in) = 40043fdaecac7b591b462f7af32149a93e88eaf5
+SHA1 (patch-servers_slapd_back-sql_delete.c) = 437336aed5ef7e1b8b0e53c9d9019a43eb226472
