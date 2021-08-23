@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/04/29 07:31:52 adam Exp $
+# $NetBSD: Makefile,v 1.59 2021/08/23 09:58:59 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Lightweight Directory Access Protocol server suite
@@ -14,7 +14,6 @@ CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS	# sigwait
 # slapd options
 CONFIGURE_ARGS+=	--enable-slapd
 CONFIGURE_ARGS+=	--enable-crypt
-CONFIGURE_ARGS+=	--enable-wrappers
 
 # slapd backends
 CONFIGURE_ARGS+=	--enable-dnssrv
