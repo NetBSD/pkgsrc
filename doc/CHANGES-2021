@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4348 2021/08/24 13:31:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4349 2021/08/24 13:50:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6848,3 +6848,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-gearboy to 3.4.0 [nia 2021-08-24]
 	Updated emulators/gearboy to 3.4.0 [nia 2021-08-24]
 	Updated graphics/imlib2 to 1.7.3 [nia 2021-08-24]
+	Updated emulators/libretro-gearsystem to 3.4.0 [nia 2021-08-24]
+	Updated emulators/gearsystem to 3.4.0 [nia 2021-08-24]
