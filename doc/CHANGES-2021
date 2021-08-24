@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4329 2021/08/23 15:09:19 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4330 2021/08/24 01:55:01 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6826,3 +6826,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/elvish to 0.16.1 [bsiegert 2021-08-23]
 	Updated security/acmesh to 3.0.0 [ryoon 2021-08-23]
 	Updated www/php-nextcloud to 22.1.0 [ryoon 2021-08-23]
+	Updated net/netwake to 0.4 [sjmulder 2021-08-24]
