@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2021/08/01 14:47:25 mef Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/24 08:31:27 nia Exp $
 
 PKGREVISION=	1
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
+
+BROKEN+=	"Attempts to download files during install, PR pkg/56374"
 
 DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
