@@ -1,8 +1,8 @@
-$NetBSD: patch-platforms_desktop-shared_Makefile.common,v 1.2 2021/07/04 07:47:39 nia Exp $
+$NetBSD: patch-platforms_desktop-shared_Makefile.common,v 1.3 2021/08/24 13:50:07 nia Exp $
 
 Avoid overriding variables we want to pass through pkgsrc.
 
---- platforms/desktop-shared/Makefile.common.orig	2021-02-14 19:39:03.000000000 +0000
+--- platforms/desktop-shared/Makefile.common.orig	2021-08-13 21:24:47.000000000 +0000
 +++ platforms/desktop-shared/Makefile.common
 @@ -1,11 +1,5 @@
 -
@@ -11,7 +11,7 @@ Avoid overriding variables we want to pass through pkgsrc.
 -
  EXE = gearsystem
  
--GIT_VERSION := "$(shell git describe --abbrev=4 --dirty --always --tags)"
+-GIT_VERSION := "$(shell git describe --abbrev=7 --dirty --always --tags)"
 -
  EMULATOR_SRC=../../src
  EMULATOR_DESKTOP_SHARED_SRC=../desktop-shared
@@ -26,37 +26,10 @@ Avoid overriding variables we want to pass through pkgsrc.
  
  DEBUG ?= 0
  ifeq ($(DEBUG), 1)
-     CXXFLAGS +=-DDEBUG -g3 -fsanitize=address
+     CXXFLAGS +=-DDEBUG -g3
  else
--    CXXFLAGS +=-DNDEBUG -O3
+-    CXXFLAGS +=-DNDEBUG -O3 -flto
 +    CXXFLAGS +=-DNDEBUG
  endif
  
- LIBS =
-@@ -48,7 +42,7 @@ ifeq ($(UNAME_S), Linux) #LINUX
- 	LIBS += -lGL -lGLEW -ldl `sdl2-config --libs`
- 
- 	CXXFLAGS += `sdl2-config --cflags`
--	CFLAGS = $(CXXFLAGS)
-+	CFLAGS += $(CXXFLAGS)
- endif
- 
- ifeq ($(UNAME_S), Darwin) #APPLE
-@@ -58,7 +52,7 @@ ifeq ($(UNAME_S), Darwin) #APPLE
- 
- 	CXXFLAGS += `sdl2-config --cflags`
- 	CXXFLAGS += -I/usr/local/include -I/opt/local/include
--	CFLAGS = $(CXXFLAGS)
-+	CFLAGS += $(CXXFLAGS)
- endif
- 
- ifeq ($(findstring MINGW,$(UNAME_S)),MINGW)
-@@ -95,7 +89,7 @@ all: $(EXE)
- 	@echo Build complete for $(ECHO_MESSAGE)
- 
- $(EXE): $(OBJS)
--	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
-+	$(CXX) -o $@ $^ $(LDFLAGS) $(LIBS)
- 
- clean:
- 	rm -f $(EXE) $(OBJS)
+ SANITIZE ?= 0
