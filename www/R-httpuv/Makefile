@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/06/05 08:55:12 mef Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/24 11:22:44 mef Exp $
 
 R_PKGNAME=	httpuv
-R_PKGVER=	1.6.1
+R_PKGVER=	1.6.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,7 @@ DEPENDS+=	R-BH>=1.69.0.1:../../devel/R-BH
 DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
 DEPENDS+=	R-promises>=1.0.1:../../parallel/R-promises
 
+# Package suggested but not available: 'websocket'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_TOOLS+=	gmake
