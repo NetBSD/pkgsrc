@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4349 2021/08/24 13:50:38 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4350 2021/08/24 16:36:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6850,3 +6850,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/imlib2 to 1.7.3 [nia 2021-08-24]
 	Updated emulators/libretro-gearsystem to 3.4.0 [nia 2021-08-24]
 	Updated emulators/gearsystem to 3.4.0 [nia 2021-08-24]
+	Updated www/firefox to 91.0.2 [ryoon 2021-08-24]
