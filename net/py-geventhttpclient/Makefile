@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/14 10:44:59 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/24 10:50:05 nia Exp $
 
-DISTNAME=	geventhttpclient-1.3.1
+DISTNAME=	geventhttpclient-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geventhttpclient/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13:../../net/py-gevent
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 
 post-extract:
 	${RM} -f -r ${WRKSRC}/src/geventhttpclient/tests/__pycache__
