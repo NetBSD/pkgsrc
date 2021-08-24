@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/13 09:17:00 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/24 11:09:50 mef Exp $
 
 R_PKGNAME=	mockery
 R_PKGVER=	0.4.2
@@ -9,6 +9,9 @@ COMMENT=	Mocking Library for R
 LICENSE=	mit	# + file LICENSE
 
 DEPENDS+=	R-testthat>=2.2.1:../../devel/R-testthat
+
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	# none
 
