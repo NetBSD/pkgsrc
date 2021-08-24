@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/06/25 07:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.33 2021/08/24 08:32:17 adam Exp $
 
-DISTNAME=	tqdm-4.61.1
+DISTNAME=	tqdm-4.62.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
@@ -15,6 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
