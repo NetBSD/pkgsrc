@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/06/23 20:33:10 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/24 11:06:06 nia Exp $
 #
 
 DISTNAME=	mysql-ruby-2.8.2
@@ -16,6 +16,8 @@ USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+=	--with-mysql-config
 INSTALLATION_DIRS=	${RUBY_DOC}/mysql ${RUBY_EG}/mysql
+
+MYSQL_VERSIONS_ACCEPTED=	57 56
 
 DOCS=		README.html README_ja.html tommy.css
 
