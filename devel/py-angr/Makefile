@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2021/08/24 21:54:33 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2021/08/24 22:04:32 khorben Exp $
 
 .include "version.mk"
 
 DISTNAME=	angr-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	angr
@@ -45,6 +45,7 @@ DEPENDS+=	${PYPKGPREFIX}-claripy>=${ANGR_VERSION}:../../math/py-claripy
 DEPENDS+=	${PYPKGPREFIX}-cle>=${ANGR_VERSION}:../../devel/py-cle
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
+DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-itanium_demangler-[0-9]*:../../devel/py-itanium_demangler
 DEPENDS+=	${PYPKGPREFIX}-mulpyplexer-[0-9]*:../../devel/py-mulpyplexer
 DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
