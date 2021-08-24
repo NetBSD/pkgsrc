@@ -1,0 +1,1 @@
+bin/acme-tiny @PREFIX@/bin/acme-tiny-@PYVERSSUFFIX@
