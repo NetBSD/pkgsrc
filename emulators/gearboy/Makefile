@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/07/04 07:47:20 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/24 13:27:26 nia Exp $
 
 .include "Makefile.common"
 
@@ -11,18 +11,13 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_TOOLS+=	gmake
 
-BUILD_DIRS=	platforms/linux
+# Same as platform/linux.
+BUILD_DIRS=	platforms/bsd
 
 MAKE_FLAGS+=	CXX=${CXX}
 MAKE_FLAGS+=	GIT_VERSION="pkgsrc"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Darwin"
-MAKE_FLAGS+=	UNAME_S="Linux"
-.else
-MAKE_FLAGS+=	UNAME_S="Darwin"
-.endif
 
 # alloca
 BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
