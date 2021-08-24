@@ -1,19 +1,29 @@
-$NetBSD: patch-Makefile.in,v 1.5 2021/08/19 12:56:22 manu Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2021/08/24 15:07:28 manu Exp $
 
 Install examples into pkgsrc example directory.
 Avoid non-portable use of readlink(1) in Makefile.
 Since libp11-kit installs pthread_atfork() callback, make sure
-it cannot be unloaded.
+it cannot be unloaded. Upstream https://github.com/p11-glue/p11-kit/pull/383
 
---- Makefile.in.orig	2021-06-03 16:51:18.000000000 +0200
-+++ Makefile.in	2021-08-17 10:49:29.475741852 +0200
-@@ -1906,9 +1906,9 @@
+--- Makefile.in.orig	2021-08-24 16:41:00.329897753 +0200
++++ Makefile.in	2021-08-24 16:41:49.846525265 +0200
+@@ -1619,8 +1619,9 @@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ LCOV = @LCOV@
+ LD = @LD@
+ LDFLAGS = @LDFLAGS@
++LDFLAGS_Z_NODELETE = @LDFLAGS_Z_NODELETE@
+ LIBFFI_CFLAGS = @LIBFFI_CFLAGS@
+ LIBFFI_LIBS = @LIBFFI_LIBS@
+ LIBICONV = @LIBICONV@
+ LIBINTL = @LIBINTL@
+@@ -1906,9 +1907,9 @@
  	$(LTLIBINTL) \
  	$(NULL)
  
  libp11_kit_la_CFLAGS = $(COMMON_CFLAGS)
 -libp11_kit_la_LDFLAGS = -no-undefined -version-info \
-+libp11_kit_la_LDFLAGS = -Wl,-z -Wl,nodelete -no-undefined -version-info \
++libp11_kit_la_LDFLAGS = $(LDFLAGS_Z_NODELETE) -no-undefined -version-info \
  	$(P11KIT_LT_RELEASE) $(am__append_3) $(am__append_4)
  libp11_kit_la_SOURCES = \
  	p11-kit/proxy.c p11-kit/proxy.h p11-kit/proxy-init.c \
