@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2013/07/17 13:00:05 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2021/08/24 13:31:07 nia Exp $
 
 BUILDLINK_TREE+=	imlib2
 
@@ -24,7 +24,7 @@ _IMLIB2_PRE_X11_OPTION!= \
 pkgbase := imlib2
 .include "../../mk/pkg-build-options.mk"
 
-.if ${_IMLIB2_PRE_X11_OPTION} == "yes" || !empty(PKG_BUILD_OPTIONS.imlib2:Mx11)
+.if ${_IMLIB2_PRE_X11_OPTION} == "yes" || ${PKG_BUILD_OPTIONS.imlib2:Mx11}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
