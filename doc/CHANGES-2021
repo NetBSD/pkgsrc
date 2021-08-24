@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4332 2021/08/24 08:34:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4333 2021/08/24 09:17:27 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6830,3 +6830,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/bat to 0.18.3 [fox 2021-08-24]
 	Updated misc/py-tqdm to 4.62.2 [adam 2021-08-24]
 	Updated security/py-acme-tiny to 4.1.1 [adam 2021-08-24]
+	Updated games/warzone2100 to 4.1.3 [triaxx 2021-08-24]
