@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20965 2021/08/24 10:06:02 nia Exp $
+$NetBSD: TODO,v 1.20966 2021/08/24 10:31:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ggspatial-1.1.5
 	o R-ggtern-3.3.0
 	o R-ggthemes-4.2.4
-	o R-gh-1.2.1
 	o R-gss-2.2.2
 	o R-gstat-2.0.7
 	o R-gtools-3.8.2
