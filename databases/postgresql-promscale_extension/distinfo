@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/04/03 19:03:44 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/08/24 18:26:28 tnn Exp $
 
 SHA1 (bindgen-0.54.0.crate) = 4165698210d42a3415c9c8cabfe5d62d40631511
 RMD160 (bindgen-0.54.0.crate) = d9dd6dc8395a7268a218d0b5de74e94fd7577134
@@ -60,10 +60,10 @@ SHA1 (proc-macro2-1.0.18.crate) = f2af370d3eece8a7b28eff8d81d1ba1f50910ebb
 RMD160 (proc-macro2-1.0.18.crate) = 4d9b7a8d30c9a470d960b6e293dc145754a20975
 SHA512 (proc-macro2-1.0.18.crate) = 3e7cf577bc3548e03a2f1bee620e3ef484dcaa45fbaf7858a8ea04f79d82d636b527584765ef43c92624e1a1afac50e60ad3f9dd8efc34e8e6b84cda20c864ef
 Size (proc-macro2-1.0.18.crate) = 36252 bytes
-SHA1 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = dc545e5f9bb4e68e00c6ed4a274b705d7ceec670
-RMD160 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 9541f33ff0b906d4a9b4853e3141c67ad685d21b
-SHA512 (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = c48b9bdd63ffcb944e94fd54958b7f4581f6e294277f2591aa2f525e60bcd0a3e750a818006c2319af93a7e5b5875718d3dab3abbd54489557f0479614966a2b
-Size (promscale_extension-0.1.1-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 10901 bytes
+SHA1 (promscale_extension-0.2.0-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = dc545e5f9bb4e68e00c6ed4a274b705d7ceec670
+RMD160 (promscale_extension-0.2.0-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 9541f33ff0b906d4a9b4853e3141c67ad685d21b
+SHA512 (promscale_extension-0.2.0-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = c48b9bdd63ffcb944e94fd54958b7f4581f6e294277f2591aa2f525e60bcd0a3e750a818006c2319af93a7e5b5875718d3dab3abbd54489557f0479614966a2b
+Size (promscale_extension-0.2.0-61d8d0fe39a424e380c7beb2da3755c3dd1bd359.tar.gz) = 10901 bytes
 SHA1 (quote-1.0.7.crate) = 63ef7b19865840266f1e4a2cb3e83be884c3fd09
 RMD160 (quote-1.0.7.crate) = f6637701a383ef477c2fbddb0268b0c2590c1e89
 SHA512 (quote-1.0.7.crate) = b7cb576c07419854f71072a88e4216f50d78196703d3d8a1068dfd0f2ccb1e417c3a865ec3be613b46e74e46654f64378f527800701f74d50352cb766a885953
