@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/11/27 20:32:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/24 09:55:52 nia Exp $
 
 GCLOUDVER=	319.0.0
 DISTNAME=	google-cloud-sdk-${GCLOUDVER}-linux-x86
@@ -32,6 +32,7 @@ SUBST_MESSAGE.python=	Replacing hard coded python executable name
 SUBST_FILES.python=	lib/googlecloudsdk/core/*
 SUBST_FILES.python+=	bin/*
 SUBST_SED.python=	-e "s,CLOUDSDK_PYTHON=..*,CLOUDSDK_PYTHON=${PYTHONBIN},"
+SUBST_NOOP_OK.python=	yes
 
 INSTALLATION_DIRS=	${PKGBASE}
 
