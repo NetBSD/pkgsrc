@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:58 brook Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/24 11:46:35 mef Exp $
 
 R_PKGNAME=	yaml
-R_PKGVER=	2.2.0
+R_PKGVER=	2.2.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Methods to convert R data to YAML and back
 LICENSE=	modified-bsd
+
+TEST_DEPENDS+=	R-RUnit-[0-9]*:../../devel/R-RUnit
 
 USE_LANGUAGES=	c
 
