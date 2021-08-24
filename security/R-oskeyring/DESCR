@@ -1,0 +1,4 @@
+Aims to support all features of the system credential store, including
+non-portable ones. Supports 'Keychain' on 'macOS', and 'Credential
+Manager' on 'Windows'. See the 'keyring' package if you need a
+portable 'API'.
