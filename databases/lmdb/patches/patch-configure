@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2021/08/24 20:33:30 mef Exp $
+
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] configure:22850: if test $ol_enable_slapd == no && test $ol_enable_balancer != yes ; then
+
+--- openldap-2.5.7/configure.orig	2021-08-19 02:11:41.000000000 +0900
++++ ../openldap-2.5.7/configure	2021-08-25 05:22:32.598123877 +0900
+@@ -22847,7 +22847,7 @@ fi
+ WITH_SYSTEMD=no
+ systemdsystemunitdir=
+ ol_link_systemd=no
+-if test $ol_enable_slapd == no && test $ol_enable_balancer != yes ; then
++if test $ol_enable_slapd = no && test $ol_enable_balancer != yes ; then
+ 	if test $ol_with_systemd != no ; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: servers disabled, ignoring --with-systemd=$ol_with_systemd argument" >&5
+ $as_echo "$as_me: WARNING: servers disabled, ignoring --with-systemd=$ol_with_systemd argument" >&2;}
