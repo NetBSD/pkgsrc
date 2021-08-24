@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2021/08/22 04:02:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/24 00:40:51 gutteridge Exp $
 
 PKGNAME=	libunit-${UNIT_VERSION}
 DISTNAME=	unit-${UNIT_VERSION}
 COMMENT=	Development kit for dynamic web application server
 
 MAINTAINER=	osa@FreeBSD.org
+
+DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
+PATCHDIR=	${.CURDIR}/../../www/unit/patches
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
