@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4341 2021/08/24 11:15:19 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4342 2021/08/24 11:22:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6840,3 +6840,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-geventhttpclient to 1.5.1 [nia 2021-08-24]
 	Updated textproc/py-acora to 2.3 [nia 2021-08-24]
 	Updated textproc/R-spelling to 2.2 [mef 2021-08-24]
+	Updated www/R-httpuv to 1.6.2 [mef 2021-08-24]
