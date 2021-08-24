@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/24 08:31:27 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/24 21:38:14 khorben Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
@@ -26,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-mulpyplexer-[0-9]*:../../devel/py-mulpyplexer
 DEPENDS+=	${PYPKGPREFIX}-progressbar2-[0-9]*:../../devel/py-progressbar2
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
 DEPENDS+=	${PYPKGPREFIX}-smt-[0-9]*:../../math/py-smt
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.9.1:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
