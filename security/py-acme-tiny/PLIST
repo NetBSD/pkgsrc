@@ -1,3 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/14 00:38:56 khorben Exp $
-bin/acme_tiny
-share/doc/${PYPKGPREFIX}-acme-tiny/README.md
+@comment $NetBSD: PLIST,v 1.2 2021/08/24 08:33:53 adam Exp $
+bin/acme-tiny-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/acme_tiny.py
+${PYSITELIB}/acme_tiny.pyc
+${PYSITELIB}/acme_tiny.pyo
