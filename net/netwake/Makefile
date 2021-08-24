@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/08/06 04:04:59 sjmulder Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/24 01:49:39 sjmulder Exp $
 
 DISTNAME=	netwake-0.4
 CATEGORIES=	net
@@ -13,5 +13,7 @@ BUILD_DIRS=	cli
 
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR}
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../mk/bsd.pkg.mk"
