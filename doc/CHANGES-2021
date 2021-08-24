@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4334 2021/08/24 09:49:08 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4335 2021/08/24 10:06:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6832,3 +6832,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-acme-tiny to 4.1.1 [adam 2021-08-24]
 	Updated games/warzone2100 to 4.1.3 [triaxx 2021-08-24]
 	Updated www/R-curl to 4.3.2 [mef 2021-08-24]
+	Updated devel/py-lupa to 1.9 [nia 2021-08-24]
