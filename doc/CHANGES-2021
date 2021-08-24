@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4331 2021/08/24 05:14:56 fox Exp $
+$NetBSD: CHANGES-2021,v 1.4332 2021/08/24 08:34:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6828,3 +6828,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-nextcloud to 22.1.0 [ryoon 2021-08-23]
 	Updated net/netwake to 0.4 [sjmulder 2021-08-24]
 	Updated textproc/bat to 0.18.3 [fox 2021-08-24]
+	Updated misc/py-tqdm to 4.62.2 [adam 2021-08-24]
+	Updated security/py-acme-tiny to 4.1.1 [adam 2021-08-24]
