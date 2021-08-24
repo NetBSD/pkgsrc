@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2021/07/04 07:47:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2021/08/24 13:27:26 nia Exp $
 # used by emulators/gearboy/Makefile
 # used by emulators/libretro-gearboy/Makefile
 
-DISTNAME=	gearboy-3.3.0
+DISTNAME=	gearboy-3.4.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drhelius/}
 GITHUB_PROJECT=	Gearboy
