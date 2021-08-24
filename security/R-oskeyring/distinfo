@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/24 10:12:57 mef Exp $
+
+SHA1 (R/oskeyring_0.1.1.tar.gz) = b6e8626e859b9589bc15bf8306493a2173091f33
+RMD160 (R/oskeyring_0.1.1.tar.gz) = e85a8e6ec91f89045342b12948d0d6cd96663854
+SHA512 (R/oskeyring_0.1.1.tar.gz) = 61d2c7e2bf2767de8f0230df5de04f1d4ce7d102c9a09605f5f4613f866ed9a9744b49fa6c233bcc51bf8d3cfc668bc2b17e80a12da3b92db9d6eed869f682dc
+Size (R/oskeyring_0.1.1.tar.gz) = 29169 bytes
