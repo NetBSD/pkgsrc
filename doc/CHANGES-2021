@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4343 2021/08/24 11:28:03 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4344 2021/08/24 11:36:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6842,3 +6842,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-spelling to 2.2 [mef 2021-08-24]
 	Updated www/R-httpuv to 1.6.2 [mef 2021-08-24]
 	Updated www/R-rvest to 1.0.1 [mef 2021-08-24]
+	Updated www/R-shinyjs to 2.0.0 [mef 2021-08-24]
