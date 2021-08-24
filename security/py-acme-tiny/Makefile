@@ -1,29 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2021/08/24 08:33:53 adam Exp $
 
-DISTNAME=	acme-tiny-4.1.0
+DISTNAME=	acme-tiny-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=diafygi/}
+CATEGORIES=	security python
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme-tiny/}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://github.com/diafygi/acme-tiny/
+HOMEPAGE=	https://github.com/diafygi/acme-tiny
 COMMENT=	Tiny script to issue and renew TLS certs from Let's Encrypt
 LICENSE=	mit
 
-GITHUB_PROJECT=	acme-tiny
-GITHUB_TAG=	${PKGVERSION_NOREV}
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	openssl-[0-9]*:../../security/openssl
 
-NO_BUILD=		yes
-INSTALLATION_DIRS=	bin share/doc/${PYPKGPREFIX}-acme-tiny
-PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
+USE_LANGUAGES=	# none
 
-REPLACE_PYTHON=	acme_tiny.py
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} acme-tiny acme-tiny-${PYVERSSUFFIX} || ${TRUE}
 
-do-install:
-	${INSTALL} -m 0755 ${WRKSRC}/acme_tiny.py ${DESTDIR}${PREFIX}/bin/acme_tiny
-	${INSTALL} -m 0644 ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PYPKGPREFIX}-acme-tiny/README.md
-
-.include "../../lang/python/application.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
