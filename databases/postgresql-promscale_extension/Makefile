@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/08/25 11:06:28 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2021/08/25 11:38:35 tnn Exp $
 
 DISTNAME=	promscale_extension-0.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -9,9 +9,11 @@ GITHUB_PROJECT=	promscale_extension
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+PGX_TAG=	c82482493be32c7029498b057f22259e68675405
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	pgx-87e0460e6e88d6ffa9b9eb37dce4b71e4336e31e.tar.gz
-SITES.pgx-87e0460e6e88d6ffa9b9eb37dce4b71e4336e31e.tar.gz+=	-${MASTER_SITE_GITHUB:=JLockerman/}pgx/archive/87e0460e6e88d6ffa9b9eb37dce4b71e4336e31e.tar.gz
+DISTFILES+=	pgx-${PGX_TAG}.tar.gz
+SITES.pgx-${PGX_TAG}.tar.gz+=	\
+	-${MASTER_SITE_GITHUB:=JLockerman/}pgx/archive/${PGX_TAG}.tar.gz
 
 CHECK_PORTABILITY_SKIP+=	pgx/*
 
