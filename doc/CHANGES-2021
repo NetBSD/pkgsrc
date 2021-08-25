@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4358 2021/08/25 07:28:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4359 2021/08/25 09:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6868,3 +6868,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-iochan [nia 2021-08-25]
 	Updated textproc/py-pygments to 2.10.0 [adam 2021-08-25]
 	Updated textproc/py-ujson to 4.1.0 [adam 2021-08-25]
+	Updated www/py-curl to 7.44.1 [adam 2021-08-25]
+	Updated textproc/py-humanize to 3.11.0 [adam 2021-08-25]
