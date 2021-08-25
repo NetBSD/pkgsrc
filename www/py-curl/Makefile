@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2021/04/21 13:25:31 adam Exp $
+# $NetBSD: Makefile,v 1.75 2021/08/25 09:01:07 adam Exp $
 
-DISTNAME=	pycurl-7.43.0.6
+DISTNAME=	pycurl-7.44.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycurl/}
 
@@ -11,13 +10,18 @@ HOMEPAGE=	http://pycurl.io/
 COMMENT=	Python module interface to the cURL library
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
-PYSETUPARGS=	--with-openssl
-MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
+TEST_DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
+PYSETUPARGS=	--with-openssl
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
