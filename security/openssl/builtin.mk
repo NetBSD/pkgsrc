@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.47 2021/03/01 23:28:54 gdt Exp $
+# $NetBSD: builtin.mk,v 1.48 2021/08/25 11:25:25 jperkin Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -142,7 +142,7 @@ SSLDIR=	/etc/openssl
 .      if exists(/etc/pki/tls)
 # Some distributions have moved to /etc/pki/tls, with incomplete
 # symlinks from /etc/ssl.  Prefer the new location if it exists
-SSLDIR=	/etc/pki/tls 
+SSLDIR=	/etc/pki/tls
 .      else
 SSLDIR=	/etc/ssl 		# standard location
 .      endif
@@ -165,7 +165,7 @@ SSLCERTS=	${SSLDIR}/certs
 # directory that has one file per cert, or the directory that contains
 # trust anchor config in some fortm.
 .  if exists(${SSLDIR}/certs/ca-bundle.crt)
-SSLCERTBUNDLE=  ${SSLDIR}/certs/ca-bundle.crt
+SSLCERTBUNDLE=	${SSLDIR}/certs/ca-bundle.crt
 .  endif
 SSLKEYS=	${SSLDIR}/private
 
