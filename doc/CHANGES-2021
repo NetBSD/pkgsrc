@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4354 2021/08/25 00:12:06 tron Exp $
+$NetBSD: CHANGES-2021,v 1.4355 2021/08/25 06:10:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6856,3 +6856,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-timescaledb to 2.4.1 [tnn 2021-08-24]
 	Updated databases/postgresql-promscale_extension to 0.2.0 [tnn 2021-08-24]
 	Updated mail/mutt to 2.1.2 [tron 2021-08-25]
+	Updated devel/py-fastimport to 0.9.14 [adam 2021-08-25]
+	Updated converters/py-simplejson to 3.17.5 [adam 2021-08-25]
