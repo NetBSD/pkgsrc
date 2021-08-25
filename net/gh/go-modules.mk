@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.11 2021/08/19 16:29:02 leot Exp $
+# $NetBSD: go-modules.mk,v 1.12 2021/08/25 18:53:13 bsiegert Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -46,8 +46,8 @@ GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.6.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.8.0.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.zip
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.14.mod
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.14.zip
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.1.mod
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
@@ -336,8 +336,7 @@ GO_MODULE_FILES+=	github.com/miekg/dns/@v/v1.0.14.zip
 GO_MODULE_FILES+=	github.com/mitchellh/cli/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/cli/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.0.0.mod
-GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.mod
-GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-testing-interface/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/go-testing-interface/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/gox/@v/v0.4.0.mod
@@ -354,7 +353,8 @@ GO_MODULE_FILES+=	github.com/modern-go/reflect2/@v/v0.0.0-20180701023420-4b7aa43
 GO_MODULE_FILES+=	github.com/modern-go/reflect2/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/modern-go/reflect2/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.2.0.mod
-GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.2.0.zip
+GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.2.1-0.20210502190812-c80126ec2ad5.mod
+GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.2.1-0.20210502190812-c80126ec2ad5.zip
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.8.1.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.8.1.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
