@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/10/03 18:28:21 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/08/25 09:14:58 adam Exp $
 
-DISTNAME=	validators-0.18.1
+DISTNAME=	validators-0.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validators/}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
