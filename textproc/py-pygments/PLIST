@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/05/06 07:40:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/08/25 07:25:59 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -165,6 +165,9 @@ ${PYSITELIB}/pygments/lexers/archetype.pyo
 ${PYSITELIB}/pygments/lexers/arrow.py
 ${PYSITELIB}/pygments/lexers/arrow.pyc
 ${PYSITELIB}/pygments/lexers/arrow.pyo
+${PYSITELIB}/pygments/lexers/asc.py
+${PYSITELIB}/pygments/lexers/asc.pyc
+${PYSITELIB}/pygments/lexers/asc.pyo
 ${PYSITELIB}/pygments/lexers/asm.py
 ${PYSITELIB}/pygments/lexers/asm.pyc
 ${PYSITELIB}/pygments/lexers/asm.pyo
@@ -318,6 +321,9 @@ ${PYSITELIB}/pygments/lexers/graphics.pyo
 ${PYSITELIB}/pygments/lexers/graphviz.py
 ${PYSITELIB}/pygments/lexers/graphviz.pyc
 ${PYSITELIB}/pygments/lexers/graphviz.pyo
+${PYSITELIB}/pygments/lexers/gsql.py
+${PYSITELIB}/pygments/lexers/gsql.pyc
+${PYSITELIB}/pygments/lexers/gsql.pyo
 ${PYSITELIB}/pygments/lexers/haskell.py
 ${PYSITELIB}/pygments/lexers/haskell.pyc
 ${PYSITELIB}/pygments/lexers/haskell.pyo
@@ -357,6 +363,9 @@ ${PYSITELIB}/pygments/lexers/j.pyo
 ${PYSITELIB}/pygments/lexers/javascript.py
 ${PYSITELIB}/pygments/lexers/javascript.pyc
 ${PYSITELIB}/pygments/lexers/javascript.pyo
+${PYSITELIB}/pygments/lexers/jslt.py
+${PYSITELIB}/pygments/lexers/jslt.pyc
+${PYSITELIB}/pygments/lexers/jslt.pyo
 ${PYSITELIB}/pygments/lexers/julia.py
 ${PYSITELIB}/pygments/lexers/julia.pyc
 ${PYSITELIB}/pygments/lexers/julia.pyo
@@ -381,6 +390,9 @@ ${PYSITELIB}/pygments/lexers/math.pyo
 ${PYSITELIB}/pygments/lexers/matlab.py
 ${PYSITELIB}/pygments/lexers/matlab.pyc
 ${PYSITELIB}/pygments/lexers/matlab.pyo
+${PYSITELIB}/pygments/lexers/meson.py
+${PYSITELIB}/pygments/lexers/meson.pyc
+${PYSITELIB}/pygments/lexers/meson.pyo
 ${PYSITELIB}/pygments/lexers/mime.py
 ${PYSITELIB}/pygments/lexers/mime.pyc
 ${PYSITELIB}/pygments/lexers/mime.pyo
@@ -450,6 +462,9 @@ ${PYSITELIB}/pygments/lexers/pony.pyo
 ${PYSITELIB}/pygments/lexers/praat.py
 ${PYSITELIB}/pygments/lexers/praat.pyc
 ${PYSITELIB}/pygments/lexers/praat.pyo
+${PYSITELIB}/pygments/lexers/procfile.py
+${PYSITELIB}/pygments/lexers/procfile.pyc
+${PYSITELIB}/pygments/lexers/procfile.pyo
 ${PYSITELIB}/pygments/lexers/prolog.py
 ${PYSITELIB}/pygments/lexers/prolog.pyc
 ${PYSITELIB}/pygments/lexers/prolog.pyo
@@ -516,6 +531,9 @@ ${PYSITELIB}/pygments/lexers/slash.pyo
 ${PYSITELIB}/pygments/lexers/smalltalk.py
 ${PYSITELIB}/pygments/lexers/smalltalk.pyc
 ${PYSITELIB}/pygments/lexers/smalltalk.pyo
+${PYSITELIB}/pygments/lexers/smithy.py
+${PYSITELIB}/pygments/lexers/smithy.pyc
+${PYSITELIB}/pygments/lexers/smithy.pyo
 ${PYSITELIB}/pygments/lexers/smv.py
 ${PYSITELIB}/pygments/lexers/smv.pyc
 ${PYSITELIB}/pygments/lexers/smv.pyo
