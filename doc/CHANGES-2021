@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4357 2021/08/25 07:14:01 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4358 2021/08/25 07:28:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6866,3 +6866,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/go-parse [nia 2021-08-25]
 	Removed net/go-dns [nia 2021-08-25]
 	Removed devel/go-iochan [nia 2021-08-25]
+	Updated textproc/py-pygments to 2.10.0 [adam 2021-08-25]
+	Updated textproc/py-ujson to 4.1.0 [adam 2021-08-25]
