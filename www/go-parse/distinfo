@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2020/04/18 14:18:41 nikita Exp $
-
-SHA1 (parse-2.4.2.tar.gz) = 499e9733005fd595fe437b523d8a3ee15d38a4c0
-RMD160 (parse-2.4.2.tar.gz) = e3660370f96ecc50c984172dea0c72a28ae50e94
-SHA512 (parse-2.4.2.tar.gz) = bcc97dff30b568d804042165d6ee8b866e84e70a3bcbecd59b237dc1add5a42ba8d01e59a163b16f7dea86dd709f2c817e23b1b1a9c68470e0e6198b10def661
-Size (parse-2.4.2.tar.gz) = 88729 bytes
