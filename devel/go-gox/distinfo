@@ -1,5 +1,21 @@
-$NetBSD: distinfo,v 1.1 2019/08/29 13:43:27 he Exp $
+$NetBSD: distinfo,v 1.2 2021/08/25 06:48:58 nia Exp $
 
+SHA1 (github.com_hashicorp_go-version_@v_v1.0.0.mod) = 49fffc7d122a4cb45c6941cebd15979941c9e1b7
+RMD160 (github.com_hashicorp_go-version_@v_v1.0.0.mod) = 0c2cc2a7ee1dc457e7c662d052d2f0a3bb2364c0
+SHA512 (github.com_hashicorp_go-version_@v_v1.0.0.mod) = 40ee5ae5f6991a06b8ef61f04349a5012e36932b53c678dee58d25fc1bae386d6d431de4167641721c28f686071439fb8c9c250bf9607e9743a7280244618d87
+Size (github.com_hashicorp_go-version_@v_v1.0.0.mod) = 39 bytes
+SHA1 (github.com_hashicorp_go-version_@v_v1.0.0.zip) = 4283612ef6576477d22cb51050f33e0511b9de5b
+RMD160 (github.com_hashicorp_go-version_@v_v1.0.0.zip) = 24e9dd288a3fb0f987e66388ee206a7cbe57a6b0
+SHA512 (github.com_hashicorp_go-version_@v_v1.0.0.zip) = 6b7c320dd942b6b1c7e5e627bfe2242f77f80a0166637cd965a1845ec986f5f5c726304b09d1d88cea7cb6d36644e83b2f8fe50727223e63e79ff7bdce52abae
+Size (github.com_hashicorp_go-version_@v_v1.0.0.zip) = 15217 bytes
+SHA1 (github.com_mitchellh_iochan_@v_v1.0.0.mod) = 14ee95ec72ceb1183f38e017f93ae49f12abc787
+RMD160 (github.com_mitchellh_iochan_@v_v1.0.0.mod) = fae5b9a3b50f51c7a91a57f3a569064a1cf64ad6
+SHA512 (github.com_mitchellh_iochan_@v_v1.0.0.mod) = 2249854bef533dc77479041f9dc5610e14c549be1aac292a39b8b74b36c9fc42c04d211d8d5b71082c05971cc26a94a57751c3e61895050d41909270ee5123f3
+Size (github.com_mitchellh_iochan_@v_v1.0.0.mod) = 35 bytes
+SHA1 (github.com_mitchellh_iochan_@v_v1.0.0.zip) = aa6f961d11ba2c914d4527df3d98b03e678fd1ba
+RMD160 (github.com_mitchellh_iochan_@v_v1.0.0.zip) = 5f888bc5ddad03aa1fbb70d0960a3084960aea56
+SHA512 (github.com_mitchellh_iochan_@v_v1.0.0.zip) = c27fae2305ad9b3dabd7bf99214b86540ad21a6b2bc746c67251813769da9d49aea1cfe473fb4effa9ab7ed9e1397c36c9906445a68e84be1215ed2b3148ab9c
+Size (github.com_mitchellh_iochan_@v_v1.0.0.zip) = 2536 bytes
 SHA1 (gox-1.0.1.tar.gz) = c78d456bc15a5551d6ce4540664775d954a7e1fe
 RMD160 (gox-1.0.1.tar.gz) = 403fb22b914fb9ef6a5744fc6ee38fe0577e9cdc
 SHA512 (gox-1.0.1.tar.gz) = cfcad670d9b752fe629de26db0a7f02a72f183f1c6acaf232d4908085f27a297453ab35f5c9a3ede209cb9143fd9ed7a8b5d9c182c8796f3fe4d023cb5294497
