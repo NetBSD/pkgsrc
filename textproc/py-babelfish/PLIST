@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 13:49:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/25 19:00:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/babelfish/__init__.py
 ${PYSITELIB}/babelfish/__init__.pyc
@@ -50,6 +49,3 @@ ${PYSITELIB}/babelfish/language.pyo
 ${PYSITELIB}/babelfish/script.py
 ${PYSITELIB}/babelfish/script.pyc
 ${PYSITELIB}/babelfish/script.pyo
-${PYSITELIB}/babelfish/tests.py
-${PYSITELIB}/babelfish/tests.pyc
-${PYSITELIB}/babelfish/tests.pyo
