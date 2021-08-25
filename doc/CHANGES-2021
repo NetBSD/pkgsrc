@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4356 2021/08/25 07:03:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4357 2021/08/25 07:14:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6859,3 +6859,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-fastimport to 0.9.14 [adam 2021-08-25]
 	Updated converters/py-simplejson to 3.17.5 [adam 2021-08-25]
 	Updated www/go-minify to 2.9.21 [nia 2021-08-25]
+	Removed devel/go-pflag [nia 2021-08-25]
+	Removed devel/go-try [nia 2021-08-25]
+	Removed devel/go-fsnotify [nia 2021-08-25]
+	Removed devel/go-humanize [nia 2021-08-25]
+	Removed www/go-parse [nia 2021-08-25]
+	Removed net/go-dns [nia 2021-08-25]
+	Removed devel/go-iochan [nia 2021-08-25]
