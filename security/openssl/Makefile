@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2021/08/25 11:25:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.276 2021/08/25 15:22:05 adam Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -14,7 +14,7 @@ LICENSE=	openssl
 
 USE_GCC_RUNTIME=	yes
 
-USE_TOOLS+=		fgrep gmake makedepend perl
+USE_TOOLS+=		fgrep gmake perl
 USE_TOOLS.SunOS+=	gm4
 BUILD_TARGET=		depend all
 TEST_TARGET=		tests
