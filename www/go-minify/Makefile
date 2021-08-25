@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/08/11 19:35:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2021/08/25 07:02:29 nia Exp $
 
-DISTNAME=	minify-2.7.3
+DISTNAME=	minify-2.9.21
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	14
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tdewolff/}
 CATEGORIES=	www
 GITHUB_PROJECT=	minify
@@ -10,20 +9,12 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tdewolff/minify
-COMMENT=	Go minifiers for web formats
+COMMENT=	Command line tool that minifies web formats concurrently
 LICENSE=	mit
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/tdewolff/minify
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/mkwinsyscall
 
-post-configure:
-	cd ${WRKSRC} && ${RM} cmd/minify/install.sh.orig
-
-.include "../../www/go-parse/buildlink3.mk"
-.include "../../devel/go-humanize/buildlink3.mk"
-.include "../../devel/go-fsnotify/buildlink3.mk"
-.include "../../devel/go-try/buildlink3.mk"
-.include "../../devel/go-pflag/buildlink3.mk"
-.include "../../devel/go-sys/buildlink3.mk"
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
