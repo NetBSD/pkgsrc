@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4361 2021/08/25 11:25:30 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.4362 2021/08/25 12:57:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6873,3 +6873,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-validators to 0.18.2 [adam 2021-08-25]
 	Updated textproc/py-regex to 2021.8.21 [adam 2021-08-25]
 	Updated security/openssl to 1.1.1l [jperkin 2021-08-25]
+	Updated devel/py-dulwich to 0.20.25 [adam 2021-08-25]
+	Updated comms/py-rich to 10.7.0 [adam 2021-08-25]
