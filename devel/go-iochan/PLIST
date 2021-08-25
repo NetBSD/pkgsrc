@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/31 21:11:52 he Exp $
-gopkg/pkg/${GO_PLATFORM}/github.com/mitchellh/iochan.a
-gopkg/src/github.com/mitchellh/iochan/LICENSE.md
-gopkg/src/github.com/mitchellh/iochan/README.md
-gopkg/src/github.com/mitchellh/iochan/go.mod
-gopkg/src/github.com/mitchellh/iochan/iochan.go
-gopkg/src/github.com/mitchellh/iochan/iochan_test.go
