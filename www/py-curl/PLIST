@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2020/09/09 08:16:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/08/25 09:01:07 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
 share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
@@ -14,6 +14,7 @@ share/doc/pycurl${PYVERSSUFFIX}/RELEASE-NOTES.rst
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/linksys.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/multi-socket_action-select.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/opensocketexception.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_buffer.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real.py
