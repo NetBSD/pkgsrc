@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/07/30 12:26:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2021/08/25 07:30:19 tnn Exp $
 
 DISTNAME=	fluidsynth-2.2.2
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CHECK_PORTABILITY_SKIP+=	test-android/convert-tests.sh
 
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
