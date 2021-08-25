@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3485 2021/08/25 07:07:02 nia Exp $
+# $NetBSD: Makefile,v 1.3486 2021/08/25 07:07:50 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -435,7 +435,6 @@ SUBDIR+=	go-siphash
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
 SUBDIR+=	go-tools
-SUBDIR+=	go-try
 SUBDIR+=	go-xerrors
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
