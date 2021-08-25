@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2019/01/16 15:14:23 he Exp $
-
-SHA1 (go-dns-1.1.3.tar.gz) = 45e51bda43e32b29dc560de2dd799d5b1e7a9ac0
-RMD160 (go-dns-1.1.3.tar.gz) = 87038882b5961c0481df052f9fa6cfc78f199ab3
-SHA512 (go-dns-1.1.3.tar.gz) = b8b4f43c536c77f4bf0588ea2299febb889b8d50a4d52f9cfcbd79539ff6c14dcec2bdeabe55d7e6c4d23bd5d8f598c14665491d9b2315330adbd602ad277017
-Size (go-dns-1.1.3.tar.gz) = 3879550 bytes
