@@ -1,16 +1,19 @@
-$NetBSD: patch-Cargo.toml,v 1.2 2021/04/03 19:03:44 tnn Exp $
+$NetBSD: patch-Cargo.toml,v 1.3 2021/08/25 11:06:28 tnn Exp $
 
 Provide unpublished crate manually rather than fetch with git.
 
---- Cargo.toml.orig	2021-03-22 19:39:10.000000000 +0000
+--- Cargo.toml.orig	2021-07-02 21:51:25.000000000 +0000
 +++ Cargo.toml
-@@ -8,8 +8,7 @@ edition = "2018"
- crate-type = ["staticlib"]
+@@ -18,8 +18,8 @@ pg13 = ["pgx/pg13", "pgx-tests/pg13"]
+ [dependencies]
+ bincode = "1.3.1"
+ serde = { version = "1.0", features = ["derive"] }
+-pgx = {git="https://github.com/JLockerman/pgx.git", branch="guardless"}
+-pgx-macros = {git="https://github.com/JLockerman/pgx.git", branch="guardless"}
++pgx = {path="pgx/pgx"}
++pgx-macros = {path="pgx/pgx-macros"}
  
- [dependencies.timescale-extension-utils]
--git = "https://github.com/timescale/timescale-extension-utils"
--branch = "master"
-+path = "timescale-extension-utils"
- 
- [profile.release]
- lto = true
+ [dev-dependencies]
+-pgx-tests = {git="https://github.com/JLockerman/pgx.git", branch="guardless"}
+\ No newline at end of file
++pgx-tests = {path="pgx/pgx-tests"}
