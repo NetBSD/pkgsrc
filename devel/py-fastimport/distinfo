@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/06/09 14:21:11 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/08/25 06:06:03 adam Exp $
 
-SHA1 (fastimport-0.9.13.tar.gz) = cbf930eef030b96f3617c21b29a23a6dee8f5206
-RMD160 (fastimport-0.9.13.tar.gz) = 0b84d4af932f45eb750d370b83d76cdd701960a3
-SHA512 (fastimport-0.9.13.tar.gz) = e84fb734fb8c67196f87fde10c5958bfc40110fffc3d0d84313816db248937b473a913a08557de555942cea029bb67fce762e3f9ed7b6a5fc2548b9165667b28
-Size (fastimport-0.9.13.tar.gz) = 41781 bytes
+SHA1 (fastimport-0.9.14.tar.gz) = 9900e2b09055649da15250ffdff55e3b9120d595
+RMD160 (fastimport-0.9.14.tar.gz) = 5065695592fa101012670a89e463c53b827e3464
+SHA512 (fastimport-0.9.14.tar.gz) = cbf8f0bf5b66e847d4482b6af29ee26a69a2aadefe22c4a2f17d976a94fce86b016b61b17d0a7f4be82ceb7824d0bc12b509b8148c18f9dc8888304158a7c266
+Size (fastimport-0.9.14.tar.gz) = 41791 bytes
