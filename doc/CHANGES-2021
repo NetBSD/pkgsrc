@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4353 2021/08/24 18:34:56 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.4354 2021/08/25 00:12:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6855,3 +6855,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cbindgen to 0.20.0 [ryoon 2021-08-24]
 	Updated databases/postgresql-timescaledb to 2.4.1 [tnn 2021-08-24]
 	Updated databases/postgresql-promscale_extension to 0.2.0 [tnn 2021-08-24]
+	Updated mail/mutt to 2.1.2 [tron 2021-08-25]
