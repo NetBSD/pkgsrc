@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/01/25 14:23:59 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/08/25 07:27:46 adam Exp $
 
-SHA1 (ujson-4.0.2.tar.gz) = 7377b99213934e800a54930f42f6ddf7769e1859
-RMD160 (ujson-4.0.2.tar.gz) = e51e57803d870971453f47adb93b18027da5b03f
-SHA512 (ujson-4.0.2.tar.gz) = ece12d4407cb7cdb647597ff7fc32e4390fc4c790c59e764da5c5644e5dec470c48cb6a6aaa18429cb713643e5205c5d26b2d2d2195bc90f3a171615d3dbd80d
-Size (ujson-4.0.2.tar.gz) = 7129106 bytes
+SHA1 (ujson-4.1.0.tar.gz) = 08c802da0db297136c69939b015b36bab5da91ad
+RMD160 (ujson-4.1.0.tar.gz) = ef8d29f201179877520fa095ea84ba4fe0f711b6
+SHA512 (ujson-4.1.0.tar.gz) = b3661c23fcdad2dbbac1d92b319f85ad3b7b575c1e773f5207cc83811974ed8de0e9780acb50986fcdea1c4237d5ded8d10a9bb641468b198824f5da15b8ae0e
+Size (ujson-4.1.0.tar.gz) = 7129002 bytes
