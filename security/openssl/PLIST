@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/02/20 08:53:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/08/25 11:25:25 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -533,6 +533,7 @@ man/man3/BN_MONT_CTX_set.3
 man/man3/BN_RECP_CTX_free.3
 man/man3/BN_RECP_CTX_new.3
 man/man3/BN_RECP_CTX_set.3
+man/man3/BN_abs_is_word.3
 man/man3/BN_add.3
 man/man3/BN_add_word.3
 man/man3/BN_bin2bn.3
