@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4360 2021/08/25 09:18:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4361 2021/08/25 11:25:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6872,3 +6872,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-humanize to 3.11.0 [adam 2021-08-25]
 	Updated textproc/py-validators to 0.18.2 [adam 2021-08-25]
 	Updated textproc/py-regex to 2021.8.21 [adam 2021-08-25]
+	Updated security/openssl to 1.1.1l [jperkin 2021-08-25]
