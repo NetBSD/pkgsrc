@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4362 2021/08/25 12:57:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4363 2021/08/25 18:54:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6875,3 +6875,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/openssl to 1.1.1l [jperkin 2021-08-25]
 	Updated devel/py-dulwich to 0.20.25 [adam 2021-08-25]
 	Updated comms/py-rich to 10.7.0 [adam 2021-08-25]
+	Updated net/gh to 2.0.0 [bsiegert 2021-08-25]
