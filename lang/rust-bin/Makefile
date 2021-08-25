@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/08/21 22:06:29 gutteridge Exp $
+# $NetBSD: Makefile,v 1.26 2021/08/25 02:33:00 gutteridge Exp $
 
 DISTNAME=	rust-1.52.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -204,6 +204,13 @@ FORCE_RPATH=		--force-rpath
 .    include "../../devel/libatomic/buildlink3.mk"
 .  endif
 
+# Upstream packages for Linux ship with an extra binary vs. some other OSes.
+.  if ${OPSYS} == "Linux"
+RUST_BIN_EXTRA=	rust-lld
+.  else
+RUST_BIN_EXTRA=	# empty
+.  endif
+
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
@@ -211,8 +218,8 @@ fix-relative-rpath:
 	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
-.  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump \
-	llvm-profdata llvm-readobj llvm-size llvm-strip
+.  for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
+	llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt ${RUST_BIN_EXTRA}
 	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .  endfor
