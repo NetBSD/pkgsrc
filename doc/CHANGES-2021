@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4365 2021/08/25 19:21:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4366 2021/08/25 19:27:32 scole Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6880,3 +6880,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-paste to 3.5.0 [adam 2021-08-25]
 	Updated www/py-httptools to 0.3.0 [adam 2021-08-25]
 	Updated www/py-httpx to 0.19.0 [adam 2021-08-25]
+	Updated textproc/split-thai to 2.8 [scole 2021-08-25]
