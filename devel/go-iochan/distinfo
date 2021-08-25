@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/08/31 21:11:52 he Exp $
-
-SHA1 (iochan-1.0.0.tar.gz) = e40131ab8f433cc1cc7becc904fb74c9d9045d27
-RMD160 (iochan-1.0.0.tar.gz) = 313c634ec55c7c72ff58ddd2308d8172c54f1ef2
-SHA512 (iochan-1.0.0.tar.gz) = 51949df1cf8b00e956bb7f09eb38d3c3565e4e7adb53cd6c5a2290205b381fbccd3ac7dae9e8ed5bda7fb1f93746cd649ba484fbff211bad477962d30cf27e83
-Size (iochan-1.0.0.tar.gz) = 1817 bytes
