@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2020/09/10 10:07:00 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/08/25 19:10:41 adam Exp $
 
-DISTNAME=	Paste-3.4.4
+DISTNAME=	Paste-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paste/}
@@ -15,5 +15,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
