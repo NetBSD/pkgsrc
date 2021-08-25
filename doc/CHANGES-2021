@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4364 2021/08/25 19:11:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4365 2021/08/25 19:21:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6878,3 +6878,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gh to 2.0.0 [bsiegert 2021-08-25]
 	Updated textproc/py-babelfish to 0.6.0 [adam 2021-08-25]
 	Updated www/py-paste to 3.5.0 [adam 2021-08-25]
+	Updated www/py-httptools to 0.3.0 [adam 2021-08-25]
+	Updated www/py-httpx to 0.19.0 [adam 2021-08-25]
