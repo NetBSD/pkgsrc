@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.80 2021/04/16 06:55:33 adam Exp $
+$NetBSD: distinfo,v 1.81 2021/08/26 08:24:48 adam Exp $
 
-SHA1 (nmap-7.91.tar.bz2) = e72198f463ee9d557e4c5c9444cc5a0e5c36b00c
-RMD160 (nmap-7.91.tar.bz2) = 3e011fdd6fb3b391a3cbfc6e4c7ec35ccfe1819b
-SHA512 (nmap-7.91.tar.bz2) = 9d59f031b5f748311e9f9a0b9d05ad4a7a70fc6ac17598d7c4c81a4825c95d53817d74435d839e67b9379a052f2d37889fd634f9c75301a851f465d60fb9974d
-Size (nmap-7.91.tar.bz2) = 10503500 bytes
+SHA1 (nmap-7.92.tar.bz2) = 62342a9a6641833c5c16b7a24ced4bace68c60fb
+RMD160 (nmap-7.92.tar.bz2) = 90e066815ff7f9d6e8bffcd6464a22061c150a24
+SHA512 (nmap-7.92.tar.bz2) = 7828367f9dc76ff4d1e8c821260e565fb0c3cb6aba0473d24759133a3006cdf2cb087574f0dd7d2ba47a63754ba4f72e0b78cdae1333a58f05c41d428b56ad59
+Size (nmap-7.92.tar.bz2) = 10498200 bytes
 SHA1 (patch-configure) = 5fc39f084eadd6ea0560cd8e6f52074113566600
 SHA1 (patch-libdnet-stripped_src_arp-bsd.c) = c56c4e70eca2fa04dd8aab38ed2c3f4cac83f5e3
 SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
