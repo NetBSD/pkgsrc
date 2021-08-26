@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2021/08/03 20:18:19 js Exp $
+@comment $NetBSD: PLIST,v 1.38 2021/08/26 13:20:40 jperkin Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -126,7 +126,6 @@ lib/pulse-${PKGVERSION}/modules/module-simple-protocol-tcp.so
 lib/pulse-${PKGVERSION}/modules/module-simple-protocol-unix.so
 lib/pulse-${PKGVERSION}/modules/module-sine-source.so
 lib/pulse-${PKGVERSION}/modules/module-sine.so
-${PLIST.sun}lib/pulse-${PULSELIBVER}/modules/module-solaris.so
 lib/pulse-${PKGVERSION}/modules/module-stream-restore.so
 lib/pulse-${PKGVERSION}/modules/module-suspend-on-idle.so
 lib/pulse-${PKGVERSION}/modules/module-switch-on-connect.so
