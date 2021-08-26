@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2021/08/10 08:53:36 nia Exp $
+# $NetBSD: Makefile,v 1.164 2021/08/26 13:20:40 jperkin Exp $
 
 DISTNAME=	pulseaudio-15.0
 CATEGORIES=	audio
@@ -38,11 +38,12 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash:run gmake gm4
 USE_TOOLS+=		msgfmt perl:build pkg-config
 MESON_ARGS+=		-Dtcpwrap=disabled
+MESON_ARGS+=		--localedir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=		--localstatedir=${VARBASE}
 MESON_ARGS+=		--sysconfdir=${PKG_SYSCONFBASEDIR}
 MESON_ARGS+=		-Dfftw=disabled
 MESON_ARGS+=		-Ddoxygen=false
-CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
+MESON_ARGS+=		-Dtests=false
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse.pc.in
@@ -53,11 +54,6 @@ REPLACE_BASH+=	shell-completion/bash/pulseaudio git-version-gen
 REPLACE_BASH+=	src/utils/pa-info
 
 .include "../../mk/bsd.prefs.mk"
-
-# Some tests are incompatible for NetBSD at least
-.if ${OPSYS} == "NetBSD"
-MESON_ARGS+=		-Dtests=false
-.endif
 
 # broken test for TLS
 .if ((${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)) || \
@@ -79,7 +75,7 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
 # Version number in patch-configure.ac.must be changed too.
 PLIST_SUBST+=		PULSELIBVER=15.0
-PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
+PLIST_VARS+=		alsa bonjour coreaudio evdev oss
 
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux"
@@ -93,7 +89,7 @@ PLIST.alsa=		yes
 .include "../../audio/alsa-lib/buildlink3.mk"
 .elif ${OPSYS} == "SunOS"
 USE_LANGUAGES+=		c99
-PLIST.sun=		yes
+CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -DBSD_COMP
 .  if ${OS_VERSION} == "5.11"
 PLIST.oss=		yes
 .  endif
