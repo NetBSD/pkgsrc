@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4367 2021/08/26 06:33:22 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4368 2021/08/26 07:31:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6883,3 +6883,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/split-thai to 2.8 [scole 2021-08-25]
 	Updated security/mit-krb5 to 1.18.4 [adam 2021-08-26]
 	Updated devel/cmake to 3.21.2 [adam 2021-08-26]
+	Updated devel/py-ruamel-yaml to 0.17.14 [adam 2021-08-26]
+	Updated devel/py-hexbytes to 0.2.2 [adam 2021-08-26]
