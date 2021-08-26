@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/04/16 06:55:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/08/26 08:24:48 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -599,6 +599,7 @@ ${PLIST.lua}share/nmap/scripts/mysql-vuln-cve2012-2122.nse
 ${PLIST.lua}share/nmap/scripts/nat-pmp-info.nse
 ${PLIST.lua}share/nmap/scripts/nat-pmp-mapport.nse
 ${PLIST.lua}share/nmap/scripts/nbd-info.nse
+${PLIST.lua}share/nmap/scripts/nbns-interfaces.nse
 ${PLIST.lua}share/nmap/scripts/nbstat.nse
 ${PLIST.lua}share/nmap/scripts/ncp-enum-users.nse
 ${PLIST.lua}share/nmap/scripts/ncp-serverinfo.nse
@@ -624,6 +625,7 @@ ${PLIST.lua}share/nmap/scripts/ntp-monlist.nse
 ${PLIST.lua}share/nmap/scripts/omp2-brute.nse
 ${PLIST.lua}share/nmap/scripts/omp2-enum-targets.nse
 ${PLIST.lua}share/nmap/scripts/omron-info.nse
+${PLIST.lua}share/nmap/scripts/openflow-info.nse
 ${PLIST.lua}share/nmap/scripts/openlookup-info.nse
 ${PLIST.lua}share/nmap/scripts/openvas-otp-brute.nse
 ${PLIST.lua}share/nmap/scripts/openwebnet-discovery.nse
@@ -642,6 +644,7 @@ ${PLIST.lua}share/nmap/scripts/pjl-ready-message.nse
 ${PLIST.lua}share/nmap/scripts/pop3-brute.nse
 ${PLIST.lua}share/nmap/scripts/pop3-capabilities.nse
 ${PLIST.lua}share/nmap/scripts/pop3-ntlm-info.nse
+${PLIST.lua}share/nmap/scripts/port-states.nse
 ${PLIST.lua}share/nmap/scripts/pptp-version.nse
 ${PLIST.lua}share/nmap/scripts/puppet-naivesigning.nse
 ${PLIST.lua}share/nmap/scripts/qconn-exec.nse
