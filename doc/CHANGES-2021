@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4368 2021/08/26 07:31:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4369 2021/08/26 08:25:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6885,3 +6885,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.21.2 [adam 2021-08-26]
 	Updated devel/py-ruamel-yaml to 0.17.14 [adam 2021-08-26]
 	Updated devel/py-hexbytes to 0.2.2 [adam 2021-08-26]
+	Updated net/wireshark to 3.4.8 [adam 2021-08-26]
+	Updated net/nmap to 7.92 [adam 2021-08-26]
+	Updated net/ndiff to 7.92 [adam 2021-08-26]
+	Updated net/zenmap to 7.92 [adam 2021-08-26]
