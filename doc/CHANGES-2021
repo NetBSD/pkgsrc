@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4369 2021/08/26 08:25:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4370 2021/08/26 09:32:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6889,3 +6889,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/nmap to 7.92 [adam 2021-08-26]
 	Updated net/ndiff to 7.92 [adam 2021-08-26]
 	Updated net/zenmap to 7.92 [adam 2021-08-26]
+	Updated audio/mpg123 to 1.28.2 [adam 2021-08-26]
+	Updated net/py-prometheus_client to 0.11.0 [adam 2021-08-26]
