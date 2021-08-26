@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2021/02/18 14:42:52 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/08/26 07:31:35 adam Exp $
 
-SHA1 (hexbytes-0.2.1.tar.gz) = 10bd86d65aa98acc48cf85189da6b8cb6334cb5e
-RMD160 (hexbytes-0.2.1.tar.gz) = e8b1b249d13500e73bdc09a5638a80548c753348
-SHA512 (hexbytes-0.2.1.tar.gz) = 317e0a0ccfce0a3db3618be60045826c8f98f26f16bd2fecabfc43dceff8395a7d62785700e35911afb4508fe96701eefbb746f29c9991455f166801ed5b2e40
-Size (hexbytes-0.2.1.tar.gz) = 1521935 bytes
+SHA1 (hexbytes-0.2.2.tar.gz) = 2b127218c6b7ab4355bb736d0d7a8b1f59b6fb9c
+RMD160 (hexbytes-0.2.2.tar.gz) = 9b484321ca6e0e3862d168b831580a21121375f2
+SHA512 (hexbytes-0.2.2.tar.gz) = 80bed389756dee9eac9bd752733bbe5244dbf8ea1b2c41fa8ef2ca4b19579ec3e18ba41f98b1412a3e37e793941261a3ef1cbf29a2bda35535e44609effc69b2
+Size (hexbytes-0.2.2.tar.gz) = 4709763 bytes
 SHA1 (patch-setup.py) = 64c71cd1e7dd94f5d4e23ec5f45b938b35ea9a66
