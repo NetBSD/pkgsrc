@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/08/19 02:59:13 taca Exp $
+# $NetBSD: Makefile,v 1.50 2021/08/26 17:00:56 jperkin Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=		--disable-atomic
 CONFIGURE_ARGS+=		--disable-threads
 .endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
+CONFIGURE_ARGS+=		--without-gssapi
 
 PKG_GROUPS_VARS+=	BIND_GROUP
 PKG_USERS_VARS=		BIND_USER
