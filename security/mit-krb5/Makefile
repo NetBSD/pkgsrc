@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2021/05/24 19:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2021/08/26 06:31:33 adam Exp $
 
 BRANCHNAME=	1.18
-DISTNAME=	krb5-${BRANCHNAME}.3
+DISTNAME=	krb5-${BRANCHNAME}.4
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${BRANCHNAME}/
