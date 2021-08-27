@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4380 2021/08/27 07:49:06 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4381 2021/08/27 08:01:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6904,3 +6904,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/go-kr-pretty 2021-08-27]
 	Removed devel/go-termbox 2021-08-27]
 	Removed textproc/go-runewidth 2021-08-27]
+	Updated net/unbound to 1.13.2 [adam 2021-08-27]
+	Updated sysutils/ansible-base to 2.10.13 [adam 2021-08-27]
