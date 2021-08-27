@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/02 16:49:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/27 14:11:08 ryoon Exp $
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-c++
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-cpp
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-g++
@@ -195,6 +195,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/collect2-aix.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/collect2.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/color-macros.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/common/config/i386/i386-cpuinfo.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/conditions.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/dbxcoff.h
@@ -310,6 +311,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimplify-me.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimplify.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/glimits.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gomp-constants.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graph.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphds.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphite.h
@@ -344,6 +346,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-attr-common.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-attr.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-codes.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-config.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-constants.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-flags.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-modes-inline.h
@@ -664,7 +667,6 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/hash_
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/hashtable.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/hashtable_policy.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/indirect_array.h
-cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/int_limits.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/invoke.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/ios_base.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/istream.tcc
@@ -1399,4 +1401,3 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a-gdb.py
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.la
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++fs.la
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libsupc++.la
-@pkgdir cross/x86_64-w64-mingw32/include

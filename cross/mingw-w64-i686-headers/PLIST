@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/10/02 16:49:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/27 14:11:07 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/GL/gl.h
 cross/i686-w64-mingw32/mingw/include/GL/glaux.h
 cross/i686-w64-mingw32/mingw/include/GL/glcorearb.h
@@ -71,6 +71,7 @@ cross/i686-w64-mingw32/mingw/include/appmgmt.h
 cross/i686-w64-mingw32/mingw/include/aqadmtyp.h
 cross/i686-w64-mingw32/mingw/include/asptlb.h
 cross/i686-w64-mingw32/mingw/include/assert.h
+cross/i686-w64-mingw32/mingw/include/asyncinfo.h
 cross/i686-w64-mingw32/mingw/include/atacct.h
 cross/i686-w64-mingw32/mingw/include/atalkwsh.h
 cross/i686-w64-mingw32/mingw/include/atsmedia.h
@@ -224,9 +225,11 @@ cross/i686-w64-mingw32/mingw/include/d3d11_1.h
 cross/i686-w64-mingw32/mingw/include/d3d11_2.h
 cross/i686-w64-mingw32/mingw/include/d3d11_3.h
 cross/i686-w64-mingw32/mingw/include/d3d11_4.h
+cross/i686-w64-mingw32/mingw/include/d3d11on12.h
 cross/i686-w64-mingw32/mingw/include/d3d11sdklayers.h
 cross/i686-w64-mingw32/mingw/include/d3d11shader.h
 cross/i686-w64-mingw32/mingw/include/d3d12.h
+cross/i686-w64-mingw32/mingw/include/d3d12sdklayers.h
 cross/i686-w64-mingw32/mingw/include/d3d12shader.h
 cross/i686-w64-mingw32/mingw/include/d3d8.h
 cross/i686-w64-mingw32/mingw/include/d3d8caps.h
@@ -378,8 +381,11 @@ cross/i686-w64-mingw32/mingw/include/dinput.h
 cross/i686-w64-mingw32/mingw/include/dinputd.h
 cross/i686-w64-mingw32/mingw/include/dir.h
 cross/i686-w64-mingw32/mingw/include/direct.h
+cross/i686-w64-mingw32/mingw/include/directmanipulation.h
+cross/i686-w64-mingw32/mingw/include/directxmath.h
 cross/i686-w64-mingw32/mingw/include/dirent.h
 cross/i686-w64-mingw32/mingw/include/diskguid.h
+cross/i686-w64-mingw32/mingw/include/dismapi.h
 cross/i686-w64-mingw32/mingw/include/dispatch.h
 cross/i686-w64-mingw32/mingw/include/dispatcherqueue.h
 cross/i686-w64-mingw32/mingw/include/dispdib.h
@@ -473,6 +479,7 @@ cross/i686-w64-mingw32/mingw/include/edevdefs.h
 cross/i686-w64-mingw32/mingw/include/eh.h
 cross/i686-w64-mingw32/mingw/include/ehstorapi.h
 cross/i686-w64-mingw32/mingw/include/elscore.h
+cross/i686-w64-mingw32/mingw/include/elssrvc.h
 cross/i686-w64-mingw32/mingw/include/emostore.h
 cross/i686-w64-mingw32/mingw/include/emptyvc.h
 cross/i686-w64-mingw32/mingw/include/endpointvolume.h
@@ -485,6 +492,7 @@ cross/i686-w64-mingw32/mingw/include/esent.h
 cross/i686-w64-mingw32/mingw/include/evcode.h
 cross/i686-w64-mingw32/mingw/include/evcoll.h
 cross/i686-w64-mingw32/mingw/include/eventsys.h
+cross/i686-w64-mingw32/mingw/include/eventtoken.h
 cross/i686-w64-mingw32/mingw/include/evntcons.h
 cross/i686-w64-mingw32/mingw/include/evntprov.h
 cross/i686-w64-mingw32/mingw/include/evntrace.h
@@ -763,6 +771,7 @@ cross/i686-w64-mingw32/mingw/include/minwindef.h
 cross/i686-w64-mingw32/mingw/include/mlang.h
 cross/i686-w64-mingw32/mingw/include/mmc.h
 cross/i686-w64-mingw32/mingw/include/mmcobj.h
+cross/i686-w64-mingw32/mingw/include/mmddk.h
 cross/i686-w64-mingw32/mingw/include/mmdeviceapi.h
 cross/i686-w64-mingw32/mingw/include/mmreg.h
 cross/i686-w64-mingw32/mingw/include/mmstream.h
@@ -1055,6 +1064,7 @@ cross/i686-w64-mingw32/mingw/include/recguids.h
 cross/i686-w64-mingw32/mingw/include/reconcil.h
 cross/i686-w64-mingw32/mingw/include/regbag.h
 cross/i686-w64-mingw32/mingw/include/regstr.h
+cross/i686-w64-mingw32/mingw/include/relogger.h
 cross/i686-w64-mingw32/mingw/include/rend.h
 cross/i686-w64-mingw32/mingw/include/resapi.h
 cross/i686-w64-mingw32/mingw/include/restartmanager.h
@@ -1083,6 +1093,7 @@ cross/i686-w64-mingw32/mingw/include/rtinfo.h
 cross/i686-w64-mingw32/mingw/include/rtm.h
 cross/i686-w64-mingw32/mingw/include/rtmv2.h
 cross/i686-w64-mingw32/mingw/include/rtutils.h
+cross/i686-w64-mingw32/mingw/include/rtworkq.h
 cross/i686-w64-mingw32/mingw/include/sal.h
 cross/i686-w64-mingw32/mingw/include/sapi.h
 cross/i686-w64-mingw32/mingw/include/sapi51.h
@@ -1165,7 +1176,9 @@ cross/i686-w64-mingw32/mingw/include/smx.h
 cross/i686-w64-mingw32/mingw/include/snmp.h
 cross/i686-w64-mingw32/mingw/include/softpub.h
 cross/i686-w64-mingw32/mingw/include/spatialaudioclient.h
+cross/i686-w64-mingw32/mingw/include/spatialaudiometadata.h
 cross/i686-w64-mingw32/mingw/include/specstrings.h
+cross/i686-w64-mingw32/mingw/include/spellcheck.h
 cross/i686-w64-mingw32/mingw/include/sperror.h
 cross/i686-w64-mingw32/mingw/include/sphelper.h
 cross/i686-w64-mingw32/mingw/include/sporder.h
@@ -1374,13 +1387,16 @@ cross/i686-w64-mingw32/mingw/include/winddiui.h
 cross/i686-w64-mingw32/mingw/include/windef.h
 cross/i686-w64-mingw32/mingw/include/windns.h
 cross/i686-w64-mingw32/mingw/include/windot11.h
+cross/i686-w64-mingw32/mingw/include/windows.foundation.collections.h
 cross/i686-w64-mingw32/mingw/include/windows.foundation.h
 cross/i686-w64-mingw32/mingw/include/windows.h
+cross/i686-w64-mingw32/mingw/include/windows.media.speechsynthesis.h
 cross/i686-w64-mingw32/mingw/include/windows.security.cryptography.h
 cross/i686-w64-mingw32/mingw/include/windows.storage.h
 cross/i686-w64-mingw32/mingw/include/windows.storage.streams.h
 cross/i686-w64-mingw32/mingw/include/windows.system.h
 cross/i686-w64-mingw32/mingw/include/windows.system.threading.h
+cross/i686-w64-mingw32/mingw/include/windowscontracts.h
 cross/i686-w64-mingw32/mingw/include/windowsx.h
 cross/i686-w64-mingw32/mingw/include/windowsx.h16
 cross/i686-w64-mingw32/mingw/include/winefs.h
@@ -1435,7 +1451,12 @@ cross/i686-w64-mingw32/mingw/include/wmdrmsdk.h
 cross/i686-w64-mingw32/mingw/include/wmiatlprov.h
 cross/i686-w64-mingw32/mingw/include/wmistr.h
 cross/i686-w64-mingw32/mingw/include/wmiutils.h
+cross/i686-w64-mingw32/mingw/include/wmp.h
+cross/i686-w64-mingw32/mingw/include/wmpids.h
+cross/i686-w64-mingw32/mingw/include/wmprealestate.h
+cross/i686-w64-mingw32/mingw/include/wmpservices.h
 cross/i686-w64-mingw32/mingw/include/wmsbuffer.h
+cross/i686-w64-mingw32/mingw/include/wmsdk.h
 cross/i686-w64-mingw32/mingw/include/wmsdkidl.h
 cross/i686-w64-mingw32/mingw/include/wnnc.h
 cross/i686-w64-mingw32/mingw/include/wow64apiset.h
@@ -1487,6 +1508,7 @@ cross/i686-w64-mingw32/mingw/include/wsvns.h
 cross/i686-w64-mingw32/mingw/include/wtsapi32.h
 cross/i686-w64-mingw32/mingw/include/wtypes.h
 cross/i686-w64-mingw32/mingw/include/wtypesbase.h
+cross/i686-w64-mingw32/mingw/include/wuapi.h
 cross/i686-w64-mingw32/mingw/include/xa.h
 cross/i686-w64-mingw32/mingw/include/xapo.h
 cross/i686-w64-mingw32/mingw/include/xapofx.h

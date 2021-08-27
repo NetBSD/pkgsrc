@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/10/02 16:49:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/27 14:11:07 ryoon Exp $
 cross/x86_64-w64-mingw32/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32/mingw/include/cdoex_i.c
@@ -38,6 +38,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libactiveds.a
 cross/x86_64-w64-mingw32/mingw/lib/libadmparse.a
 cross/x86_64-w64-mingw32/mingw/lib/libadmwprox.a
 cross/x86_64-w64-mingw32/mingw/lib/libadptif.a
+cross/x86_64-w64-mingw32/mingw/lib/libadsiid.a
 cross/x86_64-w64-mingw32/mingw/lib/libadsiisex.a
 cross/x86_64-w64-mingw32/mingw/lib/libadsldpc.a
 cross/x86_64-w64-mingw32/mingw/lib/libadvapi32.a
@@ -416,8 +417,11 @@ cross/x86_64-w64-mingw32/mingw/lib/libmf.a
 cross/x86_64-w64-mingw32/mingw/lib/libmf3216.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfc42.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfc42u.a
+cross/x86_64-w64-mingw32/mingw/lib/libmfcore.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfplat.a
+cross/x86_64-w64-mingw32/mingw/lib/libmfplay.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfreadwrite.a
+cross/x86_64-w64-mingw32/mingw/lib/libmfsensorgroup.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfuuid.a
 cross/x86_64-w64-mingw32/mingw/lib/libmgmtapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libmidimap.a
@@ -588,11 +592,13 @@ cross/x86_64-w64-mingw32/mingw/lib/libolecnv32.a
 cross/x86_64-w64-mingw32/mingw/lib/liboledb32.a
 cross/x86_64-w64-mingw32/mingw/lib/liboledlg.a
 cross/x86_64-w64-mingw32/mingw/lib/libolesvr32.a
+cross/x86_64-w64-mingw32/mingw/lib/libopends60.a
 cross/x86_64-w64-mingw32/mingw/lib/libopengl32.a
 cross/x86_64-w64-mingw32/mingw/lib/libosuninst.a
 cross/x86_64-w64-mingw32/mingw/lib/libp2p.a
 cross/x86_64-w64-mingw32/mingw/lib/libp2pcollab.a
 cross/x86_64-w64-mingw32/mingw/lib/libp2pgraph.a
+cross/x86_64-w64-mingw32/mingw/lib/libpathcch.a
 cross/x86_64-w64-mingw32/mingw/lib/libpautoenr.a
 cross/x86_64-w64-mingw32/mingw/lib/libpcwum.a
 cross/x86_64-w64-mingw32/mingw/lib/libpdh.a
@@ -856,6 +862,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libwmiaprpl.a
 cross/x86_64-w64-mingw32/mingw/lib/libwmilib.a
 cross/x86_64-w64-mingw32/mingw/lib/libwmiprop.a
 cross/x86_64-w64-mingw32/mingw/lib/libwmisvc.a
+cross/x86_64-w64-mingw32/mingw/lib/libwofutil.a
 cross/x86_64-w64-mingw32/mingw/lib/libwow64.a
 cross/x86_64-w64-mingw32/mingw/lib/libwow64cpu.a
 cross/x86_64-w64-mingw32/mingw/lib/libwow64mib.a

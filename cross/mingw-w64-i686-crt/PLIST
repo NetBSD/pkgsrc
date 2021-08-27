@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/10/02 16:49:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/08/27 14:11:07 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/agtctl_i.c
 cross/i686-w64-mingw32/mingw/include/agtsvr_i.c
 cross/i686-w64-mingw32/mingw/include/cdoex_i.c
@@ -29,6 +29,7 @@ cross/i686-w64-mingw32/mingw/lib/gcrt1.o
 cross/i686-w64-mingw32/mingw/lib/gcrt2.o
 cross/i686-w64-mingw32/mingw/lib/libaclui.a
 cross/i686-w64-mingw32/mingw/lib/libactiveds.a
+cross/i686-w64-mingw32/mingw/lib/libadsiid.a
 cross/i686-w64-mingw32/mingw/lib/libadsldpc.a
 cross/i686-w64-mingw32/mingw/lib/libadvapi32.a
 cross/i686-w64-mingw32/mingw/lib/libamstrmid.a
@@ -170,6 +171,7 @@ cross/i686-w64-mingw32/mingw/lib/libelscore.a
 cross/i686-w64-mingw32/mingw/lib/libesent.a
 cross/i686-w64-mingw32/mingw/lib/libevr.a
 cross/i686-w64-mingw32/mingw/lib/libfaultrep.a
+cross/i686-w64-mingw32/mingw/lib/libfeclient.a
 cross/i686-w64-mingw32/mingw/lib/libfwpuclnt.a
 cross/i686-w64-mingw32/mingw/lib/libgdi32.a
 cross/i686-w64-mingw32/mingw/lib/libgdiplus.a
@@ -210,9 +212,12 @@ cross/i686-w64-mingw32/mingw/lib/libm.a
 cross/i686-w64-mingw32/mingw/lib/libmapi32.a
 cross/i686-w64-mingw32/mingw/lib/libmcd.a
 cross/i686-w64-mingw32/mingw/lib/libmf.a
+cross/i686-w64-mingw32/mingw/lib/libmfcore.a
 cross/i686-w64-mingw32/mingw/lib/libmfcuia32.a
 cross/i686-w64-mingw32/mingw/lib/libmfplat.a
+cross/i686-w64-mingw32/mingw/lib/libmfplay.a
 cross/i686-w64-mingw32/mingw/lib/libmfreadwrite.a
+cross/i686-w64-mingw32/mingw/lib/libmfsensorgroup.a
 cross/i686-w64-mingw32/mingw/lib/libmfuuid.a
 cross/i686-w64-mingw32/mingw/lib/libmgmtapi.a
 cross/i686-w64-mingw32/mingw/lib/libmincore.a
@@ -275,10 +280,12 @@ cross/i686-w64-mingw32/mingw/lib/liboledlg.a
 cross/i686-w64-mingw32/mingw/lib/libolepro32.a
 cross/i686-w64-mingw32/mingw/lib/libolesvr32.a
 cross/i686-w64-mingw32/mingw/lib/libolethk32.a
+cross/i686-w64-mingw32/mingw/lib/libopends60.a
 cross/i686-w64-mingw32/mingw/lib/libopengl32.a
 cross/i686-w64-mingw32/mingw/lib/libp2p.a
 cross/i686-w64-mingw32/mingw/lib/libp2pcollab.a
 cross/i686-w64-mingw32/mingw/lib/libp2pgraph.a
+cross/i686-w64-mingw32/mingw/lib/libpathcch.a
 cross/i686-w64-mingw32/mingw/lib/libpcwum.a
 cross/i686-w64-mingw32/mingw/lib/libpdh.a
 cross/i686-w64-mingw32/mingw/lib/libpdhui.a
@@ -395,6 +402,7 @@ cross/i686-w64-mingw32/mingw/lib/libwlanutil.a
 cross/i686-w64-mingw32/mingw/lib/libwldap32.a
 cross/i686-w64-mingw32/mingw/lib/libwmcodecdspuuid.a
 cross/i686-w64-mingw32/mingw/lib/libwmilib.a
+cross/i686-w64-mingw32/mingw/lib/libwofutil.a
 cross/i686-w64-mingw32/mingw/lib/libwow32.a
 cross/i686-w64-mingw32/mingw/lib/libws2_32.a
 cross/i686-w64-mingw32/mingw/lib/libwsdapi.a
