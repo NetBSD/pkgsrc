@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/08/15 07:53:54 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/08/27 00:48:39 wen Exp $
 
-SHA1 (WWW-Mechanize-Cached-1.54.tar.gz) = 56748fa9f25a532a7cf10da3933525549773b288
-RMD160 (WWW-Mechanize-Cached-1.54.tar.gz) = 1a75f550c91dcc6592cb81173f37e477a4d779f0
-SHA512 (WWW-Mechanize-Cached-1.54.tar.gz) = 087cc92d886dc6ccddb23856e4ed6dd451cc114f6b02e078b153913d32513b3b31b7110c5ec3e352971811acce37bd564fa94b36da288b2bf4a832cd38628aba
-Size (WWW-Mechanize-Cached-1.54.tar.gz) = 34868 bytes
+SHA1 (WWW-Mechanize-Cached-1.55.tar.gz) = b0e33274dce9e0def2d38c528fb5776a9bb9b69d
+RMD160 (WWW-Mechanize-Cached-1.55.tar.gz) = d63fffa9177e42993997dc1b50920a35beb543b2
+SHA512 (WWW-Mechanize-Cached-1.55.tar.gz) = cb4e4b8578a21028484b06c8fe4cea8f78a92b0e790cda7e56c72762fab254e1b3d2865a8889c5fccfdc5678e4e0473211bccbbf703655aece32bb655710fbf0
+Size (WWW-Mechanize-Cached-1.55.tar.gz) = 34945 bytes
