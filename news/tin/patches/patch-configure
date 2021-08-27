@@ -1,16 +1,15 @@
-$NetBSD: patch-configure,v 1.3 2021/01/04 15:30:46 micha Exp $
+$NetBSD: patch-configure,v 1.4 2021/08/27 17:45:26 micha Exp $
 
 Skip missing include directories.
 
---- configure.orig
+--- configure.orig	2021-08-27 08:01:40.268475849 +0000
 +++ configure
-@@ -13015,6 +13015,9 @@ echo "$ac_t""$cf_cv_ncurses_h2" 1>&6
- if test -n "$cf_1st_incdir" ; then
-   for cf_add_incdir in $cf_1st_incdir
-   do
-+    if ! [ -d $cf_add_incdir ]; then
-+      continue;
-+    fi
- 	while test $cf_add_incdir != /usr/include
- 	do
- 	  if test -d $cf_add_incdir
+@@ -35720,7 +35720,7 @@ EOF
+ 	;;
+ esac
+ 
+-for cf_func in vw_printw
++for cf_func in vw_printw get_wch
+ do
+ 
+ cf_tr_func=`echo "$cf_func" | sed y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%`
