@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/02 16:49:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/27 14:11:08 ryoon Exp $
 cross/x86_64-w64-mingw32-bootstrap/bin/x86_64-w64-mingw32-cpp
 cross/x86_64-w64-mingw32-bootstrap/bin/x86_64-w64-mingw32-gcc
 cross/x86_64-w64-mingw32-bootstrap/bin/x86_64-w64-mingw32-gcc-${PKGVERSION}
@@ -162,6 +162,7 @@ cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plug
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/collect2-aix.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/collect2.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/color-macros.h
+cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/common/config/i386/i386-cpuinfo.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/conditions.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/dbxcoff.h
@@ -272,6 +273,7 @@ cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plug
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimplify-me.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimplify.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/glimits.h
+cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gomp-constants.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graph.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphds.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphite.h
@@ -306,6 +308,7 @@ cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plug
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-attr-common.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-attr.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-codes.h
+cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-config.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-constants.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-flags.h
 cross/x86_64-w64-mingw32-bootstrap/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/insn-modes-inline.h
@@ -559,3 +562,5 @@ cross/x86_64-w64-mingw32-bootstrap/man/man1/x86_64-w64-mingw32-lto-dump.1
 cross/x86_64-w64-mingw32-bootstrap/man/man7/fsf-funding.7
 cross/x86_64-w64-mingw32-bootstrap/man/man7/gfdl.7
 cross/x86_64-w64-mingw32-bootstrap/man/man7/gpl.7
+@pkgdir cross/x86_64-w64-mingw32-bootstrap/info
+@pkgdir cross/x86_64-w64-mingw32-bootstrap/include
