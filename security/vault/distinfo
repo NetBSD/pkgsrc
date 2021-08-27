@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2021/05/30 17:37:53 he Exp $
+$NetBSD: distinfo,v 1.28 2021/08/27 09:24:41 he Exp $
 
-SHA1 (vault-1.6.5.tar.gz) = e9b47cf76c96deea4b466a9d3cc64a39a5d0959b
-RMD160 (vault-1.6.5.tar.gz) = 1b2a7ed3e6c45e31cd18a3314399a512adba4e88
-SHA512 (vault-1.6.5.tar.gz) = 0f5640d376f21d57bf25db0865b4509ef819dd82e950f8c9192188ab3ef1c2477c369049b69a5194e27051b5d8dc523b9760b01eda6568f7348bb782cf6f97c6
-Size (vault-1.6.5.tar.gz) = 39136426 bytes
+SHA1 (vault-1.6.6.tar.gz) = f627772ec519a2e01b142580e5ed8b17cebfd423
+RMD160 (vault-1.6.6.tar.gz) = 33e9b0f0e9c1f29c7cca9ad56343d0d21450d2d4
+SHA512 (vault-1.6.6.tar.gz) = 820ec2f0b71defe6e6920bb4eefec55536d3d06345b676323d4af0c74c837c886871b0951b54f917e27b61bade9b4a8e9f36e3905a82a134b9e5f887ed744534
+Size (vault-1.6.6.tar.gz) = 39139148 bytes
 SHA1 (patch-scripts_gen__openapi.sh) = 1ad66480ef135adec05f58b088440e0bec6b4ab8
 SHA1 (patch-vendor_github.com_docker_docker_client_client__unix.go) = 86d985a6aac6b0eaaf6bdc3b1e4a7e2d17454a6a
 SHA1 (patch-vendor_github.com_docker_docker_pkg_system_stat__netbsd.go) = 09c2f699b37fcb2ea05ca0df270359426a0629b7
