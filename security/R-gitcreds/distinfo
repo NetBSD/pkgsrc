@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/08/24 10:13:49 mef Exp $
+$NetBSD: distinfo,v 1.1 2021/08/27 06:02:26 jperkin Exp $
 
 SHA1 (R/gitcreds_0.1.1.tar.gz) = aa45a0f4d49e4a59eabef3a0adbc929ed97fbb04
 RMD160 (R/gitcreds_0.1.1.tar.gz) = 872653001f4d5e4140e2d9674bf90fa3c9130460
