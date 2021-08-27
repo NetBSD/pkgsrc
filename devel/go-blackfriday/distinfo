@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/06/17 02:25:38 minskim Exp $
-
-SHA1 (blackfriday-1.5.1.tar.gz) = 3f1aa38f936f11b3dc58f1298bfa142d5cfddd9a
-RMD160 (blackfriday-1.5.1.tar.gz) = c7e53d33282bfa2e1c2bc58544880fc858967383
-SHA512 (blackfriday-1.5.1.tar.gz) = 97589691599322db93619d0dfe3c02357f2eef1b00c94f38f99fe72429cc7a2e2f39fd37cf2d6a25474b21a649932e840fbae782fe2d3f9b7856782bad3d8f19
-Size (blackfriday-1.5.1.tar.gz) = 75044 bytes
