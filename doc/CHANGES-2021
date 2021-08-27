@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4383 2021/08/27 09:40:16 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4384 2021/08/27 12:34:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6908,3 +6908,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible-base to 2.10.13 [adam 2021-08-27]
 	Updated security/vault to 1.6.6 [he 2021-08-27]
 	Updated devel/mob to 1.10.0 [schmonz 2021-08-27]
+	Updated www/grafana to 8.1.2 [triaxx 2021-08-27]
