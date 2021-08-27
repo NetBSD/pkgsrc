@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 20:31:10 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/08/27 03:41:41 ryoon Exp $
 
 SHA1 (xcopilot-0.6.6.tar.gz) = 91f76d1fd8fc19b6fea18853425aa3076e945d5d
 RMD160 (xcopilot-0.6.6.tar.gz) = e267495db384070e7e192043f23290f0004ecd4a
@@ -6,13 +6,23 @@ SHA512 (xcopilot-0.6.6.tar.gz) = 3f4d789064993a014156caf291db39ab78e6fcf79dc25d6
 Size (xcopilot-0.6.6.tar.gz) = 343264 bytes
 SHA1 (patch-aa) = 3354ed73dfa6c05273c7f430d45bacb0c8adbcf5
 SHA1 (patch-ab) = d0e1eba65c0e8c963953856b939629fa0b99ea3c
-SHA1 (patch-ac) = 7755e1a2ada8e3ca4f1e7d144b82d166ed2d3360
+SHA1 (patch-ac) = eb056a51d3989be4cba91ff851699a72879f2250
 SHA1 (patch-ad) = b59e359dc575f3321385e54b87c9d6342461bf6f
 SHA1 (patch-ae) = 26067d585aac5fc30fcc8bc58b561acc4bdfae44
 SHA1 (patch-af) = 5b1a93a5b08444e53fdbb17e1148149542cc6dd1
-SHA1 (patch-ag) = 68a22072946811f9cc97434f532081a07fda567f
+SHA1 (patch-ag) = b68648a69706482b2464c19fea3e3289b2293f08
 SHA1 (patch-ah) = fa166c5ecf7458c91f89b216aee5acb6de270292
 SHA1 (patch-ai) = 255d997e2ef340a8d4b91ce25c2a3071df5c4520
-SHA1 (patch-aj) = 560a3dd902323ec1d07c292b6e8f95acb6c1c939
+SHA1 (patch-aj) = 1039e3f8c09e5963560c52f2d990d951cf956f02
 SHA1 (patch-ak) = 830984e8d2992b3c6ff1229309328717b4f9f473
 SHA1 (patch-al) = 991331f9cd004ced4b37253a55e6ecc3e66cc7c3
+SHA1 (patch-fakecall.c) = e4da6004f8a3353847f862587882e6777c743e4e
+SHA1 (patch-main.h) = 037092c49353274215232fb07a26328e4a003ade
+SHA1 (patch-mc68k_newcpu.c) = 6b96b5f450859377bab8ac360e2a982f8ac17b06
+SHA1 (patch-mx_basic.c) = 4a89ea94eb9467e3363c43695d75f825be36720c
+SHA1 (patch-mx_buttons.h) = fbbb4863a4ef846056623de3c35105c5151fea93
+SHA1 (patch-mx_libmx.h) = d3f3e6bc3fa7234f0267d4e8008820ab4d65331c
+SHA1 (patch-mx_request.c) = 0dd93dea77633d974993c6ef31981606207520b0
+SHA1 (patch-mx_select.c) = 53c02e231bbf9c3bc0f399c84e058ca7bc7bc403
+SHA1 (patch-mx_test__filesel.c) = 574bfeaa28bd23ad4da1bb87d3de4002a7793d70
+SHA1 (patch-mx_test__menu.c) = d4da66fc284885df42abbf51699a8babec59c942
