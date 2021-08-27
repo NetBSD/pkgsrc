@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3488 2021/08/27 07:17:29 nia Exp $
+# $NetBSD: Makefile,v 1.3489 2021/08/27 07:18:06 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -428,7 +428,6 @@ SUBDIR+=	go-nbreader
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-pty
 SUBDIR+=	go-review
-SUBDIR+=	go-sanitized_anchor_name
 SUBDIR+=	go-siphash
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox

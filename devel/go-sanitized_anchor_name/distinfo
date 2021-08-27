@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/06/11 16:12:09 minskim Exp $
-
-SHA1 (sanitized_anchor_name-0.0.20170919-86672fcb3f950f35f2e675df2240550f2a50762f.tar.gz) = b389f9c63ec5a1c887b55933ecd693cc2ec6585b
-RMD160 (sanitized_anchor_name-0.0.20170919-86672fcb3f950f35f2e675df2240550f2a50762f.tar.gz) = 935f14c8e293ac3e55ddea9dbbc1851c5646faa3
-SHA512 (sanitized_anchor_name-0.0.20170919-86672fcb3f950f35f2e675df2240550f2a50762f.tar.gz) = 1d53a83a293157ea42d4e1c7a1eb30c87eaa32cdc88521ebcfa3f94fa4ddcf35d1b839a16ccd00043ee59c113596d5048f88e5cf5f9e6ce6003c9d8faf837ad0
-Size (sanitized_anchor_name-0.0.20170919-86672fcb3f950f35f2e675df2240550f2a50762f.tar.gz) = 2057 bytes
