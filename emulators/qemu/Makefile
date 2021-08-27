@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.282 2021/06/22 04:09:06 thorpej Exp $
+# $NetBSD: Makefile,v 1.283 2021/08/27 03:32:37 ryoon Exp $
 
-DISTNAME=	qemu-6.0.0
-PKGREVISION=	2
+DISTNAME=	qemu-6.1.0
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +20,7 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
 
 SUBST_CLASSES+=			sphinx-build
 SUBST_STAGE.sphinx-build=	pre-configure
@@ -27,7 +28,7 @@ SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
 SUBST_FILES.sphinx-build+=	configure
 SUBST_FILES.sphinx-build+=	docs/meson.build
 SUBST_FILES.sphinx-build+=	roms/skiboot/doc/Makefile
-SUBST_FILES.sphinx-build+=	roms/u-boot/Documentation/Makefile
+SUBST_FILES.sphinx-build+=	roms/u-boot/doc/Makefile
 SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
 .include "options.mk"
@@ -74,7 +75,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mipsel
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-moxie
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-nios2
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-or1k
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc

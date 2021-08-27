@@ -1,8 +1,8 @@
-$NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
+$NetBSD: patch-hw-mips-mipssim.c,v 1.4 2021/08/27 03:32:37 ryoon Exp $
 
---- hw/mips/mipssim.c.orig	2020-12-08 16:59:44.000000000 +0000
+--- hw/mips/mipssim.c.orig	2021-08-04 16:29:07.000000000 +0000
 +++ hw/mips/mipssim.c
-@@ -39,6 +39,7 @@
+@@ -39,12 +39,20 @@
  #include "hw/boards.h"
  #include "hw/mips/bios.h"
  #include "hw/loader.h"
@@ -10,7 +10,6 @@ $NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
  #include "elf.h"
  #include "hw/sysbus.h"
  #include "hw/qdev-properties.h"
-@@ -46,6 +47,13 @@
  #include "qemu/error-report.h"
  #include "sysemu/qtest.h"
  #include "sysemu/reset.h"
@@ -24,7 +23,7 @@ $NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
  
  static struct _loaderparams {
      int ram_size;
-@@ -136,7 +144,7 @@ static void mipsnet_init(int base, qemu_
+@@ -135,7 +143,7 @@ static void mipsnet_init(int base, qemu_
                                  sysbus_mmio_get_region(s, 0));
  }
  
@@ -33,7 +32,7 @@ $NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
  mips_mipssim_init(MachineState *machine)
  {
      const char *kernel_filename = machine->kernel_filename;
-@@ -147,6 +155,7 @@ mips_mipssim_init(MachineState *machine)
+@@ -146,6 +154,7 @@ mips_mipssim_init(MachineState *machine)
      MemoryRegion *isa = g_new(MemoryRegion, 1);
      MemoryRegion *bios = g_new(MemoryRegion, 1);
      Clock *cpuclk;
@@ -41,7 +40,7 @@ $NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
      MIPSCPU *cpu;
      CPUMIPSState *env;
      ResetData *reset_info;
-@@ -209,7 +218,7 @@ mips_mipssim_init(MachineState *machine)
+@@ -208,7 +217,7 @@ mips_mipssim_init(MachineState *machine)
      /* Register 64 KB of ISA IO space at 0x1fd00000. */
      memory_region_init_alias(isa, NULL, "isa_mmio",
                               get_system_io(), 0, 0x00010000);
@@ -50,7 +49,7 @@ $NetBSD: patch-hw-mips-mipssim.c,v 1.3 2021/02/20 22:59:29 ryoon Exp $
  
      /*
       * A single 16450 sits at offset 0x3f8. It is attached to
-@@ -230,6 +239,23 @@ mips_mipssim_init(MachineState *machine)
+@@ -229,6 +238,23 @@ mips_mipssim_init(MachineState *machine)
      if (nd_table[0].used)
          /* MIPSnet uses the MIPS CPU INT0, which is interrupt 2. */
          mipsnet_init(0x4200, env->irq[2], &nd_table[0]);
