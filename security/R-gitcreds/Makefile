@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/24 10:13:49 mef Exp $
+# $NetBSD: Makefile,v 1.1 2021/08/27 06:02:26 jperkin Exp $
 
 R_PKGNAME=	gitcreds
 R_PKGVER=	0.1.1
