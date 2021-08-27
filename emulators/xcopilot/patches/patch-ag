@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2021/08/27 03:41:41 ryoon Exp $
 
---- display.c.orig	Tue Aug 25 15:56:02 1998
-+++ display.c	Tue Feb  6 15:02:19 2001
-@@ -272,8 +272,13 @@
+--- display.c.orig	1998-08-25 13:56:02.000000000 +0000
++++ display.c
+@@ -272,8 +272,13 @@ static void xcpPutImage(int x, int y, in
  }
  
  static int xcpHandleExpose(XEvent *event) {
@@ -18,7 +18,7 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
    return event->xexpose.count;
  }
  
-@@ -360,15 +365,26 @@
+@@ -360,15 +365,26 @@ static void xcpKeyEvent(int down, int ke
  typedef struct _Key {
    const char *name;
    XRectangle bounds;
@@ -52,7 +52,7 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
  
  static void HandleKey(Widget w, XtPointer client_data, XEvent *event,
                        Boolean *continue_to_dispatch)
-@@ -502,7 +518,7 @@
+@@ -502,7 +518,7 @@ static void xcpKBtoASCII(shared_img *shp
  {
    static KeySym		keysym;
    static XComposeStatus	compose;
@@ -61,7 +61,7 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
    char			buffer[8];
  
    bufsize = 8;
-@@ -511,16 +527,55 @@
+@@ -511,16 +527,55 @@ static void xcpKBtoASCII(shared_img *shp
  			bufsize,
  			&keysym,
  			&compose);
@@ -121,7 +121,7 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
  static void HandleClientMessage(Widget w, XtPointer client_data, XEvent *event,
                                  Boolean *continue_to_dispatch)
  {
-@@ -542,6 +597,8 @@
+@@ -542,6 +597,8 @@ static void HandleXEvents(Widget w, XtPo
    case KeyPress:
      xcpKBtoASCII(shptr, event);
      break;
@@ -130,7 +130,7 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
    case ButtonPress:		/* a mouse button was pressed */
      if (event->xbutton.button == 3)
        do_menu(event->xbutton.x_root, event->xbutton.y_root);
-@@ -623,7 +680,7 @@
+@@ -623,7 +680,7 @@ char *xcpInitialize(shared_img *shptr, X
                  XtNborder, BlackPixel(xcpDisplay, xcpScreenNum), NULL);
  
    XtAddEventHandler(topWidget, ButtonPressMask | KeyPressMask |
@@ -139,3 +139,19 @@ $NetBSD: patch-ag,v 1.1 2001/02/12 14:09:25 wiz Exp $
                      (XtPointer)shptr);
  
    /*
+@@ -936,8 +993,14 @@ static void xcpUpdateLCD(char *sbuf, con
+ #ifdef WORDS_BIGENDIAN
+ #define GOOD_ENDIAN(x) (x)
+ #else
++#  if __INTPTR_WIDTH__ == 32
+ /* Wonk: sizeof(unsigned char *) must be == sizeof(uint32)  - Ian */
+-#define GOOD_ENDIAN(x) ((unsigned char *)(((uint32)(x))^1UL))
++#  define GOOD_ENDIAN(x) ((unsigned char *)(((uint32)(x))^1UL))
++#  elif __INTPTR_WIDTH__ == 64
++#  define GOOD_ENDIAN(x) ((unsigned char *)(((__uint64_t)(x))^1UL))
++#  else
++#  error This architecture is not supported.
++#  endif
+ #endif
+ 
+ #define PUTPIXEL(type, dstptr, x) {                                        \
