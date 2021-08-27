@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2020/10/02 16:49:36 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/08/27 14:11:08 ryoon Exp $
 
-SHA1 (gcc-10.2.0.tar.xz) = 8de0aecd3a52bb92b43082df8a9256356d1f03be
-RMD160 (gcc-10.2.0.tar.xz) = 73f182e7d40e5c2988b2b8cd80cfca601f20e9fc
-SHA512 (gcc-10.2.0.tar.xz) = 42ae38928bd2e8183af445da34220964eb690b675b1892bbeb7cd5bb62be499011ec9a93397dba5e2fb681afadfc6f2767d03b9035b44ba9be807187ae6dc65e
-Size (gcc-10.2.0.tar.xz) = 75004144 bytes
+SHA1 (gcc-10.3.0.tar.xz) = fb51ed1660c065898c75951fb38e1ebad7d49feb
+RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
+SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
+Size (gcc-10.3.0.tar.xz) = 76692288 bytes
 SHA1 (patch-contrib_download__prerequisites) = 50f8aaf7403ce9f63cc119ff038d5f3e952bb8b6
 SHA1 (patch-libcc1_Makefile.in) = d228d3ab264ef0c4b133af27c027888502c886eb
 SHA1 (patch-libcc1_connection.cc) = 3b21290f4228dd29430e61b207aec0b153ae8120
