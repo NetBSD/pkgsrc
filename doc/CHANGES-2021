@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4377 2021/08/27 03:42:12 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4378 2021/08/27 07:14:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6898,3 +6898,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-URI-Fetch to 0.15 [wen 2021-08-27]
 	Updated emulators/qemu to 6.1.0 [ryoon 2021-08-27]
 	Updated emulators/xcopilot to 0.6.6nb2 [ryoon 2021-08-27]
+	Updated textproc/go-md2man to 2.0.1 [nia 2021-08-27]
