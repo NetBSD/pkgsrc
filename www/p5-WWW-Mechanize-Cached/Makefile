@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:55:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/08/27 00:48:39 wen Exp $
 
-DISTNAME=	WWW-Mechanize-Cached-1.54
+DISTNAME=	WWW-Mechanize-Cached-1.55
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
