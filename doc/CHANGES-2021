@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4385 2021/08/27 14:11:57 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4386 2021/08/27 17:46:45 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6923,3 +6923,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/mingw-w64-x86_64-gcc-winpthreads to 10.3.0 [ryoon 2021-08-27]
 	Updated cross/mingw-w64-x86_64-headers to 9.0.0 [ryoon 2021-08-27]
 	Updated cross/mingw-w64-x86_64-winpthreads to 9.0.0 [ryoon 2021-08-27]
+	Updated news/tin to 2.6.0 [micha 2021-08-27]
