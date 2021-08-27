@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1245 2021/08/06 12:29:23 nia Exp $
+# $NetBSD: Makefile,v 1.1246 2021/08/27 07:40:05 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -237,7 +237,6 @@ SUBDIR+=	go-diff
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
-SUBDIR+=	go-runewidth
 SUBDIR+=	go-text
 SUBDIR+=	grep
 SUBDIR+=	grepcidr
