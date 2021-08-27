@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2021/08/11 19:35:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.69 2021/08/27 09:24:41 he Exp $
 
-DISTNAME=	vault-1.6.5
-PKGREVISION=	3
+DISTNAME=	vault-1.6.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -11,7 +10,6 @@ COMMENT=	Tool for managing secrets
 LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-WORKSRC=	${PKGNAME}
 
 GO_DIST_BASE=		${DISTNAME}
 GO_SRCPATH=		github.com/hashicorp/vault
@@ -21,6 +19,8 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/
 USE_TOOLS+=		bash gmake
 
 INSTALLATION_DIRS+=	bin
+
+DEPENDS+=	go>=1.15.15:../../lang/go
 
 # Clumsy workaround for https://github.com/golang/go/issues/22409
 pre-build:
