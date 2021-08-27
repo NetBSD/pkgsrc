@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/05/25 11:20:55 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2021/08/27 00:56:05 wen Exp $
 
-SHA1 (URI-Fetch-0.13.tar.gz) = 7cfae8948f14f84d85f598911b69cc3df4cb7ff2
-RMD160 (URI-Fetch-0.13.tar.gz) = 2760d29016eb125e3760355c1c876df099d2a298
-SHA512 (URI-Fetch-0.13.tar.gz) = 8df3e15bf49a7038b2a7c0d2d175bd69ed7fd6ba83bf13e65c18a46e356465bf57e1d725a6c940830dac3c3f3af294c56bb4685ede5181904b7c9a14260145e4
-Size (URI-Fetch-0.13.tar.gz) = 16669 bytes
+SHA1 (URI-Fetch-0.15.tar.gz) = a6921de29ee69e1e5ceb97a3b85d3839479b1a70
+RMD160 (URI-Fetch-0.15.tar.gz) = a56dfeb84ce0f86d6c4796514711905f949e018d
+SHA512 (URI-Fetch-0.15.tar.gz) = eb630a628920cdee005a7a4be5c82da635050905a6cbb12b06721a11921f54b72d0c307306a413b95e43def7859eb5ac4e0d9d9400c4fe86750cc71210db7203
+Size (URI-Fetch-0.15.tar.gz) = 16808 bytes
 SHA1 (patch-META.json) = 247227107c5f9222009219a241ef1d704d11c993
 SHA1 (patch-META.yml) = a26ac05d4ea00636951e95bfb2fe81d3a82493a5
 SHA1 (patch-Makefile.PL) = b097c1f367d70a498ba670c30fd42be91ff1817b
