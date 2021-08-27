@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2020/06/29 13:22:14 nikita Exp $
-
-SHA1 (go-kr-pretty-0.2.0.tar.gz) = 4a8822a44785780b5b12e073290dcce74475c98a
-RMD160 (go-kr-pretty-0.2.0.tar.gz) = a8724d1206eb99ae7dc334c7234959a412c8623e
-SHA512 (go-kr-pretty-0.2.0.tar.gz) = 2788a36217b96d4161dcfee34e691a6a3dbde47c42bdffc3f984dce8da5d5b150457e22819667bb8ad9fe46bcd2c166700c2d56435fe103abf4f6b46228bf37e
-Size (go-kr-pretty-0.2.0.tar.gz) = 8760 bytes
