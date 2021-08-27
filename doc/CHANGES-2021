@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4371 2021/08/27 00:01:44 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4372 2021/08/27 00:11:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6892,3 +6892,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123 to 1.28.2 [adam 2021-08-26]
 	Updated net/py-prometheus_client to 0.11.0 [adam 2021-08-26]
 	Updated time/p5-DateTime-Locale to 1.32 [wen 2021-08-27]
+	Updated time/p5-DateTime-Format-Flexible to 0.34 [wen 2021-08-27]
