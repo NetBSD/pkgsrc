@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4374 2021/08/27 00:49:29 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4375 2021/08/27 00:56:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6895,3 +6895,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-Format-Flexible to 0.34 [wen 2021-08-27]
 	Updated www/p5-WWW-Mechanize to 2.04 [wen 2021-08-27]
 	Updated www/p5-WWW-Mechanize-Cached to 1.55 [wen 2021-08-27]
+	Updated www/p5-URI-Fetch to 0.15 [wen 2021-08-27]
