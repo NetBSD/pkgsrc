@@ -1,6 +1,7 @@
-$NetBSD: patch-Source_d__iwad.c,v 1.1 2020/05/11 10:46:12 micha Exp $
+$NetBSD: patch-Source_d__iwad.c,v 1.2 2021/08/27 10:47:40 micha Exp $
 
 Add pkgsrc ${PREFIX}/share/doom to WAD file search path.
+Patch is not suitable for upstream.
 
 --- Source/d_iwad.c.orig	2020-04-14 06:39:44.000000000 +0000
 +++ Source/d_iwad.c
