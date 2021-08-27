@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.444 2021/08/25 11:50:43 manu Exp $
+$NetBSD: distinfo,v 1.445 2021/08/27 01:04:49 manu Exp $
 
 SHA1 (firefox-91.0.2.source.tar.xz) = 953eb52799ae1da9ea63e154e1b3194c10bca8ce
 RMD160 (firefox-91.0.2.source.tar.xz) = 22b066a0f891aca3c9512501b01e556a6b5414e5
@@ -19,7 +19,7 @@ SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c488
 SHA1 (patch-gfx_cairo_cairo_src_cairo-type1-subset.c) = 89a9d934ef76706c552c0b81e6cbc0f45b1ffd2c
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = f6f8996f0818a1b890698c7cc5054d49cb1e8924
-SHA1 (patch-gfx_wr_swgl_build.rs) = 6b9d7528f07a89638f83dc2527f658c6b10f152b
+SHA1 (patch-gfx_wr_swgl_build.rs) = b0fddbcf1d3cebffc28caa86e431df7be18bf1ee
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 4a6606da590cfb8d855bde58b9c6f90e98d0870c
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836

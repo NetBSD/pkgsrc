@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.1 2021/08/25 11:50:43 manu Exp $
+$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.2 2021/08/27 01:04:49 manu Exp $
 
 Work around an internal compiler error on i386 when optimization is enabled:
 
@@ -17,8 +17,7 @@ Work around an internal compiler error on i386 when optimization is enabled:
      }
  
 +    // Work around a compiler bug
-+    let target_triple = std::env::var("TARGET").expect("The TARGET environment variab
-+le must be set");
++    let target_triple = std::env::var("TARGET").expect("The TARGET environment variable must be set");
 +    let target_name = target_triple.split('-').next().unwrap();
 +    if ["i386", "i586", "i686"].contains(&target_name) { 
 +        build.flag("-O0");
