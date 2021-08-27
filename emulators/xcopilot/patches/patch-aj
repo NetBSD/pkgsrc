@@ -1,8 +1,18 @@
-$NetBSD: patch-aj,v 1.1 2003/09/30 17:47:44 tron Exp $
+$NetBSD: patch-aj,v 1.2 2021/08/27 03:41:41 ryoon Exp $
 
---- mc68k/fab_custom.c.orig	1998-07-29 01:08:48.000000000 +0200
-+++ mc68k/fab_custom.c	2003-09-30 19:22:12.000000000 +0200
-@@ -1027,252 +1027,251 @@
+* Include string.h for strlen().
+
+--- mc68k/fab_custom.c.orig	1998-07-28 23:08:48.000000000 +0000
++++ mc68k/fab_custom.c
+@@ -30,6 +30,7 @@
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <stdlib.h>
++#include <string.h>
+ 
+ #include "../config.h"
+ 
+@@ -1027,252 +1028,251 @@ gen_lput(Fab *f, Reg chip[])
   *						Max Okumoto
   *---------------------------------------------------------------------------*/
  static char	*HACK[] = {
