@@ -1,54 +1,22 @@
-$NetBSD: patch-meson.build,v 1.7 2021/07/09 21:08:33 schmonz Exp $
+$NetBSD: patch-meson.build,v 1.8 2021/08/27 03:32:37 ryoon Exp $
 
 * Add NetBSD support.
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
 * Detect curses (non-ncurses{,w} too)
 
---- meson.build.orig	2021-04-29 17:18:58.000000000 +0000
+--- meson.build.orig	2021-08-04 16:29:08.000000000 +0000
 +++ meson.build
-@@ -87,6 +87,7 @@ if cpu in ['x86', 'x86_64']
-   accelerator_targets += {
-     'CONFIG_HAX': ['i386-softmmu', 'x86_64-softmmu'],
-     'CONFIG_HVF': ['x86_64-softmmu'],
-+    'CONFIG_NVMM': ['i386-softmmu', 'x86_64-softmmu'],
-     'CONFIG_WHPX': ['i386-softmmu', 'x86_64-softmmu'],
-   }
- endif
-@@ -170,6 +171,7 @@ version_res = []
- coref = []
- iokit = []
- emulator_link_args = []
-+nvmm =not_found
- hvf = not_found
- if targetos == 'windows'
-   socket = cc.find_library('ws2_32')
-@@ -227,6 +229,14 @@ if not get_option('hax').disabled()
-     accelerators += 'CONFIG_HAX'
+@@ -237,7 +237,7 @@ if not get_option('hax').disabled()
    endif
  endif
-+if targetos == 'netbsd'
-+  if cc.has_header('nvmm.h', required: get_option('nvmm'))
-+    nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
-+  endif
-+  if nvmm.found()
-+    accelerators += 'CONFIG_NVMM'
-+  endif
-+endif
- 
- tcg_arch = config_host['ARCH']
- if not get_option('tcg').disabled()
-@@ -271,6 +281,9 @@ endif
- if 'CONFIG_HVF' not in accelerators and get_option('hvf').enabled()
-   error('HVF not available on this platform')
- endif
-+if 'CONFIG_NVMM' not in accelerators and get_option('nvmm').enabled()
-+  error('NVMM not available on this platform')
-+endif
- if 'CONFIG_WHPX' not in accelerators and get_option('whpx').enabled()
-   error('WHPX not available on this platform')
- endif
-@@ -607,7 +620,7 @@ if have_system and not get_option('curse
+ if targetos == 'netbsd'
+-  if cc.has_header_symbol('nvmm.h', 'nvmm_cpu_stop', required: get_option('nvmm'))
++  if cc.has_header_symbol('nvmm.h', 'nvmm_vcpu_stop', required: get_option('nvmm'))
+     nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
+   endif
+   if nvmm.found()
+@@ -613,7 +613,7 @@ if have_system and not get_option('curse
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -57,7 +25,7 @@ $NetBSD: patch-meson.build,v 1.7 2021/07/09 21:08:33 schmonz Exp $
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
                                      required: false,
-@@ -625,7 +638,7 @@ if have_system and not get_option('curse
+@@ -631,7 +631,7 @@ if have_system and not get_option('curse
      endif
    endif
    if not get_option('iconv').disabled()
@@ -66,19 +34,3 @@ $NetBSD: patch-meson.build,v 1.7 2021/07/09 21:08:33 schmonz Exp $
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
        # We need to use libiconv if available because mixing libiconv's headers with
        # the system libc does not work.
-@@ -2129,6 +2142,7 @@ common_all = common_ss.apply(config_all,
- common_all = static_library('common',
-                             build_by_default: false,
-                             sources: common_all.sources() + genh,
-+                            implicit_include_directories: false,
-                             dependencies: common_all.dependencies(),
-                             name_suffix: 'fa')
- 
-@@ -2576,6 +2590,7 @@ if have_system
-   summary_info += {'HAX support':       config_all.has_key('CONFIG_HAX')}
-   summary_info += {'HVF support':       config_all.has_key('CONFIG_HVF')}
-   summary_info += {'WHPX support':      config_all.has_key('CONFIG_WHPX')}
-+  summary_info += {'NVMM support':      config_all.has_key('CONFIG_NVMM')}
-   summary_info += {'Xen support':       config_host.has_key('CONFIG_XEN_BACKEND')}
-   if config_host.has_key('CONFIG_XEN_BACKEND')
-     summary_info += {'xen ctrl version':  config_host['CONFIG_XEN_CTRL_INTERFACE_VERSION']}
