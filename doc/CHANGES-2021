@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4375 2021/08/27 00:56:52 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4376 2021/08/27 03:33:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6896,3 +6896,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-WWW-Mechanize to 2.04 [wen 2021-08-27]
 	Updated www/p5-WWW-Mechanize-Cached to 1.55 [wen 2021-08-27]
 	Updated www/p5-URI-Fetch to 0.15 [wen 2021-08-27]
+	Updated emulators/qemu to 6.1.0 [ryoon 2021-08-27]
