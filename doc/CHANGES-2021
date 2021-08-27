@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4382 2021/08/27 09:25:31 he Exp $
+$NetBSD: CHANGES-2021,v 1.4383 2021/08/27 09:40:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6907,3 +6907,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unbound to 1.13.2 [adam 2021-08-27]
 	Updated sysutils/ansible-base to 2.10.13 [adam 2021-08-27]
 	Updated security/vault to 1.6.6 [he 2021-08-27]
+	Updated devel/mob to 1.10.0 [schmonz 2021-08-27]
