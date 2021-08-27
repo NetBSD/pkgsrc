@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20973 2021/08/25 07:14:01 nia Exp $
+$NetBSD: TODO,v 1.20974 2021/08/27 07:14:54 nia Exp $
 
 Suggested new packages
 ======================
@@ -900,7 +900,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-kr-pretty-0.2.1
 	o go-ldap-3.3.0
 	o go-logrus-1.8.1
-	o go-md2man-2.0.0
 	o go-mkcert-1.4.3
 	o go-org-1.5.0
 	o go-protobuf-1.5.2
