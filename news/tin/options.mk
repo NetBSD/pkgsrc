@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.19 2019/01/15 15:48:17 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2021/08/27 17:45:26 micha Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses termcap # wide-curses removed, see below
+PKG_OPTIONS_GROUP.display=	curses termcap
 PKG_SUPPORTED_OPTIONS=		canlock icu inet6 nls tin-use-inn-spool
-PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap # see PR #51819
-# untested
-#PKG_SUPPORTED_OPTIONS+=	socks
+# Combination of options curses(configured to pdcurses) and icu does not work
+# curses(configured to curses) still does not work on NetBSD, see PR #51819
+# Suggest termcap instead of curses.
+PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,8 +16,7 @@ PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap # see PR #51819
 CONFIGURE_ARGS+=	--enable-cancel-locks
 .endif
 
-# Option wide-curses removed
-# Use curses option and set CURSES_DEFAULT in mk.conf to select type
+# Use curses option and CURSES_DEFAULT in mk.conf to select type
 .if !empty(PKG_OPTIONS:Mcurses)
 .include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-screen=${CURSES_TYPE}
@@ -54,8 +54,3 @@ CONFIGURE_ARGS+=	--with-inews-dir=${PREFIX}/inn/bin \
 .else
 CONFIGURE_ARGS+=	--enable-nntp-only
 .endif
-
-#.if !empty(PKG_OPTIONS:Msocks)
-#.include "../../net/dante/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-socks=${BUILDLINK_PREFIX.dante}
-#.endif
