@@ -1,31 +1,33 @@
-$NetBSD: patch-include_sysemu_nvmm.h,v 1.4 2021/05/24 14:22:08 ryoon Exp $
+$NetBSD: patch-include_sysemu_nvmm.h,v 1.5 2021/08/27 03:32:37 ryoon Exp $
 
---- include/sysemu/nvmm.h.orig	2021-05-06 04:47:40.186492405 +0000
+* Do not use CONFIG_NVMM directly to avoid pragma poison error.
+
+--- include/sysemu/nvmm.h.orig	2021-08-04 16:29:07.000000000 +0000
 +++ include/sysemu/nvmm.h
-@@ -0,0 +1,26 @@
-+/*
-+ * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
-+ *
-+ * NetBSD Virtual Machine Monitor (NVMM) accelerator support.
-+ *
-+ * This work is licensed under the terms of the GNU GPL, version 2 or later.
-+ * See the COPYING file in the top-level directory.
-+ */
+@@ -13,14 +13,22 @@
+ #include "config-host.h"
+ #include "qemu-common.h"
+ 
+-#ifdef CONFIG_NVMM
++#ifdef NEED_CPU_H
++# ifdef CONFIG_NVMM
++#  define CONFIG_NVMM_IS_POSSIBLE
++# endif
++#else
++# define CONFIG_NVMM_IS_POSSIBLE
++#endif
 +
-+#ifndef QEMU_NVMM_H
-+#define QEMU_NVMM_H
-+
-+#include "config-host.h"
-+#include "qemu-common.h"
-+
-+#ifdef CONFIG_NVMM
-+
-+int nvmm_enabled(void);
-+
-+#else /* CONFIG_NVMM */
-+
-+#define nvmm_enabled() (0)
-+
-+#endif /* CONFIG_NVMM */
-+
-+#endif /* CONFIG_NVMM */
++#ifdef CONFIG_NVMM_IS_POSSIBLE
+ 
+ int nvmm_enabled(void);
+ 
+-#else /* CONFIG_NVMM */
++#else /* CONFIG_NVMM_IS_POSSIBLE */
+ 
+ #define nvmm_enabled() (0)
+ 
+-#endif /* CONFIG_NVMM */
++#endif /* CONFIG_NVMM_IS_POSSIBLE */
+ 
+-#endif /* CONFIG_NVMM */
++#endif /* QEMU_NVMM_H */

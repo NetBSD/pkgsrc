@@ -1,13 +1,13 @@
-$NetBSD: patch-hw_mips_meson.build,v 1.2 2021/05/24 14:22:08 ryoon Exp $
+$NetBSD: patch-hw_mips_meson.build,v 1.3 2021/08/27 03:32:37 ryoon Exp $
 
---- hw/mips/meson.build.orig	2021-04-29 17:18:58.000000000 +0000
+--- hw/mips/meson.build.orig	2021-08-04 16:29:07.000000000 +0000
 +++ hw/mips/meson.build
-@@ -5,7 +5,7 @@ mips_ss.add(when: 'CONFIG_FULOONG', if_t
- mips_ss.add(when: 'CONFIG_LOONGSON3V', if_true: files('loongson3_bootp.c', 'loongson3_virt.c'))
+@@ -7,7 +7,7 @@ mips_ss.add(when: 'CONFIG_MIPS_CPS', if_
+ 
+ if 'CONFIG_TCG' in config_all
  mips_ss.add(when: 'CONFIG_JAZZ', if_true: files('jazz.c'))
- mips_ss.add(when: 'CONFIG_MALTA', if_true: files('gt64xxx_pci.c', 'malta.c'))
 -mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c'))
 +mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c', 'mipssim_virtio.c'))
+ mips_ss.add(when: 'CONFIG_FULOONG', if_true: files('fuloong2e.c'))
  mips_ss.add(when: 'CONFIG_MIPS_BOSTON', if_true: [files('boston.c'), fdt])
- mips_ss.add(when: 'CONFIG_MIPS_CPS', if_true: files('cps.c'))
- 
+ endif
