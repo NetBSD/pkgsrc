@@ -1,10 +1,12 @@
-$NetBSD: patch-Source_wi__stuff.c,v 1.1 2021/08/23 14:27:43 micha Exp $
+$NetBSD: patch-Source_wi__stuff.c,v 1.2 2021/08/27 10:47:40 micha Exp $
 
 Workaround for namespace clash on SmartOS:
 
 /home/pbulk/build/games/woof/work/woof-woof_6.3.1/Source/wi_stuff.c:366:19: error: 'time' redeclared as different kind of symbol
   366 | static patch_t*   time;
       |                   ^~~~
+
+Already merged upstream. Remove this patch for next release.
 
 --- Source/wi_stuff.c.orig	2021-08-13 13:18:32.000000000 +0000
 +++ Source/wi_stuff.c
