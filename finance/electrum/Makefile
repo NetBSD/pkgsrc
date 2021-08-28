@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/05/15 09:50:08 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/28 15:36:16 js Exp $
 
 VERSION=	4.0.9
 DISTNAME=	Electrum-${VERSION}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://download.electrum.org/${VERSION}/
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://electrum.org/
 COMMENT=	Easy to use Bitcoin client
 LICENSE=	gnu-gpl-v3
