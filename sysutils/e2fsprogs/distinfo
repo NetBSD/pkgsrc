@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.24 2017/12/08 08:12:58 adam Exp $
+$NetBSD: distinfo,v 1.25 2021/08/28 18:37:34 bsiegert Exp $
 
-SHA1 (e2fsprogs-1.43.7.tar.xz) = 06c5798cbd72d8c6655f5442848ffd33a0c913fc
-RMD160 (e2fsprogs-1.43.7.tar.xz) = ccfa3a6e474fbb3c5314bd5b6e6cc00eb1bb5076
-SHA512 (e2fsprogs-1.43.7.tar.xz) = 2ef270364d3cea620db3c3b9932849d0ff5b49d4a9a9b24f0d1ac36888199bd67432edc5f939d9f697ee0342b71a063e1ad4ce8119528a7adab7a777c1de57ba
-Size (e2fsprogs-1.43.7.tar.xz) = 5286684 bytes
+SHA1 (e2fsprogs-1.46.4.tar.xz) = 8f2357bce6fc1f782d8cc630a7e6ee2600caba4f
+RMD160 (e2fsprogs-1.46.4.tar.xz) = 31df71536b2f886fb1667ef8ec0879ed10c9d6a9
+SHA512 (e2fsprogs-1.46.4.tar.xz) = 7d9cfdf00ed58e66049585e8382fe4977088956421a0fb8155900c69afd8857309ad2b9301b3f74c9c0afa7287a0ddba2fd1538fcf57858b37a9ab712390016d
+Size (e2fsprogs-1.46.4.tar.xz) = 7035200 bytes
 SHA1 (patch-ab) = 9b686655a75239279a456dc8889113be06519cd7
 SHA1 (patch-ac) = 1a7faec14d69cb1d317908297e5500c0cb72aa4f
 SHA1 (patch-af) = bcda43bb14afdbf6a98dfedd949af4d1aff443d6
-SHA1 (patch-an) = 1199b17c4e65b8825b78fc02f7b2c9164eee56ef
 SHA1 (patch-ao) = a8fcacf506b003bf40ecadd5260ff0a6628ad2e6
 SHA1 (patch-as) = be316e404840a47422edbee65177bf6a9c94b335
 SHA1 (patch-aw) = d864c60c302230acdbdb1e33436883ad594c6808
