@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 15:20:31 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/28 05:15:33 mef Exp $
 
 R_PKGNAME=	latex2exp
-R_PKGVER=	0.4.0
+R_PKGVER=	0.5.0
 CATEGORIES=	graphics textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
