@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/28 04:20:44 mef Exp $
+
+SHA1 (R/R.methodsS3_1.8.1.tar.gz) = 87c55914feb7f4b73aaf423811e86ccd4267ca65
+RMD160 (R/R.methodsS3_1.8.1.tar.gz) = e2f0feab63e1fd108dc40140aa992f9536b274f6
+SHA512 (R/R.methodsS3_1.8.1.tar.gz) = 2e66717db4eadf597535036e3b5b1003b9d52eff2aafe06bb459d66bc406ed3de51e754e93ed652abc071e63d3d821ce576ac9c1fd0ce8b1c4ae30f4c9dd50b7
+Size (R/R.methodsS3_1.8.1.tar.gz) = 23717 bytes
