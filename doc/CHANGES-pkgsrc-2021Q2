@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.9 2021/08/16 19:28:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q2,v 1.1.2.10 2021/08/28 12:07:35 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q2 branch:
 
@@ -70,4 +70,13 @@ databases/postgresql13: build fix
 
 Pullup ticket #6492 - requested by gutteridge
 graphics/librsvg: security fix
+
+Pullup ticket #6493 - requested by taca
+net/bind916: security fix
+
+Pullup ticket #6494 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6495 - requested by nia
+www/firefox78-l10n: dependent update
 
