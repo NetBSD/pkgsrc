@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/28 02:47:44 mef Exp $
+
+SHA1 (R/hexbin_1.28.2.tar.gz) = 6e8179e3390aa693a1042c67dfed618e6209630e
+RMD160 (R/hexbin_1.28.2.tar.gz) = 06c1f4de47eb11c12bfaa9fb0ee93f7f9f80504c
+SHA512 (R/hexbin_1.28.2.tar.gz) = 07e9a7a34eb38bca3055c4712b256946edb1d413d413901f5ea128cd12a3909f1abc6e029a5d33de0bf1e37afb1cc559721d9b231186e911aa9d1b6928c91ff7
+Size (R/hexbin_1.28.2.tar.gz) = 1066670 bytes
