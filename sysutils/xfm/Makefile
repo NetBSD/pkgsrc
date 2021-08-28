@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/02/24 21:45:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2021/08/28 09:22:23 nia Exp $
 
 DISTNAME=	xfm-1.4.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 
@@ -27,6 +27,13 @@ buildlink-Xaw3d-inc-hack: buildlink-directories
 #BUILDLINK_TRANSFORM+=           l:Xaw:Xaw3d
 
 TOOL_DEPENDS+=	tradcpp>=0.5.2:../../devel/tradcpp
+
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(X11BASE:M${PREFIX})
+CONF_FILES+=	${PREFIX}/lib/X11/app-defaults/Xfm \
+		${X11BASE}/lib/X11/app-defaults/Xfm
+.endif
 
 .include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
