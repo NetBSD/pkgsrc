@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/03/10 22:30:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/08/28 08:03:18 wiz Exp $
 bin/peas-demo
 include/libpeas-1.0/libpeas-gtk/peas-gtk-autocleanups.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
@@ -21,11 +21,14 @@ lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.so
 lib/libpeas-1.0.so.0
 lib/libpeas-1.0.so.0.2600.0
+lib/libpeas-1.0/loaders/libpython3loader.so
 lib/libpeas-gtk-1.0.so
 lib/libpeas-gtk-1.0.so.0
 lib/libpeas-gtk-1.0.so.0.2600.0
 lib/peas-demo/plugins/helloworld/helloworld.plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.so
+lib/peas-demo/plugins/pythonhello/pythonhello.plugin
+lib/peas-demo/plugins/pythonhello/pythonhello.py
 lib/peas-demo/plugins/secondtime/libsecondtime.so
 lib/peas-demo/plugins/secondtime/secondtime.plugin
 lib/pkgconfig/libpeas-1.0.pc
