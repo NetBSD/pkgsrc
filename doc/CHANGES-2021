@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4387 2021/08/28 05:21:47 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.4388 2021/08/28 05:23:24 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6925,3 +6925,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/mingw-w64-x86_64-winpthreads to 9.0.0 [ryoon 2021-08-27]
 	Updated news/tin to 2.6.0 [micha 2021-08-27]
 	Updated mail/fetchmail to 6.4.21 [triaxx 2021-08-28]
+	Updated mail/fetchmailconf to 6.4.21 [triaxx 2021-08-28]
