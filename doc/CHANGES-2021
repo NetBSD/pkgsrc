@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4392 2021/08/28 07:23:03 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4393 2021/08/28 08:03:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6939,3 +6939,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/R-stat.extend version 0.1.4 [mef 2021-08-28]
 	Updated graphics/R-ggplot2 to 3.3.5 [mef 2021-08-28]
 	Updated graphics/R-ggtern to 3.3.5 [mef 2021-08-28]
+	Updated devel/libpeas to 1.26.0nb2 [wiz 2021-08-28]
