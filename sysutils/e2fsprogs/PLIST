@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/10/04 12:21:33 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/08/28 18:37:34 bsiegert Exp $
 bin/chattr
 bin/compile_et
 bin/lsattr
@@ -14,6 +14,7 @@ include/ext2fs/ext2_io.h
 include/ext2fs/ext2_types.h
 include/ext2fs/ext2fs.h
 include/ext2fs/ext3_extents.h
+include/ext2fs/hashmap.h
 include/ext2fs/qcow2.h
 include/ext2fs/tdb.h
 include/ss/ss.h
@@ -57,6 +58,7 @@ man/man8/e2freefrag.8
 man/man8/e2fsck.8
 man/man8/e2image.8
 man/man8/e2label.8
+man/man8/e2mmpstatus.8
 man/man8/e2undo.8
 man/man8/filefrag.8
 ${PLIST.fsck}man/man8/fsck.8
@@ -78,6 +80,7 @@ sbin/e2freefrag
 sbin/e2fsck
 sbin/e2image
 sbin/e2label
+sbin/e2mmpstatus
 sbin/e2undo
 sbin/filefrag
 ${PLIST.fsck}sbin/fsck
@@ -95,25 +98,5 @@ sbin/tune2fs
 share/et/et_c.awk
 share/et/et_h.awk
 share/examples/ext2fs/mke2fs.conf
-share/locale/ca/LC_MESSAGES/e2fsprogs.mo
-share/locale/cs/LC_MESSAGES/e2fsprogs.mo
-share/locale/da/LC_MESSAGES/e2fsprogs.mo
-share/locale/de/LC_MESSAGES/e2fsprogs.mo
-share/locale/eo/LC_MESSAGES/e2fsprogs.mo
-share/locale/es/LC_MESSAGES/e2fsprogs.mo
-share/locale/fi/LC_MESSAGES/e2fsprogs.mo
-share/locale/fr/LC_MESSAGES/e2fsprogs.mo
-share/locale/hu/LC_MESSAGES/e2fsprogs.mo
-share/locale/id/LC_MESSAGES/e2fsprogs.mo
-share/locale/it/LC_MESSAGES/e2fsprogs.mo
-share/locale/ms/LC_MESSAGES/e2fsprogs.mo
-share/locale/nl/LC_MESSAGES/e2fsprogs.mo
-share/locale/pl/LC_MESSAGES/e2fsprogs.mo
-share/locale/sr/LC_MESSAGES/e2fsprogs.mo
-share/locale/sv/LC_MESSAGES/e2fsprogs.mo
-share/locale/tr/LC_MESSAGES/e2fsprogs.mo
-share/locale/uk/LC_MESSAGES/e2fsprogs.mo
-share/locale/vi/LC_MESSAGES/e2fsprogs.mo
-share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
 share/ss/ct_c.awk
 share/ss/ct_c.sed
