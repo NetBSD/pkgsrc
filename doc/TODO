@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20978 2021/08/27 14:11:57 ryoon Exp $
+$NetBSD: TODO,v 1.20979 2021/08/28 05:21:47 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -769,7 +769,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felinks-0.14.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
-	o fetchmail-6.4.21
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
