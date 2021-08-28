@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/06/06 14:56:14 mef Exp $
+# $NetBSD: Makefile,v 1.6 2021/08/28 07:03:46 mef Exp $
 
 R_PKGNAME=	ggplot2
-R_PKGVER=	3.3.3
+R_PKGVER=	3.3.5
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
@@ -21,8 +21,8 @@ DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-isoband-[0-9]*:../../graphics/R-isoband
 
 # Packages suggested but not available:
-#   'ggplot2movies', 'hexbin', 'Hmisc', 'multcomp', 'profvis',
-#   'quantreg', 'svglite', 'vdiffr'
+#   'ragg', 'ggplot2movies', 'Hmisc', 'interp', 'maptools', 'multcomp',
+#   'profvis', 'quantreg', 'svglite', 'vdiffr'
 
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
 TEST_DEPENDS+=	R-mapproj-[0-9]*:../../math/R-mapproj
