@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4393 2021/08/28 08:03:31 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4394 2021/08/28 13:34:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6940,3 +6940,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/R-ggplot2 to 3.3.5 [mef 2021-08-28]
 	Updated graphics/R-ggtern to 3.3.5 [mef 2021-08-28]
 	Updated devel/libpeas to 1.26.0nb2 [wiz 2021-08-28]
+	Updated devel/ruby-gettext to 3.4.0 [taca 2021-08-28]
