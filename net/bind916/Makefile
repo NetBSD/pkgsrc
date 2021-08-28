@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/06/19 13:18:21 otis Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2021/08/28 09:22:55 bsiegert Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -6,16 +6,20 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
 
+PATCH_SITES=		https://downloads.isc.org/isc/bind9/9.16.20/patches/
+PATCHFILES=		bind-9.16.20-map-format-fix.patch
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/software/bind/
-COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.14
+COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.16
 LICENSE=	mpl-2.0
 
 CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.18
+BIND_VERSION=	9.16.20
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
@@ -36,12 +40,6 @@ CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=		--with-python=no
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-CONFIGURE_ARGS+=		--disable-atomic
-.endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 CONFIGURE_ARGS.SunOS+=		--disable-epoll
 

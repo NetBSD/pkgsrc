@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_isc_stats.c,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_isc_stats.c,v 1.1.8.1 2021/08/28 09:22:55 bsiegert Exp $
 
-* Platform fixes from NetBSD base system.
+Use 32-bit atomic integers for !_LP64 platforms.
 
 --- lib/isc/stats.c.orig	2020-05-06 09:59:35.000000000 +0000
 +++ lib/isc/stats.c
