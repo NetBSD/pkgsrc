@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/28 06:29:05 mef Exp $
+
+SHA1 (R/stat.extend_0.1.4.tar.gz) = b13a2535b3e4e58bbb2194d1f3843cd5a93f7ec4
+RMD160 (R/stat.extend_0.1.4.tar.gz) = 158e91623224acd1a50047eeb2447da0a77ad6e0
+SHA512 (R/stat.extend_0.1.4.tar.gz) = c413a308cda654f9417de4f303efeaa7d6cb054ed784a047a4d0bf4b9b7fbd567f0698c7cd7bc6ee1fb139e943a332fbeb749e1d097c7737ce5945d58afc703d
+Size (R/stat.extend_0.1.4.tar.gz) = 24915 bytes

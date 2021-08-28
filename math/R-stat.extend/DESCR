@@ -1,0 +1,7 @@
+Highest Density Regions are the smallest set in the support of a
+probability distribution with the specified coverage probability.
+'HDRs' may contain disjoint intervals, but can be calculated
+efficiently using iterative methods. One can similarly construct
+optimal (i.e., shortest) confidence intervals for some basic
+inferential problems, including for population means, variances, or
+proportion parameters.
