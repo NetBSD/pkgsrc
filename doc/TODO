@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20980 2021/08/28 07:23:03 mef Exp $
+$NetBSD: TODO,v 1.20981 2021/08/28 18:39:08 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dte-1.10
 	o dunst-1.6.1 [adds Linux- and wayland-specific code]
 	o dwdiff-2.1.4
-	o e2fsprogs-1.46.2
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
 	o ec2-ami-tools-1.5.7
