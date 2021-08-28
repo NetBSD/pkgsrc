@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/06/11 17:09:40 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/28 18:40:06 bacon Exp $
 
-DISTNAME=	vcf2hap-0.1.3
+DISTNAME=	vcf2hap-0.1.3.12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
+GITHUB_TAG=	3626f5a320be8176d359b487682385fa6ab0f197
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf2hap
