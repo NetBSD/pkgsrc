@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.511 2021/07/08 21:10:03 markd Exp $
+# $NetBSD: Makefile,v 1.512 2021/08/28 07:23:02 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -64,6 +64,7 @@ SUBDIR+=	R-gss
 SUBDIR+=	R-gstat
 SUBDIR+=	R-gtable
 SUBDIR+=	R-gtools
+SUBDIR+=	R-hexbin
 SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
 SUBDIR+=	R-igraph
@@ -105,7 +106,9 @@ SUBDIR+=	R-sp
 SUBDIR+=	R-spacetime
 SUBDIR+=	R-splancs
 SUBDIR+=	R-stabledist
+SUBDIR+=	R-stat.extend
 SUBDIR+=	R-statmod
+SUBDIR+=	R-sets
 SUBDIR+=	R-stringdist
 SUBDIR+=	R-survey
 SUBDIR+=	R-tensor

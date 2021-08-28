@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20979 2021/08/28 05:21:47 triaxx Exp $
+$NetBSD: TODO,v 1.20980 2021/08/28 07:23:03 mef Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-blob-1.2.1
 	o R-coda-0.19.4
 	o R-colourpicker-1.1.0
-	o R-compositions-2.0.1
 	o R-countrycode-1.2.0
 	o R-crayon-1.4.1
 	o R-crosstalk-1.1.1
@@ -411,7 +410,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-geoR-1.8.1
 	o R-ggExtra-0.9
 	o R-ggspatial-1.1.5
-	o R-ggtern-3.3.0
 	o R-ggthemes-4.2.4
 	o R-gss-2.2.2
 	o R-gstat-2.0.7
@@ -423,7 +421,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-intervals-0.15.2
 	o R-jsonlite-1.7.2
 	o R-labeling-0.4.2
-	o R-latex2exp-0.5.0
 	o R-latticeExtra-0.6.29
 	o R-lme4-1.1.26
 	o R-lmm-1.3
