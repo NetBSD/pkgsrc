@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2021/08/28 08:03:18 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2021/08/28 08:36:10 wiz Exp $
 
 DISTNAME=	libpeas-1.26.0
 PKGREVISION=	2
@@ -20,7 +20,7 @@ MESON_ARGS+=	-Dpython3=true
 MESON_ARGS+=	-Dpython2=false
 MESON_ARGS+=	-Dlua51=false
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 PYTHON_FOR_BUILD_ONLY=		yes
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/libpeas-gtk-1.0.pc
