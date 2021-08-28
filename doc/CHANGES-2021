@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4390 2021/08/28 06:24:31 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4391 2021/08/28 06:28:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6928,3 +6928,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/fetchmailconf to 6.4.21 [triaxx 2021-08-28]
 	Updated lang/php74 to 7.4.23 [taca 2021-08-28]
 	Updated lang/php80 to 8.0.10 [taca 2021-08-28]
+	Updated lang/php73 to 7.3.30 [taca 2021-08-28]
