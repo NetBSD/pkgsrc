@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/02/02 15:19:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/08/29 14:48:15 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -637,6 +637,9 @@ share/drupal/modules/simpletest/files/css_test_files/css_subfolder/css_input_wit
 share/drupal/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css.unoptimized.css
 share/drupal/modules/simpletest/files/css_test_files/import1.css
 share/drupal/modules/simpletest/files/css_test_files/import2.css
+share/drupal/modules/simpletest/files/css_test_files/quotes.css
+share/drupal/modules/simpletest/files/css_test_files/quotes.css.optimized.css
+share/drupal/modules/simpletest/files/css_test_files/quotes.css.unoptimized.css
 share/drupal/modules/simpletest/files/html-1.txt
 share/drupal/modules/simpletest/files/html-2.html
 share/drupal/modules/simpletest/files/image-1.png
