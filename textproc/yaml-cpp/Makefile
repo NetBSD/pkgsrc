@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/01 13:11:50 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/08/29 12:37:09 adam Exp $
 
-DISTNAME=	yaml-cpp-0.6.3
+DISTNAME=	yaml-cpp-0.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jbeder/}
 GITHUB_TAG=	${DISTNAME}
@@ -21,8 +21,5 @@ CMAKE_ARGS+=	-DYAML_BUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DYAML_CPP_BUILD_TESTS=OFF # issue 539
 
 PKGCONFIG_OVERRIDE+=	yaml-cpp.pc.cmake
-
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
-TEST_TARGET=	test
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/01 13:11:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/08/29 12:37:09 adam Exp $
 include/yaml-cpp/anchor.h
 include/yaml-cpp/binary.h
 include/yaml-cpp/contrib/anchordict.h
 include/yaml-cpp/contrib/graphbuilder.h
+include/yaml-cpp/depthguard.h
 include/yaml-cpp/dll.h
 include/yaml-cpp/emitfromevents.h
 include/yaml-cpp/emitter.h
@@ -13,7 +14,6 @@ include/yaml-cpp/eventhandler.h
 include/yaml-cpp/exceptions.h
 include/yaml-cpp/mark.h
 include/yaml-cpp/node/convert.h
-include/yaml-cpp/node/detail/bool_type.h
 include/yaml-cpp/node/detail/impl.h
 include/yaml-cpp/node/detail/iterator.h
 include/yaml-cpp/node/detail/iterator_fwd.h
@@ -29,17 +29,18 @@ include/yaml-cpp/node/node.h
 include/yaml-cpp/node/parse.h
 include/yaml-cpp/node/ptr.h
 include/yaml-cpp/node/type.h
+include/yaml-cpp/noexcept.h
 include/yaml-cpp/null.h
 include/yaml-cpp/ostream_wrapper.h
 include/yaml-cpp/parser.h
 include/yaml-cpp/stlemitter.h
 include/yaml-cpp/traits.h
 include/yaml-cpp/yaml.h
-lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake
-lib/cmake/yaml-cpp/yaml-cpp-config.cmake
-lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake
-lib/cmake/yaml-cpp/yaml-cpp-targets.cmake
 lib/libyaml-cpp.so
-lib/libyaml-cpp.so.0.6
 lib/libyaml-cpp.so.${PKGVERSION}
-lib/pkgconfig/yaml-cpp.pc
+lib/libyaml-cpp.so.0.6
+share/cmake/yaml-cpp/yaml-cpp-config-version.cmake
+share/cmake/yaml-cpp/yaml-cpp-config.cmake
+share/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake
+share/cmake/yaml-cpp/yaml-cpp-targets.cmake
+share/pkgconfig/yaml-cpp.pc
