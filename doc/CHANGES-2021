@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4402 2021/08/29 14:48:40 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4403 2021/08/29 14:51:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6955,3 +6955,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added misc/py-platformdirs version 2.2.0 [adam 2021-08-29]
 	Updated devel/py-faker to 8.12.1 [adam 2021-08-29]
 	Updated www/drupal7 to 7.82 [taca 2021-08-29]
+	Updated www/drupal8 to 8.9.18 [taca 2021-08-29]
