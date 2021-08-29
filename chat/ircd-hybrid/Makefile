@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2021/08/16 19:22:51 fox Exp $
+# $NetBSD: Makefile,v 1.79 2021/08/29 18:38:53 khorben Exp $
 
 DISTNAME=	ircd-hybrid-8.2.39
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 EXTRACT_SUFX=	.tgz
