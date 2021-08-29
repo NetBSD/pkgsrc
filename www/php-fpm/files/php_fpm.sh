@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: php_fpm.sh,v 1.1.1.1 2012/02/22 10:43:42 fhajny Exp $
+# $NetBSD: php_fpm.sh,v 1.2 2021/08/29 17:49:44 khorben Exp $
 #
 # PROVIDE: php_fpm
 # REQUIRE: DAEMON
 
-. /etc/rc.subr
+. @SYSCONFBASE@/rc.subr
 
 name="php_fpm"
 rcvar=${name}
