@@ -1,0 +1,1 @@
+bin/pydicom @PREFIX@/bin/pydicom-@PYVERSSUFFIX@
