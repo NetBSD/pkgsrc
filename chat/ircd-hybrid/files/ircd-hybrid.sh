@@ -1,13 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ircd-hybrid.sh,v 1.5 2008/09/11 21:59:33 wiz Exp $
+# $NetBSD: ircd-hybrid.sh,v 1.6 2021/08/29 18:38:53 khorben Exp $
 #
 # PROVIDE: ircdhybrid
 # REQUIRE: DAEMON
 
-if [ -f /etc/rc.subr ]
-then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	. @SYSCONFBASE@/rc.subr
 fi
 
 name="ircdhybrid"
