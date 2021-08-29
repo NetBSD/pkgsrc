@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/08/22 17:02:41 tsutsui Exp $
+$NetBSD: distinfo,v 1.6 2021/08/29 16:49:11 tsutsui Exp $
 
-SHA1 (atk-3.4.3.gem) = 32f67eaf9e2e319d393ad17aee9db2ad593af743
-RMD160 (atk-3.4.3.gem) = 25686bf0aa26914248de4a94cd3d789c068d71b6
-SHA512 (atk-3.4.3.gem) = a7fc79cfd773bad832b6552776b3892376abe74b5652e4faad97eab807d99086d2faedf3a63bfae71077a3bc9a1a611452b3b073e442bcdf55d7bede91adf366
-Size (atk-3.4.3.gem) = 15872 bytes
+SHA1 (atk-3.4.9.gem) = 0ed6f15af3ef36211b8da0d81e30dfea6e39d82e
+RMD160 (atk-3.4.9.gem) = 27b8a81a841a7cb6d7cb9268e970cc5b2cf0d0ef
+SHA512 (atk-3.4.9.gem) = a868ee04c7a3142f46e37f1de2adda6aca9b62226863fb9aded9a319da2276cd4e0a7bd13eef5660ba5c14b4758dfa2c3e65b04e857c2d2d7c369d3993ee6eb1
+Size (atk-3.4.9.gem) = 15872 bytes
