@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4397 2021/08/28 18:39:07 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.4398 2021/08/29 08:44:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6944,3 +6944,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libxtend to 0.1.3.1 [bacon 2021-08-28]
 	Updated biology/biolibc to 0.2.0 [bacon 2021-08-28]
 	Updated sysutils/e2fsprogs to 1.46.4 [bsiegert 2021-08-28]
+	Updated devel/py-ipython to 7.27.0 [adam 2021-08-29]
+	Updated comms/py-rich to 10.8.0 [adam 2021-08-29]
+	Updated devel/py-ruamel-yaml to 0.17.15 [adam 2021-08-29]
+	Updated net/py-tldextract to 3.1.1 [adam 2021-08-29]
