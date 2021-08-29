@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/08/29 16:49:13 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gstreamer.${RUBY_DLEXT}
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gstreamer/depend
 ${GEM_LIBDIR}/ext/gstreamer/extconf.rb
 ${GEM_LIBDIR}/ext/gstreamer/rbgst-child-proxy.c
-${GEM_LIBDIR}/ext/gstreamer/rbgst-element-factory.c
 ${GEM_LIBDIR}/ext/gstreamer/rbgst.c
 ${GEM_LIBDIR}/ext/gstreamer/rbgst.h
 ${GEM_LIBDIR}/extconf.rb

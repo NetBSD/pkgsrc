@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/02 18:05:06 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/08/29 16:49:13 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -63,6 +63,7 @@ ${GEM_LIBDIR}/lib/gtk3/paned.rb
 ${GEM_LIBDIR}/lib/gtk3/radio-action.rb
 ${GEM_LIBDIR}/lib/gtk3/radio-button.rb
 ${GEM_LIBDIR}/lib/gtk3/recent-chooser-dialog.rb
+${GEM_LIBDIR}/lib/gtk3/response-type.rb
 ${GEM_LIBDIR}/lib/gtk3/scale-button.rb
 ${GEM_LIBDIR}/lib/gtk3/scrolled-window.rb
 ${GEM_LIBDIR}/lib/gtk3/search-bar.rb
