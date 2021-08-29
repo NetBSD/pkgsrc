@@ -1,0 +1,4 @@
+When writing desktop application, finding the right location to store user data
+and configuration varies per platform. Even for single-platform apps, there
+may by plenty of nuances in figuring out the right location. This kind of thing
+is what the platformdirs module is for.

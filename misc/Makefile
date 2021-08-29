@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.552 2021/06/03 14:54:17 taca Exp $
+# $NetBSD: Makefile,v 1.553 2021/08/29 13:24:32 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -249,6 +249,7 @@ SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-carddav
 SUBDIR+=	py-immutables
+SUBDIR+=	py-platformdirs
 SUBDIR+=	py-sniffio
 SUBDIR+=	py-stdnum
 SUBDIR+=	py-tqdm
