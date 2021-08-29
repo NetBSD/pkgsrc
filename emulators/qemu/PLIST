@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2021/08/27 03:32:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.78 2021/08/29 01:53:06 mcf Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -35,7 +35,9 @@ ${PLIST.riscv64}bin/qemu-riscv64
 ${PLIST.s390x}bin/qemu-s390x
 ${PLIST.sh4}bin/qemu-sh4
 ${PLIST.sh4eb}bin/qemu-sh4eb
+${PLIST.sparc}bin/qemu-sparc
 ${PLIST.sparc32plus}bin/qemu-sparc32plus
+${PLIST.sparc64}bin/qemu-sparc64
 bin/qemu-storage-daemon
 bin/qemu-system-aarch64
 bin/qemu-system-alpha
