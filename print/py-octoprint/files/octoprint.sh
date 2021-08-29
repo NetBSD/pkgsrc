@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: octoprint.sh,v 1.2 2021/05/30 21:53:11 khorben Exp $
+# $NetBSD: octoprint.sh,v 1.3 2021/08/29 20:00:43 khorben Exp $
 #
 # Startup script for OctoPrint
 #
@@ -8,11 +8,11 @@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 #
-# You will need to set some variables in /etc/rc.conf to start OctoPrint:
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start OctoPrint:
 #
 # octoprint=YES
 
-$_rc_subr_loaded . /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="octoprint"
 rcvar=${name}
