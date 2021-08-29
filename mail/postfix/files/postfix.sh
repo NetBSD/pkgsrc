@@ -1,14 +1,17 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: postfix.sh,v 1.5 2005/12/30 06:29:41 martti Exp $
+# $NetBSD: postfix.sh,v 1.6 2021/08/29 21:04:55 khorben Exp $
 #
-
 # PROVIDE: mail
 # REQUIRE: LOGIN
 #	we make mail start late, so that things like .forward's are not
 #	processed until the system is fully operational
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start postfix:
+#
+# postfix=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="postfix"
 rcvar=$name
