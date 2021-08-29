@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4398 2021/08/29 08:44:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4399 2021/08/29 12:44:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6948,3 +6948,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/py-rich to 10.8.0 [adam 2021-08-29]
 	Updated devel/py-ruamel-yaml to 0.17.15 [adam 2021-08-29]
 	Updated net/py-tldextract to 3.1.1 [adam 2021-08-29]
+	Updated textproc/yaml-cpp to 0.7.0 [adam 2021-08-29]
+	Updated graphics/py-wand to 0.6.7 [adam 2021-08-29]
