@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2021/06/02 15:46:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/08/29 14:51:04 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -62,6 +62,7 @@ share/drupal/core/assets/vendor/backbone/backbone-min.map
 share/drupal/core/assets/vendor/backbone/backbone.js
 share/drupal/core/assets/vendor/ckeditor/CHANGES.md
 share/drupal/core/assets/vendor/ckeditor/LICENSE.md
+share/drupal/core/assets/vendor/ckeditor/bender-runner.config.json
 share/drupal/core/assets/vendor/ckeditor/build-config.js
 share/drupal/core/assets/vendor/ckeditor/ckeditor.js
 share/drupal/core/assets/vendor/ckeditor/lang/_translationstatus.txt
