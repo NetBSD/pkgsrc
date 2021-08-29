@@ -1,10 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
+# $NetBSD: prosody.sh,v 1.2 2021/08/29 18:32:29 khorben Exp $
+#
 # PROVIDE: prosody
 # REQUIRE: DAEMON
 
-if [ -f /etc/rc.subr ]; then
-  . /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+  . @SYSCONFBASE@/rc.subr
 fi
 
 name="prosody"
