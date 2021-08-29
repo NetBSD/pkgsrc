@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mediatomb.sh,v 1.2 2009/01/05 12:28:32 jmcneill Exp $
+# $NetBSD: mediatomb.sh,v 1.3 2021/08/29 23:14:04 khorben Exp $
 #
-
 # PROVIDE: mediatomb
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
-. /etc/rc.subr
+. @SYSCONFBASE@/rc.subr
 
 name="mediatomb"
 rcvar=$name
@@ -18,7 +18,7 @@ pidfile="@PKG_HOME@/${name}.pid"
 command_args="-d -u ${mediatomb_username:-@MEDIATOMB_USER@} -g ${mediatomb_groupname:-@MEDIATOMB_USER@} -m @PKG_HOME@ -P ${pidfile} -l ${logfile} -c @PKG_SYSCONFDIR@/config.xml"
 extra_commands="reload"
 
-if [ -f /etc/rc.subr ]; then
+if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
