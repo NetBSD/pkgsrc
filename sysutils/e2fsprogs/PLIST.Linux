@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2018/04/11 08:11:57 maya Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2021/08/29 04:35:41 mcf Exp $
+man/man8/e2scrub.8
+man/man8/e2scrub_all.8
 man/man8/e4crypt.8
 man/man8/e4defrag.8
+sbin/e2scrub
+sbin/e2scrub_all
 sbin/e4crypt
 sbin/e4defrag
+share/examples/ext2fs/e2scrub.conf
