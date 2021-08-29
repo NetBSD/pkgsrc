@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/08/28 18:37:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2021/08/29 04:35:41 mcf Exp $
 
 DISTNAME=	e2fsprogs-1.46.4
 CATEGORIES=	sysutils
@@ -74,6 +74,12 @@ SUBST_SED.man+=		-e '/mke2fs.conf/s,/etc,@root_sysconfdir@,'
 # next (two) path's in the man page do not exist
 SUBST_SED.man+=		-e '/e2fsck.conf/s,/etc,@root_sysconfdir@,'
 SUBST_SED.man+=		-e   '/blkid.tab/s,/etc,@root_sysconfdir@,'
+
+.if ${OPSYS} == "Linux"
+USE_TOOLS+=		bash:run
+REPLACE_BASH+=		scrub/e2scrub.in
+REPLACE_BASH+=		scrub/e2scrub_all.in
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libblkid/buildlink3.mk"
