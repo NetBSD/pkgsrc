@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2021/08/27 03:32:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.284 2021/08/29 01:53:06 mcf Exp $
 
 DISTNAME=	qemu-6.1.0
 PKGNAME=	${DISTNAME:S/-rc/rc/}
@@ -122,10 +122,10 @@ PLIST.nbd=			yes
 .  if !exists(/usr/include/machine/trap.h)
 CONFIGURE_ARGS+=		--disable-bsd-user
 .  else
-USER_EMUL=			i386 x86_64 sparc sparc64
+USER_EMUL=			i386 x86_64
 .  endif
 .elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
-USER_EMUL=			i386 x86_64 sparc sparc64
+USER_EMUL=			i386 x86_64
 PLIST.nbd=			yes
 .elif ${OPSYS} == "Darwin"
 USER_EMUL=
