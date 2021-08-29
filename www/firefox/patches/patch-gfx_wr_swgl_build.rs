@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.2 2021/08/27 01:04:49 manu Exp $
+$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.3 2021/08/29 09:36:16 taca Exp $
 
 Work around an internal compiler error on i386 when optimization is enabled:
 
@@ -9,10 +9,9 @@ Work around an internal compiler error on i386 when optimization is enabled:
   cargo:warning=                    ^~~~~~~~~~~~~~~
 
 
---- gfx/wr/swgl/build.rs.orig	2021-08-24 17:33:31.320811394 +0200
-+++ gfx/wr/swgl/build.rs	2021-08-25 03:00:14.918972216 +0200
-@@ -195,8 +195,16 @@
-                  .flag("-mrecip=none");
+--- gfx/wr/swgl/build.rs.orig	2021-08-23 14:57:16.000000000 +0000
++++ gfx/wr/swgl/build.rs
+@@ -196,6 +196,13 @@ fn main() {
          }
      }
  
@@ -26,4 +25,3 @@ Work around an internal compiler error on i386 when optimization is enabled:
      build.file("src/gl.cc")
          .define("_GLIBCXX_USE_CXX11_ABI", Some("0"))
          .include(shader_dir)
-         .include("src")
