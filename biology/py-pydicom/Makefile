@@ -1,29 +1,24 @@
-# $NetBSD: Makefile,v 1.3 2019/10/01 14:45:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/29 12:59:39 adam Exp $
 
-DISTNAME=	pydicom-1.3.0
+DISTNAME=	pydicom-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pydicom/}
-GITHUB_PROJECT=	pydicom
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydicom/}
 
 MAINTAINER=	eborisch@gmail.com
-HOMEPAGE=	https://github.com/pydicom/pydicom/
+HOMEPAGE=	https://github.com/pydicom/pydicom
 COMMENT=	Pure python package for working with DICOM files
 LICENSE=	modified-bsd AND mit
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
 USE_LANGUAGES=	# none
 
-DOCDIR=			share/doc/${PKGBASE}
-PLIST_SUBST+=		DOCDIR=${DOCDIR:Q}
-INSTALLATION_DIRS+=	${DOCDIR}
-
-post-extract:
-	${CHMOD} a-x ${WRKSRC}/pydicom/data/test_files/*.dcm
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pydicom pydicom-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
