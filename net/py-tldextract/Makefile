@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/11/27 19:36:27 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/08/29 08:44:22 adam Exp $
 
-DISTNAME=	tldextract-3.1.0
+DISTNAME=	tldextract-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
@@ -27,7 +27,7 @@ post-install:
 	${MV} tldextract tldextract-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
