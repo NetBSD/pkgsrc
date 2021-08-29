@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/12/02 11:45:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/08/29 08:39:35 adam Exp $
 bin/iptest-${PYVERSSUFFIX}
 bin/ipython-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
@@ -488,6 +488,9 @@ ${PYSITELIB}/IPython/lib/inputhookgtk.pyo
 ${PYSITELIB}/IPython/lib/inputhookgtk3.py
 ${PYSITELIB}/IPython/lib/inputhookgtk3.pyc
 ${PYSITELIB}/IPython/lib/inputhookgtk3.pyo
+${PYSITELIB}/IPython/lib/inputhookgtk4.py
+${PYSITELIB}/IPython/lib/inputhookgtk4.pyc
+${PYSITELIB}/IPython/lib/inputhookgtk4.pyo
 ${PYSITELIB}/IPython/lib/inputhookpyglet.py
 ${PYSITELIB}/IPython/lib/inputhookpyglet.pyc
 ${PYSITELIB}/IPython/lib/inputhookpyglet.pyo
@@ -612,6 +615,9 @@ ${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk.pyo
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk3.py
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk3.pyc
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk3.pyo
+${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk4.py
+${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk4.pyc
+${PYSITELIB}/IPython/terminal/pt_inputhooks/gtk4.pyo
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/osx.py
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/osx.pyc
 ${PYSITELIB}/IPython/terminal/pt_inputhooks/osx.pyo
