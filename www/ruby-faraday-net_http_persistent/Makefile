@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/06/03 14:28:41 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/30 15:29:19 taca Exp $
 
-DISTNAME=	faraday-net_http_persistent-1.1.0
+DISTNAME=	faraday-net_http_persistent-1.2.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
