@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4442 2021/08/30 16:17:01 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4443 2021/08/30 16:19:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7014,3 +7014,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-html-proofer to 3.19.2 [taca 2021-08-30]
 	Updated databases/ruby-arel-helpers to 2.12.1 [taca 2021-08-30]
 	Updated security/ccid to 1.4.36 [gdt 2021-08-30]
+	Updated devel/ruby-cucumber-expressions to 12.1.2 [taca 2021-08-30]
