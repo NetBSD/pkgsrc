@@ -1,17 +1,23 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mediatomb.sh,v 1.3 2021/08/29 23:14:04 khorben Exp $
+# $NetBSD: mediatomb.sh,v 1.4 2021/08/30 21:49:00 khorben Exp $
 #
 # PROVIDE: mediatomb
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
+#
+# You will need to set some variables in @PKG_SYSCONFDIR@/rc.conf to start mediatomb:
+#
+# mediatomb=YES
 
-. @SYSCONFBASE@/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	. @SYSCONFBASE@/rc.subr
+	load_rc_config_var mediatomb_username mediatomb_username
+	load_rc_config_var mediatomb_groupname mediatomb_groupname
+fi
 
 name="mediatomb"
 rcvar=$name
-load_rc_config_var mediatomb_username mediatomb_username
-load_rc_config_var mediatomb_groupname mediatomb_groupname
 command="@PREFIX@/bin/mediatomb"
 logfile="@VARBASE@/log/${name}.log"
 pidfile="@PKG_HOME@/${name}.pid"

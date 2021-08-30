@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.79 2021/08/29 23:14:04 khorben Exp $
+# $NetBSD: Makefile,v 1.80 2021/08/30 21:49:00 khorben Exp $
 
 DISTNAME=	mediatomb-0.12.1
-PKGREVISION=	57
+PKGREVISION=	58
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediatomb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mediatomb.cc/
+HOMEPAGE=	https://sourceforge.net/projects/mediatomb/
 COMMENT=	UPnP MediaServer with a web user interface
 LICENSE=	gnu-gpl-v2
 
