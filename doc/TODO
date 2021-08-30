@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20984 2021/08/30 00:53:26 mef Exp $
+$NetBSD: TODO,v 1.20985 2021/08/30 01:09:57 mef Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-lmtest-0.9.38
 	o R-lwgeom-0.2.6
 	o R-mapproj-3
-	o R-mime-0.10
 	o R-mnormt-2.0.2
 	o R-mvtnorm-1.1.1
 	o R-ncdf-1.6.9
