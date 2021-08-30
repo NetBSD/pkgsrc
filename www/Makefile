@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1573 2021/08/30 15:09:20 taca Exp $
+# $NetBSD: Makefile,v 1.1574 2021/08/30 15:12:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -862,6 +862,7 @@ SUBDIR+=	ruby-actionview60
 SUBDIR+=	ruby-actionview61
 SUBDIR+=	ruby-aws-eventstream
 SUBDIR+=	ruby-aws-partitions
+SUBDIR+=	ruby-aws-sdk-core
 SUBDIR+=	ruby-aws-sigv4
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-capybara
