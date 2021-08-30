@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 15:25:56 taca Exp $
+
+SHA1 (faraday-rack-1.0.0.gem) = f402fce9c3b4985bcdbeaafc418206db24d335dc
+RMD160 (faraday-rack-1.0.0.gem) = 109b13fbdb87aabbed201b49bf7d50efa8334e9b
+SHA512 (faraday-rack-1.0.0.gem) = e4b13a1d935aea8e5df4413e16abe336fad04209754fb998a59b7aa26c265d6ecc0e2f5ffa51019656be55ff6bb49b2655d442e0323ba6e46ccdb20aefcd3d85
+Size (faraday-rack-1.0.0.gem) = 7168 bytes
