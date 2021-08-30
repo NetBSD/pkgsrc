@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2021/05/30 23:46:26 khorben Exp $
+# $NetBSD: Makefile,v 1.36 2021/08/30 21:45:02 khorben Exp $
 #
 
-PKGNAME=		rc.subr-20210517
+PKGNAME=		rc.subr-20210830
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org

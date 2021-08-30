@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.17 2021/05/30 23:46:26 khorben Exp $
+# $NetBSD: rc.subr,v 1.18 2021/08/30 21:45:02 khorben Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -867,6 +867,25 @@ load_rc_config()
 	if [ -f ${sysconfbase}/rc.conf.d/"$_command" ]; then
 		. ${sysconfbase}/rc.conf.d/"$_command"
 	fi
+}
+
+#
+# load_rc_config_var cmd var
+#	Read the rc.conf(5) var for cmd and set in the
+#	current shell, using load_rc_config in a subshell to prevent
+#	unwanted side effects from other variable assignments.
+#
+load_rc_config_var()
+{
+	if [ $# -ne 2 ]; then
+		err 3 'USAGE: load_rc_config_var cmd var'
+	fi
+	eval $(eval '(
+		load_rc_config '$1' >/dev/null;
+		if [ -n "${'$2'}" ] || [ "${'$2'-UNSET}" != "UNSET" ]; then
+			echo '$2'=\'\''${'$2'}\'\'';
+		fi
+	)' )
 }
 
 
