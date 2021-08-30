@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2021/07/29 09:46:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2021/08/30 21:52:31 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -101,6 +101,7 @@ share/mame/hash/amiga_a3000.xml
 share/mame/hash/amiga_apps.xml
 share/mame/hash/amiga_flop.xml
 share/mame/hash/amiga_hardware.xml
+share/mame/hash/amiga_hdd.xml
 share/mame/hash/amiga_workbench.xml
 share/mame/hash/amigaaga_flop.xml
 share/mame/hash/amigaecs_flop.xml
