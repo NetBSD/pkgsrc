@@ -1,14 +1,25 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/23 09:34:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/08/30 16:22:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/cucumber/messages.deserializers.rb
+${GEM_LIBDIR}/lib/cucumber/messages.dtos.rb
 ${GEM_LIBDIR}/lib/cucumber/messages.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/id_generator.rb
+${GEM_LIBDIR}/lib/cucumber/messages/message.rb
+${GEM_LIBDIR}/lib/cucumber/messages/message/deserialization.rb
+${GEM_LIBDIR}/lib/cucumber/messages/message/serialization.rb
+${GEM_LIBDIR}/lib/cucumber/messages/message/utils.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/ndjson_to_message_enumerator.rb
 ${GEM_LIBDIR}/lib/cucumber/messages/time_conversion.rb
 ${GEM_LIBDIR}/spec/capture_warnings.rb
+${GEM_LIBDIR}/spec/cucumber/messages/acceptance_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/id_generator_spec.rb
+${GEM_LIBDIR}/spec/cucumber/messages/message/deserialization_spec.rb
+${GEM_LIBDIR}/spec/cucumber/messages/message/dummy_messages.rb
+${GEM_LIBDIR}/spec/cucumber/messages/message/serialization_spec.rb
+${GEM_LIBDIR}/spec/cucumber/messages/message/utils_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/ndjson_serialization_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/time_conversion_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/messages/version_spec.rb
