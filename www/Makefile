@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1578 2021/08/30 15:22:31 taca Exp $
+# $NetBSD: Makefile,v 1.1579 2021/08/30 15:24:24 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -892,6 +892,7 @@ SUBDIR+=	ruby-faraday-httpclient
 SUBDIR+=	ruby-faraday-net_http
 SUBDIR+=	ruby-faraday-net_http_persistent
 SUBDIR+=	ruby-faraday_middleware
+SUBDIR+=	ruby-faraday-patron
 SUBDIR+=	ruby-faye-websocket
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-html-proofer
