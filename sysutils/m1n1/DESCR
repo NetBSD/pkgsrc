@@ -1,0 +1,4 @@
+m1n1: an experimentation playground for Apple Silicon
+
+m1n1 is an initial bootloader which is in charge of pretending to be a XNU
+kernel and performing Apple-specific initialiation.
