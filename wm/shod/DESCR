@@ -1,0 +1,11 @@
+Shod is an hybrid (tiling and floating) multimonitor X11 window manager.
+Shod sets no keybindings; reads no configuration other than X resources;
+and works only via mouse with a given key modifier (Alt by default), and
+by responding to client messages with EWMH hints (so you must use wmctrl
+to control shod).
+
+NOTE: shod provides no keybindings, use sxhkd for binding keys.
+
+WARNING: Shod is attempt of mine to write a Wm and better understand how
+         X11 works, Shod is only meant for me for educational purposes.
+         Shod is an experimental project, and should be used with caution.
