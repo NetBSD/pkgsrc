@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4405 2021/08/30 00:39:46 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4406 2021/08/30 00:45:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6975,3 +6975,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/ruby-gtk3 to 3.4.9 [tsutsui 2021-08-29]
 	Updated x11/ruby-gtksourceview3 to 3.4.9 [tsutsui 2021-08-29]
 	Updated sysutils/R-later to 1.3.0 [mef 2021-08-30]
+	Updated sysutils/R-sys to 3.4 [mef 2021-08-30]
