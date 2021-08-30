@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4408 2021/08/30 00:57:36 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4409 2021/08/30 01:09:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6978,3 +6978,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/R-sys to 3.4 [mef 2021-08-30]
 	Updated sysutils/R-ps to 1.6.0 [mef 2021-08-30]
 	Added sysutils/R-unix version 1.5.3 [mef 2021-08-30]
+	Updated mail/R-mime to 0.11 [mef 2021-08-30]
