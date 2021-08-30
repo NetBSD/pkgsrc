@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/01/14 14:44:47 taca Exp $
+$NetBSD: distinfo,v 1.23 2021/08/30 15:50:27 taca Exp $
 
-SHA1 (haml-5.2.1.gem) = 080c5710756c49ab6c290a4ca46e2ffeaf86ce6d
-RMD160 (haml-5.2.1.gem) = f4d4b6f4c07882eb2217f45ddee768769d7c392e
-SHA512 (haml-5.2.1.gem) = 81ca67a09480a90df52068a32f05f7e15b8eb4c74c647b9441e661928453b0bb6a159358f2217429d6fdccb12dbdaca25998c0e9fd5ed7a168e0830873aab05f
-Size (haml-5.2.1.gem) = 92160 bytes
+SHA1 (haml-5.2.2.gem) = 434fff4bae1fc2bb70ae92c0889a2f701a059601
+RMD160 (haml-5.2.2.gem) = a45693407969c4b2ba567e65709757358ad97d8e
+SHA512 (haml-5.2.2.gem) = 1ac461357a7845fed9f9c96bb2bab4587b11f6bb2ae7900a8dd92a41a3215fe0eaeedef45a866dc70359a54bc39fafe397949b2c52ade128e8e6da84dae2b7c7
+Size (haml-5.2.2.gem) = 92160 bytes
