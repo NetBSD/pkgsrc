@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4451 2021/08/30 21:45:50 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.4452 2021/08/30 21:52:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7024,3 +7024,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 5.9 [wiz 2021-08-30]
 	Updated devel/py-hg-evolve to 10.3.3 [wiz 2021-08-30]
 	Updated pkgtools/rc.subr to 20210830 [khorben 2021-08-30]
+	Updated emulators/mame to 0.235 [wiz 2021-08-30]
