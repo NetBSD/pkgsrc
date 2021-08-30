@@ -1,0 +1,2 @@
+Amazon Web Services Signature Version 4 signing library.  Generates
+sigv4 signature for HTTP requests.
