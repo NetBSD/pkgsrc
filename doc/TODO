@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20993 2021/08/30 17:55:34 wiz Exp $
+$NetBSD: TODO,v 1.20994 2021/08/30 20:22:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -928,6 +928,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gstreamer1-1.18.4 [wip]
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
+	o gtk4-4.4
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -1831,7 +1832,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qqc2-desktop-style-5.81.0
 	o qt6-6.0
-	o qtcreator-4.14
+	o qtcreator-5.0
 	o quazip-1.1
 	o quickjs-20210327
 	o qutebrowser-2.2.0
