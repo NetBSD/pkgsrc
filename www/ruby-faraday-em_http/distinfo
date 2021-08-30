@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 15:16:21 taca Exp $
+
+SHA1 (faraday-em_http-1.0.0.gem) = 313c507ce02e5b7e7a2df238178a8aa7ab0af389
+RMD160 (faraday-em_http-1.0.0.gem) = 8325c611dd1ed0cb7a324faed5e0c26aeffeb03d
+SHA512 (faraday-em_http-1.0.0.gem) = f8b6d8887ca9d5f964933dbd7583c39c29bd2133dcd3576fef33523ea5bfa6da1bc8f90c9bf39be0841bce983ed2ec3cd4660a46304fca5b858ea683e2db3bb4
+Size (faraday-em_http-1.0.0.gem) = 9216 bytes
