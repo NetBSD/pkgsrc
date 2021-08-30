@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4440 2021/08/30 16:04:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4441 2021/08/30 16:09:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7012,3 +7012,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libssh to 0.96 [wiz 2021-08-30]
 	Updated textproc/ruby-rqrcode to 2.1.0 [taca 2021-08-30]
 	Updated www/ruby-html-proofer to 3.19.2 [taca 2021-08-30]
+	Updated databases/ruby-arel-helpers to 2.12.1 [taca 2021-08-30]
