@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4431 2021/08/30 15:43:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4432 2021/08/30 15:43:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7003,3 +7003,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-css-parser to 1.10.0 [taca 2021-08-30]
 	Updated textproc/ruby-will-paginate to 3.3.1 [taca 2021-08-30]
 	Updated net/libfilezilla to 0.31.1 [wiz 2021-08-30]
+	Updated audio/musicpd to 0.22.11 [wiz 2021-08-30]
