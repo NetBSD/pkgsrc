@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/30 15:02:34 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/aws-eventstream.rb
+${GEM_LIBDIR}/lib/aws-eventstream/decoder.rb
+${GEM_LIBDIR}/lib/aws-eventstream/encoder.rb
+${GEM_LIBDIR}/lib/aws-eventstream/errors.rb
+${GEM_LIBDIR}/lib/aws-eventstream/header_value.rb
+${GEM_LIBDIR}/lib/aws-eventstream/message.rb
+${GEM_LIBDIR}/lib/aws-eventstream/types.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

@@ -1,0 +1,2 @@
+Amazon Web Services event stream library.  Decodes and encodes binary
+stream under vnd.amazon.event-stream content-type.
