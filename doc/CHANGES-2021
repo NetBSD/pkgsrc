@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4444 2021/08/30 16:22:43 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4445 2021/08/30 16:25:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7016,3 +7016,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ccid to 1.4.36 [gdt 2021-08-30]
 	Updated devel/ruby-cucumber-expressions to 12.1.2 [taca 2021-08-30]
 	Updated devel/ruby-cucumber-messages to 17.0.1 [taca 2021-08-30]
+	Updated lang/ruby-cucumber-gherkin to 20.0.1 [taca 2021-08-30]
