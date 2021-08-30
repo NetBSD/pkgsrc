@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/05/09 15:12:46 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/08/30 15:56:34 taca Exp $
 
-DISTNAME=	rqrcode_core-1.0.0
+DISTNAME=	rqrcode_core-1.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
