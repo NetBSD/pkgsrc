@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/12/31 11:41:22 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/08/30 00:45:32 mef Exp $
 
-SHA1 (R/sys_3.3.tar.gz) = aec8747bf09fad04d13a33fa7396aff5b77ff7f2
-RMD160 (R/sys_3.3.tar.gz) = d2246cca48feffab21e08d50810a304d5ea18c5a
-SHA512 (R/sys_3.3.tar.gz) = 289f26a019c5d239327a9dedbee6a0022d768e0485d1978896b602bb79b28295e9afb7813670c712febf5fa8861fb501eb59c40c25f1bde5f109d722484116fa
-Size (R/sys_3.3.tar.gz) = 20225 bytes
+SHA1 (R/sys_3.4.tar.gz) = 9d48c9a4c70645c69d22052a9c03ef44d1fb6ce9
+RMD160 (R/sys_3.4.tar.gz) = 48eac797a009d32a619cf5fe433e29c0aae66b12
+SHA512 (R/sys_3.4.tar.gz) = e1f3ddc0b553d23dc4888905946670b23b39f83d9282b50925c18bd1fc4ba7da9ab51274c55e128117a6c7a377976202c4cc55c9d68ba9f4a3c6db5a8f27df8b
+Size (R/sys_3.4.tar.gz) = 20138 bytes
