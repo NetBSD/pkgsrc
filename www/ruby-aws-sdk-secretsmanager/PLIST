@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/08/30 15:14:06 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/client.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/client_api.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/customizations.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/errors.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/resource.rb
+${GEM_LIBDIR}/lib/aws-sdk-secretsmanager/types.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
