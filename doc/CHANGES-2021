@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4429 2021/08/30 15:40:49 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4430 2021/08/30 15:42:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7001,3 +7001,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mkvtoolnix to 61.0.0 [adam 2021-08-30]
 	Updated devel/py-macholib to 1.15.1 [adam 2021-08-30]
 	Updated www/ruby-css-parser to 1.10.0 [taca 2021-08-30]
+	Updated textproc/ruby-will-paginate to 3.3.1 [taca 2021-08-30]
