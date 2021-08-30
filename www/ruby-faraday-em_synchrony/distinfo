@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 15:18:59 taca Exp $
+
+SHA1 (faraday-em_synchrony-1.0.0.gem) = 233b29dfa859253ebc294d2630bf537bc828998c
+RMD160 (faraday-em_synchrony-1.0.0.gem) = 336dea91637ab9791ecb054c67a7d883915afd1b
+SHA512 (faraday-em_synchrony-1.0.0.gem) = a23db89333605924d3fbc92518614892d25d66e8dd566087101cb70845293a166a5365b893a1bc3c5968a762e521f2587ffaa7d0a0e37d6dcbdbd1fbf565b095
+Size (faraday-em_synchrony-1.0.0.gem) = 8192 bytes
