@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4411 2021/08/30 12:48:40 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4412 2021/08/30 14:40:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6981,3 +6981,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/R-mime to 0.11 [mef 2021-08-30]
 	Updated archivers/R-zip to 2.2.0 [mef 2021-08-30]
 	Updated devel/smake to 1.6 [micha 2021-08-30]
+	Added wm/shod version 0.5.0 [pin 2021-08-30]
