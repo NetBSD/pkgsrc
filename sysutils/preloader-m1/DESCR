@@ -1,3 +1,0 @@
-Preloader M1 acts as a wrapper for Linux (and other operating systems)
-kernels on Apple M1 hardware and provides a trampoline for starting
-processor cores.
