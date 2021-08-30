@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4448 2021/08/30 16:44:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4449 2021/08/30 17:55:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7021,3 +7021,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-wire to 6.1.1 [taca 2021-08-30]
 	Updated security/libssh2 to 1.10.0 [adam 2021-08-30]
 	Updated comms/py-rich to 10.9.0 [adam 2021-08-30]
+	Updated devel/py-mercurial to 5.9 [wiz 2021-08-30]
