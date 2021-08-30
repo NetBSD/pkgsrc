@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.17 2017/09/10 16:03:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/08/30 15:50:27 taca Exp $
 bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/FAQ.md
