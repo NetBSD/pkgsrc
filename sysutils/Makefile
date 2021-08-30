@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.962 2021/08/05 11:11:43 pin Exp $
+# $NetBSD: Makefile,v 1.963 2021/08/30 00:57:36 mef Exp $
 #
 
 COMMENT=	System utilities
@@ -11,6 +11,7 @@ SUBDIR+=	R-processx
 SUBDIR+=	R-progress
 SUBDIR+=	R-ps
 SUBDIR+=	R-sys
+SUBDIR+=	R-unix
 SUBDIR+=	R-xopen
 SUBDIR+=	WCMCommander
 SUBDIR+=	accountsservice
