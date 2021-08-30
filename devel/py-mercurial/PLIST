@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.34 2021/05/20 09:08:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/08/30 17:55:25 wiz Exp $
 bin/hg
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
 ${PYSITELIB}/hgdemandimport/__init__.pyo
@@ -464,6 +463,7 @@ ${PYSITELIB}/hgext/zeroconf/__init__.pyo
 ${PYSITELIB}/hgext3rd/__init__.py
 ${PYSITELIB}/hgext3rd/__init__.pyc
 ${PYSITELIB}/hgext3rd/__init__.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
@@ -593,6 +593,15 @@ ${PYSITELIB}/mercurial/dirstate.pyo
 ${PYSITELIB}/mercurial/dirstateguard.py
 ${PYSITELIB}/mercurial/dirstateguard.pyc
 ${PYSITELIB}/mercurial/dirstateguard.pyo
+${PYSITELIB}/mercurial/dirstatemap.py
+${PYSITELIB}/mercurial/dirstatemap.pyc
+${PYSITELIB}/mercurial/dirstatemap.pyo
+${PYSITELIB}/mercurial/dirstateutils/__init__.py
+${PYSITELIB}/mercurial/dirstateutils/__init__.pyc
+${PYSITELIB}/mercurial/dirstateutils/__init__.pyo
+${PYSITELIB}/mercurial/dirstateutils/docket.py
+${PYSITELIB}/mercurial/dirstateutils/docket.pyc
+${PYSITELIB}/mercurial/dirstateutils/docket.pyo
 ${PYSITELIB}/mercurial/discovery.py
 ${PYSITELIB}/mercurial/discovery.pyc
 ${PYSITELIB}/mercurial/discovery.pyo
@@ -659,6 +668,7 @@ ${PYSITELIB}/mercurial/helptext/dates.txt
 ${PYSITELIB}/mercurial/helptext/deprecated.txt
 ${PYSITELIB}/mercurial/helptext/diffs.txt
 ${PYSITELIB}/mercurial/helptext/environment.txt
+${PYSITELIB}/mercurial/helptext/evolution.txt
 ${PYSITELIB}/mercurial/helptext/extensions.txt
 ${PYSITELIB}/mercurial/helptext/filesets.txt
 ${PYSITELIB}/mercurial/helptext/flags.txt
@@ -924,12 +934,24 @@ ${PYSITELIB}/mercurial/revlogutils/constants.pyo
 ${PYSITELIB}/mercurial/revlogutils/deltas.py
 ${PYSITELIB}/mercurial/revlogutils/deltas.pyc
 ${PYSITELIB}/mercurial/revlogutils/deltas.pyo
+${PYSITELIB}/mercurial/revlogutils/docket.py
+${PYSITELIB}/mercurial/revlogutils/docket.pyc
+${PYSITELIB}/mercurial/revlogutils/docket.pyo
 ${PYSITELIB}/mercurial/revlogutils/flagutil.py
 ${PYSITELIB}/mercurial/revlogutils/flagutil.pyc
 ${PYSITELIB}/mercurial/revlogutils/flagutil.pyo
 ${PYSITELIB}/mercurial/revlogutils/nodemap.py
 ${PYSITELIB}/mercurial/revlogutils/nodemap.pyc
 ${PYSITELIB}/mercurial/revlogutils/nodemap.pyo
+${PYSITELIB}/mercurial/revlogutils/randomaccessfile.py
+${PYSITELIB}/mercurial/revlogutils/randomaccessfile.pyc
+${PYSITELIB}/mercurial/revlogutils/randomaccessfile.pyo
+${PYSITELIB}/mercurial/revlogutils/revlogv0.py
+${PYSITELIB}/mercurial/revlogutils/revlogv0.pyc
+${PYSITELIB}/mercurial/revlogutils/revlogv0.pyo
+${PYSITELIB}/mercurial/revlogutils/rewrite.py
+${PYSITELIB}/mercurial/revlogutils/rewrite.pyc
+${PYSITELIB}/mercurial/revlogutils/rewrite.pyo
 ${PYSITELIB}/mercurial/revlogutils/sidedata.py
 ${PYSITELIB}/mercurial/revlogutils/sidedata.pyc
 ${PYSITELIB}/mercurial/revlogutils/sidedata.pyo
