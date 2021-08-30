@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4413 2021/08/30 14:56:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4414 2021/08/30 15:03:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6983,3 +6983,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/smake to 1.6 [micha 2021-08-30]
 	Added wm/shod version 0.5.0 [pin 2021-08-30]
 	Added textproc/ruby-jmespath version 1.4.0 [taca 2021-08-30]
+	Added www/ruby-aws-eventstream version 1.1.1 [taca 2021-08-30]
