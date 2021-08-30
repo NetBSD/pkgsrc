@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2021/08/30 23:33:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.965 2021/08/30 23:46:34 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -182,7 +182,6 @@ SUBDIR+=	dptutil
 SUBDIR+=	dtb-arm-exynos5422
 SUBDIR+=	dtb-arm-tegra124
 SUBDIR+=	dtb-arm-vexpress
-SUBDIR+=	dtb-arm64-apple-m1
 SUBDIR+=	dtb-arm64-sun50i
 SUBDIR+=	dtb-arm64-tegra210
 SUBDIR+=	dtc
@@ -520,7 +519,6 @@ SUBDIR+=	pftop
 SUBDIR+=	pidof
 SUBDIR+=	pluged
 SUBDIR+=	polysh
-SUBDIR+=	preloader-m1
 SUBDIR+=	pscpug
 SUBDIR+=	psftools
 SUBDIR+=	psmisc
