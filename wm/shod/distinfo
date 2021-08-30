@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 14:39:24 pin Exp $
+
+SHA1 (shod-0.5.0.tar.gz) = b91a9134a3fb2fb0e64900f23543e18ad24a4c53
+RMD160 (shod-0.5.0.tar.gz) = c82f812eef889b2ecf24b150d93598989754cfe6
+SHA512 (shod-0.5.0.tar.gz) = f3f9c92c6b83a6a4f5a6d9d0d1b1fc40a77d1c7dbde4738029969e5605eb3abed53b23c270867c1d1ae26ea0b1c217006d54e03a5c3864e2d002897c4ff8a515
+Size (shod-0.5.0.tar.gz) = 40293 bytes
