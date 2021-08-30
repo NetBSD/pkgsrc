@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.963 2021/08/30 00:57:36 mef Exp $
+# $NetBSD: Makefile,v 1.964 2021/08/30 23:33:49 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -408,6 +408,7 @@ SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
 SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxtask
+SUBDIR+=	m1n1
 SUBDIR+=	macchina
 SUBDIR+=	magicrescue
 SUBDIR+=	manifold
