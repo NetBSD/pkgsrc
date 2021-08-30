@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.62 2021/07/29 14:00:57 wiz Exp $
+$NetBSD: distinfo,v 1.63 2021/08/30 15:50:50 wiz Exp $
 
-SHA1 (FileZilla_3.55.0_src.tar.bz2) = 887c04c430ed798b5d3048a29bf7fd4fdc37b30d
-RMD160 (FileZilla_3.55.0_src.tar.bz2) = cd23b5e29692f3cfe034ece9c11408a6c19c63fc
-SHA512 (FileZilla_3.55.0_src.tar.bz2) = 8a1221e97719610be900d66f7feba90d1c5053a618b38084e93e8f2b11e51fc523336e11e110f51828eba3f17f60cea1fcd8060bd0cc5e7fdb3d24f35a4c1732
-Size (FileZilla_3.55.0_src.tar.bz2) = 4910040 bytes
-SHA1 (patch-src_commonui_Makefile.am) = e70f467d2b5940a0a649db605cf198674bb4a1ab
+SHA1 (FileZilla_3.55.1_src.tar.bz2) = 4323955808597c2d296a827cb4ed5a20ce1592c3
+RMD160 (FileZilla_3.55.1_src.tar.bz2) = 23755797e0682c2e9f9d85d64ea79cac0d58c1d0
+SHA512 (FileZilla_3.55.1_src.tar.bz2) = 07f1ccc596cac64aca0e82a97725f2ade26de78116441ba5aefaa8bd1396a483be88d9820820b9767e77686abbfd0eb6190684303e1f4d9ec45ef0b1f2cf0170
+Size (FileZilla_3.55.1_src.tar.bz2) = 4910935 bytes
