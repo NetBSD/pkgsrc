@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/03/12 17:46:22 wiz Exp $
+$NetBSD: distinfo,v 1.15 2021/08/30 16:43:19 adam Exp $
 
-SHA1 (libssh2-1.9.0.tar.gz) = 21e98282b103307a16792e5e2d4c99beaf0b3b9c
-RMD160 (libssh2-1.9.0.tar.gz) = eb3553a9b2c05d5b6a24159db8a1478f9aea3877
-SHA512 (libssh2-1.9.0.tar.gz) = 41a3ebcf84e32eab69b7411ffb0a3b6e6db71491c968602b17392cfe3490ef00239726ec28acb3d25bf0ed62700db7f4d0bb5a9175618f413865f40badca6e17
-Size (libssh2-1.9.0.tar.gz) = 888551 bytes
-SHA1 (patch-Makefile.in) = 98dc16d73db4b99adfcea02bc597666a7c747847
+SHA1 (libssh2-1.10.0.tar.gz) = 2ebb3bc5c944090ade840f3a0ada9874eced979b
+RMD160 (libssh2-1.10.0.tar.gz) = b3af89cc5974dbffbcba0dd80dcd521e6e60b39d
+SHA512 (libssh2-1.10.0.tar.gz) = e064ee1089eb8e6cd5fa2617f4fd8ff56c2721c5476775a98bdb68c6c4ee4d05c706c3bb0eb479a27a8ec0b17a8a5ef43e1d028ad3f134519aa582d3981a3a30
+Size (libssh2-1.10.0.tar.gz) = 965044 bytes
