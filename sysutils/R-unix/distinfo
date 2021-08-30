@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 00:55:38 mef Exp $
+
+SHA1 (R/unix_1.5.3.tar.gz) = 2d6b1f93b38aef0faa444cab28b6f7dd40494d9e
+RMD160 (R/unix_1.5.3.tar.gz) = 82aeb960d1890504c39224eef7402017cfee1f17
+SHA512 (R/unix_1.5.3.tar.gz) = a8c9eb099eb90d00fa50a1ce75537a8759fd5fee478d8eac7c97151590eab7cccde823203a241baed128435e1a3f1edd6f91e95f2933f24b81c05d285fec8e75
+Size (R/unix_1.5.3.tar.gz) = 20538 bytes
