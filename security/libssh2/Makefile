@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/05/10 17:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/08/30 16:43:19 adam Exp $
 
-DISTNAME=	libssh2-1.9.0
-PKGREVISION=	1
+DISTNAME=	libssh2-1.10.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh2.org/download/
 
@@ -10,12 +9,10 @@ HOMEPAGE=	https://www.libssh2.org/
 COMMENT=	SSH2 protocol library
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib:Q}
 CONFIGURE_ARGS+=	--disable-examples-build
-
 PKGCONFIG_OVERRIDE+=	libssh2.pc.in
 TEST_TARGET=		check
 
