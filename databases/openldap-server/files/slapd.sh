@@ -1,13 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: slapd.sh,v 1.1 2016/06/17 13:56:53 jperkin Exp $
+# $NetBSD: slapd.sh,v 1.2 2021/08/30 09:36:31 khorben Exp $
 #
 # OpenLDAP standalone LDAP daemon
 #
 # PROVIDE: slapd
 # REQUIRE: DAEMON
 
-. /etc/rc.subr
+. @SYSCONFBASE@/rc.subr
 
 name="slapd"
 rcvar=${name}
