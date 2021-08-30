@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4426 2021/08/30 15:38:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4427 2021/08/30 15:39:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6997,3 +6997,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-faraday to 1.7.1 [taca 2021-08-30]
 	Updated www/ruby-rails-html-sanitizer to 1.4.2 [taca 2021-08-30]
 	Updated graphics/ImageMagick to 7.1.0.5 [wiz 2021-08-30]
+	Updated graphics/p5-PerlMagick to 7.1.0.5 [wiz 2021-08-30]
