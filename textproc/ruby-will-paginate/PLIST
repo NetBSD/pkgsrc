@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/03/24 18:18:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/08/30 15:42:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -28,14 +28,8 @@ ${GEM_LIBDIR}/spec/collection_spec.rb
 ${GEM_LIBDIR}/spec/console
 ${GEM_LIBDIR}/spec/console_fixtures.rb
 ${GEM_LIBDIR}/spec/database.yml
-${GEM_LIBDIR}/spec/fake_rubygems.rb
 ${GEM_LIBDIR}/spec/finders/active_record_spec.rb
 ${GEM_LIBDIR}/spec/finders/activerecord_test_connector.rb
-${GEM_LIBDIR}/spec/finders/data_mapper_spec.rb
-${GEM_LIBDIR}/spec/finders/data_mapper_test_connector.rb
-${GEM_LIBDIR}/spec/finders/mongoid_spec.rb
-${GEM_LIBDIR}/spec/finders/sequel_spec.rb
-${GEM_LIBDIR}/spec/finders/sequel_test_connector.rb
 ${GEM_LIBDIR}/spec/fixtures/admin.rb
 ${GEM_LIBDIR}/spec/fixtures/developer.rb
 ${GEM_LIBDIR}/spec/fixtures/developers_projects.yml
