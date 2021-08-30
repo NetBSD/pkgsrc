@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4428 2021/08/30 15:39:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4429 2021/08/30 15:40:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/p5-PerlMagick to 7.1.0.5 [wiz 2021-08-30]
 	Updated multimedia/mkvtoolnix to 61.0.0 [adam 2021-08-30]
 	Updated devel/py-macholib to 1.15.1 [adam 2021-08-30]
+	Updated www/ruby-css-parser to 1.10.0 [taca 2021-08-30]
