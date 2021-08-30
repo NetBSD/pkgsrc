@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/03/06 20:17:39 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2021/08/30 23:44:39 jmcneill Exp $
 
-SHA1 (u-boot/u-boot-apple-m1-efe1ec684e2fdaeca38422e5373bdde046ec1f20-efe1ec684e2fdaeca38422e5373bdde046ec1f20.tar.gz) = eabc89f7cf3ae680b696a3e93edf5b2fca0a9dbb
-RMD160 (u-boot/u-boot-apple-m1-efe1ec684e2fdaeca38422e5373bdde046ec1f20-efe1ec684e2fdaeca38422e5373bdde046ec1f20.tar.gz) = 81c08e23b81f90fae3551e2b3613029e615c9b29
-SHA512 (u-boot/u-boot-apple-m1-efe1ec684e2fdaeca38422e5373bdde046ec1f20-efe1ec684e2fdaeca38422e5373bdde046ec1f20.tar.gz) = 0ab1a5b6f86f159b57e38aaa5698177b05c126d016fc24ee90ca25de85424b68de8aa3007bb1fe85e5f32cb2a67e0853c7fbc2001b21161dce5e9a732a4096d3
-Size (u-boot/u-boot-apple-m1-efe1ec684e2fdaeca38422e5373bdde046ec1f20-efe1ec684e2fdaeca38422e5373bdde046ec1f20.tar.gz) = 21202914 bytes
+SHA1 (u-boot/u-boot-apple-m1-8e7191541ca9b4cda9ee191b2728cf29f1660bdd-8e7191541ca9b4cda9ee191b2728cf29f1660bdd.tar.gz) = 7eaa9c3610faafa695040f60708f478dae63ccf9
+RMD160 (u-boot/u-boot-apple-m1-8e7191541ca9b4cda9ee191b2728cf29f1660bdd-8e7191541ca9b4cda9ee191b2728cf29f1660bdd.tar.gz) = 28db81df99ff76504eda96d1dff3b931fc1f2123
+SHA512 (u-boot/u-boot-apple-m1-8e7191541ca9b4cda9ee191b2728cf29f1660bdd-8e7191541ca9b4cda9ee191b2728cf29f1660bdd.tar.gz) = 8e26ababbf512cdd7e2653f65b7b6497270ddfb81e322f958a1f535c1c70c8a82131ffb27aa423a0a2d0dc26988f7b9a7ad35130c7c1dae863677bdf47ac5a87
+Size (u-boot/u-boot-apple-m1-8e7191541ca9b4cda9ee191b2728cf29f1660bdd-8e7191541ca9b4cda9ee191b2728cf29f1660bdd.tar.gz) = 21276309 bytes
