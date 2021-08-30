@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20994 2021/08/30 20:22:44 wiz Exp $
+$NetBSD: TODO,v 1.20995 2021/08/30 21:52:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1244,7 +1244,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o maelstrom-sdl-3.0.7
 	o magic-8.3.154
 	o magit-3.0
-	o mame-0.235
 	o man-pages-5.11
 	o mapcode-2.5.5
 	o mapserver-7.6.2
