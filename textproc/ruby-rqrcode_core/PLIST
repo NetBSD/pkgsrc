@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/09 15:12:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/08/30 15:56:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
@@ -17,9 +17,11 @@ ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_alphanumeric.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_bit_buffer.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_code.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_math.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_multi.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_numeric.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_polynomial.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_rs_block.rb
+${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_segment.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_util.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/version.rb
 ${GEM_LIBDIR}/rqrcode_core.gemspec
