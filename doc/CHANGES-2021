@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4417 2021/08/30 15:12:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4418 2021/08/30 15:15:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6987,3 +6987,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ruby-aws-partitions version 1.492.0 [taca 2021-08-30]
 	Added www/ruby-aws-sigv4 version 1.2.4 [taca 2021-08-30]
 	Added www/ruby-aws-sdk-core version 3.119.1 [taca 2021-08-30]
+	Added www/ruby-aws-sdk-secretsmanager version 1.48.0 [taca 2021-08-30]
