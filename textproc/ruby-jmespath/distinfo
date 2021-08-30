@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/08/30 14:55:50 taca Exp $
+
+SHA1 (jmespath-1.4.0.gem) = 016b3f6a1ca8040f66cf4fe3dc0eaacbca4ff8bf
+RMD160 (jmespath-1.4.0.gem) = ef9121d586c9d931238ba3cb6828290e020f3d44
+SHA512 (jmespath-1.4.0.gem) = 2d8668c5328b07326950244e276582ace5c0b0ba20a216f998fab54fa70f901bbd57a1d497ddb966cbfc903f4cf11df34c9c03130ce2f44750d65f78e9736e51
+Size (jmespath-1.4.0.gem) = 20480 bytes

@@ -1,0 +1,4 @@
+jmespath.rb
+
+An implementation of JMESPath for Ruby. This implementation supports
+searching JSON documents as well as native Ruby data structures.
