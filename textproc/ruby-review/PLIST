@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/07 13:35:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/08/30 15:54:03 taca Exp $
 bin/review-catalog-converter${RUBY_SUFFIX}
 bin/review-check${RUBY_SUFFIX}
 bin/review-checkdep${RUBY_SUFFIX}
@@ -137,6 +137,7 @@ ${GEM_LIBDIR}/lib/review/latexindex.rb
 ${GEM_LIBDIR}/lib/review/latexutils.rb
 ${GEM_LIBDIR}/lib/review/lineinput.rb
 ${GEM_LIBDIR}/lib/review/location.rb
+${GEM_LIBDIR}/lib/review/loggable.rb
 ${GEM_LIBDIR}/lib/review/logger.rb
 ${GEM_LIBDIR}/lib/review/makerhelper.rb
 ${GEM_LIBDIR}/lib/review/markdownbuilder.rb
@@ -144,6 +145,9 @@ ${GEM_LIBDIR}/lib/review/md2inaobuilder.rb
 ${GEM_LIBDIR}/lib/review/pdfmaker.rb
 ${GEM_LIBDIR}/lib/review/plaintextbuilder.rb
 ${GEM_LIBDIR}/lib/review/preprocessor.rb
+${GEM_LIBDIR}/lib/review/preprocessor/directive.rb
+${GEM_LIBDIR}/lib/review/preprocessor/line.rb
+${GEM_LIBDIR}/lib/review/preprocessor/repository.rb
 ${GEM_LIBDIR}/lib/review/rstbuilder.rb
 ${GEM_LIBDIR}/lib/review/sec_counter.rb
 ${GEM_LIBDIR}/lib/review/template.rb
