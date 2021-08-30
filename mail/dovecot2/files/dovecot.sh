@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.3 2010/12/07 11:43:44 adam Exp $
+# $NetBSD: dovecot.sh,v 1.4 2021/08/30 09:33:48 khorben Exp $
 #
 
 # PROVIDE: dovecot
 # REQUIRE: DAEMON LOGIN ntpdate
 
-. /etc/rc.subr
+. @SYSCONFBASE@/rc.subr
 
 name="dovecot"
 rcvar=$name
