@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4437 2021/08/30 15:56:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4438 2021/08/30 15:57:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7009,3 +7009,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libgcrypt to 1.9.4 [wiz 2021-08-30]
 	Updated textproc/ruby-review to 5.2.0 [taca 2021-08-30]
 	Updated textproc/ruby-rqrcode_core to 1.2.0 [taca 2021-08-30]
+	Updated security/libssh to 0.96 [wiz 2021-08-30]
