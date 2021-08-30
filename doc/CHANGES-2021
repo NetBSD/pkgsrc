@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4452 2021/08/30 21:52:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4453 2021/08/30 23:48:43 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7025,3 +7025,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hg-evolve to 10.3.3 [wiz 2021-08-30]
 	Updated pkgtools/rc.subr to 20210830 [khorben 2021-08-30]
 	Updated emulators/mame to 0.235 [wiz 2021-08-30]
+	Added sysutils/m1n1 version 20210828 [jmcneill 2021-08-30]
+	Updated sysutils/u-boot-apple-m1 to 2021.04rc3 [jmcneill 2021-08-30]
+	Removed sysutils/preloader-m1 [jmcneill 2021-08-30]
+	Removed sysutils/dtb-arm64-apple-m1 [jmcneill 2021-08-30]
