@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/06/05 08:37:14 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/08/30 00:39:33 mef Exp $
 
-SHA1 (R/later_1.2.0.tar.gz) = cea59700fe6fdc1128fdde1076bec6d65d950dc7
-RMD160 (R/later_1.2.0.tar.gz) = c946e0e2c39277b28dbf235528d9ac076f7a7ef7
-SHA512 (R/later_1.2.0.tar.gz) = 4b43895f1a5dee22ebfd937c50a9b84891119fc1d2edefa54c85b9e8e6dc8fc23a83b31b5b1a3b9254b0ba762eb5a24d15f6644e3cbd9ce74cab0759ea680fb8
-Size (R/later_1.2.0.tar.gz) = 64104 bytes
+SHA1 (R/later_1.3.0.tar.gz) = 0a099fac2be6fca429e3a33776a0bf87fbfb182f
+RMD160 (R/later_1.3.0.tar.gz) = 021b3cc6537ca441bb9ef90ff49c24e9f2fc6036
+SHA512 (R/later_1.3.0.tar.gz) = b55649fd50bdeea33cfee4740325dfe61bb8a5534e1de7043267a7b4f26846082b787ef048a4af22bfd3b2ae96cc3824727fb98a6570044ad53ee0c6e1824eaf
+Size (R/later_1.3.0.tar.gz) = 63785 bytes
