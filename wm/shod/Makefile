@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.1 2021/08/30 14:39:24 pin Exp $
+
+DISTNAME=	shod-0.5.0
+CATEGORIES=	wm
+MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pin@NetBSD.org
+HOMEPAGE=	https://github.com/phillbush/shod/
+COMMENT=	Hybrid (floating and tiling) tabbed window manager
+LICENSE=	mit
+
+SUBST_CLASSES+=		configmk
+SUBST_MESSAGE.configmk=	Adjust config.mk
+SUBST_STAGE.configmk=	pre-configure
+SUBST_FILES.configmk+=	config.mk
+SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.configmk+=	-e 's,/usr/X11R6,${X11BASE},g'
+SUBST_SED.configmk+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.configmk+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.configmk+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/shod ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/shod.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+DEPENDS+=	wmctrl-[0-9]*:../../wm/wmctrl
+DEPENDS+=	sxhkd-[0-9]*:../../x11/sxhkd
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
