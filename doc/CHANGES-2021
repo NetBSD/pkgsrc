@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4433 2021/08/30 15:50:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4434 2021/08/30 15:51:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7005,3 +7005,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/libfilezilla to 0.31.1 [wiz 2021-08-30]
 	Updated audio/musicpd to 0.22.11 [wiz 2021-08-30]
 	Updated textproc/ruby-haml to 5.2.2 [taca 2021-08-30]
+	Updated net/filezilla to 3.55.1 [wiz 2021-08-30]
