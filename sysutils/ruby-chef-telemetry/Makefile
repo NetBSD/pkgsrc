@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/04/01 14:10:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/31 16:36:39 taca Exp $
 
-DISTNAME=	chef-telemetry-1.0.29
+DISTNAME=	chef-telemetry-1.1.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
