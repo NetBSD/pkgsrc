@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.10 2021/03/30 10:58:31 markd Exp $
+# $NetBSD: kf5.mk,v 1.11 2021/08/31 11:55:04 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -34,6 +34,7 @@
 # used by misc/kdav/Makefile
 # used by misc/kemoticons/Makefile
 # used by misc/kunitconversion/Makefile
+# used by multimedia/kmediaplayer/Makefile
 # used by net/kdnssd/Makefile
 # used by net/knewstuff/Makefile
 # used by net/kxmlrpcclient/Makefile
