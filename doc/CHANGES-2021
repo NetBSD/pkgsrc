@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4467 2021/08/31 15:12:42 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4468 2021/08/31 15:17:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7044,3 +7044,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/ruby-redmine [taca 2021-08-31]
 	Updated devel/ruby-fast_gettext to 2.1.0 [taca 2021-08-31]
 	Updated devel/ruby-power_assert to 2.0.1 [taca 2021-08-31]
+	Updated devel/ruby-rb-kqueue to 0.2.7 [taca 2021-08-31]
