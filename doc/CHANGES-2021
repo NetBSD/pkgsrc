@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4460 2021/08/31 11:52:45 markd Exp $
+$NetBSD: CHANGES-2021,v 1.4461 2021/08/31 12:08:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7037,3 +7037,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/openmsx to 17.0 [nia 2021-08-31]
 	Updated devel/nss to 3.69.1 [wiz 2021-08-31]
 	Added multimedia/kmediaplayer version 5.80.0 [markd 2021-08-31]
+	Updated multimedia/kmplayer to 0.12.0b [markd 2021-08-31]
