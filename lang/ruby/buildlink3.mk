@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2018/01/07 13:04:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2021/08/31 11:37:18 markd Exp $
 
 BUILDLINK_TREE+=	${RUBY_BASE}
 
@@ -21,6 +21,7 @@ buildlink-bin-ruby:
 	${RUN} \
 	f=${BUILDLINK_PREFIX.${RUBY_BASE}}"/bin/ruby${RUBY_SUFFIX}"; \
 	if ${TEST} -f $$f; then \
+		${RM} -f ${BUILDLINK_DIR}/bin/ruby; \
 		${LN} -s $$f ${BUILDLINK_DIR}/bin/ruby; \
 	fi
 
