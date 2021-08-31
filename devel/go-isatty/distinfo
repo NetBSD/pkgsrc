@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2017/10/24 06:55:07 maya Exp $
-
-SHA1 (go-isatty/go-isatty-0.0.3.tar.gz) = 876f2d14c16eb537fbbeaa052dc743527867d48a
-RMD160 (go-isatty/go-isatty-0.0.3.tar.gz) = 0aae6fe43de217a5f4d2ef559df37064b791969c
-SHA512 (go-isatty/go-isatty-0.0.3.tar.gz) = 60afa46beefe482bb13ab9dd0b94c45719a91d7f5d98f87452154636b520648fd900961b0df2bb3170bf42cdb62635073cfc48f923639aa2391ddccd6382fb1d
-Size (go-isatty/go-isatty-0.0.3.tar.gz) = 3364 bytes
