@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/08/04 08:22:30 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/31 13:16:39 ryoon Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -23,7 +23,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
-JPEG_ACCEPTED=	libjpeg-turbo
+#JPEG_ACCEPTED=	libjpeg-turbo
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fgnu-inline-asm
 
@@ -81,7 +81,7 @@ post-install:
 #.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
