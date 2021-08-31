@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4479 2021/08/31 15:48:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4480 2021/08/31 15:55:43 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7056,3 +7056,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-nio4r to 2.5.8 [taca 2021-08-31]
 	Updated net/ruby-recog to 2.3.21 [taca 2021-08-31]
 	Updated net/ruby-ruby_smb to 2.0.11 [taca 2021-08-31]
+	Added biology/biolibc-tools version 0.1.0.36 [bacon 2021-08-31]
