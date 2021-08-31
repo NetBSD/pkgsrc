@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20995 2021/08/30 21:52:41 wiz Exp $
+$NetBSD: TODO,v 1.20996 2021/08/31 10:57:26 nia Exp $
 
 Suggested new packages
 ======================
@@ -1455,7 +1455,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmpi-4.1.0
-	o openmsx-0.16.0
 	o openntpd-6.8p1
 	o openrct2-0.3.3
 	o openslp-2.0.0
