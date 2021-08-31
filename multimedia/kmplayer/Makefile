@@ -1,30 +1,50 @@
-# $NetBSD: Makefile,v 1.143 2021/05/24 19:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2021/08/31 12:06:22 markd Exp $
 #
 
-DISTNAME=	kmplayer-0.11.3d
-PKGREVISION=	69
+DISTNAME=	kmplayer-0.12.0b
 CATEGORIES=	multimedia kde
-MASTER_SITES=	https://kmplayer.kde.org/pkgs/
+MASTER_SITES=	${MASTER_SITE_KDE:=kmplayer/0.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	https://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
-BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
-DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
-DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+DEPENDS+=	kinit>=5.19.0:../../x11/kinit
+DEPENDS+=	mplayer>=1.0rc3:../../multimedia/mplayer
+DEPENDS+=	mencoder>=1.0rc3:../../multimedia/mencoder
 
-USE_TOOLS+=		msgfmt perl pkg-config
-USE_LANGUAGES=		c c++
+USE_TOOLS+=	msgfmt perl pkg-config
 
-LDFLAGS.DragonFly+=	-lgmodule-2.0
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
-.include "../../x11/gtk2/buildlink3.mk"
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kmplayerrc \
+		${PKG_SYSCONFDIR}/xdg/kmplayerrc
+
+.include "../../meta-pkgs/kde/applications.mk"
+
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/kmediaplayer/buildlink3.mk"
+.include "../../multimedia/phonon-qt5/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../meta-pkgs/kde4/kde4.mk"
-.include "../../multimedia/xine-lib/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
+.include "../../x11/xcb-util-cursor/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
