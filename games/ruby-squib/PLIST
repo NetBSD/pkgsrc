@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/11 13:38:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/08/31 15:21:24 taca Exp $
 bin/squib${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/tests.yml
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/lib/squib/args/coords.rb
 ${GEM_LIBDIR}/lib/squib/args/csv_opts.rb
 ${GEM_LIBDIR}/lib/squib/args/dir_validator.rb
 ${GEM_LIBDIR}/lib/squib/args/draw.rb
+${GEM_LIBDIR}/lib/squib/args/drop_shadow.rb
 ${GEM_LIBDIR}/lib/squib/args/embed_adjust.rb
 ${GEM_LIBDIR}/lib/squib/args/embed_key.rb
 ${GEM_LIBDIR}/lib/squib/args/hand_special.rb
@@ -144,6 +145,7 @@ ${GEM_LIBDIR}/lib/squib/sprues/crop_line_dash.rb
 ${GEM_LIBDIR}/lib/squib/sprues/invalid_sprue_definition.rb
 ${GEM_LIBDIR}/lib/squib/sprues/sprue.rb
 ${GEM_LIBDIR}/lib/squib/sprues/sprue_schema.rb
+${GEM_LIBDIR}/lib/squib/system_fonts.rb
 ${GEM_LIBDIR}/lib/squib/version.rb
 ${GEM_LIBDIR}/samples/autoscale_font/_autoscale_font.rb
 ${GEM_LIBDIR}/samples/backend/_backend.rb
@@ -178,6 +180,7 @@ ${GEM_LIBDIR}/samples/saves/_save_filenames.rb
 ${GEM_LIBDIR}/samples/saves/_save_pdf.rb
 ${GEM_LIBDIR}/samples/saves/_saves.rb
 ${GEM_LIBDIR}/samples/saves/_showcase.rb
+${GEM_LIBDIR}/samples/shadows/_shadow.rb
 ${GEM_LIBDIR}/samples/shapes/_draw_shapes.rb
 ${GEM_LIBDIR}/samples/shapes/_proofs.rb
 ${GEM_LIBDIR}/samples/sprues/_advanced_sprues.rb
@@ -185,7 +188,9 @@ ${GEM_LIBDIR}/samples/sprues/_builtin_sprues.rb
 ${GEM_LIBDIR}/samples/sprues/_fold_sheet.rb
 ${GEM_LIBDIR}/samples/sprues/_hex_tiles.rb
 ${GEM_LIBDIR}/samples/sprues/_mints.rb
+${GEM_LIBDIR}/samples/sprues/_negative_coords.rb
 ${GEM_LIBDIR}/samples/sprues/_sprue_example.rb
+${GEM_LIBDIR}/samples/system_font_debug/_list_fonts.rb
 ${GEM_LIBDIR}/samples/text/_embed_text.rb
 ${GEM_LIBDIR}/samples/text/_text.rb
 ${GEM_LIBDIR}/samples/text/_text_options.rb
