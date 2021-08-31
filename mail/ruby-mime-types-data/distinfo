@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/02/28 15:21:39 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/08/31 15:25:41 taca Exp $
 
-SHA1 (mime-types-data-3.2021.0225.gem) = e3b01733397b011faefaca574d51320d81f028d0
-RMD160 (mime-types-data-3.2021.0225.gem) = 3e4a29b5cf5af4502c186856f64e457c2d85e456
-SHA512 (mime-types-data-3.2021.0225.gem) = 348ccd1cbf0336dd512dca48d706fdc7b3c66eaa5d24da16eb0c823c69888c9af03837aefb3fb7449c6fc084167c12eeabb8fddedabbc24a42a72c2cc23d3c6c
-Size (mime-types-data-3.2021.0225.gem) = 167936 bytes
+SHA1 (mime-types-data-3.2021.0704.gem) = b29028effe0f41a3478814b175c7e7272ec46692
+RMD160 (mime-types-data-3.2021.0704.gem) = 318f0a84073f02931376fbf8dd76177a497687c7
+SHA512 (mime-types-data-3.2021.0704.gem) = 0d0b4787bb39d7cacc202e2eba3c3e5e04efe1cd053332dbe1f0daeb9a58d533bceb01711a0d392ecca83f8d00f8fe7cc55f586060c3633b42749d7cb25246a3
+Size (mime-types-data-3.2021.0704.gem) = 169984 bytes
