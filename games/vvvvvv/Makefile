@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:59 leot Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/31 07:39:00 nia Exp $
 
-DISTNAME=	VVVVVVV-0.0.0.20200110
+DISTNAME=	VVVVVV-0.0.0.20200110
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TerryCavanagh/}
 GITHUB_PROJECT=	VVVVVV
@@ -12,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/TerryCavanagh/VVVVVV
 COMMENT=	2D puzzle platform video game with gravity reversal
 LICENSE=	vvvvvv-license
+
+CONFLICTS+=	vvvvvvv-[0-9]*
+SUPERSEDES+=	vvvvvvv-[0-9]*
 
 WRKSRC=		${WRKDIR}/VVVVVV-${GITHUB_TAG}/desktop_version
 USE_CMAKE=	yes
