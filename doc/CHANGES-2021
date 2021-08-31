@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4471 2021/08/31 15:26:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4472 2021/08/31 15:33:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7048,3 +7048,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/ruby-squib to 0.17.1 [taca 2021-08-31]
 	Updated graphics/ruby-image_size to 2.1.2 [taca 2021-08-31]
 	Updated mail/ruby-mime-types-data to 3.2021.0704 [taca 2021-08-31]
+	Updated misc/ruby-bundler to 2.2.26 [taca 2021-08-31]
