@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/08/31 08:23:15 nia Exp $
+
+Shell portability.
+
+--- configure.ac.orig	2021-07-31 22:28:01.000000000 +0000
++++ configure.ac
+@@ -217,7 +217,7 @@ AC_DEFINE_UNQUOTED([DEFAULT_DATA_PATH], 
+ 
+ NOINSTALL="$with_noinstall"; AC_SUBST(NOINSTALL)
+ SETEGID="$with_setgid";      AC_SUBST(SETEGID)
+-if test "x$wsetgid" == "xyes"; then
++if test "x$wsetgid" = "xyes"; then
+ 	AC_DEFINE(SETGID, 1, [Define if running as a central install on a multiuser system that has setresgid or setegid support.])
+ fi
+ 
