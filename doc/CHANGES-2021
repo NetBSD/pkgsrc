@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4491 2021/08/31 17:16:28 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4492 2021/08/31 19:58:11 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7070,3 +7070,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-inspec-core to 4.41.2 [taca 2021-08-31]
 	Updated sysutils/ruby-listen to 3.7.0 [taca 2021-08-31]
 	Updated net/py-foolscap to 21.7.0 [gdt 2021-08-31]
+	Updated chat/matrix-synapse to 1.41.1 [js 2021-08-31]
