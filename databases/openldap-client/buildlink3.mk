@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2021/06/14 09:04:23 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2021/08/31 12:45:10 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -13,6 +13,9 @@ BUILDLINK_PKGSRCDIR.openldap-client?=	../../databases/openldap-client
 
 # Export the deprecated API from the openldap-2.2.x releases.
 BUILDLINK_CPPFLAGS.openldap-client+=	-DLDAP_DEPRECATED
+
+# libldap_r was merged into libldap, fix older software that hardcoded it
+BUILDLINK_TRANSFORM+=	l:ldap_r:ldap
 
 CHECK_BUILTIN.openldap-client:=	yes
 .include "../../databases/openldap-client/builtin.mk"
