@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/09/14 13:18:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/08/31 15:23:51 taca Exp $
 
-DISTNAME=	image_size-2.1.0
+DISTNAME=	image_size-2.1.2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
