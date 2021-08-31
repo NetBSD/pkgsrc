@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/06/21 15:48:47 taca Exp $
+# $NetBSD: Makefile,v 1.23 2021/08/31 15:37:35 taca Exp $
 
-DISTNAME=	addressable-2.7.0
+DISTNAME=	addressable-2.8.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
