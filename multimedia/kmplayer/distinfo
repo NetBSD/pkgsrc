@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.26 2016/03/23 10:04:49 markd Exp $
+$NetBSD: distinfo,v 1.27 2021/08/31 12:06:22 markd Exp $
 
-SHA1 (kmplayer-0.11.3d.tar.bz2) = f43651d4252cf6d878b5b014c1e5e9b18b2e31c4
-RMD160 (kmplayer-0.11.3d.tar.bz2) = 39cf21c28c176697632d60b8f2993e78a9e3dd0f
-SHA512 (kmplayer-0.11.3d.tar.bz2) = c2f0fa1864eecd9a0bf3039639aad41bc36bc6ff8742a8e9714c6df72dd4ee63f80c36036a0582ee8464b48ce22eb96814600ddb199c61fda0b87cfd4c457797
-Size (kmplayer-0.11.3d.tar.bz2) = 573173 bytes
-SHA1 (patch-CMakeLists.txt) = e2dc0ffbddfc72c0c395056c66a26bc1555b2958
-SHA1 (patch-aa) = 85d6f4f17a2c8afff505298f62b3105979a9e9f1
-SHA1 (patch-ab) = 975524f4ef0163d47c452f16ab98016acebead09
-SHA1 (patch-src_CMakeLists.txt) = cafeb1b1869455068880443d767e0101906990d3
-SHA1 (patch-src_kmplayershared.h) = b314dc90f44fc5154dcfcb4fa889008d78b59980
+SHA1 (kmplayer-0.12.0b.tar.bz2) = c86d65dcdf94a4844c71515eb07bb702a99b7329
+RMD160 (kmplayer-0.12.0b.tar.bz2) = 070d85dc5c6fb86e16dfd1a7ece2a8a3ae16fac6
+SHA512 (kmplayer-0.12.0b.tar.bz2) = d34c496d0c24c6d5c1bb675b83fac60da5c9672e4076aed72bac2e9b333e88d031076e7e386ec7b61ae8ece88870f6187c61f483f425aa78edd1e443c7f2e882
+Size (kmplayer-0.12.0b.tar.bz2) = 599496 bytes
+SHA1 (patch-src_CMakeLists.txt) = 407d76078b00e172dc0f33bab7530ab7e6df6d8e
+SHA1 (patch-src_kmplayer.desktop) = 7750eecc3925890b7ce50e4f01f960ce13057e54
+SHA1 (patch-src_kmplayer__part.h) = 229debbc8db20a4bf1e6a896b778ab37a7ebe54b
+SHA1 (patch-src_npplayer.cpp) = 95a25760b43f4ebe4ec4b1a4030a561ece8c1fff
+SHA1 (patch-src_viewarea.cpp) = 3fb9ce6c6d3dcf065df7f609ebe1f9033e1d7d9b
