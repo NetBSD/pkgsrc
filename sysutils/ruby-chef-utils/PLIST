@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/18 15:04:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/08/31 16:41:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Rakefile
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/chef-utils/dsl/which.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/windows.rb
 ${GEM_LIBDIR}/lib/chef-utils/internal.rb
 ${GEM_LIBDIR}/lib/chef-utils/mash.rb
+${GEM_LIBDIR}/lib/chef-utils/parallel_map.rb
 ${GEM_LIBDIR}/lib/chef-utils/version.rb
 ${GEM_LIBDIR}/lib/chef-utils/version_string.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
@@ -37,4 +38,5 @@ ${GEM_LIBDIR}/spec/unit/dsl/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/dsl/which_spec.rb
 ${GEM_LIBDIR}/spec/unit/dsl/windows_spec.rb
 ${GEM_LIBDIR}/spec/unit/mash_spec.rb
+${GEM_LIBDIR}/spec/unit/parallel_map_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
