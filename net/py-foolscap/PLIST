@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/12/12 14:27:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/08/31 17:16:22 gdt Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -53,9 +53,6 @@ ${PYSITELIB}/foolscap/connections/__init__.pyo
 ${PYSITELIB}/foolscap/connections/i2p.py
 ${PYSITELIB}/foolscap/connections/i2p.pyc
 ${PYSITELIB}/foolscap/connections/i2p.pyo
-${PYSITELIB}/foolscap/connections/socks.py
-${PYSITELIB}/foolscap/connections/socks.pyc
-${PYSITELIB}/foolscap/connections/socks.pyo
 ${PYSITELIB}/foolscap/connections/tcp.py
 ${PYSITELIB}/foolscap/connections/tcp.pyc
 ${PYSITELIB}/foolscap/connections/tcp.pyo
@@ -137,6 +134,7 @@ ${PYSITELIB}/foolscap/pb.pyo
 ${PYSITELIB}/foolscap/promise.py
 ${PYSITELIB}/foolscap/promise.pyc
 ${PYSITELIB}/foolscap/promise.pyo
+${PYSITELIB}/foolscap/py.typed
 ${PYSITELIB}/foolscap/reconnector.py
 ${PYSITELIB}/foolscap/reconnector.pyc
 ${PYSITELIB}/foolscap/reconnector.pyo
@@ -317,6 +315,7 @@ share/doc/py-foolscap/failures.rst
 share/doc/py-foolscap/flappserver.rst
 share/doc/py-foolscap/jobs.txt
 share/doc/py-foolscap/logging.rst
+share/doc/py-foolscap/py2-3-porting.rst
 share/doc/py-foolscap/schema.rst
 share/doc/py-foolscap/serializing.rst
 share/doc/py-foolscap/todo.txt
