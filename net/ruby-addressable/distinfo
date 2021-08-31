@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2019/10/19 08:16:24 tsutsui Exp $
+$NetBSD: distinfo,v 1.22 2021/08/31 15:37:35 taca Exp $
 
-SHA1 (addressable-2.7.0.gem) = 3b46d08ed6a0e2bef1bf16769c4e528c6ebc0a37
-RMD160 (addressable-2.7.0.gem) = c1e3c7a24db446b5b1c4ebbc1a7696626d19da64
-SHA512 (addressable-2.7.0.gem) = 4c438bbfa8874fdcf11eef1d1f7cceb1855ea85948daff13615a0af129d35f92cc918f4bd5bbe4cd6ebccc67a86fc582265f915dc39831ec64209de0bdeeb732
-Size (addressable-2.7.0.gem) = 104960 bytes
+SHA1 (addressable-2.8.0.gem) = e75782e143cc548d7fd3dbb8b17a947e1bc16707
+RMD160 (addressable-2.8.0.gem) = dd54a21128b4444428df227884223779f5e3397a
+SHA512 (addressable-2.8.0.gem) = c684f17940f717c2a65f9716ab9b3659948d6d51a60c38a7295fcf6fdc1c5785d2d315d2de7dab9f66a6c31f62247177d78d5d6eb556f5bb49926d4f00f8e4c8
+Size (addressable-2.8.0.gem) = 105984 bytes
