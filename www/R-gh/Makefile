@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/08/24 11:07:58 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/08/31 10:39:28 mef Exp $
 
 R_PKGNAME=	gh
 R_PKGVER=	1.3.0
@@ -11,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	R-ini>=0.3.1:../../devel/R-ini
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
 DEPENDS+=	R-httr>=1.4.1:../../www/R-httr
-DEPENDS+=	R-gitcreds-[0-9]*:../../security/R-gitgreds
+DEPENDS+=	R-gitcreds-[0-9]*:../../security/R-gitcreds
 DEPENDS+=	R-cli>=2.0.1:../../devel/R-cli
 
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
