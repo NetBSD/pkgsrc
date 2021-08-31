@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4476 2021/08/31 15:40:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4477 2021/08/31 15:43:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7053,3 +7053,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-diva to 1.0.2nb1 [taca 2021-08-31]
 	Updated net/ruby-addressable to 2.8.0 [taca 2021-08-31]
 	Updated net/ruby-dnsruby to 1.61.7 [taca 2021-08-31]
+	Updated net/ruby-nio4r to 2.5.8 [taca 2021-08-31]
