@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4456 2021/08/31 09:17:53 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.4457 2021/08/31 09:29:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7033,3 +7033,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/angband to 4.2.3 [nia 2021-08-31]
 	Removed textproc/go-diff [nia 2021-08-31]
 	Updated net/haproxy to 2.4.3nb1 [jperkin 2021-08-31]
+	Removed devel/go-isatty [nia 2021-08-31]
