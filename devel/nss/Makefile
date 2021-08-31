@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.212 2021/08/31 11:12:30 wiz Exp $
+# $NetBSD: Makefile,v 1.213 2021/08/31 11:18:14 wiz Exp $
+#
+# release notes
+# https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.69.1
