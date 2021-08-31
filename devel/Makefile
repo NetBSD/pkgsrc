@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3493 2021/08/31 09:26:36 nia Exp $
+# $NetBSD: Makefile,v 1.3494 2021/08/31 14:57:52 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2891,7 +2891,7 @@ SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-red-colors
 SUBDIR+=	ruby-red-datasets
-SUBDIR+=	ruby-redmine
+#SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-redmine-flatly-light-theme
 SUBDIR+=	ruby-redmine-gitmike-theme
 SUBDIR+=	ruby-redmine-minimalflat-theme
