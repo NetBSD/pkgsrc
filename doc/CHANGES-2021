@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4464 2021/08/31 14:43:19 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4465 2021/08/31 15:01:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7041,3 +7041,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/kile to 2.9.93 [markd 2021-08-31]
 	Updated x11/qt5-qtwebengine to 5.15.2nb2 [ryoon 2021-08-31]
 	Updated math/R-MatrixModels to 0.5.0 [mef 2021-08-31]
+	Removed devel/ruby-redmine [taca 2021-08-31]
