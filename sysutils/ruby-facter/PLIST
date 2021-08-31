@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.36 2021/06/03 15:03:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.37 2021/08/31 16:46:10 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/bin/facter
 ${GEM_LIBDIR}/lib/docs/generate.rb
 ${GEM_LIBDIR}/lib/docs/generate_cli.rb
@@ -16,7 +17,6 @@ ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/posix.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/windows.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/file_loader.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/legacy_facter.rb
-${GEM_LIBDIR}/lib/facter/custom_facts/core/logging.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/resolvable.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/suitable.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/util/collection.rb
