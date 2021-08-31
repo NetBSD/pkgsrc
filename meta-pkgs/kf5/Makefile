@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/03/30 10:58:31 markd Exp $
+# $NetBSD: Makefile,v 1.19 2021/08/31 11:57:32 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,6 +55,7 @@ DEPENDS+=	kirigami2>=${KF5VER}:../../x11/kirigami2
 DEPENDS+=	kitemmodels>=${KF5VER}:../../devel/kitemmodels
 DEPENDS+=	kitemviews>=${KF5VER}:../../x11/kitemviews
 DEPENDS+=	kjobwidgets>=${KF5VER}:../../x11/kjobwidgets
+DEPENDS+=	kmediaplayer>=${KF5VER}:../../multimedia/mediaplayer
 DEPENDS+=	knewstuff>=${KF5VER}:../../net/knewstuff
 DEPENDS+=	knotifications>=${KF5VER}:../../devel/knotifications
 DEPENDS+=	knotifyconfig>=${KF5VER}:../../devel/knotifyconfig
