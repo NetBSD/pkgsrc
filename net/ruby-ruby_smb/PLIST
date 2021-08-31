@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/09 14:00:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/08/31 15:48:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/anonymous_auth.rb
 ${GEM_LIBDIR}/examples/append_file.rb
+${GEM_LIBDIR}/examples/auth_capture.rb
 ${GEM_LIBDIR}/examples/authenticate.rb
 ${GEM_LIBDIR}/examples/delete_file.rb
 ${GEM_LIBDIR}/examples/enum_registry_key.rb
@@ -34,7 +35,6 @@ ${GEM_LIBDIR}/lib/ruby_smb/client/authentication.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/echo.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/encryption.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/negotiation.rb
-${GEM_LIBDIR}/lib/ruby_smb/client/signing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/tree_connect.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/utils.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/winreg.rb
@@ -101,6 +101,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/query_value_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/regsam.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/save_key_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/save_key_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dialect.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dispatcher.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dispatcher/base.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dispatcher/socket.rb
@@ -135,12 +136,21 @@ ${GEM_LIBDIR}/lib/ruby_smb/fscc/file_information/file_names_information.rb
 ${GEM_LIBDIR}/lib/ruby_smb/fscc/file_information/file_rename_information.rb
 ${GEM_LIBDIR}/lib/ruby_smb/generic_packet.rb
 ${GEM_LIBDIR}/lib/ruby_smb/gss.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/provider.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/provider/authenticator.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/provider/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/impersonation_levels.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/negative_session_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/netbios_name.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
+${GEM_LIBDIR}/lib/ruby_smb/server.rb
+${GEM_LIBDIR}/lib/ruby_smb/server/server_client.rb
+${GEM_LIBDIR}/lib/ruby_smb/server/server_client/negotiation.rb
+${GEM_LIBDIR}/lib/ruby_smb/server/server_client/session_setup.rb
+${GEM_LIBDIR}/lib/ruby_smb/signing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/andx_block.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/bit_field.rb
@@ -367,10 +377,16 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/file_information/file_names_information_spe
 ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/file_information/file_rename_information_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/fscc_file_attributes_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/generic_packet_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/account_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/authenticator_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/os_version_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/negative_session_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/netbios_name_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/server/server_client_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/server_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/andx_block_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/bit_field/capabilities_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/bit_field/create_options_spec.rb
