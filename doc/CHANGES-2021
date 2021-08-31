@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4458 2021/08/31 10:57:26 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4459 2021/08/31 11:12:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7035,3 +7035,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/haproxy to 2.4.3nb1 [jperkin 2021-08-31]
 	Removed devel/go-isatty [nia 2021-08-31]
 	Updated emulators/openmsx to 17.0 [nia 2021-08-31]
+	Updated devel/nss to 3.69.1 [wiz 2021-08-31]
