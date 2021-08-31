@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2021/01/11 14:10:25 taca Exp $
+# $NetBSD: Makefile,v 1.26 2021/08/31 15:40:18 taca Exp $
 
-DISTNAME=	dnsruby-1.61.5
+DISTNAME=	dnsruby-1.61.7
 CATEGORIES=	net
 
 MAINTAINER=	pettai@NetBSD.org
@@ -8,9 +8,11 @@ HOMEPAGE=	https://github.com/alexdalitz/dnsruby
 COMMENT=	Ruby DNS client library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.5<3:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-simpleidn>=0.1:../../devel/ruby-simpleidn
 
 USE_LANGUAGES=	# none
+
+OVERRIDE_GEMSPEC=	simpleidn>=0.1
 
 post-extract:
 	${MKDIR} ${WRKSRC}/html/classes

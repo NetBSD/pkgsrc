@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2020/09/14 13:29:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/08/31 15:40:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
