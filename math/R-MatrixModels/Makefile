@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:44 brook Exp $
+# $NetBSD: Makefile,v 1.5 2021/08/31 14:41:40 mef Exp $
 
 R_PKGNAME=	MatrixModels
-R_PKGVER=	0.4-1
-CATEGORIES=	math
+R_PKGVER=	0.5-0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Modelling with sparse and dense matrices
