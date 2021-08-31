@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2021/04/13 08:31:21 nia Exp $
+# $NetBSD: Makefile,v 1.312 2021/08/31 11:50:33 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -98,6 +98,7 @@ SUBDIR+=	hwdecode-demos
 SUBDIR+=	intel-vaapi-driver
 SUBDIR+=	juk
 SUBDIR+=	kdenlive
+SUBDIR+=	kmediaplayer
 SUBDIR+=	kmix
 SUBDIR+=	kmplayer
 SUBDIR+=	kscd
