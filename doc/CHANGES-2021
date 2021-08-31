@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4453 2021/08/30 23:48:43 jmcneill Exp $
+$NetBSD: CHANGES-2021,v 1.4454 2021/08/31 08:24:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7029,3 +7029,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/u-boot-apple-m1 to 2021.04rc3 [jmcneill 2021-08-30]
 	Removed sysutils/preloader-m1 [jmcneill 2021-08-30]
 	Removed sysutils/dtb-arm64-apple-m1 [jmcneill 2021-08-30]
+	Updated games/angband-sdl to 4.2.3 [nia 2021-08-31]
+	Updated games/angband to 4.2.3 [nia 2021-08-31]
