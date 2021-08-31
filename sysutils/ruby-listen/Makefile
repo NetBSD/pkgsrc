@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/05/09 14:36:14 taca Exp $
+# $NetBSD: Makefile,v 1.20 2021/08/31 16:52:57 taca Exp $
 
-DISTNAME=	listen-3.5.1
+DISTNAME=	listen-3.7.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
