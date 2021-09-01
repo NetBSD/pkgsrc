@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/06/10 05:47:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/01 18:22:05 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/traitlets/__init__.py
 ${PYSITELIB}/traitlets/__init__.pyc
@@ -90,3 +90,6 @@ ${PYSITELIB}/traitlets/utils/tests/test_decorators.pyo
 ${PYSITELIB}/traitlets/utils/tests/test_importstring.py
 ${PYSITELIB}/traitlets/utils/tests/test_importstring.pyc
 ${PYSITELIB}/traitlets/utils/tests/test_importstring.pyo
+${PYSITELIB}/traitlets/utils/text.py
+${PYSITELIB}/traitlets/utils/text.pyc
+${PYSITELIB}/traitlets/utils/text.pyo
