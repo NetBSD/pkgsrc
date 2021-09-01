@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/06/29 08:34:19 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/09/01 18:22:05 adam Exp $
 
-DISTNAME=	traitlets-5.0.5
+DISTNAME=	traitlets-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ipython.org/
 COMMENT=	Traitlets Python config system
 LICENSE=	modified-bsd
-
-DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
 
 USE_LANGUAGES=	# none
 
