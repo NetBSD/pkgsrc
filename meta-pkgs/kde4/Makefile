@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2021/05/24 19:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2021/09/01 11:16:12 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -100,7 +100,7 @@ DEPENDS+=	svgpart>=16.08.0:../../graphics/svgpart
 DEPENDS+=	dragon>=4.14.3:../../multimedia/dragon
 DEPENDS+=	ffmpegthumbs-4.14.3{,nb[0-9]*}:../../multimedia/ffmpegthumbs
 DEPENDS+=	juk>=4.14.3:../../multimedia/juk
-DEPENDS+=	kmix-4.14.3{,nb[0-9]*}:../../multimedia/kmix
+DEPENDS+=	kmix>=4.14.3:../../multimedia/kmix
 DEPENDS+=	kscd-4.14.3{,nb[0-9]*}:../../multimedia/kscd
 DEPENDS+=	mplayerthumbs-16.04.0{,nb[0-9]*}:../../multimedia/mplayerthumbs
 DEPENDS+=	kget-15.12.0{,nb[0-9]*}:../../net/kget
