@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/06/29 12:43:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/09/01 13:53:58 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1419,8 +1419,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-21.1.3-py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-56.0.0-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-21.2.3-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-57.4.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2648,6 +2648,9 @@ lib/python${PY_VER_SUFFIX}/test/__main__.pyo
 lib/python${PY_VER_SUFFIX}/test/_test_multiprocessing.py
 lib/python${PY_VER_SUFFIX}/test/_test_multiprocessing.pyc
 lib/python${PY_VER_SUFFIX}/test/_test_multiprocessing.pyo
+lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.py
+lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/allsans.pem
 lib/python${PY_VER_SUFFIX}/test/ann_module.py
 lib/python${PY_VER_SUFFIX}/test/ann_module.pyc
@@ -3205,6 +3208,9 @@ lib/python${PY_VER_SUFFIX}/test/support/socket_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/testresult.py
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyc
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyo
+lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.py
+lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/talos-2019-0758.pem
 lib/python${PY_VER_SUFFIX}/test/test___all__.py
 lib/python${PY_VER_SUFFIX}/test/test___all__.pyc
