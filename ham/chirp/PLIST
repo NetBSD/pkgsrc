@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/08/14 14:38:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/09/01 14:32:31 gdt Exp $
 @pkgdir share/chirp/images
 bin/chirpw
 bin/rpttool
@@ -168,9 +168,6 @@ ${PYSITELIB}/chirp/drivers/generic_csv.pyo
 ${PYSITELIB}/chirp/drivers/generic_tpe.py
 ${PYSITELIB}/chirp/drivers/generic_tpe.pyc
 ${PYSITELIB}/chirp/drivers/generic_tpe.pyo
-${PYSITELIB}/chirp/drivers/generic_xml.py
-${PYSITELIB}/chirp/drivers/generic_xml.pyc
-${PYSITELIB}/chirp/drivers/generic_xml.pyo
 ${PYSITELIB}/chirp/drivers/gmrsuv1.py
 ${PYSITELIB}/chirp/drivers/gmrsuv1.pyc
 ${PYSITELIB}/chirp/drivers/gmrsuv1.pyo
@@ -564,14 +561,8 @@ ${PYSITELIB}/chirp/ui/shiftdialog.pyo
 ${PYSITELIB}/chirp/util.py
 ${PYSITELIB}/chirp/util.pyc
 ${PYSITELIB}/chirp/util.pyo
-${PYSITELIB}/chirp/xml_ll.py
-${PYSITELIB}/chirp/xml_ll.pyc
-${PYSITELIB}/chirp/xml_ll.pyo
 man/man1/chirpw.1
 share/applications/chirp.desktop
-share/chirp/chirp.xsd
-share/chirp/chirp_banks.xsd
-share/chirp/chirp_memory.xsd
 share/chirp/locale/de/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/es_ES/LC_MESSAGES/CHIRP.mo
