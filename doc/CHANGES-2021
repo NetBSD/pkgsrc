@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4496 2021/09/01 14:32:40 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4497 2021/09/01 18:24:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7078,3 +7078,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py38-html-docs to 3.8.12 [adam 2021-09-01]
 	Updated lang/py39-html-docs to 3.9.7 [adam 2021-09-01]
 	Updated ham/chirp to 20210830 [gdt 2021-09-01]
+	Updated misc/py-platformdirs to 2.3.0 [adam 2021-09-01]
+	Updated devel/py-typing-extensions to 3.10.0.2 [adam 2021-09-01]
+	Updated devel/py-traitlets to 5.1.0 [adam 2021-09-01]
+	Updated security/py-google-auth-oauthlib to 0.4.6 [adam 2021-09-01]
