@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4494 2021/09/01 11:18:19 markd Exp $
+$NetBSD: CHANGES-2021,v 1.4495 2021/09/01 13:54:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7073,3 +7073,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.41.1 [js 2021-08-31]
 	Updated editors/featherpad to 1.0.0 [pin 2021-09-01]
 	Updated multimedia/kmix to 20.12.3 [markd 2021-09-01]
+	Updated lang/python38 to 3.8.12 [adam 2021-09-01]
+	Updated lang/python39 to 3.9.7 [adam 2021-09-01]
+	Updated lang/py38-html-docs to 3.8.12 [adam 2021-09-01]
+	Updated lang/py39-html-docs to 3.9.7 [adam 2021-09-01]
