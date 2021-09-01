@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4495 2021/09/01 13:54:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4496 2021/09/01 14:32:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7077,3 +7077,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python39 to 3.9.7 [adam 2021-09-01]
 	Updated lang/py38-html-docs to 3.8.12 [adam 2021-09-01]
 	Updated lang/py39-html-docs to 3.9.7 [adam 2021-09-01]
+	Updated ham/chirp to 20210830 [gdt 2021-09-01]
