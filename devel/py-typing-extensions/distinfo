@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/05/13 17:25:47 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/09/01 18:19:27 adam Exp $
 
-SHA1 (typing_extensions-3.10.0.0.tar.gz) = efa40572330e9a3c38ba519028f36d7f93647a39
-RMD160 (typing_extensions-3.10.0.0.tar.gz) = ca9683d6b70fb18b4d5a4ff8a2e59b4f22384eaf
-SHA512 (typing_extensions-3.10.0.0.tar.gz) = 1c262aedb092d506bcd90d033a640fa6e1f9131f95eafb77d30ed21ff7d6b0f492b6092d3523ecb773bc54904679e0fa1aa8c3b4af62d77f1a7e6fe5fd6cb10c
-Size (typing_extensions-3.10.0.0.tar.gz) = 45509 bytes
+SHA1 (typing_extensions-3.10.0.2.tar.gz) = 490cc095aef4ebf40921989872e1ce0d582fc481
+RMD160 (typing_extensions-3.10.0.2.tar.gz) = b9ba0200913df912b7cb026177a7dc428880b180
+SHA512 (typing_extensions-3.10.0.2.tar.gz) = 171ada56758fb04328a2cafefe80b70fbf166f2d799406883df642927964925ca73f04d0646661cd4fd016dfb5e1856b84f362e3b404c27b368ca06a09cf87db
+Size (typing_extensions-3.10.0.2.tar.gz) = 46048 bytes
