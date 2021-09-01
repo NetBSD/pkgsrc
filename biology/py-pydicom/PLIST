@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/29 12:59:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/01 18:18:19 adam Exp $
 bin/pydicom-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -129,6 +129,12 @@ ${PYSITELIB}/pydicom/data/test_files/MR_truncated.dcm
 ${PYSITELIB}/pydicom/data/test_files/README.txt
 ${PYSITELIB}/pydicom/data/test_files/SC_jpeg_no_color_transform.dcm
 ${PYSITELIB}/pydicom/data/test_files/SC_jpeg_no_color_transform_2.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cr.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cy+n1.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cy+n2.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cy+np.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cy+s2.dcm
+${PYSITELIB}/pydicom/data/test_files/SC_rgb_dcmtk_+eb+cy+s4.dcm
 ${PYSITELIB}/pydicom/data/test_files/SC_rgb_gdcm_KY.dcm
 ${PYSITELIB}/pydicom/data/test_files/SC_rgb_jpeg.dcm
 ${PYSITELIB}/pydicom/data/test_files/SC_rgb_jpeg_app14_dcmd.dcm
