@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.20 2021/08/27 17:45:26 micha Exp $
+# $NetBSD: options.mk,v 1.21 2021/09/01 16:43:59 micha Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses termcap
 PKG_SUPPORTED_OPTIONS=		canlock icu inet6 nls tin-use-inn-spool
-# Combination of options curses(configured to pdcurses) and icu does not work
 # curses(configured to curses) still does not work on NetBSD, see PR #51819
 # Suggest termcap instead of curses.
 PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap
