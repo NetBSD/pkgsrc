@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/06/29 12:43:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/09/01 13:53:58 adam Exp $
 share/doc/python3.9/.buildinfo
 share/doc/python3.9/_downloads/6b45dc135219d1404be49d606589a11d/tzinfo_examples.py
 share/doc/python3.9/_images/hashlib-blake2-tree.png
@@ -310,7 +310,6 @@ share/doc/python3.9/_sources/library/optparse.rst.txt
 share/doc/python3.9/_sources/library/os.path.rst.txt
 share/doc/python3.9/_sources/library/os.rst.txt
 share/doc/python3.9/_sources/library/ossaudiodev.rst.txt
-share/doc/python3.9/_sources/library/othergui.rst.txt
 share/doc/python3.9/_sources/library/parser.rst.txt
 share/doc/python3.9/_sources/library/pathlib.rst.txt
 share/doc/python3.9/_sources/library/pdb.rst.txt
@@ -343,6 +342,7 @@ share/doc/python3.9/_sources/library/rlcompleter.rst.txt
 share/doc/python3.9/_sources/library/runpy.rst.txt
 share/doc/python3.9/_sources/library/sched.rst.txt
 share/doc/python3.9/_sources/library/secrets.rst.txt
+share/doc/python3.9/_sources/library/security_warnings.rst.txt
 share/doc/python3.9/_sources/library/select.rst.txt
 share/doc/python3.9/_sources/library/selectors.rst.txt
 share/doc/python3.9/_sources/library/shelve.rst.txt
@@ -497,6 +497,7 @@ share/doc/python3.9/_sources/whatsnew/3.9.rst.txt
 share/doc/python3.9/_sources/whatsnew/changelog.rst.txt
 share/doc/python3.9/_sources/whatsnew/index.rst.txt
 share/doc/python3.9/_static/basic.css
+share/doc/python3.9/_static/caret-down.svg
 share/doc/python3.9/_static/changelog_search.js
 share/doc/python3.9/_static/classic.css
 share/doc/python3.9/_static/copybutton.js
@@ -507,10 +508,12 @@ share/doc/python3.9/_static/file.png
 share/doc/python3.9/_static/jquery-3.4.1.js
 share/doc/python3.9/_static/jquery.js
 share/doc/python3.9/_static/language_data.js
+share/doc/python3.9/_static/menu.js
 share/doc/python3.9/_static/minus.png
 share/doc/python3.9/_static/opensearch.xml
 share/doc/python3.9/_static/plus.png
 share/doc/python3.9/_static/py.png
+share/doc/python3.9/_static/py.svg
 share/doc/python3.9/_static/pydoctheme.css
 share/doc/python3.9/_static/pygments.css
 share/doc/python3.9/_static/searchtools.js
@@ -853,7 +856,6 @@ share/doc/python3.9/library/optparse.html
 share/doc/python3.9/library/os.html
 share/doc/python3.9/library/os.path.html
 share/doc/python3.9/library/ossaudiodev.html
-share/doc/python3.9/library/othergui.html
 share/doc/python3.9/library/parser.html
 share/doc/python3.9/library/pathlib.html
 share/doc/python3.9/library/pdb.html
@@ -886,6 +888,7 @@ share/doc/python3.9/library/rlcompleter.html
 share/doc/python3.9/library/runpy.html
 share/doc/python3.9/library/sched.html
 share/doc/python3.9/library/secrets.html
+share/doc/python3.9/library/security_warnings.html
 share/doc/python3.9/library/select.html
 share/doc/python3.9/library/selectors.html
 share/doc/python3.9/library/shelve.html
