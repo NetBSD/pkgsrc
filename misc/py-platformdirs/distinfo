@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/08/29 13:24:32 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/09/01 18:16:44 adam Exp $
 
-SHA1 (platformdirs-2.2.0.tar.gz) = 2c9b09649b49664cb302d3d40bb647271318a4dc
-RMD160 (platformdirs-2.2.0.tar.gz) = 7950892ad04906a41fadd8dd6a95ca794c4f1e35
-SHA512 (platformdirs-2.2.0.tar.gz) = 9822b7602aad04a0f5e8540a470c4e935ac6cd975b4f12c919f0ccba8395d7516764c764dea043e47e6f4e79d21afe049aa7f1ea57a9c9f67c83ed4decb82a67
-Size (platformdirs-2.2.0.tar.gz) = 21691 bytes
+SHA1 (platformdirs-2.3.0.tar.gz) = b5bb65b09ac9e3c2e54c97aba4915acf03be3786
+RMD160 (platformdirs-2.3.0.tar.gz) = 242c0868d604a217515475cb876ef46820dc4c30
+SHA512 (platformdirs-2.3.0.tar.gz) = 06c570f1c206f557fe989e79a1a98da90c05f15a66a56ebbe260884b2250c2cd1a6345d664af63a886268b5a2bb366186927561721fd6a4b52b11eb2868677b1
+Size (platformdirs-2.3.0.tar.gz) = 22730 bytes
