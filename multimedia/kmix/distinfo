@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:54:27 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/09/01 11:14:47 markd Exp $
 
-SHA1 (kmix-4.14.3.tar.xz) = 556d49a0d54f5908ab5ffaacfe821e2ec3047b81
-RMD160 (kmix-4.14.3.tar.xz) = 217854ce2004ccf70e0c76b99095a9b4abb96d24
-SHA512 (kmix-4.14.3.tar.xz) = b4581a8f847618088b55710815c45a64fe22d1ea782aa57d8e724237cf4283a49d005e2c6389974e0587352d10da46718d7a696e4faafce63950288ab7b6cd62
-Size (kmix-4.14.3.tar.xz) = 379220 bytes
-SHA1 (patch-CMakeLists.txt) = 94d47c2e106f5073b1474ba1ed3ebe8018943063
-SHA1 (patch-tests_CMakeLists.txt) = 4c39d6268e6c690099d06a8ba6946cb90242791e
+SHA1 (kmix-20.12.3.tar.xz) = b0e4d97664c508dc35aa2a02c4fea31e8e751d1e
+RMD160 (kmix-20.12.3.tar.xz) = 079188ea212919179af359eb5d4efcf950ad4e0b
+SHA512 (kmix-20.12.3.tar.xz) = cd261b9b42e81187136366a8cfcce7296d576553e8ec541785b5d53f9529cfd570af43c952dc0c36a5d3ad22abc56b02dbe040b7aebf5e9353b0ea3e670a6480
+Size (kmix-20.12.3.tar.xz) = 1150476 bytes
+SHA1 (patch-CMakeLists.txt) = 30806caf7b2fb414ba36a84fe42bc6c11c03f33a
