@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4499 2021/09/02 11:30:25 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4500 2021/09/02 11:32:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7084,3 +7084,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-google-auth-oauthlib to 0.4.6 [adam 2021-09-01]
 	Updated sysutils/navi to 2.17.2 [pin 2021-09-02]
 	Updated textproc/paperoni to 0.6.1 [pin 2021-09-02]
+	Updated sysutils/xplr to 0.14.7 [pin 2021-09-02]
