@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/08/02 15:02:29 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/09/02 11:30:06 pin Exp $
 
 SHA1 (addr2line-0.14.1.crate) = 5e02a34c470fcb872eee8ee11037f0dce619404a
 RMD160 (addr2line-0.14.1.crate) = a152b28f56c4bcf8fcbb9575764b2d85fe0d6256
@@ -1064,10 +1064,10 @@ SHA1 (uuid-0.8.2.crate) = 536cb0f788e03a22854974c7423b040c7e2891e0
 RMD160 (uuid-0.8.2.crate) = 31d3432fe08a91a716782bbbfb7776acc5d34f39
 SHA512 (uuid-0.8.2.crate) = 5a1f5ead9a920b9bbc120c02049c24b62ec215765e486d3a15c5015ef49fa506206efb737e6f6555cf6e2eddddfe55f0ca1d7dcfa9aa8bcf3e0ef570a54fa2d8
 Size (uuid-0.8.2.crate) = 37909 bytes
-SHA1 (v0.6.0-alpha1.tar.gz) = e192577159faa73302e7ec559da472d923f43ffe
-RMD160 (v0.6.0-alpha1.tar.gz) = 3f0e1a9c61cfd72a3154cc7a2d7111eb4f81e1e1
-SHA512 (v0.6.0-alpha1.tar.gz) = 939ef26690f30343606f78c380b4c8ca8440de818bf0b202f573a0f1b2274d6b502d86f5fda1c158e2302e1f78f1492f5b389c968d5d3fb14a9f923bacca9fa4
-Size (v0.6.0-alpha1.tar.gz) = 82348 bytes
+SHA1 (v0.6.1-alpha1.tar.gz) = 2a159a35b351b13aedd1965470b6487305cae80d
+RMD160 (v0.6.1-alpha1.tar.gz) = 9d4355ff779d725fef9df57e59e4386d369c4f79
+SHA512 (v0.6.1-alpha1.tar.gz) = acb666609202c56e3861ee5ea20fcd6321f9666bd0b66d51d83f04312597acea05f6d2c701b8ea27dba1df3cddad473203d087b5b0c13acf872c0465b4b48830
+Size (v0.6.1-alpha1.tar.gz) = 84219 bytes
 SHA1 (value-bag-1.0.0-alpha.6.crate) = a20be35e56ce129fbc1b04473450f77a6fe4721d
 RMD160 (value-bag-1.0.0-alpha.6.crate) = 6e1f7a2046ba87835264703d0e02bd4ca987a817
 SHA512 (value-bag-1.0.0-alpha.6.crate) = 1723a8e7698b832b288845b466ae7efb5ee1cf90d7510ece286774fc71e8f322596c05e03732d9e51af2db460b689b3e473cc11a94f97c9015972d6db3c6ba80
