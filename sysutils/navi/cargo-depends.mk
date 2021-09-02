@@ -1,7 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2021/08/09 17:28:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2021/09/02 11:28:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.42
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.43
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
@@ -12,7 +12,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.0
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
-CARGO_CRATE_DEPENDS+=	crossterm-0.20.0
+CARGO_CRATE_DEPENDS+=	crossterm-0.21.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.8.0
 CARGO_CRATE_DEPENDS+=	directories-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.2
@@ -58,8 +58,8 @@ CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.7.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.127
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.127
+CARGO_CRATE_DEPENDS+=	serde-1.0.128
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.128
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.8.17
 CARGO_CRATE_DEPENDS+=	shellwords-1.1.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.9
