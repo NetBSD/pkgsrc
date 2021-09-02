@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.512 2021/08/28 07:23:02 mef Exp $
+# $NetBSD: Makefile,v 1.513 2021/09/02 07:18:42 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -100,6 +100,7 @@ SUBDIR+=	R-reshape2
 SUBDIR+=	R-robustbase
 SUBDIR+=	R-rstudioapi
 SUBDIR+=	R-sandwich
+SUBDIR+=	R-sets
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
 SUBDIR+=	R-sp
@@ -108,7 +109,6 @@ SUBDIR+=	R-splancs
 SUBDIR+=	R-stabledist
 SUBDIR+=	R-stat.extend
 SUBDIR+=	R-statmod
-SUBDIR+=	R-sets
 SUBDIR+=	R-stringdist
 SUBDIR+=	R-survey
 SUBDIR+=	R-tensor
