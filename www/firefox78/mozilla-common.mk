@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.9 2021/01/27 05:24:11 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.10 2021/09/02 11:04:02 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -35,9 +35,16 @@ TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
-# For rustc/cargo detection
+# This is to work around build failures where an upstream configuration script
+# is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
+# "i486" when attempting to select the Rust compiler target.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
+CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
+.else
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+.endif
 
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
