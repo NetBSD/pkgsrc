@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2021/06/13 06:31:50 nia Exp $
+# $NetBSD: Makefile,v 1.79 2021/09/02 19:20:08 nia Exp $
 
 DISTNAME=	x264-snapshot-20191217-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
@@ -19,6 +19,7 @@ LICENSE=	gnu-gpl-v2
 # NetBSD/mips needs ASM disabled because it uses the MSA extension
 # (requires MIPS64 revision 2) and fails to build.
 .if ${OPSYS} == "SunOS" || \
+    !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mips*)
 CONFIGURE_ARGS+=	--disable-asm
