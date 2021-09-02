@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4497 2021/09/01 18:24:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4498 2021/09/02 11:29:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7082,3 +7082,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-typing-extensions to 3.10.0.2 [adam 2021-09-01]
 	Updated devel/py-traitlets to 5.1.0 [adam 2021-09-01]
 	Updated security/py-google-auth-oauthlib to 0.4.6 [adam 2021-09-01]
+	Updated sysutils/navi to 2.17.2 [pin 2021-09-02]
