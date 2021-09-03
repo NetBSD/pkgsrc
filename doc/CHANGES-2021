@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4509 2021/09/03 11:39:23 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4510 2021/09/03 12:06:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7096,3 +7096,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-Pillow to 8.3.2 [adam 2021-09-03]
 	Updated games/cataclysm-dda-sdl to 0.F.2 [nia 2021-09-03]
 	Updated games/cataclysm-dda to 0.F.2 [nia 2021-09-03]
+	Added devel/py-test-env version 0.6.2 [gdt 2021-09-03]
