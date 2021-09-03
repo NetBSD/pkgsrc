@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/03 12:05:17 gdt Exp $
+
+SHA1 (pytest-env-0.6.2.tar.gz) = 6e9a9ac17a5de16125d0179da4993fd83cf73ebb
+RMD160 (pytest-env-0.6.2.tar.gz) = 04ae9a39ae935f9cc18073aa2f55c3d2a527fdf2
+SHA512 (pytest-env-0.6.2.tar.gz) = 0b3bb21fc881023c102b584593c6e28840400ce8190810f33f9a421df4141e17dcfad2943c4159aaab82376b7b47b07b45f97c9cb232a7d17c4d35b55966596d
+Size (pytest-env-0.6.2.tar.gz) = 1693 bytes
