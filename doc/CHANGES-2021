@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4507 2021/09/03 10:30:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4508 2021/09/03 11:24:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7092,3 +7092,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 1.11.0 [schmonz 2021-09-03]
 	Updated audio/ncspot to 0.8.2 [pin 2021-09-03]
 	Updated shells/nushell to 0.36.0 [pin 2021-09-03]
+	Updated devel/thrift to 0.14.2 [adam 2021-09-03]
+	Updated graphics/py-Pillow to 8.3.2 [adam 2021-09-03]
