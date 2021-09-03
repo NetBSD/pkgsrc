@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.205 2021/08/14 14:30:12 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.206 2021/09/03 03:55:36 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,7 +20,7 @@ USE_LANGUAGES+=		c c++
 # ERROR: Only GCC 7.1 or newer is supported (found version 5.5.0).
 GCC_REQD+=		7
 
-TOOL_DEPENDS+=		cbindgen>=0.16.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.19.0:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
@@ -204,7 +204,7 @@ CWRAPPERS_PREPEND.cxx+= \
 	-stdlib++-isystem \
 	${BUILDLINK_PREFIX.gcc8}/gcc8/include/c++/backward
 .endif
-RUST_REQ=	1.47.0
+RUST_REQ=	1.51.0
 .include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
