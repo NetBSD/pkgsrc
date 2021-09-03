@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4502 2021/09/02 13:54:51 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4503 2021/09/03 01:59:32 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7087,3 +7087,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.14.7 [pin 2021-09-02]
 	Updated audio/termusic to 0.3.7 [pin 2021-09-02]
 	Updated net/mosquitto to 2.0.12 [gdt 2021-09-02]
+	Updated biology/biolibc to 0.2.0.1 [bacon 2021-09-03]
