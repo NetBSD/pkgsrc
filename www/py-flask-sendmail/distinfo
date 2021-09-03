@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/06/02 21:06:03 khorben Exp $
+$NetBSD: distinfo,v 1.3 2021/09/03 14:38:50 khorben Exp $
 
 SHA1 (Flask-Sendmail-0.1.tar.gz) = 6ac44c275a3d9dce4ed3d028335537ed19e67cef
 RMD160 (Flask-Sendmail-0.1.tar.gz) = 7b79b89250b9376ff5f9f2f1d1b3b0508c861a6a
 SHA512 (Flask-Sendmail-0.1.tar.gz) = c341d841a5ea2ff06d60361bf323fd3d9bce1b332143da415534e9176d797fbd5bd59ea9b7563a81e35dbe93dcbb6d957f02df61bd191b385eb834638133aecd
 Size (Flask-Sendmail-0.1.tar.gz) = 3410 bytes
 SHA1 (patch-flask__sendmail_connection.py) = bcc2161f5f1d5bcaa67a67b319554e3d41ee0e97
-SHA1 (patch-flask__sendmail_message.py) = 7aa1f56237e7ae3704eb98060dded53222ed29a1
+SHA1 (patch-flask__sendmail_message.py) = 5a4971be87c7f043d0adc3844df658fc0daf254f
