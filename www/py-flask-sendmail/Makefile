@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/06/02 21:06:03 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/03 14:38:50 khorben Exp $
 
 DISTNAME=	Flask-Sendmail-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Sendmail/}
 
