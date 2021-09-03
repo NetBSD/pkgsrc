@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4505 2021/09/03 09:39:51 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4506 2021/09/03 10:29:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7090,3 +7090,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/biolibc to 0.2.0.1 [bacon 2021-09-03]
 	Updated biology/peak-classifier to 0.1.1.21 [bacon 2021-09-03]
 	Updated devel/mob to 1.11.0 [schmonz 2021-09-03]
+	Updated audio/ncspot to 0.8.2 [pin 2021-09-03]
