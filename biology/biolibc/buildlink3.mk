@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/08/28 18:34:37 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2021/09/03 01:53:52 bacon Exp $
 
 BUILDLINK_TREE+=	biolibc
 
