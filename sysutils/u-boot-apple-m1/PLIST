@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/06 20:17:39 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/03 20:50:00 jmcneill Exp $
 share/u-boot/apple-m1/u-boot-nodtb.bin
-share/u-boot/apple-m1/u-boot.macho
+share/u-boot/apple-m1/u-boot-t8103-j274.macho
+share/u-boot/apple-m1/u-boot-t8103-j293.macho
