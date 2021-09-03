@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/08/28 18:40:29 bacon Exp $
+$NetBSD: distinfo,v 1.3 2021/09/03 01:57:56 bacon Exp $
 
-SHA1 (peak-classifier-0.1.1.20-fb47a5ccdf9df3a9c25db50fc658e0a0cbef9c36.tar.gz) = 360236da415c2f79940e6b525c236970af066b19
-RMD160 (peak-classifier-0.1.1.20-fb47a5ccdf9df3a9c25db50fc658e0a0cbef9c36.tar.gz) = 6a71f72d9d2defa8c947899304914696437f90ee
-SHA512 (peak-classifier-0.1.1.20-fb47a5ccdf9df3a9c25db50fc658e0a0cbef9c36.tar.gz) = 86cb6314b3c56ac4972c8ec418d60ee24f7773ece7fe4c990701e2b26501a56f56e9c5c02747441d0ac486a771c9814a15915f45d36cadde6ff403cd03fe8d16
-Size (peak-classifier-0.1.1.20-fb47a5ccdf9df3a9c25db50fc658e0a0cbef9c36.tar.gz) = 86572 bytes
+SHA1 (peak-classifier-0.1.1.21-c1b21c252bc51278a85366fd36a67284718dbdbd.tar.gz) = 76db2e983d97016f804f615bde16f10043a22abc
+RMD160 (peak-classifier-0.1.1.21-c1b21c252bc51278a85366fd36a67284718dbdbd.tar.gz) = 7b12a6e8e13030e99fbee800090abb91cae6ec6c
+SHA512 (peak-classifier-0.1.1.21-c1b21c252bc51278a85366fd36a67284718dbdbd.tar.gz) = 4a46edfdd03424b4ac85698330a565941a8f072b864b29ef36336ea0e25306aa1fb5996041c79efe1b5fd13adfec661cca6effbcb87486dc0272e8215f8f28bd
+Size (peak-classifier-0.1.1.21-c1b21c252bc51278a85366fd36a67284718dbdbd.tar.gz) = 86608 bytes
