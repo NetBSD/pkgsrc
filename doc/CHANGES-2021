@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4508 2021/09/03 11:24:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4509 2021/09/03 11:39:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7094,3 +7094,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/nushell to 0.36.0 [pin 2021-09-03]
 	Updated devel/thrift to 0.14.2 [adam 2021-09-03]
 	Updated graphics/py-Pillow to 8.3.2 [adam 2021-09-03]
+	Updated games/cataclysm-dda-sdl to 0.F.2 [nia 2021-09-03]
+	Updated games/cataclysm-dda to 0.F.2 [nia 2021-09-03]
