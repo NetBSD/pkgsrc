@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3495 2021/09/02 07:17:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3496 2021/09/03 12:05:17 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -2612,6 +2612,7 @@ SUBDIR+=	py-test-asyncio
 SUBDIR+=	py-test-benchmark
 SUBDIR+=	py-test-cache
 SUBDIR+=	py-test-cov
+SUBDIR+=	py-test-env
 SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
