@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--with-apxs2=${APXS}
 USE_TOOLS+=		gmake
 USE_TOOLS+=		pkg-config
 
+USE_LIBTOOL=		yes
+
 APACHE_MODULE=		yes
 
 INSTALLATION_DIRS+=	lib/httpd
