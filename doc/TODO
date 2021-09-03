@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20997 2021/08/31 14:43:19 mef Exp $
+$NetBSD: TODO,v 1.20998 2021/09/03 10:29:04 pin Exp $
 
 Suggested new packages
 ======================
@@ -1325,7 +1325,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
-	o ncspot-0.8.2
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
