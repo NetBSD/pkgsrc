@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4521 2021/09/04 20:20:08 maya Exp $
+$NetBSD: CHANGES-2021,v 1.4522 2021/09/04 20:29:01 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7111,3 +7111,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-formatR to 1.11 [mef 2021-09-04]
 	Updated lang/R-cpp11 to 0.3.1 [mef 2021-09-04]
 	Added net/gvproxy version 0.1.0 [maya 2021-09-04]
+	Added sysutils/podman version 3.3.1 [maya 2021-09-04]
