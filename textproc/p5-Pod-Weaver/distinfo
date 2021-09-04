@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/10/15 07:20:59 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/09/04 23:20:07 wen Exp $
 
-SHA1 (Pod-Weaver-4.015.tar.gz) = 8c9e49a03ed3bee336194903640e01132600250c
-RMD160 (Pod-Weaver-4.015.tar.gz) = ed05e80ac50c29fc58f56d31159e004b01337546
-SHA512 (Pod-Weaver-4.015.tar.gz) = 333e29757766b0c2ddd39cde3ef0649a3e79143a611c48c3644807d248c0c7d6a027683ca88158bf59b369b1e329cdd6f3f1c3dda6c3baaa26648f80ecdb4a8d
-Size (Pod-Weaver-4.015.tar.gz) = 40303 bytes
+SHA1 (Pod-Weaver-4.018.tar.gz) = 9c763c89e4f26be12eaca02cdba83b1c5b839b52
+RMD160 (Pod-Weaver-4.018.tar.gz) = 6077d126684c9d09b05e57aed5456c0d4126a2bd
+SHA512 (Pod-Weaver-4.018.tar.gz) = fd8d2665866e4fb0606111ddeddfc992077b90419bb21905514590815594b0b918a98ccbfa92fa57a646b52a0a061a02e718926edd3a7dfed52977c00bd18472
+Size (Pod-Weaver-4.018.tar.gz) = 43480 bytes
