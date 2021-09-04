@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/08/07 14:38:20 pin Exp $
+# $NetBSD: Makefile,v 1.17 2021/09/04 20:42:52 pin Exp $
 
-DISTNAME=	gpg-tui-0.7.4
+DISTNAME=	gpg-tui-0.8.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,11 +20,12 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gpg-tui ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.toml.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
