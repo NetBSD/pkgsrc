@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/08/11 19:35:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/04 14:52:06 bsiegert Exp $
 
 DISTNAME=	kubectl-1.20.9
 PKGREVISION=	1
@@ -21,7 +21,7 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X k8s.io/component-base/version.gitMinor=${PKGVERSION_NOREV:C/[0-9]+\.//:C/\..*//} \
 			-X k8s.io/component-base/version.gitTreeState=clean \
 			-X k8s.io/component-base/version.gitVersion=v${PKGVERSION_NOREV}'
-GO_BUILD_PATTERN+=	./cmd/kubectl
+GO_BUILD_PATTERN+=	-mod=readonly ./cmd/kubectl
 
 .include "go-modules.mk"
 
