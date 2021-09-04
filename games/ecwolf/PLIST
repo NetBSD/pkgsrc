@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/04 10:36:29 nia Exp $
+bin/ecwolf
+libexec/ecwolf
+man/man6/ecwolf.6
+share/applications/ecwolf.desktop
+share/ecwolf/ecwolf.pk3
+share/icons/hicolor/36x36/apps/ecwolf.png
+share/icons/hicolor/48x48/apps/ecwolf.png
+share/icons/hicolor/72x72/apps/ecwolf.png
+share/icons/hicolor/96x96/apps/ecwolf.png
