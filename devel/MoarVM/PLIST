@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/05/29 06:35:23 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/09/04 11:02:36 mef Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -136,7 +136,6 @@ include/moar/jit/label.h
 include/moar/jit/register.h
 include/moar/jit/tile.h
 include/moar/math/bigintops.h
-include/moar/math/grisu.h
 include/moar/math/num.h
 include/moar/memdebug.h
 include/moar/moar.h
