@@ -1,0 +1,2 @@
+A replacement for VPNKit, written in pure Go.  It is based on the
+network stack of gVisor.
