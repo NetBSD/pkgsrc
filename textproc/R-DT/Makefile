@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/09/20 09:33:39 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/04 12:34:42 mef Exp $
 
 R_PKGNAME=	DT
-R_PKGVER=	0.15
+R_PKGVER=	0.19
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
