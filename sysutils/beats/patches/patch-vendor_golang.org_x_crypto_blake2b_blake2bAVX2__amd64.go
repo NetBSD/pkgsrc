@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go,v 1.1 2019/03/15 15:03:02 he Exp $
+$NetBSD: patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go,v 1.2 2021/09/04 14:10:33 bsiegert Exp $
 
 We get link errors about runtime.support_avx and runtime.support_avx2, so
 revert the offending commit from
@@ -35,7 +35,7 @@ package) makes it difficult to stamp out this sort of bugs.  Sigh!
  
 -//go:noescape
 -func supportsAVX2() bool
-+//go:linkname x86_HasAVX internal/cpu.X86.HasSSE4
++//go:linkname x86_HasSSE4 internal/cpu.X86.HasSSE4
 +var x86_HasSSE4 bool
 +
 +func init() {

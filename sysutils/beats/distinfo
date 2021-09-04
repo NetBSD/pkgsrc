@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2021/01/08 08:32:18 he Exp $
+$NetBSD: distinfo,v 1.29 2021/09/04 14:10:33 bsiegert Exp $
 
 SHA1 (beats-6.8.13.tar.gz) = e8940f9b6a75ed8e0e6ae9177774d2e410f865f6
 RMD160 (beats-6.8.13.tar.gz) = 52959989dcd8002c0e2320f738cd43b76be8553b
@@ -7,5 +7,5 @@ Size (beats-6.8.13.tar.gz) = 35569151 bytes
 SHA1 (patch-libbeat_common_file_stderr__other.go) = 9e1f28a9721c996ba75a7712d39c70186f549067
 SHA1 (patch-vendor_github.com_insomniacslk_dhcp_dhcpv4_client.go) = 4588ee4feba431bdc1c8250d58fa9ac66f733bb3
 SHA1 (patch-vendor_github.com_tsg_gopacket_pcap_pcap.go) = 887b009bb2613ed5241fbf9a9ff3e8e75df98cae
-SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go) = 2ee9c516c6f0da5789b97b498f5db7c7eae106cd
+SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go) = 210069b9740fdb03a99c9efa6becdb650688d9c2
 SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.s) = b6aabeda2abad29d9f5d4032f57ea66eb4231688
