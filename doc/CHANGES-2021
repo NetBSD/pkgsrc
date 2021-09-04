@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4519 2021/09/04 12:48:14 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4520 2021/09/04 14:33:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7109,3 +7109,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-crosstalk to 1.1.1 [mef 2021-09-04]
 	Updated textproc/R-DT to 0.19 [mef 2021-09-04]
 	Updated textproc/R-formatR to 1.11 [mef 2021-09-04]
+	Updated lang/R-cpp11 to 0.3.1 [mef 2021-09-04]
