@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2021/09/04 20:28:42 maya Exp $
+
+You will need to build a kernel with options HZ=1000, or edit the created
+VM to append "noapic" to the Grub command line.
+===========================================================================
