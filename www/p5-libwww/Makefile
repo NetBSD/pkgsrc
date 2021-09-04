@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2021/05/24 19:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2021/09/04 23:28:27 wen Exp $
 
-DISTNAME=	libwww-perl-6.53
+DISTNAME=	libwww-perl-6.56
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Encode-Locale>=0:../../textproc/p5-Encode-Locale
 DEPENDS+=	p5-File-Listing>=6:../../devel/p5-File-Listing
 DEPENDS+=	p5-HTTP-Cookies>=6:../../www/p5-HTTP-Cookies
-DEPENDS+=	p5-HTTP-Daemon>=6:../../www/p5-HTTP-Daemon
+DEPENDS+=	p5-HTTP-Daemon>=6.12:../../www/p5-HTTP-Daemon
 DEPENDS+=	p5-HTTP-Date>=6:../../www/p5-HTTP-Date
 DEPENDS+=	p5-HTTP-Negotiate>=6:../../www/p5-HTTP-Negotiate
 DEPENDS+=	p5-HTTP-Message>=6:../../www/p5-HTTP-Message
