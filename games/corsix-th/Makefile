@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/08/18 17:57:50 leot Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/04 11:02:26 nia Exp $
 
-DISTNAME=	corsix-th-0.64
-PKGREVISION=	2
+DISTNAME=	corsix-th-0.65.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CorsixTH/}
 GITHUB_PROJECT=	CorsixTH
@@ -12,8 +11,12 @@ HOMEPAGE=	https://github.com/CorsixTH/CorsixTH
 COMMENT=	Reimplementation of the game engine of Theme Hospital
 LICENSE=	mit
 
-DEPENDS+=	lua53-filesystem-[0-9]*:../../devel/lua-filesystem
-DEPENDS+=	lua53-lpeg-[0-9]*:../../devel/lua-lpeg
+LUA_VERSIONS_ACCEPTED=	54 53 52 51
+
+.include "../../lang/lua/luaversion.mk"
+
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
+DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
@@ -36,7 +39,7 @@ CMAKE_ARGS+=	-D${module}_LIBRARIES=${PREFIX}/lib/ffmpeg4/lib${module:tl}.${SOEXT
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../lang/lua53/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
