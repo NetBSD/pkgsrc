@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4514 2021/09/04 10:37:05 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4515 2021/09/04 11:02:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7102,3 +7102,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/stone-soup-sdl to 0.27.1 [nia 2021-09-04]
 	Updated games/stone-soup to 0.27.1 [nia 2021-09-04]
 	Added games/ecwolf version 1.3.3 [nia 2021-09-04]
+	Updated games/corsix-th to 0.65.1 [nia 2021-09-04]
