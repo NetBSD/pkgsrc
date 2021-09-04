@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4512 2021/09/04 02:29:30 markd Exp $
+$NetBSD: CHANGES-2021,v 1.4513 2021/09/04 09:22:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7099,3 +7099,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-test-env version 0.6.2 [gdt 2021-09-03]
 	Updated mail/notmuch to 0.33 [ryoon 2021-09-03]
 	Added misc/kquickcharts version 5.80.0 [markd 2021-09-04]
+	Updated games/stone-soup-sdl to 0.27.1 [nia 2021-09-04]
+	Updated games/stone-soup to 0.27.1 [nia 2021-09-04]
