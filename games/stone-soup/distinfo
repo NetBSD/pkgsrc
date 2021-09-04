@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/08/10 14:46:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/09/04 09:21:29 nia Exp $
 
-SHA1 (stone_soup-0.27.0-nodeps.tar.xz) = 35b37f6d9d776720425e8a28d9c693df7434ff06
-RMD160 (stone_soup-0.27.0-nodeps.tar.xz) = 1cf737684fd9dc664911cc87039df931bc4f7c9d
-SHA512 (stone_soup-0.27.0-nodeps.tar.xz) = 0d4364efe5aa0e3388fac40ce4d47c9b3e490c17bd731db62ec7c7edb76757a37237208b2f95d4fb5ee6c0a136f5f26bc95d6450695a77982788db7fad64dae0
-Size (stone_soup-0.27.0-nodeps.tar.xz) = 12555052 bytes
+SHA1 (stone_soup-0.27.1-nodeps.tar.xz) = adc8005fcbbe6a534655417848e187375927a7df
+RMD160 (stone_soup-0.27.1-nodeps.tar.xz) = 7681cddd3d34d2ea9cc748e56df5a4673f29082d
+SHA512 (stone_soup-0.27.1-nodeps.tar.xz) = 34f693deb6a3e89c63231831402d2b3c909d0ad40142ab9dce704af2443ca25e44f5feefed5875dae03a0c70773425a545c932b2f67fd639e3550722fb2b81bf
+Size (stone_soup-0.27.1-nodeps.tar.xz) = 12418672 bytes
