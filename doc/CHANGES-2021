@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4524 2021/09/04 21:04:19 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4525 2021/09/04 23:20:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7114,3 +7114,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/podman version 3.3.1 [maya 2021-09-04]
 	Updated security/gpg-tui to 0.8.0 [pin 2021-09-04]
 	Updated devel/git-cliff to 0.2.6 [pin 2021-09-04]
+	Updated textproc/p5-Pod-Weaver to 4.018 [wen 2021-09-04]
