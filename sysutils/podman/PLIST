@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/04 20:28:42 maya Exp $
+bin/podman

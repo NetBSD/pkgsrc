@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.965 2021/08/30 23:46:34 jmcneill Exp $
+# $NetBSD: Makefile,v 1.966 2021/09/04 20:28:42 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -518,6 +518,7 @@ SUBDIR+=	pfstat
 SUBDIR+=	pftop
 SUBDIR+=	pidof
 SUBDIR+=	pluged
+SUBDIR+=	podman
 SUBDIR+=	polysh
 SUBDIR+=	pscpug
 SUBDIR+=	psftools
