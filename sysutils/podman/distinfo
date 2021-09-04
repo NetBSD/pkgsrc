@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2021/09/04 20:28:42 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/09/04 21:14:15 leot Exp $
 
-SHA1 (podman/v3.3.1.tar.gz) = 658cf4a69ffe329a6c342dc209f4951738acc3b7
-RMD160 (podman/v3.3.1.tar.gz) = 1e12b82c57db1c9b1af9bee15cd2eb61a8ffe700
-SHA512 (podman/v3.3.1.tar.gz) = 19003f63c17c1c5788f34d0d6426a366035fc76aa2312e6355464d204d6536e5f78652abaf01643d4be7c2ee5224c25717b41760a4be4f6de8031cca9b06efaa
-Size (podman/v3.3.1.tar.gz) = 10917305 bytes
+SHA1 (podman-3.3.1.tar.gz) = 658cf4a69ffe329a6c342dc209f4951738acc3b7
+RMD160 (podman-3.3.1.tar.gz) = 1e12b82c57db1c9b1af9bee15cd2eb61a8ffe700
+SHA512 (podman-3.3.1.tar.gz) = 19003f63c17c1c5788f34d0d6426a366035fc76aa2312e6355464d204d6536e5f78652abaf01643d4be7c2ee5224c25717b41760a4be4f6de8031cca9b06efaa
+Size (podman-3.3.1.tar.gz) = 10917305 bytes
 SHA1 (patch-Makefile) = 5671f5452430d4b94af924defbb473eb91732281
 SHA1 (patch-cmd_podman_machine_init.go) = 391b486723fc63120235e108b078e475c328dd15
 SHA1 (patch-cmd_podman_machine_list.go) = 96007836194c66ed2e3e2bc271af7acf8e72fd9b
