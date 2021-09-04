@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2021/09/04 20:28:42 maya Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/04 21:14:15 leot Exp $
 
-GITHUB_PROJECT=	podman
-GITHUB_TAG=	refs/tags/v3.3.1
-DISTNAME=	v3.3.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	podman-3.3.1
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/containers/podman/
 COMMENT=	Tool for managing OCI containers and pods
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/podman-3.3.1
 USE_TOOLS+=	gmake gsed
 
 .include "../../mk/bsd.prefs.mk"
