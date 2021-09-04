@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/09/04 10:36:29 nia Exp $
+
+The original game data files are required for operation. These are files
+with the extensions *.n3d, *.sod, *.sd2, *.sd3, *.wl1, or *.wl6. They
+should be placed either in ~/.config/ecwolf or ${PREFIX}/share/ecwolf.
+
+===========================================================================
