@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/31 07:52:43 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/04 20:42:52 pin Exp $
 bin/gpg-tui
 man/man1/gpg-tui.1
+man/man5/gpg-tui.toml.5
