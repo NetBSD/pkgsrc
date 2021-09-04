@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile,v 1.1 2021/09/04 20:28:42 maya Exp $
+
+Add netbsd support
+
+--- Makefile.orig	2021-08-30 19:15:26.000000000 +0000
++++ Makefile
+@@ -160,6 +160,9 @@ SRCBINDIR := bin/windows
+ else ifeq ($(GOOS),darwin)
+ BINSFX :=
+ SRCBINDIR := bin/darwin
++else ifeq ($(GOOS),netbsd)
++BINSFX :=
++SRCBINDIR := bin/netbsd
+ else
+ BINSFX := -remote
+ SRCBINDIR := bin
+@@ -351,6 +354,13 @@ podman-remote-windows: ## Build podman-r
+ 		GOOS=windows \
+ 		bin/windows/podman.exe
+ 
++.PHONY: podman-remote-netbsd
++podman-remote-netbsd: ## Build podman-remote for NetBSD
++	$(MAKE) \
++		CGO_ENABLED=0 \
++		GOOS=netbsd \
++		bin/netbsd/podman
++
+ .PHONY: podman-remote-darwin
+ podman-remote-darwin: ## Build podman-remote for macOS
+ 	$(MAKE) \
