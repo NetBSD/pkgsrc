@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20999 2021/09/04 11:51:34 mef Exp $
+$NetBSD: TODO,v 1.21000 2021/09/04 12:34:54 mef Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o Pantomime-1.2.2
 	o QuantLib-1.22
 	o R-Cairo-1.5.12.2
-	o R-DT-0.18
 	o R-GRASS-0.3.9
 	o R-Hmisc-4.5.0
 	o R-IRkernel-1.1.1
