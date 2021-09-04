@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1424 2021/08/25 06:54:57 nia Exp $
+# $NetBSD: Makefile,v 1.1425 2021/09/04 20:19:29 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -227,6 +227,7 @@ SUBDIR+=	gupnp-dlna
 SUBDIR+=	gupnp-igd
 SUBDIR+=	gupnp-tools
 SUBDIR+=	gupnp12
+SUBDIR+=	gvproxy
 SUBDIR+=	haproxy
 SUBDIR+=	hdl-dump
 SUBDIR+=	hesiod
