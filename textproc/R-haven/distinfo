@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:45:24 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/09/05 01:39:54 mef Exp $
 
-SHA1 (R/haven_2.1.1.tar.gz) = 1d280fb57d8a275a79bf1b1b06ffc30b901cdb0b
-RMD160 (R/haven_2.1.1.tar.gz) = 6c3e39fc84d04ce968ffdb354f6e62b0d4624d82
-SHA512 (R/haven_2.1.1.tar.gz) = 6cc812a93f5fe5b9bd8895b90a480ebda55295fb699ab7d0a3ae0ccead6678b400e7f69da014af487d63f6438107b22a0581469202771f20a05f3f7aa52037c6
-Size (R/haven_2.1.1.tar.gz) = 265123 bytes
+SHA1 (R/haven_2.4.3.tar.gz) = 533f859aa4ad0e89e34c08e4fe9f7d256af81e03
+RMD160 (R/haven_2.4.3.tar.gz) = 78519c36cd859268e97aac6279ef4a1ce5071eaa
+SHA512 (R/haven_2.4.3.tar.gz) = f78358fb7e7b2042deff95409cba8928ac98b90ae5be27cf4731d34bf9b067228753ac9d9a661f393ae0307b5a7de1bb4f329d4118982f65481ae51139d8bd52
+Size (R/haven_2.4.3.tar.gz) = 296805 bytes
