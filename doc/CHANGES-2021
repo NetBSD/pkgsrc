@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4553 2021/09/05 09:06:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4554 2021/09/05 09:42:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7143,3 +7143,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-Net-SFTP-Foreign to 1.93 [wen 2021-09-05]
 	Updated net/p5-Net-Server to 2.010 [wen 2021-09-05]
 	Updated devel/nss to 3.70 [wiz 2021-09-05]
+	Updated www/py-django3 to 3.2.7 [wen 2021-09-05]
