@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/17 20:48:18 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/09/05 07:44:49 wen Exp $
 
-SHA1 (Net-Telnet-Cisco-1.11.tar.gz) = 5073acdce7adb6827ead1c93d3983b465ec08a8b
-RMD160 (Net-Telnet-Cisco-1.11.tar.gz) = 39000a94d37b0f7c3788621c5d1057e652f84cab
-SHA512 (Net-Telnet-Cisco-1.11.tar.gz) = b12da84517df470d40d56a54e8d8c7b331bed87c3c330da7fc1efb7d078805e6f7348f0b52971d3c1b4e3d39014d76bbe7535c40ad3afa7efcf567521ddf0c4b
-Size (Net-Telnet-Cisco-1.11.tar.gz) = 19282 bytes
+SHA1 (Net-Telnet-Cisco-1.12.tar.gz) = 814da860575ed0f7098b553ec9aa090177f49fa5
+RMD160 (Net-Telnet-Cisco-1.12.tar.gz) = bafc45dd21a6998d7249b108590e55ecdb9c2333
+SHA512 (Net-Telnet-Cisco-1.12.tar.gz) = c4bc41839d4314610ed3659add2c50a95fbfd46fcc71ed50b16490a7d2acd3e480696de15a2f56fdb9bbad43fc8fea1bb4d1c19bc35140239a192027d85803a9
+Size (Net-Telnet-Cisco-1.12.tar.gz) = 19338 bytes
