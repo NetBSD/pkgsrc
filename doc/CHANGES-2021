@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4527 2021/09/04 23:40:51 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4528 2021/09/05 00:36:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7117,3 +7117,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Pod-Weaver to 4.018 [wen 2021-09-04]
 	Updated www/p5-libwww to 6.56 [wen 2021-09-04]
 	Updated www/p5-LWP-ConsoleLogger to 0.000043 [wen 2021-09-04]
+	Updated databases/postgresql-postgis2 to 3.1.4 [gdt 2021-09-05]
