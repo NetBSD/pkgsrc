@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21002 2021/09/05 01:40:10 mef Exp $
+$NetBSD: TODO,v 1.21003 2021/09/05 07:50:29 wen Exp $
 
 Suggested new packages
 ======================
@@ -1486,7 +1486,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Convert-Binary-C-0.84
 	o p5-Convert-Color-1.000001
 	o p5-Cpanel-JSON-XS-4.26
-	o p5-Crypt-RIPEMD160-0.08
 	o p5-Curses-1.37
 	o p5-DBD-DB2-1.86
 	o p5-DBD-Mock-1.59
@@ -1516,13 +1515,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Glib-Object-Introspection-0.049
 	o p5-Graph-ReadWrite-2.10
 	o p5-GraphViz2-2.66
-	o p5-HTML-CalendarMonthSimple-1.26
-	o p5-HTTP-OAI-4.11
 	o p5-IO-Interactive-1.023
 	o p5-JSON-MaybeXS-1.004003
-	o p5-JavaScript-Minifier-XS-0.14
 	o p5-LEOCHARRE-Dir-1.09
-	o p5-LWP-ConsoleLogger-0.000043
 	o p5-Lingua-EN-Inflect-1.905
 	o p5-Lingua-EN-Numbers-Ordinate-1.05
 	o p5-Lingua-Stem-2.31
@@ -1569,13 +1564,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Plack-Test-Agent-1.5
 	o p5-Pod-POM-Web-1.24
 	o p5-Pod-Strip-1.100
-	o p5-Pod-Weaver-4.017
 	o p5-Publican-4.3.2
-	o p5-RPC-XML-0.82
 	o p5-RT-Authen-ExternalAuth-0.27
 	o p5-Rose-DB-0.819
 	o p5-SMS-Send-1.08
-	o p5-SNMP-Info-3.71
 	o p5-SQL-Abstract-Limit-0.143
 	o p5-Search-Elasticsearch-7.712
 	o p5-Search-QueryParser-0.95
@@ -1606,12 +1598,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-WWW-Mechanize-Cached-1.55
 	o p5-WWW-Shorten-3.094
 	o p5-Weather-PurpleAir-API-0.08
-	o p5-XML-Compile-SOAP-3.27
-	o p5-XML-Encoding-2.11
 	o p5-XString-0.005
-	o p5-YAML-PP-0.027
 	o p5-ack-3.5.0
-	o p5-libapreq2-2.16
 	o p5-marisa-0.2.6
 	o p5-perl-ldap-0.68
 	o packagekit-0.5.3
