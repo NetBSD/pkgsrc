@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.183 2021/08/27 03:32:37 ryoon Exp $
+$NetBSD: distinfo,v 1.184 2021/09/05 20:58:16 nia Exp $
 
 SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
@@ -21,7 +21,8 @@ SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
 SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
 SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
 SHA1 (patch-include_sysemu_nvmm.h) = 2cf9ea36c77570136b0678fe3b1c126ca7fa04cd
-SHA1 (patch-meson.build) = 086400b3eebd0d5ce91af7779fa4f2a56d953542
+SHA1 (patch-meson.build) = 35f4d563e99dcc014a011bb4c7cddefac852d4cf
 SHA1 (patch-net_tap-solaris.c) = cc953c9a624dd55ace4e130d0b31bbfb956c17d5
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
+SHA1 (patch-target_i386_nvmm_nvmm-all.c) = 8f4b51a6460090d7826af1ae02840a208767345b
 SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
