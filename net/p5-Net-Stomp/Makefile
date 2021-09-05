@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/05 07:57:38 wen Exp $
 #
 
-DISTNAME=	Net-Stomp-0.60
+DISTNAME=	Net-Stomp-0.61
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -12,6 +11,9 @@ COMMENT=	Streaming Text Orientated Messaging Protocol Client
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-Log-Any>=1.70.7:../../devel/p5-Log-Any
+DEPENDS+=	p5-Log-Any-Adapter-TAP-[0-9]*:../../devel/p5-Log-Any-Adapter-TAP
+
 TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 TEST_DEPENDS+=	p5-Test-NiceDump-[0-9]*:../../devel/p5-Test-NiceDump
 
