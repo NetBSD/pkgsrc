@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4540 2021/09/05 02:31:11 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4541 2021/09/05 02:43:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7130,3 +7130,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-YAML-XS to 0.83 [wen 2021-09-05]
 	Updated textproc/R-htmltools to 0.5.2 [mef 2021-09-05]
 	Updated textproc/p5-YAML-PP to 0.027 [wen 2021-09-05]
+	Updated textproc/p5-XML-Encoding to 2.11 [wen 2021-09-05]
