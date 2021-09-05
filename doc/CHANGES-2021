@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4530 2021/09/05 01:32:13 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4531 2021/09/05 01:40:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7120,3 +7120,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-postgis2 to 3.1.4 [gdt 2021-09-05]
 	Updated www/p5-libapreq2 to 2.16 [wen 2021-09-05]
 	Updated www/p5-JavaScript-Minifier-XS to 0.14 [wen 2021-09-05]
+	Updated textproc/R-haven to 2.4.3 [mef 2021-09-05]
