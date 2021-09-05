@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4546 2021/09/05 07:35:48 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4547 2021/09/05 07:39:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7136,3 +7136,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p5-CryptX to 0.073 [wen 2021-09-05]
 	Updated security/p5-Crypt-RIPEMD160 to 0.08 [wen 2021-09-05]
 	Updated net/p5-SNMP-Info to 3.77 [wen 2021-09-05]
+	Updated net/p5-RPC-XML to 0.82 [wen 2021-09-05]
