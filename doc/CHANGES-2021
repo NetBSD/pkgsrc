@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4537 2021/09/05 02:16:07 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4538 2021/09/05 02:21:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7127,3 +7127,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-rmarkdown to 2.10 [mef 2021-09-05]
 	Updated www/p5-Catalyst-Plugin-Static-Simpl to 0.37 [wen 2021-09-05]
 	Updated textproc/p5-YAML-LibYAML to 0.83 [wen 2021-09-05]
+	Updated textproc/p5-YAML-XS to 0.83 [wen 2021-09-05]
