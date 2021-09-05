@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4545 2021/09/05 06:39:42 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4546 2021/09/05 07:35:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7135,3 +7135,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-String-Formatter to 1.234 [wen 2021-09-05]
 	Updated security/p5-CryptX to 0.073 [wen 2021-09-05]
 	Updated security/p5-Crypt-RIPEMD160 to 0.08 [wen 2021-09-05]
+	Updated net/p5-SNMP-Info to 3.77 [wen 2021-09-05]
