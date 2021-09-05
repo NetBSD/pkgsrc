@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4560 2021/09/05 16:58:30 leot Exp $
+$NetBSD: CHANGES-2021,v 1.4561 2021/09/05 19:22:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-App-Cmd to 0.334 [wen 2021-09-05]
 	Updated devel/p5-AtExit to 2.05 [wen 2021-09-05]
 	Updated geography/qgis to 3.16.10 [gdt 2021-09-05]
+	Updated devel/mob to 1.11.1 [schmonz 2021-09-05]
