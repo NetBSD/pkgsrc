@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.2 2021/09/05 20:32:03 wiz Exp $
 
 --- src/3rdparty/chromium/v8/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
 +++ src/3rdparty/chromium/v8/BUILD.gn
@@ -17,7 +17,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd
 +    data = []
 +
 +    args = [
-+      rebase_path(stamp, root_build_dir), "paxctl", "+m", "./" + rebase_path(get_label_info(":mksnapshot($v8_snapshot_toolchain)",
++      rebase_path(stamp, root_build_dir), "/usr/sbin/paxctl", "+m", "./" + rebase_path(get_label_info(":mksnapshot($v8_snapshot_toolchain)",
 +                                        "root_out_dir") + "/mksnapshot",
 +                         root_build_dir),
 +    ]
