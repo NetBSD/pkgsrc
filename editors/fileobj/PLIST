@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/04 13:10:20 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/05 16:39:35 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/fileobj/__init__.py
@@ -35,6 +35,9 @@ ${PYSITELIB}/fileobj/cygwin.pyo
 ${PYSITELIB}/fileobj/darwin.py
 ${PYSITELIB}/fileobj/darwin.pyc
 ${PYSITELIB}/fileobj/darwin.pyo
+${PYSITELIB}/fileobj/disas_x86.py
+${PYSITELIB}/fileobj/disas_x86.pyc
+${PYSITELIB}/fileobj/disas_x86.pyo
 ${PYSITELIB}/fileobj/dragonflybsd.py
 ${PYSITELIB}/fileobj/dragonflybsd.pyc
 ${PYSITELIB}/fileobj/dragonflybsd.pyo
@@ -68,6 +71,9 @@ ${PYSITELIB}/fileobj/ext/cstruct.pyo
 ${PYSITELIB}/fileobj/ext/current.py
 ${PYSITELIB}/fileobj/ext/current.pyc
 ${PYSITELIB}/fileobj/ext/current.pyo
+${PYSITELIB}/fileobj/ext/disas_x86.py
+${PYSITELIB}/fileobj/ext/disas_x86.pyc
+${PYSITELIB}/fileobj/ext/disas_x86.pyo
 ${PYSITELIB}/fileobj/ext/env.py
 ${PYSITELIB}/fileobj/ext/env.pyc
 ${PYSITELIB}/fileobj/ext/env.pyo
