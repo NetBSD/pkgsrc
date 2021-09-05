@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:48 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/09/05 03:20:23 wen Exp $
 
-SHA1 (String-Formatter-0.102084.tar.gz) = 495b1cac9c34272375b58dd26d161925706b9ca4
-RMD160 (String-Formatter-0.102084.tar.gz) = ef2efe77aade258dd73d9a593dfe270fa408b14c
-SHA512 (String-Formatter-0.102084.tar.gz) = d9e72e01b78d9b571cde6cb0107e334e41739b07006e224016cff5de4648b9f924003446de75ddfd911bfc25b3046554cde09502344dce53a8fed2ecfd7994dc
-Size (String-Formatter-0.102084.tar.gz) = 20981 bytes
+SHA1 (String-Formatter-1.234.tar.gz) = 136245b010cf6d31267bcfcd0fb7fef7bff3bc1d
+RMD160 (String-Formatter-1.234.tar.gz) = 665e3f4d43dc163d1a9f403075826d160cb7716c
+SHA512 (String-Formatter-1.234.tar.gz) = be5fb27182437c0e89e02d53d6c931eac614634cdd6c287109779afe1e305728ce9b0807e54c018bd68e4554fe02f2722586e8cf61de477bcb79b69db3ad55dc
+Size (String-Formatter-1.234.tar.gz) = 26321 bytes
