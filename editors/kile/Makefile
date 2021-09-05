@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2021/08/31 12:13:34 markd Exp $
+# $NetBSD: Makefile,v 1.123 2021/09/05 03:49:56 markd Exp $
 
 DISTNAME=		kile-2.9.93
 CATEGORIES=		editors kde
@@ -10,6 +10,7 @@ HOMEPAGE=		https://kile.sourceforge.io/
 COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
 
 BUILD_DEPENDS+=		kdoctools>=5.19.0:../../devel/kdoctools
+DEPENDS+=		kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=		perl msgmerge pkg-config
 
