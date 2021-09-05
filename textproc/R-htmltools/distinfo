@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/06/05 08:02:32 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/09/05 02:30:06 mef Exp $
 
-SHA1 (R/htmltools_0.5.1.1.tar.gz) = 6be8d7ebdca06c82afc100627de1676e25b92674
-RMD160 (R/htmltools_0.5.1.1.tar.gz) = d2bce997c648851ceaa613b6c2b4fb6b4ddf2a4a
-SHA512 (R/htmltools_0.5.1.1.tar.gz) = 45414e7d71a1d554f89086fbac9938c1cfd299b4480ee678abd86571af84b53acfa021bdd5d2c40194f4acf1163787e2b7539ebe1d1abf7eea57297cca7888b8
-Size (R/htmltools_0.5.1.1.tar.gz) = 71567 bytes
+SHA1 (R/htmltools_0.5.2.tar.gz) = 7f86a730e00930e9c9a94637b70cd8e3a47bc819
+RMD160 (R/htmltools_0.5.2.tar.gz) = 35eb1234e98a9685a3b6375038b63b024c50149b
+SHA512 (R/htmltools_0.5.2.tar.gz) = 10d605439621d4ae46a6b10580ddcbdbb4dc52c9b50f3d8a7c0a1ca8f86087ad4949efdaf7e445fd752ad4d58e2601e1fc7f262f9f0a8760ea883aac3cb7698c
+Size (R/htmltools_0.5.2.tar.gz) = 124510 bytes
