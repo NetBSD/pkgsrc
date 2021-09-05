@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4548 2021/09/05 07:42:54 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4549 2021/09/05 07:45:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7138,3 +7138,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-SNMP-Info to 3.77 [wen 2021-09-05]
 	Updated net/p5-RPC-XML to 0.82 [wen 2021-09-05]
 	Updated net/p5-Net-Telnet to 3.05 [wen 2021-09-05]
+	Updated net/p5-Net-Telnet-Cisco to 1.12 [wen 2021-09-05]
