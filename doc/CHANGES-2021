@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4534 2021/09/05 01:49:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4535 2021/09/05 01:50:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7124,3 +7124,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTTP-OAI to 4.11 [wen 2021-09-05]
 	Updated www/p5-HTML-CalendarMonthSimple to 1.26 [wen 2021-09-05]
 	Updated www/p5-CSS-Minifier-XS to 0.13 [wen 2021-09-05]
+	Updated textproc/R-rmarkdown to 2.10 [mef 2021-09-05]
