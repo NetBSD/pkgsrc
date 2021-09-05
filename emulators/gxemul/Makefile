@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2021/09/05 07:27:13 skrll Exp $
+# $NetBSD: Makefile,v 1.75 2021/09/05 15:07:01 ryoon Exp $
 
 DISTNAME=	gxemul-0.7.0
 PKGREVISION=	1
@@ -19,6 +19,9 @@ BUILD_TARGET=	build
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
+
+post-patch:
+	${RM} -f ${WRKSRC}/doc/machine_cats.html.orig
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${DESTDIR}${PREFIX}/bin
