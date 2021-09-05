@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2020/03/22 21:21:05 rillig Exp $
+$NetBSD: distinfo,v 1.13 2021/09/05 01:26:19 wen Exp $
 
-SHA1 (libapreq2-2.13.tar.gz) = db3761625a62230147896b47e9b047660b20ba28
-RMD160 (libapreq2-2.13.tar.gz) = 8d7d2573624193b6dfbbe354b3771012257c1578
-SHA512 (libapreq2-2.13.tar.gz) = 54553cb90c0d3f6fb34ff19364c5804976c4aff1bae551ae051fdd06f41695770f1e285c40e03dbd93ae738adc332f38f1a1994167598364071feaec833fdf05
-Size (libapreq2-2.13.tar.gz) = 891320 bytes
+SHA1 (libapreq2-2.16.tar.gz) = 55f1b7b1de698c10901ca6f80ee975670ffdbed5
+RMD160 (libapreq2-2.16.tar.gz) = 06b2c5508c272aa8639590187e3806d0a906a5d4
+SHA512 (libapreq2-2.16.tar.gz) = aa9e751a3f0d6a9cb587aa1c5408e8d9a073560860d7f653776196fe3739516df16abe943c9cb0460cfb9b68a2d79ad651cfd5e4a30a2ca34d6dc3ced73f628c
+Size (libapreq2-2.16.tar.gz) = 839264 bytes
 SHA1 (patch-aa) = f3e9e3d0ecee2f2124045af622c60b6684475e3e
 SHA1 (patch-ab) = 8318a1248de9f79228a91334bae29aa91bcbf42c
 SHA1 (patch-apreq2-config.in) = 2125b6ddcb1e95fef016f7ab154effa7219438dc
