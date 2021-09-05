@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4559 2021/09/05 16:36:48 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4560 2021/09/05 16:58:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7125,7 +7125,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTML-CalendarMonthSimple to 1.26 [wen 2021-09-05]
 	Updated www/p5-CSS-Minifier-XS to 0.13 [wen 2021-09-05]
 	Updated textproc/R-rmarkdown to 2.10 [mef 2021-09-05]
-	Updated www/p5-Catalyst-Plugin-Static-Simpl to 0.37 [wen 2021-09-05]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.37 [wen 2021-09-05]
 	Updated textproc/p5-YAML-LibYAML to 0.83 [wen 2021-09-05]
 	Updated textproc/p5-YAML-XS to 0.83 [wen 2021-09-05]
 	Updated textproc/R-htmltools to 0.5.2 [mef 2021-09-05]
