@@ -1,6 +1,6 @@
 A native Ruby implementation of the SMB Protocol Family. It currently
 supports MS-SMB and MS-SMB2.  This library currently include both a
-client level, and packet level support. A user can aprse and
+client level, and packet level support. A user can parse and
 manipulate raw SMB packets, or simply use the simple client to perform
 SMB operations. See the Wiki for more information on this porject's
 long-term goals, style guide, and developer tips.
