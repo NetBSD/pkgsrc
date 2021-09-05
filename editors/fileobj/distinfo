@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/07/20 18:57:18 tkusumi Exp $
+$NetBSD: distinfo,v 1.10 2021/09/05 16:39:35 tkusumi Exp $
 
-SHA1 (fileobj-0.7.104.tar.gz) = 4de7c363eb09ba3670486c507ba3d97b0882925f
-RMD160 (fileobj-0.7.104.tar.gz) = e8922bb68b1abd2ce835176db0dd867116b1acf4
-SHA512 (fileobj-0.7.104.tar.gz) = 0de494e7bcb431029bffdc043968144b360296c971c80ebf030666773c2d90c8a3984b6d7832b5c9b3c1c83b4ca6cb5cc26d14627834005f1956190381f72e31
-Size (fileobj-0.7.104.tar.gz) = 177919 bytes
+SHA1 (fileobj-0.7.105.tar.gz) = 6add953134b5f8651895b166a00b5be67d263289
+RMD160 (fileobj-0.7.105.tar.gz) = 93ab93572cefab0c3688f1cae539d74b6dfbec85
+SHA512 (fileobj-0.7.105.tar.gz) = a2b099725f5cf5fd2427bcfd65f2d53ffa50c6dee7b2c0e430406ca979963faf2ca757ad9dac3d6e73cbbbffb8c61e6db115d77f7211fec8e22af93b5b9cbcab
+Size (fileobj-0.7.105.tar.gz) = 182245 bytes
