@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/09 08:58:15 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/09/05 02:48:58 wen Exp $
 
-SHA1 (XML-Compile-SOAP-3.26.tar.gz) = f52bf427b4a6eba0acb95dedd2a4108e4e80fe0d
-RMD160 (XML-Compile-SOAP-3.26.tar.gz) = 4096a836c4f53a67de1af8bcbc2648581a897e62
-SHA512 (XML-Compile-SOAP-3.26.tar.gz) = 6771e29c05ccc1f6543dd57450e54f66d505093a6371cdf449f134030ad0e1fb16092d4aa89d8096816b341709838d97cdb0ee1e25576ab41366925d072f56f0
-Size (XML-Compile-SOAP-3.26.tar.gz) = 103333 bytes
+SHA1 (XML-Compile-SOAP-3.27.tar.gz) = 484ab86cc2099ac23c3cba602125ad6790222657
+RMD160 (XML-Compile-SOAP-3.27.tar.gz) = ceebd7b8a10c968f5cdf2d988aba86c750b2503a
+SHA512 (XML-Compile-SOAP-3.27.tar.gz) = eb064916b6ae0b2e5bd85b1ad328aecee529a4bdc147d85d6c96f6024234c44ee6751920f3e8d7a84cdaca717941db60a0d031d54641e9e9b1532e795810d869
+Size (XML-Compile-SOAP-3.27.tar.gz) = 103376 bytes
