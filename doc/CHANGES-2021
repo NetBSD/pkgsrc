@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4562 2021/09/05 23:40:13 thor Exp $
+$NetBSD: CHANGES-2021,v 1.4563 2021/09/05 23:42:26 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7151,3 +7151,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.16.10 [gdt 2021-09-05]
 	Updated devel/mob to 1.11.1 [schmonz 2021-09-05]
 	Updated audio/mpg123 to 1.29.0 [thor 2021-09-05]
+	Updated audio/mpg123-jack to 1.29.0 [thor 2021-09-05]
