@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/11/08 15:04:31 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/09/05 07:57:38 wen Exp $
 
-SHA1 (Net-Stomp-0.60.tar.gz) = 731f2505ce0c67a021e58870ea6b2d1a06667631
-RMD160 (Net-Stomp-0.60.tar.gz) = f7f7f5df330bc8332afda57033b42bf5f9dd685b
-SHA512 (Net-Stomp-0.60.tar.gz) = 821610000e71126d1ec7188a483d2e088b4b3112febad097232b95cf2ac45336066a3a7c7de10ad162774c71bc72e8bc2cf9d07f9f03b7beb9e1e658329180d7
-Size (Net-Stomp-0.60.tar.gz) = 30622 bytes
+SHA1 (Net-Stomp-0.61.tar.gz) = aaa9649611897a09e16c8c91bbb4b9b286dffbe2
+RMD160 (Net-Stomp-0.61.tar.gz) = 76bf4dc8f0f1cc5140356351210306e21339466d
+SHA512 (Net-Stomp-0.61.tar.gz) = d6010916f417c28bc42d5535aee92ff5b6fec78c9a2810c8988ffc97af01b09b1fd5383f2a1a1f335de6b33cf77a572781ca9b21973b88d7b0b310909f27aa26
+Size (Net-Stomp-0.61.tar.gz) = 30678 bytes
