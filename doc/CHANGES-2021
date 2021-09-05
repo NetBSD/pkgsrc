@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4529 2021/09/05 01:27:55 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4530 2021/09/05 01:32:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7119,3 +7119,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-LWP-ConsoleLogger to 0.000043 [wen 2021-09-04]
 	Updated databases/postgresql-postgis2 to 3.1.4 [gdt 2021-09-05]
 	Updated www/p5-libapreq2 to 2.16 [wen 2021-09-05]
+	Updated www/p5-JavaScript-Minifier-XS to 0.14 [wen 2021-09-05]
