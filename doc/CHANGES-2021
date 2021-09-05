@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4558 2021/09/05 12:47:32 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4559 2021/09/05 16:36:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7148,3 +7148,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/p5-Math-FFT to 1.36 [wen 2021-09-05]
 	Updated devel/p5-App-Cmd to 0.334 [wen 2021-09-05]
 	Updated devel/p5-AtExit to 2.05 [wen 2021-09-05]
+	Updated geography/qgis to 3.16.10 [gdt 2021-09-05]
