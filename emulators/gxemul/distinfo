@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.65 2021/04/24 07:31:36 fcambus Exp $
+$NetBSD: distinfo,v 1.66 2021/09/05 07:27:13 skrll Exp $
 
 SHA1 (gxemul-0.7.0.tar.gz) = 3a201be34b53bc851842c5a2ded6244e217e7cca
 RMD160 (gxemul-0.7.0.tar.gz) = 590a2ab904c2999552e33da42f1724d44efb9342
 SHA512 (gxemul-0.7.0.tar.gz) = d977342843e903aedd9dcdf6fdab81ceb5ee1552bf3b90deb77eb59b42e5fad3a65f216ce33cf33259372ff9a10af5b1365827de949f0c61fb9859b417972c71
 Size (gxemul-0.7.0.tar.gz) = 5985021 bytes
+SHA1 (patch-doc_machine__cats.html) = 1c67fbfe42fa86427e3ebdc6720b894123eb4672
+SHA1 (patch-src_cpus_cpu__arm.c) = c34c78a13a65b06d8a0011a8bbb27ecaed3f4db9
+SHA1 (patch-src_cpus_cpu__arm__instr.c) = b91c6b4de6f47de28db259dac6146f46d3f81787
+SHA1 (patch-src_cpus_cpu__arm__instr__dpi.c) = 160d870151cd25e5393f57acbf91525b69fa41f3

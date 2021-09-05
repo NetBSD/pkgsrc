@@ -1,0 +1,48 @@
+$NetBSD: patch-doc_machine__cats.html,v 1.1 2021/09/05 07:27:13 skrll Exp $
+
+--- doc/machine_cats.html.orig	2021-04-22 18:04:13.000000000 +0000
++++ doc/machine_cats.html
+@@ -46,8 +46,8 @@ SUCH DAMAGE.
+ 
+ 
+ <p>The CATS emulation mode is working well enough to run
+-old versions of <a href="#netbsdcatsinstall">NetBSD/cats</a> and
+-<a href="#openbsdcatsinstall">OpenBSD/cats</a>.</p>
++<a href="#netbsdcatsinstall">NetBSD/cats</a> and
++an old version of <a href="#openbsdcatsinstall">OpenBSD/cats</a>.</p>
+ 
+ <p><font color="red"><small><a name="#debiancats">Debian GNU/Linux</a></small></font> could
+ perhaps run in the future.
+@@ -80,14 +80,14 @@ To install NetBSD/cats onto a disk image
+ 
+ </pre>
+   <li>Download the NetBSD/cats ISO image and the generic and install kernels:<pre>
+-	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/iso/8.1/NetBSD-8.1-cats.iso">ftp://ftp.de.netbsd.org/pub/NetBSD/iso/8.1/NetBSD-8.1-cats.iso</a>
+-	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-8.1/cats/binary/kernel/netbsd-GENERIC.aout.gz">ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-8.1/cats/binary/kernel/netbsd-GENERIC.aout.gz</a>
+-	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-8.1/cats/binary/kernel/netbsd-INSTALL.aout.gz">ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-8.1/cats/binary/kernel/netbsd-INSTALL.aout.gz</a>
++	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/iso/9.2/NetBSD-9.2-cats.iso">ftp://ftp.de.netbsd.org/pub/NetBSD/iso/9.2/NetBSD-9.2-cats.iso</a>
++	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-9.2/cats/binary/kernel/netbsd-GENERIC.aout.gz">ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-9.2/cats/binary/kernel/netbsd-GENERIC.aout.gz</a>
++	<a href="ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-9.2/cats/binary/kernel/netbsd-INSTALL.aout.gz">ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-9.2/cats/binary/kernel/netbsd-INSTALL.aout.gz</a>
+ 
+ </pre>
+   <p>
+   <li>Start the installation like this:<pre>
+-	<b>gxemul -X -E cats -d nbsd_cats.img -d NetBSD-8.1-cats.iso netbsd-INSTALL.aout.gz</b>
++	<b>gxemul -X -E cats -d nbsd_cats.img -d NetBSD-9.2-cats.iso netbsd-INSTALL.aout.gz</b>
+ 
+ </pre>
+ 	and proceed like you would do if you were installing NetBSD on a real
+@@ -96,11 +96,8 @@ To install NetBSD/cats onto a disk image
+ 
+ <p>Note that there may be some long delays during bootup.
+ 
+-<p>(NOTE: Older versions of NetBSD could install via FTP in older versions
+-of GXemul. Right now, that seems to not be possible, resulting in ethernet
+-timeouts etc. Whether it is due to bit rot in the emulator, or due to NetBSD
+-having changed over time, has not been debugged.
+-If you want to try an FTP install anyway, 
++<p>(NOTE: It may also be possible to install via FTP, but this is slow and
++sometimes unstable. If you want to try an FTP install anyway, 
+ start the install without <tt>-d xxxxx.iso</tt> and use
+ IPv4 address 10.0.0.1, gateway/default route 10.0.0.254, netmask 
+ 255.0.0.0, and nameserver 10.0.0.254, when asked to configure the network.)
