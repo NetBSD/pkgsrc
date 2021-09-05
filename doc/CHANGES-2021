@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4551 2021/09/05 08:02:07 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4552 2021/09/05 08:05:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7141,3 +7141,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-Net-Telnet-Cisco to 1.12 [wen 2021-09-05]
 	Updated net/p5-Net-Stomp to 0.61 [wen 2021-09-05]
 	Updated net/p5-Net-SFTP-Foreign to 1.93 [wen 2021-09-05]
+	Updated net/p5-Net-Server to 2.010 [wen 2021-09-05]
