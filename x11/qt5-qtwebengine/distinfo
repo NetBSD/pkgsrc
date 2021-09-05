@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/09/05 20:32:03 wiz Exp $
 
 SHA1 (qtwebengine-everywhere-src-5.15.2.tar.xz) = fc633cf15998a89229446b778085f59191e27b0f
 RMD160 (qtwebengine-everywhere-src-5.15.2.tar.xz) = 69b1c3d700e825a645757180e07df0ab8b8c301d
@@ -809,7 +809,7 @@ SHA1 (patch-src_3rdparty_chromium_ui_views_window_frame__background.cc) = 0a780b
 SHA1 (patch-src_3rdparty_chromium_ui_webui_resources_js_cr.js) = 37278073ceabf117dfecf10d18fd51d54cb90cbf
 SHA1 (patch-src_3rdparty_chromium_ui_webui_resources_js_icon.js) = bd956152e8c9aabeb5f8f64ca3f29d7ec5d10e7b
 SHA1 (patch-src_3rdparty_chromium_ui_webui_webui__features.gni) = c8ce066c2075e27524913c414e740dffb74d34e7
-SHA1 (patch-src_3rdparty_chromium_v8_BUILD.gn) = 34688616a2dc8e2548a9ca53e36ab17fcb79834e
+SHA1 (patch-src_3rdparty_chromium_v8_BUILD.gn) = 4163421e85e03bd96ef9ee34926ccf5e38b3ef1e
 SHA1 (patch-src_3rdparty_chromium_v8_gni_v8.gni) = 944c7c8e2363b07aa0242a2e748cc381cc2bc216
 SHA1 (patch-src_3rdparty_chromium_v8_src_api_api.cc) = d563a6b50e5dff265d5a4b1b516de02e7149cab6
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_cpu.cc) = f6ec99bba983bb93e8515478f64681440ffbda1e

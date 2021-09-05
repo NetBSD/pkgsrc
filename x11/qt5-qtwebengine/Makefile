@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/08/31 13:16:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/05 20:32:03 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -62,7 +62,7 @@ post-install:
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 .if ${OPSYS} == "NetBSD"
-	paxctl +m ${DESTDIR}${PREFIX}/qt5/libexec/QtWebEngineProcess
+	/usr/sbin/paxctl +m ${DESTDIR}${PREFIX}/qt5/libexec/QtWebEngineProcess
 .endif
 
 .include "../../mk/bsd.prefs.mk"
