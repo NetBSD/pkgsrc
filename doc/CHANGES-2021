@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4572 2021/09/06 13:22:28 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4573 2021/09/06 15:07:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7165,3 +7165,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-country-lite to 2021.09 [fcambus 2021-09-06]
 	Updated www/php-nextcloud to 22.1.1 [ryoon 2021-09-06]
 	Updated chat/weechat to 3.2.1 [ryoon 2021-09-06]
+	Updated mail/pear-Mail_Mime to 1.10.11 [taca 2021-09-06]
