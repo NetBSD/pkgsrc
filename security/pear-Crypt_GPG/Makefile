@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/03/21 03:31:25 taca Exp $
+# $NetBSD: Makefile,v 1.10 2021/09/06 15:08:44 taca Exp $
 
-DISTNAME=	Crypt_GPG-1.6.5
+DISTNAME=	Crypt_GPG-1.6.6
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
