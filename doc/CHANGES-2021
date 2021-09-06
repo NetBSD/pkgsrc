@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4566 2021/09/06 07:25:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4567 2021/09/06 11:28:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7158,3 +7158,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python37 to 3.7.12 [adam 2021-09-06]
 	Updated lang/py36-html-docs to 3.6.15 [adam 2021-09-06]
 	Updated lang/py37-html-docs to 3.7.12 [adam 2021-09-06]
+	Updated net/py-zeroconf to 0.36.2 [adam 2021-09-06]
+	Updated devel/py-test to 6.2.5 [adam 2021-09-06]
