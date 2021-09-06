@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/09/05 02:30:06 mef Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/06 21:52:11 mef Exp $
 
 R_PKGNAME=	htmltools
 R_PKGVER=	0.5.2
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
 DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
+DEPENDS+=	R-fastmap-[0-9]*:../../devel/R-fastmap
 
 # Packages suggested but not available:  'ragg'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
