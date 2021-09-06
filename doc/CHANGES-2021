@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4569 2021/09/06 12:21:30 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4570 2021/09/06 12:22:43 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7162,3 +7162,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test to 6.2.5 [adam 2021-09-06]
 	Updated net/dbip-asn-lite to 2021.09 [fcambus 2021-09-06]
 	Updated net/dbip-city-lite to 2021.09 [fcambus 2021-09-06]
+	Updated net/dbip-country-lite to 2021.09 [fcambus 2021-09-06]
