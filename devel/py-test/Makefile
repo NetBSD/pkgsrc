@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2021/05/05 04:48:27 adam Exp $
+# $NetBSD: Makefile,v 1.103 2021/09/06 11:28:00 adam Exp $
 
-DISTNAME=	pytest-6.2.4
+DISTNAME=	pytest-6.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-iniconfig-[0-9]*:../../devel/py-iniconfig
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
