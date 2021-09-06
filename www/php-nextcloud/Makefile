@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/09/06 13:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2021/09/06 19:51:29 jperkin Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -43,6 +43,8 @@ USE_TOOLS+=	bash:run pax perl:run
 
 NC_DIR=		share/nextcloud
 INSTALLATION_DIRS=	${NC_DIR}
+
+PHP_VERSIONS_INCOMPATIBLE=	56 # php-sodium
 
 # for php interpreter
 CHECK_INTERPRETER_SKIP+=	${NC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
