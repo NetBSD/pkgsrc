@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4570 2021/09/06 12:22:43 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4571 2021/09/06 13:07:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7163,3 +7163,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.09 [fcambus 2021-09-06]
 	Updated net/dbip-city-lite to 2021.09 [fcambus 2021-09-06]
 	Updated net/dbip-country-lite to 2021.09 [fcambus 2021-09-06]
+	Updated www/php-nextcloud to 22.1.1 [ryoon 2021-09-06]
