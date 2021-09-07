@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/08/14 14:33:09 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2021/09/07 00:53:57 gdt Exp $
 
-# Update to 6.2 (wip) is on hold pending reports that the greater
-# Unifi world thinks it is stable enough. -- gdt, 2021-06-01
-DISTNAME=	unifi-6.0.45
+DISTNAME=	unifi-6.2.26
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
