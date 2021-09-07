@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.117 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: distinfo,v 1.118 2021/09/07 09:49:05 nia Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -253,6 +253,7 @@ SHA1 (patch-slideshow_source_engine_box2dtools.cxx) = b59a872552754af29ce6208fd9
 SHA1 (patch-solenv_gbuild_platform_NETBSD_AARCH64_GCC.mk) = eda8dbd0e9394b2dde2f98c0df39e7e9888f49dc
 SHA1 (patch-store_source_storbase.hxx) = 69c58db3984f22de45c7e32fdfd4f7c28340adf1
 SHA1 (patch-sw_source_core_bastyp_calc.cxx) = 317f206500c88aea4a645a6f1dea8e0a837ad581
+SHA1 (patch-sw_source_uibase_config_usrpref.cxx) = 8f761c368e38435aea53bfcfcdc1f3aba0c73d03
 SHA1 (patch-vcl_unx_generic_app_geninst.cxx) = 0bc6d8b22236ab60fce0aa1923514b7eec162ba6
 SHA1 (patch-xmloff_source_draw_ximp3dscene.cxx) = bdd0b2563e54424dd468c2334e17ab23057a69fb
 SHA1 (patch-xmlsecurity_source_gpg_CertificateImpl.hxx) = 56ac06159e0805edc1685d271b632f1af438be86
