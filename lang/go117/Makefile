@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/22 13:10:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/07 13:31:14 jperkin Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -17,6 +17,10 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
+
+.if ${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris"
+CWRAPPERS_APPEND.cc+=	-DILLUMOS
+.endif
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
