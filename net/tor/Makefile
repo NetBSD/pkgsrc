@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2021/08/17 08:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2021/09/07 14:00:52 gdt Exp $
 
 DISTNAME=	tor-0.4.6.7
 CATEGORIES=	net security
@@ -17,6 +17,11 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
+
+# https://gitlab.torproject.org/tpo/core/tor/-/issues/29520
+# Without this workaround, fails reliable with MAKE_JOBS=1 on
+# netbsd-9 amd64.
+BUILD_TARGET=		micro-revision.i all
 
 #============================================================================
 #Testsuite summary for tor 0.4.6.6
