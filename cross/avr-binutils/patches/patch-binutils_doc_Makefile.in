@@ -1,0 +1,15 @@
+$NetBSD: patch-binutils_doc_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+
+Avoid installing info files (which duplicates with other CPU).
+
+--- binutils/doc/Makefile.in.orig	2021-07-18 16:38:08.000000000 +0000
++++ binutils/doc/Makefile.in
+@@ -182,7 +182,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
+ am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
+ am__v_texidevnull_0 = > /dev/null
+ am__v_texidevnull_1 = 
+-INFO_DEPS = binutils.info
++INFO_DEPS =
+ am__TEXINFO_TEX_DIR = $(srcdir)
+ DVIS = binutils.dvi
+ PDFS = binutils.pdf
