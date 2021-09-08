@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/12/31 19:44:09 fcambus Exp $
+# $NetBSD: Makefile,v 1.61 2021/09/08 21:05:00 nia Exp $
 
 DISTNAME=	hatari-2.3.1
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.tuxfamily.org/hatari/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

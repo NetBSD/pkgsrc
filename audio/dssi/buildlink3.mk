@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/10/30 15:29:27 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/09/08 21:04:54 nia Exp $
 
 BUILDLINK_TREE+=	dssi
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	dssi
 DSSI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dssi+=	dssi>=1.1.1
+BUILDLINK_ABI_DEPENDS.dssi?=	dssi>=1.1.1nb1
 BUILDLINK_PKGSRCDIR.dssi?=	../../audio/dssi
 BUILDLINK_DEPMETHOD.dssi?=	build
 
