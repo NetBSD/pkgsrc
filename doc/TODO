@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21008 2021/09/08 11:16:03 mef Exp $
+$NetBSD: TODO,v 1.21009 2021/09/08 12:04:47 micha Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o avenger-0.8.5
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
-	o avr-binutils-2.36.1
 	o avr-gdb-10.1
 	o baci-20040415
 	o baloo-21.04.0
