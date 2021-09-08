@@ -1,0 +1,5 @@
+Man pages are installed in ${PREFIX}/share/doc/avr-libc/man/man3/
+
+To read those pages, for example, use:
+
+    env MANPATH=${PREFIX}/share/doc/avr-libc/man man BOOTLOADER_SECTION
