@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/02/09 22:33:23 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/08 21:05:08 nia Exp $
 
 DISTNAME=	sauerbraten_2020_12_27_linux
 PKGNAME=	sauerbraten-2020_12_27
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sauerbraten/}
 EXTRACT_SUFX=	.tar.bz2
