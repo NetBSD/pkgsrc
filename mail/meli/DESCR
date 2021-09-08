@@ -1,0 +1,19 @@
+meli aims for configurability and extensibility with sane defaults.
+It seeks to be a mail client for both new and power users of the terminal, but
+built today.
+
+A variety of email workflows and software stacks should be usable with meli.
+Integrate e-mail storage, sync, tagging system, SMTP client, contact management
+and editor of your choice to replace the defaults.
+
+features:
+-email threads
+-multithreaded
+-embed your own editor
+-plain text configuration
+-multi-tasking with UI tabs
+-IMAP, Maildir, notmuch, JMAP, mbox
+-optional sqlite3 index search
+-fast and minimal account configuration
+-contact list (+read-only vCard support)
+-forced UTF-8 - other encodings are read-only
