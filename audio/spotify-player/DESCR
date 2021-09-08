@@ -1,0 +1,18 @@
+spotify-player is a custom Spotify player built and tweaked based on my personal
+preferences. It is fast, easy to use, and configurable.
+
+It's designed to be a player, not a fully-fledged Spotify clone, so it does not
+aim to support all possible Spotify features.
+The main goal is to provide a quick and intuitive way to modify the current
+playback by either using player commands or navigating between different
+contexts.
+Similar to other TUI applications, is keyboard driven. User will use a set of
+predefined commands with shortcuts to interact with the player.
+spotify-player has a simple UI with three main components:
+-a playback window displaying the current playback
+-a context window displaying a context (playlist, album, artist)
+-popup windows for using some commands (switch theme, browser playlists, etc)
+or displaying additional information
+
+spotify-player is built on top of tui, rspotify, and librespot libraries.
+It's inspired by spotify-tui and ncspot.
