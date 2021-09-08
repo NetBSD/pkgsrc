@@ -1,0 +1,24 @@
+$NetBSD: patch-gprof_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+
+Avoid installing info and po (NLS) files.
+
+--- gprof/Makefile.in.orig	2021-07-18 16:44:34.000000000 +0000
++++ gprof/Makefile.in
+@@ -217,7 +217,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
+ am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
+ am__v_texidevnull_0 = > /dev/null
+ am__v_texidevnull_1 = 
+-INFO_DEPS = gprof.info
++INFO_DEPS = 
+ am__TEXINFO_TEX_DIR = $(srcdir)/../texinfo
+ DVIS = gprof.dvi
+ PDFS = gprof.pdf
+@@ -442,7 +442,7 @@ AUTOMAKE_OPTIONS = foreign no-dist no-te
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+ TEXINFO_TEX = ../texinfo/texinfo.tex
+ SUFFIXES = .c .m
+-SUBDIRS = po
++SUBDIRS =
+ BASEDIR = $(srcdir)/..
+ BFDDIR = $(BASEDIR)/bfd
+ INCDIR = $(BASEDIR)/include
