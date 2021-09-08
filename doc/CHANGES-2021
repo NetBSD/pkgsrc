@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4594 2021/09/08 22:55:06 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4595 2021/09/08 23:46:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7188,3 +7188,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/firefox91-l10n version 91.0.1 [nia 2021-09-08]
 	Updated geography/gdal-lib to 3.3.2 [gdt 2021-09-08]
 	Updated geography/py-gdal to 3.3.2 [gdt 2021-09-08]
+	Updated net/iperf2 to 2.1.4 [gdt 2021-09-08]
