@@ -1,21 +1,23 @@
-# $NetBSD: Makefile.common,v 1.13 2021/07/05 17:25:29 gdt Exp $
+# $NetBSD: Makefile.common,v 1.14 2021/09/08 22:48:13 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
 
 # Accomodate testing unreleased versions.
-VERSION_BASE=	3.3.1
+VERSION_BASE=	3.3.2
 #VERSION_RC=	rc1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	gdal-${VERSION}
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	geography
-MASTER_SITES=	https://download.osgeo.org/gdal/${VERSION_BASE}/
+MASTER_SITES=	https://download.osgeo.org/gdal/${VERSION_BASE}${VERSION_RC}/
 
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	brook@nmsu.edu
 HOMEPAGE=	http://www.gdal.org/
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/gdal-${VERSION_BASE}
 
 PATCHDIR=	${.CURDIR}/../../geography/gdal-lib/patches
 DISTINFO_FILE=	${.CURDIR}/../../geography/gdal-lib/distinfo
