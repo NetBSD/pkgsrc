@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/09/08 10:42:54 pin Exp $
+# $NetBSD: options.mk,v 1.2 2021/09/08 10:48:20 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spotify-player
 PKG_SUPPORTED_OPTIONS=	alsa gstreamer jack portaudio pulseaudio rodio sdl
@@ -53,4 +53,3 @@ RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.SDL2}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.SDL2}/lib
 .include "../../devel/SDL2/buildlink3.mk"
 .endif
-
