@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21011 2021/09/08 13:04:49 mef Exp $
+$NetBSD: TODO,v 1.21012 2021/09/08 13:38:54 mef Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.9
 	o R-nimble-0.11.0
 	o R-nloptr-1.2.2.2
-	o R-openxlsx-4.2.3
 	o R-osmdata-0.1.5
 	o R-pbdZMQ-0.3.5
 	o R-pbkrtest-0.5.1
