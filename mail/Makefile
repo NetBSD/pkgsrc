@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2021/07/13 13:16:54 nia Exp $
+# $NetBSD: Makefile,v 1.573 2021/09/08 13:59:08 pin Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -153,6 +153,7 @@ SUBDIR+=	majordomo
 SUBDIR+=	mb2md
 SUBDIR+=	mblaze
 SUBDIR+=	mdfrm
+SUBDIR+=	meli
 SUBDIR+=	mess822
 SUBDIR+=	metamail
 SUBDIR+=	mew
