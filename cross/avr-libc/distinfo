@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.15 2020/03/31 12:59:27 mef Exp $
+$NetBSD: distinfo,v 1.16 2021/09/08 12:20:35 micha Exp $
 
 SHA1 (avr-libc-2.0.0.tar.bz2) = c46b4c92bd88339f4d8d9bce29893661be890845
 RMD160 (avr-libc-2.0.0.tar.bz2) = 3185d66f9c3024ecbf56d272033b87eac4c49ad2
 SHA512 (avr-libc-2.0.0.tar.bz2) = fc8d062043d633350dbe05978935dcb8028257a4f1013f246af9658aef0671def19ac11577d1ee9302df68df1b8cf030b22441d96852e185db212263aacabea6
 Size (avr-libc-2.0.0.tar.bz2) = 3590893 bytes
-SHA1 (patch-doc_Makefile.in) = e44e69a7a438c4175a8c15c0548b77df49a691d8
-SHA1 (patch-doc_api_Makefile.in) = 0d30c3704d2b5651a68293c8b78afed19f86fdbb
+SHA1 (patch-doc_Makefile.in) = 948571851d14a15dd6aea71fa94fab86349d0988
+SHA1 (patch-doc_api_Makefile.in) = f40ae53e9ebfdeec562746586e2145570fb2429d
+SHA1 (patch-include_avr_power.h) = 0b1c6f4dd9339cae40c740868ba85c39f3eeb74d
+SHA1 (patch-include_avr_wdt.h) = 4e0882cc6e795870e58182ebe7820f9bc98bf2ce
