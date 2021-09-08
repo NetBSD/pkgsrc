@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4582 2021/09/08 12:04:47 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4583 2021/09/08 12:14:42 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7176,3 +7176,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-waldo to 0.3.0 [mef 2021-09-08]
 	Updated textproc/R-htmlTable to 2.2.1 [mef 2021-09-08]
 	Updated cross/avr-binutils to 2.37 [micha 2021-09-08]
+	Updated cross/avr-gcc to 10.3.0 [micha 2021-09-08]
