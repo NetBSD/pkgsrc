@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2021/03/15 17:00:06 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/08 23:45:45 gdt Exp $
 
-# Upstream has newer files but no newer actual releases.
-# https://sourceforge.net/p/iperf2/tickets/102/
-DISTNAME=	iperf-2.0.13
+DISTNAME=	iperf-2.1.4
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf2/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/iperf2/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 LICENSE=	modified-bsd
