@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21010 2021/09/08 12:30:26 mef Exp $
+$NetBSD: TODO,v 1.21011 2021/09/08 13:04:49 mef Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-stars-0.5.2
 	o R-statmod-1.4.35
 	o R-stringdist-0.9.6.3
-	o R-stringi-1.5.3
 	o R-survey-4.0
 	o R-tensorA-0.36.2
 	o R-tidyr-1.1.3
