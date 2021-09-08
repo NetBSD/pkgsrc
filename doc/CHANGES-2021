@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4579 2021/09/08 10:44:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4580 2021/09/08 10:44:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7173,3 +7173,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.9 [pin 2021-09-07]
 	Updated net/haproxy to 2.4.4 [jperkin 2021-09-08]
 	Added audio/spotify-player version 0.2.0 [pin 2021-09-08]
+	Updated devel/R-waldo to 0.3.0 [mef 2021-09-08]
