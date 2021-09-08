@@ -1,0 +1,15 @@
+$NetBSD: patch-gas_doc_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+
+Avoid installing info files (which duplicates with other CPU).
+
+--- gas/doc/Makefile.in.orig	2021-07-18 16:37:38.000000000 +0000
++++ gas/doc/Makefile.in
+@@ -175,7 +175,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
+ am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
+ am__v_texidevnull_0 = > /dev/null
+ am__v_texidevnull_1 = 
+-INFO_DEPS = as.info
++INFO_DEPS =
+ TEXINFO_TEX = $(top_srcdir)/../texinfo.tex
+ am__TEXINFO_TEX_DIR = $(top_srcdir)/..
+ DVIS = as.dvi
