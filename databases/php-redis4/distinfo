@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2021/03/07 12:58:28 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/09/08 15:38:48 mef Exp $
 
-SHA1 (php-redis4/4.3.0.tar.gz) = 876f6f06ec8bc9e64d85d344f8b0b2422d1c469c
-RMD160 (php-redis4/4.3.0.tar.gz) = bfe133981746004eb77c0891dd91d9d74d4656a9
-SHA512 (php-redis4/4.3.0.tar.gz) = b7ed577fb2853664731397e7093160d26a568688ee533e47dc62365307b523ff5fa93fd84183c848d6187c935bdb391f0ee188e1674c0f5e57e53dda9c3fb23d
-Size (php-redis4/4.3.0.tar.gz) = 242332 bytes
+SHA1 (php-redis/4.3.0.tar.gz) = 876f6f06ec8bc9e64d85d344f8b0b2422d1c469c
+RMD160 (php-redis/4.3.0.tar.gz) = bfe133981746004eb77c0891dd91d9d74d4656a9
+SHA512 (php-redis/4.3.0.tar.gz) = b7ed577fb2853664731397e7093160d26a568688ee533e47dc62365307b523ff5fa93fd84183c848d6187c935bdb391f0ee188e1674c0f5e57e53dda9c3fb23d
+Size (php-redis/4.3.0.tar.gz) = 242332 bytes
 SHA1 (patch-config.m4) = 07dd8fe81aa26c64fff84c3183531047eff94acb
