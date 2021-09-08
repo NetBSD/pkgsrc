@@ -1,0 +1,24 @@
+$NetBSD: patch-ld_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+
+Avoid installing info and po (NLS) files.
+
+--- ld/Makefile.in.orig	2021-07-18 16:38:34.000000000 +0000
++++ ld/Makefile.in
+@@ -298,7 +298,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
+ am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
+ am__v_texidevnull_0 = > /dev/null
+ am__v_texidevnull_1 = 
+-INFO_DEPS = ld.info
++INFO_DEPS =
+ am__TEXINFO_TEX_DIR = $(srcdir)/../texinfo
+ DVIS = ld.dvi
+ PDFS = ld.pdf
+@@ -540,7 +540,7 @@ zlibinc = @zlibinc@
+ AUTOMAKE_OPTIONS = dejagnu no-texinfo.tex no-dist foreign info-in-builddir
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+ TEXINFO_TEX = ../texinfo/texinfo.tex
+-SUBDIRS = po
++SUBDIRS =
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
