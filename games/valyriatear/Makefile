@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/04/19 15:29:59 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/08 21:05:09 nia Exp $
 
 DISTNAME=	ValyriaTear-src-with-deps-1.1.0
 PKGNAME=	${DISTNAME:tl:S/-src-with-deps//1}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ValyriaTear/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/18 17:57:49 leot Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/08 21:05:03 nia Exp $
 
 DISTNAME=	astromenace-1.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewizard/}
 GITHUB_PROJECT=	astromenace

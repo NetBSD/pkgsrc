@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/04/21 11:41:39 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/08 21:05:04 nia Exp $
 
 DISTNAME=	easyrpg-player-0.6.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://easyrpg.org/downloads/player/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
