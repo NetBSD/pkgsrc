@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/08 13:58:27 pin Exp $
+bin/meli
+man/man1/meli.1
+man/man5/meli-themes.5
+man/man5/meli.conf.5
