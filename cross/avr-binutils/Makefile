@@ -1,39 +1,37 @@
-# $NetBSD: Makefile,v 1.31 2021/05/24 19:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2021/09/08 12:02:59 micha Exp $
 
-DISTNAME=		binutils-2.30
+DISTNAME=		binutils-2.37
 PKGNAME=		${DISTNAME:S/^/avr-/}
-PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU binutils for Atmel AVR 8-bit RISC microcontrollers
-LICENSE=		gnu-gpl-v3
+LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
+USE_LANGUAGES=		c c++
 # No need to use makeinfo - this package doesn't install the documentation.
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 
-# follows to devel/binutils
-# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
-.include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
-	empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
-USE_TOOLS+=		ksh
-CONFIG_SHELL=		ksh
-.endif
-
-CONFIGURE_ARGS+=	--disable-werror --target=avr --disable-nls
+CONFIGURE_ARGS+=	--enable-deterministic-archives
+CONFIGURE_ARGS+=	--disable-lto
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ARGS+=	--target=avr
+CONFIGURE_ARGS+=	--with-system-zlib
 
 AUTO_MKDIRS=		yes
 
-# Prevent the need to run texi2pod.pl and pod2man hence
-# the need for perl as build dependency.
+TEST_DEPENDS=		dejagnu>=1.6.2:../../devel/dejagnu
+TEST_TARGET=		check
+
+# Prevent the need to run texi2pod.pl and pod2mane
+# hence the need for perl as build dependency.
 post-configure:
 	set -e;							\
 	cd ${WRKSRC};						\
@@ -50,16 +48,23 @@ post-build:
 	(cd ${WRKSRC}/bfd; ${GMAKE} all libbfd.a);
 
 post-install:
-	# Emulator/simulvar needs library files
+	# emulators/simulvar needs library files
 	(cd ${WRKSRC}/bfd; 					\
 	${GMAKE} install-exec install-data; 			\
-	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
+	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la	\
+	  ${DESTDIR}${PREFIX}/avr/lib;				\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
-	# emulator/simulavr wants following header files
+	# emulators/simulavr wants following header files
 	(cd ${WRKSRC}/include;					\
 	for f in ansidecl.h symcat.h; do			\
 	  ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/avr/include;	\
-	done;	\
+	done;							\
 	)
+	# Plugins may collide with other binutils flavours
+	${MV} ${DESTDIR}${PREFIX}/lib/bfd-plugins		\
+	  ${DESTDIR}${PREFIX}/avr/lib/
+
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
