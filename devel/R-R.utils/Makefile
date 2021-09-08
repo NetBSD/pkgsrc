@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/28 04:47:17 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/08 00:27:17 mef Exp $
 
 R_PKGNAME=	R.utils
 R_PKGVER=	2.10.1
@@ -9,6 +9,7 @@ COMMENT=	Various Programming Utilities
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	R-R.methodsS3-[0-9]*:../../devel/R-R.methodsS3
+DEPENDS+=	R-R.oo-[0-9]*:../../devel/R-R.oo
 
 USE_LANGUAGES=	# none
 
