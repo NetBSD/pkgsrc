@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/07/31 18:44:15 brook Exp $
+$NetBSD: distinfo,v 1.6 2021/09/08 13:04:22 mef Exp $
 
-SHA1 (R/stringi_1.4.6.tar.gz) = 9790f85eea96293481a0564adecafeb2b8ad2af5
-RMD160 (R/stringi_1.4.6.tar.gz) = 23f53903bf91d1d12b7a145592f3e86b0fd70d22
-SHA512 (R/stringi_1.4.6.tar.gz) = 1844757f6485ea13272e3aa67eea98c451547e1cc518f2f56a734e04c0b06ff2b38c7950e1d8486cbdf18e6828f40765e18de85ad7dc8fc74dc3a204af653d95
-Size (R/stringi_1.4.6.tar.gz) = 7284354 bytes
+SHA1 (R/stringi_1.7.4.tar.gz) = 01462c95a026566a525ed9a96111c230732b4d73
+RMD160 (R/stringi_1.7.4.tar.gz) = 064f0a09b185b109ee3e290972fec1b8b2b54405
+SHA512 (R/stringi_1.7.4.tar.gz) = bec15e8d6cb3f8ee14df0601c241f3b61dcdcd6d0d4b23cf1810094efa85e1234304154f4aa24eb58ede376a31fb16502d29d20c9667dd0f9121afea64b311a1
+Size (R/stringi_1.7.4.tar.gz) = 7599762 bytes
