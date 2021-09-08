@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21009 2021/09/08 12:04:47 micha Exp $
+$NetBSD: TODO,v 1.21010 2021/09/08 12:30:26 mef Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-gss-2.2.2
 	o R-gstat-2.0.7
 	o R-gtools-3.8.2
-	o R-hunspell-3.0.1
 	o R-igraph-1.2.6
 	o R-intervals-0.15.2
 	o R-jsonlite-1.7.2
