@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/07/16 12:56:48 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/09/08 12:02:59 micha Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -12,6 +12,7 @@ avr/bin/strip
 avr/include/ansidecl.h
 avr/include/bfd.h
 avr/include/symcat.h
+avr/lib/bfd-plugins/libdep.so
 avr/lib/ldscripts/avr1.x
 avr/lib/ldscripts/avr1.xbn
 avr/lib/ldscripts/avr1.xe
@@ -145,7 +146,6 @@ man/man1/avr-dlltool.1
 man/man1/avr-elfedit.1
 man/man1/avr-gprof.1
 man/man1/avr-ld.1
-man/man1/avr-nlmconv.1
 man/man1/avr-nm.1
 man/man1/avr-objcopy.1
 man/man1/avr-objdump.1
