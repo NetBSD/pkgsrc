@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4587 2021/09/08 13:38:53 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4588 2021/09/08 13:59:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7181,3 +7181,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-hunspell to 3.0.1 [mef 2021-09-08]
 	Updated textproc/R-stringi to 1.7.4 [mef 2021-09-08]
 	Updated textproc/R-openxlsx to 4.2.4 [mef 2021-09-08]
+	Added mail/meli version 0.7.1 [pin 2021-09-08]
