@@ -1,11 +1,11 @@
-$NetBSD: patch-doc_api_Makefile.in,v 1.3 2020/03/31 12:59:27 mef Exp $
+$NetBSD: patch-doc_api_Makefile.in,v 1.4 2021/09/08 12:20:35 micha Exp $
 
 Fix dependencies. Ultimately ignore the errors from latex though, since
 undefined references remain.
 
 --- doc/api/Makefile.in.orig	2016-06-19 16:33:29.514161905 +0000
 +++ doc/api/Makefile.in
-@@ -624,7 +624,7 @@ $(USER_MANUAL)/index.html: latex_src/ref
+@@ -636,7 +636,7 @@ $(USER_MANUAL)/index.html: latex_src/ref
  dox-pdf: $(USER_MANUAL).pdf
  
  $(USER_MANUAL).pdf: latex_src/refman.tex
