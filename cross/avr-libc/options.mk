@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/04/04 03:22:02 mef Exp $
+# $NetBSD: options.mk,v 1.7 2021/09/08 12:20:35 micha Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -9,7 +9,7 @@ PLIST_VARS+=			doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
 CONFIGURE_ARGS+=	--enable-doc
-BUILD_DEPENDS+=		doxygen>=1.8.9.1.nb1:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.8.20:../../devel/doxygen
 BUILD_DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 BUILD_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
@@ -19,17 +19,22 @@ BUILD_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
 BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
 BUILD_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
 BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+BUILD_DEPENDS+=		tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
+BUILD_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
 BUILD_DEPENDS+=		tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 BUILD_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 BUILD_DEPENDS+=		tex-float-[0-9]*:../../print/tex-float
 BUILD_DEPENDS+=		tex-geometry-[0-9]*:../../print/tex-geometry
 BUILD_DEPENDS+=		tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
+BUILD_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
 BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
 BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=		tex-multirow-[0-9]*:../../print/tex-multirow
 BUILD_DEPENDS+=		tex-natbib-[0-9]*:../../print/tex-natbib
+BUILD_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 BUILD_DEPENDS+=		tex-pgf-[0-9]*:../../print/tex-pgf
 BUILD_DEPENDS+=		tex-sectsty-[0-9]*:../../print/tex-sectsty
+BUILD_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
 BUILD_DEPENDS+=		tex-tabu-[0-9]*:../../print/tex-tabu
 BUILD_DEPENDS+=		tex-tocloft-[0-9]*:../../print/tex-tocloft
 BUILD_DEPENDS+=		tex-ulem-[0-9]*:../../print/tex-ulem
@@ -38,6 +43,14 @@ BUILD_DEPENDS+=		tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 BUILD_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
 BUILD_DEPENDS+=		makeindexk-[0-9]*:../../textproc/makeindexk
 
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+# Only installed if option doc is enabled.
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,$${PREFIX},${PREFIX},g'
+
 post-extract:
 	${MKDIR} ${WRKSRC}/doc/api/latex_src
 	${LN} -s ../../examples/largedemo/largedemo-setup.jpg ${WRKSRC}/doc/api/latex_src
@@ -45,11 +58,17 @@ post-extract:
 	${LN} -s ../../examples/largedemo/largedemo-wiring2.jpg ${WRKSRC}/doc/api/latex_src
 	${LN} -s ../../examples/stdiodemo/stdiodemo-setup.jpg ${WRKSRC}/doc/api/latex_src
 
+pre-configure:
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+
 post-install:
-	${INSTALL_DATA} \
-                ${WRKSRC}/LICENSE \
-                ${WRKSRC}/AUTHORS \
-                ${DESTDIR}${PREFIX}/share/doc/avr-libc
+	${INSTALL_DATA}					\
+		${WRKSRC}/LICENSE			\
+		${WRKSRC}/AUTHORS			\
+		${DESTDIR}${PREFIX}/share/doc/avr-libc
+	${INSTALL_DATA}					\
+		${WRKDIR}/INSTALL.pkgsrc		\
+		${DESTDIR}${PREFIX}/share/doc/avr-libc
 	## delete following or similar files, which includes PATH at build time.
 	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
 	${RM} -f ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/*${PKGVERSION_NOREV}*
