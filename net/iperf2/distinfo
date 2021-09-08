@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/03/15 17:00:06 gdt Exp $
+$NetBSD: distinfo,v 1.3 2021/09/08 23:45:45 gdt Exp $
 
-SHA1 (iperf-2.0.13.tar.gz) = 0c7625c61087b9e6866421abb8bb533658b40a8d
-RMD160 (iperf-2.0.13.tar.gz) = 199ccc03cabb48e825b948688bbc1867369cf9ef
-SHA512 (iperf-2.0.13.tar.gz) = 40fcfb8f4d27887f53a743ac07396511fb2a7ac59f4b300fe36896bd0241e191945fa253705990711772ee776d5e4227ed62760fc92abebdfebcedd11c27c0ea
-Size (iperf-2.0.13.tar.gz) = 326148 bytes
-SHA1 (patch-src_Listener.cpp) = 76751e63e17f7c65d182ed9fdefdec0170aa28f2
-SHA1 (patch-src_PerfSocket.cpp) = f59214e44c29ca73132a3edcbebc3701a2da46cd
+SHA1 (iperf-2.1.4.tar.gz) = f1b7835eb74094b1a1849faeafe35b7c362f4ab5
+RMD160 (iperf-2.1.4.tar.gz) = 26262ed6c1b062555c27ea7979916566964f81e1
+SHA512 (iperf-2.1.4.tar.gz) = 75a0e61eba649d843e23855dec3c578db573c1b34a59837d6a210b85c57b8bf92a244bacc61cf9b8796a9965982950d8d555abed69f1f9e4149f31391463ad6e
+Size (iperf-2.1.4.tar.gz) = 395909 bytes
