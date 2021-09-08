@@ -1,8 +1,8 @@
-$NetBSD: patch-port_cpl__conv.cpp,v 1.3 2020/04/28 00:24:48 gdt Exp $
+$NetBSD: patch-port_cpl__conv.cpp,v 1.4 2021/09/08 22:48:13 gdt Exp $
 
 Avoid visibility define that masks usage that is apparently beyond XOPEN or C99.
 
-Not yet net upstream; waiting until we are caught up.
+Not yet sent upstream.
 
 --- port/cpl_conv.cpp.orig	2020-01-08 11:49:05.000000000 +0000
 +++ port/cpl_conv.cpp
