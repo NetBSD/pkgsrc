@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/05/21 15:01:51 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/08 21:05:06 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ioquake/}
 GITHUB_PROJECT=	ioq3

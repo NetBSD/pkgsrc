@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/12/15 09:12:07 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/08 21:04:59 nia Exp $
 
 DISTNAME=	8aeac7bd9fa7
 PKGNAME=	blastem-0.6.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.retrodev.com/repos/blastem/archive/
 DIST_SUBDIR=	blastem
