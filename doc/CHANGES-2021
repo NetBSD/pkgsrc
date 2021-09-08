@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4590 2021/09/08 19:19:33 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4591 2021/09/08 22:20:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7184,3 +7184,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added mail/meli version 0.7.1 [pin 2021-09-08]
 	Added time/R-tzdb version 0.1.2 [mef 2021-09-08]
 	Updated audio/jack to 1.9.19 [nia 2021-09-08]
+	Added www/firefox91 version 91.0.1 [nia 2021-09-08]
