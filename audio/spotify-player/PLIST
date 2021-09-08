@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/08 10:42:54 pin Exp $
+bin/spotify_player
