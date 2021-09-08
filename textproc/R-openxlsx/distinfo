@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:48:46 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/09/08 13:38:35 mef Exp $
 
-SHA1 (R/openxlsx_4.1.0.1.tar.gz) = 89d19396ccfeb8acc44a092dc5636e460003c20c
-RMD160 (R/openxlsx_4.1.0.1.tar.gz) = 9dfd3db1a83f9d9bfae5d28c18c7f8f61a783295
-SHA512 (R/openxlsx_4.1.0.1.tar.gz) = 6f108d5ec654e005fc21ceeb829e22bbf8717eef6aa36d8f13baf7165da9c4c641acb1bda6471647255043b93eff3f1793562e7b8bc3135d49f71806654f9641
-Size (R/openxlsx_4.1.0.1.tar.gz) = 1458738 bytes
+SHA1 (R/openxlsx_4.2.4.tar.gz) = 7cbb7ec7ed0d8f875876a93d11d3c129c57f4615
+RMD160 (R/openxlsx_4.2.4.tar.gz) = afaa4e5deb029ca4594e05e68922713769496551
+SHA512 (R/openxlsx_4.2.4.tar.gz) = 72832cc23c4dd920298078715d337e1b950ca6dd85a96f607fe11dc5a1b01092415cb118106fe441f63deb68b35d6f4c541f5ecefa2ee2e604cbe02a23673f67
+Size (R/openxlsx_4.2.4.tar.gz) = 1322279 bytes
