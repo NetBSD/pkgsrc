@@ -1,0 +1,16 @@
+$NetBSD: patch-gcc_configure,v 1.1 2021/09/08 12:07:06 micha Exp $
+
+Add NetBSD support:
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90143
+
+--- gcc/configure.orig	2015-09-30 23:06:11.000000000 +0000
++++ gcc/configure
+@@ -29972,7 +29972,7 @@ case "$target" in
+       gcc_cv_target_dl_iterate_phdr=no
+     fi
+     ;;
+-  *-*-dragonfly* | *-*-freebsd*)
++  *-*-dragonfly* | *-*-freebsd* | *-*-netbsd* )
+     if grep dl_iterate_phdr $target_header_dir/sys/link_elf.h > /dev/null 2>&1; then
+       gcc_cv_target_dl_iterate_phdr=yes
+     else

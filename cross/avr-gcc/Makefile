@@ -1,71 +1,69 @@
-# $NetBSD: Makefile,v 1.46 2021/05/24 19:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2021/09/08 12:07:06 micha Exp $
 
-DISTNAME=		gcc-4.8.3
+DISTNAME=		gcc-10.3.0
 PKGNAME=		${DISTNAME:C/^/avr-/}
-PKGREVISION=		7
 CATEGORIES=		cross
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		GNU gcc-4.8 for Atmel AVR 8-bit RISC microcontrollers
+COMMENT=		GCC for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
+DISTFILES=		${DEFAULT_DISTFILES}
+EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
+DEPENDS+=		avr-binutils>=2.37:../../cross/avr-binutils
+
+.include "../../mk/bsd.prefs.mk"
+
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash gmake gsed:run
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # has sub-configures
+GNU_CONFIGURE_STRICT=	no
 
-USE_LANGUAGES=		c c++03
-USE_TOOLS+=		bison gmake lex perl tar msgfmt autoconf pod2man
-USE_PKGLOCALEDIR=	yes
-USE_GNU_CONFIGURE_HOST=	no
+# Build outside ${WRKSRC}
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 
-CHECK_PORTABILITY_SKIP+=	contrib/*
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--enable-languages='c c++'
-CONFIGURE_ARGS+=	--disable-nls --disable-lto
-CONFIGURE_ARGS+=	--disable-libquadmath-support
 CONFIGURE_ARGS+=	--enable-multilib
+CONFIGURE_ARGS+=	--disable-libquadmath-support
+CONFIGURE_ARGS+=	--disable-lto
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--disable-threads
 
-MAKE_ENV+=		MACHINE_ARCH=avr
-MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
-MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
-MAKE_ENV+=		CPPFLAGS_FOR_BUILD=${CPPFLAGS_FOR_BUILD:Q}
+# XXX: Workaround for configure error:
+#    checking dependency style of c++... none
+#    configure: error: no usable dependency style found
+MAKE_ENV+=		am_cv_CXX_dependencies_compiler_type=gcc3
 
-SUBST_CLASSES+=		sed
-SUBST_FILES.sed=	fixincludes/fixincl.x
-SUBST_SED.sed=		-e 's|@SED@|${TOOLS_PATH.sed}|g'
-SUBST_STAGE.sed=	pre-configure
-
-pre-configure:
-	${MKDIR} ${WRKDIR}/obj
-	${LN} -s ${WRKDIR}/obj/gcc/include/unwind.h ${WRKSRC}/gcc/unwind.h
-
-# To avoid the conflict with other cross and native compiler
-post-install:
-	(cd ${DESTDIR}${PREFIX}/lib; \
-	 ${MV} libiberty.a gcc/avr/ )
-
-CONFIGURE_DIRS=		${WRKDIR}/obj
-CONFIGURE_SCRIPT=	${WRKSRC}/configure
+# From lang/gcc10
+MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
+MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
+MAKE_ENV.NetBSD+=	ac_cv_func_freelocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
+MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 INSTALLATION_DIRS+=	avr/bin
 
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
-# mpc is required since gcc-4.5.x
-.include "../../math/mpcomplex/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "options.mk"
 
-CFLAGS_FOR_BUILD:=	${CFLAGS}
-CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
-CPPFLAGS_FOR_BUILD:=	${CPPFLAGS}
-CFLAGS:=		# empty
-CPPFLAGS:=		# empty
-CXXFLAGS:=		# empty
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+# Remove libcc1 and some manual pages from generic locations
+# File paths from this package should not overlap with other GCC packages
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libcc1.*
+	${RM} -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
+
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
