@@ -1,0 +1,15 @@
+# $NetBSD: buildlink3.mk,v 1.1 2021/09/08 14:50:28 mef Exp $
+#
+
+BUILDLINK_TREE+=	r_cpp11
+
+.if !defined(R_CPP11_BUILDLINK3_MK)
+R_CPP11_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.r_cpp11+=	R-cpp11>=0.3.1
+BUILDLINK_ABI_DEPENDS.r_cpp11+=	R-cpp11>=0.3.1
+BUILDLINK_PKGSRCDIR.r_cpp11?=	../../lang/R-cpp11
+
+.endif # R_CPP11_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-r_cpp11
