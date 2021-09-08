@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4592 2021/09/08 22:20:47 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4593 2021/09/08 22:54:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7186,3 +7186,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/jack to 1.9.19 [nia 2021-09-08]
 	Added www/firefox91 version 91.0.1 [nia 2021-09-08]
 	Added www/firefox91-l10n version 91.0.1 [nia 2021-09-08]
+	Updated geography/gdal-lib to 3.3.2 [gdt 2021-09-08]
