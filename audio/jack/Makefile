@@ -1,127 +1,54 @@
-# $NetBSD: Makefile,v 1.41 2021/05/24 19:49:05 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2021/09/08 19:19:19 nia Exp $
 
-DISTNAME=	jack-audio-connection-kit-0.125.0
-PKGREVISION=	4
-PKGNAME=	${DISTNAME:S/audio-connection-kit-//}
+DISTNAME=	jack2-1.9.19
+PKGNAME=	${DISTNAME:S/jack2/jack/1}
 CATEGORIES=	audio
-MASTER_SITES=	http://jackaudio.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jackaudio/}
+GITHUB_PROJECT=	jack2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jackaudio.org/
-COMMENT=	JACK audio connection kit
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://jackaudio.org/
+COMMENT=	Low-latency audio server
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEFS+=		JACKD_DEFAULT_TMPDIR
-BUILD_DEFS+=		JACKD_PROCFS_PATH
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config bash
 
-SET_LIBDIR=		yes
-USE_TOOLS+=		pkg-config
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-alsa
-CONFIGURE_ARGS+=	--disable-firewire
-CONFIGURE_ARGS+=	--disable-freebob
-CONFIGURE_ARGS+=	--disable-optimize
-CONFIGURE_ARGS+=	--enable-timestamps
-CONFIGURE_ARGS+=	--enable-resize
-CONFIGURE_ENV+=		HAVE_DOXYGEN=no
-CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
-PKGCONFIG_OVERRIDE+=	jack.pc.in
-
-PTHREAD_OPTS+=		require native
-
-CFLAGS.NetBSD+=		-D_NETBSD_SOURCE -lossaudio
-CFLAGS.Linux+=		-D_GNU_SOURCE
-CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
-
-JACKD_DEFAULT_TMPDIR?=	/tmp
+WAF_ARGS+=	--systemd=no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
-CFLAGS+=		-DJACK_HOST_HAS_BSD_POLL
-.endif
-###
-### XXX Is there a way to properly use the emulation framework
-###	for this?
-###
-.if exists(${PREFIX}/emul/linux/proc) && ${OPSYS} != "Linux"
-JACKD_PROCFS_PATH?=	${PREFIX}/emul/linux/proc
-.else
-JACKD_PROCFS_PATH?=	/proc
+PLIST_VARS+=	alsa
+.if ${OPSYS} == "Linux"
+PLIST.alsa=	yes
 .endif
 
-.if exists(/dev/shm) && ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--with-default-tmpdir=/dev/shm
-.else
-CONFIGURE_ARGS+=	--with-default-tmpdir=${JACKD_DEFAULT_TMPDIR:Q}
+PLIST_VARS+=	boomer oss
+.if ${OPSYS} == "SunOS"
+PLIST.boomer=	yes
+PLIST.oss=	yes
 .endif
 
-PLIST_VARS=		coreaudio oss sunaudio
-###
-### XXX	This is untested.  Please file a PR and/or commit a fix should
-###	any problems arise.
-###
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-coreaudio
-PLIST.coreaudio=	yes
-.else
-CONFIGURE_ARGS+=	--disable-coreaudio
+PLIST_VARS+=	sun
+.if ${OPSYS} == "NetBSD"
+PLIST.sun=	yes
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS" || \
-    exists(/usr/include/sys/audioio.h)
-CONFIGURE_ARGS+=	--enable-sun
-PLIST.sunaudio=		yes
-.else
-CONFIGURE_ARGS+=	--disable-sun
+REPLACE_PYTHON+=	waf
+REPLACE_PYTHON+=	tools/jack_control
+REPLACE_BASH+=		svnversion_regenerate.sh
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+PKGCONFIG_OVERRIDE+=		jack.pc.in
+
+.include "../../lang/python/application.mk"
+.include "../../devel/waf/waf.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-
-.include "../../mk/oss.buildlink3.mk"
-
-.if ${OSS_TYPE} != "none" && ${OPSYS} != "NetBSD" && ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=	--enable-oss
-PLIST.oss=		yes
-MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO}
-CFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
-.else
-CONFIGURE_ARGS+=	--disable-oss
-.endif
-
-SUBST_CLASSES+=		jacksrc
-SUBST_FILES.jacksrc=	libjack/unlock.c
-SUBST_MESSAGE.jacksrc=	Peforming substitutions in JACK sources.
-SUBST_STAGE.jacksrc=	pre-build
-SUBST_VARS.jacksrc=	PREFIX JACKD_PROCFS_PATH X11BASE
-
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PKG_OPTIONS_VAR=	PKG_OPTIONS.jack
-PKG_SUPPORTED_OPTIONS=	simd
-# on 7.99.26/amd64:
-# ./simd.c: In function 'x86_3dnow_add2f':
-# ./simd.c:211:3: error: impossible constraint in 'asm'
-#   asm volatile (
-#PKG_SUGGESTED_OPTIONS=	simd
-
-.  include "../../mk/bsd.options.mk"
-
-.  if !empty(PKG_OPTIONS:Msimd)
-CONFIGURE_ARGS+=	--enable-dynsimd
-.  else
-CONFIGURE_ARGS+=	--disable-dynsimd
-.  endif
-.endif
-
-BDB_ACCEPTED=		db4 db5
-BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
-
-post-extract:
-	${MKDIR} ${WRKSRC}/config/os/netbsd
-	${CP} ${FILESDIR}/atomicity.h ${WRKSRC}/config/os/netbsd
-
+.include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

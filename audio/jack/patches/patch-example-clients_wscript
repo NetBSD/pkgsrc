@@ -1,0 +1,33 @@
+$NetBSD: patch-example-clients_wscript,v 1.1 2021/09/08 19:19:20 nia Exp $
+
+Add NetBSD support.
+
+--- example-clients/wscript.orig	2021-07-15 06:18:26.000000000 +0000
++++ example-clients/wscript
+@@ -33,6 +33,8 @@ def build(bld):
+         os_incdir = ['../macosx', '../posix']
+     if bld.env['IS_SUN']:
+         os_incdir = ['../solaris', '../posix']
++    if bld.env['IS_NETBSD']:
++        os_incdir = ['../netbsd', '../posix']
+     if bld.env['IS_WINDOWS']:
+         os_incdir = ['../windows']
+     for example_program, example_program_source in list(example_programs.items()):
+@@ -58,6 +60,8 @@ def build(bld):
+         prog.use = use
+         if bld.env['IS_LINUX']:
+             prog.use += ['RT', 'M']
++        if bld.env['IS_NETBSD']:
++            prog.use += ['RT', 'M']
+         if bld.env['IS_SUN']:
+             prog.use += ['M']
+         if bld.env['IS_WINDOWS'] and bld.env['BUILD_STATIC']:
+@@ -76,6 +80,8 @@ def build(bld):
+             prog.use += ['SNDFILE']
+         if bld.env['IS_LINUX']:
+             prog.use += ['RT', 'SNDFILE']
++        if bld.env['IS_NETBSD']:
++            prog.use += ['RT', 'SNDFILE']
+         if bld.env['IS_SUN']:
+             prog.use += ['RT', 'SNDFILE']
+         if bld.env['IS_WINDOWS']:
