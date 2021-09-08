@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.139 2021/06/23 20:33:11 nia Exp $
+# $NetBSD: Makefile,v 1.140 2021/09/08 22:48:13 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-PKGREVISION=	2
+#PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats
 
@@ -32,6 +32,9 @@ CPPFLAGS+=	-D__STDC_LIMIT_MACROS
 # \todo: Support geopdf by including poppler, PoDoFo, or PDFium.
 # https://gdal.org/drivers/raster/pdf.html
 
+# Avoid NetBSD base sqlite3, which is deficient because it lacks rtree.
+# \todo Enhance pkgsrc to be able to declare that modules are needed.
+#BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.36.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
