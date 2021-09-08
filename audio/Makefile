@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2021/08/06 13:50:24 nia Exp $
+# $NetBSD: Makefile,v 1.638 2021/09/08 10:43:46 pin Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -447,6 +447,7 @@ SUBDIR+=	sphinxtrain
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
 SUBDIR+=	splay
+SUBDIR+=	spotify-player
 SUBDIR+=	spotify-qt
 SUBDIR+=	sptk
 SUBDIR+=	strawberry
