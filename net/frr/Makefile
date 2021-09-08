@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/08/15 14:54:31 kardel Exp $
+# $NetBSD: Makefile,v 1.9 2021/09/08 11:12:37 kardel Exp $
 
 GITHUB_PROJECT=	frr
-VERSION=	8.0
+VERSION=	8.0.1
 GITHUB_TAG=	frr-${VERSION}
 DISTNAME=	frr-${VERSION}
 CATEGORIES=	net
