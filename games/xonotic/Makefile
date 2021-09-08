@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/05/14 09:48:59 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/09/08 21:05:10 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	https://dl.xonotic.org/
 EXTRACT_SUFX=	.zip
