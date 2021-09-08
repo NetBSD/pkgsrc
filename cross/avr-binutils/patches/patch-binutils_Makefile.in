@@ -1,0 +1,15 @@
+$NetBSD: patch-binutils_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+
+Avoid installing po (NLS) files.
+
+--- binutils/Makefile.in.orig	2021-07-18 16:38:08.000000000 +0000
++++ binutils/Makefile.in
+@@ -569,7 +569,7 @@ zlibdir = @zlibdir@
+ zlibinc = @zlibinc@
+ AUTOMAKE_OPTIONS = dejagnu no-dist foreign subdir-objects
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+-SUBDIRS = doc po
++SUBDIRS = doc
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
