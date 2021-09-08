@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_wscript,v 1.1 2021/09/08 19:19:20 nia Exp $
+
+Add NetBSD support.
+
+--- tests/wscript.orig	2021-07-15 06:18:26.000000000 +0000
++++ tests/wscript
+@@ -20,6 +20,8 @@ def build(bld):
+             prog.includes = ['..','../macosx', '../posix', '../common/jack', '../common']
+         if bld.env['IS_LINUX']:
+             prog.includes = ['..','../linux', '../posix', '../common/jack', '../common']
++        if bld.env['IS_NETBSD']:
++            prog.includes = ['..','../netbsd', '../posix', '../common/jack', '../common']
+         if bld.env['IS_SUN']:
+             prog.includes = ['..','../solaris', '../posix', '../common/jack', '../common']
+         prog.source = test_program_sources
