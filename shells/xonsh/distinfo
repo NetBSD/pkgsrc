@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/15 10:18:43 nonaka Exp $
+$NetBSD: distinfo,v 1.3 2021/09/09 11:38:04 nia Exp $
 
-SHA1 (xonsh-0.8.8.tar.gz) = 4735db1b1c2b812d004731665c25b98e0d0b7f98
-RMD160 (xonsh-0.8.8.tar.gz) = a31817ad6d6e02eed287b6489b4cc1fd8e0872e5
-SHA512 (xonsh-0.8.8.tar.gz) = 4839e2ea860ed9f78d3d27d9d9646dde06cee6f17c62d1f6a17ee0e2c9eec6ef8b81e1ad38009d4476682daeaa2f0745205ba0f74847c6409141fb0619de4f1b
-Size (xonsh-0.8.8.tar.gz) = 1969566 bytes
+SHA1 (xonsh-0.10.1.tar.gz) = ed323c447d6ed824e3c9fc10ffa2b8a4be4399f9
+RMD160 (xonsh-0.10.1.tar.gz) = b4a191c514eae9ce7bdee68ff407860aff2c9b53
+SHA512 (xonsh-0.10.1.tar.gz) = 6ccfa4fd30fac307b27db51f868e9516986c85831bc89fa72dcc28633fa429b928c09b8ff5bb55b86fc6e05f0a8e9ebe8810dcfac11fd97ae42bbd2e1aafc8a4
+Size (xonsh-0.10.1.tar.gz) = 12662490 bytes
