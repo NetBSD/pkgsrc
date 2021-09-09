@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/12/28 08:59:53 taca Exp $
+# $NetBSD: Makefile,v 1.11 2021/09/09 01:11:43 khorben Exp $
 
 PLUGIN=		enigma
+PKGREVISION=	1
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Enigma Plugin for Roundcube
