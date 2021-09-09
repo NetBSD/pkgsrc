@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2021/01/16 21:06:52 reinoud Exp $
+$NetBSD: distinfo,v 1.26 2021/09/09 21:41:59 nia Exp $
 
 SHA1 (pa_stable_v190600_20161030.tgz) = 56c596bba820d90df7d057d8f6a0ec6bf9ab82e8
 RMD160 (pa_stable_v190600_20161030.tgz) = e6e5cd3f3cb7469aa17549c189e445d573567e13
@@ -14,5 +14,5 @@ SHA1 (patch-src_common_pa__stream.c) = 58e6ab2a61957208973a59be2f1140abc922f360
 SHA1 (patch-src_common_pa__stream.h) = 94781a9ae79ea1340eea8caadc106416c019cf74
 SHA1 (patch-src_hostapi_alsa_pa__linux__alsa.c) = 71daf913422f72aa379ae8cc302186800cff7717
 SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 572c48f64104e22e7ae49acc54a26e549e381b5b
-SHA1 (patch-src_hostapi_sun_pa__unix__sun.c) = 0a2d26e477bb4c45d56b8d70db5a939911f4cf64
+SHA1 (patch-src_hostapi_sun_pa__unix__sun.c) = bab9b21d35d76afafa06c929bb35954d3870bc0d
 SHA1 (patch-src_os_unix_pa__unix__hostapis.c) = 8cfc7d7aac8f9803e204711ded3d64842913f4fd
