@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: scripts-larger_symbol_version.sh,v 1.1 2020/06/06 14:02:18 rillig Exp $
+# $NetBSD: scripts-larger_symbol_version.sh,v 1.2 2021/09/09 18:23:44 rillig Exp $
 #
 # Tests for mk/scripts/larger_symbol_version.awk.
 #
@@ -32,7 +32,7 @@ test_case_set_up() {
 	EOF
 
 	nm_cmd=$(mock_cmd mock-nm \
-        	--when-args '-D /usr/lib/libgcc_s.so' \
+		--when-args '-D /usr/lib/libgcc_s.so' \
 		--then-output "$(cat nm-output)"
 	)
 }
