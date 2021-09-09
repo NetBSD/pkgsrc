@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.21 2020/06/07 06:10:36 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.22 2021/09/09 21:59:36 mef Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -11,6 +11,7 @@
 # REPLACE_KSH
 # REPLACE_PERL
 # REPLACE_PERL6
+# REPLACE_R
 # REPLACE_SH
 #	Lists of filename patterns relative to WRKSRC in which the #!
 #	interpreter should be replaced by the pkgsrc one. Any directories
@@ -48,6 +49,7 @@ REPLACE_BASH?=	# none
 REPLACE_CSH?=	# none
 REPLACE_KSH?=	# none
 REPLACE_PERL?=	# none
+REPLACE_R?=	# none
 REPLACE_SH?=	# none
 
 .if !empty(REPLACE_AWK:M*)
@@ -93,6 +95,13 @@ REPLACE.sys-Perl6.new=	${PERL6}
 REPLACE_FILES.sys-Perl6=${REPLACE_PERL6}
 .endif
 
+.if !empty(REPLACE_R:M*)
+REPLACE_INTERPRETER+=	sys-R
+REPLACE.sys-R.old=	[^[:space:]]*R
+REPLACE.sys-R.new=	${PREFIX}/bin/R
+REPLACE_FILES.sys-R=	${REPLACE_R}
+.endif
+
 .if !empty(REPLACE_SH:M*)
 REPLACE_INTERPRETER+=	sys-sh
 REPLACE.sys-sh.old=	[^[:space:]]*sh
@@ -136,7 +145,7 @@ replace-interpreter:
 
 _VARGROUPS+=		interp
 _PKG_VARS.interp=	REPLACE_AWK REPLACE_BASH REPLACE_CSH REPLACE_KSH
-_PKG_VARS.interp+=	REPLACE_PERL REPLACE_PERL6 REPLACE_SH
+_PKG_VARS.interp+=	REPLACE_PERL REPLACE_PERL6 REPLACE_R REPLACE_SH
 _PKG_VARS.interp+=	REPLACE_INTERPRETER
 .for interp in ${REPLACE_INTERPRETER}
 _DEF_VARS.interp+=	REPLACE.${interp}.old REPLACE.${interp}.new REPLACE_FILES.${interp}
