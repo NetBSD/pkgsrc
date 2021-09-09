@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2021/09/09 12:03:09 nia Exp $
+# $NetBSD: Makefile,v 1.88 2021/09/09 12:14:42 nia Exp $
 
 DISTNAME=	libsndfile-1.0.31
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
 GITHUB_PROJECT=	libsndfile
