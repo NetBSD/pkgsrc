@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.49 2021/01/24 14:50:25 nia Exp $
+$NetBSD: distinfo,v 1.50 2021/09/09 12:03:09 nia Exp $
 
 SHA1 (libsndfile-1.0.31.tar.bz2) = f16a88e7223baef7c4497536dc1b55b56811debc
 RMD160 (libsndfile-1.0.31.tar.bz2) = ae3fc5bbcb10a034f3edc1240acacd9f1ec349a7
 SHA512 (libsndfile-1.0.31.tar.bz2) = 62202092e5cac6346fd3c0a977380e9bf888fc59d08c9c9707dc254a8ef6ed6356da2ab0430bb970c7b06ba5bb1dafa5d7b0fe13898834c1fe4acb16f409f0e1
 Size (libsndfile-1.0.31.tar.bz2) = 875335 bytes
+SHA1 (patch-CVE-2021-3246) = 08620e24b8a41afd7c164781bf6088028ffc97ed
+SHA1 (patch-src_wavlike.c) = b2524c62d8dad9959ff7a50c412b0e85bf433f47
