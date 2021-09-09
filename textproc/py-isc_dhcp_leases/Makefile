@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/01/06 01:48:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/09 00:21:13 gutteridge Exp $
 
 DISTNAME=	isc_dhcp_leases-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isc_dhcp_leases/}
 
