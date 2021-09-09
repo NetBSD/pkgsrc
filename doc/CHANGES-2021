@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4600 2021/09/09 08:04:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4601 2021/09/09 09:23:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7198,3 +7198,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libyang to v1.0.240 [kardel 2021-09-09]
 	Updated devel/py-flexmock to 0.10.9 [adam 2021-09-09]
 	Updated comms/py-esptool to 3.1 [adam 2021-09-09]
+	Updated x11/xcolor to 0.5.1 [pin 2021-09-09]
