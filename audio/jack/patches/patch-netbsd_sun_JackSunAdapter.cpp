@@ -1,10 +1,10 @@
-$NetBSD: patch-netbsd_sun_JackSunAdapter.cpp,v 1.1 2021/09/08 19:19:20 nia Exp $
+$NetBSD: patch-netbsd_sun_JackSunAdapter.cpp,v 1.2 2021/09/09 22:41:43 nia Exp $
 
 Add NetBSD support.
 
---- netbsd/sun/JackSunAdapter.cpp.orig	2021-09-08 13:51:19.685213690 +0000
+--- netbsd/sun/JackSunAdapter.cpp.orig	2021-09-09 21:08:54.598607823 +0000
 +++ netbsd/sun/JackSunAdapter.cpp
-@@ -0,0 +1,478 @@
+@@ -0,0 +1,490 @@
 +/*
 +Copyright (C) 2008 Grame & RTL 2008
 +
@@ -186,11 +186,17 @@ Add NetBSD support.
 +        return -1;
 +    }
 +
++#ifdef AUDIO_GETFORMAT
 +    if (fCaptureChannels == 0) {
 +        if (ioctl(fInFD, AUDIO_GETFORMAT, &info) != -1) {
 +            fCaptureChannels = info.record.channels;
 +        }
 +    }
++#else
++    if (fCaptureChannels == 0) {
++        fCaptureChannels = 2;
++    }
++#endif
 +
 +    jack_log("JackSunAdapter::OpenInput input fInFD = %d", fInFD);
 +
@@ -246,11 +252,17 @@ Add NetBSD support.
 +        return -1;
 +    }
 +
++#ifdef AUDIO_GETFORMAT
 +    if (fPlaybackChannels == 0) {
 +        if (ioctl(fOutFD, AUDIO_GETFORMAT, &info) == 0) {
 +            fPlaybackChannels = info.play.channels;
 +        }
 +    }
++#else
++    if (fPlaybackChannels == 0) {
++        fPlaybackChannels = 2;
++    }
++#endif
 +
 +    jack_log("JackSunAdapter::OpenOutput input fOutFD = %d", fOutFD);
 +
