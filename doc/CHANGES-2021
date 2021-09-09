@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4595 2021/09/08 23:46:24 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4596 2021/09/09 00:21:31 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7189,3 +7189,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gdal-lib to 3.3.2 [gdt 2021-09-08]
 	Updated geography/py-gdal to 3.3.2 [gdt 2021-09-08]
 	Updated net/iperf2 to 2.1.4 [gdt 2021-09-08]
+	Updated textproc/py-isc_dhcp_leases to 0.9.1nb1 [gutteridge 2021-09-09]
