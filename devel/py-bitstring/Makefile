@@ -1,19 +1,20 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/18 20:13:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/09 07:29:09 adam Exp $
 
-DISTNAME=	bitstring-3.1.7
+DISTNAME=	bitstring-3.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/scott-griffiths/bitstring
-COMMENT=	Python module to create, manipulate, and analyze binary data
+COMMENT=	Simple construction, analysis and modification of binary data
 LICENSE=	mit
 
-do-test:
-	${RUN} cd ${WRKSRC}/test && \
-	${SETENV} ${TEST_ENV} \
-	${PYTHONBIN} -m unittest discover
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+do-test:
+	cd ${WRKSRC}/test && \
+	${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
