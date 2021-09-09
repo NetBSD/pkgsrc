@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.3 2020/01/14 14:30:00 taca Exp $
+# $NetBSD: plugins.mk,v 1.4 2021/09/09 01:11:43 khorben Exp $
 #
 
 # plugin's PKGNAME
@@ -12,14 +12,9 @@ EXTRACT_ELEMENTS?=	${WRKNAME}/${PLUGIN_DIR}
 PLUGIN_DIR?=		plugins/${PLUGIN}
 CONF_PLUGINS?=		${PLUGIN}
 
-#
-# plugin directory
-INSTALLATION_DIRS=	${RCDIR}/${PLUGIN_DIR}
-
-
 .for f in ${CONF_PLUGINS}
 CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
-			${RCDIR}/plugins/${f}/config.inc.php \
+			${PKG_SYSCONFDIR}/${f}.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 .endfor
 
