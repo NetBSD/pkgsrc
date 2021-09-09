@@ -1,10 +1,10 @@
-$NetBSD: patch-netbsd_sun_JackSunDriver.cpp,v 1.1 2021/09/08 19:19:20 nia Exp $
+$NetBSD: patch-netbsd_sun_JackSunDriver.cpp,v 1.2 2021/09/09 22:41:43 nia Exp $
 
 Add NetBSD support.
 
---- netbsd/sun/JackSunDriver.cpp.orig	2021-09-08 13:51:19.686819398 +0000
+--- netbsd/sun/JackSunDriver.cpp.orig	2021-09-09 21:08:54.658178887 +0000
 +++ netbsd/sun/JackSunDriver.cpp
-@@ -0,0 +1,557 @@
+@@ -0,0 +1,569 @@
 +/*
 +Copyright (C) 2003-2007 Jussi Laako <jussi@sonarnerd.net>
 +Copyright (C) 2008 Grame & RTL 2008
@@ -114,11 +114,17 @@ Add NetBSD support.
 +        return -1;
 +    }
 +
++#ifdef AUDIO_GETFORMAT
 +    if (fCaptureChannels == 0) {
 +        if (ioctl(fInFD, AUDIO_GETFORMAT, &info) == 0) {
 +            fCaptureChannels = info.record.channels;
 +        }
 +    }
++#else
++    if (fCaptureChannels == 0) {
++        fCaptureChannels = 2;
++    }
++#endif
 +
 +    jack_log("JackSunDriver::OpenInput input fInFD = %d", fInFD);
 +
@@ -172,11 +178,17 @@ Add NetBSD support.
 +        return -1;
 +    }
 +
++#ifdef AUDIO_GETFORMAT
 +    if (fPlaybackChannels == 0) {
 +        if (ioctl(fOutFD, AUDIO_GETFORMAT, &info) == 0) {
 +            fPlaybackChannels = info.play.channels;
 +        }
 +    }
++#else
++    if (fPlaybackChannels == 0) {
++        fPlaybackChannels = 2;
++    }
++#endif
 +
 +    jack_log("JackSunDriver::OpenOutput input fOutFD = %d", fOutFD);
 +
