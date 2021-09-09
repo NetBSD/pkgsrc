@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/09/08 19:19:19 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/09/09 21:10:18 nia Exp $
 
 SHA1 (jack2-1.9.19.tar.gz) = 3182304c0a3ecd911775fb46088f0df79ee9015f
 RMD160 (jack2-1.9.19.tar.gz) = da6ed4db02dfc856c477d76a73fe22157b6f7df8
@@ -6,7 +6,7 @@ SHA512 (jack2-1.9.19.tar.gz) = d8d5fe17e2984959546af3c53f044aa4648860e19ff8ffd54
 Size (jack2-1.9.19.tar.gz) = 988780 bytes
 SHA1 (patch-common_JackAudioAdapterFactory.cpp) = 8292a8c88c673136f52a007133278f9b4403839c
 SHA1 (patch-common_memops.c) = 468476c6067595524f492d37f3b761af48e78585
-SHA1 (patch-common_wscript) = a86ba367fcb4892b3a34f395840ecbd1c5358005
+SHA1 (patch-common_wscript) = f68886b688d623a87178eed22e3900109409be69
 SHA1 (patch-example-clients_wscript) = 9db0899e797acbc416bfd9e6aba50c70bd5ff0ab
 SHA1 (patch-netbsd_JackAtomic__os.h) = cd9cc4bf9913b3dedfbb8a2ea34077277e17f85d
 SHA1 (patch-netbsd_JackNetBSDTime.c) = 7cc2504bbd452b703dd062ac5d35f68ffe7e3b0a
