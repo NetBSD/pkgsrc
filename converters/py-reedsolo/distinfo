@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/09 07:31:02 adam Exp $
+
+SHA1 (reedsolo-1.5.4.tar.gz) = aa04481b80251d02ea2f5412ea2bb5c144f8c98b
+RMD160 (reedsolo-1.5.4.tar.gz) = ec5e633082401991f8b754776a5394b61345bfc6
+SHA512 (reedsolo-1.5.4.tar.gz) = f41203bbdae9012e72f723d38dd8ee93c9f9fbab62f4ed5dd1c2b9ca9b7e87f5fc91871049d7d952d8ee6be25ed2793c90ac7134eda5cc351e1adf8ed460e8df
+Size (reedsolo-1.5.4.tar.gz) = 271280 bytes

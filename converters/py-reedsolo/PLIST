@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/09 07:31:02 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/creedsolo.so
+${PYSITELIB}/reedsolo.py
+${PYSITELIB}/reedsolo.pyc
+${PYSITELIB}/reedsolo.pyo
