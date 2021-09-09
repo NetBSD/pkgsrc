@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4596 2021/09/09 00:21:31 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4597 2021/09/09 07:31:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7190,3 +7190,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/py-gdal to 3.3.2 [gdt 2021-09-08]
 	Updated net/iperf2 to 2.1.4 [gdt 2021-09-08]
 	Updated textproc/py-isc_dhcp_leases to 0.9.1nb1 [gutteridge 2021-09-09]
+	Updated devel/py-bitstring to 3.1.9 [adam 2021-09-09]
+	Added converters/py-reedsolo version 1.5.4 [adam 2021-09-09]
