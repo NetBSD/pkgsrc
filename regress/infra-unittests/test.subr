@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.17 2021/01/04 21:11:43 rillig Exp $
+# $NetBSD: test.subr,v 1.18 2021/09/09 18:23:44 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -15,7 +15,7 @@
 # These functions form the structure for a test. To define a test, use the
 # following pattern:
 #
-# 	if test_case_begin 'description of the test'; then
+#	if test_case_begin 'description of the test'; then
 #		...
 #		test_case_end
 #	fi
