@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/09 22:12:14 mef Exp $
+
+SHA1 (R/vroom_1.5.4.tar.gz) = b44dcfaea6b1d0764a6f5ceeb144c28e99478023
+RMD160 (R/vroom_1.5.4.tar.gz) = 27e5e996bb66a13980c8a82f2b2c417faaa0c538
+SHA512 (R/vroom_1.5.4.tar.gz) = 10457ef894fd51be4e5e041dc8abbf6003b6f28e389d7bbf936c753d057e8ce1130d61714649671e1674f15d07dda144e28f14b2dc0111c481e720bd3296edc8
+Size (R/vroom_1.5.4.tar.gz) = 721979 bytes
