@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4597 2021/09/09 07:31:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4598 2021/09/09 07:33:44 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -6604,6 +6604,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-configargparse to 1.5.2 [adam 2021-08-11]
 	Updated devel/py-greenlet to 1.1.1 [adam 2021-08-11]
 	Updated net/py-responses to 0.13.4 [adam 2021-08-11]
+	Added devel/libyang2 version 2.0.7 [kardel 2021-08-11]
+	Updated net/frr to 8.0 [kardel 2021-08-11]
 	Updated security/py-google-auth to 1.34.0 [adam 2021-08-11]
 	Updated security/py-google-auth-oauthlib to 0.4.5 [adam 2021-08-11]
 	Updated devel/py-google-api-core to 1.31.1 [adam 2021-08-11]
@@ -7172,6 +7174,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unifi to 6.2.26 [gdt 2021-09-07]
 	Updated audio/termusic to 0.3.9 [pin 2021-09-07]
 	Updated net/haproxy to 2.4.4 [jperkin 2021-09-08]
+	Updated net/frr to 8.0.1 [kardel 2021-09-08]
 	Added audio/spotify-player version 0.2.0 [pin 2021-09-08]
 	Updated devel/R-waldo to 0.3.0 [mef 2021-09-08]
 	Updated textproc/R-htmlTable to 2.2.1 [mef 2021-09-08]
