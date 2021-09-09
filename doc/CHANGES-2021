@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4602 2021/09/09 11:38:18 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4603 2021/09/09 11:38:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/py-esptool to 3.1 [adam 2021-09-09]
 	Updated x11/xcolor to 0.5.1 [pin 2021-09-09]
 	Updated shells/xonsh to 0.10.1 [nia 2021-09-09]
+	Updated www/firefox91 to 91.1.0 [nia 2021-09-09]
