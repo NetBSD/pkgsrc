@@ -1,10 +1,10 @@
-$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.3 2021/01/16 21:06:52 reinoud Exp $
+$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.4 2021/09/09 21:42:00 nia Exp $
 
 Sun/NetBSD audio support.
 
---- src/hostapi/sun/pa_unix_sun.c.orig	2021-01-16 19:57:35.080979704 +0000
+--- src/hostapi/sun/pa_unix_sun.c.orig	2021-09-09 21:10:47.132269006 +0000
 +++ src/hostapi/sun/pa_unix_sun.c
-@@ -0,0 +1,1140 @@
+@@ -0,0 +1,1123 @@
 +/*
 + * $Id"
 + * PortAudio Portable Real-Time Audio Library
@@ -98,11 +98,6 @@ Sun/NetBSD audio support.
 +
 +#ifndef SUN_DEV_DEFAULT
 +#define SUN_DEV_DEFAULT    "/dev/audio"
-+#endif
-+
-+#ifndef AUDIO_FLUSH
-+#include <sys/stropts.h>
-+#define AUDIO_FLUSH I_FLUSH
 +#endif
 +
 +#ifndef AUDIO_ENCODING_SLINEAR
@@ -919,19 +914,7 @@ Sun/NetBSD audio support.
 +
 +static PaError AbortStream( PaStream *s )
 +{
-+    PaError result = paNoError;
-+    PaSunStream *stream = (PaSunStream*)s;
-+
-+    stream->stopped = true;
-+
-+    if( stream->bufferProcessor.streamCallback )
-+        PA_ENSURE( PaUtil_CancelThreading( &stream->threading, 0, NULL ) );
-+
-+    if( stream->play.fd != -1 )
-+        (void)ioctl(stream->play.fd, AUDIO_FLUSH);
-+
-+error:
-+    return result;
++    StopStream(s);
 +}
 +
 +static PaError IsStreamStopped( PaStream *s )
