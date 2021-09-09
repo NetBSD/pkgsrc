@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/10 16:25:19 kardel Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/09 07:39:15 kardel Exp $
 bin/yanglint
 bin/yangre
 include/libyang/dict.h
@@ -10,7 +10,7 @@ include/libyang/user_types.h
 include/libyang/xml.h
 lib/libyang.so
 lib/libyang.so.1
-lib/libyang.so.1.9.2
+lib/libyang.so.1.10.32
 lib/libyang1/extensions/metadata.so
 lib/libyang1/extensions/nacm.so
 lib/libyang1/extensions/yangdata.so

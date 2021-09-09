@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/12/10 16:25:19 kardel Exp $
+$NetBSD: distinfo,v 1.2 2021/09/09 07:39:15 kardel Exp $
 
-SHA1 (libyang/v1.0.184.tar.gz) = 89842305651e76696a0b79370659763f55be4398
-RMD160 (libyang/v1.0.184.tar.gz) = 58b54cf367692986bab10b95c37fa3909f31e785
-SHA512 (libyang/v1.0.184.tar.gz) = bb1c396b6048d848ea844cc462f1ee9f14b0dad848c7618ec0f9bd239d28db8a94f94550c5439ca07e01824a910a748ec6be699c58150b34072c2f9b76acd95c
-Size (libyang/v1.0.184.tar.gz) = 1659420 bytes
+SHA1 (libyang/v1.0.240.tar.gz) = 46d94ba25b87f5f95ba6f3f466e2390b07c04b37
+RMD160 (libyang/v1.0.240.tar.gz) = 9f448ded0a5ac1c660fd349509aa538d1d750518
+SHA512 (libyang/v1.0.240.tar.gz) = 5637037ef25fb96184d444f27a1e921a18a91745bce7e796357a71ca15eb47b9c3ba0833fe8f792e54e9f02ac26be5168fd386d5f957b8f4d695ddc213c17c33
+Size (libyang/v1.0.240.tar.gz) = 1667619 bytes
 SHA1 (patch-compat_compat.h.in) = e06eb93d911360dcb2255736911e7dbd926034a3

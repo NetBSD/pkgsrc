@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4598 2021/09/09 07:33:44 kardel Exp $
+$NetBSD: CHANGES-2021,v 1.4599 2021/09/09 07:39:15 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7195,3 +7195,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-isc_dhcp_leases to 0.9.1nb1 [gutteridge 2021-09-09]
 	Updated devel/py-bitstring to 3.1.9 [adam 2021-09-09]
 	Added converters/py-reedsolo version 1.5.4 [adam 2021-09-09]
+	Updated devel/libyang to v1.0.240 [kardel 2021-09-09]
