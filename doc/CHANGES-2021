@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4604 2021/09/09 11:39:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4605 2021/09/09 12:33:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7202,3 +7202,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/xonsh to 0.10.1 [nia 2021-09-09]
 	Updated www/firefox91 to 91.1.0 [nia 2021-09-09]
 	Updated www/firefox91-l10n to 91.1.0 [nia 2021-09-09]
+	Updated multimedia/dav1d to 0.9.2 [nia 2021-09-09]
