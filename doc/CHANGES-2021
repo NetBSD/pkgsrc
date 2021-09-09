@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4606 2021/09/09 13:29:37 kardel Exp $
+$NetBSD: CHANGES-2021,v 1.4607 2021/09/09 20:33:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7205,3 +7205,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox91 to 91.1.0 [nia 2021-09-09]
 	Updated www/firefox91-l10n to 91.1.0 [nia 2021-09-09]
 	Updated multimedia/dav1d to 0.9.2 [nia 2021-09-09]
+	Updated devel/py-anyio to 3.3.1 [adam 2021-09-09]
