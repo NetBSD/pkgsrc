@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.34 2021/09/10 13:10:58 nia Exp $
+
+Allow the compiler from NetBSD 9.0.
+
+Requiring a minor version of GCC makes no sense, and indeed,
+the requirement seems to be 7.5.0 because "Ubuntu has that
+version"...
+
+https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
+
+--- configure.orig	2021-08-24 17:35:40.000000000 +0000
++++ configure
+@@ -2099,7 +2099,7 @@ cat > $TMPC << EOF
+ #  endif
+ # endif
+ #elif defined(__GNUC__) && defined(__GNUC_MINOR__)
+-# if __GNUC__ < 7 || (__GNUC__ == 7 && __GNUC_MINOR__ < 5)
++# if __GNUC__ < 7
+ #  error You need at least GCC v7.5.0 to compile QEMU
+ # endif
+ #else
