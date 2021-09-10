@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/09/05 20:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/10 11:20:03 nia Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -107,4 +107,5 @@ BUILDLINK_TRANSFORM+=   l:pci:pciutils
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
