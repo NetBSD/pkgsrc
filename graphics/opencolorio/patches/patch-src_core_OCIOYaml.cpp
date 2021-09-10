@@ -1,4 +1,4 @@
-$NetBSD: patch-src_core_OCIOYaml.cpp,v 1.1 2019/09/18 22:30:49 nia Exp $
+$NetBSD: patch-src_core_OCIOYaml.cpp,v 1.2 2021/09/10 12:21:57 nia Exp $
 
 Description: Fix build with yaml-cpp 0.6
  One of the changes in yaml-cpp 0.6 was the replacement of some inline
@@ -58,3 +58,16 @@ Bug: https://github.com/imageworks/OpenColorIO/issues/517
  #ifdef WIN32
  #pragma warning( push )
  #pragma warning( disable: 4146 )
+@@ -1439,11 +1402,7 @@ OCIO_NAMESPACE_ENTER
+             
+             // check profile version
+             int profile_version = 0;
+-#ifdef OLDYAML
+-            if(node.FindValue("ocio_profile_version") == NULL)
+-#else
+-            if(node["ocio_profile_version"] == NULL)
+-#endif
++            if(!node["ocio_profile_version"].IsDefined())
+             {
+                 std::ostringstream os;
+                 os << "The specified file ";
