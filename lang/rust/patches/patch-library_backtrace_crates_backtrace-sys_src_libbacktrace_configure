@@ -1,4 +1,4 @@
-$NetBSD: patch-library_backtrace_crates_backtrace-sys_src_libbacktrace_configure,v 1.1 2021/01/01 20:44:48 he Exp $
+$NetBSD: patch-library_backtrace_crates_backtrace-sys_src_libbacktrace_configure,v 1.2 2021/09/10 15:09:32 jperkin Exp $
 
 Use pkgsrc libtool.
 

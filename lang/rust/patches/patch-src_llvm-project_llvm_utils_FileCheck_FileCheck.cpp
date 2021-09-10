@@ -1,4 +1,4 @@
-$NetBSD: patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp,v 1.4 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp,v 1.5 2021/09/10 15:09:32 jperkin Exp $
 
 Avoid ambiguous function call.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_stacker_src_lib.rs,v 1.3 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-vendor_stacker_src_lib.rs,v 1.4 2021/09/10 15:09:32 jperkin Exp $
 
 Avoid missing pthread_* on older SunOS.
 

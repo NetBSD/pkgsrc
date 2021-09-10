@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.6 2021/06/13 12:19:16 he Exp $
+$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.7 2021/09/10 15:09:32 jperkin Exp $
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
@@ -102,7 +102,7 @@ should do just fine.
 +		    ;;
 +		share/man/*)
 +		    local _f=${_file#"share/man/"}
-+		    _file_install_path="$CFG_DESTDIR_PREFIX/$PKGMANDIR/$_f"
++		    _file_install_path="$CFG_MANDIR/$_f"
 +		    ;;
 +		share/doc/*)
              # HACK: Try to support overriding --docdir.  Paths with the form
