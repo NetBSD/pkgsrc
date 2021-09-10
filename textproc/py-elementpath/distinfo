@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/06/25 11:45:38 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/09/10 15:08:21 adam Exp $
 
-SHA1 (elementpath-2.2.3.tar.gz) = 36788f8bf4636cfc128243d2e97e5cf13a12b188
-RMD160 (elementpath-2.2.3.tar.gz) = 2db38d10c31476a5c646e92cb8d0a293ebefc5ee
-SHA512 (elementpath-2.2.3.tar.gz) = 6b962c0e3f843a24d41051e25006855b3d4ee93c4983d75bfc6eec59e72544762908062195c78053ea66ef4597317e299f1cac14085c8604a921cca52c6c067a
-Size (elementpath-2.2.3.tar.gz) = 234774 bytes
+SHA1 (elementpath-2.3.1.tar.gz) = c35b4e7bd700a5b6c0220cb6d528fc3ba3c0be11
+RMD160 (elementpath-2.3.1.tar.gz) = 585792241829db4d4486b14201e0e99d6112c03d
+SHA512 (elementpath-2.3.1.tar.gz) = 7f8bff92464d26c8380d015fa1dafc3571a4894e728e6515b6cb6861025e8537cf5b1bf4169c5805a69e46d75ac3cff66ad7e35d566b9a263b786fef7b94fd1b
+Size (elementpath-2.3.1.tar.gz) = 239086 bytes

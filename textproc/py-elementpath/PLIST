@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/03 15:14:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/09/10 15:08:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,6 +46,10 @@ ${PYSITELIB}/elementpath/helpers.pyo
 ${PYSITELIB}/elementpath/namespaces.py
 ${PYSITELIB}/elementpath/namespaces.pyc
 ${PYSITELIB}/elementpath/namespaces.pyo
+${PYSITELIB}/elementpath/protocols.py
+${PYSITELIB}/elementpath/protocols.pyc
+${PYSITELIB}/elementpath/protocols.pyo
+${PYSITELIB}/elementpath/py.typed
 ${PYSITELIB}/elementpath/regex/__init__.py
 ${PYSITELIB}/elementpath/regex/__init__.pyc
 ${PYSITELIB}/elementpath/regex/__init__.pyo
