@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/09/08 21:05:07 nia Exp $
+# $NetBSD: Makefile,v 1.34 2021/09/10 11:01:39 nia Exp $
 
 DISTNAME=	openmw-0.46.0
 PKGREVISION=	10
@@ -42,4 +42,5 @@ CONF_FILES+=	${EGDIR}/version ${PKG_SYSCONFDIR}/version
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
