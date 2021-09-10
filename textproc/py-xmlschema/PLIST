@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/02/14 15:11:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/09/10 15:10:35 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -73,6 +73,7 @@ ${PYSITELIB}/xmlschema/names.pyo
 ${PYSITELIB}/xmlschema/namespaces.py
 ${PYSITELIB}/xmlschema/namespaces.pyc
 ${PYSITELIB}/xmlschema/namespaces.pyo
+${PYSITELIB}/xmlschema/py.typed
 ${PYSITELIB}/xmlschema/resources.py
 ${PYSITELIB}/xmlschema/resources.pyc
 ${PYSITELIB}/xmlschema/resources.pyo
