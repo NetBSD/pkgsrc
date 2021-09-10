@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_aarch64__be__unknown__netbsd.rs,v 1.1 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_aarch64__be__unknown__netbsd.rs,v 1.2 2021/09/10 15:09:32 jperkin Exp $
 
 Add aarch64_be NetBSD target.
 

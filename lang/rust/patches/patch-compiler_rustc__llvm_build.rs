@@ -1,10 +1,10 @@
-$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.2 2021/04/19 17:08:09 he Exp $
+$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.3 2021/09/10 15:09:32 jperkin Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
---- compiler/rustc_llvm/build.rs.orig	2021-02-10 17:36:44.000000000 +0000
+--- compiler/rustc_llvm/build.rs.orig	2020-11-16 14:01:53.000000000 +0000
 +++ compiler/rustc_llvm/build.rs
-@@ -281,7 +281,13 @@ fn main() {
+@@ -284,7 +284,13 @@ fn main() {
          "c++"
      } else if target.contains("netbsd") && llvm_static_stdcpp.is_some() {
          // NetBSD uses a separate library when relocation is required
