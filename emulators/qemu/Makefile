@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2021/09/08 21:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.287 2021/09/10 13:10:58 nia Exp $
 
 DISTNAME=	qemu-6.1.0
 PKGNAME=	${DISTNAME:S/-rc/rc/}
@@ -19,6 +19,9 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
+
+# https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
+GCC_REQD+=		7
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
