@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2020/08/16 22:18:49 tnn Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/09/10 12:09:27 nia Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -34,9 +34,17 @@ CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+# Disable SSE/SSE2 to avoid build errors from missing _mm_pause.
+CMAKE_ARGS+=		-DCPU_BASELINE=""
+.endif
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# avoid Python 2.7
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
+.include "../../mk/atomic64.mk"
 .include "../../lang/python/pyversion.mk"
