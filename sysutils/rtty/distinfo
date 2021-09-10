@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:32:29 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/09/10 08:48:16 he Exp $
 
 SHA1 (rtty-3.2.tar.gz) = 62587ee4eec0b551b2b38341f20fddebde1ee8a1
 RMD160 (rtty-3.2.tar.gz) = 03863b5fbaf27a6f254c620e91c3dcd364df926a
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = 11cf781b562bfe35c1003db6f3ac94653c1f8e06
 SHA1 (patch-ab) = 32644f9383ef43b45421fc100382509e2e6b2e34
 SHA1 (patch-ac) = 8b1b1be9eb471f68d62b4454f9bd74dddb471d75
 SHA1 (patch-ad) = dee546ca499fa4fb534f137d58fcbbb800b244d3
+SHA1 (patch-agelogs.sh) = 50754d303652d7c2ee3bce55101b3b0dbe60b044
