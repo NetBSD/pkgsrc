@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.4 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.5 2021/09/10 15:09:32 jperkin Exp $
 
 Provide defaults for the various NetBSD targets.
 
---- vendor/openssl-src/src/lib.rs.orig	2021-03-23 16:54:53.000000000 +0000
+--- vendor/openssl-src/src/lib.rs.orig	2021-07-26 15:20:39.000000000 +0000
 +++ vendor/openssl-src/src/lib.rs
-@@ -167,6 +167,8 @@ impl Build {
+@@ -219,6 +219,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
              "aarch64-unknown-linux-musl" => "linux-aarch64",
@@ -13,15 +13,15 @@ Provide defaults for the various NetBSD targets.
              "aarch64-pc-windows-msvc" => "VC-WIN64-ARM",
              "arm-linux-androideabi" => "linux-armv4",
              "armv7-linux-androideabi" => "linux-armv4",
-@@ -178,6 +180,7 @@ impl Build {
-             "armv7-unknown-freebsd" => "BSD-generic32",
+@@ -232,6 +234,7 @@ impl Build {
+             "armv7-unknown-linux-musleabi" => "linux-armv4",
              "armv7-unknown-linux-gnueabihf" => "linux-armv4",
              "armv7-unknown-linux-musleabihf" => "linux-armv4",
 +            "armv7-unknown-netbsd-eabihf" => "BSD-generic32",
              "asmjs-unknown-emscripten" => "gcc",
              "i586-unknown-linux-gnu" => "linux-elf",
              "i586-unknown-linux-musl" => "linux-elf",
-@@ -188,6 +191,8 @@ impl Build {
+@@ -242,6 +245,8 @@ impl Build {
              "i686-unknown-freebsd" => "BSD-x86-elf",
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
@@ -30,7 +30,7 @@ Provide defaults for the various NetBSD targets.
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
-@@ -195,12 +200,14 @@ impl Build {
+@@ -249,12 +254,14 @@ impl Build {
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",

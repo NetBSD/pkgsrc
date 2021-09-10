@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.6 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.7 2021/09/10 15:09:32 jperkin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Do not use debuginfo; optimize 'bootstrap' instead.

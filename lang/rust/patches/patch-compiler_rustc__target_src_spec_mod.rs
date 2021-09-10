@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.3 2021/05/31 10:17:53 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.4 2021/09/10 15:09:32 jperkin Exp $
 
 Add i586(pentium) and aarch64_be targets.
 

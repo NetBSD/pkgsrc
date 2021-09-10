@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_cargo_src_cargo_core_profiles.rs,v 1.5 2021/05/26 09:21:39 he Exp $
+$NetBSD: patch-src_tools_cargo_src_cargo_core_profiles.rs,v 1.6 2021/09/10 15:09:32 jperkin Exp $
 
 Turn off incremental builds for sparc64, ref.
 https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_incremental_build.patch/
