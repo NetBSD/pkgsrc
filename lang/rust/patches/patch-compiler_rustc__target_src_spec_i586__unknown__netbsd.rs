@@ -1,9 +1,9 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.3 2021/05/28 10:32:20 mcf Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.4 2021/09/10 15:09:32 jperkin Exp $
 
 Add an i586 / pentium variant, in an effort to support AMD Geode etc.
 
---- compiler/rustc_target/src/spec/i586_unknown_netbsd.rs.orig	2021-04-11 00:12:43.084770395 +0200
-+++ compiler/rustc_target/src/spec/i586_unknown_netbsd.rs	2021-04-11 00:15:29.313073646 +0200
+--- compiler/rustc_target/src/spec/i586_unknown_netbsd.rs.orig	2021-06-19 17:28:44.197224530 +0000
++++ compiler/rustc_target/src/spec/i586_unknown_netbsd.rs
 @@ -0,0 +1,20 @@
 +use crate::spec::{LinkerFlavor, StackProbeType, Target, TargetOptions};
 +
@@ -11,7 +11,7 @@ Add an i586 / pentium variant, in an effort to support AMD Geode etc.
 +    let mut base = super::netbsd_base::opts();
 +    base.cpu = "pentium".to_string();
 +    base.max_atomic_width = Some(64);
-+    base.pre_link_args.get_mut(&LinkerFlavor::Gcc).unwrap().push("-m32".to_string());
++    base.pre_link_args.entry(LinkerFlavor::Gcc).or_default().push("-m32".to_string());
 +    // don't use probe-stack=inline-asm until rust-lang/rust#83139 is resolved.
 +    base.stack_probes = StackProbeType::Call;
 +
