@@ -1,6 +1,7 @@
-$NetBSD: patch-wscript,v 1.1 2021/09/08 19:19:20 nia Exp $
+$NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
 
-Add NetBSD support.
+- Add NetBSD support.
+- Ensure man pages are installed on all Unixes.
 
 --- wscript.orig	2021-07-15 06:18:26.000000000 +0000
 +++ wscript
@@ -47,3 +48,15 @@ Add NetBSD support.
  def build(bld):
      if not bld.variant and bld.env['BUILD_WITH_32_64']:
          Options.commands.append(bld.cmd + '_' + lib32)
+@@ -821,9 +836,10 @@ def build(bld):
+     bld.recurse('tools')
+ 
+     if bld.env['IS_LINUX']:
+-        bld.recurse('man')
+         bld.recurse('systemd')
+     if not bld.env['IS_WINDOWS']:
++        bld.recurse('man')
++    if not bld.env['IS_WINDOWS']:
+         bld.recurse('tests')
+     if bld.env['BUILD_JACKDBUS']:
+         bld.recurse('dbus')

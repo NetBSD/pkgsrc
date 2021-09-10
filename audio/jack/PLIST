@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2021/09/08 19:19:19 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/09/10 11:14:05 nia Exp $
+${PLIST.alsa}bin/alsa_in
+${PLIST.alsa}bin/alsa_out
 bin/jack_alias
 bin/jack_bufsize
 bin/jack_connect
@@ -21,6 +23,7 @@ bin/jack_monitor_client
 bin/jack_multiple_metro
 bin/jack_net_master
 bin/jack_net_slave
+bin/jack_netsource
 bin/jack_property
 bin/jack_rec
 bin/jack_samplerate
@@ -78,3 +81,25 @@ lib/libjackserver.so
 lib/libjackserver.so.0
 lib/libjackserver.so.0.1.0
 lib/pkgconfig/jack.pc
+man/alsa_in.1
+man/alsa_out.1
+man/jack_bufsize.1
+man/jack_connect.1
+man/jack_disconnect.1
+man/jack_freewheel.1
+man/jack_impulse_grabber.1
+man/jack_iodelay.1
+man/jack_load.1
+man/jack_lsp.1
+man/jack_metro.1
+man/jack_monitor_client.1
+man/jack_netsource.1
+man/jack_property.1
+man/jack_samplerate.1
+man/jack_showtime.1
+man/jack_simple_client.1
+man/jack_transport.1
+man/jack_unload.1
+man/jack_wait.1
+man/jackd.1
+man/jackrec.1
