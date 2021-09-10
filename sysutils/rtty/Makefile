@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:26 agc Exp $
+# $NetBSD: Makefile,v 1.34 2021/09/10 08:28:21 he Exp $
 
 DISTNAME=	rtty-3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gatekeeper.hpl.hp.com/archive/pub/misc/vixie/
 MASTER_SITES+=	ftp://gatekeeper.hpl.hp.com/pub/misc/vixie/
