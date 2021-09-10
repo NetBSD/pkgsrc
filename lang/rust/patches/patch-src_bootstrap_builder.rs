@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_builder.rs,v 1.16 2021/05/31 10:17:53 he Exp $
+$NetBSD: patch-src_bootstrap_builder.rs,v 1.17 2021/09/10 15:09:32 jperkin Exp $
 
 Do not install 'src'.
 Use @PREFIX@, not $ORIGIN in rpath.

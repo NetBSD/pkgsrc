@@ -1,4 +1,4 @@
-$NetBSD: patch-library_unwind_build.rs,v 1.4 2021/05/31 10:17:53 he Exp $
+$NetBSD: patch-library_unwind_build.rs,v 1.5 2021/09/10 15:09:32 jperkin Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
