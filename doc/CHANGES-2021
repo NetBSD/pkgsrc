@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4609 2021/09/10 11:38:04 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4610 2021/09/10 11:39:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7208,3 +7208,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-anyio to 3.3.1 [adam 2021-09-09]
 	Added textproc/R-vroom version 1.5.4 [mef 2021-09-09]
 	Updated www/firefox78 to 78.14.0 [nia 2021-09-10]
+	Updated www/firefox78-l10n to 78.14.0 [nia 2021-09-10]
