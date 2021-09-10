@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2021/06/11 05:24:08 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/09/10 15:10:35 adam Exp $
 
-SHA1 (xmlschema-1.6.4.tar.gz) = 968b8b250adb86f7e5f27deb07ea104fa4170b6f
-RMD160 (xmlschema-1.6.4.tar.gz) = 1528201ae06f11cc05d93792482c57f387c308e9
-SHA512 (xmlschema-1.6.4.tar.gz) = 7e13d20a6add1cc5b6d0f732e672be3eeeb2f107fd2031cd5c22d1059d24b7d818c534817ea115d0c5f011727175bdcae71a0b8d55f1d6bd263a7e38286c26fc
-Size (xmlschema-1.6.4.tar.gz) = 369270 bytes
+SHA1 (xmlschema-1.7.1.tar.gz) = 57b4d4d2d19f99fdbfcdb2573efdecf9f55f6405
+RMD160 (xmlschema-1.7.1.tar.gz) = 5ee681ef01b18e0e50a9e813d582ad86b27b3cdc
+SHA512 (xmlschema-1.7.1.tar.gz) = 4ad8ef9d91aa2e0b06d64aa06cc380898976c8c1b4efe049b67948b4534bb8edc3a3450cf5e242a004a039e8e29b23954138a0192ac6355fdeecb77e6284c3d9
+Size (xmlschema-1.7.1.tar.gz) = 372165 bytes
 SHA1 (patch-setup.py) = acfd8a0bcb39c7d35c5fcd62bfed643a81fe7516
