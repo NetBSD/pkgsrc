@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/07/14 17:56:16 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/09/10 12:08:51 nia Exp $
 
 DISTNAME=	oneTBB-2021.3.0
 PKGNAME=	${DISTNAME:S/oneTBB-/threadingbuildingblocks-/}
@@ -17,5 +17,6 @@ USE_LANGUAGES=	c c++11
 CMAKE_ARGS+=	-DTBB_STRICT=OFF
 TEST_TARGET=	test
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
