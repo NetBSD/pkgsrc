@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4612 2021/09/10 15:11:42 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4613 2021/09/10 16:39:13 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7214,3 +7214,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-more-itertools to 8.9.0 [adam 2021-09-10]
 	Updated textproc/py-elementpath to 2.3.1 [adam 2021-09-10]
 	Updated textproc/py-xmlschema to 1.7.1 [adam 2021-09-10]
+	Updated sysutils/auto-admin to 0.7.6 [bacon 2021-09-10]
