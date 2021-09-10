@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/06/16 21:15:55 bacon Exp $
+$NetBSD: distinfo,v 1.6 2021/09/10 16:39:03 bacon Exp $
 
-SHA1 (auto-admin-0.7.5.tar.gz) = acd1f12b9fce12b8b9ad82bd3c323f412796042e
-RMD160 (auto-admin-0.7.5.tar.gz) = 62b05884142b2d962ea12e73c9ffe8ee33ec32f9
-SHA512 (auto-admin-0.7.5.tar.gz) = 222d833ba647544646a8e51a749be49305dcdc6ce5756dfe2fcfb22f4dda8b00d57633ccd19f32664638491eec4102b5e7b85c188a81606c0848cee3eec79451
-Size (auto-admin-0.7.5.tar.gz) = 105623 bytes
+SHA1 (auto-admin-0.7.6.tar.gz) = 6ad301facb38a90dd429da8de1a78f4128601b1b
+RMD160 (auto-admin-0.7.6.tar.gz) = 7b27c4024183b7d6820664299504a5b087143b70
+SHA512 (auto-admin-0.7.6.tar.gz) = a2af8793e9199f7912233dec3bfdf730f04bfd8c84e7aedbdea219857b51c6fa42b1c336a6202a79df724902c89df7733e6147b6f86a495e3f31fee59b4c64a9
+Size (auto-admin-0.7.6.tar.gz) = 107677 bytes
