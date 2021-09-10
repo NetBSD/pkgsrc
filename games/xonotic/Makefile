@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/09/08 21:05:10 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/09/10 11:30:05 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
 PKGREVISION=	4
@@ -30,6 +30,10 @@ ICON_SIZES=	16 24 32 64 128 256 512
 PLIST_SUBST+=	FAKE_PLATFORM="linux64"
 .else
 PLIST_SUBST+=	FAKE_PLATFORM="linux32"
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-msse
 .endif
 
 INSTALLATION_DIRS+=	share/applications
