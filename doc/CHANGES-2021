@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4644 2021/09/11 21:11:53 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4645 2021/09/11 23:41:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7248,3 +7248,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/zoxide to 0.7.5 [pin 2021-09-11]
 	Updated audio/termusic to 0.3.10 [pin 2021-09-11]
 	Updated devel/git-cliff to 0.3.0 [pin 2021-09-11]
+	Removed textproc/p5-YAML-XS [wen 2021-09-11]
