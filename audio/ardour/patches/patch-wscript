@@ -1,35 +1,25 @@
-$NetBSD: patch-wscript,v 1.3 2020/03/04 10:56:35 nia Exp $
+$NetBSD: patch-wscript,v 1.4 2021/09/11 16:33:11 nia Exp $
 
-Support NetBSD.
+- Use internal copy of qm-dsp. From Arch Linux.
+- Install config files to examples, per pkgsrc policy
 
-https://github.com/Ardour/ardour/pull/469
-
---- wscript.orig	2017-09-15 20:56:23.000000000 +0000
+--- wscript.orig	2021-08-13 16:20:07.000000000 +0000
 +++ wscript
-@@ -610,7 +610,7 @@ int main() { return 0; }''',
-     if opt.stl_debug:
-         cxx_flags.append("-D_GLIBCXX_DEBUG")
+@@ -1098,8 +1098,6 @@ def configure(conf):
  
--    if re.search ("freebsd", sys.platform) != None or re.search ("openbsd", sys.platform) != None:
-+    if re.search ("[a-z]*bsd", sys.platform) != None:
-         linker_flags.append('-lexecinfo')
+     if Options.options.use_external_libs:
+         conf.define('USE_EXTERNAL_LIBS', 1)
+-        conf.env.append_value(
+-            'CXXFLAGS', '-I' + Options.options.qm_dsp_include)
  
-     if conf.env['DEBUG_RT_ALLOC']:
-@@ -1009,7 +1009,7 @@ def configure(conf):
- 
-     # executing a test program is n/a when cross-compiling
-     if Options.options.dist_target != 'mingw':
--        if Options.options.dist_target != 'msvc' and re.search ("openbsd", sys.platform) == None:
-+        if Options.options.dist_target != 'msvc' and re.search ("openbsd", sys.platform) == None and re.search ("netbsd", sys.platform) == None:
-             if re.search ("freebsd", sys.platform) != None:
-                 conf.check_cc(function_name='dlopen', header_name='dlfcn.h', uselib_store='DL')
-             else:
-@@ -1366,7 +1366,7 @@ def build(bld):
+     if Options.options.boost_include != '':
+         conf.env.append_value('CXXFLAGS', '-I' + Options.options.boost_include)
+@@ -1557,7 +1555,7 @@ def build(bld):
      if bld.is_defined ('BEATBOX'):
          bld.recurse('tools/bb')
-             
+ 
 -    bld.install_files (bld.env['CONFDIR'], 'system_config')
 +    bld.install_files (os.environ['EGDIR'], 'system_config')
  
-     bld.install_files (os.path.join (bld.env['DATADIR'], 'templates'), bld.path.ant_glob ('templates/**'), cwd=bld.path.find_dir ('templates'), relative_trick=True)
+     bld.install_files (os.path.join (bld.env['DATADIR'], 'templates'), bld.path.ant_glob ('share/templates/**'), cwd=bld.path.find_dir ('share/templates'), relative_trick=True)
  
