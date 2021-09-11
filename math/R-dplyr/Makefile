@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/06/12 22:36:14 mef Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/11 15:31:54 mef Exp $
 
 R_PKGNAME=	dplyr
-R_PKGVER=	1.0.6
+R_PKGVER=	1.0.7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
@@ -22,12 +22,19 @@ DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 DEPENDS+=	R-vctrs>=0.3.0:../../math/R-vctrs
 
 # Packages suggested but not available:
-#   'bench', 'broom', 'dbplyr', 'Lahman', 'lobstr', 'microbenchmark',
-#   'nycflights13', 'RMySQL', 'RPostgreSQL', 'RSQLite', 'tidyr'
+#   'bench', 'broom', 'dbplyr', 'Lahman', 'lobstr', 'nycflights13',
+#   'RMySQL', 'RPostgreSQL'
+
 TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
+TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
+TEST_DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
 
 USE_LANGUAGES=	c c++
 
