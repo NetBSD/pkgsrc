@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/05/06 03:28:35 minskim Exp $
+$NetBSD: distinfo,v 1.8 2021/09/11 12:41:11 mef Exp $
 
-SHA1 (R/date_1.2-38.tar.gz) = 7ee44e72f7dc9d3cc803b5f644f0e6c0cbf886d3
-RMD160 (R/date_1.2-38.tar.gz) = cc3ad646607d64fd2ec842a388a439d80705c6b5
-SHA512 (R/date_1.2-38.tar.gz) = 018a9434dc4e03ed7908b4b44b027303ac90df9f371252f97c3335c20ec306e2697166d3348b1929e4a0916f3499a51ac5ff89cd0ed0405ad75f8eb489b565ea
-Size (R/date_1.2-38.tar.gz) = 10398 bytes
+SHA1 (R/date_1.2-39.tar.gz) = df50c1709f26f5dc2b1fc814883b0b030b41f3e8
+RMD160 (R/date_1.2-39.tar.gz) = 8baff441fabcea80506ba28bcdb77b73a0899d02
+SHA512 (R/date_1.2-39.tar.gz) = 6556dd64318e1a451e1d3ba5231fe074f41f8a72a1d0732f4a16a1d5d4121e5c8ef004cd2bcffa83d680fc79c7d1a5d50726bdd9b0e9658ca1c0eff3999e9286
+Size (R/date_1.2-39.tar.gz) = 10429 bytes
