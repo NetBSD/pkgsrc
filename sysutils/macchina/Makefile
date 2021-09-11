@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2021/09/02 08:32:14 pin Exp $
+# $NetBSD: Makefile,v 1.30 2021/09/11 21:14:31 pin Exp $
 
 DISTNAME=	macchina-0.9.2
-# Newer versions require Rust-1.54
+# Newer versions depend on vergen crate, which fails to build
+# on NetBSD. Discussion on-going with upstream.
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
