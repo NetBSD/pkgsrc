@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4624 2021/09/11 10:09:33 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4625 2021/09/11 10:19:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7228,3 +7228,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/artha to 1.0.5 [mef 2021-09-11]
 	Updated misc/ruby-mini_portile2 to 2.7.0 [tsutsui 2021-09-11]
 	Updated math/R-SparseM to 1.81 [mef 2021-09-11]
+	Updated math/R-akima to 0.6.2.2 [mef 2021-09-11]
