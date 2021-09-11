@@ -1,0 +1,16 @@
+$NetBSD: patch-src_audacity.desktop.in,v 1.1 2021/09/11 08:53:19 nia Exp $
+
+I'm not sure I want to know why, but GDK_SYNCHRONIZE=1 stops the Reverse
+option from crashing the program.
+
+--- src/audacity.desktop.in.orig	2020-05-19 09:43:53.000000000 +0000
++++ src/audacity.desktop.in
+@@ -46,7 +46,7 @@ Icon=@AUDACITY_NAME@
+ Type=Application
+ Categories=AudioVideo;Audio;AudioVideoEditing;
+ 
+-Exec=env UBUNTU_MENUPROXY=0 @AUDACITY_NAME@ %F
++Exec=env UBUNTU_MENUPROXY=0 GDK_SYNCHRONIZE=1 @AUDACITY_NAME@ %F
+ StartupNotify=false
+ Terminal=false
+ MimeType=application/x-audacity-project;@MIMETYPES@
