@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4626 2021/09/11 10:27:17 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4627 2021/09/11 10:29:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7230,3 +7230,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-SparseM to 1.81 [mef 2021-09-11]
 	Updated math/R-akima to 0.6.2.2 [mef 2021-09-11]
 	Updated math/R-bitops to 1.0.7 [mef 2021-09-11]
+	Added audio/libltc version 1.3.1 [nia 2021-09-11]
