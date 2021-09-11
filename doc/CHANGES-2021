@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4637 2021/09/11 19:46:14 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4638 2021/09/11 19:52:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7241,3 +7241,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mold to 0.9.5 [fcambus 2021-09-11]
 	Updated devel/binutils to 2.37 [fcambus 2021-09-11]
 	Updated editors/Sigil to 1.7.0 [wiz 2021-09-11]
+	Updated devel/binaryen to 102 [fcambus 2021-09-11]
