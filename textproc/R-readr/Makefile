@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/12/18 12:42:04 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/11 01:07:42 mef Exp $
 
 R_PKGNAME=	readr
-R_PKGVER=	1.3.1
-PKGREVISION=	1
+R_PKGVER=	2.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +14,15 @@ DEPENDS+=	R-clipr>=0.7.0:../../devel/R-clipr
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 DEPENDS+=	R-hms>=0.4.1:../../time/R-hms
+DEPENDS+=	R-vroom-[0-9]*:../../textproc/R-vroom
+
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
+TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-waldo-[0-9]*:../../devel/R-waldo
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
@@ -35,6 +43,8 @@ post-install:
 # Can't find librcon.so during test.
 R_PKG_INSTALL_ARGS+=	--no-test-load
 
-.include "../../devel/R-Rcpp/buildlink3.mk"
+.include "../../lang/R-cpp11/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../time/R-tzdb/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
