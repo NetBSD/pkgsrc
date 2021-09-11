@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2021/09/08 02:36:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28 2021/09/11 08:38:44 nia Exp $
 
-DISTNAME=	rust-1.52.1
+DISTNAME=	rust-1.54.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -90,8 +89,7 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 
 # NetBSD provided binaries:
 
-# Suffix for re-generated binary bootstrap
-NBSUF=nb1
+NBSUF=
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
@@ -208,8 +206,10 @@ FORCE_RPATH=		--force-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
 .  for bin in clippy-driver miri rls rustc rustdoc
-	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
+	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
+		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} ; \
+	fi
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
 .  if ${OPSYS} == "Linux"
