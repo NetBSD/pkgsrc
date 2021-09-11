@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/11 12:25:58 mef Exp $
+
+SHA1 (R/rgl_0.107.14.tar.gz) = dda760d7e795a721376099e59a45f4c2fb365fef
+RMD160 (R/rgl_0.107.14.tar.gz) = 6679717a659fb21851ccdf681dd4666fff8903c6
+SHA512 (R/rgl_0.107.14.tar.gz) = beb99e6144c13d41ac575a1bb13350170c9f81a5bfbb33dc5378258c9db8114e47319b59a54f6f8c6942ceb7bd8d08e58b13d7055dd2cbc2f137cf7d2527508a
+Size (R/rgl_0.107.14.tar.gz) = 2568366 bytes
