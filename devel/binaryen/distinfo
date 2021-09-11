@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/04/17 20:04:24 fcambus Exp $
+$NetBSD: distinfo,v 1.4 2021/09/11 19:52:33 fcambus Exp $
 
-SHA1 (binaryen-101.tar.gz) = 3817856cf47413af916d6da1548ec2a0b11c6b56
-RMD160 (binaryen-101.tar.gz) = 69836f9f0468760b7bf847915e511fc0bde1a155
-SHA512 (binaryen-101.tar.gz) = 819105fda25e3ee51d8a858f73aabe018e6af584eb2afd5b7fe06ce165e39487d5ee6da23eec2c62d8dd1d87002b00ff8bd63e28bef388ac0fed72dfe7ae88f8
-Size (binaryen-101.tar.gz) = 3760918 bytes
+SHA1 (binaryen-102.tar.gz) = 355635a0b086bb724a1b751356d355d5537e0b72
+RMD160 (binaryen-102.tar.gz) = 08d19680bd741a002e3491769418d695450d99d9
+SHA512 (binaryen-102.tar.gz) = 04ed9abca7469fc7f0d4b348e3fc6637585306b4c92683688f0ced50bc03a9f16ea7634daed45db96f7e543d9ac66440e17339187ba97b779a041a6032f7f279
+Size (binaryen-102.tar.gz) = 3901225 bytes
