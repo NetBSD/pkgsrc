@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/01/03 10:49:31 mef Exp $
+# $NetBSD: Makefile,v 1.7 2021/09/11 10:09:17 mef Exp $
 
 R_PKGNAME=	SparseM
-R_PKGVER=	1.78
+R_PKGVER=	1.81
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sparse linear algebra
