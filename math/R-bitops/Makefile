@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/08/08 19:53:47 brook Exp $
+# $NetBSD: Makefile,v 1.7 2021/09/11 10:27:03 mef Exp $
 
 R_PKGNAME=	bitops
-R_PKGVER=	1.0-6
+R_PKGVER=	1.0-7
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
