@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/04 02:13:13 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/09/11 19:52:33 fcambus Exp $
 bin/wasm-as
 bin/wasm-ctor-eval
 bin/wasm-dis
@@ -10,5 +10,5 @@ bin/wasm-shell
 bin/wasm-split
 bin/wasm2js
 include/binaryen-c.h
-include/wasm-delegations.h
+include/wasm-delegations.def
 lib/libbinaryen.so
