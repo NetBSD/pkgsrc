@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2021/09/04 21:04:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2021/09/11 21:11:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
@@ -36,8 +36,8 @@ CARGO_CRATE_DEPENDS+=	form_urlencoded-1.0.1
 CARGO_CRATE_DEPENDS+=	generic-array-0.12.4
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.4
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
-CARGO_CRATE_DEPENDS+=	git-conventional-0.10.1
-CARGO_CRATE_DEPENDS+=	git2-0.13.21
+CARGO_CRATE_DEPENDS+=	git-conventional-0.10.2
+CARGO_CRATE_DEPENDS+=	git2-0.13.22
 CARGO_CRATE_DEPENDS+=	globset-0.4.8
 CARGO_CRATE_DEPENDS+=	globwalk-0.8.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
@@ -53,7 +53,7 @@ CARGO_CRATE_DEPENDS+=	jobserver-0.1.23
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lexical-core-0.7.6
 CARGO_CRATE_DEPENDS+=	libc-0.2.99
-CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.22+1.1.0
+CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.23+1.2.0
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.3
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.4
 CARGO_CRATE_DEPENDS+=	log-0.4.14
@@ -113,8 +113,8 @@ CARGO_CRATE_DEPENDS+=	tera-1.12.1
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.2
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
-CARGO_CRATE_DEPENDS+=	thiserror-1.0.28
-CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.28
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.29
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.29
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.3
 CARGO_CRATE_DEPENDS+=	tinyvec-1.3.1
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
