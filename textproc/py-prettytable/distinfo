@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/05/04 09:27:03 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/09/11 20:45:05 fcambus Exp $
 
-SHA1 (prettytable-2.1.0.tar.gz) = b39dd9b7da575a254dcc2b0c3a408c4cdcbf65c9
-RMD160 (prettytable-2.1.0.tar.gz) = e3ff9f62d76ba5bdf38cddd44ba5d414b7f1ba5a
-SHA512 (prettytable-2.1.0.tar.gz) = 8eaad22c66299ca3f66cc167e1a94aa41e3b2699da4ff48a0e81927ee8cc623d3147ae29a0bef92370d07d6a7fb6b1eac535fca7090562419aed219b9483edd5
-Size (prettytable-2.1.0.tar.gz) = 43306 bytes
+SHA1 (prettytable-2.2.0.tar.gz) = 2321cfd65559a38118e4e56313770b769b5a65f4
+RMD160 (prettytable-2.2.0.tar.gz) = 477306547124e7d1a80f94ffc9abd5f622b9bc0f
+SHA512 (prettytable-2.2.0.tar.gz) = df8ae2a1103a4965a351ba16a95ef9659107075bb023090bd9bffd69805ce647dcb26f49164f07f5af0c0b03503373c0353935b32a0fb18edf969dc984aecda7
+Size (prettytable-2.2.0.tar.gz) = 44939 bytes
