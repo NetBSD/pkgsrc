@@ -1,27 +1,22 @@
-$NetBSD: patch-Makefile,v 1.1 2021/07/29 21:17:17 fcambus Exp $
+$NetBSD: patch-Makefile,v 1.2 2021/09/11 15:40:23 fcambus Exp $
 
-- Do not hardcode CC and CXX.
 - Remove hardcoded debug flag.
 - Remove hardcoded optimizations.
 - Do not gzip manual pages.
 - Fix manual page installation path.
 
---- Makefile.orig	2021-07-29 09:10:45.841721744 +0000
+--- Makefile.orig	2021-09-06 12:06:34.000000000 +0000
 +++ Makefile
-@@ -1,9 +1,9 @@
--CC = clang
--CXX = clang++
-+CC ?= clang
-+CXX ?= clang++
+@@ -10,7 +10,7 @@ GIT_HASH ?= $(shell [ -d .git ] && git r
  
- GIT_HASH ?= $(shell [ -d .git ] && git rev-parse HEAD)
+ OS ?= $(shell uname -s)
  
--CPPFLAGS = -g -Imimalloc/include -pthread -std=c++20 \
-+CPPFLAGS = -Imimalloc/include -pthread -std=c++20 \
-            -DMOLD_VERSION=\"0.9.3\" \
+-CPPFLAGS = -g -pthread -std=c++20 -fPIE \
++CPPFLAGS = -pthread -std=c++20 -fPIE \
+            -DMOLD_VERSION=\"0.9.5\" \
             -DGIT_HASH=\"$(GIT_HASH)\" \
  	   $(EXTRA_CPPFLAGS)
-@@ -25,7 +25,6 @@ TSAN ?= 0
+@@ -31,7 +31,6 @@ TSAN ?= 0
  ifeq ($(DEBUG), 1)
    CPPFLAGS += -O0
  else
@@ -29,16 +24,16 @@ $NetBSD: patch-Makefile,v 1.1 2021/07/29 21:17:17 fcambus Exp $
  endif
  
  ifeq ($(LTO), 1)
-@@ -95,10 +95,8 @@ install: all
- 	install -m 644 mold-wrapper.so $(DESTDIR)$(PREFIX)/lib/mold
- 	strip $(DESTDIR)$(PREFIX)/lib/mold/mold-wrapper.so
+@@ -104,10 +103,8 @@ install: all
+ 	install -m 644 mold-wrapper.so $(DEST)/lib/mold
+ 	strip $(DEST)/lib/mold/mold-wrapper.so
  
--	install -m 755 -d $(DESTDIR)$(PREFIX)/share/man/man1
--	install -m 644 docs/mold.1 $(DESTDIR)$(PREFIX)/share/man/man1
--	rm -f $(DESTDIR)$(PREFIX)/share/man/man1/mold.1.gz
--	gzip -9 $(DESTDIR)$(PREFIX)/share/man/man1/mold.1
+-	install -m 755 -d $(DEST)/share/man/man1
+-	install -m 644 docs/mold.1 $(DEST)/share/man/man1
+-	rm -f $(DEST)/share/man/man1/mold.1.gz
+-	gzip -9 $(DEST)/share/man/man1/mold.1
 +	install -m 755 -d $(DESTDIR)$(MAN_DIR)/man1
 +	install -m 644 docs/mold.1 $(DESTDIR)$(MAN_DIR)/man1
  
  uninstall:
- 	rm -f $(DESTDIR)$(PREFIX)/bin/mold
+ 	rm -f $(DEST)/bin/mold
