@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/09/26 01:18:30 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/09/11 01:29:30 mef Exp $
 
-SHA1 (R/readstata13_0.9.2.tar.gz) = f87e7e136d0707d4720b00acd2a81c0e071ff65a
-RMD160 (R/readstata13_0.9.2.tar.gz) = 15d371f1c7170cf1aa1df2f8f1f31dec8707d11b
-SHA512 (R/readstata13_0.9.2.tar.gz) = c2e9ba9fa013f9976ef2d3e6d3e4fe8429fc4b8dd0ad420061bf5738de2dbfc2cfb039f7a55f8d978c51ca17ae9d9dd473cb6d77947057966f40c3ca48a86ca6
-Size (R/readstata13_0.9.2.tar.gz) = 61394 bytes
-SHA1 (patch-inst_include_readstata.h) = 6bbec9e0cbc87ac344143abf502d11d90edf4b69
+SHA1 (R/readstata13_0.10.0.tar.gz) = 9d2532189e8163249af5d93869242008eed8ac81
+RMD160 (R/readstata13_0.10.0.tar.gz) = c18c871642d314711e53d50264dd245c40980545
+SHA512 (R/readstata13_0.10.0.tar.gz) = b17cd615cb1c17727d75e05c0c93aa325fa313b84d12b1e09e3887ae88cd70e699131bcab98718a430572ef39a8973622651ea00a9c4780010d97d4b76d7d8cd
+Size (R/readstata13_0.10.0.tar.gz) = 64282 bytes
