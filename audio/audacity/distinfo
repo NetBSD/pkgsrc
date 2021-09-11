@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2021/02/06 23:21:13 dbj Exp $
+$NetBSD: distinfo,v 1.45 2021/09/11 08:53:19 nia Exp $
 
 SHA1 (audacity-2.4.1.tar.gz) = f164b6a2e02947809cee2e313cb61279a60d4829
 RMD160 (audacity-2.4.1.tar.gz) = 8c0b5643d015c7dd5bbe1b47eae0025201eb51b2
@@ -9,7 +9,7 @@ SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
 SHA1 (patch-configure) = 2cf208a6104c73c761156e2373d21af64606c31e
 SHA1 (patch-configure.ac) = b34f733208080d57b30877d762e61a3d3fdec888
 SHA1 (patch-include_audacity_Types.h) = 369ce152d4ecc8fd67fcb45fe4adf3260119571b
-SHA1 (patch-lib-src_FileDialog_Makefile.am) = efa6ca612f3984a4cf8150e3c624e347d144af87
+SHA1 (patch-lib-src_FileDialog_Makefile.am) = cc78f4d26210b536b4e1d88ab668295625aac73b
 SHA1 (patch-lib-src_FileDialog_Makefile.in) = 44ca2539d68ab3951ae44377ed56f574785c1b08
 SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
 SHA1 (patch-lib-src_libnyquist_nyquist_cmupv_src_cmupv.c) = 3d6cb845d82b1bcbe31dabd4bad30cb1f7ea27d5
@@ -19,4 +19,6 @@ SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda2
 SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
 SHA1 (patch-src_AudioIO.cpp) = 1b44c68c4233b24a5fa4e17515eb237fee0e283a
+SHA1 (patch-src_audacity.desktop.in) = 66e43b6cba4d0245210fb6e9b7345abef1828e89
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
+SHA1 (patch-src_menus_ViewMenus.cpp) = df9a785ac572520f04cd16f5d6b023b8f253f24a
