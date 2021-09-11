@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4616 2021/09/11 02:00:34 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4617 2021/09/11 02:04:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7219,3 +7219,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/R-readstata13 to 0.10.0 [mef 2021-09-11]
 	Updated www/R-htmlwidgets to 1.5.4 [mef 2021-09-11]
 	Updated www/R-httpuv to 1.6.3 [mef 2021-09-11]
+	Updated cad/gtkwave to 3.3.111 [mef 2021-09-11]
