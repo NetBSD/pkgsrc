@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2021/09/07 11:06:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2021/09/11 21:10:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -70,8 +70,9 @@ CARGO_CRATE_DEPENDS+=	instant-0.1.10
 CARGO_CRATE_DEPENDS+=	itertools-0.10.1
 CARGO_CRATE_DEPENDS+=	itoa-0.4.8
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.1.22
-CARGO_CRATE_DEPENDS+=	js-sys-0.3.53
+CARGO_CRATE_DEPENDS+=	js-sys-0.3.54
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
+CARGO_CRATE_DEPENDS+=	lewton-0.10.2
 CARGO_CRATE_DEPENDS+=	libc-0.2.101
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.5
 CARGO_CRATE_DEPENDS+=	log-0.4.14
@@ -93,6 +94,9 @@ CARGO_CRATE_DEPENDS+=	num-rational-0.3.2
 CARGO_CRATE_DEPENDS+=	num-rational-0.4.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.0
+CARGO_CRATE_DEPENDS+=	ogg-0.5.1
+CARGO_CRATE_DEPENDS+=	ogg-0.8.0
+CARGO_CRATE_DEPENDS+=	ogg_metadata-0.4.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.8.0
 CARGO_CRATE_DEPENDS+=	openssl-0.10.36
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.66
@@ -176,12 +180,12 @@ CARGO_CRATE_DEPENDS+=	version-compare-0.0.11
 CARGO_CRATE_DEPENDS+=	version_check-0.9.3
 CARGO_CRATE_DEPENDS+=	viuer-0.5.2
 CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.76
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.76
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.76
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.76
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.76
-CARGO_CRATE_DEPENDS+=	web-sys-0.3.53
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.77
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.77
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.77
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.77
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.77
+CARGO_CRATE_DEPENDS+=	web-sys-0.3.54
 CARGO_CRATE_DEPENDS+=	webpki-0.21.4
 CARGO_CRATE_DEPENDS+=	webpki-roots-0.21.1
 CARGO_CRATE_DEPENDS+=	weezl-0.1.5
