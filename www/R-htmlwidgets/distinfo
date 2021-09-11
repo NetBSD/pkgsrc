@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/06/12 01:49:22 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/09/11 01:49:06 mef Exp $
 
-SHA1 (R/htmlwidgets_1.5.3.tar.gz) = 6961256f03bc1937a21c2e0958a57452b8e70038
-RMD160 (R/htmlwidgets_1.5.3.tar.gz) = a44be9bedcb531159172567228d1aeefe1473f45
-SHA512 (R/htmlwidgets_1.5.3.tar.gz) = 6f7551f92f7ac76c99044651c763eb51fb5f82bd0d03b890698e0a3fca80e2ee010cdf5c0940c6b8a4ebebf9861d3c343d3cd1ac1953b08011fb3cddd11a6b75
-Size (R/htmlwidgets_1.5.3.tar.gz) = 323656 bytes
+SHA1 (R/htmlwidgets_1.5.4.tar.gz) = 3e9e8521c3b1ab3efaca0cdc0e380bba0fa6e219
+RMD160 (R/htmlwidgets_1.5.4.tar.gz) = ffa4431bf0757cc5a9ea3114574018181d37239c
+SHA512 (R/htmlwidgets_1.5.4.tar.gz) = 80f647dd3c71497a2dc2fc7d9ff7c743912cdd3678f02e4b320623a7b16aebebfa4d782aedd2eeb1b9d3fd172e6d322da9b7ae0ca52b4c8155a1c6e907be329d
+Size (R/htmlwidgets_1.5.4.tar.gz) = 956850 bytes
