@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/10/02 10:31:59 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/09/11 12:31:42 mef Exp $
 
-SHA1 (R/car_3.0-10.tar.gz) = 600c4ecc316c7b2ed5abff20bb8160c6a5b16939
-RMD160 (R/car_3.0-10.tar.gz) = 55b38e3890bd71b3b91bc8240ce06fdf0ce04fc4
-SHA512 (R/car_3.0-10.tar.gz) = 59e7f58e5f79c854402f15049ed1e36a8e62a1fd3279a3a27194619a61f8120826207290416695767672e7d962190c4a0676cb4f41edb8cf47e1e88fd78118e2
-Size (R/car_3.0-10.tar.gz) = 501293 bytes
+SHA1 (R/car_3.0-11.tar.gz) = 9bbc88254b3db5b30206067ceb617533ae6330b4
+RMD160 (R/car_3.0-11.tar.gz) = b62069028244752ff8e145ee83ba6d7ba2f7601a
+SHA512 (R/car_3.0-11.tar.gz) = 332878f8c6f07bfdac1fbe84fff2211ff8349b68b715b4b97a0a915a8d80e9b877e995bebf5e2b7059d3b2b2fb52bcab64ded6b4da28a88784628ace7f114ec4
+Size (R/car_3.0-11.tar.gz) = 490173 bytes
