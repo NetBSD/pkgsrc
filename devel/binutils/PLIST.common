@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.36 2021/01/29 13:10:34 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.37 2021/09/11 15:54:39 fcambus Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -66,7 +66,6 @@ gnu/man/man1/windmc.1
 gnu/man/man1/windres.1
 include/ansidecl.h
 include/bfd.h
-include/bfd_stdint.h
 include/bfdlink.h
 ${PLIST.ctf}include/ctf-api.h
 ${PLIST.ctf}include/ctf.h
