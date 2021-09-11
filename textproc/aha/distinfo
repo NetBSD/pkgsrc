@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/11/12 14:04:33 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/09/11 05:48:30 mef Exp $
 
-SHA1 (aha-0.5.tar.gz) = fdb8be82e940762546160c237993bdfe1f935c71
-RMD160 (aha-0.5.tar.gz) = ce0541972b35b4e5b6ba18b4f12949a14891cec1
-SHA512 (aha-0.5.tar.gz) = 2fbf0be928d8ea0491f6710d96eddd135253cadce6cc8c00f342e03e030ee16a3ff1eb6a559740cdd642b074c9e4e3fd9a76412272ffeb0b7bb419b0dcb6dbc1
-Size (aha-0.5.tar.gz) = 375851 bytes
+SHA1 (aha-0.5.1.tar.gz) = 1db95e69b28c46c485643c42fe0a921caf721d3e
+RMD160 (aha-0.5.1.tar.gz) = f68bb2c2999265885236c09914aeb0a7b481762c
+SHA512 (aha-0.5.1.tar.gz) = 0eb88e681208c0956e344d6574f9d7ba155d38bfb386d0a9f17022c5e925fb16d0efb6aa04804191b4cac1697a87a0f16ba51bcd97b6135cc7606046eaf89288
+Size (aha-0.5.1.tar.gz) = 394410 bytes
