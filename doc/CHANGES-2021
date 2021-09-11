@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4647 2021/09/11 23:48:57 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4648 2021/09/11 23:54:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7251,3 +7251,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed textproc/p5-YAML-XS [wen 2021-09-11]
 	Added audio/aften version 0.0.8 [nia 2021-09-11]
 	Updated math/p5-Statistics-Descriptive to 3.0800 [wen 2021-09-11]
+	Updated misc/p5-Business-ISBN-Data to 20210112.006 [wen 2021-09-11]
