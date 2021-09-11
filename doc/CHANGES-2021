@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4631 2021/09/11 12:41:22 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4632 2021/09/11 14:24:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7235,3 +7235,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/R-rgl version 0.107.14 [mef 2021-09-11]
 	Updated math/R-car to 3.0.11 [mef 2021-09-11]
 	Updated math/R-date to 1.2.39 [mef 2021-09-11]
+	Updated math/R-mvtnorm to 1.1.2 [mef 2021-09-11]
