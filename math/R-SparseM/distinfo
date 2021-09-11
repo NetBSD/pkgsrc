@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/01/03 10:49:31 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/09/11 10:09:17 mef Exp $
 
-SHA1 (R/SparseM_1.78.tar.gz) = 02de5aa6948e3f263f507b11819767d4e58e9562
-RMD160 (R/SparseM_1.78.tar.gz) = e51f6d7beaa36655c8ffdeb2e15ef54cacde74df
-SHA512 (R/SparseM_1.78.tar.gz) = bff92ebf068017ddc65440bc589c77037d42183d7ce535e09f0b6beb4a072743bcb16129ff435cdfa78095bfd153a52a0ae6e0c326ae8a54e21d9783431b73c6
-Size (R/SparseM_1.78.tar.gz) = 735024 bytes
+SHA1 (R/SparseM_1.81.tar.gz) = 5b2d34eaf5e728ac439f7c3ccf272a95fee2bcf7
+RMD160 (R/SparseM_1.81.tar.gz) = 009c27b4a622bff3ea5a282bd92c7deaa70bcbcf
+SHA512 (R/SparseM_1.81.tar.gz) = 3fba6796a48a32059e9b7a7a22302c251a57abaca3c8a90dd531a9f7d201cb1156b65382b00b3d9e4dc919031d7adbe9c7744304401974c81063ef23d98fe126
+Size (R/SparseM_1.81.tar.gz) = 735100 bytes
