@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4618 2021/09/11 05:45:01 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4619 2021/09/11 08:39:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7221,3 +7221,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/R-httpuv to 1.6.3 [mef 2021-09-11]
 	Updated cad/gtkwave to 3.3.111 [mef 2021-09-11]
 	Updated textproc/R-xmlparsedata to 1.0.5 [mef 2021-09-11]
+	Updated lang/rust-bin to 1.54.0 [nia 2021-09-11]
