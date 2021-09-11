@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/09/11 14:28:04 mef Exp $
 
 R_PKGNAME=	genetics
-R_PKGVER=	1.3.8.1.2
-PKGREVISION=	3
-CATEGORIES=	math
+R_PKGVER=	1.3.8.1.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classes and methods for handling genetic data
