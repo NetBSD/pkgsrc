@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2021/09/11 10:29:15 nia Exp $
+# $NetBSD: Makefile,v 1.640 2021/09/11 23:44:48 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -11,6 +11,7 @@ SUBDIR+=	abcmidi
 SUBDIR+=	adplay
 SUBDIR+=	adplug
 SUBDIR+=	aeneas
+SUBDIR+=	aften
 SUBDIR+=	aiomixer
 SUBDIR+=	alac
 SUBDIR+=	alacconvert

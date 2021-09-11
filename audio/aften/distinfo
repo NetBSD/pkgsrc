@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/09/11 23:44:48 nia Exp $
+
+SHA1 (aften-0.0.8.tar.bz2) = 1ff73cdcade0624495ad807492cecf14862fb61c
+RMD160 (aften-0.0.8.tar.bz2) = 540d4efb6428d14c46dd181cb89b5261fa98b1ac
+SHA512 (aften-0.0.8.tar.bz2) = 1261297eac5065c6f028618d3e15e9b152ac35440c74cfb09d98cd99a90fb1c6a49585f70928834c3f6ddbcdd1d8721f7329d24f57cd30901dff09bbc0d419e3
+Size (aften-0.0.8.tar.bz2) = 80865 bytes
+SHA1 (patch-CMakeLists.txt) = a99d769b6145192ec04548c20a3f89dc3294ffdf
+SHA1 (patch-libaften_cpu__caps.h) = 543a436e180796f62dab20b5e8c4fd139f7034e2

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/11 23:44:48 nia Exp $
+bin/aften
+bin/wavfilter
+bin/wavinfo
+bin/wavrms
+include/aften/aften-types.h
+include/aften/aften.h
+include/aften/aftenxx.h
+lib/libaften.so
+lib/libaften.so.0
+lib/libaften.so.${PKGVERSION}
+lib/libaftenxx.so
+lib/libaftenxx.so.0
+lib/libaftenxx.so.${PKGVERSION}
