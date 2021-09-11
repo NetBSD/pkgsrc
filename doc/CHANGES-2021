@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4638 2021/09/11 19:52:45 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4639 2021/09/11 20:45:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7242,3 +7242,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/binutils to 2.37 [fcambus 2021-09-11]
 	Updated editors/Sigil to 1.7.0 [wiz 2021-09-11]
 	Updated devel/binaryen to 102 [fcambus 2021-09-11]
+	Updated textproc/py-prettytable to 2.2.0 [fcambus 2021-09-11]
