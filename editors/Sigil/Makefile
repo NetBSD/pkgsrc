@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2021/07/30 12:26:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.143 2021/09/11 19:46:03 wiz Exp $
 
-DISTNAME=	Sigil-0.9.14
-PKGREVISION=	20
+DISTNAME=	Sigil-1.7.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_PROJECT=	Sigil
@@ -11,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sigil-ebook.com/
 COMMENT=	Multi-platform WYSIWYG ebook editor (for the ePub format)
 LICENSE=	gnu-gpl-v3
-
-#MAKE_JOBS_SAFE=	NO
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
@@ -52,6 +49,6 @@ REPLACE_PYTHON+=		src/Resource_Files/*/*.py
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
