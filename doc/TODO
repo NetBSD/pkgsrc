@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21018 2021/09/11 10:09:33 mef Exp $
+$NetBSD: TODO,v 1.21019 2021/09/11 12:41:22 mef Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-colourpicker-1.1.0
 	o R-countrycode-1.2.0
 	o R-crayon-1.4.1
-	o R-date-1.2.39
 	o R-deldir-0.2.10
 	o R-digest-0.6.27
 	o R-e1071-1.7.6
