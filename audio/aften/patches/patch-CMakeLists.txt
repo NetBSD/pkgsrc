@@ -1,0 +1,36 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/09/11 23:44:49 nia Exp $
+
+- Expand the default CMAKE_MODULE_PATH so pkgsrc can append to it
+without breaking things.
+- Recognize amd64 as x86.
+
+--- CMakeLists.txt.orig	2007-09-08 01:51:47.000000000 +0000
++++ CMakeLists.txt
+@@ -17,12 +17,12 @@ ENDIF(${Aften_SOURCE_DIR} MATCHES ${Afte
+ 
+ INCLUDE(${CMAKE_ROOT}/Modules/TestBigEndian.cmake)
+ INCLUDE(${CMAKE_ROOT}/Modules/CheckCSourceCompiles.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/ConfigHelper.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/HeaderTests.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/FlagsTests.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/CompilerVisibility.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/CompilerSIMD.cmake)
+-INCLUDE(${CMAKE_MODULE_PATH}/DetectCompiler.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/ConfigHelper.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/HeaderTests.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/FlagsTests.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/CompilerVisibility.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/CompilerSIMD.cmake)
++INCLUDE(${CMAKE_SOURCE_DIR}/CMakeModules/DetectCompiler.cmake)
+ 
+ OPTION(SHARED "build shared Aften library" OFF)
+ OPTION(DOUBLE "build Aften with doubles instead of floats" OFF)
+@@ -179,7 +179,7 @@ IF(SVN_VERSION)
+ ENDIF(SVN_VERSION)
+ 
+ # do SIMD stuff
+-IF(CMAKE_SYSTEM_MACHINE MATCHES "i.86" OR CMAKE_SYSTEM_MACHINE MATCHES "x86_64")
++IF(CMAKE_SYSTEM_MACHINE MATCHES "i.86" OR CMAKE_SYSTEM_MACHINE MATCHES "x86_64" OR CMAKE_SYSTEM_MACHINE MATCHES "amd64")
+   CHECK_MMX()
+ 
+   IF(HAVE_MMX)
