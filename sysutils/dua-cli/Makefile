@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/08/16 13:04:52 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/11 21:06:59 pin Exp $
 
-DISTNAME=	dua-cli-2.14.4
-# Do not update this package. Newer versions require Rust>=1.54.0
-# in order to build clap-3.0.0-beta.4
+DISTNAME=	dua-cli-2.14.6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
