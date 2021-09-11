@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/11 10:29:15 nia Exp $
+include/ltc.h
+lib/libltc.la
+lib/pkgconfig/ltc.pc
+man/man3/ltc.h.3

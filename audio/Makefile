@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2021/09/08 10:43:46 pin Exp $
+# $NetBSD: Makefile,v 1.639 2021/09/11 10:29:15 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -239,6 +239,7 @@ SUBDIR+=	libid3tag
 SUBDIR+=	libifp
 SUBDIR+=	liblastfm
 SUBDIR+=	liblo
+SUBDIR+=	libltc
 SUBDIR+=	libmad
 SUBDIR+=	libmatemixer
 SUBDIR+=	libmikmod
