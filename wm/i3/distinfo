@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2021/09/12 07:22:47 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/09/12 07:31:44 nia Exp $
 
 SHA1 (i3-4.19.2.tar.xz) = c9cbd300ccf5723ba0f749c1369945ea61b82536
 RMD160 (i3-4.19.2.tar.xz) = 83d260e3f652290ba299df43920ec13d171317f3
@@ -7,4 +7,4 @@ Size (i3-4.19.2.tar.xz) = 1277396 bytes
 SHA1 (patch-etc_config) = d3f649e8d4dc7cae7eb3c1548fa8d81224e4dacb
 SHA1 (patch-etc_config.keycodes) = 6adde0b3a56576805facd951fa9d32bfd6c88011
 SHA1 (patch-meson.build) = 013ac42f10aeb1ad05b5496f6283878e53506c46
-SHA1 (patch-src_log.c) = 406b459fa646ae25d80595bdee03ccee5d530d4a
+SHA1 (patch-src_log.c) = 4ade2bf17399c307339cb8c73ba65d2fe418841d
