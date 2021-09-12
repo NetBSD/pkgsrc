@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2021/08/30 17:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2021/09/12 10:22:57 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -31,17 +31,17 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 5.9
+# Known test failures as of 5.9.1
 # test-persistent-nodemap.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6523
+# test-cloned-uncompressed
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6591
 # test-censor.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6585
-# test-manifest.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6586
 # test-removeemptydirs.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
 #
-# Ran 888 tests, 97 skipped, 4 failed.
+# Ran 888 tests, 97 skipped, 5 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
