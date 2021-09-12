@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/09/09 07:31:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/12 07:02:05 wiz Exp $
 
 DISTNAME=	reedsolo-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,12 +10,7 @@ HOMEPAGE=	https://github.com/tomerfiliba/reedsolomon
 COMMENT=	Pure-Python Reed Solomon encoder/decoder
 LICENSE=	mit
 
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-#PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
