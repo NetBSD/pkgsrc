@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4650 2021/09/12 00:01:58 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4651 2021/09/12 00:04:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7254,3 +7254,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/p5-Business-ISBN-Data to 20210112.006 [wen 2021-09-11]
 	Updated misc/p5-Business-ISBN to 3.006 [wen 2021-09-11]
 	Updated misc/p5-Business-ISMN to 1.202 [wen 2021-09-12]
+	Updated misc/p5-Business-UPS to 2.02 [wen 2021-09-12]
