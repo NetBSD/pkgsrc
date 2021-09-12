@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21028 2021/09/12 06:37:43 wen Exp $
+$NetBSD: TODO,v 1.21029 2021/09/12 07:01:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -475,6 +475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aewm++-1.1.5
 	o afbinit-1.0.1
 	o afl++-3.12c
+	o age-1.0
 	o aide-0.16
 	o akonadi-16.08.1
 	o album-4.17
@@ -562,6 +563,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
+	o bison-3.8
 	o blender-2.93
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -749,6 +751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.2.3
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -887,7 +890,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.6.0
 	o google-glog-2.2.2
+	o gopls-0.7.2
 	o goreman-0.3.7
 	o gossip-0.31
 	o got-0.52
@@ -902,13 +907,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o greed-4.2
 	o gromacs-2021.1
 	o groonga-11.0.1
-	o grpc-1.39.1
+	o grpc-1.40.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins0.10-bad-0.11.90
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.18.4
 	o gstreamer1-1.18.4 [wip]
+	o gstreamer1-1.18.5
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
 	o gtk4-4.4
@@ -1122,7 +1128,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kxmlrpcclient-5.81.0
 	o labelnation-1.218
 	o labltk-8.06.7
-	o ladspa-1.16
+	o ladspa-1.17
 	o lastpass-cli-1.3.3
 	o latexmk-472b
 	o lbdb-49
@@ -1196,6 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libvirt-2.3
 	o libwebsockets-4.2.0
 	o libxdg-basedir-1.2.3
+	o libxkbcommon-1.3.1
 	o libyang-1.0.225
 	o libzookeeper-3.7.0
 	o libzrtpcpp-4.6.6
@@ -1318,6 +1325,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o node_exporter-1.1.2
+	o notmuch-0.33.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsm-2.4.12
@@ -1730,6 +1738,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
+	o py-gstreamer1-1.18.5
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
@@ -1840,6 +1849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-marisa-0.2.6
 	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
+	o rust-1.55.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -2044,6 +2054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wcalc-2.4
 	o wcslib-7.6
 	o websvn-2.6.0
+	o wget-1.21.2
 	o wgetpaste-2.30
 	o whowatch-1.8.5
 	o widelands-1.0
