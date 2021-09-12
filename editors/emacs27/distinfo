@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/04/01 22:29:21 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/09/12 08:28:34 tnn Exp $
 
 SHA1 (emacs-27.2.tar.gz) = 6c5370eda0bf41e3346dcf2d6cfe994ac56445c1
 RMD160 (emacs-27.2.tar.gz) = 5cf2927984b34cfd611114190c8b7f498093e994
 SHA512 (emacs-27.2.tar.gz) = dddba2794df136a52a9f65b81acd765dcca01148b65bf37b249d620d3b143ecc94be25ea9efe96c0884a2deeb16e3fc63bbb42c690e86ac6d5faef43b8b8c4e3
 Size (emacs-27.2.tar.gz) = 67153050 bytes
 SHA1 (patch-lib-src_emacsclient.c) = c329314da221df5cc60cc3da2424589843ef8dc9
+SHA1 (patch-src_Makefile.in) = d9d9d66dec68ea2aa1a7406b94dfa055fbee70ed
 SHA1 (patch-src_inotify.c) = 1fdc6566ed57e8418f1ddc85bb03518d7d9d6bb3
