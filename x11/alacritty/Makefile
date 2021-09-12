@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/08/04 00:02:32 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2021/09/12 14:47:34 tnn Exp $
 
 DISTNAME=	alacritty-0.9.0
 CATEGORIES=	x11
@@ -46,11 +46,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/alacritty.yml ${DESTDIR}${PREFIX}/share/examples/alacritty
 
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
