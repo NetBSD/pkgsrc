@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4655 2021/09/12 07:16:29 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4656 2021/09/12 07:21:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7259,3 +7259,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/p5-Mac-PropertyList to 1.502 [wen 2021-09-12]
 	Updated misc/p5-Parse-Win32Registry to 1.1 [wen 2021-09-12]
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.32 [wen 2021-09-12]
+	Updated security/p5-IO-Socket-SSL to 2.072 [wen 2021-09-12]
