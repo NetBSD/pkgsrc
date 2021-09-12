@@ -1,4 +1,4 @@
-$NetBSD: patch-common_wscript,v 1.3 2021/09/10 11:14:05 nia Exp $
+$NetBSD: patch-common_wscript,v 1.4 2021/09/12 06:04:44 nia Exp $
 
 Add NetBSD support.
 
