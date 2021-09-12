@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21034 2021/09/12 09:17:35 wiz Exp $
+$NetBSD: TODO,v 1.21035 2021/09/12 09:24:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.7.5
 	o imapsync-1.727
-	o imath-3.1.3
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o inetutils-2.0
