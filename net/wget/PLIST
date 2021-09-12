@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/01/04 12:27:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/09/12 09:15:10 wiz Exp $
 bin/wget
 info/wget.info
 man/man1/wget.1
@@ -45,6 +45,7 @@ share/locale/it/LC_MESSAGES/wget.mo
 share/locale/ja/LC_MESSAGES/wget-gnulib.mo
 share/locale/ja/LC_MESSAGES/wget.mo
 share/locale/ko/LC_MESSAGES/wget-gnulib.mo
+share/locale/ko/LC_MESSAGES/wget.mo
 share/locale/lt/LC_MESSAGES/wget.mo
 share/locale/ms/LC_MESSAGES/wget-gnulib.mo
 share/locale/nb/LC_MESSAGES/wget-gnulib.mo
