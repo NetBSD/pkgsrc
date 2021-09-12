@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21025 2021/09/12 03:31:49 wen Exp $
+$NetBSD: TODO,v 1.21026 2021/09/12 03:33:23 wen Exp $
 
 Suggested new packages
 ======================
@@ -1459,10 +1459,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Archive-Peek-0.38
 	o p5-Authen-Simple-0.6
 	o p5-BerkeleyDB-1.1
-	o p5-Business-ISBN-3.006
-	o p5-Business-ISBN-Data-20210112.006
-	o p5-Business-ISMN-1.202
-	o p5-Business-UPS-2.02
 	o p5-CDB_File-1.05
 	o p5-CPAN-FindDependencies-3.05
 	o p5-CPAN-Perl-Releases-5.20210320
