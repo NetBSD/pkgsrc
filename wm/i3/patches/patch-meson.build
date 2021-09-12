@@ -1,0 +1,24 @@
+$NetBSD: patch-meson.build,v 1.1 2021/09/12 07:22:47 nia Exp $
+
+Install config files to examples, per pkgsrc policy.
+
+--- meson.build.orig	2021-02-27 09:37:58.753311900 +0000
++++ meson.build
+@@ -44,7 +44,7 @@ else
+   cdata.set('PATCH_VERSION', 0)
+ endif
+ cdata.set_quoted('I3_VERSION', '@VCS_TAG@')
+-cdata.set_quoted('SYSCONFDIR', join_paths(get_option('prefix'), get_option('sysconfdir')))
++cdata.set_quoted('SYSCONFDIR', join_paths(get_option('sysconfdir')))
+ 
+ if get_option('b_sanitize').split(',').contains('address')
+   cdata.set('I3_ASAN_ENABLED', 1)
+@@ -580,7 +580,7 @@ install_data(
+ install_subdir(
+   'etc',
+   strip_directory: true,
+-  install_dir: join_paths(get_option('sysconfdir'), 'i3'),
++  install_dir: join_paths(get_option('datadir'), 'examples', 'i3'),
+ )
+ 
+ install_subdir(

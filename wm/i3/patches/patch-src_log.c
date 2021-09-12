@@ -1,37 +1,15 @@
-$NetBSD: patch-src_log.c,v 1.7 2020/10/31 13:55:17 wiz Exp $
+$NetBSD: patch-src_log.c,v 1.8 2021/09/12 07:22:47 nia Exp $
 
-* NetBSD versions below and 7 miss shm_open and shm_unlink
-* NetBSD versions below 8 miss pthread_condattr_pshared 
+NetBSD lacks pthread_condattr_setpshared.
 
---- src/log.c.orig	2019-08-03 13:14:38.000000000 +0000
+--- src/log.c.orig	2021-02-27 09:37:58.756645200 +0000
 +++ src/log.c
-@@ -123,6 +123,7 @@ void init_logging(void) {
-  *
-  */
- void open_logbuffer(void) {
-+#if !defined(__NetBSD__) 
-     /* Reserve 1% of the RAM for the logfile, but at max 25 MiB.
-      * For 512 MiB of RAM this will lead to a 5 MiB log buffer.
-      * At the moment (2011-12-10), no testcase leads to an i3 log
-@@ -175,6 +176,7 @@ void open_logbuffer(void) {
-     logwalk = logbuffer + sizeof(i3_shmlog_header);
-     loglastwrap = logbuffer + logbuffer_size;
-     store_log_markers();
-+#endif /* !defined(__NetBSD__) */
- }
+@@ -161,7 +161,7 @@ void open_logbuffer(void) {
  
- /*
-@@ -182,11 +184,13 @@ void open_logbuffer(void) {
-  *
-  */
- void close_logbuffer(void) {
-+#if !defined(__NetBSD__)
-     close(logbuffer_shm);
-     shm_unlink(shmlogname);
-     free(shmlogname);
-     logbuffer = NULL;
-     shmlogname = "";
-+#endif /* !defined(__NetBSD__) */
- }
+     header = (i3_shmlog_header *)logbuffer;
  
- /*
+-#if !defined(__OpenBSD__)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
+     pthread_condattr_t cond_attr;
+     pthread_condattr_init(&cond_attr);
+     if (pthread_condattr_setpshared(&cond_attr, PTHREAD_PROCESS_SHARED) != 0)
