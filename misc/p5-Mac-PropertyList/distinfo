@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/03/25 15:26:35 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/09/12 01:44:31 wen Exp $
 
-SHA1 (Mac-PropertyList-1.413.tar.gz) = c2da24c64da028fea004bb31afbba7cc91a951bc
-RMD160 (Mac-PropertyList-1.413.tar.gz) = ca1c6102f6f0614f71a0050dc1475ea6685b11a5
-SHA512 (Mac-PropertyList-1.413.tar.gz) = f29f946a613cc4937e9b72813ef17475f7d4205db7bee26bbbf637329a7c3f1be2ef4490bceb556c478040c322e412052ce26c127ec56de1d7556e8446aa98bb
-Size (Mac-PropertyList-1.413.tar.gz) = 38201 bytes
+SHA1 (Mac-PropertyList-1.502.tar.gz) = f12a64dc038d896177f65c2b80aa332dbc292784
+RMD160 (Mac-PropertyList-1.502.tar.gz) = 76146d56ae0956949d0e1512d82b8e8396ae874a
+SHA512 (Mac-PropertyList-1.502.tar.gz) = 62515ef137a31852197cfecd60582ea9dbf697c4e8c37a09ea21a9667fcae7a99cb709f1d1b9edc5f717c70bdef6db2c6496f740cc3d6f5436ac34a8b36f6fec
+Size (Mac-PropertyList-1.502.tar.gz) = 40323 bytes
