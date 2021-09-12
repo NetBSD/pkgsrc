@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/09/10 11:14:05 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/09/12 06:04:44 nia Exp $
 
 SHA1 (jack2-1.9.19.tar.gz) = 3182304c0a3ecd911775fb46088f0df79ee9015f
 RMD160 (jack2-1.9.19.tar.gz) = da6ed4db02dfc856c477d76a73fe22157b6f7df8
@@ -11,9 +11,9 @@ SHA1 (patch-example-clients_wscript) = 9db0899e797acbc416bfd9e6aba50c70bd5ff0ab
 SHA1 (patch-netbsd_JackAtomic__os.h) = cd9cc4bf9913b3dedfbb8a2ea34077277e17f85d
 SHA1 (patch-netbsd_JackNetBSDTime.c) = 7cc2504bbd452b703dd062ac5d35f68ffe7e3b0a
 SHA1 (patch-netbsd_JackPlatformPlug__os.h) = f17b0daf4d8a4ef1001b35e6ea1411cfb1b981c2
-SHA1 (patch-netbsd_sun_JackSunAdapter.cpp) = e3d2972dd07919c5de266ae830f043aed2662a2c
+SHA1 (patch-netbsd_sun_JackSunAdapter.cpp) = a3680d9dc6bb78c812590f62b1c24a9c78d65b20
 SHA1 (patch-netbsd_sun_JackSunAdapter.h) = 740b36c69d02742eceeb724ba18796664fb1bc2d
-SHA1 (patch-netbsd_sun_JackSunDriver.cpp) = b3f18de879f2d770547ac534bfd4f5bb64db3017
+SHA1 (patch-netbsd_sun_JackSunDriver.cpp) = 7ffa6b659b1df8eee4cfaa3da8d170b0c3f49355
 SHA1 (patch-netbsd_sun_JackSunDriver.h) = 9da5fbec2216081876174057f831da4c54e3029e
 SHA1 (patch-posix_JackNetUnixSocket.cpp) = 562242daf7c0f296bfcd03f468518aaf18d995d9
 SHA1 (patch-posix_JackNetUnixSocket.h) = ce9a9255dc0dd423562b94b0fcc1012c8ba3a37e
@@ -21,4 +21,4 @@ SHA1 (patch-posix_JackPosixSemaphore.cpp) = 59425ada11a5cab83159691ae10a23c0d367
 SHA1 (patch-posix_JackSocket.cpp) = 88ae18c3d2cc31a43355ff9b0c78ab13b83bd314
 SHA1 (patch-tests_wscript) = e0bf616175a116df489808cda8cb8c70890d4da0
 SHA1 (patch-tools_wscript) = 197fc67305c62ccfb35b06d194d1785bb8ef5ab3
-SHA1 (patch-wscript) = 71c9a1c583b864b6d89c081aa0e259ff898e293d
+SHA1 (patch-wscript) = 2d95ee17426992d921c8b2c432abdf39ec2d54c7
