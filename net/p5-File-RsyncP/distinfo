@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/09/12 09:35:08 wen Exp $
 
-SHA1 (File-RsyncP-0.74.tar.gz) = dc18d4f599dca50d3930756125283c0e92969729
-RMD160 (File-RsyncP-0.74.tar.gz) = a4407d6189cbb36f5ff1cbe01307822f5748b6b3
-SHA512 (File-RsyncP-0.74.tar.gz) = 0585c2f0b145875e9a13523d829b2ed9907e1e38c526f630a79a5b5dab36b6a9012375620ae92292e5977735c106bfab905bb121f56df5ca4494e1efcbd02cb6
-Size (File-RsyncP-0.74.tar.gz) = 167122 bytes
+SHA1 (File-RsyncP-0.76.tar.gz) = a045f82e15fd5b3dad9b1e53f50bb500af75eb08
+RMD160 (File-RsyncP-0.76.tar.gz) = 7a01ca78f58df4753ed0c958e1204bbfae070ca9
+SHA512 (File-RsyncP-0.76.tar.gz) = b81d9ce63181605939e8aff87c9e56ab276899f019f44eb3f149e7ee0d44a94fcbee771381ebe6ca8281c2de0d57d9cbdbcb972ccb7406a0aefd920040603bb3
+Size (File-RsyncP-0.76.tar.gz) = 167744 bytes
