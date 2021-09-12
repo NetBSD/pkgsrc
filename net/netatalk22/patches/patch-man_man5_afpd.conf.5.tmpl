@@ -1,0 +1,15 @@
+$NetBSD: patch-man_man5_afpd.conf.5.tmpl,v 1.1 2021/09/12 15:52:37 nat Exp $
+
+Allow -1 as a vaild tickleval to disable session tickles.
+As needed on appletalk 58.
+
+--- man/man5/afpd.conf.5.tmpl.orig	2014-04-08 08:47:12.000000000 +0000
++++ man/man5/afpd.conf.5.tmpl
+@@ -598,6 +598,7 @@ These options are useful for debugging o
+ \-tickleval \fI[number]\fR
+ .RS 4
+ Sets the tickle timeout interval (in seconds)\&. Defaults to 30\&.
++A value of -1 disables session tickles.
+ .RE
+ .PP
+ \-timeout \fI[number]\fR
