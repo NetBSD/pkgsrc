@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4662 2021/09/12 07:38:28 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4663 2021/09/12 07:43:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7266,3 +7266,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/p5-Net-IPv6Addr to 1.02 [wen 2021-09-12]
 	Updated net/p5-Net-INET6Glue to 0.6.4 [wen 2021-09-12]
 	Updated net/p5-Net-GitHub to 1.02 [wen 2021-09-12]
+	Updated net/p5-Net-DNS to 1.32 [wen 2021-09-12]
