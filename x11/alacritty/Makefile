@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/09/12 14:47:34 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2021/09/12 14:50:27 tnn Exp $
 
 DISTNAME=	alacritty-0.9.0
 CATEGORIES=	x11
@@ -19,11 +19,14 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
-
-.include "../../mk/bsd.prefs.mk"
+.endif
 
 .if ${OPSYS} == "NetBSD" && exists(${X11BASE}/lib/X11/locale/lib/common/xlcUTF8Load.so)
 # This works around XIM errors when RTLD local-binding libX11.
