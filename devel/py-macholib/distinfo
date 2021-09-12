@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/08/30 15:38:32 adam Exp $
+$NetBSD: distinfo,v 1.12 2021/09/12 09:56:23 adam Exp $
 
-SHA1 (macholib-1.15.1.tar.gz) = 9ea16e70eb624480a6583bd5844f05bce0244f9b
-RMD160 (macholib-1.15.1.tar.gz) = 42a0eabe5e1d57ff438150ed3f6ac0aa40fa330e
-SHA512 (macholib-1.15.1.tar.gz) = 4c1511c9784cd004efd2b249b09ee283a38b4bbca7608da311b61e4edbca620a721b968aca03131c2d6bcef84bc840815c887b624c936f05082ef666af4029c0
-Size (macholib-1.15.1.tar.gz) = 57525 bytes
+SHA1 (macholib-1.15.2.tar.gz) = 6ae0385730d0e458a433963da8cf40f280610242
+RMD160 (macholib-1.15.2.tar.gz) = 7f1eea5611938174af30cbbd9438ff324dc4ae96
+SHA512 (macholib-1.15.2.tar.gz) = ae0c3c3a14e15e412ff4ca3bb6a36a94ae3727494ed993fa623ebdcdfd7da2de1e4ef3484bc43aec780ae7bb95a6d32d1b26236813171bfa370029062a616d4f
+Size (macholib-1.15.2.tar.gz) = 57604 bytes
