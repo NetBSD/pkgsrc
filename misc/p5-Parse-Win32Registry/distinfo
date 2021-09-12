@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/09/12 01:57:21 wen Exp $
 
-SHA1 (Parse-Win32Registry-1.0.tar.gz) = dc857428c81076031512282a22832c63321f2d5c
-RMD160 (Parse-Win32Registry-1.0.tar.gz) = 949c1e9481610ca546891f5779eb9ed714069a04
-SHA512 (Parse-Win32Registry-1.0.tar.gz) = 09305b5324193395cea48c900bc0dc7a4dfd1345b8dadf08dad9558110585c0d4b68887be92fe58fe498f57f00f39420e609f9988ecd3807733173f5e474a1a0
-Size (Parse-Win32Registry-1.0.tar.gz) = 102985 bytes
+SHA1 (Parse-Win32Registry-1.1.tar.gz) = 609bd019cb9d2b0b5e3c7d78e8f6a182b698aead
+RMD160 (Parse-Win32Registry-1.1.tar.gz) = 79e70b33866888e91bbccf4bcf0387d632d3e053
+SHA512 (Parse-Win32Registry-1.1.tar.gz) = 6b85ffbe971a7908a8fdddc59873097f01faa508ff8af88ce15c603baecb44de28813ee9a5d43c70d40f488a2f7aafbce22f644b6e3924712c94e46420e70bd6
+Size (Parse-Win32Registry-1.1.tar.gz) = 103489 bytes
