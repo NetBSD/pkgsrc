@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2020/09/07 12:03:06 wiz Exp $
+$NetBSD: distinfo,v 1.22 2021/09/12 00:10:18 wen Exp $
 
-SHA1 (Locale-Codes-3.65.tar.gz) = a70e99234f35d94710178b4221211169aeebf547
-RMD160 (Locale-Codes-3.65.tar.gz) = 949a68b5c680f8031bdb16bcfee92a05ab8e1ba1
-SHA512 (Locale-Codes-3.65.tar.gz) = 501c63b54af4058ff09613db2f8bca2d693bb09129ac62556e14c4c8f20266016d98ab159d543cd18373c8ae798427ee0f5f740c8b61dd39769726dd921f864a
-Size (Locale-Codes-3.65.tar.gz) = 859374 bytes
+SHA1 (Locale-Codes-3.68.tar.gz) = 0822339b5b3a7209badcaf6d05ad1f9cc8a5a611
+RMD160 (Locale-Codes-3.68.tar.gz) = 566b6716a3216f72f6a904558e0e7ff5192d5682
+SHA512 (Locale-Codes-3.68.tar.gz) = 49120270536896ab625ccf11b070e6c35571a235c48050c56772a760fc5d77d38ea8cf5472c4e5cb899aeade98aaaf418160dac75c6fb9b440de60570bb131cc
+Size (Locale-Codes-3.68.tar.gz) = 864534 bytes
