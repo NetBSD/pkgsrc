@@ -1,10 +1,10 @@
-$NetBSD: patch-etc_config,v 1.1 2020/09/25 12:35:48 nia Exp $
+$NetBSD: patch-etc_config,v 1.2 2021/09/12 07:22:47 nia Exp $
 
 Useful default volume controls for NetBSD.
 
---- etc/config.orig	2020-07-26 08:11:37.000000000 +0000
+--- etc/config.orig	2021-02-27 09:37:58.746645500 +0000
 +++ etc/config
-@@ -22,18 +22,24 @@ font pango:monospace 8
+@@ -22,18 +22,22 @@ font pango:monospace 8
  
  # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
  # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -25,8 +25,6 @@ Useful default volume controls for NetBSD.
 -bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 +bindsym XF86AudioRaiseVolume exec --no-startup-id mixerctl -w outputs.master+=15 && $refresh_i3status
 +bindsym XF86AudioLowerVolume exec --no-startup-id mixerctl -w outputs.master-=15 && $refresh_i3status
-+bindsym XF86AudioMute exec --no-startup-id mixerctl -w outputs.master=0 && $refresh_i3status
-+bindsym XF86AudioMicMute exec --no-startup-id mixerctl -w inputs.reclevel=0 && $refresh_i3status
 +
 +# Use pactl to adjust volume in PulseAudio.
 +#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
