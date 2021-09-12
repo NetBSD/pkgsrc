@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21027 2021/09/12 05:04:58 dsainty Exp $
+$NetBSD: TODO,v 1.21028 2021/09/12 06:37:43 wen Exp $
 
 Suggested new packages
 ======================
@@ -1624,7 +1624,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-memcached-3.1.5
 	o php-mongo-1.6.16
 	o php-mrbs-1.9.2
-	o php-nextcloud-21.0.1
 	o php-orangehrm-4.0
 	o php-owncloud-10.7.0
 	o php-phrasea2-4.1.2
