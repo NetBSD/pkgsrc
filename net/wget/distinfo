@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.65 2021/01/14 16:31:00 schmonz Exp $
+$NetBSD: distinfo,v 1.66 2021/09/12 09:15:10 wiz Exp $
 
-SHA1 (wget-1.21.1.tar.lz) = 215b0c056580b28d7d5edeac9c8c356ecc99ec4c
-RMD160 (wget-1.21.1.tar.lz) = 730e08c0b84b5af3cbf4764b1fa149b4ba3e938a
-SHA512 (wget-1.21.1.tar.lz) = 51ce93608094b2e5ba8144ff4d5cd36637eb6f9a3663355558885ea1f9fad0641e4ce13d61a18ac2f1285487ac7c7eba721aef04f9079889c0045f3ab915a450
-Size (wget-1.21.1.tar.lz) = 2367165 bytes
-SHA1 (patch-lib_malloc_dynarray-skeleton.c) = e5bac65aad4a3e09f7ade477d0991ba002900e4d
+SHA1 (wget-1.21.2.tar.lz) = 4255d97b9067cf91e5c1439520857cdaa6460fc6
+RMD160 (wget-1.21.2.tar.lz) = 2f6c8a960b51abe7050416cc2ce37f645a86e5f4
+SHA512 (wget-1.21.2.tar.lz) = 25e682e6f8458e9b9ec9ba1c796e670d1170d6de62716e3e879d729b04c0899cf300701330527b2f1d5a5e62ed1acb3c90c1a32716f96b3ecd8a71337a76a15a
+Size (wget-1.21.2.tar.lz) = 2407790 bytes
