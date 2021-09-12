@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4659 2021/09/12 07:26:24 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4660 2021/09/12 07:31:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7263,3 +7263,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/i3 to 4.19.2 [nia 2021-09-12]
 	Updated mail/mutt to 2.1.3 [tron 2021-09-12]
 	Updated net/p5-SNMP-Info to 3.78 [wen 2021-09-12]
+	Updated net/p5-Net-IPv6Addr to 1.02 [wen 2021-09-12]
