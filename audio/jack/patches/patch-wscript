@@ -1,4 +1,4 @@
-$NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
+$NetBSD: patch-wscript,v 1.3 2021/09/12 06:04:44 nia Exp $
 
 - Add NetBSD support.
 - Ensure man pages are installed on all Unixes.
@@ -13,7 +13,19 @@ $NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
          ('IS_SUN',     'SunOS',   ['sunos']),
          ('IS_WINDOWS', 'Windows', ['cygwin', 'msys', 'win32'])
      ]
-@@ -531,6 +532,9 @@ def obj_add_includes(bld, obj):
+@@ -231,6 +232,11 @@ def configure(conf):
+     conf.env.append_unique('CXXFLAGS', ['-Wall', '-Wno-invalid-offsetof'])
+     conf.env.append_unique('CXXFLAGS', '-std=gnu++11')
+ 
++    # Needed to work around "error: ::vfscanf has not been declared" failures
++    # prior to NetBSD 9.99.x.
++    if conf.env['IS_NETBSD']:
++        conf.env.append_unique('CXXFLAGS', '-D_NETBSD_SOURCE')
++
+     if not conf.env['IS_MACOSX']:
+         conf.env.append_unique('LDFLAGS', '-Wl,--no-undefined')
+     else:
+@@ -531,6 +537,9 @@ def obj_add_includes(bld, obj):
      if bld.env['IS_SUN']:
          obj.includes += ['posix', 'solaris']
  
@@ -23,7 +35,7 @@ $NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
      if bld.env['IS_WINDOWS']:
          obj.includes += ['windows']
  
-@@ -678,6 +682,11 @@ def build_drivers(bld):
+@@ -678,6 +687,11 @@ def build_drivers(bld):
          'windows/portaudio/JackPortAudioDriver.cpp',
      ]
  
@@ -35,7 +47,7 @@ $NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
      winmme_src = [
          'windows/winmme/JackWinMMEDriver.cpp',
          'windows/winmme/JackWinMMEInputPort.cpp',
-@@ -779,6 +788,12 @@ def build_drivers(bld):
+@@ -779,6 +793,12 @@ def build_drivers(bld):
              target = 'oss',
              source = oss_src)
  
@@ -48,7 +60,7 @@ $NetBSD: patch-wscript,v 1.2 2021/09/10 11:14:05 nia Exp $
  def build(bld):
      if not bld.variant and bld.env['BUILD_WITH_32_64']:
          Options.commands.append(bld.cmd + '_' + lib32)
-@@ -821,9 +836,10 @@ def build(bld):
+@@ -821,9 +841,10 @@ def build(bld):
      bld.recurse('tools')
  
      if bld.env['IS_LINUX']:

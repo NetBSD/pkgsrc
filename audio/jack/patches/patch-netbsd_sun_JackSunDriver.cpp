@@ -1,8 +1,8 @@
-$NetBSD: patch-netbsd_sun_JackSunDriver.cpp,v 1.3 2021/09/10 11:14:05 nia Exp $
+$NetBSD: patch-netbsd_sun_JackSunDriver.cpp,v 1.4 2021/09/12 06:04:44 nia Exp $
 
 Add NetBSD support.
 
---- netbsd/sun/JackSunDriver.cpp.orig	2021-09-10 11:08:26.142826553 +0000
+--- netbsd/sun/JackSunDriver.cpp.orig	2021-09-12 05:59:47.195547055 +0000
 +++ netbsd/sun/JackSunDriver.cpp
 @@ -0,0 +1,569 @@
 +/*
