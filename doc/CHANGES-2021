@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4652 2021/09/12 00:11:00 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4653 2021/09/12 01:47:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7256,3 +7256,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/p5-Business-ISMN to 1.202 [wen 2021-09-12]
 	Updated misc/p5-Business-UPS to 2.02 [wen 2021-09-12]
 	Updated misc/p5-Locale-Codes to 3.68 [wen 2021-09-12]
+	Updated misc/p5-Mac-PropertyList to 1.502 [wen 2021-09-12]
