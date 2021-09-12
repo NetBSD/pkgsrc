@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4673 2021/09/12 09:35:51 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4674 2021/09/12 09:58:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7277,3 +7277,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/imath to 3.1.3 [wiz 2021-09-12]
 	Updated net/p5-Net-Amazon-S3 to 0.98 [wen 2021-09-12]
 	Updated net/p5-File-RsyncP to 0.76 [wen 2021-09-12]
+	Updated devel/py-hypothesis to 6.21.0 [adam 2021-09-12]
+	Updated graphics/py-altgraph to 0.17.2 [adam 2021-09-12]
+	Updated devel/py-macholib to 1.15.2 [adam 2021-09-12]
+	Updated devel/py-xdis to 5.0.12 [adam 2021-09-12]
