@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/09/07 12:17:33 wiz Exp $
+$NetBSD: distinfo,v 1.15 2021/09/12 09:30:28 wen Exp $
 
-SHA1 (Net-Amazon-S3-0.91.tar.gz) = 3da3fcba146c648d2f45f605dd20a6a54c7af0f6
-RMD160 (Net-Amazon-S3-0.91.tar.gz) = 1b2f022b7229dcac84652c985e567a54001603b8
-SHA512 (Net-Amazon-S3-0.91.tar.gz) = 5f40476b1771eb74234cf1f2205047866ced7a693318696464c53e310ea06b04b5783613417c6f221333df6502a55fdb1ae0a02b2c3145daa00ecd247428f1d3
-Size (Net-Amazon-S3-0.91.tar.gz) = 97265 bytes
+SHA1 (Net-Amazon-S3-0.98.tar.gz) = 4c205fa0e33452c18ddbe1e2e10770b3d05f4c4e
+RMD160 (Net-Amazon-S3-0.98.tar.gz) = 37e713a9cb77b552d46bd5c04bc4d88a352214ec
+SHA512 (Net-Amazon-S3-0.98.tar.gz) = fa7b4848d4d6a16243a092e78b6b4cde876cb2945e5d261fff0f54e6d66e57995fc527b9cebcc78c7e590051290d48ef36f1405eedfb3073fd5754c7a396604a
+Size (Net-Amazon-S3-0.98.tar.gz) = 131669 bytes
