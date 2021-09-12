@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21030 2021/09/12 09:08:42 wiz Exp $
+$NetBSD: TODO,v 1.21031 2021/09/12 09:10:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o goocanvas-2.0.2
 	o google-benchmark-1.6.0
 	o google-glog-2.2.2
-	o gopls-0.7.2
 	o goreman-0.3.7
 	o gossip-0.31
 	o got-0.52
