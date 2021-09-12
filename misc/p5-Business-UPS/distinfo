@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:49:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/09/12 00:03:28 wen Exp $
 
-SHA1 (Business-UPS-2.01.tar.gz) = dd5578d3a45bb00cdf7e066672e523afb970f239
-RMD160 (Business-UPS-2.01.tar.gz) = 0ade53ea8717aa54ef2f88d603dc7c34c3eefb30
-SHA512 (Business-UPS-2.01.tar.gz) = 1c0d60e9a3a513fd0ce2513e4e561eec60de5890bfe497b19d44976a2da9d7f31870bbc1824569b882ac573ddd969ad1d67293a2ac08a7750e2dd881d0f49f16
-Size (Business-UPS-2.01.tar.gz) = 9341 bytes
+SHA1 (Business-UPS-2.02.tar.gz) = 899b787a29a91d56e0f874a6dd01f46e00536455
+RMD160 (Business-UPS-2.02.tar.gz) = dc9e5a44b9ba6ff61a223da178496de1d9400c1c
+SHA512 (Business-UPS-2.02.tar.gz) = 417245c9197de23bce3a816dad79c212f6aaf26554b7f79fc55b4686b590836bc1febce4e0a6605939ffbb051f8b928f3ec2d113e75c632c1f59acf8b719347d
+Size (Business-UPS-2.02.tar.gz) = 10189 bytes
