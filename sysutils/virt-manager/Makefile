@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/04/21 11:42:44 adam Exp $
+# $NetBSD: Makefile,v 1.50 2021/09/12 08:40:44 nia Exp $
 
 DISTNAME=	virt-manager-0.9.4
 PKGREVISION=	35
@@ -9,6 +9,8 @@ MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	https://virt-manager.org/
 COMMENT=	GUI to manage virtual machines
 LICENSE=	gnu-gpl-v2
+
+BROKEN+=	"Lack of libvirt Python bindings, needs work"
 
 DEPENDS=	libvirt>=0.9.3:../../sysutils/libvirt
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.24:../../x11/py-gtk2
