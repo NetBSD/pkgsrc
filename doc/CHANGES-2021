@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4670 2021/09/12 09:17:35 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4671 2021/09/12 09:24:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7274,3 +7274,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/gdbm to 1.21 [wiz 2021-09-12]
 	Updated net/wget to 1.21.2 [wiz 2021-09-12]
 	Updated audio/fluidsynth to 2.2.3 [wiz 2021-09-12]
+	Updated math/imath to 3.1.3 [wiz 2021-09-12]
