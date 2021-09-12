@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4675 2021/09/12 10:23:09 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4676 2021/09/12 10:36:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7282,3 +7282,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-macholib to 1.15.2 [adam 2021-09-12]
 	Updated devel/py-xdis to 5.0.12 [adam 2021-09-12]
 	Updated devel/py-mercurial to 5.9.1 [wiz 2021-09-12]
+	Updated net/gallery-dl to 1.18.4 [leot 2021-09-12]
