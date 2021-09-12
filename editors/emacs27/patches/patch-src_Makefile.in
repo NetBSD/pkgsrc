@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2021/09/12 08:28:34 tnn Exp $
+
+Fix crash during build on aarch64-apple-darwin*
+https://github.com/emacs-mirror/emacs/commit/a88f63500e475f842e5fbdd9abba4ce122cdb082.patch
+
+--- src/Makefile.in.orig	2021-01-28 17:52:38.000000000 +0000
++++ src/Makefile.in
+@@ -339,7 +339,7 @@ HAVE_PDUMPER = @HAVE_PDUMPER@
+ 
+ ## ARM Macs require that all code have a valid signature.  Since pump
+ ## invalidates the signature, we must re-sign to fix it.
+-DO_CODESIGN=$(patsubst arm-apple-darwin%,yes,@configuration@)
++DO_CODESIGN=$(patsubst aarch64-apple-darwin%,yes,@configuration@)
+ 
+ # 'make' verbosity.
+ AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
