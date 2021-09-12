@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 00:35:20 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/09/12 07:48:12 wen Exp $
 
-SHA1 (Net-Daemon-0.48.tar.gz) = b322436fd9e5cc52fa1da9db345838026351bcea
-RMD160 (Net-Daemon-0.48.tar.gz) = 0a0dab641a7a9ca0964ce33f9d3af7de375cd1e0
-SHA512 (Net-Daemon-0.48.tar.gz) = 85bc280adc0de6be8ebd64771732f83299018edd06441cf96c438914a16c3805918805cde07bae4fe92caa86475ad35cabfc1edfccff117dcce7f5dc8b137bba
-Size (Net-Daemon-0.48.tar.gz) = 29513 bytes
+SHA1 (Net-Daemon-0.49.tar.gz) = dbe832c726b4ae63f5c91e031ba761a6ce773eed
+RMD160 (Net-Daemon-0.49.tar.gz) = 1ae3fbd5af533dda02ba1154eea03c276c7dc9a1
+SHA512 (Net-Daemon-0.49.tar.gz) = 8b2797757c98c2cc9821866817ea4e28a8aa120f7614c17e32417e75990d425055d406581c3b554e8e4d2f9cc7bf4fba1244773d92b1b98bc3bc02b50300c131
+Size (Net-Daemon-0.49.tar.gz) = 31853 bytes
