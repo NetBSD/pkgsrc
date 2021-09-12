@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2021/08/11 19:35:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/12 09:08:32 wiz Exp $
 
-DISTNAME=		age-${GITHUB_TAG:S/v//:S/-rc./rc/}
-PKGREVISION=		2
+DISTNAME=		age-1.0.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FiloSottile/}
-GITHUB_TAG=		v1.0.0-rc.3
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/FiloSottile/age/
