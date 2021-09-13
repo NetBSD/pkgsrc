@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/09/13 11:37:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.14 2021/09/13 11:44:45 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
 PKGNAME=	java-rxtx-2.1.7r2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms java
 MASTER_SITES=	http://rxtx.qbang.org/pub/rxtx/
 EXTRACT_SUFX=	.zip
@@ -33,34 +33,17 @@ JNILIB=	jnilib
 JNILIB=	la
 .endif
 
-.if ${MACHINE_ARCH} == "x86_64"
-JAVA_MACHINE_ARCH=	amd64
-.elif !empty(MACHINE_CPU:Marm*)
-JAVA_MACHINE_ARCH=	arm
-.else
-JAVA_MACHINE_ARCH=	${MACHINE_ARCH}
-.endif
-
 .include "../../mk/java-vm.mk"
 
-# Inconveniently, for built-in JRE's, PKG_JAVA_HOME will be set to the native
-# directory - which we should not be messing with.  But prior to builtin.mk
-# processing, PKG_JAVA_HOME will match the Pkgsrc JRE home, which is a
-# suitable installation location for Native JRE, as well as being the
-# correct installation location for Pkgsrc JRE.
-JAVA_INSTALL_BASE:=	${PKG_JAVA_HOME}
-
-RXTX_PATH=	${JAVA_INSTALL_BASE}/jre/lib/${JAVA_MACHINE_ARCH}
-JHOME_PATH=	${JAVA_INSTALL_BASE}/jre/lib/ext
+RXTX_PATH=	${PREFIX}/lib/java/rxtx
+JHOME_PATH=	${PREFIX}/lib/java/rxtx
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 MAKE_FLAGS+=	RXTX_PATH=${RXTX_PATH:Q}
 MAKE_FLAGS+=	JHOME=${JHOME_PATH:Q}
 
-INSTALLATION_DIRS+=	${RXTX_PATH:Q} ${JHOME_PATH:Q}
+INSTALLATION_DIRS+=	lib/java/rxtx
 
-PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
-PLIST_SUBST+=	JAVA_HOME="${JAVA_INSTALL_BASE:C/^${PREFIX}\///}"
 PLIST_SUBST+=	JNILIB=${JNILIB}
 
 pre-configure:
