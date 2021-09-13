@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2021/09/11 21:10:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2021/09/13 18:33:13 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -94,9 +94,7 @@ CARGO_CRATE_DEPENDS+=	num-rational-0.3.2
 CARGO_CRATE_DEPENDS+=	num-rational-0.4.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.0
-CARGO_CRATE_DEPENDS+=	ogg-0.5.1
 CARGO_CRATE_DEPENDS+=	ogg-0.8.0
-CARGO_CRATE_DEPENDS+=	ogg_metadata-0.4.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.8.0
 CARGO_CRATE_DEPENDS+=	openssl-0.10.36
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.66
