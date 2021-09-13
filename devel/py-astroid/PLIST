@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/06/30 05:59:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/09/13 06:50:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/astroid/_ast.pyo
 ${PYSITELIB}/astroid/arguments.py
 ${PYSITELIB}/astroid/arguments.pyc
 ${PYSITELIB}/astroid/arguments.pyo
-${PYSITELIB}/astroid/as_string.py
-${PYSITELIB}/astroid/as_string.pyc
-${PYSITELIB}/astroid/as_string.pyo
 ${PYSITELIB}/astroid/astroid_manager.py
 ${PYSITELIB}/astroid/astroid_manager.pyc
 ${PYSITELIB}/astroid/astroid_manager.pyo
@@ -46,6 +43,9 @@ ${PYSITELIB}/astroid/brain/brain_collections.pyo
 ${PYSITELIB}/astroid/brain/brain_crypt.py
 ${PYSITELIB}/astroid/brain/brain_crypt.pyc
 ${PYSITELIB}/astroid/brain/brain_crypt.pyo
+${PYSITELIB}/astroid/brain/brain_ctypes.py
+${PYSITELIB}/astroid/brain/brain_ctypes.pyc
+${PYSITELIB}/astroid/brain/brain_ctypes.pyo
 ${PYSITELIB}/astroid/brain/brain_curses.py
 ${PYSITELIB}/astroid/brain/brain_curses.pyc
 ${PYSITELIB}/astroid/brain/brain_curses.pyo
@@ -157,6 +157,9 @@ ${PYSITELIB}/astroid/brain/brain_type.pyo
 ${PYSITELIB}/astroid/brain/brain_typing.py
 ${PYSITELIB}/astroid/brain/brain_typing.pyc
 ${PYSITELIB}/astroid/brain/brain_typing.pyo
+${PYSITELIB}/astroid/brain/brain_unittest.py
+${PYSITELIB}/astroid/brain/brain_unittest.pyc
+${PYSITELIB}/astroid/brain/brain_unittest.pyo
 ${PYSITELIB}/astroid/brain/brain_uuid.py
 ${PYSITELIB}/astroid/brain/brain_uuid.pyc
 ${PYSITELIB}/astroid/brain/brain_uuid.pyo
@@ -217,9 +220,24 @@ ${PYSITELIB}/astroid/modutils.pyo
 ${PYSITELIB}/astroid/node_classes.py
 ${PYSITELIB}/astroid/node_classes.pyc
 ${PYSITELIB}/astroid/node_classes.pyo
-${PYSITELIB}/astroid/nodes.py
-${PYSITELIB}/astroid/nodes.pyc
-${PYSITELIB}/astroid/nodes.pyo
+${PYSITELIB}/astroid/nodes/__init__.py
+${PYSITELIB}/astroid/nodes/__init__.pyc
+${PYSITELIB}/astroid/nodes/__init__.pyo
+${PYSITELIB}/astroid/nodes/as_string.py
+${PYSITELIB}/astroid/nodes/as_string.pyc
+${PYSITELIB}/astroid/nodes/as_string.pyo
+${PYSITELIB}/astroid/nodes/const.py
+${PYSITELIB}/astroid/nodes/const.pyc
+${PYSITELIB}/astroid/nodes/const.pyo
+${PYSITELIB}/astroid/nodes/node_classes.py
+${PYSITELIB}/astroid/nodes/node_classes.pyc
+${PYSITELIB}/astroid/nodes/node_classes.pyo
+${PYSITELIB}/astroid/nodes/node_ng.py
+${PYSITELIB}/astroid/nodes/node_ng.pyc
+${PYSITELIB}/astroid/nodes/node_ng.pyo
+${PYSITELIB}/astroid/nodes/scoped_nodes.py
+${PYSITELIB}/astroid/nodes/scoped_nodes.pyc
+${PYSITELIB}/astroid/nodes/scoped_nodes.pyo
 ${PYSITELIB}/astroid/objects.py
 ${PYSITELIB}/astroid/objects.pyc
 ${PYSITELIB}/astroid/objects.pyo
