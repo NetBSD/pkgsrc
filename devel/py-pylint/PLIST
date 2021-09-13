@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/06/30 06:02:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/09/13 06:52:31 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -162,6 +162,9 @@ ${PYSITELIB}/pylint/extensions/comparetozero.pyo
 ${PYSITELIB}/pylint/extensions/confusing_elif.py
 ${PYSITELIB}/pylint/extensions/confusing_elif.pyc
 ${PYSITELIB}/pylint/extensions/confusing_elif.pyo
+${PYSITELIB}/pylint/extensions/consider_ternary_expression.py
+${PYSITELIB}/pylint/extensions/consider_ternary_expression.pyc
+${PYSITELIB}/pylint/extensions/consider_ternary_expression.pyo
 ${PYSITELIB}/pylint/extensions/docparams.py
 ${PYSITELIB}/pylint/extensions/docparams.pyc
 ${PYSITELIB}/pylint/extensions/docparams.pyo
@@ -186,6 +189,9 @@ ${PYSITELIB}/pylint/extensions/redefined_variable_type.pyo
 ${PYSITELIB}/pylint/extensions/typing.py
 ${PYSITELIB}/pylint/extensions/typing.pyc
 ${PYSITELIB}/pylint/extensions/typing.pyo
+${PYSITELIB}/pylint/extensions/while_used.py
+${PYSITELIB}/pylint/extensions/while_used.pyc
+${PYSITELIB}/pylint/extensions/while_used.pyo
 ${PYSITELIB}/pylint/graph.py
 ${PYSITELIB}/pylint/graph.pyc
 ${PYSITELIB}/pylint/graph.pyo
@@ -240,18 +246,30 @@ ${PYSITELIB}/pylint/pyreverse/diadefslib.pyo
 ${PYSITELIB}/pylint/pyreverse/diagrams.py
 ${PYSITELIB}/pylint/pyreverse/diagrams.pyc
 ${PYSITELIB}/pylint/pyreverse/diagrams.pyo
+${PYSITELIB}/pylint/pyreverse/dot_printer.py
+${PYSITELIB}/pylint/pyreverse/dot_printer.pyc
+${PYSITELIB}/pylint/pyreverse/dot_printer.pyo
 ${PYSITELIB}/pylint/pyreverse/inspector.py
 ${PYSITELIB}/pylint/pyreverse/inspector.pyc
 ${PYSITELIB}/pylint/pyreverse/inspector.pyo
 ${PYSITELIB}/pylint/pyreverse/main.py
 ${PYSITELIB}/pylint/pyreverse/main.pyc
 ${PYSITELIB}/pylint/pyreverse/main.pyo
+${PYSITELIB}/pylint/pyreverse/plantuml_printer.py
+${PYSITELIB}/pylint/pyreverse/plantuml_printer.pyc
+${PYSITELIB}/pylint/pyreverse/plantuml_printer.pyo
+${PYSITELIB}/pylint/pyreverse/printer.py
+${PYSITELIB}/pylint/pyreverse/printer.pyc
+${PYSITELIB}/pylint/pyreverse/printer.pyo
+${PYSITELIB}/pylint/pyreverse/printer_factory.py
+${PYSITELIB}/pylint/pyreverse/printer_factory.pyc
+${PYSITELIB}/pylint/pyreverse/printer_factory.pyo
 ${PYSITELIB}/pylint/pyreverse/utils.py
 ${PYSITELIB}/pylint/pyreverse/utils.pyc
 ${PYSITELIB}/pylint/pyreverse/utils.pyo
-${PYSITELIB}/pylint/pyreverse/vcgutils.py
-${PYSITELIB}/pylint/pyreverse/vcgutils.pyc
-${PYSITELIB}/pylint/pyreverse/vcgutils.pyo
+${PYSITELIB}/pylint/pyreverse/vcg_printer.py
+${PYSITELIB}/pylint/pyreverse/vcg_printer.pyc
+${PYSITELIB}/pylint/pyreverse/vcg_printer.pyo
 ${PYSITELIB}/pylint/pyreverse/writer.py
 ${PYSITELIB}/pylint/pyreverse/writer.pyc
 ${PYSITELIB}/pylint/pyreverse/writer.pyo
