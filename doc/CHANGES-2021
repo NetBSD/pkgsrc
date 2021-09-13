@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4684 2021/09/13 07:16:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4685 2021/09/13 07:36:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7294,3 +7294,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.68.4 [adam 2021-09-13]
 	Updated devel/glib2-tools to 2.68.4 [adam 2021-09-13]
 	Updated devel/gdbus-codegen to 2.68.4 [adam 2021-09-13]
+	Updated devel/mob to 1.12.0 [schmonz 2021-09-13]
