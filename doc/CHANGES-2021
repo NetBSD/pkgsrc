@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4696 2021/09/13 18:33:33 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4697 2021/09/13 20:32:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7309,3 +7309,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-delayer to 1.2.1 [tsutsui 2021-09-13]
 	Updated chat/element-web to 1.8.4 [js 2021-09-13]
 	Updated audio/termusic to 0.3.11 [pin 2021-09-13]
+	Updated net/ncgopher to 0.2.0nb2 [pin 2021-09-13]
