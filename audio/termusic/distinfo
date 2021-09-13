@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/09/11 21:10:01 pin Exp $
+$NetBSD: distinfo,v 1.11 2021/09/13 18:33:13 pin Exp $
 
 SHA1 (adler-1.0.2.crate) = 4b3b7b567ba15929c15c0b8f4c498afaefde76db
 RMD160 (adler-1.0.2.crate) = 8a3ccd049edf486e01dd612352816e76176f601c
@@ -376,18 +376,10 @@ SHA1 (num_cpus-1.13.0.crate) = 0b9b73086f2d7cfffda566f89ca392329edb504c
 RMD160 (num_cpus-1.13.0.crate) = 6b4f4fad7d91a058b8e4c0d6ec506cf76d1bd3da
 SHA512 (num_cpus-1.13.0.crate) = e75ec298fa682be84bf4efb6cf40126da9233ef25f07e887c2fa7421ee78790204564e6406c8219466651f47421e27f69eca690bb9cdfc982b644d78cc10de3f
 Size (num_cpus-1.13.0.crate) = 14704 bytes
-SHA1 (ogg-0.5.1.crate) = 3e7e5ff6a8f7edf6dea4701ad62d3791d988cc3b
-RMD160 (ogg-0.5.1.crate) = 61dfa436536db37a06a19c21c3734864abbe48f9
-SHA512 (ogg-0.5.1.crate) = ef7cc461f9ab2bc18fb55195bd121a70f990bb4c26745eb947a30b1ddb9d81662f2c97ffd9775afb2820922ddef8a2a34817b3c5a209c42e6bd7a79106aa90be
-Size (ogg-0.5.1.crate) = 23782 bytes
 SHA1 (ogg-0.8.0.crate) = 0251750659223d3981289bb9a2516e331e7965f7
 RMD160 (ogg-0.8.0.crate) = b70ca1b44096d824e91c11d27ae79a95c05f6f6e
 SHA512 (ogg-0.8.0.crate) = d5ea03e00ecade8713a8bf31e34bc45cba94b812c26dd46b579d85d61ff502ba501626b64d3cfa066a47343819f65d27c478372439b758cb7ab31ebce81f48b1
 Size (ogg-0.8.0.crate) = 27128 bytes
-SHA1 (ogg_metadata-0.4.1.crate) = 90d389637b87317ed5677b9f3ef61d6c0b76f9dc
-RMD160 (ogg_metadata-0.4.1.crate) = 6251d66e2e1236c7ff32675cfa7ca22264f6dfda
-SHA512 (ogg_metadata-0.4.1.crate) = 5a1b6c71799c8eb34225877f9d71ab0884f789e6810211ab575fcbedd09c922011b651cb9f566291ba00f5b2dd1d7176a884c0fac59fa15874c7a7eb3030c7cd
-Size (ogg_metadata-0.4.1.crate) = 10566 bytes
 SHA1 (once_cell-1.8.0.crate) = d02dc9c650689176a8da249a40f211c7f058e54b
 RMD160 (once_cell-1.8.0.crate) = f9064f0c3f37752fe1ecd56af66f1843c0bb34a5
 SHA512 (once_cell-1.8.0.crate) = 88e55c9433225ce85a08353168c87fca2237615482160a5c28f3ac17f06d48c63e0c21b5f7ef81f82ca133436e371802ea099453844f1c111003bcb6ba89e827
@@ -612,10 +604,10 @@ SHA1 (terminal_size-0.1.17.crate) = f9a2c1a849fa9736589c3c4e1b129c107411adad
 RMD160 (terminal_size-0.1.17.crate) = 5bc2e37ea82cd23669384aec1fcf4ba971abf136
 SHA512 (terminal_size-0.1.17.crate) = 96ec1bc8abd597f01ae59da567036d5d40b422764a4da662e2030c3ef4ce80a983c8b6a4ef1f34d88e649e0b1ea27b206d56a31924bcd2d31ff7e5a2e96d4201
 Size (terminal_size-0.1.17.crate) = 9141 bytes
-SHA1 (termusic-0.3.10.tar.gz) = aec43c4816f0e538b624c77e61413fa219eaacd8
-RMD160 (termusic-0.3.10.tar.gz) = d73018b5e469710ae66db51251056dc08cb4291a
-SHA512 (termusic-0.3.10.tar.gz) = 735d8aad2f891b46ce417565e155f468c4ba659915eae032b0ef3f5b1564e8df8fd9d5308b2147d8a799cc96bd790a482cce3679d2d2074a6827b41203467048
-Size (termusic-0.3.10.tar.gz) = 3070785 bytes
+SHA1 (termusic-0.3.11.tar.gz) = 2581bec5ec58a51818411433e1b32550ee1006ab
+RMD160 (termusic-0.3.11.tar.gz) = 4a36fb91c532b7d5e077da3a4f3455465500f23f
+SHA512 (termusic-0.3.11.tar.gz) = fab7bae12209bab30c525f576d6de28792c4f24c066db436e156877eb938d3df58c43ff6043865c7c6c77d292c954a5dab8121a621e5354b070f4579b1718889
+Size (termusic-0.3.11.tar.gz) = 3071275 bytes
 SHA1 (textwrap-0.14.2.crate) = be2df3adfeacfdc7ed842042c80fd0d448a34db0
 RMD160 (textwrap-0.14.2.crate) = 930984cf417d217431563882e3c2b90070c61170
 SHA512 (textwrap-0.14.2.crate) = 521ab37e03aae8fcce5b909541399fc90a23020e353f95102c658fa94ffc56b9bdff43f47fb3da6e30f5c9cc9447fab72fe21d7276dfa21fe5a1a5a1c874e371
