@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/17 00:54:00 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2021/09/13 11:37:34 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
@@ -26,6 +26,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_JVMS_ACCEPTED=	oracle-jdk8 openjdk8 sun-jdk7
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+JNILIB=	jnilib
+.else
+JNILIB=	la
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64"
 JAVA_MACHINE_ARCH=	amd64
@@ -55,6 +61,7 @@ INSTALLATION_DIRS+=	${RXTX_PATH:Q} ${JHOME_PATH:Q}
 
 PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
 PLIST_SUBST+=	JAVA_HOME="${JAVA_INSTALL_BASE:C/^${PREFIX}\///}"
+PLIST_SUBST+=	JNILIB=${JNILIB}
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
