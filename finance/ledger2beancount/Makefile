@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/13 06:14:45 wiz Exp $
 
 DISTNAME=	ledger2beancount-2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=beancount/}
 GITHUB_PROJECT=	ledger2beancount
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Getopt-Long-Descriptive>=0:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Regexp-Common>=0:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-String-Interpolate>=0:../../textproc/p5-String-Interpolate
-DEPENDS+=	p5-YAML-XS>=0:../../textproc/p5-YAML-XS
+DEPENDS+=	p5-YAML-LibYAML>=0:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-enum>=0:../../devel/p5-enum
 
 REPLACE_PERL+=	bin/ledger2beancount
