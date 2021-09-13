@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4688 2021/09/13 07:58:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4689 2021/09/13 08:40:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7298,3 +7298,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-BDD-Cucumber to 0.82 [schmonz 2021-09-13]
 	Updated graphics/ImageMagick to 7.1.0.6 [wiz 2021-09-13]
 	Updated devel/pango to 1.48.9 [adam 2021-09-13]
+	Updated devel/py-bitarray to 2.3.4 [adam 2021-09-13]
+	Updated security/py-asyncssh to 2.7.1 [adam 2021-09-13]
