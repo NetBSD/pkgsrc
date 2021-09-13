@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.282 2021/06/30 14:26:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.283 2021/09/13 07:14:50 adam Exp $
 
-PKGREVISION=	1
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome
@@ -17,6 +16,8 @@ MESON_ARGS+=	-Db_lundef=false
 .endif
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -D__stub_epoll_create
 LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
