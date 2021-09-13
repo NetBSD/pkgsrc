@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4690 2021/09/13 10:13:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4691 2021/09/13 11:24:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7302,3 +7302,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-asyncssh to 2.7.1 [adam 2021-09-13]
 	Updated databases/tdb to 1.4.5 [adam 2021-09-13]
 	Updated net/samba4 to 4.13.11 [adam 2021-09-13]
+	Updated net/py-zeep to 4.1.0 [adam 2021-09-13]
+	Updated finance/py-eth-hash to 0.3.2 [adam 2021-09-13]
