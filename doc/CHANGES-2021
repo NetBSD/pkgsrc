@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4693 2021/09/13 15:25:26 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.4694 2021/09/13 15:35:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-eth-hash to 0.3.2 [adam 2021-09-13]
 	Updated comms/java-rxtx to 2.1.7r2nb3 [dsainty 2021-09-13]
 	Updated net/mikutter to 4.1.6 [tsutsui 2021-09-13]
+	Updated devel/ruby-delayer to 1.2.1 [tsutsui 2021-09-13]
