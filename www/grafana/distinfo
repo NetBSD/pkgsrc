@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/08/27 12:06:43 triaxx Exp $
+$NetBSD: distinfo,v 1.17 2021/09/13 06:35:35 triaxx Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -13528,14 +13528,14 @@ SHA1 (gotest.tools_v3_@v_v3.0.3.zip) = af78f504d880feacf6079072facfd3320bad4589
 RMD160 (gotest.tools_v3_@v_v3.0.3.zip) = 56381fbcf7de62963645b7dda60756b593e557ad
 SHA512 (gotest.tools_v3_@v_v3.0.3.zip) = 7f3f556401d7ce27f1dc88e8a022f8885cddd488f4ece632e24cf9b9f6504d748519480dcf60a577a3a9451104340a917f353f43f89e05f868913c26357593d6
 Size (gotest.tools_v3_@v_v3.0.3.zip) = 95019 bytes
-SHA1 (grafana-8.1.2.linux-amd64.tar.gz) = ebdb36a7d3f3be7548949e07ec24ee773416d5bc
-RMD160 (grafana-8.1.2.linux-amd64.tar.gz) = 0379fd3329b9e5b989a1ee51c26ea9f64ad71e7d
-SHA512 (grafana-8.1.2.linux-amd64.tar.gz) = 0a0ffa010c8d7c603bbe884b2dfcf5f4e42a9036181f7f5755e333ac6bac8fb193365c9ee5325d113e81e389d9ddc7c4847b436023fcdd74dc4ac0df3cb0bdd3
-Size (grafana-8.1.2.linux-amd64.tar.gz) = 57186805 bytes
-SHA1 (grafana-8.1.2.tar.gz) = be1ae316a82bd9443b47c6f82f9ccfb4ece0d473
-RMD160 (grafana-8.1.2.tar.gz) = f4587a364873a0fa16879bbb84cd9048a0f9cf26
-SHA512 (grafana-8.1.2.tar.gz) = 2833d11d8cfd154462fec2844134326cfa5c5df31b834d023609c3ac2bd2121b85b75202100617329c7ae201012e6910576d630626b27b7f26ea094e16b38891
-Size (grafana-8.1.2.tar.gz) = 11910424 bytes
+SHA1 (grafana-8.1.3.linux-amd64.tar.gz) = c3427943f96331cb41cf318b2bd387987dd7c69e
+RMD160 (grafana-8.1.3.linux-amd64.tar.gz) = 57cad2d92f9fc93a9890835f9e01080fda341ca8
+SHA512 (grafana-8.1.3.linux-amd64.tar.gz) = 846cca2dea482fbe20e191b3f78b2de99766ab53afe14878a41fcffb5b3d02ecd307ead6c0ff59e72537a4c06101eba55d884d6711ae4f0be3b3fe49cef66b7f
+Size (grafana-8.1.3.linux-amd64.tar.gz) = 57206900 bytes
+SHA1 (grafana-8.1.3.tar.gz) = 5bf251eb9e034644fa0c8b70af38a4ceb65e453c
+RMD160 (grafana-8.1.3.tar.gz) = 784cf08f32cc0435cf8b9dc1d59bfbe179bacf1d
+SHA512 (grafana-8.1.3.tar.gz) = 8e193daee908b9d0932e276f89ad4ce2795758812fa75dd830c55f530d85fb68599d27d0e5348a56d0c08ffc44d22c19ce410836782f729a2d61b83db4654d68
+Size (grafana-8.1.3.tar.gz) = 11923880 bytes
 SHA1 (honnef.co_go_netdb_@v_v0.0.0-20150201073656-a416d700ae39.mod) = cb67884fa6d3feb6c1cbd941052148764c1fb4e5
 RMD160 (honnef.co_go_netdb_@v_v0.0.0-20150201073656-a416d700ae39.mod) = a7a232f67259763d26e6ab6e94f02d57a4ba4414
 SHA512 (honnef.co_go_netdb_@v_v0.0.0-20150201073656-a416d700ae39.mod) = 6b32f5cd9613189ea3b5b9acaaa14dbb82a7a447e00ebccd9d9c8ffd2e45dde1555453d4b1be38598d9aabe284ffbdbc74fa3c03fee7510e19b88a6e1e2f0629
