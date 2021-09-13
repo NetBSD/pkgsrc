@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21040 2021/09/13 07:50:06 wiz Exp $
+$NetBSD: TODO,v 1.21041 2021/09/13 18:27:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -933,6 +933,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
+	o gzip-1.11
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o h5utils-1.13.1
 	o h8300-elf-binutils-2.36.1
@@ -1442,6 +1443,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
 	o openssh-8.7p1
+	o openssl-3.0.0
 	o openvas-libraries-8.0.8
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1986,6 +1988,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-browser-10.5.6
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
