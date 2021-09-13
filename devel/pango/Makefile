@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2021/09/13 07:57:19 adam Exp $
+# $NetBSD: Makefile,v 1.245 2021/09/13 08:04:39 wiz Exp $
 
 DISTNAME=	pango-1.48.9
 CATEGORIES=	devel fonts
@@ -52,7 +52,7 @@ post-install:
 .include "options.mk"
 .include "../../graphics/librsvg/available.mk"
 
-BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.7
+BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=1.0.6
 .include "../../converters/fribidi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.60
 .include "../../devel/glib2/buildlink3.mk"
