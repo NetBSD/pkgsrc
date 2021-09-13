@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2021/09/03 23:49:09 ryoon Exp $
+$NetBSD: distinfo,v 1.56 2021/09/13 06:58:02 wiz Exp $
 
-SHA1 (notmuch-0.33.tar.xz) = 3b16b91f6b1d557288bfaa24540f2c5aea4c02c0
-RMD160 (notmuch-0.33.tar.xz) = 30250880652dd4e76751333b477b04bde8d92747
-SHA512 (notmuch-0.33.tar.xz) = 280dab51b80f701d0b392da08a5026f7efef198640e23084ccaf5a8e138c3eee413d2243e1a98e856391432cb6afe50ee817797be8768a2f2564797b3aefe14d
-Size (notmuch-0.33.tar.xz) = 730764 bytes
+SHA1 (notmuch-0.33.1.tar.xz) = 297d797bfc5c036db98e94792826417b9a7a1125
+RMD160 (notmuch-0.33.1.tar.xz) = d3125188674a02d33d1e44909c827d24de1618e7
+SHA512 (notmuch-0.33.1.tar.xz) = 19c4ab0a05ebc7230631f554864cfa65fe37e9b3c1a20ed21cc090cda612b28042ea90e64cfe86a1d6157cd0510357da8c066b9146c045e61cb3e7836012a695
+Size (notmuch-0.33.1.tar.xz) = 730640 bytes
 SHA1 (patch-configure) = 63b15478d1f360b930ccdcef1bfc853f5d683499
 SHA1 (patch-emacs_Makefile.local) = 4a36a2c165852a098a45c8b99c8372d65d33b07c
