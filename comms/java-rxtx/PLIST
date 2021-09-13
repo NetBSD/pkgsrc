@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.5 2021/09/13 11:37:34 dsainty Exp $
-${JAVA_HOME}/jre/lib/ext/RXTXcomm.jar
-${JAVA_HOME}/jre/lib/${JAVA_MACHINE_ARCH}/librxtxSerial.${JNILIB}
+@comment $NetBSD: PLIST,v 1.6 2021/09/13 11:44:45 dsainty Exp $
+lib/java/rxtx/RXTXcomm.jar
+lib/java/rxtx/librxtxSerial.${JNILIB}
