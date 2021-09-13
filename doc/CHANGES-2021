@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4679 2021/09/13 06:14:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4680 2021/09/13 06:37:07 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7286,3 +7286,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated benchmarks/google-benchmark to 1.6.0 [wiz 2021-09-12]
 	Updated net/unison-snapshot to 2.51.4.70.2 [gdt 2021-09-12]
 	Updated finance/ledger2beancount to 2.5nb2 [wiz 2021-09-13]
+	Updated www/grafana to 8.1.3 [triaxx 2021-09-13]
