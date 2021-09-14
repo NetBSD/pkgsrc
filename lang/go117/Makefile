@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/09/07 13:31:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/14 10:12:16 jperkin Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -17,10 +17,6 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
-
-.if ${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris"
-CWRAPPERS_APPEND.cc+=	-DILLUMOS
-.endif
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
@@ -75,6 +71,15 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/crypto/x509/root_solaris.go
 SUBST_VARS.paths=	PKG_SYSCONFDIR
+
+# Required until we bootstrap from a native illumos kit.  This is obviously
+# terrible and should be fixed properly.
+.if ${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris"
+SUBST_CLASSES+=		grplist
+SUBST_STAGE.grplist=	pre-configure
+SUBST_FILES.grplist=	src/os/user/getgrouplist_unix.go
+SUBST_SED.grplist=	-e 's,return getgrouplist.*,return 0;,'
+.endif
 
 PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
 
