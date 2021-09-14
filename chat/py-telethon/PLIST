@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/18 23:11:57 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/14 19:42:19 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -385,6 +385,9 @@ ${PYSITELIB}/telethon/tl/types/photos.pyo
 ${PYSITELIB}/telethon/tl/types/stats.py
 ${PYSITELIB}/telethon/tl/types/stats.pyc
 ${PYSITELIB}/telethon/tl/types/stats.pyo
+${PYSITELIB}/telethon/tl/types/stickers.py
+${PYSITELIB}/telethon/tl/types/stickers.pyc
+${PYSITELIB}/telethon/tl/types/stickers.pyo
 ${PYSITELIB}/telethon/tl/types/storage.py
 ${PYSITELIB}/telethon/tl/types/storage.pyc
 ${PYSITELIB}/telethon/tl/types/storage.pyo
