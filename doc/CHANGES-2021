@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4701 2021/09/14 19:19:57 js Exp $
+$NetBSD: CHANGES-2021,v 1.4702 2021/09/14 19:42:43 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7316,3 +7316,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ansible-base to 2.10.14 [adam 2021-09-14]
 	Updated misc/ansiweather to 1.18.0 [fcambus 2021-09-14]
 	Updated chat/py-mautrix to 0.10.5 [js 2021-09-14]
+	Updated chat/py-telethon to 1.23.0 [js 2021-09-14]
