@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/09/11 14:24:00 mef Exp $
+# $NetBSD: Makefile,v 1.19 2021/09/14 07:59:13 jperkin Exp $
 
 R_PKGNAME=	mvtnorm
 R_PKGVER=	1.1-2
@@ -11,5 +11,4 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
-.include "../../mk/compiler/gfortran.mk"
 .include "../../mk/bsd.pkg.mk"
