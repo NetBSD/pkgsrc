@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/09 12:10:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/14 08:29:53 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -1095,9 +1095,15 @@ ${PYSITELIB}/ansible/plugins/connection/winrm.pyo
 ${PYSITELIB}/ansible/plugins/doc_fragments/__init__.py
 ${PYSITELIB}/ansible/plugins/doc_fragments/__init__.pyc
 ${PYSITELIB}/ansible/plugins/doc_fragments/__init__.pyo
+${PYSITELIB}/ansible/plugins/doc_fragments/action_common_attributes.py
+${PYSITELIB}/ansible/plugins/doc_fragments/action_common_attributes.pyc
+${PYSITELIB}/ansible/plugins/doc_fragments/action_common_attributes.pyo
 ${PYSITELIB}/ansible/plugins/doc_fragments/backup.py
 ${PYSITELIB}/ansible/plugins/doc_fragments/backup.pyc
 ${PYSITELIB}/ansible/plugins/doc_fragments/backup.pyo
+${PYSITELIB}/ansible/plugins/doc_fragments/connection_pipelining.py
+${PYSITELIB}/ansible/plugins/doc_fragments/connection_pipelining.pyc
+${PYSITELIB}/ansible/plugins/doc_fragments/connection_pipelining.pyo
 ${PYSITELIB}/ansible/plugins/doc_fragments/constructed.py
 ${PYSITELIB}/ansible/plugins/doc_fragments/constructed.pyc
 ${PYSITELIB}/ansible/plugins/doc_fragments/constructed.pyo
