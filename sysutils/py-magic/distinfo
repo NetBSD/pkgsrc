@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/06/07 08:22:17 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/09/14 20:23:04 js Exp $
 
 SHA1 (python-magic-0.4.24.tar.gz) = 4eeda7a16b3784859b617797fa3e18d9ff18dded
 RMD160 (python-magic-0.4.24.tar.gz) = 139333b721a95953a1979fcee7623c4f186ed829
 SHA512 (python-magic-0.4.24.tar.gz) = 1d1dfea5b7b4b8246ddff7c25bec6df500423f0d26bbc08d490aa7120e6a66c50650ed6a52e958592056a59fcbd02af53c614a77aa7d43898de3ff90d2ca16de
 Size (python-magic-0.4.24.tar.gz) = 17295 bytes
+SHA1 (patch-magic_loader.py) = aca35be959e9ca249b0c4c59dab22c7d859cb45d
