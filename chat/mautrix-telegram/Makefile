@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2021/07/14 08:29:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/14 20:01:48 js Exp $
 
-DISTNAME=	mautrix-telegram-0.9.0
-PKGREVISION=	2
+DISTNAME=	mautrix-telegram-0.10.1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/telegram-${PKGVERSION_NOREV}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/mautrix-telegram
@@ -21,11 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
-DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.8.2<0.9:../../chat/py-mautrix
-DEPENDS+=	${PYPKGPREFIX}-telethon>=1.17<18:../../chat/py-telethon
+DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.10.4<0.11:../../chat/py-mautrix
+DEPENDS+=	${PYPKGPREFIX}-telethon>=1.22<24:../../chat/py-telethon
 DEPENDS+=	${PYPKGPREFIX}-telethon-session-sqlalchemy>=0.2.14<0.3:../../chat/py-telethon-session-sqlalchemy
 # webp_convert and qr_login
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<8:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<9:../../graphics/py-Pillow
 # qr_login
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<7:../../graphics/py-qrcode
 
