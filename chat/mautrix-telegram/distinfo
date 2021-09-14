@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/11/18 23:27:56 js Exp $
+$NetBSD: distinfo,v 1.2 2021/09/14 20:01:48 js Exp $
 
-SHA1 (mautrix-telegram-0.9.0.tar.gz) = 066ccaf81abf9464c1433d402579382eee2fb81f
-RMD160 (mautrix-telegram-0.9.0.tar.gz) = 99863468266710b1c22c8a9be8f248891c174bcd
-SHA512 (mautrix-telegram-0.9.0.tar.gz) = 16622cf9f1624c8641fbda9a47e34bc78d08f068cf6c6715fb8da8d2bad19e02fc161b8b246623400831f25d466fa40ae14115bae716997ed83e8ba683e30c76
-Size (mautrix-telegram-0.9.0.tar.gz) = 684824 bytes
+SHA1 (mautrix-telegram-0.10.1.tar.gz) = 8886bddb5047932b6270648852b0e47fa0937c8e
+RMD160 (mautrix-telegram-0.10.1.tar.gz) = 960d2f15d4bef6368e2bd206cdd1353326755c3b
+SHA512 (mautrix-telegram-0.10.1.tar.gz) = 916653e4b59bfaee3509b53735d66a1144895159fedaee24e5b82ef589f73eadc08d970ab39ee25d666d0dd3bb5451f08ef92ea836a5d6fbed2a6f3732318670
+Size (mautrix-telegram-0.10.1.tar.gz) = 690313 bytes
