@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.18 2021/09/12 09:12:34 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/09/14 13:32:50 schmonz Exp $
 
 SHA1 (gdbm-1.21.tar.gz) = f6eec6113f04a4b5fd2c1cfead10e7d65c8f3d89
 RMD160 (gdbm-1.21.tar.gz) = 0a39c460bc85e271cac4d7fe08f6b38bf9426e6a
 SHA512 (gdbm-1.21.tar.gz) = b2a31802d1af9f97b24d3dd01cb048bab4a8e748297f1b70851c0342400dde4281242b7f80bd92a36035e22398d240d131b550ab444ee838a077522a6921fa43
 Size (gdbm-1.21.tar.gz) = 1005982 bytes
+SHA1 (patch-configure) = 0ae6c9280f911a524a3a2043df1e24588bd93a63
 SHA1 (patch-src_Makefile.in) = 52b47f3dcd381143d1cdae40f1972bd989dcce1f
+SHA1 (patch-src_gdbmshell.c) = 56e8d69db9cab2a2e4846d9adec908596dd1f6a0
+SHA1 (patch-src_gdbmsync.c) = b57595f11838faabe5accda79fb62207c021a052
+SHA1 (patch-src_systems.h) = dc4132ae62c6b4f050dcf3d4c30552af087b310b
