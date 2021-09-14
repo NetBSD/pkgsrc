@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/09/12 07:31:44 nia Exp $
+# $NetBSD: Makefile,v 1.45 2021/09/14 06:23:32 wiz Exp $
 
 DISTNAME=	i3-4.19.2
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config perl:run
+USE_TOOLS+=	bash pkg-config perl:run
 USE_LANGUAGES=	c99
 
 LDFLAGS.SunOS+=	-lgen -liconv -lsocket
