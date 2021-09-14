@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/18 20:48:58 js Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/14 19:19:35 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -49,6 +49,9 @@ ${PYSITELIB}/mautrix/bridge/__init__.pyo
 ${PYSITELIB}/mautrix/bridge/_community.py
 ${PYSITELIB}/mautrix/bridge/_community.pyc
 ${PYSITELIB}/mautrix/bridge/_community.pyo
+${PYSITELIB}/mautrix/bridge/async_getter_lock.py
+${PYSITELIB}/mautrix/bridge/async_getter_lock.pyc
+${PYSITELIB}/mautrix/bridge/async_getter_lock.pyo
 ${PYSITELIB}/mautrix/bridge/bridge.py
 ${PYSITELIB}/mautrix/bridge/bridge.pyc
 ${PYSITELIB}/mautrix/bridge/bridge.pyo
@@ -67,6 +70,12 @@ ${PYSITELIB}/mautrix/bridge/commands/crypto.pyo
 ${PYSITELIB}/mautrix/bridge/commands/handler.py
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyc
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyo
+${PYSITELIB}/mautrix/bridge/commands/login_matrix.py
+${PYSITELIB}/mautrix/bridge/commands/login_matrix.pyc
+${PYSITELIB}/mautrix/bridge/commands/login_matrix.pyo
+${PYSITELIB}/mautrix/bridge/commands/manhole.py
+${PYSITELIB}/mautrix/bridge/commands/manhole.pyc
+${PYSITELIB}/mautrix/bridge/commands/manhole.pyo
 ${PYSITELIB}/mautrix/bridge/commands/meta.py
 ${PYSITELIB}/mautrix/bridge/commands/meta.pyc
 ${PYSITELIB}/mautrix/bridge/commands/meta.pyo
@@ -142,6 +151,12 @@ ${PYSITELIB}/mautrix/client/api/modules/media_repository.pyo
 ${PYSITELIB}/mautrix/client/api/modules/misc.py
 ${PYSITELIB}/mautrix/client/api/modules/misc.pyc
 ${PYSITELIB}/mautrix/client/api/modules/misc.pyo
+${PYSITELIB}/mautrix/client/api/modules/push_rules.py
+${PYSITELIB}/mautrix/client/api/modules/push_rules.pyc
+${PYSITELIB}/mautrix/client/api/modules/push_rules.pyo
+${PYSITELIB}/mautrix/client/api/modules/room_tag.py
+${PYSITELIB}/mautrix/client/api/modules/room_tag.pyc
+${PYSITELIB}/mautrix/client/api/modules/room_tag.pyo
 ${PYSITELIB}/mautrix/client/api/rooms.py
 ${PYSITELIB}/mautrix/client/api/rooms.pyc
 ${PYSITELIB}/mautrix/client/api/rooms.pyo
@@ -283,6 +298,7 @@ ${PYSITELIB}/mautrix/errors/request.pyo
 ${PYSITELIB}/mautrix/errors/well_known.py
 ${PYSITELIB}/mautrix/errors/well_known.pyc
 ${PYSITELIB}/mautrix/errors/well_known.pyo
+${PYSITELIB}/mautrix/py.typed
 ${PYSITELIB}/mautrix/types/__init__.py
 ${PYSITELIB}/mautrix/types/__init__.pyc
 ${PYSITELIB}/mautrix/types/__init__.pyo
@@ -327,7 +343,11 @@ ${PYSITELIB}/mautrix/types/event/to_device.pyc
 ${PYSITELIB}/mautrix/types/event/to_device.pyo
 ${PYSITELIB}/mautrix/types/event/type.py
 ${PYSITELIB}/mautrix/types/event/type.pyc
+${PYSITELIB}/mautrix/types/event/type.pyi
 ${PYSITELIB}/mautrix/types/event/type.pyo
+${PYSITELIB}/mautrix/types/event/voip.py
+${PYSITELIB}/mautrix/types/event/voip.pyc
+${PYSITELIB}/mautrix/types/event/voip.pyo
 ${PYSITELIB}/mautrix/types/filter.py
 ${PYSITELIB}/mautrix/types/filter.pyc
 ${PYSITELIB}/mautrix/types/filter.pyo
@@ -340,6 +360,9 @@ ${PYSITELIB}/mautrix/types/misc.pyo
 ${PYSITELIB}/mautrix/types/primitive.py
 ${PYSITELIB}/mautrix/types/primitive.pyc
 ${PYSITELIB}/mautrix/types/primitive.pyo
+${PYSITELIB}/mautrix/types/push_rules.py
+${PYSITELIB}/mautrix/types/push_rules.pyc
+${PYSITELIB}/mautrix/types/push_rules.pyo
 ${PYSITELIB}/mautrix/types/users.py
 ${PYSITELIB}/mautrix/types/users.pyc
 ${PYSITELIB}/mautrix/types/users.pyo
@@ -349,6 +372,9 @@ ${PYSITELIB}/mautrix/types/util/__init__.pyo
 ${PYSITELIB}/mautrix/types/util/enum.py
 ${PYSITELIB}/mautrix/types/util/enum.pyc
 ${PYSITELIB}/mautrix/types/util/enum.pyo
+${PYSITELIB}/mautrix/types/util/enum_test.py
+${PYSITELIB}/mautrix/types/util/enum_test.pyc
+${PYSITELIB}/mautrix/types/util/enum_test.pyo
 ${PYSITELIB}/mautrix/types/util/obj.py
 ${PYSITELIB}/mautrix/types/util/obj.pyc
 ${PYSITELIB}/mautrix/types/util/obj.pyo
@@ -358,6 +384,9 @@ ${PYSITELIB}/mautrix/types/util/serializable.pyo
 ${PYSITELIB}/mautrix/types/util/serializable_attrs.py
 ${PYSITELIB}/mautrix/types/util/serializable_attrs.pyc
 ${PYSITELIB}/mautrix/types/util/serializable_attrs.pyo
+${PYSITELIB}/mautrix/types/util/serializable_attrs_test.py
+${PYSITELIB}/mautrix/types/util/serializable_attrs_test.pyc
+${PYSITELIB}/mautrix/types/util/serializable_attrs_test.pyo
 ${PYSITELIB}/mautrix/util/__init__.py
 ${PYSITELIB}/mautrix/util/__init__.pyc
 ${PYSITELIB}/mautrix/util/__init__.pyo
@@ -370,6 +399,9 @@ ${PYSITELIB}/mautrix/util/async_db/database.pyo
 ${PYSITELIB}/mautrix/util/async_db/upgrade.py
 ${PYSITELIB}/mautrix/util/async_db/upgrade.pyc
 ${PYSITELIB}/mautrix/util/async_db/upgrade.pyo
+${PYSITELIB}/mautrix/util/bridge_state.py
+${PYSITELIB}/mautrix/util/bridge_state.pyc
+${PYSITELIB}/mautrix/util/bridge_state.pyo
 ${PYSITELIB}/mautrix/util/color_log.py
 ${PYSITELIB}/mautrix/util/color_log.pyc
 ${PYSITELIB}/mautrix/util/color_log.pyo
@@ -414,6 +446,7 @@ ${PYSITELIB}/mautrix/util/formatter/formatted_string.pyc
 ${PYSITELIB}/mautrix/util/formatter/formatted_string.pyo
 ${PYSITELIB}/mautrix/util/formatter/html_reader.py
 ${PYSITELIB}/mautrix/util/formatter/html_reader.pyc
+${PYSITELIB}/mautrix/util/formatter/html_reader.pyi
 ${PYSITELIB}/mautrix/util/formatter/html_reader.pyo
 ${PYSITELIB}/mautrix/util/formatter/html_reader_htmlparser.py
 ${PYSITELIB}/mautrix/util/formatter/html_reader_htmlparser.pyc
@@ -436,17 +469,18 @@ ${PYSITELIB}/mautrix/util/logging/color.pyo
 ${PYSITELIB}/mautrix/util/logging/trace.py
 ${PYSITELIB}/mautrix/util/logging/trace.pyc
 ${PYSITELIB}/mautrix/util/logging/trace.pyo
+${PYSITELIB}/mautrix/util/magic.py
+${PYSITELIB}/mautrix/util/magic.pyc
+${PYSITELIB}/mautrix/util/magic.pyo
 ${PYSITELIB}/mautrix/util/manhole.py
 ${PYSITELIB}/mautrix/util/manhole.pyc
 ${PYSITELIB}/mautrix/util/manhole.pyo
 ${PYSITELIB}/mautrix/util/markdown.py
 ${PYSITELIB}/mautrix/util/markdown.pyc
 ${PYSITELIB}/mautrix/util/markdown.pyo
-${PYSITELIB}/mautrix/util/network_retry.py
-${PYSITELIB}/mautrix/util/network_retry.pyc
-${PYSITELIB}/mautrix/util/network_retry.pyo
 ${PYSITELIB}/mautrix/util/opt_prometheus.py
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyc
+${PYSITELIB}/mautrix/util/opt_prometheus.pyi
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyo
 ${PYSITELIB}/mautrix/util/program.py
 ${PYSITELIB}/mautrix/util/program.pyc
