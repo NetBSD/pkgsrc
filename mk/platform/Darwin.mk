@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.104 2021/07/26 11:58:24 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.105 2021/09/14 10:33:26 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -111,6 +111,7 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 OSX_SDK_MAP.11.2=	11.1
 OSX_SDK_MAP.11.4=	11.3
 OSX_SDK_MAP.11.5=	11.3
+OSX_SDK_MAP.11.6=	11.3
 #
 OSX_SDK_PATH!=	/usr/bin/xcrun \
 		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
@@ -207,6 +208,15 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
+
+.if ${MACHINE_ARCH} == "aarch64"
+CWRAPPERS_APPEND.cc+=	-arch arm64
+CWRAPPERS_APPEND.cxx+=	-arch arm64
+CWRAPPERS_APPEND.ld+=	-arch arm64
+_WRAP_EXTRA_ARGS.CC+=	-arch arm64
+_WRAP_EXTRA_ARGS.CXX+=	-arch arm64
+_WRAP_EXTRA_ARGS.LD+=	-arch arm64
+.endif
 
 # Darwin 7.7.x has poll() in libc, but no poll.h. Try to help GNU
 # configure packages that break because of this by pretending that
