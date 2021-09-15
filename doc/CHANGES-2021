@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4710 2021/09/15 08:20:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4711 2021/09/15 11:24:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7327,3 +7327,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/jack to 1.9.19nb3 [schmonz 2021-09-15]
 	Updated devel/py-dialog to 3.5.2 [adam 2021-09-15]
 	Updated net/py-lexicon to 3.7.0 [adam 2021-09-15]
+	Updated net/grpc to 1.40.0 [adam 2021-09-15]
+	Updated net/py-grpcio to 1.40.0 [adam 2021-09-15]
+	Updated net/py-grpcio-testing to 1.40.0 [adam 2021-09-15]
+	Updated net/py-grpcio-tools to 1.40.0 [adam 2021-09-15]
