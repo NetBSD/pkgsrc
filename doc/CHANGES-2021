@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4712 2021/09/15 11:34:39 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4713 2021/09/15 12:07:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7332,3 +7332,19 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-testing to 1.40.0 [adam 2021-09-15]
 	Updated net/py-grpcio-tools to 1.40.0 [adam 2021-09-15]
 	Updated audio/libsamplerate to 0.2.2 [nia 2021-09-15]
+	Updated security/py-acme to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-apache to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-digitalocean to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-dnsimple to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-gehirn to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-google to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-linode to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-luadns to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-nsone to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-ovh to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-rfc2136 to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-route53 to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-dns-sakuracloud to 1.19.0 [adam 2021-09-15]
+	Updated security/py-certbot-nginx to 1.19.0 [adam 2021-09-15]
