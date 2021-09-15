@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2021/01/24 16:12:51 nia Exp $
+# $NetBSD: Makefile,v 1.29 2021/09/15 11:34:25 nia Exp $
 
-DISTNAME=	libsamplerate-0.2.1
+DISTNAME=	libsamplerate-0.2.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libsndfile.github.io/libsamplerate/
