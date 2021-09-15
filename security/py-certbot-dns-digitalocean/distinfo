@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/08/05 10:52:00 adam Exp $
+$NetBSD: distinfo,v 1.19 2021/09/15 12:05:15 adam Exp $
 
-SHA1 (certbot-dns-digitalocean-1.18.0.tar.gz) = 7ee397128dafc2b7f22d8b6391c1a913e6d43a1a
-RMD160 (certbot-dns-digitalocean-1.18.0.tar.gz) = 9fcbc4a10dcad8fa9d4fd7b57f89d6817e9386ac
-SHA512 (certbot-dns-digitalocean-1.18.0.tar.gz) = 1840ee8fe934488ecdd23145b4a7140ddcd890ca240cbb5faead58c855b846064be46098540511fd1fe94203d2b68d24c30b712862abee594836895f85dd3ac8
-Size (certbot-dns-digitalocean-1.18.0.tar.gz) = 13973 bytes
+SHA1 (certbot-dns-digitalocean-1.19.0.tar.gz) = 1fa7fce51eed76e5cedd6155970ebf6bb6e28e1b
+RMD160 (certbot-dns-digitalocean-1.19.0.tar.gz) = 471cce7ac7d145e4cf02847ed86d529714a6d1f4
+SHA512 (certbot-dns-digitalocean-1.19.0.tar.gz) = 59cc6fe6408b1340d31fd7419b2f5b6111b7db3e9d7aec6dfb85b4f6dd88f92d73c262608f7c833e036c9aceb9d720c5f9d3d99b728239c42b6d375ae29a6f63
+Size (certbot-dns-digitalocean-1.19.0.tar.gz) = 14015 bytes
