@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/05/07 18:45:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/09/15 08:20:33 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -189,6 +189,9 @@ ${PYSITELIB}/lexicon/providers/njalla.pyo
 ${PYSITELIB}/lexicon/providers/nsone.py
 ${PYSITELIB}/lexicon/providers/nsone.pyc
 ${PYSITELIB}/lexicon/providers/nsone.pyo
+${PYSITELIB}/lexicon/providers/oci.py
+${PYSITELIB}/lexicon/providers/oci.pyc
+${PYSITELIB}/lexicon/providers/oci.pyo
 ${PYSITELIB}/lexicon/providers/onapp.py
 ${PYSITELIB}/lexicon/providers/onapp.pyc
 ${PYSITELIB}/lexicon/providers/onapp.pyo
@@ -234,6 +237,9 @@ ${PYSITELIB}/lexicon/providers/transip.pyo
 ${PYSITELIB}/lexicon/providers/ultradns.py
 ${PYSITELIB}/lexicon/providers/ultradns.pyc
 ${PYSITELIB}/lexicon/providers/ultradns.pyo
+${PYSITELIB}/lexicon/providers/vercel.py
+${PYSITELIB}/lexicon/providers/vercel.pyc
+${PYSITELIB}/lexicon/providers/vercel.pyo
 ${PYSITELIB}/lexicon/providers/vultr.py
 ${PYSITELIB}/lexicon/providers/vultr.pyc
 ${PYSITELIB}/lexicon/providers/vultr.pyo
@@ -411,6 +417,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_njalla.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_nsone.py
 ${PYSITELIB}/lexicon/tests/providers/test_nsone.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_nsone.pyo
+${PYSITELIB}/lexicon/tests/providers/test_oci.py
+${PYSITELIB}/lexicon/tests/providers/test_oci.pyc
+${PYSITELIB}/lexicon/tests/providers/test_oci.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_onapp.py
 ${PYSITELIB}/lexicon/tests/providers/test_onapp.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_onapp.pyo
@@ -456,15 +465,15 @@ ${PYSITELIB}/lexicon/tests/providers/test_transip.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.py
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyo
+${PYSITELIB}/lexicon/tests/providers/test_vercel.py
+${PYSITELIB}/lexicon/tests/providers/test_vercel.pyc
+${PYSITELIB}/lexicon/tests/providers/test_vercel.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.py
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_yandex.py
 ${PYSITELIB}/lexicon/tests/providers/test_yandex.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_yandex.pyo
-${PYSITELIB}/lexicon/tests/providers/test_zeit.py
-${PYSITELIB}/lexicon/tests/providers/test_zeit.pyc
-${PYSITELIB}/lexicon/tests/providers/test_zeit.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_zilore.py
 ${PYSITELIB}/lexicon/tests/providers/test_zilore.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_zilore.pyo
