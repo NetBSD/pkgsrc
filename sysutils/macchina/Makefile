@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2021/09/11 21:14:31 pin Exp $
+# $NetBSD: Makefile,v 1.31 2021/09/15 13:35:55 pin Exp $
 
-DISTNAME=	macchina-0.9.2
-# Newer versions depend on vergen crate, which fails to build
-# on NetBSD. Discussion on-going with upstream.
+DISTNAME=	macchina-1.1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,17 +12,10 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config
-
 INSTALLATION_DIRS=	bin share/examples/macchina
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXdmcp}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXau}/lib
-
-BUILDLINK_TRANSFORM+=	opt:-pie:-fPIC
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		openwrt
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/macchina ${DESTDIR}${PREFIX}/bin
@@ -33,8 +24,4 @@ do-install:
 DEPENDS+=	wmctrl-[0-9]*:../../wm/wmctrl
 
 .include "../../lang/rust/cargo.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libXdmcp/buildlink3.mk"
-.include "../../x11/libXau/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
