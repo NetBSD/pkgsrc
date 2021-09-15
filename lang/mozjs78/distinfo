@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.12 2021/05/02 07:25:12 prlw1 Exp $
+$NetBSD: distinfo,v 1.13 2021/09/15 01:17:46 gutteridge Exp $
 
-SHA1 (mozjs78_78.4.0.orig.tar.xz) = b2c1c241f70310d545f8a3c05b9c8c11676e56a8
-RMD160 (mozjs78_78.4.0.orig.tar.xz) = cef93b6116eff9f04beeaf3dda0a42cd811d0b18
-SHA512 (mozjs78_78.4.0.orig.tar.xz) = 05a0dd27cd8f330c69bf798f9025dd560e76a1a14628af4caeeae4f7573aef9371e19edb8a8e4cd28e92e189eb3a159b4ffedb1b1bd4b806e065de433cca6ffd
-Size (mozjs78_78.4.0.orig.tar.xz) = 58319040 bytes
-SHA1 (patch-.cargo_config.in) = 4ff4f59d8a614ad0abcc90f34fdf21461938c7f8
-SHA1 (patch-Cargo.lock) = e6096719b2df8d3eaaac777686ea83a7f1a0515d
-SHA1 (patch-Cargo.toml) = bb57fc798a7c34332fd6cae52a9c9d5dfe84f6c5
+SHA1 (mozjs78_78.13.0.orig.tar.xz) = a73fffc909aa038d51c418f6042ea7eda24ff201
+RMD160 (mozjs78_78.13.0.orig.tar.xz) = c4f3079b79328e8578b26547a0dcc56586b28bc3
+SHA512 (mozjs78_78.13.0.orig.tar.xz) = e47e69ae37df73db16f20d581c1b8cec7653e62578510bfd5b6c3dea8a86a28076f70633ae2d0e2c6f2e144f676c80faa51a8d64318ccc01c71e523b07bd542a
+Size (mozjs78_78.13.0.orig.tar.xz) = 60022692 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 149301b4a8fb81f6c64d90672b3137ae6d68461f
-SHA1 (patch-build_moz.configure_toolchain.configure) = 930ed1aec1da8c10c80d8f31dfc5acbf2db31c5f
+SHA1 (patch-build_moz.configure_toolchain.configure) = 0a398dcd2855de94b25e5afd993c9f40cc323980
 SHA1 (patch-js_moz.configure) = f3d762b293761e359ac7c389059aa228949a6f0b
 SHA1 (patch-js_src_jit_AtomicOperations.h) = 19eba50673f8138bbb09c0eaca63923cadbadd26
 SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = 84d629df0e7963755aa38ff9a1e29d60ed3adb4c
