@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4714 2021/09/15 12:20:46 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4715 2021/09/15 12:28:43 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7349,3 +7349,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-sakuracloud to 1.19.0 [adam 2021-09-15]
 	Updated security/py-certbot-nginx to 1.19.0 [adam 2021-09-15]
 	Updated games/minetest to 5.4.1 [nia 2021-09-15]
+	Updated cross/avr-gcc to 10.3.0nb1 [micha 2021-09-15]
