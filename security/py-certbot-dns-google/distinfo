@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/08/05 10:52:00 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/09/15 12:05:15 adam Exp $
 
-SHA1 (certbot-dns-google-1.18.0.tar.gz) = 481c1e7496a842471ff51bcd166c958fb52f4e01
-RMD160 (certbot-dns-google-1.18.0.tar.gz) = ceda158804d3dc3cb68a300fd1cd6509edbf46e9
-SHA512 (certbot-dns-google-1.18.0.tar.gz) = db0b176904beeddaf8b0be54c296884c5f369b4b9cc17085880efc4ecbf0ae6f7b96462d10f1b5729c559c56410002b704c631c02acbc4a9ca92cfaa898a084b
-Size (certbot-dns-google-1.18.0.tar.gz) = 23620 bytes
+SHA1 (certbot-dns-google-1.19.0.tar.gz) = d2b1c4ac01b28e7112ad6c09e154ec88dae1e1de
+RMD160 (certbot-dns-google-1.19.0.tar.gz) = 059ed82a934edcc542ce2856970210a38af65d2c
+SHA512 (certbot-dns-google-1.19.0.tar.gz) = ce1586b8c8544f4e1716d19f247e7541d402b754773401fec5f0b36e5d0f2744540da276ed94cb08d05b6437a6e2396ab0010e31228e638015113a3a3f0b76c6
+Size (certbot-dns-google-1.19.0.tar.gz) = 23660 bytes
