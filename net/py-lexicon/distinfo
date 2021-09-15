@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.58 2021/07/02 09:49:42 adam Exp $
+$NetBSD: distinfo,v 1.59 2021/09/15 08:20:33 adam Exp $
 
-SHA1 (dns-lexicon-3.6.1.tar.gz) = 9986675fb23fa4305f74f9f9ab621ba07f9f1b15
-RMD160 (dns-lexicon-3.6.1.tar.gz) = fb63d7be4454254c630817390612b8e01c79716b
-SHA512 (dns-lexicon-3.6.1.tar.gz) = f142863e90c1dc260bfa9818c5b29d1db2d06f21f4f8fdfbfe9d209a8c0fb1975061650e725309cc0c32f31bb0bf2f8efe75ea30381c47e25cecf2b97887362a
-Size (dns-lexicon-3.6.1.tar.gz) = 156103 bytes
+SHA1 (dns-lexicon-3.7.0.tar.gz) = de2942765bba18f2617b63230c4eaff7864d3e15
+RMD160 (dns-lexicon-3.7.0.tar.gz) = ca3a1486058dfffc01e26d7169fd32726de52fc3
+SHA512 (dns-lexicon-3.7.0.tar.gz) = 8f5efd81babb17b5c80f597cb2e22431f3b53028a68339345ae81b13a434443670bd48dd57510cbe1b6f39f2003cc3c125cfa7f327c2fd50f238ea5ae55499b6
+Size (dns-lexicon-3.7.0.tar.gz) = 161192 bytes
