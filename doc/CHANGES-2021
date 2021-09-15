@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4711 2021/09/15 11:24:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4712 2021/09/15 11:34:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7331,3 +7331,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio to 1.40.0 [adam 2021-09-15]
 	Updated net/py-grpcio-testing to 1.40.0 [adam 2021-09-15]
 	Updated net/py-grpcio-tools to 1.40.0 [adam 2021-09-15]
+	Updated audio/libsamplerate to 0.2.2 [nia 2021-09-15]
