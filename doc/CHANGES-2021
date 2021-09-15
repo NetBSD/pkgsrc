@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4717 2021/09/15 12:39:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4718 2021/09/15 13:33:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7353,3 +7353,4 @@ Changes to the packages collection and infrastructure in 2021:
 	added math/R-gsl version 2.1.6 [mef 2021-09-15]
 	Updated www/nginx to 1.20.1nb1 [adam 2021-09-15]
 	Updated www/nginx-devel to 1.21.3 [adam 2021-09-15]
+	Updated audio/termusic to 0.3.12 [pin 2021-09-15]
