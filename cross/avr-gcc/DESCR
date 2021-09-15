@@ -1,4 +1,4 @@
 GCC configured as cross-compiler for Atmel AVR 8-bit RISC
 microcontrollers.
 
-This package includes a C compiler.
+This package includes C and C++ compilers.

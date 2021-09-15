@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2021/09/08 12:07:06 micha Exp $
+# $NetBSD: Makefile,v 1.48 2021/09/15 12:20:15 micha Exp $
 
 DISTNAME=		gcc-10.3.0
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
@@ -32,6 +33,7 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 CONFIGURE_ARGS+=	--enable-languages='c c++'
 CONFIGURE_ARGS+=	--enable-multilib
+CONFIGURE_ARGS+=	--disable-libcc1
 CONFIGURE_ARGS+=	--disable-libquadmath-support
 CONFIGURE_ARGS+=	--disable-lto
 CONFIGURE_ARGS+=	--disable-nls
@@ -58,10 +60,9 @@ INSTALLATION_DIRS+=	avr/bin
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
-# Remove libcc1 and some manual pages from generic locations
+# Remove some manual pages from generic locations
 # File paths from this package should not overlap with other GCC packages
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libcc1.*
 	${RM} -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3

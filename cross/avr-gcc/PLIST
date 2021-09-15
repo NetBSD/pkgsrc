@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/09/08 12:07:06 micha Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/09/15 12:20:15 micha Exp $
 bin/avr-c++
 bin/avr-cpp
 bin/avr-g++
@@ -877,8 +877,6 @@ lib/gcc/avr/${PKGVERSION}/plugin/include/wide-int-print.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/wide-int.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/xcoff.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/xcoffout.h
-lib/gcc/avr/${PKGVERSION}/plugin/libcc1plugin.la
-lib/gcc/avr/${PKGVERSION}/plugin/libcp1plugin.la
 lib/gcc/avr/${PKGVERSION}/tiny-stack/double64/libgcc.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/double64/libgcov.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/libgcc.a
