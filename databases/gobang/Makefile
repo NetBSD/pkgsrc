@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/09/15 14:04:43 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/15 14:08:54 wiz Exp $
 
-DISTNAME=	v0.1.0-alpha.5
+DISTNAME=	gobang-v0.1.0-alpha.5
 PKGNAME=	gobang-0.1.0alpha5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TaKO8Ki/}
-GITHUB_PROJECT=	gobang
 GITHUB_TAG=	v0.1.0-alpha.5
 
 MAINTAINER=	pin@NetBSD.org
