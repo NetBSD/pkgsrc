@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4705 2021/09/15 01:18:14 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4706 2021/09/15 06:26:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7320,3 +7320,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/mautrix-telegram to 0.10.1 [js 2021-09-14]
 	Updated security/tor-browser to 10.5.6 [wiz 2021-09-14]
 	Updated lang/mozjs78 to 78.13.0 [gutteridge 2021-09-15]
+	Updated www/curl to 7.79.0 [wiz 2021-09-15]
