@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4715 2021/09/15 12:28:43 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4716 2021/09/15 12:35:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7350,3 +7350,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-nginx to 1.19.0 [adam 2021-09-15]
 	Updated games/minetest to 5.4.1 [nia 2021-09-15]
 	Updated cross/avr-gcc to 10.3.0nb1 [micha 2021-09-15]
+	added math/R-gsl version 2.1.6 [mef 2021-09-15]
