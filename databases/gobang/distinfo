@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/09/15 14:04:43 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/09/15 14:08:54 wiz Exp $
 
 SHA1 (ahash-0.7.4.crate) = ca3eb7d3acacf0696863acef0b71cf392f14f681
 RMD160 (ahash-0.7.4.crate) = 0654731a94e0c31e770b6e7ad333957fc92a3dc2
@@ -212,6 +212,10 @@ SHA1 (getrandom-0.2.3.crate) = d070be38f71a22f3ffcfb82c94baf936e9aafc83
 RMD160 (getrandom-0.2.3.crate) = 84ff4c3d46ba370a271e36ef03af9dd65f15532e
 SHA512 (getrandom-0.2.3.crate) = e6da64ed529cb0fc000b613f75187ed6b20f716e721d8a02ac2ae39c507fb9f6189ebb66b522d28584eff1e7e9efc274cad6bfe43f464f58053701e1d51c603d
 Size (getrandom-0.2.3.crate) = 26261 bytes
+SHA1 (gobang-v0.1.0-alpha.5.tar.gz) = e9c1a92e6b35efcc2642918aa22db1cf11ee1ee1
+RMD160 (gobang-v0.1.0-alpha.5.tar.gz) = be50344c2b5c2f09e313c0b8f12e5be327d2f62d
+SHA512 (gobang-v0.1.0-alpha.5.tar.gz) = 364c7ece048846ff19a35fba67a3c16b1ff9c1b22b0caea5b9153294d7f2a2518808e15cad37b9f6adacc001f1883d21947468b73c29746299c3126fe44920cc
+Size (gobang-v0.1.0-alpha.5.tar.gz) = 2376883 bytes
 SHA1 (hashbrown-0.11.2.crate) = 1e50084419239938a191693268674e29ac976798
 RMD160 (hashbrown-0.11.2.crate) = 9333cddfa4de962ae277555df29fe5c7aedfd1c3
 SHA512 (hashbrown-0.11.2.crate) = c21ca68fd49bbb741901f59fed04cc124b8da99e2a4dfc26e2e5e1140637872b344612a01691bd30cc771575c571be15f756c84dde225441699cd2322af2ad6c
@@ -676,10 +680,6 @@ SHA1 (url-2.2.2.crate) = 2abe41e19bae9db36db870818d2ca83d956534ab
 RMD160 (url-2.2.2.crate) = 88549457a02ddb42e88caef6ab0f632702757dd5
 SHA512 (url-2.2.2.crate) = f9b6ad99d69ff303283b3fd9e98945fbd6cb411a3d141badcbb3a0566723a451375e6dd5d5357e3eb7a1b5b1ee5756a2347c43817db2de6fe35b9004b090e077
 Size (url-2.2.2.crate) = 68555 bytes
-SHA1 (v0.1.0-alpha.5.tar.gz) = e9c1a92e6b35efcc2642918aa22db1cf11ee1ee1
-RMD160 (v0.1.0-alpha.5.tar.gz) = be50344c2b5c2f09e313c0b8f12e5be327d2f62d
-SHA512 (v0.1.0-alpha.5.tar.gz) = 364c7ece048846ff19a35fba67a3c16b1ff9c1b22b0caea5b9153294d7f2a2518808e15cad37b9f6adacc001f1883d21947468b73c29746299c3126fe44920cc
-Size (v0.1.0-alpha.5.tar.gz) = 2376883 bytes
 SHA1 (vcpkg-0.2.15.crate) = bdb25262b9bffeab1f14c3486ad29192d763a2ec
 RMD160 (vcpkg-0.2.15.crate) = 0fcfbf1de5497655c84b150a285c8a434370035f
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
