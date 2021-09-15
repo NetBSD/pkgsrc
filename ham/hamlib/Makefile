@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2021/05/24 19:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2021/09/15 22:52:45 gdt Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
 # V.rcN, VrcN, V~rcN
-VERSION=	4.1
+VERSION=	4.3.1
 VERSIOND=	${VERSION}
 VERSIONF=	${VERSION}
-PKGREVISION=	4
 CATEGORIES=	ham
 MASTER_SITES=	https://github.com/Hamlib/Hamlib/releases/download/${VERSIOND}/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
@@ -27,9 +26,13 @@ CONFIGURE_ARGS+=	--without-tcl-binding \
 			--without-perl-binding \
 			--without-python-binding
 
-.include "../../mk/bsd.prefs.mk"
+post-install:
+	mv ${DESTDIR}/${PREFIX}/bin/testlibusb ${DESTDIR}/${PREFIX}/bin/rigctl_testlibusb
+
 
 TEST_TARGET=	check
+
+.include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
