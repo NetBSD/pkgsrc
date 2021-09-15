@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4723 2021/09/15 19:03:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4724 2021/09/15 19:06:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7360,3 +7360,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added databases/gobang version 0.1.0alpha5 [pin 2021-09-15]
 	Added textproc/cJSON version 1.7.15 [adam 2021-09-15]
 	Updated devel/py-faker to 8.13.2 [adam 2021-09-15]
+	Updated geography/qgis to 3.16.11 [gdt 2021-09-15]
