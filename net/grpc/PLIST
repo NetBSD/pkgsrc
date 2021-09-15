@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/07/27 15:47:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/09/15 11:23:13 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -272,31 +272,31 @@ lib/libgpr.so.18
 lib/libgpr.so.18.0.0
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
-lib/libgrpc++.so.1.39
+lib/libgrpc++.so.1.40
 lib/libgrpc++_alts.so
 lib/libgrpc++_alts.so.${PKGVERSION}
-lib/libgrpc++_alts.so.1.39
+lib/libgrpc++_alts.so.1.40
 lib/libgrpc++_error_details.so
 lib/libgrpc++_error_details.so.${PKGVERSION}
-lib/libgrpc++_error_details.so.1.39
+lib/libgrpc++_error_details.so.1.40
 lib/libgrpc++_reflection.so
 lib/libgrpc++_reflection.so.${PKGVERSION}
-lib/libgrpc++_reflection.so.1.39
+lib/libgrpc++_reflection.so.1.40
 lib/libgrpc++_unsecure.so
 lib/libgrpc++_unsecure.so.${PKGVERSION}
-lib/libgrpc++_unsecure.so.1.39
+lib/libgrpc++_unsecure.so.1.40
 lib/libgrpc.so
 lib/libgrpc.so.18
 lib/libgrpc.so.18.0.0
 lib/libgrpc_plugin_support.so
 lib/libgrpc_plugin_support.so.${PKGVERSION}
-lib/libgrpc_plugin_support.so.1.39
+lib/libgrpc_plugin_support.so.1.40
 lib/libgrpc_unsecure.so
 lib/libgrpc_unsecure.so.18
 lib/libgrpc_unsecure.so.18.0.0
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
-lib/libgrpcpp_channelz.so.1.39
+lib/libgrpcpp_channelz.so.1.40
 lib/libupb.so
 lib/libupb.so.18
 lib/libupb.so.18.0.0
