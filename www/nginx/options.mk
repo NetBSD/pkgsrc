@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.70 2021/06/01 10:53:46 adam Exp $
+# $NetBSD: options.mk,v 1.71 2021/09/15 12:37:05 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -211,7 +211,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.2.8
+PUSH_VERSION=		1.2.10
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
