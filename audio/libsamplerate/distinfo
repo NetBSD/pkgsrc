@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/01/24 16:12:51 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/09/15 11:34:25 nia Exp $
 
-SHA1 (libsamplerate-0.2.1.tar.bz2) = 075ffa9d53171db4356ed8f6419d0b8e3a1e8394
-RMD160 (libsamplerate-0.2.1.tar.bz2) = 2ab41928588d9aee60369e5ed678d99d1b1bab15
-SHA512 (libsamplerate-0.2.1.tar.bz2) = f54f7f12c9536868d7a11fc9cbb86857505e7b75fe34cedaf0b9bfc864da6037296b3eae303a33d4c87b7fd20d96933b91ef59c8cc3d1313b9fc21654e5daa2d
-Size (libsamplerate-0.2.1.tar.bz2) = 3747188 bytes
+SHA1 (libsamplerate-0.2.2.tar.xz) = 93eacb671d2d09e317f5ccd49967cf747cb4d937
+RMD160 (libsamplerate-0.2.2.tar.xz) = 7816165703a0c7ab4a6f2a96e1cb8cb8e7fc69ab
+SHA512 (libsamplerate-0.2.2.tar.xz) = d23ae54d23209ba22baae9e5fd178dd8e0e99205dada7e7c3a7b3a3d8cf816ed427a411bfeb008427f64da7767d645edce40811f238af11c8c386f5ef25a9f0c
+Size (libsamplerate-0.2.2.tar.xz) = 3319468 bytes
