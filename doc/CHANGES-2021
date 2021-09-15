@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4722 2021/09/15 14:06:26 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4723 2021/09/15 19:03:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7358,3 +7358,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 1.1.4 [pin 2021-09-15]
 	Updated shells/nushell to 0.37.0 [pin 2021-09-15]
 	Added databases/gobang version 0.1.0alpha5 [pin 2021-09-15]
+	Added textproc/cJSON version 1.7.15 [adam 2021-09-15]
+	Updated devel/py-faker to 8.13.2 [adam 2021-09-15]
