@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/29 17:17:17 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/09/15 13:34:29 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
 qt5/plugins/styles/libkvantum.so
@@ -141,6 +141,7 @@ share/kvantummanager/translations/kvantummanager_ru.qm
 share/kvantummanager/translations/kvantummanager_si.qm
 share/kvantummanager/translations/kvantummanager_sk_SK.qm
 share/kvantummanager/translations/kvantummanager_tr.qm
+share/kvantummanager/translations/kvantummanager_uk.qm
 share/kvantummanager/translations/kvantummanager_zh_CN.qm
 share/kvantummanager/translations/kvantummanager_zh_Hant.qm
 share/kvantumpreview/translations/kvantumpreview_ar_DZ.qm
@@ -172,6 +173,7 @@ share/kvantumpreview/translations/kvantumpreview_ru.qm
 share/kvantumpreview/translations/kvantumpreview_si.qm
 share/kvantumpreview/translations/kvantumpreview_sk.qm
 share/kvantumpreview/translations/kvantumpreview_tr.qm
+share/kvantumpreview/translations/kvantumpreview_uk.qm
 share/kvantumpreview/translations/kvantumpreview_zh_CN.qm
 share/kvantumpreview/translations/kvantumpreview_zh_Hant.qm
 share/themes/KvAdapta/openbox-3/close.xbm
