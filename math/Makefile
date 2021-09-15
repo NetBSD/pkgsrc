@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.513 2021/09/02 07:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.514 2021/09/15 12:35:20 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -60,6 +60,7 @@ SUBDIR+=	R-generics
 SUBDIR+=	R-genetics
 SUBDIR+=	R-geoR
 SUBDIR+=	R-goftest
+SUBDIR+=	R-gsl
 SUBDIR+=	R-gss
 SUBDIR+=	R-gstat
 SUBDIR+=	R-gtable
