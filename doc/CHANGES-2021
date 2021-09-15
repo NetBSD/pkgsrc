@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4709 2021/09/15 08:06:58 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4710 2021/09/15 08:20:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7325,3 +7325,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 57.5.0 [adam 2021-09-15]
 	Updated net/py-tldextract to 3.1.2 [adam 2021-09-15]
 	Updated audio/jack to 1.9.19nb3 [schmonz 2021-09-15]
+	Updated devel/py-dialog to 3.5.2 [adam 2021-09-15]
+	Updated net/py-lexicon to 3.7.0 [adam 2021-09-15]
