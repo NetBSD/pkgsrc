@@ -1,15 +1,15 @@
-$NetBSD: patch-build_moz.configure_toolchain.configure,v 1.1 2020/12/05 12:03:26 nia Exp $
+$NetBSD: patch-build_moz.configure_toolchain.configure,v 1.2 2021/09/15 01:17:46 gutteridge Exp $
 
 Builds fine on MacOS with newer toolchain
 
---- build/moz.configure/toolchain.configure.orig	2020-11-04 10:51:54.000000000 +0000
+--- build/moz.configure/toolchain.configure.orig	2021-08-28 12:40:42.000000000 +0000
 +++ build/moz.configure/toolchain.configure
-@@ -141,7 +141,7 @@ with only_when(host_is_osx | target_is_o
-     @imports(_from='biplist', _import='readPlist')
+@@ -142,7 +142,7 @@ with only_when(host_is_osx | target_is_o
+     @imports('plistlib')
      def macos_sdk(sdk, host):
          sdk_min_version = Version('10.11')
 -        sdk_max_version = Version('10.15.4')
-+        sdk_max_version = Version('10.15.6')
++        sdk_max_version = Version('10.15.7')
  
          if sdk:
              sdk = sdk[0]
