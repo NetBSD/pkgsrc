@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1250 2021/09/11 23:40:25 wen Exp $
+# $NetBSD: Makefile,v 1.1251 2021/09/15 18:59:54 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -154,6 +154,7 @@ SUBDIR+=	bk
 SUBDIR+=	bsdgrep-devel
 SUBDIR+=	btparse
 SUBDIR+=	c2html
+SUBDIR+=	cJSON
 SUBDIR+=	cabocha
 SUBDIR+=	catdoc
 SUBDIR+=	catdoc-tk
