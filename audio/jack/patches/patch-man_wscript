@@ -1,0 +1,13 @@
+$NetBSD: patch-man_wscript,v 1.1 2021/09/15 07:44:37 schmonz Exp $
+
+Follow hier(7).
+
+--- man/wscript.orig	2021-07-15 06:18:26.000000000 +0000
++++ man/wscript
+@@ -7,5 +7,5 @@ import os
+ 
+ def build(bld):
+     bld.exec_command('cd man ; sh fill_template %s' % bld.env['JACK_VERSION'])
+-    bld.install_files(bld.env['MANDIR'], bld.path.ant_glob('*.1'))
++    bld.install_files(bld.env['MANDIR'] + '/man1', bld.path.ant_glob('*.1'))
+ 
