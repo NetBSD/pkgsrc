@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.941 2021/08/17 17:45:18 pin Exp $
+# $NetBSD: Makefile,v 1.942 2021/09/15 07:14:52 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -705,6 +705,7 @@ SUBDIR+=	xworld
 SUBDIR+=	xwrits
 SUBDIR+=	xwud
 SUBDIR+=	xxkb
+SUBDIR+=	yad
 SUBDIR+=	zenity
 
 .include "../mk/misc/category.mk"
