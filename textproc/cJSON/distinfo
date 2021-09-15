@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/15 18:59:54 adam Exp $
+
+SHA1 (cJSON-1.7.15.tar.gz) = 268593a0838a6ae9115ec778828f1e06a88def03
+RMD160 (cJSON-1.7.15.tar.gz) = 52e90600efe8e2008d2a3efc32c0a82c5e35c52b
+SHA512 (cJSON-1.7.15.tar.gz) = 0b32a758c597fcc90c8ed0af493c9bccd611b9d4f9a03e87de3f7337bb9a28990b810befd44bc321a0cb42cbcd0b026d45761f9bab7bd798f920b7b6975fb124
+Size (cJSON-1.7.15.tar.gz) = 352278 bytes
