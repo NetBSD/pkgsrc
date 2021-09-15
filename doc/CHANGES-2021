@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4720 2021/09/15 13:36:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4721 2021/09/15 13:39:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7356,3 +7356,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.12 [pin 2021-09-15]
 	Updated graphics/kvantum to 0.20.2 [pin 2021-09-15]
 	Updated sysutils/macchina to 1.1.4 [pin 2021-09-15]
+	Updated shells/nushell to 0.37.0 [pin 2021-09-15]
