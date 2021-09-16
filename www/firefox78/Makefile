@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/09/10 11:37:53 nia Exp $
+# $NetBSD: Makefile,v 1.36 2021/09/16 19:49:15 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		78.14
@@ -6,6 +6,7 @@ MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//:S/firefox-/firefox78-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -63,11 +64,13 @@ CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/chrome/toolkit/content/global/buildconfig.html
 
 MOZILLA=	${PKGBASE}
-MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/${MOZILLA}/browser/chrome/icons/default/default48.png
+
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
-MOZILLA_NAME=	Firefox
+MOZILLA_NAME=		Firefox
+MOZILLA_BRANDING=	official
 .else
-MOZILLA_NAME=	Browser
+MOZILLA_NAME=		Browser
+MOZILLA_BRANDING=	unofficial
 .endif
 
 #
@@ -113,7 +116,6 @@ post-build:
 	  > ${WRKDIR}/desktop
 
 INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/pixmaps
 
 post-install:
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
@@ -122,8 +124,12 @@ post-install:
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
-	${INSTALL_DATA} ${MOZILLA_ICON}					\
-	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
+.for i in 16 22 24 32 48 64 128 256
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${i}x${i}/apps
+	${INSTALL_DATA} ${WRKSRC}/browser/branding/${MOZILLA_BRANDING}/default${i}.png \
+	  ${DESTDIR}${PREFIX}/share/icons/hicolor/${i}x${i}/apps/${MOZILLA}.png
+.endfor
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
