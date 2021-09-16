@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/01/06 01:17:50 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/09/16 00:23:52 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -175,6 +175,9 @@ ${PYSITELIB}/music21/common/classTools.pyo
 ${PYSITELIB}/music21/common/decorators.py
 ${PYSITELIB}/music21/common/decorators.pyc
 ${PYSITELIB}/music21/common/decorators.pyo
+${PYSITELIB}/music21/common/enums.py
+${PYSITELIB}/music21/common/enums.pyc
+${PYSITELIB}/music21/common/enums.pyo
 ${PYSITELIB}/music21/common/fileTools.py
 ${PYSITELIB}/music21/common/fileTools.pyc
 ${PYSITELIB}/music21/common/fileTools.pyo
@@ -199,6 +202,9 @@ ${PYSITELIB}/music21/common/pathTools.pyo
 ${PYSITELIB}/music21/common/stringTools.py
 ${PYSITELIB}/music21/common/stringTools.pyc
 ${PYSITELIB}/music21/common/stringTools.pyo
+${PYSITELIB}/music21/common/types.py
+${PYSITELIB}/music21/common/types.pyc
+${PYSITELIB}/music21/common/types.pyo
 ${PYSITELIB}/music21/common/weakrefTools.py
 ${PYSITELIB}/music21/common/weakrefTools.pyc
 ${PYSITELIB}/music21/common/weakrefTools.pyo
@@ -371,19 +377,19 @@ ${PYSITELIB}/music21/key.pyo
 ${PYSITELIB}/music21/languageExcerpts/__init__.py
 ${PYSITELIB}/music21/languageExcerpts/__init__.pyc
 ${PYSITELIB}/music21/languageExcerpts/__init__.pyo
-${PYSITELIB}/music21/languageExcerpts/cn.txt
-${PYSITELIB}/music21/languageExcerpts/de.txt
-${PYSITELIB}/music21/languageExcerpts/en.txt
-${PYSITELIB}/music21/languageExcerpts/fr.txt
 ${PYSITELIB}/music21/languageExcerpts/instrumentLookup.py
 ${PYSITELIB}/music21/languageExcerpts/instrumentLookup.pyc
 ${PYSITELIB}/music21/languageExcerpts/instrumentLookup.pyo
-${PYSITELIB}/music21/languageExcerpts/it.txt
-${PYSITELIB}/music21/languageExcerpts/la.txt
 ${PYSITELIB}/music21/languageExcerpts/naturalLanguageObjects.py
 ${PYSITELIB}/music21/languageExcerpts/naturalLanguageObjects.pyc
 ${PYSITELIB}/music21/languageExcerpts/naturalLanguageObjects.pyo
-${PYSITELIB}/music21/languageExcerpts/nl.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/cn.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/de.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/en.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/fr.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/it.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/la.txt
+${PYSITELIB}/music21/languageExcerpts/trainingData/nl.txt
 ${PYSITELIB}/music21/layout.py
 ${PYSITELIB}/music21/layout.pyc
 ${PYSITELIB}/music21/layout.pyo
@@ -425,9 +431,21 @@ ${PYSITELIB}/music21/metadata/primitives.pyo
 ${PYSITELIB}/music21/metadata/testMetadata.py
 ${PYSITELIB}/music21/metadata/testMetadata.pyc
 ${PYSITELIB}/music21/metadata/testMetadata.pyo
-${PYSITELIB}/music21/meter.py
-${PYSITELIB}/music21/meter.pyc
-${PYSITELIB}/music21/meter.pyo
+${PYSITELIB}/music21/meter/__init__.py
+${PYSITELIB}/music21/meter/__init__.pyc
+${PYSITELIB}/music21/meter/__init__.pyo
+${PYSITELIB}/music21/meter/base.py
+${PYSITELIB}/music21/meter/base.pyc
+${PYSITELIB}/music21/meter/base.pyo
+${PYSITELIB}/music21/meter/core.py
+${PYSITELIB}/music21/meter/core.pyc
+${PYSITELIB}/music21/meter/core.pyo
+${PYSITELIB}/music21/meter/tests.py
+${PYSITELIB}/music21/meter/tests.pyc
+${PYSITELIB}/music21/meter/tests.pyo
+${PYSITELIB}/music21/meter/tools.py
+${PYSITELIB}/music21/meter/tools.pyc
+${PYSITELIB}/music21/meter/tools.pyo
 ${PYSITELIB}/music21/midi/__init__.py
 ${PYSITELIB}/music21/midi/__init__.pyc
 ${PYSITELIB}/music21/midi/__init__.pyo
@@ -695,6 +713,9 @@ ${PYSITELIB}/music21/omr/k525MIDIMvt1.mid
 ${PYSITELIB}/music21/omr/k525OMRMvt1.xml
 ${PYSITELIB}/music21/omr/k525OMRshort.xml
 ${PYSITELIB}/music21/omr/k525short.mid
+${PYSITELIB}/music21/percussion.py
+${PYSITELIB}/music21/percussion.pyc
+${PYSITELIB}/music21/percussion.pyo
 ${PYSITELIB}/music21/pitch.py
 ${PYSITELIB}/music21/pitch.pyc
 ${PYSITELIB}/music21/pitch.pyo
@@ -4707,6 +4728,9 @@ ${PYSITELIB}/music21/spanner.pyo
 ${PYSITELIB}/music21/stream/__init__.py
 ${PYSITELIB}/music21/stream/__init__.pyc
 ${PYSITELIB}/music21/stream/__init__.pyo
+${PYSITELIB}/music21/stream/base.py
+${PYSITELIB}/music21/stream/base.pyc
+${PYSITELIB}/music21/stream/base.pyo
 ${PYSITELIB}/music21/stream/core.py
 ${PYSITELIB}/music21/stream/core.pyc
 ${PYSITELIB}/music21/stream/core.pyo
@@ -4725,6 +4749,9 @@ ${PYSITELIB}/music21/stream/makeNotation.pyo
 ${PYSITELIB}/music21/stream/streamStatus.py
 ${PYSITELIB}/music21/stream/streamStatus.pyc
 ${PYSITELIB}/music21/stream/streamStatus.pyo
+${PYSITELIB}/music21/stream/tests.py
+${PYSITELIB}/music21/stream/tests.pyc
+${PYSITELIB}/music21/stream/tests.pyo
 ${PYSITELIB}/music21/stream/tripletOffsetBugtest.xml
 ${PYSITELIB}/music21/style.py
 ${PYSITELIB}/music21/style.pyc
@@ -4774,9 +4801,6 @@ ${PYSITELIB}/music21/test/testSerialization.pyo
 ${PYSITELIB}/music21/test/testSingleCoreAll.py
 ${PYSITELIB}/music21/test/testSingleCoreAll.pyc
 ${PYSITELIB}/music21/test/testSingleCoreAll.pyo
-${PYSITELIB}/music21/test/testStream.py
-${PYSITELIB}/music21/test/testStream.pyc
-${PYSITELIB}/music21/test/testStream.pyo
 ${PYSITELIB}/music21/test/timeGraphImportStar.py
 ${PYSITELIB}/music21/test/timeGraphImportStar.pyc
 ${PYSITELIB}/music21/test/timeGraphImportStar.pyo
