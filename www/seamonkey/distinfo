@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.171 2021/06/02 15:39:55 wiz Exp $
+$NetBSD: distinfo,v 1.172 2021/09/16 14:59:32 nia Exp $
 
-SHA1 (seamonkey-2.53.6.source.tar.xz) = ff5cb7701acc7487d094c8d04ecabe0aa486eae9
-RMD160 (seamonkey-2.53.6.source.tar.xz) = fdedcb9419ff598ad9e18e94115ed9d5e3624116
-SHA512 (seamonkey-2.53.6.source.tar.xz) = 1854862b5b4781e21cb14bdb6be95e219195459202f55cde3800594174307a9ff23e8b29304494489e947a2749765cdb75ca56633f2fcff8afaf277da972a573
-Size (seamonkey-2.53.6.source.tar.xz) = 283905464 bytes
+SHA1 (seamonkey-2.53.9.source.tar.xz) = c130687f4ba4fffe75461c2b0bb8d6dd2756d0d1
+RMD160 (seamonkey-2.53.9.source.tar.xz) = 11cddb895ea4d66b3ea582e919e675a2d66baf60
+SHA512 (seamonkey-2.53.9.source.tar.xz) = 17f7009f2b5a1f337c24f98e2bfac2b63498f6e5b5080cbfc1c541ee60fa07f5116b76b7f20f2fc4e000b8c38c4558c7c9ef10abbdfec52dd597bc25d5a952f4
+Size (seamonkey-2.53.9.source.tar.xz) = 285118824 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 38ba5e8a0e41352afc4e767c25388c3c772b0457
 SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
+SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c002337ca566e5d0124d071bf39e5fb9daa7e059
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b742b070a45507678f592428110477e484c52659
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 5a5890c5347cdb1a0899eebe4f014584fa460c10
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 5c6074fb8e0baf4e7dc2dd49718bfd285e65e3e1
@@ -27,7 +28,7 @@ SHA1 (patch-mozilla_media_libcubeb_update.sh) = ad2accd9068b8aa77b21a2926cf701b2
 SHA1 (patch-mozilla_media_libpng_pngpriv.h) = a4da316a4055d79daafd642e5dc8a2ce2bda6fa7
 SHA1 (patch-mozilla_netwerk_srtp_src_crypto_hash_hmac.c) = 2e567f6f626ce081dd4e2c0e7918f8924345afd6
 SHA1 (patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = b5db9d527a84ebb1061f4aecd80fb2c0d340d6c3
-SHA1 (patch-mozilla_old-configure.in) = 934f82f2f52819121504d4397099d4fbc1291c19
+SHA1 (patch-mozilla_old-configure.in) = c59201b264c358cc93ee0dce79d98df0998b5299
 SHA1 (patch-mozilla_servo_components_style_build__gecko.rs) = 40c3796b1c561f67920916713154737bd914d4f6
 SHA1 (patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs) = 41a9417208961d1fa9253ab7d01de27f7ffe6ea7
 SHA1 (patch-mozilla_toolkit_components_terminator_nsTerminator.cpp) = 0d9c8c1ff35321973793bb948c3f43746260b21a
