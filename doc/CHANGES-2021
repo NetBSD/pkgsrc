@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4736 2021/09/16 15:00:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4737 2021/09/16 15:01:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7375,3 +7375,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mitmproxy to 7.0.3 [leot 2021-09-16]
 	Updated math/R-energy to 1.7.8 [mef 2021-09-16]
 	Updated www/seamonkey to 2.53.9 [nia 2021-09-16]
+	Updated www/seamonkey-l10n to 2.53.9 [nia 2021-09-16]
