@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4729 2021/09/16 08:38:02 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4730 2021/09/16 08:39:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7366,3 +7366,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-e1071 to 1.7.8 [mef 2021-09-16]
 	Updated x11/xorgproto to 2021.5 [wiz 2021-09-16]
 	Updated x11/xorgproto to 2021.5nb1 [wiz 2021-09-16]
+	Updated x11/libXi to 1.8 [wiz 2021-09-16]
