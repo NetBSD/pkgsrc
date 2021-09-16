@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/01 19:08:22 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/16 09:22:46 wiz Exp $
 ${PYSITELIB}/syslogng/__init__.py
 ${PYSITELIB}/syslogng/__init__.pyc
 ${PYSITELIB}/syslogng/debuggercli/__init__.py
@@ -13,6 +13,8 @@ ${PYSITELIB}/syslogng/debuggercli/completerlang.py
 ${PYSITELIB}/syslogng/debuggercli/completerlang.pyc
 ${PYSITELIB}/syslogng/debuggercli/debuggercli.py
 ${PYSITELIB}/syslogng/debuggercli/debuggercli.pyc
+${PYSITELIB}/syslogng/debuggercli/editline.py
+${PYSITELIB}/syslogng/debuggercli/editline.pyc
 ${PYSITELIB}/syslogng/debuggercli/debuglang.py
 ${PYSITELIB}/syslogng/debuggercli/debuglang.pyc
 ${PYSITELIB}/syslogng/debuggercli/getoptlexer.py

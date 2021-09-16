@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2020/05/31 17:30:17 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2021/09/16 09:22:46 wiz Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
-
-PKGREVISION=		4
 
 CONFIGURE_ARGS+=	--enable-stomp
 CONFIGURE_ARGS+=	--enable-tcp-wrapper

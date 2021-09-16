@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 21:50:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/16 09:22:48 wiz Exp $
 
 SYSLOG_MOD=		smtp
 SYSLOG_MOD_DIR=		afsmtp
 COMMENT=		Syslog-ng SMTP module
-PKGREVISION=		1
 
-.include "../../sysutils/syslog-ng/Makefile.module"
+.include "../../sysutils/syslog-ng/module.mk"
 
 CONFIGURE_ARGS+=	--with-libesmtp=${BUILDLINK_PREFIX.libesmtp}
 
