@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4726 2021/09/16 00:25:42 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.4727 2021/09/16 04:17:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7363,3 +7363,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.16.11 [gdt 2021-09-15]
 	Updated ham/hamlib to 4.3.1 [gdt 2021-09-15]
 	Updated audio/py-music21 to 7.1.0 [gutteridge 2021-09-16]
+	Updated math/R-e1071 to 1.7.8 [mef 2021-09-16]
