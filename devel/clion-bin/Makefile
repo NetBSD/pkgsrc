@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:07 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/16 20:43:36 wiz Exp $
 
-
-VERSION=	2018.3.4
+VERSION=	2021.2
 DISTNAME=	CLion-${VERSION}
 PKGNAME=	clion-bin-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/cpp/
 
@@ -19,8 +17,8 @@ USE_JAVA2=	8
 
 USE_TOOLS+=	pax sed
 
-REPLACE_PYTHON=	bin/printenv.py \
-		bin/restart.py  \
+REPLACE_PYTHON+=	bin/printenv.py
+REPLACE_PYTHON+=	bin/restart.py
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,13 +37,20 @@ REPLACE_BASH+=	bin/gdb/linux/bin/gcore
 
 do-install:
 	cd ${WRKSRC} &&	\
-	${RM} -r bin/fsnotifier bin/fsnotifier-arm bin/clion.sh.orig\
-	bin/fsnotifier64 bin/libdbm64.so			\
-	lib/pty4j-native/linux/x86/libpty.so			\
-	lib/pty4j-native/linux/x86_64/libpty.so 			\
-	bin/clang bin/gdb bin/lldb jre64 bin/cmake plugins/tfsIntegration/lib/native  \
-	plugins/python/helpers/pydev/pydevd_attach_to_process  \
-	bin/libyjpagent-linux.so bin/libyjpagent-linux64.so && \
+	${RM} -r \
+	bin/clang \
+	bin/clion.sh.orig \
+	bin/fsnotifier \
+	bin/cmake \
+	bin/gdb \
+	bin/libdbm64.so \
+	lib/pty4j-native/ \
+	plugins/python-ce \
+	plugins/performanceTesting \
+	plugins/cwm-plugin \
+	jbr/lib \
+	jbr/bin \
+	bin/lldb && \
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
 	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
 	${FILESDIR}/clion.desktop > \
