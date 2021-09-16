@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/07/17 14:14:47 leot Exp $
+$NetBSD: distinfo,v 1.25 2021/09/16 11:52:19 leot Exp $
 
-SHA1 (mitmproxy-7.0.0.tar.gz) = c014af7f0798dd81a488f0920d4c1862b2a1fdb9
-RMD160 (mitmproxy-7.0.0.tar.gz) = bd1d2ea67f9ecd8f899ce6f345faa825f43571db
-SHA512 (mitmproxy-7.0.0.tar.gz) = 3836a33e5d2be09fb89987d2b0b898183dab9f17b990b98ab754d07cc5d7275786cfac0ab946e65a099ece054c7bbd65d62d01e4e4281e5f9b5f3dcdd0ac80b4
-Size (mitmproxy-7.0.0.tar.gz) = 27308204 bytes
+SHA1 (mitmproxy-7.0.3.tar.gz) = 8484fcd8d446198439926b6ca2509f0b2ae35dfa
+RMD160 (mitmproxy-7.0.3.tar.gz) = 922973381adb8da43b5a59a71186e1a4a6b3882d
+SHA512 (mitmproxy-7.0.3.tar.gz) = cffbb60421724fa28aab69b3bf1100e0aa5ab6e8933186f5706eb4eee35ef0f716616001156dac07921c73024e6ad8b98499a273575c592bb7694c0dffb728da
+Size (mitmproxy-7.0.3.tar.gz) = 27311502 bytes
