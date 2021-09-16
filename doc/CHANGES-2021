@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4738 2021/09/16 19:19:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4739 2021/09/16 20:43:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7377,3 +7377,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/seamonkey to 2.53.9 [nia 2021-09-16]
 	Updated www/seamonkey-l10n to 2.53.9 [nia 2021-09-16]
 	Added lang/csmith version 2.3.0 [wiz 2021-09-16]
+	Updated devel/clion-bin to 2021.2 [wiz 2021-09-16]
