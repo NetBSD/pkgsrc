@@ -1,11 +1,12 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.8 2021/02/08 12:26:20 ryoon Exp $
+$NetBSD: patch-mozilla_old-configure.in,v 1.9 2021/09/16 14:59:32 nia Exp $
 
---- old-configure.in.orig	2020-04-01 11:01:50.000000000 +0000
+--- old-configure.in.orig	2021-08-08 13:02:00.000000000 +0000
 +++ old-configure.in
-@@ -2646,6 +2646,19 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -2425,6 +2425,19 @@ MOZ_WEBM_ENCODER=1
+ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
- dnl ==================================
++dnl ==================================
 +dnl = Check sunaudio availability
 +dnl ==================================
 +
@@ -18,7 +19,6 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.8 2021/02/08 12:26:20 ryoon Exp $
 +
 +AC_SUBST(MOZ_SUN)
 +
-+dnl ==================================
- dnl = Check alsa availability on Linux
- dnl ==================================
- 
+ dnl ========================================================
+ dnl NegotiateAuth
+ dnl ========================================================
