@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_signal-handler.c,v 1.2 2021/09/16 09:22:47 wiz Exp $
+$NetBSD: patch-lib_signal-handler.c,v 1.3 2021/09/16 09:32:03 wiz Exp $
 
 sigaction() is the old, compat syscall. On NetBSD call the up to date one.
+https://github.com/syslog-ng/syslog-ng/pull/3786
 
 --- lib/signal-handler.c.orig	2021-06-09 18:47:52.838429049 +0200
 +++ lib/signal-handler.c	2021-06-09 18:48:47.322106570 +0200
