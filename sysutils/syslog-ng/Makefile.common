@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.18 2021/01/18 10:19:47 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/09/16 09:22:46 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.17.2
+DISTNAME=	syslog-ng-3.34.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=syslog-ng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.syslog-ng.org/
+HOMEPAGE=	http://www.syslog-ng.com/
 COMMENT=	Highly portable log management solution
 LICENSE=	gnu-gpl-v2
 
@@ -17,7 +17,7 @@ PATCHDIR=	${.CURDIR}/../../sysutils/syslog-ng/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/syslog-ng/distinfo
 
 USE_LANGUAGES=	c c99
-USE_TOOLS+=	flex pkg-config gmake awk:run yacc
+USE_TOOLS+=	flex pkg-config gmake awk:run bison
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_FEATURES+=	strnlen
@@ -25,7 +25,6 @@ USE_FEATURES+=	strnlen
 CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 
 CONFIGURE_ARGS+=	--disable-amqp
-CONFIGURE_ARGS+=	--disable-geoip
 CONFIGURE_ARGS+=	--disable-http
 CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--disable-java
@@ -41,7 +40,6 @@ CONFIGURE_ARGS+=	--disable-tcp-wrapper
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ivykis=system
-CONFIGURE_ARGS+=	--with-mongoc=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
@@ -52,10 +50,12 @@ SUBST_STAGE.unamepath=	post-configure
 SUBST_FILES.unamepath=	contrib/syslog2ng
 SUBST_VARS.unamepath=	UNAME
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_AWK+=		contrib/syslog2ng
 REPLACE_PYTHON+=	lib/merge-grammar.py
+
+BUILD_DEFS+=		VARBASE
 
 # Kill bundled depedencies, speeds up configure time
 post-extract:
