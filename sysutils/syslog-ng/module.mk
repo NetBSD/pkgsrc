@@ -1,8 +1,8 @@
-# $NetBSD: module.mk,v 1.1 2021/09/16 09:22:47 wiz Exp $
+# $NetBSD: module.mk,v 1.2 2021/09/16 09:25:25 wiz Exp $
 # used by sysutils/py-syslog-ng/Makefile
 # used by sysutils/syslog-ng-amqp/Makefile
 # used by sysutils/syslog-ng-curl/Makefile
-# used by sysutils/syslog-ng-geoip/Makefile
+# used by sysutils/syslog-ng-geoip2/Makefile
 # used by sysutils/syslog-ng-mongodb/Makefile
 # used by sysutils/syslog-ng-redis/Makefile
 # used by sysutils/syslog-ng-smtp/Makefile
