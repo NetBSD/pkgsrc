@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.177 2021/08/13 14:57:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.178 2021/09/16 16:46:24 nia Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/chrome/icons/default/default128.png
@@ -33,4 +33,11 @@ lib/firefox/platform.ini
 lib/firefox/plugin-container
 lib/firefox/removed-files
 share/applications/firefox.desktop
-share/pixmaps/firefox.png
+share/icons/hicolor/128x128/apps/firefox.png
+share/icons/hicolor/16x16/apps/firefox.png
+share/icons/hicolor/22x22/apps/firefox.png
+share/icons/hicolor/24x24/apps/firefox.png
+share/icons/hicolor/256x256/apps/firefox.png
+share/icons/hicolor/32x32/apps/firefox.png
+share/icons/hicolor/48x48/apps/firefox.png
+share/icons/hicolor/64x64/apps/firefox.png
