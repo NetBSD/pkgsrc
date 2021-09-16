@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/06/01 21:07:21 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/16 19:49:15 nia Exp $
 bin/firefox78
 lib/firefox78/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox78/actors/AboutHttpsOnlyErrorParent.jsm
@@ -5732,4 +5732,11 @@ lib/firefox78/res/table-remove-row-active.gif
 lib/firefox78/res/table-remove-row-hover.gif
 lib/firefox78/res/table-remove-row.gif
 share/applications/firefox78.desktop
-share/pixmaps/firefox78.png
+share/icons/hicolor/128x128/apps/firefox78.png
+share/icons/hicolor/16x16/apps/firefox78.png
+share/icons/hicolor/22x22/apps/firefox78.png
+share/icons/hicolor/24x24/apps/firefox78.png
+share/icons/hicolor/256x256/apps/firefox78.png
+share/icons/hicolor/32x32/apps/firefox78.png
+share/icons/hicolor/48x48/apps/firefox78.png
+share/icons/hicolor/64x64/apps/firefox78.png
