@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/03/07 06:36:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/09/16 08:39:06 wiz Exp $
 include/X11/extensions/XInput.h
 include/X11/extensions/XInput2.h
 lib/libXi.la
@@ -30,6 +30,7 @@ man/man3/XGetSelectedExtensionEvents.3
 man/man3/XGrabDevice.3
 man/man3/XGrabDeviceButton.3
 man/man3/XGrabDeviceKey.3
+man/man3/XIAllowEvents.3
 man/man3/XIBarrierReleasePointer.3
 man/man3/XIBarrierReleasePointers.3
 man/man3/XIChangeHierarchy.3

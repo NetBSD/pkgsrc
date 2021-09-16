@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2020/01/18 23:35:52 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2021/09/16 08:39:06 wiz Exp $
 
-DISTNAME=		libXi-1.7.10
+DISTNAME=		libXi-1.8
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,11 +17,6 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3 ac_cv_path_ASCIIDOC= ac_cv_path_XMLTO=
 PKGCONFIG_OVERRIDE+=	xi.pc.in
 
-SUBST_CLASSES+=		sosubdir
-SUBST_STAGE.sosubdir=	pre-configure
-SUBST_FILES.sosubdir=	man/*.man
-SUBST_SED.sosubdir=	-e 's|\.so X|.so manlibmansuffix/X|'
-
 CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.6
@@ -29,5 +24,6 @@ BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xorgproto+=	xorgproto>=2021.5nb1
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
