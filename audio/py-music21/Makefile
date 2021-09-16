@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/08/09 04:46:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2021/09/16 00:23:52 gutteridge Exp $
 
-VERSION=	6.7.1
+VERSION=	7.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
 GITHUB_PROJECT=	music21
