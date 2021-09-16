@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/12/03 12:31:22 nia Exp $
+# $NetBSD: options.mk,v 1.6 2021/09/16 08:26:52 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ardour
 PKG_SUPPORTED_OPTIONS=	alsa jack
@@ -24,7 +24,6 @@ PLIST_VARS+=	jack
 .if !empty(PKG_OPTIONS:Mjack)
 PLIST.jack=	yes
 ARD_BACKENDS+=	jack
-BUILDLINK_API_DEPENDS.jack+=	jack>=0.125.0nb2
 .  include "../../audio/jack/buildlink3.mk"
 .endif
 
