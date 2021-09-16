@@ -1,12 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2019/08/08 19:53:48 brook Exp $
+# $NetBSD: Makefile,v 1.11 2021/09/16 04:16:47 mef Exp $
 
 R_PKGNAME=	e1071
-R_PKGVER=	1.7-2
-CATEGORIES=	math
+R_PKGVER=	1.7-8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+DEPENDS+=	R-proxy-[0-9]*:../../math/R-proxy
+
+# Packages suggested but not available: 'mlbench', 'slam'
+TEST_DEPENDS+=	R-randomForest-[0-9]*:../../math/R-randomForest
+TEST_DEPENDS+=	R-SparseM-[0-9]*:../../math/R-SparseM
+TEST_DEPENDS+=	R-xtable-[0-9]*:../../math/R-xtable
 
 USE_LANGUAGES=	c c++
 
