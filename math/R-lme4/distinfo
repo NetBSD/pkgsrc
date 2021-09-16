@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/07/31 19:49:55 brook Exp $
+$NetBSD: distinfo,v 1.4 2021/09/16 23:47:51 mef Exp $
 
-SHA1 (R/lme4_1.1-21.tar.gz) = 489052d369d8cfb8d69807f480e4be33eb64955a
-RMD160 (R/lme4_1.1-21.tar.gz) = eb6bc5ff9a2aebe1554dd839d7fef41a94d31806
-SHA512 (R/lme4_1.1-21.tar.gz) = 6aa61c032731b585e262f52d2051aa2e9c424ec6f797a0073d4b6fb254a2fea28daeadb24e2e0e3522bd9929a4ce50a9899444570ccbd156ddcea9063cac2d13
-Size (R/lme4_1.1-21.tar.gz) = 4124154 bytes
+SHA1 (R/lme4_1.1-27.1.tar.gz) = 4f2fc7666af41670f3de7dc88f943707cfc37a7c
+RMD160 (R/lme4_1.1-27.1.tar.gz) = 3b00bd9f3569ca6f40e3e735b7927b9b214256ae
+SHA512 (R/lme4_1.1-27.1.tar.gz) = 24af458973e4b6cbfb24c8add55438fb5f9b5338a9195f2ea87531fa3c783cd0a2f3a7591fe601af5dd9332b34b116da0f01043cb1d931ec502c88c944106df9
+Size (R/lme4_1.1-27.1.tar.gz) = 3311365 bytes
