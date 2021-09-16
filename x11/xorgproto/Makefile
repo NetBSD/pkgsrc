@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/09/16 08:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/16 08:37:53 wiz Exp $
 
 DISTNAME=		xorgproto-2021.5
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +13,8 @@ LICENSE=		mit
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c
+
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib
 
 # Force a consistent PLIST.
 CONFIGURE_ENV+=		MISC_MAN_SUFFIX="7"
