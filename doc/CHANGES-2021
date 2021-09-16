@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4741 2021/09/16 22:17:52 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4742 2021/09/16 22:41:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7380,3 +7380,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/clion-bin to 2021.2 [wiz 2021-09-16]
 	Updated math/R-geoR to 1.8.1 [mef 2021-09-16]
 	Updated math/R-gstat to 2.0.7 [mef 2021-09-16]
+	Updated math/R-gtools to 3.9.2 [mef 2021-09-16]
