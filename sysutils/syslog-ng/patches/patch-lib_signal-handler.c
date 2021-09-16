@@ -1,11 +1,12 @@
-$NetBSD: patch-lib_signal-handler.c,v 1.1 2019/03/15 10:04:00 bouyer Exp $
+$NetBSD: patch-lib_signal-handler.c,v 1.2 2021/09/16 09:22:47 wiz Exp $
+
 sigaction() is the old, compat syscall. On NetBSD call the up to date one.
 
---- lib/signal-handler.c.orig	2019-03-15 09:25:35.669181384 +0100
-+++ lib/signal-handler.c	2019-03-15 09:29:02.023178726 +0100
-@@ -45,6 +45,9 @@
+--- lib/signal-handler.c.orig	2021-06-09 18:47:52.838429049 +0200
++++ lib/signal-handler.c	2021-06-09 18:48:47.322106570 +0200
+@@ -84,12 +84,16 @@
  static int
- call_original_sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)
+ _original_sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)
  {
 +#ifdef __NetBSD__
 +  __libc_sigaction14(signum, act, oldact);
@@ -13,11 +14,10 @@ sigaction() is the old, compat syscall. On NetBSD call the up to date one.
    static int (*real_sa)(int, const struct sigaction *, struct sigaction *);
  
    if (real_sa == NULL)
-@@ -52,6 +55,7 @@
-       real_sa = dlsym(RTLD_NEXT, "sigaction");
-     }
+     real_sa = dlsym(RTLD_NEXT, "sigaction");
+ 
    return real_sa(signum, act, oldact);
 +#endif
  }
  
- static gboolean
+ static gint
