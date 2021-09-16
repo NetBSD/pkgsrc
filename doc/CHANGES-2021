@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4732 2021/09/16 09:24:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4733 2021/09/16 10:35:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7370,3 +7370,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed sysutils/syslog-ng-geoip successor sysutils/syslog-ng-geoip2 [wiz 2021-09-16]
 	Updated sysutils/syslog-ng to 3.34.1 [wiz 2021-09-16]
 	Added sysutils/syslog-ng-geoip2 version 3.34.1 [wiz 2021-09-16]
+	Updated devel/py-minidump to 0.0.20 [adam 2021-09-16]
+	Updated security/py-asyncssh to 2.7.2 [adam 2021-09-16]
