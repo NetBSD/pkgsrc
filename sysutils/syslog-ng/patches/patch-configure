@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.4 2021/09/16 09:22:47 wiz Exp $
+$NetBSD: patch-configure,v 1.5 2021/09/16 09:32:03 wiz Exp $
 
 Portability.
+https://github.com/syslog-ng/syslog-ng/pull/3786
 
 --- configure.orig	2021-09-10 11:02:58.000000000 +0000
 +++ configure
