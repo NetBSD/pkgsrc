@@ -4,3 +4,5 @@ Syslog-ng tries to fill the gaps original syslogd's were lacking:
 	* message integrity, message encryption
 	* portability
 	* better network forwarding
+
+This package contains the amqp module.
