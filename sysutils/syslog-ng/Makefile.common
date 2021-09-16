@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2021/09/16 09:22:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2021/09/16 12:02:12 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -48,7 +48,7 @@ CONFIGURE_ARGS.SunOS+=	ac_cv_func_inotify_init=no
 SUBST_CLASSES+=		unamepath
 SUBST_STAGE.unamepath=	post-configure
 SUBST_FILES.unamepath=	contrib/syslog2ng
-SUBST_VARS.unamepath=	UNAME
+SUBST_SED.unamepath=	-e s,/bin/uname,${UNAME},
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

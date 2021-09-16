@@ -1,10 +1,11 @@
-$NetBSD: patch-ac,v 1.3 2015/10/29 16:34:13 fhajny Exp $
+$NetBSD: patch-ac,v 1.4 2021/09/16 12:02:12 wiz Exp $
 
 # add NetBSD support and fix some paths
+https://github.com/syslog-ng/syslog-ng/pull/3786
 
---- contrib/syslog2ng.orig	2014-12-15 14:48:45.000000000 +0000
+--- contrib/syslog2ng.orig	2021-09-10 11:01:49.000000000 +0000
 +++ contrib/syslog2ng
-@@ -5,18 +5,24 @@
+@@ -5,7 +5,7 @@
  # Translator from syslog.conf to syslog-ng.conf
  # by Jonathan W. Marks <j-marks@uiuc.edu>
  #
@@ -13,10 +14,8 @@ $NetBSD: patch-ac,v 1.3 2015/10/29 16:34:13 fhajny Exp $
  
  BEGIN {
  	# Handle the various platforms- determine proper log device
--	"/bin/uname -s" | getline sysname;
--	close("/bin/uname -s");
-+	"@UNAME@ -s" | getline sysname;
-+	close("@UNAME@ -s");
+@@ -13,10 +13,16 @@ BEGIN {
+ 	close("/bin/uname -s");
  	if (sysname == "SunOS") {
  		LOGDEVTYPE="sun-streams";
 +		LOGDEVPATH="/dev/log";
