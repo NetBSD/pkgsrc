@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/09/08 22:19:50 nia Exp $
+# $NetBSD: options.mk,v 1.2 2021/09/16 20:45:38 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -70,6 +70,8 @@ LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+.else
+CONFIGURE_ARGS+=	--with-branding=browser/branding/unofficial
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebrtc)
