@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/04/30 09:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2021/09/16 08:22:41 wiz Exp $
 
-DISTNAME=		xorgproto-2021.4
+DISTNAME=		xorgproto-2021.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
