@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21045 2021/09/15 11:24:32 adam Exp $
+$NetBSD: TODO,v 1.21046 2021/09/16 04:17:00 mef Exp $
 
 Suggested new packages
 ======================
@@ -392,7 +392,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-crayon-1.4.1
 	o R-deldir-0.2.10
 	o R-digest-0.6.27
-	o R-e1071-1.7.6
 	o R-effects-4.2.0
 	o R-emdbook-1.3.12
 	o R-energy-1.7.8
