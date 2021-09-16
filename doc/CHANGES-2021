@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4730 2021/09/16 08:39:15 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4731 2021/09/16 09:23:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7367,3 +7367,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xorgproto to 2021.5 [wiz 2021-09-16]
 	Updated x11/xorgproto to 2021.5nb1 [wiz 2021-09-16]
 	Updated x11/libXi to 1.8 [wiz 2021-09-16]
+	Removed sysutils/syslog-ng-geoip successor sysutils/syslog-ng-geoip2 [wiz 2021-09-16]
+	Updated sysutils/syslog-ng to 3.34.1 [wiz 2021-09-16]
