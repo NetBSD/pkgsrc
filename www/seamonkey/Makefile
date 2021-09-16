@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.238 2021/07/30 12:27:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.239 2021/09/16 14:59:32 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	5
-SM_VER=		2.53.6
+SM_VER=		2.53.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,7 +38,7 @@ CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=comm/suite
-CONFIGURE_ARGS+=	--enable-extensions=default,irc
+CONFIGURE_ARGS+=	--enable-extensions=default
 
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 #ALL_ENV+=		MOZ_APP_NAME=${PKGBASE}
@@ -127,9 +126,7 @@ post-install:
 	rm -rf ${WRKDIR}/${OBJDIR}/extensions
 	${INSTALL_DATA} ${WRKDIR}/seamonkey.desktop \
 		${DESTDIR}${PREFIX}/share/applications/seamonkey.desktop
-	${INSTALL_DATA} ${WRKSRC}/comm/suite/branding/seamonkey/default.png \
-		${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/seamonkey.png
-.for s in 16 48 64 128
+.for s in 16 22 24 32 48 64 128 256
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
 	${INSTALL_DATA} ${WRKSRC}/comm/suite/branding/seamonkey/default${s}.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/seamonkey.png
