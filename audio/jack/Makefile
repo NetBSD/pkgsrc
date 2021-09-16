@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/09/15 07:44:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2021/09/16 13:43:01 nia Exp $
 
 DISTNAME=	jack2-1.9.19
 PKGNAME=	${DISTNAME:S/jack2/jack/1}
@@ -29,6 +29,8 @@ PLIST_VARS+=	boomer oss
 .if ${OPSYS} == "SunOS"
 PLIST.boomer=	yes
 PLIST.oss=	yes
+# Wants POSIXy getgrnam_r(3)
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 .endif
 
 PLIST_VARS+=	sun
