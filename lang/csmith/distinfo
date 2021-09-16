@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/16 19:19:05 wiz Exp $
+
+SHA1 (csmith-2.3.0.tar.gz) = f307aaf99667044b173aba5f02bf033471f1a669
+RMD160 (csmith-2.3.0.tar.gz) = 6e4f191199e2e776c03ba4b58ea1466f8cf74e3c
+SHA512 (csmith-2.3.0.tar.gz) = abab6ace0fa6b1be248c3ffbac7069bcadbad7b7af5673660849c8bebf84de040afcf527b2fefbbcb68b9164a43e08684c147496fb2b25bbffef7495dba39041
+Size (csmith-2.3.0.tar.gz) = 637381 bytes
