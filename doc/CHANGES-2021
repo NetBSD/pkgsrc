@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4727 2021/09/16 04:17:00 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4728 2021/09/16 08:22:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7364,3 +7364,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/hamlib to 4.3.1 [gdt 2021-09-15]
 	Updated audio/py-music21 to 7.1.0 [gutteridge 2021-09-16]
 	Updated math/R-e1071 to 1.7.8 [mef 2021-09-16]
+	Updated x11/xorgproto to 2021.5 [wiz 2021-09-16]
