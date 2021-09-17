@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/22 13:10:18 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/17 13:17:19 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
@@ -2432,8 +2432,10 @@ go117/src/cmd/go/testdata/script/mod_get_incompatible.txt
 go117/src/cmd/go/testdata/script/mod_get_indirect.txt
 go117/src/cmd/go/testdata/script/mod_get_insecure_redirect.txt
 go117/src/cmd/go/testdata/script/mod_get_issue37438.txt
+go117/src/cmd/go/testdata/script/mod_get_issue47979.txt
 go117/src/cmd/go/testdata/script/mod_get_latest_pseudo.txt
 go117/src/cmd/go/testdata/script/mod_get_lazy_indirect.txt
+go117/src/cmd/go/testdata/script/mod_get_lazy_upgrade_lazy.txt
 go117/src/cmd/go/testdata/script/mod_get_local.txt
 go117/src/cmd/go/testdata/script/mod_get_main.txt
 go117/src/cmd/go/testdata/script/mod_get_major.txt
@@ -10003,6 +10005,9 @@ go117/test/fixedbugs/issue4748.go
 go117/test/fixedbugs/issue4752.go
 go117/test/fixedbugs/issue4776.go
 go117/test/fixedbugs/issue4785.go
+go117/test/fixedbugs/issue48088.dir/a.go
+go117/test/fixedbugs/issue48088.dir/b.go
+go117/test/fixedbugs/issue48088.go
 go117/test/fixedbugs/issue4813.go
 go117/test/fixedbugs/issue4847.go
 go117/test/fixedbugs/issue4879.dir/a.go
