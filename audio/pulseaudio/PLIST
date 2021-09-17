@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2021/09/17 06:47:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.40 2021/09/17 07:14:17 schmonz Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -153,7 +153,7 @@ man/man1/paplay.1
 man/man1/parec.1
 man/man1/parecord.1
 man/man1/pasuspender.1
-man/man1/pax11publish.1
+${PLIST.x11}man/man1/pax11publish.1
 man/man1/pulseaudio.1
 man/man1/start-pulseaudio-x11.1
 man/man5/default.pa.5
