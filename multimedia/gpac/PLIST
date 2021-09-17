@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/07/14 01:35:23 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/09/17 00:10:21 nia Exp $
 bin/MP4Box
 bin/MP4Client
 bin/gpac
@@ -95,12 +95,15 @@ include/gpac/version.h
 include/gpac/webvtt.h
 include/gpac/xml.h
 lib/gpac/gm_ft_font.${LIBEXT}
-${PLIST.oss}lib/gpac/gm_oss_audio.${LIBEXT}
-lib/gpac/gm_pulseaudio.${LIBEXT}
+${PLIST.alsa}lib/gpac/gm_alsa.${LIBEXT}
+${PLIST.jack}lib/gpac/gm_jack.${LIBEXT}
+${PLIST.pulseaudio}lib/gpac/gm_pulseaudio.${LIBEXT}
 lib/gpac/gm_validator.${LIBEXT}
 ${PLIST.x11}lib/gpac/gm_x11_out.${LIBEXT}
-lib/libgpac.10.1.0.${LIBEXT}
-lib/libgpac.10.${LIBEXT}
+${PLIST.darwin}lib/libgpac.10.1.0.${LIBEXT}
+${PLIST.darwin}lib/libgpac.10.${LIBEXT}
+${PLIST.notdarwin}lib/libgpac.${LIBEXT}.10.1.0
+${PLIST.notdarwin}lib/libgpac.${LIBEXT}.10
 lib/libgpac.${LIBEXT}
 lib/libgpac_static.a
 lib/pkgconfig/gpac.pc
@@ -108,6 +111,7 @@ man/man1/gpac-filters.1
 man/man1/gpac.1
 man/man1/mp4box.1
 man/man1/mp4client.1
+share/applications/gpac.desktop
 share/gpac/default.cfg
 share/gpac/gui/extensions/H2B2VS/H2B2VS.png
 share/gpac/gui/extensions/H2B2VS/h2b2vs.js
@@ -199,3 +203,4 @@ share/gpac/scripts/ttml-renderer.js
 share/gpac/scripts/webvtt-renderer.js
 share/gpac/shaders/fragment.glsl
 share/gpac/shaders/vertex.glsl
+share/pixmaps/gpac.png

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2021/07/30 12:27:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2021/09/17 00:10:21 nia Exp $
 
 DISTNAME=	gpac-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,7 +21,8 @@ CONFIGURE_ARGS+=	--extra-cflags="${CFLAGS}"
 CONFIGURE_ARGS+=	--extra-ldflags="${LDFLAGS}"
 CFLAGS+=		-I${BUILDLINK_PREFIX.faad2}/${BUILDLINK_INCDIRS.faad2}
 
-.include "options.mk"
+# malloc_usable_size()
+LDFLAGS.NetBSD+=	-ljemalloc
 
 # Pre-generate header and avoid git dependency.
 pre-build:
@@ -29,37 +30,33 @@ pre-build:
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	darwin notdarwin
 .if ${SHLIB_TYPE} == "dylib"
+PLIST.darwin=	yes
 PLIST_SUBST+=	LIBEXT=dylib
 post-install:
 	cd ${DESTDIR}${PREFIX} && find lib/gpac -name "*.dylib" | while read lib; do \
 		install_name_tool -id ${PREFIX}/$${lib} $${lib}; \
 	done
 .else
-PLIST_SUBST+=	LIBEXT=so
+PLIST.notdarwin=	yes
+PLIST_SUBST+=		LIBEXT=so
 .endif
 
+.include "options.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-# doesn't work yet
-#.include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/xmlrpc-c/buildlink3.mk"
-PLIST_VARS+=		oss
-.if ${OPSYS} != "Darwin"
-.include "../../mk/oss.buildlink3.mk"
-PLIST.oss=	yes
-.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
