@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4748 2021/09/17 13:17:32 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.4749 2021/09/17 14:26:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7388,3 +7388,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/apache24 to 2.4.49 [adam 2021-09-17]
 	Updated lang/go116 to 1.16.8 [bsiegert 2021-09-17]
 	Updated lang/go117 to 1.17.1 [bsiegert 2021-09-17]
+	Updated graphics/gd to 2.3.3 [adam 2021-09-17]
+	Updated www/py-flask-restful to 0.3.9 [adam 2021-09-17]
