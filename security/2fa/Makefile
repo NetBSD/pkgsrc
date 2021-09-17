@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2021/08/11 19:35:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2021/09/17 13:52:50 bsiegert Exp $
 
 DISTNAME=	2fa-1.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rsc/}
 GITHUB_TAG=	v1.2.0
