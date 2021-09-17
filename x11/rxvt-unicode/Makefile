@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/05/28 05:24:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.66 2021/09/17 10:20:04 nia Exp $
 
 DISTNAME=	rxvt-unicode-9.26
 CATEGORIES=	x11
@@ -35,5 +35,6 @@ post-install:
 .include "options.mk"
 
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
