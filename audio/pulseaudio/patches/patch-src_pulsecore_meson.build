@@ -1,0 +1,19 @@
+$NetBSD: patch-src_pulsecore_meson.build,v 1.1 2021/09/17 06:47:30 schmonz Exp $
+
+Avoid selecting whatever this is on macOS ARM (it gives assembler
+errors).
+
+--- src/pulsecore/meson.build.orig	2021-07-27 20:02:27.000000000 +0000
++++ src/pulsecore/meson.build
+@@ -175,8 +175,10 @@ simd = import('unstable-simd')
+ simd_variants = [
+   { 'mmx' : ['remap_mmx.c', 'svolume_mmx.c'] },
+   { 'sse' : ['remap_sse.c', 'sconv_sse.c', 'svolume_sse.c'] },
+-  { 'neon' : ['remap_neon.c', 'sconv_neon.c', 'mix_neon.c'] },
+ ]
++if host_machine.system() != 'darwin'
++  simd_variants.append({ 'neon' : ['remap_neon.c', 'sconv_neon.c', 'mix_neon.c'] })
++endif
+ 
+ libpulsecore_simd_lib = []
+ 

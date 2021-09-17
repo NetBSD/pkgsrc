@@ -1,0 +1,14 @@
+$NetBSD: patch-src_meson.build,v 1.1 2021/09/17 06:47:30 schmonz Exp $
+
+Add missing source file in the non-Windows case. Needed for macOS.
+
+--- src/meson.build.orig	2021-07-27 20:02:27.000000000 +0000
++++ src/meson.build
+@@ -182,6 +182,7 @@ if host_machine.system() == 'windows'
+ else
+   libpulsecommon_sources += [
+     'pulsecore/mutex-posix.c',
++    'pulsecore/poll-posix.c',
+     'pulsecore/semaphore-posix.c',
+     'pulsecore/thread-posix.c'
+   ]
