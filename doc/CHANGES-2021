@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4751 2021/09/17 20:08:41 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4752 2021/09/17 20:58:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7393,3 +7393,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/webkit-gtk to 2.32.4 [leot 2021-09-17]
 	Updated lang/nodejs12 to 12.22.6 [adam 2021-09-17]
 	Updated lang/nodejs to 14.17.6 [adam 2021-09-17]
+	Updated sysutils/macchina to 1.1.6 [pin 2021-09-17]
