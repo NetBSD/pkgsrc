@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4746 2021/09/17 12:52:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4747 2021/09/17 12:56:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7386,3 +7386,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/syslog-ng-snmp version 3.34.1 [wiz 2021-09-17]
 	Updated net/qbittorrent to 4.3.8 [adam 2021-09-17]
 	Updated www/apache24 to 2.4.49 [adam 2021-09-17]
+	Updated lang/go116 to 1.16.8 [bsiegert 2021-09-17]
