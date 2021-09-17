@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/09/11 16:33:11 nia Exp $
+# $NetBSD: Makefile,v 1.54 2021/09/17 06:40:39 nia Exp $
 
 DISTNAME=	Ardour-6.9.0
 PKGNAME=	${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 # currently, distfiles must be downloaded by hand from ardour.org
 # and uploaded using `make upload-distfiles`.
 # there is no canonical URL, only https://community.ardour.org/srctar
-MASTER_SITES=	#
+MASTER_SITES=	https://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
