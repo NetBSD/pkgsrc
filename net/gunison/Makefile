@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/08/11 19:35:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/17 13:52:49 bsiegert Exp $
 
 DISTNAME=	gunison-0.1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vfaronov/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
