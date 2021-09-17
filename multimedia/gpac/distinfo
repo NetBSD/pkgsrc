@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.18 2021/07/14 01:35:23 schmonz Exp $
+$NetBSD: distinfo,v 1.19 2021/09/17 00:10:21 nia Exp $
 
 SHA1 (gpac-1.0.1.tar.gz) = ceda4a9ffc2fb51958fa292b432d1f0f9a457a60
 RMD160 (gpac-1.0.1.tar.gz) = 1e19dba1a2770268f64947f6ba34fb458028764f
 SHA512 (gpac-1.0.1.tar.gz) = 533371d59e72250bef315be03ec3437cd66782d0fb6bdb6486a6f4d57d06a6a7deff1b31fe8bfd360be1d1c848b33b5d25e7268f56f27f8e92cbcb7da1aba82b
 Size (gpac-1.0.1.tar.gz) = 10352926 bytes
-SHA1 (patch-Makefile) = 4fa2a8034ef1e01bc3c716f8b3b60be976e620f1
+SHA1 (patch-Makefile) = 1478bc37c42f8e62dbf44e9dfe2fa988ef68e0b5
 SHA1 (patch-configure) = b76d24b134b7e10c613411f08d8374f0e0202599
+SHA1 (patch-include_gpac_Remotery.h) = 0a8775a6cb7b16e2c5c7b6018c940bf9a049cc31
+SHA1 (patch-src_quickjs_cutils.h) = df7662578bf2c727da43dce91d94bc380f6da84d
+SHA1 (patch-src_quickjs_quickjs.c) = 276e3d2dfa51a64bf99795b294bb7e16405a9627
+SHA1 (patch-src_utils_Remotery.c) = dfd01780211bcccfc574c572690241c91d941ce0
+SHA1 (patch-src_utils_os__config__init.c) = 99e339d969e319a0a29fc8b366f6335c19ca4c50
