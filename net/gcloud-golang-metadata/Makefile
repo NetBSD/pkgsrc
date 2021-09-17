@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2021/08/11 19:35:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2021/09/17 13:52:47 bsiegert Exp $
 #
 
 DISTNAME=		gcloud-golang
 PKGNAME=		gcloud-golang-metadata-20150310
-PKGREVISION=		40
+PKGREVISION=		41
 GITHUB_PROJECT=		${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=GoogleCloudPlatform/}
