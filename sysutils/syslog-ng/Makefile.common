@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.20 2021/09/16 12:02:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2021/09/17 09:39:54 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
-# used by sysutils/syslog-ng/Makefile.module
+# used by sysutils/syslog-ng/module.mk
 
 DISTNAME=	syslog-ng-3.34.1
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=syslog-ng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.syslog-ng.com/
-COMMENT=	Highly portable log management solution
+COMMENT?=	Highly portable log management solution
 LICENSE=	gnu-gpl-v2
 
 GITHUB_RELEASE=	${DISTNAME}
@@ -24,6 +24,7 @@ USE_FEATURES+=	strnlen
 
 CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 
+CONFIGURE_ARGS+=	--disable-afsnmp
 CONFIGURE_ARGS+=	--disable-amqp
 CONFIGURE_ARGS+=	--disable-http
 CONFIGURE_ARGS+=	--disable-ipv6
