@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/05/14 10:55:34 nia Exp $
+# $NetBSD: Makefile,v 1.44 2021/09/17 10:27:34 nia Exp $
 
 DISTNAME=	qvwm-1.1.12
 CATEGORIES=	wm
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex
 USE_LANGUAGES=	c c++03
+
+LIBS.SunOS+=	-lICE -lSM
 
 # Avoid embedding relative paths into the binary.
 CONFIGURE_ENV+=		ac_cv_path_PATH_RM=${RM}
