@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/17 09:41:44 wiz Exp $
+lib/syslog-ng/libafsnmp.la
