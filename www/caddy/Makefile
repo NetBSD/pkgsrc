@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2021/08/11 19:35:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2021/09/17 13:52:51 bsiegert Exp $
 
 DISTNAME=	caddy-2.4.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=caddyserver/}
