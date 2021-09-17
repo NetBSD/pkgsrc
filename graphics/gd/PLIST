@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/03/23 07:10:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/09/17 14:24:23 adam Exp $
 bin/annotate
 bin/bdftogd
 bin/gd2copypal
@@ -11,7 +11,6 @@ bin/giftogd2
 bin/pngtogd
 bin/pngtogd2
 bin/webpng
-include/entities.h
 include/gd.h
 include/gd_color_map.h
 include/gd_errors.h
