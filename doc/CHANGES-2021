@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4752 2021/09/17 20:58:32 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4753 2021/09/17 21:15:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7394,3 +7394,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs12 to 12.22.6 [adam 2021-09-17]
 	Updated lang/nodejs to 14.17.6 [adam 2021-09-17]
 	Updated sysutils/macchina to 1.1.6 [pin 2021-09-17]
+	Updated net/dnsmasq to 2.86 [adam 2021-09-17]
+	Updated textproc/py-phonenumbers to 8.12.31 [adam 2021-09-17]
