@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2021/06/24 09:29:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.44 2021/09/17 20:08:23 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs8/Makefile
 # used by lang/nodejs10/Makefile
@@ -22,7 +22,8 @@ GCC_REQD+=		4.9.4
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--shared-cares
+# Needs ares_nameser.h which is not installed by libcares
+#CONFIGURE_ARGS+=	--shared-cares
 CONFIGURE_ARGS+=	--shared-libuv
 CONFIGURE_ARGS+=	--shared-zlib
 CONFIGURE_ARGS+=	--without-npm
@@ -85,5 +86,5 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.41
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../net/libcares/buildlink3.mk"
+#.include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
