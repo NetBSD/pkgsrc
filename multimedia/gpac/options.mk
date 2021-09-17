@@ -1,10 +1,44 @@
-# $NetBSD: options.mk,v 1.3 2020/09/19 03:38:07 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2021/09/17 00:10:21 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gpac
-PKG_SUPPORTED_OPTIONS=	x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gpac
+PKG_SUPPORTED_OPTIONS=		alsa jack pulseaudio x11
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS=		alsa x11
+.else
+PKG_SUGGESTED_OPTIONS=		x11
+.endif
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		alsa
+.if !empty(PKG_OPTIONS:Malsa)
+PLIST.alsa=		yes
+CONFIGURE_ARGS+=	--enable-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+PLIST_VARS+=		jack
+.if !empty(PKG_OPTIONS:Mjack)
+PLIST.jack=		yes
+CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-jack
+.endif
+
+PLIST_VARS+=		pulseaudio
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+PLIST.pulseaudio=	yes
+CONFIGURE_ARGS+=	--enable-pulseaudio
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pulseaudio
+.endif
 
 PLIST_VARS+=		x11
 .if !empty(PKG_OPTIONS:Mx11)
