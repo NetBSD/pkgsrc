@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4744 2021/09/16 23:48:02 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4745 2021/09/17 09:42:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7383,3 +7383,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-gtools to 3.9.2 [mef 2021-09-16]
 	Updated math/R-intervals to 0.15.2 [mef 2021-09-16]
 	Updated math/R-lme4 to 1.1.27.1 [mef 2021-09-16]
+	Added sysutils/syslog-ng-snmp version 3.34.1 [wiz 2021-09-17]
