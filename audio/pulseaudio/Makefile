@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2021/08/26 13:20:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.165 2021/09/17 06:47:29 schmonz Exp $
 
 DISTNAME=	pulseaudio-15.0
 CATEGORIES=	audio
@@ -75,7 +75,13 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
 # Version number in patch-configure.ac.must be changed too.
 PLIST_SUBST+=		PULSELIBVER=15.0
-PLIST_VARS+=		alsa bonjour coreaudio evdev oss
+PLIST_VARS+=		alsa evdev oss
+
+.if ${SHLIB_TYPE} == "dylib"
+PLIST_SUBST+=		SOEXT=dylib
+.else
+PLIST_SUBST+=		SOEXT=so
+.endif
 
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux"
@@ -93,10 +99,7 @@ CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -DBSD_COMP
 .  if ${OS_VERSION} == "5.11"
 PLIST.oss=		yes
 .  endif
-.elif ${OPSYS} == "Darwin"
-PLIST.bonjour=		yes
-PLIST.coreaudio=	yes
-.else
+.elif ${OPSYS} != "Darwin"
 PLIST.oss=		yes
 .endif
 
