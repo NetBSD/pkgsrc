@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/18 23:05:34 mef Exp $
+
+SHA1 (R/broom_0.7.9.tar.gz) = c9e6286f1c551e9b27e241815451d073ea6135c8
+RMD160 (R/broom_0.7.9.tar.gz) = ed9a085278ec91a2cea78f57f7d5577c270568d0
+SHA512 (R/broom_0.7.9.tar.gz) = 3346882452c311ef61a313a0311d5e30d65dafb8a27622d6bbdfe413e71087fb129999326931c98ffa6ddd5046ae5b2ac609622f31c3ab205ccfda4eac8c803e
+Size (R/broom_0.7.9.tar.gz) = 631606 bytes
