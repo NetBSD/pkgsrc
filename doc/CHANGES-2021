@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4778 2021/09/18 13:50:55 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4779 2021/09/18 13:53:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7421,3 +7421,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/R-knitr to 1.34 [mef 2021-09-18]
 	Updated archivers/ruby-ffi-libarchive to 1.1.3 [taca 2021-09-18]
 	Updated converters/ruby-unf_ext to 0.0.8 [taca 2021-09-18]
+	Updated devel/p5-Proc-Background to 1.22 [wen 2021-09-18]
