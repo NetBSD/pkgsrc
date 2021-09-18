@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2021/09/18 02:25:23 mef Exp $
+# $NetBSD: Makefile,v 1.517 2021/09/18 02:37:18 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -41,7 +41,6 @@ SUBDIR+=	R-carData
 SUBDIR+=	R-chron
 SUBDIR+=	R-circular
 SUBDIR+=	R-classInt
-SUBDIR+=	R-clim.pact
 SUBDIR+=	R-coda
 SUBDIR+=	R-combinat
 SUBDIR+=	R-compositions
