@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4774 2021/09/18 12:49:09 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4775 2021/09/18 13:19:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7417,3 +7417,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-statmod to 1.4.36 [mef 2021-09-18]
 	Updated math/R-stringdist to 0.9.8 [mef 2021-09-18]
 	Updated math/R-tensorA to 0.36.2 [mef 2021-09-18]
+	Updated devel/glib2 to 2.68.4nb1 [wiz 2021-09-18]
