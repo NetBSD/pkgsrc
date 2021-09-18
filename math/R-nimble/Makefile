@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/09/20 03:19:05 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/18 03:53:43 mef Exp $
 
 R_PKGNAME=	nimble
-R_PKGVER=	0.9.0
+R_PKGVER=	0.11.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MCMC, Particle Filtering, and Programmable Hierarchical Modeling
@@ -10,6 +10,8 @@ LICENSE=	modified-bsd OR gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-R6-[0-9]*:../../devel/R-R6
 DEPENDS+=	R-coda>=0.19.3:../../math/R-coda
 DEPENDS+=	R-igraph>=1.2.4.1:../../math/R-igraph
+
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c++ fortran
 
