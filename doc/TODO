@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21062 2021/09/18 08:10:09 nia Exp $
+$NetBSD: TODO,v 1.21063 2021/09/18 11:30:44 mef Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-rgdal-1.5.23
 	o R-rgeos-0.5.5
 	o R-robustbase-0.93.7
-	o R-rstudioapi-0.13
 	o R-sandwich-3.0.0
 	o R-scales-1.1.1
 	o R-spatstat-2.1.0
