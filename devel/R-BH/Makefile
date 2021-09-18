@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:37 brook Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/18 14:04:48 mef Exp $
 
 R_PKGNAME=	BH
-R_PKGVER=	1.69.0-1
+R_PKGVER=	1.75.0-0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
