@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/08/13 13:01:51 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/09/18 07:34:59 nia Exp $
 
-SHA1 (wmmixer-1.8.tar.gz) = d93af3581e6c39a33b890259850567a6fd904847
-RMD160 (wmmixer-1.8.tar.gz) = a0089a8a9c4d98295578035b035f1a88506072da
-SHA512 (wmmixer-1.8.tar.gz) = 3b5c7f27da6ed2cbf8d06c431584186799d17e72db663db6ffc488f777c31de0b13fcc3f665099925efab036a14e70da4bbbabaff6ffc12280698e91f555e276
-Size (wmmixer-1.8.tar.gz) = 102723 bytes
+SHA1 (wmmixer-1.9.tar.gz) = 7bd6d8dd25b020622be64e04ebafb0f894bf902f
+RMD160 (wmmixer-1.9.tar.gz) = 532c1feb66261cc35b73b62bc6801173f652887d
+SHA512 (wmmixer-1.9.tar.gz) = 3e1ac2185daad89f8e51ca45c8b96aa3d9791cf9889484fc9873d1111534cf457cfd598296b01a0fa67b2e2c4f4ecea2b9ed3890ef416548342187a1f5dad44d
+Size (wmmixer-1.9.tar.gz) = 103603 bytes
 SHA1 (patch-mixctl.cc) = 6301b07ea04d213c1c1ff6677afcf273d85328ce
