@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4761 2021/09/18 05:06:17 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4762 2021/09/18 05:30:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7404,3 +7404,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed math/R-clim.pact (Removed from the CRAN) [mef 2021-09-18]
 	Updated math/R-nimble to 0.11.1 [mef 2021-09-18]
 	Updated math/nlopt to 2.6.2 [mef 2021-09-18]
+	Updated math/R-pixmap to 0.4.12 [mef 2021-09-18]
