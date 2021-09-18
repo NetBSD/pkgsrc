@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2021/08/17 14:37:59 mef Exp $
+# $NetBSD: Makefile,v 1.12 2021/09/18 14:23:00 mef Exp $
 
 R_PKGNAME=	xfun
-R_PKGVER=	0.25
+R_PKGVER=	0.26
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Miscellaneous functions by 'Yihui Xie'
 LICENSE=	mit
 
+# Package suggested but not available: 'rhub'
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-tinytex>=0.31:../../print/R-tinytex
