@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2021/06/21 14:21:28 martin Exp $
+$NetBSD: distinfo,v 1.29 2021/09/18 22:10:22 jklos Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -104,6 +104,7 @@ SHA1 (patch-netwerk_sctp_src_netinet6_sctp6__usrreq.c) = 8608c2745a28a35c9e47288
 SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = d381ac61f78616213565357d4e95c5bdc1c7c444
 SHA1 (patch-netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = b7a6d9a6ed7fd41b50b2330665e1bf30cafdb367
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 78c6687be8abc3a4cab33206588057ad688bf20d
+SHA1 (patch-python_mozbuild_mozbuild_configure_constants.py) = 95a4e09fa0f792a380b96443ba673b3e5bb4d008
 SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 27e90fdfd5587f670958d832cd56107740b226ee
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = 4e5dc7cf11ea3d48cca86b5d21158d676ebd8957
