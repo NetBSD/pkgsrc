@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4795 2021/09/18 15:36:29 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4796 2021/09/18 15:42:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7438,3 +7438,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ffi to 1.15.4 [taca 2021-09-18]
 	Updated devel/ruby-gettext to 3.4.1 [taca 2021-09-18]
 	Updated devel/ruby-test-unit to 3.4.7 [taca 2021-09-18]
+	Updated finance/ruby-activemerchant to 1.123.0 [taca 2021-09-18]
