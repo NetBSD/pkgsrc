@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/07/31 19:51:24 brook Exp $
+$NetBSD: distinfo,v 1.9 2021/09/18 01:19:18 mef Exp $
 
-SHA1 (R/lmm_1.2.tar.gz) = fc46191a9f1226f63bfb272af793a006a2a5c60c
-RMD160 (R/lmm_1.2.tar.gz) = b0bca18a409b68036b1409a7954f04104b5d417f
-SHA512 (R/lmm_1.2.tar.gz) = 72444cc69cd755b7ef96001f4e651d8cd0ee6d0532bc46d9a818c3b0823649c2a5842579c17acdc5b9060da8b993cce9f16b719155346693b99d9c9b9a65f675
-Size (R/lmm_1.2.tar.gz) = 491954 bytes
+SHA1 (R/lmm_1.3.tar.gz) = 5ff447234804c122c4a355859f469a9feeabfb8c
+RMD160 (R/lmm_1.3.tar.gz) = 496ceec67553972b1de709a2b21ffd97ead2b72f
+SHA512 (R/lmm_1.3.tar.gz) = 3631138c74fa339408d035ad19421678206565e956b73bb6bca35b68e4178161af469a82907e1d89434a328a2c078590bac9c894f5eff87c2f191c3c60ebd2de
+Size (R/lmm_1.3.tar.gz) = 492975 bytes
