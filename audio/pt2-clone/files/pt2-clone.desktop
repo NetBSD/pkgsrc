@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ProTracker 2
+Comment=ProTracker 2.3D clone
+Comment[fr]=Clone de ProTracker 2.3D
+Exec=pt2-clone %F
+Icon=pt2-clone
+Terminal=false
+Type=Application
+Categories=AudioVideo;AudioVideoEditing;
+Keywords=tracker;amiga;
+MimeType=audio/mod;
