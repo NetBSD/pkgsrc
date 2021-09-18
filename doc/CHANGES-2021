@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4757 2021/09/18 01:59:28 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4758 2021/09/18 02:25:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7400,3 +7400,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-lmm to 1.3 [mef 2021-09-18]
 	Added math/R-tmvnsim version 1.0.2 [mef 2021-09-18]
 	Updated math/R-mnormt to 2.0.2 [mef 2021-09-18]
+	Added math/R-ncdf4 version 1.17 [mef 2021-09-18]
