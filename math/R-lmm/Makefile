@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/08/08 19:53:51 brook Exp $
+# $NetBSD: Makefile,v 1.16 2021/09/18 01:19:18 mef Exp $
 
 R_PKGNAME=	lmm
-R_PKGVER=	1.2
-CATEGORIES=	math
+R_PKGVER=	1.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linear mixed models
