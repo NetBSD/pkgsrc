@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/06 00:52:22 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/18 08:07:52 nia Exp $
 bin/pt2-clone
+man/man1/pt2-clone.1
+share/applications/pt2-clone.desktop
 share/examples/pt2-clone/protracker.ini
+share/pixmaps/pt2-clone.png
