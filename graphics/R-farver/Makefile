@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/07/31 20:31:27 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/18 14:48:44 mef Exp $
 
 R_PKGNAME=	farver
-R_PKGVER=	2.0.3
+R_PKGVER=	2.1.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
