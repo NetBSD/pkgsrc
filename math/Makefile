@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.514 2021/09/15 12:35:20 mef Exp $
+# $NetBSD: Makefile,v 1.515 2021/09/18 01:46:26 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -116,6 +116,7 @@ SUBDIR+=	R-tensor
 SUBDIR+=	R-tensorA
 SUBDIR+=	R-tibble
 SUBDIR+=	R-tidyr
+SUBDIR+=	R-tmvnsim
 SUBDIR+=	R-units
 SUBDIR+=	R-urca
 SUBDIR+=	R-vctrs
