@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:28:23 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/09/18 11:43:01 mef Exp $
 
-SHA1 (R/sandwich_2.5-1.tar.gz) = acaf9914ed1a0674033e701b10a4e4733a5b4634
-RMD160 (R/sandwich_2.5-1.tar.gz) = ccdc868f90c92016d5b1baf5e76a107a8fc2082c
-SHA512 (R/sandwich_2.5-1.tar.gz) = 381a4f3f1252e61796744a0d15ce1a118e4a0d4d06325294617fee77e4080e37a0832794d03e1478b7a897058693a50a5c0e59591f445517590f7772c7fd7d04
-Size (R/sandwich_2.5-1.tar.gz) = 1349536 bytes
+SHA1 (R/sandwich_3.0-1.tar.gz) = 243830dd567c18b2d1fc46069350ffbf40ebb04d
+RMD160 (R/sandwich_3.0-1.tar.gz) = fc11d686429ae4a6caa9c1427edb5e1302caff50
+SHA512 (R/sandwich_3.0-1.tar.gz) = fa2117c0d357aea85bab3468789739e218d87552535a8c5aaabb5c1191883304dfd8ac5109d7104ab15fd4535c5f1f4de88a5779ad1e573efc73b0ae567c6769
+Size (R/sandwich_3.0-1.tar.gz) = 1482805 bytes
