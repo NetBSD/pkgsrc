@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/09/03 01:53:52 bacon Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/09/18 00:42:39 bacon Exp $
 include/biolibc/bed.h
 include/biolibc/biolibc.h
 include/biolibc/biostring.h
