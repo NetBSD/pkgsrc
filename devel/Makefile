@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3496 2021/09/03 12:05:17 gdt Exp $
+# $NetBSD: Makefile,v 1.3497 2021/09/18 06:18:47 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -47,6 +47,7 @@ SUBDIR+=	R-filelock
 SUBDIR+=	R-fs
 SUBDIR+=	R-gert
 SUBDIR+=	R-git2r
+SUBDIR+=	R-globals
 SUBDIR+=	R-glue
 SUBDIR+=	R-ini
 SUBDIR+=	R-inline
