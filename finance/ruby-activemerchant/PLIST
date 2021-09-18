@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/06/03 14:39:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/09/18 15:42:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -127,6 +127,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/migs.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/migs/migs_codes.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/modern_payments.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/modern_payments_cim.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/moka.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/monei.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/moneris.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/money_movers.rb
@@ -150,12 +151,14 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/orbital/orbital_soft_descript
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pac_net_raven.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pagarme.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pago_facil.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_arc.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_conex.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_gate_xml.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_hub.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_junction.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_junction_v2.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_secure.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pay_trace.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paybox_direct.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payeezy.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payex.rb
@@ -177,6 +180,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_ca.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_digital_goods.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_express.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_express_common.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paysafe.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payscout.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paystation.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payu_in.rb
@@ -244,6 +248,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/network_tokenization_credit_card.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/payment_token.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/rails.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/response.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/three_d_secure_eci_mapper.rb
 ${GEM_LIBDIR}/lib/active_merchant/connection.rb
 ${GEM_LIBDIR}/lib/active_merchant/country.rb
 ${GEM_LIBDIR}/lib/active_merchant/empty.rb
