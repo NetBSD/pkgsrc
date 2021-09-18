@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4780 2021/09/18 13:53:49 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4781 2021/09/18 13:55:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7423,3 +7423,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/ruby-unf_ext to 0.0.8 [taca 2021-09-18]
 	Updated devel/p5-Proc-Background to 1.22 [wen 2021-09-18]
 	Updated databases/ruby-sequel to 5.48.0 [taca 2021-09-18]
+	Updated devel/ruby-cucumber-expressions to 12.1.3 [taca 2021-09-18]
