@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21068 2021/09/18 12:49:09 mef Exp $
+$NetBSD: TODO,v 1.21069 2021/09/18 13:48:54 taca Exp $
 
 Suggested new packages
 ======================
@@ -1902,7 +1902,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o sudo-1.9.8
+	o sudo-1.9.8p1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o sup-0.4
 	o superlu-5.2.2
