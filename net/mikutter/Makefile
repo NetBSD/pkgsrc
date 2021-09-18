@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.200 2021/09/13 15:25:07 tsutsui Exp $
+# $NetBSD: Makefile,v 1.201 2021/09/18 15:30:54 tsutsui Exp $
 #
 
 DISTNAME=	mikutter-4.1.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
@@ -18,7 +19,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.1.2:../../devel/ruby-delayer
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.2.0:../../devel/ruby-delayer-deferred
 DEPENDS+=	${RUBY_PKGPREFIX}-diva>=1.0.2:../../devel/ruby-diva
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.3.5:../../devel/ruby-gettext
-DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=3.4.1:../../x11/ruby-gtk2
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.2:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta-[0-9]*:../../databases/ruby-moneta
@@ -48,5 +48,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
+.include "../../x11/ruby-gtk2/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
