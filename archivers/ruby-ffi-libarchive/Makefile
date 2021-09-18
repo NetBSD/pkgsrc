@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/02/13 10:13:23 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/18 13:48:01 taca Exp $
 
-DISTNAME=	ffi-libarchive-1.0.17
+DISTNAME=	ffi-libarchive-1.1.3
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
