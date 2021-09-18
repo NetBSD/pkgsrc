@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/07/31 20:31:28 brook Exp $
+$NetBSD: distinfo,v 1.8 2021/09/18 12:25:31 mef Exp $
 
-SHA1 (R/splancs_2.01-40.tar.gz) = 78ae26c41c00753ab192e4163f5b20b7b2ed2acd
-RMD160 (R/splancs_2.01-40.tar.gz) = 4df5d4fc0e3cc38188155d36e22cbecf0bc3b587
-SHA512 (R/splancs_2.01-40.tar.gz) = 0157a1031b8dc8caa2bea7e2d6697aef6b6ab35f69ca1d0cbe7ea21968f7980e19d287461216938a92eac019f97db972ae5af67392ab152017a2a69182ace495
-Size (R/splancs_2.01-40.tar.gz) = 105583 bytes
+SHA1 (R/splancs_2.01-42.tar.gz) = 6c8097567738809bc77aa3bc2a4a2442489b40bf
+RMD160 (R/splancs_2.01-42.tar.gz) = 33d46d9d919876720923f9835fbf3d2f1722b5b4
+SHA512 (R/splancs_2.01-42.tar.gz) = 0281c6c99ee49b649b65f019886b5f6664738fd1f72ec148412ae7bf70bae87048a2e95046817712ec6c2a395fefaf8ccfc5a2a07972444020c7c591c706bc99
+Size (R/splancs_2.01-42.tar.gz) = 105983 bytes
