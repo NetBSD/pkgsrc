@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4788 2021/09/18 14:23:12 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4789 2021/09/18 14:27:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7431,3 +7431,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-units to 0.7.2 [mef 2021-09-18]
 	Updated misc/R-pillar to 1.6.2 [mef 2021-09-18]
 	Updated devel/R-xfun to 0.26 [mef 2021-09-18]
+	Updated devel/R-waldo to 0.3.1 [mef 2021-09-18]
