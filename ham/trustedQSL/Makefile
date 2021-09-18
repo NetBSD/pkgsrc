@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/06/24 00:09:06 gdt Exp $
+# $NetBSD: Makefile,v 1.56 2021/09/18 15:03:04 gdt Exp $
 
 DISTNAME=		tqsl-2.5.7
 CATEGORIES=		ham
@@ -25,21 +25,13 @@ USE_CMAKE=		yes
 # cause (aside from having two pixman versions installed) is ad hoc -L
 # usage in Makefile.am, without matching -R.
 
-# Filed upstream by email 20200314.
-# remove the string $(LIB_SUFFIX), tested with NetBSD at least
-SUBST_CLASSES+=			lib-suffix
-SUBST_MESSAGE.lib-suffix=	Removing $$(LIB_SUFFIX) from src/CMakeLists.txt
-SUBST_STAGE.lib-suffix=		pre-configure
-SUBST_FILES.lib-suffix=		src/CMakeLists.txt
-SUBST_SED.lib-suffix=		-e s/\$${\LIB_SUFFIX\}//
-
 CHECK_PORTABILITY_SKIP+=	osx_createdmg.sh
 
 do-configure:
 	(cd ${WRKSRC} ; \
 	cmake \
 	-DBDB_PREFIX=${PREFIX} \
-	-DBDB_INCLUDE_DIR=${PREFIX}/include \
+	-DBDB_INCLUDE_DIR=${PREFIX}/include/db5 \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
