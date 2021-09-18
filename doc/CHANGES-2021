@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4766 2021/09/18 09:01:19 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4767 2021/09/18 09:02:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7409,3 +7409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/wmmixer to 1.9 [nia 2021-09-18]
 	Updated audio/pt2-clone to 1.34 [nia 2021-09-18]
 	Updated games/simgear to 2020.3.11 [nia 2021-09-18]
+	Updated games/flightgear to 2020.3.11 [nia 2021-09-18]
