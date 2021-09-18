@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4772 2021/09/18 12:31:42 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4773 2021/09/18 12:38:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7415,3 +7415,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-spacetime to 1.2.5 [mef 2021-09-18]
 	Updated math/R-splancs to 2.01.42 [mef 2021-09-18]
 	Updated math/R-statmod to 1.4.36 [mef 2021-09-18]
+	Updated math/R-stringdist to 0.9.8 [mef 2021-09-18]
