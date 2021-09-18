@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/06/07 15:35:24 mef Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/18 14:19:07 mef Exp $
 
 R_PKGNAME=	pillar
-R_PKGVER=	1.6.1
+R_PKGVER=	1.6.2
 CATEGORIES=	misc
 
 MAINTAINER=	minskim@NetBSD.org

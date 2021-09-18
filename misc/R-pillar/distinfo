@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/06/06 23:37:31 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/09/18 14:19:07 mef Exp $
 
-SHA1 (R/pillar_1.6.1.tar.gz) = 0969f1ca7159cb00b623063faa50e9e421efcb1d
-RMD160 (R/pillar_1.6.1.tar.gz) = 82d54afb2728b0b26915421d726772564b2fad5e
-SHA512 (R/pillar_1.6.1.tar.gz) = f93ca2b1522f12621be241383ed589aadd1240d668d85d848413282c3c4dc5671bdef23dafeeb5613b6aa72ad9e0624289b8cec7cb1156fae25783baf16f2536
-Size (R/pillar_1.6.1.tar.gz) = 1111747 bytes
+SHA1 (R/pillar_1.6.2.tar.gz) = f394de5d215ce48fe7f5f192ea3a5d3437dad30e
+RMD160 (R/pillar_1.6.2.tar.gz) = 5b2644e5865e0de7d2b5760a8436df0b9e8fd3cc
+SHA512 (R/pillar_1.6.2.tar.gz) = 8c62cf4e3c22a944a4236e2cf64a851e251da960d3c8b74157d7292a408eb109cde2ae761eb5cf8fc93dc5884bbd1c15f4cc09c5dba943964111436033669af2
+Size (R/pillar_1.6.2.tar.gz) = 1130321 bytes
