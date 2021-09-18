@@ -1,7 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/28 07:33:38 wen Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/18 05:06:06 mef Exp $
 include/nlopt.f
 include/nlopt.h
 include/nlopt.hpp
-lib/libnlopt.la
+lib/cmake/nlopt/NLoptConfig.cmake
+lib/cmake/nlopt/NLoptConfigVersion.cmake
+lib/cmake/nlopt/NLoptLibraryDepends-release.cmake
+lib/cmake/nlopt/NLoptLibraryDepends.cmake
+lib/libnlopt.so
+lib/libnlopt.so.0
+lib/libnlopt.so.0.10.0
 lib/pkgconfig/nlopt.pc
 man/man3/nlopt.3
+man/man3/nlopt_minimize.3
+man/man3/nlopt_minimize_constrained.3
