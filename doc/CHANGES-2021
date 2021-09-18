@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4768 2021/09/18 11:30:44 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4769 2021/09/18 11:43:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7411,3 +7411,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/simgear to 2020.3.11 [nia 2021-09-18]
 	Updated games/flightgear to 2020.3.11 [nia 2021-09-18]
 	Updated math/R-rstudioapi to 0.13 [mef 2021-09-18]
+	Updated math/R-sandwich to 3.0.1 [mef 2021-09-18]
