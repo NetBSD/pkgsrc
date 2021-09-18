@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/02/13 10:13:23 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/09/18 13:48:01 taca Exp $
 
-SHA1 (ffi-libarchive-1.0.17.gem) = 81ee4b483afa4eaa54fa87ac10000710a59a4256
-RMD160 (ffi-libarchive-1.0.17.gem) = 8e248a4ccd6706e704562dd295cd8e33913d26c4
-SHA512 (ffi-libarchive-1.0.17.gem) = 2fe942f96dfc896f32eee3aff4aa8a2bffb554784e8d0e7bddbf9ac4fed06111104b75b2104d0266e4e643a3a62b13ada1d224182ff318f7922a859f2e8dc441
-Size (ffi-libarchive-1.0.17.gem) = 15872 bytes
+SHA1 (ffi-libarchive-1.1.3.gem) = 2e4faff345365a3e1deeaa9688d6aeab5e6244d6
+RMD160 (ffi-libarchive-1.1.3.gem) = 593d4b0e8057485cacf8d800f003f93c84c5e216
+SHA512 (ffi-libarchive-1.1.3.gem) = 3d504fef54d64f94a96452f49aef6be3639295a77ec1e9caeb9dccc03b0b5fc7ccbac08c0a55a0a3d8bf6ebab376bd3fb1a148ddbb040418f4f4fd6ca81ae2b5
+Size (ffi-libarchive-1.1.3.gem) = 16384 bytes
