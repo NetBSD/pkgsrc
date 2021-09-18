@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4754 2021/09/18 00:33:44 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.4755 2021/09/18 01:19:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7397,3 +7397,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dnsmasq to 2.86 [adam 2021-09-17]
 	Updated textproc/py-phonenumbers to 8.12.31 [adam 2021-09-17]
 	Updated devel/libxtend to 0.1.3.5 [bacon 2021-09-18]
+	Updated math/R-lmm to 1.3 [mef 2021-09-18]
