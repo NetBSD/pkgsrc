@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 20:55:25 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/18 15:04:56 mef Exp $
 
 R_PKGNAME=	colourpicker
-R_PKGVER=	1.0
+R_PKGVER=	1.1.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
