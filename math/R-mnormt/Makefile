@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2020/08/09 16:42:15 brook Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/18 01:59:15 mef Exp $
 
-CATEGORIES=	math R
+R_PKGNAME=	mnormt
+R_PKGVER=	2.0.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/mnormt/
 COMMENT=	Multivariate normal and t distributions
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-R_PKGNAME=	mnormt
-R_PKGVER=	1.5-6
+DEPENDS+=	R-tmvnsim-[0-9]*:../../math/R-tmvnsim
 
 USE_LANGUAGES+=	c fortran
 
