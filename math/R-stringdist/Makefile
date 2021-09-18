@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2020/02/10 14:21:00 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/18 12:38:42 mef Exp $
 
 R_PKGNAME=	stringdist
-R_PKGVER=	0.9.5.5
-CATEGORIES=	math
+R_PKGVER=	0.9.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Approximate String Matching and String Distance Functions
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c
+TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
