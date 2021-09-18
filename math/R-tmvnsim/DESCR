@@ -1,0 +1,10 @@
+Importance sampling from the truncated multivariate normal using the
+GHK (Geweke-Hajivassiliou-Keane) simulator. Unlike Gibbs sampling
+which can get stuck in one truncation sub-region depending on initial
+values, this package allows truncation based on disjoint regions that
+are created by truncation of absolute values. The GHK algorithm uses
+simple Cholesky transformation followed by recursive simulation of
+univariate truncated normals hence there are also no convergence
+issues. Importance sample is returned along with sampling weights,
+based on which, one can calculate integrals over truncated regions for
+multivariate normals.
