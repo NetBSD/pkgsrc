@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/09/08 10:44:19 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/09/18 14:27:43 mef Exp $
 
-SHA1 (R/waldo_0.3.0.tar.gz) = 32a62c08314e56812ef687e212f81579d09d35eb
-RMD160 (R/waldo_0.3.0.tar.gz) = ff32f0b67464f1b0d55b688c57922937df958dd3
-SHA512 (R/waldo_0.3.0.tar.gz) = 3c1cf01b1011eca1c84b1d567a27398db3c993e23a03a6909356d7203aa101defb053dd9991c4ef718d8ce4a64d525d516a1b31a610b2b0cd60ab4d6e4896548
-Size (R/waldo_0.3.0.tar.gz) = 33470 bytes
+SHA1 (R/waldo_0.3.1.tar.gz) = 90634a97e8a02136f5f986a283bdb29fbf92da8b
+RMD160 (R/waldo_0.3.1.tar.gz) = 0c235deb7d4ae75671cdb3eb6f9d857c475c5d83
+SHA512 (R/waldo_0.3.1.tar.gz) = 3655f92013f87c7a34c36bdeaba225c7f0dd7b31703b018191ab3b665f93c46ec1a4f37c8b904aa80c344ee9e10fb905ef75bda935a309e0bc14a44fa2ab418f
+Size (R/waldo_0.3.1.tar.gz) = 33728 bytes
