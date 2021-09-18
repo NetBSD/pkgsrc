@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/06/10 18:47:24 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/09/18 12:16:03 mef Exp $
 
 DISTNAME=	ipykernel-5.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
