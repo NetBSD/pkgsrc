@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/18 01:38:00 mef Exp $
+
+SHA1 (R/tmvnsim_1.0-2.tar.gz) = d4c17fa698adba67227c1015177892308c407568
+RMD160 (R/tmvnsim_1.0-2.tar.gz) = bb4c62b206f02d64ffbc894e47052a42c7fc3889
+SHA512 (R/tmvnsim_1.0-2.tar.gz) = c70ac65ad1e3e632d4a3ed5d2a72ecb20c9b303263eb5ee0b2f6cc74762155c28e359579e202e8fda373a1effd280bf640dbe603e4520104fe84039cf333aced
+Size (R/tmvnsim_1.0-2.tar.gz) = 6052 bytes
