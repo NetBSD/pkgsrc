@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 11:52:55 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/09/18 14:09:49 mef Exp $
 
-SHA1 (R/units_0.7-1.tar.gz) = 68e4a1cfb436b8b9cd59a0bb540861e3f68d0738
-RMD160 (R/units_0.7-1.tar.gz) = b92f981ff758c8521db4154f7154acc561953e27
-SHA512 (R/units_0.7-1.tar.gz) = 307678082a32212ee8fd15f33f64f32540512ee9473086501ecd5553719dd951b525325d57bb64e9695df67aeb45b57248121a7d53b48dd0367afa54bc6038a0
-Size (R/units_0.7-1.tar.gz) = 854699 bytes
+SHA1 (R/units_0.7-2.tar.gz) = a96e2461781d20d2d105865c4df2c52c41089a6b
+RMD160 (R/units_0.7-2.tar.gz) = b2184da0ba35c9d0ce38fa2cf72907fa6c7e52e8
+SHA512 (R/units_0.7-2.tar.gz) = 81881e633a0c6f70d5e0b8d2675773752a6a2d137909eb61f8734f6188b8d0ae48b5ee99341facddf8910ddf2d35cc38f4a2c33ab9d57b6ec39b9c925db650a1
+Size (R/units_0.7-2.tar.gz) = 855840 bytes
 SHA1 (patch-configure) = f57f2b7187678ba9f0973e2c90dd08d1fe4e752f
 SHA1 (patch-configure.ac) = 6f6dab407646bda4fc25abca4af1c730146a79be
