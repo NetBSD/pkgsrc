@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2021/08/12 14:58:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.90 2021/09/18 13:53:29 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -70,6 +70,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.46.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.47.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.48.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
