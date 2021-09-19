@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4805 2021/09/19 07:02:14 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4806 2021/09/19 07:32:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7446,3 +7446,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/PC6001VX to 3.8.1 [tsutsui 2021-09-19]
 	Updated comms/asterisk18 to 18.6.0 [jnemeth 2021-09-19]
 	Updated lang/elixir to 1.12.3 [nia 2021-09-19]
+	Updated games/freeciv-share to 2.6.5 [nia 2021-09-19]
+	Updated games/freeciv-client to 2.6.5 [nia 2021-09-19]
+	Updated games/freeciv-server to 2.6.5 [nia 2021-09-19]
