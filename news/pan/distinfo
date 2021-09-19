@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.36 2021/09/19 17:40:27 rhialto Exp $
+$NetBSD: distinfo,v 1.37 2021/09/19 18:32:44 rhialto Exp $
 
 SHA1 (pan-PAN_0_147.tar.bz2) = 7bd4b8cbf6ca95af6c3249363290ed7464404957
 RMD160 (pan-PAN_0_147.tar.bz2) = e313697c2e9d35c9352c8746f8ce4c4e13123405
 SHA512 (pan-PAN_0_147.tar.bz2) = 616aa53447b8d4390ce9e0f9747783512976578bc6fe2b9d4cd772de85e0aa253ecb95f630ef3947711a06ce479fc9df635e7c8ed9278bf9448947aed4cda2c0
 Size (pan-PAN_0_147.tar.bz2) = 1794085 bytes
+SHA1 (patch-pan_general_text-match.cc) = eaf15f3323f693d094892d3283437ad5ac3c9682
+SHA1 (patch-pan_general_text-match.h) = 6ac5a68a8b1cb472df517a8df53eee5a79e4c73c
+SHA1 (patch-pan_gui_group-prefs-dialog.cc) = eb3461aff1c51f8284d4a342a76af77e69fb23bb
+SHA1 (patch-pan_usenet-utils_mime-utils.cc) = 6cec0237458495657752dffdb836df32e4f4da6d
