@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2021/04/02 20:27:12 plunky Exp $
+$NetBSD: distinfo,v 1.39 2021/09/19 15:35:40 gdt Exp $
 
 SHA1 (qcad-3.26.1.0.tar.gz) = 7bfc33e7a26a2f0f99f64ac120b110d3bd67aa3d
 RMD160 (qcad-3.26.1.0.tar.gz) = 2c764bd8dd126e3084fc4291cea0fcd3df3d7e7a
@@ -29,6 +29,7 @@ SHA1 (patch-src_operations_operations.pro) = d10b38594f29ae07febdb52339049646926
 SHA1 (patch-src_run_main.cpp) = ef4498e2b1028dd675663793a885b4a65030027f
 SHA1 (patch-src_run_run.pri) = fca4570872f9fc7b25beac8dfd0c4802b81d3972
 SHA1 (patch-src_scripting_ecmaapi_ecmaapi.pro) = 8105fd89a8b52962f9e0c1ff80cf154ceb09145e
+SHA1 (patch-src_scripts_scripts.pro) = 7019dd69451b2594890c14f9ebf688a15cf81ee4
 SHA1 (patch-src_snap_snap.pro) = 9464576805a1d2baa81c91f759e59a8cc3989b6a
 SHA1 (patch-src_spatialindex_spatialindex.pro) = 3afcdcd036b0ee183220cc5406accbf0756841e7
 SHA1 (patch-src_stemmer_stemmer.pro) = d76d1d92378f516a278432fb0d6a23f8fdd355eb
