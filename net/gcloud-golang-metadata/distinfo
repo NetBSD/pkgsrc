@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:57 joerg Exp $
-
-SHA1 (gcloud-golang-9e1852f597.tar.gz) = 6c0ae291809c101ef2ddb1cd1d8c1bfc3fdcf53e
-RMD160 (gcloud-golang-9e1852f597.tar.gz) = 1da0c142082903868c2e878ba3101c1773d9cfb6
-SHA512 (gcloud-golang-9e1852f597.tar.gz) = ca2525c235c36ba728016809b44064a664a9107f0a46a917db2e75acebcecda49c7ff89d2360c7b4e652b1830be5a15376737c0916accf5e00ae5c4253259185
-Size (gcloud-golang-9e1852f597.tar.gz) = 88037 bytes
