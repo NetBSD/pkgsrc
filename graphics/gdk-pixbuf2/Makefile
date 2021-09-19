@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/09/19 08:06:20 nia Exp $
+# $NetBSD: Makefile,v 1.49 2021/09/19 16:05:15 adam Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.6
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -18,6 +18,8 @@ CONFLICTS+=	gtk2+<2.22
 
 USE_TOOLS+=	pkg-config xgettext
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 MESON_ARGS+=			-D installed_tests=false
 MESON_ARGS+=			-D x11=false
