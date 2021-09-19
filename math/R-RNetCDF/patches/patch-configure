@@ -1,24 +1,24 @@
-$NetBSD: patch-configure,v 1.2 2020/09/20 23:12:15 mef Exp $
+$NetBSD: patch-configure,v 1.3 2021/09/19 02:55:21 mef Exp $
 
 Fix the use of == in shell scripts.
 
---- configure.orig	2020-09-12 01:56:31.000000000 +0000
-+++ configure
-@@ -3628,7 +3628,7 @@ fi
+--- configure.orig	2021-08-20 17:07:16.000000000 +0900
++++ configure	2021-09-19 11:44:01.660453490 +0900
+@@ -3718,7 +3718,7 @@ fi
  
  fi
  
--if test "x$have_nc_config" == xyes; then :
-+if test "x$have_nc_config" = xyes; then :
+-if test "x$have_nc_config" == xyes
++if test "x$have_nc_config" = xyes
+ then :
  
      # Prepend linker flags to LDFLAGS:
-     { $as_echo "$as_me:${as_lineno-$LINENO}: checking netcdf linker flags" >&5
-@@ -3910,7 +3910,7 @@ fi
+@@ -4064,7 +4064,7 @@ fi
  
  
  # Define HAVE_LIBUDUNITS2 if all udunits2 checks were successful:
--if test "x$enable_calendar" == xyes; then :
-+if test "x$enable_calendar" = xyes; then :
-   $as_echo "#define HAVE_LIBUDUNITS2 1" >>confdefs.h
+-if test "x$enable_calendar" == xyes
++if test "x$enable_calendar" = xyes
+ then :
+   printf "%s\n" "#define HAVE_LIBUDUNITS2 1" >>confdefs.h
  
- else
