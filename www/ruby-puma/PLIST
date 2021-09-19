@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/02/14 13:47:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/09/19 17:56:43 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -61,7 +61,7 @@ ${GEM_LIBDIR}/lib/puma/error_logger.rb
 ${GEM_LIBDIR}/lib/puma/events.rb
 ${GEM_LIBDIR}/lib/puma/io_buffer.rb
 ${GEM_LIBDIR}/lib/puma/jruby_restart.rb
-${GEM_LIBDIR}/lib/puma/json.rb
+${GEM_LIBDIR}/lib/puma/json_serialization.rb
 ${GEM_LIBDIR}/lib/puma/launcher.rb
 ${GEM_LIBDIR}/lib/puma/minissl.rb
 ${GEM_LIBDIR}/lib/puma/minissl/context_builder.rb
