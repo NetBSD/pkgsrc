@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/09/08 21:04:59 nia Exp $
+# $NetBSD: Makefile,v 1.31 2021/09/19 15:00:03 nia Exp $
 
 DISTNAME=	xournalpp-1.1.0
 PKGREVISION=	1
@@ -14,12 +14,12 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	translations xournalpp
 
-# C++11
-GCC_REQD+=	4.7
+# C++17, std::filesystem
+GCC_REQD+=	8
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
