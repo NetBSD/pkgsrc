@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4838 2021/09/19 17:18:08 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4839 2021/09/19 17:19:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7485,3 +7485,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-gsl to 2.1.7 [wiz 2021-09-19]
 	Updated security/ruby-rex-encoder to 0.1.6 [taca 2021-09-19]
 	Updated security/ruby-rex-bin_tools to 0.1.8 [taca 2021-09-19]
+	Updated security/ruby-rex-exploitation to 0.1.28 [taca 2021-09-19]
