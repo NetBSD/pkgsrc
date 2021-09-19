@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4852 2021/09/19 17:52:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4853 2021/09/19 17:53:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7499,3 +7499,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-faraday to 1.8.0 [taca 2021-09-19]
 	Updated www/ruby-faraday_middleware to 1.1.0 [taca 2021-09-19]
 	Updated www/ruby-faye-websocket to 0.11.1 [taca 2021-09-19]
+	Updated www/ruby-loofah to 2.12.0 [taca 2021-09-19]
