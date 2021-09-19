@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/09/11 21:06:59 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/09/19 10:04:13 pin Exp $
 
 SHA1 (ansi_term-0.12.1.crate) = fa6af8a593898105594dfb8b057dcbfdf30648a2
 RMD160 (ansi_term-0.12.1.crate) = 747f8ed27409243576d586c9957d9e06837f27bf
@@ -100,10 +100,10 @@ SHA1 (diff-0.1.12.crate) = 1438cf49a50db33825762d9243dd5b008b0604b6
 RMD160 (diff-0.1.12.crate) = d86ceef386cb6f62605325e62cda6abbb17a7f97
 SHA512 (diff-0.1.12.crate) = 0e81331c0424e9369963e23894a6412b65a3ed4f3154ccc184fc84cf1c5985b81c586a6b34e8c6c0e5c3afba38fb15277cfd89e7f50c85bd5d8d4d24ba670d16
 Size (diff-0.1.12.crate) = 10223 bytes
-SHA1 (dua-cli-2.14.6.tar.gz) = 6803ee6fd1c8b9860ead4f6a65ac2375133d646c
-RMD160 (dua-cli-2.14.6.tar.gz) = fb6f9c2f06ce9d7a35041931767d98cb199e98e0
-SHA512 (dua-cli-2.14.6.tar.gz) = f37dd5451a8ff8e3f5413a62881aa8f5c986ed34836bed2c2aae13160d1cdfd0fdc28de9f1e4a7819a6c8666f2c969d71a837245faabfcbfe69c454845541136
-Size (dua-cli-2.14.6.tar.gz) = 60160 bytes
+SHA1 (dua-cli-2.14.7.tar.gz) = 802be6070c61c7800db9482fd3e1851e1e9cebed
+RMD160 (dua-cli-2.14.7.tar.gz) = b48b356ad1ad06bd42b284a504defee6a7b32449
+SHA512 (dua-cli-2.14.7.tar.gz) = f67049d64e1421c9b3600559538b6041a7df276c6fc6c5d8f753232b74082bcc414a25224332bc18e46cb6928b95574e59e03c2d18e0bd287369d07cc36ad7bc
+Size (dua-cli-2.14.7.tar.gz) = 60273 bytes
 SHA1 (either-1.6.1.crate) = 8bc23c16c8bacea8d0d9cee2553a563071cdde7b
 RMD160 (either-1.6.1.crate) = 07bd6bf61d1af0d0b0c997fc36b14e0d76e94cd5
 SHA512 (either-1.6.1.crate) = 4bfe56920e30cbc8eb4f90162db618f7dca653b42db35ab6a7045d3fd9a24ceb1778b1f79613850bdb1a87ad3794fa0d73015e46c48d513f368d8c3776fc9ddf
