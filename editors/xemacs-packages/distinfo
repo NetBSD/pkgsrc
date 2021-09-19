@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2021/09/15 21:06:42 hauke Exp $
+$NetBSD: distinfo,v 1.28 2021/09/19 14:53:15 hauke Exp $
 
 SHA1 (xemacs-packages/Sun-1.19-pkg.tar.gz) = de24d0bf78e753e733138c6a2bec0ecf414511e0
 RMD160 (xemacs-packages/Sun-1.19-pkg.tar.gz) = 5f6bec6276f8b5a59ea6532f12c06a474571a274
@@ -519,5 +519,5 @@ Size (xemacs-packages/zenirc-1.18-pkg.tar.gz) = 278677 bytes
 SHA1 (patch-lisp_guided-tour_guided-tour.el) = 28556cc7fbb9a18ba88d6e2cf23f3b517461f580
 SHA1 (patch-lisp_vc_vc-git.el) = 8b5aa902cc56a256c9c2210b49437bf7929f6e30
 SHA1 (patch-lisp_vc_vc.el) = ec13ecf02b41dca5bb80afc63ee4fb9f0b283a45
-SHA1 (patch-lisp_w3_url.el) = 551e11abffe6df7693003ca2aad5238fbd6c0116
+SHA1 (patch-lisp_w3_url.el) = 14c9d20ed501fc5fc6fe28225b9a9a40accec766
 SHA1 (patch-lisp_xemacs-base_simple-more.el) = 20ccf1afff6b69f33209f179e96822cce8f25a26
