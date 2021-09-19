@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4846 2021/09/19 17:40:44 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.4847 2021/09/19 17:41:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7493,3 +7493,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-aws-eventstream to 1.2.0 [taca 2021-09-19]
 	Updated www/ruby-aws-partitions to 1.503.0 [taca 2021-09-19]
 	Updated news/pan to 0.147 [rhialto 2021-09-19]
+	Updated www/ruby-aws-sigv4 to 1.4.0 [taca 2021-09-19]
