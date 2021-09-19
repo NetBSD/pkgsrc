@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4844 2021/09/19 17:37:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4845 2021/09/19 17:39:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7491,3 +7491,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-serverspec to 2.41.8 [taca 2021-09-19]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.5.6 [taca 2021-09-19]
 	Updated www/ruby-aws-eventstream to 1.2.0 [taca 2021-09-19]
+	Updated www/ruby-aws-partitions to 1.503.0 [taca 2021-09-19]
