@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2021/09/19 17:40:27 rhialto Exp $
+# $NetBSD: Makefile,v 1.114 2021/09/19 18:02:37 rhialto Exp $
 
 PKGNAME=		pan-0.147
+PKGREVISION=		1
 CATEGORIES=		news
 TAG=			${PKGNAME_NOREV:tu:C/-/_/:C/\./_/} # PAN_0_147
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
@@ -41,7 +42,6 @@ pre-build:
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
