@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/10/16 07:41:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2021/09/19 12:49:42 bsiegert Exp $
 
-DISTNAME=	gsutil-4.53
+DISTNAME=	gsutil-4.68
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsutil/}
@@ -22,15 +22,15 @@ DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.9.4:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-crcmod>=1.7:../../security/py-crcmod
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-gcs-oauth2-boto-plugin>=2.7:../../net/py-gcs-oauth2-boto-plugin
-DEPENDS+=	${PYPKGPREFIX}-google-apitools>=0.5.30:../../www/py-google-apitools
+DEPENDS+=	${PYPKGPREFIX}-google-apitools>=0.5.32:../../www/py-google-apitools
 DEPENDS+=	${PYPKGPREFIX}-google-reauth>=0.1.0:../../security/py-google-reauth
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.18:../../www/py-httplib2
-DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-monotonic>=1.4:../../time/py-monotonic
 DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/build_docs.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/install.sh
