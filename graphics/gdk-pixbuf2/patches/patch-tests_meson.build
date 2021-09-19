@@ -1,22 +1,22 @@
-$NetBSD: patch-tests_meson.build,v 1.1 2020/02/20 03:35:35 brook Exp $
+$NetBSD: patch-tests_meson.build,v 1.2 2021/09/19 08:06:20 nia Exp $
 
 Add LD_LIBRARY_PATH so uninstalled programs find newly built shared libraries.
 
---- tests/meson.build.orig	2019-10-08 10:44:10.000000000 +0000
+--- tests/meson.build.orig	2021-04-09 14:44:51.540196000 +0000
 +++ tests/meson.build
-@@ -5,6 +5,7 @@ resources_c = custom_target('resources.c
-   input: 'resources.gresource.xml',
-   output: 'resources.c',
-   command: [
-+    'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
-     gen_resources,
-     '--pixdata=@0@'.format(gdk_pixbuf_pixdata.full_path()),
-     '--loaders=@0@'.format(loaders_cache.full_path()),
-@@ -23,6 +24,7 @@ resources_h = custom_target('resources.h
-   input: 'resources.gresource.xml',
-   output: 'resources.h',
-   command: [
-+    'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
-     gen_resources,
-     '--pixdata=@0@'.format(gdk_pixbuf_pixdata.full_path()),
-     '--loaders=@0@'.format(loaders_cache.full_path()),
+@@ -12,6 +12,7 @@ if enabled_loaders.contains('png') and h
+     input: 'resources.gresource.xml',
+     output: 'resources.c',
+     command: [
++      'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
+       gen_resources,
+       '--glib-compile-resources=@0@'.format(glib_compile_resources.full_path()),
+       '--pixdata=@0@'.format(gdk_pixbuf_pixdata.full_path()),
+@@ -31,6 +32,7 @@ if enabled_loaders.contains('png') and h
+     input: 'resources.gresource.xml',
+     output: 'resources.h',
+     command: [
++      'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
+       gen_resources,
+       '--glib-compile-resources=@0@'.format(glib_compile_resources.full_path()),
+       '--pixdata=@0@'.format(gdk_pixbuf_pixdata.full_path()),
