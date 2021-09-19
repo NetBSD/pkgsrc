@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4816 2021/09/19 11:52:44 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4817 2021/09/19 12:36:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7463,3 +7463,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/skypeweb-purple to 1.7 [yhardy 2021-09-19]
 	Updated games/REminiscence to 0.4.9 [yhardy 2021-09-19]
 	Updated sysutils/dust to 0.7.0 [pin 2021-09-19]
+	Updated www/caddy to 2.4.5 [bsiegert 2021-09-19]
