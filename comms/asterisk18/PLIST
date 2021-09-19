@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/06/13 07:57:52 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/09/19 03:59:25 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -24,6 +24,7 @@ lib/asterisk/modules/app_dictate.so
 lib/asterisk/modules/app_directed_pickup.so
 lib/asterisk/modules/app_directory.so
 lib/asterisk/modules/app_disa.so
+lib/asterisk/modules/app_dtmfstore.so
 lib/asterisk/modules/app_dumpchan.so
 lib/asterisk/modules/app_echo.so
 lib/asterisk/modules/app_exec.so
@@ -49,6 +50,7 @@ lib/asterisk/modules/app_queue.so
 lib/asterisk/modules/app_read.so
 lib/asterisk/modules/app_readexten.so
 lib/asterisk/modules/app_record.so
+lib/asterisk/modules/app_reload.so
 lib/asterisk/modules/app_sayunixtime.so
 lib/asterisk/modules/app_senddtmf.so
 lib/asterisk/modules/app_sendtext.so
@@ -66,6 +68,7 @@ lib/asterisk/modules/app_url.so
 lib/asterisk/modules/app_userevent.so
 lib/asterisk/modules/app_verbose.so
 lib/asterisk/modules/app_voicemail.so
+lib/asterisk/modules/app_waitforcond.so
 lib/asterisk/modules/app_waitforring.so
 lib/asterisk/modules/app_waitforsilence.so
 lib/asterisk/modules/app_waituntil.so
@@ -2435,6 +2438,6 @@ share/examples/asterisk/xmpp.conf
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
 @pkgdir libdata/asterisk/third-party/pjproject
-@pkgdir libdata/asterisk/keys
+@pkgdir libdata/asterisk/keys/stir_shaken
 @pkgdir libdata/asterisk/firmware/iax
 @pkgdir libdata/asterisk/documentation/thirdparty
