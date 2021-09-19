@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/06/02 15:05:11 taca Exp $
+$NetBSD: distinfo,v 1.17 2021/09/19 17:54:44 taca Exp $
 
-SHA1 (mechanize-2.8.1.gem) = fbf707da43c3994390f18d3e52a735db7eed2bcc
-RMD160 (mechanize-2.8.1.gem) = f657b259d7602cd1f5044a68e0be1c6a9f4a0dbe
-SHA512 (mechanize-2.8.1.gem) = 073a204a00e3c130e80b4c7547062d12c364e8b5bf3b386a8463b3569a1716144ae169b11e130af2ecd1efc6528b5169c77c37e1bb036064175d51e7e7394779
-Size (mechanize-2.8.1.gem) = 141312 bytes
+SHA1 (mechanize-2.8.2.gem) = 390a10bd29d14f6f748270dc813db6ba62ce620f
+RMD160 (mechanize-2.8.2.gem) = c64e9b4c9fbcaab6bd16fc3d27a936654e6848c9
+SHA512 (mechanize-2.8.2.gem) = 98143d4660414f3120cf8c0d8164416d255cd0a28f96f5096d675d0d70d822d3b0e70022487058306634b9da8ac3aa4211e92d93e73d1b6112809f12a412b1e9
+Size (mechanize-2.8.2.gem) = 142336 bytes
