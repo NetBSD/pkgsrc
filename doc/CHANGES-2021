@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4840 2021/09/19 17:21:02 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4841 2021/09/19 17:24:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7487,3 +7487,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-bin_tools to 0.1.8 [taca 2021-09-19]
 	Updated security/ruby-rex-exploitation to 0.1.28 [taca 2021-09-19]
 	Updated sysutils/ruby-chef-zero to 15.0.9 [taca 2021-09-19]
+	Updated sysutils/ruby-inspec-core to 4.41.20 [taca 2021-09-19]
