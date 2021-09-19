@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/07/12 18:46:07 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/19 09:12:46 nia Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -33,16 +33,10 @@ CMAKE_ARGS+=	-DCOMPILER_RT_INSTALL_PATH:STRING=lib/clang/${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
-PLIST_SUBST+=	COMPILER_RT_OS_DIR=${OS_DIR}
-PLIST_VARS+=	asan
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "SunOS"
-PLIST.asan=	yes
-.endif
-
 TEST_TARGET=	check-compiler-rt
+
+GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
