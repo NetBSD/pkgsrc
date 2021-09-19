@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/05/30 11:40:46 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/09/19 16:54:22 taca Exp $
 
-SHA1 (metasploit-model-4.0.2.gem) = a524d346a8449f1b0e5f5ba05a1270f5ea0bdd50
-RMD160 (metasploit-model-4.0.2.gem) = 3893e35ed349ef5eab419548257681afa72d9bb3
-SHA512 (metasploit-model-4.0.2.gem) = 2bba08a73e3ce4b260b01e69729697941a04bd178c42184c8f87f09f52bff7b054c98a7570aa3b0e99f4831f8cdcdb9dbd6a0e2a559860d25b9b9c203e2d8562
-Size (metasploit-model-4.0.2.gem) = 81920 bytes
+SHA1 (metasploit-model-4.0.3.gem) = d4f91ae82ca1839d30346feabe3d6e96e3f3723c
+RMD160 (metasploit-model-4.0.3.gem) = baf4d13fc46b272df944e5b9468eb445d44be7da
+SHA512 (metasploit-model-4.0.3.gem) = db02fa2f848025df2f0ddf579200adf800eead15bcd3d3ab62e743fa4c85b1f4ff581f3286d6391c0b1d1b032a230fd2aa67ca095c93d066d50a6d27983819aa
+Size (metasploit-model-4.0.3.gem) = 81920 bytes
