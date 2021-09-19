@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4821 2021/09/19 14:02:19 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.4822 2021/09/19 16:27:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7468,3 +7468,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/obfs4proxy to 0.0.11 [bsiegert 2021-09-19]
 	Removed net/gcloud-golang-metadata [bsiegert 2021-09-19]
 	Removed www/go-gohtml [bsiegert 2021-09-19]
+	Updated net/bind916 to 9.16.21 [taca 2021-09-19]
