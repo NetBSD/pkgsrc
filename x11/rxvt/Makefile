@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2021/08/08 20:33:33 nia Exp $
+# $NetBSD: Makefile,v 1.64 2021/09/19 08:41:13 nia Exp $
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
 
