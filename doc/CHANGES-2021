@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4812 2021/09/19 10:40:13 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4813 2021/09/19 10:50:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7458,3 +7458,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/dua-cli to 2.14.7 [pin 2021-09-19]
 	Updated converters/py-charset-normalizer to 2.0.6 [adam 2021-09-19]
 	Updated comms/py-rich to 10.10.0 [adam 2021-09-19]
+	Updated net/py-responses to 0.14.0 [adam 2021-09-19]
+	Updated devel/py-rope to 0.20.1 [adam 2021-09-19]
