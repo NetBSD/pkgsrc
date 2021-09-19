@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.58 2020/03/22 10:01:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.59 2021/09/19 07:31:27 nia Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
 # used by games/freeciv-server/Makefile
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.6.2
+FC_VERS=	2.6.5
 CATEGORIES=	games
 MASTER_SITES=	http://files.freeciv.org/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +24,7 @@ USE_PKGLOCALEDIR=	yes
 DISTINFO_FILE=		../../games/freeciv-share/distinfo
 #PATCHDIR=		../../games/freeciv-share/patches
 
-REPLACE_PYTHON=		${WRKSRC}/common/generate_packets.py
+REPLACE_PYTHON=		common/generate_packets.py
 
 SUBST_CLASSES+=		data
 SUBST_STAGE.data=	pre-configure
