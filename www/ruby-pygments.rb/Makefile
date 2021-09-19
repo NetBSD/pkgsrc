@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2021/03/21 13:12:10 taca Exp $
+# $NetBSD: Makefile,v 1.24 2021/09/19 18:52:44 gutteridge Exp $
 
 DISTNAME=	pygments.rb-2.2.0
-CATEGORIES=	textproc
+CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/tmm1/pygments.rb
-COMMENT=	Pygments wrapper for ruby
+HOMEPAGE=	https://github.com/pygments/pygments.rb
+COMMENT=	Ruby wrapper for Pygments syntax highlighter
 LICENSE=	mit
 
 REPLACE_PYTHON=	lib/pygments/mentos.py
