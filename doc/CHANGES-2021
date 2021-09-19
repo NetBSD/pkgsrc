@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4824 2021/09/19 16:42:07 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4825 2021/09/19 16:43:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7471,3 +7471,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.21 [taca 2021-09-19]
 	Updated archivers/php-pecl-zip to 1.19.4 [taca 2021-09-19]
 	Updated games/ruby-squib to 0.17.2 [taca 2021-09-19]
+	Updated mail/ruby-mime-types-data to 3.2021.0901 [taca 2021-09-19]
