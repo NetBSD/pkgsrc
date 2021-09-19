@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4855 2021/09/19 17:57:12 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4856 2021/09/19 17:59:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-loofah to 2.12.0 [taca 2021-09-19]
 	Updated www/ruby-mechanize to 2.8.2 [taca 2021-09-19]
 	Updated www/ruby-puma to 5.4.0 [taca 2021-09-19]
+	Updated www/ruby-rouge to 3.26.1 [taca 2021-09-19]
