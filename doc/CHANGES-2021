@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4850 2021/09/19 17:48:26 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4851 2021/09/19 17:50:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7497,3 +7497,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-aws-sdk-core to 3.121.0 [taca 2021-09-19]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.49.0 [taca 2021-09-19]
 	Updated www/ruby-faraday to 1.8.0 [taca 2021-09-19]
+	Updated www/ruby-faraday_middleware to 1.1.0 [taca 2021-09-19]
