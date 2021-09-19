@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/03/22 10:01:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/09/19 07:31:27 nia Exp $
 lib/libfreeciv.la
 man/man6/freeciv-client.6
 man/man6/freeciv-gtk2.6
@@ -16,6 +16,7 @@ man/man6/freeciv-sdl.6
 man/man6/freeciv-sdl2.6
 man/man6/freeciv-server.6
 man/man6/freeciv-xaw.6
+man/man6/freeciv.6
 share/doc/freeciv/ABOUT-NLS
 share/doc/freeciv/AUTHORS
 share/doc/freeciv/BUGS
