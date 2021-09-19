@@ -1,7 +1,7 @@
-$NetBSD: patch-gdk-pixbuf_gdk-pixbuf-scaled-anim.c,v 1.2 2015/06/30 10:47:55 ryoon Exp $
+$NetBSD: patch-gdk-pixbuf_gdk-pixbuf-scaled-anim.c,v 1.3 2021/09/19 08:06:20 nia Exp $
 
 * include config.h early to avoid redefinition warnings on solaris
-*
+
 --- gdk-pixbuf/gdk-pixbuf-scaled-anim.c.orig	2014-03-06 04:36:45.000000000 +0000
 +++ gdk-pixbuf/gdk-pixbuf-scaled-anim.c
 @@ -19,7 +19,7 @@

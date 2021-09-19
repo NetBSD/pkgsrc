@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2021/04/16 06:43:48 nia Exp $
+# $NetBSD: Makefile,v 1.48 2021/09/19 08:06:20 nia Exp $
 
-DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
+DISTNAME=	gdk-pixbuf-2.42.6
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	2
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${MSITE_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,8 +16,6 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS+=	gtk2+<2.22
 
-.include "../../graphics/gdk-pixbuf2/Makefile.version"
-
 USE_TOOLS+=	pkg-config xgettext
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
@@ -30,20 +27,10 @@ PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-.include "../../lang/python/pyversion.mk"
-
-REPLACE_INTERPRETER+=	py3
-REPLACE.py3.old=	.*/usr/bin/env python[^ ]*
-REPLACE.py3.new=	${PYTHONBIN}
-REPLACE_FILES.py3+=	build-aux/gen-installed-test.py
-REPLACE_FILES.py3+=	build-aux/gen-thumbnailer.py
-REPLACE_FILES.py3+=	build-aux/gen-resources.py
+.include "../../lang/python/tool.mk"
 
 _BUILDING_GTK2= yes
 .include "loaders.mk"
-
-pre-build:
-	${CHMOD} +x ${WRKSRC}/build-aux/*.py ${WRKSRC}/build-aux/*.sh
 
 .include "../../devel/meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
