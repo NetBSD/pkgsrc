@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2021/08/10 11:18:57 nia Exp $
+# $NetBSD: Makefile,v 1.27 2021/09/19 07:02:00 nia Exp $
 
-DISTNAME=	elixir-1.12.2
+DISTNAME=	elixir-1.12.3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake:run
 BUILD_TARGET=	compile
 TEST_TARGET=	test
 
-MAKE_ENV+=	LC_ALL="en_US.UTF-8"
+ALL_ENV+=	LC_ALL="en_US.UTF-8"
 
 MAKE_FLAGS+=	MAN_PREFIX=${PREFIX}/${PKGMANDIR}
 
