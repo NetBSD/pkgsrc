@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:52 brook Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/19 02:32:27 mef Exp $
 
 R_PKGNAME=	pbkrtest
-R_PKGVER=	0.4-7
-CATEGORIES=	math
+R_PKGVER=	0.5.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Parametric bootstrap and Kenward Roger based methods for mixed model comparison
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-lme4>=1.1.10:../../math/R-lme4
+DEPENDS+=	R-numDeriv-[0-9]*:../../math/R-numDeriv
+DEPENDS+=	R-broom-[0-9]*:../../math/R-broom
+
+# for a4.sty
+TEST_DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
+# tex-boxedminipage
+TEST_DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
 
 USE_LANGUAGES=	# none
 
