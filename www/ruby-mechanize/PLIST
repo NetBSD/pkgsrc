@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2021/06/02 15:05:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/09/19 17:54:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci-test.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.yardopts
