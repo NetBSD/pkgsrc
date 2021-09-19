@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/08/30 15:08:33 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/09/19 17:40:32 taca Exp $
 
-SHA1 (aws-sigv4-1.2.4.gem) = a968579d455bb2d534a28e055db2eb092ad9471d
-RMD160 (aws-sigv4-1.2.4.gem) = e1c6767c81d2739e2f6168783aceca9d87dcfc52
-SHA512 (aws-sigv4-1.2.4.gem) = 1c03bf59899c7e7f6b01a786e75985c73459f0aacd3f01df70bac562db452e369317f8cb749f30d30629f058845687d9e2f614547f6f3ca1a4378db724170e4f
-Size (aws-sigv4-1.2.4.gem) = 16384 bytes
+SHA1 (aws-sigv4-1.4.0.gem) = 58bb7274919badd5de5ed56373401a1310584375
+RMD160 (aws-sigv4-1.4.0.gem) = eca72af08cbd6c30ffca96d7de3e0ae95bc8ac1e
+SHA512 (aws-sigv4-1.4.0.gem) = 250dfd5755fa5163c65c122ff33c4e3b700359281a2b7c0640fb25ad8fbd2f01afa6034413345eb395d0219dc7c4cd6f4ab899c21321b76a336fa49a7ff298de
+Size (aws-sigv4-1.4.0.gem) = 16896 bytes
