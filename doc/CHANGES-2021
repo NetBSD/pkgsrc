@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4802 2021/09/19 03:05:15 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4803 2021/09/19 03:33:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7443,3 +7443,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-pbkrtest to 0.5.1 [mef 2021-09-19]
 	Updated math/R-RNetCDF to 2.5.2 [mef 2021-09-19]
 	Updated math/R-RPostgreSQL to 0.7 [mef 2021-09-19]
+	Updated emulators/PC6001VX to 3.8.1 [tsutsui 2021-09-19]
