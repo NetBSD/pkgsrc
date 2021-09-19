@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.4 2019/01/04 08:53:11 adam Exp $
 
-SHA1 (pycares-2.4.0.tar.gz) = f9f74680411cbe00a68433e22ffb145ea150c4e9
-RMD160 (pycares-2.4.0.tar.gz) = 94879b87d65f3c43ab25e960763b794ae3f79c4d
-SHA512 (pycares-2.4.0.tar.gz) = 7770a2b1fd69bb800019a292e5c9fc1f737b044fb4ca5166ead197da3515f2edac55f947a68f3505c9b404745529287114667d742162c98f2ff84b2c330ef295
-Size (pycares-2.4.0.tar.gz) = 214021 bytes
-SHA1 (patch-setup__cares.py) = 05b36350b308b9e3efbfe02a04204f77fe511dac
+SHA1 (pycares-3.1.1.tar.gz) = 81ac6e24655ab66b604917d2d3e6200be3cadab2
+RMD160 (pycares-3.1.1.tar.gz) = 35839ead89fdce809138de2a9f52a17d3d729450
+SHA512 (pycares-3.1.1.tar.gz) = 7fce42e686063b8b0fdafe6542eadf316245a2fe00834b699ae4d16e324ff33829b2fe0aa0159652da49007a80a195deb53ab6396ace526e09693c96da102f6c
+Size (pycares-3.1.1.tar.gz) = 233742 bytes
