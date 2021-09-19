@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1425 2021/09/04 20:19:29 maya Exp $
+# $NetBSD: Makefile,v 1.1426 2021/09/19 13:52:15 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -171,7 +171,6 @@ SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	fwknop
 SUBDIR+=	gallery-dl
-SUBDIR+=	gcloud-golang-metadata
 SUBDIR+=	get-flash-videos
 SUBDIR+=	get_iplayer
 SUBDIR+=	gethost
