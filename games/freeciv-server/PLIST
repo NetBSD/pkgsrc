@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/31 14:44:57 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/09/19 07:31:27 nia Exp $
 bin/freeciv-server
 etc/freeciv/database.lua
 lib/libfreeciv-srv.la
 share/appdata/freeciv-server.appdata.xml
-share/applications/freeciv-server.desktop
+share/applications/org.freeciv.server.desktop
