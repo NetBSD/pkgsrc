@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4797 2021/09/18 23:08:24 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4798 2021/09/19 01:33:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7434,7 +7434,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-waldo to 0.3.1 [mef 2021-09-18]
 	Updated graphics/R-farver to 2.1.0 [mef 2021-09-18]
 	Updated graphics/R-colourpicker to 1.1.0 [mef 2021-09-18]
-	Updated devel/ruby-cucumber-tag-expressions to 4.0.2 [taca 2021-09-18]
 	Updated devel/ruby-ffi to 1.15.4 [taca 2021-09-18]
 	Updated devel/ruby-gettext to 3.4.1 [taca 2021-09-18]
 	Updated devel/ruby-test-unit to 3.4.7 [taca 2021-09-18]
