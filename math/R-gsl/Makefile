@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/09/15 12:33:17 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/19 17:15:42 wiz Exp $
 
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
@@ -8,7 +8,7 @@ COMMENT=	R wrapper for the Gnu Scientific Library
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	gsl
-R_PKGVER=	2.1-6
+R_PKGVER=	2.1-7
 
 USE_LANGUAGES=	c
 
