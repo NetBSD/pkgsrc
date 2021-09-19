@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4831 2021/09/19 17:01:57 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4832 2021/09/19 17:05:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7478,3 +7478,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit-model to 4.0.3 [taca 2021-09-19]
 	Updated security/ruby-metasploit-payloads to 2.0.55 [taca 2021-09-19]
 	Updated security/ruby-rex-text to 0.2.36 [taca 2021-09-19]
+	Updated security/ruby-rex-random_identifier to 0.1.8 [taca 2021-09-19]
