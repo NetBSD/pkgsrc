@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/08/30 16:28:44 taca Exp $
+# $NetBSD: Makefile,v 1.12 2021/09/19 07:33:34 wiz Exp $
 
 DISTNAME=	cucumber-core-10.0.1
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-gherkin>=20.0<21:../../lang/ruby-cucumber-gherkin
 DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=17.0<18:../../devel/ruby-cucumber-messages
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-tag-expressions>=3.0<4:../../devel/ruby-cucumber-tag-expressions
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-tag-expressions>=3.0:../../devel/ruby-cucumber-tag-expressions
 
 USE_LANGUAGES=	# none
 
