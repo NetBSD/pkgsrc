@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4814 2021/09/19 11:01:01 yhardy Exp $
+$NetBSD: CHANGES-2021,v 1.4815 2021/09/19 11:07:23 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7461,3 +7461,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-responses to 0.14.0 [adam 2021-09-19]
 	Updated devel/py-rope to 0.20.1 [adam 2021-09-19]
 	Updated chat/skypeweb-purple to 1.7 [yhardy 2021-09-19]
+	Updated games/REminiscence to 0.4.9 [yhardy 2021-09-19]
