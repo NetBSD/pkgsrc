@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/07/14 15:15:12 maya Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/09/19 17:40:27 rhialto Exp $
 bin/pan
 man/man1/pan.1
 share/appdata/pan.appdata.xml
@@ -31,6 +31,7 @@ share/locale/ga/LC_MESSAGES/pan.mo
 share/locale/gl/LC_MESSAGES/pan.mo
 share/locale/hr/LC_MESSAGES/pan.mo
 share/locale/hu/LC_MESSAGES/pan.mo
+share/locale/id/LC_MESSAGES/pan.mo
 share/locale/it/LC_MESSAGES/pan.mo
 share/locale/ja/LC_MESSAGES/pan.mo
 share/locale/ko/LC_MESSAGES/pan.mo
