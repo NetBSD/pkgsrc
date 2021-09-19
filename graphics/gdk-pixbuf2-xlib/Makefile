@@ -1,57 +1,29 @@
-# $NetBSD: Makefile,v 1.32 2021/04/16 07:35:28 nia Exp $
+# $NetBSD: Makefile,v 1.33 2021/09/19 08:06:20 nia Exp $
 
-DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
-PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
-PKGREVISION=	1
+DISTNAME=	gdk-pixbuf-xlib-2.40.2
+# historical reasons
+PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${MSITE_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf-xlib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://developer.gnome.org/gdk-pixbuf
-COMMENT=	Image loaders for gtk2 (X11 support)
+HOMEPAGE=	https://gitlab.gnome.org/Archive/gdk-pixbuf-xlib
+COMMENT=	Deprecated Xlib integration for GdkPixbuf
 LICENSE=	gnu-gpl-v2
-
-PATCHDIR=	${.CURDIR}/../../graphics/gdk-pixbuf2/patches
-DISTINFO_FILE=	${.CURDIR}/../../graphics/gdk-pixbuf2/distinfo
 
 CONFLICTS+=	gtk2+<2.22
 
-.include "../../graphics/gdk-pixbuf2/Makefile.version"
-
 USE_TOOLS+=	msgfmt pkg-config
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf-xlib
 
-MESON_ARGS+=			-D installed_tests=false
-MESON_ARGS+=			-D man=false
-MESON_ARGS+=			-D x11=true
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-xlib-2.0.pc
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-post-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/*
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
-	${INSTALL_DATA} ${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
-	${INSTALL_DATA} ${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
-	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so ${DESTDIR}${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so.*[0-9.] ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/output/meson-private/gdk-pixbuf-xlib-2.0.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
-
 .include "../../devel/meson/build.mk"
-.include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection:=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
