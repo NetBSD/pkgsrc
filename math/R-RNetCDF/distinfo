@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/09/20 23:12:14 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/09/19 02:55:21 mef Exp $
 
-SHA1 (R/RNetCDF_2.4-2.tar.gz) = fd68dd7e1b5dc789e8d313ff9593cf56a8075ca0
-RMD160 (R/RNetCDF_2.4-2.tar.gz) = 8ff7615c3a43d83218914e9139a5bf00d9ad6c14
-SHA512 (R/RNetCDF_2.4-2.tar.gz) = afd314dd0a5735ccad3579c9b9091956e7277cf8e630016264f5adef9f31831c79d85b53459e160f09e37789b3518f3cb184a100036af082abfb0533b906e1a6
-Size (R/RNetCDF_2.4-2.tar.gz) = 124926 bytes
-SHA1 (patch-configure) = 0ff9f35b4c2ca1701c381be9f6761fd62fa33e39
+SHA1 (R/RNetCDF_2.5-2.tar.gz) = d774b638f4ed2369151a49a381462cc1f5c7b9c3
+RMD160 (R/RNetCDF_2.5-2.tar.gz) = 9ba42433793f0cce837aa4c66ee618c7a6ab2cae
+SHA512 (R/RNetCDF_2.5-2.tar.gz) = d12f5e96352f6ae9726a2b1f288db036a6addf2f66abc876773cfefb35e1a9cd1ff62991cec62877e00384f1687c24d905f31300f9a6d477b0f367daed24b97c
+Size (R/RNetCDF_2.5-2.tar.gz) = 143675 bytes
+SHA1 (patch-configure) = b8309c6e26be3039e8d86482979f031887abd123
