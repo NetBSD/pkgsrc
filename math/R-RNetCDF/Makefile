@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2021/04/21 13:24:59 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/09/19 02:55:21 mef Exp $
 
 R_PKGNAME=	RNetCDF
-R_PKGVER=	2.4-2
+R_PKGVER=	2.5-2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to NetCDF datasets
-PKGREVISION=	1
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3	# OR file LICENSE
 
-USE_LANGUAGES=	c
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/netcdf/buildlink3.mk"
