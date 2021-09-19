@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4842 2021/09/19 17:28:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4843 2021/09/19 17:34:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7489,3 +7489,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-chef-zero to 15.0.9 [taca 2021-09-19]
 	Updated sysutils/ruby-inspec-core to 4.41.20 [taca 2021-09-19]
 	Updated sysutils/ruby-serverspec to 2.41.8 [taca 2021-09-19]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.5.6 [taca 2021-09-19]
