@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4806 2021/09/19 07:32:29 nia Exp $
+$NetBSD: CHANGES-2021,v 1.4807 2021/09/19 08:07:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7449,3 +7449,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/freeciv-share to 2.6.5 [nia 2021-09-19]
 	Updated games/freeciv-client to 2.6.5 [nia 2021-09-19]
 	Updated games/freeciv-server to 2.6.5 [nia 2021-09-19]
+	Updated graphics/gdk-pixbuf2 to 2.42.6 [nia 2021-09-19]
+	Updated graphics/gdk-pixbuf2-xlib to 2.40.2 [nia 2021-09-19]
