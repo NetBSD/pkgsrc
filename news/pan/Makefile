@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.112 2021/05/24 19:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2021/09/19 17:40:27 rhialto Exp $
 
-DISTNAME=		pan-0.146
-PKGREVISION=		7
+PKGNAME=		pan-0.147
 CATEGORIES=		news
-MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/source/
+TAG=			${PKGNAME_NOREV:tu:C/-/_/:C/\./_/} # PAN_0_147
+MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
 EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		pan-${TAG}
 
 MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		http://pan.rebelbase.com/
@@ -12,6 +13,7 @@ COMMENT=		Newsreader for GTK2
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
+USE_TOOLS+=		autoconf automake
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -24,9 +26,8 @@ LIBS+=			-lcompat
 
 LIBS.SunOS+=	-lsocket -liconv
 
-# temporary fix for GLib 2.68 breakage
-# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
-CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 # "Build" these files out of thin air, since base msgfmt doesn't know
 # about --xml --desktop.
@@ -40,7 +41,7 @@ pre-build:
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.16.0
+.include "../../textproc/enchant/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
