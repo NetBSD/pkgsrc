@@ -1,0 +1,32 @@
+# $NetBSD: go-modules.mk,v 1.1 2021/09/19 13:32:20 bsiegert Exp $
+
+GO_MODULE_FILES+=	git.schwanenlied.me/yawning/bsaes.git/@v/v0.0.0-20190320102049-26d1add596b6.mod
+GO_MODULE_FILES+=	git.schwanenlied.me/yawning/bsaes.git/@v/v0.0.0-20190320102049-26d1add596b6.zip
+GO_MODULE_FILES+=	git.torproject.org/pluggable-transports/goptlib.git/@v/v1.0.0.mod
+GO_MODULE_FILES+=	git.torproject.org/pluggable-transports/goptlib.git/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/agl/ed25519/@v/v0.0.0-20170116200512-5312a6153412.mod
+GO_MODULE_FILES+=	github.com/agl/ed25519/@v/v0.0.0-20170116200512-5312a6153412.zip
+GO_MODULE_FILES+=	github.com/dchest/siphash/@v/v1.2.1.mod
+GO_MODULE_FILES+=	github.com/dchest/siphash/@v/v1.2.1.zip
+GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.mod
+GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.zip
+GO_MODULE_FILES+=	github.com/dsnet/golib/@v/v0.0.0-20171103203638-1ea166775780.mod
+GO_MODULE_FILES+=	github.com/dsnet/golib/@v/v0.0.0-20171103203638-1ea166775780.zip
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.4.1.mod
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.4.1.zip
+GO_MODULE_FILES+=	github.com/klauspost/cpuid/@v/v1.2.0.mod
+GO_MODULE_FILES+=	github.com/klauspost/cpuid/@v/v1.2.0.zip
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.6.mod
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.6.zip
+GO_MODULE_FILES+=	gitlab.com/yawning/utls.git/@v/v0.0.11-1.mod
+GO_MODULE_FILES+=	gitlab.com/yawning/utls.git/@v/v0.0.11-1.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190325154230-a5d413f7728c.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190325154230-a5d413f7728c.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20190328230028-74de082e2cca.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20190328230028-74de082e2cca.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190329044733-9eb1bfa1ce65.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190329044733-9eb1bfa1ce65.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.zip
