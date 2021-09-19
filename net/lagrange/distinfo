@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/08/13 12:40:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/09/19 08:56:04 nia Exp $
 
-SHA1 (lagrange-1.6.2.tar.gz) = 8172ca2768d55d8b2fe4a85da11970cb523cecdd
-RMD160 (lagrange-1.6.2.tar.gz) = 19473edd78958e353b13d8c9a09bc838513d1114
-SHA512 (lagrange-1.6.2.tar.gz) = 2f4ad3c93535e8cd8f8106bc7428d0ae00f09ee1dc37334c57bd16d685145250fcc71c4d118206cb30055cd4095f3095f0a23b944769668e6ff3ac11bd36a42f
-Size (lagrange-1.6.2.tar.gz) = 22708028 bytes
+SHA1 (lagrange-1.6.5.tar.gz) = 9acc14a116b09a123d5910a9adde22350969ac9c
+RMD160 (lagrange-1.6.5.tar.gz) = 2d50fba13de7c3975ce954b7e421729b3e18e720
+SHA512 (lagrange-1.6.5.tar.gz) = f86eac167f68221166fdb93ff26b33c070e771405a845884c3f1ccfd4c54cee6a207a21022d4e9ade48a33648ca3f5a607ac432879c6163ea494225448188e88
+Size (lagrange-1.6.5.tar.gz) = 22717536 bytes
