@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4857 2021/09/19 18:01:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4858 2021/09/19 23:51:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7504,3 +7504,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-puma to 5.4.0 [taca 2021-09-19]
 	Updated www/ruby-rouge to 3.26.1 [taca 2021-09-19]
 	Updated www/ruby-websocket-driver to 0.7.5 [taca 2021-09-19]
+	Updated math/R-psych to 2.1.6 [mef 2021-09-19]
