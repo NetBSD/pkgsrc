@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/02/05 15:23:58 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/09/19 17:05:20 taca Exp $
 
-SHA1 (rex-random_identifier-0.1.5.gem) = 99e47815fff16fabf13e245d773df5d62cdd8789
-RMD160 (rex-random_identifier-0.1.5.gem) = 23a389971cbc8f8298fa4bf874046d4ef6c4b876
-SHA512 (rex-random_identifier-0.1.5.gem) = ac794b8fb3c1d450f3f171da36f17e7eb675e3fe7c4a34bf47fde2cc16635d31f8f762a3e9ae5d7e9c53babccad4665345d5d1389caa9549dd7c54b157d59feb
-Size (rex-random_identifier-0.1.5.gem) = 16896 bytes
+SHA1 (rex-random_identifier-0.1.8.gem) = 101e8655a647ed24e498c38cc592d1d523eb06b7
+RMD160 (rex-random_identifier-0.1.8.gem) = c3bf7cb284ad6290188c27d3bb0cdc1353f071fe
+SHA512 (rex-random_identifier-0.1.8.gem) = 7fd30d9ed3b246e71fe694269fc0b0f77a1ed9986de7d5d2a05860d02df5fb0739a561914cfac312509c3a1f8d992061d98f66c4368d58e1481f67c79cff2364
+Size (rex-random_identifier-0.1.8.gem) = 17408 bytes
