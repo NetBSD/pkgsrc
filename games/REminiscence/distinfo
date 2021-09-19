@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.6 2021/07/21 12:59:10 yhardy Exp $
+$NetBSD: distinfo,v 1.7 2021/09/19 11:06:41 yhardy Exp $
 
-SHA1 (REminiscence-0.4.8.tar.bz2) = c0097b76e2385d222358b65db88f2cd4f7c5eca9
-RMD160 (REminiscence-0.4.8.tar.bz2) = f853446eb4db9fe0874c44f70d3d3e95b1cc19be
-SHA512 (REminiscence-0.4.8.tar.bz2) = f4b0853bfd61df712ee028617d5847f7dc2b3dd84f3286ed25c45a5011093e1c46b5f50d3c3839cea57aa7ff31b1c9c04de3d3553908a8bd60837aa298b8544e
-Size (REminiscence-0.4.8.tar.bz2) = 158116 bytes
+SHA1 (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = 2e5d40525f0c51b5f4d9d941aa80f90d64eed76e
+RMD160 (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = 28733606d0c30ea6c90f2eb027eb4bfbcedb8b0d
+SHA512 (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = b30b34ef21e68c1cb2b87998ad33bad84e6bd919e91ff954cbe220797f2028f3d0ff581d5549c7a8c0c0d06ecfbeee572cdc9101fbc220de705ff274f8ba3576
+Size (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = 159531 bytes
+SHA1 (REminiscence-0.4.9/stb_vorbis.c) = d4a936c6e1910aeb7c2eb6bcb22bde1044a1d2d4
+RMD160 (REminiscence-0.4.9/stb_vorbis.c) = 68160d8a481d38735b8c8dfb04da928cc63ca2d6
+SHA512 (REminiscence-0.4.9/stb_vorbis.c) = 860d87b37bfc9624544d62e72e3c28075db18a24e81d7cadf622b726bd9b94e5f3485afe0d8ac223a976a2d65cd5ee527a3c4831aae9947168a25cf19bf78c88
+Size (REminiscence-0.4.9/stb_vorbis.c) = 192790 bytes

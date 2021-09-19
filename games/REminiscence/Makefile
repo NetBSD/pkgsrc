@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2021/09/08 21:05:03 nia Exp $
-DISTNAME=		REminiscence-0.4.8
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.22 2021/09/19 11:06:41 yhardy Exp $
+DISTNAME=		REminiscence-0.4.9
 CATEGORIES=		games
 MASTER_SITES=		http://cyxdown.free.fr/reminiscence/
+DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.tar.bz2
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		stb_vorbis.c
+SITES.stb_vorbis.c=	${MASTER_SITE_GITHUB:=nothings/}stb/raw/1ee679ca2ef753a528db5ba6801e1067b40481b8/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cyxdown.free.fr/reminiscence/
 COMMENT=		Engine to play Flashback by Delphine Software
-LICENSE=		gnu-gpl-v3
+LICENSE=		gnu-gpl-v3 AND public-domain
 
 USE_LANGUAGES=		c++
 
@@ -17,6 +20,9 @@ BUILD_TARGET=		rs
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/doc/REminiscence
+
+pre-build:
+	${CP} ${WRKDIR}/stb_vorbis.c ${WRKSRC}/
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rs ${DESTDIR}${PREFIX}/bin
