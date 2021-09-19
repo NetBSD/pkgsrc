@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/06/14 16:27:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/19 17:49:58 taca Exp $
 
-DISTNAME=	faraday_middleware-1.0.0
+DISTNAME=	faraday_middleware-1.1.0
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
