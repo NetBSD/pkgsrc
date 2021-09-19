@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/08/24 13:50:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/09/19 08:14:58 nia Exp $
 
-SHA1 (gearsystem-3.4.0.tar.gz) = c061d89e00761d6da6635dce30aba3c3053345c0
-RMD160 (gearsystem-3.4.0.tar.gz) = 9bae3dc1a81212296bcb830323b3909c7c2b814f
-SHA512 (gearsystem-3.4.0.tar.gz) = b04dab15c0848f709e8bc048958dc91ab2cc6e0c72d2ef680b3bb26d525c4aeb5b896a6714908c52263bed7356af3e21e20748b23cd457a18918de3d4f698ed6
-Size (gearsystem-3.4.0.tar.gz) = 14570068 bytes
+SHA1 (gearsystem-3.4.1.tar.gz) = d2656779caee4d497c989201e8ed5c01dce7c9ca
+RMD160 (gearsystem-3.4.1.tar.gz) = f92e06ba8dfd4c754fa0b91b1f13418c75b19234
+SHA512 (gearsystem-3.4.1.tar.gz) = 04fa31b6e86f3397bf64e3f2184f3810176518bb4aaa1a85c80eb6dde11da80cce14fbbe6a35aa3a26c5c00c12eb5bfb7f8033d98e4fbc894d5f7135cd49d6c1
+Size (gearsystem-3.4.1.tar.gz) = 14570974 bytes
 SHA1 (patch-platforms_desktop-shared_Makefile.common) = 0616233d880b0cf232362efb495798074eb59c84
