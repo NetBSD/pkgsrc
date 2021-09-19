@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4822 2021/09/19 16:27:18 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4823 2021/09/19 16:32:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7469,3 +7469,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/gcloud-golang-metadata [bsiegert 2021-09-19]
 	Removed www/go-gohtml [bsiegert 2021-09-19]
 	Updated net/bind916 to 9.16.21 [taca 2021-09-19]
+	Updated archivers/php-pecl-zip to 1.19.4 [taca 2021-09-19]
