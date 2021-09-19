@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 16:51:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/19 17:05:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
