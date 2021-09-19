@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/04/02 20:27:12 plunky Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/09/19 15:35:40 gdt Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -8,6 +8,7 @@ lib/libqcadentity.so
 lib/libqcadgrid.so
 lib/libqcadgui.so
 lib/libqcadoperations.so
+lib/libqcadscripts.so
 lib/libqcadsnap.so
 lib/libqcadspatialindex.so
 lib/libqcadstemmer.so
