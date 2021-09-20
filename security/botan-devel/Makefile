@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/04/21 13:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.41 2021/09/20 09:09:21 nia Exp $
 
 DISTNAME=	Botan-2.17.3
 PKGNAME=	${DISTNAME:tl}
@@ -40,8 +40,10 @@ CONFIGURE_ARGS+=	--cpu=i386
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
-.elif ${MACHINE_ARCH} == "arm"
-CONFIGURE_ARGS+=	--cpu=arm
+.elif !empty(MACHINE_ARCH:Maarch64*)
+CONFIGURE_ARGS+=	--cpu=arm64
+.elif !empty(MACHINE_ARCH:Mearm*)
+CONFIGURE_ARGS+=	--cpu=arm32
 .endif
 
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
