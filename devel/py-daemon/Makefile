@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/09/20 08:55:30 nia Exp $
+# $NetBSD: Makefile,v 1.22 2021/09/20 09:20:17 wiz Exp $
 
 DISTNAME=	python-daemon-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.10:../../devel/py-lockfile
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
