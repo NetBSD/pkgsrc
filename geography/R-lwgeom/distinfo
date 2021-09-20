@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/08 23:32:09 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/09/20 11:52:06 mef Exp $
 
-SHA1 (R/lwgeom_0.2-5.tar.gz) = 1559616a162bc4516f63e77199eccb3f48fa31c5
-RMD160 (R/lwgeom_0.2-5.tar.gz) = 6956e9749989ff2b5c743cef445259663405a98e
-SHA512 (R/lwgeom_0.2-5.tar.gz) = bde098a524e96e9f5663261a816a466b406fa7b1ffbcf2231f624d9e07affb54922691dce9b9608c5b0e6789e218bd155079befca002fe123ecef5a1fc6e5c03
-Size (R/lwgeom_0.2-5.tar.gz) = 501653 bytes
+SHA1 (R/lwgeom_0.2-7.tar.gz) = 703a7329877f22046ca1545b15e33aff2558de5a
+RMD160 (R/lwgeom_0.2-7.tar.gz) = 37965a5710719883afb7e8e234def621efb1ef1a
+SHA512 (R/lwgeom_0.2-7.tar.gz) = 46c145d236e3a995332b268dde897bea8311e0558df49517f26849950d818c35d7520d15866730e4b73a781751e05cd7300980cc686ab1887ae62e551049295e
+Size (R/lwgeom_0.2-7.tar.gz) = 473431 bytes
