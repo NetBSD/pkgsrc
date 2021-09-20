@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4863 2021/09/20 01:16:56 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4864 2021/09/20 01:36:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7510,3 +7510,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-tibble to 3.1.4 [mef 2021-09-20]
 	Updated math/R-survey to 4.1.1 [mef 2021-09-20]
 	Updated math/R-nloptr to 1.2.2.2 [mef 2021-09-20]
+	Updated graphics/R-ggExtra to 0.9 [mef 2021-09-20]
