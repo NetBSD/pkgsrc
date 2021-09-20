@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/04/21 11:41:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/20 11:52:06 mef Exp $
 
 R_PKGNAME=	lwgeom
-R_PKGVER=	0.2-5
-PKGREVISION=	2
+R_PKGVER=	0.2-7
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +9,10 @@ COMMENT=	Bindings to Selected 'liblwgeom' Functions for Simple Features
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-units>=0.6.5:../../math/R-units
+
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-geosphere-[0-9]*:../../geography/R-geosphere
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
