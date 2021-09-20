@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21087 2021/09/20 04:12:04 mef Exp $
+$NetBSD: TODO,v 1.21088 2021/09/20 05:04:50 mef Exp $
 
 Suggested new packages
 ======================
@@ -1419,7 +1419,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
-	o osm-gps-map-1.2.0
 	o oto-0.5
 	o owl-lisp-0.1.16
 	o p0f-3.09b
