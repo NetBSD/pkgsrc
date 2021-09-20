@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2020/08/17 20:18:54 leot Exp $
+# $NetBSD: Makefile,v 1.7 2021/09/20 03:35:09 mef Exp $
 
 R_PKGNAME=	Cairo
-R_PKGVER=	1.5-10
-PKGREVISION=	1
+R_PKGVER=	1.5-12.2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R graphics device using cairo graphics library
 LICENSE=	gnu-gpl-v2
 
+TEST_DEPENDS+=	R-png-[0-9]*:../../graphics/R-png
+
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c
 
 .include "../../math/R/Makefile.extension"
 .include "../../graphics/cairo/buildlink3.mk"
