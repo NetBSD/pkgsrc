@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2019/07/31 19:55:15 brook Exp $
-
-SHA1 (R/maps_3.3.0.tar.gz) = a691cc1a4b3e57b52d202c587c7ef80ad0978ed6
-RMD160 (R/maps_3.3.0.tar.gz) = c4249d4f907742c8174a3e34034bc9b41b2e37ab
-SHA512 (R/maps_3.3.0.tar.gz) = 4310748976ab262f818de589d63d5a5b49bc356c5df0651b123124152701e4c2003387a5cb9b5e8b7fbd0ecc8bbe010c707fc86461f152d544451f1fa65ac647
-Size (R/maps_3.3.0.tar.gz) = 2493744 bytes
