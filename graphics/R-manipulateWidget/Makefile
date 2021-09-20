@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/06 11:04:25 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/20 03:11:38 mef Exp $
 
 R_PKGNAME=	manipulateWidget
-R_PKGVER=	0.10.1
+R_PKGVER=	0.11.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +16,7 @@ DEPENDS+=	R-miniUI>=0.1.1.1:../../www/R-miniUI
 DEPENDS+=	R-shiny>=1.0.3:../../www/R-shiny
 DEPENDS+=	R-miniUI-[0-9]*:../../www/R-miniUI
 DEPENDS+=	R-webshot-[0-9]*:../../www/R-webshot
+DEPENDS+=	R-shinyjs-[0-9]*:../../www/R-shinyjs
 
 #Packages suggested but not available:
 #  'dygraphs', 'leaflet', 'plotly'
