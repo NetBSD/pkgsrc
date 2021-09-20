@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21092 2021/09/20 09:19:54 wiz Exp $
+$NetBSD: TODO,v 1.21093 2021/09/20 11:05:50 mef Exp $
 
 Suggested new packages
 ======================
@@ -414,7 +414,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-raster-3.4.5
 	o R-scales-1.1.1
 	o R-spatstat-2.1.0
-	o R-spatstat.data-2.1.0
 	o R-stars-0.5.2
 	o R-timeSeries-3062.100
 	o R-tseries-0.10.48
