@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/20 03:06:37 mef Exp $
+
+SHA1 (R/diffr_0.1.tar.gz) = 3baf2d611b52cece88dce9fc283f980da492f891
+RMD160 (R/diffr_0.1.tar.gz) = d147467d69859357e8e766fb4307889006016a5c
+SHA512 (R/diffr_0.1.tar.gz) = c7683c7a7cc8b90a33923494378447296c57867e00d7a825843be52875cefa4d5951e30bf4133bc32c69c64bad09cd0cedcb2ef2bc85259f2f858f65eb211cba
+Size (R/diffr_0.1.tar.gz) = 65972 bytes
