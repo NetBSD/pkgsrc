@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/09/20 12:20:11 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/20 12:25:34 mef Exp $
 
 R_PKGNAME=	spatstat
 R_PKGVER=	2.2-0
@@ -9,8 +9,6 @@ COMMENT=	Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=	c c++
-
-# ERROR: dependencies 'spatstat.geom', 'spatstat.core', 'spatstat.linnet' are not available for package 'spatstat'
 
 DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
 DEPENDS+=	R-spatstat.core>=2.1.0:../../geography/R-spatstat.core
