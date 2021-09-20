@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 03:55:17 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/20 12:20:11 mef Exp $
 
 R_PKGNAME=	spatstat
-R_PKGVER=	1.63-2
+R_PKGVER=	2.2-0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,13 +10,20 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=	c c++
 
+# ERROR: dependencies 'spatstat.geom', 'spatstat.core', 'spatstat.linnet' are not available for package 'spatstat'
+
 DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
-DEPENDS+=	R-spatstat.data>=1.4.3:../../geography/R-spatstat.data
-DEPENDS+=	R-spatstat.utils>=1.17.0:../../geography/R-spatstat.utils
+DEPENDS+=	R-spatstat.core>=2.1.0:../../geography/R-spatstat.core
+DEPENDS+=	R-spatstat.data>=2.1.0:../../geography/R-spatstat.data
+DEPENDS+=	R-spatstat.geom>=2.1.0:../../geography/R-spatstat.geom
+DEPENDS+=	R-spatstat.linnet>=2.1.0:../../geography/R-spatstat.linnet
+DEPENDS+=	R-spatstat.utils>=2.1.0:../../geography/R-spatstat.utils
 DEPENDS+=	R-abind>=1.4.0:../../math/R-abind
 DEPENDS+=	R-goftest>=1.0.3:../../math/R-goftest
 DEPENDS+=	R-polyclip>=1.5.0:../../graphics/R-polyclip
 DEPENDS+=	R-tensor>=1.5:../../math/R-tensor
+
+TEST_DEPENDS+=	tex-anysize-[0-9]*:../../print/tex-anysize
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
