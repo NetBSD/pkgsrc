@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/09/08 21:04:58 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/20 07:50:07 nia Exp $
 
 DISTNAME=	ykchorus-v0.2.2-source
 PKGNAME=	${DISTNAME:S/-source//1:S/-v/-/1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SpotlightKid/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -25,6 +25,9 @@ GCC_REQD+=	4.7
 .if ${OPSYS} != "Linux"
 CXXFLAGS+=	-DDGL_FILE_BROWSER_DISABLED
 .endif
+
+# No CPU-specific optimizations
+MAKE_FLAGS+=	NOOPT=true
 
 REPLACE_SH+=	dpf/utils/generate-ttl.sh
 
