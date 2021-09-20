@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/09 15:14:14 brook Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/20 12:12:17 mef Exp $
 
 R_PKGNAME=	ggspatial
-R_PKGVER=	1.0.3
+R_PKGVER=	1.1.5
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,12 @@ DEPENDS+=	R-plyr>=1.8.6:../../math/R-plyr
 DEPENDS+=	R-reshape2>=1.4.3:../../math/R-reshape2
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 DEPENDS+=	R-tidyr>=1.0.2:../../math/R-tidyr
+
+# Packages suggested but not available: 'ggrepel', 'vdiffr'
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-stars-[0-9]*:../../geography/R-stars
+TEST_DEPENDS+=	R-lwgeom-[0-9]*:../../geography/R-lwgeom
 
 USE_LANGUAGES=	# none
 
