@@ -1,0 +1,4 @@
+An R interface to the 'codediff' JavaScript library (a copy of which
+is included in the package, see <https://github.com/danvk/codediff.js>
+for information). Allows for visualization of the difference between 2
+files, usually text files or R scripts, in a browser.
