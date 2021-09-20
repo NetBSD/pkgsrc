@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4888 2021/09/20 11:11:12 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4889 2021/09/20 11:52:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7536,3 +7536,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added geography/R-spatstat.linnet version 2.3.0 [mef 2021-09-20]
 	Updated geography/R-spatstat.data to 2.1.0 [mef 2021-09-20]
 	Updated geography/R-spData to 0.3.10 [mef 2021-09-20]
+	Updated geography/R-lwgeom to 0.2.7 [mef 2021-09-20]
