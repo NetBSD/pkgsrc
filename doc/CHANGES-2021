@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4894 2021/09/20 12:51:30 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4895 2021/09/20 13:01:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7542,3 +7542,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/R-osmdata to 0.1.6 [mef 2021-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q3 branch [wiz 2021-09-20]
 	Updated geography/R-raster to 3.4.13 [mef 2021-09-20]
+	Updated geography/R-stars to 0.5.3 [mef 2021-09-20]
