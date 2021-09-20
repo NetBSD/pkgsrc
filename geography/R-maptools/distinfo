@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/06/06 07:53:48 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/09/20 05:19:08 mef Exp $
 
-SHA1 (R/maptools_1.1-1.tar.gz) = dfb81adfd72d898684af9cff8f36b1962c82f1e3
-RMD160 (R/maptools_1.1-1.tar.gz) = a928c9aaae78a563dcf0edf54d4e2e84a9fe638f
-SHA512 (R/maptools_1.1-1.tar.gz) = 069530531e498c62bb363da20f799ab7d63db4400844cec376b166c70dedd9fdd4070b25918408a6f707298f355b9dc24ca0ddcedb7a9dec556b900c924fd32b
-Size (R/maptools_1.1-1.tar.gz) = 1586925 bytes
+SHA1 (R/maptools_1.1-2.tar.gz) = 5bde02d61f441516a457331c1f30fe447a12a9ae
+RMD160 (R/maptools_1.1-2.tar.gz) = a23e98bd784f65ef7513f779e9169bc7f4ae7953
+SHA512 (R/maptools_1.1-2.tar.gz) = d4e753bda0375ef24665ad6ca3d6f2f06d955ecc53d7ea2f91555a554ffef16b3223058335efc69ef180452c3fb927bbb718b1b5624b85b664125d919414b494
+Size (R/maptools_1.1-2.tar.gz) = 1594390 bytes
