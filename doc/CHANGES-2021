@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4868 2021/09/20 03:08:08 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4869 2021/09/20 03:11:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7515,3 +7515,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/R-jpeg to 0.1.9 [mef 2021-09-20]
 	Added math/R-insight version 0.14.4 [mef 2021-09-20]
 	Added devel/R-diffr version 0.1 [mef 2021-09-20]
+	Updated graphics/R-manipulateWidget to 0.11.0 [mef 2021-09-20]
