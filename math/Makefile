@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.518 2021/09/18 23:08:24 mef Exp $
+# $NetBSD: Makefile,v 1.519 2021/09/20 02:51:23 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -69,6 +69,7 @@ SUBDIR+=	R-hexbin
 SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
 SUBDIR+=	R-igraph
+SUBDIR+=	R-insight
 SUBDIR+=	R-intervals
 SUBDIR+=	R-lme4
 SUBDIR+=	R-lmm
