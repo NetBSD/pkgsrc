@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4881 2021/09/20 06:45:43 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4882 2021/09/20 07:22:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7528,3 +7528,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added geography/R-wk version 0.5.0 [mef 2021-09-20]
 	Added geography/R-s2 version 1.0.6 [mef 2021-09-20]
 	Updated geography/R-sf to 1.0.2 [mef 2021-09-20]
+	Updated geography/R-spatstat.utils to 2.2.0 [mef 2021-09-20]
