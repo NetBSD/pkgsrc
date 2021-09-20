@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4859 2021/09/20 00:01:21 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4860 2021/09/20 00:11:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7506,3 +7506,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-websocket-driver to 0.7.5 [taca 2021-09-19]
 	Updated math/R-psych to 2.1.6 [mef 2021-09-19]
 	Updated math/R-XML to 3.99.0.8 [mef 2021-09-20]
+	Updated math/R-robustbase to 0.93.8 [mef 2021-09-20]
