@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/07 03:42:41 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/09/20 07:21:52 mef Exp $
 
-SHA1 (R/spatstat.utils_1.17-0.tar.gz) = 41e9284b04bee4b711cf4ae4437a45982eb9eea1
-RMD160 (R/spatstat.utils_1.17-0.tar.gz) = 23e08dd7ada0d5753d216e7e4987bed76c67f702
-SHA512 (R/spatstat.utils_1.17-0.tar.gz) = b266dedd28167caf22e4bb143c36eba79fa88df1c5a015cf1561d9d4d5ef2896e229911a979ab0366e32c33018be0b743536567b1d0e043128588d2fee9d8fd8
-Size (R/spatstat.utils_1.17-0.tar.gz) = 66334 bytes
+SHA1 (R/spatstat.utils_2.2-0.tar.gz) = 2c36f5d4c2a021f2ab62b523e81be72c2e914d0f
+RMD160 (R/spatstat.utils_2.2-0.tar.gz) = c39cffca11880bc9fbd1237ce7e47a70ff6bc599
+SHA512 (R/spatstat.utils_2.2-0.tar.gz) = 83f51d5deccd9e95ad074367540ff28a0704481eefb1faf6a6a53a13bcc0e61e082f54101f943ba5823534aea36c07abb162feaf1b60313d4f95f9cbe93c5ce0
+Size (R/spatstat.utils_2.2-0.tar.gz) = 71720 bytes
