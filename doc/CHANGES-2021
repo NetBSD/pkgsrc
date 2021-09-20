@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4872 2021/09/20 03:39:29 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4873 2021/09/20 03:55:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7519,3 +7519,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/R-viridisLite to 0.4.0 [mef 2021-09-20]
 	Updated graphics/R-Cairo to 1.5.12.2 [mef 2021-09-20]
 	Updated graphics/R-viridis to 0.6.1 [mef 2021-09-20]
+	Updated print/R-tinytex to 0.32 [mef 2021-09-20]
