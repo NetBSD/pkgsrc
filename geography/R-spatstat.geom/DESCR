@@ -1,0 +1,5 @@
+Defines types of spatial data such as point patterns, mainly in two
+dimensions, but also in higher dimensions. Provides class support, and
+functions for geometrical operations on spatial data, used in the
+'spatstat' family of packages. Excludes spatial data on a linear
+network, which are covered by the separate package 'spatstat.linnet'.
