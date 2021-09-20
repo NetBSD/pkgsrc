@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4864 2021/09/20 01:36:35 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4865 2021/09/20 02:33:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7511,3 +7511,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-survey to 4.1.1 [mef 2021-09-20]
 	Updated math/R-nloptr to 1.2.2.2 [mef 2021-09-20]
 	Updated graphics/R-ggExtra to 0.9 [mef 2021-09-20]
+	Updated graphics/R-ggthemes to 4.2.4 [mef 2021-09-20]
