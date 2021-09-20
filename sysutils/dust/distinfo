@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/09/19 11:52:24 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/09/20 18:31:19 pin Exp $
 
 SHA1 (aho-corasick-0.7.18.crate) = 0e3f242614a732b703e12fc3c4456c53b0536fb8
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
@@ -64,10 +64,10 @@ SHA1 (doc-comment-0.3.3.crate) = 6486b6d97e559f8728dfe108f9275c2aeb504396
 RMD160 (doc-comment-0.3.3.crate) = 5d7ae26f23e3b272bcb86ebb959609a762aebe10
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
-SHA1 (dust-0.7.0.tar.gz) = cf1884400c3b1f7197e6739648b28485010f9092
-RMD160 (dust-0.7.0.tar.gz) = 9a44b06704f6d56c73c4d2e32cd2c1ca9648de37
-SHA512 (dust-0.7.0.tar.gz) = 708aac98a45b7fdbe622ed5503dec7e728d7ac9f15b75722cece3e36ce39a0ff3ca363c06fb84c56c7683edf4816e22301f6ba84c34cb59e654115b74d3f5e3b
-Size (dust-0.7.0.tar.gz) = 88819 bytes
+SHA1 (dust-0.7.5.tar.gz) = a0e164a04fb3868bae53e0fe386ef22e6f3025a2
+RMD160 (dust-0.7.5.tar.gz) = 3308ca794c5af637d1556324c205c0f5eba571ef
+SHA512 (dust-0.7.5.tar.gz) = 22459292ed0707b33aa3eb2aba0ee3d46ce597a468e14a28e32391a33d0a591e408fab91e4154c49183544f4fb61dd41750ae4928dbe9b5e5d69714a561b8a8e
+Size (dust-0.7.5.tar.gz) = 88818 bytes
 SHA1 (either-1.6.1.crate) = 8bc23c16c8bacea8d0d9cee2553a563071cdde7b
 RMD160 (either-1.6.1.crate) = 07bd6bf61d1af0d0b0c997fc36b14e0d76e94cd5
 SHA512 (either-1.6.1.crate) = 4bfe56920e30cbc8eb4f90162db618f7dca653b42db35ab6a7045d3fd9a24ceb1778b1f79613850bdb1a87ad3794fa0d73015e46c48d513f368d8c3776fc9ddf
