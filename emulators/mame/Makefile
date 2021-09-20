@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2021/09/08 21:05:00 nia Exp $
+# $NetBSD: Makefile,v 1.139 2021/09/20 08:41:19 nia Exp $
 
 DISTNAME=	mame-0.235
 PKGREVISION=	1
@@ -44,8 +44,8 @@ BUILDLINK_TRANSFORM+=	rm:-m32
 BUILDLINK_TRANSFORM+=	rm:-m64
 .endif
 
-# Need to use gnu++14 instead of c++14 to get __builtin_alloca() (!)
-BUILDLINK_TRANSFORM+=	opt:-std=c++14:-std=gnu++14
+# Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
+BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 
 # -Werror is problematic
 MAKE_ENV=	NOWERROR=1
