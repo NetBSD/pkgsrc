@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/05 07:51:33 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/20 03:54:54 mef Exp $
 
 R_PKGNAME=	tinytex
 R_PKGVER=	0.32
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Helper Func. to Install & Maintain 'TeX Live' & Compile 'LaTeX' Docs
 LICENSE=	mit	# + file LICENSE
 
-DEPENDS+=	R-xfun>=0.5:../../devel/R-xfun
+DEPENDS+=	R-xfun>=0.23:../../devel/R-xfun
 
 USE_LANGUAGES=	# none
 
