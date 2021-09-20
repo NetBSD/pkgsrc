@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2021/09/20 06:01:41 mef Exp $
+
+BUILDLINK_TREE+=	R-wk
+
+.if !defined(R_WK_BUILDLINK3_MK)
+R_WK_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.R-wk+=	R-wk>=0.2.0
+BUILDLINK_DEPMETHOD.R-wk?=	build
+BUILDLINK_PKGSRCDIR.R-wk?=	../../geography/R-wk
+.endif	# R_WK_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-R-wk
