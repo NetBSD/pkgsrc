@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/09/20 06:01:41 mef Exp $
+
+SHA1 (R/wk_0.5.0.tar.gz) = 9934662b3c75ca4277dd045f6d7a137de85279f8
+RMD160 (R/wk_0.5.0.tar.gz) = 843e0e0236c8c17211a9e77bc301a09f4d0caf6a
+SHA512 (R/wk_0.5.0.tar.gz) = 2fff9b4712b79320239c33692330f7e74b3ff8c132b58e7a5fd07e76a1dc05ad8d134a7df05daf6091b20745d780f891610603c79f13d9869c9c015acd7ed783
+Size (R/wk_0.5.0.tar.gz) = 138686 bytes
