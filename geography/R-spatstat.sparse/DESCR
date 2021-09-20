@@ -1,0 +1,4 @@
+Defines sparse three-dimensional arrays and supports standard
+operations on them. The package also includes utility functions for
+matrix calculations that are common in statistics, such as quadratic
+forms.
