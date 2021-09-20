@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4884 2021/09/20 09:19:54 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4885 2021/09/20 09:58:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7531,3 +7531,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/R-spatstat.utils to 2.2.0 [mef 2021-09-20]
 	Updated geography/R-rgdal to 1.5.27 [mef 2021-09-20]
 	Updated textproc/py-docutils to 0.16nb1 [wiz 2021-09-20]
+	Added geography/R-spatstat.sparse version 2.0.0 [mef 2021-09-20]
