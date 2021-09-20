@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2021/07/29 19:16:08 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/09/20 07:50:07 nia Exp $
 
 SHA1 (ykchorus-v0.2.2-source.tar.gz) = f0304085d5d8d9da64e97373ded537107e3034bd
 RMD160 (ykchorus-v0.2.2-source.tar.gz) = a745f22489e3293391b27c3ea52752fe7198a66e
 SHA512 (ykchorus-v0.2.2-source.tar.gz) = 2b7151b00562b6a2209c08d5e025f6881c9b6631ee76fc86610ac856571d72b50e6c367bd7401642ba149288b40e609b8761abbe7753def528716408d143a52c
 Size (ykchorus-v0.2.2-source.tar.gz) = 2010302 bytes
 SHA1 (patch-Makefile) = f6e8812d436891b7e747a5897db382de689046ee
+SHA1 (patch-dpf_Makefile.base.mk) = 359836a0e786ba6bf2c20a44c7a0c66e51966c31
