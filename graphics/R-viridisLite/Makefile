@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:43 brook Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/20 03:31:06 mef Exp $
 
 R_PKGNAME=	viridisLite
-R_PKGVER=	0.3.0
+R_PKGVER=	0.4.0
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
