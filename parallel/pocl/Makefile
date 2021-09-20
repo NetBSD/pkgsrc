@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/11 15:09:23 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/20 09:05:30 nia Exp $
 
 DISTNAME=	pocl-1.7
 PKGREVISION=	2
@@ -32,6 +32,11 @@ GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
 .include "../../mk/bsd.prefs.mk"
+
+# "LLVM could not recognize your CPU model automatically..."
+.if !empty(MACHINE_ARCH:Maarch64*)
+CMAKE_ARGS+=	-DLLC_HOST_CPU="cortex-a53"
+.endif
 
 pre-configure:
 .if empty(PKGSRC_COMPILER:M*clang*)
