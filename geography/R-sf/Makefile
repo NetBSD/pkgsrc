@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/06/06 14:45:22 mef Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/20 06:45:31 mef Exp $
 
 R_PKGNAME=	sf
-R_PKGVER=	0.9-8
+R_PKGVER=	1.0-2
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,17 +15,24 @@ DEPENDS+=	R-rgeos>=0.5.2:../../geography/R-rgeos
 DEPENDS+=	R-DBI>=0.8:../../math/R-DBI
 DEPENDS+=	R-classInt>=0.4.1:../../math/R-classInt
 DEPENDS+=	R-units>=0.6.0:../../math/R-units
+DEPENDS+=	R-s2-[0-9]*:../../geography/R-s2
 
 # Packages suggested but not available:
-#   'lwgeom', 'mapview', 'odbc', 'pool', 'rgdal', 'RPostgres',
-#   'RPostgreSQL', 'RSQLite', 's2', 'spatstat', 'spatstat.geom',
-#   'spatstat.core', 'spatstat.linnet', 'spatstat.utils', 'stars',
-#   'terra', 'tidyr', 'tmap'
+#   'mapview', 'odbc', 'pool', 'RPostgres', 'RSQLite', 'spatstat.geom',
+#   'spatstat.core', 'spatstat.linnet', 'terra', 'tmap'
 
-TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-blob-[0-9]*:../../devel/R-blob
-TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
+TEST_DEPENDS+=	R-RPostgreSQL-[0-9]*:../../math/R-RPostgreSQL
+TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
+TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
+TEST_DEPENDS+=	R-stars-[0-9]*:../../geography/R-stars
+TEST_DEPENDS+=	R-spatstat-[0-9]*:../../geography/R-spatstat
+TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
