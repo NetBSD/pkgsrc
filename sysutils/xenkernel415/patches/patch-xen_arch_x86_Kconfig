@@ -1,0 +1,15 @@
+$NetBSD: patch-xen_arch_x86_Kconfig,v 1.1 2021/09/21 12:23:49 bouyer Exp $
+Restore 32bits PV guests support by default, for backward compatibility.
+This will be restricted to PV_SHIM for the next stable pkgsrc branch
+
+--- xen/arch/x86/Kconfig.orig	2021-09-21 13:25:36.605335522 +0200
++++ xen/arch/x86/Kconfig	2021-09-21 13:25:45.125518654 +0200
+@@ -56,7 +56,7 @@
+ config PV32
+ 	bool "Support for 32bit PV guests"
+ 	depends on PV
+-	default PV_SHIM
++	default y
+ 	---help---
+ 	  The 32bit PV ABI uses Ring1, an area of the x86 architecture which
+ 	  was deprecated and mostly removed in the AMD64 spec.  As a result,
