@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/09/15 13:39:28 pin Exp $
+# $NetBSD: Makefile,v 1.7 2021/09/21 10:47:28 pin Exp $
 
 DISTNAME=	nushell-0.37.0
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -20,9 +21,13 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		default tree
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_match ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_extra_tree ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
