@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/05/03 17:20:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/21 14:44:49 ryoon Exp $
 
 GITHUB_PROJECT=	epoll-shim
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-0.0.20210418
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	# empty
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
 
@@ -21,6 +20,12 @@ USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+PLIST_VARS+=	eventfd timerfd
+.if exists("/usr/include/sys/eventfd.h")
+PLIST.eventfd=	YES
+.endif
+.if exists("/usr/include/sys/timerfd.h")
+PLIST.timerfd=	YES
+.endif
 
 .include "../../mk/bsd.pkg.mk"

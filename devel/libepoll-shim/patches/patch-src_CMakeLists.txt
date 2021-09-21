@@ -1,0 +1,48 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2021/09/21 14:44:49 ryoon Exp $
+
+* If /usr/include/sys/timerfd.h exists, do not install timerfd.h.
+
+--- src/CMakeLists.txt.orig	2021-04-18 19:28:52.000000000 +0000
++++ src/CMakeLists.txt
+@@ -31,6 +31,7 @@ endmacro()
+ include(CheckSymbolExists)
+ # FreeBSD 13 supports native eventfd descriptors. Prefer them if available.
+ check_symbol_exists(eventfd "sys/eventfd.h" HAVE_EVENTFD)
++check_symbol_exists(timerfd_create "sys/timerfd.h" HAVE_TIMERFD)
+ check_symbol_exists(kqueue1 "sys/event.h" HAVE_KQUEUE1)
+ add_compat_target(kqueue1 "NOT;HAVE_KQUEUE1")
+ check_symbol_exists(sigandset "signal.h" HAVE_SIGANDSET)
+@@ -65,7 +66,6 @@ add_library(
+   epoll.c
+   epollfd_ctx.c
+   kqueue_event.c
+-  timerfd.c
+   timerfd_ctx.c
+   signalfd.c
+   signalfd_ctx.c
+@@ -73,6 +73,9 @@ add_library(
+ if(NOT HAVE_EVENTFD)
+   target_sources(epoll-shim PRIVATE eventfd.c eventfd_ctx.c)
+ endif()
++if(NOT HAVE_TIMERFD)
++  target_sources(epoll-shim PRIVATE timerfd.c)
++endif()
+ include(GenerateExportHeader)
+ generate_export_header(epoll-shim BASE_NAME epoll_shim)
+ target_link_libraries(
+@@ -91,11 +94,13 @@ set(_headers
+     "epoll-shim/detail/read.h"
+     "epoll-shim/detail/write.h"
+     "sys/epoll.h"
+-    "sys/signalfd.h"
+-    "sys/timerfd.h")
++    "sys/signalfd.h")
+ if(NOT HAVE_EVENTFD)
+   list(APPEND _headers "sys/eventfd.h")
+ endif()
++if(NOT HAVE_TIMERFD)
++  list(APPEND _headers "sys/timerfd.h")
++endif()
+ foreach(_header IN LISTS _headers)
+   configure_file("${PROJECT_SOURCE_DIR}/include/${_header}"
+                  "${PROJECT_BINARY_DIR}/install-include/${_header}" COPYONLY)
