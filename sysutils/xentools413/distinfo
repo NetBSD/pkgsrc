@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/03/30 06:59:03 bouyer Exp $
+$NetBSD: distinfo,v 1.11 2021/09/21 13:20:47 bouyer Exp $
 
 SHA1 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = b78d21457bc07b4c4d3e770109c169ddafdacdf5
 RMD160 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = 846dbcc0f56e87fca8c87b00ca2ed031471d4246
@@ -8,10 +8,10 @@ SHA1 (xen413/seabios-1.12.1.tar.gz) = 229f14b55876a20e1b60be075e99569a6bd8967d
 RMD160 (xen413/seabios-1.12.1.tar.gz) = d7e778971c68454b27730213b5d72c0600e77344
 SHA512 (xen413/seabios-1.12.1.tar.gz) = 58755ce842adcb99c0f2f3ebbf9ec6d4a5072753966ab46805a96db1570847b109a90e6e03d61f9088ef877ca8ba96a8006777dc38ec434fce6b487f6c1f91d0
 Size (xen413/seabios-1.12.1.tar.gz) = 613450 bytes
-SHA1 (xen413/xen-4.13.3.tar.gz) = edcd1bd736afa7b3b3022a97ce8ff215219a90c2
-RMD160 (xen413/xen-4.13.3.tar.gz) = 08665b76171957017c312d5637f6921526a3675d
-SHA512 (xen413/xen-4.13.3.tar.gz) = 622127d824b9c49b57282a887fb404e0bad05ff60bccade82e4e0e9b5ad975ff9aa1fba83392e6d8379e9a15340e8ae9785c0913eb11027816e4600432eea6b6
-Size (xen413/xen-4.13.3.tar.gz) = 39044539 bytes
+SHA1 (xen413/xen-4.13.4.tar.gz) = c521842ef96ac8143e1b2da80aa64db473860c3d
+RMD160 (xen413/xen-4.13.4.tar.gz) = 56fdcad77d212d27c0af52201f7f723b1727681a
+SHA512 (xen413/xen-4.13.4.tar.gz) = 1f6d67e0270b10be45b6444322ced791b44df09a3a51e0fe690f5ad76cd80d35115efc93056e99f73b4e550178e0e780c9ee827ced04b09caf12fdf34d9a9b71
+Size (xen413/xen-4.13.4.tar.gz) = 39055744 bytes
 SHA1 (patch-.._seabios-rel-1.12.1_src_string.c) = 8b4091daf0b653cfd4db51d2c09b5b42a08f6311
 SHA1 (patch-Config.mk) = c41005a60de2f94a72b0206030eb021c137653d3
 SHA1 (patch-Makefile) = 6c580cbea532d08a38cf5e54228bd0210a98da21
