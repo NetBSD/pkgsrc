@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/21 12:23:49 bouyer Exp $
 ${PYSITELIB}/grub/ExtLinuxConf.py
 ${PYSITELIB}/grub/ExtLinuxConf.pyc
 ${PYSITELIB}/grub/GrubConf.py
@@ -167,7 +167,7 @@ lib/debug${LOCALBASE}/libexec/xen/boot/xen-shim-syms
 lib/libxencall.a
 lib/libxencall.so
 lib/libxencall.so.1
-lib/libxencall.so.1.2
+lib/libxencall.so.1.3
 lib/libxenctrl.a
 lib/libxenctrl.so
 lib/libxenctrl.so.4.15
