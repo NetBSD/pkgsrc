@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4899 2021/09/21 03:24:19 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4900 2021/09/21 10:47:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7547,3 +7547,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed math/R-maps successor geography/R-maps [mef 2021-09-20]
 	Updated devel/py-approvaltests to 2.1.0 [schmonz 2021-09-20]
 	Updated sysutils/dust to 0.7.5 [pin 2021-09-20]
+	Updated shells/nushell to 0.37.0nb1 [pin 2021-09-21]
