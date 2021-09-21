@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/09/18 08:05:09 taca Exp $
+# $NetBSD: Makefile,v 1.63 2021/09/21 09:36:03 jperkin Exp $
 
 DISTNAME=	nokogiri-1.12.4
 CATEGORIES=	textproc
@@ -18,6 +18,9 @@ RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	mini_portile2>=2.6.1 \
 			:files ports/archives/libxml2-2.9.12.tar.gz= \
 			ports/archives/libxslt-1.1.34.tar.gz=
+
+# XXX: work around bug in bootstrap-mk-files, remove when fixed
+MAKE_ENV.SunOS+=	ARFLAGS=rcv
 
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
