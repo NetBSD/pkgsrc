@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/04/21 13:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.40 2021/09/22 02:50:02 mef Exp $
 
 DISTNAME=	codelite-15.0
 PKGREVISION=	2
@@ -70,6 +70,7 @@ BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc//uchardet/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
