@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4902 2021/09/21 13:21:30 bouyer Exp $
+$NetBSD: CHANGES-2021,v 1.4903 2021/09/22 14:22:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7552,3 +7552,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xentools415 to 4.15.1 [bouyer 2021-09-21]
 	Updated sysutils/xenkernel413 to 4.13.4 [bouyer 2021-09-21]
 	Updated sysutils/xentools413 to 4.13.4 [bouyer 2021-09-21]
+	Updated security/pam-u2f to 1.1.1 [nia 2021-09-22]
