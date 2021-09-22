@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/09/22 02:35:40 mef Exp $
+# $NetBSD: Makefile,v 1.34 2021/09/22 05:59:26 mef Exp $
 
 DISTNAME=		binutils-2.37
 PKGNAME=		${DISTNAME:S/^/avr-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2
@@ -62,7 +62,7 @@ post-install:
 	)
 	# emulators/simulavr wants following header files
 	(cd ${WRKSRC}/include;					\
-	for f in ansidecl.h symcat.h; do			\
+	for f in ansidecl.h symcat.h diagnostics.h ; do			\
 	  ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/avr/include;	\
 	done;							\
 	)
