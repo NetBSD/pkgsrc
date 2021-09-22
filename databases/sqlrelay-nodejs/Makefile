@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/04/21 13:24:31 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/09/22 21:19:28 mef Exp $
 
 PKGNAME=	${DISTNAME:S/sqlrelay/sqlrelay-nodejs/}
 PKGREVISION=	1
@@ -29,4 +29,5 @@ CHECK_WRKREF_SKIP+=	lib/node_modules/sqlrelay/sqlrelay.node
 .include "../../databases/sqlrelay/buildlink3.mk"
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
