@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2021/05/24 19:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2021/09/22 10:35:57 adam Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -119,14 +119,11 @@ INSTALLATION_DIRS+=	share/examples/net-snmp
 post-extract:
 .if ${OPSYS} == "DragonFly"
 	cp ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
-# XXX make it build on OS X 10.10; remove on the next update
 .elif ${OPSYS} == "Darwin"
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin14.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin15.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin16.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin17.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin18.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin19.h
+	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin18.h
+	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin19.h
+	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin20.h
+	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin21.h
 .endif
 
 post-wrapper:
