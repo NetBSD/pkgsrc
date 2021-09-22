@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/09/08 21:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.64 2021/09/22 11:59:22 nia Exp $
 
 DISTNAME=		openmsx-17.0
 PKGREVISION=		1
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config pax
 
-GCC_REQD+=		7 # C++17
+GCC_REQD+=		8 # std::charconv
 
 # Not sure why this is necessary to find components.hh...
 CXXFLAGS+=		-I${WRKSRC}/output
