@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/09/08 21:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/22 12:57:49 nia Exp $
 
 DISTNAME=	melonDS-0.8.3
 PKGNAME=	${DISTNAME:S/DS/ds/}
@@ -27,6 +27,11 @@ INSTALLATION_DIRS+=	share/applications
 .for s in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
 .endfor
+
+.include "../../graphics/MesaLib/features.mk"
+.if ${MESALIB_SUPPORTS_EGL:tl} == "no"
+PKG_FAIL_REASON+=	"Requires EGL support in Mesa"
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/flatpak/net.kuribo64.melonds.desktop \
