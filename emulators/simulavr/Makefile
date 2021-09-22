@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/09/22 02:35:40 mef Exp $
+# $NetBSD: Makefile,v 1.33 2021/09/22 06:01:31 mef Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		5
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
 CONFIGURE_ARGS+=	--with-libiberty=${PREFIX}/avr/lib/libiberty
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/avr/include ${PREFIX}/include
 CONFIGURE_ENV+=		TEX=no
 
 # Following line does not work yet (examples/python directory)
@@ -24,6 +25,7 @@ CONFIGURE_ENV+=		TEX=no
 #MAKE_ENV+=		az_python_use=true
 
 MAKE_JOBS_SAFE=		no
+AUTO_MKDIRS=		yes
 
 USE_TOOLS+=		makeinfo gmake
 USE_LIBTOOL=		yes
@@ -85,6 +87,9 @@ SUBST_SED.makeinfo=	-e 's,@MAKEINFO@,${PREFIX}/bin/makeinfo,g'
 
 # gcc 2.95 gives warnings that it cannot inline all functions.
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/avr/include/simulavr ${DESTDIR}${PREFIX}/include/
 
 .include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../cross/avr-gcc/buildlink3.mk"
