@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/09/21 14:44:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/09/22 17:45:13 nia Exp $
 
 GITHUB_PROJECT=	epoll-shim
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,10 +21,10 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 PLIST_VARS+=	eventfd timerfd
-.if exists("/usr/include/sys/eventfd.h")
+.if !exists(/usr/include/sys/eventfd.h)
 PLIST.eventfd=	YES
 .endif
-.if exists("/usr/include/sys/timerfd.h")
+.if !exists(/usr/include/sys/timerfd.h)
 PLIST.timerfd=	YES
 .endif
 
