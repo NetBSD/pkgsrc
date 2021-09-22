@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/09/21 13:20:47 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2021/09/22 21:18:12 bouyer Exp $
 
 SHA1 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = b78d21457bc07b4c4d3e770109c169ddafdacdf5
 RMD160 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = 846dbcc0f56e87fca8c87b00ca2ed031471d4246
@@ -81,7 +81,7 @@ SHA1 (patch-tools_qemu-xen-traditional_i386-dm_hookstarget.mak) = 3fdfbb7c9c2243
 SHA1 (patch-tools_qemu-xen-traditional_net.c) = 0999993172070db5dc8d7c7daaa4999a3edaadb8
 SHA1 (patch-tools_qemu-xen-traditional_xen-hooks.mak) = 528878c8465d75b63e044e4f6c89609e4edbc3e0
 SHA1 (patch-tools_qemu-xen_audio_audio.c) = a7f47ff0350900bcb99b5515eeee162144a98cf8
-SHA1 (patch-tools_qemu-xen_configure) = 38eee924f66c226a09c2408312fc0f67d99d2b81
+SHA1 (patch-tools_qemu-xen_configure) = fe16110e33158ca446fb191c64621bf80b76dea9
 SHA1 (patch-tools_qemu-xen_net_tap-bsd.c) = ac1ed72daeb051eae7352542630a9a02c99e485e
 SHA1 (patch-tools_qemu-xen_net_tap.c) = 53d8c1799136c412b775d7d02d72b1abc63f4dd3
 SHA1 (patch-tools_qemu-xen_qemu-doc.texi) = e72d480ec29829055f01226eaf020d4cbd100d5d
