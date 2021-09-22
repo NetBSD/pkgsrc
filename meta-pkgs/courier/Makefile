@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/22 21:24:57 mef Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 CATEGORIES=	meta-pkgs mail
@@ -30,7 +30,7 @@ DEPENDS+=	courier-mta>=${COURIER_VERSION}:../../mail/courier-mta
 #
 #	mail/maildrop, mail/courier-imap, mail/sqwebmail
 #
-DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
+#EPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 DEPENDS+=	courier-imap>=4.8.0:../../mail/courier-imap
 DEPENDS+=	sqwebmail>=5.4.1:../../mail/sqwebmail
 
