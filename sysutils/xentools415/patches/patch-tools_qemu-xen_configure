@@ -1,10 +1,11 @@
-$NetBSD: patch-tools_qemu-xen_configure,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+$NetBSD: patch-tools_qemu-xen_configure,v 1.2 2021/09/22 18:40:43 bouyer Exp $
 
 -lrt is needed for shm_open()
+-stopgap measure to make the package build on HEAD: ignore eventfd
 
---- tools/qemu-xen/configure.orig	2019-09-27 12:21:35.000000000 +0200
-+++ tools/qemu-xen/configure	2020-05-08 20:09:00.341400664 +0200
-@@ -841,6 +841,7 @@
+--- tools/qemu-xen/configure.orig	2021-04-07 17:38:52.000000000 +0200
++++ tools/qemu-xen/configure	2021-09-22 19:09:30.727151120 +0200
+@@ -851,6 +851,7 @@
    audio_drv_list="oss try-sdl"
    audio_possible_drivers="oss sdl"
    oss_lib="-lossaudio"
@@ -12,3 +13,11 @@ $NetBSD: patch-tools_qemu-xen_configure,v 1.1 2021/04/18 12:31:26 bouyer Exp $
    HOST_VARIANT_DIR="netbsd"
    supported_os="yes"
  ;;
+@@ -4779,6 +4780,7 @@
+ if compile_prog "" "" ; then
+   eventfd=yes
+ fi
++eventfd=no
+ 
+ # check if memfd is supported
+ memfd=no
