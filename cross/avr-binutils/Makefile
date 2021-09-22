@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2021/09/08 12:02:59 micha Exp $
+# $NetBSD: Makefile,v 1.33 2021/09/22 02:35:40 mef Exp $
 
 DISTNAME=		binutils-2.37
 PKGNAME=		${DISTNAME:S/^/avr-/}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2
@@ -54,6 +55,10 @@ post-install:
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la	\
 	  ${DESTDIR}${PREFIX}/avr/lib;				\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
+	)
+	# emulators/simulavr wants libiberty
+	(cd ${WRKSRC}/libiberty ;				\
+	${INSTALL_DATA} libiberty.* ${DESTDIR}${PREFIX}/avr/lib/libiberty	\
 	)
 	# emulators/simulavr wants following header files
 	(cd ${WRKSRC}/include;					\
