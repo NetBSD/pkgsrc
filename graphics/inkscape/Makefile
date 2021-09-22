@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2021/07/18 18:54:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.239 2021/09/22 06:35:56 nia Exp $
 
 DISTNAME=	inkscape-1.1
 PKGREVISION=	1
@@ -27,7 +27,9 @@ TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOLS_PLATFORM.msgfmt=	# empty
 
 EXTRACT_USING=		bsdtar
-GCC_REQD+=		4.5.2
+
+# std::optional
+GCC_REQD+=		7
 
 # This should be resolved in CMakeLists.txt.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
