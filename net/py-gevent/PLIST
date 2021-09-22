@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/08/24 10:42:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/09/22 07:09:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,9 +79,9 @@ ${PYSITELIB}/gevent/_semaphore.pyo
 ${PYSITELIB}/gevent/_socket2.py
 ${PYSITELIB}/gevent/_socket2.pyc
 ${PYSITELIB}/gevent/_socket2.pyo
-${PYSITELIB}/gevent/_socket3.py
-${PYSITELIB}/gevent/_socket3.pyc
-${PYSITELIB}/gevent/_socket3.pyo
+${PLIST.py3x}${PYSITELIB}/gevent/_socket3.py
+${PLIST.py3x}${PYSITELIB}/gevent/_socket3.pyc
+${PLIST.py3x}${PYSITELIB}/gevent/_socket3.pyo
 ${PYSITELIB}/gevent/_socketcommon.py
 ${PYSITELIB}/gevent/_socketcommon.pyc
 ${PYSITELIB}/gevent/_socketcommon.pyo
@@ -151,7 +151,8 @@ ${PYSITELIB}/gevent/hub.pyo
 ${PYSITELIB}/gevent/libev/__init__.py
 ${PYSITELIB}/gevent/libev/__init__.pyc
 ${PYSITELIB}/gevent/libev/__init__.pyo
-${PYSITELIB}/gevent/libev/_corecffi.abi3.so
+${PLIST.py2x}${PYSITELIB}/gevent/libev/_corecffi.so
+${PLIST.py3x}${PYSITELIB}/gevent/libev/_corecffi.abi3.so
 ${PYSITELIB}/gevent/libev/_corecffi_build.py
 ${PYSITELIB}/gevent/libev/_corecffi_build.pyc
 ${PYSITELIB}/gevent/libev/_corecffi_build.pyo
@@ -165,7 +166,8 @@ ${PYSITELIB}/gevent/libev/watcher.pyo
 ${PYSITELIB}/gevent/libuv/__init__.py
 ${PYSITELIB}/gevent/libuv/__init__.pyc
 ${PYSITELIB}/gevent/libuv/__init__.pyo
-${PYSITELIB}/gevent/libuv/_corecffi.abi3.so
+${PLIST.py2x}${PYSITELIB}/gevent/libuv/_corecffi.so
+${PLIST.py3x}${PYSITELIB}/gevent/libuv/_corecffi.abi3.so
 ${PYSITELIB}/gevent/libuv/_corecffi_build.py
 ${PYSITELIB}/gevent/libuv/_corecffi_build.pyc
 ${PYSITELIB}/gevent/libuv/_corecffi_build.pyo
