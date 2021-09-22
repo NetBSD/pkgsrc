@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/06/28 12:33:01 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2021/09/22 12:02:56 nia Exp $
 
 DISTNAME=		ckmame-1.1
 CATEGORIES=		emulators
@@ -14,6 +14,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config perl:test
 USE_CMAKE=		yes
 TEST_TARGET=		check
+
+GCC_REQD+=	8 # std::filesystem
 
 .include "../../archivers/libarchive/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.8
