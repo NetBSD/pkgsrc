@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2021/03/06 15:29:59 wiz Exp $
+$NetBSD: distinfo,v 1.29 2021/09/22 06:56:10 nia Exp $
 
 SHA1 (ncmpc-0.45.tar.xz) = e83ddb8f33f57ccff9261e05a5b1e66712bf8196
 RMD160 (ncmpc-0.45.tar.xz) = c7246a55a329b23ee84c00fa737d494bac10ff19
@@ -8,3 +8,4 @@ SHA1 (patch-doc_meson.build) = 5052b9eef5057f50dcbcea8d5bb46027263edb46
 SHA1 (patch-meson.build) = b16babee9f8e5799a600bf029b3bb606e32a265a
 SHA1 (patch-src_charset.cxx) = c8e06c936657819060c6539a3726e03fda7da54a
 SHA1 (patch-src_ncu.cxx) = 93ab60c406f8ef29fe23ffe6099d5825ee12bc13
+SHA1 (patch-src_net_IPv6Address.hxx) = 013994a6ef21532a6ebeaf6aeaa4a7ef83c0ce6b
