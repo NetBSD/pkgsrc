@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/09/21 13:20:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2021/09/22 21:18:12 bouyer Exp $
 #
 VERSION=	4.13.4
 
@@ -51,7 +51,7 @@ CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
-USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake
+USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake gsed
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		YES
