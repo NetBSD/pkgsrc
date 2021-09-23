@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/04/24 09:35:31 mrg Exp $
+$NetBSD: distinfo,v 1.9 2021/09/23 09:53:21 adam Exp $
 
 SHA1 (gcc-10.3.0.tar.xz) = fb51ed1660c065898c75951fb38e1ebad7d49feb
 RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
@@ -11,7 +11,7 @@ Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
-SHA1 (patch-gcc_config.gcc) = 6523fd234687e13abd54009a770f1c0acbcd62c7
+SHA1 (patch-gcc_config.gcc) = 4bf07441b6893e9b510f9ad775b4b95aa23e9791
 SHA1 (patch-gcc_config.host) = 8920ce841f6088b365c9b590e3ea9535bd880b40
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = 87185f5c2e2dbe4195cb19fe6213d2d616d5519b
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
