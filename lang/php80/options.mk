@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/03/07 13:41:36 taca Exp $
+# $NetBSD: options.mk,v 1.2 2021/09/23 15:48:37 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
@@ -69,6 +69,6 @@ PLIST.embed=		yes
 post-install: post-install-embed
 post-install-embed:
 	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/include/php/sapi/embed/
-	${INSTALL_LIB} ${WRKSRC}/libs/libphp7.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/libs/libphp.so ${DESTDIR}${PREFIX}/lib/
 .endif
 .endif
