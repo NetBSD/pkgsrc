@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/09/22 21:24:57 mef Exp $
+# $NetBSD: Makefile,v 1.19 2021/09/23 22:20:06 gutteridge Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 CATEGORIES=	meta-pkgs mail
@@ -30,7 +30,8 @@ DEPENDS+=	courier-mta>=${COURIER_VERSION}:../../mail/courier-mta
 #
 #	mail/maildrop, mail/courier-imap, mail/sqwebmail
 #
-#EPENDS+=	maildrop>=2.5.0:../../mail/maildrop
+# maildrop is presently a hard dependency of courier-mta.
+#DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 DEPENDS+=	courier-imap>=4.8.0:../../mail/courier-imap
 DEPENDS+=	sqwebmail>=5.4.1:../../mail/sqwebmail
 
