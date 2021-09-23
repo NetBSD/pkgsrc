@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/04/21 11:40:31 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/09/23 13:25:43 mef Exp $
 #
 
 USE_LANGUAGES=	c c++
@@ -7,6 +7,24 @@ USE_LANGUAGES=	c c++
 PKGREVISION=	11
 
 COMMENT+=	Bad plugins
+
+# really adhoc fix
+# intention is that the file gst-libs/gst/interfaces/photography-enumtypes.c
+# has the line
+#    #include "photography.h"
+# instead of
+#   \#include "photography.h"
+# To do that, modify generating Makefile to insert sed command
+# It may be some problems on glib-mkenums (in glib2-tools)
+
+SED_STRING=	',$$^ > $$@,$$^ | sed -e "s/\\\\\\\#include/\#include/" > $$@,'
+
+SUBST_CLASSES+=			backslash
+SUBST_FILES.backslash=		gst-libs/gst/interfaces/Makefile
+SUBST_MESSAGE.backslash=	Remove unnecessary bachslash
+SUBST_SED.backslash=		-e '/enumtypes.c:/,/ a hack rule to make sure/'s${SED_STRING}
+SUBST_STAGE.backslash=		post-configure
+
 
 # builds gsettings module
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
