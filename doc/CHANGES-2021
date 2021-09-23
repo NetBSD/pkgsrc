@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4905 2021/09/23 14:12:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4906 2021/09/23 14:44:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7555,3 +7555,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pam-u2f to 1.1.1 [nia 2021-09-22]
 	Updated shells/nushell to 0.37.0nb2 [pin 2021-09-23]
 	Updated lang/php73 to 7.3.31 [taca 2021-09-23]
+	Updated audio/termusic to 0.3.13 [pin 2021-09-23]
