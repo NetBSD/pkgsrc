@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/04/08 10:26:08 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2021/09/23 18:38:35 nia Exp $
 
 SHA1 (openscad-2021.01.tar.gz) = 4dce768db6ba1f95b0b10e9c53b3b8cd7318d11d
 RMD160 (openscad-2021.01.tar.gz) = 4ee2d86c8b2d56bedaef49eeed38765844e2cf60
@@ -6,5 +6,6 @@ SHA512 (openscad-2021.01.tar.gz) = 2dac2d9c2fdbb720bc2e56f66849a75abe10ee646f918
 Size (openscad-2021.01.tar.gz) = 15656800 bytes
 SHA1 (patch-features_qscintilla2-priv.prf) = ca5d5735d091441d6daf7535802f5ba7362c808c
 SHA1 (patch-openscad.pro) = 55e97368d2fdd77c8a4773699cfffdaccd65d63f
+SHA1 (patch-scripts_translation-update.sh) = 24929df617e450558934e46b1711f241945da7eb
 SHA1 (patch-src_colormap.h) = d218a17ac71e0178d32b79723b532c9f098bc038
 SHA1 (patch-src_scintillaeditor.h) = 47d2cde8d7349a23770c549e5df9b219678825e9
