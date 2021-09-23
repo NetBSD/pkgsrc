@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/09/17 13:52:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2021/09/23 00:15:22 gutteridge Exp $
 
 DISTNAME=		amazon-ecs-cli-1.21.0
 PKGREVISION=		7
@@ -20,5 +20,7 @@ INSTALLATION_DIRS+=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/ecs-cli ${DESTDIR}${PREFIX}/bin
 
-.include "../../lang/go/go-module.mk"
+# XXX This doesn't build when being treated as a "module" by recent Go
+# versions. On next update, check if this can be adjusted back to go-module.mk.
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
