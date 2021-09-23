@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2021/07/30 12:26:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2021/09/23 18:37:48 nia Exp $
 
 VERSION=	2021.01
 DISTNAME=	openscad-${VERSION}
@@ -38,6 +38,7 @@ do-configure:
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/opencsg/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
