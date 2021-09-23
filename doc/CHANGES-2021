@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4904 2021/09/23 10:15:49 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4905 2021/09/23 14:12:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7554,3 +7554,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xentools413 to 4.13.4 [bouyer 2021-09-21]
 	Updated security/pam-u2f to 1.1.1 [nia 2021-09-22]
 	Updated shells/nushell to 0.37.0nb2 [pin 2021-09-23]
+	Updated lang/php73 to 7.3.31 [taca 2021-09-23]
