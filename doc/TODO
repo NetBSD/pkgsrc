@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21100 2021/09/23 12:06:24 mef Exp $
+$NetBSD: TODO,v 1.21101 2021/09/24 12:48:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -370,7 +370,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-21.1.5 [pkgsrc-wip]
-	o MesaLib-21.2.1
+	o MesaLib-21.2.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
