@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4907 2021/09/23 15:49:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.4908 2021/09/24 02:27:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7557,3 +7557,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php73 to 7.3.31 [taca 2021-09-23]
 	Updated audio/termusic to 0.3.13 [pin 2021-09-23]
 	Updated lang/php80 to 8.0.11 [taca 2021-09-23]
+	Updated lang/php74 to 7.4.24 [taca 2021-09-24]
