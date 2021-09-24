@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2017/12/08 21:12:05 bsiegert Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2021/09/24 18:35:28 bsiegert Exp $
 ${PYSITELIB}/borg/platform/linux.so
+${PYSITELIB}/borg/platform/syncfilerange.so
