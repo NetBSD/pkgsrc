@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2021/08/20 02:54:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.134 2021/09/24 05:47:00 tnn Exp $
 
 DISTNAME=	librsvg-2.50.7
 CATEGORIES=	graphics gnome
@@ -25,6 +25,20 @@ PKGCONFIG_OVERRIDE=	librsvg.pc.in
 TEST_TARGET=		check
 
 .include "cargo-depends.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+# librsvg broken with rustc-1.54.0. Temp fix for pkgsrc freeze.
+.if \
+  !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)	|| \
+  !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+RUSTFLAGS+=	-C target-feature=-lse
+PKG_LIBTOOL=	${WRKDIR}/libtool
+pre-configure:
+	sed 's,$$AR t "$$f_ex_an_ar_oldlib",& | grep -v lse.o,'	\
+	  < ${PREFIX}/bin/libtool > ${WRKDIR}/libtool
+	chmod +x ${WRKDIR}/libtool
+.endif
 
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
