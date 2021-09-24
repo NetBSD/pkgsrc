@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2021/01/01 08:19:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2021/09/24 18:56:16 thor Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${PKGVERSION}
@@ -84,9 +84,6 @@ lib/libboost_serialization.so.${PKGVERSION}
 lib/libboost_stacktrace_addr2line.a
 lib/libboost_stacktrace_addr2line.so
 lib/libboost_stacktrace_addr2line.so.${PKGVERSION}
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.a
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.so
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.so.${BOOST_VERSION}
 lib/libboost_stacktrace_basic.a
 lib/libboost_stacktrace_basic.so
 lib/libboost_stacktrace_basic.so.${PKGVERSION}
