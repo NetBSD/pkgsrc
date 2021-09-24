@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/09/23 13:25:43 mef Exp $
+# $NetBSD: Makefile,v 1.36 2021/09/24 12:31:02 mef Exp $
 #
 
 USE_LANGUAGES=	c c++
@@ -10,12 +10,12 @@ COMMENT+=	Bad plugins
 
 # really adhoc fix
 # intention is that the file gst-libs/gst/interfaces/photography-enumtypes.c
-# has the line
+# should have the line
 #    #include "photography.h"
 # instead of
 #   \#include "photography.h"
 # To do that, modify generating Makefile to insert sed command
-# It may be some problems on glib-mkenums (in glib2-tools)
+# It may be by some problems on glib-mkenums (in glib2-tools-2.68.3)
 
 SED_STRING=	',$$^ > $$@,$$^ | sed -e "s/\\\\\\\#include/\#include/" > $$@,'
 
