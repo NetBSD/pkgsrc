@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/09/25 05:40:00 nia Exp $
+
+Cope with NetBSD calling 32-bit ARM "earm".
+
+--- CMakeLists.txt.orig	2019-10-30 05:48:12.000000000 +0000
++++ CMakeLists.txt
+@@ -114,7 +114,7 @@ if(WIN32)
+ 	endif()
+ else()
+ 	set(X86 OFF)
+-	if(CMAKE_SYSTEM_PROCESSOR MATCHES "^arm")
++	if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(arm|earm)")
+ 		set(Architecture "arm")
+ 	elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "^i.86$")
+ 		set(X86 ON)
