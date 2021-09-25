@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/06/01 17:41:02 nia Exp $
+# $NetBSD: Makefile,v 1.13 2021/09/25 05:27:44 nia Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-20200526
 PKGREVISION=	1
@@ -21,6 +21,7 @@ MAKE_FLAGS+=	WANT_ZLIB=0 # disable vendored zlib
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "earmv7hf"
+CFLAGS+=	-march=armv7-a+neon -mfpu=neon
 MAKE_FLAGS+=	ARCH=arm
 MAKE_FLAGS+=	DYNAREC=ari64
 MAKE_FLAGS+=	HAVE_NEON=1
