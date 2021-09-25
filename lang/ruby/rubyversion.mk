@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.236 2021/07/21 14:39:05 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.237 2021/09/25 00:47:26 dholland Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -232,7 +232,7 @@ RUBY_VERSIONS_ACCEPTED?=	27 30 26
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
-.  error Unsuported RUBY_VERSION_DEFAULT: ${RUBY_VERSION_DEFAULT}
+.  error Unsupported RUBY_VERSION_DEFAULT: ${RUBY_VERSION_DEFAULT}
 .endif
 
 .for rv in ${RUBY_VERSIONS_ACCEPTED}
