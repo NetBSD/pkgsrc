@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2021/09/19 18:02:37 rhialto Exp $
+# $NetBSD: Makefile,v 1.115 2021/09/25 01:39:19 mef Exp $
 
 PKGNAME=		pan-0.147
 PKGREVISION=		1
@@ -7,6 +7,7 @@ TAG=			${PKGNAME_NOREV:tu:C/-/_/:C/\./_/} # PAN_0_147
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		pan-${TAG}
+DIST_SUBDIR=		pan-0.147-checksum-not-match
 
 MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		http://pan.rebelbase.com/
