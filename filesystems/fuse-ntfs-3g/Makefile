@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/16 19:30:55 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2021/09/25 05:50:15 nia Exp $
 
 .include "../../filesystems/libntfs/Makefile.common"
 
@@ -7,6 +7,7 @@ CATEGORIES=	filesystems
 
 COMMENT=	NTFS driver with read and write support
 
+CONFIGURE_ARGS+=	--disable-ldconfig
 CONFIGURE_ARGS+=	--disable-ntfsprogs
 CONFIGURE_ARGS+=	--enable-mount-helper
 
