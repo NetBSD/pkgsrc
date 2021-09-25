@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2021/09/08 21:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.46 2021/09/25 05:44:12 nia Exp $
 
 PKGREVISION= 4
 .include "version.mk"
@@ -64,6 +64,7 @@ CONFIGURE_ARGS+=	--enable-floathard
 .endif
 
 .if ${MACHINE_ARCH} == "earmv7hf"
+CFLAGS+=		-march=armv7-a+neon -mfpu=neon
 CONFIGURE_ARGS+=	--enable-floathard
 CONFIGURE_ARGS+=	--enable-neon
 .endif
