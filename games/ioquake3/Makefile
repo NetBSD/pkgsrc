@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/09/08 21:05:06 nia Exp $
+# $NetBSD: Makefile,v 1.19 2021/09/25 05:36:11 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
@@ -44,6 +44,8 @@ QUAKE_ARCH=	sparc
 .else
 QUAKE_ARCH=	${MACHINE_ARCH}
 .endif
+
+MAKE_FLAGS+=	COMPILE_ARCH=${QUAKE_ARCH:Q}
 
 PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
 
