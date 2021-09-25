@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/05/02 10:24:49 nia Exp $
+# $NetBSD: Makefile,v 1.97 2021/09/25 06:03:06 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 PKGREVISION=	6
@@ -12,6 +12,8 @@ COMMENT=	Use your webcam to take photos and videos
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
+
+BROKEN+=	"Incompatible with latest Vala, new versions hang at startup"
 
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
