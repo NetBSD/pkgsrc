@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/09/26 05:58:36 mef Exp $
 
 SHA1 (phraseanet-v3.1.4-linux.tar.gz) = 46e423c87b4ba74a24ff8ebc9214c83ece1ec628
 RMD160 (phraseanet-v3.1.4-linux.tar.gz) = 3a2389b8effd0e6882f5d98eb70fe8fb55989114
@@ -6,3 +6,4 @@ SHA512 (phraseanet-v3.1.4-linux.tar.gz) = f275bd059fbd9ad08e20a4bb4977c18cfdebfd
 Size (phraseanet-v3.1.4-linux.tar.gz) = 73712035 bytes
 SHA1 (patch-aa) = 26a1bdff1c59f74c7ec074ba4fb935ec965c4b00
 SHA1 (patch-ab) = 4a5057abfb73dde38997cf2cbea2dc05aa5a9c2f
+SHA1 (patch-configure.ac) = 4b9540bf05cea5ff929f5ec7293345c164755480
