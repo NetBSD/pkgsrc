@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/09/26 01:21:51 mef Exp $
+# $NetBSD: Makefile,v 1.11 2021/09/26 01:26:51 mef Exp $
 #
 
 DISTNAME=	WiLiKi-0.6.2
@@ -14,8 +14,6 @@ LICENSE=	mit
 
 # XXX Use >=0.9 to work-around `gauche-config --sitelibdir` change!
 #DEPENDS+=	Gauche>=0.9:../../lang/gauche
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=	yes
 .include "../../lang/gauche/buildlink3.mk"
