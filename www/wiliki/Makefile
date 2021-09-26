@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/09/26 00:59:56 mef Exp $
+# $NetBSD: Makefile,v 1.10 2021/09/26 01:21:51 mef Exp $
 #
 
 DISTNAME=	WiLiKi-0.6.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	https://practical-scheme.net/wiliki/wiliki.cgi
 COMMENT=	WikiWiki clone written in Scheme
-LICENCS=	mit
+LICENSE=	mit
 
 # XXX Use >=0.9 to work-around `gauche-config --sitelibdir` change!
 #DEPENDS+=	Gauche>=0.9:../../lang/gauche
