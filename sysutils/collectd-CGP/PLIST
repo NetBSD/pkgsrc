@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/24 22:39:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/26 01:34:21 mef Exp $
 share/collectd-graph-panel/.gitignore
 share/collectd-graph-panel/.htaccess
 share/collectd-graph-panel/apache.json
@@ -7,7 +7,7 @@ share/collectd-graph-panel/base.class.php
 share/collectd-graph-panel/base64.js
 share/collectd-graph-panel/battery.json
 share/collectd-graph-panel/binaryxhr.js
-share/collectd-graph-panel/${PKGVERSION}.js
+share/collectd-graph-panel/cgp.js
 share/collectd-graph-panel/changelog
 share/collectd-graph-panel/collectd.inc.php
 share/collectd-graph-panel/color.js
