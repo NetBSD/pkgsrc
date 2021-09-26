@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/09/26 05:58:37 mef Exp $
+
+Use function name mysql_init instead of my_init to check the link is OK
+
+checking for my_init in -lmysqlclient... no
+configure: error: cannot link to libmysqlclient
+*** Error code 1
+
+--- configure.ac.orig	2021-09-26 14:41:49.645873851 +0900
++++ configure.ac	2021-09-26 14:47:42.704711042 +0900
+@@ -77,7 +77,7 @@ AC_CHECK_FUNCS([memset select setlocale 
+ 
+ AC_CHECK_LIB(xml2,xmlParseDoc,,AC_MSG_ERROR([cannot link to libxml2]))
+ AC_CHECK_LIB(expat,XML_Parse,,AC_MSG_ERROR([cannot link to libexpat]))
+-AC_CHECK_LIB(mysqlclient,my_init,,AC_MSG_ERROR([cannot link to libmysqlclient]))
++AC_CHECK_LIB(mysqlclient,mysql_init,,AC_MSG_ERROR([cannot link to libmysqlclient]))
+ AC_CHECK_LIB(pthread,pthread_create,,AC_MSG_ERROR([cannot link to pthread]))
+ 
+ # AC_CONFIG_FILES([simpleopt/Makefile])
