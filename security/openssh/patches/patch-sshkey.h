@@ -1,13 +1,13 @@
-$NetBSD: patch-sshkey.h,v 1.2 2020/09/29 15:17:42 ryoon Exp $
+$NetBSD: patch-sshkey.h,v 1.3 2021/09/26 15:37:51 wiz Exp $
 
 Support for non recommendable (insecure) modulus size for RSA. This may be
 required in order to access old, non-upgradable, devices for which modulus size
 is less than 1024 bits (frequently 768 bits).
 
---- sshkey.h.orig	2020-09-27 07:25:01.000000000 +0000
+--- sshkey.h.orig	2021-09-26 14:03:19.000000000 +0000
 +++ sshkey.h
-@@ -48,7 +48,11 @@
- # define EC_POINT	void
+@@ -50,7 +50,11 @@
+ #define SSH_OPENSSL_VERSION "without OpenSSL"
  #endif /* WITH_OPENSSL */
  
 +#ifdef SSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ
