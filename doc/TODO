@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21101 2021/09/24 12:48:33 wiz Exp $
+$NetBSD: TODO,v 1.21102 2021/09/26 15:38:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -591,6 +591,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cook-2.31
 	o coordgenlibs-2.0.3
 	o coq-8.13.2
+	o coreutils-9.0
 	o couchdb-3.1.1
 	o courier-0.77.0
 	o courier-imap-4.16.1
@@ -1191,6 +1192,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o magic-8.3.154
 	o magit-3.0
 	o man-pages-5.11
+	o mandoc-1.14.6
 	o mapcode-2.5.5
 	o mapserver-7.6.2
 	o marisa-0.2.6
@@ -1403,7 +1405,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openrct2-0.3.3
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
-	o openssh-8.7p1
 	o openssl-3.0.0
 	o openvas-libraries-8.0.8
 	o opera-26
