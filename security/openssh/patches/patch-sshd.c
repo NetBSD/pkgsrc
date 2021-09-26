@@ -1,12 +1,12 @@
-$NetBSD: patch-sshd.c,v 1.12 2020/05/27 13:49:27 sevan Exp $
+$NetBSD: patch-sshd.c,v 1.13 2021/09/26 15:37:51 wiz Exp $
 
 * Revive tcp_wrappers support.
 
---- sshd.c.orig	2020-05-27 00:38:00.000000000 +0000
+--- sshd.c.orig	2021-09-26 14:03:19.000000000 +0000
 +++ sshd.c
-@@ -124,6 +124,13 @@
- #include "ssherr.h"
- #include "sk-api.h"
+@@ -126,6 +126,13 @@
+ #include "srclimit.h"
+ #include "dh.h"
  
 +#ifdef LIBWRAP
 +#include <tcpd.h>
@@ -18,7 +18,7 @@ $NetBSD: patch-sshd.c,v 1.12 2020/05/27 13:49:27 sevan Exp $
  /* Re-exec fds */
  #define REEXEC_DEVCRYPTO_RESERVED_FD	(STDERR_FILENO + 1)
  #define REEXEC_STARTUP_PIPE_FD		(STDERR_FILENO + 2)
-@@ -538,10 +545,17 @@ privsep_preauth(struct ssh *ssh)
+@@ -532,10 +539,17 @@ privsep_preauth(struct ssh *ssh)
  		/* Arrange for logging to be sent to the monitor */
  		set_log_handler(mm_log_handler, pmonitor);
  
@@ -36,7 +36,7 @@ $NetBSD: patch-sshd.c,v 1.12 2020/05/27 13:49:27 sevan Exp $
  
  		return 0;
  	}
-@@ -2132,6 +2146,25 @@ main(int ac, char **av)
+@@ -2179,6 +2193,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  
