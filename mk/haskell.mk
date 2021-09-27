@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.35 2021/05/04 15:44:33 pho Exp $
+# $NetBSD: haskell.mk,v 1.36 2021/09/27 14:30:47 nia Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -42,6 +42,8 @@
 
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
+
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
 

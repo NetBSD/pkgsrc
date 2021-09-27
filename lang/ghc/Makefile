@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2021/05/24 19:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2021/09/27 14:30:48 nia Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	12
@@ -15,6 +15,8 @@ COMMENT=	Compiler for the functional language Haskell
 
 SITES.ghc-6.4.2-src.tar.bz2=	http://www.haskell.org/ghc/dist/6.4.2/
 SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz= ${MASTER_SITE_LOCAL}
+
+MKPIE_SUPPORTED=	no
 
 # There is only an i386 bootstrap kit available.
 ONLY_FOR_PLATFORM=	Darwin-*-i386 FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 SunOS-*-i386
