@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/09/11 15:40:23 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/27 20:53:14 fcambus Exp $
 
-DISTNAME=	mold-0.9.5
+DISTNAME=	mold-0.9.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
