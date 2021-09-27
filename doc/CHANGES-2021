@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4915 2021/09/27 18:54:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4916 2021/09/27 19:02:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7565,3 +7565,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-anita to 2.9 [gson 2021-09-27]
 	Updated devel/meson to 0.59.1 [adam 2021-09-27]
 	Updated www/curl to 7.79.1 [adam 2021-09-27]
+	Updated net/py-impacket to 0.9.23 [adam 2021-09-27]
+	Updated devel/cmake to 3.21.3 [adam 2021-09-27]
