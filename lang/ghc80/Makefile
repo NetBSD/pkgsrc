@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/05/24 19:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2021/09/27 14:30:48 nia Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -13,6 +13,8 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 8.0 Release Series
 LICENSE=	modified-bsd
+
+MKPIE_SUPPORTED=	no
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
