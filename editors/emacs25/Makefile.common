@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2020/05/22 05:51:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/09/27 15:26:24 nia Exp $
 #
 # used by editors/emacs25/Makefile
 # used by editors/emacs25-nox11/Makefile
+
+MKPIE_SUPPORTED=        no
 
 .include "../../mk/bsd.prefs.mk"
 
