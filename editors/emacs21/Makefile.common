@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2020/01/18 23:30:45 rillig Exp $
+# $NetBSD: Makefile.common,v 1.20 2021/09/27 15:26:24 nia Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -36,6 +36,8 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
+
+MKPIE_SUPPORTED=        no
 
 .include "../../mk/bsd.prefs.mk"
 
