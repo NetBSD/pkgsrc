@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4914 2021/09/27 17:17:38 gson Exp $
+$NetBSD: CHANGES-2021,v 1.4915 2021/09/27 18:54:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7563,3 +7563,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.3.0 [rillig 2021-09-27]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q3 branch [wiz 2021-09-27]
 	Updated misc/py-anita to 2.9 [gson 2021-09-27]
+	Updated devel/meson to 0.59.1 [adam 2021-09-27]
+	Updated www/curl to 7.79.1 [adam 2021-09-27]
