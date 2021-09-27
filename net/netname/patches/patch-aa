@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2010/02/11 22:18:35 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2021/09/27 18:31:24 kim Exp $
 
---- Makefile.orig	1999-09-15 03:15:12.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2011-08-25 21:00:21.000000000 +0300
++++ Makefile	2021-09-27 21:26:22.954299785 +0300
 @@ -5,13 +5,9 @@
  #
  SHELL	= /bin/sh
@@ -18,7 +18,13 @@ $NetBSD: patch-aa,v 1.4 2010/02/11 22:18:35 joerg Exp $
  MANEXT	= 1
  
  #
-@@ -74,12 +70,9 @@ netname: netname.c
+@@ -70,17 +66,14 @@
+ 		netname.man
+ 
+ netname: netname.c
+-	$(CC) $(CFLAGS) -o $@ $? $(LIBES)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $? $(LIBES)
+ 
  inst-all: install install.man
  
  install:
