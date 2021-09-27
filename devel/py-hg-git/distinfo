@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/03/24 09:25:09 hauke Exp $
+$NetBSD: distinfo,v 1.9 2021/09/27 02:00:44 mef Exp $
 
 SHA1 (hg-git-0.10.0.tar.bz2) = 9207e04d942518dd9277555d2f54e063a0fa4e05
 RMD160 (hg-git-0.10.0.tar.bz2) = 9c1dc4227269a49a8c23afb9c0e3c53a4f580d8e
 SHA512 (hg-git-0.10.0.tar.bz2) = 6f4277bc2b63da97e63531c751465e72467be0dfe92a7b64bfa423412268f89f02985665428597281a53b44f169f1291447e7b1d3a8047d7b0d67d1b1e0e5e27
 Size (hg-git-0.10.0.tar.bz2) = 143518 bytes
+SHA1 (patch-setup.py) = 9255ceda0eb9a34963fc107fb62da8e5d6424ba8
