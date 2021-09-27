@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/01/20 09:08:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/27 19:00:28 adam Exp $
 
-DISTNAME=	impacket-0.9.22
+DISTNAME=	impacket-0.9.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
@@ -53,12 +53,12 @@ SUBST_FILES.crypto+=	tests/misc/test_dpapi.py
 SUBST_SED.crypto=	-e 's,Cryptodome,Crypto,'
 
 post-install:
-.for bin in GetADUsers GetNPUsers GetUserSPNs addcomputer atexec dcomexec dpapi \
+.for bin in A Get-GPPPassword GetADUsers GetNPUsers GetUserSPNs PoC PoC2 addcomputer atexec dcomexec dpapi \
 esentutl exchanger findDelegation getArch getPac getST getTGT goldenPac karmaSMB \
 kintercept lookupsid mimikatz mqtt_check mssqlclient mssqlinstance netview \
 nmapAnswerMachine ntfs-read ntlmrelayx ping ping6 psexec raiseChild \
-rdp_check reg registry-read rpcdump sambaPipe samrdump secretsdump services \
-smbclient smbexec smbrelayx smbserver sniff sniffer split ticketConverter \
+rdp_check reg registry-read rpcdump rpcmap sambaPipe samrdump secretsdump services \
+smbclient smbexec smbpasswd smbrelayx smbserver sniff sniffer split testTGT testTGT2 ticketConverter \
 ticketer wmiexec wmipersist wmiquery
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX}.py || ${TRUE}
