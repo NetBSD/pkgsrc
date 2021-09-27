@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/20 09:08:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/09/27 19:00:28 adam Exp $
+bin/A-${PYVERSSUFFIX}.py
+bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
+bin/PoC-${PYVERSSUFFIX}.py
+bin/PoC2-${PYVERSSUFFIX}.py
 bin/addcomputer-${PYVERSSUFFIX}.py
 bin/atexec-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
@@ -33,18 +37,21 @@ bin/rdp_check-${PYVERSSUFFIX}.py
 bin/reg-${PYVERSSUFFIX}.py
 bin/registry-read-${PYVERSSUFFIX}.py
 bin/rpcdump-${PYVERSSUFFIX}.py
-bin/rpcmap.py
+bin/rpcmap-${PYVERSSUFFIX}.py
 bin/sambaPipe-${PYVERSSUFFIX}.py
 bin/samrdump-${PYVERSSUFFIX}.py
 bin/secretsdump-${PYVERSSUFFIX}.py
 bin/services-${PYVERSSUFFIX}.py
 bin/smbclient-${PYVERSSUFFIX}.py
 bin/smbexec-${PYVERSSUFFIX}.py
+bin/smbpasswd-${PYVERSSUFFIX}.py
 bin/smbrelayx-${PYVERSSUFFIX}.py
 bin/smbserver-${PYVERSSUFFIX}.py
 bin/sniff-${PYVERSSUFFIX}.py
 bin/sniffer-${PYVERSSUFFIX}.py
 bin/split-${PYVERSSUFFIX}.py
+bin/testTGT-${PYVERSSUFFIX}.py
+bin/testTGT2-${PYVERSSUFFIX}.py
 bin/ticketConverter-${PYVERSSUFFIX}.py
 bin/ticketer-${PYVERSSUFFIX}.py
 bin/wmiexec-${PYVERSSUFFIX}.py
@@ -145,6 +152,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/even.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/even6.py
 ${PYSITELIB}/impacket/dcerpc/v5/even6.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/even6.pyo
+${PYSITELIB}/impacket/dcerpc/v5/iphlp.py
+${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyc
+${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/lsad.py
 ${PYSITELIB}/impacket/dcerpc/v5/lsad.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/lsad.pyo
@@ -358,6 +368,9 @@ ${PYSITELIB}/impacket/examples/serviceinstall.pyo
 ${PYSITELIB}/impacket/examples/smbclient.py
 ${PYSITELIB}/impacket/examples/smbclient.pyc
 ${PYSITELIB}/impacket/examples/smbclient.pyo
+${PYSITELIB}/impacket/examples/utils.py
+${PYSITELIB}/impacket/examples/utils.pyc
+${PYSITELIB}/impacket/examples/utils.pyo
 ${PYSITELIB}/impacket/helper.py
 ${PYSITELIB}/impacket/helper.pyc
 ${PYSITELIB}/impacket/helper.pyo
