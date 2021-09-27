@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4913 2021/09/27 14:06:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4914 2021/09/27 17:17:38 gson Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7562,3 +7562,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/openssh to 8.8.1 [wiz 2021-09-26]
 	Updated pkgtools/pkglint to 21.3.0 [rillig 2021-09-27]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q3 branch [wiz 2021-09-27]
+	Updated misc/py-anita to 2.9 [gson 2021-09-27]
