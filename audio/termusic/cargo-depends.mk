@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2021/09/23 14:44:04 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2021/09/27 20:15:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -65,6 +65,7 @@ CARGO_CRATE_DEPENDS+=	hex-0.4.3
 CARGO_CRATE_DEPENDS+=	humantime-2.1.0
 CARGO_CRATE_DEPENDS+=	id3-0.6.4
 CARGO_CRATE_DEPENDS+=	idna-0.2.3
+CARGO_CRATE_DEPENDS+=	if_chain-1.0.2
 CARGO_CRATE_DEPENDS+=	image-0.23.14
 CARGO_CRATE_DEPENDS+=	instant-0.1.11
 CARGO_CRATE_DEPENDS+=	itertools-0.10.1
@@ -132,6 +133,7 @@ CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
 CARGO_CRATE_DEPENDS+=	ring-0.16.20
 CARGO_CRATE_DEPENDS+=	rustls-0.19.1
 CARGO_CRATE_DEPENDS+=	ryu-1.0.5
+CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scoped_threadpool-0.1.9
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	sct-0.6.1
@@ -177,6 +179,7 @@ CARGO_CRATE_DEPENDS+=	url-2.2.2
 CARGO_CRATE_DEPENDS+=	version-compare-0.0.11
 CARGO_CRATE_DEPENDS+=	version_check-0.9.3
 CARGO_CRATE_DEPENDS+=	viuer-0.5.2
+CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.78
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.78
@@ -187,6 +190,7 @@ CARGO_CRATE_DEPENDS+=	web-sys-0.3.55
 CARGO_CRATE_DEPENDS+=	webpki-0.21.4
 CARGO_CRATE_DEPENDS+=	webpki-roots-0.21.1
 CARGO_CRATE_DEPENDS+=	weezl-0.1.5
+CARGO_CRATE_DEPENDS+=	wildmatch-2.1.0
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
