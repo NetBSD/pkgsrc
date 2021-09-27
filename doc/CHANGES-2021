@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4918 2021/09/27 20:13:11 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.4919 2021/09/27 20:15:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7569,3 +7569,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.21.3 [adam 2021-09-27]
 	Updated textproc/py-prettytable to 2.2.1 [fcambus 2021-09-27]
 	Updated textproc/lowdown to 0.9.0 [fcambus 2021-09-27]
+	Updated audio/termusic to 0.3.15 [pin 2021-09-27]
