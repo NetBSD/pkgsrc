@@ -1,4 +1,4 @@
-# $NetBSD: go-vars.mk,v 1.2 2020/08/30 05:52:10 tnn Exp $
+# $NetBSD: go-vars.mk,v 1.3 2021/09/27 16:02:36 nia Exp $
 #
 # Makefile fragment to be included by any package that uses go-package.mk.
 #
@@ -18,3 +18,4 @@ CTF_SUPPORTED=		no
 RELRO_SUPPORTED=	no
 SSP_SUPPORTED=		no
 STRIP_DEBUG_SUPPORTED=	no
+MKPIE_SUPPORTED=	no
