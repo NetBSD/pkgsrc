@@ -1,13 +1,13 @@
-$NetBSD: patch-mesonbuild_dependencies_dev.py,v 1.4 2020/04/01 14:51:05 wiz Exp $
+$NetBSD: patch-mesonbuild_dependencies_dev.py,v 1.5 2021/09/27 18:50:06 adam Exp $
 
 Allow handling different versions of LLVM in pkgsrc using LLVM_CONFIG_PATH.
 
---- mesonbuild/dependencies/dev.py.orig	2020-03-23 17:22:09.000000000 +0000
+--- mesonbuild/dependencies/dev.py.orig	2021-08-18 11:22:33.000000000 +0000
 +++ mesonbuild/dependencies/dev.py
-@@ -201,7 +201,10 @@ class LLVMDependencyConfigTool(ConfigToo
+@@ -204,7 +204,10 @@ class LLVMDependencyConfigTool(ConfigToo
      __cpp_blacklist = {'-DNDEBUG'}
  
-     def __init__(self, name: str, environment, kwargs):
+     def __init__(self, name: str, environment: 'Environment', kwargs: T.Dict[str, T.Any]):
 -        self.tools = get_llvm_tool_names('llvm-config')
 +        if 'LLVM_CONFIG_PATH' in os.environ:
 +            self.tools = [os.environ['LLVM_CONFIG_PATH']]
