@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/07/30 12:27:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2021/09/27 08:20:18 jperkin Exp $
 
 DISTNAME=	guacamole-server-1.0.0
 PKGREVISION=	14
@@ -37,6 +37,7 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	src/guacd/man/guacd.conf.5
 SUBST_SED.manpath=	-e 's,/etc/guacamole,${PKG_SYSCONFDIR},g'
+SUBST_NOOP_OK.manpath=	yes # PKG_SYSCONFBASE=/etc
 
 REPLACE_PERL+=		src/protocols/rdp/keymaps/generate.pl
 
