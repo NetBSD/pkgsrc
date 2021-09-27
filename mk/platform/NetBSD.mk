@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.65 2021/04/25 07:51:25 mrg Exp $
+# $NetBSD: NetBSD.mk,v 1.66 2021/09/27 16:13:26 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -138,7 +138,11 @@ _OPSYS_SUPPORTS_FORTIFY=yes
 .if (${MACHINE_ARCH} == "i386") || \
     (${MACHINE_ARCH} == "x86_64") || \
     (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "aarch64eb")
+    (${MACHINE_ARCH} == "aarch64eb") || \
+    (${MACHINE_ARCH} == "sparc64") || \
+    (${MACHINE_ARCH} == "m68k") || \
+    (!empty(MACHINE_ARCH:Mearm*)) || \
+    (!empty(MACHINE_ARCH:Mmips*))
 _OPSYS_SUPPORTS_MKPIE=	yes
 .endif
 
