@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.37 2021/09/27 13:35:48 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.38 2021/09/27 15:25:54 ryoon Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -9,7 +9,7 @@
 #	The preferred MySQL version.
 #
 #	Possible: 57 56 80 mariadb106 mariadb105 mariadb104
-#	Default: 57
+#	Default: mariadb106
 #
 # Package-settable variables:
 #
