@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/24 19:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/09/27 14:30:48 nia Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGNAME=	ghc-bootstrap-6.8.3
@@ -18,6 +18,8 @@ COMMENT=	Bootstrap kit generator for the GHC Haskell compiler
 CONFLICTS+=		ghc-[0-9]*
 # Disable this (at least for now) so bootstrap kits get built by autobuilds.
 #NOT_FOR_BULK_PLATFORM=	*-*-*	# Package is useful only for maintainers.
+
+MKPIE_SUPPORTED=	no
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
 
