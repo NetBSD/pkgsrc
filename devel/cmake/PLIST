@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2021/07/29 11:37:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.67 2021/09/27 19:02:38 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -1913,7 +1913,6 @@ share/cmake-${CMAKE_API}/Modules/CMakeHIPCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeHIPCompilerABI.hip
 share/cmake-${CMAKE_API}/Modules/CMakeHIPCompilerId.hip.in
 share/cmake-${CMAKE_API}/Modules/CMakeHIPInformation.cmake
-share/cmake-${CMAKE_API}/Modules/CMakeHIPRuntime.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeIOSInstallCombined.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeISPCCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeISPCCompilerABI.ispc
@@ -2181,15 +2180,6 @@ share/cmake-${CMAKE_API}/Modules/Compiler/QCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/QCC-CXX-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/QCC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/QCC.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-ASM.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-C.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-CXX.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-DetermineCompiler.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-FindBinUtils.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-HIP.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-OBJC.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang-OBJCXX.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/ROCMClang.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO-DetermineCompiler.cmake
