@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.82 2021/04/21 11:40:44 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.83 2021/09/28 22:11:54 leot Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
@@ -23,6 +23,7 @@ pkgbase := webkit-gtk
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"

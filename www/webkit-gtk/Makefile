@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.211 2021/09/17 15:50:34 leot Exp $
+# $NetBSD: Makefile,v 1.212 2021/09/28 22:11:54 leot Exp $
 
-DISTNAME=	webkitgtk-2.32.4
+DISTNAME=	webkitgtk-2.34.0
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -46,6 +46,7 @@ CMAKE_ARGS+=		-DENABLE_BUBBLEWRAP_SANDBOX=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
 CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
+CMAKE_ARGS+=		-DUSE_SOUP2=ON
 CMAKE_ARGS+=		-DUSE_SYSTEMD=OFF
 
 REPLACE_PERL+=	Source/JavaScriptCore/Scripts/*.pl
@@ -139,6 +140,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.3
