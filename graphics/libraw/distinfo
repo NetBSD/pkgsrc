@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.27 2021/09/19 18:46:50 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/09/28 09:59:24 nia Exp $
 
-SHA1 (LibRaw-0.19.5.tar.gz) = c151995b6f17a0ccef7fbc1dcb982f0ccb04d934
-RMD160 (LibRaw-0.19.5.tar.gz) = 051642cfdf713e1d981a1790f4d872d89ff6f02a
-SHA512 (LibRaw-0.19.5.tar.gz) = 4560045f75e6d2ab0d1d8686075f3a0e26a5d7ce693b48508110a2c31d19055d58983c24852da0abb64fa90db5e20f24b87aa7537ed04d958c38c8b265a7e826
-Size (LibRaw-0.19.5.tar.gz) = 1303806 bytes
-SHA1 (patch-internal_libraw__x3f.cpp) = ec5d479a45d7fc25c884cc7259ad513857fa2711
-SHA1 (patch-libraw__r.pc.in) = e691f79c69c5530c93262c270fe7e2f5b1c959d9
-SHA1 (patch-libraw_libraw__const.h) = 91836dca7f9ba820417381bad53fe292b3e5f0ce
-SHA1 (patch-src_libraw__cxx.cpp) = fb2f16cb7a0798f499383bc06768ac0543049f66
+SHA1 (LibRaw-0.20.2.tar.gz) = 8143597d820167fb4f3a51c920e142e6f1386d01
+RMD160 (LibRaw-0.20.2.tar.gz) = 932abbfd49432ace0a2e2b4e4fbb07f140421de3
+SHA512 (LibRaw-0.20.2.tar.gz) = 96b1aaf09e2d46448d1b3619270c1f1c32e9bcbd866567cec67d5b1f889362f0fae3f3533ea9bf6a11a917be3b61ee6c9938bad09209d93453039ed04eaeae4a
+Size (LibRaw-0.20.2.tar.gz) = 1432141 bytes
+SHA1 (patch-libraw__r.pc.in) = 6ad890804132306c878657a31998f70d92f8b185
