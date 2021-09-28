@@ -1,11 +1,12 @@
-$NetBSD: patch-setup.py,v 1.5 2018/06/17 19:21:22 adam Exp $
+$NetBSD: patch-setup.py,v 1.6 2021/09/28 12:44:16 jperkin Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
 Assume panel_library is correct; this is a fix for ncurses' gnupanel
   which will get transformed to panel in buildlink.
+Support OpenSSL 3.x.
 
---- setup.py.orig	2018-03-28 09:19:31.000000000 +0000
+--- setup.py.orig	2021-09-04 03:49:41.000000000 +0000
 +++ setup.py
 @@ -7,7 +7,7 @@ import importlib._bootstrap
  import importlib.util
@@ -16,7 +17,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
  from distutils.errors import *
  from distutils.core import Extension, setup
  from distutils.command.build_ext import build_ext
-@@ -43,7 +43,7 @@ host_platform = get_platform()
+@@ -48,7 +48,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -25,7 +26,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (after any relative
-@@ -512,15 +512,15 @@ class PyBuildExt(build_ext):
+@@ -517,15 +517,15 @@ class PyBuildExt(build_ext):
              return ['m']
  
      def detect_modules(self):
@@ -50,7 +51,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -776,8 +776,6 @@ class PyBuildExt(build_ext):
+@@ -781,8 +781,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -59,7 +60,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
          elif self.compiler.find_library_file(lib_dirs, 'ncurses'):
              curses_library = 'ncurses'
          elif self.compiler.find_library_file(lib_dirs, 'curses'):
-@@ -842,8 +840,7 @@ class PyBuildExt(build_ext):
+@@ -847,8 +845,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -69,7 +70,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
                               ]
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-@@ -854,9 +851,7 @@ class PyBuildExt(build_ext):
+@@ -859,9 +856,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -80,7 +81,12 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -875,7 +870,7 @@ class PyBuildExt(build_ext):
+@@ -877,10 +872,12 @@ class PyBuildExt(build_ext):
+         openssl_ver = 0
+         openssl_ver_re = re.compile(
+             r'^\s*#\s*define\s+OPENSSL_VERSION_NUMBER\s+(0x[0-9a-fA-F]+)' )
++        openssl_ver_major = re.compile(                                    
++            '^\s*#\s*define\s+OPENSSL_VERSION_MAJOR\s+([0-9]+)' )     
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -89,7 +95,17 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1275,6 +1270,30 @@ class PyBuildExt(build_ext):
+@@ -892,6 +889,9 @@ class PyBuildExt(build_ext):
+                         if m:
+                             openssl_ver = int(m.group(1), 16)
+                             break
++                        m = openssl_ver_major.match(line)                      
++                        if m and int(m.group(1)) >= 3:           
++                            openssl_ver = 0x03000000                      
+             except IOError as msg:
+                 print("IOError while reading opensshv.h:", msg)
+ 
+@@ -1280,6 +1280,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -120,7 +136,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1286,7 +1305,7 @@ class PyBuildExt(build_ext):
+@@ -1291,7 +1315,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -129,7 +145,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1418,8 +1437,7 @@ class PyBuildExt(build_ext):
+@@ -1423,8 +1447,7 @@ class PyBuildExt(build_ext):
              missing.append('_curses')
  
          # If the curses module is enabled, check for the panel module
@@ -139,7 +155,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
              exts.append( Extension('_curses_panel', ['_curses_panel.c'],
                                     include_dirs=curses_includes,
                                     define_macros=curses_defines,
-@@ -2103,10 +2121,7 @@ class PyBuildExt(build_ext):
+@@ -2108,10 +2131,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -151,7 +167,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
              libraries = self.detect_math_libs()
              sources = [
                '_decimal/_decimal.c',
-@@ -2389,7 +2404,7 @@ def main():
+@@ -2394,7 +2414,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
