@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2019/11/24 01:03:28 gdt Exp $
+# $NetBSD: Makefile.common,v 1.18 2021/09/28 12:55:12 jperkin Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--config=SunOS-SunStudio
 .  else
 CONFIGURE_ARGS+=	--config=SunOS-GCC
 # GCC 4.6 and newer forces c99 for C++, need _XOPEN_SOURCE=600
-.    if !empty(CC_VERSION:Mgcc-4.[6-9].*) || !empty(CC_VERSION:Mgcc-[5-9].*) || !empty(PKGSRC_COMPILER:Mclang)
+.    if !empty(CC_VERSION:Mgcc-4.[6-9].*) || !empty(CC_VERSION:Mgcc-[5-9].*) || !empty(CC_VERSION:Mgcc-1[0-9].*) || !empty(PKGSRC_COMPILER:Mclang)
 MAKE_ENV+=		XOPEN_SOURCE=600
 .    else
 MAKE_ENV+=		XOPEN_SOURCE=500
