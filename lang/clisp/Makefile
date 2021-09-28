@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2021/04/25 07:51:24 mrg Exp $
+# $NetBSD: Makefile,v 1.118 2021/09/28 22:20:21 wiz Exp $
 
 DISTNAME=		clisp-2.49
 PKGREVISION=		27
@@ -30,6 +30,8 @@ USE_PKGLOCALEDIR=	yes
 BUILD_DIRS=		src
 USE_TOOLS+=		groff
 UNLIMIT_RESOURCES=	datasize stacksize
+
+MKPIE_SUPPORTED=	no
 
 USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure --host=..." => cross-building
 CONFIGURE_ARGS+=	--disable-maintainer-mode
