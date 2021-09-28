@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4923 2021/09/28 05:34:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4924 2021/09/28 09:21:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7575,3 +7575,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gpsd to 3.23.1 [gdt 2021-09-28]
 	Updated devel/py-ddt to 1.4.3 [adam 2021-09-28]
 	Updated security/py-josepy to 1.10.0 [adam 2021-09-28]
+	Updated security/apg to 2.3.0bnb10 [ryoon 2021-09-28]
