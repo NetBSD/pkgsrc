@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/06/03 15:47:34 taca Exp $
+# $NetBSD: Makefile,v 1.78 2021/09/28 12:59:40 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -39,7 +39,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/clamscan
 NOT_PAX_MPROTECT_SAFE+=	bin/freshclam
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
 .endif
 
