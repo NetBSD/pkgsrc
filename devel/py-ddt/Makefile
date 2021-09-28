@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/03/20 09:30:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/28 05:27:05 adam Exp $
 
-DISTNAME=	ddt-1.4.2
+DISTNAME=	ddt-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/ddt/}
