@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2021/07/07 10:10:04 adam Exp $
+# $NetBSD: Makefile,v 1.57 2021/09/28 16:22:27 adam Exp $
 
-DISTNAME=	rabbitmq-server-3.8.19
+DISTNAME=	rabbitmq-server-3.9.7
 PKGNAME=	${DISTNAME:S/-server//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
@@ -85,6 +85,7 @@ REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-env
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-plugins
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-queues
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-streams
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-upgrade
 
 CHECK_PORTABILITY_SKIP+=	scripts/rabbitmq-server-ha.ocf
@@ -93,6 +94,7 @@ CHECK_PORTABILITY_SKIP+=	scripts/rabbitmq-server-ha.ocf
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-diagnostics
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-plugins
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-queues
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-streams
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-upgrade
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmqctl
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/sbin/cuttlefish
