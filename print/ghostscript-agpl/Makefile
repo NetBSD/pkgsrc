@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/06/09 20:20:09 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/09/28 12:50:01 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -72,7 +72,7 @@ CFLAGS+=		-fPIC
 .endif
 
 # Not ideal but too many files hardcode _XOPEN_SOURCE=500.
-.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang)
+.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*) || !empty(PKGSRC_COMPILER:Mclang)
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .else
 CPPFLAGS.SunOS+=	-D__C99FEATURES__
