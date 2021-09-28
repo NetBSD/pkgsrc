@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2021/08/08 23:14:46 gdt Exp $
+# $NetBSD: Makefile,v 1.59 2021/09/28 00:16:08 gdt Exp $
 
-DISTNAME=	gpsd-3.23
-PKGREVISION=	1
+DISTNAME=	gpsd-3.23.1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 # will probably switch to https://gitlab.com/gpsd/gpsd/releases
