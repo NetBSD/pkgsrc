@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.952 2021/09/11 12:28:09 mef Exp $
+# $NetBSD: Makefile,v 1.953 2021/09/28 10:29:22 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -346,7 +346,6 @@ SUBDIR+=	libpano13
 SUBDIR+=	libpgf
 SUBDIR+=	libpuzzle
 SUBDIR+=	libraw
-SUBDIR+=	libraw013
 SUBDIR+=	librsvg
 SUBDIR+=	librsvg-c
 SUBDIR+=	libscigraphica
