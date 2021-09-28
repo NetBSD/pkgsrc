@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/08/24 10:42:50 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/09/28 12:58:27 jperkin Exp $
 
 DISTNAME=	gevent-21.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
 BUILDLINK_TRANSFORM.SunOS+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 .endif
 
