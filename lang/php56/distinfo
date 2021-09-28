@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2020/11/16 12:10:05 ryoon Exp $
+$NetBSD: distinfo,v 1.58 2021/09/28 14:39:49 jperkin Exp $
 
 SHA1 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 980b9f3f2e62a7360904b5b2107a4213bd052caa
 RMD160 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 4eeb1cc0364da69920c3d101a2f1a882550721a7
@@ -25,6 +25,7 @@ SHA1 (patch-ext_intl_normalizer_normalizer__normalize.c) = 8031fa56c927781f3094d
 SHA1 (patch-ext_intl_timezone_timezone__class.cpp) = b76ba1df02e854b9fae27c4c3dd554fba91aadfa
 SHA1 (patch-ext_intl_timezone_timezone__methods.cpp) = fc3a99380f1c29553621cb864493d6d79b4d737a
 SHA1 (patch-ext_mssql_php__mssql.c) = c4fa9231dc539ffb027f1beb6f182f21ddb94a3c
+SHA1 (patch-ext_openssl_openssl.c) = 4f232bbad8a32e0cb5457f788bc3da4c58072f41
 SHA1 (patch-ext_pcre_pcrelib_config.h) = 26588e9932ee715e32c872a1c7e2f9c640bd9cf8
 SHA1 (patch-ext_pdo__mysql_config.m4) = 9d25c673fc151e1b8ae137f2a0fc540189ef5398
 SHA1 (patch-ext_pdo_config.m4) = f6deef3ac631769baa587dd7c27e55bd2e9ca6a5
