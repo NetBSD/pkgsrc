@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.7 2018/10/06 14:32:45 nia Exp $
+# $Id: Makefile.in,v 1.8 2021/09/28 13:05:08 nia Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -44,7 +44,7 @@ COMPILE= $(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
 
 digest_OBJS = digest.o keccak.o md5c.o md5hl.o rmd160.o \
 rmd160hl.o sha1.o sha1hl.o sha2.o sha2hl.o sha3.o sha3hl.o \
-tiger.o whirlpool.o blake2b.o blake2b-hl.o
+tiger.o whirlpool.o blake2b.o blake2b-hl.o blake2s.o blake2s-hl.o
 
 SRCS= digest.c keccak.c md5c.c md5hl.c rmd160.c \
 rmd160hl.c sha1.c sha1hl.c sha2.c sha2hl.c sha3.c sha3hl.c \
