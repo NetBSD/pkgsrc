@@ -1,12 +1,12 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MarkedSpace.cpp,v 1.3 2020/09/11 14:47:35 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MarkedSpace.cpp,v 1.4 2021/09/28 22:11:54 leot Exp $
 
 Avoid ambiguous function call.
 
---- Source/JavaScriptCore/heap/MarkedSpace.cpp.orig	2020-08-12 09:17:52.000000000 +0000
+--- Source/JavaScriptCore/heap/MarkedSpace.cpp.orig	2021-09-01 09:16:46.000000000 +0000
 +++ Source/JavaScriptCore/heap/MarkedSpace.cpp
-@@ -28,6 +28,8 @@
- #include "MarkedSpaceInlines.h"
+@@ -29,6 +29,8 @@
  #include <wtf/ListDump.h>
+ #include <wtf/SimpleStats.h>
  
 +using std::pow;
 +

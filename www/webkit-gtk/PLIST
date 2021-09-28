@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2021/09/17 15:50:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.76 2021/09/28 22:11:54 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -52,6 +52,7 @@ include/webkitgtk-4.0/webkit2/WebKitInputMethodContext.h
 include/webkitgtk-4.0/webkit2/WebKitInstallMissingMediaPluginsPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitJavascriptResult.h
 include/webkitgtk-4.0/webkit2/WebKitMediaKeySystemPermissionRequest.h
+include/webkitgtk-4.0/webkit2/WebKitMemoryPressureSettings.h
 include/webkitgtk-4.0/webkit2/WebKitMimeInfo.h
 include/webkitgtk-4.0/webkit2/WebKitNavigationAction.h
 include/webkitgtk-4.0/webkit2/WebKitNavigationPolicyDecision.h
@@ -219,10 +220,10 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.18.8
+lib/libjavascriptcoregtk-4.0.so.18.19.5
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.53.5
+lib/libwebkit2gtk-4.0.so.37.55.3
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
