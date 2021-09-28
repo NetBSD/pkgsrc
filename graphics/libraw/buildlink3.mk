@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2020/03/15 10:31:59 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/09/28 09:59:24 nia Exp $
 
 BUILDLINK_TREE+=	libraw
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libraw?=	../../graphics/libraw
 
 pkgbase := libraw
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.libraw:Mjasper)
+.if ${PKG_BUILD_OPTIONS.libraw:Mjasper}
 .  include "../../graphics/jasper/buildlink3.mk"
 .endif
 .include "../../graphics/lcms2/buildlink3.mk"
