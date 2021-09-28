@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.17 2018/10/06 14:32:45 nia Exp $ */
+/*	$NetBSD: digest.c,v 1.18 2021/09/28 13:05:08 nia Exp $ */
 
 /*-
  * Copyright (c) 2001-2016 Alistair Crooks <agc@NetBSD.org>
@@ -35,6 +35,7 @@
 #include <locale.h>
 #endif
 #include <blake2b.h>
+#include <blake2s.h>
 #include <md5.h>
 #include <rmd160.h>
 #include <sha1.h>
@@ -83,6 +84,9 @@ static alg_t algorithms[] = {
 	{ "BLAKE2B",	64,
 	  (HASH_init) BLAKE2b_Init,	(HASH_update) BLAKE2b_Update,
 	  (HASH_end) BLAKE2b_End,	(HASH_file) BLAKE2b_File },
+	{ "BLAKE2S",	64,
+	  (HASH_init) BLAKE2s_Init,	(HASH_update) BLAKE2s_Update,
+	  (HASH_end) BLAKE2s_End,	(HASH_file) BLAKE2s_File },
 	{ "MD5",	16,
 	  (HASH_init) MD5Init,		(HASH_update) MD5Update,
 	  (HASH_end) MD5End,		(HASH_file) MD5File },
