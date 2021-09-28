@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4921 2021/09/28 00:04:00 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.4922 2021/09/28 00:16:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7572,3 +7572,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.15 [pin 2021-09-27]
 	Updated devel/mold to 0.9.6 [fcambus 2021-09-27]
 	Updated geography/gama to 2.15 [gdt 2021-09-28]
+	Updated geography/gpsd to 3.23.1 [gdt 2021-09-28]
