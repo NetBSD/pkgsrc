@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2021/06/23 18:30:24 schmonz Exp $
+$NetBSD: patch-setup.py,v 1.3 2021/09/28 12:31:25 jperkin Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
@@ -8,15 +8,15 @@ Do not look for ncursesw.
 Assume panel_library is correct; this is a fix for ncurses' gnupanel
   which will get transformed to panel in buildlink.
 
-Build the _ssl module with pkgsrc choiced OpenSSL.
+Build the _ssl module with pkgsrc choiced OpenSSL.  Support OpenSSL 3.x
 
 macOS arm64 support, via MacPorts.
 
 cygwin 2.7.3-no-libm.patch
 
---- setup.py.orig	2021-06-22 19:20:43.000000000 +0000
+--- setup.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ setup.py
-@@ -16,6 +16,7 @@ from distutils.command.build_ext import 
+@@ -16,6 +16,7 @@ from distutils.command.build_ext import
  from distutils.command.install import install
  from distutils.command.install_lib import install_lib
  from distutils.spawn import find_executable
@@ -97,7 +97,12 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -888,7 +889,7 @@ class PyBuildExt(build_ext):
+@@ -885,10 +886,12 @@ class PyBuildExt(build_ext):
+         openssl_ver = 0
+         openssl_ver_re = re.compile(
+             '^\s*#\s*define\s+OPENSSL_VERSION_NUMBER\s+(0x[0-9a-fA-F]+)' )
++        openssl_ver_major = re.compile(
++            '^\s*#\s*define\s+OPENSSL_VERSION_MAJOR\s+([0-9]+)' )
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -106,7 +111,18 @@ cygwin 2.7.3-no-libm.patch
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -988,175 +989,6 @@ class PyBuildExt(build_ext):
+@@ -899,6 +902,10 @@ class PyBuildExt(build_ext):
+                     m = openssl_ver_re.match(line)
+                     if m:
+                         openssl_ver = eval(m.group(1))
++                        break
++                    m = openssl_ver_major.match(line)
++                    if m and eval(m.group(1)) >= 3:
++                        openssl_ver = 0x03000000
+             except IOError, msg:
+                 print "IOError while reading opensshv.h:", msg
+                 pass
+@@ -988,175 +995,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -282,7 +298,7 @@ cygwin 2.7.3-no-libm.patch
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1262,46 +1094,32 @@ class PyBuildExt(build_ext):
+@@ -1262,46 +1100,32 @@ class PyBuildExt(build_ext):
          else:
              missing.append('_sqlite3')
  
@@ -352,7 +368,7 @@ cygwin 2.7.3-no-libm.patch
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1313,7 +1131,7 @@ class PyBuildExt(build_ext):
+@@ -1313,7 +1137,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -361,7 +377,7 @@ cygwin 2.7.3-no-libm.patch
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1357,18 +1175,14 @@ class PyBuildExt(build_ext):
+@@ -1357,18 +1181,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -388,7 +404,7 @@ cygwin 2.7.3-no-libm.patch
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -1429,8 +1243,7 @@ class PyBuildExt(build_ext):
+@@ -1429,8 +1249,7 @@ class PyBuildExt(build_ext):
              missing.append('_curses')
  
          # If the curses module is enabled, check for the panel module
@@ -398,7 +414,7 @@ cygwin 2.7.3-no-libm.patch
              exts.append( Extension('_curses_panel', ['_curses_panel.c'],
                                     include_dirs = curses_incs,
                                     libraries = [panel_library] + curses_libs) )
-@@ -2129,6 +1942,7 @@ class PyBuildExt(build_ext):
+@@ -2129,6 +1948,7 @@ class PyBuildExt(build_ext):
  
          if host_platform == 'darwin':
              sources.append('_ctypes/malloc_closure.c')
@@ -406,7 +422,7 @@ cygwin 2.7.3-no-libm.patch
              sources.append('_ctypes/darwin/dlfcn_simple.c')
              extra_compile_args.append('-DMACOSX')
              include_dirs.append('_ctypes/darwin')
-@@ -2191,6 +2005,16 @@ class PyBuildExt(build_ext):
+@@ -2191,6 +2011,16 @@ class PyBuildExt(build_ext):
                      break
  
          if ffi_inc and ffi_lib:
@@ -423,7 +439,7 @@ cygwin 2.7.3-no-libm.patch
              ext.include_dirs.extend(ffi_inc)
              ext.libraries.append(ffi_lib)
              self.use_system_libffi = True
-@@ -2342,9 +2166,9 @@ def main():
+@@ -2342,9 +2172,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2021/06/23 18:30:24 schmonz Exp $
+$NetBSD: distinfo,v 1.83 2021/09/28 12:31:25 jperkin Exp $
 
 SHA1 (Python-2.7.18.tar.xz) = 678d4cf483a1c92efd347ee8e1e79326dc82810b
 RMD160 (Python-2.7.18.tar.xz) = 40a514bb05c9e631454ea8466e28f5bb229428ad
@@ -48,4 +48,4 @@ SHA1 (patch-Modules_sunaudiodev.c) = d836d77854a2b3d79fa34a06a8e2493bf0a503e6
 SHA1 (patch-Python_thread__pthread.h) = 517cfefc2f2e13631d22bad28c327513cdf17c10
 SHA1 (patch-configure) = a8bcacd360ca3a451c43a05a4be3bcea56f70617
 SHA1 (patch-pyconfig.h.in) = 66d1a685e17ef7977bf09cdc64bdf80087216bc7
-SHA1 (patch-setup.py) = 19aa0992ea75cd151be7e35f05d9af0a84d07e85
+SHA1 (patch-setup.py) = 4ab14fc01a1622b7a35bfb45b93a12d16dfc8b82
