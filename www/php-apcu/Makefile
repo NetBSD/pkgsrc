@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/03/07 14:47:58 taca Exp $
+# $NetBSD: Makefile,v 1.20 2021/09/28 13:22:27 manu Exp $
 
 MODNAME=	apcu
 PECL_VERSION=	5.1.20
+PKGREVISION=	1
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +13,14 @@ PHP_VERSIONS_INCOMPATIBLE=	56
 
 GNU_CONFIGURE_STRICT=	no # --with-pcre-dir is added for all PHP extensions
 CONFIGURE_ARGS+=	--enable-${MODNAME}
+
+# Use spinlocks if available
+# XXX Default is fnctl, and implentation leaks 
+# file descriptors on apachectl graceful
+.if ${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == x86_64
+CONFIGURE_ARGS+=	--enable-apcu-spinlocks
+.endif
+
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE}
