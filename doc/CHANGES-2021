@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4930 2021/09/28 16:22:46 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4931 2021/09/28 17:58:20 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7585,3 +7585,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-xopen to 1.2.0 [adam 2021-09-28]
 	Updated devel/py-xdis to 5.0.13 [adam 2021-09-28]
 	Updated net/rabbitmq to 3.9.7 [adam 2021-09-28]
+	Updated sysutils/htop to 3.1.0 [fox 2021-09-28]
