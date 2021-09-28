@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2021/05/02 10:24:51 nia Exp $
+# $NetBSD: Makefile,v 1.104 2021/09/28 12:59:11 jperkin Exp $
 #
 
 DISTNAME=	vinagre-3.6.2
@@ -25,7 +25,7 @@ LDFLAGS.SunOS+=	-lnsl
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9].*)
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9].*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
 CFLAGS+=	-Wno-error=format-nonliteral
 .endif
 
