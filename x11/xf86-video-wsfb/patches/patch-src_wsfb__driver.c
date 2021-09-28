@@ -1,4 +1,4 @@
-$NetBSD: patch-src_wsfb__driver.c,v 1.3 2018/05/13 03:45:07 ryoon Exp $
+$NetBSD: patch-src_wsfb__driver.c,v 1.4 2021/09/28 13:58:13 ryoon Exp $
 
 Add revision 1.15 from xsrc version:
 date: 2013-01-31 12:18:01 +0100; author: macallan; state: Exp; lines: +145 -72;
@@ -11,6 +11,8 @@ fa9aabe95a65c4dd12008e16ad66d5c773a7993a
 
 Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
 8069c6970c731c38e105f5dddd5ce83ba88b0773
+
+* Remove xf86DisableRandR. This was removed from xorg.
 
 --- src/wsfb_driver.c.orig	2012-01-01 15:25:08.000000000 +0000
 +++ src/wsfb_driver.c
@@ -430,7 +432,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  		    "shadow framebuffer initialization failed\n");
  		return FALSE;
  	}
-@@ -877,20 +947,19 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -877,20 +947,16 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
  	if (!fPtr->rotate)
  		WsfbDGAInit(pScrn, pScreen);
  	else
@@ -440,9 +442,8 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  #endif
  	if (fPtr->rotate) {
 -		xf86DrvMsg(scrnIndex, X_INFO, "Enabling Driver Rotation, "
-+		xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Enabling Driver Rotation, "
- 		    "disabling RandR\n");
- 		xf86DisableRandR();
+-		    "disabling RandR\n");
+-		xf86DisableRandR();
  		if (pScrn->bitsPerPixel == 24)
 -			xf86DrvMsg(scrnIndex, X_WARNING,
 +			xf86DrvMsg(pScrn->scrnIndex, X_WARNING,
@@ -454,7 +455,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  	xf86SetBackingStore(pScreen);
  
  	/* Software cursor. */
-@@ -907,10 +976,16 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -907,10 +973,16 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
  	if (!miCreateDefColormap(pScreen))
  		return FALSE;
  	flags = CMAP_RELOAD_ON_MODE_SWITCH;
@@ -472,7 +473,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  	if(!xf86HandleColormaps(pScreen, ncolors, 8, WsfbLoadPalette,
  				NULL, flags))
  		return FALSE;
-@@ -937,9 +1012,9 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -937,9 +1009,9 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
  }
  
  static Bool
@@ -484,7 +485,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  	PixmapPtr pPixmap;
  	WsfbPtr fPtr = WSFBPTR(pScrn);
  
-@@ -971,30 +1046,34 @@ WsfbCloseScreen(int scrnIndex, ScreenPtr
+@@ -971,30 +1043,34 @@ WsfbCloseScreen(int scrnIndex, ScreenPtr
  	/* Unwrap CloseScreen. */
  	pScreen->CloseScreen = fPtr->CloseScreen;
  	TRACE_EXIT("WsfbCloseScreen");
@@ -527,7 +528,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
      WsfbPtr fPtr = WSFBPTR(pScrn);
      int newX, newY;
  
-@@ -1026,13 +1105,13 @@ WsfbPointerMoved(int index, int x, int y
+@@ -1026,13 +1102,13 @@ WsfbPointerMoved(int index, int x, int y
      }
  
      /* Pass adjusted pointer coordinates to wrapped PointerMoved function. */
@@ -544,7 +545,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  
  	TRACE_ENTER("EnterVT");
  	pScrn->vtSema = TRUE;
-@@ -1041,20 +1120,20 @@ WsfbEnterVT(int scrnIndex, int flags)
+@@ -1041,20 +1117,20 @@ WsfbEnterVT(int scrnIndex, int flags)
  }
  
  static void
@@ -569,7 +570,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  #endif
  
  	TRACE_ENTER("SwitchMode");
-@@ -1063,10 +1142,10 @@ WsfbSwitchMode(int scrnIndex, DisplayMod
+@@ -1063,10 +1139,10 @@ WsfbSwitchMode(int scrnIndex, DisplayMod
  }
  
  static int
@@ -582,7 +583,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  #endif
  
  	TRACE_ENTER("ValidMode");
-@@ -1132,7 +1211,7 @@ WsfbLoadPalette(ScrnInfoPtr pScrn, int n
+@@ -1132,7 +1208,7 @@ WsfbLoadPalette(ScrnInfoPtr pScrn, int n
  static Bool
  WsfbSaveScreen(ScreenPtr pScreen, int mode)
  {
@@ -591,7 +592,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  	WsfbPtr fPtr = WSFBPTR(pScrn);
  	int state;
  
-@@ -1159,11 +1238,12 @@ WsfbSave(ScrnInfoPtr pScrn)
+@@ -1159,11 +1235,12 @@ WsfbSave(ScrnInfoPtr pScrn)
  
  	TRACE_ENTER("WsfbSave");
  
@@ -606,7 +607,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  	if (ioctl(fPtr->fd, WSDISPLAYIO_GETCMAP,
  		  &(fPtr->saved_cmap)) == -1) {
  		xf86DrvMsg(pScrn->scrnIndex, X_ERROR,
-@@ -1181,7 +1261,7 @@ WsfbRestore(ScrnInfoPtr pScrn)
+@@ -1181,7 +1258,7 @@ WsfbRestore(ScrnInfoPtr pScrn)
  
  	TRACE_ENTER("WsfbRestore");
  
@@ -615,7 +616,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  		/* reset colormap for text mode */
  		if (ioctl(fPtr->fd, WSDISPLAYIO_PUTCMAP,
  			  &(fPtr->saved_cmap)) == -1) {
-@@ -1240,9 +1320,9 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
+@@ -1240,9 +1317,9 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
  		frameY0 = pScrn->frameY0;
  	}
  
@@ -627,7 +628,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  
  	return TRUE;
  }
-@@ -1250,7 +1330,7 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
+@@ -1250,7 +1327,7 @@ WsfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
  static void
  WsfbDGASetViewport(ScrnInfoPtr pScrn, int x, int y, int flags)
  {
@@ -636,7 +637,7 @@ Replace LoaderGetOS with ifdef (fix build with modular-xorg-server-1.20.0)
  }
  
  static int
-@@ -1305,12 +1385,12 @@ WsfbDGAAddModes(ScrnInfoPtr pScrn)
+@@ -1305,12 +1382,12 @@ WsfbDGAAddModes(ScrnInfoPtr pScrn)
  		pDGAMode->viewportWidth = pMode->HDisplay;
  		pDGAMode->viewportHeight = pMode->VDisplay;
  
