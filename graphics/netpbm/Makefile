@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2021/05/24 19:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2021/09/28 12:52:51 jperkin Exp $
 
 DISTNAME=	netpbm-10.79.04
 PKGREVISION=	8
@@ -71,9 +71,8 @@ MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .include "../../mk/compiler.mk"
 
 # Ridiculous but they hardcode it in every file so we have no choice.
-.if ${OPSYS} == "SunOS" && \
-    (!empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang))
-SUBST_CLASSES+=		xopen
+.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-1[0-9].*)
+SUBST_CLASSES.SunOS+=	xopen
 SUBST_STAGE.xopen=	pre-configure
 SUBST_FILES.xopen=	*/*.c */*/*.c */*/*/*.c */*/*/*/*.c */*/*/*/*/*.c
 SUBST_FILES.xopen+=	lib/util/lexheader
