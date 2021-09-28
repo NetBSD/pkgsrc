@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/11/20 18:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/09/28 12:55:59 jperkin Exp $
 
 LIBV4L_VERS=	1.20.0
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
@@ -61,7 +61,7 @@ PLIST_VARS=	needs_videoio
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .else
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
