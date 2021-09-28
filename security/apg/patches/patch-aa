@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2014/02/14 04:14:40 rodent Exp $
+$NetBSD: patch-aa,v 1.5 2021/09/28 09:20:34 ryoon Exp $
 
-Don't hardcode CC, CFLAGS, PREFIX. Fix installation stage.
+* Don't hardcode CC, CFLAGS, PREFIX. Fix installation stage.
+* Add LDFLAGS to fix RELRO build.
 
 --- Makefile.orig	2003-08-07 15:40:39.000000000 +0000
 +++ Makefile
@@ -25,6 +26,23 @@ Don't hardcode CC, CFLAGS, PREFIX. Fix installation stage.
  
  ####################################################################
  # If you plan to install APG daemon you should look at lines below #
+@@ -129,13 +126,13 @@ cliserv: apgd apgbfm 
+ cygwin: standalone
+ 
+ apg:
+-	${CC} ${CFLAGS} ${STANDALONE_OPTIONS} -o ${PROGNAME} ${SOURCES} ${APG_CLIBS}
++	${CC} ${CFLAGS} ${LDFLAGS} ${STANDALONE_OPTIONS} -o ${PROGNAME} ${SOURCES} ${APG_CLIBS}
+ 
+ apgd:
+-	${CC} ${CFLAGS} -DCLISERV ${CLISERV_OPTIONS} -o ${CS_PROGNAME} ${SOURCES} ${APG_CS_CLIBS}
++	${CC} ${CFLAGS} ${LDFLAGS} -DCLISERV ${CLISERV_OPTIONS} -o ${CS_PROGNAME} ${SOURCES} ${APG_CS_CLIBS}
+ 
+ apgbfm:
+-	${CC} ${FLAGS} -DAPGBFM -o ${BFM_PROGNAME} ${BFM_SOURCES} ${APGBFM_CLIBS}
++	${CC} ${CFLAGS} ${LDFLAGS} -DAPGBFM -o ${BFM_PROGNAME} ${BFM_SOURCES} ${APGBFM_CLIBS}
+ 
+ strip:
+ 	strip ${PROGNAME}
 @@ -143,24 +140,12 @@ strip:
  	strip ${BFM_PROGNAME}
  
