@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/09/27 18:50:06 adam Exp $
+# $NetBSD: Makefile,v 1.29 2021/09/29 07:29:54 adam Exp $
 
-DISTNAME=	meson-0.59.1
+DISTNAME=	meson-0.59.2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
