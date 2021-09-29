@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4956 2021/09/29 13:12:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4957 2021/09/29 13:30:42 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7618,3 +7618,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/leptonica to 1.82.0 [adam 2021-09-29]
 	Updated games/woof to 7.0.0 [micha 2021-09-29]
 	Updated graphics/inkscape to 1.1.1 [wiz 2021-09-29]
+	Updated devel/smake to 1.6nb1 [micha 2021-09-29]
