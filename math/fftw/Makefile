@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2021/06/12 07:30:47 nia Exp $
-
-PKGREVISION=	8
+# $NetBSD: Makefile,v 1.77 2021/09/29 13:34:48 wiz Exp $
 
 COMMENT=	Fast C routines to compute DFTs (single and double precision)
 
