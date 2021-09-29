@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 13:25:27 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/09/29 16:14:02 adam Exp $
 
-DISTNAME=	ugrep-3.1.11
-PKGREVISION=	1
+DISTNAME=	ugrep-3.3.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,10 +12,9 @@ LICENSE=	modified-bsd
 
 .include "options.mk"
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-bzlib
 CONFIGURE_ARGS+=	--with-lz4
 CONFIGURE_ARGS+=	--with-lzma	# lzma & xz files
