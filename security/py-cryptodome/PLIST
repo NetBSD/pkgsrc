@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/02/25 08:13:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/09/29 09:38:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -107,6 +107,8 @@ ${PYSITELIB}/Crypto/Cipher/_mode_siv.py
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyo
+${PLIST.py2x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
+${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.abi3.so
 ${PYSITELIB}/Crypto/Cipher/_raw_aes.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_arc2.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_blowfish.${SOEXT}
