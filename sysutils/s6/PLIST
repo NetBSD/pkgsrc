@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/17 19:31:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/09/29 09:54:48 schmonz Exp $
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
 bin/s6-applyuidgid
@@ -34,6 +34,7 @@ bin/s6-permafailon
 bin/s6-setlock
 bin/s6-setsid
 bin/s6-setuidgid
+bin/s6-socklog
 bin/s6-softlimit
 bin/s6-sudo
 bin/s6-sudoc
@@ -42,6 +43,7 @@ bin/s6-supervise
 bin/s6-svc
 bin/s6-svdt
 bin/s6-svdt-clear
+bin/s6-svlink
 bin/s6-svlisten
 bin/s6-svlisten1
 bin/s6-svok
@@ -49,6 +51,7 @@ bin/s6-svperms
 bin/s6-svscan
 bin/s6-svscanctl
 bin/s6-svstat
+bin/s6-svunlink
 bin/s6-svwait
 bin/s6-tai64n
 bin/s6-tai64nlocal
@@ -58,12 +61,12 @@ bin/ucspilogd
 include/s6/accessrules.h
 include/s6/compat.h
 include/s6/config.h
+include/s6/fdholder.h
 include/s6/ftrigr.h
 include/s6/ftrigw.h
-include/s6/s6-fdholder.h
-include/s6/s6-supervise.h
+include/s6/lock.h
 include/s6/s6.h
-include/s6/s6lock.h
+include/s6/supervise.h
 lib/s6/libs6.a
 libexec/s6lockd-helper
 man/man1/s6-accessrules-cdb-from-fs.1
@@ -98,10 +101,10 @@ man/man1/s6-log.1
 man/man1/s6-mkfifodir.1
 man/man1/s6-notifyoncheck.1
 man/man1/s6-permafailon.1
-man/man1/s6-s6lockd.1
 man/man1/s6-setlock.1
 man/man1/s6-setsid.1
 man/man1/s6-setuidgid.1
+man/man1/s6-socklog.1
 man/man1/s6-softlimit.1
 man/man1/s6-sudo.1
 man/man1/s6-sudoc.1
@@ -110,6 +113,7 @@ man/man1/s6-supervise.1
 man/man1/s6-svc.1
 man/man1/s6-svdt-clear.1
 man/man1/s6-svdt.1
+man/man1/s6-svlink.1
 man/man1/s6-svlisten.1
 man/man1/s6-svlisten1.1
 man/man1/s6-svok.1
@@ -117,11 +121,13 @@ man/man1/s6-svperms.1
 man/man1/s6-svscan.1
 man/man1/s6-svscanctl.1
 man/man1/s6-svstat.1
+man/man1/s6-svunlink.1
 man/man1/s6-svwait.1
 man/man1/s6-tai64n.1
 man/man1/s6-tai64nlocal.1
 man/man1/s6-usertree-maker.1
 man/man1/s6lockd-helper.1
+man/man1/s6lockd.1
 man/man1/ucspilogd.1
 man/man7/s6-accessrules.7
 man/man7/s6-fdholder-error-codes.7
