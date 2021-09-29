@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2021/09/29 08:52:11 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2020-08-31 16:14:30.000000000 +0000
++++ configure
+@@ -14718,7 +14718,7 @@ else
+ fi
+ 
+ 
+-if test "x$LIBEXIF_GTK_EXTENSION" == "xgtk3" ; then
++if test "x$LIBEXIF_GTK_EXTENSION" = "xgtk3" ; then
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for dynamic library extension" >&5
+ printf %s "checking for dynamic library extension... " >&6; }
+ soext=""
