@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/06/15 12:39:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/09/29 19:19:23 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -33,7 +33,7 @@ include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.9
-lib/libgs.so.9.54
+lib/libgs.so.9.55
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/gsnd.1
