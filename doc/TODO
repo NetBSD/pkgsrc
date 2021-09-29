@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21107 2021/09/29 08:34:02 wiz Exp $
+$NetBSD: TODO,v 1.21108 2021/09/29 08:40:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
-	o bison-3.8.1
 	o blender-2.93
 	o bliz++-0.10
 	o blur6ex-0.3.462
