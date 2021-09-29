@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/06/23 20:33:17 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/09/29 19:01:19 adam Exp $
 
 DISTNAME=	cfengine-3.15.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cfengine-package-repos.s3.amazonaws.com/tarballs/
 

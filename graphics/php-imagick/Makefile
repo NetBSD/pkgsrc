@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/08/15 14:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/09/29 19:00:47 adam Exp $
 
 MODNAME=		imagick
 PECL_VERSION=		3.4.4
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES+=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

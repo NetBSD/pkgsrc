@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/07/13 12:35:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/09/29 19:00:54 adam Exp $
 #
 
 PLUGIN_NAME=    libravatar
 
+PKGREVISION= 1
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

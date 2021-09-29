@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/04/21 13:24:25 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/09/29 19:00:22 adam Exp $
 
 DISTNAME=		gloox-1.0.17
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		chat
 MASTER_SITES=		https://camaya.net/download/
 EXTRACT_SUFX=		.tar.bz2
