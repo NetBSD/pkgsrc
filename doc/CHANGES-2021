@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4961 2021/09/29 15:27:15 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.4962 2021/09/29 16:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7623,3 +7623,12 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/aria2 to 1.36.0 [ryoon 2021-09-29]
 	Updated fonts/harfbuzz to 3.0.0 [wiz 2021-09-29]
 	Updated sysutils/nnn to 4.3 [sjmulder 2021-09-29]
+	Updated devel/boost-jam to 1.77.0 [adam 2021-09-29]
+	Updated devel/boost-headers to 1.77.0 [adam 2021-09-29]
+	Updated devel/boost-libs to 1.77.0 [adam 2021-09-29]
+	Updated devel/boost-build to 1.77.0 [adam 2021-09-29]
+	Updated devel/boost-docs to 1.77.0 [adam 2021-09-29]
+	Updated devel/boost-mpi to 1.77.0 [adam 2021-09-29]
+	Updated devel/py-boost to 1.77.0 [adam 2021-09-29]
+	Updated meta-pkgs/boost to 1.77.0 [adam 2021-09-29]
+	Updated textproc/ugrep to 3.3.7 [adam 2021-09-29]
