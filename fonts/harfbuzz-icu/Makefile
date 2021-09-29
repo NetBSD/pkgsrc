@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/07/09 23:14:12 markd Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/29 20:26:01 wiz Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
@@ -19,7 +19,7 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 .if ${OPSYS} == "Darwin"
 HARFBUZZ_ICU_LIBNAME=	libharfbuzz-icu.0.dylib
 .else
-HARFBUZZ_ICU_LIBNAME=	libharfbuzz-icu.so.0.20801.0
+HARFBUZZ_ICU_LIBNAME=	libharfbuzz-icu.so.0.*[0-9]
 .endif
 
 .PHONY: harfbuzz-icu-install
