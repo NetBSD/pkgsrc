@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21112 2021/09/29 09:29:01 adam Exp $
+$NetBSD: TODO,v 1.21113 2021/09/29 09:33:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -955,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
+	o inkscape-1.1.1
 	o inn-2.6.4
 	o input-pad-1.4.2
 	o ioping-1.2
