@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21108 2021/09/29 08:40:24 wiz Exp $
+$NetBSD: TODO,v 1.21109 2021/09/29 08:43:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1115,7 +1115,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdsk-1.5.15
 	o libdwarf-20210305
 	o libepoxy-1.5.5
-	o libexif-0.6.23
 	o libextractor-1.11
 	o libffi-3.4.2
 	o libflash-0.4.13
