@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4960 2021/09/29 14:57:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4961 2021/09/29 15:27:15 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7622,3 +7622,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/fftw to 3.3.10 [wiz 2021-09-29]
 	Updated net/aria2 to 1.36.0 [ryoon 2021-09-29]
 	Updated fonts/harfbuzz to 3.0.0 [wiz 2021-09-29]
+	Updated sysutils/nnn to 4.3 [sjmulder 2021-09-29]
