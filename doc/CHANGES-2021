@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4962 2021/09/29 16:15:23 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4963 2021/09/29 19:21:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7632,3 +7632,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-boost to 1.77.0 [adam 2021-09-29]
 	Updated meta-pkgs/boost to 1.77.0 [adam 2021-09-29]
 	Updated textproc/ugrep to 3.3.7 [adam 2021-09-29]
+	Updated print/ghostscript-agpl to 9.55.0 [adam 2021-09-29]
+	Updated lang/nodejs to 14.18.0 [adam 2021-09-29]
