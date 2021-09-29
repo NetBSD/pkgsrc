@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4937 2021/09/29 08:40:24 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4938 2021/09/29 08:43:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7594,3 +7594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/gnurl [nikita 2021-09-29]	Updated emulators/mame to 0.236 [wiz 2021-09-29]
 	Updated graphics/ImageMagick to 7.1.0.8 [wiz 2021-09-29]
 	Updated devel/bison to 3.8.1 [wiz 2021-09-29]
+	Updated graphics/libexif to 0.6.23 [wiz 2021-09-29]
