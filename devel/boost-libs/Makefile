@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2021/09/24 18:56:16 thor Exp $
+# $NetBSD: Makefile,v 1.89 2021/09/29 16:11:04 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -17,7 +17,7 @@ PLIST_VARS+=		backtrace context fiber log longdbl
 .if (${OPSYS} == "NetBSD" && \
 	((${MACHINE_ARCH} == "i386") || \
 	(!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))) || \
-    (!empty(MACHINE_PLATFORM:MNetBSD-8.*-x86_64) && \
+    (!empty(MACHINE_PLATFORM:MNetBSD-[89].*-x86_64) && \
 	!empty(CC_VERSION:Mgcc-7.*))
 BJAM_ARGS+=		pch=off
 .endif
