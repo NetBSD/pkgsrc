@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2021/05/16 10:14:09 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/09/29 13:34:48 wiz Exp $
 # used by math/fftw/Makefile
 # used by math/fftw-long/Makefile
 # used by math/fftw-quad/Makefile
 
-DISTNAME=	fftw-3.3.9
+DISTNAME=	fftw-3.3.10
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
 MASTER_SITES+=	http://www.fftw.org/
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.fftw.org/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../math/fftw/distinfo
-PATCHDIR=	${.CURDIR}/../../math/fftw/patches
+#PATCHDIR=	${.CURDIR}/../../math/fftw/patches
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
