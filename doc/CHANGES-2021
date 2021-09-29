@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4943 2021/09/29 09:39:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4944 2021/09/29 09:52:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7604,3 +7604,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/py-rich to 10.11.0 [adam 2021-09-29]
 	Updated security/py-cryptodome to 3.10.4 [adam 2021-09-29]
 	Updated devel/py-cachelib to 0.3.0 [adam 2021-09-29]
+	Updated devel/skalibs to 2.11.0.0 [schmonz 2021-09-29]
