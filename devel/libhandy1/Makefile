@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/04/14 07:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/09/29 09:10:32 wiz Exp $
 
 DISTNAME=	libhandy-1.0.1
 PKGNAME=	${DISTNAME:S/libhandy/libhandy1/1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libhandy/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
