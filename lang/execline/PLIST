@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/16 14:06:46 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/09/29 09:53:57 schmonz Exp $
 bin/background
 bin/backtick
+bin/case
 bin/cd
 bin/define
 bin/dollarat
@@ -54,6 +55,7 @@ include/execline/execline.h
 lib/execline/libexecline.a
 man/man1/background.1
 man/man1/backtick.1
+man/man1/case.1
 man/man1/define.1
 man/man1/dollarat.1
 man/man1/elgetopt.1
