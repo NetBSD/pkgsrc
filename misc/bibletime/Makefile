@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2021/07/30 12:26:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2021/09/29 19:00:59 adam Exp $
 
 DISTNAME=		bibletime-3.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bibletime/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2021/04/21 13:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.38 2021/09/29 19:00:31 adam Exp $
 
 DISTNAME=	kdesdk-strigi-analyzers-16.04.0
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	devel
 COMMENT=	Strigi analyzers for various tools
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}
