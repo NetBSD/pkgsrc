@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2021/04/15 19:55:06 prlw1 Exp $
+# $NetBSD: Makefile,v 1.61 2021/09/29 09:10:31 wiz Exp $
 
 DISTNAME=	dconf-editor-3.38.3
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf-editor/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
