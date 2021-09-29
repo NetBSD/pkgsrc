@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4954 2021/09/29 11:53:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4955 2021/09/29 11:55:51 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7616,3 +7616,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 2.2.0 [schmonz 2021-09-29]
 	Updated www/nghttp2 to 1.45.1 [adam 2021-09-29]
 	Updated graphics/leptonica to 1.82.0 [adam 2021-09-29]
+	Updated games/woof to 7.0.0 [micha 2021-09-29]
