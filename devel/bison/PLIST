@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2020/08/24 07:50:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2021/09/29 08:40:14 wiz Exp $
 bin/bison
 info/bison.info
 man/man1/bison.1
@@ -7,7 +7,6 @@ share/bison/README.md
 share/bison/bison-default.css
 share/bison/m4sugar/foreach.m4
 share/bison/m4sugar/m4sugar.m4
-share/bison/skeletons/README-D.txt
 share/bison/skeletons/bison.m4
 share/bison/skeletons/c++-skel.m4
 share/bison/skeletons/c++.m4
@@ -18,6 +17,7 @@ share/bison/skeletons/d-skel.m4
 share/bison/skeletons/d.m4
 share/bison/skeletons/glr.c
 share/bison/skeletons/glr.cc
+share/bison/skeletons/glr2.cc
 share/bison/skeletons/java-skel.m4
 share/bison/skeletons/java.m4
 share/bison/skeletons/lalr1.cc
@@ -58,6 +58,9 @@ share/doc/bison/examples/c/bistromathic/parse.y
 share/doc/bison/examples/c/calc/Makefile
 share/doc/bison/examples/c/calc/README.md
 share/doc/bison/examples/c/calc/calc.y
+share/doc/bison/examples/c/glr/Makefile
+share/doc/bison/examples/c/glr/README.md
+share/doc/bison/examples/c/glr/c++-types.y
 share/doc/bison/examples/c/lexcalc/Makefile
 share/doc/bison/examples/c/lexcalc/README.md
 share/doc/bison/examples/c/lexcalc/parse.y
@@ -74,9 +77,11 @@ share/doc/bison/examples/c/reccalc/parse.y
 share/doc/bison/examples/c/reccalc/scan.l
 share/doc/bison/examples/c/rpcalc/Makefile
 share/doc/bison/examples/c/rpcalc/rpcalc.y
-share/doc/bison/examples/d/Makefile
 share/doc/bison/examples/d/README.md
-share/doc/bison/examples/d/calc.y
+share/doc/bison/examples/d/calc/Makefile
+share/doc/bison/examples/d/calc/calc.y
+share/doc/bison/examples/d/simple/Makefile
+share/doc/bison/examples/d/simple/calc.y
 share/doc/bison/examples/java/README.md
 share/doc/bison/examples/java/calc/Calc.y
 share/doc/bison/examples/java/calc/Makefile
