@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.245 2021/09/13 08:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.246 2021/09/29 07:31:51 adam Exp $
 
-DISTNAME=	pango-1.48.9
+DISTNAME=	pango-1.48.10
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
