@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.240 2021/09/29 10:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.241 2021/09/29 13:12:09 wiz Exp $
 
-DISTNAME=	inkscape-1.1
-PKGREVISION=	2
+DISTNAME=	inkscape-1.1.1_2021-09-20_3bf5ae0d25
+PKGNAME=	inkscape-1.1.1
 CATEGORIES=	graphics
-MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
+# master site is using a weird redirect that ftp(1) does not support
+#MASTER_SITES=	https://inkscape.org/gallery/item/29255/
+#https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
-
-WRKSRC=		${WRKDIR}/inkscape-1.1_2021-05-24_c4e8f9ed74
 
 .if !exists(/usr/bin/iconv)
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
@@ -26,7 +26,7 @@ DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOLS_PLATFORM.msgfmt=	# empty
 
-EXTRACT_USING=		bsdtar
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 # std::optional
 GCC_REQD+=		7
