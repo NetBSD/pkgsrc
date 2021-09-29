@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.91 2021/05/27 17:02:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.92 2021/09/29 16:11:04 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -10,7 +10,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.76.0
+BOOST_VERSION=		1.77.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 # Update mysql57-client/patches/patch-cmake_boost.cmake when updating version
@@ -23,7 +23,7 @@ PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
 PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
 
-MASTER_SITES=	https://dl.bintray.com/boostorg/release/${BOOST_VERSION}/source/
+MASTER_SITES=	https://boostorg.jfrog.io/artifactory/main/release/${BOOST_VERSION}/source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,7 +37,7 @@ DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
 USE_TOOLS+=		pax
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 
 .include "../../mk/bsd.prefs.mk"
 
