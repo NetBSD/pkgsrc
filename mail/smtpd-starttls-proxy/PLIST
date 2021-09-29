@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/09/29 09:58:31 schmonz Exp $
+bin/smtpd-starttls-proxy-io
+include/smtpd-starttls-proxy/config.h
