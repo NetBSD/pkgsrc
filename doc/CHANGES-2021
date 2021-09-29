@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4947 2021/09/29 09:54:58 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4948 2021/09/29 09:55:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7608,3 +7608,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/fdtools to 2021.04.30nb1 [schmonz 2021-09-29]
 	Updated lang/execline to 2.8.1.0 [schmonz 2021-09-29]
 	Updated sysutils/s6 to 2.11.0.0 [schmonz 2021-09-29]
+	Updated net/s6-dns to 2.3.5.2 [schmonz 2021-09-29]
