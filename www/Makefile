@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1585 2021/09/19 14:01:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1586 2021/09/29 07:44:43 nikita Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -128,7 +128,6 @@ SUBDIR+=	geckodriver
 SUBDIR+=	geeklog
 SUBDIR+=	gitea
 SUBDIR+=	gitweb
-SUBDIR+=	gnurl
 SUBDIR+=	go-ffuf
 SUBDIR+=	go-minify
 SUBDIR+=	goaccess
