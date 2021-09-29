@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/04 09:16:45 schmonz Exp $
-bin/minidentd
+@comment $NetBSD: PLIST,v 1.7 2021/09/29 09:56:36 schmonz Exp $
 bin/s6-clockadd
 bin/s6-clockview
 bin/s6-getservbyname
@@ -32,7 +31,6 @@ include/s6-networking/sbearssl.h
 include/s6-networking/stls.h
 lib/s6-networking/libs6net.a
 ${PLIST.tls}lib/s6-networking/libsbearssl.a
-man/man1/minidentd.1
 man/man1/s6-clockadd.1
 man/man1/s6-clockview.1
 man/man1/s6-getservbyname.1
