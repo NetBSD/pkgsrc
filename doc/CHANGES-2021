@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4934 2021/09/29 07:44:43 nikita Exp $
+$NetBSD: CHANGES-2021,v 1.4935 2021/09/29 08:30:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7591,4 +7591,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/meson to 0.59.2 [adam 2021-09-29]
 	Updated devel/pango to 1.48.10 [adam 2021-09-29]
 	Updated misc/py-platformdirs to 2.4.0 [adam 2021-09-29]
-	Removed www/gnurl [nikita 2021-09-29]
+	Removed www/gnurl [nikita 2021-09-29]	Updated emulators/mame to 0.236 [wiz 2021-09-29]
