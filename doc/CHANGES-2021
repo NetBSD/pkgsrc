@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4942 2021/09/29 09:29:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4943 2021/09/29 09:39:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7602,3 +7602,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-urllib3 to 1.26.7 [adam 2021-09-29]
 	Updated misc/py-tqdm to 4.62.3 [adam 2021-09-29]
 	Updated comms/py-rich to 10.11.0 [adam 2021-09-29]
+	Updated security/py-cryptodome to 3.10.4 [adam 2021-09-29]
+	Updated devel/py-cachelib to 0.3.0 [adam 2021-09-29]
