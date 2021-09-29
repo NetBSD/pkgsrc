@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/05/10 22:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/29 19:00:08 adam Exp $
 
 GITHUB_PROJECT=	pcl
 GITHUB_TAG=	pcl-${PKGVERSION_NOREV}
 DISTNAME=	pcl-1.11.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PointCloudLibrary/}
 

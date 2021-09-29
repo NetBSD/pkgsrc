@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/04/21 13:25:31 adam Exp $
+# $NetBSD: Makefile,v 1.60 2021/09/29 19:01:29 adam Exp $
 
 DISTNAME=		sitecopy-0.16.6
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		www
 MASTER_SITES=		http://www.manyfish.co.uk/sitecopy/
 

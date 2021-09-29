@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/04/21 13:24:28 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/29 19:00:25 adam Exp $
 
 DISTNAME=	libstaroffice-0.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
