@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/09/08 21:05:09 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/09/29 19:00:41 adam Exp $
 
 DISTNAME=	taisei-v1.3.2
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taisei-project/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
