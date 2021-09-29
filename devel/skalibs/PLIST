@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/11 18:11:32 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/09/29 09:51:58 schmonz Exp $
 include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
@@ -7,7 +7,6 @@ include/skalibs/avlnode.h
 include/skalibs/avltree.h
 include/skalibs/avltreen.h
 include/skalibs/bigkv.h
-include/skalibs/biguint.h
 include/skalibs/bitarray.h
 include/skalibs/bsdsnowflake.h
 include/skalibs/bufalloc.h
@@ -15,7 +14,7 @@ include/skalibs/buffer.h
 include/skalibs/bytestr.h
 include/skalibs/cbuffer.h
 include/skalibs/cdb.h
-include/skalibs/cdb_make.h
+include/skalibs/cdbmake.h
 include/skalibs/config.h
 include/skalibs/datastruct.h
 include/skalibs/direntry.h
@@ -26,7 +25,6 @@ include/skalibs/djbtime.h
 include/skalibs/djbunix.h
 include/skalibs/env.h
 include/skalibs/envalloc.h
-include/skalibs/environ.h
 include/skalibs/error.h
 include/skalibs/exec.h
 include/skalibs/fmtscan.h
@@ -37,20 +35,16 @@ include/skalibs/genqdyn.h
 include/skalibs/genset.h
 include/skalibs/gensetdyn.h
 include/skalibs/genwrite.h
-include/skalibs/getpeereid.h
-include/skalibs/iobuffer.h
 include/skalibs/iopause.h
 include/skalibs/ip46.h
 include/skalibs/kolbak.h
 include/skalibs/lolstdio.h
-include/skalibs/md5.h
 include/skalibs/netstring.h
 include/skalibs/nonposix.h
 include/skalibs/nsig.h
 include/skalibs/posixishard.h
 include/skalibs/posixplz.h
 include/skalibs/random.h
-include/skalibs/rc4.h
 include/skalibs/segfault.h
 include/skalibs/selfpipe.h
 include/skalibs/setgroups.h
