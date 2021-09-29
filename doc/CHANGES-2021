@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4940 2021/09/29 08:56:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4941 2021/09/29 09:03:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7597,3 +7597,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libexif to 0.6.23 [wiz 2021-09-29]
 	Updated graphics/libexif-gtk to 0.5.0 [wiz 2021-09-29]
 	Updated fonts/unifont to 14.0.01 [wiz 2021-09-29]
+	Updated lang/vala to 0.54.0 [wiz 2021-09-29]
