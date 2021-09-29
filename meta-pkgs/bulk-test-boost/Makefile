@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/05/30 11:48:28 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/09/29 16:54:24 adam Exp $
 
 DISTNAME=	bulk-test-boost-20210529
 CATEGORIES=	meta-pkgs
@@ -43,7 +43,6 @@ BUILD_DEPENDS+=		ncmpc-[0-9]*:../../audio/ncmpc
 BUILD_DEPENDS+=		ncmpcpp-[0-9]*:../../audio/ncmpcpp
 BUILD_DEPENDS+=		osm2pgsql-[0-9]*:../../geography/osm2pgsql
 BUILD_DEPENDS+=		openscad-[0-9]*:../../cad/openscad
-BUILD_DEPENDS+=		poppler-glib-[0-9]*:../../print/poppler-glib
 BUILD_DEPENDS+=		powerdns-[0-9]*:../../net/powerdns
 BUILD_DEPENDS+=		powerdns-recursor-[0-9]*:../../net/powerdns-recursor
 BUILD_DEPENDS+=		qbittorrent-[0-9]*:../../net/qbittorrent
