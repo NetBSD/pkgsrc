@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2021/04/21 13:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.41 2021/09/29 19:00:41 adam Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
-PKGREVISION=		32
+PKGREVISION=		33
 CATEGORIES=		games
 
 DISTFILES=	${DISTNAME}-source.tar.bz2

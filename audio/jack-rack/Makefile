@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2021/09/08 21:04:55 nia Exp $
+# $NetBSD: Makefile,v 1.81 2021/09/29 19:00:18 adam Exp $
 #
 
 DISTNAME=	jack-rack-1.4.7
-PKGREVISION=	71
+PKGREVISION=	72
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jack-rack/}
 EXTRACT_SUFX=	.tar.bz2

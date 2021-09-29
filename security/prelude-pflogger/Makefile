@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2021/04/21 13:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/09/29 19:01:19 adam Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
 PKGNAME=	prelude-pflogger-0.9.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 #MASTER_SITES=	http://prelude-ids.org/download/releases/
 

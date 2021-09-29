@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2021/05/24 19:56:03 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2021/09/29 19:01:30 adam Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	26
+PKGREVISION=	27
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"

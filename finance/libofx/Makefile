@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2021/04/21 13:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.44 2021/09/29 19:00:36 adam Exp $
 
 DISTNAME=	libofx-0.9.15
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	finance devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libofx/}
 
