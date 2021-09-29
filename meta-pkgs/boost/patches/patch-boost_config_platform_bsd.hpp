@@ -1,8 +1,8 @@
-$NetBSD: patch-boost_config_platform_bsd.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
+$NetBSD: patch-boost_config_platform_bsd.hpp,v 1.2 2021/09/29 16:11:04 adam Exp $
 
---- boost/config/platform/bsd.hpp.orig	2011-03-07 13:07:30.000000000 +0000
+--- boost/config/platform/bsd.hpp.orig	2021-08-05 09:41:19.000000000 +0000
 +++ boost/config/platform/bsd.hpp
-@@ -37,7 +37,7 @@
+@@ -38,7 +38,7 @@
  // and not in <unistd.h>
  //
  #if (defined(__FreeBSD__) && (__FreeBSD__ <= 3))\
@@ -11,16 +11,7 @@ $NetBSD: patch-boost_config_platform_bsd.hpp,v 1.1 2017/08/24 19:31:32 adam Exp 
  #  define BOOST_HAS_PTHREADS
  #endif
  
-@@ -56,13 +56,15 @@
- #endif
- 
- #if !((defined(__FreeBSD__) && (__FreeBSD__ >= 5)) \
--      || (defined(__NetBSD_GCC__) && (__NetBSD_GCC__ >= 2095003)) || defined(__DragonFly__))
-+      || (defined(__NetBSD_GCC__) && (__NetBSD_GCC__ >= 2095003)) \
-+      || defined(__DragonFly__) \
-+      || defined(__OpenBSD__))
- #  define BOOST_NO_CWCHAR
- #endif
+@@ -64,7 +64,7 @@
  //
  // The BSD <ctype.h> has macros only, no functions:
  //
