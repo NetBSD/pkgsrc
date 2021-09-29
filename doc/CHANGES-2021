@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4951 2021/09/29 09:59:33 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4952 2021/09/29 10:02:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7612,3 +7612,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/s6-networking to 2.5.0.0 [schmonz 2021-09-29]
 	Updated misc/s6-portable-utils to 2.2.3.3 [schmonz 2021-09-29]
 	Added mail/smtpd-starttls-proxy version 0.0.1.0 [schmonz 2021-09-29]
+	Updated print/poppler to 21.09.0 [wiz 2021-09-29]
