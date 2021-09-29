@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2021/07/09 23:14:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.48 2021/09/29 14:57:02 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -42,13 +42,13 @@ lib/cmake/harfbuzz/harfbuzz-config.cmake
 ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.20801.0
+lib/libharfbuzz-gobject.so.0.30000.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.20801.0
+lib/libharfbuzz-subset.so.0.30000.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.20801.0
+lib/libharfbuzz.so.0.30000.0
 lib/pkgconfig/harfbuzz-gobject.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
@@ -101,6 +101,8 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-var.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-set.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape-plan.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-style.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-subset.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-unicode.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-uniscribe.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-version.html
@@ -136,7 +138,9 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-opentype-features.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-operations.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-plans-and-caching.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-shaper-selection.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/style-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/style.css
+${PLIST.doc}share/gtk-doc/html/harfbuzz/subset-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/terminology.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/text-runs.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/the-distinction-between-levels-0-and-1.html
