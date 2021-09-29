@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/09/29 08:52:10 wiz Exp $
 include/libexif-gtk/gtk-exif-browser.h
 include/libexif-gtk/gtk-exif-content-list.h
 include/libexif-gtk/gtk-exif-entry-ascii.h
@@ -15,6 +15,8 @@ include/libexif-gtk/gtk-exif-entry-version.h
 include/libexif-gtk/gtk-exif-entry.h
 lib/libexif-gtk.la
 lib/pkgconfig/libexif-gtk.pc
-share/locale/es/LC_MESSAGES/libexif-gtk.mo
-share/locale/fr/LC_MESSAGES/libexif-gtk.mo
-share/locale/ru/LC_MESSAGES/libexif-gtk.mo
+share/locale/de/LC_MESSAGES/libexif-gtk-5.mo
+share/locale/es/LC_MESSAGES/libexif-gtk-5.mo
+share/locale/fr/LC_MESSAGES/libexif-gtk-5.mo
+share/locale/pl/LC_MESSAGES/libexif-gtk-5.mo
+share/locale/ru/LC_MESSAGES/libexif-gtk-5.mo
