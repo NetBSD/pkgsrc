@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4938 2021/09/29 08:43:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4939 2021/09/29 08:52:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7595,3 +7595,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.1.0.8 [wiz 2021-09-29]
 	Updated devel/bison to 3.8.1 [wiz 2021-09-29]
 	Updated graphics/libexif to 0.6.23 [wiz 2021-09-29]
+	Updated graphics/libexif-gtk to 0.5.0 [wiz 2021-09-29]
