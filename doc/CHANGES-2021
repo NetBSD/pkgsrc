@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4945 2021/09/29 09:53:26 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.4946 2021/09/29 09:54:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7606,3 +7606,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-cachelib to 0.3.0 [adam 2021-09-29]
 	Updated devel/skalibs to 2.11.0.0 [schmonz 2021-09-29]
 	Updated sysutils/fdtools to 2021.04.30nb1 [schmonz 2021-09-29]
+	Updated lang/execline to 2.8.1.0 [schmonz 2021-09-29]
