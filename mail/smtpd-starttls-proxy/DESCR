@@ -1,0 +1,4 @@
+smtpd-starttls-proxy is a chainloading program that runs right before
+the SMTP server on your command line. It interposes itself between the
+client commands and the server, and implements STARTTLS on behalf of
+the server.
