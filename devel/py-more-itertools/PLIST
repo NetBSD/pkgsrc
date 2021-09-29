@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/15 11:55:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/09/29 09:22:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/more_itertools/__init__.py
 ${PYSITELIB}/more_itertools/__init__.pyc
+${PYSITELIB}/more_itertools/__init__.pyi
 ${PYSITELIB}/more_itertools/__init__.pyo
 ${PYSITELIB}/more_itertools/more.py
 ${PYSITELIB}/more_itertools/more.pyc
+${PYSITELIB}/more_itertools/more.pyi
 ${PYSITELIB}/more_itertools/more.pyo
+${PYSITELIB}/more_itertools/py.typed
 ${PYSITELIB}/more_itertools/recipes.py
 ${PYSITELIB}/more_itertools/recipes.pyc
+${PYSITELIB}/more_itertools/recipes.pyi
 ${PYSITELIB}/more_itertools/recipes.pyo
