@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/04/30 13:00:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2021/09/29 09:53:16 schmonz Exp $
 
 DISTNAME=		fdtools-2021.04.30
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +15,7 @@ WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
 CPPFLAGS+=		-I ${PREFIX:Q}/include \
+			-Dtain_t=tain \
 			-Dpathexec=mexec -Dpathexec0=mexec0 \
 			-Dpathexec_run=exec_ae -Dpathexec_env=env_mexec
 LDFLAGS+=		-L ${PREFIX:Q}/lib/skalibs
