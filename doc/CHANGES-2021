@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4958 2021/09/29 13:34:58 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4959 2021/09/29 14:54:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7620,3 +7620,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/inkscape to 1.1.1 [wiz 2021-09-29]
 	Updated devel/smake to 1.6nb1 [micha 2021-09-29]
 	Updated math/fftw to 3.3.10 [wiz 2021-09-29]
+	Updated net/aria2 to 1.36.0 [ryoon 2021-09-29]
