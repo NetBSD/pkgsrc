@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.7 2020/09/29 14:29:42 ryoon Exp $
+$NetBSD: patch-configure,v 1.8 2021/09/29 19:19:23 adam Exp $
 
 Use system zlib for linking.
 Add rpath.
 Get all LDFLAGS for FreeType2.
 Use correct install_name with path on Darwin.
 
---- configure.orig	2020-09-25 12:33:30.000000000 +0000
+--- configure.orig	2021-09-27 07:44:02.000000000 +0000
 +++ configure
-@@ -4028,7 +4028,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+@@ -4049,7 +4049,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
  CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
  CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
  LDFLAGSAUXTMP="\$(LDFLAGS)"
@@ -16,7 +16,7 @@ Use correct install_name with path on Darwin.
  
  # purposefully do not include "help" output for this
  # Check whether --enable-save_confaux was given.
-@@ -4660,9 +4660,7 @@ case $host in
+@@ -4681,9 +4681,7 @@ case $host in
          CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
          CFLAGS_LARGEFILE="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
          # the trailing space is required!
@@ -27,7 +27,7 @@ Use correct install_name with path on Darwin.
          if test $GCC = yes; then
              CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
              CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
-@@ -7693,7 +7691,7 @@ fi
+@@ -7627,7 +7625,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -36,7 +36,7 @@ Use correct install_name with path on Darwin.
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -11620,10 +11618,10 @@ case $host in
+@@ -11587,11 +11585,11 @@ case $host in
      ;;
      *-darwin*)
        DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
@@ -44,14 +44,16 @@ Use correct install_name with path on Darwin.
 -      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(PCL_SONAME_MAJOR_MINOR)"
 -      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(XPS_SONAME_MAJOR_MINOR)"
 -      PDL_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(GPDL_SONAME_MAJOR_MINOR)"
+-      PDF_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(PDF_SONAME_MAJOR_MINOR)"
 +      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(GS_SONAME_MAJOR_MINOR)"
 +      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(PCL_SONAME_MAJOR_MINOR)"
 +      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(XPS_SONAME_MAJOR_MINOR)"
 +      PDL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(GPDL_SONAME_MAJOR_MINOR)"
++      PDF_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(PDF_SONAME_MAJOR_MINOR)"
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".dylib"
      ;;
-@@ -11639,10 +11637,10 @@ case $host in
+@@ -11607,11 +11605,11 @@ case $host in
          #fi
          # ^^^ untested
        fi
@@ -59,10 +61,12 @@ Use correct install_name with path on Darwin.
 -      PCL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR) $_ldflags"
 -      XPS_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR) $_ldflags"
 -      PDL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR) $_ldflags"
+-      PDF_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PDF_SONAME_MAJOR)"
 +      GS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR) $_ldflags"
 +      PCL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR) $_ldflags"
 +      XPS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR) $_ldflags"
 +      PDL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR) $_ldflags"
++      PDF_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PDF_SONAME_MAJOR)"
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".so"
      ;;
