@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4957 2021/09/29 13:30:42 micha Exp $
+$NetBSD: CHANGES-2021,v 1.4958 2021/09/29 13:34:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7619,3 +7619,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/woof to 7.0.0 [micha 2021-09-29]
 	Updated graphics/inkscape to 1.1.1 [wiz 2021-09-29]
 	Updated devel/smake to 1.6nb1 [micha 2021-09-29]
+	Updated math/fftw to 3.3.10 [wiz 2021-09-29]
