@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/09/08 21:05:06 nia Exp $
+# $NetBSD: Makefile,v 1.13 2021/09/29 19:00:39 adam Exp $
 
 DISTNAME=	iortcw-1.51c
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=iortcw/}
 

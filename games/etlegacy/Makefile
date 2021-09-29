@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2021/09/08 21:05:05 nia Exp $
+# $NetBSD: Makefile,v 1.24 2021/09/29 19:00:38 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	etlegacy-${ETL_VERSION}
-PKGREVISION=	21
+PKGREVISION=	22
 
 COMMENT=	Open source Wolfenstein: Enemy Territory client and server
 
