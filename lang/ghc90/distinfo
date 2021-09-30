@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.15 2021/05/22 09:11:07 pho Exp $
+$NetBSD: distinfo,v 1.16 2021/09/30 15:32:53 jperkin Exp $
 
 SHA1 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 3ff01d768393b3866e7a7543f9f55646aaffce7a
 RMD160 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 39bf10b13054a6316c8477609fb98abe4277fa6c
 SHA512 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 730347bb5eaac4efac8ec487fafd2da6fe2932db45f59e324c83698eb0b0e8a6a4b4fd513de17fb9c152ccee328660cfe1638cad631ce5e35b2dbfddda0d8850
 Size (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 49500236 bytes
+SHA1 (ghc-8.10.4-boot-x86_64-unknown-solaris2.tar.xz) = ef7ba2ff12f8d875809afd0e81ebeda2eebef687
+RMD160 (ghc-8.10.4-boot-x86_64-unknown-solaris2.tar.xz) = 640c3418ca7d728fc4e8c4bd0dc718cc4f5b521e
+SHA512 (ghc-8.10.4-boot-x86_64-unknown-solaris2.tar.xz) = 3484e865b0b7c3fac4c56cdcee5e42e4579cea6a5fb527a894a9a8eba26a3bd0a691262dfb744c129f2be6bdc1d875756ffbba99fff49e1f19a10a567b4bdb12
+Size (ghc-8.10.4-boot-x86_64-unknown-solaris2.tar.xz) = 64361808 bytes
 SHA1 (ghc-9.0.1-boot-aarch64-unknown-netbsd.tar.xz) = db416c1e32a0b65e964aa80db3ecd4492a9e62d0
 RMD160 (ghc-9.0.1-boot-aarch64-unknown-netbsd.tar.xz) = 29250c03e4d29a04f2904508cd0d87d47a0e4340
 SHA512 (ghc-9.0.1-boot-aarch64-unknown-netbsd.tar.xz) = 6ae93b63ecaacc9740f88b0c78095ea660cdf3d7d30bf02b66da3d1a31ceaaf3fd33053b7863ced70ef8b4b844257e6bd856d44648e21876f802e395d265c4d6
@@ -20,10 +24,6 @@ SHA1 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 893871b70f5eb3cafdd8e6629b
 RMD160 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 33e89913fbb6307e229088fa700d78633dfea12e
 SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 1ec81c83e247855e6e67bca3529955a24d8a9213c2d2f22997bb5260e1119edd5a463e4ecd7d3d1ebf85dbd090a12f1c1ac9776ad14395742e1b20ae1e1a45a4
 Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49606768 bytes
-SHA1 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 19fa8860969d332baced6ea281616cdc5ec32d67
-RMD160 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = deb39ae711a2cfa5cec9419e993d2be05e054770
-SHA512 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 92694ef783274f42800d899af4dd558087e3c2ce13e175558a23f5187c944333a2872cee1df9b14683903a0542954a8483c7413343aacaa2b1676d10a6d27a6d
-Size (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 59903112 bytes
 SHA1 (ghc-9.0.1-src.tar.xz) = adaec1c05cd03d6af02716d59ab5f597434b700b
 RMD160 (ghc-9.0.1-src.tar.xz) = 2bed45072ccb838418ae0405f5cfe64a237315e3
 SHA512 (ghc-9.0.1-src.tar.xz) = bee7950a5118be8d8cefe0db5070139a5a93ca21c5bc6f8bf453429831f0c44f5e0fb5ee569865d6b8b92749044ee4123be06920928ac7a1ec9cffa9404a3e53
@@ -35,7 +35,7 @@ Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
 SHA1 (patch-aclocal.m4) = 8a21585c1b6a35020c5dec577ee0c7ed3bd7d0af
 SHA1 (patch-compiler_GHC_Driver_Pipeline.hs) = cc2c53f14420b8b75bd70b73e2c95bb52a10cd0c
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = 36d7171e571d56c4e6ae1ed99d2851c0b0dac084
-SHA1 (patch-configure.ac) = a67c57f39c152a9fc8af830045cf001e957590e2
+SHA1 (patch-configure.ac) = ba7762aa3dbd9757c155666a5fe957cae355bad6
 SHA1 (patch-ghc.mk) = fdcbc5b0c48b616eb96868e49681536d773eaddd
 SHA1 (patch-libraries_Cabal_Cabal_Distribution_Simple_GHC.hs) = 6d2a9f238ce7a7551002f6da253eb536adcc4a43
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
@@ -50,7 +50,7 @@ SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = 6efef280832d376915a8
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 49215dce493a6bbc440f91a3959e592f86fc779b
 SHA1 (patch-libraries_unix_include_execvpe.h) = 560c6e9b644687fad62e380f73f08359c48639a2
 SHA1 (patch-llvm-targets) = cba672c60c9cb84e0347a3cd6e8770306542e5d8
-SHA1 (patch-rts_ProfHeap.c) = bc1492578eac7b194caaf1221586cd6c13aa9583
+SHA1 (patch-rts_ProfHeap.c) = fafbb740ee87949da12749834478769548322993
 SHA1 (patch-rts_ghc.mk) = 6e3daf71fb7e656131aa2aeeb0346c651520216a
 SHA1 (patch-rts_posix_GetTime.c) = 036e09510c893ab8677a2b4add0193e7f811bb82
 SHA1 (patch-rts_posix_OSThreads.c) = 4fe5fb21021de05d9803ccbf1715de98ebd55206
