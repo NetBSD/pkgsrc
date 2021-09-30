@@ -1,10 +1,27 @@
-$NetBSD: patch-configure.ac,v 1.1 2021/02/09 13:16:24 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2021/09/30 13:23:48 jperkin Exp $
 
 Don't use non-portable operator ==:
 https://gitlab.haskell.org/ghc/ghc/merge_requests/2497
 
 --- configure.ac.orig	2021-02-04 05:28:14.000000000 +0000
 +++ configure.ac
+@@ -723,11 +723,11 @@ dnl ------------------------------------
+ dnl ** Copy the files from the "fs" utility into the right folders.
+ dnl --------------------------------------------------------------
+ AC_MSG_NOTICE([Creating links for in-tree file handling routines.])
+-ln -f utils/fs/fs.* utils/lndir/
+-ln -f utils/fs/fs.* utils/unlit/
+-ln -f utils/fs/fs.* rts/
+-ln -f utils/fs/fs.h libraries/base/include/
+-ln -f utils/fs/fs.c libraries/base/cbits/
++cp -p utils/fs/fs.* utils/lndir/
++cp -p utils/fs/fs.* utils/unlit/
++cp -p utils/fs/fs.* rts/
++cp -p utils/fs/fs.h libraries/base/include/
++cp -p utils/fs/fs.c libraries/base/cbits/
+ AC_MSG_NOTICE([Routines in place. Packages can now be build normally.])
+ 
+ dnl --------------------------------------------------------------
 @@ -848,7 +848,7 @@ if test "x$EnableDtrace" = "xyes"; then
    if test -n "$DtraceCmd"; then
      if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" \

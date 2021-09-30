@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/09/27 14:30:48 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/09/30 13:23:48 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 8.10 Release Series
 LICENSE=	modified-bsd
-
-MKPIE_SUPPORTED=	no
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
