@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/11 15:29:31 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/09/30 15:50:33 abs Exp $
 bin/sqlworkbench
 share/sql-workbench/LICENSE
-share/sql-workbench/SQLWorkbench-Manual.pdf
+share/sql-workbench/SQLWorkbench.cfg.sample
 share/sql-workbench/SQLWorkbench.exe
-share/sql-workbench/SQLWorkbench.vbs
 share/sql-workbench/SQLWorkbench64.exe
-share/sql-workbench/history.html
+share/sql-workbench/download_jre.cmd
+share/sql-workbench/download_jre.ps1
+share/sql-workbench/download_jre.sh
+share/sql-workbench/ext/README_EXT
+share/sql-workbench/ext/flatlaf.jar
 share/sql-workbench/log4j-sample.xml
+share/sql-workbench/manual/SQLWorkbench-Manual.pdf
 share/sql-workbench/manual/annotations.html
 share/sql-workbench/manual/command-copy.html
 share/sql-workbench/manual/command-export.html
@@ -65,11 +69,8 @@ share/sql-workbench/manual/workbench-manual-single.html
 share/sql-workbench/manual/workbench-manual.html
 share/sql-workbench/manual/workspace-usage.html
 share/sql-workbench/sqlwbconsole.cmd
-share/sql-workbench/sqlwbconsole.exe
 share/sql-workbench/sqlwbconsole.sh
-share/sql-workbench/sqlwbconsole64.exe
 share/sql-workbench/sqlworkbench.cmd
-share/sql-workbench/sqlworkbench.desktop
 share/sql-workbench/sqlworkbench.jar
 share/sql-workbench/sqlworkbench.sh
 share/sql-workbench/workbench32.png
