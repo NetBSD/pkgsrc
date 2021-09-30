@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2018/03/22 08:14:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2021/09/30 08:33:21 wiz Exp $
 
 BUILDLINK_TREE+=	libslang2
 
@@ -13,13 +13,13 @@ BUILDLINK_TRANSFORM+=		l:slang:slang2
 pkgbase:=	libslang2
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libslang2:Mpng)
+.if ${PKG_BUILD_OPTIONS.libslang2:Mpng}
 .  include "../../graphics/png/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libslang2:Mpcre)
+.if ${PKG_BUILD_OPTIONS.libslang2:Mpcre}
 .  include "../../devel/pcre/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libslang2:Moniguruma)
+.if ${PKG_BUILD_OPTIONS.libslang2:Moniguruma}
 .  include "../../textproc/oniguruma/buildlink3.mk"
 .endif
 

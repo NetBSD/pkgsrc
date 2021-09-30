@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/01/26 17:30:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.23 2021/09/30 08:33:21 wiz Exp $
 
 DISTNAME=	slang-2.2.4
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/
 MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v2.2/
@@ -24,6 +23,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
+
+PKGCONFIG_OVERRIDE+=	autoconf/slangpc.in
 
 DLOPEN_REQUIRE_PTHREADS=	no
 

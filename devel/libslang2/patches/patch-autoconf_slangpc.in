@@ -1,0 +1,14 @@
+$NetBSD: patch-autoconf_slangpc.in,v 1.1 2021/09/30 08:33:21 wiz Exp $
+
+Fix library name.
+
+--- autoconf/slangpc.in.orig	2011-04-11 02:37:07.000000000 +0000
++++ autoconf/slangpc.in
+@@ -7,6 +7,6 @@ Name: slang
+ Description: S-Lang programming library and interpreter
+ URL: http://www.jedsoft.org/slang/
+ Version: @slang_version@
+-Libs: -L${libdir} -lslang
++Libs: -L${libdir} -lslang2
+ Libs.private: @TERMCAP@ @DYNAMIC_LINK_LIB@ @LIBS@ @M_LIB@
+ Cflags: -I${includedir}
