@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4973 2021/09/30 13:43:06 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4974 2021/09/30 14:09:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7644,3 +7644,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/MoarVM to 2021.09 [mef 2021-09-30]
 	Updated math/p5-Math-BigInt-GMP to 1.6009 [wen 2021-09-30]
 	Updated lang/nqp to 2021.09 [mef 2021-09-30]
+	Updated lang/rakudo to 2021.09 [mef 2021-09-30]
