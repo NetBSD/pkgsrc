@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/12/11 15:29:31 abs Exp $
+$NetBSD: distinfo,v 1.7 2021/09/30 15:50:33 abs Exp $
 
-SHA1 (Workbench-Build124.zip) = e0f8eb4625e8c11de0b3c4440a1c64da98dc78aa
-RMD160 (Workbench-Build124.zip) = 5780052b1ba96119320270b57a897da39fad7de3
-SHA512 (Workbench-Build124.zip) = 82dc66199ad8f13fde96a6b2126ac54bd8108af8f15212daf10d2359fff1400607c557caca1a917ae93e3a5ab66791a0f6f57fa21f19814958d64822acb84026
-Size (Workbench-Build124.zip) = 6868177 bytes
+SHA1 (Workbench-Build127.zip) = 4a389a1515f9751c67ba7ea327a528271075a0f0
+RMD160 (Workbench-Build127.zip) = 7deaf40efd26fca2bebe20712e027dbf390649f4
+SHA512 (Workbench-Build127.zip) = 4d675136767d8d347ced22214fab036fb24c6e6c844bdef07c3290f6890c8f96a0555ae7dd00df639bc5832deb79ac79329fbc062f0f93f2a9b89d0a12c61156
+Size (Workbench-Build127.zip) = 8275806 bytes
