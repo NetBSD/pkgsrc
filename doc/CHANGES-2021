@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4970 2021/09/30 13:25:11 wen Exp $
+$NetBSD: CHANGES-2021,v 1.4971 2021/09/30 13:32:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7641,3 +7641,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/shod to 2.1.4 [pin 2021-09-30]
 	Updated mail/notmuch to 0.33.2 [jperkin 2021-09-30]
 	Updated math/p5-Math-BigInt to 1.999825 [wen 2021-09-30]
+	Updated devel/MoarVM to 2021.09 [mef 2021-09-30]
