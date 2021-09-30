@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2021/03/08 08:08:43 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.63 2021/09/30 11:08:57 nia Exp $
 
 # used by x11/labltk/Makefile
 DISTNAME=	ocaml-4.11.2
@@ -26,6 +26,9 @@ GNU_CONFIGURE=		yes
 
 #DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
 #PATCHDIR=	${.CURDIR}/../../lang/ocaml/patches
+
+# build failure on i386: "../ocamlopt.opt: text relocations"
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
