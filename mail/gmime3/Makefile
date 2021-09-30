@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/05/25 05:34:49 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2021/09/30 11:04:08 jperkin Exp $
 
 DISTNAME=	gmime-3.2.7
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.2/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +18,9 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
+
+LDFLAGS.SunOS+=		-liconv
+
 # one test failure as of 3.2.6
 # test-filters:
 # https://github.com/jstedfast/gmime/issues/81
