@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/09/19 20:39:52 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/09/30 18:57:26 adam Exp $
 
-SHA1 (python-axolotl-0.1.42.tar.gz) = 6170d4eea0a70c31bf319159bd4475455ba684f7
-RMD160 (python-axolotl-0.1.42.tar.gz) = 22988db6b833ced9b7f62401ae50a3076caf5de5
-SHA512 (python-axolotl-0.1.42.tar.gz) = 83af21f6bc3070227dabe5030fce6812f5c04476c7240f00bb09b0e81d40f0ffaa351316d65f8291853892fdf63f42b83ee4825223125b21c975565167bca7a0
-Size (python-axolotl-0.1.42.tar.gz) = 39472 bytes
+SHA1 (python-axolotl-0.2.3.tar.gz) = 36720d28eac9875cb4975fbb38c7965942004c6f
+RMD160 (python-axolotl-0.2.3.tar.gz) = bd830ee43a670a2b5601d74a2d0097251136b9ac
+SHA512 (python-axolotl-0.2.3.tar.gz) = 484a13a0117fcafabc297c48bfac33039b6ed3986165816cb92bbaba7472fb2616de71246c2482c0170002c9b61ef38f84ff28d8841151730f97b34a5da2e31f
+Size (python-axolotl-0.2.3.tar.gz) = 38180 bytes
