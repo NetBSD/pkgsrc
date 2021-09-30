@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2015/08/28 08:17:38 richard Exp $
+# $NetBSD: Makefile,v 1.65 2021/09/30 11:39:27 nia Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
@@ -19,9 +19,6 @@ MAKE_FILE=	unix/Makefile
 MAKE_FLAGS+=	LOCAL_ZIP=${CFLAGS:Q}
 MAKE_FLAGS+=	LFLAGS1=${_STRIPFLAG_CC:Q}
 MAKE_FLAGS+=	-DUNICODE_SUPPORT
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
-CFLAGS+=	-O0
-.endif
 
 .include "../../mk/compiler.mk"
 
@@ -30,6 +27,11 @@ BUILD_TARGET=	generic_gcc
 .else
 BUILD_TARGET=	generic
 CFLAGS+=	-O
+.endif
+
+.if ${MACHINE_ARCH} == "i386" && ${PKGSRC_MKPIE:tl} != "no"
+# Text relocations
+MAKE_FLAGS+=	DISABLE_ASM=YES
 .endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
