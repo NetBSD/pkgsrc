@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4969 2021/09/30 13:18:26 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.4970 2021/09/30 13:25:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7640,3 +7640,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/starship to 0.58.0 [pin 2021-09-30]
 	Updated wm/shod to 2.1.4 [pin 2021-09-30]
 	Updated mail/notmuch to 0.33.2 [jperkin 2021-09-30]
+	Updated math/p5-Math-BigInt to 1.999825 [wen 2021-09-30]
