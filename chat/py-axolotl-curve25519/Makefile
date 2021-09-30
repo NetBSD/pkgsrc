@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/09/19 20:40:45 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/09/30 18:56:14 adam Exp $
 
-PKGNAME=	${PYPKGPREFIX}-axolotl-curve25519-0.4.1.2
 DISTNAME=	python-axolotl-curve25519-0.4.1.post2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
 CATEGORIES=	chat security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-axolotl-curve25519/}
 
