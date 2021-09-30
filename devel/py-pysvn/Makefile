@@ -1,30 +1,53 @@
-# $NetBSD: Makefile,v 1.46 2021/04/21 11:41:30 adam Exp $
+# $NetBSD: Makefile,v 1.47 2021/09/30 16:15:10 hauke Exp $
 #
 
-VERS=		1.7.6
+VERS=		1.9.15
 DISTNAME=	pysvn-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=	25
 CATEGORIES=	devel
-MASTER_SITES=	http://pysvn.barrys-emacs.org/source_kits/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysvn/}
 
 MAINTAINER=		helgoman@users.sourceforge.net
-HOMEPAGE=		http://pysvn.tigris.org/
+HOMEPAGE=		https://pysvn.sourceforge.io/
 COMMENT=		Python interface to Subversion
 LICENSE=		apache-1.1
 
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+USE_LANGUAGES=		c c++
 
-USE_LANGUAGES=		c
+WRKSRC=			${WRKDIR}/${DISTNAME}/Source
 
 BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
-SUBST_CLASSES+=		rpath-flg
-SUBST_STAGE.rpath-flg=	pre-configure
-SUBST_FILES.rpath-flg=	Source/setup_configure.py
-SUBST_SED.rpath-flg=	-e 's|-Wl,--rpath|${COMPILER_RPATH_FLAG}|g'
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	setup_configure.py
+SUBST_VARS.path+=	PREFIX
+
+PYSETUPCONFIGARGS=	--verbose --pycxx-dir="../Import/pycxx-7.1.5"
+PYLIBVER=		${PYVERSSUFFIX:S/./_/g}
+
+INSTALLATION_DIRS+=	${PYSITELIB}/pysvn
+
+PRINT_PLIST_AWK+=	{ gsub(/${PYLIBVER}\.so/, "$${PYLIBVER}.so"); }
+
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
+PLIST_SUBST+=		PYLIBVER=${PYLIBVER:Q}
+
+do-configure:
+	${RUN} \
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} \
+	${PYTHONBIN} setup.py configure ${PYSETUPCONFIGARGS}
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/pysvn/__init__.py \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/pysvn/__init__.py
+	${INSTALL_LIB} ${WRKSRC}/pysvn/_pysvn_${PYLIBVER}.so \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/pysvn/_pysvn_${PYLIBVER}.so
 
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../www/neon/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
