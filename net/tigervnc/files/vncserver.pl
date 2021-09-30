@@ -101,6 +101,7 @@ if (-d "/etc/X11/fontpath.d") {
 if (! -l "/usr/lib/X11") {push(@fontpaths, '/usr/lib/X11/fonts');}
 if (! -l "/usr/X11") {push(@fontpaths, '/usr/X11/lib/X11/fonts');}
 if (! -l "/usr/X11R6") {push(@fontpaths, '/usr/X11R6/lib/X11/fonts');}
+if (! -l "/usr/X11R7") {push(@fontpaths, '/usr/X11R7/lib/X11/fonts');}
 push(@fontpaths, '/usr/share/fonts/default');
 
 @fonttypes = ('misc',
