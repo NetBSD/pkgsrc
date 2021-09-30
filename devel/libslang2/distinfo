@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2018/05/17 10:35:59 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2021/09/30 08:33:21 wiz Exp $
 
 SHA1 (slang-2.2.4.tar.bz2) = 34e68a993888d0ae2ebc7bc31b40bc894813a7e2
 RMD160 (slang-2.2.4.tar.bz2) = fc023080f021201a99263d686ab4a8b87bbb575a
@@ -11,4 +11,5 @@ SHA1 (patch-ad) = 9ab953b8d850832f49f8af9bdb397f474af209eb
 SHA1 (patch-ae) = 85cc759196617a81cee65460e5aabb3a966a6a77
 SHA1 (patch-af) = 15ae3f27d727492c3bebcbfbca005a78455b8774
 SHA1 (patch-ag) = 25be7b526b2adb90d7b83645cc93fa67743fe86f
+SHA1 (patch-autoconf_slangpc.in) = face2e156e75854bb9ce07882ee02bbdc077aba5
 SHA1 (patch-src_slproc.c) = 297723830b85ebed124ec4ff7bd6608bf2e23f29
