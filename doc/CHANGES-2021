@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4974 2021/09/30 14:09:13 mef Exp $
+$NetBSD: CHANGES-2021,v 1.4975 2021/09/30 14:19:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7645,3 +7645,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/p5-Math-BigInt-GMP to 1.6009 [wen 2021-09-30]
 	Updated lang/nqp to 2021.09 [mef 2021-09-30]
 	Updated lang/rakudo to 2021.09 [mef 2021-09-30]
+	Updated www/firefox to 92.0.1 [ryoon 2021-09-30]
