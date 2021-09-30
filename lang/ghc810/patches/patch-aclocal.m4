@@ -1,4 +1,4 @@
-$NetBSD: patch-aclocal.m4,v 1.1 2021/02/09 13:16:24 ryoon Exp $
+$NetBSD: patch-aclocal.m4,v 1.2 2021/09/30 13:23:48 jperkin Exp $
 
 Hunk #1:
   Remove _AC_PROG_CC_C99 macro that is removed in autoconf-2.71
@@ -11,9 +11,9 @@ Hunk #3:
   Canonicalize OS name netbsd* to "netbsd":
   https://gitlab.haskell.org/ghc/ghc/merge_requests/2496
 
---- aclocal.m4.orig	2020-07-08 16:43:03.000000000 +0000
+--- aclocal.m4.orig	2021-01-25 19:33:20.000000000 +0000
 +++ aclocal.m4
-@@ -611,17 +611,6 @@ AC_DEFUN([FP_SET_CFLAGS_C99],
+@@ -651,17 +651,6 @@ AC_DEFUN([FP_SET_CFLAGS_C99],
      CC="$$1"
      CFLAGS="$$2"
      CPPFLAGS="$$3"
@@ -31,7 +31,7 @@ Hunk #3:
      dnl restore saved state
      FP_COPY_SHELLVAR([fp_save_CC],[CC])
      FP_COPY_SHELLVAR([fp_save_CFLAGS],[CFLAGS])
-@@ -661,7 +650,7 @@ AC_DEFUN([FPTOOLS_SET_C_LD_FLAGS],
+@@ -701,7 +690,7 @@ AC_DEFUN([FPTOOLS_SET_C_LD_FLAGS],
      x86_64-unknown-solaris2)
          $2="$$2 -m64"
          $3="$$3 -m64"
@@ -40,7 +40,16 @@ Hunk #3:
          $5="$$5 -m64"
          ;;
      alpha-*)
-@@ -2047,6 +2036,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
+@@ -1360,7 +1349,7 @@ AC_DEFUN([FP_GCC_VERSION], [
+     AC_MSG_ERROR([C compiler is required])
+   fi
+ 
+-  if $CC --version | grep --quiet gcc; then
++  if $CC --version | grep gcc >/dev/null; then
+     AC_CACHE_CHECK([version of gcc], [fp_cv_gcc_version],
+     [
+         # Be sure only to look at the first occurrence of the "version " string;
+@@ -2106,6 +2095,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
        openbsd*)
          $3="openbsd"
          ;;
