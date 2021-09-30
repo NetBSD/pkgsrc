@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/30 14:39:24 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/09/30 09:59:47 pin Exp $
 bin/shod
+bin/shodc
 man/man1/shod.1
