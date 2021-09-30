@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4977 2021/09/30 15:50:54 abs Exp $
+$NetBSD: CHANGES-2021,v 1.4978 2021/09/30 16:15:37 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7648,3 +7648,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 92.0.1 [ryoon 2021-09-30]
 	Updated www/firefox-l10n to 92.0.1 [ryoon 2021-09-30]
 	Updated databases/sql-workbench to 127 [abs 2021-09-30]
+	Updated devel/py-pysvn to 1.9.15 [hauke 2021-09-30]
