@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4967 2021/09/30 09:58:05 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4968 2021/09/30 10:00:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7638,3 +7638,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/neomutt to 20210205 [wiz 2021-09-29]
 	Updated devel/libslang2 to 2.2.4nb4 [wiz 2021-09-30]
 	Updated shells/starship to 0.58.0 [pin 2021-09-30]
+	Updated wm/shod to 2.1.4 [pin 2021-09-30]
