@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:15 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/09/30 16:15:10 hauke Exp $
 
-SHA1 (pysvn-1.7.6.tar.gz) = 720399815278a0b29a2ea87a09a0d2807d4614e4
-RMD160 (pysvn-1.7.6.tar.gz) = f6b44e293ec4a94cd610cb8e1f2b711c1aad5aee
-SHA512 (pysvn-1.7.6.tar.gz) = 21c78521d34167ebb751c832ed2cc954f1afa1941caf073f1d3cca2d487dceffbf81feaf0761ed3a9fd94e7289d81228b54f556019b9851386bdbf7577320ed2
-Size (pysvn-1.7.6.tar.gz) = 331549 bytes
-SHA1 (patch-Source_pysvn__client__cmd__checkin.cpp) = d4a6ab9709fea7728519fa3a34044bf93ef24bd2
+SHA1 (pysvn-1.9.15.tar.gz) = f10c81564d43fa5363ef5354a67bd5336faa633d
+RMD160 (pysvn-1.9.15.tar.gz) = 11086a08131edba961e0a2416c8227d1ac0a1bbe
+SHA512 (pysvn-1.9.15.tar.gz) = 0809507134fd31f6bcc90217e7840eb166e2eb2ed56316010a549dd70f6f855599f596942574343cdefd5997947b12c847df2cd145669f50aa93f603e46a5ee0
+Size (pysvn-1.9.15.tar.gz) = 667161 bytes
+SHA1 (patch-setup__configure.py) = 51265c394958ae67457f0b5347cd33b706f84d26
