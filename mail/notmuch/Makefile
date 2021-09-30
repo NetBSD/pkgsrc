@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2021/09/13 06:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2021/09/30 13:18:17 jperkin Exp $
 
-DISTNAME=	notmuch-0.33.1
+DISTNAME=	notmuch-0.33.2
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -12,10 +12,10 @@ LICENSE=	gnu-gpl-v3
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash gmake makeinfo pkg-config
+USE_TOOLS+=	bash gmake makeinfo perl:test pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
-#TEST_TARGET=	check
+TEST_TARGET=	check
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -45,7 +45,7 @@ SUBST_MESSAGE.gpg=	Select GnuPG command
 SUBST_FILES.gpg+=	configure
 SUBST_VARS.gpg=		GPGME_GPG
 
-LDFLAGS.SunOS+=	-lnsl
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
