@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2021/09/29 19:01:16 adam Exp $
+# $NetBSD: Makefile,v 1.160 2021/09/30 11:17:10 nia Exp $
 
 DISTNAME=	gnupg-1.4.23
 PKGREVISION=	13
@@ -29,6 +29,10 @@ CONFIGURE_ARGS+=	--disable-gnupg-iconv
 
 .if (${OPSYS} == "AIX" || ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS") \
     && defined(ABI) && ${ABI} == 64
+CONFIGURE_ARGS+=	--disable-asm
+.endif
+
+.if ${MACHINE_ARCH} == "i386" && ${PKGSRC_MKPIE:tl} == "yes"
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
