@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_ProfHeap.c,v 1.4 2021/05/05 09:18:52 pho Exp $
+$NetBSD: patch-rts_ProfHeap.c,v 1.5 2021/09/30 15:32:53 jperkin Exp $
 
 NetBSD does not have uselocale(3).
 
@@ -7,7 +7,7 @@ https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5677
 
 --- rts/ProfHeap.c.orig	2021-01-25 16:30:28.000000000 +0000
 +++ rts/ProfHeap.c
-@@ -69,7 +69,7 @@ static locale_t prof_locale = 0, saved_locale = 0;
+@@ -69,7 +69,7 @@ static locale_t prof_locale = 0, saved_l
  STATIC_INLINE void
  init_prof_locale( void )
  {
@@ -35,12 +35,12 @@ https://gitlab.haskell.org/ghc/ghc/-/merge_requests/5677
  #else
      saved_locale = uselocale(prof_locale);
  #endif
-@@ -108,6 +111,8 @@ restore_locale( void )
- {
+@@ -109,6 +112,8 @@ restore_locale( void )
  #if defined(mingw32_HOST_OS)
      _configthreadlocale(prof_locale_per_thread);
-+    setlocale(LC_NUMERIC, saved_locale);
-+#elif defined(netbsd_HOST_OS)
      setlocale(LC_NUMERIC, saved_locale);
++#elif defined(netbsd_HOST_OS)
++    setlocale(LC_NUMERIC, saved_locale);
  #else
      uselocale(saved_locale);
+ #endif
