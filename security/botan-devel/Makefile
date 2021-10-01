@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2021/09/29 19:00:12 adam Exp $
+# $NetBSD: Makefile,v 1.43 2021/10/01 12:13:08 nia Exp $
 
 DISTNAME=	Botan-2.17.3
 PKGNAME=	${DISTNAME:tl}
@@ -32,9 +32,12 @@ CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
 CONFIGURE_ARGS+=	--cc=gcc
 .endif
 
+PLIST_VARS+=		x86
 .if ${MACHINE_ARCH} == "x86_64"
+PLIST.x86=		yes
 CONFIGURE_ARGS+=	--cpu=amd64
 .elif ${MACHINE_ARCH} == "i386"
+PLIST.x86=		yes
 CONFIGURE_ARGS+=	--cpu=i386
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
