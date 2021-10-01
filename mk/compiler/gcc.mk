@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.226 2021/08/03 07:19:20 nia Exp $
+# $NetBSD: gcc.mk,v 1.227 2021/10/01 11:56:12 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -94,7 +94,7 @@ _DEF_VARS.gcc=	\
 	_IS_BUILTIN_GCC \
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
-	_NEED_GCC2 _NEED_GCC3 _NEED_GCC34 \
+	_NEED_GCC2 _NEED_GCC3 \
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
 	_NEED_GCC10 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
@@ -126,7 +126,7 @@ _USE_VARS.gcc=	\
 	_PKGSRC_USE_FORTIFY _PKGSRC_USE_RELRO _PKGSRC_USE_STACK_CHECK \
 	_OPSYS_INCLUDE_DIRS _OPSYS_LIB_DIRS
 _IGN_VARS.gcc=	\
-	_GCC2_PATTERNS _GCC3_PATTERNS _GCC34_PATTERNS \
+	_GCC2_PATTERNS _GCC3_PATTERNS \
 	_GCC6_PATTERNS _GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS \
 	_GCC10_PATTERNS _GCC_AUX_PATTERNS
 _LISTED_VARS.gcc= \
@@ -160,12 +160,9 @@ _GCC_DIST_VERSION:=	${${_GCC_DIST_NAME:tu}_DIST_VERSION}
 _GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 		2.9[0-4] 2.9[0-4].* 2.95 2.95.[0-3]
 
-# _GCC3_PATTERNS matches N s.t. 2.95.3 < N < 3.4.
+# _GCC3_PATTERNS matches N s.t. 2.95.3 < N < 4. 
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
-		2.[1-9][0-9][0-9]* 3.[0-3] 3.[0-3].*
-
-# _GCC34_PATTERNS matches N s.t. 3.4 <= N < 4.
-_GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]*
+		2.[1-9][0-9][0-9]* 3.[0-9] 3.[0-9].*
 
 # _GCC6_PATTERNS matches N s.t. 4.5 <= N < 7.
 _GCC6_PATTERNS= 4.[0-9] 4.[0-9]* 5 5.* 6 6.*
@@ -297,12 +294,6 @@ _NEED_GCC3?=	no
 _NEED_GCC3=	yes
 .  endif
 .endfor
-_NEED_GCC34?=	no
-.for _pattern_ in ${_GCC34_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC34=	yes
-.  endif
-.endfor
 _NEED_GCC6?=	no
 .for _pattern_ in ${_GCC6_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
@@ -341,7 +332,6 @@ _NEED_NEWER_GCC=NO
 .  endif
 .endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
-    !empty(_NEED_GCC34:M[nN][oO]) && \
     !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
     !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
     !empty(_NEED_GCC10:M[nN][oO]) && \
@@ -355,8 +345,6 @@ LANGUAGES.gcc?=	c
 LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC3:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran77 java objc
-.elif !empty(_NEED_GCC34:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC6:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC7:M[yY][eE][sS])
@@ -482,24 +470,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc)
 _GCC_PKGSRCDIR=		../../lang/gcc3-c
 _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
-.  endif
-.elif !empty(_NEED_GCC34:M[yY][eE][sS])
-#
-# We require gcc-3.4.x in the lang/gcc34 directory.
-#
-_GCC_PKGBASE=		gcc34
-.  if ${PKGPATH} == lang/gcc34
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc34
-_GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mobjc)
-_USE_GCC_SHLIB?=	yes
-.    endif
 .  endif
 .elif !empty(_NEED_GCC6:M[yY][eE][sS])
 #
