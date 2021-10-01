@@ -1,0 +1,1 @@
+bin/filetype @PREFIX@/bin/filetype-@PYVERSSUFFIX@
