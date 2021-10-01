@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/09/29 19:01:09 adam Exp $
+# $NetBSD: Makefile,v 1.42 2021/10/01 13:34:12 nia Exp $
 
 DISTNAME=	netatalk-2.2.6
 PKGNAME=	${DISTNAME:C/-/22-/}
@@ -19,6 +19,9 @@ BDB_ACCEPTED=		db4 db5
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config perl:run
 GNU_CONFIGURE=		yes
+
+# https://mail-index.netbsd.org/pkgsrc-users/2021/10/01/msg034512.html
+CHECK_RELRO_SKIP+=	libexec/netatalk/uams/*.a
 
 BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
 
