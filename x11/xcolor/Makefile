@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/09/09 09:23:03 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/10/01 02:57:20 gutteridge Exp $
 
 DISTNAME=	xcolor-0.5.1
 CATEGORIES=	x11
@@ -30,4 +30,5 @@ do-install:
 .include "../../lang/python/tool.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
