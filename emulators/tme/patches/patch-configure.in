@@ -1,9 +1,19 @@
-$NetBSD: patch-configure.in,v 1.1 2020/08/13 05:59:52 tsutsui Exp $
+$NetBSD: patch-configure.in,v 1.2 2021/10/01 16:14:48 tsutsui Exp $
 
+- Workaround for SS2 emulation on NetBSD/amd64.
 - Fix wrong comparison.
 
 --- configure.in.orig	2010-06-05 19:56:37.000000000 +0000
 +++ configure.in
+@@ -565,7 +565,7 @@ else
+ 
+     # get the host recode parts:
+     case "${target}" in
+-    i[3456789]86-*-netbsd* | x86_64-*-netbsd* | i[3456789]86-*-linux*)
++    i[3456789]86-*-netbsd* | i[3456789]86-*-linux*)
+ 	recode_hosts="mmap x86"
+ 	;;
+     *) recode_hosts= ;;
 @@ -599,7 +599,7 @@ i[3456789]86-* | x86_64-*) misc_hosts="x
  esac
  changequote([, ])dnl
