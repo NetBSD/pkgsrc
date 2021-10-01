@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.28 2020/08/13 06:33:59 tsutsui Exp $
+$NetBSD: distinfo,v 1.29 2021/10/01 16:14:48 tsutsui Exp $
 
 SHA1 (tme-0.8.tar.gz) = dd4f3421c20ceed548c5328a21dbb26e80f46b9c
 RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
 SHA512 (tme-0.8.tar.gz) = 961ccee96d5192ff7373a401834e96d5946f3aa783bd4c8839c6b1f5fa15a768e3241972d1e5049f89b8593ff9db0e9dc2378a50e85dae680327c11bc14323e8
 Size (tme-0.8.tar.gz) = 2100123 bytes
-SHA1 (patch-configure) = 53835d3d9c3f77618962d67b3a72c5d44f72bf2b
-SHA1 (patch-configure.in) = 9795ad35a16698057f01e78314b5ee215065e450
+SHA1 (patch-configure) = 75fb974a21641cf27fefd34837226367042e5d1d
+SHA1 (patch-configure.in) = 64b4717bc68fab1ece476e11e2d685b2c90aa9ac
 SHA1 (patch-host_bsd_Makefile.am) = db0add22732e95b18886877a92e57e1a19d3099f
 SHA1 (patch-host_bsd_Makefile.in) = 0c361aca770ec7e323cef150e0e1b29d6a442306
 SHA1 (patch-host_bsd_bsd-if.c) = 929ddb1cbf3cbbc84dc9b1c8facba42032857dfa
@@ -18,6 +18,7 @@ SHA1 (patch-ic_m68k_m68k-insns.c) = dcb23606915beb2bb66e2c53f001603487318c96
 SHA1 (patch-ic_m68k_m68k-misc.c) = a5d5f5dfdd0331d30b19815687ead49554a771f1
 SHA1 (patch-ic_mm58167.c) = 1c35c599f56f6a13a9dfc85dc5154f094bd8c0d0
 SHA1 (patch-ic_sparc_sparc-execute.c) = bccd0f021d3921273f61d9dddb1e93d45ff7d84c
+SHA1 (patch-libtme_host_recode-mmap.c) = 3e405f1783e17f91166539a042f67109f5632b7e
 SHA1 (patch-libtme_memory-auto.sh) = b7f70df312e69d711f9ef5c99dc5244e80ea6a14
 SHA1 (patch-libtme_misc.c) = 30b27fc54550555d54124af20ef746072c083695
 SHA1 (patch-libtme_module.c) = 622db6788f4159b41486bd433a699de75e66d998
