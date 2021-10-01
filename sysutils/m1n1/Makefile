@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/08/30 23:33:23 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2021/10/01 12:40:52 nia Exp $
 
 GITHUB_PROJECT=	m1n1
 GITHUB_TAG=	4df78129aac4547231dbac662d28c3b67b13cc79
@@ -19,6 +19,8 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/m1n1-4df78129aac4547231dbac662d28c3b67b13cc79
 USE_TOOLS+=	gmake
+
+TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 MAKE_FLAGS+=	ARCH=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf-
