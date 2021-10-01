@@ -1,0 +1,2 @@
+bin/pythran @PREFIX@/bin/pythran-@PYVERSSUFFIX@
+bin/pythran-config @PREFIX@/bin/pythran-config-@PYVERSSUFFIX@
