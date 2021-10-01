@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/06/26 17:42:23 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2021/10/01 11:49:59 nia Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -25,6 +25,9 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
+
+# Relocations result in a linker error on AArch64, but not x86.
+MKPIE_SUPPORTED=	no
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has several configure scripts
