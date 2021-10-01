@@ -1,42 +1,7 @@
-$NetBSD: patch-ab,v 1.39 2013/11/10 20:12:32 dholland Exp $
-
-- add -lexecinfo if libexecinfo exists (hack for NetBSD-current)
-- ...?
-
-A more proper fix for the first hunk has been reported upstream here:
-https://bugzilla.gnome.org/show_bug.cgi?id=711795
-so once that gets rolled in the first hunk can be removed.
+$NetBSD: patch-ab,v 1.40 2021/10/01 14:29:05 ryoon Exp $
 
 --- configure.orig	2013-11-03 17:00:19.000000000 +0000
 +++ configure
-@@ -14135,7 +14135,11 @@ if eval test \"x\$"$as_ac_Header"\" = x"
-   cat >>confdefs.h <<_ACEOF
- #define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
- _ACEOF
--
-+if [ $ac_header = execinfo.h ]; then
-+    if [ -e /usr/lib/libexecinfo.a -o -e /usr/lib/libexecinfo.so ]; then
-+	LIBS="$LIBS -lexecinfo"
-+    fi
-+fi
- fi
- 
- done
-@@ -19153,13 +19157,13 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
-   gimp_ok=yes
- fi
- rm -f conftest*
-+  fi
- 
-       if test "x$gimp_ok" = xyes; then
- 
- $as_echo "#define HAVE_SYS_SELECT_H 1" >>confdefs.h
- 
-       fi
--  fi
-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $gimp_ok" >&5
- $as_echo "$gimp_ok" >&6; }
-   if test "x$gimp_ok" = xno; then
 @@ -23499,7 +23503,7 @@ fi
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
