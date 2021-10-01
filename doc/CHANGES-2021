@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4985 2021/10/01 09:03:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4986 2021/10/01 11:58:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7661,3 +7661,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libimagequant to 2.16.0 [adam 2021-10-01]
 	Updated graphics/pngquant to 2.16.0 [adam 2021-10-01]
 	Updated finance/gnucash-docs to 4.8 [wiz 2021-10-01]
+	Removed lang/gcc34 [nia 2021-10-01]
+	Removed lang/gcc44 [nia 2021-10-01]
