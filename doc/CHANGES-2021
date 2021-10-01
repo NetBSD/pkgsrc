@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4990 2021/10/01 14:29:31 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4991 2021/10/01 18:54:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7668,3 +7668,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/babl to 0.1.88 [ryoon 2021-10-01]
 	Updated graphics/gegl to 0.4.32 [ryoon 2021-10-01]
 	Updated graphics/gimp to 2.10.28 [ryoon 2021-10-01]
+	Updated textproc/ruby-nokogiri to 1.12.5 [tsutsui 2021-10-01]
