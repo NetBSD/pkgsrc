@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2021/10/01 08:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2021/10/01 08:51:53 wiz Exp $
 
 DISTNAME=	notmuch-0.33.2
 CATEGORIES=	mail
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake makeinfo pkg-config # perl:test
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
-#TEST_TARGET=	check
+TEST_TARGET=	check
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
