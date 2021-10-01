@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/01 19:51:00 adam Exp $
+
+SHA1 (astunparse-1.6.3.tar.gz) = f0acaef1bb0969ba3923676fac0010fa17e21ab4
+RMD160 (astunparse-1.6.3.tar.gz) = 3506f9ca63bfac6efa0a2933ff0257b760972011
+SHA512 (astunparse-1.6.3.tar.gz) = 12e99b32524e551494d3053a57aeb646bca8a96a9aa17b0737e6dace6c11874e2e7633d82197cacc0b55622bea637030344ab45c8db57ef244bd63663799d2e9
+Size (astunparse-1.6.3.tar.gz) = 18290 bytes
