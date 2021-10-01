@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/06/03 19:09:33 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/01 09:00:52 adam Exp $
 
-SHA1 (pngquant-2.15.1-src.tar.gz) = 97843fc4ddc81d4b8fae007f4fe687481176d557
-RMD160 (pngquant-2.15.1-src.tar.gz) = 176bf2be42152a7bddd3c4dbd7716cd39abd6072
-SHA512 (pngquant-2.15.1-src.tar.gz) = 9a39700994a877d779b275b73e259310fcbf92920d4d177dce4e046be442731b2b498e41d57e469ce32aa5f3c49e5f58e40552905d97e62f1231c1795c95457d
-Size (pngquant-2.15.1-src.tar.gz) = 149278 bytes
+SHA1 (pngquant-2.16.0-src.tar.gz) = 7f51371e01010b99545dd601fe672b297796fabc
+RMD160 (pngquant-2.16.0-src.tar.gz) = d254867afdbb7c02ac89dce2293541c6bb7ee873
+SHA512 (pngquant-2.16.0-src.tar.gz) = 09d18e84f9e51d6b2199350409da612e40b21695242cb750ee6a7f8a0bfb0139487af8096207fdf29b250da5bfc88f90371251b8b4e9b7b5b46cb6f256540154
+Size (pngquant-2.16.0-src.tar.gz) = 149322 bytes
 SHA1 (patch-configure) = 34165a94074a0e7f35b23794165589551d58ee08
