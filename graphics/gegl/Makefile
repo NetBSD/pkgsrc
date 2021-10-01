@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2021/10/01 14:28:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2021/10/01 16:31:27 adam Exp $
 
 DISTNAME=	gegl-0.4.32
 CATEGORIES=	graphics
-MASTER_SITES=	https://download.gimp.org/pub/gegl/0.4/
+MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
@@ -19,6 +19,9 @@ MESON_ARGS+=	-Ddocs=false
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pkg-config xgettext
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gegl
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gegl
 
 PKGCONFIG_OVERRIDE+=	gegl.pc.in
 
