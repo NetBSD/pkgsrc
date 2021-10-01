@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/01 19:53:00 adam Exp $
+
+SHA1 (beniget-0.4.1.tar.gz) = 0167f16d17fbd61b91e620bca07e4ec7054ce51d
+RMD160 (beniget-0.4.1.tar.gz) = 4628ed559827ecee405a71ca646e5a04af7542ee
+SHA512 (beniget-0.4.1.tar.gz) = c002dec769b070cf02038ce232edb905b66df7095b8ff1030ecae1b3810ebae7c1b9b0c38dd1c651b27afe538f01cfff0e54145c09c8e3318963af6a7c1588eb
+Size (beniget-0.4.1.tar.gz) = 16277 bytes
