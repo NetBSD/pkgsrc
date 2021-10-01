@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/10/01 19:51:00 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/astunparse/__init__.py
+${PYSITELIB}/astunparse/__init__.pyc
+${PYSITELIB}/astunparse/__init__.pyo
+${PYSITELIB}/astunparse/__main__.py
+${PYSITELIB}/astunparse/__main__.pyc
+${PYSITELIB}/astunparse/__main__.pyo
+${PYSITELIB}/astunparse/printer.py
+${PYSITELIB}/astunparse/printer.pyc
+${PYSITELIB}/astunparse/printer.pyo
+${PYSITELIB}/astunparse/unparser.py
+${PYSITELIB}/astunparse/unparser.pyc
+${PYSITELIB}/astunparse/unparser.pyo
