@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/08/17 20:17:47 leot Exp $
+# $NetBSD: Makefile,v 1.12 2021/10/01 15:07:46 nia Exp $
 
 DISTNAME=	swc-0.0.0.20200228
 PKGREVISION=	1
@@ -16,6 +16,9 @@ USE_TOOLS+=	gmake pkg-config
 
 # Needs access to input, tty, and DRM devices.
 SPECIAL_PERMS+=	bin/swc-launch ${SETUID_ROOT_PERMS}
+
+# "ld: -r and -pie may not be used together"
+MKPIE_SUPPORTED=	no
 
 PKGCONFIG_OVERRIDE+=	swc.pc.in
 
