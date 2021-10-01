@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21120 2021/09/30 19:03:01 adam Exp $
+$NetBSD: TODO,v 1.21121 2021/10/01 08:55:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -813,7 +813,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
-	o gnucash-4.8
 	o gnutime-1.9
 	o go-afero-1.6.0
 	o go-appengine-1.6.7
