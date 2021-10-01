@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/10/01 19:53:00 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/beniget/__init__.py
+${PYSITELIB}/beniget/__init__.pyc
+${PYSITELIB}/beniget/__init__.pyo
+${PYSITELIB}/beniget/beniget.py
+${PYSITELIB}/beniget/beniget.pyc
+${PYSITELIB}/beniget/beniget.pyo
