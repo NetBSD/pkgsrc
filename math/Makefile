@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2021/09/20 13:09:37 mef Exp $
+# $NetBSD: Makefile,v 1.521 2021/10/01 19:55:37 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -395,6 +395,7 @@ SUBDIR+=	py-photutils
 SUBDIR+=	py-powerlaw
 SUBDIR+=	py-pyerfa
 SUBDIR+=	py-pymc3
+SUBDIR+=	py-pythran
 SUBDIR+=	py-pyvo
 SUBDIR+=	py-pywavelets
 SUBDIR+=	py-quadprog
