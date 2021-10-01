@@ -1,0 +1,629 @@
+<!-- $NetBSD: hardening.xml,v 1.1 2021/10/01 17:20:27 nia Exp $ -->
+
+<appendix id="hardening">
+<title>Security hardening</title>
+
+<para>
+A number of mechanisms are available in pkgsrc to improve the security of the
+resulting system. This page describes the mechanisms, and gives hints
+about detecting and fixing problems.
+</para>
+
+<para>
+Mechanisms can be enabled individually in
+<filename>mk.conf</filename>, and are
+individually described below.
+</para>
+
+<para>
+Typically, a feature will cause some programs to fail to build or work
+when first enabled. This can be due to latent problems in the
+program, and can be due to other reasons. After enough testing to
+have confidence that user problems will be quite rare, individual
+mechanisms will be enabled by default.
+</para>
+
+<para>
+For each mechanism, see the Caveats section below for an explanation
+of what might go wrong at compile time and at run time, and how to
+notice and address these problems.
+</para>
+
+<sect1 id="hardening.mechanisms">
+<title>Mechanisms</title>
+
+<sect2 id="hardening.mechanisms.enabled">
+<title>Enabled by default</title>
+
+<sect3 id="hardening.mechanisms.enabled.fortify">
+<title>PKGSRC_USE_FORTIFY</title>
+
+<para>
+This allows substitute wrappers to be used for some commonly used
+library functions that do not have built-in bounds checking - but
+could in some cases.
+</para>
+
+<para>
+Two mitigation levels are available:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>"weak" only enables checks at compile-time.</para>
+</listitem>
+<listitem>
+<para>"strong" enables checks at compile-time and runtime.</para>
+</listitem>
+</itemizedlist>
+
+<para>
+"strong" has been enabled by default since pkgsrc-2017Q3.
+</para>
+</sect3>
+
+<sect3 id="hardening.mechanisms.enabled.ssp">
+<title>PKGSRC_USE_SSP</title>
+
+<para>
+This enables a stack-smashing protection mitigation. It is done by adding a
+guard variable to functions with vulnerable objects. The guards are initialized
+when a function is entered and then checked when the function exits. The guard
+check will fail and the program forcibly exited if the variable was modified in
+the meantime. This can happen in case of buffer overflows or memory corruption,
+and therefore exposing these bugs.
+</para>
+
+<para>
+Different mitigation levels are available:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>"yes", which will only protect functions considered vulnerable
+by the compiler;</para>
+</listitem>
+<listitem>
+<para>"all", which will protect every function;</para>
+</listitem>
+<listitem>
+<para>"strong", the default, which will apply a better balance between the
+two settings above.</para>
+</listitem>
+</itemizedlist>
+
+<para>
+This mitigation is supported by both GCC and clang. It may be supported in
+additional compilers, possibly under a different name. It is particularly useful
+for unsafe programming languages, such as C/C++.
+</para>
+
+<itemizedlist>
+<listitem>
+<para>"yes" is enabled by default where known supported since pkgsrc-2017Q3.</para>
+</listitem>
+<listitem>
+<para>"strong" is enabled by default where known supported since pkgsrc-2021Q4.</para>
+</listitem>
+</itemizedlist>
+
+<para>More details can be found here:</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<ulink url="https://en.wikipedia.org/wiki/Buffer_overflow_protection">Buffer overflow protection on Wikipedia</ulink>
+</para>
+</listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="hardening.mechanisms.enabled.pie">
+<title>PKGSRC_MKPIE</title>
+
+<para>
+This requests the creation of PIE (Position Independent Executables) for all
+executables. The PIE mechanism is normally used for shared libraries, so that
+they can be loaded at differing addresses at runtime. PIE itself does not have
+useful security properties; however, it is necessary to fully leverage some,
+such as ASLR.  Some operating systems support Address Space Layout Randomization
+(ASLR), which causes different addresses to be used each time a program is run.
+This makes it more difficult for an attacker to guess addresses and thus makes
+exploits harder to construct. With PIE, ASLR can really be applied to the entire
+program, instead of the stack and heap only.
+</para>
+
+<para>
+PIE executables will only be built for toolchains that are known to support PIE.
+Currently, this means NetBSD on x86, ARM, SPARC64, m68k, and MIPS.
+</para>
+
+<para>
+<varname>PKGSRC_MKPIE</varname> was enabled by default after the pkgsrc-2021Q3 branch.
+</para>
+</sect3>
+
+<sect3 id="hardening.mechanisms.enabled.relro">
+<title>PKGSRC_USE_RELRO</title>
+
+<para>
+This also makes the exploitation of some security vulnerabilities more
+difficult in some cases.
+</para>
+
+<para>Two different mitigation levels are available:</para>
+
+<itemizedlist>
+<listitem>
+<para>
+partial: the ELF sections are reordered so that internal data sections
+precede the program's own data sections, and non-PLT GOT is read-only;
+</para>
+</listitem>
+<listitem>
+<para>
+full: in addition to partial RELRO, every relocation is performed immediately
+when starting the program (with a slight performance impact), allowing the
+entire GOT to be read-only.
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+This is currently supported by GCC. Many software distributions now enable this
+feature by default, at the "partial" level.
+</para>
+
+<para>
+More details can be found here:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<ulink url="https://www.redhat.com/en/blog/hardening-elf-binaries-using-relocation-read-only-relro">Hardening ELF binaries using Relocation Read-Only (RELRO)</ulink>
+</para>
+</listitem>
+</itemizedlist>
+</sect3>
+</sect2>
+
+<sect2 id="hardening.mechanisms.disabled">
+<title>Not enabled by default</title>
+
+<sect3 id="hardening.mechanisms.disabled.repro">
+<title>PKGSRC_MKREPRO</title>
+
+<para>
+With this option, pkgsrc will try to build packages reproducibly. This allows
+packages built from the same tree and with the same options, to produce
+identical results bit by bit. This option should be combined with ASLR and
+<varname>PKGSRC_MKPIE</varname> to avoid predictable address offsets for
+attackers attempting to exploit security vulnerabilities.
+</para>
+
+<para>
+More details can be found here:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<ulink url="https://reproducible-builds.org/">Reproducible Builds - a set of software development practices that create an independently-verifiable path from source to binary code</ulink>
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+More work likely needs to be done before pkgsrc is fully reproducible.
+</para>
+</sect3>
+
+<sect3 id="hardening.mechanisms.disabled.stackcheck">
+<title>PKGSRC_USE_STACK_CHECK</title>
+
+<para>
+This uses <literal>-fstack-check</literal> with GCC for
+another stack protection mitigation.
+</para>
+
+<para>
+It asks the compiler to generate code verifying that it does not corrupt the
+stack. According to GCC's manual page, this is really only useful for
+multi-threaded programs.
+</para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="hardening.caveats">
+<title>Caveats</title>
+
+<sect2 id="hardening.caveats.pie">
+<title>Problems with PKGSRC_MKPIE</title>
+
+<sect3 id="hardening.caveats.pie.build">
+<title>Packages failing to build</title>
+
+<para>
+A number of packages may fail to build with this option enabled. The
+failures are often related to the absence of the <literal>-fPIC</literal>
+compilation flag when building libraries or executables (or ideally
+<literal>-fPIE</literal> in the latter case). This flag is added to the
+<varname>CFLAGS</varname> already, but requires the package to
+actually support it.
+</para>
+
+<sect4 id="hardening.caveats.pie.build.fix">
+<title>How to fix</title>
+
+<para>
+These instructions are meant as a reference only; they likely need to be adapted
+for many packages individually.
+</para>
+
+<para>
+For packages using <filename>Makefiles</filename>:
+</para>
+
+<programlisting>
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+</programlisting>
+
+<para>
+For packages using <filename>Imakefiles</filename>:
+</para>
+
+<programlisting>
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
+</programlisting>
+</sect4>
+</sect3>
+
+<sect3 id="hardening.caveats.pie.crash">
+<title>Run-time crashes</title>
+
+<para>
+Some programs may fail to run, or crash at random times once built as PIE. Two
+scenarios are essentially possible. This is nearly always due to a bug in
+the program being exposed due to ASLR.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.pie.disable">
+<title>Disabling PKGSRC_MKPIE on a per-package basis</title>
+
+<para>
+Ideally, packages should be fixed for compatibility with MKPIE.
+However, in some cases this is very difficult, due to complex build systems,
+packages using non-standard toolchains, or programming languages with odd
+bootstrapping mechanisms.
+</para>
+
+<para>
+To disable <varname>PKGSRC_MKPIE</varname> on a per-package basis, set
+<varname>MKPIE_SUPPORTED= no</varname> in the package's Makefile before
+<filename>bsd.prefs.mk</filename> is included.
+</para>
+</sect3>
+</sect2>
+
+<sect2 id="hardening.caveats.fortify">
+<title>Problems with PKGSRC_USE_FORTIFY</title>
+
+<sect3 id="hardening.caveats.fortify.build">
+<title>Packages failing to build</title>
+
+<para>
+This feature makes use of pre-processing directives to look for hardened,
+alternative implementations of essential library calls. Some programs may fail
+to build as a result; this usually happens for those trying too hard to be
+portable, or otherwise abusing definitions in the standard library.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.fortify.crash">
+<title>Run-time crashes</title>
+
+<para>
+This feature may cause some programs to crash, usually indicating an
+actual bug in the program. The fix will typically involve patching the
+original program's source code.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.fortify.opt">
+<title>Optimization is required</title>
+
+<para>
+At least in the case of GCC, FORTIFY will only be applied if optimization is
+applied while compiling. This means that the <varname>CFLAGS</varname> should
+also contain <literal>-O</literal>, <literal>-O2</literal> or another
+optimization level. This cannot easily be applied globally, as some packages
+may require specific optimization levels.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.fortify.disable">
+<title>Disabling FORTIFY on a per-package basis</title>
+
+<note>
+<para>FORTIFY should not be disabled to work around runtime crashes in
+the program!  This is a very bad idea and will expose you to security
+vulnerabilities.
+</para>
+</note>
+
+<para>
+To disable FORTIFY on a per-package basis, set the following
+in the package's <filename>Makefile</filename>
+before <filename>bsd.prefs.mk</filename> is included:
+</para>
+
+<programlisting>
+FORTIFY_SUPPORTED=	no
+</programlisting>
+</sect3>
+</sect2>
+
+<sect2 id="hardening.caveats.relro">
+<title>Problems with PKGSRC_USE_RELRO</title>
+
+<sect3 id="hardening.caveats.relro.performance">
+<title>Performance impact</title>
+
+<para>
+For better protection, full RELRO requires every symbol to be resolved when the
+program starts, rather than simply when required at run-time. This will have
+more impact on programs using a lot of symbols, or linked to libraries exposing
+a lot of symbols. Therefore, daemons or programs otherwise running in
+background are affected only when started. Programs loading plug-ins at
+run-time are affected when loading the plug-ins.
+</para>
+
+<para>
+The impact is not expected to be noticeable on modern hardware, except in some
+cases for big programs.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.relro.crash">
+<title>Run-time crashes</title>
+
+<para>
+Some programs handle plug-ins and dependencies in a way that conflicts with
+RELRO: for instance, with an initialization routine listing any other plug-in
+required. With full RELRO, the missing symbols are resolved before the
+initialization routine can run, and the dynamic loader will not be able to find
+them directly and abort as a result. Unfortunately, this is how Xorg loads its
+drivers. Partial RELRO can be applied instead in this case.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.relro.disable">
+<title>Disabling RELRO on a per-package basis</title>
+
+<para>
+To disable RELRO on a per-package basis, set the following
+in the package's <filename>Makefile</filename>
+before <filename>bsd.prefs.mk</filename> is included:
+</para>
+
+<programlisting>
+RELRO_SUPPORTED=	no
+</programlisting>
+</sect3>
+</sect2>
+
+<sect2 id="hardening.caveats.ssp">
+<title>Problems with PKGSRC_USE_SSP</title>
+
+<sect3 id="hardening.caveats.ssp.build">
+<title>Packages failing to build</title>
+
+<para>
+The stack-smashing protection provided by this option does not work for some
+programs. The most common situation in which this happens is when the program
+allocates variables on the stack, with the size determined at run-time.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.ssp.crash">
+<title>Run-time crashes</title>
+
+<para>
+Again, this feature may cause some programs to crash via a
+<varname>SIGABRT</varname>, usually indicating an actual bug in the program.
+</para>
+
+<para>
+On NetBSD <varname>LOG_CRIT</varname> level syslog
+messages are sent and - by default -
+appended to <filename>/var/log/messages</filename>, e.g.:
+</para>
+
+<programlisting>
+Jan  6 15:42:51 hostname -: hostname program - - - buffer overflow detected; terminated
+</programlisting>
+
+<para>
+(where <literal>hostname</literal> is the hostname(1) and
+<literal>program</literal> is the basename(1) of the program crashed).
+</para>
+
+<para>
+Patching the original program is then required.
+</para>
+
+<para>
+Rebuilding the package via:
+</para>
+
+<programlisting>
+<userinput>% env CFLAGS=-g INSTALL_UNSTRIPPED=yes make replace</userinput>
+</programlisting>
+
+<para>
+and inspecting the backtrace of the coredump via the debugger
+should point out the problematic call by inspecting the frame
+calling the _chk() (SSP) function.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.ssp.performance">
+<title>Performance impact</title>
+
+<para>
+The compiler emits extra code when using this feature: a check for buffer
+overflows is performed when entering and exiting functions, requiring an extra
+variable on the stack. The level of protection can otherwise be adjusted to
+affect only those functions considered more sensitive by the compiler (with
+-fstack-protector instead of -fstack-protector-all).
+</para>
+
+<para>
+The impact is not expected to be noticeable on modern hardware. However,
+programs with a hard requirement to run at the fastest possible speed should
+avoid using this feature, or using libraries built with this feature.
+</para>
+</sect3>
+
+<sect3 id="hardening.caveats.ssp.disable">
+<title>Disabling SSP on a per-package basis</title>
+
+<note>
+<para>SSP should not be disabled to work around runtime crashes in
+the program!  This is a very bad idea and will expose you to security
+vulnerabilities.</para>
+</note>
+
+<para>
+To disable SSP on a per-package basis, set the following
+in the package's <filename>Makefile</filename>
+before <filename>bsd.prefs.mk</filename> is included:
+</para>
+
+<programlisting>
+SSP_SUPPORTED=	no
+</programlisting>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="hardening.audit">
+<title>Auditing the system</title>
+
+<para>
+The illusion of security is worse than having no security at all. This section
+lists a number of ways to ensure the security features requested are actually
+effective.
+</para>
+
+<para>
+These instructions were obtained and tested on a system derived from NetBSD 7
+(amd64). YMMV.
+</para>
+
+<sect2 id="hardening.audit.pie">
+<title>Checking for PIE</title>
+
+<para>
+The ELF executable type in use changes for binaries built as PIE; without:
+</para>
+
+<programlisting>
+<userinput>$ file /path/to/bin/ary</userinput>
+/path/to/bin/ary: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for NetBSD 7.0, not stripped
+</programlisting>
+
+<para>as opposed to the following binary, built as PIE:</para>
+
+<programlisting>
+<userinput>$ file /path/to/pie/bin/ary</userinput>
+/path/to/pie/bin/ary: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for NetBSD 7.0, not stripped
+</programlisting>
+
+<para>
+The latter result is then what is expected.
+</para>
+</sect2>
+
+<sect2 id="hardening.audit.relropartial">
+<title>Checking for partial RELRO</title>
+
+<para>
+The following command should list a section called RELRO:
+</para>
+
+<programlisting>
+<userinput>$ objdump -p /path/to/bin/ary</userinput>
+
+/path/to/bin/ary:     file format elf64-x86-64
+
+Program Header:
+[...]
+   RELRO off    0x0000000000000d78 vaddr 0x0000000000600d78 paddr 0x0000000000600d78 align 2**0
+</programlisting>
+
+<para>
+This check is now performed automatically if
+<varname>PKG_DEVELOPER</varname> is set and RELRO is enabled.
+</para>
+</sect2>
+
+<sect2 id="hardening.audit.relrofull">
+<title>Checking for full RELRO</title>
+
+<para>
+The dynamic loader will apply RELRO immediately when detecting the presence of
+the <varname>BIND_NOW</varname> flag:
+</para>
+
+<programlisting>
+<userinput>$ objdump -x /path/to/bin/ary</userinput>
+
+/path/to/bin/ary:     file format elf64-x86-64
+
+Dynamic Section:
+[...]
+  BIND_NOW             0x0000000000000000
+</programlisting>
+
+<para>
+This has to be combined with partial RELRO (see above) to be fully efficient.
+</para>
+
+<para>
+This check is now performed automatically (where supported) if
+<varname>PKG_DEVELOPER</varname> is set.
+</para>
+</sect2>
+
+<sect2 id="hardening.audit.ssp">
+<title>Checking for SSP</title>
+
+<para>
+Building objects, binaries and libraries with SSP will affect the presence of
+additional symbols in the resulting file:
+</para>
+
+<programlisting>
+<userinput>$ nm /path/to/bin/ary</userinput>
+[...]
+                 U __stack_chk_fail
+0000000000600ea0 B __stack_chk_guard
+</programlisting>
+
+<para>
+This is an indicator that the program was indeed built with support for SSP.
+</para>
+
+<para>
+This check is now performed automatically (where supported) if
+<varname>PKG_DEVELOPER</varname> is set and SSP is enabled.
+</para>
+</sect2>
+</sect1>
+</appendix>
