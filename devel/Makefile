@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3498 2021/09/20 03:08:07 mef Exp $
+# $NetBSD: Makefile,v 1.3499 2021/10/01 19:53:00 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2165,6 +2165,7 @@ SUBDIR+=	py-argparse
 SUBDIR+=	py-args
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
+SUBDIR+=	py-astunparse
 SUBDIR+=	py-async-timeout
 SUBDIR+=	py-async_generator
 SUBDIR+=	py-at-spi
@@ -2183,6 +2184,7 @@ SUBDIR+=	py-backports.shutil_get_terminal_size
 SUBDIR+=	py-backports_abc
 SUBDIR+=	py-bcolz
 SUBDIR+=	py-behave
+SUBDIR+=	py-beniget
 SUBDIR+=	py-binaryornot
 SUBDIR+=	py-bintrees
 SUBDIR+=	py-bitarray
@@ -2312,6 +2314,7 @@ SUBDIR+=	py-future
 SUBDIR+=	py-futures
 SUBDIR+=	py-fuzzywuzzy
 SUBDIR+=	py-game
+SUBDIR+=	py-gast
 SUBDIR+=	py-gcovr
 SUBDIR+=	py-generate
 SUBDIR+=	py-gflags
