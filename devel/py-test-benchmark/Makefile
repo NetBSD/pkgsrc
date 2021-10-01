@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/11/27 10:41:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/01 12:47:27 adam Exp $
 
-DISTNAME=	pytest-benchmark-3.2.3
+DISTNAME=	pytest-benchmark-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-benchmark/}
@@ -10,28 +10,24 @@ HOMEPAGE=	https://github.com/ionelmc/pytest-benchmark
 COMMENT=	Pytest support for benchmarking
 LICENSE=	2-clause-bsd
 
-# Optional dependencies, not yet packaged:
-#        'aspect': ['aspectlib'],
-#        'histogram': ['pygaljs'],
 DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
-DEPENDS+=	${PYPKGPREFIX}-pygal-[0-9]*:../../graphics/py-pygal
 DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
+DEPENDS+=	${PYPKGPREFIX}-pygal-[0-9]*:../../graphics/py-pygal
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
+
 post-install:
+.for bin in py.test-benchmark pytest-benchmark
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} py.test-benchmark py.test-benchmark-${PYVERSSUFFIX} || ${TRUE}
-	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} pytest-benchmark pytest-benchmark-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
