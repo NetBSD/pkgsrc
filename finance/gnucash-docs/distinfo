@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/06/28 07:35:17 wiz Exp $
+$NetBSD: distinfo,v 1.32 2021/10/01 09:03:19 wiz Exp $
 
-SHA1 (gnucash-docs-4.6.tar.gz) = fbe9741b8ddd3a37ae6cbbdc4248dff3ae6a6e89
-RMD160 (gnucash-docs-4.6.tar.gz) = 2bcfd03b613f14705f2872f24f19710d97f1a9f1
-SHA512 (gnucash-docs-4.6.tar.gz) = 27913bdb4b7c5c8a2ad34ce56c857a02e97c4879026a6901f979169ba52cfec80945e6cdb292fd6d60e80b65a009c9bea432754f3b97e82d7583a7b69e3999bc
-Size (gnucash-docs-4.6.tar.gz) = 73704192 bytes
+SHA1 (gnucash-docs-4.8.tar.gz) = 80ab0a700aa1abcd0e3f656388da350869b34be1
+RMD160 (gnucash-docs-4.8.tar.gz) = 2e48a683eea1ec327d2442af4cbd717d9cefec4e
+SHA512 (gnucash-docs-4.8.tar.gz) = ca484ccf2268b2861c0768ba7d949b3d006366518512f99f6ab26a8dfce8aedbc1e2352539d375a9a6e920c2b59a66f81a0de3b5efc04d522a4519d9a5d6e8cb
+Size (gnucash-docs-4.8.tar.gz) = 65799136 bytes
