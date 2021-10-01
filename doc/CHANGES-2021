@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4988 2021/10/01 14:27:42 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.4989 2021/10/01 14:28:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7666,3 +7666,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-benchmark to 3.4.1 [adam 2021-10-01]
 	Updated sysutils/py-filetype to 1.0.8 [adam 2021-10-01]
 	Updated graphics/babl to 0.1.88 [ryoon 2021-10-01]
+	Updated graphics/gegl to 0.4.32 [ryoon 2021-10-01]
