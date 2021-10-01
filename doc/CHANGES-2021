@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4982 2021/09/30 21:40:04 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.4983 2021/10/01 08:55:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7657,3 +7657,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-immutabledict to 2.2.0 [adam 2021-09-30]
 	Updated net/tigervnc to 1.11.0.1.20.11nb5 [wiz 2021-09-30]
 	Updated devel/nss to 3.71 [wiz 2021-09-30]
+	Updated finance/gnucash to 4.8 [wiz 2021-10-01]
