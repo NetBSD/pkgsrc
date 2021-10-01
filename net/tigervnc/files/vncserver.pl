@@ -97,12 +97,8 @@ if (-d "/etc/X11/fontpath.d") {
     $fontPath = "catalogue:/etc/X11/fontpath.d";
 }
 
-@fontpaths = ('/usr/share/X11/fonts', '/usr/share/fonts', '/usr/share/fonts/X11/');
-if (! -l "/usr/lib/X11") {push(@fontpaths, '/usr/lib/X11/fonts');}
-if (! -l "/usr/X11") {push(@fontpaths, '/usr/X11/lib/X11/fonts');}
-if (! -l "/usr/X11R6") {push(@fontpaths, '/usr/X11R6/lib/X11/fonts');}
-if (! -l "/usr/X11R7") {push(@fontpaths, '/usr/X11R7/lib/X11/fonts');}
-push(@fontpaths, '/usr/share/fonts/default');
+@fontpaths = ('@PREFIX@/share/fonts', '@PREFIX@/share/fonts/X11/');
+if (! -l "@X11BASE@") {push(@fontpaths, '@X11BASE@/lib/X11/fonts');}
 
 @fonttypes = ('misc',
              '75dpi',

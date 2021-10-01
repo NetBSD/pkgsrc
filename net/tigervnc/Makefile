@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2021/09/30 21:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2021/10/01 11:42:23 nia Exp $
 
 DISTNAME=		tigervnc-1.11.0
 PKGNAME=		${DISTNAME}.1.20.11
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.11.0
@@ -48,6 +48,7 @@ SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure
 SUBST_MESSAGE.hpath=	fixing hardcoded paths
 SUBST_FILES.hpath=	unix/vncserver/vncserver.in
+SUBST_FILES.hpath=	vncserver.pl
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 
