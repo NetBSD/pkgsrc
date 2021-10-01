@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/01 19:52:08 adam Exp $
+
+SHA1 (gast-0.5.2.tar.gz) = 99491544f561ef76523e6f29a621ce633fc7a1c1
+RMD160 (gast-0.5.2.tar.gz) = 75f686d7bd6cf844b0fc449c847c0b2d15b0e4b2
+SHA512 (gast-0.5.2.tar.gz) = 2a06245ba93f2c0715f662e32e0865732828deb672bc70c3d70a4969c8a2e4c518354a4a63760eddeba53932d4f8bf0ae0ffab64f1a1ad3b20d5b2d18285cd6a
+Size (gast-0.5.2.tar.gz) = 14222 bytes
