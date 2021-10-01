@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4999 2021/10/01 23:56:46 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5000 2021/10/01 23:59:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7680,3 +7680,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Config-INI to 0.027 [wen 2021-10-01]
 	Updated devel/p5-Config-MVP-Reader-INI to 2.101464 [wen 2021-10-01]
 	Updated devel/p5-Config-MVP to 2.200012 [wen 2021-10-01]
+	Updated devel/p5-Config-Tiny to 2.27 [wen 2021-10-01]
