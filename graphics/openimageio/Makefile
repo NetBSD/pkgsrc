@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2021/09/29 19:00:08 adam Exp $
+# $NetBSD: Makefile,v 1.81 2021/10/01 12:35:36 nia Exp $
 
 DISTNAME=	oiio-2.2.16.0
 PKGNAME=	${DISTNAME:S/oiio/openimageio/}
@@ -71,4 +71,5 @@ pre-configure:
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
