@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4992 2021/10/01 19:56:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.4993 2021/10/01 21:28:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7673,3 +7673,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-gast version 0.5.2 [adam 2021-10-01]
 	Added devel/py-beniget version 0.4.1 [adam 2021-10-01]
 	Added math/py-pythran version 0.10.0 [adam 2021-10-01]
+	Updated sysutils/macchina to 1.1.7 [pin 2021-10-01]
