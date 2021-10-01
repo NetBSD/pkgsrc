@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/05/25 05:12:06 adam Exp $
+# $NetBSD: Makefile,v 1.23 2021/10/01 09:00:36 adam Exp $
 
-DISTNAME=	libimagequant-2.15.1
+DISTNAME=	libimagequant-2.16.0
 CATEGORIES=	graphics
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ImageOptim/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
