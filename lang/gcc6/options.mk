@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/03 19:03:59 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2021/10/01 11:56:14 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -120,8 +120,7 @@ DISTFILES +=	${ISL14}.tar.bz2
 
 ###
 ### Optional languages
-### Ada could be added although there is a bootstrapping issue.  See
-### ../gcc34-ada for guidance
+### Ada could be added although there is a bootstrapping issue.
 ###
 
 .if !empty(PKG_OPTIONS:Mgcc-objc++)
