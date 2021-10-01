@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.32 2021/04/09 05:12:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2021/10/01 14:28:07 ryoon Exp $
 bin/gegl
 bin/gegl-imgcmp
+include/gegl-0.4/ctx.h
 include/gegl-0.4/gegl-apply.h
 include/gegl-0.4/gegl-audio-fragment.h
 include/gegl-0.4/gegl-buffer-backend.h
@@ -94,7 +95,6 @@ lib/gegl-0.4/gegl-core.${SOEXT}
 lib/gegl-0.4/gegl-generated.${SOEXT}
 lib/gegl-0.4/gif-load.${SOEXT}
 lib/gegl-0.4/grey2.json
-${PLIST.jasper}lib/gegl-0.4/jp2-load.${SOEXT}
 lib/gegl-0.4/jpg-load.${SOEXT}
 lib/gegl-0.4/jpg-save.${SOEXT}
 lib/gegl-0.4/lcms-from-profile.${SOEXT}
@@ -112,20 +112,19 @@ lib/gegl-0.4/rgbe-save.${SOEXT}
 lib/gegl-0.4/sdl2-display.${SOEXT}
 lib/gegl-0.4/seamless-clone-compose.${SOEXT}
 lib/gegl-0.4/seamless-clone.${SOEXT}
-${PLIST.svg}lib/gegl-0.4/svg-load.${SOEXT}
+lib/gegl-0.4/svg-load.${SOEXT}
 lib/gegl-0.4/text.${SOEXT}
 lib/gegl-0.4/tiff-load.${SOEXT}
 lib/gegl-0.4/tiff-save.${SOEXT}
 lib/gegl-0.4/transformops.${SOEXT}
-lib/gegl-0.4/vector-fill.${SOEXT}
 lib/gegl-0.4/vector-stroke.${SOEXT}
 lib/gegl-0.4/webp-load.${SOEXT}
 lib/gegl-0.4/webp-save.${SOEXT}
-lib/libgegl-0.4.so
-lib/libgegl-0.4.so.0
-lib/libgegl-0.4.so.0.429.1
-lib/libgegl-npd-0.4.so
-lib/libgegl-sc-0.4.so
+lib/libgegl-0.4.${SOEXT}
+lib/libgegl-0.4.${SOEXT}.0
+lib/libgegl-0.4.${SOEXT}.0.431.1
+lib/libgegl-npd-0.4.${SOEXT}
+lib/libgegl-sc-0.4.${SOEXT}
 lib/pkgconfig/gegl-0.4.pc
 lib/pkgconfig/gegl-sc-0.4.pc
 share/locale/bs/LC_MESSAGES/gegl-0.4.mo
