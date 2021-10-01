@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2021 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.39 2021/01/02 08:32:15 jnemeth Exp $
+$NetBSD: pkgsrc.xml,v 1.40 2021/10/01 17:20:27 nia Exp $
 
 Abstract
 
@@ -429,24 +429,45 @@ A. A simple example package: bison
 
     A.2. Steps for building, installing, packaging
 
-B. Build logs
+B. Security hardening
 
-    B.1. Building figlet
-    B.2. Packaging figlet
+    B.1. Mechanisms
 
-C. Directory layout of the pkgsrc FTP server
+        B.1.1. Enabled by default
+        B.1.2. Not enabled by default
 
-    C.1. distfiles: The distributed source files
-    C.2. misc: Miscellaneous things
-    C.3. packages: Binary packages
-    C.4. reports: Bulk build reports
-    C.5. current, stable, pkgsrc-20xxQy: source packages
+    B.2. Caveats
 
-D. Help topics
-E. Editing guidelines for the pkgsrc guide
+        B.2.1. Problems with PKGSRC_MKPIE
+        B.2.2. Problems with PKGSRC_USE_FORTIFY
+        B.2.3. Problems with PKGSRC_USE_RELRO
+        B.2.4. Problems with PKGSRC_USE_SSP
 
-    E.1. Make targets
-    E.2. Procedure
+    B.3. Auditing the system
+
+        B.3.1. Checking for PIE
+        B.3.2. Checking for partial RELRO
+        B.3.3. Checking for full RELRO
+        B.3.4. Checking for SSP
+
+C. Build logs
+
+    C.1. Building figlet
+    C.2. Packaging figlet
+
+D. Directory layout of the pkgsrc FTP server
+
+    D.1. distfiles: The distributed source files
+    D.2. misc: Miscellaneous things
+    D.3. packages: Binary packages
+    D.4. reports: Bulk build reports
+    D.5. current, stable, pkgsrc-20xxQy: source packages
+
+E. Help topics
+F. Editing guidelines for the pkgsrc guide
+
+    F.1. Make targets
+    F.2. Procedure
 
 List of Tables
 
@@ -814,7 +835,7 @@ pkgsrc guide. If you don't find anything here, there are alternatives:
     like BUILD_DEFS, a make target like do-build, a missing C or C++ function
     like strcasecmp or any other topic.
 
-    The available help topics are listed in Appendix D, Help topics.
+    The available help topics are listed in Appendix E, Help topics.
 
   * To see the value of a single variable, run bmake show-var VARNAME=X.
 
@@ -857,7 +878,7 @@ Before you download any pkgsrc files, you should decide whether you want the
 current branch or the stable branch. The latter is forked on a quarterly basis
 from the current branch and only gets modified for security updates. The names
 of the stable branches are built from the year and the quarter, for example
-2021Q1.
+2021Q3.
 
 The second step is to decide how you want to download pkgsrc. You can get it as
 a tar file or via CVS. Both ways are described here.
@@ -870,7 +891,7 @@ CVS at any later time.
 The primary download location for all pkgsrc files is https://cdn.NetBSD.org/
 pub/pkgsrc/ or ftp://ftp.NetBSD.org/pub/pkgsrc/ (it points to the same
 location). There are a number of subdirectories for different purposes, which
-are described in detail in Appendix C, Directory layout of the pkgsrc FTP
+are described in detail in Appendix D, Directory layout of the pkgsrc FTP
 server.
 
 The tar archive for the current branch is in the directory current and is
@@ -881,12 +902,12 @@ published at pkgsrc.tar.bz2 and pkgsrc.tar.xz respectively.
 
 You can fetch the same files using FTP.
 
-The tar file for the stable branch 2021Q1 is in the directory pkgsrc-2021Q1 and
+The tar file for the stable branch 2021Q3 is in the directory pkgsrc-2021Q3 and
 is also called pkgsrc.tar.gz.
 
 To download the latest pkgsrc stable tarball, run:
 
-$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2021Q1/pkgsrc.tar.gz
+$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2021Q3/pkgsrc.tar.gz
 
 If you prefer, you can also fetch it using "wget", "curl", or your web browser.
 
@@ -905,7 +926,7 @@ $ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz
 
 To fetch a specific pkgsrc stable branch, run:
 
-$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2021Q1 -P pkgsrc
+$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2021Q3 -P pkgsrc
 
 This will create the directory pkgsrc/ in your /usr/ directory and all the
 package source will be stored under /usr/pkgsrc/.
@@ -987,7 +1008,7 @@ When updating pkgsrc, the CVS program keeps track of the branch you selected.
 But if you, for whatever reason, want to switch from the stable branch to the
 current one, you can do it by adding the option "-A" after the "update"
 keyword. To switch from the current branch back to the stable branch, add the "
--rpkgsrc-2021Q1" option.
+-rpkgsrc-2021Q3" option.
 
 3.2.2.2. What happens to my changes when updating?
 
@@ -1344,7 +1365,7 @@ allow your program to compile, you can tidy these up also with the command:
 
 
 Taking the figlet utility as an example, we can install it on our system by
-building as shown in Appendix B, Build logs.
+building as shown in Appendix C, Build logs.
 
 The program is installed under the default root of the packages tree - /usr/
 pkg. Should this not conform to your tastes, set the LOCALBASE variable in your
@@ -1716,7 +1737,7 @@ $ make package
 This will build and install your package (if not already done), and then build
 a binary package from what was installed. You can then use the pkg_* tools to
 manipulate it. Binary packages are created by default in /usr/pkgsrc/packages,
-in the form of a gzipped tar file. See Section B.2, "Packaging figlet" for a
+in the form of a gzipped tar file. See Section C.2, "Packaging figlet" for a
 continuation of the above misc/figlet example.
 
 See Chapter 23, Submitting and Committing for information on how to submit such
@@ -2898,7 +2919,7 @@ pkgsrc guide. If you don't find anything here, there are alternatives:
     like BUILD_DEFS, a make target like do-build, a missing C or C++ function
     like strcasecmp or any other topic.
 
-    The available help topics are listed in Appendix D, Help topics.
+    The available help topics are listed in Appendix E, Help topics.
 
   * To see the value of a single variable, run bmake show-var VARNAME=X.
 
@@ -8894,14 +8915,395 @@ Now that you don't need the source and object files any more, clean up:
 # make clean
 ===>  Cleaning for bison-1.25
 
-Appendix B. Build logs
+Appendix B. Security hardening
 
 Table of Contents
 
-B.1. Building figlet
-B.2. Packaging figlet
+B.1. Mechanisms
 
-B.1. Building figlet
+    B.1.1. Enabled by default
+    B.1.2. Not enabled by default
+
+B.2. Caveats
+
+    B.2.1. Problems with PKGSRC_MKPIE
+    B.2.2. Problems with PKGSRC_USE_FORTIFY
+    B.2.3. Problems with PKGSRC_USE_RELRO
+    B.2.4. Problems with PKGSRC_USE_SSP
+
+B.3. Auditing the system
+
+    B.3.1. Checking for PIE
+    B.3.2. Checking for partial RELRO
+    B.3.3. Checking for full RELRO
+    B.3.4. Checking for SSP
+
+A number of mechanisms are available in pkgsrc to improve the security of the
+resulting system. This page describes the mechanisms, and gives hints about
+detecting and fixing problems.
+
+Mechanisms can be enabled individually in mk.conf, and are individually
+described below.
+
+Typically, a feature will cause some programs to fail to build or work when
+first enabled. This can be due to latent problems in the program, and can be
+due to other reasons. After enough testing to have confidence that user
+problems will be quite rare, individual mechanisms will be enabled by default.
+
+For each mechanism, see the Caveats section below for an explanation of what
+might go wrong at compile time and at run time, and how to notice and address
+these problems.
+
+B.1. Mechanisms
+
+B.1.1. Enabled by default
+
+B.1.1.1. PKGSRC_USE_FORTIFY
+
+This allows substitute wrappers to be used for some commonly used library
+functions that do not have built-in bounds checking - but could in some cases.
+
+Two mitigation levels are available:
+
+  * "weak" only enables checks at compile-time.
+
+  * "strong" enables checks at compile-time and runtime.
+
+"strong" has been enabled by default since pkgsrc-2017Q3.
+
+B.1.1.2. PKGSRC_USE_SSP
+
+This enables a stack-smashing protection mitigation. It is done by adding a
+guard variable to functions with vulnerable objects. The guards are initialized
+when a function is entered and then checked when the function exits. The guard
+check will fail and the program forcibly exited if the variable was modified in
+the meantime. This can happen in case of buffer overflows or memory corruption,
+and therefore exposing these bugs.
+
+Different mitigation levels are available:
+
+  * "yes", which will only protect functions considered vulnerable by the
+    compiler;
+
+  * "all", which will protect every function;
+
+  * "strong", the default, which will apply a better balance between the two
+    settings above.
+
+This mitigation is supported by both GCC and clang. It may be supported in
+additional compilers, possibly under a different name. It is particularly
+useful for unsafe programming languages, such as C/C++.
+
+  * "yes" is enabled by default where known supported since pkgsrc-2017Q3.
+
+  * "strong" is enabled by default where known supported since pkgsrc-2021Q4.
+
+More details can be found here:
+
+  * Buffer overflow protection on Wikipedia
+
+B.1.1.3. PKGSRC_MKPIE
+
+This requests the creation of PIE (Position Independent Executables) for all
+executables. The PIE mechanism is normally used for shared libraries, so that
+they can be loaded at differing addresses at runtime. PIE itself does not have
+useful security properties; however, it is necessary to fully leverage some,
+such as ASLR. Some operating systems support Address Space Layout Randomization
+(ASLR), which causes different addresses to be used each time a program is run.
+This makes it more difficult for an attacker to guess addresses and thus makes
+exploits harder to construct. With PIE, ASLR can really be applied to the
+entire program, instead of the stack and heap only.
+
+PIE executables will only be built for toolchains that are known to support
+PIE. Currently, this means NetBSD on x86, ARM, SPARC64, m68k, and MIPS.
+
+PKGSRC_MKPIE was enabled by default after the pkgsrc-2021Q3 branch.
+
+B.1.1.4. PKGSRC_USE_RELRO
+
+This also makes the exploitation of some security vulnerabilities more
+difficult in some cases.
+
+Two different mitigation levels are available:
+
+  * partial: the ELF sections are reordered so that internal data sections
+    precede the program's own data sections, and non-PLT GOT is read-only;
+
+  * full: in addition to partial RELRO, every relocation is performed
+    immediately when starting the program (with a slight performance impact),
+    allowing the entire GOT to be read-only.
+
+This is currently supported by GCC. Many software distributions now enable this
+feature by default, at the "partial" level.
+
+More details can be found here:
+
+  * Hardening ELF binaries using Relocation Read-Only (RELRO)
+
+B.1.2. Not enabled by default
+
+B.1.2.1. PKGSRC_MKREPRO
+
+With this option, pkgsrc will try to build packages reproducibly. This allows
+packages built from the same tree and with the same options, to produce
+identical results bit by bit. This option should be combined with ASLR and
+PKGSRC_MKPIE to avoid predictable address offsets for attackers attempting to
+exploit security vulnerabilities.
+
+More details can be found here:
+
+  * Reproducible Builds - a set of software development practices that create
+    an independently-verifiable path from source to binary code
+
+More work likely needs to be done before pkgsrc is fully reproducible.
+
+B.1.2.2. PKGSRC_USE_STACK_CHECK
+
+This uses -fstack-check with GCC for another stack protection mitigation.
+
+It asks the compiler to generate code verifying that it does not corrupt the
+stack. According to GCC's manual page, this is really only useful for
+multi-threaded programs.
+
+B.2. Caveats
+
+B.2.1. Problems with PKGSRC_MKPIE
+
+B.2.1.1. Packages failing to build
+
+A number of packages may fail to build with this option enabled. The failures
+are often related to the absence of the -fPIC compilation flag when building
+libraries or executables (or ideally -fPIE in the latter case). This flag is
+added to the CFLAGS already, but requires the package to actually support it.
+
+B.2.1.1.1. How to fix
+
+These instructions are meant as a reference only; they likely need to be
+adapted for many packages individually.
+
+For packages using Makefiles:
+
+MAKE_FLAGS+=    CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=    LDFLAGS=${LDFLAGS:Q}
+
+For packages using Imakefiles:
+
+MAKE_FLAGS+=    CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=    LOCAL_LDFLAGS=${LDFLAGS:Q}
+
+B.2.1.2. Run-time crashes
+
+Some programs may fail to run, or crash at random times once built as PIE. Two
+scenarios are essentially possible. This is nearly always due to a bug in the
+program being exposed due to ASLR.
+
+B.2.1.3. Disabling PKGSRC_MKPIE on a per-package basis
+
+Ideally, packages should be fixed for compatibility with MKPIE. However, in
+some cases this is very difficult, due to complex build systems, packages using
+non-standard toolchains, or programming languages with odd bootstrapping
+mechanisms.
+
+To disable PKGSRC_MKPIE on a per-package basis, set MKPIE_SUPPORTED= no in the
+package's Makefile before bsd.prefs.mk is included.
+
+B.2.2. Problems with PKGSRC_USE_FORTIFY
+
+B.2.2.1. Packages failing to build
+
+This feature makes use of pre-processing directives to look for hardened,
+alternative implementations of essential library calls. Some programs may fail
+to build as a result; this usually happens for those trying too hard to be
+portable, or otherwise abusing definitions in the standard library.
+
+B.2.2.2. Run-time crashes
+
+This feature may cause some programs to crash, usually indicating an actual bug
+in the program. The fix will typically involve patching the original program's
+source code.
+
+B.2.2.3. Optimization is required
+
+At least in the case of GCC, FORTIFY will only be applied if optimization is
+applied while compiling. This means that the CFLAGS should also contain -O, -O2
+or another optimization level. This cannot easily be applied globally, as some
+packages may require specific optimization levels.
+
+B.2.2.4. Disabling FORTIFY on a per-package basis
+
+Note
+
+FORTIFY should not be disabled to work around runtime crashes in the program!
+This is a very bad idea and will expose you to security vulnerabilities.
+
+To disable FORTIFY on a per-package basis, set the following in the package's
+Makefile before bsd.prefs.mk is included:
+
+FORTIFY_SUPPORTED=      no
+
+B.2.3. Problems with PKGSRC_USE_RELRO
+
+B.2.3.1. Performance impact
+
+For better protection, full RELRO requires every symbol to be resolved when the
+program starts, rather than simply when required at run-time. This will have
+more impact on programs using a lot of symbols, or linked to libraries exposing
+a lot of symbols. Therefore, daemons or programs otherwise running in
+background are affected only when started. Programs loading plug-ins at
+run-time are affected when loading the plug-ins.
+
+The impact is not expected to be noticeable on modern hardware, except in some
+cases for big programs.
+
+B.2.3.2. Run-time crashes
+
+Some programs handle plug-ins and dependencies in a way that conflicts with
+RELRO: for instance, with an initialization routine listing any other plug-in
+required. With full RELRO, the missing symbols are resolved before the
+initialization routine can run, and the dynamic loader will not be able to find
+them directly and abort as a result. Unfortunately, this is how Xorg loads its
+drivers. Partial RELRO can be applied instead in this case.
+
+B.2.3.3. Disabling RELRO on a per-package basis
+
+To disable RELRO on a per-package basis, set the following in the package's
+Makefile before bsd.prefs.mk is included:
+
+RELRO_SUPPORTED=        no
+
+B.2.4. Problems with PKGSRC_USE_SSP
+
+B.2.4.1. Packages failing to build
+
+The stack-smashing protection provided by this option does not work for some
+programs. The most common situation in which this happens is when the program
+allocates variables on the stack, with the size determined at run-time.
+
+B.2.4.2. Run-time crashes
+
+Again, this feature may cause some programs to crash via a SIGABRT, usually
+indicating an actual bug in the program.
+
+On NetBSD LOG_CRIT level syslog messages are sent and - by default - appended
+to /var/log/messages, e.g.:
+
+Jan  6 15:42:51 hostname -: hostname program - - - buffer overflow detected; terminated
+
+(where hostname is the hostname(1) and program is the basename(1) of the
+program crashed).
+
+Patching the original program is then required.
+
+Rebuilding the package via:
+
+% env CFLAGS=-g INSTALL_UNSTRIPPED=yes make replace
+
+and inspecting the backtrace of the coredump via the debugger should point out
+the problematic call by inspecting the frame calling the _chk() (SSP) function.
+
+B.2.4.3. Performance impact
+
+The compiler emits extra code when using this feature: a check for buffer
+overflows is performed when entering and exiting functions, requiring an extra
+variable on the stack. The level of protection can otherwise be adjusted to
+affect only those functions considered more sensitive by the compiler (with
+-fstack-protector instead of -fstack-protector-all).
+
+The impact is not expected to be noticeable on modern hardware. However,
+programs with a hard requirement to run at the fastest possible speed should
+avoid using this feature, or using libraries built with this feature.
+
+B.2.4.4. Disabling SSP on a per-package basis
+
+Note
+
+SSP should not be disabled to work around runtime crashes in the program! This
+is a very bad idea and will expose you to security vulnerabilities.
+
+To disable SSP on a per-package basis, set the following in the package's
+Makefile before bsd.prefs.mk is included:
+
+SSP_SUPPORTED=  no
+
+B.3. Auditing the system
+
+The illusion of security is worse than having no security at all. This section
+lists a number of ways to ensure the security features requested are actually
+effective.
+
+These instructions were obtained and tested on a system derived from NetBSD 7
+(amd64). YMMV.
+
+B.3.1. Checking for PIE
+
+The ELF executable type in use changes for binaries built as PIE; without:
+
+$ file /path/to/bin/ary
+/path/to/bin/ary: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for NetBSD 7.0, not stripped
+
+as opposed to the following binary, built as PIE:
+
+$ file /path/to/pie/bin/ary
+/path/to/pie/bin/ary: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for NetBSD 7.0, not stripped
+
+The latter result is then what is expected.
+
+B.3.2. Checking for partial RELRO
+
+The following command should list a section called RELRO:
+
+$ objdump -p /path/to/bin/ary
+
+/path/to/bin/ary:     file format elf64-x86-64
+
+Program Header:
+[...]
+   RELRO off    0x0000000000000d78 vaddr 0x0000000000600d78 paddr 0x0000000000600d78 align 2**0
+
+This check is now performed automatically if PKG_DEVELOPER is set and RELRO is
+enabled.
+
+B.3.3. Checking for full RELRO
+
+The dynamic loader will apply RELRO immediately when detecting the presence of
+the BIND_NOW flag:
+
+$ objdump -x /path/to/bin/ary
+
+/path/to/bin/ary:     file format elf64-x86-64
+
+Dynamic Section:
+[...]
+  BIND_NOW             0x0000000000000000
+
+This has to be combined with partial RELRO (see above) to be fully efficient.
+
+This check is now performed automatically (where supported) if PKG_DEVELOPER is
+set.
+
+B.3.4. Checking for SSP
+
+Building objects, binaries and libraries with SSP will affect the presence of
+additional symbols in the resulting file:
+
+$ nm /path/to/bin/ary
+[...]
+                 U __stack_chk_fail
+0000000000600ea0 B __stack_chk_guard
+
+This is an indicator that the program was indeed built with support for SSP.
+
+This check is now performed automatically (where supported) if PKG_DEVELOPER is
+set and SSP is enabled.
+
+Appendix C. Build logs
+
+Table of Contents
+
+C.1. Building figlet
+C.2. Packaging figlet
+
+C.1. Building figlet
 
 # make
 ===> Checking for vulnerabilities in figlet-2.2.1nb2
@@ -8992,7 +9394,7 @@ cp figlet.6 /usr/pkg/man/man6
 ===> Registering installation for figlet-2.2.1nb2
 #
 
-B.2. Packaging figlet
+C.2. Packaging figlet
 
 # make package
 ===> Checking for vulnerabilities in figlet-2.2.1nb2
@@ -9003,15 +9405,15 @@ Using SrcDir value of /usr/pkg
 Registering depends:.
 #
 
-Appendix C. Directory layout of the pkgsrc FTP server
+Appendix D. Directory layout of the pkgsrc FTP server
 
 Table of Contents
 
-C.1. distfiles: The distributed source files
-C.2. misc: Miscellaneous things
-C.3. packages: Binary packages
-C.4. reports: Bulk build reports
-C.5. current, stable, pkgsrc-20xxQy: source packages
+D.1. distfiles: The distributed source files
+D.2. misc: Miscellaneous things
+D.3. packages: Binary packages
+D.4. reports: Bulk build reports
+D.5. current, stable, pkgsrc-20xxQy: source packages
 
 As in other big projects, the directory layout of pkgsrc is quite complex for
 newbies. This chapter explains where you find things on the FTP server. The
@@ -9020,7 +9422,7 @@ different, but inside this directory, everything should look the same, no
 matter on which server you are. This directory contains some subdirectories,
 which are explained below.
 
-C.1. distfiles: The distributed source files
+D.1. distfiles: The distributed source files
 
 The directory distfiles contains lots of archive files from all pkgsrc
 packages, which are mirrored here. The subdirectories are called after their
@@ -9028,12 +9430,12 @@ package names and are used when the distributed files have names that don't
 explicitly contain a version number or are otherwise too generic (for example
 release.tar.gz).
 
-C.2. misc: Miscellaneous things
+D.2. misc: Miscellaneous things
 
 This directory contains things that individual pkgsrc developers find worth
 publishing.
 
-C.3. packages: Binary packages
+D.3. packages: Binary packages
 
 This directory contains binary packages for the various platforms that are
 supported by pkgsrc. Each subdirectory is of the form OPSYS/ARCH/OSVERSION_TAG.
@@ -9069,13 +9471,13 @@ specific platform. It has a directory called All which contains all binary
 packages. Besides that, there are various category directories that contain
 symbolic links to the real binary packages.
 
-C.4. reports: Bulk build reports
+D.4. reports: Bulk build reports
 
 Here are the reports from bulk builds, for those who want to fix packages that
 didn't build on some of the platforms. The structure of subdirectories should
-look like the one in Section C.3, "packages: Binary packages".
+look like the one in Section D.3, "packages: Binary packages".
 
-C.5. current, stable, pkgsrc-20xxQy: source packages
+D.5. current, stable, pkgsrc-20xxQy: source packages
 
 These directories contain the "real" pkgsrc, that is the files that define how
 to create binary packages from source archives.
@@ -9099,7 +9501,7 @@ branch of the CVS repository. In these directories there is an additional file
 called pkgsrc-20xxQy.tar.{bz,gz,xz}, which contains the state of pkgsrc when it
 was branched.
 
-Appendix D. Help topics
+Appendix E. Help topics
 
 The following list contains all help topics that are available when running 
 bmake help topic=:index.
@@ -9370,171 +9772,172 @@ MECAB_CHARSET                    MEDIATOMB_GROUP
 MEDIATOMB_USER                   MIPSPROBASE
 MIREDO_GROUP                     MIREDO_USER
 MISSING_FEATURES                 MKDIR
-MLDONKEY_GROUP                   MLDONKEY_HOME
-MLDONKEY_USER                    MONOTONE_GROUP
-MONOTONE_USER                    MOTIFBASE
-MOTIF_TYPE                       MOTIF_TYPE_DEFAULT
-MPI_TYPE                         MSGFMT_STRIP_MSGCTXT
-MSGFMT_STRIP_MSGID_PLURAL        MTOOLS_ENABLE_FLOPPYD
-MUST                             MV
-MYSQL_CHARSET                    MYSQL_DATADIR
-MYSQL_EXTRA_CHARSET              MYSQL_GROUP
-MYSQL_USER                       MYSQL_VERSION
-MYSQL_VERSIONS_ACCEPTED          MYSQL_VERSIONS_ALL
-MYSQL_VERSION_DEFAULT            NAGIOSCMD_GROUP
-NAGIOSDIR                        NAGIOS_GROUP
-NAGIOS_USER                      NATIVE_APPEND_ABI
-NATIVE_APPEND_ELF                NATIVE_EXEC_FMT
-NATIVE_MACHINE_PLATFORM          NATIVE_OBJECT_FMT
-NBPAX_PROGRAM_PREFIX             NETBSD_LOGIN_NAME
-NMH_EDITOR                       NMH_MTA
-NMH_PAGER                        NOLOGIN
-NOTE                             NOT_FOR_PLATFORM
-NOT_PAX_ASLR_SAFE                NOT_PAX_MPROTECT_SAFE
-NO_BUILD                         NO_CHECKSUM
-NO_CONFIGURE                     NO_SKIP
-NS_PREFERRED                     NULLMAILER_GROUP
-NULLMAILER_USER                  OASIS
-OASIS_BUILD_ARGS                 OBJHOSTNAME
-OBJMACHINE                       OCAML_FINDLIB_DIRS
-OCAML_FINDLIB_REGISTER           OCAML_FINDLIB_REGISTER_VERBOSE
-OCAML_SITELIBDIR                 OCAML_TOPKG_DOCDIR
-OCAML_USE_DUNE                   OCAML_USE_FINDLIB
-OCAML_USE_JBUILDER               OCAML_USE_OASIS
-OCAML_USE_OASIS_DYNRUN           OCAML_USE_OPAM
-OCAML_USE_OPT_COMPILER           OCAML_USE_TOPKG
-OMF                              ONLY_FOR_COMPILER
-ONLY_FOR_PLATFORM                OPENSSH_CHROOT
-OPENSSH_GROUP                    OPENSSH_USER
-OPSYS                            OPSYS_EMULDIR
-OS                               OSS_TYPE
-OSX                              OSX_TOLERATE_SDK_SKEW
-OS_HAVE_ALSA                     OS_HAVE_RCD
-OS_VARIANT                       OS_VERSION
-OTF_FONTS_DIR                    OVERRIDE_DIRDEPTH
-OVERRIDE_GEMSPEC                 OVERRIDE_GNU_CONFIG_SCRIPTS
-OVERRIDE_ROCKSPEC                OWN_DIRS
-OWN_DIRS_PERMS                   P4GROUP
-P4PORT                           P4ROOT
-P4USER                           PACKAGES
-PALMOS_DEFAULT_SDK               PAMBASE
-PAM_DEFAULT                      PAPERSIZE
-PASSIVE_FETCH                    PATCHDIR
-PATCHFILES                       PATCH_ARGS
-PATCH_DEBUG                      PATCH_DIST_ARGS
-PATCH_DIST_CAT                   PATCH_DIST_STRIP
-PATCH_FUZZ_FACTOR                PATCH_STRIP
-PATH                             PCCBASE
-PEAR                             PEAR_CHANNEL
-PEAR_CHANNEL_ALIAS               PEAR_CHANNEL_VERSION
-PEAR_CMD                         PEAR_LIB
-PEAR_PACKAGE_XML                 PERL5
-PERL5_CONFIGURE                  PERL5_CONFIGURE_DIRS
-PERL5_LDFLAGS                    PERL5_LICENSE
-PERL5_MODULE_TYPE                PERL5_PACKLIST
-PERL5_PACKLIST_DIR               PERL5_PERLBASE
-PERL5_SITEBASE                   PERL5_USE_PACKLIST
-PERL5_VENDORBASE                 PFCTL
-PFVAR_H                          PF_VERSION
-PGGROUP                          PGHOME
-PGPKGSRCDIR                      PGSQL_TYPE
-PGSQL_VERSION                    PGSQL_VERSIONS_ACCEPTED
-PGSQL_VERSION_DEFAULT            PGUSER
-PG_LIB_EXT                       PHP
-PHPCOMMON_MK                     PHPPKGSRCDIR
-PHP_BASE_VERS                    PHP_CHECK_INSTALLED
-PHP_EXTENSION_DIR                PHP_INITIAL_TEENY
-PHP_PKG_PREFIX                   PHP_VERSION
-PHP_VERSIONS_ACCEPTED            PHP_VERSIONS_INCOMPATIBLE
-PHP_VERSION_DEFAULT              PHP_VERSION_REQD
-PILRC_USE_GTK                    PKGCONFIG_BASE
-PKGCONFIG_FILE                   PKGCONFIG_OVERRIDE
-PKGCONFIG_OVERRIDE_STAGE         PKGDIR
-PKGGNUDIR                        PKGINFODIR
-PKGLOCALEDIR                     PKGMANDIR
-PKGNAME                          PKGNAME_REQD
-PKGPATH                          PKGREVISION
-PKGSRC_BLAS_TYPES                PKGSRC_CHANGES
-PKGSRC_COMPILER                  PKGSRC_KEEP_BIN_PKGS
-PKGSRC_LOCKTYPE                  PKGSRC_MAKE_ENV
-PKGSRC_MESSAGE_RECIPIENTS        PKGSRC_MKPIE
-PKGSRC_MKREPRO                   PKGSRC_RUN_TEST
-PKGSRC_SETENV                    PKGSRC_SLEEPSECS
-PKGSRC_TODO                      PKGSRC_USE_CTF
-PKGSRC_USE_FORTIFY               PKGSRC_USE_RELRO
-PKGSRC_USE_SSP                   PKGSRC_USE_STACK_CHECK
-PKGTASKS_DATAFILE                PKGTOOLS_ARGS
-PKGTOOLS_ENV                     PKG_ALTERNATIVES
-PKG_APACHE                       PKG_APACHE_ACCEPTED
-PKG_APACHE_DEFAULT               PKG_BEST_EXISTS
-PKG_BUILD_OPTIONS                PKG_COMPRESSION
-PKG_CONFIG                       PKG_CONFIG_PERMS
-PKG_CREATE_USERGROUP             PKG_DB_TMPDIR
-PKG_DEBUG_LEVEL                  PKG_DEFAULT_OPTIONS
-PKG_DESTDIR_SUPPORT              PKG_DEVELOPER
-PKG_DISABLED_OPTIONS             PKG_FATAL_ERRORS
-PKG_FC                           PKG_FILELIST_CMD
-PKG_GECOS                        PKG_GID
-PKG_GROUPS                       PKG_GROUPS_VARS
-PKG_HOME                         PKG_INIT_SCRIPTS
-PKG_JAVA_HOME                    PKG_JVM
-PKG_JVMS_ACCEPTED                PKG_JVM_DEFAULT
-PKG_LEGACY_OPTIONS               PKG_LIBTOOL
-PKG_OPTIONS                      PKG_OPTIONS_DEPRECATED_WARNINGS
-PKG_OPTIONS_LEGACY_OPTS          PKG_OPTIONS_LEGACY_VARS
-PKG_OPTIONS_NONEMPTY_SETS        PKG_OPTIONS_OPTIONAL_GROUPS
-PKG_OPTIONS_REQUIRED_GROUPS      PKG_OPTIONS_VAR
-PKG_PHP                          PKG_PHP_MAJOR_VERS
-PKG_PHP_VERSION                  PKG_RCD_SCRIPTS
-PKG_REFCOUNT_DBDIR               PKG_REGISTER_SHELLS
-PKG_RESUME_TRANSFERS             PKG_SHELL
-PKG_SUGGESTED_OPTIONS            PKG_SUPPORTED_OPTIONS
-PKG_SYSCONFBASE                  PKG_SYSCONFBASEDIR
-PKG_SYSCONFDIR                   PKG_SYSCONFDIR_PERMS
-PKG_SYSCONFSUBDIR                PKG_SYSCONFVAR
-PKG_TOOLS_BIN                    PKG_UID
-PKG_UPDATE_FONTS_DB              PKG_USERS
-PKG_USERS_VARS                   PKG_VERBOSE
-PLEASE                           PLIST
-PLIST_AWK                        PLIST_AWK_ENV
-PLIST_SRC                        PLIST_SUBST
-PLIST_TYPE                       PLIST_VARS
-POPTOP_USE_MPPE                  POSSIBLE_GFORTRAN_VERSION
-POST_FETCH_HOOK                  PREFER
-PREFER_NATIVE                    PREFER_NATIVE_PTHREADS
-PREFER_PKGSRC                    PREFIX
-PREPEND_PATH                     PRE_ROOT_CMD
-PRIVILEGED_STAGES                PS
-PTHREAD_AUTO_VARS                PTHREAD_CFLAGS
-PTHREAD_LDFLAGS                  PTHREAD_LIBS
-PTHREAD_OPTS                     PTHREAD_TYPE
-PVM_SSH                          PYPKGPREFIX
-PYTHON_FOR_BUILD_ONLY            PYTHON_SELF_CONFLICT
-PYTHON_VERSIONED_DEPENDENCIES    PYTHON_VERSIONS_ACCEPTED
-PYTHON_VERSIONS_INCOMPATIBLE     PYTHON_VERSION_DEFAULT
-PYTHON_VERSION_REQD              PYVERSSUFFIX
-PY_NO_EGG                        QMAILDIR
-QMAIL_ALIAS_USER                 QMAIL_DAEMON_USER
-QMAIL_LOG_USER                   QMAIL_NOFILES_GROUP
-QMAIL_PASSWD_USER                QMAIL_QMAIL_GROUP
-QMAIL_QUEUE_DIR                  QMAIL_QUEUE_EXTRA
-QMAIL_QUEUE_USER                 QMAIL_REMOTE_USER
-QMAIL_ROOT_USER                  QMAIL_SEND_USER
-QPOPPER_FAC                      QPOPPER_SPOOL_DIR
-QPOPPER_USER                     RAKE_NAME
-RASMOL_DEPTH                     RCD_DIR
-RCD_ORDER                        RCD_SCRIPTS
-RCD_SCRIPTS_DIR                  RCD_SCRIPTS_EXAMPLEDIR
-RCD_SCRIPTS_MODE                 RCD_SCRIPTS_SHELL
-RCD_SCRIPT_SRC                   RCD_SUBR
-RDOC                             READLINE_DEFAULT
-READLINE_TYPE                    REAL_ROOT_GROUP
-REAL_ROOT_USER                   RECURSIVE_MAKE
-RELAY_CTRL_DIR                   RELRO_SUPPORTED
-REPLACE_AWK                      REPLACE_BASH
-REPLACE_CSH                      REPLACE_KSH
-REPLACE_PERL                     REPLACE_PERL6
-REPLACE_PHP                      REPLACE_PYTHON
+MKPIE_SUPPORTED                  MLDONKEY_GROUP
+MLDONKEY_HOME                    MLDONKEY_USER
+MONOTONE_GROUP                   MONOTONE_USER
+MOTIFBASE                        MOTIF_TYPE
+MOTIF_TYPE_DEFAULT               MPI_TYPE
+MSGFMT_STRIP_MSGCTXT             MSGFMT_STRIP_MSGID_PLURAL
+MTOOLS_ENABLE_FLOPPYD            MUST
+MV                               MYSQL_CHARSET
+MYSQL_DATADIR                    MYSQL_EXTRA_CHARSET
+MYSQL_GROUP                      MYSQL_USER
+MYSQL_VERSION                    MYSQL_VERSIONS_ACCEPTED
+MYSQL_VERSIONS_ALL               MYSQL_VERSION_DEFAULT
+NAGIOSCMD_GROUP                  NAGIOSDIR
+NAGIOS_GROUP                     NAGIOS_USER
+NATIVE_APPEND_ABI                NATIVE_APPEND_ELF
+NATIVE_EXEC_FMT                  NATIVE_MACHINE_PLATFORM
+NATIVE_OBJECT_FMT                NBPAX_PROGRAM_PREFIX
+NETBSD_LOGIN_NAME                NMH_EDITOR
+NMH_MTA                          NMH_PAGER
+NOLOGIN                          NOTE
+NOT_FOR_PLATFORM                 NOT_PAX_ASLR_SAFE
+NOT_PAX_MPROTECT_SAFE            NO_BUILD
+NO_CHECKSUM                      NO_CONFIGURE
+NO_SKIP                          NS_PREFERRED
+NULLMAILER_GROUP                 NULLMAILER_USER
+OASIS                            OASIS_BUILD_ARGS
+OBJHOSTNAME                      OBJMACHINE
+OCAML_FINDLIB_DIRS               OCAML_FINDLIB_REGISTER
+OCAML_FINDLIB_REGISTER_VERBOSE   OCAML_SITELIBDIR
+OCAML_TOPKG_DOCDIR               OCAML_USE_DUNE
+OCAML_USE_FINDLIB                OCAML_USE_JBUILDER
+OCAML_USE_OASIS                  OCAML_USE_OASIS_DYNRUN
+OCAML_USE_OPAM                   OCAML_USE_OPT_COMPILER
+OCAML_USE_TOPKG                  OMF
+ONLY_FOR_COMPILER                ONLY_FOR_PLATFORM
+OPENSSH_CHROOT                   OPENSSH_GROUP
+OPENSSH_USER                     OPSYS
+OPSYS_EMULDIR                    OS
+OSS_TYPE                         OSX
+OSX_TOLERATE_SDK_SKEW            OS_HAVE_ALSA
+OS_HAVE_RCD                      OS_VARIANT
+OS_VERSION                       OTF_FONTS_DIR
+OVERRIDE_DIRDEPTH                OVERRIDE_GEMSPEC
+OVERRIDE_GNU_CONFIG_SCRIPTS      OVERRIDE_ROCKSPEC
+OWN_DIRS                         OWN_DIRS_PERMS
+P4GROUP                          P4PORT
+P4ROOT                           P4USER
+PACKAGES                         PALMOS_DEFAULT_SDK
+PAMBASE                          PAM_DEFAULT
+PAPERSIZE                        PASSIVE_FETCH
+PATCHDIR                         PATCHFILES
+PATCH_ARGS                       PATCH_DEBUG
+PATCH_DIST_ARGS                  PATCH_DIST_CAT
+PATCH_DIST_STRIP                 PATCH_FUZZ_FACTOR
+PATCH_STRIP                      PATH
+PCCBASE                          PEAR
+PEAR_CHANNEL                     PEAR_CHANNEL_ALIAS
+PEAR_CHANNEL_VERSION             PEAR_CMD
+PEAR_LIB                         PEAR_PACKAGE_XML
+PERL5                            PERL5_CONFIGURE
+PERL5_CONFIGURE_DIRS             PERL5_LDFLAGS
+PERL5_LICENSE                    PERL5_MODULE_TYPE
+PERL5_PACKLIST                   PERL5_PACKLIST_DIR
+PERL5_PERLBASE                   PERL5_SITEBASE
+PERL5_USE_PACKLIST               PERL5_VENDORBASE
+PFCTL                            PFVAR_H
+PF_VERSION                       PGGROUP
+PGHOME                           PGPKGSRCDIR
+PGSQL_TYPE                       PGSQL_VERSION
+PGSQL_VERSIONS_ACCEPTED          PGSQL_VERSION_DEFAULT
+PGUSER                           PG_LIB_EXT
+PHP                              PHPCOMMON_MK
+PHPPKGSRCDIR                     PHP_BASE_VERS
+PHP_CHECK_INSTALLED              PHP_EXTENSION_DIR
+PHP_INITIAL_TEENY                PHP_PKG_PREFIX
+PHP_VERSION                      PHP_VERSIONS_ACCEPTED
+PHP_VERSIONS_INCOMPATIBLE        PHP_VERSION_DEFAULT
+PHP_VERSION_REQD                 PILRC_USE_GTK
+PKGCONFIG_BASE                   PKGCONFIG_FILE
+PKGCONFIG_OVERRIDE               PKGCONFIG_OVERRIDE_STAGE
+PKGDIR                           PKGGNUDIR
+PKGINFODIR                       PKGLOCALEDIR
+PKGMANDIR                        PKGNAME
+PKGNAME_REQD                     PKGPATH
+PKGREVISION                      PKGSRC_BLAS_TYPES
+PKGSRC_CHANGES                   PKGSRC_COMPILER
+PKGSRC_KEEP_BIN_PKGS             PKGSRC_LOCKTYPE
+PKGSRC_MAKE_ENV                  PKGSRC_MESSAGE_RECIPIENTS
+PKGSRC_MKPIE                     PKGSRC_MKREPRO
+PKGSRC_RUN_TEST                  PKGSRC_SETENV
+PKGSRC_SLEEPSECS                 PKGSRC_TODO
+PKGSRC_USE_CTF                   PKGSRC_USE_FORTIFY
+PKGSRC_USE_RELRO                 PKGSRC_USE_SSP
+PKGSRC_USE_STACK_CHECK           PKGTASKS_DATAFILE
+PKGTOOLS_ARGS                    PKGTOOLS_ENV
+PKG_ALTERNATIVES                 PKG_APACHE
+PKG_APACHE_ACCEPTED              PKG_APACHE_DEFAULT
+PKG_BEST_EXISTS                  PKG_BUILD_OPTIONS
+PKG_COMPRESSION                  PKG_CONFIG
+PKG_CONFIG_PERMS                 PKG_CREATE_USERGROUP
+PKG_DB_TMPDIR                    PKG_DEBUG_LEVEL
+PKG_DEFAULT_OPTIONS              PKG_DESTDIR_SUPPORT
+PKG_DEVELOPER                    PKG_DISABLED_OPTIONS
+PKG_FATAL_ERRORS                 PKG_FC
+PKG_FILELIST_CMD                 PKG_GECOS
+PKG_GID                          PKG_GROUPS
+PKG_GROUPS_VARS                  PKG_HOME
+PKG_INIT_SCRIPTS                 PKG_JAVA_HOME
+PKG_JVM                          PKG_JVMS_ACCEPTED
+PKG_JVM_DEFAULT                  PKG_LEGACY_OPTIONS
+PKG_LIBTOOL                      PKG_OPTIONS
+PKG_OPTIONS_DEPRECATED_WARNINGS  PKG_OPTIONS_LEGACY_OPTS
+PKG_OPTIONS_LEGACY_VARS          PKG_OPTIONS_NONEMPTY_SETS
+PKG_OPTIONS_OPTIONAL_GROUPS      PKG_OPTIONS_REQUIRED_GROUPS
+PKG_OPTIONS_VAR                  PKG_PHP
+PKG_PHP_MAJOR_VERS               PKG_PHP_VERSION
+PKG_RCD_SCRIPTS                  PKG_REFCOUNT_DBDIR
+PKG_REGISTER_SHELLS              PKG_RESUME_TRANSFERS
+PKG_SHELL                        PKG_SUGGESTED_OPTIONS
+PKG_SUPPORTED_OPTIONS            PKG_SYSCONFBASE
+PKG_SYSCONFBASEDIR               PKG_SYSCONFDIR
+PKG_SYSCONFDIR_PERMS             PKG_SYSCONFSUBDIR
+PKG_SYSCONFVAR                   PKG_TOOLS_BIN
+PKG_UID                          PKG_UPDATE_FONTS_DB
+PKG_USERS                        PKG_USERS_VARS
+PKG_VERBOSE                      PLEASE
+PLIST                            PLIST_AWK
+PLIST_AWK_ENV                    PLIST_SRC
+PLIST_SUBST                      PLIST_TYPE
+PLIST_VARS                       POPTOP_USE_MPPE
+POSSIBLE_GFORTRAN_VERSION        POST_FETCH_HOOK
+PREFER                           PREFER_NATIVE
+PREFER_NATIVE_PTHREADS           PREFER_PKGSRC
+PREFIX                           PREPEND_PATH
+PRE_ROOT_CMD                     PRIVILEGED_STAGES
+PS                               PTHREAD_AUTO_VARS
+PTHREAD_CFLAGS                   PTHREAD_LDFLAGS
+PTHREAD_LIBS                     PTHREAD_OPTS
+PTHREAD_TYPE                     PVM_SSH
+PYPKGPREFIX                      PYTHON_FOR_BUILD_ONLY
+PYTHON_SELF_CONFLICT             PYTHON_VERSIONED_DEPENDENCIES
+PYTHON_VERSIONS_ACCEPTED         PYTHON_VERSIONS_INCOMPATIBLE
+PYTHON_VERSION_DEFAULT           PYTHON_VERSION_REQD
+PYVERSSUFFIX                     PY_NO_EGG
+QMAILDIR                         QMAIL_ALIAS_USER
+QMAIL_DAEMON_USER                QMAIL_LOG_USER
+QMAIL_NOFILES_GROUP              QMAIL_PASSWD_USER
+QMAIL_QMAIL_GROUP                QMAIL_QUEUE_DIR
+QMAIL_QUEUE_EXTRA                QMAIL_QUEUE_USER
+QMAIL_REMOTE_USER                QMAIL_ROOT_USER
+QMAIL_SEND_USER                  QPOPPER_FAC
+QPOPPER_SPOOL_DIR                QPOPPER_USER
+RAKE_NAME                        RASMOL_DEPTH
+RCD_DIR                          RCD_ORDER
+RCD_SCRIPTS                      RCD_SCRIPTS_DIR
+RCD_SCRIPTS_EXAMPLEDIR           RCD_SCRIPTS_MODE
+RCD_SCRIPTS_SHELL                RCD_SCRIPT_SRC
+RCD_SUBR                         RDOC
+READLINE_DEFAULT                 READLINE_TYPE
+REAL_ROOT_GROUP                  REAL_ROOT_USER
+RECURSIVE_MAKE                   RELAY_CTRL_DIR
+RELRO_SUPPORTED                  REPLACE_AWK
+REPLACE_BASH                     REPLACE_CSH
+REPLACE_KSH                      REPLACE_PERL
+REPLACE_PERL6                    REPLACE_PHP
+REPLACE_PYTHON                   REPLACE_R
 REPLACE_RUBY                     REPLACE_RUBY_DIRS
 REPLACE_RUBY_PAT                 REPLACE_SH
 REPLACE_TEXLUA                   REQD_DIRS
@@ -9838,16 +10241,16 @@ warnx                            wattr_off
 wattr_on                         work
 wrapper                          wrkdir
 
-Appendix E. Editing guidelines for the pkgsrc guide
+Appendix F. Editing guidelines for the pkgsrc guide
 
 Table of Contents
 
-E.1. Make targets
-E.2. Procedure
+F.1. Make targets
+F.2. Procedure
 
 This section contains information on editing the pkgsrc guide itself.
 
-E.1. Make targets
+F.1. Make targets
 
 The pkgsrc guide's source code is stored in pkgsrc/doc/guide/files, and several
 files are created from it:
@@ -9864,7 +10267,7 @@ files are created from it:
   * https://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps: PostScript version of the
     pkgsrc guide.
 
-E.2. Procedure
+F.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
