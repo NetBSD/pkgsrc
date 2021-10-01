@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4991 2021/10/01 18:54:45 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.4992 2021/10/01 19:56:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7669,3 +7669,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/gegl to 0.4.32 [ryoon 2021-10-01]
 	Updated graphics/gimp to 2.10.28 [ryoon 2021-10-01]
 	Updated textproc/ruby-nokogiri to 1.12.5 [tsutsui 2021-10-01]
+	Added devel/py-astunparse version 1.6.3 [adam 2021-10-01]
+	Added devel/py-gast version 0.5.2 [adam 2021-10-01]
+	Added devel/py-beniget version 0.4.1 [adam 2021-10-01]
+	Added math/py-pythran version 0.10.0 [adam 2021-10-01]
