@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/17 19:42:13 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/01 23:46:28 wen Exp $
 
-SHA1 (Config-INI-Reader-Ordered-0.020.tar.gz) = fa80c4451ca2f2902d7dbbf7b01fcdea93696a61
-RMD160 (Config-INI-Reader-Ordered-0.020.tar.gz) = d6e847d87c3adf9211e3de2f44ccbda7af57673e
-SHA512 (Config-INI-Reader-Ordered-0.020.tar.gz) = c6243f3a6059695366a75228d480a191bb0de40af5fcd3685fe6857557c6351ebaa825589d24b7051565d081a1018433ad015f5ac3c7d3389774f9ffe6275cb3
-Size (Config-INI-Reader-Ordered-0.020.tar.gz) = 14945 bytes
+SHA1 (Config-INI-Reader-Ordered-0.021.tar.gz) = 449d39b204c064f1306f8253a52bb001ea84b46f
+RMD160 (Config-INI-Reader-Ordered-0.021.tar.gz) = 67fe0bac778208d6e925eaa795b366d4e7bcb662
+SHA512 (Config-INI-Reader-Ordered-0.021.tar.gz) = b03fd1c94634b23c1f174c92fb6603bd8e74a9dc4833df44cefa2308c2d7acfed99eb1705ab4098772f797d669c8547719f1b55cd3bd680894e60af7c1d39063
+Size (Config-INI-Reader-Ordered-0.021.tar.gz) = 15903 bytes
