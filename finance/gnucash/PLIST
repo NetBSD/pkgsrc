@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2021/06/28 07:32:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.80 2021/10/01 08:54:57 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -492,23 +492,24 @@ share/doc/gnucash/swipe.qif
 share/doc/gnucash/taxreport.gnucash
 share/doc/gnucash/web.qif
 share/examples/gnucash/environment
-share/glib-2.0/schemas/org.gnucash.dialogs.business.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.checkprinting.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.commodities.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.export.csv.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.import.csv.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.import.generic.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.import.qif.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.reconcile.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.sxs.gschema.xml
-share/glib-2.0/schemas/org.gnucash.dialogs.totd.gschema.xml
-share/glib-2.0/schemas/org.gnucash.general.finance-quote.gschema.xml
-share/glib-2.0/schemas/org.gnucash.gschema.xml
-share/glib-2.0/schemas/org.gnucash.history.gschema.xml
-share/glib-2.0/schemas/org.gnucash.warnings.gschema.xml
-share/glib-2.0/schemas/org.gnucash.window.pages.account.tree.gschema.xml
-share/glib-2.0/schemas/org.gnucash.window.pages.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.deprecated.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.business.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.checkprinting.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.commodities.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.export.csv.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.import.csv.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.import.generic.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.import.qif.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.reconcile.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.dialogs.totd.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.history.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.warnings.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.window.pages.account.tree.gschema.xml
+share/glib-2.0/schemas/org.gnucash.GnuCash.window.pages.gschema.xml
 share/gnucash/accounts/C/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/C/acctchrt_business.gnucash-xea
 share/gnucash/accounts/C/acctchrt_carloan.gnucash-xea
@@ -1054,6 +1055,7 @@ share/gnucash/icons/hicolor/24x24/actions/gnc-jumpto.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-split-trans.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-sx-new.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-transfer.png
+share/gnucash/migratable-prefs.xml
 share/gnucash/pixmaps/gnucash-icon-48x48.bmp
 share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
