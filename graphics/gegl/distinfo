@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.34 2021/07/08 21:29:49 markd Exp $
+$NetBSD: distinfo,v 1.35 2021/10/01 14:28:07 ryoon Exp $
 
-SHA1 (gegl-0.4.30.tar.xz) = 5409c096dcba512186a0a6a8ef2449d62b2affae
-RMD160 (gegl-0.4.30.tar.xz) = a9c35d5343baad327a622d1989f8f43597d9ccd1
-SHA512 (gegl-0.4.30.tar.xz) = 73db2d18260ba061fbbc2adb3256ea9d5b822b57f5654cc3aefb59e7afeeb2e4f0fd7e95ac14603c0a549935df04d5744001089efb378511c914c68664dbd378
-Size (gegl-0.4.30.tar.xz) = 5398052 bytes
+SHA1 (gegl-0.4.32.tar.xz) = b0c8c19d3cae0408014b604cae0bb831b89ef70a
+RMD160 (gegl-0.4.32.tar.xz) = e55ce5195c6db210c790722b7bf94f2f8e3aa0ce
+SHA512 (gegl-0.4.32.tar.xz) = 68da02b8df0a1d234063958896f3678ead62772e611bddb39a6f21ec58cc744599d0a691224c057f2da4d04f2ccfb155a545deea92e77c728dbaeeb90e68cad6
+Size (gegl-0.4.32.tar.xz) = 5633796 bytes
 SHA1 (patch-gegl_gegl-config.c) = a8e1f5f5394a33be2bcdcb05ec7654d06f7ad4bc
-SHA1 (patch-operations_external_exr-save.cc) = 9896064414bcb73eb244bb82a9ce768868084aa3
 SHA1 (patch-operations_external_png-load.c) = 9a03e842597d6c069f7dfa0fa224dd487479b27f
 SHA1 (patch-operations_external_tiff-load.c) = 5be8581a1459db3007bb82c27c2770356314f71d
