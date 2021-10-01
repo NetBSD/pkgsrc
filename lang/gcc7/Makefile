@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/06/26 17:42:23 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2021/10/01 11:49:59 nia Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -20,6 +20,9 @@ COMMENT=	The GNU Compiler Collection (GCC) - 7.0 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
+
+# Relocations result in a linker error on AArch64, but not x86.
+MKPIE_SUPPORTED=	no
 
 NOT_FOR_PLATFORM=	Interix-*-* Darwin-*-aarch64
 
