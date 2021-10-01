@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.4993 2021/10/01 21:28:07 pin Exp $
+$NetBSD: CHANGES-2021,v 1.4994 2021/10/01 23:39:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7674,3 +7674,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-beniget version 0.4.1 [adam 2021-10-01]
 	Added math/py-pythran version 0.10.0 [adam 2021-10-01]
 	Updated sysutils/macchina to 1.1.7 [pin 2021-10-01]
+	Updated devel/p5-Class-Data-Inheritable to 0.09 [wen 2021-10-01]
