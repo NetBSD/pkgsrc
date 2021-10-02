@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/09/11 21:11:32 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/10/02 21:41:31 pin Exp $
 
 SHA1 (aho-corasick-0.7.18.crate) = 0e3f242614a732b703e12fc3c4456c53b0536fb8
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
@@ -144,10 +144,10 @@ SHA1 (getrandom-0.2.3.crate) = d070be38f71a22f3ffcfb82c94baf936e9aafc83
 RMD160 (getrandom-0.2.3.crate) = 84ff4c3d46ba370a271e36ef03af9dd65f15532e
 SHA512 (getrandom-0.2.3.crate) = e6da64ed529cb0fc000b613f75187ed6b20f716e721d8a02ac2ae39c507fb9f6189ebb66b522d28584eff1e7e9efc274cad6bfe43f464f58053701e1d51c603d
 Size (getrandom-0.2.3.crate) = 26261 bytes
-SHA1 (git-cliff-0.3.0.tar.gz) = 284743b47abe150b0912addf433a43e858a23dbd
-RMD160 (git-cliff-0.3.0.tar.gz) = d727f8f43d52e6f13c8ef54266d1013d680c9f2c
-SHA512 (git-cliff-0.3.0.tar.gz) = 2381fbcbc6ea6e212803b36a7added11eae8e2698dd41f98713e9f11bdb4fb37174db3c1aeba0a02ebc8843fb3d93ecb97e98c1b871c8cf8201fe08e3e664396
-Size (git-cliff-0.3.0.tar.gz) = 50090 bytes
+SHA1 (git-cliff-0.4.0.tar.gz) = 08d7d1ddc10fcd6f66744861352a7221046771b3
+RMD160 (git-cliff-0.4.0.tar.gz) = c75ca1cd56c776517d73673d77ab752beeb757fb
+SHA512 (git-cliff-0.4.0.tar.gz) = cf6c4581a3593e00366eb797003539f25a1f066bc44751662c5e4294b5092591b0c8373a8b39a415e193874a8039f40e3a7c48da2dd4b93a853539808dc31867
+Size (git-cliff-0.4.0.tar.gz) = 51467 bytes
 SHA1 (git-conventional-0.10.2.crate) = 3e8541e6601de3d367150d30714640e2a58d2c66
 RMD160 (git-conventional-0.10.2.crate) = 8572b33cfca1c9dc74544806db2c6243a7c4751b
 SHA512 (git-conventional-0.10.2.crate) = 03e579b6224580f1929fe23770eeaad2dc65000d26def1f80c9610e3248d09c6b674bd48f7797fec27cc6b6a603b1e0a3e29ccf5402cd73085ed864688f4ab5d
@@ -312,10 +312,10 @@ SHA1 (ppv-lite86-0.2.10.crate) = 7a665cbfcc1d0a172d7d1d05a9596b7f3d6b83aa
 RMD160 (ppv-lite86-0.2.10.crate) = 01d542acbb34f9c86111d6be7a2195dd95011fe6
 SHA512 (ppv-lite86-0.2.10.crate) = c9941052e504b9b310024064026e4b1d540dd877705ef450a833d9ff6dee70ba874cdad68c46381a71d5b54482cd80b3dbb8e0c225758fd339069031a55195f1
 Size (ppv-lite86-0.2.10.crate) = 20915 bytes
-SHA1 (pretty_assertions-0.7.2.crate) = 0ad9a8a955d21aa7cf8e0385a317945a6b024a41
-RMD160 (pretty_assertions-0.7.2.crate) = 579126da22403d5d058966ce3bbc0c12f524f839
-SHA512 (pretty_assertions-0.7.2.crate) = edf898bbb15f4f56d2d7688d90d44d0ee7913b7d78b4774548eb7a88e8f75b0de9635c93b107744a2501839202ecf828004d179c6edf84706ae160186d47d177
-Size (pretty_assertions-0.7.2.crate) = 79200 bytes
+SHA1 (pretty_assertions-1.0.0.crate) = d2413bc7fcc2c5a7aa2a372631310f54cc32aa03
+RMD160 (pretty_assertions-1.0.0.crate) = f8c4022a9ee01c85ef8531a2c9c9ba49bd9605d2
+SHA512 (pretty_assertions-1.0.0.crate) = 65065b7efc5e7003499063464e4b996c84f22637143a01f8857552369960425156e0ce0571a62e876df3a8ac9d1361548bf5d4676749b0baf5bdd3a22f66b1a5
+Size (pretty_assertions-1.0.0.crate) = 73836 bytes
 SHA1 (pretty_env_logger-0.4.0.crate) = 1db85a806ea1b7fe474f3213297f6e82eb734f37
 RMD160 (pretty_env_logger-0.4.0.crate) = 33b052bdd0b336127ce729b15a604e12de57a605
 SHA512 (pretty_env_logger-0.4.0.crate) = 770de8e256cedfb21fc89cc1ecc564ae1a8e67263705b4234b91867996c4db77ec703b70a46aef6b018c6ce09aab6a232fd1eedf8324c39f119a6807daa534f9
