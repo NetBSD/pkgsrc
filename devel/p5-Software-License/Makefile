@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2021/05/24 19:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/10/02 10:56:29 wen Exp $
 
-DISTNAME=	Software-License-0.103014
+DISTNAME=	Software-License-0.104001
 # put a period in the center of 6 digit, for example, 0.103004 -> 0.103.004
 PKGNAME=	p5-${DISTNAME:C/\.([0-9][0-9][0-9])([0-9][0-9][0-9])/.\1.\2/}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEONT/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RJ/RJBS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Software-License
