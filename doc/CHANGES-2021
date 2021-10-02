@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5006 2021/10/02 02:38:59 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5007 2021/10/02 03:06:02 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7687,3 +7687,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-CPAN-Perl-Releases to 5.20210920 [wen 2021-10-02]
 	Updated devel/p5-CPANPLUS to 0.9912 [wen 2021-10-02]
 	Updated devel/p5-Curses to 1.38 [wen 2021-10-02]
+	Updated net/mikutter to 4.1.7 [tsutsui 2021-10-02]
