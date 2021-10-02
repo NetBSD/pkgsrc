@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2021/05/24 19:50:11 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/10/02 00:37:50 wen Exp $
 
-DISTNAME=	CPAN-FindDependencies-2.49
+DISTNAME=	CPAN-FindDependencies-3.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
@@ -13,7 +12,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Capture-Tiny>=0.05:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Devel-CheckOS>=1.52:../../devel/p5-Devel-CheckOS
+DEPENDS+=	p5-Env-Path>=0.19:../../devel/p5-Env-Path
 #DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
+DEPENDS+=	p5-File-Type>=0:../../devel/p5-File-Type
 DEPENDS+=	p5-libwww>=1.41:../../www/p5-libwww
 DEPENDS+=	p5-Parse-CPAN-Packages>=2.31:../../devel/p5-Parse-CPAN-Packages
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI # really URI::file>=4.13
