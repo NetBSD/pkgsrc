@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5021 2021/10/02 21:39:42 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5022 2021/10/02 21:41:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7704,3 +7704,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ruamel-yaml to 0.17.16 [adam 2021-10-02]
 	Updated textproc/py-ujson to 4.2.0 [adam 2021-10-02]
 	Updated sysutils/broot to 1.6.4 [pin 2021-10-02]
+	Updated devel/git-cliff to 0.4.0 [pin 2021-10-02]
