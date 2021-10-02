@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/05/24 19:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/10/02 07:53:20 wen Exp $
 
-DISTNAME=	Devel-OverloadInfo-0.005
+DISTNAME=	Devel-OverloadInfo-0.007
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -12,7 +11,6 @@ COMMENT=	Perl 5 module for introspect overloaded operators
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
-DEPENDS+=	p5-Sub-Identify>=0:../../devel/p5-Sub-Identify
 
 BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 
