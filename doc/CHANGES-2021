@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5010 2021/10/02 07:54:38 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5011 2021/10/02 10:57:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7691,3 +7691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-ebug to 0.64 [wen 2021-10-02]
 	Updated devel/p5-Devel-NYTProf to 6.11 [wen 2021-10-02]
 	Updated devel/p5-Devel-OverloadInfo to 0.007 [wen 2021-10-02]
+	Updated devel/p5-Software-License to 0.104001 [wen 2021-10-02]
