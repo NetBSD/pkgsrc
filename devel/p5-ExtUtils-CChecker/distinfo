@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/11 11:20:13 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/02 13:27:46 wen Exp $
 
-SHA1 (ExtUtils-CChecker-0.10.tar.gz) = a3e3d9af2bcdfeb71125890d8948015b516fe5a2
-RMD160 (ExtUtils-CChecker-0.10.tar.gz) = bff92be0c8cb3d20524df21aa53341f13c96d528
-SHA512 (ExtUtils-CChecker-0.10.tar.gz) = 8b43c559333d14d682a00a0fa956aff8b6b4209b7b442f330f9e8573b438dcd5a2d3b86582e2aad2f974c342acee3e79785b9816cb585807dba9b448a1626d4c
-Size (ExtUtils-CChecker-0.10.tar.gz) = 19496 bytes
+SHA1 (ExtUtils-CChecker-0.11.tar.gz) = be5e58fdd7fea4d2c912cb85ecfe90debc9b4a45
+RMD160 (ExtUtils-CChecker-0.11.tar.gz) = 6163905dd79285d23f6bf903be6f40cec73fac61
+SHA512 (ExtUtils-CChecker-0.11.tar.gz) = 4b638e5082443eafcf2f3586ec8ff20ee62b054f8bc24149dd7a2549f57ca748618f76c057f456eadca4e5c4099071ee2d1c8993a13e2f5ea8924cd92319dd8c
+Size (ExtUtils-CChecker-0.11.tar.gz) = 20241 bytes
