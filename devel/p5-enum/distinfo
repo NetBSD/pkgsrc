@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/01 09:06:38 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/02 13:21:00 wen Exp $
 
-SHA1 (enum-1.11.tar.gz) = 81d82e2aa89a341a67036ed0904f4749f2ee1525
-RMD160 (enum-1.11.tar.gz) = e47974c70ffc8b962699ab7babb29514ba79c639
-SHA512 (enum-1.11.tar.gz) = 53d7137f42e4845887f6067f16e68141827379c40c50299d36f4c44ba005cea52610c55a7eb09600ff36aac87d11b9c992e63007c1e4fe11a12e381d7515f733
-Size (enum-1.11.tar.gz) = 7883 bytes
+SHA1 (enum-1.12.tar.gz) = a7571c831bee7dfdc3723af543a8742d089c8f7a
+RMD160 (enum-1.12.tar.gz) = 1b0bd0809809be5a1da3aa5cb8c4995bf1cbc316
+SHA512 (enum-1.12.tar.gz) = 04c5b5ff185c9e8d41aa056a1be7fb8f95a0063b88f2c9d2678c0c11037f077c3a3502914f0ddd3c67f255b275dcf238a13ca0d23b28addb4e5a7bba0dcfc8ae
+Size (enum-1.12.tar.gz) = 14908 bytes
