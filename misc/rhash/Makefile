@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/07/15 09:39:17 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/10/02 20:54:57 jklos Exp $
 
 DISTNAME=	rhash-1.4.2
+PKGREVISION=    1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
