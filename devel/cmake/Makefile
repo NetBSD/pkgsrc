@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.184 2021/10/02 20:54:57 jklos Exp $
+# $NetBSD: Makefile,v 1.185 2021/10/02 21:30:52 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION=	1
 .include "Makefile.common"
 
 COMMENT=	Cross platform make
@@ -57,7 +57,7 @@ pre-configure:
 USE_CURSES=		wsyncup
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.3.3
-BUILDLINK_API_DEPENDS.rhash+=	rhash>1.4.2
+BUILDLINK_API_DEPENDS.rhash+=	rhash>1.4.2nb1
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
