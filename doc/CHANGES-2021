@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5017 2021/10/02 13:28:26 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5018 2021/10/02 15:01:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7698,3 +7698,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-enum to 1.12 [wen 2021-10-02]
 	Updated devel/p5-Exception-Class to 1.45 [wen 2021-10-02]
 	Updated devel/p5-ExtUtils-CChecker to 0.11 [wen 2021-10-02]
+	Updated devel/p5-ExtUtils-CppGuess to 0.23 [wen 2021-10-02]
