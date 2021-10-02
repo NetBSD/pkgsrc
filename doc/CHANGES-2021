@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5019 2021/10/02 16:47:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5020 2021/10/02 18:34:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7701,3 +7701,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-ExtUtils-CppGuess to 0.23 [wen 2021-10-02]
 	Updated devel/py-lazr.config to 2.2.3 [adam 2021-10-02]
 	Updated audio/faudio to 21.10 [adam 2021-10-02]
+	Updated devel/py-ruamel-yaml to 0.17.16 [adam 2021-10-02]
+	Updated textproc/py-ujson to 4.2.0 [adam 2021-10-02]
