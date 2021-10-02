@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5002 2021/10/02 00:38:38 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5003 2021/10/02 01:53:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7683,3 +7683,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Config-Tiny to 2.27 [wen 2021-10-01]
 	Updated devel/p5-Convert-Binary-C to 0.84 [wen 2021-10-02]
 	Updated devel/p5-CPAN-FindDependencies to 3.10 [wen 2021-10-02]
+	Updated www/mediawiki to 1.36.2 [wen 2021-10-02]
