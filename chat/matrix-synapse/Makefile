@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2021/08/31 19:57:59 js Exp $
+# $NetBSD: Makefile,v 1.34 2021/10/02 12:23:13 js Exp $
 
-DISTNAME=	matrix-synapse-1.41.1
+DISTNAME=	matrix-synapse-1.43.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.5.1:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=1:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=1.4.0:../../devel/py-canonicaljson
@@ -27,14 +27,12 @@ DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
-DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.3.1:../../devel/py-daemonize
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.8.0:../../net/py-prometheus_client
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.4.0:../../net/py-prometheus_client
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
