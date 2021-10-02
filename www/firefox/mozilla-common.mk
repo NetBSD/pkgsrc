@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.208 2021/10/01 13:31:52 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.209 2021/10/02 13:10:52 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -68,8 +68,7 @@ CXXFLAGS+=		-mstackrealign
 PLIST.i386=		yes
 .endif
 
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/*/*.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
