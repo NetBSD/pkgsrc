@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5014 2021/10/02 12:43:20 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5015 2021/10/02 13:21:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7695,3 +7695,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/element-web to 1.9.0 [js 2021-10-02]
 	Updated chat/matrix-synapse to 1.43.0 [js 2021-10-02]
 	Updated devel/p5-Dist-Zilla to 6.024 [wen 2021-10-02]
+	Updated devel/p5-enum to 1.12 [wen 2021-10-02]
