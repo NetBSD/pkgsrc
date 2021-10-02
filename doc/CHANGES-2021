@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5012 2021/10/02 11:49:12 js Exp $
+$NetBSD: CHANGES-2021,v 1.5013 2021/10/02 12:23:23 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7693,3 +7693,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-OverloadInfo to 0.007 [wen 2021-10-02]
 	Updated devel/p5-Software-License to 0.104001 [wen 2021-10-02]
 	Updated chat/element-web to 1.9.0 [js 2021-10-02]
+	Updated chat/matrix-synapse to 1.43.0 [js 2021-10-02]
