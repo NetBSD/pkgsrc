@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2021/09/11 21:11:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2021/10/02 21:41:31 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
@@ -77,7 +77,7 @@ CARGO_CRATE_DEPENDS+=	pest_generator-2.1.3
 CARGO_CRATE_DEPENDS+=	pest_meta-2.1.3
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.19
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
-CARGO_CRATE_DEPENDS+=	pretty_assertions-0.7.2
+CARGO_CRATE_DEPENDS+=	pretty_assertions-1.0.0
 CARGO_CRATE_DEPENDS+=	pretty_env_logger-0.4.0
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
