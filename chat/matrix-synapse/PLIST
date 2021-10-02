@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/08/31 19:57:59 js Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/10/02 12:23:13 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -185,6 +185,9 @@ ${PYSITELIB}/synapse/config/metrics.pyo
 ${PYSITELIB}/synapse/config/modules.py
 ${PYSITELIB}/synapse/config/modules.pyc
 ${PYSITELIB}/synapse/config/modules.pyo
+${PYSITELIB}/synapse/config/oembed.py
+${PYSITELIB}/synapse/config/oembed.pyc
+${PYSITELIB}/synapse/config/oembed.pyo
 ${PYSITELIB}/synapse/config/oidc.py
 ${PYSITELIB}/synapse/config/oidc.pyc
 ${PYSITELIB}/synapse/config/oidc.pyo
@@ -398,6 +401,9 @@ ${PYSITELIB}/synapse/handlers/events.pyo
 ${PYSITELIB}/synapse/handlers/federation.py
 ${PYSITELIB}/synapse/handlers/federation.pyc
 ${PYSITELIB}/synapse/handlers/federation.pyo
+${PYSITELIB}/synapse/handlers/federation_event.py
+${PYSITELIB}/synapse/handlers/federation_event.pyc
+${PYSITELIB}/synapse/handlers/federation_event.pyo
 ${PYSITELIB}/synapse/handlers/groups_local.py
 ${PYSITELIB}/synapse/handlers/groups_local.pyc
 ${PYSITELIB}/synapse/handlers/groups_local.pyo
@@ -758,6 +764,7 @@ ${PYSITELIB}/synapse/replication/tcp/streams/events.pyo
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.py
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.pyc
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.pyo
+${PYSITELIB}/synapse/res/providers.json
 ${PYSITELIB}/synapse/res/templates/account_previously_renewed.html
 ${PYSITELIB}/synapse/res/templates/account_renewed.html
 ${PYSITELIB}/synapse/res/templates/add_threepid.html
@@ -786,6 +793,7 @@ ${PYSITELIB}/synapse/res/templates/registration.html
 ${PYSITELIB}/synapse/res/templates/registration.txt
 ${PYSITELIB}/synapse/res/templates/registration_failure.html
 ${PYSITELIB}/synapse/res/templates/registration_success.html
+${PYSITELIB}/synapse/res/templates/registration_token.html
 ${PYSITELIB}/synapse/res/templates/room.html
 ${PYSITELIB}/synapse/res/templates/room.txt
 ${PYSITELIB}/synapse/res/templates/sso.css
@@ -823,9 +831,9 @@ ${PYSITELIB}/synapse/rest/admin/groups.pyo
 ${PYSITELIB}/synapse/rest/admin/media.py
 ${PYSITELIB}/synapse/rest/admin/media.pyc
 ${PYSITELIB}/synapse/rest/admin/media.pyo
-${PYSITELIB}/synapse/rest/admin/purge_room_servlet.py
-${PYSITELIB}/synapse/rest/admin/purge_room_servlet.pyc
-${PYSITELIB}/synapse/rest/admin/purge_room_servlet.pyo
+${PYSITELIB}/synapse/rest/admin/registration_tokens.py
+${PYSITELIB}/synapse/rest/admin/registration_tokens.pyc
+${PYSITELIB}/synapse/rest/admin/registration_tokens.pyo
 ${PYSITELIB}/synapse/rest/admin/rooms.py
 ${PYSITELIB}/synapse/rest/admin/rooms.pyc
 ${PYSITELIB}/synapse/rest/admin/rooms.pyo
@@ -1015,6 +1023,9 @@ ${PYSITELIB}/synapse/rest/media/v1/media_repository.pyo
 ${PYSITELIB}/synapse/rest/media/v1/media_storage.py
 ${PYSITELIB}/synapse/rest/media/v1/media_storage.pyc
 ${PYSITELIB}/synapse/rest/media/v1/media_storage.pyo
+${PYSITELIB}/synapse/rest/media/v1/oembed.py
+${PYSITELIB}/synapse/rest/media/v1/oembed.pyc
+${PYSITELIB}/synapse/rest/media/v1/oembed.pyo
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.py
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.pyc
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.pyo
@@ -1239,6 +1250,9 @@ ${PYSITELIB}/synapse/storage/databases/main/roommember.pyo
 ${PYSITELIB}/synapse/storage/databases/main/search.py
 ${PYSITELIB}/synapse/storage/databases/main/search.pyc
 ${PYSITELIB}/synapse/storage/databases/main/search.pyo
+${PYSITELIB}/synapse/storage/databases/main/session.py
+${PYSITELIB}/synapse/storage/databases/main/session.pyc
+${PYSITELIB}/synapse/storage/databases/main/session.pyo
 ${PYSITELIB}/synapse/storage/databases/main/signatures.py
 ${PYSITELIB}/synapse/storage/databases/main/signatures.pyc
 ${PYSITELIB}/synapse/storage/databases/main/signatures.pyo
@@ -1618,6 +1632,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/61/03recreate_min_depth.py
 ${PYSITELIB}/synapse/storage/schema/main/delta/61/03recreate_min_depth.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/61/03recreate_min_depth.pyo
 ${PYSITELIB}/synapse/storage/schema/main/delta/62/01insertion_event_extremities.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/63/01create_registration_tokens.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/63/02delete_unlinked_email_pushers.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/63/02populate-rooms-creator.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/63/03session_store.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/63/04add_presence_stream_not_offline_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
