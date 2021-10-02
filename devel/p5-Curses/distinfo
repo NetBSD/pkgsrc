@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2016/08/16 00:38:25 wen Exp $
+$NetBSD: distinfo,v 1.21 2021/10/02 02:38:18 wen Exp $
 
-SHA1 (Curses-1.36.tar.gz) = 8fbd0fa71b3f6db0b050a1d025585e2afcc96a27
-RMD160 (Curses-1.36.tar.gz) = 4e1cad194f5ea984ee5eaeb2aeb1665f19f1be9a
-SHA512 (Curses-1.36.tar.gz) = 40ce96bdf7ef4bbd6975363bc27c2c561a81cafbaf147f2655a2c6521e09f6e40441cee06b6f8f27e370ad59eaf6f677ffe8e475030dfa870d25eca37717c58c
-Size (Curses-1.36.tar.gz) = 135049 bytes
+SHA1 (Curses-1.38.tar.gz) = ca217b02461da7372d8e9cb5f0a794f90ac6d930
+RMD160 (Curses-1.38.tar.gz) = d9229bb48e379f78276e4fc6dd8e691e7af6bbb0
+SHA512 (Curses-1.38.tar.gz) = 27999e71f19576c930a794c9f478e8a3b6b3b1d1e68c4ca57b712f20c98a83dba46295c012a6c618d097b661ec30441c8147e26579218ecef977d7c7996c7442
+Size (Curses-1.38.tar.gz) = 135789 bytes
