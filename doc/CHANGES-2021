@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5018 2021/10/02 15:01:46 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5019 2021/10/02 16:47:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7699,3 +7699,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Exception-Class to 1.45 [wen 2021-10-02]
 	Updated devel/p5-ExtUtils-CChecker to 0.11 [wen 2021-10-02]
 	Updated devel/p5-ExtUtils-CppGuess to 0.23 [wen 2021-10-02]
+	Updated devel/py-lazr.config to 2.2.3 [adam 2021-10-02]
+	Updated audio/faudio to 21.10 [adam 2021-10-02]
