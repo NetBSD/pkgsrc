@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2021/09/29 19:00:30 adam Exp $
+# $NetBSD: Makefile,v 1.184 2021/10/02 20:54:57 jklos Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -57,6 +57,7 @@ pre-configure:
 USE_CURSES=		wsyncup
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.3.3
+BUILDLINK_API_DEPENDS.rhash+=	rhash>1.4.2
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
