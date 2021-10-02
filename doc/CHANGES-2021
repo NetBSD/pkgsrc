@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5008 2021/10/02 07:38:53 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5009 2021/10/02 07:47:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7689,3 +7689,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Curses to 1.38 [wen 2021-10-02]
 	Updated net/mikutter to 4.1.7 [tsutsui 2021-10-02]
 	Updated devel/p5-Devel-ebug to 0.64 [wen 2021-10-02]
+	Updated devel/p5-Devel-NYTProf to 6.11 [wen 2021-10-02]
