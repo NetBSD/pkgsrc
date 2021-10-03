@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.135 2021/05/24 19:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2021/10/03 09:22:28 nia Exp $
 
 PKGNAME=	${DISTNAME}
 PKGREVISION=	17
 COMMENT=	XEmacs text editor version 21.4
+
+.include "Makefile.common"
 
 # extra options for x11 support, not for sharing with xemacs-current-nox11
 PKG_SUPPORTED_OPTIONS+=		x11 xface
@@ -17,8 +19,6 @@ SUBST_VARS.desktop-file=	PREFIX LIBDIR
 SUBST_FILES.desktop-file=	etc/xemacs.desktop
 
 INSTALLATION_DIRS+=		share/applications
-
-.include "Makefile.common"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
