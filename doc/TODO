@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21126 2021/10/02 16:47:38 adam Exp $
+$NetBSD: TODO,v 1.21127 2021/10/03 06:02:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,6 +476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o asapm-3.1
+	o asciidoc-9.1.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -519,6 +520,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
+	o bison-3.8.2
 	o blender-2.93
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -550,6 +552,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cascadia-ttf-2108.26
 	o catch2-2.13.6
 	o catdoc-1.1
 	o catdoc-tk-1.1
@@ -968,6 +971,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
 	o ispell-ru-io-0.99g5
+	o itstool-2.0.7
 	o iverilog-10.3
 	o ivykis-0.42.4
 	o iwi-firmware3-3.1
@@ -1272,6 +1276,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o neon-0.32.1
 	o netbt-hcidump-5.58
 	o netramet-50
 	o newmail-1.0.2
@@ -1617,6 +1622,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-21.10.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1966,6 +1972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.54.1
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
