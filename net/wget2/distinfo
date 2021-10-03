@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/10/03 13:41:11 ryoon Exp $
+
+SHA1 (wget2-2.0.0.tar.lz) = 06edd7eabea3c5837d79c78ef71dbadda4cf507a
+RMD160 (wget2-2.0.0.tar.lz) = d803a6dd63602e2f8e7643efc7990ff285817a97
+SHA512 (wget2-2.0.0.tar.lz) = 0e58b05cc6ddc8e9e573beacd5e493d266c58d10e13d81967d2509b73f4bee0ef88a0c09e979f223530189b2bfde593eeb68d38c4fa8702761fa2779174004b3
+Size (wget2-2.0.0.tar.lz) = 1956207 bytes
+SHA1 (patch-configure) = 8ab41d49dca4b508081d5465fbfafe6f2087558b
