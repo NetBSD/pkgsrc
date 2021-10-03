@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2021/09/29 19:00:39 adam Exp $
+# $NetBSD: Makefile,v 1.55 2021/10/03 19:02:46 nros Exp $
 
 DISTNAME=	lgogdownloader-3.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sude-/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
