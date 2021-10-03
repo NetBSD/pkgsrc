@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/08/25 19:25:07 scole Exp $
+# $NetBSD: Makefile,v 1.28 2021/10/03 20:40:08 scole Exp $
 
-ST_VERSION=	2.8
+ST_VERSION=	2.9
 PKGNAME=	split-thai-${ST_VERSION}
 CATEGORIES=	textproc
 
