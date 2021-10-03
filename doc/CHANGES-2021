@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5026 2021/10/03 12:46:01 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5027 2021/10/03 13:12:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7709,3 +7709,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.16 [pin 2021-10-02]
 	Updated textproc/py-markups to 3.1.2 [gutteridge 2021-10-03]
 	Updated devel/py-guppy3 to 3.1.1 [gutteridge 2021-10-03]
+	Updated sysutils/coreutils to 9.0 [ryoon 2021-10-03]
