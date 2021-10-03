@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/06/14 22:32:06 mef Exp $
+# $NetBSD: Makefile,v 1.23 2021/10/03 07:13:15 nia Exp $
 
 DISTNAME=		gprolog-1.4.5
 CATEGORIES=		lang
@@ -22,6 +22,10 @@ CONFIGURE_ARGS+=	--with-install-dir=${PREFIX}/lib/${PKGNAME_NOREV} \
 # MAKE_JOBS_SAFE= 	no
 # but try to remove above (mef)
 
+# On NetBSD/i386:
+# pl2wam: text relocations
+# pl2wam: Cannot write-enable text segment: Permission denied
+MKPIE_SUPPORTED=	no
 
 TEST_TARGET=	check
 
