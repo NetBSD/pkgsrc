@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.28 2020/04/21 11:23:29 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.29 2021/10/03 07:06:42 nia Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -39,6 +39,10 @@
 
 .if !defined(OCAML_MK)
 OCAML_MK= # defined
+
+# Text relocations errors when building packages that use
+# ocamlfind on i386.
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
 
