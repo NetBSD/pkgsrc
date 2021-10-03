@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5032 2021/10/03 17:57:03 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5033 2021/10/03 19:14:31 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7715,3 +7715,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.10 [fcambus 2021-10-03]
 	Updated net/dbip-city-lite to 2021.10 [fcambus 2021-10-03]
 	Updated net/dbip-country-lite to 2021.10 [fcambus 2021-10-03]
+	Updated databases/postgresql-timescaledb to 2.4.2 [tnn 2021-10-03]
+	Updated databases/promscale to 0.6.0 [tnn 2021-10-03]
+	Updated databases/prometheus to 2.30.2 [tnn 2021-10-03]
