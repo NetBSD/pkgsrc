@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/09/06 12:20:18 fcambus Exp $
+# $NetBSD: Makefile,v 1.19 2021/10/03 17:55:01 fcambus Exp $
 
-DISTNAME=	dbip-asn-lite-2021-09.mmdb
-PKGNAME=	dbip-asn-lite-2021.09
+DISTNAME=	dbip-asn-lite-2021-10.mmdb
+PKGNAME=	dbip-asn-lite-2021.10
 CATEGORIES=	net
 MASTER_SITES=	https://download.db-ip.com/free/
 EXTRACT_SUFX=	.gz
