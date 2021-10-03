@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5028 2021/10/03 13:19:42 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.5029 2021/10/03 13:42:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7711,3 +7711,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-guppy3 to 3.1.1 [gutteridge 2021-10-03]
 	Updated sysutils/coreutils to 9.0 [ryoon 2021-10-03]
 	Updated misc/gnuls to 9.0 [ryoon 2021-10-03]
+	Added net/wget2 version 2.0.0 [ryoon 2021-10-03]
