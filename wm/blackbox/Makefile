@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/06/11 21:30:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.40 2021/10/03 12:49:58 gutteridge Exp $
 
 DISTNAME=	blackbox-0.77
 PKGREVISION=	1
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	blackboxwm
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.lz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gutteridge@NetBSD.org
 HOMEPAGE=	https://github.com/bbidulock/blackboxwm
 COMMENT=	Small and fast X11 window manager
 LICENSE=	mit
