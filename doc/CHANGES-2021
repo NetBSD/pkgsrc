@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5030 2021/10/03 17:55:14 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5031 2021/10/03 17:56:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7713,3 +7713,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/gnuls to 9.0 [ryoon 2021-10-03]
 	Added net/wget2 version 2.0.0 [ryoon 2021-10-03]
 	Updated net/dbip-asn-lite to 2021.10 [fcambus 2021-10-03]
+	Updated net/dbip-city-lite to 2021.10 [fcambus 2021-10-03]
