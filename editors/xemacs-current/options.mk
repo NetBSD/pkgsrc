@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2020/11/29 19:52:26 nia Exp $
+# $NetBSD: options.mk,v 1.20 2021/10/03 17:53:11 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -15,12 +15,6 @@ PKG_OPTIONS+=		x11
 ###
 PLIST_VARS+=		x11
 .if !empty(PKG_OPTIONS:Mx11)
-.  include "../../mk/jpeg.buildlink3.mk"
-.  include "../../graphics/png/buildlink3.mk"
-.  include "../../graphics/tiff/buildlink3.mk"
-.  include "../../x11/libXpm/buildlink3.mk"
-.  include "../../mk/xaw.buildlink3.mk"
-.  include "../../x11/xbitmaps/buildlink3.mk"
 PLIST.x11=		yes
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-jpeg
@@ -42,7 +36,33 @@ CONFIGURE_ARGS+=	--with-xim=xlib
 # Explicitly exclude other toolkits
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-gnome
+
+LIBDIR=				${PREFIX}/lib/${DISTNAME}
+
+SUBST_CLASSES+=			desktop-file
+SUBST_STAGE.desktop-file=	pre-configure
+SUBST_MESSAGE.desktop-file=	Fixing paths in XEmacs desktop file
+SUBST_VARS.desktop-file=	PREFIX LIBDIR
+SUBST_FILES.desktop-file=	etc/xemacs.desktop
+
+INSTALLATION_DIRS+=		share/applications
+
+post-extract:
+	cp ${.CURDIR}/../../editors/xemacs/files/xemacs.desktop ${WRKSRC}/etc/
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/etc/xemacs.desktop \
+		${DESTDIR}${PREFIX}/share/applications/
+
+.  include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.  include "../../mk/jpeg.buildlink3.mk"
+.  include "../../graphics/png/buildlink3.mk"
+.  include "../../graphics/tiff/buildlink3.mk"
+.  include "../../x11/libXpm/buildlink3.mk"
+.  include "../../mk/xaw.buildlink3.mk"
+.  include "../../x11/xbitmaps/buildlink3.mk"
 .else
+
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-png
@@ -63,11 +83,11 @@ CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mxft)
+CONFIGURE_ARGS+=	--with-xft=emacs,tabs,menubars,gauges
 .  include "../../fonts/fontconfig/buildlink3.mk"
 .  include "../../graphics/freetype2/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-xft=emacs,tabs,menubars,gauges
 .else
 CONFIGURE_ARGS+=	--without-xft
 .endif
@@ -81,8 +101,8 @@ CONFIGURE_ARGS+=	--without-xface
 
 PLIST_VARS+=		canna
 .if !empty(PKG_OPTIONS:Mcanna)
-.  include "../../inputmethod/canna-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-canna
+.  include "../../inputmethod/canna-lib/buildlink3.mk"
 PLIST.canna=		yes
 .else
 CONFIGURE_ARGS+=	--without-canna

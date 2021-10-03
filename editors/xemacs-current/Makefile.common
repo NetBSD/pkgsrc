@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2021/09/27 15:58:33 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/10/03 17:53:11 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -60,15 +60,6 @@ INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 # but this is fine for us.
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/term.h)
 CPPFLAGS+=	-DTERMINFO
-.endif
-
-.if !empty(PKG_OPTIONS:Mx11)
-post-extract:
-	cp ${.CURDIR}/../../editors/xemacs/files/xemacs.desktop ${WRKSRC}/etc/
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/xemacs.desktop \
-		${DESTDIR}${PREFIX}/share/applications/
 .endif
 
 .include "../../databases/gdbm/buildlink3.mk"
