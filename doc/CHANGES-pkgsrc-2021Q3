@@ -1,4 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.1 2021/09/27 13:22:17 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.2 2021/10/03 17:56:53 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
+
+Pullup ticket #6502 - requested by wiz
+graphics/libexif: security fix
 
