@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/10/02 20:54:57 jklos Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/03 17:34:11 nros Exp $
 
 DISTNAME=	rhash-1.4.2
-PKGREVISION=    1
+PKGREVISION=    2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
@@ -24,9 +24,12 @@ CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib\ ${LDFLAGS
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-INSTALL_TARGET=		install install-pkg-config
+INSTALL_TARGET=		install install-pkg-config install-lib-so-link
 INSTALLATION_DIRS=	share/examples/rhash
 TEST_TARGET=		test
+
+PKGCONFIG_OVERRIDE=		dist/librhash.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 CONF_FILES+=	${PREFIX}/share/examples/rhash/rhashrc ${PKG_SYSCONFDIR}/rhashrc
 
