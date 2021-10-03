@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/03/17 08:02:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/10/03 17:34:11 nros Exp $
 bin/rhash
 include/rhash.h
 include/rhash_torrent.h
 lib/librhash.a
+lib/librhash.so
 lib/librhash.so.0
 lib/pkgconfig/librhash.pc
 man/man1/rhash.1
