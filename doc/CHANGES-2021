@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5033 2021/10/03 19:14:31 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.5034 2021/10/03 20:42:19 scole Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7718,3 +7718,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-timescaledb to 2.4.2 [tnn 2021-10-03]
 	Updated databases/promscale to 0.6.0 [tnn 2021-10-03]
 	Updated databases/prometheus to 2.30.2 [tnn 2021-10-03]
+	Updated textproc/split-thai to 2.9 [scole 2021-10-03]
