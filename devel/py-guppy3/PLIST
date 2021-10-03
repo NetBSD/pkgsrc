@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/12/15 14:49:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/10/03 12:45:52 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/guppy/__init__.py
 ${PYSITELIB}/guppy/__init__.pyc
 ${PYSITELIB}/guppy/__init__.pyo
+${PYSITELIB}/guppy/_version.py
+${PYSITELIB}/guppy/_version.pyc
+${PYSITELIB}/guppy/_version.pyo
 ${PYSITELIB}/guppy/etc/Cat.py
 ${PYSITELIB}/guppy/etc/Cat.pyc
 ${PYSITELIB}/guppy/etc/Cat.pyo
