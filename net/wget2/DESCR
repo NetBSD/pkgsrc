@@ -1,0 +1,5 @@
+GNU Wget2 is the successor of GNU Wget, a file and recursive website
+downloader. Designed and written from scratch it wraps around
+libwget, that provides the basic functions needed by a web client.
+Wget2 works multi-threaded and uses many features to allow fast
+operation.
