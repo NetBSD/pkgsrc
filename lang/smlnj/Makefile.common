@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/10/12 19:50:58 he Exp $
+# $NetBSD: Makefile.common,v 1.16 2021/10/03 07:10:44 nia Exp $
 #
 # used by lang/smlnj/Makefile
 
@@ -21,6 +21,11 @@ BROKEN_ON_PLATFORM+=	SunOS-*-i386 SunOS-*-powerpc
 
 # there are 32-on-64 hacks for amd64 on linux and netbsd
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64 NetBSD-*-x86_64
+
+# On NetBSD/i386:
+# run.x86-netbsd: Cannot write-enable text segment: Permission denied
+# ./config/install.sh !!! Boot code failed, no heap image (sml.x86-bsd).
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
