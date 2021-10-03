@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5025 2021/10/03 12:42:43 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5026 2021/10/03 12:46:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7708,3 +7708,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/qt5ct to 1.5 [pin 2021-10-02]
 	Updated audio/termusic to 0.3.16 [pin 2021-10-02]
 	Updated textproc/py-markups to 3.1.2 [gutteridge 2021-10-03]
+	Updated devel/py-guppy3 to 3.1.1 [gutteridge 2021-10-03]
