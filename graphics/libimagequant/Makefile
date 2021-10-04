@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/10/01 09:00:36 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/10/04 12:05:58 hauke Exp $
 
 DISTNAME=	libimagequant-2.16.0
 CATEGORIES=	graphics
@@ -29,7 +29,9 @@ CONFIGURE_ARGS+=	--disable-sse
 .endif
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libimagequant.h ${DESTDIR}${PREFIX}/include/libimagequant.h
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libimagequant.la ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
+		${DESTDIR}${PREFIX}/include/libimagequant.h
+	${LIBTOOL} --mode=install --tag=CC ${INSTALL_LIB} \
+		${WRKSRC}/libimagequant.la ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
