@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5036 2021/10/04 09:01:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5037 2021/10/04 09:07:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7722,3 +7722,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/badwolf to 1.2.0 [pin 2021-10-04]
 	Updated biology/py-pydicom to 2.2.2 [adam 2021-10-04]
 	Updated finance/py-eth-account to 0.5.6 [adam 2021-10-04]
+	Updated net/haproxy to 2.4.6 [wiz 2021-10-04]
