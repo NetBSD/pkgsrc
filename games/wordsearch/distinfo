@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/04 21:49:21 gutteridge Exp $
+
+SHA1 (wordsearch-2.0.tar.gz) = 2df5453d9b740431beb30344e2461c2cafe0377a
+RMD160 (wordsearch-2.0.tar.gz) = 7fc95e1fd8732309972502a308c93096b3561e00
+SHA512 (wordsearch-2.0.tar.gz) = 160a186c693d96ebe13ee45def9b4a64b9f9b5b65fc41860e30c23b299188ad307e8a28124d5acebf431cb0fcda43900ecb8e93d39ea5b135dc68e77cc76b88c
+Size (wordsearch-2.0.tar.gz) = 12109 bytes
