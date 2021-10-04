@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile,v 1.4 2021/03/01 13:19:19 adam Exp $
+$NetBSD: patch-src_Makefile,v 1.5 2021/10/04 18:55:36 adam Exp $
 
 Add DESTDIR support.
 Fix NetBSD support.
 
---- src/Makefile.orig	2021-02-22 21:23:58.000000000 +0000
+--- src/Makefile.orig	2021-10-04 10:59:40.000000000 +0000
 +++ src/Makefile
-@@ -40,8 +40,8 @@ else
+@@ -45,8 +45,8 @@ else
  endif
  
  PREFIX?=/usr/local
@@ -16,7 +16,7 @@ Fix NetBSD support.
  PKG_CONFIG?=pkg-config
  
  # Default allocator defaults to Jemalloc if it's not an ARM
-@@ -152,6 +152,10 @@ ifeq ($(uname_S),NetBSD)
+@@ -151,6 +151,10 @@ ifeq ($(uname_S),NetBSD)
  	    FINAL_LIBS+= -lexecinfo
      	endif
  else
@@ -27,11 +27,11 @@ Fix NetBSD support.
  ifeq ($(uname_S),FreeBSD)
  	# FreeBSD
  	FINAL_LIBS+= -lpthread -lexecinfo
-@@ -187,6 +191,7 @@ endif
+@@ -186,6 +190,7 @@ endif
  endif
  endif
  endif
 +endif
- # Include paths to dependencies
- FINAL_CFLAGS+= -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -I../deps/hdr_histogram
  
+ ifdef OPENSSL_PREFIX
+ 	OPENSSL_CFLAGS=-I$(OPENSSL_PREFIX)/include
