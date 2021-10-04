@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2018/06/12 10:15:03 adam Exp $
+$NetBSD: patch-Makefile,v 1.6 2021/10/04 15:02:24 hauke Exp $
 
 Libtoolize.
 
@@ -18,7 +18,7 @@ Libtoolize.
  
  $(SHAREDOBJS):
 -	$(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
-+	${LIBTOOL} --mode=compile $(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
++	${LIBTOOL} --mode=compile --tag=CC $(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
  
 -libimagequant.so: $(SHAREDOBJS)
 -	$(CC) -shared -Wl,-soname,$(SHAREDLIBVER) -o $(SHAREDLIBVER) $^ $(LDFLAGS)
@@ -28,7 +28,7 @@ Libtoolize.
 -	$(CC) -shared -o $(SHAREDLIBVER) $^ $(LDFLAGS)
 -	ln -fs $(SHAREDLIBVER) $(SHAREDLIB)
 +$(SHAREDLIB): $(SHAREDOBJS)
-+	${LIBTOOL} --mode=link $(CC) -o $(SHAREDLIB) $^ $(LDFLAGS) \
++	${LIBTOOL} --mode=link --tag=CC $(CC) -o $(SHAREDLIB) $^ $(LDFLAGS) \
 +		-rpath ${PREFIX}/lib -version-info $(subst .,:,$(basename $(VERSION)))
  
  $(OBJS): $(wildcard *.h) config.mk
