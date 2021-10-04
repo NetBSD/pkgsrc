@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5035 2021/10/04 07:46:18 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5036 2021/10/04 09:01:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7720,3 +7720,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/prometheus to 2.30.2 [tnn 2021-10-03]
 	Updated textproc/split-thai to 2.9 [scole 2021-10-03]
 	Updated www/badwolf to 1.2.0 [pin 2021-10-04]
+	Updated biology/py-pydicom to 2.2.2 [adam 2021-10-04]
+	Updated finance/py-eth-account to 0.5.6 [adam 2021-10-04]
