@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/25 10:15:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/10/04 09:26:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tenacity/__init__.py
@@ -22,9 +23,6 @@ ${PYSITELIB}/tenacity/before.pyo
 ${PYSITELIB}/tenacity/before_sleep.py
 ${PYSITELIB}/tenacity/before_sleep.pyc
 ${PYSITELIB}/tenacity/before_sleep.pyo
-${PYSITELIB}/tenacity/compat.py
-${PYSITELIB}/tenacity/compat.pyc
-${PYSITELIB}/tenacity/compat.pyo
 ${PYSITELIB}/tenacity/nap.py
 ${PYSITELIB}/tenacity/nap.pyc
 ${PYSITELIB}/tenacity/nap.pyo
