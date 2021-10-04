@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5042 2021/10/04 18:59:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5043 2021/10/04 21:54:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7730,3 +7730,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/libreoffice to 7.2.1.2 [ryoon 2021-10-04]
 	Updated databases/redis to 6.2.6 [adam 2021-10-04]
 	Updated sysutils/py-cpuinfo to 8.0.0 [adam 2021-10-04]
+	Added games/wordsearch version 2.0 [gutteridge 2021-10-04]
