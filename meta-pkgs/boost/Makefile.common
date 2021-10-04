@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.92 2021/09/29 16:11:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.93 2021/10/04 07:13:19 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -37,7 +37,7 @@ DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
 USE_TOOLS+=		pax
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 
