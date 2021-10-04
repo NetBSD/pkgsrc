@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.27 2021/08/03 07:28:15 nia Exp $
+# $NetBSD: clang.mk,v 1.28 2021/10/04 14:21:21 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -57,9 +57,9 @@ _CTF_CFLAGS=		-gdwarf-2
 
 # The user can choose the level of RELRO.
 .if ${PKGSRC_USE_RELRO} == "partial"
-_RELRO_LDFLAGS=		-Wl,-z,relro
+_RELRO_LDFLAGS=		-Wl,-zrelro
 .else
-_RELRO_LDFLAGS=		-Wl,-z,relro -Wl,-z,now
+_RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
 .endif
 
 # The user can choose the level of stack smashing protection.
