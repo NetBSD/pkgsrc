@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/05/25 10:15:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/10/04 09:26:19 adam Exp $
 
-DISTNAME=	tenacity-7.0.0
+DISTNAME=	tenacity-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tenacity/}
