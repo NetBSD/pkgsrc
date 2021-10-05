@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5046 2021/10/05 18:35:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5047 2021/10/05 19:07:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7736,3 +7736,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/p5-Sys-Mmap version 0.20 [gdt 2021-10-05]
 	Updated www/py-django3 to 3.2.8 [adam 2021-10-05]
 	Updated www/py-django-cors-headers to 3.10.0 [adam 2021-10-05]
+	Added lang/python310 version 3.10.0 [adam 2021-10-05]
+	Added lang/py310-html-docs version 3.10.0 [adam 2021-10-05]
