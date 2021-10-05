@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.23 2021/02/24 19:13:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/10/05 19:25:41 adam Exp $
 include/openvpn-msg.h
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
 lib/openvpn/plugins/openvpn-plugin-down-root.la
+man/man5/openvpn-examples.5
 man/man8/openvpn.8
 sbin/openvpn
 share/doc/openvpn/COPYING
