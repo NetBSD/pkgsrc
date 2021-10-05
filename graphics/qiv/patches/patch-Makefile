@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2021/10/05 23:54:27 snj Exp $
+
+--- Makefile.orig	2021-10-05 16:42:59.959553303 -0700
++++ Makefile	2021-10-05 16:43:57.778103315 -0700
+@@ -116,7 +116,7 @@ DEFINES_G = $(DEFINES) -DDEBUG
+ all: $(PROGRAM)
+ 
+ $(PROGRAM): $(OBJS)
+-	$(CC) $(CFLAGS) $(DEFINES) $(OBJS) $(LIBS) -o $(PROGRAM)
++	$(CC) $(CFLAGS) $(DEFINES) $(OBJS) $(LIBS) $(LDFLAGS) -o $(PROGRAM)
+ 
+ $(OBJS): %.o: %.c $(HEADERS) Makefile
+ 	$(CC) -c $(CFLAGS) $(DEFINES) $(INCLUDES) $< -o $@
