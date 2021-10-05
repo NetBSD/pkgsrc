@@ -1,0 +1,7 @@
+This package contains a perl module to access mmap.
+
+The Sys::Mmap module uses the POSIX mmap call to map in a file as a
+Perl variable. Memory access by mmap may be shared between threads or
+forked processes, and may be a disc file that has been mapped into
+memory. Sys::Mmap depends on your operating system supporting UNIX or
+POSIX.1b mmap, of course.
