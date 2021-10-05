@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/05 12:57:48 gdt Exp $
+
+SHA1 (Sys-Mmap-0.20.tar.gz) = f3d7a0bfcf9100e68102dfedb9165dc3e3569c7b
+RMD160 (Sys-Mmap-0.20.tar.gz) = f490c8e0bd1ccab231639fa0da071bed078a9647
+SHA512 (Sys-Mmap-0.20.tar.gz) = 7afe9e1be26d75bbc818d3deb51e0ba751c2711f8503a77882d3d207b1c37e4867fe79e5757193ba058ed395ba955406d8af3f195ce5dff5b4b29748d9d86f5f
+Size (Sys-Mmap-0.20.tar.gz) = 17962 bytes
