@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21129 2021/10/04 09:07:23 wiz Exp $
+$NetBSD: TODO,v 1.21130 2021/10/05 07:56:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,6 +1185,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-sqlite3-2.4.0
 	o lua-std-normalize-2.0.3
 	o lua-web-sanitize-1.1.0
+	o lumina-1.6.1
 	o lzma-9.18
 	o mDNSResponder-1310.80.1
 	o mDNSResponder-nss-1310.80.1
@@ -1731,6 +1732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-z3-4.8.10
 	o py-z3solver-4.8.10.0
 	o py-zanata-python-client-1.5.3
+	o python-3.10.0
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
