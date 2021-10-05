@@ -1,4 +1,4 @@
-# $NetBSD: plist-python.awk,v 1.2 2015/12/05 17:12:13 adam Exp $
+# $NetBSD: plist-python.awk,v 1.3 2021/10/05 19:08:13 adam Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -45,7 +45,7 @@ BEGIN {
 /^[^@]/ && /[^\/]+\.py[co]$/ {
 	sub(/[^\/]+\.py[co]$/, "__pycache__/&")
 	sub(/\.py[co]$/, ".cpython-" PYVERS "&")
-	if (PYVERS ~ /^3[5-9]$/ && $0 ~ /\.pyo$/) {
+	if (PYVERS ~ /^3[0-9]+$/ && $0 ~ /\.pyo$/) {
 		sub(/\.pyo$/, ".opt-1.pyc")
 	}
 }
