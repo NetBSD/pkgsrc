@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3499 2021/10/01 19:53:00 adam Exp $
+# $NetBSD: Makefile,v 1.3500 2021/10/05 12:58:56 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -1844,6 +1844,7 @@ SUBDIR+=	p5-Sub-Quote
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Symbol-Global-Name
 SUBDIR+=	p5-Syntax-Keyword-Junction
+SUBDIR+=	p5-Sys-Mmap
 SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
 SUBDIR+=	p5-TAP-Formatter-HTML
