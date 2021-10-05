@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5045 2021/10/05 12:59:49 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5046 2021/10/05 18:35:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7734,3 +7734,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gnupg2 to 2.2.31 [adam 2021-10-05]
 	Updated databases/hiredis to 1.0.1 [adam 2021-10-05]
 	Added devel/p5-Sys-Mmap version 0.20 [gdt 2021-10-05]
+	Updated www/py-django3 to 3.2.8 [adam 2021-10-05]
+	Updated www/py-django-cors-headers to 3.10.0 [adam 2021-10-05]
