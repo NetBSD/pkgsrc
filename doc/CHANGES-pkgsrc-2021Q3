@@ -1,7 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.2 2021/10/03 17:56:53 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.3 2021/10/05 19:10:24 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
 Pullup ticket #6502 - requested by wiz
 graphics/libexif: security fix
+
+Pullup ticket #6501 - requested by bsiegert
+net/tigervnc: Bugfix for X11R7 fonts
 
