@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/10/01 08:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2021/10/05 06:56:48 wiz Exp $
 
 DISTNAME=	notmuch-0.33.2
 CATEGORIES=	mail
@@ -11,7 +11,7 @@ COMMENT=	Mail indexer
 LICENSE=	gnu-gpl-v3
 
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	bash gmake makeinfo pkg-config # perl:test
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
