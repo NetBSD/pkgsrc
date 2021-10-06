@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/05/30 21:29:10 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/06 07:48:51 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-octoprint-filecheck-2021.2.23
@@ -14,7 +14,7 @@ LICENSE=	gnu-agpl-v3
 
 EGG_NAME=	OctoPrint_FileCheck-2021.2.23
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

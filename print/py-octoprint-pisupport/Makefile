@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/05/30 21:20:20 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2021/10/06 07:48:51 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-octoprint-pisupport-2021.3.26.post2
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-PiSupport/
 COMMENT=	OctoPrint plugin providing information about your Pi in the UI
 LICENSE=	gnu-agpl-v3
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
