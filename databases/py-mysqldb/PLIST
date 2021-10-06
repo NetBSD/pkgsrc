@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/10/16 07:39:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/10/06 18:00:12 tron Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/MySQLdb/__init__.py
 ${PYSITELIB}/MySQLdb/__init__.pyc
 ${PYSITELIB}/MySQLdb/__init__.pyo
+${PYSITELIB}/MySQLdb/compat.py
 ${PYSITELIB}/MySQLdb/connections.py
 ${PYSITELIB}/MySQLdb/connections.pyc
 ${PYSITELIB}/MySQLdb/connections.pyo
