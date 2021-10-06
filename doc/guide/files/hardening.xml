@@ -1,4 +1,4 @@
-<!-- $NetBSD: hardening.xml,v 1.1 2021/10/01 17:20:27 nia Exp $ -->
+<!-- $NetBSD: hardening.xml,v 1.2 2021/10/06 06:11:17 nia Exp $ -->
 
 <appendix id="hardening">
 <title>Security hardening</title>
@@ -603,6 +603,12 @@ This check is now performed automatically (where supported) if
 
 <sect2 id="hardening.audit.ssp">
 <title>Checking for SSP</title>
+
+<note>
+Checking for SSP using this method only works where the operating system
+uses <literal>libssp</literal>. <literal>libssp</literal> is not used
+on recent NetBSD/FreeBSD/Linux versions.
+</note>
 
 <para>
 Building objects, binaries and libraries with SSP will affect the presence of
