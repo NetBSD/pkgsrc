@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2021/01/11 13:56:09 adam Exp $
+# $NetBSD: Makefile,v 1.17 2021/10/06 19:16:45 adam Exp $
 
-DISTNAME=	graphviz-0.16
+DISTNAME=	graphviz-0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphviz/}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/01/11 13:56:09 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/10/06 19:16:45 adam Exp $
 
-SHA1 (graphviz-0.16.zip) = 8e3a20d0748c378ffe0b5dc8eb56a030aecce086
-RMD160 (graphviz-0.16.zip) = 2ddb245a57ec5c7a7b439c5c416ee4b90b654e99
-SHA512 (graphviz-0.16.zip) = 7896901decf712657d4cb16fad58eab8492e1476e60a32b1a7fa37ede2e9c47ed31c00b7dedcaafdee291e2cfe6b2e2affa352282665782829fd3fb2f30bdf92
-Size (graphviz-0.16.zip) = 193031 bytes
+SHA1 (graphviz-0.17.zip) = c3e288bccb2417eca57a7be3a92aa37a13c3c8ca
+RMD160 (graphviz-0.17.zip) = 9eeaba6d35b0ea651e84a139a88559f110ee16c1
+SHA512 (graphviz-0.17.zip) = 02f5ef21f9e3bf3b609f43fe0d9cb51632ea43c878055746af62fda4dd55883f6ad58f69faecb6aba552100cc835901309c8c2ec833cd74c617619fce2d49600
+Size (graphviz-0.17.zip) = 193647 bytes
