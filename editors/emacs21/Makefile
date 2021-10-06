@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2021/05/24 19:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2021/10/06 15:33:03 nia Exp $
 
 PKGREVISION=	44
 CATEGORIES=	editors
@@ -6,6 +6,8 @@ CATEGORIES=	editors
 CONFLICTS+=	emacs21-nox11-[0-9]*
 
 USE_TOOLS+=	imake
+
+MKPIE_SUPPORTED=	no
 
 .include "options.mk"
 
