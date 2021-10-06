@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.5 2021/10/06 21:13:43 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.6 2021/10/06 21:59:47 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -13,4 +13,7 @@ print/ghostscript-agpl: Bugfix, undefined reference error during link
 
 Pullup ticket #6503 - requested by taca
 databases/redis: security fix
+
+Pullup ticket #6504 - requested by taca
+www/apache24: security fix
 
