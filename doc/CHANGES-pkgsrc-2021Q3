@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.4 2021/10/05 19:55:06 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.5 2021/10/06 21:13:43 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -10,4 +10,7 @@ net/tigervnc: Bugfix for X11R7 fonts
 
 Pullup ticket #6500 - requested by bsiegert
 print/ghostscript-agpl: Bugfix, undefined reference error during link
+
+Pullup ticket #6503 - requested by taca
+databases/redis: security fix
 
