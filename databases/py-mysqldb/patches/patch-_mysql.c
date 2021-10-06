@@ -1,19 +1,10 @@
-$NetBSD: patch-_mysql.c,v 1.1 2021/07/27 23:21:23 tron Exp $
+$NetBSD: patch-_mysql.c,v 1.2 2021/10/06 18:00:12 tron Exp $
 
 Use official MySQL API to fix build with latest version of MariaDB
 
---- _mysql.c.orig	2014-01-02 13:52:50.000000000 +0000
-+++ _mysql.c	2021-07-28 00:17:13.849678370 +0100
-@@ -40,8 +40,6 @@
- #include "structmember.h"
- #if defined(MS_WINDOWS)
- #include <config-win.h>
--#else
--#include "my_config.h"
- #endif
- #include "mysql.h"
- #include "mysqld_error.h"
-@@ -2002,7 +2000,11 @@
+--- _mysql.c.orig	2017-01-04 12:47:08.000000000 +0000
++++ _mysql.c	2021-10-06 18:21:05.978598645 +0100
+@@ -1908,7 +1908,11 @@
  	int r, reconnect = -1;
  	if (!PyArg_ParseTuple(args, "|I", &reconnect)) return NULL;
  	check_connection(self);
