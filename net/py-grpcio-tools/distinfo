@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2021/09/15 11:23:13 adam Exp $
+$NetBSD: distinfo,v 1.31 2021/10/06 10:58:30 adam Exp $
 
-SHA1 (grpcio-tools-1.40.0.tar.gz) = bec756a2eb632dcf46b6deb1a2f123f6215c7075
-RMD160 (grpcio-tools-1.40.0.tar.gz) = d17f40196e9742b1d3bd6356f1209c1ef6e06cac
-SHA512 (grpcio-tools-1.40.0.tar.gz) = 722db1b54bc4c897e5b6827c6829bfabdb7f2c56a437e893654236e77fb8d34cc0935c4060805c3dc2e19ac5504ca59198e3cc1d57973104cf469387a4f61701
-Size (grpcio-tools-1.40.0.tar.gz) = 2128757 bytes
+SHA1 (grpcio-tools-1.41.0.tar.gz) = 90ee6427a31aa87756117a47e93a22f21a80c38b
+RMD160 (grpcio-tools-1.41.0.tar.gz) = 46b943014bd18d341e516d6edece3ba10b85333b
+SHA512 (grpcio-tools-1.41.0.tar.gz) = 67b293fdbace63d3031372594d57a22194b6d257704279c12b227dabd8feb6de0acd5ba36f6296da7d82c8eac0ca4aa7cc3b12ea01ca9ffa0d15ed8181eb46ee
+Size (grpcio-tools-1.41.0.tar.gz) = 2172949 bytes
 SHA1 (patch-setup.py) = ecd08109c7d3173ccaa6d3b4428a66a9eac560f7
