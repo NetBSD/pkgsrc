@@ -9283,6 +9283,11 @@ set.
 
 B.3.4. Checking for SSP
 
+Note
+
+Checking for SSP using this method only works where the operating system uses
+libssp. libssp is not used on recent NetBSD/FreeBSD/Linux versions.
+
 Building objects, binaries and libraries with SSP will affect the presence of
 additional symbols in the resulting file:
 
