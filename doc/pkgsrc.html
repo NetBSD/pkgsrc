@@ -11414,6 +11414,14 @@ This check is now performed automatically (where supported) if
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="hardening.audit.ssp"></a>B.3.4. Checking for SSP</h3></div></div></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+Checking for SSP using this method only works where the operating system
+uses <code class="literal">libssp</code>. <code class="literal">libssp</code> is not used
+on recent NetBSD/FreeBSD/Linux versions.
+</p>
+</div>
 <p>
 Building objects, binaries and libraries with SSP will affect the presence of
 additional symbols in the resulting file:
