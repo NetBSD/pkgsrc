@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2021/09/15 11:23:13 adam Exp $
+$NetBSD: distinfo,v 1.35 2021/10/06 10:58:30 adam Exp $
 
-SHA1 (grpcio-1.40.0.tar.gz) = 6a01b9ad785b419f01bc551848dee9b3a333bd87
-RMD160 (grpcio-1.40.0.tar.gz) = d7551adad5777a3fa163b9f40121695d264b12a5
-SHA512 (grpcio-1.40.0.tar.gz) = a912ae923392362befeaa0f0e4b2f3ff3a71f2439cce6d6221a7d63e23dc759346c0064c6b44ea5407dbbaec629183844583d20040310dcc08fb3cd658191cf3
-Size (grpcio-1.40.0.tar.gz) = 21275735 bytes
+SHA1 (grpcio-1.41.0.tar.gz) = 1b80144101621a7ef89f8e1127a634e2c72aabba
+RMD160 (grpcio-1.41.0.tar.gz) = e0108bb608e88d5b1a1a3c381f9ce44db92e8880
+SHA512 (grpcio-1.41.0.tar.gz) = 714c1da865864df994540ccc48e73e709f63ceb8617119e67b463f647783d65222b8ef760e2ac1ebaab0fe43442382c2859d796c8a30d6e1eaf511b7dac515a7
+Size (grpcio-1.41.0.tar.gz) = 21214188 bytes
 SHA1 (patch-setup.py) = c3135fbac1d69942eca57a5fccaf805c8a6cff23
 SHA1 (patch-src_core_lib_iomgr_port.h) = 8f088cbf22110c03a684c24c9e17ef5fc64e925a
