@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.28 2021/10/06 10:20:24 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.29 2021/10/06 10:25:32 jperkin Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -27,6 +27,7 @@ CHECK_SSP_SUPPORTED=	no
 
 USE_TOOLS+=		bsdtar
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
+CARGO_WRKSRC?=		${WRKSRC}
 
 DISTFILES?=			${DEFAULT_DISTFILES}
 .for crate in ${CARGO_CRATE_DEPENDS}
@@ -46,8 +47,8 @@ post-extract: cargo-vendor-crates
 .PHONY: cargo-vendor-crates
 cargo-vendor-crates:
 	@${STEP_MSG} "Extracting local cargo crates"
-	${RUN}${MKDIR} ${WRKSRC}/.cargo
-	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${WRKSRC}/.cargo/config
+	${RUN}${MKDIR} ${CARGO_WRKSRC}/.cargo
+	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${CARGO_WRKSRC}/.cargo/config
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
@@ -66,7 +67,7 @@ print-cargo-depends:
 		/^version = / { split($$3, a, "\""); vers=a[2]; }	\
 		/^source = / {						\
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers;	\
-			}' ${WRKSRC}/Cargo.lock
+			}' ${CARGO_WRKSRC}/Cargo.lock
 
 DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
 			  ${CARGO_NO_DEFAULT_FEATURES:M[yY][eE][sS]:C/[yY][eE][sS]/--no-default-features/}	\
@@ -82,4 +83,4 @@ do-build: do-cargo-build
 
 .PHONY: do-cargo-build
 do-cargo-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
+	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
