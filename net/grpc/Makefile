@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2021/09/15 11:23:13 adam Exp $
+# $NetBSD: Makefile,v 1.47 2021/10/06 10:58:30 adam Exp $
 
-DISTNAME=	grpc-1.40.0
+DISTNAME=	grpc-1.41.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +13,9 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++11
 USE_TOOLS+=	pkg-config
+
+# For Darwin
+#MAKE_ENV+=	DYLD_LIBRARY_PATH=${PREFIX}/lib
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 # use cmake's find_package() to locate a pre-installed dependency
