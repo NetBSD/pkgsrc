@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.19 2021/07/04 08:56:47 nia Exp $
+# $NetBSD: NEWS,v 1.20 2021/10/06 05:49:55 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,32 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Default Python version changed to 3.9 [nia 2021-10-01]
+
+Increased enabled-by-default hardening options [nia 2021-09-27]
+
+	PKGSRC_USE_MKPIE was enabled on some architectures.
+	Packages that provide static libraries to other packages
+	should be rebuilt with MKPIE enabled.
+	Some packages may experience runtime errors on platforms
+	like i386 - usually this is due to unsafe assembly code,
+	which should be disabled when MKPIE is enabled.
+
+	PKGSRC_USE_RELRO was enabled on some architectures.
+	This should not affect the majority of packages that properly
+	honor CFLAGS/LDFLAGS when building.  Packages experiencing
+	problems loading dynamic ELF plugins at runtime should have
+	RELRO disabled.
+
+	PKGSRC_USE_SSP was bumped from "yes" to "strong".  This
+	is not expected to have a noticable effect.
+
+	More information:
+	https://www.NetBSD.org/docs/pkgsrc/hardening.html
+	(or see "Security hardening" section of doc/pkgsrc.txt)
+
+Default MySQL implementation changed to MariaDB 10.6 [nia 2021-09-27]
 
 Default PostgreSQL changed to 13 [nia 2021-06-28]
 
