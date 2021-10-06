@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/07/11 04:08:06 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/10/06 14:48:29 nia Exp $
 
 SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
 RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
@@ -16,7 +16,7 @@ SHA1 (patch-Source_FreeImage_PluginJ2K.cpp) = bbc44884aba8be3af2aa824da5cf788d91
 SHA1 (patch-Source_FreeImage_PluginJP2.cpp) = 9a6d27e039b2050004a2d331389bdfa32dffe681
 SHA1 (patch-Source_FreeImage_PluginJPEG.cpp) = 9ed3ce6d70871c9657a69daa4f68ae8423e100a2
 SHA1 (patch-Source_FreeImage_PluginPNG.cpp) = 0d9c71856a9355f56c3e9a571a414098d8af2e88
-SHA1 (patch-Source_FreeImage_PluginRAW.cpp) = 1d67ad2b634e2a5b1fa82be240a4d6edfad7c05d
+SHA1 (patch-Source_FreeImage_PluginRAW.cpp) = 0aad009320f3da38272e17f65576400d97c4d4f5
 SHA1 (patch-Source_FreeImage_PluginTIFF.cpp) = bfa869452929f62162c15982b58013b0d43e9f8e
 SHA1 (patch-Source_FreeImage_PluginWebP.cpp) = d7b57cfcb1379c6a849edb219c8a59edae83ff5c
 SHA1 (patch-Source_FreeImage_ZLibInterface.cpp) = 73211e8ecefb7972f1fcb579dc4a17409c81c480
