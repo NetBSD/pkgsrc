@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5052 2021/10/06 11:08:00 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5053 2021/10/06 18:01:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7749,3 +7749,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-tools to 1.41.0 [adam 2021-10-06]
 	Updated devel/py-greenlet to 1.1.2 [adam 2021-10-06]
 	Updated devel/py-flexmock to 0.10.10 [adam 2021-10-06]
+	Updated databases/py-mysqldb to 1.3.10 [tron 2021-10-06]
