@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2014/01/23 15:14:30 wiz Exp $
+# $NetBSD: hacks.mk,v 1.3 2021/10/06 21:10:24 adam Exp $
 
 .if !defined(OPENCV_HACKS_MK)
 OPENCV_HACKS_MK=	defined
@@ -12,7 +12,7 @@ PKG_HACKS+=		tree-pre
 SUBST_CLASSES+=		opt-hack
 SUBST_STAGE.opt-hack=	post-configure
 SUBST_MESSAGE.opt-hack=	Working around gcc-4.5.4 bug.
-SUBST_FILES.opt-hack=	${WRKSRC}/modules/calib3d/CMakeFiles/opencv_calib3d.dir/build.make
+SUBST_FILES.opt-hack=	modules/calib3d/CMakeFiles/opencv_calib3d.dir/build.make
 SUBST_SED.opt-hack=	-e '/stereosgbm.cpp.o/s/-o /-fno-tree-pre -o /'
 .endif
 
