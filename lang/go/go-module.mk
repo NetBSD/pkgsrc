@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.6 2020/11/03 18:44:13 tnn Exp $
+# $NetBSD: go-module.mk,v 1.7 2021/10/06 10:30:22 jperkin Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -15,6 +15,11 @@
 #	List of dependency files to be downloaded from the Go module proxy.
 #	Can be filled out from the output of "make show-go-modules".
 #
+# GO_EXTRA_MOD_DIRS (optional)
+#
+# 	List of additional directories in which to look for go.mod files for
+# 	the show-go-modules target.
+#
 # Keywords: go golang
 #
 
@@ -27,6 +32,7 @@
 .include "../../lang/go/version.mk"
 
 GO_BUILD_PATTERN?=	...
+GO_EXTRA_MOD_DIRS?=
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin
@@ -56,6 +62,9 @@ do-install:
 .PHONY: show-go-modules
 show-go-modules: ${WRKDIR}/.extract_done
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} GOPROXY= ${GO} mod download -x
+.for dir in ${GO_EXTRA_MOD_DIRS}
+	${RUN} cd ${dir} && ${PKGSRC_SETENV} ${MAKE_ENV} GOPROXY= ${GO} mod download -x
+.endfor
 	${RUN} ${PRINTF} '# $$%s$$\n\n' NetBSD
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -a \( -name "*.mod" -o -name "*.zip" \) | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/' | ${SORT}
 
@@ -75,7 +84,7 @@ pre-clean:
 	${RUN} [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || true
 
 _VARGROUPS+=		go
-_PKG_VARS.go=		GO_BUILD_PATTERN
+_PKG_VARS.go=		GO_BUILD_PATTERN GO_MODULE_FILES GO_EXTRA_MOD_DIRS
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
 			GOOPT GOTOOLDIR GO_PLATFORM
