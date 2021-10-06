@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/03/22 08:56:56 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2021/10/06 09:07:00 jperkin Exp $
 
 DISTNAME=	Scrapy-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
