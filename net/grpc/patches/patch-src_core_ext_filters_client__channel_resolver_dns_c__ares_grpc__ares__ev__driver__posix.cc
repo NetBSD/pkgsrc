@@ -1,11 +1,11 @@
-$NetBSD: patch-src_core_ext_filters_client__channel_resolver_dns_c__ares_grpc__ares__ev__driver__posix.cc,v 1.3 2020/08/07 06:45:57 adam Exp $
+$NetBSD: patch-src_core_ext_filters_client__channel_resolver_dns_c__ares_grpc__ares__ev__driver__posix.cc,v 1.4 2021/10/06 10:58:30 adam Exp $
 
 Add SunOS support.
 
---- src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.orig	2020-08-04 20:02:23.000000000 +0000
+--- src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.orig	2021-09-25 02:33:41.000000000 +0000
 +++ src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc
-@@ -23,6 +23,11 @@
- #include <ares.h>
+@@ -22,6 +22,11 @@
+ 
  #include <string.h>
  #include <sys/ioctl.h>
 +#ifdef __sun
@@ -14,5 +14,5 @@ Add SunOS support.
 +#include <stropts.h>
 +#endif
  
- #include "absl/strings/str_cat.h"
+ #include <ares.h>
  
