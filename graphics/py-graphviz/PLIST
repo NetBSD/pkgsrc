@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/17 13:05:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/10/06 19:16:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/graphviz/__init__.py
 ${PYSITELIB}/graphviz/__init__.pyc
 ${PYSITELIB}/graphviz/__init__.pyo
-${PYSITELIB}/graphviz/_compat.py
-${PYSITELIB}/graphviz/_compat.pyc
-${PYSITELIB}/graphviz/_compat.pyo
 ${PYSITELIB}/graphviz/backend.py
 ${PYSITELIB}/graphviz/backend.pyc
 ${PYSITELIB}/graphviz/backend.pyo
