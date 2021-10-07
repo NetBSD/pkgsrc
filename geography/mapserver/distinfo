@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/09/26 12:21:57 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:09:27 nia Exp $
 
-SHA1 (mapserver-5.6.8.tar.gz) = 44b813f888c8c950f5e2ba20ae4d7ef08d002bc4
 RMD160 (mapserver-5.6.8.tar.gz) = dd00c7e6ed57b3522f47a7fede8299bd8ef12566
 SHA512 (mapserver-5.6.8.tar.gz) = 33eb64be8420b04eb6017d0a96da11aa401c6aab670fa9dad59879d5da45b512205896cd1ce42fba5a0b0c7bc68a9cf774a0ce5b639177c8e29b43c66bb03a41
 Size (mapserver-5.6.8.tar.gz) = 2332277 bytes

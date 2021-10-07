@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/06/21 11:45:58 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:09:31 nia Exp $
 
-SHA1 (tex-pst-geo-44131/pst-geo.doc.tar.xz) = b4086cec4f76c6f4c84f229bb041df6ed03a56d5
 RMD160 (tex-pst-geo-44131/pst-geo.doc.tar.xz) = de823e9cd1a199cac66a652e6e353af2351960ca
 SHA512 (tex-pst-geo-44131/pst-geo.doc.tar.xz) = 6eb75a57af14ed69cc1a85c5abb7578e61d9e6e6d4812eb87f9f8e47f28a19246cd5b7b8731f3842db0e618e3f256cbe49b12e25e46ca2bc4aa865e84a8d85a7
 Size (tex-pst-geo-44131/pst-geo.doc.tar.xz) = 117835236 bytes

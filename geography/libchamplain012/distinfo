@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/03/11 10:48:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:09:26 nia Exp $
 
-SHA1 (libchamplain-0.12.20.tar.xz) = dbba5d51847fbc91136dcf19cf63b71a6c3fd271
 RMD160 (libchamplain-0.12.20.tar.xz) = 32492f660a672d3cb08228415d416cd75d8998cc
 SHA512 (libchamplain-0.12.20.tar.xz) = 514e4bd2803ace0d87a95a318a03bc2f2ccc454129146d76590d1b1f5666c95a4fb7013e2ad0cfafc5844d7d8b732c81a44cd0e7d51c505adcfe55c55abb4f6f
 Size (libchamplain-0.12.20.tar.xz) = 222168 bytes

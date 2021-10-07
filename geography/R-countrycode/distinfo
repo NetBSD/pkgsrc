@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/09/20 04:11:53 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:09:20 nia Exp $
 
-SHA1 (R/countrycode_1.3.0.tar.gz) = 64e8a53ee361ec8cab28b7fda7bfc6d7a6a64cdf
 RMD160 (R/countrycode_1.3.0.tar.gz) = cf38a8226abcccc7ab9c8f08b698fd9b842eefb0
 SHA512 (R/countrycode_1.3.0.tar.gz) = 026048e5add8ab987298fe2db082b214c42cd7dc1edc18ad7fc0fd9827ae48cbce25991b687fe50f2d7b380a47a68c15ffe22e71f68ce7a85b7efdfd21e97e73
 Size (R/countrycode_1.3.0.tar.gz) = 504013 bytes
