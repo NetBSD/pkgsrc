@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/05/21 08:42:00 plunky Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:32:19 nia Exp $
 
-SHA1 (SFML-2.5.1-sources.zip) = a2d9d8ceed52bcff27d11f21e814b51ba19cd116
 RMD160 (SFML-2.5.1-sources.zip) = 3b137887696a223f0c3576b16bae9f0e3535f16f
 SHA512 (SFML-2.5.1-sources.zip) = 75b4f3076d817388b78aa060fba6a4c67b2cde3393ec6d9dc66052d9770636572e9bfcd6b63fcb5dc7888e00cda2161cd84b55e07d463159da52ac1142d8d1af
 Size (SFML-2.5.1-sources.zip) = 23283095 bytes

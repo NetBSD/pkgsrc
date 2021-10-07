@@ -1,34 +1,26 @@
-$NetBSD: distinfo,v 1.12 2021/01/12 12:00:43 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:32:08 nia Exp $
 
-SHA1 (handbrake/HandBrake-1.3.3-source.tar.bz2) = efde8bb8cbb455e92f8bafd0f092db81c4b5827b
 RMD160 (handbrake/HandBrake-1.3.3-source.tar.bz2) = 2f46ff02efd56818905b3438c2f5c14da3334bb8
 SHA512 (handbrake/HandBrake-1.3.3-source.tar.bz2) = a4cca4e45d39eb3d43441abe832e2b8398694917981fa994075e475b68297cae28039e3c75d06442194262a881b9e416e5ebd73d10f86214b95f54c35fd3088c
 Size (handbrake/HandBrake-1.3.3-source.tar.bz2) = 16804119 bytes
-SHA1 (handbrake/dav1d-0.5.1.tar.bz2) = 03f6b1ceeb543caf783c6bb2c17e9790802277c8
 RMD160 (handbrake/dav1d-0.5.1.tar.bz2) = 2193f5f242573b1cc52afb7b6b1558aae019211e
 SHA512 (handbrake/dav1d-0.5.1.tar.bz2) = 2d1e7888fa9c138903b4209647e907803d2444fc2afb219b9a45dcc4c75098128b299950750bd68970004ea413ad88933d4d651a3e4e0e1557506598a15cee3b
 Size (handbrake/dav1d-0.5.1.tar.bz2) = 548584 bytes
-SHA1 (handbrake/ffmpeg-4.2.3.tar.bz2) = 7be5114d169e5a1ba73ad1e844e7fb4d0fb93cc6
 RMD160 (handbrake/ffmpeg-4.2.3.tar.bz2) = e1ec845296241c2a60d6e8847eba67eb71a3a3de
 SHA512 (handbrake/ffmpeg-4.2.3.tar.bz2) = ca9b0c8df41783689d80e9d0a43acef8b457fb4003ff4173a7b0898cefabc76efc24257e8990ab2559a3e409c9a1a66f90343a421579a85fe7398b1a898b60b5
 Size (handbrake/ffmpeg-4.2.3.tar.bz2) = 10957405 bytes
-SHA1 (handbrake/libbluray-1.1.2.tar.bz2) = 3885c0d0bd0f04a3a372ceec3a01a44a7624f272
 RMD160 (handbrake/libbluray-1.1.2.tar.bz2) = bbfea1093f9fc5ea089cf5860e55e020b916a4b0
 SHA512 (handbrake/libbluray-1.1.2.tar.bz2) = 5a82af6c1840a1dcb31d06d90203c68e2c4f0bbadc9212eb0bb2776d42b0ab3793a769ebe07b3051be151e8b15876874d5a0658292f72b7126dd915a1ada3fe7
 Size (handbrake/libbluray-1.1.2.tar.bz2) = 745779 bytes
-SHA1 (handbrake/libdvdnav-6.0.1.tar.bz2) = 258b82156e13803f2b0dbaec74e15475b4341d2f
 RMD160 (handbrake/libdvdnav-6.0.1.tar.bz2) = b546e77983eee3b0c842aa98f77c131d96132714
 SHA512 (handbrake/libdvdnav-6.0.1.tar.bz2) = 83a015821dacea702eb34abb7a940b9a263918a66fe711fe9a817754f25c2aa0afae3543b4d93673d1c93d3e7914e1b776c10ce50465516f4e3a3d419c15ad9f
 Size (handbrake/libdvdnav-6.0.1.tar.bz2) = 378491 bytes
-SHA1 (handbrake/libdvdread-6.0.2.tar.bz2) = a3d4b85cbe52b11cff7587ed010fa38ce512fd95
 RMD160 (handbrake/libdvdread-6.0.2.tar.bz2) = 811f3199acabd487edce8741060e6499b53deb68
 SHA512 (handbrake/libdvdread-6.0.2.tar.bz2) = e8831a67bbf1a144e9298b59e5462889c8b0197592a3c169523b5d84d9b9c1aaa719ccde2aa98c490e04f2a94c3fa7244b286e8faed674ae8c70400a0ece9c6c
 Size (handbrake/libdvdread-6.0.2.tar.bz2) = 405298 bytes
-SHA1 (handbrake/meson-0.55.0.tar.gz) = 266c35ad4ea0b526e3437500b99a0745adf82d92
 RMD160 (handbrake/meson-0.55.0.tar.gz) = 59db72dded4bf8dfb53dd5eb00d229e377a2ae80
 SHA512 (handbrake/meson-0.55.0.tar.gz) = bf2a5bab19deb433e363bf569527dbd1a9e8c0f77482aa077abbaa480dadc396e43148957473a31ecd9d3965578d2f7b7dc8808839c619ae2c0d419aed72d4e2
 Size (handbrake/meson-0.55.0.tar.gz) = 1742882 bytes
-SHA1 (handbrake/x265_3.2.1.tar.gz) = 0bd4889ff3ad596372ce2338f2d896947a2eec53
 RMD160 (handbrake/x265_3.2.1.tar.gz) = 7386c00a49a2fc143cd3c8cea657872235a8ba77
 SHA512 (handbrake/x265_3.2.1.tar.gz) = 5cb29b9d4475c1f686f6e31e47ccddde3db1639d5dcf9c058513389a9fdeb35a83b14e30e59498a76dec74bb0b410b6d8f5b1b45d18927be9811bb6a40d8d568
 Size (handbrake/x265_3.2.1.tar.gz) = 1426255 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2019/11/26 14:15:22 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:32:03 nia Exp $
 
-SHA1 (DVDStyler-3.1.tar.bz2) = eddae0b413c451f23a55d68b5799d893ed7bcd00
 RMD160 (DVDStyler-3.1.tar.bz2) = 765b21bf2544b4dba739982e91945557ed568613
 SHA512 (DVDStyler-3.1.tar.bz2) = 3cae65480eba490bc945d9862f1c86f32fb01e14c6e773b0c707ad3257f84eb56d155bcde84c84729c6cd038e02355b679d7a4fd9db448ccb02e6a96fb6e123c
 Size (DVDStyler-3.1.tar.bz2) = 8990074 bytes
