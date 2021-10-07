@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/10/07 11:48:48 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/10/07 15:54:23 pin Exp $
 
 DISTNAME=	nushell-0.38.0
 CATEGORIES=	shells
@@ -8,10 +8,6 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
-
-# sys-info crate doesn't currently build on 32bit cpus
-# see, https://github.com/FillZpp/sys-info-rs/issues/80
-ONLY_FOR_PLATFORM=	*-*-x86_64
 
 .include "cargo-depends.mk"
 
