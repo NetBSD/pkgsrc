@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/06/15 11:50:34 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:47:45 nia Exp $
 
-SHA1 (Padre-1.00.tar.gz) = cc1e2527fd2952967471800f4a11608281d48573
 RMD160 (Padre-1.00.tar.gz) = 88858fcd8b99fdbad0cb6de90c26872582674028
 SHA512 (Padre-1.00.tar.gz) = 8a2630eb54944b85ec77eaf90595fe6bb482b88ae87622b9e54973fbc1cc5f7ccf83d7b2481a9a66886310db9678569d23b18de033f7759db71ac73fd3151856
 Size (Padre-1.00.tar.gz) = 1969274 bytes

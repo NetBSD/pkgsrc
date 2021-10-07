@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.73 2020/06/21 03:54:53 mef Exp $
+$NetBSD: distinfo,v 1.74 2021/10/07 13:47:35 nia Exp $
 
-SHA1 (TeXmacs-1.99.13-src.tar.gz) = b95da965a047e82461f39e8641189ddf388453cb
 RMD160 (TeXmacs-1.99.13-src.tar.gz) = 5b3ef92a19929ffacd4ecbd358e4b839d124202f
 SHA512 (TeXmacs-1.99.13-src.tar.gz) = 26d178d3c5cad48746c27788948b06f29aedb814beb860b4517e143d1daa5c9cb8e61b728fac1b7dea93e1ae09d5e5294d623b33c14937016118ff511f697eb6
 Size (TeXmacs-1.99.13-src.tar.gz) = 37181886 bytes

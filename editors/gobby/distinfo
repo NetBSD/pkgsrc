@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:32:16 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:47:40 nia Exp $
 
-SHA1 (gobby-0.4.12.tar.gz) = 55d23f6ca51c1f2929218f6877f2c580a3b2c34e
 RMD160 (gobby-0.4.12.tar.gz) = fca36ca997e2f5fdd6062e135ea35f0adae6d965
 SHA512 (gobby-0.4.12.tar.gz) = cd8280aeaf792f08a5b8bc96dd64a746dfc752e9cefff46d982bfea8be1f9f8a98bacadd3f1adaf88b437df99d217a46dfdd99e97581e36c92f04362e7c9fbc6
 Size (gobby-0.4.12.tar.gz) = 464464 bytes

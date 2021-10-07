@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2017/04/04 07:53:23 fhajny Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 13:47:44 nia Exp $
 
-SHA1 (nvi-1.81.6.tar.bz2) = d3445ed69166102735335a2ff60d092d9a9143c6
 RMD160 (nvi-1.81.6.tar.bz2) = 0db8568bea96392d9a027044177c60317c8ade36
 SHA512 (nvi-1.81.6.tar.bz2) = 7e203f7ea6723427d18ff55361254991f50d395f89aab2ea52d0902c474acb24c289da7c35d9e907d652145f13483d8a8270f5c8ee72bd723a3b1eaeecc4f9fd
 Size (nvi-1.81.6.tar.bz2) = 1758309 bytes

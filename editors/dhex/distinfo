@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/03/23 19:45:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:47:37 nia Exp $
 
-SHA1 (dhex_0.69.tar.gz) = f18020a8fd59839eb735bc8bba2624c9a8a7ae5c
 RMD160 (dhex_0.69.tar.gz) = e963140362f661bb415ae0519dcd62192ab4fa70
 SHA512 (dhex_0.69.tar.gz) = 76115fd6b67bf1f61af6acfbc4dac9ac54c14aeb291de6a190aa1ffa599cf8b3e40a422ed34c237cf1f5c7406b07e38e38fb1c9c9dd36ce93d05265238060ba0
 Size (dhex_0.69.tar.gz) = 57362 bytes

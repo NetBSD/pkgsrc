@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/09/27 20:50:32 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:47:46 nia Exp $
 
-SHA1 (Padre-Plugin-HG-0.17.tar.gz) = 2710a1711718de0181bb4c16b960ea0c0fcc817a
 RMD160 (Padre-Plugin-HG-0.17.tar.gz) = 2f6f8e4ef8c3256d983865764052cff28d04f413
 SHA512 (Padre-Plugin-HG-0.17.tar.gz) = 72d8685a340b55e0aa90f5ed1018ddd7b559a872ce94491f6ea3683593e499c8e4a9426c78b736f22dd0fb7043ff7e083ac1c5271f0acc98c43b49a4ea89f053
 Size (Padre-Plugin-HG-0.17.tar.gz) = 14109 bytes
