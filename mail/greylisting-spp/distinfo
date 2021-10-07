@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/12/14 07:19:39 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:20 nia Exp $
 
-SHA1 (greylisting-spp-1.1.tar.gz) = 648cfcb135619635e38a84c4c7316cba35d929e5
 RMD160 (greylisting-spp-1.1.tar.gz) = 91b2a46130070a92913c7e399004d86ad524a940
 SHA512 (greylisting-spp-1.1.tar.gz) = 7797c98243283f7ef8985df7f0525502f14b871f5d32303d4a55d4b8471443fe6687a4565f51a0f3b5bbd84c2ff516602a6064f2287161ca09fe026d0f479c59
 Size (greylisting-spp-1.1.tar.gz) = 33254 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/07/07 08:21:33 wen Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:25:37 nia Exp $
 
-SHA1 (User-Identity-1.00.tar.gz) = 8ce1fbc5fb54aee7e87c4176df1fc3a2b74b27cc
 RMD160 (User-Identity-1.00.tar.gz) = 23acb11ef147ef74c1a8410576f35df06b17f4c5
 SHA512 (User-Identity-1.00.tar.gz) = b39315050aed9064f606d6fb167e42fb55bd411f1573215b544c9f2833c0d39f12700a4fec701317e31d614c55825f250b0b5ce7b3355fb63bc953d07d8fc744
 Size (User-Identity-1.00.tar.gz) = 28871 bytes

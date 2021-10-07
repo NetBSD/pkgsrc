@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2018/10/13 14:38:54 schmonz Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:25:29 nia Exp $
 
-SHA1 (nullmailer-2.2.tar.gz) = c19202fbd8b348b9e0fe9664d538fe35e1dcc9c0
 RMD160 (nullmailer-2.2.tar.gz) = e50701d5477c57136282ecc87618165057ec76a4
 SHA512 (nullmailer-2.2.tar.gz) = 21b29d59f3c386c13ce4541ae11dc5cd69f842085479d7fc9a69a540abc608ce5c1825f06bd3566536b392931f7eeb1b2d35addd816849e6f431877bb18c8268
 Size (nullmailer-2.2.tar.gz) = 257740 bytes

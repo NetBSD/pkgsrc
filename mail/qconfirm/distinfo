@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/09 18:23:15 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:25:41 nia Exp $
 
-SHA1 (qconfirm-0.14.3.tar.gz) = c19f1335aa71f8423551a12e4efa9ac151adedd9
 RMD160 (qconfirm-0.14.3.tar.gz) = 221172ab6ee7586d642299a85712850dda14ddfc
 SHA512 (qconfirm-0.14.3.tar.gz) = a4b018927ac58244e7780e9e741947202d7ed14a56e3593844eeb682e7695a69cd7310171ea9f9a15bd693b8145ce7736b7d800e6eecfae981a848cf22707016
 Size (qconfirm-0.14.3.tar.gz) = 99317 bytes

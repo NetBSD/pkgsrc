@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/02/03 14:09:27 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:25:19 nia Exp $
 
-SHA1 (fml-7.99.1.tar.gz) = fb3579913f5f18a7e1316d31138db909f51b65e7
 RMD160 (fml-7.99.1.tar.gz) = e520b0658b5edd2b6fa8cb4f6bd47498ebf61425
 SHA512 (fml-7.99.1.tar.gz) = 1f76d07f62314a21ba05ecb14721e3aa99ae65567a5eff3ca83f4d839a4e52775f9f893ee0454ae43fe3a3d9b92854caa74968f0b660abca6c78d73d509c2217
 Size (fml-7.99.1.tar.gz) = 6930569 bytes
