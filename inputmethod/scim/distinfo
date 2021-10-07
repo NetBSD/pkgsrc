@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/01/11 23:49:28 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:19:46 nia Exp $
 
-SHA1 (scim-1.4.17.tar.gz) = fd5a1078cb6c8d67f8bbf79969b8c5db033a0cda
 RMD160 (scim-1.4.17.tar.gz) = e46cbd5e883a282cc8fc4491a0f62cba149e7870
 SHA512 (scim-1.4.17.tar.gz) = a7e0696330bca6fdf929ec0565ab4af1b4d0e5f73592cf5cccf1af6412eb351cd5a5ec9a3e5b83b24d6abad89bbb38a375cbbb0fd978f2fa17f6d64b69da0e3a
 Size (scim-1.4.17.tar.gz) = 1285383 bytes
