@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/10/08 21:43:00 mcf Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:12 nia Exp $
 
-SHA1 (Linux-Inotify2-2.2.tar.gz) = 7d5802197dd167aaca1bbe468befe6c52b405d0f
 RMD160 (Linux-Inotify2-2.2.tar.gz) = 923cac8fa99adb4f856386334749784825c5aec9
 SHA512 (Linux-Inotify2-2.2.tar.gz) = 2c9d7c0489f65821783d448c304d320490490cf955456e9e9e80b92927e12cb0f7cfc66034a85d7b3d440602910b7db1ec4afe54d4e802815435c1bdbf81bac3
 Size (Linux-Inotify2-2.2.tar.gz) = 10272 bytes

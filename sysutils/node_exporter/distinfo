@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/09/30 13:14:16 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:58:08 nia Exp $
 
-SHA1 (node_exporter-1.0.1.tar.gz) = a74afa37e7b7ef55904f018954bef04678a2c6cf
 RMD160 (node_exporter-1.0.1.tar.gz) = c1bf34bc93f44db6fefc47a0fac86cd03de5b049
 SHA512 (node_exporter-1.0.1.tar.gz) = 0643042a04494a65d1ebdedf78671a1e3473b7ac6f3bc606fa2c52e893dfc68b591ef7e38ac6768c4c529c25b831811c01839475a4fde9baeb0a6c581a57839f
 Size (node_exporter-1.0.1.tar.gz) = 2792033 bytes

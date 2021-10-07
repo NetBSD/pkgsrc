@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/03/18 13:54:23 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:57:46 nia Exp $
 
-SHA1 (dvdisaster-0.79.5.tar.bz2) = 23ccf697031280adb5bc3e17a0d5def0421fc28d
 RMD160 (dvdisaster-0.79.5.tar.bz2) = fda87eea610a7882bb01416e4b5452a1b4c2e16d
 SHA512 (dvdisaster-0.79.5.tar.bz2) = 8630d4389983307afc3faa5b4256f531ded370f84ec35d4a363853dc7d79e5e15ee0b81bf64f4b88f57fe6176537df8195f83acf23e770d991c700b7408dd1f5
 Size (dvdisaster-0.79.5.tar.bz2) = 8224726 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/04 21:14:15 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:58:17 nia Exp $
 
-SHA1 (podman-3.3.1.tar.gz) = 658cf4a69ffe329a6c342dc209f4951738acc3b7
 RMD160 (podman-3.3.1.tar.gz) = 1e12b82c57db1c9b1af9bee15cd2eb61a8ffe700
 SHA512 (podman-3.3.1.tar.gz) = 19003f63c17c1c5788f34d0d6426a366035fc76aa2312e6355464d204d6536e5f78652abaf01643d4be7c2ee5224c25717b41760a4be4f6de8031cca9b06efaa
 Size (podman-3.3.1.tar.gz) = 10917305 bytes

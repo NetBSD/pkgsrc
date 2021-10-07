@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/02/04 11:41:38 bouyer Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:58:39 nia Exp $
 
-SHA1 (xen411/xen-4.11.4.tar.gz) = 6c8cdf441621c14dc5345196b48df6982c060c4f
 RMD160 (xen411/xen-4.11.4.tar.gz) = 49819fcd1de3985d4dea370be962548c862f2933
 SHA512 (xen411/xen-4.11.4.tar.gz) = 8383f0b369fa08c8ecfdd68f902a2aaad140146a183131c50c020fe04c2f1e829c219b9bd9923fa8f1c180e1e7c6e73d0d68b7015fc39fd3b7f59e55c680cedb
 Size (xen411/xen-4.11.4.tar.gz) = 25184564 bytes

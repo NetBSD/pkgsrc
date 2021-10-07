@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2018/11/15 01:13:01 markd Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 14:57:39 nia Exp $
 
-SHA1 (cdrdao-1.2.4.tar.bz2) = 3adfbdefc73728a75c9ddc41160c9fe4139fb1e0
 RMD160 (cdrdao-1.2.4.tar.bz2) = 5124d440cd0ecc8d219caba3246d6d7aa246b6b7
 SHA512 (cdrdao-1.2.4.tar.bz2) = 41f20275ca44ec9003d0e3ed280cc98012353005cda6f544ebfa44f3f79f991845c0ef17af74db9456f1bacc342a7fd48c9e942d757927a4a9ff91808f7bbb09
 Size (cdrdao-1.2.4.tar.bz2) = 1442181 bytes

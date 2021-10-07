@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/08/19 00:21:13 jlam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:57:56 nia Exp $
 
-SHA1 (i810switch-0.6.5.tar.gz) = 437adeb38f6530b5e68810fc5ee65fb5adaafd97
 RMD160 (i810switch-0.6.5.tar.gz) = 4acaea0c7c4197cdff30885a51f65cda3d3a6df9
 SHA512 (i810switch-0.6.5.tar.gz) = f7d14b933b39bb4274ec2c156c422927c6a5b7b16e3474a2cf9f80b9798062980642deb19d67ad7946a5a3ccc91465c3c09d113485a9526a5c75c8e625ec6079
 Size (i810switch-0.6.5.tar.gz) = 24287 bytes

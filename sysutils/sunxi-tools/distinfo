@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/08/23 13:57:30 jmcneill Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:29 nia Exp $
 
-SHA1 (sunxi-tools-20170823-cd9e6099e8668f4aa25d3ffc71283c0b138af1b7.tar.gz) = 8ce2cea3e940ad743e16b3bf67079dc38ca63053
 RMD160 (sunxi-tools-20170823-cd9e6099e8668f4aa25d3ffc71283c0b138af1b7.tar.gz) = f4eca6914e7652fc2da287eda686fccda4bb9fe3
 SHA512 (sunxi-tools-20170823-cd9e6099e8668f4aa25d3ffc71283c0b138af1b7.tar.gz) = e9f17f035e8b18fda0d4194ad05bf207a9708fdd63c6767fb0ddf22c550b1137cc627c7679c634b4cf18d4ad90951e382de2757b527f799696ad1c2968dac640
 Size (sunxi-tools-20170823-cd9e6099e8668f4aa25d3ffc71283c0b138af1b7.tar.gz) = 96277 bytes

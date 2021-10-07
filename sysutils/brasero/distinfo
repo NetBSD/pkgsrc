@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/01/10 21:18:21 joerg Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:57:37 nia Exp $
 
-SHA1 (brasero-3.12.2.tar.xz) = 2f3677c2aafa1c6a832befe45e0aeb25f9f95089
 RMD160 (brasero-3.12.2.tar.xz) = bc96ca61aa631bf018f4b9aff3ffeafae5db6e03
 SHA512 (brasero-3.12.2.tar.xz) = 14886e772123f179f79d3172b59e21ced990fd8834cd27e8717eb635a75163c44c1d5084818b53da559a0c2ef25e7c0da4a3a7d3781e2ea74b59cfe98987384f
 Size (brasero-3.12.2.tar.xz) = 3742120 bytes

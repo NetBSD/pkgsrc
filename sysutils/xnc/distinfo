@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/04/20 00:46:51 joerg Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:58:42 nia Exp $
 
-SHA1 (xnc-5.0.4.src.tar.gz) = 4673ba128f4df88342bfd4968a2427e894f6f3cb
 RMD160 (xnc-5.0.4.src.tar.gz) = 46366a75eca41f10f68ae7d4ad95b76ed4d576e2
 SHA512 (xnc-5.0.4.src.tar.gz) = dffbc87b615c824e54ea153ee94019615cd6da6febd415442e45cbed7b58e3bf90aae495c5e4095d13ceee95da601db2a2a57bccfad5aed4976ef863ba6d4e81
 Size (xnc-5.0.4.src.tar.gz) = 2130633 bytes

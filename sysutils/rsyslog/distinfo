@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2018/09/20 13:30:11 fhajny Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:58:22 nia Exp $
 
-SHA1 (rsyslog-8.38.0.tar.gz) = 87aaaca873c3cfa6e450ba371ab88fad20fd6b17
 RMD160 (rsyslog-8.38.0.tar.gz) = 44ac2abefb603ff0f7f18615317ea5f59d619cc0
 SHA512 (rsyslog-8.38.0.tar.gz) = 9dc3bdc4ef01c2af433478e182704694cb50849d811d476a03e4ce03b3c5aecfb506e7f1c1e51fadcd63da60b067d8011b92b8c9354a688fe66f7b6ffd8f9254
 Size (rsyslog-8.38.0.tar.gz) = 2721798 bytes

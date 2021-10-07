@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:32 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:58:30 nia Exp $
 
-SHA1 (sysinfo-3.5.1.tar.gz) = 720d687aa7c65c41792c415a355962e9ca76fbd5
 RMD160 (sysinfo-3.5.1.tar.gz) = 140bd34d017d7ffc5c5d49e52271b4308539bba6
 SHA512 (sysinfo-3.5.1.tar.gz) = e0cca78a09c8bace2767bfc9f6f60111110838f774553575de65c5e81d76a8b1d19c6c552f9f1ed6264f5531b54aaf7871d1ab68c5d37c1cbfdc6a19e04b23ae
 Size (sysinfo-3.5.1.tar.gz) = 259920 bytes

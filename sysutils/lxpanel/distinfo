@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/09 01:57:43 gutteridge Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:03 nia Exp $
 
-SHA1 (lxpanel-0.10.1.tar.xz) = 393b78dbbb76518a99549411131c35da5bfed0fa
 RMD160 (lxpanel-0.10.1.tar.xz) = 79d5ddffcdd62a8112f7177765ecf479a4651437
 SHA512 (lxpanel-0.10.1.tar.xz) = 0478ca1322a6645c5120e0fdb2b6d6409799f3296d971456670eb8b23b8457ae93a966ddcb5b5e5bdbcd694442ade2252d6a3931d36296e19e5339b2d689cfef
 Size (lxpanel-0.10.1.tar.xz) = 1548276 bytes

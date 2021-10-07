@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2017/06/23 15:56:17 joerg Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:58:28 nia Exp $
 
-SHA1 (skill-4.1.4.tgz) = 8a8dff9dbf9f1aa382887c142ac4dc205d7ddbf3
 RMD160 (skill-4.1.4.tgz) = e28e035879ecb66b6117133caf7ad05f00758371
 SHA512 (skill-4.1.4.tgz) = 1159756750860bd439a8d0ac6adb15c68a9b425297324a2843e2703b13f56d98ca32b7d847bdfad3929533d8cfa9dfb42776711c71f9b954cd1c62687161f951
 Size (skill-4.1.4.tgz) = 46349 bytes

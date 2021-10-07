@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2017/08/23 17:53:44 jlam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:58:08 nia Exp $
 
-SHA1 (bluez-5.27.tar.xz) = c1707e8ae38b299c07e6c18ff3c26a4b928d03bf
 RMD160 (bluez-5.27.tar.xz) = 21cec0a67c70215cc6972a0bfd5679b1a5fa8fac
 SHA512 (bluez-5.27.tar.xz) = 5e5e3ec17b4552027559083effb076e9c7d45528765fb27ca1aa1f3d8bb6a4a79c9fda91392f7b5b6da7aabf2b2b6e5bb16b0546323901501a93c53f79a66324
 Size (bluez-5.27.tar.xz) = 1542348 bytes

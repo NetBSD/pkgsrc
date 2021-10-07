@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/11/29 21:58:03 dbj Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:57:43 nia Exp $
 
-SHA1 (ddrescue-1.25.tar.lz) = 1788c279e0679f2e88c4d64cbd06d23b703d1e26
 RMD160 (ddrescue-1.25.tar.lz) = f34748e1cbf7be897be7051e162d279fa6f2cdb7
 SHA512 (ddrescue-1.25.tar.lz) = 90e344a618e385730836218817588f6854db6d1acdf357bf60bdba04c76382e73041dfc367ba4de60062992ee74b2da58417f6e464ffbeed10ec89fac110f4b8
 Size (ddrescue-1.25.tar.lz) = 87001 bytes

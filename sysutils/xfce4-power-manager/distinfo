@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/08/17 19:15:37 gutteridge Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:41 nia Exp $
 
-SHA1 (xfce4-power-manager-1.6.5.tar.bz2) = d50e77401b81f5118d4db424546b7b712dd71beb
 RMD160 (xfce4-power-manager-1.6.5.tar.bz2) = d9d5012af7cf3ab670f88c5bccf36e8e83e27f29
 SHA512 (xfce4-power-manager-1.6.5.tar.bz2) = ebcf9ba7431518fdafa74f49511200e16093c34f78516e823a2f7ac02a085a08377efe5f9c6fe285f3d1e2de253789404e01b34a48e3f5ff23c2c143b2801207
 Size (xfce4-power-manager-1.6.5.tar.bz2) = 1205473 bytes

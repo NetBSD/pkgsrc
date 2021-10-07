@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/04/25 20:53:02 rillig Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:58:39 nia Exp $
 
-SHA1 (xe-guest-utilities_5.6.0-595.tar.gz) = 7373f2cc37ba3761ee92051513e09787371eb77e
 RMD160 (xe-guest-utilities_5.6.0-595.tar.gz) = f526fd9ae1b47f22860915aba825ddd440b445b8
 SHA512 (xe-guest-utilities_5.6.0-595.tar.gz) = b34cb8afac674fe6d40fda44a03183392c690965ccfb7c708f30c53fb70770b6e3900563356bce3722f37263170dcb368a0725b6f0bb5730e78636c990394061
 Size (xe-guest-utilities_5.6.0-595.tar.gz) = 454235 bytes

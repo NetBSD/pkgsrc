@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/01/18 13:08:01 youri Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:58:42 nia Exp $
 
-SHA1 (xfce4-verve-plugin-2.0.0.tar.bz2) = 732e0b3aa69b8664dc8bfc35fb99b8cbe93942ee
 RMD160 (xfce4-verve-plugin-2.0.0.tar.bz2) = 6a05712ec588352866983a5418c30154c9855c73
 SHA512 (xfce4-verve-plugin-2.0.0.tar.bz2) = b6be658f5996857e1c5696dc66f973fa5875ba95682297ad157e107abae821023cdf7101ba5f8e5358740549e392b76bf7d1dae252f43bf1a7e8716d798ed39a
 Size (xfce4-verve-plugin-2.0.0.tar.bz2) = 384165 bytes

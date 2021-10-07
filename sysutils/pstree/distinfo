@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2016/02/09 14:27:57 mef Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:58:16 nia Exp $
 
-SHA1 (pstree-2.39.tar.gz) = 9246b2a39ebcea66250e344fa0a4781dbd48b504
 RMD160 (pstree-2.39.tar.gz) = 74bd6cd2fa22e0bde2f3e4936c1b6ed4d767b6df
 SHA512 (pstree-2.39.tar.gz) = 31ec81b4adb563068a3006312e1e42b026d41107c7756c54f8b38d143b32426fc702602c7eb925a55c62be5cb3ef7d562e6ba032ec7a0788d0c45f5d5b5b0662
 Size (pstree-2.39.tar.gz) = 12929 bytes
