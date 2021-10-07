@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/04/07 12:28:29 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:35:49 nia Exp $
 
-SHA1 (step-20.12.3.tar.xz) = 01e136a0c77a54b6537b7602012fdc4726eb2f81
 RMD160 (step-20.12.3.tar.xz) = 61cc230b86ff26d2359d9d0dead4ecb07ea91fa5
 SHA512 (step-20.12.3.tar.xz) = d5971012711b3e8c0e9a85844babf26db983efdfee77dc112f419979d9f8fca9374c81fc8612511928b1bc4cd7b3a385ff821739fb6e80f77c60d37194bc78a2
 Size (step-20.12.3.tar.xz) = 958852 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/04/01 22:16:47 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:35:51 nia Exp $
 
-SHA1 (utftools-1.6.tar.gz) = 92406e9cc5f47fa0baa2d558b56175bc836431f1
 RMD160 (utftools-1.6.tar.gz) = 7dfeda42ab72257dd92085e911b466175f3d0ff9
 SHA512 (utftools-1.6.tar.gz) = a72a1d4bf768bbcb9b2003872fec902c2b3e7dc7e386573a8aa4acdd48b1900ab0a57811a8241ffa2951e9a1190d8b79878efe08dd9587e6e3dd00d83c60113c
 Size (utftools-1.6.tar.gz) = 26298 bytes

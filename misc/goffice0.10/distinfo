@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/02/11 15:45:27 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 14:35:20 nia Exp $
 
-SHA1 (goffice-0.10.48.tar.xz) = 86da465e81d84a1f353766adaf3c88ad62b22e55
 RMD160 (goffice-0.10.48.tar.xz) = 65362cd8dbeb4441e976e76a1aece35bd586ad46
 SHA512 (goffice-0.10.48.tar.xz) = 90ce49c666a164205f8f78dca9fa40c81ddf0312b1b7f76808b8813d168868b5ce46c307fd5405a1314b0a475a4e52e95ab379b2dc751c1626e085ecf846d0f3
 Size (goffice-0.10.48.tar.xz) = 2413400 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/01/22 19:45:33 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:35:33 nia Exp $
 
-SHA1 (orca-3.34.1.tar.xz) = 83cb7fbe27754734ffb7eeb6855e3c69fee2a92c
 RMD160 (orca-3.34.1.tar.xz) = 0060a07a4c07803c978dea833ddbe84f41addc0b
 SHA512 (orca-3.34.1.tar.xz) = 32ab5e3d31e5ddac685d49fa1589e09976b0fdc9fdb811a7b83425dcda9ae713f1055c2767a6ca7a398d5f739809111afeb47d26f43ef5b043434ae7d59969c7
 Size (orca-3.34.1.tar.xz) = 3658324 bytes

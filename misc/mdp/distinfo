@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/03 11:47:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:35:31 nia Exp $
 
-SHA1 (mdp-1.0.15.tar.gz) = 49fa6297ddefb0f1d9ad1e6ea8b0daf5e8357a75
 RMD160 (mdp-1.0.15.tar.gz) = d5ca0b1e0120a4e8f66931d8cb785e9e227f48e0
 SHA512 (mdp-1.0.15.tar.gz) = 88337224dc7b58bc82f68861083e31ac429ff97e6dfcf7a66042c302205ca01947df35445e0b4683c5c5a998c493db882d3aaff462673b5a387865c33752bb0e
 Size (mdp-1.0.15.tar.gz) = 37728 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/10/01 09:29:00 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:35:31 nia Exp $
 
-SHA1 (mbuffer-20180625.tgz) = d3beb0aa92de4095bdbb819a6f0a977507155c96
 RMD160 (mbuffer-20180625.tgz) = d3fb1e03c40719e72af852692cfcce5db0992b0c
 SHA512 (mbuffer-20180625.tgz) = 01d712f51ac0b206d6ee91fbbd4cea4873784aaca02daa9b3d72cfcc0a63696b20c15ca4b6e834924f02f2878ac90192110df584c55fb1a65620ae8b0f7ec87e
 Size (mbuffer-20180625.tgz) = 140946 bytes

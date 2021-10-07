@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/04/30 10:38:55 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:35:51 nia Exp $
 
-SHA1 (urjtag-0.10.tar.gz) = 1e21f07d758e9e151d932e95c0b3b11fd178eace
 RMD160 (urjtag-0.10.tar.gz) = d22dcaf8447e594f5fbb25836df141e2a451760a
 SHA512 (urjtag-0.10.tar.gz) = bdabd7b2aeca8235c7f3fa35b1dc13cb46ef98ceca2cd2a1b8df492c5faeeb26574579e92de1c178fe714b01e1e5eabeae4f89719af0372cf07dafe854a4409c
 Size (urjtag-0.10.tar.gz) = 1391759 bytes
