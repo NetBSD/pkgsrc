@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/01/17 07:33:50 skrll Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:32:16 nia Exp $
 
-SHA1 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 7a0e4aa2709fe6c0b85b26bc4227f78d90dd6d3b
 RMD160 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 99898cc1ac443c5fda20d62e256045baa29bd8d5
 SHA512 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = c9e14c7ed83259e5e2ee23cdf7d11ba498851814e502fffd8e62676a91adaa5ec28a7f34d831a2c9feae46acea21520df79d308de8514198fbecab5eaa912a6f
 Size (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 1218873 bytes

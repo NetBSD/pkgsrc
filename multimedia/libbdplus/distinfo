@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:54:27 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:32:10 nia Exp $
 
-SHA1 (libbdplus-0.1.2.tar.bz2) = 2d696eca08f450427d6dc65b604b1ad1c13478bd
 RMD160 (libbdplus-0.1.2.tar.bz2) = 3d2529b576b27f6c41bedb4fc2febca4b9a50e38
 SHA512 (libbdplus-0.1.2.tar.bz2) = e00e7bc9f52b9275646593b753ba646b052255be94a7241965f4dbe4734f8f6a072973ed4b9997957f939236b0633897c295749f79e232188430795be5b5087b
 Size (libbdplus-0.1.2.tar.bz2) = 319828 bytes

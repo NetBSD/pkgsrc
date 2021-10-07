@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/07/26 00:02:39 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:32:16 nia Exp $
 
-SHA1 (nostt-1.2.1.tar.gz) = 32b831217c489a44ea5975b875023c7bd72ecf2c
 RMD160 (nostt-1.2.1.tar.gz) = 861ff49ba0c2d7203fb49fb84fe54dac0b565264
 SHA512 (nostt-1.2.1.tar.gz) = 9bd3abcc919987d16e72c2d5d9fffaffab67b999d16b73494108c9699fdc79946f5f4cb3bd4bd7769996e7f85e43047079a9a9a693ed4b8f4d60198df039b43b
 Size (nostt-1.2.1.tar.gz) = 10148 bytes

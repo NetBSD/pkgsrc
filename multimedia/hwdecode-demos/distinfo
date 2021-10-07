@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/08/17 12:22:50 tnn Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:32:09 nia Exp $
 
-SHA1 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = be65d3836694184d2a56a18053cb356f194f30fe
 RMD160 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 4cf6fa9532e1d24616e72d25166bb4a2836edf02
 SHA512 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 785a8982dc9d5cf737a8379457924aaf0823cae0b0a2c9d15e30e13dfce2afcfca44cf6c4c5b6fd7a11b5370bdb8a28eb1f222b598ef3b004c55237e71d6866b
 Size (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 379926 bytes
