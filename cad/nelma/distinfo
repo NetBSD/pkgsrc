@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 00:21:18 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:20:30 nia Exp $
 
-SHA1 (nelma-3.2.tar.gz) = 2a39a35527db03babcb09e992b29cbc659923c71
 RMD160 (nelma-3.2.tar.gz) = 657decc5243147bdb6d80329a0604d76ddd0a91d
 SHA512 (nelma-3.2.tar.gz) = 12b4481ef8fd5858b5af58903a05191fc9cb1360079afb920ad9b0813ad652e80c57187d087d89a8f7d5347b78713a3f9260d102324261457df9caa97e6ba353
 Size (nelma-3.2.tar.gz) = 64618 bytes
