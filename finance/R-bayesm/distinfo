@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/02/15 23:53:07 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:53:49 nia Exp $
 
-SHA1 (R/bayesm_3.1-4.tar.gz) = 27b76738cc656a33d28550544f16a29cf480064a
 RMD160 (R/bayesm_3.1-4.tar.gz) = 9970fb91f10de9ec74cc04d69970143a476946f7
 SHA512 (R/bayesm_3.1-4.tar.gz) = 1fe81650ff141e3023d197a659e782bab61b33efcfaf398237e725e17ad571f50bbd24eb7d9e25d83d110c1d438405ebf3a731cd18e3638b486ee69ee65528e3
 Size (R/bayesm_3.1-4.tar.gz) = 2269364 bytes

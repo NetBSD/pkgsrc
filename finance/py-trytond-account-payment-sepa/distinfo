@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/12/04 21:13:01 rodent Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:53:57 nia Exp $
 
-SHA1 (tryton-4.2/trytond_account_payment_sepa-4.2.0.tar.gz) = fbf23f8a253701b17e0761f4dae53d6eb7f90b83
 RMD160 (tryton-4.2/trytond_account_payment_sepa-4.2.0.tar.gz) = 2da0b55f3b56b26bd1fc5db42afd1175395a4c84
 SHA512 (tryton-4.2/trytond_account_payment_sepa-4.2.0.tar.gz) = f5335b573f606365853e73f33a09fc10b4ac60829422bdf266faebe43ca20d758028de799a4aed541c29801a40c187b4d88057495e8de06fde3c0dddf924ccdc
 Size (tryton-4.2/trytond_account_payment_sepa-4.2.0.tar.gz) = 112597 bytes
