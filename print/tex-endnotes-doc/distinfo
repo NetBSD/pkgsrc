@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/01 02:30:48 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:01 nia Exp $
 
-SHA1 (endnotes.doc.r53319.tar.xz) = 500e16b56a8ed9ac5f8c11c196006c9fe3bdc889
 RMD160 (endnotes.doc.r53319.tar.xz) = c99ea3ed98fb5be5f95efeaf1bf46096d1126954
 SHA512 (endnotes.doc.r53319.tar.xz) = e4de81d6cf0d7bc686d84420dff1e390ad18747ebc9381c6df006f871f9d5e000aae5cd43a3648dfdab2806da83efc6b375ceb4a9110137ed6b373538a7a8b57
 Size (endnotes.doc.r53319.tar.xz) = 280164 bytes

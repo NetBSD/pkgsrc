@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 01:01:37 agc Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:49:01 nia Exp $
 
-SHA1 (pdflib-4.0.3.tar.gz) = 9fbe256249ef780c4607ee3070785d9a4ecc03f7
 RMD160 (pdflib-4.0.3.tar.gz) = 5e21c05a9e2c49d90ccffea5a2ba085776b457c7
 SHA512 (pdflib-4.0.3.tar.gz) = 21c8bbe3f26736f3d4fa0825974c14f8ea3ea4d8ca145091eb1a7e3612085cbb20a11256505e468f285389e78adafd3918b7d7e0c509a77ebdaf2843d1c1a0c5
 Size (pdflib-4.0.3.tar.gz) = 2373817 bytes

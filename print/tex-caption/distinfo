@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/02/13 10:27:35 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:49:35 nia Exp $
 
-SHA1 (caption.r56771.tar.xz) = 6fbcfad050044607e455a215ef149daf2a04be59
 RMD160 (caption.r56771.tar.xz) = 83f12b0ac5c3cc46963a0f7c8d4fa9095b45c871
 SHA512 (caption.r56771.tar.xz) = d0e7276e6e84cabc85d64bc397fd2e4a258e913e4f78022ae40f3c7293e7f9b3f34dd011a944223507cb1555dbf2031dc563e34a5f7064e9903964bda5a893c3
 Size (caption.r56771.tar.xz) = 30812 bytes

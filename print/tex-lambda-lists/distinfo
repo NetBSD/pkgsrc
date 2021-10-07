@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/04/25 11:05:19 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:39 nia Exp $
 
-SHA1 (tex-lambda-lists-31402/lambda-lists.tar.xz) = f987c5a1af5bc67d851c2cd08a9cf49ab62bb45b
 RMD160 (tex-lambda-lists-31402/lambda-lists.tar.xz) = 650962b77405b26f1476cc3110225a75cc34ecb1
 SHA512 (tex-lambda-lists-31402/lambda-lists.tar.xz) = c51e48929a0b35a3e0ace484d213dc76c1089fc9fe10383253141281ae4567cad43fd732457f90ebf8d9828286e5cd41dea9a31ef74fc2405061b0c1d4cf40a1
 Size (tex-lambda-lists-31402/lambda-lists.tar.xz) = 1544 bytes

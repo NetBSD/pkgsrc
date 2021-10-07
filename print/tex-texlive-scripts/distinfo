@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/06/06 23:29:22 markd Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:51:38 nia Exp $
 
-SHA1 (texlive-scripts.r59470.tar.xz) = c887474e10f082910557f658eb86cf3b684c3c74
 RMD160 (texlive-scripts.r59470.tar.xz) = 9d299b1a36776745b21b0919a83d02be9c93c7c7
 SHA512 (texlive-scripts.r59470.tar.xz) = 7e7bcc2b78f069dc2746d7aa94c9bd0a4360a284b88282c6eb1070cf229a28df5cb78345e6f922567c3a1df7b3257b7cb4b531d8aa6407b11a03ed86604a04f0
 Size (texlive-scripts.r59470.tar.xz) = 107992 bytes

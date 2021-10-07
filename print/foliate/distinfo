@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/04/03 02:24:00 fox Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:48:55 nia Exp $
 
-SHA1 (foliate-2.6.3.tar.gz) = ffc9b742c682c9da8e6f05161f4f77bba39a1325
 RMD160 (foliate-2.6.3.tar.gz) = 2d332c21c2a9b6dbd9562e2280f66d3501ef4489
 SHA512 (foliate-2.6.3.tar.gz) = b3dd5bc5a02d3f2210b0c7376426a7ea1668a81fa64fea179da2ab1d852778414cce45171143814d2010d6c03b0287dbbc512884107774ec211e24c6ed8127cb
 Size (foliate-2.6.3.tar.gz) = 4822251 bytes

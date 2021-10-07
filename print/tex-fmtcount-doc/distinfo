@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/05/01 02:30:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:50:11 nia Exp $
 
-SHA1 (fmtcount.doc.r53912.tar.xz) = b6f945d48d639816d86e73f825b9a355502c5b3e
 RMD160 (fmtcount.doc.r53912.tar.xz) = 790b1c3241bf1e6bc625f6b3c4e60d2509f15819
 SHA512 (fmtcount.doc.r53912.tar.xz) = fa0955c7d08dca99d3323b9cf364edd8b4b305723a3fd3ae38687c6473ea2af3593c47384a61feff0071199b909e1424d422eed3864866b28c7d27b1f42c3994
 Size (fmtcount.doc.r53912.tar.xz) = 400372 bytes

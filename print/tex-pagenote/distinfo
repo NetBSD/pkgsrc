@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/10/23 10:28:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:51:04 nia Exp $
 
-SHA1 (tex-pagenote-15878/pagenote.tar.xz) = a09517fa2f1dd998ebb6af5bd15cb32602eb9395
 RMD160 (tex-pagenote-15878/pagenote.tar.xz) = 86fca83835008cdd3a7b183bb3e40a0f69a5b1cc
 SHA512 (tex-pagenote-15878/pagenote.tar.xz) = df3667f219bd019b040f075901a3a25a8d97158945fd03e2de5fdeee38e2d8b65276da7936dc68c45dcf65fe38aa25baf7197caa974da5e5937fd684d18bd74d
 Size (tex-pagenote-15878/pagenote.tar.xz) = 2020 bytes

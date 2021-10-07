@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/06/21 10:14:21 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:51:02 nia Exp $
 
-SHA1 (tex-onlyamsmath-42927/onlyamsmath.tar.xz) = d42439feadd60c8bbb2482546278af51e3041a5b
 RMD160 (tex-onlyamsmath-42927/onlyamsmath.tar.xz) = 0a1bcf63a3327f2c61cd86d0056672859553211d
 SHA512 (tex-onlyamsmath-42927/onlyamsmath.tar.xz) = c1d3eee13f677c028abb78ff406fa65613bb0e98d4812da4871e1ce9b04d49f65854e70ad31773b2328287ea283b518272a640b6661159c10c447ee54c46f827
 Size (tex-onlyamsmath-42927/onlyamsmath.tar.xz) = 1416 bytes

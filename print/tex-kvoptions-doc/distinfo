@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/13 05:18:51 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:38 nia Exp $
 
-SHA1 (kvoptions.doc.r56609.tar.xz) = 64928f4abc1c0a847b34e5af0eb3546ac6e26fb6
 RMD160 (kvoptions.doc.r56609.tar.xz) = 32cb120b8fb2d06b2c28bfde3b1e60a46ed9bd23
 SHA512 (kvoptions.doc.r56609.tar.xz) = dc8fa31afcb9c86d5a94ffa4bfd7e02fd186b27d1f645a5317c718d8079e4b003426e9202c49f6cf3017cd49a59100d8c2a6a553d16012856e340da0e9ede0ef
 Size (kvoptions.doc.r56609.tar.xz) = 472508 bytes

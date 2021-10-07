@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:44 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:25 nia Exp $
 
-SHA1 (hyphen-esperanto.r58652.tar.xz) = 4c327e83eee7a66333bf0025ab28ac4ab8005ca2
 RMD160 (hyphen-esperanto.r58652.tar.xz) = d71db41e53a650229538718449343da9dd779631
 SHA512 (hyphen-esperanto.r58652.tar.xz) = ed2976e9fb3eec5d2f0759348b284129e43bf161db571dd21270335388b8aec57e1b8393bc9b246f8a6e9cde22f93a4cb3c1a03dcadd64fdda3d70b576789050
 Size (hyphen-esperanto.r58652.tar.xz) = 10668 bytes

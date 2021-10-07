@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/05 05:42:52 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:51:13 nia Exp $
 
-SHA1 (powerdot.r59272.tar.xz) = 27040806c62eca1a831325e33a5b915aa3fec775
 RMD160 (powerdot.r59272.tar.xz) = 3bcee24305322873ad7e96a8f819825157877488
 SHA512 (powerdot.r59272.tar.xz) = c8ab1d65e2ac0695cac0e8a0a683fe712ba51e8aa028316901e1ab6e31b0be68348066fcf290b03321c0bacbf5c0b16265b28022ef38137a3d89bd25aac58dd7
 Size (powerdot.r59272.tar.xz) = 26268 bytes

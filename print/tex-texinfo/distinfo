@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/06/05 06:32:36 markd Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:51:38 nia Exp $
 
-SHA1 (texinfo.r57911.tar.xz) = f14079345445b3f053d820da7b9a6e45528713c8
 RMD160 (texinfo.r57911.tar.xz) = cde8c110db1440fc328bc8653bdb6c52b1f26935
 SHA512 (texinfo.r57911.tar.xz) = 9bcff364b4f7e505f4301d54f8acd5fa248dabafe246c649abf4f229ad12c2e041935684741717e29f22a02ed3181b5619a3ddfe6e2047b16f928ab69b1b4295
 Size (texinfo.r57911.tar.xz) = 98652 bytes

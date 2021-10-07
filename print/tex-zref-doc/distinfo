@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/20 11:07:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:52:00 nia Exp $
 
-SHA1 (zref.doc.r56611.tar.xz) = bdacb58336c8131d08939b8b18ce87ae55b905c5
 RMD160 (zref.doc.r56611.tar.xz) = ebdbc609aaa45a6adee810cc68eaa136f5fb5c08
 SHA512 (zref.doc.r56611.tar.xz) = 928c54696572694b1fc7712a0f8357851c18d83bf723c6f03a9f784dfbd123b2c886593bc95de0d3b7f8109e1d0b3a52cc6ef1a877c0506130e7c5d96b046a67
 Size (zref.doc.r56611.tar.xz) = 651440 bytes

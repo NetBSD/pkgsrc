@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 04:06:15 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:19 nia Exp $
 
-SHA1 (tex-realscripts-39706/realscripts.tar.xz) = b4535d2d275840a3d8bfde1b5309a2f8a8f1f0c4
 RMD160 (tex-realscripts-39706/realscripts.tar.xz) = 7b611ba0a6423bffe91774c65bba588df8c7bc98
 SHA512 (tex-realscripts-39706/realscripts.tar.xz) = 2f23437eec9a0b7a395ae746a781cd71c0823230d44bcdfc8eb27325588cdb840573761da97885329e13e97d5c145fc712eae493c71c55d777d270d8f6ab5222
 Size (tex-realscripts-39706/realscripts.tar.xz) = 1900 bytes

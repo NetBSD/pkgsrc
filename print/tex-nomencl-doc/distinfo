@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/02/20 10:34:47 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:51:00 nia Exp $
 
-SHA1 (nomencl.doc.r57263.tar.xz) = d9dd06d36d67242a3367edb8e0477fa7a3923697
 RMD160 (nomencl.doc.r57263.tar.xz) = 41233ede75648a65270f75a0dfc265c3c7b715e2
 SHA512 (nomencl.doc.r57263.tar.xz) = cf29a353af0a32e41d18087d3ae9c8447d52cb0f95dabfbde01150d15637022d53a8576c362bd7489e8110cdc5dc1892159652d67e61f165f25a78b64d8e095c
 Size (nomencl.doc.r57263.tar.xz) = 531236 bytes

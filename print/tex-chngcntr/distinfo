@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/01/23 09:30:34 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:39 nia Exp $
 
-SHA1 (tex-chngcntr-47577/chngcntr.tar.xz) = 3f7022e454999895f9e4ca96f81db26222e6d555
 RMD160 (tex-chngcntr-47577/chngcntr.tar.xz) = 864243abf856142ea443c23fffe73e21a22eba70
 SHA512 (tex-chngcntr-47577/chngcntr.tar.xz) = 0e902dc742afde8cde229cf17d20cc6bf47f042d4c03c3771ee544bd8af84e4670c3fe41d523703db0c38c38f1867009b39a9495f0e4a52187bbf222dcacbf8b
 Size (tex-chngcntr-47577/chngcntr.tar.xz) = 2044 bytes

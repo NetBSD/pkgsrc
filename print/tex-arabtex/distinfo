@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/03 04:54:57 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:16 nia Exp $
 
-SHA1 (arabtex.r59150.tar.xz) = 88d92b756327e12979debd7e1d063095a589bb29
 RMD160 (arabtex.r59150.tar.xz) = 6df5bc4006e25fbe6ca41d978550ee6af89ed348
 SHA512 (arabtex.r59150.tar.xz) = 1266c1824595e29a96a00f21da756d7ff12ab361bb9a719ff08f2d10c341826757965dda77c32cf03bb565a3ec61ef991fe2b5cf97d26f4ff89bf35dec65e3d6
 Size (arabtex.r59150.tar.xz) = 222028 bytes

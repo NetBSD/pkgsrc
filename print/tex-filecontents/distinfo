@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/01 02:30:49 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:50:09 nia Exp $
 
-SHA1 (filecontents.r52142.tar.xz) = ffd41115ef052a50266c8d0f7432188911e34a24
 RMD160 (filecontents.r52142.tar.xz) = 8c3f1255853a418904712ae9ef4338a4d7e4f5d3
 SHA512 (filecontents.r52142.tar.xz) = b40bf2e4eea194783dded4f00dc24f1cea26a854e96b57995b69354a70c1e7ba9ef0e64542c2b524ad59d9b12fb1accf93ee28b4c7e735279c0bbeb915b6c991
 Size (filecontents.r52142.tar.xz) = 2056 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/20 09:53:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:41 nia Exp $
 
-SHA1 (classpack.r55218.tar.xz) = f2e1c875b84e2da0be56376facf3edd92c776b65
 RMD160 (classpack.r55218.tar.xz) = cf32048b59ba9e58c983924d1df13abe55da9b48
 SHA512 (classpack.r55218.tar.xz) = 483d96aff1739fc2cdb63e9753fbb86ec93b493ee3d8d104e6089c791e4674d522a30e0dc747a48d8ffc6690452a147b2ad15a3a9cc676c641a9f6aca535563e
 Size (classpack.r55218.tar.xz) = 2292 bytes

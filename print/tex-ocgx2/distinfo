@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/20 10:36:35 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:51:02 nia Exp $
 
-SHA1 (ocgx2.r57531.tar.xz) = 60a13a72e5affd775759c1825bc936603bf0a2b8
 RMD160 (ocgx2.r57531.tar.xz) = fc5006079bf5f291f4e11ea1b25b15092eaccd69
 SHA512 (ocgx2.r57531.tar.xz) = 2b09a488d273992f02034b66ffda3ac7a7f9251e8b57c7794cd50d8e68f5bc2d1b55d1388bfab41e3a46ee037cc5de4e1e137a7175b5191fe9d68fb6b3513ffd
 Size (ocgx2.r57531.tar.xz) = 13444 bytes

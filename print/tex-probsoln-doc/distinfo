@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/08/17 03:42:18 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:51:14 nia Exp $
 
-SHA1 (tex-probsoln-44783/probsoln.doc.tar.xz) = 746678ea3b95fe8d54561ba430790dd5b1a17635
 RMD160 (tex-probsoln-44783/probsoln.doc.tar.xz) = 324bff4e9fe5c8c1ea5e72a7a1992ca3cb4876dd
 SHA512 (tex-probsoln-44783/probsoln.doc.tar.xz) = bfc11035b829f299aef75d852ed6425880cb8f43ee48bd09186e5969a553520c009dd09b2e73b234e3c57e5f1299713409b15a464ff1ed96df4befda0b8f8076
 Size (tex-probsoln-44783/probsoln.doc.tar.xz) = 954412 bytes

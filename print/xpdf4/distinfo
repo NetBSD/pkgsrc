@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/09 20:36:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:52:03 nia Exp $
 
-SHA1 (xpdf-4.03.tar.gz) = 3e71b44fc98460b0f97a18594feb0e3c4e4248d9
 RMD160 (xpdf-4.03.tar.gz) = a11136ebb97b14913d83fe87af0f75c8d8d4ca91
 SHA512 (xpdf-4.03.tar.gz) = 5f8478c2c4863a3c50f9b45a6fec73c7e67a74adbeaa651dd2e29982ea4cf050740874ee670672f985a323c12c28c968c16238c4238aeb52810a45e2728d622f
 Size (xpdf-4.03.tar.gz) = 936046 bytes

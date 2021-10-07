@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/27 22:35:36 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:11 nia Exp $
 
-SHA1 (aleph.r54276.tar.xz) = 4474fb8d3fc3fb9fbbcb476f4c7eab4ee4c2e08e
 RMD160 (aleph.r54276.tar.xz) = 76bda85a7d2374a4e86f765282b4053458637d52
 SHA512 (aleph.r54276.tar.xz) = ac42bae0d6d3b4be4c343a8dfc127bda123119a14a078fefa7d3e6c004a820fc18b4b1f9abb11963942c3bcd5080d0c63a3cc0c374bb7250cac63f226259c803
 Size (aleph.r54276.tar.xz) = 612 bytes

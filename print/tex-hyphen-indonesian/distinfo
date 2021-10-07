@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:45 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:27 nia Exp $
 
-SHA1 (hyphen-indonesian.r58609.tar.xz) = d76ca29c983aad234997af942470feca3672a249
 RMD160 (hyphen-indonesian.r58609.tar.xz) = 5be5c16eb8317300193b17152281be4c3a0b3ea1
 SHA512 (hyphen-indonesian.r58609.tar.xz) = 3f04a63010c02d77cb229c90aec9f1079557493958573be9ce992ac5ae3c229f01f9abc0cac785d9340ff48aa169a01f8b327ecb2e255bef57f1fe85d04d1d2a
 Size (hyphen-indonesian.r58609.tar.xz) = 2416 bytes

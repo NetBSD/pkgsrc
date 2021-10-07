@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/01 00:15:13 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:57 nia Exp $
 
-SHA1 (diagbox.doc.r54080.tar.xz) = 6c077c8d0309ef56a99500d3af76e092ebea066d
 RMD160 (diagbox.doc.r54080.tar.xz) = ea14678b41bd543250729bad462c9008b26f9e99
 SHA512 (diagbox.doc.r54080.tar.xz) = 96310db4878e417f09e6202e5ca86f29524af5c1292ad8fed2563f1872e094be1249c4753eac5129c68492a5fe9ea87857783e2ca9af1ab77dfd1ca9b3309b2f
 Size (diagbox.doc.r54080.tar.xz) = 238496 bytes

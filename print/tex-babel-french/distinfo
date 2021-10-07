@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/02/14 20:16:41 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:49:19 nia Exp $
 
-SHA1 (babel-french.r56607.tar.xz) = c3b2744d328a2cc5987f1b7a259aca061769d17b
 RMD160 (babel-french.r56607.tar.xz) = 8cd832cd61f8647e2cd5a73dabc6cd69abbeb1d3
 SHA512 (babel-french.r56607.tar.xz) = eaf680b5828b069907c0edf2b62c49475648f973f1ed220e47f6c05907e4b813021b0b18f66b3926ddea4266654dc91055913f3d6be1a799ef0bb2ac8241b9e3
 Size (babel-french.r56607.tar.xz) = 15924 bytes

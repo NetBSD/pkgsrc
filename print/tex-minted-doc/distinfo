@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/08/24 00:04:12 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:55 nia Exp $
 
-SHA1 (tex-minted-44855/minted.doc.tar.xz) = b82732dc740324600386664a76957cc0221b9a46
 RMD160 (tex-minted-44855/minted.doc.tar.xz) = fa3ee85ae69d3d09342f40cff04c3fe7890eddf8
 SHA512 (tex-minted-44855/minted.doc.tar.xz) = 013bab6a7abfff35d5316ec335ddb13e8c91e918ef78d9e49bc393be3cc6e71f22c740ff862045a5d20bbfc1a508bbc272f0dbc668db3ffc657dafb0ddfbc45c
 Size (tex-minted-44855/minted.doc.tar.xz) = 803628 bytes

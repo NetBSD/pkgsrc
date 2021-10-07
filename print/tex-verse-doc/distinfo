@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/07 14:03:52 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:54 nia Exp $
 
-SHA1 (verse.doc.r34017.tar.xz) = 6ae0e3c11747b5dcfbff3cce55c831a91d6cfc8f
 RMD160 (verse.doc.r34017.tar.xz) = 8a8e17999f5a5ac853bc409d2290401447b3ea0d
 SHA512 (verse.doc.r34017.tar.xz) = 6f255167db9ebb84cf86a14e6999410efb22d087d97b82837c3ebc5bf69f0990e77ae0325618ba3ea02c116741422a531f646929eab2b5810b9f3978be6651f2
 Size (verse.doc.r34017.tar.xz) = 422968 bytes

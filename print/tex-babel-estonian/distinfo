@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:05:59 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:19 nia Exp $
 
-SHA1 (tex-babel-estonian-38064/babel-estonian.tar.xz) = e099c4156d93351a04853f1a98a82ac2a1754bdc
 RMD160 (tex-babel-estonian-38064/babel-estonian.tar.xz) = 9717a033db89831ab8f681b1dce2349fea615d1c
 SHA512 (tex-babel-estonian-38064/babel-estonian.tar.xz) = bdd6dfa5a97fa67fce7eadc7c8c0d1627e2e8dc37d1c9d70341442bcc5a6394f4499dcff9c0f1d6e0fb3aea9feed90163a96deabc4496b49f076d8e776868a72
 Size (tex-babel-estonian-38064/babel-estonian.tar.xz) = 3040 bytes
