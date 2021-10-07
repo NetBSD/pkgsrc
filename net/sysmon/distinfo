@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/02/02 10:14:19 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:51 nia Exp $
 
-SHA1 (sysmon-0.93.tar.gz) = 9802be83f1b88577fcdaad9b9447ce9fe48163a5
 RMD160 (sysmon-0.93.tar.gz) = 77a276a3964f4830dc4351c19741be724e95ec42
 SHA512 (sysmon-0.93.tar.gz) = 367ec53cf5253a1fd83eee4837206d9551ea2b2d8e62cd910f4c0a7f1090bc6a519277e94ea1e08f8354a7a88fcc6b4d5092bc481385b57547496558e47e85c8
 Size (sysmon-0.93.tar.gz) = 519522 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/02/09 20:56:47 rillig Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:43:01 nia Exp $
 
-SHA1 (vsftpd-3.0.3.tar.gz) = d5f5a180dbecd0fbcdc92bf0ba2fc001c962b55a
 RMD160 (vsftpd-3.0.3.tar.gz) = 0f0fd063661950bd466a818daae51cba3073e3cd
 SHA512 (vsftpd-3.0.3.tar.gz) = 5a4410a88e72ecf6f60a60a89771bcec300c9f63c2ea83b219bdf65fd9749b9853f9579f7257205b55659aefcd5dab243eba878dbbd4f0ff8532dd6e60884df7
 Size (vsftpd-3.0.3.tar.gz) = 196649 bytes

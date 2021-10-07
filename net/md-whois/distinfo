@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/01/07 13:13:02 otis Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:41:49 nia Exp $
 
-SHA1 (md-whois-5.5.4.tar.gz) = 76d4e7530d88e860dbfd10406d67683bc4c7a794
 RMD160 (md-whois-5.5.4.tar.gz) = 80c1224e1540012c4b317fe426d57f38fcd34b7e
 SHA512 (md-whois-5.5.4.tar.gz) = f2fa92dc9490356c3584c2f9ac4e443dd4f57fbbeb0499fefc80af62665b886cb19d33ca55c5a8a0f9378588a646dfbd4dfda4da6c55681ba974b49ed93208d7
 Size (md-whois-5.5.4.tar.gz) = 103246 bytes

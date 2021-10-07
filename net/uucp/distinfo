@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/08 23:19:22 dholland Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:43:00 nia Exp $
 
-SHA1 (uucp-1.07.tar.gz) = e7c93c3aa6468f1b26dd4d9104dbbe8c2949e9ee
 RMD160 (uucp-1.07.tar.gz) = e265ecd08245dd2510db20430a7a0e387ef4df51
 SHA512 (uucp-1.07.tar.gz) = 13d215890234e638bed53dce7bab6eb78e0ce6b658f23ac1d7f8abc6e1d97963bef76aa4148ca644f450d5a1678fac940b73fbcd5845d7f5bea3afbd8055229b
 Size (uucp-1.07.tar.gz) = 1013234 bytes

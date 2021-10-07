@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/08/07 16:36:18 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:41:41 nia Exp $
 
-SHA1 (knot-3.1.0.tar.xz) = ba54eb09b258aa0a3466fffa026c562f31c12f85
 RMD160 (knot-3.1.0.tar.xz) = 0ebc31564098c670b19dd4e4fabb350052bd0b05
 SHA512 (knot-3.1.0.tar.xz) = 7a76ca1547f6aded1045b8a124ec4e35c61199b822b7692b656ef9bfadb68bdfde097a1ece973725ea14690743da2e2c08717055516b150696e3ac341fa5c728
 Size (knot-3.1.0.tar.xz) = 1401992 bytes

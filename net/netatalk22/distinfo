@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/09/12 15:52:37 nat Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:41:57 nia Exp $
 
-SHA1 (netatalk-2.2.6.tar.bz2) = 98a2d33f2e240e49caec32b83bca579723ce87f7
 RMD160 (netatalk-2.2.6.tar.bz2) = c7b051cf89d30c9bf1d491d9e04ceee2f39b897d
 SHA512 (netatalk-2.2.6.tar.bz2) = 74aa3415a43293a8804b00b0eda564d6536310e59c3f0d067d634db89f4d612a1dfd932df18607c32b948922ae032bc25471e21635ab149a78629ff95c341f47
 Size (netatalk-2.2.6.tar.bz2) = 1301887 bytes

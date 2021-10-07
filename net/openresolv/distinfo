@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2020/07/22 13:52:56 roy Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 14:42:02 nia Exp $
 
-SHA1 (openresolv-3.11.0.tar.xz) = 5ad00fcda8e92447f741d69c5842b600229a1f60
 RMD160 (openresolv-3.11.0.tar.xz) = c75eb149da474ed8d3d8777b57cfd431aa5847bb
 SHA512 (openresolv-3.11.0.tar.xz) = 09708b8a1abf7de926f75a1825d4243be6e59fc1de7cc3d7ab7f5a317e11175bd24af03bff2c878ccc54c96913feed27630765647c70fec8a9f9aa7370744e24
 Size (openresolv-3.11.0.tar.xz) = 20552 bytes

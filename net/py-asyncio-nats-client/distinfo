@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/08 17:06:50 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:25 nia Exp $
 
-SHA1 (asyncio-nats-client-0.10.0.tar.gz) = 86aeca893a67e6f71a2d58e8547e20731b927185
 RMD160 (asyncio-nats-client-0.10.0.tar.gz) = c8a0771ab777f6fc07db6a446c3a1034b215e618
 SHA512 (asyncio-nats-client-0.10.0.tar.gz) = 79a23044e723d645fd2025722c867f02c59a6c9438fc8e91bcf6cdb93765acaa8e6038ae414f284c774820898cf7742945a4dbd55febf6b7f0add012e28f7085
 Size (asyncio-nats-client-0.10.0.tar.gz) = 17698 bytes

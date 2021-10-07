@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/16 15:33:29 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:30 nia Exp $
 
-SHA1 (gnome-nettool-3.8.1.tar.xz) = e40bc85ff71b64fcca11db444392c93d04d0094c
 RMD160 (gnome-nettool-3.8.1.tar.xz) = e9bf8fdbcbdc39609853376ecc4e6721fe8e661f
 SHA512 (gnome-nettool-3.8.1.tar.xz) = c1c90fa727ebbf21442c4d0f5f4e98acf91fdd68a476f5f378167f92c3d7938ef33598525b62b838dc9b485abeb40171bdffb0fe3cb060fd3982db013a30bbed
 Size (gnome-nettool-3.8.1.tar.xz) = 589024 bytes

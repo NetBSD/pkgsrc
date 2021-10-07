@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/01/13 15:08:19 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:45 nia Exp $
 
-SHA1 (xdr-3.0.2.gem) = fa04cb1964488c1284675cb2bfe7d026479b4e99
 RMD160 (xdr-3.0.2.gem) = c3ea9251a0ddbe628b180f8571f4d9748b06ae89
 SHA512 (xdr-3.0.2.gem) = cf5e180f5c2bf3ea97ea0e8547d7112ea4c6644840df0bdd1d7f7b6b6a158d9f0f93c1f2c1a74d2ac49df35e7dd78a38380250da586b790a749bc80a35948b51
 Size (xdr-3.0.2.gem) = 16384 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 12:25:09 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:36 nia Exp $
 
-SHA1 (resolv-0.1.2.0.tar.gz) = b2cc24b2920f396454ae485f938e8e149327036d
 RMD160 (resolv-0.1.2.0.tar.gz) = c47ecc0943dd01315cffde2b903cfd794bdc6041
 SHA512 (resolv-0.1.2.0.tar.gz) = fae2d0717a109b0d6cc19c51c773bc68c64c0048b9d930528cf5622ee270ebaddec180c1d444542e8eb036262611f5b88deadeea223fb2ef2b15b41369a2376e
 Size (resolv-0.1.2.0.tar.gz) = 156710 bytes

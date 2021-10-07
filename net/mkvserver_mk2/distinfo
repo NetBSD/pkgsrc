@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/12/01 11:48:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:51 nia Exp $
 
-SHA1 (mkvserver_mk2-0.0.0.20200117-c62abc30f4cca6147ddc732570b30fcb4bee30ec.tar.gz) = 4ce520c5b7b03f9bc22054558389be2deadeb508
 RMD160 (mkvserver_mk2-0.0.0.20200117-c62abc30f4cca6147ddc732570b30fcb4bee30ec.tar.gz) = 348298eb9e5854f27204364faa74d478674ae024
 SHA512 (mkvserver_mk2-0.0.0.20200117-c62abc30f4cca6147ddc732570b30fcb4bee30ec.tar.gz) = 4629a561ba0ea6b0a90396c0a73f63d75999b846e3b7771db8ad8b3a83faa93b23397c5996537e70020f4c70c5bb515d46847ff435ca4ea00d6e3d20fd3db53c
 Size (mkvserver_mk2-0.0.0.20200117-c62abc30f4cca6147ddc732570b30fcb4bee30ec.tar.gz) = 24755 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/21 10:23:41 he Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:06 nia Exp $
 
-SHA1 (MaxMind-DB-Common-0.040001.tar.gz) = a9352bad985e3ef6b13ef998cf553385bc1d726c
 RMD160 (MaxMind-DB-Common-0.040001.tar.gz) = 0a7097fcb9aa089b441604d13a9e989644b14f1f
 SHA512 (MaxMind-DB-Common-0.040001.tar.gz) = 4748ac66e09ec3c8017b7365562b8273399c85f359c35b22868e1b86e80e8a59a3a3fbfd851becf0ac997657b4e8288057204a2e14bb699815676f3214f6345c
 Size (MaxMind-DB-Common-0.040001.tar.gz) = 22195 bytes

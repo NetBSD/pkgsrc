@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/08 21:50:08 dholland Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:41:49 nia Exp $
 
-SHA1 (microdc2-0.15.6.tar.gz) = d39fedfb817203b70854aaff3a9e7fb2f2f317d2
 RMD160 (microdc2-0.15.6.tar.gz) = c7e05994c9012f4774c1de6eaea7ee3225c63336
 SHA512 (microdc2-0.15.6.tar.gz) = efa178e6639b897df52f467864019a4c5d259dc0ece3852c2e173d09ef3dfbd7c9936d41002ee0b8e3365e71cea687e484bcbe7ed340649b2035cd5a55b76308
 Size (microdc2-0.15.6.tar.gz) = 639392 bytes

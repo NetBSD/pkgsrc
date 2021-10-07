@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2016/06/15 05:40:21 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:42:02 nia Exp $
 
-SHA1 (openntpd-6.0p1.tar.gz) = 4495e1ba750a6c6c623bba784c5e0f6423585206
 RMD160 (openntpd-6.0p1.tar.gz) = a07b4c96d843c206550a20f839485c04771916b8
 SHA512 (openntpd-6.0p1.tar.gz) = a71c516dbe7596cbcb3a385112a59a82185b7e3d93a52eda695cea5a0a599ba7fbf58daa81da55d608255cb6950398123fa7d71663604a4c3bcbee949711296d
 Size (openntpd-6.0p1.tar.gz) = 432696 bytes

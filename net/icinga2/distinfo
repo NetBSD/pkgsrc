@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/17 13:22:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:36 nia Exp $
 
-SHA1 (icinga2-2.12.3.tar.gz) = 2cbcb9e1dd85613c8452235bdacd0eac347b0f69
 RMD160 (icinga2-2.12.3.tar.gz) = 21d907c8441503fcfda975756ccc76fb2a04f5b4
 SHA512 (icinga2-2.12.3.tar.gz) = 28b87e03a8ffeb7a1d19ddf9555151b826f7bf1fd33b0139c2fc8abe7c89d66d96089d5b32d0aaccc3876040514b2bfbde9970416d5ec4ea3b023b17c0fb1799
 Size (icinga2-2.12.3.tar.gz) = 7534454 bytes

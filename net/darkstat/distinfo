@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/12/28 12:02:10 bsiegert Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:41:19 nia Exp $
 
-SHA1 (darkstat-3.0.719.tar.bz2) = 519f5bb783a478de4e9ac9a5f9a2031fbe7143af
 RMD160 (darkstat-3.0.719.tar.bz2) = 900afe5a8db6e55a3640ffe33e76bad76a22a05a
 SHA512 (darkstat-3.0.719.tar.bz2) = 264f6c5f862745fbfb5d125aae5a319369f028fd7be96cfb12775147f528a36b7f5a42bcd6434f2d376933292364641f2ec9cd9bdb1fe105f5a905e331181f98
 Size (darkstat-3.0.719.tar.bz2) = 117695 bytes

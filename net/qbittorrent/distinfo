@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/09/17 12:51:18 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:42:37 nia Exp $
 
-SHA1 (qbittorrent-4.3.8.tar.gz) = 3127023a3583a29f577a281d12ef0d78ae4f7118
 RMD160 (qbittorrent-4.3.8.tar.gz) = 440173ac7885160f4c52aa2de395877b8dbde4b3
 SHA512 (qbittorrent-4.3.8.tar.gz) = bb03f27f0807dfac867ddf5a6fcec1687946068a7e7d88483f0ded34d7279aa0d3324fe25f23c22ce80ee98437d8914229c5969ea8849eed1d4ad68e031601e2
 Size (qbittorrent-4.3.8.tar.gz) = 8506355 bytes

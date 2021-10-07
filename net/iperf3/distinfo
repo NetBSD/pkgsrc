@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/06/03 19:06:19 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:38 nia Exp $
 
-SHA1 (iperf-3.10.1.tar.gz) = 3abccfc379ee38384f97525560ee10345ff4b79d
 RMD160 (iperf-3.10.1.tar.gz) = 2e391c60c69bb7fce2797364bf22bfdb2c65d13b
 SHA512 (iperf-3.10.1.tar.gz) = 127a5276bad07401cafb43093f8677c5b4672aae9b4ab4fab5e2987b9f2e664b7370a39d260a4da572aeb318f02df9c491f1214602e5e3bde617127d1f049243
 Size (iperf-3.10.1.tar.gz) = 633304 bytes

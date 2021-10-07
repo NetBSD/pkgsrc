@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/07/22 13:43:12 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:42:57 nia Exp $
 
-SHA1 (transmission-3.00.tar.xz) = fd6bd78cfe5a612b422a49e8193d82df2486a3c4
 RMD160 (transmission-3.00.tar.xz) = 5286c3e183474cba6ed1c6cfc022f4f5afab4fda
 SHA512 (transmission-3.00.tar.xz) = eeaf7fe46797326190008776a7fa641b6341c806b0f1684c2e7326c1284832a320440013e42a37acda9fd0ee5dca695f215d6263c8acb39188c5d9a836104a61
 Size (transmission-3.00.tar.xz) = 3329220 bytes

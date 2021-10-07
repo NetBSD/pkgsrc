@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/03 10:12:54 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:41:46 nia Exp $
 
-SHA1 (libslirp-4.3.1.tar.xz) = f69c50c264a465bde6fe0cd6b577e2f1c0b20ece
 RMD160 (libslirp-4.3.1.tar.xz) = 9e404b2d8760de3971ea7047c43aa697893235b6
 SHA512 (libslirp-4.3.1.tar.xz) = b34793d67dbe15302a16562ce6e63063eec04f8ca1a6fdb5c10891de9fbcc59877c30d4883cd8c5d911147981401b93dacae538a5b85253bde5e44edea6c228c
 Size (libslirp-4.3.1.tar.xz) = 99056 bytes

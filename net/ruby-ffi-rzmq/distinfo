@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/20 08:45:49 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:41 nia Exp $
 
-SHA1 (ffi-rzmq-2.0.7.gem) = fa419fd62d7e66661c35156f30a3356348e61a05
 RMD160 (ffi-rzmq-2.0.7.gem) = e553260f27a55560203f2c6995bcd7c3cb6212cb
 SHA512 (ffi-rzmq-2.0.7.gem) = fe2179127dbe037e3b5f4eb5f3da2e28555255cd1700923555140c6d899a83d2812fe4047484c1f9bbd85692ac66c0f66b103e4bf7a88fe80f20ef2d3a11c356
 Size (ffi-rzmq-2.0.7.gem) = 51200 bytes

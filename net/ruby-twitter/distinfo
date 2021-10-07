@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/06/21 15:26:53 taca Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:42:44 nia Exp $
 
-SHA1 (twitter-7.0.0.gem) = a7b29fc0806a6227939ea2ccc19afb54fbc580fd
 RMD160 (twitter-7.0.0.gem) = 5ad961f9134b931f4a53f2eba9721210b3b9dd17
 SHA512 (twitter-7.0.0.gem) = eb4a39bee3f5bb865678a722aa19100b343f711a8111555ec5d9ec833777936e6f7a32104d75f6ac594e9cf447b3d9e87c32321ddac1e8f2eb414316f4ae143d
 Size (twitter-7.0.0.gem) = 77824 bytes

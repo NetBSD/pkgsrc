@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/12/13 21:52:04 dmcmahill Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:41:37 nia Exp $
 
-SHA1 (inadyn-2.5.tar.gz) = 9345dd2d118d86c116f5e238fdef1959bfe05a43
 RMD160 (inadyn-2.5.tar.gz) = cb590b7cfa6f625846adfd157b365060661e9175
 SHA512 (inadyn-2.5.tar.gz) = 885d05fdf70067a0e34899026300185a47f94e49ffe0cbbb7d07b17c80bd4cb2d2a9b35af4466b0dcc7949c59224d424f95e5afb9d31310db4ddacb90ca2475a
 Size (inadyn-2.5.tar.gz) = 456400 bytes

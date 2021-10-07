@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:41:47 nia Exp $
 
-SHA1 (libzrtpcpp/V4.4.0.tar.gz) = edbd5484f476439dff3692aed85680173bb78d65
 RMD160 (libzrtpcpp/V4.4.0.tar.gz) = 7018a4507aaa67debb52d54a428750e9f9e01eef
 SHA512 (libzrtpcpp/V4.4.0.tar.gz) = 56cc44cf05a505b6d62043f4ee621bc00fd38d1b0f27f9d21ed6169aae3d08f948cf2af91f8a094f24db82080fc9c553aa50c34d06926b68cd767f258454c204
 Size (libzrtpcpp/V4.4.0.tar.gz) = 1933037 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/09 20:09:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:10 nia Exp $
 
-SHA1 (6tunnel-0.13.tar.gz) = f85fb2c44c660f51e4ad199e2a123c2cd0264e4a
 RMD160 (6tunnel-0.13.tar.gz) = 7253b861565ea90b6f76cda0b0b3a2bd5da64c44
 SHA512 (6tunnel-0.13.tar.gz) = e495b561e2fe4483417cf44291d729377fe02123f21b7d58b9aed294c676392d860de7474b6bcb4e3e4ffdcd87752ee1af070dfbab028b5de5adb778b0241f72
 Size (6tunnel-0.13.tar.gz) = 103054 bytes

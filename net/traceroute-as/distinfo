@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:41 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:56 nia Exp $
 
-SHA1 (traceroute_991603.tar.Z) = 84a66a5acc87ca74a74c7a091f288f0886d71d2e
 RMD160 (traceroute_991603.tar.Z) = 2b0eea1e0f91373f6554283436545766ace8115e
 SHA512 (traceroute_991603.tar.Z) = 61457a57adcbd3b869715d0d1b2ad70fb973dfb4501f691c03bdb350fb29d6c593fe900e261f5175bb3f22c612238dd14ea5dcddb0517178cb89d3be138f424f
 Size (traceroute_991603.tar.Z) = 75111 bytes

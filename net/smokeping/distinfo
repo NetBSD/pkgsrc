@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/04/27 18:05:18 bouyer Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:42:48 nia Exp $
 
-SHA1 (smokeping-2.7.3.tar.gz) = a57dbd201b3d9142b15dcf63a906a265989a2929
 RMD160 (smokeping-2.7.3.tar.gz) = 54ebc0f840a7c52e4610a7409fa3213e1a90b647
 SHA512 (smokeping-2.7.3.tar.gz) = d46d61539ffdd9cac41391aa813364260f90f84443c328b1c9233ab6ba3a0c157861694614e6c33e18b153f6a6afc0769c5fc7752b3ab52f114d984e53232830
 Size (smokeping-2.7.3.tar.gz) = 6614710 bytes

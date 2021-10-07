@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/11/06 11:07:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:09 nia Exp $
 
-SHA1 (Net-Frame-Device-1.12.tar.gz) = 8575d5b93a1003af95a2752f05790c46472891f8
 RMD160 (Net-Frame-Device-1.12.tar.gz) = 7495a996aa7a245712e73862db94322ced767e32
 SHA512 (Net-Frame-Device-1.12.tar.gz) = aba85b72ebc412fa4e3c7083d541abf3a2c3b08bea5c44074aa5aa02f78f2a54ba1b0fa93987c08033e0105df2a5fc4364fe5fb576439dd99666f5cf34314ae6
 Size (Net-Frame-Device-1.12.tar.gz) = 13322 bytes

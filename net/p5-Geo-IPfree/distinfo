@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/08/16 12:40:20 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:42:05 nia Exp $
 
-SHA1 (Geo-IPfree-1.151940.tar.gz) = 18b175423a096d1ee2f1f10f63ccafc21f5b1768
 RMD160 (Geo-IPfree-1.151940.tar.gz) = 75e9fc2eb62af2be2c95a3dfa0f6ea1cb0b0f3c4
 SHA512 (Geo-IPfree-1.151940.tar.gz) = 139f367e2797137ac5aafd070bb76bfe792e708f8dcddb6bc5a1cbaefb72b5d4e6bc1734eece991a64273bb12c640be017e32a2d049ba9dc85ccb694cc3fca96
 Size (Geo-IPfree-1.151940.tar.gz) = 642161 bytes

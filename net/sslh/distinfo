@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/06/13 12:04:21 rhialto Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:42:50 nia Exp $
 
-SHA1 (sslh-1.21c.tar.gz) = f9d190b07fa9b72ab7d750bdfc1adaf23917649e
 RMD160 (sslh-1.21c.tar.gz) = dca5001a1bde50c08c6bfe40ff9cdb923cd1682c
 SHA512 (sslh-1.21c.tar.gz) = 9446c6afe965684c5d6406ac8917338f57d95f8fbfacd7a51193dd5dbac77e1ed5e39eb8e2575e7025a8612b25e9fba7e64832a48c999f366875217b9328da22
 Size (sslh-1.21c.tar.gz) = 111895 bytes

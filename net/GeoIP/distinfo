@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/01/08 11:59:43 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:41:11 nia Exp $
 
-SHA1 (GeoIP-1.6.12.tar.gz) = ac1a6809afbb7624aff2f6e12ceb300b12de1715
 RMD160 (GeoIP-1.6.12.tar.gz) = 80d8c7d9c4822879e33ecde31056e56bfbb78a6e
 SHA512 (GeoIP-1.6.12.tar.gz) = a1c8120692a7ba6de5836550917f86f4797dd236a8b7d71b6f92b5389e4b071d89e57036654f5de1d4b762730a2a5c331c31414eab0c889c9befaa097941fee7
 Size (GeoIP-1.6.12.tar.gz) = 473914 bytes

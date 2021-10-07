@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/06/04 18:56:40 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 14:41:47 nia Exp $
 
-SHA1 (libupnp-1.14.7.tar.bz2) = 33e2eec13112860c9da8406ae6f60a920a7205cf
 RMD160 (libupnp-1.14.7.tar.bz2) = 36f938e05069a2a3c115a7f06d9fbc3fd75f9afe
 SHA512 (libupnp-1.14.7.tar.bz2) = 8aacde63655d8673d50452c1c9e00c8e379e9a938bb0f510ab56764c397402519ca72d4481208ab08d7e2f5eb494f2713fed63a734401f62a9674a340f998e11
 Size (libupnp-1.14.7.tar.bz2) = 678912 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/04/14 13:54:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:33 nia Exp $
 
-SHA1 (requestbuilder-0.7.1.tar.gz) = 0d928d2020221ece3b1a203e5c5e60d37eee66b9
 RMD160 (requestbuilder-0.7.1.tar.gz) = 806623820d30629714d5f27e51e5edbb0f69446e
 SHA512 (requestbuilder-0.7.1.tar.gz) = b46873692518accadb5527ee0ead41070ab323fd141455b5f92a7fa3a666b999d969448d364d5570391aa78591e294ff19b905e4adb75ee85a4f4279e0730b52
 Size (requestbuilder-0.7.1.tar.gz) = 33534 bytes

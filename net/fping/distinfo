@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/08/03 11:51:47 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:41:27 nia Exp $
 
-SHA1 (fping-4.4.tar.gz) = 8be8be5b8dc5c0dd3505db79b8fe1438fe4ef590
 RMD160 (fping-4.4.tar.gz) = b2da9e204a4b2d60c6b632504cdf30d9c3c83317
 SHA512 (fping-4.4.tar.gz) = 8c9ff78edee10ce8e02a0d6189d4a2d91cc60954740c15730f8f1a17d037ee9f565828fa0dcd47a06f2746328063125704d467939d6280b44d5ac98a65e5acd0
 Size (fping-4.4.tar.gz) = 182921 bytes

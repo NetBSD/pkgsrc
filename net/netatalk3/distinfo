@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/07/06 20:19:54 christos Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:41:57 nia Exp $
 
-SHA1 (netatalk-3.1.12.tar.bz2) = cc1fe1ebdbdb4da9cf82835c440e82ba28a832c5
 RMD160 (netatalk-3.1.12.tar.bz2) = 30f44674f76f7d70d02772ddf2ff249e4aef3a50
 SHA512 (netatalk-3.1.12.tar.bz2) = 0b22abaf0084d5684ccc049225abb34caa32893ea8fe7eb67901fde94726f054149ce78d2da49cf06fe30360eb18b2edccff20f9ac69d5ab5105f6d2f4178759
 Size (netatalk-3.1.12.tar.bz2) = 1918312 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/09/29 09:55:43 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:45 nia Exp $
 
-SHA1 (s6-dns-2.3.5.2.tar.gz) = 3347a036dc994087920b49379b70a3e682d1fffe
 RMD160 (s6-dns-2.3.5.2.tar.gz) = c385745f3821c91b534ed6a25725174b7815d91d
 SHA512 (s6-dns-2.3.5.2.tar.gz) = a2b88ea70b183128ba3959e7ea00ef96c0aa7c0533d69bbd0a1050aa0272e129571135ae6939b0079f353c4c723652c9205e7ec8ed6ab785320ce46c250d8340
 Size (s6-dns-2.3.5.2.tar.gz) = 84893 bytes

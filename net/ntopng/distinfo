@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/06/23 19:34:15 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:42:00 nia Exp $
 
-SHA1 (ntopng-4.2.tar.gz) = 3fbf98ab83b31b7e03434252ca4bceff920bed2b
 RMD160 (ntopng-4.2.tar.gz) = 300a7a875cc8c77a607286ad0d5ddb447e81e6e5
 SHA512 (ntopng-4.2.tar.gz) = e89ec3f35644ae8bc570d9802ecfadbf0067145e23a589df2032e8781e9c954f4166d3abb650ddafc65e4fbad656730ee1abf9c5273d3e09f8173d423436b8ff
 Size (ntopng-4.2.tar.gz) = 57554819 bytes

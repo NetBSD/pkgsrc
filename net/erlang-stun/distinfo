@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/05/21 10:20:52 triaxx Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:41:25 nia Exp $
 
-SHA1 (stun-1.0.43.tar.gz) = 2e0ec202b3aa3b38af1b2b438af5e38b7fd971e7
 RMD160 (stun-1.0.43.tar.gz) = ade9a5ed5fc639df1197c83e7cc5f2ffc91eb96e
 SHA512 (stun-1.0.43.tar.gz) = dbd786f4e2a11a1d941d5db92f9ea3ec726b0cdf100d3e8b7badca2e6ba086680707765412d154b2fe4958d3a695984c5be25a73725ef80643dbe57f981f9a02
 Size (stun-1.0.43.tar.gz) = 39788 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/12 18:40:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:31 nia Exp $
 
-SHA1 (OnionBalance-0.2.0.tar.gz) = 48ff20e6874b02a213471d659ff01bd22911c691
 RMD160 (OnionBalance-0.2.0.tar.gz) = 0e86a66ce0aea6218fbc1ad67ddafde48a885982
 SHA512 (OnionBalance-0.2.0.tar.gz) = 74601210d9d0703043fdc424120f3b2b5ef7daeeed512ce18cd21f81298a17f738914d6782d2ee868c0f58af1ffe7a25c0de95f8cc70a7dfac4c3a60352130a6
 Size (OnionBalance-0.2.0.tar.gz) = 92830 bytes

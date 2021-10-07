@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 00:35:41 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:42:57 nia Exp $
 
-SHA1 (tsocks-1.8beta5.tar.gz) = 489f88c5df999ba21b27cdaa7836d9426d062aec
 RMD160 (tsocks-1.8beta5.tar.gz) = 12e3eeeafaf7f3be21dd8901da38d5890659b09e
 SHA512 (tsocks-1.8beta5.tar.gz) = b41636ea6b77abf0d1e3cda7bbca4e7ee96f3cdb1843f3a2c530650931e5567f67921de67b28ba9bab0f51df39770a3f7fb458cf7ac78aad7aa861923df2c4a9
 Size (tsocks-1.8beta5.tar.gz) = 83928 bytes

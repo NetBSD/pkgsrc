@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/07/07 11:23:01 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:41:57 nia Exp $
 
-SHA1 (nc110.tgz) = f8ec3a39796b141b6654d39b7957b863c7f79a95
 RMD160 (nc110.tgz) = 3e891fa094d921940e53035fb6721e2f0c04efdb
 SHA512 (nc110.tgz) = c9a7f5045f76d9ffef4e83fcc3e82f69ac4eb05e061686db51e9367949bfe0b90226b290a059dc68dcf3bf2040b95b5c78545199674da57a7c73e2f9145cf812
 Size (nc110.tgz) = 75267 bytes

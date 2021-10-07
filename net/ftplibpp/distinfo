@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/03/26 02:30:26 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:28 nia Exp $
 
-SHA1 (ftplibpp-1.0.1.tar.gz) = 51bfa48cf54efd23becdc83eb0f5d16f3e7bec21
 RMD160 (ftplibpp-1.0.1.tar.gz) = 6ea80510ba4aace8cf73474ab2bcb9373d799070
 SHA512 (ftplibpp-1.0.1.tar.gz) = e613638419646d628c5966ac94634701108edba17e20b0fb7df8aa6702550ad0b3537e0c7f3a06120468db48f058c489e1aeb8692fadc5d02b1e5bc46de63a76
 Size (ftplibpp-1.0.1.tar.gz) = 26688 bytes

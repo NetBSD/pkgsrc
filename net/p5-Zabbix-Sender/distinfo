@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/12/30 14:49:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:18 nia Exp $
 
-SHA1 (Zabbix-Sender-0.07.tar.gz) = 643ba4979534897521afd2f75d90874d527d3949
 RMD160 (Zabbix-Sender-0.07.tar.gz) = 933811da829a62f6e7346d170417a2f6c1434fca
 SHA512 (Zabbix-Sender-0.07.tar.gz) = ab2e15bcb9abf5557dea7fb6f68faaf2ca49ae0de51cd0f28b013254ee7c86dcfdba0c07bf6320213813d0b099b637ae9d3ab811997d062cc6f567cd4c0057c0
 Size (Zabbix-Sender-0.07.tar.gz) = 18697 bytes

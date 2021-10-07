@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/09/19 12:49:42 bsiegert Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:42:28 nia Exp $
 
-SHA1 (gsutil-4.68.tar.gz) = d0ff2116eca2a9fb24a1b094ffd5bb94f90fcbc7
 RMD160 (gsutil-4.68.tar.gz) = ae4df0ac57f0c56d996158155414c7b324012b89
 SHA512 (gsutil-4.68.tar.gz) = c2eb0a541cbf3b34c4ee8b679bfa01b25741f3a5e4cb7b1a362e5b9434dd7ed965eb6afd283ab7495f04b27ebde84b957ff99a74eec0f7c98555ef860ff786f5
 Size (gsutil-4.68.tar.gz) = 2905181 bytes

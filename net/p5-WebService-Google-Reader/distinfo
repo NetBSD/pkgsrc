@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/06/05 12:56:45 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:17 nia Exp $
 
-SHA1 (WebService-Google-Reader-0.23.tar.gz) = 0da67c1c7afbdb15e7eb6b3a2c80e72c180ff877
 RMD160 (WebService-Google-Reader-0.23.tar.gz) = 91390e4fd8da8d5d5613fe6b24f8a07431c19d00
 SHA512 (WebService-Google-Reader-0.23.tar.gz) = 5f05af9a24e402d3d9c007a15f468a43e77fd20e4d402fcf00419c627a332d491064d447f3f03de1bbccf70094ac370385ef55b212afbc60bd07c26a6696b753
 Size (WebService-Google-Reader-0.23.tar.gz) = 17519 bytes

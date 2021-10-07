@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/29 22:39:45 khorben Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:28 nia Exp $
 
-SHA1 (fwknop-2.6.10.tar.gz) = b0a70f5626e6e27a41259fc4f07e19c39da5df73
 RMD160 (fwknop-2.6.10.tar.gz) = ee14efc6e43cc9ac32f489f257ab2b19257092cd
 SHA512 (fwknop-2.6.10.tar.gz) = e6c34dad012921fc0773826c769df322f06fd9310e8f263d8b786d2acda0310763db566324a436ea539b5e0bd6a08ce22e9499f6566d61d6309d84927faa4cf4
 Size (fwknop-2.6.10.tar.gz) = 3030310 bytes

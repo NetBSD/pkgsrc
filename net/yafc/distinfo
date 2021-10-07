@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/03/26 21:53:31 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:43:06 nia Exp $
 
-SHA1 (yafc-0.7.10.tar.bz2) = a9a0cd2a86bb3e36b670c74fd348d68087cbe7b4
 RMD160 (yafc-0.7.10.tar.bz2) = f785bc4e9cfbef7d3aa35714726dce7a484e2eed
 SHA512 (yafc-0.7.10.tar.bz2) = 92505eb4581230bc240d9b3bb73253cd2714fcd56fd021099861882e3d4aea6d9ab8fc31337f6a645b0d5d26f32d6ed01cec351b7f1bbbde3540e90a3bd84614
 Size (yafc-0.7.10.tar.bz2) = 403013 bytes

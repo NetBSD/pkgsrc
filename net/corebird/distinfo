@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/08/02 22:15:05 mef Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:41:19 nia Exp $
 
-SHA1 (corebird-1.7.4.tar.xz) = 80d9db6926091b49515e4bb27e52d818fbbea31d
 RMD160 (corebird-1.7.4.tar.xz) = 13d80f64680bb06145bbe31da7990e548f25a553
 SHA512 (corebird-1.7.4.tar.xz) = ad50130b7a7fa32a5629889ee9758bbbf4d622f503a7f935b73c64a8e7cb5e1ec44df2202c3d82e04afe4865c08b671286a445d327af3b4fd1d7c732fb62ebdd
 Size (corebird-1.7.4.tar.xz) = 712704 bytes
