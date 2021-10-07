@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/20 00:41:43 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:32:03 nia Exp $
 
-SHA1 (dvb-apps/148ede2a6809.tar.gz) = 1d7b7713cce5a2a1db4a5639789140b5c3ba272f
 RMD160 (dvb-apps/148ede2a6809.tar.gz) = b024e3fa143d4b89ce842aeb799217f48c0df58a
 SHA512 (dvb-apps/148ede2a6809.tar.gz) = 93cb79aeccdb7a84fd109d85f38feda2da66cd8929ebc1b5d2b0bbe587a84665c66d16d7ae97b52b8c8c0712d3c28e7f64475957c7a90f2c48b3d74df0763082
 Size (dvb-apps/148ede2a6809.tar.gz) = 516680 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/07/03 11:52:37 wiedi Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:32:20 nia Exp $
 
-SHA1 (tstools-1_11.tgz) = fb8e5f59fada384d2d7865f840a0ad28404bde81
 RMD160 (tstools-1_11.tgz) = f4fa0e3f49c9409096608a6bf3849c785de9d3f5
 SHA512 (tstools-1_11.tgz) = 8cc0f5d4ff22bd3151a4fa3012d22ebc36dd3c7546258f9f9ecc2d0513e478aeccd8f5fff7cfd24e647e0e668b0968e780dab4418469c0979ccc6176136d9e26
 Size (tstools-1_11.tgz) = 392616 bytes

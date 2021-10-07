@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2017/04/17 19:50:06 schwarz Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:32:08 nia Exp $
 
-SHA1 (gstreamer-0.10.36.tar.bz2) = ff95b5316b920e7c2836588bba18fa61395fbd03
 RMD160 (gstreamer-0.10.36.tar.bz2) = 5dd01d8ea7afe98e96037bf73f995654f469096e
 SHA512 (gstreamer-0.10.36.tar.bz2) = f6037bdadbc05122208313ce53d0e29da0381ed8ec67fee7cb39c8aca83fc540d646b65b0790c14c2365d6bd8443ba4008479dcd23a2e34b05536697c7208962
 Size (gstreamer-0.10.36.tar.bz2) = 3655705 bytes

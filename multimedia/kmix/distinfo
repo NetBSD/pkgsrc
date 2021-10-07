@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/09/01 11:14:47 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:32:09 nia Exp $
 
-SHA1 (kmix-20.12.3.tar.xz) = b0e4d97664c508dc35aa2a02c4fea31e8e751d1e
 RMD160 (kmix-20.12.3.tar.xz) = 079188ea212919179af359eb5d4efcf950ad4e0b
 SHA512 (kmix-20.12.3.tar.xz) = cd261b9b42e81187136366a8cfcce7296d576553e8ec541785b5d53f9529cfd570af43c952dc0c36a5d3ad22abc56b02dbe040b7aebf5e9353b0ea3e670a6480
 Size (kmix-20.12.3.tar.xz) = 1150476 bytes

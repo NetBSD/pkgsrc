@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/08/03 09:51:28 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:32:14 nia Exp $
 
-SHA1 (mediainfo_20.03_AllInclusive.7z) = e6cbdaa85b9c4b182cd1325506926637b0e158d8
 RMD160 (mediainfo_20.03_AllInclusive.7z) = 976c635af03faa44d9a4cca2bc5c143efa44601d
 SHA512 (mediainfo_20.03_AllInclusive.7z) = 850f4ee5f8ceb3a91a4466ff73c9f2fb70a1a63f8bdd7ffd8dd40e83b619b71c59e9b8659a8636758c90a62d7024b4e617b17025c72f23a7bcd25a3823d2ee39
 Size (mediainfo_20.03_AllInclusive.7z) = 3706487 bytes

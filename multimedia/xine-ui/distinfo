@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2020/04/02 15:53:28 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:32:21 nia Exp $
 
-SHA1 (xine-ui-0.99.12.tar.xz) = ee4fc8bad73f67527a035b67ce97c542bd6d6db6
 RMD160 (xine-ui-0.99.12.tar.xz) = 8745bb5d5add4cbecf171aca7f73f58918b26149
 SHA512 (xine-ui-0.99.12.tar.xz) = bc04cb8df730abce147485b488250331a304e4318fc28ebab890c6485242a5edeafd953547c637622e2312c65aa1e36aaae6117d608dd668781d841804f2ae86
 Size (xine-ui-0.99.12.tar.xz) = 1980672 bytes

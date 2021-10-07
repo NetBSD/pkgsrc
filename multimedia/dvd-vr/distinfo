@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/01 14:01:39 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:32:03 nia Exp $
 
-SHA1 (dvd-vr-0.9.7.tar.gz) = bf7f9ef5a5f04f69832898ef077d48c021f7e512
 RMD160 (dvd-vr-0.9.7.tar.gz) = 686f4f64908a92056e351366267524c172ae796c
 SHA512 (dvd-vr-0.9.7.tar.gz) = 1f2880de819705da7366cb916b4fb55be4774e4b76f8de318646665057e2d0eec30a3b1fc43ae29aec991b09bb9b2b2a28a627a952a577fefc7050d1999bae66
 Size (dvd-vr-0.9.7.tar.gz) = 28603 bytes

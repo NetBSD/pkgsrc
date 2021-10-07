@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.69 2021/04/05 18:14:20 leot Exp $
+$NetBSD: distinfo,v 1.70 2021/10/07 14:32:15 nia Exp $
 
-SHA1 (mpv-0.33.1.tar.gz) = e8277afac5bd33af5bcad7b3ae5beae61268d89a
 RMD160 (mpv-0.33.1.tar.gz) = 7527ebe0cfe4435fbc54e2523cdbbe59cdf40f5d
 SHA512 (mpv-0.33.1.tar.gz) = 99d6c40d18c5cf83814b44ec6d8eade229800c5b51a734c9bbe831c3aeb95f8931124c94f6ae2360ffff62053c163bc3c55b254df021e005b350ebc3df7e952b
 Size (mpv-0.33.1.tar.gz) = 3259882 bytes
