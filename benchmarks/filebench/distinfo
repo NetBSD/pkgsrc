@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:25:50 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:18:30 nia Exp $
 
-SHA1 (filebench-1.4.9.1.tar.gz) = 9082a4fcc97a0d803d3e8f8db7120883b5a97ab5
 RMD160 (filebench-1.4.9.1.tar.gz) = 0621ce5646ad82c2d2e2cc1d7a128f204e5ebabd
 SHA512 (filebench-1.4.9.1.tar.gz) = a6400aba4266fcf98e46c4824796a594adc5d5e7f9605f6e1ab01973ce448e27948991e453b186947a8d89f8603a69a3ba955edf2a1abccd2935196af7b6f0d1
 Size (filebench-1.4.9.1.tar.gz) = 349535 bytes
