@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/08/29 11:09:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:57:45 nia Exp $
 
-SHA1 (dmg2img-1.6.7.tar.gz) = 15dc1bc352c524fb54259c0787551927bb03088f
 RMD160 (dmg2img-1.6.7.tar.gz) = 4b3dfa6b02f39cbe1020605e3c32c06936df6852
 SHA512 (dmg2img-1.6.7.tar.gz) = 4c42841c5cdbf868b6038648a6c83e78d4b7f2010f7065d7b3f4c2c04d13af9489716c1dfa867aff5f3c3b3eef96dc3fc0610eff13fec139265f37f468e339e6
 Size (dmg2img-1.6.7.tar.gz) = 23238 bytes

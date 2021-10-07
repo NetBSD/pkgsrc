@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/01 00:20:05 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:47 nia Exp $
 
-SHA1 (efreet-1.7.10.tar.bz2) = c324ed0f20e670e76b8644cf9fb7b0920bdb936f
 RMD160 (efreet-1.7.10.tar.bz2) = 1add26ffddb4e5dc81a75a7ae41c3ec13ad71662
 SHA512 (efreet-1.7.10.tar.bz2) = 2bfc79de3c6f4d61cd4dfab567bfecc207afd413248d1a1edd7cc21378ec670420d4ffef20ae7ba5e33c72e49da0ad3c810d0086431fb3c9909c361a12586698
 Size (efreet-1.7.10.tar.bz2) = 450761 bytes

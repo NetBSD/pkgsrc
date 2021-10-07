@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.10 2020/05/09 12:17:52 triaxx Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:57:54 nia Exp $
 
-SHA1 (grub-2.04.tar.gz) = de58e12e02c4d60ef0f24057bde6abde8474c3e1
 RMD160 (grub-2.04.tar.gz) = f990ff7dc3e4fa6f1048b87b192a0ae7cf3b3c63
 SHA512 (grub-2.04.tar.gz) = 3ba14fe8fdd15322ef89dd2f90e7f4a9e1e9a2ea19b795e0677c1f504b3fb93329109a83ddf5230f7173068e3f043dd5c9a92f6f2bb9257e13e236f62df10453
 Size (grub-2.04.tar.gz) = 11130271 bytes
-SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
 SHA512 (unifont-5.1.20080820.pcf.gz) = 8939e2bc82ca97b60e6678f3ff079a2be7ba9b702f2e8ee289e853af5823695f7baafbf14b674fc5e41071f2a6de4f2dadd56bf8b4653849dd756d59622f1649
 Size (unifont-5.1.20080820.pcf.gz) = 1379965 bytes

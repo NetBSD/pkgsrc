@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/09/17 08:50:01 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:57:48 nia Exp $
 
-SHA1 (etckeeper_1.18.14.orig.tar.gz) = 911575137d218cc7831b5fbe95ff13934ca6a3fe
 RMD160 (etckeeper_1.18.14.orig.tar.gz) = 34855d5e3578e2a0b3867583add9615623411ba0
 SHA512 (etckeeper_1.18.14.orig.tar.gz) = 1bc01845d47ce3af1ef56474745843e8be6e005da90a21bed302fe73476fbf1f64b84fae7dac73139c394ca698bd146e1609fa34ebbc6737ba73a6f61e670948
 Size (etckeeper_1.18.14.orig.tar.gz) = 93528 bytes

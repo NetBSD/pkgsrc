@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2020/05/27 12:58:57 adam Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:58:17 nia Exp $
 
-SHA1 (python-crontab-2.5.1.tar.gz) = 90f956fbb37155ed0b3d7b445a36c3d51994f429
 RMD160 (python-crontab-2.5.1.tar.gz) = b660538ec51c36386ebbbbbab4c62df1231081be
 SHA512 (python-crontab-2.5.1.tar.gz) = 63cdf222e39e39ac63c65f1df8c569e6f640732e2d01922ee4a5bd9cd71a713def1def798f37651eb902f65b5c53905e4c3d9acc7d4456998645339d38ace3e0
 Size (python-crontab-2.5.1.tar.gz) = 52573 bytes

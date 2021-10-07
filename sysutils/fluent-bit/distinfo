@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/20 00:45:56 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:50 nia Exp $
 
-SHA1 (fluent-bit-0.13.2.tar.gz) = 7d44b4655874fb6d63fe15bce780067df7f2ffe3
 RMD160 (fluent-bit-0.13.2.tar.gz) = ab64676e78ed86cd90cf1f89f711d88ba2e69c92
 SHA512 (fluent-bit-0.13.2.tar.gz) = 787e1d8f1c50e39642f7b637938c5e5d4dd8400bd89c9ed929830bf19e4617baf0bd25503ab5be5711ea85c0030061872447203bbd20255bb87649615ab350e0
 Size (fluent-bit-0.13.2.tar.gz) = 8758919 bytes

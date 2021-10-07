@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/02/09 14:16:53 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:12 nia Exp $
 
-SHA1 (SSH-Batch-0.030.tar.gz) = 3157cb4e59a2cd544ca4341b33b5d0c711445f40
 RMD160 (SSH-Batch-0.030.tar.gz) = d9171a746965ae582a8373140b366e9e0736e10e
 SHA512 (SSH-Batch-0.030.tar.gz) = d4a4462637f653bba7f140ef8fa26f5faaf0c0cf2e8536d7185d1dc54ce3d24bf26e53a4e14173d715215b986155cac942141039403770fecc324f21e837281f
 Size (SSH-Batch-0.030.tar.gz) = 77379 bytes

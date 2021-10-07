@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:16 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:54 nia Exp $
 
-SHA1 (grun-0.9.3.tar.gz) = 53ed0f6d449331b6967d3f49d67072c8714a1305
 RMD160 (grun-0.9.3.tar.gz) = efb7c197de41c2060042b9111ceba3aa8e02b67c
 SHA512 (grun-0.9.3.tar.gz) = cac78955f59d9981b2b39dce701fa508d00b1d39c8c05ac417cf8ed81419092949765e572f2f3d01bc1d916c28d0a428f84282111264adda9078261fa286e7d0
 Size (grun-0.9.3.tar.gz) = 368318 bytes

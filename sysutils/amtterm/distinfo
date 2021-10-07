@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/12/31 13:10:00 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:57:33 nia Exp $
 
-SHA1 (amtterm-1.6.tar.gz) = ad1f928426b9bccead1f7d36e551c29885eff97d
 RMD160 (amtterm-1.6.tar.gz) = 9fb55ade1f5ca3015be0794236ea3031fc137367
 SHA512 (amtterm-1.6.tar.gz) = b10777727cf7f931e4b04fff7c621ea6e94989738833fe4f830bd795c8be3b0e983100b34a2ea5feb48221f022b3498a819c9f4fba9c7722226d56d374a1d986
 Size (amtterm-1.6.tar.gz) = 40804 bytes

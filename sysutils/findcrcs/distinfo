@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/04 08:42:11 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:50 nia Exp $
 
-SHA1 (findcrcs-0.3.tar.gz) = 5144f3d17c318706b3e8113242bccfc59b62bfb7
 RMD160 (findcrcs-0.3.tar.gz) = 05e6c25a15f1cfa78bad06a76e8862ffaf25e897
 SHA512 (findcrcs-0.3.tar.gz) = b55a59fc3b2d11f10c87cb05d428409043bdcaaefc42a10c456f5fffc3ede18cc02f09397399cc60a6295666872776eb10662ec089d315f512129faac26b7d4f
 Size (findcrcs-0.3.tar.gz) = 3981565 bytes

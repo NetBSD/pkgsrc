@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/03/19 17:48:32 triaxx Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:58:28 nia Exp $
 
-SHA1 (smartmontools-7.2.tar.gz) = 8d68241096f6ed5b1bbcd8b427fa4a881c1f3e33
 RMD160 (smartmontools-7.2.tar.gz) = 51a00e9ac83c5f16af20f220b129180c953385a9
 SHA512 (smartmontools-7.2.tar.gz) = d7e724295b5d53797b5e4136eea5f5cc278db81e4016ba65142438b8c68c54f85a32c582c147a1590b9bc8f74a58952bcb57b9923dd69d34582530a0985799ea
 Size (smartmontools-7.2.tar.gz) = 992256 bytes

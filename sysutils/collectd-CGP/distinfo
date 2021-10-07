@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/24 22:39:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:57:40 nia Exp $
 
-SHA1 (collectd-cgp-1.zip) = 38965c92c217cefba68a80165481af043957143c
 RMD160 (collectd-cgp-1.zip) = 83562f3777c93efff254e7010d66f502bdd8cefd
 SHA512 (collectd-cgp-1.zip) = 8b1b1edabe188644c94cb66e6dd2ca4727312e6c5ea237514a644cabeb19ae46e9512e63af63b7c252b185b2f1aa02b1ac726e7df7cf28fa8f2949f9f5681fc8
 Size (collectd-cgp-1.zip) = 165843 bytes
