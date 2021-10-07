@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/06/20 12:13:19 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:49:26 nia Exp $
 
-SHA1 (dgen-sdl-1.33.tar.gz) = 08629d9396a582ecc1ca50dba2f211e9405c5adc
 RMD160 (dgen-sdl-1.33.tar.gz) = 4c6df66bf861390db7150e12c0252de6b549218b
 SHA512 (dgen-sdl-1.33.tar.gz) = c98ab8cdced62a5d26fd677ad36b031e756620114c946ac067599e84ae6ebcfab731554dd4337b6314c3b5db4601c8a6cc67c285d2aad136e659b9973c01a749
 Size (dgen-sdl-1.33.tar.gz) = 939297 bytes

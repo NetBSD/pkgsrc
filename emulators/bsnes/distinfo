@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/10/20 12:21:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:22 nia Exp $
 
-SHA1 (bsnes-115.tar.gz) = 3123e1e58d16c77f85fe2bf5e3a2681b83c63e20
 RMD160 (bsnes-115.tar.gz) = 020291f3116197c9900f805f29eb973d76bde664
 SHA512 (bsnes-115.tar.gz) = 80b993bd6ab6f3e4772e97cdce504ea4e511bc09d551d7ad19a42c1676880645adb3b286bf803c715f5b0f6e2c410cea73845bcb7e83089ebb59111eaa3da5b3
 Size (bsnes-115.tar.gz) = 4145996 bytes

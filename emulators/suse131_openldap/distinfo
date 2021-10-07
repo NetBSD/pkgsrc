@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/06/17 17:21:39 tsutsui Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:49:50 nia Exp $
 
-SHA1 (suse131/libldap-2_4-2-2.4.33-8.9.2.i586.rpm) = 368ee55553d793b4e32752aa12ba30944881149a
 RMD160 (suse131/libldap-2_4-2-2.4.33-8.9.2.i586.rpm) = d486738557f4f34a385648de4cdfea31cba9dd6a
 SHA512 (suse131/libldap-2_4-2-2.4.33-8.9.2.i586.rpm) = fc2ba3d9250b8ee8811e8faa25319a5f9304917f5458481f08caf83c14cdbe6a201650e35d4598d91f3217370a9bbe568e6f5b3705adc7e01dd6d0532311743f
 Size (suse131/libldap-2_4-2-2.4.33-8.9.2.i586.rpm) = 203688 bytes
-SHA1 (suse131/libldap-2_4-2-2.4.33-8.9.2.x86_64.rpm) = 9eb9fcfb2dcf173b12e3dccef58a55c35f5046a4
 RMD160 (suse131/libldap-2_4-2-2.4.33-8.9.2.x86_64.rpm) = 8c5b47db97b5baff44ecd19bcde9cfa7a6952ad7
 SHA512 (suse131/libldap-2_4-2-2.4.33-8.9.2.x86_64.rpm) = 210c75990a52477cfc3b58896669df2e6634af452b1dd551d9d9e009367e8bcab1bab75726db7355d905fb32b0032e638cf07e949a0f009a23d8edd74803a2db
 Size (suse131/libldap-2_4-2-2.4.33-8.9.2.x86_64.rpm) = 208048 bytes

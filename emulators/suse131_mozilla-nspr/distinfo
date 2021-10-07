@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/06/17 17:21:39 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:49:49 nia Exp $
 
-SHA1 (suse131/mozilla-nspr-4.12-34.1.i586.rpm) = a3518a65638b97562bec533140ed9f444d3bf13f
 RMD160 (suse131/mozilla-nspr-4.12-34.1.i586.rpm) = c246bd03e6d4de460382a2623ef36380ff8d3512
 SHA512 (suse131/mozilla-nspr-4.12-34.1.i586.rpm) = bfb6d0bd0c4fe5921680a378159e611746b5f796ea7d8f016cce14e7ac356d534f89a20a2fb3a10589117aed7479f3ae6ce2a9d287c1cb74cf5090a38345dff4
 Size (suse131/mozilla-nspr-4.12-34.1.i586.rpm) = 116235 bytes
-SHA1 (suse131/mozilla-nspr-4.12-34.1.x86_64.rpm) = b28e7aef4352698559c16212dbd7b88c4e942408
 RMD160 (suse131/mozilla-nspr-4.12-34.1.x86_64.rpm) = 14b186802d605dd437fed8c2b0a9c87a8d49746f
 SHA512 (suse131/mozilla-nspr-4.12-34.1.x86_64.rpm) = 68f4d3abffa25b7844a7d027fb7d72891b6bfbb093a2f5c6777c45650d2e28f4a43b36da52c8e97c14091731464ebb0a266a4f0d231a46c51beeb810da35c08f
 Size (suse131/mozilla-nspr-4.12-34.1.x86_64.rpm) = 116066 bytes

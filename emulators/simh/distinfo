@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2020/02/18 16:49:50 joerg Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 13:49:38 nia Exp $
 
-SHA1 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 58d77b58be3850d5f1cd9a7cdcb24d1e110bd71e
 RMD160 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 0b2ad6107006f89b0ca66ddc556c2f00df56937c
 SHA512 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 1c17430e74022cb5a9aebc784dc1a223fbbe323799ab528a9c788db8e3dbad01b7635da3c3dc158fcd28103c5fc462ce0fc3e9cdd90c298ff6ecdeb3dfd5f0a8
 Size (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 12077046 bytes

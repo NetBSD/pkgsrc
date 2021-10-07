@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/06/13 13:02:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:32 nia Exp $
 
-SHA1 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = b4c6492680fd84a8dc4d7ef025ab648438e305dc
 RMD160 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 5545255f788358f03ab5340436d75a17e28d8523
 SHA512 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 0c6bf51960a36069912a0d44dfc96a0cc8fd352e6e06087bd11dd309045b8f0efbd83629f894f213f822efe73d3f94a9f3461cfc3f14c77c56ead664bcc23acd
 Size (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 4301350 bytes

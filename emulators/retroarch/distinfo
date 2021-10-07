@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/03/05 11:18:39 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:49:37 nia Exp $
 
-SHA1 (retroarch-1.9.0/retroarch-assets.tar.gz) = f1e00377a5e3ec0ceabeab55ac5f661fc610a532
 RMD160 (retroarch-1.9.0/retroarch-assets.tar.gz) = ea66a38122f8cc25f3a7d205f7f145d5e1f43451
 SHA512 (retroarch-1.9.0/retroarch-assets.tar.gz) = ba31152fa526b23f44aead13d8d3975c480b9748443233b2fa7501b697a7b49bf00de8a16669858124f511a1c1fd8ae6f1f8f019c68b3c08e687be6404717f9c
 Size (retroarch-1.9.0/retroarch-assets.tar.gz) = 159084018 bytes
-SHA1 (retroarch-1.9.0/retroarch.tar.gz) = 49ac34c1c7047a580f1e436ec13fee0a7b70adf9
 RMD160 (retroarch-1.9.0/retroarch.tar.gz) = 660461ac30aee68b741365feb9a095b3e82d9316
 SHA512 (retroarch-1.9.0/retroarch.tar.gz) = 228312424325fae12f5647e8774fb546e9a379d7a61a831d84e4c45b0a8ad9c3a2c2d0fd6442347842a71f39be2e0ef9d4302900279fe7e61d5def2966b636c3
 Size (retroarch-1.9.0/retroarch.tar.gz) = 39152024 bytes
