@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/08/01 02:57:12 jnemeth Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:27:01 nia Exp $
 
-SHA1 (asterisk-13.38.3/asterisk-13.38.3.tar.gz) = 56653f0685dc0d5271cac32e5ec0268b627685ef
 RMD160 (asterisk-13.38.3/asterisk-13.38.3.tar.gz) = d34103dd29398640288aed65081a923bf8be62d4
 SHA512 (asterisk-13.38.3/asterisk-13.38.3.tar.gz) = dd67f73704f1c68639313852ba1508165c7b525f0f4156c776258e27ee19a0ee87293ae7805178b0f37188fca91b861c52b5206cbba754a6181492d0efb7e895
 Size (asterisk-13.38.3/asterisk-13.38.3.tar.gz) = 33711458 bytes
-SHA1 (asterisk-13.38.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
 RMD160 (asterisk-13.38.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
 SHA512 (asterisk-13.38.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
 Size (asterisk-13.38.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
