@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/07 12:28:27 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:26 nia Exp $
 
-SHA1 (kidentitymanagement-20.12.3.tar.xz) = e5c30151622588b6addb7485ec89df21d24cc691
 RMD160 (kidentitymanagement-20.12.3.tar.xz) = c93d458c2e750756db4061169119700547c7204f
 SHA512 (kidentitymanagement-20.12.3.tar.xz) = 24ea71f45bb1dc0efcd9acc03f4a05c4558a77a24689dfc70a3dfecb8a697c7282e05e3d212466961e37661c2c8522606f909df0b750e3b203e3843ea3729e02
 Size (kidentitymanagement-20.12.3.tar.xz) = 152000 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/02/01 11:21:58 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:35:13 nia Exp $
 
-SHA1 (bbdb-2.35.tar.gz) = 5fc27ed404e7de1628494a706da96504398ffd20
 RMD160 (bbdb-2.35.tar.gz) = ea212acd00c18b9a8c3a8b1aa4b1c5727ea3a55c
 SHA512 (bbdb-2.35.tar.gz) = 28a7dcf8521e78621aad9369d346d942fe5b08d868f2286b12921e0d6924f9d9495066223b1aa71862a71558d0f85dca40fbe0ce8880844fb2be5ccb931fd60c
 Size (bbdb-2.35.tar.gz) = 767464 bytes

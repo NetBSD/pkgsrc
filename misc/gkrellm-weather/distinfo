@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 23:49:36 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:35:20 nia Exp $
 
-SHA1 (gkrellweather-2.0.7.tgz) = 53f62999a4aff018f6943b8b56dd9e54907754c3
 RMD160 (gkrellweather-2.0.7.tgz) = a8f92a45ea048c194970f5615e50c4b08120efe0
 SHA512 (gkrellweather-2.0.7.tgz) = 103212f5d8c66c512cf22689f5e64e886e2df57b963a2c01873f6d2044653653d2bd8d5804ed788f202e2bb2b7289090198434ddad363c124c047bcc530e04e3
 Size (gkrellweather-2.0.7.tgz) = 19968 bytes

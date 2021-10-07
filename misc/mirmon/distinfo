@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/09/18 04:32:08 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:35:31 nia Exp $
 
-SHA1 (mirmon-2.11.tar.gz) = 5fcceca98701e1a05f75b28087f5024989e210a0
 RMD160 (mirmon-2.11.tar.gz) = f7414d91a33a9356befe4f34ac59bbd3fe43dec8
 SHA512 (mirmon-2.11.tar.gz) = d489d9560369dfe65dbc413f1b9481634e8e9127d8b544ad6857f57b4fa76a6e5069b7d03dfa97706d1285f5a6c84b8e560bfedce61a5cee6a2c83c4f8b94f48
 Size (mirmon-2.11.tar.gz) = 72482 bytes
