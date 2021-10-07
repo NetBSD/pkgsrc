@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/11/09 07:30:59 dholland Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:18:29 nia Exp $
 
-SHA1 (unixbench-4.1.0.tgz) = 0a43d9cf08869c0f81bde4647be6bcf76c064248
 RMD160 (unixbench-4.1.0.tgz) = 182e8a35574df0cd7984662bf99d47a7e24e7e03
 SHA512 (unixbench-4.1.0.tgz) = 4bca36cd2b5425c74aed58b34d2bbc1a4e5db9b9fe0c24946bacc239dc2ef9f643bb088e83c7b4b9682d92328bd3a8c0788855c887334c92f03e0ba9acb09480
 Size (unixbench-4.1.0.tgz) = 63075 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/04 05:05:59 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:18:28 nia Exp $
 
-SHA1 (R/rbenchmark_1.0.0.tar.gz) = ebeec0b8ce6b43c89ee552aba488cfe0f59d1cce
 RMD160 (R/rbenchmark_1.0.0.tar.gz) = ba93ce5349c17ec6883b6985f4b648e0c62edb6d
 SHA512 (R/rbenchmark_1.0.0.tar.gz) = 3857df545cf37246aa80de061ff62544a6114cfc73ae66bfac7d8a78fc32d45e08b70648edea528cca4db0ef4b351f9f71bedfc64a7d8f3ecbd423848a715a7f
 Size (R/rbenchmark_1.0.0.tar.gz) = 5093 bytes

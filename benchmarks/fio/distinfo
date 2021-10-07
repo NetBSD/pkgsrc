@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/04/30 09:42:27 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:18:30 nia Exp $
 
-SHA1 (fio-3.19.tar.gz) = 02503623deb40fae2b12c09cdf5f4b9339902f7b
 RMD160 (fio-3.19.tar.gz) = 1bfeee6af3fd5b94d134df9ca3c308dd84e7e24d
 SHA512 (fio-3.19.tar.gz) = 2154fb1c91f30c56182a85f0011ad5d1d25f3857a33165ea46f15a413bc8e47d0150026a7f87e901bcb5d587bc96bf22e62bc689bcfdc99976d82808f58a99fe
 Size (fio-3.19.tar.gz) = 1006012 bytes
