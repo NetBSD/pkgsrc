@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/02/16 18:19:08 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:14:30 nia Exp $
 
-SHA1 (xf86-video-tdfx-1.5.0.tar.bz2) = 8042dd0c2bc5a396b2cfeb5418b03059a089be25
 RMD160 (xf86-video-tdfx-1.5.0.tar.bz2) = 7477efe9097e270cfe41102ecf25c89c5622217f
 SHA512 (xf86-video-tdfx-1.5.0.tar.bz2) = eca3359c7db56183a1cfcce7295e41ccc349005ee1cbcf75209f1e4e8e04e887ba511712ef35efc11c940713c8327b0b8ab8b6c86facf02062b3e84c0b1af5ff
 Size (xf86-video-tdfx-1.5.0.tar.bz2) = 371315 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/04/07 12:28:32 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:13:48 nia Exp $
 
-SHA1 (konsole-20.12.3.tar.xz) = 6fe6388ef450b5fb718abcac4c9b7fa43adc191b
 RMD160 (konsole-20.12.3.tar.xz) = 1666f8e199eca51894bacf20e01c9fdf84588572
 SHA512 (konsole-20.12.3.tar.xz) = a48eaa0080b26369f5f163f3ae345bca7f35aa06d581ecc0bbeca54fee2e9b900a4b648f940a67f506ecb00dba971220f1c1c7a699efcbb6e27ee0932c27e37a
 Size (konsole-20.12.3.tar.xz) = 1250536 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:13:34 nia Exp $
 
-SHA1 (gromit-20041213.tar.gz) = f83bdadc90988634a27865eac5da9e847febec37
 RMD160 (gromit-20041213.tar.gz) = e20e1cea9fb5245143f0dd24b209cc17d3becd3f
 SHA512 (gromit-20041213.tar.gz) = 8d10953bf0500e9b411ce6d7b6c43b295ab64113e8a873438409de8a1aad19b685483045341b0af889e7c833816f035c95dda90d3c201caf7c69ea7cbad57e42
 Size (gromit-20041213.tar.gz) = 21970 bytes

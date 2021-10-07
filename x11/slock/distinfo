@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/11/23 08:20:21 leot Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:13 nia Exp $
 
-SHA1 (slock-1.4.tar.gz) = 65b821a0953daa919b5ac69b470d772033808ad7
 RMD160 (slock-1.4.tar.gz) = ac38666104a129f3b582ab9d1a2b0c9918b876bf
 SHA512 (slock-1.4.tar.gz) = ad285360dd3f16a225159abaf2f82fabf2c675bd74478cf717f68cbe5941a6c620e3c88544ce675ce3ff19af4bb0675c9405685e0f74ee4e84f7d34c61a0532f
 Size (slock-1.4.tar.gz) = 6889 bytes

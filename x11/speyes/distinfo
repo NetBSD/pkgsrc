@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 03:28:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:14:13 nia Exp $
 
-SHA1 (speyes-1.2.0.tar.gz) = 41863e3e64fac51152c070a1c51b2745a504c5c4
 RMD160 (speyes-1.2.0.tar.gz) = b5bee36abe2f635a14640fe50f6f5bca3d08c130
 SHA512 (speyes-1.2.0.tar.gz) = 6536cf23e18b6eaca8983ac55fb79e6d9f4dba5d592939bec0698b4efc36ec045e4b92a3d5d9eefb39629f3444cbac2ba208bcba8edef77532f5420346c6e359
 Size (speyes-1.2.0.tar.gz) = 29973 bytes

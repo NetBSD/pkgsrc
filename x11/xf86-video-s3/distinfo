@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/11/14 11:07:12 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:14:29 nia Exp $
 
-SHA1 (xf86-video-s3-0.7.0.tar.bz2) = ddcd103a8e955b30f09c0336623fe1341f92ff12
 RMD160 (xf86-video-s3-0.7.0.tar.bz2) = e0d867a0bfab79633e0591a686b75a479b03aeb1
 SHA512 (xf86-video-s3-0.7.0.tar.bz2) = 6158e3f7dba8b4770758fa43c686a316c11f70966f80e015ae0087d90a036062237adeb7ad0f6aa21cc46b9d08ad38c964940ff503b58b502e87cf11be60cdd4
 Size (xf86-video-s3-0.7.0.tar.bz2) = 348923 bytes

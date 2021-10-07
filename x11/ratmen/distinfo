@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/11/24 17:33:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:14:10 nia Exp $
 
-SHA1 (ratmen-2.2.3.tar.gz) = 19577497d7432d40f9706cfcd958512efad4bda6
 RMD160 (ratmen-2.2.3.tar.gz) = ae2663e8a4ce17047687b66f6af261164e24b4a5
 SHA512 (ratmen-2.2.3.tar.gz) = c57d53176c931d419a1404e5415a16ce8a1bae67b4473f578fca3ac2b9063c7a3ed02b4ada1d2aa4872e7f43d5d598fd222b05f2503a3e92e56473409a1ab140
 Size (ratmen-2.2.3.tar.gz) = 25026 bytes

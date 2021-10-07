@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/11/19 11:03:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:03 nia Exp $
 
-SHA1 (picom-8.2.tar.gz) = c07ba3f3016a1a333054a26be540262daa4ec854
 RMD160 (picom-8.2.tar.gz) = 976cc0b70cdc30e5e8a3c343694b94f67f3fbd9c
 SHA512 (picom-8.2.tar.gz) = bdc6675e73a211075ee0df2b056342cabb19ad27fd73586f5216886f503cd994536845eb866f371e07a8dc0404346c67b899a14830e9b7cbc9c01cbd782f36b1
 Size (picom-8.2.tar.gz) = 242653 bytes

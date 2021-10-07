@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/08/24 06:30:58 tnn Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:14:00 nia Exp $
 
-SHA1 (modeline-20060729/modeline_vfr.c) = 0ce2771e46344fde9abc3d81c2a8775265c955c2
 RMD160 (modeline-20060729/modeline_vfr.c) = 42f03cd4851e5d222ee8b8dce3d4ddd17640a88c
 SHA512 (modeline-20060729/modeline_vfr.c) = 8a85f5b8546930e88893adbdae2499932de97795fa8735a45964d3d2ba13941aec28800210e2a6c9b4e038aff687bcb083c166bf1b73348f07c274471f4e4c13
 Size (modeline-20060729/modeline_vfr.c) = 2437 bytes

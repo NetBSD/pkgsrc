@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/06/07 22:54:29 youri Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:01 nia Exp $
 
-SHA1 (mxterm_129.tar.gz) = 863732aa1096aac58f42f8f6c94c95bfa189aaf7
 RMD160 (mxterm_129.tar.gz) = 67e40886f25c60752d94cdb3bda831baf1863eb9
 SHA512 (mxterm_129.tar.gz) = c4f8f4b0e84d9ab367becb4b734f9ad2845575de4ccada9c8cd2f99e4f69b6a3aabd10fb6cecc7458de91393db3764e1dd1efcc16c4864eb3031bd61943f8152
 Size (mxterm_129.tar.gz) = 743816 bytes

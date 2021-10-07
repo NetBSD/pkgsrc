@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/02 21:43:20 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:09 nia Exp $
 
-SHA1 (qt5ct-1.5.tar.bz2) = 8cdc1c60f7379e89ee503ff0de5457d263e40d33
 RMD160 (qt5ct-1.5.tar.bz2) = 4a88b9bb40db1ce68d428ee8da9032a05497f969
 SHA512 (qt5ct-1.5.tar.bz2) = fc16c7849a89aa8ee9480162888294638bc01f83b89d86c978397e58f6da4360cf07b9f558635b8a5b13bd10d18f3ad49663fe8a76183da9ae55aac23230b1e5
 Size (qt5ct-1.5.tar.bz2) = 81089 bytes

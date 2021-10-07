@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/09/19 08:41:56 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:14:12 nia Exp $
 
-SHA1 (rxvt-2.7.10.tar.gz) = dabb960d94703d4f81e9a9a50749210a2977ef2b
 RMD160 (rxvt-2.7.10.tar.gz) = 1bea3ff456b4f9ddce187b3e3a0ac11a7363c8eb
 SHA512 (rxvt-2.7.10.tar.gz) = cff86c2f94c533d906b412a949fe754726a0c67d87534b8f9794080898aa20744ee5de6f9109e9de1db14291cb6de7c1c4c1944ec9192e4ea42b0a3fe598b2a1
 Size (rxvt-2.7.10.tar.gz) = 595073 bytes

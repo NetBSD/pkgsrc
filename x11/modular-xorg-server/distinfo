@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.113 2021/07/31 08:12:29 wiz Exp $
+$NetBSD: distinfo,v 1.114 2021/10/07 15:14:00 nia Exp $
 
-SHA1 (xorg-server-1.20.13.tar.xz) = 4a846a4affeb3863e23c1d57a3b1bca4374a2ddb
 RMD160 (xorg-server-1.20.13.tar.xz) = 69cf94d6cc6cbab716619746830bb9adc136f974
 SHA512 (xorg-server-1.20.13.tar.xz) = 4e0b7bd4e070dc52cb2c51c2056feb133de2c0487d359392ed63abba9702910cd2e2983e9415973d8d6e9672eac78be6f39202687fc56610877914ce722554b3
 Size (xorg-server-1.20.13.tar.xz) = 5122260 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.56 2021/01/20 20:40:28 adam Exp $
+$NetBSD: distinfo,v 1.57 2021/10/07 15:14:14 nia Exp $
 
-SHA1 (tk8.6.11-src.tar.gz) = bce8d477fd64f4e626e1fb9bd5a1aeca65bd85cb
 RMD160 (tk8.6.11-src.tar.gz) = 5ddb89a523471b56f8ac7f1be3f1117497801e64
 SHA512 (tk8.6.11-src.tar.gz) = 2e11490f2f51ef7e723661dd91c95622234fb97850e80d8ecd564be8c28f7c8fb0334a97cf8267af9d68f63e4adea887a1a4eec8d2e807d6a970b5912f99d3f2
 Size (tk8.6.11-src.tar.gz) = 4496914 bytes
