@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/07/16 08:50:50 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:56:10 nia Exp $
 
-SHA1 (fish-3.3.1.tar.xz) = 2a220f67b8eee0e0f2439411e9cc6c0320970caa
 RMD160 (fish-3.3.1.tar.xz) = 9ec5b3ee590427a9e7d7b4691da13970385ded0f
 SHA512 (fish-3.3.1.tar.xz) = fc50ca44fab3f2d942284d4f714150f7ccf1e49c73da36f8d4ae4a33a9b3280f98bed15848839f5d443b4274fd0ff90174bafa6a8e9a4da226dda63d7766a660
 Size (fish-3.3.1.tar.xz) = 3489152 bytes

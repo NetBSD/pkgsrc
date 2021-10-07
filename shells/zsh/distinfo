@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.71 2020/12/25 21:47:47 ryoon Exp $
+$NetBSD: distinfo,v 1.72 2021/10/07 14:56:13 nia Exp $
 
-SHA1 (zsh-5.8.tar.xz) = 966ea0498fb94140f3caf12af88e98b0e4d02078
 RMD160 (zsh-5.8.tar.xz) = 4d387cbdaf9db52e24678871cd399c3bd5564429
 SHA512 (zsh-5.8.tar.xz) = 96198ecef498b7d7945fecebbe6bf14065fa8c5d81a7662164579eba8206b79575812d292adea1864bc7487ac0818ba900e25f9ab3802449340de80417c2c533
 Size (zsh-5.8.tar.xz) = 3193284 bytes

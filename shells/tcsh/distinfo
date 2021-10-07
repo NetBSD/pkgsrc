@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.46 2020/07/14 21:48:29 christos Exp $
+$NetBSD: distinfo,v 1.47 2021/10/07 14:56:12 nia Exp $
 
-SHA1 (tcsh-6.22.02.tar.gz) = d3c916c82eec7e20c49dedf660edd51a7971f8ab
 RMD160 (tcsh-6.22.02.tar.gz) = f6c7d6521e1e092dd2c68727e45fbadd54af82e4
 SHA512 (tcsh-6.22.02.tar.gz) = 32d271b568c63265ea4c98494f5e60b37c3a3fc2594e8763b8f6f0b09018ab9db7ef6f951120b37f7880ccf04ba3a2559e30dc08d24f4ba9dc36853238d55980
 Size (tcsh-6.22.02.tar.gz) = 1006405 bytes

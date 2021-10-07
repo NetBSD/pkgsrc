@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/11/28 19:31:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:56:13 nia Exp $
 
-SHA1 (zsh-completions-0.27.0.tar.gz) = d942d4069080ae4dec20fd94f68765e7ff09e6a6
 RMD160 (zsh-completions-0.27.0.tar.gz) = 62162a53dda531fbd901761496350dae77499eac
 SHA512 (zsh-completions-0.27.0.tar.gz) = 1c25fce14117d6eb652e2d3bfb49e68baa9f7c5832031582ec8c3066b91f07491067ff887647177048b51146beda1bcac7080abf140ea5ef846fcdd8ac388b8c
 Size (zsh-completions-0.27.0.tar.gz) = 218869 bytes
