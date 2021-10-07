@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/09/01 14:32:31 gdt Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:17:20 nia Exp $
 
-SHA1 (chirp-daily-20210830.tar.gz) = c4d7e1929999a36aee87f2616943eed217de0d80
 RMD160 (chirp-daily-20210830.tar.gz) = 7330794c6c34480e4d159e5efaaad1b9a8a98777
 SHA512 (chirp-daily-20210830.tar.gz) = 9cef64819bf45095e60678da60548581dfb339efcd4b8b11f7c44fbaee347b213feb8ced0f5a9333d7e6677a9eccd8823aaa17fb3e5f6358915480f358036252
 Size (chirp-daily-20210830.tar.gz) = 1012666 bytes
