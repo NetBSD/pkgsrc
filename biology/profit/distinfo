@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/02 18:42:22 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:19:42 nia Exp $
 
-SHA1 (ProFitV2.2.tar.gz) = 57e94944fd469ab24d53f15a5a836498c4bb7d1d
 RMD160 (ProFitV2.2.tar.gz) = 5674c0eb51af6629fd0f1b39585209fa18393e65
 SHA512 (ProFitV2.2.tar.gz) = 66224f3e15d1ed8a75fa67612ebea0dd797d818214ad6c06736d6c568bfa79bf0413158ce2599bf1b1bd1ad61520ab38b6a36e9c857cbe8aeec736fb04aba1da
 Size (ProFitV2.2.tar.gz) = 242731 bytes

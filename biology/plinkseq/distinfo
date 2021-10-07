@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/12/17 12:55:29 rillig Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:19:42 nia Exp $
 
-SHA1 (plinkseq-0.08.tar.gz) = 8bff6b32750eee85559dda2c7c3cf9aea423a3d7
 RMD160 (plinkseq-0.08.tar.gz) = bce0966ea5f25d8c1091157561aaf533a98595ec
 SHA512 (plinkseq-0.08.tar.gz) = c82db774df26988f9af377d5493cf579bbf1a219b43987f74381f795ade2340dd486c8d7d629612fd6068a023ea605540f2c972bf7fb71d665730262ef94cb80
 Size (plinkseq-0.08.tar.gz) = 2991871 bytes

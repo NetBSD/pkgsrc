@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/07/23 19:22:00 bacon Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:19:40 nia Exp $
 
-SHA1 (kallisto-0.46.1.tar.gz) = e39adb9801049836dcd7ac52e775f64af4d0a51b
 RMD160 (kallisto-0.46.1.tar.gz) = 8e42c5c52f19ec2e37f8591f7472a969b479bfd4
 SHA512 (kallisto-0.46.1.tar.gz) = 53a4db8fd5e0585693d8cd683651b4bdcc84c724a19e80a6162f1844fd491eb2d4e3180be2d9aabea7d49c9cbe0a05250f41da7d1de89d5d6cb6a8806f1afb7d
 Size (kallisto-0.46.1.tar.gz) = 2254560 bytes
