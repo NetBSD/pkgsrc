@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/05 07:51:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:51:04 nia Exp $
 
-SHA1 (ori-0.8.2.tar.xz) = 88856d3ceef858cca157c1ea7d9d6e29188109ec
 RMD160 (ori-0.8.2.tar.xz) = bf6ff123b6eae465477bc10a6ef72a24dde44df0
 SHA512 (ori-0.8.2.tar.xz) = 19e913506cb5edb4961def9f19a97a9e3ac54d32f20e379830349fd8d5a37923ce97b3419a04d6cbd665c74d4aa0cd9a3cf6d23c5b7c63440f2cf3f51a8ac8bd
 Size (ori-0.8.2.tar.xz) = 238576 bytes
