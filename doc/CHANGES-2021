@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5056 2021/10/07 09:03:54 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5057 2021/10/07 11:47:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7755,3 +7755,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/opencv to 3.4.15 [adam 2021-10-06]
 	Updated graphics/opencv-contrib-face to 3.4.15 [adam 2021-10-06]
 	Updated textproc/lowdown to 0.9.1 [fcambus 2021-10-07]
+	Updated sysutils/macchina to 1.1.8 [pin 2021-10-07]
