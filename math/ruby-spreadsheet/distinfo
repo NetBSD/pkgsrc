@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.53 2021/05/30 09:33:10 taca Exp $
+$NetBSD: distinfo,v 1.54 2021/10/07 14:28:29 nia Exp $
 
-SHA1 (spreadsheet-1.2.9.gem) = d68769bbdb20dba78d38a6e4dcccf6aebdbbf022
 RMD160 (spreadsheet-1.2.9.gem) = 25b2ed8b260eb5efb6ac441282a25650c2e8c342
 SHA512 (spreadsheet-1.2.9.gem) = d8ad8516476fbdce88fbd20d7c7d967a16fc3ab51354be3a80a3bbfad62b377c405ae115018dad98b780636f44f912afcff582991dff3e978755d9b85be3aa3e
 Size (spreadsheet-1.2.9.gem) = 368640 bytes

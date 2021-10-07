@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 19:25:41 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:49 nia Exp $
 
-SHA1 (R/forecast_8.7.tar.gz) = 1174b66990f89015f095d1c3f27da414757c54cc
 RMD160 (R/forecast_8.7.tar.gz) = 2bfe93af64689ed4820137b463edf46004199197
 SHA512 (R/forecast_8.7.tar.gz) = 096f813bc77c843c5cbeba9bfa36d6f91c6781ef7ec88acc5fc9f243cde4978083de0f6662e1458191709efa8b0f77798f36ea2deab5ccd18c47af0478861352
 Size (R/forecast_8.7.tar.gz) = 909190 bytes

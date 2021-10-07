@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/06/28 08:30:05 wiz Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:28:05 nia Exp $
 
-SHA1 (gsl-2.7.tar.gz) = 29179db0d746f422bb0ceca2cbda4de107a2c651
 RMD160 (gsl-2.7.tar.gz) = 06ef50b9f39ed205070d48936d7db40975156b9e
 SHA512 (gsl-2.7.tar.gz) = a14ac5400acaf4884620430dbeb6f0b28eafe946923b792ab0eccc2a2abc9113d8ce342f4b1e5396f05247649f7d6f953944a8e6bdbf9ee1adb9e67b7c3df2b5
 Size (gsl-2.7.tar.gz) = 7508761 bytes

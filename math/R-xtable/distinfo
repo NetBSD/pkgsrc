@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/07/31 20:37:45 brook Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:27:56 nia Exp $
 
-SHA1 (R/xtable_1.8-4.tar.gz) = 976fd0d383fd7d3901b93d6533e45087d408e044
 RMD160 (R/xtable_1.8-4.tar.gz) = a933bf73256425cdd77abb1a42c906830046f148
 SHA512 (R/xtable_1.8-4.tar.gz) = 0143e22d3fc60c30159387f1614ecb269bc90d8d7a32d10f7f1e7f77863dfe33a71ca95cb1abd7b3d0f889e26a63d16e60dea4a1d4a33bbcbe6b5c823ed96b09
 Size (R/xtable_1.8-4.tar.gz) = 564589 bytes

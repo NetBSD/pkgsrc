@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/05 19:45:49 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:28:21 nia Exp $
 
-SHA1 (asdf-2.7.3.tar.gz) = 93e613bd6d2b5ef65cb0d53f9c4fe31f3162bb53
 RMD160 (asdf-2.7.3.tar.gz) = 59c0a16528293e481d631746a7f4d7aee3d65b5e
 SHA512 (asdf-2.7.3.tar.gz) = 3fb713f536213cae49a9f30273f411327be02d59d61ee39d2ab7a643655359eda8698c801d10f3922ef1a5fb8a7070ce08ef0fc36b556dfe9632a7e8baef9dfc
 Size (asdf-2.7.3.tar.gz) = 509984 bytes

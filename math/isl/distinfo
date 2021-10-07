@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/05/02 17:47:30 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:28:06 nia Exp $
 
-SHA1 (isl-0.24.tar.xz) = d16012cf5bf35684ef0de68dab55279d34df4909
 RMD160 (isl-0.24.tar.xz) = 16e9b8e1758c05e9fcbdc76f83c13a927f2d66d7
 SHA512 (isl-0.24.tar.xz) = ff6bdcff839e1cd473f2a0c1e4dd4a3612ec6fee4544ccbc62b530a7248db2cf93b4b99bf493a86ddf2aba00e768927265d5d411f92061ea85fd7929073428e8
 Size (isl-0.24.tar.xz) = 1930956 bytes
