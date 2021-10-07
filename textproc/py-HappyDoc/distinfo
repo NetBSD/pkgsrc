@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:00:01 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:05 nia Exp $
 
-SHA1 (HappyDoc_r2_1.tar.gz) = f1b22586d358af6679b09bf475a05e49742aa358
 RMD160 (HappyDoc_r2_1.tar.gz) = f615f72138fe7d5c1e77c89da43c23e5f2fe9e0f
 SHA512 (HappyDoc_r2_1.tar.gz) = 226de5ef8f6c9fc4988dd8ef67c92a6c9a3c1c5a6a644d1efd55d047c4a1a2db027dab010df0d0fd6d769e011077a9cabbb59c82440d10a98e260526e9bbff86
 Size (HappyDoc_r2_1.tar.gz) = 523968 bytes

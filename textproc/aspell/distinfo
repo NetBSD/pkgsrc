@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.32 2021/05/11 01:26:25 rin Exp $
+$NetBSD: distinfo,v 1.33 2021/10/07 15:00:40 nia Exp $
 
-SHA1 (aspell-0.60.8.tar.gz) = ae554df297aee676b4d16f261fa5c60e285478f6
 RMD160 (aspell-0.60.8.tar.gz) = 331a10149aa4efe9b6798137d6a56a0a44fcf570
 SHA512 (aspell-0.60.8.tar.gz) = 8ef4952c553b6234dfe777240d2d97beb13ef9201e18d56bee3b5068d13525db3625b7130d9f5122f7c529da0ccb0c70eb852a81472a7d15fb7c4ee5ba21cd29
 Size (aspell-0.60.8.tar.gz) = 3486448 bytes

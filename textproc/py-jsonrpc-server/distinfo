@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/11/07 18:56:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:13 nia Exp $
 
-SHA1 (python-jsonrpc-server-0.4.0.tar.gz) = 850406e455d8e48a9ae2ffa4a4ff81995eeb3946
 RMD160 (python-jsonrpc-server-0.4.0.tar.gz) = 0b4b335eaeb03323f1030c5a12b426c696e7a87d
 SHA512 (python-jsonrpc-server-0.4.0.tar.gz) = 062e5b75253b95e64918a9da86ad7e29d8a29019670e451b9a28d44cde064339953004c343be0e7dd40968ec9fc2420b5722265f56c2db8057d0f1eaf088dacc
 Size (python-jsonrpc-server-0.4.0.tar.gz) = 26491 bytes

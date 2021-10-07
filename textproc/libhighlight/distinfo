@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/05/13 14:06:09 schmonz Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 15:01:21 nia Exp $
 
-SHA1 (highlight-4.1.tar.bz2) = 0cd81c22b368b192b523f197a51ac59579cb1a73
 RMD160 (highlight-4.1.tar.bz2) = caaf0be6515db2e4d98f1cf7648f219875c97a8e
 SHA512 (highlight-4.1.tar.bz2) = 6e3ba72b2109f1b33fcebd1a426a8d4b3e12ee224b8a2069e7aab1391473594ccf9b35303bca5ca1339d2ce42bc6db2d16c1da7b1cdd451f5fabe672ca388731
 Size (highlight-4.1.tar.bz2) = 1469115 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.93 2021/04/21 08:30:17 adam Exp $
+$NetBSD: distinfo,v 1.94 2021/10/07 15:01:15 nia Exp $
 
-SHA1 (icu4c-69_1-src.tgz) = 620a71c84428758376baa0fb81a581c3daa866ce
 RMD160 (icu4c-69_1-src.tgz) = f458e5ec9dcb14b582d4577313ec922687ce9d1c
 SHA512 (icu4c-69_1-src.tgz) = d4aeb781715144ea6e3c6b98df5bbe0490bfa3175221a1d667f3e6851b7bd4a638fa4a37d4a921ccb31f02b5d15a6dded9464d98051964a86f7b1cde0ff0aab7
 Size (icu4c-69_1-src.tgz) = 24814903 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 14:40:31 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:05 nia Exp $
 
-SHA1 (cmark-gfm-0.2.2.tar.gz) = 175feefbbadd63fe45d0e8ec72e1896e40e313a8
 RMD160 (cmark-gfm-0.2.2.tar.gz) = da38f9866b2d78dd9fc68978ce9a2fc1f28c5e61
 SHA512 (cmark-gfm-0.2.2.tar.gz) = f4d5825b19beeef42402b0bed0928ebfb7923aee6c59d4937516877a89cce832667ff19fdf3a6279d484ffaad06d763e0ac4946275b1051c3cae12d7928a2567
 Size (cmark-gfm-0.2.2.tar.gz) = 201210 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/02 11:51:27 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:04 nia Exp $
 
-SHA1 (blaze-html-0.9.1.2.tar.gz) = 853ec4784ffe8c31e86078e7bb2c39b1f7aace15
 RMD160 (blaze-html-0.9.1.2.tar.gz) = e55012f5099f1fa9a6983e038c5698c1e56d1144
 SHA512 (blaze-html-0.9.1.2.tar.gz) = 26e5294285033fa453ab9914a5bdb37c42f5b7c3a10400be1ff6dd125a70499d556c106cc8128154dc0c455c8b80b489a883265fcb626e2d4afcd8e4d94374bc
 Size (blaze-html-0.9.1.2.tar.gz) = 81617 bytes

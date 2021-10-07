@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/08/31 19:55:58 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:01:49 nia Exp $
 
-SHA1 (Text-MultiMarkdown-1.000035.tar.gz) = 85465ac76154eb2d19e8c4893e2ce92d2443422f
 RMD160 (Text-MultiMarkdown-1.000035.tar.gz) = 47e2b76cd262814798c1861bdb26e46eb7429d11
 SHA512 (Text-MultiMarkdown-1.000035.tar.gz) = adb7db3c2293e268761c537d9415c98c3a88808c772618813a21656facf5afab0cbe7d1fa9707f920416a34be1dab13700755594c79ed822ae44420e05da6ab7
 Size (Text-MultiMarkdown-1.000035.tar.gz) = 112893 bytes

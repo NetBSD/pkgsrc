@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/28 23:55:26 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:07 nia Exp $
 
-SHA1 (black-20.8b1.tar.gz) = 65462f991edd03e8e7f4f26364d2ace6757b17b8
 RMD160 (black-20.8b1.tar.gz) = 63de27671405a15165325731e0b74e4bfe1be80d
 SHA512 (black-20.8b1.tar.gz) = f047c2a1ce759a8e19eed2e1869752bb8a63bf17a554aff5d9e834a48cd390b23918b78e01d5c36c0fb7599439d7e422847bde504ff698d53df5c5939a8870d2
 Size (black-20.8b1.tar.gz) = 1096433 bytes

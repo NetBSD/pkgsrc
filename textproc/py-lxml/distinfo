@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.58 2021/03/23 06:47:48 adam Exp $
+$NetBSD: distinfo,v 1.59 2021/10/07 15:02:14 nia Exp $
 
-SHA1 (lxml-4.6.3.tar.gz) = a14e8b1cb38f3ed425e2d9b22950ce64c63500ef
 RMD160 (lxml-4.6.3.tar.gz) = 4b54125427221bb6e74c11cc58d560b78e32c35f
 SHA512 (lxml-4.6.3.tar.gz) = 57489c42257afd00376886d6873c97088778afa8009fa644e2660722d134f346030218c24be6329ee828f73f5164cdd1dad583c17addbdf3e0c84e4d8ab9e176
 Size (lxml-4.6.3.tar.gz) = 3191113 bytes

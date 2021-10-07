@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/05 12:55:25 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:00:38 nia Exp $
 
-SHA1 (R/xml2_1.3.2.tar.gz) = 5e4e66ca04954e4190b61698121db4dbc647d3aa
 RMD160 (R/xml2_1.3.2.tar.gz) = 371564ab5430e9da4be2ff3a5607a3a544342836
 SHA512 (R/xml2_1.3.2.tar.gz) = f74ceed824c71870bdf9c9a77818a4abf508d084fca49f570c1028fc74b90a23e59e4cab37649138536341e94b06d01d1e3be6341d8de017e10951e58aea174b
 Size (R/xml2_1.3.2.tar.gz) = 271876 bytes

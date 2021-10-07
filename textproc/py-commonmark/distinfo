@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/11 00:46:00 js Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:08 nia Exp $
 
-SHA1 (commonmark-0.9.1.tar.gz) = ace69766c6d498f87cbee50d055bdf43e5b2cf5b
 RMD160 (commonmark-0.9.1.tar.gz) = 87a980080d252986c782720cbb3e834ca4ede9da
 SHA512 (commonmark-0.9.1.tar.gz) = bacf5ef387a0c330a2128f42c42c29c1a48ae623683e6e56ad28a1621aabd72e29cd3e2d661e8207b8cc0c347d267f262a55f2145fc58f8c8aeff91e7a283324
 Size (commonmark-0.9.1.tar.gz) = 95764 bytes

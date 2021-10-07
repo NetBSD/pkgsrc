@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/13 10:36:11 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:19 nia Exp $
 
-SHA1 (sgmllib3k-1.0.0.tar.gz) = 036530c678e2f66b183dd675887ed7efbb64a7f2
 RMD160 (sgmllib3k-1.0.0.tar.gz) = a5076132fc42434d5615606a9f325774eb53cba3
 SHA512 (sgmllib3k-1.0.0.tar.gz) = f9238afb831356f66b1c3e55975e0ea88007ffe1469b8b4e325e704d1915eb0ab120f5f9e98f36eeb4bf6204a1938d8a4d5a424f0cc054b141ac94adc8ef8ca9
 Size (sgmllib3k-1.0.0.tar.gz) = 5750 bytes

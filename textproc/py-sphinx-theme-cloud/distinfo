@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/11/25 10:44:11 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:20 nia Exp $
 
-SHA1 (cloud_sptheme-1.10.0.tar.gz) = ae2c029db693219d156a2b58ff615b61b7a145cb
 RMD160 (cloud_sptheme-1.10.0.tar.gz) = b84f71d4be833f56120f98c2941baf7287d5a1c2
 SHA512 (cloud_sptheme-1.10.0.tar.gz) = 296a7db1e30b5012ebaf4117db1ed72cf109ff7bb4dc08c9cce5c7822ca68a5a8f53c8dd84df2780aabcce0509d1cfc48ab459ba3879d8721bbf8ca730307dda
 Size (cloud_sptheme-1.10.0.tar.gz) = 167074 bytes

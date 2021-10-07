@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/03/11 07:12:01 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:01:12 nia Exp $
 
-SHA1 (igerman98-20161207.tar.bz2) = 2dbbaf220db2fe95142fdc03fc7ecb26df77e456
 RMD160 (igerman98-20161207.tar.bz2) = 6c8e460d27af7930af5b457e513316410c8321a6
 SHA512 (igerman98-20161207.tar.bz2) = 62be84ac76fd2a0acc25439aa4c04339e54a1c7a2f619d76e0e01cfb53eeeca263c5cc335e315f9adeee9bab5cc392d4c473ca55cbed371c04c123d6fa2272aa
 Size (igerman98-20161207.tar.bz2) = 470207 bytes

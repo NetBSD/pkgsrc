@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 02:00:16 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:02:47 nia Exp $
 
-SHA1 (xmlcatmgr-2.2.tar.gz) = 1761eb72234a14d3d919ce3ccb0c0550421bf2e8
 RMD160 (xmlcatmgr-2.2.tar.gz) = 6d01a88defccd086758f78d345a2abdf4be5c970
 SHA512 (xmlcatmgr-2.2.tar.gz) = c8496e5ed0b7d8a2323af6d9089ba57d86239408e3ba4804485474287aa37c9412212819b990b4685c9e6002ff027a6f1c796cfe804516efaf6c64e9e8beafb3
 Size (xmlcatmgr-2.2.tar.gz) = 97265 bytes
