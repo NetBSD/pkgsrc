@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2016/01/20 14:34:35 leot Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:35:17 nia Exp $
 
-SHA1 (dvtm-0.15.tar.gz) = 9bcec7af79b2adfead88c5513fa19b53dad6e134
 RMD160 (dvtm-0.15.tar.gz) = f4222388098891433711020b2739e5756b7c2122
 SHA512 (dvtm-0.15.tar.gz) = 48a0c8fd6a50fe5d43414d0223c9f4b9920a31d42fe3bfc428ce1ae7d0e41a41ebe2597eae0824c7c76bfb0e32a13e440c8d5fcdb1886d55d6791fa3fe3fd77b
 Size (dvtm-0.15.tar.gz) = 40511 bytes

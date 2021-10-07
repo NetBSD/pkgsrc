@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/11/17 08:48:32 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:35:29 nia Exp $
 
-SHA1 (libkvkontakte-5.0.0.tar.xz) = 0e1fa71e045916fd0762136464f56c62847cefa6
 RMD160 (libkvkontakte-5.0.0.tar.xz) = 3c870680656e2ec443350d982409ec5fd37940a0
 SHA512 (libkvkontakte-5.0.0.tar.xz) = bc7fa3d2d8a815c3a8b2265bf45500c10ac31383883a6a19802c5d01be5c16c1e72a8fe0c2c7cc086c9a7403ce001df0629e546caa872a2ae599e3a2650ef1af
 Size (libkvkontakte-5.0.0.tar.xz) = 59116 bytes

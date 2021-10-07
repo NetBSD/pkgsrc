@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/02/07 04:41:55 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:35 nia Exp $
 
-SHA1 (Locale-US-3.04.tar.gz) = e8a53b36a6774588522e26c6fa79671b28d42895
 RMD160 (Locale-US-3.04.tar.gz) = c5e0ff3d7aaa54478cf0238551c9e9acf20caa5a
 SHA512 (Locale-US-3.04.tar.gz) = 3971ef5f6afd3bcb5eb7ef5759a7cff317acee9684e74e483214139200873fc75cc447fc82409b4eb5aeda51e25073a7906a6fa2df3d72118cff60ef66b68f6b
 Size (Locale-US-3.04.tar.gz) = 10768 bytes
