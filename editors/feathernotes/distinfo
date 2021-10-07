@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/03/11 08:10:58 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:47:38 nia Exp $
 
-SHA1 (FeatherNotes-V0.9.0.tar.gz) = 5e9d9948c0988b4769886dac7a65957010fa14ef
 RMD160 (FeatherNotes-V0.9.0.tar.gz) = 789def1bb7e7ccff0867d268bcaa8fab36db3a83
 SHA512 (FeatherNotes-V0.9.0.tar.gz) = 0264fa1215503f4a9625accfaf2e436e035232cfe25f77cb6a7f50231e6e0155677d36f2201382de9f64bb4b41bb2b8e772dd74099b293a7c8c658f89827f595
 Size (FeatherNotes-V0.9.0.tar.gz) = 483572 bytes

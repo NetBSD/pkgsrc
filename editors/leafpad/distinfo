@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/06/20 05:48:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:47:42 nia Exp $
 
-SHA1 (leafpad-0.8.18.1.tar.gz) = 73876d02f808fb8bf5ef316d01afb9a478a4ff38
 RMD160 (leafpad-0.8.18.1.tar.gz) = df9caa1d4248e7da3dc5ecae31f3e758f477732e
 SHA512 (leafpad-0.8.18.1.tar.gz) = 1caad712967f634f585ab32e406534b5ce2c5621008c1eb5b2b48f17ca0f48cd834ea2ea1c67eda4053fa84e8727ff0e708e99d3b5dad838dcf0701389788257
 Size (leafpad-0.8.18.1.tar.gz) = 289117 bytes

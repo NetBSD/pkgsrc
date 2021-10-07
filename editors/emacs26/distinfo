@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/04/25 05:56:36 dsainty Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:47:38 nia Exp $
 
-SHA1 (emacs-26.3.tar.gz) = 79f6d7c4b26787c44189fe5d1520c354f470f3fb
 RMD160 (emacs-26.3.tar.gz) = 263c0152f538d3371c60accb710f3825b01ae097
 SHA512 (emacs-26.3.tar.gz) = a0248a0b9197d557743ba3224831f622276ad324956bd5db3d07ff5030959b09ebb7e77aac488ef74bf32184d4dcb89ceda1bf9f37b9c883f2743d39d181edcf
 Size (emacs-26.3.tar.gz) = 65207899 bytes

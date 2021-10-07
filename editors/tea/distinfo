@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/10/06 15:54:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:47:49 nia Exp $
 
-SHA1 (tea-48.0.1.tar.gz) = d30e1a742ad3de5c6184d81ada6a53a6e1fdb550
 RMD160 (tea-48.0.1.tar.gz) = 3a3b5f009b9d9e3e63da4faecef69ca5e410f9f2
 SHA512 (tea-48.0.1.tar.gz) = e6cf67214f075b4a6c6e91ce4ae07779be75752f58c1b88603f1e23748b15c6c20c48dcecdba6115ef4a891a3094008e4de110f2d925514e0537dbbd63ea94d3
 Size (tea-48.0.1.tar.gz) = 502561 bytes
