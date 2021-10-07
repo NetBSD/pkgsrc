@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/28 16:00:56 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:46 nia Exp $
 
-SHA1 (anyio-3.3.2.tar.gz) = fc5e97b01d26f162d59b5ecece6a54f8acc2e53d
 RMD160 (anyio-3.3.2.tar.gz) = c2154e852273461598bcb0b4fcfe1e24c0f5321c
 SHA512 (anyio-3.3.2.tar.gz) = 4dd47b549aa69ec3637d1b3836bb3d20146f7f40ffd30630e739f499ddaebdbef3cf37006e0e165a65939327dcd2cf49c334e9dff2411468c0862d5a894b1ce3
 Size (anyio-3.3.2.tar.gz) = 133260 bytes

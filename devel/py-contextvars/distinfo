@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/08 20:03:07 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:04 nia Exp $
 
-SHA1 (contextvars-2.4.tar.gz) = 7e4e8ac79c19d11d22affbb82db2503c85bf2e6b
 RMD160 (contextvars-2.4.tar.gz) = 8a93b02e1ca00c938a16ca579ac32801dd4e4cfb
 SHA512 (contextvars-2.4.tar.gz) = 529e3f3bdb2e02aa9205321c212fd82a1fcf3d5ec4325666c8b02c97d0e18f91706e01e0d7c8319db91324406e06731f226cf0fc09666c9ccdbe2db682187c78
 Size (contextvars-2.4.tar.gz) = 9570 bytes

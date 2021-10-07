@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/12/10 13:56:34 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:44:31 nia Exp $
 
-SHA1 (spin647.tar.gz) = 307ae8ce800dd62520ea118f144a806c14cdf4a5
 RMD160 (spin647.tar.gz) = 2b07b9c25fcd7f934dc86241069c39e3dfc426ee
 SHA512 (spin647.tar.gz) = da8a28e4fa024e40beb813f78cd001a6e17ff19636b4a946dff08c7ab999f7fd2f21e532a9610861f0530fd5d0c68685bbaa5a2b5bc65ad2c14cf8a46324c65c
 Size (spin647.tar.gz) = 515131 bytes

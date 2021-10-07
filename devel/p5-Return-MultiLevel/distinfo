@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/09/17 13:01:57 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:14 nia Exp $
 
-SHA1 (Return-MultiLevel-0.05.tar.gz) = 1673e908ce307c3f7a27361e98de4730d3123309
 RMD160 (Return-MultiLevel-0.05.tar.gz) = 18ff832cda0a8b472c7f5497bd283bb779dffd0e
 SHA512 (Return-MultiLevel-0.05.tar.gz) = ca8d5c2067c8e47e49988363a5f5816e51f13eb07a83daccb55208654f23b9dd6a67128d38cf0e61891cb0867d42a3dc0653795907ad743a72691d5da9f8be0d
 Size (Return-MultiLevel-0.05.tar.gz) = 7054 bytes

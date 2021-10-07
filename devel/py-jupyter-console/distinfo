@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/10 18:53:58 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:18 nia Exp $
 
-SHA1 (jupyter_console-6.4.0.tar.gz) = 78e4e456316fc7feadfce42c4da85df3f4916254
 RMD160 (jupyter_console-6.4.0.tar.gz) = 8190b4b93ef04d48765dd842e4a86af953c1e57e
 SHA512 (jupyter_console-6.4.0.tar.gz) = e2b301cfd3a56ee4cf33d5cfb297726d0f4478562167ed0f0a9320d389118fa661a85b6a5ef24db60673a76d84545bcdb9741bfdd9f8d13ccdbbc5c5e52d7227
 Size (jupyter_console-6.4.0.tar.gz) = 35765 bytes

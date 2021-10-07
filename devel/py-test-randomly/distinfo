@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/16 16:42:52 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:43:48 nia Exp $
 
-SHA1 (pytest-randomly-3.3.1.tar.gz) = 643fd96bf800e84ceb1c3bb16bad0e189e2bf37e
 RMD160 (pytest-randomly-3.3.1.tar.gz) = 456da37f5fdccb3f856ad7ef26a281a3374de8a0
 SHA512 (pytest-randomly-3.3.1.tar.gz) = 107b42df282d04d48a30d27e08fd177bf1f5c2d83fb5f2374fe76699fcc347c74cb57f6507d208569eaf77820099404032fbc15cfe78f6c2da259dcfcea6ffc0
 Size (pytest-randomly-3.3.1.tar.gz) = 30980 bytes

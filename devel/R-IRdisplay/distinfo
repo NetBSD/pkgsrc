@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/06 15:19:02 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:38:55 nia Exp $
 
-SHA1 (R/IRdisplay_1.0.tar.gz) = c64fa8b541595776bffbb9d3f31ed179604db2b8
 RMD160 (R/IRdisplay_1.0.tar.gz) = 0a666af0878ee677b8ba0ad7d1e7b1ac5f1078b1
 SHA512 (R/IRdisplay_1.0.tar.gz) = de473f342a4a2092aaa87c62019cd00378962b4c4b57008914b44f111aa868a0a332a484a77d6d09ac3aed13ddae6a859fa35feded32ed5e009e37fdd9b4a4c5
 Size (R/IRdisplay_1.0.tar.gz) = 7729 bytes

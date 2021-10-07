@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/09/28 16:04:54 adam Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:43:55 nia Exp $
 
-SHA1 (xopen-1.2.0.tar.gz) = eb7cb8da7709a7325291ffb030d3f20cb4cc4d00
 RMD160 (xopen-1.2.0.tar.gz) = 2d6bc66848f38f00c6dbfd5f84c59be76ae94cea
 SHA512 (xopen-1.2.0.tar.gz) = 91c5e17310be0681ce26981c1dc3653d00f3417b6469ee12e8d37b0056184c73c8e720943ae1daf660666ef9f36cae6cbc68f08bd7f010d32957598823ae86c9
 Size (xopen-1.2.0.tar.gz) = 20089 bytes

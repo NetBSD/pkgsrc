@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/21 07:02:41 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:02 nia Exp $
 
-SHA1 (R/rio_0.5.27.tar.gz) = 4bd287f1fb0bf7fa15a6ad12c44ed3a9b1e23f1e
 RMD160 (R/rio_0.5.27.tar.gz) = b517c683b94b8fccb65f997ad90f5d5a45efd7c6
 SHA512 (R/rio_0.5.27.tar.gz) = 0a6752f206c74d6e9c91824ba41e404d9ee3b48e6ad80d5b90612ce5dedf00651d9795e01ee4943caaa1525a0bbeb6e5af015f1bd2237ef7b8f1afa4789dab31
 Size (R/rio_0.5.27.tar.gz) = 444681 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/09/14 18:11:06 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:41:35 nia Exp $
 
-SHA1 (Gravatar-URL-1.07.tar.gz) = cb1c6eb609bcc0f460d9b7e3b4cbb902143422ac
 RMD160 (Gravatar-URL-1.07.tar.gz) = 4a5d250aaa2da4889d5d3cd90c2c979caeb4d057
 SHA512 (Gravatar-URL-1.07.tar.gz) = 2c72841e62f48f6a1684845ec8a3c1d7306ef98b6f8191ccbae28fc07d2238989acc52c3238828c9458fd9154e102596e20a6ec33bd8f77eaa4934fd65750bd5
 Size (Gravatar-URL-1.07.tar.gz) = 20902 bytes

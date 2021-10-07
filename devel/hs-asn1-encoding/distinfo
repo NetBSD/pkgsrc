@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 00:02:43 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:45 nia Exp $
 
-SHA1 (asn1-encoding-0.9.6.tar.gz) = 88bd7e968ac403f28cab0d375e074e8ddcdff674
 RMD160 (asn1-encoding-0.9.6.tar.gz) = 9ead6fa649622caa04ae7a129d740a0670008887
 SHA512 (asn1-encoding-0.9.6.tar.gz) = e31362881ebec21be5dab1c46284ea6e2571dd87f5c730690787303363a01712945ba85969c39bb2e2d76f9bcefce5d3bad247564e4b6959008804346f65fc9c
 Size (asn1-encoding-0.9.6.tar.gz) = 17343 bytes

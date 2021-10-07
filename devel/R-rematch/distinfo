@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 00:43:29 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:01 nia Exp $
 
-SHA1 (R/rematch_1.0.1.tar.gz) = 40cfa004420af09bb055635d94c0e652aab8ed02
 RMD160 (R/rematch_1.0.1.tar.gz) = 9ef9b693174b659f0063a9c408d5fbb26d75d07d
 SHA512 (R/rematch_1.0.1.tar.gz) = b97c4d8c4d8fd3706e8d1f97eb1ea21fb3cd45289933bf4559b5131b6cfae37434a7fae5f2bd07acc8bb3b9e40874bd893b7a5e5bc63d6a4dcf624a5d51f0ab1
 Size (R/rematch_1.0.1.tar.gz) = 3719 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 20:57:43 tnn Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:39:41 nia Exp $
 
-SHA1 (go-sys-0.0.20200202-d101bd2416.tar.gz) = d428638aaf94785499f3a8960088bfe30591db5d
 RMD160 (go-sys-0.0.20200202-d101bd2416.tar.gz) = b7b953b649c43d44d4eeb15b6598954ce2c06b73
 SHA512 (go-sys-0.0.20200202-d101bd2416.tar.gz) = 0d9b69c7c7b0d525d359d70e75a243ee109fd1bcadd535a6c7704b7bdbeb1bd0f3140c09fcbd9c22ff777b7a54a4c9dfb4036dc837ad703fcbbb2cda1858326a
 Size (go-sys-0.0.20200202-d101bd2416.tar.gz) = 1539300 bytes

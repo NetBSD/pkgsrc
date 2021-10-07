@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/09/06 23:06:21 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:41:29 nia Exp $
 
-SHA1 (File-Flat-1.07.tar.gz) = 5ff8dce4709aff5341d042e248196c0502807e63
 RMD160 (File-Flat-1.07.tar.gz) = 211541c93688d05803d487e916d4f93e9c66df84
 SHA512 (File-Flat-1.07.tar.gz) = 98ae462c3f840c5e661753aa37d1501ded78e8e20d49d00811187e280c70caf3431fcb2cc83311116adb3303676837b20e421da646d7d05c0573b22f6549f9ce
 Size (File-Flat-1.07.tar.gz) = 50489 bytes

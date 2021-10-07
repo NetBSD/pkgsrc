@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/07/04 07:45:49 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:37 nia Exp $
 
-SHA1 (Throwable-1.000.tar.gz) = 1cdad028e4a9736035e355f0bd0e87e5474f37cf
 RMD160 (Throwable-1.000.tar.gz) = 887eb142af8839d6d953a4a22bf95b2757384e5f
 SHA512 (Throwable-1.000.tar.gz) = d81d2e3eff78ad396e6e61ad09ecf3c1eaaf33ae24c8b74c8336b568dceb1b62aa03f9e8417df2edc55b0c6806599c7e88ccc43f2b45c11262fd8139706a9bc3
 Size (Throwable-1.000.tar.gz) = 21875 bytes

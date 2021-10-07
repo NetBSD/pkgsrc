@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/06 23:17:01 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:47 nia Exp $
 
-SHA1 (Metrics-Any-0.06.tar.gz) = bcefa6faf8aa1f972ec13e8c71459a6c716415c3
 RMD160 (Metrics-Any-0.06.tar.gz) = 7620338ac9c9015eff5afb66d82712f52019bf91
 SHA512 (Metrics-Any-0.06.tar.gz) = dd0600e01340b564f00629e15c3b935a84ef6e2d88c0695e51c321af96b05cec4ad16ec5636ab39847dc4f82ca541989e77f2f7f7bab8417c5a3b13169c50d49
 Size (Metrics-Any-0.06.tar.gz) = 29793 bytes

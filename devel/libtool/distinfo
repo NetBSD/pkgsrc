@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.105 2018/11/13 21:44:42 sevan Exp $
+$NetBSD: distinfo,v 1.106 2021/10/07 13:40:23 nia Exp $
 
-SHA1 (libtool-2.4.6.tar.gz) = 25b6931265230a06f0fc2146df64c04e5ae6ec33
 RMD160 (libtool-2.4.6.tar.gz) = 6f4b4c3e89426652da3acffa707f71bb4ccee26a
 SHA512 (libtool-2.4.6.tar.gz) = 3233d81cb2739a54b840a0a82064eebbfaa4fb442fb993a35d6bd41d8395c51f038c90ae048b9252f172d0a5bbfb4b36e2b13d4477001f9ff7d4124237819a18
 Size (libtool-2.4.6.tar.gz) = 1806697 bytes

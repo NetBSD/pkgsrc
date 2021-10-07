@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 10:31:34 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:00 nia Exp $
 
-SHA1 (R/lpSolve_5.6.15.tar.gz) = 81c7700cd88735cfb8624c01e072eb4ffb373860
 RMD160 (R/lpSolve_5.6.15.tar.gz) = e2e23b02b8f22f18d6e806011c1aea5011ce7c05
 SHA512 (R/lpSolve_5.6.15.tar.gz) = 68a71654cf405890028f32b6764446a0a82842a529cf060190d14fa2dcb114613bafff44235cbb156cbcfb0a8a9e0982051189aa9d6f65ea1721e09d35d118e1
 Size (R/lpSolve_5.6.15.tar.gz) = 467646 bytes

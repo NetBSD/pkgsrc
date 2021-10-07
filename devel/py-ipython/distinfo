@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/09/30 19:41:41 adam Exp $
+$NetBSD: distinfo,v 1.42 2021/10/07 13:43:17 nia Exp $
 
-SHA1 (ipython-7.28.0.tar.gz) = 88063aec2d6c3a769bb30635ce867d870e1b22b0
 RMD160 (ipython-7.28.0.tar.gz) = 57faa79e71d613a30d1192c6dfb4e3a6719eab44
 SHA512 (ipython-7.28.0.tar.gz) = 227645ab2cc698f6f7141bb3712b254d75beaf3f227065530f25f988ac76b5a741752ddfa6bb2816b625eaa4972d434f9e73dbe465654e4efc5420b5d80650cb
 Size (ipython-7.28.0.tar.gz) = 5150515 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/12/28 12:53:00 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:39:13 nia Exp $
 
-SHA1 (avltree-1.1.tar.gz) = b0568fa59d4115297043ce580abf904143c2d6f1
 RMD160 (avltree-1.1.tar.gz) = 7e76e869c38437ae2e561b463c74a736785e8ea4
 SHA512 (avltree-1.1.tar.gz) = 6706531a999dfcfdc2ce580697d627901dc8543508d91be6343ebfa48662d4bda32c8b47c8d2c4cf9977f656cafa7c832566f3dc4392268c244e1f5f7afc8378
 Size (avltree-1.1.tar.gz) = 11698 bytes

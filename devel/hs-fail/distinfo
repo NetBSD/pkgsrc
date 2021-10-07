@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/12/31 14:24:57 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:49 nia Exp $
 
-SHA1 (fail-4.9.0.0.tar.gz) = 2fdf8226e3e00fc29c30ae79f724a6704f825cd6
 RMD160 (fail-4.9.0.0.tar.gz) = 5f362dad5753c8293a0a08da8956b732271e98ae
 SHA512 (fail-4.9.0.0.tar.gz) = 0b4e6111387768482ff10b8ee55ff0b3b04750d8def057b7935bef814902de4536d0825e18b95a342722735b29cf88aafec21eb3b2a75eb4f0c55aa7c6b80108
 Size (fail-4.9.0.0.tar.gz) = 2416 bytes

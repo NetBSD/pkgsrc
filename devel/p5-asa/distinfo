@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/07 10:24:23 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:42:42 nia Exp $
 
-SHA1 (asa-1.04.tar.gz) = 581443ade76e184f1f1a98caaa9d1d607d236809
 RMD160 (asa-1.04.tar.gz) = cdfa14532f3099aab0092ac98ddc1018548efbca
 SHA512 (asa-1.04.tar.gz) = 8584036c1c520741fe1bd4fb2875a86a46e2abd07d441078ef64bd90a31ba13b001079b020263add298ff004e094f8380b2ec590aacfc808cc1ba4be6b177b0a
 Size (asa-1.04.tar.gz) = 27573 bytes

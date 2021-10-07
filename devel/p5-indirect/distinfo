@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/08/14 01:53:32 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:44 nia Exp $
 
-SHA1 (indirect-0.39.tar.gz) = 6c61a9555f5f9b13140636f82b4311592558cc64
 RMD160 (indirect-0.39.tar.gz) = e308940e61b8b0302d0d82af40e2549f6909e6c8
 SHA512 (indirect-0.39.tar.gz) = d3275a2cab2eeceef61756e08947d3072c0ce5cea2e8b70870c5fcbd9c63e56cf70568395002b7d02060cad3482f7f56723b1ad85fcf0a4c4ee2568b5035816c
 Size (indirect-0.39.tar.gz) = 52231 bytes

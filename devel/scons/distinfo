@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2020/01/09 11:52:35 adam Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 13:44:28 nia Exp $
 
-SHA1 (scons-3.1.2.tar.gz) = 832fc58d2e850348c2c44de48f187f51d1663fdf
 RMD160 (scons-3.1.2.tar.gz) = 0f788a7b1ce5a967f5514d9c20b2f93ac35a0812
 SHA512 (scons-3.1.2.tar.gz) = 90b48bcc9598b72aae0f3d87a32d07c599e47f462ef12fb4ef3aece96f43f76d52a7155a74192435cf8339f9babd089998084a0f16f79217961dfd23b4bd1958
 Size (scons-3.1.2.tar.gz) = 587096 bytes

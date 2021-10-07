@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/10/23 12:15:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:47 nia Exp $
 
-SHA1 (pytest-forked-1.3.0.tar.gz) = e42f924de467dd0f485139d8ef3baaad75c7017c
 RMD160 (pytest-forked-1.3.0.tar.gz) = 98a3298258979cc2ec39134b7ba74e0cda9cc205
 SHA512 (pytest-forked-1.3.0.tar.gz) = 25d639aa43380155d7744f1d05a95e0144f5fe7dea42ff3c2bba3803a07d73b5eb008525469330c5dda14800fe4b611241691be197132f31f88f66930c3ecac0
 Size (pytest-forked-1.3.0.tar.gz) = 9850 bytes

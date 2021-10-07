@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/09/21 22:46:11 wiz Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:41:11 nia Exp $
 
-SHA1 (Coro-6.57.tar.gz) = 1ff1c7aee5cd1c31fbc50c38ab86d0ab0930417d
 RMD160 (Coro-6.57.tar.gz) = 2959ba3cf6938a6094af43ae4e8b05779602feec
 SHA512 (Coro-6.57.tar.gz) = d5655c5df1d502c265b26e474f1423f9406029ce56254a92d78b51e14313f685575095e185758d743d78f3c74d758922ec57f714498cf982819c110d198d6f42
 Size (Coro-6.57.tar.gz) = 198128 bytes

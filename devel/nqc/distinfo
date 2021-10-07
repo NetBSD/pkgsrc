@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/07/05 20:23:39 wiedi Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:40:37 nia Exp $
 
-SHA1 (nqc-2.3.r1.tar.gz) = 40adcd87c12fc23c600899a6a704620ef2208488
 RMD160 (nqc-2.3.r1.tar.gz) = 2f7a435a99cb207814a8f357b701b1cc1fee2964
 SHA512 (nqc-2.3.r1.tar.gz) = d0c16bf7b6b3fb373631c89ba0f5e5534ac615aba22338e2eca323e0c9bfaa99ea6b15eb0f0fd10c03af306a189775a6ee3abacc21fe94ab12e5d58986c9beba
 Size (nqc-2.3.r1.tar.gz) = 193028 bytes

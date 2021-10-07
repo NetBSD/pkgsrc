@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/12/05 15:52:42 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:07 nia Exp $
 
-SHA1 (pydocstyle-3.0.0.tar.gz) = b37a1645c5b45694162d94ea69180079f29aac2c
 RMD160 (pydocstyle-3.0.0.tar.gz) = 2d42de8801db344734bd0706ace23509376e7430
 SHA512 (pydocstyle-3.0.0.tar.gz) = ec2313e26dd988d35c99563344befc7b538f1d5945d1b1ce767f77851ff291b713aef423bc3d57a29f59d3198f14a6c5c7d217e5989534a1b877564634edd548
 Size (pydocstyle-3.0.0.tar.gz) = 29627 bytes

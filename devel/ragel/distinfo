@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/03/12 17:36:35 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:43:58 nia Exp $
 
-SHA1 (ragel-6.10.tar.gz) = 946162090fb58b794ed53173fac13398d565b794
 RMD160 (ragel-6.10.tar.gz) = e37a0f83d3acbb77c7d7ea115f2faf0f2478724b
 SHA512 (ragel-6.10.tar.gz) = 6c1fe4f6fa8546ae28b92ccfbae94355ff0d3cea346b9ae8ce4cf6c2bdbeb823e0ccd355332643ea72d3befd533a8b3030ddbf82be7ffa811c2c58cbb01aaa38
 Size (ragel-6.10.tar.gz) = 1232993 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/17 08:04:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:49 nia Exp $
 
-SHA1 (testrepository-0.0.20.tar.gz) = 2eef048f17abbd7edd07e9441b2a2fdd1d1c2098
 RMD160 (testrepository-0.0.20.tar.gz) = 6dfcf25b35885b8531088fecc2f65320059ac15b
 SHA512 (testrepository-0.0.20.tar.gz) = df14500e2b27b6f39d9d4c4f42961efd63dfe25186e561eb1678952a8ab9311f17c36b78819fea33e0ac879c47a33d45c31ff58be017609c8a6157905ee712d6
 Size (testrepository-0.0.20.tar.gz) = 84956 bytes

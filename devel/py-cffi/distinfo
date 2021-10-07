@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.43 2021/07/09 20:20:27 adam Exp $
+$NetBSD: distinfo,v 1.44 2021/10/07 13:43:01 nia Exp $
 
-SHA1 (cffi-1.14.6.tar.gz) = 35bb24955834ecb5b7173e625fa95b02d638fcfd
 RMD160 (cffi-1.14.6.tar.gz) = 02a34fb6f526cb05d42d840db29e27ba0c8b0d0e
 SHA512 (cffi-1.14.6.tar.gz) = 30a8b25b74921a90a1fa96d05de1f25437d0fbbf73b7de0bb9ce22dfcaccbd78376b605525fe970212221d3e598357a9b1da420bfbd1a3e513263ed2b789e813
 Size (cffi-1.14.6.tar.gz) = 475744 bytes

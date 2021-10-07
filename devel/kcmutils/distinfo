@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:21 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:02 nia Exp $
 
-SHA1 (kcmutils-5.80.0.tar.xz) = 35dc5c2c5f7b2e59e6099cd8cec2735084141033
 RMD160 (kcmutils-5.80.0.tar.xz) = ed89c7a3eeb6a5657a14ae337b16a95688bb3886
 SHA512 (kcmutils-5.80.0.tar.xz) = eed69f85032bd0e9c3211b0aca82932586ca443801cca268afa7dc3a27f703803ea9dd356f60107ca2b83daac36046752470092739837c9aa2c40c02335a8ee3
 Size (kcmutils-5.80.0.tar.xz) = 258676 bytes

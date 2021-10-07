@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/08/10 11:31:34 rhialto Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:46 nia Exp $
 
-SHA1 (patchelf-0.13.tar.bz2) = 2fb76033b0b7918edebab971e4c30ec60ab9ecfd
 RMD160 (patchelf-0.13.tar.bz2) = a5ee22a1fca84a194b462a0b4d87c4eab9fddf41
 SHA512 (patchelf-0.13.tar.bz2) = 43c3f99fe922e2f34d860389165bcc2b0f3f3317e124eb8443017f71b1f223d96a7c815dc81f51b14958b7dc316f75c4ab367ccc287cd99c82abe890b09a478d
 Size (patchelf-0.13.tar.bz2) = 172499 bytes

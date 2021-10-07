@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/02/25 14:08:54 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:23 nia Exp $
 
-SHA1 (Term-Screen-1.06.tar.gz) = 4a50481a7ad80d7868bfe56f590937b37cc339c6
 RMD160 (Term-Screen-1.06.tar.gz) = ae47d30d4027ad797034009ee30b34f94881772b
 SHA512 (Term-Screen-1.06.tar.gz) = c65d97267675a39ecca4f221a75d9d0e171db7463a1680ceada6a752d434af431d6c493043c28365ad7474b5d79c21574da9d2d5f482e67a8ebca6ec3fa950a0
 Size (Term-Screen-1.06.tar.gz) = 9522 bytes

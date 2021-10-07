@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/09/13 07:14:50 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 13:39:35 nia Exp $
 
-SHA1 (glib-2.68.4.tar.xz) = bfebd4a5074715962177e8712cec630219f58786
 RMD160 (glib-2.68.4.tar.xz) = cf4d834a0e8f5e77ba39d627290ac0263ba0f177
 SHA512 (glib-2.68.4.tar.xz) = be17d79b41d17fd2b144184d6e793180667b7d9ba299215ea6d4948b4c05f6d888b4868c48643e25935a34ee2f85ee1d03e53325151b7a61819437cbd3c84b10
 Size (glib-2.68.4.tar.xz) = 4945212 bytes

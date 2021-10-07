@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/04/10 08:08:24 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:41:27 nia Exp $
 
-SHA1 (File-BaseDir-0.08.tar.gz) = 85e077b27d122e5a13eddc230012d76774bd3508
 RMD160 (File-BaseDir-0.08.tar.gz) = 3ffe2398b0aee3c185acfc2d532ee33039591183
 SHA512 (File-BaseDir-0.08.tar.gz) = 6b44edca34906c34d574933c21c0e3a1a236a431a3ac12caeabcc2638688dfe1c02efc9a1e75a2c2cd522de0dca00df0620cd262c184ec938cc97766d1121f99
 Size (File-BaseDir-0.08.tar.gz) = 10052 bytes

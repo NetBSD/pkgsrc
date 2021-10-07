@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/01/02 02:57:19 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:30 nia Exp $
 
-SHA1 (File-Listing-6.14.tar.gz) = 8eddfdc42cfd76e2b94fbec0166fe95ef9e3ada8
 RMD160 (File-Listing-6.14.tar.gz) = b3e355d4776870131cd95854adfa0db60af164a2
 SHA512 (File-Listing-6.14.tar.gz) = 858339b15a455db570d15b02e801ab0e0afd47da71685002083cbcc1a0f89783fcad4e840e0381f186046ab2f355dc0f593dc8c9c0a2da0fc6f17a35265924ab
 Size (File-Listing-6.14.tar.gz) = 80562 bytes

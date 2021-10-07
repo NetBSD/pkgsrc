@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2016/11/07 11:12:27 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:24 nia Exp $
 
-SHA1 (nosexcover-1.0.11.tar.gz) = 4914b6adfbe547189bd855c24083f31f2d020237
 RMD160 (nosexcover-1.0.11.tar.gz) = 410c4d1ca5525e6bcc61c6a9670134637772359a
 SHA512 (nosexcover-1.0.11.tar.gz) = a4c75aac5095aa8323094b2a4eceb3af26243e6c87dd8720df8cf43ae0f76c28c638fe2c3cbcad621b7c2779115dccbb32e6a2f33a8bc5efb22a0fb0901d64fa
 Size (nosexcover-1.0.11.tar.gz) = 2903 bytes

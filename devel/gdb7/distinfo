@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/06/05 10:41:28 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:35 nia Exp $
 
-SHA1 (gdb-7.11.tar.gz) = 99f5795cf670e00a623266cb4ce59cc76ec6e5a2
 RMD160 (gdb-7.11.tar.gz) = 9181c3a79dc676d36e58162567051cf9f68d354d
 SHA512 (gdb-7.11.tar.gz) = 6854774bba73ecf02c4d8bb4e194b8fd8fd3c6c661cbead0b3b816b9d9f736df1b85f331a669808700b0ad0f945b58483fffb77d49f5b690e828a00f65c04893
 Size (gdb-7.11.tar.gz) = 35215975 bytes

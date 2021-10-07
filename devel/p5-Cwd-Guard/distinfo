@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/11/08 20:27:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:12 nia Exp $
 
-SHA1 (Cwd-Guard-0.05.tar.gz) = 9226dd929e1cd33e6328eb2e45ba9618015c59b9
 RMD160 (Cwd-Guard-0.05.tar.gz) = 2adb76dc1107b4eae567a26caf4bf8653874e678
 SHA512 (Cwd-Guard-0.05.tar.gz) = 14aa68e535cec8f7182d5648558c539cbf6eebe2fee9c59d0b06f5b45cca1c6c652104a58f71b5a56f796f03d139e3e74962e45fb127bf038803b05cb9f32b82
 Size (Cwd-Guard-0.05.tar.gz) = 10253 bytes

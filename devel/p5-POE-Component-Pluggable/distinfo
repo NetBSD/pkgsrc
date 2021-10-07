@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/04/09 03:34:43 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:04 nia Exp $
 
-SHA1 (POE-Component-Pluggable-1.28.tar.gz) = 37f70d5e3bf6c1161c7ccf427a97881647e8d9cb
 RMD160 (POE-Component-Pluggable-1.28.tar.gz) = cbca4625e39f926b0b70753f0c622ea3cfd92dde
 SHA512 (POE-Component-Pluggable-1.28.tar.gz) = 2fc89f40b0d44621032bd53e05263dc486733639de4a180679b30b337278ab50746db26c9d8c7416e45ec013da5d88072730ef87f83149c43f81cc6708549094
 Size (POE-Component-Pluggable-1.28.tar.gz) = 23460 bytes

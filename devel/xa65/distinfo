@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/13 20:20:41 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:44:42 nia Exp $
 
-SHA1 (xa-2.3.11.tar.gz) = eea188d39be06ae4b61ef5d11319b17ffe0fb751
 RMD160 (xa-2.3.11.tar.gz) = 0b14fb35099f6f4016e7b51a9a43820d70cc8fd5
 SHA512 (xa-2.3.11.tar.gz) = 2be31b6a67d30e94be616c465591614881028a8bc308202de7561a5719573582b3f29a205a0be76e1f9071621b4882c9aef95cf3494f376e88edc40afa1545dc
 Size (xa-2.3.11.tar.gz) = 153864 bytes

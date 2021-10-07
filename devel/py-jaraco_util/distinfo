@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/04/11 19:47:13 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:18 nia Exp $
 
-SHA1 (jaraco.util-11.0.zip) = 74359856ac4c332dbcdb1d1c82f0fe043e8108cc
 RMD160 (jaraco.util-11.0.zip) = fd38b9b29dc52c4cd97f5b5a2c80232213cf52e4
 SHA512 (jaraco.util-11.0.zip) = 73b2e37fc306e1f2dded3a6e00516f63d1fbdd558894f2b37441dc4b385446374100b52821c59103a90686433063985bb820d05c73777d080cd9e43dc997fabf
 Size (jaraco.util-11.0.zip) = 38817 bytes

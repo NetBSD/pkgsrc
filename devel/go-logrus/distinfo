@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/09/11 17:45:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:40 nia Exp $
 
-SHA1 (logrus-1.0.6.tar.gz) = 53cca2f3cbda24c0b3320cad2a2dc7bcb3056729
 RMD160 (logrus-1.0.6.tar.gz) = 10e347f3e360dd95663507198f4ca352012e8de4
 SHA512 (logrus-1.0.6.tar.gz) = 003d6bd64e36afbe640210e589bef2803f13540dbc58947ae6173219c6c90c67bc1068abc9a59af338b1cf2b972237a1340348c23965aecd25df8ab803dbbb39
 Size (logrus-1.0.6.tar.gz) = 29022 bytes

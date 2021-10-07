@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/12/30 23:48:43 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:46 nia Exp $
 
-SHA1 (base-unicode-symbols-0.2.4.2.tar.gz) = 4e18eb6810c0735bcaaa1a61fa97d3472a503790
 RMD160 (base-unicode-symbols-0.2.4.2.tar.gz) = 150c9918dd98ba32a717c48a26982e8df6480726
 SHA512 (base-unicode-symbols-0.2.4.2.tar.gz) = 127ba0a6c6f50e16c0bb0634bc7ee84d3596e541ccfd1be1ad261e85fab695613fd415e6a913a02f5dbc10dcaa9e3217db3123b564d070351e5a6a7c9a64b462
 Size (base-unicode-symbols-0.2.4.2.tar.gz) = 6584 bytes

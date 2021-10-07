@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/07/02 09:07:12 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:39:11 nia Exp $
 
-SHA1 (atkmm-2.28.2.tar.xz) = 7337abed4c599c17f80cc30e636b4be46ab7eed6
 RMD160 (atkmm-2.28.2.tar.xz) = c7e1dcad0e07b441e5be2d855d4c377463d14173
 SHA512 (atkmm-2.28.2.tar.xz) = df20b89b603a6ae419db24b21acbd6a9d0e91c07e374b4b774f6a67581ce1581affb0d079a264f0d7f2e6d8b63210639dd7aa15e7e94fb5904d161e9a2aac286
 Size (atkmm-2.28.2.tar.xz) = 689944 bytes
