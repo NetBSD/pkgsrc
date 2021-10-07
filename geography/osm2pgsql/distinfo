@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/04/21 16:56:44 gdt Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:09:28 nia Exp $
 
-SHA1 (osm2pgsql-1.3.0.tar.gz) = 784ad8adb94a3bf47618148d4a82c0d41d48176e
 RMD160 (osm2pgsql-1.3.0.tar.gz) = ece9e29ce715aced56656e304a610f886c530969
 SHA512 (osm2pgsql-1.3.0.tar.gz) = e643f3a1987ead36763c96d34b5dd7e170273b77a521106c21311dc7b01d2b34470b2e00e3214050f2cbdd3d89703a1827ee6c35928ed77cc7f35fc4e20331f3
 Size (osm2pgsql-1.3.0.tar.gz) = 2460451 bytes

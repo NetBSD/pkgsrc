@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:08:42 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:09:25 nia Exp $
 
-SHA1 (gpsutils-0.4.0.tar.gz) = 1440cab5a5e2dce35d8a6da837e6ee84abf4b465
 RMD160 (gpsutils-0.4.0.tar.gz) = 35b183eb743c0ddafa96ffab8db54b57cb62c98d
 SHA512 (gpsutils-0.4.0.tar.gz) = 440e5693c8d7e479099fa460ca9a6b98af7d5ab0c9e2903eb9750e5729b2cf8340e54c2b0bae119e919b3c055367d141ca6b0e4fda1b14f1b41d408e40cc51ae
 Size (gpsutils-0.4.0.tar.gz) = 2013739 bytes
