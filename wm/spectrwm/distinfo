@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/06/25 11:29:20 pin Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:05:11 nia Exp $
 
-SHA1 (spectrwm-3.4.1.tar.gz) = 3ea09cb9d7d81788721f815833bd15cf49599850
 RMD160 (spectrwm-3.4.1.tar.gz) = 88356d31dff1eb53ddcc77b7c76877bcaffee268
 SHA512 (spectrwm-3.4.1.tar.gz) = 94d468833124b51fa12b29b173126f10f27dd551d599459e4bea589721b3df6f1f0af0ea67326ed3ad462e1203d3bbcb82032ff83abfa0943ec45afd29dedaa6
 Size (spectrwm-3.4.1.tar.gz) = 164507 bytes

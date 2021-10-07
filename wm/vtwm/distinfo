@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/02/26 17:23:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:12 nia Exp $
 
-SHA1 (vtwm-5.5.0.tar.gz) = 04129d93ace26a34dd59b1ff652bea661fcfe0c8
 RMD160 (vtwm-5.5.0.tar.gz) = 5bb43578091c1283212774fb4893d77b13b87fff
 SHA512 (vtwm-5.5.0.tar.gz) = cf0b7bc2c007fea9df909d695098cc5ab5ab9fbb83b58264a3fc380aa5db83411c3ebec9f238fb23fdfcacdf9ae289ece7c14831d6839e606031d587fc7d73af
 Size (vtwm-5.5.0.tar.gz) = 1141664 bytes

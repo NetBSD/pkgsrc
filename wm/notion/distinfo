@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2019/03/16 11:06:38 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:05:09 nia Exp $
 
-SHA1 (notion-3-2017050501.tar.gz) = 718c806e24533847b45f7163e2adb5f8de2f2766
 RMD160 (notion-3-2017050501.tar.gz) = 448fbf14ce082fc0bd826cbc3be7c750433ca2d3
 SHA512 (notion-3-2017050501.tar.gz) = e75d2e0e5bb2405698593bebd51d19c6820335a46d60f3e07e5bbac696c2fd3e4341fc166d65e90f8ae56fdba0f7be34e33d0fe3058617a3ea2d63636c48d6f6
 Size (notion-3-2017050501.tar.gz) = 795635 bytes

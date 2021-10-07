@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/10 12:48:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:05:03 nia Exp $
 
-SHA1 (bbpager-0.4.7.tar.gz) = 37217534369b32650c154cd387da6d837c097ee6
 RMD160 (bbpager-0.4.7.tar.gz) = e7a8fb13a4ed11bd319d212bb0bac81ff27bf172
 SHA512 (bbpager-0.4.7.tar.gz) = 33202efd4d55639ab4c5f9fe54b9b0a6e4d32dd822119fb5517d5d2231922962d6985b51d7fa84dc3eb909ddea05033965a3882cda2dc10193aae2f873da1869
 Size (bbpager-0.4.7.tar.gz) = 170575 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2018/05/14 10:31:14 maya Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:05:14 nia Exp $
 
-SHA1 (wmii+ixp-3.9.2.tbz) = e85a2979a0bd0a1db7ed486fc709afe72bafd8b0
 RMD160 (wmii+ixp-3.9.2.tbz) = 8a401a5d0a033c0da254d15e7fe415ec40e7a332
 SHA512 (wmii+ixp-3.9.2.tbz) = c75d6d3f80e2b263c8d7b9eb6d0e700a1ad642209fc0984908e9399d22372c6c0572f47ab61881d5d56c4cc4eeb2914a545f6af1bbb936b65848764577d75761
 Size (wmii+ixp-3.9.2.tbz) = 432032 bytes

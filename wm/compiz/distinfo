@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2015/11/02 23:42:51 agc Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:05:04 nia Exp $
 
-SHA1 (compiz-0.8.8.tar.gz) = 01d065db07f6fd6bcad51811ffba69221aff656e
 RMD160 (compiz-0.8.8.tar.gz) = 421d4f010d1e10d1562e86ea0112e9a8eca711e7
 SHA512 (compiz-0.8.8.tar.gz) = f97ac4ac9895e2ca8f224bff20c6482f18bba2a3bb479c8b2c44b5ae97f8d0e06e56180524e153b8bb4867684db82f1d34c0d23357bdd7c33bc22463d12f2583
 Size (compiz-0.8.8.tar.gz) = 1758943 bytes
