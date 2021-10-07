@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2018/09/21 14:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:44:59 nia Exp $
 
-SHA1 (slrn-1.0.3a.tar.bz2) = 898d09685f5fe159f23829cd21e15308f5dce822
 RMD160 (slrn-1.0.3a.tar.bz2) = dd5f5df5d508b8e0c5b136093f24121af31d3432
 SHA512 (slrn-1.0.3a.tar.bz2) = 11cef2dfe41f441af15acc22fb675cf607e932f0dd6d4a998e51ecda05c9a50d7abf10a3e693ffc857ad77e09634f460404e4d5b289169e7bbffdaf5d6d565a3
 Size (slrn-1.0.3a.tar.bz2) = 997138 bytes

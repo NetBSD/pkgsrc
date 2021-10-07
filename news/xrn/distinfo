@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/11/10 20:03:40 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:45:00 nia Exp $
 
-SHA1 (xrn-10.11.tar.gz) = 4dfe8063b1356c74f2e92ab84d93ff464a174e70
 RMD160 (xrn-10.11.tar.gz) = 7bb29af447efcb4197be2f780d7bd9733f5523a5
 SHA512 (xrn-10.11.tar.gz) = e65def882d2bfbf376fa903d35007091d94ba0a927bc75bfd988d6f7f9826949db777344fd539c294c0f0af3a15ab02e470279491cca12c9314f901061fe09a7
 Size (xrn-10.11.tar.gz) = 469671 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/07/02 07:37:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:44:58 nia Exp $
 
-SHA1 (newsbeuter-2.9.tar.gz) = e0d61cda874ea9b77ed27f2edfea50a6ea471894
 RMD160 (newsbeuter-2.9.tar.gz) = b93adbf5305191c40f3e4b2d770d9984bb7c32e3
 SHA512 (newsbeuter-2.9.tar.gz) = b173008c8c8d3729f8ccef3ce62645a05c1803fb842d5c0afdf9ffd4ed3726030f9c359c20bc817402a6a0ea12af742d0ae7faf9b92d52c11f420f62b430b0aa
 Size (newsbeuter-2.9.tar.gz) = 432763 bytes

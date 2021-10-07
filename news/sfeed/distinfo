@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/08/08 10:51:53 leot Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:44:59 nia Exp $
 
-SHA1 (sfeed-1.0.tar.gz) = 1645d5ef882bc2694f6f198b3ae22473a91931c2
 RMD160 (sfeed-1.0.tar.gz) = 8862f05b753cf9236023bb8d172a7b762a96f9c3
 SHA512 (sfeed-1.0.tar.gz) = 8377b092c797483564e189e77f9cb37a675d5d88ad41625ab5afbafb39af13bf2787d27d1bc543f8089f2fffec4532b58687a8ed2b0f3d31a1aa030359de6a93
 Size (sfeed-1.0.tar.gz) = 39349 bytes
