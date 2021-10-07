@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/08/02 20:30:24 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:02:18 nia Exp $
 
-SHA1 (pyphen-0.11.0.tar.gz) = 471d6f52829badf7b2184eafbde0a01cebe6fb31
 RMD160 (pyphen-0.11.0.tar.gz) = ebdd64f0345cf072be9296d24f14fff8de2adb4d
 SHA512 (pyphen-0.11.0.tar.gz) = 49f510cdc00af479054c64380de8fb5722e2c99a3cf0f882c4b78b82c80300b6cb28c53c593a091e358eae662b28a50ac6e63afb8d57f2adf5c03e5a7f879c68
 Size (pyphen-0.11.0.tar.gz) = 1954944 bytes

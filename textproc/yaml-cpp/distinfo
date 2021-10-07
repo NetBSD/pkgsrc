@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/08/29 12:37:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:02:48 nia Exp $
 
-SHA1 (yaml-cpp-0.7.0.tar.gz) = 8a4126f1e21d374dac8dfc8524ffea101a160f2f
 RMD160 (yaml-cpp-0.7.0.tar.gz) = 29f7e171a84c1e08cc0d2c6842e206f0ae3a10cf
 SHA512 (yaml-cpp-0.7.0.tar.gz) = 2de0f0ec8f003cd3c498d571cda7a796bf220517bad2dc02cba70c522dddde398f33cf1ad20da251adaacb2a07b77844111f297e99d45a7c46ebc01706bbafb5
 Size (yaml-cpp-0.7.0.tar.gz) = 1033237 bytes

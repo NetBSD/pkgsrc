@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2020/05/18 11:31:51 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 15:02:38 nia Exp $
 
-SHA1 (source-highlight-3.1.9.tar.gz) = 233e37b011ba1a5e57f674dd0077d505306bc3e4
 RMD160 (source-highlight-3.1.9.tar.gz) = f69de8b826d697633455b2b560851509bbf8bd43
 SHA512 (source-highlight-3.1.9.tar.gz) = d8e154e9a5d62c77807e4e5d36c0faed5ce2964291be5f8b83e2968a6de52229503689a4ca2109a717ae2632a14b63ec937ca0430c91684c72063f6bc0294195
 Size (source-highlight-3.1.9.tar.gz) = 1717234 bytes

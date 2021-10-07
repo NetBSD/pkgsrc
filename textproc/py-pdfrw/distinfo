@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/02 10:56:15 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:17 nia Exp $
 
-SHA1 (pdfrw-0.4.tar.gz) = 0055a83778e14287795dc4011b52c0e2d79cc8dd
 RMD160 (pdfrw-0.4.tar.gz) = 592e7ea22b4b69204eba5b859b6909d8d8d6fbfc
 SHA512 (pdfrw-0.4.tar.gz) = 6c0b629e837f9bd479a288bcd040952b98920da345113bf90167becbdf2f90a9d6c082c5e7988c68118bd62a2a5a0d22f98523407996531bb5d3031e847e10b0
 Size (pdfrw-0.4.tar.gz) = 95402 bytes

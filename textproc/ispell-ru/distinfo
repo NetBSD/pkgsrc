@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:18 nia Exp $
 
-SHA1 (rus-ispell-0.99g4.tar.gz) = a1f178b8e51abe812a69209f58e4f583e4e7bc39
 RMD160 (rus-ispell-0.99g4.tar.gz) = 6c2d74b22c488e6372615b98c727f84011dea1be
 SHA512 (rus-ispell-0.99g4.tar.gz) = 6183240484eb843c599e715e154fa570004d8775fb95c468030b82910a3cbceb7c3b98d3277711cc128cce6d3e3d5fdafa3dacbf08f5fe02bb27948ff2cac814
 Size (rus-ispell-0.99g4.tar.gz) = 521972 bytes

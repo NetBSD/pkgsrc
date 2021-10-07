@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/06/10 10:10:47 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:01:16 nia Exp $
 
-SHA1 (ispell-3.4.04.tar.gz) = e5976ed225953f6327cbd922a91872122393d195
 RMD160 (ispell-3.4.04.tar.gz) = 6463f1ac889f8fff564a91ba30fa3bc6baadffc6
 SHA512 (ispell-3.4.04.tar.gz) = d8613e020fbe216347a2a9abb83a7e291886f8f7c229bde42f87b3477de9c2dbce9da1230dc9b7aeb35c95727e34377489aac2cf46dc49a7c135da35b9cc6eb3
 Size (ispell-3.4.04.tar.gz) = 670046 bytes

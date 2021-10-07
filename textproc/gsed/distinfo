@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2020/01/27 10:37:33 wiz Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:01:02 nia Exp $
 
-SHA1 (sed-4.8.tar.xz) = 61bd770062d49cdab3f0f45df473e2bf950ba266
 RMD160 (sed-4.8.tar.xz) = 58ecaadd5fb43151a816f6576ec6a96717d434fc
 SHA512 (sed-4.8.tar.xz) = 7de25d9bc2981c63321c2223f3fbcab61d7b0df4fcf7d4394b72400b91993e1288d8bf53948ed5fffcf5a98c75265726a68ad4fb98e1d571bf768603a108c1c8
 Size (sed-4.8.tar.xz) = 1348048 bytes

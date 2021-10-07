@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/03/10 11:52:56 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:01:27 nia Exp $
 
-SHA1 (mandoc-1.14.5.tar.gz) = a59b05ad8012aafaee08d70f22f2ece3402b9b8c
 RMD160 (mandoc-1.14.5.tar.gz) = 19948d8b99862132993d32968e774077e7e7fe5b
 SHA512 (mandoc-1.14.5.tar.gz) = 848f290847f3095757f25647e6d73eb7044018b145bf6f9dc8b5db164b1421911efdc5b3b9022ec3a2c5af9687a84d5acedee810f2bd2f7caaa9242dadb2cc52
 Size (mandoc-1.14.5.tar.gz) = 651846 bytes

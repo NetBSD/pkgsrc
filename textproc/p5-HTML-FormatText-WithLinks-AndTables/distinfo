@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/01/12 11:24:18 rodent Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:34 nia Exp $
 
-SHA1 (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 85008c688f3e8822c9af2ec4b1f9814342fba61a
 RMD160 (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = a758df957e2f9ddfd01017a14793f1d428cdb878
 SHA512 (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 3deea4406f7f9dd55d22d60c169d3889be7ef802a43507fb8b608c45ecdff52f743c9cb3a4703f1e44cdcf033c4c64b4c993192fe1a39efc9eae78c6fb66ff3e
 Size (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 11934 bytes

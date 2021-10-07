@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.4 2020/10/03 15:42:44 tsutsui Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:44 nia Exp $
 
-SHA1 (unicode-emoji-13.1/ReadMe.txt) = bea43e86ded6ffe278b437e1a30644c848e40b29
 RMD160 (unicode-emoji-13.1/ReadMe.txt) = fb4faa25d6f1dc4b42ad7bddbe95d79d97426f21
 SHA512 (unicode-emoji-13.1/ReadMe.txt) = cedc49c4b303956c1bc6f031ccf29c4bb857aaebdb4384a4c20832ba43e82cd2453cb82d10820deda2d81dded18ddb374497cba4a23685e64c2a48f07a16b041
 Size (unicode-emoji-13.1/ReadMe.txt) = 571 bytes
-SHA1 (unicode-emoji-13.1/emoji-sequences.txt) = 21253cd6edbfbdd3182ae35ad2d3494281205965
 RMD160 (unicode-emoji-13.1/emoji-sequences.txt) = 19af7bfb0cb2b3f6b9af7bbecda4f1edab822882
 SHA512 (unicode-emoji-13.1/emoji-sequences.txt) = d3deacd360f6e9838a6d3aa94e38099f77abce228debd598a1c010ff75f21197b92d5c31fb2d839551da262b1b1ea7a7adaeb7156909ef614dc81e52ea9d4478
 Size (unicode-emoji-13.1/emoji-sequences.txt) = 180011 bytes
-SHA1 (unicode-emoji-13.1/emoji-test.txt) = cd0fa24be89718fdd6ef4047dc2630a364ff3051
 RMD160 (unicode-emoji-13.1/emoji-test.txt) = c5d8c9f38d90e5f4aeef08de9b93cb47dcb4ae96
 SHA512 (unicode-emoji-13.1/emoji-test.txt) = a5f8189eb8a35af16427fdfbd00b16111cfced1f0c5677cdf749bfd8937796be82664b0410731c3b38cbbbf940521ceb753836204e4394475d3db4296a49f82d
 Size (unicode-emoji-13.1/emoji-test.txt) = 575499 bytes
-SHA1 (unicode-emoji-13.1/emoji-zwj-sequences.txt) = d337db87a2fe8a83e23303cb975ea4ff82ac7115
 RMD160 (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 4b7144f6286677ea8e43331421b5e37aab8173e2
 SHA512 (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 3e3d849fc6d93abf91b962b7e81f53e2e1a4cdeeb2a0c27eca96a9915924c5865843610441339cf571ff32cf084ff183c3fdd9a4b3f3d59be9f92e2de324eda1
 Size (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 227601 bytes

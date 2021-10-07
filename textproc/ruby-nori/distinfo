@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 09:24:35 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:32 nia Exp $
 
-SHA1 (nori-2.6.0.gem) = 9e49112ed3b1705a8345671b94e4c10746bef566
 RMD160 (nori-2.6.0.gem) = fd787e813c23a5429abc3ece0dfa921c74fba76a
 SHA512 (nori-2.6.0.gem) = bec947e4c05437d373cf13fe04368d9caf54bd3c97d152a042ae348a81df4698ed769fa75f0fc14ca3f86f4f8da8ea5ce3d1f7cf43a1e64b8d58f7ca39ef5b45
 Size (nori-2.6.0.gem) = 23040 bytes

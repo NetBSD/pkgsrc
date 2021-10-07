@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/03 08:37:56 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:12 nia Exp $
 
-SHA1 (jellyfish-0.7.2.tar.gz) = 737f4d110ed6ca13bad12bfe9bcf5ded1f2d7bfc
 RMD160 (jellyfish-0.7.2.tar.gz) = d1b6b9df5c301f7459aab25b66b7a4dfa09b512f
 SHA512 (jellyfish-0.7.2.tar.gz) = 5fa19826a3adb16dea26855d733bd3e8ccce0c68652249f7bcc06f9b5d5ac36919152301c9afafdfca9877cef6614dccbe8e46a51ab41c1fed493374929c3367
 Size (jellyfish-0.7.2.tar.gz) = 133320 bytes

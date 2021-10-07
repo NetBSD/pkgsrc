@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/01 15:31:18 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:32 nia Exp $
 
-SHA1 (nokogumbo-2.0.5.gem) = 18ac12c4c3c3739682485a40bf4219b1abcfbd4c
 RMD160 (nokogumbo-2.0.5.gem) = da49db0d26fbc2e42ae44bdbb9aa68ffbb43ed02
 SHA512 (nokogumbo-2.0.5.gem) = 67a25b2bc0bec819feb7f0cc6bae587a8104d2973ba19d516e07b60da75ae8a34be8c3c121e26a6ddc7c07aede711469b73eba311fa2377c6a22a77ae1687fff
 Size (nokogumbo-2.0.5.gem) = 221696 bytes

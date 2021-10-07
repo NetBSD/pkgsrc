@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 17:31:23 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:10 nia Exp $
 
-SHA1 (unicode-transforms-0.3.7.1.tar.gz) = 02b06d70c6e58abca327fd179828a37e1761e164
 RMD160 (unicode-transforms-0.3.7.1.tar.gz) = 2e77f67f6b7af91ec49ca7ac6f17b5c0f0862f03
 SHA512 (unicode-transforms-0.3.7.1.tar.gz) = a4e39b943bcea6c86ebb8df7253a39ecf2a7bf5a083d0cf2ee1e5720af4afe47111330a787353a5728793d02739448debae2fd73fe6ba2d0eb94cbbb4bfef30f
 Size (unicode-transforms-0.3.7.1.tar.gz) = 717790 bytes

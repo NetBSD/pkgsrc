@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/09 13:03:10 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:36 nia Exp $
 
-SHA1 (Lingua-Stem-Ru-0.04.tar.gz) = 5f16b646c151316017bbe316689fab560c24e0e2
 RMD160 (Lingua-Stem-Ru-0.04.tar.gz) = 9179527391a1c16f1d8274394d6add493a167c77
 SHA512 (Lingua-Stem-Ru-0.04.tar.gz) = 30ad7e74cbc065d3a9534f099a7c08b7aef5ec2290609e72704d1ae4ae0ea1a3622dfd0a4012fb169903fe7ef959d24d38e51cd330bc1c38ac09a1d50a76962e
 Size (Lingua-Stem-Ru-0.04.tar.gz) = 217502 bytes

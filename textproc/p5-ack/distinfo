@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/09/07 17:31:44 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 15:02:01 nia Exp $
 
-SHA1 (ack-v3.4.0.tar.gz) = 8d486ac69336accf353916ef5a5962da984d3667
 RMD160 (ack-v3.4.0.tar.gz) = 26fd9f478d8865d5844bb6892a1dd71d514ebb8e
 SHA512 (ack-v3.4.0.tar.gz) = cc8de5a784f63a8f48b9548e930972578866d0fcc520febc6002d1ce4f9b55aabb0c8e87860586a668d94b5091c66194c05a07c584fe30fad2c5d786aee95db5
 Size (ack-v3.4.0.tar.gz) = 251106 bytes
