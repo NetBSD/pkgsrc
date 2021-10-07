@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/05/30 08:04:48 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:50:30 nia Exp $
 
-SHA1 (hyphen-thai.r58652.tar.xz) = fc35cbfa6dfdc9bfaa4df51b43ab332439404ef0
 RMD160 (hyphen-thai.r58652.tar.xz) = 7e39eb35c6e7dbdcd2921c5dd52df7e40298b335
 SHA512 (hyphen-thai.r58652.tar.xz) = 8336eee03250859ab4328ad3c1fe437d2af688ef56b43be49c45838965ffe033befa84cdf600e9f48cdf60cbbfbff44450c830bd4c34556f680c5096ed3aecc4
 Size (hyphen-thai.r58652.tar.xz) = 33700 bytes

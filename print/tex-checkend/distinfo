@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 10:55:47 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:38 nia Exp $
 
-SHA1 (tex-checkend-51475/checkend.tar.xz) = a1d7ca31b01fe374fcece3542ccda598cedaf784
 RMD160 (tex-checkend-51475/checkend.tar.xz) = 1e557537ec81196478d8243774ecad96d510242d
 SHA512 (tex-checkend-51475/checkend.tar.xz) = 40af84a5510dc3038c536c4b0aae0176651f01953650c1e6ec8b5d76459e7000246205d55f2b13ef566930649daf1eafc38e6d2d822787d1fa462e99837b6ba7
 Size (tex-checkend-51475/checkend.tar.xz) = 1732 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/27 22:35:36 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:10 nia Exp $
 
-SHA1 (acronym.r54758.tar.xz) = f0da7a10e47b593b7fa8609e8202b49edee08963
 RMD160 (acronym.r54758.tar.xz) = 580a6ef7218185a943aa15f9a90a12f786549440
 SHA512 (acronym.r54758.tar.xz) = be68e32baacdb8708d1a31c4a585fcd282d0def7a76a1e284b908532118aec04505271790a99ab0a36e7c035695b84f8ae1e2146c31ca8c4fcfb76be4f11db26
 Size (acronym.r54758.tar.xz) = 4980 bytes

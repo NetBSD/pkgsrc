@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/02/13 11:40:09 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:51:58 nia Exp $
 
-SHA1 (xkeyval.doc.r57006.tar.xz) = 7df94a6e6225b765443fb891e128bf1c2a57e399
 RMD160 (xkeyval.doc.r57006.tar.xz) = bfe0267725e999b052ffe701ce800e75cfc30373
 SHA512 (xkeyval.doc.r57006.tar.xz) = 58a64143df3ca2cfd5b8260dbe5df4900586d3131f7914ea1da9b0a8f53c84e2ce49a6e36c03be3c3a508b4a9f26e61c167c600e73105709d6f36b2acdb6bd2e
 Size (xkeyval.doc.r57006.tar.xz) = 392804 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2016/08/07 10:32:06 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:18 nia Exp $
 
-SHA1 (tex-graphics-cfg-41448/graphics-cfg.tar.xz) = c258bc7fef552fcafdb49d4372c847dac701fabd
 RMD160 (tex-graphics-cfg-41448/graphics-cfg.tar.xz) = 2115ebd7f45f96c0843790286ffd9e9bbee45150
 SHA512 (tex-graphics-cfg-41448/graphics-cfg.tar.xz) = d6a2cac42ca09362e4870afb6cf5988fc6752cc65d9ca704ba2d9ba4bcbda294f6a517e7837500aa7b8c2dc445f5d18fe1553c4654120bed52fcb3a0f8d0a055
 Size (tex-graphics-cfg-41448/graphics-cfg.tar.xz) = 1128 bytes

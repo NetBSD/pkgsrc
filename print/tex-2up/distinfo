@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/20 09:37:44 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:07 nia Exp $
 
-SHA1 (2up.r55076.tar.xz) = ae75cd11a321c6c6d3feede98c45c1e1af1099f8
 RMD160 (2up.r55076.tar.xz) = dd158779ede03c52663191b75a80e3b4697f898c
 SHA512 (2up.r55076.tar.xz) = 6408d1d99a97df71640bcdde4133edc2e5861bbcdc8c5e1be98d5704f7ecf9c043c5538ea19ac4952d811e3677ee0698bdd477eadbd1068725bdb210787d9dbc
 Size (2up.r55076.tar.xz) = 4200 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/21 03:38:01 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:03 nia Exp $
 
-SHA1 (tex-eqparbox-45215/eqparbox.tar.xz) = 74f3519f884d75598851e18f93ab0cddbc9b9823
 RMD160 (tex-eqparbox-45215/eqparbox.tar.xz) = 59fa811907657290df25c802f6df42f0dce561f6
 SHA512 (tex-eqparbox-45215/eqparbox.tar.xz) = 5e3ddfa8f2a196518915cfa26ca587df173fdcd7deb4dbb73adacf23f376af4829ed8b3241b160ebb35722fef788047e22568c709be3b383ce36283b57a7a6d0
 Size (tex-eqparbox-45215/eqparbox.tar.xz) = 2788 bytes

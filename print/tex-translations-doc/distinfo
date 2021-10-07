@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/20 11:04:57 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:45 nia Exp $
 
-SHA1 (translations.doc.r57461.tar.xz) = a7dfa81b9a0457110e2dfa36703f3a6d44d8ea83
 RMD160 (translations.doc.r57461.tar.xz) = dc6594e243852ee60cdc5d68fb646b1441885399
 SHA512 (translations.doc.r57461.tar.xz) = e5faff88c1b8f9588e6b7bba20aa3aef9711ee273d79623ea79f90345be6c6420595dcbb5419f87463c2a89b019b8999c330627a74f4f03ebc1af41ee7894006
 Size (translations.doc.r57461.tar.xz) = 503624 bytes

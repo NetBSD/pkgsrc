@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/04/07 12:28:30 markd Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:48:59 nia Exp $
 
-SHA1 (okular-20.12.3.tar.xz) = c6b8b746b7d192ede083042cda8d1755f2e69f8c
 RMD160 (okular-20.12.3.tar.xz) = 10967c460d2e1325a27e606ffca3016690d0bcc4
 SHA512 (okular-20.12.3.tar.xz) = f64eca81bdbd163b2780037026c330259d5dd7fed7a175b06601742bc6b98c25f26463d72764e5b77878b3c36df4f4657d4cd5349f389786a45df1a5fa9cda45
 Size (okular-20.12.3.tar.xz) = 7884780 bytes

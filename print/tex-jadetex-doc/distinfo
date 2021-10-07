@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/14 03:04:34 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:34 nia Exp $
 
-SHA1 (jadetex.doc.r57186.tar.xz) = e18c6b486918f6d7a20d7e1dbcf50a10fc7c7ded
 RMD160 (jadetex.doc.r57186.tar.xz) = 457772d417a3f305973bd4fa61920b671375fe86
 SHA512 (jadetex.doc.r57186.tar.xz) = bf83fb4dc700f10050d34905197a630f8de75a6a27146188efc254b831ad0d68cc873b610f7457a3dc1140a10793aa05c567749efc38225089014df99fc2c895
 Size (jadetex.doc.r57186.tar.xz) = 31792 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/13 10:56:29 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:09 nia Exp $
 
-SHA1 (filehook.r56479.tar.xz) = a845a55db4004d9693e4b9161b0d44fb6ecc3cc3
 RMD160 (filehook.r56479.tar.xz) = aac59774b9ff94228cff284a902d6c8b3caf6c11
 SHA512 (filehook.r56479.tar.xz) = 4591384d78ddb17648bc3bbbbad2b0e7f693a250e36b8cfb110233d909151352c337ff15ac0f53803a01ca2b59b85c7fcf4405cb67e04df1a0bd3bbcf18a6f07
 Size (filehook.r56479.tar.xz) = 4964 bytes

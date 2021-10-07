@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/07/06 03:28:56 wen Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:49:00 nia Exp $
 
-SHA1 (LaTeX-Driver-1.2.0.tar.gz) = 4abba34ad4a05daad6eca56a0dfd4231b4186547
 RMD160 (LaTeX-Driver-1.2.0.tar.gz) = c0e8871e574c5d8a25d58253c2f5d37628493d38
 SHA512 (LaTeX-Driver-1.2.0.tar.gz) = 013e64f74dc4d0b833c25c545281d7453a0dbdedc74c0e3af54fd1e4cdf6b4389c6c248d19e338cee3ca7af70344ec0ba1a3920c02bb11aed43d03135a1bdc42
 Size (LaTeX-Driver-1.2.0.tar.gz) = 55293 bytes

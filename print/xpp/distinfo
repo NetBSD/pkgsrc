@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/03/05 14:57:59 bouyer Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:49:22 nia Exp $
 
-SHA1 (xpp-1.5.tar.gz) = 7f3c1427979516e47402a0acb708eb83b68daa61
 RMD160 (xpp-1.5.tar.gz) = a64ec4c93013d1db08a6c9b6705b43850c36c337
 SHA512 (xpp-1.5.tar.gz) = 098ce2f78f0f38153680a52e8af1707eadf2f96ed58a2087bdb3e462e44f5e4f5d1a382cd319d8c0d030dea416ce1bf76d0698b3b91ab7019a1c0dab08418d77
 Size (xpp-1.5.tar.gz) = 107755 bytes

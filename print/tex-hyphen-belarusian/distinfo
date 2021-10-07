@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/30 08:04:42 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:24 nia Exp $
 
-SHA1 (hyphen-belarusian.r58652.tar.xz) = 8da5c79d7a49ce863a47ffe8b8798a16e9de88c5
 RMD160 (hyphen-belarusian.r58652.tar.xz) = 3caa07527aa3297de36eb00c2dbafde7443d2f3d
 SHA512 (hyphen-belarusian.r58652.tar.xz) = 19b9bd10d2357d0cb6ecc9ddb5e46b65b3c0eec1b2917a78311f255c1609bbb86595ce617d331271a72de934ae4001597f4a04d61b3810e34f3b197b21cab193
 Size (hyphen-belarusian.r58652.tar.xz) = 11856 bytes

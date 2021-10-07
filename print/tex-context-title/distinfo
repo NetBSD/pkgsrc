@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/06 02:10:25 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:49:49 nia Exp $
 
-SHA1 (tex-context-title-47085/context-title.tar.xz) = 1a563ff4372ed8304a55401bbbd860b513868f9e
 RMD160 (tex-context-title-47085/context-title.tar.xz) = a881bbafd86f78dbb4b72cc1bb52247a53e1fbff
 SHA512 (tex-context-title-47085/context-title.tar.xz) = 6ddaed20bccab2cb06d27c485c3974a43ce9d5f18848a23c9405892b5f8ba7628896fb10dd15faaeae78ef36a90d7c4202c5fdb83eec53953d2b3aaa1f9fbf20
 Size (tex-context-title-47085/context-title.tar.xz) = 2216 bytes

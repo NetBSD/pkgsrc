@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:43 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:25 nia Exp $
 
-SHA1 (hyphen-czech.r58609.tar.xz) = 0e1d715b9c55828826fb35de31ae9d4f93f2a666
 RMD160 (hyphen-czech.r58609.tar.xz) = 8b7da6776f9a424fb3292b08f5d79da7c6b41f7c
 SHA512 (hyphen-czech.r58609.tar.xz) = f5c8b08c2db716dfa6d36fcf337b4e18372978d04e28ff2c8ed0a0b3866f4bb3efb7b498fedbfde5052fc504b8677ae553c2dce73701e219632d8c5460d7e826
 Size (hyphen-czech.r58609.tar.xz) = 15756 bytes

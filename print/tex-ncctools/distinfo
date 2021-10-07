@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/02 02:27:45 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:58 nia Exp $
 
-SHA1 (ncctools.r51810.tar.xz) = 13dbec816728e2ae2a44729e03297e90fe89762a
 RMD160 (ncctools.r51810.tar.xz) = 2cce439912566715d741f3e8f3a6632b0f5e631e
 SHA512 (ncctools.r51810.tar.xz) = f7ec6f6c51d2a4f071b85cf28299a4a11eeabaf225c85cd0144bb0971ec3da44ee9aeac7cdd7501d258b7e8cf25b3e3484cd60dbadf0ff3ee05767c713c12dfa
 Size (ncctools.r51810.tar.xz) = 24572 bytes

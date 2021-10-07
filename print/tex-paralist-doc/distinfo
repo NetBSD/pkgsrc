@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/06/21 11:45:57 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:51:05 nia Exp $
 
-SHA1 (tex-paralist-43021/paralist.doc.tar.xz) = a41d11688be600ea34aefd491cd42bcf7826f2d6
 RMD160 (tex-paralist-43021/paralist.doc.tar.xz) = f16a3808e72d2fc16ee4e9beab39fdb2e0fa65c1
 SHA512 (tex-paralist-43021/paralist.doc.tar.xz) = 9779cafcaccb6db5b3c8502fef772f688c25df78ceb5f0025972266a5a76fc2f3aa7e3e3c408155da4815fafe83792c29e02b1f9ee5aec60f52c3fe1bf4ea051
 Size (tex-paralist-43021/paralist.doc.tar.xz) = 209076 bytes

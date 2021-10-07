@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/01/26 09:39:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:42 nia Exp $
 
-SHA1 (tex-colorprofiles-49086/colorprofiles.doc.tar.xz) = aa3f9e017fc39ebd85245c137f55cd0c2a3aa27c
 RMD160 (tex-colorprofiles-49086/colorprofiles.doc.tar.xz) = 0bde73e01bf8e48ef116d5166616a811e40ef41e
 SHA512 (tex-colorprofiles-49086/colorprofiles.doc.tar.xz) = 936ebf755ceecedc00492a53843ca906bb7f58b080a0d3bdf94d8608f6901475bf34ef45b411a4ad3fc44faca566a63ef278e80dcec9dd6a990815acbb73f00c
 Size (tex-colorprofiles-49086/colorprofiles.doc.tar.xz) = 27624 bytes
