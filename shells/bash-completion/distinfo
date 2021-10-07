@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/03/10 16:35:53 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:56:09 nia Exp $
 
-SHA1 (bash-completion-2.11.tar.xz) = 731834de11a2fea2992002c528dc9d39f0cb9fdc
 RMD160 (bash-completion-2.11.tar.xz) = c38855cb1e3379c815d5491234ee589b91c44e3f
 SHA512 (bash-completion-2.11.tar.xz) = 41585f730b5114d397831ba36d10d05643c6a6179e746ddc49aa1cbef61ea5525fd2f09b2e474adee14e647f99df8d5983ee48e29a59d8a30e1daf7fb1837e06
 Size (bash-completion-2.11.tar.xz) = 311004 bytes
