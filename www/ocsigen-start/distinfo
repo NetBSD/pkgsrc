@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/12/11 09:49:37 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:26 nia Exp $
 
-SHA1 (ocsigen-start-2.21.1.tar.gz) = 62ee463870dc498876f4768646170a2d862aef78
 RMD160 (ocsigen-start-2.21.1.tar.gz) = 55fd43cf67c98860957ea246df83adc345567a8a
 SHA512 (ocsigen-start-2.21.1.tar.gz) = 5f3f84cd4be76b000af033347890cf94ea53e811f24e52aec6f5c4c06c201460e33f346f0356a6233f5478981190d8105db651273609b92a0d16ad55463c0dd6
 Size (ocsigen-start-2.21.1.tar.gz) = 1047596 bytes

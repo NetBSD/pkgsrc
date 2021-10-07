@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/03/13 17:39:48 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:08:42 nia Exp $
 
-SHA1 (jekyll-gist-1.5.0.gem) = efc7cce6645e638cca64b2044b1a9796588aa287
 RMD160 (jekyll-gist-1.5.0.gem) = e3121172e0bd6b698d4bc3228185ef3fa170963a
 SHA512 (jekyll-gist-1.5.0.gem) = 0ebf8a1fef5649fb85d06b9d62becefeef53b2611621cc2bc9dcceae821a00e5cc86794a603c7971b192ac9efc0e603b32f4a192702d40c05243ff0c3fd8fa98
 Size (jekyll-gist-1.5.0.gem) = 12288 bytes

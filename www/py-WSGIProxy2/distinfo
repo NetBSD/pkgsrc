@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/02/26 11:27:17 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:08:11 nia Exp $
 
-SHA1 (WSGIProxy2-0.4.6.tar.gz) = f42b2255ca09c32852c8dfdd266a5edee9596faa
 RMD160 (WSGIProxy2-0.4.6.tar.gz) = 82b5c2d6d9282a72e0de536d57ed4ae45d3d510d
 SHA512 (WSGIProxy2-0.4.6.tar.gz) = c60d794c0c8b383bf1857ec325d6d0b4fce9c4aec4a06cbf9d7549b609633e491e137342b7bbaf4eec12462eabba63096328c8517b0685e241d1baecd5827cad
 Size (WSGIProxy2-0.4.6.tar.gz) = 16481 bytes

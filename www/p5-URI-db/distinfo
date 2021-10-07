@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/08/21 13:50:51 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:08:03 nia Exp $
 
-SHA1 (URI-db-0.19.tar.gz) = a676e82cbf40f3df6627a7d448dfe40bd5a01731
 RMD160 (URI-db-0.19.tar.gz) = a9f7dc648323c6a5c20e81f78746bc53c78ed940
 SHA512 (URI-db-0.19.tar.gz) = 4263bc58acadfc61eb4269392e5924fa349138c6a14584ee754b12669787c22c6228a66034c191bd934126bc3120f10188f50daf5a5a81605efa89442093e146
 Size (URI-db-0.19.tar.gz) = 23261 bytes

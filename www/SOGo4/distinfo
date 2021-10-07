@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/11 12:01:54 tm Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:07:00 nia Exp $
 
-SHA1 (SOGo-4.0.8.tar.gz) = 9f1fbcdc2cce970c4d6e6bcbb294248662f83a3d
 RMD160 (SOGo-4.0.8.tar.gz) = fa1501c998cc1d90f71b977e424698ee73759e83
 SHA512 (SOGo-4.0.8.tar.gz) = bf527b2f58973d9812cc07ba83cb473ddd314613121cb95ab4574a90b30975953831b8f43b0970b544ca5b85fbcaf9bc5de51ef78e8223c74299db2fe1657afd
 Size (SOGo-4.0.8.tar.gz) = 34552490 bytes

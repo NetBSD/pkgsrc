@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/05/25 05:00:24 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:08:13 nia Exp $
 
-SHA1 (django-admin-sortable2-1.0.tar.gz) = 2b578894d13f3133e52b2968b008b0789a785937
 RMD160 (django-admin-sortable2-1.0.tar.gz) = 7e3af15aeb7a4aace50a9c67728bd1b1f87f1610
 SHA512 (django-admin-sortable2-1.0.tar.gz) = c0973af59df796835aa938cffe36411989babbab35cdaa11930b337fb0abb56cc5aa3bc104f447dd9cff550005e0f0c4c20bbc58ccb8b540c2d038f5238b6b3c
 Size (django-admin-sortable2-1.0.tar.gz) = 56874 bytes

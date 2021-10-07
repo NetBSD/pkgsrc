@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/03/30 10:58:29 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:07:18 nia Exp $
 
-SHA1 (kjs-5.80.0.tar.xz) = 30c91f09bd07e89ec33670a935f4c4092011cc87
 RMD160 (kjs-5.80.0.tar.xz) = 508b7969bdf2c25f90a4b5401f3f0d151e0e5a95
 SHA512 (kjs-5.80.0.tar.xz) = faf419dc9209d4ff7e15d9c807c7d4c9ae1b877d8d4ff9b32a0ceec7fa55438ce25e8758f84d934d368f1101b09bd5fcc3ecc1b19e50df3211be5c5bb9f81915
 Size (kjs-5.80.0.tar.xz) = 337980 bytes

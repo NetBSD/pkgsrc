@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/08/13 14:14:28 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:08:33 nia Exp $
 
-SHA1 (Uliweb-0.5.tar.gz) = e9c533c012ccee1671c0eef402cd453875482174
 RMD160 (Uliweb-0.5.tar.gz) = ea5a86c2da43ee567519823e7e11a7a31f7e7871
 SHA512 (Uliweb-0.5.tar.gz) = 1d19b5f8b14515a7dbe37b42409d8fff52200ec4e1861a7a37d18ce3134027d922161b7a1d3bee051080e38bccbbe4d40e046d55a28b44bac7002114cc2d9b92
 Size (Uliweb-0.5.tar.gz) = 564198 bytes

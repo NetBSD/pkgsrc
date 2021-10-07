@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/06/24 09:37:54 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:07:41 nia Exp $
 
-SHA1 (HTML-Lint-2.32.tar.gz) = 101ddf7bbd5209ef5003e5def123465c77d02d42
 RMD160 (HTML-Lint-2.32.tar.gz) = 6e0c58ee5421213059f151475e18055cd6a4ecfa
 SHA512 (HTML-Lint-2.32.tar.gz) = b943b1734b5fd9eeb6ad82ef0f7e17ad6721f5e4dae23ed3fb077a3cdeacd019aa6efe7659396cd199bd803d8b1729d75766fa81095969b2219d87cd554d7cef
 Size (HTML-Lint-2.32.tar.gz) = 30735 bytes

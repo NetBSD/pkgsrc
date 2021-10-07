@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 08:23:06 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:08:41 nia Exp $
 
-SHA1 (http-accept-2.1.1.gem) = c0f1c4c89aa01e17d2d0f0f9077a7d5c21eb04a3
 RMD160 (http-accept-2.1.1.gem) = efa6ba902b31e927f18187dd5f81b5513f182595
 SHA512 (http-accept-2.1.1.gem) = 5bf72e0f2d1e5b7d6e4845fc1ec8431b3c390294b8f2590fce34afb637e76690d128140446cf4078bc451da966dc8abb7dea2c0408dab346d45d5f2c1ae301af
 Size (http-accept-2.1.1.gem) = 11776 bytes

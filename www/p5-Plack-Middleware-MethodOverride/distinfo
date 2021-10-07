@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/30 12:02:08 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:07:57 nia Exp $
 
-SHA1 (Plack-Middleware-MethodOverride-0.20.tar.gz) = fc184e8eccb33b5d6511927c82402e273e7b0620
 RMD160 (Plack-Middleware-MethodOverride-0.20.tar.gz) = 3e46c46d3d7328a6b09261b54c583335b2592ec6
 SHA512 (Plack-Middleware-MethodOverride-0.20.tar.gz) = d6bc61553e4b6a140510a2030147e2b159461c811814f85937db112582f9fcc8523acb086f323d3e23b86b9b2eba3cd7e6812b21403c47e0d06d53a1575c93fa
 Size (Plack-Middleware-MethodOverride-0.20.tar.gz) = 12715 bytes

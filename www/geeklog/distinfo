@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2015/12/13 14:55:35 taca Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 15:07:12 nia Exp $
 
-SHA1 (geeklog-2.1.1.tar.gz) = f039ca40dea3e876a344a64bba3b184b809589ab
 RMD160 (geeklog-2.1.1.tar.gz) = 331e100026b697cd1c9d63badcbc30417d94ded0
 SHA512 (geeklog-2.1.1.tar.gz) = 57ad03901706c3cdfeed941284d02441007956ce2d21afe916e49ccadffee532959ce3846a9ef41d4d93d8880b68cb1c42d74f1ec0e126c8fe43e2989f0d6ee8
 Size (geeklog-2.1.1.tar.gz) = 11801336 bytes

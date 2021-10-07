@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/01/16 09:57:09 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:08:18 nia Exp $
 
-SHA1 (djangocms-googlemap-2.0.0.tar.gz) = a8a2bec8033553dcc04ce1ec59e4b1ff5cf439f5
 RMD160 (djangocms-googlemap-2.0.0.tar.gz) = 5f034526d3a827f21e3a68223ee7be847d9f55e6
 SHA512 (djangocms-googlemap-2.0.0.tar.gz) = 41e62cd9fde8fb6b60c3e77d33a28815f71c29b4f4df0394ae34f0b5dc36239f07a3e088b4b67ae682fcb8ee795b12a16da1415584e6255a0dfce2b4a3f6a47c
 Size (djangocms-googlemap-2.0.0.tar.gz) = 48083 bytes

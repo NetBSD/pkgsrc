@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/10/05 20:15:01 nils Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:08:51 nia Exp $
 
-SHA1 (siege-4.0.7.tar.gz) = 23e0c31a719af893bab4b9a38d5bc7f1929fd73a
 RMD160 (siege-4.0.7.tar.gz) = c9d3d41a97ffb483907442aca9a58436e3706feb
 SHA512 (siege-4.0.7.tar.gz) = 2dcccc50a2d8cd0d6c18efe776b871b999f6918c078898845fec34bb2b1b8ec03e0b95792dd963aaefb054e4f4e27f604ed95c0de5f8a34cbf738f66a2307abc
 Size (siege-4.0.7.tar.gz) = 525654 bytes

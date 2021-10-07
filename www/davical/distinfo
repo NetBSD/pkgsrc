@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/03/19 17:03:44 triaxx Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 15:07:08 nia Exp $
 
-SHA1 (davical-1.1.10.tar.gz) = a52ac6c0ca2fb2051f041643e3c2a181b08ec71d
 RMD160 (davical-1.1.10.tar.gz) = 80cb286d2954278ae823028b5f81757403046596
 SHA512 (davical-1.1.10.tar.gz) = 20a4a473b12d467131a3b93aed1828ae978cf3b34feedecda384a974814b285c1b842d1ec0d2638b14388a94643ed6f5566a5993884b6e71bdaf6789ce43bd63
 Size (davical-1.1.10.tar.gz) = 1891545 bytes

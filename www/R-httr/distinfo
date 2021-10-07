@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/20 15:23:56 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:06:59 nia Exp $
 
-SHA1 (R/httr_1.4.2.tar.gz) = 3839ca4012f901cd81871d40f9f39bf62bc9df62
 RMD160 (R/httr_1.4.2.tar.gz) = 44d5fbc042c14a91630d728f75fc7a49a01a86f1
 SHA512 (R/httr_1.4.2.tar.gz) = cbfb0569e7d61298645ce1cd569fdc3a25ef8ab07654523d001cd7b6292600c0baaf45be0b30fb2f692caed8e58367c4b6095914f5333ea5fb7c131df8931371
 Size (R/httr_1.4.2.tar.gz) = 159950 bytes
