@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/08/17 18:35:12 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:13:55 nia Exp $
 
-SHA1 (libxfce4ui-4.14.1.tar.bz2) = 5f8f80879de493f0478a5108be890cb869fb89d6
 RMD160 (libxfce4ui-4.14.1.tar.bz2) = 86bfb60f4fc60cb0b5575e0863811174a3c93a45
 SHA512 (libxfce4ui-4.14.1.tar.bz2) = f42f41da3a683a0c56c3b1e7ba420c4f50909d2613e681d053b09b50bc0eb7f750f44c892e94b0ee8b9207983a87c0cadbda1ad93d0df74ae351dc8812025407
 Size (libxfce4ui-4.14.1.tar.bz2) = 756175 bytes

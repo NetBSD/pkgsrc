@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/05/28 05:24:10 triaxx Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 15:14:12 nia Exp $
 
-SHA1 (rxvt-unicode-9.26.tar.bz2) = d325d8cdea6bcb8e0b8b219b8451bf5c690b6c62
 RMD160 (rxvt-unicode-9.26.tar.bz2) = ce20bcda75cadd4a22edf166ce50384080de1b23
 SHA512 (rxvt-unicode-9.26.tar.bz2) = 35560b57730e17c9542ea4a615fd86ce703c4e6421323e8fe1570007737a880fde90d17943e5af9e170be4111b9769f4aa7e57efca5428421fdc1c299112f8e0
 Size (rxvt-unicode-9.26.tar.bz2) = 904950 bytes

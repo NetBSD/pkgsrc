@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2017/01/29 05:54:21 mef Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:14:35 nia Exp $
 
-SHA1 (xfstt-1.9.3.tar.xz) = 0024485b4bd225b048632e7bd53ec7d9d9ce10f6
 RMD160 (xfstt-1.9.3.tar.xz) = 4ee9c22c244a8de03c90c9dfcea2cf6e900e2278
 SHA512 (xfstt-1.9.3.tar.xz) = 51507c49fc2610eb3f3ca90d8a55ce0be06ea6c8e6753205a23657ea7f34b90b605568c0d68348ae0d9f3f63d515107eab8a67428f325308a22577e87b43b65e
 Size (xfstt-1.9.3.tar.xz) = 215116 bytes

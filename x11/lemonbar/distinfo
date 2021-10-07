@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/11/23 14:07:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:13:48 nia Exp $
 
-SHA1 (lemonbar-1.4.tar.gz) = 18abca2464a50ccf21a7d92378f9e7585952c919
 RMD160 (lemonbar-1.4.tar.gz) = 416917e37c611abf12eb6ee1a12fce7b836e5ac1
 SHA512 (lemonbar-1.4.tar.gz) = 2e516298854ad4ebf3dd4b67e933f0dca46a23cfb4146ef1737f26d937c582d0f9ce93b62ce094a7e456d55bd6273168f664c284c48c9637c8ed08f032799b14
 Size (lemonbar-1.4.tar.gz) = 16810 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2018/04/20 01:36:00 christos Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:13:31 nia Exp $
 
-SHA1 (efltk-2.0.5.tar.bz2) = 26f7124b384d0bfe3d28a73cbdf0111432b08d99
 RMD160 (efltk-2.0.5.tar.bz2) = 7efa711d0df8a01ee402e1866286265d294778e8
 SHA512 (efltk-2.0.5.tar.bz2) = 869f2d694a8ea4d4d3f3101be359f5a8027e604e662f4bc8ade128caa2e5d6e2dc51ad257243e0805f9381345b9247463a2bb718869bd101f16c43dde348345b
 Size (efltk-2.0.5.tar.bz2) = 1241294 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/03/09 06:52:02 tnn Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:14:40 nia Exp $
 
-SHA1 (xp-1.2b10.tar.gz) = 70b232966ee2483ceb8f0ae8f0ef0cf7b899104b
 RMD160 (xp-1.2b10.tar.gz) = 035f6f7dd3143e220ab454388d1632788e9e2bd3
 SHA512 (xp-1.2b10.tar.gz) = 6c45b91dccdf1a9dc5b836f7ed38a3abd5e309671c19011b0d3d3333049071ec3236bc531a1fada919ca7c43c54f48802b51644971d864860e1250f969073cae
 Size (xp-1.2b10.tar.gz) = 43036 bytes

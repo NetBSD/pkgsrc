@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/06/18 08:39:32 pin Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:13:47 nia Exp $
 
-SHA1 (kitty-0.21.1.tar.xz) = 9511df25a0e568bf2c315a66cbc1656408df2c64
 RMD160 (kitty-0.21.1.tar.xz) = 77c9c729439d6f6cd4800da3604934720d1a7485
 SHA512 (kitty-0.21.1.tar.xz) = 86b1e03f8227375cc46dabffd972a131c8a33d55d87888b2cf67d97da6749144408778b8ac126dbc29fe3850f272e5ae0c4313194ebb130ae3417b04b76cb987
 Size (kitty-0.21.1.tar.xz) = 4339836 bytes

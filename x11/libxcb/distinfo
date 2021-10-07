@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/02/23 22:37:45 wiz Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 15:13:54 nia Exp $
 
-SHA1 (libxcb-1.14.tar.xz) = e218be6043162d2f758643dbda8caccd53107388
 RMD160 (libxcb-1.14.tar.xz) = 13ca4d944e3b1e202bbc501fef0035a7db44201b
 SHA512 (libxcb-1.14.tar.xz) = b90a23204b0d2c29d8b115577edb01df0465e02d6a8876550fecd62375d24a5d5f872ddd5946772ddba077cadce75b12c7a6d218469dc30b5b92bc82188e8bc6
 Size (libxcb-1.14.tar.xz) = 439404 bytes

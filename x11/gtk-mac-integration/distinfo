@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/07/02 12:17:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:13:34 nia Exp $
 
-SHA1 (gtk-mac-integration-3.0.1.tar.xz) = ba8600887256d020a9bf5b2bcce3636294ec318e
 RMD160 (gtk-mac-integration-3.0.1.tar.xz) = 50b403a4fa0216f87fc462b775dacd4a366935df
 SHA512 (gtk-mac-integration-3.0.1.tar.xz) = fb34e4e03d26db9635f5c5cfd0c1caab81b4099fa2bac3828115be3275f5ef17c90e886b4a50cfe28d9b3b782c18551b078713a1123dbcbd5bc3f909f6a2579b
 Size (gtk-mac-integration-3.0.1.tar.xz) = 349228 bytes

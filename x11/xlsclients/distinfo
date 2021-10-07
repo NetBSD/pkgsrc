@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/03/10 22:07:37 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:14:38 nia Exp $
 
-SHA1 (xlsclients-1.1.4.tar.bz2) = 175af1c216a1db3de5023ecd6cce186e7693c6e4
 RMD160 (xlsclients-1.1.4.tar.bz2) = b26f2e0818e3b1486c222b6015cc9e528cab4328
 SHA512 (xlsclients-1.1.4.tar.bz2) = 42fd848d88d3cf31168a37fed63f9f5b60ddc4f36be2956b354e574c93129d75f29e005d6631784380bcef27860b54c64f419ca18ad77f092f4520dec47b10f4
 Size (xlsclients-1.1.4.tar.bz2) = 130586 bytes

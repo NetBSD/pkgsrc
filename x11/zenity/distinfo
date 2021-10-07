@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/03/30 11:00:38 cirnatdan Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 15:14:47 nia Exp $
 
-SHA1 (zenity-3.32.0.tar.xz) = cb210b751b513fe800ffd7ab61d473476561ea36
 RMD160 (zenity-3.32.0.tar.xz) = b49fc55351dfc87439dfe5608b32b6495f1cdb93
 SHA512 (zenity-3.32.0.tar.xz) = d057df25dbb2d780c6be184ec167b0f569eadf0ac1c460d63509843157f14dfdcebe46bb6f93b17c6069ef0208902ce9ecbb4025933f7dc7572323032ec34fda
 Size (zenity-3.32.0.tar.xz) = 4753752 bytes

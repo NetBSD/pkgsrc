@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/14 10:39:27 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:14:18 nia Exp $
 
-SHA1 (xauth-1.1.tar.bz2) = 16180e36d75a23cb182cb91e78f24273f1a63967
 RMD160 (xauth-1.1.tar.bz2) = efc6bc78d403c8db7da201782f3a107f36ffd2d8
 SHA512 (xauth-1.1.tar.bz2) = b6ecd59a853a491ef45bf8cfbff63bed36645f81cb79ae9d18458b57f7502bccf92f0d979d3337578518646f680ad379e67b1dac15a927cbb11372733e7a3a0c
 Size (xauth-1.1.tar.bz2) = 163510 bytes

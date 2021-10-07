@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2019/02/01 11:24:10 tnn Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 15:14:17 nia Exp $
 
-SHA1 (x11vnc-0.9.16.tar.gz) = c0efa873fa4873e9e69bdfa229cd9e21c5a8963e
 RMD160 (x11vnc-0.9.16.tar.gz) = df5b5873ebceb5cc00ba8ba9d9cf0fed873f53e8
 SHA512 (x11vnc-0.9.16.tar.gz) = 69f65ee312f8dede6051b401304987502a213c6c28c7f41e855734f11de1fae14d5d493dc9c28b2e4b7c0be55f8dbd3b35dd2610aae910183772c3e626736fec
 Size (x11vnc-0.9.16.tar.gz) = 1708009 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:14:10 nia Exp $
 
-SHA1 (qwt-6.0.1.tar.bz2) = 301cca0c49c7efc14363b42e082b09056178973e
 RMD160 (qwt-6.0.1.tar.bz2) = 54b815d131fd7e7c8bfd1a49fbf3bc7c0ccc9c7a
 SHA512 (qwt-6.0.1.tar.bz2) = 36fdd5344203586daa8b8283b6ae743fedd3f0685bc3405295868288de66827695b5e31e9a54231a3fe8aa0f3b008f1d0961ff9d89a201a4f5b14f7376b17610
 Size (qwt-6.0.1.tar.bz2) = 2437570 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/17 14:40:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:13:38 nia Exp $
 
-SHA1 (hsetroot-1.0.5.tar.gz) = b24b1a24fe93b67f886ebe5a9cda7bf547ab2886
 RMD160 (hsetroot-1.0.5.tar.gz) = 270b15a8a89204a7194d928e052830401c9afe3b
 SHA512 (hsetroot-1.0.5.tar.gz) = b43f7cd75886e72cb6134446d383d7d9a684c818f2d8a0f829670c8dfca5eaaa1eb6c25f30dda41f3483609b25e8a44a3a3cb3a969bba7f77a9b9df712fa2167
 Size (hsetroot-1.0.5.tar.gz) = 12878 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/03/10 22:06:14 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:37 nia Exp $
 
-SHA1 (xload-1.1.3.tar.bz2) = fd5053d38551883309863c2a43de2ceffa908a50
 RMD160 (xload-1.1.3.tar.bz2) = 1fb5d6600e59d535014f14dfaf9182241d5a65ea
 SHA512 (xload-1.1.3.tar.bz2) = 8dbc4f0cee7b30d7381be819152b27653d9b0049266e59bde2e2c972a88c4f2bdea766fc407bbdfef15d0aab30fedc756189a1048170a812853133a5094fe7a5
 Size (xload-1.1.3.tar.bz2) = 140327 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/08/02 10:47:05 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:13:50 nia Exp $
 
-SHA1 (libXft-2.3.4.tar.bz2) = 697ff9108deeabb66b91a478e10fe962e3c097a3
 RMD160 (libXft-2.3.4.tar.bz2) = a346fef0d0416c9e58ca6cab4166e24bf8c8531f
 SHA512 (libXft-2.3.4.tar.bz2) = 5bb019750982ed4643880efd7368bc226ad49cfa8c0c8c6d4614dfeed74f588c65e1ba69adcc12284ec07d841e5b58fc1c27f3fddf83fe1a2837b29dd9ecec51
 Size (libXft-2.3.4.tar.bz2) = 359088 bytes

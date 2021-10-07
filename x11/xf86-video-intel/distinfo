@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.32 2020/10/13 04:38:29 maya Exp $
+$NetBSD: distinfo,v 1.33 2021/10/07 15:14:28 nia Exp $
 
-SHA1 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = f9cb02d46b771e278a11dc88536049daf76f6ee8
 RMD160 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 40400b5860115d3c679ec849e0ba90dba74ee6ca
 SHA512 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 29fea01332438ad7616bae56a926f5c6fa08f93f67c23a0bb38f775719f12b15fba5bcb096c0665948f80d3ff6b7c108f360e44aae008192ef6c9b21187b4bbb
 Size (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 1250303 bytes

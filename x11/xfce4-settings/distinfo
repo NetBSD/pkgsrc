@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/05/14 00:16:48 gutteridge Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 15:14:33 nia Exp $
 
-SHA1 (xfce4-settings-4.14.3.tar.bz2) = 537c14ae06fb2d460fa920be6293053c8b3106eb
 RMD160 (xfce4-settings-4.14.3.tar.bz2) = 58f4ecbbf0595e74b709cf225f09dcb0a32a5281
 SHA512 (xfce4-settings-4.14.3.tar.bz2) = fcc5bfa98d8903dc3ac51ec909e542485a44f6c11ddca815508c2ed913410a0becd54b2db6761ee48f5a20d6ca08377eeefbb54bd0cb7cde0a0c0d4b65802ab5
 Size (xfce4-settings-4.14.3.tar.bz2) = 1201308 bytes
