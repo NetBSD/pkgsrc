@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/08/19 00:25:34 jlam Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:21:13 nia Exp $
 
-SHA1 (siod.tgz) = e49cbd59bbdf3af607335a300ace98c561ad5bdd
 RMD160 (siod.tgz) = 51aeb394d1391d289abd6375502b23cb9089ff31
 SHA512 (siod.tgz) = 585497489facfce8a3748bc965a83eb07b29b8215d53ff69e6a8c18f7078d72b260e95716c151c4bf590ec41d219876a606674bf0781d37b0a28ef7a06d19648
 Size (siod.tgz) = 214700 bytes

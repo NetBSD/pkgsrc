@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/05/30 09:26:57 taca Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:21:11 nia Exp $
 
-SHA1 (execjs-2.8.1.gem) = fec32d21110a45f3d28708722f65d17db4cabf45
 RMD160 (execjs-2.8.1.gem) = 81fdd5d0bcd1ef8c9b30597e6474277562081dc7
 SHA512 (execjs-2.8.1.gem) = b7053e944a1ed1889d712220349ee7d153d1b75c8b186ccea6b4b1f4ff757047ea868cd78b0259ea57d0f8b43be291ec1228aea377d244b7f9fe29ad43134afe
 Size (execjs-2.8.1.gem) = 17408 bytes

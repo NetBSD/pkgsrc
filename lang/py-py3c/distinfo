@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/14 15:02:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:21:08 nia Exp $
 
-SHA1 (py3c-1.3.tar.gz) = 8d6cd8093fe3d13b7e3f2a3311f33e995863e53b
 RMD160 (py3c-1.3.tar.gz) = e284c696d5f66013f7187a02f0d46974a3f22b58
 SHA512 (py3c-1.3.tar.gz) = cf43808f415a2a8832c669b8bfdb74754c99941694afaa6ecc7d11d0c9fa542136cf0066bffab05b2e0cacc532d3301ca4275da358f7947723c64c5f1a2633ed
 Size (py3c-1.3.tar.gz) = 46423 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/04/20 08:38:57 cirnatdan Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:20:53 nia Exp $
 
-SHA1 (gjs-1.68.0.tar.xz) = 2e69f19fcd446a205a3c1495d45f9300bc5ecca8
 RMD160 (gjs-1.68.0.tar.xz) = 35af94947ca81f0d97a667964dad82d966a30ec4
 SHA512 (gjs-1.68.0.tar.xz) = 65278ca345f2c786995bed7755dd86403b469eb6cceaa6db57dbd4af212025a3b1f01b7387f45dc9abc23d47ba2f39c5ab8a90ec95b1934f1471a68a06f0d82d
 Size (gjs-1.68.0.tar.xz) = 553044 bytes

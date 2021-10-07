@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/02/13 15:56:16 maya Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:20:52 nia Exp $
 
-SHA1 (gcc-7.5.0.tar.xz) = 9153345fa05adfa58b4759ccb9f37d09662dd101
 RMD160 (gcc-7.5.0.tar.xz) = 91d46ec088badec75f41a2ad2a0ba228a6715107
 SHA512 (gcc-7.5.0.tar.xz) = fe716cc19f2e3255d3a8b1b8290777bf769c6d98e6e0b07b81a3d6ad43f8af74cb170dfa18b1555dbfcd3f55ae582b91a286ccef496b9b65c1579902f96a1f60
 Size (gcc-7.5.0.tar.xz) = 62783088 bytes
-SHA1 (isl-0.18.tar.bz2) = bbffc5a2b05e4f0c97e882f96c448504491dc4ed
 RMD160 (isl-0.18.tar.bz2) = e876f1049893de5be4a82a63f272f62547d455ca
 SHA512 (isl-0.18.tar.bz2) = 85d0b40f4dbf14cb99d17aa07048cdcab2dc3eb527d2fbb1e84c41b2de5f351025370e57448b63b2b8a8cf8a0843a089c3263f9baee1542d5c2e1cb37ed39d94
 Size (isl-0.18.tar.bz2) = 1658291 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/09/01 13:52:52 adam Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:21:10 nia Exp $
 
-SHA1 (Python-3.8.12.tar.xz) = 7643eccc15f5606bd0dc04affc7ea901e417165d
 RMD160 (Python-3.8.12.tar.xz) = 3453c1e5cacbc2cb506c8a98b2310fda9ade3ea8
 SHA512 (Python-3.8.12.tar.xz) = 2f93fe5ff83f470c7b6a1b7f29f499a2a010fabd649e9fe65ad3fbfa21b6e1966e77c9b7ac012d978159bc3fe63fec2d64bc6982fc2ee1714d3fa0e47631f279
 Size (Python-3.8.12.tar.xz) = 18443568 bytes

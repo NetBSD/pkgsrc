@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/06/25 21:08:04 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:21:07 nia Exp $
 
-SHA1 (mypy-0.910.tar.gz) = 25174c2ebcd2b98fe5652e6e6d558712e6db64ff
 RMD160 (mypy-0.910.tar.gz) = a2f5e814652ed0f21604a593aea7f61f86fc6815
 SHA512 (mypy-0.910.tar.gz) = 2f8caa6945db992ae3a20c47904a023a62cc2f98296c136d7d09ac5f0a0d83b833b4c3ef811f1369e647860fb9a194d120225333a62daf055af12f39fb45a552
 Size (mypy-0.910.tar.gz) = 2500630 bytes

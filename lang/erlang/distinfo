@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.91 2021/05/20 13:54:55 triaxx Exp $
+$NetBSD: distinfo,v 1.92 2021/10/07 14:20:50 nia Exp $
 
-SHA1 (erlang-23.3.4.tar.gz) = 6edfa356b177b07c74e67da64ae0e8f3a64bb976
 RMD160 (erlang-23.3.4.tar.gz) = b2b4c372c477a269334c9af25d545b5113d723d2
 SHA512 (erlang-23.3.4.tar.gz) = c8c5a9676163058276c703a0db0373508fad0ed9dff0aa9806ce59115ca766ff1d343c5a3917a920b249655fe188b974482ff378e9173c9fe00ea3907e618da5
 Size (erlang-23.3.4.tar.gz) = 56664814 bytes
