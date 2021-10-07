@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:28:56 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:16 nia Exp $
 
-SHA1 (wmfstatus-0.4.tar.gz) = c6f7bfa9fe51ac4e85912921d04a4ba7f7906b1f
 RMD160 (wmfstatus-0.4.tar.gz) = 4aa61a96fab92c31881dd4bf1d8210b13b2f48f0
 SHA512 (wmfstatus-0.4.tar.gz) = 5975a71cd1f6584f38acb5cc8534be068b30296d8ef33a6420031b7913357f1a1a8e855df7e37b0fc239a6d0f571389dd8394d95f2015e7db90ec31d13890c53
 Size (wmfstatus-0.4.tar.gz) = 20004 bytes

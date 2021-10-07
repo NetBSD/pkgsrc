@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/11/14 11:05:20 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:14:36 nia Exp $
 
-SHA1 (xinput-1.6.3.tar.gz) = 6fed797704eaba52a7220dd8cdc32142df1a60b9
 RMD160 (xinput-1.6.3.tar.gz) = 82373e45f143b9819b0a9215cfa1752a9714df99
 SHA512 (xinput-1.6.3.tar.gz) = f2d61288b87505add5909aace7d51d99f5c7b1a8fad5475316da371f74d5b616ae261660c81851bec595c5d716fead3e40d8fc0cc7d2234c2b04db2b24e25da8
 Size (xinput-1.6.3.tar.gz) = 203936 bytes

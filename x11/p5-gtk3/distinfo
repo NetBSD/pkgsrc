@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/07/26 14:18:16 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:14:04 nia Exp $
 
-SHA1 (Gtk3-0.038.tar.gz) = d5dfdc7e502caf6af8dcde4a31825b10380dd8d5
 RMD160 (Gtk3-0.038.tar.gz) = e110962056bbaa566db015a7ef1578c4a61bb4f0
 SHA512 (Gtk3-0.038.tar.gz) = 2289184a25deec342b9519028cc5ebb3a66137d7891366485e4b6a1ef52a4a28b5ba8083a317a56664d4ea6eb1bc0619477d1ca169baf79b868467fba27f82bf
 Size (Gtk3-0.038.tar.gz) = 57426 bytes

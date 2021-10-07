@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/03/10 22:09:31 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:14:39 nia Exp $
 
-SHA1 (xmessage-1.0.5.tar.bz2) = d3eca72c7173d0d9547c676a16bcec51ca1213a2
 RMD160 (xmessage-1.0.5.tar.bz2) = 63f33807b3eb4636ae974567241795fb1419d5a2
 SHA512 (xmessage-1.0.5.tar.bz2) = a8423c3986b1576fa67800c315a605a527bb9a8f594ac269a736ae7b91eed0d4d83deb89148197dc3cd3f0e51894146958ce2979f78e97dcdb99c5326e34dabe
 Size (xmessage-1.0.5.tar.bz2) = 133393 bytes

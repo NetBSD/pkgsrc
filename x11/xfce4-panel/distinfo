@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2020/05/14 00:11:24 gutteridge Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 15:14:33 nia Exp $
 
-SHA1 (xfce4-panel-4.14.4.tar.bz2) = 81dcbec0d22f95b4de554c819fdfd97e721faf55
 RMD160 (xfce4-panel-4.14.4.tar.bz2) = 4fdd08f9b1990f35a2fc5b55a597b96490d2e8f7
 SHA512 (xfce4-panel-4.14.4.tar.bz2) = 5ae7c7acf0254fdc3f5eaccf75d7c12699ab8147322f231af7bd17b1238b8c25a96d628dada9caa086fc8fde2b7dc4030a38eb7b863b290f9e069193b3728d85
 Size (xfce4-panel-4.14.4.tar.bz2) = 1307938 bytes

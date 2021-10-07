@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/01/18 18:31:17 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:30 nia Exp $
 
-SHA1 (xf86-video-siliconmotion-1.7.9.tar.bz2) = 8b694bf2b64a1c6808708ed8cb4b013493ea5ffa
 RMD160 (xf86-video-siliconmotion-1.7.9.tar.bz2) = 2cf9a271a705833d2a0a5e87b8c1333fa8a8e899
 SHA512 (xf86-video-siliconmotion-1.7.9.tar.bz2) = 13085945ca496f83521c28b25c394077e010031dbdc2374347a932a52650ada02f525269a81d0b0bb20b48e371d5435a7a73cb7555a07dc5a784e77152608c63
 Size (xf86-video-siliconmotion-1.7.9.tar.bz2) = 416351 bytes

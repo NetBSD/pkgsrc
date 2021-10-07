@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/11/21 11:22:33 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 15:14:07 nia Exp $
 
-SHA1 (qtscript-everywhere-src-5.15.2.tar.xz) = 6ab2c96373ad3866b8b5e9e74efb607518560e11
 RMD160 (qtscript-everywhere-src-5.15.2.tar.xz) = c8ba5a4221fbfee38a37b7f33aad8ebd33260b75
 SHA512 (qtscript-everywhere-src-5.15.2.tar.xz) = 71c70b34f7d4a0742df64d20d7e9a685cc640b9cc6a3d22847c04f45a437b3f5537f40225a522ed82787c2744d9a4949dea5b43c2ee81961d5ed175cf10deb32
 Size (qtscript-everywhere-src-5.15.2.tar.xz) = 2663016 bytes

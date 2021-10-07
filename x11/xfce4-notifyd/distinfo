@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/12/22 00:28:13 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:33 nia Exp $
 
-SHA1 (xfce4-notifyd-0.6.2.tar.bz2) = ac82a3604d3dfc38f6104e2cc0b908142331f00a
 RMD160 (xfce4-notifyd-0.6.2.tar.bz2) = ecafce753674b79b13f66fddd77774820f47b44f
 SHA512 (xfce4-notifyd-0.6.2.tar.bz2) = 13fdbcd5031ad44a89327eb65356a4d2c45315e0c8c507e457eee4cc95898794679163de9603a2059d9aaf20d62df317f8a09e0353f6adb526970a21d580b325
 Size (xfce4-notifyd-0.6.2.tar.bz2) = 548415 bytes

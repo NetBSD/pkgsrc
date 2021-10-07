@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/06/02 15:22:07 taca Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:14:12 nia Exp $
 
-SHA1 (tk-0.4.0.gem) = 61772f4b3ab14e219860b570fe11c6dd64a5fd93
 RMD160 (tk-0.4.0.gem) = dac0d0ca5c4e3a58b8de650b1be5020cf5399329
 SHA512 (tk-0.4.0.gem) = 6890e15ccfa979c20419ed030c68d49223d483c81aef9c3cd792636bc600e26701b4b75a07c55c5ea867428dfc5e02cee9f000ad2a4cb952aeaecf266fc267b1
 Size (tk-0.4.0.gem) = 1721856 bytes

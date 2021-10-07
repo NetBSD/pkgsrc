@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/21 12:23:21 cirnatdan Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:13:53 nia Exp $
 
-SHA1 (gdm-40.0.tar.gz) = f16d102b1052ff3ae0b64cac47dd3910b9b2ae74
 RMD160 (gdm-40.0.tar.gz) = aef9fa9d25f92b671166b9b2a56f9f5811e912cc
 SHA512 (gdm-40.0.tar.gz) = e1280b2e7011f76732d1c7901025f31693c58fd4eaa1483ffa0d7e24a1f14aaf3de64b0fa4d4423be72b77329f36c7a8552406dec9272f67b4756bb1ccbe1ef9
 Size (gdm-40.0.tar.gz) = 1588680 bytes

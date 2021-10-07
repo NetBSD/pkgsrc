@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/03/09 02:03:27 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:13:58 nia Exp $
 
-SHA1 (lxterminal-0.4.0.tar.xz) = 9f065280fae8b6ca0439699ce73dd661a4f21d43
 RMD160 (lxterminal-0.4.0.tar.xz) = de24dfa4fba57a793c753e8d1c56950f80392186
 SHA512 (lxterminal-0.4.0.tar.xz) = d1462bf9739c5e9022cbabe9f9c8f70bbb882c0aba7a39d1f87d804f4002056151165d7555cace6f439c0acfbdcd3c959a420993379f646d066f5d30af71232e
 Size (lxterminal-0.4.0.tar.xz) = 201856 bytes

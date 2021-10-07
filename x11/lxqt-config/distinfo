@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/20 18:41:57 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:13:57 nia Exp $
 
-SHA1 (lxqt-config-0.17.1.tar.xz) = 55e65ef6746f59f708cc333a87a09fb0395791d8
 RMD160 (lxqt-config-0.17.1.tar.xz) = 98fe66d922552b8aef6244c2b0261dc17a0a01eb
 SHA512 (lxqt-config-0.17.1.tar.xz) = 2173acd18ffa5aeee9d11bd73955d0475b53a335df7d95523a2297b5ef3f9a8e4e135a290e7a720a227a92c84532a64d9fbc7a811de242dd32f9e70d036d3ca6
 Size (lxqt-config-0.17.1.tar.xz) = 339184 bytes
