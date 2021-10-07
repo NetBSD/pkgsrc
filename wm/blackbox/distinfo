@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/06/11 21:20:09 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:05:03 nia Exp $
 
-SHA1 (blackbox-0.77.tar.lz) = 4a8c17b3ab885ff417df26bd9f9b7c5163fdd7df
 RMD160 (blackbox-0.77.tar.lz) = c21ede6822115b9163d6bf6482b4a0864f0b0927
 SHA512 (blackbox-0.77.tar.lz) = d33c611ae019ab37b936566470f318b7a9de601da6586f2b7485882e2da2c9a22cfaa6dd4850b9a749791f33a9dbb8bcb84c88cb10a890080eb437131f19c593
 Size (blackbox-0.77.tar.lz) = 566397 bytes

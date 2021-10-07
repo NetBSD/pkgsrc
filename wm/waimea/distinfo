@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/02 23:42:55 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:05:12 nia Exp $
 
-SHA1 (waimea-0.4.0.tar.gz) = b2dc5e829aad8681bab9313bd336b79875154531
 RMD160 (waimea-0.4.0.tar.gz) = 5694d832cb3cd51d6f3473c73eb70f803825c1a3
 SHA512 (waimea-0.4.0.tar.gz) = 66a7dc606b21ae0e01503aaca9194be4af3cc8d80796cff0bfd4996e29988f070263620fed44ae85afae06c6b2d71cd70af6757b4205c1fb542faa6530589d83
 Size (waimea-0.4.0.tar.gz) = 242526 bytes
