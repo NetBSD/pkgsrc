@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/05/22 10:18:23 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:20:29 nia Exp $
 
-SHA1 (LibreCAD-2.2.0-rc2.tar.gz) = da8ef6ad80db6bc94fa36b48edee35bb9394f88c
 RMD160 (LibreCAD-2.2.0-rc2.tar.gz) = bbbe7b332f992a82d657c8f812f0014f3a59a626
 SHA512 (LibreCAD-2.2.0-rc2.tar.gz) = e4f6041ea9685f57d08a2e33f7202341f31698e7faa860b2710109ad650be4a3f93f368044d5d7175dedd852e2a81d4de2a5d4949b559d74e41ecc9ad502b652
 Size (LibreCAD-2.2.0-rc2.tar.gz) = 13561381 bytes

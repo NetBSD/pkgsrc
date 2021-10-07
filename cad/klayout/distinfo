@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/08/15 03:29:29 mef Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:20:29 nia Exp $
 
-SHA1 (klayout-0.27.3.tar.gz) = ba4803f973167a633737a54eb7a24955b30c18e7
 RMD160 (klayout-0.27.3.tar.gz) = 137d0721d2240eda4aae69260fe7aa173c3da9dc
 SHA512 (klayout-0.27.3.tar.gz) = 5f3a83cbbdc171acf200a90e4758942e7c3dd4ec66666576c6ecb041326e52a99222992e844d63f939650374a7493f542b1412ada714b6c0271103facb5acaa9
 Size (klayout-0.27.3.tar.gz) = 57274694 bytes
