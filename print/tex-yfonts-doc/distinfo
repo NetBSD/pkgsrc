@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/05/12 04:13:19 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:52:00 nia Exp $
 
-SHA1 (tex-yfonts-50755/yfonts.doc.tar.xz) = bd21a49a8411fd68774a0efe65822734339ea7cb
 RMD160 (tex-yfonts-50755/yfonts.doc.tar.xz) = 419294281c55a5c0c0ebec1a5bbaed04572389f3
 SHA512 (tex-yfonts-50755/yfonts.doc.tar.xz) = 54857e6693242080c5f410ded0bb16d3df65fee2834b2b5d1232dd063a70796905771059da07e7d92358fce9da992c3e605be345ae7c5d4012d37dc37a17dc82
 Size (tex-yfonts-50755/yfonts.doc.tar.xz) = 192824 bytes

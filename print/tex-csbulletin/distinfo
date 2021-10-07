@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 00:15:12 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:49:51 nia Exp $
 
-SHA1 (csbulletin.r54433.tar.xz) = 9227a1ab9df1d52f31a9f7981fa18e7ea7fd34f3
 RMD160 (csbulletin.r54433.tar.xz) = ac4c87331a68ea5c8b35c25efea0bf22932adc2c
 SHA512 (csbulletin.r54433.tar.xz) = 7b1f41ce8c9cecd8cce3aa1458a029a558b3a70dbcf8e5fb53e192db5d4b56ffdca3e323fa54d7960e141d6e1e32ca52b8824b3c326c94def8b32ad42d0dfee0
 Size (csbulletin.r54433.tar.xz) = 12916 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/06/05 04:18:00 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:50:51 nia Exp $
 
-SHA1 (media9.doc.r58025.tar.xz) = 6ea51feabee6c6eddc1c641acd6ad03af84c6c7c
 RMD160 (media9.doc.r58025.tar.xz) = 2ebd2e0d2423cafcfe33cd69e4032cfbc48a4d1d
 SHA512 (media9.doc.r58025.tar.xz) = 2a28cb6f7b10eb19767ca75e51d16406319fc22967af38b170669f46627d0978065917a028d1f0ac480680175ba0464e27c367fe2181ad36c0cd057cb1beb286
 Size (media9.doc.r58025.tar.xz) = 3717032 bytes

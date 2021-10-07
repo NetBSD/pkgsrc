@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/01/04 21:36:55 abs Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:48:56 nia Exp $
 
-SHA1 (if-psprint-1.10.tar.gz) = c714602ca0efa06d92d3a0108b51b6160e1b5daf
 RMD160 (if-psprint-1.10.tar.gz) = 550438994c1dab225b05c731c991cbfcdd6db38a
 SHA512 (if-psprint-1.10.tar.gz) = 2e76f796aebe4370a9db8de09e7adcb1d0af399354dc509c76d361324e1b42c2822370cb7aaa0bb277c87cf31bd9c062a6c67d57c9097c028449743db8c1182a
 Size (if-psprint-1.10.tar.gz) = 3176 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/08/06 20:50:25 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:52 nia Exp $
 
-SHA1 (tex-urlbst-51530/urlbst.doc.tar.xz) = bd34bb1fdaadf94c35463202528e2796dd031aeb
 RMD160 (tex-urlbst-51530/urlbst.doc.tar.xz) = 02b5fe65f905c017eb80957954fa03bb6083ed55
 SHA512 (tex-urlbst-51530/urlbst.doc.tar.xz) = 0dd2c6cfda184d77866503bd94e79b7c99d20f4b9627e01946887aee80318adb26528f352fcb0db764e37d7b2292a78f0d80bcb51ca7cd95593a879063154315
 Size (tex-urlbst-51530/urlbst.doc.tar.xz) = 238148 bytes

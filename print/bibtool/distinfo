@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/09/08 03:52:26 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:48:51 nia Exp $
 
-SHA1 (BibTool-2.65.tar.gz) = 389cf126587a75d4df8d4bf79f5cc85deb66bdf3
 RMD160 (BibTool-2.65.tar.gz) = 1c888c236bcb5c969f10f4facfe644215e1c93fb
 SHA512 (BibTool-2.65.tar.gz) = a3206e10e339449963975ce73de1aa45f0450a9471ac61c9f2ccf2d5c6e008c5e10a2630d33faef9d1104b334b0ebf518014531b116dec844c267acb1c67ed48
 Size (BibTool-2.65.tar.gz) = 728543 bytes

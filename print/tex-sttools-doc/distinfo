@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/02/20 10:45:42 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:51:32 nia Exp $
 
-SHA1 (sttools.doc.r56774.tar.xz) = ca3aaadb86434d6b063d6b05d01689130537afe0
 RMD160 (sttools.doc.r56774.tar.xz) = 62bae23e7a0cb76e27d337a21ec2123063565a83
 SHA512 (sttools.doc.r56774.tar.xz) = b32bd4fa10599b3ace5bc8e1b2dae79750aace26a98806de275fdd358554b6f26fde48c9e7b0fbb108de0a771728a68f6c09fa9c568a5e2fce7b9aaa1fb1f58f
 Size (sttools.doc.r56774.tar.xz) = 764344 bytes

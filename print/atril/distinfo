@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/07/20 23:16:30 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:48:51 nia Exp $
 
-SHA1 (atril-1.24.1.tar.xz) = e0f8051e5f2f79e7e29637a6b16974fc845804f2
 RMD160 (atril-1.24.1.tar.xz) = bac8c38cc43a2f4e3d44f5993cb5cc404f12aa23
 SHA512 (atril-1.24.1.tar.xz) = 94a55e7699bdfc9368e20986664bd411c12f50f466874ebf20210df3de6ddb499866b505e157c56b58a8065aad2c24284b96afa8c547a6cd259eef413096a91a
 Size (atril-1.24.1.tar.xz) = 2043552 bytes

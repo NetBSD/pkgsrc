@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/05/11 23:15:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:15 nia Exp $
 
-SHA1 (tex-g-brief-50415/g-brief.doc.tar.xz) = 18f74fbbcb2d4390a2e2ea2fa38344e83224dba0
 RMD160 (tex-g-brief-50415/g-brief.doc.tar.xz) = c7a8902621049f905a5300622237a145a9282e07
 SHA512 (tex-g-brief-50415/g-brief.doc.tar.xz) = 147d30be05a9224e141d9dc23a81750d0c43bf590d6e1dcb3e92fda6c668031522ef410904e5c7621c9b98879d6809fe604cf47de7f24891bc7e15c7be5ad05c
 Size (tex-g-brief-50415/g-brief.doc.tar.xz) = 258180 bytes

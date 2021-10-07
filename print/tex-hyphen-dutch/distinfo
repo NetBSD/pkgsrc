@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:43 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:25 nia Exp $
 
-SHA1 (hyphen-dutch.r58609.tar.xz) = f1ded83276a10e0abd5fbcaef34c40a5bcb789e8
 RMD160 (hyphen-dutch.r58609.tar.xz) = 2a529b90884dfed04e4dd9583c8e890ad4caafae
 SHA512 (hyphen-dutch.r58609.tar.xz) = 111371e47ca29069a5a9144d694858dd899b19e2b38d0c793b1e4884c69ae2d62398aacb4cd89e23246fc025e42872875bc808c1f327ac1502fac88c962e6c14
 Size (hyphen-dutch.r58609.tar.xz) = 38024 bytes
