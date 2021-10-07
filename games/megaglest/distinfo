@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/08 20:54:16 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:41 nia Exp $
 
-SHA1 (megaglest-3.13.0.tar.gz) = 88899e6da952314c8a34522da0610fea0f940746
 RMD160 (megaglest-3.13.0.tar.gz) = 4160ac3d7fbfa45cb0b4ea32a3d307968c14276d
 SHA512 (megaglest-3.13.0.tar.gz) = 9815db81f0e202fe74217ac73ce7ea711d1923fbb56a74514c030483a0a337a3d1ea4028893325d709011067b6649484ee5abd2698bd0d436e958675a40ac357
 Size (megaglest-3.13.0.tar.gz) = 3654897 bytes

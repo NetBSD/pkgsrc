@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/07/02 14:27:25 seb Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:08:01 nia Exp $
 
-SHA1 (xpuyopuyo-0.9.8.tar.gz) = 07c4a6b87b4a42778af69c2b223cd27b79fe2d41
 RMD160 (xpuyopuyo-0.9.8.tar.gz) = a5512e897d807764c0432de515b75d76b54a21a0
 SHA512 (xpuyopuyo-0.9.8.tar.gz) = 4277e0d05f30446070af38dd3b690efdbc4c45fc255513529bd29af2f9986f2e7d6d12e0e31ecf9a228bf5bd025aedd659953b6d19933ee447a6a9c9216a6a49
 Size (xpuyopuyo-0.9.8.tar.gz) = 1235619 bytes

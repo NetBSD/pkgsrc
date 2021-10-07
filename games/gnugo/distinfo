@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/03/23 17:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:07:30 nia Exp $
 
-SHA1 (gnugo-3.8.tar.gz) = a8ce3c7512634f789bc0c964fe23a5a6209f25db
 RMD160 (gnugo-3.8.tar.gz) = 2f5c57a6c81ea3cfde073ba41cae09f3692e6e67
 SHA512 (gnugo-3.8.tar.gz) = c17c01e317fa18882225cfa46838b55bb52a73ed36aa720f0cdfb6d2048fa69039832ca0544c3e98f831e92fe4478d991fc4f57e1cee7dadf243d2316fac9e67
 Size (gnugo-3.8.tar.gz) = 3200454 bytes

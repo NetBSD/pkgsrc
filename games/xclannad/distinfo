@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/26 02:33:34 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:59 nia Exp $
 
-SHA1 (xclannad-7hc.tar.gz) = fbe63701a47a1bc90aca8ab8d0b41ca3b5c9d114
 RMD160 (xclannad-7hc.tar.gz) = a7bea485587c59d7797aa1bde01f0eb963122d02
 SHA512 (xclannad-7hc.tar.gz) = 5d14c1ca6932d0a013e36c2af51d0d4de2cb73e4c438ccf2bebf03f223a62649203726cc552f975e3177ea614f79c1d2d0d36220116289f0bb8f65a74997ac27
 Size (xclannad-7hc.tar.gz) = 534245 bytes

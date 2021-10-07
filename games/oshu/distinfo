@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/30 09:29:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:46 nia Exp $
 
-SHA1 (oshu-2.0.1.tar.gz) = ff604bf3d30e9d8f4e135a7c424e0dccf3f3e72d
 RMD160 (oshu-2.0.1.tar.gz) = 05d208fa1765e7aff6b7c49dcbb1844dc77de17d
 SHA512 (oshu-2.0.1.tar.gz) = 65768b3d8e7733464f05a19bbee594c0be728267bbd0667bc0f34e0d01a39e52d4ecce89a9223f7c454d73b21bc735401e9d83eea8b0a2eaf1c7825a3bd6b1cf
 Size (oshu-2.0.1.tar.gz) = 144900 bytes

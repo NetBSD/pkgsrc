@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:08:00 nia Exp $
 
-SHA1 (xkanon-071209.tar.gz) = 4fcb7e4136f9b2265ea79ab96fb257cda7854aef
 RMD160 (xkanon-071209.tar.gz) = 779005a2a5aad4d0922cce3a34b618f47e0f6370
 SHA512 (xkanon-071209.tar.gz) = ac5ffabecbe2c34ece074ece1ebe69f426d26f69611aedd1d0660f096908d201550561eee5b2a87c7c8d22bb531a0048f3258c3b60428b3dbdee8293d7dcac0c
 Size (xkanon-071209.tar.gz) = 494758 bytes
-SHA1 (xkanon-gtk2-090830.tar.gz) = f306024a2dbdd8188488b5f63f3725ab4ca9cc74
 RMD160 (xkanon-gtk2-090830.tar.gz) = 8b2c1d6491b1f82df2ccde42a954bfa38bab801a
 SHA512 (xkanon-gtk2-090830.tar.gz) = 162a3048eaac71ffe8a4423206cb0c7023f07868da559c80b2fc8cadf503af7e2f6596b5834bddf661ec830d04974f36a03f54d2bc5c9d7b5e0e4302244cdfe9
 Size (xkanon-gtk2-090830.tar.gz) = 667208 bytes

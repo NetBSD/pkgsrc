@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:20 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:36 nia Exp $
 
-SHA1 (kolf-20.12.3.tar.xz) = 872ea751f3f9055fbec71e66dbae3e1c0aa0c9c4
 RMD160 (kolf-20.12.3.tar.xz) = cb78df57cb6691767a57e00b0a474a9653e3a045
 SHA512 (kolf-20.12.3.tar.xz) = 63f78174da9aa76bed51128b44900e52b314daf2caaf22e1f7bf2233b58e999a34e508354c46b20b26ba95908eb690d3cbe20a425ad6e2661a8ee5fd373acb63
 Size (kolf-20.12.3.tar.xz) = 1029796 bytes

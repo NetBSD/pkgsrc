@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/07/27 15:22:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:07:57 nia Exp $
 
-SHA1 (widelands-build21-source.tar.gz) = 6e759c187db71afb6c4ea5e0d4d896a032f09696
 RMD160 (widelands-build21-source.tar.gz) = b4beb43886b9daa857d431cc4203e96f4dad8864
 SHA512 (widelands-build21-source.tar.gz) = 8d36bd0407a72e4e221155121f9ab4ce7fdfb6d81ca70a2772baf12c3397fc6abbcad5006336adb471d2c5127a90b4cda735e941d69cf779be1f923d4a38960e
 Size (widelands-build21-source.tar.gz) = 381374149 bytes
