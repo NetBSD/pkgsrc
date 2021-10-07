@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/07/20 09:00:07 tpaul Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:39 nia Exp $
 
-SHA1 (softvms-1.10/softvms.tar.gz) = 4e6dadc42aeb734d553ac3d5b57c0759330b0220
 RMD160 (softvms-1.10/softvms.tar.gz) = 273b26a475dbf4360351a813c12700f2ce33f6c1
 SHA512 (softvms-1.10/softvms.tar.gz) = d92e38b06947efcb96236355f55fae8803363151e4a31d01ec6b13bdd82813ff870866697eedc7d8708ed3450eebb35daa0425df7cf973ac33270040a950df71
 Size (softvms-1.10/softvms.tar.gz) = 93333 bytes

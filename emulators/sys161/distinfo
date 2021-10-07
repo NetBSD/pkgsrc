@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/03/07 05:53:29 dholland Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:49:51 nia Exp $
 
-SHA1 (sys161-2.0.8.tar.gz) = b95f4a827b5ce773a20504dd63e05a2acdc78c8d
 RMD160 (sys161-2.0.8.tar.gz) = 0fac2fd650213aa06dcd1b18fab4d548a2d6e7b7
 SHA512 (sys161-2.0.8.tar.gz) = 154315254c7a30d6ab6822341a425e1cb26851d369b0164cf5fd5b4f3ea1ec244cf951d9a319c9f08034e50347b44aa792ce934286c3ecd678098ce45ceb6efd
 Size (sys161-2.0.8.tar.gz) = 172637 bytes

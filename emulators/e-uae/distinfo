@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/12/31 06:21:09 maya Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:49:27 nia Exp $
 
-SHA1 (e-uae-0.8.29-WIP4.tar.bz2) = f8c78fef04e6bcd7be36921790d71fcc6e47d00b
 RMD160 (e-uae-0.8.29-WIP4.tar.bz2) = 823810cd4c41ee31c394fcea9302f4ca680f0567
 SHA512 (e-uae-0.8.29-WIP4.tar.bz2) = 63d5c60ca017ba7ffaba32c4d7edceba0410b773066cc58e226c8cc2c92152eb3689698b0affe478cc63c996c731fbbf56d9028dfd000394d904f193f860473f
 Size (e-uae-0.8.29-WIP4.tar.bz2) = 1122718 bytes

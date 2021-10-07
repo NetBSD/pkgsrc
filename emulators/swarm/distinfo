@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 20:31:09 agc Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:49:51 nia Exp $
 
-SHA1 (swarm-0.61.tar.gz) = 36ed52671f8be2cf8e799efd94a48b2919979d2c
 RMD160 (swarm-0.61.tar.gz) = d8e15da178236a46761a65cd52809276df5f3511
 SHA512 (swarm-0.61.tar.gz) = 2e328f3ae1f4bb14890dc4c329ccb9946732252a1161265023faea29860f7ef29715b4fb010c63dda3a557e2f086624a4bf5c31aa8de542b160322963cac3d6e
 Size (swarm-0.61.tar.gz) = 395061 bytes

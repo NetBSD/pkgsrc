@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/20 12:49:45 kamil Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:49:30 nia Exp $
 
-SHA1 (haxm-7.5.6.tar.gz) = 53a18b39dafea5221f5b9854fa409884ea268410
 RMD160 (haxm-7.5.6.tar.gz) = f772a8d87d7cf58764b21a2dcfe0eaf3524e211d
 SHA512 (haxm-7.5.6.tar.gz) = 27a837f53450e9768ced9478bef2272d2d68db0c4136e9db7c9bdf96cb185592f6d2aba4f50cb7de493e9a0a0e1a1ed9d1f40c3742c15c36515e3f615a51054f
 Size (haxm-7.5.6.tar.gz) = 241086 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/30 16:40:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:49:31 nia Exp $
 
-SHA1 (libretro-beetle-ngp-20200518-3d31f4ad9f8d8367ccf492f04640c8ca172ef81d.tar.gz) = 4ee9963f40be9c20081a1c34a645a1daba559880
 RMD160 (libretro-beetle-ngp-20200518-3d31f4ad9f8d8367ccf492f04640c8ca172ef81d.tar.gz) = f505e38ce252b2ad974f7627586a04b3e6830324
 SHA512 (libretro-beetle-ngp-20200518-3d31f4ad9f8d8367ccf492f04640c8ca172ef81d.tar.gz) = bc52bce389ee88ef7d6a930879cfe392363cbd4be385b3bd6f8cf8ba8b18d51154a3a1451d7a2bc3ad5dce6ea89a602c5aa2dc722754c216ced642ce938809b8
 Size (libretro-beetle-ngp-20200518-3d31f4ad9f8d8367ccf492f04640c8ca172ef81d.tar.gz) = 187391 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 20:30:55 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:49:21 nia Exp $
 
-SHA1 (mdiff231.zip) = b3e3bceef0c8e541ea496db4df104912796615da
 RMD160 (mdiff231.zip) = 8c0190a45d02f7b7c93a66ddc2e4540c5ecee410
 SHA512 (mdiff231.zip) = 698997cb2068c71d9dbdedfc3c1b6328cd70d78a0de87d32ee44b93c7fe83be8ba622e7c5709d353cc9aae321b2b9dff9c74133649af0a8176df264886c8db39
 Size (mdiff231.zip) = 229171 bytes

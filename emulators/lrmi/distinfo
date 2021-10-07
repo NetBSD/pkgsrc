@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:31:00 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:49:35 nia Exp $
 
-SHA1 (lrmi-0.8.tar.gz) = e01ba74b5343551b8d717c2fa9c365cb11d1ab48
 RMD160 (lrmi-0.8.tar.gz) = 680c7f7e6599f71b942edef10846991e1c1ce14b
 SHA512 (lrmi-0.8.tar.gz) = 64f712a1fff3ef071ec3e311cce1e080247702893216cffd24d42dd5a77a5e84f267ce59b91ed8591b766d4821053449804758e0778461b46ba90ca10ec1d6f5
 Size (lrmi-0.8.tar.gz) = 9347 bytes

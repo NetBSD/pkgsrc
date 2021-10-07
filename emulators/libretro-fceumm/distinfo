@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/30 14:29:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:49:32 nia Exp $
 
-SHA1 (libretro-fceumm-20200520-f11f3afbd6a8a54f0656708cdd2b8398f1da6a9b.tar.gz) = c396d7ef58697202355ff3632fc33c78107c5ce9
 RMD160 (libretro-fceumm-20200520-f11f3afbd6a8a54f0656708cdd2b8398f1da6a9b.tar.gz) = 11d76f6442cf18d732784299c833682746d86c4e
 SHA512 (libretro-fceumm-20200520-f11f3afbd6a8a54f0656708cdd2b8398f1da6a9b.tar.gz) = 811121d5af42ca653b9f0b6fa1de62caf64eddc175d51192ba6011023f8744b2a584e8519ff9d1167e6de6b0f2a8e3d505131ec11c5cbbf7e567248a876424a9
 Size (libretro-fceumm-20200520-f11f3afbd6a8a54f0656708cdd2b8398f1da6a9b.tar.gz) = 501514 bytes
