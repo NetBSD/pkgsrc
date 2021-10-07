@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/09/29 12:49:55 tnn Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:19:44 nia Exp $
 
-SHA1 (xylem.1.8.7.tar.Z) = 7816507d576448ff15659fef744dd27cc64562f5
 RMD160 (xylem.1.8.7.tar.Z) = ae20e3b3492d1c68371abd533f675c79930768eb
 SHA512 (xylem.1.8.7.tar.Z) = 75e0817b61e6ccaa4ed5f1bacdcb2b63fbd0cab46606b3e329524a6dd28637a23b355ad722a0401de98186250a9e9743e665c68eae03256f6c34652dcd8c19e3
 Size (xylem.1.8.7.tar.Z) = 417985 bytes
