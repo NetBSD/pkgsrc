@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2019/01/04 02:06:05 tnn Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:20:59 nia Exp $
 
-SHA1 (librep_0.92.7.tar.xz) = e35aa9dbf09638c71d728bf0273fc1d039f7008b
 RMD160 (librep_0.92.7.tar.xz) = 3cce6962397102c79600850d4648d1158e0d499a
 SHA512 (librep_0.92.7.tar.xz) = 752cb2da31457200b5896f70ce24a097b261b996da25998cd78a777f982597473afce1a216f449a4a969d29b1678bf54e2f148e86de6f9548eeb5cfd530ae377
 Size (librep_0.92.7.tar.xz) = 651344 bytes

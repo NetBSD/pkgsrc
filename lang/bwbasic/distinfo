@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2017/01/19 06:48:46 wen Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:20:46 nia Exp $
 
-SHA1 (bwbasic-3.10.zip) = da5966490b83c47b61c937f5090e75c50d4df520
 RMD160 (bwbasic-3.10.zip) = 1b0b279a5e559f189c1dba8e83a0b2689af8ac1c
 SHA512 (bwbasic-3.10.zip) = 36e896bafaac370c1c03f066e1d7830e308b022c9a62833756c13ee179a80cb948cdae1f0ad3129bdd5f72a5f40432bc3989744fc183812ea4bf99807c75c7d8
 Size (bwbasic-3.10.zip) = 3158727 bytes

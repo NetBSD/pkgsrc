@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.67 2021/07/12 18:42:06 adam Exp $
+$NetBSD: distinfo,v 1.68 2021/10/07 14:20:48 nia Exp $
 
-SHA1 (clang-12.0.1.src.tar.xz) = e3cdd3fb39c78a5bcb0a1d5706678cf8643a48f6
 RMD160 (clang-12.0.1.src.tar.xz) = 662d890fe81218fbf79c25540eb09c7664bc5b8a
 SHA512 (clang-12.0.1.src.tar.xz) = 405011f0974b239427ca87c65e7485709c77705a9b7d51d679fe2abec79865f8c51c7ab085b4e6bf7aa4d0eade4b1438d88dd5feb56b434dc5d718ebf5715efa
 Size (clang-12.0.1.src.tar.xz) = 15323860 bytes

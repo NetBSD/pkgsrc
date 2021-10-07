@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/08/18 10:25:16 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:20:47 nia Exp $
 
-SHA1 (chibi-scheme-0.9.1.tgz) = 2cd12ec96d991bf4e4357e06e363e14be730a14a
 RMD160 (chibi-scheme-0.9.1.tgz) = 346cc444a9a44d3678b68bf423f76f439f171501
 SHA512 (chibi-scheme-0.9.1.tgz) = 64a68e06174e326c3f3c29573483fd2af9aee26e3fb3074ad9dc46a3a46c2ff642ec1ffb07d28850215527fb6a0d1fac25e0e416024bd228328e9ea423dd7324
 Size (chibi-scheme-0.9.1.tgz) = 886984 bytes

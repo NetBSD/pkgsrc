@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/12/25 00:11:56 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:21:04 nia Exp $
 
-SHA1 (opensource-cobol-1.5.1J-utf8.tar.gz) = eda4191aff9e05b569fe4024a26dab187a00c3f6
 RMD160 (opensource-cobol-1.5.1J-utf8.tar.gz) = 1996eb2fcb7c3df86e8ab3dd51652720bed4ba6e
 SHA512 (opensource-cobol-1.5.1J-utf8.tar.gz) = d61127229127bd8e60de018cf05fae70876a757452e8dc4f0d98a6d866332018cf4ba8b0bb3c14f0a9de540bd3a5bb8f870803d8d71967f0dcd416463e9d4a11
 Size (opensource-cobol-1.5.1J-utf8.tar.gz) = 1744325 bytes

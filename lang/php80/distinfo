@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/09/28 13:59:12 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:21:06 nia Exp $
 
-SHA1 (php-8.0.11.tar.xz) = a69e003e68abe2a511fa7632f1cfa017f32be34d
 RMD160 (php-8.0.11.tar.xz) = 291d6e4d7e331bb43f570ef053b4fb484ff40c3c
 SHA512 (php-8.0.11.tar.xz) = 2d346959b2691ea0d5334dc9cad225b7a65ec53d6a6493f3b95c4819a0c088bec36aa1bf4ab3c8044a631bcfefb689d85463ff2259d42000e65dac30badcc59d
 Size (php-8.0.11.tar.xz) = 10804388 bytes

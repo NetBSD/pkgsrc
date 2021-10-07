@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/12/12 02:01:57 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:20:55 nia Exp $
 
-SHA1 (gprolog-1.4.5.tar.gz) = cbb4a517f6ccfb6622ee099eb9b36a25ea4f8131
 RMD160 (gprolog-1.4.5.tar.gz) = 781c8fcffa180e63b821689589f5b02ab803135c
 SHA512 (gprolog-1.4.5.tar.gz) = 425103bc9e5bdbdb4ae331f5be0cf49524fbdb4f5e2809fb973360de9e7ad9935c1b28f3603e0be696a647153d9f0d3dacdc87251098ac99faf7d0b3c652fc60
 Size (gprolog-1.4.5.tar.gz) = 3587361 bytes
