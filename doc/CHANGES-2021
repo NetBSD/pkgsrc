@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5055 2021/10/06 21:10:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5056 2021/10/07 09:03:54 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7754,3 +7754,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.3.2 [adam 2021-10-06]
 	Updated graphics/opencv to 3.4.15 [adam 2021-10-06]
 	Updated graphics/opencv-contrib-face to 3.4.15 [adam 2021-10-06]
+	Updated textproc/lowdown to 0.9.1 [fcambus 2021-10-07]
