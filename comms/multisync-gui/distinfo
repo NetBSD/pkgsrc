@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:34:55 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:27:05 nia Exp $
 
-SHA1 (multisync-gui-0.91.0.tar.gz) = 03b32007dab9945ee08affe6ac59be34f565adcb
 RMD160 (multisync-gui-0.91.0.tar.gz) = 7522f28e217acefde9076229da81ab4df627e2af
 SHA512 (multisync-gui-0.91.0.tar.gz) = 66697d8d48d494d6a2aef7cf26cbe3b2602e9661b5c557acc15b2b0942062edcb7cba95c9c2192d097ff7a1a16f051ac613eb8dbcd2429287153fc8354f2fe2b
 Size (multisync-gui-0.91.0.tar.gz) = 112933 bytes
