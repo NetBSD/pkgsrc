@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/04/21 10:46:02 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:17 nia Exp $
 
-SHA1 (Test-DNS-0.203.tar.gz) = 7ddaf13d53ee055b1ae31fe1e12539092805f45e
 RMD160 (Test-DNS-0.203.tar.gz) = 5c42b5f2710ed992f55746b4ccccc30f967d6abe
 SHA512 (Test-DNS-0.203.tar.gz) = 0de1b6b2a96d145033ed34157590282180e92e770654a6d6fdc1d46576717b91588731d77c12830453d0b15aede7b1f0f7cbef201497a1d7786c8ee8edd31794
 Size (Test-DNS-0.203.tar.gz) = 11871 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/10/13 17:24:05 christos Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:43:05 nia Exp $
 
-SHA1 (xl2tpd-20171013.zip) = 6495031d98b8d803503e47ca20a1902fb116779c
 RMD160 (xl2tpd-20171013.zip) = 4e6cbe6fd9792e14e4bc33ad7daeef3e917eda1b
 SHA512 (xl2tpd-20171013.zip) = 95868ebcea53f55ae0c3edae6b0a5904d8aa13a046b8e0c0eb06eb1eb656ee16245aa002694dfb080e1295ceea27bc6c147d4ef7702b038925bcfdac522d7e91
 Size (xl2tpd-20171013.zip) = 548262 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/06/17 19:44:22 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:41 nia Exp $
 
-SHA1 (kopete-16.12.0.tar.xz) = 0add6bd39d5c1342dd6d8d6257238f310a6f211a
 RMD160 (kopete-16.12.0.tar.xz) = 964994c637a636b0e795a3db32ae7fa56352ef2f
 SHA512 (kopete-16.12.0.tar.xz) = 7ea765ebb8652773734b98d9287b9a81452d390b86f80b1c34e166491762791666593e68204100cf18b2245f42a4aabcf4c433c02280d116ec814b93613885fe
 Size (kopete-16.12.0.tar.xz) = 6340832 bytes

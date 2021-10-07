@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:34:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:13 nia Exp $
 
-SHA1 (apache-apollo-1.4-unix-distro.tar.gz) = 777b9de3209f05af30d013d52c12f68f8391ab54
 RMD160 (apache-apollo-1.4-unix-distro.tar.gz) = ba9e5703e62aa7c243ad5a616a3950ab79ac08eb
 SHA512 (apache-apollo-1.4-unix-distro.tar.gz) = 721fa8da11780785ebca84cc742e234344c7b44af59c2391558afbe1f5a24fa7b719574912a658bcd234f0ca9041686ebe30a4a58c943762ad8723160cfb84bc
 Size (apache-apollo-1.4-unix-distro.tar.gz) = 27147106 bytes

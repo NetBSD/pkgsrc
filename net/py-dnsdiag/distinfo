@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/03 14:11:32 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:26 nia Exp $
 
-SHA1 (dnsdiag-1.7.0.tar.gz) = 813ba37acdfb7b0d4bb37cc288035b00e99a827b
 RMD160 (dnsdiag-1.7.0.tar.gz) = c7ef686beeada33369b7c24557a2f2986d562750
 SHA512 (dnsdiag-1.7.0.tar.gz) = 05eebf5ab905d826005b06895817e57e2e5bdbb115b2679c096e16bf15c78ca73a77f79e8e8feb3c425a171fdc11ad2493c5ce461eff97ae774b17d7c392a768
 Size (dnsdiag-1.7.0.tar.gz) = 12819 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/12 23:02:15 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:00 nia Exp $
 
-SHA1 (nsca-ng-1.4.tar.gz) = 5b8423d14d1bab2dc87605694f828363a1e671e4
 RMD160 (nsca-ng-1.4.tar.gz) = 17fa9aaff47f1790aaae090a9fdea4955b85c4e2
 SHA512 (nsca-ng-1.4.tar.gz) = 79b52fb2e5a7f1523958a24846ac15826738a28454e6e2c9e20dda2202b99fce042d0733ac8dfc98619210312af8eff748c22f82208528f54243061054273c41
 Size (nsca-ng-1.4.tar.gz) = 354012 bytes

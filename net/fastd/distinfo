@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/10 12:36:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:10 nia Exp $
 
-SHA1 (fastd-22.tar.gz) = 1c44e4286b0ae47e1973037bfac0038603d6b919
 RMD160 (fastd-22.tar.gz) = 6e720d3d098f9a4a8ad80127c72da95decd82c3b
 SHA512 (fastd-22.tar.gz) = a4891214f65cfb9f4b7a1f6bc077442cc31848fe5b0804892c197d97617838902ddb033af382ea0820337e12b4dabbf2f28468091dd9ac2d096eb8db067e5648
 Size (fastd-22.tar.gz) = 243780 bytes

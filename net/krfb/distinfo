@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:30 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:41:41 nia Exp $
 
-SHA1 (krfb-20.12.3.tar.xz) = 3f89dd5a9a4776b39ba6a41232c4088787b2c53f
 RMD160 (krfb-20.12.3.tar.xz) = a9343089670893e77829e4e86faed6926f068ea1
 SHA512 (krfb-20.12.3.tar.xz) = f66948288fbf78adf893c9c53c76acd6eb36e805d6603d912e4cd5d7ecd6fd7dedfa421a072aff989b51b312041793b4a6c3d2a16dbef50a9a1f7014c558b5ab
 Size (krfb-20.12.3.tar.xz) = 1280912 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.79 2021/09/12 10:36:47 leot Exp $
+$NetBSD: distinfo,v 1.80 2021/10/07 14:41:28 nia Exp $
 
-SHA1 (gallery_dl-1.18.4.tar.gz) = 9b5a30cc886feae796a22070cbf847d6d95fced5
 RMD160 (gallery_dl-1.18.4.tar.gz) = da535a0f4c21f689908fc9305c24651ac1dfddfc
 SHA512 (gallery_dl-1.18.4.tar.gz) = 3924e7a1fe206a7ec46ad8b098b2bba9c329087b4a6728cd5d032d3a260c0f22ce920c9699476593d802129e13c0788a1aaa0fe886fdd89f609e5d3a6abe5f28
 Size (gallery_dl-1.18.4.tar.gz) = 368537 bytes

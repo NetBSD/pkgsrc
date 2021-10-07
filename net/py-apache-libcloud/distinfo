@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/05/17 19:06:47 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:42:24 nia Exp $
 
-SHA1 (apache-libcloud-3.0.0.tar.gz) = 4f52fa220b7e5b56cb773ac7e86a0c561e8118bf
 RMD160 (apache-libcloud-3.0.0.tar.gz) = abddb1a23c662434ef7cdb7351b12583ae4a6eef
 SHA512 (apache-libcloud-3.0.0.tar.gz) = c04e55e0b7b8943250fd3b291d7aa5e2aa67c4460405f8cb7f527a2c95e045dcd4ce3785ad83fe8284e49d761c84c3f243f491e59c94de463e2079d77da09332
 Size (apache-libcloud-3.0.0.tar.gz) = 2136758 bytes

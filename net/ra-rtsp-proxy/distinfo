@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/03/23 17:06:58 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:42:37 nia Exp $
 
-SHA1 (rtspd-src-1.0.0.0.tar.gz) = 64cdbb847bd4966d65b86cc25eeac6403eed1738
 RMD160 (rtspd-src-1.0.0.0.tar.gz) = 829b785906236ba9146a0b538fc5607cd08e5bb9
 SHA512 (rtspd-src-1.0.0.0.tar.gz) = 1a82b8935bdb1d6e2669fd32543b14a581b219c7ed85cf7f2d49c9dde5ab4cf31b25a1603b459c77ed663ec06a1b85d5e5f1ba3319726d8964cfd2ede5142e06
 Size (rtspd-src-1.0.0.0.tar.gz) = 107032 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2020/03/18 17:59:51 joerg Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 14:43:07 nia Exp $
 
-SHA1 (zeromq-4.3.2.tar.gz) = e5253bff214f77621b3d29443f1aa6e5a106ffe5
 RMD160 (zeromq-4.3.2.tar.gz) = 01621ad7d28f7eb2de939441bd1b4f2c21fb3663
 SHA512 (zeromq-4.3.2.tar.gz) = b6251641e884181db9e6b0b705cced7ea4038d404bdae812ff47bdd0eed12510b6af6846b85cb96898e253ccbac71eca7fe588673300ddb9c3109c973250c8e4
 Size (zeromq-4.3.2.tar.gz) = 1697442 bytes

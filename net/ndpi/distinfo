@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/06/23 19:31:49 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:41:57 nia Exp $
 
-SHA1 (nDPI-3.4.tar.gz) = 65d216e1cf8c07c836db1740a2b6a7077c92b044
 RMD160 (nDPI-3.4.tar.gz) = 3ceacbecda549950b9436f5a8801a1a2ebdbd336
 SHA512 (nDPI-3.4.tar.gz) = ed5a22b6ddc14ad707a18a0bd96746c1df489969faaa42016fa9aad8d414fc4ee303b96cac15c3ba86f484a80a0aaa2dd1be5f92be672912e0e0d30da4bdad4c
 Size (nDPI-3.4.tar.gz) = 37976087 bytes

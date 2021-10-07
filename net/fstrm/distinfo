@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/02 03:31:24 leot Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:27 nia Exp $
 
-SHA1 (fstrm-0.6.0.tar.gz) = 6b1c1df0e280e63ad270ddb1c20c9f03a30969ff
 RMD160 (fstrm-0.6.0.tar.gz) = a74e2e8c23c151d8fb0daa5504c045814ef6f1d2
 SHA512 (fstrm-0.6.0.tar.gz) = 8e327f40fb49b36998d8bb9353b30b9924630b85adf1e4462ce4b456daa7eea727892a59f43ddd48de5bf5059a450fef54726b09af6d7f210fa182c4055d65f4
 Size (fstrm-0.6.0.tar.gz) = 135214 bytes

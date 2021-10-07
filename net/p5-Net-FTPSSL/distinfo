@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/04/18 13:21:34 mef Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:42:09 nia Exp $
 
-SHA1 (Net-FTPSSL-0.42.tar.gz) = ddc8bd1e36c844e01e1a08f5100613f06bd2866e
 RMD160 (Net-FTPSSL-0.42.tar.gz) = 37c8d2a9630c9251a6b2aae70f4ec3b3347793ea
 SHA512 (Net-FTPSSL-0.42.tar.gz) = 358a7d5e6e638469b2d1ad2c079fb82a988a76a82f4f11ea0ef8d123a145da387267247597c4fc724ea8b236ae4eb27b75c643052b01faceb19da1bdda33b3c1
 Size (Net-FTPSSL-0.42.tar.gz) = 125828 bytes

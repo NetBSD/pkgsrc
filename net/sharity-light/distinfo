@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2016/09/01 12:58:46 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:42:47 nia Exp $
 
-SHA1 (Sharity-Light.1.3.tar.gz) = 8d4262dd2c793db74596527f4215c1c84a77f7af
 RMD160 (Sharity-Light.1.3.tar.gz) = 55f56a00c7488a2c29d38682a5faef92863f5d29
 SHA512 (Sharity-Light.1.3.tar.gz) = 8b7e0ff63d674c22e46cea6f3d581a30924cc49c63aeff4d46e8ccb837d1f9171a64a6ccd3e341b89dd5e9c905c28322c1c1cf578603b7a375240c5e0d0f1fe5
 Size (Sharity-Light.1.3.tar.gz) = 78504 bytes

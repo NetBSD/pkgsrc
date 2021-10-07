@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/10/01 10:27:58 otis Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:41:22 nia Exp $
 
-SHA1 (dnsdist-1.5.1.tar.bz2) = cd1e44374e51d90e897154a5157e060db990f5dd
 RMD160 (dnsdist-1.5.1.tar.bz2) = 9f77b200cb8d079b9f77f411c311393a81271be1
 SHA512 (dnsdist-1.5.1.tar.bz2) = 68fe5f55fd081ed80a620933af9f8310be0e21c86ba449a9c557975b5c83f4b64e3002e6032dc002582d081e70e1ec2ff080c5d8389fd46a9896bdafd5a41f9f
 Size (dnsdist-1.5.1.tar.bz2) = 1068061 bytes
