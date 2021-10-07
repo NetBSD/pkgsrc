@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2019/07/04 12:15:04 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 15:07:10 nia Exp $
 
-SHA1 (elinks-0.12pre6.tar.bz2) = 3517795e8a390cb36ca249a5be6514b9784520a5
 RMD160 (elinks-0.12pre6.tar.bz2) = 99d92dde61ed9c626f10d3d431ed4d325b2e33f6
 SHA512 (elinks-0.12pre6.tar.bz2) = bff70faafea7c4739695a7fad8f659109894b318588f5a035a5594a6053238789259ce6067c2f5cb97448f138db143adebb23f84bf689bea209ba37573484b7f
 Size (elinks-0.12pre6.tar.bz2) = 2854500 bytes

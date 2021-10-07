@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/16 09:42:34 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:18 nia Exp $
 
-SHA1 (djangocms-column-1.11.0.tar.gz) = 310c4528f812ecc5359e3713432018b97b4e8035
 RMD160 (djangocms-column-1.11.0.tar.gz) = 81a9ba16bd47bb295795bfbb820dac0e57e6838d
 SHA512 (djangocms-column-1.11.0.tar.gz) = 63c91797303a6eafafa512b85a18ebc87407ff87823890c56b66f6301c8aeedbe82539833f581fcd8613f3bc62180381536ff48bb1de267d20ea950c001a3a3f
 Size (djangocms-column-1.11.0.tar.gz) = 23871 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.74 2021/03/03 10:09:13 mrg Exp $
+$NetBSD: distinfo,v 1.75 2021/10/07 15:07:05 nia Exp $
 
-SHA1 (bozohttpd-20210227.tar.bz2) = 7af4adc2aa306e083acf04b3f74e6e383db4cb6c
 RMD160 (bozohttpd-20210227.tar.bz2) = df60e9fe7b1892863a56e2a4988bf8781d8e9021
 SHA512 (bozohttpd-20210227.tar.bz2) = b838498626ffb7f7e84f31611e0e99aaa3af64bd9376e1a13ec16313c182eebfd9ea2c2d03904497239af723bf34a3d2202dac1f2d3e55f9fd076f6d45ccfa33
 Size (bozohttpd-20210227.tar.bz2) = 63732 bytes

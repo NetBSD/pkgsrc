@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/12/14 10:47:37 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:21 nia Exp $
 
-SHA1 (Flask-Common-0.3.0.tar.gz) = f6734a777bb58aab964ca7bf2783c40162f42b9f
 RMD160 (Flask-Common-0.3.0.tar.gz) = f70e51bd881ef34a9b4c004f6d94aedad1ae8e01
 SHA512 (Flask-Common-0.3.0.tar.gz) = 15dda3ade4140278617c14eb3004d848a0b44ccaf59bf94859177ae5284e453c9bd928817a7636bd437f374e53828b03fac2f2bf5d033284f3119e1595cca53f
 Size (Flask-Common-0.3.0.tar.gz) = 3560 bytes

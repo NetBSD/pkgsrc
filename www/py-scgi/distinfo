@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/03/24 08:25:30 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:31 nia Exp $
 
-SHA1 (scgi-1.15.tar.gz) = 4fd17f55514aebcad9af9b50b1f1d882db5c70ea
 RMD160 (scgi-1.15.tar.gz) = 621413709debb59f16a49d59825b29e9a40d09b9
 SHA512 (scgi-1.15.tar.gz) = 6d4d9938dcd18d38d397e49aa27cc1dcf764dd81cff7df3ba7531c298a521712b39c3c6743369f04a78d702b79559c5ce9a14d2069235224562f3bce912882f4
 Size (scgi-1.15.tar.gz) = 32984 bytes

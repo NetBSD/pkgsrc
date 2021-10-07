@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/08/22 07:16:47 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:08:37 nia Exp $
 
-SHA1 (actionpack-6.1.4.1.gem) = a0f804bbd252530aa3bb9a9fa08d67bc527715f0
 RMD160 (actionpack-6.1.4.1.gem) = 0947de22e1872ad499cd5ce91361ffc9e5c307eb
 SHA512 (actionpack-6.1.4.1.gem) = 965abceeb84162a83b27bf1156ff9841d0ca27b604ab52982c166a2ac9bb17ae057b5eb80df35d66c1dec230d787326231e297a70726174aae301cf773dff4eb
 Size (actionpack-6.1.4.1.gem) = 225280 bytes

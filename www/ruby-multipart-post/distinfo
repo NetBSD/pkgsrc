@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/03/21 16:58:04 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:08:43 nia Exp $
 
-SHA1 (multipart-post-2.1.1.gem) = f2c6ddc8ea50d81372a64d8698b96700de48c454
 RMD160 (multipart-post-2.1.1.gem) = b8e3345f58d2baec9eef3069e962e6fc38c09606
 SHA512 (multipart-post-2.1.1.gem) = afa16717ee136f0bbbc20fe243252831604740bb61fa7288a2437a4a67638f660a4bd491b5326b034173e9e8352f2659f27dc8aaa761721f7111b7e9e704582f
 Size (multipart-post-2.1.1.gem) = 13824 bytes

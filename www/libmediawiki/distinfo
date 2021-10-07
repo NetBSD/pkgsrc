@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/11/17 08:53:25 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:19 nia Exp $
 
-SHA1 (libmediawiki-5.37.0.tar.xz) = ca94bf9553604da042ee95af48efe4a5d67ebb24
 RMD160 (libmediawiki-5.37.0.tar.xz) = 9729cd56a8587096155c6ffd74d85719d2468dff
 SHA512 (libmediawiki-5.37.0.tar.xz) = 5efcd30782c8d54cddad51c6a96065f2942529e89facfd1c3a71af343a898858db02fa95dd0af0161b3e13aee6a9a373a0a641ce64e128c7282cbf3770db6993
 Size (libmediawiki-5.37.0.tar.xz) = 55188 bytes

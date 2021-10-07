@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/10/25 10:29:04 kamil Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:07:15 nia Exp $
 
-SHA1 (htmlcxx-0.85.tar.gz) = e56fef830db51041fd297d269d24379b2dccb928
 RMD160 (htmlcxx-0.85.tar.gz) = d357b4c29127aae7f06da666c004c9db26ef29a4
 SHA512 (htmlcxx-0.85.tar.gz) = a385b65fb668727b0034a95e5dcda18939e4cd2fa5140bbf3bc63907abc481cb4e6f2f46089eac131cde2b8234a4fc5db4f81253b10e6dff6b42632cea990a61
 Size (htmlcxx-0.85.tar.gz) = 414624 bytes

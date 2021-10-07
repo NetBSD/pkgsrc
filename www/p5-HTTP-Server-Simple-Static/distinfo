@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/11/08 21:40:46 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:48 nia Exp $
 
-SHA1 (HTTP-Server-Simple-Static-0.14.tar.gz) = c06180c127683ef714469f8db482179ec6726aa0
 RMD160 (HTTP-Server-Simple-Static-0.14.tar.gz) = 644a877e5732cc5460b00003c0b9e590090bb65d
 SHA512 (HTTP-Server-Simple-Static-0.14.tar.gz) = d8b0f1e6668fe99e094e1889edb9f5f71fdfe535f3f343f374e150f8c5de1cc3313c4264d50f2cff59af5379424921ecfda5a9acd61a445cc96df46280bd0565
 Size (HTTP-Server-Simple-Static-0.14.tar.gz) = 6643 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/03 06:48:05 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:08 nia Exp $
 
-SHA1 (php-propro/propro-2.1.0.tgz) = 8eae99aaa9e3b2d4fada9ec968072bce2893573b
 RMD160 (php-propro/propro-2.1.0.tgz) = 133bc76be7a0b9edbcbc1a6a5be23a9e9b5bf112
 SHA512 (php-propro/propro-2.1.0.tgz) = 94fc97f7bf17661ec7ecbe4d13b4fc98b8381469140d121fef49d32a4b767e956ed87b9f5bbb794f27ca47ce4b7b3125ea2b9091eb9d1f0a52b5c8f9df7ee145
 Size (php-propro/propro-2.1.0.tgz) = 14253 bytes

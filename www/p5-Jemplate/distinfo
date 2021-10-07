@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/09/27 15:38:58 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:07:49 nia Exp $
 
-SHA1 (Jemplate-0.30.tar.gz) = 2a8ed1f37f3381723f0ceeac60a7d217fa82fa9d
 RMD160 (Jemplate-0.30.tar.gz) = 0915d43def3803a846940f203db0f221d6076a6a
 SHA512 (Jemplate-0.30.tar.gz) = ee3b00a0116988fb454a0335247d5e6c1840533d33ae527c590815675c24bd36f89689419dcc80de933d96be15e833aac8d23ccfb5c5491cde697996a11e7f87
 Size (Jemplate-0.30.tar.gz) = 1912038 bytes

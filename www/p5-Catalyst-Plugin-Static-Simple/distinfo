@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/09/05 01:57:05 wen Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:07:37 nia Exp $
 
-SHA1 (Catalyst-Plugin-Static-Simple-0.37.tar.gz) = ec7022e3c203a0171121d4b367ea3c531417f84c
 RMD160 (Catalyst-Plugin-Static-Simple-0.37.tar.gz) = 4b013ed17678f799812eb5e1e788094977f607dd
 SHA512 (Catalyst-Plugin-Static-Simple-0.37.tar.gz) = 6901c6ebdd73caecd5f6c21017be82f62537efd2fc466fd96be0593a5fa946419c1d25b1b97520825d34d731d90b8c358f169bc252194fd40281e8e0e1721d15
 Size (Catalyst-Plugin-Static-Simple-0.37.tar.gz) = 28548 bytes

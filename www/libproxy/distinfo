@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.21 2020/09/22 18:22:59 bsiegert Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 15:07:19 nia Exp $
 
-SHA1 (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = d5c71fa0be6d61417d3fcbb34445044ca3b64e3c
 RMD160 (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 26d3f2bd4defa6c6073846e2a8eabbc121eddf67
 SHA512 (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 908fbf49bec18764a8c2ab81ef5d5e6e1fc2423cf9a6608cc7d3a6d5ac44676e171646b0f95b39b7ade108afd62cc2ede8f7b57d6ba0d67025f30b18e5084292
 Size (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 1585 bytes
-SHA1 (libproxy-0.4.15.tar.gz) = 2dc0fc31cad78ce3d7a5ceb8fa8df07010f5c13e
 RMD160 (libproxy-0.4.15.tar.gz) = 4818e264398035b10b1cd015d429bff8b637daba
 SHA512 (libproxy-0.4.15.tar.gz) = 8f68bd56e44aeb3f553f4657bef82a5d14302780508dafa32454d6f724b724c884ceed6042f8df53a081d26ea0b05598cf35eab44823257c47c5ef8afb36442b
 Size (libproxy-0.4.15.tar.gz) = 93084 bytes

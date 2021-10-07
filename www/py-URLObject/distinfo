@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/09/28 04:58:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:08:10 nia Exp $
 
-SHA1 (URLObject-2.4.3.tar.gz) = e94c90c30cf16235710f97fde9df0288d18b28fa
 RMD160 (URLObject-2.4.3.tar.gz) = b9f763247194c504ebe49e54b8cc4af98484f844
 SHA512 (URLObject-2.4.3.tar.gz) = a557731f4da8a2aaf8f7e3f7219b48cf66cf6a5706a0ba6978e9eeb310d8246baec6a6c9d798e31ac1b3874fd0d93bb88ea359a87390f7b935ba5472994e1bbe
 Size (URLObject-2.4.3.tar.gz) = 27878 bytes

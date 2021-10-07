@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/10 10:49:56 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:32 nia Exp $
 
-SHA1 (python-swiftclient-3.11.0.tar.gz) = 3366137dee9bd8e05da2b729e1366b4fa898d49d
 RMD160 (python-swiftclient-3.11.0.tar.gz) = 38b1a1bbad921ac55d8a00a3c1de43d13ca1ba3f
 SHA512 (python-swiftclient-3.11.0.tar.gz) = 8dd65fdb17615d11ae15ef66a82d666134f944390400cc32ac2e49f2cc16415d81d894fc73b8fab12ca8e344ca194a2323de4da22de960c6268052bfa6813594
 Size (python-swiftclient-3.11.0.tar.gz) = 201503 bytes

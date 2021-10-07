@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/04/27 17:15:49 wiz Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 15:08:02 nia Exp $
 
-SHA1 (URI-5.09.tar.gz) = ee3a28661467ea086c69edaece4746002b380d6d
 RMD160 (URI-5.09.tar.gz) = 6c354775323c6bde2661009659ca73330d1fc11a
 SHA512 (URI-5.09.tar.gz) = b9af77064abb8cb83900a02c18b3d5b8f840559f0f925be71b18bcdb4a24c40d654ccf9969d72b7d8930ea17ae4f4f4291fd327bb0b93c204c8f819a1776b8bb
 Size (URI-5.09.tar.gz) = 108897 bytes

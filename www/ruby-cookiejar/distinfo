@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/03/15 16:09:04 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:39 nia Exp $
 
-SHA1 (cookiejar-0.3.3.gem) = 33dcc20d7c06e792fe12f47ebc413f34525e9758
 RMD160 (cookiejar-0.3.3.gem) = a59e8664538ebf7584dd31ac14805433b24b9d6b
 SHA512 (cookiejar-0.3.3.gem) = 52ef655ef7f5219812216328ae24bbae0f5f6edea493bb96dffb1f9d665efa22cd3d1567e84c5cc3bec53ab3ceb8243afb4d710631cd274801e5b2de63a6edbe
 Size (cookiejar-0.3.3.gem) = 20992 bytes

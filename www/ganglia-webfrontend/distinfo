@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2018/09/21 14:48:08 bacon Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:07:11 nia Exp $
 
-SHA1 (ganglia-web-3.7.2.tar.gz) = c19f0446f1bfea71a8482d640ea0bfd5bdda788d
 RMD160 (ganglia-web-3.7.2.tar.gz) = 2abd57780260ea795a702a877dac63de4dfa669c
 SHA512 (ganglia-web-3.7.2.tar.gz) = 033b00923a4cf7f342a44de9e37da67411992054e7f103fa09d91bbd125fb9066cc4e77ae5011810d7d926e2997b48d30e3d505d83239cd4c0a6b996a7679f8d
 Size (ganglia-web-3.7.2.tar.gz) = 704632 bytes

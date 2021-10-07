@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/01/03 14:55:27 leot Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:08:56 nia Exp $
 
-SHA1 (vimb-3.6.0.tar.gz) = c068cb9743be8f326c7d3da416d45ef2d1844b76
 RMD160 (vimb-3.6.0.tar.gz) = 96e23c9df28d067fec149e7a97a9f3b24048c0ec
 SHA512 (vimb-3.6.0.tar.gz) = 0c1a131641c47ec0dd7a5346d5e7260f85293ecc105e04e6265680c53bbbdc8d98acc4f4e11443efc4e4148aa0b77c496cf7e5f59d44857e6e612c3d4a643c8f
 Size (vimb-3.6.0.tar.gz) = 144750 bytes

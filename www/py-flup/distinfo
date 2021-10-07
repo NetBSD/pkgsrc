@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/09/05 08:18:23 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:08:24 nia Exp $
 
-SHA1 (flup-1.0.3.tar.gz) = 47c93ce3ecd036ae30a57a690f3c74c5cefbaeea
 RMD160 (flup-1.0.3.tar.gz) = bae32e4ff56870bb83b8a073540055a59ef7a266
 SHA512 (flup-1.0.3.tar.gz) = f165685b39a8539d29d48d0ad3c9c0495f428892b8935545a128730687c658a1e8b74a09c8084dd4a2490b1d26f1382b48c95ba43401171fd46876b068ba2f8e
 Size (flup-1.0.3.tar.gz) = 52277 bytes

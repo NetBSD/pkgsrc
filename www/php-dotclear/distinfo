@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/06/24 02:32:27 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:08:10 nia Exp $
 
-SHA1 (dotclear-2.18.1.tar.gz) = 3c87b3abf756fe22c9ee91a1d744dfd784576b47
 RMD160 (dotclear-2.18.1.tar.gz) = c02d7591b10173f180c0d7f0747b077ebdda0b26
 SHA512 (dotclear-2.18.1.tar.gz) = 517755808873eababe8c2c441008c98519573adc648cadfec1d82d24dccccacf38857f088ecd9f8e42c26f5a858496383f918ad77eb4fabde620609814f90a58
 Size (dotclear-2.18.1.tar.gz) = 3017421 bytes

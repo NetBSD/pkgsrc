@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/02/04 00:18:02 minskim Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:20 nia Exp $
 
-SHA1 (feedgen-0.9.0.tar.gz) = 9da79674d8d1b0a830066f0e8d7dcd9f23db98f1
 RMD160 (feedgen-0.9.0.tar.gz) = ebcc5aa289c6f2d17d7d77b03d9ea3e739bd967e
 SHA512 (feedgen-0.9.0.tar.gz) = fca43ad43656b6a63c7489a8c8d4e9dd46182e2ecaead988d978014a29bec87e1cfbaae962907fae6373a759e8ab68ea2dfed8fa538d2deba7eaa5298c07af1d
 Size (feedgen-0.9.0.tar.gz) = 217925 bytes

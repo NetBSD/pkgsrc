@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/06/12 07:03:53 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 15:08:56 nia Exp $
 
-SHA1 (viewvc-1.2.1.tar.gz) = 41ca71774ba51e088353525f403dea8561e09cb1
 RMD160 (viewvc-1.2.1.tar.gz) = 067eeb5633b6ef3c511faec4a2c7d2399e148a34
 SHA512 (viewvc-1.2.1.tar.gz) = d56d78258833499890e746fe6901d4a716b3a83eb12d786322154f373b0485710735f11ed4ae991894d0ac77c4c97b9c383089ba1f92859ae84994c7cd6c951c
 Size (viewvc-1.2.1.tar.gz) = 361031 bytes

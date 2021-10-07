@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/10/04 06:05:49 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:06 nia Exp $
 
-SHA1 (pear/HTTP_Request2-2.4.2.tgz) = 9d46f0b0fe07ff8e14507ff7e29afe55deaeec1d
 RMD160 (pear/HTTP_Request2-2.4.2.tgz) = a02b11f8344f3dcfd7065b45c67cac5bb0e2cde0
 SHA512 (pear/HTTP_Request2-2.4.2.tgz) = c122df64f3f87d562fd4f818b3f02f7639dc907f724d034c420ddeabc5295d0a94d77221287349bcb7a790a97cf7c9b078d9a8086a476789eae906c6e124c910
 Size (pear/HTTP_Request2-2.4.2.tgz) = 125530 bytes

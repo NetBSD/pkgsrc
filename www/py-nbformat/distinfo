@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/10 18:57:58 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:08:29 nia Exp $
 
-SHA1 (nbformat-5.1.3.tar.gz) = 84a416c822f6088fef6fd1d8b56b03f0d3c98c0e
 RMD160 (nbformat-5.1.3.tar.gz) = d02668b91044e0e544fb4681c70473652ffa974f
 SHA512 (nbformat-5.1.3.tar.gz) = 442c8e9fbc0fe33830a16a38278195469438c7ad28b4270e203284c49dc747f541c1ed9f2a19aca9bf705f0615d4b8402f0492e1ca6715bfbd8be2a5e505fa7c
 Size (nbformat-5.1.3.tar.gz) = 73703 bytes

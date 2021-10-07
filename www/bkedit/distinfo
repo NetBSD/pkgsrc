@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 02:46:50 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:07:05 nia Exp $
 
-SHA1 (bk_edit-0.6.23.tar.gz) = fe37a0e213e54d8a60f70b6e03818e26f3690bf2
 RMD160 (bk_edit-0.6.23.tar.gz) = a9cc09925ccd0691d5a38b04ea2a81f877a3c102
 SHA512 (bk_edit-0.6.23.tar.gz) = ffbf32e29d494f21cbf5fac85eda81454213e641f0166d933fee630ca638b86ce66af9f6943b173b031244aff0bb3263d416f634721538ca1349cbc1a9050fc6
 Size (bk_edit-0.6.23.tar.gz) = 113434 bytes

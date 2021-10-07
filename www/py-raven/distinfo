@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/02/18 11:44:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:08:30 nia Exp $
 
-SHA1 (raven-6.10.0.tar.gz) = fdaa60a1bcbd35ca9efc3cd33bb43a2dce80f920
 RMD160 (raven-6.10.0.tar.gz) = 29eea73d7de786ae721758b75845c5798a268792
 SHA512 (raven-6.10.0.tar.gz) = 37ca6d5953dc92b57b3bf4e2edb3947d41f33711d9babfc9eafb8712dc5923829f8810e5123e63749710aeecceb66e56bf8b5b60868f61d750704e20add3c747
 Size (raven-6.10.0.tar.gz) = 288902 bytes

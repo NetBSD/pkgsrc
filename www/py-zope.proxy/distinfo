@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/06/08 12:48:52 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:36 nia Exp $
 
-SHA1 (zope.proxy-4.3.5.tar.gz) = a3eb324c9d9e070014fd6364f42bef4c6af58878
 RMD160 (zope.proxy-4.3.5.tar.gz) = 822105134e3f9195b073301b8f00c1c34c739350
 SHA512 (zope.proxy-4.3.5.tar.gz) = 2122a33c3743392547577b1d5631389b41bd7d9b894d9b09b3c81225c9e0f9952f03c7e606afaab8993d86dc476590183a6581fe95b04d407fbf0f85646d014d
 Size (zope.proxy-4.3.5.tar.gz) = 45162 bytes

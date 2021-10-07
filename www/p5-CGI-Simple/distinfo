@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/03/25 11:07:21 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:07:31 nia Exp $
 
-SHA1 (CGI-Simple-1.25.tar.gz) = 806a93934aa59c0527b548bc83a959331219de55
 RMD160 (CGI-Simple-1.25.tar.gz) = 594a5160ff497eb72321b7540f40c79b5cc87390
 SHA512 (CGI-Simple-1.25.tar.gz) = ace262b4ccafe2ee01582aacf52b31aa1202dc5408bb33071330bc7c53f2cfbb39f9e8844c4511c86125dc05f7161b7592a4038c353dddd1bfd52c03dbcfa9dd
 Size (CGI-Simple-1.25.tar.gz) = 87489 bytes

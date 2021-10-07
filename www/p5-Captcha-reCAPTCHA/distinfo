@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/05/21 08:56:18 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:32 nia Exp $
 
-SHA1 (Captcha-reCAPTCHA-0.97.tar.gz) = e17f8039ee6c21c720bca22828a17b050f4fb874
 RMD160 (Captcha-reCAPTCHA-0.97.tar.gz) = b5eb8384881e0cf92fcda513e64d22f6b1791c11
 SHA512 (Captcha-reCAPTCHA-0.97.tar.gz) = f16be381a858b9cb94a0c8a8bd1eb2aea383818ad8f1d9854f978e70ecee8f72de92ce948c486bdde4ffc06fb912720851ea67c3dc056dcc20f619be185ccb0e
 Size (Captcha-reCAPTCHA-0.97.tar.gz) = 9311 bytes

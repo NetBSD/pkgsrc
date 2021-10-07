@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/12/06 07:15:04 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:07:32 nia Exp $
 
-SHA1 (Catalyst-Action-REST-1.21.tar.gz) = dee3ae196245db3c3200f788c4037cb8ce1f94a1
 RMD160 (Catalyst-Action-REST-1.21.tar.gz) = 545906d657812fd5cea3b082d61b7aeac32520ff
 SHA512 (Catalyst-Action-REST-1.21.tar.gz) = 0ff701d24fe4c79e76c6ca6d3ce2520f696fe3b7c31a1e730f643c43d2d593bda4d0ca302d7b3d3714084c1f06e2b664373ec1f33d64fc79d7e1d1a7b99795f0
 Size (Catalyst-Action-REST-1.21.tar.gz) = 51320 bytes

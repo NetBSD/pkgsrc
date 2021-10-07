@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/11/13 21:01:37 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:35 nia Exp $
 
-SHA1 (whitenoise-4.1.4.tar.gz) = c96973da9c619469a97f951e28a1292c462f6c08
 RMD160 (whitenoise-4.1.4.tar.gz) = 86c523856082a07cd9ec52cfdb7af149e71e15a4
 SHA512 (whitenoise-4.1.4.tar.gz) = c87d06539c44bbb1a422cdec213c6d05dbab6e4409b7be12fd4976302d57b6fe6edd981212d8f616a58656dbeea93779957085d53c6e7d01c982a6b89a5a5133
 Size (whitenoise-4.1.4.tar.gz) = 43539 bytes
