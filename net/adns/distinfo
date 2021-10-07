@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/02/11 11:25:51 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:41:12 nia Exp $
 
-SHA1 (adns-1.6.0.tar.gz) = aa8f1d0c5357fc71ad7f2ed145cd81db7af02848
 RMD160 (adns-1.6.0.tar.gz) = bfed1dc9adec78f73b34b6d02ee986eb43ef2e7f
 SHA512 (adns-1.6.0.tar.gz) = d28d27123a2c9f873a60f9f1fd76ba60c795dc703ff52a6649f8f7ead12a5c74eb71b0a158168dfe9bb1eaf9b7d21f96ef303eb07fd9ad37fd73c38ed853d8de
 Size (adns-1.6.0.tar.gz) = 323474 bytes

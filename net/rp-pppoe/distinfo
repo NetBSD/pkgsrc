@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2015/11/04 00:35:34 agc Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:42:39 nia Exp $
 
-SHA1 (rp-pppoe-3.8.tar.gz) = d9a4346701e580b4a6049a940557b38533f9e8f7
 RMD160 (rp-pppoe-3.8.tar.gz) = 039798154acae9e7a066172f23904d766ba68a9a
 SHA512 (rp-pppoe-3.8.tar.gz) = fd929978790645639800164ad1855862f2b2ec4597a2c4c76ea7691aafd7f6ab5797fc64034eefb574dcf6dd51c51eda91c461f70bf4f557d46fee656143effc
 Size (rp-pppoe-3.8.tar.gz) = 212931 bytes

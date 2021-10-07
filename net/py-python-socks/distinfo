@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/31 09:21:26 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:33 nia Exp $
 
-SHA1 (python-socks-1.2.4.tar.gz) = 77b142bb67f7e80291e6d063edaae58980a86b62
 RMD160 (python-socks-1.2.4.tar.gz) = 860e8f395bad9a676781a993a3dce52bc137247d
 SHA512 (python-socks-1.2.4.tar.gz) = a81e11649caf87c65d37b1f88402272c18c28ad76f63237207c2951098e38b5b66aa3496c59755949f02ed6e2bb3fc1c44f550172e3684d28674ca4aa27392ec
 Size (python-socks-1.2.4.tar.gz) = 20547 bytes

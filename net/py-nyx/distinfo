@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/02/28 06:20:20 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:31 nia Exp $
 
-SHA1 (nyx-2.1.0.tar.gz) = 50b9ec02a3eb513ae8dcb44583f34b88a412a590
 RMD160 (nyx-2.1.0.tar.gz) = 1af0218681d708d1450e3714f3cdec85f7205fe8
 SHA512 (nyx-2.1.0.tar.gz) = 69a645cc811a1b1fbd9cf0501d8f23f1a52e0e92a0598097bb0c9efb040e1895e1dd431bad93be36db0e85ca7ac32ee5c866d50d2812069a39e5160b44575a37
 Size (nyx-2.1.0.tar.gz) = 6908817 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 00:35:12 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:41:52 nia Exp $
 
-SHA1 (mrt-2.2.2a-Aug11.tar.gz) = 6290a0b8d5539fddbd562d8dec64deb291dd3369
 RMD160 (mrt-2.2.2a-Aug11.tar.gz) = e62d3b06d802757cbb1aa4225713b8bf7523ba77
 SHA512 (mrt-2.2.2a-Aug11.tar.gz) = d7dc528b4c0c2379ff73b97c6b99167be220db5260f2e6b894aae6feb245ff4b0717ce3244af9464d3c7d0467e7830b66ce1700e2b49b605cb9cefab3542e014
 Size (mrt-2.2.2a-Aug11.tar.gz) = 596596 bytes

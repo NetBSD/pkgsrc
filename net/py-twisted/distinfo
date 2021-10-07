@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2020/02/06 15:44:57 adam Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:42:35 nia Exp $
 
-SHA1 (Twisted-19.10.0.tar.bz2) = 38a7f1b9c63ba0d2db553e2d210af2fd01b3ed21
 RMD160 (Twisted-19.10.0.tar.bz2) = d1c3684e564f13f554f08656ec2a03f725796505
 SHA512 (Twisted-19.10.0.tar.bz2) = de8d7fd0b2081cebeff68b060c8469377011648bc563a94a993d3530fb007ed42c3a54925c9a10c465ee7a3065cc9108ace12d10d358223fab13494becb9ac4b
 Size (Twisted-19.10.0.tar.bz2) = 3118485 bytes

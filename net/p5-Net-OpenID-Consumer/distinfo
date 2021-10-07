@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/07/26 06:20:31 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:42:12 nia Exp $
 
-SHA1 (Net-OpenID-Consumer-1.18.tar.gz) = 171c7b4986f39e0529f7570a728e72211b610974
 RMD160 (Net-OpenID-Consumer-1.18.tar.gz) = ca21468f04b08fd2b7ac03804e343ecffe487fec
 SHA512 (Net-OpenID-Consumer-1.18.tar.gz) = b8d06ada0f574a88a8a9aecc4f8d11f9a9f91e0320d649a3e99b0ad91b463d22b94919206e1514d1891031c2c6e82f61a6421aea4746ec7314503f1ba9d22fa4
 Size (Net-OpenID-Consumer-1.18.tar.gz) = 58643 bytes

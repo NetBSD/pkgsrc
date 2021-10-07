@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:34:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:15 nia Exp $
 
-SHA1 (bridged-20010701.tar.gz) = 039087ee4c0e78c4897d28887f93835398fa818c
 RMD160 (bridged-20010701.tar.gz) = 89c56f7e26d5d056de78745db46260707c3a3647
 SHA512 (bridged-20010701.tar.gz) = 42b4f39408596a02ca4221a7d159cb4bee6db885b532b95d3d06cb47b816064325f6c5802cc29fac9c34af056a5046d8ca7c54a5a19b70c480cde1f24c1d8d9e
 Size (bridged-20010701.tar.gz) = 29269 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/07/26 17:35:59 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:42:34 nia Exp $
 
-SHA1 (scp-0.13.6.tar.gz) = 04968c393627eb880912d5b4dc8de4cbd38e900c
 RMD160 (scp-0.13.6.tar.gz) = 2f018fa35ae7b909d71bf0c024fba9ce41cfe121
 SHA512 (scp-0.13.6.tar.gz) = 4635b6075580755b7fb73b830c1a36c2fa4e3ed3f2f499909a84ca73b3f7221c6c25161d1cd66159643a33c2b18deb109278c6b92d97bdf6cc4545d86bd59dc8
 Size (scp-0.13.6.tar.gz) = 11955 bytes

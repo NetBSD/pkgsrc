@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/01/06 14:26:03 leot Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:46 nia Exp $
 
-SHA1 (sacc-1.03.tgz) = 54af897ace692d0159a044fe7987602af76bd1ee
 RMD160 (sacc-1.03.tgz) = 6bc0b2fb764265e4a5ec2b0e8e8e4b49f4f52d00
 SHA512 (sacc-1.03.tgz) = bce8c0181336fb4f34259bf80b86f974d4534d7e397af5851097cad4345a58262b1d10807b4ed074422b1e16da23185261fac17770f5cbbe6b9839ee3c2e131c
 Size (sacc-1.03.tgz) = 12183 bytes

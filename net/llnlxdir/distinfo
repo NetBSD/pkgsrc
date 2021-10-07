@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:10 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:48 nia Exp $
 
-SHA1 (llnlxdir2_1_2.tar.Z) = b9e8f79929e693d4f0fd3b41f7ce3ceb76abd252
 RMD160 (llnlxdir2_1_2.tar.Z) = 124acfad9f18730dd560e2bf44887b7381a3e484
 SHA512 (llnlxdir2_1_2.tar.Z) = 02526c0457bdaaab31351ff230cb4ecbcdb77970399a823df1302d90dea8df0dd296461e1515187851af0e3ac2b84f56f82b760508595c6e014f68a2eae276a9
 Size (llnlxdir2_1_2.tar.Z) = 574027 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2016/06/19 05:55:56 markd Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:42:00 nia Exp $
 
-SHA1 (ntop-4.1.0.tar.gz) = 11cd397e5524fa72652d840ce1b92631f8bf39a2
 RMD160 (ntop-4.1.0.tar.gz) = 6f10e30e1b2870fc1ec327512e17cfbe0783faa4
 SHA512 (ntop-4.1.0.tar.gz) = 6759ef6396768b33db96db20ceb907f9d8a5e3421c920d277e043bec85eb1fb38e41b7c88e189e7dd316a02c627aa4c4ea9295beee8cd890ac09b5d8b161a579
 Size (ntop-4.1.0.tar.gz) = 39118983 bytes

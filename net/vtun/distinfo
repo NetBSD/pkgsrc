@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/04/21 07:36:24 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:43:02 nia Exp $
 
-SHA1 (vtun-3.0.4.tar.gz) = 2335c21b56fadf9ce851dd7f342fb0ed4f522c47
 RMD160 (vtun-3.0.4.tar.gz) = 004f2fa3a583b579706a1bc8728108ce9e4bca6e
 SHA512 (vtun-3.0.4.tar.gz) = b1bb7294bd745c2ca888704e2b0f8e05447b5e01bec0f921648afe363d61a19508dea9e26663993cd69c506aa92621e76f36045bddf7c3723d13a72741ca6781
 Size (vtun-3.0.4.tar.gz) = 132691 bytes

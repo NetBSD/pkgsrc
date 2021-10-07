@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:13 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:52 nia Exp $
 
-SHA1 (mtftpd-20080229.tar.gz) = f4ca14fa9dfd3ba6fa92abe9b87bcc1b4f071810
 RMD160 (mtftpd-20080229.tar.gz) = af3d046ea7a57fcc00d7955a7707d8c007e7aeca
 SHA512 (mtftpd-20080229.tar.gz) = f73de4862439ba307dfc923a0fd0d1a4d95b3fd2740622611290fa36deb462fdd3a4de6894c8a6762f65f08e589ae9b59bd995eabf405de21e5b77f26afae4a8
 Size (mtftpd-20080229.tar.gz) = 135499 bytes

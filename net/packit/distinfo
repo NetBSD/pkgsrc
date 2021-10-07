@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/01/26 10:52:04 maya Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:18 nia Exp $
 
-SHA1 (packit-1.0.tgz) = 21e1540c55879123d6bcca92c64d371b734893b1
 RMD160 (packit-1.0.tgz) = 02b2ec56ccac5f8d755c0d84f1360b1cea698fce
 SHA512 (packit-1.0.tgz) = cc7e957d2149edbc92d4d914c9f29aecb7945bab43f2df7435bc4c21a4724f92e9d99990683e4d301384117f79819f87f423eaa28dbef11b37a96c4aa40a1398
 Size (packit-1.0.tgz) = 138367 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/12/18 23:25:59 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:41:47 nia Exp $
 
-SHA1 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 55d79e6c4305cd67cd487c601298349c17ca05c1
 RMD160 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 3fb7d82b4cbf77ee2eb5e1c55d7aeb535d17506b
 SHA512 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 18b0a1698d32bbdbfe6f65f76130b2a95860e3cc76e8adb904269663698c7c0ae982f451fda1f25e5461f096045d40a89d9014258f439366d5b4feaa4999d643
 Size (libvncserver-LibVNCServer-0.9.13.tar.gz) = 567491 bytes

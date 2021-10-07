@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/07/04 22:35:03 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:48 nia Exp $
 
-SHA1 (copas-2.0.2.tar.gz) = e14afc3577e25e4612ea7e17223216194c981f7d
 RMD160 (copas-2.0.2.tar.gz) = 9693f624911ae99bae47271dc0816fa1c28b0629
 SHA512 (copas-2.0.2.tar.gz) = dd83a513fbddb2f0164c3573b417623f5cc556413c4937be7e362f4c1667bad83391143e1bf609480726730ce488c4080e810f2ce12a98a7abb5293993c10182
 Size (copas-2.0.2.tar.gz) = 51660 bytes

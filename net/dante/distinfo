@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/06/01 07:42:08 adam Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:41:19 nia Exp $
 
-SHA1 (dante-1.4.3.tar.gz) = 1e264ec532774324b5508ba5f2ad226d479b4977
 RMD160 (dante-1.4.3.tar.gz) = 06edfb0cd0cc6a777eda244e4f256d28e1e6956d
 SHA512 (dante-1.4.3.tar.gz) = c19675b2dee931366caf4a0dd4f44045ae731cc2f986e5d2e4bf498925c7d93a92a32088234d4a9443424f6dfb0796a1fa3fdc7c47e5aa11612c29a101f47888
 Size (dante-1.4.3.tar.gz) = 1343935 bytes

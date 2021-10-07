@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2016/04/17 08:20:47 wiz Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 14:42:15 nia Exp $
 
-SHA1 (NetAddr-IP-4.079.tar.gz) = 41f0048dccf016077e65b93a681e40b4f6b28336
 RMD160 (NetAddr-IP-4.079.tar.gz) = 121fdc8441d58993dfbca8321adcf47937c29987
 SHA512 (NetAddr-IP-4.079.tar.gz) = 8ebc8ffb914cf72c041441f96de0e9c982eebdb8c26dbf15f885d0113b3634e4851d81f13f555c14d1fdf0ab95ae2ce880ed124e6c200e391adae3b1d6d3eb65
 Size (NetAddr-IP-4.079.tar.gz) = 213896 bytes

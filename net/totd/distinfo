@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2018/09/29 10:52:55 maya Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:42:56 nia Exp $
 
-SHA1 (totd-1.5.3.tar.gz) = a1ccdbc1a05b463619cb207988bd5a0c452a7d16
 RMD160 (totd-1.5.3.tar.gz) = b5b28a992e06f00d7983fab96c651b997ed5c47e
 SHA512 (totd-1.5.3.tar.gz) = eb6fe6f2d1eda7d0bae8fa5b966b59813982264849fe835343c6a85e9262554bc2f89764c2ff760cd722786da391bcf8fdba5d544327a202316b35bd837b8c13
 Size (totd-1.5.3.tar.gz) = 243807 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.47 2021/10/06 10:58:30 adam Exp $
+$NetBSD: distinfo,v 1.48 2021/10/07 14:41:32 nia Exp $
 
-SHA1 (grpc-1.41.0.tar.gz) = fa8da59b2944dc28c64d1ec831ae236c3cdcbd2e
 RMD160 (grpc-1.41.0.tar.gz) = 97584f3bf8276c236fc04b7bf80b82bbee2a7e25
 SHA512 (grpc-1.41.0.tar.gz) = bc353bfd8cc10d8b992e4cf680c656ef6ddbcecbaa640c94e9255664d532926e48f3839afc98ef6278ae4e2eb54d166ac67fec7315dc1d08640845ed8120d902
 Size (grpc-1.41.0.tar.gz) = 8347643 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/02 20:09:29 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:21 nia Exp $
 
-SHA1 (podcastdl-0.3.3.tar.gz) = 93555540170f1f03a66ffbead0ef3a72461312ec
 RMD160 (podcastdl-0.3.3.tar.gz) = 0aa96c2cc0b3277beb09a2d7d2f038e0883d6b44
 SHA512 (podcastdl-0.3.3.tar.gz) = 54dd3ae98896f1fb77c21114e733d2759d5bfe771e65e0b6f34040a18b497a30ea78abdbb25835e18db3d0a86a14e7aab116a70144b65d5b8e8744fd25dbfa3a
 Size (podcastdl-0.3.3.tar.gz) = 5580 bytes

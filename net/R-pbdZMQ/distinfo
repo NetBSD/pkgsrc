@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 20:44:35 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:11 nia Exp $
 
-SHA1 (R/pbdZMQ_0.3-3.tar.gz) = ffd1e9f758e9b67df019157a6a4e433864882ee4
 RMD160 (R/pbdZMQ_0.3-3.tar.gz) = 58c0e082007dd9bf08d83f388a8e8169f37e5deb
 SHA512 (R/pbdZMQ_0.3-3.tar.gz) = 3dac074c116b18e1d92f5c9b0cca042ac8d8d1dfcd982b476e9957622cfca38fa94508740376619b5a0a74f73d3e146893358d07ae97214df04096a18eadae9d
 Size (R/pbdZMQ_0.3-3.tar.gz) = 1052217 bytes

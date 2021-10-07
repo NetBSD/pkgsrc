@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 11:44:45 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:41:35 nia Exp $
 
-SHA1 (mime-types-0.1.0.9.tar.gz) = 5953e02dc0352f44a0840f788fa5e859d7b13b21
 RMD160 (mime-types-0.1.0.9.tar.gz) = db564a3c00ee9de5082826ae8e7a7f194b5a8b2b
 SHA512 (mime-types-0.1.0.9.tar.gz) = cffc9d4d808d52b35bf6b5bdd6c069411ec8746bb3951e7c1a6200eecb2ae0617ede9891aa3e077e9ea5fc6f08bc2a1c44547971ed2a66108c96fd9dda30e6db
 Size (mime-types-0.1.0.9.tar.gz) = 11384 bytes

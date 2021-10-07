@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/04/07 12:28:30 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:41 nia Exp $
 
-SHA1 (krdc-20.12.3.tar.xz) = 313b4fb1c9272d9a9cf538bca57ff1a8411c67da
 RMD160 (krdc-20.12.3.tar.xz) = 1760dec838e47b46cc72a8af8d5384d704f19e09
 SHA512 (krdc-20.12.3.tar.xz) = bdf9fd7fd0be6925e6a547d2473ec78d073cfd252595996715f1216d1ff86a2792c995e708aecc4d9273dd605463bd769edffaf6543d0dffc0af910174789e4f
 Size (krdc-20.12.3.tar.xz) = 1564652 bytes

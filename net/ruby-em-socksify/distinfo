@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/03/14 15:13:38 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:41 nia Exp $
 
-SHA1 (em-socksify-0.3.2.gem) = b96aec1603eb73cbd0c9908a1388bfbebe960300
 RMD160 (em-socksify-0.3.2.gem) = 2be0ff3b6f25415f4b7e54034e17869b654e6a4d
 SHA512 (em-socksify-0.3.2.gem) = 0fb0b27073acceed860282c0f67e6614d9253321ec537d5237b41a47708a8e0b1023ea34bacd6e23327192917bae1da055ccbaa4bdb414b0421f9c392f1a31ed
 Size (em-socksify-0.3.2.gem) = 9216 bytes

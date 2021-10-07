@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2017/08/15 13:22:20 jperkin Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:42:38 nia Exp $
 
-SHA1 (rancid-3.6.2.tar.gz) = 866c4fb43722edd580f4e7e552a7c7226626eb45
 RMD160 (rancid-3.6.2.tar.gz) = 10ef7096f9d63092617168b597e19fa7e7b34c22
 SHA512 (rancid-3.6.2.tar.gz) = 6f373969ae27e0d7893be19583d8147e1c14b17cd327304a8fe18fe1f44829741bb29073bbaa6ec07b5e7d5454055478e4b0f06a64909268ad947a48cc6a5ea7
 Size (rancid-3.6.2.tar.gz) = 511207 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/01/16 13:04:42 triaxx Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:41:25 nia Exp $
 
-SHA1 (esip-1.0.39.tar.gz) = 426c27483c5b785574808dd03432bae553c85c71
 RMD160 (esip-1.0.39.tar.gz) = 5a7fbfefc124295d86b0bd66e4d418c9e3469ac1
 SHA512 (esip-1.0.39.tar.gz) = 9db1989f22f8ae5e4919624f036a5127f621e720bb7de2357af70d22ac7d353478b5a738c854b39db88bd5baa9531b3849ca7ba600013ad3728fc4d2067f9ae5
 Size (esip-1.0.39.tar.gz) = 89844 bytes
