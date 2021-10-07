@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2020/09/19 13:50:48 taca Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:57:34 nia Exp $
 
-SHA1 (apcupsd-3.14.14.tar.gz) = f027fa141c929371fe860443b6d911ef3a3606fb
 RMD160 (apcupsd-3.14.14.tar.gz) = ecab483f1a38d1cfb75c6d439f89a611efcc45f2
 SHA512 (apcupsd-3.14.14.tar.gz) = c953bbf3e08f809748a7978a3952604176390d1cd276f187fe096d9bc3c8993b52127e8350c0363387da41318e24b4d1e00ea58df71f3bb8f50c9a5a64cd2d7f
 Size (apcupsd-3.14.14.tar.gz) = 1843409 bytes

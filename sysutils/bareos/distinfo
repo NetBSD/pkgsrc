@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/08/11 10:24:05 kardel Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:57:35 nia Exp $
 
-SHA1 (bareos-20.0.2.tar.gz) = 3c478df0515d341e6ef39e9a4534c1699d1094e5
 RMD160 (bareos-20.0.2.tar.gz) = 8c365c9b363df521dfc4bea16bf1eacf00fe958e
 SHA512 (bareos-20.0.2.tar.gz) = f3a0f481a2c9b3a422f4db3e094587c97fe10e2ea5e7a8ba44e9971b0a11746ae4ad598ea469d5c8ec0dfb962e4104c00931397905aebbf3e22af49834043994
 Size (bareos-20.0.2.tar.gz) = 13333946 bytes

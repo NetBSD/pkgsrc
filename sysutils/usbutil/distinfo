@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2019/07/29 11:19:56 micha Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:58:35 nia Exp $
 
-SHA1 (usbutil-0.5.tar.gz) = 4c9abc6f370ab561bd2748b1792802d1e959c599
 RMD160 (usbutil-0.5.tar.gz) = 48c6bedeed8daf50a760feedef3575db021066f8
 SHA512 (usbutil-0.5.tar.gz) = 7bede70e32b185123f7297ccfe49f28ec7724a83ae018d9fce69e4aad6211a18571e177249da4d20cee3c7db3362011a4b13d6044a5f858bdc3951a247498dd8
 Size (usbutil-0.5.tar.gz) = 11508 bytes

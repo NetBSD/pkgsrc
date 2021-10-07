@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/10/19 17:28:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:57:39 nia Exp $
 
-SHA1 (cfm-0.6.6.tar.gz) = af499c60b870f4f59cd28d612eeaa700cf24d28f
 RMD160 (cfm-0.6.6.tar.gz) = 9b3b06a18c6c7790a5a24c5ad7fad7d73c7e3533
 SHA512 (cfm-0.6.6.tar.gz) = 0b34b6f1c9997a0caacabef1a1c60cb1b8078cd35466b1250907500d0750f4a7fc5d9e1b247c4f3f5430ec1a6a74d41fa080be7e04ae728a7a01cfe92a8c42a8
 Size (cfm-0.6.6.tar.gz) = 71472 bytes

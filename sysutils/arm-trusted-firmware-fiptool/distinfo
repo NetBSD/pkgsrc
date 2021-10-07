@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/06/30 14:33:15 thorpej Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:34 nia Exp $
 
-SHA1 (arm-trusted-firmware-2.3.zip) = 7fd1f1c896de819f3fa262de78ba4641cdd0e436
 RMD160 (arm-trusted-firmware-2.3.zip) = 6e17330effbc7524def684c3683bbdd3a48ad05d
 SHA512 (arm-trusted-firmware-2.3.zip) = 1ee358fef1a4cda68d01857d3c822034b3ab1cc68918c7a4087e95f3f2b9b41a12431a8091847f5897ae9a403826d8fcfde0a8a689c69808ff06e737a845db28
 Size (arm-trusted-firmware-2.3.zip) = 5797101 bytes

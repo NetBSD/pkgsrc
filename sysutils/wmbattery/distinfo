@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/10 11:26:01 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:58:37 nia Exp $
 
-SHA1 (wmbattery-2.54.tar.gz) = 549b0eec16880f9b71b60faed6326d1a9a76af54
 RMD160 (wmbattery-2.54.tar.gz) = ef709353135de51a74599f9e86967b261df1caeb
 SHA512 (wmbattery-2.54.tar.gz) = 58c901ed85d3ea7e0c750bb968c3250706ed693162fe4684d75683a3897df7ff02ee4afbe12a5d26b1f1b632d4c6f9902713a632e6784173ea49bad312fd30aa
 Size (wmbattery-2.54.tar.gz) = 87925 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/06/24 09:09:29 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:58:14 nia Exp $
 
-SHA1 (Unix-Statgrab-0.112.tar.gz) = 09271d510e9a098e24099e1e47dd9fcebc37773e
 RMD160 (Unix-Statgrab-0.112.tar.gz) = 38588b1f62d11ee272965a634eb2dd97226cd960
 SHA512 (Unix-Statgrab-0.112.tar.gz) = da69f53bbadd649ec6e09ceb15c58578c2d3d51a3dfd04a32ef172c169527eddc2056660a1bdc6cd888afcbff621b4ab8420b49520db5788a59dab7f0dc78020
 Size (Unix-Statgrab-0.112.tar.gz) = 77286 bytes

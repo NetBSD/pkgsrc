@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/05/25 14:32:18 youri Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:58:05 nia Exp $
 
-SHA1 (menu-cache-1.1.0.tar.xz) = 01e6035aa1fe76d7047bdec235254aa5ce17394a
 RMD160 (menu-cache-1.1.0.tar.xz) = 0cf2f2b41847087189102373f496b63aa7841b9d
 SHA512 (menu-cache-1.1.0.tar.xz) = e4c6619ade7b9a1b97c1366bb94dffb9975be5664b193cf0c69cf9470ef7ae19bda3390d04d98ee9a5b1658ec48aa5c83508c26c347af689161ee67c076b3c9e
 Size (menu-cache-1.1.0.tar.xz) = 265524 bytes

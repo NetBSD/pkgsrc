@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2018/11/25 20:20:57 spz Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:57:33 nia Exp $
 
-SHA1 (amanda-3.3.9.tar.gz) = aff8af309edace21985434c041e3c46052db0ee1
 RMD160 (amanda-3.3.9.tar.gz) = 8f96be4318a86405b1d7045b899777d933f2abc4
 SHA512 (amanda-3.3.9.tar.gz) = 345670a20cff335453e8dcbf457d1fcdb9f266e4a03d729c2b1ba762f4fac323de4a87713d0fd54c11ca244a08dc97fb8c641625f7fa81cb241b3c17748b1b7e
 Size (amanda-3.3.9.tar.gz) = 4673301 bytes

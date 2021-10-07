@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/08/21 21:29:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:58:35 nia Exp $
 
-SHA1 (upower-0.99.13.tar.xz) = 243293648009763df9fe46aec9390cedfa129a3b
 RMD160 (upower-0.99.13.tar.xz) = 9ed6305ed5527c4733181c434301f669df229240
 SHA512 (upower-0.99.13.tar.xz) = 5e72d3a67060e3053bc0753b5a2ab3b5fc5bc5e9d6e32165286c7d4c97d23441ef7c095af3af7a6f1f59841e63c1d46b2d90681abad22eb442047bd628d859d2
 Size (upower-0.99.13.tar.xz) = 448876 bytes

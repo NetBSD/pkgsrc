@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/12/05 21:29:25 sevan Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:58:27 nia Exp $
 
-SHA1 (c06315e.zip) = 7627a5cfabb7fc272a7f662e4f86ab33e3732d56
 RMD160 (c06315e.zip) = ddd1c72b72f216d4998c394fa86469366e41538e
 SHA512 (c06315e.zip) = b25e9976d2d2d84b20ada91da5d69e1893010281dacb422c4748e09d60b1001e01196d8a0e63ca03daf1f938bfc89b982b0973fb3da787ac6d8ed4cce808e71f
 Size (c06315e.zip) = 28336 bytes

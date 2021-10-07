@@ -1,26 +1,20 @@
-$NetBSD: distinfo,v 1.7 2020/04/09 05:59:31 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:34 nia Exp $
 
-SHA1 (odroidc2-v2015.01-bl1.bin.hardkernel) = 40d92af372797dc3e24de62feab117206dae6718
 RMD160 (odroidc2-v2015.01-bl1.bin.hardkernel) = 356c7ec0fada96ff8371c5286990fd31212174f9
 SHA512 (odroidc2-v2015.01-bl1.bin.hardkernel) = 2fae07297d62ff211b5d8645b3b41e76b045edaeb6997d972736d7544276dfd70d220a836d6399c47b233eb266e0c3a4f4972b2879fec863fbbfb47f4510a84f
 Size (odroidc2-v2015.01-bl1.bin.hardkernel) = 49664 bytes
-SHA1 (odroidc2-v2015.01-bl2.package) = c245dbd155b4223cf2e431a538fecbf8755c1b24
 RMD160 (odroidc2-v2015.01-bl2.package) = e3c2bede7d9da33b657f15aa0319d405d35b1dca
 SHA512 (odroidc2-v2015.01-bl2.package) = 03c66955feee94558080897fadb048bcddf024f189fe813bfe96c7b9b126c94089f4bda4dbb099a1f54412b3aa5c65ee58dfc4b4cd2dd9f5d3066f0074b09b44
 Size (odroidc2-v2015.01-bl2.package) = 49152 bytes
-SHA1 (odroidc2-v2015.01-bl30.bin) = 45c93d61aefb4ca64751a7a2fc80d1837e816d73
 RMD160 (odroidc2-v2015.01-bl30.bin) = 71802df8303e87eed4b6fdcde088b981fa52e8ba
 SHA512 (odroidc2-v2015.01-bl30.bin) = d6a0ea6dfb0dc09fd6bc50173f4da1dcadbcd4d8f2f638f7d9e4fb571bda7fc511fd3f90f8cdd534780099c616c5fbfd6140f940782d79de34234f60207ac152
 Size (odroidc2-v2015.01-bl30.bin) = 40584 bytes
-SHA1 (odroidc2-v2015.01-bl301.bin) = 6e0803c9a3d0285ce3c4eff4ec225543c725e191
 RMD160 (odroidc2-v2015.01-bl301.bin) = 1d7e23ccb066041c6c02ade331f43989f027c318
 SHA512 (odroidc2-v2015.01-bl301.bin) = 6d638819ae4192a8429c445985ce7c56b72c66b8099da5126c47c81b642eb30c89aeedb62229e7b05dd50996d406f2c8925ae9323bd77112aae2ff6a3c6b6a9f
 Size (odroidc2-v2015.01-bl301.bin) = 6228 bytes
-SHA1 (odroidc2-v2015.01-bl31.bin) = 3b8fa827eafe109abb94de3a2eb4a83ceb7c3f85
 RMD160 (odroidc2-v2015.01-bl31.bin) = 1f19dba80270fac22acc07d2f8c60d21000e3b4e
 SHA512 (odroidc2-v2015.01-bl31.bin) = 8df2ce62ce2af72cfc25a164481864aba0e0791014f80d9ce262cb248b23c1c5ebbc20842b835b20b9a4ed388ee5b7cffd69d483c8921446a6ba118ed1878f4f
 Size (odroidc2-v2015.01-bl31.bin) = 69840 bytes
-SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
 SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47e8392bab34cb432c2e3633d903efb260f71fff87dffd6f2bf09ac900e96b3d4247073958d83b89ceff
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes

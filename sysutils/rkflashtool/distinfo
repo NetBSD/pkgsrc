@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/03/17 10:02:58 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:58:22 nia Exp $
 
-SHA1 (rkflashtool-20160324-094bd6410cb016e487e2ccb1050c59eeac2e6dd1.tar.gz) = 9d6ebaa5f6ae23a0ce67914db6daed38a6fe5634
 RMD160 (rkflashtool-20160324-094bd6410cb016e487e2ccb1050c59eeac2e6dd1.tar.gz) = 2bc0cdb9f498e16346e41a40ce251ea5d3a2fd30
 SHA512 (rkflashtool-20160324-094bd6410cb016e487e2ccb1050c59eeac2e6dd1.tar.gz) = f765d4c1a414f771a0dfbeb0f64c06b8550675f3669cb80f43fee069c5d8948b3c229d00b6d05784ad3ab882cd39a9282e4f065f366ca623b56ada51a7e145a3
 Size (rkflashtool-20160324-094bd6410cb016e487e2ccb1050c59eeac2e6dd1.tar.gz) = 17676 bytes
