@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/04/10 12:33:01 gdt Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:51:02 nia Exp $
 
-SHA1 (encfs-1.9.4.tar.gz) = bf1e2b7688ee715c487d3d181e810d53c5983a0a
 RMD160 (encfs-1.9.4.tar.gz) = 847f943f6ae7622d54aa9ef25a64344153c23da0
 SHA512 (encfs-1.9.4.tar.gz) = 082e35e6eae4730b5e7827eed729422f9d995ebe9e441c5f9725f39cc2f46f014ac1479c7b0a7ce04e9e7228c1a93ecf5b4228e667fc48e6a7d3b68d2324cd0b
 Size (encfs-1.9.4.tar.gz) = 2794574 bytes

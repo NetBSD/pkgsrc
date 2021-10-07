@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/04/02 13:14:08 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:51:04 nia Exp $
 
-SHA1 (ntfs-3g_ntfsprogs-2017.3.23.tgz) = 160a836274c38d92e5c3a55256f404c8dd8f3cc1
 RMD160 (ntfs-3g_ntfsprogs-2017.3.23.tgz) = aae0cd7a2560ad87ba41832f1b34af5aaaa38739
 SHA512 (ntfs-3g_ntfsprogs-2017.3.23.tgz) = 3a607f0d7be35204c992d8931de0404fbc52032c13b4240d2c5e6f285c318a28eb2a385d7cf5ac4cd445876aee5baa5753bb636ada0d870d84a9d3fdbce794ef
 Size (ntfs-3g_ntfsprogs-2017.3.23.tgz) = 1259054 bytes

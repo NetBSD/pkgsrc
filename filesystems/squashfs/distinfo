@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/06/19 21:17:46 scole Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:51:05 nia Exp $
 
-SHA1 (squashfs-tools-4.4.tar.gz) = 883eb8bfae3aaef619e6d3b7ae51f5aa83097cfd
 RMD160 (squashfs-tools-4.4.tar.gz) = 1967b075376dbc05c9683509afd508af89e95d65
 SHA512 (squashfs-tools-4.4.tar.gz) = 133ce437fb8c929933d52cff710b61dd9181f6f8be58250b0d6a59a7bb79a2b350f68f456b06a0e17c469409a71272d586802d570248273ddcd5dad088c00308
 Size (squashfs-tools-4.4.tar.gz) = 241842 bytes
