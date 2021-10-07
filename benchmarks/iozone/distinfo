@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2017/08/04 18:15:05 mrg Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 13:18:31 nia Exp $
 
-SHA1 (iozone3_430.tar) = de02b10fcde6bd60e0c805e3abfc0aed15e85ac1
 RMD160 (iozone3_430.tar) = 4b43f14268ebe3accf8cdc881c3f82430d649082
 SHA512 (iozone3_430.tar) = f513c1a34bcdfadca0d01a942d55c7494e5646cf17384140df42643259456d41e40a54453ab3b9a1f1ebdeb456a9b4b1f836f979927cac57391b9a20ecdbcb55
 Size (iozone3_430.tar) = 1832960 bytes
