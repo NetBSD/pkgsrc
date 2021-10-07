@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/07/20 17:09:15 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:06 nia Exp $
 
-SHA1 (QScintilla-2.11.5.tar.gz) = 1719d557f21375e04c11bd4ecf09a4d2ef87d2d0
 RMD160 (QScintilla-2.11.5.tar.gz) = bf0596f336fe888fd3d08d9ce816231533233bdb
 SHA512 (QScintilla-2.11.5.tar.gz) = 46bc3c896b4ab71fbcc821ce3a248ecc4200378e0b621adef8d39092f940928806c76abe529b7f27ce4280e7e49091d8cbeafe6f303ca85cf5675df2887fd99b
 Size (QScintilla-2.11.5.tar.gz) = 3007564 bytes

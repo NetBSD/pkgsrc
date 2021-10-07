@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/05/04 14:09:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:43 nia Exp $
 
-SHA1 (xscribble.tgz) = 9983577533c6b6f482e2bfe863f54604337562c7
 RMD160 (xscribble.tgz) = 49f5a5339819a76e303a135d54fb8ffd4f88febb
 SHA512 (xscribble.tgz) = b86d08f1a1b6e8b67a70267aabebd021a918809bf9a22fbbb0c44a4ba7089b9bc8d6395ae5596bca617dbb1ecbad24c5942f5f0a9d9b687aae2295487308801d
 Size (xscribble.tgz) = 164379 bytes

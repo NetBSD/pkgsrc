@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/02/21 09:43:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:14:38 nia Exp $
 
-SHA1 (xlsatoms-1.1.3.tar.bz2) = 9fdb1e8df6bb08529a812ac90f63d500bf5174cc
 RMD160 (xlsatoms-1.1.3.tar.bz2) = 7725f532c41fd6e8ebce984fdfca35dd26502afa
 SHA512 (xlsatoms-1.1.3.tar.bz2) = c267ccfdc5a83e834bfb5c3b144e22642badcadef4eb146eeec2df6fe6f85e9379500ae4219912c70fa2e535036a1a96cf496381f5d814e79af075e03c975f30
 Size (xlsatoms-1.1.3.tar.bz2) = 126327 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2020/10/03 12:52:54 mef Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 15:13:33 nia Exp $
 
-SHA1 (back-0_28_0.tar.gz) = e2d3127c885c6e552f8f0d18f5548074f3a3d46a
 RMD160 (back-0_28_0.tar.gz) = 77b47da1b9a2aa215c8a10fcc5466c7f709b6c55
 SHA512 (back-0_28_0.tar.gz) = cdfc7592d588850486be1bc0983fa78841e281802e57da03776da195550a13cc3919e42acba3319d00cfbafea541fddcdc1400fca9f00134049c4ba74f96f74f
 Size (back-0_28_0.tar.gz) = 973862 bytes

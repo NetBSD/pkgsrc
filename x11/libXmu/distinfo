@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/03/17 08:16:10 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:13:51 nia Exp $
 
-SHA1 (libXmu-1.1.3.tar.bz2) = 7ff54ce38379fb795aebed38f6be404ee0dfeec6
 RMD160 (libXmu-1.1.3.tar.bz2) = 43fe670abde2f6f627e82d706bb951dd09e07552
 SHA512 (libXmu-1.1.3.tar.bz2) = 8c6cc65b22aa031ad870dd92736681a068a0878a425a53dbed909943da1136c4a24034d467cfd3785c3a8d78f66850b69f1ebe1eb24aaf9bc176b1d171a5c762
 Size (libXmu-1.1.3.tar.bz2) = 394330 bytes

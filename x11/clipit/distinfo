@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/11/25 21:41:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:13:28 nia Exp $
 
-SHA1 (clipit-1.4.5.tar.gz) = eb677bf3400579af3d8e88951389c019c56851e0
 RMD160 (clipit-1.4.5.tar.gz) = bd98d87802815d2185d999de7e430ab7591b2c67
 SHA512 (clipit-1.4.5.tar.gz) = 2bfa2635be9fd63a8bf41842da5a6a4063b442b4e8d011bb1a696ae1e9883408fb327eb331e220d10569ec72c399ca79ac5a94f7fe5402ae4fae11bacbe87b70
 Size (clipit-1.4.5.tar.gz) = 105985 bytes

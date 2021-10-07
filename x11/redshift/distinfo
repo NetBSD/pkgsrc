@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/07 17:16:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:14:10 nia Exp $
 
-SHA1 (redshift-1.12.tar.xz) = ee874faa0a2fd9ea6f7cab219cefa00038514824
 RMD160 (redshift-1.12.tar.xz) = bf7e9fa1d09353a8f38d3e9dbce53132c14ee999
 SHA512 (redshift-1.12.tar.xz) = 225e222e5f2c55be4571094ccaf02a92e162dfc35fd0fe504084e21e358b888a72f9992f9f9edaf1d496eb673af74a0d825ae5cf6ef7f0f1ab51d32419722c32
 Size (redshift-1.12.tar.xz) = 486072 bytes

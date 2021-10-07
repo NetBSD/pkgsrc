@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.49 2020/09/15 19:30:03 adam Exp $
+$NetBSD: distinfo,v 1.50 2021/10/07 15:14:05 nia Exp $
 
-SHA1 (sip-4.19.24.tar.gz) = bc509d2a9999e454751f1ccb674d01d204c09286
 RMD160 (sip-4.19.24.tar.gz) = 6c281e3ece414f5de4a05b107093ec3ffef24ab1
 SHA512 (sip-4.19.24.tar.gz) = c9acf8c66da6ff24ffaeed254c11deabbc587cea0eb50164f2016199af30b85980f96a2d754ae5e7fe080f9076673b1abc82e2a6a41ff2ac442fb2b326fca1c0
 Size (sip-4.19.24.tar.gz) = 1055461 bytes

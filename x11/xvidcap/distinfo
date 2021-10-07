@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/04/23 14:31:12 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:14:45 nia Exp $
 
-SHA1 (xvidcap-1.1.7.tar.gz) = ccdf8ac85c76b202dbf46074df6b3844faf127d1
 RMD160 (xvidcap-1.1.7.tar.gz) = 782f0f8b4693bb3e96fdf06de71b2f6832b246e0
 SHA512 (xvidcap-1.1.7.tar.gz) = 9dc2e6751a0f9126dc81f24fca18430a57550b57eaad2e2cd782cc1a5274a7998b509b491d85db3a1302866583b48c36e65043608c453c0466fbbe3d1142bc42
 Size (xvidcap-1.1.7.tar.gz) = 4789924 bytes

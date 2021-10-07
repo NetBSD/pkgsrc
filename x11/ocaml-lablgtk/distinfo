@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/01/29 07:58:36 jaapb Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:14:01 nia Exp $
 
-SHA1 (lablgtk-2.18.10.tar.gz) = 2e07b48da54c7daf7a1a0573569f97e5a293eab0
 RMD160 (lablgtk-2.18.10.tar.gz) = 9aaa162c9f6bb6b85d32c0660c26b38154b6c126
 SHA512 (lablgtk-2.18.10.tar.gz) = 73705aaa80db433d11a28df5f6f5d10bd282e477e90916152a87e71865ccfcd7dfbdbe77350ecadf61ba2ccc7a188de1c68f1e6385e20c75f167969001e8418d
 Size (lablgtk-2.18.10.tar.gz) = 1068504 bytes

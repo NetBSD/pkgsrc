@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/04/20 18:50:56 pin Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:13:57 nia Exp $
 
-SHA1 (lxqt-panel-0.17.1.tar.xz) = 441d3754d91a33b7162fddf3c0a293077a9bac66
 RMD160 (lxqt-panel-0.17.1.tar.xz) = bb53067a9519c9e49bac658f01ae1971c66684ee
 SHA512 (lxqt-panel-0.17.1.tar.xz) = 439905144029518e46efdd72eb3db17203678e243ca5f7090bf5db902805deaded41f6c59d02bf538fbf24b7951d6da6a924331c685b69d162812249fb9a4e72
 Size (lxqt-panel-0.17.1.tar.xz) = 510212 bytes

@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.24 2021/09/19 08:49:01 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 15:13:31 nia Exp $
 
-SHA1 (Eterm-0.9.6.tar.gz) = b4cb00f898ffd2de9bf7ae0ecde1cc3a5fee9f02
 RMD160 (Eterm-0.9.6.tar.gz) = 96e2ebf7ee7464ffab8bbecec2976a1e5935712e
 SHA512 (Eterm-0.9.6.tar.gz) = 07ef5587b7c8444d49ffd6f20f09c98bd248ccee9b3de311f5705961579f707c4a8e2b69a2193500b75cc1e4bdeabb711a1dd23637d6b94433508d8a93d377fe
 Size (Eterm-0.9.6.tar.gz) = 831756 bytes
-SHA1 (Eterm-bg-0.9.5.tar.gz) = 26e81a1e91228c971c70ba06e006ef69490ef208
 RMD160 (Eterm-bg-0.9.5.tar.gz) = acbab70cf5a22f1c45a16f5a8a92ed1e057a59a0
 SHA512 (Eterm-bg-0.9.5.tar.gz) = 2d58d1342c7750f8dde93451b732cff3a0580d76635054632728cf2d8e5c5298732c855672981810cf21a8d1f5d46626abe1f35fbf33e2b713cc5d6bc82d10f8
 Size (Eterm-bg-0.9.5.tar.gz) = 1883627 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/02/10 23:25:57 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:14:26 nia Exp $
 
-SHA1 (xf86-video-apm-1.3.0.tar.bz2) = 15b5cae18376e6e421a1e892f1cba1af872189c2
 RMD160 (xf86-video-apm-1.3.0.tar.bz2) = 284410031320e50213541d65d00236015d8cc704
 SHA512 (xf86-video-apm-1.3.0.tar.bz2) = 1b10a2d1f886c228629487946fda1ff1766fe0c00657ba8cc1b4cf3bcd7cf66716a0875c90e6f7b7178cf3b48a78a4301bfad1714ee37c63aa7ae9c498ab4f8b
 Size (xf86-video-apm-1.3.0.tar.bz2) = 352759 bytes

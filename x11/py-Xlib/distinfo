@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/12/19 16:56:34 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:03 nia Exp $
 
-SHA1 (python-xlib-0.29.tar.bz2) = e721a97f573f28b002f3c914e6bc27cf6a3bbb3b
 RMD160 (python-xlib-0.29.tar.bz2) = 71b2ed38a4cd8090177aa270d8ef8e2dff922550
 SHA512 (python-xlib-0.29.tar.bz2) = 6275deb2c1e2068d560c45803e651fef9910b5cb921e043ed8204878a1f885b92122b6af3d4ac33f220231c1933d3150524169d0078f64b74df29a8f617d953a
 Size (python-xlib-0.29.tar.bz2) = 209322 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/12/22 09:42:41 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:14:00 nia Exp $
 
-SHA1 (motif-2.3.8.tar.gz) = ca9d8d67544434c5883d8d0fb684a48f8b0108bd
 RMD160 (motif-2.3.8.tar.gz) = a4c10db68d880d3096c97cc1c995351616a90a57
 SHA512 (motif-2.3.8.tar.gz) = 1ab8e8eece25ef97e948592b5fa3e19d98e932695290a18b7a8e90f1aa2766bc4f082bdbc3999dff5660e684821178a149040f76bb477163e53ca06474d02b55
 Size (motif-2.3.8.tar.gz) = 5704328 bytes

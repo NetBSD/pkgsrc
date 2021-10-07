@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/11/13 15:53:26 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:16 nia Exp $
 
-SHA1 (viewres-1.0.6.tar.bz2) = f1d12e5b4e1180916edb44234599a486b025b480
 RMD160 (viewres-1.0.6.tar.bz2) = c3a88c997708c9b8db84c94bd690bacc433178e9
 SHA512 (viewres-1.0.6.tar.bz2) = 3f4cfc61608bc6c9b35ef66ceb473661ca01946d3306d54040d32803e8e0eec506a0ce37ea22bfe514544a6ba9645fd30f39b20c063aff696b3c0fda3fe95dff
 Size (viewres-1.0.6.tar.bz2) = 135200 bytes
