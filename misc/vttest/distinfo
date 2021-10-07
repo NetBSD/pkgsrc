@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/04/21 07:23:17 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:35:52 nia Exp $
 
-SHA1 (vttest-20210210.tgz) = f82ccc9b462aaf2a9c47fd6937ddcb0c36e4e1a2
 RMD160 (vttest-20210210.tgz) = cb9fbee6e899f5f38e2dd799092b1499ca794c7a
 SHA512 (vttest-20210210.tgz) = dcf721a7be4b8289d835f624f988356471337581bab8392ee7acb45eaae40feaa920bf3a27c9acc2a210b92935e1bfda95076761e57668194bce2735345b73b4
 Size (vttest-20210210.tgz) = 213997 bytes

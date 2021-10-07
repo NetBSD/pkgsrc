@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/01/06 14:31:44 leot Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:35:32 nia Exp $
 
-SHA1 (moreutils-0.65.tar.gz) = f5fd0145cc023cdeb9fa46ccfae94014c5d4fb39
 RMD160 (moreutils-0.65.tar.gz) = 19864d86e9dbcdf13daf04e39bb54cdb09d920ca
 SHA512 (moreutils-0.65.tar.gz) = dcad2a3b6d9621da6d2f860f39acb04c80d42cc2123e12a6ec84524f6a1fc7f5ae4bd5d00e698fe14d4c5e7d491d790970ce4370c9abd1f63318d1c512f596b9
 Size (moreutils-0.65.tar.gz) = 93180 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/10/15 15:09:23 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:44 nia Exp $
 
-SHA1 (colorize-0.8.1.gem) = 6c0cfbd40b53f4dee434052bf0d9bdb37fee1ab5
 RMD160 (colorize-0.8.1.gem) = f2439e8654a4d0314ed8a428d00379bd7c82d879
 SHA512 (colorize-0.8.1.gem) = 0819dfaa94150c85cbe633c77006f2f4bdd6c4f9bf9dfa954b8c4038b8a680c99a2b4b160da05bf426402d287a0db4c4eb1cc66a949405188b632f39da381c72
 Size (colorize-0.8.1.gem) = 15872 bytes

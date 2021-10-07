@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/04/07 12:28:28 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:35:26 nia Exp $
 
-SHA1 (kmousetool-20.12.3.tar.xz) = 5a3c46d03265b655300784652174092bc8255f97
 RMD160 (kmousetool-20.12.3.tar.xz) = 61502d07a096903d0158d85797215dc3608f3ebc
 SHA512 (kmousetool-20.12.3.tar.xz) = 8b0d7a4c9a83a4b4c0fdc97016356f1aca195c6728802b182491421a71fb9dedf41bf4f8e5c4e0f2042cd46d972fa07492911844251117fc821a37ad03663c1d
 Size (kmousetool-20.12.3.tar.xz) = 116760 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/06/26 09:15:40 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:35:16 nia Exp $
 
-SHA1 (cowsay-3.04.tar.gz) = ea5526e1fe3f02e80c8d62b3fc9e1dff51c0d08e
 RMD160 (cowsay-3.04.tar.gz) = d4c2a6b38c8330339e33cc69b5efcb3e1be46917
 SHA512 (cowsay-3.04.tar.gz) = 99d21ef9a7c7c76056cb7acb2c771fbdabfedde4f6edb5d3035337c59f9e88944690d1b43282c32827ad79339199716366c8be73b0dea09063ec2d52220c1b51
 Size (cowsay-3.04.tar.gz) = 31961 bytes
