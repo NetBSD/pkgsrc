@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/01/10 16:31:34 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:35:16 nia Exp $
 
-SHA1 (dose3-5.0.1.tar.gz) = c2ed5c1b1f389d4e7cc58fbb01ca04c80df81a66
 RMD160 (dose3-5.0.1.tar.gz) = 5e006235243a9bf6009ae8de4368d21c16b79413
 SHA512 (dose3-5.0.1.tar.gz) = e66526319446054041f138ee2633043d0832089f6a554cf566a28de899d10383acfb1aa6bf1a368811602939676510933a7d2404fd34dbeba15045b458f5af84
 Size (dose3-5.0.1.tar.gz) = 297433 bytes

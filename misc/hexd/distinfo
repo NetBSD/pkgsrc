@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/13 22:29:24 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:35:21 nia Exp $
 
-SHA1 (hexd-1.0.0.tar.gz) = b107924314bb471d61747cb397bf5697f7cfa7ff
 RMD160 (hexd-1.0.0.tar.gz) = e5bcff104da734592731b7cc1075fe93588c4714
 SHA512 (hexd-1.0.0.tar.gz) = 4d6a915fef732258538327ac519c7d8fb0844b5b05f6ae264a0a313d382646f87b3fe6227df2b201fbcc7aa26695279dee16c1b4d2176cbb9ed161c97457d071
 Size (hexd-1.0.0.tar.gz) = 27426 bytes

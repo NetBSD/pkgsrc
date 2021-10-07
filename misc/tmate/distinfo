@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/01/09 12:53:45 rxg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:50 nia Exp $
 
-SHA1 (tmate-2.4.0.tar.gz) = 27c08f321e75716dfe0f037d18fa907b9dfe1319
 RMD160 (tmate-2.4.0.tar.gz) = b377abc68071506ac5b05a067fc5c13985cfd7ab
 SHA512 (tmate-2.4.0.tar.gz) = 92d2ca354b295678bfc2747ca83a45ebafeaec40ebac94bd94c4926af4f820b3f3a087f365147f41c80d1c8ad032f52c697a2421839c39315d84f98f7eccada6
 Size (tmate-2.4.0.tar.gz) = 614179 bytes

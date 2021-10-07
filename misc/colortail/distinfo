@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/03/23 17:06:56 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:35:15 nia Exp $
 
-SHA1 (colortail-0.3.0.tar.gz) = 5c55a9b0550868129d8ede133f6b34fa5356c5ce
 RMD160 (colortail-0.3.0.tar.gz) = 9141fff0a26ec653b39f580749336cbd16c92492
 SHA512 (colortail-0.3.0.tar.gz) = b05ed6295e79e11c6f9c54312d38096e65c111f35b9ffb3a768934c3758e39d7ffa1bb9aeed1278b99c4e853ff8d45156eb336d2d6851724fc32b1701ac49b8d
 Size (colortail-0.3.0.tar.gz) = 54329 bytes

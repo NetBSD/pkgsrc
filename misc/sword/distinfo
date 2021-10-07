@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/10/27 16:59:45 kamil Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:49 nia Exp $
 
-SHA1 (sword-1.8.1.tar.gz) = 3a9932fd7c9e73bb032b09288a5f29440c8bb25e
 RMD160 (sword-1.8.1.tar.gz) = 2297bd574b5c592fbbee741cd32b3c812908dfc8
 SHA512 (sword-1.8.1.tar.gz) = 5c08c070ea0c86b7d929bbf94c89730eb5a487986deb9edf01c08d1710356aecd1ab3bde4437a778e5fc1ceb05b63287612ec6161381c0986a36344c27d2ab36
 Size (sword-1.8.1.tar.gz) = 2449503 bytes

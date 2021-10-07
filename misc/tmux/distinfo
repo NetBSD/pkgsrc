@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.50 2021/04/17 10:28:22 leot Exp $
+$NetBSD: distinfo,v 1.51 2021/10/07 14:35:50 nia Exp $
 
-SHA1 (tmux-3.2.tar.gz) = 181d726792e0ac3c4b7ebe5befd5f995c57fbc9b
 RMD160 (tmux-3.2.tar.gz) = 25a9c3db68f423d8f828207759f66f785ee10121
 SHA512 (tmux-3.2.tar.gz) = 63165495e838871c7f42ac1a6229ec2404acfa7d42c7a0070c89cb38712ac933676930392b0a10cbdd6059910ae46129257b90135c5846e85142e786482fd75e
 Size (tmux-3.2.tar.gz) = 646457 bytes

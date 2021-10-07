@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/22 18:39:53 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:35:32 nia Exp $
 
-SHA1 (mousetweaks-3.32.0.tar.xz) = bbc97c36b2f7a7f8025eacc8a7efd31debc9190d
 RMD160 (mousetweaks-3.32.0.tar.xz) = ae20e8de08e16fc8a51fed0c234f679bd90bf0ca
 SHA512 (mousetweaks-3.32.0.tar.xz) = 3711c2aa1bc40f80a75857bf8a35dbe24443f8040cf8131e32818c797da44f2bb54d58f804ec8df7a95f66ff2e5db8c48067fca97c16ffa59239ecdf101c4a52
 Size (mousetweaks-3.32.0.tar.xz) = 372088 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:26 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:35:27 nia Exp $
 
-SHA1 (kunitconversion-5.80.0.tar.xz) = 0adcbf44949fb87ac04b85a9e07292093eee4ded
 RMD160 (kunitconversion-5.80.0.tar.xz) = 5cda933b7259f1069c1370b1ac3475a0e4d8eed6
 SHA512 (kunitconversion-5.80.0.tar.xz) = ad2509c262a6f60f0eaec9c2d77105302623dc602cb44b2c3d15b0cf3186c37a24d65e18def72857d69b26eb6684f7a6d033e0e87adfd05b0a4ebc7dd0b58a81
 Size (kunitconversion-5.80.0.tar.xz) = 860568 bytes

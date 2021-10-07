@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/04/07 12:28:28 markd Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:35:31 nia Exp $
 
-SHA1 (marble-20.12.3.tar.xz) = 8b81f1f9e7eb3c767d661883b30c8bb3858142dc
 RMD160 (marble-20.12.3.tar.xz) = 71b6d1f74c01bcda3aafc12bc1e3b770c56ad6d8
 SHA512 (marble-20.12.3.tar.xz) = 0dc69ce2dafac196d3b494bd29a268f879e8bd14ae916454682289822024d58e077e4972588cc6d51284459f2fc9aceacd4e1e8a8302f987556e20a7acaf172a
 Size (marble-20.12.3.tar.xz) = 52242116 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/12/08 11:15:57 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:35:11 nia Exp $
 
-SHA1 (9menu-1.10.tar.gz) = 069e916a3ba0e6da14b8e9a21a4f176503ff6680
 RMD160 (9menu-1.10.tar.gz) = f0a7d11e3eecc78a1751cc193b6d8ece9e3fe9bf
 SHA512 (9menu-1.10.tar.gz) = 14fc4e69135222ca840bcf6580321987cac38a1b6ad4cdc0ea4f1e17d16dd9be942afee13133b0f851ca01d6c3dfc5f280838f5defaced2f4215a61caf1bafb7
 Size (9menu-1.10.tar.gz) = 17097 bytes

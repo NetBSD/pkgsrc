@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/04/07 12:28:27 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:35:24 nia Exp $
 
-SHA1 (kig-20.12.3.tar.xz) = 750fdb63f6df71c216d7bb4931bfff6e25258e5a
 RMD160 (kig-20.12.3.tar.xz) = b29cb40b3854843ba5752e40554ca05826fdb8c7
 SHA512 (kig-20.12.3.tar.xz) = 4de18bf47d532c623aa877e2d52ef3e78f9fe715b96a110eb654aca578fb1addb5aa7d8f9e8e0f54f0549954018e3d7f829f07cb41bf587da115f1a2923e5428
 Size (kig-20.12.3.tar.xz) = 3122112 bytes

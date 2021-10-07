@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/03/23 17:06:56 joerg Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:35:49 nia Exp $
 
-SHA1 (splitvt-1.6.6.tar.gz) = 8073f4998ae0d772deecc583b61ea7cb92f7186b
 RMD160 (splitvt-1.6.6.tar.gz) = 014a9990ef41414b8488e10c24354bfc9588c4f8
 SHA512 (splitvt-1.6.6.tar.gz) = a0a0ea2251489f14e2ba7af9bb1b9d309d6fa310f434090d97af2a0805c398731dec45a5cc15c2074af4d3f33b02c5bab019743530619755382af80ff86fa670
 Size (splitvt-1.6.6.tar.gz) = 64797 bytes

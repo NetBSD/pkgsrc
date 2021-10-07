@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/01/07 17:41:33 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:35:32 nia Exp $
 
-SHA1 (nyancat-1.5.2.tar.gz) = 0fb02df62dcf17c46fb8887ea6bb23d5633315c4
 RMD160 (nyancat-1.5.2.tar.gz) = 1f125ecdeeacaf937ca8707b933835547260e41c
 SHA512 (nyancat-1.5.2.tar.gz) = 8eee5da8afacdbe8b6b5f66686c101d42da26ef6c172e6b43b6042e1bacf7dfb5668e006cbbe675aca523b567eea57404af5b5bb6d654d137951e06c9a75463a
 Size (nyancat-1.5.2.tar.gz) = 15126 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2019/06/21 06:12:32 triaxx Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:35:55 nia Exp $
 
-SHA1 (yelp-3.32.0.tar.xz) = 63e3c4bce8ea54da5f8ce0463e0f76be28b6f506
 RMD160 (yelp-3.32.0.tar.xz) = 411f225fa47214302ca5ac82ec89ce7ee0aa41e0
 SHA512 (yelp-3.32.0.tar.xz) = 3091f62e6f6de359e33e3db7fa64b079f482c0dcee496441b145ba4f8715dfd2bf9c085a1f49b07d9f47f20bb557c1912dccbf9291f35357e434522668b28081
 Size (yelp-3.32.0.tar.xz) = 1531356 bytes

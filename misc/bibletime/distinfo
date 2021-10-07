@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/12/04 12:17:58 nros Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:13 nia Exp $
 
-SHA1 (bibletime-3.0.tar.xz) = 848bc1679767d767e35c2e8798ae23833edb9e34
 RMD160 (bibletime-3.0.tar.xz) = 9d838bd20fbcb7ca850fba4837cc66096b6f073e
 SHA512 (bibletime-3.0.tar.xz) = 85afc2781807345ea8fdefea6d179955fa76085c0a9c97e47321ea37ef9ea05367678c54bacfc10cf1d6085d46ba6fbd1c7d448044ffdfe3c96007ee8d7e5c00
 Size (bibletime-3.0.tar.xz) = 1568732 bytes

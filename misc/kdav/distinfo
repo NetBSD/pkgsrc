@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/30 10:58:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:35:24 nia Exp $
 
-SHA1 (kdav-5.80.0.tar.xz) = faeca7dcb7ceabdbddfdb7ce4bc524f2c5087455
 RMD160 (kdav-5.80.0.tar.xz) = e533aee314b535dddd7b9e919932e1081f0a0552
 SHA512 (kdav-5.80.0.tar.xz) = 9f572d40b8a71e588c6a9773ca5615250e6517477c33594ca8ccc78a177d2fca8eaca6224dfcdc2f972d0205b50093d238d3c6f55ea39a7d823bf797d21a8e80
 Size (kdav-5.80.0.tar.xz) = 59824 bytes

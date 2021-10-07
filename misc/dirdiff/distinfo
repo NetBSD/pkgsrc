@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:49:34 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:35:16 nia Exp $
 
-SHA1 (dirdiff-2.1.tar.gz) = baa355b2eae4886de57a47cb69d8214c7545c0e8
 RMD160 (dirdiff-2.1.tar.gz) = 280ead77db4371eee2d6cc6d5df3ee362585fbb0
 SHA512 (dirdiff-2.1.tar.gz) = 826d5a7a633921bec7043c89ccdadff19b4a6328efd09913932b306a48242203fbf6b5bac69d72660acf2c76ce6c8c5e53be62c2e69bbf3e3717e21c544ca261
 Size (dirdiff-2.1.tar.gz) = 43105 bytes

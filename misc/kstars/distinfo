@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2018/05/17 11:18:50 jperkin Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:35:27 nia Exp $
 
-SHA1 (kstars-4.14.3.tar.xz) = 108b204308d464f03f3119b08d2e53c203615c05
 RMD160 (kstars-4.14.3.tar.xz) = 6e0ae12cc2b7c9277294c720ebab6502d3fffd29
 SHA512 (kstars-4.14.3.tar.xz) = c843506ae0d85e03b9ac3b11be73f35b66f9fc64adddf7a4643cb397fc59628920254aa056d7bf968b54893ce035d40d0c17a7d0fc576d3dae5799fd0f16ec3e
 Size (kstars-4.14.3.tar.xz) = 12374500 bytes

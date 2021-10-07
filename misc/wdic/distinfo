@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:49:54 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:35:52 nia Exp $
 
-SHA1 (wdic_wob_v3.0.tar.gz) = 63621be8f7fa12b24d6f318e7bb8fcbac82d38da
 RMD160 (wdic_wob_v3.0.tar.gz) = aba08a48dda7cf08902fe7e4820731d0caf406db
 SHA512 (wdic_wob_v3.0.tar.gz) = faab7b26a4aa77e32bb5477b905f75a8dc60a88f6ef3e605346d5abc659f7184e94bb8d75154f42db278dd6d2c7289e3d90ec2317a3c41a2076c0ebbbaa954e3
 Size (wdic_wob_v3.0.tar.gz) = 2885 bytes
