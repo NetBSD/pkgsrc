@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/01/16 12:18:42 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:23:33 nia Exp $
 
-SHA1 (spectrum-1.4.8.tar.gz) = 9323f8f89eb1f84e36e1d64845741cbebbf0d249
 RMD160 (spectrum-1.4.8.tar.gz) = 859c1d0f6f1c4d535bbada13c1c11f2b4550805a
 SHA512 (spectrum-1.4.8.tar.gz) = 05f5932ba4e5d42107b2bf1396d5c410a792d9692841d82676eaf136b0a051b9efa3232d6a82d3ad1fe4b4d77b8e6e34e005145456957633bc88a9b5d3095094
 Size (spectrum-1.4.8.tar.gz) = 239725 bytes

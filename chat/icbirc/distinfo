@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/03/23 17:06:46 joerg Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:23:23 nia Exp $
 
-SHA1 (icbirc-1.9.tar.gz) = bf59e8bacefee6df7f7e7941484658ec9506c595
 RMD160 (icbirc-1.9.tar.gz) = 42d53e01463b0562d1254c855b347180b29787d4
 SHA512 (icbirc-1.9.tar.gz) = 2c0de7840b6af705f12ef68dec640c1bfff90092e2d7015e792b45be2134b6bc9253c1c2fb74af10c78e577694fd9e50c29da42bd78e27527b7dbf42b47451d7
 Size (icbirc-1.9.tar.gz) = 11070 bytes

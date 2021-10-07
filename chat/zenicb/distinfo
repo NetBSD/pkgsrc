@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/03/23 17:06:48 joerg Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:23:35 nia Exp $
 
-SHA1 (zenicb-19981202.tar.gz) = c700e51084a123e210a8aa7335ebc1b2464a85e7
 RMD160 (zenicb-19981202.tar.gz) = d8d25f04385cfacf72e3f229bffda6e90eb8ea77
 SHA512 (zenicb-19981202.tar.gz) = 98be3475459b0865a06fe8a1b327e3038031a58ad6f38351870f9ef2327777e5738a2063493be1011bda6d251b7493427f0128ad784a548af5d9f86b588821b4
 Size (zenicb-19981202.tar.gz) = 30833 bytes

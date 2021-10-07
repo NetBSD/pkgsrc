@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/08/16 19:22:51 fox Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 13:23:23 nia Exp $
 
-SHA1 (ircd-hybrid-8.2.39.tgz) = 54f01a309c4dc143c459c2351baf970bff7601ef
 RMD160 (ircd-hybrid-8.2.39.tgz) = e32a70a3d8b213c182548930be8a6af3d1474469
 SHA512 (ircd-hybrid-8.2.39.tgz) = 56ea3c9f8a8a8089532c3002da3261a0cfc18f0b84af65d193c33b982b568b46764e41b2c04794fed1653048a7ad916ac62339316e3528eea83c1299fd9ad9e4
 Size (ircd-hybrid-8.2.39.tgz) = 1042772 bytes

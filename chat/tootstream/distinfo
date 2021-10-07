@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/03/05 20:24:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:23:35 nia Exp $
 
-SHA1 (tootstream-0.3.8.1.tar.gz) = e004ed08b113149da8b7a3187774b2d33aac1657
 RMD160 (tootstream-0.3.8.1.tar.gz) = 4f589166e88addaff764fa004063ad5832b61c23
 SHA512 (tootstream-0.3.8.1.tar.gz) = 7082e911d07cfd003a3a9ee25f63972ab0a4441ba00f5ec3f965ba30090e149c7551a97d50cc50832c8288336b23bf2b62216b8aa3bfc6695ed9bf9fad3e4d76
 Size (tootstream-0.3.8.1.tar.gz) = 25509 bytes

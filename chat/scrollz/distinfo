@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 01:20:24 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:23:32 nia Exp $
 
-SHA1 (ScrollZ-2.2.3.tar.gz) = 81acfc32f13369e30878ead9f52c598f62f90abd
 RMD160 (ScrollZ-2.2.3.tar.gz) = eb0e8eabb200c20b86b206e22f4a62ec08032be2
 SHA512 (ScrollZ-2.2.3.tar.gz) = 9fb819d6e8f2616096541a0fe52be949756ff1ea1f42e804ddbb1020850612864de7e2b6b9cc116c329d89ff162ecf2ba9897ed7408b6d4028b11fe50ec38923
 Size (ScrollZ-2.2.3.tar.gz) = 948958 bytes

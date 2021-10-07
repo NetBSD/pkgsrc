@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/01/23 13:08:11 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:23:30 nia Exp $
 
-SHA1 (profanity-0.9.5.tar.gz) = 88f3bcb483f25710cb35ab3e3f227f11b5d1225a
 RMD160 (profanity-0.9.5.tar.gz) = 39c0a1b7f50e5000bfc649a0461d7f2d45230b16
 SHA512 (profanity-0.9.5.tar.gz) = 79305ee488d3a9b87bb422d6525bfaae62c4969d466b968c86941ed5bf0c0080e349758f2e1ead144693513b5d19a635372e73aa1fe9e362836b9245e1d2b898
 Size (profanity-0.9.5.tar.gz) = 830966 bytes
