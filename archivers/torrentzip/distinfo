@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/10/05 15:21:07 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:06:11 nia Exp $
 
-SHA1 (TrrntZip.NET106.zip) = 6b35fb54590cab45027197c7fb789c98825a3220
 RMD160 (TrrntZip.NET106.zip) = 97715595f70e257a0ba4706c52f44282cf910e45
 SHA512 (TrrntZip.NET106.zip) = aa413d4b9ace603b9b419de4fb3d8adb27c24303ee912434d295640aa5bf907aed4bfff3b759918305e30253c74a5e9aa6a23bbf7dc4e69979ac4feaccd8f092
 Size (TrrntZip.NET106.zip) = 123732 bytes

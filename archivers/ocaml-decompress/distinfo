@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:00:02 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:06:04 nia Exp $
 
-SHA1 (decompress-0.8.1.tar.gz) = 1340e992666eeb61d4e5508986171e31531e2089
 RMD160 (decompress-0.8.1.tar.gz) = e584b75fd2d54c6371b04e6b2d22b6f941ed5d27
 SHA512 (decompress-0.8.1.tar.gz) = e928e1ccea4ab6987074df76787da62ea1376604d1ea98faad041a5cd0ff2e5d3cd90f511a2c90cce8cebc8df7c686cf1e67ad089ca4e580410fde6440fc96fb
 Size (decompress-0.8.1.tar.gz) = 45845 bytes
