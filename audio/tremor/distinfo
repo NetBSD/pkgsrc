@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/03/16 21:54:13 maya Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:09:57 nia Exp $
 
-SHA1 (tremor-562307a.tar.gz) = 31f596fe1e55ce67e5c8b03d611bd1b9593272bd
 RMD160 (tremor-562307a.tar.gz) = d04d47d8441ed7f66b3e9be9507af81cb2116fcb
 SHA512 (tremor-562307a.tar.gz) = 19776c9a9e022c14224578eca5b290cd26a9f883ef20567c172491617c929c254d8cd6b844f8419e2e62c88f71e61238f87d82c23c02ab8ad195ab2a3b0f9384
 Size (tremor-562307a.tar.gz) = 148875 bytes

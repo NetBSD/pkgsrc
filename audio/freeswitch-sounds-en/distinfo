@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.3 2019/03/16 17:16:52 rillig Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:09:23 nia Exp $
 
-SHA1 (freeswitch/freeswitch-sounds-en-us-callie-16000-1.0.22.tar.gz) = f097264f3f47706ab18daad207e7dbaf03331546
 RMD160 (freeswitch/freeswitch-sounds-en-us-callie-16000-1.0.22.tar.gz) = e78e9e2d6573bb1161322749708cf1a2c39c210e
 SHA512 (freeswitch/freeswitch-sounds-en-us-callie-16000-1.0.22.tar.gz) = e12f8bff995ffe29659b842cd36e89b85350275a5b848746c60aa7227559c41459ee10e9963f133b85157a43ff159fdae5b2e34f9f9ad9eb2778bd9d5c337385
 Size (freeswitch/freeswitch-sounds-en-us-callie-16000-1.0.22.tar.gz) = 32760710 bytes
-SHA1 (freeswitch/freeswitch-sounds-en-us-callie-32000-1.0.22.tar.gz) = 67dbe615bd6bcae6e4b9f683692286bdbbf4bb57
 RMD160 (freeswitch/freeswitch-sounds-en-us-callie-32000-1.0.22.tar.gz) = 4586acddc35e0951b56e5dfd212340c0c5a5a95d
 SHA512 (freeswitch/freeswitch-sounds-en-us-callie-32000-1.0.22.tar.gz) = 948ad5924d020196562f58211bc1aa89ddc18d73550840f1d3250fafdd1943c4e96ed8b4d7fc14218be0df1d08224ccdf0be1ccbd06d4df2ef2e36cc496801f8
 Size (freeswitch/freeswitch-sounds-en-us-callie-32000-1.0.22.tar.gz) = 64352708 bytes
-SHA1 (freeswitch/freeswitch-sounds-en-us-callie-48000-1.0.22.tar.gz) = 4d1a7fe5234216d68e097fb31a8fb49bbec43c05
 RMD160 (freeswitch/freeswitch-sounds-en-us-callie-48000-1.0.22.tar.gz) = 07cec69e7caf283399ed7f4e82738a7c5f0c6cee
 SHA512 (freeswitch/freeswitch-sounds-en-us-callie-48000-1.0.22.tar.gz) = ba27e7dc7b7c39bf31745443031afb08d7b6767e219150fd9a717d785b39f84073c877d55246191a3d7e65e552b81fdd941b1326b3cdbe6d4aad3e3a78d6b430
 Size (freeswitch/freeswitch-sounds-en-us-callie-48000-1.0.22.tar.gz) = 92587928 bytes
-SHA1 (freeswitch/freeswitch-sounds-en-us-callie-8000-1.0.22.tar.gz) = 08af26b4b61f8cb5756f7892435225ef79dadcfb
 RMD160 (freeswitch/freeswitch-sounds-en-us-callie-8000-1.0.22.tar.gz) = c0af6f5c4355d0e7acb257375dee1906f6bcb6de
 SHA512 (freeswitch/freeswitch-sounds-en-us-callie-8000-1.0.22.tar.gz) = 68d02fded9a5d19a852b1ffad429ab7dcfdf34b58db2dce6e581bc5c501667cf7b17fd22ac7af7a1782824ff0bf8889ae066977ae9821ae4aa193f7fc2608880
 Size (freeswitch/freeswitch-sounds-en-us-callie-8000-1.0.22.tar.gz) = 16443424 bytes

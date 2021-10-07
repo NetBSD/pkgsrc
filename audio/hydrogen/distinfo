@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/04/17 10:09:45 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 13:09:27 nia Exp $
 
-SHA1 (hydrogen-1.0.2.tar.gz) = e09f7dbd31f49d9b3ba820e688a34b3606261077
 RMD160 (hydrogen-1.0.2.tar.gz) = 50f681d1dbb416714ba72ae40ecc8e92a362390f
 SHA512 (hydrogen-1.0.2.tar.gz) = 7466b7ef1da4a078d67e1cab8744b2e0c3c048bb55e1febd22023c591ed9e2bf1cea41adc38a775a2ac60978735517a92df404d5ca8bb13603ea68c8da70daa9
 Size (hydrogen-1.0.2.tar.gz) = 11533410 bytes

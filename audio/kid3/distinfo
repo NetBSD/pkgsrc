@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2018/01/21 04:10:44 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:09:29 nia Exp $
 
-SHA1 (kid3-3.5.1.tar.gz) = efaf95e5b057bc8d3414321bf643fe24a98111a2
 RMD160 (kid3-3.5.1.tar.gz) = 14f203dcc105766bb94fe6318a5346089ecb0888
 SHA512 (kid3-3.5.1.tar.gz) = 7f1fbd6d1d576d23f9b57baaaa35101fb2e9ea23dec5b5506e25ec5a94dc8516d25b69b4dddb4a9b4835b2502d0a07087c245380483571a68e5972f98ca8ca58
 Size (kid3-3.5.1.tar.gz) = 1414829 bytes

@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.3 2019/03/16 17:16:53 rillig Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:09:23 nia Exp $
 
-SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = bff5ed02816b0d7e193503a980bc3dc7655e6564
 RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = fdf15330ca1ab76507f24d311ddcfc37b4df0b18
 SHA512 (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = 7aa1138e99f5371823647dbae6317c6db09a8eab85fc5cad2f79139137f9a8c04a04bc2977f044d76678a94404fee1d77623fd85d7609f3bef55a9219f0233a6
 Size (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = 28650196 bytes
-SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 4c1e0d8fecd999afac75170e5a2636e0d7acd7c0
 RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 8ec35413af595e5b6f82c9ccab0ace10abb05c6b
 SHA512 (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 01c00889d4c8234f80dee189ba6dc52256b1d3103f405f5d88b2378d110dd1b68b483e6585440b3fa8727055dfdac52b438af4f7f158a29d67eeddaedad2cccd
 Size (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 56843560 bytes
-SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = 27dc9d953f41c351323a2068dfa22f98dfc31ea2
 RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = f7a7481d6df7a0217dda8ba94d2f940686d94db1
 SHA512 (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = e9ecebb69ab0f79ae87b40ae8235177183f2346a4c8b3a24da6ea79294c014f9e6f42ce2cc29ba6e082b9ddb42066f9ce3bf77079038457aba163dfe2ce60490
 Size (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = 84394475 bytes
-SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = cff2da72b0dc53df781ac7526f3e035192f9065c
 RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = 2e6902bdd848b0b5cd70463d217e717c4eb4e9fe
 SHA512 (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = ce9ca26d0288374b4ba42bac02879c4a5c010defbb23c9d0dd72e6fe8e84b9df95be31593abc0ba139d30384d6d2c7801f00052376da9b995acde2649d3fae52
 Size (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = 14363334 bytes

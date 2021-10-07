@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:50 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:09:52 nia Exp $
 
-SHA1 (sidplay-base-1.0.9.tgz) = 0a159a9710fd82c942fe011a0d2ac70fb01be29c
 RMD160 (sidplay-base-1.0.9.tgz) = 4a96d5ebc5510d2b348bc837c184912c7f16789a
 SHA512 (sidplay-base-1.0.9.tgz) = 0801d69ccd0ae6ec8521c4b2f4a0fb13bd3980de21d6b83c1fd9872a22ae277a52fb4099ec400034c08d42fba91153973c07a692c8abd2cebe4746884f855928
 Size (sidplay-base-1.0.9.tgz) = 71969 bytes

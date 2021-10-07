@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/12/03 18:15:35 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:09:47 nia Exp $
 
-SHA1 (audioread-2.1.9.tar.gz) = ad3a24b17168479cfe4a6eb0524873192e817d58
 RMD160 (audioread-2.1.9.tar.gz) = b24fb30dfb11d130484e8d53271d6b8d9540c6f3
 SHA512 (audioread-2.1.9.tar.gz) = ad2260b6931cfeebb815d48221366a2a5d8095965ff18e94c5eb0809d9a1b02e650a62ad5e895b7f1e003771fa3babf56f59ce4538aca78b678566fd28327290
 Size (audioread-2.1.9.tar.gz) = 377500 bytes

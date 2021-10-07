@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2019/02/24 10:38:12 wiz Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 13:09:28 nia Exp $
 
-SHA1 (icecast-2.4.4.tar.gz) = dc1974235e72dfa5006ab4b8bae0380a2f951a36
 RMD160 (icecast-2.4.4.tar.gz) = a24654985dbd5c192c71f96d308a644744f3ea0b
 SHA512 (icecast-2.4.4.tar.gz) = e9ffb478cac2570891787455591d881a59185e067bb36f51706a7070cd9d82d80425ec8cf151f5ebb17d1b75654449fc760f8b82a1bb05f020b47ec09e46b4d0
 Size (icecast-2.4.4.tar.gz) = 2360592 bytes
