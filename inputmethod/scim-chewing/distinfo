@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 22:13:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:19:47 nia Exp $
 
-SHA1 (scim-chewing-0.3.5.tar.bz2) = f26ced990f0c9e5d43e271cd6e77583de81a008d
 RMD160 (scim-chewing-0.3.5.tar.bz2) = e174c062d9f603ab08fcffb67d273821ee0ff06c
 SHA512 (scim-chewing-0.3.5.tar.bz2) = 239535b563a5d6fcbb5d3777c6e91dc99487e9a89eabf7610dcffcec9aea05ca196619adc717c0cadf04c85a78fa36b9e516431359143a8eb4ea9f1b98a10e52
 Size (scim-chewing-0.3.5.tar.bz2) = 352975 bytes

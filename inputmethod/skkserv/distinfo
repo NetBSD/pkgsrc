@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/05/13 04:14:48 rillig Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:19:49 nia Exp $
 
-SHA1 (skk/skk9.6.tar.gz) = f462b4586dff6e36bfe331a526e054c3f6c3aad9
 RMD160 (skk/skk9.6.tar.gz) = af182063e92f993cd2d9a69d7f89109ef0631526
 SHA512 (skk/skk9.6.tar.gz) = e3cc03a9b6e0d5be6bcd7dbb2452b0f932850fff7602c865edd4e730b8047aaa10db01571e845bcf567dcfdc6829a7ed2295e1dda40eaaa92fa6b27d9b3abf41
 Size (skk/skk9.6.tar.gz) = 2407653 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/12/18 05:55:20 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:19:41 nia Exp $
 
-SHA1 (ibus-skk-1.4.3.tar.xz) = 3eae5363c1cbce500f0d2ea8f92c2c5bf3a01309
 RMD160 (ibus-skk-1.4.3.tar.xz) = 6fd7269b53dddecc4b9db8b935461adc459d0610
 SHA512 (ibus-skk-1.4.3.tar.xz) = c05302878f9c4b0a59daa1d285ab44501f63c0f7890149412137d3f6124fc4a7ebfe16172de311cbb5f2b9035255b5784a715a7832e6734d76e11bf19e2c9d3b
 Size (ibus-skk-1.4.3.tar.xz) = 321344 bytes
