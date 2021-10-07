@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2017/05/15 13:53:26 jperkin Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:06:04 nia Exp $
 
-SHA1 (nulibdist-220.tar.gz) = 8b8ca835d4e3e3d8a5e1ae9830fdfd0ed0bb07e3
 RMD160 (nulibdist-220.tar.gz) = a6b0d5bd0d0d413741fd1d46da80ef699f084321
 SHA512 (nulibdist-220.tar.gz) = 15fd5dde8e1c5ccfd52298c4379e3953c3574e797540ddb57e3d3c2978613be6c2567854860846a8d431e2c9d31fc7d5bcf624b6a7e8aff66639463f87e22b02
 Size (nulibdist-220.tar.gz) = 390564 bytes

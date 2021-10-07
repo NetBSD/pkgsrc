@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/04/05 15:58:31 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:05:57 nia Exp $
 
-SHA1 (dact-0.8.42.tar.gz) = f0ff1ff8a3eae9e15eeb3c9b567c7cd7f829eaac
 RMD160 (dact-0.8.42.tar.gz) = 2f79cb5a1baa64767253b499b6f0121c8f5a3857
 SHA512 (dact-0.8.42.tar.gz) = 4117ff116d1e30ed453c105e88583050a69a4b8c5b0a23c22a6e44ce926c106b7edf5dac4bdb7f7597d2d271402838d9a34fc88c5c90732e8d7ec0d615f80f6f
 Size (dact-0.8.42.tar.gz) = 150939 bytes

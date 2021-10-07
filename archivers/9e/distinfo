@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:56:19 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:05:55 nia Exp $
 
-SHA1 (9e.tar.gz) = fc966f51a167e4ed3dc371e399bbc8909f074b54
 RMD160 (9e.tar.gz) = bbcdde8d9b4989a12edd935c6156d80aaf5f8f5e
 SHA512 (9e.tar.gz) = 742f7fd4e8801a63c000d1fccaa9ae851e74ceaa2cdf2c41cbfc7e647a52f6c0ac2843b87320fb7d821f7bf0112323e1b67ca4d998fcc703711dc1868d8d0516
 Size (9e.tar.gz) = 2019 bytes
