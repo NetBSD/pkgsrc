@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/09/28 00:16:08 gdt Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 14:09:25 nia Exp $
 
-SHA1 (gpsd-3.23.1.tar.gz) = 1912c3e640752a12980b8bb819c65e9dc1c84eb8
 RMD160 (gpsd-3.23.1.tar.gz) = 62a786fc520792e00496cc46014e39be66fe56ef
 SHA512 (gpsd-3.23.1.tar.gz) = fccfac363103282581e4ea8236ce40e4600a01f02489c1aaec721a13deac556bac046a3b76f8a5e21fe8c736056e872d8c7f2e4ed2d38a164323dd9738f00388
 Size (gpsd-3.23.1.tar.gz) = 4904121 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/08/24 13:01:32 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:09:27 nia Exp $
 
-SHA1 (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 77cb82bb97b95330d11985c4472f83c15c310091
 RMD160 (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 70b5760b67015a45c681ff5cb2c6312610cd008a
 SHA512 (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 007f8c8c3c9334d9e71a2a471744fb7f5db5e67fe6f16440b4fb0134688c946f914505b2b11b5e4cbcb85defb00dd972f9ea7b5610042e8f946930d2a7f1326f
 Size (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 124761 bytes

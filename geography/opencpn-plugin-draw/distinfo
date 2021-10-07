@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/09/12 16:54:34 bouyer Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:09:27 nia Exp $
 
-SHA1 (ocpn_draw_pi-1.6.8.tar.gz) = f317b860d87a2c2f6d474ed95a6fdc16175014d5
 RMD160 (ocpn_draw_pi-1.6.8.tar.gz) = dc5bba99cc71d56c6c4e5524c843d3ed6ec009cb
 SHA512 (ocpn_draw_pi-1.6.8.tar.gz) = 74b575b3ef5ccea56204a95612add60f3a5cf615ec9cc0c6147abcc0f46d632e0c42a0758a12ff04ac1cc2c255f69b13bd8d98d23b2b4351708e4c40ed17a0f1
 Size (ocpn_draw_pi-1.6.8.tar.gz) = 1506472 bytes
