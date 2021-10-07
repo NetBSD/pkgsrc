@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.6 2021/10/06 21:59:47 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.7 2021/10/07 20:31:12 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -16,4 +16,7 @@ databases/redis: security fix
 
 Pullup ticket #6504 - requested by taca
 www/apache24: security fix
+
+Pullup ticket #6505 - requested by wiz
+security/tor-browser: bugfix
 
