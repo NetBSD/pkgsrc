@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/05/24 19:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/07 22:40:59 nia Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang21-/}
@@ -24,6 +24,10 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
+
+# "This run-time was supposed be compiled with all code below 2Gb,
+# but the instruction 'allocate_tt' is located at 00000001c586f34c."
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
