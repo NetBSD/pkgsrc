@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/11/12 09:02:10 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:08:12 nia Exp $
 
-SHA1 (bottle-0.12.19.tar.gz) = c9e3e859e9b23c4b84fa82c47d62b383036c9fcb
 RMD160 (bottle-0.12.19.tar.gz) = 46495834652972d83123678af255b239196d6dcf
 SHA512 (bottle-0.12.19.tar.gz) = e5d2f6a32d1b89ae3cc9607456c0614db2b58882c6d36273d695c51d3d77b1858cac4d914dbf19bca3b74be68c197aa6473f162e40d9b7ae2af3a084a28c2637
 Size (bottle-0.12.19.tar.gz) = 73142 bytes

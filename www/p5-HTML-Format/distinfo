@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/04/15 10:29:50 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:07:40 nia Exp $
 
-SHA1 (HTML-Format-2.12.tar.gz) = f5b752d97a424f7abcaa16341b85ea943af87429
 RMD160 (HTML-Format-2.12.tar.gz) = c25d731c2568426db72ab042ae412cdcbde1237e
 SHA512 (HTML-Format-2.12.tar.gz) = 38571caaa118e13d5d730e6c32e74a756b47d4d498918d7a844402a606285024a78f372d7ea534aee9a383bf94a83be376e1b143b54565bcace940be56f60802
 Size (HTML-Format-2.12.tar.gz) = 50248 bytes

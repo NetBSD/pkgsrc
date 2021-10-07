@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/01/17 14:02:21 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:37 nia Exp $
 
-SHA1 (CatalystX-CRUD-Controller-REST-0.005.tar.gz) = 809a9826be4e55022a357227e75547b6efb24868
 RMD160 (CatalystX-CRUD-Controller-REST-0.005.tar.gz) = dc18ec68119fda15b9766f2004d4980abedbf898
 SHA512 (CatalystX-CRUD-Controller-REST-0.005.tar.gz) = 1ab174b50480f967f3593bda7def5c65efbb313c2d91cbcd81ee9149f14c6123a7b90153c6be13897f822f256cf0b1994c2c7cc6fdc31a40859b57e77ca80466
 Size (CatalystX-CRUD-Controller-REST-0.005.tar.gz) = 27335 bytes

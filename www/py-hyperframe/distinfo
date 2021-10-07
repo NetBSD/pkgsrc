@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/04/29 08:22:42 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:08:27 nia Exp $
 
-SHA1 (hyperframe-6.0.1.tar.gz) = c0a71cbda94eaa979076a4cd2527c7779d4e5da9
 RMD160 (hyperframe-6.0.1.tar.gz) = 80fe234fb9d1f4260a4f83b66436002f79919c9e
 SHA512 (hyperframe-6.0.1.tar.gz) = 2a5101b2e91e047fe39b32f81a1a8b2240c371fed28a5e1581e743371418388a7dfb55bc819c46a45804e7f00a5231ca54c92aa1b5b41ffeb714b8cb3ac485ca
 Size (hyperframe-6.0.1.tar.gz) = 25008 bytes

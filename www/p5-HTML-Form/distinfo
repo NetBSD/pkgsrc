@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/09 03:07:14 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:07:40 nia Exp $
 
-SHA1 (HTML-Form-6.07.tar.gz) = defc58c90443039d774b6953df4a3f100610d134
 RMD160 (HTML-Form-6.07.tar.gz) = b044310300e5fecc9caad3c5d8fa459bdbccb6bb
 SHA512 (HTML-Form-6.07.tar.gz) = 32aac4bb85609c2c596e771678bd4d36f3e34deaa3de7333f089c8f887045780db949b5a1573254557eb0247713232cca5e90f89a80e0d53049840660ad3017e
 Size (HTML-Form-6.07.tar.gz) = 41503 bytes

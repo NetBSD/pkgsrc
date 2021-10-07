@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/07/23 09:32:37 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:07:57 nia Exp $
 
-SHA1 (Plack-Middleware-RemoveRedundantBody-0.09.tar.gz) = c50f6df1b999dc7bf5d9c0445c706b707576d24f
 RMD160 (Plack-Middleware-RemoveRedundantBody-0.09.tar.gz) = 42381a19a07e05e1250266e93798708d5c779c35
 SHA512 (Plack-Middleware-RemoveRedundantBody-0.09.tar.gz) = 0c47eca0e877ca78f248acb416edf93c7e0eb0b518d86594682063725b5c789c7a4e27130a6f42ef1cb506e9384c46cb96f82f42e716c3756319736ba41574ba
 Size (Plack-Middleware-RemoveRedundantBody-0.09.tar.gz) = 10708 bytes

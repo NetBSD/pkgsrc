@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/06/07 15:43:05 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:48 nia Exp $
 
-SHA1 (sassc-2.4.0.gem) = 3032f0c1662efc8aa04636e99a6bdefd15549fc8
 RMD160 (sassc-2.4.0.gem) = 2fa1d26256e46310c921856a14e54d0219bd8fb1
 SHA512 (sassc-2.4.0.gem) = 835ba03d0fc5a791b2d620367f63202973f778bd8ebaa87c27f6a1de75b5895270205e8746fbb242d2739c9830a27d72453a75c1b536090840de581c52caade6
 Size (sassc-2.4.0.gem) = 304640 bytes

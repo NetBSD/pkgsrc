@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/24 11:27:50 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:06:59 nia Exp $
 
-SHA1 (R/rvest_1.0.1.tar.gz) = e5ff023885de0e699048f967f0530782a11b92e4
 RMD160 (R/rvest_1.0.1.tar.gz) = ff90dc8a32abf530a1e187e1c06791ea009053a7
 SHA512 (R/rvest_1.0.1.tar.gz) = 246cba48246a3d0697ed673e37afdca5d063ee56b382fe33083dd587c16035cbb37ae93f54863954dcdcdc3596e103553f0986aaeab21bb37d33346534c3fda3
 Size (R/rvest_1.0.1.tar.gz) = 94307 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/12/21 03:50:43 manu Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:07:02 nia Exp $
 
-SHA1 (mod_auth_ofba-0.6.tar.gz) = fb687cc656b9c5c316290925f1ebda66d36a9872
 RMD160 (mod_auth_ofba-0.6.tar.gz) = 8901f90c4e4506da2f98763e713fd8c3e7a76dfe
 SHA512 (mod_auth_ofba-0.6.tar.gz) = d4f3bfce060fdbf917bf1a7ae225797db928e1aac728eb30693fc6a7e299b9201de245f783c01ba467ed18ff7fc91c6cbbf73ba27ed8325963eaf84d620c8a79
 Size (mod_auth_ofba-0.6.tar.gz) = 86879 bytes

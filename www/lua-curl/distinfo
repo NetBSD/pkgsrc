@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/06/07 11:42:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:07:21 nia Exp $
 
-SHA1 (lua-curl-0.3.13.tar.gz) = 06a76bfddb4048a65bdffc584ef0290e90975d55
 RMD160 (lua-curl-0.3.13.tar.gz) = e1c297aff5ae5c04e8cc1e32619522dfec63e0a0
 SHA512 (lua-curl-0.3.13.tar.gz) = 4283109e349b994e0d2349a45b37a95bab7a7fc115740a4ce078ff967485364714691eac3398db90bacb54584790d6ec778d845fb7ecc7716c0863c454216f05
 Size (lua-curl-0.3.13.tar.gz) = 98531 bytes

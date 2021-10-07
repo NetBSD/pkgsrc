@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2018/12/02 19:35:26 bsiegert Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:07:05 nia Exp $
 
-SHA1 (bluefish-2.2.10.tar.bz2) = abb2080b5cbc65cd9c7551572ac21012c5ee2031
 RMD160 (bluefish-2.2.10.tar.bz2) = 98f9e1442882dd8342895ef43f636ff6b5dce623
 SHA512 (bluefish-2.2.10.tar.bz2) = ddfad4c595d371dfd7ca5551c1771c2d82dbffcc90acda31bbd2a048730e24e2d1e37fbe847e5005d96acefdf5f38cb93785d23817e59624ecd7ea10bfbc3aeb
 Size (bluefish-2.2.10.tar.bz2) = 4159964 bytes

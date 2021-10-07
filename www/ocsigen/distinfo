@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/12/11 08:27:21 jaapb Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:07:25 nia Exp $
 
-SHA1 (ocsigenserver-2.16.1.tar.gz) = 3277c1d9a0e1e8e93a6b950c195c2cfa01dec2e9
 RMD160 (ocsigenserver-2.16.1.tar.gz) = df103153f3defef6047d4fd681f952e5aad9a200
 SHA512 (ocsigenserver-2.16.1.tar.gz) = be5c1fb6c54fb374232a94e82aee7fd77cdee95584e5ad421f9f41965b0f2ce69c01f6a8bd1b2c622cd806668b7b6ff849ff4f3099283d1406144f27ea8da6cf
 Size (ocsigenserver-2.16.1.tar.gz) = 1241874 bytes

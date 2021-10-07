@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/07/05 20:14:14 fcambus Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 15:08:51 nia Exp $
 
-SHA1 (snownews-1.8.tar.gz) = b6396ed7728e82ce126cc4cfde0dce5aeba376db
 RMD160 (snownews-1.8.tar.gz) = 419865824853fce434388478836a5d07d18439c5
 SHA512 (snownews-1.8.tar.gz) = 023c10667ee80510303955058c21ff6546c8b3f6588a8ec24de103783ae2037e33628f141a6f6028b7338d75b189a3ad26dce74ac818434226629b2c4383c94e
 Size (snownews-1.8.tar.gz) = 154813 bytes

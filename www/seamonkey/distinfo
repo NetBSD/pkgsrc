@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.172 2021/09/16 14:59:32 nia Exp $
+$NetBSD: distinfo,v 1.173 2021/10/07 15:08:50 nia Exp $
 
-SHA1 (seamonkey-2.53.9.source.tar.xz) = c130687f4ba4fffe75461c2b0bb8d6dd2756d0d1
 RMD160 (seamonkey-2.53.9.source.tar.xz) = 11cddb895ea4d66b3ea582e919e675a2d66baf60
 SHA512 (seamonkey-2.53.9.source.tar.xz) = 17f7009f2b5a1f337c24f98e2bfac2b63498f6e5b5080cbfc1c541ee60fa07f5116b76b7f20f2fc4e000b8c38c4558c7c9ef10abbdfec52dd597bc25d5a952f4
 Size (seamonkey-2.53.9.source.tar.xz) = 285118824 bytes
