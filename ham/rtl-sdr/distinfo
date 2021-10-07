@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/02/03 10:48:17 tnn Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:17:22 nia Exp $
 
-SHA1 (rtl-sdr-0.6.0.tar.gz) = 91a4499110ab27fe4e15e9425ab95145342cdd82
 RMD160 (rtl-sdr-0.6.0.tar.gz) = f02dfa2079f924967e2ee22b2e424e7d4a0ec521
 SHA512 (rtl-sdr-0.6.0.tar.gz) = a08356a08672f03d86adb662e28923e7998b78c0f49432dc1b1e3844976158c467242e0c5eabf206fd257bdebcf91cd2767dabf13d2ef475f2f3e1d82e23ed75
 Size (rtl-sdr-0.6.0.tar.gz) = 134289 bytes

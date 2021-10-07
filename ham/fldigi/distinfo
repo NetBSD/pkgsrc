@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.69 2021/02/06 15:15:08 dbj Exp $
+$NetBSD: distinfo,v 1.70 2021/10/07 14:17:20 nia Exp $
 
-SHA1 (fldigi-4.1.01.tar.gz) = 79bd6fbd28d7dd63de450e63de993dd230fabae2
 RMD160 (fldigi-4.1.01.tar.gz) = 598158a8367a821265893812cec496f0d1fdefaa
 SHA512 (fldigi-4.1.01.tar.gz) = f0fa33714b56d396dea59511083546765a34c645aa03875d0c6bb38af89ff79ecad6b5556895a6615d18b6340d50d94beb69e92c4a488fed346863fa1e378633
 Size (fldigi-4.1.01.tar.gz) = 3916445 bytes
