@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2016/03/30 13:24:12 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:18:32 nia Exp $
 
-SHA1 (netperf-2.7.0.tar.bz2) = 415ecd4877cf8e24cefe6943564e511e6f1e2215
 RMD160 (netperf-2.7.0.tar.bz2) = a3b9b89999362ae4077efcffa509140683d2982b
 SHA512 (netperf-2.7.0.tar.bz2) = 5fb37945bead831247de9c8ba86b33f134ba39e753b483df72de97f536d0846538dadf61acc2dee57f04ab5d16a92afab4890e79a5d7ffa863afd526267fffad
 Size (netperf-2.7.0.tar.bz2) = 1024430 bytes
