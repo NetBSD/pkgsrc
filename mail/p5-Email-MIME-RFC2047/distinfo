@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/08/17 13:31:18 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:31 nia Exp $
 
-SHA1 (Email-MIME-RFC2047-0.97.tar.gz) = 2d8d3ee30af80822119c3111ee7ce59b74dc10ca
 RMD160 (Email-MIME-RFC2047-0.97.tar.gz) = bae15edca01ee206d7cc52781c64005bd8844cd4
 SHA512 (Email-MIME-RFC2047-0.97.tar.gz) = bb06be967af60e989bef507bf08b6356174c3344edd2bba2293b84ddc9f3a19043097706bd58425c5a2975944786ce9e2ef080de52b7d409ed66e0c88362dfe1
 Size (Email-MIME-RFC2047-0.97.tar.gz) = 19377 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/15 22:01:29 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:13 nia Exp $
 
-SHA1 (bincimap-1.2.13final.tar.gz) = 76e9e96125ef683c7ca3474363723162569e5ec3
 RMD160 (bincimap-1.2.13final.tar.gz) = 454bc8d34c52b5cc1af68e55bfdc82ac0f36ced3
 SHA512 (bincimap-1.2.13final.tar.gz) = 53c4df3b46a433fae5dd441f1613dd1a0f73de43c25a56e1aa210f45b9d0b0201a0fdeb050f0b37646ce3b571d835b06cd6b1a566078aab8a61f352fc718e584
 Size (bincimap-1.2.13final.tar.gz) = 511059 bytes

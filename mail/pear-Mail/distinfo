@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/05/28 11:33:17 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:25:38 nia Exp $
 
-SHA1 (pear/Mail-1.4.1.tgz) = 5c5214215e98ce17b91fb8d38c0af308a0803e10
 RMD160 (pear/Mail-1.4.1.tgz) = 513a46e8c7ed2d6a1ce986d0760434781798ddd1
 SHA512 (pear/Mail-1.4.1.tgz) = 851fa64bcf042fba58a70833c12ec5d7af6382e14e6157eeeb5be51b22cdfa5677c5d1eeba8c1f9eef6d55c2d732a4d5d6ea28c726aef232b233c170f7b82307
 Size (pear/Mail-1.4.1.tgz) = 21756 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.57 2021/09/30 13:18:17 jperkin Exp $
+$NetBSD: distinfo,v 1.58 2021/10/07 14:25:29 nia Exp $
 
-SHA1 (notmuch-0.33.2.tar.xz) = b5e5e30069bfc0e70084894e109ef3c95a280921
 RMD160 (notmuch-0.33.2.tar.xz) = 69f24862a333ef3ecf93b2bb55f2b7ddc7b7d4f7
 SHA512 (notmuch-0.33.2.tar.xz) = 15f4ecbd991df3a64c2b89aeb6bf7649e76ff2010f80120a15c10c9c5e913a90696ef6a760cbea24bbc9a3ca8cae18fada13d80e69c848cc142d355f2a513f5d
 Size (notmuch-0.33.2.tar.xz) = 733228 bytes
