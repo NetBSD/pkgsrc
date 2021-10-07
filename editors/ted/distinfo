@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2019/06/08 10:40:58 rillig Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:47:49 nia Exp $
 
-SHA1 (ted-2.21.src.tar.gz) = 303b15de1fe97e473c4b89a88b6e127ee81e07e9
 RMD160 (ted-2.21.src.tar.gz) = 68935d62d216708c7053910f1261353176cf5c72
 SHA512 (ted-2.21.src.tar.gz) = f926d49c1c68ae54b7b4871cccc48e1ff1ad217baa915735be6f12944b710050fe358b1e85b75a3d8ffc236563dc81364be1f64079805993978dccfdb819f735
 Size (ted-2.21.src.tar.gz) = 3956815 bytes

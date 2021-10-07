@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/08/29 13:17:53 fcambus Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:47:40 nia Exp $
 
-SHA1 (hexedit-1.5.tar.gz) = e49d5a613d2c4540b03563db5eb8e827793f77b2
 RMD160 (hexedit-1.5.tar.gz) = ad4c3f60b19c927d7ea0ce416cb6be7e00cd5291
 SHA512 (hexedit-1.5.tar.gz) = 9d8e5c8c0cda0af17ffeaf528e3dacd7fc2878dfc0755cb055dae5c56f05c961353c1d1723b05897314b49a44a6eb96de5d3a599c6b29967425507eea7cc7ca5
 Size (hexedit-1.5.tar.gz) = 30544 bytes
