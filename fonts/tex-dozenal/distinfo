@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/01/23 10:46:29 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:04:37 nia Exp $
 
-SHA1 (tex-dozenal-47680/dozenal.tar.xz) = eb0dd085484d41bbef0681659650c11cd767a47c
 RMD160 (tex-dozenal-47680/dozenal.tar.xz) = fa0945128619466354e720c5d1ce17bd381010cf
 SHA512 (tex-dozenal-47680/dozenal.tar.xz) = 8875f5caa49673be6441cdeb4c35bd5b7614bf8cef76f3afebd9e4be817605c6a3795947ff453709fefc8bde8d6d5f1bbb7598b22fce7a12f448dfba2284d68f
 Size (tex-dozenal-47680/dozenal.tar.xz) = 101832 bytes

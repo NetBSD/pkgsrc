@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/12/11 13:52:07 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:03:49 nia Exp $
 
-SHA1 (FiraCode-2.tar.gz) = 6f27f6f65615114addb0a21eb1baad2115587f92
 RMD160 (FiraCode-2.tar.gz) = 471f097b0b8691f929f4c1fd2c3c51936ecf70e3
 SHA512 (FiraCode-2.tar.gz) = 313f11f1550d964119c2576bc988ca7d009ebd670c93b3c4a29583f91499166816ed326fdb5a5082ed7c7a33c49263e627a3356cc739aa1a8e34689820081399
 Size (FiraCode-2.tar.gz) = 7100481 bytes

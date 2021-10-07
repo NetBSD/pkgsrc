@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:13 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:39 nia Exp $
 
-SHA1 (ebgaramond-maths.r52168.tar.xz) = e97efd15644e7c09967a79cd1821e13b341c9306
 RMD160 (ebgaramond-maths.r52168.tar.xz) = 43d20915ab8777b14e4aa28b5ddb64313413bb19
 SHA512 (ebgaramond-maths.r52168.tar.xz) = 5d65f676daee62f96875def0faf6d1fa217143046768985956372473b4cd3c6c00ca650cdedcdf677d6ae6a03c65743d30df6d32c36cc8366d8a1a9961bc11d3
 Size (ebgaramond-maths.r52168.tar.xz) = 3456 bytes

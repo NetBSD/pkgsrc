@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/01/24 11:10:42 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:20 nia Exp $
 
-SHA1 (tex-tex-gyre-48058/tex-gyre.tar.xz) = 3ea54d724f1b51a50d962966e0606887bea877a0
 RMD160 (tex-tex-gyre-48058/tex-gyre.tar.xz) = a9ac723f83ee44199d8064f1816ab2f129ad66fd
 SHA512 (tex-tex-gyre-48058/tex-gyre.tar.xz) = 95000cd55940e8f2582925400eb1fb9ed8a59c71ed80a00b6d33e173c707fb9ff7597d451f3d1865e0a74084b07937df391af35d364cb2eab1135b9879cd45cb
 Size (tex-tex-gyre-48058/tex-gyre.tar.xz) = 7745436 bytes

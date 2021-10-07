@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:04:31 nia Exp $
 
-SHA1 (tex-cm-unicode-19445/cm-unicode.doc.tar.xz) = edc4f8813f0c63e3ee2f511fddab2bb25244d81b
 RMD160 (tex-cm-unicode-19445/cm-unicode.doc.tar.xz) = dc80cd706e73ae364b445003fae62da0dbef146a
 SHA512 (tex-cm-unicode-19445/cm-unicode.doc.tar.xz) = 8c9229311ebba1d60331a266dda00a814a6517dfeea7705e5fd55ca8e05a68a8d124bf6c54c03e9068f9818640b288c7f7393b8ff6e38325b5b0c4314ea65069
 Size (tex-cm-unicode-19445/cm-unicode.doc.tar.xz) = 950708 bytes

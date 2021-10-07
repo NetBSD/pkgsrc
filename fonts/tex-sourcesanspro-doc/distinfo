@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/12 11:58:15 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:05:17 nia Exp $
 
-SHA1 (sourcesanspro.doc.r54892.tar.xz) = f3f8cd72715c454c3959e4a6ef1da30421c9031b
 RMD160 (sourcesanspro.doc.r54892.tar.xz) = ace3c904f57394d6bd7e1838dc559da778602236
 SHA512 (sourcesanspro.doc.r54892.tar.xz) = 174def8872588c27b8f90b3c384ee356aec43e4e42014bb1c02d648d8b309dfa8fb9cea03f65fa9bd86dc3ff1e64483f1312dbaca6e212f65d2d379a1d9935e3
 Size (sourcesanspro.doc.r54892.tar.xz) = 671484 bytes

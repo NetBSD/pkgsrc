@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:20 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:16 nia Exp $
 
-SHA1 (sansmathaccent.r53628.tar.xz) = 61b6e08c00206645ed472545750c146b567480fc
 RMD160 (sansmathaccent.r53628.tar.xz) = 39cd1853b0bc3c2e4d389193fe52d929a2182f59
 SHA512 (sansmathaccent.r53628.tar.xz) = 685b0c604978aac45efd75c37652471aa165bfbbf12dfa686320a6a9ef926f9043382333ecc26db6d2ff4d12732d135947145ba937eb6d01d4a4e9aa17784315
 Size (sansmathaccent.r53628.tar.xz) = 10604 bytes

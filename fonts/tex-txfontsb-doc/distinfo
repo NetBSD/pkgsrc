@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:21 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:21 nia Exp $
 
-SHA1 (txfontsb.doc.r54512.tar.xz) = e256965cf87bea300c032fbc08301d1a7c0d5e56
 RMD160 (txfontsb.doc.r54512.tar.xz) = 17cbfd8ead41792f270491ac1666a92e9893482a
 SHA512 (txfontsb.doc.r54512.tar.xz) = 982d29750320bc1709ff8329effb3f7bedc6ded888a537aeb7f080c6fc37414956b1b1e149225cea3f3a60982575fbc943433cd4f9cc5e5d61c596973c07b3ed
 Size (txfontsb.doc.r54512.tar.xz) = 59400 bytes

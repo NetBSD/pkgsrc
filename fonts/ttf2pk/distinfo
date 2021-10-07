@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/06/06 01:17:17 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:05:22 nia Exp $
 
-SHA1 (texlive-20210325-source.tar.xz) = fa68012b86e20410c90684ec2ff50e34023bbaf2
 RMD160 (texlive-20210325-source.tar.xz) = 90f924b7843de99c9b438d66926192020291bbee
 SHA512 (texlive-20210325-source.tar.xz) = afd6eb24efaeac7c58d43ff24162aece919079a9ae02934509f068c7a3828223c33c14d9db11ff7fea3560b08a06f352446ba7f845eefb4a56a87b96f088f213
 Size (texlive-20210325-source.tar.xz) = 54837368 bytes

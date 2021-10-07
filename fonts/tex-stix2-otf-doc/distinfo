@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/05 06:27:38 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:05:18 nia Exp $
 
-SHA1 (stix2-otf.doc.r58735.tar.xz) = 8b49f2e8aaf932685780eaa43fc44158cf697b16
 RMD160 (stix2-otf.doc.r58735.tar.xz) = bfbb31c5cfface151cbe877682457cdbd6ebdb68
 SHA512 (stix2-otf.doc.r58735.tar.xz) = 15e370d490eb01022877ce01cb8e9954af89553bd0cb2b404820c8744271d13ea32c75d2971abed4cc64a692184fb0fe369bc97bf870524599b2011fec3bfec2
 Size (stix2-otf.doc.r58735.tar.xz) = 1252812 bytes
