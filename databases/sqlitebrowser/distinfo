@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/05/25 05:39:55 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:35:51 nia Exp $
 
-SHA1 (sqlitebrowser-3.12.2.tar.gz) = dde75cbf04a1809d41769ff88d45f2d4be090c8b
 RMD160 (sqlitebrowser-3.12.2.tar.gz) = b5f5f642f3dcf4846b8cb443350e1e2841746e74
 SHA512 (sqlitebrowser-3.12.2.tar.gz) = a6afc0a4286f07adb7038f3a010c93e14204b477bde27b1599c9bfe3390422d3edfaa2a9381b1f13e63a7aaf90e931ee85358eb8b2c15b6ea55818d29c59395f
 Size (sqlitebrowser-3.12.2.tar.gz) = 3990817 bytes

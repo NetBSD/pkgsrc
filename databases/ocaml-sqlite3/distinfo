@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/01/31 11:57:04 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:35:17 nia Exp $
 
-SHA1 (sqlite3-5.0.1.tbz) = b577400a4e72559ebfbb9ebc531215b7d7ffbb27
 RMD160 (sqlite3-5.0.1.tbz) = ad6e21e791aee5461fdf7437dbe7bba02655245e
 SHA512 (sqlite3-5.0.1.tbz) = 95bd6997d9f143b143be5f293448857309b64d76cea39784cae06b18c2eecb4efe382dca82eabcc123cf74a4160bf7f2b204d06fc22ecb83a1f9bdec7af45817
 Size (sqlite3-5.0.1.tbz) = 29532 bytes

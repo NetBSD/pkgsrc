@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/09/06 21:40:30 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:27 nia Exp $
 
-SHA1 (Redis-1.998.tar.gz) = 40be661eac4d4a5385844017b423c4d857151c5c
 RMD160 (Redis-1.998.tar.gz) = 20d5a313768973e136949ca42e85a2d79cc91ff0
 SHA512 (Redis-1.998.tar.gz) = 232f0e602f6165da426ff6ee6a531f81eea3491c0312dae2813bdb15ac34469f6621c7683d5bd6b2be0cdcc09edf3f1f19cc03c848d43d41e630fe1306f62268
 Size (Redis-1.998.tar.gz) = 59660 bytes

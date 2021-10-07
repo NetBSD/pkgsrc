@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/07/16 02:55:13 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:35:29 nia Exp $
 
-SHA1 (Search-QueryParser-SQL-0.010.tar.gz) = dba73b2111496677a478fc12376ea2fd74765cb8
 RMD160 (Search-QueryParser-SQL-0.010.tar.gz) = c8b791a57308139f6444da11333389082626f68e
 SHA512 (Search-QueryParser-SQL-0.010.tar.gz) = f2a462ad6b0769e50c8a255b3304173984260227ed87374676eb003457d3d4cb3a679453ab82d84a413303051e5b90be0b29e46671d49daad13132b4dbd24161
 Size (Search-QueryParser-SQL-0.010.tar.gz) = 28415 bytes

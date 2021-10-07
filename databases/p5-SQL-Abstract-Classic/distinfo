@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/06 21:04:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:35:28 nia Exp $
 
-SHA1 (SQL-Abstract-Classic-1.91.tar.gz) = 166271047e2c032574ac2755ee8a56f674d7dcff
 RMD160 (SQL-Abstract-Classic-1.91.tar.gz) = 724cd521fe4ce0ffa40a99db959437e0671f1ba0
 SHA512 (SQL-Abstract-Classic-1.91.tar.gz) = a2389c04889ea09fc6512f955f8a383d1f51839f584a0be16aab33dec72b67214d0f22d55c666fa0ddeaa32e5c6fc91e1e50541d52e71beeb3b3d85af21a9643
 Size (SQL-Abstract-Classic-1.91.tar.gz) = 78466 bytes

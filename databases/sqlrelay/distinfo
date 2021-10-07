@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/03/01 14:39:01 taca Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 13:35:51 nia Exp $
 
-SHA1 (sqlrelay-1.8.0.tar.gz) = 30fe6bab49b04c091cee61d77c854d8b4674cc1d
 RMD160 (sqlrelay-1.8.0.tar.gz) = 1c87f0da0d8334a23fff35e9ff1edeb3f2093111
 SHA512 (sqlrelay-1.8.0.tar.gz) = cfb430f1eb9de4c8dd5c4ee4a89a1c04ba2449cc302155bbf115cd8b50933f7fb690395cb394ce01bfb8e7d83b79168f898baafd1169383ecdfd961347679561
 Size (sqlrelay-1.8.0.tar.gz) = 4684135 bytes

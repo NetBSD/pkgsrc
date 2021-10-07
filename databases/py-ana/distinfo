@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 02:13:36 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:35:35 nia Exp $
 
-SHA1 (ana-0.06.tar.gz) = fd53b0f6fc1d2f48f20e6b462ddb3b25e0aa4082
 RMD160 (ana-0.06.tar.gz) = 4c5925f113ba9ef1fbdce1a14a38ac3ed5b4ce72
 SHA512 (ana-0.06.tar.gz) = d4944f96379d399040e191d3058d35e5e7ca2cd7193b8dfb3b7b78e0dbf26c8c5dc48acb7c570e51fead0387ee708246de8cf9231ef35028bdd7686f732df875
 Size (ana-0.06.tar.gz) = 5876 bytes
