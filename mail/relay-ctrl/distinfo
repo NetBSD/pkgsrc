@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/01/02 02:19:02 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:25:44 nia Exp $
 
-SHA1 (relay-ctrl-3.2.tar.gz) = 36379d81131d81446729e5b9ee94843b0bdf3410
 RMD160 (relay-ctrl-3.2.tar.gz) = 7e64c946432103ec25709585c8b2208ffc9d95ec
 SHA512 (relay-ctrl-3.2.tar.gz) = aa2c7516e330ba3c4f466848e59b60cf5649393c3f9c87a3a5e5dfa170f96b9b1ad519098dfa153f9e06f9e02bd48d2a22118e1e8ccfe3e2585250e8feb4e5af
 Size (relay-ctrl-3.2.tar.gz) = 23119 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/17 11:01:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:25:50 nia Exp $
 
-SHA1 (thunderbird-52.9.1.source.tar.xz) = 9970d78084fe979f568ea00bf06b8e81a738e630
 RMD160 (thunderbird-52.9.1.source.tar.xz) = b3169a0154fa85648a98ba0d74f264abd224b323
 SHA512 (thunderbird-52.9.1.source.tar.xz) = 0de80a5036b1e8a5a8549c546b4693cb285ee4d10f546f4b4aceed9e1d6c64b9dbafce7bacaaf057112130036f7b41fb2e0fa3343412140e6ac926dd94c27d23
 Size (thunderbird-52.9.1.source.tar.xz) = 230475264 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/05/25 23:36:40 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:34 nia Exp $
 
-SHA1 (Mail-Box-POP3-3.005.tar.gz) = 463e86e641e4e17e2d441c284522aec32b39758a
 RMD160 (Mail-Box-POP3-3.005.tar.gz) = 1a5be053842da49b1b8277317b82ac9ba66de9e7
 SHA512 (Mail-Box-POP3-3.005.tar.gz) = cbcda3c9df08d8cf5d279e1b8308885213b75b0af56a3be7c0a5fc769ff60a6c9e6f2cd5ab4ab19532e388e14ceb6b4b62042dea4bb512c31384823004137079
 Size (Mail-Box-POP3-3.005.tar.gz) = 31804 bytes

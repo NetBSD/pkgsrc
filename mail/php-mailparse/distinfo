@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/03 07:48:26 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:38 nia Exp $
 
-SHA1 (php-mailparse/mailparse-3.1.1.tgz) = a4f94e01c249825db680a600ca15dd8b303840b3
 RMD160 (php-mailparse/mailparse-3.1.1.tgz) = 2816e0a5ac6ec6e349b65f86d06c5d6a93beeec1
 SHA512 (php-mailparse/mailparse-3.1.1.tgz) = 01ddb8d4d27a74c14f70b02b49322c60fc79affab374205fee91b9da21e5148e08dba024f6bc620e4f26c2c937675e09092c52ca69172d2f7797c3e2bf374bee
 Size (php-mailparse/mailparse-3.1.1.tgz) = 941192 bytes

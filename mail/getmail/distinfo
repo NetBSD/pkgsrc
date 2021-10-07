@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.146 2020/12/16 20:19:43 schmonz Exp $
+$NetBSD: distinfo,v 1.147 2021/10/07 14:25:19 nia Exp $
 
-SHA1 (getmail-5.15.tar.gz) = 174483c050159ba76b73f699c3b25abe8d294a6d
 RMD160 (getmail-5.15.tar.gz) = 8f7d9db590aa7992de5acc2d85e1fe6b3a16192e
 SHA512 (getmail-5.15.tar.gz) = c338de2643c0c3bcfab943be2268eb80436a85e071f9418e08c406af6e40f5d3fafdb7db5438ad2bd1cd75cec38b43ffe2f67811fa3d00a33096d4061a48297e
 Size (getmail-5.15.tar.gz) = 199733 bytes

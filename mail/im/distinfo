@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/02/24 23:55:36 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:25:20 nia Exp $
 
-SHA1 (im-153.tar.gz) = 6353cbdc960d454290ea4e9e6f895b97ea96e199
 RMD160 (im-153.tar.gz) = 83d39a98e9e098bde830c7af7b9be3f47ce71c94
 SHA512 (im-153.tar.gz) = d51ca005793768ec185879df841ad6bbff627cf485d965f68d76fdfcc0a278e172261d84eff3515b7aa1ce039bcb1d425ed040f0a847da1b8adc672b069a671a
 Size (im-153.tar.gz) = 271538 bytes

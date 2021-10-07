@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/10/17 08:36:26 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:49 nia Exp $
 
-SHA1 (swaks-20201014.0.tar.gz) = ed9a81fac22ec23fe4c051b6bbb5ad930ba30d3d
 RMD160 (swaks-20201014.0.tar.gz) = 5e60192ca7b14af9dff1aab82c648874c8c6ad07
 SHA512 (swaks-20201014.0.tar.gz) = 8a4e8dc810a9c5943afdbc4db7130e110c42e211d6927ce1cdbab6f81fa49c31490e6c3668ec3cea79580c07b281ce30901b3b4a71325951167158cc9d70d9cc
 Size (swaks-20201014.0.tar.gz) = 110953 bytes

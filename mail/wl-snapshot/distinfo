@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/10/22 03:55:12 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:51 nia Exp $
 
-SHA1 (wl-beta_2.15.9+0.20190919.orig.tar.gz) = 0b5ced6b17dbe66f0c167666508c167d31ce3dcf
 RMD160 (wl-beta_2.15.9+0.20190919.orig.tar.gz) = b004fccd8b2d322f830dc1147e1d8c0739ae3e7a
 SHA512 (wl-beta_2.15.9+0.20190919.orig.tar.gz) = f58c43d8b9f3496b1a01c3783a990e14d9bd7413216bcca8549092eab27171a6fa9179727b6606c53d710d173f980105f5f9cdfbe982720704381ed9fbe50629
 Size (wl-beta_2.15.9+0.20190919.orig.tar.gz) = 1209434 bytes
