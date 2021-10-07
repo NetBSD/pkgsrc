@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/12/19 12:22:20 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:32:18 nia Exp $
 
-SHA1 (mpegdash-0.1.5.tar.gz) = c6521c62461b2c9cf3b86eedae88a369fb14ddff
 RMD160 (mpegdash-0.1.5.tar.gz) = df8e5298c1c807a3f4605bc75d82e47ab4f5fcac
 SHA512 (mpegdash-0.1.5.tar.gz) = 19ecac5ebb024953af3c603809a0c0de9fe5a3e3a4037c1fff65b35d2f59327cff3efc9fb4629c3f61577134782704b2026007ad95e2d72cd632935b9c6f9bc5
 Size (mpegdash-0.1.5.tar.gz) = 7338 bytes
