@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.48 2021/09/08 22:48:13 gdt Exp $
+$NetBSD: distinfo,v 1.49 2021/10/07 14:09:23 nia Exp $
 
-SHA1 (gdal-3.3.2.tar.xz) = 61bdc71dd611e02137400f7dbbc8f219fa21cf3d
 RMD160 (gdal-3.3.2.tar.xz) = 812d7a48b7bdb200ec6a87e6537bd8f2fbd39c2b
 SHA512 (gdal-3.3.2.tar.xz) = 24599095a9185b3ca5170609cbcf682756c9d5f4c43343034f89c1cbb237bc943702c167731c926eaacfb0d5385dede21e5c5c4c27bc6c3b3b8ee18d9e8ceee5
 Size (gdal-3.3.2.tar.xz) = 12940900 bytes
