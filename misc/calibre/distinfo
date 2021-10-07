@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.106 2020/11/17 01:55:04 gutteridge Exp $
+$NetBSD: distinfo,v 1.107 2021/10/07 14:35:14 nia Exp $
 
-SHA1 (calibre-3.40.1.tar.xz) = 12cea0bed963dde2b58c9cdd4c3c25c735d6d15a
 RMD160 (calibre-3.40.1.tar.xz) = 72bf801e4164dcebec22ba36162fe034c9edad54
 SHA512 (calibre-3.40.1.tar.xz) = 1333c24e384ccae79d264055e1e84b8a13919e68d9290a277e07bb7f3b4579d15090859b50945672c155a438a2bf9e5f088f094bc30781af7c5d0d9ccd7226f4
 Size (calibre-3.40.1.tar.xz) = 38365300 bytes

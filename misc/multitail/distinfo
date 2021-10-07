@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/01/04 22:05:37 roy Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:35:32 nia Exp $
 
-SHA1 (multitail-4.0.6.tgz) = f8c52ab48e85411c7cd1540509995bf2f4cfee25
 RMD160 (multitail-4.0.6.tgz) = 9d1f6d4e705c09b6e69afc965d48428331721bcc
 SHA512 (multitail-4.0.6.tgz) = b8ef7dda4e0e76b431c3ea3721284cdf7c45b5a8b93bd0f72ba64304530fe549dfc0416ace4b37070fd6a838b1c6bea44a91e1965bb12c433e1c9de5136e8ce4
 Size (multitail-4.0.6.tgz) = 124429 bytes

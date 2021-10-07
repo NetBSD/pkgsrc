@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/22 00:11:01 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:35:31 nia Exp $
 
-SHA1 (mic-paren-3.13-d0410c7d805c9aaf51a1bcefaaef092bed5824c4.tar.gz) = 96b405e62f29c7e1f5ebe317b43a4c93b3ab58d4
 RMD160 (mic-paren-3.13-d0410c7d805c9aaf51a1bcefaaef092bed5824c4.tar.gz) = b43c189b8b566d3975d5850aadc93d6e698ba215
 SHA512 (mic-paren-3.13-d0410c7d805c9aaf51a1bcefaaef092bed5824c4.tar.gz) = 3c4bfc6f34fff247b5e928b0c351c924b4491c1fc5ca6a680e33790fe629b63685cf4d95d76a27e258a7e2c3c5318e0bc62935e034e0ddf8756040e4d092d394
 Size (mic-paren-3.13-d0410c7d805c9aaf51a1bcefaaef092bed5824c4.tar.gz) = 15154 bytes
