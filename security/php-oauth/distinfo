@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/01/03 06:54:03 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:54:20 nia Exp $
 
-SHA1 (php-oauth/oauth-2.0.7.tgz) = 8630b05e6bf9d9bbafa7a6109fabaca03c942222
 RMD160 (php-oauth/oauth-2.0.7.tgz) = c8f17903a0c19512df5e4ae05ddd7b0c262a392f
 SHA512 (php-oauth/oauth-2.0.7.tgz) = 261bbe6d1c4299f44ce40030b3959e26f2535c70d01b7a4e870d14c84b0a01e68484e61907554d720667fa08a2ec00b7d43cf2f523800c832f02b093e7b6534a
 Size (php-oauth/oauth-2.0.7.tgz) = 78926 bytes

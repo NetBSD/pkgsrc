@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/30 01:41:28 khorben Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:45 nia Exp $
 
-SHA1 (ssdeep-2.14.1.tar.gz) = 7064d5cc11cb22b7ef2dc952bdac035e548cbffd
 RMD160 (ssdeep-2.14.1.tar.gz) = f345a5e23563fe6f1dd56887c086bdcca4667d4d
 SHA512 (ssdeep-2.14.1.tar.gz) = 6f45a961800fcbd4a5c8f1dac9afc7e0791ecd5aded28f3048d4ade68870a8e928704c80a5778a463b9492d561ae4568785c2b8c873f485d5d9c500d74955f07
 Size (ssdeep-2.14.1.tar.gz) = 86366 bytes

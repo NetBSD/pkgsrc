@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/04/06 13:52:14 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:17 nia Exp $
 
-SHA1 (pcsc-perl-1.4.14.tar.bz2) = dd1fd3a7272c8221e16c3e83160e23fba1c4e494
 RMD160 (pcsc-perl-1.4.14.tar.bz2) = 2de4973023785845f4362d5eaed8b69b0712452d
 SHA512 (pcsc-perl-1.4.14.tar.bz2) = 202aca1c122c8b91340411a4930f6d0d6f3d439d1783b7ad5e2a727bb015704045d66b5b5ba51f567672a6256606ad26e8390b9f243e329d6ccd05146edc229c
 Size (pcsc-perl-1.4.14.tar.bz2) = 36563 bytes

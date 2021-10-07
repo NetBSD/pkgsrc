@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/10/27 19:49:44 kamil Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:54:45 nia Exp $
 
-SHA1 (srm-1.2.15.tar.gz) = 137bb9b94819de48b8061e4185552b6170bbf9c6
 RMD160 (srm-1.2.15.tar.gz) = 61b674b21acf48ec837fcaf59836abdda62bc496
 SHA512 (srm-1.2.15.tar.gz) = a8ec78473c55b70557fca88f525998ed51df3be58618b9da220e1bb73df013163f4e1563cbe2062b9cf1512152afeb9004b5be0be69cc1278c0d28597310dfd2
 Size (srm-1.2.15.tar.gz) = 132031 bytes

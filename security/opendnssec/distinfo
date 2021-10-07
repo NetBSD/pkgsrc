@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.42 2020/06/11 09:41:56 he Exp $
+$NetBSD: distinfo,v 1.43 2021/10/07 14:54:05 nia Exp $
 
-SHA1 (opendnssec-1.4.14.tar.gz) = 3ac11d815572750f604707f87d68db7d593d2e86
 RMD160 (opendnssec-1.4.14.tar.gz) = c323611792c738201ea47f6874a00d127b19c6e2
 SHA512 (opendnssec-1.4.14.tar.gz) = b814d13ef95dcf238f3e9d6bb3dc489328d7a4a5db9e32214ac29716043f9e635e62fb3795b9d5d75e8215373f9330ea5a17840830f5e467067f305a610bee6b
 Size (opendnssec-1.4.14.tar.gz) = 1037188 bytes

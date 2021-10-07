@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2018/07/01 17:23:43 joerg Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:53:44 nia Exp $
 
-SHA1 (Botan-1.10.17.tgz) = b36541b441fb116caf068b6157ad7d01d71ecd2e
 RMD160 (Botan-1.10.17.tgz) = 77336d0c9a10c03e86ad5946f1e357ec70cee9e7
 SHA512 (Botan-1.10.17.tgz) = a47cab3af113652247c8efc8b0f043eb62175eaa8554833d5fc3016ea94dbdd8aa722ab9b5226cc5f133afbcc088d54362111630eaa4594812c39925cc3c8649
 Size (Botan-1.10.17.tgz) = 2706678 bytes

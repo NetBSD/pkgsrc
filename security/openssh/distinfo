@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.112 2021/09/26 15:37:51 wiz Exp $
+$NetBSD: distinfo,v 1.113 2021/10/07 14:54:06 nia Exp $
 
-SHA1 (openssh-8.8p1.tar.gz) = 1eb964897a4372f6fb96c7effeb509ec71c379c9
 RMD160 (openssh-8.8p1.tar.gz) = 6ba3f5af90f960e1add6f81c1173adee8197e705
 SHA512 (openssh-8.8p1.tar.gz) = d44cd04445f9c8963513b0d5a7e8348985114ff2471e119a6e344498719ef40f09c61c354888a3be9dabcb5870e5cbe5d3aafbb861dfa1d82a4952f3d233a8df
 Size (openssh-8.8p1.tar.gz) = 1815060 bytes
