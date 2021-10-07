@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/09/06 19:47:38 wiz Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:29:04 nia Exp $
 
-SHA1 (Convert-UUlib-1.71.tar.gz) = 76dfa13942de7a7ac52dc7f44ceb6b5ddffc1e37
 RMD160 (Convert-UUlib-1.71.tar.gz) = 1b5338d4114c825ba8475db010b88800de5d58dd
 SHA512 (Convert-UUlib-1.71.tar.gz) = 6ca67737a29709903322f506063c4c65e17a15a2cef40959cbf1309ba608867516f554bdec426e217ec610f84e76197d41cb8a2ac7d57fb640728b0e2ae5ef31
 Size (Convert-UUlib-1.71.tar.gz) = 277227 bytes

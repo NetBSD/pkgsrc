@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/10/24 23:30:56 wen Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:29:06 nia Exp $
 
-SHA1 (Unicode-MapUTF8-1.14.tar.gz) = 4bb72a4f923d32b3c786b7aaef4dab21ab719f95
 RMD160 (Unicode-MapUTF8-1.14.tar.gz) = 3a53bf822e28348b139d1480c5838bd8b428fd2a
 SHA512 (Unicode-MapUTF8-1.14.tar.gz) = 6e7a3d32a97661213da54666ef3012ccaa4795704186b274df49a72da5e22be089c08b90e1ee808a0481aa298b17a74da6029410080c54fafd4845597bc9e826
 Size (Unicode-MapUTF8-1.14.tar.gz) = 19646 bytes

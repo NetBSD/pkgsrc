@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/21 23:30:21 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:28:58 nia Exp $
 
-SHA1 (dsk2rom-0.80.tar.gz) = ed1ff7e18f9698cc1141197cb188de326a38b7b0
 RMD160 (dsk2rom-0.80.tar.gz) = 0d32fe2519013a77e6b28e0c4e833afc101fd6d8
 SHA512 (dsk2rom-0.80.tar.gz) = 846736ee6a552eaef48bfae76a123ec1dda4304f7e5ab09a5c70c939a1586c29b976e6cb55de0f75ed61e98be323f4be540ee5c4c172f5d5822c351406874fc2
 Size (dsk2rom-0.80.tar.gz) = 28727 bytes
