@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/03/21 10:21:07 fcambus Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:30:21 nia Exp $
 
-SHA1 (atasm109.zip) = 2f2ca23937a92303ca75ac6002c38995999e521d
 RMD160 (atasm109.zip) = ced844bef7075114169693ee576c2697baf782e5
 SHA512 (atasm109.zip) = 7daed20c0fa4a2bf20372e6c102a5e0ef9072fc9fea59d2990209572167f71f4d432abf1176ea2365d894b9e3666f6290b93c25765c71d0741bc8bf144d5561e
 Size (atasm109.zip) = 397661 bytes
