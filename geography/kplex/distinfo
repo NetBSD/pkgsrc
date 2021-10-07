@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/04/29 08:49:45 plunky Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:09:26 nia Exp $
 
-SHA1 (kplex-1.3.2.tgz) = 67e37e5512ab437f1306375daa363e55ae42e385
 RMD160 (kplex-1.3.2.tgz) = 90c12558523e93be99bacc658a58b7edae72eef5
 SHA512 (kplex-1.3.2.tgz) = 2507c87b056a6a8142bc78255201bbdc8a0e53891d00282f4280ca90eff4c6fc267aae260cdca58bbaa51a589871bcb73a3e3328ce949d7711b1d507757139b9
 Size (kplex-1.3.2.tgz) = 85591 bytes

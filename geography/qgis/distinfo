@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/09/15 19:06:15 gdt Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:09:31 nia Exp $
 
-SHA1 (qgis-3.16.11.tar.bz2) = 3ec3e0fe4a1adf685e52801ea0a144387b309407
 RMD160 (qgis-3.16.11.tar.bz2) = bbcda69299719546c0e3cc406e86de7af0640a5a
 SHA512 (qgis-3.16.11.tar.bz2) = ee7606c6402348d62a4690198d36936a97f12b7cde85ab6aada2fa5f895f24fb571b3c8aea0d3d8b16fa6cd677b2686379b083368c40cf2867fb6b6d15908917
 Size (qgis-3.16.11.tar.bz2) = 117284587 bytes
