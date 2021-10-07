@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/11/28 13:37:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:01:52 nia Exp $
 
-SHA1 (Text-Unidecode-1.30.tar.gz) = 13c28520896a0073e0ea9333a2b6b770dcf17d6e
 RMD160 (Text-Unidecode-1.30.tar.gz) = c4f5ba6ac84eef0ce4999935b7a32da0576c8720
 SHA512 (Text-Unidecode-1.30.tar.gz) = 194f8aba0dcdc7a53338b86370b7cfb6c60d4a8982ada6084f0eb0ccd66ce461b831b6daf04932f039ff1b983dc3cd0c0ced1e8b455955d2699c36120b41a526
 Size (Text-Unidecode-1.30.tar.gz) = 137977 bytes

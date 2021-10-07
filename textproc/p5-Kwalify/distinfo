@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/09/02 12:40:05 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:01:34 nia Exp $
 
-SHA1 (Kwalify-1.23.tar.gz) = ef6e2d2b4306d4456cc85a61358c8c63198bbc59
 RMD160 (Kwalify-1.23.tar.gz) = 3571a1f3b7c923a7cde5f935043a55cb497978d7
 SHA512 (Kwalify-1.23.tar.gz) = 08eb752b5468e14c6cea5ee988e6328cfd839295ec34dd27e3d4f045c4da44b49fba34321af8691ffca0f6b39038abb0a3b09c89fba69cbe79142cd13927dc38
 Size (Kwalify-1.23.tar.gz) = 16613 bytes

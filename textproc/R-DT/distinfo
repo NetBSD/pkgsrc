@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/09/04 12:34:42 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:00:35 nia Exp $
 
-SHA1 (R/DT_0.19.tar.gz) = 0348a853841121251a5ac4acc71b7516ff91afd0
 RMD160 (R/DT_0.19.tar.gz) = c4f106df3393af536dbd232278a49950152c4bec
 SHA512 (R/DT_0.19.tar.gz) = 9f3ae844aff34b432bd61d258c28f954dafab28565522b2e7006b3e0df2793562ce49dd52388c2666a0174dc62cddbf998582f5472db52d1699cf7ddb6b9453f
 Size (R/DT_0.19.tar.gz) = 1545669 bytes

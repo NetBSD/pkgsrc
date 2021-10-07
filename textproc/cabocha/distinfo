@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2016/09/09 02:13:59 taca Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:00:52 nia Exp $
 
-SHA1 (cabocha-20160909/cabocha-0.69.tar.bz2) = 9196098628c5d1f0b83b371a03352b6652c04001
 RMD160 (cabocha-20160909/cabocha-0.69.tar.bz2) = 3758be284222090884a20066cad14a873c070e2a
 SHA512 (cabocha-20160909/cabocha-0.69.tar.bz2) = 44890b87da0ad998272c63d0f8d446e3d16b1e42af0bfeb4cd9ca16dfe6fd96d63c7f5c1a2a37cd145fd4f37fdb62d6176b34876229181e8cbf4c33c7f04b1c9
 Size (cabocha-20160909/cabocha-0.69.tar.bz2) = 84638995 bytes

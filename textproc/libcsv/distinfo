@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:07:00 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:21 nia Exp $
 
-SHA1 (libcsv-3.0.3.tar.gz) = 2f637343c3dfac80559595f519e8f78f25acc7c1
 RMD160 (libcsv-3.0.3.tar.gz) = 8cf16e810924dd0f41b0444cf2a02d5e6da2ab21
 SHA512 (libcsv-3.0.3.tar.gz) = e657b166ce9e0159aab14edda9b5513922ee1a307065ba264342457629b13e8380f96b3ebabc690fd868dad23efc624362272ffe7c8b2acba8ad9e920dde7172
 Size (libcsv-3.0.3.tar.gz) = 331491 bytes

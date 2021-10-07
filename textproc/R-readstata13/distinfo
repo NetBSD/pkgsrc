@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/09/11 01:29:30 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:00:37 nia Exp $
 
-SHA1 (R/readstata13_0.10.0.tar.gz) = 9d2532189e8163249af5d93869242008eed8ac81
 RMD160 (R/readstata13_0.10.0.tar.gz) = c18c871642d314711e53d50264dd245c40980545
 SHA512 (R/readstata13_0.10.0.tar.gz) = b17cd615cb1c17727d75e05c0c93aa325fa313b84d12b1e09e3887ae88cd70e699131bcab98718a430572ef39a8973622651ea00a9c4780010d97d4b76d7d8cd
 Size (R/readstata13_0.10.0.tar.gz) = 64282 bytes

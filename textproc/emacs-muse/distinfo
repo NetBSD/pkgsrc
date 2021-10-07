@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/09/08 22:17:57 hauke Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:00:58 nia Exp $
 
-SHA1 (muse-3.20.tar.gz) = 08acfbe3c382ba261c11d9c4565cc5f19a490115
 RMD160 (muse-3.20.tar.gz) = 08ddeb181d5ef64863ecd90545cc028bc20d2d5b
 SHA512 (muse-3.20.tar.gz) = 23cd0e864586f907418753bc3284afde51b4f8559c5d043c52baa70de70ec4a845d9e8362b93e701308dbbd662e3429035df8ad440916e61d5909498cd55f7be
 Size (muse-3.20.tar.gz) = 411316 bytes

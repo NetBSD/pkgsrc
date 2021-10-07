@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 13:32:51 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:00:36 nia Exp $
 
-SHA1 (R/data.table_1.14.0.tar.gz) = 6ca317410f49abd751905572e943fb3f09790eb0
 RMD160 (R/data.table_1.14.0.tar.gz) = b724e1a468411d678fbe29806b921e8251fdcdbe
 SHA512 (R/data.table_1.14.0.tar.gz) = db90998904270f42cc654faa0b333f8e720e4044c7f2c82f52efbb69e1ed30c5b2c1b034f7a5baff4543151eda7fb33aa454817889ac95a5d17d6aba364396df
 Size (R/data.table_1.14.0.tar.gz) = 5303849 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/01/24 16:17:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:02:38 nia Exp $
 
-SHA1 (serd-0.30.10.tar.bz2) = 35b480488a09c86a0638cea1e0ebdd01814d587b
 RMD160 (serd-0.30.10.tar.bz2) = 4bc6e3b680bceca10d4d9e9ae3ae5aaf19c9224b
 SHA512 (serd-0.30.10.tar.bz2) = ed7b49abfd3dc3a724b047f5f0cd07b811596330c96d91c0ce90540440f03260e05daee76c3ccccc3d4ca39afbbd4f3d07decbb601730e90c133a09c640c0006
 Size (serd-0.30.10.tar.bz2) = 586386 bytes

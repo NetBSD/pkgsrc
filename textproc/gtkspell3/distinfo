@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/11/13 13:33:29 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:02 nia Exp $
 
-SHA1 (gtkspell3-3.0.10.tar.xz) = 5a77b84891f6877fcf273c68ae8187912068304f
 RMD160 (gtkspell3-3.0.10.tar.xz) = db7e6f023e55fda96f630e88f7e9d945ec2dc6b9
 SHA512 (gtkspell3-3.0.10.tar.xz) = 3b1ceaa9ffa06bd3f6dae39c95db951588e5cf2edf4f551cac6972822ba230af3415c5045fa24f7a4dfe05c2e386ab3f67cb80cb779576b4e54293b7b9fbc28e
 Size (gtkspell3-3.0.10.tar.xz) = 300968 bytes

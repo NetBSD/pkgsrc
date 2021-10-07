@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:29 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:00:59 nia Exp $
 
-SHA1 (ezxml-0.8.6.tar.gz) = 50eb51d7a0f87ce39aa9a7661955a0c89cbd3e7f
 RMD160 (ezxml-0.8.6.tar.gz) = 6fa98f9a4bfabeb53d3f5ffc717a3e915271b124
 SHA512 (ezxml-0.8.6.tar.gz) = 5a83dfe3c2777cfce3b92381bf1a9ddba0d7900b37ad896f2635bf642ea91430f989ffaced96c8b08f3f1d1d68bedc860092fc2bbee237763aafbafd41f52c39
 Size (ezxml-0.8.6.tar.gz) = 16479 bytes

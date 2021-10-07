@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 13:39:59 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:09 nia Exp $
 
-SHA1 (dicttoxml-1.7.4.tar.gz) = dc5c2776518ae57ac5a567baa652e7abd8554b76
 RMD160 (dicttoxml-1.7.4.tar.gz) = 0e5d2626b7388226abf8213d6c2d67961f75c251
 SHA512 (dicttoxml-1.7.4.tar.gz) = 91abcf2b9b248717618e9fc1c8694e881b9deaa16438dd4674f94a22b4aabfdab3b13f95c3d44a60577d49eca82fb268f59b33d1312cf5388bdaf949a2865cbf
 Size (dicttoxml-1.7.4.tar.gz) = 18190 bytes

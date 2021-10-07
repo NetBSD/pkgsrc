@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 15:44:55 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:07 nia Exp $
 
-SHA1 (hxt-regex-xmlschema-9.2.0.7.tar.gz) = 78b3aa4713bf267afcb05d33929664322ef234ae
 RMD160 (hxt-regex-xmlschema-9.2.0.7.tar.gz) = a501549eacbdacd562e1f095ba85b4e2a5615630
 SHA512 (hxt-regex-xmlschema-9.2.0.7.tar.gz) = 8ce1b2c1bcc79f8072d5b1dcfc9d184bb3286065b290e4df80fd02d454725d97d4346554a913a167eb97a45fba43b5000a08e8a9cf1dac129ff261b917d2e4cf
 Size (hxt-regex-xmlschema-9.2.0.7.tar.gz) = 35907 bytes

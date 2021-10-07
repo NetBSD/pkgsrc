@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/11/10 06:29:37 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:01:40 nia Exp $
 
-SHA1 (Pod-Readme-v1.2.3.tar.gz) = ef8f6cbc9c8a43dc4ce2ec451215820142fc4aa6
 RMD160 (Pod-Readme-v1.2.3.tar.gz) = 337851115f9aba8d37e857795cf2a4bff7331e34
 SHA512 (Pod-Readme-v1.2.3.tar.gz) = c9518d3fd3082d6c4bb87300e04e29cb14459c08e3573bac6542ab4d4842389eaabb0d37fdc018ddb971e876b30078d14ce007840c867a7a81c0952c77c03a66
 Size (Pod-Readme-v1.2.3.tar.gz) = 37001 bytes

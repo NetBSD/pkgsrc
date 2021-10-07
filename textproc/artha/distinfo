@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/11 09:54:50 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:00:39 nia Exp $
 
-SHA1 (artha-1.0.5.tar.bz2) = 82142d2a6392b4b7f12df2b3d33ab75f576f56fc
 RMD160 (artha-1.0.5.tar.bz2) = f106ae78af70adaf85ebca9e1b69a9806fcca3c8
 SHA512 (artha-1.0.5.tar.bz2) = 37741cce4961dd9c792f6331e7e8d8606d4b314f92765dcea74e2a57b921798ff9ed0399aa3ef94b2b21cd67795bdf002ae96646ffb004d0abdbf1e80dee37b7
 Size (artha-1.0.5.tar.bz2) = 377944 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/10/21 06:58:09 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:19 nia Exp $
 
-SHA1 (rst2pdf-0.98.tar.gz) = 87fcc70ee33ec11e759649c86e41a9df81438f99
 RMD160 (rst2pdf-0.98.tar.gz) = ffcf967ba3ccc7cb1241a7c2a8ff58be14298175
 SHA512 (rst2pdf-0.98.tar.gz) = f8fcc269139e1d163fc21a5f92262c1e106b98c8807d45f3b53f9e9164fa667e3508bfe7ca7fd100e7f60e4105980c15dedfe546f0a81d1cc02b3a24b8dd7e48
 Size (rst2pdf-0.98.tar.gz) = 11333895 bytes

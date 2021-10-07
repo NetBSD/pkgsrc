@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/18 23:13:39 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:01:06 nia Exp $
 
-SHA1 (edit-distance-0.2.2.1.tar.gz) = d5feacb084ede6e1164813a5bf8ada890cc2ebad
 RMD160 (edit-distance-0.2.2.1.tar.gz) = e646f0712750d3d2b68d2b4dc40d93d726e27b56
 SHA512 (edit-distance-0.2.2.1.tar.gz) = 67d19c9f5712191f88641d32ff0b84aaf05c2acd71cfa81a17675690ac9076b34aff687afa8501f8b22ddcece12a439e053265d14b70dc155b0e08406050fdd7
 Size (edit-distance-0.2.2.1.tar.gz) = 13228 bytes

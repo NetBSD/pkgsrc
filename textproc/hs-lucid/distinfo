@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 10:13:05 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:07 nia Exp $
 
-SHA1 (lucid-2.9.12.1.tar.gz) = d2cdeafbac0068ec0e086ab7201121fd2675f714
 RMD160 (lucid-2.9.12.1.tar.gz) = aba743b6ab2b6aa2668fb7de4ad2e982e4916e27
 SHA512 (lucid-2.9.12.1.tar.gz) = 2572047a2711ae26b3e736ac73acb5c154d7493d47323853fda0503fa75ded35df9d7819f43879583b097718ee90235c71d8c9839c4a89ceecaa8a830b077651
 Size (lucid-2.9.12.1.tar.gz) = 19988 bytes

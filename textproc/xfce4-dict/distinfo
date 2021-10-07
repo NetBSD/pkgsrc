@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/10/19 22:49:43 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:46 nia Exp $
 
-SHA1 (xfce4-dict-0.8.4.tar.bz2) = a102343f7d031900a1d989de1d70df694522f20f
 RMD160 (xfce4-dict-0.8.4.tar.bz2) = 9324460bd59360dcea33bd76c0a18f601a673461
 SHA512 (xfce4-dict-0.8.4.tar.bz2) = f662b94671f2179cc93010e9ff6ad7f3425cfafeb8d7c635fefb8e816d78273f0135d6c7ff3ed143e5e01985eb4275ac89827d197ed059fbfa79df69b327f253
 Size (xfce4-dict-0.8.4.tar.bz2) = 526227 bytes

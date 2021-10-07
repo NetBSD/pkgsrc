@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/24 15:40:07 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:01:07 nia Exp $
 
-SHA1 (jira-wiki-markup-1.3.4.tar.gz) = b9ff16dc30e71e4885644d7f3e86adb974cc2763
 RMD160 (jira-wiki-markup-1.3.4.tar.gz) = b4eb3a9d8fb464dc0842f1b883d9c5889bf17c10
 SHA512 (jira-wiki-markup-1.3.4.tar.gz) = 762ebecfd8fd903ae348a9f09fa8c610e48a5a8b1b5177a749cb51f94d01d7fdf6f8e078f48797ae94ad8e352d06841189c649ef5131b41470d1390a3e23f481
 Size (jira-wiki-markup-1.3.4.tar.gz) = 23759 bytes

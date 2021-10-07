@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/03/14 15:47:03 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:32 nia Exp $
 
-SHA1 (markaby-0.9.0.gem) = 4875fa004af4327d6739db81234072c30de6fd95
 RMD160 (markaby-0.9.0.gem) = 809ebcfe64e63f3bbaa8a9e5f99fe45f6deb968d
 SHA512 (markaby-0.9.0.gem) = 89c348029648fe22366f6aa2d6335b5fa8d456bfafebab4d4394ea6747a38a82cabff94b5d896849fa1bf9540a4e414760eb51070b21c8d47073bf3b11cee4f9
 Size (markaby-0.9.0.gem) = 23552 bytes

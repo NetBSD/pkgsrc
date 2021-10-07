@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/25 13:59:20 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:50 nia Exp $
 
-SHA1 (pxp-1.2.8.tar.gz) = f8482217db665a8d9b25023ee231f6419c127142
 RMD160 (pxp-1.2.8.tar.gz) = 8b15bc7529a46f533fa258c837359ef7d69a2086
 SHA512 (pxp-1.2.8.tar.gz) = 3292bfbda494066e454331a9cfc56b03f55afe8548bdf24fea09d9bc0a03c333c027f7b527983bd9b4d659458c95acf7e3fc251c72d26ab3502f52067c9f2549
 Size (pxp-1.2.8.tar.gz) = 619689 bytes

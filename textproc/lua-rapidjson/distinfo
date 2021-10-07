@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/07 11:53:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:26 nia Exp $
 
-SHA1 (lua-rapidjson-0.7.1.tar.gz) = 09322ef9a91596afbc2bf5303a8aa7c1c10af78d
 RMD160 (lua-rapidjson-0.7.1.tar.gz) = d088e03472480a1847c7ff2be03c9fa551d90968
 SHA512 (lua-rapidjson-0.7.1.tar.gz) = e84157ddf000605cf41faf359eb51223867203cccd3c0d3597b1bc8e237ad6eda85ddf7854d97f1c57551e601f9a4389ac51143b4c51c27d21344b71e5a084dd
 Size (lua-rapidjson-0.7.1.tar.gz) = 196402 bytes

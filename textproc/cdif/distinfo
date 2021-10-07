@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/02/20 13:19:13 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:00:52 nia Exp $
 
-SHA1 (cdif-2.14.tar.gz) = 73744770e78067cb2d5e19c9caa538635597b44c
 RMD160 (cdif-2.14.tar.gz) = 47804bf34afa8ec049c7f9b1231d41ac2155c23a
 SHA512 (cdif-2.14.tar.gz) = 9bb463073ae3e058c442601d2ab40472bbf1f3b801135b3a95a5410c9f57e6fc11e505194aee5f77fc7379c1cce6c0fac4ff902f2c9f45f73f8f881976f76067
 Size (cdif-2.14.tar.gz) = 17111 bytes

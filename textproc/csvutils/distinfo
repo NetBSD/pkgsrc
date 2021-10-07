@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:07:00 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:00:54 nia Exp $
 
-SHA1 (csvutils-0.9.3.tgz) = 0153f39f899c85cdf276316ebadfa4b2b537c7b3
 RMD160 (csvutils-0.9.3.tgz) = 0805b32ac3df05a399bdf0028114985afd3118d7
 SHA512 (csvutils-0.9.3.tgz) = 822b2ac24083bedd2a10fa037251ada2332887b5ba209185c08f66ae8c7485995395fa2f8bc48cc0861adf7d07fbc72198876dccaad4fd6aa2a709c0f6ee280f
 Size (csvutils-0.9.3.tgz) = 47046 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2019/12/19 22:24:01 joerg Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 15:01:21 nia Exp $
 
-SHA1 (latex2html-2016.tar.gz) = 667308a050a071106acc573f4b88f919bb0809c9
 RMD160 (latex2html-2016.tar.gz) = 1e400a65753ee8520acf1d3c4f9356d1e58fa033
 SHA512 (latex2html-2016.tar.gz) = 2a7d12bda145101c4099cd0efba7ccfd18eaa858c9ffe5223d0bc25eb57d298b94961289a6a79443000116a358ea8513d8054933f902aad21a67a2c0c2e41445
 Size (latex2html-2016.tar.gz) = 1149971 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/15 13:08:52 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:46 nia Exp $
 
-SHA1 (xfpt-0.09.tar.bz2) = f556d54b9e4491dedcb5ece7b45244b13c09cce1
 RMD160 (xfpt-0.09.tar.bz2) = 656edeb5fd5126f04260b53d3025826230ea6ccc
 SHA512 (xfpt-0.09.tar.bz2) = 1e38f5708045e90ee89bc014bb065fde65baf8e9146e0d785a73fb679708e5fc9e6be6c3277697f20053706040544ea46dc539efb55bc66f569044e71afc4f2c
 Size (xfpt-0.09.tar.bz2) = 143944 bytes

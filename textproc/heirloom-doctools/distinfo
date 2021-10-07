@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/03/10 12:49:32 leot Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:03 nia Exp $
 
-SHA1 (heirloom-doctools-160308.tar.gz) = d5e58c868237b247f660161d5fa514834f337027
 RMD160 (heirloom-doctools-160308.tar.gz) = 6e484f4fd49ed1c4f59eaa20c8f176da2de8b23e
 SHA512 (heirloom-doctools-160308.tar.gz) = 46a5b2969a807abeb4a45eb63db918c903fe02226edddccabc4eabc7e6ad77dd1c0cf633fe55981f16907cb96f3a94a769383966d2f5f5dcde276734f7ad00d7
 Size (heirloom-doctools-160308.tar.gz) = 4626836 bytes
