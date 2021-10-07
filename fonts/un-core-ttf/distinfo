@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:05:27 nia Exp $
 
-SHA1 (un-fonts-core-1.0.2-080608.tar.gz) = 4245d08649a0acc26d8c73e707b61371b9370e7a
 RMD160 (un-fonts-core-1.0.2-080608.tar.gz) = 6ba1f48a829b74109cbf727f332b5ebf8b606bb4
 SHA512 (un-fonts-core-1.0.2-080608.tar.gz) = ab7c394931b5dcc6a7f6db89b69928ee769cffcca08e1266ecf4864bfea06d9dacc45c4d821786de8dad04b84b0de78a9db84bfcbb0ec506999dbb791570d941
 Size (un-fonts-core-1.0.2-080608.tar.gz) = 20117428 bytes

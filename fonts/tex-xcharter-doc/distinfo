@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/06/05 07:11:25 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:05:25 nia Exp $
 
-SHA1 (xcharter.doc.r59394.tar.xz) = 9924f4c4c4451fcf60c1e324cd237da3d4027ec2
 RMD160 (xcharter.doc.r59394.tar.xz) = 66ff527dc1b8017347a7b5679b5f972cfa12a3d2
 SHA512 (xcharter.doc.r59394.tar.xz) = ef2c193d4d6fbcf7a616b52d70530ccafaa72c524a475176b421bfee137b95ced0323f24d0f93f32dc9228cdf6005f82ee2e741fd2e0bfb6d7cc2de27aa5a14a
 Size (xcharter.doc.r59394.tar.xz) = 445936 bytes

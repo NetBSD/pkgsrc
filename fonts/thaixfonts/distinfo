@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/07/06 15:45:47 scole Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:05:26 nia Exp $
 
-SHA1 (thaixfonts-1.2.7.tar.xz) = 366e660581f33428592ed63727916ce12eeb0c90
 RMD160 (thaixfonts-1.2.7.tar.xz) = 15f32b37a231537d9084f907f0b2290736119205
 SHA512 (thaixfonts-1.2.7.tar.xz) = 697167a1718af84ab358d8fc79b1cf36f716641beca4974d0483ae5cd5d01f9c5e0c0f4bbcbec02792ee2bf1d913b75666d8f6f97d09e5424d888dfc1354ccd2
 Size (thaixfonts-1.2.7.tar.xz) = 95452 bytes

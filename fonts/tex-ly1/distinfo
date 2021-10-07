@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/01/24 10:37:53 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:05:01 nia Exp $
 
-SHA1 (tex-ly1-47848/ly1.tar.xz) = 9501ccf6f7c80787ef340f0212ea774dada36160
 RMD160 (tex-ly1-47848/ly1.tar.xz) = ec96fef8efd7b9e4ed5ff8d352fc713343ad19df
 SHA512 (tex-ly1-47848/ly1.tar.xz) = a744e7d5d5670dbc7317412684f41d57c584cf70b5b4356993bfdec8c7f5e3cc7581fe0a1432c3e8d3126c2f3d95caa8684eaf60be5e5f32f14d28febffb2fcf
 Size (tex-ly1-47848/ly1.tar.xz) = 54904 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/03/11 09:45:45 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:03:54 nia Exp $
 
-SHA1 (cyr-rfx-20001007/cyr-rfx-koi8-o-1.1.tgz) = bcf7ab65b34e2388d6d5a62065f0b80be7f15976
 RMD160 (cyr-rfx-20001007/cyr-rfx-koi8-o-1.1.tgz) = 0908e7482ada005fa2a9d8e526a523e682a3d3d4
 SHA512 (cyr-rfx-20001007/cyr-rfx-koi8-o-1.1.tgz) = 8dea5265cbe016ba2d317db37d92bc7b2a9f68e134d78cc73069dc87e46ed5ff05a252516c409013875fbee0a6291fc91a58410a57f4dc1fcf6adcb5c723dd8e
 Size (cyr-rfx-20001007/cyr-rfx-koi8-o-1.1.tgz) = 471735 bytes

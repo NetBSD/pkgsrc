@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/06/21 06:13:16 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:46 nia Exp $
 
-SHA1 (tex-fontmfizz-43546/fontmfizz.tar.xz) = 18e5b1c328b1e57a2f6249f4f6a50889437fd0fb
 RMD160 (tex-fontmfizz-43546/fontmfizz.tar.xz) = 726f51c632705cf696c0f0a1256ddb9a10507964
 SHA512 (tex-fontmfizz-43546/fontmfizz.tar.xz) = 4a63477035c31d87e3ccece92dfd84b1d0c09052fc2411dd6361d06e59d1d8614c9801bd0218fb0f8b1c36102da15b9a5e8ae0473221ef3d5601d2891b2b0ecc
 Size (tex-fontmfizz-43546/fontmfizz.tar.xz) = 39564 bytes

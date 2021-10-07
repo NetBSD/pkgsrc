@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/09/30 14:29:00 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:03:56 nia Exp $
 
-SHA1 (fira-4.202.tar.gz) = f2dda180b58f669c7b2f6c5df207871c40bcb278
 RMD160 (fira-4.202.tar.gz) = b9e0eba012bf29e450fe01ee60f255ab00eb01c3
 SHA512 (fira-4.202.tar.gz) = fec770fa038f2aa0654f9382f95aa1266a2655970f4c7755b237af9d1c09f47ce719f8daf3afc39812fc69448b9481ee0e2a1414f1d007ad70b4254c92950ebb
 Size (fira-4.202.tar.gz) = 94581261 bytes
