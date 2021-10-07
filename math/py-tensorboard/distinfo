@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/04/06 19:22:41 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:28 nia Exp $
 
-SHA1 (tensorboard-1.7.0.tar.gz) = 0e31bc6edb242313d959af6d04831fda948ffb61
 RMD160 (tensorboard-1.7.0.tar.gz) = c8e182234b23b952ce526f94853edcdc217ae9ac
 SHA512 (tensorboard-1.7.0.tar.gz) = 1a57745675f404f2c566c2e356329c9e2b98899e9b350fe77f7018dae9d2c34d52dfdea8de5e02cc699d1c0819a9ec1d78df51e88f97c09ef2f72f808ab7a800
 Size (tensorboard-1.7.0.tar.gz) = 4311124 bytes

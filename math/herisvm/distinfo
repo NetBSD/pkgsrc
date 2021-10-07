@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/02/17 11:12:15 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:28:06 nia Exp $
 
-SHA1 (herisvm-0.8.0.tar.gz) = 0fdaa5153a9e181720fad921b4568e0e0361814e
 RMD160 (herisvm-0.8.0.tar.gz) = 0cab8c9ed0f373d383d8f524dc121c4e39648572
 SHA512 (herisvm-0.8.0.tar.gz) = f04d85eee8b5597ce8c59b66b6a4e553babb3c68bafdcbbe36f0e385562d1c33ae35e8ee4160b3836bb88462879e3d23e85aacaf2d0467d012eab68aac4181aa
 Size (herisvm-0.8.0.tar.gz) = 15308 bytes

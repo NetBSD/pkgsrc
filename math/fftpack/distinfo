@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:54 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:02 nia Exp $
 
-SHA1 (fftpack-20001130.tar.gz) = 4abc6f2da65d20a228a4478d186b9d2433be392a
 RMD160 (fftpack-20001130.tar.gz) = 27bd3ff8729d4f24c2370d71360395b018ca1fc0
 SHA512 (fftpack-20001130.tar.gz) = 09bb58f09f7f48d4ae32b455cc0e32eb98317b9e89365668311c618a5f8526fce3b45c637e1006758c4c558dc4af3915a9ac925c9887cb1e5e57a8bdca9cc939
 Size (fftpack-20001130.tar.gz) = 50318 bytes

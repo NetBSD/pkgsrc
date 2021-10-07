@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:33:31 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:27:58 nia Exp $
 
-SHA1 (calc-2.02f.tar.gz) = 1a1d54fb90725aacaf1c9308a94be4b813ac4880
 RMD160 (calc-2.02f.tar.gz) = 4ca65723de4a5c3f8ebb3c61191185b48ddb1009
 SHA512 (calc-2.02f.tar.gz) = e39e32ef75477f532c0ddbb56d60fb87390b58009e69052e2a83d0cb160e785448b7179ddcacbfd5390e874bab6bc19b587013a17cc1f876723d6f88e3f5d24f
 Size (calc-2.02f.tar.gz) = 831865 bytes

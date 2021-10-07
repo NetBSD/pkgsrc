@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/07/31 18:39:23 brook Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:27:45 nia Exp $
 
-SHA1 (R/RcppArmadillo_0.9.600.4.0.tar.gz) = dac8ff73458c0915de60935276988895cce9c48d
 RMD160 (R/RcppArmadillo_0.9.600.4.0.tar.gz) = 07c995a457b02ea5c2230e4edc9d9cd5cd0cfa8d
 SHA512 (R/RcppArmadillo_0.9.600.4.0.tar.gz) = 0b756d0e22bfcb5c78b104d277353a0de318b4a07660de8a19f580292b05e3325e094152d0eb5b93729d1cb72ab27ce7932db42b69def1571815fec6256093cd
 Size (R/RcppArmadillo_0.9.600.4.0.tar.gz) = 1360028 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/07/27 02:37:10 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:27:46 nia Exp $
 
-SHA1 (R/abind_1.4-5.tar.gz) = 6b3d85631af7ab574f96c08a6d48ad8bfd281458
 RMD160 (R/abind_1.4-5.tar.gz) = c81ea303a1048e41df9b9e5ac929011bdb9faa74
 SHA512 (R/abind_1.4-5.tar.gz) = b1f5d716e04f748b9d189a4a3e15ad00c2b5a7c69425dbf9f36fcb4fe23f6ff5cec2eb22ec626ab194c1eb88bdfd271b535868b00157efd4acf0faa022d16987
 Size (R/abind_1.4-5.tar.gz) = 21810 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/05 16:56:27 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:47 nia Exp $
 
-SHA1 (R/bbmle_1.0.20.tar.gz) = a50f1bd6c4b7b09cfaf83c97b181362808ae1ab8
 RMD160 (R/bbmle_1.0.20.tar.gz) = 4dc532574961812997e29289c7eee9d0ad9bb8bf
 SHA512 (R/bbmle_1.0.20.tar.gz) = 9ec6479123fed024885926fa0069bbb6664a8bdeb2fd5086f67589de90820fab1caec15793337fe06f880ea61a97abd62531fb49938067d23e4e9ad23eafe26e
 Size (R/bbmle_1.0.20.tar.gz) = 500688 bytes

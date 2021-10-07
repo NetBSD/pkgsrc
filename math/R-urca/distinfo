@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:31:55 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:56 nia Exp $
 
-SHA1 (R/urca_1.3-0.tar.gz) = 582151ed30607daaa82ecd8d7247a11d2f8061c0
 RMD160 (R/urca_1.3-0.tar.gz) = f383dbdb7450d351dbd7015074df01b4fb0f881b
 SHA512 (R/urca_1.3-0.tar.gz) = 08dbf1605f230ab6de18085296a50a0a27922d4f58c16a3fc80df011ab5e5a1edd86f697eefe0364bba90ece22729e1dcfc146c11eba7f27fd7509b51a92f673
 Size (R/urca_1.3-0.tar.gz) = 682935 bytes

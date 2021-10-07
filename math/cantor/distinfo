@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/04/07 12:28:26 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:27:59 nia Exp $
 
-SHA1 (cantor-20.12.3.tar.xz) = 0d6bc0fe84841e34601cb5214be1041f2acee6ba
 RMD160 (cantor-20.12.3.tar.xz) = f634aa5049e359a58b453768004e8684dc23ab4f
 SHA512 (cantor-20.12.3.tar.xz) = 35461a47c9ce4aa4de8ca8496ca33c42691db6be927f30018e174f3234a485c436cca90b6362c8ba325f8bc220a09079069278bdfd08f4510dd7d12ee1a39ed7
 Size (cantor-20.12.3.tar.xz) = 9128948 bytes

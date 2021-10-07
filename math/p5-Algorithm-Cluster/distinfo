@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/12/14 14:36:06 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:28:13 nia Exp $
 
-SHA1 (Algorithm-Cluster-1.59.tar.gz) = 56ceb3aa6a9526fc4536091a9de0d14857ac0e68
 RMD160 (Algorithm-Cluster-1.59.tar.gz) = 7d4fe5f976fc4720c471c56bc296b8fbe9f71196
 SHA512 (Algorithm-Cluster-1.59.tar.gz) = 40cc8ded06fd236fd604595b8ccebfe98b931f629dccc2a6b4aa50c52fb50a4809c1fcea21f1e9b84903cefa66aaad1759f84b8549ac4d70e8dbcb328e31faf5
 Size (Algorithm-Cluster-1.59.tar.gz) = 461420 bytes
