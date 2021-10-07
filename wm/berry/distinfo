@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/05 13:13:42 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:05:03 nia Exp $
 
-SHA1 (berry-0.1.7.tar.gz) = 3825d018e6ed4dfb8972a2f738875954c8647b76
 RMD160 (berry-0.1.7.tar.gz) = 25350583990c24d098bf8bbd29a5bd90b7107651
 SHA512 (berry-0.1.7.tar.gz) = 2920890324d25b71da616960b1914aafcfabf542049696daecfe699ed447ee4e78427067fc1c11e27a466196f9c6d9b7c3b2a36f85c80ac03f5856f38e2e2e66
 Size (berry-0.1.7.tar.gz) = 25570 bytes
