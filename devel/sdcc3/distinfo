@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/12/29 06:29:23 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:44:29 nia Exp $
 
-SHA1 (sdcc-src-3.9.0.tar.bz2) = 0c9f701bff044b58381ebceeed7383e20e860be0
 RMD160 (sdcc-src-3.9.0.tar.bz2) = cbe4d96fabe2eaf11da7c896a85921071c71bf00
 SHA512 (sdcc-src-3.9.0.tar.bz2) = 513f6388c7005e6722ad5220cbd70da04f5848896fb42738b1536fe4fa44906e2d2efe0e3e9f68e0c224e0fd2dedd75663bf382e389392ef038b2ae5f16339b0
 Size (sdcc-src-3.9.0.tar.bz2) = 19155256 bytes

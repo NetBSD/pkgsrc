@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/01/05 11:59:06 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:01 nia Exp $
 
-SHA1 (chai-1.1.2.tar.gz) = 47e19b67cbb98d2192ddd6310702f5c5b1b7efe3
 RMD160 (chai-1.1.2.tar.gz) = 878810cfa53e216b0a825e8eb9597b8adef2328d
 SHA512 (chai-1.1.2.tar.gz) = 81191b11a8c5c6bd1fbb0c43fe7855d6e6d9be54b4d0ddc42582a23b9df03249a91ba8ca50b5b74e76aab73a101377624e041b6c47ea6cba5267d4b58eaf77e5
 Size (chai-1.1.2.tar.gz) = 107807 bytes

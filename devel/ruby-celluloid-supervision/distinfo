@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/10/20 14:32:30 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:44:05 nia Exp $
 
-SHA1 (celluloid-supervision-0.20.6.gem) = 3f29e12927063c350003000cae36afd7e11ab32b
 RMD160 (celluloid-supervision-0.20.6.gem) = 62c3460ee7b656924f936cddfd6e60afe23d91de
 SHA512 (celluloid-supervision-0.20.6.gem) = 511fc707e8c06516867d6bc77ff7cb4fcbb51cc72a827e6af7353c77cc4e9d745dc6d3f35e71296a5a47ef4f3f8078b64c17a862095b9eb91791889433e21a66
 Size (celluloid-supervision-0.20.6.gem) = 15872 bytes

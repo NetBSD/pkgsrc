@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/06/18 03:33:24 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:00 nia Exp $
 
-SHA1 (MooseX-Types-LoadableClass-0.015.tar.gz) = a9d658e417db0304aca065216b9c59d3c96841c0
 RMD160 (MooseX-Types-LoadableClass-0.015.tar.gz) = 157fc4535b4fe5a8eddb6de8d809dd1424fa1214
 SHA512 (MooseX-Types-LoadableClass-0.015.tar.gz) = 337738006fa2fa59801900d5dc353750f299762d94033bdb2cf29fdc29c37e88d4eaf9c36f60eb946ff1f5bcabd362ad002755a515ff8388f2c7e7c39471223b
 Size (MooseX-Types-LoadableClass-0.015.tar.gz) = 31511 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/03/08 14:45:06 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:44:16 nia Exp $
 
-SHA1 (parslet-2.0.0.gem) = 6541392ee69e0523169136ae624e710cfaceb173
 RMD160 (parslet-2.0.0.gem) = 26c0efffd8081b1a3db286ea37aa8d18b471ffaf
 SHA512 (parslet-2.0.0.gem) = 6c132b44505b5bd3196e86b91eebe2500caf0cc241272e58b72bcdf467148f17932f236d7f7528169ae5bd144e8e9890e552b5dca89713ddc6085765c7618127
 Size (parslet-2.0.0.gem) = 79872 bytes

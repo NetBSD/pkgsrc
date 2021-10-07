@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/08/23 11:28:36 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:51 nia Exp $
 
-SHA1 (treq-18.6.0.tar.gz) = f3c95030d373a9dc8e92d56c167e3ae8e5ed1b73
 RMD160 (treq-18.6.0.tar.gz) = 0960e004dc9769df3228915bba439acc41162294
 SHA512 (treq-18.6.0.tar.gz) = 336887790ad94643f5904030349a39481a91e4bd90f8de840130b709ed9edb4c5af7b591d1438fa7c69ed60d7c2316f5c705716d0b2ecd4de71d0a823e6d7bb8
 Size (treq-18.6.0.tar.gz) = 59156 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/08/09 11:45:48 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:47 nia Exp $
 
-SHA1 (Menlo-Legacy-1.9022.tar.gz) = 56ed131ad4d69041e9e27f87264418d78c30d4cf
 RMD160 (Menlo-Legacy-1.9022.tar.gz) = a49f91672f5d28933231288fd7898d69eb2d410f
 SHA512 (Menlo-Legacy-1.9022.tar.gz) = 3e554b77449b540dfb3f48fb3d3980bac591cabcde051d2e1a66a865d8717be7fd87975cee3af1848209b52828597bc719434cddc16a4da8ec63edb153056b0b
 Size (Menlo-Legacy-1.9022.tar.gz) = 34493 bytes

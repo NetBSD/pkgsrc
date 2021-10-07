@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/04/23 07:00:57 pho Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:39:58 nia Exp $
 
-SHA1 (vector-0.12.0.3.tar.gz) = c57440b2887ed62f7c83526f99e3ce8201e433c7
 RMD160 (vector-0.12.0.3.tar.gz) = c030f62c6116e7701ec727b18a9c630a77f70281
 SHA512 (vector-0.12.0.3.tar.gz) = 176646ae612866064303cd200e9d940fec1645bb88176a89adb00df3b9a6df96200e3c9cf85a57af3a1481d6633b353da8e03d7a6c467c40e926275fe8d36853
 Size (vector-0.12.0.3.tar.gz) = 124899 bytes

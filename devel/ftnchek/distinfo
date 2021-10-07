@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2016/08/15 12:46:35 mef Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:39:34 nia Exp $
 
-SHA1 (ftnchek-3.3.1.tar.gz) = 41ef07155bcbb384ff257b1e5e052cbb7635d620
 RMD160 (ftnchek-3.3.1.tar.gz) = 44074d9d8ec04f51a5cfbee71686463b97d8bae2
 SHA512 (ftnchek-3.3.1.tar.gz) = 14c698a6d936ffcd1966822f3b307fc2a70ffd5d58dcff27e10a9491562cff12ef75d98c0e67a7053e106df4f6b4d920e8164950778c5e13e7c15543fa2ecc41
 Size (ftnchek-3.3.1.tar.gz) = 1048638 bytes

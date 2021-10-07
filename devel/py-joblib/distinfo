@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/02/10 08:24:36 adam Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:43:18 nia Exp $
 
-SHA1 (joblib-1.0.1.tar.gz) = 0657629abac7050deea95f262121e3d1775c6612
 RMD160 (joblib-1.0.1.tar.gz) = 7c277a69400d4db410e106515b8a84da13539af6
 SHA512 (joblib-1.0.1.tar.gz) = e985982d9f4fb1abf5f9a55008e4666a06fe7d39324877a89823e9acd7edd447dc342c264a21d4546eb29f285b1b735f25b3064e5c0361be4dbf723860e4fdbe
 Size (joblib-1.0.1.tar.gz) = 316131 bytes

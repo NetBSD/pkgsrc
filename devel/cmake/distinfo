@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.184 2021/09/27 19:02:38 adam Exp $
+$NetBSD: distinfo,v 1.185 2021/10/07 13:39:19 nia Exp $
 
-SHA1 (cmake-3.21.3.tar.gz) = 7efab148bce84d54533414d3387b1bd2f98a82bd
 RMD160 (cmake-3.21.3.tar.gz) = 45bde8ff6281e62efbdc8189ebf2bfad077e3126
 SHA512 (cmake-3.21.3.tar.gz) = 0571b78443906c5ad51fb0fafbd32d565caf628cc150b1190802cb819e8497c108ea6b7ecaa03133df2dbbceb730696d24b4df38468c92088c769ce4076d9e9f
 Size (cmake-3.21.3.tar.gz) = 9630442 bytes

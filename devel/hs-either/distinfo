@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 05:21:34 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:49 nia Exp $
 
-SHA1 (either-5.0.1.1.tar.gz) = abdb613c91d4a801dbdab27bc903055ea150974d
 RMD160 (either-5.0.1.1.tar.gz) = bd81899f9d3c40c5fbbdf6422153d8daea5bda8a
 SHA512 (either-5.0.1.1.tar.gz) = 96b23a9d5f1d2d4dd256251c488e06fa0e8642d849cf61c9de2a4089d2cbe86763062e69f83344eba2f75b30992f3e90ec195bd054f8de386c4c6b477a025c01
 Size (either-5.0.1.1.tar.gz) = 10162 bytes

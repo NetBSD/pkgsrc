@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/09/13 08:44:18 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:56 nia Exp $
 
-SHA1 (Array-Diff-0.09.tar.gz) = 2c76a2e9caea3ba780236182b8c33531a343706d
 RMD160 (Array-Diff-0.09.tar.gz) = 4336d21ef2ba127fcb0bac8a2c09097e44bf78f1
 SHA512 (Array-Diff-0.09.tar.gz) = acfa2e47f39f2af5a04b59c3c708349e603295cf12c699ecbd9184c975e2cdb5edacbafc15c61c976c73ce459e3d2d5ea99fc50c2e4e2e56132dd1c3794e5e6c
 Size (Array-Diff-0.09.tar.gz) = 11335 bytes

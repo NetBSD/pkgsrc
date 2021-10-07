@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/06 17:35:31 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:59 nia Exp $
 
-SHA1 (remake-4.2.1+dbg-1.4.tar.gz) = 90bae9e1a9f87c56579235a228d27330b0b12c37
 RMD160 (remake-4.2.1+dbg-1.4.tar.gz) = d35dcb2d10ed00603050d05aaf63d3a1a58c5e32
 SHA512 (remake-4.2.1+dbg-1.4.tar.gz) = 6232736439cae8101b65292d12344a938e1f1ca136e8fd62e23e43b3326f2cc5abbaf37a502f2c1dde24276d8a7a9f4346d669e105c865fb06d0a846f5df98da
 Size (remake-4.2.1+dbg-1.4.tar.gz) = 2177617 bytes

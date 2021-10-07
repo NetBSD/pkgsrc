@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/23 09:07:28 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:53 nia Exp $
 
-SHA1 (safe-0.3.19.tar.gz) = bd8e382f951625d178fbf9e0231704e1931b6f94
 RMD160 (safe-0.3.19.tar.gz) = 1331539a2324bf052eacc66834f27a05c6924436
 SHA512 (safe-0.3.19.tar.gz) = 9e987a895f0f888338bb2b0088732a404246a28ce32d73808ed6aa3b6d909da884ec54d5fe71fd190e287f108be1800bef2865acfcfac3bf6873dfb7c679cfea
 Size (safe-0.3.19.tar.gz) = 11267 bytes

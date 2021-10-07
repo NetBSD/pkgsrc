@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/01/24 09:14:10 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:40:48 nia Exp $
 
-SHA1 (ocaml-re-1.9.0.tar.gz) = 7118e759f933f83d20d50b1fbea2cac9e8f88a77
 RMD160 (ocaml-re-1.9.0.tar.gz) = 624bbd68034f2b68c2a11d980498a5724e2d3c30
 SHA512 (ocaml-re-1.9.0.tar.gz) = 3e11c6eccf573ab5d7f43accf1f1ac9eda0d7320067e142b9f76b309315c1e30d22c5bb80c7a54b05d9c92d3518d26ea82b5093de9b48f86e3c62d6073f14eda
 Size (ocaml-re-1.9.0.tar.gz) = 83642 bytes

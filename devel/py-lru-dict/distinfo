@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/03 18:38:02 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:21 nia Exp $
 
-SHA1 (lru-dict-1.1.7.tar.gz) = ad3752aa37f4511bdcb26de9860dead48b814991
 RMD160 (lru-dict-1.1.7.tar.gz) = fe263dbeb683fda2b4dc14d538706e6e6abc670b
 SHA512 (lru-dict-1.1.7.tar.gz) = f645afc40d52b6f7f30afd09f0bdc7b4b6bd98fc5ba31d194c8f55680421b34ef04f5b624b68598369964d3fea82029bd02f9571762c61f9104088f4ecefbf44
 Size (lru-dict-1.1.7.tar.gz) = 10380 bytes

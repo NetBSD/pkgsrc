@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/03/20 10:12:13 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:41:14 nia Exp $
 
-SHA1 (Data-Munge-0.097.tar.gz) = 59123ccafd98eb332e2fc8fee6730239f4bb228b
 RMD160 (Data-Munge-0.097.tar.gz) = 879fcd8f0281cb4a7de574f1dc79eb2e5ae6f5d1
 SHA512 (Data-Munge-0.097.tar.gz) = 9f71ca08d4f96242f649ef9eeede78cfafce0857a7d423512a24cafc7c22d335a148f23a6d78197244a09a73f1ea095fc262a3c8d318432117da31b7d9759d63
 Size (Data-Munge-0.097.tar.gz) = 9332 bytes

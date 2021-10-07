@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/04/23 04:58:10 pho Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:39:53 nia Exp $
 
-SHA1 (primitive-0.7.1.0.tar.gz) = b1d36673018ec4e148ac3a861053246caa610098
 RMD160 (primitive-0.7.1.0.tar.gz) = 9bc7240932f7987c041f523d1fcb9dade74f876b
 SHA512 (primitive-0.7.1.0.tar.gz) = 8ade11d0b2221cfdf042da0263b5b5367a7ca2a9b9e1141844e4a65bb0467df879c92cd3515440d715b59345860c1ec3cb3efd7a3d702269ea15e18692586367
 Size (primitive-0.7.1.0.tar.gz) = 52184 bytes

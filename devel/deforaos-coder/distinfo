@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/13 00:40:38 khorben Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:39:26 nia Exp $
 
-SHA1 (Coder-0.3.0.tar.gz) = 02c29d07c89170e193387a6fa1c97289bf576d8b
 RMD160 (Coder-0.3.0.tar.gz) = 32670b9c99fdd40ac5482eb466b44552da984a61
 SHA512 (Coder-0.3.0.tar.gz) = 926f709b0103eb3c87f732bd96ed342610a2c16b25aa4cbcfcb4bcb5771edb07d940f531188c2ce38343e49c789eb27dc4cffba799276dd25b2cc72e2e93930f
 Size (Coder-0.3.0.tar.gz) = 136228 bytes

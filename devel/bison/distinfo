@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.59 2021/09/29 08:40:14 wiz Exp $
+$NetBSD: distinfo,v 1.60 2021/10/07 13:39:14 nia Exp $
 
-SHA1 (bison-3.8.1.tar.xz) = 9772ea3130d6cbddaefe29a659698775a5701394
 RMD160 (bison-3.8.1.tar.xz) = 2e86a3970b364def94fe401d75802468460f6a89
 SHA512 (bison-3.8.1.tar.xz) = f87978c41eca4db22de4f64feb3be92e44862d412f75dd84980045faf0f9e7f5a41b25bef8d4acd90743638eab61a7ac111444969d958fef5fe3535bac416921
 Size (bison-3.8.1.tar.xz) = 2800372 bytes

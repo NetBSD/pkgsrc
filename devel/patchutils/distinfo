@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/12/20 13:05:00 rhialto Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:42:46 nia Exp $
 
-SHA1 (patchutils-0.4.2.tar.xz) = 0d4631a76b078c0b8cd8ebdf98982d3380125889
 RMD160 (patchutils-0.4.2.tar.xz) = 28c32934111ccfd5fc9ec159d0a4bfb891616323
 SHA512 (patchutils-0.4.2.tar.xz) = 20970d52fd43c09dc7799297b9a9eb6f60ba29ecc750d49381a2dc52273dfe484a47696cddd541f623394fa3486734cf337297cbeab6b1b244511c7740f46897
 Size (patchutils-0.4.2.tar.xz) = 159504 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 14:28:31 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:47 nia Exp $
 
-SHA1 (ppx_module_timer-0.13.0.tar.gz) = f478f43742fcd3cd7853407a675225cde1bcf823
 RMD160 (ppx_module_timer-0.13.0.tar.gz) = 07a6666634e8a6f060aec4ca174ce427c8360b0d
 SHA512 (ppx_module_timer-0.13.0.tar.gz) = 7599f3d77e0c9cdfd18b6eda02c3d36bb0ecf925cd250896f348a064dc0c563d0a77ae7dc006c920e44a0cccbe78724b5879895abf3d0567008dc1399310d65f
 Size (ppx_module_timer-0.13.0.tar.gz) = 7180 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/11 11:16:46 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:21 nia Exp $
 
-SHA1 (Taint-Util-0.08.tar.gz) = 286a3ad893ed9432b223043e1e362a08651a6118
 RMD160 (Taint-Util-0.08.tar.gz) = f87457d39146769fcd84ee109e999508b65e70e1
 SHA512 (Taint-Util-0.08.tar.gz) = 78a1ec5af26a21de4d63455caa401d26b7cfc58e32c33ab5ca1fa75063856c3866b8deba19dba518e0138c65d2cad184b1c682cd48b68d1ed4c0570017d0f7a8
 Size (Taint-Util-0.08.tar.gz) = 14862 bytes

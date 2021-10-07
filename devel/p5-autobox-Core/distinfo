@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/01/02 11:52:52 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:42 nia Exp $
 
-SHA1 (autobox-Core-1.33.tar.gz) = 61efade861b4bffbf317559d545b170b81aec82f
 RMD160 (autobox-Core-1.33.tar.gz) = 19818265a70f732eadc4287a7dd2dd08c8726237
 SHA512 (autobox-Core-1.33.tar.gz) = 2041830e57573372909f9e7c209881539bf7f21862bbe438f8c761754b061f2efbb72615d744da443170dad79cd7688cd4c30b89308196674e9b6e84419766f0
 Size (autobox-Core-1.33.tar.gz) = 39185 bytes

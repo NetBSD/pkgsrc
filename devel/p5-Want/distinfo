@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2016/03/04 13:26:07 wen Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:42:41 nia Exp $
 
-SHA1 (Want-0.29.tar.gz) = 8b6ad919e051a28112a031595e8c273b7107351f
 RMD160 (Want-0.29.tar.gz) = d6cfaf218e1a69e584b4e50d1e1fea96d54d6e87
 SHA512 (Want-0.29.tar.gz) = 08df985de16b5e9dd67d6ed38d319da2511e92098f95a861a5a695eed8d77eaf412671b626e4da29b536147ad4da4a8cfdfd789ef204dac240073091481f3c1a
 Size (Want-0.29.tar.gz) = 20928 bytes

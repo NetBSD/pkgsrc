@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/22 06:43:44 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:43 nia Exp $
 
-SHA1 (redmine-4.2.2.tar.gz) = 7f5589dccc231c5be6cf6f94fc958cb5a380d8cb
 RMD160 (redmine-4.2.2.tar.gz) = 1621ebb047b86546a5036de6823cde166731a174
 SHA512 (redmine-4.2.2.tar.gz) = 71155358ca68d9eb5bf6b79e26202c29ba3355d499662bfe659ff1672625a25d91694d5f1e4bb8db18456642470244aca914efe4456adef2850b70ff7eb216b2
 Size (redmine-4.2.2.tar.gz) = 3038398 bytes

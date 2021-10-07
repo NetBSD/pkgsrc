@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/26 12:52:02 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:41:31 nia Exp $
 
-SHA1 (File-ShareDir-1.118.tar.gz) = 4f75c9f86f711228c2ec65c4016b70fd1912138e
 RMD160 (File-ShareDir-1.118.tar.gz) = 963c5dfd23c1c944ed9a88d70291680877e16a6a
 SHA512 (File-ShareDir-1.118.tar.gz) = 890f33e96333f7b07707d722e59e7da9a287112062814ef294594ac67f2f7349f905c009e6cd70d3af3a4de85335b074ec5a61194f9b0495f3e793d6ca635853
 Size (File-ShareDir-1.118.tar.gz) = 29631 bytes

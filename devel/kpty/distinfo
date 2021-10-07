@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:23 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:06 nia Exp $
 
-SHA1 (kpty-5.80.0.tar.xz) = f294a9bebf155d551d5a0f15cb6e67af3ff5864c
 RMD160 (kpty-5.80.0.tar.xz) = 923eedc406f4909f72ad4bb862a3a4cb1827980c
 SHA512 (kpty-5.80.0.tar.xz) = 406b3170d80bb7a3213e8ed940c517eb97227ea442bfc4175886f0c90c031b2593695973411dc993174d1af0719c3a4365c0f74f2dcede538433dc3081ff3af1
 Size (kpty-5.80.0.tar.xz) = 56224 bytes

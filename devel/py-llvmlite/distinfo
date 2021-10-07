@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/07/12 19:38:46 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:43:20 nia Exp $
 
-SHA1 (llvmlite-0.36.0.tar.gz) = 0fc7979ede5a14f00a46c3d1f7b564992a2f40d0
 RMD160 (llvmlite-0.36.0.tar.gz) = 7a43e41871c4c2b215a7140cfc19561cb01666fd
 SHA512 (llvmlite-0.36.0.tar.gz) = 2fed7347227f02f34bfbdc172e2e27a9074a4f8fe8b91b46241e4d5c7892e44dd69867297442e5705e0fa94f72c2c0f508fd7bb04ff748c618f28aec08f333bf
 Size (llvmlite-0.36.0.tar.gz) = 126219 bytes

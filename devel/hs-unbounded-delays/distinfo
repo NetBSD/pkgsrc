@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 05:12:04 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:56 nia Exp $
 
-SHA1 (unbounded-delays-0.1.1.1.tar.gz) = bb5d456141330f6aa290bd2e1f42d9be120ca073
 RMD160 (unbounded-delays-0.1.1.1.tar.gz) = 67a87a2d441ced325094c12ba7f8b1001a3cad97
 SHA512 (unbounded-delays-0.1.1.1.tar.gz) = 7439c8976498bd84e966b7e08e8d868d65debe3ffc7fd77dc6de345258b4532f2203415abf9530fdaa5feba0bfdc1031303b343502d1f3dc401058125babd41b
 Size (unbounded-delays-0.1.1.1.tar.gz) = 4114 bytes

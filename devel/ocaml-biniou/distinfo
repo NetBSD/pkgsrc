@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/01/31 11:32:30 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:40:39 nia Exp $
 
-SHA1 (biniou-1.2.1.tar.gz) = 87d560984544f195b8228d0b830ac3ed764dbcbc
 RMD160 (biniou-1.2.1.tar.gz) = c98f87ef72a71ea92162654294f91d0f1db60a8d
 SHA512 (biniou-1.2.1.tar.gz) = f0166666559f3a767fdc6987bad45ec4a772b70b8880b6d769ef644c9bfd46962f089c7b5dfff368413015e765daf4bacffe253bdb3478d9a4d30a15f0d29589
 Size (biniou-1.2.1.tar.gz) = 23970 bytes

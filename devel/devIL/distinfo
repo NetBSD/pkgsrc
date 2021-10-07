@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/08/28 13:12:15 maya Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:39:27 nia Exp $
 
-SHA1 (DevIL-1.7.8.tar.gz) = bc27e3e830ba666a3af03548789700d10561fcb1
 RMD160 (DevIL-1.7.8.tar.gz) = a3cdb14fcca5e75ada240a53cbdc3e749a759da5
 SHA512 (DevIL-1.7.8.tar.gz) = a67e1488d6cb366431d9fcb460b8fe5b8a1dd79426ac77f8abd0db4a5aad7512697f72ef0c49ddb0e806469cc37ba1319e10ccd2ebd73942332df2c3c507458e
 Size (DevIL-1.7.8.tar.gz) = 2051993 bytes

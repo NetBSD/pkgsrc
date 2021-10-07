@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/12 00:02:52 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:13 nia Exp $
 
-SHA1 (marcel-1.0.1.gem) = 4a312abf30666a0397b1a20fe0a9f574eb7a09aa
 RMD160 (marcel-1.0.1.gem) = 3d9e4e74c2785121d1eb5ed61a93bc982a2104be
 SHA512 (marcel-1.0.1.gem) = b22e3d1c20b75d8b7e7cefc12aaa6fe40151ddb1ac86a33e73660815297709205be6a02621e8faf473d1d8926ba8db09e53c9e7abd4249c9f8da0f3b48c47fdd
 Size (marcel-1.0.1.gem) = 39424 bytes

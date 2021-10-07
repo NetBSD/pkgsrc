@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.46 2021/09/29 07:29:12 adam Exp $
+$NetBSD: distinfo,v 1.47 2021/10/07 13:40:34 nia Exp $
 
-SHA1 (memcached-1.6.12.tar.gz) = 40d43e98f149e13e6c81eee813e6734f23413a01
 RMD160 (memcached-1.6.12.tar.gz) = 50920d55853aa3703191ceeb699d0a3048867f0d
 SHA512 (memcached-1.6.12.tar.gz) = 6cf41f14679ffac096195c29cf79741f28069e92d8ceddd5039061f1b8d3d4018f2983a6e43a27306ff299f9198e56f9ebd8ee8b62aa4882b38a0aa712ab1779
 Size (memcached-1.6.12.tar.gz) = 618614 bytes

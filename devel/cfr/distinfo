@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/04/04 16:07:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:18 nia Exp $
 
-SHA1 (cfr_0_125.jar) = 25bef77dfac40ef69e5395ea4e721788e532d219
 RMD160 (cfr_0_125.jar) = 6658ffa2401123a6d02d1ffc3ec4c5b4c3c81ad7
 SHA512 (cfr_0_125.jar) = e00203568f3a09b69d77b559753d8d714b413291d81f2a7acfdad0dddd254da62813e4008ed81574d2a47549757228317d593529d3b785b7c6c4c1da66182be0
 Size (cfr_0_125.jar) = 1565730 bytes

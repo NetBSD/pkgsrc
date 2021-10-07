@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/05 17:53:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:52 nia Exp $
 
-SHA1 (Deprecated-1.2.7.tar.gz) = 11a6b030e50f72f66e9d99d00fbac508e3a7279d
 RMD160 (Deprecated-1.2.7.tar.gz) = aba6b88ede0e649dcb576bf0a8574b87b7f5deef
 SHA512 (Deprecated-1.2.7.tar.gz) = c76d4197f96537bb456edc4d47b6ad795317c6535058586e659688a7cb8226c3926b9de3b64545cdf805cd90d6fa620885845629c0d83182b49de08c97f68bc3
 Size (Deprecated-1.2.7.tar.gz) = 5046835 bytes

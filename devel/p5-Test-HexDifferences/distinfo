@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/26 16:33:39 he Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:29 nia Exp $
 
-SHA1 (Test-HexDifferences-1.001.tar.gz) = cf946803f02d4514b3dcbef895532938cca7e56f
 RMD160 (Test-HexDifferences-1.001.tar.gz) = 5cc2973d6d9f2ad41aa8d2767f63faaedda66958
 SHA512 (Test-HexDifferences-1.001.tar.gz) = 687fb0f9546102bb541ea4c370082e18688e6ad9eb570821efbba1e22ad0b5341fcff3ce6b1ac8d44c9118bae561a331ed33067b9d5f20f2b274e03ea7b01f69
 Size (Test-HexDifferences-1.001.tar.gz) = 10214 bytes

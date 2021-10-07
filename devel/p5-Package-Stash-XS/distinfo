@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/01/03 12:36:31 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:05 nia Exp $
 
-SHA1 (Package-Stash-XS-0.29.tar.gz) = 037da26286bd213ae0d5607cfae4ccf0da7e4c09
 RMD160 (Package-Stash-XS-0.29.tar.gz) = 5d92f7245a8bfb2430605bf23990dcb3217cf51f
 SHA512 (Package-Stash-XS-0.29.tar.gz) = f7afcf1a67915d9990a8d63e418ebc6b6b48947b90a72a454b8197656233d8cc976f72d44e4179621628e52fa7ab9a9a74f18f95ad1999d3f45181531ed44849
 Size (Package-Stash-XS-0.29.tar.gz) = 87491 bytes

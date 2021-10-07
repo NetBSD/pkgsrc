@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/25 03:39:49 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:49 nia Exp $
 
-SHA1 (php-mode-1.13.1.zip) = d989e25ac6c2bcb06a13a09f6c97db533bf28c17
 RMD160 (php-mode-1.13.1.zip) = 7aa93c45907769fa22df69306b1854603336b25e
 SHA512 (php-mode-1.13.1.zip) = 1c11d28d23c7e0a913ef7a139811dd7d9a7d5123bf168d17809015fbe163f9a1489478cbee6cb26107b5cf1d782beed8c41271b2feec62a3167229880bce4089
 Size (php-mode-1.13.1.zip) = 56425 bytes

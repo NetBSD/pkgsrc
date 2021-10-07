@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/02/20 12:02:56 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:03 nia Exp $
 
-SHA1 (Object-Realize-Later-0.21.tar.gz) = 2bee6da32e94dcbde99910ba22a83636b04b165f
 RMD160 (Object-Realize-Later-0.21.tar.gz) = 93331997fb317af3f751cc5b8b0a1c6b393d2197
 SHA512 (Object-Realize-Later-0.21.tar.gz) = 006b54dc97f4464d434f4dd423546f078eb815c4eecba8cf54e292d4b98b679b6c8e8011aab808582553b245ee25013583b8d430762de6e30c3136a87858c21d
 Size (Object-Realize-Later-0.21.tar.gz) = 12375 bytes

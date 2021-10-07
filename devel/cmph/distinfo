@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/11/20 12:22:48 alnsn Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:39:20 nia Exp $
 
-SHA1 (cmph-2.0.tar.gz) = eabdd4cd9f9bb2fed6773caac8d91638ad2d02b7
 RMD160 (cmph-2.0.tar.gz) = fdeb1807657d1cd1ad155a4c81ed222ce8c6c90a
 SHA512 (cmph-2.0.tar.gz) = 7f37a8dcfce047ada9968681e07f66f014f8090aa5ce99358944a60715c7ef2bc62abf4b5c146fe99a0c812f2286ff0c009683b702a4e20c66617d955cf80caa
 Size (cmph-2.0.tar.gz) = 480924 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.63 2021/07/01 07:23:00 wiz Exp $
+$NetBSD: distinfo,v 1.64 2021/10/07 13:40:37 nia Exp $
 
-SHA1 (nspr-4.32.tar.gz) = 28e05ef5cbe6e7cde239d3cdcccabf571ec73f69
 RMD160 (nspr-4.32.tar.gz) = e7b4a6903ac891161149b59142fccf29c11eb58f
 SHA512 (nspr-4.32.tar.gz) = da9b65b374783d20a2e589211b411816d899e296e91175d376e59df1919144c1808c155a234d6ceefdf7b8ae8f47cec98d92a5aa3150a579513251860e50dcb7
 Size (nspr-4.32.tar.gz) = 1079004 bytes

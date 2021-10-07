@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/23 15:24:09 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:48 nia Exp $
 
-SHA1 (conduit-1.3.4.1.tar.gz) = 0bfbd13bb8b578d999b7f8c50dd1a64745658c41
 RMD160 (conduit-1.3.4.1.tar.gz) = e87e60cc6142996f0db16800b425369760cc0812
 SHA512 (conduit-1.3.4.1.tar.gz) = fdb5eb22e0e49a6b150b7bafe9775e9b2b41b70338647d447ae20a3901d93de9b286cc2ac0ff7533bffeb0b3ca9a5b898fd6c0341898b4ecddde9a9eb4a2823a
 Size (conduit-1.3.4.1.tar.gz) = 88893 bytes

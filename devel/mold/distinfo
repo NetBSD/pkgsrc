@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/09/27 20:53:14 fcambus Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:40:51 nia Exp $
 
-SHA1 (mold-0.9.6.tar.gz) = e97d5faf82b91b2e4337afcc911688a8c0230ec0
 RMD160 (mold-0.9.6.tar.gz) = ec8bf5c0a920831f52c3868426d502daaed41987
 SHA512 (mold-0.9.6.tar.gz) = d3de30b371413e974728fba03958d6043026f59aead8371058a0b1dc672e2675e169a1def3afd3751058f529d6ec80ff78c773d2718c1d9f0bdea74d9f13bc2e
 Size (mold-0.9.6.tar.gz) = 3378698 bytes

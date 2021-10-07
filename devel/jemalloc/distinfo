@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2019/08/06 07:50:24 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:40:01 nia Exp $
 
-SHA1 (jemalloc-5.2.1.tar.bz2) = 9e06b5cc57fd185379d007696da153893cf73e30
 RMD160 (jemalloc-5.2.1.tar.bz2) = 9a0876956a96e1b2c7c25c15754241670f3d4609
 SHA512 (jemalloc-5.2.1.tar.bz2) = 0bbb77564d767cef0c6fe1b97b705d368ddb360d55596945aea8c3ba5889fbce10479d85ad492c91d987caacdbbdccc706aa3688e321460069f00c05814fae02
 Size (jemalloc-5.2.1.tar.bz2) = 554279 bytes

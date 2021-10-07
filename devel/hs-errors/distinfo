@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 07:19:38 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:49 nia Exp $
 
-SHA1 (errors-2.3.0.tar.gz) = e9a72baafa57bf56581f16c578ff5d337d1e4dab
 RMD160 (errors-2.3.0.tar.gz) = 9a7ff057bc0faf19967f62b76144a6805c1db2ef
 SHA512 (errors-2.3.0.tar.gz) = dddfc63505fd7023c4a669b3cc3d736cf7ecb774b53dcdfeee2d203dcdf4684f5d149a1c217134de214b64af4e154a3ef08b315615c85a1c734ceb42e80823b4
 Size (errors-2.3.0.tar.gz) = 9184 bytes

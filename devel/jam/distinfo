@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/03/26 21:19:58 rillig Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:39:52 nia Exp $
 
-SHA1 (ftjam-2.5.2.tar.bz2) = 08bad35e74ec85c4592d378014586174d22297b5
 RMD160 (ftjam-2.5.2.tar.bz2) = fd1d1161963ba85be09aecffe832cf1db8a7b70f
 SHA512 (ftjam-2.5.2.tar.bz2) = 0754111d22e27f66800c584b8c891819fc5d089713b9c73d7e51f3e5231f322f5f52a3176fae1d13e4e059aed783faaa4f0cd048123cd1f622fe8554335e7e7a
 Size (ftjam-2.5.2.tar.bz2) = 196631 bytes

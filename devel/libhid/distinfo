@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/12/10 15:46:26 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:16 nia Exp $
 
-SHA1 (libhid-0.2.16.tar.gz) = 9a25fef674e8f20f97fea6700eb91c21ebbbcc02
 RMD160 (libhid-0.2.16.tar.gz) = f61f016ae54bc5532202fd676d38d1f684e7ab8d
 SHA512 (libhid-0.2.16.tar.gz) = 3c9348f9d63e0e1577e983c65ff8e6acbaee0d5f43ecb29b7004654a7e9d14a94176aa029f259e0b8576fc30e8a9af6d1df34912dd582bfadc2b29f9b87eb52b
 Size (libhid-0.2.16.tar.gz) = 435245 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 14:19:47 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:45 nia Exp $
 
-SHA1 (psq-0.1.0.tar.gz) = e79fe812fb931ee63b8b0505d183dfc25a43b0e3
 RMD160 (psq-0.1.0.tar.gz) = 2eb8ee78e163492f886b751ef0f170afcecccbf7
 SHA512 (psq-0.1.0.tar.gz) = c341678f7375d29ab03923506d7befdfc0b603659069914204c8483505742c784ba599525ed381e7ad1278d1418fc227d9dc9026f3fc7f3d7e0200d2b6f8d6b4
 Size (psq-0.1.0.tar.gz) = 9548 bytes

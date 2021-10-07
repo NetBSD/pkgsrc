@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/10 15:00:36 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:44:09 nia Exp $
 
-SHA1 (generator-0.0.1.gem) = 925996beb38458f7cd9ad3e698c8c29b26d8f68e
 RMD160 (generator-0.0.1.gem) = 1f3111e05facbf2fb316c208a1223456cd4c3a55
 SHA512 (generator-0.0.1.gem) = 724d63b95fd470f21c9f51931cd68e369adb167ef5b64b0a6a503cada0ae415692701c0af6132b99369a767cc7c5664b40c95db781d3c7c28ee51964acd85a4c
 Size (generator-0.0.1.gem) = 7168 bytes

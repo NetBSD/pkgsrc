@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:35 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:01 nia Exp $
 
-SHA1 (Net-LDAP-Batch-0.02.tar.gz) = f7bc937a66f42195569b176ed947d37aa1259210
 RMD160 (Net-LDAP-Batch-0.02.tar.gz) = ee0a1246411200b52c874ba9b1d975e3a07de1b9
 SHA512 (Net-LDAP-Batch-0.02.tar.gz) = 955a331bec097f839be7b7dbf2e55c64a4071aeb3fdac20b26dbaa1a2fad01051428ee97846f02560b7000a3b1eb193ca431c30a4e63c3a2d922cab21e592a17
 Size (Net-LDAP-Batch-0.02.tar.gz) = 7205 bytes

@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/05/25 11:44:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:37 nia Exp $
 
-SHA1 (tl-expected-1.0.0/add-tl.cmake) = f2f40516d12b47451ed1fb2f5015c01bca1eb16a
 RMD160 (tl-expected-1.0.0/add-tl.cmake) = 592a6d54ce75a4adac4c11b5b7171a1f79c0843b
 SHA512 (tl-expected-1.0.0/add-tl.cmake) = d7570d8cb44dd9a4538bb4c6857a36f2538729cbf5e329f7984e4fa8fd1d830b8f63a8e77190905e13b29eaab9e00f5826667c53b2635c9e6d550bee10cc8936
 Size (tl-expected-1.0.0/add-tl.cmake) = 1366 bytes
-SHA1 (tl-expected-1.0.0/tl-expected-1.0.0.tar.gz) = 2ce5120ef6b4238b092a73214a48516462f809ce
 RMD160 (tl-expected-1.0.0/tl-expected-1.0.0.tar.gz) = 554d783c23c26a27d68bcc015599f4cd69000c1c
 SHA512 (tl-expected-1.0.0/tl-expected-1.0.0.tar.gz) = 747ea34b5540dfcf595896332851f10c52a823ab8ba3fc8152478b0a9e8ca01f0f26827348407249827f4106ff577bd6e697ea6f749c1f21bd1f0913a621075d
 Size (tl-expected-1.0.0/tl-expected-1.0.0.tar.gz) = 102672 bytes

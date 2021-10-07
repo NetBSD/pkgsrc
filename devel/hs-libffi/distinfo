@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/20 01:12:15 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:51 nia Exp $
 
-SHA1 (libffi-0.1.tar.gz) = 3feab4c630d7a78a2d8b3667a772934b51733203
 RMD160 (libffi-0.1.tar.gz) = 41b009d8c158ee1c680ebadcf9f09dcac633c6df
 SHA512 (libffi-0.1.tar.gz) = ca6dcdec14f12c565c48143aed72a022960978148759d9ee2ababf6f7e008a5cb5d152d4f10a2bfef511e4e852a4b30f1bc81928b249461c0b67817b1c74e0b3
 Size (libffi-0.1.tar.gz) = 8597 bytes

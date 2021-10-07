@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/03 15:42:34 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:52 nia Exp $
 
-SHA1 (old-locale-1.0.0.7.tar.gz) = e238f273748b2c0416f8c8ee21c635423943f4a3
 RMD160 (old-locale-1.0.0.7.tar.gz) = eb19ab52153bc3d1553fc6e7ba863e54b213fa05
 SHA512 (old-locale-1.0.0.7.tar.gz) = 34d018cb040de9adce3ddb8cffabe2a0610f6cd0ff5340ee721b7076671bd5cc3e830f58d16e73240df4b068510f7a24fd1995efc38f002b52d228abc4581d6a
 Size (old-locale-1.0.0.7.tar.gz) = 3384 bytes

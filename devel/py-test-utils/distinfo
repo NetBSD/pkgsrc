@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 14:09:01 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:49 nia Exp $
 
-SHA1 (test-utils-0.1.0.tar.gz) = 4e9f6597a6eeb22e75219f110d735b16a2327e78
 RMD160 (test-utils-0.1.0.tar.gz) = 1e311cfeeb6c8cdfddddbd1b6a64a29294c241b4
 SHA512 (test-utils-0.1.0.tar.gz) = a02b013be2189df4014ae582057ce7f1c0dc4484355ae63819650c5199c5312e1145b79d10e62fc4c689c0cf3698d0f631ac72548faa3131a943ccf1c7f3417a
 Size (test-utils-0.1.0.tar.gz) = 2998 bytes

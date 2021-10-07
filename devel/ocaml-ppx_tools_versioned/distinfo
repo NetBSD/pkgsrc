@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/12/09 11:28:57 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:40:48 nia Exp $
 
-SHA1 (ppx_tools_versioned-5.4.0.tar.gz) = edc41d7c2b977a46e5cd27c2bcf99e84a2fdb450
 RMD160 (ppx_tools_versioned-5.4.0.tar.gz) = 370bf2283413c99f30dd19d4f7d47aac40ab09f0
 SHA512 (ppx_tools_versioned-5.4.0.tar.gz) = 7f0421dbb42b43acc4f7892ac1c4c0ac13bdc188400d308688c4548b228aaf8bd80a4e2294672b50c78ac61e3c8df148c98d16b59f48292f02be40e7fd9640a9
 Size (ppx_tools_versioned-5.4.0.tar.gz) = 91817 bytes

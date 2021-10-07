@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.40 2021/05/02 19:03:52 wiz Exp $
+$NetBSD: distinfo,v 1.41 2021/10/07 13:39:38 nia Exp $
 
-SHA1 (make-4.3.tar.gz) = 3c40e5b49b893dbb14f1e2e1f8fe89b7298cc51d
 RMD160 (make-4.3.tar.gz) = 2f2d49f85200433a7a5119bd9d56758a3033c2c0
 SHA512 (make-4.3.tar.gz) = 9a1185cc468368f4ec06478b1cfa343bf90b5cd7c92c0536567db0315b0ee909af53ecce3d44cfd93dd137dbca1ed13af5713e8663590c4fdd21ea635d78496b
 Size (make-4.3.tar.gz) = 2317073 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/20 19:46:24 triaxx Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:31 nia Exp $
 
-SHA1 (mqtree-1.0.13.tar.gz) = b463bb796c1a754db852d56edbf6e7371ace13bd
 RMD160 (mqtree-1.0.13.tar.gz) = fa9ef0640aa2a360d7b1b5da123c8bb1b23e3f3c
 SHA512 (mqtree-1.0.13.tar.gz) = eb429fbe348be62f3a6401caee41ad330cc480be8543a513cfb2928645fceb5b8ffcacdd14356230df5359dcdde696bb2f120ae47951db20251195923d392bf2
 Size (mqtree-1.0.13.tar.gz) = 229077 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/23 07:07:30 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:50 nia Exp $
 
-SHA1 (generic-deriving-1.14.tar.gz) = 0fbf83112786781558050c3491f145a420e660b6
 RMD160 (generic-deriving-1.14.tar.gz) = e12e055a27fb6e7b16dca0c5f5416e4625d357f9
 SHA512 (generic-deriving-1.14.tar.gz) = 794b4846bbc34981301b3f973d6812cd93c2b777e6938347a10cfbf0a8527d885aa0e5dd4a4be9f2e7a89620d4c9bd2d663b0b9b54ed4bc0e82ccc4bd2712f35
 Size (generic-deriving-1.14.tar.gz) = 69658 bytes

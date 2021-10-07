@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/04/26 12:56:18 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:41:37 nia Exp $
 
-SHA1 (IO-AIO-4.75.tar.gz) = 79980c7d07b931ebf6116789caf7ececb004fc9b
 RMD160 (IO-AIO-4.75.tar.gz) = e208273c78bc965482e762911a9d08a35c4ab3de
 SHA512 (IO-AIO-4.75.tar.gz) = 3a30b34d6de476accc9b07c0723a3b21c235e5bd2b5951edc3ce3150de22a6b7dab5634d78ec17b799a71f2ede0bc138fead1e02885eed31a4da5cec05dfcaa3
 Size (IO-AIO-4.75.tar.gz) = 181557 bytes

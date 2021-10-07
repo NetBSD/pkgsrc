@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/07/06 15:18:25 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:39:09 nia Exp $
 
-SHA1 (redo-0.42c.tar.gz) = efc1dec0bc831a3bb4d6c3d3f2854e551ecf9cfa
 RMD160 (redo-0.42c.tar.gz) = 89c434620a0dffb268d06a8e3c6d64ece1398d89
 SHA512 (redo-0.42c.tar.gz) = 764ef84cfb56d5dd883cf80f706a567491e1a679d136219c4db3c122386aad3cfbd28131dc231a91639f596d7b8819c4254e4e7fa38f917996ca8bf3e1a5dc19
 Size (redo-0.42c.tar.gz) = 195222 bytes

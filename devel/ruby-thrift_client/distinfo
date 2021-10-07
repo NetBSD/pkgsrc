@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/06/14 15:46:02 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:44:26 nia Exp $
 
-SHA1 (thrift_client-0.11.0.gem) = ce474aeb0b3e72f3026eb54ae38c8edff89a7968
 RMD160 (thrift_client-0.11.0.gem) = 6ec62092d83a72df6c6098d1f6ddaa059f130b1a
 SHA512 (thrift_client-0.11.0.gem) = 2193b0a32ae279c2979f2af539825dcdd4d0000338bcd9642f62987ae491fa166d2ccbfa0110c63e9513740d3f7d50f9214a55298291a79031374f927960d482
 Size (thrift_client-0.11.0.gem) = 15872 bytes

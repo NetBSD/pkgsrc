@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/04/10 00:42:40 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:41:08 nia Exp $
 
-SHA1 (Clone-Choose-0.010.tar.gz) = 188368ba7cd6cbdad92dca815d8c72bb2789f94f
 RMD160 (Clone-Choose-0.010.tar.gz) = c13beb0d15f3d9851a2c84ab9173b1fa02fa958d
 SHA512 (Clone-Choose-0.010.tar.gz) = 5dbcd1b031ddbdaff81c46c5a48eb51b31bfe451e0777dc88a107d2b104e8708f08a5717a0f82f4d03efb8610e2b42fcb2dc1269e3262ece16b9a503d606face
 Size (Clone-Choose-0.010.tar.gz) = 10828 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 14:24:08 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:50 nia Exp $
 
-SHA1 (typerep-0.13.0.tar.gz) = 0068ae833693cff984cbce781678cbc8ea0df6ab
 RMD160 (typerep-0.13.0.tar.gz) = c5315e80cfc9fd8817342811c71feb7e9c916728
 SHA512 (typerep-0.13.0.tar.gz) = f0a788b6e09b0e7080115ad1d24fbbd539506bff61305c15b02e82b32af047ac04c21056f0845055bdff32a3f1b198c6c765944df7ab499dce43c515e17837e2
 Size (typerep-0.13.0.tar.gz) = 22882 bytes

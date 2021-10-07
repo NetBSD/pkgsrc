@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/01/25 19:03:04 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:42 nia Exp $
 
-SHA1 (retry_decorator-1.1.0.tar.gz) = d9a65c8758e70763450e94d327e09a8e1017249c
 RMD160 (retry_decorator-1.1.0.tar.gz) = 1e53a6cc88df7019b6a53d62be0bfd2992ef2f0f
 SHA512 (retry_decorator-1.1.0.tar.gz) = 0c699ccee6d189608fc6610b0c40db8e0648830cf3b463c74853e448f59314f4ead2acd379ac92fcd75d1ba7d6f0592753f112495d9bd4652190486a1d17f094
 Size (retry_decorator-1.1.0.tar.gz) = 3291 bytes

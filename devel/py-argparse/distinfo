@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/04/06 06:33:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:56 nia Exp $
 
-SHA1 (argparse-1.4.0.tar.gz) = 50f36429b2989461ee541093e7229257ee950c07
 RMD160 (argparse-1.4.0.tar.gz) = 88c7e326bb59ed510b4bedc8d8b78b5420b5819d
 SHA512 (argparse-1.4.0.tar.gz) = 9941f9d26c43169f947c9efadda6239349e1f9df80ff5fcdba3070bc7b43c43ab6bb4b7f0c7eee8e5d06231a17a7e9ee9eb73c7a9bb68ebe5d13f879686d61b2
 Size (argparse-1.4.0.tar.gz) = 70508 bytes

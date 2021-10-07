@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/09/06 22:20:04 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:55 nia Exp $
 
-SHA1 (AnyEvent-RabbitMQ-1.22.tar.gz) = ecaed0b1c80e704899dbf84ddf99c28197af893c
 RMD160 (AnyEvent-RabbitMQ-1.22.tar.gz) = 61b035fc103ce2d4da1bb0e2c052e66a889957c6
 SHA512 (AnyEvent-RabbitMQ-1.22.tar.gz) = fa6da53a906fd0a47b372b1ab3996e5727591b7e5b1a3df00aef923e2a11e84b4b079ebc855f1f1c88fd827cc58c286603e3e6f9f18c53a737c58ee7160845f0
 Size (AnyEvent-RabbitMQ-1.22.tar.gz) = 79993 bytes

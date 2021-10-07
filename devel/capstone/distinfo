@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/08/18 20:20:46 riastradh Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:39:16 nia Exp $
 
-SHA1 (capstone-4.0.2.tar.gz) = c0dfa4f6236a4505916ce67d63b856bf806b0d83
 RMD160 (capstone-4.0.2.tar.gz) = d99a45aee7fea4f27d07ff154946b2485b6e4bac
 SHA512 (capstone-4.0.2.tar.gz) = 7f93534517307b737422a8825b66b2a1f3e1cca2049465d60ab12595940154aaf843ba40ed348fce58de58b990c19a0caef289060eb72898cb008a88c470970e
 Size (capstone-4.0.2.tar.gz) = 3439542 bytes

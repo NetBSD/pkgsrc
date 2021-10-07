@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/11/08 20:50:16 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:42 nia Exp $
 
-SHA1 (autovivification-0.18.tar.gz) = 7a2dc5e20f85c88bc88b591551fdfd693f914e3c
 RMD160 (autovivification-0.18.tar.gz) = c5092ec8f3a85ac713e6a7aa6353d9e59af57893
 SHA512 (autovivification-0.18.tar.gz) = f5058bf1672a53281d70431cbb2bdd1a37dda8dc3d4191ca3c68c469089c5a1f2a36522f2a0b5d19847d91296f43e49cf6296c87b78940e786f0d0ac106a539e
 Size (autovivification-0.18.tar.gz) = 55854 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/01 04:47:40 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:56 nia Exp $
 
-SHA1 (transformers-base-0.4.5.2.tar.gz) = 8f34ffe28119b72862fc6c1fec97a81d13c08057
 RMD160 (transformers-base-0.4.5.2.tar.gz) = 882a782696ce9a165d6af20cfb17dcc7665efb53
 SHA512 (transformers-base-0.4.5.2.tar.gz) = 5953d99fee3a02f825c096cf035a5ee825da17e154ca9847ddb215dee54a96a8b28af2b4adb639ef3548ea9aa8a2cb781563c7ffbb399bed5a35c056d03bcbd4
 Size (transformers-base-0.4.5.2.tar.gz) = 2849 bytes

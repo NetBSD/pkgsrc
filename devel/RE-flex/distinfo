@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/28 19:17:15 scole Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:04 nia Exp $
 
-SHA1 (RE-flex-2.1.4.tar.gz) = 19d4569ccaa160537c96a2ce9f0923967a2ccbed
 RMD160 (RE-flex-2.1.4.tar.gz) = 892dffb7415fab18fd406753a4701dfb3f877e45
 SHA512 (RE-flex-2.1.4.tar.gz) = bad6c6712851acf957ed24de6ab8be424393996fb8ec0fc590716f33f91002971644ee55867ed4bae52019faa8c7616d9e43474e305f9ac780d4a29b062ced4d
 Size (RE-flex-2.1.4.tar.gz) = 6040596 bytes
