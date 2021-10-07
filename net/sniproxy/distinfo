@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/01/11 23:09:53 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:42:48 nia Exp $
 
-SHA1 (sniproxy-0.6.0.tar.gz) = 26ff187c46eb4f98f9f1731cd26f341383ea6454
 RMD160 (sniproxy-0.6.0.tar.gz) = 24e9126e100bdc6a04a4dd5fbe7379b642e04ff2
 SHA512 (sniproxy-0.6.0.tar.gz) = 8a99573673bdd57e528c5781cb166d39c80daed699382b24c3fa18a6011d074a1d9e470fee404d24b4450cf067c9995125910b2941b5216d88d189a1d79ebf73
 Size (sniproxy-0.6.0.tar.gz) = 78515 bytes

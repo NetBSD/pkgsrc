@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/04/15 10:43:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:32 nia Exp $
 
-SHA1 (grive2-0.5.1.tar.gz) = 581915a653fdbd0076c69a4c4aa06eab2fa041cf
 RMD160 (grive2-0.5.1.tar.gz) = 71b0929a252d2a18b8b7b822696a30eedc34d422
 SHA512 (grive2-0.5.1.tar.gz) = 609837fc93ad78d143dcb4d1f558743d413c887fec2e9aaac81edd58549b812db859aab5ce7f664f06564779cff4bae32d43529e47fcc36640f1a9b52c5b5888
 Size (grive2-0.5.1.tar.gz) = 169929 bytes

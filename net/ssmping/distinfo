@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/08/19 00:26:12 jlam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:50 nia Exp $
 
-SHA1 (ssmping-0.9.tar.gz) = f3eee602d5c39e07e4d0382497b6b1cba88d59f3
 RMD160 (ssmping-0.9.tar.gz) = 008c34fa9d3401c9763f9f4566e297975216ad1a
 SHA512 (ssmping-0.9.tar.gz) = 4825685d6d45cc624848154e5c2a2a9d4bd1a266aed8fd560957aeb48d76bcab6b1022042f24f37c16799c75c126ec99b90f11b8361495b0a3cab061f28080d0
 Size (ssmping-0.9.tar.gz) = 16464 bytes

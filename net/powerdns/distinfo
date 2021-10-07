@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.44 2021/02/08 13:31:58 otis Exp $
+$NetBSD: distinfo,v 1.45 2021/10/07 14:42:21 nia Exp $
 
-SHA1 (pdns-4.4.1.tar.bz2) = a65fbad74c93c6c9c0555b0c76b5b0f566c9cfa8
 RMD160 (pdns-4.4.1.tar.bz2) = 0ada8e806fffff697d68636f6fd07da6660f698b
 SHA512 (pdns-4.4.1.tar.bz2) = a6f31972f77ded8ecfb523e8810dd90e5b7aa628746fee2a9a0daae2a7935800f111ce8617ffd71d5ce3881947d4ffc36c9cb37996a7bcc514536bb4abe1f79e
 Size (pdns-4.4.1.tar.bz2) = 1276990 bytes

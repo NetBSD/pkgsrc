@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/03/14 14:26:12 spz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:43:05 nia Exp $
 
-SHA1 (xymon-4.3.30.tar.gz) = ae7a10fc9a9ddf64162dbc6150402f4d377fa325
 RMD160 (xymon-4.3.30.tar.gz) = 510fc85c87c30d39dcf4ccc31a334f66440b7bfb
 SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
 Size (xymon-4.3.30.tar.gz) = 3549653 bytes

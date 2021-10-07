@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/19 11:03:46 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:24 nia Exp $
 
-SHA1 (aioresponses-0.7.2.tar.gz) = 95a46bdd8f3ea1d83394cacd42e72e6f136b9962
 RMD160 (aioresponses-0.7.2.tar.gz) = 6c9c933594e585d1ed4b8bf7a82750be2f218ffe
 SHA512 (aioresponses-0.7.2.tar.gz) = 847c687990c38733c714cfd7b4f268406392aeea6764f084dae25f43246b7b5731f149067fb921864b1b22c9e7b2ca66254ff311d726333d0b23a5566ab18029
 Size (aioresponses-0.7.2.tar.gz) = 28135 bytes

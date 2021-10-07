@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2020/04/17 00:20:45 joerg Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 14:43:05 nia Exp $
 
-SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
 RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
 SHA512 (xorp-1.6.tar.gz) = 274a13b97d264f1faf1ffe8d22c3088d485efcafb414ffc4bcf5175d82fe027cdef0fc109668f8036206a9a2ac23caca61f507f91688cf3e8d89e8c03d7f318a
 Size (xorp-1.6.tar.gz) = 7895108 bytes

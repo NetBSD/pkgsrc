@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/03/01 18:20:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:42:22 nia Exp $
 
-SHA1 (proxytunnel-1.9.0.tgz) = 51d816125bb9e9bca267d35f861000eb0fa9d80b
 RMD160 (proxytunnel-1.9.0.tgz) = 5444861031fa256a5e0d2d83be297afc70137e8b
 SHA512 (proxytunnel-1.9.0.tgz) = 8c9901e6f997f2d79acecbf3fc34232f902afbde9bc9ff645e44dcf5b430bb014d9532a3fe5035036ad78a67b739fd7f5cc649b92de3e15d4908c8cc5c0fdcab
 Size (proxytunnel-1.9.0.tgz) = 46556 bytes

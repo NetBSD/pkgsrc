@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/03/07 07:46:01 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:42:30 nia Exp $
 
-SHA1 (ncclient-0.6.10.tar.gz) = a5d32ed4c20f51fe7347f6379f00856b088a8025
 RMD160 (ncclient-0.6.10.tar.gz) = 63bc3ee9bf10821ed8c70b61e66527d3877d5fc0
 SHA512 (ncclient-0.6.10.tar.gz) = 7af9e3fdc4981713782bcf60936a4eb50e658a179359a271aefde78857ae8064fe446cbecb1d320a09c8b223b1b6a4a5c3fbc59ae4b890a158f4c10dff7ccaf5
 Size (ncclient-0.6.10.tar.gz) = 105349 bytes

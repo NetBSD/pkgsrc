@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/01/10 19:20:48 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:40 nia Exp $
 
-SHA1 (kget-15.12.0.tar.xz) = 3d43741582654987400299213e91f5fad36fddc3
 RMD160 (kget-15.12.0.tar.xz) = 6968e321ce3153b47b97327f912320cff2e99e0b
 SHA512 (kget-15.12.0.tar.xz) = 72af1444783329edfa919ccd56600b9ba0633879591d19d9c870a5c4f3211d856fb0217234f6cbe5e70a3de56734d1f6b5ecc8fdfd83e74d6cbdfafcd2a5e250
 Size (kget-15.12.0.tar.xz) = 1081868 bytes

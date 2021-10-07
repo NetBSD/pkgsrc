@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/06/15 15:18:22 christos Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:36 nia Exp $
 
-SHA1 (iana-etc-2.30.tar.bz2) = 218593bcb9264014c4e397d838b2c218eac9df06
 RMD160 (iana-etc-2.30.tar.bz2) = c381a9b1a26a6a06cebf8b1789ac42b8d362256f
 SHA512 (iana-etc-2.30.tar.bz2) = d841b9c177fb0675bab10c9b0ebc4d3c2b743754c615e3fabcaebb29ffefaf2491278d0e672b99af3cbc9b300138700f56c1026f6d41659783150aea97583936
 Size (iana-etc-2.30.tar.bz2) = 205618 bytes

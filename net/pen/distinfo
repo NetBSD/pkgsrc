@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/01/10 14:58:56 schmonz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:42:10 nia Exp $
 
-SHA1 (pen-0.34.1.tar.gz) = 7a1d8a86ab711e217e19bd8ef5c5fea07f3284e5
 RMD160 (pen-0.34.1.tar.gz) = 79ef42beebc32a9fcf25f3b59d52509650bfea42
 SHA512 (pen-0.34.1.tar.gz) = 5237e67ef2a8751cab0bbaf75bbd081f0c645830b20d94e5fab365def0692307f2e0c55158697fc79a197c624bd34bda590cf5ded229beea44da597d3344b263
 Size (pen-0.34.1.tar.gz) = 184622 bytes

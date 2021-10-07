@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/03/24 15:30:10 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:42:43 nia Exp $
 
-SHA1 (snmp-1.3.2.gem) = 06e354ec8963145834b0515b04aba63ac9f327a2
 RMD160 (snmp-1.3.2.gem) = bb60ed683debea17c36c379b6b4cda2ab46b9861
 SHA512 (snmp-1.3.2.gem) = e2ccf2d7ae370b08e5890155f24b911a31aaf944a49aee7fa9654b4970d8ab2e3bbc0fa365c7a2977da0951d5ebb0123d064df4b458648518cb8e8968229d6f4
 Size (snmp-1.3.2.gem) = 206336 bytes

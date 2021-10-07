@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2017/03/24 09:43:21 sborrill Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:41:18 nia Exp $
 
-SHA1 (citrix_ica-10.6.115659/en.linuxx86.tar.gz) = 674a113dc82e9add57f306cc24e143373532d709
 RMD160 (citrix_ica-10.6.115659/en.linuxx86.tar.gz) = 45453f4a63baf2b0c10f3f31ca3e17574361dcfa
 SHA512 (citrix_ica-10.6.115659/en.linuxx86.tar.gz) = 7644137149b70d7bb05910cbd309ff788443155967dc3c94591537927125cc66de38e8c159bf016deb3ec6daeb8b91b33a3217695e4f0d0e8ec057e7d67c1b8d
 Size (citrix_ica-10.6.115659/en.linuxx86.tar.gz) = 1801486 bytes

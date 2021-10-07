@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2018/03/10 16:32:18 he Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:41:25 nia Exp $
 
-SHA1 (exabgp/3.4.23.tar.gz) = 25523fbc1a1ad3c44ced38f50697f5bca0808a52
 RMD160 (exabgp/3.4.23.tar.gz) = 4683067e93884fa1b41edcd13a8b335b09fc8778
 SHA512 (exabgp/3.4.23.tar.gz) = 50b8df2d33cb37efe204b709650200d4ec6de5cf1805ee5d0642723b50d6ec86d560795687631ab43069a5c5e85ee5eda89a98e76b58a21e3efa5e3632a84b92
 Size (exabgp/3.4.23.tar.gz) = 544183 bytes
