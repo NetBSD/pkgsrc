@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 06:04:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:28:59 nia Exp $
 
-SHA1 (aeson-pretty-0.8.8.tar.gz) = 7441f19332e0a8b582eec573f9e743eb65c6b592
 RMD160 (aeson-pretty-0.8.8.tar.gz) = 5a96e90ff5cb7676c843551cff8140e769d850e5
 SHA512 (aeson-pretty-0.8.8.tar.gz) = 5867343c5d51d632bb299fcbc00cdb29b0feb1931f0ff9c3cf89c5752f1a103c68c9e6fa65e8538ac19212853c39f6d1d6e0c2d9f0bf49fe001c1bfd792db779
 Size (aeson-pretty-0.8.8.tar.gz) = 5600 bytes
