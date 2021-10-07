@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:32:23 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:47:52 nia Exp $
 
-SHA1 (xcoral-3.2.tar.gz) = 31b9ea50da10a3c09433062b0ae121246094cdbf
 RMD160 (xcoral-3.2.tar.gz) = 6b1b3206d3e0d8b0da87e85c30e0eed167ef42c3
 SHA512 (xcoral-3.2.tar.gz) = 597446717b460e1da8f82bb9a284101dc2d344a5a192300ed72311cca70a01156e9edd35a210c5c958cb56d540fc85692bc88fb0da9d71edd06141a415c6c97f
 Size (xcoral-3.2.tar.gz) = 1412437 bytes

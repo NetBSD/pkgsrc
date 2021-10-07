@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/17 14:44:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:47:39 nia Exp $
 
-SHA1 (ghex-3.18.4.tar.xz) = 531907284a06a4252dfd1fa589103120a613218b
 RMD160 (ghex-3.18.4.tar.xz) = dad9f1b0dced038444b6316bc613e9d804436bec
 SHA512 (ghex-3.18.4.tar.xz) = 6121a5986ee7d7f96bf7f401e155f8aa37f076af455bc68e43d1b5b02b63bc9aed3eba5209511d1b659eb4c9093ab5d9601c14a5e868d979e92a6d0ca0cf9ce2
 Size (ghex-3.18.4.tar.xz) = 1420268 bytes

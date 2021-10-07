@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/05/21 07:40:28 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:47:51 nia Exp $
 
-SHA1 (vile-9.8u.tgz) = c1cac5db46f022cabd92d464b082e248f8403666
 RMD160 (vile-9.8u.tgz) = ac428031d6269aea01c38dc44237e8ce9faea0b0
 SHA512 (vile-9.8u.tgz) = fad06c8e341feec7e9aed1e53cd9a1e7fe79fdeb050aba743ac4edfb6096db88c1ef63377d6ecbeddd0eb8ad46a323bcc55d09b1ff221a75cd74a3f991e3f24d
 Size (vile-9.8u.tgz) = 2375989 bytes
