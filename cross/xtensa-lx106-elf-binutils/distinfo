@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/20 15:18:59 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:30:27 nia Exp $
 
-SHA1 (binutils-gdb-xtensa-2.31_20190405-c0b4cd465573f1772927cb3ad5d6e7d17af21622.tar.gz) = 6e7e15f6cbcff5e7e02b2a757b859b3104b1cdd2
 RMD160 (binutils-gdb-xtensa-2.31_20190405-c0b4cd465573f1772927cb3ad5d6e7d17af21622.tar.gz) = 7e604d7db91309a40c77b2d8139d9d9db58bb753
 SHA512 (binutils-gdb-xtensa-2.31_20190405-c0b4cd465573f1772927cb3ad5d6e7d17af21622.tar.gz) = 1394cd8d50b13b801caba4c44e51b0a2b31332d77d87456e89efc120e8bc7c3f7b34e42aa921efc845045ab591b4e1f9ce954334f3242f6ade6a30a539d5ef38
 Size (binutils-gdb-xtensa-2.31_20190405-c0b4cd465573f1772927cb3ad5d6e7d17af21622.tar.gz) = 57031990 bytes

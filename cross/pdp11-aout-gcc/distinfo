@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/07/30 19:45:58 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:30:26 nia Exp $
 
-SHA1 (gcc-8.2.0.tar.xz) = 19926bdb6c4b58891015929853d41aeff019d400
 RMD160 (gcc-8.2.0.tar.xz) = 4fba19867980d04bed1e62d46d4787c99f4fd13d
 SHA512 (gcc-8.2.0.tar.xz) = 64898a165f67e136d802a92e7633bf1b06c85266027e52127ea025bf5fc2291b5e858288aac0bdba246e6cdf7c6ec88bc8e0e7f3f6f1985f4297710cafde56ed
 Size (gcc-8.2.0.tar.xz) = 63460876 bytes
