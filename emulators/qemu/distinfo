@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.186 2021/09/19 13:49:12 yhardy Exp $
+$NetBSD: distinfo,v 1.187 2021/10/07 13:49:37 nia Exp $
 
-SHA1 (palcode-clipper-qemu-5.2.0nb8) = ddbf1dffb7c2b2157e0bbe9fb7db7e57105130b1
 RMD160 (palcode-clipper-qemu-5.2.0nb8) = 3f9fe19a40f7ca72ecfe047d1449e55b63cba3ee
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-SHA1 (qemu-6.1.0.tar.xz) = aae5ef7761b5f2fc45f0076219f1249da86f94b5
 RMD160 (qemu-6.1.0.tar.xz) = 00f21e102c9ca70c154b770d0094fd48568bbdd5
 SHA512 (qemu-6.1.0.tar.xz) = 3378ae21c75b77ee6a759827f1fcf7b2a50a0fef07e3b0e89117108022a8d8655fa977e4d65596f4f24f7c735c6594d44b0c6f69732ea4465e88a7406b1d5d3c
 Size (qemu-6.1.0.tar.xz) = 111258808 bytes

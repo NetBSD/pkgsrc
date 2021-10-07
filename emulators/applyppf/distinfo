@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:30:55 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:21 nia Exp $
 
-SHA1 (applyppf3_src.zip) = d80dd39b322863defdea76a1703565a7ce569b23
 RMD160 (applyppf3_src.zip) = ec06579d49ef81148233f51bbacbd3fd948bb403
 SHA512 (applyppf3_src.zip) = 4153b4356a3c7d106a53eb0cb5e943a7469060a09bf49cde85e7cb9452821181f18c29ceb9f8f1fdc2ad5a7dbb3a23300bfb373a515e0c7f8373c454be05bcf6
 Size (applyppf3_src.zip) = 5618 bytes

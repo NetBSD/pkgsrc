@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/12/20 15:15:01 fcambus Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:49:51 nia Exp $
 
-SHA1 (ucon64-2.2.1-src.tar.gz) = bfc6fad1b82cb0d5ffe734f46d088567e8d93126
 RMD160 (ucon64-2.2.1-src.tar.gz) = ca363e350be23fa2f083deb598efab307066b231
 SHA512 (ucon64-2.2.1-src.tar.gz) = 34453399151e5ed256fdcf387b9d32a052718b264e51b99a2be251b90589337d13cd317f8d1aa7d3c8e39c8e407b22797d4608ec6d14b99c8673ec74f349f6c2
 Size (ucon64-2.2.1-src.tar.gz) = 1476080 bytes
