@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.51 2020/04/20 12:50:02 christos Exp $
+$NetBSD: distinfo,v 1.52 2021/10/07 14:42:22 nia Exp $
 
-SHA1 (proftpd-1.3.6c.tar.gz) = 661fe96f6d4403e91bd2199ff8b5d8f0413ce9e6
 RMD160 (proftpd-1.3.6c.tar.gz) = 0fcb3453fef0c5a25b9605940b5840eacead8f40
 SHA512 (proftpd-1.3.6c.tar.gz) = 9b10e603b26d527b594682a4905e70dc0a8361372ed80a8e2617167305047bf94ea16b441f9d5782ae04dd50768d32e12f9cb68708c1f80dcd219b09e0d4fd15
 Size (proftpd-1.3.6c.tar.gz) = 20271908 bytes

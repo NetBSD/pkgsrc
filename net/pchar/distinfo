@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 00:35:26 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:42:18 nia Exp $
 
-SHA1 (pchar-1.5.tar.gz) = 3e78505b881773d2a726b426c6023ee2519bed75
 RMD160 (pchar-1.5.tar.gz) = b8e600b9c11cf7e584768c87aadeeb9d7b482949
 SHA512 (pchar-1.5.tar.gz) = 56784589a16638a12230a11a177b8dd97a7abac927624beaaea89e0169423f7242c2b434a36aad1a07d977e6b006fd71eb9132aecb1d35e3e3363eb2d1549d84
 Size (pchar-1.5.tar.gz) = 117678

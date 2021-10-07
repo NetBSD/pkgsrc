@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2020/01/05 18:45:58 kim Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:17 nia Exp $
 
-SHA1 (cisco-mibs/v1.tar.gz) = b63a440ee161123a8aafe747912b18cf29effcb8
 RMD160 (cisco-mibs/v1.tar.gz) = a267d24ce7e61977e3e3f9391d19fbf0e7095dc1
 SHA512 (cisco-mibs/v1.tar.gz) = 37c47ed3465cca00b43f9609feb78b0d7fcddee3f24923434c383dd2de6546a124a929f040f7b867368d3fa220f78afbb569cf500f109ece2f8004ed8f0115bc
 Size (cisco-mibs/v1.tar.gz) = 7645565 bytes
-SHA1 (cisco-mibs/v2.tar.gz) = fe1355c207488055aacc5cf14792660eb04b4778
 RMD160 (cisco-mibs/v2.tar.gz) = 7e64ecb3ffb5e46f8765e627454116551a6cd50c
 SHA512 (cisco-mibs/v2.tar.gz) = ba267a93097d6a0a0a57414940ce88a0739581e4b6d04b884fb6de4415a1245c6c601795e35e611c1b5b1feec5569e4ecd05ddb343fc55cf57e1747b2983f3da
 Size (cisco-mibs/v2.tar.gz) = 8473631 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:43:00 nia Exp $
 
-SHA1 (UPnP-Inspector-0.2.2.tar.gz) = 4885b612b98d3272d3ccb6b7539384ea5895d41c
 RMD160 (UPnP-Inspector-0.2.2.tar.gz) = effc60387a78b62234665f91f638c602e6a823a6
 SHA512 (UPnP-Inspector-0.2.2.tar.gz) = e7fecba8613f87b3fff763102a2a01a71d8c7bb85b176e5a23db56796baf0d55f48268d880ae4b84ec73379426f44bf17fa974dbd6194c8192d6bb5f0ac4f5ed
 Size (UPnP-Inspector-0.2.2.tar.gz) = 134150 bytes

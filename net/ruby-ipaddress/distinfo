@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/03/15 14:45:40 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:41 nia Exp $
 
-SHA1 (ipaddress-0.8.3.gem) = 4451c0877d08c012546c4dde9d7603b5bc326ae2
 RMD160 (ipaddress-0.8.3.gem) = f5d76e3419d395463752ca40a1d19a72b95d93a0
 SHA512 (ipaddress-0.8.3.gem) = 898f20bd2883b64a678570a79891231857559ad402bdb5c987b1f117749f9f063a41d1482c58eeb10fe2285475201e6f14f48b8a2fa6ee0b46dcd4de9af57695
 Size (ipaddress-0.8.3.gem) = 38400 bytes

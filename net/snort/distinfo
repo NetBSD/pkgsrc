@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.52 2020/10/01 19:45:02 nils Exp $
+$NetBSD: distinfo,v 1.53 2021/10/07 14:42:48 nia Exp $
 
-SHA1 (snort-2.9.16.1.tar.gz) = cbee25cd793f40eddb72ff7b2cf4d2025a7df43d
 RMD160 (snort-2.9.16.1.tar.gz) = 0716e9647d86d56d82761b0ffc6e491dcd4985a0
 SHA512 (snort-2.9.16.1.tar.gz) = 9462bd38a032c96298a6b6abea8502dadbab53f6f5163b90abb9ae247262c0e76afdeef31748a6bbd216a7c9d65d14e18b7096865135d88087ea27cc32596155
 Size (snort-2.9.16.1.tar.gz) = 6947960 bytes

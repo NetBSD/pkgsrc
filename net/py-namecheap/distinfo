@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/01/28 12:01:49 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:30 nia Exp $
 
-SHA1 (PyNamecheap-0.0.3.tar.gz) = a682021ad1ae4ba9e987d78e2e71a84cd60eb519
 RMD160 (PyNamecheap-0.0.3.tar.gz) = 3ee63c50b2e50d6f3f29418151338dab3ba19888
 SHA512 (PyNamecheap-0.0.3.tar.gz) = 95931d47eae7a8f5a3a8384e4819d2ac6e55af31b6f189b7124b6db7d90932cb6a65f058a57c0a61e519f03d973d951ec7a2db32047c09764cbca6ec290eabb8
 Size (PyNamecheap-0.0.3.tar.gz) = 5748 bytes

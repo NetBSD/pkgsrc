@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/03 17:55:01 fcambus Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:41:19 nia Exp $
 
-SHA1 (dbip-asn-lite-2021-10.mmdb.gz) = 351f2316fe79f737e97e7254e15b5f1b0f2b89bb
 RMD160 (dbip-asn-lite-2021-10.mmdb.gz) = 87de3685653dbadebd617a324d6482ebfd512007
 SHA512 (dbip-asn-lite-2021-10.mmdb.gz) = ed97ba4e9653aadfd7a52bb7ca134dc6943225bc5a11bac3fb666e3f5ecb45a08edc792ed6ef2dd6f141f3afbbc9aa2ee664f8283667ac4c96acb6e1e5840bab
 Size (dbip-asn-lite-2021-10.mmdb.gz) = 4007408 bytes

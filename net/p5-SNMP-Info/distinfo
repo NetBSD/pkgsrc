@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/09/12 07:24:33 wen Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:42:16 nia Exp $
 
-SHA1 (SNMP-Info-3.78.tar.gz) = bb4807a65ff8cc618c3b862dced6ee122b3c8c74
 RMD160 (SNMP-Info-3.78.tar.gz) = c935fdf821925771952474cfd26f789850ad27bb
 SHA512 (SNMP-Info-3.78.tar.gz) = eca499aba07030a0e5e976c93680a403e6cee7e83814913f4a52287ca7f16d8a4775b5b772625b36253ff604022ee06133754f60a5ef7a5d497b2624033e9a70
 Size (SNMP-Info-3.78.tar.gz) = 578683 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.42 2021/06/25 11:42:48 adam Exp $
+$NetBSD: distinfo,v 1.43 2021/10/07 14:41:27 nia Exp $
 
-SHA1 (freeradius-server-3.0.23.tar.bz2) = 292355d799cc10c4e20c315a4a90598d21e0d563
 RMD160 (freeradius-server-3.0.23.tar.bz2) = 93824fed9c47a8367365120edf489a4f580b8c11
 SHA512 (freeradius-server-3.0.23.tar.bz2) = 2369378a448035706fac77b4eddd28b950fbb587edefb5be6cf579043435cdec911b4a5326cfeabd05c28bb964e53027bcd1cd8a6a56013836f041a10326ef1a
 Size (freeradius-server-3.0.23.tar.bz2) = 3381917 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/02 18:16:25 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:42 nia Exp $
 
-SHA1 (network_interface-0.0.2.gem) = 9492d607d88b1340576b5aa4da9a35b107b28381
 RMD160 (network_interface-0.0.2.gem) = c07f50edb9dfcdd2de63b4a5026ea2b3d966bff7
 SHA512 (network_interface-0.0.2.gem) = 8850325e7e0c5ab51b060270220099c2c00cf7031083a511ae9f8dd6d1b9219b37169fa7620e9648eb071784a840e14ce965f8d1cf5d475ff82691bfba25a202
 Size (network_interface-0.0.2.gem) = 16896 bytes

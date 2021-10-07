@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2019/10/06 12:52:20 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:41:48 nia Exp $
 
-SHA1 (maradns-2.0.17.tar.bz2) = deb7ea8ec2a78275b31fccc4acf103330c04b7e7
 RMD160 (maradns-2.0.17.tar.bz2) = 27b0163058a8704a7d1d37e8436627eed3c292c0
 SHA512 (maradns-2.0.17.tar.bz2) = 375f35b6aa6f8a64dfaf04009b2c543d3f176ff4380923ea52af71296956fe4310eba0edf319bf7b545272bfce8818991d6b731e8428607ae3b8778d062dcd52
 Size (maradns-2.0.17.tar.bz2) = 1135103 bytes

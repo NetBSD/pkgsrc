@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/10/12 14:26:52 wiz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:41:27 nia Exp $
 
-SHA1 (freeDiameter/1.5.0.tar.gz) = d88f3836f4548c93638e82b5c0bc86554a431b8f
 RMD160 (freeDiameter/1.5.0.tar.gz) = b0490017dcf3c82254fee25e6743d8d989141f15
 SHA512 (freeDiameter/1.5.0.tar.gz) = 21350a22ca3538da598c162ac493bd2b42199bfe2bdcac4203924ce0b5cdcd78ec6437dc41fea451f29f64e764bbbff18c21294b9ccb6ac8465768b5a850ef29
 Size (freeDiameter/1.5.0.tar.gz) = 1010247 bytes

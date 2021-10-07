@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/01/11 10:31:59 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:32 nia Exp $
 
-SHA1 (pypiserver-1.4.2.zip) = 488450ef15479776574aa8bae486ceab4497fa27
 RMD160 (pypiserver-1.4.2.zip) = 938fcbfc48b9bee2da8a2c0d6da8a0a58ccbbe04
 SHA512 (pypiserver-1.4.2.zip) = f7e17dd894d62300ba27d99244e809b3789c658a5eba8d82236c8b978e28091877dd26526ce5574466dba470d70e03381982ec818a7c969071283370eb6d4cf2
 Size (pypiserver-1.4.2.zip) = 547599 bytes

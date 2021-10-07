@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 14:59:02 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:41:35 nia Exp $
 
-SHA1 (connection-0.3.1.tar.gz) = 8910bef4b64c1a02dc5644ccda5c2f8c33a18f8b
 RMD160 (connection-0.3.1.tar.gz) = 976a55668846594d16bd91ff05d02bc60db47f44
 SHA512 (connection-0.3.1.tar.gz) = 06da91d39e0d9a556a78da77a7ca31d520d5e7e8fd65509f82be926ad2c34282ef1f4d03aa6065c5834bc89417cf51b573f3cf4529fe3ead72eb1e80cc6d7a98
 Size (connection-0.3.1.tar.gz) = 9051 bytes

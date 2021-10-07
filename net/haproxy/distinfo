@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.76 2021/10/04 09:07:12 wiz Exp $
+$NetBSD: distinfo,v 1.77 2021/10/07 14:41:34 nia Exp $
 
-SHA1 (haproxy-2.4.6.tar.gz) = b5e5cd985819d44779e6e5efdf7256f74649163f
 RMD160 (haproxy-2.4.6.tar.gz) = b848381c208b3addb139bc22bf63ee44ba7d7592
 SHA512 (haproxy-2.4.6.tar.gz) = 3752d88cd3eb82d08f625230c2c3171a30c11141dc044cc53e7164424d13e545ba12fee45a22fccc5cebade2611d3da57648d08ebde47f861bca68dcd96c3e29
 Size (haproxy-2.4.6.tar.gz) = 3594150 bytes

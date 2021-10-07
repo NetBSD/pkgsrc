@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/11/24 13:25:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:59 nia Exp $
 
-SHA1 (uftp-5.0.tar.gz) = a5a38f8654d340d988345a716b808d427ed5816f
 RMD160 (uftp-5.0.tar.gz) = 709cc992b1b0ef2b25bcf41890289936919051cf
 SHA512 (uftp-5.0.tar.gz) = f76e86559971facd806141fae88c6c47ec8361440044e429126391c6ac17f5f6ec0c79950816f9329cbb85a6be31d0700d18f599ef0b56f8df3ebe03fad4e27a
 Size (uftp-5.0.tar.gz) = 239651 bytes

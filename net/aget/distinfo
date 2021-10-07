@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/10/25 03:34:42 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:41:12 nia Exp $
 
-SHA1 (aget-0.4.1.tar.gz) = 6f7bc1676fd506207a1a168c587165b902d9d609
 RMD160 (aget-0.4.1.tar.gz) = 4a23d722b0e4d6c632c40006aa5e67d5acfd4b88
 SHA512 (aget-0.4.1.tar.gz) = 23fd4a7786b905bb10fb8de62dea294e014e0c2ad276614c642ebd3865b262eb88e08308df9a68f418de19a984ad138561d82c67e0226dfb5f56520e8ed15ad7
 Size (aget-0.4.1.tar.gz) = 12783 bytes

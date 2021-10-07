@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/04 18:52:51 jdolecek Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:41:27 nia Exp $
 
-SHA1 (freerdp-2.3.2.tar.gz) = 2380e3382bec472f75b80f50bc0c1b2be8a963dc
 RMD160 (freerdp-2.3.2.tar.gz) = 9351474e70a67cce1418fea5f35d4584aa316abf
 SHA512 (freerdp-2.3.2.tar.gz) = b8502d34c73113a42bf2dc240431967829064d68f507cc42ff06432a784213eee4a2c001b174f1b970545aec75b3caf21ba5f4ee1ca8c07c7ef834131413204b
 Size (freerdp-2.3.2.tar.gz) = 7284490 bytes
