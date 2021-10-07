@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:49 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:09:51 nia Exp $
 
-SHA1 (rosegarden-2.1pl4.tar.gz) = 5a6e293eb38a7090ba6929fec23104ffef587533
 RMD160 (rosegarden-2.1pl4.tar.gz) = 94604241c8e4101520d8b79544a16839d98436e5
 SHA512 (rosegarden-2.1pl4.tar.gz) = 75caf2132ac1e89bd13c650750776793c86ded8fdd0e2237831ffe64d1d4bc53f1345c2e545005f6194320b832b134145e278e816d2e251a436f011a1221f640
 Size (rosegarden-2.1pl4.tar.gz) = 587134 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/09/14 10:41:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:12 nia Exp $
 
-SHA1 (ario-1.6.tar.gz) = 246bef864360953b70a00b2c8123547d669d686b
 RMD160 (ario-1.6.tar.gz) = dc908a04ae17429030c1eeab41e29e5f9171d0d8
 SHA512 (ario-1.6.tar.gz) = 93057da62616e79f6ba6f7204fabac37417fb34c350b53eeea61508f4c65322fabaef7a9fdbe7beb8dcbf92c8f86f0d33caf1ffa0ad76de8050fe72d57408ec0
 Size (ario-1.6.tar.gz) = 1151747 bytes

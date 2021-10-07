@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/03/10 17:08:21 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:09:36 nia Exp $
 
-SHA1 (lilv-0.24.12.tar.bz2) = c2c8c48edea83e039c9b0316540cd5d1c4e22b72
 RMD160 (lilv-0.24.12.tar.bz2) = 5fdb63287e97a9dd2b1f64d068ac0a26086a54b5
 SHA512 (lilv-0.24.12.tar.bz2) = ea22db4e995792b62d60d793169c792549b8fb0255c2cf7a85780dd149811921e2fae5eaea0fb83465f01b14dfa66361af3be40bf7cb3733e98655b943f4faee
 Size (lilv-0.24.12.tar.bz2) = 427404 bytes

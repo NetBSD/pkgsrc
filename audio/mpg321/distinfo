@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/07/08 13:42:13 leot Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:09:41 nia Exp $
 
-SHA1 (mpg321_0.3.2.orig.tar.gz) = bf1c22542c86af69267828e45f217fdeb49e5d43
 RMD160 (mpg321_0.3.2.orig.tar.gz) = 04ea36c893bbe6fb0054a7fcd71294927cf70ac9
 SHA512 (mpg321_0.3.2.orig.tar.gz) = f1bead2c11e4cde0f1a87e1b2e3d216ef80c9a5dd8b219841961688d44a5fc63a54b7af07359766fde0b2712ddc5d0a90b20149c3228cb2d70e830e15c8ab234
 Size (mpg321_0.3.2.orig.tar.gz) = 151139 bytes

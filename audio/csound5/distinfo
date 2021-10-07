@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/06/20 07:56:40 rillig Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:09:16 nia Exp $
 
-SHA1 (Csound5.19.01.tar.gz) = eeeb3591745c5b352b9040a2dfa3805f22f5fbda
 RMD160 (Csound5.19.01.tar.gz) = ceb9952d562c57b09143a47a4d51081753f1b694
 SHA512 (Csound5.19.01.tar.gz) = 8dd0c8984a75fe74e5aea53abf15276fdb526ce34ff48402ad2cfd2953b65a67a52f3a279cd030964cddd2322711df04638e039e2998022d92c56593450d3c8c
 Size (Csound5.19.01.tar.gz) = 9302526 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:12:34 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:09:26 nia Exp $
 
-SHA1 (gqmpeg-0.91.1.tar.gz) = 23d81dbf49a2d44ceda58bea2b324716b42edbb5
 RMD160 (gqmpeg-0.91.1.tar.gz) = 7e10b097bc2af3010f43c47a1f905e6103c8dd5f
 SHA512 (gqmpeg-0.91.1.tar.gz) = 48bddd4a32a80b4a811ebb049c4b8d41bf8bf25bf4faf200558b9c259c3e781250872ccfe3981cf1bc21571418afdccc31f8f77f02b10f02717272c474431b54
 Size (gqmpeg-0.91.1.tar.gz) = 1078478 bytes

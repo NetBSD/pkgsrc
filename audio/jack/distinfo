@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/09/15 07:44:09 schmonz Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 13:09:29 nia Exp $
 
-SHA1 (jack2-1.9.19.tar.gz) = 3182304c0a3ecd911775fb46088f0df79ee9015f
 RMD160 (jack2-1.9.19.tar.gz) = da6ed4db02dfc856c477d76a73fe22157b6f7df8
 SHA512 (jack2-1.9.19.tar.gz) = d8d5fe17e2984959546af3c53f044aa4648860e19ff8ffd54452e87fa6cdfd111f825c57e3df17cb8ed95de8392b6f354b12ded41e3e021a37f07b99a89ba18d
 Size (jack2-1.9.19.tar.gz) = 988780 bytes

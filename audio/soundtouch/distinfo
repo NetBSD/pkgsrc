@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/05/29 21:28:03 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:53 nia Exp $
 
-SHA1 (soundtouch-2.1.2.tar.bz2) = a49bb8d8bb2c296a913122b8f844a1cad0429c19
 RMD160 (soundtouch-2.1.2.tar.bz2) = 058e0d69bee64ab05f9cbad9ad1d53a2142b96d4
 SHA512 (soundtouch-2.1.2.tar.bz2) = d45cb0f94e3df32e9c76722a148f201277b2ddc3e390394c1f4ae1263f13557c6b664e90301b5f62d7561d743ab4903a44a34ab7248880b343d581cebd5f0cd9
 Size (soundtouch-2.1.2.tar.bz2) = 526281 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/09/12 17:15:56 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:22 nia Exp $
 
-SHA1 (filter_audio-0.0.1.tar.gz) = d3070b92c8436ec8a07f0833819269b055d8bc00
 RMD160 (filter_audio-0.0.1.tar.gz) = ca4dfeda1fd927221ee095d276c3008e9f83251c
 SHA512 (filter_audio-0.0.1.tar.gz) = 9ae4d77ddc0c9f604642a6a968ead684affd9dc957ab4ddc3cf9974da028b9c402155322a63dbbcdb7dc8e3eec63c2fcef267862580229cfc01bc496f990ed58
 Size (filter_audio-0.0.1.tar.gz) = 209985 bytes

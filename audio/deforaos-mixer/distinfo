@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/01/13 01:26:03 khorben Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:09:17 nia Exp $
 
-SHA1 (Mixer-0.4.0.tar.gz) = f09b8ba1d1a1f69360650ed7b7e706f987a0d649
 RMD160 (Mixer-0.4.0.tar.gz) = 8bf3d75494e0e97c2b5e7a8bd08408d53481dc78
 SHA512 (Mixer-0.4.0.tar.gz) = b2294f8a44b1415068302bf4bde0d6b4b9e5d525c9e46469271579f86d54e80262d5ed40cbd08241ed4c98cd92f5644058b02bb4142b949f26c30816d2b5c5c3
 Size (Mixer-0.4.0.tar.gz) = 31365 bytes

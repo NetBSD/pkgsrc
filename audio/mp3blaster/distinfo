@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2018/04/18 00:40:47 christos Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:09:39 nia Exp $
 
-SHA1 (mp3blaster-3.2.6.tar.gz) = bf07498a64c0ebf904d56ab6ed1ab28275f59f61
 RMD160 (mp3blaster-3.2.6.tar.gz) = ceebc80640bacfb2cb7e9b08ea1732c95a2fcd0f
 SHA512 (mp3blaster-3.2.6.tar.gz) = eb977eb46b86449c6d433b1740aa08580e5b8f3d55d82d6f2623cd5fd103d73b7df127fb9ac650a21da61ad4948eb569a812e15d9adc9424d491fa625e198e0d
 Size (mp3blaster-3.2.6.tar.gz) = 354019 bytes

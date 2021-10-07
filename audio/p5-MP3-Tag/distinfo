@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/09/06 19:28:06 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:09:45 nia Exp $
 
-SHA1 (MP3-Tag-1.15.zip) = 7110c54c6935daafa19bc80d83faa39f020d6ee9
 RMD160 (MP3-Tag-1.15.zip) = ec23f95902dc7ae6aba387cbe04e93c8e1a12d4d
 SHA512 (MP3-Tag-1.15.zip) = e0361e34583dc8d1742b40d2922e66de8d43180d99e52f8e34166c432619ca4611b8589c6acc0498384f9f0dd2e30189351c18e0bfe2a4ca96df60809683cbb3
 Size (MP3-Tag-1.15.zip) = 321983 bytes

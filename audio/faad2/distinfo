@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2020/11/19 10:41:26 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 13:09:19 nia Exp $
 
-SHA1 (faad2-2.10.0.tar.gz) = 7f2666d3aa891cb923d97cec1d73365944338f79
 RMD160 (faad2-2.10.0.tar.gz) = 2666b3d3432840d4ec9ccf597015019725530a5d
 SHA512 (faad2-2.10.0.tar.gz) = 92c8b5e79f85b7a7caac9e7954959c26d74ef148a658dcb37e2c1b303fc2fcc5a0d12f21e7bd476870498109bdd03916a56c13f578186a69d6eceb103222e771
 Size (faad2-2.10.0.tar.gz) = 803225 bytes

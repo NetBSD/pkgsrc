@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 01:12:51 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:09:54 nia Exp $
 
-SHA1 (SpiralSynth-2.0.0.tar.gz) = ea42c5b7710237139f5281cf0c4ca155c184c4cd
 RMD160 (SpiralSynth-2.0.0.tar.gz) = c05f38a9ae8b8b87f520c11854631e6dfa00c034
 SHA512 (SpiralSynth-2.0.0.tar.gz) = fb9b1c84d03120c372af344f1f3e6ec4bfecea8d2c2afed9f5484c13e453bf816cfa7429690d3a3356ca84a51df31fdbb3ca25d2d2b023aacacfea6ec4936244
 Size (SpiralSynth-2.0.0.tar.gz) = 66263 bytes

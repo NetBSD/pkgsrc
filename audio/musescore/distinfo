@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/02/11 06:54:57 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:09:42 nia Exp $
 
-SHA1 (musescore-3.6.2.tar.gz) = 603d9d797bdd1df961ff3ff7fb06a1e5bb9f0cf0
 RMD160 (musescore-3.6.2.tar.gz) = 196df967a96367e3665bb94d884f29b425a759f3
 SHA512 (musescore-3.6.2.tar.gz) = 04ff1ddd82358c070640f81bbaa9c47c5da95aa57c56a5d1b975ad984744e0def17d5581da6bbeda1aae1c68470100d104d4f8a39ba33bf37bf8891ffcbf1d6e
 Size (musescore-3.6.2.tar.gz) = 69077899 bytes
