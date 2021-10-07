@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/09/29 08:56:26 wiz Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:05:28 nia Exp $
 
-SHA1 (unifont-14.0.01.tar.gz) = 055aef312b4b520822e9d221f39583771d30eab6
 RMD160 (unifont-14.0.01.tar.gz) = 2d2f5e1be4df2b433c9456b8b977171aec8ad3a4
 SHA512 (unifont-14.0.01.tar.gz) = 1b1247502ff13143f2908ef39b6cea6adca82e7633acc78ead0847874597c342484c7357cb449bec0921ab84d1ea752c3e8cdd24dfda02f2b69898dd9f6c7a6b
 Size (unifont-14.0.01.tar.gz) = 23589517 bytes

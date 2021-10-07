@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/01/26 11:37:11 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:04:29 nia Exp $
 
-SHA1 (tex-cm-49028/cm.tar.xz) = 34c5870069846eb24937a21c961817df3a6b9baa
 RMD160 (tex-cm-49028/cm.tar.xz) = a82fcbaabda4302509b123d9cad1f6f3bc68ed5a
 SHA512 (tex-cm-49028/cm.tar.xz) = ea93b0e74fec5e00ed2d3ccc4493cf2bbd747948da563fff3ec34ea5fe1c58b7fb30ea4a1a78d2ebb08e69eb6e3ca1050a66011c42d00a4f1fc99dbbe8fa20f3
 Size (tex-cm-49028/cm.tar.xz) = 238084 bytes

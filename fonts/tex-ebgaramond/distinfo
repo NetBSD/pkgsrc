@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/04/26 12:21:13 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:04:39 nia Exp $
 
-SHA1 (ebgaramond.r54721.tar.xz) = e0168040a6dbde3f9e39339aeda2aefdd02ce136
 RMD160 (ebgaramond.r54721.tar.xz) = 34ef1c28a6e2f90e1c3ed884bf2597c2cdaa6b41
 SHA512 (ebgaramond.r54721.tar.xz) = aa8717933733ddfa456b9aa7dcc6648b6150b0facd4b296c44e9b718e958ab59de887bfc39a2aff9cab55190a999708ec3f4600bd3b900f57ee76a420cd2495e
 Size (ebgaramond.r54721.tar.xz) = 11484484 bytes

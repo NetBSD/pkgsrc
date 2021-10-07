@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/12 15:21:10 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:11 nia Exp $
 
-SHA1 (public-sans-v1.008.tar.gz) = 0fdc596646cbc71a2ca9712d1817fe17499d7556
 RMD160 (public-sans-v1.008.tar.gz) = 67fc3797fdaa8208b6caf79a0947b51bfc77cacd
 SHA512 (public-sans-v1.008.tar.gz) = c83935e79ec0837cf2a8c74817e02313adddc9cac213eb3ede5e3560425bc875c031a74bff86dfe53ee0161967c86898cf4830dbe14b2a28e70b5ad874ea9103
 Size (public-sans-v1.008.tar.gz) = 12128774 bytes

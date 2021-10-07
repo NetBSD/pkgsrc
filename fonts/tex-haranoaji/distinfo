@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/21 05:42:57 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:04:52 nia Exp $
 
-SHA1 (haranoaji.r57574.tar.xz) = 708a0bf687c447745954e21195414e202d6398fd
 RMD160 (haranoaji.r57574.tar.xz) = edd2efe55fcfa881e230b7d29a14551713aa29cb
 SHA512 (haranoaji.r57574.tar.xz) = 536b8f30134c8ec45e7e55981799520214bc646fe1f8a5525797612d130a9897070fd703b5920a7039192e4411ccdef6d23204c839be2320dc5f557380a55070
 Size (haranoaji.r57574.tar.xz) = 26051156 bytes
