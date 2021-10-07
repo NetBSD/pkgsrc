@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/08/11 13:38:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:51:02 nia Exp $
 
-SHA1 (fuse-ext2-0.0.10.tar.gz) = cb92048bf3aac01b55af8c1362ab903b19669f3a
 RMD160 (fuse-ext2-0.0.10.tar.gz) = 6303f369301eb58c78bb495ee1b1bee3f69ccf4a
 SHA512 (fuse-ext2-0.0.10.tar.gz) = b884c0f92b706ae3f03dd75f489990e7cea31fd68526ade48ab5a11e1c9f78ec02a4dbb82450ce2aca12742a799c334a3ab8f2443a96ad003a76f0a86567fa24
 Size (fuse-ext2-0.0.10.tar.gz) = 122746 bytes

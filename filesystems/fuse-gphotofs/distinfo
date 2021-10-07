@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:15:00 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:51:02 nia Exp $
 
-SHA1 (gphotofs-0.5.tar.bz2) = 97ad5e82bf8b601898d378b34bcf646ed6423e19
 RMD160 (gphotofs-0.5.tar.bz2) = 8ebbb23b1d974ee1ee629d843d301f1071823b49
 SHA512 (gphotofs-0.5.tar.bz2) = 6f5bcaf8ca820c0590ec95af55ec9438c864a298660ad15c6d6e8f59201a7f873d29f16cf77d13538111f6cec3f958ea0ac88c6c51836ab2d8c9d6cca156ed3a
 Size (gphotofs-0.5.tar.bz2) = 261357 bytes
