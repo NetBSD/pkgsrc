@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/08/13 12:08:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:07 nia Exp $
 
-SHA1 (drawing-0.8.3.tar.gz) = b91d71c54544af6ea40673ba7cf233ef736bf4b0
 RMD160 (drawing-0.8.3.tar.gz) = 76abd73484f73df2d6767866b250098b05a51576
 SHA512 (drawing-0.8.3.tar.gz) = 15ddfa09306f0629be6c282a1bb4dff59d95747575052d4b070b7b6152411b010e102144c724b33712bd1347f0ca1d11a27ce01edac94bc62b449a029f688de6
 Size (drawing-0.8.3.tar.gz) = 11436783 bytes

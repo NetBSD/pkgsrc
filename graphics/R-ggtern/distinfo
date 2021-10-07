@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/28 07:12:05 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:11:58 nia Exp $
 
-SHA1 (R/ggtern_3.3.5.tar.gz) = 79a98edc30d9565773b30a639a7016b2e2112847
 RMD160 (R/ggtern_3.3.5.tar.gz) = ae674d87ff4d617539a84d0cb41a2d34cae03f39
 SHA512 (R/ggtern_3.3.5.tar.gz) = cfb5529324658ee9f614001483425ee21ca9dc2ed23104b35961d98629f2147f751e8cbefbebc472b7c544d7e6e470c7f4312c17bd336c8610f83468a4b8d4b7
 Size (R/ggtern_3.3.5.tar.gz) = 566674 bytes

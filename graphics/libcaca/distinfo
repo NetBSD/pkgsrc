@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/04/21 10:17:40 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (libcaca-0.99.beta19.tar.gz) = ed138f3717648692113145b99a80511178548010
 RMD160 (libcaca-0.99.beta19.tar.gz) = 8623dbfe2584d6e5c633aa140f30139a13a59128
 SHA512 (libcaca-0.99.beta19.tar.gz) = 780fc7684d40207cc10df3f87d6d8f1d47ddfffa0e76e41a5ce671b82d5c7f090facb054c3d49ca7c4ea1a619625bb9085ce52f837f50792b4a2d776a4c68e15
 Size (libcaca-0.99.beta19.tar.gz) = 1203495 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/01/24 09:58:54 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:13:21 nia Exp $
 
-SHA1 (tex-venndiagram-47952/venndiagram.doc.tar.xz) = 4898cab3a1b2ad32d8f0fa9b928dec9701cb7840
 RMD160 (tex-venndiagram-47952/venndiagram.doc.tar.xz) = bb1652268de42a8efb6fdd61dd1d3f480399922a
 SHA512 (tex-venndiagram-47952/venndiagram.doc.tar.xz) = e1a034ba7171aa94c5fe51aab4b799501989563144ff9f8053e8a690dada38d86df2539afc97c0ba4fb89fa6eacb80c9bf50e2436d3bfa567590aaa1af4d1e19
 Size (tex-venndiagram-47952/venndiagram.doc.tar.xz) = 338636 bytes

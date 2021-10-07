@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/09/29 08:52:10 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (libexif-gtk-0.5.0.tar.xz) = 32c0ed5b8d17450303c93e82693b0f24c8e3e469
 RMD160 (libexif-gtk-0.5.0.tar.xz) = 744d68a046a110c2d1e19b9b6355dc335b448493
 SHA512 (libexif-gtk-0.5.0.tar.xz) = ade46abee851abacec7093174a2470eb59b2e43549b9b60877f1da87efa58482052d471c6be44717664b15e17d5846837703c658a846f5e0d95e75fdc2ed02d4
 Size (libexif-gtk-0.5.0.tar.xz) = 309400 bytes

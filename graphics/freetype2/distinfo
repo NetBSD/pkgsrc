@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.69 2020/10/21 08:26:08 adam Exp $
+$NetBSD: distinfo,v 1.70 2021/10/07 14:12:10 nia Exp $
 
-SHA1 (freetype-2.10.4.tar.xz) = 0181862673f7216ad2b5074f95fc131209e30b27
 RMD160 (freetype-2.10.4.tar.xz) = daf8f00c3698b480c9beb8ce8059f30d98644c14
 SHA512 (freetype-2.10.4.tar.xz) = 827cda734aa6b537a8bcb247549b72bc1e082a5b32ab8d3cccb7cc26d5f6ee087c19ce34544fa388a1eb4ecaf97600dbabc3e10e950f2ba692617fee7081518f
 Size (freetype-2.10.4.tar.xz) = 2416620 bytes

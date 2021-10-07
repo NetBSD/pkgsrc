@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/04/07 12:28:25 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:12:30 nia Exp $
 
-SHA1 (libksane-20.12.3.tar.xz) = ba6eddb5e07c13ba6c189ed3964524398de7c93d
 RMD160 (libksane-20.12.3.tar.xz) = 238bbfe0b462e4d813aca34f28cef16724214a28
 SHA512 (libksane-20.12.3.tar.xz) = c0fa893cd8e18bfb9c9372b43378a4cf384984359f92c5a433e0ab78c56c17a7a68927e0492155ed376e82e52127ee8cf077bb36a7feb5473aefbeb2dc62f9f0
 Size (libksane-20.12.3.tar.xz) = 145464 bytes

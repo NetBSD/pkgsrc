@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/01/20 02:22:59 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:12:06 nia Exp $
 
-SHA1 (cheese-3.34.0.tar.xz) = 1626d2568f0cc5bda904595a6693be02b909991f
 RMD160 (cheese-3.34.0.tar.xz) = 6dcea825424c3ecc44fa8a9c88c6ce4a9bb8733c
 SHA512 (cheese-3.34.0.tar.xz) = 093b4e5f7f15fd0c445fffd254d4a5035a4e3e91bacccdeeda64a4a7182901646daea5c8596c954a67896f9aaf37dab2309c21e8f026583f59d787a2c1e4c200
 Size (cheese-3.34.0.tar.xz) = 1077052 bytes

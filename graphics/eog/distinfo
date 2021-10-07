@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2020/11/12 09:44:00 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:12:08 nia Exp $
 
-SHA1 (eog-3.38.0.tar.xz) = 8cfb03be7a615cf8b6ddae2a75f1c668f54710f4
 RMD160 (eog-3.38.0.tar.xz) = 87e619ebe97cbbd50eeefa9315a1be95c1903afa
 SHA512 (eog-3.38.0.tar.xz) = 2b93cfe8e421a7e57855a69c2a3592f5334dbaf3999d63594e897898aff092a45a69f9ce77146a8bb4a9ee2c4cb7d53f38c76a3422c8fc9195682ae648c8683e
 Size (eog-3.38.0.tar.xz) = 3654864 bytes

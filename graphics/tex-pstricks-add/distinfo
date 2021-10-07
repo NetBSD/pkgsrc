@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/04/27 02:08:14 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:13:15 nia Exp $
 
-SHA1 (pstricks-add.r53763.tar.xz) = 28aa767812564c0098f5e56d81e5e97da79ea4b9
 RMD160 (pstricks-add.r53763.tar.xz) = 78aa2ab99d7d98c4a1865ce68d5765515cc20a71
 SHA512 (pstricks-add.r53763.tar.xz) = cf73863537b9058961d4592077dabfbd0e76ff0f07dbc7b17520945bad42286483da11ebbd44abe403845a9092cfa6415ad881ab19d323527f1b979b9e0163be
 Size (pstricks-add.r53763.tar.xz) = 21220 bytes

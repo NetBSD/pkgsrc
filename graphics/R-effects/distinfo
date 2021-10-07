@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 12:59:05 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:11:58 nia Exp $
 
-SHA1 (R/effects_4.1-1.tar.gz) = eaae745cef2c6f27bfc585fde584030220f6ca2d
 RMD160 (R/effects_4.1-1.tar.gz) = 0b356daf86824a62e30352d879d64ecd1fe2cbbf
 SHA512 (R/effects_4.1-1.tar.gz) = 7720315eb1afa8f5f3a19e69a62f22ea7241be1ee9ce843eaf37750e80939acc32e3301759b47b8abbb2ece08fd8da9cc9b5f9a217dde3200122ee86ad4b1014
 Size (R/effects_4.1-1.tar.gz) = 2606577 bytes

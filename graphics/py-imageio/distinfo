@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/03 09:21:14 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:12:47 nia Exp $
 
-SHA1 (imageio-2.9.0.tar.gz) = 07f2898001299313c9aade099b239ee96a1fd5cf
 RMD160 (imageio-2.9.0.tar.gz) = b92ba421826947c4603186572eda219fd9aae02d
 SHA512 (imageio-2.9.0.tar.gz) = 07fce90f25393c5bdede52b04fc8175764226bdb47546fd304f947ff8cc006477c6edb9b96f3dcb11e9e137b72a89f5d25c3652e71853c92100aa91140312179
 Size (imageio-2.9.0.tar.gz) = 3341646 bytes

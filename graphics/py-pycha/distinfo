@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/03/11 20:17:12 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:48 nia Exp $
 
-SHA1 (pycha-0.8.1.tar.gz) = 1126f3515469444b52d7b70b184412fd20e3a11c
 RMD160 (pycha-0.8.1.tar.gz) = 99e3883f6529c029ef37267fcd3f2fe5c4e85c8c
 SHA512 (pycha-0.8.1.tar.gz) = d4d173004c9c0ac7db73631c6ac380c6fdef54a3d245dde9ebc32c9fa6f3cd27b486d10e725ee45598605324b63809687ba41de5cb4fbe591bc5cb09241f6be5
 Size (pycha-0.8.1.tar.gz) = 43399 bytes

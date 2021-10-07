@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/20 02:33:14 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:11:58 nia Exp $
 
-SHA1 (R/ggthemes_4.2.4.tar.gz) = cbdd20739498f76a38ef3ebc46b0e16032e65ced
 RMD160 (R/ggthemes_4.2.4.tar.gz) = 0e6ddc5acda93c0f1ff46ddc422884e00b28de8e
 SHA512 (R/ggthemes_4.2.4.tar.gz) = 70aca67975581dc451c03f204637feff5527c7cc170c67b678b0fca8f947f27dedcf541dc56ee6cf6622a05ec10188509a60ec887cb1ef2b7001f221a4706471
 Size (R/ggthemes_4.2.4.tar.gz) = 444642 bytes

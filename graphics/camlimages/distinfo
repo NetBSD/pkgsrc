@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/02/27 15:46:56 mef Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:12:03 nia Exp $
 
-SHA1 (camlimages-4.0.1a/v4.0.1.tar.gz) = 3ff44142386970003d3cff1446ad351b36759a8e
 RMD160 (camlimages-4.0.1a/v4.0.1.tar.gz) = dd3a1aeb43bc7459781958a93db23ce32d0ca6e6
 SHA512 (camlimages-4.0.1a/v4.0.1.tar.gz) = c4e2a816911ed128c0414308d1ace914bbb51e40b6d70a3c492690b38c860f79e3e01efa3f1be7d57654c78f8acca6f30bffb9e6b8fd423d1d36d6a477d0fd8d
 Size (camlimages-4.0.1a/v4.0.1.tar.gz) = 2190274 bytes

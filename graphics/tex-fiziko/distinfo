@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/05/15 08:48:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:13:03 nia Exp $
 
-SHA1 (tex-fiziko-50293/fiziko.tar.xz) = 2f05efdfdb72ebc915de721fb7159c809e0570b1
 RMD160 (tex-fiziko-50293/fiziko.tar.xz) = 135cb5dcf49756916312fdcef24201e034a42435
 SHA512 (tex-fiziko-50293/fiziko.tar.xz) = 785f99a52193acc630e5fb00cc2db9e16795f42059d65054b0fa07f8081b95e66a245fd05c8b3ee49a69d91a17e7447d10c39863612e44e2632afd5fd0165e38
 Size (tex-fiziko-50293/fiziko.tar.xz) = 20908 bytes
