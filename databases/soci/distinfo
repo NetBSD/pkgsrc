@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:56:35 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:35:50 nia Exp $
 
-SHA1 (soci-3.2.2.tar.gz) = 0a63cdbe719793c37b328a95778451a550f22c0a
 RMD160 (soci-3.2.2.tar.gz) = d366c1773d23c551404a8e05791afc3a4b6acfdd
 SHA512 (soci-3.2.2.tar.gz) = b18b82f5bb24072852cc02cece311d1d5ddb9cb9a029a2925b9e834905b20eb3ceaa3089f2aaf547771dc3c50eea87c351d2f172041116d1710138fa3b2fb1bf
 Size (soci-3.2.2.tar.gz) = 354047 bytes

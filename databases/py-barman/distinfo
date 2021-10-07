@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/08/26 10:20:19 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:35:36 nia Exp $
 
-SHA1 (barman-2.11.tar.gz) = e2b3d7e54404d858903d67caf4250afe7fae9830
 RMD160 (barman-2.11.tar.gz) = 19d2c539d9e6543e1c56c3cabac5d55481372657
 SHA512 (barman-2.11.tar.gz) = 19862e7a50e45ec48c2e6e12aa18cdc262e5114d243d24f5b9229347a6fd9e3fe79a10a2c4a9ac14fe4c283c59c992b3b8a5409371a5b780b8c5ab20eec1ee96
 Size (barman-2.11.tar.gz) = 1260434 bytes

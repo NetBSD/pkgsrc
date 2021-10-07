@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2020/09/06 21:30:58 wiz Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 13:35:25 nia Exp $
 
-SHA1 (DBIx-SearchBuilder-1.68.tar.gz) = 3d2d0f7d6e9904474b531fcb0039f2aa03f418fc
 RMD160 (DBIx-SearchBuilder-1.68.tar.gz) = 03af7d206ac7ee01c6498b45fd1d46e33e17ac1d
 SHA512 (DBIx-SearchBuilder-1.68.tar.gz) = 5495dcc5ff23c01e4fd917802243a30d94d6a2fdce6f6e761f0eb2df765c9bfa0ba6065bd10b961c61b22483ca2ef08e958fe6aa1dbf20a85cd9aa9d97cf19ee
 Size (DBIx-SearchBuilder-1.68.tar.gz) = 115423 bytes

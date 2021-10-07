@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:48 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:35:07 nia Exp $
 
-SHA1 (D6.data.ros.gz) = 3efe5c0b4675dcdc2c89cf9a1b6f305663d153a5
 RMD160 (D6.data.ros.gz) = 20b99b066b953424dcb0b5435e9731806fac5d52
 SHA512 (D6.data.ros.gz) = 9406f9db614ba313efbbc632c84e22f292e258221d62144f762378b735a57059ca18b6077bd9ed5b41be315ceec3cd8b4a4fb7ca99856e8a41759e0be344cd78
 Size (D6.data.ros.gz) = 992143667 bytes
-SHA1 (cstore0.2.tar.gz) = 51f3eac1adde49f72c454ed3895f5954ee17ad46
 RMD160 (cstore0.2.tar.gz) = bb510ddcd3dbc5683059f313e6fb0335ad7c71dd
 SHA512 (cstore0.2.tar.gz) = 8e5e7941d5504f4688f4e8059f152adc825a59160b2f1d203bebf7b2db9d8a3032a6c5ce5697d2810e301ead4f8d7614b2c8b5977b5c3075878fb5975d2b05d5
 Size (cstore0.2.tar.gz) = 4292918 bytes
-SHA1 (data4.tar.gz) = aa07edc8a13bb194774af49cd6a1f5a95574aefd
 RMD160 (data4.tar.gz) = 9914cae55abfef9d880f14a004f4f608180ec905
 SHA512 (data4.tar.gz) = 2a44f082b36bc9d92ce327abf8e3a9c75f52616f93049c0a3a17fe2e38ba89baf626f1d2b7f982e22ebc9c2c55793054cfe063f67182f687a6c68ecadde0f21b
 Size (data4.tar.gz) = 1348695152 bytes
