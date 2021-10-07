@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:59 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:58 nia Exp $
 
-SHA1 (ipw2200-fw-3.0.tgz) = 84c28f1bed09c4d54bedf43492bd7884d0593928
 RMD160 (ipw2200-fw-3.0.tgz) = 6dafe3ef609176eec0f119df93fd586094892100
 SHA512 (ipw2200-fw-3.0.tgz) = a109d7eb894c5f591b85ec951c985cef9b36ff3afbf2975aa1069cfda60791def35d3c77105850a43d4ea94d5d2f775914b47c43fa7d71114641a32491dcd96a
 Size (ipw2200-fw-3.0.tgz) = 269999 bytes

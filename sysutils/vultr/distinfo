@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/30 08:05:14 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:58:36 nia Exp $
 
-SHA1 (vultr/v2.0.1.tar.gz) = d2f95c814d9edb42737a8963d9cccddc7e9ca24c
 RMD160 (vultr/v2.0.1.tar.gz) = 89d60065d569b97259fa8ecd37d863631e3f3bb2
 SHA512 (vultr/v2.0.1.tar.gz) = bb0f5d0e09dd431f3edc3acd9129f418f6fad7b117ec4c63ee427d1711143cec8a1364b212dbbc8cea0220d08d0eb588ba6df3fe001761f574ffe58717146450
 Size (vultr/v2.0.1.tar.gz) = 1160042 bytes

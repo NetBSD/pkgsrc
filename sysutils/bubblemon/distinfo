@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:07 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:57:37 nia Exp $
 
-SHA1 (bubblemon-dockapp-1.46.tar.gz) = 172de9ea7d78e4578143469187a72da8f836647a
 RMD160 (bubblemon-dockapp-1.46.tar.gz) = 79e8be36cd11a2c6f4998cd747b6125696603a81
 SHA512 (bubblemon-dockapp-1.46.tar.gz) = c3d42f82ea7fb837839787a184a6198d7b092451e629562c90735a22166e75f55e8e1af1026e0314a4f06ff68bc48a22157e62bd19e54a4e38b4c12228396fa3
 Size (bubblemon-dockapp-1.46.tar.gz) = 40001 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/31 12:54:29 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:57 nia Exp $
 
-SHA1 (ioping-1.1.tar.gz) = 255ccebdd08498b9a197deefbf01b0da5e1538fd
 RMD160 (ioping-1.1.tar.gz) = a8163590fe76789010e3a0173069c817469e79cd
 SHA512 (ioping-1.1.tar.gz) = 67802a6ab552ad1fdb8894f4d814601c2f66154f4bfc50fa0001d881694864c1a70882b4ba2d0f50cbd484472dc649a22b312f802a3bacc3317671971bdc0201
 Size (ioping-1.1.tar.gz) = 29251 bytes

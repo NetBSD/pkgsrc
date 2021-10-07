@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/09/28 17:57:38 fox Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:57:56 nia Exp $
 
-SHA1 (htop-3.1.0.tar.gz) = f8cf08d61a707a961b0cbb0c98bd4352d5c88de7
 RMD160 (htop-3.1.0.tar.gz) = eb64c52e19df747bfe5b03ebc607b950e5084bf3
 SHA512 (htop-3.1.0.tar.gz) = bb4422591a61978d1cc5b423413820c14cc571c4660087387949f1071609da38e42be2be8485863cb19b0b957d1fdeb5b2df46212d9ddd3891871b1c9d276c6e
 Size (htop-3.1.0.tar.gz) = 378838 bytes

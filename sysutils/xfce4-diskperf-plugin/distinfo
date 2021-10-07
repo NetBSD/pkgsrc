@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2019/08/18 22:13:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:58:40 nia Exp $
 
-SHA1 (xfce4-diskperf-plugin-2.6.2.tar.bz2) = 997e484f2d05767b9318eb07443fac6a779cb33c
 RMD160 (xfce4-diskperf-plugin-2.6.2.tar.bz2) = d769646b4a03d245d218b026abc116820bd2bd15
 SHA512 (xfce4-diskperf-plugin-2.6.2.tar.bz2) = e91a888a9936f8a0279a062801d16ebe03159df479413087a01e20c15913df781378e4b4c91ecba94d71afa813c6d3a5367b11c1c6d3d62bf10fea78c4853031
 Size (xfce4-diskperf-plugin-2.6.2.tar.bz2) = 347244 bytes

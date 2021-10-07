@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:44 nia Exp $
 
-SHA1 (devkitd-jmcneill-003.tar.gz) = 56c94a626a89d56a99b232f01b0d42aaf80c16cf
 RMD160 (devkitd-jmcneill-003.tar.gz) = 88b166f04061579fa18a510d57593fd3eec453e0
 SHA512 (devkitd-jmcneill-003.tar.gz) = 40f56e7fff81ea0a6dfefa8409c5ffbb9c9b7ca34e8ceb96890b8c69007ae52d2438a52e24344ec8dbed8051137c418cae77ab7cc42a6e6909a3aecbed37c3e8
 Size (devkitd-jmcneill-003.tar.gz) = 336408 bytes
