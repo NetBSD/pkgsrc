@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/01/29 08:29:49 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:51:58 nia Exp $
 
-SHA1 (tex-xltxtra-49555/xltxtra.tar.xz) = 3246f4491a23c59c8b338a60b3333107ea3909a5
 RMD160 (tex-xltxtra-49555/xltxtra.tar.xz) = c79f70b992422096b49501cd25279ad76de2bfdd
 SHA512 (tex-xltxtra-49555/xltxtra.tar.xz) = c3626a23aa89a5f8c915deb8a5d9dffd2288d6a9a5fadf305c1749ef7daf5043407bb1967ae0d68b70e782a93a1d37342a7d6a28706873518303099758e58269
 Size (tex-xltxtra-49555/xltxtra.tar.xz) = 2536 bytes

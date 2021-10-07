@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/04/27 05:09:57 adam Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:49:04 nia Exp $
 
-SHA1 (WeasyPrint-52.5.tar.gz) = d0bd703a7ba0ab881d0887410a518840f7cab607
 RMD160 (WeasyPrint-52.5.tar.gz) = 36214c26292007ef46e6e1e6ea546518f3f08e79
 SHA512 (WeasyPrint-52.5.tar.gz) = 0ce86db000adef95fabfb335c069ad2a602ed98056219cedde905c550b04b10b0881d72fbdd38a48fae4e263825f5fbd8a70ce13932083afb8930eacc5817fb5
 Size (WeasyPrint-52.5.tar.gz) = 325050 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/30 08:04:44 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:26 nia Exp $
 
-SHA1 (hyphen-ethiopic.r58652.tar.xz) = 7c2058cdd6779fd1a4709e5a05106ba0e3ec9636
 RMD160 (hyphen-ethiopic.r58652.tar.xz) = bc9e2b49dd7027c0a70ceda6995339536930b219
 SHA512 (hyphen-ethiopic.r58652.tar.xz) = a1532603758e7f774acba7c13ee74f0046ff187598ca86b2e93b91da31317f03fdbab5d4d7c0814978fb2ac159bd6e5a48e6e734c19758da21ad0a031844f52b
 Size (hyphen-ethiopic.r58652.tar.xz) = 4448 bytes

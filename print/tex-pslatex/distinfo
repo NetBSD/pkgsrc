@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/13 05:39:00 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:15 nia Exp $
 
-SHA1 (pslatex.r57434.tar.xz) = 8e828eae33fc57678742fdc14de542f44d5e0ba7
 RMD160 (pslatex.r57434.tar.xz) = dfd51268bfde57b955c6cc58222cd7f765c1d0ab
 SHA512 (pslatex.r57434.tar.xz) = 64dc0f10f3aaa78a4d611d21601e5fb3f27c7c97bcf04f5dd3192f5253660edc862481f3b1bcb8b18b6cc07a6064e78953c31470bf36bc70103f2a83374483c4
 Size (pslatex.r57434.tar.xz) = 5824 bytes

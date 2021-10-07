@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 04:06:18 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:58 nia Exp $
 
-SHA1 (tex-xetexconfig-41133/xetexconfig.tar.xz) = dfc154176f263c7cba8d6bee62487fd88aa6e0ec
 RMD160 (tex-xetexconfig-41133/xetexconfig.tar.xz) = ab1799def14e4657dc60fe7597cd9b8fa6ff01b7
 SHA512 (tex-xetexconfig-41133/xetexconfig.tar.xz) = f83779f08deb7b191bbf01d71dc7074af867fca12d1a3d0adebfb0fccd4f3d6fb21d978c53a40985dd87078ef62f5f8f479ad393f2b21d136209b327663da50e
 Size (tex-xetexconfig-41133/xetexconfig.tar.xz) = 580 bytes

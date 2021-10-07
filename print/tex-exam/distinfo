@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/06/03 07:00:11 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:50:07 nia Exp $
 
-SHA1 (exam.r58023.tar.xz) = 323eba9559fa5d1a871aead5131225c4ba835ed5
 RMD160 (exam.r58023.tar.xz) = e18c9a480133c8e9a9663b24dd63bb0eacc2ab93
 SHA512 (exam.r58023.tar.xz) = 0a18063d56042bbd93d43e7e0dd7da59e352c6ee31eb9d925124f5057e6ec62a87277271bdb7f1bfd81e22537af6b648efafaef22e25956ef2e48868b381e9ea
 Size (exam.r58023.tar.xz) = 49904 bytes

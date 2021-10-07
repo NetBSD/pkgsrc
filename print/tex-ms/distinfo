@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/13 11:19:04 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:48 nia Exp $
 
-SHA1 (ms.r57473.tar.xz) = 48ca7bbaba32bcd74c22771a8ec0ff840bc3ce2c
 RMD160 (ms.r57473.tar.xz) = 22ee79a174d86ced9a4ab8059183aff16887450b
 SHA512 (ms.r57473.tar.xz) = 73d46ed7ba85773f4ba7c261ff0ea8f2e751e53659fc19686bddd9523b160dba5e367c8fcb30a20678e4a3df26c0812a6b771736eef8616e112cbac3a25e7b48
 Size (ms.r57473.tar.xz) = 3064 bytes

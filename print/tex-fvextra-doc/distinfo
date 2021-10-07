@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/05/07 10:28:55 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:15 nia Exp $
 
-SHA1 (tex-fvextra-49947/fvextra.doc.tar.xz) = 64fc4da95267ddd76123e0e3c947118c83234e39
 RMD160 (tex-fvextra-49947/fvextra.doc.tar.xz) = e0890de6d475c5f11d43de00cc22804b26247e2b
 SHA512 (tex-fvextra-49947/fvextra.doc.tar.xz) = 15a535efa410fc718ed2c027e6a949d4a95bb5552aa3f0e817eabb2e3de412083b26f0bc1ff01d90c42411a8bd63f2590c578dc1b4ddaced98a4c7f1cf15033a
 Size (tex-fvextra-49947/fvextra.doc.tar.xz) = 817944 bytes

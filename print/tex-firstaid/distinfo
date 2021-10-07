@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/03 07:05:18 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:09 nia Exp $
 
-SHA1 (firstaid.r58440.tar.xz) = 9010f9a06733c0608a1836720dbb8554fb0bb086
 RMD160 (firstaid.r58440.tar.xz) = c5cde6dab8a42648c4842f1933d22379d72adf89
 SHA512 (firstaid.r58440.tar.xz) = 31e74a644d0b2a9b0f659207195cc39b7b0cdfd44c878caf541869a114ca90990637c04b3da74f9f49e2dbcb30863030fe901a67b200d1aa4a9892ff41defe15
 Size (firstaid.r58440.tar.xz) = 2160 bytes

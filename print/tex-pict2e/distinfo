@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/18 19:56:20 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:51:09 nia Exp $
 
-SHA1 (pict2e.r56504.tar.xz) = bda28b73c1809a1d2417c4c4a7b9be206b521bdd
 RMD160 (pict2e.r56504.tar.xz) = 6b397fa372515678b74e58a67148351176aede23
 SHA512 (pict2e.r56504.tar.xz) = 04c4fc0ea9647c0a434be2ba709f539392685233adc92da262fee4d081b6d31bfe88d8c537c19a102bc7200e2adffac4f7a4cbb3a7a47ca47c26e93e96772e6e
 Size (pict2e.r56504.tar.xz) = 7804 bytes

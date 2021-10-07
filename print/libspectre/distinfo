@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/05/19 15:40:59 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:48:58 nia Exp $
 
-SHA1 (libspectre-0.2.9.tar.gz) = dc0535a128660f759fbea6b5fa0dc57a718312fa
 RMD160 (libspectre-0.2.9.tar.gz) = 8407cc242696163990e77132386518a943f95c4b
 SHA512 (libspectre-0.2.9.tar.gz) = 7c24b5c83c6d356c89417d09dc76566afbe886ec189fe80d030a239c23ad25b061db071768117fa06805aa3d86f749fb232b7491bd7d467f26a40e348e74d5d2
 Size (libspectre-0.2.9.tar.gz) = 433384 bytes

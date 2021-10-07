@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/30 08:04:47 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:29 nia Exp $
 
-SHA1 (hyphen-romansh.r58652.tar.xz) = bfb494bfa2812a8dc876835d3e1944c68aa5cfd1
 RMD160 (hyphen-romansh.r58652.tar.xz) = c9f7e2585f6e94c6e465757e5d71856e13baf4f5
 SHA512 (hyphen-romansh.r58652.tar.xz) = a69d3881493c70cfd58e3d79ed76ce6f18bbcb43e1683f31270eafeb743b366a3c52c9945ff94db333e88ca18145263ba74002f5e78bb42d7aefa48c66af7955
 Size (hyphen-romansh.r58652.tar.xz) = 3512 bytes

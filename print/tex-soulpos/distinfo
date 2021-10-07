@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 10:59:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:51:29 nia Exp $
 
-SHA1 (tex-soulpos-51479/soulpos.tar.xz) = fb80bec0f0d6419488d795faa77ad62b6f1a42ae
 RMD160 (tex-soulpos-51479/soulpos.tar.xz) = e0d24d6ea0d85b962f7a46d98e4b9824d5ff9f94
 SHA512 (tex-soulpos-51479/soulpos.tar.xz) = 2f0a15e324013f2be4a8728fe9ed629b20b26a66fe2cb0d2347e12013684a64f908f9f1161c8f4c64928ac23a9fccdcbe5b8dbe85b0a406c5c7f7979223301ab
 Size (tex-soulpos-51479/soulpos.tar.xz) = 3188 bytes

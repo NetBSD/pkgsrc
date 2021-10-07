@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/06/05 04:31:51 markd Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:50:57 nia Exp $
 
-SHA1 (musixtex.r59240.tar.xz) = 50045c70e498f55dee0ec7d1f90f9cbb7f438465
 RMD160 (musixtex.r59240.tar.xz) = 338a299a18478f2cf588dbaa7677ef5a033fbb7a
 SHA512 (musixtex.r59240.tar.xz) = 70c64b5312c1e9ba88e3d5ba82569400bc76697cf0c7b6bae7a025182f343ff81b4dd8bbf2cd51eb5899d7d6befaf5bb6890e89d9109d3e5e980b69ea1f63486
 Size (musixtex.r59240.tar.xz) = 102992 bytes

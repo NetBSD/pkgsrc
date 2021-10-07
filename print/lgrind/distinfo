@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/03/23 17:06:58 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:48:58 nia Exp $
 
-SHA1 (lgrind.tar.bz2) = 152d92ccdcb9bc7342f6aec6c4c009d124f7e812
 RMD160 (lgrind.tar.bz2) = c32b0002d95e3dec58d03ba39e58dd798058e0eb
 SHA512 (lgrind.tar.bz2) = 7feffb0ebe4de3a3c36dc6f5ceeb214682e5d49c1212e7890a16f672401dc00177ed59d9e7e581d0a575dc3a823c84cfc7e1a163a4f91e36a311dd5be6204832
 Size (lgrind.tar.bz2) = 90624 bytes

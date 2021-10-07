@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/17 17:09:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:50:14 nia Exp $
 
-SHA1 (tex-fundus-calligra-26018/fundus-calligra.tar.xz) = 9cd1aa15dca195c596818d71b0fc9dc27bf4b076
 RMD160 (tex-fundus-calligra-26018/fundus-calligra.tar.xz) = 0706f7691026fb446a4e28423f12f850dca59dae
 SHA512 (tex-fundus-calligra-26018/fundus-calligra.tar.xz) = 4e4af075b48df0727dd46b3c7d00f690e2100e3c341437313dd2e5183db2c0173e705a72964bfe0aed2b9ae50e74a1338a7ec3ebb85f07ed2204d93d506b21a5
 Size (tex-fundus-calligra-26018/fundus-calligra.tar.xz) = 1548 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/05/03 11:57:33 markd Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:51:08 nia Exp $
 
-SHA1 (pdftex.r54227.tar.xz) = f8b35640f54389767c5a6524977e0bfd6b5f4b4f
 RMD160 (pdftex.r54227.tar.xz) = f5f8b58be67e0a474b814f8cd50f1510e1f34751
 SHA512 (pdftex.r54227.tar.xz) = 1846d2c75f53339dce486311b6034aff104dbc50e0e7d243a772f7c3e2bc9c0ff7cbd9229386ba0e136abd894b2ee42a51d26588fca7824a85e23fc60564aad0
 Size (pdftex.r54227.tar.xz) = 36988 bytes

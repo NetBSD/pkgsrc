@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/06/06 01:48:17 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:18 nia Exp $
 
-SHA1 (graphics-def.doc.r59435.tar.xz) = b663b756f3bc477f651be73957d290281e5e1c6a
 RMD160 (graphics-def.doc.r59435.tar.xz) = 6469134755316c2e5a2a6167e6fdb86f92864552
 SHA512 (graphics-def.doc.r59435.tar.xz) = eeb7368ce9f1a6d3492d1c853b33966e7b90560ece0474b07fcbb8ba7090ad144efdb37fbd05d0a9d90d4d0d616423f3fd5a37d38a1a9ca9ddfa2595ceb6a5ed
 Size (graphics-def.doc.r59435.tar.xz) = 608 bytes

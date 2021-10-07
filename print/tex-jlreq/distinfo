@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/05 04:52:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:35 nia Exp $
 
-SHA1 (jlreq.r59376.tar.xz) = 4df41e71bc596cf3632dbf912f5adbacf8d6d774
 RMD160 (jlreq.r59376.tar.xz) = 89d5e061763d83b06a68fe1379ae6ed693fdefb2
 SHA512 (jlreq.r59376.tar.xz) = c5ddbe9d584a698b04522b150391e3664912b17d28a9ee8434df73b3a61f400456a7ff156baab9ffd63d6746b3c11f737ab37dc53cd8b91faba02ba26e706999
 Size (jlreq.r59376.tar.xz) = 135864 bytes

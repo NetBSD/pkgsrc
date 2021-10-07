@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/08/04 12:41:59 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:50:26 nia Exp $
 
-SHA1 (tex-hyphen-galician-51186/hyphen-galician.tar.xz) = ff2a049cff9af19ebcf665db58c67f4ce3d51b0f
 RMD160 (tex-hyphen-galician-51186/hyphen-galician.tar.xz) = 392befe23016dcf8d602614784429e02fad60f93
 SHA512 (tex-hyphen-galician-51186/hyphen-galician.tar.xz) = fc4bbfc8f824554487670e115d9844cdab69e4410d8db6382c87386513627a2a96c3a5fe1278102704abdff04f859a51db79316f695ee259398723a32d4fd64a
 Size (tex-hyphen-galician-51186/hyphen-galician.tar.xz) = 10428 bytes

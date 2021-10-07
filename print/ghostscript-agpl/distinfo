@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/09/30 23:48:51 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:48:55 nia Exp $
 
-SHA1 (ghostscript-9.55.0.tar.xz) = 8bdb24d0dbb429c5bd574fa94a613206d5543ec9
 RMD160 (ghostscript-9.55.0.tar.xz) = 4e4833825b1645953afb56bbdde5fd14c6e04d6f
 SHA512 (ghostscript-9.55.0.tar.xz) = 42c7e05ba72e9fdd626c5412187b13fc3c9459cae57dfe49ddd3011bf4e2cbd10bc88f09068a9f777c2ec6ae881cd737fd700ab62ec5108f2aca69152588f38e
 Size (ghostscript-9.55.0.tar.xz) = 67417724 bytes

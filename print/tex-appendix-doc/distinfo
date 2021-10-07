@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/27 22:35:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:15 nia Exp $
 
-SHA1 (appendix.doc.r53718.tar.xz) = b700271b36d4459cfa9490a2abeb77a2afd2fea3
 RMD160 (appendix.doc.r53718.tar.xz) = 39b65ed20f4b6da5cf15eacdbdb2c713cafd5894
 SHA512 (appendix.doc.r53718.tar.xz) = f4e90fc9fa5ca89a9a20ceb56cce788984f3ce5e55f92c99de966a54afca7145d9e3602c4e514ee6b7887b3ae9f8facc9b3191ada19514aae7c7886ae2984b0c
 Size (appendix.doc.r53718.tar.xz) = 316980 bytes
