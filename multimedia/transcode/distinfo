@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2019/12/29 10:23:53 markd Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 14:32:20 nia Exp $
 
-SHA1 (transcode-1.1.7.tar.bz2) = e35df68b960eb56ef0a59a4cdbed1491be56aee6
 RMD160 (transcode-1.1.7.tar.bz2) = faa854acbbfd52faaa216505176f94d756d77841
 SHA512 (transcode-1.1.7.tar.bz2) = d6f9674f3f5c3346194120585741ca660eb9ee133085cfce9460a14eaa0cf16fdf291761bd1db78e1c784e4d69a9481c7470cf8357dc7638ee3017620500f45f
 Size (transcode-1.1.7.tar.bz2) = 2183627 bytes

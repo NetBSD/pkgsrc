@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/01/12 16:17:47 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:32:16 nia Exp $
 
-SHA1 (obs-studio-26.1.2.tar.gz) = 8e4c60f10439ca856fc75f2be590dd1a4ea2ac31
 RMD160 (obs-studio-26.1.2.tar.gz) = e8a4fef8843e351a9d6cd98e00a8b720b027763e
 SHA512 (obs-studio-26.1.2.tar.gz) = cd95fbf587f7edfe415cae75299d65c1d771bb118649fb839ae43d77145d87725c23df3360aa7b8c35ab8b62e5ec7983a8b02f8b102caa78f768eb58b4263417
 Size (obs-studio-26.1.2.tar.gz) = 16624899 bytes

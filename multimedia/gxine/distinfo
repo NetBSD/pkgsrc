@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2019/06/18 12:38:36 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 14:32:08 nia Exp $
 
-SHA1 (gxine-0.5.910.tar.xz) = d3e5569e7534600600fcfb1232916763c6150205
 RMD160 (gxine-0.5.910.tar.xz) = f06d641596b936ae137480c1a8334957ded87d7d
 SHA512 (gxine-0.5.910.tar.xz) = f105060bb0a86215ee7bfb5804795d400f1c79973e3141e8c8e3ecab249d8a6cdd6467a926625a6f89081d7160f192ea63a57f623de46c7634c4cc08431f897d
 Size (gxine-0.5.910.tar.xz) = 931616 bytes

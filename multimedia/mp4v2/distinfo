@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/04/13 16:32:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:32:15 nia Exp $
 
-SHA1 (mp4v2-4.1.6.tar.gz) = f2ee0853cc7219f1dc4bb09d9cf0cf1327704813
 RMD160 (mp4v2-4.1.6.tar.gz) = 5fc23086c05822c04eefa407076177218ae9a8b7
 SHA512 (mp4v2-4.1.6.tar.gz) = 91f5183d38c9d7fd754ba4b5e149b00600d5b6cb8da063667e5c3a6c8edb4e5efc919d6c4381acd6e011ef56dce3f722a78c51b984066f5c0cc54aae735f3611
 Size (mp4v2-4.1.6.tar.gz) = 4322307 bytes

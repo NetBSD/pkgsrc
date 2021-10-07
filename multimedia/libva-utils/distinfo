@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/29 01:32:53 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:32:13 nia Exp $
 
-SHA1 (libva-utils-2.6.0.tar.gz) = 0b94f6a8bdf3bd63bdf22db289b3d54bc1b9c589
 RMD160 (libva-utils-2.6.0.tar.gz) = 3c94bf349a7ad63dfc9101695adf08b614fa6b88
 SHA512 (libva-utils-2.6.0.tar.gz) = 2722504861d09e049495ffaa07cfb5fb23720770e19d6d5e03b10592e20d99c87d9e401e8db26edd00cb7edb7e85438ca721c8c323b23664bd5a1e094bbed8d4
 Size (libva-utils-2.6.0.tar.gz) = 1196875 bytes

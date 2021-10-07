@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2020/05/16 17:44:15 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:32:21 nia Exp $
 
-SHA1 (xvidcore-1.3.7.tar.bz2) = e7d2afee48d7cdc8e64fed8a4d13062ca09f3ba5
 RMD160 (xvidcore-1.3.7.tar.bz2) = 84d37c2b3b48fb6cde2b6a6a57c7e6c1bdf79556
 SHA512 (xvidcore-1.3.7.tar.bz2) = e2b22e7a7e103af7adcc999d95484f991a0a33df02b912fe042b2e23d2af07381c737d23158dbf0fad770ee680572f86fbe04ab2ef33c81e2e0180ead2acc8ed
 Size (xvidcore-1.3.7.tar.bz2) = 698615 bytes
