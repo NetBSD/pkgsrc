@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/01/17 10:31:41 jaapb Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:42:47 nia Exp $
 
-SHA1 (pcre-7.4.3.tar.gz) = 4b6c3b228b5c9e9e2ef7b403e8529e45cda51079
 RMD160 (pcre-7.4.3.tar.gz) = bb12d5a21d17091a1e31dce9163480ed8b8c20e4
 SHA512 (pcre-7.4.3.tar.gz) = e4ab8ae47702d12eb65e75c57f7dc04638aa4dc32ff3e786a93db1369cce23f1e19db5d1c2ba23c52fe4ab5c1660d42d6ffb5b1a0effbdc21d1c7e381dab5248
 Size (pcre-7.4.3.tar.gz) = 47329 bytes

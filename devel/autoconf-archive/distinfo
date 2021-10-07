@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/12/04 05:09:50 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:39:12 nia Exp $
 
-SHA1 (autoconf-archive-2019.01.06.tar.xz) = 25986729b9a156a6aee058e6bcf90406659eac83
 RMD160 (autoconf-archive-2019.01.06.tar.xz) = 1b4e35536f47ed61b21e542af2ae892ce8feeb95
 SHA512 (autoconf-archive-2019.01.06.tar.xz) = 14bf8d0bf8be4a4dc078677de1977e496d4d9cf095bc897c174e331311b722cd3a34054e74c2146fff4b5c84269463e6a6fc61907d77d1c51bb221c8fb124fcb
 Size (autoconf-archive-2019.01.06.tar.xz) = 651320 bytes

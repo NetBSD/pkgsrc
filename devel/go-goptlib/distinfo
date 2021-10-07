@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/03/14 23:25:08 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:39 nia Exp $
 
-SHA1 (go-goptlib/1.0.0.tar.gz) = e9ebd825a42dacfea56d55a590c90db471669c77
 RMD160 (go-goptlib/1.0.0.tar.gz) = 3c891d120ea13955b53fcdb69758a09e6bcaa143
 SHA512 (go-goptlib/1.0.0.tar.gz) = 6246dbc8207adfcd8c5690d38ce731387cf7280d9b3cc1fec6b26fc235a09832cb9d7d28f66787496e7ff5b57da94b195f4004d1614aff67286fa67a5cddeb58
 Size (go-goptlib/1.0.0.tar.gz) = 25843 bytes

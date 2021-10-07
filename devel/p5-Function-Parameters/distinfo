@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/11/13 15:10:33 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:33 nia Exp $
 
-SHA1 (Function-Parameters-2.001003.tar.gz) = 26b6f19da98298f7973088563006cae9d85d5489
 RMD160 (Function-Parameters-2.001003.tar.gz) = 89f1bcbf86609774dc5f85c2e323509bc3a318ba
 SHA512 (Function-Parameters-2.001003.tar.gz) = 47fd5e1e4b4d62b4576cc7439ba6f2636cef96f851e668bbd2274f79f2c4ee11fd9aa2e5739bbdfdf3ed0b3c373dc1c8d63920fd390a1d56592fbdc9be90db59
 Size (Function-Parameters-2.001003.tar.gz) = 91273 bytes

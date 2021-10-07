@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/06/10 18:44:33 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:43:18 nia Exp $
 
-SHA1 (jupyter_core-4.7.1.tar.gz) = 01e57900f8e4475fb90ae533cf7ebd6f4c323867
 RMD160 (jupyter_core-4.7.1.tar.gz) = 3e116affa674c6ea0c147182d2897f4918f10af3
 SHA512 (jupyter_core-4.7.1.tar.gz) = bc190abd000566dbd097dcb14acf1926c92bb265f2cfbbd14dac6a9cf7d6a02f924ba89fa957ca30c2af57433e9187e288bb8e80d039a3d3a583c6e488a9c80e
 Size (jupyter_core-4.7.1.tar.gz) = 68886 bytes

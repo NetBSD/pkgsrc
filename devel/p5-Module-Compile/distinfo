@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/01 04:36:28 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:41:49 nia Exp $
 
-SHA1 (Module-Compile-0.38.tar.gz) = 2558a913252adcfbe37f723afdbe3b96a1bc3c5f
 RMD160 (Module-Compile-0.38.tar.gz) = 449c1195fce39988b8fe42359f11840caa973470
 SHA512 (Module-Compile-0.38.tar.gz) = 50f17cf6e88f9834d69944e64a46b2ca260824220cf09fe962c29dd36a8d0cdd7a2d59c7e0cf360a7fb506252cdea3b13b99437e443735b35c7a713a0bea1f31
 Size (Module-Compile-0.38.tar.gz) = 35482 bytes

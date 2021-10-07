@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/06/22 11:33:41 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:43:12 nia Exp $
 
-SHA1 (pygame-1.9.6.tar.gz) = d055cf1e37d8c340579e2d745e8ca4c9397767da
 RMD160 (pygame-1.9.6.tar.gz) = abe4dc7b5e350617048474a3d168d9d1d09eae2b
 SHA512 (pygame-1.9.6.tar.gz) = d923c554203a7c35e37921658cb4c5bf50215ab0ff4d2b869a1ee6b2e2ca31d66ec4bbde4287f5a777838ffe932cd15b993cb0224b86e43d684de61c35acbcd0
 Size (pygame-1.9.6.tar.gz) = 3223131 bytes

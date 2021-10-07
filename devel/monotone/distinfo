@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.54 2021/03/06 08:57:54 nia Exp $
+$NetBSD: distinfo,v 1.55 2021/10/07 13:40:35 nia Exp $
 
-SHA1 (monotone-1.1.tar.bz2) = 2b97559b252decaee3a374b81bf714cf33441ba3
 RMD160 (monotone-1.1.tar.bz2) = c5e0f45028b806eb166b4aaecababa8e8e81b686
 SHA512 (monotone-1.1.tar.bz2) = 0599e7fc004552f6a15095b62627eb60d80bfd32904608b6fef15f6c6f83db8059375833cb8ddc54fed569223a95f8ea0ba3c7008ad2969a5776faa27e5e5f3b
 Size (monotone-1.1.tar.bz2) = 3428699 bytes

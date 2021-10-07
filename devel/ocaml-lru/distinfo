@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 14:21:34 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:43 nia Exp $
 
-SHA1 (lru-0.2.0.tar.gz) = a83c0c26865293cb4d9f17531956a716fa6fb555
 RMD160 (lru-0.2.0.tar.gz) = ab69597144e9e6f22b13dbdb63505b567af408b1
 SHA512 (lru-0.2.0.tar.gz) = 5ccb670c8ce0afe91749d0dd993fae6177ea30bcce5a43c0e9139a01c7f843170ab9bc759980b77d9998ee39ca7739546525462e640a7a40dcca54771d98e023
 Size (lru-0.2.0.tar.gz) = 9862 bytes

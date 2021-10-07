@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/01/22 10:48:14 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:08 nia Exp $
 
-SHA1 (entrypoints-0.3.tar.gz) = 5e191cf9815cd66bace7f8bae9ee52c910923f4a
 RMD160 (entrypoints-0.3.tar.gz) = 368a6f43ee97280b824a597947ea3a276f4125f5
 SHA512 (entrypoints-0.3.tar.gz) = aa1274362d3a4b00266103319ca51aa266605b4999c89a9d0673eb61bfae9e646cb0ec6b86c95544493f6fe048385a2c7641d64adca8f45815546fb1e663c858
 Size (entrypoints-0.3.tar.gz) = 12315 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/06/30 17:38:52 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:40:18 nia Exp $
 
-SHA1 (libmimedir-0.5.1.tar.gz) = 9ce47cb996a8c78529435fcf87d6657d9be2c87a
 RMD160 (libmimedir-0.5.1.tar.gz) = e20dfd1a83853d01718ddb60c8ea65ffddf8f281
 SHA512 (libmimedir-0.5.1.tar.gz) = 156be7b56260cb1d83ea6f9378ef2d79147c7d92bf83370edb8ef69aac7a7fff68ed262d79c4c397029297241c18b091d286e014cbdfb68962afa8222b649568
 Size (libmimedir-0.5.1.tar.gz) = 284854 bytes

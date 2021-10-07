@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/08/18 20:18:56 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:53 nia Exp $
 
-SHA1 (python-utils-2.4.0.tar.gz) = f61fbc540db10b11c3d514bfe358c0a98f3bcb42
 RMD160 (python-utils-2.4.0.tar.gz) = d642ccd0c436ea671eea2c84fbb40b390b248f17
 SHA512 (python-utils-2.4.0.tar.gz) = bfad0ef30383df634b89bb2206a00e45434eff9fee9ba0eeab99361bacfb56f3fb420019608b639713a7e8777870de75becb1d7b48aa09c582df27f9ebe8c512
 Size (python-utils-2.4.0.tar.gz) = 22230 bytes

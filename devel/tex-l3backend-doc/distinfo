@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/06/06 10:42:46 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:44:34 nia Exp $
 
-SHA1 (l3backend.doc.r59118.tar.xz) = d955438351909c0ae814ea9a633e512a0d948be2
 RMD160 (l3backend.doc.r59118.tar.xz) = 933cd1d2c099ffd3c333449157af3c5290f16e8d
 SHA512 (l3backend.doc.r59118.tar.xz) = 553f07436c8dc3c613598f998dd260a006a6d1ed79951472c6248d17bff7f1cb155345265880d91e7d5f0b763faf03fd3a2326d6fd27fc3a718b10c9e5e5f44d
 Size (l3backend.doc.r59118.tar.xz) = 843660 bytes

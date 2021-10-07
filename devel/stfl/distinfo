@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2016/06/07 17:57:11 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:31 nia Exp $
 
-SHA1 (stfl-0.24.tar.gz) = c770a20f719f5a7f0a691727098c51b43df9c33c
 RMD160 (stfl-0.24.tar.gz) = 374ef95e6de3e77991a469ce75c1c972d8c8a3be
 SHA512 (stfl-0.24.tar.gz) = 95df4574b1bc32d795751156dc5b93afbca3ba241607a3a55210c89dda61b9a26ad574bb5f729a0158c9052235dbf63d6c58b38e7f1061d14ab7062af6150fa0
 Size (stfl-0.24.tar.gz) = 45585 bytes

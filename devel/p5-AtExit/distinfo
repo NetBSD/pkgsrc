@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/09/05 12:46:47 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:40:57 nia Exp $
 
-SHA1 (AtExit-2.05.tar.gz) = 348c89291c9ac755eefdfc05ed450a6e46c851fa
 RMD160 (AtExit-2.05.tar.gz) = 58e45461cee69912dc655f57ad325ad8f867f068
 SHA512 (AtExit-2.05.tar.gz) = 1d65da5c384e09d0f85f5a3c57f63f3b19d14558d07f0cb8ef388d01298b788e405562750503a9cfcf6d841866649ead1e96fcf501a84924680bc85a904f64ef
 Size (AtExit-2.05.tar.gz) = 11793 bytes

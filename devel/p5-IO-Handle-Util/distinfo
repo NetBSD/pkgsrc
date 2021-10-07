@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/12/16 04:40:14 wen Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:41:38 nia Exp $
 
-SHA1 (IO-Handle-Util-0.02.tar.gz) = 3df25e488e1adec0ba422281884f63def1e90291
 RMD160 (IO-Handle-Util-0.02.tar.gz) = 03181eb58a65a3e7698f75104b4c04fa51beec1f
 SHA512 (IO-Handle-Util-0.02.tar.gz) = 54b8c78f61915953ec8c484f50d0d64c965626ff45bda5ebed9f5e414a0a1011ba4d6aa2aa543991654718c06bb69860de80861dde472da295bde60ac7563b2b
 Size (IO-Handle-Util-0.02.tar.gz) = 37457 bytes

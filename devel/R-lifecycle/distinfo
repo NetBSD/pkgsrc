@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/31 22:15:16 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:38:59 nia Exp $
 
-SHA1 (R/lifecycle_1.0.0.tar.gz) = 1c96b3fbb9d03dd4c99842226312e5770f8132c1
 RMD160 (R/lifecycle_1.0.0.tar.gz) = 038099bcb72f5c71fc50ea63eb42197563adf3f6
 SHA512 (R/lifecycle_1.0.0.tar.gz) = 603e1889c41b970a10956aff5b547111bd0166de7c6721419d2ea1667ff36202803faa9a0913710993d15e4713227ae8d9801ab26b0f2e54b06d44838de495a4
 Size (R/lifecycle_1.0.0.tar.gz) = 83389 bytes

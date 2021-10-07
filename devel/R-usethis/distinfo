@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/05/31 21:50:20 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:39:03 nia Exp $
 
-SHA1 (R/usethis_2.0.1.tar.gz) = 8061f06f3bc7491fdb3ce87c6002a704cc6fc956
 RMD160 (R/usethis_2.0.1.tar.gz) = 1b9dd62e347c7fdc631d3fecec3a9372986d1eb5
 SHA512 (R/usethis_2.0.1.tar.gz) = 5b51e23096a687a8e4be2b909a58e9d782b607715badc7cbe22ec691e3f1466dc981fe80488f591a2ce4b06b3e246fc5366ed0faea60dfceefd1d8aae3760811
 Size (R/usethis_2.0.1.tar.gz) = 306090 bytes

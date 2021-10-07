@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/13 10:53:40 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:50 nia Exp $
 
-SHA1 (variantslib-0.12.0.tar.gz) = d6e954c453bc551f4120b9ba73cdda02a70cc513
 RMD160 (variantslib-0.12.0.tar.gz) = 79526d7663180bc1cf7565f06e0a24a05e05ff06
 SHA512 (variantslib-0.12.0.tar.gz) = 1b8f0355832c1329a298d7f2697893b943ac6c6a431665623298507c74b0e0b8e89f00e9a3410e122d4f7e34d83825bd1c21d528694ee992cbf41c7f54b74fde
 Size (variantslib-0.12.0.tar.gz) = 2946 bytes

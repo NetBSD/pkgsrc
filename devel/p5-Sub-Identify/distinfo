@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/04/16 15:38:00 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:20 nia Exp $
 
-SHA1 (Sub-Identify-0.14.tar.gz) = 18f5f9819f5566d3470d60bd2d9baae97bc9f33f
 RMD160 (Sub-Identify-0.14.tar.gz) = b985f1a87583b3bf6fd48b292f39bd474f7b49c0
 SHA512 (Sub-Identify-0.14.tar.gz) = f69f542c84c5c3ca1f1c7f5f58fd2cf19279a65229f43117c31f24ab0e49d5f329bef2bc00f22252fd2e52b4e17f16b279dac438920668e046e59f2e22e52c14
 Size (Sub-Identify-0.14.tar.gz) = 53135 bytes

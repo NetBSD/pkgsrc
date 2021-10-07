@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/04 08:30:19 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:41 nia Exp $
 
-SHA1 (XString-0.005.tar.gz) = cdb324c85f98347b509e671c42727974f2a5c320
 RMD160 (XString-0.005.tar.gz) = add7ce4d3f1b56246fcb2c59f428a05dcba9ee8f
 SHA512 (XString-0.005.tar.gz) = 4a6055e9e59169b77e04e8b890944b3a7bc4ff9844ad6b2557f7181f7b1c8576a7aab7ebee351044cbac8f3bff2d37dea2af4bc7ff775fbc3a398c9785c53aaf
 Size (XString-0.005.tar.gz) = 134507 bytes

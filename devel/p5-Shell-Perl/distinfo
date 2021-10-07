@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/09/17 13:08:49 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:17 nia Exp $
 
-SHA1 (Shell-Perl-0.004.tar.gz) = 5c827defd3208fc1eef50f7a112a75d4576fb8da
 RMD160 (Shell-Perl-0.004.tar.gz) = 7c60c3e4272e50fdadef36e5b492e3540c8de93f
 SHA512 (Shell-Perl-0.004.tar.gz) = 4371517246eb0d92d38d8dbf4d4f9206efdec6e76cfa3539bf7fbd008f8752848a31385a20c1cab589081698c3526c6df0129e61c18784386bf66da5ec1e1a04
 Size (Shell-Perl-0.004.tar.gz) = 14908 bytes

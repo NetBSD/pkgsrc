@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/09/07 10:15:33 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:42:35 nia Exp $
 
-SHA1 (Test-TempDir-0.11.tar.gz) = e29ed5648ee3c354bb01568b0286721cdf895dda
 RMD160 (Test-TempDir-0.11.tar.gz) = 8e41c718bf7fcde64082c471029de8ff9d0a715c
 SHA512 (Test-TempDir-0.11.tar.gz) = 15edacc32ad0d23685c6ddb4bd1e6d9c13cc0d9806087e39617bd9cbdc99997b3b8b0c7f72f15566743af813e8a332523a49fd11b51252d7ef959476b9682030
 Size (Test-TempDir-0.11.tar.gz) = 35260 bytes

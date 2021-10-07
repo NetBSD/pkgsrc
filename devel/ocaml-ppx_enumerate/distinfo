@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/16 09:19:56 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:46 nia Exp $
 
-SHA1 (ppx_enumerate-0.13.0.tar.gz) = 4732f7fb9c46bc0bfd4e3118e73d928aae851297
 RMD160 (ppx_enumerate-0.13.0.tar.gz) = df20e60b382804f2f7322dacd1a6df56aed79f27
 SHA512 (ppx_enumerate-0.13.0.tar.gz) = d594258a864b1e185a7f154300065bdb94e98d6c3c548231a59fe3068c0ea8300f8b3ce0d0bff13e2d7b917c4a31d849777cba9b5a8845685c4967f5cd3cd631
 Size (ppx_enumerate-0.13.0.tar.gz) = 9467 bytes

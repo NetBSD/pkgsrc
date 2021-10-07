@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/08/22 12:14:40 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:41:13 nia Exp $
 
-SHA1 (Data-Integer-0.006.tar.gz) = d64943d27a0f4ab8a80f5408590f18f9339562aa
 RMD160 (Data-Integer-0.006.tar.gz) = c81d3e1eecd78c4d170ede280db5dc3824ded5bd
 SHA512 (Data-Integer-0.006.tar.gz) = 6deb95248775d1c4f93e3b806d2f57c0045193da261884a4ce58887287c7d538cd6dd1a5853d5f5388281101a5ca801400e337cb4b9fb15e7ca973e3c5b91c03
 Size (Data-Integer-0.006.tar.gz) = 24289 bytes

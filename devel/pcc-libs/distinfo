@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/01/15 15:04:29 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:46 nia Exp $
 
-SHA1 (pcc-libs-1.1.0.tgz) = 1c6bfb7b3cb3bf2732b1dc46d832dd7d0509d378
 RMD160 (pcc-libs-1.1.0.tgz) = 049c0a083ed46e3f22990c07bfcee4eac6daf660
 SHA512 (pcc-libs-1.1.0.tgz) = 89d90f246300ab1da652f652c685756aa038017f5b7d57d050bb5c88e01e70b594ffaef8772230fbeb9461e07c5b1df60e85e550ec4717008159218d50c8697a
 Size (pcc-libs-1.1.0.tgz) = 198204 bytes

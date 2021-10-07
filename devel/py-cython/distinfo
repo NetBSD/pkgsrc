@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.64 2021/07/14 08:07:26 adam Exp $
+$NetBSD: distinfo,v 1.65 2021/10/07 13:43:05 nia Exp $
 
-SHA1 (Cython-0.29.24.tar.gz) = 21187175b7da94020e662c04f805d580f1071880
 RMD160 (Cython-0.29.24.tar.gz) = f4f0656202943c03c6933d6c19cf757dc6d1fda3
 SHA512 (Cython-0.29.24.tar.gz) = d8baa0c70c6f1159d4ce9b039739733af5723e3df4cc2637c8526d036d26ce35fe20491c43d8b4cc87e8d9b5e0b4bdd3181b6c9c0fc0de6a0215bf38e28794f4
 Size (Cython-0.29.24.tar.gz) = 2076225 bytes

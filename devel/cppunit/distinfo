@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/12/31 08:43:52 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:39:21 nia Exp $
 
-SHA1 (cppunit-1.15.1.tar.gz) = 0a991d725e0b5805506f4cb1c1deb9b7942ea17c
 RMD160 (cppunit-1.15.1.tar.gz) = 1ce2dd2717699bd88b2e9b6315528fea31c60fef
 SHA512 (cppunit-1.15.1.tar.gz) = 0feb47faec451357bb4c4e287efa17bb60fd3ad966d5350e9f25b414aaab79e94921024b0c0497672f8d3eeb22a599213d2d71d9e1d28b243b3e37f3a9a43691
 Size (cppunit-1.15.1.tar.gz) = 814363 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/02/14 02:55:23 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:20 nia Exp $
 
-SHA1 (cmockery2-1.3.9.zip) = 6f6e2183a4fe1578173877c8b163474d15f571b1
 RMD160 (cmockery2-1.3.9.zip) = d4ba42f59fa0fb4075e77cf7b6e632c9f71bdda5
 SHA512 (cmockery2-1.3.9.zip) = 82b6d9992bf71a730e160e6c5295ebef2e606ac4a132687668c5707d3c3498230f6d66a2171affc5b9bd2c37a3dad5f422f777198bc6fb4836c5ab8b1f9540d5
 Size (cmockery2-1.3.9.zip) = 85409 bytes

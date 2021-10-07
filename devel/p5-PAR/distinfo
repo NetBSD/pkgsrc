@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2019/10/27 13:57:39 mef Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:42:03 nia Exp $
 
-SHA1 (PAR-1.016.tar.gz) = c414314d254c9f56b2dd3b68f23300a27b38fb5a
 RMD160 (PAR-1.016.tar.gz) = 6d00358106f4e04a9ffe11e1adbdbf84e39d6f95
 SHA512 (PAR-1.016.tar.gz) = abbea766f214b51f54241f791ba496b62d8580cfeedec473ad7c98daad44d0ef495cb157df6f1b0402ab81eda6603e6092625d80f19f8f1ff2cea7f56861b259
 Size (PAR-1.016.tar.gz) = 66317 bytes

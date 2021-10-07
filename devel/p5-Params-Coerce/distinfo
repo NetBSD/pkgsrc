@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/26 14:53:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:06 nia Exp $
 
-SHA1 (Params-Coerce-0.15.tar.gz) = d3b970781373a8ffd87f315c2f74e6fe5eb3d55a
 RMD160 (Params-Coerce-0.15.tar.gz) = 9cb9d737bc19f262d15e9f73f7f6f308fa2da9cf
 SHA512 (Params-Coerce-0.15.tar.gz) = 6d03cd874505d0b29d17028f0c613ba2512a57a6f5eaea24d25d404287da913a6930ea9468b182cc085a0a0f978ddc4eb1b1ec74eac78f28936544535567bc36
 Size (Params-Coerce-0.15.tar.gz) = 31426 bytes

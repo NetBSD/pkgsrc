@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/06/07 15:26:20 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:44:13 nia Exp $
 
-SHA1 (mercenary-0.4.0.gem) = a35a1602df8e0ae550e6ea24d0fd3a2ee38370a7
 RMD160 (mercenary-0.4.0.gem) = 86e9c8e3e2bb338a25dffeea63316e371a9030ba
 SHA512 (mercenary-0.4.0.gem) = 1421bef136587f7c7cb3296b115a90f389ec7d61e7bbe6c396249cd5e090ac548c82166bbf2c43cc589725a740faef5b5f0e921fae8e9948fe506f80578045eb
 Size (mercenary-0.4.0.gem) = 17920 bytes

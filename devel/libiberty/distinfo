@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:42 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:16 nia Exp $
 
-SHA1 (libiberty-1.0.tar.gz) = e0ad9a4ae0e1d2be67a14d03e7e8840ab01dc2d5
 RMD160 (libiberty-1.0.tar.gz) = 9d4d77f43baefe06052d2465fd19d49c29c5d859
 SHA512 (libiberty-1.0.tar.gz) = 9590aab1f988041e30041a168e6912f0273738d8b0357b22f02d954ac1b04723efaecf96acf97a75568909202d3a40304808f9aac7def662da196d77e2f4459a
 Size (libiberty-1.0.tar.gz) = 1210416 bytes

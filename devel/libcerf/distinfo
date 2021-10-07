@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/03/01 12:47:22 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:40:09 nia Exp $
 
-SHA1 (libcerf-1.13.tgz) = e9c9fe8257774361b1f1e9de9d1bbb8057097a96
 RMD160 (libcerf-1.13.tgz) = 6bf9e6dea553fbd961f4ca02e3f047b7ea7f1c6f
 SHA512 (libcerf-1.13.tgz) = 4df711d3e9fd00de99959c3253a9565d1dc2c41f75a5800ced9c52f89cbd13185fbdca3ad75de788fd16c044082738ab345b7fb6a8820ac588edafe1812944aa
 Size (libcerf-1.13.tgz) = 61589 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/23 09:55:49 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:46 nia Exp $
 
-SHA1 (async-2.2.3.tar.gz) = 57bf464ea2dd6df05e6987aa0aa06ba523f40446
 RMD160 (async-2.2.3.tar.gz) = f5a2b436358d468d9828c261de3d79b1ca8eca8e
 SHA512 (async-2.2.3.tar.gz) = 99a7cd04d05362b6d007ec75a32cf0a6c11f4b3e46ab706349289f5bb0ad128fd2a9809e4d30634917a0a608b0d611c6d4e936ea36535c7c5ec167fead5f3248
 Size (async-2.2.3.tar.gz) = 14056 bytes

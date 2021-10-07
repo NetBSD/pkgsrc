@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/07/12 18:59:06 rhialto Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:15 nia Exp $
 
-SHA1 (breezy-3.2.1.tar.gz) = 40daba64b800bbfb17d82b37fe72dbc28c6ab9fe
 RMD160 (breezy-3.2.1.tar.gz) = a926908c19690f173df1f292b1cca7bfdf57c394
 SHA512 (breezy-3.2.1.tar.gz) = bfbbff1301f7cc13a2d59b1add80c196f3b45b69994194dcae96c0be151f807c965854047c86e43f54dd8c7aa24d56b25afdd00f0063e83b362a8c46d5858226
 Size (breezy-3.2.1.tar.gz) = 9445046 bytes

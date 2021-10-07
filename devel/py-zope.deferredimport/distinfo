@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/06/08 13:00:59 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:56 nia Exp $
 
-SHA1 (zope.deferredimport-4.3.1.tar.gz) = d5ad78e61b44362f8488d4e9917f072122bae310
 RMD160 (zope.deferredimport-4.3.1.tar.gz) = 398312ffdb8421a3efd5c6145132deda552d54ad
 SHA512 (zope.deferredimport-4.3.1.tar.gz) = fc78d9d142f039d9abef8cd1d3774e3014dc4a927fe8f92f32cd42ac304d360ff2757a4a5b646e94ff4a31a95c81dca1b630dae96cd9fae50b8815d2083d9e67
 Size (zope.deferredimport-4.3.1.tar.gz) = 20244 bytes

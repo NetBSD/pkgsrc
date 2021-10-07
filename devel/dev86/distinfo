@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:23 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:39:27 nia Exp $
 
-SHA1 (dev86-0.16.21.tar.gz) = 0f5b54a36fe24f90b4cc8b62517d00b32c04b34e
 RMD160 (dev86-0.16.21.tar.gz) = 592eec1f68b62b8a4717428f133e2a6106b12b81
 SHA512 (dev86-0.16.21.tar.gz) = e51d94cecc298f860c1dcbc225d5c77a18769eb7a51f888853ca3bdb3cc6596c07d67cd9b403f7d52155716eb1708396461dc596cd02728d762d0ed5e87d054f
 Size (dev86-0.16.21.tar.gz) = 711473 bytes

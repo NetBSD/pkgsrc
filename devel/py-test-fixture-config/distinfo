@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/06/14 07:49:36 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:47 nia Exp $
 
-SHA1 (pytest-fixture-config-1.7.0.tar.gz) = 7cb7315e1bf9c59446b42a4fc85092e213216a43
 RMD160 (pytest-fixture-config-1.7.0.tar.gz) = e64e907c7751d57e624d8d4f98dd35884f9a8b43
 SHA512 (pytest-fixture-config-1.7.0.tar.gz) = c861bbbb91efff338255734ddb4a8b615880c32a12c981160e9e7575d38adff8c5febad46bb9b4208634e39d4cfa73dec342265ccc1951168c1b12fd334cd746
 Size (pytest-fixture-config-1.7.0.tar.gz) = 9884 bytes

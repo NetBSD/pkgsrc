@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/07/29 10:19:14 wiz Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 13:44:32 nia Exp $
 
-SHA1 (talloc-2.3.3.tar.gz) = 0b8c413c69a1be4a2a36d6884c83742cfb33b67c
 RMD160 (talloc-2.3.3.tar.gz) = 2c9979b83cfc8729a4904dcde7aeaff89a8bc055
 SHA512 (talloc-2.3.3.tar.gz) = 1e4b90769b9be72421d76bf9149fd0736f43d034b1573ab2dfb5cd613b4fb3fdf67d575f81789851787e1cbbc7353cdfc114cefbccb15fc0f39e222f40aff65f
 Size (talloc-2.3.3.tar.gz) = 650493 bytes

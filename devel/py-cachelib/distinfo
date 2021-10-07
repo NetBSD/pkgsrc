@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/29 09:38:52 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:00 nia Exp $
 
-SHA1 (cachelib-0.3.0.tar.gz) = 0ebbc695a401e653f0001ea5cf83daa78118529f
 RMD160 (cachelib-0.3.0.tar.gz) = 6d4042cc817f2620bc00b52796b20c4733282f93
 SHA512 (cachelib-0.3.0.tar.gz) = f9184cf9702c2df77e09d28d6feb8e6f0bc22f17c110a2371e76c4b78163950803e4f013c3746e21b9ac5771f72238ecd8bb041c5a7f44eab6bcb4de6e2ea377
 Size (cachelib-0.3.0.tar.gz) = 18340 bytes

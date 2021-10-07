@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2020/05/16 21:19:58 gdt Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 13:40:36 nia Exp $
 
-SHA1 (netcdf-4.6.1.tar.gz) = 11912675530db61474b305b572e06f83d682aa2c
 RMD160 (netcdf-4.6.1.tar.gz) = aa70f9ca6b5fbd8c914420b3570ac4f316ed47e5
 SHA512 (netcdf-4.6.1.tar.gz) = a2d49b013ff1bcba748e4b1f55a14a25728bfdfce44001cbfacfd01d585ea39972950ea4db6fa6ec3531f8be8a3a3072a2338b6b211205719e81d0498fd8a502
 Size (netcdf-4.6.1.tar.gz) = 5693557 bytes

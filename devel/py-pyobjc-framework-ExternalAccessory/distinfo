@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/07/09 08:36:37 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:43:33 nia Exp $
 
-SHA1 (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = b5f8ec5f59c80f67ff4adcaa0a553ae8af975e7b
 RMD160 (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = a022ab69b20fd2bb9ef970ed6bf20b57e8034e83
 SHA512 (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = a20b2bee0d8232665619cdc25a39481be87a34afefd1093fc5d9af73c28295488bf798aa443b478b3704143f7f58656c8505a58d13c78603e4ff4ed1686272f1
 Size (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = 16537 bytes
