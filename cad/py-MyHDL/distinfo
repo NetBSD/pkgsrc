@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2018/12/27 16:01:54 joerg Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:20:31 nia Exp $
 
-SHA1 (myhdl-0.10.tar.gz) = d766a1a556e9dce23af07d1b378fbcc6e3b86494
 RMD160 (myhdl-0.10.tar.gz) = 234d3f3c5d2d84e548e317e1b85bc28efbfd7b14
 SHA512 (myhdl-0.10.tar.gz) = b250c8b09a2cfbd2a70da60d567c8bcb09747c3e8df536cdd28ad49a8a6fbe5a28395295a6ed6046ced745b617fb3804ceb0f83d9b34db7c70701148ae7db25b
 Size (myhdl-0.10.tar.gz) = 1205466 bytes
