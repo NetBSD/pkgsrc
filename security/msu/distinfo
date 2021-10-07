@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2016/04/01 11:06:44 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:54:03 nia Exp $
 
-SHA1 (msu-1.09.tbz) = 54904c613072d65b24324abf06ce0439b23b0fca
 RMD160 (msu-1.09.tbz) = 833ff88d5cee7ba48fcc7dec30b411e33ff19077
 SHA512 (msu-1.09.tbz) = 946686af44e972c23f87bd196265c91f66096f52711d615315139f77aae0830153b0abb82040c8d96e182ef85874c54575fb3068e8babf3aaa613d45da5e748c
 Size (msu-1.09.tbz) = 3355 bytes

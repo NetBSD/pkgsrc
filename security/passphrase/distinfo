@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/29 19:35:55 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:19 nia Exp $
 
-SHA1 (passphrase/1.1.tar.gz) = 0048d9cfe750c52154242911e066e5f9ff1a82ac
 RMD160 (passphrase/1.1.tar.gz) = c4cac04076eb98e7623bcd396bcbb206c14cd57c
 SHA512 (passphrase/1.1.tar.gz) = 7092628ce7ceac4af971eaf53eba048a81dc518dcabc6c8c8f9abbb52dee1329559c89ba32605a963c27b45ac72b723d78e93810400c613a1db237a730d7f39f
 Size (passphrase/1.1.tar.gz) = 31598 bytes

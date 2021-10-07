@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2019/09/12 23:00:42 tnn Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:54:49 nia Exp $
 
-SHA1 (ykclient-2.15.tar.gz) = cbe8ca74b1cd1fbd07589db51bb5ab8db1f85401
 RMD160 (ykclient-2.15.tar.gz) = ba4c2dbc83d22b3e045c43b484c87042be879a4b
 SHA512 (ykclient-2.15.tar.gz) = 06e3f923091004385e3beb29147d57b7d8bcfd6b98e3e2a845c14ca515298d88d0cadb39cbd5809688627ca8335e32e1e4ae9b57a2092112d7b77c959cf30fcf
 Size (ykclient-2.15.tar.gz) = 50816 bytes

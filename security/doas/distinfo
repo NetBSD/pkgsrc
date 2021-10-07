@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/10/21 19:32:39 pin Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:53:47 nia Exp $
 
-SHA1 (doas-6.3p2.tar.gz) = 0dd0c76b9ccfe2d5edaa9dbb51e67e7a0e409c13
 RMD160 (doas-6.3p2.tar.gz) = 68efea9b81855b7d7614626f91695436839de4a3
 SHA512 (doas-6.3p2.tar.gz) = 34b15856912145831d682857df4281e38d1e39017d188f79c70e5e601b605a41aec29e0412252212d646fb439032ed25b2ddedab1073d702a67c6b1e827f53aa
 Size (doas-6.3p2.tar.gz) = 27521 bytes

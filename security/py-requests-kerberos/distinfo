@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/01/19 09:10:04 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:32 nia Exp $
 
-SHA1 (requests-kerberos-0.12.0.tar.gz) = 5faadac93b967f9be84b5f7b18c10737a92dd674
 RMD160 (requests-kerberos-0.12.0.tar.gz) = 0eb8306b0b48d66c3fa102527e6d4a87a68f85d7
 SHA512 (requests-kerberos-0.12.0.tar.gz) = 9a7a4a899100aa84b268c0f0387a8d33bd82627862df7faf8f632b7159ea1a3c1be765f9bea61ed85aea86fa48c863f5912bfd09647c739f8bffeaa1959b6c6b
 Size (requests-kerberos-0.12.0.tar.gz) = 11257 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/19 14:00:56 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:43 nia Exp $
 
-SHA1 (rvault-0.3.tar.gz) = bdb92e1d0034aa2df07a38f1ec9d6d1a1a0435f0
 RMD160 (rvault-0.3.tar.gz) = 5c6323c3b606021685e93c4f4b3050752f84a8a8
 SHA512 (rvault-0.3.tar.gz) = 0687d14cf646adccb3c09a3d5a16e771ef9b046bd4e596a487413e83e06709b27a62c2f08a9a23d47f6253cadc1fb7cbe53262455faa6628d5b23d8539f12271
 Size (rvault-0.3.tar.gz) = 76921 bytes

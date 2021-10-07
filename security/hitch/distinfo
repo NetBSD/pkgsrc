@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/06/27 10:12:10 tnn Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:53:51 nia Exp $
 
-SHA1 (hitch-1.7.0.tar.gz) = fea45689c8b360700992cc17184cc684d8e34563
 RMD160 (hitch-1.7.0.tar.gz) = 918cd72552117d63e8aa5ffda9852105854de217
 SHA512 (hitch-1.7.0.tar.gz) = d82d2cb5d0be39dcd40ffd969d0a1c25d4d253c21078f8b2b1fca7a4e93acc84c15a53590966917b6382faffc24abdc7928b713460b1f28a321ac5b8fafd8313
 Size (hitch-1.7.0.tar.gz) = 323894 bytes

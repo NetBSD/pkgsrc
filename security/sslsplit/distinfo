@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/09/07 07:58:11 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:47 nia Exp $
 
-SHA1 (sslsplit-0.5.5.tar.bz2) = 1e861265cfb0e9738a325155a58c52380261d640
 RMD160 (sslsplit-0.5.5.tar.bz2) = 9835bd8286383453a916aa906516b3ee60b85e2b
 SHA512 (sslsplit-0.5.5.tar.bz2) = 1d4968382659e975cd59692f3de80d79831a7842c9b909bb3cefedb5e2928254394e0f593c3409e3d5b1d0b192d8f8123ae10b08cecfd65584d790437d9f3d2a
 Size (sslsplit-0.5.5.tar.bz2) = 532788 bytes

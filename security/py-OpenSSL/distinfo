@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/12/19 11:52:26 leot Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:54:24 nia Exp $
 
-SHA1 (pyOpenSSL-20.0.1.tar.gz) = 97a98f017ac5f0384ae725035c6138bac458b903
 RMD160 (pyOpenSSL-20.0.1.tar.gz) = cbf2b0434544dc9ddc239694fd20ef63920d73cb
 SHA512 (pyOpenSSL-20.0.1.tar.gz) = e81e0870398b882d77453b02e972559c0be82dbfe87bd8a48a65e8943acc3ea07dc8c3150b88e299c237496043443d1a5832219c337e4436f99ef419b36dd23f
 Size (pyOpenSSL-20.0.1.tar.gz) = 173736 bytes

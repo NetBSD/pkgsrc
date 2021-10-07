@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/07/06 01:49:09 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:12 nia Exp $
 
-SHA1 (Crypt-Random-1.54.tar.gz) = 246bee23663a802de3f26831a947b5edfa47064e
 RMD160 (Crypt-Random-1.54.tar.gz) = 397522df321d2a6e804a45f34f5028705c857b55
 SHA512 (Crypt-Random-1.54.tar.gz) = cad58c3598efd2c7bd0ea611f31eeec99bbb61029df3f29abcc3ac951b1edc03829f1dd3c5f4d1c09a9914cae9eb171ea467562e3739122f1cf48b1119c42d29
 Size (Crypt-Random-1.54.tar.gz) = 22368 bytes

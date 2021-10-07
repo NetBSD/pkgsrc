@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/05 15:14:13 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:40 nia Exp $
 
-SHA1 (rex-mime-0.1.6.gem) = a66b157d696017cd892fe47bf702f58e418805b5
 RMD160 (rex-mime-0.1.6.gem) = 1200ba9bcea8e6e6ea0ba8fd166982fe64a3d1bd
 SHA512 (rex-mime-0.1.6.gem) = b6d111d47ee4eaaf89e5b515762c81b17b6d5ab5a7a3658ffc3a6fe373584ce2491287b71a702ce647106133fab6501b2ca1fd5e9c3426bd4b17e7b4646cf831
 Size (rex-mime-0.1.6.gem) = 16384 bytes

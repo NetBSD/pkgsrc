@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/08/30 15:57:11 wiz Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 14:53:59 nia Exp $
 
-SHA1 (libssh-0.9.6.tar.xz) = 1b2dd673b58e1eaf20fde45cd8de2197cfab2f78
 RMD160 (libssh-0.9.6.tar.xz) = b5fdb28700a6f592fc612693eed6b39988265432
 SHA512 (libssh-0.9.6.tar.xz) = 4040ec4af937e95be2e41313ef6d4db60b46b8d4dea10c09402398127c1d1ca8843392d207088aeee3c7ef631c6ae7b66861327dcebf78ed3af0723777619fd1
 Size (libssh-0.9.6.tar.xz) = 1053056 bytes

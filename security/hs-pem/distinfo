@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 00:44:22 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:53:53 nia Exp $
 
-SHA1 (pem-0.2.4.tar.gz) = 1d27ad6ecfd52cd71ecf96677f1e736bf79d70ca
 RMD160 (pem-0.2.4.tar.gz) = 8ad4514937627eefe07d4bb06d46f86492a67e12
 SHA512 (pem-0.2.4.tar.gz) = c27531ae89e69cebbeeecdf3cf72b897eb65c2f9b22c898bf88d79664f1b54b592f0e0f2bc007f84ec3b0efee8bd20eee187bf73a2947b2fc7d9f4a7e418872d
 Size (pem-0.2.4.tar.gz) = 4717 bytes

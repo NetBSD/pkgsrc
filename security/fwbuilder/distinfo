@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2017/06/17 19:52:13 joerg Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:53:49 nia Exp $
 
-SHA1 (fwbuilder-5.1.0.3599.tar.gz) = 4a693eb7d5cd51b5eb16e874540cb27c5b726dc5
 RMD160 (fwbuilder-5.1.0.3599.tar.gz) = 38cb91aaa137bb5f0bc14b8d7e70da5a83467349
 SHA512 (fwbuilder-5.1.0.3599.tar.gz) = 3a0d726736ad841a070a26b101fe4a5388a082e99146554fc60af53c10b1f01ccdd1206046502d355afdb0819ea28f7b309f6ae62b087b3de5da75d8dd56b62c
 Size (fwbuilder-5.1.0.3599.tar.gz) = 7182573 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/09/01 14:06:52 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:54:50 nia Exp $
 
-SHA1 (zkt-1.1.4.tar.gz) = ad2d4422f05f83d04278ecccfe854852956dcc62
 RMD160 (zkt-1.1.4.tar.gz) = e987e25d960d5dba19cbc54e18b0b8144e83aa1a
 SHA512 (zkt-1.1.4.tar.gz) = 349b49645557c9e03949c742bf4b37b4c3605b984c5990a3517519f31d23be3c6fb63349707a8c742f0c40c6aeb558592ce9c4e3b6656faec7947d2dfea6a178
 Size (zkt-1.1.4.tar.gz) = 382629 bytes

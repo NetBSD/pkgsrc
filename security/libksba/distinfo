@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/08/03 15:30:06 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:53:58 nia Exp $
 
-SHA1 (libksba-1.4.0.tar.bz2) = 3b524585ddd456c486a8134ba318a394e356f9a2
 RMD160 (libksba-1.4.0.tar.bz2) = ba9579c3ca9a4c5df8e7a0d5681150de2d790f81
 SHA512 (libksba-1.4.0.tar.bz2) = 7c1666017ebfa50b5663153dead1e019e0ee342c4f44ee8f644fc749e82dcc983237ef0f557de9de3f7908dc90405d967a4db2e36e04fe0d5a09edf49f8a0c8d
 Size (libksba-1.4.0.tar.bz2) = 651319 bytes

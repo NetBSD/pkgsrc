@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/30 16:26:31 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:54:29 nia Exp $
 
-SHA1 (google-reauth-0.1.0.tar.gz) = dcc110ebfd4afaad37d96606a759d53a6edb2513
 RMD160 (google-reauth-0.1.0.tar.gz) = 9de61cb70594e09f9c38b325db86c30a6d06e4f3
 SHA512 (google-reauth-0.1.0.tar.gz) = 18eed013af9d314889435172c2d02c5029c69f4976e5307c6d2b2a646e150a5ade86dc2802e3a6ab153dfdeae1006a796bcaa9db4d91c07ce21916d94dc16034
 Size (google-reauth-0.1.0.tar.gz) = 17289 bytes

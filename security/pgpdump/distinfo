@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2016/06/03 20:20:08 bsiegert Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:54:20 nia Exp $
 
-SHA1 (pgpdump-0.31.tar.gz) = 6a616aa4eac9d8d508004a93be79902186cd51e5
 RMD160 (pgpdump-0.31.tar.gz) = cfb2882dcc9c08ea15588e21bac92f4a29db5b86
 SHA512 (pgpdump-0.31.tar.gz) = 10d138baf0e3c9a47f6c8549a94b14eaa8babf95a09265e3a5b91469598726d6ee94cc7c481688c2d2b63917d6daba1bb368923aaf75adac6b18694d9a2940c4
 Size (pgpdump-0.31.tar.gz) = 63808 bytes

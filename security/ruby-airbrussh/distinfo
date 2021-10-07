@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/03/24 15:46:22 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:54:36 nia Exp $
 
-SHA1 (airbrussh-1.4.0.gem) = f16ccda4495331ec0cf31b958b1f4750596d6405
 RMD160 (airbrussh-1.4.0.gem) = 600fabc51d31d281cf545f1898507f2029d8b0ed
 SHA512 (airbrussh-1.4.0.gem) = c21360df11ea9d69c1f9e6bde12dd4d7ae69293b0ce2a04d449e0ffeb3b800efd779bd859d711cd63bfd624ff3c3fa2e28f425a8db19f0a573f6356de0071966
 Size (airbrussh-1.4.0.gem) = 20992 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/06/20 11:15:18 adam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:54:26 nia Exp $
 
-SHA1 (bcrypt-3.1.7.tar.gz) = 7b8d7ef665bd654f55a206a8951fb63d96b335d8
 RMD160 (bcrypt-3.1.7.tar.gz) = af0842db4fab9714b313a29310be5a56e6e1356d
 SHA512 (bcrypt-3.1.7.tar.gz) = bb9a431c8de97d5615d1a7fb67f868d08d839313fd5f3e17d8db40db1870f8b624594352c24c163c6a03485217de873cd92578040350678888728885c7b749de
 Size (bcrypt-3.1.7.tar.gz) = 42512 bytes

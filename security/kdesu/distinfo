@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:27 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:53:55 nia Exp $
 
-SHA1 (kdesu-5.80.0.tar.xz) = 562af2b513aedba0a6b436067ca9f6e51635f530
 RMD160 (kdesu-5.80.0.tar.xz) = 26cca28da846d003cddf86123397dba7060edbf3
 SHA512 (kdesu-5.80.0.tar.xz) = b5ccbb6827a18c2f8b370d64405825a4c533fac120e56a99a6d90bd01d563606ae625f2048e27fd19756d51175ecf163468349f7587540401abd5d002a7c8a6e
 Size (kdesu-5.80.0.tar.xz) = 52188 bytes
