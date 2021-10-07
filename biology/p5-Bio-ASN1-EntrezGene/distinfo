@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/09/06 19:43:03 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:19:41 nia Exp $
 
-SHA1 (Bio-ASN1-EntrezGene-1.73.tar.gz) = 3c67cf7490a81b781a4434f0f6034ad4544fa8e2
 RMD160 (Bio-ASN1-EntrezGene-1.73.tar.gz) = e3fe51af7423ca74364375075821c8b09cd8c198
 SHA512 (Bio-ASN1-EntrezGene-1.73.tar.gz) = b94f3b4f394861178a405f82a8d929c9be2f8f23b911f5737ab80da0dc30a6cf5fb3166a783b5e172de4ba99094a02ffc03dc456e55f46079042ab7ec03b53dc
 Size (Bio-ASN1-EntrezGene-1.73.tar.gz) = 157307 bytes
