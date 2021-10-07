@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2019/09/11 13:16:45 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:46:46 nia Exp $
 
-SHA1 (hwloc-1.11.13.tar.bz2) = c3ae96a845ff3800f28b28fdb48146f971589653
 RMD160 (hwloc-1.11.13.tar.bz2) = 5cf1f0c250fc4a2eb20a99ed05a959af5bd17a68
 SHA512 (hwloc-1.11.13.tar.bz2) = dd38bcc9a5df2dcfd3bbd828ab13fdb1c1d21747a0b62e6c87df95d2835c0472590344ff5bda4f6c28e597eaba1ea11c0bc96907ad45f1215f51f95ac9f58138
 Size (hwloc-1.11.13.tar.bz2) = 4120436 bytes

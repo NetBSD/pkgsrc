@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/05 08:43:54 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:46:45 nia Exp $
 
-SHA1 (R/promises_1.2.0.1.tar.gz) = b94c680683b2425b43119d1876005d57696b7f85
 RMD160 (R/promises_1.2.0.1.tar.gz) = b67c3abecaaae2b94f5d1132e6523a2537f60a24
 SHA512 (R/promises_1.2.0.1.tar.gz) = 8de6e45a790475826b1be5a442360b003174c17583d07cf47442b0efbffa2e0932245dbab44e8cc59e75a3e7443b3fc864c2d17babdf3e472bf88c2db5199335
 Size (R/promises_1.2.0.1.tar.gz) = 3120504 bytes
