@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:00:13 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:43 nia Exp $
 
-SHA1 (texi2roff-2.0.tar.gz) = df7f19141042af1fadee192c312b56b738b158f6
 RMD160 (texi2roff-2.0.tar.gz) = fa08de910490b13b61b5ea2e2e3857163e7d183b
 SHA512 (texi2roff-2.0.tar.gz) = 749dc564c77c8429ca4fdd72f84ea15c959ae8c40e04f5b8eb5eb7c5d6813e433fa7655330ffef47539b133b659fba5e60734e1a0c89be6510f72119d332dcaf
 Size (texi2roff-2.0.tar.gz) = 45487 bytes

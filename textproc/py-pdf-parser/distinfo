@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/03/13 12:04:45 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:17 nia Exp $
 
-SHA1 (pdf-parser_V0_6_8.zip) = 95e03615b33a245f5ecd021b2fb9382e711e6727
 RMD160 (pdf-parser_V0_6_8.zip) = 32b625e4b39e1ceaa808a377e0847c772c410ce2
 SHA512 (pdf-parser_V0_6_8.zip) = 82250ccbed36d432fdf2fcecb42cc59025fc9a5ac2a0ce44970a415c2e590c2c5104d52fa82356287d3bfb385380ebfe1c42db4a2036583a2567e4c9cd8ffc86
 Size (pdf-parser_V0_6_8.zip) = 13039 bytes

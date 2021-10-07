@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/10/12 21:14:22 rillig Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:01:16 nia Exp $
 
-SHA1 (Isearch-1.47.01.tar.gz) = 86761d6055fdd7b954b7ac9d9fd3d0084d758e3f
 RMD160 (Isearch-1.47.01.tar.gz) = 2e7f4c21d8a2d3cb194823a881ee7315f88de66c
 SHA512 (Isearch-1.47.01.tar.gz) = e99b62cd05ab93cc5d34dd5776f9f471afe7a62d58fcd729327b2ef057179611513bf017c5bdaed25a8f6079af9cfd1a1eda730a41f6b3f0ff960ec98d1fa198
 Size (Isearch-1.47.01.tar.gz) = 484760 bytes

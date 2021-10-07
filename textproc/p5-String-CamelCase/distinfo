@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/03/25 15:56:43 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:01:42 nia Exp $
 
-SHA1 (String-CamelCase-0.04.tar.gz) = 52112f88980f91bc4e298ab6a22e88c126c6cd1f
 RMD160 (String-CamelCase-0.04.tar.gz) = 5824cf19582fdcd849e6c01a3c4658ef3aac5530
 SHA512 (String-CamelCase-0.04.tar.gz) = b5a5c1b2f2b3a0be3c25891948ce456d8fccf6247a52efc4045c6607a45108caa92a7f12240ab57b618a27b8c42bf8855e9b1cd84a14bce0151e93954c93b256
 Size (String-CamelCase-0.04.tar.gz) = 7877 bytes

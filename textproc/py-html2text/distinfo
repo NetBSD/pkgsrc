@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2020/01/17 18:14:49 schmonz Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 15:02:11 nia Exp $
 
-SHA1 (html2text-2020.1.16.tar.gz) = 0eb74ae2c366245845ebd00cde73ef20f48948da
 RMD160 (html2text-2020.1.16.tar.gz) = a36b162620bbd0337e69fd67cdf0f54211074ad3
 SHA512 (html2text-2020.1.16.tar.gz) = 14453c98e81d05afb3241b04a9e50caf63e4b6f857337b4bd9f53e6b8fa7146aa6a1f4f64777db9fa350316b19fe62a0033dce5748191ca9fbd17a8757002855
 Size (html2text-2020.1.16.tar.gz) = 49464 bytes

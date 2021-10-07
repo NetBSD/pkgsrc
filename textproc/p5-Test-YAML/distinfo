@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/06/24 09:13:29 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:45 nia Exp $
 
-SHA1 (Test-YAML-1.07.tar.gz) = db141082dbfe9ecf67d5d770c78f223a6a2548ac
 RMD160 (Test-YAML-1.07.tar.gz) = cdd08d4f7702285dd2a6ae3a62a064ecbfa8813a
 SHA512 (Test-YAML-1.07.tar.gz) = fe169d351e3c3e41c04d4429bc698f0aa49c7572e1681d4d72d5610d56234642093a31ed7ee5a972cac3e714ff481aa31e69bf12807ec446dd6f927e854d5606
 Size (Test-YAML-1.07.tar.gz) = 11562 bytes

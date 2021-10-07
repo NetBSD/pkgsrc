@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/09/18 12:42:40 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:02:00 nia Exp $
 
-SHA1 (XML-Tiny-2.07.tar.gz) = 64d9d1e6046a1a2f341f9c589b84a67542256fbc
 RMD160 (XML-Tiny-2.07.tar.gz) = c50088e73890b6e49a5de64198a1aafd57f211ed
 SHA512 (XML-Tiny-2.07.tar.gz) = 93be9af40fefc89ff86e956747106d11960adae8dc03ee2886c9b0ab8903c5b96608a369909213029e9335e4dceb37f8dcd4e163517175d9b229b2b449019fea
 Size (XML-Tiny-2.07.tar.gz) = 37713 bytes

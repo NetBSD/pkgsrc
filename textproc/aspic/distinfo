@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/15 13:15:26 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:00:40 nia Exp $
 
-SHA1 (aspic-1.05.tar.gz) = d7e83fcd0a0322e2fcb263485b3f82f6bb95e4d9
 RMD160 (aspic-1.05.tar.gz) = dc7d7767b81ca4e78277390651f2407eb2aff1bb
 SHA512 (aspic-1.05.tar.gz) = 3a3757a8f82dc4faa89441cedfe99ebfb5375457204bff3dd220c643ba3bb6e3c63872f308db34a4941ea83dbf6101b5594af0abef21fae349a8c1152d3c9079
 Size (aspic-1.05.tar.gz) = 246999 bytes

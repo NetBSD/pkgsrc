@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 15:28:11 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:06 nia Exp $
 
-SHA1 (doctemplates-0.9.tar.gz) = 24af93320be556c02b91ac1bd9612a83540967f3
 RMD160 (doctemplates-0.9.tar.gz) = 37b103a8b73faf0325a44bfcaa4085c20a6097d1
 SHA512 (doctemplates-0.9.tar.gz) = 3216fc7ef4e2a45230a2854c22c2a8622774bc834bbf59d34134912b3942df2a541230bd91324995e13e19098a0fa0bf7057c7d55ca35ec75da7840fddd61a37
 Size (doctemplates-0.9.tar.gz) = 27366 bytes

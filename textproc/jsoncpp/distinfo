@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/09/29 16:49:15 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:01:20 nia Exp $
 
-SHA1 (jsoncpp-1.9.4.tar.gz) = d0cceda7df8d6e77d6acde6b9dea0ff604be6b36
 RMD160 (jsoncpp-1.9.4.tar.gz) = c35709d6cc3de960003efdfb06909640bb1da2f9
 SHA512 (jsoncpp-1.9.4.tar.gz) = adfd4afbdf6b79bd37edcf0e248f07864994f1c4bcb7431f3b44102490ce467f72381908066655fa486dec12f467af0a11f42f859bbf719895974c7339db7d22
 Size (jsoncpp-1.9.4.tar.gz) = 214057 bytes

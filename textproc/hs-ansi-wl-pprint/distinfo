@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/23 16:12:26 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:04 nia Exp $
 
-SHA1 (ansi-wl-pprint-0.6.9.tar.gz) = c38e749e4b428c60bc535bea1febc17c8f7dd90e
 RMD160 (ansi-wl-pprint-0.6.9.tar.gz) = 5cb137a2e3646f612c5dd7a0346f539d59aebf6d
 SHA512 (ansi-wl-pprint-0.6.9.tar.gz) = 2a66236f740f0b45b6133555e8b1315dc85ece1c16dd51e4aa7f31d2fee03d66869af5f81e6383aa840f503c2cad46f3655f53b784ebca7b3480efb53eea2a04
 Size (ansi-wl-pprint-0.6.9.tar.gz) = 16723 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 14:16:58 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:36 nia Exp $
 
-SHA1 (unicode_utils-1.4.0.gem) = 123471c8b928b50217df39ae2ea112ba5723ad48
 RMD160 (unicode_utils-1.4.0.gem) = 608ac6e4e9ad1cf5fa7d5973f2e31d693a8b5ad1
 SHA512 (unicode_utils-1.4.0.gem) = c7c34ada41b76ce9d06c3451451881c914903f532a555e4353d895ae52e36dea37ff7cf5ad3254fc188270514034dcd5ccd5a68fa3d65b6e2e3ad62d02bc4237
 Size (unicode_utils-1.4.0.gem) = 439808 bytes

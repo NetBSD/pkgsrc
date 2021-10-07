@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/24 16:52:47 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:31 nia Exp $
 
-SHA1 (kramdown-parser-gfm-1.1.0.gem) = 77b069536b24ee436ce1c24c35693d96652aa8f0
 RMD160 (kramdown-parser-gfm-1.1.0.gem) = 053baa035ca3942c74fb1f7261d649b75613aa15
 SHA512 (kramdown-parser-gfm-1.1.0.gem) = 5662c1a50da7c8e50fd50afb5fe1dcd3bd63f4282d9940f96bb56266b63841c0b09902ce90eb3162aa89c54047970667b17299b3a7cf475bab2641604aa15d8c
 Size (kramdown-parser-gfm-1.1.0.gem) = 11776 bytes

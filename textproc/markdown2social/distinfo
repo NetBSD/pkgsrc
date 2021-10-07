@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2016/01/15 14:32:25 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:28 nia Exp $
 
-SHA1 (markdown2social-0.3.tar.gz) = b5807e6c8391cc194f8514566f7c8b860bc53728
 RMD160 (markdown2social-0.3.tar.gz) = 5f34f1e90f6cc139ab9db95fa30e9e7b2bf5d0fc
 SHA512 (markdown2social-0.3.tar.gz) = 0867f26d853d8e0b9de0c65e02228501099c98fb33c9bc05a976bf01ffb1f79e80e6e87253332dfb29bebf9bc9f71837e827703845d77b477f97567ca7305fad
 Size (markdown2social-0.3.tar.gz) = 20948 bytes

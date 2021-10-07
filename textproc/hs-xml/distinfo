@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/02 14:22:53 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:01:08 nia Exp $
 
-SHA1 (xml-1.3.14.tar.gz) = 067bc290e6de1b7301539da28ef349c1d8ebe17b
 RMD160 (xml-1.3.14.tar.gz) = 4065772c1a6955e336645bb256d175182dc9efbe
 SHA512 (xml-1.3.14.tar.gz) = 2ddaa6c837fe85a06c751a66ae2c185fb7190f51f24649a668032b048b3e1b15982b45c86dfee4131453f0bd1ed704e934090bbede252a2b6de30c5f4ad44137
 Size (xml-1.3.14.tar.gz) = 12048 bytes

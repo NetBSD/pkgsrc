@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2016/03/30 09:57:50 jperkin Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:00:51 nia Exp $
 
-SHA1 (bsdgrep-20071201.tar.gz) = ae5eabcaa6fbf1760023ee6f3d4a596fe1db9039
 RMD160 (bsdgrep-20071201.tar.gz) = 915ac4d8c6a44e56a6bf88454e7cc9ae5dc7f363
 SHA512 (bsdgrep-20071201.tar.gz) = 9199bf7128e26b5ad5b249147c0fb7a88aecb6ebc9fba37efc1eb9beda2677cb62111390e141c2b383cb39f61c76bb129aa85991a6820003f053bc605a53bf57
 Size (bsdgrep-20071201.tar.gz) = 13161 bytes

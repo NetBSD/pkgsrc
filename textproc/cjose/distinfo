@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/16 08:03:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:00:52 nia Exp $
 
-SHA1 (cjose-0.6.1.tar.gz) = 0dd6efca729f1190f66855523c3920c3f7ddd482
 RMD160 (cjose-0.6.1.tar.gz) = 653323af3933dd622689815c3e11a102b23808c9
 SHA512 (cjose-0.6.1.tar.gz) = 7ae67a6d19591b3d19b888270ec0ca17df399bea117e42686fc1de39b3741ed9a8816f96d33d090687c49c3123cdc95430a781835a525a02d22561ebf5aaa653
 Size (cjose-0.6.1.tar.gz) = 1586963 bytes
