@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/27 05:56:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:56:10 nia Exp $
 
-SHA1 (eltclsh-1.9.tar.gz) = 4c85fc6927c3fc4359316e9265460a8747972a0d
 RMD160 (eltclsh-1.9.tar.gz) = 8bee0288bc458845b5384272164df48e2e7e0b03
 SHA512 (eltclsh-1.9.tar.gz) = 7bcde89504257d12131d16609c9f3359c885f28f2f886da61357dcdd8fb615202ecfcb4930ef1bb95c4fec6d69521b4d0e3a9271da58bc69e44ab85651259106
 Size (eltclsh-1.9.tar.gz) = 342659 bytes
