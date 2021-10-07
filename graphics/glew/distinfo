@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/02/17 14:20:35 wiz Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 14:12:15 nia Exp $
 
-SHA1 (glew-2.2.0.tgz) = 22d6e9b9e691080eb6313407dbf51cfebc3345ea
 RMD160 (glew-2.2.0.tgz) = d36b8aea152ad3b18889e048eb680ab9772959c9
 SHA512 (glew-2.2.0.tgz) = 57453646635609d54f62fb32a080b82b601fd471fcfd26e109f479b3fef6dfbc24b83f4ba62916d07d62cd06d1409ad7aa19bc1cd7cf3639c103c815b8be31d1
 Size (glew-2.2.0.tgz) = 835861 bytes

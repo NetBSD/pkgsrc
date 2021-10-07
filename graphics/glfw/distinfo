@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/04/19 10:51:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:15 nia Exp $
 
-SHA1 (glfw-3.3.4.tar.gz) = d0782bc16762d08c62a3db145c4c6fc645d75e1f
 RMD160 (glfw-3.3.4.tar.gz) = 109f4072049944c6bf8dd32cbafdd3dbd6021cde
 SHA512 (glfw-3.3.4.tar.gz) = 2b45ab72da7a2c007c0f42ccd56205f9684cfb980e2b1df127850cd057bb2b02ce02c7c64acd54cd433778e7017148f214afedf09badff9d2edf5f9b8d9d2701
 Size (glfw-3.3.4.tar.gz) = 762885 bytes

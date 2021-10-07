@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/06/21 16:44:05 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:12:39 nia Exp $
 
-SHA1 (Image-JpegTran-AutoRotate-0.04.tar.gz) = 74964aacf6381784a79476e66ebb3f6ff04e0a77
 RMD160 (Image-JpegTran-AutoRotate-0.04.tar.gz) = bc03b74e1a83bc38821edc2cc2791eab293997b8
 SHA512 (Image-JpegTran-AutoRotate-0.04.tar.gz) = 81eb71fc886206a0cd6978d8ca87ecbc42a33c763d310112a9b223dcfa149c09b2bcf396fc6f7cf1ff43f2b107ade411cad85a60f116a16c495fe68ddccb2760
 Size (Image-JpegTran-AutoRotate-0.04.tar.gz) = 120117 bytes

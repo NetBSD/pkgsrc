@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/02/11 02:38:37 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:12:18 nia Exp $
 
-SHA1 (grafx2-2.7.2950-src.tgz) = 126fa87c1bcd18af0215b24451828c37d6c45f31
 RMD160 (grafx2-2.7.2950-src.tgz) = c9a2ca8c59d0229b296bb2eeac3293a7a2fbd679
 SHA512 (grafx2-2.7.2950-src.tgz) = 1f13d17327b55d040cca63bf804f81ff2cc8a57ef6c3418d5da2e84c090b3c2b62ed348abfb95b50f11ceea80637477e8cfd3d277dfd5c8949fbdb7620098cec
 Size (grafx2-2.7.2950-src.tgz) = 1104406 bytes

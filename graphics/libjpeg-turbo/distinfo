@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/08/10 09:13:54 adam Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:12:29 nia Exp $
 
-SHA1 (libjpeg-turbo-2.1.1.tar.gz) = f9c3c17479f4fa2c76dba15125552fc9f6bfda80
 RMD160 (libjpeg-turbo-2.1.1.tar.gz) = 61540f131dbfd5564fba7aee0cecfdd3bab164b9
 SHA512 (libjpeg-turbo-2.1.1.tar.gz) = 9cf61b4677b38e254063248a3fdbe138634d23a35ae8f2ee2661bdb3248b1d0500bd43201b8d9fe66c779d578074fd9ed19bc097ba22e10143530c2a19738673
 Size (libjpeg-turbo-2.1.1.tar.gz) = 2256321 bytes

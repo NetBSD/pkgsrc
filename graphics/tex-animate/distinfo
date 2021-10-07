@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/02/20 09:42:52 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:12:58 nia Exp $
 
-SHA1 (animate.r56583.tar.xz) = cccc511ec374adea18b2def09d4c6918832cdd5f
 RMD160 (animate.r56583.tar.xz) = fdc9468812abdc8f352b1310d015ad63a2e7a032
 SHA512 (animate.r56583.tar.xz) = 29739e0c995ef6c00efdaa730a1e866b13efdb4005db8b8088ce4f1826899adabae41e2b7c0659df256817274ee11dfb7a033eb7b2f11302591a1fd541e1c1be
 Size (animate.r56583.tar.xz) = 23388 bytes

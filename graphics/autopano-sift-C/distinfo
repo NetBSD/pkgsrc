@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/08/19 00:19:37 jlam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:01 nia Exp $
 
-SHA1 (autopano-sift-C-2.5.1.tar.gz) = f8c5f4004ae51cb58acc5cedb065ae0ef3e19a8c
 RMD160 (autopano-sift-C-2.5.1.tar.gz) = e51d996cdc7dcae3abde22878fe76ff904c55950
 SHA512 (autopano-sift-C-2.5.1.tar.gz) = 4f3c9e8738c7bc29ff6284033b7b813de61ef440c3d544755be8c4ad715a6e4175801ee4c02642df5e05bac82929c5554d85a5c488a2c27da1e5e81d3cd72931
 Size (autopano-sift-C-2.5.1.tar.gz) = 192267 bytes

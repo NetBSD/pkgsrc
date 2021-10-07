@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:45 nia Exp $
 
-SHA1 (brewer2mpl-1.4.1.zip) = ecaf12e633a9d4e86a4136fc70cd51e74be65272
 RMD160 (brewer2mpl-1.4.1.zip) = 2708e5198408d8a2c1b663c1146ea677c07cb96e
 SHA512 (brewer2mpl-1.4.1.zip) = 102fe462f6ae5134a026c52158715c8d38e7202095a360b357522e446b157c801b78d50db69a718262e69a1ef1042240f4e26176353d27780895ccc2412ac0df
 Size (brewer2mpl-1.4.1.zip) = 29347 bytes

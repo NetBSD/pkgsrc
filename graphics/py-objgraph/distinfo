@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/01/11 13:58:09 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:12:48 nia Exp $
 
-SHA1 (objgraph-3.5.0.tar.gz) = cc64c6ef0618495cc3e672a3cae9c57c1c929370
 RMD160 (objgraph-3.5.0.tar.gz) = 49a64206252216ee423af1d9b48aa8e84fdda9fd
 SHA512 (objgraph-3.5.0.tar.gz) = da29202871bad06f2caa9cc297e7bf9a15af4c89e23baf9c271764e0ce93ff9557cd5c21d0bf39b425713460dbe2dbc8468d70c6bfcc1c3ff8b1b4d4a7923858
 Size (objgraph-3.5.0.tar.gz) = 638591 bytes

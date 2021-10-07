@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/18 05:02:21 tnn Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:12:13 nia Exp $
 
-SHA1 (gimp-fix-ca-3.0.2.zip) = ac6037b9c28972e779951224e8c233931734f190
 RMD160 (gimp-fix-ca-3.0.2.zip) = 67fd360e8e05b8b2eb5c3d8491e3531b8b96bda7
 SHA512 (gimp-fix-ca-3.0.2.zip) = 306cafa20dfbdc4612daf0e2edb80f89e502c9244042864bb281e87dc7a3f6eae640e8ae0ca7ae7053d376095f8c69987afd75e8126d8ab36fe9f294d02f6172
 Size (gimp-fix-ca-3.0.2.zip) = 7225 bytes

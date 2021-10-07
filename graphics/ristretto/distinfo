@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/08/18 05:54:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:12:51 nia Exp $
 
-SHA1 (ristretto-0.10.0.tar.bz2) = 88f2a4fcb704892f1906ba365189160abc6da961
 RMD160 (ristretto-0.10.0.tar.bz2) = 7ff9f590e61b51f180917df33a2df208e9409cc2
 SHA512 (ristretto-0.10.0.tar.bz2) = 1727025bbc056a71475d91505cc141661b011c3944cf4ca4d96b48a9ad7e1b28b8f4b0c856fa789cd2c877c1faa27aa57441e35e06f38fd2b81ddcd3284dc2b6
 Size (ristretto-0.10.0.tar.bz2) = 586447 bytes

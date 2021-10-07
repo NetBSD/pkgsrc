@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/18 14:48:44 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:11:58 nia Exp $
 
-SHA1 (R/farver_2.1.0.tar.gz) = a0219989d9635b0700652090160b675ae175cc91
 RMD160 (R/farver_2.1.0.tar.gz) = 5034990133b45b4c4ea8ffb7ad2c37f5c51d6222
 SHA512 (R/farver_2.1.0.tar.gz) = a89c77a971e831d2b203a011539f5e077d953432156eaff588e8b0cb57536dfaace1d98bd656b9b48eccddb2b1d03dc395e01ae670bde1b769b905bc17eb4129
 Size (R/farver_2.1.0.tar.gz) = 1281864 bytes
