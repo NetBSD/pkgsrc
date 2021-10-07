@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/30 14:52:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:31 nia Exp $
 
-SHA1 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 776707703689510829465c3ad6948c47fa9cc14d
 RMD160 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 484fffb5c8342c6fa9e0f38664778be042a56dc8
 SHA512 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 8dd68b12d0bbd935cb6e471df8c4622ff6a517582e32bfc41140a058a2fde4e51f6f24e8a3760478e10790a732b74dd0b7a05071601d3694924ae26d80cedefb
 Size (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 1200707 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/19 08:14:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:49:28 nia Exp $
 
-SHA1 (gearsystem-3.4.1.tar.gz) = d2656779caee4d497c989201e8ed5c01dce7c9ca
 RMD160 (gearsystem-3.4.1.tar.gz) = f92e06ba8dfd4c754fa0b91b1f13418c75b19234
 SHA512 (gearsystem-3.4.1.tar.gz) = 04fa31b6e86f3397bf64e3f2184f3810176518bb4aaa1a85c80eb6dde11da80cce14fbbe6a35aa3a26c5c00c12eb5bfb7f8033d98e4fbc894d5f7135cd49d6c1
 Size (gearsystem-3.4.1.tar.gz) = 14570974 bytes

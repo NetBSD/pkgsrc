@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2016/06/17 17:21:38 tsutsui Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:49:49 nia Exp $
 
-SHA1 (suse131/glibc-locale-2.18-4.44.1.i586.rpm) = 16a03a7932d20cf2d826d98a4139a1f5ebd3705b
 RMD160 (suse131/glibc-locale-2.18-4.44.1.i586.rpm) = 5efb803c488513219734e337c99003307d6e15ce
 SHA512 (suse131/glibc-locale-2.18-4.44.1.i586.rpm) = ddc94279ade37e7ff0b3238964a81525f8e0017f5209ff82a0973bc7d73e9883176b54369d25cc16f2184671a3420fbe417007ca7cc9ad0821cc801f26a67b1f
 Size (suse131/glibc-locale-2.18-4.44.1.i586.rpm) = 6229828 bytes
-SHA1 (suse131/glibc-locale-2.18-4.44.1.x86_64.rpm) = 3b668e73b871e5e55aeb2f88a0d590da1b9db98e
 RMD160 (suse131/glibc-locale-2.18-4.44.1.x86_64.rpm) = b104183b0919c66992865cba1d19e781856c086f
 SHA512 (suse131/glibc-locale-2.18-4.44.1.x86_64.rpm) = c4047585b9fcf7f538451dcbee2f460bc7d0432a77d0dfd68660363c7d0c5133b1cebf6d7fa91d77526399889b879d841f9293d19c6bd3359361cb1822d75564
 Size (suse131/glibc-locale-2.18-4.44.1.x86_64.rpm) = 6247465 bytes

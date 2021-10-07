@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/08/27 07:15:47 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:49:52 nia Exp $
 
-SHA1 (vmips-1.5.1.tar.gz) = e4884af442403720cf2b0047144d4632e9d8122f
 RMD160 (vmips-1.5.1.tar.gz) = 42fb5012533032c51b2cb23e838f99b23f02dec4
 SHA512 (vmips-1.5.1.tar.gz) = ad77b1d70d29ff15003198f7ebe7afe7bcd023024de0064661a78f53ebedbcc60a4dea48869ff2d4fc68777f357a094b7b05fba03f3c0f19ad0ebf0de09e044e
 Size (vmips-1.5.1.tar.gz) = 1092824 bytes

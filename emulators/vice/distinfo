@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.49 2021/01/01 12:46:03 rhialto Exp $
+$NetBSD: distinfo,v 1.50 2021/10/07 13:49:51 nia Exp $
 
-SHA1 (vice-3.5.tar.gz) = 09caf57ace1015fcdd6ad0dd05699dbe71204571
 RMD160 (vice-3.5.tar.gz) = c037f4c892b5712f4829bcb6f84c4cbeb21ff0aa
 SHA512 (vice-3.5.tar.gz) = 02f364c1645138cacb461346d44de8f524fb2aba7d980181caf039c46ca9d30db98466e5b0e56e6a41417cd7bbd63d73bf6eb110af1271e23732e320dd1fab70
 Size (vice-3.5.tar.gz) = 22557578 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/04/20 00:36:45 joerg Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:49:29 nia Exp $
 
-SHA1 (gpsim-20050905.tar.gz) = 46e7d0d69695961aca4324d8d3267181bd641081
 RMD160 (gpsim-20050905.tar.gz) = 1b717f0e51440c4e2db72a4bdfb90d2e8d5e4a3d
 SHA512 (gpsim-20050905.tar.gz) = 5c071d2bb948f3e11468f2fdfe286a02162d3beec9de8ad50f8fcb3631f41e120cf18079469101474dc0453cd8b45d5522d01d49b354eaca6e0212703d093317
 Size (gpsim-20050905.tar.gz) = 2027957 bytes

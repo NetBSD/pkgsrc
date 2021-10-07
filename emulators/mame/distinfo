@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.110 2021/09/29 08:30:22 wiz Exp $
+$NetBSD: distinfo,v 1.111 2021/10/07 13:49:35 nia Exp $
 
-SHA1 (mame-0.236.tar.gz) = c581fe58d408773bfb28068b4db5d2882e3e4e18
 RMD160 (mame-0.236.tar.gz) = a4fe0b38229d796fbca0b03bb46ed54e89bc37e4
 SHA512 (mame-0.236.tar.gz) = ee5a61ae9f636c1b6f5d3dd5280c5b691e24a7f509956812248973b48b4c80b4bc0269be80c8cbba654793a4a3ff4d64f8a6af5a0152f172da245204c710f65c
 Size (mame-0.236.tar.gz) = 185713006 bytes
