@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/04/07 14:35:27 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:29:01 nia Exp $
 
-SHA1 (libkkc-0.3.5.tar.gz) = cf4339d375c8e4098a1c50cd6679f29b6b896708
 RMD160 (libkkc-0.3.5.tar.gz) = 4d74ccf508546cbaa007d688e1274f3ee2a554a7
 SHA512 (libkkc-0.3.5.tar.gz) = f611c3104a22ad38af29746870849d8937b6af2a7fee0952cc25f36ef845b5617a192df7ca63ff2a507384f7a6a13c9c1b4fa3b9a34f3f041bee8793d04b9236
 Size (libkkc-0.3.5.tar.gz) = 1424282 bytes

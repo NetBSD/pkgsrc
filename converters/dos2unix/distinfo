@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2020/11/26 15:12:39 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 13:28:58 nia Exp $
 
-SHA1 (dos2unix-7.4.2.tar.gz) = e2d6dab6a57e122de330d36639ccb43a6432534d
 RMD160 (dos2unix-7.4.2.tar.gz) = 9889ca39f1befaa88be7144eabb1fea913d73231
 SHA512 (dos2unix-7.4.2.tar.gz) = 3fb77561596bafd83f3f7807ce967e58d5a96e5235afe3a4074ae7112297445690b2586bf652eb0b5bd1984fd41a79478355f6df8244561b4167a8a09593110d
 Size (dos2unix-7.4.2.tar.gz) = 727429 bytes

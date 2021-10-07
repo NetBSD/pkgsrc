@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:54 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:29:10 nia Exp $
 
-SHA1 (ruby-romkan-0.4.tar.gz) = 316b95ac4c8914fd1020d9b0893c870ace68a144
 RMD160 (ruby-romkan-0.4.tar.gz) = ff769f4f5e0c978dab644ff78b9c53927faf161d
 SHA512 (ruby-romkan-0.4.tar.gz) = d4e4089122d643878a0e19852dd650c4d7e35918838edfe4bc210a5d26cc3e55b5be430db4378e75f44a3435331fd4e1155dfc3e1846babb3a1b626dd127eacd
 Size (ruby-romkan-0.4.tar.gz) = 4653 bytes

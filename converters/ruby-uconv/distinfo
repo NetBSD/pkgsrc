@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/12/12 17:56:55 taca Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:29:10 nia Exp $
 
-SHA1 (uconv-0.6.1.tar.gz) = 0aa28b222d6175e827602775f43ff270274cfc4d
 RMD160 (uconv-0.6.1.tar.gz) = c068f5441567c9d72004cbc819c1db0a37103223
 SHA512 (uconv-0.6.1.tar.gz) = 6f964e42886f498bd6c4111e522143d8d958b8c6e401d26f784fdf1441684f1fde7cfdc35a08d3707a42e305d5508d9ff3fbc1b735298f8af2aae3923cbda68d
 Size (uconv-0.6.1.tar.gz) = 740417 bytes
