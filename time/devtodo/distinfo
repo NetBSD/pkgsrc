@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/02 23:31:36 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:03:55 nia Exp $
 
-SHA1 (devtodo-0.1.20.tar.gz) = 003067a12139d712dbb3706069e0950a93ecaaf4
 RMD160 (devtodo-0.1.20.tar.gz) = 389201318faa5ff6d302bd5f8c8f8b094664b45c
 SHA512 (devtodo-0.1.20.tar.gz) = 58cff0455c735af4530fc9321d1eade8272dd5759eeb8a688a641c9be11830b87be116801e3cd1d90a27e070775fa00d7b4d6b3399eba7aad5c752bfda9c28fb
 Size (devtodo-0.1.20.tar.gz) = 390935 bytes

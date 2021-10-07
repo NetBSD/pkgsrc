@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/13 10:08:16 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:04:13 nia Exp $
 
-SHA1 (timers-4.3.3.gem) = 5a88f732e57f1037a042f21ef9a48d6632bc5935
 RMD160 (timers-4.3.3.gem) = c89381421778e47a9a404d8174964e7ae875d18f
 SHA512 (timers-4.3.3.gem) = 6acc552f1148339f317262880e772fd85dd87e92719acb0c66d7792d64a8e318462d3106cca2a8a3a5717d2b5741f1973fdfb79e5744851d3f1139d3d40a6f77
 Size (timers-4.3.3.gem) = 9728 bytes

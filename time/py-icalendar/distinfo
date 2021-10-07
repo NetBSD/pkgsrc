@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/01/09 09:30:26 adam Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:04:09 nia Exp $
 
-SHA1 (icalendar-4.0.7.tar.gz) = 3a77dcddeb567a589db7f11b1cd291d799b730f5
 RMD160 (icalendar-4.0.7.tar.gz) = eba9a736f1c9eb1fcacf388a425e5e0db952bee9
 SHA512 (icalendar-4.0.7.tar.gz) = 97f7184ddc42ade2a447af5112f5bd18ea9a89ef25ea3983cc2213fefe2c59255102b7babcd49b3e04cbe435d75d2712dd57eebc1bf1c20c54aae7081ba24379
 Size (icalendar-4.0.7.tar.gz) = 78569 bytes

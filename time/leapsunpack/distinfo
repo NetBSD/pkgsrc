@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/11/07 13:49:16 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:03:58 nia Exp $
 
-SHA1 (leapsunpack-0.06.tar.gz) = 967a62c70ad0db34c62bb06b5f0b94a4aabae570
 RMD160 (leapsunpack-0.06.tar.gz) = cd3d67fa6ba6b386a590957f60a5817ec6cc5a9e
 SHA512 (leapsunpack-0.06.tar.gz) = 6e1b6e9f8b7a50590bfc1c44a715de639ef36b91ad2e189489a7683a329471807e5512aa8b8f6af702e77228268bb6c003c5bd03ccc0b1c9de787473fedeca1e
 Size (leapsunpack-0.06.tar.gz) = 31330 bytes

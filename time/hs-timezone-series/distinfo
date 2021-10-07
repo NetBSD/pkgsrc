@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/02 15:41:01 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:03:57 nia Exp $
 
-SHA1 (timezone-series-0.1.9.tar.gz) = 62e7a54cff6577661e65074c4ade424b98880efb
 RMD160 (timezone-series-0.1.9.tar.gz) = 839bc202e4d333964267b114bff58e2ae6bc85c8
 SHA512 (timezone-series-0.1.9.tar.gz) = 9a716223270dfcb0ed39e2dcfb460e3540c0f2444f703c466cbd48ad5664e689aa3f6595f32e59b96fef7891aafabc03c9925367a26c2c043cb6adca2dad7a88
 Size (timezone-series-0.1.9.tar.gz) = 5812 bytes

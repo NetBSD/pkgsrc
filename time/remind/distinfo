@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/01/07 10:09:38 kim Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:04:13 nia Exp $
 
-SHA1 (remind-03.02.00.tar.gz) = 1151ee8741fae36274c0391a65fc8a0733c0f8fb
 RMD160 (remind-03.02.00.tar.gz) = 197b921545c3f39b40016ebc60f9842f3a857ec5
 SHA512 (remind-03.02.00.tar.gz) = 978ee2e6a45756e02bc2de0495d95c4b4377d9af76cb1ea5070f8e2438a451d2bf44245b93018bcbf6ea217520b7b4c8766d5eab354f9a0bc4982b25e90bd278
 Size (remind-03.02.00.tar.gz) = 365896 bytes
