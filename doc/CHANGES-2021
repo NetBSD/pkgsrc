@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5060 2021/10/07 12:17:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5061 2021/10/07 19:10:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7759,3 +7759,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/nushell to 0.38.0 [pin 2021-10-07]
 	Updated sysutils/xplr to 0.15.0 [pin 2021-10-07]
 	Updated security/tor-browser to 10.5.8 [wiz 2021-10-07]
+	Updated www/apache24 to 2.4.51 [adam 2021-10-07]
+	Updated www/py-httplib2 to 0.20.1 [adam 2021-10-07]
