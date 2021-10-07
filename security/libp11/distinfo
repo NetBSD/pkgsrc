@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/04/10 08:25:08 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:53:58 nia Exp $
 
-SHA1 (libp11-0.4.11.tar.gz) = 25bd6376a41b7e10713157c7fd51e4bf5d57cdc7
 RMD160 (libp11-0.4.11.tar.gz) = 00392cf1ae584ecc3075e2c9efd7bb0fc02cd45e
 SHA512 (libp11-0.4.11.tar.gz) = 37eeeab09cbef7e1498358f2c614f4ec6cb9f37bc9b19e6e393fc0ed3c47ebad8d484b5f5cf428c76ffdf25d08e337d5148d0ff517957283394111dea83352f2
 Size (libp11-0.4.11.tar.gz) = 500433 bytes

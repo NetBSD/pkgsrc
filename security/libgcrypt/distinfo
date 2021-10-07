@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.91 2021/08/30 15:53:43 wiz Exp $
+$NetBSD: distinfo,v 1.92 2021/10/07 14:53:57 nia Exp $
 
-SHA1 (libgcrypt-1.9.4.tar.bz2) = 1bccc8393482fa1953323ff429c6b5ba5676eb1a
 RMD160 (libgcrypt-1.9.4.tar.bz2) = 04ba20bde2cc765932be6c9433dec0d1bbb64335
 SHA512 (libgcrypt-1.9.4.tar.bz2) = d0e117ac73c94d70e9521ee1e6328691498cc8328f8c4e21338096908f5c04c7b838966eb63d59494565f4e19f506c07dab4f4d922150d75610d9f7b57abbf60
 Size (libgcrypt-1.9.4.tar.bz2) = 3239704 bytes

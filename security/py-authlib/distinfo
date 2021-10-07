@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/07 08:18:10 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:54:25 nia Exp $
 
-SHA1 (Authlib-0.15.4.tar.gz) = 0de4009622699e15756b7810a523924243c19f23
 RMD160 (Authlib-0.15.4.tar.gz) = 4139c2c8af3f0dbf933691d193f4068cbb6d9270
 SHA512 (Authlib-0.15.4.tar.gz) = d0ece5543aae35adf0cc07539a350db217127eadc51b6906e4a5ed2322fc5c1982d3c8f2bfa2c2398f3e1fadfe712e016c2ca48ca5b0fce2d15146ebd8bc1e47
 Size (Authlib-0.15.4.tar.gz) = 124231 bytes

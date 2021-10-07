@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/12/21 11:17:36 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:53:41 nia Exp $
 
-SHA1 (R/openssl_1.4.3.tar.gz) = b0a28a603cc960971c3d95f82fb0eaaea5646c8a
 RMD160 (R/openssl_1.4.3.tar.gz) = 4d1a4bce6f096f805c3414f6ee487251785183bb
 SHA512 (R/openssl_1.4.3.tar.gz) = 8e138f7ce31c5c596bb42da36772488e47163d867fecfe44fc191c47a1d1fad562fdcbc42280c5d331b37be8538765502dad524d7f57ad90baa9161119bdbd72
 Size (R/openssl_1.4.3.tar.gz) = 1207708 bytes

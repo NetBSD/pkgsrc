@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:59 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:33 nia Exp $
 
-SHA1 (slowaes-0.1a1.tar.gz) = 79488ef78f618f8c02ecf15cc79f8aadbae5031f
 RMD160 (slowaes-0.1a1.tar.gz) = 7ff6e05eea73ddbbf716489b024013d6faeab5d5
 SHA512 (slowaes-0.1a1.tar.gz) = 09126a6cf2a0da27c45b12d25c3a9147f47448311f9e36b6db2aa62d8b85f3fdf66f10f8f5d84edf48cde7f6c766d9ed384832f9ca0e28f95104149a7f424d95
 Size (slowaes-0.1a1.tar.gz) = 7017 bytes

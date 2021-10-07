@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/03/19 08:16:29 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:34 nia Exp $
 
-SHA1 (stix-1.2.0.11.tar.gz) = 6b2ca6a9d5abb3b55c1e4dcf8dcb18e841fcbb34
 RMD160 (stix-1.2.0.11.tar.gz) = 15a3e814e1b244ffa637af95a1245b88dd8ea4c7
 SHA512 (stix-1.2.0.11.tar.gz) = 174d2f04efb8e91faaf4dbf6f8a83ba86b25b988ead203adfcca52dbcd3db9f83b83906376aa86bc945e4727d7df4183a659059e346c103ed5cf98f2e0d021b3
 Size (stix-1.2.0.11.tar.gz) = 218758 bytes

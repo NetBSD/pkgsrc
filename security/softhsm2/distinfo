@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/03/07 19:49:12 he Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:45 nia Exp $
 
-SHA1 (softhsm-2.6.1.tar.gz) = c6fd316df6366960b8c8cda92408d7e02c3fb434
 RMD160 (softhsm-2.6.1.tar.gz) = 73b116b9513d1afcd241431e967a582de1cb737f
 SHA512 (softhsm-2.6.1.tar.gz) = e77137096ff2ac2f5396971efbaa2007188855a8f723cb511182c6c5e5a353b3f98297442758e77a18c3a378c0ca3fce8abe090977f0f4f8d526de204fd523fb
 Size (softhsm-2.6.1.tar.gz) = 1066766 bytes

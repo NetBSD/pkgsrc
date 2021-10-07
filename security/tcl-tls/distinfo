@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/09/02 18:37:26 bsiegert Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:54:47 nia Exp $
 
-SHA1 (tcltls-1.7.16.tar.gz) = 24f6022bc36bb8a0fe8215d82838d3599200f048
 RMD160 (tcltls-1.7.16.tar.gz) = 136e6c78c565eb3208a6fe2e45973c4b232765ce
 SHA512 (tcltls-1.7.16.tar.gz) = f63b885dbfaec5d9ae811c126bd0ff253787effd7b053282b9ee566e9fae54df940bc058a6c3dd22e31fcb9ec6ae1b286aa40efd69c3f01f5a3014aada730ab1
 Size (tcltls-1.7.16.tar.gz) = 166439 bytes

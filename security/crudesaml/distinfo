@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/06/08 07:38:18 manu Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:53:45 nia Exp $
 
-SHA1 (crudesaml-1.10.tar.gz) = 9e9c187647384db2730bec2cad975f778558d1ee
 RMD160 (crudesaml-1.10.tar.gz) = 1c99a8d49993ff5da47ba0ef615656825a829104
 SHA512 (crudesaml-1.10.tar.gz) = d57a450e00908d91563b26ac847de617a973083d5a66756bd20ffd3aaccd997ecfd2c48dd72425ea0d60014f0681357ce00b0715cd7bb7a4aeecf1a5e869d3c7
 Size (crudesaml-1.10.tar.gz) = 187238 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/09/19 16:51:27 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:54:37 nia Exp $
 
-SHA1 (metasploit-concern-4.0.3.gem) = 7c34e74cc232599e3fe157d4e19c388b5d2c25d4
 RMD160 (metasploit-concern-4.0.3.gem) = 806a440a088828e62f7b09cefb2de9f42e379cb8
 SHA512 (metasploit-concern-4.0.3.gem) = 7170657cde24f1bf86d8872802b8c6e81d99abd18d563353fa0d47858c98e38c86d7ddc5670d9164d6cf4d47ed35da2cc4b6f83d328fb5b464d1038dbea849b3
 Size (metasploit-concern-4.0.3.gem) = 18944 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/09/19 17:15:42 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:54:40 nia Exp $
 
-SHA1 (rex-encoder-0.1.6.gem) = 6696541a17453628d3d1380e96079d36236de242
 RMD160 (rex-encoder-0.1.6.gem) = 8c63d16d67cea076b3075254438d6d629a2a2138
 SHA512 (rex-encoder-0.1.6.gem) = afdbf7f3db54b391650f5fe39e56da0907a5dc208235bfefddde24a9a2f1624c95b6565f9fcc2cfb6dcfeed8d3e8480d8c8866f1413f229c25d870dc2ecd1ce0
 Size (rex-encoder-0.1.6.gem) = 40960 bytes

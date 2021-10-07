@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.77 2021/08/26 06:31:33 adam Exp $
+$NetBSD: distinfo,v 1.78 2021/10/07 14:54:03 nia Exp $
 
-SHA1 (krb5-1.18.4.tar.gz) = 6111b1dd8794299d6a13799b1377ec2a045a315c
 RMD160 (krb5-1.18.4.tar.gz) = 7428c4c12efb95947bec7934f4bf084c1c8e4e86
 SHA512 (krb5-1.18.4.tar.gz) = 7d9f1e937ba122f5af1340b5025420903a4cc3692bdf4093289921ad09b3fd02c8684b65a783d4b397ba15c4cf29c728cbf24a6405c5fff72fb882137703539e
 Size (krb5-1.18.4.tar.gz) = 8716664 bytes

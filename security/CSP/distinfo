@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2018/04/07 10:53:34 triaxx Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:53:40 nia Exp $
 
-SHA1 (CSP-0.34.tar.gz) = 13440461ffc119421a6a97f62d94d35a38fde2e7
 RMD160 (CSP-0.34.tar.gz) = 68a7e3ad1ccac9628aaffd5331e2877f29e2cb38
 SHA512 (CSP-0.34.tar.gz) = 3984a6b6acfca5430ce0b135f5d0e9c298165e9aebd9d6fe5b847926dcb7d2d7164331983bd651ae426d711db8f6ce9e3667254352198f7b52ccd03290f17785
 Size (CSP-0.34.tar.gz) = 18110 bytes
-SHA1 (cspguide.pdf) = f527519553d7c64f625210a74435c413cd470838
 RMD160 (cspguide.pdf) = d4727fb6e4e44ad8c45d0749374843b38a340af9
 SHA512 (cspguide.pdf) = 2927a3d6b02e19e1acbd2230b4577d71151557cac22c59a7eebfab0d726c4deaf2826fe920065197bcd1271d37223a70ffd59fe3c3e37b93a6d8c799b5250b33
 Size (cspguide.pdf) = 152084 bytes

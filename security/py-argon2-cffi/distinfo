@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/12 18:17:21 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:25 nia Exp $
 
-SHA1 (argon2-cffi-20.1.0.tar.gz) = c79943104960db3024346731d5153392c187c0d7
 RMD160 (argon2-cffi-20.1.0.tar.gz) = e92e6f3962052f3c9abbaa93b7192a18c7bc4b0c
 SHA512 (argon2-cffi-20.1.0.tar.gz) = d1d798e3e51ed67c4f523a66081fea99479ee986b5cfc36b250954e757b9846625681445447f9347519d9988f8a2ace2e3c8ce5817c5c6b4767819cf56ee0af2
 Size (argon2-cffi-20.1.0.tar.gz) = 1814415 bytes

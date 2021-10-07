@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/02/16 19:03:46 gdt Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:54:19 nia Exp $
 
-SHA1 (pcsc-lite-1.9.1.tar.bz2) = 7f3a12ecba3e1977ac1191b46f8ba8f433b85e49
 RMD160 (pcsc-lite-1.9.1.tar.bz2) = 154dac588182ed2cc0460439d5010191e46cb08c
 SHA512 (pcsc-lite-1.9.1.tar.bz2) = 4f59ea6acb5b258092018f10609987e12b8e601049e6ffed4b4b82abd3c4b35c38a60e1cda28fdc884202e694d1bc3a3b5d930c5b1e9c1b9c309bd17ef463e63
 Size (pcsc-lite-1.9.1.tar.bz2) = 763525 bytes

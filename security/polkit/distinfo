@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/07/05 13:22:39 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:54:22 nia Exp $
 
-SHA1 (polkit-0.119.tar.gz) = 0794825e31a0a6e4859f93596d3f475b9d08f9e1
 RMD160 (polkit-0.119.tar.gz) = 52d66bd2b80e3a1ca52495fd09e307adbd2360a0
 SHA512 (polkit-0.119.tar.gz) = 0260fb15da1c4c1f429e8223260981e64e297f1be8ced42f6910f09ea6581b8205aca06c9c601eb4a128acba2f468de0223118f96862ba769f95721894cf1578
 Size (polkit-0.119.tar.gz) = 1387409 bytes

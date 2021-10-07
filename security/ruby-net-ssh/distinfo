@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/06/10 14:51:07 taca Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:54:38 nia Exp $
 
-SHA1 (net-ssh-6.1.0.gem) = f35fbf25acb72aacd62aebfcabbf810020a51ae8
 RMD160 (net-ssh-6.1.0.gem) = 5c9c97750b7b1860b748698b23796ee4d70b380a
 SHA512 (net-ssh-6.1.0.gem) = cd09fccb584f268aa52fff8a9ab52cec96b3e8be7f90c75c53f9e37492aabd15256fd3012128684954f6dbe912d2cfcf9eaeaeba93fdeb480bf6da6c08ec90f1
 Size (net-ssh-6.1.0.gem) = 134656 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2018/12/16 22:19:25 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:54:49 nia Exp $
 
-SHA1 (xml-security-c-2.0.2.tar.gz) = 281efe6701397036af420244be26815589cec982
 RMD160 (xml-security-c-2.0.2.tar.gz) = dec0d113943e48495cc4a5a33a1d892f793a08f0
 SHA512 (xml-security-c-2.0.2.tar.gz) = bebadee2daf27181f5bcc955a909397976e8fd2e67f5e546f5adbede0ca790647cbec9181b0b609da59d525ff3baa9f899af2a3d815bc7a2f3a57bd8b30c011b
 Size (xml-security-c-2.0.2.tar.gz) = 904933 bytes

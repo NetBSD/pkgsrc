@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:08 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:40 nia Exp $
 
-SHA1 (ruby-rc4-0.1.5.gem) = 9e4a9510c4ed86a5a8f28c21a90172b17b061116
 RMD160 (ruby-rc4-0.1.5.gem) = bcb373f65b0eeb3976b9e236d13510a3dfc34813
 SHA512 (ruby-rc4-0.1.5.gem) = db0fd372a3534f0da6bd1c53c42f12691a54dcc36324819c14d1288aa8ba0fa99a04a3ce739035c11007f47d781f147bc0c0b9746e59bf2c8ed0e5830f2df6f5
 Size (ruby-rc4-0.1.5.gem) = 7168 bytes
