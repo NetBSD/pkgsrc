@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/08/24 08:48:58 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:28:56 nia Exp $
 
-SHA1 (TECkit-2.5.10.tar.gz) = 66c5c12bd47229894f02b7a7977d2fc18e311a27
 RMD160 (TECkit-2.5.10.tar.gz) = 39ee696719cabc7caf80a9f65690661af8fd5739
 SHA512 (TECkit-2.5.10.tar.gz) = fb05cb73988c8cc695832bbf174d83c0d797dbda96c9d47ef93e0cb21cf356740a0566f89a3ea20fefb52fda0d572d219c95b5c8e1801e6a9a59e520b4e90ff1
 Size (TECkit-2.5.10.tar.gz) = 3025694 bytes
