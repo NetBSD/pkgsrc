@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/03/24 08:41:28 abs Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:47:53 nia Exp $
 
-SHA1 (yEd-3.17.zip) = af7b17dfd5a59c17417eaf27de06f5bf31a582c4
 RMD160 (yEd-3.17.zip) = 5d2a6290ad4cc47641af261116beba48d0f6eaa6
 SHA512 (yEd-3.17.zip) = 503348f249915a08dcfcf19e4cf48ecce2df6ca7c168beb2b6bf1031f698b609ccbbd0524ea8e8459ae48e51a9bc36e02c1bd6fb5d1bf2bddb4e164cb4ab3cc3
 Size (yEd-3.17.zip) = 34762028 bytes

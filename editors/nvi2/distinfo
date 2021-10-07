@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/11/24 18:27:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:47:44 nia Exp $
 
-SHA1 (nvi2-2.2.0.tar.gz) = 00606c4ffaa2d3cb7b69ab73722114c59e2d811b
 RMD160 (nvi2-2.2.0.tar.gz) = e304f500deea1ba54cde58a086a3b1702b3fe423
 SHA512 (nvi2-2.2.0.tar.gz) = 46251f8b9b1e663e38cb7386a9497b8f9e96e9364ee04f89e73081b2351c7ff51b41a272ab7aaffc37b9485781600218e1529d9436fa1b5ad5505e297f63c9eb
 Size (nvi2-2.2.0.tar.gz) = 439545 bytes

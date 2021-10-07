@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/09/27 21:35:36 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:47:46 nia Exp $
 
-SHA1 (Padre-Plugin-Kate-0.06.tar.gz) = 3f277ef56517f2699d4d5366bffd94ed7317bab2
 RMD160 (Padre-Plugin-Kate-0.06.tar.gz) = 24bdc4b5b971bea47df0f91c99e98b4af9b6bcf7
 SHA512 (Padre-Plugin-Kate-0.06.tar.gz) = 58467f9e1446ab54682353879f8011342afcaefb6e220d5dfb88fcde42624f3b3c19aabbba1a3300c895245ec41d10ce3ff8f03ffdbb342d01dc9bcd95ccbf1d
 Size (Padre-Plugin-Kate-0.06.tar.gz) = 13402 bytes

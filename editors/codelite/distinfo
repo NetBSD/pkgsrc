@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/03/06 16:08:32 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:47:36 nia Exp $
 
-SHA1 (codelite-15.0.tar.gz) = 459d03880a2011bbd37e85bc2ade31aea24c2872
 RMD160 (codelite-15.0.tar.gz) = 0ba366f639ac8b951a8aead891ffe2255a4c21bc
 SHA512 (codelite-15.0.tar.gz) = fd5777cdb57d184407cff4503d255b4bcdf14041420ff9daf7043f710c159d6bdb47d467e92948f96ce4eb15eef40b782feec7195f5f66845f3c82d911b3f0b8
 Size (codelite-15.0.tar.gz) = 104970727 bytes

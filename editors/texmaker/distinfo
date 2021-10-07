@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/12/05 11:12:02 nros Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:47:50 nia Exp $
 
-SHA1 (texmaker-5.0.4.tar.bz2) = 2bdf4d801ec2adb7b691e601974048ea8c8c5df8
 RMD160 (texmaker-5.0.4.tar.bz2) = 24d99a7e15f6a084bf67c117a823ae59e28532a5
 SHA512 (texmaker-5.0.4.tar.bz2) = 34ff5773358c2fffbc9e7e61028cd74eef231152e3483531b66cb0d907dd8f70a4e8b6d6ea09b0b11387b592f6d1676ba8a1e737b26c86a45b16882e53edff1f
 Size (texmaker-5.0.4.tar.bz2) = 15812468 bytes

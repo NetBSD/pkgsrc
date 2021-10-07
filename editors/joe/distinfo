@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2018/05/08 08:31:29 wen Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 13:47:41 nia Exp $
 
-SHA1 (joe-4.6.tar.gz) = da7712333f676cfb5ae9f3565fd2225c5a2185ca
 RMD160 (joe-4.6.tar.gz) = cd5a8eff82b7e8043f1a5fdbc875ec37b4de5f5a
 SHA512 (joe-4.6.tar.gz) = 3dd64a994fb3d352a12bf027ef16d57d14ac2577fd63fb6b6e25cae46052befaa7c15dc029bff2f8c3275df90f0343bd46313601055d97277ea4540e109fbe82
 Size (joe-4.6.tar.gz) = 1895046 bytes

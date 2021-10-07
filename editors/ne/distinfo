@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/08/07 12:20:17 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:47:44 nia Exp $
 
-SHA1 (ne-3.18.tar.gz) = 365603be30905aa132a5c2563a8f3024e06e8902
 RMD160 (ne-3.18.tar.gz) = 4f856bb07e86657b7fa7a40e1aba1499f5ff0fa7
 SHA512 (ne-3.18.tar.gz) = 56509124c4d4836a367564e086b02bb453cf6a12e236631cf9f1781672b832f2c6204e4886cacaed0c9d0a60c34ba0920fc87ba578b9deaf0b63443396cc2a6b
 Size (ne-3.18.tar.gz) = 665893 bytes

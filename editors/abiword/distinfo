@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.82 2021/07/13 13:24:43 nia Exp $
+$NetBSD: distinfo,v 1.83 2021/10/07 13:47:35 nia Exp $
 
-SHA1 (abiword-3.0.5.tar.gz) = d6999f95eb270604c4c47966545a7a2d667836aa
 RMD160 (abiword-3.0.5.tar.gz) = 69cd7b59e6880c8e205d99165227879284be9f09
 SHA512 (abiword-3.0.5.tar.gz) = a2484268901ff47307c9d1f1928622e364f1006f22ce38257c585144df9411dfe3c2dea28c1f1f50a6e545e8cc579cce34117a89dfa771e20312e3ea1a9989d6
 Size (abiword-3.0.5.tar.gz) = 11084159 bytes

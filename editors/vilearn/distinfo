@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/03/30 09:22:48 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:47:51 nia Exp $
 
-SHA1 (vilearn-1.0.shar.Z) = 08aed424df46f30c93c604f3dc79d2affe1ec70e
 RMD160 (vilearn-1.0.shar.Z) = 081d6c4055d7de7e6739e217501ca1fa7054e2fc
 SHA512 (vilearn-1.0.shar.Z) = 55456ebcb37ab2edfad1643626cd803e77e39183d497ac7093f27095e0c859d470b2020c23909eff2c98701ba49884874c9c94258de098307d0fe746b463b9f2
 Size (vilearn-1.0.shar.Z) = 25787 bytes
