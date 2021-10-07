@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/02/01 22:16:43 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:51 nia Exp $
 
-SHA1 (tex-gothic-49869/gothic.doc.tar.xz) = b6dc2eb1d1520db8b7763fd14cfd32be41e0c6de
 RMD160 (tex-gothic-49869/gothic.doc.tar.xz) = 2580881b0436192975eec2097ee9b4e00ea356e7
 SHA512 (tex-gothic-49869/gothic.doc.tar.xz) = b5edfd7f2dfe64c72d629a6a69c11bb53bee222bd8f0051a99a0e4c8f7e7f1a9b2ca1a5198fe56e4976310281b8cf388020c1f4b73515d973a1ac7dc1830993e
 Size (tex-gothic-49869/gothic.doc.tar.xz) = 193532 bytes

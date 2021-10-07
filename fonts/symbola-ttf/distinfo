@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/07/24 10:16:47 leot Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:13 nia Exp $
 
-SHA1 (symbola-ttf-9.17/Symbola.zip) = 625f27244161644d3ba154fef83942a376a8beaf
 RMD160 (symbola-ttf-9.17/Symbola.zip) = 5c338b74d3399b4d88ab42426a703d0ce06e32c4
 SHA512 (symbola-ttf-9.17/Symbola.zip) = 29c2141ba7d5be96b4d2faa52e4d2efbd1ff6a8368fdeae8986a4a3de50522a813c46efd462556b5b6c10bb97777ca068564b9dcdfd7961c485ece5fda18e04c
 Size (symbola-ttf-9.17/Symbola.zip) = 4122777 bytes

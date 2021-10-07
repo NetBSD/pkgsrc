@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2019/07/29 08:43:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:04:03 nia Exp $
 
-SHA1 (inconsolata-ttf-2.001/Inconsolata-Bold.ttf) = 3de268caaee19809b2b24589ca5c65ee027397e0
 RMD160 (inconsolata-ttf-2.001/Inconsolata-Bold.ttf) = b7a8cac3ebbee9a63193146835cc3602dbae0969
 SHA512 (inconsolata-ttf-2.001/Inconsolata-Bold.ttf) = 4cecd19b4a0fdefdafd7649f71f37bb3c77afe6be69edd16231fc5081b9b4c6ec57a00bfecebfcec5e8d2d27cc4ce7749ca1bdefdd31506f6e03f4f1ff474abc
 Size (inconsolata-ttf-2.001/Inconsolata-Bold.ttf) = 108360 bytes
-SHA1 (inconsolata-ttf-2.001/Inconsolata-Regular.ttf) = 01e452f6f6004868daf0c4904ea31b92fe8e934c
 RMD160 (inconsolata-ttf-2.001/Inconsolata-Regular.ttf) = 416634cc5c971b446c10b004a12c9426017b218b
 SHA512 (inconsolata-ttf-2.001/Inconsolata-Regular.ttf) = 66fee61dc4c0331ef383b9d5bdf5e52ef0503e1a8fe60e23a4749110c744a32335e5421b8ca55d1a65e13a728fd464c05bb7ba65cbc82269b2fa678fc21eaba3
 Size (inconsolata-ttf-2.001/Inconsolata-Regular.ttf) = 95960 bytes

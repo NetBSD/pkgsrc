@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/06/06 11:09:50 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:05:00 nia Exp $
 
-SHA1 (luaotfload.r59293.tar.xz) = dfef07817a1bbe3d1992b4e7da5d7fd796e256c3
 RMD160 (luaotfload.r59293.tar.xz) = e5ccf4881b1d680b70373851fe40e6ed41257000
 SHA512 (luaotfload.r59293.tar.xz) = 821a5ea31a6131bea129929abbcc114959e1a32325a42f1b22fc6d37f7213d1dbb2f20cefcdcce38089d82cc366328b7dd80cad192a374694a925506073de8dc
 Size (luaotfload.r59293.tar.xz) = 597604 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/05/03 12:45:53 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:24 nia Exp $
 
-SHA1 (tex-bookhands-46480/bookhands.doc.tar.xz) = 87222be960e038e18e473c64bef1e1f9ebd37f4d
 RMD160 (tex-bookhands-46480/bookhands.doc.tar.xz) = 93cb3c8d91dad6f8b3ee7ec7e12cdadcabd67024
 SHA512 (tex-bookhands-46480/bookhands.doc.tar.xz) = ef5466279149001d0fd57f545b57a21df8fef5e8cbbfbcd8477d528acf6ce1f2e00dcdd206084781bd1fc04df20783d87d212ef4c13396e9e05e4b2c9c8cf95c
 Size (tex-bookhands-46480/bookhands.doc.tar.xz) = 1610252 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/08/11 04:21:42 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:48 nia Exp $
 
-SHA1 (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = b693e984c79531e73fe69b239fa2ea74cd4828f4
 RMD160 (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 9298ca684fcdee9c2743142dc0827e6cdd5e267a
 SHA512 (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 074d5a42ddc427f240a956aca94d95b065813206b2ba66778de032665b924d02065cefa17dce14671b31bb8e455215bc34cdae29ee09a2db8b6e330fad3e7e1a
 Size (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 1247116 bytes

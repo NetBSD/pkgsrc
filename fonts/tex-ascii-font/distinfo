@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:04:18 nia Exp $
 
-SHA1 (tex-ascii-font-29989/ascii-font.tar.xz) = 59e2fa489e9ba8a4a5b1507a58b136a99ffbd431
 RMD160 (tex-ascii-font-29989/ascii-font.tar.xz) = 78e2b7f2d01a8af2193fee286cf7437ae13ba559
 SHA512 (tex-ascii-font-29989/ascii-font.tar.xz) = 0257b5a76871d3bd188777210b8c5612919c83d826c5137ccdb6f7ffac5e963272bdc0e262321b4028bf4c2b849ec77a1717ad91b90ab20fc11af84c07407486
 Size (tex-ascii-font-29989/ascii-font.tar.xz) = 48984 bytes

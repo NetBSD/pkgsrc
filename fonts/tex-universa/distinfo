@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:21 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:22 nia Exp $
 
-SHA1 (universa.r51984.tar.xz) = 054bf3402a74dcd19db7df0e816cb700cd765d77
 RMD160 (universa.r51984.tar.xz) = 72a58622b633a826c4cdd8b6cd828070c85acd1d
 SHA512 (universa.r51984.tar.xz) = f21f9bbc0c4e730cd1b115a5dbab22df9519d4a364045e292eae6b73741dabe0117c53759b7db7696c88241800970801335f7537e19d448fda6f72569c4eba50
 Size (universa.r51984.tar.xz) = 16744 bytes

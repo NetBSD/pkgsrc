@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/05/13 11:56:58 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:14 nia Exp $
 
-SHA1 (tex-Asana-Math-50999/Asana-Math.doc.tar.xz) = b5bc3278cd204c07f74f80678bc9c6bfc25238d7
 RMD160 (tex-Asana-Math-50999/Asana-Math.doc.tar.xz) = 24daff9c487e00745b03f3426f30bffc574e3981
 SHA512 (tex-Asana-Math-50999/Asana-Math.doc.tar.xz) = 69a6615dda5f7e47fdff1b0b1afc4211f749a929b81f19a554246033e6f5f4a482c3c03a6903b64d83c4daeccb70983dacb35467047a467314637e65a19c917c
 Size (tex-Asana-Math-50999/Asana-Math.doc.tar.xz) = 3748 bytes

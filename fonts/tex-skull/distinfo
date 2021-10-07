@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:20 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:17 nia Exp $
 
-SHA1 (skull.r51907.tar.xz) = b409237a73a12babfb44daf42d8b76a6c66d6f21
 RMD160 (skull.r51907.tar.xz) = 582c7db288314ef452e813737cbefabceca0f3c4
 SHA512 (skull.r51907.tar.xz) = 261ba31f30fa26e25f82dfe60ff7600c71db51f1dee68a5c094fa8a746995ee9031e41c0f24a4e83aec52c603cbea71a0773cae63481f167b81abdfb0ac3f782
 Size (skull.r51907.tar.xz) = 1752 bytes

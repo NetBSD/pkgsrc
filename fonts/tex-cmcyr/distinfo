@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 03:57:27 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:31 nia Exp $
 
-SHA1 (tex-cmcyr-39273/cmcyr.tar.xz) = 60d82f82914c1da7d2f59d5653ded1bc8519ac9d
 RMD160 (tex-cmcyr-39273/cmcyr.tar.xz) = c6024a0fd2ac9cb15dc061a8826d10450f77ed1d
 SHA512 (tex-cmcyr-39273/cmcyr.tar.xz) = a7fa354aa9e876b9366a9b66cd32ccd58f70297a6460f32c6ba6b1c9c19b2636e387d9e15dec81260ce2a13f07468e1a03eaee3dc9178c2626f9713420155b71
 Size (tex-cmcyr-39273/cmcyr.tar.xz) = 901860 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/06/03 06:26:18 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:34 nia Exp $
 
-SHA1 (concrete.r57963.tar.xz) = f7dbc9c4487c9df3298ba06d8dfeeca3696f1d58
 RMD160 (concrete.r57963.tar.xz) = 781f8544bab3951caa1325a1155ec5cd24fac4d0
 SHA512 (concrete.r57963.tar.xz) = 9bf9621c120f831110f71cf8d53ee5d4d42869da8c9b2c653125dd6cb6eb9b8d264116645753ee34dce1076204e008d9e74bd0596b46ffac596cc7726b0c75a9
 Size (concrete.r57963.tar.xz) = 9556 bytes

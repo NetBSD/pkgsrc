@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/05 04:03:46 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:05:00 nia Exp $
 
-SHA1 (lm.r58637.tar.xz) = f2ee23d8eebce67e04887209fe1db5477a19e21c
 RMD160 (lm.r58637.tar.xz) = 1f4aa7fbfe54520518a4aac34cca52169b953319
 SHA512 (lm.r58637.tar.xz) = d758e51742787410416bfa4ea4e32951484435b977c9ea3bc7ce51d919ec4d28b2ade387d3b1129f034aeb41db481bf72729fca5d24177e65d2719200798febb
 Size (lm.r58637.tar.xz) = 11944788 bytes

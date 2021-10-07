@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/01/14 11:47:11 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:04:12 nia Exp $
 
-SHA1 (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = bb9ccedc4e7b7280f7dff919efa8b98f93e83807
 RMD160 (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 515d15de814829985b86ca25dcde9f4d07422a6f
 SHA512 (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 877b47b203d6f8ee71e60ba612a25b5a1b707205b0a4aaf02cfe2c806466acc6d393c93ad2fd6e76d761150b2594fcd6abce7b3c0415b5b915b06c6c143b6b53
 Size (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 6735736 bytes
