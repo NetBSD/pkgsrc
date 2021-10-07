@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.42 2021/06/27 08:08:59 tnn Exp $
+$NetBSD: distinfo,v 1.43 2021/10/07 14:17:21 nia Exp $
 
-SHA1 (gnuradio-3.9.2.0.tar.gz) = 6cb92288d6d5f7e758010b259ebc230849cd4436
 RMD160 (gnuradio-3.9.2.0.tar.gz) = b42446a4459a2532acf60455d42610e37d9499b1
 SHA512 (gnuradio-3.9.2.0.tar.gz) = 4a2807d6713fff10906354553ef5810b81ef4116573fdf15b122e8fc18373c56e1685b8592a8f0f08c0524c4983f3d7d4774bdada98dff0990d028f71cbd7898
 Size (gnuradio-3.9.2.0.tar.gz) = 4219714 bytes
