@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2019/03/25 22:47:02 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:05:57 nia Exp $
 
-SHA1 (cabextract-1.9.1.tar.gz) = a939b03822cf5a8fcc1677077915416f42a12784
 RMD160 (cabextract-1.9.1.tar.gz) = e102e94846f7fe21ad5fbde3e2be542caba58c36
 SHA512 (cabextract-1.9.1.tar.gz) = c354a4b20a222b40813f01baf8311c9a76611da427f9f44e977a3fd09508e24a18b486e3eef889a9debdca459f1b0c28d5d25429ccd555d3a2e4ff92d91cec14
 Size (cabextract-1.9.1.tar.gz) = 469369 bytes

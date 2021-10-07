@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/11/25 14:59:24 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:05:55 nia Exp $
 
-SHA1 (afio-2.5.2.tar.gz) = f811295db1381212fa54f583840982f28b64eac2
 RMD160 (afio-2.5.2.tar.gz) = a0da5fafb6cee3fac054bbbb74eacc8e24cd7c7f
 SHA512 (afio-2.5.2.tar.gz) = e0fb9b2d31bb912d7f30d8dd992cffcc99a84424c7386082abb8da82a1911b852c5a80e8135f0b6266113519f582dba45dc3c87c8f3b822a2daa14a1ae1d9944
 Size (afio-2.5.2.tar.gz) = 194030 bytes

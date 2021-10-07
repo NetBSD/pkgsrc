@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2017/03/23 17:06:45 joerg Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:05:57 nia Exp $
 
-SHA1 (fastjar-0.98.tar.gz) = c240a9e2115aad486329360d9166514261149af2
 RMD160 (fastjar-0.98.tar.gz) = 593ed2dfcc02599a3540028a0f0b5c77d6be7071
 SHA512 (fastjar-0.98.tar.gz) = c0f9fca7b58d6acd00b90a5184dbde9ba3ffc5bf4d69512743e450649a272baf1f6af98b15d79d2b53990eaf84ef402c986035e6b615a19e35ed424348143903
 Size (fastjar-0.98.tar.gz) = 717984 bytes

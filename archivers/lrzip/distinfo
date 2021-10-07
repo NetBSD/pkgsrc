@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/04/05 17:34:38 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:06:01 nia Exp $
 
-SHA1 (lrzip-0.631.tar.bz2) = 49143bf5433270133ac9adff429e5d6c248e9019
 RMD160 (lrzip-0.631.tar.bz2) = c88cd1c48ecc390b0fe1a5892cdb0d87ab81f3a3
 SHA512 (lrzip-0.631.tar.bz2) = 6420cd465ccd4581066408482335a82089f84f0aca1b05249b9fc6039b7e67df94457a7c871859e363206df3a40e93cfde576388785113f6c99b31d34c00a307
 Size (lrzip-0.631.tar.bz2) = 522158 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:56:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:06:07 nia Exp $
 
-SHA1 (ppmdi1.rar) = 8d9780f78e5131f0f21ba0519d13f6d92a8eec82
 RMD160 (ppmdi1.rar) = 16fd62db9c17e6c65b4134ed322a2fce8c1f59dc
 SHA512 (ppmdi1.rar) = 29162e6f415c4fb6fc5547c0c35a015f15d69975ea07aeeda64cdd1354a0c3a56ed0d4289797fa91933476fdbad7415a85efbfc813c6b6a074c82d6426f4bc85
 Size (ppmdi1.rar) = 72270 bytes

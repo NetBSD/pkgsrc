@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/08/30 01:14:59 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:05:55 nia Exp $
 
-SHA1 (R/zip_2.2.0.tar.gz) = 894e63bc681826dad2a1ebc0a89b55e5cf70a683
 RMD160 (R/zip_2.2.0.tar.gz) = 5db05a0e804bdb03ed7997b9b54ae91503e448f7
 SHA512 (R/zip_2.2.0.tar.gz) = c32ba46ece47502a5fc087db49be7574c9ae3f558d39b6fb20d37c9c2a0bd00452e99b43cd6cadd087b93fc3008e53f7ea3b59ba96f8b40f5dff6b36b3749fc6
 Size (R/zip_2.2.0.tar.gz) = 114391 bytes

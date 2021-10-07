@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/09/06 19:21:38 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:06:05 nia Exp $
 
-SHA1 (Compress-Bzip2-2.28.tar.gz) = 46144c6c326f7c3041fbe94136c4cc2adc88c08b
 RMD160 (Compress-Bzip2-2.28.tar.gz) = ea3a3bbf179a0cd47abe460539448c154a2d6ec6
 SHA512 (Compress-Bzip2-2.28.tar.gz) = 3b00eab4cec4ec62c2b590dc63e92b4f167407edcee3bdb6581d570bc82c47b6152eb0f21a8b748ac49e87c89a1b99358785609e8f832da16107b6cdc4d9e852
 Size (Compress-Bzip2-2.28.tar.gz) = 895637 bytes
