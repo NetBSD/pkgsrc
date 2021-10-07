@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/02 15:09:01 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:29:02 nia Exp $
 
-SHA1 (libzmf-0.0.2.tar.xz) = c0dc491800f4aa24960d20fa38b9f84df1c15e07
 RMD160 (libzmf-0.0.2.tar.xz) = b0be3dbe0f6bf4565c1668a236850601616f625f
 SHA512 (libzmf-0.0.2.tar.xz) = ad4a8e65e85434e43caa239ff2a3f358c6db6411235c4bb73d8d2aa1527a4f411433370706db391f8f8110a36759249ee19b27be75bae5f361c491006d1b9aa2
 Size (libzmf-0.0.2.tar.xz) = 320952 bytes

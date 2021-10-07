@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/10/05 11:28:32 wiz Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:29:09 nia Exp $
 
-SHA1 (qrencode-4.1.1.tar.bz2) = 497097254017dd263a60339028507d0b5faedeb0
 RMD160 (qrencode-4.1.1.tar.bz2) = ad12dd508b9e5d578d27f9cd9bedb1b3799c57d0
 SHA512 (qrencode-4.1.1.tar.bz2) = 981b3242c213e1b40ac88711912dd8c27ea11f3437d1a04b6b226499a6e991a8f0b3b10f818bcc104812192a1dac4ce05f16ecd847a50cb03d4859b84bad89b8
 Size (qrencode-4.1.1.tar.bz2) = 461562 bytes

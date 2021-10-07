@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/05/23 00:37:03 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:29:05 nia Exp $
 
-SHA1 (MIME-Base32-1.303.tar.gz) = 7063303da6c32d95ae636fce9a394b78c249f02d
 RMD160 (MIME-Base32-1.303.tar.gz) = c4084eb8eb8003c7c348ba74918a5f1fbada0a72
 SHA512 (MIME-Base32-1.303.tar.gz) = 48c2541d08976fba154816d4f803cc20d8d51f8a7e4084cd85e23f7559868611adcce133f7dd8728cb21bbec67c325a99e68e36149b4ae3bfae97a6e57f4b806
 Size (MIME-Base32-1.303.tar.gz) = 14121 bytes

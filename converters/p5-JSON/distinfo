@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/04/26 14:36:28 wiz Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 13:29:04 nia Exp $
 
-SHA1 (JSON-4.03.tar.gz) = 99e9ebead1e195cb7fe0d755325c1a36651a75ea
 RMD160 (JSON-4.03.tar.gz) = 0d690c5741804d41b5b45c4e247c0109be5db639
 SHA512 (JSON-4.03.tar.gz) = 5910818d3a866a50ea655da7d9ae617f21d3bc7e8511d35cff96ec4ea04fe553638c7843422cf2d00c37835a6d9f931b1defd224f57c40a3e52d7cef4684ef8c
 Size (JSON-4.03.tar.gz) = 91373 bytes
