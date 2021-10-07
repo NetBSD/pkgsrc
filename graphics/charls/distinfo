@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/14 12:55:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:04 nia Exp $
 
-SHA1 (charls-2.2.0.tar.gz) = 7824c230d5b8a1de33f1c9c2177b1640c26d74ef
 RMD160 (charls-2.2.0.tar.gz) = 2150d6ece8a61ed8cc62aaf665d4cd5a4ab47a2d
 SHA512 (charls-2.2.0.tar.gz) = 387293f89bc30b50a59de7d5af23d0047bcdba89bd48cdb81e0437adabbfc9e19e135749129334a9db5c3ae5ad0c75b489e6e6545ee0c8134fc432153413793e
 Size (charls-2.2.0.tar.gz) = 9827594 bytes

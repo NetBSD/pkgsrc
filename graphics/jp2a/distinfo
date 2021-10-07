@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/12/29 21:31:34 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:12:22 nia Exp $
 
-SHA1 (jp2a-1.0.7.tar.gz) = 6ce933828f035b6a721a3e66f6fa84d3a363d2ca
 RMD160 (jp2a-1.0.7.tar.gz) = a89ba674f7234620c30456ea3da6a6cc7a696ad9
 SHA512 (jp2a-1.0.7.tar.gz) = 28bde9ee2c1a67d548275c36c3f958e3760e94f2dc03ab7cefeccf8bc0ac19978c46fddefd82b460554d3fefb092386426253114766de48ef32444e7cf20b44a
 Size (jp2a-1.0.7.tar.gz) = 113008 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2020/06/01 00:14:21 gdt Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:12:14 nia Exp $
 
-SHA1 (ufraw-0.22.tar.gz) = 7fc33b66f4d6ecc277e1a5589c8e5db24568949c
 RMD160 (ufraw-0.22.tar.gz) = 2588acde88dda8c30310b967e7185862072c124c
 SHA512 (ufraw-0.22.tar.gz) = a42eff5052c18afec90245cf97ceeade78e3f288186cf697ac4abf2e8290d4081db8ac4de3ae47b3774f30a6cb4cbda392099e6fd2125fe751abb40d9b065ad2
 Size (ufraw-0.22.tar.gz) = 1103554 bytes

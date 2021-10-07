@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:12:50 nia Exp $
 
-SHA1 (qvplay-0.95.tar.gz) = 3b185c456b14da355ca53418276773617a505d0f
 RMD160 (qvplay-0.95.tar.gz) = a4a42e004f7edd2c786f6f5174630945decf3db9
 SHA512 (qvplay-0.95.tar.gz) = bb7c184d1a2e7a3effc7a31d0c9405b5baa21f3e9ac5f4025c02aac89ce98475562b28ee1d817dd7620d4feaac882c1a41026de93e41e93c8b1932685914b5a2
 Size (qvplay-0.95.tar.gz) = 112802 bytes

@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/10/06 21:10:24 adam Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:12:36 nia Exp $
 
-SHA1 (opencv-3.4.15.tar.gz) = 2baab7f24f48f2dd2f4c72d47195da00f2ad317a
 RMD160 (opencv-3.4.15.tar.gz) = e7f75f9f9f6102ab7b88d04be4e00a0148eb623c
 SHA512 (opencv-3.4.15.tar.gz) = 775149e56f0aa94d53eb024404866380d97ce423ef1c8343ee8f12c1377e454ae182b2528e86949b5f7250e551d464bd1a5de2e2d9f0d0e1dd3dc188a1db790d
 Size (opencv-3.4.15.tar.gz) = 87661484 bytes
-SHA1 (opencv_contrib-3.4.15.tar.gz) = 146e72f072e660809d3659e527c7b1e3c0c1daa9
 RMD160 (opencv_contrib-3.4.15.tar.gz) = 39940294ebf80accb32698acd2417c988049e464
 SHA512 (opencv_contrib-3.4.15.tar.gz) = 639f5f869d68014fcc5041f5fe890c98635610d8b26c9964721e2fbe74ce8a12aef8f305364ff024fe0086bf2e7252c4fdd00a5de08854fdcd285c0f4916125a
 Size (opencv_contrib-3.4.15.tar.gz) = 55214581 bytes

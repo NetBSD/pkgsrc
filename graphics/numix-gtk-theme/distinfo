@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/11 13:37:15 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:12:35 nia Exp $
 
-SHA1 (numix-gtk-theme-2.6.7.tar.gz) = 89be7b06b6de5f5db0d4fbb1e7852ed8c4e8aa2e
 RMD160 (numix-gtk-theme-2.6.7.tar.gz) = 2fd25d15e34952c7b253cd93b45e8f14aca3c668
 SHA512 (numix-gtk-theme-2.6.7.tar.gz) = a034644a08173e70de496b88b40c8749d3c3dc988da0c09a03eca77a5263704b001114678e0492988831b1664593d4054f2d7c0d90d95f5b05dcd05914577a03
 Size (numix-gtk-theme-2.6.7.tar.gz) = 156607 bytes

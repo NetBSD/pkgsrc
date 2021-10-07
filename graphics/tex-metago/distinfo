@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:13:05 nia Exp $
 
-SHA1 (tex-metago-15878/metago.tar.xz) = abf8f446959e85ba72ef08e4d31701e26154f730
 RMD160 (tex-metago-15878/metago.tar.xz) = 4f19938c7486ce28baff6db087aee27fabc4ff5c
 SHA512 (tex-metago-15878/metago.tar.xz) = e7c68d18c42c19750e2763029eae2a2902bf8686200e9880cb1d6e624e01c32fbd24759f5fed2ae91155446c6ce7bd8c9678a7695ede7ef752f486dac0fee859
 Size (tex-metago-15878/metago.tar.xz) = 5024 bytes

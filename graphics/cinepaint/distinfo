@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2018/12/31 13:11:12 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 14:12:04 nia Exp $
 
-SHA1 (cinepaint-1.0-4.tar.gz) = 2049958784d211cc0be8f41f3473433479ba71fe
 RMD160 (cinepaint-1.0-4.tar.gz) = f83527778b3cc78240da9fa28d3f9ef1513fd397
 SHA512 (cinepaint-1.0-4.tar.gz) = de39f454499001cad22b54e1e8faf481d21d541932e47c65d7a9f5499a9dc67d585e46741a453b07db01fef4930c420d860c6cebfcc73e330fb5a33dc9b2cdae
 Size (cinepaint-1.0-4.tar.gz) = 12167016 bytes

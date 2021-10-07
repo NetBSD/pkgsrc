@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 21:34:33 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:13:22 nia Exp $
 
-SHA1 (ucview-0.22.tar.gz) = 4ed3471ebb5cb600ede01d8bb7e5a0aad9fd292e
 RMD160 (ucview-0.22.tar.gz) = d741bd9dfa1df114b75d26b1d5b9790ff9d3057a
 SHA512 (ucview-0.22.tar.gz) = 51798c67bd8a517d16c6abbe24d063db92fc91e15300db01b82937091d2de3a12a6545b439efbcda2c18e6fa34f97ef9333ab0dbcbc7c7667c93c0994ec875f7
 Size (ucview-0.22.tar.gz) = 527712 bytes

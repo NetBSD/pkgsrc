@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:33:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:13 nia Exp $
 
-SHA1 (gimp-exif-browser-0.1.0/exif-browser.tar.gz) = 86c2d2b86e877636895d90ab6f5dafb78ee1a8b9
 RMD160 (gimp-exif-browser-0.1.0/exif-browser.tar.gz) = c4e6825559aa7984036d18c32b61a81fb3b0d4b3
 SHA512 (gimp-exif-browser-0.1.0/exif-browser.tar.gz) = ef3088bb734afd34bd6295b38cc5c7ffec2909c2115bf97e5af3f5dd0eb6acd9433748a824be384f4d35f6a2de6ba3dc0ae7b03f5d3fca2a45d139a7b8e86b62
 Size (gimp-exif-browser-0.1.0/exif-browser.tar.gz) = 202166 bytes

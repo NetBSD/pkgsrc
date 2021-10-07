@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/16 19:37:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:13:23 nia Exp $
 
-SHA1 (viewnior-1.7.tar.gz) = 8ad5d0ded92073c43af3e88410038aaba1390a4d
 RMD160 (viewnior-1.7.tar.gz) = 6ca45e4b06896dc19dd3cf3de561f4d42f632c20
 SHA512 (viewnior-1.7.tar.gz) = 5ba17d7b5ceeffa65b04213f179c1439b09ac44e412e0750dde159b118a714f28d3a290509a402b234e4e7ba5b185fc73eef65d418598f344911e4e2c1373fe5
 Size (viewnior-1.7.tar.gz) = 165719 bytes

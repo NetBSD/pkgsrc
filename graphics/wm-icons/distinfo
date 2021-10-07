@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:13:24 nia Exp $
 
-SHA1 (wm-icons-0.4.0.tar.bz2) = c293ff64350224c1130ac5471e6cc871f9048023
 RMD160 (wm-icons-0.4.0.tar.bz2) = a44f722109ce5f43ce1e7f0332393c34062e7355
 SHA512 (wm-icons-0.4.0.tar.bz2) = 9b21dbb1ac697520792c1e8bfc6b06d4d9933828759571b7af978a670223841fcfe9adcf7f945de3f3a4a39e0d991045d6086be9b293bd89b67cf937262d53a5
 Size (wm-icons-0.4.0.tar.bz2) = 3433177 bytes

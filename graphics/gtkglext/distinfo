@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2018/06/03 23:53:02 dholland Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:12:19 nia Exp $
 
-SHA1 (gtkglext-1.2.0.tar.bz2) = d84c9472af3438fbce84189613e5370b97d9d1e7
 RMD160 (gtkglext-1.2.0.tar.bz2) = c731df1b4f0bf2ccb213fe489d2c2d08910d4c77
 SHA512 (gtkglext-1.2.0.tar.bz2) = c5452b7594195da3c1428dc3021a041d70bb8079a514b7310fe7b66f638748ad2399adead36047b52b60b033757581e72f0532c0301e033019bf909f7365071d
 Size (gtkglext-1.2.0.tar.bz2) = 703821 bytes

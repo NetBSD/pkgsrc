@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.62 2021/07/26 05:15:15 mrg Exp $
+$NetBSD: distinfo,v 1.63 2021/10/07 14:12:02 nia Exp $
 
-SHA1 (blender-2.93.1.tar.xz) = ae43f42a13e03baa37457a8e6a6c4e64c4579285
 RMD160 (blender-2.93.1.tar.xz) = 8b609530e464931c166f6dd1bc4564107ba1e881
 SHA512 (blender-2.93.1.tar.xz) = b14e8cca248c53e4a93976d7fa1cd1ab92a7d18a3809b2a535881731aad2f68d8d155ad175b27aa1890714b81aa6648604a614cacc90e95b7269569661e393b1
 Size (blender-2.93.1.tar.xz) = 42960100 bytes

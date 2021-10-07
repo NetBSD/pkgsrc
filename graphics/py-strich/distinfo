@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/10/23 13:38:41 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:12:49 nia Exp $
 
-SHA1 (pyStrich-0.8.tar.gz) = 076a7bfab9d28ba4a94766fd8fdb41ca6be332bc
 RMD160 (pyStrich-0.8.tar.gz) = 72d5ff19735e698e318bc7c9d7842863f41a0c44
 SHA512 (pyStrich-0.8.tar.gz) = 53179204692d9d3b3824d558f4d56ff9a2f7994953e61be3f51227b4326304bb84857fba015fe7302e5f94e3b8472787111f7c3510f7918d9eeca7d7cdf4304a
 Size (pyStrich-0.8.tar.gz) = 981235 bytes

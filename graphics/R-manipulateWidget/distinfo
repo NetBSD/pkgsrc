@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/20 03:11:38 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:11:59 nia Exp $
 
-SHA1 (R/manipulateWidget_0.11.0.tar.gz) = ca08e161cea11262f61ded475b1549addb278490
 RMD160 (R/manipulateWidget_0.11.0.tar.gz) = 48a819fe673ae31663ec08c30f2f17a543183ae9
 SHA512 (R/manipulateWidget_0.11.0.tar.gz) = 405352443e83b266c6da162fc06bc0e36ba77eb29d494c09c54c8c4af3ce694ea688ea0e64f38a42eec1c50562107612d44f11a6979101a87c8118d928324873
 Size (R/manipulateWidget_0.11.0.tar.gz) = 3961928 bytes

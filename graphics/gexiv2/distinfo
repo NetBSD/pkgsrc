@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/04/08 11:23:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:12:12 nia Exp $
 
-SHA1 (gexiv2-0.12.2.tar.xz) = 887015e9220866aa1d0b235f27c99cd3d11daa35
 RMD160 (gexiv2-0.12.2.tar.xz) = c17e79f2dfcb862327dfabbf15748ad4a17e8911
 SHA512 (gexiv2-0.12.2.tar.xz) = 850bf41f6180b0fdd050ab08da6e3bbd8d25ffc25a1f48e17a1d7a65771893cc79fba9cbd6718bf1754251ac4a4754983f0ab8f006a05f8c4a15085846d001a5
 Size (gexiv2-0.12.2.tar.xz) = 378428 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/05/14 16:08:06 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:12:00 nia Exp $
 
-SHA1 (SDL_image-1.2.12.tar.gz) = 5e3e393d4e366638048bbb10d6a269ea3f4e4cf2
 RMD160 (SDL_image-1.2.12.tar.gz) = 206990959c6b225286c0a19bc05b991c6bc2c3e8
 SHA512 (SDL_image-1.2.12.tar.gz) = 0e71b280abc2a7f15755e4480a3c1b52d41f9f8b0c9216a6f5bd9fc0e939456fb5d6c10419e1d1904785783f9a1891ead278c03e88b0466fecc6871c3ca40136
 Size (SDL_image-1.2.12.tar.gz) = 2231074 bytes

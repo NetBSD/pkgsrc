@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/05/14 10:05:41 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:13:18 nia Exp $
 
-SHA1 (tex-texdraw-51030/texdraw.tar.xz) = 40af4bef6f6950d4478b7de64b0c5fd78c3b70ce
 RMD160 (tex-texdraw-51030/texdraw.tar.xz) = 7d612995c2f6a4b7371cdb90238bc2edb80dea1d
 SHA512 (tex-texdraw-51030/texdraw.tar.xz) = 30cc546b259f93bec3f5d3efea5e73cdf7e34f9f76cac8946d82fff3123abb6f5bc7c70c48987bab24e154c56f6145fef0680b416e7cf2aaa79f5aa673600f59
 Size (tex-texdraw-51030/texdraw.tar.xz) = 15548 bytes

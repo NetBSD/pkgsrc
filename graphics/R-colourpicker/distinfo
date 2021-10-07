@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/18 15:04:56 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:11:57 nia Exp $
 
-SHA1 (R/colourpicker_1.1.0.tar.gz) = 4079ccbe32286816629c315a0dc19248183a800f
 RMD160 (R/colourpicker_1.1.0.tar.gz) = 496df5243d70bd04004785196b93550549e4ffd3
 SHA512 (R/colourpicker_1.1.0.tar.gz) = 4b39bfd5e6ba2bc0290653279a9d0b94f3cbab54ca9be2f5ace189e3d5d60eaf56486eef817dbabb7720f071e203f5f95a9e6d0fffa1ab401f3ec57b8d3b49c8
 Size (R/colourpicker_1.1.0.tar.gz) = 1833280 bytes

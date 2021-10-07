@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/06 14:48:29 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:12:10 nia Exp $
 
-SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
 RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
 SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
 Size (FreeImage3180.zip) = 7415716 bytes

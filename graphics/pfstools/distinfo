@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/12/15 21:32:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:41 nia Exp $
 
-SHA1 (pfstools-2.1.0.tgz) = 7190c55b3c0af2cbabf6d326895bab8b9b8b8dbe
 RMD160 (pfstools-2.1.0.tgz) = 701b96e9f566fae061bdd3b46d5fc846537d4a65
 SHA512 (pfstools-2.1.0.tgz) = 2117d638a807ec803fec0e8a2d1478f2771cc39fb349b582ab2727762379dc52c9b2a50c276d123c2c7456cdc7518ae60bdaa6d2e3ff179f9f43df63f2b57012
 Size (pfstools-2.1.0.tgz) = 596136 bytes

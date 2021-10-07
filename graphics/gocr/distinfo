@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/07/24 23:59:55 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:12:17 nia Exp $
 
-SHA1 (gocr-0.48.tar.gz) = 2172fd04c556b70b19db2b2abbc47749f5d08130
 RMD160 (gocr-0.48.tar.gz) = 11f839e843d356ce95fb5c26f53d3f545a695937
 SHA512 (gocr-0.48.tar.gz) = 53520c94b6991818482d0f6a5e3e7102f8530fd1215607b04e528244b697479d98669cfe4fd9098e5e1a2e5dd88c45f1edb1171c14adb798e811efd23bdada73
 Size (gocr-0.48.tar.gz) = 382555 bytes

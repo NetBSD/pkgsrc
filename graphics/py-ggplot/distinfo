@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/06/17 20:27:16 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:47 nia Exp $
 
-SHA1 (ggplot-0.11.5.tar.gz) = a28f95147f1dd4d91df45ddd230b119343d66e2d
 RMD160 (ggplot-0.11.5.tar.gz) = 661ff2a7f5734b3df71d9da8f7ffd7c4d2975e7c
 SHA512 (ggplot-0.11.5.tar.gz) = e505ffcda39ba3a4c60f617b7fd46d80392a4f0e1964ba2d5de754c22824c495a5f38cd25c9d0ce00a0b5f5fcd746eb207083ce7648a2bfd7fd2835a2019c4c5
 Size (ggplot-0.11.5.tar.gz) = 1948627 bytes

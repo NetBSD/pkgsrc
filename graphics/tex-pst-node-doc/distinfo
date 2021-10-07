@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/04/27 02:08:14 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:13:13 nia Exp $
 
-SHA1 (pst-node.doc.r54687.tar.xz) = afd4586e9568c0267888aac1561314858e4bccb2
 RMD160 (pst-node.doc.r54687.tar.xz) = bf56adb6cc37ec39d87e15d94177818e3cc1884c
 SHA512 (pst-node.doc.r54687.tar.xz) = da13d6f9584cb2810b0aac8ed65af49a48128049433a845b6a2d73bc2395e043f6ce89ca84978eb52455cdc713931a610cb1047e46badaa2c6b4baf5073c15e6
 Size (pst-node.doc.r54687.tar.xz) = 418912 bytes

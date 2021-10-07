@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/08 19:33:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:11:57 nia Exp $
 
-SHA1 (R/dichromat_2.0-0.tar.gz) = 37aa8221aedb9b004decf7a1022a266ab7a0342e
 RMD160 (R/dichromat_2.0-0.tar.gz) = 0c0f35ad66c4b19f1ff77839c3a3356264c0a26a
 SHA512 (R/dichromat_2.0-0.tar.gz) = 14b7fe6321548c669c96f48a881f35a50fa693dea26e2ec2c6818277620aec1877272d0ab8f58853eef9fff8e6f2c6ed4a3505bdfea03142f172a6eb91faebc6
 Size (R/dichromat_2.0-0.tar.gz) = 84320 bytes

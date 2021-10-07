@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.83 2021/09/29 13:12:09 wiz Exp $
+$NetBSD: distinfo,v 1.84 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 203960527f27e9fedf3e662847f759a6b4781178
 RMD160 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 1ec2cf2feedd2fa34c704931f43c738a944c21ae
 SHA512 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 22b1b584a344c4f4ebd0b6e84a4af44e472ef47b3971cb97cbb026a4bf7cb5bea49a7de0c2af2a9e439c7c794f775081c8d1904f33eadb49a5389ea01bc0896c
 Size (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 34221284 bytes

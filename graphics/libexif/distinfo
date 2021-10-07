@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/09/29 08:42:57 wiz Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (libexif-0.6.23.tar.xz) = e8439ad25f19b53874b685c3a9e80e6d883c1b2a
 RMD160 (libexif-0.6.23.tar.xz) = e6950f3939bb63f9782933bfa6b6741110a998aa
 SHA512 (libexif-0.6.23.tar.xz) = bf8adbe91ae14a69a83d16712c6067b06b05dfe2af66badf0de3414ee214c1d79a16529eb17bcdbac41ef8e9701d9e2c7a7ea4531e939af4050f9781b8302751
 Size (libexif-0.6.23.tar.xz) = 1327916 bytes

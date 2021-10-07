@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/07/20 10:54:18 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:11:56 nia Exp $
 
-SHA1 (Drawpile-2.1.17.tar.gz) = e436db084d903b891d0703abf46d04126b0cdcd5
 RMD160 (Drawpile-2.1.17.tar.gz) = fdc6dc5bcc63d8f84e8a2a7b09e5bbd91b69c932
 SHA512 (Drawpile-2.1.17.tar.gz) = 57fb472ea885c1a4844a9e56d3d8eab6dfac59b63118f23671799cbe9110940885546e96be9d0444f1b023d5c9527156990b043e109880896c87a0e1476e68aa
 Size (Drawpile-2.1.17.tar.gz) = 2521569 bytes

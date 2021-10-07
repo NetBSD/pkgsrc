@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/04 10:34:24 leot Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:13:27 nia Exp $
 
-SHA1 (zbar-0.23.90.tar.bz2) = 236fef9ff59eb85d962807a3cde860a377871b0a
 RMD160 (zbar-0.23.90.tar.bz2) = 2c2f9e228d40cd330058bdbcecff78020238798f
 SHA512 (zbar-0.23.90.tar.bz2) = c4ccac8526acab4e28c6145c5cdb95b6a6c5c81b6d2f883053435794f7c351edee20abdc9599cb0de96db546f584c9479896baa87b01ad409d5e75ea8b48118c
 Size (zbar-0.23.90.tar.bz2) = 1199323 bytes

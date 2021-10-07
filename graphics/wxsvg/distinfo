@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/09/19 13:28:44 schmonz Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:13:24 nia Exp $
 
-SHA1 (wxsvg-1.5.22.tar.bz2) = 7f9667ad0f8b8ba83e6e517f37b5a882546d4c8c
 RMD160 (wxsvg-1.5.22.tar.bz2) = 0eccdba9ebb656249b6a39e58bb39f7824250c54
 SHA512 (wxsvg-1.5.22.tar.bz2) = de9ffe314293267b728d0c9bd79b72c87ab057ca9e40af4e7f248ff4e39040a8f1b2a95a1e0bf2db20f3e718ad585e26dc8e69beeeb23b3161edac447e3cfe7b
 Size (wxsvg-1.5.22.tar.bz2) = 499287 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/08/14 07:34:32 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:12:14 nia Exp $
 
-SHA1 (girara-0.3.6.tar.xz) = a82497ef003c85c8084fd141b9b5fbb87a3256bf
 RMD160 (girara-0.3.6.tar.xz) = 90daec43dda56ce4dd6c451e6259de30a1fb8e86
 SHA512 (girara-0.3.6.tar.xz) = e9496b1bb629d59377ed1fee8a2fab2c7e5d60845e6777ed9bb796e1843fea20abda32d7de885f01e892654ea996490403c442021528b6b4f2aa50cf54d74c42
 Size (girara-0.3.6.tar.xz) = 60056 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/02/15 00:54:50 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:44 nia Exp $
 
-SHA1 (ptex-2.1.28.tar.gz) = 67ba20b98247a12f075631b6e65271953e519eda
 RMD160 (ptex-2.1.28.tar.gz) = eecce0d629551a827a866c63e2ca17651deef5fd
 SHA512 (ptex-2.1.28.tar.gz) = ddce3c79f14d196e550c1e8a5b371482f88190cd667a2e2aa84601de1639f7cabb8571c1b3a49b48df46ce550d27088a00a67b1403c3bfec2ed73437c3dca3e8
 Size (ptex-2.1.28.tar.gz) = 305327 bytes

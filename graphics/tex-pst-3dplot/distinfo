@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/15 10:55:34 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:13:10 nia Exp $
 
-SHA1 (pst-3dplot.r56758.tar.xz) = 7b6ea565632809eceb74e3805ef5f5eb4eb13eec
 RMD160 (pst-3dplot.r56758.tar.xz) = 31f41e44b6986118b2b5b8c4883f412f943ec4ff
 SHA512 (pst-3dplot.r56758.tar.xz) = 6b12d6273f5025b4afbb1adac35e73f60a1ca6430b24c40c145af1a50e35150a34cc70ff14e9904caff34be6955146f358f4231785aa8b7ff662978a846857f2
 Size (pst-3dplot.r56758.tar.xz) = 21824 bytes

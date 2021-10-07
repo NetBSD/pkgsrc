@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:00:47 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:13:17 nia Exp $
 
-SHA1 (tex-shapes-38024/shapes.doc.tar.xz) = acdb80e877571e0c45dabb701dd3e8530ebd3397
 RMD160 (tex-shapes-38024/shapes.doc.tar.xz) = d0b73ac2cebac40f0b447d68b8f18846e33d3a77
 SHA512 (tex-shapes-38024/shapes.doc.tar.xz) = 87411c6ab9b5b8acaf23915ff726720b7e0fa82acbf13316ec4fd73f14e02d053a5654ac764189f68b5d72e43fda890248b651b5d42ede65a8bf2ec7d05cf4bf
 Size (tex-shapes-38024/shapes.doc.tar.xz) = 183000 bytes

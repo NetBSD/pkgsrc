@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/04/25 11:13:07 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:13:09 nia Exp $
 
-SHA1 (tex-pgfgantt-46280/pgfgantt.doc.tar.xz) = 3f95072b17b921e40292a8006ddf491dc7b010c4
 RMD160 (tex-pgfgantt-46280/pgfgantt.doc.tar.xz) = ca8c9fa9a9edfc1722df396f1ef95f906c771f4a
 SHA512 (tex-pgfgantt-46280/pgfgantt.doc.tar.xz) = 3602cc038bc22b6c5275679edc045a3f07fb70c66a12b9ee9e9a43b96c4f592ee34509a58b28a5f640657e270b8b7916295702c0f192c1602ab783028bee979b
 Size (tex-pgfgantt-46280/pgfgantt.doc.tar.xz) = 929720 bytes

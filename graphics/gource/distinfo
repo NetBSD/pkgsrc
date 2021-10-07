@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/03/23 19:02:46 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:12:17 nia Exp $
 
-SHA1 (gource-0.51.tar.gz) = ab51953026510f7fd139787800cc06392469f7d6
 RMD160 (gource-0.51.tar.gz) = e59c61c6f2b6da5a2a358df2a033c1d9a33d42e4
 SHA512 (gource-0.51.tar.gz) = f29326ffb2aa6f645fb941e08e41f0cbf8dd894d5a4d607b782caeb12a24e6446198027060b880e0ad14a36efbed19023620dd8c890cfc0c027fc90ac2d5be24
 Size (gource-0.51.tar.gz) = 882783 bytes

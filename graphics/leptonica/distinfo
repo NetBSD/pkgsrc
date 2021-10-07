@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/09/29 11:53:13 adam Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:12:26 nia Exp $
 
-SHA1 (leptonica-1.82.0.tar.gz) = 0566b433f760e886617a25ac94c52ebc954c06a7
 RMD160 (leptonica-1.82.0.tar.gz) = bb3b14b6f0615d2d25f804d7861a8ac7ed0231d1
 SHA512 (leptonica-1.82.0.tar.gz) = cb0484570bf3921307ab5c805b3f0e08d4aaa811adfb592f3956b563fc145f7a45173e2278fc5d8a9e37f729bb34dbf8068e030e2066d54547f82d26b56aa27d
 Size (leptonica-1.82.0.tar.gz) = 14041481 bytes

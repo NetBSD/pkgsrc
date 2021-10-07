@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 21:33:55 agc Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:12:07 nia Exp $
 
-SHA1 (djvulibre-3.5.27.tar.gz) = 99c4f2c621c063bf8c8a1626030539fe5a8675f9
 RMD160 (djvulibre-3.5.27.tar.gz) = 4ebfef0e402ee621f0080243f362510754ea8333
 SHA512 (djvulibre-3.5.27.tar.gz) = 62abcaa2fe7edab536477929ba38b882453dab1a06e119a3f838b38d5c61f5d8c252e4769e6534582b826e49bcfb490513179580fab9c3afa84aa92053ccebee
 Size (djvulibre-3.5.27.tar.gz) = 3648522 bytes

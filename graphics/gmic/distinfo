@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/07/13 21:06:03 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:12:16 nia Exp $
 
-SHA1 (gmic_2.9.0.tar.gz) = f1c4dd0c58548828fe57ca6685b384ae086f45bf
 RMD160 (gmic_2.9.0.tar.gz) = f5e250c3043f811c76a74d60513a979ed09679b0
 SHA512 (gmic_2.9.0.tar.gz) = 3b3703520998e5ad547316683158d7b60541a8cea2a7c1e7118f8de88492e0961bf1fe1da360dfb26d0ba7eaf997e7005a864364297db2bb405d532dedc4241d
 Size (gmic_2.9.0.tar.gz) = 6195597 bytes

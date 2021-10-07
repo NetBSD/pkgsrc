@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/06/28 07:50:44 wiz Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:12:09 nia Exp $
 
-SHA1 (exiv2-0.27.4-Source.tar.gz) = ed620c568463179aca7847bee5fda40c11c08318
 RMD160 (exiv2-0.27.4-Source.tar.gz) = 175baf677c419549d6968e3786405ed5912d2670
 SHA512 (exiv2-0.27.4-Source.tar.gz) = f6798baafb36a54ba5bc65c2d28d4f4469e298582c90b417eb437b5dbda8e11963fb3314e8419717b3815ee8c3a68955cddc79e45351d9f2c165a0b73eb7b7be
 Size (exiv2-0.27.4-Source.tar.gz) = 32055837 bytes
