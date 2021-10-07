@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/07 20:01:32 dholland Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:18:31 nia Exp $
 
-SHA1 (libmicro-0.4.0.tar.gz) = bf73af51610f08c9fb50025beb3ee86718a11596
 RMD160 (libmicro-0.4.0.tar.gz) = 5d844892cbe9fcc77fd3479c54d7135b196a0097
 SHA512 (libmicro-0.4.0.tar.gz) = 7623b0f36b78d704dcdd843b54c9e3bc9f816c11bfbde536717d7219c25f38d9c41dae0fa80ace4fc89b9c22b5b0bcd379efa2fe16bc90b7981f77b35973578e
 Size (libmicro-0.4.0.tar.gz) = 48858 bytes

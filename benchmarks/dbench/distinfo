@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 00:25:50 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:18:29 nia Exp $
 
-SHA1 (dbench-4.0.tar.gz) = 34492fa9d9686052e9b85bd3deedc2bbf6cef626
 RMD160 (dbench-4.0.tar.gz) = bff2f721eb47868a1e34d4d4691817f0a6f037d8
 SHA512 (dbench-4.0.tar.gz) = 70c65c5b079edf745c267be753919c780153c9064dbda95c270b3c2c1d8c16e84fab4e743eb777436813678ecff13ec2b55d011e8acc4bd83e58f0dda7438e7f
 Size (dbench-4.0.tar.gz) = 2055359 bytes
