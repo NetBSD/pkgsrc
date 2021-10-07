@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/01/21 16:15:05 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:12:55 nia Exp $
 
-SHA1 (shotwell-0.30.8.tar.xz) = f2631d380e64b6d8ff9a81c3b545cd26452c0f6f
 RMD160 (shotwell-0.30.8.tar.xz) = 7700ce9e22432c1789c4c8c79d56b0a3fdb17887
 SHA512 (shotwell-0.30.8.tar.xz) = dccd496a083145283c79250329f88fdfe526a98ce84b6d1c52a9c48c9e52a4749bdf2449f3102474c994ef1e687e06767b9bcda03ea97d1168d3417743a6e866
 Size (shotwell-0.30.8.tar.xz) = 6460512 bytes

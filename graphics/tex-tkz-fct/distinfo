@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/11 11:33:48 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:13:21 nia Exp $
 
-SHA1 (tkz-fct.r55031.tar.xz) = 80639f59f3003121e2b7ff6f096b2c875fe6e9b4
 RMD160 (tkz-fct.r55031.tar.xz) = c9edb07135169f3e64ebaf30e51e8e4c111146e6
 SHA512 (tkz-fct.r55031.tar.xz) = 6defbc1265838eacb6612f87d969590db6cb2eb0a1c9316c1f52e700c7b7e576f971080538982d7adccb12af6ce7392cb6d6da13a9d3e537e5af8fc2dc290a89
 Size (tkz-fct.r55031.tar.xz) = 4948 bytes

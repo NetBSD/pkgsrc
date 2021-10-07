@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/01/18 15:58:41 leot Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:12:57 nia Exp $
 
-SHA1 (sxiv-26.tar.gz) = 663fd8ed46930e08ce9b5dd6e6573634563bd773
 RMD160 (sxiv-26.tar.gz) = b46c5916c568cbd455695be201e99ed0a22a87fd
 SHA512 (sxiv-26.tar.gz) = c4bd56ea14e520ea9b116e275009f2089e5c434d6894281215b09d07572b2d3190c3c3eca015a2933328d704afb7d443a66e858b4e6904a3d4d45378b35d22cb
 Size (sxiv-26.tar.gz) = 48569 bytes

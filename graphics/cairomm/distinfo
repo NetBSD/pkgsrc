@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/07/02 09:01:07 adam Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:12:03 nia Exp $
 
-SHA1 (cairomm-1.14.3.tar.xz) = c295fd03a071dde272da45f300704ee6e1b23a41
 RMD160 (cairomm-1.14.3.tar.xz) = 846189e06d7b169fc6d1215962bff325592bdf45
 SHA512 (cairomm-1.14.3.tar.xz) = 8dc8a0de733904742c54d4935b596d4103f2e498c6735894bc6a5a81eb4962c6ea944bad94102b18b25850f78e948d38f117c566b197bc76da23a4e88b62ee4e
 Size (cairomm-1.14.3.tar.xz) = 604572 bytes

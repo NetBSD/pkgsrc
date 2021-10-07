@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.107 2017/09/04 20:31:41 wiz Exp $
+$NetBSD: distinfo,v 1.108 2021/10/07 14:12:34 nia Exp $
 
-SHA1 (netpbm-10.79.04.tar.gz) = 24a5f348b406891354595e85db8b7889c24619ea
 RMD160 (netpbm-10.79.04.tar.gz) = 772d63bc9b08bdc4ec09cb333c3eb9e7615388be
 SHA512 (netpbm-10.79.04.tar.gz) = b5a918bca061015fc6ef361074d010abe88f57dc27971a1db5d4102fd6a02cefc61f2220919d40c9c7a001afac466c74c8d9c1858e3c0f4370422cc4f4c31907
 Size (netpbm-10.79.04.tar.gz) = 2796774 bytes
-SHA1 (netpbm-docs-r3052.tar.gz) = 6986a401717fd1ecb330fd426738bd8069eaf85c
 RMD160 (netpbm-docs-r3052.tar.gz) = 3486f2df6e2e1b83cc5221a969da5db8b842c9ef
 SHA512 (netpbm-docs-r3052.tar.gz) = 0217139aaf8ddba720df3b5242988674d4e5c2ab8f7399de1ecbe169e702eb79dbb55e1622b1af14058cfd3110d1ef0453237e57fb498d3220369d99afa4d77f
 Size (netpbm-docs-r3052.tar.gz) = 472779 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.44 2021/08/02 05:55:10 adam Exp $
+$NetBSD: distinfo,v 1.45 2021/10/07 14:12:21 nia Exp $
 
-SHA1 (jasper-2.0.33.tar.gz) = 6a29dd39cb42bf8766c67f8d41fa7dfdef02a9f0
 RMD160 (jasper-2.0.33.tar.gz) = ed5665914e6c8a312535bd771028f7bf6f88b542
 SHA512 (jasper-2.0.33.tar.gz) = b243be296b9e7adc86c5eee1deb50afab9e9361861fa3bc010d0fb10d29712fb872f685e7caeb15a6ecf25a7684ecd03bc2ebf851573e3930e8ee9bb2fa65a22
 Size (jasper-2.0.33.tar.gz) = 2027526 bytes

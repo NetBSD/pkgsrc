@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/03/01 09:48:40 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 14:12:21 nia Exp $
 
-SHA1 (ivtools-2.0.4a1.tar.gz) = 170aa24379c01be7c8127e94bc16165c0121a4d6
 RMD160 (ivtools-2.0.4a1.tar.gz) = 58a7dc87414313b5946fe6421fbc356b23890857
 SHA512 (ivtools-2.0.4a1.tar.gz) = ff1dac25b33541235faba99af3443f2eaad5e816fabd4d32045076e4dfb998b2af0821bc7325dff3a44cb182db2ed4d50a623e5926f5cf77f6c75f7c215cc3ce
 Size (ivtools-2.0.4a1.tar.gz) = 1829957 bytes

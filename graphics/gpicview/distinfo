@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/05/22 19:38:24 youri Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:17 nia Exp $
 
-SHA1 (gpicview-0.2.5.tar.xz) = 6741b107c190574abd4ae31f281462b0536e495a
 RMD160 (gpicview-0.2.5.tar.xz) = 46c979b8647817a7e7a081bda3d3389edd0bc8ea
 SHA512 (gpicview-0.2.5.tar.xz) = afc7e67c7ae1252f9c1816ee46fe69e96ea7be9a60e03406a539f17b2e4f0e4b93a028c6f3f1c455f5433d6d7d78a58dcee2cb0ac91ea53093a21935bf454afd
 Size (gpicview-0.2.5.tar.xz) = 349536 bytes

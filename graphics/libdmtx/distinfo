@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/24 14:52:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (libdmtx-0.7.5.tar.gz) = 5a9742e7f74e8d1c154a212b3b0f37a740b6f0f2
 RMD160 (libdmtx-0.7.5.tar.gz) = 8c8e1335a6f9e2686969248d7c5bb6d5a49e4d0e
 SHA512 (libdmtx-0.7.5.tar.gz) = c4bccc9eff4a93b6bb417ed23ed46e82cc98b650a94be40479d192af8537ee02a16700fbbd8f2271035ff8b804c40ab6461825d94bd80a3081d3a4b3988ea22a
 Size (libdmtx-0.7.5.tar.gz) = 790944 bytes

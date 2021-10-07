@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/08/10 11:40:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:12:20 nia Exp $
 
-SHA1 (imv-4.3.0.tar.gz) = ba213b40a2953532ac54dea76b8f28df31cfefbc
 RMD160 (imv-4.3.0.tar.gz) = f96bc28f4cd4889e1f25725660d7964611410763
 SHA512 (imv-4.3.0.tar.gz) = 1735c03c48888004b11b3aaf0215a9530c035468a8efdb210d856551ebb75030c906eee2b6ab80e5d3646206e6051a73a8c5e15c010dd09bca7f9e90f9b0e34b
 Size (imv-4.3.0.tar.gz) = 79031 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/01/16 00:25:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.37 2021/10/07 14:12:04 nia Exp $
 
-SHA1 (dia-0.97.3.tar.xz) = 316393951daebd186ba387e1cd6e34160a458c39
 RMD160 (dia-0.97.3.tar.xz) = a984efa1663cc154f4394060af37fab146f99175
 SHA512 (dia-0.97.3.tar.xz) = 34298980be930b87cb4a636344e4cb2a7e43eedc00b0969a5e446cee9b74b616fdc8c798efcb9a5832b98741f2e20632a44037b2bcb436f59591d531ef441efa
 Size (dia-0.97.3.tar.xz) = 5548500 bytes

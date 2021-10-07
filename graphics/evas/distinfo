@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2020/05/07 13:05:13 wiz Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:12:08 nia Exp $
 
-SHA1 (evas-1.7.10.tar.bz2) = dfdc60cbc0ee90980fe9c3c1752332b364514cb5
 RMD160 (evas-1.7.10.tar.bz2) = 54201a7a577a956dcfad9c3943b9726a77ad7333
 SHA512 (evas-1.7.10.tar.bz2) = 6a2f877dbeed86fa36d4f21ccf2a4ff74d1f9922d17d394094e18d024f9e4b4fceb2f133b28ecc7f1dfe7ab551b3dc501a90878c311f979a84ea708e4a060e01
 Size (evas-1.7.10.tar.bz2) = 9463058 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/06/12 06:09:43 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:12:26 nia Exp $
 
-SHA1 (lcms2-2.12.tar.gz) = 3d0c0276fcd3930b80c424512ec0b1ed54ec1497
 RMD160 (lcms2-2.12.tar.gz) = b814c0371f9e7d477440f80188cbe66b5fbbe9d5
 SHA512 (lcms2-2.12.tar.gz) = 967e8ac9a1d1aa3be45dc82362b9bc71c555e8577441efda57dc12d0bf84ed9188460c52eb8542d399ce9ab43bd4191988ed22b254ef34c6c1877bbb935952ed
 Size (lcms2-2.12.tar.gz) = 7419126 bytes

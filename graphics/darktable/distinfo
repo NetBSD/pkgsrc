@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/07/13 12:36:30 markd Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 14:12:06 nia Exp $
 
-SHA1 (darktable-3.0.0.tar.xz) = 468ea6cbc313ec899b448f5c9c8ce4144d5f35c7
 RMD160 (darktable-3.0.0.tar.xz) = b7d1c358250a950548a01d2de9bee9f551cf5dee
 SHA512 (darktable-3.0.0.tar.xz) = de154cc19281f61316363243db3e531be33ac4c4632d6277ba715884b83a3c35f1d433a0e53f5f1eb7ffe03c6fcba4629612c94f942c196807c876b421faafc6
 Size (darktable-3.0.0.tar.xz) = 3827412 bytes
