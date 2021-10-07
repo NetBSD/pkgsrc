@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/18 12:38:42 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:55 nia Exp $
 
-SHA1 (R/stringdist_0.9.8.tar.gz) = 39319ef0848eee1451deb49c2df39dcb5bcfc4cc
 RMD160 (R/stringdist_0.9.8.tar.gz) = 9a6bee5b6c619e8ef1fff7e4244f22f4a7630785
 SHA512 (R/stringdist_0.9.8.tar.gz) = e8159f10f13db0b4b219bb81fead94578c7b35bc30589f0b8dcdb7514d31ff47a0fe318cd49974a12bec449725547c59cbc8324135ba40269c1cf5bc54e931a7
 Size (R/stringdist_0.9.8.tar.gz) = 840199 bytes

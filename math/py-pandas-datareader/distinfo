@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/12/30 02:16:15 minskim Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:28:26 nia Exp $
 
-SHA1 (pandas-datareader-0.8.1.tar.gz) = 750f0e2721eb2d2d07240b9e8b4ea9e9910ea3f0
 RMD160 (pandas-datareader-0.8.1.tar.gz) = 32a28a88a5bfdbe0169e72920436a6e095a79570
 SHA512 (pandas-datareader-0.8.1.tar.gz) = 459811474da30301d72970955de3fad41c3f7b85df0bb0a9ddd9396e6733041a592cfedeb07095f14018fa463db1b40853cbeadb27fda5ce37a77bbb0acd1601
 Size (pandas-datareader-0.8.1.tar.gz) = 90082 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/28 05:30:45 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:48 nia Exp $
 
-SHA1 (R/compositions_2.0-2.tar.gz) = 07aef5c2a57d7728870fe5a266090cbe8c7c31d8
 RMD160 (R/compositions_2.0-2.tar.gz) = deae014cd47a693ce9d42c3e769916c8bcbfb524
 SHA512 (R/compositions_2.0-2.tar.gz) = f3484aeba165891a39cec95d5eb700d475e71f7bde063bc223fb88642b582897599a4480c75cbc43722437fd907a6565f1a58694f4b99a37d676d4cda5a5c867
 Size (R/compositions_2.0-2.tar.gz) = 1168643 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/07/12 17:50:29 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:28:27 nia Exp $
 
-SHA1 (roman-3.3.tar.gz) = 716387d7af54547effe785124c2c69e7ab0a7ca2
 RMD160 (roman-3.3.tar.gz) = 793b600babe15e5cc811f9eb9fe2fe931378a180
 SHA512 (roman-3.3.tar.gz) = 8d2952640519052ce629a3881cb871448fc7921eb5f45525305c43ef9fb2672062d0ca96ab16d7aaa95f5eebcad028fdcf519f224f3631734fbb6a4a314f3a49
 Size (roman-3.3.tar.gz) = 7577 bytes

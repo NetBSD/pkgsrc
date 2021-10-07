@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/19 14:42:39 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:22 nia Exp $
 
-SHA1 (astroML-1.0.tar.gz) = cce31bd4d1523657f4641985227a601b27c7e166
 RMD160 (astroML-1.0.tar.gz) = a5ea25d1a770d59c04112eca9e4383fb35926bb8
 SHA512 (astroML-1.0.tar.gz) = b61f3644c495befe242dd2530be9d82d257653875f4597c64634768fbea0f12eceee17107a4a6133abe0744ba65568858cb479086f3be69b0d432c4a3d89e2bc
 Size (astroML-1.0.tar.gz) = 538896 bytes

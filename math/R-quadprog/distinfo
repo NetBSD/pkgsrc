@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 20:20:36 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:53 nia Exp $
 
-SHA1 (R/quadprog_1.5-7.tar.gz) = 002358e65ec97326c4d111877a5aa67e26bfb3b0
 RMD160 (R/quadprog_1.5-7.tar.gz) = c76ebbb5134be7c19552646e80564ab6349f4f41
 SHA512 (R/quadprog_1.5-7.tar.gz) = 88bb6004321638ee696ccb42535f2e14d94b2bdeeb537272f2ea47de3cefa210410b3e64e268e4754590ac16eee9c297960acdb4da27f46a80da59378aaf0f2c
 Size (R/quadprog_1.5-7.tar.gz) = 35925 bytes

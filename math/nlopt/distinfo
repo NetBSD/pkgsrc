@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/09/18 05:06:06 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:12 nia Exp $
 
-SHA1 (nlopt-2.6.2.tar.gz) = d7f7962e4e8cc014b734d591d8041a64d56250c3
 RMD160 (nlopt-2.6.2.tar.gz) = 133b655d359ef9d5475324e077e28901a30bb757
 SHA512 (nlopt-2.6.2.tar.gz) = 61e5c01140a57c0ad2a0acd82ad50dce1b5679dc281e55cbbc332e876b19a689013100617545a42b721d8c487df37d6ccd67859171243433fe29468f259b556b
 Size (nlopt-2.6.2.tar.gz) = 2040229 bytes

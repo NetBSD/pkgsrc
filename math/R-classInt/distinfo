@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/01/03 12:52:04 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:27:47 nia Exp $
 
-SHA1 (R/classInt_0.4-3.tar.gz) = bee1c505e4b7d599807558e3a8147c913b9de13e
 RMD160 (R/classInt_0.4-3.tar.gz) = 28bd9b16d24c9fb14346c709a2e2336dcf98d437
 SHA512 (R/classInt_0.4-3.tar.gz) = 10cbeafd846f05a397075727c795ab6aa19de6b0d32fef0e5a38d0f1bf5639a9c6c82a5bb27af99f5f4f75e41faf551b85089bcdce73a81a35f2b58e5bc2894a
 Size (R/classInt_0.4-3.tar.gz) = 403884 bytes

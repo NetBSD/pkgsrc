@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/09/20 22:55:50 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:27:44 nia Exp $
 
-SHA1 (R/ISwR_2.0-8.tar.gz) = 67ddc24475e37adb19ff35755a3efc9cf3d3080f
 RMD160 (R/ISwR_2.0-8.tar.gz) = cb386f829808cfa3406e4165484f015181516af3
 SHA512 (R/ISwR_2.0-8.tar.gz) = 561a12cd24ff32f29e824c8ce9c7f154404ecb0ff9059c01d13afd151951b1d67a75624512ca4dff8a5c0770bd90c7a80778dccbbefe38bbd030351d7f922879
 Size (R/ISwR_2.0-8.tar.gz) = 164076 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/01/18 11:00:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:32 nia Exp $
 
-SHA1 (tex-mathpartir-39864/mathpartir.tar.xz) = 686f659034e382ef5bd6cafd7bd4a6d2d3280a69
 RMD160 (tex-mathpartir-39864/mathpartir.tar.xz) = ffd4f5e9eae6cfdeccd84486e22fb42dd2d3a56c
 SHA512 (tex-mathpartir-39864/mathpartir.tar.xz) = 4f7e8c5346ddd8afc210cd02e2de1d49bf604deecf4bdb1d7a291a21ef0eebf68d262ea00ab1dc9e7d95c0e66e2e7af6a3fb9a5003fe9ae95cdc0bc00e766e97
 Size (tex-mathpartir-39864/mathpartir.tar.xz) = 4608 bytes

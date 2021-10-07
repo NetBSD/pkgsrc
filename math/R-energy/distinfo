@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/16 12:28:02 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:48 nia Exp $
 
-SHA1 (R/energy_1.7-8.tar.gz) = c5e73efe5319e5050e0379544ca760624f32cae3
 RMD160 (R/energy_1.7-8.tar.gz) = cb7ddd4e918e166059084da5bf914a4804b44ca6
 SHA512 (R/energy_1.7-8.tar.gz) = 55cc12e51bcb751e6a55cd32cdd2efbdba46a5bcf1b9a87bfe3947a84a50ab6d287a08f3b95b1a83c9ab54e4aff3335fe65645f2d36219a8b5ab945d21947b63
 Size (R/energy_1.7-8.tar.gz) = 136166 bytes

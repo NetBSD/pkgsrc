@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/23 07:45:58 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:28:06 nia Exp $
 
-SHA1 (comonad-5.0.8.tar.gz) = 84a382c822ca41cd99e0118dafa46c4e051aa021
 RMD160 (comonad-5.0.8.tar.gz) = 02a637ce9ec47f07302a6bc5d53a12a17a856c5d
 SHA512 (comonad-5.0.8.tar.gz) = b823ea36826da74c6ec46cb835493224f62da66516841b9660a04c391dee803c31e140b2c523b563fb51f46509d99cce157b456a88fbaf2371da11933d5d787e
 Size (comonad-5.0.8.tar.gz) = 15227 bytes

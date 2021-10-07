@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/20 14:04:23 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:15 nia Exp $
 
-SHA1 (Math-Int64-0.54.tar.gz) = faa112d827de594b228488639c6cb22a01933c0d
 RMD160 (Math-Int64-0.54.tar.gz) = 476d284352aed80079186a125a19638c582a0a5a
 SHA512 (Math-Int64-0.54.tar.gz) = 03677df499ebc3924fabefbc6fb863adc2f765341a9697305b03bb24477b391029e65cc492c831a24e282e26e850082abbd0e52dda198aa041f3f4f41cc4f995
 Size (Math-Int64-0.54.tar.gz) = 119664 bytes

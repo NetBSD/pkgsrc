@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:54 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:01 nia Exp $
 
-SHA1 (eispack-20001130.tar.gz) = dfd893128165534b6e8aacdf14c2c94d27e18891
 RMD160 (eispack-20001130.tar.gz) = db424dff988c53509b03e5c75630b6436573c994
 SHA512 (eispack-20001130.tar.gz) = 1bd00d6ade1a52fd7bc96ef803c5b697090cd09831e7c3d39b47272593498b23d2fe270d6bde772bca1ee14fc2190c675bbe7aa6b7be8b38d089661d9d7571f7
 Size (eispack-20001130.tar.gz) = 434534 bytes

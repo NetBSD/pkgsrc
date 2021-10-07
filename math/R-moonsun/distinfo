@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/05 22:58:29 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:51 nia Exp $
 
-SHA1 (R/moonsun_0.1.3.tar.gz) = 2a29ac7f1b4bc4717647b0e0fda149080aa855a4
 RMD160 (R/moonsun_0.1.3.tar.gz) = d48c57325364bafe143fa062ef09138dd597ebf8
 SHA512 (R/moonsun_0.1.3.tar.gz) = 5be7fc1d869bbddd97ed6c875ba2702447b74e1b8598a22876017c30be2aee2d274a116eea4a07bd71a40a8d872f334b5ba5377f47705395d790a4b8be99bc95
 Size (R/moonsun_0.1.3.tar.gz) = 153796 bytes
