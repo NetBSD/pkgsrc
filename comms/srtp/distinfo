@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/05 17:54:39 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:27:09 nia Exp $
 
-SHA1 (srtp-2.3.0.tar.gz) = 263a45a82cb1acb1a6c7beef64def31949496a02
 RMD160 (srtp-2.3.0.tar.gz) = 4a650d4eb649be9c1779d15a48f135e712406709
 SHA512 (srtp-2.3.0.tar.gz) = 34b1a01cb9a75aed175be09aadd2827224203b9801becc3fbc5214667cce79c3b87b0f59e4315583863ab5a2cc4fc81d56ab604a5e4c984518b8a8a2a7b77461
 Size (srtp-2.3.0.tar.gz) = 633819 bytes

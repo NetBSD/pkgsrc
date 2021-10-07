@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/03/15 21:08:41 tnn Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:27:05 nia Exp $
 
-SHA1 (lirc-0.9.0.tar.bz2) = 8456bf7101d4f2d31d61c5073357a4981b458581
 RMD160 (lirc-0.9.0.tar.bz2) = d8f1cf3a03573be36787e87adc71beba3e678a37
 SHA512 (lirc-0.9.0.tar.bz2) = e91534c63e6065bd7da3b15e1676edf1672b8beb21864a6825df86247d7d165bf2dee6f8191732933e24e42a406e46afc55559948e4061eed2de7b08fac13431
 Size (lirc-0.9.0.tar.bz2) = 857286 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2017/05/07 08:08:44 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:27:05 nia Exp $
 
-SHA1 (minicom-2.7.1.tar.gz) = 915432810e7be05c684a634a2c6d45fec3c92cf9
 RMD160 (minicom-2.7.1.tar.gz) = cc538b69d3bbc0de13691ac6394f03e97c5dfb5d
 SHA512 (minicom-2.7.1.tar.gz) = b429b32d187c3ee915c5074a0d0f08b7e3951cb8528ecbdd889837ff301662c16740ad77bd2bf3baf759c0a84e779a8dc8fd888a4260a0ace15ebc4c2f697c82
 Size (minicom-2.7.1.tar.gz) = 875939 bytes

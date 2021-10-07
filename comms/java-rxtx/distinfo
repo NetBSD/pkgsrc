@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/09/13 11:37:34 dsainty Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:27:03 nia Exp $
 
-SHA1 (rxtx-2.1-7r2.zip) = 1d9ef2f80b23bc08b8fdeaa547ee78cb5f76e613
 RMD160 (rxtx-2.1-7r2.zip) = dc569a654fbef58aa521013e170c0200b8b3668f
 SHA512 (rxtx-2.1-7r2.zip) = 977f098da9e9618a2bc1d2265f1a59c8bdeb00a228378af0176e2f7fa408fb0dcb309a8168de0febc13fa0e04d9d54c76c267a61b815037b5881100c4025a1ce
 Size (rxtx-2.1-7r2.zip) = 1345757 bytes

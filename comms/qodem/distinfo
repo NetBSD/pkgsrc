@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/03/16 17:00:40 fcambus Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:27:08 nia Exp $
 
-SHA1 (qodem-1.0.1.tar.gz) = 955741a2372b36144377d6994289fd3949d3f64e
 RMD160 (qodem-1.0.1.tar.gz) = 78d23e09474444fe5e940cce72b53ad4456a7323
 SHA512 (qodem-1.0.1.tar.gz) = 1bbd0c2f935e8bccf67534153da8fc2c78ceedc6398e6259f2830ea021ce7c8296881285e436a3c8986a9ec78781ae22604b086a852b0afbfd5ff1cf73d8647f
 Size (qodem-1.0.1.tar.gz) = 9959922 bytes
