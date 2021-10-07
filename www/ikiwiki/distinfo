@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.138 2021/05/14 06:50:16 schmonz Exp $
+$NetBSD: distinfo,v 1.139 2021/10/07 15:07:16 nia Exp $
 
-SHA1 (ikiwiki_3.20200202.3.orig.tar.xz) = abbb8ca6611cffe859e5ec323f61bc02377dcb97
 RMD160 (ikiwiki_3.20200202.3.orig.tar.xz) = 3062c04b31e0ca6aea30d47405a6d47eb80127dc
 SHA512 (ikiwiki_3.20200202.3.orig.tar.xz) = a1d89ccc0d02cddb3ef53c4c4a4a3349139d558fd4eb418263551a48cb635ed29ef430f8276ef6b42486a9232706908752e15e88590e919db6665e1a8844a4e5
 Size (ikiwiki_3.20200202.3.orig.tar.xz) = 2689636 bytes

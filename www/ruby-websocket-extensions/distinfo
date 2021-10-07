@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/06/14 15:57:43 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:08:49 nia Exp $
 
-SHA1 (websocket-extensions-0.1.5.gem) = 622c14d75e19aa43126696646e27cf1fa55887ff
 RMD160 (websocket-extensions-0.1.5.gem) = 6b5e38b0b91ff3cdcd4687086300ffe77faf2fac
 SHA512 (websocket-extensions-0.1.5.gem) = ad51b37025789186d4a82cc011e5ea22b5152621488083db82096ad5a46139b3d14c027bca28ca0abd8da53df82ea5ad99d25803936c3d39757bd1fe73dd5e15
 Size (websocket-extensions-0.1.5.gem) = 10752 bytes

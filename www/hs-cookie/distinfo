@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/15 16:55:54 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:07:14 nia Exp $
 
-SHA1 (cookie-0.4.5.tar.gz) = 0f4eb4a46f3bff22c8cd75f2860e225ca12d7ff3
 RMD160 (cookie-0.4.5.tar.gz) = 502c57b71e49db97b17b8508984839d2462948ad
 SHA512 (cookie-0.4.5.tar.gz) = b3d4c12b4683f4f02e4d59b47ec3867554dee2fcb106fe59a073b8ead63a220458b91e8b5a2321e46a91666ba61e88798361448a7bc86e496a47d6731b8c0b93
 Size (cookie-0.4.5.tar.gz) = 6048 bytes

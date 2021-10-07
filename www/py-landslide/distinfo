@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/12/15 09:07:41 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:28 nia Exp $
 
-SHA1 (landslide-1.1.8.tar.gz) = 0499fc9ddf200a3e6dfdce3c993939b2632323f4
 RMD160 (landslide-1.1.8.tar.gz) = 56ed96b906fce7741264bf02419e429a0dba0e65
 SHA512 (landslide-1.1.8.tar.gz) = 6ff2a3d40662b0178d2fd2828814f0808ed0e7df9ad1dcd14e7c24b832867039bf50af65c44616b8a8c15d2f0a858173c8ed815562ccd522570d503bcd111f89
 Size (landslide-1.1.8.tar.gz) = 152361 bytes

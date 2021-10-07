@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/05/25 17:48:36 leot Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 15:07:24 nia Exp $
 
-SHA1 (netsurf-all-3.10.tar.gz) = d1404abcc8ba526dc425d8fda81a5a495082de19
 RMD160 (netsurf-all-3.10.tar.gz) = 2ba50fcb148d1b229e48b80f2a2c24daf2948783
 SHA512 (netsurf-all-3.10.tar.gz) = fc4c300eef07c540a7e07f8034db25b7e5fb731b5956029af2220f8638802aa38c055ad54b5683c14501aef9c22fb781b96613c16ae9a6996c3833ceede6f9bf
 Size (netsurf-all-3.10.tar.gz) = 8537919 bytes

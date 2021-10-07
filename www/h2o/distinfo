@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/03/21 14:16:04 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:07:13 nia Exp $
 
-SHA1 (h2o-2.2.6.tar.gz) = 5cc09af1baf35938a86d7cfafe8a0b876ff2ee81
 RMD160 (h2o-2.2.6.tar.gz) = bf99a74257ccb4c9efbd7e11ce7aab2a7af01a95
 SHA512 (h2o-2.2.6.tar.gz) = f2f28905c01782a0432c9dfdb2f21054e0a4741ac4c5f26802d4b439d0172840aa215aba5dc7c9af62275dcc24de105674a3819384dc38246e43ce3e8263eb20
 Size (h2o-2.2.6.tar.gz) = 16257760 bytes

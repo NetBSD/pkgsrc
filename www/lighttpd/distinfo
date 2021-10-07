@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.62 2021/10/04 09:13:22 wiz Exp $
+$NetBSD: distinfo,v 1.63 2021/10/07 15:07:20 nia Exp $
 
-SHA1 (lighttpd-1.4.60.tar.xz) = 1acece73158a37b4ab27d81ccc67815f0b018c49
 RMD160 (lighttpd-1.4.60.tar.xz) = 1b5135a576342fae8ba1fe9e95e539beebd41249
 SHA512 (lighttpd-1.4.60.tar.xz) = e3a4b0f142f2a02212a8ede07e2f683605f8009d933281caee89b8b82482bdc473956bd9d9ff0392ea6cecf3fe3b05e6e4cee7052a875a1b00dfab7667402cd8
 Size (lighttpd-1.4.60.tar.xz) = 1008548 bytes

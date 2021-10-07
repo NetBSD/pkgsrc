@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/07/19 12:47:31 tnn Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:08:56 nia Exp $
 
-SHA1 (varnish-6.6.1.tgz) = b5036538ea05cc57afbfabeabdb2f284349c648d
 RMD160 (varnish-6.6.1.tgz) = 8541fa91dbfde9840b2d9495654833d9a3e99fd6
 SHA512 (varnish-6.6.1.tgz) = af3ee1743af2ede2d3efbb73e5aa9b42c7bbd5f86163ec338c8afd1989c3e51ff3e1b40bed6b72224b5d339a74f22d6e5f3c3faf2fedee8ab4715307ed5d871b
 Size (varnish-6.6.1.tgz) = 3518308 bytes

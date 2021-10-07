@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2020/03/31 13:59:32 roy Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:07:06 nia Exp $
 
-SHA1 (cgit-1.2.3.tar.xz) = 8aba6b897efa3e5a246a30d761261dd2e2bbacc0
 RMD160 (cgit-1.2.3.tar.xz) = 4884b999302eb89afa67c73f07e8853f9402e681
 SHA512 (cgit-1.2.3.tar.xz) = 58f9bb644b07be49dc51f3ef30a3d0e53699cede3c06b1d6920f3874fe846c83dd2589632aa84357b70ea2d60272448409aa1b892f405d14dd6745f5559b4504
 Size (cgit-1.2.3.tar.xz) = 90632 bytes
-SHA1 (git-2.25.1.tar.xz) = bd69370c94de27b4b72257d1bc9bc6e45f04e70d
 RMD160 (git-2.25.1.tar.xz) = a8ab476982440c2cc94c7d21f619320d74f117d2
 SHA512 (git-2.25.1.tar.xz) = 15241143acfd8542d85d2709ac3c80dbd6e8d5234438f70c4f33cc71a2bdec3e32938df7f6351e2746d570b021d3bd0b70474ea4beec0c51d1fc45f9c287b344
 Size (git-2.25.1.tar.xz) = 5875548 bytes

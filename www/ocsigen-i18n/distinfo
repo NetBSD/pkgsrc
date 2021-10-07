@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/12/11 10:58:20 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:26 nia Exp $
 
-SHA1 (ocsigen-i18n-3.7.0.tar.gz) = 6d38c310dc86c8aae502b8e3a8996d4eb4060fc3
 RMD160 (ocsigen-i18n-3.7.0.tar.gz) = 7fa2aa863f3b774f7d371750f5575e10c2226928
 SHA512 (ocsigen-i18n-3.7.0.tar.gz) = e16743070f1a15bb8850132f710aceda61102dea692da8b611c7d249602007400036c4944d7a2ff14ffdd7dfcc42504377fd8762a7fe40540051ee09b0d563c1
 Size (ocsigen-i18n-3.7.0.tar.gz) = 7851 bytes

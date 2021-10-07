@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/02/06 15:37:41 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:08:53 nia Exp $
 
-SHA1 (squidclamav-6.16.tar.gz) = c54a2b4770815c5048f7313e9fb435c48738c9e3
 RMD160 (squidclamav-6.16.tar.gz) = 55da34d1e375cf30822329c36662987c332e126b
 SHA512 (squidclamav-6.16.tar.gz) = 8beecf1eccbad7b2f7a1a5fa53d9695cd09cd7debbca13318e14e280211c68d341b6b562778d052c1f345ef32f82cd0c37d711ad7834c2fce95e102bc85dab6a
 Size (squidclamav-6.16.tar.gz) = 444046 bytes

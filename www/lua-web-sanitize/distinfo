@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/10 07:40:55 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:07:21 nia Exp $
 
-SHA1 (web_sanitize-1.0.0.tar.gz) = 5b9a3bd08e8d9e5608805b72c550da9ba247afa8
 RMD160 (web_sanitize-1.0.0.tar.gz) = 87cbcb3411b6582377479b8853608c3c06d2bd3c
 SHA512 (web_sanitize-1.0.0.tar.gz) = 37d32c3c1cbe0286bfd37098d7f1d4e5374f3169d045c177e0ed531a3732aeadf6ca58d234efcb99e1f776d069f231b701dd4477c2a2e2ed3384ea213a7ef534
 Size (web_sanitize-1.0.0.tar.gz) = 26034 bytes

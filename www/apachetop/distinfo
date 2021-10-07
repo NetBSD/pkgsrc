@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/12/21 23:51:30 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:04 nia Exp $
 
-SHA1 (0.18.4.zip) = 911b6a9bac7d320ee1f2dc3e4a8f8afd34a97fd4
 RMD160 (0.18.4.zip) = 09f5ed68c0584d5e20deae4bf1b1831e965cb671
 SHA512 (0.18.4.zip) = 91d5cadbe5a7ffc1bdd4999e5986ab55ad770caf6f2d19811b322d9e5af42b7f40a16d4b05c05c9d1d59ac80392ca90ba03dddb2a69e08d2d8243f9ef58158b7
 Size (0.18.4.zip) = 55053 bytes

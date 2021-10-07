@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/05/19 14:21:13 hauke Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:08:07 nia Exp $
 
-SHA1 (glpi-9.4.6.tgz) = 358e5f85f8eb1a15f0c3d051807c48b6d2867f8c
 RMD160 (glpi-9.4.6.tgz) = b56a5ef32bbae6a34ff750177c1c4cd0452735f0
 SHA512 (glpi-9.4.6.tgz) = a7bd8f2c351d17feb245716b3716268a43be513d3265916c93e0ce926bce3c754c05b9c1c237336bab74cd2ddb349c722dcaf994f39f5e1b5f2c01e0565df0de
 Size (glpi-9.4.6.tgz) = 35006348 bytes

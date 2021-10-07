@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/07/23 23:56:48 wen Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:07:55 nia Exp $
 
-SHA1 (ParallelUserAgent-2.62.tgz) = 46af99f88f19d290cc9e03338c609663a66e592c
 RMD160 (ParallelUserAgent-2.62.tgz) = 47a8d7a033f0f62a28cedd56f25186c7b84f85c6
 SHA512 (ParallelUserAgent-2.62.tgz) = 46cb66ce8c71373a94bb8f9af11904a52627118f45bb3a9d75aefd7b14ecb61ca24a27c94940705990dd98fd7917f7a43069da029ab69f49c57ac35717b46faf
 Size (ParallelUserAgent-2.62.tgz) = 58910 bytes

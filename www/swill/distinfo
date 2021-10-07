@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/09/18 07:46:09 dholland Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:08:54 nia Exp $
 
-SHA1 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 1628126f9629b1cf78a1e8d8b7bb0296b9085e9c
 RMD160 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = d422a9999ea1168f116d95ec5be60ab24966988b
 SHA512 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = dd8867b497dd7e3ac661c06b4301e056a10efb81b23e6573677fd7b3d0015600d28f0cf15428b84f0f4490efb8fb37cf9e4457cc3d68feac9175147186130672
 Size (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 119204 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/07/27 14:58:12 adam Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:08:27 nia Exp $
 
-SHA1 (idna-2.10.tar.gz) = ab9b7f0143cc0095da8439939eee9ce153af5f60
 RMD160 (idna-2.10.tar.gz) = 57234789c6f95edce1725e7d3858a27da309e087
 SHA512 (idna-2.10.tar.gz) = 83b412de2f79a4bc86fb4bdac7252521b9d84f0be54f4fb1bde1ee13a210bbfa4b1a98247affbc7921046fb117a591316c12694c1be72865767646554c5207ac
 Size (idna-2.10.tar.gz) = 175616 bytes

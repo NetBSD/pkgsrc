@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/02/19 17:49:24 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:08:34 nia Exp $
 
-SHA1 (webcolors-1.11.1.tar.gz) = e3d84ff93d9f125d1ef1033c522245fb8ff20564
 RMD160 (webcolors-1.11.1.tar.gz) = 808eb25a7e7c8171cd7701f59f612683a87923cc
 SHA512 (webcolors-1.11.1.tar.gz) = b8d9146e31292b41c3f3a501ca5f0ce5d9c21ec08dc31384bf6bfe06ccff202b97592eaafef0cfce9ddef1b674bf19a527225d67ecceb92bdc514a050a02524b
 Size (webcolors-1.11.1.tar.gz) = 309399 bytes

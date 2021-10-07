@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/09/10 11:37:53 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 15:07:11 nia Exp $
 
-SHA1 (firefox-78.14.0esr.source.tar.xz) = 95d4ca87593bc348e3c56345eee64627c648b952
 RMD160 (firefox-78.14.0esr.source.tar.xz) = 5a5bf6558a05ed8ea376fcc1ba861b447183b493
 SHA512 (firefox-78.14.0esr.source.tar.xz) = 5d5e4b1197f87b458a8ab14a62701fa0f3071e9facbb4fba71a64ef69abf31edbb4c5efa6c20198de573216543b5289270b5929c6e917f01bb165ce8c139c1ac
 Size (firefox-78.14.0esr.source.tar.xz) = 340771180 bytes

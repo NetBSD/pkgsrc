@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/07/21 05:57:54 fcambus Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 15:07:15 nia Exp $
 
-SHA1 (htmldoc/v1.9.12.tar.gz) = 464e4bee133d1d7b5d08b7f99c7e14d5c4d280ad
 RMD160 (htmldoc/v1.9.12.tar.gz) = c740e8d5a7be996c3e04be2715fe4bf28495cc47
 SHA512 (htmldoc/v1.9.12.tar.gz) = bd388f2cad335e2ecc12892f951edb164389f583458f14f8fcc85a0bfca01f2c620465889522574155d00b65e3b28d8ecbde65b87d883136044493d3d5839280
 Size (htmldoc/v1.9.12.tar.gz) = 3422902 bytes

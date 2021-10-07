@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:29 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:07:17 nia Exp $
 
-SHA1 (khtml-5.80.0.tar.xz) = 0fc7263b107061d2a7f30ada7e290aab8923d7c9
 RMD160 (khtml-5.80.0.tar.xz) = a7acf91cea7d1307da86213f13a1aeea8b747745
 SHA512 (khtml-5.80.0.tar.xz) = 3d3881376e03cc21306f13178e6aad3458460f87b61747eb2abb2d94a58b28fd5c52bc10b33a8bcf0c2ad02d62ea464c4c88ed0ffeb0ecb7df59b77c8fd2aba3
 Size (khtml-5.80.0.tar.xz) = 2089848 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2018/09/13 12:33:28 maya Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 15:07:20 nia Exp $
 
-SHA1 (w3c-libwww-5.4.2.tgz) = 6bc3c0de4cd2e0d51b17789c9a86b5296ce44b2f
 RMD160 (w3c-libwww-5.4.2.tgz) = 7b6ecfbd84ca8b2ce3b19d3b60e9f6a75ea914f5
 SHA512 (w3c-libwww-5.4.2.tgz) = d0dbe2be106c4987a5131c22c300bd3fcb1dce1881d0009269dd4e3c8068da1c07e2b1ca4bfd181640f8b467d4a378a9036f9b385d3a28badbe22b2ed74e0e74
 Size (w3c-libwww-5.4.2.tgz) = 2630357 bytes
