@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/28 22:10:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:10 nia Exp $
 
-SHA1 (aeneas-1.7.3.tar.gz) = f3513c78067db67bf781f8b1b91176b72de5696a
 RMD160 (aeneas-1.7.3.tar.gz) = d0a02582621a06593d78ff72d35abc082a7bc1e5
 SHA512 (aeneas-1.7.3.tar.gz) = 4b661831aa4b614b7953d320a33f07e4a133dfc63c89775dcf9c65eb028950dfe124452430af64d822b855162f3f859e93a9995eac18eb5dd943e9aec3f7a8fa
 Size (aeneas-1.7.3.tar.gz) = 31395640 bytes

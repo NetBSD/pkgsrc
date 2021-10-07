@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/11/23 12:25:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:21 nia Exp $
 
-SHA1 (festvox-rab16-2.5/festvox_rablpc16k.tar.gz) = 534e45a4ba10b7e0573ec30596ca4e57d888c6a2
 RMD160 (festvox-rab16-2.5/festvox_rablpc16k.tar.gz) = d72d9a0adb623ea1b00a51957a2c94a3c8d0fb9e
 SHA512 (festvox-rab16-2.5/festvox_rablpc16k.tar.gz) = c97a19f82eca65553846b83ae355852266408de1268b4d80af50d6e212a833d98f414d1e9b85751c8f074b285f01ead93cc42208e3c0bbca330524a35e936835
 Size (festvox-rab16-2.5/festvox_rablpc16k.tar.gz) = 5369131 bytes

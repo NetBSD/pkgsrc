@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 01:12:25 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:09:13 nia Exp $
 
-SHA1 (aumix-2.9.1.tar.bz2) = 1b84054cfb74d3513b254d05c2fb08f6a6a3edc7
 RMD160 (aumix-2.9.1.tar.bz2) = a68d2e1da251edad721e997099d8149075f07449
 SHA512 (aumix-2.9.1.tar.bz2) = bd063dc9dab8455f467fbe9e4ea1baa5cef914923e66ab5a8fca1e6964cac7851e3755f054bfe41657371e221920fe9a52f9807457996244f4bcd5db4659b21d
 Size (aumix-2.9.1.tar.bz2) = 231622 bytes
