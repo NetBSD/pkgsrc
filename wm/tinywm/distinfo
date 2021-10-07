@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/11 15:12:35 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:05:11 nia Exp $
 
-SHA1 (tinywm-1.3.tgz) = 2fc6e5ef28939d067f3f924bb9334f1be1cee5eb
 RMD160 (tinywm-1.3.tgz) = b9885aee9eafbe5d40238258572ed431455f2f01
 SHA512 (tinywm-1.3.tgz) = 6ee19a74c528e949052e0b3ea7ca94e67c199f53e6e756b79e2fc8606e5feaed30de5ef77d0f63d6d16233d1d1cf584b50115edd93e226d8211afebd398da888
 Size (tinywm-1.3.tgz) = 5028 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/19 13:53:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:12 nia Exp $
 
-SHA1 (velox-0.0.3.20200119-5cfdcbafb130128d4537ade4dffe8ac12712607d.tar.gz) = 12c3c0cc7dbf64f7f7e42b09a68ec20ed7c84cde
 RMD160 (velox-0.0.3.20200119-5cfdcbafb130128d4537ade4dffe8ac12712607d.tar.gz) = 1d15070f81f1e401d27aef6826340c23a73fcd35
 SHA512 (velox-0.0.3.20200119-5cfdcbafb130128d4537ade4dffe8ac12712607d.tar.gz) = 4ebaabefe7b304946b3a25475827ce0a04a7998652ccee726a6b935411ee224ce2d5ca5af0f913d6d2a4a1d698738674f3ffec9d2e718cf13e80b8d4760e0d14
 Size (velox-0.0.3.20200119-5cfdcbafb130128d4537ade4dffe8ac12712607d.tar.gz) = 23076 bytes

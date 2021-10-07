@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/05/04 14:09:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:08 nia Exp $
 
-SHA1 (mlvwm-0.9.3.tar.gz) = 363c5a64179a7a9b7e7a273237d61dfc68605b0b
 RMD160 (mlvwm-0.9.3.tar.gz) = e4b7b5461172497e41256d33163a3bf98b02d5ab
 SHA512 (mlvwm-0.9.3.tar.gz) = 3898ae2a073cd31d6f83e3a138b6c9d0468fcc94f3aba1f60a83549e1b5120f833e832be81ceeecd37363d694f838828e024fbc4fb349f4039d5440fe78cce77
 Size (mlvwm-0.9.3.tar.gz) = 92454 bytes

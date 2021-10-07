@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2019/11/26 13:34:05 wiz Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 15:05:10 nia Exp $
 
-SHA1 (pwm-20070720.tar.gz) = f1985c729cb0a4158d2b7f55d23ad58f6d323c55
 RMD160 (pwm-20070720.tar.gz) = 6fe8e4f42fd69c1cbdf2f87e41fc7ff99a3a622e
 SHA512 (pwm-20070720.tar.gz) = 26712b0d7962a97410a559b98642a4e94d001103f45e96a67ff8bfa35574144fd3411206d84bbbe02a417ccf31f709de569a9be59d48bfad98cd2c54989f2f4e
 Size (pwm-20070720.tar.gz) = 158213 bytes

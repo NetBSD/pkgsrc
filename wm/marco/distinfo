@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/07/11 03:32:48 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:05:08 nia Exp $
 
-SHA1 (marco-1.24.2.tar.xz) = 387a367a11f20b4cc6357aff6154bd654e861f87
 RMD160 (marco-1.24.2.tar.xz) = 913782192c1e778c8381ebbf5a3101067cced584
 SHA512 (marco-1.24.2.tar.xz) = 2e699935fb72ddc34aa1f98f5771f252141245ad8fd0983aafe5ea55aeeb3f90b5d68a61c27704adf0b929565180367aae46486d45e789d7de101ec9a7bc9f96
 Size (marco-1.24.2.tar.xz) = 1845356 bytes

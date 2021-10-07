@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/07/13 08:16:17 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:05:03 nia Exp $
 
-SHA1 (amiwm0.21pl2.tar.gz) = 770082049158a47e7171a5d74e82eeea7957b36e
 RMD160 (amiwm0.21pl2.tar.gz) = 3f135fb5ca0e945bcd7035485a9a886012b43db7
 SHA512 (amiwm0.21pl2.tar.gz) = 6504a4fd4c30a571b0c501b46fdc442fcc993c27b4595753f7bfa12a38c0b997a01d939c7a35e6c499aa0f8972bc0fda7cc88a9fe77091f363f8cd5a9e8d50de
 Size (amiwm0.21pl2.tar.gz) = 195128 bytes

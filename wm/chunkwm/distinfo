@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/04/04 02:24:40 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:05:04 nia Exp $
 
-SHA1 (chunkwm-0.4.8.tar.gz) = 1c1337429d4595f7691e2c52194f21dd668a19e8
 RMD160 (chunkwm-0.4.8.tar.gz) = a5177a6a9f7c65bb427a68c0eb4d6c434b02b28e
 SHA512 (chunkwm-0.4.8.tar.gz) = b93b2081efba53268b1d2e83787bb3af505be84544d4becc688fb3da2673cf483e3b6acd6dbc7a8007685f6df4da54f2830727a5a4f1ea6a9efdf3bb981cd8eb
 Size (chunkwm-0.4.8.tar.gz) = 161867 bytes
