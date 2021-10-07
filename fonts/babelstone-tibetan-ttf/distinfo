@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2021/01/02 00:05:03 uwe Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:03:52 nia Exp $
 
-SHA1 (babelstone-tibetan-ttf-10.5/BabelStoneTibetan.ttf) = 4c7d5fbb1af911a8e49d63ef375d60e876bfbe3c
 RMD160 (babelstone-tibetan-ttf-10.5/BabelStoneTibetan.ttf) = 8c90ec726ad1ccea863b2d56e5d54c3879658b42
 SHA512 (babelstone-tibetan-ttf-10.5/BabelStoneTibetan.ttf) = 9b959194f8f4e06869aa15cab05f377b4ae0ff7a279b4914545af0983dffe3a85766d83342f4e47c5039d15c6159c70a72ee35e3b61fb055c7cc2acb3950ac81
 Size (babelstone-tibetan-ttf-10.5/BabelStoneTibetan.ttf) = 3050444 bytes
-SHA1 (babelstone-tibetan-ttf-10.5/BabelStoneTibetanSlim.ttf) = a08d3a177fd7ff36c243e7429d8adab727402f50
 RMD160 (babelstone-tibetan-ttf-10.5/BabelStoneTibetanSlim.ttf) = 2baa66ae375f0a768e45d24c8867e959e6580811
 SHA512 (babelstone-tibetan-ttf-10.5/BabelStoneTibetanSlim.ttf) = 45795036dd139d356c25119a5d718dc20daba3c3e3fa73b17670c391985ae03a42fac2eb132bc6690376a8960a67025032a15d3e61e177c61cc7f4816f72e7a4
 Size (babelstone-tibetan-ttf-10.5/BabelStoneTibetanSlim.ttf) = 3050956 bytes

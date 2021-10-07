@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:21 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:25 nia Exp $
 
-SHA1 (wasysym.doc.r54080.tar.xz) = 16db8adab24877191a2ad38e4525f9bb7d5ca162
 RMD160 (wasysym.doc.r54080.tar.xz) = b0fbe638275f6edb4ed8c40f854e606555f644d9
 SHA512 (wasysym.doc.r54080.tar.xz) = ffa36c6f1446c0dcdf1e1dd8b47946eb84d666714d94eac28c857170c9aa414b612486fcf107ae462c50ecafd6ff20c90c776abb5774db64a32aa07be8c58b2f
 Size (wasysym.doc.r54080.tar.xz) = 163244 bytes

@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.5 2017/07/19 04:01:58 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:05:28 nia Exp $
 
-SHA1 (urw-fonts-2.0/urw-dingbats.tar.bz2) = d836d5a0c4bed43078564e994ec2efd403d2655e
 RMD160 (urw-fonts-2.0/urw-dingbats.tar.bz2) = b8a0c6fe913c13d9d49dfe90d616634bb21a49e5
 SHA512 (urw-fonts-2.0/urw-dingbats.tar.bz2) = 97f84407738340489b6f226a2a8815cff6049a7e26d9d39464bce30c3caf68676da6dc75663d7657988c09cfd80148080454e829e13a3470c7000377b0126e71
 Size (urw-fonts-2.0/urw-dingbats.tar.bz2) = 45897 bytes
-SHA1 (urw-fonts-2.0/urw-fonts-2.0.tar.bz2) = b7755509b7bd313da037afe986fc84d616493180
 RMD160 (urw-fonts-2.0/urw-fonts-2.0.tar.bz2) = d28b6d4556c21abba25e437200395daec57db908
 SHA512 (urw-fonts-2.0/urw-fonts-2.0.tar.bz2) = 374698eb9a7cd874c55f69f45faed7a68c5e850100fc2ba5aef48aaafe0cf95c95212c562805e3f51f6261297976bccde68f8c7ce80d40c21ee2dd6db12d06dc
 Size (urw-fonts-2.0/urw-fonts-2.0.tar.bz2) = 3763965 bytes
-SHA1 (urw-fonts-2.0/urw-symbol.tar.bz2) = 0c0367c4a3456bc8565afe38db580025a4661fc1
 RMD160 (urw-fonts-2.0/urw-symbol.tar.bz2) = ae19d73e3e4f510b18b4705d9be0e440aed9baa8
 SHA512 (urw-fonts-2.0/urw-symbol.tar.bz2) = d5876743d8d4b48083882955d97f01e534a867952fc6184e8220f93d9e0ce1d6d4a636867c76d2383b553dba1e967c798b773a47f67bd577afd25220cb2c5e9d
 Size (urw-fonts-2.0/urw-symbol.tar.bz2) = 33496 bytes

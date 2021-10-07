@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/05/26 01:46:04 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:04:10 nia Exp $
 
-SHA1 (Font-FreeType-0.16.tar.gz) = 38c9a9c9c0c26fd8f30b663a235cefdd7f6ec208
 RMD160 (Font-FreeType-0.16.tar.gz) = bfad512ecfcf32266f9326c9a5a472023438a7e2
 SHA512 (Font-FreeType-0.16.tar.gz) = f43d1ef5a40a7a4d108ff55f77d630cf324062d2af85e6691c445e0fa9fceb658bd105a000f887cd6e5d1f0b1edaa95b1245781783e714a1f3b628ac7a4489fd
 Size (Font-FreeType-0.16.tar.gz) = 239211 bytes

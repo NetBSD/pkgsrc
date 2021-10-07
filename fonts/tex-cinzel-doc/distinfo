@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/26 12:21:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:29 nia Exp $
 
-SHA1 (cinzel.doc.r54512.tar.xz) = e45c04abce838c9bdb5784b9fa2b6dd56e23c8b5
 RMD160 (cinzel.doc.r54512.tar.xz) = b63d4e8ae67d3a35b4229b8dc44aecaa23bc4e78
 SHA512 (cinzel.doc.r54512.tar.xz) = 8bebe9427e35fd55a2b1e11d924124605b2045aaa50c7ae15e78b8fcad2b50c0363686f6eb6ddc8bcf3f407a8afc983df5b6cc1d8e2c9713616d1110532364d1
 Size (cinzel.doc.r54512.tar.xz) = 39128 bytes

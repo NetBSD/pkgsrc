@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 22:28:56 uwe Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:04:05 nia Exp $
 
-SHA1 (jomolhari-alpha003c.zip) = 90d3d27b041029ccfc290d02f0047dd432aa6ace
 RMD160 (jomolhari-alpha003c.zip) = be14f64b1343a45c1c5abc689bbf5d9284953f0e
 SHA512 (jomolhari-alpha003c.zip) = d3dd179c84c5cfb5cdc4a82ea1356b594973ef056cbc8fa4e23e37f21573b138eded19ef7370803dbe796e80a0d2c72a0866eb9f36e4b511627c770a00e08270
 Size (jomolhari-alpha003c.zip) = 902618 bytes

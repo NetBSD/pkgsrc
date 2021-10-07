@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/12/11 13:18:19 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:03:49 nia Exp $
 
-SHA1 (Hack-3.003.tar.gz) = 114ca5525dd667559a424b7e38fc2e66f5b35671
 RMD160 (Hack-3.003.tar.gz) = 6b7d99126cd2d4b6f53af60e613f701bd5f1e6bd
 SHA512 (Hack-3.003.tar.gz) = e3b8369efd3f0df88c5ef314009be0f08c500c2ad597587883b766ee63614b0736de403fa790faa72b20997e8bcb1650326d1cdb67e7f430d694a27aefed0165
 Size (Hack-3.003.tar.gz) = 3455727 bytes

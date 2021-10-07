@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/01/27 00:59:48 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:05:17 nia Exp $
 
-SHA1 (tex-sourceserifpro-49120/sourceserifpro.tar.xz) = cee15284e558834d96a0210f293365a7cbbbcfea
 RMD160 (tex-sourceserifpro-49120/sourceserifpro.tar.xz) = 13d43f0bf0a443eaa37d70a00375112ef407cdd1
 SHA512 (tex-sourceserifpro-49120/sourceserifpro.tar.xz) = 71632ea780d5afbe61aa24e23a762329e207c2129783d2a8294a2a0f251a83e44239d1a01af5697b0499cb29f9f62c0d0eb6809a009c20fd4e3f8ea71bb9b859
 Size (tex-sourceserifpro-49120/sourceserifpro.tar.xz) = 3673396 bytes

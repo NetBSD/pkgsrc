@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/01/23 11:07:45 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:04:54 nia Exp $
 
-SHA1 (tex-ipaex-type1-47700/ipaex-type1.tar.xz) = 3f8ab852c920a9eef304077f4fb336a9794a7352
 RMD160 (tex-ipaex-type1-47700/ipaex-type1.tar.xz) = 813b75db52aa362550354d0f1f5987ef8bba4fe0
 SHA512 (tex-ipaex-type1-47700/ipaex-type1.tar.xz) = 5bbeceee2bbaa2748cd6ebf3954c598db8e7d72a04af75e0b6aad510cab9ccf0812c0daf17da8b11d5676eeea10ffee8af6f35eca063fe5784a8563803b7266f
 Size (tex-ipaex-type1-47700/ipaex-type1.tar.xz) = 13161616 bytes

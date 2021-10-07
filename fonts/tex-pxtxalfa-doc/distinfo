@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:19 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:05:14 nia Exp $
 
-SHA1 (pxtxalfa.doc.r54080.tar.xz) = 6d606fa2c52e136a9fc2316fe3956c2d2c9fc495
 RMD160 (pxtxalfa.doc.r54080.tar.xz) = 5c78a4ae975bb8c9427d7b2c1987f738d41963bf
 SHA512 (pxtxalfa.doc.r54080.tar.xz) = 0ed329847a91c8164883b873fc7a98cdb1571cc733d9d71ddd9bbe52b591a71b03cf0d6bfe83d63e41f6524e01f38a91c67d370c661e02816622dd56eacfd462
 Size (pxtxalfa.doc.r54080.tar.xz) = 36132 bytes

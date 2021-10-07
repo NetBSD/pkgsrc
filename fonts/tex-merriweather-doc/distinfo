@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/20 00:22:06 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:05:03 nia Exp $
 
-SHA1 (merriweather.doc.r56365.tar.xz) = 3fe77b6347bda63ebea057e5fd4bd6b581b96d59
 RMD160 (merriweather.doc.r56365.tar.xz) = d3ccf44472653fa6d0a31d23525beba763dcf286
 SHA512 (merriweather.doc.r56365.tar.xz) = d67a277eaa4e4783d9014ce5d8fe67f7c7cc17e04474150b1c5a9df13d894ef7ddecd599464a68aad95ac17393b1a3ed0bec6fcab5aee0b7c53c89c8674032fd
 Size (merriweather.doc.r56365.tar.xz) = 75472 bytes
