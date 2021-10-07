@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/08 13:23:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:51 nia Exp $
 
-SHA1 (simutrans-src-121-0.zip) = c7acc3fe1091a10cb3c14e5e5afc6bf8cc2ceed2
 RMD160 (simutrans-src-121-0.zip) = 49855f920f466ee85c7cf80f43dc623797f417bb
 SHA512 (simutrans-src-121-0.zip) = 4a4e232596e12169fe4e4c1a5c356e3b2d670c93aa3d5507576fccd0025607854a8cfe5bd184078783e2ef294bd6204dd790968f369dc4db08215ac3a22c815e
 Size (simutrans-src-121-0.zip) = 4154876 bytes

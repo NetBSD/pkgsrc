@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:56:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:27 nia Exp $
 
-SHA1 (fruit_21_linux.zip) = 7bb23a7871ab3d6e152631dab86051dbba615c57
 RMD160 (fruit_21_linux.zip) = 05fb30041ee85540769c1d0ed6a439caac0d8698
 SHA512 (fruit_21_linux.zip) = 80d80141ca3c2a4521b241a750bd237e0971b531bc4e8e89ae3bdcdbb1436b99b35e64f505b9a61413726744646b6b4ce126bcdb53b90adc727f88a50adee889
 Size (fruit_21_linux.zip) = 716762 bytes

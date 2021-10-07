@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:20 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:35 nia Exp $
 
-SHA1 (klickety-20.12.3.tar.xz) = 39a9f7057e1d0adb6c8f90bf62c3f09e587bb921
 RMD160 (klickety-20.12.3.tar.xz) = b86cf5035d7b141eec23bc5c0244394ea35f62ce
 SHA512 (klickety-20.12.3.tar.xz) = 6fd26ee6d83e70f01911c31b17fbf398f718a54d26997174792c75884d0cd97f935caf7b25730ef1a9f6f1bc6daa78396449c19412c07936e630b5a7d42bf9f5
 Size (klickety-20.12.3.tar.xz) = 1394852 bytes

@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.15 2019/12/21 23:40:43 joerg Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:07:13 nia Exp $
 
-SHA1 (asc/asc-2.6.1.0.tar.bz2) = 3731e8016143d3c83364f67f4ac7d8e7491b7a50
 RMD160 (asc/asc-2.6.1.0.tar.bz2) = f66fd672638c13661618b0e9a7e364a694793322
 SHA512 (asc/asc-2.6.1.0.tar.bz2) = 9bf6c8ef44e4f8df32335d6fda3d755e74065cfa36cfab913c7f5990cea0d7f7215642e290a0aa0eaa98417a0f19a971d17fd4b464dbece9f60880bd32daee2e
 Size (asc/asc-2.6.1.0.tar.bz2) = 42569531 bytes
-SHA1 (asc/frontiers.ogg) = 2c41ff90e6d8598e7efe7414cd61df0972720b71
 RMD160 (asc/frontiers.ogg) = d9180257b34871301d55ec4db37fab3d144ceecf
 SHA512 (asc/frontiers.ogg) = 8c2ce497519b3842fba2d39b5c6de6194584d64c0375d404535628898cb2e7a82433fc6008781381a80a6cbb24ff49162de3634ebcf28b17b0631c30668fd8af
 Size (asc/frontiers.ogg) = 4691844 bytes
-SHA1 (asc/machine_wars.ogg) = e889908b8d6e84a5df90be9ccc965074c6ed94b0
 RMD160 (asc/machine_wars.ogg) = 41da08dce0671329bb7bb16f52249f1baeaa1b49
 SHA512 (asc/machine_wars.ogg) = 2c1bab89b9397f52dcf7eedfc0dbc88d49a586ac0474c76a09a87a880712bf0fa408c03a65a5f5d322dee86e3b12cbc66d53cd6728e8fa34fa8f2ee2bbc06cd8
 Size (asc/machine_wars.ogg) = 3138308 bytes
-SHA1 (asc/time_to_strike.ogg) = 27f06d312a7a58aa853b46e3775d6fecd813d57a
 RMD160 (asc/time_to_strike.ogg) = 03f67601e729ba8cbdeb01b6e0b4317bbe10e435
 SHA512 (asc/time_to_strike.ogg) = 2ed946116cac2ea63d401eb7415d5b3e4e548bc5a5b00b01a6f1c4db6a242895810dfefdf1ace9652f01dc934a70b756aa74d01630cfac97b19ce84a93b772ee
 Size (asc/time_to_strike.ogg) = 3830679 bytes

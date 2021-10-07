@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/18 13:40:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:07:53 nia Exp $
 
-SHA1 (SuperTux-v0.6.2-Source.tar.gz) = 558c12db3b73ba48057e342adf6f32e7fdac9c78
 RMD160 (SuperTux-v0.6.2-Source.tar.gz) = 6ccc18343f32e41f832c96141bd26d0d19f11e95
 SHA512 (SuperTux-v0.6.2-Source.tar.gz) = 5baa783ee589b42a9bbce3740659dbb7b617ebfcc00c0a038c03d31b56700e3923c8548700ccebe42b325ca03bd85186bc5edef9f6580d93dc48d8aca88cbf74
 Size (SuperTux-v0.6.2-Source.tar.gz) = 174295862 bytes

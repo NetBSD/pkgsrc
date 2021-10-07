@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/03/09 09:39:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:56 nia Exp $
 
-SHA1 (unknown-horizons-2019.1.tar.gz) = 84480614147a84bfc275c546fc970542ebee9cac
 RMD160 (unknown-horizons-2019.1.tar.gz) = a502b658984e2c7ac5b4779c7db94efc311446fe
 SHA512 (unknown-horizons-2019.1.tar.gz) = 87ae37442ee0b80130c7a75c7eeb7c0ef6c50f3e6b2616db32e6381ace5068729ab7086edefc00eefd3b89e85f9a05fb6c4d05f2a2adc46fa928e5c2a29b72db
 Size (unknown-horizons-2019.1.tar.gz) = 266260509 bytes

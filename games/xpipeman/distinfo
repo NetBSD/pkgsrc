@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/01/30 18:42:47 rillig Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:08:01 nia Exp $
 
-SHA1 (xpipeman-1.5.tar.gz) = 065ec572f7be019737e2bb9ed131bc907c713cc5
 RMD160 (xpipeman-1.5.tar.gz) = 9668409dadf70bf5bf4a546a3340846191937c74
 SHA512 (xpipeman-1.5.tar.gz) = b4aaa1a55a32bff36d48cb181d447556b757b13647ccbb8d1654725e8fde0d15b6e5bbe23d822b9a9205103df99ee5d5683316754711fc8f8c6a9c7f8eedb973
 Size (xpipeman-1.5.tar.gz) = 42990 bytes

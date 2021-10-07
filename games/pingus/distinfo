@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/12/19 22:15:09 joerg Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:07:46 nia Exp $
 
-SHA1 (pingus-0.7.6.tar.gz) = c888c277995bed84052b62d0eacbd77d0346a276
 RMD160 (pingus-0.7.6.tar.gz) = e58ced4252caea3ca642a82a47468ed49eaa7851
 SHA512 (pingus-0.7.6.tar.gz) = ea0e7fd2cc1f6c23e62e222dffa1eb4764313ccecd716083c516fa4720c19562c9940da1dae4cbc527b85de9c0094f482e4f907212226b39ad044222b477769b
 Size (pingus-0.7.6.tar.gz) = 13410576 bytes

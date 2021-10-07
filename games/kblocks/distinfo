@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:18 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
 
-SHA1 (kblocks-20.12.3.tar.xz) = b9f42af54c9755768cc60b49873af71c07ce0915
 RMD160 (kblocks-20.12.3.tar.xz) = 0ed6fd6ca1fdca7a7808da8c958d9a336f4f401e
 SHA512 (kblocks-20.12.3.tar.xz) = ba5164af1bae348780b4ac284be0a696521671d258a26d0e2d7e401b995077d7b4c01fa0c3df4dbffdd6f79c617907e41b452b067d6d8861ffcbe5b68d5a2690
 Size (kblocks-20.12.3.tar.xz) = 1908420 bytes

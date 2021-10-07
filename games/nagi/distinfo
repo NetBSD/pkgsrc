@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 20:56:59 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:07:43 nia Exp $
 
-SHA1 (nagi_src_-_2002-11-14.tar.gz) = 3afeae70e78dd36a3d8b114212992318a8182372
 RMD160 (nagi_src_-_2002-11-14.tar.gz) = 0dbbb6895ba067d91d5afd3ba11c8f82aacf1488
 SHA512 (nagi_src_-_2002-11-14.tar.gz) = c8c09e23d779a373553b284fbe711e775f974e8c4284578fe331fbab31701a3379671c1b5d107d97d9f2128e24068c51076f1bf1cbf280c923ffa96950a4945a
 Size (nagi_src_-_2002-11-14.tar.gz) = 168462 bytes

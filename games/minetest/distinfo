@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/09/15 12:20:15 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:07:42 nia Exp $
 
-SHA1 (minetest-5.4.1/minetest-game.tar.gz) = 150361c436a65ef0f66186e1920ac27f4f969167
 RMD160 (minetest-5.4.1/minetest-game.tar.gz) = 8c4da408f34ad7a08eb9b4e00491ed4e3faf4990
 SHA512 (minetest-5.4.1/minetest-game.tar.gz) = c0c07eaa2d551c50807afa1ab52cf3b8bb695fca87ab96b0e10e3b2d709a0cf48b25b3b21022b8e7e5122e6e4a184e404cd3d132496028f57d0cf3326957899f
 Size (minetest-5.4.1/minetest-game.tar.gz) = 2474325 bytes
-SHA1 (minetest-5.4.1/minetest.tar.gz) = 9cb24bff8fb6cf52d007197cd86bafd0bbdaee8f
 RMD160 (minetest-5.4.1/minetest.tar.gz) = f3a04a0917358380917654e72bfca4baaf421274
 SHA512 (minetest-5.4.1/minetest.tar.gz) = 8f9985c6a658c868ed8971f112eae3c71c2b1535fd433689920be6d42ac2c7eb8453d58ec2825573764ee2f56b651c5e27895b7fd58fada61fbaf4758fc69471
 Size (minetest-5.4.1/minetest.tar.gz) = 11209289 bytes
