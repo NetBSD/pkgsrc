@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/09/07 11:33:19 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:25:34 nia Exp $
 
-SHA1 (Mail-Box-3.009.tar.gz) = 3542b9bd9e6142b12aeaf9187a2c20fc06e25d4f
 RMD160 (Mail-Box-3.009.tar.gz) = ae8e2a6d86f64261acdf397adb39b5adab55e446
 SHA512 (Mail-Box-3.009.tar.gz) = f9a90915adea21b2275d53df5d218968c120b53562ed397253babb77eda8e09ae90817655ce25dba2c282d6a2ff2053466cecfd53ec8e74f22196032a1c39e7a
 Size (Mail-Box-3.009.tar.gz) = 296059 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/02/22 10:27:00 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:25:41 nia Exp $
 
-SHA1 (pypolicyd-spf-2.0.2.tar.gz) = 58cd401a2b28a2784ed4645b927336ac439ae761
 RMD160 (pypolicyd-spf-2.0.2.tar.gz) = 389b979ada83cd8ec49794ff895a71085afda59f
 SHA512 (pypolicyd-spf-2.0.2.tar.gz) = adcc7b30c6922894f9407edd0637b02a138623f4480ec37635475396826b457c835b3ffb599d1985e306770fe5f72404552ed705bd957e63b5c54ca3d8991673
 Size (pypolicyd-spf-2.0.2.tar.gz) = 38546 bytes

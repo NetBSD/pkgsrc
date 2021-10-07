@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/10 08:41:56 spz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:25:39 nia Exp $
 
-SHA1 (postsrsd-1.11.tar.gz) = 664478941995a05166dc2bc73d744de48ecd8827
 RMD160 (postsrsd-1.11.tar.gz) = 8c94d4fdd5bc47566bcda83e968892204962e6a6
 SHA512 (postsrsd-1.11.tar.gz) = cc041bbbd0277dd416a19e427d63eace3489dc518ebe3a61a022b3e2e159bcb09731a0eb5547eb85bd55887821726b66e828326c109c2ebe26b27dbd062a8d89
 Size (postsrsd-1.11.tar.gz) = 36309 bytes

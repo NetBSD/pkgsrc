@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2020/03/11 19:20:36 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:25:13 nia Exp $
 
-SHA1 (cue-snap-20180813.tar.gz) = 927e03d9162f0c9bf2e5fda2bd53bb934262efc3
 RMD160 (cue-snap-20180813.tar.gz) = 0b6ab0346b36e1c12a87e3932e20ef948e41ddf0
 SHA512 (cue-snap-20180813.tar.gz) = 2d923d61e1b4f199d681d28115f9f00f32e1d6f5fb61a9d3d6d54b43533fba89342246a3004732f3dbabb20e322f1002700c5b3cc26d8e5687d3d11ad9454b81
 Size (cue-snap-20180813.tar.gz) = 260627 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/03/06 12:17:25 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:25:29 nia Exp $
 
-SHA1 (offlineimap-7.2.3.tar.gz) = b81565c423e03ec3541207bc21ae71bace3d4b01
 RMD160 (offlineimap-7.2.3.tar.gz) = 2af5d177a9d0ff70e152178afc61624859742dc3
 SHA512 (offlineimap-7.2.3.tar.gz) = a80601352c8029ca495d155f6f0a4d9f15d27193b5e8938ccddfbd9ff55f9bc8ee14c18c78a019dcbcab22dd0f6c00e3ee4fed13df1b766681d4eb08a93de921
 Size (offlineimap-7.2.3.tar.gz) = 721483 bytes

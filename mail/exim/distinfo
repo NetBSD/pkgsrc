@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.79 2021/05/04 20:29:38 abs Exp $
+$NetBSD: distinfo,v 1.80 2021/10/07 14:25:17 nia Exp $
 
-SHA1 (exim-4.94.2.tar.xz) = 4854541833583d82c6e667d3dde566d41162eec3
 RMD160 (exim-4.94.2.tar.xz) = 4de1b7cca08ccbcaf3987332d15cd1fbc6135c9b
 SHA512 (exim-4.94.2.tar.xz) = 5334c236221ed4e03dbc33e6a79d939b06037fa2f4b71971607a360b67af5c85a89681ee13a5eeaf0184382c55a160cf2e89ed7afb2949f025a54f1e88f9e3fc
 Size (exim-4.94.2.tar.xz) = 1838076 bytes

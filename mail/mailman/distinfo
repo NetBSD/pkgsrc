@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2020/08/26 18:40:35 wiz Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 14:25:24 nia Exp $
 
-SHA1 (mailman-2.1.34.tgz) = b2482720b6fc8740c2fe9ca4c6c703e550fa87d1
 RMD160 (mailman-2.1.34.tgz) = 348b42ad1aab5c42d2aff1ee8279cabfa0d1eb66
 SHA512 (mailman-2.1.34.tgz) = 34b8a2c1c335327ac899e6be71de020f80ec053823c9812c48609e97834f5a4b48939bbd640f8dff541c4189088199cae93818f77056e96c2318f565743a97bf
 Size (mailman-2.1.34.tgz) = 9414225 bytes

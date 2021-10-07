@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/03/08 06:57:26 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:40 nia Exp $
 
-SHA1 (aiosmtpd-1.4.2.tar.gz) = 7bfc975bf5529de9eedcbe2c23b62e65fced1b5a
 RMD160 (aiosmtpd-1.4.2.tar.gz) = 57e208c9d265ef8938218a4b7b2217ed5a6981af
 SHA512 (aiosmtpd-1.4.2.tar.gz) = b910ae4c00b52f59b9f2199b296a1b76caa7567cbcd2e27c73d4ec894e9b48cd8190090083ce33b87dc924c4394a6425506355951208af65b89a6c1abe371114
 Size (aiosmtpd-1.4.2.tar.gz) = 140630 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2020/03/22 21:07:30 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:25:36 nia Exp $
 
-SHA1 (MailTools-2.21.tar.gz) = 41738d2863b7faee5c8382b16879c58f7ad5ca4b
 RMD160 (MailTools-2.21.tar.gz) = d8520f09dbcfff48462cdc2cf1518c095d046ef4
 SHA512 (MailTools-2.21.tar.gz) = 70c7e5760691a1fc0a2812c48a632896db9bf719d3cb07a63c3a4456c5a365855c7f71c7436c84e5085374628f26ad31fcf13e74b3b7242911da59b7916065a0
 Size (MailTools-2.21.tar.gz) = 58013 bytes

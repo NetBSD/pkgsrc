@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/03/19 10:52:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:25:17 nia Exp $
 
-SHA1 (enma-1.2.0.tar.gz) = 91d3863dc144c8567d18744d8219b8d0049ebe75
 RMD160 (enma-1.2.0.tar.gz) = 80c38ba76d2a51a8703bbc3d2073dbd8aaa51f22
 SHA512 (enma-1.2.0.tar.gz) = f7829a0746aebd738424cd339032b27899e06ac3779993b59e967575ad4535ee5ea4b92d09cd5ddc54e3ce89b82f1b753e11edc3e334cf71d330dd33d5ef3b74
 Size (enma-1.2.0.tar.gz) = 411233 bytes

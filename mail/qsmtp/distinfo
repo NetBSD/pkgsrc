@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/10/10 10:01:38 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:43 nia Exp $
 
-SHA1 (Qsmtp-0.38.tar.xz) = 1e3e3fd605a8f691726b7967a78b1f2e94b2f9e4
 RMD160 (Qsmtp-0.38.tar.xz) = 8f9283b2f728782ace5586430b7982c305d8211d
 SHA512 (Qsmtp-0.38.tar.xz) = b1e5d3806eeb47488d91fff3dc60c88420bfa9edf77d2d68f51cdfea913c5c0298d13b9dd66a69100c9a9d1d4b7b1abadac11b253192b029329a13e77f895296
 Size (Qsmtp-0.38.tar.xz) = 252632 bytes
