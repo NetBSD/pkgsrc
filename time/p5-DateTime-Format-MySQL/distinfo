@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/05/29 01:32:22 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:04:02 nia Exp $
 
-SHA1 (DateTime-Format-MySQL-0.0701.tar.gz) = 9a16ecf2a5791d91290b90707b57db1bd9765770
 RMD160 (DateTime-Format-MySQL-0.0701.tar.gz) = 81451b705ca2f3fdfbd083c5431f4c667b94cf9c
 SHA512 (DateTime-Format-MySQL-0.0701.tar.gz) = 74cbe1dcf6d708c643b24eb25f837f56715fee6685a1071bce9e5e5114347155018b8c14247233910bd6e6208996532962b93cc024a816fbeb37a41116a6265c
 Size (DateTime-Format-MySQL-0.0701.tar.gz) = 13817 bytes

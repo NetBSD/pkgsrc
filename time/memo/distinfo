@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/09/15 16:25:22 khorben Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:03:59 nia Exp $
 
-SHA1 (memo-0.6.tar.gz) = 709b5aafdccf7dd0dca72714b24a7c4b2aa93291
 RMD160 (memo-0.6.tar.gz) = 448f2c7c654dd50bc31955aad7657545eca543bd
 SHA512 (memo-0.6.tar.gz) = bfdf09a7dbc86ce5f321f658bae39042f6f7d0abaa3ab1c6e2d8ad913e50aa1cd3c454b1042cda70a04e376620c20ca25eabebee819b644fda05e17e1662bc8c
 Size (memo-0.6.tar.gz) = 16283 bytes

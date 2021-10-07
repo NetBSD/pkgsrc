@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2016/03/30 09:46:37 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:03:54 nia Exp $
 
-SHA1 (dclock.shar.Z) = 1e9dac79e11f7075fd216e90d45218f499c9b035
 RMD160 (dclock.shar.Z) = 772bded334477537f39f2a492d0bea69afff71a8
 SHA512 (dclock.shar.Z) = cd2c8f3fbd68dd99c9029c24a8580b1f6fe505458b4a0878a7bff78e84a2f764ee9b258d18425d9298184d6933d55c0e384510bffc09b7b0db9fca2a0ea64de8
 Size (dclock.shar.Z) = 23855 bytes
