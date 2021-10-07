@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 03:57:31 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:05:20 nia Exp $
 
-SHA1 (tex-tex-gyre-math-41264/tex-gyre-math.doc.tar.xz) = 7b1927ebebc89a267ef6e5f2e40df089e087d03c
 RMD160 (tex-tex-gyre-math-41264/tex-gyre-math.doc.tar.xz) = ef72753598a9e2e532ed2fca579495259224fa13
 SHA512 (tex-tex-gyre-math-41264/tex-gyre-math.doc.tar.xz) = 25f38b7b16c565aecb043efe0a7d6d52fc034378241867937007a7b430801fb6ec079ca0ffc80a6a6a6c4ea5143a092d7568892e6a31df32029fb4e227ed15d7
 Size (tex-tex-gyre-math-41264/tex-gyre-math.doc.tar.xz) = 436052 bytes

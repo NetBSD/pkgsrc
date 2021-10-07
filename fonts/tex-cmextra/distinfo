@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/03 06:20:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:31 nia Exp $
 
-SHA1 (cmextra.r57866.tar.xz) = bd97fd938ad5f95026d84fe0705805c2c98c5f1c
 RMD160 (cmextra.r57866.tar.xz) = 5c6d0cab0b6406311134c12f76c51a05b299abf8
 SHA512 (cmextra.r57866.tar.xz) = fa6bd1e79ca96500080405e01a7524a6fd13358335d34b3e2983a7f33f7b7a50ff4106ee5f2f483f3e040a3a7135b4133d727c6a7cb0c90f63be40e5410e3b48
 Size (cmextra.r57866.tar.xz) = 21740 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:11 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:14 nia Exp $
 
-SHA1 (adforn.r54512.tar.xz) = 60700fbcf83ad96d62e7d5ceb07908763864ba7b
 RMD160 (adforn.r54512.tar.xz) = 0584eaa133c8c9d17e18ceb9c05b7f697777b8f7
 SHA512 (adforn.r54512.tar.xz) = 7a4a4da6c72ff2f8ab4b2a9a5e92887306a8e2aee4bcc5a93c18bf41d1bf9c05bd23fd6401bda054994aafa8d6002dbc16d8483b951acb705cd46fda08aaf060
 Size (adforn.r54512.tar.xz) = 36500 bytes

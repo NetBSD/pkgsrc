@@ -1,38 +1,29 @@
-$NetBSD: distinfo,v 1.4 2017/04/10 13:23:49 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:09 nia Exp $
 
-SHA1 (noto-ttf-20170410/Noto-hinted.zip) = 34f475c1817ef4254f9728430c7a9d5f10bd2f11
 RMD160 (noto-ttf-20170410/Noto-hinted.zip) = fb1e4fac109695c4ed6417cbd9bb7336510891f8
 SHA512 (noto-ttf-20170410/Noto-hinted.zip) = 4a8b1d09220e32721edec1177027137d04364a0c844cb9b96a0dbe6c0842883bfd70d5675d8f3efbc0a7db651800c32c12a59e0aaada1b96e3294431d1530845
 Size (noto-ttf-20170410/Noto-hinted.zip) = 499786749 bytes
-SHA1 (noto-ttf-20170410/NotoSansCJKjp-hinted.zip) = 97e5cb43715dc63bd84468f8db2be61f867c5c1f
 RMD160 (noto-ttf-20170410/NotoSansCJKjp-hinted.zip) = 2bf46077f58afbcc4e9cc75f31763527f9995b57
 SHA512 (noto-ttf-20170410/NotoSansCJKjp-hinted.zip) = f0fd28c088666fa61825258a90c16d9144a3f736c05c60656f90fbd271716a326109a3c97303edeb7b045099c8f53cd8b5aaa767ff424b29eb363d779dd21a4b
 Size (noto-ttf-20170410/NotoSansCJKjp-hinted.zip) = 121096788 bytes
-SHA1 (noto-ttf-20170410/NotoSansCJKkr-hinted.zip) = c64c456c46edb4a53574b0dc633d6c7c0fe4bf48
 RMD160 (noto-ttf-20170410/NotoSansCJKkr-hinted.zip) = 051b98d98843f651fe758a643c9d1c7ef087c21b
 SHA512 (noto-ttf-20170410/NotoSansCJKkr-hinted.zip) = 757c9629319e97d60fa9e7ed7162f167c1b55c21a3e2af35e2de0b9cbfbb153e75cdd9b5908e61a374e53da9ce43aa6a133bc018824e07787c8e54a32c8288a6
 Size (noto-ttf-20170410/NotoSansCJKkr-hinted.zip) = 121163997 bytes
-SHA1 (noto-ttf-20170410/NotoSansCJKsc-hinted.zip) = 46ab99f0b5f0132e52af12e3e3bb7eef6d6b0ef4
 RMD160 (noto-ttf-20170410/NotoSansCJKsc-hinted.zip) = f1c267b4563123977d78a80a486d0587fdd1332c
 SHA512 (noto-ttf-20170410/NotoSansCJKsc-hinted.zip) = 5323043e3b80a9e3a08bd2c9e78bbaa3e0da1da3c26e4ed54c6517c966d93370f2341158fa0c44794f42a579678e506443f06167085199fa575c52320cb179fe
 Size (noto-ttf-20170410/NotoSansCJKsc-hinted.zip) = 121063638 bytes
-SHA1 (noto-ttf-20170410/NotoSansCJKtc-hinted.zip) = 12ff42aa640d8d451715012ab6399292b31e71a0
 RMD160 (noto-ttf-20170410/NotoSansCJKtc-hinted.zip) = acdddf1fbc93da23128920f3b3deaad2db54ebd0
 SHA512 (noto-ttf-20170410/NotoSansCJKtc-hinted.zip) = 985621315a20f44d888905e2c96ca3384a8064e034bf25b24fce1fcd161d1e87e4d196aa72dc949d471732729c7214f14051d795b3def14f213761f19b3d965b
 Size (noto-ttf-20170410/NotoSansCJKtc-hinted.zip) = 121247382 bytes
-SHA1 (noto-ttf-20170410/NotoSerifCJKjp-hinted.zip) = aecca88079f315845bd6d6ba6c0231c93ff01a20
 RMD160 (noto-ttf-20170410/NotoSerifCJKjp-hinted.zip) = ab080efcf5b98363d65e89aeba2f516ce9d7d1d1
 SHA512 (noto-ttf-20170410/NotoSerifCJKjp-hinted.zip) = 39c24acad67df6729c01b51ffbdf949895084c4683c8dae699d38803364d615dce565fcdbc1442823a1111ef22ee080315e9cc8fa508d27613688aee778be315
 Size (noto-ttf-20170410/NotoSerifCJKjp-hinted.zip) = 130358543 bytes
-SHA1 (noto-ttf-20170410/NotoSerifCJKkr-hinted.zip) = 7be6b6c3db9030813998f53145ab63e19faaa746
 RMD160 (noto-ttf-20170410/NotoSerifCJKkr-hinted.zip) = f62f3da5fea968f0eaf0ba63d92c88dc90797f2b
 SHA512 (noto-ttf-20170410/NotoSerifCJKkr-hinted.zip) = 417db2060037f87d948a1f3684fec633c7a3018b8949723f3266599308941aae1f936496a0a38b0fd4b4e6f775ebdb1f4132995bb6d57f676db56c3d91f3740a
 Size (noto-ttf-20170410/NotoSerifCJKkr-hinted.zip) = 130214488 bytes
-SHA1 (noto-ttf-20170410/NotoSerifCJKsc-hinted.zip) = 4ed301f9c1e1858e884a3ed469919b4144bba4a9
 RMD160 (noto-ttf-20170410/NotoSerifCJKsc-hinted.zip) = c8a99a492d0d4b6618b7eedb3e8c8feb4be20764
 SHA512 (noto-ttf-20170410/NotoSerifCJKsc-hinted.zip) = 457b245e3ee2f88cfdd43b7a2c85bb9c72d471ff2fbf02fd7e2e13e290f3751380f4ed1312864f0131c1bb42d8156d3151d17fce4b67164332cd714a4be532c3
 Size (noto-ttf-20170410/NotoSerifCJKsc-hinted.zip) = 130325901 bytes
-SHA1 (noto-ttf-20170410/NotoSerifCJKtc-hinted.zip) = 4d0b3217f43e782c5a89182388168c7673d7d19d
 RMD160 (noto-ttf-20170410/NotoSerifCJKtc-hinted.zip) = cb55bed4a4bed6b1fffe9b3c7073c5d6c2f65bc8
 SHA512 (noto-ttf-20170410/NotoSerifCJKtc-hinted.zip) = 40f756b440c3531a58ff33faa3a05402a7e2ddf4c98f9a37b7eb5c8a76be23147d345c1adf1b3751d570e790ecccbd5275ffcb2cae8de3ef221fb5694fb786af
 Size (noto-ttf-20170410/NotoSerifCJKtc-hinted.zip) = 130361945 bytes

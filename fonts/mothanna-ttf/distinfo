@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:04:09 nia Exp $
 
-SHA1 (Mothanna-0.02.tar.gz) = c55b736c372c495b5b530466a3130765ff9a2038
 RMD160 (Mothanna-0.02.tar.gz) = c16dd37b1b073750ba42ba9b63ee45e4cf1df811
 SHA512 (Mothanna-0.02.tar.gz) = 0c453850a9bffb3c30a84fb0cf5fde12cf03031dee92597cb7abbb48629d479535853d46befabebe4f2e75ac407368354dcadf2fe98d6487eb17482af6b4e462
 Size (Mothanna-0.02.tar.gz) = 111104 bytes

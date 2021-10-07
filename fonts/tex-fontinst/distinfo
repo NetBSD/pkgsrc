@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:14 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:04:46 nia Exp $
 
-SHA1 (fontinst.r53562.tar.xz) = 135d457d5452d72eca7451b6defd563ed6a11ecb
 RMD160 (fontinst.r53562.tar.xz) = b75116b4b9430e17f25adefb066c73a0eac42c91
 SHA512 (fontinst.r53562.tar.xz) = 1703570199fbc41d589817f83b5782bef5552030ab54646d464423f0788b1f2f3a5017a92846de55ee696b4ccbe1d46b2220382f7446ac7cafc9970c58d1b5ba
 Size (fontinst.r53562.tar.xz) = 85736 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/26 12:21:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:34 nia Exp $
 
-SHA1 (countriesofeurope.doc.r54512.tar.xz) = 460d2fdd876e7439ef15db09a27ab9ee0d191349
 RMD160 (countriesofeurope.doc.r54512.tar.xz) = 979a7cfc340154a40ff2325f3580679cd5e1d4be
 SHA512 (countriesofeurope.doc.r54512.tar.xz) = e99ac6f4b57a2aed80cfd1214da7625ae94336677f0cfa0306125b06054835c2c3b23ac901cc3f421d56e4d021dd468db12e21acd6b3883c8b937919dbda056a
 Size (countriesofeurope.doc.r54512.tar.xz) = 103320 bytes

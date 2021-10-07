@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/04/26 12:21:16 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:04:58 nia Exp $
 
-SHA1 (libertine.r54583.tar.xz) = ec2cf1314bdc27417cbf0990f421346bb1c91aca
 RMD160 (libertine.r54583.tar.xz) = f83cf6cbad466a4a8c34b5f53cb1de7b1e88150a
 SHA512 (libertine.r54583.tar.xz) = b4c3a52caa463b8968862de7c9442da09af1bad572b4f59a31cd349948365fc04a190f876b99dca61cffeaa57faf26658c1e44bca6e27ea03024fd50fb665d5b
 Size (libertine.r54583.tar.xz) = 13946168 bytes

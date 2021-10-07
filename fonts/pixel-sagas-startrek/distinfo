@@ -1,42 +1,32 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:04:11 nia Exp $
 
-SHA1 (PS_Font_Fontana.zip) = 231e24e3f618a98be36b185873b709b024c4497d
 RMD160 (PS_Font_Fontana.zip) = 4057fb90ceca3fafa5a7d34d9cbc56f410068a2c
 SHA512 (PS_Font_Fontana.zip) = 05d8e916e982f00351ed0fc45d1f6a416e30f48f876ddff191458677a295302999929cb01019e95211bd06a3e7f9103c732f622a99d2e4e007d3370a4a91c5a3
 Size (PS_Font_Fontana.zip) = 43295 bytes
-SHA1 (PS_Font_Jefferies.zip) = 1f7c2b92060535c5c025271c96491a4a053dda19
 RMD160 (PS_Font_Jefferies.zip) = a25d6e65b4915f40e47addd0a5406d97f780a2ca
 SHA512 (PS_Font_Jefferies.zip) = d68f9f50b9b4c8afa61c8e4f8dba159fa569f0199976da4e7b8fd0e03d00a71870a176c5c58ad5f59036ce23cb366ae0c7c0024f9651a34e3f4973c6df900a2b
 Size (PS_Font_Jefferies.zip) = 38705 bytes
-SHA1 (PS_Font_Montalban.zip) = 72f7d8418065a3f8e007d419d6af2e3589b794cf
 RMD160 (PS_Font_Montalban.zip) = f568f3d781980857cf8c35c88eb7dcdf44ccb743
 SHA512 (PS_Font_Montalban.zip) = f561f1dd628174b727644c961a9fbb03d8e962c323b04bd3183d45b2415200a45ff71f20a03dbc88f73263baaf6d4f4435ae1676df8702c48639f78f620f54e6
 Size (PS_Font_Montalban.zip) = 44884 bytes
-SHA1 (PS_Font_Okuda.zip) = 3fd7192995884f3eb2ee8b71c3b21fcf8fcf864a
 RMD160 (PS_Font_Okuda.zip) = e464b88588481c87ad241811216e7b2329e0f0b4
 SHA512 (PS_Font_Okuda.zip) = e3df1c22d078160f951a8ad5d714a2cf10d29cb63bce37c6f05ae0b0587cf9303b718b378460fb8f2543e220bc2e4c166f00379bfe04bcf92bcc4f0116f15f74
 Size (PS_Font_Okuda.zip) = 46446 bytes
-SHA1 (PS_Font_Probert.zip) = afa2df478eb69bd3841207eac29aad132d3598af
 RMD160 (PS_Font_Probert.zip) = 2b47ef2b267699a62aaaae5e2596f326e934669b
 SHA512 (PS_Font_Probert.zip) = 557f6e3961cc57a1072f24d54ef0f6079032adfe613d7fd20eb5dd21be47cda9f6889f1403fc0d3725bf41dbfe701dbbab55a8a0b9ae66d2968218df323c355d
 Size (PS_Font_Probert.zip) = 74185 bytes
-SHA1 (PS_Font_Roddenberry.zip) = 91e96f0d8c40030f595ff2ed00342c20a6895a34
 RMD160 (PS_Font_Roddenberry.zip) = c4f90de9db31126bf367fc953f3b5e70348fde40
 SHA512 (PS_Font_Roddenberry.zip) = 4d39db241f93ac1b3d9168426b30fbf20f01837ff7117f8507b49a56a29b9880db82633e1cc82e06610b13cac2c14bc66d69b5c2456bd5a4d28c75dcc199988e
 Size (PS_Font_Roddenberry.zip) = 22965 bytes
-SHA1 (PS_Font_Sternbach.zip) = 1afbfe98ca8371985939a3d0a2289fd5688ca05f
 RMD160 (PS_Font_Sternbach.zip) = 75f086215241f0c260b2c61b690ac9a8a884819f
 SHA512 (PS_Font_Sternbach.zip) = ceaf7ea1723598c5694ea91a9ec6f2a0ef19868e9bfe22be8d6df86d331d5ec5ab34b4d7b2906d5656a773cf8871062cd78be21d86491768b95340e2dc1678a6
 Size (PS_Font_Sternbach.zip) = 55095 bytes
-SHA1 (PS_Font_Tellarite.zip) = afb35912303f8f12f36f0e54728c3764731136f8
 RMD160 (PS_Font_Tellarite.zip) = dcc853b60dd60f6a36377ec126b04b46861b6f59
 SHA512 (PS_Font_Tellarite.zip) = a0f98234491f903f632f5170ddcd57b366ef5c720e600d4f29e682a50a72b94a37c9a4520708d0cbf3bdffb49179faa3351ef8d28e59365c74ca08c1539ba736
 Size (PS_Font_Tellarite.zip) = 5672 bytes
-SHA1 (PS_Font_Trek_Arrowcaps.zip) = 3f81f701a415b2445d9fb1aa8e477034df1cbd2a
 RMD160 (PS_Font_Trek_Arrowcaps.zip) = aefa0294aa6b6e8526d0e26397dda0233fb29ddf
 SHA512 (PS_Font_Trek_Arrowcaps.zip) = 9c12cf4852203a08b600ccffe24412a872baf7b6f0b84b52ac3ebcd44a6403c08a4e44802d26cafb09ad3e3bd1c4a5148b63bfd76fa2ca9da39f2279302fef26
 Size (PS_Font_Trek_Arrowcaps.zip) = 5748 bytes
-SHA1 (PS_Font_Trek_Arrowheads.zip) = 89a7b33e477a781a94324795a4b9d1437cd847e9
 RMD160 (PS_Font_Trek_Arrowheads.zip) = a1e9349e2947d69cc7baa4cc37cd023a5b211a46
 SHA512 (PS_Font_Trek_Arrowheads.zip) = bf35e3084e652a8e9dda5af797a389cc74af8dc51e8cba4c8d5f20ddeccfe50c187d319a3d59894fb2fb5f5fdd665b9c81f4b54251f12b4ae4158eb914b6c04f
 Size (PS_Font_Trek_Arrowheads.zip) = 9067 bytes
