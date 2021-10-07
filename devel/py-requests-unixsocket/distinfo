@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/18 13:15:36 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:41 nia Exp $
 
-SHA1 (requests-unixsocket-0.2.0.tar.gz) = d6529e8a50538cca626abf8f88dc2a1cda25a0e6
 RMD160 (requests-unixsocket-0.2.0.tar.gz) = 734f57911c70bf75fb8c33378340154bc51a1251
 SHA512 (requests-unixsocket-0.2.0.tar.gz) = a670f136ff1d8fb427cd017d92d388fd48a8a853d50aaa6eed685f3b453e28c6dbf5a710d7394face3eec42f8bdd84f798c7c4c82dab7b53d7a8c229ade52405
 Size (requests-unixsocket-0.2.0.tar.gz) = 13303 bytes

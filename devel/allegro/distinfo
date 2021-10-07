@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2019/06/18 17:38:18 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 13:39:07 nia Exp $
 
-SHA1 (allegro-4.4.3.1.tar.gz) = f778102e8418398f44585bbd22a148667266453f
 RMD160 (allegro-4.4.3.1.tar.gz) = 964f4dcb984e012915c08a6b6574e5a1e667e57e
 SHA512 (allegro-4.4.3.1.tar.gz) = c5a552ab710226493447eb2547b3d7559badb96f511fbefd315b665b7486013a6710c83b69363eb09f90f53ef4278fe7b90cfee88d90d88f0fe8dc7df7606729
 Size (allegro-4.4.3.1.tar.gz) = 4663634 bytes

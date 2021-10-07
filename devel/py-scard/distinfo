@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/08/17 07:00:58 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:43 nia Exp $
 
-SHA1 (pyscard-1.9.9.tar.gz) = 991dd0f413acc6c6ce9627c53091947c349ab243
 RMD160 (pyscard-1.9.9.tar.gz) = 292afdfc11843175f020ab6da870780b61c407f7
 SHA512 (pyscard-1.9.9.tar.gz) = 88c7314c10153f509eb9bf6318e62210c7182e51b531af752a402bf8d05cfa2658cc1a4e7b9385a474038ddfa5a1bfbf1f208fcd9abe02a60161ce7c757c67b2
 Size (pyscard-1.9.9.tar.gz) = 145428 bytes

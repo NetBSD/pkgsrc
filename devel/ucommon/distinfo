@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/01/13 18:21:24 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:44:39 nia Exp $
 
-SHA1 (ucommon-7.0.0.tar.gz) = 1317c89c4f53b38059a193c75291283606eb9c26
 RMD160 (ucommon-7.0.0.tar.gz) = 7af41f1dc3d965ac165cce56f19164aa18482f24
 SHA512 (ucommon-7.0.0.tar.gz) = d32f8603d920eb98b5d4bc75224a7a8bb8bf2001a8dd3152626a8438ea4c39503a7446dec3aa90cf464b7abb68a6e42bac488ef9705517bd333b64bce219915b
 Size (ucommon-7.0.0.tar.gz) = 837905 bytes

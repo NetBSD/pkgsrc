@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/11/29 18:06:56 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:40:36 nia Exp $
 
-SHA1 (ninja-1.10.2.tar.gz) = 8d2e8c1c070c27fb9dc46b4a6345bbb1de7ccbaf
 RMD160 (ninja-1.10.2.tar.gz) = 1346989347fbb47b7211c1a49d5f9236f3027488
 SHA512 (ninja-1.10.2.tar.gz) = 895412ae1cbc83c656e92f282602a29300e08274e9dea0da4464202ae556e7a1ab03bec057f23da4756bbd91bd2d744cd7a64b336740fd2782bb4db5c3b7b496
 Size (ninja-1.10.2.tar.gz) = 213959 bytes

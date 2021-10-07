@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/06/10 08:08:56 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:58 nia Exp $
 
-SHA1 (backcall-0.2.0.tar.gz) = 5bc62d540af1534f23560c0c32aac1e129518cd5
 RMD160 (backcall-0.2.0.tar.gz) = 7d42ca6b0199ab946ad86c30fc799d3a9e6c5f1e
 SHA512 (backcall-0.2.0.tar.gz) = 7f086121c485c0ea4bc6935e7d116c8b14ff44ff6001a49665d0a698b6cf9a809823b9bca634a78d92cf40656f953dbac0132241327a5fa6be0ea685ff63636e
 Size (backcall-0.2.0.tar.gz) = 18041 bytes

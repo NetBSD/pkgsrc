@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/16 17:08:53 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:09 nia Exp $
 
-SHA1 (falcon-2.0.0.tar.gz) = 04cc91d672ab40c229002862e1c4be091acb91ad
 RMD160 (falcon-2.0.0.tar.gz) = 27954bce1bc1651056c4bd3dbb2af6610fea069a
 SHA512 (falcon-2.0.0.tar.gz) = 1b821d96452208dcfbaa978ecc9340b0b531878aeb362a5b27668fea5f354315275afc7c2ba3012b2cf86c8e32b52d10c932bcf2cc91789a1b4f5a458da5078b
 Size (falcon-2.0.0.tar.gz) = 397801 bytes

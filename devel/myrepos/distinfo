@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/07/26 09:34:27 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:35 nia Exp $
 
-SHA1 (myrepos_1.20180726.tar.xz) = 179b646fceef652af959a31f819ca5e5e484d7cb
 RMD160 (myrepos_1.20180726.tar.xz) = 68d0966f8c4ffcc2c371a1087aabf36d20f03ae3
 SHA512 (myrepos_1.20180726.tar.xz) = 0dfc6b23a4f972186eb163a6a6f932ce0233993db0440caa4df7b5239d21ee4e9c674ec63ea4374c55b2ebd32d93bba8ef12b0d2e85b1bf2505a54ed6c6ed6aa
 Size (myrepos_1.20180726.tar.xz) = 60388 bytes

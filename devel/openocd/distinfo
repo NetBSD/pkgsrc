@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/06 21:15:38 tnn Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:40:52 nia Exp $
 
-SHA1 (openocd-0.11.0.tar.bz2) = 8d454145a8c22eb9d837ab3ba08dcef06cd10473
 RMD160 (openocd-0.11.0.tar.bz2) = d1e09011ef5e9171529b550b0e90468da178425d
 SHA512 (openocd-0.11.0.tar.bz2) = 4c8d880945083a05a3781b3fe2a39e4055df635faab1cacd78ca51ced75c9a478f4e16e6c6fa35ac117e2e4d6453cdd19818f1d27aae6edf1bda8c0e846d0de8
 Size (openocd-0.11.0.tar.bz2) = 5699972 bytes

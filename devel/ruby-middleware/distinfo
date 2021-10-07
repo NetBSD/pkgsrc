@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/18 16:11:01 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:44:14 nia Exp $
 
-SHA1 (middleware-0.1.0.gem) = f7f08a36dbf5c531b7110ad222ad34e81981dc61
 RMD160 (middleware-0.1.0.gem) = 6b5387978c28b97b1eeab467827f8169649ba429
 SHA512 (middleware-0.1.0.gem) = a485c254accefb915a56a6aaebb0bf5fa8520e5aefb1dca9945f4402fd6fb28cd69b34692d5d276f2f025c6f919d983acba44ef0ad9d8966fc571f7cfd64da12
 Size (middleware-0.1.0.gem) = 11264 bytes

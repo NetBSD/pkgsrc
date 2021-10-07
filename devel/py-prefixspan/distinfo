@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/08/28 08:20:37 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:27 nia Exp $
 
-SHA1 (prefixspan-0.5.2.tar.gz) = 1d446b782c532903090eaae3969ae97a71c2f9a8
 RMD160 (prefixspan-0.5.2.tar.gz) = 7f11eea6f3339aa52ce078405be183213273db01
 SHA512 (prefixspan-0.5.2.tar.gz) = 11ed5cbde71f58cd4d52fa4d8a375b1f669f5cf613551a6dacd2b4b4817c3c59001119258d845c2d13589b23924154466b773919b80c68f2f1afaef83387363b
 Size (prefixspan-0.5.2.tar.gz) = 10404 bytes

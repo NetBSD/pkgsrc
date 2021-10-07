@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/08/09 11:36:36 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:47 nia Exp $
 
-SHA1 (Menlo-1.9019.tar.gz) = 68acd425802f5e635581e1dd46c28c77d4b93551
 RMD160 (Menlo-1.9019.tar.gz) = 6ca0a29c4d97ca43921ec2b58f0e11baf4779d4a
 SHA512 (Menlo-1.9019.tar.gz) = 6b541a94f01c56154b104d3d4ed9607389c489996f355bf7138805d66abeaa7423cadf0cb33ec9046ee80e516a96296dd12b26e70d133ee83fa9eeb587acf5be
 Size (Menlo-1.9019.tar.gz) = 37558 bytes

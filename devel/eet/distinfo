@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/04/20 13:19:38 joerg Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:39:29 nia Exp $
 
-SHA1 (eet-1.7.10.tar.bz2) = 3ca915debfb9f563785424485b0f5c74d6caa0da
 RMD160 (eet-1.7.10.tar.bz2) = c748ab6f2d088f05657f87f3c6b77b1d0e527067
 SHA512 (eet-1.7.10.tar.bz2) = 4e4cee77ed8ece65f482ab2535ffc033d06837e8e9f8d109c9ea90eeeaa07f2cac0519a563bd715c7442837b703d55b18222535bd06d9a1c0319dfec2966e1f8
 Size (eet-1.7.10.tar.bz2) = 573420 bytes

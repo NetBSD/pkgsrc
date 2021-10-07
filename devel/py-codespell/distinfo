@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/30 07:55:58 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:03 nia Exp $
 
-SHA1 (codespell-2.1.0.tar.gz) = 864291779befb5fdd777e8141f6fabf13524ea59
 RMD160 (codespell-2.1.0.tar.gz) = b67118583e6d84ef07075dc77d25eb34a68625f7
 SHA512 (codespell-2.1.0.tar.gz) = bdc96f3e99e06c7995d22822dadc1e48953ad16b6c8fd591199d1ddd024c3c88f9420be9c7c3dfbf5a8bd8922da85ca5e436310e162dced955affb1a8be3a8e1
 Size (codespell-2.1.0.tar.gz) = 185923 bytes

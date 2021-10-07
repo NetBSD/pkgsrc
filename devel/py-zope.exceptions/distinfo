@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/08/21 12:39:01 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:56 nia Exp $
 
-SHA1 (zope.exceptions-4.4.tar.gz) = 2efe7f0b9d678090042d59601b4ccc8e275ad094
 RMD160 (zope.exceptions-4.4.tar.gz) = bdb9053a6f2e5cbc1e11071379f8263eddac38a4
 SHA512 (zope.exceptions-4.4.tar.gz) = 6ef175271ad1d62b450533e4c7d8f7380ffac519be5c48be084be297ad21d21fd8be380d9b5e221a8dac6a4c792bab14abc707331415c2df88208cac9c34013e
 Size (zope.exceptions-4.4.tar.gz) = 28243 bytes

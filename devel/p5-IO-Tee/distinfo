@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/07 06:52:42 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:39 nia Exp $
 
-SHA1 (IO-Tee-0.66.tar.gz) = 048428f14f4d0486c8719fb5103153c73df8eb67
 RMD160 (IO-Tee-0.66.tar.gz) = 1e34f380cf43a8bd9b45346361e2ccd022d24941
 SHA512 (IO-Tee-0.66.tar.gz) = 0f651b043e8a503e5b5933fabbdc00df139bb16b5f4e3f8e135123c53ede78abd2d3df9e824c85e1443f883fc1026fb6ff97a8c511d46076630b890253567c75
 Size (IO-Tee-0.66.tar.gz) = 12883 bytes

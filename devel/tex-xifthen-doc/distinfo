@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 03:54:44 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:44:36 nia Exp $
 
-SHA1 (tex-xifthen-38929/xifthen.doc.tar.xz) = 87ac7c3e91fbe3a0bae55978fd8dba6bfa671c1d
 RMD160 (tex-xifthen-38929/xifthen.doc.tar.xz) = 27893b5eef6a1eb8978d561fe9612a40fc77d1bf
 SHA512 (tex-xifthen-38929/xifthen.doc.tar.xz) = 13a26a1c4b7ee41c45b7b2cf921d899e2287f1f1528c78650f3f766236aaef682b213c984e9e92f7eefc20bc456c2ef2659761722df2dcab913c2063b3ac5c00
 Size (tex-xifthen-38929/xifthen.doc.tar.xz) = 482660 bytes

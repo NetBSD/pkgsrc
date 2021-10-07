@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/01/02 07:47:17 wen Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:41:30 nia Exp $
 
-SHA1 (File-MimeInfo-0.30.tar.gz) = eed2f0d688f4d900db47e507472ac2faf9a8b456
 RMD160 (File-MimeInfo-0.30.tar.gz) = 0a60c026763f0a6f009b233e1013d4d6799118ea
 SHA512 (File-MimeInfo-0.30.tar.gz) = 44030d2e2be66cb67d4329f8f308bf114014c511fe965979600157d62deffd5c2f05fdf883cb02d98f00d5d0b77c56e252cd377a398461ec421fe7491cd544ec
 Size (File-MimeInfo-0.30.tar.gz) = 36132 bytes

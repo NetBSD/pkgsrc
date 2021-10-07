@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.56 2021/10/06 08:09:19 adam Exp $
+$NetBSD: distinfo,v 1.57 2021/10/07 13:42:52 nia Exp $
 
-SHA1 (protobuf-cpp-3.18.1.tar.gz) = ec0d156f35770c47148bc5059b55a65af8331e45
 RMD160 (protobuf-cpp-3.18.1.tar.gz) = 4d4afc8e61a662c24434d00f31b55922b71d93b4
 SHA512 (protobuf-cpp-3.18.1.tar.gz) = 524340259bf084a228b2a3bae9a45b7730fc75e4e523ec928f062a10eaea8b914638007037a1e04ec25db5d23f7d339850cf658b5611c54bde6cf12927651164
 Size (protobuf-cpp-3.18.1.tar.gz) = 4776202 bytes

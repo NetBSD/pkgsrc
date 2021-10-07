@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/09/09 06:53:31 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:41:02 nia Exp $
 
-SHA1 (Carp-1.50.tar.gz) = 309973bc0c27f7a186a307c0f243cac36101d229
 RMD160 (Carp-1.50.tar.gz) = aec90b85120c721edf7958ff912e6b4f1633e083
 SHA512 (Carp-1.50.tar.gz) = 624e5fe41492d1d5de840d56a648168f2e6066717efaa20d257b277219ea2cd3b73e5bc2bd46a3e37e060cb3e35b4cccc560bdd169c2e252e861d441e90df4b6
 Size (Carp-1.50.tar.gz) = 24894 bytes

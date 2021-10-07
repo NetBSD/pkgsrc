@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/04/01 20:27:20 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:44:43 nia Exp $
 
-SHA1 (zzuf-0.15.tar.gz) = 21541d54cec64750c2dd3366a73832e6f5250833
 RMD160 (zzuf-0.15.tar.gz) = 12052a511a789d18ee3af3428f6e69e3492452a0
 SHA512 (zzuf-0.15.tar.gz) = f5b26f630343d4e0d87705df26b2fa01059ea7ffd7a4970a353014f9e59bc31526edde675de6a4dab9372e39d762cfd180a38990e498f609a3c7ae7fe44ba487
 Size (zzuf-0.15.tar.gz) = 493559 bytes

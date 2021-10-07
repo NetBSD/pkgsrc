@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/09/06 22:32:29 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:41:07 nia Exp $
 
-SHA1 (Class-Tiny-1.008.tar.gz) = 5f34236cc7f41e6bbd37de274ca44e5f74c97450
 RMD160 (Class-Tiny-1.008.tar.gz) = c0d2c564ac5d30c64731b6d9b49f1a07117722aa
 SHA512 (Class-Tiny-1.008.tar.gz) = 908eb8547e01036ef361f0a8623d028b1e733ea003fc227788b9c18d0db544a70dbe47de18822f9699a19156f36eac73caeb4849d44eea14ada1128afdb7efbd
 Size (Class-Tiny-1.008.tar.gz) = 24657 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/07/20 14:40:36 maya Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:39:37 nia Exp $
 
-SHA1 (glade-3.36.0.tar.xz) = 2137c0945c602a865a2910736f3ff5cd442bc8ef
 RMD160 (glade-3.36.0.tar.xz) = 577ca6641931a066fc9d5cdcc083fc78c221fabc
 SHA512 (glade-3.36.0.tar.xz) = c984613ade26e3fe68a700a48cccadf5ac96eb716a6e90aad36f3de684faeb607d9aaf112d74a048cd33e222a02388ee6583ca915648486f0259cc805e16d243
 Size (glade-3.36.0.tar.xz) = 4466808 bytes

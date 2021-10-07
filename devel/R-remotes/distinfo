@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/12 01:43:34 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:02 nia Exp $
 
-SHA1 (R/remotes_2.4.0.tar.gz) = 5cb205d4e9075d942e66abcda90168678a611c56
 RMD160 (R/remotes_2.4.0.tar.gz) = 2abf1fc422d26baa22a31e5bb3bc647d4a637541
 SHA512 (R/remotes_2.4.0.tar.gz) = 699dee6d63aea2d65190fe63cd28199c394cac3e9dc8aacf8fc74e8fa62855fc1358831f2770ccd3e9feb79206bcdb9cbdfd93b91050231a0cb7e2fc6a1b2b38
 Size (R/remotes_2.4.0.tar.gz) = 149836 bytes

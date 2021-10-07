@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/09 11:21:46 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:09 nia Exp $
 
-SHA1 (libbsd-0.10.0.tar.xz) = 9cb8f0b717da13c8aa13b9f3f5f8105ee6e5ccb5
 RMD160 (libbsd-0.10.0.tar.xz) = 12ba2b56ce049a1bae5212435fdd17635f1de6ce
 SHA512 (libbsd-0.10.0.tar.xz) = b75529785b16c93d31401187f8a58258fbebe565dac071c8311775c913af989f62cd29d5ce2651af3ea6221cffd31cf04826577d3e546ab9ca14340f297777b9
 Size (libbsd-0.10.0.tar.xz) = 393576 bytes

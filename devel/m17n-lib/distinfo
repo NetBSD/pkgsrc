@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2018/05/11 09:33:26 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:40:32 nia Exp $
 
-SHA1 (m17n-lib-1.8.0.tar.gz) = 298923e2f7f6b8763769b74c8b2da8fe4d13ecce
 RMD160 (m17n-lib-1.8.0.tar.gz) = c62706566c32d830ae2993c93af61377ad948758
 SHA512 (m17n-lib-1.8.0.tar.gz) = 8aba862888393232172c03cdf52531e29ea969c4327e6f69879ecf7438eafee32782f509ec292b3e1b7cd3202e2764984d7a59e85cdb87a7c8bfcbac5b0ee6fd
 Size (m17n-lib-1.8.0.tar.gz) = 1091731 bytes

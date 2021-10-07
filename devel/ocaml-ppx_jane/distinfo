@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 14:10:26 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:46 nia Exp $
 
-SHA1 (ppx_jane-0.13.0.tar.gz) = 7693d8029636309aed37b6bd3a7474538ce8277f
 RMD160 (ppx_jane-0.13.0.tar.gz) = 61cfad9ebff014817c04bb175ececfebe7bb7619
 SHA512 (ppx_jane-0.13.0.tar.gz) = bfd04fa60573a988dcd28554d54ece8a48a8d72fe5ec363a1bebc147ec5ae1f8fb81eaa9bf89e9e3eddec78747fb3581e5d3375c875dc55cab5e2946d4161642
 Size (ppx_jane-0.13.0.tar.gz) = 3648 bytes

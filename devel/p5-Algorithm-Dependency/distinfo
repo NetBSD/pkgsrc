@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/05/04 02:13:54 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:53 nia Exp $
 
-SHA1 (Algorithm-Dependency-1.112.tar.gz) = 01a23cb890c5b7ca1f279b22487f6ee8abd382b0
 RMD160 (Algorithm-Dependency-1.112.tar.gz) = bac081b6cd5ee08d689b21908fef1c279451dab1
 SHA512 (Algorithm-Dependency-1.112.tar.gz) = 6c2c29468fbeb76987eda10aafafe50b34fd545668849aade9212ff3cd466cb7d4490810383c44a102919ff3897f564a83b38d03780efa33497dd4f00baef0cf
 Size (Algorithm-Dependency-1.112.tar.gz) = 43014 bytes

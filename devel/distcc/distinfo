@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2018/07/11 07:30:40 adam Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 13:39:28 nia Exp $
 
-SHA1 (distcc-3.3.tar.gz) = 20c9f3085d7211945b7f3f8a60bce704a8a0f127
 RMD160 (distcc-3.3.tar.gz) = b74efe4c744b1bd1c4c6c998d4c8c481c38e293f
 SHA512 (distcc-3.3.tar.gz) = 459c175c8ac905bc70299e77ac11b6d24782bd69c9152126249c9af8fbb4c269e6f7317b02abf50cf6cc0405dd0f887e803320e19dc528a19c4c488640c615dc
 Size (distcc-3.3.tar.gz) = 1171281 bytes

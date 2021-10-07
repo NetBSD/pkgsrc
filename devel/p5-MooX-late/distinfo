@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/16 12:43:45 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:41:54 nia Exp $
 
-SHA1 (MooX-late-0.100.tar.gz) = ca8be71a235354605755d7fcd1cd34f33048cae0
 RMD160 (MooX-late-0.100.tar.gz) = 9f19b84a01c023dfcf69cf88473cb1c5550f5b90
 SHA512 (MooX-late-0.100.tar.gz) = 69450edbe7b2192094608a3ec543348d87223c9a124b86dc04a1cdf74b697adb331e5e1498533a557e5d4eded374770086d6696bdda597afe924520cad0c229c
 Size (MooX-late-0.100.tar.gz) = 22113 bytes

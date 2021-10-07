@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2017/02/22 11:46:58 wiz Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 13:39:11 nia Exp $
 
-SHA1 (atf-0.21.tar.gz) = 7cc9d3703f7c0e00bb8ec801f7ac65ac9dc898d7
 RMD160 (atf-0.21.tar.gz) = c68d675a59ee717fb83dfbfbe530a48619f93946
 SHA512 (atf-0.21.tar.gz) = 9b4b67d7d0d1f65cc9571d38c67dfc620b08ff7c0abf57d87bcae54055b4af21f95f3363f2cf8ee9b13b89a5351bc58669b784a0fd8c1beb0664c14933c10ce1
 Size (atf-0.21.tar.gz) = 567791 bytes

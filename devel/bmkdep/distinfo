@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/01/14 23:05:23 cheusov Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:39:14 nia Exp $
 
-SHA1 (bmkdep-20140112.tar.gz) = 1c9c7fd5f3b3ece6e09761e291c4be1e3cd1fe33
 RMD160 (bmkdep-20140112.tar.gz) = 5b898886da404605dc0540829d8020625a675dd7
 SHA512 (bmkdep-20140112.tar.gz) = c071adeab94907c4a8cb3d8d8fa8fcfb1f93c37c50ec2801dea530e391b9d6117a7c808fdfda6b9d2505535d2ece5d113639fd3f4d0256f58e9748a8a9f3dc9e
 Size (bmkdep-20140112.tar.gz) = 7649 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2017/10/24 12:25:13 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 13:39:09 nia Exp $
 
-SHA1 (apr-util-1.6.1.tar.bz2) = 4cc73bc36ca697419f555476f2fc1c63df6069f4
 RMD160 (apr-util-1.6.1.tar.bz2) = 6fb156f827980f21ff9f59039529d55bda824e93
 SHA512 (apr-util-1.6.1.tar.bz2) = 40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d
 Size (apr-util-1.6.1.tar.bz2) = 428595 bytes

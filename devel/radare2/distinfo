@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/03/21 13:16:47 leot Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:43:57 nia Exp $
 
-SHA1 (radare2-5.1.1.tar.gz) = 2689cc0b990bca3ae895e75c2bb98558128638b4
 RMD160 (radare2-5.1.1.tar.gz) = 9e6954a98edbcd2d3130a3201badf62a89442fab
 SHA512 (radare2-5.1.1.tar.gz) = b6728bb59788804f5442d5eec8141f62c3b51f589955589b310733b3aeb28beedb969af540649f454dad96710231df384e389d8b4a1d55627d8370e4d3da454f
 Size (radare2-5.1.1.tar.gz) = 7920840 bytes

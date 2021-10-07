@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.36 2020/07/29 07:00:15 wiz Exp $
+$NetBSD: distinfo,v 1.37 2021/10/07 13:39:36 nia Exp $
 
-SHA1 (gettext-0.21.tar.gz) = e6c0a0cba5b00a604c9118403a8199c77a538526
 RMD160 (gettext-0.21.tar.gz) = 93b5bf20f0cb7f0fb5342a948b86d55682b99521
 SHA512 (gettext-0.21.tar.gz) = bbe590c5dd3580c75bf30ff768da99a88eb8d466ec1ac9eea20be4cab4357ecf72448e6b81b47425e39d50fa6320ba426632914d7898dfebb4f159abc39c31d1
 Size (gettext-0.21.tar.gz) = 24181849 bytes

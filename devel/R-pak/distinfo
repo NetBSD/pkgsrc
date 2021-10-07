@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 11:44:59 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:00 nia Exp $
 
-SHA1 (R/pak_0.1.2.1.tar.gz) = 47102671864f57d1ee0a240cd602feb8551ec362
 RMD160 (R/pak_0.1.2.1.tar.gz) = a71e73eff1332f4ba1c432d9caab552fe0a57067
 SHA512 (R/pak_0.1.2.1.tar.gz) = 690bb5219974796b91c0c8e8b2198faecc412b28e091590c0ccd191c0087eba8443871498d16912e8fd05282314b3379e490287f0c89ca3c92242bf779ccde72
 Size (R/pak_0.1.2.1.tar.gz) = 159956 bytes

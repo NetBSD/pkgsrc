@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 02:50:51 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:26 nia Exp $
 
-SHA1 (deepstate-0.1-61ae1ed422194bd879e50ee5b2bce93537310473.tar.gz) = 5934b0ccbca58061501b9a5fdfb5ca6eb8131a4b
 RMD160 (deepstate-0.1-61ae1ed422194bd879e50ee5b2bce93537310473.tar.gz) = 0de503f7586c5892c36ebc15a501d0b3682feac6
 SHA512 (deepstate-0.1-61ae1ed422194bd879e50ee5b2bce93537310473.tar.gz) = f9316e90c44ae960a7a447ade857509fd3b7fe95ec1c66bf25fe921cc95cd0361894c92dd08628966eb89637797f92ae7147db9b8eb166cf032b4fe1dc6c06c7
 Size (deepstate-0.1-61ae1ed422194bd879e50ee5b2bce93537310473.tar.gz) = 115694 bytes

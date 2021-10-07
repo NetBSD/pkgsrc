@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/21 13:16:13 manu Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:17 nia Exp $
 
-SHA1 (liblnk-alpha-20171101.tar.gz) = 0a5a0e1562c83620ed35fe25dccc480351d0af32
 RMD160 (liblnk-alpha-20171101.tar.gz) = 1a368e20c0de30fff977bc55f4a7d84859eec756
 SHA512 (liblnk-alpha-20171101.tar.gz) = 03e985b35ce0fd604f919494ac7183c7139564e035e279e14eb07ed6bd7f9608645d8b20c2d2391e135be4b5c949893fdb0814aff691cd5752863f17e21e748a
 Size (liblnk-alpha-20171101.tar.gz) = 1479690 bytes

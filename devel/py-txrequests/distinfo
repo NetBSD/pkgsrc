@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/01/28 08:56:54 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:51 nia Exp $
 
-SHA1 (txrequests-0.9.6.tar.gz) = c502f00fa2e1a3794737a9c2438cd168fa44673e
 RMD160 (txrequests-0.9.6.tar.gz) = 1f22e5af917532e12ee0b394efedabc6b67f2ad3
 SHA512 (txrequests-0.9.6.tar.gz) = 3892e121417b8346a2a2db02f8f4143b8f87c060cb4d48dbd07fa77559cfb0caf5742b257377ec0a746f2b995eba36f419a1a5b19d83a0c343cd39057dd34fb1
 Size (txrequests-0.9.6.tar.gz) = 5306 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/10/30 14:10:46 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:44:09 nia Exp $
 
-SHA1 (gettext-setup-0.31.gem) = b9e99b8c00e264a11eae69684c76c932be318bcc
 RMD160 (gettext-setup-0.31.gem) = b4a2990d3e792a1aa2baec469d7427d61c7ca05b
 SHA512 (gettext-setup-0.31.gem) = 80dea3f6ddd748a7140af772d543cb57ed6140ebe37f22278509838f76f35ab46ad0a6cae8a0832bc6f0313fd15b1e583bc3d40db1a743bb48543755d77ff1fd
 Size (gettext-setup-0.31.gem) = 17920 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2016/07/16 03:32:32 markd Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 13:43:58 nia Exp $
 
-SHA1 (rapidsvn-0.12.1.tar.gz) = 65d051b5a84fe8b5b0ce906f2ba5cf134a560feb
 RMD160 (rapidsvn-0.12.1.tar.gz) = dde655f385245ba9346a5fc4a051ef01c5551501
 SHA512 (rapidsvn-0.12.1.tar.gz) = 892dab56e8ec19c5f26a0ddfab378187bc0325275f9fcf759c12beead70aab17876f7e5920bcf214fc86354faef58244ce25926ba010158f7354cd144e1c4c07
 Size (rapidsvn-0.12.1.tar.gz) = 1087511 bytes

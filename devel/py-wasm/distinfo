@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 01:36:09 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:53 nia Exp $
 
-SHA1 (wasm-1.2.tar.gz) = 3d76ca8849426042bd22ee7b3bf1bbf59b28ee24
 RMD160 (wasm-1.2.tar.gz) = bdbd86694715ad7d7f10774f0086e3aa7ac2c784
 SHA512 (wasm-1.2.tar.gz) = 010983d95abc3c0286710679b36b4b158c2c42bec66a5a52f7b043a1dc755be3e65865e9fdb24a01a88e071ac84f7938b78c3e17d649b263e438e8e5fd658c11
 Size (wasm-1.2.tar.gz) = 1398527 bytes

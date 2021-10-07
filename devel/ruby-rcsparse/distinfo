@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/07/27 08:01:43 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:44:19 nia Exp $
 
-SHA1 (rcsparse/rcsparse-0.0.0.47.zip) = 54a8a82aae27680b6d1d7aebb6ed21495ed0a4af
 RMD160 (rcsparse/rcsparse-0.0.0.47.zip) = bc8232c62f8c31129a79eeccd491963c123e7527
 SHA512 (rcsparse/rcsparse-0.0.0.47.zip) = 2bfabecc9a7dfd651b4bdb3049facecb51337b4899c15b823594cecc15dc8277c9716782641c2ff6eb9fc8d2c11442c68911d644fed05ce160747af41b56e083
 Size (rcsparse/rcsparse-0.0.0.47.zip) = 146300 bytes

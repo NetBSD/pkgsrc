@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.34 2020/09/29 14:08:36 adam Exp $
+$NetBSD: distinfo,v 1.35 2021/10/07 13:40:35 nia Exp $
 
-SHA1 (nasm-2.15.05.tar.xz) = d338409a03fc6d1508102881a675a00275fcb879
 RMD160 (nasm-2.15.05.tar.xz) = a69cec7112525a27a39247e75626654f58759627
 SHA512 (nasm-2.15.05.tar.xz) = 512f90a2584f1c5811429274b97c64a2cedf37b9fdeffb1bcd0ea64afd9ecc19a2d7877ca8f1e05393aa324153fc9f39ea51dacbf8d25a7d5a2d7728c925dba7
 Size (nasm-2.15.05.tar.xz) = 995732 bytes

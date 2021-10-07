@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.54 2020/03/31 17:02:42 wiz Exp $
+$NetBSD: distinfo,v 1.55 2021/10/07 13:40:15 nia Exp $
 
-SHA1 (libgsf-1.14.47.tar.xz) = 5c8e7d2b5a1f525971fc318a6ea78fdf1083a31e
 RMD160 (libgsf-1.14.47.tar.xz) = 084aebcb6457498bba2c163005ef23c1f9432b66
 SHA512 (libgsf-1.14.47.tar.xz) = 143d48eb02be8202b9eb97e29e5909061a0e1a562b86e4bb4b2eac3fb0a42b139ead131ed1ffa4dfe304b65527089777823122223a74ebbc9df94c17d013f97b
 Size (libgsf-1.14.47.tar.xz) = 691448 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/07/09 08:36:42 adam Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:43:38 nia Exp $
 
-SHA1 (pyobjc-framework-SystemConfiguration-6.2.2.tar.gz) = 8e5f2c9da092067c267b82c71f21cae5799aa4a6
 RMD160 (pyobjc-framework-SystemConfiguration-6.2.2.tar.gz) = b563cb38367c097867a923c14e57b4508d29598b
 SHA512 (pyobjc-framework-SystemConfiguration-6.2.2.tar.gz) = 497c7389463fd68d8e5395175e2fdf4d251e7c6414ddfae051741786416b8d7f028c2af75cd2bf9d278c13ed388abe05b2d76fc79521317b8b5c6178b3ed331b
 Size (pyobjc-framework-SystemConfiguration-6.2.2.tar.gz) = 78485 bytes

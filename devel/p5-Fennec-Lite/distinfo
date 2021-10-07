@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/07 20:00:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:27 nia Exp $
 
-SHA1 (Fennec-Lite-0.004.tar.gz) = 4f6441f0bf427986acea5038a396647a75f5288e
 RMD160 (Fennec-Lite-0.004.tar.gz) = 1e8aa5e5ae01888a48d0d3d09ff8993c79d4ce0e
 SHA512 (Fennec-Lite-0.004.tar.gz) = 507b58a0f7f1efb4f46b615f3bdd28666b52bffe35376afe07341074c8051032d0650a35afe884e8e603de1b63653763e1f0501d7f390fea14fbebc0eb4fa8af
 Size (Fennec-Lite-0.004.tar.gz) = 10555 bytes
