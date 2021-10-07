@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/09/24 10:32:43 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/10/07 11:48:48 pin Exp $
 
-DISTNAME=	nushell-0.37.0
-PKGREVISION=	3
+DISTNAME=	nushell-0.38.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -9,6 +8,10 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
+
+# sys-info crate doesn't currently build on 32bit cpus
+# see, https://github.com/FillZpp/sys-info-rs/issues/80
+ONLY_FOR_PLATFORM=	*-*-x86_64
 
 .include "cargo-depends.mk"
 
@@ -29,7 +32,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_inc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_match ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_textview ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_extra_tree ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
