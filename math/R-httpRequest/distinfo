@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/07/31 19:43:12 brook Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:27:50 nia Exp $
 
-SHA1 (R/httpRequest_0.0.10.tar.gz) = 6f870e86f3e2ce7e54e26b89bff94696a4df6d96
 RMD160 (R/httpRequest_0.0.10.tar.gz) = c8569904b352a20f779056057ca23c5fd40c8228
 SHA512 (R/httpRequest_0.0.10.tar.gz) = c38f1f85e8a9fb741978980094ef53130610e98d6a6c1266e5771a9e353669fb05c6766f80f00442badb2e6f03343a9ec6a61f8a88e6c6835199b34a10bc30ae
 Size (R/httpRequest_0.0.10.tar.gz) = 4605 bytes

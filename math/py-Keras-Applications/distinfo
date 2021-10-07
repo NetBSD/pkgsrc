@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/01 16:38:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:20 nia Exp $
 
-SHA1 (Keras_Applications-1.0.8.tar.gz) = 4992ab0d32ed4a226d17ad2d8808088ec0798dab
 RMD160 (Keras_Applications-1.0.8.tar.gz) = 4ca07acc1aef5535c75b9da9d75073f95ea1199a
 SHA512 (Keras_Applications-1.0.8.tar.gz) = d2297026199a48622acc933af580d616a01b31ef58ff9003c10bbd92ffcffb58464e084837104497c6ee98707604f8631f618a8ac9f4c0bfc0510324e5e16750
 Size (Keras_Applications-1.0.8.tar.gz) = 289095 bytes

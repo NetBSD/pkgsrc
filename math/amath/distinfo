@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/07/25 12:26:05 leot Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:27:57 nia Exp $
 
-SHA1 (amath-1.8.3.tar.gz) = a47d944bf7f692c31f3d45645a61cf07f9ee193f
 RMD160 (amath-1.8.3.tar.gz) = 89b36657808ce5fb248206abb89dae7889d73b72
 SHA512 (amath-1.8.3.tar.gz) = e9fffc25b1c953658f106c3be5ba46a18140c47d58a6321dd5cbc0cb356f9fff674042e6ec8e1d686e197136405ec379f5be60184fc7a489fa43997660863704
 Size (amath-1.8.3.tar.gz) = 250255 bytes

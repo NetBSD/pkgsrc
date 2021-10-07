@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:55 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:28:23 nia Exp $
 
-SHA1 (PyFFTW3-0.2.1.tar.gz) = f01a7591a51316d6a55dfd7300097edefdaed450
 RMD160 (PyFFTW3-0.2.1.tar.gz) = 2f83fd22a239edc3cb4fe854255f7445ae19f2b1
 SHA512 (PyFFTW3-0.2.1.tar.gz) = 1ed40672c284c2bc1619b02c35756b64e8e9a18df0e08e725ecec13c910affeb103cb46f807c2926d1fa1924dd4e34deafed948da06df20deb625dd40318e362
 Size (PyFFTW3-0.2.1.tar.gz) = 25317 bytes

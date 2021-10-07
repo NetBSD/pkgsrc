@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/05/30 13:18:59 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:27:56 nia Exp $
 
-SHA1 (R/vctrs_0.3.8.tar.gz) = f0e291b05006037f396080d66fc9f7e6ba02bfbf
 RMD160 (R/vctrs_0.3.8.tar.gz) = 2c45b3d9dcb635eaac898bf3a0039b03b7e4ffe6
 SHA512 (R/vctrs_0.3.8.tar.gz) = f5162fa4641779fc7cd0f77efb1d83efc01af0ba13d910337531980e2fa93abe6ce03f23a9a51db4f506faf716cc3fac820b91abac3e3282bc9cb73038fc5787
 Size (R/vctrs_0.3.8.tar.gz) = 782608 bytes

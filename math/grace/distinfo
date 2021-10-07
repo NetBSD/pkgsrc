@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2017/01/06 10:58:56 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:28:05 nia Exp $
 
-SHA1 (grace-5.1.25.tar.gz) = bcf2588c54c34535be5fe2d07b8fbbda12100a73
 RMD160 (grace-5.1.25.tar.gz) = 3fff22b3ceaaffddd81c8d23d26623f2e8f87c7c
 SHA512 (grace-5.1.25.tar.gz) = 9ea68483af1dfc98d217ae730b7a51b66deae5aaa8dfda29d5a3337ed4b5728b45aa03f561bf7d4173e73d6af8dee03cbabd95c0c8dd36999303c89451a3728a
 Size (grace-5.1.25.tar.gz) = 2957689 bytes

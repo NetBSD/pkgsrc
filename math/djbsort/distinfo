@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/18 10:08:31 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:28:01 nia Exp $
 
-SHA1 (djbsort-20190516.tar.gz) = 0a5888c775dfe48d7d3dd7fd1c0fb3bc31d15c1a
 RMD160 (djbsort-20190516.tar.gz) = 2e4d916f43b5ca929d82ce77c012e9d32a2b4dff
 SHA512 (djbsort-20190516.tar.gz) = 55c0845c0fca81d7d9bae34774494f1620acc656c600c7e1833af62a55326d763424218e8b17e1c577ebb3d0049cadef4f627c4528385d50daa55bc48785b883
 Size (djbsort-20190516.tar.gz) = 30927 bytes

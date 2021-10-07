@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/07 11:51:38 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:28:15 nia Exp $
 
-SHA1 (Math-Matrix-0.91.tar.gz) = 3383dfb3d2f7d9cade10ee9fe8ff70190b2ec09d
 RMD160 (Math-Matrix-0.91.tar.gz) = 8579988533988a638b6baa8e01a3f360a2fb556f
 SHA512 (Math-Matrix-0.91.tar.gz) = dcaf4cf1f6925ad67ff707c359dd2985577ed5cd788eb649638e63ff31f11af6145676b603cf0280cc9375745fca967b785615fa73c793065f6fe52df3d1ae03
 Size (Math-Matrix-0.91.tar.gz) = 27895 bytes

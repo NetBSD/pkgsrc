@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/12/31 14:10:51 pho Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:28:07 nia Exp $
 
-SHA1 (scientific-0.3.6.2.tar.gz) = ae0dcfaf9f4087e6147d1acb69a7deb826b85702
 RMD160 (scientific-0.3.6.2.tar.gz) = 8dd3b320db88ed7a239197ec212e221c584ecfa3
 SHA512 (scientific-0.3.6.2.tar.gz) = 47a74524c8fb25d381adf868d823a6b6772f3f69b0b3cf9f9de015a03bc941857ef3fca1b4f8cbf23e998164e71a914e167221e753c6f32dc8644047d1ef57ee
 Size (scientific-0.3.6.2.tar.gz) = 23510 bytes

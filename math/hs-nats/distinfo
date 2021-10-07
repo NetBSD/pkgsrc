@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/31 13:55:47 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:07 nia Exp $
 
-SHA1 (nats-1.1.2.tar.gz) = f51474cdd408286f846ff200de08faade3d9affd
 RMD160 (nats-1.1.2.tar.gz) = 22fd69f162b4a7dc87b2755ad89a88ee12ee35c6
 SHA512 (nats-1.1.2.tar.gz) = 596f11e98fe57893279ddd1f5af11a12e747e0d5e87000c7e20d0f5c2da0f0be9a6b8d19c8d5759716a7fb9a3e77d0e999380af3d5a350fe32a5492dc6077450
 Size (nats-1.1.2.tar.gz) = 7776 bytes

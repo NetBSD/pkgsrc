@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/08/08 21:55:54 brook Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:28:33 nia Exp $
 
-SHA1 (udunits-2.2.26.tar.gz) = 714332946db3d71faca228436eb9f024b0f269f4
 RMD160 (udunits-2.2.26.tar.gz) = 275c5f5f2a4df94eb357659b6d9160de74bfc8f7
 SHA512 (udunits-2.2.26.tar.gz) = 9e5320454646458ac40ba0855b6b8e12f7edbdb4b9a6c687a4c38ad07400e2e0c0f7968069885f83eb73da64886e1c6dd1e462ebc23205df849c3a460cedb640
 Size (udunits-2.2.26.tar.gz) = 1227596 bytes

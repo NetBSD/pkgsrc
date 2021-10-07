@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/20 00:49:49 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:55 nia Exp $
 
-SHA1 (R/survey_4.1-1.tar.gz) = 99ff92ff4e0711bf9fea79d356dd63f75df474aa
 RMD160 (R/survey_4.1-1.tar.gz) = 57e81198c8637e65046004052c28ef4d84c3ae1e
 SHA512 (R/survey_4.1-1.tar.gz) = 54264ef11b075f3a22e3ff1818879f57ab3be4df80d17d3a5810c552a2fbcb7a7de98f13429c4dc7200e9f58dfb3071f197276c21e462594e46c121933c5776b
 Size (R/survey_4.1-1.tar.gz) = 1736232 bytes
