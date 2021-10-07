@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:57:23 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:17:20 nia Exp $
 
-SHA1 (fl_logbook-2.5.tar.gz) = cbe13e21af25f4a7f897974d90b9f41171f0dc1f
 RMD160 (fl_logbook-2.5.tar.gz) = 5c7831a712c88c43179e7042cdf7f0d2fbdae4a9
 SHA512 (fl_logbook-2.5.tar.gz) = 0ea8dfd2cfa5b726baa059800a7696081c4cb13d624b66a5637a4881438335388defeac11000dbc91be39a584758845a58a480bc83894383cc432aa2d8e50a36
 Size (fl_logbook-2.5.tar.gz) = 58672 bytes
