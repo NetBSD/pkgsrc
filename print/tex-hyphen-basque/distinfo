@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:42 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:24 nia Exp $
 
-SHA1 (hyphen-basque.r58652.tar.xz) = bddba5e3196f65f5a1180eed20426bfab776e744
 RMD160 (hyphen-basque.r58652.tar.xz) = a031f7da581f3e13f4528cf1458405656058a50d
 SHA512 (hyphen-basque.r58652.tar.xz) = b90680dc5692824d60ca603e8bdd2fcade7cc772c8c0f9538d579704fb16165db2baf0c466ccaff46d92491b4a678fa86a127c0d106dbef6d640dfd2f887663d
 Size (hyphen-basque.r58652.tar.xz) = 3224 bytes

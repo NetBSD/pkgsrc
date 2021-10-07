@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/13 04:34:24 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:49:36 nia Exp $
 
-SHA1 (carlisle.r56753.tar.xz) = 354901c4a9a88af44b9a34bb16e24633ee72bba4
 RMD160 (carlisle.r56753.tar.xz) = 71c0bde619e2cb2068b5d99b9ac802772a0c2e96
 SHA512 (carlisle.r56753.tar.xz) = 679a07121b01b5ef1ad15b5713bf2b38374d49458d754eb204c914bc02dfd4ed429e30826efd980be0bfd1cefad7607804a04e8a820980877bea68286b23961f
 Size (carlisle.r56753.tar.xz) = 8664 bytes

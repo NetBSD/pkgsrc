@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/05/06 01:41:23 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:41 nia Exp $
 
-SHA1 (tex-cjkutils-47198/cjkutils.tar.xz) = ff12b54fba56ea755a236824e00bb4c9424f1658
 RMD160 (tex-cjkutils-47198/cjkutils.tar.xz) = 527d8c4ad6955aba2a7a3e47e1a3447f7253e860
 SHA512 (tex-cjkutils-47198/cjkutils.tar.xz) = 550177f316936cc107ae6902b334fa3b41f4955a51393ec2243dae92f8dc1a0547b3b181d6048bf171ef843daa2563b6431f5520b382757b4ce80795c5d02c76
 Size (tex-cjkutils-47198/cjkutils.tar.xz) = 2016 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 22:53:08 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:51 nia Exp $
 
-SHA1 (uplatex.doc.r59450.tar.xz) = 07527f76e0f28f5842859e479cf83d53bb9ce09d
 RMD160 (uplatex.doc.r59450.tar.xz) = 0b19460ca2e3ffcf4d88c44d3c779639cc89d0ad
 SHA512 (uplatex.doc.r59450.tar.xz) = e18c72acbbd80445b7a45d91a40230bf57a806c6e0c74387d20cba12261fb43fecc9b2183dc7e754905ef27a50e2cb209099761adc91144077b5661db3f661bb
 Size (uplatex.doc.r59450.tar.xz) = 776324 bytes

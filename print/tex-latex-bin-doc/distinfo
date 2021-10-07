@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/27 23:43:40 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:40 nia Exp $
 
-SHA1 (latex-bin.doc.r57186.tar.xz) = b902e3d301cf4e27a92061919d73a659899b29d9
 RMD160 (latex-bin.doc.r57186.tar.xz) = b8ee23f672389e296af4aaf96b393f18bbd4663a
 SHA512 (latex-bin.doc.r57186.tar.xz) = 16b2f1158d4f10541fee3fa5dbe768c08418918233929786929618a0d843e135f29c5d478e938c4ab3b2020cb85577a0b75d4923902d4d96e26dc756f152879f
 Size (latex-bin.doc.r57186.tar.xz) = 69852 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 22:15:38 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:17 nia Exp $
 
-SHA1 (pxbase.doc.r59473.tar.xz) = 64b64ae0d684820390737e84cde0d61e3f221034
 RMD160 (pxbase.doc.r59473.tar.xz) = 89525e5023a9b18a8d835c13fd38c960e6552427
 SHA512 (pxbase.doc.r59473.tar.xz) = 4421d659294e02b2d0268a4b0d56b037c321c69abc856bb00917b61b79bf78462fb4a5c9c8616d773e7267137de0f6af88cef02dcb661259c7ed7247317f7aab
 Size (pxbase.doc.r59473.tar.xz) = 161900 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2020/03/18 13:49:29 gdt Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 14:48:56 nia Exp $
 
-SHA1 (gutenprint-5.3.3.tar.xz) = edfab4bafe8e6420c7c321915eeb2dd16e899c59
 RMD160 (gutenprint-5.3.3.tar.xz) = 3a1a9a66ad376294fbb10b547ff53481a81b0337
 SHA512 (gutenprint-5.3.3.tar.xz) = d2c47eb4ccc3c46ccb2f1042682edf7443f5c57439ead72f49ecd10537cf967251bacf7ca7da29fb8dceecc7eebd55ed021f2594ff9fb6509bab543fab1dc8d6
 Size (gutenprint-5.3.3.tar.xz) = 5050624 bytes

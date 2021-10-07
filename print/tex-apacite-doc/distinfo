@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/01/12 20:14:10 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:14 nia Exp $
 
-SHA1 (tex-apacite-31264/apacite.doc.tar.xz) = aec4189bb6704a3888a674b6c39f2ceadfd72703
 RMD160 (tex-apacite-31264/apacite.doc.tar.xz) = af80a06fea54d35efd095873f4303e6526930c17
 SHA512 (tex-apacite-31264/apacite.doc.tar.xz) = 0f4638bb631ac2a582088dbc1e9b11b073a0851478345f70a2c99b3f818e9ad3822d3e82f18254b0ff1810dae39d6c372dc5f03a3f24e90e214086923248d1aa
 Size (tex-apacite-31264/apacite.doc.tar.xz) = 641164 bytes

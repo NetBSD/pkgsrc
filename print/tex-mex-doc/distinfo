@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 21:59:15 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:52 nia Exp $
 
-SHA1 (mex.doc.r58661.tar.xz) = a09fe97fc8cd79ae7698e7b16bbc5a3402679c59
 RMD160 (mex.doc.r58661.tar.xz) = d56b277ac3cedbccd0f403b739ae55fd59e947a9
 SHA512 (mex.doc.r58661.tar.xz) = 091f2825376718d8c2190555af7ef54d0ae5202425d57b986fba861df2f8604301df5a121ccfcfcdc91032d07dcda8289fb8de5d81c487b93b0e202a2a5a658e
 Size (mex.doc.r58661.tar.xz) = 35540 bytes

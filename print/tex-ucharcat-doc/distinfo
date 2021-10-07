@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/10/15 20:38:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:51:48 nia Exp $
 
-SHA1 (tex-ucharcat-38907/ucharcat.doc.tar.xz) = 34cf5b65a92f255d340c26a269cfbb9b04df1f23
 RMD160 (tex-ucharcat-38907/ucharcat.doc.tar.xz) = 5a00d787aa0746b1bc8f7df53799ad346cd22be1
 SHA512 (tex-ucharcat-38907/ucharcat.doc.tar.xz) = ef8b3c9570dcb86817bf1b6cafb4d61417a99ca000bdf798f5ba288b9722668914dac1d61f23cfaf5daae3449465edde091d94c3af347c4d3f57f51d6f605688
 Size (tex-ucharcat-38907/ucharcat.doc.tar.xz) = 159872 bytes

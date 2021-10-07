@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/02/14 21:28:47 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:49:00 nia Exp $
 
-SHA1 (biber-2.16.tar.gz) = cb27ebbee89e0e53630efa4308ca38f8278f7367
 RMD160 (biber-2.16.tar.gz) = f6d804a72a30160b5f46fceaf2588c2052662717
 SHA512 (biber-2.16.tar.gz) = 12b939c194e171f4e7d8e0341b6301b55be8376eab3aa3e14a72a780e5bd8f6d61fa601a95f99c9d17894b8c10a785ccc916b23593391ed00ef31e0a8c2a4662
 Size (biber-2.16.tar.gz) = 1594209 bytes

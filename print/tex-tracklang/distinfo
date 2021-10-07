@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/15 01:26:43 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:44 nia Exp $
 
-SHA1 (tracklang.r55707.tar.xz) = 818574eb8dd0c15c6723f87aecbaa078a727d866
 RMD160 (tracklang.r55707.tar.xz) = 1eedaf4b149ce945253d4a70a521233f06237188
 SHA512 (tracklang.r55707.tar.xz) = 6f33892886257274d3011b1d8e84d325477b75d6f151b1cd5223d456fdb1e5983146a20106fa19f3750b5898e24400a33e22de0571c9c301c3c0f6c0a1163e5f
 Size (tracklang.r55707.tar.xz) = 19144 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/20 09:45:09 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:49:17 nia Exp $
 
-SHA1 (atenddvi.doc.r56922.tar.xz) = f70a0f755e5f212579b04064ca65eab538b9605a
 RMD160 (atenddvi.doc.r56922.tar.xz) = f060f353e9d6cb0737576ced637d0c04d86aa8c1
 SHA512 (atenddvi.doc.r56922.tar.xz) = d60dae681800be4495c2690f78513475d98a4480364306eb26c16c551b0e984f135aefccdcff549e6702b2b62bb185ccbdacd85dd3c12e5b20c128d9397c0e8c
 Size (atenddvi.doc.r56922.tar.xz) = 280328 bytes

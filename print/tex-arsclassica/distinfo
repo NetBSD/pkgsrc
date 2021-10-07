@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/05/02 12:01:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:16 nia Exp $
 
-SHA1 (tex-arsclassica-45656/arsclassica.tar.xz) = dba8a429d1c000fb02fdb710e47c2d3a73046c0d
 RMD160 (tex-arsclassica-45656/arsclassica.tar.xz) = 9706a8d3427fc9c69835a105bc050c9406b32507
 SHA512 (tex-arsclassica-45656/arsclassica.tar.xz) = 7808b77e8868ad2e4bc584408b3bfc15cb53c4b012be5ad205148a37901f98f99de7437d94b32af8254ab1cec51c7a3b442fc7bf65e40346810c4f68fa81eea3
 Size (tex-arsclassica-45656/arsclassica.tar.xz) = 2220 bytes

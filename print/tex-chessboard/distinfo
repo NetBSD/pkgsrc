@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/14 21:55:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:39 nia Exp $
 
-SHA1 (chessboard.r56833.tar.xz) = c5d97a657e1cb59fe98f2da1e86693fc72a45000
 RMD160 (chessboard.r56833.tar.xz) = c12352eceae39ff43d5090479d7542a8da4cef2d
 SHA512 (chessboard.r56833.tar.xz) = 9447eb4dd8712ccbb519f91e99ccd1c64cc0e9ba904bd46dd8c83ce03c31e5caddca8e76c2cfeeefd5946c8881b9e6b198d50c131a1e8d5622b054d1459865cc
 Size (chessboard.r56833.tar.xz) = 22600 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/02/14 21:25:52 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:49:27 nia Exp $
 
-SHA1 (biblatex.r57272.tar.xz) = 0dc585dd512b3ac59432d62e859420294bb91f6b
 RMD160 (biblatex.r57272.tar.xz) = 9b5020a1968970ff93994fe40b8045ccf7ff1f65
 SHA512 (biblatex.r57272.tar.xz) = 9d8fbb720f69afabb42ff17287ba61760d910b40c4b90923bf46fa0aa9e6eeb188cbf09f533f0916af145a361702387fce95ece74feb3a535d6409a3fb39f684
 Size (biblatex.r57272.tar.xz) = 243000 bytes
