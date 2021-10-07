@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/07/20 07:08:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:19 nia Exp $
 
-SHA1 (fdk-aac-0.1.6.tar.gz) = 574103e24fe45b3b89a92cc6a7a9d260c483b9e0
 RMD160 (fdk-aac-0.1.6.tar.gz) = cd792eac8339d65b6997c8769c8eda4565fb9201
 SHA512 (fdk-aac-0.1.6.tar.gz) = d4d14debeb6e424f4e2a1458ed7bebaa2c45ce54170c6e679286fd965f52286b6a6c1e944edbb4ea2302c3bb789c0f3cdab9c0d89618014ba4250b2f04d71d12
 Size (fdk-aac-0.1.6.tar.gz) = 2091618 bytes

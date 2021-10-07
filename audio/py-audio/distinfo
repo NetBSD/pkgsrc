@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/04/02 08:41:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:47 nia Exp $
 
-SHA1 (PyAudio-0.2.11.tar.gz) = b09341f11e1797866afc16bac7995d0f6c039e52
 RMD160 (PyAudio-0.2.11.tar.gz) = 7a6bb88f56622555e77eb799e4ee74ff970b6e92
 SHA512 (PyAudio-0.2.11.tar.gz) = 64db5542ee60837c9b07677e146fc7b060ff47c8b1c04cbb575bce79dd3ed4776c201e169ff2860f27dbe9e00a77046ba0cb925b55f7c546f8de46c6df68954e
 Size (PyAudio-0.2.11.tar.gz) = 37428 bytes

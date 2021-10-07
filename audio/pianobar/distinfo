@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/23 17:07:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:09:46 nia Exp $
 
-SHA1 (pianobar-2020.04.05.tar.gz) = 3f8ba74a2c3d1a24ce57f61e6cd77005ebfec246
 RMD160 (pianobar-2020.04.05.tar.gz) = 3baab80b81370bb393fa5bdcc177b95e115dcaf6
 SHA512 (pianobar-2020.04.05.tar.gz) = 5d05dc48536977b8f06219061c3279a4eb1a0d0a5d9f473aa2d59871868ec361814bd274a54bee8591412005161a131b0e1224ebf607cb56f3d0dbe6672abc98
 Size (pianobar-2020.04.05.tar.gz) = 56965 bytes

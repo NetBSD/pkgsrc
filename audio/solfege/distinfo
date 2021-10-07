@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/07/08 13:57:42 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:09:52 nia Exp $
 
-SHA1 (solfege-3.22.2.tar.xz) = d46e67d2f64c943fbdfa3858f077b49186a60a66
 RMD160 (solfege-3.22.2.tar.xz) = 0832a8b75c913af0f7d7124b339e70a6cc82fb23
 SHA512 (solfege-3.22.2.tar.xz) = 475d2eea54d0c6b2cb11a5271a02ca64e79c45fb6155d87a01b16e826669a07cca0b4c2543cbbb1ce8d36412ccfd64e8052de1efad3db19f34d7e0a984d7459a
 Size (solfege-3.22.2.tar.xz) = 4107232 bytes

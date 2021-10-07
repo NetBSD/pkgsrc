@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/04/17 08:31:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:09:18 nia Exp $
 
-SHA1 (ezstream-1.0.2.tar.gz) = 8b1cda0f5d7c4df24b847691f98065aab51020d2
 RMD160 (ezstream-1.0.2.tar.gz) = ac1a9478cf7cbec75cefee4b124b2dd5a4cb4691
 SHA512 (ezstream-1.0.2.tar.gz) = 54a11b6db9fd15259bbd3cfff11d95100b4c334e19a58a39b8b98f97300c57fbcaa19dabc751d93158ec3f7eb7a7101178c99d9eba193e49b7917ed5731aa48d
 Size (ezstream-1.0.2.tar.gz) = 514884 bytes
