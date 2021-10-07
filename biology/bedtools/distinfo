@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/08 01:49:25 bacon Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:19:37 nia Exp $
 
-SHA1 (bedtools-2.30.0.tar.gz) = b3bae21434f261818e15875727b4a3c5c7366bc7
 RMD160 (bedtools-2.30.0.tar.gz) = 1cc30e5bc3df12f38d8f1e055ff2f939d7608395
 SHA512 (bedtools-2.30.0.tar.gz) = 3d69d6a53d3e5d15597dfefa26f7895231adbf3c1fe3b16ee4213e497ef01a20698add2f0e6f03d8eb7cd7c70709955f0ebdf897a025a83d31ef17e2c91f9856
 Size (bedtools-2.30.0.tar.gz) = 20639858 bytes

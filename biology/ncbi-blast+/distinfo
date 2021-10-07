@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/11 13:47:40 bacon Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:19:41 nia Exp $
 
-SHA1 (ncbi-blast-2.11.0+-src.tar.gz) = af9bdc82ec01959fb2ab8367636face8a0ef3e91
 RMD160 (ncbi-blast-2.11.0+-src.tar.gz) = a8036dca9cc85b589bbb7f7f24e47c7e0053ead6
 SHA512 (ncbi-blast-2.11.0+-src.tar.gz) = 617994a0e3a4675a5f7048f165ac405bbd6a715ece9aba115d7c26b6be446b889b817dd496a2e15673545e5b594684c83fc4edb22cb5ecca2fd6d342c3bd642e
 Size (ncbi-blast-2.11.0+-src.tar.gz) = 58493096 bytes

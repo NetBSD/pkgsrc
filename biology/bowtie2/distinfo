@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/21 17:30:12 bacon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:19:37 nia Exp $
 
-SHA1 (bowtie2-2.4.2.tar.gz) = b8eb8158828459412586003b6051d79ed123fc82
 RMD160 (bowtie2-2.4.2.tar.gz) = 0c6c5fe29a40f913e3810d1fe022b948403dfb09
 SHA512 (bowtie2-2.4.2.tar.gz) = f8bb74aaec7557bcd1bc4b5ec5e2a3b141d78c88b04f39cdcc417d15f058bdb48b15d159c4ab569b4d655e3d1bd0cf8152343f05b9a20d5d29680c3e8c2f1a05
 Size (bowtie2-2.4.2.tar.gz) = 10590144 bytes
