@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2021/10/01 21:27:41 pin Exp $
+# $NetBSD: Makefile,v 1.34 2021/10/07 11:47:08 pin Exp $
 
-DISTNAME=	macchina-1.1.7
+DISTNAME=	macchina-1.1.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
