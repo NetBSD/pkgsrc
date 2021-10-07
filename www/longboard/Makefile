@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/10/07 12:12:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/10/07 15:53:24 pin Exp $
 
 DISTNAME=	longboard-0.0.7
 CATEGORIES=	www
@@ -9,10 +9,6 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jbr/longboard/
 COMMENT=	Longboard: The easy way to surf
 LICENSE=	apache-2.0 OR mit
-
-# sys-info crate doesn't currently build on 32bit cpus
-# see, https://github.com/FillZpp/sys-info-rs/issues/80
-ONLY_FOR_PLATFORM=	*-*-x86_64
 
 .include "cargo-depends.mk"
 
