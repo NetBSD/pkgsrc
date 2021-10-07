@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/01/08 17:33:51 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:08:28 nia Exp $
 
-SHA1 (mechanize-0.4.5.tar.gz) = 8b978b688fda2b29a1bfd33402ca53b7aa9688e2
 RMD160 (mechanize-0.4.5.tar.gz) = 95fa856a47e3b8da46e2146e688a79adc64cf2dc
 SHA512 (mechanize-0.4.5.tar.gz) = 51706d5c073501d02fb7395eda30625ed9191324f948073c7d1589df0e507d8b7641ca514ceff55e7d82e899ba6e10c55507c79668976c7654ff0004671d09d2
 Size (mechanize-0.4.5.tar.gz) = 216908 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2017/09/27 16:31:47 wiz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:08:00 nia Exp $
 
-SHA1 (Starlet-0.31.tar.gz) = e88dca3f85d8f78d974af6c36a849e1f833b69d4
 RMD160 (Starlet-0.31.tar.gz) = 990ea99a0ea653b6bf1099cf2e931f41bd01f26c
 SHA512 (Starlet-0.31.tar.gz) = 855451ee69e379230d2476144fe5b44d0fef115e654d22bd697b3d75cc30aa53c179201d3bf980cc044b48081f7d2cfd56a956e5747d0e93e4468fd511945b7b
 Size (Starlet-0.31.tar.gz) = 111347 bytes

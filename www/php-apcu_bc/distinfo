@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/12/15 18:20:17 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:08:07 nia Exp $
 
-SHA1 (php-apcu_bc/apcu_bc-1.0.5.tgz) = f486de1122d860c5a4004d69eef4968f6d2a3bd3
 RMD160 (php-apcu_bc/apcu_bc-1.0.5.tgz) = 55a5dd86ce0f389dc030c8ff929736bb2f11b7e0
 SHA512 (php-apcu_bc/apcu_bc-1.0.5.tgz) = 60ee1540c31873d7963fd8efa6293006eae19cb6c7815cea1f3b50b197a982840472a1e632cc7af5666f6af5522008bec30e48cd764920240a6c5a0d0eb0e6e0
 Size (php-apcu_bc/apcu_bc-1.0.5.tgz) = 7415 bytes

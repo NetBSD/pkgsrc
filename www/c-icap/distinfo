@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2019/10/14 11:00:56 sborrill Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:07:05 nia Exp $
 
-SHA1 (c_icap-0.5.5.tar.gz) = 5757186185fe110fca8bd709e14633712225cfc8
 RMD160 (c_icap-0.5.5.tar.gz) = 36200e8a8ea390e38cc9006540124e2f4fca59db
 SHA512 (c_icap-0.5.5.tar.gz) = 7a24c90116df40c5a8dc29785efacba65f16557f44f6b26de7bb1bb4890e8bf017db582ccac7d82a1be4efe41d3a7f420ad27c3f012d9c1741c3fd69abd9e571
 Size (c_icap-0.5.5.tar.gz) = 690954 bytes

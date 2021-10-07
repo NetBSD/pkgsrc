@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/08/05 13:22:30 adam Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 15:08:33 nia Exp $
 
-SHA1 (uWSGI-2.0.19.1.tar.gz) = 88d893e67c055a5e2da92dadd53562c114063222
 RMD160 (uWSGI-2.0.19.1.tar.gz) = cba6b90e8c16c57eb7861e0f48b99e9a8def90a6
 SHA512 (uWSGI-2.0.19.1.tar.gz) = 5e249f65ed1d39515d1264e76d4de9fe42fc28ea3157a2ea724f36e2ae058380545d834b39dde40554f4ad0f19bb57ef7842d5d1b991884df986c665f4c59149
 Size (uWSGI-2.0.19.1.tar.gz) = 803862 bytes

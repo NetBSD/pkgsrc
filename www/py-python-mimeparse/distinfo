@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/04/25 20:34:04 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:08:30 nia Exp $
 
-SHA1 (python-mimeparse-1.6.0.tar.gz) = 675c262a74635f5e5326bb2dd1834f97c826ffa6
 RMD160 (python-mimeparse-1.6.0.tar.gz) = 7358b9daf8823bb02a81bba1ebd400bdebcc28f2
 SHA512 (python-mimeparse-1.6.0.tar.gz) = cc2ec8059034fc224c59bffeb77e7fd0ba86b753373c8daf3a182fd56d647f0b96d7bacb6708be285dd7e246ebc19b813e2bfb8ac79a86f6d4e702c223f5187e
 Size (python-mimeparse-1.6.0.tar.gz) = 6541 bytes

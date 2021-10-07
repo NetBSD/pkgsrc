@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/01/25 11:09:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:26 nia Exp $
 
-SHA1 (otter-browser-1.0.02.tar.gz) = 3ab9068b6032efa469c0952b0a18c9e60dfa2a9f
 RMD160 (otter-browser-1.0.02.tar.gz) = 9022d884091c2607f2db9aef251fae42ce5670e6
 SHA512 (otter-browser-1.0.02.tar.gz) = 5b142486298f2ef1f0613363c7a4de3340544ecd82406efc64225e78eb958337ea4045c0c44553fe3b29a0836bd5f6cdab37d615ebf98756108f9aa5473360a1
 Size (otter-browser-1.0.02.tar.gz) = 4940331 bytes

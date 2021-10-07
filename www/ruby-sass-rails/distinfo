@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/20 17:34:50 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:47 nia Exp $
 
-SHA1 (sass-rails-6.0.0.gem) = cce0a7994d0c5fddfa8e30b4f97c8e652a00d758
 RMD160 (sass-rails-6.0.0.gem) = dd242ebe18f7f0cda6a91fd625774aa0334942e0
 SHA512 (sass-rails-6.0.0.gem) = 0818c25e6c1ef6c5251f685f40793aebbf1a219ef022fe333e720d1378a25f7c246d657f9b0c05023436adf4edbd8ab1866e3a93d12ca1c02a3c243cce8083f9
 Size (sass-rails-6.0.0.gem) = 7168 bytes

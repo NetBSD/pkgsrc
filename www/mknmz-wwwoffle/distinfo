@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/02/02 13:23:29 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:22 nia Exp $
 
-SHA1 (mknmz-wwwoffle-0.7.2.tar.gz) = a9636a0a73828b15f72711e7881a98759062a9b3
 RMD160 (mknmz-wwwoffle-0.7.2.tar.gz) = 7e261d3a7d1deb9e161e295e3a5d6b50207678bb
 SHA512 (mknmz-wwwoffle-0.7.2.tar.gz) = cc833b7c51ee202765c3051b5ace7f13bc341d5c52322bda2705c64d7dda2aabb2ecb049e2fa86dd52d3de5f8cc79e6977cfb1bb4a4028e7af9136abd9fe446e
 Size (mknmz-wwwoffle-0.7.2.tar.gz) = 64070 bytes

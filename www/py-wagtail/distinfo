@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/04/20 14:44:04 joerg Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:08:34 nia Exp $
 
-SHA1 (wagtail-2.12.4.tar.gz) = 403ac5ed31c3a01f738bcaa2f98c3d8ba08c39b4
 RMD160 (wagtail-2.12.4.tar.gz) = e268dbabd9c1ee3d27c6758e5ec5d0edffc94854
 SHA512 (wagtail-2.12.4.tar.gz) = d353e0e1383bec8a7b752f6f9a3b6cdd0886db2bac95f9e46a13b2657a97f7bf41a8969626e72e390c8621f21c6509c00dc11422a027bcb73a5eec22cda2e8d7
 Size (wagtail-2.12.4.tar.gz) = 8755733 bytes

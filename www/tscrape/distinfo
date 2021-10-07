@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/10/09 15:34:22 leot Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:08:55 nia Exp $
 
-SHA1 (tscrape-0.6.tar.gz) = 4d3934106598a34a8c0df2e6ad87f60609ef6948
 RMD160 (tscrape-0.6.tar.gz) = 7857b4537bcdb7e865020937e67a5208610ed19e
 SHA512 (tscrape-0.6.tar.gz) = c9e778c0f07ee8a7cc77da12c58ea8043c251a8c490991102c794b31d696036fb74106fb5e9d5b65967aefab9e62ea6e8a7b42658a41b9ac1e18d4acd885eb65
 Size (tscrape-0.6.tar.gz) = 15790 bytes
