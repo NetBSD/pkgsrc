@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/09/08 14:46:49 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:27:02 nia Exp $
 
-SHA1 (efax-0.9.tar.gz) = 8965407996737e6ec2c8a198ba34811f5134b5d1
 RMD160 (efax-0.9.tar.gz) = 471112ab87cfcf11521a5ea7c0cb203a44e958c3
 SHA512 (efax-0.9.tar.gz) = 7941852f0a97ccd5bfee8331222a5877a36202ef0bc27917a31789bba1d2f17af1f114e93a20be9898505d0ce37b5fabf1a51e824eaeeb0f5de20ebdbdd95030
 Size (efax-0.9.tar.gz) = 96736 bytes
