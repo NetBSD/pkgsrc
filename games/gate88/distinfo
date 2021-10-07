@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:28 nia Exp $
 
-SHA1 (Gate88_Mar19_05.tar.gz) = 6c4a3865fed077e3a71d21b1a457bbfeed165601
 RMD160 (Gate88_Mar19_05.tar.gz) = 7e925e26c7b2c914ab0cee0436408033536d060d
 SHA512 (Gate88_Mar19_05.tar.gz) = 5da5eeb7ee231bbd3c0fbbb807536301bd3952491e927db0397388d2aec847e661fcb854f7d0ac2a258ec4b1daf001621b9b7db43ed380b7e4f8829248fe70c5
 Size (Gate88_Mar19_05.tar.gz) = 13804318 bytes

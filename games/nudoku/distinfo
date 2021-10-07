@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/11/24 21:00:02 fcambus Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:44 nia Exp $
 
-SHA1 (nudoku-2.1.0.tar.gz) = fd28945728bc47ec60f8e10efc6a150bb83f5ee2
 RMD160 (nudoku-2.1.0.tar.gz) = 4628a78cf1aba04d73a0308e415c812e3e4afc40
 SHA512 (nudoku-2.1.0.tar.gz) = dde16d1dccc1cae8d156f57fccf8b112f3fee7d23b912b5cd7ecc092ecbf04a8e85f469e53fa02e6bd2d0b9498e4a65a219e1aad8091f82638dceab32f320670
 Size (nudoku-2.1.0.tar.gz) = 31592 bytes

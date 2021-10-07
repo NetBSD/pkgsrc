@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2019/06/06 21:53:44 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:07:48 nia Exp $
 
-SHA1 (PySolFC-2.6.4.tar.xz) = d627ee614210a00d74617632be617fde6ec7e3cb
 RMD160 (PySolFC-2.6.4.tar.xz) = 22bb80cfbec9f494a5fd6a998aa8eab6372214a4
 SHA512 (PySolFC-2.6.4.tar.xz) = e88719216054f36ff468c16f5ffe701b0995da88edf4da2266dee528d541c0ae8bbaf503a356e926c626bef2651ca8b6aae539b5cb6b5f0dcb4a04ca6111d6b7
 Size (PySolFC-2.6.4.tar.xz) = 3761108 bytes
-SHA1 (PySolFC-Cardsets-2.0.tar.bz2) = cbf26b7e282c242a2080dfd06e3847abbaf67303
 RMD160 (PySolFC-Cardsets-2.0.tar.bz2) = a51c2e1ef0276a4bb9783ae880a731b9e30bebc4
 SHA512 (PySolFC-Cardsets-2.0.tar.bz2) = 24275cd3656024e268a49487ac75e1e67e61ec20e0a9f88e2d1c287f91314a1a9343856d1202ce468f8863f4e9a9bf27526fbb1979a7d765718b38e64ca0cfc8
 Size (PySolFC-Cardsets-2.0.tar.bz2) = 30687905 bytes

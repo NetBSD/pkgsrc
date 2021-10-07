@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/09/18 09:01:01 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:07:51 nia Exp $
 
-SHA1 (simgear-2020.3.11.tar.bz2) = 69e938a458e637ae9f1d678fc46b4ddf597f378e
 RMD160 (simgear-2020.3.11.tar.bz2) = 124b5fbb762a73f6a58c5caab89f3982dacdf124
 SHA512 (simgear-2020.3.11.tar.bz2) = e7b7c73a574012f9ee33cc751eca9dc968339d0f8f5ec005386ed6863d96af6d17423dd68eb5180f1c6bf3b05a422de10ce03ea5e745029445edac7919fc1c99
 Size (simgear-2020.3.11.tar.bz2) = 1415047 bytes

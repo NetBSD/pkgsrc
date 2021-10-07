@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/09 11:22:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:32 nia Exp $
 
-SHA1 (iortcw-1.51c.tar.gz) = a418f9747f3250ad855885368924dead48006909
 RMD160 (iortcw-1.51c.tar.gz) = db33fd67b58b7163864c6b434a86f4cdd58fb308
 SHA512 (iortcw-1.51c.tar.gz) = bed985e00ba117bfe8c5fae20671575af2fa1c2eeaaba9ef69e6b82485d883084138f7f949299cfdad8171b40209d9baf111879acfd01e5eae16859b63ce77c6
 Size (iortcw-1.51c.tar.gz) = 27246236 bytes

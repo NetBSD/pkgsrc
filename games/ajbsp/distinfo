@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/07/22 10:25:24 micha Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:12 nia Exp $
 
-SHA1 (ajbsp-v1.01.tar.gz) = 69a9ebe35c840a69c5c14b2368a5e3f1d75a7b0a
 RMD160 (ajbsp-v1.01.tar.gz) = 6943aed9fb3bf047ceafc0bf35cbf610b51fa612
 SHA512 (ajbsp-v1.01.tar.gz) = a554cd11f95afe351769a78878b8717354750dc2165b8b4f2ab37cf92125aa058c4b08d0e4df5e7c82a9b0c0be578f12bbdf03df8c620295449982271544cba9
 Size (ajbsp-v1.01.tar.gz) = 77251 bytes

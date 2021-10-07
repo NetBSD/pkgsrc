@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/08/16 01:29:37 dholland Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:07:42 nia Exp $
 
-SHA1 (mirrormagic-3.0.0.tar.gz) = 44f401ae883edb7cdc981cdde8807f18ec342bdc
 RMD160 (mirrormagic-3.0.0.tar.gz) = 69db03f025d57bb921d4b0143db06f37bb6371d7
 SHA512 (mirrormagic-3.0.0.tar.gz) = 4cec053bc78a10090a5f9cf678429fd3c927637c3299652de9914b4d8a19518c2e5e10d72bba56aff6a545bbf30e95874576be5b08978060cd59cdba1903de2a
 Size (mirrormagic-3.0.0.tar.gz) = 4052452 bytes

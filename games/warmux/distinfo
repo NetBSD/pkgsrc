@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/01/27 12:13:43 triaxx Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:07:57 nia Exp $
 
-SHA1 (warmux-11.04.1.tar.bz2) = 375dbeb43a56a047daa4fcea49a9802f4b308795
 RMD160 (warmux-11.04.1.tar.bz2) = badd055d0e10e364cfa140a76f39ec0956c674c0
 SHA512 (warmux-11.04.1.tar.bz2) = 99501ea186e091b55a6e45935de83440be02ae4fc12ee6def5ec24e213c829230b4f6017043be6afbc7188e442b0e1128cfd27c290fbe0e49b6597f927fd1e2d
 Size (warmux-11.04.1.tar.bz2) = 110083622 bytes

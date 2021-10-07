@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/03/23 17:06:52 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:08:00 nia Exp $
 
-SHA1 (xgospel-1.12d.tar.gz) = 9d873603b745b1e6046c1407a72e6d6ea474ef37
 RMD160 (xgospel-1.12d.tar.gz) = 20e55639ae2ec365ad3698f7709e2bd386380acc
 SHA512 (xgospel-1.12d.tar.gz) = 7972db8e2a807c02d36f97c57357defe55540b82d659b80aa8a3c40ecbbded3266aa193b837656c158e159ec7aaa78c1100b11f47e2e82c67a5d63fd405911f2
 Size (xgospel-1.12d.tar.gz) = 699374 bytes

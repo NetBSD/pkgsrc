@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/03/23 17:06:52 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:08:02 nia Exp $
 
-SHA1 (xrick-021212.tgz) = 1a84eac20a22ab86d2013cc1c8ff7e0097b4466a
 RMD160 (xrick-021212.tgz) = c73afbf495ec9bd6c72b67c91661143e6d93cb08
 SHA512 (xrick-021212.tgz) = 7a6547dfce586512c3c4aa7fd5aa0d7d8bd223dbec6a9211e858034bd73d44f168266441d8f3475cddbed8f3a19c7c0df31345b62e2ecfb860664e54facb48bf
 Size (xrick-021212.tgz) = 1648538 bytes

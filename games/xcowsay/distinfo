@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/11/24 10:36:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:07:59 nia Exp $
 
-SHA1 (xcowsay-1.5.1.tar.gz) = c24047b4d6c296ad99960947aa3200b9ece0d4a8
 RMD160 (xcowsay-1.5.1.tar.gz) = 0d2c4e28d57e752a5d80d5e26f4d8d724294489f
 SHA512 (xcowsay-1.5.1.tar.gz) = 783f54b83846a3d993fb0a0191cf98d4ea2f7dab86f549384684f71abf1fdd709ed9e002dfcec43cac7fb44c96735bb3ced6c59aaeabe6b67b5ff43d62e52c88
 Size (xcowsay-1.5.1.tar.gz) = 287843 bytes

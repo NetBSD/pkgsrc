@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/08/30 17:04:31 micha Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:07:20 nia Exp $
 
-SHA1 (doom1-1.9/shareware_doom_iwad.zip) = 2d274030c4ba07b9bd1409e5e80f47a6df4efd3a
 RMD160 (doom1-1.9/shareware_doom_iwad.zip) = 3591afbdf5ec84e86425709b06b45e83aac4420d
 SHA512 (doom1-1.9/shareware_doom_iwad.zip) = 9fe5a32a24efa622ff7017303d3c8fdc7b4e6c4ec548e50bea402bfa9a1f320ce3f316f4a7f62e64786af876776d51b20fc7688f497896aa176f97b85ada30f9
 Size (doom1-1.9/shareware_doom_iwad.zip) = 1782482 bytes

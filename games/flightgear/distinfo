@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/09/18 09:01:01 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:07:25 nia Exp $
 
-SHA1 (flightgear-2020.3.11.tar.bz2) = 8c47fca6fb06d3e6d5d53ef1ccd43da447892982
 RMD160 (flightgear-2020.3.11.tar.bz2) = 16613eee42afa4cda5555fcab558a3c757fd9ae5
 SHA512 (flightgear-2020.3.11.tar.bz2) = 9a7c6f262da8daf3d954df7a2a8a96e555f3212c1d949211d0dbddd08a8f7380fa8f4986d60f48e17db563154d250184ee772b79b10277a2c5819fabec3930ee
 Size (flightgear-2020.3.11.tar.bz2) = 8926212 bytes

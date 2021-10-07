@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:18 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
 
-SHA1 (kbounce-20.12.3.tar.xz) = 31c34dae142620913df41bfef68099c6205ea023
 RMD160 (kbounce-20.12.3.tar.xz) = afb7cb078d84e064ad8636644a4240243d47233f
 SHA512 (kbounce-20.12.3.tar.xz) = d1137116ba98a96b129d21fca8f087c87df338ef081dea0b6bcab6b026eb341ad9ef4e9c0858d95a7268e5585aac68336b58bc132acc14148a0f91646637a22c
 Size (kbounce-20.12.3.tar.xz) = 3443204 bytes

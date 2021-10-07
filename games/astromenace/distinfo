@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/12 17:09:55 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:14 nia Exp $
 
-SHA1 (astromenace-1.4.1.tar.gz) = 75e554daa8221d5ed77f393ecb8ec15638f91e3d
 RMD160 (astromenace-1.4.1.tar.gz) = b6c9541609f6efc3a04612daeeb65107df754d64
 SHA512 (astromenace-1.4.1.tar.gz) = 408fd8a9fcc51d0cdfd31d77bc1c05b079b3248622a252e73e1145db9715b3a331eef5fde295c3390143fb7bb2f88460d374eddea719b6452577bf5e83bd14c1
 Size (astromenace-1.4.1.tar.gz) = 68041500 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:17 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:15 nia Exp $
 
-SHA1 (bomber-20.12.3.tar.xz) = d067cff9d48163f15297ace1f8d9af1e8911c36d
 RMD160 (bomber-20.12.3.tar.xz) = 58f2d86a9982eb8dc92bb2686506482166527c95
 SHA512 (bomber-20.12.3.tar.xz) = 4a40b968507ee3c0b9db4fd0adb87a734a11e170599513fc2bccf4086047eb9991ca566109f82b7b147cb551efe50e9ecb95d9a3a8b723a8c2c7823cebbde50c
 Size (bomber-20.12.3.tar.xz) = 825104 bytes

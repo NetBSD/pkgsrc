@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/21 12:34:24 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:21 nia Exp $
 
-SHA1 (dunelegacy-0.96.4-src.tar.bz2) = 033c4cd57e6c427c9b8ace9aa42f7502a57f9f94
 RMD160 (dunelegacy-0.96.4-src.tar.bz2) = cef0160458a36b32aae57ca7490c37582349fc7f
 SHA512 (dunelegacy-0.96.4-src.tar.bz2) = d6e152da4bc526ed05ac89fafc2e3467b1a95b3670987eeca262b7207e7dbe67dd228483cb5a432fe08232e34a52d4cb500b42cd186adb4bcde5da17419f7db0
 Size (dunelegacy-0.96.4-src.tar.bz2) = 2513167 bytes

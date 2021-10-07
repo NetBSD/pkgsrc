@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/08 19:56:27 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:36 nia Exp $
 
-SHA1 (kpat-20.12.3.tar.xz) = 6b6ef7ef9e97d248b69182e2b75faacafea033a6
 RMD160 (kpat-20.12.3.tar.xz) = 8bb788d922cf7ed966c495618d03fd05ad6316d3
 SHA512 (kpat-20.12.3.tar.xz) = d299fa951e171aeb45ca2b543e2eeabbd8451311446e685573c8306f5e8a34c0caba7017f2523c7286106a48f51f9f19f3723d71a2df8a19d9d51c21cfdaf23a
 Size (kpat-20.12.3.tar.xz) = 3584892 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:57:03 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:07:49 nia Exp $
 
-SHA1 (quake-v6-bsd-kame.tar.gz) = 09d58eef39f3d8a6b7b7287c88fc66d4dd3feb0b
 RMD160 (quake-v6-bsd-kame.tar.gz) = 1844e193b62886c452a65c5c5780f58d19684109
 SHA512 (quake-v6-bsd-kame.tar.gz) = c99f62b10234a01e4a9bf3742c2d305198c8dba8894766a33fb92e6e651497c6f91ad7ae494d450785a9a7fd3dc8fd1066b7540fa7accb9fbe7294cc742ae22c
 Size (quake-v6-bsd-kame.tar.gz) = 4503326 bytes

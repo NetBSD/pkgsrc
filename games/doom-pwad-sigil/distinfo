@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/07 11:51:12 micha Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:20 nia Exp $
 
-SHA1 (sigil_v1_21.zip) = 28ad6dc5a2c6d722cde83e0a0e9901b1658f2f22
 RMD160 (sigil_v1_21.zip) = 7b4991b86994812f3bcc2e056453c1a31d661ff7
 SHA512 (sigil_v1_21.zip) = 6a9a94f3445ab007041540846720c359b871e2c6de815d851610c898ef3102fd314489bd258be9335f13197aeacd877286d19770a20ddfa5c8f581132932eac0
 Size (sigil_v1_21.zip) = 3250842 bytes

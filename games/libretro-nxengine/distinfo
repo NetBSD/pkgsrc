@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/31 16:22:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:39 nia Exp $
 
-SHA1 (libretro-nxengine-20200109-f39250e54f20c616dd4403cb8d4cab14032530b5.tar.gz) = 28af6535695eaea0ec7c6188decfc0c49f2edb1a
 RMD160 (libretro-nxengine-20200109-f39250e54f20c616dd4403cb8d4cab14032530b5.tar.gz) = fda2cacb45a9a85094aca8658447aa6284d67ded
 SHA512 (libretro-nxengine-20200109-f39250e54f20c616dd4403cb8d4cab14032530b5.tar.gz) = 77135c5621405ae8168ec2a0dce1441c3c4da853270b377efaf6e6e7e2d498e96464ed8f12d05d9ccff17c3053335566f0c74047ba264b9bfc12b3e0e0749db5
 Size (libretro-nxengine-20200109-f39250e54f20c616dd4403cb8d4cab14032530b5.tar.gz) = 2707902 bytes

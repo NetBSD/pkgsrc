@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:52 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:07:32 nia Exp $
 
-SHA1 (ioquake3-raspberrypi-20150118.zip) = 4d41a7d4290d99ce20179d5f693e327831392436
 RMD160 (ioquake3-raspberrypi-20150118.zip) = 4baba47cddba21e25a0e9986b50c9bb6ba22b4e0
 SHA512 (ioquake3-raspberrypi-20150118.zip) = acbc6056f45c6b2b0920361bce02cdb33719e790cd3cc14fc9eec4f6855970aec5287bb0650de05ce852cd073909a58b85118e3bda5d6288bf75e4f585ff6d6b
 Size (ioquake3-raspberrypi-20150118.zip) = 4062816 bytes

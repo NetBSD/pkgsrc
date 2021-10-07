@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/08 11:46:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:49 nia Exp $
 
-SHA1 (quadrupleback-0.1.1.tar.gz) = c69d970a69aadc4a3086f5dfbf5a939dae594510
 RMD160 (quadrupleback-0.1.1.tar.gz) = b04581bb99f54c5c38fb142388867f0e3f3b8a5c
 SHA512 (quadrupleback-0.1.1.tar.gz) = d65f19c3497da03ada6908b2a8f2349211a0583a39b9e738d2fb05e0d1563d718f6b5ffd1a2d1a70bfd45ac90bfefbd7fa564cd17d3a1c72ecbcac7372efc3ef
 Size (quadrupleback-0.1.1.tar.gz) = 416008 bytes

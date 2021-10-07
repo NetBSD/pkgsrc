@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2019/07/06 22:53:24 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:07:49 nia Exp $
 
-SHA1 (quakeforge-0.7.2.tar.gz) = 6c10b095b2c6e860e3b20fca970429d8eda72e36
 RMD160 (quakeforge-0.7.2.tar.gz) = 4cb283f8aa14268ec23145d55830d0044820f75a
 SHA512 (quakeforge-0.7.2.tar.gz) = ec68f298e10db926e7e9d569d375204eed10e80f03cdc79598beea468df6de53a12afa71a832e60705a50475c87f6f617df53bccdf6dfae3482acc34d9b39ce6
 Size (quakeforge-0.7.2.tar.gz) = 3890305 bytes

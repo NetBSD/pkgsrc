@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2019/09/04 17:43:15 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:07:38 nia Exp $
 
-SHA1 (lbreakout2-2.6.5.tar.gz) = d92326499165fd368be04378d633e13d42b4d2d7
 RMD160 (lbreakout2-2.6.5.tar.gz) = 8ec9dd05478d41799419edaf31ea1407576fcb06
 SHA512 (lbreakout2-2.6.5.tar.gz) = 45c54bc9401131c96eba5fdcc08ca1324904fb50d3967acf7f29034045cbcd4c1d0b65f38eb33d8aace4cfe35f2a2e7a6c2319e4a6d6a1b41274dbe293a1747b
 Size (lbreakout2-2.6.5.tar.gz) = 3491519 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/05/04 17:08:05 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:07:45 nia Exp $
 
-SHA1 (openttd-1.11.2-source.tar.xz) = 1894134b7bfc7c645ce9c4fe5747db3dd40abf61
 RMD160 (openttd-1.11.2-source.tar.xz) = 19d5edf788076fe562bcc8f095e44dd3910c83b0
 SHA512 (openttd-1.11.2-source.tar.xz) = 9a6364bf19627db9f8ec58bfa85fa3a8febf1109f3b5fb9053bef810ac2d0c41df91b58f0b253dd45320a29cae2e8485df794afa7b5240f19759f98fd65c35ea
 Size (openttd-1.11.2-source.tar.xz) = 6783972 bytes

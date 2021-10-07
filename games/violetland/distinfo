@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2016/09/11 14:44:29 kamil Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:56 nia Exp $
 
-SHA1 (violetland-0.5-source-with-dependencies.tar.gz) = eb42e647e6ee7473835f0a2c47abb99dd19f4ae4
 RMD160 (violetland-0.5-source-with-dependencies.tar.gz) = 25115e79a8355261ede62c78b5f9794ab2ea6d09
 SHA512 (violetland-0.5-source-with-dependencies.tar.gz) = 9b00fa600332c956c49bc5906f373c0dfff08a13320617014942ac4dbc199de8f84bef87ed218b38812ae3c53622e9148aa4463c4ea219056360bff1c73b7f88
 Size (violetland-0.5-source-with-dependencies.tar.gz) = 11495885 bytes

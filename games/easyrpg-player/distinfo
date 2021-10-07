@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/11/20 12:39:10 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:07:21 nia Exp $
 
-SHA1 (easyrpg-player-0.6.2.3.tar.xz) = 754894b17190ed02c451fa4f33236fd845592d52
 RMD160 (easyrpg-player-0.6.2.3.tar.xz) = 4be1a6f60d1014b4412825d20974711eb8e8d8bc
 SHA512 (easyrpg-player-0.6.2.3.tar.xz) = df0d001709a3f64179a1b37cc6c59fc54a7daab2014ee78ef7795b1b82341583a6d735dbe0a05fd80efdaed881a09476f3119b76a387f23bf3abf6491e6635ea
 Size (easyrpg-player-0.6.2.3.tar.xz) = 4640348 bytes

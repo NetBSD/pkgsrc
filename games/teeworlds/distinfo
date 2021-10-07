@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/19 11:46:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:07:54 nia Exp $
 
-SHA1 (teeworlds-0.7.5-src.tar.gz) = 8978c9444573d208ffe405de740fa73583e28f8e
 RMD160 (teeworlds-0.7.5-src.tar.gz) = 14b3a2629b5341bf11d984cf76f51c9e7c1cd16f
 SHA512 (teeworlds-0.7.5-src.tar.gz) = f0c55489b99b06e27298ac42adcf31e1130e7eace6f8672836e50c66c27ab0ccce5b8680c7181a2adc59e1f5808564001b5f0bc8ac7ab355ad8db71328ea7a76
 Size (teeworlds-0.7.5-src.tar.gz) = 8935505 bytes

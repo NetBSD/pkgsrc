@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/07/21 12:53:20 yhardy Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:07:13 nia Exp $
 
-SHA1 (arx-libertatis-1.2.tar.xz) = afec697725d2cffee4c5ba04479cd5ba78502408
 RMD160 (arx-libertatis-1.2.tar.xz) = 5465f98f0a56abbbef9eb33b40e164ce2971acb2
 SHA512 (arx-libertatis-1.2.tar.xz) = faa838469ed65346e660eda5af95626bd140fa589f6d46917cd567782969f47080214bc98e99b3b7c85b5a150d610fb8712f261ac84799d504e4dda75533f67c
 Size (arx-libertatis-1.2.tar.xz) = 2478640 bytes

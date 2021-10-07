@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/09/03 11:38:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:07:16 nia Exp $
 
-SHA1 (cataclysm-dda-0.F.2.tar.gz) = d436b0e0dbbae47e6f40c8201c56391edddd5564
 RMD160 (cataclysm-dda-0.F.2.tar.gz) = 46f9caf52ab312d770e20a7d5f94ced1a4fd630e
 SHA512 (cataclysm-dda-0.F.2.tar.gz) = 31425be7381815462aff48c08c89f02734bb3caff70e151b1b9fe0f5fd2e1a9ae5dbcfab6910dd2ea7788cbecd21db4f89757c07d5fb72538c531b64e6f9bde3
 Size (cataclysm-dda-0.F.2.tar.gz) = 88597127 bytes

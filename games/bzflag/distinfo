@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/03/04 11:02:05 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:07:16 nia Exp $
 
-SHA1 (bzflag-2.4.22.tar.gz) = f84758349390c5dd82641d2bab26da90bb0b4e0f
 RMD160 (bzflag-2.4.22.tar.gz) = e5f82dbda8a5bce00e770c43767459c08905ac08
 SHA512 (bzflag-2.4.22.tar.gz) = 74262e786f5605e9f5aa8ff83f3abc0bf4c20fcb63666d7bd877a6c092f6910a089638908fc267d04500f30b93e77d966184c12da8f83c8e4ac32b411e1a3633
 Size (bzflag-2.4.22.tar.gz) = 15071606 bytes
