@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2017/09/27 16:29:18 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:07:59 nia Exp $
 
-SHA1 (SVN-Web-0.63.tar.gz) = 4a4e9a468d0129095cebec264fb91850ba7c5998
 RMD160 (SVN-Web-0.63.tar.gz) = c6aade7d859f336f41cb2228a3b17bac2b79fba8
 SHA512 (SVN-Web-0.63.tar.gz) = 2dce520d315ea51b5db4e2bb4882128a55b59e63a6b18b2ca68bba71df5100829751fd5892af52dd0eb6d8e69f361b1d3c3b244ceec8fd00ac526dc626e03e95
 Size (SVN-Web-0.63.tar.gz) = 99291 bytes

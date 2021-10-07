@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/02/02 12:16:00 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:56 nia Exp $
 
-SHA1 (Plack-Middleware-ConsoleLogger-0.05.tar.gz) = 82209a05667a29b05180120313bf2fd15548beab
 RMD160 (Plack-Middleware-ConsoleLogger-0.05.tar.gz) = 640a7a32fcae9b7009ba6122e48b850c050df6b9
 SHA512 (Plack-Middleware-ConsoleLogger-0.05.tar.gz) = da9bd84a4872c1c054c89f041905bf9b7944f85211e4eb58f73390be1caee8d93e5d3f9311deaefdc3cf80db68db3ace69d47176557101ad00398bf8af57a725
 Size (Plack-Middleware-ConsoleLogger-0.05.tar.gz) = 10514 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/09/27 13:25:43 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:33 nia Exp $
 
-SHA1 (Catalyst-Authentication-Store-Htpasswd-1.006.tar.gz) = d08c8d12ae42e212155571c11951b783b9e2c066
 RMD160 (Catalyst-Authentication-Store-Htpasswd-1.006.tar.gz) = 995bc6336cbaf288d61604800ae96c114510a651
 SHA512 (Catalyst-Authentication-Store-Htpasswd-1.006.tar.gz) = 34d0757fc9129dbe33a3da6fb854f0c0a7f959a3e926a1255942b5df9f18032c6be12d6c30d8e1b8f8f105f7eab236e3b1491ffa28fb5f25579dc3b7fd0e233a
 Size (Catalyst-Authentication-Store-Htpasswd-1.006.tar.gz) = 33100 bytes

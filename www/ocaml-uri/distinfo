@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/21 11:21:47 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:07:25 nia Exp $
 
-SHA1 (ocaml-uri-3.1.0.tar.gz) = 33b5ed08217577240f33ca0c5487b891582fa560
 RMD160 (ocaml-uri-3.1.0.tar.gz) = 8cef8ab1a850136bdc89dbe76ffd91a9bed9a6bd
 SHA512 (ocaml-uri-3.1.0.tar.gz) = 05c29710e8bd0eb92a3b1438b201776055490f9c913da75de20917f0e8a95b502e59c0b4776f9f111d78a6818f7b815572a68231aa5b106637f11b5e13214e72
 Size (ocaml-uri-3.1.0.tar.gz) = 216814 bytes

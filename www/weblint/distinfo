@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/07/22 21:45:41 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:08:58 nia Exp $
 
-SHA1 (weblint-1.020.tar.gz) = 445cc723ff2a25095c48aa52bd3f082fef22ba0c
 RMD160 (weblint-1.020.tar.gz) = f139b8e7c726ad21daab20288ed93b688193ac44
 SHA512 (weblint-1.020.tar.gz) = dedcbdc43dd2edd786849bf0b919d3e808440a9f1f801b24aae1c4891da33f6801ab3b8abc030cfd7ba993b32ff90a811bd08c3ceeff7a77bbdc3c9877dff2b0
 Size (weblint-1.020.tar.gz) = 41264 bytes

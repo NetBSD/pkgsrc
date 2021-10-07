@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/08/25 01:57:43 manu Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:07:02 nia Exp $
 
-SHA1 (tomcat-connectors-1.2.43-src.tar.gz) = 04136649eca7ea42a31564021a7f8959dbcb9822
 RMD160 (tomcat-connectors-1.2.43-src.tar.gz) = 9669e16a8dbec6b2e1a07f88b2d2fb281a95523b
 SHA512 (tomcat-connectors-1.2.43-src.tar.gz) = eee06e5eaadd237aa98cd0f6a15c4d8f96edb3b4d8b6b8d9cbdd91abc6b89b50aa75132d76b87791d1800b904d84aea03bafabbe5697541e5ec66bf07cc507f4
 Size (tomcat-connectors-1.2.43-src.tar.gz) = 3242555 bytes

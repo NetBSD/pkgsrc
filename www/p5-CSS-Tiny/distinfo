@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/04/17 12:25:40 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:07:32 nia Exp $
 
-SHA1 (CSS-Tiny-1.20.tar.gz) = c929ff62c46660138e2392db4ff5386ced4748bb
 RMD160 (CSS-Tiny-1.20.tar.gz) = 5ad05e5d2ddb2f2e4cb25e72322fd4cc9882cc1e
 SHA512 (CSS-Tiny-1.20.tar.gz) = 22913c13d6df3e5ffb73fa5bbb60aeede9e7bd44a59031c566da882015e24ff839968aac211c4fd2aa8570b23ee4bd4df2828e366371218cbee18ce85cfab2b6
 Size (CSS-Tiny-1.20.tar.gz) = 8706 bytes

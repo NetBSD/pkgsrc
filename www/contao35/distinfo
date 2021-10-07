@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2020/10/04 06:31:02 taca Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 15:07:07 nia Exp $
 
-SHA1 (contao-3.5.40.tar.gz) = 67ee42c5232142bf7b7f9f86635f9a5dc7c3536d
 RMD160 (contao-3.5.40.tar.gz) = b8fdb80da8b96fd7820f972f5b33418fadcadf81
 SHA512 (contao-3.5.40.tar.gz) = 54a2e00fdca1bd3a11464d5c74113cbb74b7d39fc368dc6de7608a4a8dd7fe5464d9840b0ecd37ca2ee7df6cf0ac004a0e2903c79e06c7509787a6700814d598
 Size (contao-3.5.40.tar.gz) = 11204594 bytes

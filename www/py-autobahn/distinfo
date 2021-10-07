@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2020/01/23 14:33:18 adam Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 15:08:11 nia Exp $
 
-SHA1 (autobahn-20.1.2.tar.gz) = 3d58a95c117e7bd98bd63178ad83b1b08b08c048
 RMD160 (autobahn-20.1.2.tar.gz) = 4e9627ba1696f6ba1e1536a5d40cd82683064a64
 SHA512 (autobahn-20.1.2.tar.gz) = 5a2c2ba937abaf196b4370ce6a873f091ce4d08d438a65d96809c2c9146afc0d174b44e9c245fbe0332f523ef86fae620d7a5d9f2603e714b2b05d3ef980e662
 Size (autobahn-20.1.2.tar.gz) = 612566 bytes

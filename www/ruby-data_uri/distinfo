@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/20 08:50:50 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:08:39 nia Exp $
 
-SHA1 (data_uri-0.1.0.gem) = 4fbfb75f8cfc0d6c24672aa976a70834453667cd
 RMD160 (data_uri-0.1.0.gem) = 7b3675afa1f8bf82251ae00af136cdbde1d9a792
 SHA512 (data_uri-0.1.0.gem) = 88eef1dd3ef28de80a1de3dcd7e9fc33cf54235f9eb0e060ea7bb214494c738d35f0236d03533e3a1c2aa4531ae1df522a03ecbb34e489a1960bd964cfb08f52
 Size (data_uri-0.1.0.gem) = 6144 bytes

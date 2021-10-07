@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/12/16 15:24:20 hans Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:00 nia Exp $
 
-SHA1 (album-4.15.tar.gz) = d0e8a0e73d5db7e7319a7028917319b4abaf075b
 RMD160 (album-4.15.tar.gz) = ccb19c0c463b06e7063c2a59ef0c4c5db2f2c18e
 SHA512 (album-4.15.tar.gz) = 3e075efd81c829817f42fbe2163269581aa6ac972ec8f14e04237598e08722cdda78cc702e8628a6f77e6c2181ab7bc438f56975f5ed883f5ed9c53ca13edf9a
 Size (album-4.15.tar.gz) = 651380 bytes

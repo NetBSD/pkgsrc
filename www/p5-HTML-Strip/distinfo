@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/04/29 13:57:22 wen Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:07:43 nia Exp $
 
-SHA1 (HTML-Strip-2.10.tar.gz) = 16b556735adebe0e94d6f68986cfa2001b12cb69
 RMD160 (HTML-Strip-2.10.tar.gz) = 7f44813a6a45f4404de2628fe6a22a6ad804c44a
 SHA512 (HTML-Strip-2.10.tar.gz) = e5a5c7817e519542e39e3d27e6c113082188665f2f19c795d96aa841f8c35f3515880f1f0eab3a30d69377433311bb3164a8528c057fe331f28f29f8a18c9e05
 Size (HTML-Strip-2.10.tar.gz) = 15333 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/05 10:51:25 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:07:18 nia Exp $
 
-SHA1 (lariza-v21.06.tar.gz) = 6c3ba1a90bd84593fb783e708658f0c10e1d5320
 RMD160 (lariza-v21.06.tar.gz) = a87cf393b6ea5a402361412dd686b99c0a35729b
 SHA512 (lariza-v21.06.tar.gz) = b647e4b043c903eb398b5e4e3bd4116b05bde28249363279730b5b889c3343bfb15dc4f6e099c4ef8b85af505ad40c9b183257b488cf025ba02494be7ab65466
 Size (lariza-v21.06.tar.gz) = 23272 bytes

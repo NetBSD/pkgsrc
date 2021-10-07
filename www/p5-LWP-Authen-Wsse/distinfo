@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/06/08 14:56:35 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:07:53 nia Exp $
 
-SHA1 (LWP-Authen-Wsse-0.05.tar.gz) = fa44456a3996ca95e3e740ee656217cfef1e7613
 RMD160 (LWP-Authen-Wsse-0.05.tar.gz) = 946da9337d1c120d080ef51ba89a2a307269c42a
 SHA512 (LWP-Authen-Wsse-0.05.tar.gz) = b5612b2996ea84680e75accce386a575c08ba941281329f100b4acfeba8ac56fca91abf5bdb45355b5dea407f578e24df32b7be2a3e26e7900e92c4bb724e2e2
 Size (LWP-Authen-Wsse-0.05.tar.gz) = 11412 bytes

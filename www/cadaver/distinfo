@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/04/25 13:47:31 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:07:06 nia Exp $
 
-SHA1 (cadaver-0.23.3.tar.gz) = 4ad8ea2341b77e7dee26b46e4a8a496f1a2962cd
 RMD160 (cadaver-0.23.3.tar.gz) = 104f687cfd121b091ba2f509b37574509b4ffabd
 SHA512 (cadaver-0.23.3.tar.gz) = 48fe0a266be0ca7239f325377e5e2a8dc57a5d60466c7160e36c060ad24c09a50727695b9fa931844b1e66e173ebbb838f390d6c60fd07b614bd3b636cd4dd41
 Size (cadaver-0.23.3.tar.gz) = 831884 bytes

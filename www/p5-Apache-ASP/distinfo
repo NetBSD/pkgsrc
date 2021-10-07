@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/03/18 09:00:38 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:07:27 nia Exp $
 
-SHA1 (Apache-ASP-2.63.tar.gz) = e9c97e6dfe2b9bd92293da13e18a1a8db6640e8c
 RMD160 (Apache-ASP-2.63.tar.gz) = d913116c2aab04d54c067cbbe6df5c26e1d941ad
 SHA512 (Apache-ASP-2.63.tar.gz) = 492033af496a7d7dccc9052e5a85336008cb1cd55566fee6cd06f8416297ebd1b6c7b8145afa4321d8e993edb9312c4075820640e116261ab48f85c2311aeff3
 Size (Apache-ASP-2.63.tar.gz) = 513869 bytes

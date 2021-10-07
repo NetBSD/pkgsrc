@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/08/15 08:02:27 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:08:02 nia Exp $
 
-SHA1 (Test-LWP-UserAgent-0.034.tar.gz) = 4e4ef8f9039b310c35f92a919c5776fb6d748b83
 RMD160 (Test-LWP-UserAgent-0.034.tar.gz) = b59f387f7ea815fb2c3bb80f474b31e17b5b01dc
 SHA512 (Test-LWP-UserAgent-0.034.tar.gz) = c1c7daf78744028ab4b35323fce5c7fcb3b223751a6bc0eb7abcc9b11322c5e340825b9f2546f01a96025e2d78a41a91202c0969b86d07c0551aee14c2b674e3
 Size (Test-LWP-UserAgent-0.034.tar.gz) = 50898 bytes

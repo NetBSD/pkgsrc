@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/09/27 16:07:37 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:07:58 nia Exp $
 
-SHA1 (Pod-POM-Web-1.23.tar.gz) = 332a3e1808e3f8ae99cffb15be74663cacd1d781
 RMD160 (Pod-POM-Web-1.23.tar.gz) = 8931143b54f34a1f9f1d7600a71e989993ca575c
 SHA512 (Pod-POM-Web-1.23.tar.gz) = c15bbfe6b75b4c6abdd72488c1d1ea4cd507b27073d2704dcee5025d0f8642424fbd6b6b37807f88621602223dd4f229ba0ed2958a76449e159a4deb7cf2804c
 Size (Pod-POM-Web-1.23.tar.gz) = 36217 bytes

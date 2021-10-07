@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/05/09 17:19:32 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:08:53 nia Exp $
 
-SHA1 (squidanalyzer-6.6.tar.gz) = 62efe499991c054f9dfac7054a9435b1a121d8eb
 RMD160 (squidanalyzer-6.6.tar.gz) = bf7d1f9164f077cceaeab99130d1ce9a3b59817f
 SHA512 (squidanalyzer-6.6.tar.gz) = de51287c9e38cff8c2c8cdc76936bdd9013fb13b4622276d6f11700cfae03be597f7759e1fd7e0ae9fa44ac45319c6ac1eb028dc1f4c57a1a9fe1cf5df30f9e7
 Size (squidanalyzer-6.6.tar.gz) = 170053 bytes

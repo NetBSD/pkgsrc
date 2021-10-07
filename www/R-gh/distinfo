@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/24 10:31:18 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:06:58 nia Exp $
 
-SHA1 (R/gh_1.3.0.tar.gz) = d11dfcc964a1d3be3dabefdbd058688e76f7dd6e
 RMD160 (R/gh_1.3.0.tar.gz) = e9f0ab69530f8299b5747ed15aae3b787fd74aeb
 SHA512 (R/gh_1.3.0.tar.gz) = 61d576923817fafc8dee522e35caa60508b29f4a6ae994b30651de01efcc3ac3caae114ffa7e85ed5f90bf5de83121ab04db5f653893c3d9e4f1d0735b4f6cf4
 Size (R/gh_1.3.0.tar.gz) = 45619 bytes

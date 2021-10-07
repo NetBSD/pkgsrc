@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/10/26 09:27:09 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:08:28 nia Exp $
 
-SHA1 (Mezzanine-4.3.1.tar.gz) = 3d8a60489488772f345b7bd538af5ac69c958814
 RMD160 (Mezzanine-4.3.1.tar.gz) = 86f7837c50a2658b5e1715570110fec1bb15dbdb
 SHA512 (Mezzanine-4.3.1.tar.gz) = 9f16e5403faa069b95fcc1b8d5eea0e6bfc70861708a11074aa002ecf1a424354f3aa3cd5af68a7d01c4b6ed2b381a4cdcee1ceac75d06d659a9e4c59a94f74b
 Size (Mezzanine-4.3.1.tar.gz) = 6208692 bytes

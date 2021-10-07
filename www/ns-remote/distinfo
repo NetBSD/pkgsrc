@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/01/04 22:14:56 abs Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:07:25 nia Exp $
 
-SHA1 (ns-remote-1.12.tar.gz) = 1f543f0a7d7853d56a36102616e6019b926d4dc1
 RMD160 (ns-remote-1.12.tar.gz) = 39f815a021aa7fabee4c44ecf948f1c81ee04f35
 SHA512 (ns-remote-1.12.tar.gz) = 428ab8db41e8da6265d0b6c06307e5630ffcde7c48aeace8b1b744ef1be1219238f1f9077abd03e0450f09349993926bd1878dfd09d077a1da997e2391c2cc84
 Size (ns-remote-1.12.tar.gz) = 10756 bytes

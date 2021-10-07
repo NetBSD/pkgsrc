@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/07/07 08:27:39 wen Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:08:05 nia Exp $
 
-SHA1 (WWW-Shorten-3.094.tar.gz) = cd6a1ddb60b3dc2eca218d20a8c5ef7088bd66b4
 RMD160 (WWW-Shorten-3.094.tar.gz) = b28ad8433ab6a1b9fbbfc32afeb1a511e8a94821
 SHA512 (WWW-Shorten-3.094.tar.gz) = ef20775f91b23b07b55cd0fb6880311e45e18f5cae67a133f075215ed84f0039339924d611dde8de166b852175fd52e362aaca23982806d1dc7e325b633969c0
 Size (WWW-Shorten-3.094.tar.gz) = 25651 bytes
