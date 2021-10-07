@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/03/19 11:30:26 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:25:40 nia Exp $
 
-SHA1 (prayer-1.3.5.tar.gz) = cce72edba8859b2c4e71799a7f93a420326f87b6
 RMD160 (prayer-1.3.5.tar.gz) = 8c2c9a4ddb723c8defd7f8742d529de0b6dbaa89
 SHA512 (prayer-1.3.5.tar.gz) = 6bb190fda2ac60c6f3801bc89eb719bea7b479c4417eb5e3315d95118dcfecceca9274fb0478360756d2f361d08ebf1f8176a393dbf1b5a3775a52f46e315be1
 Size (prayer-1.3.5.tar.gz) = 751658 bytes

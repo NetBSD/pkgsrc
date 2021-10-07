@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.45 2021/03/17 14:11:39 ryoon Exp $
+$NetBSD: distinfo,v 1.46 2021/10/07 14:25:27 nia Exp $
 
-SHA1 (msmtp-1.8.15.tar.xz) = 1208db3da0db71c0615b11bf91a072f2297e10f6
 RMD160 (msmtp-1.8.15.tar.xz) = be7c16c5cd466a13b548efbd3bf80bee00e393b9
 SHA512 (msmtp-1.8.15.tar.xz) = 66c722f65590785f005631f0edb46f427cc4d9028c71ffbb1fb4eaa8d8fdacaadbcf24f81edc41e464e156b2beb65ecd1166b3d4aad4630ccd9fcaaa2e72e2a6
 Size (msmtp-1.8.15.tar.xz) = 370736 bytes

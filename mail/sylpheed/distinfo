@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.89 2019/07/14 13:10:55 tnn Exp $
+$NetBSD: distinfo,v 1.90 2021/10/07 14:25:49 nia Exp $
 
-SHA1 (sylpheed-3.7.0.tar.bz2) = 178424466901572b99fbf8e3bd55d6347f727f3c
 RMD160 (sylpheed-3.7.0.tar.bz2) = 09ee37dfc063e76fc3780de613cfd80be917d6d8
 SHA512 (sylpheed-3.7.0.tar.bz2) = 490837528bf7ba9d26994cd5fff00b6e5390a127419b9d0efd9fc25c38be1291d55c5b8daebdf5ca9d9159a51c938449e76212328f3eae40cc039db88cb5caa4
 Size (sylpheed-3.7.0.tar.bz2) = 3612328 bytes
