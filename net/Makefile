@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1426 2021/09/19 13:52:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1427 2021/10/07 05:59:10 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -991,6 +991,7 @@ SUBDIR+=	wap-utils
 SUBDIR+=	waste
 SUBDIR+=	websocketpp
 SUBDIR+=	wget
+SUBDIR+=	wget2
 SUBDIR+=	wgetpaste
 SUBDIR+=	whatmask
 SUBDIR+=	whois3
