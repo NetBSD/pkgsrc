@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/26 17:17:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:53:50 nia Exp $
 
-SHA1 (R/timeSeries_3042.102.tar.gz) = cc3d25272fe04f579e4de973fbe264a4e59d5246
 RMD160 (R/timeSeries_3042.102.tar.gz) = 5f6c9c082fdb6813d4b0dbeb8fc1e13ae859206c
 SHA512 (R/timeSeries_3042.102.tar.gz) = 610c2557803968979ef1114f5ef06ad88164ee3371ebdd99ad3d4ef11d880946b84797db8ede69b41cb84026c343233248d5235fe3d6cf28880889334b6439df
 Size (R/timeSeries_3042.102.tar.gz) = 1256511 bytes

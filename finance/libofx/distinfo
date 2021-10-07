@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/05/12 06:03:48 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:53:51 nia Exp $
 
-SHA1 (libofx-0.9.15.tar.gz) = 96b9fad846652af5c3f2205e267dba8bf185d778
 RMD160 (libofx-0.9.15.tar.gz) = f1fdf640a482228176b5e1406e92e72512aaaeea
 SHA512 (libofx-0.9.15.tar.gz) = 9d9c5e55bd4ac71d1158c7b8dfe7ecbcaba6f03afdbf3dc2f6d3699c5e4f3fce045400df0217d5f1f4ba45a0ee1b10862b0ebbe1a0f634d756c3b1b88872ce1f
 Size (libofx-0.9.15.tar.gz) = 1298356 bytes
