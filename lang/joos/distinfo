@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:20:57 nia Exp $
 
-SHA1 (joos-0.2.tar.bz2) = ffc3a53908353f6ae4f1150f7e03086bfff787c7
 RMD160 (joos-0.2.tar.bz2) = 044f876a97ba11363a24e2cbb5860e13796bd10f
 SHA512 (joos-0.2.tar.bz2) = 97bc47ace1200511495ebf69949e108ff71e359bcdfcd7572fd334852bf35096a4b21942f4bc8d2164a905282aedf4d83c0c131ca407e2da270e7d5d3e5c5dbc
 Size (joos-0.2.tar.bz2) = 285084 bytes

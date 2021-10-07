@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:20:47 nia Exp $
 
-SHA1 (cim-3.30.tar.gz) = 8636ac8d1eaee793769051af60140af80b82b22f
 RMD160 (cim-3.30.tar.gz) = d5c07046799dec8840c7c7d9f5c88e552a4c6432
 SHA512 (cim-3.30.tar.gz) = a8cacb8badf287db283a400e15e2f5ba982a8b2a98ec6affd98dc2b54855da2eca4063a5bccc949e50f56cc649e301ecc3eff83b4c6085203f6e871f7db9b851
 Size (cim-3.30.tar.gz) = 416809 bytes

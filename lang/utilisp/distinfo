@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 22:50:46 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:21:16 nia Exp $
 
-SHA1 (utilispc-1.13.tar.gz) = 05d998277fcad1407a98e51f8f8b2c0203f0bba1
 RMD160 (utilispc-1.13.tar.gz) = 86053d575a68e1e25a310614384c99c4b6ab0593
 SHA512 (utilispc-1.13.tar.gz) = 7004f9b4b129cea35326f3d2afc8934a88b7c362865f7ff1cbd5f37b2f59487b0b438b4e7e4d0d28c5b4633a93d27264bf9d0454508cafea77ded6cbc8eb9c19
 Size (utilispc-1.13.tar.gz) = 515215 bytes

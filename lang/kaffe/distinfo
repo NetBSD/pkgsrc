@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/06/27 01:22:51 dholland Exp $
+$NetBSD: distinfo,v 1.37 2021/10/07 14:20:57 nia Exp $
 
-SHA1 (kaffe-1.1.7.tar.gz) = 5951d16a4a7b11689932583d134520ca6de00817
 RMD160 (kaffe-1.1.7.tar.gz) = 7523a3470cd06cf60dbade8ea2f464dc9d85277b
 SHA512 (kaffe-1.1.7.tar.gz) = 1edab9d1a2ed96230b2342a1770d83d37834aa748b273ef197777aecb4a2fee7fc57843ce0b5f7809c90af2e04ef6b2251d4516e8d088942acb548e824d28bc2
 Size (kaffe-1.1.7.tar.gz) = 14494274 bytes

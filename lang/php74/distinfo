@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/09/28 13:50:15 jperkin Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:21:06 nia Exp $
 
-SHA1 (php-7.4.24.tar.xz) = 34660781db70c891dcaab046931d38f60464d7e3
 RMD160 (php-7.4.24.tar.xz) = 67a0c7ca2067311ee363e685fc89aba1980b0778
 SHA512 (php-7.4.24.tar.xz) = 30dd0a83d6184791f4cff3edcffeb05470de8f98ddadba3c11544449bf500280ff2048a8ca8588b35d0622dcbbf16f55ea297f51d469ae137048cab2d40da9cd
 Size (php-7.4.24.tar.xz) = 10372816 bytes

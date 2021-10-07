@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/03/05 13:57:17 jaapb Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:21:06 nia Exp $
 
-SHA1 (polyml-5.8.1.tar.gz) = 9050a484169d130bae09ebf9da78ce94f54e8de1
 RMD160 (polyml-5.8.1.tar.gz) = 83b59aee68eb59f07dd34229582581b273a08720
 SHA512 (polyml-5.8.1.tar.gz) = 8701c27a4a84b00529b8ae30ce340a46f45eb12d74a94ff5c5663bbbe79f5723039b96298190ba23bcbde11a26fb2b364d9452f45fdb19576a596e364812416f
 Size (polyml-5.8.1.tar.gz) = 9845209 bytes

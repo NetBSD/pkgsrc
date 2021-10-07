@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/03/23 17:06:54 joerg Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:21:13 nia Exp $
 
-SHA1 (scheme48-1.9.2.tgz) = b2d02b6ddac56e566d170b9c916f11dbd182390a
 RMD160 (scheme48-1.9.2.tgz) = 81f7f253f4fb9ff7771c44b28f437ebb77756669
 SHA512 (scheme48-1.9.2.tgz) = a854e3c6f5b02c585fa125899dee276500b91e21cc773202fd4cb84f2e0566a0e19cc34b5f96a3265fab6bf06422e869a2e48433eb2d8fac83a1179fda62e2d1
 Size (scheme48-1.9.2.tgz) = 3951356 bytes

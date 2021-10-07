@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:20:50 nia Exp $
 
-SHA1 (erlang/OTP-21.3.6.tar.gz) = 9b10259443efc4a6be4e287d3fc1d8ed83ae605c
 RMD160 (erlang/OTP-21.3.6.tar.gz) = c2a9048d35191a63fd1f7b23a4608646d142a784
 SHA512 (erlang/OTP-21.3.6.tar.gz) = 4ba430ccacde9366233c085f641712b2745360315ce32447e19eb25ee2c734e4be88fe2ccb68a9bda9c6ee7f257330adcad9fc421a8038ab14dba426c9466227
 Size (erlang/OTP-21.3.6.tar.gz) = 54030023 bytes

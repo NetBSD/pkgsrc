@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/09/28 12:44:16 jperkin Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:21:10 nia Exp $
 
-SHA1 (Python-3.6.15.tar.xz) = fc7c36957c2cd228cc217bb5df4f580f1fdcd602
 RMD160 (Python-3.6.15.tar.xz) = eb84f49be5de3e2cc93059b9e90d3d42c971a90f
 SHA512 (Python-3.6.15.tar.xz) = f1894d704c91669d94ec83b5631288bf1e0c73ddcf33cea0977575f262eb672caebc8ac00e34e9b99c321c19cc9a71d6081fa957bb8e23cf5bfba50f345145ef
 Size (Python-3.6.15.tar.xz) = 17223796 bytes

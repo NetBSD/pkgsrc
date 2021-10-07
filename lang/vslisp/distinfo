@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/01/17 15:14:47 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:21:17 nia Exp $
 
-SHA1 (vslisp-4.0-1.tar.gz) = ccd21360f6bd2a7f47638797a7a5d25d2f8cb797
 RMD160 (vslisp-4.0-1.tar.gz) = e958c708ae1b63e9761f61a02b44ad639f23df4f
 SHA512 (vslisp-4.0-1.tar.gz) = ce15ef01d0aab623069105cd8c84d0ff65908a2f03cd170128ba836485fe42b2a71d02b7876094701ae65022b859d3f353c1449285c87a8326e765b27f0bbe6d
 Size (vslisp-4.0-1.tar.gz) = 167403 bytes

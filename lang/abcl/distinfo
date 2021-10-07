@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/07/29 21:47:46 rjs Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:20:45 nia Exp $
 
-SHA1 (abcl-src-1.7.1.tar.gz) = 6ae7b20c844e5c357169e3ecc9abe412db85ba0c
 RMD160 (abcl-src-1.7.1.tar.gz) = 138ebc4e9de31fce98b056669a9905d6d95158c2
 SHA512 (abcl-src-1.7.1.tar.gz) = a883118fd9fa403f8dde2f7e5824e74801525602fb9c2bcbafd83adccdf7480d097e93d3e1c23a8a7467a3735b5cc39b002215b7796fbe3f4d453fafd0906e34
 Size (abcl-src-1.7.1.tar.gz) = 2557628 bytes

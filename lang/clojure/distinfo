@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/10/08 23:40:37 fox Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:20:48 nia Exp $
 
-SHA1 (clojure-tools-1.10.1.469.tar.gz) = 33b42797609740c6c4a3d478ce07aae94d130ab0
 RMD160 (clojure-tools-1.10.1.469.tar.gz) = 163f9bad72ccfdd122480f06f6b56f7d16c357d9
 SHA512 (clojure-tools-1.10.1.469.tar.gz) = b74654f2e0382332fa2ea514ad2022153419726fa2e63f9b0fe791832b6817508fdd8009f06798c8a36b19351925ad1808e999fab6e6165512e957aed37d5d6a
 Size (clojure-tools-1.10.1.469.tar.gz) = 19750978 bytes
