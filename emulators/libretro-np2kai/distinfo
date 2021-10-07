@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/02/24 15:26:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:49:33 nia Exp $
 
-SHA1 (libretro-np2kai-0.86.18.tar.gz) = de096eea5f3bae2e8c0e3bca520df3babc16233a
 RMD160 (libretro-np2kai-0.86.18.tar.gz) = 9cf5bbfc786c01c62942d9fe6f0f83627fe9af20
 SHA512 (libretro-np2kai-0.86.18.tar.gz) = ac03feea576fd3db1502f7d508a503c600fdeed58aab9ee71c43d2df2748df0a1f8ee9dfe0eaf6d74c2b7b1c581d5ea51c0a614a179cd20f951c38dd678c5043
 Size (libretro-np2kai-0.86.18.tar.gz) = 2540446 bytes

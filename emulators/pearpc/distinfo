@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2018/03/17 01:27:55 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:49:37 nia Exp $
 
-SHA1 (pearpc-0.5.tar.bz2) = 17c5ec69f0139d5a5ce02186a3c990040f45f343
 RMD160 (pearpc-0.5.tar.bz2) = 5f2cd819c21a2cd69465737cf873fc7f00c59188
 SHA512 (pearpc-0.5.tar.bz2) = 26fdc238e846bb52394c6a6e59c8b391b916c464a0e906bf0fb1007401eac3d278b5e4ca1f4f85238ea15f15b4ca731e0dcf5835c5ff189ac9307b98f3f3ab21
 Size (pearpc-0.5.tar.bz2) = 800380 bytes
