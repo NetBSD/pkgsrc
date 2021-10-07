@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/19 14:26:57 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:26 nia Exp $
 
-SHA1 (pyerfa-1.7.1.1.tar.gz) = 6395a58c8a3ce2c521e2ab1fdc0ea55655fe466b
 RMD160 (pyerfa-1.7.1.1.tar.gz) = 51d7dd200ea2b59832d9b65b8102e1ab60ac0904
 SHA512 (pyerfa-1.7.1.1.tar.gz) = 59c2dceed6ef5b1ece618742dd0084b729cce8eb52f903dff2aad009fa0f495defb4511688da0a5203ed5900d041a552fbe50668ddac0c3a6bb3fd6d34d089bb
 Size (pyerfa-1.7.1.1.tar.gz) = 1322843 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/31 16:36:07 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:07 nia Exp $
 
-SHA1 (semigroups-0.19.1.tar.gz) = f782391c947edd39b86c02f249e2b4cf629bf8c3
 RMD160 (semigroups-0.19.1.tar.gz) = 30b68217452c2da045a069d4d314316880facb79
 SHA512 (semigroups-0.19.1.tar.gz) = ea073a8aac0d6a4d82205a31bacc672b7f4e2471403b7a97f04b080535da71054abb987af6c7e459ea16908625b03991bc90055d0447d2b0cac55fef335362d4
 Size (semigroups-0.19.1.tar.gz) = 21124 bytes

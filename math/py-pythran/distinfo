@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/10/01 19:55:37 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:35 nia Exp $
 
-SHA1 (pythran-0.10.0.tar.gz) = 984636da98ce42914987e33ab42d28bf9d7703a5
 RMD160 (pythran-0.10.0.tar.gz) = 86e3d7ed4d32dc4e58f86c10f5c3eb278908278a
 SHA512 (pythran-0.10.0.tar.gz) = 5c1828482e2ab0d2552e718fb2e076d0494e0cf5ccc7cf3869f4ead74d8e583da096619a8c39d72e3b9ff14e5f7c2e310380911b5ef4436d3d7b0cb364fffaa0
 Size (pythran-0.10.0.tar.gz) = 3833449 bytes

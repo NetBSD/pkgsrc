@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/06/16 19:22:59 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:26 nia Exp $
 
-SHA1 (powerlaw-1.4.6.tar.gz) = f9fa2cd0c3bf625fb3c2903b3a44a0452806edda
 RMD160 (powerlaw-1.4.6.tar.gz) = 5543e30e566f99c523078c61c23d6c7b8f9084bd
 SHA512 (powerlaw-1.4.6.tar.gz) = 95c83e3ee9b28be9da6a4f5f0cd77c6df8a70ff2dfd5bf333893928abecc7efa5ab2fbde366e94df2ee3f37f7bcfe8cd00343b099706ac1b13aa423a9ec0e07e
 Size (powerlaw-1.4.6.tar.gz) = 27928 bytes

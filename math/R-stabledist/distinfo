@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/01/30 02:13:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:55 nia Exp $
 
-SHA1 (R/stabledist_0.7-1.tar.gz) = 5670ba81bc02a1b487f1807c5d8aa69969d15920
 RMD160 (R/stabledist_0.7-1.tar.gz) = 96cf43c21f0c89623244bfb07d46bc2d9edeae4d
 SHA512 (R/stabledist_0.7-1.tar.gz) = f0819fbd39ea53efae5a1e862801d3aa9ae304edad18ecfa1ea06683480d79081e8b42c5af2d9c627673d55b74b948bf2127a519d8a73cb65aa8a9f4d786789a
 Size (R/stabledist_0.7-1.tar.gz) = 31963 bytes

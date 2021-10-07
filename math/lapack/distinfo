@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/06/01 22:14:09 thor Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 14:28:08 nia Exp $
 
-SHA1 (lapack-3.9.1.tar.gz) = ccb1e9cb6e7fa7db8a680292457d7d990f25d286
 RMD160 (lapack-3.9.1.tar.gz) = 380a2072eb7d8358ec8bf100e3d114600fc71444
 SHA512 (lapack-3.9.1.tar.gz) = 1c70892ce22eb1f5c0be1e0384d00dc876622e6254e853616eb7c0379c5d1ecf2f1f94d06389dbfba06b78484daf625d899306a9dc0b31a0646320c814022fdb
 Size (lapack-3.9.1.tar.gz) = 7543209 bytes

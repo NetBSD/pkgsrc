@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/09/07 11:58:29 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:18 nia Exp $
 
-SHA1 (Spreadsheet-ReadSXC-0.24.tar.gz) = d929c6c232bcd9c6a970609eed204dfc4c0d739a
 RMD160 (Spreadsheet-ReadSXC-0.24.tar.gz) = ab3c40576176f65745ee85c2bfe366afd9592d8a
 SHA512 (Spreadsheet-ReadSXC-0.24.tar.gz) = 809b5e296b935a42c5de8599d97a567194a5cd02abb11b517897ece5219519a6f1accbd65d123a502d39729e296ec01689d91f30bc3493dad9b03474296cdcd0
 Size (Spreadsheet-ReadSXC-0.24.tar.gz) = 90964 bytes

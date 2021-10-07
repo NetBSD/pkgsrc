@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/01/22 12:22:18 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:28:31 nia Exp $
 
-SHA1 (tex-apnum-47510/apnum.tar.xz) = 1a7ec27e27bb5c16d16de2989b3720c7ac17a651
 RMD160 (tex-apnum-47510/apnum.tar.xz) = 6b25328aa29c64e9349ca12252e0ff7d58037a2d
 SHA512 (tex-apnum-47510/apnum.tar.xz) = 1718c3d4499f7c65f40553c920cc681384aeeaa489b04a656e5313cddec11c6b36be9798a35e24bb9c06932a96733f52153eff7d6ae5f6d69b8a02fef60f1464
 Size (tex-apnum-47510/apnum.tar.xz) = 13364 bytes

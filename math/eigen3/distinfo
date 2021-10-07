@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/03/17 17:20:00 prlw1 Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:28:01 nia Exp $
 
-SHA1 (eigen-3.3.9.tar.bz2) = 516322dc3d98f7f6d20f11050da43084f68e6c71
 RMD160 (eigen-3.3.9.tar.bz2) = f100af009a9b72532653d0e90eb81f12379f97a1
 SHA512 (eigen-3.3.9.tar.bz2) = 6f222e27480d02d90f258c94a4a4787771491fc30c73d5fb025a8089484fdeb2c65d464172f5c29d0c3096b69ff98027a18a40c04b006da670733a2c75f55b65
 Size (eigen-3.3.9.tar.bz2) = 1667231 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2015/11/03 23:33:33 agc Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:28:04 nia Exp $
 
-SHA1 (genius-1.0.17.tar.gz) = 884a12db62de68aa90b078ba9baa124f73c44f51
 RMD160 (genius-1.0.17.tar.gz) = 17b6fa3fddf65f4bab8e0d7721f85ea8a666d838
 SHA512 (genius-1.0.17.tar.gz) = 1467f9cc6991918315d7f38722ea5a74bafe231ca3d6a63a901e83de07212a4a738205a086366bb55464e919876951ea69a869c582c0c834de4dbcdc02e006be
 Size (genius-1.0.17.tar.gz) = 3960909 bytes
