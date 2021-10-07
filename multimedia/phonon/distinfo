@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2019/08/27 06:39:24 markd Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:32:17 nia Exp $
 
-SHA1 (phonon-4.10.3.tar.xz) = 0d763f037ca03109e287155f94d7bf11b5443a05
 RMD160 (phonon-4.10.3.tar.xz) = 7a1934b45a6d54d0803edf0a3cd6d7b5b4ecc1e7
 SHA512 (phonon-4.10.3.tar.xz) = 2619ac0d7873205a2773bdb226695b5a9e2deb4f47b1a0bb9dbf9a905e3f82f7834ced1b4b1e7a6dadf50fca289f92a5749e3057546c3e16a41e1d6420b594c6
 Size (phonon-4.10.3.tar.xz) = 336724 bytes

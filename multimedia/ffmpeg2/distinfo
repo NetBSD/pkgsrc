@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.59 2020/07/12 19:32:42 adam Exp $
+$NetBSD: distinfo,v 1.60 2021/10/07 14:32:04 nia Exp $
 
-SHA1 (ffmpeg-2.8.17.tar.xz) = de0e0f7a23f78bbf70d690182b01061f53af68ff
 RMD160 (ffmpeg-2.8.17.tar.xz) = 129c9bdc6ee60621d89dbb0cdd27316944e973f5
 SHA512 (ffmpeg-2.8.17.tar.xz) = c09cefb51b62c428988fb344643dd60f3b21b4bba84316a59275b38bfa9341014fcfb9350c462e301e71365a23a3799b9cabc2119cff940d77513cf700a6af84
 Size (ffmpeg-2.8.17.tar.xz) = 7233412 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/03/23 17:06:56 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:32:18 nia Exp $
 
-SHA1 (regionset-0.1.tar.gz) = c60b973f44288264234d07be1fb418b6e7bf61a5
 RMD160 (regionset-0.1.tar.gz) = 2061fae73b8b948135a91b33eaacd77590507306
 SHA512 (regionset-0.1.tar.gz) = 19e1a681f6acc9f7da064432f893cd6736e3b54e5f0187025b9702a7301a982bc2f3948604e3bc9f7f15b20feb0dbc0424ad9727790cddb448b89189c1ce18c3
 Size (regionset-0.1.tar.gz) = 17095 bytes

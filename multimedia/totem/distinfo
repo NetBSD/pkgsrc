@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.45 2020/01/20 01:41:52 nia Exp $
+$NetBSD: distinfo,v 1.46 2021/10/07 14:32:20 nia Exp $
 
-SHA1 (totem-3.34.1.tar.xz) = c8ec27f81c6163b86a84e466275342fb52a2f9e3
 RMD160 (totem-3.34.1.tar.xz) = 850ebc57efbc251a20490f07b489f16ccd83b13f
 SHA512 (totem-3.34.1.tar.xz) = 9a3556f5cf522fca29926db185c2e5d25bdb80a25e14d0ba3062a7f15fc3ec40ae9f25752763bc444d4fd82ec2098efd732da662a1b1c5923ec19fde432606db
 Size (totem-3.34.1.tar.xz) = 2157160 bytes

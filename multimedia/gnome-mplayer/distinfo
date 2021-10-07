@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:54:25 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:32:05 nia Exp $
 
-SHA1 (gnome-mplayer-1.0.9.tar.gz) = 3bd45082db715ef05289c6b6a793d3c3a326a54c
 RMD160 (gnome-mplayer-1.0.9.tar.gz) = 2fe8db43ffd51c7c82ed59f64cb32605597bb882
 SHA512 (gnome-mplayer-1.0.9.tar.gz) = 5aaea17afddaf2f949b798b87d4d6306130b9622d2dae68a7f24abebc2174cac7cb17c3112dac6629a0643e31098865462c10355dfcd43f16d2503848e18fa7d
 Size (gnome-mplayer-1.0.9.tar.gz) = 1082199 bytes

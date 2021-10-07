@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.83 2021/07/15 10:15:47 nia Exp $
+$NetBSD: distinfo,v 1.84 2021/10/07 14:32:20 nia Exp $
 
-SHA1 (vlc-3.0.16.tar.xz) = e22ac839a09b5ead8992ae6aa8ea886364283e6a
 RMD160 (vlc-3.0.16.tar.xz) = 5fdc33fec2a42dcb6c432ee29196399f91c629f1
 SHA512 (vlc-3.0.16.tar.xz) = 35cdf191071224d0cf1b5a83c00773ff87b9e5bfcf0f5523f7edd53f75b23eda6b27bb49ffa97d69a1d176b8fe4786d959aeeb00d4380beab71c9f7e6b7c7298
 Size (vlc-3.0.16.tar.xz) = 26439328 bytes

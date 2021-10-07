@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/07 19:17:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:32:05 nia Exp $
 
-SHA1 (frei0r-plugins-1.7.0.tar.gz) = f56840b3d8235810ec1ce5f036c20f88ece6ddca
 RMD160 (frei0r-plugins-1.7.0.tar.gz) = 5f53940b12737c9d0f7b868305396f26a34b4649
 SHA512 (frei0r-plugins-1.7.0.tar.gz) = 8c80e8e0ce8c302e633ea1f6ff4e2a141fd7a8bcb7fce25dc7f1f6521be11258a3efa1074c224c7323e6a17bc405413385be193a5c787e2f276252b50477ebce
 Size (frei0r-plugins-1.7.0.tar.gz) = 1214323 bytes
