@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/03/31 13:43:08 triaxx Exp $
+$NetBSD: distinfo,v 1.36 2021/10/07 14:20:50 nia Exp $
 
-SHA1 (erlang/otp_doc_html_23.3.tar.gz) = 4898ad84b40365f81df7a0a57bed9f6108867c48
 RMD160 (erlang/otp_doc_html_23.3.tar.gz) = 255a9eb8c5c0f3db9d4d27b53da647e283dcf716
 SHA512 (erlang/otp_doc_html_23.3.tar.gz) = 8be4aae46839239604b875b39339e7b6b6c677c099b3d749d5f1041c4508c1c3b4aa8136a93df12b1e5cb6333ef907276f5965c9726ed2b9e77a6043c8ef53b1
 Size (erlang/otp_doc_html_23.3.tar.gz) = 36224657 bytes

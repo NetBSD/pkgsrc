@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/03 17:28:53 kamil Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:21:17 nia Exp $
 
-SHA1 (zenlisp-0.0.20131122/zenlisp.zip) = de74643b59b9838abb16b915c56d551108b53672
 RMD160 (zenlisp-0.0.20131122/zenlisp.zip) = 61aa6c1487cf6032454631c35df8b22f3f3b2e5f
 SHA512 (zenlisp-0.0.20131122/zenlisp.zip) = c108d503ad4df24e0e266e945afec0922a0f57e48ef8ece830fe0d2af560d343fb4226fbde7aa1f9584ad38cfd68ba1b511dfdd947325b7d06fae222502b022d
 Size (zenlisp-0.0.20131122/zenlisp.zip) = 96751 bytes

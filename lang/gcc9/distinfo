@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/13 15:56:17 maya Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:20:52 nia Exp $
 
-SHA1 (gcc-9.3.0.tar.xz) = b746688bf045a316fc92c3528138ad10d0822b6b
 RMD160 (gcc-9.3.0.tar.xz) = e0ade31726b8fbb1eb308e2b1383a79633aef996
 SHA512 (gcc-9.3.0.tar.xz) = 4b9e3639eef6e623747a22c37a904b4750c93b6da77cf3958d5047e9b5ebddb7eebe091cc16ca0a227c0ecbd2bf3b984b221130f269a97ee4cc18f9cf6c444de
 Size (gcc-9.3.0.tar.xz) = 70533868 bytes

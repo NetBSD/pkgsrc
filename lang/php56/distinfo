@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.58 2021/09/28 14:39:49 jperkin Exp $
+$NetBSD: distinfo,v 1.59 2021/10/07 14:21:05 nia Exp $
 
-SHA1 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 980b9f3f2e62a7360904b5b2107a4213bd052caa
 RMD160 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 4eeb1cc0364da69920c3d101a2f1a882550721a7
 SHA512 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = bbe39ad27a5a82c705692c921b214c5630227ed9852f0432340f74533b5e618d9bea01bff75a4b7a1f1b72876b6d092d2db4533758d9a927f274cff7361f3eb4
 Size (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 41904 bytes
-SHA1 (php-5.6.40.tar.xz) = 0403ae06273fe8c1acdbd45b181a8a53f4b0b4d7
 RMD160 (php-5.6.40.tar.xz) = 43b648cf24cdea59765a1d12c247f83f60af283f
 SHA512 (php-5.6.40.tar.xz) = 997b5a952a60cf9166671cc91fcc34c674dd62bfd5cb0a9cdf3fdf2d088b5d19943d94c1cf193f8ab71fc4957d9a9a4c7c2fb8826f937501c1c0a0858f10e329
 Size (php-5.6.40.tar.xz) = 12472236 bytes

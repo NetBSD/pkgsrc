@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/04/07 06:19:21 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:21:02 nia Exp $
 
-SHA1 (node-v10.24.1.tar.xz) = b476e5aaa305798d903ed0de424ee0a5c8b4eed2
 RMD160 (node-v10.24.1.tar.xz) = 1e59704c06219ced68b1f47abd2e1e176a144f41
 SHA512 (node-v10.24.1.tar.xz) = c25eca3c26dfb82be2e2e2f7b5401fb1811a9586732e12944929bcb6ad1f2bd7a3a97681008922cd28bf330b2672907dd637c718e8c7c55444b9028a2bafdb6d
 Size (node-v10.24.1.tar.xz) = 21647996 bytes
