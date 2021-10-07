@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2016/07/21 11:10:02 mef Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:41 nia Exp $
 
-SHA1 (xpad-4.8.0.tar.bz2) = 0810b4fc9a082a762b3c32898d8ea8590028d20f
 RMD160 (xpad-4.8.0.tar.bz2) = c15513b71d6a4f112da0932ac15ccacdea36390f
 SHA512 (xpad-4.8.0.tar.bz2) = 286afe23ace31e983c7db44231600dfb5c9ef2faa82b5560df3e1ab0b64deba2bee52cf805b728b12705b899ac3f3bc9715bc77d0d7e01dd692b9802edd358fe
 Size (xpad-4.8.0.tar.bz2) = 247547 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/06/11 13:30:19 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:13:28 nia Exp $
 
-SHA1 (c++-gtk-utils-2.2.19.tar.gz) = e8d3350f2ce7fddf5a36db1a992e5257881a8fba
 RMD160 (c++-gtk-utils-2.2.19.tar.gz) = 76209538c35a9efb613ac9446db9d8ae70309454
 SHA512 (c++-gtk-utils-2.2.19.tar.gz) = c6527cc32b6a14a5fe24705a91a6918863f418ec8a274d24c79b65e905efefab53a5e53edfa57b31ed8b14ab8d9d26b4876861cab37e3702df456feb84e1cc5c
 Size (c++-gtk-utils-2.2.19.tar.gz) = 3060284 bytes

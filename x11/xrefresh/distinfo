@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/03/10 22:15:38 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:42 nia Exp $
 
-SHA1 (xrefresh-1.0.6.tar.bz2) = 11eb5b3f905631281d2cedd86a0b666bab0d9bdc
 RMD160 (xrefresh-1.0.6.tar.bz2) = 2eb7784edf1443eb7345b1750112cfd07f4879fe
 SHA512 (xrefresh-1.0.6.tar.bz2) = 361e97fecfc2706d5eeab69df0d4dd4baa55b6783cfddabf51d8561b7c930d71ce6c217e0512c6564208d69b04f89c69ea8c0bfb2e4f6cc25b062b55e4db3674
 Size (xrefresh-1.0.6.tar.bz2) = 127494 bytes

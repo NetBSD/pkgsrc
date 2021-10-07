@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/05/15 21:59:15 youri Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:32 nia Exp $
 
-SHA1 (xfdashboard-0.7.4.tar.bz2) = 8d04b3b34360009fe4e1dd7187932e35ed83a5d3
 RMD160 (xfdashboard-0.7.4.tar.bz2) = 9581e6b3371e0ab93c6eaa98d916e32b74fa8a07
 SHA512 (xfdashboard-0.7.4.tar.bz2) = b4e6678f8c8c89e1ddbd5dffb83beebd8846053f93f456e6ab42572051bb382c6372a8356650386a433dd8662671cd6c5d01a1bd6552d8e08c2bf9aa6b54ef88
 Size (xfdashboard-0.7.4.tar.bz2) = 2523988 bytes

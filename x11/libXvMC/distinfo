@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/11/13 22:09:08 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:13:52 nia Exp $
 
-SHA1 (libXvMC-1.0.12.tar.bz2) = 4871f92a83faa86aff5c630a2d6016c67bf11b97
 RMD160 (libXvMC-1.0.12.tar.bz2) = e0632a4b1f8853ed322f4175670b6bf78250f70d
 SHA512 (libXvMC-1.0.12.tar.bz2) = 62cb9a72b20af3b081d2d555a253b0e2b8b26b31f4fad10bd3e53bbf96e1663b61bd8df2b78b16f18218cd37cce0c9e6809ae16ded226b37a8b199e41b223955
 Size (libXvMC-1.0.12.tar.bz2) = 306581 bytes

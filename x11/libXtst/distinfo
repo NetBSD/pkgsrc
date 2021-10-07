@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/10/04 22:02:50 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:13:52 nia Exp $
 
-SHA1 (libXtst-1.2.3.tar.bz2) = 27d004db631bee3a82155d3caf961d9584207d36
 RMD160 (libXtst-1.2.3.tar.bz2) = 1cfba7e6eced26d56677fb78de1e4c4a37ff9938
 SHA512 (libXtst-1.2.3.tar.bz2) = 6f6741fd3596775eaa056465319f78c29c91b3893a851a4899df651a2023a4d762497b112a33d7d3e8865fe85d173d03e4b49daef76a66af1ae1eaab82a12765
 Size (libXtst-1.2.3.tar.bz2) = 321819 bytes

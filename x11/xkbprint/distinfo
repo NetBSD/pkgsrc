@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/11/26 10:05:08 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:14:36 nia Exp $
 
-SHA1 (xkbprint-1.0.5.tar.bz2) = e707caffb3c680b3a869a776aa3f80caeac9e9c3
 RMD160 (xkbprint-1.0.5.tar.bz2) = f9b8e5e50b734db6027ba68c617d15407f344fcd
 SHA512 (xkbprint-1.0.5.tar.bz2) = ac3870352f3a595b5b8a8cb64f39e9bea81b17572c73cfbf72482477a2f576d0ffcdcf735cb3c66b8a88a7fe0f7aece6738cbac87df5641e44fae1ab9b97111f
 Size (xkbprint-1.0.5.tar.bz2) = 166856 bytes

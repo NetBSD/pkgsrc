@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/12/13 10:42:36 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:13:51 nia Exp $
 
-SHA1 (libXpm-3.5.13.tar.bz2) = 38b1a2728adb49f4e255aba1530f51789815ffc4
 RMD160 (libXpm-3.5.13.tar.bz2) = 6554f024ec432e163f5bc71fddf0fdfbbb85b5ab
 SHA512 (libXpm-3.5.13.tar.bz2) = 3b8f6e926272f39b1d95135c2274c00f5aaee1f9fb2ef79f71628df5edeb7ba20158819ef6a778101cc4092493a3b5b613c53634fdccadcc0fc85f0605e5e9a5
 Size (libXpm-3.5.13.tar.bz2) = 463251 bytes

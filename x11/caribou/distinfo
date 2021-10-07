@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/11 23:58:04 youri Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:13:28 nia Exp $
 
-SHA1 (caribou-0.4.21.tar.xz) = ba10a7a2d7608008ffe4461826252792facf90c4
 RMD160 (caribou-0.4.21.tar.xz) = 8b70cbe72135974b338f61c1e4a8cd4a21c8135f
 SHA512 (caribou-0.4.21.tar.xz) = 5fc0cf54a1cad50d41e659adbbb932b51d69d18951562f87497e99aaae17ac72b453b759dd7289ff8f68a79574dfce510b9de6bedc61408c14cb48b83eaf08da
 Size (caribou-0.4.21.tar.xz) = 426516 bytes

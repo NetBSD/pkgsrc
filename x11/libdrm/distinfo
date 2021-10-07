@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.97 2020/04/12 19:41:21 joerg Exp $
+$NetBSD: distinfo,v 1.98 2021/10/07 15:13:52 nia Exp $
 
-SHA1 (libdrm-2.4.100.tar.gz) = 2097f0b98deaff16b8f3b93cedcb5cd35291a3c1
 RMD160 (libdrm-2.4.100.tar.gz) = 03d8b8b8a416988932c05f81f9f495505b44ceea
 SHA512 (libdrm-2.4.100.tar.gz) = b61835473c77691c4a8e67b32b9df420661e8bf8700507334b58bde5e6a402dee4aea2bec1e5b83343dd28fcb6cf9fd084064d437332f178df81c4780552595b
 Size (libdrm-2.4.100.tar.gz) = 1149132 bytes

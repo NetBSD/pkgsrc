@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 03:29:10 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:14:40 nia Exp $
 
-SHA1 (xneko.tar.gz) = f1eef2fcad823dce959489f7f6aecd0bcf8155c7
 RMD160 (xneko.tar.gz) = 8876f0d72f525add21c1b716c02776a9b38b0a7e
 SHA512 (xneko.tar.gz) = ed3709054cd0cf29199b476413e18a4a024664308e59fdef220c93040910ef19ff28dbc06448dfd4feac833767fe9a5f012224a2b877b79d3e878100d8f3ddb5
 Size (xneko.tar.gz) = 21111 bytes

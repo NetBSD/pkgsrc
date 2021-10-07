@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/11/28 16:11:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:14:15 nia Exp $
 
-SHA1 (tk8.5.19-src.tar.gz) = ca828226ffa10f9650a5de7c4624cb6d3591b392
 RMD160 (tk8.5.19-src.tar.gz) = 9893ed1a070135e84b7a6f646ecd46e4be3ab241
 SHA512 (tk8.5.19-src.tar.gz) = cf01338ed0189624faf6d71b503d8593365d59853c8588fc15fae1c22027cf8a4d9b77b47f10bf2719cd4ba7dad2c98f2966dc4ec674cd04975af4aeea0718b1
 Size (tk8.5.19-src.tar.gz) = 4116241 bytes

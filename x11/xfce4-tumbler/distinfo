@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/08/24 04:54:32 gutteridge Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:14:34 nia Exp $
 
-SHA1 (tumbler-0.3.0.tar.bz2) = 3222d6748c9a249ef3abe94868fabd8542f31dd4
 RMD160 (tumbler-0.3.0.tar.bz2) = df3b2e27734a2d59449288fdab72dd9c3c34238a
 SHA512 (tumbler-0.3.0.tar.bz2) = e216a9c8c659457c6e6dbb40d95cd9a34d64d204fea9523d0a66f1c331108f6e01fb83d668b99eed73ed26579ae3a717cd3215ddceaebfff888d942ecb18469b
 Size (tumbler-0.3.0.tar.bz2) = 559424 bytes

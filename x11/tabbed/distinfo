@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:07:02 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:14:14 nia Exp $
 
-SHA1 (tabbed-0.6.tar.gz) = 3c64d79817337f86f0cdd60b5b79af7e77d4a5f9
 RMD160 (tabbed-0.6.tar.gz) = 8d92c6b315bbdcdb2c7635d411c1f674e90d04f4
 SHA512 (tabbed-0.6.tar.gz) = bcad873251be6b5de21311531e8d24330003b42790cb94d559a0d1be45408b3e0722c14e7c7f2cefd0717fd2a2d7a100fa08fc4e10e7bb669935909602286553
 Size (tabbed-0.6.tar.gz) = 12926 bytes
