@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2017/08/19 00:21:01 jlam Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:29 nia Exp $
 
-SHA1 (gnuchess-4.0.pl80.tar.gz) = 0c581be2e7b6b17524e288e105a468a7ca328c8b
 RMD160 (gnuchess-4.0.pl80.tar.gz) = 889510f73c3e5143fc312c010e8324e68c11dcdc
 SHA512 (gnuchess-4.0.pl80.tar.gz) = 9f57f586096148b489d10f83179a5b4eb267723ae0363a256587a046e4f327fc108a2eb09c748035c33528285f436579a8f922b3c8fb6fe1dcb1b623f4f7131a
 Size (gnuchess-4.0.pl80.tar.gz) = 1493280 bytes

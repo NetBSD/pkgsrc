@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/04 16:16:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:49 nia Exp $
 
-SHA1 (redeclipse_2.0.0_nix.tar.bz2) = 03ef3dc675e470ff498463cd04d08b507f0dcb84
 RMD160 (redeclipse_2.0.0_nix.tar.bz2) = df61e8cb793e1d931d9caeb7444baaf3167c6cb7
 SHA512 (redeclipse_2.0.0_nix.tar.bz2) = 179a8177ddafefb09de38629c7cc15e8843cd49ad3580093c9f4243dd0d2d2fe095e8df770c2a8f3996d4e273822d6bc955acca73f8191266adb95a34beaf6dd
 Size (redeclipse_2.0.0_nix.tar.bz2) = 948705751 bytes

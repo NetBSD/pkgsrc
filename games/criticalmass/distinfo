@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2016/12/10 21:46:51 dholland Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:07:19 nia Exp $
 
-SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
 SHA512 (CriticalMass-1.0.2.tar.bz2) = af3200adc4b6ed9f24eaa89ef5b2f31e8d09e402d0c2eef8db604afcbb2d36bad48e76c3c11c1b2410d2d4e0ffd8554e2e9749a8c8cc4752b4636b8919a66037
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes

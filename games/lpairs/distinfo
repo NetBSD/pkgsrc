@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/03/22 09:26:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:07:40 nia Exp $
 
-SHA1 (lpairs-1.0.5.tar.gz) = a89c1d7e8fe9d2ad5a6b0a2fd6399333dfd76f80
 RMD160 (lpairs-1.0.5.tar.gz) = 119130b9b277efa39a2ca7c3e24d47a14e5d1eb1
 SHA512 (lpairs-1.0.5.tar.gz) = 381c47969446b778c694f484647ab6a6bd41eb996e741a01a63f1b854c30f78c7e9f1043546a3b8649ec6db940cac3b7ae5ba3c23e6c9df2716a93e6f6d37324
 Size (lpairs-1.0.5.tar.gz) = 557997 bytes

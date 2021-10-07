@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/03/21 14:41:45 rillig Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:07:23 nia Exp $
 
-SHA1 (EXchess_v7.97beta.zip) = 1ea71ba8ce9ecbc52699ee39490f1d275c91dd82
 RMD160 (EXchess_v7.97beta.zip) = 7e317362040321b8dcecae867a6710036846d579
 SHA512 (EXchess_v7.97beta.zip) = 33e909bf2f39996e579c16ba2752f6d8d1c0d3c7e788c95be7fa8bc8b8ef67d3792693b28d3f73e52fb3f45bffbc5c9ccb0cf7a5fb27f70bb154de7e93f7df86
 Size (EXchess_v7.97beta.zip) = 1759660 bytes

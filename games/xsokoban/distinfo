@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:52 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:08:03 nia Exp $
 
-SHA1 (xsokoban-3.3c.tar.gz) = d5a829a8a507c60458093baa431e4fe9ff619aed
 RMD160 (xsokoban-3.3c.tar.gz) = 394cc9663982004f27135baad4e26c18c2c6817c
 SHA512 (xsokoban-3.3c.tar.gz) = b3f4a42697fa663515e6cfe8ac707e282e77380342b835f61067b0cf7032738d7ea05333d890486a3ec3f3299aacbcff6e42914908ed915e34e79d386d432fe2
 Size (xsokoban-3.3c.tar.gz) = 98961 bytes

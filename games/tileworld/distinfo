@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/01/18 23:21:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:07:55 nia Exp $
 
-SHA1 (tworld-1.3.2.tar.gz) = 6aaf1649c1adc3fe3fe550d280da3feb3ebf38bb
 RMD160 (tworld-1.3.2.tar.gz) = dfd31ea0b2b06c37404dd8bb231a395851f8b955
 SHA512 (tworld-1.3.2.tar.gz) = 0972a4af1b59309b43008fe758c93c689bf6e97b9d8687c6572e7ad65a928c3ee6fe2254bfc09191d71013c9904b4fed93b1676b1faaa2f9d74d360d1e2c3103
 Size (tworld-1.3.2.tar.gz) = 1076024 bytes

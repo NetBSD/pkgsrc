@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 20:57:01 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:47 nia Exp $
 
-SHA1 (powwow-1.2.5.tar.gz) = 505bf2f269011970e450b2877646e6ff037ba992
 RMD160 (powwow-1.2.5.tar.gz) = f48363c42863a71384f329c2701712f911dd46f4
 SHA512 (powwow-1.2.5.tar.gz) = 2480f1445f2942507dadc833d2924e24f191f3b61778c9fc4253868ba707bb8a3edbc15b6724df84123ad2b4783f7473f1add59311e56e0c103cc5d85feb231d
 Size (powwow-1.2.5.tar.gz) = 169159 bytes

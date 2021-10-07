@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/01/13 15:46:26 hauke Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:07:58 nia Exp $
 
-SHA1 (xboard-4.9.1.tar.gz) = 9bcd31bb88877f56dff77b16e3d0cfd34cc18be0
 RMD160 (xboard-4.9.1.tar.gz) = 95d109876556fdb3a50086365e4254afc66c0381
 SHA512 (xboard-4.9.1.tar.gz) = 7c6f17450edc3f56d5987f6363da01633850b87b0d6664524a4697216dc66aa58f84314ba57ee68aebfbb01ef96995e34be4e98fb4a5124e3f5090690f91ae08
 Size (xboard-4.9.1.tar.gz) = 4015017 bytes

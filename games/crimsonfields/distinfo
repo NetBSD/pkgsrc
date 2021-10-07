@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2019/11/09 12:53:10 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:07:19 nia Exp $
 
-SHA1 (crimson-0.5.3.tar.gz) = c26b0eed62eb725268eb234b7ae611b12bd580ec
 RMD160 (crimson-0.5.3.tar.gz) = 1ac71f167fd5051cea85c54883c3401d6f1c12e0
 SHA512 (crimson-0.5.3.tar.gz) = 56a0c8c3e271f6ca53baaee23c28b594033b2d3e4b22fb4cd58c9858dc2bda556a13d1204cdba607da0a4414affb455b1403dde73e385a1accdd5162ec9e0a89
 Size (crimson-0.5.3.tar.gz) = 1005150 bytes

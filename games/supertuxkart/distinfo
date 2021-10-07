@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/03/22 11:24:01 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:07:53 nia Exp $
 
-SHA1 (supertuxkart-1.1-src.tar.xz) = 68be26f4b15d30dede26563cbcc6de999036c5e0
 RMD160 (supertuxkart-1.1-src.tar.xz) = 586cda4ab532efa6761bae74d5ad9473ce24f7f3
 SHA512 (supertuxkart-1.1-src.tar.xz) = 81d5ff59bb33eba8a00547239d54cacfde25eed0c56c857712a00a62032e4cf371cdd367159eaa4bfec6d4dd5781b705e41b58a26b864aa43678cfe9926bb804
 Size (supertuxkart-1.1-src.tar.xz) = 616739152 bytes
