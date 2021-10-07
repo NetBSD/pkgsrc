@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/08/15 13:21:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16.2.1 2021/10/07 20:30:37 tm Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -757,9 +757,9 @@ lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/avito-ru@2x.png
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/baidu-com@2x.png
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bbc-uk@2x.png
-lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bing-com@2x.png
+lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bing-com@2x.svg
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/ctrip-com@2x.png
-lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/duckduckgo-com@2x.png
+lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/duckduckgo-com@2x.svg
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/ebay@2x.png
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/facebook-com@2x.png
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/google-com@2x.png
@@ -5338,6 +5338,7 @@ lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line.svg
+lib/tor-browser/chrome/torbutton/skin/tor-survey-icon.svg
 lib/tor-browser/chrome/torbutton/skin/tor.png
 lib/tor-browser/chrome/torbutton/skin/torbrowser_mobile_logo.png
 lib/tor-browser/chrome/torbutton/skin/torbutton.css
