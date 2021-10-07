@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/03/07 12:16:35 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:03:59 nia Exp $
 
-SHA1 (oclock-1.0.4.tar.bz2) = 0bc8f3f44290950f60af894e20e0ceb0c5e8e862
 RMD160 (oclock-1.0.4.tar.bz2) = 0531d69b390b1747b3c7f511a7a229fbbe6e3952
 SHA512 (oclock-1.0.4.tar.bz2) = 6e0d36a84572a153226b2929f2253cb7adc3c9e5e3af168aeaf8c487ade2e43517b271a8e9cdb2a2c4a67ca56ed0b99c194ca63a4a822b68bfc72ca6518335e7
 Size (oclock-1.0.4.tar.bz2) = 132835 bytes

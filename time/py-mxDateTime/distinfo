@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2017/04/10 12:31:05 mef Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:04:10 nia Exp $
 
-SHA1 (egenix-mx-base-3.2.9.tar.gz) = 7bce0d094e3e95376d921217ddf44d4491e8c96f
 RMD160 (egenix-mx-base-3.2.9.tar.gz) = 13b6fbc3fa8ad7fb7948789dd748d91be95f49c4
 SHA512 (egenix-mx-base-3.2.9.tar.gz) = ff3b6ba90e9729004e7b18511a69529698b7d6089f08b686a0930d8f065323933e9fb97f2ed7a5b24c4bca0ddad1983773144b5dd9ee401859a2ffbfcfc79025
 Size (egenix-mx-base-3.2.9.tar.gz) = 4611603 bytes

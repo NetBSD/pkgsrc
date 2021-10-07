@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/03 06:35:06 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:04:16 nia Exp $
 
-SHA1 (datetime2.doc.r58590.tar.xz) = 5a837d167e9d67f51a67df40786467fae0edea42
 RMD160 (datetime2.doc.r58590.tar.xz) = b320fb325eee0ba3cbaf56b89950ad927dda6a9d
 SHA512 (datetime2.doc.r58590.tar.xz) = 5baa0ef9d3d1e6f0f375ce6dca2f83681d8dca9f3d027c60b705f005a22e87dc1d952a0f4f8d9fa50f0bb887794a8ad89e28ad89f8a99ceea78c97659a4a656f
 Size (datetime2.doc.r58590.tar.xz) = 1017512 bytes

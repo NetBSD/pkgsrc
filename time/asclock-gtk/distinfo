@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/03/23 17:07:00 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:03:53 nia Exp $
 
-SHA1 (asclock-gtk-2.1.10beta.tar.gz) = 07b5f570842bf734ec5aff4d4f64fa075e9c1823
 RMD160 (asclock-gtk-2.1.10beta.tar.gz) = 69337c30fa5c9d9b4e53c1542381a4519022bfee
 SHA512 (asclock-gtk-2.1.10beta.tar.gz) = db2eb93053ea53407b15e0b5558e8381a52f327bb262a3ea1d10a79f6c790187275ca8a53315636955ee18a173a37e1cd41b2e93803720c090b410f91c0d9e7c
 Size (asclock-gtk-2.1.10beta.tar.gz) = 146621 bytes

@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.5 2020/01/10 17:05:40 plunky Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:04:23 nia Exp $
 
-SHA1 (harmonics-dwf-20060708.tcd.bz2) = 1f54ed856b064e485f7e386eb4a71965e83abfa4
 RMD160 (harmonics-dwf-20060708.tcd.bz2) = 754255ac5f2e36cf2dce587e7f9f7bd0561226d9
 SHA512 (harmonics-dwf-20060708.tcd.bz2) = 38988e5db30d734c6e937077a473a69eb1ef34ab9c5d493f4818f197734104223bdc0f069bd5a919d15c4d2685effc62aa85a439ae1803d7fa502a1a95d07fe5
 Size (harmonics-dwf-20060708.tcd.bz2) = 477682 bytes
-SHA1 (wvs.tar.bz2) = 25149a2f8fbbd67e488c2ec3445443819b227925
 RMD160 (wvs.tar.bz2) = 0e83b847efc635f18bd96cc5a29149d5af41dc4d
 SHA512 (wvs.tar.bz2) = 780710449946a9a4118d7bcce4a9a62d253801744ec8d911f50b1e4a1530d1bb994fd92364fcd8fd9592d33053606e18c7b3d17acc22336d8f32bca887a88850
 Size (wvs.tar.bz2) = 37461520 bytes
-SHA1 (xtide-2.15.2.tar.bz2) = 0684d72df6e463822ac36016e248eaea07228340
 RMD160 (xtide-2.15.2.tar.bz2) = 70ce6fb263dcde492ccdf4d7541cf63c13a415cb
 SHA512 (xtide-2.15.2.tar.bz2) = adfcaeb0f87defb5918d80651b90de47f5afd5cf651fcf12fc1d02d970e8ac3fec613445b91464e72806037cfa9e576b880c8d361d3062f1bc3bc2df58da1ba6
 Size (xtide-2.15.2.tar.bz2) = 727048 bytes

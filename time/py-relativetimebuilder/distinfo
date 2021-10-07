@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/04/03 14:50:44 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:04:10 nia Exp $
 
-SHA1 (relativetimebuilder-1.0.0.tar.gz) = fdf0859f52e78191878900c71401defbd780b651
 RMD160 (relativetimebuilder-1.0.0.tar.gz) = 544dc2cc83144c5ca958591cf5b3838f6718977c
 SHA512 (relativetimebuilder-1.0.0.tar.gz) = cb69e5968305475686c93e0814496c35780d73f67c6cfdc6ba8e1f3fc407254c37b9f89aaf712874f46fd577e2f3776ed37cac8c48524c2e21de4701a12619d9
 Size (relativetimebuilder-1.0.0.tar.gz) = 11780 bytes

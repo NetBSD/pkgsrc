@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/03/21 12:56:46 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:04:10 nia Exp $
 
-SHA1 (maya-0.6.1.tar.gz) = 414ae4626970699a1708766f30fb932dc1ac1e65
 RMD160 (maya-0.6.1.tar.gz) = f9f46ac004756a2f98b31cbeec758b4472f4c31c
 SHA512 (maya-0.6.1.tar.gz) = 11d721de6d63cfed3980fc3fdd0c857d981f5286ee4cdb02cd464e69684f4461fae9d23e1b957855071d6408ef0fbb4f55c39914750c939af77a2b38a30cbfee
 Size (maya-0.6.1.tar.gz) = 14387 bytes

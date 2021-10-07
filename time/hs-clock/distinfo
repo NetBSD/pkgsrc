@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 05:17:54 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:03:56 nia Exp $
 
-SHA1 (clock-0.8.2.tar.gz) = d71603595142b22abd4817c5dba84713639e42b7
 RMD160 (clock-0.8.2.tar.gz) = 55bdfe8cc96d5d924f8e9a58c4e66b187902e5e1
 SHA512 (clock-0.8.2.tar.gz) = 42a7681ae8f1357c4ae39f51a15d7a00f3d587c8fc787d648308f914702471e6f9b32ee51fa1e8164a77f195600fdab8e27d45aa13a7052a921c4b8c246b891e
 Size (clock-0.8.2.tar.gz) = 7604 bytes

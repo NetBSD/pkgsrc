@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/11 13:48:48 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:04:20 nia Exp $
 
-SHA1 (tty-clock-2.3.tar.gz) = 0b85f57324c3cb610267aabb8900bf2f391f27bc
 RMD160 (tty-clock-2.3.tar.gz) = ebac5fd81d90764206a7787238fb015284f59e9a
 SHA512 (tty-clock-2.3.tar.gz) = ff3cfd5c6312377128b33c7e8c2138627b996d1b17730d8a8fdf55e95f2020e591e69317459aab8383d178f3cb71af046b84eeb81cabfa9b09a27008c5f4b626
 Size (tty-clock-2.3.tar.gz) = 7764 bytes

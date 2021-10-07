@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/09/07 17:39:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:04:01 nia Exp $
 
-SHA1 (DateTime-Format-Builder-0.83.tar.gz) = d2e450801ab59daeb2052769adb10565dda22d1d
 RMD160 (DateTime-Format-Builder-0.83.tar.gz) = 0e14fd5a8f88f585ca0adb32cf28711613aa43cd
 SHA512 (DateTime-Format-Builder-0.83.tar.gz) = eb0601dce7bc9adb0b4b6df2058b5f126e36738a9fc1e18c6e09ecf2787fbe7cd9b8ae9a5772590d6fa0df271b5a7fde0f3ab6f2be68e182adaac48ca3ae3837
 Size (DateTime-Format-Builder-0.83.tar.gz) = 63355 bytes

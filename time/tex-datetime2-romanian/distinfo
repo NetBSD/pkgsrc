@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/20 09:59:07 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:04:18 nia Exp $
 
-SHA1 (datetime2-romanian.r56394.tar.xz) = cbf06b3facabb42c4f246ded8b51a4444260057b
 RMD160 (datetime2-romanian.r56394.tar.xz) = 287648461bead852de4b84f3dbd192028a77806f
 SHA512 (datetime2-romanian.r56394.tar.xz) = fed59ecdb496fbad41a5558526671cddf9cb487f50cdf103f61141fb1955170e54dbc3fc134ef51a2867715e7bc714dbf81bbb11e6d30c324a87492870738d39
 Size (datetime2-romanian.r56394.tar.xz) = 2856 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/04/21 23:54:02 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:04:01 nia Exp $
 
-SHA1 (DateTime-Event-Recurrence-0.19.tar.gz) = e987e615f173a7c1e637a78f4471770e532cd940
 RMD160 (DateTime-Event-Recurrence-0.19.tar.gz) = c033dd3de7ac28d01a44d2a6d540624ed7eba912
 SHA512 (DateTime-Event-Recurrence-0.19.tar.gz) = a431b69dcdab75deb09efad2e558c429b7456807d0151dca1ae602a1b7dd3f22bd9e6bae510ef039a2cb6f18f31ba92688c00586588aad60528cb461d9d4c9d5
 Size (DateTime-Event-Recurrence-0.19.tar.gz) = 25240 bytes

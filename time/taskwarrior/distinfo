@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/08/01 20:02:41 yhardy Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:04:14 nia Exp $
 
-SHA1 (task-2.5.3.tar.gz) = ba1a3cbc5903979755d47f724d14ebeff40b6c81
 RMD160 (task-2.5.3.tar.gz) = d59dcb1644dccafb0ff35c5ea3e704e88b5d9f71
 SHA512 (task-2.5.3.tar.gz) = e906c8f42ad4b9a7e20a82defe31b89194d72957f18dd5129ecc41a2a60a9d8b0d01abb9b44ecce79b65cd9064af4a4a4c9dd695f98152e77908f130dc3f9677
 Size (task-2.5.3.tar.gz) = 788760 bytes
