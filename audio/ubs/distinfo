@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:12:53 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:09:57 nia Exp $
 
-SHA1 (ubs-0.17.tar.gz) = f0f67d437e4c5c7026b2f05d1aaff53688eb3253
 RMD160 (ubs-0.17.tar.gz) = 4e0e46bb8346f0c86989b0b33973000bbb86f1aa
 SHA512 (ubs-0.17.tar.gz) = 821e9aeb33abb18fc25476cb8fc98e592398104495f6687364ff86de21e1f161cac7061e82b9c84d17adfb072c518b66e8d115441f084f8cfc65f63156dc1eda
 Size (ubs-0.17.tar.gz) = 372222 bytes

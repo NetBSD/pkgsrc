@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.31 2019/11/27 14:44:05 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 13:09:19 nia Exp $
 
-SHA1 (festival-2.5.0-release.tar.gz) = a433de2d1c344a1af63579e757551432abe583ca
 RMD160 (festival-2.5.0-release.tar.gz) = 68f71e389f38c78863b15da319f16d21dcf27818
 SHA512 (festival-2.5.0-release.tar.gz) = 529ec3a1780a861074b6070567f3e11cfcc839081f61e078978a491f11eb424bc4d6adf599f073d5571e20f66871b7045df9f9b175a1083d10e8bb02342639b1
 Size (festival-2.5.0-release.tar.gz) = 789013 bytes
-SHA1 (speech_tools-2.5.0-release.tar.gz) = 8154c956465b2407c4de1700c7ecd0b04b4694ca
 RMD160 (speech_tools-2.5.0-release.tar.gz) = a13c480ed7d5cd13a090d47a04bca011f07ee183
 SHA512 (speech_tools-2.5.0-release.tar.gz) = 013540a5252efb57633f442143a51bc87aac719dfb46c8f47e750322d19dac9b504f55125462a2ee74a6b0bd2661a63a1fc73a8c3c6d2886e38b136a80447fd7
 Size (speech_tools-2.5.0-release.tar.gz) = 1328624 bytes

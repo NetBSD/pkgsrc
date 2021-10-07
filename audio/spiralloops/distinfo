@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 01:12:51 agc Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:09:54 nia Exp $
 
-SHA1 (SpiralLoops-2.0.0.tar.gz) = 47d9caa17f20827abef7708bff212bb3fad58a72
 RMD160 (SpiralLoops-2.0.0.tar.gz) = b164bacf6d18128111959dbca079883b7fde8d85
 SHA512 (SpiralLoops-2.0.0.tar.gz) = b21ba819476cf46294674ea8ea87e326f1b5f744547131190dfc2a4c956695e5c229093028732832a6cce79f9f1483d0329d2c82990775b263a6db82bbb83c6e
 Size (SpiralLoops-2.0.0.tar.gz) = 85458 bytes

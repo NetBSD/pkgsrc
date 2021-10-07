@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/02 12:30:20 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:31 nia Exp $
 
-SHA1 (libgig-4.2.0.tar.bz2) = cdf1f77dbe3cd55b57058ec316e0efc307296025
 RMD160 (libgig-4.2.0.tar.bz2) = f845d8558171e48ae9486ede63e09b82f522983c
 SHA512 (libgig-4.2.0.tar.bz2) = 52c8c749c7852e229c76c17211398dbf5dd5891a1ee9d8e8bc61d55b825c5676595b20b26014e739b9bfd387db36895152b380519609a928a8fa68f4a20279f6
 Size (libgig-4.2.0.tar.bz2) = 746637 bytes

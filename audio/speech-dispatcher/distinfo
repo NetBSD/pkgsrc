@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/12/31 00:34:37 js Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:53 nia Exp $
 
-SHA1 (speech-dispatcher-0.10.2.tar.gz) = 33da39cece3c3a502758eef6ac2147e065997a60
 RMD160 (speech-dispatcher-0.10.2.tar.gz) = 3517af73279ae0c610c2ed9d9d5c4764fd85a653
 SHA512 (speech-dispatcher-0.10.2.tar.gz) = 9af240d9a15062489c170440911e9d148d0d113a0f22211f1496e9754345a5d079e160962d666801322dc2efa1134f8b5e209c0183d93a1f0896705dc6011122
 Size (speech-dispatcher-0.10.2.tar.gz) = 4431520 bytes

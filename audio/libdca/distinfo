@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/05/16 17:56:53 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:09:30 nia Exp $
 
-SHA1 (libdca-0.0.7.tar.bz2) = 1414a1c6b6cd49495f461a092fdb5da7b741fcdb
 RMD160 (libdca-0.0.7.tar.bz2) = 24a7ae60b93efaedeee7e2e0aa318ca6afcaaf39
 SHA512 (libdca-0.0.7.tar.bz2) = dae15d77d066687c882833d5bed8d65a585c1fc0277b7276563c89ddd5a83b35389ec94cca445f38af28a9b01430b72647e9afd1b08f030959e711de1a08924a
 Size (libdca-0.0.7.tar.bz2) = 158232 bytes

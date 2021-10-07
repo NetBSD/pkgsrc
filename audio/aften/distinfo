@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/09/11 23:44:48 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:11 nia Exp $
 
-SHA1 (aften-0.0.8.tar.bz2) = 1ff73cdcade0624495ad807492cecf14862fb61c
 RMD160 (aften-0.0.8.tar.bz2) = 540d4efb6428d14c46dd181cb89b5261fa98b1ac
 SHA512 (aften-0.0.8.tar.bz2) = 1261297eac5065c6f028618d3e15e9b152ac35440c74cfb09d98cd99a90fb1c6a49585f70928834c3f6ddbcdd1d8721f7329d24f57cd30901dff09bbc0d419e3
 Size (aften-0.0.8.tar.bz2) = 80865 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/05/22 09:09:58 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:09:17 nia Exp $
 
-SHA1 (gsm-1.0.19.tar.gz) = 3ea15bf487593b589bec1b8d08b25e66c8a125f9
 RMD160 (gsm-1.0.19.tar.gz) = d8efbcb75aa9cc6a03d288fef1d7d703150d40cb
 SHA512 (gsm-1.0.19.tar.gz) = f69b4bf2d918b118b5de90b8ab88fd026008ac7432f07b872b81fe52cdc781f605dca8eedcdaebc8beb974cef388496c618f92a41961c62057009964159f8392
 Size (gsm-1.0.19.tar.gz) = 64665 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/14 01:18:45 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:09:45 nia Exp $
 
-SHA1 (MusicBrainz-DiscID-0.06.tar.gz) = 98d55855fe6a677b6d116058775bc73c7c68ac0b
 RMD160 (MusicBrainz-DiscID-0.06.tar.gz) = eb7973f521e27b1aa44786e6ffa3b8d73ae256cc
 SHA512 (MusicBrainz-DiscID-0.06.tar.gz) = 85483603c111d39f7e6490808817416612a96a0dc3d20ad432e7bd1e39ca0a21d4044dd4e25ff41eb713e4b0dd97c0cb1c486cb7a2c730369df9b782e61ec483
 Size (MusicBrainz-DiscID-0.06.tar.gz) = 6663 bytes

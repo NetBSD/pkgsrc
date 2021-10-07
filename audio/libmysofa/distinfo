@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/02/03 20:13:11 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:09:33 nia Exp $
 
-SHA1 (libmysofa-1.2.tar.gz) = 56a23d3c7feb13f164425c17f9d4453fdc0e5334
 RMD160 (libmysofa-1.2.tar.gz) = f02a32bc99851ba0990be2803f05656a28a28979
 SHA512 (libmysofa-1.2.tar.gz) = 5d6f46b8c3a9c464db25fbb2cda1f7172429f4ac79d95d29396edcb49312cf80fdfc0d46132745892b502be142f80e70126c7bae5891c1423b19bde7df0e8a56
 Size (libmysofa-1.2.tar.gz) = 199998224 bytes

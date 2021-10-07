@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:09:58 nia Exp $
 
-SHA1 (wmmp3-0.12.tar.gz) = 439e19550c58fe31db8c1bcf2985c56f62d7bc1f
 RMD160 (wmmp3-0.12.tar.gz) = 14fe7a9725449d179e09912e1dc6e34a37c0222b
 SHA512 (wmmp3-0.12.tar.gz) = 6cc06f109d6ab6c69ed3b8175010a2f38053138291f02e59780fc7394c35cc629ddd6b982bd5069e20a3cb81d81b3d08b9e10d1f7984f783f22c9b012c933740
 Size (wmmp3-0.12.tar.gz) = 43977 bytes

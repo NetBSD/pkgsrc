@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/26 11:20:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:09:48 nia Exp $
 
-SHA1 (hsaudiotag3k-1.1.3.tar.gz) = 443150c5c41f035e1c54dce98381e02bf4d600d9
 RMD160 (hsaudiotag3k-1.1.3.tar.gz) = e163b898a3e7fc19650e46516a2f0d000a063399
 SHA512 (hsaudiotag3k-1.1.3.tar.gz) = 1dccca399343152480912a9630b8c612039cba65595cbef29ca70c4ba1265ae5527b3d48ac910158d90bef7e41ba517fb504a479c2be376e37c89bb400261d6a
 Size (hsaudiotag3k-1.1.3.tar.gz) = 16666 bytes

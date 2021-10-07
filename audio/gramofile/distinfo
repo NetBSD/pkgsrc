@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/05/20 19:24:15 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:09:26 nia Exp $
 
-SHA1 (gramofile-1.6P.tar.gz) = aea717a551c27c9da460d976f5c49802c0409784
 RMD160 (gramofile-1.6P.tar.gz) = f4b81c78e6c6e80e2109d8921de8e03364910d61
 SHA512 (gramofile-1.6P.tar.gz) = 7731cfd360cfcf8615ef5072d6d50423ae7192c7be233b2ad49bb10940ed9edb977f36dccad4c2d239868f3d0c3334feed6dd6f38b34a1ff6bfc144be07be38d
 Size (gramofile-1.6P.tar.gz) = 117822 bytes

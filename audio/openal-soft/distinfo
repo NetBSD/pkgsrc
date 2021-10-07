@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/12 05:09:49 mcf Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:09:43 nia Exp $
 
-SHA1 (openal-soft-1.21.1.tar.bz2) = f39b81a9ce22419e106259cf424405291520b8f3
 RMD160 (openal-soft-1.21.1.tar.bz2) = b5b96f0e36d4a29303d62a484d7c6c1fe0798de6
 SHA512 (openal-soft-1.21.1.tar.bz2) = 420eec18149a9b784daaabe8a2865de3b87d5550cf2e8e06569464d0b5ba6e51d904c18f1461af08676bf8c8b76ef270e860008d79545a5f85131299e89bffd4
 Size (openal-soft-1.21.1.tar.bz2) = 524787 bytes

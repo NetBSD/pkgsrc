@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/05/29 21:12:14 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:09:46 nia Exp $
 
-SHA1 (playitslowly-1.5.1.tar.gz) = f481b7c4d85958eba9d95a5876071c3589c9a2b1
 RMD160 (playitslowly-1.5.1.tar.gz) = 3c475b9e40e88f7f4a3299493c4eb32450c3c75c
 SHA512 (playitslowly-1.5.1.tar.gz) = eaa512c05ca9cc85463542cca7251eda0058baaf9073cfd891b99e0bdc0f0ab4242bd7c5adf9a1fcdacb6e7958501f7d6dc1db834f224bb656acb80b119ba436
 Size (playitslowly-1.5.1.tar.gz) = 40255 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/10/13 16:00:59 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:09:32 nia Exp $
 
-SHA1 (libmodplug-0.8.9.0.tar.gz) = 9d18572f85fdd95091befa972ee5d94139dcefde
 RMD160 (libmodplug-0.8.9.0.tar.gz) = 81eae38506cfba344af9b01c2336de643adbbbe3
 SHA512 (libmodplug-0.8.9.0.tar.gz) = 880e10154fd367ee24ace53ca7e32a5c1fee7dfff1f934e6499944c12779427da63e2f55f8d6ce25db0a42a5b4424053bf64305b31dbfc4ef6a8909924d655fd
 Size (libmodplug-0.8.9.0.tar.gz) = 576566 bytes

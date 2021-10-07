@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2019/11/21 23:59:06 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:10:02 nia Exp $
 
-SHA1 (xmp-4.1.0.tar.gz) = 4550bd5daa505f577a9cd9470da202fcc4b57ebc
 RMD160 (xmp-4.1.0.tar.gz) = 61d875610bf2e90d1d91fb01e2a960b714036413
 SHA512 (xmp-4.1.0.tar.gz) = 9d9791b729f902afc8c728609e82c06fc6576d915b83a01957b1ca585d726f00196f9059df1d86c3e75db7b275416b3d550aea32b140daafaf20b0170ae2dc32
 Size (xmp-4.1.0.tar.gz) = 210435 bytes

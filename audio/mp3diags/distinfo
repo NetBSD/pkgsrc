@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2019/10/28 10:20:57 kamil Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 13:09:39 nia Exp $
 
-SHA1 (MP3Diags-unstable-1.5.01.tar.gz) = 645caf3000209165b89a7eb49e2bd37ae8a2e939
 RMD160 (MP3Diags-unstable-1.5.01.tar.gz) = 0e6dadc2eb8487e6c0afdc361ce36441ebe8fbdd
 SHA512 (MP3Diags-unstable-1.5.01.tar.gz) = 30ef7276e1be08c0d5d1d6af2a1f6f4fa61753fda65e0914c0e07a0823e1ba9a0e3a2718bde55d68e928cb965db510c80bd5f2419ac19d063edd1fa257a1ee18
 Size (MP3Diags-unstable-1.5.01.tar.gz) = 1234926 bytes
