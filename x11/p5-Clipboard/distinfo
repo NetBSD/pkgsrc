@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/07 20:53:48 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:02 nia Exp $
 
-SHA1 (Clipboard-0.26.tar.gz) = 55f1d6312f67f1860c338b21618d944b9816fae4
 RMD160 (Clipboard-0.26.tar.gz) = 4439cdecf43b9961cb82bc63762a538fe9a9ab64
 SHA512 (Clipboard-0.26.tar.gz) = 68427934e4c460492f0fca1ea45891070e6aa544b49896d383786918055889ab179bc9d926018f85d6f77e89f7882098750d55b8dc656047bc63ec07d1c515c1
 Size (Clipboard-0.26.tar.gz) = 25159 bytes

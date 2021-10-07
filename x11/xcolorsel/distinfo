@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/05/01 23:30:25 rillig Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:14:21 nia Exp $
 
-SHA1 (xcolorsel-1.1a-src.tar.gz) = 398df69d3c5ac99ee21b1e19100b98f385a1666c
 RMD160 (xcolorsel-1.1a-src.tar.gz) = 5ae81689bcdc23828778eb5d46f08b7c30b1566c
 SHA512 (xcolorsel-1.1a-src.tar.gz) = 33df2bdfaef8d82e061fe28d736f41fa6ca59e3eca3669cb47bec74bd2cfc3b3ddf6a6aff1451c30f991a4534e98d780b7beb47b6e0eb4b0d419370157a6567c
 Size (xcolorsel-1.1a-src.tar.gz) = 67359 bytes

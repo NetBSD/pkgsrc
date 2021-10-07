@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/01/10 19:13:33 maya Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:14:13 nia Exp $
 
-SHA1 (slim-1.3.6.tar.gz) = 9407ea2ee7b2ed649f17a8ddbf1f7b26a7c7b9fb
 RMD160 (slim-1.3.6.tar.gz) = 1bf3269b23275c50b67ada8cb5709e093eb6764f
 SHA512 (slim-1.3.6.tar.gz) = 345b1dee5d6f0c3716dfa7c5c16274adbf18586bdaaa6af4f310e24c5a61f79a297ffac921a5ba545523317e9fe120916df226c36b9c9b49c2ac9c1ca21dee0c
 Size (slim-1.3.6.tar.gz) = 232547 bytes

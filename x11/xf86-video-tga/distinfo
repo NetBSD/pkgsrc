@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:29:04 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:31 nia Exp $
 
-SHA1 (xf86-video-tga-1.2.2.tar.bz2) = 0b96ebd6907b9efb278056ce701f330c22c550d8
 RMD160 (xf86-video-tga-1.2.2.tar.bz2) = 1312240c77ddb3561a65b6c4c09962428fa15d02
 SHA512 (xf86-video-tga-1.2.2.tar.bz2) = 38d0f61e0384400187b8a02d8ddc8b08edf2485448d9fcc941b5cc20bfc15f46d7f665b98365227b42b029dc92d76da9efcf8e934bcf382765657a0b54d1d231
 Size (xf86-video-tga-1.2.2.tar.bz2) = 318943 bytes

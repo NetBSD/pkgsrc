@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.166 2021/01/01 15:46:56 nia Exp $
+$NetBSD: distinfo,v 1.167 2021/10/07 15:13:35 nia Exp $
 
-SHA1 (gtk+-2.24.33.tar.xz) = 6fb0199cbb858456ba5d6fc9d7e4641f73476e76
 RMD160 (gtk+-2.24.33.tar.xz) = 85333860bdeda25f28c45177fe08d5f0914d4e52
 SHA512 (gtk+-2.24.33.tar.xz) = 71b588797c81f727dfac8dcb1be193f7436f717d30ecf18eae2d3aeb0f445b3be4743400acac16435490db8f564f01032065d3f42d27871317f80c98aef929d5
 Size (gtk+-2.24.33.tar.xz) = 12661828 bytes

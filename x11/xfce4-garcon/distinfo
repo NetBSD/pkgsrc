@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/04/05 22:59:00 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:14:32 nia Exp $
 
-SHA1 (garcon-0.7.0.tar.bz2) = 9c7598a79b1e71ebc5f5a0003082b75b84e50dde
 RMD160 (garcon-0.7.0.tar.bz2) = f5e7e07397c596bb9577a0e01cb38f1eb843fbe0
 SHA512 (garcon-0.7.0.tar.bz2) = e865f68fe595bbc22d023d72ce4663c75e837a6789eb2158747e2cb7420ea2bba06dfd660e1de20675b9f9057cb2a9c1dc24221de8be93882e9b29bffb1fce37
 Size (garcon-0.7.0.tar.bz2) = 508624 bytes

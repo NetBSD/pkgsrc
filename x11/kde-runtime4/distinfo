@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2016/04/22 08:04:23 jperkin Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:13:39 nia Exp $
 
-SHA1 (kde-runtime-15.12.0.tar.xz) = 30da08dfb51fade220df7f8cf3e3eab5669a2e18
 RMD160 (kde-runtime-15.12.0.tar.xz) = 37e6c3693e81b31a4b92a5eeb35f8c84602bf86d
 SHA512 (kde-runtime-15.12.0.tar.xz) = 453f0538147bb3ea95d4d9e6c503f128f30a383ebe139dcf6df411688d9c245779e931c609e38ca7b94b58907e496af3299646654f53518bf2cb7aa22c8f9137
 Size (kde-runtime-15.12.0.tar.xz) = 7903824 bytes

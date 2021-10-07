@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.39 2020/08/01 07:18:35 tnn Exp $
+$NetBSD: distinfo,v 1.40 2021/10/07 15:14:04 nia Exp $
 
-SHA1 (PyQt4_gpl_mac-4.12.3.tar.gz) = 5d4bb6eeb1a6fe6ba37b55c41d04dc2b5e5ebfba
 RMD160 (PyQt4_gpl_mac-4.12.3.tar.gz) = cebd9cda0246027112674bf2bae0a295f9c711ff
 SHA512 (PyQt4_gpl_mac-4.12.3.tar.gz) = 895678ea77cbb5b81cbd65bd57bf2271443b2a40e14f7f5f61a5d917e49ef23f08c911cecdff2bcc851c3360ef0281a5eda72acfe7ca4a66eb99af93db9ac1ec
 Size (PyQt4_gpl_mac-4.12.3.tar.gz) = 11336223 bytes
-SHA1 (PyQt4_gpl_x11-4.12.3.tar.gz) = 0f743997fc43d564aecaf89818cd4d259bd5664b
 RMD160 (PyQt4_gpl_x11-4.12.3.tar.gz) = c146d67829542ec8dee6db24531dcb0f8b9a4411
 SHA512 (PyQt4_gpl_x11-4.12.3.tar.gz) = 5b50bc7b1f1f1e93db323477745db7bf0f8783f403b6d65d4c0e0f1fc9b8d61c09afa67bea25575bdb3ad40c0bd4d956d27802fc193bc4dc31b993227ba12f22
 Size (PyQt4_gpl_x11-4.12.3.tar.gz) = 11336418 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/03/10 22:22:03 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:47 nia Exp $
 
-SHA1 (xwud-1.0.5.tar.bz2) = a85d84a1b81f8e667ea6ac126d447590c93eb079
 RMD160 (xwud-1.0.5.tar.bz2) = abeda786ceb337b334fd77a8cf6253b6d4a913a1
 SHA512 (xwud-1.0.5.tar.bz2) = 27a0ce7481978ae6cd94b0d94374af72185e270d68f2496620e148bb00945427c4827138d9efc48745e6382e3da3390ed0cdff7dbd02dcf9706e8ecccae97184
 Size (xwud-1.0.5.tar.bz2) = 133376 bytes

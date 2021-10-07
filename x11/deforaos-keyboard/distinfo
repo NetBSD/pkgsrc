@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/01/12 07:08:02 khorben Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:13:29 nia Exp $
 
-SHA1 (Keyboard-0.4.0.tar.gz) = 05ddc20308ad2c2aaccdbb645ddc81af27ffd0ab
 RMD160 (Keyboard-0.4.0.tar.gz) = 6d393ad63d1f0488281039178fad97e29873f9ed
 SHA512 (Keyboard-0.4.0.tar.gz) = 88763e9f9a6ccef7e10b19c716de2a08519a168835362f5c815b0660ce3403f9745082b22e3a25af57b34bc82008e8ffed26d905edfdd2bf1ca2289e1bf914fc
 Size (Keyboard-0.4.0.tar.gz) = 22643 bytes

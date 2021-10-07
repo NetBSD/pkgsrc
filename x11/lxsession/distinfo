@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/03/09 01:51:32 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:13:58 nia Exp $
 
-SHA1 (lxsession-0.5.5.tar.xz) = 93f495f3afff0300de3c7b9aacce0ef29eb86bab
 RMD160 (lxsession-0.5.5.tar.xz) = 1ecbb939e1c7d84ecef3bc8354fa2aaa171dbd14
 SHA512 (lxsession-0.5.5.tar.xz) = 12e25214485cf855b380a5aa91eb536f31536c98f5a50a1115cb4bf8ff884c7cdcd40c69a1502eeb9f4d3e6169e0607d6488ef3152ee184662fee39fe7a04d54
 Size (lxsession-0.5.5.tar.xz) = 422564 bytes

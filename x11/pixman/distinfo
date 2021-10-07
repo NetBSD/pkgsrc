@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.64 2020/04/20 06:40:05 wiz Exp $
+$NetBSD: distinfo,v 1.65 2021/10/07 15:14:03 nia Exp $
 
-SHA1 (pixman-0.40.0.tar.xz) = c625853be8a5369cece57ab7dba558ff739a6332
 RMD160 (pixman-0.40.0.tar.xz) = 49f6dedbecfff3747af47716199727818b9ca47f
 SHA512 (pixman-0.40.0.tar.xz) = 8a60edb113d68791b41bd90b761ff7b3934260cb3dada3234c9351416f61394e4157353bc4d61b8f6c2c619de470f6feefffb4935bfcf79d291ece6285de7270
 Size (pixman-0.40.0.tar.xz) = 634752 bytes

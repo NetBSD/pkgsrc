@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/30 23:05:36 khorben Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:13:29 nia Exp $
 
-SHA1 (Notes-0.2.0.tar.gz) = 728a921c3caf5015c479056f7393eeb0cff61dcd
 RMD160 (Notes-0.2.0.tar.gz) = 1b755b1e3d3410cb8a50e6e534f2d3807e89e2fb
 SHA512 (Notes-0.2.0.tar.gz) = 671e4e51ad0598337f520e6076f71eae4fe42057740537976908df7e6d29f789ee24218fb2ecbbaaf4f98e1552e5e5a6d5d3b1079385b26b8e4a1573af58c8cc
 Size (Notes-0.2.0.tar.gz) = 19560 bytes

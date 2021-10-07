@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/13 21:51:24 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:13:49 nia Exp $
 
-SHA1 (libICE-1.0.10.tar.bz2) = 5b5eb125d4f43a3ab8153b0f850963ee6c982c24
 RMD160 (libICE-1.0.10.tar.bz2) = f34d9b26934de6d3df0d34081fa888a7e4c64816
 SHA512 (libICE-1.0.10.tar.bz2) = 2f1ef2c32c833c71894a08fa7e7ed53f301f6c7bd22485d71c12884d8e8b36b99f362ec886349dcc84d08edc81c8b2cea035320831d64974edeba021b433c468
 Size (libICE-1.0.10.tar.bz2) = 393116 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:29:11 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:41 nia Exp $
 
-SHA1 (xpostit3.3.1.tar.Z) = 8ba13bb544d9c99308e36fff2590623ad9a16fef
 RMD160 (xpostit3.3.1.tar.Z) = 913ed61908541c65b8f2930c0f066ad2704b7856
 SHA512 (xpostit3.3.1.tar.Z) = dc7444d0a99b42e42c342e496651a22778bd19beb84317ded6235202164a858ff520069f66c54e7836a7aa6d77f390984c3459180c495ed52c0b735e7a4423a8
 Size (xpostit3.3.1.tar.Z) = 53910 bytes

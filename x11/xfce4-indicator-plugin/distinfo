@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/15 21:53:08 youri Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:14:32 nia Exp $
 
-SHA1 (xfce4-indicator-plugin-2.3.4.tar.bz2) = f7b67062fe50fd376c84662d9abd02950d2ac528
 RMD160 (xfce4-indicator-plugin-2.3.4.tar.bz2) = 8e46256a62128510e1ba2f7170e19376c4f13339
 SHA512 (xfce4-indicator-plugin-2.3.4.tar.bz2) = b1fd065c8221ae91d95b540411317cd67bb9b26d46c7cfe85ec90d7ccdcd11e7b8832008c8b6fb5c257e0b1a08360f00ad9da5520108024cc36c63d865ffdca6
 Size (xfce4-indicator-plugin-2.3.4.tar.bz2) = 406991 bytes

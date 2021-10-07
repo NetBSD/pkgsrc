@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/11/21 11:22:34 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 15:14:08 nia Exp $
 
-SHA1 (qttools-everywhere-src-5.15.2.tar.xz) = ae92f651b1b029bd6f55fc8888134d73d8ad19be
 RMD160 (qttools-everywhere-src-5.15.2.tar.xz) = 32d7ac88f4769c4b6a4b57082af29a8f8c6c1915
 SHA512 (qttools-everywhere-src-5.15.2.tar.xz) = 3bd32a302af6e81cd5d4eb07d60c5ef233f1ca7af1aae180c933ac28fafffce28c6c868eb032108747937ea951d6d4f0df5516841bc65d22c529207147533a8b
 Size (qttools-everywhere-src-5.15.2.tar.xz) = 8894728 bytes

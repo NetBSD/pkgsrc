@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/12 21:08:28 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:14:13 nia Exp $
 
-SHA1 (slop-7.5.tar.gz) = 587a37881395c1a9af7cb5dcd98d984ece2c45d1
 RMD160 (slop-7.5.tar.gz) = 660c18246caae2a046351d4644ae6d96dde10f11
 SHA512 (slop-7.5.tar.gz) = c02e40c5b924841996617fcc9629a6a739a04b6128c18e1eb06dc285d2f8026d847e67077fb59a111fc45c112f871a6e5faef20108c3d777271e1d4aca7f4737
 Size (slop-7.5.tar.gz) = 51060 bytes

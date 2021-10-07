@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/07/09 22:52:54 markd Exp $
+$NetBSD: distinfo,v 1.29 2021/10/07 15:14:06 nia Exp $
 
-SHA1 (qtdeclarative-everywhere-src-5.15.2.tar.xz) = cde54101a922dc92028a26e8b07149a83b2eaae2
 RMD160 (qtdeclarative-everywhere-src-5.15.2.tar.xz) = 747c8e854b52a3007c4ccbe62d23439fe0894763
 SHA512 (qtdeclarative-everywhere-src-5.15.2.tar.xz) = a084e4ace0d6868668c95f1b62598a7dd0f455bfb0943ac8956802d7041436686f20c7ccdde7d6fd6c4b8173c936dd8600cf3b87bf8575f55514edfbb51111d3
 Size (qtdeclarative-everywhere-src-5.15.2.tar.xz) = 21559880 bytes

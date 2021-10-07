@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 03:29:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:14:43 nia Exp $
 
-SHA1 (xscript.tar.Z) = 57d2d5fdcf05718eebc9532347be46ac07206030
 RMD160 (xscript.tar.Z) = 1ef8579f0e6a09b9d1b29d2218ae3d213a3f7ac9
 SHA512 (xscript.tar.Z) = d396b2b95184e304262ee71d1c01737dd64f18a15b5b667a28fc246c656992d87577375a2150643dc96fd78ff8f2c33132dc49b72e812024d5e635ce5c5dcebd
 Size (xscript.tar.Z) = 122669 bytes

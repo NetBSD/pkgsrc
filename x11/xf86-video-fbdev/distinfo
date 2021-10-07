@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/05/30 21:53:50 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:14:27 nia Exp $
 
-SHA1 (xf86-video-fbdev-0.5.0.tar.bz2) = 8d79ec615cb54436ff96dc94b74775db6dc47aff
 RMD160 (xf86-video-fbdev-0.5.0.tar.bz2) = 28b325d31dc3b16dad5fed0c812ec9b01c1d6bb7
 SHA512 (xf86-video-fbdev-0.5.0.tar.bz2) = c1217b943bbe3301b3c2a8649ed1004c3c67b02607bd56bbc14f6dfa05e7f0184332c81a6a19595514745501ed88526aee932e555779b7c3a8233646b0979448
 Size (xf86-video-fbdev-0.5.0.tar.bz2) = 295102 bytes

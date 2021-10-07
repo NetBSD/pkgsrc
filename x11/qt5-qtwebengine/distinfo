@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/05 20:32:03 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:14:11 nia Exp $
 
-SHA1 (qtwebengine-everywhere-src-5.15.2.tar.xz) = fc633cf15998a89229446b778085f59191e27b0f
 RMD160 (qtwebengine-everywhere-src-5.15.2.tar.xz) = 69b1c3d700e825a645757180e07df0ab8b8c301d
 SHA512 (qtwebengine-everywhere-src-5.15.2.tar.xz) = de64c30819f5e2f8620c853ff22b2f9717641477aef4432a552a72d1d67ed62ed61572afee6de3f2c9f32dee28f4f786ffd63fc465aa42c0ae1e87ea28341756
 Size (qtwebengine-everywhere-src-5.15.2.tar.xz) = 280142544 bytes

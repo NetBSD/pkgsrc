@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/09/19 13:52:14 taca Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 15:14:25 nia Exp $
 
-SHA1 (xf86-input-keyboard-1.9.0.tar.bz2) = 24b5d84d221a75650f390ff63315912bf9a94992
 RMD160 (xf86-input-keyboard-1.9.0.tar.bz2) = 1b6d2d6fc538f7d57a0b452173184248e22d87d0
 SHA512 (xf86-input-keyboard-1.9.0.tar.bz2) = d1a52d10039096d0d5e09750b6a8c2388345748331615af93e5be499646c3bc5fbbfc897fcebdeada5efaafff94f26a2ab84d6e35f01a875b8b9956a42015df9
 Size (xf86-input-keyboard-1.9.0.tar.bz2) = 341693 bytes

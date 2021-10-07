@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/05/17 10:47:52 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:13:35 nia Exp $
 
-SHA1 (gtk+extra-2.1.2.tar.gz) = 1b6cccbf89a79c8fe551d77c84dbf21a82c69f07
 RMD160 (gtk+extra-2.1.2.tar.gz) = e14bfc2a055fdef0d037b494018ca25047cc3c9e
 SHA512 (gtk+extra-2.1.2.tar.gz) = 815c498d05d5c00b318363f3a63797a2318d3f1547cc091391ab12607d7bdad8289fe73210c2c00ea1341272633dfc19e443602fe19be70cefc79ca8a6e70a32
 Size (gtk+extra-2.1.2.tar.gz) = 1274946 bytes

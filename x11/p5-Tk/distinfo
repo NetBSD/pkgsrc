@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2020/09/07 20:58:27 wiz Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 15:14:02 nia Exp $
 
-SHA1 (Tk-804.035.tar.gz) = 31b5fac38361049dda20e2fbd6d4ae044291f412
 RMD160 (Tk-804.035.tar.gz) = cfc0989ba68ae717d8e7afb71ff6a22e18322eb5
 SHA512 (Tk-804.035.tar.gz) = ff6a236e7a2b25ff759a1bfdff517524ade337a03e6da8524f29b9ff958b4e01fe527e53fa7884179f3b1a15c0419a554eeedd471eb4c2f3a1baac5cc3ae1daa
 Size (Tk-804.035.tar.gz) = 7024487 bytes

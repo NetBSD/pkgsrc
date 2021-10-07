@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/06/12 00:18:31 youri Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:13:47 nia Exp $
 
-SHA1 (keybinder-3.0-0.3.2.tar.gz) = d23c12440b54cb0f40e7e876c22001dc7b5714b0
 RMD160 (keybinder-3.0-0.3.2.tar.gz) = 420732465a39588d9c41fac702f98fa28f4421dc
 SHA512 (keybinder-3.0-0.3.2.tar.gz) = 14171875e03ade88165f28c7267b66cf9efe34259d7a3072a786ba49dacf8f8d6d84753b1aeedec5dfb0a24028be86bceeebee2f6b1bf5ef2eb79ee45f909b11
 Size (keybinder-3.0-0.3.2.tar.gz) = 378942 bytes

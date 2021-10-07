@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/11/24 10:25:24 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 15:14:19 nia Exp $
 
-SHA1 (xbindkeys-1.8.7.tar.gz) = eb5eed246ccec4f5a513b0a0e7367ba669c77dba
 RMD160 (xbindkeys-1.8.7.tar.gz) = c8c53a5625e4a956a365a593800c01ccad54d1c6
 SHA512 (xbindkeys-1.8.7.tar.gz) = a6b1478e8ef4bedc686fdd15abc11a8a592ac17c69e1a5a13f60e735e9be9646faed62e980cdac4aa7bc7e3253237465de38dee98935dd3f9911d4e48209b2e9
 Size (xbindkeys-1.8.7.tar.gz) = 177532 bytes

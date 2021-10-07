@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2020/01/05 19:24:28 gutteridge Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 15:14:32 nia Exp $
 
-SHA1 (exo-0.12.11.tar.bz2) = f44111614d5906630d40d0dab442719c7c6f3566
 RMD160 (exo-0.12.11.tar.bz2) = c49a98b986573c19cd3d85d1ff5ccc2234b6c936
 SHA512 (exo-0.12.11.tar.bz2) = ecbf20feddf86178d34a5c70212f0c2310ab1d6ce25291846d6d1d3045270ae3e68102065d7b3d8840137406f826f9bc37fed92a16c1268c3d14f2833a97d533
 Size (exo-0.12.11.tar.bz2) = 1333227 bytes

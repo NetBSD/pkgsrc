@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:13:31 nia Exp $
 
-SHA1 (FileRunner-2.5.1.tar.gz) = ef607b3229491c1a6608fac67ce584d01a50c69d
 RMD160 (FileRunner-2.5.1.tar.gz) = 94c0dd841aac617c2b5632975e4c7fa1fe149c11
 SHA512 (FileRunner-2.5.1.tar.gz) = 922740549af2c03be47dfcf7e29815d682eebe63f06f7aaebdfa576e0f7fcb596150e76aa2b032046c4cb1cff4aae836b3e4c4fc6ae56b25ca63684f7d75e25e
 Size (FileRunner-2.5.1.tar.gz) = 122795 bytes

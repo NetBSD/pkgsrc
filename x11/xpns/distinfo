@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:29:11 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:14:41 nia Exp $
 
-SHA1 (pns_source.tar.Z) = 2fab75ecdcddba9250a836740821202d8b19f5b8
 RMD160 (pns_source.tar.Z) = 0f55bf6c830f179dd0d20e32884159ab2f8fea1d
 SHA512 (pns_source.tar.Z) = 2ea65733c80e6b9e5feae3212de9eb4e8e9d21cd808b1ecb110f15f11a6e948688a08bf778623bb02504e10baa0539712da93ca104152102953e62c18710ec8a
 Size (pns_source.tar.Z) = 256925 bytes

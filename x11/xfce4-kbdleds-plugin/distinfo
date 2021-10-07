@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/06/23 16:49:47 youri Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:14:33 nia Exp $
 
-SHA1 (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = d10393d4c1aeda4a10f89f3d85a5a574e0fa9ba8
 RMD160 (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = 13dd6160585a7ead98f5250e0d69d2f43a071cf3
 SHA512 (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = 2cc48ec04d24ff55900c511c1fbe3ce1f7c45e59a30098a3b8af292ff5b219e7050e81d22f449f77ac79129b63db20ea61cb49730c5092583b935190149e127f
 Size (xfce4-kbdleds-plugin-0.0.6.tar.bz2) = 265889 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 00:27:52 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:13:31 nia Exp $
 
-SHA1 (enlightenment-0.17.6.tar.bz2) = 23e04845cf68d9edd3ef789331b21dcb3846ac01
 RMD160 (enlightenment-0.17.6.tar.bz2) = 3e994330b36ea9617b33aae5a4adac9db3aafff2
 SHA512 (enlightenment-0.17.6.tar.bz2) = 5f8fec0b2c9cb2bcc3e2738b68e4266179153288a161e4e2d0f7ff50b702d6d78d836b433105c548997b516324ca7ba44a74a7361052235b50e18c22a26c9dc9
 Size (enlightenment-0.17.6.tar.bz2) = 29500129 bytes
