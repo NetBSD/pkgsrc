@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/06/21 23:10:50 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:53:59 nia Exp $
 
-SHA1 (libressl-2.7.4.tar.gz) = cf2d76b6872ceac9ca28867e07f8dd3f4d777c5f
 RMD160 (libressl-2.7.4.tar.gz) = e2fff57fe8ae432a4b3104561d2ba1ee16804242
 SHA512 (libressl-2.7.4.tar.gz) = 1cd82a1bff4f655251b5feb0c850f4164e0fd548e4b404407370f74dcc75c205f42efc7787a157eecac84cbbe46af48cb63f46b3fef75f4a0a9ea19a5863a691
 Size (libressl-2.7.4.tar.gz) = 3359012 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:17:43 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:53:46 nia Exp $
 
-SHA1 (ddos_scan.tar) = 97e695f19df0edef4d833afb8114b24822e3db27
 RMD160 (ddos_scan.tar) = 5aedea63bbcf357b8084d8e0e6ad0a4294ba3ba3
 SHA512 (ddos_scan.tar) = 073fd54dc34ddd1678406dc66474f8cd677cf0957ec728e76e4c59019ef709fb3b3e5d1468f3265cb3ee76184ba536a33db5c4613242ca040895176bc7023f88
 Size (ddos_scan.tar) = 30720 bytes

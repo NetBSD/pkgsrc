@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/13 20:52:04 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:21 nia Exp $
 
-SHA1 (pius-3.0.0.tar.bz2) = 1a08e086057a601fcb6a5b8be2aacb001a9f4133
 RMD160 (pius-3.0.0.tar.bz2) = c8ddc1a1abc3033e41f049fccd099c951c37e061
 SHA512 (pius-3.0.0.tar.bz2) = 0c906574ac703f45e3318ae3e7994fe6580fd172849b2956d9084033d6fbfd69fec942b95bc2edadadc223fa0685ff0b9799ad03570b712b9cdb09d69491cc91
 Size (pius-3.0.0.tar.bz2) = 46643 bytes

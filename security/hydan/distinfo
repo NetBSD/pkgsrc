@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:17:46 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:53:54 nia Exp $
 
-SHA1 (hydan-0.13.tar.gz) = 3c76bf1a1adb36a5124163cbbd55f9aff1afdb6e
 RMD160 (hydan-0.13.tar.gz) = eb20dd2087435d77f413fce80b93e1efc256bc1f
 SHA512 (hydan-0.13.tar.gz) = 6ef6548b08272caab4f902b300558d5dcf501604927d886e841e1246caf10c3995a4dbd64fb1bf9f75c13fbb33161e1e6941d691339928749013613a35b3ec45
 Size (hydan-0.13.tar.gz) = 180409 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/04/06 09:27:13 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:54:45 nia Exp $
 
-SHA1 (spiped-1.6.1.tgz) = 6ad5b4873a0372c86682497bf0d4c6348b47f2e7
 RMD160 (spiped-1.6.1.tgz) = e3f8326c751efcb8a2758d23beb50db599fff0b9
 SHA512 (spiped-1.6.1.tgz) = ec69cb49a19e4e5705526ec74ee683ac3923412bc5ca3a45fc8268699367421cd37354ccc03c18c2d48f06cdb8a4c4bce3ef3b60934997c6770547e02e6f66ae
 Size (spiped-1.6.1.tgz) = 115055 bytes

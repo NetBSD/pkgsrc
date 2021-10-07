@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2018/05/30 14:58:03 ginsbach Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:54:02 nia Exp $
 
-SHA1 (mcrypt-2.6.8.tar.gz) = 8ae0e866714fbbb96a0a6fa9f099089dc93f1d86
 RMD160 (mcrypt-2.6.8.tar.gz) = 5115c679ee5d34b9fb9e976c12240c48370df514
 SHA512 (mcrypt-2.6.8.tar.gz) = eae5f831e950df69eb93efc8314100b4b5dc8a535b1d00f500e6b25382efcec321346776a92dadf101b878ef46a47de2e9e81f5ddf5c73563ece4741f169c8d1
 Size (mcrypt-2.6.8.tar.gz) = 471915 bytes

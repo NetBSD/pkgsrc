@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/09/12 22:45:24 tnn Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:54:00 nia Exp $
 
-SHA1 (libyubikey-1.13.tar.gz) = 2b2c190f6fd5c94051032ab9f2e94c67f6f58a50
 RMD160 (libyubikey-1.13.tar.gz) = 0b649c9789865ab94b8c763534b6de47b0ba1198
 SHA512 (libyubikey-1.13.tar.gz) = 28f45cb9817c30a70d168ae507d3f8014051058d730eed92b31d92e96784138dea291bda4275511c5f92a6427cb4249d76c802b8abb867cec50e62fb770950f2
 Size (libyubikey-1.13.tar.gz) = 347337 bytes

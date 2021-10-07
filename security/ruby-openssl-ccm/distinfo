@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/24 16:06:21 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:39 nia Exp $
 
-SHA1 (openssl-ccm-1.2.2.gem) = 5a4a91f65d0e6c3647a1fd177161aba99b44f7c3
 RMD160 (openssl-ccm-1.2.2.gem) = 41541a2e04a72b3c3fb89550e5502ba687e23cea
 SHA512 (openssl-ccm-1.2.2.gem) = 5f04af1ac65608e519fcf68259b2690f12882781cdba411939f809e1a6cb602723bf23d9cb920949e8eb7c4bfddb3e65446ae16d0276af78992de21cbfcdfc49
 Size (openssl-ccm-1.2.2.gem) = 24576 bytes

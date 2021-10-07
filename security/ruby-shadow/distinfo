@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/23 07:26:14 taca Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:42 nia Exp $
 
-SHA1 (ruby-shadow-2.5.0.gem) = c217fafeb1a1d63d75b170938f50cd18d786ba2e
 RMD160 (ruby-shadow-2.5.0.gem) = 324edce2de244734fc91f5acecd08a7d66581db7
 SHA512 (ruby-shadow-2.5.0.gem) = 1abd54df1bd4f29e135093df9b22886a726824f8b72b742017fd31bdc3fa39e3d79410a747cf2ebe4117f75e665fb89c904375b5c44a674bec91a4cc37646520
 Size (ruby-shadow-2.5.0.gem) = 11264 bytes

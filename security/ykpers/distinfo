@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2019/09/12 22:54:23 tnn Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:54:49 nia Exp $
 
-SHA1 (ykpers-1.20.0.tar.gz) = e623d1692b6955acac1fe5218d675f826bb5ebca
 RMD160 (ykpers-1.20.0.tar.gz) = 350a9461c89a6c8324e53a877692328887e9bf9b
 SHA512 (ykpers-1.20.0.tar.gz) = a38b26700793f0a801e5f5889bbbce4a3f728d22aaecf8d0890f1b5135e67bed16a78b7a36dbc323c5d296901f6dd420fa658a982492a0cd9f0bbf95a5fbc823
 Size (ykpers-1.20.0.tar.gz) = 127975 bytes

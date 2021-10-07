@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/02/24 19:14:38 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:54:33 nia Exp $
 
-SHA1 (rsa-4.7.2.tar.gz) = e8a53067e03fe1b6682fd99a40a7359396a06daa
 RMD160 (rsa-4.7.2.tar.gz) = ab0fdbce566057469379043cebadb434f7384750
 SHA512 (rsa-4.7.2.tar.gz) = 63f561774dbaa10511167cba31e0f852e32b3250f2803edaa2729dc2b28baa2c42cb79dfbd49e38eb42ce82f665ed4c3d9dcc810c37380401e2c62202b1c7948
 Size (rsa-4.7.2.tar.gz) = 39711 bytes

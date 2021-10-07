@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/20 18:23:38 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:01 nia Exp $
 
-SHA1 (lxqt-policykit-0.17.0.tar.xz) = 83d8bd4b67d120d79cf65beb4d07e64a9540675e
 RMD160 (lxqt-policykit-0.17.0.tar.xz) = 661808bbe41d3dde059dea8e02505020ddb4d9ad
 SHA512 (lxqt-policykit-0.17.0.tar.xz) = 1cfd4b2d21840704e4b15ae71098e9c6f3d51031293f1fdf6e134ffee867fe4e845caaf24fbd2c107317372b90b6d415a76854977fa8f6b703e708bd09120328
 Size (lxqt-policykit-0.17.0.tar.xz) = 38272 bytes

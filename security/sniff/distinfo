@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/03/30 09:52:58 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:54:44 nia Exp $
 
-SHA1 (sniff-2.0.tar.gz) = 9e9ef76eaccaa6cbb3c23054a29a08dd9faed328
 RMD160 (sniff-2.0.tar.gz) = 8879f5ffcfc3f59fcde7cbc5c103d7c7f4947c4b
 SHA512 (sniff-2.0.tar.gz) = b58f9b7f0aa5dcf3ee1c4dc75c79c14eeb2736f909990e910d9186d8853f8eaa09172e906f20092717d3f7eb6d588b5307712574ba116505b052e69978286032
 Size (sniff-2.0.tar.gz) = 10720 bytes

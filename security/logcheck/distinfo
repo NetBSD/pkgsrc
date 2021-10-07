@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/11/10 10:34:51 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:54:00 nia Exp $
 
-SHA1 (logcheck-1.1.1.tar.gz) = 18f89f0dacfe9ff31076c006d58e1bcfedaa7f22
 RMD160 (logcheck-1.1.1.tar.gz) = 1865f598b4bf32af466d4aec5e0803249a61c442
 SHA512 (logcheck-1.1.1.tar.gz) = 4be045289259655e7b4da05dd1a07c649b2289fbc6f15dd424dc48ab980478f3ae49501f0e9e2035fddb9a40acaf2f4ab310ff8d95355196d82d41d6fc860143
 Size (logcheck-1.1.1.tar.gz) = 30267 bytes

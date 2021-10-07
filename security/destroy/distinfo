@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 01:17:43 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:53:46 nia Exp $
 
-SHA1 (destroy-20040415.tar.gz) = c2a24155858e9236c8cba2bb5f45687d778b1fde
 RMD160 (destroy-20040415.tar.gz) = b1132ee8c226b6239c1da5591081d9fbccb9c284
 SHA512 (destroy-20040415.tar.gz) = dcc59f530370f641972ba2b10ddff5d7fd87c3c895a3d93ab9884f0bab70a2445db9e491101bd29f81bfbc05de3a9fad7ddc6b754686f907fb76f47fdffc01b1
 Size (destroy-20040415.tar.gz) = 4261 bytes

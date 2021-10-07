@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.47 2020/03/21 00:15:11 markd Exp $
+$NetBSD: distinfo,v 1.48 2021/10/07 14:53:51 nia Exp $
 
-SHA1 (heimdal-1.5.3.tar.gz) = 23f39a099ae862dce1f5f4e5c3720861849a4bd0
 RMD160 (heimdal-1.5.3.tar.gz) = 834660b4c0fe81a3aac4ffd9d8d37d74add1fa70
 SHA512 (heimdal-1.5.3.tar.gz) = 5c7890f60d6fe6b5034fca204eb7cdb33fdc397fe09b169212b6267310b83bb0b3b06a4c2888841be34c92cbd701bd95734b4019c33c147459c4a449861c4431
 Size (heimdal-1.5.3.tar.gz) = 6798305 bytes

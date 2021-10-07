@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/10/19 12:30:30 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:03 nia Exp $
 
-SHA1 (monocypher-3.1.1.tar.gz) = 7476dbf0c404b9cd196f763aaa09fa2b7f4b70b0
 RMD160 (monocypher-3.1.1.tar.gz) = 71336114fab7068aeb63dc2ae12452d064c671d1
 SHA512 (monocypher-3.1.1.tar.gz) = 9c202ffe74eac1f2a7f21b8e195d981c21c5792b788315dea168cf40f1ee83cb787f3409c2d6135f517a58fee5f3e44c9ef521e132cee40c04e4b4868787f366
 Size (monocypher-3.1.1.tar.gz) = 1066382 bytes

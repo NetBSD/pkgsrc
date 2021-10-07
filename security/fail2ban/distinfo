@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/04/20 17:24:16 nils Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:53:48 nia Exp $
 
-SHA1 (fail2ban-0.11.1.tar.gz) = 45b1e4320b079b193acfda7bdc60421f1e920077
 RMD160 (fail2ban-0.11.1.tar.gz) = 529e2c7d1be0b6e1a2dd4e0e385822ca13477685
 SHA512 (fail2ban-0.11.1.tar.gz) = 019b088aa6375f98742ed101ef6f65adabca3324444d71d5b8597a8d1d22fa76b9f503660f0498643fe24a3b8e4368de916072a1ab77b8e2ea3eda41c3e0c8c6
 Size (fail2ban-0.11.1.tar.gz) = 538660 bytes

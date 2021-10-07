@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/03/07 17:56:25 he Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:53:44 nia Exp $
 
-SHA1 (Botan-2.17.3.tar.xz) = f77d9224a2e85e05b4195cdbb05ec67f55639515
 RMD160 (Botan-2.17.3.tar.xz) = 0c9b9e3de4fa1c69e86e9efc6b047875a7e31c85
 SHA512 (Botan-2.17.3.tar.xz) = ead0f144dfb9eca66d0e81e376d0d49f4b0b6bc1599f8cf52299e1753645b5b20100efa004ef5f9571f7bea88958f35db38367fc26f2603890f8f199cc890dbc
 Size (Botan-2.17.3.tar.xz) = 5937596 bytes

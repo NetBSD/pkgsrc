@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/29 07:53:38 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:05 nia Exp $
 
-SHA1 (opendoas-6.8.tar.gz) = 11963ee647b7166972512740bc7f648c8aa1272f
 RMD160 (opendoas-6.8.tar.gz) = 56f9c02d81f6ad9925323f1b44d7f7087f1108f0
 SHA512 (opendoas-6.8.tar.gz) = 4a57079bba353247e645bc07a5d4e78fd01471d193e83751fd87b72cffa4e152c0f7ea172563f767a7193b14489f57bc066b4fee50842d30b5b7f7ce918434bb
 Size (opendoas-6.8.tar.gz) = 32307 bytes

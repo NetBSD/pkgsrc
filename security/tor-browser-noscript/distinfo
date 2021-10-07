@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/08/15 13:20:11 wiz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:54:48 nia Exp $
 
-SHA1 (noscript-11.2.11.xpi) = ba1760c4e5417c92ace091486000e6324197676e
 RMD160 (noscript-11.2.11.xpi) = 866799cb56d31e27a625a17c07ab3643763e40ea
 SHA512 (noscript-11.2.11.xpi) = db34970e967d2f1842106a2dc2c516347cfe799f48cc046a079267bc6adef6d6e6da42d1da146ab3f88401e3b2e6c5cf4b0c4ada13e13d2c8a59b31523b10fa9
 Size (noscript-11.2.11.xpi) = 656784 bytes

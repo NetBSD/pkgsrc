@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 13:06:38 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:53:54 nia Exp $
 
-SHA1 (x509-validation-1.6.11.tar.gz) = 15bf1c299973321177c460e28f283a48b9264793
 RMD160 (x509-validation-1.6.11.tar.gz) = de2cad29e40516a85218390df2781b3c220ddd5b
 SHA512 (x509-validation-1.6.11.tar.gz) = 5c156b7018afabedac0c2ee6192c536cf09eacdaf9265490a7f4a7d336077dc198a07f16bf58f3fec04a1350f0a8b3c050380673612cf5695c9e7b5a73a4ebf4
 Size (x509-validation-1.6.11.tar.gz) = 19752 bytes

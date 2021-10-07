@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.66 2021/04/21 09:02:32 nia Exp $
+$NetBSD: distinfo,v 1.67 2021/10/07 14:54:47 nia Exp $
 
-SHA1 (stunnel-5.59.tar.gz) = 3eba2c0572e356adf9861fe4b325ec2774291fb8
 RMD160 (stunnel-5.59.tar.gz) = 327dbe72dc7b1e8e97b8e92ffd49abd6d7ba6a09
 SHA512 (stunnel-5.59.tar.gz) = c9f93ff6a09baef6d85e883cb469de495f5c006b9f0d3e018ade7a21bb3521e3db7982701c752d6b117ff2ad03a7f7299afd399c8956006af2eade52358ac1c7
 Size (stunnel-5.59.tar.gz) = 995508 bytes

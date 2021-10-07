@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/03 15:03:05 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:42 nia Exp $
 
-SHA1 (rubyntlm-0.6.3.gem) = bd7768d97c549f404a456830659a293084d7b22e
 RMD160 (rubyntlm-0.6.3.gem) = d87782dea959fbb8f9d03ab756ec3c3974bb76f9
 SHA512 (rubyntlm-0.6.3.gem) = 7e50c1bf63477fead9189a5ade06db65a3fad04d82bccfbffb513517ab97766053c800af9551e027dedc3aee6fb35288c234d98b1a02815299bcbc463e0edd87
 Size (rubyntlm-0.6.3.gem) = 32768 bytes

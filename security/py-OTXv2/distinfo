@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/04/03 14:33:50 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:54:24 nia Exp $
 
-SHA1 (OTXv2-1.2.tar.gz) = 99f6320fd41f1c723d36472fa5da8b65d6f5f1f0
 RMD160 (OTXv2-1.2.tar.gz) = 4810eac1843d487e6e72ef02769f033be5d7284e
 SHA512 (OTXv2-1.2.tar.gz) = 95af342b6d36eb6ab461145eb19c1ecaae2129749667c36e4fc98b87ca286ef4c467a0684c62fa21c9dcb1f69d3041dad67b252ac79a8c781dce39c13e558f47
 Size (OTXv2-1.2.tar.gz) = 6774 bytes

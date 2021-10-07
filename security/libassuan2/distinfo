@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/04/05 08:57:39 adam Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:53:56 nia Exp $
 
-SHA1 (libassuan-2.5.5.tar.bz2) = ec4f67c0117ccd17007c748a392ded96dc1b1ae9
 RMD160 (libassuan-2.5.5.tar.bz2) = bd2d3fb38a81bff283f85d30bb1a342cf87bea6b
 SHA512 (libassuan-2.5.5.tar.bz2) = 70117f77aa43bbbe0ed28da5ef23834c026780a74076a92ec775e30f851badb423e9a2cb9e8d142c94e4f6f8a794988c1b788fd4bd2271e562071adf0ab16403
 Size (libassuan-2.5.5.tar.bz2) = 572263 bytes

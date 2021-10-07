@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/13 07:21:29 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:54:33 nia Exp $
 
-SHA1 (solo-python/0.0.26.tar.gz) = 6be26f59f9bb41a34bc1e09cadbe5db8ec1b4aea
 RMD160 (solo-python/0.0.26.tar.gz) = 4559e01fbc511c5fdac9417a48c83dcbf7dd829a
 SHA512 (solo-python/0.0.26.tar.gz) = f97da4a4ed3b0e0f4715407b179d8a8c1385076611fe8669cec6b514313d38dd14c6c22434b73e2c72f7456407a6c942b26b72cca7a56969cfbc630ee25aad85
 Size (solo-python/0.0.26.tar.gz) = 35251 bytes
