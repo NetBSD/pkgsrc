@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5061 2021/10/07 19:10:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5062 2021/10/07 19:38:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7761,3 +7761,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser to 10.5.8 [wiz 2021-10-07]
 	Updated www/apache24 to 2.4.51 [adam 2021-10-07]
 	Updated www/py-httplib2 to 0.20.1 [adam 2021-10-07]
+	Updated net/py-lexicon to 3.8.0 [adam 2021-10-07]
+	Updated devel/py-joblib to 1.1.0 [adam 2021-10-07]
