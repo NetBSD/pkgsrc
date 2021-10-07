@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/15 23:49:25 gutteridge Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:04 nia Exp $
 
-SHA1 (lxtask-0.1.9.tar.xz) = a146138e04952cd560cfb787b0bb9fa7dd57b0eb
 RMD160 (lxtask-0.1.9.tar.xz) = a7a59b8bd539f82161a4401086cc232b8b5cd3e0
 SHA512 (lxtask-0.1.9.tar.xz) = 21a28a86180e2c0d11f591707fe4333cb78224316d6c33e581f5a38a36baf619e22c426f58a6e4eaaa5701119b909a956691fc00ef47dff140443148f2941f4d
 Size (lxtask-0.1.9.tar.xz) = 138000 bytes

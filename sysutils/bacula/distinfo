@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.58 2021/05/16 06:56:31 jnemeth Exp $
+$NetBSD: distinfo,v 1.59 2021/10/07 14:57:35 nia Exp $
 
-SHA1 (bacula-9.6.7.tar.gz) = cf548f4ab0b22761dfe2ddd5e9f0f29e0ccf77c8
 RMD160 (bacula-9.6.7.tar.gz) = 9361625af2bafca9595b0f259e832fba3de75653
 SHA512 (bacula-9.6.7.tar.gz) = 27551faa2e4b13c6c2b9a2500f1253dfa5ee84929013491a7bf512d965d655c5af78b08201090474bc9b29827ca0a5c1c5a23a55712a1f739f37de75449cfd4d
 Size (bacula-9.6.7.tar.gz) = 4168102 bytes

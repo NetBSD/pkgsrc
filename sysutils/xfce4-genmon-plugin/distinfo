@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/08/19 01:09:47 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:40 nia Exp $
 
-SHA1 (xfce4-genmon-plugin-4.0.2.tar.bz2) = cffc57ae3bce3ac0b3d5a6a055ef533907bb398c
 RMD160 (xfce4-genmon-plugin-4.0.2.tar.bz2) = 86a3ccd6cbc256c0def6918f39135109da52f9f0
 SHA512 (xfce4-genmon-plugin-4.0.2.tar.bz2) = 78a9cd95a83d6ffcb512647f1c674589bf80e4ef24a3431be96fd7506c7642e42c796f7316e034083fe794ab79521d856083b12a186276a1dfe4f14dbe97149e
 Size (xfce4-genmon-plugin-4.0.2.tar.bz2) = 334196 bytes

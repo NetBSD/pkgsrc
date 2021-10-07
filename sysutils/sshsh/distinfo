@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:31 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:58:29 nia Exp $
 
-SHA1 (sshsh-1.0.tar.gz) = b27a1f19f86ae6546dca6098377874204a6ddde8
 RMD160 (sshsh-1.0.tar.gz) = 5c16fc1b04050169bee233714a49b78b23b2e543
 SHA512 (sshsh-1.0.tar.gz) = 5bf7499653e5666389b3325bcf8e8e94536468285ce985d68c4310202155d1e4c1042a097a9caee3195243aea1754a5669c73ef266e51213416c90500124ba1e
 Size (sshsh-1.0.tar.gz) = 865 bytes

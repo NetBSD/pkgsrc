@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2018/09/20 21:41:16 ryoon Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:58:09 nia Exp $
 
-SHA1 (open-vm-tools-10.3.0-8931395.tar.gz) = 236d8159882ab2663043232a59f84eba144d0345
 RMD160 (open-vm-tools-10.3.0-8931395.tar.gz) = 5287327b105bfb2356b510f8a6e11b2153d50f17
 SHA512 (open-vm-tools-10.3.0-8931395.tar.gz) = 627056db94b79aa7782324ed1a71e7f0c2420f0a0d76d3e65b84035b1350e29757a1412cbf195ef3d79fae37ddd6f17c6892ea2c64dbfa331854ded016965604
 Size (open-vm-tools-10.3.0-8931395.tar.gz) = 4638881 bytes

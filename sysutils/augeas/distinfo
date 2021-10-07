@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/01/01 18:34:38 bsiegert Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:57:34 nia Exp $
 
-SHA1 (augeas-1.12.0.tar.gz) = afe7aee292e058141d8c19f6a82b5f8bae2d5163
 RMD160 (augeas-1.12.0.tar.gz) = 989b454bdf814faab8164ad86b04cdd1e0635c97
 SHA512 (augeas-1.12.0.tar.gz) = 4f61d4abbf338e915dfae212560d39792674bc757f05f500afa80c6170abc214ffb99cab2cf5bbd1c2338d11a6909e5fc3ff7112a2246fca69f7b39ac283da40
 Size (augeas-1.12.0.tar.gz) = 2429279 bytes

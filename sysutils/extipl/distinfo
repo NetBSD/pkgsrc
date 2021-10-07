@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/07/21 21:08:03 maya Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:57:48 nia Exp $
 
-SHA1 (extipl-5.04.tar.gz) = 41b42bc4ba0bfad86e6abdc2b02620c9934c2cd9
 RMD160 (extipl-5.04.tar.gz) = a7c037f92609463d61b3c7d52276e3849aa44055
 SHA512 (extipl-5.04.tar.gz) = aadd7cb5d9c68634b94b4c1cd68c73f4c29b228df9d619f1db10b162e04737bf3dd19851ffc05334fbaa21147165af76c7c9043dc0ad69c77c5bce33ec247378
 Size (extipl-5.04.tar.gz) = 85382 bytes

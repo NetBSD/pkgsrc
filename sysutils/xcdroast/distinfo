@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2018/03/17 09:09:12 tnn Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:58:39 nia Exp $
 
-SHA1 (xcdroast-1.18.tar.gz) = a80b9d123809e1d84afec8c51601dd764540bdd0
 RMD160 (xcdroast-1.18.tar.gz) = f5eafcc9638700dc62b624d3829cc362c204a343
 SHA512 (xcdroast-1.18.tar.gz) = 77808052aab9ab2d579ce7edc6d863e885692815bedb4f84d716ab14246076a3dac0e8f4a57fb46f65b1417be698c32cae80992afc808b6e52e9fd41625b8443
 Size (xcdroast-1.18.tar.gz) = 3403570 bytes

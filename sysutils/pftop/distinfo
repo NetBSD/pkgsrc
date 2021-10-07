@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 01:32:26 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:58:15 nia Exp $
 
-SHA1 (pftop-0.7.tar.gz) = 651afa532cfc8cf59c3598704deb9bf3788ac9e9
 RMD160 (pftop-0.7.tar.gz) = 0e0c09e5feeb07deba8b540233dcb946ba0b4508
 SHA512 (pftop-0.7.tar.gz) = e9be01704adc112bd1f5dc011f7900754d600df6be50e28ee4a937faabe00b627ed4d1565e92560d750e70f5117533c494565f616f3562eae61301642d438713
 Size (pftop-0.7.tar.gz) = 59765 bytes

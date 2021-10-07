@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/12/31 13:33:26 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:57:56 nia Exp $
 
-SHA1 (hivex-1.3.18.tar.gz) = d66131981d2c978ab9cfc7e28dd052e7e273ae18
 RMD160 (hivex-1.3.18.tar.gz) = 7fc4345eb90031df6070ec4cc0d765c29f98223c
 SHA512 (hivex-1.3.18.tar.gz) = 1851351118921e81df9e505f90d00048a178572c2edd3de40194a69915176bdb615e2eb5afea408d57063e98257c8d1e3d0cd6730407153892cc9e3befc4aa3a
 Size (hivex-1.3.18.tar.gz) = 1542133 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/09/01 10:21:55 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:57:43 nia Exp $
 
-SHA1 (desktop-file-utils-0.26.tar.xz) = 9fd94cb7de302163015fcbc0e157c61323b1205d
 RMD160 (desktop-file-utils-0.26.tar.xz) = a68b5994a7d099e2dffa279ea20c31cc7e39266e
 SHA512 (desktop-file-utils-0.26.tar.xz) = 5b4e435f0b635d8f898ac7f5759f74a08ffbe2a56d41fee0e84ff57e73b98d08b57b4416f20b99f696dad8bcb1c20792b39acf836b0814220c0b386ea5f6b831
 Size (desktop-file-utils-0.26.tar.xz) = 83132 bytes

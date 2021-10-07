@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/16 10:14:15 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:58:37 nia Exp $
 
-SHA1 (wipe-2.3.1.tar.bz2) = 72aa8bcbeb54deb676ae08af78401132860703de
 RMD160 (wipe-2.3.1.tar.bz2) = 313c140a2ea6f2c81a0b4d90974c8581ba0b14db
 SHA512 (wipe-2.3.1.tar.bz2) = 63870e68fa5dbf90abb686052f8dcc216ccb93b0c4f5cc10d60ccf43f3606ba91b46dc1e3d8b34d201f7ea657f70b45a61d5d04facf5b2a3e47d2286c46e7110
 Size (wipe-2.3.1.tar.bz2) = 72297 bytes

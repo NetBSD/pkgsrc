@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/04 11:27:01 cirnatdan Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:57:53 nia Exp $
 
-SHA1 (gnome-control-center-40.0.tar.xz) = 06a456d779b174a29ea65801133d2b85fcc02732
 RMD160 (gnome-control-center-40.0.tar.xz) = a48a62135fc0cb46f25cd9e293526c679db749f0
 SHA512 (gnome-control-center-40.0.tar.xz) = 26980cd18c414b12d2bf7e61be200e02302e170d53aba4f064154eda4c006648160919b6d4c9d168d8c5a461c05dc6593a52066b144af577c6aac420b9723cb9
 Size (gnome-control-center-40.0.tar.xz) = 6463616 bytes

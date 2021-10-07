@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/03/23 18:24:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:47 nia Exp $
 
-SHA1 (goldrush-0.2.0.tar.gz) = 47298770de7fbd70d2ed6ac42e13c4661faa9185
 RMD160 (goldrush-0.2.0.tar.gz) = 98422971b4ba2165dca3a6aa4f9b0b73b7474be2
 SHA512 (goldrush-0.2.0.tar.gz) = 1a74f02c75e72f8a60366b9ba74b763eb98621da2ce6044ed97e836566caf8ce85fadeee62b3d24303df319e2c1333d1c544cd267a041b718b0ab36de53e7b1a
 Size (goldrush-0.2.0.tar.gz) = 25887 bytes

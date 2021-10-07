@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/01/08 08:58:30 he Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:58:03 nia Exp $
 
-SHA1 (logrotate-3.18.0.tar.gz) = bbd38ce35cba68d8e20da83cb41a1195324ad4e4
 RMD160 (logrotate-3.18.0.tar.gz) = 7fe1c548970e4c81be2173782b92240a26c0ec38
 SHA512 (logrotate-3.18.0.tar.gz) = d1bca267fbec4acbb83ffba4d3ac4c864f4269d8513e5614e7dbe6f3b1f176685218bffdb5d62f559ee73f84cf9a8a257c9f63e30af058d12d0034240f247586
 Size (logrotate-3.18.0.tar.gz) = 224873 bytes
