@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/06 11:07:42 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:43:11 nia Exp $
 
-SHA1 (flexmock-0.10.10.tar.gz) = 892f336c22fd900e4de71349d7b01d45e077d585
 RMD160 (flexmock-0.10.10.tar.gz) = 304da3ff1f6622406a44e5149ff0b1e26a5f3cf1
 SHA512 (flexmock-0.10.10.tar.gz) = 211939bf40ecb25981a70d5bfe897ef8127ef38d5adf6a48b086c4b6f49b05e1a04f09afb73f428e3eb21a8090ba33ca86e605c2c1ac70d9fc269fdd640ccb73
 Size (flexmock-0.10.10.tar.gz) = 49201 bytes

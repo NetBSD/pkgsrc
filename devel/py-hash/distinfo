@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/06/30 19:01:52 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:14 nia Exp $
 
-SHA1 (pyfasthash-0.6.2.tar.gz) = e703ff597cd8db8bfd83f44f0e42e7ac9153c302
 RMD160 (pyfasthash-0.6.2.tar.gz) = 3a6e3f5015c8b2c8d4a7f2bc04ef0ca7f75eabb6
 SHA512 (pyfasthash-0.6.2.tar.gz) = 1820a56f27dd58d1aff4657230b1e5c9b276d64fc1573ad5c14612efd92d584070f12414a9e4fd9929eb61e054a6d65dc6ce1f25457431eaf736c38ecb6fc9be
 Size (pyfasthash-0.6.2.tar.gz) = 197576 bytes

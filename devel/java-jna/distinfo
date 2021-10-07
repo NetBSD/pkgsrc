@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/04/05 12:55:15 nonaka Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:00 nia Exp $
 
-SHA1 (jna-5.2.0.tar.gz) = 295b9fb5103372487f0a49e6fe203e3a3e341dce
 RMD160 (jna-5.2.0.tar.gz) = 4415e399502ac0d79d19480f7cc3d6b8c7537b3a
 SHA512 (jna-5.2.0.tar.gz) = ea96228730c2285fca8552ca7269fa91519da9b058f19ea2277061728d126afc218770f38d41d4536af7e801165754d4a5be42d11d40a02895bac49192efed56
 Size (jna-5.2.0.tar.gz) = 77133648 bytes

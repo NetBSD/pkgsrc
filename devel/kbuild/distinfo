@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/01/02 10:37:29 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:02 nia Exp $
 
-SHA1 (kBuild-r3127.tar.gz) = 1f2d383c504a7881a2ef71b1470c2422b773316d
 RMD160 (kBuild-r3127.tar.gz) = aea4428954871e44ebb4ccb7bf1f4facc91a92a6
 SHA512 (kBuild-r3127.tar.gz) = 6a724892d32c25a08dede7969d3878dea2c18f47da30908b147451e36297f77fdb806c34c457524010d3eadf199858843a92ca4cef774a0b8a700471708cb36c
 Size (kBuild-r3127.tar.gz) = 17579258 bytes

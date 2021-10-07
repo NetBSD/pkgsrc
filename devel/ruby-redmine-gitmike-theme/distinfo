@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/03/15 16:28:26 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:44:19 nia Exp $
 
-SHA1 (ruby-redmine-gitmike-theme/v1.2.0.tar.gz) = 5f351a81fd7200aaffc5c9002d88c0881d0e62fa
 RMD160 (ruby-redmine-gitmike-theme/v1.2.0.tar.gz) = 9ce323a7e87a9d2411cf50965332b79101c012b0
 SHA512 (ruby-redmine-gitmike-theme/v1.2.0.tar.gz) = 9dd8d58ca131bb27c7a3a8b8c0f3e85109326cff0313410354c4320ccae6feb738516a9826dfd267d6185f0501018d215fd048b9bd0fbb8509933acd024145c5
 Size (ruby-redmine-gitmike-theme/v1.2.0.tar.gz) = 156397 bytes

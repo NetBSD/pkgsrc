@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/04/23 06:23:40 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:41:15 nia Exp $
 
-SHA1 (Data-Random-0.13.tar.gz) = 8f29da425c6cc3185b21b6c74262111ee51c3779
 RMD160 (Data-Random-0.13.tar.gz) = fe336653361cf753f143e190649c4c7e3e271cf0
 SHA512 (Data-Random-0.13.tar.gz) = 7cf3811ee26a3b93a8170cc9c863ad2cf03f5997cabe66cd78646a4d93a6568ef247f636782b8c707c3064120b30609f3562d8654b31e5e31890aa302b03cdb5
 Size (Data-Random-0.13.tar.gz) = 158143 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/04/18 07:38:53 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:42:49 nia Exp $
 
-SHA1 (physfs-3.0.2.tar.bz2) = 6a15c458898d0570101d8f173201cde9ced78df7
 RMD160 (physfs-3.0.2.tar.bz2) = 621f9c4433d3c3dd2cebbf2355bcf0a5e2b34578
 SHA512 (physfs-3.0.2.tar.bz2) = 4024b6c3348e0b6fc1036aac330192112dfe17de3e3d14773be9f06e9a062df5a1006869f21162b4e0b584989f463788a35e64186b1913225c073fea62754472
 Size (physfs-3.0.2.tar.bz2) = 194888 bytes

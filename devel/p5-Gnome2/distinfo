@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/11/08 20:13:44 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:35 nia Exp $
 
-SHA1 (Gnome2-1.047.tar.gz) = de572d49e9efeae3f94ec4a0285e5d843f327b04
 RMD160 (Gnome2-1.047.tar.gz) = 1abf38eb39e8f287fdd029f17a4173ed31d61547
 SHA512 (Gnome2-1.047.tar.gz) = fc6dcca5d604e742c4d22fe4c1b2ece0d2c56d23f4fd112d11c8dbf70e632b4d2982bf42bd68dc69be492ba2ad81f8b5183cfe5d452f53a622b2a1a6db3137e3
 Size (Gnome2-1.047.tar.gz) = 79616 bytes

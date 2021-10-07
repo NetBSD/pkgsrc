@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/01/19 08:55:44 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:03 nia Exp $
 
-SHA1 (kdesdk-strigi-analyzers-16.04.0.tar.xz) = 6042871330ccdd81fc30245e01ea4e554810022f
 RMD160 (kdesdk-strigi-analyzers-16.04.0.tar.xz) = 1b0e0f1c2e598defa1e84378322435e0d59fc287
 SHA512 (kdesdk-strigi-analyzers-16.04.0.tar.xz) = e2fe57729c3c2f0f3c2c40ba8839eb06c28919008e8cbab28d35e5cd8da090be8a14e0378865851f94cc2f9805b73785551946469e4d738dfc031b04c07f88cd
 Size (kdesdk-strigi-analyzers-16.04.0.tar.xz) = 18224 bytes

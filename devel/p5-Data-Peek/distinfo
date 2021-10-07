@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/07/06 08:41:40 wen Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 13:41:14 nia Exp $
 
-SHA1 (Data-Peek-0.50.tgz) = 1d164a0d9bca009fc7e4898f30b1912423f5c69e
 RMD160 (Data-Peek-0.50.tgz) = 30236aaf01ba41e4fd87b830cf1267c5899b572f
 SHA512 (Data-Peek-0.50.tgz) = 7021d2a7bab189b6e31fe63d1af61e11706e3e3a208c68e8fb65aca0e884f235c89386b222888fd38fcd6afa6f2158229fd5693939996a042b55a9bad8089d21
 Size (Data-Peek-0.50.tgz) = 134887 bytes

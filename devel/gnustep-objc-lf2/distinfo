@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:29 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:38 nia Exp $
 
-SHA1 (gnustep-objc-lf2.95.3-r88.tar.gz) = a69bae2cac8716d5547c210de7485ce57e401f68
 RMD160 (gnustep-objc-lf2.95.3-r88.tar.gz) = 623476a5d0475333702d14c91605d5247bb3e2dc
 SHA512 (gnustep-objc-lf2.95.3-r88.tar.gz) = 37befbe442500fe1e524406ca8d3afcdce99a6d8cb66613f20662a6d879c6547f1575d9668bbd78dbf134b93532a3f2f24a23a2cfcdf3a69ea3ae6a7a55668f2
 Size (gnustep-objc-lf2.95.3-r88.tar.gz) = 101538 bytes

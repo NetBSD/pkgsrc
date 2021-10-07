@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/01/04 08:49:33 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:59 nia Exp $
 
-SHA1 (python-bugzilla-2.2.0.tar.gz) = 555eaa77da76704ce073c4f23a6c7585124fc726
 RMD160 (python-bugzilla-2.2.0.tar.gz) = 264a5200fbdba89dead30d9bb63f76bab9e329ae
 SHA512 (python-bugzilla-2.2.0.tar.gz) = 91e54d072ccf51f1c93037f9ca2fb9b80322d61b182b51fcc2fea5bb9ee56a10bd8f931bf2410f1878ccede8bfd368f8a3f4a58eef236c1592814ba7d49cffb5
 Size (python-bugzilla-2.2.0.tar.gz) = 79818 bytes

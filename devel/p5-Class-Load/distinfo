@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2018/06/18 02:56:13 wen Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:41:06 nia Exp $
 
-SHA1 (Class-Load-0.25.tar.gz) = f800087a2b04c1ffdb51c05c2c1a25d8770b0189
 RMD160 (Class-Load-0.25.tar.gz) = 1da287cd47a569c7b9c72cad85f949c52f488968
 SHA512 (Class-Load-0.25.tar.gz) = feacb4ae99358d3dc45b23b2d7cc814603e59a72424e7e0620d4939fa6d6206a1bb123c010b49013ce4764df11dc7c04fc1d7bd5783c61a391310bcb653e7ca4
 Size (Class-Load-0.25.tar.gz) = 36644 bytes

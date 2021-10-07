@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/11/01 13:30:13 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:07 nia Exp $
 
-SHA1 (leahneukirchen-redo-0.3.tar.gz) = 76e7e73062492b63d8b5b3f99771dc02c3252746
 RMD160 (leahneukirchen-redo-0.3.tar.gz) = 467cf112d390f5ba26ae96a3a9bb137a08a01825
 SHA512 (leahneukirchen-redo-0.3.tar.gz) = 0b689206cc865456075649562cd9f4eefb187062747c36a4f119fa5dcba42593ab08148cdd8246c0e8f473ef33f36baba22871b4513f4078ad988e3c9045dd38
 Size (leahneukirchen-redo-0.3.tar.gz) = 7831 bytes

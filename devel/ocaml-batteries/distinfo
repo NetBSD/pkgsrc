@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/03/12 11:12:45 jaapb Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:39 nia Exp $
 
-SHA1 (batteries-2.11.0.tar.gz) = 944ef2a96122bd861ee0f4cb01a6c7dfa023e7a2
 RMD160 (batteries-2.11.0.tar.gz) = 409b588495fde5f8ce43c527288509db4f6c731d
 SHA512 (batteries-2.11.0.tar.gz) = b266a1b2cc924acb64063fad56179fcf421134b8d5f194cf79d283dcd1d288a72a4681f647dddf5a45b3233e8c97800b6e216863ba40293ac8414683b795ddad
 Size (batteries-2.11.0.tar.gz) = 788284 bytes

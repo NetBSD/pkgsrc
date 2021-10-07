@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/05/16 11:33:14 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:40:20 nia Exp $
 
-SHA1 (librelp-1.2.16.tar.gz) = 40934dba5ad2cc1184ee0a60acaf2da70dca54f4
 RMD160 (librelp-1.2.16.tar.gz) = ba79e0ce34789e85d5a7f602d9c0209ea3a3ad4a
 SHA512 (librelp-1.2.16.tar.gz) = 54c101281c94046e4f8d6f77e73ab52874408e62c77f3dfa29ec0b294f39c216637674cc0bf1b7e04173557b3f21bfa74b7be1aafa3ff2771acd41d1d067d3a3
 Size (librelp-1.2.16.tar.gz) = 474456 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/06/27 23:50:24 wiedi Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:42:50 nia Exp $
 
-SHA1 (picp-0.6.7.tar.gz) = 870c9af3c9d738841754dc4960ce304ffded7cf4
 RMD160 (picp-0.6.7.tar.gz) = 1aab3e2771005bb7bc76838baa63069f9367efa7
 SHA512 (picp-0.6.7.tar.gz) = 77466097daa33e4dacf373efd5f288aa85fa06dfb8c9615859d87cfdac3388d9b1fd8f4dec36d75c826b8e9afdae0e0d464129e276413a28cfe40379c013e48f
 Size (picp-0.6.7.tar.gz) = 122700 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/05/27 14:42:25 wiz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:43:45 nia Exp $
 
-SHA1 (subprocess32-3.5.4.tar.gz) = 73b07bcd4ac4acfcae9d3156451066ee7f034006
 RMD160 (subprocess32-3.5.4.tar.gz) = 002e752df7a8ea273d8324c6682d392b8c91b07b
 SHA512 (subprocess32-3.5.4.tar.gz) = c811bdb5842d9f5ed9e51df4d13ba39045fbe98ca6e90a2c8138e68e44c2a55a2f0f3eb3e77e26caa3f88c360584912b001a0ca37ba68ac6c946c68c7a37d29a
 Size (subprocess32-3.5.4.tar.gz) = 97373 bytes

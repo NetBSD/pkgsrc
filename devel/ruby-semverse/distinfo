@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/01/10 16:10:14 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:44:23 nia Exp $
 
-SHA1 (semverse-3.0.0.gem) = 5bce48da4d4004dedb3373a4e6965c67511267e1
 RMD160 (semverse-3.0.0.gem) = 2e774c1d8f6892a1930d29c23e5a3ab2e0f0363f
 SHA512 (semverse-3.0.0.gem) = b06a430f9c49ddf3703cea808cd3c178fdb09fb875cf42622c647ca5d759717638595cc23fd08d7209a394a49584f14e8987e444cbc7a3bda35e06fdd16fafd9
 Size (semverse-3.0.0.gem) = 11776 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/09 07:29:09 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:59 nia Exp $
 
-SHA1 (bitstring-3.1.9.tar.gz) = 99252fd1e4870e3543b753962ad9457295ff5b6d
 RMD160 (bitstring-3.1.9.tar.gz) = ceab2326f9ee43789dff607661bba60dbb036056
 SHA512 (bitstring-3.1.9.tar.gz) = e47e27fdf98486cb1968ef6dad4c90cc673487e18b9da79ba176ed73be4ff629360330e6e3bb422edd4c5e104af437169739f9000f93917a2fe0e8448a0b42d0
 Size (bitstring-3.1.9.tar.gz) = 198509 bytes

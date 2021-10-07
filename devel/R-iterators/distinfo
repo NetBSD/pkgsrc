@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/08/21 11:51:34 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:38:59 nia Exp $
 
-SHA1 (R/iterators_1.0.13.tar.gz) = c6193e7bf96bc31dd1a9128bce7d68d57dbd0c63
 RMD160 (R/iterators_1.0.13.tar.gz) = 22b7a3ac4637c71bc4a369229ae9e6e30fd8ede4
 SHA512 (R/iterators_1.0.13.tar.gz) = 1564b94ec7cd7302aea53c060370342858d959bb092420994dfc7651e4a89d57b43eeeef174e5295872570dee20deee0b317a0084c747a5ceb4630f7e80fb298
 Size (R/iterators_1.0.13.tar.gz) = 288559 bytes

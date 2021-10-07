@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/11/13 12:46:04 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:39:35 nia Exp $
 
-SHA1 (gdl-3.34.0.tar.xz) = c4711fcd2bf124dcd04fc23de40a669350186028
 RMD160 (gdl-3.34.0.tar.xz) = 616535b5685e0663acf18f1222ce6ec3eb2716d9
 SHA512 (gdl-3.34.0.tar.xz) = 8c43f330556dae67e4f64e92c3ba5c2e9351d3040d6002bda89f20f9494fc93030abe80072f0cf86280f98e290805154e9ca12aaa7013f0a341d8ea94323d3b0
 Size (gdl-3.34.0.tar.xz) = 531368 bytes

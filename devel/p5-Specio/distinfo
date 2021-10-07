@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/04/26 15:01:33 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:42:18 nia Exp $
 
-SHA1 (Specio-0.47.tar.gz) = b4501d7ac77b265577c7c187e53192acdf8769d1
 RMD160 (Specio-0.47.tar.gz) = d608e0bded08a45a6778558f11e1807d2c81509a
 SHA512 (Specio-0.47.tar.gz) = 68cdcf22818b27c38ce92b497adae81f27605aa385e9156d51d5e8e63da121d6bf26b7339a7ee3c9408cc6e3731702b008bc4b2e3c8eab67728f959f03682f44
 Size (Specio-0.47.tar.gz) = 108288 bytes

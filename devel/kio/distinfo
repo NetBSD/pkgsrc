@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/03/30 10:58:22 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:40:05 nia Exp $
 
-SHA1 (kio-5.80.1.tar.xz) = c406837abab97a30f9594e15f635e95a25e06f1b
 RMD160 (kio-5.80.1.tar.xz) = d85981efb2beba3b884cc70ef7964c4163edcf7e
 SHA512 (kio-5.80.1.tar.xz) = c3080291d06956bd197e7104eacdfbab3e166fb5b598bc6c902c4e6ff9cc7922b59c2ae5acb2a565e61d2a6047ca09651446f0a41d268568b4cb192477969213
 Size (kio-5.80.1.tar.xz) = 3318204 bytes

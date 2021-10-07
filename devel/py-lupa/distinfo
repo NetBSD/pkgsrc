@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/08/24 10:05:50 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:43:21 nia Exp $
 
-SHA1 (lupa-1.9.tar.gz) = 834e513d4ed109919dfce745b4e10f4d30c53353
 RMD160 (lupa-1.9.tar.gz) = 382e9493a4e95b110065f2ac27657c15f65d25ff
 SHA512 (lupa-1.9.tar.gz) = 4ea8d0ebe7f6481bf9ef4a49d5e30f8baf0ce12c9afb793526858808aea44eb27044ad5c2b5c9532e1ea2220a4eb9b52ce4debb2f7cb2bf53b26abee81541916
 Size (lupa-1.9.tar.gz) = 1014812 bytes

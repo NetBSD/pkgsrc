@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:29:00 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:40 nia Exp $
 
-SHA1 (bos-0.2.0.tbz) = 6795dbb2fe5f63dd2003dbeff7145bff2f4dacd1
 RMD160 (bos-0.2.0.tbz) = d467b8512a26d8341d8353d7ad385bd2757dad15
 SHA512 (bos-0.2.0.tbz) = f9120f8108c6da5647c9fbcc78736a5f87bf5627fad01035fdab1af6322c93e75df670d7d2910fe474c92c48ffffcf15955a84e698cfc7bfb7c1ac4fe27d472f
 Size (bos-0.2.0.tbz) = 41008 bytes

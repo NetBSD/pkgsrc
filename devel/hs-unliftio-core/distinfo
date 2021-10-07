@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/23 12:34:06 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:57 nia Exp $
 
-SHA1 (unliftio-core-0.2.0.1.tar.gz) = 3b100788c9f61e50ff748f170effc28d68aa1ab7
 RMD160 (unliftio-core-0.2.0.1.tar.gz) = c466edcc00e9c575a92207479f059714350f098c
 SHA512 (unliftio-core-0.2.0.1.tar.gz) = 6bb6bbab7336ea460b354e897c7fae236a53e7975af0430abcb2bb9d23374da0340381176d55f827f8a2b17809fa0205c6baf2a2542c72b9557b874c593d1b02
 Size (unliftio-core-0.2.0.1.tar.gz) = 3696 bytes

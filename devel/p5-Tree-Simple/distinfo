@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/07/04 08:02:57 wen Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:42:39 nia Exp $
 
-SHA1 (Tree-Simple-1.34.tgz) = 4b05da14897cfabaa5d4fa8b5567eb60689c4b3e
 RMD160 (Tree-Simple-1.34.tgz) = 1dd03e8980a42ed7feb67cd14be8a2149a084164
 SHA512 (Tree-Simple-1.34.tgz) = cd03bdfd283d55a097bceb0c9bf3b81bb4dd5ca9a60de59e3e70b7e88b672456fd18d370f2dee1077a2afeecc973d42e78cc31f8023344b1f7e211432ef4e3ed
 Size (Tree-Simple-1.34.tgz) = 46813 bytes

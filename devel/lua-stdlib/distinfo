@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/08/06 23:45:07 joerg Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:40:31 nia Exp $
 
-SHA1 (stdlib-41.2.2.tar.gz) = 4c85bc8ce1b302696b61614bb4a4ca0d3b3219d8
 RMD160 (stdlib-41.2.2.tar.gz) = d08b092fd90dd3f66574d39c98a96f7dd81fea51
 SHA512 (stdlib-41.2.2.tar.gz) = b477ff90f2c3e49ad83194b1a67592d786c91dbc9dfe199a701fa68bc84b6ba8c820d37ac2fc74c2ebc3fb7a83aac8bcf0af58041ce14fc1dc6b297f3ae054aa
 Size (stdlib-41.2.2.tar.gz) = 398500 bytes

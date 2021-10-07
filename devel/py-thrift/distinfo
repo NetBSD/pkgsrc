@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/09/03 11:19:34 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:43:50 nia Exp $
 
-SHA1 (thrift-0.14.2.tar.gz) = daf3640f5f18ddb7c194133903b6882df93c5d51
 RMD160 (thrift-0.14.2.tar.gz) = 52ff909c997ce38c70480d6d2c35c4bfbe8abbdc
 SHA512 (thrift-0.14.2.tar.gz) = b65804c487809a26ad1b2dfc3bd47e73ac2713d58541d1eb0622cd1715aaf8b5ba6f2c79b9adb5c6716aa332e13d546581ec61032807c6cd9dbdaaa6e17bc7bd
 Size (thrift-0.14.2.tar.gz) = 4182273 bytes

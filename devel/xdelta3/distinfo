@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/02/08 16:26:49 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:44:42 nia Exp $
 
-SHA1 (xdelta3-3.0.11.tar.gz) = 3758290f34f33d8c56d1d4ef033044effb317c39
 RMD160 (xdelta3-3.0.11.tar.gz) = 0096cc3f9c7d8e11741e871926d1cbea080dc20e
 SHA512 (xdelta3-3.0.11.tar.gz) = 41c48e28f92ad50a737cf0acac150fe17d1132e9a652c482d751c8c4e745c6922d576a183eeabae343a1a238ed8c53353e537977628c86eb599ab3d1c01e7c52
 Size (xdelta3-3.0.11.tar.gz) = 683605 bytes

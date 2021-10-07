@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/07/09 06:41:02 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:56 nia Exp $
 
-SHA1 (apipkg-1.5.tar.gz) = df3cb7615735ca7bb1b5e4eff06e4de08612ec2a
 RMD160 (apipkg-1.5.tar.gz) = 3a9c4097dab889b2047eddca849479e2a3568301
 SHA512 (apipkg-1.5.tar.gz) = 828937ca5e203915248fac54db8e7c13f941e006403f2a415c27fa4d1aa114790be3d7b5dd892f528611e5e6dfe75114ee80f4f4589a03c3f789ae6ddfcae0bf
 Size (apipkg-1.5.tar.gz) = 11186 bytes

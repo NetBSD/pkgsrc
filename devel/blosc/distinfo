@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/03/07 13:45:18 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:39:14 nia Exp $
 
-SHA1 (blosc-1.21.0.tar.gz) = e3e0e55cea527347c9e74ea33fa6f2f9482277ab
 RMD160 (blosc-1.21.0.tar.gz) = fc04eae83b3f2715c3e1a4ee87a5db3193c03a73
 SHA512 (blosc-1.21.0.tar.gz) = 76758176f91979794dc3b8d46c21294d81e33fda4f2e299b031f2dc059d77e351e3f5f1c984b0263713d6e04c48534984d580244573dd96f0198dd3838b9f376
 Size (blosc-1.21.0.tar.gz) = 907199 bytes

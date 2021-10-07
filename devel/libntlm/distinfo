@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 06:18:17 wiz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:40:19 nia Exp $
 
-SHA1 (libntlm-1.6.tar.gz) = d6f9b69f154d82d0f9a49e9686b79fc03f21c3c6
 RMD160 (libntlm-1.6.tar.gz) = 673b3b2d18a8429565c09b52b309f598937ca081
 SHA512 (libntlm-1.6.tar.gz) = d68bc6b5cd7f5f70385ba78275a810fa46e60f761f0949f2262eef35ae052661739ef17ce3fc4ab75f7e8cfc788b1ccd7766d4ff0ee78db08ea4de3e224653f2
 Size (libntlm-1.6.tar.gz) = 688608 bytes

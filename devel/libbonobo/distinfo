@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.34 2020/05/17 15:24:48 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/07 13:40:09 nia Exp $
 
-SHA1 (libbonobo-2.32.1.tar.bz2) = c7650434a4f328eae6f38a29ee8dadd455f35f9c
 RMD160 (libbonobo-2.32.1.tar.bz2) = e8ce74114de9fe8e9cdef3e697b42c3290076010
 SHA512 (libbonobo-2.32.1.tar.bz2) = 271e34ddb16a1ef756064c062e29bac333f3e109e3efd6db43857db3b2b4259c0c53d2480ac4945cd511b10bc7a1b770a966421bf80655bbfd301f565622c69a
 Size (libbonobo-2.32.1.tar.bz2) = 1377716 bytes

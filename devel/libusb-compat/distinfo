@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/10/13 06:10:35 triaxx Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:40:23 nia Exp $
 
-SHA1 (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 7a64e8c3ba015e3b7db19054a75eefb9d8730874
 RMD160 (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 111845e2675c8dfb243a2241e823950c1c4a2f34
 SHA512 (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 8f3b2f9a275987b13278215b28950f9bc4c4cd30d3dc08ff5141ed6486d484981d059588533857eb521a5362ce2eb74c9f9c98f3d0c59d9a288debf9fc95a882
 Size (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 374868 bytes

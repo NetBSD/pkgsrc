@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/03/12 08:33:12 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:49 nia Exp $
 
-SHA1 (php-raphf/raphf-1.1.2.tgz) = 2afc398ab2e4226a98307e2d04f5b04805002259
 RMD160 (php-raphf/raphf-1.1.2.tgz) = 6c760c788040e84cd1dedeb118062552ba83397f
 SHA512 (php-raphf/raphf-1.1.2.tgz) = dbde89a8ba508727ab2511b977b74fcc06010d75d043c2acca31e75cac2a105a8c322a01995271ab89fcd39d42a16b36c6d1c06a569e33926c0626d30a6672eb
 Size (php-raphf/raphf-1.1.2.tgz) = 15915 bytes

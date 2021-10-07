@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/25 09:30:27 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:41 nia Exp $
 
-SHA1 (eqaf-0.2.tar.gz) = 23466af0c6c8b420cfeffad27d9fca981d9fac43
 RMD160 (eqaf-0.2.tar.gz) = 4a873e9de826946d55497461f49bae3837e022ad
 SHA512 (eqaf-0.2.tar.gz) = 601e3a75f9aa651916531caec19d1c9e4e15bb4530fc9ded4123dd02a2852b9d7a6f1126823204500e643867ce931b61f8df5fc9ff918468353becf3fbe3fed1
 Size (eqaf-0.2.tar.gz) = 12123 bytes

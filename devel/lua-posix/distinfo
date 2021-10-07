@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/07/14 12:41:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:40:30 nia Exp $
 
-SHA1 (luaposix-35.0.tar.gz) = 31a8c48fc57ff1a4199df27618e098beabcee946
 RMD160 (luaposix-35.0.tar.gz) = 6ae6a865c21fda8a1caa291cfb2cef7255302dc2
 SHA512 (luaposix-35.0.tar.gz) = 4bb61892b78d9e59418a9a6360b9f611fb9b5438b9261a2c6672f053a1b21dfd9a2060b8d2f0d3eac6185773cf84672c1769c081c4ab53d2ddae2232e4a9269b
 Size (luaposix-35.0.tar.gz) = 178091 bytes

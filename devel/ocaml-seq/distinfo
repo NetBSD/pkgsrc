@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/05/13 11:30:24 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:49 nia Exp $
 
-SHA1 (seq-0.1.tar.gz) = 59a174b5206fa327b9928f8f978bf47edc7a8fd9
 RMD160 (seq-0.1.tar.gz) = d5623f6f44a7cc59ce63bfbfa495a76a1b975082
 SHA512 (seq-0.1.tar.gz) = cf0df428408efd8f593765c419007c3b181c1234fa957bd09bd96bbbbc7950dcd329429a8a22573680fdfd46847e21befae29ade967509690428ba2b90fe83f2
 Size (seq-0.1.tar.gz) = 2452 bytes

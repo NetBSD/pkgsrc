@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/06/02 23:27:11 khorben Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:02 nia Exp $
 
-SHA1 (cle-9.0.7491.tar.gz) = e6ca325e84102929d00812eefaaae06ea47e23b0
 RMD160 (cle-9.0.7491.tar.gz) = 52b0824c208f6d0bcb920731b1b1e60c2eb8e88f
 SHA512 (cle-9.0.7491.tar.gz) = 4022b4e82eb3d460b3d9c5d64d605ade57f435d08526224c84375aace1500383290e3feb750f1ab2b9c2d11d2d9d5dd6b00f566cc36d969ea52caaed16656808
 Size (cle-9.0.7491.tar.gz) = 130873 bytes

@@ -1,22 +1,17 @@
-$NetBSD: distinfo,v 1.2 2020/10/02 19:44:47 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:39 nia Exp $
 
-SHA1 (github.com_karrick_godirwalk_@v_v1.12.0.mod) = 5a8290cb0f30eab37b97fbe78b5a0c85157e66d4
 RMD160 (github.com_karrick_godirwalk_@v_v1.12.0.mod) = 8663b871b3c25f83978bd50d750175cf800ce2be
 SHA512 (github.com_karrick_godirwalk_@v_v1.12.0.mod) = 0e4f2430ce02a71bce1b8ac38df95b86332db955a8e7d9d59d59c094c5003adf8af5a3073e350fdd06ac06ae9d8a1a30b4d8b2c8f84e2a5c5e9c720bd0727fd4
 Size (github.com_karrick_godirwalk_@v_v1.12.0.mod) = 36 bytes
-SHA1 (github.com_karrick_godirwalk_@v_v1.12.0.zip) = 27e451c168259accbaf65930fc03cbbd72ba6d23
 RMD160 (github.com_karrick_godirwalk_@v_v1.12.0.zip) = 61db4c6478953ec36efffa2fe93d7c700db09c18
 SHA512 (github.com_karrick_godirwalk_@v_v1.12.0.zip) = 59bb65ae4f9a32662a2473a01cb7ede88882ee959e7c135727155ef5eae5f70da1a79ef3727b12272b57f5573e4b9b8b25297f2bf4b8911f334b7497ed7f684b
 Size (github.com_karrick_godirwalk_@v_v1.12.0.zip) = 32029 bytes
-SHA1 (github.com_pkg_errors_@v_v0.8.1.mod) = da42a6f9a0154c92454c5210d58afe50c52458f4
 RMD160 (github.com_pkg_errors_@v_v0.8.1.mod) = 22b82c26f14ec7646a150dfcb0c651db569cb26a
 SHA512 (github.com_pkg_errors_@v_v0.8.1.mod) = 0c156e21d35c45a89c1a1b69ff1976b4f7511b3870bf96126121f5a5effa3723eb45bf080e840d5c8b96898c65207dba83eb3e1a23668dd8a5e20ee6be775cc0
 Size (github.com_pkg_errors_@v_v0.8.1.mod) = 29 bytes
-SHA1 (github.com_pkg_errors_@v_v0.8.1.zip) = ec13acb37b589560497f039f05fc8ad9de8fcb0f
 RMD160 (github.com_pkg_errors_@v_v0.8.1.zip) = bc68fbef11bae85965ac639765be76b3f1969d8f
 SHA512 (github.com_pkg_errors_@v_v0.8.1.zip) = f97471d54c5e73b3f59326847cdd4dbbb142a9ae790df83493f11a851d716fb407e01a857152812caf731b8f3e0f37ae151ee83300feaa73152173f6cb5b8515
 Size (github.com_pkg_errors_@v_v0.8.1.zip) = 14339 bytes
-SHA1 (gopkgs-2.1.2.tar.gz) = ddfd1b51da744b2119bc17310819481420e3d93d
 RMD160 (gopkgs-2.1.2.tar.gz) = df7b443ad6f2bf09c388642f9f9e8a02905fe777
 SHA512 (gopkgs-2.1.2.tar.gz) = e69d468a6d20e898b45fc7117696d89c42ad0c9c38905fa56f6252fce810363171466bb8c66ab429413c1c953c95959ff44d344f1d099f558d7e8e57a68ba251
 Size (gopkgs-2.1.2.tar.gz) = 7426 bytes

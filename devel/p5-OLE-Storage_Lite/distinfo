@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/04/16 13:34:56 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:42:02 nia Exp $
 
-SHA1 (OLE-Storage_Lite-0.20.tar.gz) = b567f84279d27e4788b0de3276eabd4d371a33be
 RMD160 (OLE-Storage_Lite-0.20.tar.gz) = b0cb713116168340899743299a97b6a56d525907
 SHA512 (OLE-Storage_Lite-0.20.tar.gz) = bcf89c561e02c850f6d5d27705dd671f0294e4a903cf7863f9dbf536203dfb3148ca4fa88ef91a429b96142bf1ae040989d8850fd171448e0db5dc9ae7fc1877
 Size (OLE-Storage_Lite-0.20.tar.gz) = 22586 bytes

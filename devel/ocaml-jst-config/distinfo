@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/13 11:39:36 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:43 nia Exp $
 
-SHA1 (jst-config-0.12.0.tar.gz) = 16ccd9efd14c7e57ab9a10f593734bd798868509
 RMD160 (jst-config-0.12.0.tar.gz) = a343f8373b46019907e30e435b3d252372adc2cb
 SHA512 (jst-config-0.12.0.tar.gz) = ee3ba2830c9e1adedaf71bf4333b6a287bb744ad920d2e11f8af3697eac0858899fc60de3f740c1c97654e0120ac1ac5cad6b182d0f093b19868e23f2339978e
 Size (jst-config-0.12.0.tar.gz) = 5093 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/07 20:11:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:47 nia Exp $
 
-SHA1 (Meta-Builder-0.004.tar.gz) = 4fe077a0d223dfd72558360d32c9e71899188075
 RMD160 (Meta-Builder-0.004.tar.gz) = 67f43c967c7c65ac5f5a14b02a1ce04081aa5679
 SHA512 (Meta-Builder-0.004.tar.gz) = c8dcc7129b08f9e562bcb2077c41c7eb72e108f7a8fd0f41c0b84c5615af02b4f418003d0a86c8ecc6f6c6f693b5928626f6e22c40d303318675c41eb301d2bb
 Size (Meta-Builder-0.004.tar.gz) = 10650 bytes

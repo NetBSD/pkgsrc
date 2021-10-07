@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/02 14:23:50 fcambus Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:39:19 nia Exp $
 
-SHA1 (cloc-1.90.tar.gz) = 2d739c6358ed3366713f6d0d914dac8ff384dd91
 RMD160 (cloc-1.90.tar.gz) = 53a2d402f9f5fc6f04279f23c23e69a7dbd27517
 SHA512 (cloc-1.90.tar.gz) = 368692b308e8da04246c059814bc24433c128d7937ec2efc12359af17dec0026bda9c982097eab0318852a89cc48098e845bfc10f2ed7340dce824d6ae1415c9
 Size (cloc-1.90.tar.gz) = 614306 bytes

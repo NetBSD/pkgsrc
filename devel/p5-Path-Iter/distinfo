@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/12/31 13:37:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:08 nia Exp $
 
-SHA1 (Path-Iter-0.2.tar.gz) = 8c0522c89914ad24a04bc494fff61fb389bb7461
 RMD160 (Path-Iter-0.2.tar.gz) = a4c9e56cb974c23b3bb53156755f9b4866010cf4
 SHA512 (Path-Iter-0.2.tar.gz) = 339f0c22e423cd4916324f02eac359ef3d6bc7718a49c1ad9384d1a0f4eabac3ddd3f1de2ad46beadbbc36473b18f137ad15171bb3e09cda68dd27f953042df4
 Size (Path-Iter-0.2.tar.gz) = 5364 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/12/30 09:26:34 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:44:33 nia Exp $
 
-SHA1 (tevent-0.10.2.tar.gz) = 2b42026f3a949aebdd8860f32b90f65c5ff1f405
 RMD160 (tevent-0.10.2.tar.gz) = a7863eb10608f027912b1c191e13a9a62ed33134
 SHA512 (tevent-0.10.2.tar.gz) = 1da8f28898f35daab515892b880d1de601062cc3e2b2570cd62e6913df17b0195a05acb7b484c628cddc0eb8b0cde893105ede3feb32bc5764e7d25684f332ba
 Size (tevent-0.10.2.tar.gz) = 800731 bytes

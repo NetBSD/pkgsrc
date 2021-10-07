@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/03/19 22:09:55 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:44:42 nia Exp $
 
-SHA1 (xsd-4.0.0+dep.tar.bz2) = ad3de699eb140e747a0a214462d95fc81a21b494
 RMD160 (xsd-4.0.0+dep.tar.bz2) = d1af702e6feb7216e04c2f30173311e2d4629313
 SHA512 (xsd-4.0.0+dep.tar.bz2) = 1b7f5f7a50007e0c739e23c46cf34657845038c3c58f2da4f9978a9486a30674d829e4dfe428af32669207af79375eb8d413ac471c4ffd1c2bc842411f454ae9
 Size (xsd-4.0.0+dep.tar.bz2) = 1642625 bytes

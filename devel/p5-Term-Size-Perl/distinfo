@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/02/25 17:35:00 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:24 nia Exp $
 
-SHA1 (Term-Size-Perl-0.031.tar.gz) = 0f1fa934323bbb96ead92abbee1570f8c7b1364c
 RMD160 (Term-Size-Perl-0.031.tar.gz) = 402d542c7baf396c0090acb002862af57507d49e
 SHA512 (Term-Size-Perl-0.031.tar.gz) = 7babfb7637e795f1826a964a64cdca48bc7d92dc2cdff0fbdf62f2462fcd2be81475703f577baa18ce3df24f6ae8c103ca19ea53aa3b78733391ed456fcb66bc
 Size (Term-Size-Perl-0.031.tar.gz) = 13137 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/05/31 14:33:58 rillig Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 13:39:06 nia Exp $
 
-SHA1 (SOPE-2.3.23.tar.gz) = ad9632a8ba20060179591ceb91bfbc9313311867
 RMD160 (SOPE-2.3.23.tar.gz) = b2decc467ebebf3518a4b3bbb55f1964fb1b33a7
 SHA512 (SOPE-2.3.23.tar.gz) = d10d3ac530f31dfe5a18ce0bdd89efe0545714a9a52bb0ff07b0566025e90438035e2363390ab7e5daae55a77bf3a7ba766f1ebc96dc764af28dbe756398516d
 Size (SOPE-2.3.23.tar.gz) = 2283214 bytes

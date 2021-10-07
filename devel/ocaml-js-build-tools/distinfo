@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/07/11 13:56:49 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:42 nia Exp $
 
-SHA1 (js-build-tools-113.33.06.tar.gz) = 7ce03b89e717088cf038db64bc845debf724245e
 RMD160 (js-build-tools-113.33.06.tar.gz) = afad400f4c127ef2367d118fc1aa02a575fa51e2
 SHA512 (js-build-tools-113.33.06.tar.gz) = 23189d75c68070e793e9d898e7f2681ef13d94f0b13125cbf2c887206867da93621069b3f1ce26b53bc64fda83f1f8c960f8ec8e09d8201041282e26668ba937
 Size (js-build-tools-113.33.06.tar.gz) = 10785 bytes

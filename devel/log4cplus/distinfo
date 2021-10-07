@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/03/24 09:18:53 sno Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:26 nia Exp $
 
-SHA1 (log4cplus-2.0.3.tar.bz2) = 0326d52a11a31dc1b5fb8885bccf9ddafb8e840b
 RMD160 (log4cplus-2.0.3.tar.bz2) = 223f295de9efa66097ba793b3b329c5214fb739a
 SHA512 (log4cplus-2.0.3.tar.bz2) = 444b04a099bdd02e642a49b9280e8c3aaa8061bd5470b5227189690d7a9a386100c23762a5f2738a78a678334dad06468a5bb6ec30ec2ec15a0406f9d101f6c9
 Size (log4cplus-2.0.3.tar.bz2) = 962335 bytes

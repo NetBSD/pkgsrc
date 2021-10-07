@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/01 00:02:27 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:33 nia Exp $
 
-SHA1 (flatbuffers-1.9.0.tar.gz) = 66a3c75a271c6dab1dc4511aed4b7d498875265d
 RMD160 (flatbuffers-1.9.0.tar.gz) = 0a73365e0d0f6db5d65b59d4807f457af4a0645e
 SHA512 (flatbuffers-1.9.0.tar.gz) = 0ba07dbe5b2fde1d0a6e14ee26ee2816062541d934eda204b846a30c019362f2626761b628c900293928b9b546dba8ca477c13182e022c3e0e0a142fd67f0696
 Size (flatbuffers-1.9.0.tar.gz) = 681752 bytes

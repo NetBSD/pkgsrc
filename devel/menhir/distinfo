@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/01/14 22:04:26 jaapb Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:34 nia Exp $
 
-SHA1 (menhir-20190924.tar.gz) = 289aa1a5b8dff3b6e8ab8134e8931dbf662f8933
 RMD160 (menhir-20190924.tar.gz) = 4f11eb980d6ce043c1453a474dd521fb85caf71b
 SHA512 (menhir-20190924.tar.gz) = 8036eb8a65f123ceadd21739d88dafca54a2338fc168922a1301a9fbe709ac5e8e7214d95d8114f3798c15f458822e64dcedb94f7fff18ab6f9ccfb6de462e46
 Size (menhir-20190924.tar.gz) = 2491000 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/10/01 09:52:19 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:51 nia Exp $
 
-SHA1 (txgithub-15.0.0.tar.gz) = d3c8fbc3e07246f3bbe9520f74285b6383acf113
 RMD160 (txgithub-15.0.0.tar.gz) = fa64e8cb817248d841a726a4ca11f3029db09cd2
 SHA512 (txgithub-15.0.0.tar.gz) = 1935ad2466655174d92704233eb255993c4244142efb7899f5da0dda35ca58213a0d77f03fd2e34bcfa2cb601afe3d9bf02b22f0bef906ad54c7fc8ada9d46b6
 Size (txgithub-15.0.0.tar.gz) = 5534 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/09/13 15:35:18 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:44:06 nia Exp $
 
-SHA1 (delayer-1.2.1.gem) = 86700960bd19cdfe04026343bb42316c2d23760d
 RMD160 (delayer-1.2.1.gem) = bdcfe31706d0d3ebcae12f5f0521a25c75485ace
 SHA512 (delayer-1.2.1.gem) = e48bb785f208e924ecc9245dfc423953dda1793a3bf1f3a0071fdb922ee383d59cac366830a5c82b0223a9038cc8703f446201e7232134511092c23c29e91785
 Size (delayer-1.2.1.gem) = 12288 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/03/16 13:26:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:53 nia Exp $
 
-SHA1 (Spans-1.0.1.tar.gz) = 27f7270417823ccd729d6ad6f75a49e830de9203
 RMD160 (Spans-1.0.1.tar.gz) = 87c7cb8bb3c8b7f949a7aa697f2b850448a4c399
 SHA512 (Spans-1.0.1.tar.gz) = b9b7a6d3ea694210a45719d22265745c003eb1d3b8c09c4f4f232641a31cedec13e1200487db6ed1f71b9d3b0a489387a44c80a7c7e5abb69321a237fd2acbdd
 Size (Spans-1.0.1.tar.gz) = 45013 bytes

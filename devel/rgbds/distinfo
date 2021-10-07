@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/08/14 08:19:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:43:59 nia Exp $
 
-SHA1 (rgbds-0.5.1.tar.gz) = 6cd119bf3cbbdb221fbb0373cff150c4eea6bc0e
 RMD160 (rgbds-0.5.1.tar.gz) = 3a029b78610b76f7a6d28e3ad58f835da17ae5e7
 SHA512 (rgbds-0.5.1.tar.gz) = dc29a94291a137a45bd6af45afaf7d98d29c16bbb66794b36236f53f4604ec0e4688e6542c80990e6e794d94e8fa5de13813d9764efe34e5a79fe68a66ce592c
 Size (rgbds-0.5.1.tar.gz) = 7938330 bytes

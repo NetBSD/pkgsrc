@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2016/08/11 00:26:12 mef Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:39:27 nia Exp $
 
-SHA1 (diffuse-0.4.8.tar.bz2) = 473f7e82f57cc3a5ce0378eea8aede19a3f2a9df
 RMD160 (diffuse-0.4.8.tar.bz2) = c424ba8e48a86d0eeab2b51b15bb6f81dd23e95d
 SHA512 (diffuse-0.4.8.tar.bz2) = 0c62976526804a328f1cc1775f842e9575fab50309cc964171af5ee89d8f303d4cbdf66a078ed64bb8826f5a57c2cc7fc59afc1ee87646ece340212d34f2514e
 Size (diffuse-0.4.8.tar.bz2) = 557966 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/03/08 13:00:32 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:18 nia Exp $
 
-SHA1 (String-Format-1.18.tar.gz) = a38c51955e0c472c66d6a3014c7c5c81979a7275
 RMD160 (String-Format-1.18.tar.gz) = 2461060e16667c854a7a0625f73541b512c4a831
 SHA512 (String-Format-1.18.tar.gz) = 34eb3991a9bea931f59ca1683ba72d8b07244ed4c2a9409be0626346526b4eb2ab07acdd5c4eabf44a767867a4991e97d89835eb0e4c3c43b413de75eb3c0d5d
 Size (String-Format-1.18.tar.gz) = 13676 bytes

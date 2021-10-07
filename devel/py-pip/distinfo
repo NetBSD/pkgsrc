@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2020/12/18 09:03:43 adam Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 13:43:26 nia Exp $
 
-SHA1 (pip-20.3.3.tar.gz) = a8c85abfdc0bf15dd7360865f59e4234be00d1e2
 RMD160 (pip-20.3.3.tar.gz) = 44caf2ab9618ad0b91422748af760e6aa94b8608
 SHA512 (pip-20.3.3.tar.gz) = 757503b0b5891488141fe75ef9364d6ee8e81bddd00325c197c61df0700454e0144d8a372ee9882048ad38d42350f995d02811a2bf02292490e80ac26adc076d
 Size (pip-20.3.3.tar.gz) = 1529320 bytes

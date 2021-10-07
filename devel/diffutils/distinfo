@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2019/07/07 18:02:43 schwarz Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:39:27 nia Exp $
 
-SHA1 (diffutils-3.7.tar.xz) = ad4e0a05ee2e7f5529db6cb84474f45e086e609b
 RMD160 (diffutils-3.7.tar.xz) = 55c286ed697eb5987eca7abfc33bdab34c3021fb
 SHA512 (diffutils-3.7.tar.xz) = 7b12cf8aea1b9844773748f72272d9c6a38adae9c3c3a8c62048f91fb56c60b76035fa5f51665dceaf2cfbf1d1f4a3efdcc24bf47a5a16ff4350543314b12c9c
 Size (diffutils-3.7.tar.xz) = 1448828 bytes

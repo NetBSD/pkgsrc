@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/08/08 13:04:44 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:41:07 nia Exp $
 
-SHA1 (Class-Virtual-0.08.tar.gz) = 187c5983669c563a1de44fc0ea6c5812691cc2b7
 RMD160 (Class-Virtual-0.08.tar.gz) = 37dddb605c5c85d70d1f798829c78041e83dc020
 SHA512 (Class-Virtual-0.08.tar.gz) = 43a95d1339724b9b6392ab7c13eba502938cfee9ad29eaeaae0dc84549f29ecc700af38a7f04bbd357fc76c30b878532c919edc69bc986d791556eea46ef4439
 Size (Class-Virtual-0.08.tar.gz) = 6864 bytes

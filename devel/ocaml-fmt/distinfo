@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 17:41:27 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:42 nia Exp $
 
-SHA1 (fmt-0.8.5.tbz) = 6e1be70f369a544f9d07ef3ba0c41c290a390aa7
 RMD160 (fmt-0.8.5.tbz) = 258d9ad924a7f3707df6e143e93ebbaadf77160d
 SHA512 (fmt-0.8.5.tbz) = 3ec8991ac008b0b8a942b4aec7a24d7a9cb047b68c81b2abe6e3074bf6f54c4e30a7cf6707c93edbd516ed5ef05de1adf1a879267f1cac4ccbc441de78b1d37c
 Size (fmt-0.8.5.tbz) = 14348 bytes

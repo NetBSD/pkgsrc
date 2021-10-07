@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/07/25 04:00:34 dholland Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 13:40:24 nia Exp $
 
-SHA1 (util-linux-2.32.1.tar.xz) = de9271fb93fb651d21c027e2efb0cf0ac80f2e9a
 RMD160 (util-linux-2.32.1.tar.xz) = bf61cb460eabcfdb90909dbcfd8e64bb9097ce65
 SHA512 (util-linux-2.32.1.tar.xz) = 267fedae24a874ee4dc558081f6b8d07b33b955b0635f3348f021c111c17f2e95c01b2cbf909fe13c6ca448cbcf23c658c75f72f25749aa65e99f68fabb94698
 Size (util-linux-2.32.1.tar.xz) = 4561088 bytes

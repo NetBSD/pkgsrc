@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/03/21 12:29:01 mef Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:41:10 nia Exp $
 
-SHA1 (Config-GitLike-1.18.tar.gz) = 47f0b748e08676354c6f2984c7b69cb9920e2a98
 RMD160 (Config-GitLike-1.18.tar.gz) = 08fd29ddb6ce05063439fb0b4f91c700c9eebf76
 SHA512 (Config-GitLike-1.18.tar.gz) = 4f7e3d987bae63f5f3971135a44d393c0a6f6ccf294de1b94187b05d288533a97419fdc234b27c2bd957b10b3fd0bff2fbde4c2010c50e65e6027ee87ff9a7f8
 Size (Config-GitLike-1.18.tar.gz) = 52692 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/12/14 14:23:46 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:16 nia Exp $
 
-SHA1 (intervaltree-3.1.0.tar.gz) = 4083f3677a5f8a24d26a2b7406dd2c9de072ba9c
 RMD160 (intervaltree-3.1.0.tar.gz) = f9ae139bd3b8dab7b2e05c8155ad9fdf06dba392
 SHA512 (intervaltree-3.1.0.tar.gz) = adb49726912ad6e9cf6c0985b4fb94df91b4ef54aa2eb327186d7f15bc992745d81654d49f1dd2ce95f7173683ba2a072787ef1e8b389cd9b7e23b9ae743906a
 Size (intervaltree-3.1.0.tar.gz) = 32861 bytes

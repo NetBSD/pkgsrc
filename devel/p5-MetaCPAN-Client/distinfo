@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/09/07 07:05:04 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:41:47 nia Exp $
 
-SHA1 (MetaCPAN-Client-2.028000.tar.gz) = f9d2c9431de27317c75968a730c6cf51d7f61b1b
 RMD160 (MetaCPAN-Client-2.028000.tar.gz) = 8437646670c7c447b1f53d120a9b020a898c66e5
 SHA512 (MetaCPAN-Client-2.028000.tar.gz) = b4c273f1409cddf69b9db2118e3c7312a72532f5676a2990dbb7b18ce2eed8784f76754dbb1f5cec2a64189f9790473a96d5aabf405acb36caa35822412f763c
 Size (MetaCPAN-Client-2.028000.tar.gz) = 53689 bytes

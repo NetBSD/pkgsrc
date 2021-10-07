@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/01/22 18:11:53 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 13:39:27 nia Exp $
 
-SHA1 (devhelp-3.34.0.tar.xz) = 106980b86318ceb9a769450de0ffa7ad451a8858
 RMD160 (devhelp-3.34.0.tar.xz) = 3ce87b3e2c518a322ee7bdc9307ca825aadb935b
 SHA512 (devhelp-3.34.0.tar.xz) = 34ed48ed323827b01f7d32e186da856c788ddfe37d6836082a81e6c8e4cd7bfc2265309cc3b298a0aea542b85e9261987d47a5a4396d865ec7e4cc13a9d05814
 Size (devhelp-3.34.0.tar.xz) = 288352 bytes

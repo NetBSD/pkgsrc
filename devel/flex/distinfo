@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2017/07/24 14:19:06 jakllsch Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 13:39:33 nia Exp $
 
-SHA1 (flex-2.6.4.tar.gz) = fafece095a0d9890ebd618adb1f242d8908076e1
 RMD160 (flex-2.6.4.tar.gz) = 6439e82ff51698202a71a91f85d4eaad8a3fa10c
 SHA512 (flex-2.6.4.tar.gz) = e9785f3d620a204b7d20222888917dc065c2036cae28667065bf7862dfa1b25235095a12fd04efdbd09bfd17d3452e6b9ef953a8c1137862ff671c97132a082e
 Size (flex-2.6.4.tar.gz) = 1419096 bytes

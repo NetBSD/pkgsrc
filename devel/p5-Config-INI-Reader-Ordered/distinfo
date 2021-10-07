@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/01 23:46:28 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:41:10 nia Exp $
 
-SHA1 (Config-INI-Reader-Ordered-0.021.tar.gz) = 449d39b204c064f1306f8253a52bb001ea84b46f
 RMD160 (Config-INI-Reader-Ordered-0.021.tar.gz) = 67fe0bac778208d6e925eaa795b366d4e7bcb662
 SHA512 (Config-INI-Reader-Ordered-0.021.tar.gz) = b03fd1c94634b23c1f174c92fb6603bd8e74a9dc4833df44cefa2308c2d7acfed99eb1705ab4098772f797d669c8547719f1b55cd3bd680894e60af7c1d39063
 Size (Config-INI-Reader-Ordered-0.021.tar.gz) = 15903 bytes

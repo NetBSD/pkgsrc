@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/05/02 12:10:31 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:32 nia Exp $
 
-SHA1 (Test-NoTabs-2.02.tar.gz) = 8ce4180fcef40e5fb8b7653dac2c8e380bbf6c92
 RMD160 (Test-NoTabs-2.02.tar.gz) = 0805a1b69a9d7526e12addc997c9b43b22147302
 SHA512 (Test-NoTabs-2.02.tar.gz) = e7bd189fde1b35f67569ea702735ead8595684807491cf1635cb6a7d9360adca23d411ec1a165796afc45d55d1a724e07cecf8ddbd06206d4fe38f553954af3a
 Size (Test-NoTabs-2.02.tar.gz) = 29626 bytes

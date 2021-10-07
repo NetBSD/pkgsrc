@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/01/15 09:03:39 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:42:55 nia Exp $
 
-SHA1 (anytree-2.8.0.tar.gz) = 354f8ee332c2aeeea298e2149d0524fbea1e0009
 RMD160 (anytree-2.8.0.tar.gz) = 2f48920927d32f56c584bcfce9dc40fabe604faa
 SHA512 (anytree-2.8.0.tar.gz) = 907fe690965b143b51b61dda837625d882f83268eb25d8e59b63b129681922c76e61616de9c030ef1fb42c23b502942584e99736432393f4c7b5e1dadb8f7eea
 Size (anytree-2.8.0.tar.gz) = 189484 bytes

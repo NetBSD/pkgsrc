@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/01/23 13:11:14 jaapb Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:40:40 nia Exp $
 
-SHA1 (cppo-1.6.6.tar.gz) = 0ec51fb584ffabc4f41b54494d23b0cfd42a0e02
 RMD160 (cppo-1.6.6.tar.gz) = 070658fff7af6f4f81ad5fe22f0c2de5a4e11c7b
 SHA512 (cppo-1.6.6.tar.gz) = 80b0d7a5f0f5b7d9d62ddfb204ebf5e3216c2926ba7f667b9ef10981de6a51cd6d670b7062769bf6fbdd163c1c8fb5426a74c31234ddc03ec94a75645bf469da
 Size (cppo-1.6.6.tar.gz) = 28667 bytes

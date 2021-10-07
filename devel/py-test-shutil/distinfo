@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/09/04 07:57:08 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:48 nia Exp $
 
-SHA1 (pytest-shutil-1.7.0.tar.gz) = 8c4c721af57e14296a848601bb3acc7ef10a27e4
 RMD160 (pytest-shutil-1.7.0.tar.gz) = 869b11f66cfd12c0ee18afee4b825a8a35361a4f
 SHA512 (pytest-shutil-1.7.0.tar.gz) = 3746c08b17834621a7142ed9d5915b5c348c13367f5b423b258d3471bcb9c9e983c61c25ca936f879b8b82f80512512b7f3ade5555c24a790c72b502e3f3d144
 Size (pytest-shutil-1.7.0.tar.gz) = 23497 bytes

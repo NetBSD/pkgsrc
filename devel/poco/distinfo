@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/04/08 08:21:58 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:42:51 nia Exp $
 
-SHA1 (poco-1.6.1-all.tar.gz) = 38841212a6893d4290909a62b4f310450230fb6d
 RMD160 (poco-1.6.1-all.tar.gz) = a7ab9429db5b4b5fc02c194a208f11f296deb90b
 SHA512 (poco-1.6.1-all.tar.gz) = 6c68f3f2692bad8ad4a111e541e8da6376246517b2dca73f429539e9ceaa107e791c3673261467cf8a2e2efabd0dd2a5160d9d412e71af114b4a6b700c9c2393
 Size (poco-1.6.1-all.tar.gz) = 5636597 bytes

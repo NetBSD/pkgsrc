@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/27 21:02:10 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:20 nia Exp $
 
-SHA1 (Devel-Leak-0.04.tar.gz) = 4ead938f5c59dd2d220d98051d326a10bca900ef
 RMD160 (Devel-Leak-0.04.tar.gz) = 85f60d6674d3c55348045df9ab2d5815d59c2e67
 SHA512 (Devel-Leak-0.04.tar.gz) = 203e8eb372b1613dfe73c0f6813c615f7242ee8ef9dabcdd0bc971d0f09aefa98bce57bac292616757c28ed22c476c22743d0ffe8af2e823d724e24042161bb4
 Size (Devel-Leak-0.04.tar.gz) = 3437 bytes

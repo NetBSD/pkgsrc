@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/09/28 06:42:12 tron Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:46 nia Exp $
 
-SHA1 (Mac-SystemDirectory-0.10.tar.gz) = bfa98cb6e3f658bb90e00c80ec616053fb5da4db
 RMD160 (Mac-SystemDirectory-0.10.tar.gz) = 380e46d6e2b68746640fffe96ce658fb6703df46
 SHA512 (Mac-SystemDirectory-0.10.tar.gz) = b80fbf938a4ab1b70bc471725621d057674da039d84b097cad57a47d2d69a02b863964a18da9d59dd882e01d253e515fe5b4a13dc77319599943290c3149eeb8
 Size (Mac-SystemDirectory-0.10.tar.gz) = 31128 bytes

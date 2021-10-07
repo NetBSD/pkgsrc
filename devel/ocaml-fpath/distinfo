@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:19:17 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:42 nia Exp $
 
-SHA1 (fpath-0.7.2.tbz) = df9553857e88f14b701afac8b196c7b9c94ef29f
 RMD160 (fpath-0.7.2.tbz) = 422a6df2aa345f171da4c4de2cf627eb7ccfc493
 SHA512 (fpath-0.7.2.tbz) = d8ab8d6f183a1742d74a3a3220cc1d62e7df38a6f3ca1c04fad18426a0897152255382305ad14d058b5b85ab55a27536c39a62deffac8d46984a730a2a18405d
 Size (fpath-0.7.2.tbz) = 24142 bytes

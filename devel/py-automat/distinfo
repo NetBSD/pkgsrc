@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/23 10:20:22 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:42:57 nia Exp $
 
-SHA1 (Automat-0.8.0.tar.gz) = 06ab71507af0b39c4aad0ebebc9762e093856555
 RMD160 (Automat-0.8.0.tar.gz) = 47ebcfc9c49f75aaa6dadc2eeb97d942e1dac0bc
 SHA512 (Automat-0.8.0.tar.gz) = 2dbd4e784f65b02a8c93fc5f15236df3649d667a9792f6cac929dbac5d971495bdab4825df0fcd6817b9a9f79b7a5d8cfbdf8e4d18605f0761546b31b3091ad7
 Size (Automat-0.8.0.tar.gz) = 59687 bytes

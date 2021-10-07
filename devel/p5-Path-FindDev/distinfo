@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/04/12 13:09:18 wen Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:08 nia Exp $
 
-SHA1 (Path-FindDev-v0.5.3.tar.gz) = efff24d0b47895aed547cbb161161b8c7b555bb7
 RMD160 (Path-FindDev-v0.5.3.tar.gz) = 5dad75a1cefa6ba6fb906a5221f85ec7f7f1e827
 SHA512 (Path-FindDev-v0.5.3.tar.gz) = dd7a6a05f9e21c45a5ef25b3e2598a8f769a2ab3ef24ddb8e918b17a0f025bc5ba5b23fecf832911b7003de6cdaceb0e4a8c1139b4e23b080920739604e37bf6
 Size (Path-FindDev-v0.5.3.tar.gz) = 41204 bytes

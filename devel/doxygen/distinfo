@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.68 2020/10/04 09:45:26 ryoon Exp $
+$NetBSD: distinfo,v 1.69 2021/10/07 13:39:28 nia Exp $
 
-SHA1 (doxygen-1.8.20.src.tar.gz) = 606a7bb525a55a01fc7399bc50ad7589ad1d2283
 RMD160 (doxygen-1.8.20.src.tar.gz) = 1076c8a24171a10b584580441c68e956aa2955f2
 SHA512 (doxygen-1.8.20.src.tar.gz) = 65d104d25061ee59199c74c0328f59fbeaf14f0dade755187ebd43f59008adfef243d4da448b71ae04dc325b848f9bdd109eb20e6f6092f3ed19862426d060cf
 Size (doxygen-1.8.20.src.tar.gz) = 5132703 bytes

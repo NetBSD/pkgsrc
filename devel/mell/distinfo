@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:34 nia Exp $
 
-SHA1 (mell-1.0.0.tar.gz) = a682bc230db30f11496c6fd6c680028086d1f516
 RMD160 (mell-1.0.0.tar.gz) = 5d45bee16f4e889ba5e87c4cf8c6d72dc2541153
 SHA512 (mell-1.0.0.tar.gz) = 1cffc2b282bcb166fca3321c5f10a43ab4091e0acf04beef92e905fd377e0aa2ddbd4e168f8bfd255b95e0d0554e943157708eec23682e8197b28da4a87c7d46
 Size (mell-1.0.0.tar.gz) = 54979 bytes

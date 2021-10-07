@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/04/26 12:45:39 wiz Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 13:40:53 nia Exp $
 
-SHA1 (Alien-Build-2.38.tar.gz) = 393ac7a0d95fdd4a2b3e21a2cb7d26ad6f84d7ba
 RMD160 (Alien-Build-2.38.tar.gz) = 35f043b9d87836dce6af5b07b8c812e3b9f0cca7
 SHA512 (Alien-Build-2.38.tar.gz) = a77b27894c74e9b73fd479f3efb67c748bf9f32931a75471f6e5e0ccbb65d2e5617abfef28f71a7e461f4e1a4216fa8968564aa8ae52ff1bbeae570743fbab81
 Size (Alien-Build-2.38.tar.gz) = 331770 bytes

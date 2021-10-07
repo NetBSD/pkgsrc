@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:31:30 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:41 nia Exp $
 
-SHA1 (duff-0.2.tar.gz) = f0273ff0f84e7fb5d199f9c31532a0b6221413d4
 RMD160 (duff-0.2.tar.gz) = 0e00e1b7e1e0d10a34c245b8b5066680d763827f
 SHA512 (duff-0.2.tar.gz) = e8a10c289e7a1024eeeebf3fa46aec72818cbf28fd28b3da69b9e66add82ac252f652ae70b63a7307c0994193f0b3c27e790d2f751bb652d9200efec1915c284
 Size (duff-0.2.tar.gz) = 15471 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 15:16:44 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:38:56 nia Exp $
 
-SHA1 (R/blob_1.2.0.tar.gz) = 30566732bbc1493b61eccfa6b20bb4258e78b27f
 RMD160 (R/blob_1.2.0.tar.gz) = d2077ff37533880518e094f002a10eb6ef346c8f
 SHA512 (R/blob_1.2.0.tar.gz) = 5a9130760fc032e52ae4604ec935d097aebab8ee368facbe5e70429ca05ab6c12624b0c08f48c12ef2db3d9af6c3bc6e0fe23f9142161a9a09753882e164fa1c
 Size (R/blob_1.2.0.tar.gz) = 9355 bytes

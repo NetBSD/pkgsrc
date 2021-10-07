@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/09/20 21:32:33 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:01 nia Exp $
 
-SHA1 (R/purrr_0.3.4.tar.gz) = beedb91ea411d1ac78317dbf6a533afef5b19c3a
 RMD160 (R/purrr_0.3.4.tar.gz) = 406f18126d30de7f59aab15d8eb4db32e83fb520
 SHA512 (R/purrr_0.3.4.tar.gz) = 30f121c751e6c85b986b872ed1bae6464d2f0f3b79493537d4f1b673d55725218dd982a2ed7b8b8a12b2aad586db3133e49721812f35bf3b2c692612759bb2ca
 Size (R/purrr_0.3.4.tar.gz) = 375062 bytes

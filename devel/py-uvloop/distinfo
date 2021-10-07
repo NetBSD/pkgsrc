@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/08/11 07:03:57 adam Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 13:43:53 nia Exp $
 
-SHA1 (uvloop-0.16.0.tar.gz) = 8246e0174fb9cd302b0b52218b7b25ab56c60888
 RMD160 (uvloop-0.16.0.tar.gz) = bfc40de505e677dbebc28dc4082e8c494eb45dac
 SHA512 (uvloop-0.16.0.tar.gz) = dd6dcec38f7f94dc0cf0123302fd6fe404428196b452a80a8258a207654e3f67e210233be3d649668c22b48390232d0347706b1d87fb50016287142c742b806d
 Size (uvloop-0.16.0.tar.gz) = 2129067 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/23 04:44:20 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:44 nia Exp $
 
-SHA1 (happy-1.20.0.tar.gz) = 7ac1ee4aab8d4abe206ffcaadc8a93d98a346264
 RMD160 (happy-1.20.0.tar.gz) = 6132dd3496fc22363d09dc7e307d93f779bfdc3e
 SHA512 (happy-1.20.0.tar.gz) = 2c19e6e13032ead435495aab232192cf0ad9fe5e3e04c79b40b586272fb0208284815cf5c15d609f75387e7fe91ca0932b675bcaa95552f62ad08a12701649ce
 Size (happy-1.20.0.tar.gz) = 184515 bytes

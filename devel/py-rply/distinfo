@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/02/24 19:41:40 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:43:42 nia Exp $
 
-SHA1 (rply-0.7.8.tar.gz) = 06498d0a198bc229fa2a43f08cb5892303aa4a3a
 RMD160 (rply-0.7.8.tar.gz) = 59ce1aaf1a35add3f52951cbbd4e8642572dfe50
 SHA512 (rply-0.7.8.tar.gz) = 8b6a5b7d1ace1606520762fd4c088f3f8d84363be426578bf4daa1a9e6eee7b659449d7b383d7021d7ce4485be737f0f603acace3779acd42dd986213a1f6141
 Size (rply-0.7.8.tar.gz) = 15850 bytes

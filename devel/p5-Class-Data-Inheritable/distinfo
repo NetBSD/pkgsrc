@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/01 23:38:11 wen Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:41:04 nia Exp $
 
-SHA1 (Class-Data-Inheritable-0.09.tar.gz) = 2cfbc3256688110e783f82896496f0307935c532
 RMD160 (Class-Data-Inheritable-0.09.tar.gz) = ad26815628213c34824d1b4565592ee80a225c01
 SHA512 (Class-Data-Inheritable-0.09.tar.gz) = 2e76aaf12c8d26442d53746e5d74636bb35c55461efb6d9b5ea50a635e3f781707b2d7f9cb3da9113ed31de464d3931f9734c29ace2a7ee5c6e111392b6a97cf
 Size (Class-Data-Inheritable-0.09.tar.gz) = 6087 bytes

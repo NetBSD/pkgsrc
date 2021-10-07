@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/06/02 23:27:11 khorben Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:42:55 nia Exp $
 
-SHA1 (angr-9.0.7491.tar.gz) = 86db66a0f41cf677903dd5f1d14352f619123fb9
 RMD160 (angr-9.0.7491.tar.gz) = fefbf4371ee3b70bf31e605e676ecf931061bc00
 SHA512 (angr-9.0.7491.tar.gz) = d3ead1e3926dd7987744947fd27787c019260def915fd4317d3adabe9270bb80ff135047f8a7e547f9f9581fa5167ede11b11a2506c814cca5e2feaf1593290b
 Size (angr-9.0.7491.tar.gz) = 1355985 bytes

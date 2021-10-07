@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/08/21 11:21:25 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:42:11 nia Exp $
 
-SHA1 (Proc-PID-File-1.29.tar.gz) = 9cf81017426cd09d883ac258875e6f0d0b9759a1
 RMD160 (Proc-PID-File-1.29.tar.gz) = 10ac7944003e29c461ed8159c56f9a1ae4cfdf74
 SHA512 (Proc-PID-File-1.29.tar.gz) = 92dd43b21b27170ac081e773d6573b0070cdddf3a210e7c4587807456a98ef7425490580e2bc038f6720176b32f22619a38364f6bb083a6aa7e2733853685515
 Size (Proc-PID-File-1.29.tar.gz) = 15476 bytes

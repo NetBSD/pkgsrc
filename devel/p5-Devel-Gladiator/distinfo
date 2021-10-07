@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/16 00:52:53 wen Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:41:20 nia Exp $
 
-SHA1 (Devel-Gladiator-0.08.tar.gz) = 88ef076174574be1af7cca3e377b123888fa4a9e
 RMD160 (Devel-Gladiator-0.08.tar.gz) = a0f0d24c359bc8508fb458f72f3bc6355da91664
 SHA512 (Devel-Gladiator-0.08.tar.gz) = 597de295bcaf861e338fb3df17ad21c7f7efe0c55fb01656f970322733445965eeaa212316b2b8b6a5982f1e65aca3c98f34fefc07cca396d912683efb8c83ee
 Size (Devel-Gladiator-0.08.tar.gz) = 105873 bytes

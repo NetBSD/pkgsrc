@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 13:29:57 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:41 nia Exp $
 
-SHA1 (fieldslib-0.13.0.tar.gz) = e07a4ef0bc5e8dfd2c6b6d40f2537b2f92e8848c
 RMD160 (fieldslib-0.13.0.tar.gz) = 93a282947e747689ac24a726ffdbcdfb1d4f1b23
 SHA512 (fieldslib-0.13.0.tar.gz) = a216d94030350176937dad54f8b4bd4c5a24546ec8a3113d370735f338cab7e0e50fdeeed4e7032d73f57faad4e86d0fede049a8ab4755a7b44be6aaad420aa8
 Size (fieldslib-0.13.0.tar.gz) = 3684 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/05/05 16:38:40 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:40:00 nia Exp $
 
-SHA1 (foundation-0.0.26.tar.gz) = f68e1ff42a76270f41ec3db0b69f548d587a706b
 RMD160 (foundation-0.0.26.tar.gz) = 3545c9a261e8570b0d41b809a6b4a53afe195382
 SHA512 (foundation-0.0.26.tar.gz) = c85b4fc08ee92de8c7bd6e2b469762e7f101c52eebedca17ceb4073048781d309e6e62dff4d248df79f8237e293f5b38c73c94c14635ba2992bda52510e85eac
 Size (foundation-0.0.26.tar.gz) = 120483 bytes

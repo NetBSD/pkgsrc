@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/04/05 08:46:37 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:02 nia Exp $
 
-SHA1 (kafka_2.12-1.1.0.tgz) = 057cc111d354d2c20f0125d8e43b44682c69b381
 RMD160 (kafka_2.12-1.1.0.tgz) = 2e92b496a2c4d317d740cfa9d287790ac6d9ef96
 SHA512 (kafka_2.12-1.1.0.tgz) = 48d1ddc71f5a5b1b25d111f792553be69be62293640a3c6af985203c6ee88c6aa78e01327066bfad3feae6b0b45d71c0cac6ebd2d08843d92269132741a3791b
 Size (kafka_2.12-1.1.0.tgz) = 50326212 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2020/12/11 07:57:26 jaapb Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 13:40:43 nia Exp $
 
-SHA1 (lwt-5.3.0.tar.gz) = 34a3a1ad9bec1317681eb42d26505498bf2b2857
 RMD160 (lwt-5.3.0.tar.gz) = 85d9e47e32cbf35031d42467e8c4f0fd08b1f698
 SHA512 (lwt-5.3.0.tar.gz) = 9922c19944595b0c07da8e1bbdecb2cc7c5a7edcdc2224215efb819d9c735da8986388a2446bd0762e28533f5d9d386970f07a4f1b0d14255c6743f3a1d16cb6
 Size (lwt-5.3.0.tar.gz) = 298152 bytes

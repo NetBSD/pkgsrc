@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2018/05/02 12:02:27 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:42:15 nia Exp $
 
-SHA1 (Safe-Hole-0.14.tar.gz) = 991ff49ea0856fe1f1b949eb61e65e674481ebdf
 RMD160 (Safe-Hole-0.14.tar.gz) = 206a8598830033e504d1583ca5c9ccee5e049fea
 SHA512 (Safe-Hole-0.14.tar.gz) = 29570c5e6c2bf8709b92b62c36d24c643956535ed0cf3fa73cbe9406543f17c96d4bd37a753c02d1f77f962d76788f423816fd63d31f7f56884acefa873f30e7
 Size (Safe-Hole-0.14.tar.gz) = 15901 bytes

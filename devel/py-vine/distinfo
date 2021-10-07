@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/05/07 17:55:20 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:53 nia Exp $
 
-SHA1 (vine-5.0.0.tar.gz) = 23cd303dc42a81831b9867f03e7ab765e8d7cd80
 RMD160 (vine-5.0.0.tar.gz) = b62e7a48c9551c33c40fc1cf5074796fe259d508
 SHA512 (vine-5.0.0.tar.gz) = ff8f4b3f675220772ed0523e468eedbaec4aca793877b984e9a215603d1288cc3cc71dfeb152219d22f98de0ac7e9f9fa0cc35c2424ff36044cfc8f28192c159
 Size (vine-5.0.0.tar.gz) = 48758 bytes

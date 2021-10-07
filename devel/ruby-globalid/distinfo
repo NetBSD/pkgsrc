@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/08/22 13:40:40 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:44:10 nia Exp $
 
-SHA1 (globalid-0.5.2.gem) = 6091a20c6a87a78e9b6e729da51a418388a11022
 RMD160 (globalid-0.5.2.gem) = 62d24a2972e365dfb4247071d1d25461c8e438a2
 SHA512 (globalid-0.5.2.gem) = ccdde19f7c3b5faea358741c04d6534f81915f692127bc0afe41311bb505a892ea95af0220c61e0683f94ee500d3e18cc69502efb58a97fc5535b2dfc5af52e3
 Size (globalid-0.5.2.gem) = 13312 bytes

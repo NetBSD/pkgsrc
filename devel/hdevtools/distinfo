@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/01 03:25:51 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:39:44 nia Exp $
 
-SHA1 (hdevtools-0.1.8.0.tar.gz) = 691c52bc79977691c25d9c30b13fb43e30364370
 RMD160 (hdevtools-0.1.8.0.tar.gz) = 2af21a52d9cb0151ab2f64eb58f80340c60436fa
 SHA512 (hdevtools-0.1.8.0.tar.gz) = 6f21e69e15799c60ca1acf5f96e41a44b0cebc17a97c33c6dc4ef06887dcd996450bf6debab217060ab458e2810d271220ca3645124a017ef6eefe49448fa827
 Size (hdevtools-0.1.8.0.tar.gz) = 22984 bytes

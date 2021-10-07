@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/05/15 00:14:56 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:44:42 nia Exp $
 
-SHA1 (xfconf-4.14.3.tar.bz2) = 5d963f803edc6609b0337c688aa232c926e00fc8
 RMD160 (xfconf-4.14.3.tar.bz2) = eccd7f0b9d1966a38c026d641f4c67df110ed340
 SHA512 (xfconf-4.14.3.tar.bz2) = e3add05018215cc597bb76d852903077e1fd0a21429c462116c560739eaf32167f9dddac3adb36e89b9380b87fc4b4c38d4ee9fdd5139b540268be437fc3a713
 Size (xfconf-4.14.3.tar.bz2) = 591432 bytes

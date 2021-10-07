@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/25 00:53:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:40 nia Exp $
 
-SHA1 (gocode-20170907.tar.gz) = 326d8af972592a9aa2838a734ef6ed593e33e8f7
 RMD160 (gocode-20170907.tar.gz) = 78ffab1ee92898dcb5f222572e532f871fdf2c82
 SHA512 (gocode-20170907.tar.gz) = 0fe07d98146581392f80218faa6d64bbbf59f42d97ad4f058b94f510e9b26742d18a48f7b93672ab4de79a3775cfb6340e27421f948985895cfbc2f82542cc44
 Size (gocode-20170907.tar.gz) = 90665 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/06/01 16:13:42 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:55 nia Exp $
 
-SHA1 (aiounittest-1.4.0.tar.gz) = 7ebde888b714ebc38a50b7e5b136438d9f916807
 RMD160 (aiounittest-1.4.0.tar.gz) = 631a76cc56732bbbecd7e7c037257f35d5bdb5af
 SHA512 (aiounittest-1.4.0.tar.gz) = 9f0d7e8abe0852ed5ba554e08286078b00188e231829998a0ba62bdaea25050340c966cf036ea8462b51233005cf3b592780b1007f182bf6c3ffef7e8f041097
 Size (aiounittest-1.4.0.tar.gz) = 5910 bytes

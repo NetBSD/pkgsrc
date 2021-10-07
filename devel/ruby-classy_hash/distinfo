@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/11 13:41:12 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:05 nia Exp $
 
-SHA1 (classy_hash-1.0.0.gem) = 2b81ec730cc6c48d6d07db79879d8a36272d39e9
 RMD160 (classy_hash-1.0.0.gem) = 462bdee10bbe7ace779133ba5d9d4a290fd9d003
 SHA512 (classy_hash-1.0.0.gem) = 8d21b4943ceb2eb0147b899985140339356b9fb53f19dc3758ce0ad3246333ff868852f543842a10a9d3a8ef30db740cb1ac59f3f94327b2c4ddc303ad178da4
 Size (classy_hash-1.0.0.gem) = 9728 bytes

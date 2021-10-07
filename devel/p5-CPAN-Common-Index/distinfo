@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/08/09 10:05:19 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:59 nia Exp $
 
-SHA1 (CPAN-Common-Index-0.010.tar.gz) = 7f4514e7dbb54bf48036b6b8f7b45973bf35fa46
 RMD160 (CPAN-Common-Index-0.010.tar.gz) = 3c8e01695d8e404ac1de9451ba40a55f1f5eb758
 SHA512 (CPAN-Common-Index-0.010.tar.gz) = 45dbd8baa97962b4eca995a8192553dc52c4a28b86f1e8074ae660047f31ca9198dafb0f13ea6b2a2b5b2bc72ccdd3e4ea5b007026f07822a1a1084cce16e970
 Size (CPAN-Common-Index-0.010.tar.gz) = 1612703 bytes

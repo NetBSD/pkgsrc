@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/01/21 03:39:26 wen Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:43 nia Exp $
 
-SHA1 (curry-1.001000.tar.gz) = 306b547fd19e4bcf84fa67c440ea4240e39f7692
 RMD160 (curry-1.001000.tar.gz) = 2fb22dcb29adf070c7e3f17dffab1a10e7231942
 SHA512 (curry-1.001000.tar.gz) = 1d934ceb64a73784484ac73a529f9f6cdd3cbcaff7175515ddce75bbc7933f2f3105f3a4ef12e33eb82db5792c435e32aae12f64b3e334064db4305910e86d14
 Size (curry-1.001000.tar.gz) = 3754 bytes

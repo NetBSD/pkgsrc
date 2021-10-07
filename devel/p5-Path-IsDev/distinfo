@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/04/14 15:11:46 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:08 nia Exp $
 
-SHA1 (Path-IsDev-1.001003.tar.gz) = 0144fa1933eed44509ec1920e58c7db235d0981c
 RMD160 (Path-IsDev-1.001003.tar.gz) = 100088c67b5b29d09bcd41f52ee24efabad53c73
 SHA512 (Path-IsDev-1.001003.tar.gz) = fd4e355d0e67ec210eba443d5867dce181664da6ae300d81b98e77fd78a25d5a4f95e0b901f0a6c7596f28a3e2e37264f31226c410f5e6fb6a565d2ef0618d59
 Size (Path-IsDev-1.001003.tar.gz) = 188687 bytes

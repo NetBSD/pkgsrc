@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:21 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:44:04 nia Exp $
 
-SHA1 (byaccr-0.1.tar.gz) = a4971742083d2570bb630908d0b15010af134e9f
 RMD160 (byaccr-0.1.tar.gz) = db1a74e6c94e3df5574a86822ea14c00ab433dae
 SHA512 (byaccr-0.1.tar.gz) = c6ec14ad90238986e21c9a9fe794c1eae08e13edf80bed71d2cc5830e40f40ac09057183aa35e07bed153084bea944327db93b24449b2bc306555d0e08f1e8df
 Size (byaccr-0.1.tar.gz) = 34786 bytes

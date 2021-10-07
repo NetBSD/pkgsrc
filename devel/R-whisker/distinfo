@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/20 21:47:31 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:04 nia Exp $
 
-SHA1 (R/whisker_0.4.tar.gz) = 25000ddd09cae4a47fc91e54f273018f782e5240
 RMD160 (R/whisker_0.4.tar.gz) = b0facdbc72fd0f57bdeecf33e55ca515920b20f0
 SHA512 (R/whisker_0.4.tar.gz) = 257dfcf9f8df6a59004e21fdad3a0e0958b4070e7d293e573ef8b4a237d1e3cab049384ddb266d9a5ef385564c3aef265d82e275c9bb8c8baa608ed88ab95584
 Size (R/whisker_0.4.tar.gz) = 28574 bytes

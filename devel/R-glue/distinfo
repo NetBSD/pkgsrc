@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/06/06 12:35:52 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:38:59 nia Exp $
 
-SHA1 (R/glue_1.4.2.tar.gz) = 75a8877f60de7c2f5c2c7abdfb9ee34deb40e5dd
 RMD160 (R/glue_1.4.2.tar.gz) = d184dfe8a6cc7568a91c783600a98602f869ac28
 SHA512 (R/glue_1.4.2.tar.gz) = d4c43c95fedf881be2fbe0e406a282e9af30b741533b653cb3c84ead8952e971d94cb4b6a98df07551b17726630b426e6178296e1c146e6cf04e9a7bd6d0562c
 Size (R/glue_1.4.2.tar.gz) = 99049 bytes

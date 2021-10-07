@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/04/23 06:06:12 pho Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:39:49 nia Exp $
 
-SHA1 (dlist-1.0.tar.gz) = 4803b4cefb1a1076ce3e918cd4af52cb5f69f778
 RMD160 (dlist-1.0.tar.gz) = 5ce78649bb7d2e93632e84855edb45e40b0ed789
 SHA512 (dlist-1.0.tar.gz) = 8985b9e775e8d99c3d8cf59eabfb7ed13c395482186b086831a79afea9b980ee59e386856df82dcc030f430be55cc95fa057e962776fe37a371e8be5ae19abef
 Size (dlist-1.0.tar.gz) = 18667 bytes

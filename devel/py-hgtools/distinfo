@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/09/12 04:00:07 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:15 nia Exp $
 
-SHA1 (hgtools-6.5.2.tar.gz) = bdee1be07e29207a89914ca2fd3b73881b3a5f62
 RMD160 (hgtools-6.5.2.tar.gz) = de7c25513a736dede694ff20eb6591171e62f0bc
 SHA512 (hgtools-6.5.2.tar.gz) = 8927d0b1970a367116d27a62d1f673af5de6a064cff1187d05139a4c9bb78886639c9683c012526393be046f589eb66793f7cbab2bc4fe6f52a582f70e56915f
 Size (hgtools-6.5.2.tar.gz) = 21715 bytes

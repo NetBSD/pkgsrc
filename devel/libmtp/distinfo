@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/10/29 12:55:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 13:40:18 nia Exp $
 
-SHA1 (libmtp-1.1.18.tar.gz) = b2a1fe4cb2b908ee1ca5b1c7eb3615b9dbdb109f
 RMD160 (libmtp-1.1.18.tar.gz) = 72e35ac820a5507bf1059dc89f62add39e20c8c6
 SHA512 (libmtp-1.1.18.tar.gz) = 1a8d503effd83217c339a1aea3a16954d718059edf3110cb2f21cff74cdd1243e7f4880d4e12f8fbdc9a5deed366c4151babe6ecd6f4cf4b7330a27e27bf7cc8
 Size (libmtp-1.1.18.tar.gz) = 832463 bytes

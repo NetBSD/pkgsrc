@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 14:07:49 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:46 nia Exp $
 
-SHA1 (termcolor-1.1.0.tar.gz) = 52045880a05c0fbd192343d9c9aad46a73d20e8c
 RMD160 (termcolor-1.1.0.tar.gz) = 1555f55ff04abff3929dd86215dcd679c3c4813f
 SHA512 (termcolor-1.1.0.tar.gz) = 4bd06bf4405a9ef6c005cd4d159ef602f7fc7fccb3e57586da1187c402f4d0b9051ef930cae423065c51ff4be8a22ceae556a61a6b3c8c519d623c066c340b53
 Size (termcolor-1.1.0.tar.gz) = 3912 bytes

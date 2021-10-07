@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2017/02/10 07:03:51 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:41:22 nia Exp $
 
-SHA1 (Devel-Symdump-2.18.tar.gz) = 1d1de227c3abbb4b41afa0ba08b55647d6513167
 RMD160 (Devel-Symdump-2.18.tar.gz) = 9949dab5ae7d7ff9826e80d33f8adc5e7e0e6196
 SHA512 (Devel-Symdump-2.18.tar.gz) = 4e8e1ee723e3e02d2f0c100dace40d7722f6366402cff24fb50c8616a863628bc2faa02210754132afa7cbebbd90c75ea6f173e15bbcfaa5158dfcfdfd03da73
 Size (Devel-Symdump-2.18.tar.gz) = 18439 bytes

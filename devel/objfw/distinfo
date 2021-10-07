@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/29 12:13:13 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:38 nia Exp $
 
-SHA1 (objfw-0.90.2.tar.gz) = d5a39884ffeff57c96f4879c2ddb7a10a42a7a35
 RMD160 (objfw-0.90.2.tar.gz) = 3403dfe7ecb232d12917a91f264c5192c651c9a5
 SHA512 (objfw-0.90.2.tar.gz) = c894befe9388a5fce9c0e18fbd737f995af9923d52cfb3c8c1faca8879121cd68654d8e262f6a9fdb1578073dd70e5364737ad5ffaa483d9553d6a549af2ec67
 Size (objfw-0.90.2.tar.gz) = 650744 bytes

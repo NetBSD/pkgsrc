@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/03/13 05:45:25 dholland Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:44:41 nia Exp $
 
-SHA1 (verifast-18.02.tar.gz) = 6100ea410e5f7e1c5ceacc16263137f60ebe7ced
 RMD160 (verifast-18.02.tar.gz) = 28d98b0033a9026599db6098bde6871c47d99ded
 SHA512 (verifast-18.02.tar.gz) = 5f1c6203d9db4556a00402e56b6699cb00e75c388f2de6f957558cf7611ddabddccfc4ae1235a1cd8fabc4ec5673df6588e475328ed562799f1fa687ad5c38aa
 Size (verifast-18.02.tar.gz) = 1732020 bytes

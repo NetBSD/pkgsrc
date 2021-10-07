@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/07/12 18:47:15 adam Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 13:40:25 nia Exp $
 
-SHA1 (lldb-12.0.1.src.tar.xz) = 07c4844f5a13ff063fed5b7c5c67b8aef4d1bb7b
 RMD160 (lldb-12.0.1.src.tar.xz) = 0712a6e836a052fc20fe6963f0a4d6f0d6b8a7ec
 SHA512 (lldb-12.0.1.src.tar.xz) = df3c8e088bf69fb843cd7365fd2df4cefb72c9a313511fb0d0fa3e06e7d12cada35a1d621ec4312c99799e68ff76955423993ce0310c58f74ccd5151984f38ee
 Size (lldb-12.0.1.src.tar.xz) = 9837800 bytes

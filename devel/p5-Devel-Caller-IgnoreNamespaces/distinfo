@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/11/08 21:35:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:18 nia Exp $
 
-SHA1 (Devel-Caller-IgnoreNamespaces-1.1.tar.gz) = 513285c6204584707cce88e5785a88d3c5c2dbcb
 RMD160 (Devel-Caller-IgnoreNamespaces-1.1.tar.gz) = 7b868de75916154d9ae0c97bb6fd3d03d190cf1c
 SHA512 (Devel-Caller-IgnoreNamespaces-1.1.tar.gz) = aebae00229f1496523d04d3ff1baa53b226f615532140876b65cf8ed46e26129934ef886f0e280db0f1323ea8945187afdf864b14923e866cc89e9b7ee767945
 Size (Devel-Caller-IgnoreNamespaces-1.1.tar.gz) = 12831 bytes

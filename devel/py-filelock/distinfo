@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/05/21 12:55:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:10 nia Exp $
 
-SHA1 (filelock-3.0.12.tar.gz) = ca03bf213ee1d7a9b6353cebc265072aae40fdcb
 RMD160 (filelock-3.0.12.tar.gz) = f4045fa508760a35480bef08ea89f2a102dc249a
 SHA512 (filelock-3.0.12.tar.gz) = 09b8b16c12a60044a259a5d644bc8066660871104a7f4cd431431173d475b9f15744adfb8d86ec8cda69f2a1b52bd14cb8a066d70fa5e49c449bc5ee702ec2a0
 Size (filelock-3.0.12.tar.gz) = 8549 bytes

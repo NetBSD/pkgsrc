@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/02/12 11:03:34 dholland Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:40:51 nia Exp $
 
-SHA1 (omake-0.10.3.tar.gz) = 5a48e4cade84b2e7224c18cf22115e7168caaebd
 RMD160 (omake-0.10.3.tar.gz) = f1281155c9b88817a9ac5a1abcb95dd96ff847fe
 SHA512 (omake-0.10.3.tar.gz) = 8fc042cccd9d3b03fc16e29ac19368e078d0f8c14ed60862fe787248c5a4f88995ffd43ab0a9b416ec7f4b7762ab57c293ef3ea0b9dcbbd21c1c767ab41c2cc3
 Size (omake-0.10.3.tar.gz) = 1491587 bytes

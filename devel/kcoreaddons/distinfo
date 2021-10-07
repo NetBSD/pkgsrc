@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/03/30 10:58:21 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:40:03 nia Exp $
 
-SHA1 (kcoreaddons-5.80.0.tar.xz) = 7259733b8ca50de16856c5629dc23a7f8c683bbb
 RMD160 (kcoreaddons-5.80.0.tar.xz) = b363ed07d1fe02e76c5c7e61dde98bb71e542830
 SHA512 (kcoreaddons-5.80.0.tar.xz) = 38e4784eb344402d31cd0be0af4f3d514d5b4b2713e781abce5896f3fef35852dad6a59e3965a25639d042ad90ca527a6e79a312ffc210594d501b5c52ee7d1c
 Size (kcoreaddons-5.80.0.tar.xz) = 410980 bytes
