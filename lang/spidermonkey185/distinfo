@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/04/13 19:19:37 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:21:14 nia Exp $
 
-SHA1 (js185-1.0.0.tar.gz) = 52a01449c48d7a117b35f213d3e4263578d846d6
 RMD160 (js185-1.0.0.tar.gz) = 23e6ddc81d5b63e015aecc1a104b2d3d3ced5005
 SHA512 (js185-1.0.0.tar.gz) = 2af7122a7c7007fd7b6668776fe1222515a810b3e43bbf0f76b8f94e1ef406ffd3fb5ccec393021b00274c05b38a77235bc8d6886994c56762fcaf0aa7cf6718
 Size (js185-1.0.0.tar.gz) = 6164605 bytes

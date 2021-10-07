@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/09/06 07:25:13 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:21:09 nia Exp $
 
-SHA1 (python-3.7.12-docs-html.tar.bz2) = c163c0b58454dbcf8a24eae47c0d15020f5d459b
 RMD160 (python-3.7.12-docs-html.tar.bz2) = 558eadae39156f1644036ad2ed261cbf8f5eb642
 SHA512 (python-3.7.12-docs-html.tar.bz2) = 872b2f3d9a674d8fe364ba4ce9aa465cc31846215b3a9874faf5cac41dedffdc422143d030e0a80a8a8dde43169d627ce4e1054218f1cd247af2fdf143b0c98b
 Size (python-3.7.12-docs-html.tar.bz2) = 6287419 bytes

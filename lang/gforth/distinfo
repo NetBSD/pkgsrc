@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2015/12/29 23:34:47 dholland Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:20:52 nia Exp $
 
-SHA1 (gforth-0.7.3.tar.gz) = 4ef40d8427249b4367ac5e8965b55ca113c18baa
 RMD160 (gforth-0.7.3.tar.gz) = 6261b9b568695421148063a17e0dbf2983132062
 SHA512 (gforth-0.7.3.tar.gz) = f034234acfb0fc727f28b564432219a100b916c6df4b847794a55b2fc3b8ed8714eca6de0df67c7c427b7c2bb4dd00f65cfd34e6eb60181e41ab84fea30304e4
 Size (gforth-0.7.3.tar.gz) = 2523433 bytes

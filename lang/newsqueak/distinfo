@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:50:39 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:21:02 nia Exp $
 
-SHA1 (newsqueak.tar.gz) = 085cc8248be5b6145f57b8517e0f22469e5047c1
 RMD160 (newsqueak.tar.gz) = 56f6fcf95a58d141efc57cedbf1a49574ea8b777
 SHA512 (newsqueak.tar.gz) = 7781106ba3d76be4028a9988cafe6cc8f5e2f2a72c7310326b45b15024cad0ef6787cd0ccff52aad4d6eeae9d0a598681b1b6c8efbb0dfc96b0456609e2e408c
 Size (newsqueak.tar.gz) = 265358 bytes

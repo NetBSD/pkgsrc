@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/10 10:17:05 rillig Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:21:10 nia Exp $
 
-SHA1 (quickjs-2020-04-12.tar.xz) = 5fc6872e8cf307b32dd8245ca96949acde77b1ba
 RMD160 (quickjs-2020-04-12.tar.xz) = b1e011bc5a5ec6a5769e7d0ab00948c4f67b293b
 SHA512 (quickjs-2020-04-12.tar.xz) = ed15bb159fa05a7c7749e34f346d426803adf34f1ee83eb23c1a9acce037402537fb52ff0c54135da13d7908a71043eb00b5688fe13488eca356a0713d4a65a3
 Size (quickjs-2020-04-12.tar.xz) = 741060 bytes

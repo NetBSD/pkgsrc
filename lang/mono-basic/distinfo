@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/03/08 11:00:42 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:21:01 nia Exp $
 
-SHA1 (mono-basic-4.7.tar.bz2) = 91621fa52bda744f66563e28a3eb9c533ee595d2
 RMD160 (mono-basic-4.7.tar.bz2) = 8c1a0894bf0f6330d2eccf0f21df243a4141bac0
 SHA512 (mono-basic-4.7.tar.bz2) = c690f81d7af64d1592bc480be230abc93480728288291fe85de5c8b273eb6127d619c3bd02f2acd285b9b055ef4f2970a764b34f49f15e59ed238d01c151c99a
 Size (mono-basic-4.7.tar.bz2) = 2051806 bytes

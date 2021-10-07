@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/08/26 06:54:28 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:21:09 nia Exp $
 
-SHA1 (spark_parser-1.8.9.tar.gz) = 37ba4a86db15b68c50f36070d50eced1e157567a
 RMD160 (spark_parser-1.8.9.tar.gz) = 8c9297dc69d81dbd4651b601c01d40e8027ebada
 SHA512 (spark_parser-1.8.9.tar.gz) = 2ac5a21729d7d7f9f4bbe1e90884b51a91fb287804ba2b4ab46135c4daa743f5d15c457994f1d6a56c1bb6b3fd64e97d326fb851ae87900be3511a653026b75f
 Size (spark_parser-1.8.9.tar.gz) = 118345 bytes

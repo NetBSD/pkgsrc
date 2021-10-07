@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2018/03/16 08:26:28 dholland Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:21:06 nia Exp $
 
-SHA1 (pict-4.1.tar.gz) = e3d3341d4dc54ed015b0d89eab6760ee7f14c5cd
 RMD160 (pict-4.1.tar.gz) = aea1df3530387c592a1c5eb9e8f464e242109f86
 SHA512 (pict-4.1.tar.gz) = a1d3e74ecbdd664c29f840fb17f49599f3b27975d0f062e708ad1164ac5a2d6398e815bea1db9ac3f50f25e4e492e744554325077bf0239fc799c9af92f2b71d
 Size (pict-4.1.tar.gz) = 1062078 bytes
-SHA1 (pict-jumbo-patch-20180316.gz) = c8777191a5f1ed598f24321fff7e71d4fd13e29f
 RMD160 (pict-jumbo-patch-20180316.gz) = 64ed708666b6d2a377c59537fee2d28cc7e94f68
 SHA512 (pict-jumbo-patch-20180316.gz) = f79caef5ceee50fa905ef8d90a67d8337977dcc6780cd38ed5b5032573383f3098ec86c4558affeddfebc48878f60829ef5aca293ff2026ee498b6831fddc709
 Size (pict-jumbo-patch-20180316.gz) = 12499 bytes

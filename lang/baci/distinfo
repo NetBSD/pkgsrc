@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.12 2020/09/26 11:35:14 mef Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:20:46 nia Exp $
 
-SHA1 (bacidoc.tar.gz) = 6550d2f87903b69ce470e9682d47420399fcf0af
 RMD160 (bacidoc.tar.gz) = fab70e9bea44b384fe758de506f75bba68f412a6
 SHA512 (bacidoc.tar.gz) = a1ad27f3347f0d00cf1a28c75871d0b65e89b92870ac25fce44ed34d7f03c0fafada2a592375c8d19d011937c596b9bd88c8fd85f6b42b215ddcbd64e6d34674
 Size (bacidoc.tar.gz) = 162066 bytes
-SHA1 (bacisrc.tar.gz) = 3b655bcbd2823047f3f92e6f2d3d12bc7eaa772d
 RMD160 (bacisrc.tar.gz) = c484e3c05734cac1dd394d9b09b256e2a2626897
 SHA512 (bacisrc.tar.gz) = 2398784a8962f824e099187ff0db1d2ff9b23d9b34732acd69b6da1b060cca0ef48d2825d2dd4553e3e4393e30926aa1407e7b0ccd2e2208608a952b28810cc9
 Size (bacisrc.tar.gz) = 186723 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 22:50:32 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:20:45 nia Exp $
 
-SHA1 (a60-0.23a.tar.gz) = 6f02787e0ce5b2fa785eb709afbd02d6589e551b
 RMD160 (a60-0.23a.tar.gz) = 83eab797bb2a584b17d2a36aeca99feb5490aea9
 SHA512 (a60-0.23a.tar.gz) = 47c65d63ca94ef549d652f11438dd9c7405d278b9333e929c74657a44713f2c55f0e3a36db88704c22f82e1e9ee8864b5075d74b5398efc4b20d16f98914c2f0
 Size (a60-0.23a.tar.gz) = 1160801 bytes
