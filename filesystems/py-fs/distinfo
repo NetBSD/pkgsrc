@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/16 13:17:39 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:51:05 nia Exp $
 
-SHA1 (fs-2.4.13.tar.gz) = 8a7331df88410b4e29665ea1a56b5f7784ebbee9
 RMD160 (fs-2.4.13.tar.gz) = 9b87b5271aea8268a55ce98ccf0ca9a4c88925f4
 SHA512 (fs-2.4.13.tar.gz) = fc3c3f5bbc437899ecc862db5354ba06cd1cf4042a46adeb84bec02ccc4d3a82600aa7f4819367eb1a2ed1fba8e2971a4ba6e03f0335cb77693159c7968f6833
 Size (fs-2.4.13.tar.gz) = 179654 bytes
