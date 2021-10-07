@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/07/30 22:47:18 tnn Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:20:29 nia Exp $
 
-SHA1 (kicad-doc-5.1.10.tar.gz) = 985b20fa92c0262f8c8b4e4c468820131a954c58
 RMD160 (kicad-doc-5.1.10.tar.gz) = 758141c196c7c336d6049875c12b241bd4cb4b9d
 SHA512 (kicad-doc-5.1.10.tar.gz) = 7e9d2adf479e0113c569cb22f1f9019685e36cef9697ec6dc0854180a03ac427011ab2da66cab23cb4d1322fd16b75eaec3193c8b60dfe74e893fe7c367c5290
 Size (kicad-doc-5.1.10.tar.gz) = 316075538 bytes

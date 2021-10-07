@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/09/04 16:05:20 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:20:31 nia Exp $
 
-SHA1 (gdspy-1.6.zip) = b4343bf2d33da16ae9277a99ced2a0f3d6a3c531
 RMD160 (gdspy-1.6.zip) = 64b9f1d6c20a8edfbf0ff80816aaa3b2a903c22d
 SHA512 (gdspy-1.6.zip) = 7e7a40efdd6ca9eb9685c0d3d07bc169d8c92d990b386b2c733032d0c6dc0c1bef06daf53b5aa864f752bc132671eab5f0557a4103fe1ec57f1db264030173fa
 Size (gdspy-1.6.zip) = 12568268 bytes

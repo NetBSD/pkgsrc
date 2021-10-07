@@ -1,46 +1,35 @@
-$NetBSD: distinfo,v 1.3 2016/08/30 10:57:35 plunky Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:20:31 nia Exp $
 
-SHA1 (qcad-partlibrary/Architecture-2012-07-09.zip) = dc4a88fbdc1cb1ace14769e7f57f4133b3445b64
 RMD160 (qcad-partlibrary/Architecture-2012-07-09.zip) = a975873f44b63ac508487ce2e6db5bbedb02f9e5
 SHA512 (qcad-partlibrary/Architecture-2012-07-09.zip) = 79b93b34d71c50610af173ced9a5bdaa0d33756e0e5f1d71092dd306fd3446a23a88a0df732471fa5d2b7e555a34ac92d7278ffa9992b9fe150deadfae56db46
 Size (qcad-partlibrary/Architecture-2012-07-09.zip) = 2174974 bytes
-SHA1 (qcad-partlibrary/Chemistry-2016-08-19.zip) = ab1e429d608e327685954403d556cf343ac21e4c
 RMD160 (qcad-partlibrary/Chemistry-2016-08-19.zip) = 96fea8fbadba9ed89e750b38ebbcf74824bf4e67
 SHA512 (qcad-partlibrary/Chemistry-2016-08-19.zip) = 7e055f061807da8f54c751af3db2d9ea0d55fffb4a7599dea59ba176947fb215d8e407e352b049a2106bdc77d79cbcf7533a7208cb4ce86f281d51e9a7c08acf
 Size (qcad-partlibrary/Chemistry-2016-08-19.zip) = 566617 bytes
-SHA1 (qcad-partlibrary/Electronics-2012-07-09.zip) = b9e95cb738c4b160008488faccecca3af0a209a1
 RMD160 (qcad-partlibrary/Electronics-2012-07-09.zip) = 2be0b3dd6a911c1e8bf14e6e17d2c8c64d100f7d
 SHA512 (qcad-partlibrary/Electronics-2012-07-09.zip) = 070563a1532af0df73d5ffecbcf9f8c2fc37c2586c95a0a35cbafb08faee8309a4b87be95e4c5a368e817b090f15b31c723eecef8d3531118718cb065f7d0051
 Size (qcad-partlibrary/Electronics-2012-07-09.zip) = 2133320 bytes
-SHA1 (qcad-partlibrary/GIS-2012-07-09.zip) = ec2251c7691a12f4fd54c9208b294358a9ba6a83
 RMD160 (qcad-partlibrary/GIS-2012-07-09.zip) = 10f0c1237f047ef0356754a7ac67d591cda5b1c8
 SHA512 (qcad-partlibrary/GIS-2012-07-09.zip) = 2b6ea7c075f1bc8420df67b4ef3c30d07ca5d49bb21b0a4c41fe9c684c43dac918d443ed58eef426fd9f1c18d6a144421b6e00eda8f258225889438c43076480
 Size (qcad-partlibrary/GIS-2012-07-09.zip) = 166150 bytes
-SHA1 (qcad-partlibrary/Hydraulics-2012-07-09.zip) = 7faaadcbf45a485f9ddc347e58285ecfa8b7a7c8
 RMD160 (qcad-partlibrary/Hydraulics-2012-07-09.zip) = 2dec0bad756802f666ed8c3d88d7641b40dd3d7e
 SHA512 (qcad-partlibrary/Hydraulics-2012-07-09.zip) = 365b979e6051f6a33a1243634d6174e8a29592fbbe924e10e374dc35ff31574a2de390761df75367a8d4e62ba7ca13bc3893f95e4fd2de19f3af7fea3ff781b0
 Size (qcad-partlibrary/Hydraulics-2012-07-09.zip) = 551062 bytes
-SHA1 (qcad-partlibrary/LRMCircuits-2014-02-05.zip) = 4ca31a08d0d818b1f3b9267616b8535af1d50798
 RMD160 (qcad-partlibrary/LRMCircuits-2014-02-05.zip) = aeeb1c3433245d56b054a43505f714cf3b7632ef
 SHA512 (qcad-partlibrary/LRMCircuits-2014-02-05.zip) = 4d489247a3ce80f2ecd2772448d3b625b6390c7bf9397ecfc3fd052f46cfdecf747689037f5b3a222f27e7b8c27b3a5464231459e849e8a6129af81c5d169f4b
 Size (qcad-partlibrary/LRMCircuits-2014-02-05.zip) = 1009518 bytes
-SHA1 (qcad-partlibrary/MSR-2016-08-19.zip) = c8084a43e9f9765975334d9e35d99cb30adac984
 RMD160 (qcad-partlibrary/MSR-2016-08-19.zip) = 45d1f2aa4058a5b23a7ad9d49bb9a8d53a737977
 SHA512 (qcad-partlibrary/MSR-2016-08-19.zip) = 9c886ba96e9ed4c9189ccc72b4b9fdd4b752d7641995fa023cb668c8e5f070b2b6f49e8fc9283a22daf332ef4800190a7ac558d7b8e0f55661ad465975f1ec84
 Size (qcad-partlibrary/MSR-2016-08-19.zip) = 36196 bytes
-SHA1 (qcad-partlibrary/Mechanics-2012-07-09.zip) = 84aa5a01e3d7d0d332b0191cdd1a2bc83b008354
 RMD160 (qcad-partlibrary/Mechanics-2012-07-09.zip) = b72dbc411ba2300ef3651fb94b56c8c0631782cc
 SHA512 (qcad-partlibrary/Mechanics-2012-07-09.zip) = 5fcb5e0dd02fd83693021ffb269aba08858e9bbd569d899be05d4f8d92097ecb376db3d04bd79225d06a94755bd051a0d3ecb9d8e217dacd8a4796c432c01d60
 Size (qcad-partlibrary/Mechanics-2012-07-09.zip) = 17037672 bytes
-SHA1 (qcad-partlibrary/Misc-2016-08-08.zip) = 17933c8d78a05280471b4f9e7400b780f82b775c
 RMD160 (qcad-partlibrary/Misc-2016-08-08.zip) = c64e249ad3c3eaca69018e33fd77f8ac765c98cc
 SHA512 (qcad-partlibrary/Misc-2016-08-08.zip) = 29a67bbc0553f7acd56c9eaee1d19db7459da75d04c1a9a4505323ae8d16360318095a902cb31881149edd6ab49494c075c86029dd17307b6469979db07e8cb6
 Size (qcad-partlibrary/Misc-2016-08-08.zip) = 151998 bytes
-SHA1 (qcad-partlibrary/Processing-2016-08-19.zip) = 0a4895da6ffe31e7896aa797ce28b6cc196ca796
 RMD160 (qcad-partlibrary/Processing-2016-08-19.zip) = 20125691bf5af6aaa622a89abb15229a2c893fd2
 SHA512 (qcad-partlibrary/Processing-2016-08-19.zip) = 245058a032d75539f2d80a1ddbeec035605b12e8940e726cb19b663af7d3b5a0095a4669ff3a475f47eb2777561f8c5e52bc2a6cd7025128749f20ccf00b4696
 Size (qcad-partlibrary/Processing-2016-08-19.zip) = 2415061 bytes
-SHA1 (qcad-partlibrary/thenounproject.com-2012-07-09.zip) = 4b87f7b0f08ed8d193ab1fd9e48cd64381146f60
 RMD160 (qcad-partlibrary/thenounproject.com-2012-07-09.zip) = 45a1cde9208edab6ed18d7a13e4981108a6b467a
 SHA512 (qcad-partlibrary/thenounproject.com-2012-07-09.zip) = 613d3379279545cdfd7c762b7782113491121abc03424b9c8cf63f02520b39602797351f528b26d75c6d80a2fc7266edaec9efded56fdbd54ad0cbb868021dfd
 Size (qcad-partlibrary/thenounproject.com-2012-07-09.zip) = 3654955 bytes

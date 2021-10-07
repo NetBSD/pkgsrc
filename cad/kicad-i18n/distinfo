@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/07/30 22:47:18 tnn Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:20:29 nia Exp $
 
-SHA1 (kicad-i18n-5.1.10.tar.bz2) = 2bd3ea16fb78db575305a541106d73cd1fefcc74
 RMD160 (kicad-i18n-5.1.10.tar.bz2) = 2e4a2ae0b3aa1a474a9afc4213c19f0d64006a65
 SHA512 (kicad-i18n-5.1.10.tar.bz2) = c40d170ae247f376da03159eeddafbbb1828612ce274714f6111f1be16d122808e7ecdbd3d79dcf90f13f43ed55d603055eafcaf69cab7323367db711631f789
 Size (kicad-i18n-5.1.10.tar.bz2) = 2934783 bytes

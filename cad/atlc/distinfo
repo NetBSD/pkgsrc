@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 00:21:15 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:20:26 nia Exp $
 
-SHA1 (atlc-4.6.0.tar.gz) = 4c2185e17812925351345465094e2036fefa9724
 RMD160 (atlc-4.6.0.tar.gz) = 1923ed83762fec124662c7a628c337f46857ca78
 SHA512 (atlc-4.6.0.tar.gz) = 270c13473a8e9613a12bb743396f732a37c8adc77a3c3ff7055e884aea3a42824482035ea432e627c435dda9332dd2b9cf1e77736f2fe8225a238e11a3e69f81
 Size (atlc-4.6.0.tar.gz) = 2445849 bytes

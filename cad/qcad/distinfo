@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.39 2021/09/19 15:35:40 gdt Exp $
+$NetBSD: distinfo,v 1.40 2021/10/07 13:20:31 nia Exp $
 
-SHA1 (qcad-3.26.1.0.tar.gz) = 7bfc33e7a26a2f0f99f64ac120b110d3bd67aa3d
 RMD160 (qcad-3.26.1.0.tar.gz) = 2c764bd8dd126e3084fc4291cea0fcd3df3d7e7a
 SHA512 (qcad-3.26.1.0.tar.gz) = 493b12acc207c2cfa781cbba29922252a727e61843195f504b8001169c3fbdadffc182adb44eb5793a2747986223f690cf553d5097b0f96b42b5b787dcd7407a
 Size (qcad-3.26.1.0.tar.gz) = 34844599 bytes

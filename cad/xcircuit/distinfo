@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2020/02/15 07:30:06 mef Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 13:20:33 nia Exp $
 
-SHA1 (xcircuit-3.10.17.tgz) = a11c4ac14fecfaeb092e3e5e683100ff98f701aa
 RMD160 (xcircuit-3.10.17.tgz) = f9d94890ed9760e7ab62bd6bc44822b2b3651239
 SHA512 (xcircuit-3.10.17.tgz) = 0df4730adfd54baf8be480a94ecfa087c7885beb638e69ff29335320f73e284458f7762ddaf13f8521e1dcac01d7e5beec48f545da8868fd90b6f79f803ae165
 Size (xcircuit-3.10.17.tgz) = 1616440 bytes
