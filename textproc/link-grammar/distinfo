@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/05/16 19:57:35 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:01:24 nia Exp $
 
-SHA1 (link-grammar-5.9.1.tar.gz) = c6f345e6fa189e0095c4c7e707a8efb1746c0ee9
 RMD160 (link-grammar-5.9.1.tar.gz) = 658113bb0125a8fe8c6fa6d145dcd23a9e02d6bd
 SHA512 (link-grammar-5.9.1.tar.gz) = c8d8bc99ddd6f6190ebcb24fcafc79497c3eeab1deb3099691f55c735a0a607a8372a8dca5cd86ce7c20cd3a45e4f1cbf91bef39dc781a5b5a2246006b4f601e
 Size (link-grammar-5.9.1.tar.gz) = 3809872 bytes

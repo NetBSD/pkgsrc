@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/06/23 20:15:47 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:02:05 nia Exp $
 
-SHA1 (PyICU-2.7.4.tar.gz) = 666eb8df1f56b27c022f3af2b3e7f5aad7c39ffa
 RMD160 (PyICU-2.7.4.tar.gz) = 99a149ca6ac79c5f7915542f156eee664b70dc90
 SHA512 (PyICU-2.7.4.tar.gz) = b1252f04c162525b607f28704629389a0765961eb3b8d8c7e67a141f9ecbe6d420cfdd043bc945134db8df550cd58316c08a3ac9c30192e04b0710ad2bc21c1d
 Size (PyICU-2.7.4.tar.gz) = 298560 bytes

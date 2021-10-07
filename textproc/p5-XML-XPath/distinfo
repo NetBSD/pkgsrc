@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2018/10/20 13:20:19 wen Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 15:02:01 nia Exp $
 
-SHA1 (XML-XPath-1.44.tar.gz) = 5eacae3028a3c250a5667d4b56ba3678ccbd0ab9
 RMD160 (XML-XPath-1.44.tar.gz) = 6fe310b4748917203ce0a0b168d1c5d0edd4c76c
 SHA512 (XML-XPath-1.44.tar.gz) = 9314523baa55b48b8e684fbf9cc53006ef39829e2bcbd61a432508a96946c50384dff7eba47bd9f54aadc67c12fae6c1219104b017063d23ec3ee350a67eb12e
 Size (XML-XPath-1.44.tar.gz) = 55903 bytes

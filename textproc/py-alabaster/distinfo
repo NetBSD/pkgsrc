@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/10/07 10:20:22 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:02:06 nia Exp $
 
-SHA1 (alabaster-0.7.12.tar.gz) = 36c11bd5d8e99e2009b643b7f6e91bf2a0fd573b
 RMD160 (alabaster-0.7.12.tar.gz) = 9390c073a8df0d0c59014318281be0e7ff6bf336
 SHA512 (alabaster-0.7.12.tar.gz) = e3bfd0c92ce01f08d5e6d9dc1ef0967ca1f54827e08756f4a0ba7be8d3b8bec7f2e53a169b831ff5ce2d2548f7f52c6e518bcc513e49bb3e4c38274293aebbac
 Size (alabaster-0.7.12.tar.gz) = 11242 bytes

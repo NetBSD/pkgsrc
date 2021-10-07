@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/08/24 09:35:51 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:01:47 nia Exp $
 
-SHA1 (Text-Diff-HTML-0.08.tar.gz) = c74341de779bfefd31f01ff311cd32a066e977d4
 RMD160 (Text-Diff-HTML-0.08.tar.gz) = 0339eda6b889d4d43b097197a58c458972583968
 SHA512 (Text-Diff-HTML-0.08.tar.gz) = e5a7fe71ec74a71916f74b5ccbd83d67e4a260a5744a39101c8bb47057fd2dfa34b1068e1499ffcf543bff672519c22b8caf9a325ec772d9ec5b1c5ce5a11c78
 Size (Text-Diff-HTML-0.08.tar.gz) = 19182 bytes

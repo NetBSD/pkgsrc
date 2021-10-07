@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/17 21:07:03 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:11 nia Exp $
 
-SHA1 (guessit-3.1.1.tar.gz) = 59d314e60d7aaae74b9a5faec74c802d66555702
 RMD160 (guessit-3.1.1.tar.gz) = da11c5728b3b6d16b5874efc02aaff4d60e808b9
 SHA512 (guessit-3.1.1.tar.gz) = 6a02c4024d286cf49c62e072bcb616a052cec1ce51d364b17cea1768504c4ecebba914a3bf5beda9a61dca0e7764c8642cb5b918a20fb25cdd7120ad1667825f
 Size (guessit-3.1.1.tar.gz) = 147605 bytes

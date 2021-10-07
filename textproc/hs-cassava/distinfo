@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 06:10:39 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:05 nia Exp $
 
-SHA1 (cassava-0.5.2.0.tar.gz) = 8288560c1b1328dc930da8e850439824c2842277
 RMD160 (cassava-0.5.2.0.tar.gz) = 1913809650916b73dd6cab17d4374666bb6f83c4
 SHA512 (cassava-0.5.2.0.tar.gz) = f7f3fc2ebf58491847fb20b21ecf18595933d296bfd4c48249d35c52e72988c4e2758d7a6d2095a9edb3bed8e154a11170920a7c08262270c9f60cb853085383
 Size (cassava-0.5.2.0.tar.gz) = 37411 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/03/07 18:36:05 nros Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:01:22 nia Exp $
 
-SHA1 (libplist-1.12.tar.bz2) = 48f071c723387637ef2cc2980d4ca0627aab067b
 RMD160 (libplist-1.12.tar.bz2) = c1d6171766329dd809013c9061239636f8cb3998
 SHA512 (libplist-1.12.tar.bz2) = 8af40d8f457ca9a8a9061e9429698c696200714cc05dcbe981e900106c52cd5222edb9dd8d8976bccd0c8997508ed14fb2e10f0ed29383f2ad4f7c5eb7eec0b3
 Size (libplist-1.12.tar.bz2) = 384321 bytes

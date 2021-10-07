@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 02:00:16 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:02:48 nia Exp $
 
-SHA1 (yamcha-0.33.tar.gz) = 4ee6d8150557761f86fcb8af118636b7c23920c0
 RMD160 (yamcha-0.33.tar.gz) = ac21fa16a45efa40775d426cd6229f612a7aa21e
 SHA512 (yamcha-0.33.tar.gz) = 22858a16f877f984fb955a39c625a8231b2c867d58b152d7c8c8626da4e5480bb2cf02e6bb8792e227d283f69d7f49aaed7b053307a55d8a4cd0b42e6d0bfca9
 Size (yamcha-0.33.tar.gz) = 488670 bytes

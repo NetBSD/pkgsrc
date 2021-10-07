@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/09/02 13:19:04 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:01:36 nia Exp $
 
-SHA1 (Lingua-Stem-2.30.tar.gz) = b20f7193a2ca4c7759c4fcd6d53a50f574b39c3e
 RMD160 (Lingua-Stem-2.30.tar.gz) = 832970268272498d8748ed8ace0e3d1946af4302
 SHA512 (Lingua-Stem-2.30.tar.gz) = 3cbd5df1254a9d7f58481117a05fbe7e8e8c19e33df173ef3bc22334eb9797bda44c402807e2ae77410e152c5cee8215cff36bb65d1f869fa4ae1f8a028af667
 Size (Lingua-Stem-2.30.tar.gz) = 1615868 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/01/14 14:38:40 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:02:28 nia Exp $
 
-SHA1 (csv-3.1.9.gem) = cf3f59a40dd3eafb92452a6651b469e1f19bbbe3
 RMD160 (csv-3.1.9.gem) = 38d6613988b065287a9c95a166a194aaff3a7c8e
 SHA512 (csv-3.1.9.gem) = a8ea1a73143b76b6de5220272b7ddbc36e44054f1b318aedba8df6f922640241318884d69429de035d3e73b7be491c384157469205b8f4cf6af01568a45daf71
 Size (csv-3.1.9.gem) = 60416 bytes

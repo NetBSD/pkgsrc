@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/08 18:21:30 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:09 nia Exp $
 
-SHA1 (stringsearch-0.3.6.6.tar.gz) = d7c34aa3314ec63096d0aac7ef2a47114fb1b980
 RMD160 (stringsearch-0.3.6.6.tar.gz) = 2904a2dd2fa538fe6dbbfcc805706ab315553684
 SHA512 (stringsearch-0.3.6.6.tar.gz) = a642934981318b399a7fcfbf0134d5d02d8d072591bcfed7abc57bf6474b86d6c7bc6cf11f44ace6db579a0297877850fd9049be69b61f4f9964cd72455b14e0
 Size (stringsearch-0.3.6.6.tar.gz) = 39679 bytes

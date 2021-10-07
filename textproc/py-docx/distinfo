@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/06/07 08:36:00 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:02:09 nia Exp $
 
-SHA1 (python-docx-0.8.11.tar.gz) = 171c4c00aa4dcdd39d8c4b7d6b0ce74e11db926c
 RMD160 (python-docx-0.8.11.tar.gz) = c243f297e3862493e3b6e6e801909652757b7779
 SHA512 (python-docx-0.8.11.tar.gz) = 6e32c75aa28da779f548dfe6902f95299aaee1936d7ce463742b2d1c4374148e947a4fcc7efd785696b2bcf4d7faaa4f769e88c91e8ec7c6e048d6b1fe67d61e
 Size (python-docx-0.8.11.tar.gz) = 5561613 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 15:59:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:01:07 nia Exp $
 
-SHA1 (hxt-unicode-9.0.2.4.tar.gz) = 8ece2631570c2b55dc29e83728ff676c38fffe5f
 RMD160 (hxt-unicode-9.0.2.4.tar.gz) = 91f286ef3ffb314b0c0a64ed863cc75bd2cd13cd
 SHA512 (hxt-unicode-9.0.2.4.tar.gz) = 4daab9c754e05e15bb0f32bce4ccc0c581c6d8dd4ca4d4868ca7b756a6e40cc9ae8890fc3c925b63bb419db0354229ca6e61fa96bec048f0c61b3ebb43d212bb
 Size (hxt-unicode-9.0.2.4.tar.gz) = 14010 bytes

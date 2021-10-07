@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/07/19 07:41:36 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:01:19 nia Exp $
 
-SHA1 (jo-1.4.tar.gz) = b2fba63dd7f71f4b0dc2cc33e69362499acd9312
 RMD160 (jo-1.4.tar.gz) = ae05e4bcd9955833c20670cb7ce26351b6e55ee0
 SHA512 (jo-1.4.tar.gz) = c283b25e76fa06842c4f7d8ae8d94b207981d92a1bd4a064631e0646bdeedc06c1a00dddac405a455b27bda5eb34aaa7dc6d886ccf750741fd4d7312f692d169
 Size (jo-1.4.tar.gz) = 144596 bytes

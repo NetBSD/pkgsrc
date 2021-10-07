@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/11 19:04:15 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:07 nia Exp $
 
-SHA1 (colored-1.4.2.tar.gz) = f6c041bade22c1b9aa21adedfae485b27b408c82
 RMD160 (colored-1.4.2.tar.gz) = 0e45f2009c5a3ab2f8ca81cdbcc5b223346588e4
 SHA512 (colored-1.4.2.tar.gz) = cc3764ae19d5b2f846592b4b5dd7ed60f211a1896a52e453a9949b961cb6a1fae65ccba8bf50f2f959364851027970be1ede820b2766002d9df1e9a4a0080ad7
 Size (colored-1.4.2.tar.gz) = 56694 bytes

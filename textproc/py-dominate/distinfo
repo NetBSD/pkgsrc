@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/16 20:52:35 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:02:09 nia Exp $
 
-SHA1 (dominate-2.6.0.tar.gz) = 6a63a03d0f9acff000528bf0cf76fe9bdaeedf77
 RMD160 (dominate-2.6.0.tar.gz) = 32b5348da55ff231e149b4e64c26ab18c891f327
 SHA512 (dominate-2.6.0.tar.gz) = 1bb690d05a290753cabac045160500717eda8c7610ce88d2b88a490abaa64b2cdb07067c433fa6a27110ec6cb67d884d335663217391e61215ac8eb30003d8e6
 Size (dominate-2.6.0.tar.gz) = 35034 bytes

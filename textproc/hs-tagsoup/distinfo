@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/01/02 15:19:00 pho Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:09 nia Exp $
 
-SHA1 (tagsoup-0.14.8.tar.gz) = 3b2f03272bf8bd69b69f21d69df10cf12d938c8a
 RMD160 (tagsoup-0.14.8.tar.gz) = 65161d862578abff0e703f38c8a747cd7eae8c21
 SHA512 (tagsoup-0.14.8.tar.gz) = 2fc0adfc43402e537dac043682d876cae29834ebe9bcec7b53cc26ba769324b987be9cd86f9174f52344635342b7ff8f6cc2186be92c5bf4b359968f3cdd17e4
 Size (tagsoup-0.14.8.tar.gz) = 43894 bytes

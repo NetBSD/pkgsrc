@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/11/27 19:49:45 jaapb Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:01:30 nia Exp $
 
-SHA1 (ocaml-csv-2.2.tar.gz) = f10de1e5bde9e805258bac114e5023c1e6604663
 RMD160 (ocaml-csv-2.2.tar.gz) = 3053f42030c1cb2775f1dd56302e8927df4bdf74
 SHA512 (ocaml-csv-2.2.tar.gz) = 733f33482d4b26f3046a205808dbbb66e0414ebc0c32fa9529b647828f9ed15cfdee00634d61959ae33ad99a41ac9193c25e6ecf154edf99a8344a5ddde75ccf
 Size (ocaml-csv-2.2.tar.gz) = 45069 bytes

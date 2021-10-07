@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:55:05 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:00:37 nia Exp $
 
-SHA1 (R/readxl_1.3.1.tar.gz) = 65d5ef4a56acbedac01dbdf115f93e647ea6da84
 RMD160 (R/readxl_1.3.1.tar.gz) = 1479cba0dd11e4db4ba3f04f43e6fbbdae75bd95
 SHA512 (R/readxl_1.3.1.tar.gz) = befeb57b4b5eeb934e08927aca0c0026591d264c34a029f2d77509b60d466c7f8e5df7d11bd38865ab1010042eb30f93363bf0c6fce608ae724f1ccb0b402ac2
 Size (R/readxl_1.3.1.tar.gz) = 2056165 bytes

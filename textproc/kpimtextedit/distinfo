@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/07 12:28:31 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:21 nia Exp $
 
-SHA1 (kpimtextedit-20.12.3.tar.xz) = 8281e389cea030fb20628a9843df2ff5ac757c06
 RMD160 (kpimtextedit-20.12.3.tar.xz) = af938e53a86405fa32a791cc5048b0170071d8bd
 SHA512 (kpimtextedit-20.12.3.tar.xz) = 8a62f79e909d4d434766151b5a53f024252fd6feca94bead809ed5f2a5b81a544563bff15afdcc3c9b280ba51e7f96bd643b490d88c0e28dd7fa378168cb1469
 Size (kpimtextedit-20.12.3.tar.xz) = 201292 bytes

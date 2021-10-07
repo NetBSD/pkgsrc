@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/08/10 14:43:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:15 nia Exp $
 
-SHA1 (nltk-3.5.zip) = 8cacfc7a0f98c1a391e256483999651da8736213
 RMD160 (nltk-3.5.zip) = e9c69bef8b27bb6e60f18a1184bc1a5f68db05c6
 SHA512 (nltk-3.5.zip) = 93cb2c031bbb6d2f20a3bc739f6a2760b9073483834506b5b828f4562fd41435f30339b998d158ac90792b7908d60ebff31e9ba49b4ed4e8c38bdb0b753fc70a
 Size (nltk-3.5.zip) = 1433531 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:59:18 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:00:39 nia Exp $
 
-SHA1 (aiksaurus-1.2.1.tar.gz) = b9e98650bc5257673d5b1507f3e0edbc0cb6a0b5
 RMD160 (aiksaurus-1.2.1.tar.gz) = 0f46c121adb6222f0b4709787162cb6f0a0ff35e
 SHA512 (aiksaurus-1.2.1.tar.gz) = 48591850f28f1a8f4b4986df14090ef7bd57cbfbad739cb0013db021f6f5bcb3c592b38e36774735499e27b9e99330504f8d9c6022158e25469cbc81d13f7463
 Size (aiksaurus-1.2.1.tar.gz) = 928893 bytes

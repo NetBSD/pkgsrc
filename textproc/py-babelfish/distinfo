@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/25 19:00:06 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:07 nia Exp $
 
-SHA1 (babelfish-0.6.0.tar.gz) = e2d584632e7ca0ce209b2e4af96c848417ee73d7
 RMD160 (babelfish-0.6.0.tar.gz) = 3a569730b50de86eac880f5874d983e5dcc0899f
 SHA512 (babelfish-0.6.0.tar.gz) = f5b6c1394ba3106773ceafd63f65e0a4df94ff7860069cdba1d4bbe91bccf528be4ad0eb1acdd00ce336afcd61f29e71910baab511a1fc26ded6aac7e10fe9cf
 Size (babelfish-0.6.0.tar.gz) = 87807 bytes

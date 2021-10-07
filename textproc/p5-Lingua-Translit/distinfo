@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/18 18:35:01 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:01:37 nia Exp $
 
-SHA1 (Lingua-Translit-0.28.tar.gz) = fad2b240a131550d77b3c00e6eff544b781a552e
 RMD160 (Lingua-Translit-0.28.tar.gz) = eeea175766ffd4e71816ac5c2300c2b7506d2770
 SHA512 (Lingua-Translit-0.28.tar.gz) = eb6d6fb6cda3b4c73fffc3ccc907453b3f285cf3e1d7e3349c971c55af855c301bdb1fb0e9d6dbab77d6f036740ce5aebe28c6d7f04f812460b9e2b6f53d4bb8
 Size (Lingua-Translit-0.28.tar.gz) = 110433 bytes

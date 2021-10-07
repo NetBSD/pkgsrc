@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/10/15 17:28:16 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:02:23 nia Exp $
 
-SHA1 (textile-3.0.4.tar.gz) = 5d13861336c05a62ccdd18a1b742247fd8560bc5
 RMD160 (textile-3.0.4.tar.gz) = 72ea615bc87a17273a68b504a82990f45b757dbd
 SHA512 (textile-3.0.4.tar.gz) = db56bd1cce52cc87a2bed1f8e0229fc6e0232fe95c46172fd8daf00b79a96e6e246adee057d5d0540283c322a87cc9c3990cfa5dfacc2468c5e2c907ffa17a03
 Size (textile-3.0.4.tar.gz) = 49890 bytes

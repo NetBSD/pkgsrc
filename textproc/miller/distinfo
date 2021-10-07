@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/03/24 10:31:04 fcambus Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 15:01:29 nia Exp $
 
-SHA1 (miller-5.10.2.tar.gz) = 56a69e0f1b7d3f6f296c410d7734446975c2c155
 RMD160 (miller-5.10.2.tar.gz) = a11720c8ed61f52e0725aca847b16b14f10a7920
 SHA512 (miller-5.10.2.tar.gz) = be40611b055d94f3b0ef75b35dfd242dd4942dce3292bb01b48a6a12f9e4c09fc43bb9d0650902c7aa13328d9a2bbcea4da2964af58d07f39ae63b34712a45f5
 Size (miller-5.10.2.tar.gz) = 6192382 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.36 2019/12/18 12:43:40 joerg Exp $
+$NetBSD: distinfo,v 1.37 2021/10/07 15:02:47 nia Exp $
 
-SHA1 (xmlrpc-c-1.51.04.tgz) = 0c085e210d07b2e2d8ce877e24c370a7b3df2074
 RMD160 (xmlrpc-c-1.51.04.tgz) = c85a1ec7bdf5bb4a49b8d0445b7ab1a94b53bd66
 SHA512 (xmlrpc-c-1.51.04.tgz) = 93ba49606b651d69ba5cc85a62a96fad550e98fb38efcaf6aed316933d875921e0a0885261aa9f417311d35797e8d0a0e5a6281359d28026fc2ff5712563a274
 Size (xmlrpc-c-1.51.04.tgz) = 6656000 bytes

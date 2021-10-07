@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/04/05 15:43:19 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:01:59 nia Exp $
 
-SHA1 (XML-SAX-Base-1.09.tar.gz) = bf2c97ed35d5de09015d5a6f6ab8a8ee50aedd4a
 RMD160 (XML-SAX-Base-1.09.tar.gz) = db0deffe2536d7e96b00010a8bb87f2d56eac36b
 SHA512 (XML-SAX-Base-1.09.tar.gz) = 72a34fd2b0375222cad3a42a0e2d92f793d7a2ac27d831a8a8d3322fdc75ba246ca53c33cdc0fbade81f3a96ad977ebf5d4cddc6d75d76be79b2e655f316d532
 Size (XML-SAX-Base-1.09.tar.gz) = 28215 bytes
