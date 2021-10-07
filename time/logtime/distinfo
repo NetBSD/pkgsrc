@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:31:38 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 15:03:58 nia Exp $
 
-SHA1 (logtime-1.2.tar.gz) = f72658d64a36799ea1e0ea2a469d18697b1f0605
 RMD160 (logtime-1.2.tar.gz) = 4fd00b4f202abbfb2aa438d16321c330e038b69b
 SHA512 (logtime-1.2.tar.gz) = 2eabb562dd1fbeefa0c357a57a0e03efa665d434e86742bd1209130c5b3e94953b4987778cf44afc4ae13403d8c26fb5c6f08d74e3e718d8b92c3d6292c218bf
 Size (logtime-1.2.tar.gz) = 1770 bytes

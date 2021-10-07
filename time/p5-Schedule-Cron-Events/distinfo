@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/07 17:53:32 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:04:05 nia Exp $
 
-SHA1 (Schedule-Cron-Events-1.96.tar.gz) = 60718b3f97d11396606962240ceae4ce7e610140
 RMD160 (Schedule-Cron-Events-1.96.tar.gz) = 17f705c93b118db9192243bb19e0577a38e1c9ba
 SHA512 (Schedule-Cron-Events-1.96.tar.gz) = d8aa687da7812f3f6aaf685609965931fc8d41cc0998bd6ea54b81a3d12403806be365fd4ec35f6d447c1baf225c6434f731ccf5c58f8dbb27c0ca4784803a52
 Size (Schedule-Cron-Events-1.96.tar.gz) = 25810 bytes

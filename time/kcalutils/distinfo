@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/07 12:28:31 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:03:57 nia Exp $
 
-SHA1 (kcalutils-20.12.3.tar.xz) = 738e0eedc986dc64611caadb4532f9598ebb2fde
 RMD160 (kcalutils-20.12.3.tar.xz) = 308dae4d3d2b24b8abd61a570c81b3b0b69aea0b
 SHA512 (kcalutils-20.12.3.tar.xz) = a25d85dcc2e7ece08e9b1e4299954977150ea0e4422f1e9062a86a4829f59a356417bc6cea3f242310e7645f88bd66f8335a8b07b839ef58df1c00abf26558df
 Size (kcalutils-20.12.3.tar.xz) = 324512 bytes

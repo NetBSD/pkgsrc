@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/05/12 18:20:07 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:04:12 nia Exp $
 
-SHA1 (tzlocal-2.1.tar.gz) = 7d2d590f68849e6b6371210bd808b40ec5619faf
 RMD160 (tzlocal-2.1.tar.gz) = 19f7979e221659e3f90300656e01f483733433c1
 SHA512 (tzlocal-2.1.tar.gz) = 5419f3316dfcbf0355cc6f0790454fe6cecfa8b1ae17bfa7bf8aff89b0af3e63c94ffe9c22b11f612e53826a33e7179ff71bc2a86f6a358cdff36c7ae34e2453
 Size (tzlocal-2.1.tar.gz) = 22462 bytes

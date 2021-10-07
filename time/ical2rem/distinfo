@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:07:00 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:03:57 nia Exp $
 
-SHA1 (ical2rem-0.5.2/ical2rem.pl.txt) = 3fbb96468deaa3287b06c6ae304e6dcc34e9a61e
 RMD160 (ical2rem-0.5.2/ical2rem.pl.txt) = 27391ac58f9d6948fbf1c1c4abbcd14e6c82767f
 SHA512 (ical2rem-0.5.2/ical2rem.pl.txt) = fa4d8d9494b66ca0a7364d629b83a53311291013406a78b5721de322802b8a156ef31c9f929fc1e55172a6223776a4f10a4bdaa0bc7f126063a312fd0ee4ca4a
 Size (ical2rem-0.5.2/ical2rem.pl.txt) = 9372 bytes
