@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2021/05/24 19:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2021/10/07 22:40:58 nia Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -18,6 +18,10 @@ EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf awk gmake perl:run flex
+
+# "This run-time was supposed be compiled with all code below 2Gb,
+# but the instruction 'allocate_tt' is located at 00000001c586f34c."
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
