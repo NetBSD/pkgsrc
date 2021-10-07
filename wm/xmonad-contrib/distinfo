@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/04/25 14:32:12 pho Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:05:14 nia Exp $
 
-SHA1 (xmonad-contrib-0.16.tar.gz) = 54e7ab28b23773e2c904bd9fe8532c84529f14a9
 RMD160 (xmonad-contrib-0.16.tar.gz) = 1618b5a57ff99c2b53cc0f934d8950adf8874a09
 SHA512 (xmonad-contrib-0.16.tar.gz) = 22a18b4045cbfca0229cbf6c0bf1dfa595cbffbe6b82fd58b1fcf941cbfd306642160995b55859cead3cf574df696d2a3cea6507cac4d5c7c58cf09b3a86bc25
 Size (xmonad-contrib-0.16.tar.gz) = 540237 bytes

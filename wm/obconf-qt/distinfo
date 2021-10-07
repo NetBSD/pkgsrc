@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/20 18:16:33 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:09 nia Exp $
 
-SHA1 (obconf-qt-0.16.1.tar.xz) = 0ed7d802bb84746476e51f9ca5f7150dae35ebbd
 RMD160 (obconf-qt-0.16.1.tar.xz) = 4dfc15a344c4372481c82f84ebc4615fc74f95e7
 SHA512 (obconf-qt-0.16.1.tar.xz) = 863ae74e0ca3191a2e9471f722eff1ed9b55cc2fe1851c6bc0a52610682e1aa6087a45b34d3bc79ab26d42340c7f8aa37544a6a83b1775a31f79277174667f7f
 Size (obconf-qt-0.16.1.tar.xz) = 102328 bytes

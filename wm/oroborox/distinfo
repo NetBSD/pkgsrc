@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:07:01 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:09 nia Exp $
 
-SHA1 (rox/OroboROX-0.9.8.tar.bz2) = 73b4565fce7c178a0a458cd432fcd6d4e65fec6e
 RMD160 (rox/OroboROX-0.9.8.tar.bz2) = e1175bbbe20275be4f3440077832eaca470b7afa
 SHA512 (rox/OroboROX-0.9.8.tar.bz2) = 6968f4263b39fff6547f0dd261e6882ab855cbbc91fe49c28bef1f6ab8dbb994e03f1cda2dc8eb6deec4051e04b6e026a3826f428c6f6e3ec09a39523345c7a4
 Size (rox/OroboROX-0.9.8.tar.bz2) = 463443 bytes

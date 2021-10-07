@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/10 19:22:36 plunky Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:05:07 nia Exp $
 
-SHA1 (icewm-1.4.2.tar.bz2) = d1f9af531fec7beaa334db9c0e4764b9e40bbacd
 RMD160 (icewm-1.4.2.tar.bz2) = 6aaabad0c235901556951c9d88178adf15e29f51
 SHA512 (icewm-1.4.2.tar.bz2) = 0d227d75d2e3e6e5314eb0990375b85a34496e61e8b504ee023decb52b0c3a20bfd65c0d491b738d3742ddf3f21acfabfc8e4d43df51d137f568580b6c5ed0cd
 Size (icewm-1.4.2.tar.bz2) = 1731772 bytes
