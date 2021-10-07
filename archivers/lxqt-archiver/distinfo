@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/20 18:38:16 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:06:02 nia Exp $
 
-SHA1 (lxqt-archiver-0.4.0.tar.xz) = 6cd861675ecb674f245f410745cdf9c26585ba55
 RMD160 (lxqt-archiver-0.4.0.tar.xz) = b72ab6da1c50981dc1f1d4c30c2a1a503f53c136
 SHA512 (lxqt-archiver-0.4.0.tar.xz) = e1b323cd118af3726009e153c4f9766ec53b29fa0280530da16e2101d36ec45b55de0fe3d87c1386a4e5b3d88712fd209659b4ebb9344af689812600ae136ed6
 Size (lxqt-archiver-0.4.0.tar.xz) = 167124 bytes

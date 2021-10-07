@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/02/16 00:35:19 mef Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:05:58 nia Exp $
 
-SHA1 (cpio-2.13.tar.gz) = 9568076fd23fb9bc00d32ee458bb2231d5254e40
 RMD160 (cpio-2.13.tar.gz) = 6eb5b4a56bb9bd4c6f7511ed0d506029ca0f131c
 SHA512 (cpio-2.13.tar.gz) = 1e1ca6b3e3e64f206f9d828a152d6b4f8f6974de7a953ff96e02698b1c3c2c777c2111450e6a71c0693e29ca8bc01c3dda9f5e829b8e3221f647414df49dff6a
 Size (cpio-2.13.tar.gz) = 1889402 bytes

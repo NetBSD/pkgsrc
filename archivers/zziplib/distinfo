@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/01/17 09:36:45 otis Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 13:06:14 nia Exp $
 
-SHA1 (zziplib-0.13.72.tar.gz) = 330cab1c477196d2d26d30d5f4cb031647fd4597
 RMD160 (zziplib-0.13.72.tar.gz) = d1bcdbf0df1e1eb222c31b8d4c659bb1a45744f4
 SHA512 (zziplib-0.13.72.tar.gz) = 4bb089e74813c6fac9657cd96e44e4a6469bf86aba3980d885c4573e8db45e74fd07bbdfcec9f36297c72227c8c0b2c37dab1bc4326cef8529960e482fe501c8
 Size (zziplib-0.13.72.tar.gz) = 1162175 bytes
