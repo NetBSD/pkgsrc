@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/12/09 15:08:29 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:12:07 nia Exp $
 
-SHA1 (djview-4.12.tar.gz) = 66dca4f966b9e50b160ff2b0b6e05b9ac1bdb09f
 RMD160 (djview-4.12.tar.gz) = 92108c2c92b2593cb85dc288a578ed7440671838
 SHA512 (djview-4.12.tar.gz) = 0314c409b5474bb5bbe81aa2dc44b24507dac6f7cfde8d275a9d3bb1c2046b6ce2173543618ab7cbb702dbe94d7b2d85d3e19df09fafea73bb8662ee2ba89a01
 Size (djview-4.12.tar.gz) = 713842 bytes

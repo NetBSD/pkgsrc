@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/13 20:34:45 youri Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:01 nia Exp $
 
-SHA1 (arc-theme-20170302.tar.gz) = 66bdef3f37e70bd6cb3d62978d96d7db8d3f967a
 RMD160 (arc-theme-20170302.tar.gz) = c250d7153048d4bbb29ced81593505838668e1df
 SHA512 (arc-theme-20170302.tar.gz) = 99408a7c4db2bd2d81453e308ae5d9bc9bfda4f11e57191936f985de2937debff76c4d1f37a97ac8f5ad3751401ee8ad02457e4558b9c4aedc2bfeba1736ef03
 Size (arc-theme-20170302.tar.gz) = 1534152 bytes

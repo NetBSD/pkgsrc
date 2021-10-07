@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/01/29 17:35:30 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:12:50 nia Exp $
 
-SHA1 (qimageblitz-0.0.6.tar.bz2) = 32bcda9adb262ef49c62e3a7adbfcdeec98f72e4
 RMD160 (qimageblitz-0.0.6.tar.bz2) = 5720d4e18dd7fdcd532e6dc9a2d2fe06116e7fef
 SHA512 (qimageblitz-0.0.6.tar.bz2) = dbd506c01622824efdec69640eb95e737d7848fa15d33351084a6499ca2321d7bc08e080d1e443f8ab9015cd2967c10d9b5aa2f3c6eaa7558153821c46133af9
 Size (qimageblitz-0.0.6.tar.bz2) = 57617 bytes

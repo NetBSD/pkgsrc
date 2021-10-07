@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 21:34:06 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:12:26 nia Exp $
 
-SHA1 (lib3ds-1.2.0.tar.gz) = 49614218c4c11572887beefaa34d23f72ef70a2c
 RMD160 (lib3ds-1.2.0.tar.gz) = 3e0401e36b545c2a54213ecb2ea3216360450562
 SHA512 (lib3ds-1.2.0.tar.gz) = 36e8afba3864377a6068d3fbf3f042bbffa0ef1b37ee19a1f9d0d6f7080ee4dd79f7a687aedaa93698721f4e5191a9a6d1abf84cb056864c515967da08908b26
 Size (lib3ds-1.2.0.tar.gz) = 136806 bytes

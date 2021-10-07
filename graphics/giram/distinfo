@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 21:34:00 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:12:14 nia Exp $
 
-SHA1 (giram-0.3.5.tar.gz) = f8ecdd1a954315cb9e1356af3b8a3b20fb9f9b41
 RMD160 (giram-0.3.5.tar.gz) = 4535ff962ceb68f774e2d8b3176dac9dd9eceed1
 SHA512 (giram-0.3.5.tar.gz) = 50ad888328c25fcef3c62bfca2d3163dbc18a4f5d155e794b45222eeac1fb530347096b5d801ed10cebc345963041abfeed3eb6292e02dd09488c302bfa76558
 Size (giram-0.3.5.tar.gz) = 1028404 bytes

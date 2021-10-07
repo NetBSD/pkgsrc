@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/08/03 16:00:26 triaxx Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:13:24 nia Exp $
 
-SHA1 (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 06d4f379f3ebbd182bc8e0c4ca0866bfe8de5b42
 RMD160 (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 6c5f0249276ed136ab1d7e28618fe7570bc2ce87
 SHA512 (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 7dbcece6d6da4d716a9607a41e1e2f004d956f03e49015dfdc3d50ed7c37eac74355d7883e7f96117ca1400472c3de8e2b0d1e6b3a7b279ae87a99de2c01fbed
 Size (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 1162578 bytes

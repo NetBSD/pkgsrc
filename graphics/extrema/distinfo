@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/08/01 04:03:48 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:12:09 nia Exp $
 
-SHA1 (extrema-4.4.5.tar.gz) = 2048df89f5c4282b2ff3cdab33293aed546f711a
 RMD160 (extrema-4.4.5.tar.gz) = 80aac9925fb9a8ce8d68ad2712f14435bc463b89
 SHA512 (extrema-4.4.5.tar.gz) = 933caac15b511fc599366d42472d38bfce5031dbfa7bb7139bcd222268307f0141b18eb885948b39e52a6f06980ad7575cb9b56a31ad81d4cd7b2af291402e87
 Size (extrema-4.4.5.tar.gz) = 6536157 bytes

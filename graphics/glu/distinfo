@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/08/11 20:40:55 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:12:15 nia Exp $
 
-SHA1 (glu-9.0.2.tar.xz) = d56833045bf49218fbaf6047371c14ff852cecfe
 RMD160 (glu-9.0.2.tar.xz) = 55c71a4dbcc42718a69b42b7f0966f8725324da2
 SHA512 (glu-9.0.2.tar.xz) = 2517d7406bb643d12c017a95dcb5d8716f307344332638bcbdf274a90752a7c22165d34745f1b082ed916bb07d40e62d1d1d67d96426225be63166f3480d6f64
 Size (glu-9.0.2.tar.xz) = 436176 bytes

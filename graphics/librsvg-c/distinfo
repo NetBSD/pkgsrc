@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/03/03 13:04:34 leot Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:31 nia Exp $
 
-SHA1 (librsvg-2.40.21.tar.xz) = 063d1ca696633d43c462e1ca3e8be3145559d954
 RMD160 (librsvg-2.40.21.tar.xz) = 5135ad75e976658936d03655faa37f9ed1c11a3e
 SHA512 (librsvg-2.40.21.tar.xz) = db0563d8e0edaae642a6b2bcd239cf54191495058ac8c7ff614ebaf88c0e30bd58dbcd41f58d82a9d5ed200ced45fc5bae22f2ed3cf3826e9348a497009e1280
 Size (librsvg-2.40.21.tar.xz) = 1655860 bytes

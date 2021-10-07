@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 21:34:35 agc Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 14:13:26 nia Exp $
 
-SHA1 (xpaint-2.7.8.1.tar.bz2) = d225254cc15cbc166c392b112b57104657a33aaa
 RMD160 (xpaint-2.7.8.1.tar.bz2) = 8efca6ff71df8635b8ed50e0c6db2b81f2e068cf
 SHA512 (xpaint-2.7.8.1.tar.bz2) = d10dd745d5b4a23c0eacf36d7ab71abc1ceba131a3a371f52fe7a07c7b8d17d4497b2e4e1699ee6b90e4d68411b01d20bfba1668c5488606bb45dcb60ef3882b
 Size (xpaint-2.7.8.1.tar.bz2) = 459429 bytes

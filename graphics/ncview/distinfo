@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/08/08 22:18:27 brook Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:12:34 nia Exp $
 
-SHA1 (ncview-2.1.7.tar.gz) = fa94e608ba0fe81f5357e5d34dedfc1351847c81
 RMD160 (ncview-2.1.7.tar.gz) = 3862bad211f468d121c02a99e72b34bf81bb9cb7
 SHA512 (ncview-2.1.7.tar.gz) = c39b26e8453f91865e8483abc6ee25d804150dd03ad21469c0e22a60b41f182c108678e22eb86652b66e8ca0997b5f533b2542593f793d673eeeab73b81eaef7
 Size (ncview-2.1.7.tar.gz) = 1280624 bytes

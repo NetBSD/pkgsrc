@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.39 2021/04/07 12:28:24 markd Exp $
+$NetBSD: distinfo,v 1.40 2021/10/07 14:12:25 nia Exp $
 
-SHA1 (kipi-plugins-20.12.3.tar.xz) = 74242523dd3c61509f760558775f563eda3bd27b
 RMD160 (kipi-plugins-20.12.3.tar.xz) = 097bdefc9273554767ef2adcb225ec6830d77c6d
 SHA512 (kipi-plugins-20.12.3.tar.xz) = 8e5cf2ea81facc7ab5eed509be71b0dc57e93ce06237c805211493e345805f82b3aa3f8994d0def3b81dec97261409acb9bc51616b85eebf10a98c43369b4992
 Size (kipi-plugins-20.12.3.tar.xz) = 1644852 bytes

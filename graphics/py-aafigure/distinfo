@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/01/04 21:07:12 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:12:45 nia Exp $
 
-SHA1 (aafigure-0.6.tar.gz) = b7e30b45279871e617e36c7f5e0efa3223ca48bd
 RMD160 (aafigure-0.6.tar.gz) = 94ac577ae34eacf86e049768514bf0ba5ccdf989
 SHA512 (aafigure-0.6.tar.gz) = 2547fe3ca401e2edd8f8b5b8fc0fa95d0a1392f9d31db2f509dedee4c48d1cf02c04fbb6a3a8e0a7713f675f02f51e460048c0e1f9fd702cebfe379ce30af316
 Size (aafigure-0.6.tar.gz) = 52292 bytes

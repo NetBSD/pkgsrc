@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 21:34:04 agc Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 14:12:21 nia Exp $
 
-SHA1 (imlib-1.9.15.tar.bz2) = c9a732a354fbb3c7e1a426e5d19fc92d73f8f720
 RMD160 (imlib-1.9.15.tar.bz2) = 195b80833167134ba2d9a9574d420279f9cf55f4
 SHA512 (imlib-1.9.15.tar.bz2) = f50d9141b3c54b44921aa09c0a5ea848aefaa904efdd6da132dace42604671f8dbd3e4b71a596f054f0db4525ba2002864b5e5b21f8805cf1b5514b661ac254a
 Size (imlib-1.9.15.tar.bz2) = 683242 bytes

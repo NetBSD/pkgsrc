@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/09 17:04:14 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:11:59 nia Exp $
 
-SHA1 (R/labeling_0.3.tar.gz) = fb3328f5c876aabdfb47447a1c73de932e751bc6
 RMD160 (R/labeling_0.3.tar.gz) = 997347510c71efb792de93a7bdb28e3ef49f6c5b
 SHA512 (R/labeling_0.3.tar.gz) = 158b7c2836b86257c513dcbe48abf1ec95ae26e9a3d9e62218704c1924996c58a2f53c853e462ffa3e4d36fbd40400fad6ea28949b3b4c432036f3330711a252
 Size (R/labeling_0.3.tar.gz) = 10722 bytes

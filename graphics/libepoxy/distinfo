@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/01/01 21:16:12 adam Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:12:27 nia Exp $
 
-SHA1 (libepoxy-1.5.4.tar.xz) = d08d805b3307005e2197741012f9f4bc9739cd31
 RMD160 (libepoxy-1.5.4.tar.xz) = 3ae1a3a59ecc1f273a0b2712626819ad4ee26844
 SHA512 (libepoxy-1.5.4.tar.xz) = 7bde6fe7164aaa88b6e476dafb13391c551c530267936a1456e242d2bf648117f319788ba089100b3f773444098a894db6d27326b47dc4ae26db4766308d7510
 Size (libepoxy-1.5.4.tar.xz) = 227180 bytes

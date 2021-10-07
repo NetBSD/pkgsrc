@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2019/01/04 01:18:14 tnn Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:12:15 nia Exp $
 
-SHA1 (mesa-demos-8.4.0.tar.bz2) = 57ba892e919fa22ce3db9f25e7331a6fa33c652c
 RMD160 (mesa-demos-8.4.0.tar.bz2) = dcbfec40c173cacef19bf929b4b8119ce78e8e1b
 SHA512 (mesa-demos-8.4.0.tar.bz2) = b72d03cad36e0535ff18dcfb222ec4200064b9264f6da51a6e5f03b0dd912abe188bc1d600b6698de3ce6f63b28d2ce01565886ca8e7079edc4967fbf2fb0957
 Size (mesa-demos-8.4.0.tar.bz2) = 10073259 bytes
