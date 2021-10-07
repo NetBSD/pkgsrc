@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 20:56:52 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:07:30 nia Exp $
 
-SHA1 (grhino-0.16.1.tar.gz) = d9c13d88980bb37d5172193bdab088c7a987c1c2
 RMD160 (grhino-0.16.1.tar.gz) = e0b77cfe4ba8215dda5701c3ddcf753a5fbc9358
 SHA512 (grhino-0.16.1.tar.gz) = 17fd5539a9d74a715237a51cbf2f3119feae2bed6a26496b02d7882385d5567571ba4b4c4018554944d07322e5a0c3b3235e141579281621f5a030acbe6480e2
 Size (grhino-0.16.1.tar.gz) = 1178091 bytes

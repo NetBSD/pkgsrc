@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:18 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
 
-SHA1 (kbreakout-20.12.3.tar.xz) = a693b9aaa9992260ec1d69b62fb5541be5cf7143
 RMD160 (kbreakout-20.12.3.tar.xz) = 3d3878671340b4734299578e41048d7b2a29e6f7
 SHA512 (kbreakout-20.12.3.tar.xz) = e74d6ecd602d210ca40f4192c00984eea9bc96c18dc2b72194449e578a5656f81c18680bacb444d707d301cdcf06c47b8651117a05b0ff2888117fea994958fe
 Size (kbreakout-20.12.3.tar.xz) = 2284120 bytes

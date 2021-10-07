@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/02 14:58:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:07:14 nia Exp $
 
-SHA1 (bastet-0.43.2.tar.gz) = 75b1f154e4d60599959198d3cb3a5d06a21cfc90
 RMD160 (bastet-0.43.2.tar.gz) = 41c22ef7daebfa37c9d2aad5a13a8db5d80aaded
 SHA512 (bastet-0.43.2.tar.gz) = e81ca8bf674b537b539b7f6b35b1233a714f03750ce1b3947f84e70ca5f98ed4583902e7b4800c5bdde66ee95a4ef8ed0f5854675c2d149cd26d2498dc187a41
 Size (bastet-0.43.2.tar.gz) = 87496 bytes

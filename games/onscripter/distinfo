@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2019/11/21 13:05:29 tsutsui Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 14:07:44 nia Exp $
 
-SHA1 (onscripter-20191116.tar.gz) = 9dec71759d3891ede403516e60a0311844a3f8ef
 RMD160 (onscripter-20191116.tar.gz) = 7f3ced296344102d578f2208caef99a9cba2b330
 SHA512 (onscripter-20191116.tar.gz) = 889a1f3916dade4eb0b34f05d8160e5640dd3b9092b8f02120ee153a836c2153805f224dd2ada32b9d839f289e6e31b2a363a17703f774afc37eb1c7e2a5850c
 Size (onscripter-20191116.tar.gz) = 252945 bytes

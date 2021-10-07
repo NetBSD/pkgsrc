@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/09/04 10:36:29 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:13 nia Exp $
 
-SHA1 (ecwolf/1.3.3.tar.gz) = 8b56638a7d5a7a0803a4cd5923bc62586598d8cd
 RMD160 (ecwolf/1.3.3.tar.gz) = 6bad3c6359ca7f6b694e0b6b2f6d567bb58225a5
 SHA512 (ecwolf/1.3.3.tar.gz) = bbce936a9ea556ba12a649c4394002d660a1e328861646d558ff7fc088e6ab6f0fab789955321ea0c1122df4043bd16b84bb7a7507e5ccab91cf128778c7608a
 Size (ecwolf/1.3.3.tar.gz) = 9618283 bytes

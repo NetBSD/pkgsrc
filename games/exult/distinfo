@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/04/19 10:47:57 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:07:23 nia Exp $
 
-SHA1 (exult-1.6.tar.gz) = 9d0459e24d796193490dfc441351219e1944e92c
 RMD160 (exult-1.6.tar.gz) = d73882320478a90e25bb4bae9f41d500c1823ef4
 SHA512 (exult-1.6.tar.gz) = e786ccc11d3fc1b0747c0c620b51152d09f5157ca1e458a5aecc5e66c91e3222b6ba61311149bd6be83e20d339ea1d6d47640f89cc1750a9720549278a33e1b2
 Size (exult-1.6.tar.gz) = 7906968 bytes

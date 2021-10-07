@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/12/11 01:10:26 dholland Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:07:24 nia Exp $
 
-SHA1 (finalbattle-jumbo-patch-20161210.gz) = 99a4eb17d7bab08ade244300b19cc3bb3135e125
 RMD160 (finalbattle-jumbo-patch-20161210.gz) = 10f1cd934fcdeef77974c621f75ca587d647928a
 SHA512 (finalbattle-jumbo-patch-20161210.gz) = f3019220c8768b77787f1431eb262e0fcfd76b1a6ce03c689ad6ea71cf6c49543611d3327a77e4b5cb224a8cdea0036288d6d42c11c85af5bd47b3f10df9e670
 Size (finalbattle-jumbo-patch-20161210.gz) = 15780 bytes
-SHA1 (finalbattle.0.0.tar.gz) = 36942d8bb0bd79b04cff52c085a0d1406973b965
 RMD160 (finalbattle.0.0.tar.gz) = f1df6916ebdda9bebf10f005a9ccdb97c77f6e39
 SHA512 (finalbattle.0.0.tar.gz) = 55e77c97e678f0f589040c51cc57df363350cdcb0ed85f0af4364202dee5b53e9aadd8f06d540bae36bbb9406c964c0e84d65df50246d66aee93b5e475848877
 Size (finalbattle.0.0.tar.gz) = 86579 bytes
