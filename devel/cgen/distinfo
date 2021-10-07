@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/03/26 21:49:01 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:18 nia Exp $
 
-SHA1 (cgen-20131001.tar.bz2) = f456bd2c2a9a28871c99c6261c5d0fed02b15de3
 RMD160 (cgen-20131001.tar.bz2) = 5fca888ddc4ec8768de553e8a907c69aeb9256f2
 SHA512 (cgen-20131001.tar.bz2) = dde7a4d85e2b19f52bcb09d3169d89c8e42cee460950fa8ea7aacf1464c29c09bef76fffa337bcd95510314785baf2ed2655e781324c0523ec619d31516e8c8b
 Size (cgen-20131001.tar.bz2) = 1631519 bytes

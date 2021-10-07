@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/12/18 23:06:19 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 13:40:24 nia Exp $
 
-SHA1 (libusb-1.0.24.tar.bz2) = d8d614b538f7c953b6e3b73f1eea5dc70820a7e2
 RMD160 (libusb-1.0.24.tar.bz2) = c673ae73d1c8d97632511973451eb647d0bf2d7f
 SHA512 (libusb-1.0.24.tar.bz2) = 5aea36a530aaa15c6dd656d0ed3ce204522c9946d8d39ffbb290dab4a98cda388a2598da4995123d1032324056090bd429e702459626d3e8d7daeebc4e7ff3dc
 Size (libusb-1.0.24.tar.bz2) = 606593 bytes

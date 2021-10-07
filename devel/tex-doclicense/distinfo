@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/06/03 06:41:48 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:44:33 nia Exp $
 
-SHA1 (doclicense.r58350.tar.xz) = a414bb1826435fbf3c480052010c9b35127c9a16
 RMD160 (doclicense.r58350.tar.xz) = b81861c38f45b5799168f7bd8f3029efff98dd75
 SHA512 (doclicense.r58350.tar.xz) = 1f701453752b32f1030dd7cda6f51bd94d6d9d67f465070b613f4ea55857f300be8c7a19c7440c6fab129e3fc1749fe6b9aad13b1fc28b5b61670f65bf0e0a81
 Size (doclicense.r58350.tar.xz) = 234912 bytes

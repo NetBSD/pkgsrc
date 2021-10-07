@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/12/15 21:33:23 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:40:52 nia Exp $
 
-SHA1 (Acme-Damn-0.08.tar.gz) = cc6121de964e1fbfb76b244f4a619249c02cebc2
 RMD160 (Acme-Damn-0.08.tar.gz) = 18753910db69449569ce6b00334baaea2847e34a
 SHA512 (Acme-Damn-0.08.tar.gz) = aaded3d7e3a3cdb69f4640623970c62e9491a389eedc0f91c3473764626c45baf89f87695caf1c703a05ce414a0b51e5deac3552b1d3e17f674d3c757f2fb52e
 Size (Acme-Damn-0.08.tar.gz) = 9241 bytes

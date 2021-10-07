@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2020/11/03 11:24:31 triaxx Exp $
+$NetBSD: distinfo,v 1.32 2021/10/07 13:39:38 nia Exp $
 
-SHA1 (gnustep-make-2.8.0.tar.gz) = 5ebc1f89a600ba112874319e4bd0f3699866a7bd
 RMD160 (gnustep-make-2.8.0.tar.gz) = 924687b3cb75f094a7cb5be9e4e1d6abd74c6c4c
 SHA512 (gnustep-make-2.8.0.tar.gz) = e9e57ed7a1c360c2dbf17f70d38e5107a1a9613842dcc645f10ed7a01eb9f9ee71bd2d0cacbe00439ce73f194a3eb3ed2e71409241ac96ee3bba704dcf6dfd7b
 Size (gnustep-make-2.8.0.tar.gz) = 606337 bytes

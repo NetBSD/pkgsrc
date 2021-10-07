@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/01/31 13:42:32 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:20 nia Exp $
 
-SHA1 (line_profiler-2.1.2.tar.gz) = 080238497cf47d04abc15ff476bd2348bac9f0bd
 RMD160 (line_profiler-2.1.2.tar.gz) = b41db04a1f5dc118a0850fab219e53e3e579abfd
 SHA512 (line_profiler-2.1.2.tar.gz) = 625a585915d338fe8ef2f37c5b5bc024f769a623380b85725bcf33686e4cc62a211c2e91552e093dee940367b0d2ad306c5cbe7f1e8f1574eb731d128b8e22bd
 Size (line_profiler-2.1.2.tar.gz) = 83131 bytes

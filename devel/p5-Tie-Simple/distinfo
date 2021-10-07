@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/26 10:37:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:42:39 nia Exp $
 
-SHA1 (Tie-Simple-1.04.tar.gz) = a49f1d454dcc0998a5a6ace627f5cc735579fae5
 RMD160 (Tie-Simple-1.04.tar.gz) = 7181342843e82438fea381b73448286aec34c7a9
 SHA512 (Tie-Simple-1.04.tar.gz) = 24843a02565b525ff5ffbd362b1b746a3c576569c3e5c5fff5a0d543c2fbdbb4e1d6a6c45faeaff0a2721f2525996f21d46b7db88a40b49bc2541d0f99806ef2
 Size (Tie-Simple-1.04.tar.gz) = 13190 bytes

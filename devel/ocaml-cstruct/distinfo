@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:11:31 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:41 nia Exp $
 
-SHA1 (ocaml-cstruct-3.7.0.tar.gz) = 2ef3f5ff4f41a81c7f9d848788927ccd0a35de34
 RMD160 (ocaml-cstruct-3.7.0.tar.gz) = 0964850d351b7eb0f7649c98fdae11526ed3d150
 SHA512 (ocaml-cstruct-3.7.0.tar.gz) = 5e4aaa310d0ff9b7d393d61236253b767e873c13050bed861243899175a25c88267aeabe5d49d1c92af87615238f7f5b2868599d047a5d04200392ccc15a5283
 Size (ocaml-cstruct-3.7.0.tar.gz) = 218339 bytes

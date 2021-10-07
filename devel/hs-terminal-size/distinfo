@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/20 00:48:03 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:55 nia Exp $
 
-SHA1 (terminal-size-0.3.2.1.tar.gz) = 4e72b521d37884544a4e3f14f8b80998e3bcefbb
 RMD160 (terminal-size-0.3.2.1.tar.gz) = f127814dd7b5c44f38b61fed49bf306d7a53f55a
 SHA512 (terminal-size-0.3.2.1.tar.gz) = 1e04705dda8ade9a06f8b369f1033a93ffb94a1b959a556e11f2373b25924adbbab4be0f3e077394e1023e0054044739df13406b69153c1542f4083be82a1584
 Size (terminal-size-0.3.2.1.tar.gz) = 4175 bytes

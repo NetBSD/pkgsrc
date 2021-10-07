@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/12/19 08:17:21 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:39:34 nia Exp $
 
-SHA1 (frama-c-Phosphorus-20170501.tar.gz) = d9372127ba80636cc1c692a141a7a02dee8325da
 RMD160 (frama-c-Phosphorus-20170501.tar.gz) = 24a5b8578491d3c15aa539da69062803d0c6d137
 SHA512 (frama-c-Phosphorus-20170501.tar.gz) = b3b73932378cba7be8ac0cbb1f7311e8f60dde68cad55c10659ffa40e76ab3f106d554e245ccd90ffb5307b9a42b6ce51154a5b9c006687b8c5808c77ca4c2f3
 Size (frama-c-Phosphorus-20170501.tar.gz) = 7431131 bytes

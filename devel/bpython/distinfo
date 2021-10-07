@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/03/20 15:14:48 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:39:15 nia Exp $
 
-SHA1 (bpython-0.21.tar.gz) = 97c8d5f810841a90fa867845f2411de513002024
 RMD160 (bpython-0.21.tar.gz) = f2a4344a9efb586091c561b88fffac29bf3cb41a
 SHA512 (bpython-0.21.tar.gz) = a0eea1b9c2329ce5665456e99703ef476faab38f880eb8a330a6536970888cfdaada9f0e377d3c1acd8b6c79eb0c562ada43e82bac9df4cce5878594c3399ddf
 Size (bpython-0.21.tar.gz) = 208206 bytes

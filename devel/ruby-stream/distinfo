@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/01/10 16:19:07 taca Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:44:24 nia Exp $
 
-SHA1 (stream-0.5.3.gem) = 31dc71b6e3e79d13300339a53770ca2a33a2c836
 RMD160 (stream-0.5.3.gem) = 96f66ef2efe7530c20df3e1aad62c5c8e2b0d3a7
 SHA512 (stream-0.5.3.gem) = 1ca9431220908859b9c8a38b486be1c750964d15adf86f6a0f0f6596d29865e996c4fd3fdd2a951fef4056a8c15bb7f15e4125dbd88cc737dacb568893af06ba
 Size (stream-0.5.3.gem) = 15360 bytes

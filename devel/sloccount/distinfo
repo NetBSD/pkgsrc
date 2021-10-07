@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/13 04:01:36 rillig Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:44:30 nia Exp $
 
-SHA1 (sloccount-2.26.tar.gz) = 505031c6adfb93e454aaf8b0ee7de04122079d13
 RMD160 (sloccount-2.26.tar.gz) = a5bd1dbe8bd5e5c52ed790990c0d5d8fc49b26ff
 SHA512 (sloccount-2.26.tar.gz) = ed6ab315a56dbdc86c654b94e790c9ea9e2dcad0db26b63c0973c33eb7fa634b4ade0a1f3c6ccfd5172ea95f648c1dd3b0ae2575b0aa44b3fec708c24a6aca54
 Size (sloccount-2.26.tar.gz) = 190948 bytes

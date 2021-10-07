@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/01/11 23:55:32 rodent Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:43:05 nia Exp $
 
-SHA1 (d2to1-0.2.12.tar.gz) = 72ab470f5837cb9de41f130ad7cf8b9b2c5187d0
 RMD160 (d2to1-0.2.12.tar.gz) = ff57010d2892940d699825080bedf4bee2ab4373
 SHA512 (d2to1-0.2.12.tar.gz) = a437d3652a63267470488de677e9d9e9844265480a8693f8b0163db8e1801f123888a14b78b0efb99c88598601cda5af7cfba993bd053c0683ed9ea22e8342a6
 Size (d2to1-0.2.12.tar.gz) = 35901 bytes

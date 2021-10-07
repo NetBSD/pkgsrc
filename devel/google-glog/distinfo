@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/02/20 20:46:13 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:39:42 nia Exp $
 
-SHA1 (glog-0.4.0.tar.gz) = 0d79fb524591dee0f46213e9a23f609f74e0cbb2
 RMD160 (glog-0.4.0.tar.gz) = a609844ee3d796e29dd726210d19eab7c591e37f
 SHA512 (glog-0.4.0.tar.gz) = b585f1819ade2075f6b61dc5aaca5c3f9d25601dba2bd08b6c49b96ac5f79db23c6b7f2042df003f7130497dd7241fcaa8b107d1f97385cb66ce52d3c554b176
 Size (glog-0.4.0.tar.gz) = 200955 bytes

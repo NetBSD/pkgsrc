@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/12/04 12:54:01 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:18 nia Exp $
 
-SHA1 (kafka-python-1.4.4.tar.gz) = 8d8a4c9d61506e1895afb379a9eb780f7b68347c
 RMD160 (kafka-python-1.4.4.tar.gz) = 08c22d9182b5b55ef9eddc6f581cd0e059bbdfdb
 SHA512 (kafka-python-1.4.4.tar.gz) = 856116c01a162411542e603de7202f9ff5e3987aeee77691366771c5cca7f836bdab66b921e97100159f38e1a17c4e94cb772376f4809bf8bea4203b2b00f788
 Size (kafka-python-1.4.4.tar.gz) = 279069 bytes

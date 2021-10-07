@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2018/07/04 07:43:59 wen Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 13:41:03 nia Exp $
 
-SHA1 (Class-Accessor-Grouped-0.10014.tar.gz) = 23ce24acc23e2cff8bca20c9c16dcadeb7c32940
 RMD160 (Class-Accessor-Grouped-0.10014.tar.gz) = f8bbd85267bb9d40b147c7d9eb533c54f994ca69
 SHA512 (Class-Accessor-Grouped-0.10014.tar.gz) = d69fe27c3a12845bb4d0abe6c73d1a82eaf550821184f0945c3802e3932c7742e04c6f655e550386923c2a005e7f893f44ed950c56e6e80785b5a23e7b3c80b3
 Size (Class-Accessor-Grouped-0.10014.tar.gz) = 28703 bytes

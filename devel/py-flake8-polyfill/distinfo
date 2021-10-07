@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/01/01 21:26:15 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:10 nia Exp $
 
-SHA1 (flake8-polyfill-1.0.2.tar.gz) = 99e632be067a1dbf1bb77d73cc5b408f57c6aa93
 RMD160 (flake8-polyfill-1.0.2.tar.gz) = 6436358ca93393d70ada67859184f6564e1ccef7
 SHA512 (flake8-polyfill-1.0.2.tar.gz) = 767a599aacbe87328b3e36bd85e0841870760ed9bd95dd3a4a9084edc6f0ae89f8203d565c2b075f16f1db21b647c17b2aa59b08e4702109d7e5f79f36d9f3fa
 Size (flake8-polyfill-1.0.2.tar.gz) = 7591 bytes

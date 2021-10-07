@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/07/16 20:05:57 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:40:09 nia Exp $
 
-SHA1 (libctl-3.2.2.tar.gz) = d7f860313d5cc226c51f868bbe9bb930d143ab9c
 RMD160 (libctl-3.2.2.tar.gz) = 2390548f7a30e709e22b3ee12f21ec9f7e45def7
 SHA512 (libctl-3.2.2.tar.gz) = 646456c23490eb3e63e845d4866b16bd1d92b210f2279342560888bb4764e474b97e17ff34beb672d43afe4d42bbcbddbcf8bb49cedc23b886061a93de10e6df
 Size (libctl-3.2.2.tar.gz) = 505796 bytes

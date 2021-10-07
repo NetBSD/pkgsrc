@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/07/09 08:36:41 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:43:37 nia Exp $
 
-SHA1 (pyobjc-framework-SafariServices-6.2.2.tar.gz) = bfcd30c458402fe17f203ae07ff4011a1bad6896
 RMD160 (pyobjc-framework-SafariServices-6.2.2.tar.gz) = c0211d336074b996ceb9da2c2b21ef9dab0d58c0
 SHA512 (pyobjc-framework-SafariServices-6.2.2.tar.gz) = 31e4b369b46e778e1510226cb7a50ec4e91550c2ad11d8dd990f2adc3e4d0c054297fd0c6c2fe8788e78ca14e9e2e31445243fb57fdbc90203e169c06dd29362
 Size (pyobjc-framework-SafariServices-6.2.2.tar.gz) = 20126 bytes

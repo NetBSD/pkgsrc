@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/11 11:37:46 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:41:01 nia Exp $
 
-SHA1 (Cache-Memcached-Fast-0.26.tar.gz) = 2adedc7af2afca11c37a35284112e985362cb34f
 RMD160 (Cache-Memcached-Fast-0.26.tar.gz) = b80e94b58ad71afef4cc8bb7a79c2eb1cad16c09
 SHA512 (Cache-Memcached-Fast-0.26.tar.gz) = aea565be2d1aaae186c6d985d88e444fa39311338a851f7f05b013affcab0bfcabd258a3df08849b9429b7168ff0d1e59ab27b1e843b217093b2b64786e890b1
 Size (Cache-Memcached-Fast-0.26.tar.gz) = 87887 bytes

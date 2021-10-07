@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/09/09 13:25:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:16 nia Exp $
 
-SHA1 (libindicator-12.10.1.tar.gz) = 25c8a0a150651ee6b2198df3f36fcbb49f0295c2
 RMD160 (libindicator-12.10.1.tar.gz) = c5353a3ee5b9b24fac0cb2a7b620a23c406055af
 SHA512 (libindicator-12.10.1.tar.gz) = d6d77d0309b15cf6b52539323920ab0c1594cb1c1cef8a8d67cd0f76f8ceeeac28eb6db6227563df1932e6f1fadcffac68d82982182b745257dfaf91f1c945af
 Size (libindicator-12.10.1.tar.gz) = 427764 bytes

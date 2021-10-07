@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/21 10:06:35 he Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:13 nia Exp $
 
-SHA1 (Data-IEEE754-0.02.tar.gz) = e5e3999690792924af5829f4ee00b2ce43ffead5
 RMD160 (Data-IEEE754-0.02.tar.gz) = 8f4d839b5051d32887a81713240925dc33ca1cbd
 SHA512 (Data-IEEE754-0.02.tar.gz) = b343489beb45c5540adaf8da3edee39e3cbbe99098212df83b4b341af600990d0568f1455d768cbc234c09ae18afd087218fecdfa64bf2830561bb538b42ab1e
 Size (Data-IEEE754-0.02.tar.gz) = 22181 bytes

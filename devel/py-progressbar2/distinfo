@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/08/18 20:19:20 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:27 nia Exp $
 
-SHA1 (progressbar2-3.51.4.tar.gz) = 2efb65457c20e1ee5a4c49e5dd27fe246ff0ac4c
 RMD160 (progressbar2-3.51.4.tar.gz) = 3788defe0bd9d0318b481193ed40086ca9631736
 SHA512 (progressbar2-3.51.4.tar.gz) = b242ffdce1eccfeebe827565a631d15d5a7282f48dcc2f1e746a05a38b33b62101663e86ae8223f81334718499400dd41421c05f3a07bc6fcce8313a69fc63e3
 Size (progressbar2-3.51.4.tar.gz) = 206005 bytes

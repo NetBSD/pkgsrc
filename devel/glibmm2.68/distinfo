@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/02 09:15:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:39 nia Exp $
 
-SHA1 (glibmm-2.68.1.tar.xz) = 7d9ef98756f2b5c9e4afbce7cf68f78bd2c1c423
 RMD160 (glibmm-2.68.1.tar.xz) = ab4e37015abe0a11993694b8a9221f4b4c5c0f8e
 SHA512 (glibmm-2.68.1.tar.xz) = ca164f986da651e66bb5b98a760853e73d57ff84e035809d4c3b2c0a1b6ddf8ca68ffc49a71d0e0b2e14eca1c00e2e727e3bf3821e0b2b3a808397c3d33c6d5c
 Size (glibmm-2.68.1.tar.xz) = 7657712 bytes

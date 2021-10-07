@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/10/10 15:41:16 minskim Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:15 nia Exp $
 
-SHA1 (hyperscan-0.0.2.tar.gz) = f1076507263524cf9427c39e594c74e950715d8c
 RMD160 (hyperscan-0.0.2.tar.gz) = 9f1136f1d1bccc0e72544255d49eb32f3f2998a2
 SHA512 (hyperscan-0.0.2.tar.gz) = d8a9d22cc266059d023bd45d195456b063ad58fd6e484a69f612f6487f898f736ae74e498cd3e52a7af260336ea8b5a2b2060bfbe7c93ffe695e419607b30334
 Size (hyperscan-0.0.2.tar.gz) = 15598 bytes

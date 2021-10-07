@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 05:25:25 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:54 nia Exp $
 
-SHA1 (tasty-1.4.1.tar.gz) = a95a249a0aba4427a99303d5541b20732a94c8a6
 RMD160 (tasty-1.4.1.tar.gz) = c16333eae6b6e89b077bf98965d46ec97385040c
 SHA512 (tasty-1.4.1.tar.gz) = 72f7dfc60d1582be25ff7e5015ba735156fcc2e8074f0655c68eb4f0c0d2063aa882c2407fe8858a47a316d90b84f8b40a511663642bdc43739c3f02beb021b2
 Size (tasty-1.4.1.tar.gz) = 56599 bytes

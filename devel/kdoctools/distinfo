@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:22 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:40:04 nia Exp $
 
-SHA1 (kdoctools-5.80.0.tar.xz) = 38224b4c5ae461944e5dda10da6757a920e10504
 RMD160 (kdoctools-5.80.0.tar.xz) = dbfe6d8f9ecd2bc94540571d80961c50b472886a
 SHA512 (kdoctools-5.80.0.tar.xz) = 17448f08528af1537987f336b8a00249f631909bb7060d31639ec8937a4cd105d3d35c8872d37651d628ce55484d87dff188e365e290fa1321f869d0ef4f2ee7
 Size (kdoctools-5.80.0.tar.xz) = 438652 bytes

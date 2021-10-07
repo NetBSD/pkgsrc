@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/07 10:18:53 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:42:37 nia Exp $
 
-SHA1 (TheSchwartz-1.15.tar.gz) = f940daadf0174982229bc5fdf50d453150f9f850
 RMD160 (TheSchwartz-1.15.tar.gz) = 4184c402b85215d9e06aeed7166eacfbf1dbc644
 SHA512 (TheSchwartz-1.15.tar.gz) = ed97c777d533506b913acc216cab3d78dd0b1b3e1404cd0875d178ac44ff9cd0596d6f2e7e5d4fdb4df3815c3bf280fbb43236534448e47f4c8cfc6e4859e335
 Size (TheSchwartz-1.15.tar.gz) = 54249 bytes

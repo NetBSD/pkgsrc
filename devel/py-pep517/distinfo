@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/07/19 07:07:13 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:43:26 nia Exp $
 
-SHA1 (pep517-0.11.0.tar.gz) = f0a52ce1539ffc26049133f4ab6d1a26ea24562a
 RMD160 (pep517-0.11.0.tar.gz) = fa76323f1b3a29c975e701eacd4fc39aef9dd1d6
 SHA512 (pep517-0.11.0.tar.gz) = 4981aacef2b7bf86205a93753699c1af557a1af6e33214d8ecc99922ba48988a0cedd0e3194839f790c37b751d6caf3c85fd7538f0e33d15a7c97cf20174e4fd
 Size (pep517-0.11.0.tar.gz) = 25169 bytes

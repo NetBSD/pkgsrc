@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/20 14:01:19 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:16 nia Exp $
 
-SHA1 (Data-UUID-Base64URLSafe-0.35.tar.gz) = ef1abc289072d9d7429d142a2c5e234446b14c5d
 RMD160 (Data-UUID-Base64URLSafe-0.35.tar.gz) = 0fa9be7967fa22e138d1bc36023f076a5fd931ab
 SHA512 (Data-UUID-Base64URLSafe-0.35.tar.gz) = 18465552a5a8f4238a247a87391bd77bc962d5c92aeb29621f0f46fefd0fab1571cde15ed70f4776f5dbbd03c28fdb1c5d843d353465e2f3241607308d5fc13d
 Size (Data-UUID-Base64URLSafe-0.35.tar.gz) = 17200 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/02 18:02:36 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:30 nia Exp $
 
-SHA1 (egypt-1.10.tar.gz) = f7eb2450bdd642780b4693eea940fa741ecbb788
 RMD160 (egypt-1.10.tar.gz) = 87d3bbcfa94be2bebb3e5c4ce2976c9fb52bcb02
 SHA512 (egypt-1.10.tar.gz) = 81e98b3d379301f1c0919aeb46d45264772b7d9d77277cb842c8ed7b944d61918e530f4e9e2c56451445dc2c6a312fd76086a81e193540baa3d56f3bb56b438d
 Size (egypt-1.10.tar.gz) = 4670 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/03/14 23:22:26 alnsn Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:39:41 nia Exp $
 
-SHA1 (go-siphash/v1.2.1.tar.gz) = 82bac91296a027cf62c2d422d7ae341d170239a9
 RMD160 (go-siphash/v1.2.1.tar.gz) = ab44965b73348ee2000199f592be702dc18267f6
 SHA512 (go-siphash/v1.2.1.tar.gz) = bb59a152322350ce4d88f3a8795fcb319621f0c5b2e535f251e7c159ea574b22678f0e29c6dc0fde08ff1be628cd7c76534e902e3f1d332009031cae01491e11
 Size (go-siphash/v1.2.1.tar.gz) = 10729 bytes

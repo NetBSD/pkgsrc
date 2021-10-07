@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/01 17:42:12 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:41 nia Exp $
 
-SHA1 (go-xerrors-20190719-9bdfabe685.tar.gz) = 1fc793c05d63019a565f75d9ca8c1c40f70ec987
 RMD160 (go-xerrors-20190719-9bdfabe685.tar.gz) = e3aa1982f3557027fe0b99cbdbdec1d50480a5c4
 SHA512 (go-xerrors-20190719-9bdfabe685.tar.gz) = 9f6f524feda6c6fcf56c0a2347362a245d7a6f7f430826d2ccf56c521f6db6c913d8788f7894866dd6667c9ed65b5a6c35176e5952f8687f71cd7c7b179083f9
 Size (go-xerrors-20190719-9bdfabe685.tar.gz) = 13661 bytes

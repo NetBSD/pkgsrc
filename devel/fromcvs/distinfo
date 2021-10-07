@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2019/09/15 09:13:19 mef Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:39:34 nia Exp $
 
-SHA1 (fromcvs-0.0.0.134.zip) = a212bf8b1a3eee50ab95afcfcb0ac8d5a3722d9e
 RMD160 (fromcvs-0.0.0.134.zip) = 3abf35fd3ae91c0b2629c2581d8b8bae6617d78f
 SHA512 (fromcvs-0.0.0.134.zip) = b77b6c33754575bccabdf67ce59a73ff86257a2331f5989cfac241392cb01aa19b1c6ee03c5e7f7063f4a6b5f388d2fdf32866062b9f4d5732da8fca9044c98d
 Size (fromcvs-0.0.0.134.zip) = 46593 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/04/10 05:43:12 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:41:28 nia Exp $
 
-SHA1 (File-DesktopEntry-0.22.tar.gz) = 5cec1844dc150db3eab387467379888b43b3fb35
 RMD160 (File-DesktopEntry-0.22.tar.gz) = fcc822b86aba38104b2422a6dbc276ecc6c2812d
 SHA512 (File-DesktopEntry-0.22.tar.gz) = f6a0f2a91c66ea3e5ebac1e66f82317c4109d8d3e2211b4e84cd870b9df07320c03ee0d026e89f788338a1c02152c77e36402684da4f5a7093eb3ac21ff584a7
 Size (File-DesktopEntry-0.22.tar.gz) = 18366 bytes

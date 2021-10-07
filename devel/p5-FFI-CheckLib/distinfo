@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/08/16 01:16:34 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:41:27 nia Exp $
 
-SHA1 (FFI-CheckLib-0.27.tar.gz) = 3618111e047a963fe1822d549a39dc95e4db13c5
 RMD160 (FFI-CheckLib-0.27.tar.gz) = 0e4d309285073fd6c0ecc1b52c17cd3bc4e0eadc
 SHA512 (FFI-CheckLib-0.27.tar.gz) = 0a6cf93fc0461e6b21533007b2d9956f14bf7acf6bffdbe5274b43f8c3d9defabfb60854e31b95cfe430d2cecdcddeafdcc9514daca6a4807697cf10c280a6d7
 Size (FFI-CheckLib-0.27.tar.gz) = 29371 bytes

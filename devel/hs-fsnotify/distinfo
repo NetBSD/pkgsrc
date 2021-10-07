@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 13:35:50 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:39:50 nia Exp $
 
-SHA1 (fsnotify-0.3.0.1.tar.gz) = 70045646b3a1d04a029def1deb22114487bb658f
 RMD160 (fsnotify-0.3.0.1.tar.gz) = 2711cb8bf74a3f9fc02b2d4965ef74ca1fad75ca
 SHA512 (fsnotify-0.3.0.1.tar.gz) = d5c96a54c1b4788e1d50f259d11d4e2d6eb7224552b50cb359a1f4cdcc2a9b7270f9b5ccdfe9738a163b54ab7ab5a0114de9cabc56660a7324cdfc4b16179e1a
 Size (fsnotify-0.3.0.1.tar.gz) = 20638 bytes

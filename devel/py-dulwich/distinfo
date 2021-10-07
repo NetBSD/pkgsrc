@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/08/25 12:55:49 adam Exp $
+$NetBSD: distinfo,v 1.42 2021/10/07 13:43:07 nia Exp $
 
-SHA1 (dulwich-0.20.25.tar.gz) = 3e6c997e8bf03b0b8016298f238a0e1dea740a89
 RMD160 (dulwich-0.20.25.tar.gz) = eb615d81bdd209a6705e08be47d734c960a9eeb5
 SHA512 (dulwich-0.20.25.tar.gz) = 955172da704641bc649e27b956672d11cdf97003f2fea2e46f590deacb0b999e3c3348e3e292ce7be4444447887345ad63fd47cfda369cd9255cfa7c6ff50719
 Size (dulwich-0.20.25.tar.gz) = 414587 bytes

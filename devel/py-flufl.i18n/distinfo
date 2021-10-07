@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/18 13:07:38 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:11 nia Exp $
 
-SHA1 (flufl.i18n-2.0.1.tar.gz) = 59903b552bca68419e6cbfdfbeb0e4402a531c61
 RMD160 (flufl.i18n-2.0.1.tar.gz) = c0b340dd05fb5c840d0f9b800940f57cf4f9b6fc
 SHA512 (flufl.i18n-2.0.1.tar.gz) = 372a27c81c0c58994b7b4b9ddb177f6acd3106536391c82c61cf1ba1b8b2e920be559720d98046ee9aa977a9119f231f7bbe71535cfb538d8563fff1da737ee1
 Size (flufl.i18n-2.0.1.tar.gz) = 18572 bytes

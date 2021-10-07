@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/20 05:41:16 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:44:03 nia Exp $
 
-SHA1 (bond-0.5.1.gem) = b42ebfdfc6b1491adbb82cbc047ace400b9f07b9
 RMD160 (bond-0.5.1.gem) = 06dc4e0a19397e317600d92b98011d350db46b71
 SHA512 (bond-0.5.1.gem) = 498ac4d44da2a8db0335526ff2e7859f7129a95141a63f914dc28a47009456eac1cdb8f015b4d22ae402b54152f0f9f9ce4b8f52248401042148256704553736
 Size (bond-0.5.1.gem) = 35328 bytes

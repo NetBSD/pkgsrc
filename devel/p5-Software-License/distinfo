@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/02 10:56:29 wen Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:42:17 nia Exp $
 
-SHA1 (Software-License-0.104001.tar.gz) = be337199f1fa3364af98f0a8e958de94c3851f61
 RMD160 (Software-License-0.104001.tar.gz) = 5f2fe7b0baf4a776e4505fcf79c83a290ca08252
 SHA512 (Software-License-0.104001.tar.gz) = 4ba5e11e8aa34a4f59ad4028e8e4547e22d5d56e04836cf280a0fb52a2fb64c8cf5347f6f6e2c368506c35eeb7e189527e4339d11541aac34c2c28737717e34e
 Size (Software-License-0.104001.tar.gz) = 131973 bytes

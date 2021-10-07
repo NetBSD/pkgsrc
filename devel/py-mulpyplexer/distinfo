@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/08/18 20:20:08 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:23 nia Exp $
 
-SHA1 (mulpyplexer-0.08.tar.gz) = de9bb912570e7522febd6fa0ca01ae2767e5992c
 RMD160 (mulpyplexer-0.08.tar.gz) = 2f1b28ad398eb8d39d95ee8319653f587896fab4
 SHA512 (mulpyplexer-0.08.tar.gz) = 6a8e3aaeaa42a1ec90bbd34aefa6c9c259e8b3e8a01e0824fce9cf4e82ae65aedec747eb1849ef7341bab144be739ae86378fdd825d4eefa3bbf89ca96a87ab3
 Size (mulpyplexer-0.08.tar.gz) = 2100 bytes

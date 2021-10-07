@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/02/20 14:58:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:39:15 nia Exp $
 
-SHA1 (bullet-2.89.tar.gz) = 8abdb23274951245aed62cc8587f4c3cbfbbd8e7
 RMD160 (bullet-2.89.tar.gz) = 53ac2648d7df631c54d6175f7f441291bd99f58e
 SHA512 (bullet-2.89.tar.gz) = 3c4ba6a3b3623ef44dd4a23e0bc2e90dec1f2b7af463edcb886e110feac1dfb4a91945f0ed640052cac228318539e275976d37238102fb10a0f78aef065a730b
 Size (bullet-2.89.tar.gz) = 135742506 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/03/19 10:24:47 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:39:42 nia Exp $
 
-SHA1 (gperftools-2.9.1.tar.gz) = 15354d240b39e1e6e34c1b4eef35a6a3df898fbf
 RMD160 (gperftools-2.9.1.tar.gz) = e2791edfb1da6f2ecbede519e9d36101046bdb7f
 SHA512 (gperftools-2.9.1.tar.gz) = 05c1c17447303dc8231414d5cdbb2e4d8659ba363179072eba62bc21c3a150ed1998f5e5fb10342f2098f53bd36d03303a7a5ebd29611e31c0ed2f93d41d6d0d
 Size (gperftools-2.9.1.tar.gz) = 1581218 bytes

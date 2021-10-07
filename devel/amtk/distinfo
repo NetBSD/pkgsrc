@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/21 13:51:52 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:39:08 nia Exp $
 
-SHA1 (amtk-5.0.2.tar.xz) = b31628d65bfaa7619fc828a58e70b79e0fdffcba
 RMD160 (amtk-5.0.2.tar.xz) = 11fbd8fb52e363a86cd90139d71aa4fa3f2e143e
 SHA512 (amtk-5.0.2.tar.xz) = 71876430c4e7c19c49170ef6ff8d4c5324f871fd1e02162f33a9249b87f693fa4f4f748ac73d901135d331fee662e5000851e86a00d921da6669319728526136
 Size (amtk-5.0.2.tar.xz) = 368440 bytes

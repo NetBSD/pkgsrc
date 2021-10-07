@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:43:53 nia Exp $
 
-SHA1 (uuid-1.30.tar.gz) = 77ffab33e5052153504a5990dabf7a8505a464bf
 RMD160 (uuid-1.30.tar.gz) = 02f7f2c21cb7a18e426e8e4b573d0521baee97f9
 SHA512 (uuid-1.30.tar.gz) = 9a748fe9acbe228cbf2f477b73d8358803452d7cb18a829ccc9bb80796d9d14d9c16ccc3f34af0d3550586c8f3618c88550a98689d491477199c5898a72b5826
 Size (uuid-1.30.tar.gz) = 5811 bytes

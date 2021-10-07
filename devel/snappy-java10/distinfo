@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.9 2020/07/01 05:03:39 yyamano Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:44:30 nia Exp $
 
-SHA1 (snappy-java/snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
 RMD160 (snappy-java/snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa
 SHA512 (snappy-java/snappy-1.0.5.tar.gz) = 4f772673dd1bf482f13db0f09299b46d0ee47b7052c43e69c2c5361d352031152f3132c25faf86ffcf1bfbe0e68625d7eef8fa669be873b568adfc160a82f25b
 Size (snappy-java/snappy-1.0.5.tar.gz) = 1731382 bytes
-SHA1 (snappy-java/snappy-java-1.0.5.4.tar.gz) = 2a67400be7e5967ee28c87f32ea4776f26494f2c
 RMD160 (snappy-java/snappy-java-1.0.5.4.tar.gz) = 30d12e9717b012bf5b214deecf59f3d02c36996b
 SHA512 (snappy-java/snappy-java-1.0.5.4.tar.gz) = 4fce5c0c0ce294ba789fd33dd8aeed92b6c58e004ac8e569ee1840fe4fbeb47b1f3edff75619aee0ebbda65476ec56b15a4aeead360d98dbc3d45d295ab028bd
 Size (snappy-java/snappy-java-1.0.5.4.tar.gz) = 6041905 bytes
-SHA1 (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = 3ff19882907aef93579b96e56e3d191c49e34e15
 RMD160 (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = 48b28e2d091838b8e80dd16b46bd1ef603c4d5b9
 SHA512 (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = f5148b0ded3b6beeb688b1b57dbc7fe64d40cd927140e9c4c35baf5f2fba25fb533dc38736736f153fd2e2cf76f0d0092cc676d9446f3baba102f2af64c56258
 Size (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = 13148358 bytes

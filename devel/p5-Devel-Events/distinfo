@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/05/02 09:31:18 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:19 nia Exp $
 
-SHA1 (Devel-Events-0.09.tar.gz) = 96f632caf4895a319aede85cf03fc2f406699258
 RMD160 (Devel-Events-0.09.tar.gz) = ef951cc10cfdd3d3a552fe2b06e3a793b724d90d
 SHA512 (Devel-Events-0.09.tar.gz) = 3832a8fb80a8293f6b7aba3c594ffe252c5e3f88417df2c40b1129907955b8bb4146cf834a191fd239eff8ed08779c9988b0f68fd3e0a34f0ef7c8a05b8d8cb4
 Size (Devel-Events-0.09.tar.gz) = 42192 bytes

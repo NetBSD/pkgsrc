@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/03/15 16:03:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:44:41 nia Exp $
 
-SHA1 (wayland-1.18.0.tar.xz) = 33e5292b32a115e829458ea627201ed1e4ad4f45
 RMD160 (wayland-1.18.0.tar.xz) = 0416292a51e3f2ed9c537a94de60ff8e02273d97
 SHA512 (wayland-1.18.0.tar.xz) = e30199e30c2bbd361ee695b4f3f7a4e264f10ed8f46f2c90762b5739fc578ae757dc39aa0258d8fbf0ed418553470bccd4b2730ed9705481cfccdab5de96a8fc
 Size (wayland-1.18.0.tar.xz) = 453968 bytes

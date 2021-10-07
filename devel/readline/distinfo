@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/01/04 12:01:45 wiz Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 13:43:58 nia Exp $
 
-SHA1 (readline-8.1.tar.gz) = 48c5e0c3a212449e206e21ba82856accac842c6f
 RMD160 (readline-8.1.tar.gz) = 80c4a2bce13f1a9b5b9940aae67934770f087f71
 SHA512 (readline-8.1.tar.gz) = 27790d0461da3093a7fee6e89a51dcab5dc61928ec42e9228ab36493b17220641d5e481ea3d8fee5ee0044c70bf960f55c7d3f1a704cf6b9c42e5c269b797e00
 Size (readline-8.1.tar.gz) = 2993288 bytes

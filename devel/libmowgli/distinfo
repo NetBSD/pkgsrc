@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/11/22 00:12:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:40:18 nia Exp $
 
-SHA1 (libmowgli-2.1.3.tar.gz) = 5972c980b7e7981d2e36e6038e2bf9c99775e1e1
 RMD160 (libmowgli-2.1.3.tar.gz) = 148f26f9b4fc6912fa950b177b503713a8f6ba0b
 SHA512 (libmowgli-2.1.3.tar.gz) = bf976cf8b8bf0efaf7565230f42147adcdbe993339f58f907f5005eddf178d936cffb6cdbba59e38813854f30414856a1b9f8bdc972ea2f59cb08987ee336533
 Size (libmowgli-2.1.3.tar.gz) = 227742 bytes

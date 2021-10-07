@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2020/12/06 23:37:34 schwarz Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 13:40:20 nia Exp $
 
-SHA1 (libosip2-5.2.0.tar.gz) = a33be549e4095a3ba69659ef4df990ebec3168b6
 RMD160 (libosip2-5.2.0.tar.gz) = 9301c1dedcd8d15b58272fbb6a739b08b55dc040
 SHA512 (libosip2-5.2.0.tar.gz) = cc714ab5669c466ee8f0de78cf74a8b7633f3089bf104c9c1474326840db3d791270159456f9deb877af2df346b04493e8f796b2bb7d2be134f6c08b25a29f83
 Size (libosip2-5.2.0.tar.gz) = 718388 bytes

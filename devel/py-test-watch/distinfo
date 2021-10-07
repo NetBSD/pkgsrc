@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/09/18 13:00:44 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:49 nia Exp $
 
-SHA1 (pytest-watch-4.2.0.tar.gz) = e732be8e61781e41f75706976dc3f1ccb42ac16d
 RMD160 (pytest-watch-4.2.0.tar.gz) = e136982e94182beb399153a55b9d5396e7c136a5
 SHA512 (pytest-watch-4.2.0.tar.gz) = b0c4b43ae9a5f352601cd4de175712d5ca2517da087af6376883c752dcc482c00282c7c3728546e5cdad4a692769437df7ccb915cc21033ecf791ebb1375580a
 Size (pytest-watch-4.2.0.tar.gz) = 16340 bytes

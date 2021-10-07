@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/23 06:28:14 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:39:17 nia Exp $
 
-SHA1 (cflow-1.6.tar.gz) = 1e76700748d95b2e3212f215afd7c5cc4e0aaa1b
 RMD160 (cflow-1.6.tar.gz) = 49bafb3beda9634f2912b7d5d047fd9d242f028d
 SHA512 (cflow-1.6.tar.gz) = 30bea3bae53b462e3e0d7c1e6b9dea1e04d741910ea8de863f6cb19cf0bd20ce3c54df9793bf6dfac3a120ffbfdbc194b0dc86fb88bb4be434ad0e20e0d146e3
 Size (cflow-1.6.tar.gz) = 1076352 bytes

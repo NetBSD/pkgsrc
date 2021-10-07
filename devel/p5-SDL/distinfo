@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/06/19 14:22:18 wen Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:42:12 nia Exp $
 
-SHA1 (SDL-2.548.tar.gz) = 3c07c136e1dd6b358a915787ee3ac3c9a1e16296
 RMD160 (SDL-2.548.tar.gz) = ce525b44414aa8abf302ccba0172cc1c2872f6f2
 SHA512 (SDL-2.548.tar.gz) = bafc49dddb7e592861f822920915c73bf0c5eea3a6c567623b48a2332c7644caf1451e457545e6666adea5e314b23bcd85a3f3a52c770abfd498c0e4c0feae85
 Size (SDL-2.548.tar.gz) = 2487708 bytes

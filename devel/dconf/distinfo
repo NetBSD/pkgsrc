@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2020/03/15 19:45:58 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 13:39:25 nia Exp $
 
-SHA1 (dconf-0.36.0.tar.xz) = 7c547ab2132a7965ae2df7a4217f1ac60f1e8f84
 RMD160 (dconf-0.36.0.tar.xz) = a16546b31001e7841a40324a71383bfe2f403874
 SHA512 (dconf-0.36.0.tar.xz) = fed0b4ac13dfeff3bbe428a5c25408a0f13610219e561841a3af75cf18f9c630c385989b700c081b79ab53c00bdecf43c7c94979312c047faefbda4b2653d40d
 Size (dconf-0.36.0.tar.xz) = 114828 bytes

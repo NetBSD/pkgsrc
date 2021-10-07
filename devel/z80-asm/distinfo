@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/02/21 07:40:39 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:44:43 nia Exp $
 
-SHA1 (z80-asm-2.3.7.tar.gz) = a6355ab14f8e9de82e55fec5e4005e89d282cdb5
 RMD160 (z80-asm-2.3.7.tar.gz) = 65637277f2ab9b0d681fcbcc9034717419264915
 SHA512 (z80-asm-2.3.7.tar.gz) = 66c57404df21f85f695ed6c0a21755da8fb0a67ead10067421069d13175a49fced3050699bb750ed7253b76974f3dc5f989ab55d19459577f2277950a7f2e100
 Size (z80-asm-2.3.7.tar.gz) = 533983 bytes

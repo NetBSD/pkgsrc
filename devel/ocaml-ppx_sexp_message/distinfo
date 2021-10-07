@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 13:03:19 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:47 nia Exp $
 
-SHA1 (ppx_sexp_message-0.13.0.tar.gz) = 8c8b1aafe11c50fe3a83f500da2e42edf2a7c71e
 RMD160 (ppx_sexp_message-0.13.0.tar.gz) = fa6cf9c415e62351476d58889a01a2575cd776dc
 SHA512 (ppx_sexp_message-0.13.0.tar.gz) = 733aba343a5b84ce005d7cfbd4bddec68165058818d97c400e61839173eb0c89d65337469a05bb35f6381147c168da014659ef33c84f2cb0347af60a48d6ffcc
 Size (ppx_sexp_message-0.13.0.tar.gz) = 7498 bytes

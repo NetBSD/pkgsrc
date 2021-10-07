@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/02/13 11:55:36 mef Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:41:59 nia Exp $
 
-SHA1 (MooseX-Singleton-0.30.tar.gz) = a502e0d44d69afed174bbcb4ff20215bb7314c7c
 RMD160 (MooseX-Singleton-0.30.tar.gz) = 3ac3bf477e10c0c2653ee0829608ef88b19c8742
 SHA512 (MooseX-Singleton-0.30.tar.gz) = 26abf9c976eca03f8387249a7a88c0e5fd56ecee009502c94b2ecb796c5b19cb668ff1ec98135ad931725de7cc66be93a3976f37c0c304dc9e1f4cfff22c4c8a
 Size (MooseX-Singleton-0.30.tar.gz) = 34417 bytes

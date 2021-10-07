@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/02/04 17:17:06 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:06 nia Exp $
 
-SHA1 (python2-pythondialog-3.5.1.tar.gz) = bd2006638c579e015ae5ff23ec44463691187ae3
 RMD160 (python2-pythondialog-3.5.1.tar.gz) = ad6858359b27a6b65a14a40416dd909377210a7c
 SHA512 (python2-pythondialog-3.5.1.tar.gz) = 42d7ac58e44ee4c0a10f36f21f025f6d155b23d3a278b9fce46e49811f405af2dbf21a869230e80907713296a6d31109a97945d8992a3e870ba4e0a6eb514865
 Size (python2-pythondialog-3.5.1.tar.gz) = 1918879 bytes

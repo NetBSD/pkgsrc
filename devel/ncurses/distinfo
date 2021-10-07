@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.46 2020/09/07 11:11:41 schmonz Exp $
+$NetBSD: distinfo,v 1.47 2021/10/07 13:40:36 nia Exp $
 
-SHA1 (ncurses-6.2.tar.gz) = 56e410fb77f2b5501a0b2f6a995376f3cefe1097
 RMD160 (ncurses-6.2.tar.gz) = bedfe81f33b3e55e44d14126c9c2821d7f222701
 SHA512 (ncurses-6.2.tar.gz) = 4c1333dcc30e858e8a9525d4b9aefb60000cfc727bc4a1062bace06ffc4639ad9f6e54f6bdda0e3a0e5ea14de995f96b52b3327d9ec633608792c99a1e8d840d
 Size (ncurses-6.2.tar.gz) = 3425862 bytes

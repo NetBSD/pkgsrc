@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:40:08 nia Exp $
 
-SHA1 (libargparse-0.1.0000.tar.gz) = 5574468f84618677f6a7f46547c49fede109cb7c
 RMD160 (libargparse-0.1.0000.tar.gz) = 64d0a53a0f7d65c7f6864704761dc92a7ac31451
 SHA512 (libargparse-0.1.0000.tar.gz) = 5619c3f441af532e1f5564f5c506cfd5d80184c36d4f042d6e78908b0fb88b4da9c78c2108b54d790ce21657c16d4b066fb584878b0a7a37ce0a453afbcc00a8
 Size (libargparse-0.1.0000.tar.gz) = 113175 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2019/09/15 17:55:09 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 13:39:08 nia Exp $
 
-SHA1 (anjuta-3.34.0.tar.xz) = a2feeb1a1c5582dbee56ad62b3ad6435cc022ebd
 RMD160 (anjuta-3.34.0.tar.xz) = 113e01eee1675d08ff2fc4f56e755d6e01b8ce07
 SHA512 (anjuta-3.34.0.tar.xz) = 9d5a4c23751893ff7e21cd55c1f112f27b53fe2ea5ac645c63e2da627efce202b88696e3e5d860ad75a5c13c88a9082775d74f4482208161b5e63d56c4004d57
 Size (anjuta-3.34.0.tar.xz) = 6420472 bytes

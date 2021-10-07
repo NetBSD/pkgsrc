@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:40:21 nia Exp $
 
-SHA1 (libsafec-10052013.tar.gz) = daf86aa303259a713ffdb3854fff497c59cc9466
 RMD160 (libsafec-10052013.tar.gz) = 93bdb27a8748fee3d32a7fd613ed1927a7b5c3af
 SHA512 (libsafec-10052013.tar.gz) = 81e0832a86ad2ba08b041fafe120bfb5a51fd7621781a7571169ed54548723019e09ff800cb8a632de988fdb5887e6c814c930f0bc57cc817fc7055edcd49e53
 Size (libsafec-10052013.tar.gz) = 1957012 bytes

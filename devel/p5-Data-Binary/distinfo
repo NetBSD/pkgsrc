@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/01/26 08:08:41 wen Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:41:12 nia Exp $
 
-SHA1 (Data-Binary-0.01.tar.gz) = bbf3a313d00351b418f395630d02eb06d5dc0d65
 RMD160 (Data-Binary-0.01.tar.gz) = b785118c9347c9880be5746b9a094467c852d315
 SHA512 (Data-Binary-0.01.tar.gz) = fee212031713280218ad01aba596bb6827ee10c2cc258f18ddf02b2e5e3b5dbf40f80d8ad92f29e5acb390656fd1c7d752e783401842b45cb75ddd9ff6fd975d
 Size (Data-Binary-0.01.tar.gz) = 3419 bytes

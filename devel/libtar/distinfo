@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/12/13 18:26:07 bsiegert Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:40:23 nia Exp $
 
-SHA1 (libtar-1.2.20.tar.gz) = 89901d5dbf720b59df7a5f0b34ff90bff9bbb806
 RMD160 (libtar-1.2.20.tar.gz) = 2a27adb42ecf77289bfdc14ca931a6d482f7e975
 SHA512 (libtar-1.2.20.tar.gz) = aa2ba3a1fc90029bb4ba79b1127aaa91f3653ba1f672c52be04556586a5dcd07c52dcaad6939cabf95480966ad7db9a767881db28cc4567da634072ae766ad77
 Size (libtar-1.2.20.tar.gz) = 64640 bytes

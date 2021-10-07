@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/08/31 23:04:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:43:44 nia Exp $
 
-SHA1 (setuptools-44.1.1.zip) = d1ba6f62520e09956bc3163291a26b185fdff2c6
 RMD160 (setuptools-44.1.1.zip) = f8af333dabae2df9fba6f02dc2d22249b15d83e8
 SHA512 (setuptools-44.1.1.zip) = ef19bfbbab4d1fb31156c6820f3469304193d8bc76bb0a2260094e2e724af8af89a5845179275f37f8edd807074145c1e79f7e3e3e5e48a2cac6744af1bf3db2
 Size (setuptools-44.1.1.zip) = 858770 bytes

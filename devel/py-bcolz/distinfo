@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/04/14 08:43:20 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:42:58 nia Exp $
 
-SHA1 (bcolz-1.2.1.tar.gz) = 1c2a9f8dda127ada7a2791525df9cbfc54a62a09
 RMD160 (bcolz-1.2.1.tar.gz) = 867cb61194bc63d53aab507100c880d884949178
 SHA512 (bcolz-1.2.1.tar.gz) = 31a54727d8991893ab235f4353608da524837940f49e1d7bf2ab1dd6f94600f71e7d29328e18b4b66555d1679f0b1f40238f24c319357afa7c58a33be8a130e2
 Size (bcolz-1.2.1.tar.gz) = 1458967 bytes

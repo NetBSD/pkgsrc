@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/09/15 13:15:16 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:41:26 nia Exp $
 
-SHA1 (ExtUtils-Helpers-0.026.tar.gz) = 1a8b0c9cfe9dfe3df7aadf91e29af8637a00bdd4
 RMD160 (ExtUtils-Helpers-0.026.tar.gz) = bd6d179eaa3c84d8d390559d76880ac47a103321
 SHA512 (ExtUtils-Helpers-0.026.tar.gz) = 372d801f43003c571758823a84bfe418876f1b48e3d8c35f888ca41469f6771a33aa30cf893a4c4a68ea62c6e8c8c6ab2ef44ee783dbf9f25e18bc0389359399
 Size (ExtUtils-Helpers-0.026.tar.gz) = 15099 bytes

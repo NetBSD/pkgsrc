@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:07:40 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:38 nia Exp $
 
-SHA1 (angstrom-0.11.1.tar.gz) = 4c5c5393266de805131924570e2be0de6499f680
 RMD160 (angstrom-0.11.1.tar.gz) = 3f4ba04ee666bbd641f4b0ba9015de986f789e72
 SHA512 (angstrom-0.11.1.tar.gz) = 95d74005b4e0b8ad07ae0563b26f6fc97cd0286736b01858ed77c804f051c2bd1d153394e0ddf4010fb0e9ccf5b0eba1e872d9c0722a951f081467e5d44817b1
 Size (angstrom-0.11.1.tar.gz) = 112982 bytes

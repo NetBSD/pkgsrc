@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/09/20 03:09:14 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:38:57 nia Exp $
 
-SHA1 (R/covr_3.5.1.tar.gz) = ae9da922f68cddeac26ab79a3b8fc49c18a753b3
 RMD160 (R/covr_3.5.1.tar.gz) = 5c567eca70a9d9596dd5d7464883e026a4603701
 SHA512 (R/covr_3.5.1.tar.gz) = 5e1bb562258dda6cfdf0ee36c1cb6436e4a61a1b75e9d3b1813fcd7c9f6d94be2167fac83c0de009c6dbd749a280cdfe28e5e000a8ad6e0252b07980ac55d05d
 Size (R/covr_3.5.1.tar.gz) = 146686 bytes

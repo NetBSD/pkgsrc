@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/04/29 13:08:59 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:41:39 nia Exp $
 
-SHA1 (IO-TieCombine-1.005.tar.gz) = a110f37a1b2f023b46edf5a7615ea67b95a98e98
 RMD160 (IO-TieCombine-1.005.tar.gz) = d44b50f0799b61e7e5baff8260174e7d1e7008d3
 SHA512 (IO-TieCombine-1.005.tar.gz) = d0de091279d13e0421e5e0c901a994760cc2f427a1a05305d947f94feb2c040728bcd738965eb583b2c57481fdc474a5516660457069b19f30695962f56cfecf
 Size (IO-TieCombine-1.005.tar.gz) = 16863 bytes

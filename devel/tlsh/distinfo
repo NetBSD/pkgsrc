@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/09/01 07:52:02 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:44:38 nia Exp $
 
-SHA1 (tlsh-3.4.5.tar.gz) = 2d50b1e66ffbfd215f36648258d28be4171015c0
 RMD160 (tlsh-3.4.5.tar.gz) = a7f5f94d8113a6d6e24a84fe86b3d9dc93609757
 SHA512 (tlsh-3.4.5.tar.gz) = 039f9fb9fb467a9b22f85a621c46069bac1745da039657840e1ff1a53901392fcf29d3c953b0f47d831d022a5e2594925c726d4ff921614418a3bb023a4ebbdc
 Size (tlsh-3.4.5.tar.gz) = 1914815 bytes

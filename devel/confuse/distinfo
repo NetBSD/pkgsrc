@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/08/24 08:18:12 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:39:21 nia Exp $
 
-SHA1 (confuse-3.3.tar.gz) = 09fd05cebe41f56d68a8fafa80070d060dea30b9
 RMD160 (confuse-3.3.tar.gz) = 17eb2c5c29368fab839a5b45e58b5aeb74c7d196
 SHA512 (confuse-3.3.tar.gz) = 07f994ca670778ea3dd667b96e1109a90f1f886184b124a9249b60c724d35e423600ed33b46d46ef9299b8b531784e8023af6fad4c88b72791c86c0b1b7c370e
 Size (confuse-3.3.tar.gz) = 775369 bytes

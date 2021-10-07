@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2016/07/24 01:28:37 kamil Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:40:43 nia Exp $
 
-SHA1 (ode-0.13.tar.bz2) = 0279d58cc390ff5cc048f2baf96cff23887f3838
 RMD160 (ode-0.13.tar.bz2) = 6397d3de8caa6a15625784a0ee8bcfab55626e13
 SHA512 (ode-0.13.tar.bz2) = d30c5228e10df5784802ceaea08353a3fd1088450b2ba69ad1da840b8aad2224484e5642145820621e105e08aa6da6f3e9957780d4c3b047647558b1abc32780
 Size (ode-0.13.tar.bz2) = 2008288 bytes

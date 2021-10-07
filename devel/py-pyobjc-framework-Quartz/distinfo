@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2020/07/09 08:36:41 adam Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:43:37 nia Exp $
 
-SHA1 (pyobjc-framework-Quartz-6.2.2.tar.gz) = 481a242a5bbc8a936f6578b46b62e10b3ba180eb
 RMD160 (pyobjc-framework-Quartz-6.2.2.tar.gz) = 183e5d937bcbbb772a212823806abfc84318f0af
 SHA512 (pyobjc-framework-Quartz-6.2.2.tar.gz) = 048b9a3da8d6eded6e21c9e7da76c3c10c88feacea5151d043027bc4fea307664d1063d0c489e39309006055760e66a999541767b17f191cca1065b484ffe720
 Size (pyobjc-framework-Quartz-6.2.2.tar.gz) = 3370098 bytes

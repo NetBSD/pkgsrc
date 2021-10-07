@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/09/14 16:17:42 taca Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:44:14 nia Exp $
 
-SHA1 (mixlib-config-3.0.9.gem) = 66f695b1b1fcf5d7666eb6da5d0170ccd3f4e7f3
 RMD160 (mixlib-config-3.0.9.gem) = 26e9466b665cb734c6fb3adee160ed4db6f0447e
 SHA512 (mixlib-config-3.0.9.gem) = 0a1239c5e8392fee1ceb76534cba171ff50c7bc7322e92b0ac7a9cb0b76348971a63c5e4387c0703662d73b681db0cd88263b60beb0c1932962f98473661fe58
 Size (mixlib-config-3.0.9.gem) = 14336 bytes

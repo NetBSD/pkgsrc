@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/25 09:24:16 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:40:39 nia Exp $
 
-SHA1 (base_bigstring-0.12.0.tar.gz) = a83dfe92e72e5ee07d9e778ce1686e217eded062
 RMD160 (base_bigstring-0.12.0.tar.gz) = a889396219825bd5e4b7d912a3646b970b075f29
 SHA512 (base_bigstring-0.12.0.tar.gz) = 8648279c20f81ba8a11686f38d43a2fdc8ba611860e62fa1bb05f583a4ba80900e86e9d4bfaf76c3120be22cb5f42c495077750bf3750a32dbbc013130aad239
 Size (base_bigstring-0.12.0.tar.gz) = 12892 bytes

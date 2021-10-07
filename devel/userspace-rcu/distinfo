@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2020/07/01 00:40:48 manu Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:44:40 nia Exp $
 
-SHA1 (userspace-rcu-0.12.1.tar.bz2) = 93ad363e3889e55fac7d35d406927e5925e40dd9
 RMD160 (userspace-rcu-0.12.1.tar.bz2) = c55faf01ed8cb2f222d8ec407b2bac91ef66ab7c
 SHA512 (userspace-rcu-0.12.1.tar.bz2) = c0c14eede77358904dfb10774390fd86b4fa9e0ab25d278c869728d40eb263bfa7e489b20ce7198169e71d74fe41bb5018fc1553a5e0654840c9765e088c83db
 Size (userspace-rcu-0.12.1.tar.bz2) = 527626 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/10/29 15:08:31 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:43:49 nia Exp $
 
-SHA1 (pytest-virtualenv-1.7.0.tar.gz) = d67d9dd7715bd0b6de64cc9f3a609658b2bfb126
 RMD160 (pytest-virtualenv-1.7.0.tar.gz) = cb64069d33b247d2a7c67abc5a14dc1f6e4f1b71
 SHA512 (pytest-virtualenv-1.7.0.tar.gz) = 0463ebf44ae18ee50a60e421a22aaaf0e34f827ec8f21c8f0dc79cbdc253748f9d1e5b33e4f418b52f0d8fd45990e162bb6410686ebe9fdc02650c286901d474
 Size (pytest-virtualenv-1.7.0.tar.gz) = 15767 bytes
