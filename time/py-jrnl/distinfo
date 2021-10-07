@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/12/19 14:26:21 leot Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:04:09 nia Exp $
 
-SHA1 (jrnl-1.9.8.tar.gz) = 11c6e522e6074f5df39ecd664f24b7e70f67ce27
 RMD160 (jrnl-1.9.8.tar.gz) = b91ed3326a11c120c250d548d593e1f858db1663
 SHA512 (jrnl-1.9.8.tar.gz) = dad2e78a984c2415674e26e833dac118bc99acbd43b860dbf39a19a0374c92393b91087f0d1b3163ad0cf851c7abfebe80ce74320d6058f8a494a84bc51d0aef
 Size (jrnl-1.9.8.tar.gz) = 193595 bytes

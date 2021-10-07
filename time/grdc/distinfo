@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/03/30 09:20:26 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:03:56 nia Exp $
 
-SHA1 (grdc-20031019.tar.gz) = 9f7c1503255546a43d38c66450bf707cd32b240a
 RMD160 (grdc-20031019.tar.gz) = 08045a69e7b756105ee5deea72fc90a7ea9ad3f6
 SHA512 (grdc-20031019.tar.gz) = e2e06c2a294b916c2d223bcf3e9c67dc69ba1c7024e44e3af8b8152665dffa359b3d401c32bbb58a3640530c554382d47b4adbf6e7b04d3004b7583f01eb8f73
 Size (grdc-20031019.tar.gz) = 2621 bytes

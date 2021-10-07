@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/03/30 08:45:32 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:04:14 nia Exp $
 
-SHA1 (saytime_11nov1995.tar.gz) = 0deae40ee1c4f128a75d93bc0d9d7cf61c6c757b
 RMD160 (saytime_11nov1995.tar.gz) = c5b4193f4ccabcf75da59e0019e2a73673576d06
 SHA512 (saytime_11nov1995.tar.gz) = deb5eed59dfe39380e4484a5df47def5835d16c1ece3da14c0fc1d11264f3e807a3542d3aabb29a57fe86b46eeec878af1802691ef8ca2470c2e4652d3b80fa9
 Size (saytime_11nov1995.tar.gz) = 104245 bytes

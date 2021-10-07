@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2020/09/07 17:56:19 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:04:03 nia Exp $
 
-SHA1 (TimeDate-2.33.tar.gz) = 33384f2bcea9d9bb77009d1be00e671add9df69a
 RMD160 (TimeDate-2.33.tar.gz) = b0cb4cbec7ec9cb19e04531b8e6b0ee99fe70c5e
 SHA512 (TimeDate-2.33.tar.gz) = a3a20a0d9439e68bf621c66fad0598e6257345727be79c87c7cc99994b3a58eb738787fedb720beb069e9758ad1347c15313f64411806dd0f4dfbcca5061c820
 Size (TimeDate-2.33.tar.gz) = 29997 bytes

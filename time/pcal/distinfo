@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/04/08 06:14:46 riastradh Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:04:05 nia Exp $
 
-SHA1 (pcal-4.11.0.tgz) = 214bcb4c4b7bc986ae495c96f2ab169233a7f973
 RMD160 (pcal-4.11.0.tgz) = f2c6d061ff0abbb01c33b8d7617f3e1c03e967c5
 SHA512 (pcal-4.11.0.tgz) = a04ed4e859c4df32dd9c8b8dd8076f88679cc631aa4acecfb23524c14eef758fa3cac41f52bc88a018544e2df025b5f659d1bcc8c8f6c317ebfdcbe197c066c8
 Size (pcal-4.11.0.tgz) = 324368 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/25 00:52:29 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:04:09 nia Exp $
 
-SHA1 (jinja2-time-0.2.0.tar.gz) = ca1e452286e6051bdb38fbfa997a3bd19d9ee63c
 RMD160 (jinja2-time-0.2.0.tar.gz) = ab4922311b45c56b2e9462b5afd555ed82cdabbe
 SHA512 (jinja2-time-0.2.0.tar.gz) = 8ac4686312cde689f7a431001833d5d477030c4f5e9470d949bd07a40fcb9521f6ddcde37a72468093121ff9451e352a0bb43d20a796d7a204cf94e8a7545f2c
 Size (jinja2-time-0.2.0.tar.gz) = 5701 bytes

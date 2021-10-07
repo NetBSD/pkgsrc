@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/01/27 05:36:44 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:03:59 nia Exp $
 
-SHA1 (Business-Hours-0.13.tar.gz) = e4286f7dea67668f0e4c2b9e70c653b25d0e98a2
 RMD160 (Business-Hours-0.13.tar.gz) = e94818eb5e775b81e83f31e49dbce343da1b32ba
 SHA512 (Business-Hours-0.13.tar.gz) = 2fb0c5c017f4dd5eaeaf394b7534348473bf47009020d23d5fb642ae67a06d8041f6dae4d554e8e36412cecf447a300f30bcacf4f8aab3c357ea81b6a5c55d7c
 Size (Business-Hours-0.13.tar.gz) = 16391 bytes
