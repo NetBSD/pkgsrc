@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/10/14 13:34:36 wen Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:22 nia Exp $
 
-SHA1 (DBIx-Class-EncodedColumn-0.00020.tar.gz) = 0cafd52bf13a9f316745b9f844f9a1234430db6d
 RMD160 (DBIx-Class-EncodedColumn-0.00020.tar.gz) = b2ec6ed0bd482435b4e5d74fc8b35251fc23cfbe
 SHA512 (DBIx-Class-EncodedColumn-0.00020.tar.gz) = 38b034f257ebfb6eb3071a5d87acedb25918f4f9e5e4f522784a549a896f463befe820155cbe56ce51097c042634bf863f610f1ddf0ed78860a6e99a464d1b7a
 Size (DBIx-Class-EncodedColumn-0.00020.tar.gz) = 26143 bytes

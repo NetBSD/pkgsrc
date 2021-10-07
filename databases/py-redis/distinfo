@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/06/08 12:51:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:35:39 nia Exp $
 
-SHA1 (redis-3.5.3.tar.gz) = 320212e552a6d92f708f83ac1bdc4e2330afb067
 RMD160 (redis-3.5.3.tar.gz) = 8138c8bf7874fbf1b57d603b7a929f4c8e469317
 SHA512 (redis-3.5.3.tar.gz) = eae6ac6b3e0f1366a9c29e5e2d9a5210e4627e62e3006159b1c290f36cd9c1c2c12cafe0944f7a010e04632b517874f230aa9411491993b7ecf2080546217206
 Size (redis-3.5.3.tar.gz) = 141112 bytes

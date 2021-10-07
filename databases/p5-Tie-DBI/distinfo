@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/06 22:11:48 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:35:29 nia Exp $
 
-SHA1 (Tie-DBI-1.08.tar.gz) = 48320d14f1e09351ae358b8f15ad6357b8399080
 RMD160 (Tie-DBI-1.08.tar.gz) = 2c416557c1e9baf148b2d6bc0e01b8b6deaebd1a
 SHA512 (Tie-DBI-1.08.tar.gz) = 9a66d5c6dbdcbb7f6afbc77cfd28246243e2544371d971f3234a107f2e61c89ce2addc1f6dfc1821603eaab768464cc02fa6a2f5438c20fbea65a9742259a989
 Size (Tie-DBI-1.08.tar.gz) = 31012 bytes
