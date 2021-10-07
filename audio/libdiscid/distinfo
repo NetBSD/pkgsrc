@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2017/01/30 12:16:17 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:09:30 nia Exp $
 
-SHA1 (libdiscid-0.6.2.tar.gz) = e578cd6ef7ab08dd20eb4fbb26bf55375930b0bb
 RMD160 (libdiscid-0.6.2.tar.gz) = dac7943f8294ed9dc3538a6028a4a125d51a4be9
 SHA512 (libdiscid-0.6.2.tar.gz) = 7ce9bb589f64644ef44400620bd3e65a329e52c5698b44c3dc1569fb143d9af15d540b95fbdce1b87db0263e2ff55c81133213ed1708cdb25af1b38a46c4e1ac
 Size (libdiscid-0.6.2.tar.gz) = 401455 bytes

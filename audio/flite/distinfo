@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/04/17 09:24:50 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:09:22 nia Exp $
 
-SHA1 (flite-2.2.tar.gz) = 687cace51875b15d2f10dba0732dfc0634571bb8
 RMD160 (flite-2.2.tar.gz) = 86b66adeb328878d5cafb7e67bb203b734edeb66
 SHA512 (flite-2.2.tar.gz) = 1ca2f4145651490ef8405fdb830a3b42e885020a7603d965f6a5581b01bed41047d396b38c2ceab138fc0b28d28078db17acd2b5a84c6444cb99d65c581afa72
 Size (flite-2.2.tar.gz) = 20233792 bytes

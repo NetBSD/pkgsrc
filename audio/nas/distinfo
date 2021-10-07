@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2020/04/26 06:32:00 rillig Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 13:09:42 nia Exp $
 
-SHA1 (nas-1.9.4.src.tar.gz) = a251c5b771f9d7fa98f65e5830a039b28f8a6995
 RMD160 (nas-1.9.4.src.tar.gz) = 9622263075b1d24fb27dd06c9edecc91ac3157ae
 SHA512 (nas-1.9.4.src.tar.gz) = 3f8bd60f8ce0f25a2605af17caaadfe4f21223ba4cd3fa02078d1427b17cdf33ebda887e5dc30cd68eb7f64bfad80aafc9071ff0a26f0d3a4a93caacac03b5bb
 Size (nas-1.9.4.src.tar.gz) = 1464598 bytes

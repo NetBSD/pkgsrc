@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:46 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:09:40 nia Exp $
 
-SHA1 (mp3val-0.1.8-src.tar.gz) = 19f7506d387f72def2861ec271c5cb4135bd8f5e
 RMD160 (mp3val-0.1.8-src.tar.gz) = 25b63be18d40623324b1ce4d622bd18204965c13
 SHA512 (mp3val-0.1.8-src.tar.gz) = 62371453be53840fb0f0d87c9fcf9cbd6f5c8ae107e529f0cb6b8190ef9e7ebf564bb080c9d0a6adc3b5450673e70b5f4343dee82c1e6400750935cccebc2604
 Size (mp3val-0.1.8-src.tar.gz) = 21406 bytes

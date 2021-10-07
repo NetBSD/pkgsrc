@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:39 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:09:35 nia Exp $
 
-SHA1 (libvisual-0.2.0.tar.gz) = 8867f743c7407890c8cc571acab2fbcab869f3a1
 RMD160 (libvisual-0.2.0.tar.gz) = d933e849ffb8ce8f21d9d58e92fd104b137b718d
 SHA512 (libvisual-0.2.0.tar.gz) = 7c145fb32ad847e693c8acf4d0b7b2ccc1b0b2fec2626f2fa69a23435d066bdf3a320af76e92b2f374b26280b7a061da349b28183134b504013f16eadfd016d8
 Size (libvisual-0.2.0.tar.gz) = 431141 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/11/09 11:48:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:09:18 nia Exp $
 
-SHA1 (faac-1.30.tar.gz) = a07f7f5d700f9aa15fb70276c9ae2199c4cfc2cb
 RMD160 (faac-1.30.tar.gz) = 99fb55f82984fb94ca9a85a8cad99962c7d78ef2
 SHA512 (faac-1.30.tar.gz) = 8582cd580dba2a347d15dc4fab42020d7120d0552c54ab74cfaf59ba1b270abb94c67e39d42459a14cbc6e98f3fd00cbda589e1b4f0c7278e41bdef6ae7b6554
 Size (faac-1.30.tar.gz) = 241750 bytes

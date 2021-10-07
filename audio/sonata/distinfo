@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/09/14 11:05:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:09:52 nia Exp $
 
-SHA1 (sonata-1.7b1.tar.gz) = 3e3bbc6614a5cb9bc7294aa992d4366501c4702b
 RMD160 (sonata-1.7b1.tar.gz) = 6f43f032e8bafafa3df513606ff8e332087b82c7
 SHA512 (sonata-1.7b1.tar.gz) = a07d2040f062fb814ef4cb38b2610bd4af29f920303eda0ab7bcec2dcc66928760a812f7c5967d08c2d8f88e4fddb691a628b446fe097eb8d87c4c1ce08c5a21
 Size (sonata-1.7b1.tar.gz) = 2255999 bytes

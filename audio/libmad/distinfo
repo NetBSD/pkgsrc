@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/07/10 20:01:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:09:32 nia Exp $
 
-SHA1 (libmad-0.15.1b.tar.gz) = cac19cd00e1a907f3150cc040ccc077783496d76
 RMD160 (libmad-0.15.1b.tar.gz) = 0f3415ee10b188681e282ca69dec74c46ca73b0f
 SHA512 (libmad-0.15.1b.tar.gz) = 2cad30347fb310dc605c46bacd9da117f447a5cabedd8fefdb24ab5de641429e5ec5ce8af7aefa6a75a3f545d3adfa255e3fa0a2d50971f76bc0c4fc0400cc45
 Size (libmad-0.15.1b.tar.gz) = 502379 bytes
