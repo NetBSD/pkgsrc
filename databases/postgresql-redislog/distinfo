@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/19 22:11:27 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:35:34 nia Exp $
 
-SHA1 (redislog-0.2.tar.gz) = 080c1327996f3ff36416e6efe4481af005e49b00
 RMD160 (redislog-0.2.tar.gz) = 6bbba7d732dc22ff4bef50c830afb654941e91e4
 SHA512 (redislog-0.2.tar.gz) = 8e6c93147e95f69340ccb20965294a83411ada685cd75ba4a7a0be9380298f93f627f07acd8744b4ea65f3d905dba772b68e495ded3836e3a850ffbaec146553
 Size (redislog-0.2.tar.gz) = 11684 bytes

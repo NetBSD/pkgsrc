@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 01:56:35 agc Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:35:51 nia Exp $
 
-SHA1 (sqsh-2.1-src.tar.gz) = 7bbdda5590262e465508c889b86107465f3a2b90
 RMD160 (sqsh-2.1-src.tar.gz) = 9a76e661a10b79fd4c0d7f58878caf6e6349e590
 SHA512 (sqsh-2.1-src.tar.gz) = eda633a903a05436169d32c92b7f0ac0bdb1fd4ee04aca87a125cdb3972c17a994d9e4339774705035e3f428c11787d2728c7b6b8365474d573834075a34a179
 Size (sqsh-2.1-src.tar.gz) = 358874 bytes

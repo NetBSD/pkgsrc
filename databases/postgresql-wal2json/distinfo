@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/05 09:04:58 otis Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:35:34 nia Exp $
 
-SHA1 (wal2json_2_3.tar.gz) = 923f9bbcd0505a1f0b6eac1d371e4ff2d266a958
 RMD160 (wal2json_2_3.tar.gz) = ddd2a36503a2ec99e5a33e9fd9629612172db5fc
 SHA512 (wal2json_2_3.tar.gz) = 968f15a64daba77ad439fc95e4091ec2fe8581bf40559f1ff3a2c75c129e4954b43eea7300678a0b27a7fc880f25266e39aa8b9bc8bd2c9001661fc93f9c981f
 Size (wal2json_2_3.tar.gz) = 87413 bytes

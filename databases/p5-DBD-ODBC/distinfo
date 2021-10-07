@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/09/06 20:11:56 wiz Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:35:19 nia Exp $
 
-SHA1 (DBD-ODBC-1.61.tar.gz) = 89e428147c11deecf3ada1d5d9aa440b1b3e8df7
 RMD160 (DBD-ODBC-1.61.tar.gz) = ac0ca97131940438e18c7e119d0bd8e9e65c744d
 SHA512 (DBD-ODBC-1.61.tar.gz) = cd20a505b64fd6a6d9a5158c134f9337a9f40879516e4fcb45270dcc20d88ade1ddcf856e36db72b8ca57e34052284f794532f55f0a1f6469cd3d8dff0103435
 Size (DBD-ODBC-1.61.tar.gz) = 283251 bytes

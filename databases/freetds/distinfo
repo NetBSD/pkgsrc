@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2019/07/04 07:15:35 adam Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 13:35:08 nia Exp $
 
-SHA1 (freetds-1.00.112.tar.bz2) = 607b2f8bedf8487be2471623638757a55adce5a9
 RMD160 (freetds-1.00.112.tar.bz2) = 0e1b8a5aa99efea0932fe0ef0485bae5bc69f415
 SHA512 (freetds-1.00.112.tar.bz2) = 162fd65552260a25af7399e8f69ec6b7f609d72b1822c6cec00a33b055958a267f0bb580f074a59d325a4e93d57244a9b515f7581b0186d35f402ab6b3b86f83
 Size (freetds-1.00.112.tar.bz2) = 2225521 bytes

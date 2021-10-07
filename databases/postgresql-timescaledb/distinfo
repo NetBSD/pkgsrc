@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/03 18:10:21 tnn Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:35:34 nia Exp $
 
-SHA1 (timescaledb-2.4.2.tar.gz) = 8200196fa249dad9bfad5a7070eff6806d803acf
 RMD160 (timescaledb-2.4.2.tar.gz) = e13a5f6a132b92cf701619b33a784db36089653d
 SHA512 (timescaledb-2.4.2.tar.gz) = 56a0ff981e7374e2845d949c5bde2f157063b36cb7f9c54c6627c35ae8a8a5e5a3637fb66c6fd5c61a25b86f80a204ab7a6071b9705646bfee6a9b252c805b2d
 Size (timescaledb-2.4.2.tar.gz) = 2409324 bytes

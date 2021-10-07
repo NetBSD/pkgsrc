@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2018/09/10 12:18:09 fhajny Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 13:35:36 nia Exp $
 
-SHA1 (python-driver-3.15.1.tar.gz) = 9d62371cc1d71443e51aa60c464db1bfb54b6155
 RMD160 (python-driver-3.15.1.tar.gz) = 67547a190cb5f7b08a7c29d715beac736dcbdd9d
 SHA512 (python-driver-3.15.1.tar.gz) = 61d0a8b5e348de8a21e3ef6c30d40744e4499bce56c700fc180b31596a2d5e2310ccbcbc2bf1a5e25408ba34ef8c16724cceeb98ff4640a54c2ab23d1ca9c3d0
 Size (python-driver-3.15.1.tar.gz) = 582655 bytes

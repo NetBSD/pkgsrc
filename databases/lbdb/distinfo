@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2019/02/08 22:25:32 tonio Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:35:12 nia Exp $
 
-SHA1 (lbdb_0.48.1.tar.gz) = ae81fee4c46d3680aa6ad5434efcc4db371c3165
 RMD160 (lbdb_0.48.1.tar.gz) = 4e458585c22826b962089412d55ddf0005eb9160
 SHA512 (lbdb_0.48.1.tar.gz) = 47d35caa88634f0f98e08e58d9920a44012ee51203dd765a716147b717e76b95cc1a07cd149b569800d5f97e78a7367f35a4e6298fc2bf33fa2f2988db87771e
 Size (lbdb_0.48.1.tar.gz) = 183538 bytes

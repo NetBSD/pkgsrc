@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/06/29 13:24:54 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:07 nia Exp $
 
-SHA1 (db-6.2.32.tar.gz) = 51824cee0a59cdcfb11413ac4558c851dda24551
 RMD160 (db-6.2.32.tar.gz) = 6a3bc6562aea20184f8ee60800461dca31b50c4f
 SHA512 (db-6.2.32.tar.gz) = 83bdbf18a7b9782409cf4563f8d5f11322d5e564a39946c890604a60440a6ea6361e0236bbc30bd4e8e1de1fa9196b8e815fd126baa035f55c5826c2c6aa3401
 Size (db-6.2.32.tar.gz) = 45342417 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/28 09:18:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:35:31 nia Exp $
 
-SHA1 (pgpool-II-4.2.2.tar.gz) = 87f917320f4cf790a44a235e2a8854b6fa79d7b3
 RMD160 (pgpool-II-4.2.2.tar.gz) = cc87f747fdf74b5e6628fabab808a474766f8288
 SHA512 (pgpool-II-4.2.2.tar.gz) = a147c810cc691fb27b823a813cbd2eaad66822c7c9f5c0f829cc70d4ac65911bbe827640f2dbd8060913276ed97340b52167e4332e9cdf013b6c9bc144c7b5d8
 Size (pgpool-II-4.2.2.tar.gz) = 4734840 bytes

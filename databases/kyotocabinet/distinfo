@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/02/18 18:02:46 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:12 nia Exp $
 
-SHA1 (kyotocabinet-1.2.79.tar.gz) = 21a2d05bfe66775334c21009dac5016e5410ddb3
 RMD160 (kyotocabinet-1.2.79.tar.gz) = aa8ba2f5ff503828c709c8effea1f6df7d845059
 SHA512 (kyotocabinet-1.2.79.tar.gz) = 9243192c81d3aa37cc8c80eb3bdf235192a0919b134cededa2b4178be515d148916e7405e094cbcdd7dbf13bf38a569bf21863afac7cc05d6418cca5853a2ff4
 Size (kyotocabinet-1.2.79.tar.gz) = 943804 bytes
