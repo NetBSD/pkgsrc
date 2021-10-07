@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/11/08 02:18:21 mef Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 15:02:01 nia Exp $
 
-SHA1 (XML-Writer-0.900.tar.gz) = 19af1d84dee77ef6419172b6f6148ea11ab4662c
 RMD160 (XML-Writer-0.900.tar.gz) = 4cdb941c828b1f833e86cb8dae3bfbd7ef1b5b33
 SHA512 (XML-Writer-0.900.tar.gz) = 0856146f497194529352378bdd81462e0ffd185b2464f9995dedc3b4705f517d87960a9a473e44a0ae7095bdee0e3f0121410ea6208c3adb94636e9db0c8da2e
 Size (XML-Writer-0.900.tar.gz) = 29817 bytes

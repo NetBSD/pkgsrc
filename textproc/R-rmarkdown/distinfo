@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/05 01:50:39 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:00:37 nia Exp $
 
-SHA1 (R/rmarkdown_2.10.tar.gz) = 298c69b011aca0370569a1e2f54ef07bda0111c7
 RMD160 (R/rmarkdown_2.10.tar.gz) = 1a38e890d27107a0ed82ccac5a7bcbaca27f0f55
 SHA512 (R/rmarkdown_2.10.tar.gz) = 800f3b132097236d60a703c0d89da11aeae872a17f10475b502b5b936059b268c013b07e0c0e9cdf4ee8cd47fc82b0b5bc901db36962d9084d1819748675b059
 Size (R/rmarkdown_2.10.tar.gz) = 3248794 bytes

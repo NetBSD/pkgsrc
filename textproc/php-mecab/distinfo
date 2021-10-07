@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/12/13 17:20:21 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:04 nia Exp $
 
-SHA1 (php-mecab/mecab-0.6.0.tgz) = a96087af17b978ddbb49c9b9bdf179158d141b9f
 RMD160 (php-mecab/mecab-0.6.0.tgz) = 549c4a1b5166ae64d562f929ed847f2b8a8ab8f5
 SHA512 (php-mecab/mecab-0.6.0.tgz) = 37d3adfe46686cbfbb2e00e3afc5667d4949d8568cddf1bd2e484de5a13dc02af80d9e3d1c1c5ad629b3630a9391ba325858229657f4a11d662b0fd482503b15
 Size (php-mecab/mecab-0.6.0.tgz) = 50194 bytes

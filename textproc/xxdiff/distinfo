@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/11 20:52:38 ginsbach Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:48 nia Exp $
 
-SHA1 (xxdiff-4.0.1.tar.bz2) = 560cd1ca8b947a9dca14938595905ef31ee18eee
 RMD160 (xxdiff-4.0.1.tar.bz2) = 1bd4a5bde100026e562d540f230c609f9b3c06cc
 SHA512 (xxdiff-4.0.1.tar.bz2) = bcc2b528a0ebf273677d74aa3a971feb9052a01a8187a5d8abe3bce744520a3fa61bd842a9d4ba465abbf00f6da62868a1f18adeb7d8eccee6f76df4a1e4db3a
 Size (xxdiff-4.0.1.tar.bz2) = 1981869 bytes

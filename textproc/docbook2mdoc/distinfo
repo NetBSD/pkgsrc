@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/08/25 17:53:58 ng0 Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:00:57 nia Exp $
 
-SHA1 (docbook2mdoc-1.1.0.tgz) = 2797e0362e84c01eaa46ea40c2089fe773b97c4c
 RMD160 (docbook2mdoc-1.1.0.tgz) = dfe77e13a6ccbe413b55a7f7106be1e000ea4f98
 SHA512 (docbook2mdoc-1.1.0.tgz) = d935a12de59a1b91f51b3ddcc1047ce6e46f0490852c3ab1191402f6c2f9d8e79c57b1ad67ac7b2527c9aa4788f027ca6b83dffbcfed756af0422858713101be
 Size (docbook2mdoc-1.1.0.tgz) = 26732 bytes

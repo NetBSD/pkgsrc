@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/04/18 00:44:27 minskim Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:02:31 nia Exp $
 
-SHA1 (itex2MML-1.5.5/itexToMML.tar.gz) = 05c64ac84e20458fecdedb13cd03cd2c72736461
 RMD160 (itex2MML-1.5.5/itexToMML.tar.gz) = 6088d89b567b5cb7a4b0c5fc80ad0c4f0a18ee0a
 SHA512 (itex2MML-1.5.5/itexToMML.tar.gz) = 452436fe6f72d2c99c2bf3aec0d5d74d0bd754b6f54948428e45f50b037927a64ae3148386c387d3065d35392c3744ec6467d3e6fb8c25d46a3872d92d35ce2d
 Size (itex2MML-1.5.5/itexToMML.tar.gz) = 155205 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 09:42:01 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:01:04 nia Exp $
 
-SHA1 (annotated-wl-pprint-0.7.0.tar.gz) = 94099620a42be265d1545a1f0caa5c074290ab64
 RMD160 (annotated-wl-pprint-0.7.0.tar.gz) = 823c8e675a3ed269dfc448dd1c0571c622f11eea
 SHA512 (annotated-wl-pprint-0.7.0.tar.gz) = 1e7ea93a63c500ebb23458202c62ed37eee7f462bbc4c390822de37fd0f411983eed49fed4c69ffb32705519f9aa956131d14ad930f21b48b28c5de5d4095f0a
 Size (annotated-wl-pprint-0.7.0.tar.gz) = 10338 bytes

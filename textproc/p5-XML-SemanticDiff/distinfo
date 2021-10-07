@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2018/08/21 12:17:38 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 15:02:00 nia Exp $
 
-SHA1 (XML-SemanticDiff-1.0007.tar.gz) = 988d6fab51e7cd1b3b58eb8c7a1f4acca399b8a5
 RMD160 (XML-SemanticDiff-1.0007.tar.gz) = ca66508f9e74f34a0ced16cd92190600d57b694a
 SHA512 (XML-SemanticDiff-1.0007.tar.gz) = 821be3c88d3df654774c282168ff7d18685ce595abd0f8358d7ddcea6f43d8f5bdd869882a74553c259e6a2ddb8bdcbc3f930497263a647711e2f3fe3c61def2
 Size (XML-SemanticDiff-1.0007.tar.gz) = 36146 bytes

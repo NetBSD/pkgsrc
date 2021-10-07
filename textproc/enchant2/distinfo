@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/08/15 13:25:33 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 15:00:58 nia Exp $
 
-SHA1 (enchant-2.3.1.tar.gz) = 018ab0057165f21fa4d0cdb5dfb67f4a475d34fa
 RMD160 (enchant-2.3.1.tar.gz) = a6c8c9a6ff5eae56b8c89dcf985605a34c529d47
 SHA512 (enchant-2.3.1.tar.gz) = c6fb8498d34a55040c2791124c2975952497e5a1b8999958691279b1a60a37473a1d2e3e11504f7cc877370be7772c2db621022040ea7035b21e40e8367606f5
 Size (enchant-2.3.1.tar.gz) = 987361 bytes

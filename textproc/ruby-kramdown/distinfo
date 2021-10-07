@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/03/18 10:20:24 fcambus Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 15:02:31 nia Exp $
 
-SHA1 (kramdown-2.3.1.gem) = 5be8b0f17e0db42297c0434e526676e0a258ef52
 RMD160 (kramdown-2.3.1.gem) = ab4099c7123e9dd32f9c0620278f0d8cb224bf17
 SHA512 (kramdown-2.3.1.gem) = d1955065e3c5d7a60e595b647d5e453cf07a08fe25d40c67cf6f32d30f704a2c653a52959f8c71b3290e6da74836a085fa6bf8201c878303ad572dee8cc64496
 Size (kramdown-2.3.1.gem) = 122368 bytes

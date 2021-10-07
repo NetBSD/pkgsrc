@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/09/07 14:52:57 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:01:44 nia Exp $
 
-SHA1 (Syntax-SourceHighlight-2.1.2.tar.gz) = a3e85fd8303be70fad331d85cf4130b271473c73
 RMD160 (Syntax-SourceHighlight-2.1.2.tar.gz) = 73fda88c2a6d0cb40c34a32bccf81afa2d098707
 SHA512 (Syntax-SourceHighlight-2.1.2.tar.gz) = 663f37eaa2ba40e35cd56e1b0f259f242ac001fab3e527b6529fd5e035c0a587b31abb1a8b26550eda94db3ad5fa9bb252d7791b10bfad8702399bc9445668af
 Size (Syntax-SourceHighlight-2.1.2.tar.gz) = 17108 bytes

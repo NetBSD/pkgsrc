@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 09:10:24 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:30 nia Exp $
 
-SHA1 (gyoku-1.3.1.gem) = 9b4d5ad96f2afc65aadbba2c6ab85c53c30dde8d
 RMD160 (gyoku-1.3.1.gem) = 6a005e71a7161bcbb39b79847a2ee81504723f1f
 SHA512 (gyoku-1.3.1.gem) = 12ebab28273346842d13060386db7d96c71224a4f562f2a4a496ea5dbd2341cdf8850148d6cb37ffb193724f428d82e4978e79de97d4e5205c8d346d69df4745
 Size (gyoku-1.3.1.gem) = 16896 bytes

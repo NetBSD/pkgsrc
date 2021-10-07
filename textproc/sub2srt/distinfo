@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/01 10:59:12 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:39 nia Exp $
 
-SHA1 (sub2srt-0.5.5.tar.gz) = 0573f63a30d36990e594210152dd854fe884f0eb
 RMD160 (sub2srt-0.5.5.tar.gz) = a971e7e73f17d0d6ba02f354e13fda3c118f4c60
 SHA512 (sub2srt-0.5.5.tar.gz) = 833e2c830ff28cad81064c906a8c565c89e4e0fd57382d65fd91b437bf5445a44a36606c8e3dd7b91947e48b09e60131be39a6cbf3b2f79aed3b2d849b008d99
 Size (sub2srt-0.5.5.tar.gz) = 11564 bytes

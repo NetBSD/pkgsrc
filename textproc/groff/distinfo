@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2020/03/30 19:32:24 joerg Exp $
+$NetBSD: distinfo,v 1.28 2021/10/07 15:01:01 nia Exp $
 
-SHA1 (groff-1.22.4.tar.gz) = 2ce4ab107e3fab1414fef2c5b5312f562a4e4d35
 RMD160 (groff-1.22.4.tar.gz) = 6f0555695ac882a8e1f925cce22f7e3d267188cb
 SHA512 (groff-1.22.4.tar.gz) = 1c42d3cd71efaf067b5850945d9097fa1f0fadd5e2b6ba7446bd9d4f439fe1ad058e4ddb0d4e0f503682137dfc7c822944ce1e3e5cf981673f8ba197ea77126d
 Size (groff-1.22.4.tar.gz) = 4137480 bytes

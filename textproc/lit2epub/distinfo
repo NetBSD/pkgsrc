@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/02/20 10:18:33 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:01:24 nia Exp $
 
-SHA1 (ebook-tools-0.2.2.tar.gz) = 1f10bef62c9125cf804366134e486a58308f07ff
 RMD160 (ebook-tools-0.2.2.tar.gz) = 2808a20b7bc9dc01b54be0e46dfb4cf96508d1a2
 SHA512 (ebook-tools-0.2.2.tar.gz) = b4518249835ed7cc672392bf2f8b1c62bc218e41c53663bb26ab34c9e43a99b6b7ae794babdb4bd775e467bb17918703a66ee57c8cf94cb7afc4ba2a7f74816a
 Size (ebook-tools-0.2.2.tar.gz) = 46889 bytes

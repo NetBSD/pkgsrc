@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/01/18 14:52:59 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:35 nia Exp $
 
-SHA1 (terminal-table-2.0.0.gem) = 967467fe515e0221049431ef2929404bf9dc6be2
 RMD160 (terminal-table-2.0.0.gem) = e99cb81cd13fc6fff3c9db2841db9717be0c61d5
 SHA512 (terminal-table-2.0.0.gem) = 7394f830ac5e2b24d0d9553031a1a53e7b76b903a43239eb70531af9cbb54d1c81d526fa9ed805a6ed937e343b7dc65fe36d036467471c33f2b4955da220fd03
 Size (terminal-table-2.0.0.gem) = 14336 bytes

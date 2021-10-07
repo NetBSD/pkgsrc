@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/10/19 10:50:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 15:00:42 nia Exp $
 
-SHA1 (aspell6-de-20161207-7-0.tar.bz2) = 9016f4c294cb80a730553f24a4c32bac3efc77c2
 RMD160 (aspell6-de-20161207-7-0.tar.bz2) = df152d724af872fda49fc0165b2c144be4bebb69
 SHA512 (aspell6-de-20161207-7-0.tar.bz2) = ec29fa49d4e0303d6ceb78da3884ac54ddf34205895f30a95bce0db66f74472b423980200acf01efb1fa40380d6ea6351a58656400af35772266f8a54b1bbec8
 Size (aspell6-de-20161207-7-0.tar.bz2) = 294974 bytes

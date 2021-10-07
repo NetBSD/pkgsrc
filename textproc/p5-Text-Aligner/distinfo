@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/09/07 14:53:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:01:45 nia Exp $
 
-SHA1 (Text-Aligner-0.16.tar.gz) = bbaafa10e1925f7727d4e59d5a552e35f446fb54
 RMD160 (Text-Aligner-0.16.tar.gz) = 7d1fa36d6a0a83573406868c786c0d3d647f2827
 SHA512 (Text-Aligner-0.16.tar.gz) = ad3135de32ce870fbb9e5ccf9ad0d02f655c3e37397127009ad46e7baca515f9bb011251958c7fdbcc2ceabcfbbcb4dc8608c0b70ec3e4086492e1c6c1b38dfb
 Size (Text-Aligner-0.16.tar.gz) = 15911 bytes

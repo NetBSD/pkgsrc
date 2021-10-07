@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/16 12:17:43 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:02:19 nia Exp $
 
-SHA1 (rdflib-5.0.0.tar.gz) = 849702915bf7d4aae66cc55106fb5041babfbb0e
 RMD160 (rdflib-5.0.0.tar.gz) = de9c5a53fa3ec4e160af74ad3f57471cc829d581
 SHA512 (rdflib-5.0.0.tar.gz) = ba98ab6a7bb9d993d11c559a739761f297282eb9307f3e333db8dd1c6b365b408a59b701d823bef9be774a59b3f44f64c9444e3bb0115c0c549cb00945385dab
 Size (rdflib-5.0.0.tar.gz) = 818586 bytes

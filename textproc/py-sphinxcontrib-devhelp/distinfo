@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/02/29 15:27:13 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:21 nia Exp $
 
-SHA1 (sphinxcontrib-devhelp-1.0.2.tar.gz) = 3782815be9e11190fe7c7d697e73369432c56fd6
 RMD160 (sphinxcontrib-devhelp-1.0.2.tar.gz) = 10ab655ca874f228604f17c7cd521f0bcb1f446f
 SHA512 (sphinxcontrib-devhelp-1.0.2.tar.gz) = 83b46eaf26df3932ea2136cfda1c0fca4fc08ce8bca564845b3efe5bb00d6c8c93991f4edd4913d4ec796e2d85bd2c7265adf28e98f42e8094daeb5ac11a0eb1
 Size (sphinxcontrib-devhelp-1.0.2.tar.gz) = 17398 bytes

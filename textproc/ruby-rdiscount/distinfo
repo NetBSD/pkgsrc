@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/09/14 15:05:28 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:02:33 nia Exp $
 
-SHA1 (rdiscount-2.2.0.2.gem) = efbb7aee19ffff763a47a9c9b21d8ec901a3499e
 RMD160 (rdiscount-2.2.0.2.gem) = c646ee5d658eb51c11de44190532340be3cedf85
 SHA512 (rdiscount-2.2.0.2.gem) = 97a0fabb77238173f101298e4b4b6d4728b9e15cb7d3f14e7d1d978c44ab92dd89c2e02d0c15c0fa70a836eb54abca06b0027e26e5d87540bfe145c8527be3f7
 Size (rdiscount-2.2.0.2.gem) = 68096 bytes

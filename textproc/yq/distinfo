@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/11/19 21:30:15 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:49 nia Exp $
 
-SHA1 (yq-2.9.2.tar.gz) = 3196b8a2069d29c867ee3c2b1ae25e9a4e757e6c
 RMD160 (yq-2.9.2.tar.gz) = 9e2b490939cb222bc283245316d73d3f5de89079
 SHA512 (yq-2.9.2.tar.gz) = 3b3c8e486540c0345af0bbc17b3f8e64d07d4eadce7f38931c1adcae74610cce7d305f43a8a903f9838672c56d25e92bd0b1d967142d3a2dcd66338e39d03f12
 Size (yq-2.9.2.tar.gz) = 20941 bytes

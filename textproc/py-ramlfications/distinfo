@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 21:20:16 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 15:02:18 nia Exp $
 
-SHA1 (ramlfications-0.1.9.tar.gz) = 0fc6e0cc70d7bd216529eb041b2a225a22acc32f
 RMD160 (ramlfications-0.1.9.tar.gz) = 524879376a03e95afeaa9aea8080ab42e49cc606
 SHA512 (ramlfications-0.1.9.tar.gz) = 5f93556e8f008b86bbe1e3b96dba3b20a31e583800334931b9c3972da897bc19a93ba5fdd687799e99aee79a93e10e58ca1b3eb5b0f38fb2b28d0f0ba0723e82
 Size (ramlfications-0.1.9.tar.gz) = 1094577 bytes

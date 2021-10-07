@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/08/28 19:35:46 scole Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:02:40 nia Exp $
 
-SHA1 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = c14a6eb1d56a5b497a2b952a51a927cef7e99f7d
 RMD160 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 3206eadd1f63a648ea0bb52bd4be5d9fe8fe598b
 SHA512 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 75cd5409024a883ca393753ba39814be6a9a4d025aab8cc29a4d121564397a7ea1d294288dfa27077f3d8d3d075cd20b089e8cff85ce33e31e305874c1040151
 Size (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 594203 bytes

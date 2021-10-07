@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2016/07/15 13:14:10 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 15:01:29 nia Exp $
 
-SHA1 (mxml-2.10.tar.gz) = 9145980cac61f3ced592db8876b4a61cc187dce3
 RMD160 (mxml-2.10.tar.gz) = b06a20ed436a7b6845acc66f523985cae8a175eb
 SHA512 (mxml-2.10.tar.gz) = c3838611979c4228df476166e4e987fc1ff8f9b8bd30139066b475dcd99e25be81ecc5171235bc80b1c2291c9d78c9ceae9a1dfc928272a983740d6a67372f5c
 Size (mxml-2.10.tar.gz) = 265398 bytes

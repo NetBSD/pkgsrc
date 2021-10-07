@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/04/01 11:38:30 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 15:00:51 nia Exp $
 
-SHA1 (bibclean-2.11.4.tar.gz) = 8a51c0e8182d303e336137d6bc601276b1b86c77
 RMD160 (bibclean-2.11.4.tar.gz) = 9a68c05599911ee0c4c89f5a7c3c4c9d8b3b7fb2
 SHA512 (bibclean-2.11.4.tar.gz) = 00bfa17b6aa0e11a0419ccebf67fc3f927032ded3055f889cf4738677bd01dae9003021d2d83397adaa451aad45c5409af18132fbd69ad4e0da4b757394563f4
 Size (bibclean-2.11.4.tar.gz) = 2165967 bytes

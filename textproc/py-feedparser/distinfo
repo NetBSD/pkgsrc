@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/06/23 18:18:42 schmonz Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 15:02:10 nia Exp $
 
-SHA1 (feedparser-6.0.8.tar.gz) = bec0a6c2216cd492c1827db43d5e9ea05aacc92b
 RMD160 (feedparser-6.0.8.tar.gz) = 41b61055d44d48cb1a89d4baead40d093b78e9d1
 SHA512 (feedparser-6.0.8.tar.gz) = 1fa91f35412a86cac569eade729f922c4b742df7b7acd3822f4e41c5cbefab948af422f44da5e830c0c4555048f15a341116cab0d5d7be14e4e8b3b97fa63d1a
 Size (feedparser-6.0.8.tar.gz) = 285827 bytes

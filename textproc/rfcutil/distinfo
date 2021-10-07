@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 02:00:06 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:02:26 nia Exp $
 
-SHA1 (rfc-3.2) = 1dd1b8f90d0e24fcd8447ff563ca6c47931a826c
 RMD160 (rfc-3.2) = 40c8bfb3baa4bee7060cc69cd908395df19d678b
 SHA512 (rfc-3.2) = 39b1ee51a41524b287b09f0f3afb5a4aa5b2a22f6bff4ac193e35ceef3b6d0ed3901b19078aaf4c79feafb49037c398a23cf4a19777de1ab438c6ad7394843b0
 Size (rfc-3.2) = 15308 bytes
