@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:47 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:23:26 nia Exp $
 
-SHA1 (ktp-text-ui-0.9.0.tar.bz2) = ac4e43bff475f53a8fa3e56734b26855c52024fa
 RMD160 (ktp-text-ui-0.9.0.tar.bz2) = b711453a06791b72d12c75da987c89ae30f54162
 SHA512 (ktp-text-ui-0.9.0.tar.bz2) = 8ff0cd400cf7bafc228f8769a9688b17a60d10b5f012e4718130d7dc98f77e2f08bad1cce2ee089096de0da1d55c57b7c7cbeff163decf60e564c381d56b10bd
 Size (ktp-text-ui-0.9.0.tar.bz2) = 471280 bytes
