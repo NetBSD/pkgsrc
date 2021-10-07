@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 00:12:15 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:54:03 nia Exp $
 
-SHA1 (xquote-2.6.10.tar.gz) = d88abe72b9994375d454ff749c00fffd09fda05a
 RMD160 (xquote-2.6.10.tar.gz) = bde5b7ec201eab96c5ff4b98b6bbc5abc3adb4fc
 SHA512 (xquote-2.6.10.tar.gz) = c63c211ec96b3776e65e1bf85d99cfdef211c832b83083d3a63e240a04b793d4aa98432229a4bfa7dbb0f31d5265b9ed13b20cbadfaa575b5b27624d03c54a7f
 Size (xquote-2.6.10.tar.gz) = 106006 bytes

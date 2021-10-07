@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/12/04 21:12:59 rodent Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:53:55 nia Exp $
 
-SHA1 (tryton-4.2/trytond_account-4.2.0.tar.gz) = da06a614137745ada295f9d125648daafcfab0f0
 RMD160 (tryton-4.2/trytond_account-4.2.0.tar.gz) = 3a62e87302a68cf1c9931d10e5b3df8a10227a23
 SHA512 (tryton-4.2/trytond_account-4.2.0.tar.gz) = 5c77f88c614d37f842e9a027baad1d1348922759aa975e60ddef714cbe6fd6cb5f98115ccf6daa7aea94d53f2d392746b18407f0c456f25c6cb45ccf075be58b
 Size (tryton-4.2/trytond_account-4.2.0.tar.gz) = 371283 bytes
