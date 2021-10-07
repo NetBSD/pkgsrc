@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/08/25 16:42:21 gdt Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:54:50 nia Exp $
 
-SHA1 (ZoneMinder-1.29.0.tar.gz) = 1e1fb9aeb7f482c27b4275ad84556b6c3910e4dc
 RMD160 (ZoneMinder-1.29.0.tar.gz) = d744a68552651489cc17f369c11baa3cc45621ff
 SHA512 (ZoneMinder-1.29.0.tar.gz) = 4716e0788db29880eeafc817fe63662d07c3b805214b4d2eb29b346dd3493b0215c9e79370e3414220c812065eefbe253548a70d8128c253aa4535f66f9544df
 Size (ZoneMinder-1.29.0.tar.gz) = 9302624 bytes

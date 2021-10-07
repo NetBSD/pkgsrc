@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.40 2020/11/22 12:04:28 nia Exp $
+$NetBSD: distinfo,v 1.41 2021/10/07 14:54:43 nia Exp $
 
-SHA1 (seahorse-3.38.0.1.tar.xz) = 84e0ac58ab5362d9a302b31fab58e9c3029e0b24
 RMD160 (seahorse-3.38.0.1.tar.xz) = 79c6f3eac8c994c0382cebff8af99010139afd36
 SHA512 (seahorse-3.38.0.1.tar.xz) = d0fdbb81d71e5e0908f732ad49db89a3cae936f98e0285f758a8861259bff976d33083783a7e19474bd6a1e95c11ec74021b6b7f5cdd3d51372e9cd93d4fd014
 Size (seahorse-3.38.0.1.tar.xz) = 1726460 bytes

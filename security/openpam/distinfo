@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/01/30 11:17:05 triaxx Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:54:05 nia Exp $
 
-SHA1 (openpam-20190224.tar.gz) = da815b1977b9fc5c237c23743804c096fb582b82
 RMD160 (openpam-20190224.tar.gz) = 56f65b2a806dba8e8a2af3f16d7ed7b8183d5440
 SHA512 (openpam-20190224.tar.gz) = 62787167e923bcbefdf620a0a73b1aa9342a55f233f4a98c269c1952294c22d4c07b883d0e91eec3ca268fbfaee860999bfc884bd0af1fc7658ee0ba5b1d696d
 Size (openpam-20190224.tar.gz) = 507353 bytes

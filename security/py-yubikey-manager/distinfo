@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/08/18 13:37:50 riastradh Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:35 nia Exp $
 
-SHA1 (yubikey-manager-3.1.1.tar.gz) = 6f93f6534ad681b9092edf1f28dd970aed964114
 RMD160 (yubikey-manager-3.1.1.tar.gz) = 927cb522b894dd4824c92b2d0d59385a74800243
 SHA512 (yubikey-manager-3.1.1.tar.gz) = 4c1516c9fb72bae5f046f32220403504b3b34bce503abc50597c13cc0f29eb7673b8520d580f7bdd31120adfd4cfef8a91f3bb42bdafc517836952d7f5bb6ad9
 Size (yubikey-manager-3.1.1.tar.gz) = 119251 bytes

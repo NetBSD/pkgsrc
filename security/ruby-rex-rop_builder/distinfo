@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/05 15:28:07 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:41 nia Exp $
 
-SHA1 (rex-rop_builder-0.1.4.gem) = c56ecd8c55ec6d2704d1664d81e7410d1fe36cdf
 RMD160 (rex-rop_builder-0.1.4.gem) = e6e1fbe7e58fe1568d34fdbe36f0dee095b29b23
 SHA512 (rex-rop_builder-0.1.4.gem) = 9f8d8371572bf53ab9752fd6fdce12084431bfc80e1074b4b9136be60d83792dd6ae65ac02879e23377e6d8f61cf46f13088d1d0121c9df1268abb8ac119de6b
 Size (rex-rop_builder-0.1.4.gem) = 17920 bytes

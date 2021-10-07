@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/04/13 15:42:27 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:53:52 nia Exp $
 
-SHA1 (honeyd-1.5c.tar.gz) = 342cc53e8d23c84ecb91c7b66c6e93e7ed2a992a
 RMD160 (honeyd-1.5c.tar.gz) = 2316c4fb6b74b0ece4429d392c478fcd7516b6a7
 SHA512 (honeyd-1.5c.tar.gz) = b359d915957528f24f043510ea528e1b581c4badccb04e6ad6fc5b1811fb710fa908695dbb8e35089c002b89fd2a31ce1b2c4f491cb926185901198959c70d16
 Size (honeyd-1.5c.tar.gz) = 915465 bytes

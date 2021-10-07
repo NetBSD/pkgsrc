@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/01/19 00:26:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:54:45 nia Exp $
 
-SHA1 (snow-20130616.tar.gz) = b7cc0214d24cef44f50cd9069a0052f8dcd54176
 RMD160 (snow-20130616.tar.gz) = e7b37ad12f2f09505f85ae073cfd9e3908a14407
 SHA512 (snow-20130616.tar.gz) = 4e3167a9f5c706d117c8af534c4f324ab405bd909b67e3cb3e98d6534f322272a54c776bbad595055d58aaed2890a7bb610236470ec3e49b9228c2c83b152b8d
 Size (snow-20130616.tar.gz) = 16210 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/11/18 15:44:37 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:42 nia Exp $
 
-SHA1 (ruby-openid-2.9.2.gem) = 75b8e678b7da783363c7c99f0a1a8dcc67841687
 RMD160 (ruby-openid-2.9.2.gem) = 47ce2d2d0bcbb842300ecd891c4cb58d0365f3f9
 SHA512 (ruby-openid-2.9.2.gem) = 7b5cd60af00df78cd3504739894bb11656545a6ecec14165c3d0f131ab1ae461a180b85ba63a0297e3d3b4677bf418bbe83e7b27e36a543ede326323d43d1362
 Size (ruby-openid-2.9.2.gem) = 331776 bytes
