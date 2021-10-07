@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/09/27 13:48:21 mef Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:20:28 nia Exp $
 
-SHA1 (verilog-10.1.1.tar.gz) = 7f4cead8cabb90cc4525951357c43866ca710749
 RMD160 (verilog-10.1.1.tar.gz) = 77c933b712ab027b13a81e3eead7ee4f565741b7
 SHA512 (verilog-10.1.1.tar.gz) = a57fdce3d870be8ce39eb3050dabd5a2d4d491c657b85ccbf775bef7fa9a6889a18bf4d2508341ef2cc17d872b5d6c802d4fd8585e4ec7952526699ebb24bfac
 Size (verilog-10.1.1.tar.gz) = 1684925 bytes
