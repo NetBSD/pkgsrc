@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2018/08/06 09:38:21 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:25:41 nia Exp $
 
-SHA1 (pymsgauth-2.1.0-filter3-20180806.patch) = 8fdb67781bd35a7aeba00b626499c2b08642a1aa
 RMD160 (pymsgauth-2.1.0-filter3-20180806.patch) = 49e75bc08a6e692aa80c356850dd2894233e5805
 SHA512 (pymsgauth-2.1.0-filter3-20180806.patch) = bb315d0f021477e08ad912020b89d0b8536824ddcf8582a17447f84362f13ac84693136a1baf74fdd64ceaa376ec23fbee68e07de3665b5f6de60ad8fe71fd89
 Size (pymsgauth-2.1.0-filter3-20180806.patch) = 26393 bytes
-SHA1 (pymsgauth-2.1.0.tar.gz) = fe6c60022529ce2444db3423f84d44e457ae61bb
 RMD160 (pymsgauth-2.1.0.tar.gz) = 0a5d7d6be65d9623647a3dfe014cb89a2c213183
 SHA512 (pymsgauth-2.1.0.tar.gz) = a53ab929659106903a0c0fb83984a478d3bf32556467cf2ccf88d36f7b749a692edc3253a49ef78b0a3fe6e7475cca1ae583d4b8bc162fb693b395b6ab80ebc1
 Size (pymsgauth-2.1.0.tar.gz) = 17915 bytes

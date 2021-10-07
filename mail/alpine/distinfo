@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2020/11/23 16:36:03 bsiegert Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 14:25:12 nia Exp $
 
-SHA1 (alpine-2.24.tar.xz) = 42f2936935699686276bc6ab9e510eff7376a3dd
 RMD160 (alpine-2.24.tar.xz) = 1612ff9edfdd66a0ef145f338fa9db26177360e0
 SHA512 (alpine-2.24.tar.xz) = 642a51f73732ebdf7c40e2b66370aa2f48fb13b349b477871b26295c3e8b860a0cc78dec9f80efc6ea74c548a080ceff04181eb18c35a9c8cae8d8ef831178c5
 Size (alpine-2.24.tar.xz) = 7341676 bytes

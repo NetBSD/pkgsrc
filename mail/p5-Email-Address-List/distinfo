@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2019/02/22 14:12:34 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:30 nia Exp $
 
-SHA1 (Email-Address-List-0.06.tar.gz) = 4f3ad765944e393bb1ebeb8cf8eb51c459e2ae8a
 RMD160 (Email-Address-List-0.06.tar.gz) = ed32488f923c5406f98f4dc6364b88e2c0126bc7
 SHA512 (Email-Address-List-0.06.tar.gz) = 8a173198bed7b5bf41801de9713f424459366b937493bb15c0362843cfe78ca02ce2709f2fe31f3fd61752c0d52956b059e09c3becdbfab0887e9efae6112141
 Size (Email-Address-List-0.06.tar.gz) = 29428 bytes

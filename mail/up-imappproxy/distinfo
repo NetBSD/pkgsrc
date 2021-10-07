@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/03/18 22:05:56 tm Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:25:51 nia Exp $
 
-SHA1 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 85e76717b0d2f790e366b7516cc567fc551c9cc6
 RMD160 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = dac57dcea68c333f6b05942c99fb8d0bfd0b7808
 SHA512 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 72b79266d3f277052657ecab47a431c9efd764e9fa9523177288cedeede47dd1a5a654a8c9a851a45b3175f43e18ad2290d87778b45889976f7ce0d17625962f
 Size (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 118836 bytes

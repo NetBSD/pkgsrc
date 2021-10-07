@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2020/04/16 12:49:34 manu Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:25:23 nia Exp $
 
-SHA1 (maildrop-3.0.0.tar.bz2) = d982d4d9d4ee2fa8637102049126c5202eb82c73
 RMD160 (maildrop-3.0.0.tar.bz2) = 9be87d2615f49bb02702c88ade8ebc3260c03e51
 SHA512 (maildrop-3.0.0.tar.bz2) = 1f1e1682ec7c2d0c1f2e71059f186d9a9d3118194b1e558d3a6e5826721fb14a661f4d75df42ce2626430ac072b50e723b563ae00c1ebdeb4da96abfeb534eff
 Size (maildrop-3.0.0.tar.bz2) = 2091018 bytes

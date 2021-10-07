@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/04/16 14:03:29 manu Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:25:21 nia Exp $
 
-SHA1 (squirrelmail-imap_proxy-1.2.7.tar.gz) = b2e324383ae8a2cdb3b5bd0340a2e2174941bd65
 RMD160 (squirrelmail-imap_proxy-1.2.7.tar.gz) = 87f3b9ab367e9da2a3f532e6de867004abbe75cf
 SHA512 (squirrelmail-imap_proxy-1.2.7.tar.gz) = 355816e26eb9fa273b2b4e6cf0c2f55b85d0568291095913a4b05dd73a428a173c2a5b327c4ef296ca74ca500250b22fa2ae44d7d44613624641954fc9603507
 Size (squirrelmail-imap_proxy-1.2.7.tar.gz) = 136209 bytes

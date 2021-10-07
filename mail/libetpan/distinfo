@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.24 2020/05/19 10:13:49 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/07 14:25:22 nia Exp $
 
-SHA1 (libetpan-1.9.4.tar.gz) = cfdfe4329382a30afc5b540e258aaa950fabd25f
 RMD160 (libetpan-1.9.4.tar.gz) = cc1718182a677bc10aaab726ab0dc3d52de2e2f6
 SHA512 (libetpan-1.9.4.tar.gz) = 7b7047d084fb4ce0c91821c2ad78e921d6d009106851afb7f5b068713c84ebe6926f6bf7a7423f263eeebef617511e44f6b65448d892bbc058c447235fd55c0f
 Size (libetpan-1.9.4.tar.gz) = 5000025 bytes
