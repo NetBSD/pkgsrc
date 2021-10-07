@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/04/16 06:48:04 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:28:09 nia Exp $
 
-SHA1 (liblinear-2.43.tar.gz) = 10d378df08006894fbbcd1eeb7985e1ea9b1fc38
 RMD160 (liblinear-2.43.tar.gz) = 77da1afd0eef2ec6730a1c3a970490bdeb83d827
 SHA512 (liblinear-2.43.tar.gz) = e64dac01a05b31600d749561ae7360a0c16887eed31236de6ab0187809d54f13842d96984fe3b331ee73ca22f3ae63c33604519cc7d93e77160ccde55eb8071c
 Size (liblinear-2.43.tar.gz) = 564336 bytes

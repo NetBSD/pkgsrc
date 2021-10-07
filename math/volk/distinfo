@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/05 11:58:57 tnn Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:34 nia Exp $
 
-SHA1 (volk-2.4.1.tar.gz) = 86b8e9fb4749bcb4aa7b5080cad50fe12996b212
 RMD160 (volk-2.4.1.tar.gz) = 9b27ac0dbb78162f365e9162d090908e3907cdc6
 SHA512 (volk-2.4.1.tar.gz) = 11b4d6428692e759eb634adb8df5cd1603dc45def3d0985f77249fb93c364be30da9d37d325da5e455409f376a88ef2cd6d6e878a1ece4a204f0dded4fbc4d3c
 Size (volk-2.4.1.tar.gz) = 347313 bytes

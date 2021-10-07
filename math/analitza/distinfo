@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/04/07 12:28:26 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:27:57 nia Exp $
 
-SHA1 (analitza-20.12.3.tar.xz) = 05125fe8ba91cbaa97025c779ea7ecb4dede30dd
 RMD160 (analitza-20.12.3.tar.xz) = f12de89ffc53947fd06580830dcf99b6ff6537fe
 SHA512 (analitza-20.12.3.tar.xz) = 2357c5395bcdf66b1a54de7404441ef6966ef6b2a6c2c9a6cc31d5104a126acdd09f7aeb3f4d605591c0e2753a32967eafbccb48e188c96318126ed6657b0d01
 Size (analitza-20.12.3.tar.xz) = 341640 bytes

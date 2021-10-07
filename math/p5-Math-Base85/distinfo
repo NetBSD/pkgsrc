@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/10/18 18:34:01 wiz Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:14 nia Exp $
 
-SHA1 (Math-Base85-0.4.tar.gz) = eef8a31cf1cb208f4f80945ba297a67ef54bf5bc
 RMD160 (Math-Base85-0.4.tar.gz) = 7ca3949086588cdad286f0f222ea601440eb96a7
 SHA512 (Math-Base85-0.4.tar.gz) = 3e53d520e8f0f01193fff03486c301920bb212cb3aeba0cf45ed0a9552a9d22661ccd6364062fb0e7755096dcf14af57209b5d0aa2bfcd7ff3af1d0ca1d5278a
 Size (Math-Base85-0.4.tar.gz) = 10567 bytes

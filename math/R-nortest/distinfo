@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:23:11 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:52 nia Exp $
 
-SHA1 (R/nortest_1.0-4.tar.gz) = 24806fa0fe174ed06750908c69143e9f5e10f06f
 RMD160 (R/nortest_1.0-4.tar.gz) = 68ccf93e1b0e4827600f9e84565267144c293d32
 SHA512 (R/nortest_1.0-4.tar.gz) = 097eb34476ec6b8702370f36cbcb15380469334d397b0a2df24ffffcb227d83ea26e208d6d884e3c98af621913048b59d09275efb40b0f76101dcde9d824a935
 Size (R/nortest_1.0-4.tar.gz) = 6179 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:34:58 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:56 nia Exp $
 
-SHA1 (R/zeallot_0.1.0.tar.gz) = 4ba2ee425f62396ef2d5566ac6e8c94f9a4f7faa
 RMD160 (R/zeallot_0.1.0.tar.gz) = e8f4ed7aaed52378a1d5d83c6ca2c425dc0a17db
 SHA512 (R/zeallot_0.1.0.tar.gz) = c1d0708b39d11afe4ec3a8d1fc7445b91ce15909887617df608e57be329435cabd9e27c0499261a096050af3ac5bcf3d3283a128807c5edb23c1a8865409293a
 Size (R/zeallot_0.1.0.tar.gz) = 32549 bytes

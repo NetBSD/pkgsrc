@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/07/31 20:26:23 brook Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:27:54 nia Exp $
 
-SHA1 (R/sgeostat_1.0-27.tar.gz) = ee683ab240c9ec17f8422c1bb69c017fcf2ad915
 RMD160 (R/sgeostat_1.0-27.tar.gz) = e95b8c3ff8e5cab27b695eef35e7052cae7bb523
 SHA512 (R/sgeostat_1.0-27.tar.gz) = 5c8ee87f9f2410ee901d10f2672aba69ffec10121faad38ea738ec176cdafe59e4a0e5cf3f1fb2d45e5ca7830a2d7903c6c1aff796800cb0f306639c8dd33e73
 Size (R/sgeostat_1.0-27.tar.gz) = 35685 bytes

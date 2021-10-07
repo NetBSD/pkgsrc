@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/20 00:10:53 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:53 nia Exp $
 
-SHA1 (R/robustbase_0.93-8.tar.gz) = b3bc3960fd5d3d80042660fb9cdd9031f4234328
 RMD160 (R/robustbase_0.93-8.tar.gz) = df7a77c04bd21636b5015eff7f4a1cb649529f7e
 SHA512 (R/robustbase_0.93-8.tar.gz) = 1e6d2f7dd90bd9b095953f80bd59a008b410f13c05641e67ea43ee85ebfd5dc4d6c7908e0a3426cd6cee7e8f13ab1ed71443abe153988dac08de927369818181
 Size (R/robustbase_0.93-8.tar.gz) = 2334489 bytes

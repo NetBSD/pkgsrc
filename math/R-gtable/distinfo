@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 19:40:17 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:50 nia Exp $
 
-SHA1 (R/gtable_0.3.0.tar.gz) = af82b098cf3f5a0e3543c69e89b41900d398df6c
 RMD160 (R/gtable_0.3.0.tar.gz) = 5c523cb13dc6dd7768e54840bbdd688aa3d1dfd0
 SHA512 (R/gtable_0.3.0.tar.gz) = 20fa86874a286f5b49ca428040113cb94272df966dd8e0403648ecc76672d8680239fc8030ea803cf65c5baa3acf1698b068b7c51163fa7f27acc31242befc52
 Size (R/gtable_0.3.0.tar.gz) = 368081 bytes

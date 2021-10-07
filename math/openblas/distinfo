@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.5 2021/06/07 15:52:17 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:28:12 nia Exp $
 
-SHA1 (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = d7d1f67c1ef0c14c93761bdf44f0da8d0dd4bc0f
 RMD160 (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = b740a744c0405d036c39ee5224b7d18f542db788
 SHA512 (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = c07964ead5ffe9cf088364697bfe5cb409170663e420bdcd08a6366a028625d2a3c23ee4ddbaf0e625860a9fd08cbbb39f97eb985c366c052696d6f8598a844f
 Size (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = 12498434 bytes
-SHA1 (openblas-0.3.15/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
 RMD160 (openblas-0.3.15/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
 SHA512 (openblas-0.3.15/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
 Size (openblas-0.3.15/large.tgz) = 2595 bytes
-SHA1 (openblas-0.3.15/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
 RMD160 (openblas-0.3.15/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
 SHA512 (openblas-0.3.15/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
 Size (openblas-0.3.15/timing.tgz) = 1059485 bytes

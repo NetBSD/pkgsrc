@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:33:32 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:28:00 nia Exp $
 
-SHA1 (dcdflib.f-1.1.tar.gz) = 9b5d730a9f8ac46bb3e1b202c91c444382316dbb
 RMD160 (dcdflib.f-1.1.tar.gz) = 8638d6baef6b115ef5e527836b943de7067c5ca8
 SHA512 (dcdflib.f-1.1.tar.gz) = 479bbe8be775494be0b68a0a4b34f3f05bce576c63262244024e4ee4f8a5496e12cb097f94e84bbcc1fd2c99ee50173bd76d7847c60f6034887b7b37e395cff3
 Size (dcdflib.f-1.1.tar.gz) = 62269 bytes

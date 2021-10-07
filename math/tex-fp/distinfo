@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/01/30 08:47:04 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:31 nia Exp $
 
-SHA1 (tex-fp-49719/fp.tar.xz) = 9f7f663d4157a833f979d0040e7ef158bee20da0
 RMD160 (tex-fp-49719/fp.tar.xz) = 96dcf49471090e37ce8877befb64700a6a79161f
 SHA512 (tex-fp-49719/fp.tar.xz) = 0912018b4b1ec57a0ea33eb80b556aa111c738c3255e47f73301d926ae9245ffccab8e90b30cbe5a40ab5bdccea602f0ecd879bdb6681f02be79c79c2f3375d3
 Size (tex-fp-49719/fp.tar.xz) = 19252 bytes

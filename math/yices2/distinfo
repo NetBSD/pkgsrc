@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2019/08/24 22:09:16 alnsn Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:35 nia Exp $
 
-SHA1 (Yices-2.6.1.tar.gz) = 472c4eb7dadc3e8de30495389f50ad3aa09baa08
 RMD160 (Yices-2.6.1.tar.gz) = 337faea5f2963998a93645f5b1abb4830f5dc1b8
 SHA512 (Yices-2.6.1.tar.gz) = 586f24a8e3da45726ee69f4b3a744f2c04c3b400304319c00667c81c6799a846906ed580a9c4dd0df87a23ddb8e4fefb0b8ab60c13c19dc29243ba116717d1f2
 Size (Yices-2.6.1.tar.gz) = 8903749 bytes

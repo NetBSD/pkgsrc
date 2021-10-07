@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/12/28 11:47:34 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:28:29 nia Exp $
 
-SHA1 (randlib-1.3/randlib.c-1.3.tar.gz) = fece8e186781e94199fe3443262ddcc729ec08d6
 RMD160 (randlib-1.3/randlib.c-1.3.tar.gz) = 0b722553ffabc7204a2ec797ca6e2f44bd3f5554
 SHA512 (randlib-1.3/randlib.c-1.3.tar.gz) = fa1883e48b3d8f44dcfdc3b485387b6dfb6abc75ec841b08f885df4e8152ab89bc5df3bae2765d4e89adc4939b24c3dea3b19650108d8c1d4c4e21fef1214c8c
 Size (randlib-1.3/randlib.c-1.3.tar.gz) = 42044 bytes

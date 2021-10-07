@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:09:36 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:46 nia Exp $
 
-SHA1 (R/acepack_1.4.1.tar.gz) = b8f34f23f133fb62b40ab579c69e8c9131934f31
 RMD160 (R/acepack_1.4.1.tar.gz) = 23499d6aa9c41ec3575cc2209559e64af61bfb7f
 SHA512 (R/acepack_1.4.1.tar.gz) = e6787d653224043d0fac8b7e63a8b8060320fc1e4c6ab76b20ce3e7712cbd0f89af8731b383ceb90f9be4381a72eb965cad84e979cb8c935318fecf6d3f9ee88
 Size (R/acepack_1.4.1.tar.gz) = 34848 bytes

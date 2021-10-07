@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2018/08/30 12:56:34 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:27:47 nia Exp $
 
-SHA1 (R/circular_0.4-93.tar.gz) = e3d6bf4a2a318770df32fb1676629ed160c35049
 RMD160 (R/circular_0.4-93.tar.gz) = 84c8a836971ed7e9eb2dbbe9d41c24d79c8adb5c
 SHA512 (R/circular_0.4-93.tar.gz) = a345ecd43fa4f4fbb53e54e0830004c685f5e6dd5cd63bf6e15db265b63b0b522d8321a3f40540dd172919a4a2709ef5fa3e07932bd6d0bb1f25c2152e54e1ee
 Size (R/circular_0.4-93.tar.gz) = 180959 bytes

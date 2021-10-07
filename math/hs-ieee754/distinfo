@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 14:01:15 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:06 nia Exp $
 
-SHA1 (ieee754-0.8.0.tar.gz) = 255a19943c43203339097d0a9a13578551ba1579
 RMD160 (ieee754-0.8.0.tar.gz) = 610fe386b2c1c5d8d96a8854ea5ad8475aa9f7d8
 SHA512 (ieee754-0.8.0.tar.gz) = d75b619f0c0b9ac496a68997b6d79b3d7504221f1583e7c35ecc035b6e2b11559e402264f36827153aa89d9eabb27d9383413eb5fd157385b3f41c4f0050a43b
 Size (ieee754-0.8.0.tar.gz) = 17564 bytes

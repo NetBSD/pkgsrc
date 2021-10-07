@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/11/13 20:56:08 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:28:28 nia Exp $
 
-SHA1 (tables-3.6.1.tar.gz) = 3f093c3dd5be7ec2aaa1263fa0957f5d67c48e52
 RMD160 (tables-3.6.1.tar.gz) = 05833282f4c44e48f6f39afada9cb2684aa3249a
 SHA512 (tables-3.6.1.tar.gz) = 7f018b70251095049bce9075be4e19f72efba9d39121a35c4521f634b1dd5b81ab6de47df3bb44ad6b8b2dbdbff4e6d0985ad1a7b2f13b44f920c0935e5830ff
 Size (tables-3.6.1.tar.gz) = 4641089 bytes

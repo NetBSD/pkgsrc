@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 20:03:25 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:52 nia Exp $
 
-SHA1 (R/numDeriv_2016.8-1.1.tar.gz) = 972f38b7076ba80298544bbf5a6b17ef02203851
 RMD160 (R/numDeriv_2016.8-1.1.tar.gz) = 5d1e84c8caff78f58b181d46707255172f51d3d4
 SHA512 (R/numDeriv_2016.8-1.1.tar.gz) = 20e9dda1af54ff581f4f9218c34af204de5b78bb21eed88aef836ea215c37d90f7af8f1d972436316eab80451f531e1c9badb34f33001e3441a583a3ac4776e0
 Size (R/numDeriv_2016.8-1.1.tar.gz) = 76053 bytes

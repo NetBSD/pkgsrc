@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/11 10:18:37 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:58 nia Exp $
 
-SHA1 (arpack-ng-3.8.0.tar.gz) = 6b89dc1b298e1db7df17094308fc3309afa49618
 RMD160 (arpack-ng-3.8.0.tar.gz) = a28fc286d1dcbf489715c7361401f79f08f2d1c7
 SHA512 (arpack-ng-3.8.0.tar.gz) = 8969c74c4c0459ea2d29ea49d5260f668fd33f73886df0da78a42a94aea93c9f5fb70f5df035266db68807ab09a92c13487a7a4e6ca64922145aade8a148a2de
 Size (arpack-ng-3.8.0.tar.gz) = 1014494 bytes

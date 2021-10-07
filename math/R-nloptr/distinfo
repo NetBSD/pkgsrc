@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/20 01:16:44 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:27:52 nia Exp $
 
-SHA1 (R/nloptr_1.2.2.2.tar.gz) = 3a3e8e61da0692653b4aba729a091094d08aa414
 RMD160 (R/nloptr_1.2.2.2.tar.gz) = 08fc7de50a72a913f75b8c36d56dd4b47bf5142b
 SHA512 (R/nloptr_1.2.2.2.tar.gz) = fc553ab44f30d0d67be7a1a6cb67e24a90b74943505b3331e7f8f474bfa58a4655b23137c88d350472d4b7ffcb34503ba7ae81692948c4943600a2793e33ccc7
 Size (R/nloptr_1.2.2.2.tar.gz) = 2450931 bytes

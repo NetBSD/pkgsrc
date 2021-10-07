@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/09/16 22:17:41 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:27:45 nia Exp $
 
-SHA1 (R/gstat_2.0-7.tar.gz) = c7d63db2fcacd9c1b707bf7ad31daccc1d620888
 RMD160 (R/gstat_2.0-7.tar.gz) = 44404bb8c4e7215922c96780766a791db135f676
 SHA512 (R/gstat_2.0-7.tar.gz) = f87af89695700f737a302d6729f9dcdf9165f6870b20fd53e77686df849d74791ec71ad03e3dc0b670d2093b774925b3f5847ddfdd0cd41f7260868e739d2093
 Size (R/gstat_2.0-7.tar.gz) = 2320333 bytes

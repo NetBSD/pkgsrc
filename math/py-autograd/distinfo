@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/04/27 19:03:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:28:22 nia Exp $
 
-SHA1 (autograd-1.3.tar.gz) = 9dc88df4078c111f45731e0934cf8c0fd9a87723
 RMD160 (autograd-1.3.tar.gz) = 4566e05e7ca36c37b3b804d60b7610cc8b3c04ef
 SHA512 (autograd-1.3.tar.gz) = 6cffa84dc489cb4eca2e2ae2a0866cfeccc3ad1717f90b582fdb0530d8f1a4cc9cc6801db6ad1584587b3df84826cb2b6f5d08f665038f6978ab1451042a8195
 Size (autograd-1.3.tar.gz) = 38257 bytes

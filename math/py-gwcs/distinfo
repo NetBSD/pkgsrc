@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/19 14:54:00 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:23 nia Exp $
 
-SHA1 (gwcs-0.15.0.tar.gz) = 10976b50f2eb0748614382098d4c6e2b8720f18e
 RMD160 (gwcs-0.15.0.tar.gz) = a2ebb3613154a6352cd047e9658f5136a3fbcea3
 SHA512 (gwcs-0.15.0.tar.gz) = 3ae8f9ea6e46666bd578a098b942099bbe53918009dd0a8e52fec252f6e5216d0271effd49d193ed850e5e164667fcc8b464bfe128c6899b0e8c39b27362a146
 Size (gwcs-0.15.0.tar.gz) = 167453 bytes

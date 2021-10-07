@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:25:00 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:53 nia Exp $
 
-SHA1 (R/relimp_1.0-5.tar.gz) = af7fdc3530ebda0ecef9e19ce31d8a4a66febad9
 RMD160 (R/relimp_1.0-5.tar.gz) = ebf6d8a110988ac5e965946ee8938b6865abcea9
 SHA512 (R/relimp_1.0-5.tar.gz) = 46a73aee8aedaadc4a703d9edf25079fa994b36cf696d15e5e7da270440a3ee244fff1a70bac2ff24bca813b0627a092d2626416bca9d7e967cd5cd529ceeccf
 Size (R/relimp_1.0-5.tar.gz) = 13836 bytes

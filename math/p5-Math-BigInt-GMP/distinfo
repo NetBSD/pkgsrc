@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/09/30 13:34:54 wen Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:28:14 nia Exp $
 
-SHA1 (Math-BigInt-GMP-1.6009.tar.gz) = 84483d8bee1b6af61c2bdcc99b54c28995d8b276
 RMD160 (Math-BigInt-GMP-1.6009.tar.gz) = 10b020691797d5da1806b90ce0bf3b9a644da7be
 SHA512 (Math-BigInt-GMP-1.6009.tar.gz) = 2496826f9a84c81ca7b75a97c705fc56bc5a65b22f2d527543822142d655787eb3d9accb2d09d01534a3ff1379bd1853fc76168c946659c35de6cc607abdcf32
 Size (Math-BigInt-GMP-1.6009.tar.gz) = 2591620 bytes

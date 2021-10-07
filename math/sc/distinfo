@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/06/01 06:35:33 simonb Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:28:30 nia Exp $
 
-SHA1 (sc-7.16_1.1.2.tar.gz) = e094fd045d7838dd125dc6634986d1be88eeb006
 RMD160 (sc-7.16_1.1.2.tar.gz) = 9ca1217fdabce53f7da7f7150757e35ab7f9bb27
 SHA512 (sc-7.16_1.1.2.tar.gz) = f685db7ee62d7ed4a644d41059f08c4e4d16639ca5065554d50f2affaae4c845c6b782d514c3945fb1121d060e8d1be8bdff7833ada4123d4b21a904945cea06
 Size (sc-7.16_1.1.2.tar.gz) = 222457 bytes

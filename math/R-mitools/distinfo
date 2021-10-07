@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:21:43 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:27:51 nia Exp $
 
-SHA1 (R/mitools_2.4.tar.gz) = f50297928af7ca849f992f2be1408a5fd3ef4fc8
 RMD160 (R/mitools_2.4.tar.gz) = 875a3b594a7df9fab2c48f832b3627ea4a1ef9d5
 SHA512 (R/mitools_2.4.tar.gz) = c98105420b14b360ad7ceaf0d45e2d86f650ec0513ed75a2771b95fa6675c7d082585ea3ae30fe8bc9e8892fda3dcfab96d74fb7696b776ad5eb951ea464cf4c
 Size (R/mitools_2.4.tar.gz) = 229514 bytes

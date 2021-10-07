@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.61 2021/06/14 22:39:01 wiz Exp $
+$NetBSD: distinfo,v 1.62 2021/10/07 14:28:12 nia Exp $
 
-SHA1 (octave-6.2.0.tar.xz) = 0b6826ebf4174fee1f3dd87907e5cd0fa9a3d481
 RMD160 (octave-6.2.0.tar.xz) = 0dd692760091d1144f157209c5af3aa893d34ff6
 SHA512 (octave-6.2.0.tar.xz) = 7a0d9ee5fd739bd9bd5d2d57faf9e800ccc760afbb840ec5e3371d1e1564163a6190587e31b16d22ae834162917049a0e2789663294030aa84ee86430127eade
 Size (octave-6.2.0.tar.xz) = 25131148 bytes

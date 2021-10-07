@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/19 14:23:00 mef Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:23 nia Exp $
 
-SHA1 (jplephem-2.15.tar.gz) = 09b0820c80aa8d2f57999fb3070c274024fc0994
 RMD160 (jplephem-2.15.tar.gz) = 3e726fc66667e1279d6a7f1c1a3491a33f1e6e28
 SHA512 (jplephem-2.15.tar.gz) = 7a1e527dae8864680099768bfbaa441dd1694a0662d8ce36bb96b3bcdf0d78b11cbf768961858d4138a3259b24a02d0fc4ede63aa22b1955a0fe8cac0e36d9ba
 Size (jplephem-2.15.tar.gz) = 40164 bytes

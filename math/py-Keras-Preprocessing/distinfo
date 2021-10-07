@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/01 16:31:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:21 nia Exp $
 
-SHA1 (Keras_Preprocessing-1.1.0.tar.gz) = d5fb5a95ab0a22ea582a59e1ce9f6d033c4b619d
 RMD160 (Keras_Preprocessing-1.1.0.tar.gz) = 04e71fe95361a40e6417f23cb7f87b2a8ef24f68
 SHA512 (Keras_Preprocessing-1.1.0.tar.gz) = bf9a939d73ee46d098e0cae1bf3223fc613b7f5eb202845a9d293e5367506e010d0e9930609014efb00359de89c711a2eae12d8bd7b8863a377304301c30b5ac
 Size (Keras_Preprocessing-1.1.0.tar.gz) = 51738 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2016/05/22 17:50:57 wiz Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:28:16 nia Exp $
 
-SHA1 (Math-Pari-2.01080900.zip) = 7f2c10d30f4bd3b9b9af638f325bc80e39757ff6
 RMD160 (Math-Pari-2.01080900.zip) = 12ed92b335a9b097190ed3147dae14b491d3827c
 SHA512 (Math-Pari-2.01080900.zip) = 844324472632081e16d8c70e2f3b14a04cc125dc65ac1e4e75b495f7b83393cadc637c6b81d2e6657380b153a6d91eba4a437087481ffbd4c6c58c5da0e4d05b
 Size (Math-Pari-2.01080900.zip) = 166396 bytes

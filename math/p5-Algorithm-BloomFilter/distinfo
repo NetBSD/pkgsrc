@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/11 11:25:34 maya Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:28:13 nia Exp $
 
-SHA1 (Algorithm-BloomFilter-0.02.tar.gz) = 722d09db1320c1223177e11328a0ce8d5d92253b
 RMD160 (Algorithm-BloomFilter-0.02.tar.gz) = fe8c1a20aad763f622b810731c18312da33fe9fe
 SHA512 (Algorithm-BloomFilter-0.02.tar.gz) = 0df2b8654bb2fa97fcb35ac34666ce0b38d4eebc7995aaf287d761e272ca415b5d95402aaa07d67f9e51d031f69171698f660089ccf2f3b53d801a665d38c0e0
 Size (Algorithm-BloomFilter-0.02.tar.gz) = 50691 bytes

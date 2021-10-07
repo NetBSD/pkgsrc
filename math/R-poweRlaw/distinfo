@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 20:16:40 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:27:52 nia Exp $
 
-SHA1 (R/poweRlaw_0.70.2.tar.gz) = 01e60c15d3c609b824839303cf6bdc2a7c0e6ad5
 RMD160 (R/poweRlaw_0.70.2.tar.gz) = 7c920fe121dda38ca8bf2b4d1310f73470fb0453
 SHA512 (R/poweRlaw_0.70.2.tar.gz) = f96b89bab6120dcfbb9edfd71db8b7182872053d65db969caa523f5559eb48409313acc0193e9595ffc7a1f546893cc30c838abd195d4bb75efc19aabc297429
 Size (R/poweRlaw_0.70.2.tar.gz) = 4315696 bytes
