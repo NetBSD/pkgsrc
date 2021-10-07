@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:33:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:12:04 nia Exp $
 
-SHA1 (circos-0.49.tgz) = 04cbdd25ba86104d2f68d5feb611f37ddc409bca
 RMD160 (circos-0.49.tgz) = 00f2d9913530781849a2ea48097eb05a5824f0c4
 SHA512 (circos-0.49.tgz) = 5e9043a1945f0bfcff0a6e5604f0458c39e833dd565b3c441c85daa4a6d79583950f3c4650de54e6133946b7d42a5dd575f3c2c6b714e72e9d4ed84923cdecf9
 Size (circos-0.49.tgz) = 73468067 bytes

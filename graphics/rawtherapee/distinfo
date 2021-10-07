@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/06/05 13:10:27 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:12:51 nia Exp $
 
-SHA1 (rawtherapee-5.6.tar.xz) = 82a9a4d591ec691b99440810736de6341e92e177
 RMD160 (rawtherapee-5.6.tar.xz) = 0fe490ae69013855629faa519729724e68807a83
 SHA512 (rawtherapee-5.6.tar.xz) = 2c751c7631ea2ef65c334fa0baab16d4c3161fae66487870c476f07f1ea3604a5e28a251fd98d9688cafc088302af7aa6e28e9b27a37f916715708ed5e731f0f
 Size (rawtherapee-5.6.tar.xz) = 12083264 bytes

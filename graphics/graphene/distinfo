@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/04 11:21:41 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:12:18 nia Exp $
 
-SHA1 (graphene-1.10.2.tar.xz) = da75005317ca0e22f554e3cee60b5964b04f9926
 RMD160 (graphene-1.10.2.tar.xz) = d6fca6c59522bacc8e61d0a24bb5d1ca9d9485cc
 SHA512 (graphene-1.10.2.tar.xz) = a8a8ef1e4ccffee2313a18b9b8dda06c7ede6d49fdde8578694500634e3c90278fd30af7d88938d5ecb08c519cc3e09d21fe69d0f21cb766e056ceedbb3eafb0
 Size (graphene-1.10.2.tar.xz) = 292372 bytes

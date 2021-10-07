@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/06/05 04:14:02 markd Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:13:05 nia Exp $
 
-SHA1 (mcf2graph.r59314.tar.xz) = 6087ca37961669e8a93f05df712ef3aab08669b0
 RMD160 (mcf2graph.r59314.tar.xz) = 481016b6ada4e1b568da925eac051d36589aefc7
 SHA512 (mcf2graph.r59314.tar.xz) = f8de4acdd630cbb273184a29fe175b59d4bc498a027176d3226540776de95c2100abebf29ee0eb692a66f785c83089982a3653a982f34c9bbb130e65e189c625
 Size (mcf2graph.r59314.tar.xz) = 23476 bytes

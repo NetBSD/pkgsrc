@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2016/01/09 08:21:58 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:12:13 nia Exp $
 
-SHA1 (gimp-help-2.8.2.tar.bz2) = 38df36c0692efbe2f7949f5535b5dcc32aa46f0d
 RMD160 (gimp-help-2.8.2.tar.bz2) = 1b2bd82224abd9eee39e6e795368af28074161e2
 SHA512 (gimp-help-2.8.2.tar.bz2) = 3afdaa8b2f005d939d039d2e22c8306145e7b7acaca5ef89279998e87931e99d1fe607f1337f7796d667d5c6be456ba976b3c8a937c9dd6b1888d7158cfbed67
 Size (gimp-help-2.8.2.tar.bz2) = 158504580 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2018/09/02 13:00:55 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:13:22 nia Exp $
 
-SHA1 (tuxpaint-stamps-2018.09.01.tar.gz) = 8b117210062707ddd61b73fd4ee05efcc6e85146
 RMD160 (tuxpaint-stamps-2018.09.01.tar.gz) = 2f3848589ff31e086cebb599b4011c1de39ae7c6
 SHA512 (tuxpaint-stamps-2018.09.01.tar.gz) = dd045200ee99ad714b6890bb870e489346769caff096ceac7cb89191a71261f2d2085a5bc8ea1ff2ea2de20efe24261f6e1ffab7cc58fc7d7760b9e0d19d4bc5
 Size (tuxpaint-stamps-2018.09.01.tar.gz) = 194176139 bytes

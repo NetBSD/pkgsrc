@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2016/04/21 15:54:31 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:12:30 nia Exp $
 
-SHA1 (libpano13-2.9.19.tar.gz) = 85d8d94c96780fa5b6df2c2e4929f8d20557f128
 RMD160 (libpano13-2.9.19.tar.gz) = 88b8770815d3a8bd41cfe367ae19daffcf2ec76a
 SHA512 (libpano13-2.9.19.tar.gz) = f9f147426d44d8babac09cb1a1b5111f88b9c2fc079f33df80133492bcf24cbd1edd771e6bec7bed4b0256bf15c700139c0a83119d3adf296ae5c567e006d868
 Size (libpano13-2.9.19.tar.gz) = 3527845 bytes

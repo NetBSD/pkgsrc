@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/07/08 21:27:07 markd Exp $
+$NetBSD: distinfo,v 1.26 2021/10/07 14:12:20 nia Exp $
 
-SHA1 (hugin-2020.0.0.tar.bz2) = 20e39ab82e1d8208a7eee2f216ab1271c95f583f
 RMD160 (hugin-2020.0.0.tar.bz2) = 499c24bf2dd0eb0b1e223183004dd00f9ced61c2
 SHA512 (hugin-2020.0.0.tar.bz2) = 4c55767c630ea03faf359bda606e5e9e7709a47ab41e821772da8c6da0cf658b1d31d7d8e96ea1c41ec61bdeb2da8c86c92b5d6964a9301732a13137178ec04e
 Size (hugin-2020.0.0.tar.bz2) = 10371301 bytes

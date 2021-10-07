@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/07/26 13:23:16 bsiegert Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:12:40 nia Exp $
 
-SHA1 (Cairo-1.109.tar.gz) = 549a055054854d69e055fc5d9a071bece3f4d2f9
 RMD160 (Cairo-1.109.tar.gz) = c6eb5dda1ca8f5e9b0bf9373e38cd8809914d874
 SHA512 (Cairo-1.109.tar.gz) = b80841bff480acf95f69659cba02ca17c79b67a2dc5c9b9302efb15bbd79bd4bc2f1801c001c220723da11081e86a08a83e07ecc8866810ebf9406e1f6fa1c53
 Size (Cairo-1.109.tar.gz) = 116924 bytes
