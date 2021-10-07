@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/01/10 14:00:41 taca Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:27:08 nia Exp $
 
-SHA1 (ruby-termios-1.1.0.gem) = 9ac4843aae6eccf0afe28047f5de7a102b6005af
 RMD160 (ruby-termios-1.1.0.gem) = 37aaaff0cb9a02b61b72179152f2588cfad962b3
 SHA512 (ruby-termios-1.1.0.gem) = dc98e6d7e304fa76b4139dd88f8c6955e6f4e09ca48d5611813fac941564c93165945c24dc0d7f7f84d7cd959512d006d73f042b57fcb1dde2743ffbb3cc9b41
 Size (ruby-termios-1.1.0.gem) = 17408 bytes
