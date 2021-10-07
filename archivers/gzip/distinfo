@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2019/01/10 06:47:42 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 13:05:59 nia Exp $
 
-SHA1 (gzip-1.10.tar) = bde6f92de3bb1f780bb260ff9af719bfd1dbf811
 RMD160 (gzip-1.10.tar) = 66169ae312d98afc79a98d1a2ffe98a091f65ebd
 SHA512 (gzip-1.10.tar) = fc54f62e5b1db56bde178e0019fb831af6bfad73fc346742ae830de9623e5982dbc1e5463a34fbf0b88777b53901ffbbecfba724fb3ae7d9f758c5701bb54098
 Size (gzip-1.10.tar) = 5355520 bytes

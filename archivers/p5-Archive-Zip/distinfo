@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.33 2020/09/06 12:12:14 wiz Exp $
+$NetBSD: distinfo,v 1.34 2021/10/07 13:06:05 nia Exp $
 
-SHA1 (Archive-Zip-1.68.tar.gz) = 71faba3b05942c94959aba50a2471f08e3b7b202
 RMD160 (Archive-Zip-1.68.tar.gz) = 6f534d3c8a05a742c5a35a79f5bdccc3e88aef67
 SHA512 (Archive-Zip-1.68.tar.gz) = 40c3ba26b1c27a8b15b919934e7fcd531f208bec73de3454e123ac1fb771831e287b8fade421be40e243498beb6dad9b6133ef07d2e5d407afbd1f3d6a30b916
 Size (Archive-Zip-1.68.tar.gz) = 163490 bytes

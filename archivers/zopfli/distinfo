@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/02/29 15:56:39 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:06:14 nia Exp $
 
-SHA1 (zopfli-1.0.3.tar.gz) = f41af7ea641dc322dec637302a63d63fcecf410d
 RMD160 (zopfli-1.0.3.tar.gz) = e0052131ccd1147aaced9ca43dc1769d008c219a
 SHA512 (zopfli-1.0.3.tar.gz) = 362cbeee0b3f04a4c5da512f82671491f874d4ec7b693dca9724ae42123d7ac184cc4d5de1872b4f1fc938c97f79dfdb482f62d1fca4a17cff6d267f6021e8d2
 Size (zopfli-1.0.3.tar.gz) = 195227 bytes

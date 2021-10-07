@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/05/30 21:48:19 khorben Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:06:09 nia Exp $
 
-SHA1 (zipstream-new-1.1.8.tar.gz) = b20b215b0cfca81212b548341fec8391688bdc50
 RMD160 (zipstream-new-1.1.8.tar.gz) = b8aa987a62b9ee1dba97f64523f99a2f2232bc27
 SHA512 (zipstream-new-1.1.8.tar.gz) = 96dd0931487ee7d43fedb21d0b8f41e48c1e30bcf903df115e40aa6346016ca6b49d012ee3ed882f6d2306f774c90afefa539aa450d22f60cc29a6c338c1e49b
 Size (zipstream-new-1.1.8.tar.gz) = 9377 bytes

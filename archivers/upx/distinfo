@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/05/15 08:08:28 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:06:13 nia Exp $
 
-SHA1 (upx-3.96.tar.gz) = 7156878e617270df5f5ae5b249b8462b7382aeb1
 RMD160 (upx-3.96.tar.gz) = d741374988f6271b95f049b6381fb6355ef143c5
 SHA512 (upx-3.96.tar.gz) = 1baa5208a895f8ed9b729a110646b6dd7779269d7792255b37d3923b26f30fb7cf12e22615eb4d5c520b3ec41153599338814b21c6f14c7a750a835f23831560
 Size (upx-3.96.tar.gz) = 1676172 bytes
-SHA1 (upx-lzma-sdk-3.96.tar.gz) = d07dcd680c564395e692efb207b3d8eda795e4db
 RMD160 (upx-lzma-sdk-3.96.tar.gz) = a50c931d3e4537b2712e652840cc38e1b71ae651
 SHA512 (upx-lzma-sdk-3.96.tar.gz) = 9690a1dfabf8bcb161b26761556a390aa354b633914254b29e36246fe11f9c3e905dafa916d0d52300bd418e2bddedd4122027e447fc87183bce4479e771c7df
 Size (upx-lzma-sdk-3.96.tar.gz) = 109692 bytes
