@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.66 2021/09/12 09:15:10 wiz Exp $
+$NetBSD: distinfo,v 1.67 2021/10/07 14:43:02 nia Exp $
 
-SHA1 (wget-1.21.2.tar.lz) = 4255d97b9067cf91e5c1439520857cdaa6460fc6
 RMD160 (wget-1.21.2.tar.lz) = 2f6c8a960b51abe7050416cc2ce37f645a86e5f4
 SHA512 (wget-1.21.2.tar.lz) = 25e682e6f8458e9b9ec9ba1c796e670d1170d6de62716e3e879d729b04c0899cf300701330527b2f1d5a5e62ed1acb3c90c1a32716f96b3ecd8a71337a76a15a
 Size (wget-1.21.2.tar.lz) = 2407790 bytes

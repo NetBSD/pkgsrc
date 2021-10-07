@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 00:35:05 agc Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:41:38 nia Exp $
 
-SHA1 (ipw-3.3a.tar.gz) = ca7943d263b9ace3951badeb4189e5aa9c2c8ddd
 RMD160 (ipw-3.3a.tar.gz) = 7b159404a1fbd897b2ec1bb9516ab3b1a897345d
 SHA512 (ipw-3.3a.tar.gz) = 442e156b6d107d82a1bf729dd919df188501310bd3b63069adbf13991b2edacb8f1f52d74dd87176e98cbf86db22ff8a76720df2a01ef92e32607c445f976891
 Size (ipw-3.3a.tar.gz) = 17238 bytes

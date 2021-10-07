@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2017/12/21 10:24:12 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:32 nia Exp $
 
-SHA1 (pylint-celery-0.3.tar.gz) = 4b1314a8d5bff8943b69c8fb6a01b875f774dcb5
 RMD160 (pylint-celery-0.3.tar.gz) = 9b8b3eede32c74248289bc38064b2a9e15f35015
 SHA512 (pylint-celery-0.3.tar.gz) = f67a7c506357e7415cbe9e18f4631e7e14aa09ddd806df94cfd9090f0fd6a799c462cbd0ddc4b86e82fd1795809df2d1295ded5f863b982088080c78f359413b
 Size (pylint-celery-0.3.tar.gz) = 1899 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2018/10/30 02:48:24 manu Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:55 nia Exp $
 
-SHA1 (check_syncrepl-0.5.tgz) = 784a41e93a1fff8e0bb8560ff152586954b7425c
 RMD160 (check_syncrepl-0.5.tgz) = ae359f554162af5b4069fefddfcbc883587a1cfb
 SHA512 (check_syncrepl-0.5.tgz) = c2c108c4d7997401859ff5131bcfd926bdc36681a3bf3371b32538b6e9be4e90eba0681e94c908cbcd150c3949a056f478f855c8ee27681355335628679a7824
 Size (check_syncrepl-0.5.tgz) = 2412 bytes

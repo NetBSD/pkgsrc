@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/07/17 16:01:34 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:41:41 nia Exp $
 
-SHA1 (knock-0.8.tar.gz) = d17a46ae994771d8f09d34b5cee6829936d726bf
 RMD160 (knock-0.8.tar.gz) = f5c48af7c4edaefe0c204caa86a1af3ad94e8ac5
 SHA512 (knock-0.8.tar.gz) = 6511e29f604cebc4a4048f5e49c1b73db0bbe0041a88f7c8559fa1a60ea894aadb72a608c423f867a5a4dddb06d00a0713863473981e42273662a77364c260ec
 Size (knock-0.8.tar.gz) = 377107 bytes

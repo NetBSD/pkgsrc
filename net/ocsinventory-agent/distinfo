@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:17 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:01 nia Exp $
 
-SHA1 (Ocsinventory-Agent-1.1.2.1.tar.gz) = ff8395bd281ddfdb9c3f9106b51aa75ac542f169
 RMD160 (Ocsinventory-Agent-1.1.2.1.tar.gz) = 8cd303df6f760d6ec4f64e79792544c4c8119227
 SHA512 (Ocsinventory-Agent-1.1.2.1.tar.gz) = eb754ed75be9c8f18049d320cf4fc13e2a54ef6bc972629f722847c06c20daacab2ac636107976fbf676b82c7d326ab4ffedeadf02182f12185b1b372f334f07
 Size (Ocsinventory-Agent-1.1.2.1.tar.gz) = 1401670 bytes

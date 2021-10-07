@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/10/05 09:16:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:26 nia Exp $
 
-SHA1 (cymruwhois-1.6.tar.gz) = 38381c26808b27d7d71dbaa81953b330157f161f
 RMD160 (cymruwhois-1.6.tar.gz) = 18ce3fdf52ca3d7137e53f004a76c35af34a2b9d
 SHA512 (cymruwhois-1.6.tar.gz) = 7ff9a2473d6c8a97b21c2460157a3b51ab9af76ecdb202dd134f063b24344834446b8fda932a09e6fb59b1fcae8e92452e57bc3f5ae070ea25bcafdf39ae051b
 Size (cymruwhois-1.6.tar.gz) = 4411 bytes

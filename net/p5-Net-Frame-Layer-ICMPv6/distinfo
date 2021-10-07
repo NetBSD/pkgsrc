@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/18 13:24:25 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:09 nia Exp $
 
-SHA1 (Net-Frame-Layer-ICMPv6-1.11.tar.gz) = 5451d50f630da88305cf014684ab2cd041fd12cd
 RMD160 (Net-Frame-Layer-ICMPv6-1.11.tar.gz) = 9d998d1948b6199834af62e4ea2a7eb5fea48659
 SHA512 (Net-Frame-Layer-ICMPv6-1.11.tar.gz) = 719e4fe0ad12968f4e05ba606024644c4883eb112ff9722460cec76324c65c4ea26ab87f1e04687a50d97b097b8c7420d897d65b71b83fc0e72296345716e9db
 Size (Net-Frame-Layer-ICMPv6-1.11.tar.gz) = 13736 bytes

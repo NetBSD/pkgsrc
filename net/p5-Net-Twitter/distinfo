@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2018/01/18 09:43:47 wen Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:42:14 nia Exp $
 
-SHA1 (Net-Twitter-4.01043.tar.gz) = f02c174c579c52292b3aae02e69b6ead9b39a426
 RMD160 (Net-Twitter-4.01043.tar.gz) = 86e0926638301a7d1c3a4ef8ac24d904d941c333
 SHA512 (Net-Twitter-4.01043.tar.gz) = 498c83328064205b50923cd4d628b434dd32f62be649a00bc9776649b98f8b571cc6924671655c3460aaa0b362f76629c5336eff96d88b8aef45f6bc547a1790
 Size (Net-Twitter-4.01043.tar.gz) = 140431 bytes

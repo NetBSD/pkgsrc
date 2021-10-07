@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/03/21 10:31:51 he Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:42:06 nia Exp $
 
-SHA1 (MaxMind-DB-Writer-0.300003.tar.gz) = d1e35c89149f75e2535fafae7eb400f9c4937229
 RMD160 (MaxMind-DB-Writer-0.300003.tar.gz) = 92f0f0e1087c4c37f4eea1876a3530da95141a98
 SHA512 (MaxMind-DB-Writer-0.300003.tar.gz) = 416659d62d958c9d0a5a490648adb3dbbafde044ba154ba3b018f6fb1f066d551e5cbbf4584881f8497ccc018da2b63e5450ef4a58a0bf1c94c321b176bf0da3
 Size (MaxMind-DB-Writer-0.300003.tar.gz) = 191053 bytes

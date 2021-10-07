@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/12/13 15:01:05 taca Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:42:42 nia Exp $
 
-SHA1 (netrc-0.11.0.gem) = bc59d9f86c0bd26862d6b169405c61e75bfc25f3
 RMD160 (netrc-0.11.0.gem) = a1d21fe088d6e8b9582dc8cc5cccc951e0ce86ca
 SHA512 (netrc-0.11.0.gem) = 7f0df3f79d92b891d40a49e9b893ca7131077195cf15453b155e37e68e29f8cd3810ba791a06338058262c8cb8fed56c87c295e450c133b428b3398eb99e683a
 Size (netrc-0.11.0.gem) = 10752 bytes

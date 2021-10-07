@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:57 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:16 nia Exp $
 
-SHA1 (bsddip-1.02.tar.Z) = f938ba32fcbb958c6a9632502d6728cb0a8bac4c
 RMD160 (bsddip-1.02.tar.Z) = 799b899cee5ef1b8a49c8a0929a2c4f0d17bcbab
 SHA512 (bsddip-1.02.tar.Z) = d9b1d95f79c2bf73bc180f4285d95f6033444a3995c5320835b989dc7786f7bd8b95ce7b221fae5ce8b38bba47ebfa59f8a2d825ca2265452b002c4f0ff43d1d
 Size (bsddip-1.02.tar.Z) = 78191 bytes

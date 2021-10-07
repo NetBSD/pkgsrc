@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2017/08/14 20:38:02 wiz Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:41:36 nia Exp $
 
-SHA1 (httping-2.5.tgz) = f53b0c8d4fe4020028f62dc43289beab78eebcfb
 RMD160 (httping-2.5.tgz) = f0154ece513637c3334dc2852a9435292996f00a
 SHA512 (httping-2.5.tgz) = 397ce2eac91c9aede0eb19823bfca4e7f98c263937f5954c8a48d5248a251d2030e31f18decb7f7f8b0118ec0e16ec0a84ea4c943ccde7056b80de162954c355
 Size (httping-2.5.tgz) = 71400 bytes

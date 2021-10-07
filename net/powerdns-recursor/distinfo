@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.37 2020/12/14 11:18:25 otis Exp $
+$NetBSD: distinfo,v 1.38 2021/10/07 14:42:21 nia Exp $
 
-SHA1 (pdns-recursor-4.4.2.tar.bz2) = c7828ad57d4cc28372b676e7b3704ec6098694c8
 RMD160 (pdns-recursor-4.4.2.tar.bz2) = 7b259c75d920711eb098c3e36ac8d232d85d801f
 SHA512 (pdns-recursor-4.4.2.tar.bz2) = 31fdf62d87e5ee8f9570c6b738339bc8cc65c43800f18c7fb49aa5c53fc9ad76a1ddf02cc44f7129e06b41700b5cb3768ff8f81cc521c28147ea6538c73f8781
 Size (pdns-recursor-4.4.2.tar.bz2) = 1396763 bytes

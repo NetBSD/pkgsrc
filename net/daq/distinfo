@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/10/01 19:11:03 nils Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:41:18 nia Exp $
 
-SHA1 (daq-2.0.7.tar.gz) = f95ed4c03e546cee53de3c41b251db53411cb682
 RMD160 (daq-2.0.7.tar.gz) = c915d34c0ba6c7deb469d6969bc1e077a27cf576
 SHA512 (daq-2.0.7.tar.gz) = 9bedddbc2d952526ab4e1d65f4507eb914507f8b3b5702ecf7137f8a210c690703469162a117a76cb8376a5639db46bd767fc48789ba7294a0bad26d4cd0ede2
 Size (daq-2.0.7.tar.gz) = 520287 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2018/02/21 15:20:04 triaxx Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:41:10 nia Exp $
 
-SHA1 (3proxy-0.8.11.tgz) = 0bef5462e558db2d86cce92f8dc916b494dd7bde
 RMD160 (3proxy-0.8.11.tgz) = 19f0d2903dcad680f5442a49d962cac1f874cae4
 SHA512 (3proxy-0.8.11.tgz) = 4160684892292a0c4666f8b8f3bdba0c0846842816ef4f6d0ce7286b520a3cda2ceee76580d2e61942afb9404a8ad93aa0260043acd4ffbfc1c38b3e31857c67
 Size (3proxy-0.8.11.tgz) = 511157 bytes

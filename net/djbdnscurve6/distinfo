@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/08/04 13:33:21 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:41:22 nia Exp $
 
-SHA1 (djbdnscurve6-38.tgz) = ab0dc2c5d11f8a7f5df65860b559c63ac5160c93
 RMD160 (djbdnscurve6-38.tgz) = 4a14c949bbcadb362f566d9909dfd2e8d4cd997f
 SHA512 (djbdnscurve6-38.tgz) = 05cec8f2524f96c81ae83acda2b187cadfe3fd3f6f734644ebe97dedb178b5aefc3eaa8f7bacd60bbdaaee22c67172cbda8a7b7486e407fe030349f6597959a6
 Size (djbdnscurve6-38.tgz) = 122880 bytes

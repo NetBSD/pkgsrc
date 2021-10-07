@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 00:35:10 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:41:47 nia Exp $
 
-SHA1 (linc-1.1.1.tar.bz2) = efebe15c4e29f9c03dfda04191161e557b1e1982
 RMD160 (linc-1.1.1.tar.bz2) = 0b8607abf3a9fa877c83f43586e5227a3fb85d66
 SHA512 (linc-1.1.1.tar.bz2) = 3311b632f22a56ece018beffc06d92a0fc1bd1934530de578b84d93a27375be6d0c4d47747e4f350659ae5b19ceed89ece9b9aba03bc8c09e328e3b1950022f1
 Size (linc-1.1.1.tar.bz2) = 204064 bytes

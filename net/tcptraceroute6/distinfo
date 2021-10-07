@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/11/30 12:49:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:53 nia Exp $
 
-SHA1 (ndisc6-1.0.4.tar.bz2) = 08704f1bbcc12e21826abf9185fbf9f6186a9668
 RMD160 (ndisc6-1.0.4.tar.bz2) = 57b92e4085ca5b1ff2a050c33081b8770de6b68a
 SHA512 (ndisc6-1.0.4.tar.bz2) = 6f6cd939fb7079518db5c1bcd11353c722237d7735d229f9fd20d03e9f16b1ddf07c7c78c91364886148f2a82d6805eafe7e27da6b4e7c99b111603ec5fab842
 Size (ndisc6-1.0.4.tar.bz2) = 264071 bytes

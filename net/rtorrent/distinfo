@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2019/07/30 09:19:59 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/07 14:42:40 nia Exp $
 
-SHA1 (rtorrent-0.9.8.tar.gz) = ed4f150ea8bb8f57af2042190512391a118e2302
 RMD160 (rtorrent-0.9.8.tar.gz) = fde07c9b9db00a90cb851b058402a87d447f92f7
 SHA512 (rtorrent-0.9.8.tar.gz) = 016685948d0290694ab9635ae218c7acd876e6d45bea1bdba3a29c545e64f5d824c5e2f6693a4c2e9200196177881d54f312d72e0a19742bd74a03bd19ca05c7
 Size (rtorrent-0.9.8.tar.gz) = 647523 bytes

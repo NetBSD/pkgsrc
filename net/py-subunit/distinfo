@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/12 11:47:40 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:35 nia Exp $
 
-SHA1 (python-subunit-1.4.0.tar.gz) = 09376b4bcb0ba6c5b5c894a31b851e454d9dc5ef
 RMD160 (python-subunit-1.4.0.tar.gz) = e5fe525a5bfb4fdd5e4090f6a371b99401383643
 SHA512 (python-subunit-1.4.0.tar.gz) = 7f8ebf1cfdd7ff22bfd68367cb90dd75e7f3b5f7da71830b304225905e1799ad1ec8f0d41f5f98895c831dc10fe77229137a472b8e8e57ea84c05c66694a5b5b
 Size (python-subunit-1.4.0.tar.gz) = 100059 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/12/06 15:43:48 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:42:50 nia Exp $
 
-SHA1 (stund-0.97.tgz) = 49bc35790e4b3facbb31ebcc1f1f8277a999fb0c
 RMD160 (stund-0.97.tgz) = 06672b39bb3fcac1c136a3496b875f05deafc647
 SHA512 (stund-0.97.tgz) = 8f32d4fadf7264967a8cdabf410b9cd495e1f4dc6198d5efe07559996697db088a8a6b1b5fd0814c1a04fe8c17c866256d6a59b719a153fd23c26939d3c6bc1a
 Size (stund-0.97.tgz) = 169558 bytes

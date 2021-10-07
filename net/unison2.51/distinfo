@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/06/24 15:24:56 gdt Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:42:59 nia Exp $
 
-SHA1 (unison-2.51.4.tar.gz) = 39bdc780d2d3ed78bc5f76e4a766f3fae1211b2a
 RMD160 (unison-2.51.4.tar.gz) = a4bc8917459d7b3db5bbb8739fa4c3961d10bba4
 SHA512 (unison-2.51.4.tar.gz) = 55d94752d0aae968e325ad6bee7fc835c276932ea83c3ae7ec8fa9975936110e0ee031868307ce4354f8fbdec351ad5d734f569a1a4bc5bb87bc5ae64e8b0f14
 Size (unison-2.51.4.tar.gz) = 1371579 bytes

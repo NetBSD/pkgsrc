@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/06/27 20:11:00 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:41:45 nia Exp $
 
-SHA1 (libquic-0.0.3.tar.gz) = ff2e58b2b32a64f9280895c8f34a8c601562ade2
 RMD160 (libquic-0.0.3.tar.gz) = a5225e609fbdbc2e56942b3dcf063359fe5b2e10
 SHA512 (libquic-0.0.3.tar.gz) = a04f5285b2448cd763daa9833574e5977e903975dd20980c80020ee4177df6ff6294ee2c1821d97a8ac34e44aae215178f57b52a12826135f5ee4efc8e74643b
 Size (libquic-0.0.3.tar.gz) = 5848330 bytes

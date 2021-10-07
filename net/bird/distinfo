@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/09/25 22:29:06 joerg Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:41:15 nia Exp $
 
-SHA1 (bird-1.6.3.tar.gz) = a6714488c4466778abeaba14ca9441066283676e
 RMD160 (bird-1.6.3.tar.gz) = 238e113ebbe1871413bce307cd5303f92bc21fe9
 SHA512 (bird-1.6.3.tar.gz) = d0f044cbbb3e5fe0624ad8ae58f5fa352ff41a9cd73f37d803431d9d148927bce52d8f2b82e31dd65c753c55b1034aaf8e15739a511e42cd2dd122b5cd1e15df
 Size (bird-1.6.3.tar.gz) = 1337198 bytes

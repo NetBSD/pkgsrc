@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2020/08/03 13:41:49 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/10/07 14:42:36 nia Exp $
 
-SHA1 (pyzmq-19.0.2.tar.gz) = 1f65a40ff85536a6ebb6ddd7105075061d37d2e2
 RMD160 (pyzmq-19.0.2.tar.gz) = 008be479b08313768a8cba8b20a2d813101be4a0
 SHA512 (pyzmq-19.0.2.tar.gz) = aca37b54e07fe6c3c16be56aa5bd856bbf0f4d7bebd11bd9fdecc6e74b7f996572f1dc52e32ae94562c5a63391975a1caeb04d3c0af9f82f780dbee37aae1a9f
 Size (pyzmq-19.0.2.tar.gz) = 1156195 bytes

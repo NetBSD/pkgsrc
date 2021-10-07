@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/12/29 22:09:38 ng0 Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:43:02 nia Exp $
 
-SHA1 (wgetpaste-2.29.tar.bz2) = 1cfd3e513c8c504a22851ab4120821344066eecf
 RMD160 (wgetpaste-2.29.tar.bz2) = 1331aff97117ee0763ea63124cf6e4c4d99e814c
 SHA512 (wgetpaste-2.29.tar.bz2) = 6596842733bb5d1d52cbb3cbcf61ba714f0cbfdc13acb4d6025ccfd27c214adaf886ac3a0a11baefaa4af3f33165619e5a3360b4e0807d29e8dc8ef5ff819bb6
 Size (wgetpaste-2.29.tar.bz2) = 12988 bytes

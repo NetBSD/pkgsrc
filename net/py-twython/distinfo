@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/04/29 13:35:07 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:42:35 nia Exp $
 
-SHA1 (twython-3.8.2.tar.gz) = 5a5b4c476a06f6639d06d60b7908d116cb818fe7
 RMD160 (twython-3.8.2.tar.gz) = 7208e3d189b278d181a13188ad30b56e77e11b2d
 SHA512 (twython-3.8.2.tar.gz) = 928dfb88f179caf3416b245126f939f6c12d08f7bc04b37584e42cb943b3f3ba5abe9ad9350e7079139e847f1aec75e0199dc24992ae1839c01e8f48411355cf
 Size (twython-3.8.2.tar.gz) = 373927 bytes

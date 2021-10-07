@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:58 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:42:37 nia Exp $
 
-SHA1 (rabbiter-2.0.1.gem) = 64cb90f60758e5d72ce276e4e74da537c0b5e7f7
 RMD160 (rabbiter-2.0.1.gem) = 9dacbde83bce0dc03fc6a77a6925ae3ed6a8e026
 SHA512 (rabbiter-2.0.1.gem) = 798a63822d42bae3f2d4a1fd55678b52d396551b6ac2aa2c3a491c5a604d7687b8eb7864d431551a3ca20143ec6dd0303a50264826fb54b7c0185a8b292a2465
 Size (rabbiter-2.0.1.gem) = 15872 bytes

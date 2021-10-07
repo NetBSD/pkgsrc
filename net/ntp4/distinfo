@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.34 2020/10/07 10:15:02 jperkin Exp $
+$NetBSD: distinfo,v 1.35 2021/10/07 14:42:00 nia Exp $
 
-SHA1 (ntp-4.2.8p15.tar.gz) = e34e5b6f48c3ed1bbcfb03080dec1b8f91e19381
 RMD160 (ntp-4.2.8p15.tar.gz) = 4653211d8c258a4a9edf1b2445a77223330176a2
 SHA512 (ntp-4.2.8p15.tar.gz) = f5ad765e45fc302263dd40e94c287698fd235b94f3684e49f1d5d09d7d8bdd6b8c0fb96ecdabffea3d233e1e79b3c9687b76dc204ba76bad3f554682f4a97794
 Size (ntp-4.2.8p15.tar.gz) = 7015970 bytes

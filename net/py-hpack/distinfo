@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2020/10/03 18:09:10 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:42:28 nia Exp $
 
-SHA1 (hpack-4.0.0.tar.gz) = 5f4432e5ca99075562d1b4734d4ee0f4a7aef0d3
 RMD160 (hpack-4.0.0.tar.gz) = 6aedf9f459392ec55f894bd5549e181764c1799b
 SHA512 (hpack-4.0.0.tar.gz) = 7a303d00176288cefb4b9c562aad8d15f4e15865d6f6c8c8a086cc2ebf605547c5b2ca0498ba24d758f0a9e37877b585de1b55b232eae271b9eaf2d1238106ca
 Size (hpack-4.0.0.tar.gz) = 49117 bytes

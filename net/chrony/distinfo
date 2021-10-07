@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/06/12 08:38:01 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:41:17 nia Exp $
 
-SHA1 (chrony-4.1.tar.gz) = 15dc1976653f17d290b65007a4779e3f4ac1833e
 RMD160 (chrony-4.1.tar.gz) = 9df3b31d78433fcb251dd2c80034f874b0d987a0
 SHA512 (chrony-4.1.tar.gz) = 5e283d6a56e6852606c681a7c29c5786b102d584178cbd7033ebbc95a8e95533605631363b850a3087cca438a5878db7a317f120aab2fd856487d02fccfbcb1f
 Size (chrony-4.1.tar.gz) = 564648 bytes

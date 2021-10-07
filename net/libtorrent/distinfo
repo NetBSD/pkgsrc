@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.40 2019/12/22 22:28:15 joerg Exp $
+$NetBSD: distinfo,v 1.41 2021/10/07 14:41:47 nia Exp $
 
-SHA1 (libtorrent-0.13.8.tar.gz) = e63277da94cec33c0200dd39799984b8f21dd7f2
 RMD160 (libtorrent-0.13.8.tar.gz) = f2e3c6038650b8207e397584f5dcc8bf31e2f721
 SHA512 (libtorrent-0.13.8.tar.gz) = 417177df5b27cd8c6a6317063b0846da2690de4633836466728605c2edad2de407d29d321cc481b8d1352dd0ff6dd89f4566a830424a8cf986f2fddb04704da4
 Size (libtorrent-0.13.8.tar.gz) = 834027 bytes
