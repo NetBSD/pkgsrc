@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/11/23 05:30:45 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:30:21 nia Exp $
 
-SHA1 (gcc-8.2.0.tar.xz) = 19926bdb6c4b58891015929853d41aeff019d400
 RMD160 (gcc-8.2.0.tar.xz) = 4fba19867980d04bed1e62d46d4787c99f4fd13d
 SHA512 (gcc-8.2.0.tar.xz) = 64898a165f67e136d802a92e7633bf1b06c85266027e52127ea025bf5fc2291b5e858288aac0bdba246e6cdf7c6ec88bc8e0e7f3f6f1985f4297710cafde56ed
 Size (gcc-8.2.0.tar.xz) = 63460876 bytes
-SHA1 (newlib-3.0.0.tar.gz) = 641e4d4a50e31016ca90e0d3ea095aabae34c4a7
 RMD160 (newlib-3.0.0.tar.gz) = 505d486c9c658d10ed3b1af13459b2f289680b1f
 SHA512 (newlib-3.0.0.tar.gz) = d4730ce9a4fc4e62052e89d20d4a3855a103b3d1a2818e94c7a68626db285aa8db8e56a684103731916bfba3e581db88e3a93264034ea0f2880ee8976283c04f
 Size (newlib-3.0.0.tar.gz) = 18168046 bytes
