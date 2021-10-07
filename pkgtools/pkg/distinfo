@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2020/09/21 03:03:55 khorben Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:47:19 nia Exp $
 
-SHA1 (pkg-1.10.99.7.tar.xz) = b233bbe0cef4f31f19ec56c75be2c0e43652dbf8
 RMD160 (pkg-1.10.99.7.tar.xz) = c37402ac7cfee2f0a45a521c3057027699f31603
 SHA512 (pkg-1.10.99.7.tar.xz) = 32bfb919da140bb7b75427ea6351aee3a4a297a0e13b5c722bdd5a0b8f488085883df36929fb97ff6fd944b901fa0fc95174b1474a9a4422047ffc626869e43b
 Size (pkg-1.10.99.7.tar.xz) = 2217824 bytes
