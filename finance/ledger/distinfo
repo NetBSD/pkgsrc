@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/06/15 16:54:38 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:53:51 nia Exp $
 
-SHA1 (ledger-3.2.1.tar.gz) = 75dced00c8f24555e7c3f6314b001b169e54c152
 RMD160 (ledger-3.2.1.tar.gz) = 6286315fcad52f51c59f9b41261713aa141e9fae
 SHA512 (ledger-3.2.1.tar.gz) = 526c60cee354c9d2ead38cef3b89b349467e41fa3ec0927b51e7246a3352f19f0f81574211f20ba9bac5915590b870b9f9478a103ab661d3d9a10f41c52f4512
 Size (ledger-3.2.1.tar.gz) = 790959 bytes

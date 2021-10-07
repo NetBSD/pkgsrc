@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 00:34:09 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:53:55 nia Exp $
 
-SHA1 (pyevmasm-0.2.3.tar.gz) = 8eadc1b01c3ed4dcfb36b6bcc20be20ec1765215
 RMD160 (pyevmasm-0.2.3.tar.gz) = 615bb7688bce205852d6c481386ffeb678b7de45
 SHA512 (pyevmasm-0.2.3.tar.gz) = 0f687dec85f0a038399d9318de3bfb1bf56406ead5536c502955d9f2e4027725befab0e6e65f5112b5a8f0f777dbfe1d6d91340c7dd9c099459ac00dddbb7229
 Size (pyevmasm-0.2.3.tar.gz) = 19658 bytes

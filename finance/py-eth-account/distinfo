@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/04 09:01:19 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:53:53 nia Exp $
 
-SHA1 (eth-account-0.5.6.tar.gz) = 6ea254b16f135b072e39a2bf5afaf14296938ae4
 RMD160 (eth-account-0.5.6.tar.gz) = a476bebdc327332e430ced2d133ade7aa2c5efdb
 SHA512 (eth-account-0.5.6.tar.gz) = d6fcf51605d8888149a57c2bd0cc4b36d70a0511318100be5d23aa58ba1f3c7803e75d038ae7d925082a8779e6306f7fe4b0f4cff5790aa49abb544cd222ccf2
 Size (eth-account-0.5.6.tar.gz) = 5380888 bytes

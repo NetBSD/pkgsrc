@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/04/11 14:08:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:53:53 nia Exp $
 
-SHA1 (python-bitcoinlib-0.11.0.tar.gz) = 1ff86466439d983c02de2e1b612a2da59a3fdb26
 RMD160 (python-bitcoinlib-0.11.0.tar.gz) = 13a18b3e804317f881c2d5292f1150e0c2dc9f6a
 SHA512 (python-bitcoinlib-0.11.0.tar.gz) = 7898401275f64a6b4dd9fce1bfcfaf2c0c9103f35a18fe1f3e54eaea4b1311227f1711a0aaf9bc2749c158bc3f7b9c0cb9f7a5bd4d9cf7a9e7f3591320d6c072
 Size (python-bitcoinlib-0.11.0.tar.gz) = 150107 bytes
