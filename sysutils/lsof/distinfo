@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.96 2020/05/13 19:36:56 tnn Exp $
+$NetBSD: distinfo,v 1.97 2021/10/07 14:58:03 nia Exp $
 
-SHA1 (lsof_4.91.tar.bz2) = da6f9883d00f200671f6e47cf838bb9b6b9c6f01
 RMD160 (lsof_4.91.tar.bz2) = 5f7be9a860f30b66e247e0405657a69dd044e245
 SHA512 (lsof_4.91.tar.bz2) = 49f811941dd6303f7cb0655fddb8b1177af5d1b18f2bd1edfab09d2c128aea73daecf09c7a5375979c66ba764c88a6e70c9086b55c3634e3be01ab1aa12e9f92
 Size (lsof_4.91.tar.bz2) = 791734 bytes

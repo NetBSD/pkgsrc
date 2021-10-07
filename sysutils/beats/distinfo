@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/09/04 14:10:33 bsiegert Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:57:36 nia Exp $
 
-SHA1 (beats-6.8.13.tar.gz) = e8940f9b6a75ed8e0e6ae9177774d2e410f865f6
 RMD160 (beats-6.8.13.tar.gz) = 52959989dcd8002c0e2320f738cd43b76be8553b
 SHA512 (beats-6.8.13.tar.gz) = 39f1ba06e1930ea498c13dda11cd835096adbcd075585672004fdc9e19d96971936e47f9c631ee02f59984c10858cfd914de136ddc356e8c39fe833401b42304
 Size (beats-6.8.13.tar.gz) = 35569151 bytes

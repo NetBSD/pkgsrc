@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.35 2020/06/01 15:47:53 msaitoh Exp $
+$NetBSD: distinfo,v 1.36 2021/10/07 14:58:14 nia Exp $
 
-SHA1 (pciutils-3.7.0.tar.gz) = 8688ce7351895df5b1eab91888ed9c313e35ee4b
 RMD160 (pciutils-3.7.0.tar.gz) = 49be0dbddad3bad0727527b154a23982730c6194
 SHA512 (pciutils-3.7.0.tar.gz) = 37c01619264d299ac1e367a022637d60ab2bf6e5533fe9d37b2d37fdc5070563b78bfedc200b6bcb9192ce43fdec09ff350080c3e3ba504b90766d004398efc5
 Size (pciutils-3.7.0.tar.gz) = 507777 bytes

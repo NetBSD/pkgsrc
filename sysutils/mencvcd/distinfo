@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/03/01 11:50:24 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:05 nia Exp $
 
-SHA1 (mplayer/MPlayer-1.4.tar.xz) = 0954a7141de7c945d90db234e39a78c27cf73f78
 RMD160 (mplayer/MPlayer-1.4.tar.xz) = 7f94e3e3f127491f70a93a8699a1192c0771e20b
 SHA512 (mplayer/MPlayer-1.4.tar.xz) = 8ef71cad187d8c8f81c837279bd3a421b440c892d3347a667670b21c954007e35cf0d15828f0901f347b9c1b053e8da4bc7f0fb6de34382d1e463074923d7b34
 Size (mplayer/MPlayer-1.4.tar.xz) = 15054920 bytes

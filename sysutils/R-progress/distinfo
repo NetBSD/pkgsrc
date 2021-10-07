@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:40:18 brook Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:57:32 nia Exp $
 
-SHA1 (R/progress_1.2.2.tar.gz) = c5ba973046f6c675ee88eee9a2cd3f5dd1d16e77
 RMD160 (R/progress_1.2.2.tar.gz) = bacf6b0cbf21b281e41d5f3b4aa5e79c02ded657
 SHA512 (R/progress_1.2.2.tar.gz) = c02dfd93f43ac82ea44b97e53dd9e570aa90e95c8e4a9088114bae77f573eaba536b167a27d6a6a48d6db1d0b21d59d22468b48c0ce9580862af35f7bb3ee0bb
 Size (R/progress_1.2.2.tar.gz) = 29506 bytes

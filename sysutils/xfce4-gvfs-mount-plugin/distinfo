@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:58:41 nia Exp $
 
-SHA1 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = a782b1204049839eb01d792ce67dd32e320adff1
 RMD160 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 20da93179d239c59075caa911f37142574337ccc
 SHA512 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 0bab5e20620594e1633c12c4c20724a43317004eda6f353579f890cc1d9b3288b7a3bdc411e9f34efb00ed31876d1e29d70e8bfacc9f18ed6806b36f5e112527
 Size (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 280614 bytes

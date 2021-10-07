@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/01/19 09:29:54 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:00 nia Exp $
 
-SHA1 (kuser-16.08.0.tar.xz) = 94ce88ce4c3cb2df1e9063a6605a5027d025f417
 RMD160 (kuser-16.08.0.tar.xz) = b9dfc3794b87fc446e5c17339cb604d8e03b2065
 SHA512 (kuser-16.08.0.tar.xz) = af734dcdb5dbaac9a873fb563cb62f48b98cf58892b17659647dcdbc537f26430a6ac172897507391c6d5df887db1d96c54db64365f58043f8ea93e2f23fffea
 Size (kuser-16.08.0.tar.xz) = 135520 bytes

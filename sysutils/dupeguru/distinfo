@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/04/03 21:59:48 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:46 nia Exp $
 
-SHA1 (dupeguru-src-4.0.4_RC.tar.gz) = f4fb780feb40eb9707551aa9cfb73adc7840a614
 RMD160 (dupeguru-src-4.0.4_RC.tar.gz) = 90d8437b790a96235c6e62f6ddad31e05524ff1f
 SHA512 (dupeguru-src-4.0.4_RC.tar.gz) = 991a06afa9fb89ca8294a415d6c1448c6a9fdefb1ff26e08e38686567076ad255be49a7018d7529e72c557597a105b076470750da8a6f87d0ea84444937bb700
 Size (dupeguru-src-4.0.4_RC.tar.gz) = 502389 bytes

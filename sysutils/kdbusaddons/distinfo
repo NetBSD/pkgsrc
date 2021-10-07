@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/03/30 10:58:27 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:57:59 nia Exp $
 
-SHA1 (kdbusaddons-5.80.0.tar.xz) = 33abda20b51c03de3060e1ba2c0a831516adbe02
 RMD160 (kdbusaddons-5.80.0.tar.xz) = 6d6a9dbcdfda8ac03f48bb520dd799be3051da91
 SHA512 (kdbusaddons-5.80.0.tar.xz) = 87d3a75cde0ff9f759654bb8ec99762ae18f0d5d3dbd941987a871583811b141d9020dd0c5b25ea2f05c2b9ef521edc8423548c0587aea69c2e4fab9d423160b
 Size (kdbusaddons-5.80.0.tar.xz) = 42596 bytes

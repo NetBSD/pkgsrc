@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/03/06 18:26:07 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:57:44 nia Exp $
 
-SHA1 (detox-1.4.2.tar.gz) = b0e346951921dcd6429c9d26bae4c218cf17728a
 RMD160 (detox-1.4.2.tar.gz) = c30c616379e6a728bad817e3582cde51b03f7ef8
 SHA512 (detox-1.4.2.tar.gz) = 29b700bb225a5fd6be555adf4398c2419cc7906061bfa3ab46c890b15486d73d56495c5e837215881c3e120e62139ac4b036974ca4eb39e9ae8e1f2cc1d05b4e
 Size (detox-1.4.2.tar.gz) = 142104 bytes

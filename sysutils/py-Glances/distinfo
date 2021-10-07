@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/08/21 21:45:52 fox Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:58:16 nia Exp $
 
-SHA1 (Glances-3.2.3.1.tar.gz) = ac4afc207185d69189fdbafc8d43966cbf8ade49
 RMD160 (Glances-3.2.3.1.tar.gz) = a2a18b3877f06edca69e024410bf94a535973276
 SHA512 (Glances-3.2.3.1.tar.gz) = 66325108a6957ff8b9455823e445ebc9fa109d04661d4046543125d57f9cff4957887469788c0477b9b965b9b2c6972a7b4297dc4092d952e29fcac719683b7a
 Size (Glances-3.2.3.1.tar.gz) = 6855145 bytes

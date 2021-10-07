@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/09/07 14:35:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:13 nia Exp $
 
-SHA1 (Sys-CpuLoad-0.31.tar.gz) = 86175c6b569a940ea2cf8acaf79f0d84ac22662a
 RMD160 (Sys-CpuLoad-0.31.tar.gz) = f03a95332c274fc2d2f40ac02017639d870ab5b3
 SHA512 (Sys-CpuLoad-0.31.tar.gz) = d820beccabfc468d9b511536d80960e61b9f35615c7faeb39f1b1e8e3ecee44fdc6391431b57365910c3ac686409a7ae84f709bb45dd63b763c0d76fe2ce178b
 Size (Sys-CpuLoad-0.31.tar.gz) = 19808 bytes

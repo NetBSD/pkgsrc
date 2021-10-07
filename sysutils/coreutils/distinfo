@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.39 2021/10/03 13:11:56 ryoon Exp $
+$NetBSD: distinfo,v 1.40 2021/10/07 14:57:41 nia Exp $
 
-SHA1 (coreutils-9.0.tar.xz) = e2623469f37259d4a89ced5f91af5eaf0ab8792d
 RMD160 (coreutils-9.0.tar.xz) = 0c83607270cd799d241499df3ee8ae415059b286
 SHA512 (coreutils-9.0.tar.xz) = 9be08212891dbf48e5b22e7689dc27dac50df4631ebf29313470b72b7921f0b2aa5242917d05587785358495ca56e3b21f5b3ca81043d53cab92354da6c53a03
 Size (coreutils-9.0.tar.xz) = 5612752 bytes

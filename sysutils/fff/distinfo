@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/09/28 09:06:21 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:57:49 nia Exp $
 
-SHA1 (fff-2.2.tar.gz) = 3a8a621c0fb8b879737f46261798b427e96bd614
 RMD160 (fff-2.2.tar.gz) = 8fbfb577bc74f3c28d49c8971eea6a6513d7f650
 SHA512 (fff-2.2.tar.gz) = 364fef67b69aa28fc9448eb4b11c4d7152f11191fd4313f728b1bb00fbc80682dd2d3b4d65884aa3d70b82d319e2ca8e19bf7a06c04b250e49c3577caa5fe2cf
 Size (fff-2.2.tar.gz) = 16426 bytes

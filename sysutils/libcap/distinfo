@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/10/16 22:33:49 mcf Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:58:00 nia Exp $
 
-SHA1 (libcap-2.44.tar.gz) = e6465b796f77f191e6603dda872abe8d5c4e4e02
 RMD160 (libcap-2.44.tar.gz) = f8d0b67ba0ede3b97ad17c9e9335c5ae9c4e49ae
 SHA512 (libcap-2.44.tar.gz) = 29feb4a503aee7b86dba882175b0b76f05aed39c63ddcf47a7db7d62ab517a40c506dadfc40ddd1911f551dbe5bb26e447bb4c1024b298658a86750caab67144
 Size (libcap-2.44.tar.gz) = 170931 bytes

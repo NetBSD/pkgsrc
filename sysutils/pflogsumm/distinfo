@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/12/01 04:21:56 kim Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:58:15 nia Exp $
 
-SHA1 (pflogsumm-1.1.5.tar.gz) = d18daa19d725e64c2b7e6c8da458b2d563272645
 RMD160 (pflogsumm-1.1.5.tar.gz) = 7ae3c7ce49861834784c3aaaa32e3adb99ef0da0
 SHA512 (pflogsumm-1.1.5.tar.gz) = 994d660692dfea38a1dd9866d15f15035657e85131c1f5a2cd82baa5bd4ad987a00939cb5233f316d2090014c52ae68ef20db0c893f8634969484e0e74678f4d
 Size (pflogsumm-1.1.5.tar.gz) = 47130 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 01:32:35 agc Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:58:36 nia Exp $
 
-SHA1 (vobcopy-1.2.0.tar.gz) = f48e84b225e79a5ad2e388230d8f6e2c5d754bff
 RMD160 (vobcopy-1.2.0.tar.gz) = 6ce6f4b0f6bc136a20b689d03e672886e49b41c2
 SHA512 (vobcopy-1.2.0.tar.gz) = 78f158ed537d1888051ec82495bb8d8a4bafe1da577b20715f0de88792f913e300a36c9ca25f34dc378c823e90cbe8725147c23b7057927a23a668ff02676003
 Size (vobcopy-1.2.0.tar.gz) = 68214 bytes

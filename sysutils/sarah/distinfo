@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:32:30 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:58:26 nia Exp $
 
-SHA1 (sarah-0.9.1b.tar.gz) = 1c890ac52937898141164c9abbfb52004780cbbb
 RMD160 (sarah-0.9.1b.tar.gz) = f73c89209093d533582f0f1931190d9ea36c4620
 SHA512 (sarah-0.9.1b.tar.gz) = d67bc1e13daa26222310ab60a08b49b48b4c3bac9081a7fea8534bcb2b9c4a8708dc272e662b715639bf4286b3be102a9b7bf76a5af12f65b9f1bf939c8189b9
 Size (sarah-0.9.1b.tar.gz) = 38031 bytes

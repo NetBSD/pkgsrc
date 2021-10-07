@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/04/30 13:00:11 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:57:49 nia Exp $
 
-SHA1 (fdtools-2021.04.30.tar.bz2) = a1f88394a9183e956eaa0dd12375ee0d5c5d4f09
 RMD160 (fdtools-2021.04.30.tar.bz2) = 55a6184d3ce1ad739d90495198fb6579c8894e3c
 SHA512 (fdtools-2021.04.30.tar.bz2) = a023af80b565a72b78bca0cf40dab0de7a6c34dfbe7a9067976d24437fd0113eb253f52212d184b76c507579114cce2adab3637e561efd7872c54cb0e8935262
 Size (fdtools-2021.04.30.tar.bz2) = 42358 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/11/01 19:35:42 maya Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:58:28 nia Exp $
 
-SHA1 (spice-protocol-0.14.3.tar.xz) = 12c98ce42f161ded0d281f0064b04694ccadb2ea
 RMD160 (spice-protocol-0.14.3.tar.xz) = 5a59b1347e4d0b2a54d0b9083e10e1b80341de08
 SHA512 (spice-protocol-0.14.3.tar.xz) = 9e35fd0d9be14074a482bdb20fe6954e5f0a616d0ad60da63a065435df2b169ec134a95d5756df73e2606c7497c9bf0427023d4e5ebfbb1abb181cf8020879a6
 Size (spice-protocol-0.14.3.tar.xz) = 22224 bytes

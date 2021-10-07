@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2020/04/29 20:15:33 wiedi Exp $
+$NetBSD: distinfo,v 1.17 2021/10/07 14:58:44 nia Exp $
 
-SHA1 (znapzend-0.20.0.tar.gz) = bbf71e30db16e0e27b1fd0b32496e55f33b88743
 RMD160 (znapzend-0.20.0.tar.gz) = bd8c5cc32e7382267e3b1c9f6c5ca67dfeb3ab28
 SHA512 (znapzend-0.20.0.tar.gz) = 5168b39d1cb21a9eddd49726f9e823ebbf449c73ee499a82ac8cf3b5a72be654054b01f42aa240d44e1ae644afb641e8d7e36aaeed45a46b7e4cd5c46d57bd0b
 Size (znapzend-0.20.0.tar.gz) = 165742 bytes

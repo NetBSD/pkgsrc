@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.12 2020/10/25 03:54:31 wen Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:57:39 nia Exp $
 
-SHA1 (cfengine-3.15.2.tar.gz) = 6b71fdb0e22de1a647044b6aa3a1e2d8ad6556da
 RMD160 (cfengine-3.15.2.tar.gz) = 9def499fdd6b02ec1e80ba6a8be6ac3667cb952f
 SHA512 (cfengine-3.15.2.tar.gz) = 894b626fb8cc64fc18ab3ed3e5af90abc2a83bf3a7ea6198e812d0de4c360bbc9c373921e5bd4d533d096e079af71e4ee0c3da1bd72866bab28e45b5e44b11b8
 Size (cfengine-3.15.2.tar.gz) = 3099121 bytes
-SHA1 (cfengine-masterfiles-3.15.2.tar.gz) = c3a200c972b1018d3c873bbb452b68c1b27c95c9
 RMD160 (cfengine-masterfiles-3.15.2.tar.gz) = e8c80beb6c83f7d057707e4e1daaeb9bcfcc75cc
 SHA512 (cfengine-masterfiles-3.15.2.tar.gz) = b5819188b0b825d16778f195046fe55b43d799afb926646b9654fb06363ab1defa5de93a053c0ae8c0cea13299b5628b7eec39116e30ba2d4927f26b3371c268
 Size (cfengine-masterfiles-3.15.2.tar.gz) = 483402 bytes

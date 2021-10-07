@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2017/07/08 12:06:56 kamil Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:57:46 nia Exp $
 
-SHA1 (dtpstree-1.0.3.tar.xz) = 0faf99b3220247f3656282ac6f059478a4210a75
 RMD160 (dtpstree-1.0.3.tar.xz) = 37ff4213515400a9a70725366c4783de863f6f05
 SHA512 (dtpstree-1.0.3.tar.xz) = c0b3490bb253890824f36698db8442e2f1565d6c44921f353c45ee1c9314f1fbc69f3d537ef7a005911e4a5052c9df34330d4937fb9c41f790aaacb15d1d750c
 Size (dtpstree-1.0.3.tar.xz) = 47784 bytes

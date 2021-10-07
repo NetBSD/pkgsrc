@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/09/17 13:52:15 otis Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:58:43 nia Exp $
 
-SHA1 (zabbix-4.0.24.tar.gz) = 2c51981e1b8b0d2857e1683fd601afe96e461f38
 RMD160 (zabbix-4.0.24.tar.gz) = 58adfbe295abd10cd99fbced97e829040537993c
 SHA512 (zabbix-4.0.24.tar.gz) = ec4d4bbfc3ce1ea10a4e6cf96c10e4495ce2ea154dc297544ae107d4cb7451e3fc76e25d7822f40a809a87a268c54abb8a9d49869942f2009c0a7f92ff6abaf3
 Size (zabbix-4.0.24.tar.gz) = 17404177 bytes

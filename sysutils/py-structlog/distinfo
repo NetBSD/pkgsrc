@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/05/14 08:22:34 adam Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:58:19 nia Exp $
 
-SHA1 (structlog-21.1.0.tar.gz) = 9cf26163bd6a95599353e8e20cf440bd261b3cb3
 RMD160 (structlog-21.1.0.tar.gz) = 2834079daf760401be3cf192affca8a31bcca810
 SHA512 (structlog-21.1.0.tar.gz) = 1540dc8c3682bb428fe64bbc9494eaf59b78a49c13ae4de1338e0bfbb2f4e70a00aab7aa8c45008879087deb0c8cef5412d5323292d5f968c8d613cb74f40802
 Size (structlog-21.1.0.tar.gz) = 371729 bytes

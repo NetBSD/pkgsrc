@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/24 22:39:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:57:40 nia Exp $
 
-SHA1 (collectd-haproxy-1.2.1.zip) = ddccc4a0a7fddf54144044c98a0236ff8927fc07
 RMD160 (collectd-haproxy-1.2.1.zip) = 3c1ae3f4664c770beabd6d2f2db666667b921828
 SHA512 (collectd-haproxy-1.2.1.zip) = 70f43a44e8b4afa9469ef7cd6bd340210e0f2473e631c3b20f852756a2f997278a8fd4744e073a5f22ee94eac680f0d0c0b516dd54a6ad2fc84987d65ef1f2ed
 Size (collectd-haproxy-1.2.1.zip) = 66871 bytes

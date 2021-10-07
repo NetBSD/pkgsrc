@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/05/31 18:19:17 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:58:05 nia Exp $
 
-SHA1 (memtester-4.5.1.tar.gz) = ab6774c17d132e69c2abab078e211111980341e2
 RMD160 (memtester-4.5.1.tar.gz) = 6c529f24f2a16cd923624ac9eeccbc1ed28e48a6
 SHA512 (memtester-4.5.1.tar.gz) = cf5744f11a931338a94158aee3047ad2dab18b0cb27b8998184a98f33aaebc678beec74841a2bcbbd7154cc2e46a20f746d9cae01a9274714bcedb93f29f8c80
 Size (memtester-4.5.1.tar.gz) = 23655 bytes

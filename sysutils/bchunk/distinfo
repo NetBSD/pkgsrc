@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/11/17 13:07:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:57:36 nia Exp $
 
-SHA1 (bchunk-1.2.2.tar.gz) = 5d241a7923a53f8bcd3075d26801958a7e934ee5
 RMD160 (bchunk-1.2.2.tar.gz) = 50160ddd03d1fd03d1c7ea5bd034e459e93da17e
 SHA512 (bchunk-1.2.2.tar.gz) = 94fcc1dea3a38a907b3f209c20f3de54028cc34bf8964d1dccf94faf3ca3851270cc8e052c29a3f04c60e525c029ebfb1c3c04fa85525e20273ac8d72cb317c8
 Size (bchunk-1.2.2.tar.gz) = 15359 bytes

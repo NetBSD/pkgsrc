@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/12/31 00:32:01 ng0 Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:58:17 nia Exp $
 
-SHA1 (diffoscope-134.tar.gz) = 492bd630a06f35b9ac404a3f69b62f00217e081f
 RMD160 (diffoscope-134.tar.gz) = 7f1aba96b4960318a119ac2c7a83f6673f0e754a
 SHA512 (diffoscope-134.tar.gz) = 87026c2211cf1b9a91cc254f8894461a3f16740bae2359ca49259320f5d59720d95ab5db4de8e6b9839f04655d20079f1e85e213be5745bfadf27b5cef470b45
 Size (diffoscope-134.tar.gz) = 1710240 bytes

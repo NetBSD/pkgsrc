@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:32:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:57:33 nia Exp $
 
-SHA1 (pacpidump.tar.gz) = 55cea53b1824f9df3b43c08c749bf584b567cd69
 RMD160 (pacpidump.tar.gz) = bd68bcea754e677c032d40a3f8e0c2fdbfacf476
 SHA512 (pacpidump.tar.gz) = eaa64dfed962d7a6b3334f4f3f77eacf573c56a3c768bd4f2f56850b823141fde38f4a31843d627a8a73d04611341315b350e0b6f2c7a556eec6c490218ab1c4
 Size (pacpidump.tar.gz) = 45281 bytes

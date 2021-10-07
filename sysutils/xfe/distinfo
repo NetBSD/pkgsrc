@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2019/07/07 15:22:29 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/07 14:58:39 nia Exp $
 
-SHA1 (xfe-1.43.2.tar.gz) = 9336d2ea5d780685205c038540fea8f454d2a120
 RMD160 (xfe-1.43.2.tar.gz) = 4b366d27af97d8d6197debfa013b48b879f34af0
 SHA512 (xfe-1.43.2.tar.gz) = ad7b450d0828747f801219c23824b0751fc2a7f0eea791369c4adb3090ffe1279056fa8804ef97b25a2f810e00d37357efc962dc9d4087c3d7cc5f8ffb37d51d
 Size (xfe-1.43.2.tar.gz) = 2834576 bytes

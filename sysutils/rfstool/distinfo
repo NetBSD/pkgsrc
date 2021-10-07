@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:21 nia Exp $
 
-SHA1 (rfstool-0.14-source.zip) = c7397d4e6afae2d6537205043a048bc0103a28e0
 RMD160 (rfstool-0.14-source.zip) = a01709437d938dcb975d7f4eeefa6105f258cefa
 SHA512 (rfstool-0.14-source.zip) = c97b68b1263ee7af2580837f37a7a905546a046e80a270e98cc698ad7633eae883a02ad1ce0f613b71ab784ec6adfab30f8ebc72c3ef817323cddcdf32ea24b7
 Size (rfstool-0.14-source.zip) = 80381 bytes

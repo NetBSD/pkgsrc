@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.47 2021/03/07 14:19:41 wiz Exp $
+$NetBSD: distinfo,v 1.48 2021/10/07 14:57:40 nia Exp $
 
-SHA1 (collectd-5.12.0.tar.bz2) = af36fe83e2995270b5632fc21e5a001e6702cdce
 RMD160 (collectd-5.12.0.tar.bz2) = 9f21d334bbf6a791d3553c16cc533532056cd87f
 SHA512 (collectd-5.12.0.tar.bz2) = 7a15e4c0ae587db4987d673a790a4f3bea1cab29ce24a506fb21fa7bd2f60bfec70867eaa1c1395cb5b0e0ae81a024fb6109b064da0ef50e7c146d2198871c70
 Size (collectd-5.12.0.tar.bz2) = 1902756 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2020/05/18 10:20:13 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:58:33 nia Exp $
 
-SHA1 (tree-1.8.0.tgz) = 06934bf1f6a92af4eaec6bc61e568cec5e068ba1
 RMD160 (tree-1.8.0.tgz) = 7a8e488213e41729a21b1f455bafd09a1e2d0eea
 SHA512 (tree-1.8.0.tgz) = 3f657a6278ec5eab2fccab39dfd69bf9376811189a368b5e3213dc900b90a4e7a4961fc58eb80ad2efd5b40d2fbd0146ec59f30fe0bba576f93519214f240695
 Size (tree-1.8.0.tgz) = 50286 bytes

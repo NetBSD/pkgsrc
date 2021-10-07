@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/09/29 15:27:05 sjmulder Exp $
+$NetBSD: distinfo,v 1.23 2021/10/07 14:58:08 nia Exp $
 
-SHA1 (nnn-4.3.tar.gz) = e265a47dd5deec795e71dc4e9d550810d1730a5c
 RMD160 (nnn-4.3.tar.gz) = 8b427389d71d4f47ed494c3f089ad77d601b1a1b
 SHA512 (nnn-4.3.tar.gz) = 588af174d86db14acf5d1e2ac42f88ca5c6f0e105996a58771e7e0f989f224616e7a12d74fecc96540a9782db0cf8857c21bf0f50df4ee3b4b5c641291c64575
 Size (nnn-4.3.tar.gz) = 236606 bytes

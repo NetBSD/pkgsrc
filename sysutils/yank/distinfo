@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/12/11 13:38:57 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:58:43 nia Exp $
 
-SHA1 (yank-1.2.0.tar.gz) = cc76f407869dac79e2701f67292c80cd3696b59f
 RMD160 (yank-1.2.0.tar.gz) = b114c1b5899f9cca3ab1cf4118daca0cbae2e341
 SHA512 (yank-1.2.0.tar.gz) = 2a8b1e506452a337f1214ce96192dc3f55a8bcfd922151d308e60218fabd75c09407c6e41f42555ca0c885d74db4c5e0340f9f3c73375e0fb3f4c136614bbeb7
 Size (yank-1.2.0.tar.gz) = 8759 bytes

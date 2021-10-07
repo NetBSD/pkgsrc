@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/08/15 10:57:09 tnn Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:10 nia Exp $
 
-SHA1 (BackupPC-XS-0.62.tar.gz) = abc0dd6275ccb27aab9cb71db98f5690719a65bb
 RMD160 (BackupPC-XS-0.62.tar.gz) = 0aa4c33f0d2b6188d1481c01e3e2aecffb567b12
 SHA512 (BackupPC-XS-0.62.tar.gz) = 64a87c5660cf8674e5f9a9974e5be6a6d57201b38a94923e9de9b090fa4ce09fac28d1634c8991dea81cae05ffbbc848ede0f5b5c40b7d1f6d728b3466980f17
 Size (BackupPC-XS-0.62.tar.gz) = 289549 bytes

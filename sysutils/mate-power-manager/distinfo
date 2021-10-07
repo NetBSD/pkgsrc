@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/08/06 01:16:18 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:58:04 nia Exp $
 
-SHA1 (mate-power-manager-1.24.3.tar.xz) = 89871c3cbdb39117614100ee6008921a8b1e714a
 RMD160 (mate-power-manager-1.24.3.tar.xz) = 731d279060acdf8ee255431fd8f86650500b1b59
 SHA512 (mate-power-manager-1.24.3.tar.xz) = 6aad5c5346e563ce0fbc4e72bccce49323843e3b12738b9e45040dd804f962344a1dbc8f26d518b28fc35ca9ec87a2068f81731eb0c094be114378f2f93a2a8c
 Size (mate-power-manager-1.24.3.tar.xz) = 6199712 bytes

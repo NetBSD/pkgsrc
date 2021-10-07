@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:23 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:09 nia Exp $
 
-SHA1 (nrg2iso-0.4.tar.gz) = 26dfa9b489c9165dbc578ef3fddf6e491349df12
 RMD160 (nrg2iso-0.4.tar.gz) = fea91079c6af7df497db22147cf219b6a91833dc
 SHA512 (nrg2iso-0.4.tar.gz) = fa9e081984345770fad713cdfc5711c8c9ace3981d1cc8130b4c2b83eca517c7765eaab758a34dd5e59846f24c6e3f76f3fc89e984305c4358859b0b28e1ec68
 Size (nrg2iso-0.4.tar.gz) = 8553 bytes

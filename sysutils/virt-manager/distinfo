@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/03/31 13:57:10 bsiegert Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:58:36 nia Exp $
 
-SHA1 (virt-manager-0.9.4.tar.gz) = 1c36a95242c83ea82925c0e0f3844a32b37b8247
 RMD160 (virt-manager-0.9.4.tar.gz) = 15b3d1da4e2571ef91899bcca14354cbf656242c
 SHA512 (virt-manager-0.9.4.tar.gz) = f70f4c4f0d5b282d8126e495a2da8bcb6afe0bcbbae493d4abb46c3a1802f5ce36f477125421cb577ab2f64bae522db4d7c03558fa7997d74f5060b29b98c53a
 Size (virt-manager-0.9.4.tar.gz) = 1709809 bytes

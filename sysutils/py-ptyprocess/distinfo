@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/20 19:04:06 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:58:19 nia Exp $
 
-SHA1 (ptyprocess-0.7.0.tar.gz) = 2d8830d1025c8e33149c7723c2f283122f9488c1
 RMD160 (ptyprocess-0.7.0.tar.gz) = b82c884c8a66a9771b164ba2bf16549bb80b1395
 SHA512 (ptyprocess-0.7.0.tar.gz) = 791d8f2e79900627215ce80ce67ee9c79173dbc08297c6219d5058f9b80c5e323b93049e6836a70c4073f43548d22e3cf310f2e9948ef12f96bcaa15b0ddb2f3
 Size (ptyprocess-0.7.0.tar.gz) = 70762 bytes

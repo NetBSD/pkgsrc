@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/04/07 12:28:31 markd Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:57:58 nia Exp $
 
-SHA1 (k3b-20.12.3.tar.xz) = 094fb553e92134384beb8a4a3b94dcb600af1870
 RMD160 (k3b-20.12.3.tar.xz) = cbe421ff091c1d51300e64f18c13eeaa84f84768
 SHA512 (k3b-20.12.3.tar.xz) = e0c85d4faa6749d271d92a945e54c68876582b7d5c5719682950ca9305b75d0a46226f080e9c0bac300e63e32387ebb034d48f6ddc3b2d1a4fa2487db53f4039
 Size (k3b-20.12.3.tar.xz) = 10688136 bytes

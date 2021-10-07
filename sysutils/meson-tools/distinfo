@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/01/16 18:33:22 martin Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:58:06 nia Exp $
 
-SHA1 (meson-tools-0.1.zip) = 7aff683f97029a831ef8f6d82d99e188b3ef2a7a
 RMD160 (meson-tools-0.1.zip) = 5d3309de5d5de732dddbb6c8e75d0a2b9e9e6b8d
 SHA512 (meson-tools-0.1.zip) = ef0e15abafa6f0494ed79e1c2ca3b02bd3d671628d28fa7c39e571f72debcf74dfcc9eac39a57afbf1a87ffc1f798774a5215f48e07bf2366fc68427768aba14
 Size (meson-tools-0.1.zip) = 15057 bytes

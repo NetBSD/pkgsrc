@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/04/06 23:43:39 khorben Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:58:29 nia Exp $
 
-SHA1 (spice-0.14.3.tar.bz2) = f5968dd5df5f64805d093b4c85b4165959e6c65b
 RMD160 (spice-0.14.3.tar.bz2) = fe99d8d0db4b275b1d19dc9a7231144133c5bfa0
 SHA512 (spice-0.14.3.tar.bz2) = 9ecdc455ff25c71ac1fe6c576654b51efbfb860110bd6828065d23f7462d5c5cac772074d1a40f033386258d970b77275b2007bcfdffb23fdff2137154ea46e4
 Size (spice-0.14.3.tar.bz2) = 1504304 bytes
