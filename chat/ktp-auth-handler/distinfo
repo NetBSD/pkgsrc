@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:46 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:23:25 nia Exp $
 
-SHA1 (ktp-auth-handler-0.9.0.tar.bz2) = 7f855701da1997ee6c1920b7219dead9c94ca04d
 RMD160 (ktp-auth-handler-0.9.0.tar.bz2) = 54e47d7e81c019f797ba34bd39de64bb35179917
 SHA512 (ktp-auth-handler-0.9.0.tar.bz2) = 915790f317d82a34b2daaf81eae47af0d68e6602de57902801d7904f3b64165556554a12a076bb40037ccdc6e74c39328dfdaefd2e30dd1018952ec3e4fae675
 Size (ktp-auth-handler-0.9.0.tar.bz2) = 49212 bytes

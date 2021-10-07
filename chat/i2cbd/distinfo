@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/11/30 12:20:53 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 13:23:23 nia Exp $
 
-SHA1 (i2cbd-2.0_BETA5.tar.gz) = be219c5b6fa2413681214d756dee02c3cd252843
 RMD160 (i2cbd-2.0_BETA5.tar.gz) = d48988fb175857370c2523c86e0e586decbe28ae
 SHA512 (i2cbd-2.0_BETA5.tar.gz) = 8e13e005c46dfbb8a63a1269872270db03a0f1378a0cb14a879a8572583e47893047ebabd2e7391964d94ab9e5a4c89d88a3a5c5727195904fd0f5173b8e51b3
 Size (i2cbd-2.0_BETA5.tar.gz) = 59158 bytes

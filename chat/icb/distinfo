@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2020/08/18 02:17:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 13:23:23 nia Exp $
 
-SHA1 (icb-5.0.9.tar.gz) = 151430ad7fe3e9787627b31f6551bf1f398b1bd8
 RMD160 (icb-5.0.9.tar.gz) = 8184620d7abf71fa38315fa14aa5345b6981c9bf
 SHA512 (icb-5.0.9.tar.gz) = d72a30cd671242dceb98defae80780bffd2aaaddfea2bf50d0970368f2601dd203b13939d102ce9af3c8d46373addcd2bcf385a1bb8e3c3b3674c21072fd8d00
 Size (icb-5.0.9.tar.gz) = 357565 bytes

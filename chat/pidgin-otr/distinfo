@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2016/03/28 00:17:12 gdt Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:23:30 nia Exp $
 
-SHA1 (pidgin-otr-4.0.2.tar.gz) = 8fc072178b1c0a4161da1685c9ca9f30ade0b72d
 RMD160 (pidgin-otr-4.0.2.tar.gz) = 707f42936139ce87562ab3b42f78d6c1a0fe8286
 SHA512 (pidgin-otr-4.0.2.tar.gz) = 6815f1d2be5786726602a924ae6ead5371543a53bd36231dc3239fa580f73a6136836df0c1beb64d83b76e6bd0d80ffe6750ca6e9ddd2a6a94841a9a678925ad
 Size (pidgin-otr-4.0.2.tar.gz) = 515627 bytes

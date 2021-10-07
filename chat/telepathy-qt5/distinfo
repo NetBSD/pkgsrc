@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:23:34 nia Exp $
 
-SHA1 (telepathy-qt-0.9.8.tar.gz) = cb4bf4a69e38451880ac88fa0e44a8a6f5bfe9cb
 RMD160 (telepathy-qt-0.9.8.tar.gz) = 52f5ab2f9491d4f80648a44497dba298b9a30d45
 SHA512 (telepathy-qt-0.9.8.tar.gz) = fad662c02417c8e4e239d438ea3549226e589442aea8418c8922a6b78ff88422a36c1cc0d2e3591240fac115390a7fbdb1b4deea98187051cc811175b60b9e8b
 Size (telepathy-qt-0.9.8.tar.gz) = 6448686 bytes

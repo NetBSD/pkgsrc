@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:20:20 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:23:24 nia Exp $
 
-SHA1 (iroffer1.3.b11.tgz) = cc6db30dffa070a69ed9c1f9298a817863e13b16
 RMD160 (iroffer1.3.b11.tgz) = 51e00c06d15598a18502e554eb8816a69c71131a
 SHA512 (iroffer1.3.b11.tgz) = a1a933a571074a3c1ab54577290078b38a8d892ac7168ea08c0445575ebde317f0101498008edfa94ff78688c06005eb87201352def6ab2d9b19cac11b311cd5
 Size (iroffer1.3.b11.tgz) = 126909 bytes
