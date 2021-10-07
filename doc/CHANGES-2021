@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5058 2021/10/07 11:49:08 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5059 2021/10/07 11:51:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7757,3 +7757,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/lowdown to 0.9.1 [fcambus 2021-10-07]
 	Updated sysutils/macchina to 1.1.8 [pin 2021-10-07]
 	Updated shells/nushell to 0.38.0 [pin 2021-10-07]
+	Updated sysutils/xplr to 0.15.0 [pin 2021-10-07]
