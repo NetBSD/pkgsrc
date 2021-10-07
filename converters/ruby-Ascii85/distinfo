@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/01/10 14:03:51 taca Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:29:10 nia Exp $
 
-SHA1 (Ascii85-1.1.0.gem) = f31a11171f2846a4f7474f3832fae249ae5d8525
 RMD160 (Ascii85-1.1.0.gem) = 6d3a170229aa9ff64e5478e7a5f1454587db7998
 SHA512 (Ascii85-1.1.0.gem) = f160dbc06f49aaf1c678ece5b94fab4c3878cf7fe6accc267e64505e412072cb28b9dc28ec1ed8bf01ddbd7c08c920d95fbe182f756072d614b9827f6ec50094
 Size (Ascii85-1.1.0.gem) = 12288 bytes

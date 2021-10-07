@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/26 00:33:40 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:29:09 nia Exp $
 
-SHA1 (CairoSVG-1.0.22.tar.gz) = 67696e210d2c4cd3a0b1d6560651b77d74f504d0
 RMD160 (CairoSVG-1.0.22.tar.gz) = 2706ca48472f77b48103ce3ea91a3ba2cce2c3be
 SHA512 (CairoSVG-1.0.22.tar.gz) = 5f4ea7b80947092620827e454182af7332082a8c84fddc035f75ed19c09b4a9027d6bfd5c96e5f388150833788a71ab8fb77a1ffdd963b8106f07b1908a0c8f6
 Size (CairoSVG-1.0.22.tar.gz) = 30896 bytes

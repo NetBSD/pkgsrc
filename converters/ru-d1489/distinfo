@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:54 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:29:10 nia Exp $
 
-SHA1 (d1489-1.5.1.tgz) = 98634ac2b80c7692021e0798b5ea1974490f9d02
 RMD160 (d1489-1.5.1.tgz) = 040efe1b3d1c0040cac72b6b85e6a069e8828835
 SHA512 (d1489-1.5.1.tgz) = a06e18e586126fe61ef507bee84afecefc65f0d2134043833f4478bf278ac1264aacd45a1611db01dd76b55d10f17beb6e9e3cce385eebb8c53da5d3e7cc1141
 Size (d1489-1.5.1.tgz) = 9862 bytes

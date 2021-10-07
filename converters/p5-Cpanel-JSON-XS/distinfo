@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/09/06 19:48:51 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:29:04 nia Exp $
 
-SHA1 (Cpanel-JSON-XS-4.23.tar.gz) = da09f64e9483097aa657078a7cfb60ddef41bbce
 RMD160 (Cpanel-JSON-XS-4.23.tar.gz) = 4729cedc1d1039ea806eaf14ee2199bd3a84f780
 SHA512 (Cpanel-JSON-XS-4.23.tar.gz) = 1c0d70ff85a2217c2b326c8002766e237966e0fcdac447fbb5108a5ba98b2771db17731853f2f7bedf85c337c7f6e18333c2c235830a17e152e7838bd168d0f9
 Size (Cpanel-JSON-XS-4.23.tar.gz) = 253594 bytes
