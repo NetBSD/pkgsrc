@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/03/23 17:07:00 joerg Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 15:03:55 nia Exp $
 
-SHA1 (emiclock-2.0.2.tar.gz) = e1c042d600faf59ecdb11f1199f1793282db90c1
 RMD160 (emiclock-2.0.2.tar.gz) = 25a753aaefbd9b8b57c16fbfe13678a002ab8179
 SHA512 (emiclock-2.0.2.tar.gz) = 5276ec3e7a2333417c362c6779d38da5b6e76427085d41608f10bcc6b78910949427dd292c283e8d31d96eaba12cbb97de98774bd9976f83c55fea5f80ee8e69
 Size (emiclock-2.0.2.tar.gz) = 308682 bytes

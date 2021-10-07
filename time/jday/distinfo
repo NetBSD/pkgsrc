@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/11/04 12:57:00 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 15:03:57 nia Exp $
 
-SHA1 (jday-2.4.tar.gz) = 46b020ef315eb21b3b0e5192693687ef286cf2e1
 RMD160 (jday-2.4.tar.gz) = f69d7b5f00fc3fc9ebb7fe7fb0d3c0d1dcdc0927
 SHA512 (jday-2.4.tar.gz) = e4399339098b4444382bc657d4485d6d83f064e473d2add355b9f5881a2a3b8344ffb27824a397c7bece94ca3eb6ce907246cee4ed687d9544b2f138e8fc5c80
 Size (jday-2.4.tar.gz) = 337012 bytes

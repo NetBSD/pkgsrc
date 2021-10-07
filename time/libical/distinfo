@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/04/19 11:04:52 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 15:03:58 nia Exp $
 
-SHA1 (libical-3.0.10.tar.gz) = ed9a3bcff30d543c6caae019f4333f6af55934ed
 RMD160 (libical-3.0.10.tar.gz) = c7ade4170aa750f95e93eba5b36a897d8d5edf01
 SHA512 (libical-3.0.10.tar.gz) = e32ccaff9b8a501f340567a1221c580023e4ed79918519bfa88aee2c0e8b62f5ea37e10907f2eb6fbd346a57408708a74e30aaf9a57a8d711eae30ddc974ddd0
 Size (libical-3.0.10.tar.gz) = 889470 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/12/07 15:44:34 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:04:09 nia Exp $
 
-SHA1 (l18n-2020.6.1.tar.gz) = 354a2a8fd619babf79b97d5a48d83baf4d4e05b1
 RMD160 (l18n-2020.6.1.tar.gz) = d20e1fc023bf9eb4e5711901b3bedb0f734f8ca9
 SHA512 (l18n-2020.6.1.tar.gz) = 83405892678e53266a7dd6c8769ee96a9ef3fdd647790917ce25b74881a88d96bf2380901616bd5b0d23f65673457915bbd3976b28d89cf99ea0f5d1a9491ebb
 Size (l18n-2020.6.1.tar.gz) = 50557 bytes
