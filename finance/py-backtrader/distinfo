@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/06/17 05:43:02 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:53:52 nia Exp $
 
-SHA1 (backtrader-1.9.74.123.tar.gz) = 55a49a0c7561afa89d5127013fed8844c0ddbb42
 RMD160 (backtrader-1.9.74.123.tar.gz) = c740a47055c8fac4502ed31e71c7b1114453310c
 SHA512 (backtrader-1.9.74.123.tar.gz) = cd8429d0c08e778727e07cb31f9dd462e9ba289f54b407b086107b2a0267c95d4bf8ac85bbfa3762900408eb5e7d57c89d675fd5241a87de847e39fd5d0ddd11
 Size (backtrader-1.9.74.123.tar.gz) = 2175081 bytes

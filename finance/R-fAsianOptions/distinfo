@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/03/02 18:49:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:53:49 nia Exp $
 
-SHA1 (R/fAsianOptions_3042.82.tar.gz) = ff6e89e20c828b429eb1178947ddb094eef3b2aa
 RMD160 (R/fAsianOptions_3042.82.tar.gz) = f954146f12bb8c0188188c51e615edd1e51dcde1
 SHA512 (R/fAsianOptions_3042.82.tar.gz) = 4d06bb1e5cbc4e7e16339f7aac876ca4f4ccc9db5d18e904161a0003ecdbd9473aef57c46cf547c481afd65be399ba45d3e30cfa845639eb3c59fdf5246d8f4f
 Size (R/fAsianOptions_3042.82.tar.gz) = 82774 bytes

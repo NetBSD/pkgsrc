@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/12/04 21:13:03 rodent Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:53:59 nia Exp $
 
-SHA1 (tryton-4.2/trytond_product_price_list-4.2.0.tar.gz) = 98093225569b0495112a437d0c327b42a3a30787
 RMD160 (tryton-4.2/trytond_product_price_list-4.2.0.tar.gz) = daa95003bdf5fede4a221d351cbdc120a817f74c
 SHA512 (tryton-4.2/trytond_product_price_list-4.2.0.tar.gz) = df2c239f73e7d4a2e0e6ff9050aa5fa6ece30c9a14ceae5c1ccd2dd7b29a87ac883ab73cbfb70b940017f141f7a424e3be6a3ee105ac982c492d2d034b371963
 Size (tryton-4.2/trytond_product_price_list-4.2.0.tar.gz) = 25863 bytes

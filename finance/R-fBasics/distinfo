@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/02/27 17:46:19 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:53:49 nia Exp $
 
-SHA1 (R/fBasics_3042.89.tar.gz) = dd4e9468c08f20466e3cd32bed922862e0aec632
 RMD160 (R/fBasics_3042.89.tar.gz) = 434e17301c154aaa32cfd462eada6a59318763ef
 SHA512 (R/fBasics_3042.89.tar.gz) = f6bbb62c5171254c22a27fccefcb29e006d40f977f712af3dad3ff3c01dfc9ec2326c28459c7bab19232bad515963fd4942f9f40cee5f063749f0442ca17452c
 Size (R/fBasics_3042.89.tar.gz) = 929797 bytes

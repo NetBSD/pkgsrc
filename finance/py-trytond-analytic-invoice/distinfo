@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2016/12/04 21:13:02 rodent Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:53:58 nia Exp $
 
-SHA1 (tryton-4.2/trytond_analytic_invoice-4.2.0.tar.gz) = 39b10ea5331b6540e708baaa0f4c23d2d3f67f95
 RMD160 (tryton-4.2/trytond_analytic_invoice-4.2.0.tar.gz) = 790464ac10a3db1c8603726f9db2a7bda836f220
 SHA512 (tryton-4.2/trytond_analytic_invoice-4.2.0.tar.gz) = 80e652a5ff5aa1518416013c75e1f8c87fa9da7d3a28be885c7ad0e1a36cfc228dd336569d8e1ff585bc0839c27df9675ded08489985c64f1023b48478b2ab8e
 Size (tryton-4.2/trytond_analytic_invoice-4.2.0.tar.gz) = 22549 bytes
