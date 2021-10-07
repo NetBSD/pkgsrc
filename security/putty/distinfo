@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.32 2021/07/24 14:54:08 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2021/10/07 14:54:24 nia Exp $
 
-SHA1 (putty-0.76.tar.gz) = de09f50aee330eb05ad0cb81b970d0cc8e5c9b25
 RMD160 (putty-0.76.tar.gz) = 6e8bdea6badaecf8347d790c2fd58c7d20974429
 SHA512 (putty-0.76.tar.gz) = 4576b359593928c6eba923f2d7b66ac0f2cf00e0c217cdbbb124471c3b35feb090e623847bfc507a4ef106cb3067aac47419e241b11dd8bf4ae554061fa93c25
 Size (putty-0.76.tar.gz) = 2735687 bytes

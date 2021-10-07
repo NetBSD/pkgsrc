@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/11/13 15:06:44 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:54:31 nia Exp $
 
-SHA1 (mohawk-1.1.0.tar.gz) = c1f40f98a43a9094c481d49ad5af3409da6728a3
 RMD160 (mohawk-1.1.0.tar.gz) = 9998b8d8617f61805b64ac78aee2a45e5f837d9e
 SHA512 (mohawk-1.1.0.tar.gz) = 1e4a55f62f759dd00d7acef00d4c447b98c0c06bd142574abd20f8309ba12b2209d1690d59687807306a8808aa5a39871508517981846ee1c9a8bc603ef443a5
 Size (mohawk-1.1.0.tar.gz) = 18507 bytes

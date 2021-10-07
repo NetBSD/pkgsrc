@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/05 23:04:03 wen Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:10 nia Exp $
 
-SHA1 (Crypt-JWT-0.033.tar.gz) = d7af520262e30e33ce954773bda0d5c7d610f2de
 RMD160 (Crypt-JWT-0.033.tar.gz) = a770f88b84762849de812db28c16cf95bb494799
 SHA512 (Crypt-JWT-0.033.tar.gz) = c846c9267f72fab8f760d49c31b58c527cc97da684975fad33f16a4325b878197810fa4e16687cbe132f821f5449825521a4067da4754ecdb6335461b08aa3a9
 Size (Crypt-JWT-0.033.tar.gz) = 84063 bytes

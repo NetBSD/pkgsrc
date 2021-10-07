@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/04/24 13:21:53 pho Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:53:53 nia Exp $
 
-SHA1 (ed25519-0.0.5.0.tar.gz) = 283d3f90f0c141bb711e8fc01830defbf46b8a38
 RMD160 (ed25519-0.0.5.0.tar.gz) = eebedb9ca2a80b47cb67af71ffd9c620b1c3d5e9
 SHA512 (ed25519-0.0.5.0.tar.gz) = cd2bb28de905c6d659f80f15e82970a9634c959432c73b6fd3b10ebca42a1ce734429e7ac861d0ab328904d99651a6d2fcaaf4d74ab75a3c0be68607e8f54ce9
 Size (ed25519-0.0.5.0.tar.gz) = 80034 bytes

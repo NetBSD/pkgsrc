@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:17:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:53:40 nia Exp $
 
-SHA1 (Bastille-3.0.9.tar.bz2) = 389f13d9c6c7b14b91b30bda7285238c74758e0d
 RMD160 (Bastille-3.0.9.tar.bz2) = 853bec2e007d3084cb4df9d509a316523c4dc467
 SHA512 (Bastille-3.0.9.tar.bz2) = a97ab2c2bb64c655d43ddcfd4000cee8666787e5b5923390e3155b258c3a2cf7d131abd474f9b0dd415eb455b664ab26a875da6636268b2a715ea87dd4dae2f0
 Size (Bastille-3.0.9.tar.bz2) = 319045 bytes

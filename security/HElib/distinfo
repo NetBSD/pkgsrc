@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/06/08 13:47:43 wiz Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:53:40 nia Exp $
 
-SHA1 (HElib-1.0.1.tar.gz) = f732f38a2919e59d387516d1e41f113a3ffa0448
 RMD160 (HElib-1.0.1.tar.gz) = b27214fa002750ead4eda97cf5cc1402b299674c
 SHA512 (HElib-1.0.1.tar.gz) = 19bc63f74e61db82bc9ed4c0245c7da33e1e89bbdab26260100f248512757359c49ed76bd5bc5ec061415c292d1904a2a5e3a481ffbc366f3c7c1cd7c5498aa4
 Size (HElib-1.0.1.tar.gz) = 1579853 bytes

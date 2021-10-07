@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 12:40:40 pho Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:53:53 nia Exp $
 
-SHA1 (x509-store-1.6.7.tar.gz) = 0cf24ca1e621a90c920004aec132f429e138f580
 RMD160 (x509-store-1.6.7.tar.gz) = 3604cffabc2d4f39b5b7aa69f09c99e0e2756308
 SHA512 (x509-store-1.6.7.tar.gz) = 7b0b792a988aed50995523c3f6a3bb0da08cb8963ad834afbeef8bc53e4bb3d7d11af757a999f7b5c81ef073bac10a4003fba7486abd9343a48770bfc954167e
 Size (x509-store-1.6.7.tar.gz) = 12689 bytes

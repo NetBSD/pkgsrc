@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:54:47 nia Exp $
 
-SHA1 (stegtunnel-0.4.tar.gz) = c29c1ddc4bca2e2b266acf0040a2029c3bdeb33d
 RMD160 (stegtunnel-0.4.tar.gz) = c06d13c0c22b684fb5141894bae81d3d4d623470
 SHA512 (stegtunnel-0.4.tar.gz) = 4ed63894ff941c25ca68b3cd1ad0baafb0e05ac89db1cbd383d36723380b1785db22e0214c6b682d83c2bdfcc85b1028da07eb3cbe29f3984351b6ea856b900c
 Size (stegtunnel-0.4.tar.gz) = 167291 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2019/07/09 11:20:58 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:54:00 nia Exp $
 
-SHA1 (crypt-1.18.2.tar.xz) = 55bd8c2015f39bba73aca13b5e4e37f44a292b3f
 RMD160 (crypt-1.18.2.tar.xz) = 484fa6695e84448270d45851123249276d8add8d
 SHA512 (crypt-1.18.2.tar.xz) = f6117a12a42b07f8de4a8aedbccf6ff4ee94b4b81cb7263af99627c32eae646ca8ead7d3063737918db4aa118673001fcf2cfa8e4ca8b528fb00045fda7cc893
 Size (crypt-1.18.2.tar.xz) = 2638064 bytes

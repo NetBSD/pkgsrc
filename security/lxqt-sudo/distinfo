@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/04/20 18:28:19 pin Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:01 nia Exp $
 
-SHA1 (lxqt-sudo-0.17.0.tar.xz) = 679cefaa5842c5c97c241c4fc18b9e159e374fe9
 RMD160 (lxqt-sudo-0.17.0.tar.xz) = 9d224254cefc456f55c6b378f55892a70a8fa33c
 SHA512 (lxqt-sudo-0.17.0.tar.xz) = bbd33b4e49392ee0ab611558c72842d857d2d8af95ec2b3a0db6bdd0b7062dfac24cfd468e5b1a2197ad684a65fe629993c98a5f2bb24227ce0df7dcd04127f5
 Size (lxqt-sudo-0.17.0.tar.xz) = 35884 bytes

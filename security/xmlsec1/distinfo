@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2018/01/30 13:25:19 mef Exp $
+$NetBSD: distinfo,v 1.19 2021/10/07 14:54:49 nia Exp $
 
-SHA1 (xmlsec1-1.2.25.tar.gz) = 0ef1117b8d11da475fd8d842a1341c675e627ab9
 RMD160 (xmlsec1-1.2.25.tar.gz) = f81aed97a5cc7de1a71ea32de02b73c32f7bdbf5
 SHA512 (xmlsec1-1.2.25.tar.gz) = ac61547a1cbf9016d7f75be3dc5249d6bc8a526bc51715e53ede13f056c1c72c57433a6be200c886000a25826c3e473954ded3ae988f25d37ac4ef4d777c66a6
 Size (xmlsec1-1.2.25.tar.gz) = 1839160 bytes

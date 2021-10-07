@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/04/10 09:10:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:19 nia Exp $
 
-SHA1 (floodyberry-ed25519-donna-8757bd4cd209cb032853ece0ce413f122eef212c.tar.gz) = 5cf66843d4f66fea1117bc44a8d4c94eaeeda840
 RMD160 (floodyberry-ed25519-donna-8757bd4cd209cb032853ece0ce413f122eef212c.tar.gz) = bca5b0cb7d314bc72ba37415b557d618d6705b2f
 SHA512 (floodyberry-ed25519-donna-8757bd4cd209cb032853ece0ce413f122eef212c.tar.gz) = 5e8b838bc66bdb1983e62b0ae969449741a3fb223198bce26fe3a8996e324728e8ba0e5259f9ef3db613fd484db21459e98c39367f7240940bc537210c6d7f63
 Size (floodyberry-ed25519-donna-8757bd4cd209cb032853ece0ce413f122eef212c.tar.gz) = 1169972 bytes
-SHA1 (pam_ssh_agent_auth-0.10.4.tar.gz) = 66dd8274346fd006ff40f525c082cfb701085b5f
 RMD160 (pam_ssh_agent_auth-0.10.4.tar.gz) = d4c02cb47d096ac261d1cb15791483c5c7261f12
 SHA512 (pam_ssh_agent_auth-0.10.4.tar.gz) = caccf72174d15e43f4c86a459ac6448682e62116557cf1e1e828955f3d1731595b238df42adec57860e7f341e92daf5d8285020bcb5018f3b8a5145aa32ee1c2
 Size (pam_ssh_agent_auth-0.10.4.tar.gz) = 307110 bytes

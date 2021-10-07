@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/22 05:27:06 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:53:55 nia Exp $
 
-SHA1 (kstart-4.2.tar.gz) = 09c114e1a78a2ab348741cf1b8ce3327d5a8e9fd
 RMD160 (kstart-4.2.tar.gz) = b41b66f148efbfe674d72af3077f961aea3b6682
 SHA512 (kstart-4.2.tar.gz) = 7ce9c1f964c0d469b4b8a5de88ae83186e99116959941c4e7f69c59165d0c22aac432ac26dd5fe54f7c2f725048bb55b787107aea8408e2fd6c9ad02dcb31552
 Size (kstart-4.2.tar.gz) = 296651 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/03/29 07:58:53 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:54:48 nia Exp $
 
-SHA1 (volatility-2.6.1.tar.gz) = 16e393a01f542c880190c1ec6339bb27943a600c
 RMD160 (volatility-2.6.1.tar.gz) = ad00ca8219dcb25a10ec4bbcfb74bd458669d939
 SHA512 (volatility-2.6.1.tar.gz) = 64d49de21a87fb6152ad430126466bf66bca06457f3fa2d54cee29b0e4a2eee53ab658570b6cbc782e85ca558f45fac5cf6e6625ebd85aa3ffc9f69768cfa844
 Size (volatility-2.6.1.tar.gz) = 5246187 bytes

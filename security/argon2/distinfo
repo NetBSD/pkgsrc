@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/08/07 12:58:49 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:53:43 nia Exp $
 
-SHA1 (phc-winner-argon2-20190702.tar.gz) = 4b1de90ec1ccfb6e91001e849f2cbe0222cc8b4c
 RMD160 (phc-winner-argon2-20190702.tar.gz) = 18660aa9f668339938bc1553d7c9fb8bfa816193
 SHA512 (phc-winner-argon2-20190702.tar.gz) = 0a4cb89e8e63399f7df069e2862ccd05308b7652bf4ab74372842f66bcc60776399e0eaf979a7b7e31436b5e6913fe5b0a6949549d8c82ebd06e0629b106e85f
 Size (phc-winner-argon2-20190702.tar.gz) = 1505307 bytes
