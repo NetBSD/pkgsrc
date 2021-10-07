@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/01/16 12:19:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:49:52 nia Exp $
 
-SHA1 (x16-emulator-35.tar.gz) = 831e1acb2eecc5edb36f86925f00fabd6abb8321
 RMD160 (x16-emulator-35.tar.gz) = 1b5945db7ba879978bf77e7ad5362a93c9a464c0
 SHA512 (x16-emulator-35.tar.gz) = ec014b6ad13a7631d533b665c7544689629167261ffe0f0941c9381ea8cc6b3803a27deac0d76de7aa2fdae3dc438d8f0abbabe9f55ed0221e7fa0f0d39fbf3c
 Size (x16-emulator-35.tar.gz) = 123338 bytes

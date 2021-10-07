@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/10/10 13:54:17 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:49:36 nia Exp $
 
-SHA1 (minivmac-36.04.src.tgz) = 6b5c1e00689683313a8b2c2047669939544003cf
 RMD160 (minivmac-36.04.src.tgz) = 613534f9aa4fd779d245f5511731617df4da3bb6
 SHA512 (minivmac-36.04.src.tgz) = 4de672b4a7127466e30676868cf1f49b155a1231eb7d124fd5b4236f628db8351f45db5f24564932745fa7840f6ea40707bfc46d95f3a403165f05b443367a3f
 Size (minivmac-36.04.src.tgz) = 500742 bytes

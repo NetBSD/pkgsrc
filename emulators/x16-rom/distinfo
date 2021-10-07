@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/12/28 19:31:38 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:49:52 nia Exp $
 
-SHA1 (x16-rom-35.tar.gz) = c26a3d106d0bfd0b9e4b7c4ff67b076909d75c4b
 RMD160 (x16-rom-35.tar.gz) = dd9d36f3f6f28f2513b0d3c18a4d30c4fedb93dc
 SHA512 (x16-rom-35.tar.gz) = 68694f972cd9675a49ad335485c8aafe79da24da6611933e3c83e1051053c6a7a72555a3d20ce7b607c7045a5212ebffc36d3bbae286f69e09bb7d21802ce425
 Size (x16-rom-35.tar.gz) = 401918 bytes

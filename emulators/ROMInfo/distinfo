@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2016/09/07 13:25:45 mef Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:49:21 nia Exp $
 
-SHA1 (rinfo28.zip) = 3f1b658d97cfc3831b678022bd288000066b8153
 RMD160 (rinfo28.zip) = c1afabd6a73f4467f2ffee64245d0aa1289c5b9b
 SHA512 (rinfo28.zip) = b17fb88a30af8efb428b608fcc1454e7721f131c8b6da9939a7ae501620281b58f7481aa4bd5793b018726b3e88a37e54a4fed2c64e456ba48481cf7c37219a6
 Size (rinfo28.zip) = 180204 bytes
