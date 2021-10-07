@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 22:13:39 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:19:48 nia Exp $
 
-SHA1 (scim-tomoe-0.6.0.tar.gz) = 481ee2f8f9baa6105a349da36360aed06e432291
 RMD160 (scim-tomoe-0.6.0.tar.gz) = c95059e7f594192c97b082aa61818060391a8591
 SHA512 (scim-tomoe-0.6.0.tar.gz) = d70a8838f8c82c76a8e3592ad712997189873cbc4ec7ebeba5d43d6583e24acf318299433c9342ee004c4ae4741cca7e0b88e4642cf46c43f967a47ec5ac9d4f
 Size (scim-tomoe-0.6.0.tar.gz) = 385126 bytes

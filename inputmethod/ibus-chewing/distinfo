@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/02/20 21:24:48 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:19:40 nia Exp $
 
-SHA1 (ibus-chewing-1.5.1-Source.tar.gz) = 5a6f2b7aaebce330f9a390d492d5fbd1267c9c98
 RMD160 (ibus-chewing-1.5.1-Source.tar.gz) = eac9bf1b23e026359c38524ca937034629960f5b
 SHA512 (ibus-chewing-1.5.1-Source.tar.gz) = 2db6def1fe8ca3bd71419a001909d285ee48ef84c2f65e14bacff9cd114676bed594f0c90217e1fdab67c995a7b05d675812e90e281371d8464722c31649c633
 Size (ibus-chewing-1.5.1-Source.tar.gz) = 177044 bytes
