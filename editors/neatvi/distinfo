@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/08/11 20:20:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:47:44 nia Exp $
 
-SHA1 (neatvi-09.tar.gz) = 89453680b937689658cc8a85e8b3449bf61f1088
 RMD160 (neatvi-09.tar.gz) = 92149255faedd069c6c25a63867eb1d25eca9ce9
 SHA512 (neatvi-09.tar.gz) = 11b0c34525210bcb96fc0128056a0c350cdea3318cc26b3c3aac5bce59809d8eab0dd63b410d5f91d2965ce5030ee104f614f829264854df6f26ef05a605d876
 Size (neatvi-09.tar.gz) = 44088 bytes

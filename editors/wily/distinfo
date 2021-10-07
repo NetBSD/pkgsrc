@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2017/07/21 20:50:57 nros Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:47:52 nia Exp $
 
-SHA1 (wily-0.13.42.tar.gz) = d01544d10e68cf4d24956537bfec72aab275a14b
 RMD160 (wily-0.13.42.tar.gz) = 2cc03acd7a1474e9d1f6003fe3606b94874a9fe7
 SHA512 (wily-0.13.42.tar.gz) = 5e5460cf4e086fb4ee63da074b23ad6831226e57bff3a781f4bd8f76768e8bc370c380e66ceac88ea103fd12d538db65120b22ba14ce88f38973a4f5084c273f
 Size (wily-0.13.42.tar.gz) = 487783 bytes

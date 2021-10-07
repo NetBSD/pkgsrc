@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2019/09/06 15:53:42 christos Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 13:47:41 nia Exp $
 
-SHA1 (jove4.16.0.74.tgz) = a9a9fbb07e314eae5427b5be93ca985fd3c29699
 RMD160 (jove4.16.0.74.tgz) = 5eb3eb4c0c4fe13b3296a37344e33c1c21abf931
 SHA512 (jove4.16.0.74.tgz) = 53d94fb4044efbac990efd8a2056bc60039cbbaf0b62fcbfc37a413393e3b838ea4813384d8f36c43a43a2a3052d2a72fd8f6f829ef4700bfeda717781a85337
 Size (jove4.16.0.74.tgz) = 468165 bytes

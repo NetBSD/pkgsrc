@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:32:18 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:47:43 nia Exp $
 
-SHA1 (Mule-UCS-0.84.tar.gz) = aa796d3d9cce8b3c444752e8a3fc74ecf3d76979
 RMD160 (Mule-UCS-0.84.tar.gz) = 48ac2119998b8df052d5f8835de396f32e0337ab
 SHA512 (Mule-UCS-0.84.tar.gz) = 38289b60041c79e3c3ff15939386c14a1501c5c4497c511827ac66c6bede08b2d377158bdae4eb31ebf8776f92d18f1aa7656eaa76438692a70467221aa0b1f5
 Size (Mule-UCS-0.84.tar.gz) = 565222 bytes
