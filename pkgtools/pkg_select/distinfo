@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2017/12/29 17:55:13 maya Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 14:47:19 nia Exp $
 
-SHA1 (pkg_select-20090308.tar.gz) = f4a4f40927631d16ee563671ce98e69843382c93
 RMD160 (pkg_select-20090308.tar.gz) = d265f8e18ee4500e2ac34ba2d105acff28cc7e91
 SHA512 (pkg_select-20090308.tar.gz) = 77ebda4cb6032d980682b7c4c9745982cd49d1683476fa8e16e345385651150576b252c0a4c1a6318e263c11ebc13bffa04393687db914011dfafe52d651125c
 Size (pkg_select-20090308.tar.gz) = 54637 bytes

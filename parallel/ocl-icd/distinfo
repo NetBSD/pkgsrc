@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/07/09 18:30:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:46:46 nia Exp $
 
-SHA1 (ocl-icd-2.3.0.tar.gz) = 4ccf5706c8cf09c63dd56fef57c2bf9c70a5288f
 RMD160 (ocl-icd-2.3.0.tar.gz) = d72a75a2ff12c9cf30f8b91c65782473947ee633
 SHA512 (ocl-icd-2.3.0.tar.gz) = 003f3661b7086a7364e79d1058591f12a7095aa2c3decfc4b496f00a0863a91cd81080f33b9308e3948045f8aca5856868ed2725f478654230e51a60d654e613
 Size (ocl-icd-2.3.0.tar.gz) = 100848 bytes
