@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/09/30 09:59:47 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 15:05:13 nia Exp $
 
-SHA1 (shod-2.1.4.tar.gz) = a67692aeca51690fcb196affb945554d12f9ead2
 RMD160 (shod-2.1.4.tar.gz) = 83f30232278aedd4689c1ff57433dc9754ee4bce
 SHA512 (shod-2.1.4.tar.gz) = d63066ffb922ec8154d5e9940cd845a64784b883e6490503c096a7903572dfe0251e42ed33e401afa761f93b9d698f6bf4b6054a510728626e75a2cdede43b6d
 Size (shod-2.1.4.tar.gz) = 44980 bytes

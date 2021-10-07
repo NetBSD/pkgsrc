@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2020/10/10 20:11:51 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 15:05:10 nia Exp $
 
-SHA1 (qvwm-1.1.12.tar.gz) = 27b43148a750e5b6b3efac6a6506819adbc2ed4d
 RMD160 (qvwm-1.1.12.tar.gz) = ed8d78b43e4e5778224af3a490daa2d31eb9a914
 SHA512 (qvwm-1.1.12.tar.gz) = 98f4f757a92e6ed3bf41689359447166ca0df7ab2e21f1ee2b731e574526c6c71a475a7b2e8c1ac76f23511fe21f3f09139ff11a12ded3d084d71833edde9dd7
 Size (qvwm-1.1.12.tar.gz) = 434618 bytes

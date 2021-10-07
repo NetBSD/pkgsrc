@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/10/18 10:40:40 micha Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 15:05:06 nia Exp $
 
-SHA1 (flwm-1.16.tgz) = 9d384b27647851652a701df3925c71297b4ade06
 RMD160 (flwm-1.16.tgz) = 4cac5bb4960766aea8f340fa48997f2b6a4bb67e
 SHA512 (flwm-1.16.tgz) = d352e13b0385a017922d636988ba02f20cbe5f8ccd69522f43711a3d3cc04fe876af9f2126d63bd6c862494bace6510a5cda286ce165a54bf58cade1758e1f12
 Size (flwm-1.16.tgz) = 93510 bytes
