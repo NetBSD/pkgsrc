@@ -1,30 +1,23 @@
-$NetBSD: distinfo,v 1.19 2021/09/30 10:32:20 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2021/10/07 14:20:53 nia Exp $
 
-SHA1 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 04981802730423aa12999e59679be198d540222a
 RMD160 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = f617e67f2c2f07c7211cb391a4bc2e7b304045e2
 SHA512 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 0819d9d9cd73688c143812c703e8394c9010e9e81c03a69c81f6bcc784f262ec04bffb9d8f2d030209f2f1a05ccddfb46c36fe789936e2b850920bf08052448f
 Size (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 52125656 bytes
-SHA1 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 688f5729992bd2476699d9067d97e79b06bdec60
 RMD160 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 4e9c52c8ef07343cc24528e3f8431754237d0be3
 SHA512 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = abc92ca6822ba7fe2d09bc381a833c0cbd5f436b517fba003736195cec45f8ce2e33623a587ad35f5702baac791594d62fc829e2ea4dfceae2455875661b3ba6
 Size (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 51700444 bytes
-SHA1 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = e16fcc19bc76eed3de81dd14064fd427d4f04c93
 RMD160 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 5e6eb0ca293c96dd7fa33e3ab8dc3541e2e2f441
 SHA512 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 2eccb6c0a64d505363cb340e9a603c744c48c59202a00f4c535ba0b278908fe58c126d7bfc3ae233ec097febfa3c395c3622a4cb4270b85af5189f2ceeda664a
 Size (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 53872384 bytes
-SHA1 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = bc7b0e203a6e7e6804c4be46957352d032cd22ec
 RMD160 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = dd50835c50cd2102c1af4d2ed8f1148c8ac4d4d9
 SHA512 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = 0cc836390985c56d79a5c08dd2117c53fc9802b969db408dab14cfd441d95b2b5c18fed5d0b6da8a8555501e668ba471d0b878ea11a0021fba76265ed4ef8f76
 Size (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = 53040892 bytes
-SHA1 (ghc-8.4.4-boot-x86_64-unknown-solaris2.tar.xz) = f7021882f5bd695834bdef17b824763174274b95
 RMD160 (ghc-8.4.4-boot-x86_64-unknown-solaris2.tar.xz) = 986c8ef22d4a2cb5cbf058dafd8b8dc1a6295dd9
 SHA512 (ghc-8.4.4-boot-x86_64-unknown-solaris2.tar.xz) = 88cba2a1954f0f2282e7b54b2c42f9b8d852b337996556301d9b739e4a89678c7a606e653ff21cce694489b9f02b8edd6641f62624dc0b6ecc53a377129785d5
 Size (ghc-8.4.4-boot-x86_64-unknown-solaris2.tar.xz) = 67421732 bytes
-SHA1 (ghc-8.8.4-src.tar.xz) = 94dfb44d8f6b812a7023309ec909e2288f0e7724
 RMD160 (ghc-8.8.4-src.tar.xz) = 2201ffb27231d9fce293b77830e6fae09f48f163
 SHA512 (ghc-8.8.4-src.tar.xz) = efd23bd819f7429486696a3a929a040471db7ea8a2d1f1d832e4cf0825b9e1e0c5e6ecad0ab8376f58b74e9c28c1d2f773bd126596d6d853c9e57d57e5ceb090
 Size (ghc-8.8.4-src.tar.xz) = 19395252 bytes
-SHA1 (netbsd-9.0-amd64-libterminfo.tar.gz) = db6b385b8676efc135c08b06e3dd6fd11b926999
 RMD160 (netbsd-9.0-amd64-libterminfo.tar.gz) = 5a246633c90ee85f71efcc02d8280bd0c50ab5a7
 SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
 Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2019/10/09 08:57:14 msaitoh Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:20:46 nia Exp $
 
-SHA1 (camlp4-4.08+1.tar.gz) = 7cf80c5b340fcee29d00034003e66648fc66cc3e
 RMD160 (camlp4-4.08+1.tar.gz) = d165eb98c8c2aae2f0b2b5102384d61de3243a5d
 SHA512 (camlp4-4.08+1.tar.gz) = 1f8d6df42935ecdbed96a7b02d05564665b4bf0cbe4f5fd1800a1f292d8b3864d973df1e9e8c566c0fd00b5a55ba47ecd9bd07f134a9be83601e010b0246e075
 Size (camlp4-4.08+1.tar.gz) = 649830 bytes

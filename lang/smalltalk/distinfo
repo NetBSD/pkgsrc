@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2020/09/19 15:27:15 mef Exp $
+$NetBSD: distinfo,v 1.30 2021/10/07 14:21:14 nia Exp $
 
-SHA1 (smalltalk-3.2.5.tar.gz) = 4dd77b769131527add276ded01666e089da3b8b1
 RMD160 (smalltalk-3.2.5.tar.gz) = 04cc87b31e8288fc6a8ce756612d40d91ce40cde
 SHA512 (smalltalk-3.2.5.tar.gz) = 385e5fba2acb8870759e5178282210c09c45685d0cf776bc50f4ed10c9afacf9164547ba8099ea3ed9a92a2a253aa9c2b011a7a9f2dff47ea9cfdf3b42029ebc
 Size (smalltalk-3.2.5.tar.gz) = 5779293 bytes

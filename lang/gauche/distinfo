@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.40 2021/07/24 14:50:42 yhardy Exp $
+$NetBSD: distinfo,v 1.41 2021/10/07 14:20:51 nia Exp $
 
-SHA1 (Gauche-0.9.10.tgz) = a1a35944db9b71d9117cf0d9f7806aa34711b636
 RMD160 (Gauche-0.9.10.tgz) = 0b21bea6aead08b4274605f7fa0ac6ae9efd2f87
 SHA512 (Gauche-0.9.10.tgz) = f014ec00903fc91b90da8dbdaace04a64d12695c631e923d5cdca3574aaf6701374f5adbed20c395881b047bb5a448352614d4ce7f16b6e38f69382bf8e66ed0
 Size (Gauche-0.9.10.tgz) = 7701616 bytes

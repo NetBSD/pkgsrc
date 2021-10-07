@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/12/20 00:01:37 joerg Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:21:15 nia Exp $
 
-SHA1 (squeak/Squeak-4.10.2.2614-src.tar.gz) = bd807730537122b220840b4a89f04a6689f435c2
 RMD160 (squeak/Squeak-4.10.2.2614-src.tar.gz) = 8e8a94ef036aa9ca51ade7683c3c9c8844a56660
 SHA512 (squeak/Squeak-4.10.2.2614-src.tar.gz) = b823fb97f7826dbbae5feeb15ffc3ab7e11cf27c5a3cc3f2cf2f8c39b56af5f9d0078d020a4b8f72b997198d296be6d85ec10e0bca10d5214bf586e1e0587f07
 Size (squeak/Squeak-4.10.2.2614-src.tar.gz) = 3297314 bytes

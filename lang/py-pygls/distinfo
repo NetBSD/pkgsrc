@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/12/04 16:46:59 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:21:08 nia Exp $
 
-SHA1 (pygls-0.9.1.tar.gz) = 46b19737d145d767fc1f747fa26859cbc2a6a5eb
 RMD160 (pygls-0.9.1.tar.gz) = 3914ef2fce75002f1f04bb7a004d06cb37a0797a
 SHA512 (pygls-0.9.1.tar.gz) = ea771e95d35a2642140c897be591c88c0bd9f74fdef408b08c71ed287b616f88f12052aaac6f2c620ab419ffdfe334691a1708a488ac2024d6a56429967794d6
 Size (pygls-0.9.1.tar.gz) = 37725 bytes

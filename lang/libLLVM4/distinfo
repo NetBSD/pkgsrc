@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/01/26 20:14:02 tnn Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:20:58 nia Exp $
 
-SHA1 (llvm-4.0.1.src.tar.xz) = ddbf4dab7ab1a4bdce5ed1227bf721cbb3533a6e
 RMD160 (llvm-4.0.1.src.tar.xz) = 37387a5ca73ea270b2f541ecbd1cd641f7b09be2
 SHA512 (llvm-4.0.1.src.tar.xz) = 16adc39b34ddb628f81b171119a8e2a0e9138b25011e803ef0b688e2fbea116fc4953d3a1b61b90a98a75e33619f81566b7cb06a9a2ea4d04ac5e0eb303a2d1d
 Size (llvm-4.0.1.src.tar.xz) = 21065652 bytes

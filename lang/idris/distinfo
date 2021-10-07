@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/04/25 11:39:03 pho Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:20:56 nia Exp $
 
-SHA1 (idris-1.3.3.tar.gz) = dfaf078f6220f7c44e9f052002ec3373b2f51086
 RMD160 (idris-1.3.3.tar.gz) = ceddf815d11098704e40d3d428edb99cc5fbe349
 SHA512 (idris-1.3.3.tar.gz) = 4edcc67b173b5645102520a47b295742b894c2f738f94b8f2183c782aa39c349262a5c62cc01c947bcc366930f9f952632ebc419616cdb06c952ee0134b1ec4b
 Size (idris-1.3.3.tar.gz) = 1720984 bytes

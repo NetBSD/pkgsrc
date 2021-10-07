@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.113 2021/03/17 12:48:59 wiz Exp $
+$NetBSD: distinfo,v 1.114 2021/10/07 14:21:01 nia Exp $
 
-SHA1 (mono-6.12.0.122.tar.xz) = 0ddc92fccdeaa88aa8301421f2d997fdb9d1437e
 RMD160 (mono-6.12.0.122.tar.xz) = 44e1409c86e3fae3ea808cfd894ce8587b620a70
 SHA512 (mono-6.12.0.122.tar.xz) = 0fbd4147498cc81e384933147eb6aa5c559d17a794a308af7ffa43dce51e0faefde24fc75e987ed804dcb161b52756944bc3611100fc0a4adcc260ca97ddaecd
 Size (mono-6.12.0.122.tar.xz) = 292266176 bytes

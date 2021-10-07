@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/05/09 00:32:50 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:20:45 nia Exp $
 
-SHA1 (R/sourcetools_0.1.7.tar.gz) = bbdbad448223f9ba52f0ae827a6edf54fb572de9
 RMD160 (R/sourcetools_0.1.7.tar.gz) = 7348e4313e2c5e0d29cdf7d09f07bb60e2dec605
 SHA512 (R/sourcetools_0.1.7.tar.gz) = 8446aec2a22046044a886c16b752f1846ba8e24b07fbce23678ca324536b6cc19acb795eb381491712c2bd913f891518911b48f37c0a4bd47aad12e57f6eb31d
 Size (R/sourcetools_0.1.7.tar.gz) = 24155 bytes

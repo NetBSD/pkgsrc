@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.21 2021/10/07 14:20:56 nia Exp $
 
-SHA1 (icon.v943src.tgz) = 92bd3347807b333fb903edf61a2805f2e1159577
 RMD160 (icon.v943src.tgz) = af75af7f106920cd59a7f8ac85954aa472ae78e7
 SHA512 (icon.v943src.tgz) = 9f89c7f1aaea1caea586aeb1ef74346a0f258c26ae74581a9ce7b59c2b590eb79316bdb9530b70d9af59ad06e6c444eec92016d0e5b015f4d467bde0baac2695
 Size (icon.v943src.tgz) = 3218627 bytes

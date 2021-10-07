@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:50:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:21:03 nia Exp $
 
-SHA1 (open-cobol-ce-1.1.r59.tar.gz) = 9e4a7911e4c0ff5c6f210010e61912afc82c21c4
 RMD160 (open-cobol-ce-1.1.r59.tar.gz) = af74ad102ced65b4fc161185fa59b9d973fb44ea
 SHA512 (open-cobol-ce-1.1.r59.tar.gz) = 2c979c895443cdfb4a989e21a18ea01e3cb309aaee126e3471f4fcfbc7cc040610c4d993db22ce666f6cbe96b86112c99e25cf5b9fdf8cacbccc522bf52881fa
 Size (open-cobol-ce-1.1.r59.tar.gz) = 1052119 bytes

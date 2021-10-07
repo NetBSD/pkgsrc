@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/03/20 19:14:57 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:21:07 nia Exp $
 
-SHA1 (hy-0.20.0.tar.gz) = 376449bdab3bcdbe3543d0f892f3286e403ebcae
 RMD160 (hy-0.20.0.tar.gz) = 3d5e6081dd85b478c7a65b063691cab84bcd5b4b
 SHA512 (hy-0.20.0.tar.gz) = f6a3ea45589d090c2b142b53c26c3d81f26b02c40f6ad0b875196c24ac7de3dd869b0575ce40e1f146512fb90a7ce8508810dd58d6514569ea682e7a3af39685
 Size (hy-0.20.0.tar.gz) = 90040 bytes
