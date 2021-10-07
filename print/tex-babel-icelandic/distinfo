@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/08/11 03:42:35 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:20 nia Exp $
 
-SHA1 (tex-babel-icelandic-51551/babel-icelandic.tar.xz) = 96815a3a1913b0908de90d8bc22557e7d8a65a4a
 RMD160 (tex-babel-icelandic-51551/babel-icelandic.tar.xz) = 0933ddea5d1525b40508c0391ad43c814485789f
 SHA512 (tex-babel-icelandic-51551/babel-icelandic.tar.xz) = 46aca093e061948272d2a54ff9f95b94b101582f0ec9d795668983c37b518be3c3d76d2c8e6901126d3dd7342db003589bacce9a40cfd573263a953bbedbfc48
 Size (tex-babel-icelandic-51551/babel-icelandic.tar.xz) = 4120 bytes

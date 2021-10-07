@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/02/15 00:39:21 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:51:44 nia Exp $
 
-SHA1 (toptesi.doc.r56276.tar.xz) = 0510b8e26c7dd550400fc118a20d776afa6012d4
 RMD160 (toptesi.doc.r56276.tar.xz) = 69a2bb3ffa723cd52d3b558f35669c909ffa7f17
 SHA512 (toptesi.doc.r56276.tar.xz) = 7dd70306861e8528cd4c645893a3cb81c20a6f82db2237e595573226c77f8df71ecfa57909b9675e19e441301fecf38f1b1c4bb7b4ed2705a4e132d4bf19b436
 Size (toptesi.doc.r56276.tar.xz) = 5776432 bytes

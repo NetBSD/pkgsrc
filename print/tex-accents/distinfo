@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 10:52:52 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:09 nia Exp $
 
-SHA1 (tex-accents-51497/accents.tar.xz) = f7fcc3113278b344afe6f16c2ac5f5a63adcac00
 RMD160 (tex-accents-51497/accents.tar.xz) = 2b1eb6606303c9a4c188b9a09bff530e6a726c04
 SHA512 (tex-accents-51497/accents.tar.xz) = 738e8299148365c0441495664cd97b408b181d192adb718adeacc93d4c63b7e81c12541746777571f3fd0da37348905269b5d7ecfc2d58f88174cd53edbe56b3
 Size (tex-accents-51497/accents.tar.xz) = 2956 bytes

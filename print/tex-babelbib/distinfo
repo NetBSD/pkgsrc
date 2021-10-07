@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/02/13 04:26:35 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 14:49:24 nia Exp $
 
-SHA1 (babelbib.r57349.tar.xz) = 429d756cc2bab2165ef3816106b58699d9dc1559
 RMD160 (babelbib.r57349.tar.xz) = 2fce7489e19311c22406686473a1b959e97ab2c7
 SHA512 (babelbib.r57349.tar.xz) = 90e78ff6086c80e0102ce7aae74070d3b1444208f3957e354f2c940ea4d279f87ed59e6c3310c6d9fc1464c227fb0eb4c3813ca679a6e94295e0b824cb527376
 Size (babelbib.r57349.tar.xz) = 27240 bytes

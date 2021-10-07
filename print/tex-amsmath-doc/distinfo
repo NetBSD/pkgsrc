@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/02/13 04:14:59 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:49:13 nia Exp $
 
-SHA1 (amsmath.doc.r56514.tar.xz) = 247d6e5c9f43b6fb60052692e4f3fe49f98a872e
 RMD160 (amsmath.doc.r56514.tar.xz) = c1f202e29983cade173a10c575fa10aed72979ce
 SHA512 (amsmath.doc.r56514.tar.xz) = eb71c5f8e5a05b76cc5cc1eb554843160d6592e4c802f8d0c4fa009489966350698b7fa37fd1fcac1a70e0ecebafd08dfadc81d069bd1a1867e09dd09295128c
 Size (amsmath.doc.r56514.tar.xz) = 2351400 bytes

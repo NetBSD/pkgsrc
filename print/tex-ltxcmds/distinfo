@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/13 05:26:11 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:46 nia Exp $
 
-SHA1 (ltxcmds.r56421.tar.xz) = 2fbfc0e8089e2fd60ce201ade7b9f12505bbc502
 RMD160 (ltxcmds.r56421.tar.xz) = 2913fc1368ba2fa7e5df2ca2e069fcdbc455b2cf
 SHA512 (ltxcmds.r56421.tar.xz) = 052303cd90b960cc5a9bf89c8938af95d8959ba6bdc603b4d53b68666b443b620417c9ec4ac65867b04eae8cb0a88940f905eac78d2c3718ce7a40ea249c9f94
 Size (ltxcmds.r56421.tar.xz) = 4124 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/06/06 02:04:52 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:51:36 nia Exp $
 
-SHA1 (tex.r57972.tar.xz) = ecaea3978f3e6be704f3c586d76040d4190a687e
 RMD160 (tex.r57972.tar.xz) = df7f63d1f068e7260bb5b08cbdbca0e3571df350
 SHA512 (tex.r57972.tar.xz) = e38f62fcc5ccee22a909eae5ea196e055eae59eedc652ce9788a3b4520995e97f64c683f1ba940853a06030a7ea6f1d749ed4dda1cb30433f87f5f9cdce5a9a7
 Size (tex.r57972.tar.xz) = 896 bytes

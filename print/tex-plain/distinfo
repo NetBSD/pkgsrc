@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/06/06 12:24:14 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:51:10 nia Exp $
 
-SHA1 (plain.r57963.tar.xz) = 81318474a5f223fd6c6554f607444682652f6ecc
 RMD160 (plain.r57963.tar.xz) = d355aad89e7749e83afc65aab7dac66ee2ad09fc
 SHA512 (plain.r57963.tar.xz) = 0010ad47f363ddad3a0433fbc48f4e39950eddab3d08e2eaa6d5eacdc620265d45b09ca23c48f92ac8bedf222f98095c4f91d424a27ef0e8e50ed6d673780c57
 Size (plain.r57963.tar.xz) = 29112 bytes

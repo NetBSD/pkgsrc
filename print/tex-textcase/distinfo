@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/05 12:01:04 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:51:39 nia Exp $
 
-SHA1 (textcase.r52092.tar.xz) = 1f852294210ca41bd0d939e5754e9ca101cf08cf
 RMD160 (textcase.r52092.tar.xz) = e32e23fb3e88f014a2756b1aa798705c5a1e9daf
 SHA512 (textcase.r52092.tar.xz) = 9cb8145b46343c34c4ac7c7ec64dc6d69f08e329cfae2c1ac41902a74e92cee715b5b171bbf26b92efc0a8a4500d11d317d8c927ffee623450b39e4ee6555483
 Size (textcase.r52092.tar.xz) = 1508 bytes

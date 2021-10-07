@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:03 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:09 nia Exp $
 
-SHA1 (tex-fix2col-38770/fix2col.tar.xz) = 66958891557f57ca6223467a1c77c34fa7fd6931
 RMD160 (tex-fix2col-38770/fix2col.tar.xz) = eb9be532c9a24b7130eec7771066686f8d50bdc6
 SHA512 (tex-fix2col-38770/fix2col.tar.xz) = bb7172c8ba510abd76413968861564bb34d298d61b317f2f61667f73888c539ada7696a83d704b9b7b9033d3dce7501011e76a3319a02bdbde86cefa60d05b07
 Size (tex-fix2col-38770/fix2col.tar.xz) = 2688 bytes

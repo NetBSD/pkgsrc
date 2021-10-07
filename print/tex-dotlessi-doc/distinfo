@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 10:57:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:58 nia Exp $
 
-SHA1 (tex-dotlessi-51476/dotlessi.doc.tar.xz) = 4b1b378a1a4a8c53c5fe32e8fe78dfaf5052d026
 RMD160 (tex-dotlessi-51476/dotlessi.doc.tar.xz) = ae130ff9f420638d7673147fc23114c4c4e4fdfb
 SHA512 (tex-dotlessi-51476/dotlessi.doc.tar.xz) = c77fed1f0b8ddbd6ed141fe8c9f914cbd5592820ffe3e457ecf35952817149d1315598f449dfe0e15e0e50328e45b408d3f1ef91fe83154f5374bcc62041ba77
 Size (tex-dotlessi-51476/dotlessi.doc.tar.xz) = 676 bytes

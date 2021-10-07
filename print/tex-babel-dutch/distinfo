@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/02/14 20:15:06 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:19 nia Exp $
 
-SHA1 (babel-dutch.r56827.tar.xz) = c69327fc05cba0af52e45d3f089c2505d6c35e0d
 RMD160 (babel-dutch.r56827.tar.xz) = a24312a230a8bd564cdd546598b0df02d80915ec
 SHA512 (babel-dutch.r56827.tar.xz) = 4bdebadb6dabd378fb52eedacd8181623e40bd0a8215aa77c34f7a051a020d6c60230fa0203c2d519bfffcb9a374702ccb1d7c6b0482a232f1eeda5ff52f6c1e
 Size (babel-dutch.r56827.tar.xz) = 2900 bytes

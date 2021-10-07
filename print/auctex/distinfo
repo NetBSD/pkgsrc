@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2019/07/05 15:32:09 hauke Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 14:48:51 nia Exp $
 
-SHA1 (auctex-11.92.tar.gz) = d1ac60f96abef76242b099073a7a05b24624ae81
 RMD160 (auctex-11.92.tar.gz) = 8013ad7a1d1acbd235996ea1b5bfa5bfa1f3f0a1
 SHA512 (auctex-11.92.tar.gz) = 758bf82903ba0499decf0ade77c7ac70865132a24195d7e8794538b7857c448811b7ef26149a915b60ed3ee34c2ebaddb3282a320bd459c9ee3f461d6ee9b84e
 Size (auctex-11.92.tar.gz) = 1486606 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/01 02:30:48 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:02 nia Exp $
 
-SHA1 (epigraph.doc.r54857.tar.xz) = e143a1b3e0987b21232ab486139f89a495abf871
 RMD160 (epigraph.doc.r54857.tar.xz) = d83a2cb8df000ed00f9d322fe4eccbd09af1d9b8
 SHA512 (epigraph.doc.r54857.tar.xz) = d8d2ac763e6bdcbcc200fa21995ea5044b4adad11f147b3d7e9f212274c1678cbba7661cc93df8cd013470a5397ca257690d85b8fe55704800284805abac7c62
 Size (epigraph.doc.r54857.tar.xz) = 315068 bytes

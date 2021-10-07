@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/06/05 05:08:27 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 14:51:08 nia Exp $
 
-SHA1 (pdfpages.doc.r58212.tar.xz) = efffdc343c19911f8d8646f3944517bb1def27cb
 RMD160 (pdfpages.doc.r58212.tar.xz) = bf52fa5eee9f89097d0d38800e9a35751d839fbd
 SHA512 (pdfpages.doc.r58212.tar.xz) = b71da54d15d16ea74e72e09a46403d545e32c8e0fd44abf2b3bb7dff7ed1cc51c93bfacaa482037adb2b0010b060366836c25e66def3144ed504bb6623629f80
 Size (pdfpages.doc.r58212.tar.xz) = 320504 bytes

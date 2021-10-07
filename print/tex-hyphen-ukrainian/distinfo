@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:48 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:30 nia Exp $
 
-SHA1 (hyphen-ukrainian.r58652.tar.xz) = 5004947457374865282f750d088fd6d1e7be3950
 RMD160 (hyphen-ukrainian.r58652.tar.xz) = 7ac72bde81d8e194e37eb7f998a968ddc414a361
 SHA512 (hyphen-ukrainian.r58652.tar.xz) = 05a9111b358c659159c6edfd38b9ce3d78febd794cc82968dc3e2acdc3612786304721fbd07f00f0a8278f4c2e46a1bfad821b5da45e60546d6acb5bf9068d08
 Size (hyphen-ukrainian.r58652.tar.xz) = 18692 bytes

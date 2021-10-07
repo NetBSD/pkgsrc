@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/10/31 13:53:03 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:49:02 nia Exp $
 
-SHA1 (poppler-data-0.4.10.tar.gz) = aff34e5cadda3086b154e95b9a6098454a23a712
 RMD160 (poppler-data-0.4.10.tar.gz) = 0e93645a48280968eec64e0c2b814a11759b2ad3
 SHA512 (poppler-data-0.4.10.tar.gz) = 4bebad0791b55b5e2805cf864393d1f777a7996c962398fc178211d2abbf110f75ef2fa6699e275b126aca0540eabb89542a672e0587248db9414e357a32bfd3
 Size (poppler-data-0.4.10.tar.gz) = 4497684 bytes

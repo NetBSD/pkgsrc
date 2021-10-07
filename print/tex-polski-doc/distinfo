@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/06/21 11:45:57 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:12 nia Exp $
 
-SHA1 (tex-polski-44213/polski.doc.tar.xz) = dff51adcde99e76832a39ef5b780a005f4152386
 RMD160 (tex-polski-44213/polski.doc.tar.xz) = 9a1dd1b74138f6f9a54e9ecb934522684a7964d2
 SHA512 (tex-polski-44213/polski.doc.tar.xz) = d6a7d36c093174c70b22e58b3669a9899d03fee21bcacc5042b17d5d8caa6dc4b098095a3fc1a583b88932865255a720ce355c5c5ee9f40cb7470aede8411ca9
 Size (tex-polski-44213/polski.doc.tar.xz) = 294100 bytes

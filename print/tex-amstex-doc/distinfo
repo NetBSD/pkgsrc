@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2019/02/01 21:41:27 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:13 nia Exp $
 
-SHA1 (tex-amstex-49810/amstex.doc.tar.xz) = 23ec59483cca2a85050497a1c2f741b21ab99de7
 RMD160 (tex-amstex-49810/amstex.doc.tar.xz) = 64f206b10af05ebbf531cf4dae655d912f13ce92
 SHA512 (tex-amstex-49810/amstex.doc.tar.xz) = 1a3379cb83b9104f1a277b4e8f8505620ac477a7931506192185342e281ec0f9562aa0b02896924364162d3895d15365f7550037be25e0a177d4627626c62fc8
 Size (tex-amstex-49810/amstex.doc.tar.xz) = 410600 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2020/05/02 02:27:43 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:50:33 nia Exp $
 
-SHA1 (import.r54683.tar.xz) = 8a0ded0d43ba6b0d2285ab32ae038cb0d6e20c2c
 RMD160 (import.r54683.tar.xz) = 3d8fda18110edf3600d0c4d8b27db7ad282280c3
 SHA512 (import.r54683.tar.xz) = 96a92584b4ff4a4bd3b345b446f2802e34d59ebf8c14469a5b5331e6d2f92b63f42d8f5799bdcefc9ae3f74e5e6f93aad7d5371dbe7d21e84ced3890a76c7a19
 Size (import.r54683.tar.xz) = 2712 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/06/03 04:18:50 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:22 nia Exp $
 
-SHA1 (babel-serbian.r58836.tar.xz) = a2b55697d91721ea0a66860882dd69991d5472a7
 RMD160 (babel-serbian.r58836.tar.xz) = 9f6826725317695e41f41612e68b8dee9ae3013a
 SHA512 (babel-serbian.r58836.tar.xz) = d754a40fa68732f70582b6ca548f4ce8ba43af39ed299dba4a4cad5b10afbacdfea2bd79d332ab29a2a0a81422d6784fa5beb57e5a5a90c6a29c88407c8e008b
 Size (babel-serbian.r58836.tar.xz) = 3300 bytes

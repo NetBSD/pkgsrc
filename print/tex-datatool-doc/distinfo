@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2020/05/01 00:15:13 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:49:56 nia Exp $
 
-SHA1 (datatool.doc.r52663.tar.xz) = 2b59cca22532f85cc5fb2651ecb48f06cc1fbcc5
 RMD160 (datatool.doc.r52663.tar.xz) = 6f4cc2304cdf7e65973608557608b3d05a5fc7f2
 SHA512 (datatool.doc.r52663.tar.xz) = 32b5391c7197bc29783bab0c93a5225784fea999f69bdd8b1b5c152ed338716f82dbedfdb6cd19064ee409407c0b808e5f410e6090cda6d1f8ded2ca41f3ace9
 Size (datatool.doc.r52663.tar.xz) = 2683720 bytes

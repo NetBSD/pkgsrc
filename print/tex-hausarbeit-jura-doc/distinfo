@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/02/15 00:21:21 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:50:20 nia Exp $
 
-SHA1 (hausarbeit-jura.doc.r56070.tar.xz) = e9b9a3bcf53cb6a614f6034887634890220f52b6
 RMD160 (hausarbeit-jura.doc.r56070.tar.xz) = 03587083d014ff66884ac6af6b5fab24847e3c95
 SHA512 (hausarbeit-jura.doc.r56070.tar.xz) = 76898cfd9d4bd0f34632092ac7c1d913f4d460beb9b9fd3d98c249156c406b81fe42a4bed754fde79c497f9e674f50c698de598c9bb675270e7ada1c0002bba4
 Size (hausarbeit-jura.doc.r56070.tar.xz) = 342728 bytes

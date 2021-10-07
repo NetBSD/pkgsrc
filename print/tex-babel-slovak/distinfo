@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:49:23 nia Exp $
 
-SHA1 (tex-babel-slovak-30292/babel-slovak.tar.xz) = d9f7caaeccc78a3cafef4092e309f10fb36841b9
 RMD160 (tex-babel-slovak-30292/babel-slovak.tar.xz) = 4f0239e86cc7f514efb03ce9dc1d4d92473b58a7
 SHA512 (tex-babel-slovak-30292/babel-slovak.tar.xz) = 513c393cb4a9316e9a7861f3d5d3949314ca27bf52273d85d41a9af7bfb675626fbdb6bc27b29b3d23d8683d125fd95bc6809a08d1427d1a0d7eebcdc50e9e22
 Size (tex-babel-slovak-30292/babel-slovak.tar.xz) = 5412 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/05/01 02:30:50 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:50:16 nia Exp $
 
-SHA1 (geometry.doc.r54080.tar.xz) = 6de95cfc8fcdd9cc7a1cfaf1d1cdb48fece08684
 RMD160 (geometry.doc.r54080.tar.xz) = f69af63c6e6e7031c3581b592bd8afe026b4d8c5
 SHA512 (geometry.doc.r54080.tar.xz) = 4bd5ec66f725516ef4d5d3e83e3b75a9b4408fe947161e3d885b929b34c4b60437c3fcd32472486aec12c9665b5c0d71a22896055a613c641bda4c4aa987f76f
 Size (geometry.doc.r54080.tar.xz) = 864536 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2020/05/01 00:15:11 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:49:43 nia Exp $
 
-SHA1 (colortbl.r53545.tar.xz) = af2a431a54341ded2a17b6636e095280b597c5ba
 RMD160 (colortbl.r53545.tar.xz) = 75304a028fa1fb79c0f87aa54cdc8aa46a4d3490
 SHA512 (colortbl.r53545.tar.xz) = b24972e5a945458318a7b383ad652c7851f01e6c66fa40f8d670f4f3724d280e18d825fc905d76d111d7de969bf6be29f45447eaab78fe985275984a23fd47bd
 Size (colortbl.r53545.tar.xz) = 3284 bytes

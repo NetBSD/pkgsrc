@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/08/07 13:39:05 prlw1 Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:49:02 nia Exp $
 
-SHA1 (pmw-4.51.tar.gz) = d410b480f21596cf01ba82414c8d1501d0021fe4
 RMD160 (pmw-4.51.tar.gz) = 38c787ea2d51c600be16412510e64b087fa49789
 SHA512 (pmw-4.51.tar.gz) = 70b85e57464cec234f937e7ff3524ae1c4d4a63ee2f32b55816c5764ce8f29bd910725e7f851fb5de7a41eda3d88b8ad383a2906a7e29dd0f4f5d580d76d1c5f
 Size (pmw-4.51.tar.gz) = 2241739 bytes

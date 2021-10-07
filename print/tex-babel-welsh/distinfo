@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:00 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 14:49:24 nia Exp $
 
-SHA1 (tex-babel-welsh-38372/babel-welsh.tar.xz) = 166b78ea79c0fcf3e515061c600eb6385bcc44bb
 RMD160 (tex-babel-welsh-38372/babel-welsh.tar.xz) = dd96ec1073d1570c59e61ff8473dcdf96120cb56
 SHA512 (tex-babel-welsh-38372/babel-welsh.tar.xz) = 6d9fa08e22d46641aa04e315cef6f02c145cc79aa6ddd4066e11de3fa8b02d189421fc2f3c09773785ebf65e4486b5c45b74b12ebb934176d77324bbba301a8e
 Size (tex-babel-welsh-38372/babel-welsh.tar.xz) = 1836 bytes

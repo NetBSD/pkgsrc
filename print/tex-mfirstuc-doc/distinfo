@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/05/12 01:05:45 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:52 nia Exp $
 
-SHA1 (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 766e056040a883620718a70c4913452cb0ddd2a5
 RMD160 (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 84856398b098f96205d548cb3c2adf53208268f2
 SHA512 (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 41f1e68878866fa567acb407b71f49336ed50b05bb6260b3169c35c32e94844e6d3739d34451b9be8b1207e90591eb02c6c2679ec9aa43e262df26589d4c9c39
 Size (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 661836 bytes

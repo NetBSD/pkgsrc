@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2018/07/21 16:39:05 leot Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:48:55 nia Exp $
 
-SHA1 (foomatic-db-4.0-20180721.tar.xz) = 1657d45bb1e7ad3c99e77b2d8e94162977bd6a1a
 RMD160 (foomatic-db-4.0-20180721.tar.xz) = fdaf2c419596fe44fcd47e4fdfe167afc6368929
 SHA512 (foomatic-db-4.0-20180721.tar.xz) = 50af20a0c5d12ed93f4cf649742213e0e417d11e3347a4c0203d95ad759972f571a593de525d31456ab8e023fdeb881d5c0b400570fd3420e6bdf3adcdbb4d7f
 Size (foomatic-db-4.0-20180721.tar.xz) = 6052764 bytes

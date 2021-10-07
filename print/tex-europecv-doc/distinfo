@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/06/03 06:53:00 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:50:06 nia Exp $
 
-SHA1 (europecv.doc.r59162.tar.xz) = c2bc5aa63b436cc065136c26413f317ee4c0a9f1
 RMD160 (europecv.doc.r59162.tar.xz) = af2737b578d4a9519c08fe1833171f767f3adb35
 SHA512 (europecv.doc.r59162.tar.xz) = fa6ace2fa21f8545ecd030e12a6f00938c468e3e87445df62352b0bedc25cba855b122dc28a3cfe3796379cb6f7f264de43a4b620f35eefa5583cd9275cd3ed1
 Size (europecv.doc.r59162.tar.xz) = 993116 bytes

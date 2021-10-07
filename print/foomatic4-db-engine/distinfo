@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2018/07/21 16:07:22 leot Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:48:55 nia Exp $
 
-SHA1 (foomatic-db-engine-4.0.13.tar.gz) = 68d6addec5ac5ba4235b5da991351eab5c754df5
 RMD160 (foomatic-db-engine-4.0.13.tar.gz) = 77b92e8849bfe09d46ab66900aaad3dae61060bd
 SHA512 (foomatic-db-engine-4.0.13.tar.gz) = da6a0dd9c0d7935d59a4bdd5454c1b7dcb81508f17a98ebfb9fd50fb6b5ed593f4b226715030f22c082c5328c7f7e99d775eeadcb444db5c8ad1441a11a179bf
 Size (foomatic-db-engine-4.0.13.tar.gz) = 360631 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/05 01:38:07 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:50:45 nia Exp $
 
-SHA1 (listingsutf8.doc.r53097.tar.xz) = 03779efd05be44f7b09038a508573f25e7300bc1
 RMD160 (listingsutf8.doc.r53097.tar.xz) = 1117b68c4d7eb39ab7f79082a6ac0a812b83d309
 SHA512 (listingsutf8.doc.r53097.tar.xz) = fd15657a8c7e8af4d21721f64ee0c2a77606d965698fdfeb581116f3b13dbf95bf774b77f019bef4cdb4565cd1957cf040818b1d9f78425eecfccc48ab6c5e28
 Size (listingsutf8.doc.r53097.tar.xz) = 299004 bytes

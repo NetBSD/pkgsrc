@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/06/03 06:13:00 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:49:40 nia Exp $
 
-SHA1 (cjk-ko.doc.r58081.tar.xz) = a57f38c54fd377ecc7e709f561669f10e2ee37dd
 RMD160 (cjk-ko.doc.r58081.tar.xz) = 7d90d5be18c95b47766bb789ddcb02172c7a7900
 SHA512 (cjk-ko.doc.r58081.tar.xz) = 3985b243f47a964dde86cea55ff35bef042fe4f66171188dff03e7bebfe06369604fbad9dc0acf551778bcfffb7fed77250035f28b1f033b5f64e5577960aa44
 Size (cjk-ko.doc.r58081.tar.xz) = 160716 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 11:47:12 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 14:51:07 nia Exp $
 
-SHA1 (tex-pdfcomment-49047/pdfcomment.doc.tar.xz) = e247747c96c244a0dc25569d60090b7490452631
 RMD160 (tex-pdfcomment-49047/pdfcomment.doc.tar.xz) = dd4ed6f7c0102570e282af372d59a3810cd2158d
 SHA512 (tex-pdfcomment-49047/pdfcomment.doc.tar.xz) = 9613c272b370030cb80d650a7155fede7cdef72212e8757070a305f1cb94510832a603d783233f27573f074aada3c162beccaec97266c344042d04efc026665d
 Size (tex-pdfcomment-49047/pdfcomment.doc.tar.xz) = 1206148 bytes

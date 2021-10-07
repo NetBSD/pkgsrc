@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/02/13 04:11:52 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:49:12 nia Exp $
 
-SHA1 (amscls.doc.r55378.tar.xz) = 15a12cd66dc3cbb279437018fe778c7ecd120815
 RMD160 (amscls.doc.r55378.tar.xz) = 626fbca5fdf910071a4ccb68ea8ab24527eb1e67
 SHA512 (amscls.doc.r55378.tar.xz) = c2e563bd239f36b0db3bdbfe1ccb4a0adec0c22af25b557ed748897a99672f05f36f2bba6e51827c6fdd60b351079809b15c0367d075566c5e48682c23108fe2
 Size (amscls.doc.r55378.tar.xz) = 1072480 bytes

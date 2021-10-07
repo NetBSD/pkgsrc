@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/05/30 08:04:43 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:50:25 nia Exp $
 
-SHA1 (hyphen-coptic.r58652.tar.xz) = 2a135bb1b9f69cf23634c0acc2535158fc355c06
 RMD160 (hyphen-coptic.r58652.tar.xz) = e75f765969b6b0fffd97eeff0d16714f09080698
 SHA512 (hyphen-coptic.r58652.tar.xz) = fe36adfe900e23f2b0c3e9c3a3d96b608c49bf597222537d355d6a68e2f87f587db78a1921ab1c9a80ea175529e353524c35e99b83ef7f5515ab7c0aacd2f680
 Size (hyphen-coptic.r58652.tar.xz) = 6148 bytes

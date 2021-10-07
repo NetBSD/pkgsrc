@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/05/17 15:54:41 ryoon Exp $
+$NetBSD: distinfo,v 1.36 2021/10/07 14:49:04 nia Exp $
 
-SHA1 (qpdf-10.3.2.tar.gz) = bb9bb24a6756b64e5903b0155f86ea0a4d1306aa
 RMD160 (qpdf-10.3.2.tar.gz) = ca150df40d7679f2035479381a36f853af070787
 SHA512 (qpdf-10.3.2.tar.gz) = 4e630959abf27d1801e36d0cbd754945ded42ade9299057a6b9a642c7cb2a3f8242e274642f1c33a65b4a5a77562d91dcbe64fd5772d483cbe5edb4a6a389219
 Size (qpdf-10.3.2.tar.gz) = 18943834 bytes

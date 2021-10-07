@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/01/22 12:34:50 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:50:31 nia Exp $
 
-SHA1 (tex-ifmtarg-47544/ifmtarg.tar.xz) = 320af57fa223ed1e1f268e8ae1dcb53b074b29f0
 RMD160 (tex-ifmtarg-47544/ifmtarg.tar.xz) = bc8a69799ff726232e0221fbc9048a882e60e213
 SHA512 (tex-ifmtarg-47544/ifmtarg.tar.xz) = fddd696d0df09f2563052789347b9718fb8fd47cc7a985039611d66e5662be89bf2e52edfdc9a87d104947340f0420b008e12cabb02ccc257069ce0ecb5ca25d
 Size (tex-ifmtarg-47544/ifmtarg.tar.xz) = 660 bytes

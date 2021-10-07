@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/01 00:15:10 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:49:39 nia Exp $
 
-SHA1 (chess-problem-diagrams.r53302.tar.xz) = 9835848eca9934eb857d80a55452df091f7c43b8
 RMD160 (chess-problem-diagrams.r53302.tar.xz) = 6c19c86579b03101bd691aeb4d2f82a75d212602
 SHA512 (chess-problem-diagrams.r53302.tar.xz) = 5125a7f27889534f74acd4918641ba1ec10344efb639fc7490941b605d530ab5f7c1d9e31beef978d471693e328640d0be89fea5628b1a9f9a20322649db5e05
 Size (chess-problem-diagrams.r53302.tar.xz) = 12036 bytes

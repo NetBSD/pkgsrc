@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 10:54:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:49:15 nia Exp $
 
-SHA1 (tex-arabicfront-51474/arabicfront.doc.tar.xz) = 544dd70b763bc5e2b237b5f9d0f731600caed8d9
 RMD160 (tex-arabicfront-51474/arabicfront.doc.tar.xz) = 03f02e7340f699d8f3851c8fb270bfa278cb2f67
 SHA512 (tex-arabicfront-51474/arabicfront.doc.tar.xz) = 64eb067784cdb56915b45e80f1666347bcdde06e3711a18cef16ae92450377aed236cc32c8c10d467d50e77de31a3f599abe900f411a510574378e63eb923862
 Size (tex-arabicfront-51474/arabicfront.doc.tar.xz) = 612 bytes

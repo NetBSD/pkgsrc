@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:46 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:28 nia Exp $
 
-SHA1 (hyphen-mongolian.r58652.tar.xz) = 6ab9dc375dbadaaceec6f7dc5ff07b035e0ec180
 RMD160 (hyphen-mongolian.r58652.tar.xz) = b1967b935ac319788e44011031275f23a8d4ca1d
 SHA512 (hyphen-mongolian.r58652.tar.xz) = 159562a8feb25918bc422e7dc78a46423c7fff2f3c61016a0162761411999a5555be3c6e36cf967d5034f65c12f4b0834ae0c0423c2f3ab17a65034b1803dc72
 Size (hyphen-mongolian.r58652.tar.xz) = 10440 bytes

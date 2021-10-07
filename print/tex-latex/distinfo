@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/02/13 05:22:01 markd Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 14:50:39 nia Exp $
 
-SHA1 (latex.r57354.tar.xz) = 9f8e17789fc7e6c603ef13d46c6be5b0ae0ac3ae
 RMD160 (latex.r57354.tar.xz) = 71a49a199cca49db5c6ba7abe7b3324e29817106
 SHA512 (latex.r57354.tar.xz) = 3dc7384b2074e86b6c45f5096b7a85a03064b0d9be4e74b46adefbfcc1fe80d66700f38494961a806ccd4710219681e2968fa5c0c071b366b197114af7c798b0
 Size (latex.r57354.tar.xz) = 196100 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/06/06 22:29:24 markd Exp $
+$NetBSD: distinfo,v 1.12 2021/10/07 14:51:38 nia Exp $
 
-SHA1 (texdoc.doc.r59283.tar.xz) = 916b38d3dcfdee891fe3d96e0ddee4566197e8df
 RMD160 (texdoc.doc.r59283.tar.xz) = a82d1fa309a45888fb87fa7d4c2f3895d581900b
 SHA512 (texdoc.doc.r59283.tar.xz) = bb79a2cf6c9a013a9b3c4c11597f86617043c8abea84b86f11a9ad5093655d68e0ce8d04e59b077f832c513c25e407d9ec06bdc412c3427d9ec43bb5103ea42e
 Size (texdoc.doc.r59283.tar.xz) = 135656 bytes

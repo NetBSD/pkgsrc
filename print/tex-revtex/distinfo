@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/02/15 00:33:09 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:20 nia Exp $
 
-SHA1 (revtex.r56591.tar.xz) = 33d28fe84b805c0cfc0f6266f0e5519941d6511c
 RMD160 (revtex.r56591.tar.xz) = 410e95defc4232d80681d490bd60b4cad8b80b35
 SHA512 (revtex.r56591.tar.xz) = 3ae6c843dea5ff9f91512a1b713aa2dd05f76d7116d2af3f005506864062a9d1e27888c33fc12aab96d5c566e9e7dcec0f91189f957bb4d2aa69953d6b10c316
 Size (revtex.r56591.tar.xz) = 69356 bytes

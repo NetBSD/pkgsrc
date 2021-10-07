@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/13 11:29:44 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:51:08 nia Exp $
 
-SHA1 (pdftexcmds.doc.r55777.tar.xz) = 0e71cc0b0113715dc8328caabf0c8663c8b8b69f
 RMD160 (pdftexcmds.doc.r55777.tar.xz) = e672987317ddbfef3a08e6cd825647a3c2f54652
 SHA512 (pdftexcmds.doc.r55777.tar.xz) = a16db56366e80b1694b78919a245336c37690ea9a1305a606a3bfa85a73c854e92d1cd8b9ddb0bdfdea82f1ef684d06d8b4649e4111c39f24f321dbcb01aa036
 Size (pdftexcmds.doc.r55777.tar.xz) = 379844 bytes

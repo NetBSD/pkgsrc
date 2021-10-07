@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2020/05/01 02:30:50 markd Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 14:50:17 nia Exp $
 
-SHA1 (glossaries.r54402.tar.xz) = e103f7c23baf346073c2590e05f9501d7a4ee426
 RMD160 (glossaries.r54402.tar.xz) = eaabf4bde334dbe8a6b5e425396dc4914380dc1f
 SHA512 (glossaries.r54402.tar.xz) = e900f8bc7b9f04088a3b2cbd3ff409603babaf232f09d6c75e85e3050ab0bd98b90c6e04e01aebb183e9fcbc4865c34568a7392d8b46ab318b506d10f1972d99
 Size (glossaries.r54402.tar.xz) = 77968 bytes

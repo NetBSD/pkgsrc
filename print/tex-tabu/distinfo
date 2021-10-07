@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/01/30 08:16:36 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:51:34 nia Exp $
 
-SHA1 (tex-tabu-49707/tabu.tar.xz) = 26b1c374fb2ca45f6ac04f4916328906e044511b
 RMD160 (tex-tabu-49707/tabu.tar.xz) = da1a01fa62d31435bd7ef97c9942b2d4d33dc3b7
 SHA512 (tex-tabu-49707/tabu.tar.xz) = bf557df30521d99abe4ce5c86e5487ff32f682ab7d94aecba88172012c7875942c977218317a4fc738f4edb119487bd6785f2348f771b8c98421c6494ba2eb5f
 Size (tex-tabu-49707/tabu.tar.xz) = 23900 bytes

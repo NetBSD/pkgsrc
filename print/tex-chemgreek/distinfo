@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2020/05/01 00:15:10 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:49:38 nia Exp $
 
-SHA1 (chemgreek.r53437.tar.xz) = c20de8a0762e3e7d8d4e0f4f0c0f56a5f5e5b670
 RMD160 (chemgreek.r53437.tar.xz) = 959e225415f1aff5f37deed0eba90d7e82a1443b
 SHA512 (chemgreek.r53437.tar.xz) = 8e70154271fb921ad9edf6ab5f8a21ce7c229723f88d7e37fe17aedb189c67a5749ea9e622c2dcebeedd614efbf18b9138e0219aea998f7a8ab3087348afa788
 Size (chemgreek.r53437.tar.xz) = 7120 bytes

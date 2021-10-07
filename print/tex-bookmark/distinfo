@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/02/13 04:31:18 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:49:31 nia Exp $
 
-SHA1 (bookmark.r56885.tar.xz) = c4cf1d8cc1572cee1e8bee8e4d343a91e0264233
 RMD160 (bookmark.r56885.tar.xz) = b6ae149e8a86d52947dcdd4674219fb9e0526812
 SHA512 (bookmark.r56885.tar.xz) = 56d73af9961348a8436beb957b65cd9cb0bf62c9031fa71e5f247a367ecfbbb15763214710c66e057d2806a0dc0ce09b05a163d74a7687c8f0dc340ebdbd2849
 Size (bookmark.r56885.tar.xz) = 8272 bytes

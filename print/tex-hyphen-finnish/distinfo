@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/05/30 08:04:44 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:26 nia Exp $
 
-SHA1 (hyphen-finnish.r58652.tar.xz) = d786b7a4eb6a7a2892161e323792fe752d504ca2
 RMD160 (hyphen-finnish.r58652.tar.xz) = 6e6232efdb6ab12b3dd7be0b800fd8dca3e0483b
 SHA512 (hyphen-finnish.r58652.tar.xz) = 6aa171d77952165cdcb1b667885f16dd382124ed70ed1db80a9a89553d972720d8ff5f0da1b36669e02c3030d9ff362ab77ba1fa2ba45cddfb460018f0c0191d
 Size (hyphen-finnish.r58652.tar.xz) = 4664 bytes

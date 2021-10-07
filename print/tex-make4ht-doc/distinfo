@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/06/06 12:18:57 markd Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:50:49 nia Exp $
 
-SHA1 (make4ht.doc.r58563.tar.xz) = ac4808a86fad76bc6e8eb01e035ae28a617aa710
 RMD160 (make4ht.doc.r58563.tar.xz) = 43c52e027077588997e379a0b8be5f7d74d02cb9
 SHA512 (make4ht.doc.r58563.tar.xz) = f153c737e87821a478fbc9712b320647842b3851094c851b4619ebf1e658ca944adeb2f19d197b57aaa649be70cabab9988ba33914a10c3708c75ee5370b2eac
 Size (make4ht.doc.r58563.tar.xz) = 158628 bytes
