@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2018/09/01 17:57:17 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:35:13 nia Exp $
 
-SHA1 (liquibase-3.5.5-bin.tar.gz) = 81efcf8f9706d1ef0bcc10b1948a999316211e97
 RMD160 (liquibase-3.5.5-bin.tar.gz) = ba39791480b5f6f3418889c3f8628199c64bda76
 SHA512 (liquibase-3.5.5-bin.tar.gz) = a56b7bd5aa1f7ea4a1d4b0a6fb74d71ab1caaf59bcbf11bb13a218f9b26436543588e7c3ecd769504c95e3ccd4877f9e245f6bc9354c0f00340ea8394ee4c0fb
 Size (liquibase-3.5.5-bin.tar.gz) = 4293144 bytes

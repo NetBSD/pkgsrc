@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2018/01/16 12:43:17 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:35:16 nia Exp $
 
-SHA1 (mysqltuner/1.7.2.tar.gz) = 95fa862aad269b855b3772ecf130127d52103767
 RMD160 (mysqltuner/1.7.2.tar.gz) = 20c560a3b71b4afe0f411cd9d61c7ccd0202b5d9
 SHA512 (mysqltuner/1.7.2.tar.gz) = 6cdeeb24aee84a714439dd2c6e1832a10061ec12875975d9b160d2fbda5085039a8eb124a210e1cb3e1efd358262af39afaa0ee52e12118f4b07c68d1d55fed5
 Size (mysqltuner/1.7.2.tar.gz) = 193459 bytes

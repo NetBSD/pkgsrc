@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2018/07/04 05:18:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:35:38 nia Exp $
 
-SHA1 (lmdb-0.94.tar.gz) = 03e7e5c0f3af15e4dd9325c2832afa9de919d41c
 RMD160 (lmdb-0.94.tar.gz) = 810962ca67f18e5b412c393002e45202c7c6e079
 SHA512 (lmdb-0.94.tar.gz) = 90ad4f95ae308cd7da501ad9a6d559a01c16c789375eff633440e69cddd9384f6404f1e14fc2c7879583f69c3c52d7c59f801952deaafd8ce25c9b60c455928a
 Size (lmdb-0.94.tar.gz) = 3991715 bytes

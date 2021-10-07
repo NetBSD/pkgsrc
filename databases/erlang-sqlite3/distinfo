@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/05/20 14:43:26 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:35:08 nia Exp $
 
-SHA1 (sqlite3-1.1.12.tar.gz) = 27e53e104ae744682a80685a442ed33822727311
 RMD160 (sqlite3-1.1.12.tar.gz) = d55820bf1810bd899e0a5a527540b72b4425ef42
 SHA512 (sqlite3-1.1.12.tar.gz) = 17a56c031f84da2dc324652a520d4b791d063dd2e6a34a95db5aed347ce198a95ff15f9bbbdb85e2f07603156d78f3fc5b00326f8eb395c1a70cd16ebc2b6aa9
 Size (sqlite3-1.1.12.tar.gz) = 1881515 bytes

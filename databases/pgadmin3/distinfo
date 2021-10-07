@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2020/05/14 19:10:20 joerg Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:35:31 nia Exp $
 
-SHA1 (pgadmin3-1.22.2.tar.gz) = 2b62630d3ee90b44c440d673ca8bb3dcfe010e18
 RMD160 (pgadmin3-1.22.2.tar.gz) = 48e732089cd1879f99d1894229a9cc23ed3c0c44
 SHA512 (pgadmin3-1.22.2.tar.gz) = dcfc72cc2e33dbf1c9d1ce287f9d1d46eb047c99a165372cb74ef1716098f90f2ce2a8d0cd21b511a1ac8c0569dc7b3c0593208a74641f5a8f29dc9c04e40bbd
 Size (pgadmin3-1.22.2.tar.gz) = 14788481 bytes

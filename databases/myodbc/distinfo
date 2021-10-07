@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/01/11 05:49:29 jnemeth Exp $
+$NetBSD: distinfo,v 1.14 2021/10/07 13:35:15 nia Exp $
 
-SHA1 (mysql-connector-odbc-5.3.14-src.tar.gz) = 7f062b8dc7a3c0deee7de9b3d455e1bcc50c306e
 RMD160 (mysql-connector-odbc-5.3.14-src.tar.gz) = 91dc093d3a2dcc932db0973cded1a5f9e98bbd55
 SHA512 (mysql-connector-odbc-5.3.14-src.tar.gz) = f5dee3127cc9fbeeb1c855cc964fe882254056cbb2fca343b28360ac80c6dceb3b36c1e3458828a33e1a46ead5ff3e7de5157c7d30d5e806888652aab40b7980
 Size (mysql-connector-odbc-5.3.14-src.tar.gz) = 3010166 bytes
