@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/09/01 16:43:59 micha Exp $
+$NetBSD: distinfo,v 1.31 2021/10/07 14:44:59 nia Exp $
 
-SHA1 (tin-2.6.0.tar.xz) = af5d36e909876f0fe7b17bd30995fb4a3e9efa6c
 RMD160 (tin-2.6.0.tar.xz) = cbc37af5a42aadbd6df835400c696c5315d0a5e5
 SHA512 (tin-2.6.0.tar.xz) = d843bd313fd144fbb5f4c40e3f0f776cab3a974494adc7004ee265235ab538dde520bc72c956d5a8517225fdb50e754b444f25bd3b661ddf51ff9e4135904862
 Size (tin-2.6.0.tar.xz) = 1575564 bytes
