@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/02/11 13:56:46 gdt Exp $
+$NetBSD: distinfo,v 1.37 2021/10/07 14:09:24 nia Exp $
 
-SHA1 (geos-3.9.1.tar.bz2) = 26e654352f6a953b75ff0e89c1c421343e051d3a
 RMD160 (geos-3.9.1.tar.bz2) = 490ed975d9918133788040c47c96f32b7812bdef
 SHA512 (geos-3.9.1.tar.bz2) = 7ea131685cd110ec5e0cb7c214b52b75397371e75f011e1410b6770b6a48ca492a02337d86a7be35c852ef94604fe9d6f49634c79d4946df611aaa4f5cbaee28
 Size (geos-3.9.1.tar.bz2) = 4761372 bytes

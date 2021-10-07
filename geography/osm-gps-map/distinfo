@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/09/20 05:04:37 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:09:28 nia Exp $
 
-SHA1 (osm-gps-map-1.2.0.tar.gz) = 167e335169a32ed9fb044d6515e98e1a98ee42a4
 RMD160 (osm-gps-map-1.2.0.tar.gz) = 134e4427b8b2c9ba1b6add785f5795c193e8d8ae
 SHA512 (osm-gps-map-1.2.0.tar.gz) = 7d19a3f2afcaab6dd5d2fcf62a552f4f4481d494a8ce6a88f3db94d0037ade0679d1618107859c63cdc0cf72eb8c9380b435a4c3d9af68cd3f2595cc66bba747
 Size (osm-gps-map-1.2.0.tar.gz) = 466817 bytes
