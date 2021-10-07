@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:34:55 agc Exp $
+$NetBSD: distinfo,v 1.7 2021/10/07 13:27:05 nia Exp $
 
-SHA1 (lrzsz-0.12.20.tar.gz) = 451e6a1813dfb71a412c973acd1b88b9ee3f28c4
 RMD160 (lrzsz-0.12.20.tar.gz) = 1b1776143afaff8bc7447ce998f9d3a958d51f25
 SHA512 (lrzsz-0.12.20.tar.gz) = 9bce64036f1f1c65f5910f19802aecaf3dc5ffeab0feeca10fa8d2fe1b83e212391cce23056d22fd0eda52df89e12ede68eb5d22ffcf22f935910d2af7399f12
 Size (lrzsz-0.12.20.tar.gz) = 280938 bytes

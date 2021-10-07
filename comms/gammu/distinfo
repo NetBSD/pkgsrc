@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.21 2020/02/15 02:19:49 manu Exp $
+$NetBSD: distinfo,v 1.22 2021/10/07 13:27:02 nia Exp $
 
-SHA1 (gammu-1.41.0.tar.bz2) = 74d28c3ae959d0498adf94bbbc7304cff317ea74
 RMD160 (gammu-1.41.0.tar.bz2) = 49681b5249cf936ce1a3533b9ef6f72c79701535
 SHA512 (gammu-1.41.0.tar.bz2) = f2c2534d3827216bf015607431938e0cf2524d5f2c670a5f76bb5ab7928962d22de981bbbf2dfa7af833c7903b60a775242048210bac6c35b1a9ee7668db4543
 Size (gammu-1.41.0.tar.bz2) = 2167233 bytes
