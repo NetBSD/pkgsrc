@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/08/10 12:03:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 13:23:22 nia Exp $
 
-SHA1 (omemo_2.7.14.zip) = 74656262bff10bf3879adf9fee5480a8cfc8bff9
 RMD160 (omemo_2.7.14.zip) = 074a4345b980074b2bdd4bc2887d44b7954baffa
 SHA512 (omemo_2.7.14.zip) = 33347369189eb21f2a5fb017cac9404b2a21ef77162076d51c5e086b9ffdcd67c5a856f992ec44b2e24c95eef43daf3445447c3c09f420ded59d481e7dec2c64
 Size (omemo_2.7.14.zip) = 58870 bytes

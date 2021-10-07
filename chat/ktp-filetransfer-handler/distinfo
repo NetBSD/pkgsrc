@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:47 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:23:26 nia Exp $
 
-SHA1 (ktp-filetransfer-handler-0.9.0.tar.bz2) = 151158f4f79f4305bf5d83976418886a22e65612
 RMD160 (ktp-filetransfer-handler-0.9.0.tar.bz2) = 538a9a8578e5c754484d833d72aef02035bef573
 SHA512 (ktp-filetransfer-handler-0.9.0.tar.bz2) = 6051225eda7c1f95f862837f4c75e695bf7b3d38a21e9427cb403e7ca0c547baeba549869815a1471509a5eddb686d5d8d7270a73adeba2b2b31b3f4f3050cac
 Size (ktp-filetransfer-handler-0.9.0.tar.bz2) = 48041 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/10/04 11:53:27 js Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:23:28 nia Exp $
 
-SHA1 (maubot-0.1.0.tar.gz) = 8fef73cf2506912f294b5da785b06307dd660e34
 RMD160 (maubot-0.1.0.tar.gz) = b176c8161cd9a0bccce39c09d77c74132283247a
 SHA512 (maubot-0.1.0.tar.gz) = 278f73793b9d6669039e651d8383b99ca1a4597ba6fc92141631c51890e136d434e625ef0d09b6d9f0dfbf13a64a99b16b3ac1b7f0d615abc628487c076b6736
 Size (maubot-0.1.0.tar.gz) = 1672287 bytes

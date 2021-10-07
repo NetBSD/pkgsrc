@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:47 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:23:25 nia Exp $
 
-SHA1 (ktp-common-internals-0.9.0.tar.bz2) = d78b9dacfee2952c8edc9946efecc9e18bb1082a
 RMD160 (ktp-common-internals-0.9.0.tar.bz2) = f9662740fc14d46a1f257dbd6536866196a5f3b0
 SHA512 (ktp-common-internals-0.9.0.tar.bz2) = 65ee4330d05ff91183935767069927978ff973152428ccaa88fd1a77cdef8ad1d6cb939276061b63fcfbecc9b051e83a603f07c327248dc2c28dbfa674fb226b
 Size (ktp-common-internals-0.9.0.tar.bz2) = 439404 bytes

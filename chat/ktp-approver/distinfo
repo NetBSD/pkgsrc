@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:46 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:23:25 nia Exp $
 
-SHA1 (ktp-approver-0.9.0.tar.bz2) = 9c2e7763e870bb55a97b00c5c0ef9cba024df1f7
 RMD160 (ktp-approver-0.9.0.tar.bz2) = 82c5a61c5b9a4d012035703ce3c2d7e661c005fc
 SHA512 (ktp-approver-0.9.0.tar.bz2) = 9b00d9ad2d962190f9c2e234976abccd275256356faea4c37768aeb1682694bc299cc057e25fd523f32a592611280f51003ec0e6a5a795a197cd9d8df2b6c58f
 Size (ktp-approver-0.9.0.tar.bz2) = 36866 bytes
