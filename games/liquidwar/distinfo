@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2019/07/04 17:15:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:07:39 nia Exp $
 
-SHA1 (liquidwar-5.6.5.tar.gz) = 42cc7d02a2f21ab826af1e064a79ede04f36b067
 RMD160 (liquidwar-5.6.5.tar.gz) = c925cbf2d81c38e581db4832ee4da036cba9fdbf
 SHA512 (liquidwar-5.6.5.tar.gz) = 15dc2cacd1f3b00f8dcac4318cbaf5c713f2d0e111392d14dd56eec7ae97a64af1487a11038dc108743baf3c995e9136100d56331fadc4cf19dc5702d5051a25
 Size (liquidwar-5.6.5.tar.gz) = 6508987 bytes

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/12/22 22:26:04 joerg Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:40 nia Exp $
 
-SHA1 (love-0.7.2-linux-src.tar.gz) = 876f527fc6908a6dd462080aa599ffa1ad47afa5
 RMD160 (love-0.7.2-linux-src.tar.gz) = e976925fd67e5c7714438c5135b516fb9c9bdc9a
 SHA512 (love-0.7.2-linux-src.tar.gz) = cbca1d7e3425d1ecbdae019212dfa2814d8ac3bad1faedd4b052cf3e89b5bf2fac6e422283628e4c125858c9db050dee2129476d1a73ec44ffe8a4704f170f61
 Size (love-0.7.2-linux-src.tar.gz) = 900209 bytes

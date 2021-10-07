@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2020/09/30 08:07:56 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:44 nia Exp $
 
-SHA1 (nxengine-evo-2.6.4/cavestoryen.zip) = aa9aca14e95914acc9799b651b5f5bd21847edb1
 RMD160 (nxengine-evo-2.6.4/cavestoryen.zip) = 46b23d2a102784004c0950a8d844ced26c6dc4b1
 SHA512 (nxengine-evo-2.6.4/cavestoryen.zip) = 9c7c2c6c8114974df14b1dce379b86da48caf299716e1de3d743e47c3ac6a8c13c4a0ada85778e69f11c2428f991dcbfcb0020212279f9c1787260102988cbc3
 Size (nxengine-evo-2.6.4/cavestoryen.zip) = 1136575 bytes
-SHA1 (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = 1fb3efd2990f5fd61eecb6c9a7f28b053fc69562
 RMD160 (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = 972e4d4bd7c7233d54825f2ca6d5436922d56f15
 SHA512 (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = e931d6ea6a726edecc75223139dd0a4b1eef840eca599b74146a98b7aa34f38dc5c627d3c65dd25ac23ce86531ce0a3a06a30814256743c035955c69641cae65
 Size (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = 3329255 bytes

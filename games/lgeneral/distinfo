@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:56:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:07:38 nia Exp $
 
-SHA1 (lgeneral-1.1.1.tar.gz) = 37ce2f59ec4654893fa864a7582981683e389df8
 RMD160 (lgeneral-1.1.1.tar.gz) = f4ca361e8b3d180e0fb7136f86cc6412a82974fb
 SHA512 (lgeneral-1.1.1.tar.gz) = d77ac02b0f6e26773e9f7b86680b8e7bf561a9d4a42abd8e3143b31bef403c68d1827b9e214c2a4fe02501e00caa019714c4f21dc186ac31738d036494d73d62
 Size (lgeneral-1.1.1.tar.gz) = 588698 bytes

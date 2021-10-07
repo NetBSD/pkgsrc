@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2020/07/01 10:06:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 14:07:22 nia Exp $
 
-SHA1 (etlegacy-2.76/etlegacy-libs.tar.gz) = 27da78b9c118be2bb931543ee217f95246e26658
 RMD160 (etlegacy-2.76/etlegacy-libs.tar.gz) = 3052bd1c8f3164016d5402452e76f4ed66e3571f
 SHA512 (etlegacy-2.76/etlegacy-libs.tar.gz) = cdefd393d5606025a98ad8b66bab76312395ba205d4f5144c3ee3674df4dc89f029238ab4ad441a3f38175e96a3f15f603af1cf65d65f658b6918222c5ddc5f3
 Size (etlegacy-2.76/etlegacy-libs.tar.gz) = 23000305 bytes
-SHA1 (etlegacy-2.76/etlegacy.tar.gz) = aaecb183d768d8e0e25b221a79589f031674cdcf
 RMD160 (etlegacy-2.76/etlegacy.tar.gz) = 09060499b3fbaea5fbf0d94c0563290cf327e714
 SHA512 (etlegacy-2.76/etlegacy.tar.gz) = 911c91dac71741067b9ac4e4651fae64c7def77c4061d31aafa2d473b14fb0db20c2c2fd03edf16efaabab4a026c89c647883864e031e17c551584f0ee06a5e2
 Size (etlegacy-2.76/etlegacy.tar.gz) = 10381173 bytes

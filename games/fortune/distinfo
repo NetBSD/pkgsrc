@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/28 11:20:55 tnn Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:26 nia Exp $
 
-SHA1 (fortune-mod-9708.tar.gz) = 9f96a00dbf5d2c6b0e7324af0eae988ce6adc5ad
 RMD160 (fortune-mod-9708.tar.gz) = bf40efcfde2e854166bccdbccf7cf23bfb443e61
 SHA512 (fortune-mod-9708.tar.gz) = 80c5b71d84eeb3092b2dfe483f0dad8ed42e2efeaa1f8791c26fb2ae80fbd7775777ac5252b1d8270e2e176ad14ce98940bee6d8e71fdbb9ac3323dc7188c4d0
 Size (fortune-mod-9708.tar.gz) = 1408517 bytes

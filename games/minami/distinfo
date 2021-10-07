@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 20:56:59 agc Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 14:07:42 nia Exp $
 
-SHA1 (minami-1.0.2.tgz) = c64f0e7dfd29e9cf6569a37ad0c21639c0ddf070
 RMD160 (minami-1.0.2.tgz) = f9d1bf28d6f58162f2eb32d6e423dd47a9743822
 SHA512 (minami-1.0.2.tgz) = 7a3b44471f7d1ea2a19c023dbfdbf3a537b1cc4fb935d2f1868270deef76c2bf6b9c34bc74b5cdf147fec542235178a5071cce758cc8741f6080b8869ab0dea6
 Size (minami-1.0.2.tgz) = 89527 bytes

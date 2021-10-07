@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2019/12/17 21:56:25 sevan Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:07:57 nia Exp $
 
-SHA1 (wtf-20191214.tar.gz) = 696395ab7d672cb70c9be4fb5e1a64beeea5f3de
 RMD160 (wtf-20191214.tar.gz) = fde4192f76ab2ba8c2d1562f91d3c327162a35da
 SHA512 (wtf-20191214.tar.gz) = 4f33a027e4977db7e481bcbd3946bfef38dbc9e5ad631d40a83917b74b8addef251797502c940aa8ef99d290f6626ca5d110d1e5af49da6ac8e0ad292cf6c1f9
 Size (wtf-20191214.tar.gz) = 29948 bytes

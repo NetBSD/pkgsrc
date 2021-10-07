@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/04/07 12:28:20 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:07:35 nia Exp $
 
-SHA1 (kmahjongg-20.12.3.tar.xz) = ec0aacbb4a2c297b3b80decc2e8a779d69b51574
 RMD160 (kmahjongg-20.12.3.tar.xz) = 8c4a9dbbd10025fcf7dcefc70e0b2d33c037c04b
 SHA512 (kmahjongg-20.12.3.tar.xz) = f9c021e00f2c1a0be6acc589eb3cc6eed6541864d30e46a39d96a4b08f04ea497d1a2d3eec6706f66d0e3539ee571663415e12d666a972b21a412a061f3ce703
 Size (kmahjongg-20.12.3.tar.xz) = 3435208 bytes

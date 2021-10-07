@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/06/06 16:35:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 14:07:41 nia Exp $
 
-SHA1 (manaplus-2.1.3.17.tar.xz) = 14210ecb244b88cb7dfbcd0a8ed7c6afc77b20e4
 RMD160 (manaplus-2.1.3.17.tar.xz) = 3cac47df59738ebe4e3695a29062ab5109f7d3cd
 SHA512 (manaplus-2.1.3.17.tar.xz) = 8473158f55357e199094bb6c88b6645f0044aadd950ae95f213d4276512bff29c0df58765f7127272961ea2bccb5bdca431cbe125d2a22e9510dc691e509aab7
 Size (manaplus-2.1.3.17.tar.xz) = 14132800 bytes

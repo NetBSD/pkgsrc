@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2020/01/14 13:28:42 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 14:07:33 nia Exp $
 
-SHA1 (jumpnbump-1.61.tar.xz) = e7a2dd2e8f4ba418c7596445482163a3663be826
 RMD160 (jumpnbump-1.61.tar.xz) = c34b3fd463ec002b86bd2abd1a2d6e98c53720a5
 SHA512 (jumpnbump-1.61.tar.xz) = 1c5999c6d0d00770416a61803e5dac4742e23d787ba6bec3742517e3eab006efe9448e59f3e84278e224e184a8ac8444c7c766b74374761b1aec7cffdc1708c1
 Size (jumpnbump-1.61.tar.xz) = 309072 bytes
