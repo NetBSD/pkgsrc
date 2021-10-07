@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 22:13:36 agc Exp $
+$NetBSD: distinfo,v 1.11 2021/10/07 14:19:41 nia Exp $
 
-SHA1 (ibus-table-chinese-1.8.2.tar.gz) = 00c11fa76331a5f9cb3703018d0e91a1b7425911
 RMD160 (ibus-table-chinese-1.8.2.tar.gz) = 0570b44fa66bb43ed42657a9c442e48550c1cc11
 SHA512 (ibus-table-chinese-1.8.2.tar.gz) = 30fd1c7ee8416cd62d8e26bc2646a667ac45c4579a7cb191c77e80fecccbc576c34f33ec0b5c55669c073a633298cfda1711e4b9d89a9ef8f6146acdc0167c1a
 Size (ibus-table-chinese-1.8.2.tar.gz) = 10576111 bytes

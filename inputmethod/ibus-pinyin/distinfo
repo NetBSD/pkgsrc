@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 22:13:35 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 14:19:41 nia Exp $
 
-SHA1 (ibus-pinyin-1.5.0.tar.gz) = 40abf915bb2599189d8fd76f456ce399edfa4184
 RMD160 (ibus-pinyin-1.5.0.tar.gz) = 9137f3e40971bd819fbaaf1715779a538d20a90c
 SHA512 (ibus-pinyin-1.5.0.tar.gz) = b0cd849ee3154543747dde8994eec9aed01d67e0d9be308a2f0230cf22f0281cd8fcabd9763b24238547a37e54400bcd8e541937767b93f005d04302f0c00241
 Size (ibus-pinyin-1.5.0.tar.gz) = 692516 bytes

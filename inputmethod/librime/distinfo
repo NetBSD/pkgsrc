@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/02/20 20:53:01 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/10/07 14:19:43 nia Exp $
 
-SHA1 (librime-1.7.2.tar.gz) = 1b252ca0367310b560fd189c359b194cf23a6007
 RMD160 (librime-1.7.2.tar.gz) = 1350ac1b2fc8d93740e3b1402dce2952d0fdd8d6
 SHA512 (librime-1.7.2.tar.gz) = 213f14b2f3e09fd93dffe2b6ce0d4a2651f1759c3df2929885ec6a3e036f343f1d07127a82a22378bd95677a5a45395d6bb7d884e12d40a3a160d0e9ef24a6ba
 Size (librime-1.7.2.tar.gz) = 2859403 bytes
