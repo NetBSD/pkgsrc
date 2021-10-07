@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:36 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:35:53 nia Exp $
 
-SHA1 (yap2lc-0.5.9.tar.gz) = c63b36ec5068793b53c0a84db207209fc30be277
 RMD160 (yap2lc-0.5.9.tar.gz) = c5538663917bd46dbda1e71834a8ccf145bbb4af
 SHA512 (yap2lc-0.5.9.tar.gz) = 4df37bbc8de7bda232d261078f0e77b69ef2df077661a0c561651af7f661d1d4dfcdd3b9e179133baacb612d3f5c2f46f25b3159a6bc1fbe89d7d2c31e963c6c
 Size (yap2lc-0.5.9.tar.gz) = 58651 bytes

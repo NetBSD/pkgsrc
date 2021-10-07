@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/08/11 07:23:18 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:14 nia Exp $
 
-SHA1 (mongo-tools-4.2.15.tar.gz) = 24cadb40017570b692e68e0c5dd22a0091d087d7
 RMD160 (mongo-tools-4.2.15.tar.gz) = 43a7d9239f2e8ac43ae57e542f99f6278d7ad330
 SHA512 (mongo-tools-4.2.15.tar.gz) = f613ab61a4cf029548aa0e5623fef3798642ced791bf52f229e7d14d31de9472bfc3c8bfb3fa7b4542555a17c79ff9a514480c674cb3e45fb99c4f1745fdb9f0
 Size (mongo-tools-4.2.15.tar.gz) = 15028734 bytes

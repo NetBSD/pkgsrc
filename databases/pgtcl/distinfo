@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:25 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:35:32 nia Exp $
 
-SHA1 (pgtcl1.5.tar.gz) = 8d2be537c123100ab4f1a6ddc11684fd4e0ccd23
 RMD160 (pgtcl1.5.tar.gz) = f198066c538a9566f9044e8899423ee31e123349
 SHA512 (pgtcl1.5.tar.gz) = e49e907b75e35f16831cef3bc92c902d7f4aa7690b344f74d05bb6cc2806546e2e73bb3f606ab9b6205acc8f23f1c4a585dbdedaba07639a0e9e66c33716507f
 Size (pgtcl1.5.tar.gz) = 486901 bytes

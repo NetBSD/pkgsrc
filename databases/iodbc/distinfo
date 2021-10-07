@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:56:12 agc Exp $
+$NetBSD: distinfo,v 1.13 2021/10/07 13:35:11 nia Exp $
 
-SHA1 (libiodbc-3.52.9.tar.gz) = 82be6d6ff22926f087020dd310e1e9f64b2a283e
 RMD160 (libiodbc-3.52.9.tar.gz) = ce8578dd5f994f1e83559944f1eebadde0f77bee
 SHA512 (libiodbc-3.52.9.tar.gz) = 94d45b022906d4e59b85bd845255f5f97b969a66fd7b5f4899d8d1ed22b3300c0d5a51f178c60981e7c22b4a60bf6ae7b6884eb257fe7490fbd7e8c23374f19a
 Size (libiodbc-3.52.9.tar.gz) = 1094234 bytes

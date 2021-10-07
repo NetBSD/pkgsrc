@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/02/11 00:25:14 wen Exp $
+$NetBSD: distinfo,v 1.27 2021/10/07 13:35:29 nia Exp $
 
-SHA1 (SQL-Statement-1.414.tar.gz) = 2fef0bff3aff7e02c6866d9fb60da77743bb37ed
 RMD160 (SQL-Statement-1.414.tar.gz) = b90e0781fb3448abdf7889ca1b41a8a060fd56e6
 SHA512 (SQL-Statement-1.414.tar.gz) = c8a9e93979d3f775b1e8981fff0cb958791f0a513432133bd376a20eca73da27c40d2dd74b27f3f8f7d326897e3a8b776053080eff40221fd525f546bf474c5b
 Size (SQL-Statement-1.414.tar.gz) = 159512 bytes

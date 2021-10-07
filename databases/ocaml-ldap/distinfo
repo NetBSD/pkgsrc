@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2017/09/07 15:03:51 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:35:16 nia Exp $
 
-SHA1 (ocamldap-2.3.0.tar.gz) = 9030eebac693767fd4e6725088439f32df522a04
 RMD160 (ocamldap-2.3.0.tar.gz) = e7b29c1194d5b010ed00daebc637fc9b9541204a
 SHA512 (ocamldap-2.3.0.tar.gz) = f7d850dd15c6b6a057aee2a01960a4479658143db59dff27635960bc414c4498d9601edc66780fe4f3400b43bb14a2fc3c8d256274cce5124377cb5b3ac28f52
 Size (ocamldap-2.3.0.tar.gz) = 133061 bytes

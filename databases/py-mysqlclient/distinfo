@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/11/21 20:34:21 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:35:38 nia Exp $
 
-SHA1 (mysqlclient-1.4.6.tar.gz) = 33734e95b6033db20310a1b4087963403661c5ce
 RMD160 (mysqlclient-1.4.6.tar.gz) = 9a85531f069329cc746886bf9746782405517676
 SHA512 (mysqlclient-1.4.6.tar.gz) = 11ecb8a0a6f78edb193cd07472579aec1626994a80a584ff74de18774e7db8896de595f3e4d280b78e8636f53323ebcce8aa294ec7b2a54a839742d9699650ab
 Size (mysqlclient-1.4.6.tar.gz) = 85517 bytes

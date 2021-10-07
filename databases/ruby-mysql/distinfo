@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2017/09/18 02:48:08 taca Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:35:48 nia Exp $
 
-SHA1 (ruby-mysql-2.9.14.tar.gz) = af8480baca3bdf6a25d8edb71c1f89189dc6632f
 RMD160 (ruby-mysql-2.9.14.tar.gz) = 04d25873cbb6368a7ecdcd4f78c7b0353bacd2d9
 SHA512 (ruby-mysql-2.9.14.tar.gz) = 7aaea3f40a37645c6b2e38b8bd0efa42e520dd7e3c1f9a907f772cfd7661a16045ce81c935f3ccc995d0c809e5df614bff3808d54a41fcf02ea8e936ea54f349
 Size (ruby-mysql-2.9.14.tar.gz) = 58759 bytes

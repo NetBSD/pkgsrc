@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:56:15 agc Exp $
+$NetBSD: distinfo,v 1.9 2021/10/07 13:35:16 nia Exp $
 
-SHA1 (mytop-1.6.tar.gz) = e1485115ca3a15e79f7811bdc1cfe692aa95833f
 RMD160 (mytop-1.6.tar.gz) = d2ff40b75c33d09d7cd14602fc78952ca52f8dab
 SHA512 (mytop-1.6.tar.gz) = 672209d828c70fd740a791f2e4dfac1e4c594adff197b8bc43322249f03f6c7b18a750da0892c1519fe29e24b661e41d40cdad3a29b546dec4b3a747155566e2
 Size (mytop-1.6.tar.gz) = 19720 bytes

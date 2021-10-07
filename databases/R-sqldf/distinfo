@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 14:38:58 brook Exp $
+$NetBSD: distinfo,v 1.3 2021/10/07 13:35:05 nia Exp $
 
-SHA1 (R/sqldf_0.4-11.tar.gz) = d995f3fb7437735a2eac48559fca76143dc93af4
 RMD160 (R/sqldf_0.4-11.tar.gz) = 459e2c414c16cf273736dee86b8aae19b46136c3
 SHA512 (R/sqldf_0.4-11.tar.gz) = 7780a34aaf752ccc3d55a7720c1dff72b77caa9bccccbd83b2a54df73b1ddfae16f17ed6d6eef01d85f4ac56c4aa9718222ffc9621e039a938ded288965228d7
 Size (R/sqldf_0.4-11.tar.gz) = 63097 bytes

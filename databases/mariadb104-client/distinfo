@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/07/24 11:49:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/07 13:35:15 nia Exp $
 
-SHA1 (mariadb-10.4.20.tar.gz) = 65c3ff44b60d3c10e36f1e9752e0e4b84fa00521
 RMD160 (mariadb-10.4.20.tar.gz) = 5fa098a1091ac83e346cba986672b91d2f027e3b
 SHA512 (mariadb-10.4.20.tar.gz) = ce8e0691981b39de380276cea5d553a9968d9f6ef19f54395128f01d611499f3fc203651b8d7cb56697c6ee55f5f515c960d7700738cdc50f228df7443505112
 Size (mariadb-10.4.20.tar.gz) = 82043644 bytes

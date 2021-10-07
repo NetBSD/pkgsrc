@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2017/02/26 12:59:25 wen Exp $
+$NetBSD: distinfo,v 1.10 2021/10/07 13:35:20 nia Exp $
 
-SHA1 (DBD-XBase-1.08.tar.gz) = b3ee991a7a33daa8b0691615469ef6db01d12b5a
 RMD160 (DBD-XBase-1.08.tar.gz) = 82b5c2c93584bd33a25f447ee0344dcfacb6cc8f
 SHA512 (DBD-XBase-1.08.tar.gz) = a60446444ac696a155a72d691faa93ed4e157f2ac1a4b361ebad078d29b8b36f716c78a0448b4b7df90b68991f7d71def5653895e82b93dece32690e53fd9e28
 Size (DBD-XBase-1.08.tar.gz) = 113727 bytes

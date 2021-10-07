@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/08/13 11:54:44 adam Exp $
+$NetBSD: distinfo,v 1.18 2021/10/07 13:35:34 nia Exp $
 
-SHA1 (postgresql-11.13.tar.bz2) = 7c0b06bdbe2bd3d966fb7d875843f022694e9b1a
 RMD160 (postgresql-11.13.tar.bz2) = d682247742b45048c4f30f977a2402ee79396cf7
 SHA512 (postgresql-11.13.tar.bz2) = 1b2061d505a7460e0aaae53818e77fc99fa7b73eea119033a98a3d7dd3d70d00403998654990b03bbf6eb2df383e2f44791137c8922ea4015715f8bf49c5837f
 Size (postgresql-11.13.tar.bz2) = 20123787 bytes

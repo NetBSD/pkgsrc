@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2017/09/27 19:41:21 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:35:26 nia Exp $
 
-SHA1 (MARC-XML-1.0.4.tar.gz) = db139f2bde742d43c51e91a8c25487ee57389a47
 RMD160 (MARC-XML-1.0.4.tar.gz) = 02f0c343a48fdf8d89de06afc2c91fcf77de6794
 SHA512 (MARC-XML-1.0.4.tar.gz) = 2b84b50cd4973dcfe4bac27295710da0438130053b7ee00ad50690f7e87a190d64b132e62f486cb36fb91b93c5d412292facc7c31d2feb97b4bf3f32a947dd77
 Size (MARC-XML-1.0.4.tar.gz) = 18327 bytes

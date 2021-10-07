@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.32 2021/08/11 07:19:58 adam Exp $
+$NetBSD: distinfo,v 1.33 2021/10/07 13:35:15 nia Exp $
 
-SHA1 (mongodb-src-r4.2.15.tar.gz) = 53db54d6b780af4ca4480ec59f0784293808445e
 RMD160 (mongodb-src-r4.2.15.tar.gz) = fdc142496b887bd653bd0661900474ce8cc05b33
 SHA512 (mongodb-src-r4.2.15.tar.gz) = ee46a2dfb7ae23ad38da49bf126a2bc7932bded8f01d34516ad575d2aed5d6233c5ad620b2a4424a98afb9e80e26acf40c66982cdd0637c13f0f7aaae8b746a0
 Size (mongodb-src-r4.2.15.tar.gz) = 62187847 bytes

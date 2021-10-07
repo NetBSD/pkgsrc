@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2020/07/23 11:45:58 wen Exp $
+$NetBSD: distinfo,v 1.6 2021/10/07 13:35:18 nia Exp $
 
-SHA1 (CDB_File-1.02.tar.gz) = 882518d332e378e2692d06c36cadd10c4081a0da
 RMD160 (CDB_File-1.02.tar.gz) = b5da7479c7ed4612fa8f616445ac76619f0b0421
 SHA512 (CDB_File-1.02.tar.gz) = 301be6f63bb65434bdd93503394514d828be83a1028a3e75b77ca4977c4c1c806c209f338ab2949caaa7c55cab9c263096674f265bc7555385da7e778640faa6
 Size (CDB_File-1.02.tar.gz) = 61980 bytes

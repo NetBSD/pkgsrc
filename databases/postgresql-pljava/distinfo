@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2017/10/27 09:51:03 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2021/10/07 13:35:33 nia Exp $
 
-SHA1 (pljava-1.5.0-deps.tar.gz) = de3caaf37632ee9c5ecb0ec4517f791c641cf64a
 RMD160 (pljava-1.5.0-deps.tar.gz) = 42221976038127e59b8b6e1ae536d7be57eb9d19
 SHA512 (pljava-1.5.0-deps.tar.gz) = 6511a664282e21063d5c2ee9211eb564ad41e9c51136c25361acab3711a2d594e66bb0b2c0298f8d560d31739dc52d295f70e5684b9675937579f0b4200f9fb2
 Size (pljava-1.5.0-deps.tar.gz) = 74764782 bytes
-SHA1 (pljava-1.5.0.tar.gz) = fcd9898a43aa9b0d008c7500be10bca88234e506
 RMD160 (pljava-1.5.0.tar.gz) = 8127ede299d38dec7da11865927f63468c967d37
 SHA512 (pljava-1.5.0.tar.gz) = f676c12d4134fe95c10b7b5d7dd73ae7716c5fdb1278d91dfd769fd414af34667fd1af4fa4de90ea0c3fb10206e19fc3768f17da5339b2f6a7e7d55e7bb1499d
 Size (pljava-1.5.0.tar.gz) = 430744 bytes

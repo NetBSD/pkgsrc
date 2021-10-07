@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/06/22 09:36:41 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/07 13:35:12 nia Exp $
 
-SHA1 (ldb-2.2.1.tar.gz) = c334d5a398b7a61c003d3cefbdb5736c49f0013c
 RMD160 (ldb-2.2.1.tar.gz) = 0949458a58ca2c9905574a8f9626501d37e13c2f
 SHA512 (ldb-2.2.1.tar.gz) = a2b1598869e3d9f17c5b82fc2b7289f1f08a7378a1d72609af5ed5cc91fb571ac67d3a8c22d64dad5dcc9fe32520baccd5cc37d5b4fc5f1b00a7064902296344
 Size (ldb-2.2.1.tar.gz) = 1676819 bytes

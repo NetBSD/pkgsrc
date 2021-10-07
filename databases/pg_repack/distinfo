@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2020/05/14 19:10:47 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/10/07 13:35:31 nia Exp $
 
-SHA1 (pg_repack-1.4.3.tar.gz) = 164f54ab0579c100089cc65cdd44bab20b6cacc1
 RMD160 (pg_repack-1.4.3.tar.gz) = 45900317949c377600c0933aff957804a38c66bd
 SHA512 (pg_repack-1.4.3.tar.gz) = 8fad625665446d7852d09e5c431fa2bf4e767bb5eeaf6718c824c51c558b0ff975af1f2dcce20bc714002fc755c2f6c1d23b0adc2bfa1f9167d198fc59d34cf8
 Size (pg_repack-1.4.3.tar.gz) = 93994 bytes
