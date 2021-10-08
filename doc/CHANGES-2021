@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5066 2021/10/08 10:24:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5067 2021/10/08 13:22:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7768,3 +7768,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/bacula to 9.6.7nb5 [jnemeth 2021-10-08]
 	Updated textproc/itstool to 2.0.7 [prlw1 2021-10-08]
 	Added databases/postgresql14 version 14.0 [adam 2021-10-08]
+	Updated net/samba4 to 4.13.12 [adam 2021-10-08]
+	Updated www/py-h2 to 4.1.0 [adam 2021-10-08]
