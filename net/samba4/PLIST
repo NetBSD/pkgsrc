@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2021/06/22 09:36:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.39 2021/10/08 13:20:34 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -225,6 +225,7 @@ ${PYSITELIB}/samba/dcerpc/epmapper.so
 ${PYSITELIB}/samba/dcerpc/idmap.so
 ${PYSITELIB}/samba/dcerpc/initshutdown.so
 ${PYSITELIB}/samba/dcerpc/irpc.so
+${PYSITELIB}/samba/dcerpc/krb5ccache.so
 ${PYSITELIB}/samba/dcerpc/krb5pac.so
 ${PYSITELIB}/samba/dcerpc/lsa.so
 ${PYSITELIB}/samba/dcerpc/mdssvc.so
@@ -389,6 +390,7 @@ ${PYSITELIB}/samba/tests/dcerpc/array.py
 ${PYSITELIB}/samba/tests/dcerpc/bare.py
 ${PYSITELIB}/samba/tests/dcerpc/dnsserver.py
 ${PYSITELIB}/samba/tests/dcerpc/integer.py
+${PYSITELIB}/samba/tests/dcerpc/lsa.py
 ${PYSITELIB}/samba/tests/dcerpc/mdssvc.py
 ${PYSITELIB}/samba/tests/dcerpc/misc.py
 ${PYSITELIB}/samba/tests/dcerpc/raw_protocol.py
@@ -434,11 +436,24 @@ ${PYSITELIB}/samba/tests/kcc/graph.py
 ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
+${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
+${PYSITELIB}/samba/tests/krb5/as_req_tests.py
+${PYSITELIB}/samba/tests/krb5/compatability_tests.py
+${PYSITELIB}/samba/tests/krb5/fast_tests.py
 ${PYSITELIB}/samba/tests/krb5/kcrypto.py
+${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
+${PYSITELIB}/samba/tests/krb5/kdc_tests.py
+${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
+${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
+${PYSITELIB}/samba/tests/krb5/rfc4120_constants.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_pyasn1.py
 ${PYSITELIB}/samba/tests/krb5/s4u_tests.py
 ${PYSITELIB}/samba/tests/krb5/simple_tests.py
+${PYSITELIB}/samba/tests/krb5/test_ccache.py
+${PYSITELIB}/samba/tests/krb5/test_ldap.py
+${PYSITELIB}/samba/tests/krb5/test_rpc.py
+${PYSITELIB}/samba/tests/krb5/test_smb.py
 ${PYSITELIB}/samba/tests/krb5/xrealm_tests.py
 ${PYSITELIB}/samba/tests/krb5_credentials.py
 ${PYSITELIB}/samba/tests/ldap_raw.py
