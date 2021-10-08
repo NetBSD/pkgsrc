@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5074 2021/10/08 15:08:31 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5075 2021/10/08 16:40:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7777,3 +7777,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go117 to 1.17.2 [bsiegert 2021-10-08]
 	Updated www/firefox91-l10n to 91.2.0 [nia 2021-10-08]
 	Updated devel/apache-maven to 3.8.3 [wiz 2021-10-08]
+	Removed lang/gcc3 [nia 2021-10-08]
+	Removed lang/gcc3-c [nia 2021-10-08]
+	Removed lang/gcc3-c++ [nia 2021-10-08]
+	Removed lang/gcc3-f77 [nia 2021-10-08]
+	Removed lang/gcc3-objc [nia 2021-10-08]
