@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2020/10/03 18:11:14 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/10/08 13:21:56 adam Exp $
 
-DISTNAME=	h2-4.0.0
+DISTNAME=	h2-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/python-hyper/hyper-h2
+HOMEPAGE=	https://github.com/python-hyper/h2
 COMMENT=	HTTP/2 State-Machine based protocol implementation
 LICENSE=	mit
 
