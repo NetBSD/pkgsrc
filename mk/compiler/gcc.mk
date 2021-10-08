@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.228 2021/10/04 14:21:21 nia Exp $
+# $NetBSD: gcc.mk,v 1.229 2021/10/08 16:35:57 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -90,11 +90,10 @@ _DEF_VARS.gcc=	\
 	_GCC_TEST_DEPENDS _GCC_NEEDS_A_FORTRAN _GCC_VARS _GCC_VERSION \
 	_GCC_VERSION_STRING \
 	_GCC_ADA _GCC_GMK _GCC_GLK _GCC_GBD _GCC_CHP _GCC_GLS _GCC_GNT _GCC_PRP \
-	_IGNORE_GCC _IGNORE_GCC3CXX _IGNORE_GCC3F77 _IGNORE_GCC3OBJC \
+	_IGNORE_GCC \
 	_IS_BUILTIN_GCC \
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
-	_NEED_GCC2 _NEED_GCC3 \
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
 	_NEED_GCC10 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
@@ -126,7 +125,6 @@ _USE_VARS.gcc=	\
 	_PKGSRC_USE_FORTIFY _PKGSRC_USE_RELRO _PKGSRC_USE_STACK_CHECK \
 	_OPSYS_INCLUDE_DIRS _OPSYS_LIB_DIRS
 _IGN_VARS.gcc=	\
-	_GCC2_PATTERNS _GCC3_PATTERNS \
 	_GCC6_PATTERNS _GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS \
 	_GCC10_PATTERNS _GCC_AUX_PATTERNS
 _LISTED_VARS.gcc= \
@@ -156,16 +154,8 @@ _GCC_DIST_NAME:=	gcc10
 .include "../../lang/${_GCC_DIST_NAME}/version.mk"
 _GCC_DIST_VERSION:=	${${_GCC_DIST_NAME:tu}_DIST_VERSION}
 
-# _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
-_GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
-		2.9[0-4] 2.9[0-4].* 2.95 2.95.[0-3]
-
-# _GCC3_PATTERNS matches N s.t. 2.95.3 < N < 4. 
-_GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
-		2.[1-9][0-9][0-9]* 3.[0-9] 3.[0-9].*
-
-# _GCC6_PATTERNS matches N s.t. 4.5 <= N < 7.
-_GCC6_PATTERNS= 4.[0-9] 4.[0-9]* 5 5.* 6 6.*
+# _GCC6_PATTERNS matches N s.t. N < 7.
+_GCC6_PATTERNS= 5 6 [0-6].*
 
 # _GCC7_PATTERNS matches N s.t. 7.0 <= N < 8.
 _GCC7_PATTERNS= 7 7.*
@@ -281,19 +271,7 @@ _GCC_STRICTEST_REQD=	${_version_}
 .endfor
 _GCC_REQD=	${_GCC_STRICTEST_REQD}
 
-# Determine whether we require GCC-2.x or GCC-3.x by examining _GCC_REQD.
-_NEED_GCC2?=	no
-.for _pattern_ in ${_GCC2_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC2=	yes
-.  endif
-.endfor
-_NEED_GCC3?=	no
-.for _pattern_ in ${_GCC3_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC3=	yes
-.  endif
-.endfor
+# Determine which GCC version is required by examining _GCC_REQD.
 _NEED_GCC6?=	no
 .for _pattern_ in ${_GCC6_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
@@ -331,8 +309,7 @@ _NEED_GCC_AUX=	yes
 _NEED_NEWER_GCC=NO
 .  endif
 .endfor
-.if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
-    !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
+.if !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
     !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
     !empty(_NEED_GCC10:M[nN][oO]) && \
     !empty(_NEED_GCC_AUX:M[nN][oO])
@@ -341,11 +318,7 @@ _NEED_GCC8=	yes
 
 # Assume by default that GCC will only provide a C compiler.
 LANGUAGES.gcc?=	c
-.if !empty(_NEED_GCC2:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran77 objc
-.elif !empty(_NEED_GCC3:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran77 java objc
-.elif !empty(_NEED_GCC6:M[yY][eE][sS])
+.if !empty(_NEED_GCC6:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC7:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
@@ -440,38 +413,7 @@ CFLAGS+=	-Wno-import
 CFLAGS+=	${_GCC_CFLAGS}
 FCFLAGS+=	${_GCC_FCFLAGS}
 
-.if !empty(_NEED_GCC2:M[yY][eE][sS])
-#
-# We require gcc-2.x in the lang/gcc2 directory.
-#
-_GCC_PKGBASE=		gcc2
-.  if ${PKGPATH} == lang/gcc2
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc2
-_GCC_DEPENDENCY=	gcc2>=${_GCC_REQD}:../../lang/gcc2
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mobjc)
-_USE_GCC_SHLIB?=	yes
-.    endif
-.  endif
-.elif !empty(_NEED_GCC3:M[yY][eE][sS])
-#
-# We require gcc-3.x in the lang/gcc3-* directories.
-#
-_GCC_PKGBASE=		gcc3-c
-.  if ${PKGPATH} == lang/gcc3-c
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc)
-_GCC_PKGSRCDIR=		../../lang/gcc3-c
-_GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
-.  endif
-.elif !empty(_NEED_GCC6:M[yY][eE][sS])
+.if !empty(_NEED_GCC6:M[yY][eE][sS])
 #
 # We require gcc-6.x in the lang/gcc6-* directory.
 #
@@ -598,36 +540,6 @@ _USE_GCC_SHLIB?=	yes
 .  endif
 .endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
-
-.if !empty(_NEED_GCC3:M[yY][eE][sS])
-.  if ${PKGPATH} == "lang/gcc3-c++"
-_IGNORE_GCC3CXX=	yes
-MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
-.  endif
-.  if !defined(_IGNORE_GCC3CXX) && !empty(_LANGUAGES.gcc:Mc++)
-_GCC_PKGSRCDIR+=	../../lang/gcc3-c++
-_GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
-_USE_GCC_SHLIB?=	yes
-.  endif
-.  if ${PKGPATH} == lang/gcc3-f77
-_IGNORE_GCC3F77=	yes
-MAKEFLAGS+=		_IGNORE_GCC3F77=yes
-.  endif
-.  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran77)
-_GCC_PKGSRCDIR+=	../../lang/gcc3-f77
-_GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
-_USE_GCC_SHLIB?=	yes
-.  endif
-.  if ${PKGPATH} == lang/gcc3-objc
-_IGNORE_GCC3OBJC=	yes
-MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
-.  endif
-.  if !defined(_IGNORE_GCC3OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
-_GCC_PKGSRCDIR+=	../../lang/gcc3-objc
-_GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
-_USE_GCC_SHLIB?=	yes
-.  endif
-.endif
 
 # When not using the GNU linker, gcc will always link shared libraries against
 # the shared version of libgcc, and so _USE_GCC_SHLIB needs to be enabled on
