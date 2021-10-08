@@ -1,12 +1,12 @@
-$NetBSD: patch-bin_mvn,v 1.8 2020/05/22 04:31:48 markd Exp $
+$NetBSD: patch-bin_mvn,v 1.9 2021/10/08 15:08:21 wiz Exp $
 
 Reconcile JAVA_HOME evaluated at run time on Darwin vs. hardcoded
 via PKG_JAVA_HOME elsewhere.
 Follow pkgsrc path convention.
 
---- bin/mvn.orig	2018-06-17 18:30:11.000000000 +0000
+--- bin/mvn.orig	2021-09-27 18:25:22.000000000 +0000
 +++ bin/mvn
-@@ -42,9 +42,11 @@ fi
+@@ -46,9 +46,11 @@ fi
  # OS specific support. $var _must_ be set to either true or false.
  cygwin=false;
  mingw=false;
@@ -18,7 +18,7 @@ Follow pkgsrc path convention.
  esac
  
  ## resolve links - $0 may be a link to Maven's home
-@@ -89,12 +91,17 @@ if $mingw ; then
+@@ -93,19 +95,24 @@ if $mingw ; then
    # TODO classpath?
  fi
  
@@ -37,9 +37,8 @@ Follow pkgsrc path convention.
 +JAVACMD="$JAVA_HOME/bin/java"
 +
  if [ ! -x "$JAVACMD" ] ; then
-   echo "The JAVA_HOME environment variable is not defined correctly" >&2
-   echo "This environment variable is needed to run this program" >&2
-@@ -102,7 +109,7 @@ if [ ! -x "$JAVACMD" ] ; then
+   echo "The JAVA_HOME environment variable is not defined correctly," >&2
+   echo "this environment variable is needed to run this program." >&2
    exit 1
  fi
  
@@ -48,7 +47,7 @@ Follow pkgsrc path convention.
  CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
  
  # For Cygwin, switch paths to Windows format before running java
-@@ -192,8 +199,10 @@ exec "$JAVACMD" \
+@@ -195,8 +202,10 @@ exec "$JAVACMD" \
    $MAVEN_OPTS \
    $MAVEN_DEBUG_OPTS \
    -classpath "${CLASSWORLDS_JAR}" \
