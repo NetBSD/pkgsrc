@@ -60,6 +60,8 @@ slot=$3
 device=$4
 drive=$5
 
+slot=$((${slot} - 1))
+
 case $cmd in 
    unload)
       ${CHIO} -f $ctl move drive $drive slot $slot
@@ -70,9 +72,9 @@ case $cmd in
       ;;
 
    list) 
-      ${CHIO} -f $ctl status slot voltags | /usr/bin/awk "/</ { slot=\$2 }\
-		/Primary volume tag:/ { tag=\$4 }\
-		/From:/ { print slot tag }"
+      ${CHIO} -f $ctl status slot voltags | /usr/bin/awk "/</ { slot=\$2; gsub(\":$\", \"\", slot); slot++ }\
+		/Primary volume tag: [^ ] / { tag=\$4 }\
+		/From:/ { printf \"%s:%s\n\", slot, tag }"
       ;;
 
    listall)
