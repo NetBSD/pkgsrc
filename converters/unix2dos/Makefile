@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2021/04/21 08:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/10/08 11:55:42 abs Exp $
 
 DISTNAME=	unix2dos-1.3
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	# ftp://ftp.guug.org/pub/
 
