@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5062 2021/10/07 19:38:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5063 2021/10/08 06:52:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7763,3 +7763,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httplib2 to 0.20.1 [adam 2021-10-07]
 	Updated net/py-lexicon to 3.8.0 [adam 2021-10-07]
 	Updated devel/py-joblib to 1.1.0 [adam 2021-10-07]
+	Updated databases/hiredis to 1.0.2 [adam 2021-10-08]
+	Updated devel/blosc to 1.21.1 [adam 2021-10-08]
