@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 15:00:40 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/08 21:23:11 wiz Exp $
 
-RMD160 (asciidoc-9.1.0.tar.gz) = 3d8cad3f353574f41495a4881956214601d8504c
-SHA512 (asciidoc-9.1.0.tar.gz) = c4565cfb30a8789ed64b7b9293019a6528eb93341ab109c9a6cb4985bf4a65117516e03b84340eb84ea07981650f50f52c0ae85eba2956fcbde23e46b3cf228e
-Size (asciidoc-9.1.0.tar.gz) = 1131265 bytes
+RMD160 (asciidoc-9.1.1.tar.gz) = 1d4aacf17fb26de7425659e43acb1c89a3e155c3
+SHA512 (asciidoc-9.1.1.tar.gz) = 444de69e3b87af984327873d5be1162157db5f7fb353e1fbbd24b4938ce0238fd474a67c9d3461fb7b069e7b029c63fbaf1ba8dd9cf7b91fbfa81e5429db404c
+Size (asciidoc-9.1.1.tar.gz) = 1130652 bytes
