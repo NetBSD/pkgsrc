@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5072 2021/10/08 14:47:58 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.5073 2021/10/08 14:49:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7775,3 +7775,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go116 to 1.16.9 [bsiegert 2021-10-08]
 	Updated www/firefox91 to 91.2.0 [nia 2021-10-08]
 	Updated lang/go117 to 1.17.2 [bsiegert 2021-10-08]
+	Updated www/firefox91-l10n to 91.2.0 [nia 2021-10-08]
