@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21133 2021/10/08 15:08:31 wiz Exp $
+$NetBSD: TODO,v 1.21134 2021/10/08 18:49:42 leot Exp $
 
 Suggested new packages
 ======================
@@ -1072,7 +1072,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ktexteditor-5.81.0
 	o ktextwidgets-5.81.0
 	o ktorrent3-3.3.4
-	o kubectl-1.21.0
 	o kunitconversion-5.81.0
 	o kwallet-5.81.0
 	o kwayland-5.81.0
