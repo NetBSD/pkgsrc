@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.7 2021/10/07 20:31:12 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.8 2021/10/08 13:38:22 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -19,4 +19,10 @@ www/apache24: security fix
 
 Pullup ticket #6505 - requested by wiz
 security/tor-browser: bugfix
+
+Pullup ticket #6507 - requested by tm
+net/rsync: security fix
+
+Pullup ticket #6506 - requested by taca
+apache24: security fix
 
