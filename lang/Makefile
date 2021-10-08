@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2021/10/05 19:07:13 adam Exp $
+# $NetBSD: Makefile,v 1.609 2021/10/08 16:38:31 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -67,11 +67,6 @@ SUBDIR+=	gcc-aux
 SUBDIR+=	gcc10
 SUBDIR+=	gcc10-libs
 SUBDIR+=	gcc2
-SUBDIR+=	gcc3
-SUBDIR+=	gcc3-c
-SUBDIR+=	gcc3-c++
-SUBDIR+=	gcc3-f77
-SUBDIR+=	gcc3-objc
 SUBDIR+=	gcc5-aux
 SUBDIR+=	gcc6
 SUBDIR+=	gcc6-aux
