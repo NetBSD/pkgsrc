@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2021/10/05 19:25:41 adam Exp $
+# $NetBSD: Makefile,v 1.89 2021/10/08 17:58:05 leot Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
 CATEGORIES=	net
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		ac_cv_prog_RST2HTML=
+CONFIGURE_ENV+=		ac_cv_prog_RST2MAN=
 
 TEST_TARGET=		check
 
