@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/09/16 19:49:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/10/08 14:09:56 nia Exp $
 bin/firefox78
 lib/firefox78/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox78/actors/AboutHttpsOnlyErrorParent.jsm
@@ -720,9 +720,9 @@ lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/i
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/avito-ru@2x.png
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/baidu-com@2x.png
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bbc-uk@2x.png
-lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bing-com@2x.png
+lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/bing-com@2x.svg
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/ctrip-com@2x.png
-lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/duckduckgo-com@2x.png
+lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/duckduckgo-com@2x.svg
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/ebay@2x.png
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/facebook-com@2x.png
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/images/google-com@2x.png
