@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2021/09/15 14:05:57 pin Exp $
+# $NetBSD: Makefile,v 1.641 2021/10/08 10:23:43 adam Exp $
 
 COMMENT=	Databases
 
@@ -331,6 +331,14 @@ SUBDIR+=	postgresql13-plperl
 SUBDIR+=	postgresql13-plpython
 SUBDIR+=	postgresql13-pltcl
 SUBDIR+=	postgresql13-server
+SUBDIR+=	postgresql14
+SUBDIR+=	postgresql14-client
+SUBDIR+=	postgresql14-contrib
+SUBDIR+=	postgresql14-docs
+SUBDIR+=	postgresql14-plperl
+SUBDIR+=	postgresql14-plpython
+SUBDIR+=	postgresql14-pltcl
+SUBDIR+=	postgresql14-server
 SUBDIR+=	postgresql96
 SUBDIR+=	postgresql96-client
 SUBDIR+=	postgresql96-contrib
