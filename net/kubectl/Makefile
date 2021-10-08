@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/10/08 18:49:34 leot Exp $
+# $NetBSD: Makefile,v 1.11 2021/10/08 19:09:27 leot Exp $
 
 DISTNAME=	kubectl-1.22.2
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes/}
 GITHUB_PROJECT=	kubernetes
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/kubernetes/kubectl
 COMMENT=	Command line tool lets you control Kubernetes clusters
 LICENSE=	apache-2.0
