@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5063 2021/10/08 06:52:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5064 2021/10/08 07:28:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7765,3 +7765,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-joblib to 1.1.0 [adam 2021-10-07]
 	Updated databases/hiredis to 1.0.2 [adam 2021-10-08]
 	Updated devel/blosc to 1.21.1 [adam 2021-10-08]
+	Updated sysutils/bacula to 9.6.7nb5 [jnemeth 2021-10-08]
