@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/09/17 13:52:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2021/10/08 18:55:07 bsiegert Exp $
 
 DISTNAME=	minify-2.9.21
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tdewolff/}
 CATEGORIES=	www
 GITHUB_PROJECT=	minify
