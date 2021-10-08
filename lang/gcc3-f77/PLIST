@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/08 10:22:01 jlam Exp $
-${GCC_SUBPREFIX}/bin/g77
-${GCC_SUBPREFIX}/info/g77.info
-${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/f771
-${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/include/g2c.h
-${GCC_SUBPREFIX}/lib/libfrtbegin.a
-${GCC_SUBPREFIX}/lib/libg2c.la
-${GCC_SUBPREFIX}/man/man1/g77.1
-${GCC_SUBPREFIX}/mk/f77.mk
