@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/10/07 15:54:23 pin Exp $
+# $NetBSD: Makefile,v 1.12 2021/10/08 08:24:13 pin Exp $
 
 DISTNAME=	nushell-0.38.0
 CATEGORIES=	shells
@@ -21,7 +21,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		default tree inc textview
+CARGO_FEATURES+=		default inc textview
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu ${DESTDIR}${PREFIX}/bin
