@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5068 2021/10/08 14:10:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5069 2021/10/08 14:10:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7771,3 +7771,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.13.12 [adam 2021-10-08]
 	Updated www/py-h2 to 4.1.0 [adam 2021-10-08]
 	Updated www/firefox78 to 78.15.0 [nia 2021-10-08]
+	Updated www/firefox78-l10n to 78.15.0 [nia 2021-10-08]
