@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/10/08 18:55:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2021/10/09 10:41:08 tnn Exp $
 
 DISTNAME=	gopkgs-2.1.2
 PKGNAME=	go-${DISTNAME}
@@ -16,9 +16,6 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/${DISTNAME}/v2
 
 GO_BUILD_PATTERN=	./cmd/gopkgs
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/gopkgs ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
 

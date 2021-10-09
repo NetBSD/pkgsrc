@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/10/08 18:55:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2021/10/09 10:41:09 tnn Exp $
 
 DISTNAME=		pup-0.4.0
 PKGREVISION=		36
@@ -12,15 +12,13 @@ COMMENT=		Parsing HTML at the command line
 LICENSE=		mit
 
 GO_BUILD_PATTERN=	.
-
-INSTALLATION_DIRS+=	bin share/doc/pup
+INSTALLATION_DIRS+=	share/doc/pup
 
 pre-patch:
 	${CP} ${FILESDIR}/go.mod ${WRKSRC}
 	${CP} ${FILESDIR}/modules.txt ${WRKSRC}/vendor
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/pup ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/pup
 
 .include "../../lang/go/go-module.mk"
