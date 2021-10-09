@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/10/08 18:55:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.38 2021/10/09 10:41:08 tnn Exp $
 
 DISTNAME=	2fa-1.2.0
 PKGREVISION=	5
@@ -11,10 +11,6 @@ MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=rsc/2fa/}
 COMMENT=	Command-line client for two-factor authentication
 LICENSE=	modified-bsd
-
-CHECK_RELRO_SKIP+=	bin/2fa
-
-INSTALLATION_DIRS=	bin
 
 pre-configure:
 	# Fix build error, invalid vendor/modules.txt.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/10/08 18:55:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/09 10:41:09 tnn Exp $
 
 DISTNAME=		age-1.0.0
 PKGREVISION=		2
@@ -14,12 +14,6 @@ LICENSE=		modified-bsd
 .include "go-modules.mk"
 
 GO_BUILD_PATTERN=	filippo.io/age/cmd/...
-
-INSTALLATION_DIRS+=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/age ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/age-keygen ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

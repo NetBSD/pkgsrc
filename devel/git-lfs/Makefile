@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/10/09 09:24:29 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2021/10/09 10:41:07 tnn Exp $
 
 DISTNAME=	git-lfs-2.13.3
 PKGREVISION=	7
@@ -14,8 +14,6 @@ LICENSE=	mit
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c
 GO_BUILD_PATTERN=	.
-
-INSTALLATION_DIRS=	bin
 
 pre-build:
 	cp ${WRKSRC}/lfshttp/certs_openbsd.go ${WRKSRC}/lfshttp/certs_netbsd.go
