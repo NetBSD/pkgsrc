@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/10/08 18:55:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2021/10/09 09:24:29 tnn Exp $
 
 DISTNAME=	git-lfs-2.13.3
 PKGREVISION=	7
@@ -21,10 +21,8 @@ pre-build:
 	cp ${WRKSRC}/lfshttp/certs_openbsd.go ${WRKSRC}/lfshttp/certs_netbsd.go
 # generate content for "git-lfs --help"
 	ln -sf ${GO} ${BUILDLINK_DIR}/bin/go
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} GOPATH=${WRKDIR} ${GO} generate ./commands
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/git-lfs ${DESTDIR}${PREFIX}/bin/git-lfs
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
+	    GOPATH=${WRKDIR}/.gopath ${GO} generate ./commands
 
 .include "go-modules.mk"
 
