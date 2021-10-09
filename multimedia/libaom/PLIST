@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/30 18:58:16 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/10/09 14:47:24 nia Exp $
 bin/aomdec
 bin/aomenc
 include/aom/aom.h
@@ -10,6 +10,8 @@ include/aom/aom_image.h
 include/aom/aom_integer.h
 include/aom/aomcx.h
 include/aom/aomdx.h
+lib/libaom.a
 lib/libaom.so
-lib/libaom.so.0
+lib/libaom.so.3
+lib/libaom.so.${PKGVERSION}
 lib/pkgconfig/aom.pc
