@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2021/09/08 21:05:15 nia Exp $
+# $NetBSD: Makefile,v 1.129 2021/10/09 15:35:09 nia Exp $
 
 DISTNAME=	mpv-0.33.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
