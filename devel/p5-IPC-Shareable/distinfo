@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/09 23:45:13 wen Exp $
 
-RMD160 (IPC-Shareable-1.05.tar.gz) = 9de87e7be7f8a6b0eb9fc30c53dc2bcdfd6cbd7a
-SHA512 (IPC-Shareable-1.05.tar.gz) = 2a5360a5b50d98f92099444c6a0de47f13544f457edee39bf8aa0986467a5c112542ac02c620ebad768607e3b4fde687fd2044a5936893f3c1e81915d8cf33d5
-Size (IPC-Shareable-1.05.tar.gz) = 42813 bytes
+RMD160 (IPC-Shareable-1.06.tar.gz) = 2822be8481d605bdcd9e647c7358bb7536666765
+SHA512 (IPC-Shareable-1.06.tar.gz) = 85fcdd0398cc03b6e7d19f907feb9a4b776c0a42f28e485338076da2bbafcd5da1784e6290dbacab8bf908230b4a0c8e731dff7255683a973955b3dfdfb9ee59
+Size (IPC-Shareable-1.06.tar.gz) = 43989 bytes
