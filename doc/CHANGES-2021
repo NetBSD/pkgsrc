@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5084 2021/10/09 08:33:21 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.5085 2021/10/09 08:45:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7792,3 +7792,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk18 to 18.7.0 [jnemeth 2021-10-09]
 	Updated devel/ncurses to 6.2nb4 [wiz 2021-10-09]
 	Updated pkgtools/pkglint to 21.3.1 [rillig 2021-10-09]
+	Updated security/py-cryptodome to 3.11.0 [adam 2021-10-09]
+	Updated security/py-certifi to 2021.10.8 [adam 2021-10-09]
