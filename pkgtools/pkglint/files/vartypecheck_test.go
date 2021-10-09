@@ -2442,6 +2442,20 @@ func (s *Suite) Test_VartypeCheck_WrksrcPathPattern(c *check.C) {
 
 	vt.Output(
 		"AUTOFIX: filename.mk:12: Replacing \"${WRKSRC}/\" with \"\".")
+
+	t.SetUpCommandLine("-Wall")
+
+	// Seen in devel/meson/Makefile.
+	vt.Varname("REPLACE_PYTHON")
+	vt.Op(opAssign)
+	vt.Values(
+		"test\\ cases/*/*/*.py",
+		"test\" \"cases/*/*/*.py",
+		"test' 'cases/*/*/*.py",
+		// This matches the single file literally named '*.py'.
+		"'test cases/*/*/*.py'")
+
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_WrksrcSubdirectory(c *check.C) {

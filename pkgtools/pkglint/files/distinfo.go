@@ -146,9 +146,10 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 	switch {
 	case algorithms == "SHA1" && isPatch != no:
 		return
-
-	case algorithms == "SHA1, RMD160, SHA512, Size" && isPatch != yes:
+	case algorithms == "RMD160, SHA512, Size" && isPatch != yes:
 		return
+	case algorithms == "SHA1, RMD160, SHA512, Size" && isPatch != yes:
+		return // TODO: remove as of 2021Q3
 	}
 
 	switch {
@@ -159,7 +160,7 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 		line.Errorf("Wrong checksum algorithms %s for %s.", algorithms, filename)
 		line.Explain(
 			"Distfiles that are downloaded from external sources must have the",
-			"checksum algorithms SHA1, RMD160, SHA512, Size.",
+			"checksum algorithms RMD160, SHA512, Size.",
 			"",
 			"Patch files from pkgsrc must have only the SHA1 hash.")
 
@@ -190,9 +191,10 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 // added to the distinfo file via an autofix.
 func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 	line := info.line()
-	line.Errorf("Expected SHA1, RMD160, SHA512, Size checksums for %q, got %s.", info.filename(), info.algorithms())
+	line.Errorf("Expected RMD160, SHA512, Size checksums for %q, got %s.",
+		info.filename(), info.algorithms())
 
-	algorithms := [...]string{"SHA1", "RMD160", "SHA512", "Size"}
+	algorithms := [...]string{"RMD160", "SHA512", "Size"}
 
 	missing := map[string]bool{}
 	for _, alg := range algorithms {
@@ -445,11 +447,17 @@ func (info *distinfoFileInfo) algorithms() string {
 
 func (info *distinfoFileInfo) hasDistfileAlgorithms() bool {
 	h := info.hashes
-	return len(h) == 4 &&
+	if len(h) == 4 && // TODO: remove as of 2021Q3
 		h[0].algorithm == "SHA1" &&
 		h[1].algorithm == "RMD160" &&
 		h[2].algorithm == "SHA512" &&
-		h[3].algorithm == "Size"
+		h[3].algorithm == "Size" {
+		return true
+	}
+	return len(h) == 3 &&
+		h[0].algorithm == "RMD160" &&
+		h[1].algorithm == "SHA512" &&
+		h[2].algorithm == "Size"
 }
 
 type distinfoHash struct {

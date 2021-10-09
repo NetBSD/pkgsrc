@@ -980,9 +980,13 @@ func (cv *VartypeCheck) Pathlist() {
 
 // PathPattern is a shell pattern for pathnames, possibly including slashes.
 //
+// Spaces, backslashes and quotes are rarely needed but still allowed.
+// Without these characters, the patterns would need to use '?', which does
+// not represent the intended patterns exactly.
+//
 // See FilePattern.
 func (cv *VartypeCheck) PathPattern() {
-	invalid := replaceAll(cv.ValueNoVar, `[!%*+,\-./0-9?@A-Z\[\]_a-z~]`, "")
+	invalid := replaceAll(cv.ValueNoVar, `[ "%'*+,\-./0-9?@A-Z\[\\\]_a-z~]`, "")
 	if invalid == "" {
 		return
 	}
