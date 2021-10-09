@@ -1,7 +1,8 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2021/01/13 09:26:42 nia Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2021/10/09 10:59:21 wiz Exp $
 
 libtool: compile: unable to infer tagged configuration
 libtool:   error: specify a tag with '--tag'
+https://github.com/notroj/neon/pull/68
 
 --- src/Makefile.in.orig	2011-09-18 20:04:23.000000000 +0000
 +++ src/Makefile.in
