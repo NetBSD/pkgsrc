@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5085 2021/10/09 08:45:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5086 2021/10/09 10:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7794,3 +7794,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkglint to 21.3.1 [rillig 2021-10-09]
 	Updated security/py-cryptodome to 3.11.0 [adam 2021-10-09]
 	Updated security/py-certifi to 2021.10.8 [adam 2021-10-09]
+	Updated www/neon to 0.32.1 [wiz 2021-10-09]
