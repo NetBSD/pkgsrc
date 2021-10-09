@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5087 2021/10/09 13:26:38 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5088 2021/10/09 19:23:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7796,3 +7796,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certifi to 2021.10.8 [adam 2021-10-09]
 	Updated www/neon to 0.32.1 [wiz 2021-10-09]
 	Updated databases/p5-DBIx-Connector to 0.57 [wen 2021-10-09]
+	Updated textproc/cmark to 0.30.2 [adam 2021-10-09]
+	Updated databases/py-multidict to 5.2.0 [adam 2021-10-09]
