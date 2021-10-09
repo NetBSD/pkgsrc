@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5093 2021/10/09 23:46:08 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5094 2021/10/09 23:50:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7803,3 +7803,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-IO-Async to 0.79 [wen 2021-10-09]
 	Updated devel/p5-IO-Interactive to 1.023 [wen 2021-10-09]
 	Updated devel/p5-IPC-Shareable to 1.06 [wen 2021-10-09]
+	Updated devel/p5-Log-Any to 1.710 [wen 2021-10-09]
