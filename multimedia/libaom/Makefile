@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/10/09 20:24:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/09 20:56:11 ryoon Exp $
 
 PKGNAME=	libaom-3.1.3
 DISTNAME=	ce9a40ce01ade9d6fea1721c82645804a2f39b00
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aomedia.googlesource.com/aom/+archive/
 COMMENT=	Library for using AV1, video coding format
 LICENSE=	2-clause-bsd
+
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}
 USE_CMAKE=	yes
