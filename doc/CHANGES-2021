@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5081 2021/10/09 07:46:41 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5082 2021/10/09 07:52:31 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7789,3 +7789,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/vala to 0.54.1 [wiz 2021-10-08]
 	Updated net/wireshark to 3.4.9 [adam 2021-10-09]
 	Updated net/py-minio to 7.1.1 [adam 2021-10-09]
+	Updated comms/asterisk18 to 18.7.0 [jnemeth 2021-10-09]
