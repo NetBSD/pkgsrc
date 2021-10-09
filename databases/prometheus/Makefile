@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2021/10/08 18:55:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2021/10/09 10:41:07 tnn Exp $
 
 # Important: UI has to be manually built when updating. See instructions below.
 
@@ -78,7 +78,7 @@ EXAMPLE_FILES+=	consoles/index.html.example consoles/node-cpu.html \
 EXAMPLE_FILES+=	console_libraries/menu.lib console_libraries/prom.lib
 WEBUI_DIR=	${PREFIX}/share/prometheus
 
-INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR} ${WEBUI_DIR}
+INSTALLATION_DIRS+=	${EXAMPLE_DIR} ${WEBUI_DIR}
 
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -90,12 +90,9 @@ do-build:
 		${GO} install -v -ldflags ${GO_LDFLAGS:Q} ./cmd/${f}/...
 .endfor
 
-do-install:
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
 		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
-.for f in prometheus promtool
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/${f} ${DESTDIR}${PREFIX}/bin
-.endfor
 .for f in consoles console_libraries
 	cd ${WRKSRC} && ${PAX} -rw ${f} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 .endfor
@@ -103,8 +100,6 @@ do-install:
 	cd ${WRKSRC}/web/ui && ${PAX} -rw ${f} ${DESTDIR}${WEBUI_DIR}
 	${CHMOD} -R g-w ${DESTDIR}${WEBUI_DIR}/${f}
 .endfor
-
-post-install:
 .for f in ${EXAMPLE_FILES}
 	${CHMOD} ${NONBINMODE} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}/${f}
 .endfor

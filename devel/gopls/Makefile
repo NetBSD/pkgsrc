@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/10/08 18:55:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37 2021/10/09 10:41:09 tnn Exp $
 #
 # Release notes:
 # https://github.com/golang/tools/releases
@@ -18,8 +18,6 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/tools-${GITHUB_TAG:S/\//-/}/gopls
 
 GO_BUILD_PATTERN=	.
-
-CHECK_RELRO_SKIP+=	bin/gopls
 
 .include "go-modules.mk"
 
