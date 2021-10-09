@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.8 2021/10/08 13:38:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.9 2021/10/09 12:54:24 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -25,4 +25,7 @@ net/rsync: security fix
 
 Pullup ticket #6506 - requested by taca
 apache24: security fix
+
+Pullup ticket #6510 - requested by nia
+x11/mate-applets: bugfix for non-x86
 
