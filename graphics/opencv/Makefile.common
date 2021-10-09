@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2021/10/06 21:10:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2021/10/09 15:35:06 nia Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -7,7 +7,15 @@
 OPENCV_VERSION=	3.4.15
 
 CATEGORIES=	graphics devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
+
+DISTFILES+=	opencv-${OPENCV_VERSION}.tar.gz
+DISTFILES+=	ade-${ADE_VERSION}.tar.gz
+
+SITES.ade-${ADE_VERSION}.tar.gz= \
+    -https://github.com/opencv/ade/archive/refs/tags/v${ADE_VERSION}.tar.gz
+
+SITES.opencv-${OPENCV_VERSION}.tar.gz= \
+    -https://github.com/opencv/opencv/archive/refs/tags/v${OPENCV_VERSION}.tar.gz
 
 HOMEPAGE=	https://opencv.org/
 LICENSE=	modified-bsd
@@ -15,23 +23,29 @@ LICENSE=	modified-bsd
 PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 CONFIGURE_DIRS+=	build
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 
 CMAKE_ARG_PATH=		${WRKSRC}
+CMAKE_ARGS+=		-DWITH_GSTREAMER=OFF
+CMAKE_ARGS+=		-DBUILD_JAVA=OFF
 CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
+CMAKE_ARGS+=		-DBUILD_TESTS=OFF
 CMAKE_ARGS+=		-DCV_ENABLE_INTRINSICS=OFF # XXX: problematic
 CMAKE_ARGS+=		-DENABLE_CCACHE=OFF
 CMAKE_ARGS+=		-DOPENCV_GENERATE_SETUPVARS=OFF
+CMAKE_ARGS+=		-DOPENCV_GENERATE_PKGCONFIG=ON
 CMAKE_ARGS+=		-DPROTOBUF_UPDATE_FILES=ON
 CMAKE_ARGS+=		-DWITH_EIGEN=OFF
+CMAKE_ARGS+=		-DWITH_VA=OFF # build problems on NetBSD
+CMAKE_ARGS+=		-DWITH_VA_INTEL=OFF # build problems on NetBSD
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
-CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
+CMAKE_ARGS+=		-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
 
 .include "../../mk/bsd.prefs.mk"
@@ -42,6 +56,10 @@ CMAKE_ARGS+=		-DCPU_BASELINE=""
 .endif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# avoid Python 2.7
+
+post-extract:
+	${MKDIR} ${WRKSRC}/build/3rdparty/ade
+	${CP} -r ${WRKDIR}/ade-${ADE_VERSION} ${WRKSRC}/build/3rdparty/ade
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build

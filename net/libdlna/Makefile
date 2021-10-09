@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/08/17 20:17:39 leot Exp $
+# $NetBSD: Makefile,v 1.19 2021/10/09 15:35:11 nia Exp $
 
 DISTNAME=	libdlna-0.2.4
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	http://libdlna.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2
