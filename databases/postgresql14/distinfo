@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/10/08 10:23:43 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/10/09 09:43:38 rillig Exp $
 
-SHA1 (postgresql-14.0.tar.bz2) = 23c3ed1f42d2c439316fa978923fef469a8c379d
 RMD160 (postgresql-14.0.tar.bz2) = 4765f3847c874c62b7d3ecc1fc046f9fb14a5c68
 SHA512 (postgresql-14.0.tar.bz2) = d0b5ea1bb63847a137216074f2ac2d1410723c61c279624b3034af4a130fe0e1b6d89a549c61065f025c3505af89bcd9728b04575fde2c932fa718813d2e9635
 Size (postgresql-14.0.tar.bz2) = 21836842 bytes
