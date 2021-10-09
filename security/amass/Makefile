@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/10/08 18:55:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/09 10:41:09 tnn Exp $
 
 DISTNAME=	amass-3.11.13
 PKGREVISION=	6
@@ -13,12 +13,10 @@ COMMENT=	In-depth Attack Surface Mapping and Asset Discovery
 LICENSE=	apache-2.0
 
 GO_BUILD_PATTERN=	./cmd/amass
-CHECK_RELRO_SKIP+=	bin/amass
 
-INSTALLATION_DIRS+=	bin share/examples/amass share/examples/amass/wordlists
+INSTALLATION_DIRS+=	share/examples/amass share/examples/amass/wordlists
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/amass ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/config.ini ${DESTDIR}${PREFIX}/share/examples/amass
 	${INSTALL_DATA} ${WRKSRC}/examples/wordlists/* ${DESTDIR}${PREFIX}/share/examples/amass/wordlists
 

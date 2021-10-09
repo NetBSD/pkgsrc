@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2021/10/08 18:55:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.55 2021/10/09 10:41:10 tnn Exp $
 
 DISTNAME=	grafana-8.1.3
 PKGREVISION=	2
@@ -22,9 +22,6 @@ EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
 
 CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
 CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
-
-CHECK_RELRO_SKIP+=		bin/grafana-cli
-CHECK_RELRO_SKIP+=		bin/grafana-server
 
 USE_TOOLS+=			pax
 

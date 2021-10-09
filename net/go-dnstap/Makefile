@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/10/08 18:55:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2021/10/09 10:41:08 tnn Exp $
 
 DISTNAME=		go-dnstap-0.4.0
 PKGREVISION=		6
@@ -13,11 +13,10 @@ LICENSE=		apache-2.0
 
 GO_BUILD_PATTERN=	./dnstap
 
-INSTALLATION_DIRS=	man/man8
+INSTALLATION_DIRS=	${PKGMANDIR}/man8
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/dnstap ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/dnstap/dnstap.8 ${DESTDIR}${PREFIX}/man/man8/
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/dnstap/dnstap.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "go-modules.mk"
 
