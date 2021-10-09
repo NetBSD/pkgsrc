@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/09/29 09:38:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/10/09 08:40:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -107,8 +107,8 @@ ${PYSITELIB}/Crypto/Cipher/_mode_siv.py
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyo
-${PLIST.py2x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
 ${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.abi3.so
+${PLIST.py2x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
 ${PYSITELIB}/Crypto/Cipher/_raw_aes.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_arc2.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_blowfish.${SOEXT}
@@ -228,6 +228,14 @@ ${PYSITELIB}/Crypto/Hash/__init__.pyo
 ${PYSITELIB}/Crypto/Hash/_ghash_portable.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_keccak.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_poly1305.${SOEXT}
+${PYSITELIB}/Crypto/Hash/cSHAKE128.py
+${PYSITELIB}/Crypto/Hash/cSHAKE128.pyc
+${PYSITELIB}/Crypto/Hash/cSHAKE128.pyi
+${PYSITELIB}/Crypto/Hash/cSHAKE128.pyo
+${PYSITELIB}/Crypto/Hash/cSHAKE256.py
+${PYSITELIB}/Crypto/Hash/cSHAKE256.pyc
+${PYSITELIB}/Crypto/Hash/cSHAKE256.pyi
+${PYSITELIB}/Crypto/Hash/cSHAKE256.pyo
 ${PYSITELIB}/Crypto/Hash/keccak.py
 ${PYSITELIB}/Crypto/Hash/keccak.pyc
 ${PYSITELIB}/Crypto/Hash/keccak.pyi
@@ -453,6 +461,9 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA512.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_keccak.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_keccak.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_keccak.pyo
