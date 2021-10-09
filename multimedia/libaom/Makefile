@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/06/28 11:52:41 nia Exp $
+# $NetBSD: Makefile,v 1.15 2021/10/09 14:47:24 nia Exp $
 
-PKGNAME=	libaom-1.0.0
-PKGREVISION=	4
-DISTNAME=	aom-d14c5bb4f336ef1842046089849dee4a301fbbf0
+PKGNAME=	libaom-3.1.3
+DISTNAME=	ce9a40ce01ade9d6fea1721c82645804a2f39b00
 CATEGORIES=	multimedia
-#MASTER_SITES=	-https://aomedia.googlesource.com/aom/+archive/d14c5bb4f336ef1842046089849dee4a301fbbf0.tar.gz
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	https://aomedia.googlesource.com/aom/+archive/
+DIST_SUBDIR=	libaom
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aomedia.googlesource.com/aom/+archive/
@@ -65,5 +64,8 @@ CMAKE_ARGS+=	-DAOM_TARGET_CPU="generic"
 CMAKE_ARGS+=	-DENABLE_NASM:BOOL=ON
 TOOL_DEPENDS+=	nasm>=2.13:../../devel/nasm
 .endif
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		build/aom.pc
 
 .include "../../mk/bsd.pkg.mk"
