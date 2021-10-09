@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:54:27 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/09 08:44:53 adam Exp $
 
-RMD160 (certifi-2021.5.30.tar.gz) = c73803018d1d78de492b8454c84eea414dc1ba5c
-SHA512 (certifi-2021.5.30.tar.gz) = 77a5ce25d3ea297160d3dd8e97a582cc79985acf989257755a3693696aeeefbba31b8f9e4b6afca101058a4ef7075fc5fc8780b389800354d7a1de6398612d03
-Size (certifi-2021.5.30.tar.gz) = 147455 bytes
+RMD160 (certifi-2021.10.8.tar.gz) = 8972d4fb7b192cf6e3a13a7ea9dfc497b0866eea
+SHA512 (certifi-2021.10.8.tar.gz) = 06dc41a471f16f6c52751854e82fb42011c9388651cff55761298b86ba437d431e6325ab039ef330f2b2c5f69f5ba43dc468e7ca3df205a8bb31468f43711fbe
+Size (certifi-2021.10.8.tar.gz) = 151214 bytes
