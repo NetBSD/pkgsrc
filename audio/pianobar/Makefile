@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2021/09/29 19:00:19 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/10/09 15:35:03 nia Exp $
 
 DISTNAME=	pianobar-2020.04.05
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PromyLOPh/}
 
