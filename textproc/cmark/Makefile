@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/07/17 16:29:31 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/10/09 19:20:08 adam Exp $
 
-DISTNAME=	cmark-0.30.1
+DISTNAME=	cmark-0.30.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
 
@@ -21,6 +21,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/src
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/build/src
 TEST_TARGET=	test
 
 post-extract:
