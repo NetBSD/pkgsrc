@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/07/28 03:41:00 wen Exp $
+# $NetBSD: Makefile,v 1.33 2021/10/09 23:45:13 wen Exp $
 
-DISTNAME=	IPC-Shareable-1.05
+DISTNAME=	IPC-Shareable-1.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
