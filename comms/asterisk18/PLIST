@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/09/19 03:59:25 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/10/09 07:52:15 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -35,6 +35,7 @@ lib/asterisk/modules/app_forkcdr.so
 lib/asterisk/modules/app_getcpeid.so
 lib/asterisk/modules/app_ices.so
 lib/asterisk/modules/app_image.so
+lib/asterisk/modules/app_mf.so
 lib/asterisk/modules/app_milliwatt.so
 lib/asterisk/modules/app_minivm.so
 lib/asterisk/modules/app_mixmonitor.so
@@ -147,6 +148,7 @@ lib/asterisk/modules/func_dialplan.so
 lib/asterisk/modules/func_enum.so
 lib/asterisk/modules/func_env.so
 lib/asterisk/modules/func_extstate.so
+lib/asterisk/modules/func_frame_drop.so
 lib/asterisk/modules/func_frame_trace.so
 lib/asterisk/modules/func_global.so
 lib/asterisk/modules/func_groupcount.so
@@ -168,6 +170,8 @@ lib/asterisk/modules/func_pjsip_endpoint.so
 lib/asterisk/modules/func_presencestate.so
 lib/asterisk/modules/func_rand.so
 lib/asterisk/modules/func_realtime.so
+lib/asterisk/modules/func_sayfiles.so
+lib/asterisk/modules/func_scramble.so
 lib/asterisk/modules/func_sha1.so
 lib/asterisk/modules/func_shell.so
 lib/asterisk/modules/func_sorcery.so
@@ -316,6 +320,7 @@ lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
 ${PLIST.timerfd}lib/asterisk/modules/res_timing_timerfd.so
+lib/asterisk/modules/res_tonedetect.so
 ${PLIST.jabber}lib/asterisk/modules/res_xmpp.so
 lib/libasteriskssl.so
 lib/libasteriskssl.so.1
