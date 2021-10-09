@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 14:54:28 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/09 08:40:21 adam Exp $
 
-RMD160 (pycryptodome-3.10.4.tar.gz) = 9cdc5bd4e1f4114d6cd680849b989bb31c8c4a06
-SHA512 (pycryptodome-3.10.4.tar.gz) = 1bc6b6c1f40f32e3d8868fdbb90802eb48e8fac6725f42a0b1d020978b7d3819fa1cad96fba636505c26c8e9c6fb8e63edf0ed576b1573c91789be9c7c9a8656
-Size (pycryptodome-3.10.4.tar.gz) = 3797012 bytes
+RMD160 (pycryptodome-3.11.0.tar.gz) = bf391377ee023c660814b2fd481936e2e7e11940
+SHA512 (pycryptodome-3.11.0.tar.gz) = f5b7e9a94b6e649fd9aac045bd4a0c8f3adabf5a33bab78596795c6383bc5eda345d9b9c71263d744af932add726a19d2cf0ed61ab931af3fb626207391184d1
+Size (pycryptodome-3.11.0.tar.gz) = 3791781 bytes
