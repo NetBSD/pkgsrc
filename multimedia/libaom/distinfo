@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/09 14:47:24 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/09 20:24:38 ryoon Exp $
 
-RMD160 (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = 84b6410ea7e93c839575473e4a855d5f08735eec
-SHA512 (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = c7d053390825068bccd5031915e0f790c1c1000bdf9f6c7c41dbeff65cc44d6f16ca64a05bb9e359849728fc98f74f0a24929ef08f290d1b04fa40efc0d4a5ae
-Size (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = 4606141 bytes
+RMD160 (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = 30b709ac08dcee7e30b8fe80c017d742d4c9e686
+SHA512 (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = 1aeb97d891758bb92ce999075c6a11f032097ff721aaaad9760d79c85635e9fec859de9e5890c66e4de4042a72aa508e94013a4437535b26754eac35a500889f
+Size (libaom/ce9a40ce01ade9d6fea1721c82645804a2f39b00.tar.gz) = 4606212 bytes
 SHA1 (patch-build_cmake_aom__configure.cmake) = 87a8b65cee873f7deff18cd74c140cd7e8c95924
 SHA1 (patch-build_cmake_exports.cmake) = be181c5718a5fac75f31bd8e74f214fc8b610ad9
 SHA1 (patch-build_cmake_version.cmake) = 1e6b4a1373c0d54cafdc8ad5c153881e41758bd6
