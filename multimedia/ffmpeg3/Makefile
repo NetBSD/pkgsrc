@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/10/09 07:48:07 nia Exp $
+# $NetBSD: Makefile,v 1.74 2021/10/09 10:59:44 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
 PKGREVISION=	14
@@ -38,8 +38,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/ffmpeg3
 
 .include "options.mk"
-
-.include "../../mk/compiler.mk"
 
 # disable asm on i386 to avoid text relocations
 .if ${MACHINE_ARCH} == "i386"
