@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5082 2021/10/09 07:52:31 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.5083 2021/10/09 07:52:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7790,3 +7790,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/wireshark to 3.4.9 [adam 2021-10-09]
 	Updated net/py-minio to 7.1.1 [adam 2021-10-09]
 	Updated comms/asterisk18 to 18.7.0 [jnemeth 2021-10-09]
+	Updated devel/ncurses to 6.2nb4 [wiz 2021-10-09]
