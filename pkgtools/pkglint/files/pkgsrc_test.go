@@ -1301,7 +1301,7 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 
 	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
-		"MY_CHECK_SKIP=\t*.c \"bad*pathname\"",
+		"MY_CHECK_SKIP=\t*.c \"quoted*pathname\"",
 		"MY_CHECK_SKIP+=\t*.cpp",
 		".if ${MY_CHECK_SKIP}",
 		".endif")
@@ -1313,16 +1313,14 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	t.CheckEquals(vartype.EffectivePermissions("filename.mk"), aclpAllRuntime)
 
 	// The permissions for MY_CHECK_SKIP say aclpAllRuntime, which excludes
-	// aclpUseLoadtime. Therefore there should be a warning about the VarUse in
+	// aclpUseLoadtime. Therefore, there should be a warning about the VarUse in
 	// the .if line. As of March 2019, pkglint skips the permissions check for
 	// guessed variables since that variable might have an entirely different
 	// meaning; see MkVarUseChecker.checkPermissions.
 	//
 	// There is no warning for the += operator in line 3 since the variable type
 	// (although guessed) is a list of things, and lists may be appended to.
-	t.CheckOutputLines(
-		"WARN: filename.mk:2: The pathname pattern \"\\\"bad*pathname\\\"\" " +
-			"contains the invalid characters \"\\\"\\\"\".")
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {

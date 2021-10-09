@@ -542,6 +542,9 @@ func CheckFileMk(filename CurrPath, pkg *Package) {
 	}
 
 	mklines.Check()
+	if pkg == nil || pkg.Includes(pkg.Rel(filename)) == nil {
+		NewRedundantScope().Check(mklines)
+	}
 	mklines.SaveAutofixChanges()
 }
 
