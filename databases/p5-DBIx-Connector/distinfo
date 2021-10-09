@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:35:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/09 13:25:34 wen Exp $
 
-RMD160 (DBIx-Connector-0.56.tar.gz) = c9db90f06782bfaf6c8f76022723ab31623a9216
-SHA512 (DBIx-Connector-0.56.tar.gz) = feeb26277c61ee91b2b2436d3fbc7453b6fe64ef2ac24cc0848da80202bd07092321fa530c58ab5370f6b40e6e1a3e578101794b2e1c0696aa017040ee02cd7a
-Size (DBIx-Connector-0.56.tar.gz) = 36770 bytes
+RMD160 (DBIx-Connector-0.57.tar.gz) = c081ec424699b931176ec0e4fa34c6ba2031b93e
+SHA512 (DBIx-Connector-0.57.tar.gz) = 5aa85831cf9244bb55b3ad4be000dcc2b881b06b11ba570537024c6ae861a3e7106773542155428b884b70f021eadcd9508fab48639af8011ead4da1ebe68bcd
+Size (DBIx-Connector-0.57.tar.gz) = 29653 bytes
