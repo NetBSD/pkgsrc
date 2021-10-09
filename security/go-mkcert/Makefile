@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/10/08 18:55:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2021/10/09 10:41:09 tnn Exp $
 
 DISTNAME=		mkcert-${GITHUB_TAG}
 PKGNAME=		go-mkcert-${VERSION}
@@ -16,8 +16,6 @@ LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/mkcert-${VERSION}
 GO_BUILD_PATTERN=	github.com/FiloSottile/mkcert
-
-INSTALLATION_DIRS+=	bin
 
 GO_MODULE_FILES+=	software.sslmate.com/src/go-pkcs12/@v/v0.0.0-20180114231543-2291e8f0f237.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20191108193012-7d206e10da11.mod
@@ -71,9 +69,6 @@ GO_MODULE_FILES+=	gopkg.in/errgo.v2/@v/v2.1.0.zip
 
 post-patch:
 	cd ${WRKSRC} && cp truststore_linux.go truststore_netbsd.go
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/mkcert ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

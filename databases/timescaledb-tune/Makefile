@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/10/08 18:55:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/09 10:41:08 tnn Exp $
 
 DISTNAME=	timescaledb-tune-0.11.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -14,11 +14,6 @@ LICENSE=	apache-2.0
 .include "go-modules.mk"
 
 GO_BUILD_PATTERN=	./cmd/timescaledb-tune/...
-INSTALLATION_DIRS+=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/timescaledb-tune	\
-	  ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/10/08 18:55:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2021/10/09 10:41:09 tnn Exp $
 
 # When updating changelog is available in
 # ${WRKSRC}/docs/content/changelog.md
@@ -14,13 +14,9 @@ COMMENT=	Rsync for cloud storage
 LICENSE=	mit
 
 GO_BUILD_PATTERN=	--ldflags "-X github.com/rclone/rclone/fs.Version=${PKGVERSION_NOREV}"
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-CHECK_RELRO_SKIP+=	bin/rclone
-
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/rclone ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/rclone.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "go-modules.mk"
