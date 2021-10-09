@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/08/18 20:12:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.17 2021/10/09 12:50:45 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose/}
-EXTRACT_USING=	bsdtar
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://nose.readthedocs.io/
@@ -16,17 +15,15 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
 
-SUBST_CLASSES+=		manpath
-SUBST_STAGE.manpath=	pre-build
-SUBST_FILES.manpath=	setup.py
-SUBST_VARS.manpath=	PKGMANDIR
-
-post-extract:
-	${MV} ${WRKSRC}/nosetests.1 ${WRKSRC}/nosetests${PYVERSSUFFIX}.1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 pre-test:
 	${RUN} cd ${WRKSRC} && \
 	${PYTHONBIN} setup.py build_tests
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/nosetests
+	${MV} ${DESTDIR}${PREFIX}/man/man1/nosetests.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nosetests${PYVERSSUFFIX}.1
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
