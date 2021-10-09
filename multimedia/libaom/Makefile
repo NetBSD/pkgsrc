@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/10/09 14:47:24 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/10/09 15:35:09 nia Exp $
 
 PKGNAME=	libaom-3.1.3
+PKGREVISION=	1
 DISTNAME=	ce9a40ce01ade9d6fea1721c82645804a2f39b00
 CATEGORIES=	multimedia
 MASTER_SITES=	https://aomedia.googlesource.com/aom/+archive/
