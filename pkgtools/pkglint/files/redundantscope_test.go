@@ -1470,6 +1470,29 @@ func (s *Suite) Test_RedundantScope__is_relevant_for_infrastructure(c *check.C) 
 			"Variable PKG_OPTIONS is overwritten in line 3.")
 }
 
+// All makefile fragments that are not directly or indirectly included by the
+// package Makefile need to be checked separately for redundant variable
+// assignments since these would otherwise go unnoticed.
+//
+// See CheckFileMk and Package.checkfilePackageMakefile.
+func (s *Suite) Test_RedundantScope__standalone(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/build.mk",
+		MkCvsID,
+		"",
+		"_PKG_VARS.package=\tPACKAGE_REQD",
+		"_PKG_VARS.package=\tCONFIGURE_DIRS")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/build.mk:3: " +
+			"Variable _PKG_VARS.package is overwritten in line 4.")
+}
+
 // Branch coverage for info.vari.IsConstant(). The other tests typically
 // make a variable non-constant by adding conditional assignments between
 // .if/.endif. But there are other ways. The output of shell commands is

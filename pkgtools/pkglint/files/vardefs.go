@@ -1381,6 +1381,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 
 	reg.pkglist("MESSAGE_SRC", BtPathname)
 	reg.pkglist("MESSAGE_SUBST", BtShellWord)
+	reg.pkgloadlist("MESON_REQD", BtVersion)
 	reg.pkg("META_PACKAGE", BtYes)
 	reg.syslist("MISSING_FEATURES", BtIdentifierDirect)
 	reg.pkglist("MYSQL_VERSIONS_ACCEPTED", mysqlVersions)

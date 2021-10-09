@@ -498,6 +498,7 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"ERROR: gnu-style.mk:5: Unknown Makefile line format: \"endif\".",
 		"ERROR: gnu-style.mk:1: Expected \""+MkCvsID+"\".",
 		"WARN: gnu-style.mk:2: IS_GCC is defined but not used.",
+		"WARN: gnu-style.mk:2: Variable IS_GCC is overwritten in line 4.",
 
 		// There is no warning about files/gnu-style.mk since pkglint
 		// doesn't even attempt at guessing the file type. Files placed
@@ -519,6 +520,7 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"ERROR: ../../category/other/gnu-style.mk:5: Unknown Makefile line format: \"endif\".",
 		"ERROR: ../../category/other/gnu-style.mk:1: Expected \""+MkCvsID+"\".",
 		"WARN: ../../category/other/gnu-style.mk:2: IS_GCC is defined but not used.",
+		"WARN: ../../category/other/gnu-style.mk:2: Variable IS_GCC is overwritten in line 4.",
 
 		"ERROR: patches/patch-Makefile.mk: Contains no patch.",
 		"WARN: patches/readme.mk: Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
@@ -1869,9 +1871,11 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__redundancy_in_infra(c *ch
 
 	G.Check("mk/redundant.mk")
 
-	// The redundancy check is only performed when a whole package
-	// is checked. Therefore nothing is reported here.
-	t.CheckOutputEmpty()
+	// The redundancy check applies both to package Makefiles and to
+	// makefile fragments that are given in the command line.
+	t.CheckOutputLines(
+		"NOTE: mk/redundant.mk:3: " +
+			"Definition of INFRA_REDUNDANT is redundant because of line 2.")
 
 	// If the global checks are enabled, redundancy warnings from the
 	// pkgsrc infrastructure are reported as well.
