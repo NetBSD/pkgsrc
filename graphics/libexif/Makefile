@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/09/29 08:42:57 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2021/10/09 10:56:09 nia Exp $
 
 DISTNAME=	libexif-0.6.23
 CATEGORIES=	graphics
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt msgmerge xgettext
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
 PKGCONFIG_OVERRIDE=	libexif.pc.in
