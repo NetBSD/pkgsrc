@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/08 14:47:44 bsiegert Exp $
+$NetBSD: distinfo,v 1.8 2021/10/09 09:43:38 rillig Exp $
 
-SHA1 (go1.17.2.src.tar.gz) = b78350fa6e4617c1eac66dff656eda8df0a13c1f
 RMD160 (go1.17.2.src.tar.gz) = 746baea495791be0e9f4ed6a162cc4466d4ce4cd
 SHA512 (go1.17.2.src.tar.gz) = 167220293e02d6994b5cdee5909cbdbe66f692619baeb6ff9ee0d56660eb39cfd9eac2ac510f113d5222dadd5858fd6276bd961365ca42b42c07af5d24d48107
 Size (go1.17.2.src.tar.gz) = 22182111 bytes

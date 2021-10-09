@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2018/10/18 19:26:16 leot Exp $
+$NetBSD: distinfo,v 1.14 2021/10/09 09:43:38 rillig Exp $
 
-SHA1 (patch-2.7.6.tar.xz) = 6f64fa75993bdb285ac4ed6eca6c9212725bff91
 RMD160 (patch-2.7.6.tar.xz) = 439753620b4d27d606110093d0e586719b8451c3
 SHA512 (patch-2.7.6.tar.xz) = fcca87bdb67a88685a8a25597f9e015f5e60197b9a269fa350ae35a7991ed8da553939b4bbc7f7d3cfd863c67142af403b04165633acbce4339056a905e87fbd
 Size (patch-2.7.6.tar.xz) = 783756 bytes
