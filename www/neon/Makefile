@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2021/09/29 19:00:15 adam Exp $
+# $NetBSD: Makefile,v 1.82 2021/10/09 10:54:12 wiz Exp $
 
-DISTNAME=	neon-0.31.2
-PKGREVISION=	3
+DISTNAME=	neon-0.32.1
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
@@ -9,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://notroj.github.io/neon/
 COMMENT=	HTTP and WebDAV client library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
+
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt
