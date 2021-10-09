@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/10/01 16:10:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/10/09 10:54:12 wiz Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -116,10 +116,13 @@ man/man3/ne_ssl_trust_cert.3
 man/man3/ne_ssl_trust_default_ca.3
 man/man3/ne_status.3
 man/man3/ne_strdup.3
+man/man3/ne_strhash.3
 man/man3/ne_strndup.3
+man/man3/ne_strparam.3
 man/man3/ne_token.3
 man/man3/ne_version_match.3
 man/man3/ne_version_string.3
+man/man3/ne_vstrhash.3
 man/man3/ne_xml_create.3
 man/man3/ne_xml_destroy.3
 man/man3/neon.3
@@ -143,10 +146,12 @@ share/doc/${PKGNAME}/html/refconfig.html
 share/doc/${PKGNAME}/html/referr.html
 share/doc/${PKGNAME}/html/reffeat.html
 share/doc/${PKGNAME}/html/refgetst.html
+share/doc/${PKGNAME}/html/refhash.html
 share/doc/${PKGNAME}/html/refi18n.html
 share/doc/${PKGNAME}/html/refiaddr.html
 share/doc/${PKGNAME}/html/refneon.html
 share/doc/${PKGNAME}/html/refopts.html
+share/doc/${PKGNAME}/html/refparam.html
 share/doc/${PKGNAME}/html/refproxy.html
 share/doc/${PKGNAME}/html/refreq.html
 share/doc/${PKGNAME}/html/refreqbody.html
