@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
+$NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
@@ -6,9 +6,9 @@ $NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
 * Utilize <stdlib.h> on BSD.
 * Do not override CFLAGS/CXXFLAGS except linux.
 
---- configure.orig	2020-06-09 07:15:48.000000000 +0000
+--- configure.orig	2021-10-03 17:15:01.000000000 +0000
 +++ configure
-@@ -23226,10 +23226,12 @@ do
+@@ -24425,10 +24425,12 @@ do
  done
  
    # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
@@ -24,17 +24,25 @@ $NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
        ${TRUE}
        ;;
      mingw)
-@@ -23269,6 +23271,7 @@ done
- do :
-   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- ac_fn_cxx_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
+@@ -24478,6 +24480,7 @@ then :
+ fi
+ 
+   ac_fn_cxx_check_header_compile "$LINENO" "net/if_arp.h" "ac_cv_header_net_if_arp_h" "
 +#include <stdio.h>
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -24105,7 +24108,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
+@@ -24488,6 +24491,7 @@ then :
+ 
+ fi
+ ac_fn_cxx_check_header_compile "$LINENO" "net/route.h" "ac_cv_header_net_route_h" "
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ 
+@@ -25381,7 +25385,51 @@ then :
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
- else
+ else $as_nop
  
 -      as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
@@ -85,9 +93,9 @@ $NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
  
  fi
  
-@@ -24208,7 +24255,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
+@@ -25482,7 +25530,51 @@ then :
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
- else
+ else $as_nop
  
 -      as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
@@ -138,16 +146,16 @@ $NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
  
  fi
  
-@@ -39571,6 +39662,8 @@ else
- # ifdef _MSC_VER
+@@ -42202,6 +42294,8 @@ else
+ # elif defined _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
 +# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
 +#   include <stdlib.h>
  # else
- #  ifdef HAVE_ALLOCA_H
- #   include <alloca.h>
-@@ -42313,6 +42406,9 @@ ac_fn_cxx_check_header_compile "$LINENO"
+ #  ifdef  __cplusplus
+ extern "C"
+@@ -45149,6 +45243,9 @@ printf "%s\n" "#define USE_SOLARIS_IPFIL
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #define minor_t fubar
  #endif
