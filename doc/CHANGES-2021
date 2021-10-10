@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5098 2021/10/10 01:20:43 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5099 2021/10/10 01:27:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7808,3 +7808,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Graph to 0.9724 [wen 2021-10-10]
 	Added devel/p5-Snapshot version 0.06 [wen 2021-10-10]
 	Updated devel/p5-Make to 2.011 [wen 2021-10-10]
+	Updated devel/p5-MetaCPAN-Client to 2.029000 [wen 2021-10-10]
