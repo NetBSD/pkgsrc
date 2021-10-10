@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.20 2021/10/06 05:49:55 nia Exp $
+# $NetBSD: NEWS,v 1.21 2021/10/10 08:39:40 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,12 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+SHA1 distfile hashes deprecated [nia 2021-10-07]
+
+	SHA1 hashes have been removed from the pkgsrc tree for
+	distfiles and will now no longer be generated for new
+	packages - only SHA512 and RMD160 will be generated.
 
 Default Python version changed to 3.9 [nia 2021-10-01]
 
