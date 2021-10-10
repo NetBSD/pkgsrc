@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.138 2021/10/05 19:08:13 adam Exp $
+# $NetBSD: pyversion.mk,v 1.139 2021/10/10 19:10:41 adam Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -188,13 +188,9 @@ PY_COMPILE_ALL= \
 PY_COMPILE_O_ALL= \
 	${PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 
-.if exists(${PYTHONBIN})
-PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print (distutils.sysconfig.get_python_inc(0, \"\"))" || ${ECHO} ""
-PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print (distutils.sysconfig.get_python_lib(0, 1, \"\"))" || ${ECHO} ""
-PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print (distutils.sysconfig.get_python_lib(0, 0, \"\"))" || ${ECHO} ""
+PYINC=		include/python${PYVERSSUFFIX}
+PYLIB=		lib/python${PYVERSSUFFIX}
+PYSITELIB=	${PYLIB}/site-packages
 
 PRINT_PLIST_AWK+=	/^${PYINC:S|/|\\/|g}/ \
 			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}") }
@@ -202,7 +198,6 @@ PRINT_PLIST_AWK+=	/^${PYSITELIB:S|/|\\/|g}/ \
 			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}") }
 PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
-.endif
 
 ALL_ENV+=		PYTHON=${PYTHONBIN}
 .if defined(USE_CMAKE)
