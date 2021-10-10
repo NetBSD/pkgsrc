@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/10/10 01:12:15 wen Exp $
+
+RMD160 (Test-Snapshot-0.06.tar.gz) = 3c2ccf1b530a8ea0aacb001c30daecdf12ae8150
+SHA512 (Test-Snapshot-0.06.tar.gz) = e3a667672fd094ffe12c894aea011849e2147dacc6731c546a117d1da55ff86c082aec03c03cc5174ce8329a18ce202d8a4441f935d7f0124a293478a03b6dac
+Size (Test-Snapshot-0.06.tar.gz) = 7764 bytes
