@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5106 2021/10/10 11:27:44 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5107 2021/10/10 15:56:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7817,3 +7817,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/opencv to 3.4.16 [adam 2021-10-10]
 	Updated graphics/opencv-contrib-face to 3.4.16 [adam 2021-10-10]
 	Updated shells/oksh to 7.0 [schmonz 2021-10-10]
+	Updated www/squid4 to 4.17 [taca 2021-10-10]
