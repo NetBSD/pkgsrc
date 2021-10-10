@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5104 2021/10/10 03:01:48 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5105 2021/10/10 07:02:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7814,3 +7814,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-MooseX-App to 1.42 [wen 2021-10-10]
 	Updated textproc/py-regex to 2021.9.24 [gutteridge 2021-10-10]
 	Updated lang/python27 to 2.7.18nb4 [gutteridge 2021-10-10]
+	Updated graphics/opencv to 3.4.16 [adam 2021-10-10]
+	Updated graphics/opencv-contrib-face to 3.4.16 [adam 2021-10-10]
