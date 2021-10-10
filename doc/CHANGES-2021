@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5107 2021/10/10 15:56:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5108 2021/10/10 16:39:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7806,7 +7806,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Log-Any to 1.710 [wen 2021-10-09]
 	Updated lang/mozjs78 to 78.15.0 [gutteridge 2021-10-10]
 	Updated devel/p5-Graph to 0.9724 [wen 2021-10-10]
-	Added devel/p5-Snapshot version 0.06 [wen 2021-10-10]
+	Added devel/p5-Test-Snapshot version 0.06 [wen 2021-10-10]
 	Updated devel/p5-Make to 2.011 [wen 2021-10-10]
 	Updated devel/p5-MetaCPAN-Client to 2.029000 [wen 2021-10-10]
 	Updated devel/p5-Metrics-Any to 0.07 [wen 2021-10-10]
