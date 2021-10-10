@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/10 01:44:26 wen Exp $
 
-RMD160 (Metrics-Any-0.06.tar.gz) = 7620338ac9c9015eff5afb66d82712f52019bf91
-SHA512 (Metrics-Any-0.06.tar.gz) = dd0600e01340b564f00629e15c3b935a84ef6e2d88c0695e51c321af96b05cec4ad16ec5636ab39847dc4f82ca541989e77f2f7f7bab8417c5a3b13169c50d49
-Size (Metrics-Any-0.06.tar.gz) = 29793 bytes
+RMD160 (Metrics-Any-0.07.tar.gz) = 6d9f9b87985c5a063e6a22d0ebf451b167c1171d
+SHA512 (Metrics-Any-0.07.tar.gz) = 69eb7c029ed89497ee3a19bbf0547fbfa0b23a3a0e64768497fecc8bd27b3c45c65b672c9bf834b6480742a3b2ae383d3f0363439887a88d3ad6ba7503fee40f
+Size (Metrics-Any-0.07.tar.gz) = 31028 bytes
