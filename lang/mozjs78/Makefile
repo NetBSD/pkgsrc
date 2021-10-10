@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/09/15 01:17:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2021/10/10 00:14:54 gutteridge Exp $
 
-DISTNAME=	mozjs78_78.13.0.orig
+DISTNAME=	mozjs78_78.15.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	lang
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/m/mozjs78/
