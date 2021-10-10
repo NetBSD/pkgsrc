@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:41:46 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/10 01:19:55 wen Exp $
 
-RMD160 (Make-2.002.tar.gz) = 864d3c9837310c399cfa32ec018dbf3f1e3a8bef
-SHA512 (Make-2.002.tar.gz) = 22662330081cccde861b108af0ff0875a75ef9a72f965b828066172d79218cf82a8af93db8589673befdd52abf28d7c1ecb98fbd12d7ec7512ba5d22c36eeea7
-Size (Make-2.002.tar.gz) = 18344 bytes
+RMD160 (Make-2.011.tar.gz) = 9b6e6c92c4286c1370f5cf719b4fb2752dab47c1
+SHA512 (Make-2.011.tar.gz) = b1ac446b5cc5145e5630c69f0d4520c8e9169d66a574eb9de064e4ee30449beff4982475929673e6018ed3dbb05080b656716c1de3c07300e011791102ded9aa
+Size (Make-2.011.tar.gz) = 26194 bytes
