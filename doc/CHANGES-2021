@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5095 2021/10/10 00:15:11 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5096 2021/10/10 00:16:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7805,3 +7805,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-IPC-Shareable to 1.06 [wen 2021-10-09]
 	Updated devel/p5-Log-Any to 1.710 [wen 2021-10-09]
 	Updated lang/mozjs78 to 78.15.0 [gutteridge 2021-10-10]
+	Updated devel/p5-Graph to 0.9724 [wen 2021-10-10]
