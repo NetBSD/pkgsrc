@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 14:54:27 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/10 18:43:13 adam Exp $
 
-RMD160 (certbot-dns-ovh-1.19.0.tar.gz) = 62c9e7532b9028926e8a94bce76e83a0c955f3ff
-SHA512 (certbot-dns-ovh-1.19.0.tar.gz) = 052d1914620851c6a3cf1693b7e331c3c803c88c887d914ca220c36f3e28c591d63f6b90f9f5494b579351c3e7723dc7f1ea41c44e495bdaaa1abbc410794d19
-Size (certbot-dns-ovh-1.19.0.tar.gz) = 12810 bytes
+RMD160 (certbot-dns-ovh-1.20.0.tar.gz) = dbc8b06b7da6290ff233076127cf859c3a30d21f
+SHA512 (certbot-dns-ovh-1.20.0.tar.gz) = 05d2c9d70cac2ae929e517432f1c0d9097506b64859e342b2e8d5e776c55fb34c9fe4f0c14d9c7a8eba01a10dbab19e6e198009af44a8561a5c235e87184f484
+Size (certbot-dns-ovh-1.20.0.tar.gz) = 12810 bytes
