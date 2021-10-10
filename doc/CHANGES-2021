@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5109 2021/10/10 18:29:43 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.5110 2021/10/10 18:44:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7819,3 +7819,19 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/oksh to 7.0 [schmonz 2021-10-10]
 	Updated www/squid4 to 4.17 [taca 2021-10-10]
 	Updated emulators/PC6001VX to 3.8.2 [tsutsui 2021-10-10]
+	Updated security/py-acme to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-apache to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-digitalocean to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-dnsimple to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-gehirn to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-google to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-linode to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-luadns to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-nsone to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-ovh to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-rfc2136 to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-route53 to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-dns-sakuracloud to 1.20.0 [adam 2021-10-10]
+	Updated security/py-certbot-nginx to 1.20.0 [adam 2021-10-10]
