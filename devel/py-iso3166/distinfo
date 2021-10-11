@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/11 17:55:07 adam Exp $
 
-RMD160 (iso3166-1.0.1.tar.gz) = 039173f3a626294db4537dbf387e1c81c2d89b29
-SHA512 (iso3166-1.0.1.tar.gz) = 44da1b987f01494fc7874b044fa6b0ed8a888bd159f73ab239f9db35e26c4fd310444164e538166c3804d796c0ab212bb1b1eee02eb3b9b70883d5d2d7ccccc0
-Size (iso3166-1.0.1.tar.gz) = 10052 bytes
+RMD160 (iso3166-2.0.2.tar.gz) = cfbc42b6df381359701e4d09c93b084ede15da54
+SHA512 (iso3166-2.0.2.tar.gz) = eb5c27c69e29c4312f3a5146206032aae49ee489d9a5987fce1fb66bae9d93ec252bf7fd1119403a278f66adaa5ce1c77fe8d3a1622c46ae4a291d73e5c9fb21
+Size (iso3166-2.0.2.tar.gz) = 11067 bytes
