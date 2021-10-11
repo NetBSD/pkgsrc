@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/11 17:34:11 adam Exp $
 
-RMD160 (kiwisolver-1.3.1.tar.gz) = d00de5025110ab800de3ca4ad45671c49cfcca0f
-SHA512 (kiwisolver-1.3.1.tar.gz) = 1b3c38044123951ed91d87d05dc1dddafc8876625be843857333119affa4d71700ffe5de8ce66b11c2fcba296396f06ec0ed5676c8b2f8b53ef8f54db32347ed
-Size (kiwisolver-1.3.1.tar.gz) = 53103 bytes
+RMD160 (kiwisolver-1.3.2.tar.gz) = 949f175f4350e0350e41682d7276407e46574694
+SHA512 (kiwisolver-1.3.2.tar.gz) = 24248cee3401153dfa67e9d78ae230d05640d16b23cb980379796e949a87af49f0e97a3a7735c886260846747b305b1b13ca9556ee371b688ac33cc18099d2e0
+Size (kiwisolver-1.3.2.tar.gz) = 54611 bytes
