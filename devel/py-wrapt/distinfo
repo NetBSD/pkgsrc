@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/11 18:02:12 adam Exp $
 
-RMD160 (wrapt-1.12.1.tar.gz) = 3a7943cc5072f8e341badac12000e489b7a42fbb
-SHA512 (wrapt-1.12.1.tar.gz) = efc38c0adc4fcaa34499a996ea4a337a000a812254ec7ddaca38f0132020dd31afa9fe6bab3e6010df312282ab0ea7bd571b54215d8d27e0b97b270c08cf5a62
-Size (wrapt-1.12.1.tar.gz) = 27488 bytes
+RMD160 (wrapt-1.13.1.tar.gz) = 086b2c6d33d5dba6d27bd050fc628cd38ade269a
+SHA512 (wrapt-1.13.1.tar.gz) = 1789280dcf9a717393493a17bd05dbd3bd4701f0a313c57fecaa8455b4b396f2ad469dcd333c24a040fb6fb470fd22ad5f6240d71d9bc2e8de793c4bd89068ad
+Size (wrapt-1.13.1.tar.gz) = 48803 bytes
