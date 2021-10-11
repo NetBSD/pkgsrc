@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/11 06:32:40 adam Exp $
 
-RMD160 (cwcwidth-0.1.4.tar.gz) = e754f0c66e570bf36eebdbb8c02e124c87361f98
-SHA512 (cwcwidth-0.1.4.tar.gz) = 6c87435939ef2c9f048de71bd75cbb62f26bb4298f54a4a48fbf0ebac1ca49ef857121c1583abf373017f8475f9dbafbf3760ee25776dfae16eb4fa83d23aea1
-Size (cwcwidth-0.1.4.tar.gz) = 11190 bytes
+RMD160 (cwcwidth-0.1.5.tar.gz) = 6f81599198c886a1867532b931316ee5a951ae12
+SHA512 (cwcwidth-0.1.5.tar.gz) = 3d07c32d9d847dcba89ea24d66dbd76b4a5a96d16874bb23808a9a948feb29f219ca8aa9e72384df588617a494fa343ee693e45e67cd372556328b3671339ad9
+Size (cwcwidth-0.1.5.tar.gz) = 11071 bytes
