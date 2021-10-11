@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/07/05 12:02:22 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/10/11 12:50:58 adam Exp $
 
-DISTNAME=	gssapi-1.6.14
+DISTNAME=	gssapi-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
