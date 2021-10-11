@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/03/02 10:29:57 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/10/11 17:26:16 adam Exp $
 
-DISTNAME=	parse-1.15.0
+DISTNAME=	parse-1.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parse/}
@@ -11,6 +11,8 @@ COMMENT=	Parse strings using a specification based on format()
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
