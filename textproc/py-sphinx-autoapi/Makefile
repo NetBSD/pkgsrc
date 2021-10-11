@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/01 18:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/11 09:31:22 adam Exp $
 
-DISTNAME=	sphinx-autoapi-1.8.3
+DISTNAME=	sphinx-autoapi-1.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autoapi/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/readthedocs/sphinx-autoapi
 COMMENT=	Autodoc style documenation for multiple languages
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=2.4:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=2.7:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
