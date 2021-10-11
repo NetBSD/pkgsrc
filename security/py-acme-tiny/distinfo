@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/11 17:50:16 adam Exp $
 
-RMD160 (acme-tiny-4.1.1.tar.gz) = aff510196a993ce30edba214ba9e9de5a8759fa7
-SHA512 (acme-tiny-4.1.1.tar.gz) = c71e1761b856ce020c2bbfcd7b5f1bf28a1659bbff1e9fdc62c2a40955ce3b6147768895f1f5f958a8cf45fd3e016b2b45823a6de45ae460e54956e007fd3329
-Size (acme-tiny-4.1.1.tar.gz) = 22424 bytes
+RMD160 (acme-tiny-5.0.1.tar.gz) = a81bc52ee3ed112a9ca4e724589759255527e651
+SHA512 (acme-tiny-5.0.1.tar.gz) = 12940426b0fd9cce333ae400161ba371f2c05fdcbb7ac5931079e9b420a5504c89b35613678c9527333647a7ca2f5cfd4eb238ca7b762c5488b9dd98fb3e4731
+Size (acme-tiny-5.0.1.tar.gz) = 22406 bytes
