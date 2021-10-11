@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5111 2021/10/11 06:04:23 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5112 2021/10/11 06:34:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7836,3 +7836,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-sakuracloud to 1.20.0 [adam 2021-10-10]
 	Updated security/py-certbot-nginx to 1.20.0 [adam 2021-10-10]
 	Updated devel/py-approvaltests to 3.0.0 [schmonz 2021-10-11]
+	Updated devel/py-cwcwidth to 0.1.5 [adam 2021-10-11]
+	Updated devel/py-anyio to 3.3.3 [adam 2021-10-11]
