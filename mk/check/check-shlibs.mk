@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.33 2020/10/09 16:00:16 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.34 2021/10/11 20:26:28 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -10,10 +10,10 @@
 #
 #	Default value: "yes" for PKG_DEVELOPERs, "no" otherwise.
 #
-# CHECK_SHLIBS_BLACKLIST
+# CHECK_SHLIBS_TOXIC
 # 	A list of regular expressions that will cause the test to fail
-# 	if they are matched in the resolved runpath.  For example, set
-# 	to ^/usr/lib/lib(crypto|ssl) will ensure that OpenSSL is not
+# 	if they match any resolved library paths.  For example, set
+# 	to ^/usr/lib/lib(crypto|ssl) ensures that OpenSSL is not
 # 	accidentally picked up from the OS.
 #
 #	Default value: empty.
@@ -77,8 +77,10 @@ CHECK_SHLIBS_NATIVE_ENV+=	LANG=C
 .  if defined(CHECK_WRKREF) && !empty(CHECK_WRKREF:Mextra)
 CHECK_SHLIBS_NATIVE_ENV+=	CHECK_WRKREF_EXTRA_DIRS=${CHECK_WRKREF_EXTRA_DIRS:Q}
 .  endif
-.  if defined(CHECK_SHLIBS_BLACKLIST)
-CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_BLACKLIST=${CHECK_SHLIBS_BLACKLIST:Q}
+.  if defined(CHECK_SHLIBS_TOXIC)
+CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_TOXIC=${CHECK_SHLIBS_TOXIC:Q}
+.  elif defined(CHECK_SHLIBS_BLACKLIST)
+CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_TOXIC=${CHECK_SHLIBS_BLACKLIST:Q}
 .  endif
 
 privileged-install-hook: _check-shlibs
