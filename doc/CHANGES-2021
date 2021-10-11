@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5127 2021/10/11 17:55:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5128 2021/10/11 18:09:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7862,3 +7862,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pybind11 to 2.8.0 [adam 2021-10-11]
 	Updated security/py-acme-tiny to 5.0.1 [adam 2021-10-11]
 	Updated devel/py-iso3166 to 2.0.2 [adam 2021-10-11]
+	Updated devel/py-wrapt to 1.13.1 [adam 2021-10-11]
+	Updated time/py-pytz to 2021.3 [adam 2021-10-11]
