@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2021/09/04 02:27:53 markd Exp $
+# $NetBSD: Makefile,v 1.555 2021/10/11 10:40:14 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -199,6 +199,7 @@ SUBDIR+=	most
 SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	multitail
+SUBDIR+=	nora
 SUBDIR+=	nxtvepg
 SUBDIR+=	nyancat
 SUBDIR+=	ocaml-cudf
