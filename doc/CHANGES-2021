@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5119 2021/10/11 09:03:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5120 2021/10/11 09:35:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7849,3 +7849,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.3.17 [pin 2021-10-11]
 	Updated textproc/py-JWT to 2.2.0 [adam 2021-10-11]
 	Updated devel/py-absl-py to 0.14.1 [adam 2021-10-11]
+	Updated textproc/py-sphinx-autoapi to 1.8.4 [adam 2021-10-11]
+	Updated security/py-paramiko to 2.8.0 [adam 2021-10-11]
