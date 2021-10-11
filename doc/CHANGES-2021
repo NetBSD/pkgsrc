@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5133 2021/10/11 20:25:38 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5134 2021/10/11 20:28:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7869,3 +7869,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-Mojolicious to 9.21 [schmonz 2021-10-11]
 	Updated www/p5-libwww to 6.57 [schmonz 2021-10-11]
 	Updated time/p5-DateTime-TimeZone to 2.49 [schmonz 2021-10-11]
+	Updated textproc/p5-XML-Feed to 0.63 [schmonz 2021-10-11]
