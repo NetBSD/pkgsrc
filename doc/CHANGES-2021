@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5137 2021/10/11 20:46:32 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5138 2021/10/11 20:48:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7873,3 +7873,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Feed-Find to 0.11 [schmonz 2021-10-11]
 	Updated textproc/p5-ack to 3.5.0 [schmonz 2021-10-11]
 	Updated devel/p5-Test2-Suite to 0.000141 [schmonz 2021-10-11]
+	Updated devel/p5-Test-NoWarnings to 1.06 [schmonz 2021-10-11]
