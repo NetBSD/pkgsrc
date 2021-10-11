@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.291 2021/10/07 13:39:37 nia Exp $
+$NetBSD: distinfo,v 1.292 2021/10/11 10:03:47 cirnatdan Exp $
 
-RMD160 (glib-2.68.4.tar.xz) = cf4d834a0e8f5e77ba39d627290ac0263ba0f177
-SHA512 (glib-2.68.4.tar.xz) = be17d79b41d17fd2b144184d6e793180667b7d9ba299215ea6d4948b4c05f6d888b4868c48643e25935a34ee2f85ee1d03e53325151b7a61819437cbd3c84b10
-Size (glib-2.68.4.tar.xz) = 4945212 bytes
+RMD160 (glib-2.70.0.tar.xz) = 139674d8107c540d5f826fabe0c756a4f4fc84a7
+SHA512 (glib-2.70.0.tar.xz) = fd3fcaebd34aebe0e63f9dc915b2df026a3f88a5c2254e9f17beea0a59ab0ac563976fca54eb57bd2f7af183c4ae76fb86f05951216bf4159d258b5e7b29696f
+Size (glib-2.70.0.tar.xz) = 4796812 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = 6547edb518a98c3aca53acc1f98bde83e71b14cb
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = ec8ce89da08059ebf953d84a1dca5a2b380349f4
-SHA1 (patch-gio_giomodule.c) = d704699b2f457a08fff9219fe697e5fd2cc582ed
+SHA1 (patch-gio_giomodule.c) = 68e612ac178c41aa0aae2bd66c3e4263910711ac
 SHA1 (patch-gio_glib-compile-schemas.c) = 4fc8e8ba62bef01762007ebf21569053374808d0
 SHA1 (patch-gio_gresource-tool.c) = ad0e59f48f5f98ea66be568dbe2e5a5d1ac602fc
 SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495d3312
@@ -21,9 +21,9 @@ SHA1 (patch-glib_meson.build) = 65cbe6e3bd650f8f2c37f003a48ef183700a6ef9
 SHA1 (patch-glib_tests_hash.c) = a7e19ca55fcbbc0b188c34755cae5b6b65b67f1a
 SHA1 (patch-glib_tests_include.c) = 12d98caebfb87c1146821d518c37c45f97fc7be0
 SHA1 (patch-glib_tests_meson.build) = d358bd579eb09655c608106092bdeed8f16ff4d0
-SHA1 (patch-gmodule_gmodule-dl.c) = 7a179e4ae0fabb0e807bf061b06111ac910a8d82
+SHA1 (patch-gmodule_gmodule-dl.c) = 13a6e81adc1b54ab0ed8d6302ee063754cd6f881
 SHA1 (patch-gmodule_gmodule.c) = a020920b8e5bad34550c9963eb2fc27bef24c5c9
 SHA1 (patch-gobject_glib-mkenums.in) = c177cf9b1ea81542665240678f47f68351a3760d
 SHA1 (patch-gobject_meson.build) = 412b65558aa4cf9648ee84a57ad6dfcc988b1a1d
-SHA1 (patch-meson.build) = f186c7e8ab2c5ba779a1227ae75b15adc0ea17f9
+SHA1 (patch-meson.build) = 15e5b005c7eca9027fe1fc7e9a550b93a5f5d33e
 SHA1 (patch-meson_options.txt) = 7f633fbbfa9d9b2d958365891ffb9e4094d7dd54

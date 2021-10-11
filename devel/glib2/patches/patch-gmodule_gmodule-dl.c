@@ -1,11 +1,11 @@
-$NetBSD: patch-gmodule_gmodule-dl.c,v 1.3 2021/06/30 14:26:11 prlw1 Exp $
+$NetBSD: patch-gmodule_gmodule-dl.c,v 1.4 2021/10/11 10:03:47 cirnatdan Exp $
 
 RTL_GLOBAL is a bug.
 https://gitlab.gnome.org/GNOME/glib/-/merge_requests/2171
 
---- gmodule/gmodule-dl.c.orig	2021-06-10 18:57:57.268194400 +0000
+--- gmodule/gmodule-dl.c.orig	2021-09-17 10:17:56.832962500 +0000
 +++ gmodule/gmodule-dl.c
-@@ -106,36 +106,13 @@ _g_module_open (const gchar *file_name,
+@@ -151,38 +151,13 @@ _g_module_open (const gchar *file_name,
  static gpointer
  _g_module_self (void)
  {
@@ -22,6 +22,7 @@ https://gitlab.gnome.org/GNOME/glib/-/merge_requests/2171
 -   * always returns 'undefined symbol'. Only if RTLD_DEFAULT or 
 -   * NULL is given, dlsym returns an appropriate pointer.
 -   */
+-  lock_dlerror ();
 -#if defined(__BIONIC__)
 -  handle = RTLD_DEFAULT;
 -#else
@@ -29,6 +30,7 @@ https://gitlab.gnome.org/GNOME/glib/-/merge_requests/2171
 -#endif
 -  if (!handle)
 -    g_module_set_error (fetch_dlerror (TRUE));
+-  unlock_dlerror ();
 -  
 -  return handle;
 +  return RTLD_DEFAULT;
@@ -41,5 +43,5 @@ https://gitlab.gnome.org/GNOME/glib/-/merge_requests/2171
    if (handle != RTLD_DEFAULT)
 -#endif
      {
+       lock_dlerror ();
        if (dlclose (handle) != 0)
- 	g_module_set_error (fetch_dlerror (TRUE));
