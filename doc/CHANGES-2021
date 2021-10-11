@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5123 2021/10/11 11:56:12 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.5124 2021/10/11 13:03:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7854,3 +7854,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.70.0 [cirnatdan 2021-10-11]
 	Added misc/nora version 0.2.0 [pin 2021-10-11]
 	Updated devel/gdbus-codegen to 2.70.0 [cirnatdan 2021-10-11]
+	Updated security/py-gssapi to 1.7.2 [adam 2021-10-11]
+	Updated devel/py-test-testmon to 1.2.0 [adam 2021-10-11]
