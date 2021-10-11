@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5128 2021/10/11 18:09:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5129 2021/10/11 20:12:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7864,3 +7864,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-iso3166 to 2.0.2 [adam 2021-10-11]
 	Updated devel/py-wrapt to 1.13.1 [adam 2021-10-11]
 	Updated time/py-pytz to 2021.3 [adam 2021-10-11]
+	Updated www/p5-WWW-Mechanize to 2.05 [schmonz 2021-10-11]
