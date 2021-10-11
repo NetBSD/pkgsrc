@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:10:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/11 08:59:48 pin Exp $
 
 RMD160 (addr2line-0.16.0.crate) = b8b4ae9268f1532e2338c21d0fa8e7ce3a6e1f6d
 SHA512 (addr2line-0.16.0.crate) = 7ea8fffcdff7f8f25c0a588fe2ee652053988ab2e1d39ac740f5199d6e7d30beed0272403d04b86ec5de6ad5459698cdf28f8efd5caab7b6693102df7ec4889c
@@ -867,9 +867,9 @@ Size (socket2-0.3.19.crate) = 33782 bytes
 RMD160 (socket2-0.4.1.crate) = e9fc3d1143c2054839bd1eaff38c73d1adb8e103
 SHA512 (socket2-0.4.1.crate) = 71eb3e8d15cf4e88f801d740230710b5b52ff1434526c0e61e950168979ee715dd8acec217d1a5d6f50fa49536558ef94115902f936302d81737eb163db4b8c4
 Size (socket2-0.4.1.crate) = 41364 bytes
-RMD160 (spotify-player-0.2.0.tar.gz) = 30f3389d03d708b34d8961f8b6e3ed001bd7d2e2
-SHA512 (spotify-player-0.2.0.tar.gz) = 4d9e00da2e7efa401fc5482b52abb1be72a09612a13d03da3c89d88938ce4bc8f7e7c6b44b2cf9b2acfa85c0bb3d10db7eb875468a29209184cc8187ca6bc888
-Size (spotify-player-0.2.0.tar.gz) = 516450 bytes
+RMD160 (spotify-player-0.3.0.tar.gz) = 916847796db4777e67bec45933c82dcce90ee9a4
+SHA512 (spotify-player-0.3.0.tar.gz) = b892009ecdde03df21c5e06a5af435e4a199919d748b6f86a0860195adc02ea0a070302b8db8b6204f022426906d3f16c6d5afc36a9f890c64fd4551e015ebc2
+Size (spotify-player-0.3.0.tar.gz) = 1424111 bytes
 RMD160 (stdweb-0.1.3.crate) = fd28f9df50b298e37f26ddec310f316b1bb55d8c
 SHA512 (stdweb-0.1.3.crate) = d7119427aae5d37336b8cf0002bae9c0d76a87a6865dbc9cc4c1f9abe64efe8d861c149b3975c6b3481a804e20be4fa28619257c233d3ea3d550ebd550ca5fa6
 Size (stdweb-0.1.3.crate) = 90221 bytes
