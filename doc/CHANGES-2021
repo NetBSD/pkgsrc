@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5117 2021/10/11 09:00:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5118 2021/10/11 09:02:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7846,3 +7846,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.8.0 [adam 2021-10-11]
 	Updated security/gpg-tui to 0.8.1 [pin 2021-10-11]
 	Updated audio/spotify-player to 0.3.0 [pin 2021-10-11]
+	Updated audio/termusic to 0.3.17 [pin 2021-10-11]
