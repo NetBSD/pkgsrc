@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5121 2021/10/11 09:52:46 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.5122 2021/10/11 10:40:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7852,3 +7852,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx-autoapi to 1.8.4 [adam 2021-10-11]
 	Updated security/py-paramiko to 2.8.0 [adam 2021-10-11]
 	Updated devel/glib2 to 2.70.0 [cirnatdan 2021-10-11]
+	Added misc/nora version 0.2.0 [pin 2021-10-11]
