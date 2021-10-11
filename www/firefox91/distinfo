@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/09/09 11:13:59 nia Exp $
+$NetBSD: distinfo,v 1.2.2.1 2021/10/11 18:36:20 bsiegert Exp $
 
-SHA1 (firefox-91.1.0esr.source.tar.xz) = 03e4857cf252ca5467de496a77e73ec7efde2408
-RMD160 (firefox-91.1.0esr.source.tar.xz) = 2f6873048bd5005473bb0a7c69a1d72087f36611
-SHA512 (firefox-91.1.0esr.source.tar.xz) = dad0249eb2ce66eb90ff5daf0dfb63105a19790dd45661d977f7cc889644e86b33b9b0c472f46d4032ae2e4fe02c2cf69d552156fb0ad4cf77a15b3542556ed3
-Size (firefox-91.1.0esr.source.tar.xz) = 380941240 bytes
-SHA1 (nodejs-output-91.0.tgz) = 4c5220054c1364ff679351c46206f5a4886c03bf
+RMD160 (firefox-91.2.0esr.source.tar.xz) = 410ea5ccd338f115134fb814a903812f82a4557a
+SHA512 (firefox-91.2.0esr.source.tar.xz) = f4cff7e43ff9927cbab3f02d37d360ee8bb0dbe988e280cb0638ee67bfe3c76e3a0469336de1b212fba66c958d58594b1739aafee1ebb84695d098c1e5c77b9d
+Size (firefox-91.2.0esr.source.tar.xz) = 381665824 bytes
 RMD160 (nodejs-output-91.0.tgz) = b21fe976a919cd891a757eaba2f4006d8e4ab747
 SHA512 (nodejs-output-91.0.tgz) = 3a457101a4aaa5ae955b77c41ba6b0d98eb5dd0ae9d6d8cc77c0c7bc0e844238a9c0d86cd1838ffb6a37ad8851f871c21e4ca1bb59d11e58fc42c5fec88c298c
 Size (nodejs-output-91.0.tgz) = 201061 bytes
