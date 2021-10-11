@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5110 2021/10/10 18:44:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5111 2021/10/11 06:04:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7835,3 +7835,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-route53 to 1.20.0 [adam 2021-10-10]
 	Updated security/py-certbot-dns-sakuracloud to 1.20.0 [adam 2021-10-10]
 	Updated security/py-certbot-nginx to 1.20.0 [adam 2021-10-10]
+	Updated devel/py-approvaltests to 3.0.0 [schmonz 2021-10-11]
