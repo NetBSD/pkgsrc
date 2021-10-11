@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/05/16 17:13:40 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/11 17:55:07 adam Exp $
 
-DISTNAME=	iso3166-1.0.1
+DISTNAME=	iso3166-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iso3166/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/deactivated/python-iso3166
 COMMENT=	Self-contained ISO 3166-1 country definitions
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
