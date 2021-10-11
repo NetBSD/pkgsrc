@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/10/08 18:55:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2021/10/11 12:27:02 tnn Exp $
 
 DISTNAME=	gh-2.0.0
 PKGREVISION=	2
@@ -15,12 +15,6 @@ LICENSE=	mit
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
 GO_BUILD_PATTERN=	./cmd/gh
-CHECK_RELRO_SKIP+=	bin/gh
-
-INSTALLATION_DIRS+=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/gh ${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
 
