@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2020/05/27 14:14:47 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/10/11 17:42:25 adam Exp $
 
-DISTNAME=	modulegraph-0.18
+DISTNAME=	modulegraph-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modulegraph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ronaldoussoren/modulegraph
+HOMEPAGE=	https://github.com/ronaldoussoren/modulegraph
 COMMENT=	Python module dependency analysis tool
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.15:../../graphics/py-altgraph
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
