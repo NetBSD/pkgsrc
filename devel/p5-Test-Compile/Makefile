@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2021/08/21 00:09:30 wen Exp $
+# $NetBSD: Makefile,v 1.31 2021/10/11 20:52:47 schmonz Exp $
 
-DISTNAME=	Test-Compile-v3.0.0
+DISTNAME=	Test-Compile-v3.0.1
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://metacpan.org/release/Test-Compile
 COMMENT=	Perl 5 module to check whether Perl module files compile correctly
 LICENSE=	${PERL5_LICENSE}
 
-TEST_DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 TEST_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
 TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
