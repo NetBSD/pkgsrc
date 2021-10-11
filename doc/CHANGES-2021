@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5115 2021/10/11 08:28:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5116 2021/10/11 08:58:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7844,3 +7844,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-regex to 2021.10.8 [adam 2021-10-11]
 	Updated games/scummvm to 2.5.0 [adam 2021-10-11]
 	Updated textproc/py-xmlschema to 1.8.0 [adam 2021-10-11]
+	Updated security/gpg-tui to 0.8.1 [pin 2021-10-11]
