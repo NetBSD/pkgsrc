@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/16 09:09:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/10/11 17:29:58 adam Exp $
 
 DISTNAME=	behave-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,23 +17,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hamcrest>=1.8:../../devel/py-hamcrest
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.1:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-path.py>=10.1:../../devel/py-path.py
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-DEPENDS+=	${PYPKGPREFIX}-traceback2-[0-9]*:../../devel/py-traceback2
-.endif
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-path.py
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-parse_type
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} behave behave-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
