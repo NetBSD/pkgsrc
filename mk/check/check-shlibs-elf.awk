@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.18 2020/01/16 22:53:11 joerg Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.19 2021/10/11 20:26:28 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -127,7 +127,7 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 			print DSO ": rpath relative to WRKDIR"
 		}
 	}
-	nblist = split(blacklist, blist, " ")
+	ntpaths = split(toxic, tpaths, " ")
 	nedirs = split(extradirs, edirs, " ")
 	for (lib in needed) {
 		found = 0
@@ -138,9 +138,9 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 			}
 			if (!libcache[libfile]) {
 				check_pkg(rpath[p] "/" lib)
-				for (b = 1; b <= nblist; b++) {
-					if (match(rpath[p] "/" lib, blist[b])) {
-						print DSO ": resolved path " rpath[p] "/" lib " matches blacklist " blist[b]
+				for (t = 1; t <= ntpaths; t++) {
+					if (match(rpath[p] "/" lib, tpaths[t])) {
+						print DSO ": resolved path " rpath[p] "/" lib " matches toxic " tpaths[t]
 					}
 				}
 				for (e = 1; e <= nedirs; e++) {
@@ -175,7 +175,7 @@ BEGIN {
 	readelf = ENVIRON["READELF"]
 	wrkdir = ENVIRON["WRKDIR"]
 	extradirs = ENVIRON["CHECK_WRKREF_EXTRA_DIRS"]
-	blacklist = ENVIRON["CHECK_SHLIBS_BLACKLIST"]
+	toxic = ENVIRON["CHECK_SHLIBS_TOXIC"]
 	pkg_info_cmd = ENVIRON["PKG_INFO_CMD"]
 	depends_file = ENVIRON["DEPENDS_FILE"]
 	if (readelf == "")
