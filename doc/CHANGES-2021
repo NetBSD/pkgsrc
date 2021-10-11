@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5130 2021/10/11 20:12:32 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5131 2021/10/11 20:19:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-pytz to 2021.3 [adam 2021-10-11]
 	Updated www/p5-WWW-Mechanize to 2.05 [schmonz 2021-10-11]
 	Updated www/p5-Test-WWW-Mechanize to 1.54 [schmonz 2021-10-11]
+	Updated www/p5-Mojolicious to 9.21 [schmonz 2021-10-11]
