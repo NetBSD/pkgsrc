@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/03/15 07:20:35 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/11 08:11:16 adam Exp $
 
-DISTNAME=	pycodestyle-2.7.0
+DISTNAME=	pycodestyle-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
