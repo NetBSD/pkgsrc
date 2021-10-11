@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/10/08 18:55:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/11 11:16:41 tnn Exp $
 
 PKGNAME=	restic-0.11.0
 PKGREVISION=	7
@@ -16,16 +16,14 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 
 GO_BUILD_PATTERN=	./cmd/restic
-CHECK_RELRO_SKIP+=	bin/restic
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 \
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 \
 			share/bash-completion/completions \
 			share/zsh/site-functions
 
 .include "go-modules.mk"
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/restic ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/bash-completion.sh \
 			${DESTDIR}${PREFIX}/share/bash-completion/completions/restic
 	${INSTALL_DATA} ${WRKSRC}/doc/zsh-completion.zsh \
