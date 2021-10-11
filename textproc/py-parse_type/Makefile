@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/13 11:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/11 17:27:08 adam Exp $
 
 DISTNAME=	parse_type-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-parse>=1.8.4:../../textproc/py-parse
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-parse
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
