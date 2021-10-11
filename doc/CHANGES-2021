@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5114 2021/10/11 08:16:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5115 2021/10/11 08:28:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7842,3 +7842,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-geventhttpclient to 1.5.3 [adam 2021-10-11]
 	Updated devel/py-codestyle to 2.8.0 [adam 2021-10-11]
 	Updated textproc/py-regex to 2021.10.8 [adam 2021-10-11]
+	Updated games/scummvm to 2.5.0 [adam 2021-10-11]
+	Updated textproc/py-xmlschema to 1.8.0 [adam 2021-10-11]
