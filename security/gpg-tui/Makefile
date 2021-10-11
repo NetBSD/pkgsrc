@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/09/04 20:42:52 pin Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/11 08:58:06 pin Exp $
 
-DISTNAME=	gpg-tui-0.8.0
+DISTNAME=	gpg-tui-0.8.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
