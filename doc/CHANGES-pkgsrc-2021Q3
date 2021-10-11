@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.9 2021/10/09 12:54:24 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.10 2021/10/11 18:50:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -28,4 +28,15 @@ apache24: security fix
 
 Pullup ticket #6510 - requested by nia
 x11/mate-applets: bugfix for non-x86
+
+Pullup ticket #6508 - requested by nia
+www/firefox78: security fix
+www/firefox78-l10n: dependent update
+
+Pullup ticket #6509 - requested by nia
+www/firefox91: security fix
+www/firefox91-l10n: dependent update
+
+Pullup ticket #6511 - requested by tm
+databases/hiredis: security fix
 
