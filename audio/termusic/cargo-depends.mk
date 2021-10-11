@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2021/10/02 21:45:03 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2021/10/11 09:01:48 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -27,7 +27,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
 CARGO_CRATE_DEPENDS+=	crossterm-0.20.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.8.0
 CARGO_CRATE_DEPENDS+=	ctor-0.1.21
-CARGO_CRATE_DEPENDS+=	dbus-0.9.4
+CARGO_CRATE_DEPENDS+=	dbus-0.9.5
 CARGO_CRATE_DEPENDS+=	dbus-crossroads-0.5.0
 CARGO_CRATE_DEPENDS+=	deflate-0.8.6
 CARGO_CRATE_DEPENDS+=	diff-0.1.12
@@ -118,7 +118,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro-crate-1.1.0
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.29
-CARGO_CRATE_DEPENDS+=	quote-1.0.9
+CARGO_CRATE_DEPENDS+=	quote-1.0.10
 CARGO_CRATE_DEPENDS+=	rand-0.8.4
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.3
@@ -150,7 +150,7 @@ CARGO_CRATE_DEPENDS+=	smawk-0.3.1
 CARGO_CRATE_DEPENDS+=	spin-0.5.2
 CARGO_CRATE_DEPENDS+=	strum-0.21.0
 CARGO_CRATE_DEPENDS+=	strum_macros-0.21.1
-CARGO_CRATE_DEPENDS+=	syn-1.0.77
+CARGO_CRATE_DEPENDS+=	syn-1.0.80
 CARGO_CRATE_DEPENDS+=	system-deps-3.2.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.2
@@ -163,7 +163,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec-1.5.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	toml-0.5.8
 CARGO_CRATE_DEPENDS+=	tui-0.16.0
-CARGO_CRATE_DEPENDS+=	tui-realm-stdlib-0.6.2
+CARGO_CRATE_DEPENDS+=	tui-realm-stdlib-0.6.3
 CARGO_CRATE_DEPENDS+=	tui-realm-treeview-0.3.0
 CARGO_CRATE_DEPENDS+=	tui-tree-widget-0.7.0
 CARGO_CRATE_DEPENDS+=	tuirealm-0.6.0
