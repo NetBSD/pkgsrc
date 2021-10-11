@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5112 2021/10/11 06:34:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5113 2021/10/11 06:52:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7838,3 +7838,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-approvaltests to 3.0.0 [schmonz 2021-10-11]
 	Updated devel/py-cwcwidth to 0.1.5 [adam 2021-10-11]
 	Updated devel/py-anyio to 3.3.3 [adam 2021-10-11]
+	Updated multimedia/mkvtoolnix to 62.0.0 [adam 2021-10-11]
+	Updated net/py-geventhttpclient to 1.5.3 [adam 2021-10-11]
