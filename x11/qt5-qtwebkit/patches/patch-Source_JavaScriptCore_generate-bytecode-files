@@ -1,0 +1,17 @@
+$NetBSD: patch-Source_JavaScriptCore_generate-bytecode-files,v 1.1 2021/10/11 10:14:40 tnn Exp $
+
+python 3.9 breakage:
+https://github.com/qtwebkit/qtwebkit/issues/993
+https://github.com/qtwebkit/qtwebkit/commit/78360c01c796b6260bf828bc9c8a0ef73c5132fd
+
+--- Source/JavaScriptCore/generate-bytecode-files.orig	2020-03-04 17:16:37.000000000 +0000
++++ Source/JavaScriptCore/generate-bytecode-files
+@@ -163,7 +163,7 @@ if __name__ == "__main__":
+         initBytecodesFile = openOrExit(initASMFileName, "w")
+ 
+     try:
+-        bytecodeSections = json.load(bytecodeFile, encoding = "utf-8")
++        bytecodeSections = json.load(bytecodeFile)
+     except:
+         print("Unexpected error parsing {0}: {1}".format(bytecodeJSONFile, sys.exc_info()))
+ 

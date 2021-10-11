@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2021/06/13 06:53:00 nia Exp $
+# $NetBSD: Makefile,v 1.91 2021/10/11 10:14:40 tnn Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -107,8 +107,6 @@ post-install:
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-# Source/JavaScriptCore/bytecode/BytecodeList.json unexpected keyword 'encoding'
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
 .include "../../lang/ruby/buildlink3.mk"
