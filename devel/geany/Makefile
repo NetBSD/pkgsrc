@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.72 2021/05/24 19:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2021/10/12 23:42:35 gutteridge Exp $
 
-DISTNAME=	geany-1.37.1
-PKGREVISION=	1
+DISTNAME=	geany-1.38
 CATEGORIES=	devel
 MASTER_SITES=	https://download.geany.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.geany.org/
-COMMENT=	Geany integrated development environment (IDE)
+COMMENT=	Small and lightweight integrated development environment (IDE)
 LICENSE=	gnu-gpl-v2 # AND internal Scintilla License.
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt gmake perl:run intltool
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++17
+
+# C++17
+GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE+=	geany.pc.in
 
@@ -33,10 +35,10 @@ CONFIGURE_ARGS+=	CC=sunpro
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
 .endif
 
-.include "options.mk"
-
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
