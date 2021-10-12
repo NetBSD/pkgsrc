@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5144 2021/10/12 09:28:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5145 2021/10/12 10:50:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7883,3 +7883,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/py-charset-normalizer to 2.0.7 [adam 2021-10-12]
 	Updated sysutils/ansible-base to 2.10.15 [adam 2021-10-12]
 	Updated finance/py-stripe to 2.61.0 [adam 2021-10-12]
+	Updated net/py-dpkt to 1.9.7.2 [adam 2021-10-12]
+	Updated comms/py-rich to 10.12.0 [adam 2021-10-12]
