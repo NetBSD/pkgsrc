@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/11/05 00:54:04 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/10/12 23:42:35 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -92,6 +92,7 @@ share/geany/filedefs/filetypes.Graphviz.conf
 share/geany/filedefs/filetypes.Groovy.conf
 share/geany/filedefs/filetypes.JSON.conf
 share/geany/filedefs/filetypes.Kotlin.conf
+share/geany/filedefs/filetypes.Meson.conf
 share/geany/filedefs/filetypes.Nim.conf
 share/geany/filedefs/filetypes.Scala.conf
 share/geany/filedefs/filetypes.Swift.conf
@@ -130,6 +131,7 @@ share/geany/filedefs/filetypes.haxe
 share/geany/filedefs/filetypes.html
 share/geany/filedefs/filetypes.java
 share/geany/filedefs/filetypes.javascript
+share/geany/filedefs/filetypes.julia
 share/geany/filedefs/filetypes.latex
 share/geany/filedefs/filetypes.lisp
 share/geany/filedefs/filetypes.lua
@@ -160,11 +162,10 @@ share/geany/filedefs/filetypes.xml
 share/geany/filedefs/filetypes.yaml
 share/geany/filedefs/filetypes.zephir
 share/geany/filetype_extensions.conf
-${PLIST.gtk3}share/geany/geany-3.0.css
-${PLIST.gtk3}share/geany/geany-3.20.css
-${PLIST.gtk3}share/geany/geany.css
+share/geany/geany-3.0.css
+share/geany/geany-3.20.css
+share/geany/geany.css
 share/geany/geany.glade
-${PLIST.gtk2}share/geany/geany.gtkrc
 share/geany/snippets.conf
 share/geany/tags/entities.html.tags
 share/geany/tags/std.pas.tags
