@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5140 2021/10/11 20:52:59 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5141 2021/10/12 03:04:19 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7876,3 +7876,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-NoWarnings to 1.06 [schmonz 2021-10-11]
 	Updated devel/p5-Test-MockModule to 0.177.0 [schmonz 2021-10-11]
 	Updated devel/p5-Test-Compile to 3.0.1 [schmonz 2021-10-11]
+	Updated comms/asterisk18 to 18.7.1 [jnemeth 2021-10-12]
