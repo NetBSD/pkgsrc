@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2021/10/10 12:51:41 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/10/12 07:06:01 nia Exp $
 
-PKGNAME=	libaom-3.1.3
-DISTNAME=	ce9a40ce01ade9d6fea1721c82645804a2f39b00
+DISTNAME=	libaom-3.1.3
 CATEGORIES=	multimedia
-# checksum is not stable - requires re-uploading
-MASTER_SITES=	${MASTER_SITE_LOCAL:=libaom/}
-DIST_SUBDIR=	libaom
+MASTER_SITES=	https://storage.googleapis.com/aom-releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aomedia.googlesource.com/aom/+archive/
+HOMEPAGE=	https://aomedia.googlesource.com/aom/
 COMMENT=	Library for using AV1, video coding format
 LICENSE=	2-clause-bsd
 
