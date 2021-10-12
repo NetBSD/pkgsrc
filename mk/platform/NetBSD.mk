@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.66 2021/09/27 16:13:26 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.67 2021/10/12 07:48:53 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -150,7 +150,8 @@ _OPSYS_SUPPORTS_MKPIE=	yes
 .if (${MACHINE_ARCH} == "i386") || \
     (${MACHINE_ARCH} == "x86_64") || \
     (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "aarch64eb")
+    (${MACHINE_ARCH} == "aarch64eb") || \
+    (${MACHINE_ARCH} == "powerpc")
 _OPSYS_SUPPORTS_RELRO=	yes
 .endif
 
