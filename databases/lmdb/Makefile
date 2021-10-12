@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/06/14 09:04:23 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/10/12 09:10:06 adam Exp $
 
 .include "../../databases/openldap/Makefile.version"
 
@@ -22,6 +22,7 @@ INSTALLATION_DIRS+=	include
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+CHECK_PORTABILITY_SKIP=	configure
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
