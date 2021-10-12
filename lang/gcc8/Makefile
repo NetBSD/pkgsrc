@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/10/01 11:49:59 nia Exp $
+# $NetBSD: Makefile,v 1.30 2021/10/12 13:46:15 tnn Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -127,9 +127,9 @@ MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
-CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
-.if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=		--disable-bootstrap
+.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-bootstrap
+CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
