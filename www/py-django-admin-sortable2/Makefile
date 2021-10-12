@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/05/25 05:00:24 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/10/12 18:52:58 adam Exp $
 
-DISTNAME=	django-admin-sortable2-1.0
+DISTNAME=	django-admin-sortable2-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-admin-sortable2/}
