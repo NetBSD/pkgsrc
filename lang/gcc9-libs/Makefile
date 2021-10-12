@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/02/13 15:56:17 maya Exp $
+# $NetBSD: Makefile,v 1.5 2021/10/12 13:46:15 tnn Exp $
 
 GCC_PKGNAME=	gcc9
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -22,8 +22,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 USE_TOOLS+=	pax
 
-NO_BUILD=	yes
-CHECK_SHLIBS=	no
+NO_BUILD=		yes
+CHECK_SHLIBS=		no
+RELRO_SUPPORTED=	no
 
 ## Depend on exactly ${GCC9_DIST_VERSION}.
 BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC9_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc9

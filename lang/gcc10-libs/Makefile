@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/16 15:03:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/10/12 13:46:14 tnn Exp $
 
 GCC_PKGNAME=	gcc10
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -22,8 +22,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 USE_TOOLS+=	pax
 
-NO_BUILD=	yes
-CHECK_SHLIBS=	no
+NO_BUILD=		yes
+CHECK_SHLIBS=		no
+RELRO_SUPPORTED=	no
 
 ## Depend on exactly ${GCC10_DIST_VERSION}.
 BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC10_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc10
