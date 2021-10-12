@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:27:09 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/12 10:49:44 adam Exp $
 
-RMD160 (rich-10.11.0.tar.gz) = ba717645286bd14053e90266a7689f8d33b09856
-SHA512 (rich-10.11.0.tar.gz) = 7e2e5df0d81d7ad2b3d1f6a54f4a71eae404382d5b98b8a745d241352a26dbc20e3a24f9968148c1e911fc474da6650dbe8d3cc3ba618ab2ffd28e6d3c933d82
-Size (rich-10.11.0.tar.gz) = 195164 bytes
+RMD160 (rich-10.12.0.tar.gz) = 27f7811cfd8af9aa264b517b97b39baac3db6e14
+SHA512 (rich-10.12.0.tar.gz) = 7c57d1b3cb99b753eb4a869b05800cea0c446aee906fe3959cc5d3ea93f163f411c51350d85e5ba048047145bcf2269a8570b37f3a240d7e95e537d9ffec4452
+Size (rich-10.12.0.tar.gz) = 195363 bytes
