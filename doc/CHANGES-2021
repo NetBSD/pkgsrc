@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5142 2021/10/12 07:04:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5143 2021/10/12 09:12:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7879,3 +7879,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk18 to 18.7.1 [jnemeth 2021-10-12]
 	Updated databases/repmgr to 5.3.0 [adam 2021-10-12]
 	Updated devel/py-immutabledict to 2.2.1 [adam 2021-10-12]
+	Updated databases/openldap to 2.5.8 [adam 2021-10-12]
+	Updated converters/py-charset-normalizer to 2.0.7 [adam 2021-10-12]
