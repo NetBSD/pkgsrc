@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:57:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/12 09:26:10 adam Exp $
 
-RMD160 (ansible-base-2.10.14.tar.gz) = 7dcc2621e79385a2cd799ec69625e588e1d9fe90
-SHA512 (ansible-base-2.10.14.tar.gz) = 5701143e9aa0e63905ab0e12eca03c4843f6e8b9e3a33e13a950b9feba07dfd7792e0398698f58155c75aed0622b7ad0259e0aabcef602ba963192b7d04b1b81
-Size (ansible-base-2.10.14.tar.gz) = 5990882 bytes
+RMD160 (ansible-base-2.10.15.tar.gz) = aba276d3c7be12a7949bb4e96bbac3ceac780dde
+SHA512 (ansible-base-2.10.15.tar.gz) = fed38197df8045a7226f36288bb4cce092ec2890cd12b015fe640460a7f860ad2a7ac791311e6ab4cdc26c86bfc59cbd16eb1e126693cb23398f8d20d88d128b
+Size (ansible-base-2.10.15.tar.gz) = 6137947 bytes
 SHA1 (patch-lib_ansible_module__utils_facts_hardware_netbsd.py) = cdc41b104bffab7badd00446a9d0cdecba32cca2
