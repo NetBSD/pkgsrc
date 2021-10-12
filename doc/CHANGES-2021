@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5145 2021/10/12 10:50:00 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5146 2021/10/12 12:46:22 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7885,3 +7885,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.61.0 [adam 2021-10-12]
 	Updated net/py-dpkt to 1.9.7.2 [adam 2021-10-12]
 	Updated comms/py-rich to 10.12.0 [adam 2021-10-12]
+	Updated pkgtools/pkgin to 21.10.0 [jperkin 2021-10-12]
