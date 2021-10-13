@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:20:51 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/13 12:38:52 adam Exp $
 
 RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
@@ -14,6 +14,7 @@ SHA1 (patch-gcc_config.host) = 8920ce841f6088b365c9b590e3ea9535bd880b40
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = 87185f5c2e2dbe4195cb19fe6213d2d616d5519b
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
 SHA1 (patch-gcc_config_aarch64_driver-aarch64.c) = 7e17b49924ddd9ff33d049d6539e4df77d14d3e5
+SHA1 (patch-gcc_config_darwin-driver.c) = fd57dcca96ce5ddc330e7c7b3b811f64856d7611
 SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
