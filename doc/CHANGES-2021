@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5151 2021/10/13 07:28:19 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5152 2021/10/13 07:29:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7893,3 +7893,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-wrapt to 1.13.2 [adam 2021-10-13]
 	Updated x11/xterm to 369 [pin 2021-10-13]
 	Updated security/minisign to 0.10 [fcambus 2021-10-13]
+	Updated textproc/lowdown to 0.9.2 [fcambus 2021-10-13]
