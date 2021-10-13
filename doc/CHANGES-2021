@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5148 2021/10/12 23:42:51 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5149 2021/10/13 06:58:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7889,3 +7889,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gnupg2 to 2.2.32 [adam 2021-10-12]
 	Updated www/py-django-admin-sortable2 to 1.0.2 [adam 2021-10-12]
 	Updated devel/geany to 1.38 [gutteridge 2021-10-12]
+	Updated devel/git to 2.33.1 [adam 2021-10-13]
+	Updated devel/py-wrapt to 1.13.2 [adam 2021-10-13]
