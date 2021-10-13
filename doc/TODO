@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21146 2021/10/11 20:50:18 schmonz Exp $
+$NetBSD: TODO,v 1.21147 2021/10/13 07:28:19 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -1236,7 +1236,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mingw-binutils-2.36.1
 	o mini_sendmail-1.3.9
 	o miniircd-2.1
-	o minisign-0.10
 	o mipsel-none-elf-binutils-2.36.1
 	o mipsel-none-elf-gcc-9.3.0
 	o mit-scheme-bin-9.2
