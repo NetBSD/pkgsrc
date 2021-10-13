@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.10 2021/10/11 18:50:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.11 2021/10/13 20:51:04 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -39,4 +39,7 @@ www/firefox91-l10n: dependent update
 
 Pullup ticket #6511 - requested by tm
 databases/hiredis: security fix
+
+Pullup ticket #6512 - requested by mlelstv
+print/ghostscript-agpl: pullup and build fix
 
