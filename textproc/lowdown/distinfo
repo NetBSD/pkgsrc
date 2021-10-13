@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 15:01:25 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/13 07:29:11 fcambus Exp $
 
-RMD160 (lowdown-0.9.1.tar.gz) = 7a83aa3a4e651a67a9d85eee3a09549def941b68
-SHA512 (lowdown-0.9.1.tar.gz) = 51cec24a37609c57b779e07c6a29d0efba3d823ce2f4b74fa86faecbd36f29e87576432951597c55ba517cb2f16d5c48cd45339a9dabe2a3d7c7c7947c55684f
-Size (lowdown-0.9.1.tar.gz) = 214367 bytes
+RMD160 (lowdown-0.9.2.tar.gz) = 6114d82c874950fbeb2e571ebabbe407d508eb99
+SHA512 (lowdown-0.9.2.tar.gz) = c800bd552989724b131214e9ccea416c457db50f06ff944e04b0311f4b9b2aea1f5c258e6ee35a5506373f9a9611ee3916cc493fb70da13cec630dc1a37b699b
+Size (lowdown-0.9.2.tar.gz) = 217279 bytes
