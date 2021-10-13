@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/09/22 21:18:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.23 2021/10/13 18:10:56 bouyer Exp $
 #
 VERSION=	4.13.4
 
@@ -40,6 +40,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]_*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.0_STABLE-x86_64
 
 SSP_SUPPORTED=		no
+MKPIE_SUPPORTED= 	no
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xenstoretools-[0-9]*
