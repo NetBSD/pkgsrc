@@ -1,8 +1,12 @@
-$NetBSD: patch-Modules___ctypes_callproc.c,v 1.1 2021/06/23 18:30:24 schmonz Exp $
+$NetBSD: patch-Modules___ctypes_callproc.c,v 1.1.2.1 2021/10/13 21:04:01 tm Exp $
 
 macOS arm64 support, via MacPorts.
 
---- Modules/_ctypes/callproc.c.orig	2021-06-22 19:20:28.000000000 +0000
+Fix CVE-2021-3177: Replace snprintf with Python unicode formatting in ctypes param reprs
+Via Fedora:
+https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00357-CVE-2021-3177.patch
+
+--- Modules/_ctypes/callproc.c.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Modules/_ctypes/callproc.c
 @@ -74,6 +74,10 @@
  #include <malloc.h>
@@ -15,7 +19,112 @@ macOS arm64 support, via MacPorts.
  #include <ffi.h>
  #include "ctypes.h"
  #ifdef HAVE_ALLOCA_H
-@@ -773,7 +777,8 @@ static int _call_function_pointer(int fl
+@@ -460,50 +464,62 @@ PyCArg_dealloc(PyCArgObject *self)
+ static PyObject *
+ PyCArg_repr(PyCArgObject *self)
+ {
+-    char buffer[256];
+     switch(self->tag) {
+     case 'b':
+     case 'B':
+-        sprintf(buffer, "<cparam '%c' (%d)>",
++        return PyString_FromFormat("<cparam '%c' (%d)>",
+             self->tag, self->value.b);
+-        break;
+     case 'h':
+     case 'H':
+-        sprintf(buffer, "<cparam '%c' (%d)>",
++        return PyString_FromFormat("<cparam '%c' (%d)>",
+             self->tag, self->value.h);
+-        break;
+     case 'i':
+     case 'I':
+-        sprintf(buffer, "<cparam '%c' (%d)>",
++        return PyString_FromFormat("<cparam '%c' (%d)>",
+             self->tag, self->value.i);
+-        break;
+     case 'l':
+     case 'L':
+-        sprintf(buffer, "<cparam '%c' (%ld)>",
++        return PyString_FromFormat("<cparam '%c' (%ld)>",
+             self->tag, self->value.l);
+-        break;
+ 
+ #ifdef HAVE_LONG_LONG
+     case 'q':
+     case 'Q':
+-        sprintf(buffer,
+-            "<cparam '%c' (%" PY_FORMAT_LONG_LONG "d)>",
++        return PyString_FromFormat("<cparam '%c' (%lld)>",
+             self->tag, self->value.q);
+-        break;
+ #endif
+     case 'd':
+-        sprintf(buffer, "<cparam '%c' (%f)>",
+-            self->tag, self->value.d);
+-        break;
+-    case 'f':
+-        sprintf(buffer, "<cparam '%c' (%f)>",
+-            self->tag, self->value.f);
+-        break;
+-
++    case 'f': {
++        PyObject *s = PyString_FromFormat("<cparam '%c' (", self->tag);
++        if (s == NULL) {
++            return NULL;
++        }
++        PyObject *f = PyFloat_FromDouble((self->tag == 'f') ? self->value.f : self->value.d);
++        if (f == NULL) {
++            Py_DECREF(s);
++            return NULL;
++        }
++        PyObject *r = PyObject_Repr(f);
++        Py_DECREF(f);
++        if (r == NULL) {
++            Py_DECREF(s);
++            return NULL;
++        }
++        PyString_ConcatAndDel(&s, r);
++        if (s == NULL) {
++            return NULL;
++        }
++        r = PyString_FromString(")>");
++        if (r == NULL) {
++            Py_DECREF(s);
++            return NULL;
++        }
++        PyString_ConcatAndDel(&s, r);
++        return s;
++    }
+     case 'c':
+-        sprintf(buffer, "<cparam '%c' (%c)>",
++        return PyString_FromFormat("<cparam '%c' ('%c')>",
+             self->tag, self->value.c);
+-        break;
+ 
+ /* Hm, are these 'z' and 'Z' codes useful at all?
+    Shouldn't they be replaced by the functionality of c_string
+@@ -512,16 +528,13 @@ PyCArg_repr(PyCArgObject *self)
+     case 'z':
+     case 'Z':
+     case 'P':
+-        sprintf(buffer, "<cparam '%c' (%p)>",
++        return PyUnicode_FromFormat("<cparam '%c' (%p)>",
+             self->tag, self->value.p);
+-        break;
+ 
+     default:
+-        sprintf(buffer, "<cparam '%c' at %p>",
+-            self->tag, self);
+-        break;
++        return PyString_FromFormat("<cparam '%c' at %p>",
++            (unsigned char)self->tag, (void *)self);
+     }
+-    return PyString_FromString(buffer);
+ }
+ 
+ static PyMemberDef PyCArgType_members[] = {
+@@ -773,7 +786,8 @@ static int _call_function_pointer(int fl
                                    ffi_type **atypes,
                                    ffi_type *restype,
                                    void *resmem,
@@ -25,7 +134,7 @@ macOS arm64 support, via MacPorts.
  {
  #ifdef WITH_THREAD
      PyThreadState *_save = NULL; /* For Py_BLOCK_THREADS and Py_UNBLOCK_THREADS */
-@@ -801,6 +806,37 @@ static int _call_function_pointer(int fl
+@@ -801,6 +815,37 @@ static int _call_function_pointer(int fl
      if ((flags & FUNCFLAG_CDECL) == 0)
          cc = FFI_STDCALL;
  #endif
@@ -63,7 +172,7 @@ macOS arm64 support, via MacPorts.
      if (FFI_OK != ffi_prep_cif(&cif,
                                 cc,
                                 argcount,
-@@ -810,6 +846,7 @@ static int _call_function_pointer(int fl
+@@ -810,6 +855,7 @@ static int _call_function_pointer(int fl
                          "ffi_prep_cif failed");
          return -1;
      }
@@ -71,7 +180,7 @@ macOS arm64 support, via MacPorts.
  
      if (flags & (FUNCFLAG_USE_ERRNO | FUNCFLAG_USE_LASTERROR)) {
          error_object = _ctypes_get_errobj(&space);
-@@ -1183,6 +1220,9 @@ PyObject *_ctypes_callproc(PPROC pProc,
+@@ -1183,6 +1229,9 @@ PyObject *_ctypes_callproc(PPROC pProc,
                                       rtype, resbuf,
                                       Py_SAFE_DOWNCAST(argcount,
                                                        Py_ssize_t,
@@ -81,7 +190,7 @@ macOS arm64 support, via MacPorts.
                                                        int)))
          goto cleanup;
  
-@@ -1416,6 +1456,25 @@ copy_com_pointer(PyObject *self, PyObjec
+@@ -1416,6 +1465,25 @@ copy_com_pointer(PyObject *self, PyObjec
  }
  #else
  
@@ -107,7 +216,7 @@ macOS arm64 support, via MacPorts.
  static PyObject *py_dl_open(PyObject *self, PyObject *args)
  {
      char *name;
-@@ -1940,6 +1999,9 @@ PyMethodDef _ctypes_module_methods[] = {
+@@ -1940,6 +2008,9 @@ PyMethodDef _ctypes_module_methods[] = {
       "dlopen(name, flag={RTLD_GLOBAL|RTLD_LOCAL}) open a shared library"},
      {"dlclose", py_dl_close, METH_VARARGS, "dlclose a library"},
      {"dlsym", py_dl_sym, METH_VARARGS, "find symbol in shared library"},

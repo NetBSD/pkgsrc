@@ -1,9 +1,14 @@
-$NetBSD: patch-Lib_urllib2.py,v 1.2 2020/09/20 12:10:27 mgorny Exp $
+$NetBSD: patch-Lib_urllib2.py,v 1.2.10.1 2021/10/13 21:04:01 tm Exp $
 
 bpo-39503 (CVE-2020-8492): ReDoS on AbstractBasicAuthHandler
 
-taken from:
+Taken from:
 https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e65e11dd0234f2f51ebaef61fc6e848d4059
+
+bpo-43075 (CVE-2021-3733): Fix ReDoS in request
+
+Taken from:
+https://github.com/python/cpython/pull/24391/
 
 --- Lib/urllib2.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/urllib2.py
@@ -15,7 +20,7 @@ https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e
 -                    'realm=(["\']?)([^"\']*)\\2', re.I)
 +    rx = re.compile('(?:^|,)'   # start of the string or ','
 +                    '[ \t]*'    # optional whitespaces
-+                    '([^ \t]+)' # scheme like "Basic"
++                    '([^ \t,]+)' # scheme like "Basic"
 +                    '[ \t]+'    # mandatory whitespaces
 +                    # realm=xxx
 +                    # realm='xxx'
