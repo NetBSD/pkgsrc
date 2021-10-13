@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.133 2021/06/08 17:32:34 pin Exp $
+# $NetBSD: Makefile,v 1.134 2021/10/13 07:24:11 pin Exp $
 
-DISTNAME=	xterm-368
+DISTNAME=	xterm-369
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
