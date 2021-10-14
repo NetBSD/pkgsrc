@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2021/10/14 07:35:54 tron Exp $
+# $NetBSD: Makefile,v 1.45 2021/10/14 12:42:16 wiz Exp $
+#
+# Please also update the dependency pattern in mozilla-rootcerts-openssl
+# and bump its version when updating this package.
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
