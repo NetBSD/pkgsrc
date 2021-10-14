@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/04/24 19:41:09 pin Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/14 13:09:03 pin Exp $
 
-DISTNAME=	echomap-0.6.0
+DISTNAME=	echomap-0.6.1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pjsier/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/pjsier/echomap/
 COMMENT=	Preview map files in the terminal
 LICENSE=	mit
