@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/10/14 07:21:43 tron Exp $
+# $NetBSD: Makefile,v 1.44 2021/10/14 07:35:54 tron Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -14,7 +14,7 @@ LICENSE=	mpl-2.0
 USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run mkdir:run
 
 # This must be kept in sync with security/mozilla-rootcerts-openssl
-CERTDATA_DATE=	20211014
+CERTDATA_DATE=	20210916
 CERTDATA=	certdata-${CERTDATA_DATE}.txt
 
 WRKSRC=		${WRKDIR}
