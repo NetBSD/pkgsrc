@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.56 2021/09/08 21:05:02 nia Exp $
+# $NetBSD: Makefile,v 1.57 2021/10/14 19:12:55 rhialto Exp $
 
 DISTNAME=	simh-4.0.0
-PKGNAME=	simh-4.0.0.20180919
-PKGREVISION=	3
+PKGNAME=	simh-4.0.0.20211012
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3
+GITHUB_TAG=	06a8447d26810110a8b168d7525955479bcd3f3a
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supniks historical computer simulator
 LICENSE=	mit
@@ -38,7 +37,7 @@ LDFLAGS.SunOS+=	-lm
 
 LDFLAGS.Linux+=	-lm -pthread -lrt
 
-INSTALLATION_DIRS=	bin share/simh share/doc/simh
+INSTALLATION_DIRS=	bin share/simh share/simh/TX-0 share/doc/simh
 
 MAKE_FILE=		makefile
 INCLUDES=		${PREFIX:Q}/include:\
@@ -59,7 +58,7 @@ MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q} CFLAGS_O=${CFLAGS:Q}
 MAKE_ENV+=		FONTPATH=/usr/pkg/share/fonts/X11/TTF
 
-BUILD_TARGET=		all besm6
+BUILD_TARGET=		TESTS=0 all
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
@@ -71,11 +70,16 @@ do-install:
 		fi ;							\
 	done)
 
-	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
-	${INSTALL_DATA} ${WRKSRC}/VAX/vmb.exe ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA} ${WRKSRC}/TX-0/*.bin ${DESTDIR}${PREFIX}/share/simh/TX-0
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
 		${INSTALL_DATA} "$$TXT" ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
+
+# Note: tests require shm (/var/shm is a tmpfs) for the uc15.
+# They are part of the build and can't be run separately.
+do-test:
+	cd ${WRKSRC} && ${TEST_MAKE_CMD} clean
+	cd ${WRKSRC} && ${TEST_MAKE_CMD} all
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
