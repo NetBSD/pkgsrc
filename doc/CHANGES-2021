@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5158 2021/10/14 07:38:17 tron Exp $
+$NetBSD: CHANGES-2021,v 1.5159 2021/10/14 08:01:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7899,3 +7899,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/libmediainfo to 20.03nb1 [wiz 2021-10-14]
 	Updated databases/p5-DBI to 1.643nb3 [wiz 2021-10-14]
 	Updated security/mozilla-rootcerts to 1.0.20210916 [tron 2021-10-14]
+	Updated audio/librespot to 0.3.0 [pin 2021-10-14]
