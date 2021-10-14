@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/10/14 12:40:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/14 12:42:43 wiz Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-2.7
 CATEGORIES=	security
@@ -14,7 +14,7 @@ USE_TOOLS+=	openssl
 WRKSRC=		${WRKDIR}
 BUILD_DIRS=	# empty
 
-BUILD_DEPENDS+=	mozilla-rootcerts-1.0.20211014{,nb[0-9]*}:../../security/mozilla-rootcerts
+BUILD_DEPENDS+=	mozilla-rootcerts-1.0.20210916{,nb[0-9]*}:../../security/mozilla-rootcerts
 SCRIPT=		${LOCALBASE}/sbin/mozilla-rootcerts
 
 CHECK_BUILTIN.openssl=	yes
