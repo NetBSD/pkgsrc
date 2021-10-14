@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5159 2021/10/14 08:01:58 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5160 2021/10/14 12:40:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7900,3 +7900,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/p5-DBI to 1.643nb3 [wiz 2021-10-14]
 	Updated security/mozilla-rootcerts to 1.0.20210916 [tron 2021-10-14]
 	Updated audio/librespot to 0.3.0 [pin 2021-10-14]
+	Updated security/mozilla-rootcerts-openssl to 2.7 [wiz 2021-10-14]
