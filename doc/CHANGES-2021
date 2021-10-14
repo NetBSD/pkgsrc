@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5161 2021/10/14 13:09:26 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5162 2021/10/14 19:13:12 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7902,3 +7902,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/librespot to 0.3.0 [pin 2021-10-14]
 	Updated security/mozilla-rootcerts-openssl to 2.7 [wiz 2021-10-14]
 	Updated geography/echomap to 0.6.1 [pin 2021-10-14]
+	Updated emulators/simh to 4.0.0.20211012 [rhialto 2021-10-14]
