@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/09/24 14:12:28 gson Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/10/14 20:37:58 rhialto Exp $
 bin/simh-3b2
 bin/simh-altair
 bin/simh-altairz80
@@ -12,6 +12,7 @@ bin/simh-hp2100
 bin/simh-hp3000
 bin/simh-i1401
 bin/simh-i1620
+bin/simh-i650
 bin/simh-i701
 bin/simh-i7010
 bin/simh-i704
@@ -22,21 +23,28 @@ bin/simh-i7094
 bin/simh-ibm1130
 bin/simh-id16
 bin/simh-id32
-bin/simh-imds-225
-bin/simh-isys8010
-bin/simh-isys8020
-bin/simh-isys8024
-bin/simh-isys8030
+bin/simh-infoserver100
+bin/simh-infoserver1000
+bin/simh-infoserver150vxt
+bin/simh-intel-mds
 bin/simh-lgp
 bin/simh-microvax1
 bin/simh-microvax2
+bin/simh-microvax2000
+bin/simh-microvax3100
+bin/simh-microvax3100e
+bin/simh-microvax3100m80
 bin/simh-microvax3900
 bin/simh-nova
 bin/simh-pdp1
 bin/simh-pdp10
+bin/simh-pdp10-ka
+bin/simh-pdp10-ki
+bin/simh-pdp10-kl
 bin/simh-pdp11
 bin/simh-pdp15
 bin/simh-pdp4
+bin/simh-pdp6
 bin/simh-pdp7
 bin/simh-pdp8
 bin/simh-pdp9
@@ -54,7 +62,13 @@ bin/simh-vax
 bin/simh-vax730
 bin/simh-vax750
 bin/simh-vax780
+bin/simh-vax8200
 bin/simh-vax8600
+bin/simh-vaxstation3100m30
+bin/simh-vaxstation3100m38
+bin/simh-vaxstation3100m76
+bin/simh-vaxstation4000m60
+bin/simh-vaxstation4000vlc
 share/doc/simh/0ReadMe_Projects.txt
 share/doc/simh/0readmeAsynchIO.txt
 share/doc/simh/0readme_39.txt
@@ -76,6 +90,7 @@ share/doc/simh/i7094_bug_history.txt
 share/doc/simh/id_diag.txt
 share/doc/simh/input.txt
 share/doc/simh/m68k_parse.y.txt
+share/doc/simh/m68kasm.y.txt
 share/doc/simh/pdp10_bug_history.txt
 share/doc/simh/pdp18b_diag.txt
 share/doc/simh/pdp1_diag.txt
@@ -89,5 +104,5 @@ share/doc/simh/sigma_disks.txt
 share/doc/simh/system3.txt
 share/doc/simh/tx0_diag.txt
 share/doc/simh/vax780_bug_history.txt
-share/simh/ka655x.bin
-share/simh/vmb.exe
+share/simh/TX-0/bin_newMouse_3-22-66.bin
+share/simh/TX-0/bin_tic-tac-toe_new_code_12-16-61.bin
