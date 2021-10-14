@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5155 2021/10/14 07:09:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5156 2021/10/14 07:09:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7897,3 +7897,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 5.9.2 [wiz 2021-10-13]
 	Updated sysutils/zoxide to 0.7.6 [pin 2021-10-13]
 	Updated multimedia/libmediainfo to 20.03nb1 [wiz 2021-10-14]
+	Updated databases/p5-DBI to 1.643nb3 [wiz 2021-10-14]
