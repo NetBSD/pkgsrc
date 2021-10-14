@@ -2,7 +2,7 @@ Bob Supnik's historical computer simulator, including:
 
 	3b2 alpha altair altairz80 b5000 besm6 cdc1700 eclipse gri
 	h316 hp2100 hp3000 i1401 i1620 i650 i7000 i7094 ibm1130
-	intel-systems id16 id32 lgp nova pdp1 pdp10 pdp11 pdp18b
+	intel-systems id16 id32 lgp nova pdp1 pdp6 pdp10 pdp11 pdp18b
 	pdp4 pdp7 pdp8 pdp9 s3 sage sds ssem tx0 vax
 
 See http://www.netbsd.org/ports/vax/emulator-howto.html on how to
