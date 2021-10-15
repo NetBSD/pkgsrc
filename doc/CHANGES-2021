@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5167 2021/10/15 12:21:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5168 2021/10/15 12:30:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7910,3 +7910,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/neomutt to 20211015 [wiz 2021-10-15]
 	Updated devel/py-slugify to 5.0.2 [adam 2021-10-15]
 	Updated devel/py-plumbum to 1.7.0 [adam 2021-10-15]
+	Updated archivers/arqiver to 0.9.0 [pin 2021-10-15]
