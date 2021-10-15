@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:05:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/15 12:30:01 pin Exp $
 
-RMD160 (Arqiver-0.8.0.tar.gz) = 779555bfad06e80f739c53bb516ce6240b487b56
-SHA512 (Arqiver-0.8.0.tar.gz) = c8d0fb14d7dbf98efa64253914d8f9c58b9b87f45de037ddfa24ab44edc9a8826cc46c80e56b4a41c735f6365e33b0c10d2ad8b31a90172701bc100941bffcfd
-Size (Arqiver-0.8.0.tar.gz) = 128316 bytes
+RMD160 (Arqiver-0.9.0.tar.gz) = 33853efe8f35353b7a9b71fb43f0f5c1bef07150
+SHA512 (Arqiver-0.9.0.tar.gz) = 9faa218cb3b78a57c5d5c3298b52efba0c09e29a7e4f2dcdde87ddabbe557bfa7d6926417b00e760115a8f7016c097a87fdb727b4370bc43d55e947c20f797f9
+Size (Arqiver-0.9.0.tar.gz) = 135834 bytes
