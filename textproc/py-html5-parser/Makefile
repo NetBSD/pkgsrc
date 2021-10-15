@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/04/21 11:42:48 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/10/15 15:05:59 adam Exp $
 
-DISTNAME=	html5-parser-0.4.9
+DISTNAME=	html5-parser-0.4.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html5-parser/}
 
@@ -11,8 +10,9 @@ HOMEPAGE=	https://github.com/kovidgoyal/html5-parser
 COMMENT=	Fast, standards-compliant, C-based HTML5 parser
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-lxml>=3.8.0:../../textproc/py-lxml
 
 USE_TOOLS+=	pkg-config
 
