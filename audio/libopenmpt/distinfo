@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 13:09:33 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/15 08:36:21 fcambus Exp $
 
-RMD160 (libopenmpt-0.5.10+release.autotools.tar.gz) = a6db9e0e0a7dbb820e2cadd132cbede4d5a488fe
-SHA512 (libopenmpt-0.5.10+release.autotools.tar.gz) = ea76b6e3a6038046fc72e92203018202a247e4216bc33cc358290c74aba119e81e0c40d0f4f90874dc605d9354f04437b516b11b0ee3d644af7f230851e3f816
-Size (libopenmpt-0.5.10+release.autotools.tar.gz) = 1475967 bytes
+SHA1 (libopenmpt-0.5.12+release.autotools.tar.gz) = 8429b6002523befc8aea080c5bdfa821ae69a457
+RMD160 (libopenmpt-0.5.12+release.autotools.tar.gz) = 1cbb888d6135a1d1ac1af73e41a7a1f16a1ad21d
+SHA512 (libopenmpt-0.5.12+release.autotools.tar.gz) = e22a79737a825a5753429271bba7af94fd195fb0ff770a3e2091b941c3856bbad770eeeb88cd86d37e01b0138e820199d3650f55546f2e33bb2e99b1b14d9925
+Size (libopenmpt-0.5.12+release.autotools.tar.gz) = 1477744 bytes
