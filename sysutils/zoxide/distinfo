@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/13 12:49:45 pin Exp $
+$NetBSD: distinfo,v 1.9 2021/10/15 12:34:53 pin Exp $
 
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -285,6 +285,6 @@ Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
 RMD160 (wyz-0.2.0.crate) = e3ff9087ebe5a2fa1a4f0b4a3a6c71a770ffaa5c
 SHA512 (wyz-0.2.0.crate) = 3a16c3e81d3595ddf1e7816e698eb4d07c7455dec579fd5e97b5d8b77e626cda52f3cdaee71e234e5e500a7ac58b9d1d5f12b17264686f3f225d5e5b0d315de7
 Size (wyz-0.2.0.crate) = 12926 bytes
-RMD160 (zoxide-0.7.6.tar.gz) = e5c89735a8e89e0aae1ae1489b38973d411c781b
-SHA512 (zoxide-0.7.6.tar.gz) = 818719b639f89f7f98b67f99aff08be16ef5a425505a2cb28c755f8e3ce2823ed49d9687d346ba80a2a9c86169c9de18481cdac319122a57b3f89acef05abecc
-Size (zoxide-0.7.6.tar.gz) = 267164 bytes
+RMD160 (zoxide-0.7.7.tar.gz) = 8248cb099c65ebc54ce33a366d587cc8586c758d
+SHA512 (zoxide-0.7.7.tar.gz) = b2c095601f4adc9d4dcb6d59733c73752e37e9014f446dc0d87aa31a5c3b3f4921bca5273f55a720d0c4d5e875c89f46512cb64e9234731a0e5f115c089e491c
+Size (zoxide-0.7.7.tar.gz) = 267407 bytes
