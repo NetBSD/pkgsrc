@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/05/27 12:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/15 11:56:29 adam Exp $
 
 DISTNAME=	cookiecutter-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,10 +27,7 @@ USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-whichcraft>=0.4.0:../../devel/py-whichcraft
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-slugify
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
