@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/05 21:24:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/10/15 12:20:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/plumbum/__init__.py
 ${PYSITELIB}/plumbum/__init__.pyc
@@ -15,6 +16,19 @@ ${PYSITELIB}/plumbum/cli/__init__.pyo
 ${PYSITELIB}/plumbum/cli/application.py
 ${PYSITELIB}/plumbum/cli/application.pyc
 ${PYSITELIB}/plumbum/cli/application.pyo
+${PYSITELIB}/plumbum/cli/config.py
+${PYSITELIB}/plumbum/cli/config.pyc
+${PYSITELIB}/plumbum/cli/config.pyo
+${PYSITELIB}/plumbum/cli/i18n.py
+${PYSITELIB}/plumbum/cli/i18n.pyc
+${PYSITELIB}/plumbum/cli/i18n.pyo
+${PYSITELIB}/plumbum/cli/i18n/de/LC_MESSAGES/plumbum.cli.mo
+${PYSITELIB}/plumbum/cli/i18n/fr/LC_MESSAGES/plumbum.cli.mo
+${PYSITELIB}/plumbum/cli/i18n/nl/LC_MESSAGES/plumbum.cli.mo
+${PYSITELIB}/plumbum/cli/i18n/ru/LC_MESSAGES/plumbum.cli.mo
+${PYSITELIB}/plumbum/cli/image.py
+${PYSITELIB}/plumbum/cli/image.pyc
+${PYSITELIB}/plumbum/cli/image.pyo
 ${PYSITELIB}/plumbum/cli/progress.py
 ${PYSITELIB}/plumbum/cli/progress.pyc
 ${PYSITELIB}/plumbum/cli/progress.pyo
@@ -117,6 +131,9 @@ ${PYSITELIB}/plumbum/path/remote.pyo
 ${PYSITELIB}/plumbum/path/utils.py
 ${PYSITELIB}/plumbum/path/utils.pyc
 ${PYSITELIB}/plumbum/path/utils.pyo
+${PYSITELIB}/plumbum/typed_env.py
+${PYSITELIB}/plumbum/typed_env.pyc
+${PYSITELIB}/plumbum/typed_env.pyo
 ${PYSITELIB}/plumbum/version.py
 ${PYSITELIB}/plumbum/version.pyc
 ${PYSITELIB}/plumbum/version.pyo
