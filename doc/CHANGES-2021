@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5165 2021/10/15 11:43:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5166 2021/10/15 11:44:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7907,3 +7907,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libopenmpt to 0.5.12 [fcambus 2021-10-15]
 	Updated graphics/py-leather to 0.3.4 [adam 2021-10-15]
 	Updated databases/py-pypika to 0.48.8 [adam 2021-10-15]
+	Updated mail/neomutt to 20211015 [wiz 2021-10-15]
