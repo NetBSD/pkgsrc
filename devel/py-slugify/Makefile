@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/07/08 14:58:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/15 11:54:44 adam Exp $
 
-DISTNAME=	python-slugify-4.0.1
+DISTNAME=	python-slugify-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-slugify/}
@@ -15,6 +15,8 @@ PREV_PKGPATH=	devel/py-python-slugify
 DEPENDS+=	${PYPKGPREFIX}-text-unidecode>=1.3:../../textproc/py-text-unidecode
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
