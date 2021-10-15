@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/10/06 08:41:35 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/10/15 11:41:23 adam Exp $
 
-DISTNAME=	leather-0.3.3
+DISTNAME=	leather-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/leather/}
