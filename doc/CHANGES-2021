@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5164 2021/10/15 08:36:34 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5165 2021/10/15 11:43:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7905,3 +7905,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/simh to 4.0.0.20211012 [rhialto 2021-10-14]
 	Updated audio/termusic to 0.5.0 [pin 2021-10-14]
 	Updated audio/libopenmpt to 0.5.12 [fcambus 2021-10-15]
+	Updated graphics/py-leather to 0.3.4 [adam 2021-10-15]
+	Updated databases/py-pypika to 0.48.8 [adam 2021-10-15]
