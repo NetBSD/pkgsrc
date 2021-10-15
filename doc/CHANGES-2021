@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5173 2021/10/15 13:01:51 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.5174 2021/10/15 15:06:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7916,3 +7916,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/zoxide to 0.7.7 [pin 2021-10-15]
 	Updated www/firefox to 93.0 [ryoon 2021-10-15]
 	Updated www/firefox-l10n to 93.0 [ryoon 2021-10-15]
+	Updated www/py-mechanize to 0.4.7 [adam 2021-10-15]
+	Updated textproc/py-html5-parser to 0.4.10 [adam 2021-10-15]
