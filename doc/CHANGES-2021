@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5169 2021/10/15 12:31:58 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5170 2021/10/15 12:33:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7912,3 +7912,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-plumbum to 1.7.0 [adam 2021-10-15]
 	Updated archivers/arqiver to 0.9.0 [pin 2021-10-15]
 	Updated editors/featherpad to 1.0.1 [pin 2021-10-15]
+	Updated mail/meli to 0.7.2 [pin 2021-10-15]
