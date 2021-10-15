@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/15 12:20:27 adam Exp $
 
-RMD160 (plumbum-1.6.1.post0.tar.gz) = e6eb29d08d8d9507ce63e2495515869140abe3f6
-SHA512 (plumbum-1.6.1.post0.tar.gz) = 5953de181a415d218f9da615c51b9669c93e8bc6995b91571496facce120ebf86a4a5a4a29e6cb226d426d7e479fd4dff996bbeeba135ea2f0b84d17a42a5b7e
-Size (plumbum-1.6.1.post0.tar.gz) = 79217 bytes
+RMD160 (plumbum-1.7.0.tar.gz) = 7b1b22cd19eb6958ff5f50b9913eab8bcb2e6321
+SHA512 (plumbum-1.7.0.tar.gz) = 0a12891278c12bb98b8bbb825448375240ee347eb3ca166b9cbb4da3e083979d947a7bf0a843fd9a0b7c9a13d09f24e988ee877f29420a3f29f40e387eec8826
+Size (plumbum-1.7.0.tar.gz) = 318890 bytes
