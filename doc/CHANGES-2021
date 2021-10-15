@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5171 2021/10/15 12:35:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5172 2021/10/15 13:00:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7914,3 +7914,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/featherpad to 1.0.1 [pin 2021-10-15]
 	Updated mail/meli to 0.7.2 [pin 2021-10-15]
 	Updated sysutils/zoxide to 0.7.7 [pin 2021-10-15]
+	Updated www/firefox to 93.0 [ryoon 2021-10-15]
