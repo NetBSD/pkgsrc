@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:47:39 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/15 12:31:36 pin Exp $
 
-RMD160 (FeatherPad-V1.0.0.tar.gz) = 90c1363426d74e05dfee1a42b874cabc8e18c4fa
-SHA512 (FeatherPad-V1.0.0.tar.gz) = 9f7e24fa5e89e269693bc0a37f79d987e4914dde2d2b46bd0385886383dab8b35556fbc0f5c5b7b9a2c3a41694174ffa8532c48def87d2972fbc73c1e9c38bf3
-Size (FeatherPad-V1.0.0.tar.gz) = 1010200 bytes
+RMD160 (FeatherPad-V1.0.1.tar.gz) = fd43f6d5139be8e0ec58171830f8dfda34485660
+SHA512 (FeatherPad-V1.0.1.tar.gz) = 8d1a07f8f32f63ec77e6bff8a39badd1eef87b0675096f964ff2fa770dda7c79ec9a1f788cbfa77528163aeb6c6067ca74e009293eca2e718dce92a48aef5f98
+Size (FeatherPad-V1.0.1.tar.gz) = 1014744 bytes
