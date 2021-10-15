@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2021/09/30 20:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.91 2021/10/15 19:36:35 tnn Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -14,12 +14,8 @@ PLIST_VARS+=		backtrace context fiber log longdbl
 
 .include "../../mk/compiler.mk"
 
-.if (${OPSYS} == "NetBSD" && \
-	((${MACHINE_ARCH} == "i386") || \
-	(!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))) || \
-	(!empty(MACHINE_PLATFORM:MNetBSD-[89].*-x86_64) && !empty(PKGSRC_COMPILER:Mgcc))
+# pch enabled build is generally fragile and breaks with RELRO
 BJAM_ARGS+=		pch=off
-.endif
 
 .if !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || !empty(MACHINE_ARCH:Msparc64)
 BJAM_ARGS+=		--without-context
