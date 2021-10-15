@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/11/20 16:34:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/10/15 11:43:53 wiz Exp $
 bin/neomutt
 libexec/neomutt/pgpewrap
 ${PLIST.smime}libexec/neomutt/smime_keys
@@ -51,6 +51,8 @@ share/doc/neomutt/manual.txt
 share/doc/neomutt/mime.types
 share/doc/neomutt/mimesupport.html
 share/doc/neomutt/miscellany.html
+share/doc/neomutt/oauth2/mutt_oauth2.py
+share/doc/neomutt/oauth2/mutt_oauth2.py.README
 share/doc/neomutt/optionalfeatures.html
 share/doc/neomutt/reference.html
 share/doc/neomutt/samples/Mush.rc
@@ -93,11 +95,13 @@ share/locale/it/LC_MESSAGES/neomutt.mo
 share/locale/ja/LC_MESSAGES/neomutt.mo
 share/locale/ko/LC_MESSAGES/neomutt.mo
 share/locale/lt/LC_MESSAGES/neomutt.mo
+share/locale/nb_NO/LC_MESSAGES/neomutt.mo
 share/locale/nl/LC_MESSAGES/neomutt.mo
 share/locale/pl/LC_MESSAGES/neomutt.mo
 share/locale/pt_BR/LC_MESSAGES/neomutt.mo
 share/locale/ru/LC_MESSAGES/neomutt.mo
 share/locale/sk/LC_MESSAGES/neomutt.mo
+share/locale/sr/LC_MESSAGES/neomutt.mo
 share/locale/sv/LC_MESSAGES/neomutt.mo
 share/locale/tr/LC_MESSAGES/neomutt.mo
 share/locale/uk/LC_MESSAGES/neomutt.mo
