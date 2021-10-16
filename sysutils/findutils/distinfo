@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:57:50 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/16 00:51:18 ryoon Exp $
 
-RMD160 (findutils-4.6.0.tar.gz) = 0745d081f4a53d7e8b6c17dc8235155492ff4d92
-SHA512 (findutils-4.6.0.tar.gz) = 41fcd4197c1efbd77f7420e5754e2cf9332dfef19f90c65a8fa1844bb4bc5d529c8393ee0ff979a054e9ac65ff71d7fe3921ea079f9960843412fc9a71f8afd4
-Size (findutils-4.6.0.tar.gz) = 3780154 bytes
-SHA1 (patch-aa) = 6e5a52ddb9764a533b7be56e7bd97c971f091cfe
+RMD160 (findutils-4.8.0.tar.xz) = cc1cd923927d5acf7e6a9ec0e28d1723acbd4774
+SHA512 (findutils-4.8.0.tar.xz) = eaa2da304dbeb2cd659b9210ac37da1bde4cd665c12a818eca98541c5ed5cba1050641fc0c39c0a446a5a7a87a8d654df0e0e6b0cee21752ea485188c9f1071e
+Size (findutils-4.8.0.tar.xz) = 1983096 bytes
+SHA1 (patch-aa) = c0cfed59ccff3a56d6621ac0669e14f8e3f7b9fb
