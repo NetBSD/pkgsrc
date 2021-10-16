@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/15 21:32:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5.16.1 2021/10/16 20:55:16 tm Exp $
 bin/dcraw2hdrgen
 bin/jpeg2hdrgen
 bin/pfsabsolute
@@ -14,7 +14,6 @@ ${PLIST.gl}bin/pfsglview
 bin/pfshdrcalibrate
 bin/pfsin
 bin/pfsindcraw
-bin/pfsinexr
 bin/pfsinhdrgen
 ${PLIST.im}bin/pfsinimgmagick
 bin/pfsinme
@@ -26,7 +25,6 @@ bin/pfsinyuv
 ${PLIST.octave}bin/pfsoctavelum
 ${PLIST.octave}bin/pfsoctavergb
 bin/pfsout
-bin/pfsoutexr
 ${PLIST.im}bin/pfsouthdrhtml
 ${PLIST.im}bin/pfsoutimgmagick
 bin/pfsoutpfm
@@ -73,7 +71,6 @@ ${PLIST.gl}man/man1/pfsglview.1
 man/man1/pfshdrcalibrate.1
 man/man1/pfsin.1
 man/man1/pfsindcraw.1
-man/man1/pfsinexr.1
 man/man1/pfsinhdrgen.1
 ${PLIST.im}man/man1/pfsinimgmagick.1
 man/man1/pfsinme.1
@@ -85,7 +82,6 @@ man/man1/pfsinyuv.1
 ${PLIST.octave}man/man1/pfsoctavelum.1
 ${PLIST.octave}man/man1/pfsoctavergb.1
 man/man1/pfsout.1
-man/man1/pfsoutexr.1
 ${PLIST.im}man/man1/pfsouthdrhtml.1
 ${PLIST.im}man/man1/pfsoutimgmagick.1
 man/man1/pfsoutpfm.1
