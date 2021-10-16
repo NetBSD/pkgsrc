@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/10/07 19:29:47 christos Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/10/16 19:46:42 tm Exp $
 bin/ftpasswd
 bin/ftpcount
 bin/ftpdctl
@@ -7,6 +7,7 @@ bin/ftpquota
 bin/ftptop
 bin/ftpwho
 bin/prxs
+include/proftpd/acconfig.h
 include/proftpd/ascii.h
 include/proftpd/auth.h
 include/proftpd/bindings.h
@@ -26,6 +27,7 @@ include/proftpd/dirtree.h
 include/proftpd/display.h
 include/proftpd/encode.h
 include/proftpd/env.h
+include/proftpd/error.h
 include/proftpd/event.h
 include/proftpd/expr.h
 include/proftpd/feat.h
@@ -37,6 +39,7 @@ include/proftpd/hanson-tpl.h
 include/proftpd/help.h
 include/proftpd/ident.h
 include/proftpd/inet.h
+include/proftpd/jot.h
 include/proftpd/json.h
 include/proftpd/lastlog.h
 include/proftpd/libsupp.h
@@ -56,7 +59,9 @@ include/proftpd/modules.h
 include/proftpd/netacl.h
 include/proftpd/netaddr.h
 include/proftpd/netio.h
+include/proftpd/openbsd-blowfish.h
 include/proftpd/options.h
+include/proftpd/os.h
 include/proftpd/parser.h
 include/proftpd/pfilter.h
 include/proftpd/pidfile.h
@@ -65,6 +70,7 @@ include/proftpd/pr-syslog.h
 include/proftpd/privs.h
 include/proftpd/proctitle.h
 include/proftpd/proftpd.h
+include/proftpd/random.h
 include/proftpd/redis.h
 include/proftpd/regexp.h
 include/proftpd/response.h
@@ -135,14 +141,8 @@ sbin/in.proftpd
 sbin/proftpd
 share/doc/proftpd/Configuration.html
 share/doc/proftpd/NEWS
-share/doc/proftpd/README.md
-share/doc/proftpd/README.IPv6
 share/doc/proftpd/README.LDAP
-share/doc/proftpd/README.PAM
-share/doc/proftpd/README.capabilities
-share/doc/proftpd/README.classes
-share/doc/proftpd/README.controls
-share/doc/proftpd/README.facl
+share/doc/proftpd/README.md
 share/doc/proftpd/README.modules
 share/doc/proftpd/faq.html
 share/doc/proftpd/license.txt
@@ -165,3 +165,4 @@ share/locale/ru_RU/LC_MESSAGES/proftpd.mo
 share/locale/zh_CN/LC_MESSAGES/proftpd.mo
 share/locale/zh_TW/LC_MESSAGES/proftpd.mo
 @pkgdir lib/proftpd
+@pkgdir etc
