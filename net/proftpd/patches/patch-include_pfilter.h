@@ -1,7 +1,9 @@
---- /dev/null	2016-01-22 17:30:55.000000000 -0500
-+++ include/pfilter.h	2016-01-22 16:18:33.000000000 -0500
---- include/pfilter.h.orig	2019-10-13 19:47:58.412725364 +0000
-+++ include/pfilter.h
+$NetBSD: patch-include_pfilter.h,v 1.3 2021/10/16 19:46:42 tm Exp $
+
+Add packet filter
+
+--- /dev/null	Fri Oct 15 10:32:05 2021
++++ include/pfilter.h	Fri Oct 15 10:32:05 2021
 @@ -0,0 +1,3 @@
 +
 +void pfilter_notify(int);

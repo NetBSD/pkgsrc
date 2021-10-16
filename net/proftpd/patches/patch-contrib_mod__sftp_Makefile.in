@@ -1,15 +1,15 @@
-$NetBSD: patch-contrib_mod__sftp_Makefile.in,v 1.1 2015/09/25 10:01:37 wiedi Exp $
+$NetBSD: patch-contrib_mod__sftp_Makefile.in,v 1.2 2021/10/16 19:46:42 tm Exp $
 
 Install mod_sftp misc files into examples folder
 
---- contrib/mod_sftp/Makefile.in.orig	2015-05-28 00:25:54.000000000 +0000
-+++ contrib/mod_sftp/Makefile.in
-@@ -46,8 +46,9 @@ install: install-misc
- 	fi
+--- contrib/mod_sftp/Makefile.in.orig	Tue Jul 21 17:25:51 2020
++++ contrib/mod_sftp/Makefile.in	Fri Oct 15 09:25:08 2021
+@@ -73,8 +73,9 @@
+ 	$(INSTALL_MAN) $(MODULE_NAME).h $(DESTDIR)$(includedir)/proftpd/$(MODULE_NAME).h
  
  install-misc:
--	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 dhparams.pem $(DESTDIR)$(sysconfdir)/dhparams.pem 
--	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 blacklist.dat $(DESTDIR)$(sysconfdir)/blacklist.dat
+-	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 $(top_srcdir)/dhparams.pem $(DESTDIR)$(sysconfdir)/dhparams.pem
+-	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 $(top_srcdir)/blacklist.dat $(DESTDIR)$(sysconfdir)/blacklist.dat
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(PREFIX)/share/examples/proftpd
 +	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 dhparams.pem $(DESTDIR)$(PREFIX)/share/examples/proftpd/dhparams.pem
 +	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 0644 blacklist.dat $(DESTDIR)$(PREFIX)/share/examples/proftpd/blacklist.dat
