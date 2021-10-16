@@ -1,7 +1,9 @@
---- /dev/null	2016-01-22 17:30:55.000000000 -0500
-+++ src/pfilter.c	2016-01-22 16:37:55.000000000 -0500
---- src/pfilter.c.orig	2019-10-13 19:47:58.437871822 +0000
-+++ src/pfilter.c
+$NetBSD: patch-src_pfilter.c,v 1.3 2021/10/16 19:46:42 tm Exp $
+
+Add pfilter objects.
+
+--- /dev/null	Fri Oct 15 10:32:05 2021
++++ src/pfilter.c	Fri Oct 15 10:32:05 2021
 @@ -0,0 +1,41 @@
 +#include "pfilter.h"
 +#include "conf.h"

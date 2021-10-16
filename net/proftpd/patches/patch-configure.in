@@ -1,8 +1,19 @@
-$NetBSD: patch-configure.in,v 1.1 2019/10/13 19:52:47 maya Exp $
+$NetBSD: patch-configure.in,v 1.2 2021/10/16 19:46:42 tm Exp $
 
---- configure.in.orig	2017-04-10 02:31:02.000000000 +0000
-+++ configure.in
-@@ -2836,6 +2836,12 @@ AC_TRY_RUN(
+Test if blacklistd supported.
+
+--- configure.in.orig	Tue Jul 21 17:25:51 2020
++++ configure.in	Fri Oct 15 09:41:18 2021
+@@ -2800,7 +2800,7 @@
+   AC_DEFINE(PR_USE_NONBLOCKING_LOG_OPEN, 1, [Define if using nonblocking open of log files])
+ fi
+ 
+-if test x"$enable_ident" == xyes ; then
++if test x"$enable_ident" = xyes ; then
+   ac_static_modules="mod_ident.o $ac_static_modules"
+   ac_build_static_modules="modules/mod_ident.o $ac_build_static_modules"
+ fi
+@@ -2949,6 +2949,12 @@
    AC_MSG_RESULT(cross-compiling); AC_DEFINE(HAVE_LU, 1, [Define if you have %lu support])
  )
  
