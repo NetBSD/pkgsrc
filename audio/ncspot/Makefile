@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/09/08 21:04:56 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/10/16 11:47:27 pin Exp $
 
-DISTNAME=	ncspot-0.8.2
-PKGREVISION=	1
+DISTNAME=	ncspot-0.9.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +14,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
+USE_NCURSES=			yes	# NCURSES_MOUSE_VERSION
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
@@ -22,6 +22,7 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 
@@ -33,4 +34,5 @@ do-install:
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
