@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/05/02 05:18:47 richard Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/10/16 00:51:18 ryoon Exp $
 bin/gfind
 bin/glocate
 bin/gupdatedb
@@ -14,8 +14,6 @@ gnu/man/man1/xargs.1
 gnu/man/man5/locatedb.5
 info/find-maint.info
 info/find.info
-libexec/gbigram
-libexec/gcode
 libexec/gfrcode
 man/man1/gfind.1
 man/man1/glocate.1
@@ -52,7 +50,6 @@ share/locale/pt/LC_MESSAGES/findutils.mo
 share/locale/pt_BR/LC_MESSAGES/findutils.mo
 share/locale/ro/LC_MESSAGES/findutils.mo
 share/locale/ru/LC_MESSAGES/findutils.mo
-share/locale/rw/LC_MESSAGES/findutils.mo
 share/locale/sk/LC_MESSAGES/findutils.mo
 share/locale/sl/LC_MESSAGES/findutils.mo
 share/locale/sr/LC_MESSAGES/findutils.mo
