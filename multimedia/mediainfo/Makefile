@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2015/09/07 01:02:00 dsainty Exp $
+# $NetBSD: Makefile,v 1.14.50.1 2021/10/16 18:09:24 tm Exp $
 
+PKGREVISION=		1
 .include "../../multimedia/mediainfo/Makefile.common"
 
 PKGNAME=		mediainfo-${MIVER}
