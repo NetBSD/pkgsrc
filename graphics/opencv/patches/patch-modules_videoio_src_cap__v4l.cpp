@@ -1,9 +1,9 @@
-$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.8 2021/10/06 21:10:24 adam Exp $
+$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.9 2021/10/16 07:16:29 adam Exp $
 
 Conditionalize settings not available in NetBSD's v4l2 emulation.
 Avoid non-standard integer types.
 
---- modules/videoio/src/cap_v4l.cpp.orig	2021-07-04 21:10:13.000000000 +0000
+--- modules/videoio/src/cap_v4l.cpp.orig	2021-10-08 18:31:56.000000000 +0000
 +++ modules/videoio/src/cap_v4l.cpp
 @@ -215,6 +215,14 @@ make & enjoy!
  #include <fcntl.h>
@@ -51,7 +51,7 @@ Avoid non-standard integer types.
  
  #ifndef V4L2_PIX_FMT_Y10
  #define V4L2_PIX_FMT_Y10 v4l2_fourcc('Y', '1', '0', ' ')
-@@ -555,7 +569,9 @@ bool CvCaptureCAM_V4L::autosetup_capture
+@@ -555,13 +569,17 @@ bool CvCaptureCAM_V4L::autosetup_capture
              V4L2_PIX_FMT_NV12,
              V4L2_PIX_FMT_NV21,
              V4L2_PIX_FMT_SBGGR8,
@@ -61,7 +61,15 @@ Avoid non-standard integer types.
              V4L2_PIX_FMT_SN9C10X,
  #ifdef HAVE_JPEG
              V4L2_PIX_FMT_MJPEG,
-@@ -618,9 +634,13 @@ bool CvCaptureCAM_V4L::convertableToRgb(
+             V4L2_PIX_FMT_JPEG,
+ #endif
++#ifdef V4L2_PIX_FMT_Y16
+             V4L2_PIX_FMT_Y16,
++#endif
+             V4L2_PIX_FMT_Y12,
+             V4L2_PIX_FMT_Y10,
+             V4L2_PIX_FMT_GREY,
+@@ -618,9 +636,13 @@ bool CvCaptureCAM_V4L::convertableToRgb(
      case V4L2_PIX_FMT_UYVY:
      case V4L2_PIX_FMT_SBGGR8:
      case V4L2_PIX_FMT_SN9C10X:
@@ -75,7 +83,7 @@ Avoid non-standard integer types.
      case V4L2_PIX_FMT_Y10:
      case V4L2_PIX_FMT_GREY:
      case V4L2_PIX_FMT_BGR24:
-@@ -655,7 +675,9 @@ void CvCaptureCAM_V4L::v4l2_create_frame
+@@ -655,7 +677,9 @@ void CvCaptureCAM_V4L::v4l2_create_frame
              channels = 1;
              size.height = size.height * 3 / 2; // "1.5" channels
              break;
@@ -85,7 +93,7 @@ Avoid non-standard integer types.
          case V4L2_PIX_FMT_Y12:
          case V4L2_PIX_FMT_Y10:
              depth = IPL_DEPTH_16U;
-@@ -1532,11 +1554,13 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1532,11 +1556,13 @@ void CvCaptureCAM_V4L::convertToRgb(cons
                  (unsigned char*)buffers[MAX_V4L_BUFFERS].start,
                  (unsigned char*)frame.imageData);
          return;
@@ -99,7 +107,7 @@ Avoid non-standard integer types.
      default:
          break;
      }
-@@ -1575,6 +1599,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1575,6 +1601,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
      case V4L2_PIX_FMT_RGB24:
          cv::cvtColor(cv::Mat(imageSize, CV_8UC3, currentBuffer.start), destination, COLOR_RGB2BGR);
          return;
@@ -107,7 +115,7 @@ Avoid non-standard integer types.
      case V4L2_PIX_FMT_Y16:
      {
          cv::Mat temp(imageSize, CV_8UC1, buffers[MAX_V4L_BUFFERS].start);
-@@ -1596,6 +1621,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1596,6 +1623,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
          cv::cvtColor(temp, destination, COLOR_GRAY2BGR);
          return;
      }
@@ -115,7 +123,7 @@ Avoid non-standard integer types.
      case V4L2_PIX_FMT_GREY:
          cv::cvtColor(cv::Mat(imageSize, CV_8UC1, currentBuffer.start), destination, COLOR_GRAY2BGR);
          break;
-@@ -1708,8 +1734,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1708,8 +1736,10 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_FOURCC:
          return -1;
@@ -126,7 +134,7 @@ Avoid non-standard integer types.
      case cv::CAP_PROP_FORMAT:
          return -1;
      case cv::CAP_PROP_MODE:
-@@ -1724,8 +1752,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1724,8 +1754,10 @@ static inline int capPropertyToV4L2(int 
          return V4L2_CID_HUE;
      case cv::CAP_PROP_GAIN:
          return V4L2_CID_GAIN;
@@ -137,7 +145,7 @@ Avoid non-standard integer types.
      case cv::CAP_PROP_CONVERT_RGB:
          return -1;
      case cv::CAP_PROP_WHITE_BALANCE_BLUE_U:
-@@ -1736,8 +1766,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1736,8 +1768,10 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_SHARPNESS:
          return V4L2_CID_SHARPNESS;
@@ -148,7 +156,7 @@ Avoid non-standard integer types.
      case cv::CAP_PROP_GAMMA:
          return V4L2_CID_GAMMA;
      case cv::CAP_PROP_TEMPERATURE:
-@@ -1748,34 +1780,54 @@ static inline int capPropertyToV4L2(int 
+@@ -1748,34 +1782,54 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_WHITE_BALANCE_RED_V:
          return V4L2_CID_RED_BALANCE;
