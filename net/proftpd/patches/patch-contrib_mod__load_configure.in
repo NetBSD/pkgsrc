@@ -1,13 +1,15 @@
-$NetBSD: patch-contrib_mod__load_configure.in,v 1.1 2019/12/09 19:22:57 nros Exp $
-* solaris and derivates has loadavg in sys/loadavg.h
---- contrib/mod_load/configure.in.orig	2019-12-09 18:12:06.479685628 +0000
-+++ contrib/mod_load/configure.in
-@@ -63,7 +63,7 @@ AC_ARG_WITH(libraries,
+$NetBSD: patch-contrib_mod__load_configure.in,v 1.2 2021/10/16 19:46:42 tm Exp $
+
+Solaris and derivates has loadavg in sys/loadavg.h
+
+--- contrib/mod_load/configure.in.orig	Tue Jul 21 17:25:51 2020
++++ contrib/mod_load/configure.in	Fri Oct 15 09:22:45 2021
+@@ -63,7 +63,7 @@
    ])
  
  AC_HEADER_STDC
 -AC_CHECK_HEADERS(stdlib.h unistd.h limits.h fcntl.h)
 +AC_CHECK_HEADERS(stdlib.h unistd.h limits.h fcntl.h sys/loadavg.h)
  
- AC_SUBST(LDFLAGS)
- 
+ dnl _Must_ come before AC_FUNC_GETLOADAVG
+ AC_CHECK_LIB(kstat, kstat_open)
