@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.15 2021/10/16 17:51:50 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.16 2021/10/16 18:10:15 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -51,4 +51,8 @@ mail/neomutt: security fix
 
 Pullup ticket #6515 - requested by wiz
 databases/p5-DBI: security fix
+
+Pullup ticket #6516 - requested by wiz
+multimedia/libmediainfo: security fix
+multimedia/mediainfo: security fix
 
