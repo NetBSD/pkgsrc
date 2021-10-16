@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21149 2021/10/15 11:44:04 wiz Exp $
+$NetBSD: TODO,v 1.21150 2021/10/16 19:50:39 tm Exp $
 
 Suggested new packages
 ======================
@@ -1647,14 +1647,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o prison-5.81.0
 	o profanity-0.10.0
 	o profit-2.5.3
-	o proftpd-1.3.7a
-	o proftpd-geoip-1.3.7a
-	o proftpd-ldap-1.3.7a
-	o proftpd-memcached-1.3.7a
-	o proftpd-mysql-1.3.7a
-	o proftpd-odbc-1.3.7a
-	o proftpd-postgresql-1.3.7a
-	o proftpd-sqlite-1.3.7a
 	o proj-8.0.0
 	o prosody-0.11.8
 	o ps2eps-1.70
