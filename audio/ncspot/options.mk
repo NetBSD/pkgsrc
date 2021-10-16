@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/10/20 22:54:40 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2021/10/16 11:47:27 pin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ncspot
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend ui
@@ -33,10 +33,7 @@ CARGO_FEATURES+=	rodio_backend
 .endif
 
 .if !empty(PKG_OPTIONS:Mncursesw)
-USE_NCURSES=		yes	# NCURSES_MOUSE_VERSION
 CARGO_FEATURES+=	cursive/pancurses-backend
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
-.include "../../devel/ncursesw/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mtermion)
