@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.17 2021/10/16 18:52:17 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.18 2021/10/16 20:29:50 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -58,4 +58,7 @@ multimedia/mediainfo: security fix
 
 Pullup ticket #6517 - requested by wiz
 devel/ncurses: security fix
+
+Pullup ticket #6518 - requested by wiz
+devel/apache-maven: security fix
 
