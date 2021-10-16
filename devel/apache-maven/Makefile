@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/06/29 12:39:54 yyamano Exp $
-#
+# $NetBSD: Makefile,v 1.17.10.1 2021/10/16 20:29:42 tm Exp $
 
-DISTNAME=	apache-maven-3.6.3
+DISTNAME=	apache-maven-3.8.3
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
