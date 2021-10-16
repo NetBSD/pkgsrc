@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.13 2021/10/14 18:58:39 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.14 2021/10/16 17:46:43 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -45,4 +45,7 @@ print/ghostscript-agpl: pullup and build fix
 
 Pullup ticket #6513 - requested by gutteridge
 lang/python27: security fix
+
+Pullup ticket #6514 - requested by wiz
+mail/neomutt: security fix
 
