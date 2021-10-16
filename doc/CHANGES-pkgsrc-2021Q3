@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.14 2021/10/16 17:46:43 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.15 2021/10/16 17:51:50 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -48,4 +48,7 @@ lang/python27: security fix
 
 Pullup ticket #6514 - requested by wiz
 mail/neomutt: security fix
+
+Pullup ticket #6515 - requested by wiz
+databases/p5-DBI: security fix
 
