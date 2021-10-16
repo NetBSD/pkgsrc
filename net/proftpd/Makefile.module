@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.1 2015/09/25 10:01:37 wiedi Exp $
+# $NetBSD: Makefile.module,v 1.2 2021/10/16 19:46:42 tm Exp $
 
 # used by net/proftpd-geoip/Makefile
 # used by net/proftpd-ldap/Makefile
@@ -19,4 +19,4 @@ DEPENDS+=	proftpd>=${PKGVERSION_NOREV}:../../net/proftpd
 CPPFLAGS+=	-I${WRKSRC}/include -I${WRKSRC}/contrib
 
 pre-build:
-	cd ${WRKSRC} && ${MAKE} include/buildstamp.h
+	cd ${WRKSRC} && ${GMAKE} include/buildstamp.h

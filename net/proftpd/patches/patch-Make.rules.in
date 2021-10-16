@@ -1,8 +1,10 @@
---- Make.rules.in.orig	2015-05-27 20:25:54.000000000 -0400
-+++ Make.rules.in	2016-01-25 21:48:47.000000000 -0500
---- Make.rules.in.orig	2017-04-10 02:31:02.000000000 +0000
-+++ Make.rules.in
-@@ -113,3 +113,6 @@ BUILD_FTPTOP_OBJS=utils/ftptop.o utils/s
+$NetBSD: patch-Make.rules.in,v 1.3 2021/10/16 19:46:42 tm Exp $
+
+Add pfilter objects.
+
+--- Make.rules.in.orig	Mon Aug 30 00:22:56 2021
++++ Make.rules.in	Fri Oct 15 10:32:05 2021
+@@ -114,3 +114,6 @@
  
  FTPWHO_OBJS=ftpwho.o scoreboard.o misc.o
  BUILD_FTPWHO_OBJS=utils/ftpwho.o utils/scoreboard.o utils/misc.o
