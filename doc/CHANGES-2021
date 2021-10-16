@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5175 2021/10/16 00:51:51 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.5176 2021/10/16 11:47:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7919,3 +7919,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-mechanize to 0.4.7 [adam 2021-10-15]
 	Updated textproc/py-html5-parser to 0.4.10 [adam 2021-10-15]
 	Updated sysutils/findutils to 4.8.0 [ryoon 2021-10-16]
+	Updated audio/ncspot to 0.9.0 [pin 2021-10-16]
