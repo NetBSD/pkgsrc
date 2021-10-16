@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2021/08/15 14:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.76.2.1 2021/10/16 20:55:16 tm Exp $
 
 DISTNAME=	pfstools-2.1.0
 PKGREVISION=	19
@@ -40,7 +40,6 @@ SUBST_SED.perl=		-e 's,@PERL_PATH@,${PERL5},g'
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
