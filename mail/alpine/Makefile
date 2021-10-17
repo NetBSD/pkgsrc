@@ -1,16 +1,24 @@
-# $NetBSD: Makefile,v 1.47 2020/11/23 16:36:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.48 2021/10/17 09:49:09 nia Exp $
 
-DISTNAME=	alpine-2.24
+DISTNAME=	alpine-2.25
 CATEGORIES=	mail
 MASTER_SITES=	http://alpine.x10host.com/alpine/release/src/
+DIST_SUBDIR=	${DISTNAME}
 EXTRACT_SUFX=	.tar.xz
 
+PATCH_SITES=		https://alpine.x10host.com/alpine/patches/alpine-${PKGVERSION_NOREV}/
+PATCHFILES+=		maildir.patch.gz
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://patches.freeiz.com/alpine/release/
+HOMEPAGE=	http://alpine.x10host.com/index.html
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	apache-2.0
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_LIBTOOL=	yes
+
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-ssl-certs-dir=${SSLCERTS:Q}
 CONFIGURE_ARGS+=	--with-ssl-include-dir=${SSLBASE}/include
@@ -20,8 +28,6 @@ CONFIGURE_ARGS+=	--with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 CONFIGURE_ARGS+=	--with-passfile=.pine-passfile
 # disabled, for Web Alpine Support
 CONFIGURE_ARGS+=	--without-tcl
-
-USE_LIBTOOL=	yes
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
