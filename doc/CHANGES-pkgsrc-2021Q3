@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.21 2021/10/17 16:24:16 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.22 2021/10/17 16:41:44 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -70,4 +70,7 @@ databases/sqlite3: segfault fix
 
 Pullup ticket #6522 - requested by nia
 mail/balsa: security fix
+
+Pullup ticket #6521 - requested by nia
+mail/alpine: security fix
 
