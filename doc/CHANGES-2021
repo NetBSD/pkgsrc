@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5184 2021/10/17 10:11:33 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5185 2021/10/17 10:56:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7928,3 +7928,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/alpine to 2.25 [nia 2021-10-17]
 	Updated mail/balsa to 2.6.3 [nia 2021-10-17]
 	Updated net/bftpd to 6.0 [nia 2021-10-17]
+	Updated converters/fribidi to 1.0.11 [nia 2021-10-17]
