@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:12 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/10/17 17:53:08 tm Exp $
 
-DISTNAME=	ts-0.7.4
+DISTNAME=	ts-1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://vicerveza.homeunix.net/~viric/soft/ts/
 
