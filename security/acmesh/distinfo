@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:53:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/17 09:02:46 nia Exp $
 
-RMD160 (acme.sh-3.0.0.tar.gz) = 1f94710bb3e9455c1363f7ce54baf8b0bdab285f
-SHA512 (acme.sh-3.0.0.tar.gz) = e93e955100071fda9398131aad965fe6d5b51d9c496b1db0269744513baca4c8eb142d9a35a72b72d4919c004848696fdf9de1ae51edec835ae0f695a6cb14b1
-Size (acme.sh-3.0.0.tar.gz) = 237047 bytes
+RMD160 (acme.sh-3.0.1.tar.gz) = 5865b3fa8d8d186101d12394a4ddd68d4a064480
+SHA512 (acme.sh-3.0.1.tar.gz) = 8bc5468fa70bf0a23f516b05e49f4c457cceb3ae0c12e963b538297912adce1f16fca200b116fc39a88ee0ba522e1757654ed231bebb6199ef7f5ad152511c71
+Size (acme.sh-3.0.1.tar.gz) = 239311 bytes
