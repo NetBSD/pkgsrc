@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:41:15 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/17 10:11:20 nia Exp $
 
-RMD160 (bftpd-5.7.tar.gz) = 3a532995f02a8484c0f1cf4d216f51200572d4e1
-SHA512 (bftpd-5.7.tar.gz) = 8d3cb5e2830abe10f4f38e4e1dce27da8b6ff6224fa3fd89db7b182917ff734aa5761563dc22eb04fcba4195404c205593ab40d4ac3f08d8284c8e15c4731879
-Size (bftpd-5.7.tar.gz) = 167174 bytes
+RMD160 (bftpd-6.0.tar.gz) = 4107548231723883fede976aedbeff7cf0326640
+SHA512 (bftpd-6.0.tar.gz) = 26e5ef3729e0a46737617b2e48dee4c462e5633807206eff8f14df8368b6be758688eca167c3b49c324397761da16c817c022b19cf35966408d9e8c207bc7350
+Size (bftpd-6.0.tar.gz) = 167466 bytes
