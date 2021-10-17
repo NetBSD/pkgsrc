@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5187 2021/10/17 17:28:37 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5188 2021/10/17 17:53:57 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7931,3 +7931,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/fribidi to 1.0.11 [nia 2021-10-17]
 	Updated graphics/feh to 3.7.2 [nia 2021-10-17]
 	Updated sysutils/ioping to 1.2 [tm 2021-10-17]
+	Updated sysutils/ts to 1.0.1 [tm 2021-10-17]
