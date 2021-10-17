@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:25:12 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/17 09:49:09 nia Exp $
 
-RMD160 (alpine-2.24.tar.xz) = 1612ff9edfdd66a0ef145f338fa9db26177360e0
-SHA512 (alpine-2.24.tar.xz) = 642a51f73732ebdf7c40e2b66370aa2f48fb13b349b477871b26295c3e8b860a0cc78dec9f80efc6ea74c548a080ceff04181eb18c35a9c8cae8d8ef831178c5
-Size (alpine-2.24.tar.xz) = 7341676 bytes
+RMD160 (alpine-2.25/alpine-2.25.tar.xz) = 3035891df0de21d15adc0b1665fcb4127b9b5ffd
+SHA512 (alpine-2.25/alpine-2.25.tar.xz) = 76c214cf66f4ac7af3de40357ad3a592ff2a119e327e5f6c256125b7865d46b09197435fe6ac8077ab7a498e4821925939f3f902431ca77baa786e149466a193
+Size (alpine-2.25/alpine-2.25.tar.xz) = 7495372 bytes
+RMD160 (alpine-2.25/maildir.patch.gz) = 5c402d391c399763fcf5714cfa7cca7cfbd65964
+SHA512 (alpine-2.25/maildir.patch.gz) = eea454796cab4e96b83869e880fe17d20799bf3a606712367f42deb0f3870b30f620fc77c307e40303ffc8492e828bb7772965b21614b2c27d4fc972f18ff346
+Size (alpine-2.25/maildir.patch.gz) = 34758 bytes
 SHA1 (patch-imap_src_c-client_auth_gss.c) = e6da9ee9dbe0751872d1400237a030112eaa56c6
-SHA1 (patch-imap_src_mtest_mtest.c) = 8c5282047e165fee4b6fe74c230e41d63d3cdc69
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
 SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
