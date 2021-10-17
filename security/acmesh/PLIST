@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/23 15:00:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/10/17 09:02:46 nia Exp $
 sbin/acme.sh
 share/acmesh/acme.sh
 share/acmesh/deploy/apache.sh
@@ -14,6 +14,7 @@ share/acmesh/deploy/gitlab.sh
 share/acmesh/deploy/haproxy.sh
 share/acmesh/deploy/keychain.sh
 share/acmesh/deploy/kong.sh
+share/acmesh/deploy/lighttpd.sh
 share/acmesh/deploy/mailcow.sh
 share/acmesh/deploy/myapi.sh
 share/acmesh/deploy/mydevil.sh
@@ -149,6 +150,7 @@ share/acmesh/dnsapi/dns_transip.sh
 share/acmesh/dnsapi/dns_ultra.sh
 share/acmesh/dnsapi/dns_unoeuro.sh
 share/acmesh/dnsapi/dns_variomedia.sh
+share/acmesh/dnsapi/dns_veesp.sh
 share/acmesh/dnsapi/dns_vscale.sh
 share/acmesh/dnsapi/dns_vultr.sh
 share/acmesh/dnsapi/dns_websupport.sh
@@ -164,6 +166,7 @@ share/acmesh/notify/mail.sh
 share/acmesh/notify/mailgun.sh
 share/acmesh/notify/pop.sh
 share/acmesh/notify/postmark.sh
+share/acmesh/notify/pushbullet.sh
 share/acmesh/notify/pushover.sh
 share/acmesh/notify/sendgrid.sh
 share/acmesh/notify/slack.sh
