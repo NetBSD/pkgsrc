@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/07/13 07:57:13 nia Exp $
+# $NetBSD: Makefile,v 1.24 2021/10/17 08:58:17 nia Exp $
 #
 
-DISTNAME=	abcMIDI-2021.06.27
+DISTNAME=	abcMIDI-2021.10.15
 PKGNAME=	${DISTNAME:tl:S/.//g}
 CATEGORIES=	audio
 MASTER_SITES=	https://ifdo.ca/~seymour/runabc/
