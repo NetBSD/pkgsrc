@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5189 2021/10/17 18:14:50 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5190 2021/10/17 22:00:22 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7933,3 +7933,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ioping to 1.2 [tm 2021-10-17]
 	Updated sysutils/ts to 1.0.1 [tm 2021-10-17]
 	Updated chat/icbirc to 2.1 [tm 2021-10-17]
+	Updated audio/mpg123 to 1.29.1 [thor 2021-10-17]
