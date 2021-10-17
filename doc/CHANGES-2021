@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5178 2021/10/16 19:48:57 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5179 2021/10/17 07:14:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7922,3 +7922,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncspot to 0.9.0 [pin 2021-10-16]
 	Updated security/fail2ban to 0.11.2 [tm 2021-10-16]
 	Updated net/proftpd to 1.3.7c [tm 2021-10-16]
+	Updated databases/sqlite3 to 3.36.0nb1 [wiz 2021-10-17]
