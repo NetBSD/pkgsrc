@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5191 2021/10/17 22:00:56 thor Exp $
+$NetBSD: CHANGES-2021,v 1.5192 2021/10/17 22:01:06 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7935,3 +7935,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/icbirc to 2.1 [tm 2021-10-17]
 	Updated audio/mpg123 to 1.29.1 [thor 2021-10-17]
 	Updated audio/mpg123-jack to 1.29.1nb1 [thor 2021-10-17]
+	Updated audio/mpg123-nas to 1.29.1 [thor 2021-10-17]
