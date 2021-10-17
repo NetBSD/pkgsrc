@@ -1,10 +1,10 @@
-$NetBSD: patch-sounds_Makefile.in,v 1.1 2019/09/14 18:57:10 nia Exp $
+$NetBSD: patch-sounds_Makefile.in,v 1.2 2021/10/17 10:08:53 nia Exp $
 
 Install configuration file to examples.
 
---- sounds/Makefile.in.orig	2019-09-14 18:40:39.609951201 +0000
+--- sounds/Makefile.in.orig	2021-08-18 19:36:20.000000000 +0000
 +++ sounds/Makefile.in
-@@ -351,7 +351,7 @@ top_srcdir = @top_srcdir@
+@@ -352,7 +352,7 @@ top_srcdir = @top_srcdir@
  balsa_SOUNDS = startup.wav newmail.wav
  balsasoundsdir = $(datadir)/sounds/balsa
  balsasounds_DATA = $(balsa_SOUNDS)
@@ -12,4 +12,4 @@ Install configuration file to examples.
 +soundlistdir = $(datadir)/examples/balsa
  soundlist_in_files = balsa.soundlist.in
  soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
- EXTRA_DIST = $(balsa_SOUNDS) $(soundlist_in_files)
+ EXTRA_DIST = $(balsa_SOUNDS) $(soundlist_in_files) \
