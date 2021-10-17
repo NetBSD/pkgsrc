@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5181 2021/10/17 09:02:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5182 2021/10/17 09:49:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7925,3 +7925,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/sqlite3 to 3.36.0nb1 [wiz 2021-10-17]
 	Updated audio/abcmidi to 20211015 [nia 2021-10-17]
 	Updated security/acmesh to 3.0.1 [nia 2021-10-17]
+	Updated mail/alpine to 2.25 [nia 2021-10-17]
