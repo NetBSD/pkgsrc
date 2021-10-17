@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.19 2021/10/16 20:55:38 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.20 2021/10/17 10:12:19 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -64,4 +64,7 @@ devel/apache-maven: security fix
 
 Pullup ticket #6519 - requested by nia
 graphics/pfstools: build fix
+
+Pullup ticket #6520 - requested by wiz
+databases/sqlite3: segfault fix
 
