@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5202 2021/10/18 11:25:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5203 2021/10/18 11:42:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7946,3 +7946,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/weechat to 3.3 [nia 2021-10-18]
 	Updated sysutils/vifm to 0.12 [nia 2021-10-18]
 	Updated www/snownews to 1.9 [nia 2021-10-18]
+	Updated x11/rofi to 1.7.0 [nia 2021-10-18]
