@@ -1,0 +1,15 @@
+$NetBSD: patch-src_modules_chanmodes_Makefile.in,v 1.1 2021/10/18 11:13:34 nia Exp $
+
+Honor LDFLAGS when linking modules so RELRO works.
+
+--- src/modules/chanmodes/Makefile.in.orig	2021-10-03 14:09:18.000000000 +0000
++++ src/modules/chanmodes/Makefile.in
+@@ -38,7 +38,7 @@ R_MODULES= \
+ 	secureonly.so history.so
+ 
+ MODULES=$(R_MODULES)
+-MODULEFLAGS=@MODULEFLAGS@
++MODULEFLAGS=@MODULEFLAGS@ @LDFLAGS@
+ RM=@RM@
+ 
+ all: build
