@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/12/10 13:04:05 nia Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/10/18 11:15:09 nia Exp $
 bin/weechat
 bin/weechat-curses
 bin/weechat-headless
@@ -19,7 +19,26 @@ lib/weechat/plugins/relay.so
 ${PLIST.ruby}lib/weechat/plugins/ruby.so
 lib/weechat/plugins/script.so
 lib/weechat/plugins/trigger.so
+lib/weechat/plugins/typing.so
 lib/weechat/plugins/xfer.so
+man/cs/man1/weechat-headless.1
+man/cs/man1/weechat.1
+man/de/man1/weechat-headless.1
+man/de/man1/weechat.1
+man/fr/man1/weechat-headless.1
+man/fr/man1/weechat.1
+man/it/man1/weechat-headless.1
+man/it/man1/weechat.1
+man/ja/man1/weechat-headless.1
+man/ja/man1/weechat.1
+man/man1/weechat-headless.1
+man/man1/weechat.1
+man/pl/man1/weechat-headless.1
+man/pl/man1/weechat.1
+man/ru/man1/weechat-headless.1
+man/ru/man1/weechat.1
+man/sr/man1/weechat-headless.1
+man/sr/man1/weechat.1
 share/applications/weechat.desktop
 share/icons/hicolor/128x128/apps/weechat.png
 share/icons/hicolor/16x16/apps/weechat.png
@@ -38,4 +57,5 @@ share/locale/pl/LC_MESSAGES/weechat.mo
 share/locale/pt/LC_MESSAGES/weechat.mo
 share/locale/pt_BR/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo
+share/locale/sr/LC_MESSAGES/weechat.mo
 share/locale/tr/LC_MESSAGES/weechat.mo
