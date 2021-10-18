@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.40 2021/10/07 14:58:04 nia Exp $
+$NetBSD: distinfo,v 1.41 2021/10/18 13:36:45 nia Exp $
 
-RMD160 (mc-4.8.26.tar.xz) = 5a5eea55bd90fb8f2687062e00ef040233bb9679
-SHA512 (mc-4.8.26.tar.xz) = f2f06915b775ecc94016fe5d5db9301e953cc89ee0708e79ee96e14a9f53142a467b27061ca57f65b40310fa86d4d13e2f2a29a601f8fefa6216fb10f73007be
-Size (mc-4.8.26.tar.xz) = 2492612 bytes
+RMD160 (mc-4.8.27.tar.xz) = d1d9aff2bcd569018ef1a66bc58785acc20c3749
+SHA512 (mc-4.8.27.tar.xz) = c955d66cee06e3a0e0c795f2f6b98b184762363390a903cf8ef83dc5e98e6e94d5a9c06c4788d9ff4b3ae111541df8c7dc0b864a5c21c40421a81cd8690e9a69
+Size (mc-4.8.27.tar.xz) = 2510296 bytes
 SHA1 (patch-contrib_Makefile.in) = 0b9ad555c2f702cba12b6b5e5f0ae07c16499903
 SHA1 (patch-misc_Makefile.in) = b17cdebdcd0adae91a6cff3f25939cebeb1e964f
-SHA1 (patch-src_subshell_common.c) = b6d390da68aa0028d21683b1959340e51f67efd6
+SHA1 (patch-src_subshell_common.c) = f38eab7cae73799509c57e2fe507d085701e541f
 SHA1 (patch-src_vfs_sfs_Makefile.in) = 90ce81b0dcf2ef2134884137d86e147219d180ed
