@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/07/05 20:14:14 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/10/18 11:24:51 nia Exp $
 bin/snownews
 man/de/man1/snownews.1
 man/fr/man1/snownews.1
@@ -19,6 +19,7 @@ share/locale/pt_BR/LC_MESSAGES/snownews.mo
 share/locale/ru/LC_MESSAGES/snownews.mo
 share/locale/se/LC_MESSAGES/snownews.mo
 share/locale/sl/LC_MESSAGES/snownews.mo
+share/locale/sr/LC_MESSAGES/snownews.mo
 share/locale/uk_UA/LC_MESSAGES/snownews.mo
 share/locale/zh_CN/LC_MESSAGES/snownews.mo
 share/locale/zh_TW/LC_MESSAGES/snownews.mo
