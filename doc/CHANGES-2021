@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5201 2021/10/18 11:17:35 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5202 2021/10/18 11:25:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7945,3 +7945,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/unrealircd to 5.2.2 [nia 2021-10-18]
 	Updated chat/weechat to 3.3 [nia 2021-10-18]
 	Updated sysutils/vifm to 0.12 [nia 2021-10-18]
+	Updated www/snownews to 1.9 [nia 2021-10-18]
