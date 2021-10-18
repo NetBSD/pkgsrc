@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21156 2021/10/18 06:52:19 tm Exp $
+$NetBSD: TODO,v 1.21157 2021/10/18 08:17:17 tm Exp $
 
 Suggested new packages
 ======================
@@ -1754,7 +1754,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rat-4.2.25
 	o rawtherapee-5.8
 	o razor-qt-0.5.2
-	o rbldnsd-0.998
 	o rcs-5.10.0
 	o rdp-1.6
 	o rebar-3.13.2
