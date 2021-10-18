@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2020/07/26 23:10:21 nia Exp $
+# $NetBSD: options.mk,v 1.28 2021/10/18 11:15:09 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	python lua wide-curses perl ruby
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.fast.prefs.mk"
 
-PLIST_VARS+=		lua plugin python perl ruby
+PLIST_VARS+=		lua python perl ruby
 
 .if !empty(PKG_OPTIONS:Mpython)
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -47,9 +47,4 @@ PLIST.ruby=	yes
 #BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
 .else
 CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=OFF
-.endif
-
-.if !empty(PKG_OPTIONS:Mpython) || \
-    !empty(PKG_OPTIONS:Mlua)
-PLIST.plugin=		yes
 .endif
