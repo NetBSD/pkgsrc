@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5206 2021/10/18 13:56:36 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5207 2021/10/18 14:33:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7950,3 +7950,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pcre2 to 10.38 [nia 2021-10-18]
 	Updated sysutils/mc to 4.8.27 [nia 2021-10-18]
 	Updated editors/nano to 5.9 [nia 2021-10-18]
+	Updated security/libretls to 3.4.1 [schmonz 2021-10-18]
