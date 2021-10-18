@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2021/05/24 19:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/10/18 11:17:24 nia Exp $
 #
 
-DISTNAME=	vifm-0.11
-PKGREVISION=	1
+DISTNAME=	vifm-0.12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +16,9 @@ USE_TOOLS+=	bash gmake perl pkg-config
 
 USE_CURSES=	resize_term wide
 FAKE_NCURSES=	yes
+
+# Unbundling lua, see patches/
+LIBS+=		-llua5.4
 
 # reallocarray
 CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
@@ -37,6 +39,7 @@ CONFIGURE_ARGS+=	--without-dyn-X11
 PYTHON_FOR_BUILD_ONLY=	tool
 .endif
 
+.include "../../lang/lua54/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
