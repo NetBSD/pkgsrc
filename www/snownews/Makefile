@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/10/18 11:24:51 nia Exp $
+# $NetBSD: Makefile,v 1.65 2021/10/18 11:25:11 nia Exp $
 
 DISTNAME=	snownews-1.9
 CATEGORIES=	www
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
