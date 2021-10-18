@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/12/04 20:45:34 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/10/18 08:22:42 tm Exp $
 
-DISTNAME=	httpstat-1.2.0
-PKGREVISION=	2
+DISTNAME=	httpstat-1.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reorx/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
