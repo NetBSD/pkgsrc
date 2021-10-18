@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2021/10/11 10:03:47 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.286 2021/10/18 13:00:48 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -76,4 +76,5 @@ post-extract:
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
