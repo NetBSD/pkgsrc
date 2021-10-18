@@ -1,0 +1,86 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
+
+- Unbundle Lua.
+- Install config files to examples, per pkgsrc convention.
+
+--- src/Makefile.in.orig	2021-09-29 09:57:54.000000000 +0000
++++ src/Makefile.in
+@@ -144,22 +144,6 @@ am_vifm_OBJECTS = cfg/config.$(OBJEXT) c
+ 	io/iop.$(OBJEXT) io/ior.$(OBJEXT) io/private/ioc.$(OBJEXT) \
+ 	io/private/ioe.$(OBJEXT) io/private/ioeta.$(OBJEXT) \
+ 	io/private/ionotif.$(OBJEXT) io/private/traverser.$(OBJEXT) \
+-	lua/lua/lapi.$(OBJEXT) lua/lua/lauxlib.$(OBJEXT) \
+-	lua/lua/lbaselib.$(OBJEXT) lua/lua/lcode.$(OBJEXT) \
+-	lua/lua/lcorolib.$(OBJEXT) lua/lua/lctype.$(OBJEXT) \
+-	lua/lua/ldblib.$(OBJEXT) lua/lua/ldebug.$(OBJEXT) \
+-	lua/lua/ldo.$(OBJEXT) lua/lua/ldump.$(OBJEXT) \
+-	lua/lua/lfunc.$(OBJEXT) lua/lua/lgc.$(OBJEXT) \
+-	lua/lua/linit.$(OBJEXT) lua/lua/liolib.$(OBJEXT) \
+-	lua/lua/llex.$(OBJEXT) lua/lua/lmathlib.$(OBJEXT) \
+-	lua/lua/lmem.$(OBJEXT) lua/lua/loadlib.$(OBJEXT) \
+-	lua/lua/lobject.$(OBJEXT) lua/lua/lopcodes.$(OBJEXT) \
+-	lua/lua/loslib.$(OBJEXT) lua/lua/lparser.$(OBJEXT) \
+-	lua/lua/lstate.$(OBJEXT) lua/lua/lstring.$(OBJEXT) \
+-	lua/lua/lstrlib.$(OBJEXT) lua/lua/ltable.$(OBJEXT) \
+-	lua/lua/ltablib.$(OBJEXT) lua/lua/ltm.$(OBJEXT) \
+-	lua/lua/lundump.$(OBJEXT) lua/lua/lutf8lib.$(OBJEXT) \
+-	lua/lua/lvm.$(OBJEXT) lua/lua/lzio.$(OBJEXT) \
+ 	lua/common.$(OBJEXT) lua/vifm_cmds.$(OBJEXT) \
+ 	lua/vifm_handlers.$(OBJEXT) lua/vifm_viewcolumns.$(OBJEXT) \
+ 	lua/vifmentry.$(OBJEXT) lua/vifmjob.$(OBJEXT) \
+@@ -610,7 +594,7 @@ AUTOMAKE_OPTIONS = subdir-objects
+ vim_dir = $(pkgdatadir)/vim
+ sample_colors_dir = $(pkgdatadir)/colors
+ vimdoc_dir = $(pkgdatadir)/vim-doc
+-global_colors_dir = $(sysconfdir)/vifm/colors
++global_colors_dir = $(datadir)/examples/vifm/colors
+ vim_autoload_vifm_dir = $(vim_dir)/autoload/vifm
+ vim_doc_dir = $(vim_dir)/doc
+ vim_ftdetect_dir = $(vim_dir)/ftdetect
+@@ -728,46 +712,6 @@ vifm_SOURCES = \
+ 	io/private/ionotif.c io/private/ionotif.h \
+ 	io/private/traverser.c io/private/traverser.h \
+ 	\
+-	lua/lua/lapi.c lua/lua/lapi.h \
+-	lua/lua/lauxlib.c lua/lua/lauxlib.h \
+-	lua/lua/lbaselib.c \
+-	lua/lua/lcode.c lua/lua/lcode.h \
+-	lua/lua/lcorolib.c \
+-	lua/lua/lctype.c lua/lua/lctype.h \
+-	lua/lua/ldblib.c \
+-	lua/lua/ldebug.c lua/lua/ldebug.h \
+-	lua/lua/ldo.c lua/lua/ldo.h \
+-	lua/lua/ldump.c \
+-	lua/lua/lfunc.c lua/lua/lfunc.h \
+-	lua/lua/lgc.c lua/lua/lgc.h \
+-	lua/lua/linit.c \
+-	lua/lua/liolib.c \
+-	lua/lua/ljumptab.h \
+-	lua/lua/llex.c lua/lua/llex.h \
+-	lua/lua/llimits.h \
+-	lua/lua/lmathlib.c \
+-	lua/lua/lmem.c lua/lua/lmem.h \
+-	lua/lua/loadlib.c \
+-	lua/lua/lobject.c lua/lua/lobject.h \
+-	lua/lua/lopcodes.c lua/lua/lopcodes.h \
+-	lua/lua/lopnames.h \
+-	lua/lua/loslib.c \
+-	lua/lua/lparser.c lua/lua/lparser.h \
+-	lua/lua/lprefix.h \
+-	lua/lua/lstate.c lua/lua/lstate.h \
+-	lua/lua/lstring.c lua/lua/lstring.h \
+-	lua/lua/lstrlib.c \
+-	lua/lua/ltable.c lua/lua/ltable.h \
+-	lua/lua/ltablib.c \
+-	lua/lua/ltm.c lua/lua/ltm.h \
+-	lua/lua/lua.h \
+-	lua/lua/luaconf.h \
+-	lua/lua/lualib.h \
+-	lua/lua/lundump.c lua/lua/lundump.h \
+-	lua/lua/lutf8lib.c \
+-	lua/lua/lvm.c lua/lua/lvm.h \
+-	lua/lua/lzio.c lua/lua/lzio.h \
+-	\
+ 	lua/api.h \
+ 	lua/common.c lua/common.h \
+ 	lua/vifm_cmds.c lua/vifm_cmds.h \
