@@ -1,0 +1,15 @@
+$NetBSD: patch-src_modules_snomasks_Makefile.in,v 1.1 2021/10/18 11:13:34 nia Exp $
+
+Honor LDFLAGS when linking modules so RELRO works.
+
+--- src/modules/snomasks/Makefile.in.orig	2021-10-03 14:09:18.000000000 +0000
++++ src/modules/snomasks/Makefile.in
+@@ -35,7 +35,7 @@ R_MODULES=\
+ 	dccreject.so
+ 
+ MODULES=$(R_MODULES)
+-MODULEFLAGS=@MODULEFLAGS@
++MODULEFLAGS=@MODULEFLAGS@ @LDFLAGS@
+ RM=@RM@
+ 
+ all: build

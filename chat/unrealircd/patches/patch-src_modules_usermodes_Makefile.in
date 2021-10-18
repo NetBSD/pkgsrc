@@ -1,0 +1,15 @@
+$NetBSD: patch-src_modules_usermodes_Makefile.in,v 1.1 2021/10/18 11:13:34 nia Exp $
+
+Honor LDFLAGS when linking modules so RELRO works.
+
+--- src/modules/usermodes/Makefile.in.orig	2021-10-03 14:09:18.000000000 +0000
++++ src/modules/usermodes/Makefile.in
+@@ -36,7 +36,7 @@ R_MODULES=\
+ 	privacy.so regonlymsg.so secureonlymsg.so privdeaf.so
+ 
+ MODULES=$(R_MODULES)
+-MODULEFLAGS=@MODULEFLAGS@
++MODULEFLAGS=@MODULEFLAGS@ @LDFLAGS@
+ RM=@RM@
+ 
+ all: build
