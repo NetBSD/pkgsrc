@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:58:04 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/18 09:17:26 pin Exp $
 
 RMD160 (aho-corasick-0.7.18.crate) = b0dc4b0030152d0db9483ea816548ec9c330b211
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -147,9 +147,9 @@ Size (lock_api-0.4.5.crate) = 25199 bytes
 RMD160 (log-0.4.14.crate) = 91b8b87a9386f54c92b4625d69722c8871eb8b3a
 SHA512 (log-0.4.14.crate) = 796100167663d85a7bc4244cd305e9b3f0a1b1520764b63464698eb136318d0928c40c16f5d19d9f602a5bf769851275bbd48d66b088b0c37be7a6fb62def7cc
 Size (log-0.4.14.crate) = 34582 bytes
-RMD160 (macchina-1.1.8.tar.gz) = 23351a86fc51b10e0546194208c6abc064514cf9
-SHA512 (macchina-1.1.8.tar.gz) = 81d87f5cb459a4f6abf354ad29a1b08883dce92fd0a6083d60129236a7d7320d249c5b1c9dc8dff24202676ddebffd1bce2fe405d70a0f8cf633e4846befcfe6
-Size (macchina-1.1.8.tar.gz) = 79575 bytes
+RMD160 (macchina-2.0.0.tar.gz) = 2fdda846b6d8b70417910dc3f6ba8cfbdfd53bc9
+SHA512 (macchina-2.0.0.tar.gz) = 9bd521751448e41fef3cc18875290704681f7d4c6d0053563a655c3cdfd6a0d27e9578c55684ce666937b2ac4cb01332034b58e34425b5bd404e10be6d29c717
+Size (macchina-2.0.0.tar.gz) = 51111 bytes
 RMD160 (mach-0.3.2.crate) = d15fae9a578ec70b31f078b450c2b645404b5ff0
 SHA512 (mach-0.3.2.crate) = 73622b37915f3445a57cbac5eb378bfee61f5a2383c0dd8bd7c29b5e46447405ebaeb706f3a3274e5afe37b0506afaf1511836cb8897d9d480a3abd41f18fa26
 Size (mach-0.3.2.crate) = 19611 bytes
