@@ -1545,7 +1545,7 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 		goto nuke_pkg;
 
 	if (run_install_script(pkg, "POST-INSTALL"))
-		goto nuke_pkgdb;
+		goto nuke_pkg;
 
 	/* XXX keep +INSTALL_INFO for updates? */
 	/* XXX keep +PRESERVE for updates? */
