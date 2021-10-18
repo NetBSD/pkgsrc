@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5199 2021/10/18 11:13:49 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5200 2021/10/18 11:15:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7943,3 +7943,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated benchmarks/hyperfine to 1.12.0 [pin 2021-10-18]
 	Updated sysutils/macchina to 2.0.0 [pin 2021-10-18]
 	Updated chat/unrealircd to 5.2.2 [nia 2021-10-18]
+	Updated chat/weechat to 3.3 [nia 2021-10-18]
