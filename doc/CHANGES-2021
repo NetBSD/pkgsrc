@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5205 2021/10/18 13:36:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5206 2021/10/18 13:56:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7949,3 +7949,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/rofi to 1.7.0 [nia 2021-10-18]
 	Updated devel/pcre2 to 10.38 [nia 2021-10-18]
 	Updated sysutils/mc to 4.8.27 [nia 2021-10-18]
+	Updated editors/nano to 5.9 [nia 2021-10-18]
