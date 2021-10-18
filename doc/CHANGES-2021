@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5193 2021/10/17 22:01:16 thor Exp $
+$NetBSD: CHANGES-2021,v 1.5194 2021/10/18 06:52:19 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7937,3 +7937,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-jack to 1.29.1nb1 [thor 2021-10-17]
 	Updated audio/mpg123-nas to 1.29.1 [thor 2021-10-17]
 	Updated audio/mpg123-pulse to 1.29.1 [thor 2021-10-17]
+	Updated mail/sieve-connect to 0.9 [tm 2021-10-18]
