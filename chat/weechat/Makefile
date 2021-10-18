@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.127 2021/09/29 19:00:24 adam Exp $
+# $NetBSD: Makefile,v 1.128 2021/10/18 11:15:09 nia Exp $
 
-DISTNAME=	weechat-3.2.1
-PKGREVISION=	1
+DISTNAME=	weechat-3.3
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -11,22 +10,27 @@ HOMEPAGE=	https://www.weechat.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+.include "../../lang/ruby/rubyversion.mk"
+
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
 USE_TOOLS+=	msgfmt pkg-config
 USE_LANGUAGES=	c99
 USE_CMAKE=	yes
 FAKE_NCURSES=	yes
 
+CMAKE_ARGS+=	-DASCIIDOCTOR_FOUND=ON
+CMAKE_ARGS+=	-DASCIIDOCTOR_EXECUTABLE=${PREFIX}/bin/asciidoctor${RUBY_VER}
 CMAKE_ARGS+=	-DCA_FILE=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 CMAKE_ARGS+=	-DENABLE_GUILE=OFF
 CMAKE_ARGS+=	-DENABLE_TCL=OFF
-CMAKE_ARGS+=	-DENABLE_MAN=OFF # Requires ascii-doctor
 CMAKE_ARGS+=	-DENABLE_JAVASCRIPT=OFF
 CMAKE_ARGS+=	-DENABLE_PHP=OFF
 CMAKE_ARGS+=	-DENABLE_SPELL=OFF
-CMAKE_ARGS+=	-DLOCALEDIR=${PKGLOCALEDIR}/locale
 CMAKE_ARGS+=	-DENABLE_CHARSET=ON
+CMAKE_ARGS+=	-DENABLE_MAN=ON
+CMAKE_ARGS+=	-DLOCALEDIR=${PKGLOCALEDIR}/locale
+CMAKE_ARGS+=	-DMANDIR=${PREFIX}/${PKGMANDIR}
 
 USE_PKGLOCALEDIR=	yes
 
