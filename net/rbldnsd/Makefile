@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:54 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/18 08:16:49 tm Exp $
 #
 
-DISTNAME=	rbldnsd-0.997a
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	rbldnsd-0.998
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/rbldnsd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.corpit.ru/mjt/rbldnsd/
 COMMENT=	Efficient DNS daemon to serve DNSBL zones
+LICENSE=	gnu-gpl-v1
 
-WRKSRC=		${WRKDIR}/rbldnsd-0.997a
+WRKSRC=		${WRKDIR}/${DISTNAME}
 HAS_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
