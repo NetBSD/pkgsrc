@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2020/11/24 12:15:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/10/18 11:17:24 nia Exp $
 bin/vifm
 bin/vifm-convert-dircolors
 bin/vifm-pause
 bin/vifm-screen-split
-etc/vifm/colors/Default-256.vifm
 man/man1/vifm-convert-dircolors.1
 man/man1/vifm-pause.1
 man/man1/vifm-screen-split.1
@@ -19,6 +18,7 @@ share/doc/vifm/INSTALL
 share/doc/vifm/NEWS
 share/doc/vifm/README
 share/doc/vifm/TODO
+share/examples/vifm/colors/Default-256.vifm
 share/pixmaps/vifm.png
 share/vifm/colors/astrell-root.vifm
 share/vifm/colors/astrell-user.vifm
@@ -32,6 +32,7 @@ share/vifm/vifm-media
 share/vifm/vifmrc
 share/vifm/vim-doc/doc/tags
 share/vifm/vim-doc/doc/vifm-app.txt
+share/vifm/vim-doc/doc/vifm-lua.txt
 share/vifm/vim/autoload/vifm/colorconv.vim
 share/vifm/vim/autoload/vifm/edit.vim
 share/vifm/vim/autoload/vifm/globals.vim
