@@ -1,13 +1,14 @@
-$NetBSD: patch-makefile,v 1.4 2021/10/14 19:12:56 rhialto Exp $
+$NetBSD: patch-makefile,v 1.5 2021/10/19 20:34:48 rhialto Exp $
 
 Exclude -flto for gcc 4.1.3 (used in NetBSD/vax 6)
 Exclude -flto for clang on NetBSD
 Exclude -flto for gcc 4.4.7 (Used in DragonFly 2.13 - 3.1)
 NO_LTO=1 is in effect for gcc and clang, except Darwin.
-Make -O2 conditional so can be overridden by environment
-Fix png16 detection
+Fix png16 detection.
+Let INCLUDES and LIBRARIES be the sole source for INCPATH and LIBPATH,
+to avoid seeing non-pkgsrc libraries (except MacOS platform).
 
---- makefile.orig	2021-10-07 06:38:08.000000000 +0000
+--- makefile.orig	2021-10-13 01:53:56.000000000 +0000
 +++ makefile
 @@ -298,7 +298,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
        $(shell git log -1 --pretty="SIM_GIT_COMMIT_ID %H$(GIT_EXTRA_FILES)%nSIM_GIT_COMMIT_TIME $(isodate)" >.git-commit-id)
@@ -18,6 +19,174 @@ Fix png16 detection
    PCAPLIB = pcap
    ifeq (agcc,$(findstring agcc,${GCC})) # Android target build?
      OS_CCDEFS = -D_GNU_SOURCE -DSIM_ASYNCH_IO 
+@@ -339,16 +339,16 @@ ifeq (${WIN32},)  #*nix Environments (&&
+     ifeq (Darwin,$(OSTYPE))
+       OSNAME = OSX
+       LIBEXT = dylib
+-      ifneq (include,$(findstring include,$(UNSUPPORTED_BUILD)))
+-        INCPATH:=$(shell LANG=C; ${GCC} -x c -v -E /dev/null 2>&1 | grep -A 10 '> search starts here' | grep '^ ' | grep -v 'framework directory' | tr -d '\n')
+-      endif
++      #ifneq (include,$(findstring include,$(UNSUPPORTED_BUILD)))
++        INCPATH+=$(shell LANG=C; ${GCC} -x c -v -E /dev/null 2>&1 | grep -A 10 '> search starts here' | grep '^ ' | grep -v 'framework directory' | tr -d '\n')
++      #endif
+       ifeq (incopt,$(shell if ${TEST} -d /opt/local/include; then echo incopt; fi))
+-        INCPATH += /opt/local/include
+-        OS_CCDEFS += -I/opt/local/include
++        # INCPATH += /opt/local/include
++        # OS_CCDEFS += -I/opt/local/include
+       endif
+       ifeq (libopt,$(shell if ${TEST} -d /opt/local/lib; then echo libopt; fi))
+-        LIBPATH += /opt/local/lib
+-        OS_LDFLAGS += -L/opt/local/lib
++        # LIBPATH += /opt/local/lib
++        # OS_LDFLAGS += -L/opt/local/lib
+       endif
+       ifeq (HomeBrew,$(or $(shell if ${TEST} -d /usr/local/Cellar; then echo HomeBrew; fi),$(shell if ${TEST} -d /opt/homebrew/Cellar; then echo HomeBrew; fi)))
+         ifeq (local,$(shell if $(TEST) -d /usr/local/Cellar; then echo local; fi))
+@@ -356,8 +356,8 @@ ifeq (${WIN32},)  #*nix Environments (&&
+         else
+           HBPATH = /opt/homebrew
+         endif
+-        INCPATH += $(foreach dir,$(wildcard $(HBPATH)/Cellar/*/*),$(realpath $(dir)/include))
+-        LIBPATH += $(foreach dir,$(wildcard $(HBPATH)/Cellar/*/*),$(realpath $(dir)/lib))
++        # INCPATH += $(foreach dir,$(wildcard $(HBPATH)/Cellar/*/*),$(realpath $(dir)/include))
++        # LIBPATH += $(foreach dir,$(wildcard $(HBPATH)/Cellar/*/*),$(realpath $(dir)/lib))
+       endif
+     else
+       ifeq (Linux,$(OSTYPE))
+@@ -367,15 +367,15 @@ ifeq (${WIN32},)  #*nix Environments (&&
+         ifneq (lib,$(findstring lib,$(UNSUPPORTED_BUILD)))
+           ifeq (Android,$(shell uname -o))
+             ifneq (,$(shell if ${TEST} -d ${PREFIX}/lib; then echo prefixlib; fi))
+-              LIBPATH += ${PREFIX}/lib
++              # LIBPATH += ${PREFIX}/lib
+             endif
+             ifneq (,$(shell if ${TEST} -d /system/lib; then echo systemlib; fi))
+-              LIBPATH += /system/lib
++              # LIBPATH += /system/lib
+             endif
+-            LIBPATH += $(LD_LIBRARY_PATH)
++            # LIBPATH += $(LD_LIBRARY_PATH)
+           endif
+           ifeq (ldconfig,$(shell if ${TEST} -e /sbin/ldconfig; then echo ldconfig; fi))
+-            LIBPATH := $(sort $(foreach lib,$(shell /sbin/ldconfig -p | grep ' => /' | sed 's/^.* => //'),$(dir $(lib))))
++            # LIBPATH := $(sort $(foreach lib,$(shell /sbin/ldconfig -p | grep ' => /' | sed 's/^.* => //'),$(dir $(lib))))
+           endif
+         endif
+         LIBEXT = so
+@@ -383,7 +383,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+         ifeq (SunOS,$(OSTYPE))
+           OSNAME = Solaris
+           ifneq (lib,$(findstring lib,$(UNSUPPORTED_BUILD)))
+-            LIBPATH := $(shell LANG=C; crle | grep 'Default Library Path' | awk '{ print $$5 }' | sed 's/:/ /g')
++            # LIBPATH := $(shell LANG=C; crle | grep 'Default Library Path' | awk '{ print $$5 }' | sed 's/:/ /g')
+           endif
+           LIBEXT = so
+           OS_LDFLAGS += -lsocket -lnsl
+@@ -392,27 +392,27 @@ ifeq (${WIN32},)  #*nix Environments (&&
+             OS_CCDEFS += -I/opt/sfw/include
+           endif
+           ifeq (libsfw,$(shell if ${TEST} -d /opt/sfw/lib; then echo libsfw; fi))
+-            LIBPATH += /opt/sfw/lib
+-            OS_LDFLAGS += -L/opt/sfw/lib -R/opt/sfw/lib
++            # LIBPATH += /opt/sfw/lib
++            # OS_LDFLAGS += -L/opt/sfw/lib -R/opt/sfw/lib
+           endif
+           OS_CCDEFS += -D_LARGEFILE_SOURCE
+         else
+           ifeq (cygwin,$(OSTYPE))
+             # use 0readme_ethernet.txt documented Windows pcap build components
+-            INCPATH += ../windows-build/winpcap/WpdPack/Include
+-            LIBPATH += ../windows-build/winpcap/WpdPack/Lib
++            # INCPATH += ../windows-build/winpcap/WpdPack/Include
++            # LIBPATH += ../windows-build/winpcap/WpdPack/Lib
+             PCAPLIB = wpcap
+             LIBEXT = a
+           else
+             ifneq (,$(findstring AIX,$(OSTYPE)))
+               OS_LDFLAGS += -lm -lrt
+               ifeq (incopt,$(shell if ${TEST} -d /opt/freeware/include; then echo incopt; fi))
+-                INCPATH += /opt/freeware/include
+-                OS_CCDEFS += -I/opt/freeware/include
++                # INCPATH += /opt/freeware/include
++                # OS_CCDEFS += -I/opt/freeware/include
+               endif
+               ifeq (libopt,$(shell if ${TEST} -d /opt/freeware/lib; then echo libopt; fi))
+-                LIBPATH += /opt/freeware/lib
+-                OS_LDFLAGS += -L/opt/freeware/lib
++                # LIBPATH += /opt/freeware/lib
++                # OS_LDFLAGS += -L/opt/freeware/lib
+               endif
+             else
+               ifneq (,$(findstring Haiku,$(OSTYPE)))
+@@ -423,9 +423,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
+                 ifeq ($(HAIKU_ARCH),x86_gcc2)
+                   $(error Unsupported arch x86_gcc2. Run setarch x86 and retry)
+                 endif
+-                INCPATH := $(shell findpaths -e -a $(HAIKU_ARCH) B_FIND_PATH_HEADERS_DIRECTORY)
+-                INCPATH += $(shell findpaths -e B_FIND_PATH_HEADERS_DIRECTORY posix)
+-                LIBPATH := $(shell findpaths -e -a $(HAIKU_ARCH) B_FIND_PATH_DEVELOP_LIB_DIRECTORY)
++                # INCPATH := $(shell findpaths -e -a $(HAIKU_ARCH) B_FIND_PATH_HEADERS_DIRECTORY)
++                # INCPATH += $(shell findpaths -e B_FIND_PATH_HEADERS_DIRECTORY posix)
++                # LIBPATH := $(shell findpaths -e -a $(HAIKU_ARCH) B_FIND_PATH_DEVELOP_LIB_DIRECTORY)
+                 OS_LDFLAGS += -lnetwork
+               else
+                 ifeq (,$(findstring NetBSD,$(OSTYPE)))
+@@ -433,7 +433,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+                     LDSEARCH :=$(shell LANG=C; ldconfig -r | grep 'search directories' | awk '{print $$3}' | sed 's/:/ /g')
+                   endif
+                   ifneq (,$(LDSEARCH))
+-                    LIBPATH := $(LDSEARCH)
++                    # LIBPATH := $(LDSEARCH)
+                   else
+                     ifeq (,$(strip $(LPATH)))
+                       $(info *** Warning ***)
+@@ -445,22 +445,22 @@ ifeq (${WIN32},)  #*nix Environments (&&
+                       $(info *** Warning *** variable.)
+                       $(info *** Warning ***)
+                     else
+-                      LIBPATH = $(subst :, ,$(LPATH))
++                      # LIBPATH = $(subst :, ,$(LPATH))
+                     endif
+                   endif
+-                  OS_LDFLAGS += $(patsubst %,-L%,${LIBPATH})
++                  # OS_LDFLAGS += $(patsubst %,-L%,${LIBPATH})
+                 endif
+               endif
+             endif
+             ifeq (usrpkglib,$(shell if ${TEST} -d /usr/pkg/lib; then echo usrpkglib; fi))
+-              LIBPATH += /usr/pkg/lib
+-              INCPATH += /usr/pkg/include
+-              OS_LDFLAGS += -L/usr/pkg/lib -R/usr/pkg/lib
+-              OS_CCDEFS += -I/usr/pkg/include
++              # LIBPATH += /usr/pkg/lib
++              # INCPATH += /usr/pkg/include
++              # OS_LDFLAGS += -L/usr/pkg/lib -R/usr/pkg/lib
++              # OS_CCDEFS += -I/usr/pkg/include
+             endif
+             ifeq (/usr/local/lib,$(findstring /usr/local/lib,${LIBPATH}))
+-              INCPATH += /usr/local/include
+-              OS_CCDEFS += -I/usr/local/include
++              # INCPATH += /usr/local/include
++              # OS_CCDEFS += -I/usr/local/include
+             endif
+             ifneq (,$(findstring NetBSD,$(OSTYPE))$(findstring FreeBSD,$(OSTYPE))$(findstring AIX,$(OSTYPE)))
+               LIBEXT = so
+@@ -484,12 +484,12 @@ ifeq (${WIN32},)  #*nix Environments (&&
+     endif
+     ifeq (,$(filter /lib/,$(LIBPATH)))
+       ifeq (existlib,$(shell if $(TEST) -d /lib/; then echo existlib; fi))
+-        LIBPATH += /lib/
++        # LIBPATH += /lib/
+       endif
+     endif
+     ifeq (,$(filter /usr/lib/,$(LIBPATH)))
+       ifeq (existusrlib,$(shell if $(TEST) -d /usr/lib/; then echo existusrlib; fi))
+-        LIBPATH += /usr/lib/
++        # LIBPATH += /usr/lib/
+       endif
+     endif
+     export CPATH = $(subst $() $(),:,$(INCPATH))
 @@ -598,9 +598,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
      OS_CCDEFS += -DHAVE_UTIME
    endif
@@ -30,17 +199,26 @@ Fix png16 detection
        $(info using libpng: $(call find_lib,png) $(call find_include,png))
        ifneq (,$(call find_include,zlib))
          ifneq (,$(call find_lib,z))
+@@ -790,7 +790,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+           NETWORK_FEATURES = - dynamic networking support using libpcap components from www.tcpdump.org and locally installed libpcap.${LIBEXT}
+           $(info using libpcap: $(call find_include,pcap))
+         else
+-          LIBPATH += /usr/local/lib
++          # LIBPATH += /usr/local/lib
+           LIBEXT = a
+           ifneq (,$(call find_lib,$(PCAPLIB)))
+             $(info using libpcap: $(call find_lib,$(PCAPLIB)) $(call find_include,pcap))
 @@ -1185,11 +1185,11 @@ ifneq (,$(UNSUPPORTED_BUILD))
  endif
  ifneq ($(DEBUG),)
    CFLAGS_G = -g -ggdb -g3
 -  CFLAGS_O = -O0
-+  CFLAGS_O ?= -O0
++  CFLAGS_O += -O0
    BUILD_FEATURES = - debugging support
  else
    ifneq (,$(findstring clang,$(COMPILER_NAME))$(findstring LLVM,$(COMPILER_NAME)))
 -    CFLAGS_O = -O2 -fno-strict-overflow
-+    CFLAGS_O ?= -O2 -fno-strict-overflow
++    CFLAGS_O += -O2 -fno-strict-overflow
      GCC_OPTIMIZERS_CMD = ${GCC} --help
      NO_LTO = 1
    else
@@ -49,7 +227,7 @@ Fix png16 detection
        CFLAGS_O += -O4 -flto -fwhole-program
      else
 -      CFLAGS_O := -O2
-+      CFLAGS_O ?= -O2
++      CFLAGS_O += -O2
      endif
    endif
    LDFLAGS_O = 
