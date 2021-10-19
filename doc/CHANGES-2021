@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5211 2021/10/19 11:23:25 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5212 2021/10/19 19:00:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7955,3 +7955,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/hexchat to 2.16.0 [nia 2021-10-19]
 	Updated graphics/imlib2 to 1.7.4 [nia 2021-10-19]
 	Updated mail/isync to 1.4.3 [schmonz 2021-10-19]
+	Updated databases/mysql57-client to 5.7.36 [adam 2021-10-19]
+	Updated databases/mysql57-server to 5.7.36 [adam 2021-10-19]
+	Updated x11/py-sip to 4.19.25 [adam 2021-10-19]
+	Updated x11/py-qt5 to 5.15.5 [adam 2021-10-19]
