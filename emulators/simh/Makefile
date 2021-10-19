@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2021/10/14 19:12:55 rhialto Exp $
+# $NetBSD: Makefile,v 1.58 2021/10/19 20:34:48 rhialto Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20211012
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
@@ -19,6 +20,13 @@ USE_TOOLS+=	gmake
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# Doesn't seem to work with pkgsrc pcap, and dylib path is hardcoded.
+PREFER.libpcap=		native
+# Link error with the native version: _zlibVersion
+PREFER.zlib=		pkgsrc
+.endif
 
 BUILDLINK_TRANSFORM+=	rm:-flto
 BUILDLINK_TRANSFORM+=	rm:-fwhole-program
@@ -55,10 +63,11 @@ LIBRARIES=		${PREFIX:Q}/lib:\
 MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
-MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q} CFLAGS_O=${CFLAGS:Q}
-MAKE_ENV+=		FONTPATH=/usr/pkg/share/fonts/X11/TTF
+MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=		FONTPATH=${PREFIX}/share/fonts/X11/TTF
 
-BUILD_TARGET=		TESTS=0 all
+BUILD_MAKE_FLAGS=	TESTS=0
+
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
