@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2021/05/24 19:49:13 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2021/10/19 08:17:06 nia Exp $
 
-DISTNAME=	hexchat-2.14.3
-PKGREVISION=	9
+DISTNAME=	hexchat-2.16.0
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
@@ -15,11 +14,8 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 
 USE_LANGUAGES=	c c++
 
-# XXX fails without GNU msgfmt
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-
-MESON_ARGS+=		-Dwith-text=true
-MESON_ARGS+=		-Dwith-appdata=false
+MESON_ARGS+=		-Dtext-frontend=true
+MESON_ARGS+=		-Dinstall-appdata=false
 
 REPLACE_PYTHON+=	plugins/perl/generate_header.py
 REPLACE_PYTHON+=	src/common/make-te.py
@@ -30,6 +26,12 @@ SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# msgfmt: unknown option -- xml
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 PKGCONFIG_OVERRIDE+=	data/pkgconfig/hexchat-plugin.pc.in
 
