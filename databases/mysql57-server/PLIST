@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/07/25 20:29:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/10/19 18:57:37 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -1602,6 +1602,7 @@ share/mysql/test/r/mysqldump-no-binlog.result
 share/mysql/test/r/mysqldump.result
 share/mysql/test/r/mysqldump_bug29998457.result
 share/mysql/test/r/mysqldump_bugs.result
+share/mysql/test/r/mysqldump_gtid_state.result
 share/mysql/test/r/mysqldump_restore.result
 share/mysql/test/r/mysqldumpslow.result
 share/mysql/test/r/mysqlimport.result
@@ -5956,6 +5957,7 @@ share/mysql/test/suite/innodb_fts/include/tablespace_location.inc
 share/mysql/test/suite/innodb_fts/include/tablespace_location_alter.inc
 share/mysql/test/suite/innodb_fts/include/tablespace_location_error.inc
 share/mysql/test/suite/innodb_fts/r/basic.result
+share/mysql/test/suite/innodb_fts/r/bug_32831765.result
 share/mysql/test/suite/innodb_fts/r/compatibility.result
 share/mysql/test/suite/innodb_fts/r/compatibility_win.result
 share/mysql/test/suite/innodb_fts/r/ddl.result
@@ -6009,6 +6011,7 @@ share/mysql/test/suite/innodb_fts/r/tablespace_location_error.result
 share/mysql/test/suite/innodb_fts/r/transaction.result
 share/mysql/test/suite/innodb_fts/r/truncate.result
 share/mysql/test/suite/innodb_fts/t/basic.test
+share/mysql/test/suite/innodb_fts/t/bug_32831765.test
 share/mysql/test/suite/innodb_fts/t/compatibility.test
 share/mysql/test/suite/innodb_fts/t/compatibility_win.test
 share/mysql/test/suite/innodb_fts/t/ddl.test
@@ -8591,6 +8594,7 @@ share/mysql/test/suite/perfschema/r/ddl_uvar_by_thread.result
 share/mysql/test/suite/perfschema/r/ddl_variables_by_thread.result
 share/mysql/test/suite/perfschema/r/digest_null_literal.result
 share/mysql/test/suite/perfschema/r/digest_table_full.result
+share/mysql/test/suite/perfschema/r/digest_view.result
 share/mysql/test/suite/perfschema/r/dml_accounts.result
 share/mysql/test/suite/perfschema/r/dml_cond_instances.result
 share/mysql/test/suite/perfschema/r/dml_esgs_by_account_by_event_name.result
@@ -9039,6 +9043,7 @@ share/mysql/test/suite/perfschema/t/ddl_variables_by_thread.test
 share/mysql/test/suite/perfschema/t/digest_null_literal.test
 share/mysql/test/suite/perfschema/t/digest_table_full-master.opt
 share/mysql/test/suite/perfschema/t/digest_table_full.test
+share/mysql/test/suite/perfschema/t/digest_view.test
 share/mysql/test/suite/perfschema/t/disabled.def
 share/mysql/test/suite/perfschema/t/dml_accounts.test
 share/mysql/test/suite/perfschema/t/dml_cond_instances.test
@@ -14191,6 +14196,8 @@ share/mysql/test/t/mysqldump-no-binlog.test
 share/mysql/test/t/mysqldump.test
 share/mysql/test/t/mysqldump_bug29998457.test
 share/mysql/test/t/mysqldump_bugs.test
+share/mysql/test/t/mysqldump_gtid_state-master.opt
+share/mysql/test/t/mysqldump_gtid_state.test
 share/mysql/test/t/mysqldump_restore.test
 share/mysql/test/t/mysqldumpslow.test
 share/mysql/test/t/mysqlimport.test
