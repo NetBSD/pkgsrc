@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/05/12 10:07:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/10/19 21:23:31 tm Exp $
 bin/offlineimap
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/offlineimap/CustomConfig.py
@@ -124,6 +124,9 @@ ${PYSITELIB}/offlineimap/utils/distro.pyo
 ${PYSITELIB}/offlineimap/utils/stacktrace.py
 ${PYSITELIB}/offlineimap/utils/stacktrace.pyc
 ${PYSITELIB}/offlineimap/utils/stacktrace.pyo
+${PYSITELIB}/offlineimap/version.py
+${PYSITELIB}/offlineimap/version.pyc
+${PYSITELIB}/offlineimap/version.pyo
 ${PYSITELIB}/offlineimap/virtual_imaplib2.py
 ${PYSITELIB}/offlineimap/virtual_imaplib2.pyc
 ${PYSITELIB}/offlineimap/virtual_imaplib2.pyo
