@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2021/07/30 12:27:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2021/10/19 18:59:54 adam Exp $
 
-DISTNAME=	PyQt5-5.15.2
+DISTNAME=	PyQt5-5.15.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
-PKGREVISION=	4
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 
@@ -95,7 +94,6 @@ BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.23
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
-.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
