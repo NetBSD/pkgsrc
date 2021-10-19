@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5212 2021/10/19 19:00:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5213 2021/10/19 21:24:35 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7959,3 +7959,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mysql57-server to 5.7.36 [adam 2021-10-19]
 	Updated x11/py-sip to 4.19.25 [adam 2021-10-19]
 	Updated x11/py-qt5 to 5.15.5 [adam 2021-10-19]
+	Updated mail/offlineimap to 7.3.4 [tm 2021-10-19]
