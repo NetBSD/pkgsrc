@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21158 2021/10/18 08:23:13 tm Exp $
+$NetBSD: TODO,v 1.21159 2021/10/19 21:24:36 tm Exp $
 
 Suggested new packages
 ======================
@@ -1380,7 +1380,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocamlnet-4.1.9
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
-	o offlineimap-7.3.3
 	o olvwm-4.5
 	o onscripter-20200722
 	o oo2c-2.1.7
