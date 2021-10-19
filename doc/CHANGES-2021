@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5207 2021/10/18 14:33:14 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5208 2021/10/19 07:37:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7951,3 +7951,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/mc to 4.8.27 [nia 2021-10-18]
 	Updated editors/nano to 5.9 [nia 2021-10-18]
 	Updated security/libretls to 3.4.1 [schmonz 2021-10-18]
+	Updated sysutils/htop to 3.1.1 [nia 2021-10-19]
