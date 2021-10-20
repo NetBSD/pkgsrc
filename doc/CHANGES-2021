@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5223 2021/10/20 18:32:03 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5224 2021/10/20 19:13:24 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7971,3 +7971,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/postgrey to 1.37 [tm 2021-10-20]
 	Updated mail/pst-utils to 0.6.76 [tm 2021-10-20]
 	Updated mail/t-prot to 3.4 [tm 2021-10-20]
+	Updated mail/avenger to 0.8.5 [tm 2021-10-20]
