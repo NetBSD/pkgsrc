@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2019/11/15 11:09:15 sborrill Exp $
+$NetBSD: patch-configure,v 1.2 2021/10/20 16:28:17 tm Exp $
 
 Fix test ==
 
---- configure.orig	2019-11-14 15:23:47.000000000 +0000
-+++ configure	2019-11-14 15:24:53.000000000 +0000
-@@ -23593,7 +23593,7 @@
+--- configure.orig	2021-03-28 00:08:10.000000000 +0000
++++ configure
+@@ -24755,7 +24755,7 @@ else
    ax_python_lib=no
  fi
  
 -   if test x$ax_python_lib == xno; then
 +   if test x$ax_python_lib = xno; then
       as_ac_Lib=`$as_echo "ac_cv_lib_${ax_python_bin}m''_main" | $as_tr_sh`
- { $as_echo "$as_me:$LINENO: checking for main in -l${ax_python_bin}m" >&5
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -l${ax_python_bin}m" >&5
  $as_echo_n "checking for main in -l${ax_python_bin}m... " >&6; }
