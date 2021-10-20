@@ -1,0 +1,14 @@
+hgrep is a grep tool to search files with given pattern and print the matched
+code snippets with human-friendly syntax highlighting.
+In short, it's a fusion of bat and grep or other alternatives like ripgrep.
+
+This is similar to -C option of grep command, but hgrep focuses on human
+readable outputs. hgrep is useful to survey the matches with contexts around
+them.
+When some matches are near enough, hgrep prints the lines within one code
+snippet. Unlike grep -C, hgrep adopts some heuristics around blank lines to
+determine efficient number of context lines.
+
+As an optional feature, hgrep has builtin grep implementation thanks to ripgrep
+as library. It's a subset of rg command. And it's faster when there are so many
+matches since everything is done in the same process.
