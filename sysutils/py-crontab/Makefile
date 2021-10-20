@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/05/27 12:58:57 adam Exp $
+# $NetBSD: Makefile,v 1.22 2021/10/20 19:50:01 adam Exp $
 
-DISTNAME=	python-crontab-2.5.1
+DISTNAME=	python-crontab-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-crontab/}
