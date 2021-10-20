@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/04/21 11:42:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/10/20 16:28:17 tm Exp $
 
-DISTNAME=		libpst-0.6.75
+DISTNAME=		libpst-0.6.76
 PKGNAME=		${DISTNAME:S/libpst/pst-utils/}
 PKGREVISION=		3
 CATEGORIES=		mail
