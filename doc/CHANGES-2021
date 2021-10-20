@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5224 2021/10/20 19:13:24 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5225 2021/10/20 19:50:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7972,3 +7972,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/pst-utils to 0.6.76 [tm 2021-10-20]
 	Updated mail/t-prot to 3.4 [tm 2021-10-20]
 	Updated mail/avenger to 0.8.5 [tm 2021-10-20]
+	Updated databases/py-mongo to 3.12.1 [adam 2021-10-20]
+	Updated sysutils/py-crontab to 2.6.0 [adam 2021-10-20]
