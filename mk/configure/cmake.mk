@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.21 2021/07/17 06:34:20 jperkin Exp $
+# $NetBSD: cmake.mk,v 1.22 2021/10/20 23:42:13 gdt Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -55,12 +55,19 @@ CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
 .if empty(CMAKE_PKGSRC_BUILD_FLAGS:M[nN][oO])
 CMAKE_ARGS+=    -DCMAKE_PKGSRC_BUILD_FLAGS:BOOL=TRUE
 .endif
+
 .if ${OPSYS} != "Darwin"
+# Arguably, we should pass CMAKE_BUILD_RPATH and CMAKE_INSTALL_RPATH
+# both equal to ${PREFIX}/lib, and omit -Wl,-R from LDFLAGS, to align
+# with how cmake thinks RPATH should be handled, but that is a
+# somewhat risky change.
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=TRUE
 .else
+# TODO: Explain this better.
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=FALSE
 CMAKE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${CMAKE_INSTALL_NAME_DIR}
 .endif
+
 .if defined(CMAKE_USE_GNU_INSTALL_DIRS) && empty(CMAKE_USE_GNU_INSTALL_DIRS:M[nN][oO])
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR:PATH=lib
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}
