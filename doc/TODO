@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21161 2021/10/20 14:05:26 tm Exp $
+$NetBSD: TODO,v 1.21162 2021/10/20 16:16:49 tm Exp $
 
 Suggested new packages
 ======================
@@ -1621,7 +1621,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o postgres_exporter-0.9.0
 	o postgresql-pgroonga-2.2.9
 	o postgresql-pljava-1.6.2
-	o postgrey-1.37
 	o pound-3.0d
 	o povray-3.7.0.0
 	o powerdns-4.4.3
