@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/10/20 12:27:49 pin Exp $
+bin/hgrep
