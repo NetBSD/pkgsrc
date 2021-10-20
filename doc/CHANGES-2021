@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5220 2021/10/20 14:05:26 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5221 2021/10/20 16:16:49 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7968,3 +7968,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/hgrep version 0.1.5 [pin 2021-10-20]
 	Updated mail/imapfilter to 2.7.5 [tm 2021-10-20]
 	Updated mail/mime-construct to 1.11 [tm 2021-10-20]
+	Updated mail/postgrey to 1.37 [tm 2021-10-20]
