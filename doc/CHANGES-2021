@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5217 2021/10/20 10:30:25 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5218 2021/10/20 12:29:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7965,3 +7965,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.18.1 [adam 2021-10-20]
 	Updated devel/yarn to 1.22.17 [adam 2021-10-20]
 	Updated sysutils/tiramisu to 20211019 [pin 2021-10-20]
+	Added textproc/hgrep version 0.1.5 [pin 2021-10-20]
