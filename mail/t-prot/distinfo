@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:49 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/20 18:31:49 tm Exp $
 
-RMD160 (t-prot-2.15.tar.gz) = 288a1bf6c6e7b282941da36f6ac7acde9f1ad231
-SHA512 (t-prot-2.15.tar.gz) = 23226305c95822d953c227e6db7327ead6f90f06c3620dead4384a2b05e237d123e112220e34c5741ea618db2420ea9c27535bf4642a29849f5087deb5e9809c
-Size (t-prot-2.15.tar.gz) = 46612 bytes
+RMD160 (t-prot-3.4.tar.gz) = 7947e1306bb49a092185a6f6dda6ec758b85e609
+SHA512 (t-prot-3.4.tar.gz) = 6c86c10e5b381b93cbaa9382f8bd2c94eeb9c8ecec092d83cfbda5f0eea5933fb85397b364ea58e08ef93e6a06198447f167f0850959ddf16b8a18d3fe8953f0
+Size (t-prot-3.4.tar.gz) = 46066 bytes
