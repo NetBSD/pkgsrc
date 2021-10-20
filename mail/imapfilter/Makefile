@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.48 2020/11/26 20:17:56 nia Exp $
+# $NetBSD: Makefile,v 1.49 2021/10/20 13:49:18 tm Exp $
 
-DISTNAME=	imapfilter-2.7.4
+DISTNAME=	imapfilter-2.7.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lefcha/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://imapfilter.hellug.gr/
+HOMEPAGE=	http://github.com/lefcha/imapfilter
 COMMENT=	Mail filtering utility for the IMAP
 LICENSE=	mit
 
