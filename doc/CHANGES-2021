@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5213 2021/10/19 21:24:35 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5214 2021/10/20 08:19:07 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7960,3 +7960,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/py-sip to 4.19.25 [adam 2021-10-19]
 	Updated x11/py-qt5 to 5.15.5 [adam 2021-10-19]
 	Updated mail/offlineimap to 7.3.4 [tm 2021-10-19]
+	Updated pkgtools/pkgin to 21.10.1 [jperkin 2021-10-20]
