@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5222 2021/10/20 16:28:28 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5223 2021/10/20 18:32:03 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7970,3 +7970,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/mime-construct to 1.11 [tm 2021-10-20]
 	Updated mail/postgrey to 1.37 [tm 2021-10-20]
 	Updated mail/pst-utils to 0.6.76 [tm 2021-10-20]
+	Updated mail/t-prot to 3.4 [tm 2021-10-20]
