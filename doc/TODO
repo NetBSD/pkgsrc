@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21164 2021/10/20 18:32:03 tm Exp $
+$NetBSD: TODO,v 1.21165 2021/10/20 19:13:24 tm Exp $
 
 Suggested new packages
 ======================
@@ -492,7 +492,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o automake-1.16.5
 	o autosetup-0.7.0
 	o avant-window-navigator-0.4.2
-	o avenger-0.8.5
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
