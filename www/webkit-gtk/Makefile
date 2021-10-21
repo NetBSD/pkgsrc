@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.212 2021/09/28 22:11:54 leot Exp $
+# $NetBSD: Makefile,v 1.213 2021/10/21 10:54:41 leot Exp $
 
-DISTNAME=	webkitgtk-2.34.0
+DISTNAME=	webkitgtk-2.34.1
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
