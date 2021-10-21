@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5240 2021/10/21 22:28:51 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5241 2021/10/21 22:29:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7991,3 +7991,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/graphviz to 2.49.2 [buildbox 2021-10-21]
 	Added www/httpfile version 20151206 [schmonz 2021-10-21]
 	Updated net/fehqlibs to 19 [schmonz 2021-10-21]
+	Updated net/ucspi-tcp6 to 1.12.3nb2 [schmonz 2021-10-21]
