@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2021/08/04 13:33:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2021/10/21 22:30:23 schmonz Exp $
 
-DISTNAME=		djbdnscurve6-38
+DISTNAME=		djbdnscurve6-40
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/djbdnscurve6/
 EXTRACT_SUFX=		.tgz
