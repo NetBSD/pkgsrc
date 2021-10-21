@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/05/31 09:36:44 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/21 07:46:37 wiz Exp $
 
 DISTNAME=	kstart-4.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 

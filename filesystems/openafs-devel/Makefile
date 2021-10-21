@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/21 07:46:35 wiz Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems net sysutils
 MASTER_SITES=	http://www.openafs.org/dl/openafs/1.7.11/
 EXTRACT_SUFX=	.tar.bz2
