@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5236 2021/10/21 19:09:23 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5237 2021/10/21 19:10:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7987,3 +7987,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-respx to 0.18.0 [adam 2021-10-21]
 	Updated chat/py-xmpppy to 0.6.3 [gdt 2021-10-21]
 	Updated sysutils/broot to 1.6.5 [pin 2021-10-21]
+	Updated sysutils/zoxide to 0.7.8 [pin 2021-10-21]
