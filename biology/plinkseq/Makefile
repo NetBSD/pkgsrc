@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/01/13 22:06:42 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/21 20:33:03 kim Exp $
 
 DISTNAME=	plinkseq-0.08
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology
 MASTER_SITES=	https://atgu.mgh.harvard.edu/plinkseq/dist/version-0.08/
 
