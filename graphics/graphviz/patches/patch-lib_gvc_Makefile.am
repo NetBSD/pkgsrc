@@ -1,13 +1,15 @@
-$NetBSD: patch-lib_gvc_Makefile.in,v 1.4 2017/03/08 14:51:56 wiz Exp $
+$NetBSD: patch-lib_gvc_Makefile.am,v 1.1 2021/10/21 19:44:31 schmonz Exp $
 
---- lib/gvc/Makefile.in.orig	2016-12-25 03:04:59.000000000 +0000
-+++ lib/gvc/Makefile.in
-@@ -613,7 +613,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
+Link with pthread library, if needed.
+
+--- lib/gvc/Makefile.am.orig	2021-10-16 16:39:12.000000000 +0000
++++ lib/gvc/Makefile.am
+@@ -71,7 +71,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
  	$(top_builddir)/lib/cdt/libcdt.la \
  	$(top_builddir)/lib/cgraph/libcgraph.la \
  	$(top_builddir)/lib/pathplan/libpathplan.la \
 -	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS)
 +	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- 
  libgvc_la_DEPENDENCIES = $(libgvc_C_la_DEPENDENCIES)
- EXTRA_DIST = $(man_MANS) $(pdf_DATA)
+ 
+ if WITH_WIN32
