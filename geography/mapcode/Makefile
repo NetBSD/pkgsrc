@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/05/27 19:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/21 00:50:59 gdt Exp $
 
+GITHUB_PROJECT=	mapcode-cpp
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	mapcode-cpp-2.5.4
 PKGNAME=	${DISTNAME:S/-cpp//}
 CATEGORIES=	geography
@@ -10,13 +12,10 @@ HOMEPAGE=	https://github.com/mapcode-foundation/mapcode-cpp/
 COMMENT=	Mapcode Library for C/C++
 LICENSE=	apache-2.0
 
-GITHUB_PROJECT=	mapcode-cpp
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 
 # Included CMakeLists is nonsensical
-USE_CMAKE=	yes
+USE_CMAKE=		yes
 
 CMAKE_ARGS+=		-DCMAKE_BINARY_DIR=${WRKSRC}/build
 
