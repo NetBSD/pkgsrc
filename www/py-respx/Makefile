@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/07/08 08:41:15 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/10/21 13:17:09 adam Exp $
 
-DISTNAME=	respx-0.17.1
+DISTNAME=	respx-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/respx/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/lundberg/respx
 COMMENT=	Utility for mocking out the Python HTTPX library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.18.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.20.0:../../www/py-httpx
 
 USE_LANGUAGES=	# none
 
