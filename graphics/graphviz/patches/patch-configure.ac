@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.9 2021/04/25 07:51:26 mrg Exp $
+$NetBSD: patch-configure.ac,v 1.6 2021/10/21 19:44:31 schmonz Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
@@ -10,9 +10,9 @@ last chunk: fix
 http://www.graphviz.org/mantisbt/view.php?id=2362
 last last chunk: fix sed expression not to use + which is not in BRE (guile)
 
---- configure.orig	2020-04-08 07:52:13.000000000 +0000
-+++ configure
-@@ -3369,8 +3369,15 @@ case "${host_os}" in
+--- configure.ac.orig	2021-10-16 16:39:12.000000000 +0000
++++ configure.ac
+@@ -106,8 +106,15 @@ case "${host_os}" in
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
  	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
@@ -30,16 +30,17 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  	fi
  	;;
  esac
-@@ -3387,7 +3394,6 @@ if test -z "$LIBPOSTFIX"; then
+@@ -123,8 +130,7 @@ if test -z "$LIBPOSTFIX"; then
+   case "${host_os}" in
      *linux* )
        case "${host_cpu}" in
--        aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 )
-+        aarch64* | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 )
+-        aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
 -          LIBPOSTFIX="64"
++        aarch64* | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
            INTGOSIZE=64
            ;;
        esac
-@@ -3395,7 +3401,6 @@ if test -z "$LIBPOSTFIX"; then
+@@ -132,7 +138,6 @@ if test -z "$LIBPOSTFIX"; then
      *solaris* )
        case "${host_cpu}" in
          x86_64 | sparc64 )
@@ -47,34 +48,25 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            INTGOSIZE=64
            ;;
        esac
-@@ -18350,7 +18355,7 @@ esac
- 
- 
- 
--if test "${GCC}" == "yes"
-+if test "${GCC}" = "yes"
- then
-   # Enable common warnings flags
-   CFLAGS="${CFLAGS} -Wall"
-@@ -21191,7 +21196,7 @@ done
-       if test "x$GUILE" = "x"; then
+@@ -684,7 +689,7 @@ else
+       if test "x$GUILE_CONFIG" = "x"; then
          use_guile="No (guile not available)"
        else
--        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \+\([0-9\.]\+\)$/\1/ p'`
-+        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \([0-9\.]*\)$/\1/ p'`
+-        [GUILE_VERSION=`$GUILE_CONFIG --version 2>&1 | sed -n '1 s/^.* \+\([0-9\.]\+\)$/\1/ p'`]
++        [GUILE_VERSION=`$GUILE_CONFIG --version 2>&1 | sed -n '1 s/^.* \([0-9\.]*\)$/\1/ p'`]
          GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
          GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
-         if test 0$GUILE_VERSION_MAJOR -lt 2; then
-@@ -21870,7 +21875,7 @@ $as_echo_n "checking for Lua headers and
+         AC_CHECK_PROGS(GUILE,guile$GUILE_VERSION_MAJOR.$GUILE_VERSION_MINOR guile$GUILE_VERSION_MAJOR guile)
+@@ -908,7 +913,7 @@ else
  		        LUA_VERSION=`$PKG_CONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKG_CONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKG_CONFIG --libs lua$l`
 -		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKG_CONFIG --variable=V lua`"
-+		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
++		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKG_CONFIG --variable=V lua`"
  
  		        pkgconfig_lualib_found=`$PKG_CONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -21934,7 +21939,7 @@ $as_echo_n "checking for Lua headers and
+@@ -930,7 +935,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -83,18 +75,18 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
              fi
          fi
  
-@@ -22212,8 +22217,8 @@ $as_echo "no" >&6; }
- fi
- 
- 
+@@ -1020,8 +1025,8 @@ else
+         use_ocaml="No (ocaml not available)"
+       else
+         AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
 -        OCAML_INCLUDES=-I/usr/lib$LIBPOSTFIX/ocaml
 -        OCAML_LIBS=-L/usr/lib$LIBPOSTFIX/ocaml
 +        OCAML_INCLUDES=-I${PREFIX}/lib$LIBPOSTFIX/ocaml
 +        OCAML_LIBS=-L${PREFIX}/lib$LIBPOSTFIX/ocaml
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
-         ac_fn_c_check_header_mongrel "$LINENO" "caml/mlvalues.h" "ac_cv_header_caml_mlvalues_h" "$ac_includes_default"
-@@ -22487,7 +22492,7 @@ test -n "$PHPCONFIG" || PHPCONFIG="php-c
+         AC_CHECK_HEADER(caml/mlvalues.h,[
+@@ -1124,7 +1129,7 @@ else
          else
            PHP_INCLUDES="`$PHPCONFIG --includes`"
            PHP_INSTALL_DIR="`$PHPCONFIG --extension-dir`"
@@ -103,14 +95,49 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            PHP_LIBS="`$PHPCONFIG --ldflags` `$PHPCONFIG --libs`"
            save_CPPFLAGS=$CPPFLAGS
            CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -27143,10 +27148,6 @@ fi
+@@ -2191,45 +2196,6 @@ else
+ fi
+ AM_CONDITIONAL(WITH_QUARTZ, [test "x$use_quartz" = "xYes"])
  
- 
- 
--# Check whether --with-platformsdkincludedir was given.
--if test "${with_platformsdkincludedir+set}" = set; then :
--  withval=$with_platformsdkincludedir; PLATFORMSDKINCLUDE=$withval; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE//'\\'/\\\\}; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE_ESCAPED// /\\ }
+-dnl -----------------------------------
+-dnl INCLUDES and LIBS for PLATFORMSDK
+-
+-AC_ARG_WITH(platformsdkincludedir,
+-  [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
+-  [PLATFORMSDKINCLUDE=$withval; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE//'\\'/\\\\}; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE_ESCAPED// /\\ }])
+-
+-AC_ARG_WITH(platformsdklibdir,
+-  [AS_HELP_STRING([--with-platformsdklibdir=DIR],[use Platform SDK (Windows) libraries from DIR])],
+-  [PLATFORMSDKLIB=$withval])
+-
+-AC_SUBST([PLATFORMSDKINCLUDE])
+-AC_SUBST([PLATFORMSDKINCLUDE_ESCAPED])
+-AC_SUBST([PLATFORMSDKLIB])
+-
+-dnl -----------------------------------
+-dnl INCLUDES and LIBS for GDI+
+-
+-AC_ARG_WITH(gdiplus,
+-  [AS_HELP_STRING([--with-gdiplus=no],[GDI+ framework (Windows)])],
+-  [], [with_gdiplus=no])
+-
+-if test "x$with_gdiplus" != "xyes"; then
+-  use_gdiplus="No (disabled by default - Windows only)"
+-else
+-  if test -f "$PLATFORMSDKINCLUDE\GdiPlus.h" -a -f "$PLATFORMSDKLIB\GdiPlus.lib"; then
+-    use_gdiplus="Yes"
+-    AC_DEFINE_UNQUOTED(HAVE_GDIPLUS,1,[Define if you have the GDI+ framework for Windows])
+-    GDIPLUS_HEADS=`cd "$PLATFORMSDKINCLUDE" && echo GdiPlus*.h`
+-    GDIPLUS_CFLAGS=''
+-    GDIPLUS_LIBS=''
+-    AC_SUBST([GDIPLUS_HEADS])
+-    AC_SUBST([GDIPLUS_CFLAGS])
+-    AC_SUBST([GDIPLUS_LIBS])
+-  else
+-    use_gdiplus="No (missing headers)"
+-    AC_MSG_WARN(--with-gdiplus requires valid --with-platformsdkincludedir and --with-platformsdklibdir.)
+-  fi
 -fi
+ AM_CONDITIONAL(WITH_GDIPLUS, [test "x$use_gdiplus" = "xYes"])
  
- 
- 
+ dnl -----------------------------------
