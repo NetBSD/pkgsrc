@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/10/15 20:22:48 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/21 11:36:04 adam Exp $
 
-DISTNAME=	paho-mqtt-1.5.1
+DISTNAME=	paho-mqtt-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paho-mqtt/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://www.eclipse.org/paho/
 COMMENT=	MQTT version 3.1.1 client class
 LICENSE=	epl-v1.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 # tests are not included
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 #TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../devel/py-lama
 #TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
