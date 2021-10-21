@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:09:27 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/21 12:06:15 gdt Exp $
 
-RMD160 (mapcode-cpp-2.5.4.tar.gz) = 36451979806b7524c3af70a428bfb42451f7be7e
-SHA512 (mapcode-cpp-2.5.4.tar.gz) = 8c87cbb955b0172c71ab08a3770f941b1d17874d889d0cbbeef4a125c9295e7c2cb920fba925b088226e1f3004e380bfd4a3fd04d614c75210f684436ba46bc7
-Size (mapcode-cpp-2.5.4.tar.gz) = 1164087 bytes
+RMD160 (mapcode-cpp-2.5.5.tar.gz) = 05ec63cb716753f35b27b333f9b80f75f57806df
+SHA512 (mapcode-cpp-2.5.5.tar.gz) = 28058e3fbccf034195e162f06fbec025c7729deb408e4820ea20117b2df5b6d38096c5ce0b6d08c98ccf7efb904039c7dabe460d91528b19dec7d5d312d21fcb
+Size (mapcode-cpp-2.5.5.tar.gz) = 1166238 bytes
 SHA1 (patch-CMakeLists.txt) = b700ffd3efe7d1daa25a87186db304d8d5b6a34c
