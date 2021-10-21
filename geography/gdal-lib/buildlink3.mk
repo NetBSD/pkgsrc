@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.72 2021/09/29 19:00:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.73 2021/10/21 00:45:25 gdt Exp $
 
 BUILDLINK_TREE+=	gdal-lib
 
@@ -12,11 +12,11 @@ BUILDLINK_PKGSRCDIR.gdal-lib?=		../../geography/gdal-lib
 pkgbase := gdal-lib
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.gdal-lib:Mpgsql)
+.if ${PKG_BUILD_OPTIONS.gdal-lib:Mpgsql}
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gdal-lib:Mmysql)
+.if ${PKG_BUILD_OPTIONS.gdal-lib:Mmysql}
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
