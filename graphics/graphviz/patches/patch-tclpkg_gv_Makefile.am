@@ -1,17 +1,17 @@
-$NetBSD: patch-tclpkg_gv_Makefile.in,v 1.1 2020/07/27 20:44:15 adam Exp $
+$NetBSD: patch-tclpkg_gv_Makefile.am,v 1.1 2021/10/21 19:44:31 schmonz Exp $
 
 Add missing -I flags to point to perl files.
 
 See https://gitlab.com/graphviz/graphviz/issues/1576.
 
---- tclpkg/gv/Makefile.in.orig	2019-08-11 14:47:21.000000000 -0600
-+++ tclpkg/gv/Makefile.in	2019-08-11 15:00:23.000000000 -0600
-@@ -1054,7 +1054,7 @@
+--- tclpkg/gv/Makefile.am.orig	2021-10-16 16:39:12.000000000 +0000
++++ tclpkg/gv/Makefile.am
+@@ -184,7 +184,7 @@ nodist_libgv_perl_la_SOURCES = gv_perl.c
  libgv_perl_la_SOURCES = $(BASESOURCES) gv_dummy_init.c
  libgv_perl_la_LIBADD = $(BASELIBS) $(PERL_LIBS)
  libgv_perl_la_LDFLAGS = -module -avoid-version $(PERL_LD)
 -libgv_perl_la_CPPFLAGS = $(BASECPPFLAGS) $(PERL_CC)
 +libgv_perl_la_CPPFLAGS = $(BASECPPFLAGS) $(PERL_INCLUDES) $(PERL_CC)
- pkgphpdir = $(pkglibdir)/php
- PHP_data = gv.php
- nodist_libgv_php_la_SOURCES = gv_php.cpp php_gv.h
+ $(PERL_data): gv_perl.cpp
+ gv_perl.cpp: gv.i
+ 	$(SWIG) -c++ $(SWIG_PERL_OPT) -o $@ $(srcdir)/gv.i
