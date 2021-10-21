@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:29:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/21 20:10:23 jperkin Exp $
 
 RMD160 (OpenCC-ver.1.1.1.tar.gz) = 16934c802a3c7d3e9582edf6f04bfbc11a934dee
 SHA512 (OpenCC-ver.1.1.1.tar.gz) = 48ccf61f63cf0a1c0fc484a52ae1d406a28949a52be7d7d1595e6aaf87f40ac47ea4697308441a9381f0cd6f404ee5a28b85a2fa2f288c4b3933be36f4a41363
 Size (OpenCC-ver.1.1.1.tar.gz) = 2212256 bytes
+SHA1 (patch-src_PhraseExtract.cpp) = 41ea305268331d9bc8547656450fd844209273b6
