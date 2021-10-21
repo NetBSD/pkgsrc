@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/03 19:30:32 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/10/21 00:43:36 gdt Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
@@ -46,7 +46,7 @@ MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
 # 8.1:
 # Files appear in the working directory itself.
 
-DIR.doc=		
+DIR.doc=
 DIR.pgsql=		#epsg-v${VERS}sql-PostgreSQL
 DIR.mysql=		#epsg-v${VERS}sql-mySQL
 
