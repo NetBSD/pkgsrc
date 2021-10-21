@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5238 2021/10/21 19:44:37 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5239 2021/10/21 20:43:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7989,3 +7989,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.6.5 [pin 2021-10-21]
 	Updated sysutils/zoxide to 0.7.8 [pin 2021-10-21]
 	Updated graphics/graphviz to 2.49.2 [buildbox 2021-10-21]
+	Added www/httpfile version 20151206 [schmonz 2021-10-21]
