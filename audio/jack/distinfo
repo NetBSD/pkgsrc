@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 13:09:29 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/21 13:45:12 jperkin Exp $
 
 RMD160 (jack2-1.9.19.tar.gz) = da6ed4db02dfc856c477d76a73fe22157b6f7df8
 SHA512 (jack2-1.9.19.tar.gz) = d8d5fe17e2984959546af3c53f044aa4648860e19ff8ffd54452e87fa6cdfd111f825c57e3df17cb8ed95de8392b6f354b12ded41e3e021a37f07b99a89ba18d
 Size (jack2-1.9.19.tar.gz) = 988780 bytes
 SHA1 (patch-common_JackAudioAdapterFactory.cpp) = 8292a8c88c673136f52a007133278f9b4403839c
 SHA1 (patch-common_memops.c) = 468476c6067595524f492d37f3b761af48e78585
-SHA1 (patch-common_wscript) = f68886b688d623a87178eed22e3900109409be69
+SHA1 (patch-common_wscript) = 01d21e983f408d0a423f9c5cb9f12c22017ca783
 SHA1 (patch-example-clients_wscript) = 9db0899e797acbc416bfd9e6aba50c70bd5ff0ab
 SHA1 (patch-man_wscript) = bc5ce9481d4c911350f260c069a0ce4be732f526
 SHA1 (patch-netbsd_JackAtomic__os.h) = cd9cc4bf9913b3dedfbb8a2ea34077277e17f85d
@@ -20,5 +20,5 @@ SHA1 (patch-posix_JackNetUnixSocket.h) = ce9a9255dc0dd423562b94b0fcc1012c8ba3a37
 SHA1 (patch-posix_JackPosixSemaphore.cpp) = 59425ada11a5cab83159691ae10a23c0d36750ef
 SHA1 (patch-posix_JackSocket.cpp) = 88ae18c3d2cc31a43355ff9b0c78ab13b83bd314
 SHA1 (patch-tests_wscript) = e0bf616175a116df489808cda8cb8c70890d4da0
-SHA1 (patch-tools_wscript) = 197fc67305c62ccfb35b06d194d1785bb8ef5ab3
-SHA1 (patch-wscript) = 2d95ee17426992d921c8b2c432abdf39ec2d54c7
+SHA1 (patch-tools_wscript) = fab7472b29fc6e46ba1e8ca94c12aa8808b075da
+SHA1 (patch-wscript) = a49c6e7ebd84bb5156576351308676b0b3486492

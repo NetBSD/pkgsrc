@@ -1,4 +1,4 @@
-$NetBSD: patch-wscript,v 1.3 2021/09/12 06:04:44 nia Exp $
+$NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
 
 - Add NetBSD support.
 - Ensure man pages are installed on all Unixes.
@@ -35,7 +35,18 @@ $NetBSD: patch-wscript,v 1.3 2021/09/12 06:04:44 nia Exp $
      if bld.env['IS_WINDOWS']:
          obj.includes += ['windows']
  
-@@ -678,6 +687,11 @@ def build_drivers(bld):
+@@ -582,6 +591,10 @@ def create_driver_obj(bld, **kw):
+     else:
+         driver.env['cxxshlib_PATTERN'] = 'jack_%s.so'
+ 
++    if bld.env['IS_SUN']:
++        driver.env.append_value('LINKFLAGS', '-lnsl')
++        driver.env.append_value('LINKFLAGS', '-lsocket')
++
+     obj_add_includes(bld, driver)
+ 
+     return driver
+@@ -678,6 +691,11 @@ def build_drivers(bld):
          'windows/portaudio/JackPortAudioDriver.cpp',
      ]
  
@@ -47,7 +58,7 @@ $NetBSD: patch-wscript,v 1.3 2021/09/12 06:04:44 nia Exp $
      winmme_src = [
          'windows/winmme/JackWinMMEDriver.cpp',
          'windows/winmme/JackWinMMEInputPort.cpp',
-@@ -779,6 +793,12 @@ def build_drivers(bld):
+@@ -779,6 +797,12 @@ def build_drivers(bld):
              target = 'oss',
              source = oss_src)
  
@@ -60,7 +71,7 @@ $NetBSD: patch-wscript,v 1.3 2021/09/12 06:04:44 nia Exp $
  def build(bld):
      if not bld.variant and bld.env['BUILD_WITH_32_64']:
          Options.commands.append(bld.cmd + '_' + lib32)
-@@ -821,9 +841,10 @@ def build(bld):
+@@ -821,9 +845,10 @@ def build(bld):
      bld.recurse('tools')
  
      if bld.env['IS_LINUX']:
