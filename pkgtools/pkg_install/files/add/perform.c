@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.120 2021/04/10 20:10:48 nia Exp $	*/
+/*	$NetBSD: perform.c,v 1.121 2021/10/21 13:05:25 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.120 2021/04/10 20:10:48 nia Exp $");
+__RCSID("$NetBSD: perform.c,v 1.121 2021/10/21 13:05:25 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1545,7 +1545,7 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 		goto nuke_pkg;
 
 	if (run_install_script(pkg, "POST-INSTALL"))
-		goto nuke_pkgdb;
+		goto nuke_pkg;
 
 	/* XXX keep +INSTALL_INFO for updates? */
 	/* XXX keep +PRESERVE for updates? */
