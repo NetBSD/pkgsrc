@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.148 2021/10/21 07:51:41 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2021/10/21 09:02:25 wiz Exp $
 
 DISTNAME=	heimdal-7.7.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
-GITHUB_TAG=	${DISTNAME}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.h5l.org/
