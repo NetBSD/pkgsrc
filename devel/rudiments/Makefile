@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2021/09/29 19:00:06 adam Exp $
+# $NetBSD: Makefile,v 1.66 2021/10/21 07:46:31 wiz Exp $
 
 DISTNAME=	rudiments-1.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rudiments/}
 
