@@ -1,17 +1,18 @@
-$NetBSD: distinfo,v 1.53 2021/10/16 19:46:42 tm Exp $
+$NetBSD: distinfo,v 1.54 2021/10/21 07:52:42 tm Exp $
 
 RMD160 (proftpd-1.3.7c.tar.gz) = e51b3c2350d027c60a83552078802c99f09fad1e
 SHA512 (proftpd-1.3.7c.tar.gz) = f9268e521e68cebaf1947cbfe1cc57f282ea09d59410c1722cd9a68c99d643b90b837c1fa840fdb894597c7429b0eb62bc4ac324915ffac04366daa2f104e88d
 Size (proftpd-1.3.7c.tar.gz) = 20428648 bytes
-SHA1 (patch-Make.rules.in) = 4689fcb4aff5c9b3a2e47a43b93e76101d54e812
-SHA1 (patch-Makefile.in) = 332dcd9d773770c10d876dc9da1dc7f6b1c15421
-SHA1 (patch-configure.in) = ed8e190a89cbfc3276d9e77f0bbb624f6d19f816
-SHA1 (patch-contrib_mod__load_configure.in) = 0a72c47bf813ffd2ca8f8188a2d8596ec4d60200
-SHA1 (patch-contrib_mod__load_mod__load.c) = c51abd46ffc950b5baec615a0fdaf92c993414e3
-SHA1 (patch-contrib_mod__load_mod__load.h.in) = 83f5592a9c9a2a90ec500bba382326dccf8f05e5
-SHA1 (patch-contrib_mod__sftp_Makefile.in) = 8a805d777597b4fb06a45b484373880e535a0cee
+SHA1 (patch-Make.rules.in) = 70a2298915bbf7a88660942730826a1a048e0c1d
+SHA1 (patch-Makefile.in) = 9101e11a9c8021d393134c7a010047eecaea4110
+SHA1 (patch-configure.in) = 586e5b574029eefe96eeb49cd6387c79cf21c3fb
+SHA1 (patch-contrib_mod__load_configure.in) = c7da7eded44674bfbc8eb1fb0c27d07b7dd50a24
+SHA1 (patch-contrib_mod__load_mod__load.c) = 43fe0cccf6c202a765083313d814f6c44ddcd75a
+SHA1 (patch-contrib_mod__load_mod__load.h.in) = 37b6d7eaeeb0ec68dfdd48e4bf5c033850c25da4
+SHA1 (patch-contrib_mod__sftp_Makefile.in) = c7b43dadd56096852f6f61b4c33085867defb369
 SHA1 (patch-contrib_mod_tls.c) = e36dfa9427804b41eb2ad49378b62890325d50ed
-SHA1 (patch-include_pfilter.h) = abc00fe5cc14115c937e9b3790d3c0ca259ee12c
+SHA1 (patch-include_pfilter.h) = bb9b7daec949e394bfc232d693cef9a8b1599c70
 SHA1 (patch-modules_mod__auth.c) = b1ff5c3236edabce5016da3230e0bd30ec92db48
-SHA1 (patch-src_main.c) = c00e1b1830d36d17bea5a10d8e13ec2328d3df88
-SHA1 (patch-src_pfilter.c) = c4447aea0cf84c83f6dd18316b007254c87ac510
+SHA1 (patch-src_main.c) = 29ed3ce2e1cae56299dfe3242cc085e10c3232ad
+SHA1 (patch-src_pfilter.c) = 0b658ce0ac0feb769e7a09c62b59a8e8ffafb981
+SHA1 (patch-src_pidfile.c) = 086f19aac04ad13a008abc59b731e99501da4dd2
