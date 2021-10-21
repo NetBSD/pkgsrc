@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/10/21 20:38:35 schmonz Exp $
+bin/httpfile-access
+bin/httpfile-conf
+bin/httpfile-getmtime
+bin/httpfile-gzip
+bin/httpfile-httpd
+bin/httpfile-setlock
+bin/httpfile-setmtime
