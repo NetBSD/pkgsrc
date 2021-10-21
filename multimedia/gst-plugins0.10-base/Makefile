@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/05/24 19:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2021/10/21 16:11:11 jperkin Exp $
 #
 
 .include "Makefile.common"
@@ -41,11 +41,5 @@ CONFIGURE_ARGS+=	--disable-introspection
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
-
-# XXX: hack
-# autoreconf some breaks the file names of the .mo files
-# manually fix this here instead of debugging generated Makefiles
-post-install:
-	find ${DESTDIR}${PREFIX}/share/locale -name .mo -execdir mv .mo gst-plugins-base-0.10.mo \;
 
 .include "../../mk/bsd.pkg.mk"
