@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:23:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/21 13:46:25 gdt Exp $
 
-RMD160 (xmpppy-0.6.2.tar.gz) = acd1f4bd1ffa6998824ad1eba1e7632ebb2387c6
-SHA512 (xmpppy-0.6.2.tar.gz) = 17ea07ff88ce5a5e4a577361bac7cc68a989daf482b8573f847ea2eed467441da83cd4b7e753875d232edf539840356771063b38fcfadbc5f339b7e49b8d2fb5
-Size (xmpppy-0.6.2.tar.gz) = 190749 bytes
+RMD160 (xmpppy-0.6.3.tar.gz) = f24bcd91527c2b85405077a0b6cde29d945f2d55
+SHA512 (xmpppy-0.6.3.tar.gz) = b9eed01ec3772136b0610dc3ecf8f40e1edb5bf96761669dec83bd7584d31385c6cc9226d5949ad46ee4ae13dea6d6fcd03cf2490640796f7a4232aa9d094b70
+Size (xmpppy-0.6.3.tar.gz) = 190967 bytes
 SHA1 (patch-xmpp_debug.py) = a410b7abd534f37bba583ca9f15bf05252bc55a0
