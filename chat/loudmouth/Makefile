@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2021/01/25 23:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2021/10/21 07:46:33 wiz Exp $
 
 DISTNAME=	loudmouth-1.5.4
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://mcabber.com/files/loudmouth/
 EXTRACT_SUFX=	.tar.bz2

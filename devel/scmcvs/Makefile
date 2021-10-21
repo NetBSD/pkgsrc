@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:30:41 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/10/21 07:46:35 wiz Exp $
 
 DISTNAME=	cvs-1.12.13
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel scm
 MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/feature/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
