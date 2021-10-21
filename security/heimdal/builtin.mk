@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2019/11/04 21:12:53 rillig Exp $
+# $NetBSD: builtin.mk,v 1.18 2021/10/21 07:46:02 wiz Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -44,12 +44,12 @@ _BLTN_HEIMDAL_0.6.2=		# empty
 _BLTN_HEIMDAL_0.6.1=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
 _BLTN_HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
 _BLTN_HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
-_BLTN_HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*				\
-			NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-*	\
-			NetBSD-1.5[YZ]-* NetBSD-1.5Z*-*
+_BLTN_HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*			\
+				NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-* \
+				NetBSD-1.5[YZ]-* NetBSD-1.5Z*-*
 _BLTN_HEIMDAL_0.3f=		NetBSD-1.5X-*
-_BLTN_HEIMDAL_0.3e=		NetBSD-1.5[UVW]-*				\
-			NetBSD-1.5.*-*
+_BLTN_HEIMDAL_0.3e=		NetBSD-1.5[UVW]-* \
+				NetBSD-1.5.*-*
 .    for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
 .      for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
 .        if !empty(MACHINE_PLATFORM:M${_pattern_})
@@ -117,6 +117,7 @@ MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .    if !empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILDLINK_TARGETS+=	fake-krb5-config
 
+.PHONY: fake-krb5-config
 fake-krb5-config:
 	${RUN} \
 	src=../../security/heimdal/files/krb5-config \
