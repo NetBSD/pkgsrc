@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2021/02/11 13:56:46 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2021/10/21 00:25:16 gdt Exp $
 
-DISTNAME=	geos-3.9.1
+DISTNAME=	geos-3.10.0
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,10 +33,22 @@ COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 
+USE_CMAKE=		yes
+#PKG_DEBUG_LEVEL?=	1
+# cmake hides what it is doing; ask it to be like traditional builds.
+MAKE_FLAGS+=		VERBOSE=1
+
+# Note that the new geos cmake build system is broken and misorders
+# RPATH for tests, leading to testing the installed geos instead of
+# the built geos.  Reported upstream via email 202110, and probably
+# it's a cmake bug.
 TEST_TARGET=		check
+# pthreads are used in tests only, to validate that the thread-safe
+# API to geos, which is not threaded, works.  In that API, callers
+# provide context so that the library does not use internal state.
+# For now, leave it out on the theory that it's found anyway,
+# optimizing for the package not the tests.
+#.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
