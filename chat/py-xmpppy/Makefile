@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/12/19 19:16:22 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2021/10/21 13:46:25 gdt Exp $
 
-DISTNAME=	xmpppy-0.6.2
+DISTNAME=	xmpppy-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xmpppy/}
@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=		yes
-# fails with 0.6.2
+PYDISTUTILSPKG=			yes
+# 0.6.3 fails to authenticate with python38
 PYTHON_VERSIONS_ACCEPTED=	27
 
 DOCDIR=		${PREFIX}/share/doc/py-xmpppy
