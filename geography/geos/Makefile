@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/10/21 00:25:16 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2021/10/21 00:30:50 gdt Exp $
 
 DISTNAME=	geos-3.10.0
 CATEGORIES=	geography
@@ -23,7 +23,6 @@ EXTRACT_SUFX=	.tar.bz2
 # Packages that need revbumping because of libtool's behavior:
 #   geography/gdal-lib
 #   geography/py-gdal
-#   databases/postgresql-postgis2
 # Packages that need revbumping because of direct use of the C++ lib:
 #   (none known)
 
