@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/10/15 12:34:53 pin Exp $
+# $NetBSD: Makefile,v 1.12 2021/10/21 19:10:22 pin Exp $
 
-DISTNAME=	zoxide-0.7.7
+DISTNAME=	zoxide-0.7.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ajeetdsouza/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
