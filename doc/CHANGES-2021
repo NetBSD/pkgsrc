@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5241 2021/10/21 22:29:30 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5242 2021/10/21 22:30:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7992,3 +7992,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/httpfile version 20151206 [schmonz 2021-10-21]
 	Updated net/fehqlibs to 19 [schmonz 2021-10-21]
 	Updated net/ucspi-tcp6 to 1.12.3nb2 [schmonz 2021-10-21]
+	Updated net/ucspi-ssl to 0.999.12.3 [schmonz 2021-10-21]
