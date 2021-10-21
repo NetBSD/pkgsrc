@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/10/21 20:38:35 schmonz Exp $
+
+RMD160 (httpfile-20151206.tar.bz2) = 9f83a89d47ca7d12cb80025ea178bff31823a81a
+SHA512 (httpfile-20151206.tar.bz2) = 1768a647f16026e8a928432bd21a6a8673d5993b8a913375a91fa0f62aac382bd32efc13cebc31bf275b298883d083f2485d4fe1a74f87907b29ceb721677d00
+Size (httpfile-20151206.tar.bz2) = 29502 bytes
+SHA1 (patch-Makefile) = 3739cf9cec613dbd9b823b9bca15b3e656497bb8
