@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21165 2021/10/20 19:13:24 tm Exp $
+$NetBSD: TODO,v 1.21166 2021/10/21 00:41:25 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1201,7 +1201,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o makeztxt-1.60
 	o manedit-1.2.1
 	o mantis-2.22.1
-	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
 	o mate-system-monitor-1.24.2
 	o materia-gtk-theme-20210322
