@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/05/14 14:46:40 nia Exp $
+# $NetBSD: Makefile,v 1.64 2021/10/21 17:45:40 jperkin Exp $
 
 DISTNAME=	gnustep-make-2.8.0
 PKGREVISION=	1
@@ -14,6 +14,7 @@ USE_LANGUAGES+=		c99 objc c++ objc-c++
 USE_TOOLS+=		bash:run csh
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
+CONFIGURE_ENV+=		SHELLPROG=${BASH:Q}
 CONFIGURE_ARGS+=	--disable-importing-config-file
 CONFIGURE_ARGS+=	--with-layout=fhs
 CONFIGURE_ARGS+=	--enable-native-objc-exceptions
