@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5232 2021/10/21 12:16:37 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5233 2021/10/21 13:05:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7982,3 +7982,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-JWT to 2.3.0 [adam 2021-10-21]
 	Updated geography/mapcode to 2.5.5 [gdt 2021-10-21]
 	Updated filesystems/tahoe-lafs to 1.16.0 [gdt 2021-10-21]
+	Updated pkgtools/pkg_install to 20211021 [jperkin 2021-10-21]
