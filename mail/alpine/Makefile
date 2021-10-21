@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/10/17 09:49:09 nia Exp $
+# $NetBSD: Makefile,v 1.49 2021/10/21 13:49:46 jperkin Exp $
 
 DISTNAME=	alpine-2.25
 CATEGORIES=	mail
@@ -28,6 +28,9 @@ CONFIGURE_ARGS+=	--with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 CONFIGURE_ARGS+=	--with-passfile=.pine-passfile
 # disabled, for Web Alpine Support
 CONFIGURE_ARGS+=	--without-tcl
+
+# Should be handled properly with an ldap option and buildlinked.
+CONFIGURE_ARGS.SunOS+=	--without-ldap
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
