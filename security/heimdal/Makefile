@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2021/10/21 07:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2021/10/21 07:51:41 wiz Exp $
 
 DISTNAME=	heimdal-7.7.0
 CATEGORIES=	security
@@ -64,7 +64,7 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 
-PLIST_VARS+=		glob vis hcrypto afskauth
+PLIST_VARS+=		glob vis afskauth
 
 .if ${OPSYS} == "SunOS"
 PLIST.vis=	yes
@@ -90,7 +90,6 @@ pre-configure:
 	mv manpages.new manpages
 
 .include "../../databases/sqlite3/buildlink3.mk"
-PLIST.hcrypto=		yes
 
 # Linux does not have include/vis.h and expected include/glob.h.
 .if ${OPSYS} == "Linux"
