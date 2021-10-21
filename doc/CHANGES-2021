@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5226 2021/10/21 00:25:23 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5227 2021/10/21 07:31:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7975,3 +7975,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-mongo to 3.12.1 [adam 2021-10-20]
 	Updated sysutils/py-crontab to 2.6.0 [adam 2021-10-20]
 	Updated geography/geos to 3.10.0 [gdt 2021-10-21]
+	Updated textproc/mandoc to 1.14.6 [wiz 2021-10-21]
