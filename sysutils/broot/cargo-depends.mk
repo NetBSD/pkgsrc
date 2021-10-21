@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2021/10/02 21:39:20 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2021/10/21 19:08:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -77,8 +77,8 @@ CARGO_CRATE_DEPENDS+=	is_executable-1.0.1
 CARGO_CRATE_DEPENDS+=	itoa-0.4.7
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.22
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.1.22
-CARGO_CRATE_DEPENDS+=	lazy-regex-2.2.1
-CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-2.2.1
+CARGO_CRATE_DEPENDS+=	lazy-regex-2.2.2
+CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-2.2.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	lfs-core-0.4.2
@@ -95,7 +95,7 @@ CARGO_CRATE_DEPENDS+=	memchr-2.4.0
 CARGO_CRATE_DEPENDS+=	memmap-0.7.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.4
 CARGO_CRATE_DEPENDS+=	minimad-0.7.1
-CARGO_CRATE_DEPENDS+=	minimad-0.8.0
+CARGO_CRATE_DEPENDS+=	minimad-0.9.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.3.7
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.4.4
 CARGO_CRATE_DEPENDS+=	mio-0.7.13
@@ -164,7 +164,7 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.74
 CARGO_CRATE_DEPENDS+=	syntect-4.6.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.10.3
-CARGO_CRATE_DEPENDS+=	termimad-0.16.1
+CARGO_CRATE_DEPENDS+=	termimad-0.16.3
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.2.1
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
