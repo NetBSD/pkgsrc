@@ -1,34 +1,25 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2021/04/08 08:40:05 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2021/10/22 22:43:11 nia Exp $
 
 Install configuration files to examples directory.
 
---- CMakeLists.txt.orig	2020-06-08 09:11:24.000000000 +0000
+--- CMakeLists.txt.orig	2021-10-10 16:17:03.000000000 +0000
 +++ CMakeLists.txt
-@@ -483,13 +483,13 @@ IF(NOT WIN32 AND NOT APPLE)
-     ENDIF(BUILD_OPENCS)
+@@ -922,13 +922,13 @@ elseif(NOT APPLE)
+         ENDIF(BUILD_OPENCS)
  
-     # Install global configuration files
--    INSTALL(FILES "${OpenMW_BINARY_DIR}/settings-default.cfg" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
--    INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.cfg.install" DESTINATION "${SYSCONFDIR}" RENAME "openmw.cfg" COMPONENT "openmw")
--    INSTALL(FILES "${OpenMW_BINARY_DIR}/resources/version" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
--    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb.txt" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
-+    INSTALL(FILES "${OpenMW_BINARY_DIR}/settings-default.cfg" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
-+    INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.cfg.install" DESTINATION "${DATAROOTDIR}/examples/openmw" RENAME "openmw.cfg" COMPONENT "openmw")
-+    INSTALL(FILES "${OpenMW_BINARY_DIR}/resources/version" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
-+    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb.txt" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
+         # Install global configuration files
+-        INSTALL(FILES "${INSTALL_SOURCE}/defaults.bin" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-        INSTALL(FILES "${INSTALL_SOURCE}/openmw.cfg.install" DESTINATION "${SYSCONFDIR}" RENAME "openmw.cfg" COMPONENT "openmw")
+-        INSTALL(FILES "${INSTALL_SOURCE}/resources/version" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-        INSTALL(FILES "${INSTALL_SOURCE}/gamecontrollerdb.txt" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
++        INSTALL(FILES "${INSTALL_SOURCE}/defaults.bin" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++        INSTALL(FILES "${INSTALL_SOURCE}/openmw.cfg.install" DESTINATION "${DATAROOTDIR}/examples/openmw" RENAME "openmw.cfg" COMPONENT "openmw")
++        INSTALL(FILES "${INSTALL_SOURCE}/resources/version" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++        INSTALL(FILES "${INSTALL_SOURCE}/gamecontrollerdb.txt" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
  
-     IF(BUILD_OPENCS)
--        INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw-cs.cfg" DESTINATION "${SYSCONFDIR}" COMPONENT "opencs")
-+        INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw-cs.cfg" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "opencs")
-     ENDIF(BUILD_OPENCS)
+         IF(BUILD_OPENCS)
+-            INSTALL(FILES "${INSTALL_SOURCE}/defaults-cs.bin" DESTINATION "${SYSCONFDIR}" COMPONENT "opencs")
++            INSTALL(FILES "${INSTALL_SOURCE}/defaults-cs.bin" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "opencs")
+         ENDIF(BUILD_OPENCS)
  
-     # Install resources
-@@ -819,7 +819,7 @@ if (OPENMW_OSX_DEPLOYMENT AND APPLE AND 
- 
-     install(CODE "
-         set(BU_CHMOD_BUNDLE_ITEMS ON)
--        set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH})
-+        set (CMAKE_MODULE_PATH "/home/nia/cvs/pkgsrc/games/openmw/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH})
-         include(BundleUtilities)
-         cmake_minimum_required(VERSION 3.1)
-     " COMPONENT Runtime)
+         # Install resources
