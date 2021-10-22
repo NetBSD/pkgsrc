@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2021/10/21 07:46:02 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2021/10/22 07:31:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos-prefix-cmds ldap
@@ -38,14 +38,10 @@ heimdal-ldap-schema:
 ###
 .if !empty(PKG_OPTIONS:Mkerberos-prefix-cmds)
 KRB5_PREFIX=		k
-HEIMDAL_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
-			s/^login/${KRB5_PREFIX}&/;			\
-			s/^${KRB5_PREFIX}login.access/login.access/;	\
-			s/^su/${KRB5_PREFIX}&/;				\
-			.else
+HEIMDAL_TRANSFORM=	s/^su/${KRB5_PREFIX}&/;
+CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
+.else
 KRB5_PREFIX=		# empty
-HEIMDAL_TRANSFORM=	s/^ftp/k&/
 .endif
 
 PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
-CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
