@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/22 14:17:21 jperkin Exp $
 
-RMD160 (php-imagick/imagick-3.4.4.tgz) = c0dc62d13b63281ef973a948b71ddc8dff2ffe3e
-SHA512 (php-imagick/imagick-3.4.4.tgz) = 73145a1f095849c32760db2dfc4acc13c57d99a037d65eca9b0ddf8f8e81cf6d28a50f2614e44bae1d90b4f881a2e9a64926e0e3b9403e491fd903ffeb30c4b7
-Size (php-imagick/imagick-3.4.4.tgz) = 253434 bytes
+RMD160 (php-imagick/imagick-3.5.1.tgz) = 1340c1c0ce7245a4e50b5f7082a89e31e36a0fa0
+SHA512 (php-imagick/imagick-3.5.1.tgz) = b922c4fad994a4bf26f4d92b6e81bb761bd8d4d1b52f4b7099cf944cdaed4e44d0318beccfb2cf3bee2605ce33b0ad764d9e3d2ba99c9a6f624ca569a4ac73ad
+Size (php-imagick/imagick-3.5.1.tgz) = 301411 bytes
