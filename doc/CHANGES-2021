@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5252 2021/10/22 20:23:43 scole Exp $
+$NetBSD: CHANGES-2021,v 1.5253 2021/10/22 22:43:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8004,3 +8004,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php74 to 7.4.25 [taca 2021-10-22]
 	Updated mail/neomutt to 20211022 [wiz 2021-10-22]
 	Updated textproc/split-thai to 2.10 [scole 2021-10-22]
+	Updated games/openmw to 0.47.0 [nia 2021-10-22]
