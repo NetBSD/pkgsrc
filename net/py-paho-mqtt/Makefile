@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/10/21 11:36:04 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/10/22 13:44:40 gdt Exp $
 
-DISTNAME=	paho-mqtt-1.6.0
+DISTNAME=	paho-mqtt-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paho-mqtt/}
