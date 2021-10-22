@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/09/29 19:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.44 2021/10/22 11:17:47 jperkin Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -29,6 +29,8 @@ CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.sh \
 
 CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.csh \
 			${PKG_SYSCONFDIR}/profile.d/vte.csh
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/profile.d
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
