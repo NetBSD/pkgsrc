@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5247 2021/10/22 13:44:48 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5248 2021/10/22 14:17:33 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7999,3 +7999,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.8.1 [adam 2021-10-22]
 	Updated www/py-respx to 0.18.1 [adam 2021-10-22]
 	Updated net/py-paho-mqtt to 1.6.1 [gdt 2021-10-22]
+	Updated graphics/php-imagick to 3.5.1 [jperkin 2021-10-22]
