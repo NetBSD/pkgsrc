@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5246 2021/10/22 11:13:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5247 2021/10/22 13:44:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7998,3 +7998,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 3.0.0 [pin 2021-10-22]
 	Updated textproc/py-xmlschema to 1.8.1 [adam 2021-10-22]
 	Updated www/py-respx to 0.18.1 [adam 2021-10-22]
+	Updated net/py-paho-mqtt to 1.6.1 [gdt 2021-10-22]
