@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/10/15 11:43:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/10/22 17:11:54 wiz Exp $
 bin/neomutt
 libexec/neomutt/pgpewrap
 ${PLIST.smime}libexec/neomutt/smime_keys
@@ -62,6 +62,7 @@ share/doc/neomutt/samples/colors.default
 share/doc/neomutt/samples/colors.linux
 share/doc/neomutt/samples/gpg.rc
 share/doc/neomutt/samples/mairix_filter.pl
+share/doc/neomutt/samples/markdown2html.py
 share/doc/neomutt/samples/sample.mailcap
 share/doc/neomutt/samples/sample.neomuttrc
 share/doc/neomutt/samples/sample.neomuttrc-starter

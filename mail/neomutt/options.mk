@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.16 2020/06/22 06:08:35 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2021/10/22 17:11:54 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw slang
+PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
 PKG_SUPPORTED_OPTIONS=		debug gpgme gssapi idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=		tokyocabinet notmuch lua
 PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
@@ -17,14 +17,6 @@ CONFIGURE_ENV+=		ac_cv_path_KRB5CFGPATH=${KRB5_CONFIG}
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
-.endif
-
-###
-### Slang
-###
-.if !empty(PKG_OPTIONS:Mslang)
-.  include "../../devel/libslang/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .endif
 
 ###
