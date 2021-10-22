@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2021/10/09 15:35:05 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/10/22 22:43:11 nia Exp $
 
-DISTNAME=	openmw-0.46.0
-PKGREVISION=	13
+DISTNAME=	openmw-openmw-0.47.0
+PKGNAME=	${DISTNAME:S/^openmw-//1}
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
-GITHUB_TAG=	openmw-${PKGVERSION_NOREV}
+MASTER_SITES=	https://gitlab.com/OpenMW/openmw/-/archive/${PKGNAME_NOREV}/
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://openmw.org/
@@ -20,20 +19,24 @@ GCC_REQD+=	4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DGLOBAL_CONFIG_DIR=${PKG_SYSCONFDIR}
+# System bullet is unacceptable due to OpenMW requiring
+# double-precision bullet.
+CMAKE_ARGS+=	-DOPENMW_USE_SYSTEM_BULLET=OFF
 
 EGDIR=		${PREFIX}/share/examples/openmw
 
 PKG_SYSCONFSUBDIR=	openmw
 
+CONF_FILES+=	${EGDIR}/defaults.bin ${PKG_SYSCONFDIR}/defaults.bin
 CONF_FILES+=	${EGDIR}/gamecontrollerdb.txt ${PKG_SYSCONFDIR}/gamecontrollerdb.txt
 CONF_FILES+=	${EGDIR}/openmw.cfg ${PKG_SYSCONFDIR}/openmw.cfg
-CONF_FILES+=	${EGDIR}/settings-default.cfg ${PKG_SYSCONFDIR}/settings-default.cfg
 CONF_FILES+=	${EGDIR}/version ${PKG_SYSCONFDIR}/version
 
 .include "options.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/unshield/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../devel/bullet/buildlink3.mk"
+#.include "../../devel/bullet/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
