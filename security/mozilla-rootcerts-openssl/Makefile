@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/10/14 12:42:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/10/22 16:56:39 ryoon Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-2.7
 CATEGORIES=	security
@@ -33,12 +33,14 @@ NOT_FOR_UNPRIVILEGED=	yes
 PLACE=			/etc
 SET_PREFIX=		yes
 PLIST_SUBST+=		MYETCDIR=etc
+PRINT_PLIST_AWK+=	{ sub("^etc/", "$${MYETCDIR}/"); }
 CHECK_FILES_SUPPORTED=	no
 .else
 PLACE=			${MY_PKG_SYSCONFDIR}
 # probably SET_PREFIX should not be set
 SET_PREFIX=		yes
 PLIST_SUBST+=		MYETCDIR=${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}
+PRINT_PLIST_AWK+=	{ sub("^${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}/", "$${MYETCDIR}/"); }
 .endif
 
 OPENSSLDIR=		${PLACE}/openssl/certs
