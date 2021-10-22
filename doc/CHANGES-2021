@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5250 2021/10/22 15:14:45 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5251 2021/10/22 17:12:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8002,3 +8002,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/php-imagick to 3.5.1 [jperkin 2021-10-22]
 	Updated lang/php80 to 8.0.12 [taca 2021-10-22]
 	Updated lang/php74 to 7.4.25 [taca 2021-10-22]
+	Updated mail/neomutt to 20211022 [wiz 2021-10-22]
