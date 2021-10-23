@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5260 2021/10/23 19:25:53 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5261 2021/10/23 19:27:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8012,3 +8012,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-pulse to 1.29.2 [thor 2021-10-23]
 	Updated print/mupdf to 1.19.0 [leot 2021-10-23]
 	Updated sysutils/broot to 1.6.6 [pin 2021-10-23]
+	Updated devel/git-cliff to 0.4.2 [pin 2021-10-23]
