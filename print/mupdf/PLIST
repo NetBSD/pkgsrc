@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/10/08 22:50:16 leot Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/10/23 15:22:07 leot Exp $
 bin/mupdf
 ${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
@@ -19,6 +19,7 @@ include/mupdf/fitz/crypt.h
 include/mupdf/fitz/device.h
 include/mupdf/fitz/display-list.h
 include/mupdf/fitz/document.h
+include/mupdf/fitz/export.h
 include/mupdf/fitz/filter.h
 include/mupdf/fitz/font.h
 include/mupdf/fitz/geometry.h
@@ -65,7 +66,6 @@ include/mupdf/pdf/interpret.h
 include/mupdf/pdf/javascript.h
 include/mupdf/pdf/name-table.h
 include/mupdf/pdf/object.h
-include/mupdf/pdf/output-pdf.h
 include/mupdf/pdf/page.h
 include/mupdf/pdf/parse.h
 include/mupdf/pdf/resource.h
@@ -112,9 +112,13 @@ share/doc/mupdf/manual-mutool-convert.html
 share/doc/mupdf/manual-mutool-create.html
 share/doc/mupdf/manual-mutool-draw.html
 share/doc/mupdf/manual-mutool-extract.html
+share/doc/mupdf/manual-mutool-info.html
 share/doc/mupdf/manual-mutool-merge.html
+share/doc/mupdf/manual-mutool-pages.html
+share/doc/mupdf/manual-mutool-poster.html
 share/doc/mupdf/manual-mutool-run.html
 share/doc/mupdf/manual-mutool-show.html
+share/doc/mupdf/manual-mutool-sign.html
 share/doc/mupdf/manual-mutool-trace.html
 share/doc/mupdf/style.css
 share/doc/mupdf/template.html

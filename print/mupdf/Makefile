@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2021/09/29 19:00:12 adam Exp $
+# $NetBSD: Makefile,v 1.89 2021/10/23 15:22:07 leot Exp $
 
-DISTNAME=	mupdf-1.18.0-source
+DISTNAME=	mupdf-1.19.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -39,9 +38,11 @@ post-extract:
 	    ${WRKSRC}/thirdparty/gumbo-parser \
 	    ${WRKSRC}/thirdparty/harfbuzz \
 	    ${WRKSRC}/thirdparty/jbig2dec \
+	    ${WRKSRC}/thirdparty/leptonica \
 	    ${WRKSRC}/thirdparty/lcms2 \
 	    ${WRKSRC}/thirdparty/libjpeg \
 	    ${WRKSRC}/thirdparty/openjpeg \
+	    ${WRKSRC}/thirdparty/tesseract \
 	    ${WRKSRC}/thirdparty/zlib
 
 post-build:
