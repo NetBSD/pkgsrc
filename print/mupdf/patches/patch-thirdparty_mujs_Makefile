@@ -1,11 +1,11 @@
-$NetBSD: patch-thirdparty_mujs_Makefile,v 1.7 2020/05/07 20:42:57 leot Exp $
+$NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
 
 - Add libtool support to mujs.
 - Avoid to set (unused) VERSION variable.
 
---- thirdparty/mujs/Makefile.orig	2020-03-17 13:10:18.000000000 +0000
+--- thirdparty/mujs/Makefile.orig	2021-06-08 11:41:51.000000000 +0000
 +++ thirdparty/mujs/Makefile
-@@ -7,12 +7,6 @@ bindir ?= $(prefix)/bin
+@@ -9,12 +9,6 @@ bindir ?= $(prefix)/bin
  incdir ?= $(prefix)/include
  libdir ?= $(prefix)/lib
  
@@ -18,7 +18,7 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.7 2020/05/07 20:42:57 leot Exp $
  # Compiler flags for various configurations:
  
  CFLAGS := -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
-@@ -51,7 +45,7 @@ HDRS := $(wildcard js*.h mujs.h utf.h re
+@@ -54,7 +48,7 @@ HDRS := $(wildcard js*.h mujs.h utf.h re
  
  default: shell
  shell: $(OUT)/mujs $(OUT)/mujs-pp
@@ -27,28 +27,28 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.7 2020/05/07 20:42:57 leot Exp $
  shared: $(OUT)/libmujs.so
  
  astnames.h: jsparse.h
-@@ -65,15 +59,15 @@ one.c: $(SRCS)
+@@ -68,15 +62,15 @@ one.c: $(SRCS)
  
  jsdump.c: astnames.h opnames.h
  
 -$(OUT)/%.o: %.c $(HDRS)
 +$(OUT)/%.lo: %.c $(HDRS)
  	@ mkdir -p $(dir $@)
- 	$(CC) $(CFLAGS) -o $@ -c $<
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
  
 -$(OUT)/libmujs.o: one.c $(HDRS)
 +$(OUT)/libmujs.lo: one.c $(HDRS)
  	@ mkdir -p $(dir $@)
- 	$(CC) $(CFLAGS) -o $@ -c $<
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
  
 -$(OUT)/libmujs.a: $(OUT)/libmujs.o
 +$(OUT)/libmujs.la: $(OUT)/libmujs.lo
  	@ mkdir -p $(dir $@)
  	$(AR) cr $@ $^
  
-@@ -81,11 +75,11 @@ $(OUT)/libmujs.so: one.c $(HDRS)
+@@ -84,11 +78,11 @@ $(OUT)/libmujs.so: one.c $(HDRS)
  	@ mkdir -p $(dir $@)
- 	$(CC) $(CFLAGS) -fPIC -shared -o $@ $< -lm
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -fPIC -shared $(LDFLAGS) -o $@ $< -lm
  
 -$(OUT)/mujs: $(OUT)/libmujs.o $(OUT)/main.o
 +$(OUT)/mujs: $(OUT)/libmujs.lo $(OUT)/main.lo
@@ -60,7 +60,7 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.7 2020/05/07 20:42:57 leot Exp $
  	@ mkdir -p $(dir $@)
  	$(CC) $(LDFLAGS) -o $@ $^ -lm
  
-@@ -111,8 +105,8 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
+@@ -114,8 +108,8 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
  	install -m 644 $(OUT)/mujs.pc $(DESTDIR)$(libdir)/pkgconfig
  	install -m 755 $(OUT)/mujs $(DESTDIR)$(bindir)
  

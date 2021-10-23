@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
+$NetBSD: patch-ab,v 1.24 2021/10/23 15:22:07 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -14,11 +14,11 @@ $NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
   If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
---- Makerules.orig	2020-10-07 10:35:03.000000000 +0000
+--- Makerules.orig	2021-10-05 10:44:43.000000000 +0000
 +++ Makerules
-@@ -6,19 +6,6 @@ OS := $(OS:MSYS%=MINGW)
- OS := $(OS:Windows_NT=MINGW)
- OS := $(OS:Darwin=MACOS)
+@@ -27,29 +27,6 @@ endif
+ 
+ # System specific features
  
 -ifeq ($(findstring -fembed-bitcode,$(XCFLAGS)),)
 -  # clang does not support these in combination with -fembed-bitcode
@@ -30,13 +30,23 @@ $NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
 -  SO := dylib
 -else
 -  LDREMOVEUNREACH := -Wl,--gc-sections
--  SO := so
+-  ifeq ($(OS),MINGW)
+-    SO := dll
+-  else
+-    SO := so
+-  endif
 -endif
 -
- CFLAGS += -Wsign-compare
- 
+-ifeq "$(OS)" "ios"
+-  NEONFLAGS =
+-else
+-  NEONFLAGS = -mneon
+-endif
+-
  SANITIZE_FLAGS += -fsanitize=address
-@@ -102,93 +89,79 @@ ifneq "$(CLUSTER)" ""
+ SANITIZE_FLAGS += -fsanitize=leak
+ 
+@@ -132,103 +109,79 @@ ifneq "$(CLUSTER)" ""
    CFLAGS += -DCLUSTER
  endif
  
@@ -53,10 +63,20 @@ $NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
 -  LD = xcrun ld
 -  RANLIB = xcrun ranlib
 -
--else ifeq ($(OS),Linux)
--  HAVE_OBJCOPY := yes
+-  ifeq (, $(shell which pkg-config))
+-    $(warning "No pkg-config found, install it for proper integration of libcrypto")
+-  else
+-    HAVE_LIBCRYPTO := $(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)
+-    ifeq ($(HAVE_LIBCRYPTO),yes)
+-	  LIBCRYPTO_CFLAGS := $(shell pkg-config --cflags libcrypto) -DHAVE_LIBCRYPTO
+-	  LIBCRYPTO_LIBS := $(shell pkg-config --libs libcrypto)
+-    endif
+-  endif
 +HAVE_OBJCOPY := no
  
+-else ifeq ($(OS),Linux)
+-  HAVE_OBJCOPY := yes
+-
 -  ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
 +ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
  	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
@@ -102,19 +122,19 @@ $NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
 -  endif
 +endif
  
--  HAVE_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
--  ifeq ($(HAVE_LEPTONICA),yes)
-+HAVE_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
-+ifeq ($(HAVE_LEPTONICA),yes)
+-  HAVE_SYS_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
+-  ifeq ($(HAVE_SYS_LEPTONICA),yes)
++HAVE_SYS_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
++ifeq ($(HAVE_SYS_LEPTONICA),yes)
  	SYS_LEPTONICA_CFLAGS := $(shell pkg-config --cflags lept)
  	SYS_LEPTONICA_LIBS := $(shell pkg-config --libs lept)
 -  endif
 +endif
  
--  HAVE_TESSERACT := $(shell pkg-config --exists 'tesseract-ocr >= 4.0.0' && echo yes)
--  ifeq ($(HAVE_TESSERACT),yes)
-+HAVE_TESSERACT := $(shell pkg-config --exists 'tesseract-ocr >= 4.0.0' && echo yes)
-+ifeq ($(HAVE_TESSERACT),yes)
+-  HAVE_SYS_TESSERACT := $(shell pkg-config --exists 'tesseract >= 4.0.0' && echo yes)
+-  ifeq ($(HAVE_SYS_TESSERACT),yes)
++HAVE_SYS_TESSERACT := $(shell pkg-config --exists 'tesseract >= 4.0.0' && echo yes)
++ifeq ($(HAVE_SYS_TESSERACT),yes)
  	SYS_TESSERACT_CFLAGS := $(shell pkg-config --cflags tesseract)
  	SYS_TESSERACT_LIBS := $(shell pkg-config --libs tesseract)
 -  endif
@@ -131,11 +151,13 @@ $NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
  
 -  HAVE_GLUT := yes
 -  ifeq ($(HAVE_GLUT),yes)
-+HAVE_GLUT := yes
-+ifeq ($(HAVE_GLUT),yes)
- 	SYS_GLUT_CFLAGS :=
- 	SYS_GLUT_LIBS := -lglut -lGL
+-	SYS_GLUT_CFLAGS :=
+-	SYS_GLUT_LIBS := -lglut -lGL
 -  endif
++HAVE_GLUT := $(shell pkg-config --exists glut && echo yes)
++ifeq ($(shell pkg-config --exists glut && echo yes),yes)
++	SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
++	SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
 +endif
  
 -  HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
