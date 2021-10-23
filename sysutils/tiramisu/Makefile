@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/10/20 13:07:46 pin Exp $
+# $NetBSD: Makefile,v 1.7 2021/10/23 19:28:35 pin Exp $
 
 DISTNAME=	tiramisu-2.0.20211019
 CATEGORIES=	sysutils
@@ -13,8 +13,9 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config gmake
 
-INSTALLATION_DIRS+=	share/doc/tiramisu
 MAKE_ENV+=		PREFIX=${PREFIX}
+
+CHECK_RELRO_SKIP+= 	bin/tiramisu
 
 TOOL_DEPENDS+=	vala-[0-9]*:../../lang/vala
 
