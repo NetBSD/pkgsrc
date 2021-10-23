@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5253 2021/10/22 22:43:28 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5254 2021/10/23 00:43:01 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8005,3 +8005,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/neomutt to 20211022 [wiz 2021-10-22]
 	Updated textproc/split-thai to 2.10 [scole 2021-10-22]
 	Updated games/openmw to 0.47.0 [nia 2021-10-22]
+	Updated devel/ruby-diva to 1.1.1 [tsutsui 2021-10-23]
