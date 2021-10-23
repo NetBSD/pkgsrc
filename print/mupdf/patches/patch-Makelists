@@ -1,0 +1,25 @@
+$NetBSD: patch-Makelists,v 1.1 2021/10/23 15:22:07 leot Exp $
+
+Avoid to unconditionally pass -DHAVE_* flags: this breaks lcms2 that
+gets recognized as lcms2mt.
+
+--- Makelists.orig	2021-10-05 10:44:43.000000000 +0000
++++ Makelists
+@@ -130,7 +130,7 @@ HARFBUZZ_SRC += thirdparty/harfbuzz/src/
+ 
+ JPEGXR_CFLAGS += -Ithirdparty/jpegxr
+ JPEGXR_CFLAGS += -Ithirdparty/jpegxr/Software
+-JPEGXR_CFLAGS += -DHAVE_JPEGXR
++#JPEGXR_CFLAGS += -DHAVE_JPEGXR
+ 
+ JPEGXR_BUILD_CFLAGS += -Wno-tautological-compare
+ 
+@@ -186,7 +186,7 @@ LIBJPEG_SRC += thirdparty/libjpeg/jutils
+ # --- LCMS2 (multi-threaded fork) ---
+ 
+ LCMS2_CFLAGS += -Ithirdparty/lcms2/include
+-LCMS2_CFLAGS += -DHAVE_LCMS2MT
++#LCMS2_CFLAGS += -DHAVE_LCMS2MT
+ 
+ LCMS2_SRC += thirdparty/lcms2/src/cmsalpha.c
+ LCMS2_SRC += thirdparty/lcms2/src/cmscam02.c
