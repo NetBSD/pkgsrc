@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5263 2021/10/24 03:54:55 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5264 2021/10/24 03:57:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8015,3 +8015,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/git-cliff to 0.4.2 [pin 2021-10-23]
 	Updated sysutils/pv to 1.6.20 [ryoon 2021-10-24]
 	Updated time/p5-DateTime-TimeZone to 2.51 [wen 2021-10-24]
+	Updated www/p5-CGI-Fast to 2.16 [wen 2021-10-24]
