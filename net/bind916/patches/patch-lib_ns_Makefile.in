@@ -1,21 +1,20 @@
-$NetBSD: patch-lib_ns_Makefile.in,v 1.2 2020/12/19 16:41:36 taca Exp $
+$NetBSD: patch-lib_ns_Makefile.in,v 1.3 2021/10/24 06:40:28 taca Exp $
 
 * Based on NetBSD, add support for blocklist(blacklist).
 
---- lib/ns/Makefile.in.orig	2020-12-07 08:16:53.000000000 +0000
+--- lib/ns/Makefile.in.orig	2021-09-07 09:37:05.000000000 +0000
 +++ lib/ns/Makefile.in
-@@ -41,12 +41,12 @@ LIBS =		@LIBS@
- 
- # Alphabetically
+@@ -39,11 +39,11 @@ LIBS =		@LIBS@
  OBJS =		client.@O@ hooks.@O@ interfacemgr.@O@ lib.@O@ \
--		listenlist.@O@ log.@O@ notify.@O@ query.@O@ \
-+		listenlist.@O@ log.@O@ notify.@O@ pfilter.@O@ query.@O@ \
+ 		listenlist.@O@ log.@O@ notify.@O@ query.@O@ \
  		server.@O@ sortlist.@O@ stats.@O@ update.@O@ \
- 		version.@O@ xfrout.@O@
+-		version.@O@ xfrout.@O@
++		version.@O@ xfrout.@O@ pfilter.@O@
  
  SRCS =		client.c hooks.c interfacemgr.c lib.c listenlist.c \
--		log.c notify.c query.c server.c sortlist.c stats.c \
-+		log.c notify.c pfilter.c query.c server.c sortlist.c stats.c \
- 		update.c version.c xfrout.c
+ 		log.c notify.c query.c server.c sortlist.c stats.c \
+-		update.c version.c xfrout.c
++		update.c version.c xfrout.c pfilter.c
  
  SUBDIRS =	include
+ TESTDIRS =	@UNITTESTS@

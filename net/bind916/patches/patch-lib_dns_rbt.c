@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_dns_rbt.c,v 1.2 2020/11/26 13:21:51 taca Exp $
+$NetBSD: patch-lib_dns_rbt.c,v 1.3 2021/10/24 06:40:28 taca Exp $
 
 * Take from NetBSD base.
 * Disable inline on powerpc.
 
---- lib/dns/rbt.c.orig	2020-11-16 14:44:37.000000000 +0000
+--- lib/dns/rbt.c.orig	2021-09-07 09:37:05.000000000 +0000
 +++ lib/dns/rbt.c
 @@ -319,12 +319,13 @@ Name(dns_rbtnode_t *node) {
  }
@@ -45,11 +45,11 @@ $NetBSD: patch-lib_dns_rbt.c,v 1.2 2020/11/26 13:21:51 taca Exp $
  			goto cleanup;               \
  		}                                   \
 -	} while (0);
-+	} while(/*CONSTCOND*/0)
++	} while(0)
  
  static isc_result_t
  treefix(dns_rbt_t *rbt, void *base, size_t filesize, dns_rbtnode_t *n,
-@@ -879,7 +884,7 @@ treefix(dns_rbt_t *rbt, void *base, size
+@@ -880,7 +885,7 @@ treefix(dns_rbt_t *rbt, void *base, size
  	fprintf(stderr, "deserialize ");
  	dns_name_print(&nodename, stderr);
  	fprintf(stderr, "\n");
@@ -58,7 +58,7 @@ $NetBSD: patch-lib_dns_rbt.c,v 1.2 2020/11/26 13:21:51 taca Exp $
  	hexdump("node data", node_data, datasize);
  #endif /* ifdef DEBUG */
  	isc_crc64_update(crc, (const uint8_t *)&header, sizeof(dns_rbtnode_t));
-@@ -955,7 +960,7 @@ dns_rbt_deserialize_tree(void *base_addr
+@@ -956,7 +961,7 @@ dns_rbt_deserialize_tree(void *base_addr
  
  	isc_crc64_final(&crc);
  #ifdef DEBUG
