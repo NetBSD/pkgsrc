@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/10/09 10:41:10 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2021/10/24 22:01:55 wiz Exp $
 
 DISTNAME=	gunison-0.1.0
 PKGREVISION=	5
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 GO_BUILD_PATTERN=	.
+
+CHECK_RELRO_SKIP=	bin/gunison
 
 .include "go-modules.mk"
 
