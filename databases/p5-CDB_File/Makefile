@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2021/05/24 19:49:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/10/24 08:40:09 wen Exp $
 
-DISTNAME=	CDB_File-1.02
+DISTNAME=	CDB_File-1.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CDB_File/}
 
