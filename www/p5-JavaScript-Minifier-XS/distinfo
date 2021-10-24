@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/24 07:53:16 wen Exp $
 
-RMD160 (JavaScript-Minifier-XS-0.14.tar.gz) = 39f9ff04f76d283affbf8bb8be36dadf8b63e147
-SHA512 (JavaScript-Minifier-XS-0.14.tar.gz) = 9124ced15a6574b32bfb4357416e04076b688bacb9b88da9b787dfbe1209836a52f5f2ae8554c25f2af100078f089e0b1a5a281c0459c5b048e2c92c33100c66
-Size (JavaScript-Minifier-XS-0.14.tar.gz) = 25994 bytes
+RMD160 (JavaScript-Minifier-XS-0.15.tar.gz) = 40025f4d54ebec8c1de18ca51bd026149d4e6fc9
+SHA512 (JavaScript-Minifier-XS-0.15.tar.gz) = 334a205c849ab2f70eb0712e28567a9edbc1f1360538204009c0ac89047cf271be93d792d3158a4b61a20091c6cea46326fdb5d1fd820765ddcba9259a89b91a
+Size (JavaScript-Minifier-XS-0.15.tar.gz) = 26201 bytes
