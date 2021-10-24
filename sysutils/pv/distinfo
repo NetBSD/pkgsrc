@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:16 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/24 02:40:04 ryoon Exp $
 
-RMD160 (pv-1.6.6.tar.gz) = 2bd910a35394ba37b356df468fa8985e2417b4f2
-SHA512 (pv-1.6.6.tar.gz) = 3642ae4c2e743bc3d037e86afadf4ebecf60afa3662f071ec123e3278402be7a40c34783f86b7bbf3f59f5ab10269ebd32c498ae12698d56556d7aa2f41387be
-Size (pv-1.6.6.tar.gz) = 124851 bytes
+RMD160 (pv-1.6.20.tar.gz) = 79336b8a7b58d32e51c7267e648efc2b64bfdd46
+SHA512 (pv-1.6.20.tar.gz) = de33778f1dfded1281ae3053d4fa4d8fa24c770c5abf44b9e2943e66b4fbdbc293c710435586edfdf0304a92f0e47916d55ef47c9e01e695f36cd8f8305b7d07
+Size (pv-1.6.20.tar.gz) = 135512 bytes
