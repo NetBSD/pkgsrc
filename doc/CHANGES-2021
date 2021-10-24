@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5274 2021/10/24 08:45:18 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5275 2021/10/24 09:02:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8021,7 +8021,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.21nb2 [taca 2021-10-24]
 	Updated www/p5-JavaScript-Minifier-XS to 0.15 [wen 2021-10-24]
 	Updated math/ntl to 11.5.1 [wen 2021-10-24]
-	Updated security/p5-String-Randomto 0.32 [wen 2021-10-24]
+	Updated security/p5-String-Random to 0.32 [wen 2021-10-24]
 	Updated devel/p5-Return-MultiLevel to 0.06 [wen 2021-10-24]
 	Updated devel/p5-Scalar-List-Utils to 1.60 [wen 2021-10-24]
 	Updated databases/p5-CDB_File to 1.05 [wen 2021-10-24]
