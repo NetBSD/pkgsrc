@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21174 2021/10/24 07:23:41 wiz Exp $
+$NetBSD: TODO,v 1.21175 2021/10/24 08:37:05 wen Exp $
 
 Suggested new packages
 ======================
@@ -1508,27 +1508,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Session-Storage-Secure-1.000
 	o p5-Spreadsheet-Read-0.84
 	o p5-Spreadsheet-ReadSXC-0.34
-	o p5-Statistics-Descriptive-3.0800
-	o p5-String-Random-0.31
 	o p5-String-Similarity-1.16
 	o p5-Sub-Exporter-ForMethods-0.100054
 	o p5-Sys-Filesystem-1.408
 	o p5-Term-Size-0.211
-	o p5-Test-Class-0.52
-	o p5-Test-EOL-2.02
 	o p5-Test-TempDir-0.018
 	o p5-Text-xSV-0.23
 	o p5-Tie-Cycle-1.226
 	o p5-Tk-804.036
 	o p5-Tree-DAG_Node-1.32
-	o p5-Tree-Simple-1.34
 	o p5-Tree-Simple-VisitorFactory-0.16
 	o p5-Twiggy-0.1026
-	o p5-Type-Tiny-XS-0.022
-	o p5-UNIVERSAL-require-0.19
 	o p5-User-Identity-1.00
-	o p5-WWW-Mechanize-Cached-1.55
-	o p5-WWW-Shorten-3.094
 	o p5-Weather-PurpleAir-API-0.08
 	o p5-XString-0.005
 	o p5-marisa-0.2.6
