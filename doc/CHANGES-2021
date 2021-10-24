@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5275 2021/10/24 09:02:47 leot Exp $
+$NetBSD: CHANGES-2021,v 1.5276 2021/10/24 16:20:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8026,3 +8026,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Scalar-List-Utils to 1.60 [wen 2021-10-24]
 	Updated databases/p5-CDB_File to 1.05 [wen 2021-10-24]
 	Updated databases/p5-DBD-Mock to 1.59 [wen 2021-10-24]
+	Updated textproc/ugrep to 3.3.8 [adam 2021-10-24]
+	Updated devel/meson to 0.59.3 [adam 2021-10-24]
