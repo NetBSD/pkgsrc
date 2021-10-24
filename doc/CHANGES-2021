@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5276 2021/10/24 16:20:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5277 2021/10/24 21:33:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8028,3 +8028,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/p5-DBD-Mock to 1.59 [wen 2021-10-24]
 	Updated textproc/ugrep to 3.3.8 [adam 2021-10-24]
 	Updated devel/meson to 0.59.3 [adam 2021-10-24]
+	Updated security/stunnel to 5.60 [schmonz 2021-10-24]
