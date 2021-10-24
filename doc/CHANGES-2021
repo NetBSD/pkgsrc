@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5271 2021/10/24 08:26:25 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5272 2021/10/24 08:32:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8023,3 +8023,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/ntl to 11.5.1 [wen 2021-10-24]
 	Updated security/p5-String-Randomto 0.32 [wen 2021-10-24]
 	Updated devel/p5-Return-MultiLevel to 0.06 [wen 2021-10-24]
+	Updated devel/p5-Scalar-List-Utils to 1.60 [wen 2021-10-24]
