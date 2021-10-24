@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5265 2021/10/24 04:00:26 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5266 2021/10/24 04:03:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8017,3 +8017,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/p5-DateTime-TimeZone to 2.51 [wen 2021-10-24]
 	Updated www/p5-CGI-Fast to 2.16 [wen 2021-10-24]
 	Updated www/p5-HTML-Escape to 1.11 [wen 2021-10-24]
+	Updated www/p5-HTML-FillInForm to 2.22 [wen 2021-10-24]
