@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2021/10/14 08:01:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2021/10/24 22:03:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aes-0.6.0
 CARGO_CRATE_DEPENDS+=	aes-ctr-0.6.0
@@ -171,7 +171,7 @@ CARGO_CRATE_DEPENDS+=	quote-1.0.9
 CARGO_CRATE_DEPENDS+=	rand-0.8.4
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.3
-CARGO_CRATE_DEPENDS+=	rand_distr-0.4.1
+CARGO_CRATE_DEPENDS+=	rand_distr-0.4.2
 CARGO_CRATE_DEPENDS+=	rand_hc-0.3.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.10
 CARGO_CRATE_DEPENDS+=	regex-1.5.4
