@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5267 2021/10/24 06:40:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5268 2021/10/24 07:54:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8019,3 +8019,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTML-Escape to 1.11 [wen 2021-10-24]
 	Updated www/p5-HTML-FillInForm to 2.22 [wen 2021-10-24]
 	Updated net/bind916 to 9.16.21nb2 [taca 2021-10-24]
+	Updated www/p5-JavaScript-Minifier-XS to 0.15 [wen 2021-10-24]
