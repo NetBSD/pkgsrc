@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_dns_zone.c,v 1.4 2021/07/20 07:23:04 rin Exp $
+$NetBSD: patch-lib_dns_zone.c,v 1.5 2021/10/24 06:40:28 taca Exp $
 
 No need to use atomic 64-bit integers for flags fit within 32-bit width.
 
---- lib/dns/zone.c.orig	2021-06-18 19:08:07.000000000 +0900
-+++ lib/dns/zone.c	2021-07-19 08:46:21.613595923 +0900
-@@ -241,8 +241,13 @@ struct dns_zone {
+--- lib/dns/zone.c.orig	2021-09-07 09:37:05.000000000 +0000
++++ lib/dns/zone.c
+@@ -246,8 +246,13 @@ struct dns_zone {
  	int32_t journalsize;
  	dns_rdataclass_t rdclass;
  	dns_zonetype_t type;
@@ -18,7 +18,7 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
  	unsigned int db_argc;
  	char **db_argv;
  	isc_time_t expiretime;
-@@ -387,7 +392,11 @@ struct dns_zone {
+@@ -405,7 +410,11 @@ struct dns_zone {
  	/*%
  	 * Autosigning/key-maintenance options
  	 */
@@ -30,11 +30,16 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
  
  	/*%
  	 * True if added by "rndc addzone"
-@@ -524,7 +533,9 @@ typedef enum {
+@@ -537,12 +546,14 @@ typedef enum {
+ 						      * notify due to the zone
+ 						      * just being loaded for
+ 						      * the first time. */
++#if 0
+ 	/*
+ 	 * DO NOT add any new zone flags here until all platforms
  	 * support 64-bit enum values. Currently they fail on
  	 * Windows.
  	 */
-+#if 0
  	DNS_ZONEFLG___MAX = UINT64_MAX, /* trick to make the ENUM 64-bit wide */
 +#endif
  } dns_zoneflg_t;
