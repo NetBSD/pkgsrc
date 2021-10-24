@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/24 03:59:11 wen Exp $
 
-RMD160 (HTML-Escape-1.10.tar.gz) = 8b06631133e2c9bd3c32e5dce043a9ef650b351e
-SHA512 (HTML-Escape-1.10.tar.gz) = 27d8c8f4acc1903017a1e1b8c1104c2d0a5ecb21f7ce6990e14f3624ff1548f26bf80bc55491d86166f053364988fdc8768d9f7046fa2c4df360a73f522127a3
-Size (HTML-Escape-1.10.tar.gz) = 56865 bytes
+RMD160 (HTML-Escape-1.11.tar.gz) = 41428d7d6b4a60f472f89f04733757f44ff67f09
+SHA512 (HTML-Escape-1.11.tar.gz) = 572fa1915cfceec75eba8c2425b6bd107b90553b4d18d1cdfd3efb49a31f57471cb5428f75c94916c664c1022beb7969b52fe47faae8ddc9a79a2fc95d48b48c
+Size (HTML-Escape-1.11.tar.gz) = 57093 bytes
