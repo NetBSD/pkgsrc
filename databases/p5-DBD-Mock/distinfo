@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:35:19 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/24 08:44:18 wen Exp $
 
-RMD160 (DBD-Mock-1.57.tar.gz) = 9493e2e04a766293849dfba75f2184627c206731
-SHA512 (DBD-Mock-1.57.tar.gz) = e1576c9b7ca54e877c15daf4f2e4cf64b34e6050e2a0e78260216c449b17cb1f4d2901d0ebdd8db2840b32e24437bfd85d213a62832eee6904cf51a08d37b1db
-Size (DBD-Mock-1.57.tar.gz) = 73583 bytes
+RMD160 (DBD-Mock-1.59.tar.gz) = c0c7c73c8404950393e5f9721d28108a2bf49208
+SHA512 (DBD-Mock-1.59.tar.gz) = c1ba954ae3f22df9d143e023c1ad5537315618e1d959120af8afdbfc69b13ad3a3ef153a6adbb7f853c204bfc2a3c789daf9de0830260f0687143eb68c31d11f
+Size (DBD-Mock-1.59.tar.gz) = 75533 bytes
