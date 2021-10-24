@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/14 08:01:37 pin Exp $
+$NetBSD: distinfo,v 1.7 2021/10/24 22:03:55 pin Exp $
 
 RMD160 (aes-0.6.0.crate) = 5f64677a2fc031dfbac28747ff6c6c2b7213b1cb
 SHA512 (aes-0.6.0.crate) = 65349285e429f9b8815743d86b3ebdececd48ce556a08b6ec5ec89bf966bc9b187a7df4fbe1f3b25172db3aab219b23f8040c1160359868e9f71d67a767c90c9
@@ -327,9 +327,9 @@ Size (libpulse-simple-sys-1.19.0.crate) = 9397 bytes
 RMD160 (libpulse-sys-1.19.1.crate) = 609c01da91a1e8e208a8588ab004713171c4cac3
 SHA512 (libpulse-sys-1.19.1.crate) = 72fa458f4bfe9b034d3304798d5eae07cca7cf79b529bd45dd8c2597af58aefc109ff267acaaed80e635612f44cad528e7cf169be3e19f5e4f63846597104bd2
 Size (libpulse-sys-1.19.1.crate) = 34968 bytes
-RMD160 (librespot-0.3.0.tar.gz) = f3c47cb0ba08e633fffe16dbd38f51abe0be764e
-SHA512 (librespot-0.3.0.tar.gz) = 2a9e810f8a01df17f7cfdc09dd73500f1a961c8b61d00f1b11e26d4b12efbc0f35ba2cd82df1a694fbd85fa0a0940e8d49963e1cbed23528f68a4542f8171e07
-Size (librespot-0.3.0.tar.gz) = 142218 bytes
+RMD160 (librespot-0.3.1.tar.gz) = abbd321ffe816d66d878ef96113ba8515ebe6079
+SHA512 (librespot-0.3.1.tar.gz) = 1c14a096d4c0e6c7a8f0decbb1be125d687b491c981c4a802f68b4d2d4a6293d6bb23605237c0952d7af65dd9490a326921d304b9858cf2efd8cdcb0d5edaea6
+Size (librespot-0.3.1.tar.gz) = 142322 bytes
 RMD160 (lock_api-0.4.4.crate) = e101e1116eba298054d0f5b78984a380a0dfb0d7
 SHA512 (lock_api-0.4.4.crate) = 655c8a1503b6e7f833b4c62109e1c5005727054847bff81e17d4159f91c02ac97512da0673ab227d17bc9ed0342fe3476247daf74cbc9a0b470e68c648ba706e
 Size (lock_api-0.4.4.crate) = 20356 bytes
@@ -516,9 +516,9 @@ Size (rand_chacha-0.3.1.crate) = 15251 bytes
 RMD160 (rand_core-0.6.3.crate) = 7ac88a82301cbb95fe71e941962f1be0d79c6367
 SHA512 (rand_core-0.6.3.crate) = 0fc31f96ca8ebba8c179367de01458e909265e1d627ec0c5620be7c8e83d2f9570471d6ec2cb2bc4bc531505b02fc31f1165708cc1357906791c87123b06ee87
 Size (rand_core-0.6.3.crate) = 21938 bytes
-RMD160 (rand_distr-0.4.1.crate) = 818aa1b37cd1f77461382b5c5437433b35a1fb69
-SHA512 (rand_distr-0.4.1.crate) = e5ef15e3dd9d537310f59f33b7e76c789f724e20d2fb4e43b4972b1dcb91bb8feb91e00ec1172fe8e4193e089cca4ad07a58dcb940948b84d4f78c5dc0b6f63e
-Size (rand_distr-0.4.1.crate) = 52510 bytes
+RMD160 (rand_distr-0.4.2.crate) = e54d0cf09726b0b14a73cfecd1ba812deebbe8a0
+SHA512 (rand_distr-0.4.2.crate) = 7651e1776ec2405240979a9090a9609410bf628dc7d0eece28d80b2e8e4047eaca4b3d1f277967e643a2395b62996ed6e3eae23b58251f02223d9642b41ff425
+Size (rand_distr-0.4.2.crate) = 58198 bytes
 RMD160 (rand_hc-0.3.1.crate) = 3707155d9a8143a4e89910b54fe32dc51ad29030
 SHA512 (rand_hc-0.3.1.crate) = 582bb44b81c27e698eb57c6f06444b8a7c9d3f7ee73f4e14be8004c4bfd3bbfd9795c69f7294b5e87107e86b90fa3e91ad080964474af81c92705d356e43fbb5
 Size (rand_hc-0.3.1.crate) = 11891 bytes
