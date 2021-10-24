@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21176 2021/10/24 08:41:18 wen Exp $
+$NetBSD: TODO,v 1.21177 2021/10/24 08:45:18 wen Exp $
 
 Suggested new packages
 ======================
@@ -1425,7 +1425,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Cpanel-JSON-XS-4.26
 	o p5-Curses-1.37
 	o p5-DBD-DB2-1.86
-	o p5-DBD-Mock-1.59
 	o p5-DBD-Oracle-1.80
 	o p5-DBD-Sybase-1.16
 	o p5-DBIx-SearchBuilder-1.69

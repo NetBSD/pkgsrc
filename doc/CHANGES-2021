@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5273 2021/10/24 08:41:18 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5274 2021/10/24 08:45:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8025,3 +8025,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Return-MultiLevel to 0.06 [wen 2021-10-24]
 	Updated devel/p5-Scalar-List-Utils to 1.60 [wen 2021-10-24]
 	Updated databases/p5-CDB_File to 1.05 [wen 2021-10-24]
+	Updated databases/p5-DBD-Mock to 1.59 [wen 2021-10-24]
