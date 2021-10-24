@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5261 2021/10/23 19:27:30 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5262 2021/10/24 02:40:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8013,3 +8013,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/mupdf to 1.19.0 [leot 2021-10-23]
 	Updated sysutils/broot to 1.6.6 [pin 2021-10-23]
 	Updated devel/git-cliff to 0.4.2 [pin 2021-10-23]
+	Updated sysutils/pv to 1.6.20 [ryoon 2021-10-24]
