@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5262 2021/10/24 02:40:33 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.5263 2021/10/24 03:54:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8014,3 +8014,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.6.6 [pin 2021-10-23]
 	Updated devel/git-cliff to 0.4.2 [pin 2021-10-23]
 	Updated sysutils/pv to 1.6.20 [ryoon 2021-10-24]
+	Updated time/p5-DateTime-TimeZone to 2.51 [wen 2021-10-24]
