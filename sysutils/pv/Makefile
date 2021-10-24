@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2019/06/10 16:55:02 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/10/24 02:40:04 ryoon Exp $
 #
 
-DISTNAME=		pv-1.6.6
+DISTNAME=		pv-1.6.20
 CATEGORIES=		sysutils
 MASTER_SITES=		https://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
