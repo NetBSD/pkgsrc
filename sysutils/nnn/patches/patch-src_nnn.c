@@ -1,4 +1,4 @@
-$NetBSD: patch-src_nnn.c,v 1.4 2021/09/28 23:31:04 sjmulder Exp $
+$NetBSD: patch-src_nnn.c,v 1.5 2021/10/25 22:26:53 sjmulder Exp $
 
 dprintf() polyfill for Solaris
 
@@ -8,7 +8,7 @@ dprintf() polyfill for Solaris
  #define alloca(size) __builtin_alloca(size)
  #endif
  
-+#ifdef __sun
++#ifdef __sun	/* for Illumos. Solaris 11 has it. */
 +#define NEED_DPRINTF
 +#endif
 +
@@ -20,7 +20,7 @@ dprintf() polyfill for Solaris
  /* Functions */
  
 +#ifdef NEED_DPRINTF
-+static int dprintf(int fd, const char *format, ...)
++int dprintf(int fd, const char *format, ...)
 +{
 +	va_list ap;
 +	char *s;
