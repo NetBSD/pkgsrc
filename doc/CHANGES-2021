@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5282 2021/10/25 09:11:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5283 2021/10/25 11:27:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8035,3 +8035,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.15.2 [pin 2021-10-24]
 	Updated multimedia/ffmpeg4 to 4.4.1 [adam 2021-10-25]
 	Updated multimedia/ffplay4 to 4.4.1 [adam 2021-10-25]
+	Updated audio/spotify-player to 0.4.0 [pin 2021-10-25]
