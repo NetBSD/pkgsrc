@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/09/03 11:19:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/10/25 16:49:36 adam Exp $
 
 .include "../../devel/thrift/Makefile.common"
 
@@ -9,6 +9,8 @@ DEPENDS+=	thrift-[0-9]*:../../devel/thrift
 BUILD_DIRS=	lib/lua
 
 TOOLS_BROKEN+=	perl
+
+CONFIGURE_ARGS+=	--without-rs # puts garbage into Makefile
 CONFIGURE_ENV+=		THRIFT=${PREFIX}/bin/thrift
 
 .include "../../lang/lua/buildlink3.mk"
