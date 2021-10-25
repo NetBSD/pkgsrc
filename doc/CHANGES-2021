@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5283 2021/10/25 11:27:41 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5284 2021/10/25 12:07:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8036,3 +8036,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/ffmpeg4 to 4.4.1 [adam 2021-10-25]
 	Updated multimedia/ffplay4 to 4.4.1 [adam 2021-10-25]
 	Updated audio/spotify-player to 0.4.0 [pin 2021-10-25]
+	Updated devel/py-gitdb to 4.0.9 [adam 2021-10-25]
+	Updated textproc/py-rapidjson to 1.5 [adam 2021-10-25]
