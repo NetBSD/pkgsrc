@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:43:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/25 12:04:11 adam Exp $
 
-RMD160 (gitdb-4.0.7.tar.gz) = 7710dc3e1ba0ff7998629af1fe3ae2370ce31450
-SHA512 (gitdb-4.0.7.tar.gz) = db63a613ee59249a3fccbd09fc0eca5747b166180bb5885737f849e339e81dfacd04f65e438fef241cf013cde33fe8c99a569c1599b2b5defd37b50e87dbdb0a
-Size (gitdb-4.0.7.tar.gz) = 394664 bytes
+RMD160 (gitdb-4.0.9.tar.gz) = 694224f20329ab34a5e70d5955f3d45f50e57d05
+SHA512 (gitdb-4.0.9.tar.gz) = 174b90e09b65ba38d3404fd79a8963987ab49a5e2b96ce82057b519861e8312342c425ff10849c865f66e6e88c27d651d8902a6f8abea88f9f33161f44974109
+Size (gitdb-4.0.9.tar.gz) = 394670 bytes
