@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/28 03:32:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/10/25 16:49:36 adam Exp $
 include/thrift/c_glib/config.h
 include/thrift/c_glib/processor/thrift_dispatch_processor.h
 include/thrift/c_glib/processor/thrift_multiplexed_processor.h
@@ -31,5 +31,7 @@ include/thrift/c_glib/transport/thrift_socket.h
 include/thrift/c_glib/transport/thrift_ssl_socket.h
 include/thrift/c_glib/transport/thrift_transport.h
 include/thrift/c_glib/transport/thrift_transport_factory.h
+include/thrift/c_glib/transport/thrift_zlib_transport.h
+include/thrift/c_glib/transport/thrift_zlib_transport_factory.h
 lib/libthrift_c_glib.la
 lib/pkgconfig/thrift_c_glib.pc

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2021/03/21 12:41:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/10/25 16:49:36 adam Exp $
 include/thrift/TApplicationException.h
 include/thrift/TBase.h
 include/thrift/TConfiguration.h
 include/thrift/TDispatchProcessor.h
 include/thrift/TLogging.h
+include/thrift/TNonCopyable.h
 include/thrift/TOutput.h
 include/thrift/TProcessor.h
 include/thrift/TToString.h
