@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2021/09/01 11:14:47 markd Exp $
+# $NetBSD: Makefile,v 1.74 2021/10/25 03:55:29 mrg Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
 CATEGORIES=	multimedia
@@ -35,9 +35,10 @@ SUBST_FILES.fix-moc+=	_KDE_build/plasma/engine/CMakeFiles/plasma_engine_mixer_au
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
+.include "options.mk"
+
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
