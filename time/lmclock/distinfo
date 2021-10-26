@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:03:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:24:22 nia Exp $
 
-RMD160 (lmclock-1.2.tar.gz) = 9663b7d5e6c6c1e2c0731cf439b898d45dcade8b
+BLAKE2s (lmclock-1.2.tar.gz) = 534b6f208379055b5fb2cc3832953953e6caff524df9d292a3744f071f63008f
 SHA512 (lmclock-1.2.tar.gz) = c43729f76fa72aacc82db4aee27518a9da6db02d115290ce5afd1fb65b5918dc1c6063f1483740b4a74a61bf3a1d455f54ad6df9a3410cfbe11e3d5e5be1aca0
 Size (lmclock-1.2.tar.gz) = 2913 bytes

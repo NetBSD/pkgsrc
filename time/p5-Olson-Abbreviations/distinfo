@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:29 nia Exp $
 
-RMD160 (Olson-Abbreviations-0.04.tar.gz) = f95b310d5a6cf60c0687a16acaad23254a83c48b
+BLAKE2s (Olson-Abbreviations-0.04.tar.gz) = 436333af5e608b18074def12449f324720e91b8b5706db0152d1b9f375d41756
 SHA512 (Olson-Abbreviations-0.04.tar.gz) = 75f712bd10a41eb5d6bb4f4a8894d6e9f87f9a6a056160d0346b5395bb3a25f03718d5b3a9f6bb25c8a5a8fd4c72456f9a3870e449e3bb0c078bcd6df3340576
 Size (Olson-Abbreviations-0.04.tar.gz) = 30578 bytes

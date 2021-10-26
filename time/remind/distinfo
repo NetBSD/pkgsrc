@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 15:04:13 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:24:36 nia Exp $
 
-RMD160 (remind-03.02.00.tar.gz) = 197b921545c3f39b40016ebc60f9842f3a857ec5
+BLAKE2s (remind-03.02.00.tar.gz) = d271661fd3cf0a2d03da536b0f4648dbaed31be81a71d32375c3f78370ffa813
 SHA512 (remind-03.02.00.tar.gz) = 978ee2e6a45756e02bc2de0495d95c4b4377d9af76cb1ea5070f8e2438a451d2bf44245b93018bcbf6ea217520b7b4c8766d5eab354f9a0bc4982b25e90bd278
 Size (remind-03.02.00.tar.gz) = 365896 bytes
 SHA1 (patch-ab) = d32cb94e8d7a6126cb39bb611471949b93e472bb

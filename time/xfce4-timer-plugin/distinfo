@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:04:23 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:24:47 nia Exp $
 
-RMD160 (xfce4-timer-plugin-1.7.1.tar.bz2) = 8ce1d53ebe1d9cf970a0a931bb1844040ca43d19
+BLAKE2s (xfce4-timer-plugin-1.7.1.tar.bz2) = 6360e84e3bc51b71deb92a922515d4901cc6a698e5a7cbfaa661eee19c2c7847
 SHA512 (xfce4-timer-plugin-1.7.1.tar.bz2) = 4887dc2c524a8b749a20449dd491dc8f12f8babb26c64cecf33ae56b45d2446128cb65c25f11d534278ad39a2adf7ab718714e1bfa613fd39713e44642030c16
 Size (xfce4-timer-plugin-1.7.1.tar.bz2) = 405053 bytes

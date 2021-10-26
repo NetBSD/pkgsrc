@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:38 nia Exp $
 
-RMD160 (bxjaholiday.doc.r57025.tar.xz) = 450d2ce103f12118ad92f5af8a9311bdfbf834cc
+BLAKE2s (bxjaholiday.doc.r57025.tar.xz) = 20e9faba5d1444deccef1a1729292ff1e48c3b4710adf0f1c0aab991967c23b9
 SHA512 (bxjaholiday.doc.r57025.tar.xz) = 3b44cf93b4afbbf97263b091509a5486bcbc6fc7091bc8a583be73f35487962af93f071547a78895231fb576054e440271abea20a7b07d111c197382b52ee746
 Size (bxjaholiday.doc.r57025.tar.xz) = 208336 bytes

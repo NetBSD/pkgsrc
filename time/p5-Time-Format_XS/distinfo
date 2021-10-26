@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:04:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:24:30 nia Exp $
 
-RMD160 (Time-Format_XS-1.03.tar.gz) = a2701c0eb510505ca51676f377f79ff32877439b
+BLAKE2s (Time-Format_XS-1.03.tar.gz) = 790018c9704cda0ec31c961a4ccd403971e5f79ba28d714d69c9eb359f8087ef
 SHA512 (Time-Format_XS-1.03.tar.gz) = 7b16c3d538ebc897328d762da77f0b772a6bda9fd21d8384cc72588992787267b6dafa9476c7a9b734a57351725f0a81541391b71b271f57b20533b931d3b397
 Size (Time-Format_XS-1.03.tar.gz) = 30330 bytes

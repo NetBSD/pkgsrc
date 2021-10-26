@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:03:53 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:24:17 nia Exp $
 
-RMD160 (asclock-classic-1.0.tar.gz) = 538179ab6659072c0f52dbf93d5472065cebe7eb
+BLAKE2s (asclock-classic-1.0.tar.gz) = 9b7ccaee15ade73d9ca193defd7914151edac24021a58311860ce8c4aea08260
 SHA512 (asclock-classic-1.0.tar.gz) = 726ffd64383b8e98b281a4512222cf594637b732400fbf45f7f491c306b85b992b753bb2758d18e558646292452908ffeda8ac7d0762bf22bf48a6248dae7e3f
 Size (asclock-classic-1.0.tar.gz) = 33949 bytes
 SHA1 (patch-aa) = 8d9f1cc5b3c035d5e06102b8464aaf9cf757e8cd

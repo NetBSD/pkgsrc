@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:04:12 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:24:36 nia Exp $
 
-RMD160 (pytzdata-2020.1.tar.gz) = d07e9b541ee731bd258118a4eb0cda698945b065
+BLAKE2s (pytzdata-2020.1.tar.gz) = 74b052f0047bc6b69b53d32c3dbf1bee1bffa22ce85dfed6d9a5cc40584c831e
 SHA512 (pytzdata-2020.1.tar.gz) = 4ca1eccc92cf116754b1d7635f2643143c46fa839ab16c7673855d270ae94ba83e31a4e0904e4792c1f35eb99c2d07b06aaf15b3e3dc32dc603f8837d631ee0c
 Size (pytzdata-2020.1.tar.gz) = 281719 bytes

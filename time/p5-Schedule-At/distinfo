@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:04:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:24:29 nia Exp $
 
-RMD160 (Schedule-At-1.15.tar.gz) = 59036ea5a14a1729b81a8a40b5b57587128fadc0
+BLAKE2s (Schedule-At-1.15.tar.gz) = bf53353a436a1fd12906f72c72742189979768924ef9a6f8c0f22621ee5d5854
 SHA512 (Schedule-At-1.15.tar.gz) = 15df903f990d4b72fd921fb838b00d61261c711fd963a03a6dad6a55ce86a3da268e5efa5446d477ba4bfe1e25d74ab703f4121411b79ac1001b55d136e4fd74
 Size (Schedule-At-1.15.tar.gz) = 8174 bytes

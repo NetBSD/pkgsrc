@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 15:03:57 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:24:21 nia Exp $
 
-RMD160 (ical-3.0.4.tar.gz) = 3e66d00c7a77018112f796591a6fdb34bba95f87
+BLAKE2s (ical-3.0.4.tar.gz) = 4293374d11c38c1c8d0c62379597f951b476fa397fa5983f914d70ebf6f14b24
 SHA512 (ical-3.0.4.tar.gz) = d6c16d0576bbb4c598ddc414d982f701a0ca64d09e809bd8e8824d8ecf2420d0f5c879ad42847f7968ff5365e5a881946b12ce260bdc7160f14e5bc1ee7324ef
 Size (ical-3.0.4.tar.gz) = 510640 bytes
 SHA1 (patch-time_Time.C) = bda17ecae23f8c0e5cf67bf72929418cbd518dbb

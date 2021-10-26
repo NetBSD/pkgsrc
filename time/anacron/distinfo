@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:03:53 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:24:17 nia Exp $
 
-RMD160 (anacron-2.3.tar.gz) = 613de5f8612871d92f6059c6cd324899f6fb8fcb
+BLAKE2s (anacron-2.3.tar.gz) = 70f754f5d476f50adc7b9453d2315bd1baa1a59f04e1559dcdc6e4fc1c3ab4f0
 SHA512 (anacron-2.3.tar.gz) = 27bbbfad5bc35ddc68e4345c3a3acefd0a6f794aaba890f7c75ec42b2e4c4200fbb1667e75b2e344afb7722bdc9ba3dc5a7db66d3369808bc9f483ea3509849c
 Size (anacron-2.3.tar.gz) = 24140 bytes
 SHA1 (patch-aa) = d11218f289d48b6a12ce2a5a59f645a04695214d
