@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:06 nia Exp $
 
-RMD160 (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 16e5df9dbb46c46881441c7636a30e6423fa6e0b
+BLAKE2s (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = d173fc8c5bb98d07cb317dfe6f05f0322f50cd9a33692060d1b4dfac7184a09f
 SHA512 (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 0f9a08130bb601d4c69af4be0b3c8fb000fec00ebb6b5ffdbbddd661e67b7c292373e78e047b346861ec4ae124954c84edb65fb11265159e7fbe067419161565
 Size (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 34153 bytes

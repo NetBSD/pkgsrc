@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:07 nia Exp $
 
-RMD160 (tryton-4.2/trytond_account_invoice_history-4.2.0.tar.gz) = e12932f3dbf3e35297f48359041c7f930b68a008
+BLAKE2s (tryton-4.2/trytond_account_invoice_history-4.2.0.tar.gz) = 7a3e0f73e3ba4de1e6db78bc352afc8b86ba2e4893d9a9f6e06479ea20b35c50
 SHA512 (tryton-4.2/trytond_account_invoice_history-4.2.0.tar.gz) = 8e80f48dd422b7562bfc2803d83fb62220c2d76bb8137f46abb2bbe0555c5fd6cca75a92852e02b455a1a866bc4e5f6efac86018ceaa0d5fefab8f5396af4d21
 Size (tryton-4.2/trytond_account_invoice_history-4.2.0.tar.gz) = 18374 bytes

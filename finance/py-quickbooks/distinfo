@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:05 nia Exp $
 
-RMD160 (python-quickbooks-0.6.0.tar.gz) = 0e1e3269bdf21e8af91645ea22c4ffcbfc7d71c9
+BLAKE2s (python-quickbooks-0.6.0.tar.gz) = 71909664100cda1ab82e06b48a740038436bca0f6d77d67faf0577aa9c673e51
 SHA512 (python-quickbooks-0.6.0.tar.gz) = d6b57f9686056b4a6ddb82c56a1cf2b74629050293421aa032fef05d9052a6020e6b688c3d8d70023822dbf036dcf7e77907f3b14381956bd3188aa28c1dd2e7
 Size (python-quickbooks-0.6.0.tar.gz) = 46127 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:54:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:11 nia Exp $
 
-RMD160 (tryton-4.2/trytond_sale_shipment_cost-4.2.0.tar.gz) = 713c7d9acf47e1c7238734dfed6dbe907a46ff23
+BLAKE2s (tryton-4.2/trytond_sale_shipment_cost-4.2.0.tar.gz) = d0076461eff46fe37d71a7b0df3b9fc2ee133416dda89dc0aaf46cf0bf9e7300
 SHA512 (tryton-4.2/trytond_sale_shipment_cost-4.2.0.tar.gz) = 3faeb9a82f1d337c16993af65d45765d53569f16fc1d7a6fc2abf3ebab17c1a04dcaa29bfb3bec2d5c84ad0e8e7df4ebbcab8cdcc63d3ac1dc147299d295fac7
 Size (tryton-4.2/trytond_sale_shipment_cost-4.2.0.tar.gz) = 25560 bytes

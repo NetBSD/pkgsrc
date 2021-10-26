@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:53:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:26:05 nia Exp $
 
-RMD160 (ofxparse-0.21.tar.gz) = 74cf13bde7351594ae617b59edc8cd54c88c4f28
+BLAKE2s (ofxparse-0.21.tar.gz) = 4d579f1852a685e646dce191caa57a435e5e69f1333671a1b96bbaf564945dde
 SHA512 (ofxparse-0.21.tar.gz) = 0654709413a05754799bbb289d1d43aeec91313b5d12010e5bf26a31da03e8b332f85266c924a8d4c9a614bf068de2311459a808890f0206b126e9ad0cf944b9
 Size (ofxparse-0.21.tar.gz) = 53837 bytes

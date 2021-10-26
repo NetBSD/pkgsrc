@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:01 nia Exp $
 
-RMD160 (Electrum-4.0.9.tar.gz) = 5157504e02eaf8ea91e35d30c9d7c10b2d57c588
+BLAKE2s (Electrum-4.0.9.tar.gz) = 386a2e787151101e74dd84cb805d629187601f7e7a14daa31047c0d1d12735bb
 SHA512 (Electrum-4.0.9.tar.gz) = ce63131cc58fd9e4fdfec40860d022687b0abaf67cdf40cf6ad7b6ef8be5437c5fcb70e826a4917d05f2644d943eea60c3858fa02342ab46038f6c29a121927a
 Size (Electrum-4.0.9.tar.gz) = 10457149 bytes
 SHA1 (patch-electrum-ecc_fast.py) = fa8b7d784f51890f356429ac9ba48f1bb0a3b7fc

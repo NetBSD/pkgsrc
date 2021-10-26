@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:03 nia Exp $
 
-RMD160 (alphalens-0.3.6.tar.gz) = 165bda8727aa93e7cd4f1a6d4ebc03d984cf1c07
+BLAKE2s (alphalens-0.3.6.tar.gz) = 8db406b8df4fcfc523a257a06acca2b059643c674daf356d48f64f804a693222
 SHA512 (alphalens-0.3.6.tar.gz) = 5d9ef5190691f68956a802b00c4eb1585d754c9510b54aa72f79e31de52d6c62cecf1bdc56d328805b327656c99523146ab781f0d0000725dfebb5b1babd6729
 Size (alphalens-0.3.6.tar.gz) = 18910866 bytes

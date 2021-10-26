@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:04 nia Exp $
 
-RMD160 (eth-keyfile-0.5.1.tar.gz) = 95b21024aa2d1259ea76fec045dc913d20acab78
+BLAKE2s (eth-keyfile-0.5.1.tar.gz) = da6f5c73a47193ebebb1e0edc3b9183dc6d4d98ea09000593821201c2962d63c
 SHA512 (eth-keyfile-0.5.1.tar.gz) = afbc0d891fa24e6ed078b19ff6de45c035ff0fd1765dae09812889fc04d902f54791dd265c6173c4c243538980c5ee6977ae36c31efec147b0720c840958d981
 Size (eth-keyfile-0.5.1.tar.gz) = 6607 bytes
 SHA1 (patch-setup.py) = 2e327353dad96657c86d824d640f4bfaf00032bf

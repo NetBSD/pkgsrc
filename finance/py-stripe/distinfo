@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/10/12 09:27:46 adam Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 10:26:05 nia Exp $
 
-RMD160 (stripe-2.61.0.tar.gz) = e3b71888964a4e7e723ad249838847b8fc9c2ee9
+BLAKE2s (stripe-2.61.0.tar.gz) = b34b7696fafe0607c26b9379735324c04bc8a37a5bc52c0d5b97a0d0e3db1ee6
 SHA512 (stripe-2.61.0.tar.gz) = 5b331d862ea832a821a9dff9bb7569aa2b94726c2d36ec5f304a5a41b3fcdda1096f85f444500f0826fd3e349c47b5ef18ab91b8ec5cb67d966346a0cbd1a7ef
 Size (stripe-2.61.0.tar.gz) = 231302 bytes
