@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:56:10 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:18:37 nia Exp $
 
-RMD160 (fish-3.3.1.tar.xz) = 9ec5b3ee590427a9e7d7b4691da13970385ded0f
+BLAKE2s (fish-3.3.1.tar.xz) = ec02963f5e9421e91c0775190c35e1b8b14892f61201f559958333cd549cf1d4
 SHA512 (fish-3.3.1.tar.xz) = fc50ca44fab3f2d942284d4f714150f7ccf1e49c73da36f8d4ae4a33a9b3280f98bed15848839f5d443b4274fd0ff90174bafa6a8e9a4da226dda63d7766a660
 Size (fish-3.3.1.tar.xz) = 3489152 bytes
 SHA1 (patch-build__tools_git__version__gen.sh) = 0c8feb0880d742e5de7f510a67680edbdd603aed

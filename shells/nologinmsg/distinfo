@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:56:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:18:37 nia Exp $
 
-RMD160 (nologinmsg-1.0.tar.gz) = 2c2e123dc497837169c0fcaee886dd2ab7ce530d
+BLAKE2s (nologinmsg-1.0.tar.gz) = 865d9ac14c2df9d6b6e1ea853dbb8042b003b2a8c6e7adade95c559ba61d5256
 SHA512 (nologinmsg-1.0.tar.gz) = 42acd4abcab87d7fdad6d6340d6532ba0b80e0064c9585edf4dbe5358ae36f75e561575d78747f765ebaacede88b809f1ae95f8f708eadd4facffaf47c4f02d4
 Size (nologinmsg-1.0.tar.gz) = 2954 bytes

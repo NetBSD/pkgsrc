@@ -1,35 +1,35 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:56:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:18:37 nia Exp $
 
-RMD160 (elvish-0.16.1.tar.gz) = a37537df08ad9b216c3bda8a512786feccf7ca66
+BLAKE2s (elvish-0.16.1.tar.gz) = 98c326bc2478e3dd879d61b7e080d020c5b317454ca41432411f4aa862f90e8c
 SHA512 (elvish-0.16.1.tar.gz) = a8173bea79547d6c261eda9f22eebcbd1c33977cadd998a6ecf270bb8df70550330ed4305390c4310916e6e4762d0596cc8eab616b3bc17711bba1852c4516d1
 Size (elvish-0.16.1.tar.gz) = 664779 bytes
-RMD160 (github.com_creack_pty_@v_v1.1.11.mod) = 7b5b86f88d61dd46632402e7567ee4e636c6c654
+BLAKE2s (github.com_creack_pty_@v_v1.1.11.mod) = df42a1d34a4df624a6fbab600483cf5afb215874880e2e9e23f5fb03d719eb16
 SHA512 (github.com_creack_pty_@v_v1.1.11.mod) = 9cf1687520933d3d6bbec9d7c51472998d3bdbe1b3d2a7478fca80f9e7944f9040a2b8ec7d49f1458bd46a5121bae4810d314725add41efd413319a5006b944a
 Size (github.com_creack_pty_@v_v1.1.11.mod) = 39 bytes
-RMD160 (github.com_creack_pty_@v_v1.1.11.zip) = b765c84af7222c5fcf34803a5c682928a3352edd
+BLAKE2s (github.com_creack_pty_@v_v1.1.11.zip) = 74ab83efb35aff8fab76762d9783a933583b74b4d7496f21e417e63acc277ef5
 SHA512 (github.com_creack_pty_@v_v1.1.11.zip) = d7c39c78c074d060973433f5f4c1405260fa9f49ba9ff020630bb17404412337b536275aac71ae30c0e3783b95585c46cc492f722572b941fa1476898a6f7e8c
 Size (github.com_creack_pty_@v_v1.1.11.zip) = 19702 bytes
-RMD160 (github.com_mattn_go-isatty_@v_v0.0.12.mod) = d40077cb670a9f1b21a76671bfb37f2291023e04
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.12.mod) = bfe9466b5bbed9a985efbf5ea4cdd6a6da9e51c7d1e8f7e354a7c7338a3145c0
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.12.mod) = 7bd9f6a38aa9a16c3569142164389d1c4046170f66b5e9044f7aaa3192e9d2e2ccec486e3bc7fbac868c9693b6d333068c1a34ccd9e79dec1746a86348951503
 Size (github.com_mattn_go-isatty_@v_v0.0.12.mod) = 104 bytes
-RMD160 (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 4a697bb087dd8e784a3d18d25e6b29dd880a2799
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.12.zip) = bcec7d2b9d86a66e4f2d5d2f5b16354d4effdf94490a0c1a6d2313d5b18ac64a
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 79ba14a04838c509500e6098553e8aadcd7105445387160a8aa1a6d7b0e70f0e807c99036c31faf51920544da2156195174c8530e317a72728719cb0a9a66098
 Size (github.com_mattn_go-isatty_@v_v0.0.12.zip) = 8902 bytes
-RMD160 (go.etcd.io_bbolt_@v_v1.3.5.mod) = 1ea084da2a99fce17399f8d11b0b70a615c86248
+BLAKE2s (go.etcd.io_bbolt_@v_v1.3.5.mod) = d075a8576dbaa0e933c06bed188ca694e2febd39b000c9551fc5015ae07234ee
 SHA512 (go.etcd.io_bbolt_@v_v1.3.5.mod) = d3cfb7a75e321d2a6fc145b727dea76002189ae2caa8dd3162e5e6903a1acbe5bd55be81d7f112c71b47e61351534ff991be30993632be9c9d7443111600fe39
 Size (go.etcd.io_bbolt_@v_v1.3.5.mod) = 94 bytes
-RMD160 (go.etcd.io_bbolt_@v_v1.3.5.zip) = 3460b0043cd1e1ebf198fe3f62f6981afae608fc
+BLAKE2s (go.etcd.io_bbolt_@v_v1.3.5.zip) = cd1e84e3e1abd9081b903347431d2fee9fde478085316127feddb77a70296080
 SHA512 (go.etcd.io_bbolt_@v_v1.3.5.zip) = 0b6a8a073673708adc8fc0d01c96fb0ec4276db63a17f45ff02b4243235de9634952747aff63382ed767157c6dcbcaebd5399ace63a14e52cc826bd5c9749f82
 Size (go.etcd.io_bbolt_@v_v1.3.5.zip) = 115621 bytes
-RMD160 (golang.org_x_sys_@v_v0.0.0-20200116001909-b77594299b42.mod) = 470ffe5252fd7913930e210baaa374da49776819
+BLAKE2s (golang.org_x_sys_@v_v0.0.0-20200116001909-b77594299b42.mod) = 6b2b0a0ac9d77adff84f1aab70cc38a4dcf14418c326fcb2dde80f104fb41e9f
 SHA512 (golang.org_x_sys_@v_v0.0.0-20200116001909-b77594299b42.mod) = 0c7b940d567c7685dcb55c76c69aedeaab2170f4f3bde458994c879bf344169f34fb3f3ca899b0f138a8b0b8be5031217b57a6edf5980e6066ff5cb92d1ff9ab
 Size (golang.org_x_sys_@v_v0.0.0-20200116001909-b77594299b42.mod) = 33 bytes
-RMD160 (golang.org_x_sys_@v_v0.0.0-20200202164722-d101bd2416d5.mod) = 470ffe5252fd7913930e210baaa374da49776819
+BLAKE2s (golang.org_x_sys_@v_v0.0.0-20200202164722-d101bd2416d5.mod) = 6b2b0a0ac9d77adff84f1aab70cc38a4dcf14418c326fcb2dde80f104fb41e9f
 SHA512 (golang.org_x_sys_@v_v0.0.0-20200202164722-d101bd2416d5.mod) = 0c7b940d567c7685dcb55c76c69aedeaab2170f4f3bde458994c879bf344169f34fb3f3ca899b0f138a8b0b8be5031217b57a6edf5980e6066ff5cb92d1ff9ab
 Size (golang.org_x_sys_@v_v0.0.0-20200202164722-d101bd2416d5.mod) = 33 bytes
-RMD160 (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.mod) = 470ffe5252fd7913930e210baaa374da49776819
+BLAKE2s (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.mod) = 6b2b0a0ac9d77adff84f1aab70cc38a4dcf14418c326fcb2dde80f104fb41e9f
 SHA512 (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.mod) = 0c7b940d567c7685dcb55c76c69aedeaab2170f4f3bde458994c879bf344169f34fb3f3ca899b0f138a8b0b8be5031217b57a6edf5980e6066ff5cb92d1ff9ab
 Size (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.mod) = 33 bytes
-RMD160 (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.zip) = 575a4b01a5ea5adf89655cc514bd72be2d4aa63f
+BLAKE2s (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.zip) = 0d704643bed785da0596c421da46982d962152a3076439b343d88782bc542082
 SHA512 (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.zip) = f6a53b877801048a082c1f1ec069fac8958f24d290c22b12045d0be5ae44464f9dc9ca7ac3b6a692a14654aec681fa168ef62c0ddf8f3a525e929a05031c717e
 Size (golang.org_x_sys_@v_v0.0.0-20200824131525-c12d262b63d8.zip) = 1487245 bytes

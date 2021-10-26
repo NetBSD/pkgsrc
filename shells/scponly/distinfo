@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:56:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:18:38 nia Exp $
 
-RMD160 (scponly-4.8.tgz) = de6b58fcb8108d42a1576c69003e9136b9417869
+BLAKE2s (scponly-4.8.tgz) = b7788730f7c017b4466e418905cee2129176bba26ad86dad2e230a0297f3c808
 SHA512 (scponly-4.8.tgz) = 134c008a7377cef7b8e0be483df8413e162a515967147f561d23b72bdef3dfbe70a8313811dfff6372b88f15c1ac8a4385831fcf329261276993c64d5040f29b
 Size (scponly-4.8.tgz) = 101687 bytes
 SHA1 (patch-aa) = ea2c67fa7d872e88744606a513d73d6767b9a180
