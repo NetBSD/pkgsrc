@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:29:01 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:06:42 nia Exp $
 
-RMD160 (libfreehand-0.1.2.tar.xz) = 192b04b4aa85a6d3e7f1200aad7588e72978a329
+BLAKE2s (libfreehand-0.1.2.tar.xz) = 9cb77f2a59d628134b374a51a01c33d09c028104b867bf247355a466c4937b2b
 SHA512 (libfreehand-0.1.2.tar.xz) = 4112a76ac99999801d97d1b282596d631d8496a5bf65778ab26aa06da86637b1e2b630648a67ea01bf3316ecec9f2715546baff27af090b900267c87a011b963
 Size (libfreehand-0.1.2.tar.xz) = 516132 bytes
 SHA1 (patch-src_lib_libfreehand__utils.cpp) = 83723d672b079fc1eb42db2f7db15af830174295

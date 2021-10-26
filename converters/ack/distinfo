@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:28:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:06:37 nia Exp $
 
-RMD160 (ack139.tar.gz) = 859af65bb4e4d3e1bc42840b23d571510f095d18
+BLAKE2s (ack139.tar.gz) = 289630327a6106f57591a099bbd46c754c12d3724f09c7373d40d3529917312e
 SHA512 (ack139.tar.gz) = e9dd83f2bcbb8651084102b6e29409f505fa3edffd4f925bb6ddd30b372c01374c8d61f47cf71e3b6cbace3ae2be630405f29d3589d91f95471aeba3ab778ccf
 Size (ack139.tar.gz) = 16292 bytes
 SHA1 (patch-aa) = 4840bef577a42cd4cd1a387f7261f42f9887055f
