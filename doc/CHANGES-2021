@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5291 2021/10/26 18:00:32 nros Exp $
+$NetBSD: CHANGES-2021,v 1.5292 2021/10/26 18:45:05 tm Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8055,3 +8055,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx-socks to 0.5.1 [adam 2021-10-26]
 	Updated sysutils/py-structlog to 21.2.0 [adam 2021-10-26]
 	Updated editors/texmaker to 5.1.2 [nros 2021-10-26]
+	Updated mail/mailman to 2.1.35 [tm 2021-10-26]
