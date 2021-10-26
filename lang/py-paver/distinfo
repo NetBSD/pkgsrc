@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:50 nia Exp $
 
-RMD160 (Paver-1.3.4.tar.gz) = 4179609eca6f1ad9d699919312aa4a0937fac0a4
+BLAKE2s (Paver-1.3.4.tar.gz) = 6b6e3cf7c39cc4bcd7b41758952264242ebe040a12ee6a772efd99a60e8709a0
 SHA512 (Paver-1.3.4.tar.gz) = f29d6a67ebae8100f3dc7f7cea06acf5606c4c3691be49a86cd85ff69aecff4441c28e41ce5e1b79050d32946f9bb55b213e68ee966ffc0ae1e0b0bea4871aa7
 Size (Paver-1.3.4.tar.gz) = 446425 bytes

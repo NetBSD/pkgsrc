@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:21:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:42 nia Exp $
 
-RMD160 (minischeme.tar.gz) = b00d3d59666aefc64c100a83a0e6af3a09626a29
+BLAKE2s (minischeme.tar.gz) = c14b47128e6e929e9cf98dcdf38bbdded78cabdf0455c86ec0cd0a75a5f758f0
 SHA512 (minischeme.tar.gz) = f46169821f2bf1912cb6876413fe7641a025d5cc7f2fb3c5396db4c209c6a55c0adf3875175dc0dcc1fa97be03471d4cb57970a4a0f43dbddc3f9a0a1bc65f13
 Size (minischeme.tar.gz) = 19603 bytes
 SHA1 (patch-aa) = a790b9a0f44ee417ae8678aaaebe3c4c122f211c

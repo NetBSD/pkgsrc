@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:57 nia Exp $
 
-RMD160 (surgescript-0.5.5.tar.gz) = 7d581559bef12df3e9dced8ef4fa1bcd7fa72c74
+BLAKE2s (surgescript-0.5.5.tar.gz) = aac5f01b5d625d2fad46952594fa74879b1e7c55a83540d4fc65477ca57a945e
 SHA512 (surgescript-0.5.5.tar.gz) = b3b79f36463b9ff91f2f8108d6917961d8aabfbd0693a9e9e275f57faa09022570519c553ceff8db93101058964d76df82448b487ed82c5331598df065fae34a
 Size (surgescript-0.5.5.tar.gz) = 504167 bytes
 SHA1 (patch-src_surgescript_util_utf8.c) = 44775addf7e9430bbf5fe26b0863b5334261417f

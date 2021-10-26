@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:20:56 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:51:38 nia Exp $
 
-RMD160 (guile-2.2.7.tar.gz) = 8c3dba807c4d236da81373e593d61007812ae236
+BLAKE2s (guile-2.2.7.tar.gz) = 3f9c16bba807ed79fff123d177370290e2f7b8a16f9e6876a2e10a52a7906576
 SHA512 (guile-2.2.7.tar.gz) = ad11885ffeb7655ef6c8543e67233992dc37bdcf91ed82188e6a144169c6b7d4e31cf7a6d01509c573d00904cb002719b851f71cdf1359a86de401daf613d773
 Size (guile-2.2.7.tar.gz) = 18129833 bytes
 SHA1 (patch-build-aux_config.rpath) = d6287edcf49f357d57ccc91c7e3b81862a2515c3

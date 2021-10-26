@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2021/10/07 14:20:47 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/10/26 10:51:31 nia Exp $
 
-RMD160 (chicken-4.13.0.tar.gz) = aff50d0949bb753002c01fbe50906735f4330abf
+BLAKE2s (chicken-4.13.0.tar.gz) = 575236b0fe8990b728840b7f8de137a21bc6c1b2f9dd3a2c32ed27f20c2ab1a4
 SHA512 (chicken-4.13.0.tar.gz) = 02c2035b4f81da6f4af2d246361ce8debdc9d9c663c3f43b7afb9abbf1ff591a2bb8fa144511b4d747a373dea4dcd9c10cac48466bf97032db76f3830c08709d
 Size (chicken-4.13.0.tar.gz) = 4244358 bytes

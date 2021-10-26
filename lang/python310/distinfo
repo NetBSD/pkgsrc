@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:52 nia Exp $
 
-RMD160 (Python-3.10.0.tar.xz) = 5cae2a14ca2d88278b487acb55488d288f474bd8
+BLAKE2s (Python-3.10.0.tar.xz) = 471660d88c68a21fb19399fcb42ffe3a628656564fe6bc8211039e9784c1d330
 SHA512 (Python-3.10.0.tar.xz) = 82b2729afc7d72a80882f199970667dce7d971a2e5ecfe6cf84f7b68612ab2caf6ed6d7a8cb81f24ea85cb0816464bb2e8b2e6884eda62fa40742edc674193bd
 Size (Python-3.10.0.tar.xz) = 18726176 bytes
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:21:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:46 nia Exp $
 
-RMD160 (Switch-2.17.tar.gz) = ae3a6487e915fd113b2c6b456edc0bcae4f3b410
+BLAKE2s (Switch-2.17.tar.gz) = 05fb0c94730ce4bea31f30ee153b4e8345062b8287c517daffcb1d3098fd1f29
 SHA512 (Switch-2.17.tar.gz) = 8faf3585c7b8a0552c7de7fad7b0ab89a8c3f3d55cb090d5656ae0925f8d328d9b466bd5bcbca76eaeaf56eceab11654137ba8a9bb03f79b91f00338ab2483ab
 Size (Switch-2.17.tar.gz) = 14490 bytes
