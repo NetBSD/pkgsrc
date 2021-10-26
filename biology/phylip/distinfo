@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:19:41 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:03:42 nia Exp $
 
-RMD160 (phylip-3.69.tar.gz) = a39080b959452957576c9b7daa2b9e7f25bef212
+BLAKE2s (phylip-3.69.tar.gz) = 5a4765176456e7dfa727a96f4083d8e798e90e390bad016c5211a30bd044c1e3
 SHA512 (phylip-3.69.tar.gz) = e36d12bfe597896b4298c1d0e3b0b7bd783573dc03e861b9472d8284391b2339cb3fb58eb6580298724bbd516127b68925815455514f939da9272fcfed7e229d
 Size (phylip-3.69.tar.gz) = 1511935 bytes
 SHA1 (patch-aa) = 2439ca6348fe29a534f8e305cbe4ff5e66ee3c03

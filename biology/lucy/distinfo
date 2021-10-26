@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:19:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:03:40 nia Exp $
 
-RMD160 (lucy1.20.tar.gz) = de6f9a787f9bd63b8d297beb2ecdc9793e3c183d
+BLAKE2s (lucy1.20.tar.gz) = 808f1116d0ef7515fea97c88a26eeab0a1b6c7c4118af9b982b8a4ff4636678f
 SHA512 (lucy1.20.tar.gz) = 8e182f8ecb84f374a2f40e39645dde724520c87b78bc9cfd4975ea32ad69fceccc65a899010401692f96f297e07b5f89061ab9ad8975fafd3e99c57e7ae579e2
 Size (lucy1.20.tar.gz) = 1457619 bytes
 SHA1 (patch-aa) = 2e37aaf7cad62d0183f8555b4f2bd8824b10468b

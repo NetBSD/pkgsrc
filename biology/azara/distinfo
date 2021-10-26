@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:19:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:03:36 nia Exp $
 
-RMD160 (azara-2.7-src.tar.gz) = 2426102dbb87984f88ec1266b72d2e307484af0c
+BLAKE2s (azara-2.7-src.tar.gz) = 7f0c0088fc95b13974f72db3c44b0e240bc24952c6e204a0537cbf077b9ca7bd
 SHA512 (azara-2.7-src.tar.gz) = 357a861651de21c5f20fb6f912340fbc29be01873e5c126799b1e014f7b4d1462ea9b17a107eff5f9003cb5b731235251f4fd0422292f54fd862a0fd98df2aaa
 Size (azara-2.7-src.tar.gz) = 565272 bytes
 SHA1 (patch-aa) = 1066c1e1b070020bbdd18439b27e15d359dd5e69

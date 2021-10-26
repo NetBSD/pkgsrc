@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:19:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:03:44 nia Exp $
 
-RMD160 (stacks-2.2.tar.gz) = 2f5097c668d9662dbbec705fe3bf00216c11d388
+BLAKE2s (stacks-2.2.tar.gz) = d5b6c2353e4888abfe9a721552718bd76d5705cd94209f7af0fafac37bd70bf3
 SHA512 (stacks-2.2.tar.gz) = f1cffd12313fed1c171af46f9fb501373b43d57cd3004edae1034074f43169d43398743cf625ffa21be412c808ba1168513a33c63377ee13dd056406fa222095
 Size (stacks-2.2.tar.gz) = 10822973 bytes
