@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:23 nia Exp $
 
-RMD160 (wm-icons-0.4.0.tar.bz2) = a44f722109ce5f43ce1e7f0332393c34062e7355
+BLAKE2s (wm-icons-0.4.0.tar.bz2) = 1b3891580594282c02535cbcc7ed9a1007dc4ec27a4dcf19b0dca59803a71b7e
 SHA512 (wm-icons-0.4.0.tar.bz2) = 9b21dbb1ac697520792c1e8bfc6b06d4d9933828759571b7af978a670223841fcfe9adcf7f945de3f3a4a39e0d991045d6086be9b293bd89b67cf937262d53a5
 Size (wm-icons-0.4.0.tar.bz2) = 3433177 bytes
 SHA1 (patch-Makefile.in) = 81022dd01bbb53c87a01917075473decda5e8e76

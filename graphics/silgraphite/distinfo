@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:54 nia Exp $
 
-RMD160 (silgraphite-2.3.1.tar.gz) = baaf57ff95622bff9fc3908ae55872789eab5836
+BLAKE2s (silgraphite-2.3.1.tar.gz) = a99dbf424fddd5939aacf6746b90bd527e14aef2b2093ca1c6cee7f67133c850
 SHA512 (silgraphite-2.3.1.tar.gz) = 6b0fa29e0ee507da17509ed6374b64d51360b3012bba512785186348c153047c2e6f28114e36d133f3c05dd319919bd79e9ed97fc9e29ad6bf2f7a032eb22df2
 Size (silgraphite-2.3.1.tar.gz) = 3239482 bytes
 SHA1 (patch-src_segment_Segment.cpp) = 091835ec22bf606f2f658b23e0379a21e6a18dbd

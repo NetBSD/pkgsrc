@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:18 nia Exp $
 
-RMD160 (tex-tikzpagenodes-27723/tikzpagenodes.tar.xz) = f55db94e307fc72e47ffcc84e999710833c90356
+BLAKE2s (tex-tikzpagenodes-27723/tikzpagenodes.tar.xz) = ad98d1cfc6f882137af585d1e223a63dbd4254f918229b793ed4e67032b6c404
 SHA512 (tex-tikzpagenodes-27723/tikzpagenodes.tar.xz) = ac17f932b9dc93ac764533afba1c4a13744df56bffc1cadfd189aa261b79080216520a782b9d04b5f8185a155470ec159a078af334656dd749b82760fd986356
 Size (tex-tikzpagenodes-27723/tikzpagenodes.tar.xz) = 1496 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:31 nia Exp $
 
-RMD160 (mandelbulber1.13-1.tar.gz) = d87e250b8bfb4249d43112d1d8395c5d9913f6c7
+BLAKE2s (mandelbulber1.13-1.tar.gz) = 33a278f3d7cde8b4fed8b9ef3bc5141932070b825a69b644234b3710062f2268
 SHA512 (mandelbulber1.13-1.tar.gz) = 104e91c5f113db59147bf917e869df3195ec88f3f906a682a9f4c69fa3f083717fcf0816b953da01259c2292b1a5cc08fb0f282759f31eb2a019a1a1382b7e67
 Size (mandelbulber1.13-1.tar.gz) = 1200010 bytes
 SHA1 (patch-src_netrender.hpp) = 8d1bc2f6586d56434c8d2a4c33eac5b2ed911176

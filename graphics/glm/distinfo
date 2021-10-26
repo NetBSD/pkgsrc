@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:13 nia Exp $
 
-RMD160 (glm-0.9.7.0.zip) = b324bd52938e9817e18a4da494ad891bcb272a02
+BLAKE2s (glm-0.9.7.0.zip) = 4b7b08f5b61eab7ffee4db5be98d5d6d2634ee350278037eef37337960f01ac6
 SHA512 (glm-0.9.7.0.zip) = 19c901a63bec6a3ef1749081d0f4c7af62b415e641fbab125c55252a0581c0b8c87e9239c503803f825ac68d582e5aa209467d24946a8cbb064895f35e4d93a4
 Size (glm-0.9.7.0.zip) = 4436581 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:13:15 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:47:13 nia Exp $
 
-RMD160 (pstricks.r59402.tar.xz) = 86fd5b945870677efad6f8853b48f181880830eb
+BLAKE2s (pstricks.r59402.tar.xz) = 388454faf1ad79a5fd8025d28b43752748ec55b013cc808c8760c2e09eb95306
 SHA512 (pstricks.r59402.tar.xz) = 6de574466e92051bed3128b9579da1e96148ca8ff186240ce2a69c2af4ee233793f4245cdfa9e4c8b34d010a5645e1db1c7dedc5cc0d8382dfe9b3c46d372701
 Size (pstricks.r59402.tar.xz) = 76152 bytes

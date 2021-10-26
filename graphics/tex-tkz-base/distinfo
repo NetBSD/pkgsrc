@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:20 nia Exp $
 
-RMD160 (tkz-base.r54758.tar.xz) = bf3fb8dcf17a9dc62eaa14f750cffb5df42f50fc
+BLAKE2s (tkz-base.r54758.tar.xz) = 2f72e91a9a5f32dbb61ae8172fd80052d738b6b2554b3a71b0b26113ebd21240
 SHA512 (tkz-base.r54758.tar.xz) = 9cba8d8d79c7cb01965660fee7913aeede3b0d2cc19bd7624982fc5854224f19f7dd2d2af0ba93c99b4f16827fb028564fcd9a1e9afed1988ce836188516f891
 Size (tkz-base.r54758.tar.xz) = 15292 bytes

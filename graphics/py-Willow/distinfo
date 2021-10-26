@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:43 nia Exp $
 
-RMD160 (Willow-1.4.tar.gz) = 5bbfb5a817faf754745d50867b7888750db61a28
+BLAKE2s (Willow-1.4.tar.gz) = d89b149ac77d4b448a6c42f5c4dce683439ba6e08903fae35cbb971807ec4b32
 SHA512 (Willow-1.4.tar.gz) = 7a59f0afdd6f59311707673130edcc61bcf6d05b0e2410f6fe488324d50fdbf9c066d5a89626be862082b7bc092ad45de65795c93fcaec41c0cb2574eea16242
 Size (Willow-1.4.tar.gz) = 1950643 bytes

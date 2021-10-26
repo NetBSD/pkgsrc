@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:12:30 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:46:28 nia Exp $
 
-RMD160 (libotf-0.9.16.tar.gz) = ddea1124409fa97a58386251aa70b961c11b9374
+BLAKE2s (libotf-0.9.16.tar.gz) = 4f71c311482127f8519c992f220a007471fcc3fc5c40aa5cedd6d68de8d73d1b
 SHA512 (libotf-0.9.16.tar.gz) = 0f68c45c1224f02dc0f1a8e9915dd9c1c70d71259b4e2f7bbd4fbec6426e58d4a26e4cbf28dbb8ed051ba6f532f99fc4e74b4ddf97a93ec947fa6260c875d0b4
 Size (libotf-0.9.16.tar.gz) = 423979 bytes
 SHA1 (patch-configure) = 5d43a445f6950ac14e5a91f37b25601d951868c2

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:46 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:46 nia Exp $
 
-RMD160 (gdchart-py-0.6.tar.gz) = 6c8e430e53ab7adf2b83a8493afe570474532a26
+BLAKE2s (gdchart-py-0.6.tar.gz) = 26eeab03a96832d43e46c897b80f7d35fcc1850e08ba8f280b0430016af1739b
 SHA512 (gdchart-py-0.6.tar.gz) = 92444045f6048e438534ec86b360c9a4eb06006f1242a28f41f251a1e6694f3319107032c504db043cabe86c70a18b0b24118065c4c8644ab14c0213da75ae8a
 Size (gdchart-py-0.6.tar.gz) = 321891 bytes
 SHA1 (patch-aa) = 837717d61525d3f04b058bbc513b9cf30bcc64bd

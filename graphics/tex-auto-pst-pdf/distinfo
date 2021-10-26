@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:56 nia Exp $
 
-RMD160 (auto-pst-pdf.r56596.tar.xz) = b9f2dcbcf048f21f6f80d76cb1d08758221ce93e
+BLAKE2s (auto-pst-pdf.r56596.tar.xz) = 5201ed4f3dbc8e7ce391356d284a08c4f772694b6ed29c512aa505a96281baa0
 SHA512 (auto-pst-pdf.r56596.tar.xz) = 5c1f85a0ec5aa4173181b087a1f5f8e30be6d8c21c3461999a85b42032d45292aa6f8aae4922a5e97d073fff5b2c9d114cd30f5d5bb73ef523718e891ce59473
 Size (auto-pst-pdf.r56596.tar.xz) = 2636 bytes

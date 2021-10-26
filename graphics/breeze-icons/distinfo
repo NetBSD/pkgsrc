@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:03 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:00 nia Exp $
 
-RMD160 (breeze-icons-5.80.0.tar.xz) = 0b38a4b728d727c798fac23024d872d6b0cbbc01
+BLAKE2s (breeze-icons-5.80.0.tar.xz) = abf83272e47602cc88f46d56177ba2f63723b321fc0e2a1e564c3afe3b8a6e1e
 SHA512 (breeze-icons-5.80.0.tar.xz) = c94f40505aba24c150b739d745c821bd909a12330a7b011c36c52d0c492f4608304c46cfeb72f4ba741e6a260dc7b2742f1c8276aa129d3f5577248fb4eea1fd
 Size (breeze-icons-5.80.0.tar.xz) = 2021500 bytes
 SHA1 (patch-CMakeLists.txt) = 31d11bf294f3fee5e8b6b1b5bfa31f902f0c0c3f

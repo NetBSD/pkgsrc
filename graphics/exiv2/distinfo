@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:12:09 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 10:46:06 nia Exp $
 
-RMD160 (exiv2-0.27.4-Source.tar.gz) = 175baf677c419549d6968e3786405ed5912d2670
+BLAKE2s (exiv2-0.27.4-Source.tar.gz) = e86e5892cb37f620f790d21bb7c7f2d7aecc7f97d643c92657e15236952717a6
 SHA512 (exiv2-0.27.4-Source.tar.gz) = f6798baafb36a54ba5bc65c2d28d4f4469e298582c90b417eb437b5dbda8e11963fb3314e8419717b3815ee8c3a68955cddc79e45351d9f2c165a0b73eb7b7be
 Size (exiv2-0.27.4-Source.tar.gz) = 32055837 bytes
 SHA1 (patch-cmake_compilerFlags.cmake) = 1476eea6dee5d08aece6840ec8ca3eef3442783d

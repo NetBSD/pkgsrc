@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:40 nia Exp $
 
-RMD160 (pear/Image_Color-1.0.4.tgz) = 1852abe3d3ffba4071307741579fa14ff9ed73dd
+BLAKE2s (pear/Image_Color-1.0.4.tgz) = 23227b612ae1e1b6558ca26f02fcb6ea8dbcc8deb9765605263523927ae92c74
 SHA512 (pear/Image_Color-1.0.4.tgz) = 808464458b7899ebeb41e0eb2c080acd553d0d791007f05184993faca5b7e3dd976f23c09709c95cbb521e4facbaa1267614b16d2578474ffda0a71bfab9f9bc
 Size (pear/Image_Color-1.0.4.tgz) = 9501 bytes
 SHA1 (patch-aa) = 5532003dde487901234be5e424e994f74f9c57ca

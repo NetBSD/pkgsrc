@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:19 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:18 nia Exp $
 
-RMD160 (gtksee-0.5.6.tar.gz) = 0df689de66212445bfdcdfaa9dbb65792e1c3efd
+BLAKE2s (gtksee-0.5.6.tar.gz) = b9f0ce2ebf56c42ebb7e5d8c0e79769d5b21987d00a088b518ffe8bf53ac942c
 SHA512 (gtksee-0.5.6.tar.gz) = 68a83341a7103260af516ddc159396ecef9dd745021531adf0b32efa5f287b3a0baa9976f0ef49b5e45eca529b057e58a992698e3b2341006d80648cc5fa48fd
 Size (gtksee-0.5.6.tar.gz) = 322313 bytes
 SHA1 (patch-aa) = 0fd5b2367f5ee00d2a8a6b3d9c02725e5761f564

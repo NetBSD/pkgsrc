@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:12:47 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:46:46 nia Exp $
 
-RMD160 (graphviz-0.17.zip) = 9eeaba6d35b0ea651e84a139a88559f110ee16c1
+BLAKE2s (graphviz-0.17.zip) = 3eef756b1a62ebd6298195460af355f7ff49b1619129a381511d255498c8dd8c
 SHA512 (graphviz-0.17.zip) = 02f5ef21f9e3bf3b609f43fe0d9cb51632ea43c878055746af62fda4dd55883f6ad58f69faecb6aba552100cc835901309c8c2ec833cd74c617619fce2d49600
 Size (graphviz-0.17.zip) = 193647 bytes

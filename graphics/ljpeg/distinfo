@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:30 nia Exp $
 
-RMD160 (ljpg-1.0/ljpg.tar.Z) = c61e5207ebf449e016ea9e2f23c54d323f680a54
+BLAKE2s (ljpg-1.0/ljpg.tar.Z) = 83a12e8e284cd232733cc41f7acf961dc9e81e888ab285a69fc6d44d0d061405
 SHA512 (ljpg-1.0/ljpg.tar.Z) = ff5ba1b935cbaa1b51b5bdddc11bc715456b82e1d2f2bd83b10dd8f25479254d41d8e52c1780e87853b8dc27626e9d7416cdcc876dce46bf4bb524999a48a2f8
 Size (ljpg-1.0/ljpg.tar.Z) = 334459 bytes
 SHA1 (patch-aa) = ceb910a141d782597d2d3dbb15b520e6284cb394

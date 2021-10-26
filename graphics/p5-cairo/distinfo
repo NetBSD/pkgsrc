@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:40 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:38 nia Exp $
 
-RMD160 (Cairo-1.109.tar.gz) = c6eb5dda1ca8f5e9b0bf9373e38cd8809914d874
+BLAKE2s (Cairo-1.109.tar.gz) = 40edb8306fe2c87fac68a4f5563f30cd210879ef04df03afc072e46350b618fb
 SHA512 (Cairo-1.109.tar.gz) = b80841bff480acf95f69659cba02ca17c79b67a2dc5c9b9302efb15bbd79bd4bc2f1801c001c220723da11081e86a08a83e07ecc8866810ebf9406e1f6fa1c53
 Size (Cairo-1.109.tar.gz) = 116924 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:13:26 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:47:25 nia Exp $
 
-RMD160 (xsane-0.999.tar.gz) = 3799a599ddf06b0ca297b2270b50d4b93e1f0e12
+BLAKE2s (xsane-0.999.tar.gz) = 5cf54bd87329d4faa830fa5337c82f0b348d45eee550173bb19ee98403627076
 SHA512 (xsane-0.999.tar.gz) = 73ec961fce1a86b5d6f5bac0995d222785eb4b077dc8e72492b092d2bf4500455426e80e4d27233721cd38ec84f77fb9f92190a6afe45bdaf7ffd1ee50b431ed
 Size (xsane-0.999.tar.gz) = 2950621 bytes
 SHA1 (patch-src_xsane-save.c) = 785faf5c267975534e86aad6bdbc8c279c92a202

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:20 nia Exp $
 
-RMD160 (ipe-7.2.7-src.tar.gz) = 6d68ad7831923d04ba07086f3dde2be9830d756a
+BLAKE2s (ipe-7.2.7-src.tar.gz) = fa8dcba368cdfdc2df04dbd462384d27ceafbb812a4f55b241ce6581509625ef
 SHA512 (ipe-7.2.7-src.tar.gz) = 01c855f77814e59c56198fd9216be61ac7b9b6de827eaa18cbd9464c6c5116ca11d2d3b64a71edee94aecafe0d731352455e476657c7d2e9a2237e0cfa1f7bf5
 Size (ipe-7.2.7-src.tar.gz) = 1561350 bytes
 SHA1 (patch-config.mak) = 29a5115e66b4e899692ecfe3c6a0438efb6d9cc2

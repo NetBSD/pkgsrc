@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:15 nia Exp $
 
-RMD160 (tex-roundrect-39796/roundrect.tar.xz) = ad50a9609b75a21289eed033af31283477cd63e9
+BLAKE2s (tex-roundrect-39796/roundrect.tar.xz) = 043aa94a648c56863ece4335957705fae9c9f48b5ef92a32cf868c1a3e4dd100
 SHA512 (tex-roundrect-39796/roundrect.tar.xz) = 21929d563b3791805551c181fcaf52035a602273b702845d6288f4a543f9814daccad655b17e69eef5bf7dd71481761faa79854fe0aafc1b7e01b9c637f40216
 Size (tex-roundrect-39796/roundrect.tar.xz) = 2200 bytes

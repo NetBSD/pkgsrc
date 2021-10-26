@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:04 nia Exp $
 
-RMD160 (tex-metapost-colorbrewer-48753/metapost-colorbrewer.doc.tar.xz) = fc88a619ea6d010efd3a85cf051510f4ceb3dc57
+BLAKE2s (tex-metapost-colorbrewer-48753/metapost-colorbrewer.doc.tar.xz) = fffe40a854f8a17f3bffa9fe66abfb0f2f7e31315ce67cf1ba8a69ebd45c5ff6
 SHA512 (tex-metapost-colorbrewer-48753/metapost-colorbrewer.doc.tar.xz) = 86c04f326d87a469e4cd3028344626eabf71319592e5412a16a14177efbe75dcc66da7ae77eb36dd5f9982fcb0fd5119e98e5ae90753f1a06f09501261a6181d
 Size (tex-metapost-colorbrewer-48753/metapost-colorbrewer.doc.tar.xz) = 219680 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:51 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:50 nia Exp $
 
-RMD160 (rayshade.4.0.6.tar.Z) = a19bf35aa3f66de9ce406a1a98cf7edbde60f356
+BLAKE2s (rayshade.4.0.6.tar.Z) = 122f3226b135806178f7ba5f30a31171d9dde4372c1c1872decb3699d2254156
 SHA512 (rayshade.4.0.6.tar.Z) = a8bd6f1bf27a0d1f7e894a130576f4c7daa07f082885f4ec6e850f75eb31dc3b8f8a92e14d3c9bf166f2f7fae70a1eefe7beca6cd41d28a3e592e57818e58b35
 Size (rayshade.4.0.6.tar.Z) = 369527 bytes
 SHA1 (patch-aa) = 6a736aef4d1d38e05d45d9208b18ce945edbcc1e
