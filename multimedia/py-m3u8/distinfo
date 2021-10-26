@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 14:32:18 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:01:16 nia Exp $
 
-RMD160 (m3u8-0.9.0.tar.gz) = def19d7aa23c3d7e0981b53af2fa682611e55989
+BLAKE2s (m3u8-0.9.0.tar.gz) = 5b775023c73ce2083a686b0a6218de59a828c271848b0d495cc15c7722e22d7b
 SHA512 (m3u8-0.9.0.tar.gz) = 3e40d823b054d16db707a736a1d9908e67728ac4242c7fe19c7b95ea59cf34a7d4face7bd17d3fd26b11713fc248fd8b33e59f55a33771d5ea883a5088f48911
 Size (m3u8-0.9.0.tar.gz) = 24669 bytes

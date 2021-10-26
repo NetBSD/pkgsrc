@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2021/10/07 14:32:08 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/10/26 11:01:05 nia Exp $
 
-RMD160 (gstreamer-1.16.2.tar.xz) = 9964bdddc98008a967b165e84011267bfce0252d
+BLAKE2s (gstreamer-1.16.2.tar.xz) = 193ff17c907ab911b3d5a91f6aba172aeafe4e558274ad87070b9604e971fba8
 SHA512 (gstreamer-1.16.2.tar.xz) = a8dcdb452a88f411676e54016fcf83149068b2f0b60422bebdbc81220078c61c415512006010ba0299df81ffb59853695c3ce00580f8fc46a079f6aaaa42609f
 Size (gstreamer-1.16.2.tar.xz) = 3328600 bytes
 SHA1 (patch-Makefile.in) = 0b20408779ae96c42e9b30bac54760f93fb18dc4

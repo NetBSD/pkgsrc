@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:32:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:01:08 nia Exp $
 
-RMD160 (libdvbpsi-0.2.2.tar.bz2) = 46fa5a96fff3a0648554a74ada30962a742b9e7f
+BLAKE2s (libdvbpsi-0.2.2.tar.bz2) = 24c51a3b369e1cc1014600675544b640885b1040b0f52ca7b358637446ef8637
 SHA512 (libdvbpsi-0.2.2.tar.bz2) = 9077a87d31b6c142773d68a5679a5b864df1c063f66d8b405964127b5e2f0b6b8ab4c1c003f873c221ba5657022667bfdb19cc399211be52bbc94a227de262a7
 Size (libdvbpsi-0.2.2.tar.bz2) = 330403 bytes
 SHA1 (patch-aa) = dc8c3b5a99e5e6dd73f0d0461e0924bcbdfbeb7d

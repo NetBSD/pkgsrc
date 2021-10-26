@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:13 nia Exp $
 
-RMD160 (mpeg_play-2.4-patched-src.tar.gz) = 2a763142cd3b3c24223df3870470e9f4275c2fc4
+BLAKE2s (mpeg_play-2.4-patched-src.tar.gz) = f21aba5e4cef2e06ce8fb28eebb4fb37910e6e4632cd5f9b16312dbb69f8e9c4
 SHA512 (mpeg_play-2.4-patched-src.tar.gz) = 8a4accbad3dfa010d17a9a9f72051c68a82720d34478b250e22088e7e5326eafb26ee5630261a52159d5f7c0947a065a7fb3ed183d12bbf264ca73bccc324122
 Size (mpeg_play-2.4-patched-src.tar.gz) = 146696 bytes
 SHA1 (patch-aa) = b9538234c58dd7e671e61bc4e0ed14efb1f3e733

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (dumpmpeg-0.6.tar.gz) = d53404045542a7ec0c156a0cfbf6fd0f6fb8781f
+BLAKE2s (dumpmpeg-0.6.tar.gz) = 681a43e207b897011582d51e57d137cd66b7e4b00e06333a09827c41dc409f02
 SHA512 (dumpmpeg-0.6.tar.gz) = f31937adbfa7a7b12a2043b857c0c64b1e1b37ade4ddfd4e5fac5b28c1804ee3cf1492b2ed93e5fdfda3fc832239b15eec0fa2ef0a1db3014d2814800a409f2d
 Size (dumpmpeg-0.6.tar.gz) = 43257 bytes
 SHA1 (patch-aa) = 3b1613a264dd5704d74ab732d3c335c971f5f819

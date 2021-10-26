@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:32:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:01:11 nia Exp $
 
-RMD160 (mate-media-1.24.1.tar.xz) = 42e99989fbcc4c991b60ddeecd59ff87f6dd4f7a
+BLAKE2s (mate-media-1.24.1.tar.xz) = 004555e4251b5bfbc21dbd6475578f9ad46b7a97734b385652a358893f640fd8
 SHA512 (mate-media-1.24.1.tar.xz) = 88a8f1b8ee1684c6270ee65d17cd4d031830cd968069cae38a1844b0688cdcac25fc2e09c415d8e55c5b8564c4e0421e2c111cc44de9221bf37cf0e31dc572d3
 Size (mate-media-1.24.1.tar.xz) = 568328 bytes

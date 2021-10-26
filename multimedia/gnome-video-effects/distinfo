@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:02 nia Exp $
 
-RMD160 (gnome-video-effects-0.5.0.tar.xz) = d99403bd998b5bc1a411c4691a7b561da15678e3
+BLAKE2s (gnome-video-effects-0.5.0.tar.xz) = f8251b4804bb5232216727954d05b19dc0ed4b41a207ed69a40960dc1a526b39
 SHA512 (gnome-video-effects-0.5.0.tar.xz) = 48d68984913e6732a097b4f235671ecb3442945ec843accfae4b4526ecd27641831a847ea193ac1e13a452700c4a76fa15fa84c2293cbaf7b1b2f4d1b85487ce
 Size (gnome-video-effects-0.5.0.tar.xz) = 85424 bytes

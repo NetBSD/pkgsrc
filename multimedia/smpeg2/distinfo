@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:18 nia Exp $
 
-RMD160 (smpeg2-2.0.0.tar.gz) = 6c175111e38055d62064c6b6453d8c5e64945c09
+BLAKE2s (smpeg2-2.0.0.tar.gz) = 44685ed59cbe2e028d509ff60772e46e8cbe62f5c480cc9c7f55166ec0609f1a
 SHA512 (smpeg2-2.0.0.tar.gz) = 80a779d01e7aa76778ef6ceea8041537db9e4b354df413214c4413c875cb98551891cef98fa0f057cc6a3222e4983da9ae65b86bdad2f87f9e2a6751837e2baf
 Size (smpeg2-2.0.0.tar.gz) = 482322 bytes
 SHA1 (patch-audio_hufftable.cpp) = 20b8cf5f0491a7e50af14f526fc4d0b901b25499
