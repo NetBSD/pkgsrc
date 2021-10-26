@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/10/07 13:23:19 nia Exp $
+$NetBSD: distinfo,v 1.37 2021/10/26 10:05:11 nia Exp $
 
-RMD160 (bitlbee-3.6.tar.gz) = 9a02e95c5fd8c3bd43edf1c6e25dfe4f5bdc0b35
+BLAKE2s (bitlbee-3.6.tar.gz) = 135401f8f40e51ddf60d3f1f0cfc9f2de3fb3ed9f31d6ea9f7933e9165f1bf1b
 SHA512 (bitlbee-3.6.tar.gz) = ccbf0f23e228de2de147241f36f59744b2256cba958e2fabfba0cfa60935e55bbb7d7e20fffa54da9a345e55ffa9ca82cb62e9b99dc738ba35c6e268c6561a8d
 Size (bitlbee-3.6.tar.gz) = 534961 bytes

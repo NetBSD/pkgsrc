@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:23:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:05:26 nia Exp $
 
-RMD160 (telepathy-logger-0.2.7.tar.bz2) = 8ebd08ee556745e2f3cce3d39a1de407e4106db8
+BLAKE2s (telepathy-logger-0.2.7.tar.bz2) = 0556913ed7ac36d1e640d45a99d8a0d3abd07238346651b9340425ca624451a0
 SHA512 (telepathy-logger-0.2.7.tar.bz2) = 0f96e667d310dc2222ad43ba23508f245040d598485c9bee1347ffb139c38f7ba9a1543849febc229be77c6545cb959376d3018e5662021d9ee3ea2c59f0b18b
 Size (telepathy-logger-0.2.7.tar.bz2) = 447956 bytes
 SHA1 (patch-aa) = a01f17f1e6c7cf01fd7b684de01df47b473dec61
