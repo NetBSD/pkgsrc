@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:47:42 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:21:33 nia Exp $
 
-RMD160 (lyx-2.3.6.1.tar.xz) = 42ef899a4cff27dee4bac65f8018de65c1cdde44
+BLAKE2s (lyx-2.3.6.1.tar.xz) = c9f7f2712590d37906e50bab1b05f8c57ac38afdd5c006486173e431990b0373
 SHA512 (lyx-2.3.6.1.tar.xz) = 233f6c54d4a036ad12f33c6705810bfb99747bdbd015550a8a0a9d7b664d3be50a06dc337191b820c42de4407c5f790efa50c706a45fb2260a71f772fb22c872
 Size (lyx-2.3.6.1.tar.xz) = 16242608 bytes
 SHA1 (patch-configure) = d68e3329353f2fa0ffdf9633ff0b31649f0114c7

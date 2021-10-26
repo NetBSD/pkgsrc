@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:47:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:21:42 nia Exp $
 
-RMD160 (texstudio-2.12.22.tar.gz) = 1560e583e60da30543eb90c39bbc9a76743b76c3
+BLAKE2s (texstudio-2.12.22.tar.gz) = f0a386d2f9e2e132f179462d1e5f1b5425a89c7fe926117d078a1e1be0c51886
 SHA512 (texstudio-2.12.22.tar.gz) = c589285d1fba00812583a3d58602a99e044eb4bcf6a84b939d00ad7fe4ba8f15788031361fc9b4cb8df19f8098911c437d1de5459c1736fa40888b88d13b10d1
 Size (texstudio-2.12.22.tar.gz) = 35965795 bytes
 SHA1 (patch-manhattanstyle.cpp) = 390e4026a44656e7fb2a675f958b8a6f315cffdc

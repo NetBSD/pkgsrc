@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (Padre-Plugin-Catalyst-0.13.tar.gz) = 1efda01efee8084152f025762b39443f70cdddc5
+BLAKE2s (Padre-Plugin-Catalyst-0.13.tar.gz) = 36578244b20e532581e5763fd0bc04ebe138b312014f6b97b3f46468eb2ec854
 SHA512 (Padre-Plugin-Catalyst-0.13.tar.gz) = d1b4f130d9fefa4b515d3bf1e905d603d6a65cbc26b68fdb82c9832f5b7dd1db227aa04dbc23c23c8afa911159f9f1a552d61505617a52ff078b6ceb8a3a220e
 Size (Padre-Plugin-Catalyst-0.13.tar.gz) = 55181 bytes

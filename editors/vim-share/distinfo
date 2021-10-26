@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.193 2021/10/07 13:47:51 nia Exp $
+$NetBSD: distinfo,v 1.194 2021/10/26 10:21:43 nia Exp $
 
-RMD160 (vim-8.2.3172.tar.gz) = 37f79c6cfbed6632c40692c749bb0fc510e60dd2
+BLAKE2s (vim-8.2.3172.tar.gz) = dd63b697b0feafefbd4f7cea0292fe68dcd207f46210e931d3dd463fe73517f3
 SHA512 (vim-8.2.3172.tar.gz) = 3ebcd2a65e8f4a05f074d1612d4a50c90e90cd393eccd3a647dbb83d2c87a9e15b7d98dd387961c4dc7f0a2cde941b7ee63ef5f87ecb2d4086bf4a0dd1eed701
 Size (vim-8.2.3172.tar.gz) = 15628376 bytes
 SHA1 (patch-Makefile) = 342af6768ec3f5d86448a370538a3ad75e2259ee

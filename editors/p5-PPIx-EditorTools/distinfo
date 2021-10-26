@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:21:35 nia Exp $
 
-RMD160 (PPIx-EditorTools-0.21.tar.gz) = 4bf608e85eb3a67e6a3e69a0c9426e5c431fd1e8
+BLAKE2s (PPIx-EditorTools-0.21.tar.gz) = 9171934d9dd22c3ef6d45e7f6cd2930120bb9e21391a4b1bd60c5e92156fd58c
 SHA512 (PPIx-EditorTools-0.21.tar.gz) = 16fd1b4144742debd6dce3f49215d3b24b896688f5f2150492c9e1ae0cb37a14a18f444b39d8cdf42c1895fff8b3123ed181582264df061a3acbb47ae90e5085
 Size (PPIx-EditorTools-0.21.tar.gz) = 36742 bytes
