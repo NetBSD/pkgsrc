@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:44:12 nia Exp $
 
-RMD160 (lnl-3.4.19.tar.gz) = 4e86918c8dad83d261423f97eadb15b6d5cf2061
+BLAKE2s (lnl-3.4.19.tar.gz) = b7414cd4613a8fd5165742b40b1c131efc1c6263a136103211353a6bac1d60b2
 SHA512 (lnl-3.4.19.tar.gz) = 3c7debb89a82f4750e54466704c8a8dd603ef0f497128998f28e90b36bd3154483d49a445a7e799da5ff13e0053302a4bda52ab1c0a4067ad763a0632041eccb
 Size (lnl-3.4.19.tar.gz) = 1083451 bytes

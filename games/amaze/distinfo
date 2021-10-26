@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:45 nia Exp $
 
-RMD160 (amaze-0pre0/amaze.tar.gz) = 6c727ec49296e4987c87d4c0d3c69927cfeacc7c
+BLAKE2s (amaze-0pre0/amaze.tar.gz) = da45fd7cc7985ef56fa35bf3cb4b6bbf859c3115a4afe0208c4ba737d3339fdd
 SHA512 (amaze-0pre0/amaze.tar.gz) = 23f2ccc9b87c3d7a10047aadc5930298a8b149706498402518ad4a04c7c35ff5ff26375babdefc4d3d0f5338c7bb3067737e8dc07ea1aba31e269a357d5f5ad8
 Size (amaze-0pre0/amaze.tar.gz) = 6941 bytes
 SHA1 (patch-amaze.c) = cc483ad83c44151b03f2d04c89b898f00054664a

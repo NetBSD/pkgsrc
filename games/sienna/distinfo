@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:24 nia Exp $
 
-RMD160 (sienna-1.0c.love) = 3c890f144556f0d5430880313a8e029449e412f3
+BLAKE2s (sienna-1.0c.love) = 1286398fd4c7ce7b2fe8627a9032f00c944f7ed898998aff4a9ddece16c4956c
 SHA512 (sienna-1.0c.love) = 2ae4830d4abe023032065a857049aa114996efad87d38328ca70f34fd4046473283984f6437fd51092ff1488668c14bbefedd71e300f1e25e4080fafdab987d9
 Size (sienna-1.0c.love) = 1633297 bytes

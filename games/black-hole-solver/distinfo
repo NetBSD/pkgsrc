@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:48 nia Exp $
 
-RMD160 (black-hole-solver-1.10.1.tar.xz) = 8445a0dfc9dc00a1c165b73a58c334e3bbffa991
+BLAKE2s (black-hole-solver-1.10.1.tar.xz) = b783e5dca90115efbc2d49e467088f4f3273c93e8ead09499d6a528c62fc9a19
 SHA512 (black-hole-solver-1.10.1.tar.xz) = 65e69a699922c92332da70b35303f50fbbe3f7b324e70428d24e75910ab6472db22936fbabe716fdd2ef9a88aaac3d8765b8007ceeb03d50ec865b183a5c8f69
 Size (black-hole-solver-1.10.1.tar.xz) = 78848 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:21 nia Exp $
 
-RMD160 (ranking-0.3.2.tar.gz) = e6028f3906a8f5fa069937aaccc6ce1056dd8543
+BLAKE2s (ranking-0.3.2.tar.gz) = 418e81b142808e454d54111a116698fffd16010e62d214cf909926fcd6f25f85
 SHA512 (ranking-0.3.2.tar.gz) = 0bb31e7be666bd274b4847cec04b6d89dfdc54b7dc363d041014c5fcc3cd4488b08f2cb40efa9f4a649118afc78b5de934df06f80af538b162879a369253f835
 Size (ranking-0.3.2.tar.gz) = 9187 bytes

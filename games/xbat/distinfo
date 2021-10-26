@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:44:31 nia Exp $
 
-RMD160 (xev111.tar.gz) = d8cd271be8b59fec2eb7e16c7febb209f520d5e0
+BLAKE2s (xev111.tar.gz) = 971609952b6f0db8cb6b24df2005e70bde195a06ea69a8bb3aa6c712fc312a1b
 SHA512 (xev111.tar.gz) = 9daee7ef66788078ad79c7786fe65cdaaec7a307a9966754e25a074092e79434360d8cc6066286494ce6240624a25467617001a5e4583d5582dd56dd104721d2
 Size (xev111.tar.gz) = 123960 bytes
 SHA1 (patch-aa) = c1909e7f2742a391e7f082bcb727f3376258ad86

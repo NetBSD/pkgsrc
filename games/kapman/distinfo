@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:33 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:06 nia Exp $
 
-RMD160 (kapman-20.12.3.tar.xz) = 9a6e0b3f3e1fccb9f77f5c7123bee86f3e85d255
+BLAKE2s (kapman-20.12.3.tar.xz) = 2d013cf68a939ad47276b39782062d5b7a492dd225342bfe3e5aec65c159f9db
 SHA512 (kapman-20.12.3.tar.xz) = cbfd2424a714695b643103300d693de987fb2b893910a9028806b8e18bf2b8841610fe816344821dc9847796af201d6732c86ae0add53e32fab0ade5bfe1be5f
 Size (kapman-20.12.3.tar.xz) = 2531568 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:07:43 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:44:16 nia Exp $
 
-RMD160 (nethack-366-src.tgz) = de937e31c2046900ef8c6f2eb0da0da09f8e136f
+BLAKE2s (nethack-366-src.tgz) = 0557c802cef4346ccfe133d9db7c1d8d976fca4b485e031d60901e4afceb4247
 SHA512 (nethack-366-src.tgz) = 579fde93a37a1b5df637d5bac2601194beeb455c175fbe3ef89342122c8567bb8221ce60d8a6168e6b45c67ade7d7b09c86bf202c8cbe2d6294d276be3e53055
 Size (nethack-366-src.tgz) = 5577633 bytes
 SHA1 (patch-ai) = 73c5b2ea1227531089474705f2f18bc411366365

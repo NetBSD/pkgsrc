@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:44:22 nia Exp $
 
-RMD160 (qonk-0.3.1.tar.gz) = 6ed1ad1fb67cea6677d39d1201da1eca9ea4479b
+BLAKE2s (qonk-0.3.1.tar.gz) = d9674dd907bd1e10a77a1298b5993dd5d2fdbfd8d62825586084c6bdcc72fa64
 SHA512 (qonk-0.3.1.tar.gz) = 288cd5d5afeedc83c9629e10eb6ecd106c77da877515fd56ef2df584972f8685e7ad8df0889654c23e9f1584365c9588d44e99adaee6e0061e8c130692a182de
 Size (qonk-0.3.1.tar.gz) = 339374 bytes
 SHA1 (patch-ac) = 8c592743dea66c79f66ed837b6654fe9876c0f1f

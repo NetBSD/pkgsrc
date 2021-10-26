@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:59 nia Exp $
 
-RMD160 (freedoom-0.12.1.zip) = b0b7312ce6824f33ec50a3293ed97f11d33a6017
+BLAKE2s (freedoom-0.12.1.zip) = d4d6009bda7d6512b01fd9b227f688329ef61850d861305453a80312eee926a7
 SHA512 (freedoom-0.12.1.zip) = c1cb0a45976b82d092cb0aaf6958fa920dc7c7e2fdd8dcc8ae9a3b622f648e2b78d1e8022a2d501e33965949f03643a63d1d25f7f03312a8831d430dd1c5af18
 Size (freedoom-0.12.1.zip) = 21996221 bytes

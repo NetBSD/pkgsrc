@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:53 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:27 nia Exp $
 
-RMD160 (svb.shar.Z) = db792b72e96a826099b9097ee5def2fce6830296
+BLAKE2s (svb.shar.Z) = 7ee268b45db23b4b447b830b56c668e03c706bbd9b304b1bad633dd21543d71f
 SHA512 (svb.shar.Z) = fdd3a7beb06bdb6bfedf57e88400a9080ad1a4425196d1118401c4e967b64e8d8f8a046db6d6bbb5837389fffeb9605ad14245335079a9192bb19eb6924ba0d9
 Size (svb.shar.Z) = 17403 bytes
 SHA1 (patch-aa) = 901f65e1b8a4fc634b117064d2dd282dd1fd41a5

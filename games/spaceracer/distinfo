@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:07:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:44:25 nia Exp $
 
-RMD160 (spaceracer-0.2.4.tgz) = 610ed143324d815fc5066eb33c8625d7f4f80b2e
+BLAKE2s (spaceracer-0.2.4.tgz) = 89cfb58897926994453c9b73389a66df6d38734a19f898b8adef2b955a9ca0dc
 SHA512 (spaceracer-0.2.4.tgz) = 920977b805e4e96bd06f5856918c217591f69b384be52c301438cb9a7d5b039298a7420325e6fb545501b346ddf136ff5b6a624782e4c49485554d071c1e92dc
 Size (spaceracer-0.2.4.tgz) = 992616 bytes
 SHA1 (patch-aa) = 777c257d6a13d46bb40a715e7f2033f45427ed28

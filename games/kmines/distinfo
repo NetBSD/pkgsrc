@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:08 nia Exp $
 
-RMD160 (kmines-20.12.3.tar.xz) = 956fab755621403382933bf342fc6800c35a7a1b
+BLAKE2s (kmines-20.12.3.tar.xz) = ffac80e43ec7fbedaa04286ae858a664f5c8dcb4ce78be50dd2c30b43b9f433a
 SHA512 (kmines-20.12.3.tar.xz) = ba714171e9b58a4c997e98c35463dbc679673990d2ec8769b8007cea1164d512273e3d40ef94484c3034be935d5406ab386bb70e4e5739727a615d8c0f9cc22d
 Size (kmines-20.12.3.tar.xz) = 959492 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:00 nia Exp $
 
-RMD160 (freesci-0.3.5.tar.gz) = 2d306102a09cb9b6c0327a88938d39f049dfc0e6
+BLAKE2s (freesci-0.3.5.tar.gz) = f4c196f3cd895f3ef59f1a0e28eedca9bfb6b80738b98e32ac0ece7d8e56102e
 SHA512 (freesci-0.3.5.tar.gz) = 16a76dd18bcab26023a78ec6f08339a65d1811274b5863ba945157e29f198077a92820d081810574c67be8639c62d74ce12404b5bd0417e0542e811d4bb24d19
 Size (freesci-0.3.5.tar.gz) = 1261519 bytes
 SHA1 (patch-aa) = ec90d23cb4830b4903c32118280766bfb3baf38e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:07 nia Exp $
 
-RMD160 (kiriki-20.12.3.tar.xz) = 5cbe4258762103b95a10ddeaf5c6efbefc3ea633
+BLAKE2s (kiriki-20.12.3.tar.xz) = c850354d54e8c135db383c4a2e324c28278a06f0fb8fd64389043d42c8df8e99
 SHA512 (kiriki-20.12.3.tar.xz) = 52615d3de4ba76e3e80450c8ae90dafb9fbd123954c9e703d44167be78ef4b3ce85fc51fe90a811621e5a8beb79ddc95499ce0b5d91003e9726705f9e4a0f9b5
 Size (kiriki-20.12.3.tar.xz) = 378704 bytes

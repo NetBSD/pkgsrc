@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:07:22 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:43:55 nia Exp $
 
-RMD160 (enigma-1.21.tar.gz) = 7942dd2acc1e21cb40200a9ae767a4673c569a2a
+BLAKE2s (enigma-1.21.tar.gz) = 1fa7c6657a29fdfe048e30ea9f29aa3d101f310d22084f20e42265762d7945f0
 SHA512 (enigma-1.21.tar.gz) = 0cca56a193f0f416e0fde02caf2e30b61eef506b6c62e151ff575f5c130f1e2e778d77149007b114ebaeec3a3e793434328555cb5190954a0ae13ed6cee229f0
 Size (enigma-1.21.tar.gz) = 56409951 bytes
 SHA1 (patch-aq) = 53b3f2f69438cc205146e65de1a3712a0c913de9
