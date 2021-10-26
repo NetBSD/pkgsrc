@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:07 nia Exp $
 
-RMD160 (jd-gui-1.4.0.jar) = 55962217b78de61db865d35bdf7bd55655f7a924
+BLAKE2s (jd-gui-1.4.0.jar) = 37c4f826b74f0a16b4fbda7a6275d580e0131ce9343d2874089872835aa70e85
 SHA512 (jd-gui-1.4.0.jar) = 04f59d0ec974009ca5141f7f7229862d8e084f7ecc5685825e2fa10c8539c56f5a81252f3c80e344453c75050b8fa0dc5fd5cb6b4bb9c6b845bac86ed31899e0
 Size (jd-gui-1.4.0.jar) = 8764679 bytes

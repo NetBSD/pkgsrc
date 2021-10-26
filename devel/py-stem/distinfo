@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:06 nia Exp $
 
-RMD160 (stem-1.8.0.tar.gz) = ad16dab1188a8e9b011f2935b8f3e7691f177b90
+BLAKE2s (stem-1.8.0.tar.gz) = 07a1418b271049b9d12babb874c25d33b6029f6a04ed6671580e4b10b3306375
 SHA512 (stem-1.8.0.tar.gz) = aa2033567b79aef960f8321e4c6cbc28105c59d6513ff49a9f12509d8f97b1a2e8a3b04dc28abb07fad59b0f6ba66443b92bbefa0d08b26038bbaf24f7f2846d
 Size (stem-1.8.0.tar.gz) = 2853802 bytes

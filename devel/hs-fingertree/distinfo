@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:56 nia Exp $
 
-RMD160 (fingertree-0.1.4.2.tar.gz) = d755d3ea5f17cb5f9ccd4638316fdda24dba5a84
+BLAKE2s (fingertree-0.1.4.2.tar.gz) = 442c6c55fde603b4240bece4cb68ea522051eda641c8509ec7915367143711ab
 SHA512 (fingertree-0.1.4.2.tar.gz) = 016a772830c0bb27ec15fa99c9dff280c210f288a1f2dc15828224a6a8cdad87ade816191320aa59c876eba6b33cdb47a778572e66a8f3c989984cea2f4970ac
 Size (fingertree-0.1.4.2.tar.gz) = 18978 bytes

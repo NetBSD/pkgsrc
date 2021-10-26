@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:35 nia Exp $
 
-RMD160 (Term-ReadLine-TTYtter-1.4.tar.gz) = be742edbccf9dd02000ae636ebed8afadce4516f
+BLAKE2s (Term-ReadLine-TTYtter-1.4.tar.gz) = a27dec4e5d66f66d0c3b9ac40d2e75c474ba3aec0e4fa684c027997439a09340
 SHA512 (Term-ReadLine-TTYtter-1.4.tar.gz) = 6e49c78a935259e99cabe5c9750fd5e90e205c754955d23c50227bbfe3dcb40d56ccc447d3f516ff34195d3fb411b13ae61a6c32c776231f794d2fca9da8fd1a
 Size (Term-ReadLine-TTYtter-1.4.tar.gz) = 52093 bytes

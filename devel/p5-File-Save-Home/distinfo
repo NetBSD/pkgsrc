@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:37 nia Exp $
 
-RMD160 (File-Save-Home-0.11.tar.gz) = 42ea83ec44e4c48d8a9a7b4946c55b6a4d4c3137
+BLAKE2s (File-Save-Home-0.11.tar.gz) = 4c631789102f4ea55e018f4ce6dfa07c0096333309017a86c3960582fa67b318
 SHA512 (File-Save-Home-0.11.tar.gz) = e2da0e951182341e4a33ae3e0b3b9d9a64d8ffabc4b667410c1926aa4936f370e5e5c0d0dcbffe564e9687976034e09b9cec773a44391613ba3899d2f136a602
 Size (File-Save-Home-0.11.tar.gz) = 21340 bytes

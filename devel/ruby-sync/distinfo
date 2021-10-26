@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:24 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:49 nia Exp $
 
-RMD160 (sync-0.5.0.gem) = 52dceefd53d2382526d354a151c848108a6e5881
+BLAKE2s (sync-0.5.0.gem) = 72d1ac439fc5d307749cf3204e7ea34f7ad750fc1c931a1b10695a2c8bcb38b3
 SHA512 (sync-0.5.0.gem) = 7aa544fa026c5872bf569ec320975ce2d3367cfbbd6e7576835d80670e10452f23353e773cf9a3bdf3b2b753610b0178609fa764c5a152d1186b3fa524e87376
 Size (sync-0.5.0.gem) = 8704 bytes

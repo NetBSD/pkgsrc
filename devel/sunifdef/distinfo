@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:58 nia Exp $
 
-RMD160 (sunifdef-3.1.3.tar.gz) = 8f70096f8045d4240e005f8fcf969b4981f732b6
+BLAKE2s (sunifdef-3.1.3.tar.gz) = 69b09d73f6877c94368e164ebf65d5c5f739db6ad5ac5ce7fa3c4426e7ab583e
 SHA512 (sunifdef-3.1.3.tar.gz) = a41751a77e7bff36cefa0cded66568c62360dc210d2873a746b8e342c7e2e6ceda9358ef58c168ec8a8ba24dab9ea60e675809dc881c9c14379aa88191633299
 Size (sunifdef-3.1.3.tar.gz) = 443142 bytes
 SHA1 (patch-src_args.c) = 4c443ea5e127a41404489b6e79fe38fffd670276

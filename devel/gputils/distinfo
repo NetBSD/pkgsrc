@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:39:42 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:14:48 nia Exp $
 
-RMD160 (gputils-1.5.0.tar.gz) = 0e7f0c3dc388cf7ee8a67dcd2e93a57b9a6e8e57
+BLAKE2s (gputils-1.5.0.tar.gz) = b85113e7e4febd0ae046c96fd6e4f47dff6b477058f127221fc855005d9cd3b9
 SHA512 (gputils-1.5.0.tar.gz) = fc74e92ddfe2c9c7ee272a712a411bf01790358c310afc9a802f503902675fa4717410354bf8791f64da45b63f0b1f562b55fdd7127d3989f4295ebe5f80b645
 Size (gputils-1.5.0.tar.gz) = 13155377 bytes
 SHA1 (patch-doc_html-help_Makefile.in) = a75a8f41410a3247f58a19c75de1a64f213bbc41

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:40:23 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:15:29 nia Exp $
 
-RMD160 (libtecla-1.6.1.tar.gz) = 024f05583dc78bee1a686054799ce32c86890484
+BLAKE2s (libtecla-1.6.1.tar.gz) = eb4bc5ef10493a400f11bce594e8dc03ed76f8cb1c7a6cd2dae98886b1e61f16
 SHA512 (libtecla-1.6.1.tar.gz) = 89d550868c99739b5cfd0ddba45f61d9a8fd1454c7044f29db6cced9cd1de83b895409706a8b85024d6c75678469a4b8b39dd184322d01e1ab6b5faf03c90fc7
 Size (libtecla-1.6.1.tar.gz) = 518995 bytes
 SHA1 (patch-aa) = 11be4b3d36a8bfc3247db1999b0c0546d5994413

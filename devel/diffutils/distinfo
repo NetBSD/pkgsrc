@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:39:27 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:14:33 nia Exp $
 
-RMD160 (diffutils-3.7.tar.xz) = 55c286ed697eb5987eca7abfc33bdab34c3021fb
+BLAKE2s (diffutils-3.7.tar.xz) = 55b70f9a50a544c941a6f5a27c63e9dc71f4dcf43fc06037d0a83ddc6bde2d0b
 SHA512 (diffutils-3.7.tar.xz) = 7b12cf8aea1b9844773748f72272d9c6a38adae9c3c3a8c62048f91fb56c60b76035fa5f51665dceaf2cfbf1d1f4a3efdcc24bf47a5a16ff4350543314b12c9c
 Size (diffutils-3.7.tar.xz) = 1448828 bytes
 SHA1 (patch-po_Makefile.in.in) = 0e7ed6eb85613f272e43a911a35a8b9cfbfb0536

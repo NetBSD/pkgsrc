@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:39:27 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:14:32 nia Exp $
 
-RMD160 (libSystem-0.4.2.tar.gz) = d059436d3d8314e92647f6e4b74fb87eb53fa0df
+BLAKE2s (libSystem-0.4.2.tar.gz) = c5fc13b08e233ee0216dd4dc29d92e14f2cdc0846886aaf8d0cfbfa736694dbd
 SHA512 (libSystem-0.4.2.tar.gz) = 0b67bee0287b5af7ed37342012fa489dcabe06af8d6f393862733b013c2e021c0b990937a14fbf920a69192eb28dcc72eeb469889db2c610c8fba65d419f952c
 Size (libSystem-0.4.2.tar.gz) = 49555 bytes
 SHA1 (patch-doc_Makefile) = 43348660bc1057c2e06f13bb5face9103a64ca30

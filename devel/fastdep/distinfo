@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:39:32 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:14:38 nia Exp $
 
-RMD160 (fastdep-0.16.tar.gz) = b805d3db264e46de9e68cbf3104c874d9fa73ddc
+BLAKE2s (fastdep-0.16.tar.gz) = 407823613da54a601280f80dae2a84a6b8c82ab815e0e54b7d93e1c30a4e4c9d
 SHA512 (fastdep-0.16.tar.gz) = 63cbc97b7e623aecec974a9635b88087c7553fc9d895e11d75d4930176075171dbdfb1ab0767bbfe3198aa21e0ea1ec27f849734f2439101cb6d2fde82bf2a62
 Size (fastdep-0.16.tar.gz) = 70374 bytes
 SHA1 (patch-aa) = 6704d991487d570da3cf475d03f1620febabc3aa

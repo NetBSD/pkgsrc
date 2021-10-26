@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:41:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:33 nia Exp $
 
-RMD160 (ExtUtils-LibBuilder-0.08.tar.gz) = 8d41a16dd88cb03f2149d1e0a07e104bf6e549f0
+BLAKE2s (ExtUtils-LibBuilder-0.08.tar.gz) = 2a580d3dee9adf9e952a2563024effa7ca0ee9b111683f26911d470cf17cc6e8
 SHA512 (ExtUtils-LibBuilder-0.08.tar.gz) = c9cb95ff9ce3d30163e3e6e76adc03e164bddcef1fa58a068f6fc41e4be7289f06712457fba341244e6d37ec5976912920d44ac02ff6c9a2cde368b102e5133e
 Size (ExtUtils-LibBuilder-0.08.tar.gz) = 5986 bytes

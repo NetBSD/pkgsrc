@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:41:48 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:16:56 nia Exp $
 
-RMD160 (Modern-Perl-1.20200211.tar.gz) = c37c0e46879edf996bfdfe856a41ea8eb27bff7a
+BLAKE2s (Modern-Perl-1.20200211.tar.gz) = 8bde5dce50d6be46e6243beb4d808039c7f6d15a4dd59a6a50b609bc48850058
 SHA512 (Modern-Perl-1.20200211.tar.gz) = eb647c1b617ca517dc09a2de7395de3aca19b13e7089214127f86257544e790b5b79d439d0896be88c018f2ece47ca2b853168b65d676c4af034dbcc815619be
 Size (Modern-Perl-1.20200211.tar.gz) = 14856 bytes

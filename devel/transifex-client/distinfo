@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:44:38 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:20:05 nia Exp $
 
-RMD160 (transifex-client-0.13.11.tar.gz) = ed82847de649b85a824d738ac0e2a0ee9ff2b254
+BLAKE2s (transifex-client-0.13.11.tar.gz) = e05c0461d5e3faaf52066704cfbafba8ab318742aa4e779834e8d5bff82b40ae
 SHA512 (transifex-client-0.13.11.tar.gz) = d0a1d3c6c19f57ed8e6afc070954b06639c629ceb08ce7cef9cd64f81df8391f73d0a9c29b218d9c586abc1c443c0c98e45fa0c03b4b9f7884f308735d0ff89d
 Size (transifex-client-0.13.11.tar.gz) = 215288 bytes

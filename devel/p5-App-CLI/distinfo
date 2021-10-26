@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:40:55 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:01 nia Exp $
 
-RMD160 (App-CLI-0.52.tar.gz) = 6e1e1d4a1750a4caa4b531839b6652813b7f0325
+BLAKE2s (App-CLI-0.52.tar.gz) = d8f7b3361bb3cc041fde3cc60fbe17a05880e2ed0062a83dceabf999a4cacc77
 SHA512 (App-CLI-0.52.tar.gz) = 1efa3ef4e4e6315d9c1498bc5b9d11bbe05e22c9bf50414dd6c62f0912fdfb4f832c52144736e34ecb6d592c05d53103bcb13953f37b461272ff06c2bed1c3a2
 Size (App-CLI-0.52.tar.gz) = 15793 bytes

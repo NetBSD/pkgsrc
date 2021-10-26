@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:18:04 nia Exp $
 
-RMD160 (pipestatus-0.6.0.tar.gz) = 587ca90797dcd67a843bc4bc56ba6cbff2e50d15
+BLAKE2s (pipestatus-0.6.0.tar.gz) = 194f778af9be5b2e9b9f14a2bd8abcccf45307f5c2cb61ecc479176556f6f643
 SHA512 (pipestatus-0.6.0.tar.gz) = 7a8b62615a9072000c798d94ebe3554f1441efe113e15f70e96dbff4f508954206fd5bee6922f3817bbdb6e3a706c324da3626828ee9ad4c47005a99dd50b955
 Size (pipestatus-0.6.0.tar.gz) = 6541 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:42:18 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:17:29 nia Exp $
 
-RMD160 (Specio-0.47.tar.gz) = d608e0bded08a45a6778558f11e1807d2c81509a
+BLAKE2s (Specio-0.47.tar.gz) = 775e87277d674f6299f83d2d16e4e94989c7a45883ef9bdac3c564d00e4ef5a4
 SHA512 (Specio-0.47.tar.gz) = 68cdcf22818b27c38ce92b497adae81f27605aa385e9156d51d5e8e63da121d6bf26b7339a7ee3c9408cc6e3731702b008bc4b2e3c8eab67728f959f03682f44
 Size (Specio-0.47.tar.gz) = 108288 bytes

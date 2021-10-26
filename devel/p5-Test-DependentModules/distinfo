@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:39 nia Exp $
 
-RMD160 (Test-DependentModules-0.27.tar.gz) = 8e996774bec9f572b8160d8f1d84a6899352c225
+BLAKE2s (Test-DependentModules-0.27.tar.gz) = 47469551242146125d11ec1594322facf78cd28de92fb4d665b90ac251763716
 SHA512 (Test-DependentModules-0.27.tar.gz) = 3d55006dd186bee3592cc250da1a7c76c85fe9c92859943603d89de0bb26f53f3629750aff744eb8cf55a8521729ce6ddcfa9770e78e7d587ed23e8a267e12a5
 Size (Test-DependentModules-0.27.tar.gz) = 36229 bytes

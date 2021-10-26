@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:52 nia Exp $
 
-RMD160 (base-orphans-0.8.4.tar.gz) = ffc3dc23e6aad53e010be519ef2c489325968f4a
+BLAKE2s (base-orphans-0.8.4.tar.gz) = 2752bb2d5434307e2c61bb56b52e9ed7f00c4c6bf0d96cd1d30e831e34450495
 SHA512 (base-orphans-0.8.4.tar.gz) = ce59bd56c5acc38f3c5c55d619b27684a8cc35c0b14c2dac6a4cfa56d503e25c7a764210a7cb9cef93b0acc02371af0e40d8024b7a48e88a8ebdf406fed206a6
 Size (base-orphans-0.8.4.tar.gz) = 22573 bytes

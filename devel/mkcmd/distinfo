@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:40:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:15:40 nia Exp $
 
-RMD160 (mkcmd-8.14.tgz) = e7e17759c936c35a810d814cf3c442a2fc5271a2
+BLAKE2s (mkcmd-8.14.tgz) = f0946be0f465cac458527614840e311b5208c63d967717e22002641792cd4927
 SHA512 (mkcmd-8.14.tgz) = 5269c7b14fd94de7aacb94d709dfb80de3cc6be298a8d21b246ff2d088cac405cba7f4a645140865795a13e95710b13a132d9f874e345b4585a6eb993811c635
 Size (mkcmd-8.14.tgz) = 295120 bytes
 SHA1 (patch-aa) = f453a4abaaa4a0e4527e507249eb427f1c9ac22c

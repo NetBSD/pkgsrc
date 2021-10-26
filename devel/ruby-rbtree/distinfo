@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:19 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:43 nia Exp $
 
-RMD160 (rbtree-0.4.4.gem) = a1baf2b6f673b3661c0c71e615ebe994271ae65e
+BLAKE2s (rbtree-0.4.4.gem) = daa8bac10a31d8e923c6fabb93671b9e9da0ca044039bcb78aed61992d5a7402
 SHA512 (rbtree-0.4.4.gem) = 4cfdb6c0b98ea33baa82da4099d5ba25f1cb64825c183f9f881ed49e7ab7abcd8672d50ecf28b63b9f05b0e0452c12a7696bed4f130395d59c2e059cd61d8ba7
 Size (rbtree-0.4.4.gem) = 30208 bytes

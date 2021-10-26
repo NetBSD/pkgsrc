@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:05 nia Exp $
 
-RMD160 (setuptools_scm_git_archive-1.1.tar.gz) = 7e205e075ae4e78d70ca266ba8898be04018ab23
+BLAKE2s (setuptools_scm_git_archive-1.1.tar.gz) = 955150adca707fe059dfd39e8a5bdf511fbd87cb875cf71761a2838adc77b948
 SHA512 (setuptools_scm_git_archive-1.1.tar.gz) = 948b6f950b358f375c60bf44ce6a464238d0d91d60c44677e708ec06f91a04e3d56d60a439384ff06eee56b5e408d76f6a886ddd8b95c2978ccb03ae27924cd0
 Size (setuptools_scm_git_archive-1.1.tar.gz) = 3050 bytes

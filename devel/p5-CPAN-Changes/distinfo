@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:06 nia Exp $
 
-RMD160 (CPAN-Changes-0.400002.tar.gz) = cff5a90408810fe9926ed767ab8f5d752b017da9
+BLAKE2s (CPAN-Changes-0.400002.tar.gz) = 7d0daf1354917abae5e951c6491f682e62ad9213a2311a8cd3e37b50bf4b0aad
 SHA512 (CPAN-Changes-0.400002.tar.gz) = d359073d9d5ed2126835d4895c1ee5288cc09e72202ba77441bb25cf13e9cd0f16d4040b7e2cf1785efd6e8ccbe7908415fb4fefeebe9c0548d838d2ac850dfb
 Size (CPAN-Changes-0.400002.tar.gz) = 21361 bytes

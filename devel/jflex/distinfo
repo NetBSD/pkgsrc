@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:07 nia Exp $
 
-RMD160 (jflex-1.6.0.tar.gz) = f01de346bf18c35c273de6f2ff7d1110a7398bc3
+BLAKE2s (jflex-1.6.0.tar.gz) = ce25b6b67230372b01ce3e12700e4860c4a9606a0af675916cb09c5e9e35a21a
 SHA512 (jflex-1.6.0.tar.gz) = 16ce4a89f75ce5f3da02433ff66d39ed4db567b4cf7469997dd2617b82e52d589bb17ec3a2f36b4d00a62233e48820bc2e043dcc9ae3c01f1eeca323c0166eba
 Size (jflex-1.6.0.tar.gz) = 3035885 bytes

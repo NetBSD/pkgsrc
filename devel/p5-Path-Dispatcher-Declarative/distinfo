@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:17 nia Exp $
 
-RMD160 (Path-Dispatcher-Declarative-0.03.tar.gz) = 916479fd2f26e2e19d21ae2797e132288b59a2cc
+BLAKE2s (Path-Dispatcher-Declarative-0.03.tar.gz) = b63f012715e93c21ae37c10d34b6ea383229a500ecbfec1665d4562c9e29e636
 SHA512 (Path-Dispatcher-Declarative-0.03.tar.gz) = e05d444ae331137f7b999cb23101f332a79bf5865c4eb30c59d94bba2ef7933cffaf50b1dc961f986db775f60843484c47a4553aba6ffd5508103ac8e493a239
 Size (Path-Dispatcher-Declarative-0.03.tar.gz) = 24917 bytes

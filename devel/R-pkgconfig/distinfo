@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:06 nia Exp $
 
-RMD160 (R/pkgconfig_2.0.3.tar.gz) = c4492fa0b76b4ff1375eb714c43a41d84ec844f0
+BLAKE2s (R/pkgconfig_2.0.3.tar.gz) = de8628ed9cbf0907e7a0b6bb525a74e6fd278c8eb0cf8b4d63fe8b7936cec5a2
 SHA512 (R/pkgconfig_2.0.3.tar.gz) = bfc5d0bf707ed6d13348d9c01f9470428fc2f020e72d0122a3356548bbebe4d8bd2b288dabd2ec90069935622b2df842f57a8fe9b67b51c01e7c7029921fcfb9
 Size (R/pkgconfig_2.0.3.tar.gz) = 6080 bytes

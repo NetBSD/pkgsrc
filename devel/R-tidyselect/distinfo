@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:09 nia Exp $
 
-RMD160 (R/tidyselect_1.1.1.tar.gz) = f874a468e89ac2ab261344e79f28fe53867ae82e
+BLAKE2s (R/tidyselect_1.1.1.tar.gz) = 2c524a0afd1663e94bf2e63b911084df319f8ade738ea58b8890a4cad2aaa24e
 SHA512 (R/tidyselect_1.1.1.tar.gz) = 24ffe050938eb79c4ad4fa92d9f29a33b8f21d52b250702212d0c291e95bfddf877c29e7b2ac3d69a9ac3681c2b222358a2f284f4632c6a97a3b2bfec3b7c6a7
 Size (R/tidyselect_1.1.1.tar.gz) = 92088 bytes

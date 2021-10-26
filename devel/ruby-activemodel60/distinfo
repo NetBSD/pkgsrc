@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:44:01 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:19:24 nia Exp $
 
-RMD160 (activemodel-6.0.4.1.gem) = 167bda378d53d9c257e845e88fd198aa98260e1b
+BLAKE2s (activemodel-6.0.4.1.gem) = 002006c23b009214349ff48b364ada3119a46d6792f8264627f0a44b70ceff06
 SHA512 (activemodel-6.0.4.1.gem) = 8502cf1aac01f9dc8d32a3f851b43e793e29a5c5769641eb05686c997c4d336985dd7f9606db75cbf0ab1f0fc27c29e2d6e39265a02d84d86990d8c038218812
 Size (activemodel-6.0.4.1.gem) = 58880 bytes

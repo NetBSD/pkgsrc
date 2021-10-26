@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:42:06 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:17:15 nia Exp $
 
-RMD160 (Parallel-ForkManager-2.02.tar.gz) = 3cda3e02f8d15ee1e6768db66f6732f736e04d3a
+BLAKE2s (Parallel-ForkManager-2.02.tar.gz) = 8da3903e57dbbf1a4136fc9474fb89a8927309adcc61a1654bb97eab37fe22c4
 SHA512 (Parallel-ForkManager-2.02.tar.gz) = 2b390ec8f252e7bf2b6be8d602b231b1fd347bc5256bf7f16a6d56f67256938f3d96b7a28c92c662d8b91441b7fa4cb5922c655e64a7a4a9332eb58f19b6bcfb
 Size (Parallel-ForkManager-2.02.tar.gz) = 33457 bytes

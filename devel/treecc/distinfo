@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:44:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:20:05 nia Exp $
 
-RMD160 (treecc-0.3.10.tar.gz) = b84de684189651a0ce0c0e32fed1dc2e6c58b95c
+BLAKE2s (treecc-0.3.10.tar.gz) = dc1f79b78659f4b82f73d6653791711fc8d90f47bf227282d3b281a137427d86
 SHA512 (treecc-0.3.10.tar.gz) = 426add1a96913a169a0f03a6e3247a8b48c9073335cf967ef05d4d4188fbe3b8ebc837b38b9a4de94ccdb13685ace47a91b185c75a845cf2670e929802774b73
 Size (treecc-0.3.10.tar.gz) = 375762 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:35 nia Exp $
 
-RMD160 (Term-ReadPassword-0.11.tar.gz) = 48a1164958db3b4bb869f3fd1ebf67a5327e0819
+BLAKE2s (Term-ReadPassword-0.11.tar.gz) = c81c608f86125e3154ffd1bce9f8325cffdc917226b73bfceb96ad52c0531ec5
 SHA512 (Term-ReadPassword-0.11.tar.gz) = 5aa5f858a67cbfba4daa231501c0e3009ce9df23bfd3448dcc23b6ff4dced31dcc1702bb244dd7fde31e3c51684933c58af3b6426261ba7614910f330f6f7de5
 Size (Term-ReadPassword-0.11.tar.gz) = 7056 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:17 nia Exp $
 
-RMD160 (Config-INI-Reader-Ordered-0.021.tar.gz) = 67fe0bac778208d6e925eaa795b366d4e7bcb662
+BLAKE2s (Config-INI-Reader-Ordered-0.021.tar.gz) = 70131a1686aa6c22c35f873f8cceae1aee68c02891e04648fc4b64d72cb6af00
 SHA512 (Config-INI-Reader-Ordered-0.021.tar.gz) = b03fd1c94634b23c1f174c92fb6603bd8e74a9dc4833df44cefa2308c2d7acfed99eb1705ab4098772f797d669c8547719f1b55cd3bd680894e60af7c1d39063
 Size (Config-INI-Reader-Ordered-0.021.tar.gz) = 15903 bytes

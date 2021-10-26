@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 13:40:55 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:16:02 nia Exp $
 
-RMD160 (App-Cmd-0.334.tar.gz) = 3523ecabd76b02034727f4de0470adb46a355ca6
+BLAKE2s (App-Cmd-0.334.tar.gz) = de49a57967dac208cb15b2b6e9ccef9c8204ecc4efaaddde13ff158636c488bf
 SHA512 (App-Cmd-0.334.tar.gz) = bc45141475cc389afea4220c5197559be0e379ee7c9668e52fae9864c5747f4bd487edf44abc25a21ab5b428689b93ed7607e4fe8a8844faab248623b027288d
 Size (App-Cmd-0.334.tar.gz) = 50175 bytes

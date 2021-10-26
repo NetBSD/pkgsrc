@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:06 nia Exp $
 
-RMD160 (MooseX-Object-Pluggable-0.0014.tar.gz) = f02f61440f8eca90b128b97394e4a2237d9dada8
+BLAKE2s (MooseX-Object-Pluggable-0.0014.tar.gz) = 5007b76a77e9b8c89e4c474e966dd915f415871fe71e9e869914d1156bffa7c2
 SHA512 (MooseX-Object-Pluggable-0.0014.tar.gz) = 0eab6798519fdf5f0b6c698112af62db9d3dade00d4e28d622f4dbabdb0d3f099ae1427d7a5913c8c6db25fc547c2b949672af1f8a58fdff2546b795814c36e5
 Size (MooseX-Object-Pluggable-0.0014.tar.gz) = 32080 bytes

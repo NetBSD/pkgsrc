@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:43:26 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:18:44 nia Exp $
 
-RMD160 (pexpect-4.8.0.tar.gz) = c9f6299e57e4c9b29c57b16ceaf0d3303da91683
+BLAKE2s (pexpect-4.8.0.tar.gz) = af06a742c94a2220e3c6f5c6ea35ad59e2b35825ac40539bbf7409e466a85c0f
 SHA512 (pexpect-4.8.0.tar.gz) = 7447ae2d1e13be422c894a8fd51c5aaa788e37ea7f0c798c88b77afd401fb3631400a637077ccbb83c2e3876b0d0c5e1dbd5fdc9d3739d785b4d5ad7c0192580
 Size (pexpect-4.8.0.tar.gz) = 157037 bytes

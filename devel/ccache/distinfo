@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2021/10/07 13:39:17 nia Exp $
+$NetBSD: distinfo,v 1.51 2021/10/26 10:14:23 nia Exp $
 
-RMD160 (ccache-3.7.12.tar.gz) = 0446827ee950b259221d6f4286b9b97ec57f7c59
+BLAKE2s (ccache-3.7.12.tar.gz) = 81ee3b98600c80c0531f7a46d2542cb7f0446b08a6db445ef250c7cf4274927a
 SHA512 (ccache-3.7.12.tar.gz) = 1de2dcb6568486d82b589e35f46e7f24306821545617cb9e991c1122b257d2872c1f342fd941f98777ebfd5b0b0babc45a33d824925759478f1f67370db3dd3c
 Size (ccache-3.7.12.tar.gz) = 506948 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:23 nia Exp $
 
-RMD160 (pythondialog-3.5.2.tar.gz) = 055d749cc3ffb72c228076a9df64515d2c03d946
+BLAKE2s (pythondialog-3.5.2.tar.gz) = 2c6c3845d8ad22d46adfb6470e1e8b4c983f6de4a5cc80b1f90d78edd1a64a73
 SHA512 (pythondialog-3.5.2.tar.gz) = 6ca7d9dfa87492d59bbf321b1f3dc0146084e42a8efc79377b16c2b80eb5485b23ae4a2b35d7401c9915883d2ad3e34e80e0e6ad8b44f04a1bdad0d4eabb95fd
 Size (pythondialog-3.5.2.tar.gz) = 1510472 bytes

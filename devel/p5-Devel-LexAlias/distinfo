@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:27 nia Exp $
 
-RMD160 (Devel-LexAlias-0.05.tar.gz) = d1c52eab4c44d49f3d73c18c43276687872eaf98
+BLAKE2s (Devel-LexAlias-0.05.tar.gz) = ec845eb81fc729fe273c924ea7e39ebcac8c0de47029858c41975b7ef9938ab7
 SHA512 (Devel-LexAlias-0.05.tar.gz) = 31f4e12d6d756790fba457f2a927d8dbf4c873033b1c83becc5c3668451041cb3ccea8c132529d35b2fd553dd34da34202ab97d25dc1c564024c68f9dd7a7367
 Size (Devel-LexAlias-0.05.tar.gz) = 3123 bytes

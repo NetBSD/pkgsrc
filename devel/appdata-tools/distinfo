@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:15 nia Exp $
 
-RMD160 (appdata_tools-0.1.7.tar.gz) = fedd71536613cbb4e7173ea1c93d4fd0b0e61c68
+BLAKE2s (appdata_tools-0.1.7.tar.gz) = cef844385911119b7fb270dee288dafb7dd33f4f186ad73397b2e1b984df0964
 SHA512 (appdata_tools-0.1.7.tar.gz) = d0e32a2028f54482bd9715627bbc2050cfecfaea4be37fc3eeef273cdf989aa270a55112cbc81406dadedea87ae3521d26acf0011834d0055a473083147dcdc7
 Size (appdata_tools-0.1.7.tar.gz) = 124580 bytes

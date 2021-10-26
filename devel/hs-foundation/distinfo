@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:56 nia Exp $
 
-RMD160 (foundation-0.0.26.tar.gz) = 3545c9a261e8570b0d41b809a6b4a53afe195382
+BLAKE2s (foundation-0.0.26.tar.gz) = 03913946b29d7b1606b57ee657eed4018e83cc6cc94c3e7ca145e1f6f344f418
 SHA512 (foundation-0.0.26.tar.gz) = c85b4fc08ee92de8c7bd6e2b469762e7f101c52eebedca17ceb4073048781d309e6e62dff4d248df79f8237e293f5b38c73c94c14635ba2992bda52510e85eac
 Size (foundation-0.0.26.tar.gz) = 120483 bytes
 SHA1 (patch-Foundation_Foreign_MemoryMap_Posix.hsc) = 4eff66816573ad8b606229635194ecbd86aa44b4

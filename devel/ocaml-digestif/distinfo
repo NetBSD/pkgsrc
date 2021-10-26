@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:48 nia Exp $
 
-RMD160 (digestif-0.7.2.tar.gz) = 9610094203963f266d9574467d5791514acaf469
+BLAKE2s (digestif-0.7.2.tar.gz) = bc3638bea03346c785eade65fcd7a829873521a68a8a3c71afd84ad7c1373e06
 SHA512 (digestif-0.7.2.tar.gz) = 2d7b8e94e36cea214b35769e190b975bdd14d9b294652e8e78444e7c38380924d67f354f42aa85def50aac736773c6e8c9c874d500ab1eb8758ee472cc3755ad
 Size (digestif-0.7.2.tar.gz) = 116445 bytes

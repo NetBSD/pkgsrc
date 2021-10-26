@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:50 nia Exp $
 
-RMD160 (List-MoreUtils-XS-0.430.tar.gz) = 3357a6843c5450866c4ce497ed1e5112bfcf93b7
+BLAKE2s (List-MoreUtils-XS-0.430.tar.gz) = f632a9c7024a1487d798c17cd0581bbb4320c68d14053915ab4c3a43b8d43c91
 SHA512 (List-MoreUtils-XS-0.430.tar.gz) = 98260b81f03a425bf8c2e0b63bc3a8d360a0aa2e198b2b7faaeaa48684936183018afdd1e6a04bd7e99a7e728d809709c6206ea578dfe7d8d40c5a4e3e4bb405
 Size (List-MoreUtils-XS-0.430.tar.gz) = 163827 bytes

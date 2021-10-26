@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:26 nia Exp $
 
-RMD160 (commit-patch-2.5.2.tar.gz) = d60beb2c4edbbbbd41bbd12bfe5ad4df316d7eb1
+BLAKE2s (commit-patch-2.5.2.tar.gz) = 2dce859c1a7d108c6e22f2f8b03feac256504443b7096a0dbe04a6bbaa721064
 SHA512 (commit-patch-2.5.2.tar.gz) = ccaf680ff4b6e2512aef1db406a1239dde8404446d7c5f2c4cffaa5b080e2110315f1e76f59cae9ee1707ac1be22f67ec89644335042538e7fe1c24cffa7e4d3
 Size (commit-patch-2.5.2.tar.gz) = 86745 bytes
 SHA1 (patch-Makefile) = d8e0b5dd2b71ab6d59c57a3ad628265a3f2b67d7

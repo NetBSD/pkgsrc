@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:40:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:15:42 nia Exp $
 
-RMD160 (nana-2.4.tar.gz) = 135a4025fc1b24ae5d1613970490eae053e70292
+BLAKE2s (nana-2.4.tar.gz) = 302c728ff7300fc4aa6e242afc944a55cc35c0bfa5e77d3e31df7584378914b7
 SHA512 (nana-2.4.tar.gz) = d2b350fedb67bf89599a9ed299358ee5ffbcad85f31acdcf1f6fd2c5f12eca096ba95d005c3691875278045cf884be1f7818bd21b8c36c77be666357594dc4f9
 Size (nana-2.4.tar.gz) = 345014 bytes
 SHA1 (patch-aa) = c6b8b528623c51a566275b4a08cd9952855b50d2

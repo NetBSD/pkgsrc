@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:26 nia Exp $
 
-RMD160 (Scalar-Util-Refcount-1.0.2.tar.gz) = f8cdfce3ae4030aa18b711cfad2cd1ac4f2a9849
+BLAKE2s (Scalar-Util-Refcount-1.0.2.tar.gz) = bfe87dad98a12110a00d82bc45125ca916b0f63aa36851e13b614d90a5fdb858
 SHA512 (Scalar-Util-Refcount-1.0.2.tar.gz) = 1597712f43b48851ab82698db67104647c594fd285178f416ca98123480da1d537c7c1d17782f857ef785d4af0d16936bb69e93f177ed778753cfa7c6329b363
 Size (Scalar-Util-Refcount-1.0.2.tar.gz) = 18571 bytes

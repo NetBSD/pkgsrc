@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:42:00 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:17:09 nia Exp $
 
-RMD160 (MooseX-Types-Structured-0.36.tar.gz) = 2336a886951f5e7787dd9ce469b4ea36e090d49d
+BLAKE2s (MooseX-Types-Structured-0.36.tar.gz) = c7501156f37b99f7e4c65f2f976a3d424782e4dfd2da87725a5c44914d48c26c
 SHA512 (MooseX-Types-Structured-0.36.tar.gz) = 02d5a7ec823549a5a1422f67aa2099358870e36f0b8e9244776ce28a16708639f6d63e88cc02a7b301c3663fc4dfa4c3732049383c21a1f86f3eb68cb9ace978
 Size (MooseX-Types-Structured-0.36.tar.gz) = 61348 bytes

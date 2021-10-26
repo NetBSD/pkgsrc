@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:39:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:14:57 nia Exp $
 
-RMD160 (hashable-1.3.1.0.tar.gz) = b7b46b776979fccd654bf0bb9514b8103ba28bbf
+BLAKE2s (hashable-1.3.1.0.tar.gz) = 8e33caaeea3ce9d6da6f466e67ff14e68a67e39cd08bb957f742fd1cc64b18a7
 SHA512 (hashable-1.3.1.0.tar.gz) = dc74815d9c4cbf6b5562d04843f5234d7378265f2796c8f9980ecc639a03e01c8d4a0a27ed6bb31207df537d7774d910b9fec216a8832377e09e827aabf58751
 Size (hashable-1.3.1.0.tar.gz) = 21424 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:43:01 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:18:16 nia Exp $
 
-RMD160 (cachetools-4.2.4.tar.gz) = 89f710995c1f1073766da3687661e48c4cf7ef32
+BLAKE2s (cachetools-4.2.4.tar.gz) = fb8c61c2c6450211f2afa2f8044207de3b54503e483f18b899e75ab4ac2dfaf1
 SHA512 (cachetools-4.2.4.tar.gz) = 29a6bb3a064e5603cd3e3882d8e5a6a6ef95ba3029716692c9a82d7186a0befcfb8ed4a0ee3ecb591fdff93a46836d5b25acca7ba5eab1ba837e86404aea8fcf
 Size (cachetools-4.2.4.tar.gz) = 25487 bytes

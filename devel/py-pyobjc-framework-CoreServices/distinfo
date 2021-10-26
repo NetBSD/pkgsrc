@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:51 nia Exp $
 
-RMD160 (pyobjc-framework-CoreServices-6.2.2.tar.gz) = 8728d4bafda9102aacaa1cb89e4c31b85b310b04
+BLAKE2s (pyobjc-framework-CoreServices-6.2.2.tar.gz) = 4e7e5a9e4dfe5d9abaee2592c01656c2e030d1c64c56fb54f1ac2bad3148fa2b
 SHA512 (pyobjc-framework-CoreServices-6.2.2.tar.gz) = f1dc20a29e506187ba8583c09bee87da7e20611d700d23607ad274410f75755dd28aa8dc38266a3b86c13c973849214a1d8f19736b5bfd730fe1a36d111bcd7f
 Size (pyobjc-framework-CoreServices-6.2.2.tar.gz) = 437860 bytes

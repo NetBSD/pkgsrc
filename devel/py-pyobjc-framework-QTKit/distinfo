@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:43:37 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:18:56 nia Exp $
 
-RMD160 (pyobjc-framework-QTKit-6.2.2.tar.gz) = 485fe2af256e4f510e3ec27faf6b47050a1bac6f
+BLAKE2s (pyobjc-framework-QTKit-6.2.2.tar.gz) = 7930a8cb93c22ae039dfbf11896789412d045dc0eed3d315fa5d2329d1f5bd02
 SHA512 (pyobjc-framework-QTKit-6.2.2.tar.gz) = ab770d0d13475868ea9fd9f10ae1dc602102d396ffbab3c0d1e0a4665b5660a72ad13dcce23d2db3114033a288f8a134d83fecc330acec5c6768721a0923e465
 Size (pyobjc-framework-QTKit-6.2.2.tar.gz) = 109479 bytes

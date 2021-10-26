@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:14 nia Exp $
 
-RMD160 (Package-Generator-1.106.tar.gz) = a7bef85fb9da75ad7f3a73758a7f3bd5692b20d0
+BLAKE2s (Package-Generator-1.106.tar.gz) = 3473f132ee314975e0053821493beac5d64b9624b7d74498286ab7eb20b9ad40
 SHA512 (Package-Generator-1.106.tar.gz) = 113e3f0c2238193efabea5e02a3f0cffaafb345e348e2a8dd976932f63dc06cf278cecfadb174b1cee0ed9a69ce2a3beafef2d5fb0f8ea7c828e97123e87bdb8
 Size (Package-Generator-1.106.tar.gz) = 17042 bytes

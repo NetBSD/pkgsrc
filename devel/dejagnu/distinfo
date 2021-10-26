@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:39:26 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:14:32 nia Exp $
 
-RMD160 (dejagnu-1.6.2.tar.gz) = 4afec31883a6d6d9d36f0bda404a9f636fe3c30a
+BLAKE2s (dejagnu-1.6.2.tar.gz) = 6eea3a16011355a20f9f4c908ba1120866b150ec449b391879856f8b98959006
 SHA512 (dejagnu-1.6.2.tar.gz) = ae527ce245871d49b84773d0d14b1ea6b2316c88097eeb84091a3aa885ff007eeaa1cd9c5b002d94a956d218451079b5e170561ffa43a291d9d82283aa834042
 Size (dejagnu-1.6.2.tar.gz) = 525879 bytes

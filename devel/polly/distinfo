@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:42:51 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:18:05 nia Exp $
 
-RMD160 (polly-12.0.1.src.tar.xz) = a0aecf805194bcbb3652398b386d7d2a0d3d9f57
+BLAKE2s (polly-12.0.1.src.tar.xz) = ee5471cd30e8d35505dbc01d77c12fb1649cff76c6fd244608a7937c5155b105
 SHA512 (polly-12.0.1.src.tar.xz) = 91fa3c540798faa0c1b1315798a49cbb5df25eb435186c2913845704d96e2fdd9190925670e99d4cc2be4f30cfa3bafe58d45f7a4f02655e0b1fc7d5c2537847
 Size (polly-12.0.1.src.tar.xz) = 9034612 bytes
 SHA1 (patch-CMakeLists.txt) = 8138e11f858f23e0069c8fa0c07eff2b7aaf8c43

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:56 nia Exp $
 
-RMD160 (ocaml-spawn/spawn-0.13.0.tar.gz) = 77f6f55288f821f0b2380435389fd1c8a908e63c
+BLAKE2s (ocaml-spawn/spawn-0.13.0.tar.gz) = c8fdf06a18eff9d88ea68ff6c04c616f90ce903768f09f99154a8bb5f9c01721
 SHA512 (ocaml-spawn/spawn-0.13.0.tar.gz) = 897ffec4a4c15c819e4429f6b71427005d6b40df6039e6c7f0b1ca4b4e35b24304dc56e27ce88bd81f5b61f936444f5d6e80ea14483991067aa6ee072f4a90dc
 Size (ocaml-spawn/spawn-0.13.0.tar.gz) = 13048 bytes

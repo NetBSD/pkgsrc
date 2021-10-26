@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:37 nia Exp $
 
-RMD160 (gadfly-1.0.0.tar.gz) = 8040e6666812756a7b376c576dd6fe1b34c98ad9
+BLAKE2s (gadfly-1.0.0.tar.gz) = e8aa962a9fa0edd9c872757f15606295d724e30d8556eca42898019633c10b28
 SHA512 (gadfly-1.0.0.tar.gz) = 0bb86ece782871e792618ee284949570c7621851678585949c6b3782af59dea63570ce0f55cb42a4fec9ccaf788ef0f4d4bf22915c55f7f3064dfa8c62dfc906
 Size (gadfly-1.0.0.tar.gz) = 309201 bytes

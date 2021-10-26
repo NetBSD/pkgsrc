@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:44:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:26 nia Exp $
 
-RMD160 (amstd-2.0.0.tar.gz) = e90e620f381be065e5fc127b814adfbdab3eb5cf
+BLAKE2s (amstd-2.0.0.tar.gz) = e6da7493aec4ea6c5d5de80199e7a7f5d0d4ab8dcdb4fdb10b73de8256c07e65
 SHA512 (amstd-2.0.0.tar.gz) = 2d18f22176adb4b73cb79b7e280def0149bd05ce9c27f348e6cabb4aff03e30399f728dfa0d7805779c3e660f372e860af0fee4e30c1c68de1b055c794ab1ebc
 Size (amstd-2.0.0.tar.gz) = 20057 bytes

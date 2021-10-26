@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:21 nia Exp $
 
-RMD160 (Data-Page-Pageset-1.02.tar.gz) = e695d90bbc613c2f69febf73c91d44fc2e0f8211
+BLAKE2s (Data-Page-Pageset-1.02.tar.gz) = 56e35fd2994883d5a54fc7e95b8975b42e3b2a45aa8a18b7a30cf62abf493164
 SHA512 (Data-Page-Pageset-1.02.tar.gz) = d6676511e6b9cb0c110d6f535120e04f110e53a18bf9ce65e6f346d616d9020cea6f7d9514e264fee0220ef100a1bce2e863d276fbaaa113ba8f920cf5bd2610
 Size (Data-Page-Pageset-1.02.tar.gz) = 4220 bytes

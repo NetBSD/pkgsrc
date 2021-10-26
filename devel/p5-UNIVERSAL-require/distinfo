@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:42:40 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:17:53 nia Exp $
 
-RMD160 (UNIVERSAL-require-0.19.tar.gz) = 7788dec949ccd35334db63947d3610ed4f03ef10
+BLAKE2s (UNIVERSAL-require-0.19.tar.gz) = 8a4683aee2f1aec2c1a4d38593ebfc7588502428842226abeb11dcc329af6c39
 SHA512 (UNIVERSAL-require-0.19.tar.gz) = 065a361a7605aa2827ad14eeecea23a2238df2cc477c73ea2facd475953000d0c6f8773db886333295501e6d2602dd08e2f9a81d77b4f3a4c3926dcc57358cb2
 Size (UNIVERSAL-require-0.19.tar.gz) = 6283 bytes

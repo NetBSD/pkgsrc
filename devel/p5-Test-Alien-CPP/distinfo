@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:36 nia Exp $
 
-RMD160 (Test-Alien-CPP-1.02.tar.gz) = 41b2bdf6089b6b1da46d8dfe91983c57d40bfb24
+BLAKE2s (Test-Alien-CPP-1.02.tar.gz) = 0c6d30462dfb4fa3587ad10d8a53a8d9eb81b4e38ddfc4187eb26a21ebee3144
 SHA512 (Test-Alien-CPP-1.02.tar.gz) = bf39c7618025f19af9cb10dfd87cb4f87ff30e611a0ec960df4aee717c999d9004ab3cd58705e90fde58647e05ae3a614cc4322f1bc200b1fd0be28a43954c24
 Size (Test-Alien-CPP-1.02.tar.gz) = 15862 bytes

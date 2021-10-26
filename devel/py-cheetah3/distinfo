@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:17 nia Exp $
 
-RMD160 (Cheetah3-3.2.6.tar.gz) = 924612e566e564daa9afbbd218c9983d3207a98a
+BLAKE2s (Cheetah3-3.2.6.tar.gz) = d8f873fe18eab176911f7658f29cecf6232a7f22c0aa6318cdb8ff3d0362f9ce
 SHA512 (Cheetah3-3.2.6.tar.gz) = e3422147b3d476676ecfd4ed0bba77c80b008869055748ea50fe83a79b462bb15a20239e6803403e90ea6a0a090697a7fe6ecaae8bfd8e4832f3f0c8da69200d
 Size (Cheetah3-3.2.6.tar.gz) = 295564 bytes

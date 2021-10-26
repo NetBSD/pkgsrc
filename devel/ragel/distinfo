@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:43:58 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:19:20 nia Exp $
 
-RMD160 (ragel-6.10.tar.gz) = e37a0f83d3acbb77c7d7ea115f2faf0f2478724b
+BLAKE2s (ragel-6.10.tar.gz) = 9a813e23a3e34b23969076177973858d5383b138092d49a5de41947b76fdfb34
 SHA512 (ragel-6.10.tar.gz) = 6c1fe4f6fa8546ae28b92ccfbae94355ff0d3cea346b9ae8ce4cf6c2bdbeb823e0ccd355332643ea72d3befd533a8b3030ddbf82be7ffa811c2c58cbb01aaa38
 Size (ragel-6.10.tar.gz) = 1232993 bytes
 SHA1 (patch-aapl_bstcommon.h) = 540e74d2ff3ace21d3fb0cd817027cf18837bc98

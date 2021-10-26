@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.185 2021/10/07 13:39:19 nia Exp $
+$NetBSD: distinfo,v 1.186 2021/10/26 10:14:25 nia Exp $
 
-RMD160 (cmake-3.21.3.tar.gz) = 45bde8ff6281e62efbdc8189ebf2bfad077e3126
+BLAKE2s (cmake-3.21.3.tar.gz) = b92ab7fd3aef30422391a58bb510210e995c3d25d5688f4766c67f3682710aca
 SHA512 (cmake-3.21.3.tar.gz) = 0571b78443906c5ad51fb0fafbd32d565caf628cc150b1190802cb819e8497c108ea6b7ecaa03133df2dbbceb730696d24b4df38468c92088c769ce4076d9e9f
 Size (cmake-3.21.3.tar.gz) = 9630442 bytes
 SHA1 (patch-CMakeLists.txt) = fabdb0590f4b97c34c2242749ae3b6af18aefc0a

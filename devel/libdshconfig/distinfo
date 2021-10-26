@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:18 nia Exp $
 
-RMD160 (libdshconfig-0.20.13.tar.gz) = c1a625ea391895fc7a7bcb7161b5ad0fede1e2a2
+BLAKE2s (libdshconfig-0.20.13.tar.gz) = cf40614cf8a54d43089d94caa72ddd793cce9153c66f35b6e356d5c77dcfcafd
 SHA512 (libdshconfig-0.20.13.tar.gz) = 04f3580bf1e1dbac130d350eb4c6e86a980f2ae8636a206821813ed0e14db07dc7ea720ebb3816455a4a939294caa2f2247b7348ecea72769a6f05bee0dbf19a
 Size (libdshconfig-0.20.13.tar.gz) = 323720 bytes

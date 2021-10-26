@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:42:04 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:17:13 nia Exp $
 
-RMD160 (PPI-1.270.tar.gz) = 539c7a6bdf02430a99832c41e864af6d0b4a8783
+BLAKE2s (PPI-1.270.tar.gz) = 2b48bf8a98653ba3f289b2ed36709f528a9ec0e7f8ce1d875243bb258a7c8e85
 SHA512 (PPI-1.270.tar.gz) = d138db281c69fc8bbf53174df720e97633e7fd35bc77a24ceeb164277a69a5aff2629a66e7d898d62db270333c87f998eaac23a9eab7ede76dcfd43d2c546858
 Size (PPI-1.270.tar.gz) = 251100 bytes

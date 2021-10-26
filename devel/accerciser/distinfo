@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:39:06 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:14:12 nia Exp $
 
-RMD160 (accerciser-3.38.0.tar.xz) = b5a459dea08ea54f3850d46e5e644ff772194544
+BLAKE2s (accerciser-3.38.0.tar.xz) = 6af0ee6cd3ef3b6c4042123857ebb87ce95b5115df4dff3424b3280eaa39cf75
 SHA512 (accerciser-3.38.0.tar.xz) = 5740e4acfb00f5842dac8045ca9f10c85cf2ae164f3e0caf63ec303ff104002ace6de591a9b6516c4052ec0da8e48b394647f018b6c8b68a6c5ff77c4fff2904
 Size (accerciser-3.38.0.tar.xz) = 2006380 bytes

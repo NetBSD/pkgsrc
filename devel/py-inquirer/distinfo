@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:34 nia Exp $
 
-RMD160 (PyInquirer-1.0.3.tar.gz) = 068e8fbb09309408e80931dfff66b2b605f94e83
+BLAKE2s (PyInquirer-1.0.3.tar.gz) = 7ff03537021b2dbf97c69a9fdfb91d7b983e99aa36e930ea03efe25dfbfff516
 SHA512 (PyInquirer-1.0.3.tar.gz) = b65176a49021669a580f45b176abeed2820a29ef5634347bb31b4fbe386fcbfcca608ae2ef7eca4102fe4c91e2f45d430975326eb4f9f76474266285fe374a97
 Size (PyInquirer-1.0.3.tar.gz) = 27980 bytes
 SHA1 (patch-requirements.txt) = 870281372d4d3d86a20b2c3dad6caff432f2b4d8

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:44:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:25 nia Exp $
 
-RMD160 (activesupport-6.1.4.1.gem) = ede0859be6d34260e5954b951410ddfcc890b4b8
+BLAKE2s (activesupport-6.1.4.1.gem) = ebb87a42c0a767ea4c237da830dcaef1f05758876f3bf22415dca41bcdbf2041
 SHA512 (activesupport-6.1.4.1.gem) = f3bd8dcfaafa3e1ad57fce217f5bbf74255b10656f24b7bb8d8c1bda764b499810174b14eec3e21659d35ff359bb2bbe656a18a3684eefd50554691c0d2185cc
 Size (activesupport-6.1.4.1.gem) = 219648 bytes

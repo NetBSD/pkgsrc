@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:41:49 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:16:57 nia Exp $
 
-RMD160 (Module-CPANTS-Analyse-1.01.tar.gz) = bf06ec5a46f136a75f3516e055caa958c70019cd
+BLAKE2s (Module-CPANTS-Analyse-1.01.tar.gz) = 6a7f970d8fceeeace0995f795f52dc306a1e082fb3e6d4fff376d613ab71453d
 SHA512 (Module-CPANTS-Analyse-1.01.tar.gz) = 31381f83376297842668fc6e42ea4affa6775eddbc2c7b3e7806db5da2190a4b3b8600029a04a0814dc185b1e047c25366a7bd06bece5e4a3e2a67e47d45d97a
 Size (Module-CPANTS-Analyse-1.01.tar.gz) = 38930 bytes

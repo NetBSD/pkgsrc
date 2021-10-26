@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:41 nia Exp $
 
-RMD160 (pastel-0.8.0.gem) = e8a895252b040b3551a0741d48d98dba00f3c7dc
+BLAKE2s (pastel-0.8.0.gem) = 13010180fef9d200c15d20882eff4289f94e6f6393c0a816da03b44134243db6
 SHA512 (pastel-0.8.0.gem) = fb6bb1be1af633e68bd5bb50b5dcc4d2e3b7e53607f883155288bcaf4306fbfea1ed044b8a13d9212f36cd42fa6aaec7a9011faad0b6c99b84f00057aa91b67f
 Size (pastel-0.8.0.gem) = 15872 bytes

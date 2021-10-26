@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:50 nia Exp $
 
-RMD160 (lwt_log-1.1.1.tar.gz) = b56f8fe345bfc806de216bab54b6f2dad227a2c4
+BLAKE2s (lwt_log-1.1.1.tar.gz) = fdfe0b91b7c76cfd94b94dbe424dc22dda1b97e517af90788b0519402528ac15
 SHA512 (lwt_log-1.1.1.tar.gz) = df3d171a7c72f37e96b756d252ab586767df9c13e01500faf13d4b2cee936b0602fd7c725c03db488d3737d8d92300af103d395a926dc654a2c44a5d6068f24a
 Size (lwt_log-1.1.1.tar.gz) = 24569 bytes

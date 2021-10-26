@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:10 nia Exp $
 
-RMD160 (Net-LDAP-Class-0.27.tar.gz) = ed323f0cf41d1e26685f10f83419632a2b44b24a
+BLAKE2s (Net-LDAP-Class-0.27.tar.gz) = e8bfa516d83a5e161b549675a9202da1841cb4ae73bf3155bc0f93feb21f2244
 SHA512 (Net-LDAP-Class-0.27.tar.gz) = 12844b5787bb488130b93d7d4b5c88234bf7c544c80b0eb5bf4c3489956582fd759e656971675e7c20d7d90981343dc1582a8b6b2765c67b3f8444ac18033c3e
 Size (Net-LDAP-Class-0.27.tar.gz) = 34969 bytes

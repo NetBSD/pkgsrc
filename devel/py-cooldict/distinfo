@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:20 nia Exp $
 
-RMD160 (cooldict-1.04.tar.gz) = 6fc569e1bfe8956a1fe0eff5b85019f67e204d52
+BLAKE2s (cooldict-1.04.tar.gz) = e66c873624bf200cfed9729e7ff34090f2dfdc1dc628f45e09279c7f07840925
 SHA512 (cooldict-1.04.tar.gz) = ad23eb05167582a3d8772ff8680f29651614e2694a452316e5b5c5d7f6dc50281b86ffc821015abd79ba49f78411a023f63645617491a241a1e1428140afd4d1
 Size (cooldict-1.04.tar.gz) = 5619 bytes

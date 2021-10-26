@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:13 nia Exp $
 
-RMD160 (Class-Singleton-1.6.tar.gz) = 890ff418b64e25e08b60e1615ac954f9bcb19648
+BLAKE2s (Class-Singleton-1.6.tar.gz) = 3f17d96d071165f68e712c8756dfa536019c953110927740c9af93a020a9e347
 SHA512 (Class-Singleton-1.6.tar.gz) = 68b637ba57d5da70ac8e7a8a5e1874481681d6a217bb0c58a232d4329c582f32d29b5ac4c60a131bc863c8faf2852c5249bced9d286e87fefe4960e95f35b1ec
 Size (Class-Singleton-1.6.tar.gz) = 16164 bytes

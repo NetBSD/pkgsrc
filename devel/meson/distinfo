@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/24 16:20:01 adam Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:15:40 nia Exp $
 
-RMD160 (meson-0.59.3.tar.gz) = 36994a8e29e15751a9a1977aad581057a52f3943
+BLAKE2s (meson-0.59.3.tar.gz) = d070d78323171e8c448065c2dcb3070713069b4e8a0913456345be5f1f9fc603
 SHA512 (meson-0.59.3.tar.gz) = 4ffca094474c09567a69f576b25588c38e18d3a96d0b1d592adb05493a5d6dcfcd1a6549a821862a5aabd3df34d81b3a90d01e012e62c7f46bd98152337c0ea6
 Size (meson-0.59.3.tar.gz) = 1953620 bytes
 SHA1 (patch-mesonbuild_compilers_detect.py) = 6379aaae55a7175291133335f15307b53aee4384

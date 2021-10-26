@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:43:43 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:19:04 nia Exp $
 
-RMD160 (serpent-1.28.tar.gz) = 5b9afdae6095a458697fe454a78ae280c9050c2c
+BLAKE2s (serpent-1.28.tar.gz) = 8ae82eea938625d9260b500dd7c160364dde3359d6a1c98d2c0f49dd752c1394
 SHA512 (serpent-1.28.tar.gz) = 776bc497c7cd815c4ef44107bdf53b62bb92229beba0be7efceb9fba57dc7c677bf09832db335485df3e466acdffe6ebf4b3636ae9b49e60075379a7419a29ad
 Size (serpent-1.28.tar.gz) = 26912 bytes

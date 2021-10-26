@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:35 nia Exp $
 
-RMD160 (isort-4.3.21.tar.gz) = f3905a2005ed7df9127161d1561f786addcde7fc
+BLAKE2s (isort-4.3.21.tar.gz) = f7927e628881f661a6dbfaff60060bd1e95801a522630cee347fd262c5f8c07f
 SHA512 (isort-4.3.21.tar.gz) = 2a35107baf7c78c03bab3ea2fadd0c6cbc8db219acd388600b01ace27c91e6c651355e1ecfeb03b1ef2893a1d066b3d2f182a0008e3c341193ac156b8aea0dc2
 Size (isort-4.3.21.tar.gz) = 69546 bytes

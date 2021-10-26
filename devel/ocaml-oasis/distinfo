@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:51 nia Exp $
 
-RMD160 (oasis-0.4.10.tar.gz) = e02cc1eb3943f98ff9da7add9ac60dc597982206
+BLAKE2s (oasis-0.4.10.tar.gz) = ae97d192e5dd469707fea50c106cb20fe554500de5e90548e17b9e14f79775e2
 SHA512 (oasis-0.4.10.tar.gz) = c173a3a774d13a7cb21ddb44f89dadef210d331ab5f3a1e7ff1705e815572f70e22815736cc3f3788b6d8f784c21a309b45c5bf5e984e583b31931847bf107fd
 Size (oasis-0.4.10.tar.gz) = 394732 bytes

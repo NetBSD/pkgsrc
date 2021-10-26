@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:27 nia Exp $
 
-RMD160 (Devel-Leak-Object-1.02.tar.gz) = a2553da1f566324bd3776d4debe9efaea2c9fdbc
+BLAKE2s (Devel-Leak-Object-1.02.tar.gz) = af099b76bad46f559a8e00dcc4d81174747d371877ae25481e884982d1ee1402
 SHA512 (Devel-Leak-Object-1.02.tar.gz) = 7bb58e23133734b7113303b08617744fceabff5a0409e9deba3b4f476cabec3a8f79b48448f3511d4cd8705ce7cc43a1a4529295955d22c688fa28073e5baaaf
 Size (Devel-Leak-Object-1.02.tar.gz) = 29624 bytes

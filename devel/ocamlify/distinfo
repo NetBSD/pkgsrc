@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:58 nia Exp $
 
-RMD160 (ocamlify-0.0.2.tar.gz) = 3462a5682975198096ca1f2b2ca88671db0172d0
+BLAKE2s (ocamlify-0.0.2.tar.gz) = 5b052f032f07430a063a3a220b058d9330dd0170c67d75a63b361286f0a59696
 SHA512 (ocamlify-0.0.2.tar.gz) = e36dd09de6163be1e4d1a54944bb66871a5d461b3ead9ee8393d91a624cf6f7d038be8d8b9db36b04786adff67eb830d9aa3e81475e774dc0dee73adb985079e
 Size (ocamlify-0.0.2.tar.gz) = 53184 bytes
 SHA1 (patch-__tags) = 2283a7fbb030eb127e4267c15600414c7ae310f5

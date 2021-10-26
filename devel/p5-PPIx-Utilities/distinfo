@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:13 nia Exp $
 
-RMD160 (PPIx-Utilities-1.001000.tar.gz) = bc487ed0c8ca413a11ad1113ff7dfc18b0410e88
+BLAKE2s (PPIx-Utilities-1.001000.tar.gz) = 2dec5a744f0f8a7ab705082725831b2a0c6cf7638d0c5bd240d29f9318ebdfce
 SHA512 (PPIx-Utilities-1.001000.tar.gz) = 46b900b4152e83e7a37b3fb6036051079aed677f0a33affa07f50e33a3a45bc220c899ecb99a1ab259a934aa9801582e804fe3be2980188c6442774de9b0f6de
 Size (PPIx-Utilities-1.001000.tar.gz) = 25707 bytes

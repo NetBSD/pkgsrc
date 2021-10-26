@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:57 nia Exp $
 
-RMD160 (ghc-paths-0.1.0.12.tar.gz) = 087bc2542d4fd9ce5f07bfff2ad57850d7d9c250
+BLAKE2s (ghc-paths-0.1.0.12.tar.gz) = 041fb8c8c812c3c2e1085f9284586348cfe5cf4150f06b298b8d8fd288a3bf41
 SHA512 (ghc-paths-0.1.0.12.tar.gz) = 1c66caf459f5783bde38a47ce1292bf5c47fef21e3f69d7f6c052b4eb39f446ed5decd38f0e4143a90d55ba44ebc0891b4497050cc652cbf3fcad636d45690e9
 Size (ghc-paths-0.1.0.12.tar.gz) = 2565 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.50 2021/10/07 13:40:32 nia Exp $
+$NetBSD: distinfo,v 1.51 2021/10/26 10:15:38 nia Exp $
 
-RMD160 (m4-1.4.19.tar.gz) = e42a1d0bcec2f27e3e2b64055e7890ff0144f038
+BLAKE2s (m4-1.4.19.tar.gz) = f1380114d839935b2afa53fdd7162dc5df2bbeb6d5eab48528916a138f483cbc
 SHA512 (m4-1.4.19.tar.gz) = f5dd0f02fcae65a176a16af9a8e1747c26e9440c6c224003ba458d3298b777a75ffb189aee9051fb0c4840b2a48278be4a51d959381af0b1d627570f478c58f2
 Size (m4-1.4.19.tar.gz) = 2953876 bytes
 SHA1 (patch-lib_strerror_override.c) = 29905fecf6c92f75c4999f1e3cb56e14fe2f4aae

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:57 nia Exp $
 
-RMD160 (yojson-1.7.0.tar.gz) = 87711d0769550fcc0509fd9d01b25f58325a960a
+BLAKE2s (yojson-1.7.0.tar.gz) = 57f317ec9c9fb3ef5242030582c43933625763e342f795d2cfe57bcd849c1633
 SHA512 (yojson-1.7.0.tar.gz) = 25eedb64e4bf7c7e8d5a5a115812cd502540afbdeb7c947da3a14e5968aa0a7db8ab402425662571d8935b9cd6a19796ce81dd80a65dc614f156626c60e7036e
 Size (yojson-1.7.0.tar.gz) = 29704 bytes

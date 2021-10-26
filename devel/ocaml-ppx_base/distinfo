@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:51 nia Exp $
 
-RMD160 (ppx_base-0.12.0.tar.gz) = 544c996835f189a76509fa5cb911ff906da1065c
+BLAKE2s (ppx_base-0.12.0.tar.gz) = 8d8a8707164bd95a49a4c524e1c19fc4906475bdb2cfbf201ca13094ea348897
 SHA512 (ppx_base-0.12.0.tar.gz) = 9d9931857b286df2ae5bffe60a09ee725ce5e4937bc2a5082d09a76a5b1168a5c8e8d7c50a9a9b6853002f25d887351b084bd142ea21fdd39407f299892ba964
 Size (ppx_base-0.12.0.tar.gz) = 2945 bytes
 SHA1 (patch-ppx__base.opam) = d2e185d1b843196c8e4fa67e587c34335d88fbb0

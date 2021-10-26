@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:09 nia Exp $
 
-RMD160 (R/testit_0.13.tar.gz) = 392d3f3a72394c4e51a24839f81c6b8a3dc9e4cc
+BLAKE2s (R/testit_0.13.tar.gz) = e279abe6c9f41822df689086dc9c23a93be61b89bf102594b4c02f15f3fac30b
 SHA512 (R/testit_0.13.tar.gz) = f48774a055d6eb04523e6c3a7afdbc74698aa11accc13cd66d860feab9a584a816c430196bf7e12999ea20746c9b85b6544af9dc8e16922694968392eab36d3f
 Size (R/testit_0.13.tar.gz) = 8493 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:41:00 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:16:07 nia Exp $
 
-RMD160 (CPAN-Reporter-1.2018.tar.gz) = 846f45cd1293483e401fcad1de0ab55a86162339
+BLAKE2s (CPAN-Reporter-1.2018.tar.gz) = 97f7b82202f85d56bce284ce646f2d1017bd2ccad5a04a020ce81d71f255054c
 SHA512 (CPAN-Reporter-1.2018.tar.gz) = e1b786222eb1f1ebf24fe9802a14f95ecf8bde8990cd196e1f61d9c680db78b1f68e94214cd92c00e40caed47301d6e9ffabef6acfae6b9cf347f0a44bf7f783
 Size (CPAN-Reporter-1.2018.tar.gz) = 111343 bytes

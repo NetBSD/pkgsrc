@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:57 nia Exp $
 
-RMD160 (pip-1.19.tar.gz) = 9e0e2e7f1d2f404e8054b159734ef04671cd5de3
+BLAKE2s (pip-1.19.tar.gz) = d6f720d436718c9b638b9ef8111e1b16f8f107d8a6a2637e560230688532a01e
 SHA512 (pip-1.19.tar.gz) = 548720b1690847ab3e4cd29a91fc8993504e0af0e33bba774c39248877a661809ba097b3b22aeda6d720815965f1f4f58ccf289d4d693e85576ed129ee4412da
 Size (pip-1.19.tar.gz) = 111260 bytes

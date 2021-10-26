@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:16 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:40 nia Exp $
 
-RMD160 (ParseTree-3.0.9.gem) = 48a4c1697fea0e9cf36efebec75c1d7ad541571a
+BLAKE2s (ParseTree-3.0.9.gem) = 358aab2f0f17b8ea463b0e7d8ca522adc534096724dbc88978d2b580be05fb3e
 SHA512 (ParseTree-3.0.9.gem) = 7cdfb4499ab7e4d78d5d8ffb4a4fbe7b73016d25a08073b6a7660eefb1163d77ab15d7ad38b9df5ae6193faa4b718fc893517b67ec76a2642f97eac128e1d310
 Size (ParseTree-3.0.9.gem) = 41472 bytes

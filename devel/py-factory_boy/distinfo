@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:26 nia Exp $
 
-RMD160 (factory_boy-3.2.0.tar.gz) = bfe45b3d39c535020f123574b1839d0df42e1a6c
+BLAKE2s (factory_boy-3.2.0.tar.gz) = b2d8e029bbb286ce560a89b6433d4aa8bd7c05eb3ab4d7662db7a1280000c339
 SHA512 (factory_boy-3.2.0.tar.gz) = b7ac57a1533d225dbc114184a686407826b18b546cf8ef71535c1848c7cffcd990df3daf120277c884a387fbfec865fad29fb3830f7a5fd5eb31756bb4f0fd49
 Size (factory_boy-3.2.0.tar.gz) = 153844 bytes

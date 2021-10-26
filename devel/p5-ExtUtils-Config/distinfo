@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:32 nia Exp $
 
-RMD160 (ExtUtils-Config-0.008.tar.gz) = 85808cbda32abbd84cf6919c57b5beebac9f3d0a
+BLAKE2s (ExtUtils-Config-0.008.tar.gz) = 16a3daa26120ab48a1575fd809ee026ce76ab2203d9dd3894fa116b5aca4198b
 SHA512 (ExtUtils-Config-0.008.tar.gz) = 7775e2212b4605e60559c7e63604b8f2b4c56f4846e64f9f4454f3f5d0a7a21f618143e6c61eafabf5d9ee9bca8f722c04aedeaf9c51f59924de68c272b86db2
 Size (ExtUtils-Config-0.008.tar.gz) = 11165 bytes

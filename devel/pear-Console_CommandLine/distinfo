@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:00 nia Exp $
 
-RMD160 (pear/Console_CommandLine-1.2.2.tgz) = 25228324c5f1476c9f849638678664a451060437
+BLAKE2s (pear/Console_CommandLine-1.2.2.tgz) = 4717234e90c092b10d219a3156b91966a23ba8c7ca0fc04ad4cfbd5b8694dbd6
 SHA512 (pear/Console_CommandLine-1.2.2.tgz) = 05dbde123d0d4fdbba2a959f4bea3b115e3629060a268d25a3007c2ee5a3530b8ebbd8c7d124a6c9d012cafa19f41690a888943a6c1e2e5ec1b9d83fa821d603
 Size (pear/Console_CommandLine-1.2.2.tgz) = 40705 bytes

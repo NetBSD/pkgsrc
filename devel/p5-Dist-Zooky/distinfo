@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:23 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:30 nia Exp $
 
-RMD160 (Dist-Zooky-0.24.tar.gz) = 13f4d3aa41b5b4537d2ebd5be1c804993a5db31a
+BLAKE2s (Dist-Zooky-0.24.tar.gz) = 84e7a7cd7cbea124562d511d3d6245c97f98195ff7922c8a82ac213125887bf6
 SHA512 (Dist-Zooky-0.24.tar.gz) = 451e9d50beea73f5fdcbfb670f1fd4254bc14a933336c642df59705eef77b91ee6f7d50ca4c968d5063e9491c4ced463ffec1c8d6181a959b2696e4a72f404c5
 Size (Dist-Zooky-0.24.tar.gz) = 18837 bytes

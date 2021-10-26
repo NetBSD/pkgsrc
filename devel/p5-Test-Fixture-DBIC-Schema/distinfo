@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:40 nia Exp $
 
-RMD160 (Test-Fixture-DBIC-Schema-0.04.tar.gz) = 0cb29e91cf7301e1ebad47680040f06335347563
+BLAKE2s (Test-Fixture-DBIC-Schema-0.04.tar.gz) = dc4a6fe5cc64cc106c892e91df25767abd721cfbdf50fc9fe0562d89c69b550c
 SHA512 (Test-Fixture-DBIC-Schema-0.04.tar.gz) = 3f41b81b0eaa8d583e09c8b5e1ef65c3b404b10ec6b918513eb80fdc356428e94a491b4ada2fe99c25e3f6572d8820615991859598247a6276e21849d6cc09dc
 Size (Test-Fixture-DBIC-Schema-0.04.tar.gz) = 47900 bytes

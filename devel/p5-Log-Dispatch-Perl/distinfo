@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:53 nia Exp $
 
-RMD160 (Log-Dispatch-Perl-0.05.tar.gz) = 0c6f6b9937ff4d15ee73e2a0c75dba8380efe499
+BLAKE2s (Log-Dispatch-Perl-0.05.tar.gz) = 14e26e6024748298b9c2cbc144ab23aa990a3b5f6cb6cfd592856fdb0b52e568
 SHA512 (Log-Dispatch-Perl-0.05.tar.gz) = ca67950d81f2bf22d5d16555f0dfc74bc17a717bb4c39a62b687738005b61170c434783f1f4991218791693b3eff16eaf1675dd93d122aa6c237a75752fae390
 Size (Log-Dispatch-Perl-0.05.tar.gz) = 28568 bytes

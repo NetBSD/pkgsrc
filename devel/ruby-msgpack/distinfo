@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 13:44:15 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:19:38 nia Exp $
 
-RMD160 (msgpack-1.4.2.gem) = 8889fdba5242c59843b0b6d90fe850959429d8f8
+BLAKE2s (msgpack-1.4.2.gem) = 49c693472c9d951427c3745b800e43d48c3edab24f9e6b4972c41c48e01d58a0
 SHA512 (msgpack-1.4.2.gem) = b2f703fdb401c023dfb3064cb9c4b8f1458c0420c6f6f17bdc9230aef1a6f943a605a3f7369a20e7402e98db77a62fadc90aab40de90fdf6ea16924f33eb7ff8
 Size (msgpack-1.4.2.gem) = 83456 bytes

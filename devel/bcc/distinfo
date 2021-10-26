@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:39:13 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:14:19 nia Exp $
 
-RMD160 (bcc.tar.gz) = 6ce1a333bb4ffa36d9cea5c116925f74db64345e
+BLAKE2s (bcc.tar.gz) = 66ec5b77efac7bb3afad271de903667c5f43007fb81f8753274e24ccbe8c282c
 SHA512 (bcc.tar.gz) = b21138c703e625d814274718bb2448adb9725e64a6626bec9855d37101a6924ae4dcdff9639163043883437f39061148015d2e7314e9252f8a1006d60f4a5d72
 Size (bcc.tar.gz) = 214834 bytes
 SHA1 (patch-ad) = b1e609a0436132d4a7f6893cc2dab89f77cde12e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:26 nia Exp $
 
-RMD160 (Devel-Events-Objects-0.05.tar.gz) = 1ef5e18eb5a8bd75050ae49d2157bf9354cad0bd
+BLAKE2s (Devel-Events-Objects-0.05.tar.gz) = c92433008fab67ec2c44959c9ed36f3fd55b70b34ede57022597c88e566b085d
 SHA512 (Devel-Events-Objects-0.05.tar.gz) = 874ce95beb3c7a2666b4636e01cd748173a60bf93d5922da501ec163a9746d2dc407c2463debfc528c5ea00b530b9f72e06d1985208a2575949c72c5322cafe7
 Size (Devel-Events-Objects-0.05.tar.gz) = 7422 bytes

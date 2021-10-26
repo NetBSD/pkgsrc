@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:06 nia Exp $
 
-RMD160 (javacc-5.0.tar.gz) = b7d6b5794619fb66a342935ab0644d231c39fb42
+BLAKE2s (javacc-5.0.tar.gz) = 958294ef090326685fdeb14c1971e3c9837236d0e58456f6217f149746f4a400
 SHA512 (javacc-5.0.tar.gz) = 02fe1f3b714d48b225faf974fc7fd4af617c6e946c8cbf89110c5a117b7f242395cf4af7a2c6d1b3418a2c8ffcc9e72a4bc4a7b842d8703fb49bf298a782ca30
 Size (javacc-5.0.tar.gz) = 472721 bytes
 SHA1 (patch-bin_javacc) = c94965d4725aac84b647ccd20fb0a047d84d3bdc

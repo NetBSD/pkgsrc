@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:29 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:35 nia Exp $
 
-RMD160 (File-Find-Rule-Perl-1.15.tar.gz) = 6368abea48cae33c714ced4645b939a697619a9c
+BLAKE2s (File-Find-Rule-Perl-1.15.tar.gz) = 0774a34b4500280eeb52eefa8436ee8eb36d0fc8e13d23a4c998a5e3c6fa187f
 SHA512 (File-Find-Rule-Perl-1.15.tar.gz) = 90fc64991fbdb47bcb712f2bf7c85b2571a2b161952574606ddfd9c9ad9aeaaa2e0f3355b9c8b993ab2479d8c80e89075caa9e5413259c2bb99b1e75ef791670
 Size (File-Find-Rule-Perl-1.15.tar.gz) = 7502 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:32 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:51 nia Exp $
 
-RMD160 (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 353d9e775f0ae07dcaaa17b1a3411898d6e50d77
+BLAKE2s (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 30b214dc691e934af0470c8d67135f1ce48a04fd0c9553935566b1d0310e596a
 SHA512 (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 1d0717d4cbd2a140ad3aea33e2598cf05de5a2d0bafd31cc748003d33f8fc6ccaf8162450bb16178673290afe33e71933d69ad1e164cb4a935dbf029af453285
 Size (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 17755 bytes
