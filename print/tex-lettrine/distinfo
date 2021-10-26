@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:50:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:13:55 nia Exp $
 
-RMD160 (lettrine.r54560.tar.xz) = c3e6cc9066f916f3b652d7b532ca9454ca40114e
+BLAKE2s (lettrine.r54560.tar.xz) = c38660461ea22c8c3a063bc1e3c4295e1b4727e6d637e214ba55476e6cc6d949
 SHA512 (lettrine.r54560.tar.xz) = 839469d3cdd53698bd9072451e7b9262633282cf46c32ecf23f3b0f46ae999ac259daeb6b4cc5c43222f9f788a95b85cc406857b19bf4eea1ac1ff3b00caac60
 Size (lettrine.r54560.tar.xz) = 7052 bytes

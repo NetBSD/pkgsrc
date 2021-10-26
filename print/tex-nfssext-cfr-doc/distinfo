@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:10 nia Exp $
 
-RMD160 (tex-nfssext-cfr-43640/nfssext-cfr.doc.tar.xz) = 4d2bdf6b7c90a4ff6d37913864ea551edcfd5551
+BLAKE2s (tex-nfssext-cfr-43640/nfssext-cfr.doc.tar.xz) = 393cc80a9fa857b29f38ef9857b13b3b55aaa6890d8589f5767feac4b956a890
 SHA512 (tex-nfssext-cfr-43640/nfssext-cfr.doc.tar.xz) = 28b2aff47d74de3a42c441dafc156297904b5db20d267f1af07d1e3210e7f9959474b3cec387be7d9b20dc04560b4100a0d9da6979ab8ad2a7cd1e4518cec278
 Size (tex-nfssext-cfr-43640/nfssext-cfr.doc.tar.xz) = 184888 bytes

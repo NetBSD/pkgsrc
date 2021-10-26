@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:30 nia Exp $
 
-RMD160 (tex-hang-43280/hang.tar.xz) = 0b5600199302c8f936fbd64410f62d2b682c3c0b
+BLAKE2s (tex-hang-43280/hang.tar.xz) = e806da9cecafaab08b74b01da612e725c4106da25864e2dfde6c71e4fc06cb93
 SHA512 (tex-hang-43280/hang.tar.xz) = d2622b8e83650ce5dfa4db23d2a03ad25b13eeb4f8ddbecb50a87357cafdb3325ef5e24c4ea0290b16f1672d95766641a2367aa75e173efa78f7940e6de4a838
 Size (tex-hang-43280/hang.tar.xz) = 1056 bytes

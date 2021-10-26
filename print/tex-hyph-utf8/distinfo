@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:50:23 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:13:34 nia Exp $
 
-RMD160 (hyph-utf8.r58619.tar.xz) = 259538895c427f0d6b5c50b79811e4df72d8c074
+BLAKE2s (hyph-utf8.r58619.tar.xz) = f7c92b6daebc28e372c4120e2e7b6d1fb995a7cec28ad2149ce12edfe4d8356f
 SHA512 (hyph-utf8.r58619.tar.xz) = dc14e4a6aa57764113b9945c76f3f485f370e6c399196916bea2e0451f8238c577100c0db89e742d1233a16b7f51f56674ef1f458dd04f49e207f62744e8ea47
 Size (hyph-utf8.r58619.tar.xz) = 15996 bytes

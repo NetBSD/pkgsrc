@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:02 nia Exp $
 
-RMD160 (tex-mdframed-31075/mdframed.tar.xz) = f9e4d11eeb0c22cba65d9d14b1192ea7aa9089b9
+BLAKE2s (tex-mdframed-31075/mdframed.tar.xz) = f87b8eaee227a0e7dee1b1c658600946a0fd8aeb60f7714fb72f188deab4cffd
 SHA512 (tex-mdframed-31075/mdframed.tar.xz) = f24fbb7e678a8b9c11f6bc13687b870275d8ac58c58aad599a1ea1373b6d3633a87b9f499c9b970c193475c291600c2c33fe28319215117071313abfd4bf3970
 Size (tex-mdframed-31075/mdframed.tar.xz) = 21340 bytes

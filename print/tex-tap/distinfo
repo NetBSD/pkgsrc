@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:46 nia Exp $
 
-RMD160 (tex-tap-31731/tap.tar.xz) = 6907142b2bc1fc3e957c9234fa262d9acbac3e97
+BLAKE2s (tex-tap-31731/tap.tar.xz) = 890e29aed5cd441a0d4be4d287334fc2627d6a2da7cda07bcddcf0fe37b43a39
 SHA512 (tex-tap-31731/tap.tar.xz) = e2d5ee9dcf918894d0286f99e89a8ba44d3af3980a67b34d69a9daea0f5299ccfe5f4e918f370bff119be3bd1ff037a92ce47f671540c60decaa19fd6076fabe
 Size (tex-tap-31731/tap.tar.xz) = 10668 bytes

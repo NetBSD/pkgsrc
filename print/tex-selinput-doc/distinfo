@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:35 nia Exp $
 
-RMD160 (selinput.doc.r53098.tar.xz) = c9ea7a77ed6920771e5b2d05f5be6febad8a0c5f
+BLAKE2s (selinput.doc.r53098.tar.xz) = f7dd41412a20c311ba4f5ad67a666aadcb2bddf43caefce1cd90ac5d270b4ace
 SHA512 (selinput.doc.r53098.tar.xz) = 918b0b2bbb8230a482418c56de8081bb455980e178843b0ea84b18435c1fbfcd50a71cd0491b89c5797a374479060175219333bbde2ab28b5147cb5c3fd65ff3
 Size (selinput.doc.r53098.tar.xz) = 536588 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:07 nia Exp $
 
-RMD160 (mparhack.r59066.tar.xz) = 4a06ad84b0acb9030b7e6f46ab686cdb0513e082
+BLAKE2s (mparhack.r59066.tar.xz) = 38654e0efd3f513b17763d3b202cd491768a99340edf8c69f02081827c012c7b
 SHA512 (mparhack.r59066.tar.xz) = 9a4e5a08320095095538eea8c5c5db5dc6d6c99ca3e3a3f5568228b8b52a4b1de98c1118b09626b58ef897f6810d2b43d2b5b416b3687e1bfd3a01506460bce5
 Size (mparhack.r59066.tar.xz) = 2804 bytes

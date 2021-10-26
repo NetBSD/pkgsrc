@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:14 nia Exp $
 
-RMD160 (tex-otibet-15878/otibet.doc.tar.xz) = abea43c53a2948099a7a0f2f4ed7bf44ea1b352f
+BLAKE2s (tex-otibet-15878/otibet.doc.tar.xz) = 5eb415a2462cbaebcc1d17388250e158aa4cc92b196d225ee2fc7297f71c5cc0
 SHA512 (tex-otibet-15878/otibet.doc.tar.xz) = d3cfb5f70b08272bca5e70c194bb8368b78114424d3f4ed7dc96a6a3b20d8605997c320288c47cf636e09e5e2cf78611e84919044ad2e0a1abd349b094c49ffc
 Size (tex-otibet-15878/otibet.doc.tar.xz) = 21264 bytes

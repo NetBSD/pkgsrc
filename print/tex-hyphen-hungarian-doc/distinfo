@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:37 nia Exp $
 
-RMD160 (tex-hyphen-hungarian-29725/hyphen-hungarian.doc.tar.xz) = 49345032296eb7afb148e79b4a8c2a71d2c5d385
+BLAKE2s (tex-hyphen-hungarian-29725/hyphen-hungarian.doc.tar.xz) = 741dd96a7abf7a77095b1613218ba220cf1f3bc6a20000f961457e11957b057a
 SHA512 (tex-hyphen-hungarian-29725/hyphen-hungarian.doc.tar.xz) = baeecdbf4cfbf9f4a28f06b1e2c82ea701e7e2138072a2a7d50fc31c1b1342a5d038ad3fcfd71d1c7133d06d8e5cbe7a5b4566dd8951503461a8e5afff242b0d
 Size (tex-hyphen-hungarian-29725/hyphen-hungarian.doc.tar.xz) = 99388 bytes

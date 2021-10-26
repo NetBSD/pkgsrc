@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:57 nia Exp $
 
-RMD160 (tex-longfbox-39028/longfbox.doc.tar.xz) = 644d6245e2024a7283df2c30082b63909669c842
+BLAKE2s (tex-longfbox-39028/longfbox.doc.tar.xz) = 4e9d54445e54f0833ac632f9718d242eb6ddb6ca01dd9290873e2d8d3357b9e7
 SHA512 (tex-longfbox-39028/longfbox.doc.tar.xz) = 8e8387f82e1e97e9591382a56c91f37e7f8c42de797cef2ecca66d3e6f7d92dda35bd00603ee4732a850ab983d0650119a273004d1f4de43cde88584be5619cc
 Size (tex-longfbox-39028/longfbox.doc.tar.xz) = 339608 bytes

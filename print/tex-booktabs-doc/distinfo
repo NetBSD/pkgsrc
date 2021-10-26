@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:42 nia Exp $
 
-RMD160 (booktabs.doc.r53402.tar.xz) = 338f2dd092fc20b2bcf22f07d9734251fe8d86d1
+BLAKE2s (booktabs.doc.r53402.tar.xz) = c3f018cbb203a32bc2267d31a7866c9c34cd57f68f89b6a95050e9debc80ddfb
 SHA512 (booktabs.doc.r53402.tar.xz) = 952ff0f30cf7679c09020cf2bca542e11e3a64c88956e87db6289acfb03879609f66c8beb019a6639716462aa088bdff7df3330d60a5d864f25de164affa4c51
 Size (booktabs.doc.r53402.tar.xz) = 295880 bytes

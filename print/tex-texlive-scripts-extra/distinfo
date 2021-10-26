@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:50 nia Exp $
 
-RMD160 (texlive-scripts-extra.r54744.tar.xz) = c8c14f8e5ca2522bc816dcbe79162acdfcd56c5f
+BLAKE2s (texlive-scripts-extra.r54744.tar.xz) = 027d297eeb13315293a506a54d44a65971329695f6e04df00a72a2948e96a154
 SHA512 (texlive-scripts-extra.r54744.tar.xz) = e46691aa10b961d2359359fdf00ebc86a1b881b3d1126c52f3863343d21eba00110cd9500fb03a4a9544a3d8fb443bbdc90aa2f6216b8e62a3edb0acc58e4c75
 Size (texlive-scripts-extra.r54744.tar.xz) = 23540 bytes
 SHA1 (patch-bin_e2pall) = e8d08dc3082a1cdda05fea5bdfe4996b68d3401b

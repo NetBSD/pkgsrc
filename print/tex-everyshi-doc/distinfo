@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:17 nia Exp $
 
-RMD160 (everyshi.doc.r57001.tar.xz) = f05ce0fd1e726c8dec2121d40cd78d3ca2474cff
+BLAKE2s (everyshi.doc.r57001.tar.xz) = af2d752e83e3dd557df8b235e6162f252d1f21f3883541966c023b558cb31e9a
 SHA512 (everyshi.doc.r57001.tar.xz) = 2a05f4b42c1a85b4af8fb3881d1e32d0cb8fad7070bd8eb83632b50e387083a5c8fd264b61b70416451f56a97e1c0702507bd50c534ab7baf975372d854a97a5
 Size (everyshi.doc.r57001.tar.xz) = 132236 bytes

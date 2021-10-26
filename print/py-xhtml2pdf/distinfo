@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:16 nia Exp $
 
-RMD160 (xhtml2pdf-0.2.5.tar.gz) = 1314366bcddb31344db53b22b1fc1464da9bc376
+BLAKE2s (xhtml2pdf-0.2.5.tar.gz) = d043d8ed0bdfceaa7fe59196953c0c294cd05682f98ee38469078ce3552ce556
 SHA512 (xhtml2pdf-0.2.5.tar.gz) = 370a8772ed85e8fddd7bcdd7f116310042294b9cb541b227ff1e1864ad52b9e3af034332fccc86a57260b1ca82bf34dc3327c273cc3bfa05ba2e46708619305c
 Size (xhtml2pdf-0.2.5.tar.gz) = 100124 bytes

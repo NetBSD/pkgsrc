@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:27 nia Exp $
 
-RMD160 (tex-pspicture-15878.2010/pspicture.doc.tar.xz) = 2f71bd489b9ce8a0b0fe23025969092e65f3f694
+BLAKE2s (tex-pspicture-15878.2010/pspicture.doc.tar.xz) = d634b503061453a53fcfb2f746e03c6dacd653b3e7f4305ceedff75656f716cc
 SHA512 (tex-pspicture-15878.2010/pspicture.doc.tar.xz) = 9ba5f2a51a562b5861f567e5cd3788cb7560517659036b2550f6b9db4b550a5000146a7324ace21ab6d4adecd7550393d05664be7a1a06bc495b0b89a2c30579
 Size (tex-pspicture-15878.2010/pspicture.doc.tar.xz) = 42644 bytes

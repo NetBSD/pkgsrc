@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:34 nia Exp $
 
-RMD160 (savesym.r31565.tar.xz) = 4a9dc6cc67bd73f49f4757d1e0e29287b13b5a3a
+BLAKE2s (savesym.r31565.tar.xz) = 196c783666ace93c6a7b06ec706705ef91c0dc4349a57f56442d7731a288071c
 SHA512 (savesym.r31565.tar.xz) = 212ea18ebb424f9b64ca9c75a783dee9ceebac09adcd6ff6c721d90796bf4121aa8710935529451e6f9a4de9c3cb5910b6c07d6fd6b7093c4b9904348f43a1fb
 Size (savesym.r31565.tar.xz) = 1356 bytes

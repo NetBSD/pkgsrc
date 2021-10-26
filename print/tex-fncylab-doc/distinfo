@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:22 nia Exp $
 
-RMD160 (fncylab.doc.r52090.tar.xz) = 37cd068a4001feee8c7653cb5954639096de2bee
+BLAKE2s (fncylab.doc.r52090.tar.xz) = 2de8b29d1eed0197de9b9fbf63e03e4afe3878b8ed773ff23bf91da3382f0ed0
 SHA512 (fncylab.doc.r52090.tar.xz) = a987a6efd0964bd5ab5328658e011b5c8da56b404d233c55d96541ec2f37cc72faacd934908c7346041ec8bab3866dd1f171e1c5de5eb528b0f0e80969c0bba6
 Size (fncylab.doc.r52090.tar.xz) = 206652 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:50:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:13:11 nia Exp $
 
-RMD160 (tex-endfloat-51003/endfloat.doc.tar.xz) = 7f68ff6528701d2207a910e0423059ff667cee0d
+BLAKE2s (tex-endfloat-51003/endfloat.doc.tar.xz) = eae754fc1a706378b48265dae8d8bb7f061edf6792a2f63ca2b6e06077087d74
 SHA512 (tex-endfloat-51003/endfloat.doc.tar.xz) = 39a1cfa84a2cbe5ff1b59fd9c5fa6a19cb1d3aafac6d1fbb111f117892e34142f6a21ce7808238608ac0602d905cfff6235a78762a0d510dbc436c881baf59f9
 Size (tex-endfloat-51003/endfloat.doc.tar.xz) = 181292 bytes

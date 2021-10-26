@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:51:24 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:14:34 nia Exp $
 
-RMD160 (schwalbe-chess.doc.r53305.tar.xz) = f881815a77a4974fdb201c4fe98dd2df439d3c25
+BLAKE2s (schwalbe-chess.doc.r53305.tar.xz) = c0e86091d9a15229ca868c64cf731a0c725cd2f97f19b75e4354cd7bfff7972b
 SHA512 (schwalbe-chess.doc.r53305.tar.xz) = f5ff7c4a235cb5fca0a9d0c9e347c3e2a997c1994e56dab7b9410483935253d09fb72fc678c15e63465de6fe25db7a7dcf7dc445a594711f2072020379b87df5
 Size (schwalbe-chess.doc.r53305.tar.xz) = 190900 bytes

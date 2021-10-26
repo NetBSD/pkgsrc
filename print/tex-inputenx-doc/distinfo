@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:44 nia Exp $
 
-RMD160 (inputenx.doc.r52986.tar.xz) = cb85069fdc15199e23e6ae6b381b935f24709658
+BLAKE2s (inputenx.doc.r52986.tar.xz) = efd4a18853e8826c95189cd8d03b24079ee0f51e06cb0fccab5acbaa56ec32aa
 SHA512 (inputenx.doc.r52986.tar.xz) = 087bca2b38a73530b19dba7343cc488b39ab505ce00b4c622f56f9d40c448e6349052e12358cc8fe6d8db7039c6af4f06910784795a2cb1e69b85eed423d1314
 Size (inputenx.doc.r52986.tar.xz) = 785444 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:15 nia Exp $
 
-RMD160 (tex-outline-18360/outline.doc.tar.xz) = c4e691789208773fbd268502e0d81ca9275d8555
+BLAKE2s (tex-outline-18360/outline.doc.tar.xz) = d7125052059a00f4985bcb8a2fd393b854573d9fe1b26bee1ae146c39afe8c69
 SHA512 (tex-outline-18360/outline.doc.tar.xz) = 301ad12a8f964a7dab05b208649c74ad39a64264f113963ebf36dbf83c90ed8ed042d8cc15f626f6081bd41f51d66dec592eaadabec32c65a0d67d15e8ead37a
 Size (tex-outline-18360/outline.doc.tar.xz) = 234580 bytes

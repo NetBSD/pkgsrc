@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:02 nia Exp $
 
-RMD160 (tex-memdesign-34157/memdesign.doc.tar.xz) = 932305faec290ca3ea7d0fb59ff92f86616f15fd
+BLAKE2s (tex-memdesign-34157/memdesign.doc.tar.xz) = 0e9969fe0f7656a934171e956482639583ca82b9eff0e3c3aa1ae425b7b1d1d1
 SHA512 (tex-memdesign-34157/memdesign.doc.tar.xz) = f03276ff25076aaf1a8791a00de3ccaad65b26f93cefc34e49910d86473d85837a66823d514457ef0760339947e78c4a9355d19b646a2152ac65349cfc7e7d97
 Size (tex-memdesign-34157/memdesign.doc.tar.xz) = 1733220 bytes

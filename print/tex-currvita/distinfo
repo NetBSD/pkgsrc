@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:04 nia Exp $
 
-RMD160 (tex-currvita-15878/currvita.tar.xz) = 612cb45c875a0420c3fd789d48711461e31a7124
+BLAKE2s (tex-currvita-15878/currvita.tar.xz) = d97ce557a4f31effc69183bc5d39d396306d195c7680ffed697496bb3b4cea32
 SHA512 (tex-currvita-15878/currvita.tar.xz) = 2040a687d9b2d61442e191ac89257b3988f2f63581fe5e92b1245142c8f9747c0794ff7d55300bfe043662f0b01bbe608e51d0408151797527837d9a310bbcbf
 Size (tex-currvita-15878/currvita.tar.xz) = 2340 bytes

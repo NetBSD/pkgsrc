@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:42 nia Exp $
 
-RMD160 (stringstrings.doc.r57097.tar.xz) = 6e94cdbade9c211c40e130f1f53832c01c209797
+BLAKE2s (stringstrings.doc.r57097.tar.xz) = 74ba13a6b867d57181b68d218db7067a4cd297cbd6afedc99a29ca921f70dd62
 SHA512 (stringstrings.doc.r57097.tar.xz) = 1779de4af914b69ab258bc1f69a807c12f750e5919936c78ace4496f86200bfc4c3146dffbb27ac5977c2e8d41ec8d0139cf2a2560ba7c627dacd70b34cc69ea
 Size (stringstrings.doc.r57097.tar.xz) = 381756 bytes

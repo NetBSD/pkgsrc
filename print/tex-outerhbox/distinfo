@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:14 nia Exp $
 
-RMD160 (outerhbox.r54254.tar.xz) = 336887ef20ee1ed285e634ebc4072e84c1701266
+BLAKE2s (outerhbox.r54254.tar.xz) = 5488824819053ef402bd4107b917ca7a2f1d77066a1c2a85bc2380d097424fba
 SHA512 (outerhbox.r54254.tar.xz) = 954af6a75833dc388c430faf538415457d0526b85060602b93584a45e6b0ff9bb83ab1d2117ef58817f08b138146873ff74ab045f174e949a0c9fb9f042b1121
 Size (outerhbox.r54254.tar.xz) = 1596 bytes

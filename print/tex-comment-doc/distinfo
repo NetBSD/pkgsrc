@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:54 nia Exp $
 
-RMD160 (tex-comment-41927/comment.doc.tar.xz) = 59950a6d48c55e722c8e5d0e9399fc8f31979007
+BLAKE2s (tex-comment-41927/comment.doc.tar.xz) = 45627ccdce9e1fb0f03aa8f834be91205fcd8e352a96c82bf04b3df27f7e2d90
 SHA512 (tex-comment-41927/comment.doc.tar.xz) = 51473d0d41db4a5549fdfc3d8a36d48fcc32f2fc908d134e6a15a3003da26815af58a12b95f0d2cba6123bfc7eb051c008107a07bb50677e9f631615c9aa06b1
 Size (tex-comment-41927/comment.doc.tar.xz) = 535044 bytes

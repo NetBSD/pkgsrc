@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:48:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:04 nia Exp $
 
-RMD160 (dspdfviewer-1.15.1.tar.gz) = 34d4fae5923892d3ba7019d45b516bf469ce11ad
+BLAKE2s (dspdfviewer-1.15.1.tar.gz) = 52d4da29c9f7bf19bb9dd9d7a0abe827535ef79c76ba857f6605d86f016caba0
 SHA512 (dspdfviewer-1.15.1.tar.gz) = 41de12554224c0ba60ec93f398e77f437d01548d5b72c955c39db59845ee33cfed5512abc705d6ef1b6aeb605715335015f8bbb933b6748ef8f14c7a2cc8eb03
 Size (dspdfviewer-1.15.1.tar.gz) = 165202 bytes
 SHA1 (patch-CMakeLists.txt) = 1d7a079fdce884943c877257cbdb756d625c9ebd

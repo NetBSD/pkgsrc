@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-focus.r56967.tar.xz) = 0a88b40e7a62cf95862e41b9ec28d568f87fe22e
+BLAKE2s (beamertheme-focus.r56967.tar.xz) = 23d1317b708d136f4c3ee425e497a8a1d9749e538ed1e3d937c70e3dc283e8e5
 SHA512 (beamertheme-focus.r56967.tar.xz) = b3b9be62e244fe4288e77113aa8488e24f83932d5e2b31accd30d62ced1cc8bff4b44183fe2be375e69375862237f18b6f0b40c6201f1199cd1423b09c2a60f4
 Size (beamertheme-focus.r56967.tar.xz) = 4400 bytes

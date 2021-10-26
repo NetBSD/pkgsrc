@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:29 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:13:39 nia Exp $
 
-RMD160 (hyphen-piedmontese.r58652.tar.xz) = 00ecf5ed60a1b51a122827e208bb33fc8b5c29f4
+BLAKE2s (hyphen-piedmontese.r58652.tar.xz) = 8423656604817fae2c1a9e56d3a640791cef77cb04c8a1ad25e922594f58069d
 SHA512 (hyphen-piedmontese.r58652.tar.xz) = fa7fc73edd582ba20b8236507385f0a30f477bb9c79e35fea56aa4020be966b9c4a16a327848dd051fa4cf6e6117ef8a51eb92ed6cb72f6993cb290fa5cd5ca3
 Size (hyphen-piedmontese.r58652.tar.xz) = 3336 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:48:56 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:12:07 nia Exp $
 
-RMD160 (html2ps-1.0b7.tar.gz) = 69d8b528046ca6dc9329975a9a66379df8d41003
+BLAKE2s (html2ps-1.0b7.tar.gz) = 056bbc59971da67cd993e1e7aa0c8f06e3b5d955e67d5069be3c8be713ce3706
 SHA512 (html2ps-1.0b7.tar.gz) = 5b50de983eb3acdb70b5b2feac8e0b4ac01e29c0ca36f6ad6a34b92e0ba8c2f359028e5076b47ce07296ad9992a3f889c82372f90199fd4b12f2549f6c779368
 Size (html2ps-1.0b7.tar.gz) = 128451 bytes
 SHA1 (patch-aa) = 62e0bad17da5e3acf2c0bdbe71de62edf5bdbde0

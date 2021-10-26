@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:49:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:12:32 nia Exp $
 
-RMD160 (babel-italian.r55232.tar.xz) = 81ee62b890464c1442975719ab1e3a59fb4cb1f7
+BLAKE2s (babel-italian.r55232.tar.xz) = ea06d468bcfcb83c16814c33db1608bc2c8a9765c56bf334574f37aa091d813c
 SHA512 (babel-italian.r55232.tar.xz) = 647a87e3e516f4723bd991b973417302c6f369438e6b76c5ef1d795bdc138f31516433af5b93471f0a2692ace29096d6cf8aa49edfadc2e48d1d40c4344dbfd0
 Size (babel-italian.r55232.tar.xz) = 3808 bytes

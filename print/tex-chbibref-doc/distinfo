@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:49 nia Exp $
 
-RMD160 (tex-chbibref-doc-1.0/chbibref.doc.tar.xz) = 24705f884fcd43703cfa441b3093c14c609d9dc1
+BLAKE2s (tex-chbibref-doc-1.0/chbibref.doc.tar.xz) = 8e2239c6464ed09d8209572e60ed7802879dc2cfc6cfab801428d7516f690996
 SHA512 (tex-chbibref-doc-1.0/chbibref.doc.tar.xz) = a79375b66cfda62dea3ce5820cdc00eea6d070c035903e6bf7986583920984e7fbb01b187c34f8619df5bd2e72b2e79fada0056d261e490f3fa25fe89268ccd0
 Size (tex-chbibref-doc-1.0/chbibref.doc.tar.xz) = 169552 bytes

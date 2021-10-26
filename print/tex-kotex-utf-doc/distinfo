@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:50:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:13:48 nia Exp $
 
-RMD160 (tex-kotex-utf-38558/kotex-utf.doc.tar.xz) = d1c06217ca18ecd42086b161f7b6f476ff0fd643
+BLAKE2s (tex-kotex-utf-38558/kotex-utf.doc.tar.xz) = 0cde99a07fc6a27d03c68c068e9d3052807bd7186a877002e0ef1265dab26b0d
 SHA512 (tex-kotex-utf-38558/kotex-utf.doc.tar.xz) = 471d1464143a51201cee681495c4e638f2f1382b3c04fb964d52189f15ffee376d105da10e2036ef99c7976945f5ad9a552e638b2487e661b7ce6b9e274a5d6c
 Size (tex-kotex-utf-38558/kotex-utf.doc.tar.xz) = 6849784 bytes

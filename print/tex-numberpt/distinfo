@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:12 nia Exp $
 
-RMD160 (tex-numberpt-51640/numberpt.tar.xz) = de179e10af4a09a542261b48a471c954321cd7e1
+BLAKE2s (tex-numberpt-51640/numberpt.tar.xz) = 3ae22653b92efdbd40de470dc4aacf45f38a1466fc508b4c5960826b166d68a5
 SHA512 (tex-numberpt-51640/numberpt.tar.xz) = c23fc54514b98cbc31e095f6b1ff37d37eef75146a3eb14e230ee75b71f6d506f148de643ec5e890a565b544b6d05436d47033f0c00ecdccdab697336b61dbf9
 Size (tex-numberpt-51640/numberpt.tar.xz) = 2452 bytes

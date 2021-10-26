@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:57 nia Exp $
 
-RMD160 (tex-lollipop-41438/lollipop.doc.tar.xz) = aaf2c0d9b1443fdc87d142e909bc014a5ea056f3
+BLAKE2s (tex-lollipop-41438/lollipop.doc.tar.xz) = 384611d77421ab864cd52bea544debc9087bdfa786dc9bc2b8f0b7d0f9836761
 SHA512 (tex-lollipop-41438/lollipop.doc.tar.xz) = 29f081dc3184689224d9d109abd48ca21e85edf406d28113bf99e6655b83b5eb96abbb983672ad002ecea33036f29f14d18217efd971dab749cc5279b18421a9
 Size (tex-lollipop-41438/lollipop.doc.tar.xz) = 341372 bytes

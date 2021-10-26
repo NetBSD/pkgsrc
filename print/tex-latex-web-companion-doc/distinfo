@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:52 nia Exp $
 
-RMD160 (tex-latex-web-companion-29349/latex-web-companion.doc.tar.xz) = 10ccbc835ec393fd4adf126d2734e8e921f0c017
+BLAKE2s (tex-latex-web-companion-29349/latex-web-companion.doc.tar.xz) = 49ced173ba65c4005ea64ca0b7f023e150d260e68833ed4375cdf4f2a942928d
 SHA512 (tex-latex-web-companion-29349/latex-web-companion.doc.tar.xz) = cb6babba453be1c498162bc083a5d051e22365b1a79f44543d4b3957f80a3447863736cc58cf79fea3cd65d496437f57cdba9572f2324b898cd67e9c5ce9536e
 Size (tex-latex-web-companion-29349/latex-web-companion.doc.tar.xz) = 272788 bytes

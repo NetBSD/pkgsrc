@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:00 nia Exp $
 
-RMD160 (tex-makecell-15878/makecell.tar.xz) = 2e7425d5e14861ce6151baedc132b5e81bb4eed8
+BLAKE2s (tex-makecell-15878/makecell.tar.xz) = d43126d04f431c3c4095b8f76c91b162859f0fa3aad721c201448cc10bc65388
 SHA512 (tex-makecell-15878/makecell.tar.xz) = 33ace2ccee3c20da99c02f38ce4006888c518f54bfa40ab8ca224d598775a3605928550cb62bea7eb29ddf9c89da8ea540919c80ea3f348d276092f8a39f380f
 Size (tex-makecell-15878/makecell.tar.xz) = 4460 bytes

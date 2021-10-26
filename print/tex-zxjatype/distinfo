@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:52:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:11 nia Exp $
 
-RMD160 (zxjatype.r53500.tar.xz) = 9d640e51f9a093d04509248b8c95e07d421aeb7a
+BLAKE2s (zxjatype.r53500.tar.xz) = d2852406e931b3b5cc21fab58ab2c075cfd1b1e3bf7aa80c7843a2ccad58b010
 SHA512 (zxjatype.r53500.tar.xz) = 21eaace7188c9e61f5dd65f34e26b1ca16358e7396d44188ae17e8e01a58f38ac3be9f09f8f41923c257d089210d1fb7d841eada5c9a345cec42b934d257ef94
 Size (zxjatype.r53500.tar.xz) = 8760 bytes

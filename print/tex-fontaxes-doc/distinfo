@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:23 nia Exp $
 
-RMD160 (fontaxes.doc.r55920.tar.xz) = 3a83bf6ac4995e0253efcee3c041af634097cf6b
+BLAKE2s (fontaxes.doc.r55920.tar.xz) = de03eac59eb846e297684737e4f09a17909bad86366ee31aeae882cda8d9d4eb
 SHA512 (fontaxes.doc.r55920.tar.xz) = c37621f082498bfc4c2ed0717fbe18b56032a7d5faef1ca7a73c4fd22adcfb8f7e517ced768511636d4c8488932d3b33a96137837f34c79416b9c5d8d852456c
 Size (fontaxes.doc.r55920.tar.xz) = 128948 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:05 nia Exp $
 
-RMD160 (tex-cyrplain-29349/cyrplain.tar.xz) = 0838f6f2184844ebd5fbac1f8e551bbbb2fe11cc
+BLAKE2s (tex-cyrplain-29349/cyrplain.tar.xz) = e4373055e044c55c68195a5b51e4d315df844a81548d857fca5769e6aaa52536
 SHA512 (tex-cyrplain-29349/cyrplain.tar.xz) = 6b2a96b71765151bd5986966c21a015ab92d38565ac77af3489667c399b8794cc4d69146465f8484fc7cac546b84b932775b5323c883e74c5ff3d10e89a184ac
 Size (tex-cyrplain-29349/cyrplain.tar.xz) = 8476 bytes

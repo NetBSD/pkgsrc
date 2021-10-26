@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:48:51 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:12:02 nia Exp $
 
-RMD160 (apsfilter-7.2.8.tar.gz) = 69f6cf26a2f47623ae3cd78746abc5ab9278da9c
+BLAKE2s (apsfilter-7.2.8.tar.gz) = f22d0c14a5a3ec7ccbb810a736a329637e60ae8253dcf2a9f16916225d4f3847
 SHA512 (apsfilter-7.2.8.tar.gz) = 26f725fb9c60e795088d85bcae2066a4edf6e3935afd7f0f18d56195fb90558c6b16a692be3274b2e44bd0f63551fddf29581bd914f5a1387af8a46a15ce6f11
 Size (apsfilter-7.2.8.tar.gz) = 364413 bytes
 SHA1 (patch-SETUP.in) = d9ef241fafb670a2937a7a9ffc578e943120f287

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:52:04 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:15:14 nia Exp $
 
-RMD160 (zathura-0.4.8.tar.xz) = 966553db8193fd38199dd7833c0c8ce5cc90ca2d
+BLAKE2s (zathura-0.4.8.tar.xz) = 950b271697826780ee5e37543120fe71e381717b57f08891bee53f2b4810c668
 SHA512 (zathura-0.4.8.tar.xz) = e160c0a02370ee1ed797013437f80d8841f684389695e5422b616b45410fe897f8d9183e8264f6c98a6ec5a09c5a7c21063aece96e454e3a2d4a02b8b86f6e97
 Size (zathura-0.4.8.tar.xz) = 159500 bytes
 SHA1 (patch-doc_meson.build) = f989cd35ef4b1a910470117ccaf734a917e7fc8d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:29 nia Exp $
 
-RMD160 (pxrubrica.doc.r58168.tar.xz) = 87679173fcec881960a06465b291a33dd13c9ed4
+BLAKE2s (pxrubrica.doc.r58168.tar.xz) = daaa5045214c60d050a77b77a9b1170f43ea95855b82850777795c242fc02139
 SHA512 (pxrubrica.doc.r58168.tar.xz) = df0b339e6ea2ac03d47161fe7eb278df31b391fb129f2f763f87e9e27a6b78f8da8172baab154e9b9f3b62e7fed88b400654a7bc47aaf0222a47f4746a48f5a8
 Size (pxrubrica.doc.r58168.tar.xz) = 723764 bytes

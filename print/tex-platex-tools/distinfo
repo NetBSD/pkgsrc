@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:22 nia Exp $
 
-RMD160 (platex-tools.r59403.tar.xz) = b48b383efee45c66aa22cf5a899de2f672336b7b
+BLAKE2s (platex-tools.r59403.tar.xz) = a0619a13be6903d75baa87678f0ee7c3776adf288cf1721944f56efeecef7bb5
 SHA512 (platex-tools.r59403.tar.xz) = 9237bbb607cb8158176bf5f24acd663e27133a6b0abbc4cef26443a55a499ac354231d378ccc177d4f11bd97f9297c91ba5126071099a867e7c45fc2a471dc7b
 Size (platex-tools.r59403.tar.xz) = 8240 bytes

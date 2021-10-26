@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:32 nia Exp $
 
-RMD160 (revtex4.r56589.tar.xz) = 242041c2e464d4ca7feb208d77067478ef4b9bcc
+BLAKE2s (revtex4.r56589.tar.xz) = 7df68e563bd9459af8a91faae93ec87490845c9267cd965aa187535ac1ea7a1d
 SHA512 (revtex4.r56589.tar.xz) = cd1f83a7f2664c6002b93bf7ac3b5dfef4767b79f66cd03ed738e395027736d062d23f1a6a9354834093857d467664168295e615ed1c734b708c098943d7bf87
 Size (revtex4.r56589.tar.xz) = 47488 bytes

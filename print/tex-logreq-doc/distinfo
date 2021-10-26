@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:57 nia Exp $
 
-RMD160 (tex-logreq-19640/logreq.doc.tar.xz) = aa85731e781692259922d9cad821fb87699db441
+BLAKE2s (tex-logreq-19640/logreq.doc.tar.xz) = e769951fc54788f83d4c6a36e03514277144b1be24cd3081f2dc63ece6226f66
 SHA512 (tex-logreq-19640/logreq.doc.tar.xz) = 525cc43a97b27d1ae99c94306d67db84eca329ac4bb0ac50e07dde9e72db90a7a1199057af35eb0ecbe6be06526221490fdc6547a9571127aa79cb1c5eec5d48
 Size (tex-logreq-19640/logreq.doc.tar.xz) = 3788 bytes

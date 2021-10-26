@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:49:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:13 nia Exp $
 
-RMD160 (psify/Makefile) = 14a95b0e3762e2f893411fe36da0fb9df6e600dd
+BLAKE2s (psify/Makefile) = 31e93e12fe75bbea65092e214cefecf53a595227952fef6989fe189ad84a35d7
 SHA512 (psify/Makefile) = 8c351ea94aaa519ab9a83747e4750ef18787a73d204717340f3eb6828b236c15db4ad9962c85b005078528e113e32d6f93724029682347fdaf1e645ff1b7e72f
 Size (psify/Makefile) = 498 bytes
-RMD160 (psify/psify.c) = 364d30af13d7ab7dd0c0fab35ac02aa40219d336
+BLAKE2s (psify/psify.c) = 90bddd81bddc188a1f798c1626da56d7264af112b9f484a6b346b62f65c9bdf2
 SHA512 (psify/psify.c) = 36794d9bf0107b5a626b9b62b4234c1b03f0d7993a356902ed86a1fa29b9a8c9f17c62e6a53a63d286058bae5428b97ab626dece097b0267cd937094cc06c9ba
 Size (psify/psify.c) = 12855 bytes
-RMD160 (psify/psify.lex) = 7ede8e7ad15ac39e3fe4c2f7e547f75d8338abde
+BLAKE2s (psify/psify.lex) = 23561a8b8d63673744363233f749002a68e28fce4003363d702eaa04cf73a6ab
 SHA512 (psify/psify.lex) = c4fceadd95840ced1d563071ea3e161bf61bab94b3c2540b9ce0c141b764d03ec7603971e12143615a6d5392777f60cb063dbdbe5a6b06cb0356493f8c372230
 Size (psify/psify.lex) = 18541 bytes
-RMD160 (psify/psify.man) = f79e5be3f81ead748e45afd07ae84b0d8ef2b087
+BLAKE2s (psify/psify.man) = cda63c44e0d9f2613b1b887b7c262647baf6e8a100aba54ef73c83ff503f5511
 SHA512 (psify/psify.man) = e409f3a9a3ee09854fd377e3dbbac10a468f495b6b1dc1da2ba37bb545911f2f379da12ae19909716dbbe67455d03cbb4b12bee02a0c19afe55aba0b104a4931
 Size (psify/psify.man) = 4023 bytes
 SHA1 (patch-aa) = 27c1fca4a45b5a29e10605654cdadbfe7fc9ff9a

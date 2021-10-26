@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:42 nia Exp $
 
-RMD160 (tex-stdclsdv-15878/stdclsdv.tar.xz) = 91538a93c73921c1bac926a89d360c83bd833f13
+BLAKE2s (tex-stdclsdv-15878/stdclsdv.tar.xz) = 9788e22fbd8b3b73154c22463b7e0775d2dae17d494b09c9382cb375480fc9ba
 SHA512 (tex-stdclsdv-15878/stdclsdv.tar.xz) = 2d1e12270bc980932ab910f7b512e8e1e44529f05e5f0c76a69ceadcbb56dd037d374f3dfde95aa4c24d734a39cad7d3c451fafe5bc2bf61d0e99f687bf526a6
 Size (tex-stdclsdv-15878/stdclsdv.tar.xz) = 1488 bytes

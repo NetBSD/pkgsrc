@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:30 nia Exp $
 
-RMD160 (grfext.r53024.tar.xz) = 7ff432fecc9f76dca77857854dfc16db906a757d
+BLAKE2s (grfext.r53024.tar.xz) = e3a38f6b712806554cc8b64e677a8a382afc2cbf36e270f614b276d6733cdb0a
 SHA512 (grfext.r53024.tar.xz) = a5f68f2bb2ea26d4b8f963a1b8fb8adfb3bd32e3a139dca57e6b45d80fcdd94c5e846549b1292224b9d845fd6a4d0ee56d4c2d2fbfc12c24806eca8551b9dc96
 Size (grfext.r53024.tar.xz) = 2340 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:48:56 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:12:07 nia Exp $
 
-RMD160 (ghostscript-9.06.tar.bz2) = 11ef74cf783ec5f7cde0ceaaf2823a1f62fb4d1d
+BLAKE2s (ghostscript-9.06.tar.bz2) = a85323a41a02c40da691432471e37b9279d10331aeaa62adbb5547bd39f24988
 SHA512 (ghostscript-9.06.tar.bz2) = 99f7a56316bf96d55c0cd7b07c0791ad4e6ee0d3a8f3bfa04ea28890ea9ed822ebcd7084cc8118cc38dc5def27c91c24eebc08a20a630463a9bf9d0193d0923b
 Size (ghostscript-9.06.tar.bz2) = 29246039 bytes
 SHA1 (patch-CVE-2012-4405) = 1dcb4cfeceb366c144e0a1337c6ccc2d8e13e4ca

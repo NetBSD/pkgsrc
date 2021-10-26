@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:26 nia Exp $
 
-RMD160 (appendixnumberbeamer.doc.r46317.tar.xz) = 630e677102462805569bc3701f88d55e28b26bb3
+BLAKE2s (appendixnumberbeamer.doc.r46317.tar.xz) = a1e773957d1e1adb8c99d6e47d02747e57e62ba0b6a610d7bbefcdd6008a58b7
 SHA512 (appendixnumberbeamer.doc.r46317.tar.xz) = 58b32eacfbcd8e024a4cf3dcea0c1d057010dd454c1e54b6752b970a3fa1a9e10eb15d8cee9dbb9ae032aaa8b6c070079b112f5a91b1c9617df40877a4a3454b
 Size (appendixnumberbeamer.doc.r46317.tar.xz) = 676 bytes

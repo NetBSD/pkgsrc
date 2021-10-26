@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:54 nia Exp $
 
-RMD160 (tex-leftidx-15878/leftidx.doc.tar.xz) = 478ed2debe646a05725644672d46f80086f53fc0
+BLAKE2s (tex-leftidx-15878/leftidx.doc.tar.xz) = 34850dc46e3c9fe680bb78a0a0d41e32eb15c3bafb087196ecd9b7ba7fb3ce28
 SHA512 (tex-leftidx-15878/leftidx.doc.tar.xz) = eb4637ccf7f7ded07492d8c3a9c119d69f3359d26e1f078414a9caba1149c0b44b417eca5544f8b52f25ca01d23f8d7ac347609bea6f79239985ce70b7a4c8a4
 Size (tex-leftidx-15878/leftidx.doc.tar.xz) = 50916 bytes

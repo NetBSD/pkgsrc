@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:45 nia Exp $
 
-RMD160 (tex-c90-37676/c90.doc.tar.xz) = 1686ebc1fe9f5b4ff2f188227308b510d181c109
+BLAKE2s (tex-c90-37676/c90.doc.tar.xz) = dfe74e25b81acd89df480fc7a54904e13746ff1846d9676877d465cfda374b37
 SHA512 (tex-c90-37676/c90.doc.tar.xz) = fe79f1d029b8bdba3671cc252ccf65abff309df3245b86844323a23cb8e40956880ca33742edecf828aad78892185f6b97696b666aacd31b171cadeeac4df100
 Size (tex-c90-37676/c90.doc.tar.xz) = 86520 bytes

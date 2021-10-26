@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:51 nia Exp $
 
-RMD160 (tex-textfit-20591/textfit.doc.tar.xz) = 5e01636600af77b82642358715a94346b3928cfd
+BLAKE2s (tex-textfit-20591/textfit.doc.tar.xz) = c7257704e8200f1a9f64e8e820bdeed29afed1a520ddcf1e7f1b4dc2fa066946
 SHA512 (tex-textfit-20591/textfit.doc.tar.xz) = b097bda807ae0021f35c27d67679918ed401baef07028a4c76290129b53b40d638919a90f7d53efd491da10399d9705d4324759132de735ae5b7cc5008c5401d
 Size (tex-textfit-20591/textfit.doc.tar.xz) = 162372 bytes

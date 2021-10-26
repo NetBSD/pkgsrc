@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:44 nia Exp $
 
-RMD160 (intcalc.doc.r53168.tar.xz) = 057c7059fcd4415923f44413be8a0ffb090bfa67
+BLAKE2s (intcalc.doc.r53168.tar.xz) = 0d79edac5149bc49c0d9ce2d1e6f76d4021c6ff5a19b579482eb3d0fad31fdde
 SHA512 (intcalc.doc.r53168.tar.xz) = f3cc5dba031957d77cdf39d902eeda96c8405efef52352109a7bfb187e363321d31120b4c66ed4b2e990fbd7085b927599a0956749e4303611cdbec5d9d7179e
 Size (intcalc.doc.r53168.tar.xz) = 423196 bytes

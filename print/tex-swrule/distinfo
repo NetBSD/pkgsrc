@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:44 nia Exp $
 
-RMD160 (swrule.r54267.tar.xz) = e1f9efff1a4a126c1ac99a3f6748c532a4a5853f
+BLAKE2s (swrule.r54267.tar.xz) = bfe4fbc28144928e1cb2f7a173ae456484610091c74409a1d6aa611a01fe503b
 SHA512 (swrule.r54267.tar.xz) = fbb2a8fd060e41340a876595310b54d069cf808d4e2eacba0d913732fe45a3cea698c1e6e229dd152666f7b509eca424d17378c74ad14edd0d5f08ec85c6c65a
 Size (swrule.r54267.tar.xz) = 1512 bytes

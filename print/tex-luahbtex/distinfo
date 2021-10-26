@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:58 nia Exp $
 
-RMD160 (luahbtex.r54498.tar.xz) = cccb0ac36668ee29efa4d154da2916f04e45b294
+BLAKE2s (luahbtex.r54498.tar.xz) = 3e225cb67a5d998231e51b9857034a00bc04376f0f909c793b8cc0333fa8e026
 SHA512 (luahbtex.r54498.tar.xz) = bffea9c260475928b1e40bda867d2dd2198f96aa08923cc63c5ba512d2490fcf1e8db686729cc04b0e62cae1dfededd13d4eeeae5ad321b42a9bf1219c0248aa
 Size (luahbtex.r54498.tar.xz) = 460 bytes

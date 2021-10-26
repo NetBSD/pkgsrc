@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:09 nia Exp $
 
-RMD160 (tex-newsletr-15878/newsletr.tar.xz) = effbb70e96e31d228e2d04c80f02e5df88a915e1
+BLAKE2s (tex-newsletr-15878/newsletr.tar.xz) = ac1f9535b4c90b34510bad56ed6c3c06ff23334866b8bfa028fa57a076a7441b
 SHA512 (tex-newsletr-15878/newsletr.tar.xz) = adbae20796711244b2c7748400092937b4bac6978ded2515f0a908e4cd6090c8a798a826bf5a751639655b234af016e2f1af42a869e45921c26fbde70b0ef04a
 Size (tex-newsletr-15878/newsletr.tar.xz) = 16776 bytes

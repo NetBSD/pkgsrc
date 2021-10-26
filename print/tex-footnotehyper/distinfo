@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:24 nia Exp $
 
-RMD160 (footnotehyper.r57618.tar.xz) = 5402891609d95077ef52cadebee9f18c0c683ba3
+BLAKE2s (footnotehyper.r57618.tar.xz) = 2fdde94398396d33c92bd20ec652f7163e85f4969ee82831e675bc02a367f4c2
 SHA512 (footnotehyper.r57618.tar.xz) = bac7b7ce8ec3f74d85e0182f1d65fd0c365c16426fcc725407e1d8146ebc15422fe2e10f20570e68802ae2ac405aecf55ec3dff45e7e6c1bca7b57059e0dd6d2
 Size (footnotehyper.r57618.tar.xz) = 3372 bytes
