@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5287 2021/10/26 09:55:27 he Exp $
+$NetBSD: CHANGES-2021,v 1.5288 2021/10/26 12:22:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8044,3 +8044,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/nghttp2-tools to 1.46.0 [adam 2021-10-26]
 	Updated devel/py-traitlets to 5.1.1 [adam 2021-10-26]
 	Updated net/radsecproxy to 1.9.1 [he 2021-10-26]
+	Updated devel/py-astroid to 2.8.4 [adam 2021-10-26]
+	Updated devel/py-pylint to 2.11.1 [adam 2021-10-26]
