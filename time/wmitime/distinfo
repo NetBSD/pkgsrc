@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:04:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:24:44 nia Exp $
 
-RMD160 (wmitime-0.5.tar.gz) = d37bcec96e732f5c1faa57a2181330c07f289f4a
+BLAKE2s (wmitime-0.5.tar.gz) = 7679be93962e0bcd2278dec63575b0c6f1ee7b10a33c3966c892492e7fd5c4d1
 SHA512 (wmitime-0.5.tar.gz) = 8fe05c7cf1a0ccb2172845ab74a298f01eaff3dfc536bbf363f26253a9d12d0fa3f514e24e71c5b186ff38dd5e1faf1152203443e473509ce5df243fd9623144
 Size (wmitime-0.5.tar.gz) = 15099 bytes
 SHA1 (patch-wmitime.c) = abbb262e307be7da7960dde3e8d76db3a366bf7a

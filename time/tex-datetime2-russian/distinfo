@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:42 nia Exp $
 
-RMD160 (datetime2-russian.r49345.tar.xz) = d946e61b02f374973e7aa3b473fbc67da60ecb15
+BLAKE2s (datetime2-russian.r49345.tar.xz) = 0712732cd7836ae0bf0e300794f971b7c5bce26f4d6b3eaa98f0ad2f1d578ce2
 SHA512 (datetime2-russian.r49345.tar.xz) = 2821680ce189aacf8b0303d5698d9359f240ab4e470c0e2b052235e6aaeeffc882ea4b9c9c4f91d52b1402ef7486c7115bab8058e2223b7ebd3186fbd4c4c34f
 Size (datetime2-russian.r49345.tar.xz) = 2704 bytes

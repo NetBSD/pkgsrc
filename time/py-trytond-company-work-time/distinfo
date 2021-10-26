@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:35 nia Exp $
 
-RMD160 (tryton-4.2/trytond_company_work_time-4.2.0.tar.gz) = 14250552c01d8813ef44bc3262fd34675c7fdbeb
+BLAKE2s (tryton-4.2/trytond_company_work_time-4.2.0.tar.gz) = 3939cf3966fc66bce90d15431ba31026fe58909e6898c53e63572196ca32a772
 SHA512 (tryton-4.2/trytond_company_work_time-4.2.0.tar.gz) = 780ed14010bfa7c2e988ea83ba4bbec2558fb65fa396daede1c5dedcf231e4fcb93da8c4ac1b2c9d2a0dc66263bd1645216c58e8dd02b8c62bad27034bd87428
 Size (tryton-4.2/trytond_company_work_time-4.2.0.tar.gz) = 20027 bytes

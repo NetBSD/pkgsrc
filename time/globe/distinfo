@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:03:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:24:19 nia Exp $
 
-RMD160 (globe_14Aug2014.tar.gz) = 85f00508aa7625bbe3296ffc4b465c26dd8351a6
+BLAKE2s (globe_14Aug2014.tar.gz) = 47c3a5b5c1305f8569f444029070946f117311a976611b1cca7f9202c573a695
 SHA512 (globe_14Aug2014.tar.gz) = 4bf472ecbedb1582bc4caa71bdce3dd44914d9263d58277bc9b82184a8621fb2ebba26ad49aee7a29e625816009604b49fc02719c0a3cfe8351b70463b89bf46
 Size (globe_14Aug2014.tar.gz) = 9956 bytes
 SHA1 (patch-Makefile) = e1b8fc509e618053e24c552d7dcc5b56b490de91

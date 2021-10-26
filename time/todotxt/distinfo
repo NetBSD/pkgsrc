@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:44 nia Exp $
 
-RMD160 (todotxt-2.12.0.tar.gz) = 93b8e4717bfbead2a82fa8382a3f0146b67107de
+BLAKE2s (todotxt-2.12.0.tar.gz) = be7573b30ddb8cf267cffc69d60be8e2028aa4ce33176a2bfda855bdf8f8b815
 SHA512 (todotxt-2.12.0.tar.gz) = 3b30d5e395f878811831f57e8e1a040c990e1f042f57050b6381d83ffc8b92b1ce20bfd3c5aa8b5e028b4810a5b289599603b2e16efff8badac559d200ed79f5
 Size (todotxt-2.12.0.tar.gz) = 716524 bytes
 SHA1 (patch-tests_test-lib.sh) = 8ebfce7cbe8c4a4f051a7f7bbbe9034e04264b5a

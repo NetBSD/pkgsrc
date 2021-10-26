@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:39 nia Exp $
 
-RMD160 (datetime2-czech.r47033.tar.xz) = 09d7ffb35428a967719250a7aa00d285ad8d544e
+BLAKE2s (datetime2-czech.r47033.tar.xz) = 9dccc3789f3dc90a2f9e756ed6d1ce3a8eb24ee041304a83002ac0da9621ecaa
 SHA512 (datetime2-czech.r47033.tar.xz) = 048ffe6258ce1d4bf9d098e7623d3c5e25ef8215a538e33806c4d35d6368fda81941ff9adbb394085c9b4f058fe9a3b02cbeeaae8cb1f7b2bb55aaa35c743d61
 Size (datetime2-czech.r47033.tar.xz) = 2568 bytes

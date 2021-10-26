@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:29 nia Exp $
 
-RMD160 (Template-Plugin-DateTime-0.06002.tar.gz) = c567b6c21df2b473f018139093ccfd73c0eefe6b
+BLAKE2s (Template-Plugin-DateTime-0.06002.tar.gz) = d941856d7d5b6935c76cb260d50c335f9f20aa2f4aded793e9af8439c5066b8b
 SHA512 (Template-Plugin-DateTime-0.06002.tar.gz) = 9dc79480ea9ec56d1846206e435cfb318daa671e71738624e7d3fa47d60cd3e00b2405cedbc1dba2e26b792589c90db558c3be1c9e7b0a9e5eec7f321d0b3ea0
 Size (Template-Plugin-DateTime-0.06002.tar.gz) = 19622 bytes

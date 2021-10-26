@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:40 nia Exp $
 
-RMD160 (datetime2-esperanto.r47356.tar.xz) = f2e96aba2ee8ae99be61d49cc1689397b23421f3
+BLAKE2s (datetime2-esperanto.r47356.tar.xz) = 03eb2d053a5c727622d5d3b726566ac6ee1aa1f50681566c096b109a8d28835c
 SHA512 (datetime2-esperanto.r47356.tar.xz) = 6406e5a6708c1c97da6e0f8460ba70d61c403875497c57008013a3d1a8a9100b344b3d7267ed869f777566aa403110e17d778e2a47b3970846324bf08e8ae046
 Size (datetime2-esperanto.r47356.tar.xz) = 2484 bytes

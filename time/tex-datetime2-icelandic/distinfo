@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:41 nia Exp $
 
-RMD160 (datetime2-icelandic.r47501.tar.xz) = 12d9e7a7638baabe411fe83d6794bac776b9e481
+BLAKE2s (datetime2-icelandic.r47501.tar.xz) = 5c97bdbf3a783a66fb1801f7516014a624216c12442114eb2ae3eca81b3fedce
 SHA512 (datetime2-icelandic.r47501.tar.xz) = 50b5b4a4dbe38b669929637c9b22517b960ac0eab3486705efbd92e57e50c7c3a7f46c0d2ab0048a1c382f052589f091724828e2139d8796408edb899cac2e50
 Size (datetime2-icelandic.r47501.tar.xz) = 2552 bytes

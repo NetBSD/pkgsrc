@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:03:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:17 nia Exp $
 
-RMD160 (R/tzdb_0.1.2.tar.gz) = 87e3d10c47bb0f8d74c06ea8fad6a1cc3a1f4d54
+BLAKE2s (R/tzdb_0.1.2.tar.gz) = 9fc6f4e182f55dd9413a93d714362964ff0057599ea2dad45767b9e790ae5ee8
 SHA512 (R/tzdb_0.1.2.tar.gz) = 1614dc981da00046afa0fbb5afced90fe804cb5f5095d97d0d17bc4ee75b322d98228a62fb25ea84d7c67fc4b03b7bb1f070468c2403d914e978daebdf11a65d
 Size (R/tzdb_0.1.2.tar.gz) = 550301 bytes

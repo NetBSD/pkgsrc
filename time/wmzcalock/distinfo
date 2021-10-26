@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:45 nia Exp $
 
-RMD160 (wmzcalock-0.1.tgz) = 902383d9046fe38932ed0e700d678cd5e5e82ed2
+BLAKE2s (wmzcalock-0.1.tgz) = bfa4098c65dda2bf6ccc0b15f21320c11c777822a4f64a6304e0ee07fd5d2b01
 SHA512 (wmzcalock-0.1.tgz) = c611ec9bd6dc37951015b1b3726352a9ec1125d9a3ae3fa61d78a127f89f6c9b0772bc3ab9c3fef3e3764f0b2bb14f446a7121c0e58f6bd97c6135efdf2fb034
 Size (wmzcalock-0.1.tgz) = 47451 bytes
 SHA1 (patch-wmzcalock.c) = 9a2a3d97953f4870b83a7198f64a0aafcb97066a

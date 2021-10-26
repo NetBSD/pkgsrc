@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:27 nia Exp $
 
-RMD160 (DateTime-Format-SQLite-0.11.tar.gz) = acb1ceccca1b0eaa0a809c4f810ea30bd41346f7
+BLAKE2s (DateTime-Format-SQLite-0.11.tar.gz) = 1471c02b32cd14962cbccb1769f7d978b89ed6108e2452c5ed1268b0dccf752c
 SHA512 (DateTime-Format-SQLite-0.11.tar.gz) = 061f831c2a8d653706d315c1cff24ad887e3f8c65afdbd2140066735649c097be921f217e6e2761f8f34604066c618f296d40e9c650c3a1bb085cadbdfa7b7b9
 Size (DateTime-Format-SQLite-0.11.tar.gz) = 13089 bytes

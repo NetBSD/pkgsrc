@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:39 nia Exp $
 
-RMD160 (datetime2-breton.r52647.tar.xz) = 0fa23cec717a914a1293fe77e624001df04fd60f
+BLAKE2s (datetime2-breton.r52647.tar.xz) = e08db2acee6e382d7af1f2c1714097043f668a243ad39dba3a1786a9d40306be
 SHA512 (datetime2-breton.r52647.tar.xz) = 725766f3227119012a79807c5909daab83e8056718cc4e116d8992d13e11867439d71392cdd8a2118f2d8ead61b1d36af5ae42438f8ca68f26ea14f0bb7cd0c7
 Size (datetime2-breton.r52647.tar.xz) = 2576 bytes

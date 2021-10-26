@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:35 nia Exp $
 
-RMD160 (trading_calendars-1.11.2.tar.gz) = af1f65e5a6d0f92dbccfeb3bf0f074c0be20030c
+BLAKE2s (trading_calendars-1.11.2.tar.gz) = cb4e50e0912389da77c70b300ffbfd411ebbf81f4ddbc3241a7861a6a6028e52
 SHA512 (trading_calendars-1.11.2.tar.gz) = 56450ba29df88610085cf7c2bc6a8db8b68cd0288b17b8da3b3bcb60980391ffd58b3fe93ddf2d22a7de04e4002ab8623801765b17dd91f4d959075d725e1673
 Size (trading_calendars-1.11.2.tar.gz) = 100327 bytes

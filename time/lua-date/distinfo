@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:03:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:24:23 nia Exp $
 
-RMD160 (lua-date-2.1.3.tar.gz) = 17d2c1c16ead3641355cd924b6e16302bf1f1a35
+BLAKE2s (lua-date-2.1.3.tar.gz) = 4604f08dd9f8af1b725f7a4d281390eb4126f10a0d85676576e0f1195651b15d
 SHA512 (lua-date-2.1.3.tar.gz) = ea0249cced36b564c2181c172ee75c73667f3349d75ef4f9f16d8af8d5415631b7e27ed2824952a19ee5a8c93ec757163bef32d5972547cb5e315b52885f0bd6
 Size (lua-date-2.1.3.tar.gz) = 30072 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:34 nia Exp $
 
-RMD160 (pytimeparse-1.1.8.tar.gz) = e56358a299e95b6593e39f2b57013a4157a412b0
+BLAKE2s (pytimeparse-1.1.8.tar.gz) = 3feabb07b452db8a41cc6c5526f681542d43e7a9811538ed8e88319468a1c6d6
 SHA512 (pytimeparse-1.1.8.tar.gz) = 9eb4530d779b940d66412920eefa4f4d3c43719aa3e4104da4f337c05421bcbb6ad4cb2d6459ddfac770fc9f19960a9d8ce578e67f2513499a7bee8efe9541ec
 Size (pytimeparse-1.1.8.tar.gz) = 9403 bytes

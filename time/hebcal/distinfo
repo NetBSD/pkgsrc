@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:03:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:20 nia Exp $
 
-RMD160 (hebcal-3.11.tar.gz) = 3a0d21bde2eefa9299fc62ab2eaef34685adb7af
+BLAKE2s (hebcal-3.11.tar.gz) = 5abc683b1d013e8d99225cde52732582e14c01917583fabed2b2c7284ac0723f
 SHA512 (hebcal-3.11.tar.gz) = fb243d9ff5309ffbdb8967c922f5a22c2c62532b5b276a920b0ee47dd75f22c95b7fc69799061b9ea4d8f0093123deffcce6b9d964d90d4783ab56fb77fa1e2a
 Size (hebcal-3.11.tar.gz) = 226647 bytes

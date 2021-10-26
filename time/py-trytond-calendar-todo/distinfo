@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:35 nia Exp $
 
-RMD160 (tryton-4.2/trytond_calendar_todo-4.2.0.tar.gz) = 11d0156eaba07d146035ad8352cfb6f387734cde
+BLAKE2s (tryton-4.2/trytond_calendar_todo-4.2.0.tar.gz) = bdf30ae93f251f38787f9d39900bf66d69d02bcd31c83b84cfe3d568eea78701
 SHA512 (tryton-4.2/trytond_calendar_todo-4.2.0.tar.gz) = 260a98861c532d706b87b7bf302b17b741754dd635fbb2fd46a3ef0e6dc6929b46c423dcb81e6b3dce13d5bf7473fca02ba2697b2d0fa25f0f60bb007e966f7d
 Size (tryton-4.2/trytond_calendar_todo-4.2.0.tar.gz) = 50565 bytes

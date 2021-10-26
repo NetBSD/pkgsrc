@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:04:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:24:25 nia Exp $
 
-RMD160 (DateTime-Event-Random-0.03.tar.gz) = 360c45dbeb422ce74db254be4fc86efdedef8216
+BLAKE2s (DateTime-Event-Random-0.03.tar.gz) = 15c62a958fa53250b469f77105465ad159873f277bb45f622856092f97934ff2
 SHA512 (DateTime-Event-Random-0.03.tar.gz) = 51c4925ff8fccaa8cd0af3c358d148c5a41a648084f22ec46b76da0451c7557272f5baf7454b518ea97ecb42e6b2a5b03e8095c9242d30b46052d616dffd8d3f
 Size (DateTime-Event-Random-0.03.tar.gz) = 14374 bytes

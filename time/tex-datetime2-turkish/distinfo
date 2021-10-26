@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:43 nia Exp $
 
-RMD160 (datetime2-turkish.r52331.tar.xz) = 63eb09250f759514f6218e03954aad424b09f301
+BLAKE2s (datetime2-turkish.r52331.tar.xz) = 785b13d9790e230389667f749e76e27a3b06a9344ead1ddf4dd96f6a9b8d47eb
 SHA512 (datetime2-turkish.r52331.tar.xz) = 7d4b756ab2f102c7981376d6f87e5a7f7b47d57b1ae9f821185bd5b04e7a5d9a81aebc7835a9bb43a217dffcfceb5b2c46b838bc652dab7c2f468d9510c2ee4a
 Size (datetime2-turkish.r52331.tar.xz) = 2480 bytes

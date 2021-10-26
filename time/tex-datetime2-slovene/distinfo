@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:43 nia Exp $
 
-RMD160 (datetime2-slovene.r52282.tar.xz) = 192621e31869dd96730f18dbc791b0b3399da969
+BLAKE2s (datetime2-slovene.r52282.tar.xz) = 9d88c996ff1c108907da8958ba582ddcca2ab5f4c85ee4db153ba5899d490f75
 SHA512 (datetime2-slovene.r52282.tar.xz) = 1d0a73d3781fcc9ea0df63e391f6b7a0a254bfa920c63ad1a0c76b56d4770822bc4e049ce18c554974bbb20478150cd7a4f545ef8983bacd31a112fc3acd5419
 Size (datetime2-slovene.r52282.tar.xz) = 2480 bytes

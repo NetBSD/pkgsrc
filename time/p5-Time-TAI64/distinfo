@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:30 nia Exp $
 
-RMD160 (Time-TAI64-2.11.tar.gz) = 9759cdce5102904e785e97e3b0c09a75b329aaa5
+BLAKE2s (Time-TAI64-2.11.tar.gz) = a42f2af4efad899e94850224e259a1e93964ca671aadd0d3aeec4aac5f853ca2
 SHA512 (Time-TAI64-2.11.tar.gz) = da3988cc0475c90a2fbf3867b9ec354d04b7d0cd4946597b5eb482b0a8335876bd0db9d49b607dc416d12ba119e72789aceebaa127c042c0a2ff40445e0d418e
 Size (Time-TAI64-2.11.tar.gz) = 5881 bytes
