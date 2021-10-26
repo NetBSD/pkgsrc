@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:44:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:09:35 nia Exp $
 
-RMD160 (lottanzb-0.4.1.tar.gz) = cf576f92628e505f282e88b7c6c523429c1b5c75
+BLAKE2s (lottanzb-0.4.1.tar.gz) = ff103ac773063c8107d228da45b4abddfc3f9e9ecfba3b409d118ecf98e05059
 SHA512 (lottanzb-0.4.1.tar.gz) = ff9dd4ba800e28205ceecdaf741623ca19028badc53a9b3ed5c846a1cba35dacebc9c524a661cf6e4021e557d71761ea06d958bf1691e60a516b126127901232
 Size (lottanzb-0.4.1.tar.gz) = 4003577 bytes
