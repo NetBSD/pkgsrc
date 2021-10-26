@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:43 nia Exp $
 
-RMD160 (datetime2-usorbian.r52375.tar.xz) = 33a738c883cc1d2c7b8fe7773247d2553682366d
+BLAKE2s (datetime2-usorbian.r52375.tar.xz) = c4a0fea7353edac46059a8d05b2d9665f3922a8aa5fd96a5f2ec7b100b30670a
 SHA512 (datetime2-usorbian.r52375.tar.xz) = bae799fc523f01f7c70c7818ced0294bbb57a849567e05768c4f1c3f9cbe241755ac2dbda0a9ce0e3bb3f70eec45bae1c0607410302b458370a4c05951d791cf
 Size (datetime2-usorbian.r52375.tar.xz) = 2760 bytes
