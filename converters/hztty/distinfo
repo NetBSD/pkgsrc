@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:29:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:06:41 nia Exp $
 
-RMD160 (hztty-2.0.tar.gz) = e9e1250ad55fff042e62b9a99c75315641f9e73b
+BLAKE2s (hztty-2.0.tar.gz) = b7ae37d8e627915a1384976a2e63568b43842e34d46f7fc34f03884162450341
 SHA512 (hztty-2.0.tar.gz) = 30ec6603b507a8fae64a1bb6d695779e7d991d34bae2adcd068f05232023857e8f2d88f991506d0a7afd7fb31d28df9b48cdfc26690c31e2e38266396a586345
 Size (hztty-2.0.tar.gz) = 229189 bytes
 SHA1 (patch-aa) = 9091f33afb6eb5a8ca98ca937bf7e5488a337111

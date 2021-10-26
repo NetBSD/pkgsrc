@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:29:09 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:06:50 nia Exp $
 
-RMD160 (zfec-1.5.5.tar.gz) = a1c8fc1f2532ae4ed3e005e704258c423c8ea90e
+BLAKE2s (zfec-1.5.5.tar.gz) = 0b29d9831810bb121af9068cb8d9337c3ac2e05ad6c95ae8aab74b9e936e0286
 SHA512 (zfec-1.5.5.tar.gz) = 35fe828b1c18cd3abc8c44f882ade83719d764d0fa62c9d16e9a667d7a096dd6e6a25d55887a2d08e554a5554fc00296dae4c275883d030c854483b26ab3a63b
 Size (zfec-1.5.5.tar.gz) = 80368 bytes
 SHA1 (patch-setup.py) = bbaba4326845d3cdc84dbdfbaf2d8624a366bf2d

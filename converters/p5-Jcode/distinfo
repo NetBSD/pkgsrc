@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:29:05 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:06:46 nia Exp $
 
-RMD160 (Jcode-2.07.tar.gz) = 27dbd3a992bd0eba90801fcc0561af32cdf3fb87
+BLAKE2s (Jcode-2.07.tar.gz) = 1f6bc8d518f0db6e6bf14fdc7fa3f867ea34617666fd18d894b9a50fe07c3bdb
 SHA512 (Jcode-2.07.tar.gz) = 821a917e24eda21bea3fe1188597b48463948c2ef75071882574eff1c1c8e3322aab8ff1ace0028bbc3340416cbaa834a6f0c9f82b18579206ba0cfe7b55062d
 Size (Jcode-2.07.tar.gz) = 350179 bytes

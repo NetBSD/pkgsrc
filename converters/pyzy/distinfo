@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:29:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:06:51 nia Exp $
 
-RMD160 (pyzy-0.1.0.tar.gz) = 26cf64a977b030456bd74cca40fc9c9f476f7b7d
+BLAKE2s (pyzy-0.1.0.tar.gz) = 2949fbffd259f1c0dc0cd0b7718885fe73f5b6839f25eadf23ba37560e5a31e1
 SHA512 (pyzy-0.1.0.tar.gz) = 42477152ffd6a2f7ce0e8f920d98e9dc9c7fc32fe9e93a2a4de75c791e70d0f08c30eca0244dc2b87981f6bfc4e635234d62720aa19358c8f80a84e0c371c662
 Size (pyzy-0.1.0.tar.gz) = 1571946 bytes
-RMD160 (pyzy-database-1.0.0.tar.bz2) = 1679567f31c20a235577f02175df38e16a05e7de
+BLAKE2s (pyzy-database-1.0.0.tar.bz2) = bc434ab8ad633bd77e337d6d152ff62c999232f45b993bb5011681f3e71e0103
 SHA512 (pyzy-database-1.0.0.tar.bz2) = 5a7248870407f7f92c418ada49a275062325f2eb33a7eb4b91492e4b706ae70ba931b04377a758ce429fa64cd22e8bee2ac4279d4f205bbce406248eda1decf7
 Size (pyzy-database-1.0.0.tar.bz2) = 9977983 bytes
 SHA1 (patch-src_Database.h) = 93615161afee7614899a8a7248b46a355de75de2
