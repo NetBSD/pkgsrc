@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:22 nia Exp $
 
-RMD160 (fastercsv-1.5.5.gem) = 865cbcf024d5cc42b2199eb07c91124eeb42b1ce
+BLAKE2s (fastercsv-1.5.5.gem) = 4346c8cf5d5f24dc3634ae416db49fcac22bd939b2ae794a33794b12e9cf8836
 SHA512 (fastercsv-1.5.5.gem) = f86bd11befd07b0b53226a643a22091a6a207a6f26ac9c93491fe30f820b90137a237b313040daeb9d1e3d72c0e81c0f1f5cfcfd9e893c2d8fc32899bd795def
 Size (fastercsv-1.5.5.gem) = 117248 bytes

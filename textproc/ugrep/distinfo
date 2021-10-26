@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/24 16:18:01 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:23:37 nia Exp $
 
-RMD160 (ugrep-3.3.8.tar.gz) = a02a6aa1a4b70617a309a3d7c58328d0e5bd29a7
+BLAKE2s (ugrep-3.3.8.tar.gz) = e018df90c240b7f68fbde4b2bb8aaf93778b08287b42c53d7d56944fc00184c3
 SHA512 (ugrep-3.3.8.tar.gz) = d41d875d6c019030cc0ccf97417c385603d5a5560b1eacc16d961163e5723fe0982d5ad18be6ccd715676664d8b9a74dc65545ddf66a0bcf5c07596e928e5259
 Size (ugrep-3.3.8.tar.gz) = 4295792 bytes

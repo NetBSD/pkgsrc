@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:10 nia Exp $
 
-RMD160 (poyo-0.5.0.tar.gz) = 65bbe4efb176a4970b9f4aeebafae103fdf85cac
+BLAKE2s (poyo-0.5.0.tar.gz) = a577c48c460f6f0b5ca64ed4670dcfd16c5cc8919ce00f9efabfa1784bc75574
 SHA512 (poyo-0.5.0.tar.gz) = aad4334a2aaf63cafab0ecdbdd6f94e9e3d412e6476d7ac13a4399b4af0f43b1eb910e6a3cc7438e84262bc39413fadbe91674534e1e66f446d738c1328b9905
 Size (poyo-0.5.0.tar.gz) = 15276 bytes

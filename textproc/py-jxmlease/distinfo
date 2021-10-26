@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:07 nia Exp $
 
-RMD160 (jxmlease-1.0.3.tar.gz) = 87481a6931db7227c187f345fac925ea2805d548
+BLAKE2s (jxmlease-1.0.3.tar.gz) = 348a4241b5ab0ddc05db6968221c00576bae099182c932cfcffbe753c006eb51
 SHA512 (jxmlease-1.0.3.tar.gz) = e7789c93be6b47de2549d6f2265f2f555732a691056f9f83af55cb4d11db3d4fc4f01355feff514eddd9e2c909b576150cff5430e5c302e6b210e3f1e260f496
 Size (jxmlease-1.0.3.tar.gz) = 50912 bytes

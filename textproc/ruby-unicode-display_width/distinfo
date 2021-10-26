@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:29 nia Exp $
 
-RMD160 (unicode-display_width-2.0.0.gem) = 271d67d303cf237666cfc7f252fae50c85824b20
+BLAKE2s (unicode-display_width-2.0.0.gem) = ece5f58ff05a35050f817431899a62b128e8670020acde0ec15fffaa750c899e
 SHA512 (unicode-display_width-2.0.0.gem) = 050c909f4d522b270fe9ecb8db16d2e7aecca2b254b022ef825d4ed4ea9745d4eea4592d9984278d2596ad72413f7b2886c1f6a33ca6a6b1f7bab03b634ea28f
 Size (unicode-display_width-2.0.0.gem) = 12288 bytes

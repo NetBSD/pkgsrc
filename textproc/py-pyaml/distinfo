@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:10 nia Exp $
 
-RMD160 (pyaml-18.11.0.tar.gz) = 5c09930e53d014cdc30438a0378427c121401978
+BLAKE2s (pyaml-18.11.0.tar.gz) = 5c2d8fbc6d9b4370c6db16154b30693c9d81700751e2bf8df2d4af9d63325cc7
 SHA512 (pyaml-18.11.0.tar.gz) = 4b052fd7bccfb1259833238a823048e230bc4a637312f06df3ab01dd9fde2983a87636600aa2cf4b92ee2ff119a6212b17ae6718a9078d915bcaed2f127257f9
 Size (pyaml-18.11.0.tar.gz) = 15922 bytes

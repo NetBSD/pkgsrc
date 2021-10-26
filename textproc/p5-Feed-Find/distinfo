@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/11 20:39:34 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:27 nia Exp $
 
-RMD160 (Feed-Find-0.11.tar.gz) = 195274c69917c1128be8ce7d309dedf45574dfee
+BLAKE2s (Feed-Find-0.11.tar.gz) = 96ea7b103a4e7a4a49f7ea69c4eaf526f344deefdc5462169131d7c118d7b1e1
 SHA512 (Feed-Find-0.11.tar.gz) = f84983d5de139735f625117eed10f235fda0b7f9336422bbc21f5cd0814d49d80b20e3cecfe46687ba9d7a693b472e189823aa30a447e18ec4407b914eeaab6d
 Size (Feed-Find-0.11.tar.gz) = 46064 bytes
 SHA1 (patch-Makefile.PL) = 71d3938fd552c62ceed5a88855304b59069b5e85

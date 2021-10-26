@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:04 nia Exp $
 
-RMD160 (xml-conduit-1.9.1.1.tar.gz) = 006d66f064b306759fa1f40839e41c94686d41b7
+BLAKE2s (xml-conduit-1.9.1.1.tar.gz) = f7d0e11409cea247a493f1a21f0a4b01e0e0014bcf04b58f2c11794d30998f64
 SHA512 (xml-conduit-1.9.1.1.tar.gz) = 4d75960eb400a4ac8cb13bb70f59b554659fa2a6165906f73097a2bc564505a1efa78e72b121d9ed0fd8b424ff25cd1d8368e6c1f2b6ffa4b0aa36f584727687
 Size (xml-conduit-1.9.1.1.tar.gz) = 42901 bytes

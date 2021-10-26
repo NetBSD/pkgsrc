@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:11 nia Exp $
 
-RMD160 (ispell-sk-0.3.2.tar.gz) = e559beaf4639a2fb70b48bc6eb5081ab92b3803c
+BLAKE2s (ispell-sk-0.3.2.tar.gz) = 89459bc4bc484a01d4f5d01dc0968ca9e2f9f662088ccd177d166b51d6002da9
 SHA512 (ispell-sk-0.3.2.tar.gz) = 4fdae6482a220a8987410e02f2502da1e74500cf210322a69eb6e629c952f50911c0a395b48b0a055ca6bbdf756644af1ceccc843b0dacf6f88658b05f6575dd
 Size (ispell-sk-0.3.2.tar.gz) = 618244 bytes
 SHA1 (patch-aa) = 97df68dd50e6f531c8bf42011c29aba94d91a36c

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:23 nia Exp $
 
-RMD160 (inifile-3.0.0.gem) = ac01c6a0479c73c32711be305c413f66684f7c85
+BLAKE2s (inifile-3.0.0.gem) = f1c627fd583e9565e8a1bde8566be6ffc69b46e31f7a717ea24f00713a726e32
 SHA512 (inifile-3.0.0.gem) = d77344812bb62a5639b0a36e5ac2726280990210000b85bab700819fe0fb9f56415517c00436d0056ca090e3d568596bc30f8ed211a00aced5b929e534d0a72b
 Size (inifile-3.0.0.gem) = 18432 bytes

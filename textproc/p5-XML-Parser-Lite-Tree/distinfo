@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:52 nia Exp $
 
-RMD160 (XML-Parser-Lite-Tree-0.14.tar.gz) = a2be7e789c768d3386eaa048c3198a7bcaeb0130
+BLAKE2s (XML-Parser-Lite-Tree-0.14.tar.gz) = 7b6744d2040f9b312cf3627f4accb98d36944853d3f20babeeed741b1c4f90b7
 SHA512 (XML-Parser-Lite-Tree-0.14.tar.gz) = 049d9a63ef22f6073fb4f5cb0441e2a0224c1d4e94fb1e8236fc29f47259b4ae4cf2df186b0934c4f29dec1f10b0d413e1f67f78b11b4fb4e84808b730ec8214
 Size (XML-Parser-Lite-Tree-0.14.tar.gz) = 10341 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:00:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:21:49 nia Exp $
 
-RMD160 (diction-1.13.tar.gz) = 749e8879fb0a93eb22c758a5230de2231b07e927
+BLAKE2s (diction-1.13.tar.gz) = 2106c9265e83714a34dd450be23c59aa2d469cae5c4a746bd79228a618580ea7
 SHA512 (diction-1.13.tar.gz) = f410f9992adcc362bc60f3e39e85cc07df5763623729c6d599538707aff0831e8cde59d80bcd384975d75229d6ce1cae9bebdf6eb3d4a7203b22d2a1773df039
 Size (diction-1.13.tar.gz) = 145971 bytes
 SHA1 (patch-aa) = 72e0cbc437b031720fe6e26a5a4a4220bbb4a82f

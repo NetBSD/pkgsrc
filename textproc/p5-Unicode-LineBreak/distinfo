@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:01:54 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:22:47 nia Exp $
 
-RMD160 (Unicode-LineBreak-2019.001.tar.gz) = c7795b35a4a48db2a1b336aac6636b1ef97db473
+BLAKE2s (Unicode-LineBreak-2019.001.tar.gz) = b65d00d9b5bc21e479d9e537709e75edacbbe8dd478751c3bddb700a6d771cd6
 SHA512 (Unicode-LineBreak-2019.001.tar.gz) = 2d285f928db2ed32aefa741629ce9f9bee82e69c247eaa2c9145fdb4e9bae4441bf822e108cbffc3955369539474c3299f0a8f69026a5f9686aa8458a1d87f27
 Size (Unicode-LineBreak-2019.001.tar.gz) = 312225 bytes

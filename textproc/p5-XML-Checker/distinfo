@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:01:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:22:48 nia Exp $
 
-RMD160 (XML-Checker-0.13.tar.gz) = cfaac22d6679a5c668be30647fcc891f2a21509e
+BLAKE2s (XML-Checker-0.13.tar.gz) = a36f0031dae6a40637edd968534d4b0f81ec3620a40d91d8a19fa372de16ac72
 SHA512 (XML-Checker-0.13.tar.gz) = 81dbd91f4d2938c099be7cf831ed59ac30f8c39fb024607ec86e27455be3d0b553573ed82ece99e7b746dbef11209215b1a021ab8d4fa649a3a67b60f9fd50e1
 Size (XML-Checker-0.13.tar.gz) = 34012 bytes

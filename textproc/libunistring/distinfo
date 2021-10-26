@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:01:23 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:22:17 nia Exp $
 
-RMD160 (libunistring-0.9.10.tar.gz) = d64da9245ed843c62d69c76498146bc87787c37d
+BLAKE2s (libunistring-0.9.10.tar.gz) = 6af4f8f362e74baf433757d540c157b1fead6e087f65969be54d0716bde97037
 SHA512 (libunistring-0.9.10.tar.gz) = 690082732fbbd47ab4ffbd6f21d85afece0f8e2ded24982f949f4ae52bf0a981b75ea9bc14ab289e0954cde07f31a7a4c2bb65615a8eb5b2bfa65720310b6fc9
 Size (libunistring-0.9.10.tar.gz) = 3744814 bytes

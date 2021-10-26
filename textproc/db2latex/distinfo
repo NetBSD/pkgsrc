@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:00:54 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:21:48 nia Exp $
 
-RMD160 (db2latex-xsl-0.8pre1.tar.gz) = 7f610cb176576ae5507b4bf2c53c4e2380ec021b
+BLAKE2s (db2latex-xsl-0.8pre1.tar.gz) = a18a05a1551a26ef37af18573d78a3adc12da7f917c436b998ae46c6aaa4cb35
 SHA512 (db2latex-xsl-0.8pre1.tar.gz) = 701d5921426a4a7676424138808aebb1d464a43d8925572f78074a085c67a682015e1a454cc7c7f51c2eefc8dd71ea649ccb3247c08972912c17ec03c9b47b22
 Size (db2latex-xsl-0.8pre1.tar.gz) = 696369 bytes
 SHA1 (patch-aa) = 4dbfcc93d92dd527345f9e5e353d1edb26d1f1bd

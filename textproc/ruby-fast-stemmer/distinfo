@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:22 nia Exp $
 
-RMD160 (fast-stemmer-1.0.2.gem) = 02616a610c80cdaddab37b5b8614c19ce1359070
+BLAKE2s (fast-stemmer-1.0.2.gem) = c01a3c09ea7d629fcd0c38b6f44a0458385506d76b7b3b88e3d6cb879da6641a
 SHA512 (fast-stemmer-1.0.2.gem) = 7a7a17c62ecc9ce6eaaed9d0783f161c53c5c6faa07b7b0577da5a46d4539bf3880f71e4e9097a489c045222738d0441c322fb5cef5e02a1483405f815a81b29
 Size (fast-stemmer-1.0.2.gem) = 11776 bytes

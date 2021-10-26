@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:38 nia Exp $
 
-RMD160 (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = de98886c52303242566eacd5a3eaf4459026bd71
+BLAKE2s (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 386a4da4c0e4ccb630ae233107562a54f90fe2dfbe3e311f541c862b67d640e8
 SHA512 (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 698fa7e2e3ce3be4e4ecbe59bfe7f83640f4bc004b089b2b2cd9daa8233e98fbc5b541433317c647a0c796dd9aa2cd3aa186a1f8287e9f536104ed5fc6c1f65c
 Size (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 104875 bytes
 SHA1 (patch-makefile) = 2e32c5af8922008c2961fb2a7a4f59fd31ae0df9

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:22 nia Exp $
 
-RMD160 (multimarkdown-6.5.2.tar.gz) = be0691fc7a16860a903fc11b836b8a954e484502
+BLAKE2s (multimarkdown-6.5.2.tar.gz) = 63aa165b2c8a6846e79b58dcfe6b246d42d861b13230bc9a078609de9fff29b2
 SHA512 (multimarkdown-6.5.2.tar.gz) = d7e4ff9e2b07f8bc1142e83fdf59dbe417ccdfab90e65f81fe4a11cbef8d5edd9893c97a4e0bc8f70d52cae28da0012679fc09fce183fe94d815645022ee4f63
 Size (multimarkdown-6.5.2.tar.gz) = 3359037 bytes

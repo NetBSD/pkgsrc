@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:07 nia Exp $
 
-RMD160 (hu_HU-1.6.1.tar.gz) = ad37107a62cd657485d74560355fc315fc83ddfa
+BLAKE2s (hu_HU-1.6.1.tar.gz) = 41f0062c491f60af99ef1e982f5ee1c4d0be03eb03b0ef3772e9d846eab7827c
 SHA512 (hu_HU-1.6.1.tar.gz) = 7ae1f99b16b714158c33b41ee5c7a3aaeb84bf59a1d1c13a02b0ba30972bfd2b3dd0d04a28997f0f5a97943a89d3cf9f0da55fb219ce24917ae1e3aed0a5484f
 Size (hu_HU-1.6.1.tar.gz) = 730641 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2021/10/07 15:00:56 nia Exp $
+$NetBSD: distinfo,v 1.36 2021/10/26 11:21:50 nia Exp $
 
-RMD160 (docbook-xsl-nons-1.79.2.tar.bz2) = 63bae43e79c3b8bc3dac66711eb8c9e5ae3e4a32
+BLAKE2s (docbook-xsl-nons-1.79.2.tar.bz2) = 5f5df4756f3c3396b1b70173ef9a17ed2e0763ea625c3ab29aa0e0751b4442aa
 SHA512 (docbook-xsl-nons-1.79.2.tar.bz2) = d19aad5ae91c7f9a9690836bd472ec6e01a29eaeac6b1838b5c9ea54e2ef4cc90f515d7b6640fe94e909a5a51eee80cd32e2ccbee457de6f0c6652ea43325d7d
 Size (docbook-xsl-nons-1.79.2.tar.bz2) = 23400667 bytes
 SHA1 (patch-catalog.xml) = 8bf9b6f039bd1a6dc4e41a870163ac3a2a445bcc

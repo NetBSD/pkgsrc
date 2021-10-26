@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:47 nia Exp $
 
-RMD160 (Win32-ShellQuote-0.003001.tar.gz) = e0e92313474179a0ce7819f94baeccf494c7287c
+BLAKE2s (Win32-ShellQuote-0.003001.tar.gz) = f1c54d84b5b3a76e37784ea7481b41fb8a7d7c37918deee960e84c78ffc70cf0
 SHA512 (Win32-ShellQuote-0.003001.tar.gz) = 1a6f8503e6ee03ac970883d563a8b4ef5cc570dca5afb51ed2681ebe63082217eb8443ff5574a7f7f16ef06976f149ff450377a03cb847922bc6678569d821d3
 Size (Win32-ShellQuote-0.003001.tar.gz) = 15720 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:25 nia Exp $
 
-RMD160 (Alien-Hunspell-0.16.tar.gz) = 285a6b0cd0c8d692f813df2fcd3c0ded63ac8582
+BLAKE2s (Alien-Hunspell-0.16.tar.gz) = 8c790bce75092f7f2d2cb3c9d0a252ab947044e1f8ef49c51c929e4c7a046308
 SHA512 (Alien-Hunspell-0.16.tar.gz) = d48933066aef0559f4af0e98ccc4a5b86b46ca78efbefd551056414eeb4c96d5cc88075b2567fea6fe1663c2eaf110557e741cdcc029e7f2d5b0eebf22692a67
 Size (Alien-Hunspell-0.16.tar.gz) = 17991 bytes

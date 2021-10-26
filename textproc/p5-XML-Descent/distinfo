@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:49 nia Exp $
 
-RMD160 (XML-Descent-1.04.tar.gz) = f18ccbcc69e37d4b693e6b382dd0ee1bf97bb35b
+BLAKE2s (XML-Descent-1.04.tar.gz) = 8de6940b817a75a77507dbedae53df07b72b577278d3d6bddc0ae1c3d90efc79
 SHA512 (XML-Descent-1.04.tar.gz) = 779a476907ecfbe9c279fa1f476c3aa64de626c515719643be21fef8b945cdd5c1f654a189bf7ea9a6964a88818e101e1eddc019439a5dcb397f56b13bdfa415
 Size (XML-Descent-1.04.tar.gz) = 15212 bytes
