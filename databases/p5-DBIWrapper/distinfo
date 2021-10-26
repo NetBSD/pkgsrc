@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:32 nia Exp $
 
-RMD160 (libdbiwrapper-perl-0.20.tar.gz) = 2b1595cae6ae599effd6676069a26838a01298a9
+BLAKE2s (libdbiwrapper-perl-0.20.tar.gz) = 187d51613b6aed3a5d70b3a552be445eb3468e1584ad70b275077f9372404b61
 SHA512 (libdbiwrapper-perl-0.20.tar.gz) = 603b47da7317908e6d541da03804b6a08d4b42382d9a484ee240f9d335cbad3b4419e92028e5d4dfd9424d180ae5814eb99d59234dcc68fb87f39af5dcacb038
 Size (libdbiwrapper-perl-0.20.tar.gz) = 22975 bytes

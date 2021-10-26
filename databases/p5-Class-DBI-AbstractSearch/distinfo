@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:28 nia Exp $
 
-RMD160 (Class-DBI-AbstractSearch-0.07.tar.gz) = 06febd4de545ba91c902bb8ba883f12bd934b2e1
+BLAKE2s (Class-DBI-AbstractSearch-0.07.tar.gz) = dea010bf89f90b9b461112af884afecc893d434668b5493af8f030862c2de33e
 SHA512 (Class-DBI-AbstractSearch-0.07.tar.gz) = af1daf84c7fcf789638557a5ae7cf52714940bf11f9e65755e11facf0bdcf63cf1e7ccea631061fd38607d0790cbf134cbb3654ceaa0514d5246219d680a0ddd
 Size (Class-DBI-AbstractSearch-0.07.tar.gz) = 3185 bytes

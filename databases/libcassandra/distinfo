@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:35:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:09:21 nia Exp $
 
-RMD160 (libcassandra-20101010.tar.gz) = e3e05861d1c1173d2492d49442aa68ee429d7b8f
+BLAKE2s (libcassandra-20101010.tar.gz) = 7badd508b017049b5fda9363c147beacc57f09b70e6dc6b0a642f177e9b71cdb
 SHA512 (libcassandra-20101010.tar.gz) = 22ae1d5fe2a3558dc9cda94fd4576957c6948f55a866558882db08d4abaf49ae63e41e450f7485280fc342033cdea640759f589453a9a819b6482c5fd2cd8296
 Size (libcassandra-20101010.tar.gz) = 873233 bytes
 SHA1 (patch-aa) = 00c444efc76919e0742f44e8f782d93205182490

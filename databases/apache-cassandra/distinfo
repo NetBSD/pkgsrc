@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:35:05 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:09:14 nia Exp $
 
-RMD160 (apache-cassandra-3.11.2-bin.tar.gz) = 233d74a841283f408647c6973b13f1ff6a8cf8e7
+BLAKE2s (apache-cassandra-3.11.2-bin.tar.gz) = bbaa00b89757e8e769d593fe1f2b82042a19a39b9db2ccad81941b9a3cf0713a
 SHA512 (apache-cassandra-3.11.2-bin.tar.gz) = 5b6d903997fa89deb72910aab718ab04099700af3470d593d2371566d8362a607f9a46774bd38159b981d4e6c2201e1dc554bf563b9496d06ddef7545e1fd87f
 Size (apache-cassandra-3.11.2-bin.tar.gz) = 38436262 bytes
 SHA1 (patch-bin_cassandra) = 02d6aa07576cd38c90311aca7b89cf1c1225088a

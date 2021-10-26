@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:35:52 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:10:06 nia Exp $
 
-RMD160 (tclgdbm-0.10.tar.gz) = e75af043f30b72d78d0df6fe0099b6acf42854c4
+BLAKE2s (tclgdbm-0.10.tar.gz) = 806a502b58309e366c4809fde4d64be1c0eb157d44e730ebe4ad7702256ca69d
 SHA512 (tclgdbm-0.10.tar.gz) = 1b383b953522bedbfeca6a1a50c880f2eb84c298acbb91ca1e2a68ef9abc08e4dbc92cae2b9644f56d67ea07e772592cfea437aa8e1628b262033f3e255396ba
 Size (tclgdbm-0.10.tar.gz) = 115524 bytes
 SHA1 (patch-aa) = cd51edd644fe218297afcae634d404e0362b915a
