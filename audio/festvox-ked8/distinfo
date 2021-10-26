@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:56 nia Exp $
 
-RMD160 (festvox_kedlpc8k.tar.gz) = 91a6ed7516c092645fe64205491e0f9ddf6ac507
+BLAKE2s (festvox_kedlpc8k.tar.gz) = c47e5260b9e485a58e8f93e2ad575938e85b07af3262a4112a8cfd486526d9a1
 SHA512 (festvox_kedlpc8k.tar.gz) = e07f72c8734fc8ff520021018fbbad3369699c40dac5046a6242212485899882974b4fe8a6d036153fcb37a7dcd1c60170df2e55a46d0b65f79ad5ae230f9b2f
 Size (festvox_kedlpc8k.tar.gz) = 2318524 bytes

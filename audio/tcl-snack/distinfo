@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:09:56 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:59:32 nia Exp $
 
-RMD160 (snack2.2.10.tar.gz) = 52616bc4cf06baee0e5d7a91faa5b385ee60c7a7
+BLAKE2s (snack2.2.10.tar.gz) = a56c043e385f7688a4e1539aa79ad14e165347df36a67371c7ab14fd12a06ff0
 SHA512 (snack2.2.10.tar.gz) = c17ad332fa4f3ded006b97ceca85cada079e4c7cd933768b289c13dadca1b8803fccaf709ec2def5af4abe92c307f25597ebfa6f94df2d681e40815cd7eccb9b
 Size (snack2.2.10.tar.gz) = 1798252 bytes
 SHA1 (patch-aa) = 297f046897c9cba1d0919a69874dceeeb2d56808

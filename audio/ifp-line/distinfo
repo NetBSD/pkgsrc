@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:09:28 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 09:59:03 nia Exp $
 
-RMD160 (ifp-line-0.3.tar.gz) = 71fee7e02daeb9b3dc2e7da53236057b9d5a9f63
+BLAKE2s (ifp-line-0.3.tar.gz) = c586042f16ac183f0d61f9c667d0eeb35743d3116310b81f45f01f0d4f7bb0c4
 SHA512 (ifp-line-0.3.tar.gz) = 516ad85fdaf69111581b013b2517c7083656436d429a86ec5ca4b7dcaf1c841538f98138cce8839d990a34550f11cc6bc9dedc701b0123b9cb73a91a7d78694d
 Size (ifp-line-0.3.tar.gz) = 138272 bytes
 SHA1 (patch-Makefile_am) = a273f2e813b43b717155a2dcf7bc1372d23b936b

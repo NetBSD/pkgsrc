@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:09:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:58:57 nia Exp $
 
-RMD160 (flactag-2.0.4.tar.gz) = 2eeece5d5da94a51e0e11fe425de3d0ec11b6639
+BLAKE2s (flactag-2.0.4.tar.gz) = 127c2789ea2192e6139f08fb0dc18def88fb89020146363fb6eb9e46220dea7e
 SHA512 (flactag-2.0.4.tar.gz) = d57d91bc442b89c408a4619ba6c315e085bdb654de4e9f0227c1b78b354733dd1962b563618b230ded40aa6eb75adb63a0f8ba56ee4cb7451f756196250422ef
 Size (flactag-2.0.4.tar.gz) = 482150 bytes
 SHA1 (patch-CommandLine.cc) = f677354989b98c26a613cfdf1f10ab8746ac6ec3

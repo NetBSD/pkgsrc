@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:55 nia Exp $
 
-RMD160 (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = cbf15982b6cb87fb89b699cc9042a19467e7b386
+BLAKE2s (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = 9d40cb39d4a47de8f867e4369600d8067e742e76b6f07e3190cc78d58b79c5b8
 SHA512 (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = 5d8a57840220c00e281842fd38f16887b7403dc487782947eae4a0b2d36f951aa957182bb36a1b4824e40288a5ccc2e635f38f5a09277a0da8099aa6bf24d892
 Size (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = 4103663 bytes

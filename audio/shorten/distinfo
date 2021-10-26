@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:09:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:59:28 nia Exp $
 
-RMD160 (shorten-3.6.1.tar.gz) = c25d0cf634ea86de2a3f155bc96f494c0a3167a0
+BLAKE2s (shorten-3.6.1.tar.gz) = 743da568d55042903a663b6caa3b092a70703bd2655eba2b91d8687cb0382e94
 SHA512 (shorten-3.6.1.tar.gz) = 825f2c02fcc5f715eb20b2b4356a5334be9c3d55b9c7238e0a2a734b99b88d8fb23308647644506282fd03df4a8e51e2aafbc1b1a89982d45d042a05a01951b3
 Size (shorten-3.6.1.tar.gz) = 597581 bytes

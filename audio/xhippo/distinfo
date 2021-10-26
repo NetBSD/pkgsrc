@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:09:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:36 nia Exp $
 
-RMD160 (xhippo-3.3.tar.gz) = 4023286bc843c15b1527fec49cda65a48a763af5
+BLAKE2s (xhippo-3.3.tar.gz) = 7ad8d4b21ecf085958d02e470519bc2d2db5debe124d919b89b4ef77d4ed9946
 SHA512 (xhippo-3.3.tar.gz) = 8eb6669702e881f55adc3c206051a845351bd740fec6f48ed7ff3fa316ecaf7dba1c83ba5e47fd9fe3cdaf882e318048a0bfa72eff2d39dde455f7485e5f87cc
 Size (xhippo-3.3.tar.gz) = 417111 bytes
 SHA1 (patch-aa) = 1be473dacdfb78561da8b9a90cd3c9e7570143b7

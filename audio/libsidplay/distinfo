@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:09:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:59:09 nia Exp $
 
-RMD160 (libsidplay-1.36.59.tar.bz2) = 1a49d6e818bf231d22564884d2f4999885bb3bff
+BLAKE2s (libsidplay-1.36.59.tar.bz2) = df77f55de69d35aec8cf12a7e894cd2199687f3989c86c6f3dd7fae83160e5e0
 SHA512 (libsidplay-1.36.59.tar.bz2) = 21aacdd7a44c6bb410dd3383e85a4560fd142504fc37e3f0878aa2b8ba76e8cf310d61ff9741100b166c88dbdb78b574eec0e8b24d7d6b90187633009d5fcec9
 Size (libsidplay-1.36.59.tar.bz2) = 307720 bytes
 SHA1 (patch-src_mus__.cpp) = 31c8174d10ae9757de84d5357c69eba17408aece

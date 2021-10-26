@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:57 nia Exp $
 
-RMD160 (forked-daapd-27.4.tar.xz) = 79c6d29837ec6dd4ddd64d3d7cc726991489a218
+BLAKE2s (forked-daapd-27.4.tar.xz) = faecfe398928b706856752cfdaf5caa49366e720a9b9d06bf30f157bf8e33ed6
 SHA512 (forked-daapd-27.4.tar.xz) = 0b35e21b9415bf5e2ddaa7e4cf0400344a449385f574b69a991505b7b8e8d16489f7493d74e3e9ff512cfac7fd858b22964a406108af427ce74b23f9c4d8ff93
 Size (forked-daapd-27.4.tar.xz) = 2429848 bytes
 SHA1 (patch-Makefile.in) = e59e7f81857249953dde6c79a45116e642581b34

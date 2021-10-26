@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:26 nia Exp $
 
-RMD160 (python-musicbrainzngs-0.6.tar.gz) = 73064b5cb8a8dc3f759e5baac790a6041806c503
+BLAKE2s (python-musicbrainzngs-0.6.tar.gz) = 26bc345166d0ab1127618b5a334f747eed35da35e034e89128e0691fb787b6dc
 SHA512 (python-musicbrainzngs-0.6.tar.gz) = 901729f736b207f2f086e3d44a3515d405f6621706ad9c7ca07dd304349e048c5790bb16b054393651808bac4905ceb9493dd66d9fb17a1612692427c0bd3bd4
 Size (python-musicbrainzngs-0.6.tar.gz) = 110948 bytes

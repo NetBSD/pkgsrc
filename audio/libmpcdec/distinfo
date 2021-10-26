@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:07 nia Exp $
 
-RMD160 (libmpcdec-1.2.6.tar.bz2) = 97173a1c037c1be748fb0d37e7fb7750610486db
+BLAKE2s (libmpcdec-1.2.6.tar.bz2) = 55df10fc4a7bad09c219ebffb62c0a2257ba959d8da3a59cdf5cb070732f6556
 SHA512 (libmpcdec-1.2.6.tar.bz2) = 4c4a76aeb1764aedd722fddbf152257a43256f47d42119d6001fb890ecfe3982443b2c8612495b07e122941ba10c2aaa7bcd9ecd813c79f488c9097b8a35930e
 Size (libmpcdec-1.2.6.tar.bz2) = 250302 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:49 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:25 nia Exp $
 
-RMD160 (pymad-0.6.tar.gz) = f2562eab529d696b19518c5f48b1220dfd65cb8c
+BLAKE2s (pymad-0.6.tar.gz) = 6022dcba0ca484b7cdeb9c64a23076c7e6b46502a48ca9d7f0f58d6c12191be6
 SHA512 (pymad-0.6.tar.gz) = 1493925cf0fca3ede8314071795736354e2f036f41a9e72cfcf77f960c84bba8e76b43ce7c389c15dc9f2f619ce77b0afae1b78558b1617240bdde3012ad753c
 Size (pymad-0.6.tar.gz) = 22099 bytes
 SHA1 (patch-aa) = daaae1d8c57796841be10c6dad24b589fe928694

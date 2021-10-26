@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:44 nia Exp $
 
-RMD160 (adplay-1.8.1.tar.bz2) = ce8d3ce285992ad6056dd2d8b799727cc98cdbc2
+BLAKE2s (adplay-1.8.1.tar.bz2) = 2d9465bc61b5de08301aa5b2dad206dbac3bd30a4662efd590a4f0d652f8e634
 SHA512 (adplay-1.8.1.tar.bz2) = 5c3e09d89372c19dd098955ceb6d0315364421233da60f669b1a7e4337fca0fe1f1d54f3ec103d413aad3df9ac6bcfc1a2c2f136770d08b37ff9000954ee6c1c
 Size (adplay-1.8.1.tar.bz2) = 323128 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 13:09:28 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 09:59:02 nia Exp $
 
-RMD160 (id3lib-3.8.3.tar.gz) = bfa2499ec649ed40815ad0a370c78eb1517952c4
+BLAKE2s (id3lib-3.8.3.tar.gz) = c4fb562a31ceb9f484c6e4a3fb30beb6802ca6f27125d4cde2fe1a6ee7f70e56
 SHA512 (id3lib-3.8.3.tar.gz) = 3787e261f86933c1c2f2bff2c4b349b42f5d8636e489e4f39f9d75e6dfbdc79b87009a0f4ce4b786f2fb3dbc01ca9d56c4112095b46244f897e6c9a28573adaf
 Size (id3lib-3.8.3.tar.gz) = 950726 bytes
 SHA1 (patch-aa) = 23ccb36fc35e1f645a72b9292c1cd8eeb0379a38

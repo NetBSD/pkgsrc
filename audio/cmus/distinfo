@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 13:09:16 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (cmus-2.9.1.tar.gz) = 89e61ac3b71c105c734e8cf0afc0f5dbebdae912
+BLAKE2s (cmus-2.9.1.tar.gz) = e58edef1d34ac031335a78941ca0d2e1b73c5f7368ba5ef752f6193ca2cff8e4
 SHA512 (cmus-2.9.1.tar.gz) = b417e58a68c54e97db92b8760a49a3071e81f1594f2144911eed3ccceb68499dedf0699ae313babcb822d71b37add8880dfb2018686cb572e89f8627446d5e05
 Size (cmus-2.9.1.tar.gz) = 321004 bytes
 SHA1 (patch-op_alsa.c) = 3a50d91fb0ec04dcb67c926fb3ed80abd4baacd3

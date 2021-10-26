@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:16 nia Exp $
 
-RMD160 (mpegaudio.tar.Z) = 3e40fa6629e0bb88046ac882bbfcc263925f7006
+BLAKE2s (mpegaudio.tar.Z) = 9927f7f4fc2bd6e75aeb4e2137579fb1286f3847a1bfc9a4e09c7eba5f8cc209
 SHA512 (mpegaudio.tar.Z) = 99845355a395ca817cc235b9028669f2260b58e8fb02e6c0bae458a9ef0ac27b4897927bf6c1a2d3405da1152b10e21e04b1a31c2f91db94787720fd525e8e7b
 Size (mpegaudio.tar.Z) = 144707 bytes
 SHA1 (patch-aa) = ce73eab14c962f143997b73e19a00e3d3e585ec7

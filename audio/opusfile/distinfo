@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:09:44 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 09:59:19 nia Exp $
 
-RMD160 (opusfile-0.12.tar.gz) = 9b51fa303625462ce3a2c1b5fc1bfc552913d466
+BLAKE2s (opusfile-0.12.tar.gz) = ee75b1526981e01175afb4cf18391c6be40cc7ebb6e4ff006f240922f09b5fa7
 SHA512 (opusfile-0.12.tar.gz) = e25e6968a3183ac0628ce1000840fd6f9f636e92ba984d6a72b76fb2a98ec632d2de4c66a8e4c05ef30655c2a4a13ab35f89606fa7d79a54cfa8506543ca57af
 Size (opusfile-0.12.tar.gz) = 471354 bytes

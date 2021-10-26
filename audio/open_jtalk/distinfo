@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:19 nia Exp $
 
-RMD160 (open_jtalk-1.11.tar.gz) = dba43f8542c339b22f1c0a42d7feff45d5b4896e
+BLAKE2s (open_jtalk-1.11.tar.gz) = 1ee43b9670b62a6cb58be973dbe2e84ccaacb4efcd57bc785158190fcea066c4
 SHA512 (open_jtalk-1.11.tar.gz) = 7bde50f868de88b03e91cc6a503d7284e831b71463b8a39870e82e675ae26ad57a89b604e4db71b8b2582f161a0dec5dce3e4f62ffd67667b591302b4067cd9e
 Size (open_jtalk-1.11.tar.gz) = 19464975 bytes
 SHA1 (patch-configure) = 90dc198e29888f71dcbea105ce09717270679cba

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:10 nia Exp $
 
-RMD160 (libvisual-bmp-0.2.0.tar.gz) = 9d37b1c9a7a74a630aa056d9edfdcf654b7b14d3
+BLAKE2s (libvisual-bmp-0.2.0.tar.gz) = d8992b86dea6032f7f626b4976104a66de81ed49915886560e522818d6124608
 SHA512 (libvisual-bmp-0.2.0.tar.gz) = e5c5633279b52a9dc06d626123d3e2c8353daa9fa23c1e29a1d87bc98da5c34515e6b11818ae2639984f1e35713e5c21949403afb15727c5ff812e49cf9c77c9
 Size (libvisual-bmp-0.2.0.tar.gz) = 369063 bytes
 SHA1 (patch-aa) = 4b0f49c1d864364d1c2f6730444d8685f718cef7

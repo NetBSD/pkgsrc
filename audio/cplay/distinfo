@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (cplay-1.49.tar.gz) = e370ca609f8a17f428cf67ef85d55ee55cd5738b
+BLAKE2s (cplay-1.49.tar.gz) = ea01481f61dd287df46978d21913e55331c4f3683dc000fb5e30912bb2e0a48f
 SHA512 (cplay-1.49.tar.gz) = e45af0390af2e221e1b96ea04983998aec3d8984e05415f6e47a08e8f2cd4014ddf213cebf8fe42c207d5c097cd65d2751002bc64ec8e38ec49d2ee3ad8de74d
 Size (cplay-1.49.tar.gz) = 36400 bytes
 SHA1 (patch-aa) = e7a1f3b34a5557e637d34b778b8a8cf796c9c8a9

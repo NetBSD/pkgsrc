@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:00 nia Exp $
 
-RMD160 (goom-2k4-0-src.tar.gz) = 280c0db57f437b072a49ff80f5bf85d57892af8e
+BLAKE2s (goom-2k4-0-src.tar.gz) = a96e560660d7acf0856932be5df1b1bbbfb57e95661a812d3deebe47853763ea
 SHA512 (goom-2k4-0-src.tar.gz) = 790e3ab8dee122320ad8b3ae15f6a1cd2780222d5ae97979f614f16ba73b4b853960e7945ef9053ad9eddf9e29e69d0c52f0875d07c5c6c7cee41d764bf4ea5f
 Size (goom-2k4-0-src.tar.gz) = 757058 bytes
 SHA1 (patch-aa) = 44b8332db3e7b6ec15fcc7d94d68bd0b884c6e8a

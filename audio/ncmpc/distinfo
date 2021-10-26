@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 13:09:42 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 09:59:18 nia Exp $
 
-RMD160 (ncmpc-0.45.tar.xz) = c7246a55a329b23ee84c00fa737d494bac10ff19
+BLAKE2s (ncmpc-0.45.tar.xz) = 9fdc06684d7d90c4da9fc8a92f25a0db7df664e702b025ec7466162233a768e0
 SHA512 (ncmpc-0.45.tar.xz) = 9e8c6c61547458e0fe20ccd31d4733949352688c00b66e38930b475434dbd69789f701df0de01cd1574c6250ad2f43f1258cb095d4b47af7a58b6840a8c70ccd
 Size (ncmpc-0.45.tar.xz) = 281860 bytes
 SHA1 (patch-doc_meson.build) = 5052b9eef5057f50dcbcea8d5bb46027263edb46

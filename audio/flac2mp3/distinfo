@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:57 nia Exp $
 
-RMD160 (flac2mp3.pl) = eb5d32d163f217ccbd5c2c969159486adcf922be
+BLAKE2s (flac2mp3.pl) = 43e4767774b4a3515e9209a02eb8b810d263930c464a63e9512cbc9190cb62aa
 SHA512 (flac2mp3.pl) = db27d45d121e4622835af6f4fa93734da66ca771db7086976c7ea11beb77c4e4badd65532addfcb73a0aec61949b9488f8550b4aa2d8b7ff32cf0d606ed7b581
 Size (flac2mp3.pl) = 1255 bytes

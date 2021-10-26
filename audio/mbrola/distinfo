@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:12 nia Exp $
 
-RMD160 (mbrola-20010717/mbr301h.zip) = 28f070aba106d3687e287050d7737be9d1690f00
+BLAKE2s (mbrola-20010717/mbr301h.zip) = 1ec58f663fb38404a5b37c1f17ed1d7a453097d02e1cec213b49f81769c7260e
 SHA512 (mbrola-20010717/mbr301h.zip) = 907358fba513fdcbf5fc428d51e662738488fa17ea96f4d33b6e8954f1abe0fdd6df704bdca4519fdeb58ea6a9bc9313b38dfb0d26be1aad2e83411bb6756062
 Size (mbrola-20010717/mbr301h.zip) = 72067 bytes

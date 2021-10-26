@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:09:16 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 09:58:51 nia Exp $
 
-RMD160 (csound-6.15.0.tar.gz) = ed7c7971ac2a2c06cbe8f71b512d32ddb845c4c3
+BLAKE2s (csound-6.15.0.tar.gz) = 1a50029e05c76be17063d4bc8651a52314b137ad35e7f2e12e3ac069d52a025f
 SHA512 (csound-6.15.0.tar.gz) = 3462a544357b9ef7d8f2e6c7aed5f0659524fab08669950436da856c9854f81f658f1bd50061e7e6bfd28663a578ef2e0ea75ac4f0f9c72d476dddd82aa26185
 Size (csound-6.15.0.tar.gz) = 31879171 bytes
 SHA1 (patch-CMakeLists.txt) = a9e8c15acbfe9586c0e5bdbd459cb4bc160a5f75

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:09:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:59:25 nia Exp $
 
-RMD160 (pykaraoke-0.7.5.zip) = 49e45b0c26b86363fd721068c68b73c2420ce5cb
+BLAKE2s (pykaraoke-0.7.5.zip) = f68469bfb8974f5205f9c99c9ab03c754263b3fef1e840524ece60a51c580a19
 SHA512 (pykaraoke-0.7.5.zip) = a3a99fa9f38e08e238b57bec59875f2df30907973bcaa3bc7e47c9d1d9afde40a420a510e636bb2497d0e1b81fe6cbadcf985b047bbae0c3761a9d89e576502b
 Size (pykaraoke-0.7.5.zip) = 872237 bytes

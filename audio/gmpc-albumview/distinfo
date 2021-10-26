@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:59 nia Exp $
 
-RMD160 (gmpc-albumview-11.8.16.tar.gz) = 755bbc568f94ccf041e1ac888d4a22a9c6a26abb
+BLAKE2s (gmpc-albumview-11.8.16.tar.gz) = 686e9a3364b57c79f0376999c2f1d749b67234e0a2ad22f7010019a691c482af
 SHA512 (gmpc-albumview-11.8.16.tar.gz) = fb77a8ea5db798b730532eb950b0003da97c5b0bfba1d32486d4c5bb40ac6661c73f37f12662b32b28e4311707c9fc7b2722c47686ebd953105d7cd2b9d86cc4
 Size (gmpc-albumview-11.8.16.tar.gz) = 438771 bytes

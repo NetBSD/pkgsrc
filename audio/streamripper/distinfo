@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:09:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:31 nia Exp $
 
-RMD160 (streamripper-1.64.6.tar.gz) = 3c010038f7be6959ada637b933feff2616915dba
+BLAKE2s (streamripper-1.64.6.tar.gz) = 683305b248e8d488bac374c9303745634c4c1dcd3ca8570f9baf8eed92cca7f1
 SHA512 (streamripper-1.64.6.tar.gz) = 8477086d0099f6de861f1c47112476c427073b6e8127bbaaa2dd3e7930fe9a5c6d9b2c68d4a317f1bc0b20c625e665d5c245189049d35468aa83cf51828d4428
 Size (streamripper-1.64.6.tar.gz) = 900205 bytes
 SHA1 (patch-ac) = b22e18723d4888d78f0e5e01e0db40f010b15f96

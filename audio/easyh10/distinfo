@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:52 nia Exp $
 
-RMD160 (easyh10-1.5.tar.gz) = 87893bbcf595f928ba94fcde3b2b2c16b2e09c76
+BLAKE2s (easyh10-1.5.tar.gz) = 57ec4f5739ee037c0ed611d96b0de1d9fb6056fcccb78177b2bea90a0fa1d84c
 SHA512 (easyh10-1.5.tar.gz) = 5cc36310ef1ff538754a97b1de5a4ac9e2d5ccccffe2c76a3f792bc78d533ed761b05df2c539b2c99fe1930353473099f8699acde6cc8a2f397218f6efe1f20a
 Size (easyh10-1.5.tar.gz) = 406548 bytes
 SHA1 (patch-aa) = 774606669a087113c6084f964170f2948448fb60

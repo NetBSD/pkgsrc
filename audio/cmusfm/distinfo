@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (cmusfm-0.3.3.tar.gz) = a83df9b8dff54ca4c9eacb8994ac37dfbae07e14
+BLAKE2s (cmusfm-0.3.3.tar.gz) = 4a580ffeeb9161252183811d3e74de136e66b3e85f94ae1c5b96574d95acff72
 SHA512 (cmusfm-0.3.3.tar.gz) = 6537905bdf09d04f09783237997536a1ee231ee4e589826d87f435c0dd7542dbd7d97167990bf949d2a9eb73c4a9a4da1bab17888de0aecedb2a63deaa873f39
 Size (cmusfm-0.3.3.tar.gz) = 37553 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:19 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:54 nia Exp $
 
-RMD160 (festlex-poslex-2.5/festlex_POSLEX.tar.gz) = b7c5c9d00f4ef1ceef05e08b2160fc1101202c95
+BLAKE2s (festlex-poslex-2.5/festlex_POSLEX.tar.gz) = c1a33c0826cd08979c1da658ec2a3f785ff2b9202785480b8090622e0733b69f
 SHA512 (festlex-poslex-2.5/festlex_POSLEX.tar.gz) = d7f96621fd98bcd3c84f0188fc6ac5a006e2cbb535279693be3341d51148344360f68e67962f08c4041df1e3527de9b30705b13fb9859ad91e3c804704eb5348
 Size (festlex-poslex-2.5/festlex_POSLEX.tar.gz) = 243656 bytes

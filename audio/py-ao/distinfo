@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:23 nia Exp $
 
-RMD160 (pyao-0.82.tar.gz) = 6d602ef060ddc22b4cff841741c90fa88af45fed
+BLAKE2s (pyao-0.82.tar.gz) = fc53fa3f356e27425c82879916be35e62c2c33b70e0715107fd3a01515cfdc41
 SHA512 (pyao-0.82.tar.gz) = 9c2349a2cfd55f64b8edaa6aaf9cecd4589dab3c6fd8a5cc8ad8c9512bf3595c85e0efaa56d6bb2f89410fbfa82081c8c2ea5ea68071e64afdbd8809f70b36cf
 Size (pyao-0.82.tar.gz) = 15399 bytes
 SHA1 (patch-aa) = 6822564d118285470a5e4fd3dc7dcda250dc869a

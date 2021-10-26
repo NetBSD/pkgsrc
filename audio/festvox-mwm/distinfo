@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:56 nia Exp $
 
-RMD160 (voice_mwm_di-2.0.tar.gz) = bcc453fca534333dcc15ad016848542b48791195
+BLAKE2s (voice_mwm_di-2.0.tar.gz) = 1194b4b4197dc6b4a1166b1142f9a19a2fee0ce27b044c1a82d31ffd4714eacd
 SHA512 (voice_mwm_di-2.0.tar.gz) = 384694508ac4af5af871895aace7ac781f318362438314c94535cf44e49d18134ae11a250321eb3983a99c9e7cd62251e734b4924d6b4d51f0b307265cf320b2
 Size (voice_mwm_di-2.0.tar.gz) = 5032801 bytes

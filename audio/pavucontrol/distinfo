@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:09:46 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:22 nia Exp $
 
-RMD160 (pavucontrol-4.0.tar.xz) = efb33c4f161e237b8da445fc9d6baff17be251dc
+BLAKE2s (pavucontrol-4.0.tar.xz) = 3bfb3dd63535b505259fb7f78716f072ec7b08d5ff4b1bdee6da46de1e5e7b9c
 SHA512 (pavucontrol-4.0.tar.xz) = eaea303c46ddb36733aed88c8a603907d70e4539c345d8acec23527d3306ee21ae630c0508bdab6ae52cbc2f1eb8fc4b212abda72876dc92e83fba7ceb623be2
 Size (pavucontrol-4.0.tar.xz) = 165216 bytes

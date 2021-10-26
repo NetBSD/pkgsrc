@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:09:43 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 09:59:19 nia Exp $
 
-RMD160 (ocp-0.1.21.tar.bz2) = 6b42e93e9fe5879e844b2d336825a2db156b7e6f
+BLAKE2s (ocp-0.1.21.tar.bz2) = 0bb17841cd29c491bfb37647b0df62b746bbff091fb4130e8b47cbfe27b0970d
 SHA512 (ocp-0.1.21.tar.bz2) = fec0123b61163780d8133939df2a0219c98b533a7a6eb477ee1029eff7b2f3782969e792f6a767d3ff99c809cc2cf8dc0b8518f0e91f96015279c20115507269
 Size (ocp-0.1.21.tar.bz2) = 781805 bytes
 SHA1 (patch-ab) = d33aad7cfa41330c5cb026a7d3e92545f741f429

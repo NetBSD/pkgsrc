@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:54 nia Exp $
 
-RMD160 (voice_abc_di-2.0.tar.gz) = d7404ea96ee89ff4c51ca80ce222400ff040d203
+BLAKE2s (voice_abc_di-2.0.tar.gz) = 87483d10012f04a74b7c93754b23b1d56e36d680495d3bf46237ccf304546c4e
 SHA512 (voice_abc_di-2.0.tar.gz) = d7ddc0bef4ee9836c3feb6f5c4206fd41aa6ca1465a1d699bb479c88f3b475d7556468d5e19cfab3a5c53e4c289028d2f09589ce645e30c35084d53951029ba0
 Size (voice_abc_di-2.0.tar.gz) = 1690367 bytes

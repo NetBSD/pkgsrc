@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:08 nia Exp $
 
-RMD160 (libmusicbrainz-5.1.0.tar.gz) = bf3635b0f145325cb72a17cad9e7b23d3c72c3e5
+BLAKE2s (libmusicbrainz-5.1.0.tar.gz) = 519cc6e0329d06bbc2648c574f26fd8faa4ed8a378b7cf24d54a527354c288c6
 SHA512 (libmusicbrainz-5.1.0.tar.gz) = daa7ccb94e517e90f7d88a0659c84b00f04c6a73ef7771b7e3bd9101fa6569b1935a68a3689502ed0cc8c0d71ba9d2d0ebd9c074dd5eed9f75a3db390b222e03
 Size (libmusicbrainz-5.1.0.tar.gz) = 77220 bytes

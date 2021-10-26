@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.46 2021/10/07 13:09:13 nia Exp $
+$NetBSD: distinfo,v 1.47 2021/10/26 09:58:47 nia Exp $
 
-RMD160 (audacity-2.4.1.tar.gz) = 8c0b5643d015c7dd5bbe1b47eae0025201eb51b2
+BLAKE2s (audacity-2.4.1.tar.gz) = 53a42d20bfea5dfecfe0f40f7c668036c1057a4dddaea5541802ccd76aa75e99
 SHA512 (audacity-2.4.1.tar.gz) = 2f0a3f7e24dce91ae520e285dbb05778b68e0fe37b8ded55ac568b5f8135069951b3986764adc5d0791c165b283a3c19596f1d6f51ba17028e0eb04558c63f25
 Size (audacity-2.4.1.tar.gz) = 63935461 bytes
 SHA1 (patch-Makefile.in) = 2aca8c2ae0af7863f8f090a707c08fba693c7c86

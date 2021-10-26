@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:09:51 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:59:28 nia Exp $
 
-RMD160 (ruby-mp3info-0.8.10.gem) = 17ca97817b142381d211429e06cfa07bd9336963
+BLAKE2s (ruby-mp3info-0.8.10.gem) = 94b8b7b0e93c508e9a6b1b26d74d132d1caf39abc7adc8cf65c100b238cf804a
 SHA512 (ruby-mp3info-0.8.10.gem) = b02a1ea40f99abdc854eb7d00d456c165ece5811c0a809271421c4c1fff32987cfbab10fc56415251240eb9f3fc971937ebaf39956ba2699f025971768caeccd
 Size (ruby-mp3info-0.8.10.gem) = 91136 bytes
