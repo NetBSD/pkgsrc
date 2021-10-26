@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:36 nia Exp $
 
-RMD160 (tryton-4.2/trytond_timesheet_cost-4.2.0.tar.gz) = f197e85c8714766d485bfe3e1f096c493967451f
+BLAKE2s (tryton-4.2/trytond_timesheet_cost-4.2.0.tar.gz) = 05f7c9b1987aec20fb3b59353a471021cd9c536b03273bd11404fbb67bea5e01
 SHA512 (tryton-4.2/trytond_timesheet_cost-4.2.0.tar.gz) = f8caaea7b6dea9e3220194f4cb52ddf490002252bafe2f45a322e205fc78e3267ad5848a8a0be06071ccc10c03c5ee00d860a3af0e3842a904d1406426044c82
 Size (tryton-4.2/trytond_timesheet_cost-4.2.0.tar.gz) = 24029 bytes

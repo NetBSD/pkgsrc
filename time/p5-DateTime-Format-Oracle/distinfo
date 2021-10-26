@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:27 nia Exp $
 
-RMD160 (DateTime-Format-Oracle-0.06.tar.gz) = 4b510bc45c57398b0f487751e3b10f40aac2c3d1
+BLAKE2s (DateTime-Format-Oracle-0.06.tar.gz) = 3f0dacaa17addd361c5d6b718982ef3b670ef1a5907cea7ab28328c4f44a703f
 SHA512 (DateTime-Format-Oracle-0.06.tar.gz) = 068be2b810ce4c3068184d5301da80f7cd8cc6aa6a6e7da1c77f21f4dcef14ed8c8babed72402df84f5c5dd041052e7532ee1db3d7337dd432818862488a3b2e
 Size (DateTime-Format-Oracle-0.06.tar.gz) = 5962 bytes

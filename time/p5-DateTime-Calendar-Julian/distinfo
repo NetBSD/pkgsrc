@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:04:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:24:25 nia Exp $
 
-RMD160 (DateTime-Calendar-Julian-0.104.tar.gz) = c9972f3b4d26f37768d93c7015b867d0be86d7f9
+BLAKE2s (DateTime-Calendar-Julian-0.104.tar.gz) = 9c44d726a0a72f830222732132dd8cb320c23e722fabfe660e5f57384ebf56d3
 SHA512 (DateTime-Calendar-Julian-0.104.tar.gz) = 5fa8dd0c2a8e7a3477bee723c3d6870a4c8ba361231b474afabfbb5118cc1d2d55e60035606b789a4700aaa9a35a9a836d0eb2a9bd935eeb23ff93db472e3599
 Size (DateTime-Calendar-Julian-0.104.tar.gz) = 18172 bytes

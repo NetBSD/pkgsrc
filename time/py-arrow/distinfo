@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:04:08 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:24:32 nia Exp $
 
-RMD160 (arrow-0.15.8.tar.gz) = df463189241c7f8f3ef22516865453d8520d8b94
+BLAKE2s (arrow-0.15.8.tar.gz) = 9b1b9bec597bf6c6c37047dae47a04958b8a2bfb8653f86b221d437dcc1598e7
 SHA512 (arrow-0.15.8.tar.gz) = 93d161cbeb48636f2e3f91ebcc51cddbb3b21175ae31f5d9251a22358c7d1934663a8e47a82efd8773bf30c28efefcd8d2a3baf581fe191777cd41f12f29d4d2
 Size (arrow-0.15.8.tar.gz) = 92220 bytes

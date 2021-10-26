@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:03:54 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:24:18 nia Exp $
 
-RMD160 (dclock.shar.Z) = 772bded334477537f39f2a492d0bea69afff71a8
+BLAKE2s (dclock.shar.Z) = 3140932f9ab0d4c566d6ddfdc16950e5c53c5ac86f18d062d74fe071d13de302
 SHA512 (dclock.shar.Z) = cd2c8f3fbd68dd99c9029c24a8580b1f6fe505458b4a0878a7bff78e84a2f764ee9b258d18425d9298184d6933d55c0e384510bffc09b7b0db9fca2a0ea64de8
 Size (dclock.shar.Z) = 23855 bytes
 SHA1 (patch-aa) = 403aaea5e6ecb0e374888c25dbf1ae5baa29c38e

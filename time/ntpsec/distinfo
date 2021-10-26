@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:03:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:24:23 nia Exp $
 
-RMD160 (ntpsec-1.1.9.tar.gz) = ff7d8c93a18d9020b327b843dc121c3f53fbce26
+BLAKE2s (ntpsec-1.1.9.tar.gz) = 82b991764abdedb11db052b79dd4baca0168d5eb3f7016f822f91f4cc5a9f704
 SHA512 (ntpsec-1.1.9.tar.gz) = e04267aa675a5b528f3478d00329a569ecb9bbe2b6ad18697020854d2ee451bc188c4603cd5f420a08a7e3bf047d2db1301416f57f9156df23aceb1f57303b0b
 Size (ntpsec-1.1.9.tar.gz) = 2606066 bytes
 SHA1 (patch-wscript) = f34ff4f2f13d559651e5c302a0d792f53d458933
