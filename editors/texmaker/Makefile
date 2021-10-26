@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2021/07/30 12:26:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.122 2021/10/26 17:56:54 nros Exp $
 
-DISTNAME=	texmaker-5.0.4
-PKGREVISION=	4
+DISTNAME=	texmaker-5.1.2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++ c
-USE_LIBTOOL=	yes
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
@@ -37,6 +35,6 @@ pre-configure:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
