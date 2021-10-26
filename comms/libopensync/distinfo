@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:27:04 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:06:00 nia Exp $
 
-RMD160 (libopensync-0.22.tar.bz2) = a1e9715d037a7c474b80d609e6c96a24cbb6692f
+BLAKE2s (libopensync-0.22.tar.bz2) = ed12a9c526a2b66c5da0f0d56fa65c455bfb6aff9e5638fc9b3e87ebbdb6d92e
 SHA512 (libopensync-0.22.tar.bz2) = 90b6c7af9890d51bddfa5ce9ff5403f642d1deb7dc839e517366f9fd0afa5cd582b9a0e6e37d4a110f2aba7421da6705da0a761ad3ea40e9def3d3580f1b6aa2
 Size (libopensync-0.22.tar.bz2) = 489978 bytes
 SHA1 (patch-aa) = 4bcf03611850719042bafd794fc413cef159a702

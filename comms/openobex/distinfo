@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:27:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:06:03 nia Exp $
 
-RMD160 (openobex-1.7.2-Source.tar.gz) = 69aa4026f468d63e8ca32517b84773ba2738a925
+BLAKE2s (openobex-1.7.2-Source.tar.gz) = dc15e29cc63fc94298e42b429509b19bed2af434b780ebbe65fbf3d79b0cc46f
 SHA512 (openobex-1.7.2-Source.tar.gz) = 22f1b0d99e7186da9fa12b510ef9dbb6f7d76777d58b235ab2f627703d07b6f6b0488cdc9c6d8c0ab7bc86d6d19117c55fff9273fed02736c0210f9b1788bf4d
 Size (openobex-1.7.2-Source.tar.gz) = 127248 bytes
 SHA1 (patch-lib_api.c) = 4ea3f2b8179a52a4d1266395a4f20b572582903f

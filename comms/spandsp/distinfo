@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:27:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:06:06 nia Exp $
 
-RMD160 (spandsp-0.0.6pre21.tgz) = 183a8e42d45f7b026064d696a361f0b64dad68bb
+BLAKE2s (spandsp-0.0.6pre21.tgz) = 7fdb6b11889a24ad2d3c63c69749a7c75eb19d1accdf5f9ea2d18d5083b8115d
 SHA512 (spandsp-0.0.6pre21.tgz) = 6f846021cd6a1605d371a8e5d1ac3a5b6adc5b85de2517e24a5afaa57b4864202c2d16c1196959f7f11d866732d17d301d2d37121228cec75077678f8fc3e488
 Size (spandsp-0.0.6pre21.tgz) = 3278758 bytes
 SHA1 (patch-aa) = 9367cb23f8413d6adcff23ddecda914d9de27e0c
