@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:56 nia Exp $
 
-RMD160 (Roman-1.24.tar.gz) = f99e592e323682ecd7f2daf28e9fee14945a1d29
+BLAKE2s (Roman-1.24.tar.gz) = d304d9b3bf2c2a15013279cb412c8108f465ab996ce9a86fcba9dadf93199c2d
 SHA512 (Roman-1.24.tar.gz) = 82df0d817f55ad6a8fd467e92c97e27c07bd6cb04f0accb65468d6594d3e3ea545383f1c3763215d8c984cc31c808fe979c7d6c74dab1609ec822a9f256709e0
 Size (Roman-1.24.tar.gz) = 4470 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:27:49 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:55:27 nia Exp $
 
-RMD160 (R/geoR_1.8-1.tar.gz) = e663a5c8cea455562ae52bb156a4cfc7e383a1c5
+BLAKE2s (R/geoR_1.8-1.tar.gz) = 8aa8447b4195352073b631d4a4cc43dda1c926be9f1c50b773350302f0e31833
 SHA512 (R/geoR_1.8-1.tar.gz) = fff321bf264651bb7d04121b9c29eef53a9f477265bdea59a11ec35eebceff4b8076c0bf45efd4dcffb9e53c9441e99e262402eb49a2ac37c482b97a2f5fdfe0
 Size (R/geoR_1.8-1.tar.gz) = 406492 bytes

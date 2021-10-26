@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:59 nia Exp $
 
-RMD160 (abcpmc-0.1.2.tar.gz) = adbeb10078e6cf71ac868210afbbfb4698fb7275
+BLAKE2s (abcpmc-0.1.2.tar.gz) = 0b65622ddf023176260c5d8d3009157a82613cb93a295124978dde7606b7099c
 SHA512 (abcpmc-0.1.2.tar.gz) = 5f94af7be91dc6d07438a641b60da84678ba1d033b03986c03300227ea0337d0dc90a22d85d86b1965c9175af489d9acafcfd3c52aad4130d6a994114cc1e09a
 Size (abcpmc-0.1.2.tar.gz) = 872276 bytes

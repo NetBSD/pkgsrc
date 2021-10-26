@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:33 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:10 nia Exp $
 
-RMD160 (physics.r28590.tar.xz) = 57245afaa5b3a2e69a1497e9f74eb48eea7c0149
+BLAKE2s (physics.r28590.tar.xz) = acc1daf23e7ac365ea0125e635be9bab5816f02fa6a56e784aaf0ca3e51709af
 SHA512 (physics.r28590.tar.xz) = e394a7f8eda4583cf196dccbd9d52122d0ee630a411630f11d432018c5e9696a9b3feacfa2f881d82090df165a73ee0fa610ad86422123a9e1502ccf4b695be0
 Size (physics.r28590.tar.xz) = 5912 bytes

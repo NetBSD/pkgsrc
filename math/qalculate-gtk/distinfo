@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:28:28 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:56:06 nia Exp $
 
-RMD160 (qalculate-gtk-3.5.0.tar.gz) = 98a79f6af3dd8f7e26d0fa2cef1547bd74e81aea
+BLAKE2s (qalculate-gtk-3.5.0.tar.gz) = 953567697e3944b40741c6a3e8a60aea5cce410533b2aefa664cefe377e83ed0
 SHA512 (qalculate-gtk-3.5.0.tar.gz) = de00935f90740e57ca4a6feac98be5fd947e1c2e013350b1144d756986cf02ef74e09ddfa25e2806d084897bb1424a32fbb0e605291fe700ac9dc16e599d4f86
 Size (qalculate-gtk-3.5.0.tar.gz) = 3024639 bytes

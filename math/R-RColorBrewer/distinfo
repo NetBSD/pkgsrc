@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:27:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:22 nia Exp $
 
-RMD160 (R/RColorBrewer_1.1-2.tar.gz) = 2afaade6aaea039c3f60d1fa0a66612630cd3c58
+BLAKE2s (R/RColorBrewer_1.1-2.tar.gz) = c9e99f4ab9c2ce9ad23d7982bdfbc17680048acca35505775d1ad648c02d9116
 SHA512 (R/RColorBrewer_1.1-2.tar.gz) = 29eeecae274c57f2af3366d072fb6a61a1e0be64aae9393e10c7e92c3b98473b60b7042b532c49e0ce2f53e6dce1a728ddd6937bbc64cedcb3664a429c3e54da
 Size (R/RColorBrewer_1.1-2.tar.gz) = 11532 bytes

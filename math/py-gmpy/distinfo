@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:56:01 nia Exp $
 
-RMD160 (gmpy-1.17.zip) = 0465338605fa73695259082c973eab23d7d96cff
+BLAKE2s (gmpy-1.17.zip) = 4448664afe928a02fdb7b9a7e99b98d63759b7ce173fd436edae9418be184641
 SHA512 (gmpy-1.17.zip) = f45b9862beffdc74e1e5840ec8ea1a7e15a31518df5e3782f247e98566d7d471fc4105e30d8c90194c714c46b77edfd944192fef6446cd6d60d1e4c304d0b029
 Size (gmpy-1.17.zip) = 147636 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:58 nia Exp $
 
-RMD160 (pear/Math_BigInteger-1.0.3.tgz) = 534593246d6f44454a9c505adf9bc292038b2860
+BLAKE2s (pear/Math_BigInteger-1.0.3.tgz) = 3a11497e80ebc18791abf1e5d9ebd6afc1a3e4a3e254ce21d2ab1d541322c572
 SHA512 (pear/Math_BigInteger-1.0.3.tgz) = c8d6d638a6093b39e0f95e55d4d7488ddda1ad512504a97ce62a78ffae969b0d90925d6252b26230e5664f84b0a6b70fb456a678fbb291ca1a068cc7c539f415
 Size (pear/Math_BigInteger-1.0.3.tgz) = 28009 bytes

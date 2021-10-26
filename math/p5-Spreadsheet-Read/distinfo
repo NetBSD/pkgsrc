@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:28:18 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:55:56 nia Exp $
 
-RMD160 (Spreadsheet-Read-0.81.tgz) = 3cc78bec33ada62a9b96395d0d9ef5b7363374a9
+BLAKE2s (Spreadsheet-Read-0.81.tgz) = d3eb54e95e1212a72f4f7dc6d31359e2e3bb89ad873119c0a5e3ddad8197cdb4
 SHA512 (Spreadsheet-Read-0.81.tgz) = b289e1bef3ef92298c639853ee8804ee732fdc3b144f8ed8da67221ebb96e2d113fe64b3db8fb6cc9b1aa8a426748cbc9e517fd78c099c5feb20bede14105bfd
 Size (Spreadsheet-Read-0.81.tgz) = 194447 bytes

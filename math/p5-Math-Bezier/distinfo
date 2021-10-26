@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:52 nia Exp $
 
-RMD160 (Math-Bezier-0.01.tar.gz) = 7257f9d478d8c35ec895a25b2f42b869b0442e39
+BLAKE2s (Math-Bezier-0.01.tar.gz) = 9109550cda40d9a865e4ca796a3a2e10cad13ab6bce578e9f68165aed3128ea1
 SHA512 (Math-Bezier-0.01.tar.gz) = dc8facf3bde3a763cd18e2459fc4f3c1b4736b6f13b13144cf5b9633725fd5b7b52cff77a1815ee897f36d5b52d4ae9e9a47c3ed6d02977b2dbef815ee704bec
 Size (Math-Bezier-0.01.tar.gz) = 3101 bytes

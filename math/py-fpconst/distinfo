@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:28:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:56:01 nia Exp $
 
-RMD160 (fpconst-0.7.2.tar.gz) = 28659ca7c7c84dca9061ea1d3ad7785ef1fb2cbf
+BLAKE2s (fpconst-0.7.2.tar.gz) = 9beba2ff42c95e93fc0ee005e6954d24d34142f7e277ec84e840dac06d18f5b5
 SHA512 (fpconst-0.7.2.tar.gz) = 1a4ea7702ece1b34402c5e631c2a6fb414b0c27f9535c9e1104b0e322c31e80b1218418bfa71f3e96f960c0fc73148d77dca924d6cc79813c4aaacac34d77545
 Size (fpconst-0.7.2.tar.gz) = 3015 bytes

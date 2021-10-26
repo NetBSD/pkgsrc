@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:28:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:56:12 nia Exp $
 
-RMD160 (xlispstat-3-52-20.tar.gz) = 834442693df99692c80efd6149315639329379c4
+BLAKE2s (xlispstat-3-52-20.tar.gz) = 126ec0c9f4e2717b9b54a2d41feba2c1179d8ddcbc20b6a934926724bd54ef80
 SHA512 (xlispstat-3-52-20.tar.gz) = 0b197147125d2fc5d1d4a820667e9b392287200ee7951f36f37fa1335dd6e8e0dc03dc353c9ea3a9c596ad152687ed0d71d0718f6e6c68acc4687f6d437d02f7
 Size (xlispstat-3-52-20.tar.gz) = 1527951 bytes
 SHA1 (patch-aa) = 84eb15a37fadad963ed125e0bf0b2ff826a0937a

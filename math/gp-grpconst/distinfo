@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:42 nia Exp $
 
-RMD160 (grpconst.zoo) = fafc3f168457a3d88af06d866d43f64b02f624b1
+BLAKE2s (grpconst.zoo) = d32cc2f8395d891732392b9c9eeec56e6c12550ea151afe9aedc12aa789d8d75
 SHA512 (grpconst.zoo) = 413a87cc3298f0e14609e674c01e7026e58ab53591dbfac54e247898a2e666164cbd9b9698e4b119182c741b23d8b23a1da13d74d4b15725bef6a50d6c5237b3
 Size (grpconst.zoo) = 67499 bytes

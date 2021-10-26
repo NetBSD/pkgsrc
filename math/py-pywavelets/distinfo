@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:56:04 nia Exp $
 
-RMD160 (PyWavelets-1.0.3.tar.gz) = 0bff37693009f39baae82d90f4412a2c04886e56
+BLAKE2s (PyWavelets-1.0.3.tar.gz) = d5a2979c81b59f76df8bb4d5dea23eb995748fddd318e6a8f7d04695a52f24be
 SHA512 (PyWavelets-1.0.3.tar.gz) = 7890d9d7ee2694061b2a894785bb32678af536e2f57198f05534ee87afa79f0cb74fdd9344b0c504a89e74c1145c04de20cf35977cc63d8e49365ce8fb9cf7c8
 Size (PyWavelets-1.0.3.tar.gz) = 4552777 bytes

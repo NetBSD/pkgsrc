@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:27:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:36 nia Exp $
 
-RMD160 (boolstuff-0.1.16.tar.gz) = a2b5939679d9727a06c8e1a2fe1d29213a1b61c5
+BLAKE2s (boolstuff-0.1.16.tar.gz) = 5b00dd1a8594ce8397065e29f09ae80f772740689202602bf2b6db74dfc0b2f7
 SHA512 (boolstuff-0.1.16.tar.gz) = e8b905a37ac1b2a79736b8b2c2c75054721bba1ac741e0c475abd9d250c7eeb86f0a73749f3e25f3766b0c531bb8b84b4b93f68c990ac288fe7be6188d4c1b6f
 Size (boolstuff-0.1.16.tar.gz) = 389548 bytes

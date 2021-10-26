@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:27:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:21 nia Exp $
 
-RMD160 (R/ISLR_1.2.tar.gz) = a5941b7bf932dd254d484cdd4a72115d4d302058
+BLAKE2s (R/ISLR_1.2.tar.gz) = 4bbd87c5ce555c05059fcfca54823f92a932d2427bc5c34f2841780f1adc9c9e
 SHA512 (R/ISLR_1.2.tar.gz) = bdebb9909f2bad827be67c7a1e57f9bd2c3a51336471096c1d597ebaed0fdb0eb1e411ffdd4c60f9e54f6f54cd017999510cbd3183130565628edb817bd636b9
 Size (R/ISLR_1.2.tar.gz) = 1757568 bytes

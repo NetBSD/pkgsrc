@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 14:28:02 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 10:55:40 nia Exp $
 
-RMD160 (fftw-3.3.10.tar.gz) = 067dd44017c42bf7f702ee66ea4f8c309624134d
+BLAKE2s (fftw-3.3.10.tar.gz) = c5d6a1bdf6082149d4615097869bf6cdd64c3cefa6337d30c1d642df73b74ba6
 SHA512 (fftw-3.3.10.tar.gz) = 2d34b5ccac7b08740dbdacc6ebe451d8a34cf9d9bfec85a5e776e87adf94abfd803c222412d8e10fbaa4ed46f504aa87180396af1b108666cde4314a55610b40
 Size (fftw-3.3.10.tar.gz) = 4144100 bytes

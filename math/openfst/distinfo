@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:51 nia Exp $
 
-RMD160 (openfst-1.1.tar.gz) = 45657bb11f91ffdce5261ff6f4c103c164cc161b
+BLAKE2s (openfst-1.1.tar.gz) = d8b79b30f749d74afdbf35328d542c233de7310c5cc4075bfc49058a062d707d
 SHA512 (openfst-1.1.tar.gz) = dce835b2be5a805ba2927e36536ada1ad2d49c4bea2fed65bd7c09320626a4ba9f159c5b720ddee4f6e67c53f873496c3c7bf80fe826d7eeb31a898d2b2198b8
 Size (openfst-1.1.tar.gz) = 513404 bytes
 SHA1 (patch-src_bin_compile-main.h) = b0f77cf8876acea5597b0ddb622dcddc52103cf0

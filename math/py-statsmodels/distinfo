@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:28:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:56:05 nia Exp $
 
-RMD160 (statsmodels-0.12.2.tar.gz) = d8049f589996c1a4f9c443d2303cb466e013c033
+BLAKE2s (statsmodels-0.12.2.tar.gz) = 358ad9df9c1f560312f9c98b0e89fb6a2eab486d462a0a5bba3433e8b9c99856
 SHA512 (statsmodels-0.12.2.tar.gz) = ae4872bc7300ef564407daa8b4076fd70fc180965622ed2173871579e063e2143e000540089923fe171dbb191b7dd872077d8ba6794fe23390331375ec7ce810
 Size (statsmodels-0.12.2.tar.gz) = 17470078 bytes

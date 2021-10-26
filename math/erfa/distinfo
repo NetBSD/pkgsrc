@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:39 nia Exp $
 
-RMD160 (erfa-1.7.1.tar.gz) = 98917ba7720ca47a12dea8ff6a666a6d2ed28d19
+BLAKE2s (erfa-1.7.1.tar.gz) = e6415156a2076595d3a95f487a411a8d6d280058d94dffd3637432ee34ef69e6
 SHA512 (erfa-1.7.1.tar.gz) = 353d7ffc0fb62768375c0514bc7a17fbefeca5d316e3c3efbd83a1060f19b084f9dda0af261f618f19b5f6d5642f1d4669af6a9e03cbe37959f8d0b8f1713b9a
 Size (erfa-1.7.1.tar.gz) = 334357 bytes
