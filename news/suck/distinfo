@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:44:59 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:09:37 nia Exp $
 
-RMD160 (suck-4.3.2.tar.gz) = bbe952cc1dc8c76fad6651b3530cb87daeb6bb1a
+BLAKE2s (suck-4.3.2.tar.gz) = 86391e1cda2ceaa06de19750cba12a0da246fcdc1454ea19512c79c7608de7d6
 SHA512 (suck-4.3.2.tar.gz) = 704559ea54daabc6ef7b205431e587a90de20d8a5648e60910e4bc1a1493eebc8a3497c308a9de34febf6b26eda13785cf9f1f5ae034ee7fb0a9230173d13d4f
 Size (suck-4.3.2.tar.gz) = 187560 bytes
 SHA1 (patch-aa) = 970ffa385a2b2b3f95944ba9a4321452bb247319
