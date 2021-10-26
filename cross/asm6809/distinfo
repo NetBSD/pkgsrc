@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:30:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:07:51 nia Exp $
 
-RMD160 (asm6809-2.12.tar.gz) = 61d1a9a6195f2d4fb35a2e48321fa2b85ba55191
+BLAKE2s (asm6809-2.12.tar.gz) = a10a2dfef1d36e5b28f4ba7fad5ce232a29472e2600438e4220f0f099c696043
 SHA512 (asm6809-2.12.tar.gz) = f388f9f5b258a2d3f9d755d9cc26854ecb1ee792f187977859c34d9174056867cebbee77ec8071343568bdc7ed493061db8ca5feaf2c345a5eef38fa7c17687c
 Size (asm6809-2.12.tar.gz) = 596672 bytes

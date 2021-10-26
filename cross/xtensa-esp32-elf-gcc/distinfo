@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:30:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:07:57 nia Exp $
 
-RMD160 (crosstool-ng-esp32-2019r1.tar.gz) = 390218c0db65cce4e13096aff7453c6c8a7a6b62
+BLAKE2s (crosstool-ng-esp32-2019r1.tar.gz) = bed8d08d2fc99b7b787a0e112e6e94951fdfdd067e3e0393b3cb54a61c05beec
 SHA512 (crosstool-ng-esp32-2019r1.tar.gz) = ff4dc1a31db96449ca6334296315d0edc1afdd4eef23fd0a3f8c327648f023dc732d9f25da4713d918eae764c31c6a5bea1245578185b267072f6b2b7d93c155
 Size (crosstool-ng-esp32-2019r1.tar.gz) = 2494124 bytes
-RMD160 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 11c2a777ac68b792d221e985b5087ce6c5e137f3
+BLAKE2s (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 35463882631ffc6a5b3ba517ffc503e06928efabaef578ee2a472ee0fddedc14
 SHA512 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 65c30b988f22718da2a59a8161406080f35e6850111d2fdb6607e085975c2daff277b853bd24ff9856405abc24726d8e2f5caca397afd0c92f0798d03e428c29
 Size (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 102473573 bytes
-RMD160 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 3d6eda65bc4c21feab6985ffbfc1a96d70b9e874
+BLAKE2s (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = e689211a8bf041bf687bec3f074d74aae0dfb7578cc5215d3a9b0ad0dd7d986c
 SHA512 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = d08ed86765d939f3d5cd42d69b9ba0c1b87e75a8e258baf2ee5fd75dbd2f298da36a7c704dd3944570fc5359292a3795f9de0aa7208baf20c013b37c3f925ff4
 Size (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 21247297 bytes
 SHA1 (patch-configure) = e8ce6b8126845e03bbaa28569074fada93466d85

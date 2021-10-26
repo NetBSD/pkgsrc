@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:30:22 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:07:52 nia Exp $
 
-RMD160 (dasm-2.20.14.1/dasm-2.20.14.1.tar.gz) = e7420abb3f65e7e617606a52e32076d52eecb453
+BLAKE2s (dasm-2.20.14.1/dasm-2.20.14.1.tar.gz) = b4653e352ff8d6f92644a61efa4e00ce8de2fd54964729f6a4a36868d6c9393d
 SHA512 (dasm-2.20.14.1/dasm-2.20.14.1.tar.gz) = 2b617bd7c1a968b22966e84f1353f0a334125290a550ad7b4a9f6a2c18213806730067ee2abb25b138cd3926589d387486110a77fab144160890b934cf04add1
 Size (dasm-2.20.14.1/dasm-2.20.14.1.tar.gz) = 980412 bytes

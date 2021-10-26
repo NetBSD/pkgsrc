@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:30:24 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:07:53 nia Exp $
 
-RMD160 (icdprog-0.3.tar.gz) = 5643ffd9687602ace01007f0514aeb5b372ca48e
+BLAKE2s (icdprog-0.3.tar.gz) = 9d424338081c7f79d0a4c388243ebfb5035131ed63292367983512c54ac9c4b6
 SHA512 (icdprog-0.3.tar.gz) = abcc57434050eb40cbbc6450172bcbe1bb320a39ffd54e7e53abadf5bc985632e726c92f52276710b7e0f78825eb207e7501c94493ee825546414902e0666671
 Size (icdprog-0.3.tar.gz) = 8714 bytes
 SHA1 (patch-aa) = 05e8cb5e69822ad854bd48bfcf0b24ea5b84ad22
