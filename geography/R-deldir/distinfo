@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:09:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:05 nia Exp $
 
-RMD160 (R/deldir_0.1-28.tar.gz) = e4ee09199c468d80b3814d53d9e349deb41517b1
+BLAKE2s (R/deldir_0.1-28.tar.gz) = 9ae94f7633af697c41ace52aa66ac47e4823863374f9658a2635a199c369372e
 SHA512 (R/deldir_0.1-28.tar.gz) = 8028dec24604b37aed873d43d8e61760f8f5c6c5cbcc0f815cf9433936cabe0d34ce7ce767a217be4199cc80f40ae5e40950c24b6fdc4f551587b53a7104c5ea
 Size (R/deldir_0.1-28.tar.gz) = 105886 bytes

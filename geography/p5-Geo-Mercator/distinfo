@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:09:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:13 nia Exp $
 
-RMD160 (Geo-Mercator-1.01.tar.gz) = b1c542e5842444feee93a3c6d5f27c0e4c859199
+BLAKE2s (Geo-Mercator-1.01.tar.gz) = b5ed369149e137601d279b9beb9587aa8a1736e3205125c37fe2bf63d36941e9
 SHA512 (Geo-Mercator-1.01.tar.gz) = ac4d5202292246c90f4569c7edb94a3047367702af31dfea264046f6b0b3907c60a8a1fbe3057eb80d0000c1f1d984f187fa42ffd9e95e95291422cb566b4a70
 Size (Geo-Mercator-1.01.tar.gz) = 3297 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:09:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:06 nia Exp $
 
-RMD160 (R/rgdal_1.5-27.tar.gz) = 0a2384629b7f28387ef093e991525b81e6d29b6c
+BLAKE2s (R/rgdal_1.5-27.tar.gz) = 7bc3c3a82df2382dea79f251ce4c3583482a331a0ae8d227f81c7fb5fd5dc46c
 SHA512 (R/rgdal_1.5-27.tar.gz) = ac748dbca3802d92cfa426e198dcd787f05bfa59e1027f73da8dca8dcb24da5d6b4ec874773379b6f6cb3cca3f3fb0e65176aa986fd059457e82cf21abc3474d
 Size (R/rgdal_1.5-27.tar.gz) = 4391149 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:09:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:45:17 nia Exp $
 
-RMD160 (anthems-1.3.tar.bz2) = d259a5a891227f27a0f1e8bd5530b0d70fea90f5
+BLAKE2s (anthems-1.3.tar.bz2) = c2e99a42778738173af176acd8894c2b5d5d60f741e8327e07b28c7330d4ea68
 SHA512 (anthems-1.3.tar.bz2) = 08be5ec1b7134214129753626210a6f1b7f644a5615cae33377bbd4bfe3f8ad6fd06874c9cf07d60012c27e30a8b30f713c427b10026e72d559f2008a37b9278
 Size (anthems-1.3.tar.bz2) = 204506 bytes

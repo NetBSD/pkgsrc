@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:09:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:45:17 nia Exp $
 
-RMD160 (CIA_WDB2.jpd.gz) = 0181e05617c21b3cec2be6d600371370de883bfd
+BLAKE2s (CIA_WDB2.jpd.gz) = 230f35567b06188bd6ad0caf0dee65c713749dc7cea67bf05ae615707a6a7f69
 SHA512 (CIA_WDB2.jpd.gz) = bc1d04ab618ee5de48150faf92246e13fdebe4a3a06a23dcb327d303c5f0ed5a3c39ab19c51f333c62b34c8b4af3108a20af4436d8497347ac184fdf2d73e657
 Size (CIA_WDB2.jpd.gz) = 7430183 bytes
