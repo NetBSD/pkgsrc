@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:58:59 nia Exp $
 
-RMD160 (color-theme-6.6.0.tar.gz) = 82a2c75a65f50f9c5e6d5193c3f768824c6c1549
+BLAKE2s (color-theme-6.6.0.tar.gz) = f4d6801292e1830019f025dd53144fd2f964b1b3ad5c09a769266777ce2b3656
 SHA512 (color-theme-6.6.0.tar.gz) = 4faa22900f6ad4a1dd57452470e23b57827d3f02bf2b9e3c4eed6f5693432d6478aa5008e67f219a95412a63fe52dbcad15b0ac7a3b4d39f1d28ceda75e5e76c
 Size (color-theme-6.6.0.tar.gz) = 124858 bytes
 SHA1 (patch-Makefile) = 728127c250306ca92ad940eb277500f88739b312

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:59:36 nia Exp $
 
-RMD160 (vimpager-1.8.9.tar.gz) = 6e00c2cbd8e4628d535dd6782652c61084c726c8
+BLAKE2s (vimpager-1.8.9.tar.gz) = de7cf1987098ea1b9e04e9165cc4a755b62ad958404f41eaafd22426e9690249
 SHA512 (vimpager-1.8.9.tar.gz) = 6544600d527159df69f94e976b42adb5fa8651b87ca3aa4e8da52aa197988e14b1efedf9850b6fdb9a9b5716eb1071a6bed45a3f10f41ab63e36eef91b1b3f97
 Size (vimpager-1.8.9.tar.gz) = 11942 bytes

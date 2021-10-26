@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:35:15 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:59:00 nia Exp $
 
-RMD160 (colortail-0.3.0.tar.gz) = 9141fff0a26ec653b39f580749336cbd16c92492
+BLAKE2s (colortail-0.3.0.tar.gz) = d739350e9ba660557a8e74e54b02d55b254cbbc8c71a811aeb212caab369d737
 SHA512 (colortail-0.3.0.tar.gz) = b05ed6295e79e11c6f9c54312d38096e65c111f35b9ffb3a768934c3758e39d7ffa1bb9aeed1278b99c4e853ff8d45156eb336d2d6851724fc32b1701ac49b8d
 Size (colortail-0.3.0.tar.gz) = 54329 bytes
 SHA1 (patch-ColorTail.cc) = ff028051f92db984179fdf87465716a338910a5d

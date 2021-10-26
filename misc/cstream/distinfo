@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:35:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:59:00 nia Exp $
 
-RMD160 (cstream-3.1.1.tar.gz) = 955346f09c078a36e7d39a38d25da87ed638f20a
+BLAKE2s (cstream-3.1.1.tar.gz) = 95db93df79c54ff99daf7d9ee3804731bc440700f6cb5ca7f82b45b3f2cb2f1a
 SHA512 (cstream-3.1.1.tar.gz) = 8d6364da622711f6888fd221b2f36f5da23d2a562d5a797d58d7ef361415481de8ab9ae55ae856d47c2d0141d570e22a61ab0ce9954c043877196df168f2f43a
 Size (cstream-3.1.1.tar.gz) = 96609 bytes

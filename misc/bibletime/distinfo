@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:58:57 nia Exp $
 
-RMD160 (bibletime-3.0.tar.xz) = 9d838bd20fbcb7ca850fba4837cc66096b6f073e
+BLAKE2s (bibletime-3.0.tar.xz) = 538fff2499e93f2ba20c2c3f1f1b2d4805792ae2c66ed8ddc33a408819e2dca3
 SHA512 (bibletime-3.0.tar.xz) = 85afc2781807345ea8fdefea6d179955fa76085c0a9c97e47321ea37ef9ea05367678c54bacfc10cf1d6085d46ba6fbd1c7d448044ffdfe3c96007ee8d7e5c00
 Size (bibletime-3.0.tar.xz) = 1568732 bytes
 SHA1 (patch-cmake_BTApplication.cmake) = 4183272811c95ca540b5eb8c807a94d02e7d685a

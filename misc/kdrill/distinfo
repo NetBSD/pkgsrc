@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:35:25 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:59:09 nia Exp $
 
-RMD160 (kdrill6.5.tar.gz) = f114b237a86f18477c898a3e21393f21c42cfb01
+BLAKE2s (kdrill6.5.tar.gz) = 47c438c08ea1125dcbeda6b96e843a43dcc40f214b001ea5cc69b6b49c3e4639
 SHA512 (kdrill6.5.tar.gz) = 8dcf34530bfad302597e73652586d15b7cedb48567cc4b8f03412623ca924562aace933795db51c9c1d9311ab7935d68cb94731b225ce6f3f96611da9db65a7a
 Size (kdrill6.5.tar.gz) = 233569 bytes
 SHA1 (patch-aa) = bbdad0c4d4ccf8bc066a2edf85ed51a80ff2ca30

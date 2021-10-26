@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:37 nia Exp $
 
-RMD160 (window-20120215.tar.gz) = 34d2f8bad158a419387a4d6f7fa977f65d54ab9b
+BLAKE2s (window-20120215.tar.gz) = 695dd03d540300c272ab3c4987b749021bca2601c23edab7ddbe24b86ff63a2c
 SHA512 (window-20120215.tar.gz) = 95e67c3d16b54f936f018b9a80c1007da90b97445784c51c436ae38f3edde4eaa37f6fc49bcb0b15601f4c2663fa01592b7208f737632e11e0c4abbf88f318ba
 Size (window-20120215.tar.gz) = 84798 bytes
 SHA1 (patch-ww.h) = 19281574830d256c7e2f80b12a176f07c56beb8e

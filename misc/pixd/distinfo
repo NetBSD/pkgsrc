@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:21 nia Exp $
 
-RMD160 (pixd-1.0.0.tar.gz) = 2453c6da9dbdac618ff0a3fafbf19f31e41c8de9
+BLAKE2s (pixd-1.0.0.tar.gz) = 864551f213c3a2b3f086feae6bc2012b666af697192800ddd3d4ebac85e2d9fb
 SHA512 (pixd-1.0.0.tar.gz) = 35549ff4602123bb7b63cf22334bd67a3960dbdf8b18652d3627baa0f792aa2fa8a1a451032f4165a20e98157d4a7d2be79e5a1aad4df84cfc9b563cd28c6757
 Size (pixd-1.0.0.tar.gz) = 207124 bytes

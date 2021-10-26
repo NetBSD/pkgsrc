@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:35:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:59:36 nia Exp $
 
-RMD160 (vym-2.7.1.tar.bz2) = fa3aba859cfdebd884aead017f116b180481e311
+BLAKE2s (vym-2.7.1.tar.bz2) = 0b01bc3f4c6830e1f1a525e554808a3a368d5b77c47e33e77d4468e8b9639fac
 SHA512 (vym-2.7.1.tar.bz2) = 985dbf18f743c36b484050ae24e4392eeae701c6c72fca6bd3dc5b70b38a283211946e279804c66253b5a394a642683ca4e3a66a7288400a9193fbcbfd8c9582
 Size (vym-2.7.1.tar.bz2) = 6718924 bytes
 SHA1 (patch-main.cpp) = 0292150eccc272431ff9dc0858bd3f0ce9532b8d

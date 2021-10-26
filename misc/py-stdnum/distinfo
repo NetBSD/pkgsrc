@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:35:38 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:59:22 nia Exp $
 
-RMD160 (python-stdnum-1.16.tar.gz) = 204b49339363e39caff0105a26f298bba924662e
+BLAKE2s (python-stdnum-1.16.tar.gz) = f6f2197d05fbd4d96d3e1ec627ce99261b425691f66999d854fe47b8d1fe60fc
 SHA512 (python-stdnum-1.16.tar.gz) = 29ad92a8d1d3267c56e3d128700611cbfe3bc7a27a1420bfe62851f110f3f23b1d8927771588ef043aba366913bf7a5b0eb72896ee50343f3adf72cdb071415b
 Size (python-stdnum-1.16.tar.gz) = 1039599 bytes

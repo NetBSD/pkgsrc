@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:35:30 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:59:14 nia Exp $
 
-RMD160 (glibc-2.3.6.tar.gz) = 447e9afbc096e2c1893bb0d471997295ec22535b
+BLAKE2s (glibc-2.3.6.tar.gz) = 5d20c2d349a126a0f0ff771ef412e299765992ba8c3fa15358acfb624c4cc17a
 SHA512 (glibc-2.3.6.tar.gz) = 234c0ad42ab49a6056660c1efc849cc1b8326a764d25cdc84bd53dbf6b5251f9dd0c186e959f65f7d637f56c983f8fcbbfbe5483bcd78cccaf7055ac3a8f9c18
 Size (glibc-2.3.6.tar.gz) = 18814292 bytes
-RMD160 (m17n-db-1.8.0.tar.gz) = 35165b4d727e1a05a799e3f24cee7e8d72f43c96
+BLAKE2s (m17n-db-1.8.0.tar.gz) = 26a1542456116f3c8cf2cf982728ec9d34550e5cc5198c3915dd0750dca72497
 SHA512 (m17n-db-1.8.0.tar.gz) = b21abfdcb5eb42e71fbd5edd1a99eca4a05df14f5a57eac7cdd3dc657337bd143a419f4b3f3dd0b74b82c827ede4d3666dd213af9041593cef50118ee43898d5
 Size (m17n-db-1.8.0.tar.gz) = 1977364 bytes

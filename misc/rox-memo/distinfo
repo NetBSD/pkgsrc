@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:28 nia Exp $
 
-RMD160 (rox/Memo-1.9.5.tgz) = 7cba8890ef5d6239441975171b6843918453899a
+BLAKE2s (rox/Memo-1.9.5.tgz) = fda664a73404dfe3e63a4d88cd53054478ccba99770a964f568ef3ec061b55d8
 SHA512 (rox/Memo-1.9.5.tgz) = 706049a87e803e101d00c1ac53020d47188cb7d38973bf74337d1ccd9d06a659fe09aadb5feb4c695c9426862c7e4e178dba5b59f532b9bac8295cb2b51c323b
 Size (rox/Memo-1.9.5.tgz) = 29322 bytes

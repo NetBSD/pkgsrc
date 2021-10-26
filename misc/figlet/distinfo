@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:35:19 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:59:03 nia Exp $
 
-RMD160 (figlet-2.2.5.tar.gz) = 37abd6fc6ffdd7c0057850425640fe544278a2d9
+BLAKE2s (figlet-2.2.5.tar.gz) = f7bf2ea4b7f7875b14cd8a6381d6fa496c6fe43f631ae8b36d1ecbef673cfa03
 SHA512 (figlet-2.2.5.tar.gz) = bb9610fd89a51dd3e65c485653fe1292f47dbca7cb9a05af4ce317f5d776bb346ae455aec07fc37c290f6658639920fd7c431c1135a0f4d456a21c0bd25f99fb
 Size (figlet-2.2.5.tar.gz) = 233201 bytes
 SHA1 (patch-aa) = 7ff721d16e0bbc61dae8d397944cb518e6330325

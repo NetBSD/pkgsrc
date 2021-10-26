@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:25 nia Exp $
 
-RMD160 (tryton-4.2/trytond_stock_inventory_location-4.2.0.tar.gz) = 9ec4555711f0fd123b4316915279272e6272d85d
+BLAKE2s (tryton-4.2/trytond_stock_inventory_location-4.2.0.tar.gz) = 06bfabfa4f3ba28f1fad7aadc7c17fe6c3f7f411c1c577b79c2969e86c0e95d8
 SHA512 (tryton-4.2/trytond_stock_inventory_location-4.2.0.tar.gz) = 30c3fbd0079a33128b343678ea9dabd12ea10f4481d0fc3198b6a0707d29bcdffd9b4dd0241ebe4deca9fdab3829860870578eb253c124177cf38569cf790fff
 Size (tryton-4.2/trytond_stock_inventory_location-4.2.0.tar.gz) = 20866 bytes

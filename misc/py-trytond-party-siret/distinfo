@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:35:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:59:23 nia Exp $
 
-RMD160 (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 458730325acba868e100794190bdf7a72be7ab6e
+BLAKE2s (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 25f3b7df40f6a9ddf7e82d19432d3073cf9fe62f9a5aab76dc703e3689bdafc0
 SHA512 (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = ec6fd8fa1deb0bfc9474a13a1f1264e0810432d2dd65042242a5c54f330006c49d44f4c29236d80177a20029315611f4f21fbe3e0b4b84d932338d6aeb59c9f2
 Size (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 20260 bytes

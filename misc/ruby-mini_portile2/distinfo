@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:35:46 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:59:30 nia Exp $
 
-RMD160 (mini_portile2-2.7.0.gem) = 2988dc25f5311c0540f70a6ce9037ceae57dcef2
+BLAKE2s (mini_portile2-2.7.0.gem) = e2d89a81e3da45ad39bbcc7366e0b55a24303ab204770aa87eae2b60934a37ba
 SHA512 (mini_portile2-2.7.0.gem) = 5cc60c851794027132ea516aef9e175fe7c6cfb18a50c5fe3bbe0ffdb2b0ebbfbc8be6f70b801893b04b0f0493b7a9e40bafdbb7d94758aea4af6b3957d1e4e4
 Size (mini_portile2-2.7.0.gem) = 28160 bytes

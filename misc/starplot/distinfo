@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:33 nia Exp $
 
-RMD160 (starplot-0.95.5.tar.gz) = 1d3f4bc1b9ce17da7c2d38824fbcddc8254aa4f9
+BLAKE2s (starplot-0.95.5.tar.gz) = 3acc5714e0e2c6228eecf38d7ee43f40c82a83834502543def18106439623230
 SHA512 (starplot-0.95.5.tar.gz) = cfc451b9ec8593054b76ef29170408b486e932ef467f3c2f847b40275c8a52e539142d09c76f0057c01ef87bf0628102f99151827030995a5f8bcb9541f24a11
 Size (starplot-0.95.5.tar.gz) = 892878 bytes

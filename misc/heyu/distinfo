@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:35:21 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:59:05 nia Exp $
 
-RMD160 (heyu-1.35/x10_heyu.tgz) = 61c2ff2a2d513dad6e5fca0b4c1df015dd242d83
+BLAKE2s (heyu-1.35/x10_heyu.tgz) = 1f070f0cd29faeacb2749d22a9693dc54d260dbbf2d453f331703fe101289dec
 SHA512 (heyu-1.35/x10_heyu.tgz) = 1e02e8aecbd644c683681c4dc05d2942b43fc60a8d6e4b51923bf1f070d2ee98d71cbb4a80dcf0b37fbc52115ef40105fa801ed74fdcd906e269a785a79a8ed4
 Size (heyu-1.35/x10_heyu.tgz) = 84277 bytes
 SHA1 (patch-aa) = a9c1752f20bf8de52cb5c9607e1b439a00672d12

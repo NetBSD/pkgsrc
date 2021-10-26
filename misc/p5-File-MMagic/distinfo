@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:35:35 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:59:19 nia Exp $
 
-RMD160 (File-MMagic-1.30.tar.gz) = f9ed207d1ec696d8c78c527db209cf6e0c2badac
+BLAKE2s (File-MMagic-1.30.tar.gz) = 5fcc49023f7b11ab83fdaedbf0a2b03ae3f8fdbb1a513d0ab727752dd90eb85a
 SHA512 (File-MMagic-1.30.tar.gz) = 4013fc1178cdf9c1a141652290e091f296b9bef54b9f4301926d9ed0a5262bbf67213773774e41aab8630bed20c2c9441befe55db9ca04a56d07099061b50e25
 Size (File-MMagic-1.30.tar.gz) = 22346 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:21 nia Exp $
 
-RMD160 (pty-redir-0.1.tar.gz) = 75347881746dd1419e95e2ada30b23b2d9c0d223
+BLAKE2s (pty-redir-0.1.tar.gz) = a7ada3bb4439f757bb268ba0ef29a191a535cd2127b34b372a92d94f6f84839d
 SHA512 (pty-redir-0.1.tar.gz) = c1206aee7d1d287524974d7eaea330cfddeaa7d0bd22ca11afae9e0a9392ca0028d314f9451411f061b373f79f5f867040835f9833a0359d63ca5fec5156d46c
 Size (pty-redir-0.1.tar.gz) = 8405 bytes
 SHA1 (patch-aa) = 28f8a1c22a9bf602e0e447ca45736e7cde6fddd5

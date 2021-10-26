@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:35:31 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:59:14 nia Exp $
 
-RMD160 (mate-utils-1.24.0.tar.xz) = 01e23e5ff56e520978b53bf3aec47e5d9706ac1d
+BLAKE2s (mate-utils-1.24.0.tar.xz) = c78ee002cbd63b4905c79c44bde53d826242b9d363487f270c8bea4191bbb5ee
 SHA512 (mate-utils-1.24.0.tar.xz) = d8945c85936a55d22f3ed94c9858ba84cadf552a63cdd2d9eec9120111ad71526ac88772f8e4b7a6a460b691574534e52706fba35a0395b1d894b27eece9e92c
 Size (mate-utils-1.24.0.tar.xz) = 7930068 bytes
 SHA1 (patch-logview_src_logview-utils.c) = 218670ddcc013c31d75e7654acf138e4153c0be9

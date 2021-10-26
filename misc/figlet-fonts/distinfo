@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:03 nia Exp $
 
-RMD160 (figlet-fonts-20021023/contributed.tar.gz) = 823585a19fb504eafdc51c0b228121ed784ae54b
+BLAKE2s (figlet-fonts-20021023/contributed.tar.gz) = 20904ca12f8fd535ee162f199798556632f4f4a2ac243a29b1d31d0fb20569b4
 SHA512 (figlet-fonts-20021023/contributed.tar.gz) = aa2acc332c4a8916acd4911a8779ac394bc610dda1af9bfd3e8e9713dace15a1115c360abdf83589608302b529f151f6221f0e5a1e9ad0465de5bd877dcb4943
 Size (figlet-fonts-20021023/contributed.tar.gz) = 1393560 bytes
-RMD160 (figlet-fonts-20021023/international.tar.gz) = fc74c3a4f3305f7f233cc5ae67d10f63007564ab
+BLAKE2s (figlet-fonts-20021023/international.tar.gz) = 62ca12a8f763b4c0e2947bc2da43d3a10f4fa04b2dc67964fdcd63bc9a0d74cc
 SHA512 (figlet-fonts-20021023/international.tar.gz) = 5480ccf5aef3147e2c24cca486a703ba27c03ce4b259a3f811a2aa6ebb2ff7510919438e2d4289a1a8d55a2e3b92451e7b35a4c18f6303dc51f9ee7e4fbc0657
 Size (figlet-fonts-20021023/international.tar.gz) = 3683121 bytes
-RMD160 (figlet-fonts-20021023/ms-dos.tar.gz) = 63bbef976699747fdfd6f289ac3d22d4eb710dc8
+BLAKE2s (figlet-fonts-20021023/ms-dos.tar.gz) = d37ceee1e303e0814b8d2b5d95a82f7afa0d62bb66997786a39a63e088d4fa92
 SHA512 (figlet-fonts-20021023/ms-dos.tar.gz) = 8824b21b054be50fb90e4a80e6f1ca554784a3884ac9c9e4104635a9d7c72b57d98e4070687ecd83cfe9c85cd3969eb1f24a1a3a05e49a2822a16a9f207decb9
 Size (figlet-fonts-20021023/ms-dos.tar.gz) = 2414 bytes

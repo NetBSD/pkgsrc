@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:30 nia Exp $
 
-RMD160 (patch_finder-1.0.2.gem) = 3a63158be4830df7f808bb0a9c94bf0ce90df8dd
+BLAKE2s (patch_finder-1.0.2.gem) = 9363ac51b5a3059dbd6740f3cc07fe358b2ce3711eea92a4fd94de29c896b48f
 SHA512 (patch_finder-1.0.2.gem) = 24b269fcf9d379ca07aaecb8a9282086767eed0dfa9a12cd2523eda488621a81e90c4cb386600f3120bd503e0de1887f6826da33df4e77c5c8eb3fae61e7ca8f
 Size (patch_finder-1.0.2.gem) = 14848 bytes

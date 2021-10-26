@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:58:58 nia Exp $
 
-RMD160 (byobu_5.111.orig.tar.gz) = e9240b7312181337f5f4d3cb365d791d454f8397
+BLAKE2s (byobu_5.111.orig.tar.gz) = db14a321a5be5a739d3fda13cfd942a6942efccab8939eb8659bc39013887173
 SHA512 (byobu_5.111.orig.tar.gz) = f4b20fd3ac01b4361a9ea02428326c3920a8bf728b03c309d491413daf603b3b2807ab1770274034f08299947d66a759777a1b2ddd087d7c9c19c67c7baec48a
 Size (byobu_5.111.orig.tar.gz) = 664384 bytes

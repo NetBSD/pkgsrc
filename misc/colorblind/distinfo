@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:58:59 nia Exp $
 
-RMD160 (colorblind-0.0.1.tar.gz) = c0b973dd471e2d48b2f115cb2545b9a07059d723
+BLAKE2s (colorblind-0.0.1.tar.gz) = 6decc87aaa38fe4edf830eab9ef5f122579e8cc144388742055c53795d301ed5
 SHA512 (colorblind-0.0.1.tar.gz) = 53aaf02c177b45c0bf2232e19f7500ecbcd39411090dc36971f4c4361580e1b76d68331ab1d58d02b8041b6198acdc653bc8e097eb2930624e3e094e9e77a1f5
 Size (colorblind-0.0.1.tar.gz) = 288457 bytes

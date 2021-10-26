@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:59:37 nia Exp $
 
-RMD160 (xfce4-calculator-plugin-0.7.1.tar.bz2) = a11928b0e9a3a92a5324f99eee7c815341c2ce3d
+BLAKE2s (xfce4-calculator-plugin-0.7.1.tar.bz2) = 6c2f4ea932e9162109d5f6c1315435034effd1bace60656e193e902d35b8ae1b
 SHA512 (xfce4-calculator-plugin-0.7.1.tar.bz2) = 05544e5f0e293fe44ae35b3e11a2e6fac8df13743649d0702c01c6a4b2df0557f8f9712acef6bd51aaa65f5542234a6a649017bf2fe2a6d2860ae2e534e7cff2
 Size (xfce4-calculator-plugin-0.7.1.tar.bz2) = 402401 bytes

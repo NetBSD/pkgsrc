@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:59:35 nia Exp $
 
-RMD160 (uptimec-0.2p3.tar.gz) = 79e20f60064fc49dfab8310ac0ead699af4ad188
+BLAKE2s (uptimec-0.2p3.tar.gz) = a635f7c543b4dfeddd5d295c9b700078fcf26ab155ecdc0fc0f0d0548daf2828
 SHA512 (uptimec-0.2p3.tar.gz) = e099f107798e0891fccc6558a1584681c0c4bcc8295b12a8dad0d2cf3119aa7a6b0970ba5689cf66c7eebd572261e284223c4687e154b6747ac919009f505c2f
 Size (uptimec-0.2p3.tar.gz) = 82082 bytes
 SHA1 (patch-aa) = f8190edd5486d8088310e129d679de7751fd272d

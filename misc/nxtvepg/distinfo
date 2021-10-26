@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2021/10/07 14:35:32 nia Exp $
+$NetBSD: distinfo,v 1.37 2021/10/26 10:59:16 nia Exp $
 
-RMD160 (nxtvepg-2.7.6.tar.gz) = cd90477e4cbbed7a3c3ba0c93295a51fbd299922
+BLAKE2s (nxtvepg-2.7.6.tar.gz) = bee82dc45208f3c03a116aae6c50a6d090a6ae457c0a0dddd40b94bebb0b9206
 SHA512 (nxtvepg-2.7.6.tar.gz) = 3489df8b0ff38bd5a09ed0cd885122581bddedb7e99e47cdb969bc8abbf5eb1b4341b18080a0bd81d93c2a6bbbcabf927b8910fc87dd1a192a16c70eb01c0b49
 Size (nxtvepg-2.7.6.tar.gz) = 1430471 bytes
 SHA1 (patch-aa) = 9fafa7f96d57ec1cfc08c22234ba49572eff4a58

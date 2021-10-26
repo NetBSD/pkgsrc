@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:35:44 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:59:28 nia Exp $
 
-RMD160 (rpm-4.13.0.1.tar.bz2) = 9a9b47b89ddb00b22a46ec3530c39dcc7ee1f85d
+BLAKE2s (rpm-4.13.0.1.tar.bz2) = 4552ba04d068db35a42cb58ceb84ceac90268e2d11d132c2191a1d60b7514fe8
 SHA512 (rpm-4.13.0.1.tar.bz2) = b7475dd0803e06a5dd6a95d0bf8add6ff0d8f0620dd389c4d87a85becb0eb4637aa4ff8c48e18d4844ff6feefa25d642d9f876cd210006cb2144006d34a91b91
 Size (rpm-4.13.0.1.tar.bz2) = 4305261 bytes
 SHA1 (patch-build_rpmfc.c) = 10e3196d7d2dcc17f7c2be0acbea01f00354eee3

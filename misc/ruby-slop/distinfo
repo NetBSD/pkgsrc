@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:35:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:59:31 nia Exp $
 
-RMD160 (slop-4.9.1.gem) = a3dc395fa7c6d994fac3d24d25c261a0ef5eee6f
+BLAKE2s (slop-4.9.1.gem) = fe57720e035438dffde5d4c1c867d26f693612de19dc2cff67f8ec4d607bc3f3
 SHA512 (slop-4.9.1.gem) = 711d0ccbff1bf49dd63f57112c0d81d85b729d8e08c98ed71441a073ef11ba3710a8da181101f30c159074624287b7db1b2931be82af4c48322085db89e849d1
 Size (slop-4.9.1.gem) = 20480 bytes

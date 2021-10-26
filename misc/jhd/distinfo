@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:07 nia Exp $
 
-RMD160 (jhd-2.3.tar.gz) = ce9a0924e416256f43ef66c609f94c5c8c1d5e0b
+BLAKE2s (jhd-2.3.tar.gz) = aa0337fd11b664eeb30a3475acd163f1f6ea87d7c935e2e6144fc99e088c0c6a
 SHA512 (jhd-2.3.tar.gz) = 916ecd15a376c14339d23272f05365a4f84a898828516485b4f16ae133f3010e868a90907c1462a73f5c25ed799734cf07e29563f12b6e257ea82f3b7408dc5e
 Size (jhd-2.3.tar.gz) = 7310 bytes
 SHA1 (patch-jhd.c) = 07e27d9df45d86ca0fca4dac87d439793855b14a

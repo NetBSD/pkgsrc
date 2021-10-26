@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:35:44 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:59:29 nia Exp $
 
-RMD160 (commander-4.6.0.gem) = 3531136cbb0535bb6dc8a8a12aa056e01fd52ff3
+BLAKE2s (commander-4.6.0.gem) = 7ce3b8c926cb5f1b7acb8d7f5e389207efad7493f8b04bd7a8edd1bc3923cc81
 SHA512 (commander-4.6.0.gem) = 01e7d4076b6ff632f6852e15bf995033034a71d6320c5b3b41751e86894f5eca35b408311e757c555334d220a9a811a0d60c0fc993414961f1050d948cb9f5c7
 Size (commander-4.6.0.gem) = 38400 bytes

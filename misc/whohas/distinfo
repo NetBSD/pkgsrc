@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:53 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:59:37 nia Exp $
 
-RMD160 (whohas-0.29.1.tar.gz) = c89177a4c330eb576f534c4a14588e775c1870e0
+BLAKE2s (whohas-0.29.1.tar.gz) = 447f6426eb9a36a7def2bb78545c869f872b773193383dde21754f43a802e44f
 SHA512 (whohas-0.29.1.tar.gz) = 15ece8eeef4cbdf790efeb809cefa59d826e6f784b2f5375009d6eff30077617bc64d05596437b8281a472bf5877b15fd87df78c5367a8e0ee0c97f695906486
 Size (whohas-0.29.1.tar.gz) = 196217 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:21 nia Exp $
 
-RMD160 (pick-3.0.1.tar.gz) = 0a971a50d58776f3e2d3440e48c36b47291f9856
+BLAKE2s (pick-3.0.1.tar.gz) = 1a0ce61952ce777e59cf9145ba8fb527a2b7ae8880f7ed0156d835d5228ea07d
 SHA512 (pick-3.0.1.tar.gz) = 7448e7937640f69d397bd1bd48526865b8866a8f47eb04b7af918df992f36b6e932a1cb68e845f9262faa9c88c1afcb354368b7e1c6b1dd8503aafdb53e4b70f
 Size (pick-3.0.1.tar.gz) = 29878 bytes
 SHA1 (patch-pick.c) = cdce675828e0187cc9567aeec93893c9dbd14087
