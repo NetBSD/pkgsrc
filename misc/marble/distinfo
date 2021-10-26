@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:35:31 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:59:14 nia Exp $
 
-RMD160 (marble-20.12.3.tar.xz) = 71b6d1f74c01bcda3aafc12bc1e3b770c56ad6d8
+BLAKE2s (marble-20.12.3.tar.xz) = f4d65c53c3b9f6c86f620cae916980473c03518abe138c5ad750b279e7b8ec8a
 SHA512 (marble-20.12.3.tar.xz) = 0dc69ce2dafac196d3b494bd29a268f879e8bd14ae916454682289822024d58e077e4972588cc6d51284459f2fc9aceacd4e1e8a8302f987556e20a7acaf172a
 Size (marble-20.12.3.tar.xz) = 52242116 bytes
 SHA1 (patch-src_lib_astro_astrolib.cpp) = 541b39516af740b0ff8e485e9e4e8a339ca5d7f4

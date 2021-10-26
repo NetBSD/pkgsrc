@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:35:24 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:59:07 nia Exp $
 
-RMD160 (kbruch-20.12.3.tar.xz) = 55c6c81fb5f2541f18162bb80a1c8d895ca54f7c
+BLAKE2s (kbruch-20.12.3.tar.xz) = f09458f1381ab23718bf710d64808343c222e3c83377ea72e27389b0f0a60cb3
 SHA512 (kbruch-20.12.3.tar.xz) = c0c72e9eef3da49328b201e36160d0ff6e92e011c8be5ff3d82db67a2c598e53a1ed4d95949ae0734bedaa3bf3b49af5722eb184fcb2578a813af5f159797dae
 Size (kbruch-20.12.3.tar.xz) = 5614940 bytes

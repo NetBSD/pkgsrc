@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:20 nia Exp $
 
-RMD160 (Msgcat-1.03.tar.gz) = 712daae19eebabe3229efd201766b849092bd377
+BLAKE2s (Msgcat-1.03.tar.gz) = 4a442fca93adb7b1810c2f0d902b239704e22077546ba82a51b4f37e3ef1b647
 SHA512 (Msgcat-1.03.tar.gz) = d6c499f767a453240b703f1466de6ab51585b3627b537522259230d78bfb18ef6011f4bb4482dea23640bc891cc820cfd280b0dafd5f7a33eab8db45c9e1b823
 Size (Msgcat-1.03.tar.gz) = 3249 bytes

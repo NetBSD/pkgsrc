@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:15 nia Exp $
 
-RMD160 (mkcue_1.orig.tar.gz) = 8462f803235d90fef3d4dd27a83a47ae895cd4b2
+BLAKE2s (mkcue_1.orig.tar.gz) = 39e7c05658399cc6fc677ec2f5b5e139f7a44a836f6e7ef5ed2e4f65f72ac0ef
 SHA512 (mkcue_1.orig.tar.gz) = 925d43e1451c064c80058df9e9d35df6b36f8ae551ac0377838e07fdf87babc4706eb287825ee2ef8af2de1a363c54c3fca2e14ec72f6bb86fc7f0bbe8ba9c6e
 Size (mkcue_1.orig.tar.gz) = 80650 bytes
 SHA1 (patch-GNUmakefile.in) = e4fe63ab1ed24a484652f1b05229add69dbde893

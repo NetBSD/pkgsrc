@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:35:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:59:35 nia Exp $
 
-RMD160 (ttyrec-1.0.8.tar.gz) = f7538fa742d1c1e07b8b48f3fa79cfcf13ca8044
+BLAKE2s (ttyrec-1.0.8.tar.gz) = c145d3dfbc3a788509e3d4a90bd31c72d1db22886108c2920ad8efd5ce7bbad3
 SHA512 (ttyrec-1.0.8.tar.gz) = b7f6f4c78c5148dacc7058534d89f13fcf333ee9e099d4475135e9c15a99a8aed72bf4bd5954652a6bb044d11ad35b4cb8d07208a5349c79c811f68fde7e8611
 Size (ttyrec-1.0.8.tar.gz) = 8528 bytes
 SHA1 (patch-aa) = 319272a146906f9a65848e002532b70f5cf60440

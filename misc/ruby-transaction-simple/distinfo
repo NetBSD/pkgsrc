@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:31 nia Exp $
 
-RMD160 (transaction-simple-1.4.0.2.gem) = 18cef0f36100fc4a45960e57540c78366a4d0609
+BLAKE2s (transaction-simple-1.4.0.2.gem) = 3bccbc397908eb10188f35d027410b3d2ac9fb8c8ddc70b498b8b880189cde78
 SHA512 (transaction-simple-1.4.0.2.gem) = 083c2c0d8c094d052a5262e21911985a3bf91875892844fb0559546901eea21ef14b139d7af6446c7a7bfbd1adf177e2d73cba2798c823bf295a6c87981165a4
 Size (transaction-simple-1.4.0.2.gem) = 17408 bytes

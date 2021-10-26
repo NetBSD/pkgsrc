@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:59:22 nia Exp $
 
-RMD160 (immutables-0.15.tar.gz) = b3c8e8b5d415399e3f282eb49dff3c6b3f729346
+BLAKE2s (immutables-0.15.tar.gz) = f19992a3535167ccbadfdb0af285054f0396b0fb4e76e4fef803d8d80643fca8
 SHA512 (immutables-0.15.tar.gz) = d1ea74aef5ea0fe1c4d097f278909c6c3adad5d5dfc322e44b609d65506b3c6e74c8cfc83a2d08dbec5af64ae53ed2912a326d11bda907ae8947a8d291604404
 Size (immutables-0.15.tar.gz) = 44913 bytes

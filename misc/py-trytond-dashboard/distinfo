@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:23 nia Exp $
 
-RMD160 (tryton-4.2/trytond_dashboard-4.2.0.tar.gz) = afca812c7916f23e36be7b7027600126fbeea005
+BLAKE2s (tryton-4.2/trytond_dashboard-4.2.0.tar.gz) = 8315670475b81299a42a6934998ba518eef368b858ecbb730ac8edaf582e75dd
 SHA512 (tryton-4.2/trytond_dashboard-4.2.0.tar.gz) = 57d920921933895c2849f03d85ebfb3c4042af6ccc56d4c51ddc04163d53298db6b072da554f88f595addf2e08c3753a3bdc758e5c9bdcfcff526cd1109cb159
 Size (tryton-4.2/trytond_dashboard-4.2.0.tar.gz) = 23874 bytes

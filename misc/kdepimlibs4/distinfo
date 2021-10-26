@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/10/07 14:35:25 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/10/26 10:59:08 nia Exp $
 
-RMD160 (kdepimlibs-4.14.10.tar.xz) = 4df52569c41b3af12aaf6f457e213f31feb78343
+BLAKE2s (kdepimlibs-4.14.10.tar.xz) = 6d517c313c8099ee53bd081e03cb80b9958ee2c8db71eb9299f7a6480006d9cb
 SHA512 (kdepimlibs-4.14.10.tar.xz) = 64f396957ae1f70a19ba689fabc0850aed04e4e4bce58a4bbc27af2b5cfa27b50472614b4096d8424ee6b4463faaed37d98e6cccfe36d208e9193ba20dc6766a
 Size (kdepimlibs-4.14.10.tar.xz) = 2831160 bytes
 SHA1 (patch-akonadi_itemsync.cpp) = c033adc348bd9c881bfcbc4c7344d028d4678472

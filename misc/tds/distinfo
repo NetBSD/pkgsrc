@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:34 nia Exp $
 
-RMD160 (tds-1.4.2.tar.gz) = ba73f56a234b2d944a0d408f90cbd5ea4e61af34
+BLAKE2s (tds-1.4.2.tar.gz) = 833b65d28c45338a9acc953c8187270ed487af2ebe945cec24b805d92ba8e527
 SHA512 (tds-1.4.2.tar.gz) = 552a9cc14f488a710cb3814fd2f3f203eb447a0af7a5398008333c873224ad2a6ee696d07c835092b5e441f3f26113a7bb224f812c25531bb2c34a37fe5e7113
 Size (tds-1.4.2.tar.gz) = 406814 bytes
 SHA1 (patch-ab) = 2256610af7362a418a7ebc8c0ae6fbd5116a150b

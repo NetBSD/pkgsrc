@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:36 nia Exp $
 
-RMD160 (visual_regexp-3.0.tar.gz) = b10145c6b7aa9d239e43f11696e7b8424764619b
+BLAKE2s (visual_regexp-3.0.tar.gz) = 0dc57ca8b6aa886df2644fde4e216c33cb212912a08deba348cd5bbef98ddb80
 SHA512 (visual_regexp-3.0.tar.gz) = 3c8b3e44d20f8cdc69fdb501ac82a44f6b755715c9bd6309bbca01193acc72a97595d6012ad889c957adba587c3f8f1f888c0f42993bb81bf3f730adff42c655
 Size (visual_regexp-3.0.tar.gz) = 25659 bytes

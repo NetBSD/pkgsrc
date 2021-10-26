@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:58:56 nia Exp $
 
-RMD160 (R/Hmisc_4.2-0.tar.gz) = 255c8a9260d48406855847a057035a259a72b7fd
+BLAKE2s (R/Hmisc_4.2-0.tar.gz) = 62e637c02306ff3c779ee64998a60e28abb8b26f75820688806fad9776b04f6d
 SHA512 (R/Hmisc_4.2-0.tar.gz) = 370cabd67c8c2016ecfd57e096f8de31a5cea5bbced9cf19d470214eb55e8979d34e7433361c3ceeaed26ea78aa6c0288c5a3d0104732ff80d77b4e5f8d0fd72
 Size (R/Hmisc_4.2-0.tar.gz) = 732731 bytes

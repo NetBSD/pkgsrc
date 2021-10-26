@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:34 nia Exp $
 
-RMD160 (teseq-1.1.1.tar.bz2) = b67b29ae2478a11773e058e3a1b7f86372571c23
+BLAKE2s (teseq-1.1.1.tar.bz2) = 0dac338a54aac07807be222e8d08564fa42e44447ef613ad976fba9a4953c0fd
 SHA512 (teseq-1.1.1.tar.bz2) = 00d455bac1e36d3d680df3bcb37f7e2e6784f6a5cc48975bd91828669d7c7faa025c68f7d09573e298795cc84821da3ee99e8e84c68401d23bda0e31bf58bc45
 Size (teseq-1.1.1.tar.bz2) = 271737 bytes

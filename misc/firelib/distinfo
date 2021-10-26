@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:03 nia Exp $
 
-RMD160 (firelib-1.0.1.tar.gz) = 304ac8e145e836d3a3cd1f44690c7f84cdd7e42a
+BLAKE2s (firelib-1.0.1.tar.gz) = 6a3bbbb59948acdf73fad00d5d7be6037083e2f0b4fa06a0f9995da0e7b73a95
 SHA512 (firelib-1.0.1.tar.gz) = 040d83e32befddc384cbb806ef9f2d4ffe3e08de7ff2d22470b0350fef87dc81e39c54ba2ff29bdc6a1cad7172e0c95d0997b96e46fff745a3660113e3995960
 Size (firelib-1.0.1.tar.gz) = 73951 bytes
 SHA1 (patch-aa) = 63d3f8e5a78d9aef4f7ec3c05f811bd17ba73a9c

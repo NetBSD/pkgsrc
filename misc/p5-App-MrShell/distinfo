@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:18 nia Exp $
 
-RMD160 (App-MrShell-2.0207.tar.gz) = a2891a83ca16f85515db934e667837ed659525ac
+BLAKE2s (App-MrShell-2.0207.tar.gz) = 67712cfd1c933c305305a05e7f2ddeaeca9f53e4c6122fda61d95bd4bc59677e
 SHA512 (App-MrShell-2.0207.tar.gz) = 41e431d3ec8a62c6f53b2844038c14b03b31016ab8225c4c503ad03b3df0d8968258c615aee8a1235d17e6b7555a86f96908a796bc6dc8be008f9e636ed55d02
 Size (App-MrShell-2.0207.tar.gz) = 15165 bytes

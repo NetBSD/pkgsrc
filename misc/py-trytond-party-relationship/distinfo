@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:23 nia Exp $
 
-RMD160 (tryton-4.2/trytond_party_relationship-4.2.0.tar.gz) = 8d585969887063c5cb62bd3f0c4cdfcf496b2155
+BLAKE2s (tryton-4.2/trytond_party_relationship-4.2.0.tar.gz) = 5146faa725ffb1b2541328792f7af8260a15475735f24c2899959cccb54ba060
 SHA512 (tryton-4.2/trytond_party_relationship-4.2.0.tar.gz) = be7256eea141858a44aed829aa557a2c5d9f2c0c4c35834057caad2d115666880c71f185fbe43d7d3b3c5bb5a7501ac773dc2725b85cf881de5daec2c77fde88
 Size (tryton-4.2/trytond_party_relationship-4.2.0.tar.gz) = 25294 bytes

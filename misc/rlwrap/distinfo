@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:35:43 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:59:27 nia Exp $
 
-RMD160 (rlwrap-0.45.2.tar.gz) = 44bb0089e10304efb13515b471c8dd3c423e01f5
+BLAKE2s (rlwrap-0.45.2.tar.gz) = f5b906dbf34cb273773f18cc705eff7f6c39b9df8a3d4ae5bcb5e13962cd1324
 SHA512 (rlwrap-0.45.2.tar.gz) = 77664bc17c4e6148037b8ae64c025b07c3feae91dfeff59f1846ce38e5f808a41005286daa81fd0ed01e0c789762e377cc48e6abdf124a7d4654f66b2b6c6cc4
 Size (rlwrap-0.45.2.tar.gz) = 182025 bytes

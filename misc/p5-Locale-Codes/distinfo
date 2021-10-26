@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:35:35 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 10:59:19 nia Exp $
 
-RMD160 (Locale-Codes-3.68.tar.gz) = 566b6716a3216f72f6a904558e0e7ff5192d5682
+BLAKE2s (Locale-Codes-3.68.tar.gz) = 3fc96326ac4b3cb42f358dac84b19f60b9ab78c127c35a0228098732a392d9cc
 SHA512 (Locale-Codes-3.68.tar.gz) = 49120270536896ab625ccf11b070e6c35571a235c48050c56772a760fc5d77d38ea8cf5472c4e5cb899aeade98aaaf418160dac75c6fb9b440de60570bb131cc
 Size (Locale-Codes-3.68.tar.gz) = 864534 bytes

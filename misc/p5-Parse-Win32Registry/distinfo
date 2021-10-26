@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:20 nia Exp $
 
-RMD160 (Parse-Win32Registry-1.1.tar.gz) = 79e70b33866888e91bbccf4bcf0387d632d3e053
+BLAKE2s (Parse-Win32Registry-1.1.tar.gz) = 9d55510abda8e0023337320bc59c7eec336f0726930389e5099cc9b49cb43dbb
 SHA512 (Parse-Win32Registry-1.1.tar.gz) = 6b85ffbe971a7908a8fdddc59873097f01faa508ff8af88ce15c603baecb44de28813ee9a5d43c70d40f488a2f7aafbce22f644b6e3924712c94e46420e70bd6
 Size (Parse-Win32Registry-1.1.tar.gz) = 103489 bytes
