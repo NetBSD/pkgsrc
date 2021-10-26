@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:20:27 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:04:11 nia Exp $
 
-RMD160 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7059c9642c2246abf8101658027df1c89b7cab74
+BLAKE2s (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 9dd50ac7c577a5b6ee83ed2429d2e0d007355ce7b1cc91d89a1a48adeed89bc6
 SHA512 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = ea381cf154effa25b00bb1b8e4f5dfd78c09412321750af237ad819b37d561ce34e2c670af60fa683e4faabcfe1cd7b823a59b1bfaca9a4b2329232da80cf27e
 Size (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 1175247 bytes
 SHA1 (patch-aa) = 0461bee57442482c1d6467c0d9caa8382016e479

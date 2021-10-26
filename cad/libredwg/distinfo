@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:20:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:04:13 nia Exp $
 
-RMD160 (libredwg-0.12.tar.xz) = ade68bf7076d9a3ce7be3369d7ab48b401dcb68e
+BLAKE2s (libredwg-0.12.tar.xz) = 7270e5587acc8408da83a8b75029a0c028526f66a793a207eb24357ed790dba7
 SHA512 (libredwg-0.12.tar.xz) = 3994c2031b0c96f852e5eea3e422e4156b35581e7144755ed1a84d226033684f7eea344732ac08d8aab6f1197f6f39278188ea08db9ebec7a52ddb09855b527c
 Size (libredwg-0.12.tar.xz) = 9518568 bytes
