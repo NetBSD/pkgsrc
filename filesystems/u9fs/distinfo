@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:51:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:25:31 nia Exp $
 
-RMD160 (u9fs-2.0.3.tar.gz) = 460879d27c4d282a3b4822c194b2abf458851b4d
+BLAKE2s (u9fs-2.0.3.tar.gz) = f5dd2c57e4ec8c6730af94f8cd20abdb3fda30061ac1be3bd427c636aff913ad
 SHA512 (u9fs-2.0.3.tar.gz) = bd55ac2a3a0f47052fa1d3873c8713147f040e68610523fb54ffeff4eb7638aa0fe5c140a253b28a7036efcc5f58f42a12da8d0228bbb47867a05df90364061b
 Size (u9fs-2.0.3.tar.gz) = 42325 bytes
 SHA1 (patch-aa) = 790924f9761fc90cb8db2b4ca0385eca864dfc73

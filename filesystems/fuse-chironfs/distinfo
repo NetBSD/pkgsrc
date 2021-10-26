@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:51:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:25:26 nia Exp $
 
-RMD160 (chironfs-1.1.1.tar.gz) = 29cc8fb3aac8148d3238a6b79bb002d7f8aad826
+BLAKE2s (chironfs-1.1.1.tar.gz) = 0553e467599f95a1a5056f569575d3a543e79e78ce03d444d7b2d05ce303a2fc
 SHA512 (chironfs-1.1.1.tar.gz) = 185c0ac68a2e45b71e1fabd4114c0ecfe128de32bf7b882388a0824c69a4e9a44cfb80f77796dfb42f5f4efd65f8e52fc02909024669db9423f5bf04c852cce2
 Size (chironfs-1.1.1.tar.gz) = 444036 bytes
 SHA1 (patch-ae) = a4112ec0162a39ce67c897de5177890f5a157f04

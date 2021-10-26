@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:51:02 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:25:27 nia Exp $
 
-RMD160 (encfs-1.9.4.tar.gz) = 847f943f6ae7622d54aa9ef25a64344153c23da0
+BLAKE2s (encfs-1.9.4.tar.gz) = eff113bc6b7894bd72f85dddd9604586a2725f3ed7a0b9c6d4ebe54d928c7d5a
 SHA512 (encfs-1.9.4.tar.gz) = 082e35e6eae4730b5e7827eed729422f9d995ebe9e441c5f9725f39cc2f46f014ac1479c7b0a7ce04e9e7228c1a93ecf5b4228e667fc48e6a7d3b68d2324cd0b
 Size (encfs-1.9.4.tar.gz) = 2794574 bytes
 SHA1 (patch-encfs_DirNode.cpp) = 960480ee442f534357e3325c5001b6056b2338a6
