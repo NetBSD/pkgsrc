@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:47:51 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:21:42 nia Exp $
 
-RMD160 (texworks-0.6.3.tar.gz) = d4e03af0e41f2c14eaa4800769062002f96fd77c
+BLAKE2s (texworks-0.6.3.tar.gz) = c82934180dcd0bade8686ed7a02a684c8d1002793781d00f740172b23cbbb39f
 SHA512 (texworks-0.6.3.tar.gz) = 389cf54441e74164fc842f2f293cdee45c6ff9fe202f262d32f3fb076de9a29813a62cd75052969293f2f784e0722215bbbf2206e75bc836a13d495bf5aed653
 Size (texworks-0.6.3.tar.gz) = 12082640 bytes
 SHA1 (patch-getDefaultBinPaths.sh) = 3f41dd5c29f581e8bba0bb8dd48576a5619d8d1f

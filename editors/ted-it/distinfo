@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:47:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:21:41 nia Exp $
 
-RMD160 (Ted-2.16/Ted_it_IT.tar.gz) = 8ef7da43bf0420528c857b63d2c43a3e608d75e1
+BLAKE2s (Ted-2.16/Ted_it_IT.tar.gz) = f2180f5130143b0302b4808929e9e5e087a4d687d4c1f73bc2ede02a31676d99
 SHA512 (Ted-2.16/Ted_it_IT.tar.gz) = 983840046683f316a4ebe77d578ef73f0d0a711ac6f4501b6a7e88e80a3298eab98b58cb649b217f34daa506da0f87fb3e23bb8dbd481fcbfb0af8bd1cd31082
 Size (Ted-2.16/Ted_it_IT.tar.gz) = 272135 bytes

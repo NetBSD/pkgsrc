@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:39 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:28 nia Exp $
 
-RMD160 (gate-2.06.tar.gz) = 3b1fb285dbeccf7dd09504f4596d8e7387b14c8a
+BLAKE2s (gate-2.06.tar.gz) = 0444943b59a30576adf5eb3cdab9452b13bb15d5d390c72a00eb9eea4a6402b1
 SHA512 (gate-2.06.tar.gz) = 06793cb4a361fe165b41caa9cd17b6e8f9790734422a3b4010729682ecc5a2ac371853d04e6a9b3b97b16cece05183f0a18fcc661b9b59026f3d03d830ee2170
 Size (gate-2.06.tar.gz) = 58677 bytes
 SHA1 (patch-Makefile.in) = 2f62b8968e9b22916e6449537b3cd1b857e37c35

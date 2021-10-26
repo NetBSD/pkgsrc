@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:30 nia Exp $
 
-RMD160 (gummi-0.6.6.tar.gz) = 2d2d9a7ba4ff27bb3769ad8c31705b64948be5d7
+BLAKE2s (gummi-0.6.6.tar.gz) = e83a85ec68bc9eff10102e4a6e6600f71a7e319f8c2b543c66ff547b327239b3
 SHA512 (gummi-0.6.6.tar.gz) = 3be94927c9aafa4914ed2b6f6f5022dce5bcca315a1f947fafb8a4c8bbc5a2bc57f07f8ceaaacdd0b92a5a30483ea8b00e570faf62479280d2ad874716e4c47d
 Size (gummi-0.6.6.tar.gz) = 792642 bytes
 SHA1 (patch-configure.ac) = 3034e1f140b4817f8754d2dba64148422f0ad52d

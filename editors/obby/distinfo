@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:35 nia Exp $
 
-RMD160 (obby-0.4.8.tar.gz) = 9b45340938cd0a85e379deab553be7396851366b
+BLAKE2s (obby-0.4.8.tar.gz) = a671ce758552924217527c2e45e019f09753ff3225bb1fccfaa86f4404507722
 SHA512 (obby-0.4.8.tar.gz) = 39cd01e74f8df805bd6f077afab023f70f6da16d421dd0d12abc82972a9ec3e2563cc4ef6bf99c74b59f1c96e18eb3d5065f8b07add8ecb56c26601715f184d0
 Size (obby-0.4.8.tar.gz) = 530525 bytes
 SHA1 (patch-aa) = 044bf10cfa88475b8d2d25d349bf1c01cd853b05

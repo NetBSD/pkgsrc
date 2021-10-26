@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:47:48 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:21:39 nia Exp $
 
-RMD160 (sam.msg.gz) = f3a6f354bd11b45966818188392c4655267f0571
+BLAKE2s (sam.msg.gz) = b56e3f9fcf66f569e2cf6bd3fa03609dddc459fcec6964298e3fcf4072dd2957
 SHA512 (sam.msg.gz) = 279e9854a2177330fcb80a5ad2751b01629b35d33c759e9f2d707450753c4b5c6c3ec07cbbe4e01f1b9c43e167570e88de4f9f403f9c0fe58f360db99f40e666
 Size (sam.msg.gz) = 246311 bytes
 SHA1 (patch-aa) = cbc293b98847bc36d87a780cda487e88096a2dc4

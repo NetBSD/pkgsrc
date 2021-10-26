@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 13:47:41 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 10:21:31 nia Exp $
 
-RMD160 (kile-2.9.93.tar.bz2) = 167e8f70dc3ddf7c21cf26266c99ba8a772c204d
+BLAKE2s (kile-2.9.93.tar.bz2) = 3a6554603f03fac704579c57467ceb262d014a491519359c1d9a5b1e12d04812
 SHA512 (kile-2.9.93.tar.bz2) = d87277b8ef16c82cfd415dd191916641fa1a25e316e1eb2c463b275d3654dcfe180bea03027589ab30cd8b769d92d97005846a78aff8058bcfb20eed76287504
 Size (kile-2.9.93.tar.bz2) = 8580239 bytes

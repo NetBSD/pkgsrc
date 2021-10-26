@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (Padre-Plugin-Autoformat-1.22.tar.gz) = 071543ba6b2239544776047dfbf87770dafd1155
+BLAKE2s (Padre-Plugin-Autoformat-1.22.tar.gz) = 0bd45351c96ec50ec3c3abdb31268988f8d6c59913fd9b15044d65225157a6d6
 SHA512 (Padre-Plugin-Autoformat-1.22.tar.gz) = 5f08887674d348af5377a832b48770bc0174f4b766da4e9b29efdf841442fd54153a4b80869c45cb40a6b129448cbe1cc997007f493f9b8a991bd180b7b15d49
 Size (Padre-Plugin-Autoformat-1.22.tar.gz) = 15168 bytes

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:47:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:21:34 nia Exp $
 
-RMD160 (ng-1.4.4-replace_bug.patch) = af945e81541b0b848350f46044176ba536d77f45
+BLAKE2s (ng-1.4.4-replace_bug.patch) = fc5a136a2fa38826d28b28bcf5655dc197eeee962430dbe572710f631152d5b6
 SHA512 (ng-1.4.4-replace_bug.patch) = d621ca846bad0c24a019cb13f75e6746815a845c3c380421a7c08f5b4f2da624b3b9820910bcb253e65eae874e7717171caf165d37f50eefe37a90a2dada246e
 Size (ng-1.4.4-replace_bug.patch) = 3956 bytes
-RMD160 (ng-1.4.4.tar.gz) = dd041789d3fba92fe1c9906564a246c1f62cc34e
+BLAKE2s (ng-1.4.4.tar.gz) = 2d266dd435136f42cfb08acdf7f9006a3a009f732ccb23b8ada610155a8a9407
 SHA512 (ng-1.4.4.tar.gz) = daa024e2e7c990157f3a5639f4abc7b97c16d7a39a9a5676bfe4cf7cedb75d0d40a4c3fc781f11772259b53c13e5a59c312da5de536fe0dc1d47f55a42ed9b07
 Size (ng-1.4.4.tar.gz) = 587018 bytes
 SHA1 (patch-aa) = c78f7c9d1654262f612c6db25d5def2f8d2bbcfa

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:31 nia Exp $
 
-RMD160 (kakoune-2020.01.16.tar.bz2) = 98c7ed0c9cd77cb73426853a0a92c468a9d27bbb
+BLAKE2s (kakoune-2020.01.16.tar.bz2) = 16a8ed602ec08af24cddbc42a26a2fe9846c8693c478a48d5aa8dadeb96db487
 SHA512 (kakoune-2020.01.16.tar.bz2) = c7b5b2790f3ecaf3a94b72e1d2f75fbbde8a7e8d3696f8a633439eb39a7331809d7fc13290bc781350fd6efe4cd823625438fe719f99bf18cfaff8a9a5773156
 Size (kakoune-2020.01.16.tar.bz2) = 478509 bytes
 SHA1 (patch-src_Makefile) = efdae51f3ae0389c1d6ce39dfe35c95c890ad0be

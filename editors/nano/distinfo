@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2021/10/18 13:56:26 nia Exp $
+$NetBSD: distinfo,v 1.71 2021/10/26 10:21:34 nia Exp $
 
-RMD160 (nano-5.9.tar.xz) = b74b86ba330af73ade3cee21328d380830d670da
+BLAKE2s (nano-5.9.tar.xz) = 1ca6cb7e5a421897c6cbb493e6a0812a4894fec12a48bca9d3f82b8f98cb4dff
 SHA512 (nano-5.9.tar.xz) = 45ff3abce4dab24a8090409e6d7bb26afa7fa7812a51e06728c2aa47d5b4de610d97ba4609cf13d9173087bd909fdf377235eee988a6fdcf52abb70341c40b5b
 Size (nano-5.9.tar.xz) = 1499852 bytes
 SHA1 (patch-configure) = 8df30018d732c00202b4173f1c3ae0e03aa56245
