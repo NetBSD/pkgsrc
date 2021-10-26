@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:20:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:04:12 nia Exp $
 
-RMD160 (gsmc-1.1.tar.gz) = b85385ed04ee2b4d0730cc541f185f38738f6747
+BLAKE2s (gsmc-1.1.tar.gz) = e05ff861522b9962c479d26ce84fd849b233af2f9b05cf592f76ef36e6a16b9d
 SHA512 (gsmc-1.1.tar.gz) = 9c35bd8971c97c5e6a0c67b045ccfc050d25506e25c84ad1fb130fdc94a2f6604a0f762a2d0037be571ad50672eab588f8cdc4e1367c8d72a55bd3b9b08124fc
 Size (gsmc-1.1.tar.gz) = 122714 bytes

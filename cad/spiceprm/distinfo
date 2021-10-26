@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:20:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:04:16 nia Exp $
 
-RMD160 (spiceprm-0.11.tar.gz) = 22ca1030cad4eb5507806f006b6cb83327d49640
+BLAKE2s (spiceprm-0.11.tar.gz) = cd06782f69cb403afe3f49c79d04e59c57acbc9a3c9da09587e3d75514df2e12
 SHA512 (spiceprm-0.11.tar.gz) = 863c6e0c190096f135406c0e14385ac36ba8b5a379c85b63db539ce9c43dbd3cf5aacb313a2df0a2755e9a27e5f095e87470e6c1316da7d0a1f530e98af3c4ea
 Size (spiceprm-0.11.tar.gz) = 15561 bytes

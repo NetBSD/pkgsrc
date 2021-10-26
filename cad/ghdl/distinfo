@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:20:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:04:11 nia Exp $
 
-RMD160 (gcc-4.9.2.tar.bz2) = bc6454e7c67c6f5fd2c98cdd1364ebb1739e1347
+BLAKE2s (gcc-4.9.2.tar.bz2) = f297e349a0bc27d66708cad31edf8bdf89fc37dbe19c3e0beab62221af41c9d8
 SHA512 (gcc-4.9.2.tar.bz2) = e96cba06d572dbe7f382a2b00fd9297dcf9f9219d46a9ad0bd904dc36d5e7db3335e422640b79a27fed6fde91b0731732b94a0e2fbcd47344d6779f8ba1f4f9c
 Size (gcc-4.9.2.tar.bz2) = 89939747 bytes
-RMD160 (ghdl-0.32rc1.tar.bz2) = 708b680f9e11fa313f820cb08b2b4f898800c930
+BLAKE2s (ghdl-0.32rc1.tar.bz2) = d41b0d25a28ca54ed4a4b266248d587d27fb927eb22e3b9c70426682330e9799
 SHA512 (ghdl-0.32rc1.tar.bz2) = 75ed9d0ca2190a1e0c5854c23459f69d94d4cab9b831c78646a7c4aac2b949570da6cafb5fac48e7621d2b4840f0d2ebd4d710d48baffec170dc059781c1300b
 Size (ghdl-0.32rc1.tar.bz2) = 973466 bytes
 SHA1 (patch-gcc_vhdl_Make-lang.in) = ba763e4c2f97fe67e494d8684d21c0a7c7610afa

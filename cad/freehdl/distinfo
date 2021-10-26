@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:20:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:04:11 nia Exp $
 
-RMD160 (freehdl-0.0.7.tar.gz) = d00e14d6b1cd97154b221717124c6e20b0d4f776
+BLAKE2s (freehdl-0.0.7.tar.gz) = cf52720603557878732c9d56b44be90f0cbb6372d4933ba9be01237ab95a22ff
 SHA512 (freehdl-0.0.7.tar.gz) = 3e2ca8fe4c6ba4d112d716ae48856e6ecfecf6eceac7a4bf0665c9a99d9fca880c4af095a6db093a9d7005d2b7cc753c287a3af850d05738c64c78b3c0dad566
 Size (freehdl-0.0.7.tar.gz) = 1394351 bytes
 SHA1 (patch-aa) = 4c7b147c47079931506366ce50fc0eeac187fd65

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:20:31 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:04:15 nia Exp $
 
-RMD160 (myhdl-0.10.tar.gz) = 234d3f3c5d2d84e548e317e1b85bc28efbfd7b14
+BLAKE2s (myhdl-0.10.tar.gz) = b32a10dcfdf4cead07e948d53615655e38bfa20aeaad2ab711e0493851818d21
 SHA512 (myhdl-0.10.tar.gz) = b250c8b09a2cfbd2a70da60d567c8bcb09747c3e8df536cdd28ad49a8a6fbe5a28395295a6ed6046ced745b617fb3804ceb0f83d9b34db7c70701148ae7db25b
 Size (myhdl-0.10.tar.gz) = 1205466 bytes
 SHA1 (patch-myhdl___always__seq.py) = 2ba91a28a40f5582a7ab509ee8e619ce92333e92

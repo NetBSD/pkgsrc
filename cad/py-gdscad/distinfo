@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:20:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:04:15 nia Exp $
 
-RMD160 (gdsCAD-0.4.5.tar.gz) = 7acc35a14282a2add321806017137581d61e10f8
+BLAKE2s (gdsCAD-0.4.5.tar.gz) = 2fc6e9929021bda120c7ecf3f1b0164a219bf1c3afd105e4b19b7427d93a846f
 SHA512 (gdsCAD-0.4.5.tar.gz) = f6d50e2dd0eb8edc632afd14ff8641a9ba334f57fd98dd981b3a64e3980d26e4d5de63bc8a68d303cfc9bf145547ef45a1168353c445ea1ce2b7e1468a92a3d7
 Size (gdsCAD-0.4.5.tar.gz) = 451368 bytes
