@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:57:55 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 11:19:40 nia Exp $
 
-RMD160 (gvfs-1.6.7.tar.bz2) = e833fdbc9dc503cdde8e0ab5a7a8fa5403ec1aa1
+BLAKE2s (gvfs-1.6.7.tar.bz2) = 0a9d41a0c5974b4b66f705a4fa5b1fd11a15cfa79b1bad1a9c796c41cf26a5aa
 SHA512 (gvfs-1.6.7.tar.bz2) = 68fa29bb2c272e4167f17b1383d7758b5eb235e566df0e11a2413503e5b3052ed02e0101228f5f668631480ad2fd18fa682e3c1d38b7b65a34122b1271fd3218
 Size (gvfs-1.6.7.tar.bz2) = 1404372 bytes
 SHA1 (patch-aa) = 37691e13b1c2edbcf1af301bfae22c6b1943efdf

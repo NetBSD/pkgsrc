@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:57:40 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:19:26 nia Exp $
 
-RMD160 (consul-1.2.3.tar.gz) = 33260dd044973a76673f3694d693ac3b16964542
+BLAKE2s (consul-1.2.3.tar.gz) = 1477c0a5ea3797157fb9b7b68b28b71c28e421783c6a8ce495e8e965b29d666f
 SHA512 (consul-1.2.3.tar.gz) = 71a7dbfc031df4a96faf2ddd829f289e96adefd0e0087208bbdd26e742a24e3da05fceea4181eb915703ad3323ed5b02bf74eb3fdfbed1e9a1afa2f74acb2a34
 Size (consul-1.2.3.tar.gz) = 18428593 bytes

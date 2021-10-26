@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:58:26 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:20:11 nia Exp $
 
-RMD160 (salt-2019.2.2.tar.gz) = e5e8bf87072e51ca953c3183df5aa308414faf5d
+BLAKE2s (salt-2019.2.2.tar.gz) = d1fd8ecfc338858f8d2ef06673190acf37af032503c0877c8f98cd4a97bf202a
 SHA512 (salt-2019.2.2.tar.gz) = 2bbf9765384f1f6c2336a3f421298c8900cf459e6d1ebc7fb89284014ef8db9f5215a68de2bb06dfa3404983160a0c4c589ffa3dc046611dd5409bd502938677
 Size (salt-2019.2.2.tar.gz) = 14420887 bytes

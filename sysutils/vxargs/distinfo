@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:58:36 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:20:22 nia Exp $
 
-RMD160 (vxargs-0.3.3.py) = 318fa040b11368a86a0e298169eaf62e3cf1914b
+BLAKE2s (vxargs-0.3.3.py) = c7bcbe27afff7253e7afcbe72bdd87ce3360ad3cc2ae5c3e848211c839897586
 SHA512 (vxargs-0.3.3.py) = 03de6ab0ae7db5e27749102b916070bf102e1335c5c3073ec3567f41e05ac9356fb1d46ac3e6f3a0ba1ea8d9bb2db4f34988567d997e02b36bff24f9fe90c3b2
 Size (vxargs-0.3.3.py) = 17676 bytes

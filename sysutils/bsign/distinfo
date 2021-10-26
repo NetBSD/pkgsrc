@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:57:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:19:23 nia Exp $
 
-RMD160 (bsign_0.4.5.tar.gz) = 0e57631ee5713088a9209b6d7287765224751453
+BLAKE2s (bsign_0.4.5.tar.gz) = 3c596ef388f76af16aec6d8982ad24197a8fb7c6552a7063147e1bfaa1b5af4d
 SHA512 (bsign_0.4.5.tar.gz) = a4dba37d648f683bb5b14bc9aafeb72fb0bd06e21cedb1a4bbd73dfc0a5f7bb22b5b33ef8727b5070d727afb2d97489ed4b9be28bf1025c9e618ccf47f1ef634
 Size (bsign_0.4.5.tar.gz) = 77471 bytes
 SHA1 (patch-aa) = d210da6cf00d654b20031895d69f73d9d1ab7741

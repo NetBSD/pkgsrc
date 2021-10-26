@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:16 nia Exp $
 
-RMD160 (system-tools-backends-2.6.1.tar.gz) = 266cbd4ae04ee97f5a55cb2d987691ebe41e94ac
+BLAKE2s (system-tools-backends-2.6.1.tar.gz) = ee8c31f7455273161c0b2728df79613b40b18c88f7c80afdafb51376d95ccc73
 SHA512 (system-tools-backends-2.6.1.tar.gz) = 00afd0270b6d85188cf083e604b891dfd328dfbb17be2b6f46b5613a483b89a08049502b39dad0661147f94b6c6ef5e4b8e929f689e881bfee00b47c980c0b75
 Size (system-tools-backends-2.6.1.tar.gz) = 551450 bytes
 SHA1 (patch-aa) = f523c20200fcce9655056bb0a2a9ccbef3497dff

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:58:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:20:08 nia Exp $
 
-RMD160 (capistrano-stats-1.1.1.gem) = ced5fd08cba2bb30205a477d84a55d70552da312
+BLAKE2s (capistrano-stats-1.1.1.gem) = a50678ea6b1c10dee5630f576ef8de790677210dc22ff10fc1665ddc32f644cf
 SHA512 (capistrano-stats-1.1.1.gem) = d7198052dba1f518a972b4d9e4656b23b226222c58c4898745abf90876722f1040d0f0acce07d97aa090b77d4c7655ce300f73dd0d6f55666e551862a13b7e2b
 Size (capistrano-stats-1.1.1.gem) = 7168 bytes

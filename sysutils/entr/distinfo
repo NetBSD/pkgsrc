@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:57:47 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:19:33 nia Exp $
 
-RMD160 (entr-5.0.tar.gz) = af7a3c0ca54abd09347cb0abac73c80d92e9bd3b
+BLAKE2s (entr-5.0.tar.gz) = 59dc68229e2c46fba8c8a43996ec0695d7bc97c574922b9a4e02378a640483ec
 SHA512 (entr-5.0.tar.gz) = f485efb7d05f1d099c85d8af2f313e3ed2f36720483afc3004479b5b8754c60c52a108b827efd017c674f01d6ced2878a317addef3960c8cdf9e6b142f2ad5fd
 Size (entr-5.0.tar.gz) = 25480 bytes

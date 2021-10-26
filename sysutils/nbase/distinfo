@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:53 nia Exp $
 
-RMD160 (nbase-7.0.0.7.tar.gz) = f2be01a44bfde8e2f7953396f96376f74f5dc240
+BLAKE2s (nbase-7.0.0.7.tar.gz) = c73e96426e6c97cd6e9bb376be5f45ed6cef9ed2f99f4d397f414049782040d6
 SHA512 (nbase-7.0.0.7.tar.gz) = d61d9603e09a47dafdee963f5fc17a656c6aaed09cbdbbbf41c6d82041980787c3ce513af76fcdab6c407cf93f3606d0d4d2098b1477d750dc631033929db9ed
 Size (nbase-7.0.0.7.tar.gz) = 2480386 bytes

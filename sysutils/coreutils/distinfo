@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.40 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.41 2021/10/26 11:19:26 nia Exp $
 
-RMD160 (coreutils-9.0.tar.xz) = 0c83607270cd799d241499df3ee8ae415059b286
+BLAKE2s (coreutils-9.0.tar.xz) = 8b2d248c9a3e4d739c44ada041417eb66064b1e692395346ce91254802fa677e
 SHA512 (coreutils-9.0.tar.xz) = 9be08212891dbf48e5b22e7689dc27dac50df4631ebf29313470b72b7921f0b2aa5242917d05587785358495ca56e3b21f5b3ca81043d53cab92354da6c53a03
 Size (coreutils-9.0.tar.xz) = 5612752 bytes
 SHA1 (patch-Makefile.in) = e012814dded9691c2269661e64fc02f8f12d2039

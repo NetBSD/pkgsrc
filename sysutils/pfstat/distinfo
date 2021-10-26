@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:20:01 nia Exp $
 
-RMD160 (pfstat-2.5.tar.gz) = bba652d4f27b41554422410e924a421a1a0fe2a0
+BLAKE2s (pfstat-2.5.tar.gz) = 46452cca5b3852a82ab0298e6915126f502358a57ffa5c4ee891238f05e5e214
 SHA512 (pfstat-2.5.tar.gz) = f0929d3076feb4a2a1796d48ca646cdb44257a2b7d65094ba00ca6c76f6d8fa35a1f10698900cfeaa816907fd61154b4d29299b3a048c35860d2645ca59d4907
 Size (pfstat-2.5.tar.gz) = 19166 bytes
 SHA1 (patch-Makefile) = 9852c2af6f0891a7696bb81c0c284725cb653595

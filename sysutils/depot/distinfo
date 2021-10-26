@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:29 nia Exp $
 
-RMD160 (depot-5.14.tar.gz) = d078cec8c1c39bb495789e42ab92cd3f761f8ed2
+BLAKE2s (depot-5.14.tar.gz) = 6ecd5af947c9ff5c67e47b7b82b64687831b456f36c15256e395b673e39e208e
 SHA512 (depot-5.14.tar.gz) = 2471d76c659df27de169370a91a8254545baf1c0f84d64f8ce63b4f33220a03633c0e1b496ae5a086261fad8f5188231aba9e42d2851bc7be2929f4d7bdc37aa
 Size (depot-5.14.tar.gz) = 204216 bytes
 SHA1 (patch-aa) = 5b11b84bf134b292e65b05c42bf2dce277f6bc37

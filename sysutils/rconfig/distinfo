@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2021/10/07 14:58:21 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/26 11:20:06 nia Exp $
 
-RMD160 (rconfig-0.47.tbz) = de82c2df65af2ae84632141ce94dd949d2ab6775
+BLAKE2s (rconfig-0.47.tbz) = d143a712aa1b047bf74a9ee7848c2883208fdbe3135c8288a3a18997575ef885
 SHA512 (rconfig-0.47.tbz) = c965bf500eb81e282b9de56c25603e1e70042431f22e6ad36d125e881ad491359b63b825d18f18487e3311594c145e3032efe978b5cf89189aaefd086c1aaabb
 Size (rconfig-0.47.tbz) = 13390 bytes
 SHA1 (patch-Makefile) = e172ca1488e01e805bdd7734d2890f852843bdf8

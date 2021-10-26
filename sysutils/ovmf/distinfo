@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:55 nia Exp $
 
-RMD160 (edk2-20181116.tar.gz) = 7c3b4e4768a45bce7e19a0890de8a489164061ff
+BLAKE2s (edk2-20181116.tar.gz) = bcf7b76b69cd44208d8288f45ba855a29358d9fd428b06ecd9875ebd113aa295
 SHA512 (edk2-20181116.tar.gz) = 40e188c4b195a461d1f8890251470767b650e4a136883d69aecbc5eaeae7c081d2b5bf45d6143132c4bdc2d32e5b13875b15cf753160db4bc644925158a46839
 Size (edk2-20181116.tar.gz) = 44711685 bytes
 SHA1 (patch-BaseTools_Source_C_Common_CommonLib.c) = 9013cc1baa902f24429720edc68a1bd3c2f04890

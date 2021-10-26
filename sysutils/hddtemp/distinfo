@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:40 nia Exp $
 
-RMD160 (hddtemp-0.3-beta15.tar.bz2) = 82b6affbbb14d23b5a8f3fecf3fff7acc0bd9def
+BLAKE2s (hddtemp-0.3-beta15.tar.bz2) = b94ab0dc43ae147fd7a9ee64a04d7e8ca45616f42812cca294caa3cc92ea631f
 SHA512 (hddtemp-0.3-beta15.tar.bz2) = 7db5a3dff60c59ce147b996ea4f8b6de1abcd34301bb863507b4d4b44e72fdc031078867a7f37161e67e74f6b426a1d856d3081179c678d2a442815bb0faa94d
 Size (hddtemp-0.3-beta15.tar.bz2) = 256372 bytes
-RMD160 (hddtemp.db) = ce148a09adfe2dde91c922f7a40cc71cdaf011f4
+BLAKE2s (hddtemp.db) = b508ff15f5d317500e014ab2c5af834d687234742a2a6c168b340633c5e87367
 SHA512 (hddtemp.db) = 574bd19e330a4488b5d7b24fb6e546ed52cf4250bf5396d250b918cdc59edb674b28215d7d05af3212312b78048dce7fceac8028d7aa1d31fff61f8ec460817d
 Size (hddtemp.db) = 20559 bytes
 SHA1 (patch-aa) = de89c8d8904435f084443735030daa9b9882caaa

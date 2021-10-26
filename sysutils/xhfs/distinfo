@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:28 nia Exp $
 
-RMD160 (hfsutils-3.2.6.tar.gz) = a8b8c0c6556f3be2b701baab80b933dc6691a6ea
+BLAKE2s (hfsutils-3.2.6.tar.gz) = f64ff49d58448e8571f2fea053ec1ee8dce50793527778e91a4486c734cbaf3d
 SHA512 (hfsutils-3.2.6.tar.gz) = 0db3050e5969c4e4e6c6ddb10cbc221a5837eb1e12f9331e7129511d31a4ec8d38420ed0b948dadc85ed990f3b1085e930eb7f0c37b3883866d963e47cbbb173
 Size (hfsutils-3.2.6.tar.gz) = 207697 bytes
 SHA1 (patch-aa) = 1fd9844c74a980ae1348c551750c4e4a5aa5c29f

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:43 nia Exp $
 
-RMD160 (ipw2100-fw-1.2.tgz) = 8f51612a846dfa37cce1bdca38b87557704f5f2f
+BLAKE2s (ipw2100-fw-1.2.tgz) = 6f129bf0cec5c2070aca79048ae995b28f7032bb87f5dc2ce5da7110f8a55e3b
 SHA512 (ipw2100-fw-1.2.tgz) = 54b506f9a95187ffbb8a3613cbb98c45dbb282f5833a7f9ee105e6bb0a66539013790e9a1d47600aaf09ce77e8dc75868baea6ce958c2ef1e07a26cfe8382fc1
 Size (ipw2100-fw-1.2.tgz) = 247493 bytes

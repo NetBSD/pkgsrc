@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:15 nia Exp $
 
-RMD160 (swatch-3.2.3.tar.gz) = 09692c0c889ff9c5a1af50a5e5272a177130bc31
+BLAKE2s (swatch-3.2.3.tar.gz) = e2219e55db9224fb439caffa6be1a612aeaaec5d926dee3cc0557d117c0587f1
 SHA512 (swatch-3.2.3.tar.gz) = 8020fb99b7acfc322b2a80d8fd9669fc97f272c33b19a36ef1be025ffd1a463658e9b0cc5ddbac02b12a68db9e148da53734beb632677ef88337848bbd60e90f
 Size (swatch-3.2.3.tar.gz) = 31199 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:04 nia Exp $
 
-RMD160 (kazoo-2.6.1.tar.gz) = a23fd96c32ad56f41f2a6c7301bf1838a4ff2b3e
+BLAKE2s (kazoo-2.6.1.tar.gz) = 40eb34a4db229e54440e13f0fa097aaabb446bfbc6e473bf8b02311bbbb868ad
 SHA512 (kazoo-2.6.1.tar.gz) = 613e8271bfd6c8f5ee976b6ee460478c7faad46b32995125a64312208b38755888690cd46b913ff44ba52aeb36de3ec3dd8e222985af77e99f43963a3eb48d48
 Size (kazoo-2.6.1.tar.gz) = 157425 bytes

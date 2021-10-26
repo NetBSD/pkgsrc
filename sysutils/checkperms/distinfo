@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:57:39 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:19:25 nia Exp $
 
-RMD160 (checkperms-1.12.tar.gz) = cd95029aa930b6201e9580b3ab7e36dd30b8f925
+BLAKE2s (checkperms-1.12.tar.gz) = 97cfef1d83a4ce6b06112440882f8d9dc2101ea15ca6e9b81394a9572c97e132
 SHA512 (checkperms-1.12.tar.gz) = 43e37b5963c63fdf716acdb470928d7e21a7bdfddd6c85cf626a11acc7f45fa52a53d4bcd83d543150328fe8cec5587987d2d9a7c5f0aaeb02ac1127ab41f8ae
 Size (checkperms-1.12.tar.gz) = 6621 bytes

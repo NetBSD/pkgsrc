@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:41 nia Exp $
 
-RMD160 (hivex-1.3.18.tar.gz) = 7fc4345eb90031df6070ec4cc0d765c29f98223c
+BLAKE2s (hivex-1.3.18.tar.gz) = 5230cf11a4a84ca4a8801c2fc5dfa29a1db5bc4a7b62a91b510d9b1dc3ef7e34
 SHA512 (hivex-1.3.18.tar.gz) = 1851351118921e81df9e505f90d00048a178572c2edd3de40194a69915176bdb615e2eb5afea408d57063e98257c8d1e3d0cd6730407153892cc9e3befc4aa3a
 Size (hivex-1.3.18.tar.gz) = 1542133 bytes
 SHA1 (patch-ocaml_Makefile.in) = de989be1269d59bc626bd2ddb42785102b695de6

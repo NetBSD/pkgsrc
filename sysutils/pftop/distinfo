@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:58:15 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:20:01 nia Exp $
 
-RMD160 (pftop-0.7.tar.gz) = 0e0c09e5feeb07deba8b540233dcb946ba0b4508
+BLAKE2s (pftop-0.7.tar.gz) = 0e11bff35c8fdf452184ef9e8cbe657b281f3bcdf1c1e36cbfa0652845be7d0c
 SHA512 (pftop-0.7.tar.gz) = e9be01704adc112bd1f5dc011f7900754d600df6be50e28ee4a937faabe00b627ed4d1565e92560d750e70f5117533c494565f616f3562eae61301642d438713
 Size (pftop-0.7.tar.gz) = 59765 bytes
 SHA1 (patch-aa) = ff5c522223472188933a6ccbe9725190dc8ec1b5

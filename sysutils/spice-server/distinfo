@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:14 nia Exp $
 
-RMD160 (spice-0.14.3.tar.bz2) = fe99d8d0db4b275b1d19dc9a7231144133c5bfa0
+BLAKE2s (spice-0.14.3.tar.bz2) = c1d3435df2541d95fe4e57d903c2908706ed6fdd22f9978dd959fbf8e3e94f39
 SHA512 (spice-0.14.3.tar.bz2) = 9ecdc455ff25c71ac1fe6c576654b51efbfb860110bd6828065d23f7462d5c5cac772074d1a40f033386258d970b77275b2007bcfdffb23fdff2137154ea46e4
 Size (spice-0.14.3.tar.bz2) = 1504304 bytes
 SHA1 (patch-server_red-stream.c) = b5aaee6e4bb7f0cfb89606ad026e4fa2c5f05da9

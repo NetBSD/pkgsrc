@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (dbus-sharp-0.7.0.tar.gz) = 6f24068ea649d86282cabf11b633074165c2ed9f
+BLAKE2s (dbus-sharp-0.7.0.tar.gz) = d9ece239332004a4dcf0e4ddb4617f28ef6eb9383c8ba04e800fa93674be863a
 SHA512 (dbus-sharp-0.7.0.tar.gz) = 76d9c83aae227476e40efee1e987a03a8b1da29def79657365906a8220d2cceabe433f4b4679a87dd74e77431382b6c2857ca5498b0671b679d5ddd566d0229d
 Size (dbus-sharp-0.7.0.tar.gz) = 127651 bytes
 SHA1 (patch-src_Unix.cs) = e7b6bf7f684066d12ad46cc9b1e9c59d7cec7548

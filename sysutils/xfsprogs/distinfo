@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:28 nia Exp $
 
-RMD160 (xfsprogs-2.7.3.src.tar.gz) = 7a4f6b0d5da640041334cef4b4aa2e60ba43af53
+BLAKE2s (xfsprogs-2.7.3.src.tar.gz) = 3e4e9d56bce73cf76fb71fbef3b8764f4dfc85bf965edbb4d6c1cc0f90f0688a
 SHA512 (xfsprogs-2.7.3.src.tar.gz) = afbe6e5d68086f0e70c67277ba12b39a3b1358af1f41466fa420637a24d58dfa0ab2be25eabfd1f080b1f66f9f1ce9b84d196f499e9588fd9f6f029ad6ec6462
 Size (xfsprogs-2.7.3.src.tar.gz) = 895400 bytes
 SHA1 (patch-aa) = c2d7667d5f4d7cf027ef0c41b774852cc28638e5

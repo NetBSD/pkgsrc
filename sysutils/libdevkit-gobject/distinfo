@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:46 nia Exp $
 
-RMD160 (DeviceKit-003.tar.gz) = c4966300273cb983a166b13f68c1c707575ce516
+BLAKE2s (DeviceKit-003.tar.gz) = 8f8512351b0adba4541078f6225afc4875b25dc51ecc90fdc869ab4ee8be5e71
 SHA512 (DeviceKit-003.tar.gz) = c455c577cec5783b779689ccf81f78b5c51ddf897285ed1f34b83c1fa39be34a2b614867a2f1fe568fa203c945da95c243c911edca79d8e7fba13fd39b74ceb8
 Size (DeviceKit-003.tar.gz) = 384408 bytes
 SHA1 (patch-aa) = dd2f1973ad7df7b6950a63a69f9a49538970c312

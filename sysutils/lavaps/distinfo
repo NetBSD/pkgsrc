@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:58:00 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:19:45 nia Exp $
 
-RMD160 (lavaps-2.7.tar.gz) = 286530bca67f9d324c0edfc2def6d6b2a6f24255
+BLAKE2s (lavaps-2.7.tar.gz) = 1238a5213070cb7de3982fe102b70cac5d7f910ba3a956da2951e5f6270bdc46
 SHA512 (lavaps-2.7.tar.gz) = b0c3b16bd2c99ba4d5924a5cf2f26f3fbf3a92f24817d38b773733825b6a5069976a8ae41f375045127269feae45bb2d2fc35cfbee305fe319ff1c3bc979c34c
 Size (lavaps-2.7.tar.gz) = 399332 bytes
 SHA1 (patch-aa) = 8a159ee81f0a3261214a71e38f97e1e20e703f57

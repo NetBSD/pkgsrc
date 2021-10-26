@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2021/10/07 14:57:54 nia Exp $
+$NetBSD: distinfo,v 1.40 2021/10/26 11:19:39 nia Exp $
 
-RMD160 (gnome-vfs-2.24.4.tar.bz2) = 6a5952bea02dfc96782b6f1129fe765f5313a75b
+BLAKE2s (gnome-vfs-2.24.4.tar.bz2) = ab27dbd9a4d4e227cd5ef677f38777e49798eba8f5e8e257db6fd0892f50868d
 SHA512 (gnome-vfs-2.24.4.tar.bz2) = db4e49f5356647667c4d40c7ce5c299c934cb41069b2086fb89c4e87b2202b5009616d65c1dafeb93e37033a5a68965342c2b18d87b8a3265c4347dec5128581
 Size (gnome-vfs-2.24.4.tar.bz2) = 1890370 bytes
 SHA1 (patch-aa) = a5a3ac6be3e2a888eaaab108807d2aff651e62db

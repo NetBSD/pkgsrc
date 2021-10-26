@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:55 nia Exp $
 
-RMD160 (nvramtool-4.0-9989-gf2dfef0-08bda29.tar.gz) = aa59da6e764b117e49ded2813fb94411804aa15c
+BLAKE2s (nvramtool-4.0-9989-gf2dfef0-08bda29.tar.gz) = 506cc9431c2f3c04c188d88d2dbb14162a31ffa5989fd6ce9b4168d5e7ae7070
 SHA512 (nvramtool-4.0-9989-gf2dfef0-08bda29.tar.gz) = 76a16700376c11190797b020c2a0d33da60618676761960254756a091fc49ffad9a170375c6295863e809069b35afab2ef9a83182d060be4ec9f487de66d0807
 Size (nvramtool-4.0-9989-gf2dfef0-08bda29.tar.gz) = 56282 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (dbus-sharp-glib-0.5.0.tar.gz) = 2530c5bd678d06e3f93500055b57ca706940b6ac
+BLAKE2s (dbus-sharp-glib-0.5.0.tar.gz) = 414fe2c3c9cc3c71182b0765e1e1e3df3a417209c61618ba202013ed690d0e1d
 SHA512 (dbus-sharp-glib-0.5.0.tar.gz) = 651a8d9b42342d6aca6b7963a089e8da609f0d2e9d6421f40fb9589204af63e790f1bc5dd7735bb751f84d3f0d888e2e2f174c23f79206f8858e0502cba95065
 Size (dbus-sharp-glib-0.5.0.tar.gz) = 95405 bytes
