@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:13:47 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:34:02 nia Exp $
 
-RMD160 (kguiaddons-5.80.0.tar.xz) = 51db9f28b5042b9e71a62ef78fbe200f0129e14c
+BLAKE2s (kguiaddons-5.80.0.tar.xz) = 8ebad649e908867ec0ddfa34df77010644f574fc6afda149c6921bb8aba4e270
 SHA512 (kguiaddons-5.80.0.tar.xz) = 97e4311afcdc5af6ea8dcdcce40d4c0a5c2e4a767556a7e2fac671d7691472873f526539f3c0c754da6d04987c0e180e1c0461ab747c3f0e486a5f613fa11d7b
 Size (kguiaddons-5.80.0.tar.xz) = 58832 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:33:54 nia Exp $
 
-RMD160 (X11-1.9.2.tar.gz) = 7b08c74ccdb8d4f6538127fe2d89d871d2b579eb
+BLAKE2s (X11-1.9.2.tar.gz) = 09c477b46de158974b90737ce2a6c30f9a58ff562d6073b534166753af49852e
 SHA512 (X11-1.9.2.tar.gz) = e9658c33b6dcbb6a42f1cc4a8976365506af94ddc15c32f73205b453934ef3232f3b383f8365b6aa6e69b51acfda4a0f3a8038f3164523b33781139a80582a41
 Size (X11-1.9.2.tar.gz) = 190757 bytes
 SHA1 (patch-Graphics_X11_Xlib_Event.hsc) = 271c3cc4c3106fa6eaacc36c336e5f3aa73508e4

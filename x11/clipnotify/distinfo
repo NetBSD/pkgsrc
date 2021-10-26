@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:13:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:33:44 nia Exp $
 
-RMD160 (clipnotify-1.0.2.tar.gz) = 8c147ae963b6645315ebc7428b05e4206ecebd7d
+BLAKE2s (clipnotify-1.0.2.tar.gz) = ac5e55f5964110b0e7cf41ea153b1dcb39b3896a8baa84415aa792c22a397f89
 SHA512 (clipnotify-1.0.2.tar.gz) = 52277099d9543e0f550de63ff2e15e3e7ba63ea38f3928006e2b570bb1bcdd3f2f09892bd4efecc1f36fb5131e0567c28c2b0597123c90b9f78ab6fbd02dfc49
 Size (clipnotify-1.0.2.tar.gz) = 1318 bytes

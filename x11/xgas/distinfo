@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:49 nia Exp $
 
-RMD160 (xgas.tar.gz) = bd36eaa548c01cab3f1de3b8eec7ed2e9099dbdc
+BLAKE2s (xgas.tar.gz) = 95c467206f0b2a7f363e25b2b3db75228c510d6ce149ae09b4f1803cad214e57
 SHA512 (xgas.tar.gz) = b1bbc77519762cddc482acd915a844931fa1ab8b57cbc2f3bb76c40bff8c3dcb34f5a617078b56c11bfc8e6e481a9d723849eb80885f546882653d3617af3855
 Size (xgas.tar.gz) = 24975 bytes

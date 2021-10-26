@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:13:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:33:52 nia Exp $
 
-RMD160 (gtk-theme-switch-2.0.0rc2.tar.gz) = dca1de3cbc01b6e2c2bcdb08c59e886eed748370
+BLAKE2s (gtk-theme-switch-2.0.0rc2.tar.gz) = 696c96046ef19eec87f1212b8af2c3d36e7e6cec3fb5f13ba3a52209273896d0
 SHA512 (gtk-theme-switch-2.0.0rc2.tar.gz) = add96f4af69de509aa942a1eae54f70bbe86010e40f9f03a17ee683cfccc7a955488deef81129cb42f004b2e5aa7821958db511f6461e6cc40f77f11dea037fb
 Size (gtk-theme-switch-2.0.0rc2.tar.gz) = 14046 bytes

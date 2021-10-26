@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:14:33 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:47 nia Exp $
 
-RMD160 (xfce4-screenshooter-1.9.8.tar.bz2) = 3db8422bea2b8b9e59cd8a3859c045646a98942c
+BLAKE2s (xfce4-screenshooter-1.9.8.tar.bz2) = 4cbda86e6e88513bfef63afeed128ea729efb6ddb2c12243064b2407fe4bd3cf
 SHA512 (xfce4-screenshooter-1.9.8.tar.bz2) = 325697cf37075c313956621707ec9ae40a51ec85dfa65d73ccb8695a0b2d14cff0d62a9a30114b60b0404bd9ba25728bc4c350d3c2a65def6afa4a382883746a
 Size (xfce4-screenshooter-1.9.8.tar.bz2) = 562481 bytes

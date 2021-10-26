@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:29 nia Exp $
 
-RMD160 (BWidget-1.9.0.tar.gz) = e4bb9bd27b66df849a7d15b9510b80374da5342d
+BLAKE2s (BWidget-1.9.0.tar.gz) = f333338a6d30c10650f1b322ad11f5819f6183f71d591c7953c7be69c615a0d6
 SHA512 (BWidget-1.9.0.tar.gz) = 4ef5e8d465beb76f5f5908c42bb45675efe4dd4a53d695fa4875cf2421d60b20ed426ee5113dc6fe35c3080b03aff53a7bbaf6969c37a771f622de47fa1d4627
 Size (BWidget-1.9.0.tar.gz) = 228171 bytes

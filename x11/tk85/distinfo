@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:30 nia Exp $
 
-RMD160 (tk8.5.19-src.tar.gz) = 9893ed1a070135e84b7a6f646ecd46e4be3ab241
+BLAKE2s (tk8.5.19-src.tar.gz) = c9a02dc9e35c50ed465ce7faa79df7189bfe586af033f4d07f0f370529c9cd8d
 SHA512 (tk8.5.19-src.tar.gz) = cf01338ed0189624faf6d71b503d8593365d59853c8588fc15fae1c22027cf8a4d9b77b47f10bf2719cd4ba7dad2c98f2966dc4ec674cd04975af4aeea0718b1
 Size (tk8.5.19-src.tar.gz) = 4116241 bytes
 SHA1 (patch-unix_Makefile.in) = 43607e69154800cafd0398b3d0e7494a6634acfa

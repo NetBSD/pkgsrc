@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:19 nia Exp $
 
-RMD160 (Pmw.1.3.2.tar.gz) = ad3fca73405a8c8a7e2ec81096b00665e2937964
+BLAKE2s (Pmw.1.3.2.tar.gz) = e086db5189059f3fee850f64ad8f98687760cd54cb8949c945001f51e4a797dc
 SHA512 (Pmw.1.3.2.tar.gz) = 1558570c8731a350faaa77cdd4651acbdd1738adb2048978945e0fa17d9b25b9512d31ab71cc74c49dcf100e88c0215aac73e5f91c15a93bd255e13f2bf1d027
 Size (Pmw.1.3.2.tar.gz) = 399262 bytes

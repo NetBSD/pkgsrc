@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 15:13:48 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:34:03 nia Exp $
 
-RMD160 (kterm-6.2.0-scroll-wd0.2.patch) = e2ea4285def5c4ec8b88d36a20a328cc1082a469
+BLAKE2s (kterm-6.2.0-scroll-wd0.2.patch) = bf327fd6a0f33941848503f51e5ef2902e7de9023706c2b1203f9a330a4539a2
 SHA512 (kterm-6.2.0-scroll-wd0.2.patch) = 2cd64419db78500d07fbf749980a58a4d803b52c51223593c21ae33ca0d7d7b53ba86be99e811a45057c5bc197367468e4f70eee6644ba15a3fc4477f27df502
 Size (kterm-6.2.0-scroll-wd0.2.patch) = 2901 bytes
-RMD160 (kterm-6.2.0-termios-wd0.2.patch2) = e9492a0054e6c208743931d1f7c10cd63569fefd
+BLAKE2s (kterm-6.2.0-termios-wd0.2.patch2) = 6da4748ed91a7ed66b341f93ae640bb43150a2c5a555cb2bcb832cfc704b8e17
 SHA512 (kterm-6.2.0-termios-wd0.2.patch2) = cbeda79d0bff365acbb6f23a64eace99761784ed4ac5709c917ab3297e2e4cc9054c0b0f7cc0202ba6975a56c707cf0923f1311a9d9e3649f24e544c4bd1020d
 Size (kterm-6.2.0-termios-wd0.2.patch2) = 7785 bytes
-RMD160 (kterm-6.2.0.NFS-xauth.patch) = dd4aa490abeea768e74b97baba6ea29f79299328
+BLAKE2s (kterm-6.2.0.NFS-xauth.patch) = 2e42a47b8cc55de59c4b055526f8d82dbeb1e62ec9a809d688c116dfe19d820a
 SHA512 (kterm-6.2.0.NFS-xauth.patch) = 4ab3523bcb8b8494c0fbc3adcf676d7ba8e39c940fcc9976f04761128ebde25ad2202b1140471a8109b3d7065be5f65513231401e2a0de017d68cbd6ca42945d
 Size (kterm-6.2.0.NFS-xauth.patch) = 4137 bytes
-RMD160 (kterm-6.2.0.ext06.patch.gz) = 3486869425a85496714ef98493f32188fffcfe38
+BLAKE2s (kterm-6.2.0.ext06.patch.gz) = d52b40b063aa727a8afdc423fc480f85894f616413a94d8dba7d006f2eeba950
 SHA512 (kterm-6.2.0.ext06.patch.gz) = b24c554d86b381192bf1aa74cc15cb32172366e3fe5a62fb3fffb12e23dc63715ce0666122cf8426d6d6b03f9ef0daae54b13b912f4f419a5a5c8114e24d4e08
 Size (kterm-6.2.0.ext06.patch.gz) = 78729 bytes
-RMD160 (kterm-6.2.0.tar.gz) = d23c755f119b5602a3c6f6ac97e27e10c43a8bfe
+BLAKE2s (kterm-6.2.0.tar.gz) = 0c6bc0553b5309a003de21419670abb403120f9ae4e4c028b3fb4a7221a0485b
 SHA512 (kterm-6.2.0.tar.gz) = c84a5b57154dc14ab93e1bc6cd33103495716c203a648d57044672c4218cb7e4e80110f7e6e7c0900c80c2e55843ecb190de4f61d0c72dcf9b1ada306348ce1f
 Size (kterm-6.2.0.tar.gz) = 200448 bytes
 SHA1 (patch-KTerm.ad) = 7fccdb89f586e4db634a2efc9a919a6525982964

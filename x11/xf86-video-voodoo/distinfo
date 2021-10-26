@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:45 nia Exp $
 
-RMD160 (xf86-video-voodoo-1.2.5.tar.bz2) = 80d69602164641dfef9bb951f4ad694c06de9bc1
+BLAKE2s (xf86-video-voodoo-1.2.5.tar.bz2) = d3c1be4471f79ae561bf9833556d6b734471d2c80721dbe21f8ac12cd22c9fbe
 SHA512 (xf86-video-voodoo-1.2.5.tar.bz2) = 371d606abf3d682aa1e42bfce89dabd70bcb0bba3709d63bf34ffb4a364e16422fcd56104ffc4f85cd9a8795f31b7884ff5edac5e7d3f609b4c948180e0e8e10
 Size (xf86-video-voodoo-1.2.5.tar.bz2) = 305489 bytes
 SHA1 (patch-src_voodoo.h) = bf1701a6a8b9ac14fab7b71d9faea4592f2a9cbc

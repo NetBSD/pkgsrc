@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 15:14:09 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:34:24 nia Exp $
 
-RMD160 (qtwebsockets-everywhere-src-5.15.2.tar.xz) = d2b428d7e31c466709b95cb00fce0a5bd929bc66
+BLAKE2s (qtwebsockets-everywhere-src-5.15.2.tar.xz) = 4e7eacb951070a29dc97e09b4bc5cc8eb8ca49c3191e7621dfc4e455ffaddbc2
 SHA512 (qtwebsockets-everywhere-src-5.15.2.tar.xz) = 1b23b79bff4289e785daf51441daaecf6de66ca5a3febfdd8fdb8ce871471bca4faf7663d68b23aaf562b1ebd6e9c8c27b3074f4b93bc9fcd3a0c54f7f79a9c4
 Size (qtwebsockets-everywhere-src-5.15.2.tar.xz) = 259000 bytes

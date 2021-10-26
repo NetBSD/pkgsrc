@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:17 nia Exp $
 
-RMD160 (ocaml-graphics-2.0.0.tar.gz) = fc901ee50dccc59b71d20871aa0c8ae2e0594af3
+BLAKE2s (ocaml-graphics-2.0.0.tar.gz) = e4f7ce2c5d30344582a88274efa7c0e62c74b9ab28af70ec48fb28b68f4d892c
 SHA512 (ocaml-graphics-2.0.0.tar.gz) = 4cef7b44f21cb2b24845d662e238aea12d7ade26e10fbc58edda51ed2f6cc1eb8d5221b21983c52d9cd026b08d23042f489681b4257c5123846e89c26d8bf43f
 Size (ocaml-graphics-2.0.0.tar.gz) = 38043 bytes
