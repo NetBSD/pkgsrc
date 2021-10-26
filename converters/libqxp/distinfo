@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:29:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:06:42 nia Exp $
 
-RMD160 (libqxp-0.0.2.tar.xz) = 3363d46e334124f454c8b928c1e91e8f138ef250
+BLAKE2s (libqxp-0.0.2.tar.xz) = 1fc2678ccb50de185f86c4765d842c2552a1177982a830c0b2060f68678dd2a0
 SHA512 (libqxp-0.0.2.tar.xz) = 409d3df82ac522b39bdd0ef4f0a781b906e246a8e6f502009c095eea90d672c482a7fc5c7f998d89952bc598c6f51357346ed6df490c25cb48e1318e27c50dab
 Size (libqxp-0.0.2.tar.xz) = 341760 bytes
 SHA1 (patch-src_lib_QXPBlockParser.cpp) = ee665d7b2f2a0ca2887c8e0687a39654a41dc550

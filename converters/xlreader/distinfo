@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:29:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:06:54 nia Exp $
 
-RMD160 (xlreader-0.9.0.tgz) = 1bca01d7d8509e52f71e17e4ac15446b9ded0018
+BLAKE2s (xlreader-0.9.0.tgz) = 56333bed7dc32be544ef4097fad11c5676bc72b526160dae9e1ab6a9266cb80a
 SHA512 (xlreader-0.9.0.tgz) = 88a63b3408fa21dc8648bc18a1c736850d322d3b64b44ff6eda9329d6292116f71bd9ce09f34d86969c59a62d9cdcb4d83abca92e17c2d3e5feb6a7e8917093b
 Size (xlreader-0.9.0.tgz) = 45838 bytes
 SHA1 (patch-aa) = 3acdc2956379bbd2c8f0871c1875ba9c1f6600f8

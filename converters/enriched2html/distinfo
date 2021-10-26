@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:28:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:39 nia Exp $
 
-RMD160 (enriched2html.c) = 1fa9dbf17f80a000c09d339011206d5a18500ad6
+BLAKE2s (enriched2html.c) = 2f927cdf9407f71587a81a48393440b535fb625a42d3a2e625a513203cfafc64
 SHA512 (enriched2html.c) = 8332f0c33cb08f241985834bdd908cb3c4333ff2e53b1bc9e2f9b0b8cf8a70ae279ef20b0810903964c2a3a57165e7f8b200371b9d50e7e6192c969d615864ce
 Size (enriched2html.c) = 6921 bytes

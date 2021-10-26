@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:28:57 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:06:38 nia Exp $
 
-RMD160 (bibtex2html-1.98.tar.gz) = f47dda14108c3f53bca64352bfb7455f1b79d964
+BLAKE2s (bibtex2html-1.98.tar.gz) = a79f6ba107d2fb8d51fe97825f294e284b25b5b5e4aeb5f673e558b7b243865e
 SHA512 (bibtex2html-1.98.tar.gz) = 7d8480ed87bef74a1e0c970446fba4d30b103df3e78f127a051efff875032ac7f52d3d6baab0c6a2fc67ca11f3d558d7be4439311934f99067993b5891ff6ad4
 Size (bibtex2html-1.98.tar.gz) = 92719 bytes
 SHA1 (patch-bbl_lexer.mll) = e63157f319825aad196f0628f04e1065e5f3cfa8
