@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:21:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:51:48 nia Exp $
 
-RMD160 (picoc-2.1.tar.bz2) = 9d65bcee54a6d7fa28a66afdd09d3b7554315f68
+BLAKE2s (picoc-2.1.tar.bz2) = b6992a84ae632ecad8d56bdbfeb851adaf1e5036d208aff677e3105c5b348b3c
 SHA512 (picoc-2.1.tar.bz2) = c62032130b083768f344b763a3cbaa012056c41a341cd085e5aa35547de33a5a247c4cefb88f7db6acc1432eca250eca45101d8d047904840dd3bd82d39497d7
 Size (picoc-2.1.tar.bz2) = 69991 bytes
 SHA1 (patch-aa) = 68819805ddc79a193df17ba2d23fbf388f7bfcd1

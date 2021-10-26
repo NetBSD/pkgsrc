@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:21:13 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:51:55 nia Exp $
 
-RMD160 (scala-2.13.0.tgz) = c719cfca5bc164dce3e28986282e17c9498f680a
+BLAKE2s (scala-2.13.0.tgz) = 81282c2d64c38d9ea0d13c3df92f86a6e69d373381fc61a15e29f2421f5abaf9
 SHA512 (scala-2.13.0.tgz) = 49f31e2a53d95452c8b15adc0b76fe9e8b349611ae92ba8c6a2f8129f7a88a478c140a10688f51b709514f118cac08adeff7ea4506a24794f102535ac9ea9b2e
 Size (scala-2.13.0.tgz) = 19413106 bytes
 SHA1 (patch-bin_fsc) = d6f35942b9db8774cf5a61bb90f25a329b1cfba9

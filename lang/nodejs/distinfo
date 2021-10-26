@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.204 2021/10/20 09:14:19 adam Exp $
+$NetBSD: distinfo,v 1.205 2021/10/26 10:51:44 nia Exp $
 
-RMD160 (node-v14.18.1.tar.xz) = b05b1189139ba2d60d7f8d9370c1fc37f2ca37e7
+BLAKE2s (node-v14.18.1.tar.xz) = f203ae02ceb004edc7bd898c15ac7edf874cb2b3c2028d8318a388a57a375e28
 SHA512 (node-v14.18.1.tar.xz) = a92d6f392e960008efd0c1f48471a3e294aa5292065fb31acc62723e8924f7f1a22bb02f3ab51a440f6e190bdee3c1667a275808c6b76d053a77aa6d7ad68aef
 Size (node-v14.18.1.tar.xz) = 33693816 bytes
 SHA1 (patch-common.gypi) = f0bd2962bf7c8466db24b35a35154897ecad6316

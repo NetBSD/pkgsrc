@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:20:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:51:40 nia Exp $
 
-RMD160 (konoha-1.0.0-952.tar.gz) = 98eb63382d3877b57606a205ac41cfd3928316b4
+BLAKE2s (konoha-1.0.0-952.tar.gz) = bd97bb533f1b5e8b77fa62a23213172de193402a825a659fe287c048ad8f5bf2
 SHA512 (konoha-1.0.0-952.tar.gz) = 4c4597e30a921a7fe8f447a75065f920fcfeadb1c7b46b80dbd324cc31a95e19f297aae100bb275c8ee73ba7a40e8ed14a33fceb1251c83718e1c0fb9645eb86
 Size (konoha-1.0.0-952.tar.gz) = 5235671 bytes
 SHA1 (patch-include_konoha1_konoha__config.h) = 5faf9bb6575ecab19fe78b15959db849ed6943c5

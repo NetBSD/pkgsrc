@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:21:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:51:46 nia Exp $
 
-RMD160 (p2c-1.20.tar.Z) = 9917ef3f501b1506f2992d572f439398862fba4c
+BLAKE2s (p2c-1.20.tar.Z) = 51563065a0e37326d5b61e918a2d5e66da00f127584a0a00fdee43c6d68ded0e
 SHA512 (p2c-1.20.tar.Z) = 07066c7171f6e66de4a32f2a21c5a475fc68e79dcbede03e3a332786e7ddc4febf54482f602e68deb29739193ffdb0bd9d335498d8d2441b4119e7881d55d852
 Size (p2c-1.20.tar.Z) = 579294 bytes
 SHA1 (patch-aa) = 0d8e0c2213d25728abb1230cbfca8c25a2ea86c6

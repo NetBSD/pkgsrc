@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.34 2021/10/07 14:20:51 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/26 10:51:35 nia Exp $
 
-RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
+BLAKE2s (g95_source.tgz) = f6d149ae54df9e9a04c8196baf0c6b392597eb38331105cf2bc235d5232a8cd2
 SHA512 (g95_source.tgz) = b464efd6a36bfe3cc63234d82db1f22d3f023bd3e25e6f86569c5bbb9a27fbf142f53c8dd789080a912087230ddabca5ffd324cc4125f8c96acfa367d2f0024f
 Size (g95_source.tgz) = 1355198 bytes
-RMD160 (gcc-core-4.1.2.tar.bz2) = 612cbd5b795f7095fb3f565e6a8eaaee82c472c5
+BLAKE2s (gcc-core-4.1.2.tar.bz2) = 06bb715ddbc6a6ba5d0d73ebaae07996047614e3903ca52c498e33e486fa825b
 SHA512 (gcc-core-4.1.2.tar.bz2) = 002a2025f809781e8d427c00dfe884429ae094ad417edc3393f5bae249ae6049ea0c27e43caf51f9f15525bd35e24ad2c993c57f191b9196fdb68fd20e503f6e
 Size (gcc-core-4.1.2.tar.bz2) = 17485561 bytes
 SHA1 (patch-ab) = 254dd8c3402c07bb4919c73d72712839f348824e
