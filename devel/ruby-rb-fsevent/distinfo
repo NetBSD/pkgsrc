@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:44:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:42 nia Exp $
 
-RMD160 (rb-fsevent-0.11.0.gem) = 3994c4613fa06707faf857e4ae8937428fb5ef96
+BLAKE2s (rb-fsevent-0.11.0.gem) = 467877a26e61451c4c826f5628e3bd8d7edfcc4fcfac35a7d0cc595ec0839f04
 SHA512 (rb-fsevent-0.11.0.gem) = 47da85f4f1ac3c5b67cb1abfa3f02f4ad80ef7b246ceeafabdeded8388dd03a26aa2a657a5aa2fc68b1d3dcb8f0279abea5bcec5b556ee9be6ac055bfbca051e
 Size (rb-fsevent-0.11.0.gem) = 66560 bytes

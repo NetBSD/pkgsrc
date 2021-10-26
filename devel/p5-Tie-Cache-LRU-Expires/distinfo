@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:50 nia Exp $
 
-RMD160 (Tie-Cache-LRU-Expires-0.55.tar.gz) = 2f1e42b7543dc7b07b6aadf9707a1b40958ab0cf
+BLAKE2s (Tie-Cache-LRU-Expires-0.55.tar.gz) = 3a29b47d0b463e031625e107403b6ecce740fa3cab509507c88e26daf5e6144f
 SHA512 (Tie-Cache-LRU-Expires-0.55.tar.gz) = df1e1ee1bd39e49c476880b478e0d0f2069dc57480bc06ff2e941d3851141a19dff2900e62ccf06aee147bd360c714b26926f870382b057b1da9d7a8f84f34b7
 Size (Tie-Cache-LRU-Expires-0.55.tar.gz) = 5803 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:51 nia Exp $
 
-RMD160 (Locale-Msgfmt-0.15.tar.gz) = 08390459dde044f09c76c1cf3aa71c2738575d58
+BLAKE2s (Locale-Msgfmt-0.15.tar.gz) = 382fb929da45d0060810bee833522ece94582326bce95d69b4f862fb5e245365
 SHA512 (Locale-Msgfmt-0.15.tar.gz) = 4de0462c6c420f4d4026acd78838db72e997119688f758183cd182bf3595f4f732152193df995bb546e1dc8ddd5f7f509702c40fcab9d562ffe7876a571539c4
 Size (Locale-Msgfmt-0.15.tar.gz) = 48160 bytes

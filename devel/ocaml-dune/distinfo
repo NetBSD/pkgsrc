@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:40:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:15:48 nia Exp $
 
-RMD160 (dune-2.7.1.tar.gz) = 1087dfc434355c85421155705c0c737e65a70266
+BLAKE2s (dune-2.7.1.tar.gz) = 70ed0ffc2818a4fee2a41e309400e6f4723eea35b8df0c46a923464a9aaa624d
 SHA512 (dune-2.7.1.tar.gz) = b77d0e207263107365e5a6e94423e8ab4ddbab1f920872d915e4014b7cc69915274b53fe946bb4b29dfe3de2bf5573ab3b2bffb4db8eb50b472e7dfb6cab88b7
 Size (dune-2.7.1.tar.gz) = 1290915 bytes

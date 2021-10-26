@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:51 nia Exp $
 
-RMD160 (ocplib-endian-1.0.tar.gz) = a53f32a75f8fb3c5c2412aa0eb19c2b379e0045c
+BLAKE2s (ocplib-endian-1.0.tar.gz) = bcceea2a0de910347b10976a529c3fabe43d35bdb5a6bfb0db616c02ba43ef34
 SHA512 (ocplib-endian-1.0.tar.gz) = a08fd58ec5e72510c40e8b75e0ee8327ee658f479e45dd4632bc04e3907d04aaa3684df3b993ab63fc2a6c1f1a4fb32784e9b5258730d3b89a716300522d8d7f
 Size (ocplib-endian-1.0.tar.gz) = 62753 bytes

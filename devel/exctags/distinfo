@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:39:32 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:14:37 nia Exp $
 
-RMD160 (ctags-5.8.tar.gz) = 191495869fbfa2f77a9619a4920eba26d02eface
+BLAKE2s (ctags-5.8.tar.gz) = d46528b9a947197cfc397ae1c2c008e37621ace5309acaaf4df5ca53c3b2a058
 SHA512 (ctags-5.8.tar.gz) = 981912cd335978cde22864e977947fc75326572fb29518e559cc4a8ac1edc84b3604165218a666e36353f17da4f89f8e967acdb88696f816748eb946d79eaa15
 Size (ctags-5.8.tar.gz) = 479927 bytes
 SHA1 (patch-CVE-2014-7204) = 70ae27b0b69962323cb6ec8ad89b77e6dc958cdb

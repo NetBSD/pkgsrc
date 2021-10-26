@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2021/10/07 13:39:25 nia Exp $
+$NetBSD: distinfo,v 1.71 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (cvsync-0.24.19.tar.gz) = f98530cfa25d75647af7a4baed7e6184f01207ec
+BLAKE2s (cvsync-0.24.19.tar.gz) = 722935cff4a581be165c4af882a04969eea1cc1b9f0695c8d719284ca49639cd
 SHA512 (cvsync-0.24.19.tar.gz) = b16524d47142dcbed8ddc7b6e03d14f231e5104206e0c3a2838b18de34c420c6f9e6de26a37bcc66a9f7728d2cf23dc0eb1f346e4cc44240c6458446184413e1
 Size (cvsync-0.24.19.tar.gz) = 139695 bytes
 SHA1 (patch-aa) = 6848abba52d055737f13a36fefa2edc67578049e

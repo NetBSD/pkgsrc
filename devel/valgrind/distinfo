@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:44:40 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:20:07 nia Exp $
 
-RMD160 (valgrind-3.17.0.tar.bz2) = 36fcd8542817f22fd35e570c02307024a2e0e5d3
+BLAKE2s (valgrind-3.17.0.tar.bz2) = 7ed3043e09c2d715765239e8ea1bc32eb94b1a231c32afeea130d3fa9caa8c30
 SHA512 (valgrind-3.17.0.tar.bz2) = 94de78942a7059e1ab84d1c0c0b8f3efd1c2d15c70b97bc7edc8136812778adb6f8187149d53a60a8c6a7c8b40534f9be5cfed0eb3c0c314545b681f950b108f
 Size (valgrind-3.17.0.tar.bz2) = 16459075 bytes
 SHA1 (patch-configure) = f133bb1574cc41cab01312543295996040207c5b

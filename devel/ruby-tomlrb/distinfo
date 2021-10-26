@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:51 nia Exp $
 
-RMD160 (tomlrb-1.3.0.gem) = 4fefe6808c71ac540f28c3580ab281664f72cd4c
+BLAKE2s (tomlrb-1.3.0.gem) = 2c96ae75472faedde2e58a40f74cfc946930f52e08b4501f0903231bc44eeafc
 SHA512 (tomlrb-1.3.0.gem) = 717eeb69d18ff016a9139802d43656b6aef2ced9d485d5ddb4b9164a57bcec38875c90f8877ecc80f831df20dca5bbe32c5d009549c4cd2250e0844e3a65ead1
 Size (tomlrb-1.3.0.gem) = 9728 bytes

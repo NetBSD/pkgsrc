@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:32 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:51 nia Exp $
 
-RMD160 (pyobjc-framework-CryptoTokenKit-6.2.2.tar.gz) = 1b87c4f1812639bdafd6f7c68c3295dd8161adee
+BLAKE2s (pyobjc-framework-CryptoTokenKit-6.2.2.tar.gz) = 844404e3dc35869e55bdbb4682d119012ca67293ac9bf415a85137a2ebdc9f83
 SHA512 (pyobjc-framework-CryptoTokenKit-6.2.2.tar.gz) = 0f0ff9f4fade5cea98a5a50a44d621207910e0d0d270bf43b5460747c70eb79bf15525b205974db1583906c98f0e81221e2a6e29c1746b5f7fb770c5cd48725b
 Size (pyobjc-framework-CryptoTokenKit-6.2.2.tar.gz) = 24146 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:46 nia Exp $
 
-RMD160 (Test-Script-Run-0.08.tar.gz) = 419c86c9ed0249bb1c745f48d92dae47a2477a7c
+BLAKE2s (Test-Script-Run-0.08.tar.gz) = 779bcc73f73ae4ca25305944eca0177ca366387fa6dde69ec87a6a1e98413de1
 SHA512 (Test-Script-Run-0.08.tar.gz) = a3e8710083833aef528726504724281deea677bb0a7292e9ded99c11e0ff617999d419f1ef391f2d3aa497d8df50bb8c28897a91dfaaaa43bf34ba3652185fbd
 Size (Test-Script-Run-0.08.tar.gz) = 33198 bytes

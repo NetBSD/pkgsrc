@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.117 2021/10/07 13:44:32 nia Exp $
+$NetBSD: distinfo,v 1.118 2021/10/26 10:19:57 nia Exp $
 
-RMD160 (subversion-1.14.1.tar.bz2) = 037b14fd7e47a470a3b4925a4fe925d866c8c718
+BLAKE2s (subversion-1.14.1.tar.bz2) = af51085e4a85be8367c51e407958a56118c0bfedda1a6f77576597e092662f42
 SHA512 (subversion-1.14.1.tar.bz2) = 0a70c7152b77cdbcb810a029263e4b3240b6ef41d1c19714e793594088d3cca758d40dfbc05622a806b06463becb73207df249393924ce591026b749b875fcdd
 Size (subversion-1.14.1.tar.bz2) = 8504612 bytes
 SHA1 (patch-Makefile.in) = 2df6c733d563c0bc7e0d1b4b6e6e00f82ea8c176

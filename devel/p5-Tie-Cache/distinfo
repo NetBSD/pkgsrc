@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:50 nia Exp $
 
-RMD160 (Tie-Cache-0.21.tar.gz) = caf412db4936b6d57105f95fd9ac9663a841d8c1
+BLAKE2s (Tie-Cache-0.21.tar.gz) = 0b97f497052cc3655f158b129a2ec78fc84fc62b939bd9d1fa8277f9f8a99f97
 SHA512 (Tie-Cache-0.21.tar.gz) = f2d5672c058db0513b1956e077d68c8641b518e3e676fa3f05508a21989284c7a5059a110c0e12235eefd2f7bf358b531a90ba89b60b7ae61d04f8ed24347de9
 Size (Tie-Cache-0.21.tar.gz) = 11200 bytes

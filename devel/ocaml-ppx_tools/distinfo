@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:40:48 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:15:54 nia Exp $
 
-RMD160 (ppx_tools-6.3.tar.gz) = 21b76b20d146833d62ac7b8abc2b57a323552a15
+BLAKE2s (ppx_tools-6.3.tar.gz) = 46bb8caa73272385811346bd491b926bc9811d0b4f99d912d17b0e3e6dbaa289
 SHA512 (ppx_tools-6.3.tar.gz) = 6a88f6f877f49ea8736aeca60673a19c52d5104ad9e2a3e56db3f71cd557d39df9c709c4e678ccf10263ff1f3e0504f4676227bd05ceba1e0294453a988a736c
 Size (ppx_tools-6.3.tar.gz) = 18811 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:29 nia Exp $
 
-RMD160 (cvs2html-1.82.tar.gz) = dd3d68cea80430790dace321a214643b9730d652
+BLAKE2s (cvs2html-1.82.tar.gz) = 1b949bbb6b99445efd08aba28987f3d349082e17e4f70ca8f940e98754226532
 SHA512 (cvs2html-1.82.tar.gz) = fd9d844c809c220363c04ef784f0810b1b89173931f07c40c6220795cfe7ccc6141bd442a3d8fa5cd858bf1cf1ff5701e69d1a1df1124292dd1a5a270f326988
 Size (cvs2html-1.82.tar.gz) = 14588 bytes

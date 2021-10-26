@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:44:00 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:19:23 nia Exp $
 
-RMD160 (rpc2-2.10.tar.gz) = f155cc33c91d6b354376228027a1474e12b0bb28
+BLAKE2s (rpc2-2.10.tar.gz) = 17c32a79046ac10ae979e4cde795a73783c950531c2e6c743f33544ec269a795
 SHA512 (rpc2-2.10.tar.gz) = 45d67a1eab7938c120a933aaa1c938d569fabe5d4e90f190c327d48a75de17a324f0717eeed05ae2874db59dd45d4dd604d3df61209807aed6ae357317e4b0bb
 Size (rpc2-2.10.tar.gz) = 595825 bytes
 SHA1 (patch-rpc2-src_host.c) = 8c453258ae82418ef6e4b5464e544b2b9253b93d

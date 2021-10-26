@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:57 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:19 nia Exp $
 
-RMD160 (radamsa-0.5.tar.gz) = 80ab0f8263cfd68bd253d3a5355442ca8b86a17a
+BLAKE2s (radamsa-0.5.tar.gz) = 6b5a609dfc35a53fbb17749e721159e4b88594322256af9bd78ff632e1fe7fb0
 SHA512 (radamsa-0.5.tar.gz) = d48f61ea7c0703d7fdf68ab32894e93d774e8f2893642a81046b8210d7d433f4be8930d7d79317ddb0882cf54b06505c541827b925f30b861ae8205e300fed80
 Size (radamsa-0.5.tar.gz) = 168177 bytes
 SHA1 (patch-Makefile) = ddfbac134218e101ea3b0153edb96dc66835cc3e

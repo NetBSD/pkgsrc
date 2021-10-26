@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:39:30 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:14:36 nia Exp $
 
-RMD160 (elftoolchain-0.7.1.tar.bz2) = 9e341f86573d80dd2b390d79cf82f239ecd279ff
+BLAKE2s (elftoolchain-0.7.1.tar.bz2) = 5786cc2a71b26dc5eb9b1041695aeb12f9be06409f2489f750d758ad9df19cac
 SHA512 (elftoolchain-0.7.1.tar.bz2) = 8226c468b393f0d567167a9dd6b16d2a226227e4d05dab8f44550038da44dcbfb92749f8e1a4b130b893675337a6771e24a81f350f3f864b1b8b17402ed23b26
 Size (elftoolchain-0.7.1.tar.bz2) = 5361427 bytes
 SHA1 (patch-am) = 67678cb5e9ff5df7ebaa22e7bb1dc9538e1b3063

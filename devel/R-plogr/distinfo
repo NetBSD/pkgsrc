@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:07 nia Exp $
 
-RMD160 (R/plogr_0.2.0.tar.gz) = 50a1f3a19ce5c1ad7ad16f071dc22da69c682c3d
+BLAKE2s (R/plogr_0.2.0.tar.gz) = 75df29efbff2dabb7152b6c78b9eeffaf8183e38f528fae12815ed5eb423a0ad
 SHA512 (R/plogr_0.2.0.tar.gz) = 2abf84e33265683dd071434adc6a6f440972d1cf923f7549f7217196d4d10c7800dc90645d62c13d9d7e3a380e540c55c6a75ba55c9a90825ec40f5224f85feb
 Size (R/plogr_0.2.0.tar.gz) = 7795 bytes

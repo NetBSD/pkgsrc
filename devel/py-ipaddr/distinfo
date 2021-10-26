@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:34 nia Exp $
 
-RMD160 (ipaddr-2.2.0.tar.gz) = 8b8b4b69badef1a55cdeb5818476d1b3b65ef274
+BLAKE2s (ipaddr-2.2.0.tar.gz) = b720d9be428c8c28f69b1f20c24b184fff0214c8f4d733f0d788b3ce569ec989
 SHA512 (ipaddr-2.2.0.tar.gz) = 5adb117c44e6e5dbdb9e96543aa7a34f35b4a4ec9baa163a25448058c34091bf4019d24f0250928291e4d4bc97dcdf75865daef739e2d94f98cc584e6e6c50dd
 Size (ipaddr-2.2.0.tar.gz) = 26266 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 13:39:15 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 10:14:21 nia Exp $
 
-RMD160 (bugzilla-5.0.6.tar.gz) = 053ef0b751b5a4719aebaceddf64676a125b4115
+BLAKE2s (bugzilla-5.0.6.tar.gz) = 0a2f075fab9ec4876de2ff36bb038d9ccb47c2e73046f4a27d4a7ee5fc0a99b6
 SHA512 (bugzilla-5.0.6.tar.gz) = 8ca47ea1be2b433a6ce68e1a595d72f3d0f0fede44d1194dc6bc9a116dbde3ab7285212c71995e200d31544876e4c3c57b63da1f877a0cb22747ab87a5d598de
 Size (bugzilla-5.0.6.tar.gz) = 3970724 bytes

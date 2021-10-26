@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:08 nia Exp $
 
-RMD160 (Cache-LRU-0.04.tar.gz) = d02823af1e42884bc505f9b45d7a7b5429041155
+BLAKE2s (Cache-LRU-0.04.tar.gz) = 70022d2b16b1d46f6b1a2aeda193d102febf7f5b4ed010c6fe647772a04141a2
 SHA512 (Cache-LRU-0.04.tar.gz) = 9fd4f56da78e4b8e291c4291ccb2e34bc50f7294fc8ff1d942d21fb116a5613c96f8e55ef9bb95a7ae3e810e791d3edf2f9f15063fd0fb85414a8e8964e88118
 Size (Cache-LRU-0.04.tar.gz) = 20133 bytes

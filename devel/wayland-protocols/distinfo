@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:20:08 nia Exp $
 
-RMD160 (wayland-protocols-1.20.tar.xz) = 61aab87caab4ce6ca0bb4c8fd58bc1ce320ad53d
+BLAKE2s (wayland-protocols-1.20.tar.xz) = 9201673fd0eb35a6f090534257a30ca6e7928af04bb1bdab341c5b552a36407f
 SHA512 (wayland-protocols-1.20.tar.xz) = d13f65d03add2c39cc32bf6bda0e981e9f52504bf8505fceea045c8baeb73bea64fa4edb99cb837677fbab1b5b3023054adff36fac127e819690f366b81c4977
 Size (wayland-protocols-1.20.tar.xz) = 111684 bytes

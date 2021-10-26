@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:40:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:15:17 nia Exp $
 
-RMD160 (libdbusmenu-qt_0.9.3+16.04.20160218.orig.tar.gz) = ee50d395cf35800764b91ef2c09b7e3054446ece
+BLAKE2s (libdbusmenu-qt_0.9.3+16.04.20160218.orig.tar.gz) = 6395fdd79f9fc81e1f8ce5f940ad362925249e556b279745c9766f6f5752cdba
 SHA512 (libdbusmenu-qt_0.9.3+16.04.20160218.orig.tar.gz) = dfaba59cedd320e6a3b5a9c0a5e13fb9e0952224e39cdd6ee3b32b03d95ac850a533e2a73835a7c0ead93b2283b9c235472bacb84e3d761ebe9e9398345314a9
 Size (libdbusmenu-qt_0.9.3+16.04.20160218.orig.tar.gz) = 46438 bytes
 SHA1 (patch-tools_CMakeLists.txt) = 1e270795ee3ee1d6a0a3a75b1c7e7c8806129aa5

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:39:42 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:14:48 nia Exp $
 
-RMD160 (gps-5.2.1-1-src.tgz) = 2ca95998ecc5eb7930e0b645cc550e99fe144177
+BLAKE2s (gps-5.2.1-1-src.tgz) = 60e980d81630793be990face000daacf839968efcd41cb0538f2b2d7514c975a
 SHA512 (gps-5.2.1-1-src.tgz) = 2784caddbd8708cb44957a577112e58b3bd426580b305ca43cb8ca46b82bec2410b297ba2b80f0bb8cae8f7a421cd16b5039f1d74b33f4289f2b50a8a52c60d6
 Size (gps-5.2.1-1-src.tgz) = 27925475 bytes
 SHA1 (patch-Makefile.in) = 2920de21e7e0f65c76fe406fd7f47abc80dbaf38

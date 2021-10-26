@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:09 nia Exp $
 
-RMD160 (kdesdk-kioslaves-4.14.3.tar.xz) = 72d3a3023e035327d6a47ba2446ab08b0fcb5eb7
+BLAKE2s (kdesdk-kioslaves-4.14.3.tar.xz) = 04d19bdc47c8a3951c536895553e9310d81e0ab8d7a035b6cea0a17dfa241561
 SHA512 (kdesdk-kioslaves-4.14.3.tar.xz) = e7a423b7b326e3f564458500fe665a45f1609653a27a9dd7565dd5805be1372f9e31d8435cf5dc40ab8fadaaabc0fd3ff9b7da26f70ad32f8b9190d1bb46763a
 Size (kdesdk-kioslaves-4.14.3.tar.xz) = 361228 bytes
 SHA1 (patch-svn_svn.cpp) = 8982758293383b7aad18bfa5b2cdff76e52c3d29

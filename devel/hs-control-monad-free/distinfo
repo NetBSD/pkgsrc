@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:54 nia Exp $
 
-RMD160 (control-monad-free-0.6.2.tar.gz) = 3e47dbf702773082ca129348522ae1910d967836
+BLAKE2s (control-monad-free-0.6.2.tar.gz) = 08ae2e6fbb3e0ef4ae06e9c813b42853ee43a090c842626bc39f7369e18287d6
 SHA512 (control-monad-free-0.6.2.tar.gz) = 32d39d7aed7fe355542cbc28d9a6a4de74cafe3e56ef10d1f327b063b1c9fb005332073ad5b623a620c9ac241ed5214e7d90e6fdfd4fb444b6162fc29a631006
 Size (control-monad-free-0.6.2.tar.gz) = 3665 bytes

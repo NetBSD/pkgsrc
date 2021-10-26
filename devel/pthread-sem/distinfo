@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:06 nia Exp $
 
-RMD160 (pthread-sem-1.0.tar.gz) = 317418a51f0385b5c180a9534c82dd8fe562d252
+BLAKE2s (pthread-sem-1.0.tar.gz) = c9df5e13b5bf88428d8d9364486124c44986aa40e40c2a7bb381be528ade9ef5
 SHA512 (pthread-sem-1.0.tar.gz) = 9a3675eb69efb0894e674d96367571e12b1e4cb19789b37681957df182c04646abc781f3d3f79464a8aba88b64ae6cedb2acf0f5cf3afd8271d11eb0434f8964
 Size (pthread-sem-1.0.tar.gz) = 5897 bytes

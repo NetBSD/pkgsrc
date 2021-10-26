@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 13:40:15 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 10:15:21 nia Exp $
 
-RMD160 (libgphoto2-2.5.8.tar.bz2) = bbb57fdace9783f9829bafbd89818949f6d0fce3
+BLAKE2s (libgphoto2-2.5.8.tar.bz2) = 9666489a1744b1c9a1c7f684aa59144b0807812daab1be25af5de68bf226eab2
 SHA512 (libgphoto2-2.5.8.tar.bz2) = 142957ce3c80e8ac091005ba51b24fc0b199aa46f1a196cb0cfd71e0101d6020f4dd0ec2deb7209ef9ff7b946453b5fd9faf944047c07eb9962d8d52c876b1f4
 Size (libgphoto2-2.5.8.tar.bz2) = 6941251 bytes
 SHA1 (patch-aj) = 111b26861d59dddf7a8d0998cb7ae6513114fe38

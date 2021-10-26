@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:42 nia Exp $
 
-RMD160 (Test-LongString-0.17.tar.gz) = 76baf20d08667a43b1f6ad263e76b22110eed5bb
+BLAKE2s (Test-LongString-0.17.tar.gz) = c026e6bb7589430e5f0311cf7839f902fdb2920c34353b09cbb1d6ae65d50da3
 SHA512 (Test-LongString-0.17.tar.gz) = 1c0cd6fea35bb72816451ce0790002c9dfb945390bc85d22d04670dd5af7ebbe795307ad361e2615ce4ab4f02a317a3aa5d297f2165bd3b1f6de40b3240f1352
 Size (Test-LongString-0.17.tar.gz) = 8928 bytes

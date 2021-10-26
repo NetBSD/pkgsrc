@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:44 nia Exp $
 
-RMD160 (minimalflat2-1.7.0.zip) = 97fb7fe711b426f5e1a2eb7d3de6061fbed5b877
+BLAKE2s (minimalflat2-1.7.0.zip) = 96dc7adcf68525be3da1f959b84c217533042c8a72ebeb4101dbf37c02eaabb9
 SHA512 (minimalflat2-1.7.0.zip) = 7af882ff6c3ffed9f5d120775f2b34decb19133add6316ea4cef86ffa66b1e994a323d2d11e1b5290a8e14800004b3cefb5f9fb66b391e427b05c961b1bb8fe0
 Size (minimalflat2-1.7.0.zip) = 80800 bytes

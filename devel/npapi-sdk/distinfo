@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:43 nia Exp $
 
-RMD160 (npapi-sdk-0.27.2.tar.bz2) = 9ff443f694a1d4c2a665449baefd4a1a57129add
+BLAKE2s (npapi-sdk-0.27.2.tar.bz2) = 61910168c6c4f86362f076ad9951de536fbe865125775ccf6ec25a1a0cedc206
 SHA512 (npapi-sdk-0.27.2.tar.bz2) = 827d52fbc8eb601ac0e486aed267b1ca6cb8732c92f1224f4b38e039288b77d07d47c5d4cf384a3114403b85e7f086f345912f1b20b41d27785c9bb367514842
 Size (npapi-sdk-0.27.2.tar.bz2) = 65811 bytes

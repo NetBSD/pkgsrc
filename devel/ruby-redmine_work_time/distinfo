@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:44:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:19:45 nia Exp $
 
-RMD160 (redmine_work_time-0.4.1.tar.gz) = 0f26eb0d6c720bd943bd30c133b54d39162d9423
+BLAKE2s (redmine_work_time-0.4.1.tar.gz) = 4ed7e33c6d56ad981668546f16f606ec861e21ef3a5d643397f1f237d2f46018
 SHA512 (redmine_work_time-0.4.1.tar.gz) = 4ad83d31c293df4c85ac6904e6babdf5710a5548a5854e93aaa747075075e24cd5ded6ba47cf28e7815fde241a5969e05e214040dc70ef48f551abdf2ecbfc9c
 Size (redmine_work_time-0.4.1.tar.gz) = 42621 bytes

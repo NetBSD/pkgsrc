@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:31 nia Exp $
 
-RMD160 (facade-1.2.1.gem) = 2ad1e0549be0d0a01ca537ef48ad0641f3eb96af
+BLAKE2s (facade-1.2.1.gem) = 972312bc91040500f5c819a68618310ab6ada79369bab24a635f222f44d7064c
 SHA512 (facade-1.2.1.gem) = b8021e533b67409dfff5155af60bf9c1f13d5f1fc65b7bfa5580646b5b9df8c8453018ed14b214caca46c125801a9bc047f68646d552f2c2e61a1a9572c07e99
 Size (facade-1.2.1.gem) = 16384 bytes

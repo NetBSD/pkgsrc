@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:41:59 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:17:08 nia Exp $
 
-RMD160 (MooseX-Traits-0.13.tar.gz) = 9122ca2e4c755b4595d1ca1ad732da754d687b91
+BLAKE2s (MooseX-Traits-0.13.tar.gz) = ddee4537863e65090f7b4a2ef8e324de54e38dcf08650e75ced176c466c8626a
 SHA512 (MooseX-Traits-0.13.tar.gz) = b5128105e66f2889b6ddfb5b5b871fd952bfe6e08f038cabcc5fa49e9f9f4a806dab06acf9756507613cb6c99e6d633f80c561d85be1d3a1a756039ed29acca2
 Size (MooseX-Traits-0.13.tar.gz) = 31688 bytes

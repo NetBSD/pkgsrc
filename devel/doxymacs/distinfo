@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:34 nia Exp $
 
-RMD160 (doxymacs-1.8.0.tar.gz) = f7a0657251d9220d75aec08dd796dbba3cfe99a5
+BLAKE2s (doxymacs-1.8.0.tar.gz) = e8b71739a7c99fa10d1552ab0e3e78c1a11c9adaddcd20e935a5a1d457aaf0e5
 SHA512 (doxymacs-1.8.0.tar.gz) = 7461a8a415aadf331f856e4f122712cbedc2907eff9e452f24e6ee83b96903d9944d2cfdbcfeab8a66144a0be508eae723c29f82a081df9723560b10c444f8ac
 Size (doxymacs-1.8.0.tar.gz) = 133600 bytes
 SHA1 (patch-c_Makefile.in) = 8c8cc07cd730e2139d6d6578222814ce3cbdc6a1

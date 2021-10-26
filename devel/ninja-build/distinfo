@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:40:36 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:15:43 nia Exp $
 
-RMD160 (ninja-1.10.2.tar.gz) = 1346989347fbb47b7211c1a49d5f9236f3027488
+BLAKE2s (ninja-1.10.2.tar.gz) = 04d4e51a365523abf522ab1a0090eb962cb7558254569e98f6f816dc3aeea76c
 SHA512 (ninja-1.10.2.tar.gz) = 895412ae1cbc83c656e92f282602a29300e08274e9dea0da4464202ae556e7a1ab03bec057f23da4756bbd91bd2d744cd7a64b336740fd2782bb4db5c3b7b496
 Size (ninja-1.10.2.tar.gz) = 213959 bytes
 SHA1 (patch-src_subprocess-posix.cc) = aff45ff1080c8556bc9a749666c532896bd73609

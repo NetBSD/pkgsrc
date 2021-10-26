@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:59 nia Exp $
 
-RMD160 (Algorithm-C3-0.11.tar.gz) = f0adb5d2fd6bae929e8ae7122cf8c76ab3477cd9
+BLAKE2s (Algorithm-C3-0.11.tar.gz) = 4a52d2a96a6b11858a77a4957b3179d0c0dd17d560cc179d063d27da8bbe2d4b
 SHA512 (Algorithm-C3-0.11.tar.gz) = ec2ae17090a826e013b7526e7f236e3cc9bc59488421aecb03ea876b6ed2e4b2ea4eb8e07aad57b5b645ca4a077f7064b98e790e9906496d26c1bcb36128acbe
 Size (Algorithm-C3-0.11.tar.gz) = 19226 bytes

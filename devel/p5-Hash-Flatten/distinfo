@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:43 nia Exp $
 
-RMD160 (Hash-Flatten-1.19.tar.gz) = 023ec2066c6bf355016fde99ffe667e5a71eed69
+BLAKE2s (Hash-Flatten-1.19.tar.gz) = 811514042e546216bde01812d280f8a36cbce884664f9ace41cebb26e514c45e
 SHA512 (Hash-Flatten-1.19.tar.gz) = 6a950c4e18b58a9eb1e8cbe51cc9ad7d80a01c8456cfc5c10d57c77bcf64f57f6d4a0d4291359185921b9635b31ac66e51ea990c2bcde3c657b24f4246d016b3
 Size (Hash-Flatten-1.19.tar.gz) = 15252 bytes

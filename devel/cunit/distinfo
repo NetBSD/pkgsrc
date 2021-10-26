@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:28 nia Exp $
 
-RMD160 (CUnit-2.1-0-src.tar.gz) = db3e8ea2294faae8301b597164f07fe482e877b5
+BLAKE2s (CUnit-2.1-0-src.tar.gz) = b4248bb0c04edb2de053a05d3a610719d5c9f86f8b211a65f927421786f75483
 SHA512 (CUnit-2.1-0-src.tar.gz) = 564c297293e3578384c11daef70bc45619188ff823107a2bbb6e56cfa702941b1c316cd9a4cb1116ecc5aefababd153febc39907296392b59e669d3251f85fbf
 Size (CUnit-2.1-0-src.tar.gz) = 628767 bytes
 SHA1 (patch-aa) = bf27a2c600a217e4d53fc59b2765f1b87f168100

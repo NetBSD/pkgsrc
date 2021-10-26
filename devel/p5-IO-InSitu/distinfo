@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:45 nia Exp $
 
-RMD160 (IO-InSitu-0.0.2.tar.gz) = ee4958edabe9a7be1683f49a8d78c5bd08dd3cc9
+BLAKE2s (IO-InSitu-0.0.2.tar.gz) = 862eb73c97160a1406dd226485de3d1d71ca1c4db50ec9c60f69f6f085181b3e
 SHA512 (IO-InSitu-0.0.2.tar.gz) = ddfbe6a8a2c9f9be7d8f45fe60fce5dc17d8ff5d4fc55f60bc767ea3ce8707103a12522353c9086e7caa787c66a37ca5be4db58ef6a60feecefdcfe8f3da149c
 Size (IO-InSitu-0.0.2.tar.gz) = 5824 bytes

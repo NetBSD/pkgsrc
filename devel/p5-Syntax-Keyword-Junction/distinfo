@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:32 nia Exp $
 
-RMD160 (Syntax-Keyword-Junction-0.003008.tar.gz) = dc08936392a71f48f5233991e8b92f6ed84abedc
+BLAKE2s (Syntax-Keyword-Junction-0.003008.tar.gz) = 015fe979f7c293aabe71c1db10513ff63a10010e4ad52d8518b3eb765b274bdd
 SHA512 (Syntax-Keyword-Junction-0.003008.tar.gz) = e09229bf28e4af240088de3836cd666273d2b6be18148c5e7955b6c0509e18392e39e28d4d6c6a52bc52cd19ce47a7ca5138187b9103562ca9fa0eeeaa33a98c
 Size (Syntax-Keyword-Junction-0.003008.tar.gz) = 17511 bytes

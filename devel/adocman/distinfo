@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:12 nia Exp $
 
-RMD160 (adocman-0.10.tar.gz) = d42a9ee53315cade23918f0c4ffdaca715845249
+BLAKE2s (adocman-0.10.tar.gz) = 38f0e2abb791c489194ba4041995206fbd1b9e43744aaac0d9717dad13d7508e
 SHA512 (adocman-0.10.tar.gz) = 48b44e0e82624059fea2cadac85cd2d9673d23e125ed828460d369ccccc85952f0e66c2ce1d00ef200795889f15ddafebe1cfe37851dbd9791b2b5d127de982e
 Size (adocman-0.10.tar.gz) = 38697 bytes

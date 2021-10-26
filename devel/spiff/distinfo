@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:57 nia Exp $
 
-RMD160 (spiff-1.0.tar.gz) = ff651435946dd8889b9a01a598f3933e3e50c614
+BLAKE2s (spiff-1.0.tar.gz) = 1eefbd7dacba51cf114bcb279e2efff622e3eb92fe899c1690fb7aedbbb1d13a
 SHA512 (spiff-1.0.tar.gz) = a93ff7a22644e67d548f31a3692d72242ead9a4b1ca69875b9cde748ea39a2c8d6a24eaac680fd02337290b87a10d0363111ef14ffca8eb02e36c83e0409b277
 Size (spiff-1.0.tar.gz) = 48291 bytes
 SHA1 (patch-aa) = 0a32ca2e2fd838cc21eca476111fe81a3f545181

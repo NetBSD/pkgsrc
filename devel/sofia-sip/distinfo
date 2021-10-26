@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:56 nia Exp $
 
-RMD160 (sofia-sip-1.12.11.tar.gz) = 0d398a03b8ca227c84d0909bb6f3d4fa1011cb08
+BLAKE2s (sofia-sip-1.12.11.tar.gz) = b55919cfbe3cf62c21477b1659b59261cdce42d3c8f6bdfcfdc0d131ddfe3027
 SHA512 (sofia-sip-1.12.11.tar.gz) = 48bef0223ecf5a31267773c8e2491c1990b4419be67154e350cc9e5644a98e55409d635d7828824de3e0e1658caebe5b61e44d613615beb709ecbe8180be131c
 Size (sofia-sip-1.12.11.tar.gz) = 2927808 bytes
 SHA1 (patch-scripts_lcov-report) = 0a2e5037e1431ea855e1f042fd57b0f07f51300b

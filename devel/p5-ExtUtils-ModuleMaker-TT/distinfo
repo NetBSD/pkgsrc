@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:33 nia Exp $
 
-RMD160 (ExtUtils-ModuleMaker-TT-0.94.tar.gz) = 6c1c4e39fabcf4631b1ec29915988266cb19e073
+BLAKE2s (ExtUtils-ModuleMaker-TT-0.94.tar.gz) = 8db5c7ffb5b0389667b09e48a68293287831a7cc974325f21b4451a8a15cc99f
 SHA512 (ExtUtils-ModuleMaker-TT-0.94.tar.gz) = 3e8ee62bd0bfb69058c506216fc04d02de315707050b485c8a1a6865fcd297b4f0249d236f9390082faf90291d9471f858d2252160d77e2612bef2fca2878f09
 Size (ExtUtils-ModuleMaker-TT-0.94.tar.gz) = 32506 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:33 nia Exp $
 
-RMD160 (Template-Plugin-Handy-0.003.tar.gz) = 6da51ce043f04137f0e2e229d7308443fb744b3d
+BLAKE2s (Template-Plugin-Handy-0.003.tar.gz) = cec9b503282b141c41e357b3c83c553e67fbcadaa57a52bf68ba5fe4b86d2c92
 SHA512 (Template-Plugin-Handy-0.003.tar.gz) = d485b003f772361b543efbaecfb19547673f8ad452f9c7848f1ec01decf28c808024a3764486a066a5ba482f5f0e57e0af4c05db13886b117580cd4a92c9921f
 Size (Template-Plugin-Handy-0.003.tar.gz) = 3172 bytes

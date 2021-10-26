@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:00 nia Exp $
 
-RMD160 (Quixote-2.9.1.tar.gz) = 7c5c78c194d84b125831f2fe43c4542117259a88
+BLAKE2s (Quixote-2.9.1.tar.gz) = 52b926dc08af876d457866bd530973db836d1583ba62485c7181d4c800d1737c
 SHA512 (Quixote-2.9.1.tar.gz) = b844b1777192c5d6ecdaba47bc07dfdf628cc644ec5dc48113f8f5cdebb8d3fafddce41635ffc255afa1f1f4f9bf5188046c9e8c664d81efbc1331dbb19db2c8
 Size (Quixote-2.9.1.tar.gz) = 211731 bytes

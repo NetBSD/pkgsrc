@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (cvsutils-0.2.6.tar.gz) = 2a0a7943277d257b72dbde255a7f3aa878ed8cf7
+BLAKE2s (cvsutils-0.2.6.tar.gz) = f0bc1f4d899b8c40604a27fc445c8d2a9030ff709d346fd6d9a456a49dcf716c
 SHA512 (cvsutils-0.2.6.tar.gz) = 0d982b719d80171338cfb6aa88534682ad965ce0e19ec00583fb34af609278b0d530c49bdd103a7c2d9e999c8396bb29c0676576ce951b96c661a1e764160020
 Size (cvsutils-0.2.6.tar.gz) = 81051 bytes
 SHA1 (patch-Makefile.in) = 2faf361dc6dcb6aba0755145e6511c7ff79fa604

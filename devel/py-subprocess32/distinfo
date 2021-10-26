@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:45 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:06 nia Exp $
 
-RMD160 (subprocess32-3.5.4.tar.gz) = 002e752df7a8ea273d8324c6682d392b8c91b07b
+BLAKE2s (subprocess32-3.5.4.tar.gz) = f3d1d1256c8086005ea3f924e152e7ab8d07e55438efcd5b7bf458b624212719
 SHA512 (subprocess32-3.5.4.tar.gz) = c811bdb5842d9f5ed9e51df4d13ba39045fbe98ca6e90a2c8138e68e44c2a55a2f0f3eb3e77e26caa3f88c360584912b001a0ca37ba68ac6c946c68c7a37d29a
 Size (subprocess32-3.5.4.tar.gz) = 97373 bytes
 SHA1 (patch-configure) = 12427ea60b3ddc8c5d9e6dac905ddc6a14cb8d61

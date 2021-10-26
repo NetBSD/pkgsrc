@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:40:58 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:04 nia Exp $
 
-RMD160 (B-Hooks-OP-Check-0.22.tar.gz) = d18990ad83efcd2c8212422547a78bc2a01bafcd
+BLAKE2s (B-Hooks-OP-Check-0.22.tar.gz) = 6074ebb4c731b72bff67eee362984d1f1d81e20c0e2ea1aa80a30aafca225578
 SHA512 (B-Hooks-OP-Check-0.22.tar.gz) = e68b08a34244afc73d7d3b2b0acdf8fe791b0b1f087b6b0496da0a1e655a9e51552ec8fb0f743c8626a0414fb469a2133d113ff5b4ba9f96217cc87bef877542
 Size (B-Hooks-OP-Check-0.22.tar.gz) = 76535 bytes

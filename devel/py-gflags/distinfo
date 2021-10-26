@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:30 nia Exp $
 
-RMD160 (python-gflags-3.1.2.tar.gz) = c5aea23fffa376624e9d15cbe35807e1323ad27d
+BLAKE2s (python-gflags-3.1.2.tar.gz) = a56d7a7ab966d80de16fcd43691072cd09392c782f095c64354ab3faaaed6b20
 SHA512 (python-gflags-3.1.2.tar.gz) = 7a3c08b6b212cdb9cb7feaa48e3875d1204a4b3a57182508a078331565f70509d00c315400fa0316dbf61ed4d6a6a04ca8c1a2303567d37650d8dfbb329e2f6c
 Size (python-gflags-3.1.2.tar.gz) = 52093 bytes

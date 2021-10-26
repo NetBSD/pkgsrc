@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:02 nia Exp $
 
-RMD160 (motemen-App-Prove-Plugin-ProgressBar-Each-gf5f4dbf.tar.gz) = 9f2996eeb41ef33c4d9c18e68bfb5b259735006a
+BLAKE2s (motemen-App-Prove-Plugin-ProgressBar-Each-gf5f4dbf.tar.gz) = bbe2156ea294fe1fcbbd8cfee07468802fc16a83f0d239d2f4dfefcb4df08ff7
 SHA512 (motemen-App-Prove-Plugin-ProgressBar-Each-gf5f4dbf.tar.gz) = c5d6717aea4c42693e83457d842c71da63a4d703f76041fc2527876aa3939fd7a6d30affa59b703ff5edb6354c85d011590c209c349214d6441bac2699ed88ca
 Size (motemen-App-Prove-Plugin-ProgressBar-Each-gf5f4dbf.tar.gz) = 3020 bytes
 SHA1 (patch-Makefile.PL) = a575a325df0ad347e9922a2ab1cbc24a9055849f

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:41:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:16:57 nia Exp $
 
-RMD160 (Module-FromPerlVer-0.030000.tar.gz) = 9f524c269ee856a448b798764fe65d100959bf4b
+BLAKE2s (Module-FromPerlVer-0.030000.tar.gz) = 8c399f0b3f5bd9570c9ff8390b7ec97fc59d001b287f079d9924d271cc64d3d8
 SHA512 (Module-FromPerlVer-0.030000.tar.gz) = b63d738ab4c451ff3f64c44ca5e4ad4f4b743e6ab2681bf7580a114ff0bcb84825da1f4e43081de765427a48bef85529a73a3e666944d57d8537c17ec941239c
 Size (Module-FromPerlVer-0.030000.tar.gz) = 24104 bytes

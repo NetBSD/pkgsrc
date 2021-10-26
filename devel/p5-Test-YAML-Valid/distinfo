@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:49 nia Exp $
 
-RMD160 (Test-YAML-Valid-0.04.tar.gz) = 4bc624c53c8079f01142f2f51ee821279cc906ed
+BLAKE2s (Test-YAML-Valid-0.04.tar.gz) = aae087795bc274db98e0ebe9020639d46a6fe30beb363254aa3cde0a8147adb9
 SHA512 (Test-YAML-Valid-0.04.tar.gz) = 5e1ab689759fed4e907b23bb004989812b9f4602de187af8bb9d911aa2f0c2195c036a36348bba42e91a7d61e8c5000e5d396874aa32e9f9115ace24c9af8816
 Size (Test-YAML-Valid-0.04.tar.gz) = 25970 bytes
 SHA1 (patch-Makefile.PL) = 1cd15e772e73d08bd01d08c709fa78bd52c0ace8

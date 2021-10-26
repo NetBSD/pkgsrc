@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:35 nia Exp $
 
-RMD160 (loadkit-1.1.0.tar.gz) = 37c15361766e3a62f3a5e2e21612216309ef1943
+BLAKE2s (loadkit-1.1.0.tar.gz) = c0e332e3ce52d465cac4247fb92b0d73b72250dcb38a851b3408c2b751518960
 SHA512 (loadkit-1.1.0.tar.gz) = 1d4405d8c2819f4293117df06b1587d190b9925fe77e4d055400b4610813b771b8d7f7fef78e5884ebd494b78fc51c94eb5b5b677b6ec532309b9b489e738457
 Size (loadkit-1.1.0.tar.gz) = 5844 bytes

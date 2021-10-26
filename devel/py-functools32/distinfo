@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:29 nia Exp $
 
-RMD160 (functools32-3.2.3-2.tar.gz) = f96924aa207ac835157f734a785216f57cdb123a
+BLAKE2s (functools32-3.2.3-2.tar.gz) = 8dbfc1f8d9bd6f81c5db4d9a0963065de522d6ae4b1e05c916e22925830f1668
 SHA512 (functools32-3.2.3-2.tar.gz) = ad944019f4aefde292b6872bfe06862d01920a2f44adf8740c36ed51d16d879be7638591aaddf9dac4ec83b6f05bbf81972d5f32854abedcce3dde080459f7f7
 Size (functools32-3.2.3-2.tar.gz) = 31171 bytes

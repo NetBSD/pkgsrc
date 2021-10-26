@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:42:20 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:17:32 nia Exp $
 
-RMD160 (Sub-Uplevel-0.2800.tar.gz) = b29983650e211c6b7c8e57a38c97d905cfb10302
+BLAKE2s (Sub-Uplevel-0.2800.tar.gz) = 9de1ba913817496610a8e28f3517033c7032f1398039f622452d4c8df25de8e9
 SHA512 (Sub-Uplevel-0.2800.tar.gz) = 655bab9441bc81e4002db2e715b5c1f771ee35a03bc643a44d4a279aca55431fe17e64332919311a51db2dc02c16b5f97c5751595e61ad0ab96cd0a10ac2d230
 Size (Sub-Uplevel-0.2800.tar.gz) = 28361 bytes

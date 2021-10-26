@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:28 nia Exp $
 
-RMD160 (Devel-OverrideGlobalRequire-0.001.tar.gz) = cd91e85b02eeb4dd0c2f388aa3632c13f370bb24
+BLAKE2s (Devel-OverrideGlobalRequire-0.001.tar.gz) = f872c2cf447fcc46e1211d9f1ea92197e8dfd238329039ce0fedab55fc0f6a2c
 SHA512 (Devel-OverrideGlobalRequire-0.001.tar.gz) = 33df90e5aa798d899acd73db72651be015c53cc2eaa041bb45d531a7023c32adb886ef63b2f064765a42a47b44eb0cfb80bf39f6c61cf78fa66de1581c41383e
 Size (Devel-OverrideGlobalRequire-0.001.tar.gz) = 14352 bytes

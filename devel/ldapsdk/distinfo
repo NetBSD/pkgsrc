@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:40:07 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:15:13 nia Exp $
 
-RMD160 (ldapsdk_12311998.tar.gz) = d0ede32efd1e33874d5fc74c97d9d4a053709543
+BLAKE2s (ldapsdk_12311998.tar.gz) = eb99121e1a286a42be4f46cc1d818aebc38156e5b9be0caad45773ec979291cb
 SHA512 (ldapsdk_12311998.tar.gz) = 0e6a1fc33d4d70bba2a376336a0cf93fe7aa1e2147256ba6bc5de323c62139824ac0df66b2ebef6edcda457ba6437ca251112370c9e154bc09960c40429416b4
 Size (ldapsdk_12311998.tar.gz) = 1375703 bytes
 SHA1 (patch-aa) = 19be7abc39dabd593766a0f0f8131f394afd0a67

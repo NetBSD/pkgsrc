@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:18:11 nia Exp $
 
-RMD160 (async_generator-1.10.tar.gz) = fe289d7cfe8e1a343a678f4c6a649881bf3369f0
+BLAKE2s (async_generator-1.10.tar.gz) = 1d035affb44783aceb0de0bb45f2bf5df09fc4dbffcfa603d96ae51063e96c57
 SHA512 (async_generator-1.10.tar.gz) = 3874b4e474cc7febec981f704672e233512a999e00e1672e46fe3a18e45168373fabc83142926763b7c6fcaf16948e031702d5854694aab4b5cae96b9b1ef819
 Size (async_generator-1.10.tar.gz) = 29870 bytes

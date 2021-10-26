@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:15 nia Exp $
 
-RMD160 (appstream-glib-0.7.18.tar.gz) = f8fc16e7e173b5aa000d48bdbf3c7665b7fb0281
+BLAKE2s (appstream-glib-0.7.18.tar.gz) = 6f39e52160cda396941edc629dbcededb508444979ef408aeed05832dd9f8c71
 SHA512 (appstream-glib-0.7.18.tar.gz) = 659bb7a022faff728ad1f94308e9dc63266fe9d1430d9b05be3c34843a7d00169ae69e76582537e14edaf7f5233989c6c055a5fb5ac4692674f6763be1510b9d
 Size (appstream-glib-0.7.18.tar.gz) = 2580687 bytes

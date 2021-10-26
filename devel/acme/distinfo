@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:12 nia Exp $
 
-RMD160 (acme091src.tar.gz) = df26bbdeca2bc38b284b6cf967ef13431029a7f9
+BLAKE2s (acme091src.tar.gz) = 831ab2973b98e40c840aa4fec95f1bc4fcf71c802604e35d4719e9aa6ef5e5bd
 SHA512 (acme091src.tar.gz) = fe68ad1e8a77a520490484624e38d8eb251109efdba22cf8c8bc7d50ffa52e38d37a25726d7cfa3d7f49b278bc2cc6c004408522d67187453de55842e92c7534
 Size (acme091src.tar.gz) = 131953 bytes
-RMD160 (ACME_Lib2.zip) = bf3c4d84ece0897a79bac0799027774cab0a0819
+BLAKE2s (ACME_Lib2.zip) = bfab6b820ca353f72234f05613c08804a408e32f9556aeda508d65089a6b60f4
 SHA512 (ACME_Lib2.zip) = e61fa0777008e7424fa0b6b9b46de996ea27e85bc6f0120d4b743777ffae448fe81cf7489a5c1db88e72e0e2e701ecb7d33cccfe159864b09afec7e68c44b383
 Size (ACME_Lib2.zip) = 18197 bytes
 SHA1 (patch-aa) = bd08ee3c226d758080aa2c9f4094c668ab5c9105

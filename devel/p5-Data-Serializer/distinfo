@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:41:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:16:22 nia Exp $
 
-RMD160 (Data-Serializer-0.65.tar.gz) = aeba77f2d3a33d359faab94bfee590c6d62fa3c1
+BLAKE2s (Data-Serializer-0.65.tar.gz) = d0dcf323de348b600b8ea9ba11fcfaeb6c05724bbc1668f4162655a55f02d44e
 SHA512 (Data-Serializer-0.65.tar.gz) = cc6cd25779f08598bebac38301b3bac667098f8582be8b4cd63cac7723ebc9d58e081b205e9326fd762eba5e378160545c718d50a8a1ead945be6da188c4de0d
 Size (Data-Serializer-0.65.tar.gz) = 43582 bytes

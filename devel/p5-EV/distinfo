@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 13:41:14 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:16:30 nia Exp $
 
-RMD160 (EV-4.33.tar.gz) = d8bdf0177b3725588421e354f3bf4eed0d4b2c9a
+BLAKE2s (EV-4.33.tar.gz) = 5b8300879728297966eaa388da51855d1b763c3543b0710d41a5b6defc642bf4
 SHA512 (EV-4.33.tar.gz) = dd90739888ffd793652fc6590cbfd6f3df1ea25b1a6e478dc903ef10f49f9c729e87005b94f47786ca7603cf27b02e1d5d8a2941037bef25ba5a83fe608e89c5
 Size (EV-4.33.tar.gz) = 218067 bytes
 SHA1 (patch-libev_ev.h) = 4a64abdc7d4d936623ad7a6a68195bf65218e1ed

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:32 nia Exp $
 
-RMD160 (forwardable-extended-2.6.0.gem) = 2ae98ac2faeaad70ce7c92eff3acb3f2130b3878
+BLAKE2s (forwardable-extended-2.6.0.gem) = fb8fb69e9661020c3e89fb3d22cd1b31c91668b4287af19bd788e300bf161749
 SHA512 (forwardable-extended-2.6.0.gem) = e78eed0d6e06c0db4c692718425aa92bb0d87060fb3cc3207c24d9105437caa2d3c421867077567e87cd462e8d6c2f255b82e14e2249b224e5eca2c2240355b7
 Size (forwardable-extended-2.6.0.gem) = 6656 bytes

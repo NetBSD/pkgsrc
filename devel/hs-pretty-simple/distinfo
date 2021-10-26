@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:59 nia Exp $
 
-RMD160 (pretty-simple-4.0.0.0.tar.gz) = 0f23e6699b331d5946ab6f54e108258cc5789c03
+BLAKE2s (pretty-simple-4.0.0.0.tar.gz) = bcc8bc0f690584086ec65c261f4e7717447bc937ac5a22a91501898f625a6a9e
 SHA512 (pretty-simple-4.0.0.0.tar.gz) = b30ad63fac3545e6f6b2d67b323e4d43ef29ea2a51e2ac3433e8d0ffa6776e90ac2bbe3ab790c500244c77a54a93cc5a2a6b6e87a2524f8777c74529f7681f78
 Size (pretty-simple-4.0.0.0.tar.gz) = 39887 bytes

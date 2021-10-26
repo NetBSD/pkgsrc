@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:43:13 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:18:30 nia Exp $
 
-RMD160 (GitPython-3.1.18.tar.gz) = baa23f81fbb54cbc48f40880199cb4d2a3faa711
+BLAKE2s (GitPython-3.1.18.tar.gz) = ba554d963b85d1462c3e1b8e070b56ca9d3640894828a9d3f731634f2921093d
 SHA512 (GitPython-3.1.18.tar.gz) = 981b3f4eec71c4e1de6efa2381c3c411aedfc51918f9f58f397926d21dabdfabb54d498ae44a5b6ceca59adf99e866df8d04f97a86df942e81408a5a0e751a15
 Size (GitPython-3.1.18.tar.gz) = 181199 bytes

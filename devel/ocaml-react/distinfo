@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:49 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:55 nia Exp $
 
-RMD160 (react-1.2.1.tbz) = 5fcfab9a8bf2cae19422ccd9ccf40882fcc5efa8
+BLAKE2s (react-1.2.1.tbz) = b6a03cd72151bc52382ccc8da0dfd2fb808abe989a4673297820494345b1594a
 SHA512 (react-1.2.1.tbz) = 60f8788cc820e2be5303caedc80a377c8e5deab170d0eb9df71ff99d6fc57f31357824522f973c6e0d6b3979b58272e7f90b829474a494b94565279c53e8fbb1
 Size (react-1.2.1.tbz) = 39184 bytes

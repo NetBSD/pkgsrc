@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:44 nia Exp $
 
-RMD160 (pathlib2-2.3.6.tar.gz) = 0c0ce8afe01f9d38e8f34bbf0e13bd57c6cf8a64
+BLAKE2s (pathlib2-2.3.6.tar.gz) = fdb23c037f7df5069b1c1acf6a0373d4142a8eae2b96428f096b900f2c3fd005
 SHA512 (pathlib2-2.3.6.tar.gz) = ed41792338d5808cdd068f6c04021b2918e5376fc6297f163712dec6b00a1f96f7905eeea0a601c333d253e0f1663a0472d842b0d920d680992045bbc36db970
 Size (pathlib2-2.3.6.tar.gz) = 38435 bytes

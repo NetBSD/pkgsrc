@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:03 nia Exp $
 
-RMD160 (picprg2.3d.tar.gz) = b88072bbd9a319078c3f0d3a78d2f3e687bdead5
+BLAKE2s (picprg2.3d.tar.gz) = 3f9a3f359ba6a8696519b06c8fdbcad322d79c998c4fd1b3f6a2797b461ce147
 SHA512 (picprg2.3d.tar.gz) = 633dd37ac71a718545a1fc27db03dcae6a4ee98597b8eb5e483b4aa1e00030b9b4de24f29f5969f112ebc9ce9e479a1b60727155d9274100fe54609c6eda836e
 Size (picprg2.3d.tar.gz) = 24549 bytes
 SHA1 (patch-aa) = f424612828ea9176c3504c47b6b2cbe65661003e

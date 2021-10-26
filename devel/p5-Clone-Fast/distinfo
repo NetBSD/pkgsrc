@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:15 nia Exp $
 
-RMD160 (Clone-Fast-0.96.tar.gz) = e4ca29b7a0b683b2453c9383dfa41ded5c1c7887
+BLAKE2s (Clone-Fast-0.96.tar.gz) = 7e56872f0f036c650ca900ea7326e6cdf6a349c93485b2c45d2b0330e259220e
 SHA512 (Clone-Fast-0.96.tar.gz) = 7a8137bcd39fbbfa424f7a922c5cfdbbee035074cd7575f62f37ec2d6c5da9828111098da8b40d5eeec0df780a69dc8ddef3f22e29695202252990686abee86f
 Size (Clone-Fast-0.96.tar.gz) = 51133 bytes
 SHA1 (patch-aa) = 2c612d75bda27efb8bc5c541c3a87a0cefc6fe49
