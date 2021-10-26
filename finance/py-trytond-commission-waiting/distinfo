@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:09 nia Exp $
 
-RMD160 (tryton-4.2/trytond_commission_waiting-4.2.0.tar.gz) = c80e0e9835a57ad37e01e4a34de6b47c99ef1204
+BLAKE2s (tryton-4.2/trytond_commission_waiting-4.2.0.tar.gz) = c5de7dc2c5dfdd7b9e0a40eb97303fedb7922f54d8dfbdf56a29be395bf4e50e
 SHA512 (tryton-4.2/trytond_commission_waiting-4.2.0.tar.gz) = cafb4b3638a64b9a4fe7e6a93cd389b318f43948302658d27fa06f51728661ec04a8f246e273b7437ab33be9cfa0fc562743e346471f9d63a9cd1b5c8125e7a8
 Size (tryton-4.2/trytond_commission_waiting-4.2.0.tar.gz) = 21657 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:07 nia Exp $
 
-RMD160 (tryton-4.2/trytond_account_invoice_line_standalone-4.2.0.tar.gz) = 99bcdcd43df9c152b61100731367f4336a5b75b0
+BLAKE2s (tryton-4.2/trytond_account_invoice_line_standalone-4.2.0.tar.gz) = f251396a0c3d3b90318f443b32f80c47cd78bbdf1d7d4274899ec388f56432f0
 SHA512 (tryton-4.2/trytond_account_invoice_line_standalone-4.2.0.tar.gz) = fb6941bd4010037fa705da061f54194c5723fffa6417512fdf40aa99e7095c0a6495ad72afda098b0dc207c18421bfdb9eeaa24c69325ca9a9f2f8a3cb20ce41
 Size (tryton-4.2/trytond_account_invoice_line_standalone-4.2.0.tar.gz) = 20028 bytes

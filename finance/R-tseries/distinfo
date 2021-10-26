@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:53:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:26:00 nia Exp $
 
-RMD160 (R/tseries_0.10-47.tar.gz) = 0f510703c41ba0ee7f2fbc418b7ec7b7cdbe1520
+BLAKE2s (R/tseries_0.10-47.tar.gz) = a477202d61fed9cc5ef2cc1338d7f3887205893eb083b36dcf70d0265edef510
 SHA512 (R/tseries_0.10-47.tar.gz) = 18ad8ca8f49ad8accca4e1b58b3f08cdb22921c90c4b94644a8276449fe7580949fd87b0f2087038d09a2d22623eca3edafc65fa1ff9b82fc640bc931c5effd6
 Size (R/tseries_0.10-47.tar.gz) = 164796 bytes

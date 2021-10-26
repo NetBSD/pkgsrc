@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:54:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:26:12 nia Exp $
 
-RMD160 (vatnumber-1.2.tar.gz) = a6128ccffe3516736d955b1e020455d5a81c1ffd
+BLAKE2s (vatnumber-1.2.tar.gz) = 5f9e11482622491075cc372d4830b83a09922fa2801e46feabc662f1858f48ec
 SHA512 (vatnumber-1.2.tar.gz) = 708b73f8d059638c165663f8b36dd8602c0aa857be456e50690dd61c09b9a8a2e560bf2a3ed89a790670c93f5b84c5a391cef748bebf0fa978a6fe5e319a541f
 Size (vatnumber-1.2.tar.gz) = 19074 bytes
