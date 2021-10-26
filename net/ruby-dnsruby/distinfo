@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:42:41 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:06:50 nia Exp $
 
-RMD160 (dnsruby-1.61.7.gem) = cfab884fc9cd5399ea1f3817a34e4ad4d19b5f69
+BLAKE2s (dnsruby-1.61.7.gem) = 34512b0d49a3818e2780dcd987926cf6dd979f9a85a323cd87043554ef962875
 SHA512 (dnsruby-1.61.7.gem) = 454378b7eca03483533ca1c1e01a86361c20ce88971ecc6adc72e11bb9ef03709ea1332d2549eefc1c41ed13d5a752b1a7f76e2117ffc9076776663ab6e02d1f
 Size (dnsruby-1.61.7.gem) = 261632 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:34 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:43 nia Exp $
 
-RMD160 (pysmb-1.2.7.zip) = 7d0e98af798bc5cbc1443de0eb00b0a61d06649b
+BLAKE2s (pysmb-1.2.7.zip) = d1ba9b0859694f339fedfeed4456c77d406ec308d32e8aa574e752a3ab35e000
 SHA512 (pysmb-1.2.7.zip) = bfcb2d0c95e316100dfd4c4143ff72e88e644cfa138f488be60310a724f7b4344c0c5c250c259a53fb4e5759f253ad3b353fbff5b2699804d1ece0ed28d189ef
 Size (pysmb-1.2.7.zip) = 1270592 bytes

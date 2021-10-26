@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:38 nia Exp $
 
-RMD160 (get-flash-videos-0.0.20150331-eae1ac23fcc4a31ead78bfdd99c6faae3bde4ab3.tar.gz) = 6e58678f3a861294faea366571706fae99964026
+BLAKE2s (get-flash-videos-0.0.20150331-eae1ac23fcc4a31ead78bfdd99c6faae3bde4ab3.tar.gz) = 32701c0d2594e8e4d10d8ff33ace89b82b8278237b0e99500c442a2ee13bc3f2
 SHA512 (get-flash-videos-0.0.20150331-eae1ac23fcc4a31ead78bfdd99c6faae3bde4ab3.tar.gz) = ff728d6a58c8dec24782dbf4e8605fb572dfaa837887f01b04266d7c40f121886c9ae9e4d93b9be7c36d13e3e1d1121d975d686e3641915b1d0b7876f8b35e5f
 Size (get-flash-videos-0.0.20150331-eae1ac23fcc4a31ead78bfdd99c6faae3bde4ab3.tar.gz) = 132516 bytes

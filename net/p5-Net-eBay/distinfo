@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:24 nia Exp $
 
-RMD160 (Net-eBay-0.61.tar.gz) = 1082b731c787920bcd45f622cefcbf120be25742
+BLAKE2s (Net-eBay-0.61.tar.gz) = 3e8821f25abf2fd19a8ed3889b6793668f3272f34e75e7e7c92d591b6ac4a1f7
 SHA512 (Net-eBay-0.61.tar.gz) = dafd2ef698bd30e4d24cdb8c10647be800c316f919ae9c7c240a4bb40d76fc798519dd10d9a1344371481b5d49a122ed71d3bdec7f5f6cc00cc36d420fd41f6f
 Size (Net-eBay-0.61.tar.gz) = 24969 bytes

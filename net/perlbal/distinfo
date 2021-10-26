@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:29 nia Exp $
 
-RMD160 (Perlbal-1.80.tar.gz) = 3450b13b369432c87c419352498ffdcbecca692b
+BLAKE2s (Perlbal-1.80.tar.gz) = 1dafb61f167cf55759bc394c6c77c346786988c19121bbdbdc8b7e1bb17820cd
 SHA512 (Perlbal-1.80.tar.gz) = 22d9fc9c92a85dce662a3d042fa6a3aa0fc942d935d95b87094a38961a2e72396cbc45eada80112eabb019a89b845b73a8e1d7720f3799bdbbe185e1404442e7
 Size (Perlbal-1.80.tar.gz) = 212701 bytes

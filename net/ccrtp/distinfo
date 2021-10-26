@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:41:17 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:05:27 nia Exp $
 
-RMD160 (ccrtp-2.1.2.tar.gz) = b3b2cb2f6822e08422b19fcd1528f976ca10ad66
+BLAKE2s (ccrtp-2.1.2.tar.gz) = 65090331988362953eaf2de85837dc16f4d1b83f4e74e1a505cc4d22f68e3bf3
 SHA512 (ccrtp-2.1.2.tar.gz) = a835f57a0eef7cba11c55c93ce2f11ebd8ab4099e7c723043c51e4872f3da87af946fc50fac18b47ea5d72b2a1227b377810e9134c1f3a8982d4ce5944d043e9
 Size (ccrtp-2.1.2.tar.gz) = 764869 bytes
 SHA1 (patch-doc_CMakeLists.txt) = e9cfcfc618dc6bc16da5d3bff61774c57febaff6

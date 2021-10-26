@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:48 nia Exp $
 
-RMD160 (restclient-ui-fat-3.7.1.jar) = f2b9cf31e3aa8a131ce4c5bb9416bba76ed4e07b
+BLAKE2s (restclient-ui-fat-3.7.1.jar) = 6f70729e55c33e811c0a2e91b7aa7cbba79280d875242e7797702d00a38dff6e
 SHA512 (restclient-ui-fat-3.7.1.jar) = c3f90594a192afdbdf1520a1f98ca5c77a3874a26c86f7f6da490bbafd176c930e6148ee0f4eba94758c777f7a35aff5dc17532443f6290c608996d37c93e49e
 Size (restclient-ui-fat-3.7.1.jar) = 19332082 bytes

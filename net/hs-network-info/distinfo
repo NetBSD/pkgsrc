@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:37 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:05:46 nia Exp $
 
-RMD160 (network-info-0.2.0.10.tar.gz) = 8f27eb6c92ef8a61a97dfee71df84367372ff669
+BLAKE2s (network-info-0.2.0.10.tar.gz) = 7d0a2b4468a8abde748651c12b8b4450a7cd693ed11cb27c51de168996f85e95
 SHA512 (network-info-0.2.0.10.tar.gz) = d578f64860fb3c04d11a444d9636bde57402b6728529e73c7741b056ef0d8f68cb0958118212f2d47826dc28ba9b2bfcc9aef8b5b2e9fc3da8eaadc796160895
 Size (network-info-0.2.0.10.tar.gz) = 6278 bytes
 SHA1 (patch-cbits_network-unix.c) = 78769aa78e4e61b3dd9488e5c0d2337d1f69a946

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:25 nia Exp $
 
-RMD160 (RadiusPerl-0.22.tar.gz) = af48df93ace97e30b3430b450c9c504de9ec94ed
+BLAKE2s (RadiusPerl-0.22.tar.gz) = ac34573b6d643cb4080f81a747bc7dec3269e57c7bc0ee49ca00b2eb944ce611
 SHA512 (RadiusPerl-0.22.tar.gz) = d5c7327fa3d4b6f74405e905f01be23479be542073d035c3babc34b63577069f6069e44dda9709b69b5dc25552170a764eb02ab6d2b6c2f7b366da566ae8e967
 Size (RadiusPerl-0.22.tar.gz) = 40980 bytes

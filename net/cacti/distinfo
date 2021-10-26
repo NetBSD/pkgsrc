@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:41:16 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:05:26 nia Exp $
 
-RMD160 (cacti-1.2.11.tar.gz) = ed0aab796d58a1781d7c5fe6195b61ef63d065fe
+BLAKE2s (cacti-1.2.11.tar.gz) = e116eee221954f1065aee42bf85ec8b1c40e0d89a7760043930f0c8489468807
 SHA512 (cacti-1.2.11.tar.gz) = ab8a856fde55f405314fe0ec1eccccfb78105181fc081dcc04091963b08777550182867b45daea4f630f19dbb538ad7ca5c62f2dac9cd867524dfef113e2a220
 Size (cacti-1.2.11.tar.gz) = 25099698 bytes
 SHA1 (patch-cacti.sql) = 7bdfe92fc5254762ec4f75019ca380754f5867d5

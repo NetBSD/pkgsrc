@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:56 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:05 nia Exp $
 
-RMD160 (repackaged-nasd-1.3.tar.gz) = a9aaee4722af1e7f1eefe9402c840308a4f95774
+BLAKE2s (repackaged-nasd-1.3.tar.gz) = cd51e00b2d4bf37675d9669c59b24bad18f91d1e9dc15ad38c3581d17a2e0768
 SHA512 (repackaged-nasd-1.3.tar.gz) = fbb2d603524cb51e67773c64f00625bfde0d3fd6374e3fb1eeecfa82f55435d5a3d460539fb1020f881afe4232dbe31da5db17422cd78380974d8f9cee48d88c
 Size (repackaged-nasd-1.3.tar.gz) = 1441892 bytes
 SHA1 (patch-aa) = 7da68bff24a20dcfbf0c52794705e0195a7ceb15

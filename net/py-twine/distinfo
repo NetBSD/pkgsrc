@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:45 nia Exp $
 
-RMD160 (twine-1.13.0.tar.gz) = 7285468d0850144a8d575a40b75a5b53e2f1871c
+BLAKE2s (twine-1.13.0.tar.gz) = 76742625d012c69bda588f2f384c0df59885a5dcdc89e3444ac66700028e0709
 SHA512 (twine-1.13.0.tar.gz) = d4ecacfcce995d037c63bb5827132de294289631ac84f20ebaee91fb91b487f79f18db0646c0bfe8743b596004b8241125733a7fa7719978217162dfcc8c3394
 Size (twine-1.13.0.tar.gz) = 68643 bytes

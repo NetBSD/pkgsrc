@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:26 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:35 nia Exp $
 
-RMD160 (celery-5.1.2.tar.gz) = c4ca57558a632ddf116f62b0d8e4669fccbdad18
+BLAKE2s (celery-5.1.2.tar.gz) = 76e9de1de9188c50b411bda429ddc0296220b4d67c74fd12a6b96a2d0b7bfa68
 SHA512 (celery-5.1.2.tar.gz) = c8f8d8dd4cc23a62ed3eea9b5388865993aee940730d4c672ae24c1b017466b0de6f422c7cb3b1bb2a4e33459a0d2447f9a42e59ee949fda56f3032298402a71
 Size (celery-5.1.2.tar.gz) = 1457540 bytes

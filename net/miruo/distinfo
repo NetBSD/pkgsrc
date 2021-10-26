@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:00 nia Exp $
 
-RMD160 (miruo-0.9.6b.tar.gz) = eaddd70a1427328d964cd2dd49d6ce9e6e285759
+BLAKE2s (miruo-0.9.6b.tar.gz) = e95e1f29e62117c66106fd2a5d998aff9933a9d6729195297c680224f6f213cc
 SHA512 (miruo-0.9.6b.tar.gz) = 01582979e70a54c9e774d9bd088efb39312ed1215a8ff76a1ea0c1e2685abae6a74c22f8a0426dbc975470d60722deab29bb1949691cdd036de4788db7c87ede
 Size (miruo-0.9.6b.tar.gz) = 119045 bytes

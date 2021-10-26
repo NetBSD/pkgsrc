@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:41:20 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:05:30 nia Exp $
 
-RMD160 (dctc-0.85.9.tar.gz) = dde07b6802e5a421a86fcb83480cdc720b2985b6
+BLAKE2s (dctc-0.85.9.tar.gz) = 6f75578ca68d3d3e7af3210a5a865e080ed103386ad2fb52b60705e10dc29253
 SHA512 (dctc-0.85.9.tar.gz) = 1138acc118728be534c9f73095908eb49accbfd1dba511b00cd7c7fec63342fec5b5781bc339c6c831468fe577257adad13dad729eaef16c2625510855bddde6
 Size (dctc-0.85.9.tar.gz) = 506477 bytes
 SHA1 (patch-aa) = de989aee03c726e78f2fdf10edf3708d6aca75f5

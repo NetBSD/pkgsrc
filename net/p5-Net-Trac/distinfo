@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:23 nia Exp $
 
-RMD160 (Net-Trac-0.16.tar.gz) = b331157f608332a057bbdbf31d90a6f4a04d48dc
+BLAKE2s (Net-Trac-0.16.tar.gz) = a508d19d041012f668626d1b5eaf82d36b96cdc101983bb13d11faec7593890a
 SHA512 (Net-Trac-0.16.tar.gz) = 22409d5cb84acfd2b66c717f1390b7625928194450b46c8e0c0725cc39fb3536fdbb604ae8326c7991f21b7d4bc4b98a2e9d86a592600080c6443cf63299c2e8
 Size (Net-Trac-0.16.tar.gz) = 44345 bytes

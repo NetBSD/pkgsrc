@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:41:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:05:47 nia Exp $
 
-RMD160 (inadyn-2.5.tar.gz) = cb590b7cfa6f625846adfd157b365060661e9175
+BLAKE2s (inadyn-2.5.tar.gz) = 0d285b7599cfec261167348994e520a7eb01779ccad0a50a7f0066c96313083e
 SHA512 (inadyn-2.5.tar.gz) = 885d05fdf70067a0e34899026300185a47f94e49ffe0cbbb7d07b17c80bd4cb2d2a9b35af4466b0dcc7949c59224d424f95e5afb9d31310db4ddacb90ca2475a
 Size (inadyn-2.5.tar.gz) = 456400 bytes
 SHA1 (patch-plugins_freedns.c) = d7a2f7382af41108a94fb352ce50214602b29c62

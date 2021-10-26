@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:41:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:00 nia Exp $
 
-RMD160 (miniupnpc-2.2.2.tar.gz) = 8818a5a5c607618cceaa11780287c25f4e2101fa
+BLAKE2s (miniupnpc-2.2.2.tar.gz) = 2273f740fb05bfeeb9803c3cbc84b281bd063e6a5d234047eb003a4862cc20a1
 SHA512 (miniupnpc-2.2.2.tar.gz) = d322ae2a99faf01bee52f50a40d4bc2150c67a2f7e15b6078fe92faf2aecfe7ce10bd98cef3d94a77f6f7d1f7d8451cf4cdbf6fe11c9e7c1854ee066300b0116
 Size (miniupnpc-2.2.2.tar.gz) = 100008 bytes
 SHA1 (patch-Makefile) = ff725105ef51547e586f705d47cdc4eb2cf52e51

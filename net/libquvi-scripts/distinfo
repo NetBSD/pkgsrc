@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:41:46 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:05:56 nia Exp $
 
-RMD160 (libquvi-scripts-0.4.21.tar.xz) = a8d1356a224b1bedf65ab98a547c5dc56a371ae8
+BLAKE2s (libquvi-scripts-0.4.21.tar.xz) = 80d3ec874c7ea0b6209d728079c42e0ab02dd6abfbd7070850a63e6301cd4d54
 SHA512 (libquvi-scripts-0.4.21.tar.xz) = 83a8ba10f688ceb57f37cae871dd71c0173b64f20dda4852b90a413665182aedf88e84ccd57a0f9ffee691760323e38c371aba5787fba17201847d4247c3616e
 Size (libquvi-scripts-0.4.21.tar.xz) = 121072 bytes

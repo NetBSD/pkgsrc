@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:32 nia Exp $
 
-RMD160 (geoip-api-python-1.3.2.tar.gz) = 622df285ec8d7270a5fe2f57774f5a387e944818
+BLAKE2s (geoip-api-python-1.3.2.tar.gz) = 8a3ca5f88f09147fdeeca72f58d64beff12fb94d3b9e9273ed4e3799662f3678
 SHA512 (geoip-api-python-1.3.2.tar.gz) = 284209a6894d55ef95844c5c4c7aafff99ebcb13996e5ff64a0c31b38677e13c11d51fd8b0250d0fa097f15805c27b572d5aa12c2b217a839afe3cdd0851c414
 Size (geoip-api-python-1.3.2.tar.gz) = 35674 bytes

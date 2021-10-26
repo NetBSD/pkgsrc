@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:41:41 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:05:51 nia Exp $
 
-RMD160 (knot-3.1.0.tar.xz) = 0ebc31564098c670b19dd4e4fabb350052bd0b05
+BLAKE2s (knot-3.1.0.tar.xz) = 4d8d102c723690d2dfde0dd75a4d0b17ca3c665e322b11891e9e51ee10b31c1e
 SHA512 (knot-3.1.0.tar.xz) = 7a76ca1547f6aded1045b8a124ec4e35c61199b822b7692b656ef9bfadb68bdfde097a1ece973725ea14690743da2e2c08717055516b150696e3ac341fa5c728
 Size (knot-3.1.0.tar.xz) = 1401992 bytes
 SHA1 (patch-samples_Makefile.in) = 499b8742dbd948e489b01d512bc7a8d8e4fe2e7b

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2021/10/07 14:42:37 nia Exp $
+$NetBSD: distinfo,v 1.36 2021/10/26 11:06:46 nia Exp $
 
-RMD160 (quagga-1.2.4.tar.gz) = 9d4b807ce150db9d3cec1f6bf9a3f836d4973428
+BLAKE2s (quagga-1.2.4.tar.gz) = 044953e03656c51f236f192444812002126e9edc5d1d8652acebe2bc2113a769
 SHA512 (quagga-1.2.4.tar.gz) = 3e72440bcccfd3c1a449a62b7ff8623441256399a2bee0a39fa0a19694a5a78ac909c5c2128a24735bc034ea8b0811827293b480a2584a3a4c8ae36be9cf1fcd
 Size (quagga-1.2.4.tar.gz) = 2925847 bytes
 SHA1 (patch-configure) = 928aff3c22d9c8d63276d6e787dc503fadcc048a

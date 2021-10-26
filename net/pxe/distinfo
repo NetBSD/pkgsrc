@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:32 nia Exp $
 
-RMD160 (pxe-1.4.2.tar.gz) = 8d626d500d088140284bdad32616d8b45aae8baf
+BLAKE2s (pxe-1.4.2.tar.gz) = ce11d58f95fbe4b595726ee9aa66ea774b6c6623a063bf03c21e731048f42c91
 SHA512 (pxe-1.4.2.tar.gz) = fd393d58526a6686df86a4e062dc5222fa8dac62158a26c82e23808abfda94d6ae668fce608b638fdc38e7b2100a8571a4b2470bfb13718826f8bd121f9a2cee
 Size (pxe-1.4.2.tar.gz) = 56342 bytes
 SHA1 (patch-aa) = 7d24c06f1d584d2d4c555e0ca793fb6ee1e0b7f6

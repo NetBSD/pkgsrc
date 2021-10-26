@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:42:05 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:06:15 nia Exp $
 
-RMD160 (IO-Interface-1.09.tar.gz) = 9437908763a989cbd72493fb3239a207f602df36
+BLAKE2s (IO-Interface-1.09.tar.gz) = 1f704c5248f464811709cc74e2579fe242d19bf152cdf1cb3080a1dd0b4176e4
 SHA512 (IO-Interface-1.09.tar.gz) = a23a4793e23ba0fbb0583c6692d7138e4a9b0a6959c9fa81489954090fa51ca6edfe79841a8f69ab7f7a52aec31a477cb01705f6d66d5c7e8b69f76301360cd5
 Size (IO-Interface-1.09.tar.gz) = 16414 bytes
 SHA1 (patch-aa) = ef565ac31332a52c4afc8fad0e9aafcadf7b6919

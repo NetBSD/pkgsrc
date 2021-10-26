@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:42:10 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:06:20 nia Exp $
 
-RMD160 (Net-IPv6Addr-1.02.tar.gz) = 984e634a818f113647568ad1a0763fe393c5da26
+BLAKE2s (Net-IPv6Addr-1.02.tar.gz) = 709096515ada1accde4db025982ab341e2457779aa7dc63e8888154be095f3a6
 SHA512 (Net-IPv6Addr-1.02.tar.gz) = f9cca19253f23fff74864fc13f18e3171ce36d54ac4555b3daa3603eabbdc8a46b8965def74ee0606d05ed7dc9c6288a3c289ff9d1362ab3a79d1d0e85734d61
 Size (Net-IPv6Addr-1.02.tar.gz) = 19961 bytes

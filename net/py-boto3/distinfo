@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:42:25 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:06:34 nia Exp $
 
-RMD160 (boto3-1.17.93.tar.gz) = 73efee371b5465fe277de87bde2d4a02e9c09978
+BLAKE2s (boto3-1.17.93.tar.gz) = 6c9bc1e51ae4672cf638b4aa361611047cccab83806bad789996725f368c55d0
 SHA512 (boto3-1.17.93.tar.gz) = f8ad771fa0ace7ddcacd22138db47c5e5727de7d07b5a0b5d3cb2323a9b66241310251ddd95e27ad0c4020dd6c3a4f74a54b47202e25c38ee1baa2c0c27476d0
 Size (boto3-1.17.93.tar.gz) = 98314 bytes

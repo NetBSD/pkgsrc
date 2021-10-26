@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:50 nia Exp $
 
-RMD160 (icmp-0.2.2.tar.gz) = 3372bf9abd64deecd611170e31690638787cb4f3
+BLAKE2s (icmp-0.2.2.tar.gz) = 971fbbe611d3843bd71832563786c90e2250a91727242ef56a5e9c55c35d8ce1
 SHA512 (icmp-0.2.2.tar.gz) = e261215bb5ba0e76111036487a18a989ac9b165184136873bca374e95fb997ca4f7ac22fdb9a4f9602f1a2651c72005d5a02cbdc5c491abd14c77eaff3e1719b
 Size (icmp-0.2.2.tar.gz) = 6522 bytes

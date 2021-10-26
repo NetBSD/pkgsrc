@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:40 nia Exp $
 
-RMD160 (pamqp-3.0.1.tar.gz) = c74217a7495f54ff65478ab3c6de1b1d959af5fe
+BLAKE2s (pamqp-3.0.1.tar.gz) = 4c6204c3e51f5978203426ade534d772b5507a63242a3a40d1d1a2a73d31f282
 SHA512 (pamqp-3.0.1.tar.gz) = 078b69df40b53cd18ebf8c768c6001c83bfa268d8d651752e8405cb8c5f58c809d9dfb8e1c9b72e75bace62679cd02e0a965b7b6301fd764f6786213ec04a7e2
 Size (pamqp-3.0.1.tar.gz) = 30941 bytes

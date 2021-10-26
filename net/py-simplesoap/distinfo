@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:43 nia Exp $
 
-RMD160 (PySimpleSOAP-1.16.2.tar.gz) = 1c9f257184347725680bea67d7c15b6833a7ef6d
+BLAKE2s (PySimpleSOAP-1.16.2.tar.gz) = 74ff0fbd25bacb5c4425158aea423c8d34e60d9efa2496b7142940c23878d5e7
 SHA512 (PySimpleSOAP-1.16.2.tar.gz) = 179387328d81a08413820cd0ce6cb92fedc13cd8be4451c38bd70b7a4408555acd80ca25cdf2ddc5d5295bcd9346d646c65f93b36368a35f81399dd07eba0643
 Size (PySimpleSOAP-1.16.2.tar.gz) = 44273 bytes
