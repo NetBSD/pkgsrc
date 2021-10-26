@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:40 nia Exp $
 
-RMD160 (tex-cjhebrew-43444/cjhebrew.doc.tar.xz) = bdfa4615b88d5cb1e7011f9bdd79719e1a2dce6d
+BLAKE2s (tex-cjhebrew-43444/cjhebrew.doc.tar.xz) = 01c4ae6f5c00249c1599d5c965448961d7b18f961673f68cf34d2f0038ef6f10
 SHA512 (tex-cjhebrew-43444/cjhebrew.doc.tar.xz) = 3e8906fa221ea536039e904fae497f0b686400ea749cedd204151d97906042f24f812482f057394ec987e75c697422ea3daf581e318f9f5cdea359ab9224e5d6
 Size (tex-cjhebrew-43444/cjhebrew.doc.tar.xz) = 112888 bytes

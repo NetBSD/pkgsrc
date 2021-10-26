@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:43 nia Exp $
 
-RMD160 (tex-cmtiup-39728/cmtiup.doc.tar.xz) = 4d1cbac6dc60063de47113df9e2954150d773ed8
+BLAKE2s (tex-cmtiup-39728/cmtiup.doc.tar.xz) = 8e8d1f6b480d1e147c8a1f4f00f7eb69542fda29f5172add7947955f9520aeda
 SHA512 (tex-cmtiup-39728/cmtiup.doc.tar.xz) = c21aa2921f379150052454203af1e3bfbd7d36b1a5d9a6965029a1e80ef689d94d461d33f71e922d510dac3b036f86f2648d83ac42a0e6bd2966f7e45752bffd
 Size (tex-cmtiup-39728/cmtiup.doc.tar.xz) = 585536 bytes

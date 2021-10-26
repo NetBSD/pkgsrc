@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:43 nia Exp $
 
-RMD160 (tex-cns-45677/cns.tar.xz) = 56b379aa436df3a878323300e758cc163a218f34
+BLAKE2s (tex-cns-45677/cns.tar.xz) = a555b03a1ed10c9e01ff82b3d04a538b88ec4b1afc06d00eac8b4f94b479d083
 SHA512 (tex-cns-45677/cns.tar.xz) = 54f74c716de52194d5bab6e95c6e1b7bb22b0d60a46ea6af04ab3859578c594415341ef51d88863fd188008d1326e4e9286afd40e2e7cf2c85278b1476ff65ee
 Size (tex-cns-45677/cns.tar.xz) = 2985184 bytes

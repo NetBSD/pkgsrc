@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:40 nia Exp $
 
-RMD160 (tex-charter-15878/charter.tar.xz) = e70de518c7a31f2f099f75989ba9faacb8ab1bcc
+BLAKE2s (tex-charter-15878/charter.tar.xz) = e17fc0d60ceae03c519e68251e43ee32c5e8efe6e18e631b472a39894574a1ca
 SHA512 (tex-charter-15878/charter.tar.xz) = 57bfe58a68454d8b47af89a20a131232dfc98e89232fb43eb45c433455f0cab4e3e77ecb5cdf3c05b87319696dc22ab66b46556f7eedbeb62ef6fdc373cff62e
 Size (tex-charter-15878/charter.tar.xz) = 175172 bytes

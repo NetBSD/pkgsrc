@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:04:07 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:27:18 nia Exp $
 
-RMD160 (mftrace-1.2.19.tar.gz) = eb57e9a8c06fe809a4455757d1bef638ccffc086
+BLAKE2s (mftrace-1.2.19.tar.gz) = b6ba6c84cfc189b923d89b532577470cc4b0cb887514876fd4a8dd6e4345dcc8
 SHA512 (mftrace-1.2.19.tar.gz) = 410739ced17c5e5bb82c286b6b935c9d8d46299f9c04f0ba4c97df9ada5d7e9c778c720fb8a2377eb6df3c629a6e7264836fe7675733cf60197a817477dc49ee
 Size (mftrace-1.2.19.tar.gz) = 78907 bytes

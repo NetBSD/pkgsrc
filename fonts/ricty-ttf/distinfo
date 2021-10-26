@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:04:12 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:27:23 nia Exp $
 
-RMD160 (ricty-ttf/os2version_reviser.sh) = 1b8bb49c8233432eb1cffda29155f3d5befdaf9f
+BLAKE2s (ricty-ttf/os2version_reviser.sh) = 56d6880ce350629a29f5b9c2e55a9fe3ee656a6384dda91715fe859e1bb389ff
 SHA512 (ricty-ttf/os2version_reviser.sh) = bd62df29db53b50356f61176707c97baafd39e731b965e223430b083a2675f037bdc155abbbbf42e73206c41126048211aa4092aa3add1f174c1538dad2f020c
 Size (ricty-ttf/os2version_reviser.sh) = 1309 bytes
-RMD160 (ricty-ttf/ricty_generator.sh) = 88079063db557800b08e79b32cf4fc9a8c7b84c1
+BLAKE2s (ricty-ttf/ricty_generator.sh) = 6e88d6e91822a4cdd14156842aaef57605968dc8d36f0dc80b487bba0f69b3ee
 SHA512 (ricty-ttf/ricty_generator.sh) = aa5bb3391000a12217500d7e11f950a587abe0d3f59f68e81770d594b9f7ec4755cf7354a059ee9b9260c81dce8fa7ab442d9e4471f5e9b726bd056d1dfe17e2
 Size (ricty-ttf/ricty_generator.sh) = 36173 bytes

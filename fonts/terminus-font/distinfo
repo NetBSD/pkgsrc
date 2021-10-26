@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:04:13 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:27:24 nia Exp $
 
-RMD160 (terminus-font-4.49.1.tar.gz) = 9312fd445f8c452fdf140d119eca03ba41fb2d82
+BLAKE2s (terminus-font-4.49.1.tar.gz) = a933df31ad438bd4ba79a21960489421317dbfa4ba313d402d71e31675acc200
 SHA512 (terminus-font-4.49.1.tar.gz) = 2e3a99960c459a453b5879bebbebeb653f0a22060177bf75c67bbeb7d32cfe1acce9e74a88fdc42e299b6dc402e0708552487abd26e80e985c7d6059b0d445a8
 Size (terminus-font-4.49.1.tar.gz) = 648345 bytes

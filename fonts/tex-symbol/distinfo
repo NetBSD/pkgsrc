@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:05:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:28:31 nia Exp $
 
-RMD160 (tex-symbol-31835/symbol.tar.xz) = 711cace8cc937d5236c1d89ec150bc25c58f6727
+BLAKE2s (tex-symbol-31835/symbol.tar.xz) = 9f53a1b9a5b968bdb4095671ca231985f1f6e184a8c3ae8a822d95a74887b4b5
 SHA512 (tex-symbol-31835/symbol.tar.xz) = 246bf5d37fab1919902e8b39116a4da53964cd78eebea736676ef92ee17fd02ffb7a26cdac4b6ee5e4b14deaae37a98f43ae5cbbd76d5e0f985d1630712f01ab
 Size (tex-symbol-31835/symbol.tar.xz) = 36108 bytes

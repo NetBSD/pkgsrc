@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:43 nia Exp $
 
-RMD160 (tex-cmsd-18787/cmsd.doc.tar.xz) = e9195d4ca475a1803686e32b0bcb817ae69732ae
+BLAKE2s (tex-cmsd-18787/cmsd.doc.tar.xz) = 883a45e56c9abda165ae1baaa52a82bb8621341a2129ca21c548b87d4bcf7955
 SHA512 (tex-cmsd-18787/cmsd.doc.tar.xz) = b4a96027a6cd68af8325a50ba05b7745fd29c2a29e853ceabbef89ef922955ce0aa04707cfa798dd740b185eade4790115d4a1eba6b27231118f273e34e66400
 Size (tex-cmsd-18787/cmsd.doc.tar.xz) = 2288 bytes

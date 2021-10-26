@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:22 nia Exp $
 
-RMD160 (tex-phonetic-21871/phonetic.tar.xz) = 26fa5b77603dcc5e8d7c9e3b6d76350c002cc09f
+BLAKE2s (tex-phonetic-21871/phonetic.tar.xz) = db8428bc8ef4e208211e052e305ede6e59f354a3fd001d7d0e18862f7b5a7bc9
 SHA512 (tex-phonetic-21871/phonetic.tar.xz) = 71453cec4c185dfcffb47732bc79f6f4f265db3633fd232d466ea04f2bcfc98be7a00812b83e4fd1dd58522f1ca3ca6b1ab809bf55672a23fe950789c7bbf58e
 Size (tex-phonetic-21871/phonetic.tar.xz) = 23376 bytes

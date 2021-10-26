@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:25 nia Exp $
 
-RMD160 (tex-accanthis-32089/accanthis.tar.xz) = 1630aafa9ed491f3e15fe803ef97ae663a29bba9
+BLAKE2s (tex-accanthis-32089/accanthis.tar.xz) = 555f5c99d32649cf7176d59b36517f6a3a9b5ff0d3d74304bcc786360790f80b
 SHA512 (tex-accanthis-32089/accanthis.tar.xz) = 46c1d4934ad5ebdf85310bcc53a570221cb709ad9b089ac8d1433b7508d624534efa9aea34a9b178af5223252ad7bc46af3d85d1acb9044c2dedb6a236a3633a
 Size (tex-accanthis-32089/accanthis.tar.xz) = 368020 bytes

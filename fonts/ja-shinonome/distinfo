@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:04:04 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:27:14 nia Exp $
 
-RMD160 (shinonome-0.9.11p1.tar.bz2) = 09616a221365d0884e11f206bc40ee4325c319b3
+BLAKE2s (shinonome-0.9.11p1.tar.bz2) = 336cf3369a9084d7122d8785d11d548a6a2a7237dd274728e06b18c1847367b1
 SHA512 (shinonome-0.9.11p1.tar.bz2) = 2af35a4dd741484c9abcd3c2088645c34227307e0472ea7f87487eaf590d7524eb6ab03ab15c9f0330d17b3ede75e0ef2e04ef436b2efa35e99c2a62d5738be3
 Size (shinonome-0.9.11p1.tar.bz2) = 4814008 bytes
 SHA1 (patch-Makefile.in) = b1afa85ae91858d9db8421bfa34f4c519f4ce878

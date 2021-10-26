@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:56 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:06 nia Exp $
 
-RMD160 (efont-unicode-bdf-0.4.2.tar.bz2) = 87b2f68b10822ba05ea87cf5054ac48d70679c8b
+BLAKE2s (efont-unicode-bdf-0.4.2.tar.bz2) = d7567f09f5aa291454eb308cd14fdf815dab9e5c93932390b4128c8a03adea5a
 SHA512 (efont-unicode-bdf-0.4.2.tar.bz2) = d19b4827bb473f8e7b0102b3c563e4ce559861220de158486e602aabe71f0abde127e83a46a622fafce797395f6977ad1c61e73e8c4997a4a088158a3b51e41e
 Size (efont-unicode-bdf-0.4.2.tar.bz2) = 23999335 bytes

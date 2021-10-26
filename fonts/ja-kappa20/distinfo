@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:14 nia Exp $
 
-RMD160 (Kappa20-0.394.tar.bz2) = 63f31d951b4d0f4fe2c9898c8aa77f1eeac6de59
+BLAKE2s (Kappa20-0.394.tar.bz2) = 5c9d5bcb22848062ad93201a8d6b7019bcbe0ab3808a5a242dc531f564d06dd0
 SHA512 (Kappa20-0.394.tar.bz2) = 3fafc0d7634cdb459f9737906a128ff0cc2d8edb730e1a42620498f0b0bc8b7f80bfc1a61830dab6d134c4d8a8c7face9078ad340391d37eda5fb684d1fa1f5a
 Size (Kappa20-0.394.tar.bz2) = 595861 bytes

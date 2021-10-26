@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:59 nia Exp $
 
-RMD160 (fonts-tlwg.doc.r54994.tar.xz) = 1869400f885825bf6ae5ca012acbb11f91dc354f
+BLAKE2s (fonts-tlwg.doc.r54994.tar.xz) = 71b441acc130e2041dfc6ee89f3ee1c03a3634f19202fd069d4c931533cb3712
 SHA512 (fonts-tlwg.doc.r54994.tar.xz) = a122c38181cb85964e6344c6652e20444e09943cab0d5a25580aaf4cb691cda33808972dbe3a7cfc7cb7970a7233741111fe52d93d51e3fe06615710be4089de
 Size (fonts-tlwg.doc.r54994.tar.xz) = 4600 bytes

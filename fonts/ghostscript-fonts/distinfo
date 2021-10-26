@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:04:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:27:12 nia Exp $
 
-RMD160 (ghostscript/ghostscript-fonts-other-6.0.tar.gz) = ab60dbf71e7d91283a106c3df381cadfe173082f
+BLAKE2s (ghostscript/ghostscript-fonts-other-6.0.tar.gz) = ef19a0f9eb0f64d0a5fd372329850d25a827d31d6538df036aba41a084412b99
 SHA512 (ghostscript/ghostscript-fonts-other-6.0.tar.gz) = 4e648e364053a4aa29784e8c996c063ad45581d045fcc901f45f33543f3d9051f4e659265388beb48a8f28f20de6c9ea041092564e015ffbcce522ec16280da4
 Size (ghostscript/ghostscript-fonts-other-6.0.tar.gz) = 796086 bytes

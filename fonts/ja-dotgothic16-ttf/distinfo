@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:13 nia Exp $
 
-RMD160 (ja-dotgothic16-ttf-20201216/DotGothic16-Regular.ttf) = 8963c33c7dcd846c7e44d3d6722af1580e48ac89
+BLAKE2s (ja-dotgothic16-ttf-20201216/DotGothic16-Regular.ttf) = 9c6de91f1b36af1ba180b51ad8c0607830796d1aa77f39dbc8c7231bd6c27b27
 SHA512 (ja-dotgothic16-ttf-20201216/DotGothic16-Regular.ttf) = ec760a86f7f47262fd79a48d5e76b9312aa8b48c61bbf518c49f22291656c93a7a0ad732c1120ba58b5c95af4e3731e6cda487e2d07fbdec09a7a3521f82aac7
 Size (ja-dotgothic16-ttf-20201216/DotGothic16-Regular.ttf) = 4421076 bytes
