@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:54:04 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:21 nia Exp $
 
-RMD160 (oath-toolkit-2.4.1.tar.gz) = d902ebef5b0468f383bcb15a9e8b0582011eb4ca
+BLAKE2s (oath-toolkit-2.4.1.tar.gz) = 1c708e16554736cfe5d38e4b6ff4e2eda945c9bc72cfb889f0ce4aec6078c44d
 SHA512 (oath-toolkit-2.4.1.tar.gz) = 2a3440d5c97afef00dacd235d5471e8bf68086dfdb20234a894e7534d75670808fef444fe1062525800bc5ffe368898302e6cf250cd76b7238cd602d7d05e89b
 Size (oath-toolkit-2.4.1.tar.gz) = 4136649 bytes
 SHA1 (patch-liboath_gl_fflush.c) = d957eed6c3e653ee53bbcf0b95b0c032f092b07d

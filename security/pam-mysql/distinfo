@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:34 nia Exp $
 
-RMD160 (pam_mysql-0.7RC1.tar.gz) = ffa908bf2f458c48571f0f172f841ef861ad0b47
+BLAKE2s (pam_mysql-0.7RC1.tar.gz) = 4fb0040b27cc4cbccad28ab57b0e93234bd19fbdbe2c30d786e8e3abc3b78f68
 SHA512 (pam_mysql-0.7RC1.tar.gz) = c057999c62d29dfa7a07db9a8d33d0cf0377dae4770c73019bd85f67c9c92fc9dac36fa606739162a5f7b0f9fbd849e5833fee827febfe4af883b8c2ddbd8b4f
 Size (pam_mysql-0.7RC1.tar.gz) = 335240 bytes

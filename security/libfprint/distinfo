@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:53:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:13 nia Exp $
 
-RMD160 (libfprint-0.7.0.tar.xz) = 5cafb1f7ab8b1259ed75276b4ef74f4a399ba825
+BLAKE2s (libfprint-0.7.0.tar.xz) = 24d25d313877f1db72eeeaf30df7a728c842e3ac8fba7261bc84132cd3ad8945
 SHA512 (libfprint-0.7.0.tar.xz) = 7a5280a34408ebe129256195a1219ed6a8258a2f5a46d92de4e1e18e931b0c15bd3df3898a7ee1aa5ed9b569e77953d12d007f1b7ced8b708d4bf0946e993e16
 Size (libfprint-0.7.0.tar.xz) = 550484 bytes
 SHA1 (patch-examples_Makefile) = 9f18e40b0f3037fe047c40f4a556a5c5cd88a387

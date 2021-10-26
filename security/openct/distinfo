@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:21 nia Exp $
 
-RMD160 (openct-0.6.20.tar.gz) = 06059e052293649fe695c335c1418c024147f538
+BLAKE2s (openct-0.6.20.tar.gz) = 3e805e757c6b8b1a2a21223e2ea5c4d17f92a3bfc5709165dc1a8dcfb006bf3d
 SHA512 (openct-0.6.20.tar.gz) = 5175b418847200dbd4af0d8ab09546d94568639c67db67bdea93c68cb042c7ef901bb356784d6b1d9f4de914535eee5a450b39a15d1ab9a676ffce790a408a3e
 Size (openct-0.6.20.tar.gz) = 702818 bytes
 SHA1 (patch-aa) = d44e8daa9cc402c8276bf385a5fbbe5a498b37bb

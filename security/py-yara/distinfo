@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:54:34 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:17:51 nia Exp $
 
-RMD160 (yara-python-4.1.0.tar.gz) = 24013ec2e3a6fac9383663efc28156625de4fd05
+BLAKE2s (yara-python-4.1.0.tar.gz) = 5c2e2a78b58aec3cb837797217e2e8aaadc757f99a4499dee1e89a2094af7299
 SHA512 (yara-python-4.1.0.tar.gz) = 8b9ce780b6639ab2ee5222adec888c7e0fb6be81c7c64a8b33b033de3f261f9707aa208b7a3a86749f6e86a83fe6d73941c816857faf6eb714399d1f50239b51
 Size (yara-python-4.1.0.tar.gz) = 33717 bytes

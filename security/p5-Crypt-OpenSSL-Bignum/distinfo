@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:27 nia Exp $
 
-RMD160 (Crypt-OpenSSL-Bignum-0.09.tar.gz) = bd2ee45740ed8b6fb3aacf061702ce3e6cd28a48
+BLAKE2s (Crypt-OpenSSL-Bignum-0.09.tar.gz) = d18abd77539f9fc3a4e46a79e778a961ba9df60921a509ebc518ab06e442658c
 SHA512 (Crypt-OpenSSL-Bignum-0.09.tar.gz) = 3480a64e35e158a7a7c75c0e57ac0f578ddcb901a14f80a58ffabd1f318a68a83b411a72c22c53650273507198907b1d62c88fddbf5587885f6fe1a75deff3ed
 Size (Crypt-OpenSSL-Bignum-0.09.tar.gz) = 16202 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 14:53:56 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 11:17:11 nia Exp $
 
-RMD160 (lasso-2.7.0.tar.gz) = 6660050075bdd4c7dc64ed7a1f5203ca84097d20
+BLAKE2s (lasso-2.7.0.tar.gz) = 625c78c08c4db21cc8b186b313ddf98ee3d67a675dfbf488a8b05c58d02079f4
 SHA512 (lasso-2.7.0.tar.gz) = 98615d6166cdec52abef4f5346119040f310dbee624c2cd168d2f95b5fe3e0e1437ec6bfc2cd8b680044438afa15770402f5aef87d1885f7bc61528617c17a74
 Size (lasso-2.7.0.tar.gz) = 6332202 bytes

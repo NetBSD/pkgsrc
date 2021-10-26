@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:31 nia Exp $
 
-RMD160 (Digest-Perl-MD5-1.9.tar.gz) = 31dfb73a8e5742d5ba9cb3fedc969fd152bb216c
+BLAKE2s (Digest-Perl-MD5-1.9.tar.gz) = c60c00c9f8571ee9c2af00c911b2ea2930c73bea339564246df80fd8677155d2
 SHA512 (Digest-Perl-MD5-1.9.tar.gz) = 015a1f046b85b5b89c1b44073d60116d483332cd667cb7230222df9651b7da837a532991e91848ff0b65f171b8870c2c4bda651da4ca54ea75d062ba6a55b525
 Size (Digest-Perl-MD5-1.9.tar.gz) = 72009 bytes

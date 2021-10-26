@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:54:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:18:00 nia Exp $
 
-RMD160 (scrypt-1.3.1.tgz) = 65b40f1a0c7dd9be38569b40b67c95e454addd67
+BLAKE2s (scrypt-1.3.1.tgz) = c4225ef34bc3f178c3b99e4a12e9ad712a97ca7de1f4ca6f4c6a29638bff9c80
 SHA512 (scrypt-1.3.1.tgz) = c76c29463d2a4db6b62283daca80bc4124a6272f37f983d472d44251b98da702f1edb16ad15058a8d0ea320c23bc1486892ab25d367d37ec77c38a55ad7e69fe
 Size (scrypt-1.3.1.tgz) = 394516 bytes

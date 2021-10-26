@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:37 nia Exp $
 
-RMD160 (php-ssdeep/ssdeep-1.1.0.tgz) = d8858ba974a5076e94fe1976e1bd7971daa7316b
+BLAKE2s (php-ssdeep/ssdeep-1.1.0.tgz) = 6d3744dcf5dbbac17391721e41c97ad0cbd768bcbe755dfb1c6544990e93ce2e
 SHA512 (php-ssdeep/ssdeep-1.1.0.tgz) = 006811d2a1008fac4629824b5c4ff2e498a5caf08b7cd5b6b54452f13708ee787caeb4cb496a5ba50b6f11ef360b31a881fe7c2136e142ea6014089b3996bcbd
 Size (php-ssdeep/ssdeep-1.1.0.tgz) = 7841 bytes

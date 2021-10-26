@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:47 nia Exp $
 
-RMD160 (libnacl-1.6.1.tar.gz) = 5b5743ef2a48026aff7bf153b17c2f61af8a19d9
+BLAKE2s (libnacl-1.6.1.tar.gz) = 3644244c31152b1c3d944887900e6306b2380e6481aab22399512b11883c471a
 SHA512 (libnacl-1.6.1.tar.gz) = 167029675fc81758e105821c835b840be55daefa26e59987413091f54927bb390015ac054809d5be142554a8fc1b8a82a76148bceed4a7ddcc3cb93569f56811
 Size (libnacl-1.6.1.tar.gz) = 65443 bytes
 SHA1 (patch-libnacl_____init____.py) = 7ef54e0fe6535738c2d20077779aab6a88267ba0

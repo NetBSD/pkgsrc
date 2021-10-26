@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:54:04 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:21 nia Exp $
 
-RMD160 (nfsBugFerret.tgz) = e238e0a892bb8e46969278687ce6ec1944ae24c8
+BLAKE2s (nfsBugFerret.tgz) = 71d9322307de5b92a0e18cbd36f8dbd59a2e1e43e114069343b1b1e5b85eb75d
 SHA512 (nfsBugFerret.tgz) = dedf4b2a691647f73d914fae4ddf29c029cc2271416ec505f3a96074a34bcc6c28f331ad135736ef3c04333d843e64509a0f3978ef3d888572ba33541b8d3b5d
 Size (nfsBugFerret.tgz) = 12446 bytes
-RMD160 (nfsShell.c) = 340454d35e6e67b87255cba7437186639f16cfa5
+BLAKE2s (nfsShell.c) = b331fc964645baa4582a1375a272ef8c1bf93abc5820bd3e10501f08a5e8e0bb
 SHA512 (nfsShell.c) = ff397ef03b2f76a82074a4d13100333dcd2ac472768c527c10aeb30218e8d2de8968f86af048abf0ab227945fc6f456985ee8d7937243880b7f5d55f2efe1640
 Size (nfsShell.c) = 47258 bytes
 SHA1 (patch-aa) = 7d67909e1177b61afb3c1d46d99d531bf039bd19

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:26 nia Exp $
 
-RMD160 (Crypt-DES_EDE3-0.01.tar.gz) = fce2367ded3dc20fc274afa2dfbddc2a7d2237e9
+BLAKE2s (Crypt-DES_EDE3-0.01.tar.gz) = 90a8959f2adcd8c6c3d34809e64c302d21fe4666e853b24c5748e07760c2f485
 SHA512 (Crypt-DES_EDE3-0.01.tar.gz) = 96a643c5b9128dc34ee93fd5bcad5d2c56c5111a2c40843a7ea352bd62f1430dafc399d9c7e9809c1ba34dddc5e63d731370ae7c8d555b053f55d3de7f7cb7c8
 Size (Crypt-DES_EDE3-0.01.tar.gz) = 2328 bytes

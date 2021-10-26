@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:53 nia Exp $
 
-RMD160 (chef-vault-4.1.4.gem) = 480c2531193df7ed95a7227ef6d50ff210388e20
+BLAKE2s (chef-vault-4.1.4.gem) = 66350fb06889899e9cdb05a29d270bbd2f2190e52991e1e9023f80129c3b602a
 SHA512 (chef-vault-4.1.4.gem) = afb754b8cab39ebd5f4ae20fbc1aca15436d96ac88472127522218999f70aae59d7c9fdf8dbe2bee3addc606f74c769bb5a54f780a91eaac2f7599cd7f988e18
 Size (chef-vault-4.1.4.gem) = 22528 bytes

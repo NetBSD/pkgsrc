@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:54:30 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:17:47 nia Exp $
 
-RMD160 (M2Crypto-0.36.0.tar.gz) = e813fd1da12a8b8a5550931129d29977a25cef5d
+BLAKE2s (M2Crypto-0.36.0.tar.gz) = 151909be15c453743fbb4552e6b0dfa2dc614d6b949aedd492c66274e77863d1
 SHA512 (M2Crypto-0.36.0.tar.gz) = 5b7d6d10c943ff0e09e0e9748d5578e7e0f7659a73de4ba49481152bca05871aef2bfbb869e1636a7cebcf2dd8b9f67fb0d299a833d1d4ebd538031c35d7bca1
 Size (M2Crypto-0.36.0.tar.gz) = 1127584 bytes
 SHA1 (patch-SWIG___evp.i) = 07fc94a5c7dbd2fcfde716ec316d8a833f28ffc7

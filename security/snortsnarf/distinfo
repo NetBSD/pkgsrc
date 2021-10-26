@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:45 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:18:01 nia Exp $
 
-RMD160 (SnortSnarf-050314.1.tar.gz) = e5c1a778ec800dd173e344b42cf1df567f8d40ba
+BLAKE2s (SnortSnarf-050314.1.tar.gz) = 1dd3ceac6fa1ad1850d8da667a540b6af84ba25183eeb5509ae9c62ff5da0025
 SHA512 (SnortSnarf-050314.1.tar.gz) = f850410256df16ee5eb5312bd0d5f5f078eba9f2ae02d03483cf0165e2093dd33a0db49d12753a68352d97b5abc3303227ad606cb680ff52c2f17f0d976005e9
 Size (SnortSnarf-050314.1.tar.gz) = 144103 bytes

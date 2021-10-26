@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:53:59 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:17:15 nia Exp $
 
-RMD160 (libpreludedb-0.9.15.3.tar.gz) = 70af1692966a6b31d4b18a2342a74991d3e8bfed
+BLAKE2s (libpreludedb-0.9.15.3.tar.gz) = 7f5b26f9789ea2460d93af02efb4b557427c0531ebdafd9f15b8f1d84b676f46
 SHA512 (libpreludedb-0.9.15.3.tar.gz) = 7cc0c04585fda115c88417782c6b18a61c93fe5c8d63c9be3f57de98972c031686576ab5a46adedc09b80054a9251979968c7006e59014d46b3265df166dcd12
 Size (libpreludedb-0.9.15.3.tar.gz) = 935457 bytes
 SHA1 (patch-aa) = 11cb4f1353a5dbfc046992d862230849aeb21afa

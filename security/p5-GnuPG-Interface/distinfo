@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:54:15 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:17:32 nia Exp $
 
-RMD160 (GnuPG-Interface-1.02.tar.gz) = b9027479ec5757761b2b4450ab4c3466655a0984
+BLAKE2s (GnuPG-Interface-1.02.tar.gz) = fb8959402928339901466839958230f70b5f2270b40fed85b2316da376c78118
 SHA512 (GnuPG-Interface-1.02.tar.gz) = ff4365aa75fbcd2dc77c915ec36c0b578219ae1a2148e936b4769221f91c78a3bc3d371159b5130e7bee36ecf0e169b6a16e3a160d2598811d6f70850119f6e4
 Size (GnuPG-Interface-1.02.tar.gz) = 75523 bytes
 SHA1 (patch-Makefile.PL) = db48ace347c859d561b4bb4f4ab0a7af82b15e41

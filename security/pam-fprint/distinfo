@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:34 nia Exp $
 
-RMD160 (pam_fprint-0.2.tar.bz2) = 483fcf6b70d4805b1da4f95acbd34c672275a4ba
+BLAKE2s (pam_fprint-0.2.tar.bz2) = e9dfa4151cbb0e9ace2a1120d1d0b34700e5d1da1196d376c6816a8c1cd93575
 SHA512 (pam_fprint-0.2.tar.bz2) = c860488efabfd6301b4e19596e15545bbcb1a15f79bfd7c61a357ef47cf0a621ec0d15328d5be30f7ef045813e18333bd0aea7fb8fcb06681007dcacca6396fd
 Size (pam_fprint-0.2.tar.bz2) = 72781 bytes
 SHA1 (patch-aa) = e2d6a4daa9d3e7d0af10807d1d81e74941b79089

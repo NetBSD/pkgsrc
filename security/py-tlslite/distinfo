@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:50 nia Exp $
 
-RMD160 (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 0cd0a71f9c4a8acacc87b1afe39a8cb8e744e2d8
+BLAKE2s (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 3d27913bf1c26d459b6ffd215ec7a020770d75c96ff8c92cec481be3f4a61409
 SHA512 (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = c9cc45f75932b1127cd347fbfcef4ca314e8bcc5ca35bfceb20ec95c1ba5788931cf29eb1277875ef387826398fc7db16c21d340c5b05c4934ed7c48e9807d59
 Size (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 125752 bytes
 SHA1 (patch-setup.py) = fdb3ce8d0ce0bbee4e10ef76e768d83d3a180189

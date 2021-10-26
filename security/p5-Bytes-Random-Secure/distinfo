@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:25 nia Exp $
 
-RMD160 (Bytes-Random-Secure-0.29.tar.gz) = 3f3da059554caaa429b2638fa05a94d1a4f4993a
+BLAKE2s (Bytes-Random-Secure-0.29.tar.gz) = 278c905b8a2ab45fd5fb1be25e59b5acf0862b6948bc18d9dc44a055262fd6e3
 SHA512 (Bytes-Random-Secure-0.29.tar.gz) = 72faf9e9fff1cc9641845d47b8dd1efb39861b4015246b169167d4f6050998e91d30b53d6a3e08daf91a838fcf29a05042073064204270de05b2f2ca9990fe64
 Size (Bytes-Random-Secure-0.29.tar.gz) = 28007 bytes

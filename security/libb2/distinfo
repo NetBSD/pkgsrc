@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:53:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:12 nia Exp $
 
-RMD160 (libb2-0.98.1.tar.gz) = d95434930da9329e7bd8d64d6303e0e6663e4d3b
+BLAKE2s (libb2-0.98.1.tar.gz) = 259aa4ad22b0b086ed9efa6ea3e64fc7c6ca3b593558fdcb54fe760867cd35a0
 SHA512 (libb2-0.98.1.tar.gz) = e760972173bb9ff3562843882abbe9042af09da63f37a5706921381be2d64cc4d333aec65e1e676d5a45ace913417536a1dc188c90b394c2f7b9cae654dbb108
 Size (libb2-0.98.1.tar.gz) = 534928 bytes
 SHA1 (patch-configure) = 444d3fc4ae164713aa95743bfbd1afc7c47c28b2

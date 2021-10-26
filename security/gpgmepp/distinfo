@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:53:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:07 nia Exp $
 
-RMD160 (gpgmepp-15.12.2.tar.xz) = 1e57610e56e5a7d65de1114f8f55443f5ff23762
+BLAKE2s (gpgmepp-15.12.2.tar.xz) = c7276257c8ab01446af5c1621d0d100e3ff2f80089dc10b4bf45c253b4c1c0f4
 SHA512 (gpgmepp-15.12.2.tar.xz) = af86e8c732bd8efe5fe4e89b39d9b2fc1975cce9ab66cd6a4de68097bf8acbf51e86a63dbcef5dffd5f981c0641ed1b3b68c1ca9dcc70323ced88c4c02706958
 Size (gpgmepp-15.12.2.tar.xz) = 67724 bytes

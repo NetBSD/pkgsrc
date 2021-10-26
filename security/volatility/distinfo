@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:18:05 nia Exp $
 
-RMD160 (volatility-2.6.1.tar.gz) = ad00ca8219dcb25a10ec4bbcfb74bd458669d939
+BLAKE2s (volatility-2.6.1.tar.gz) = b36b420906c13f6beb2f235829e2f502999645274440f0545ea8df1df33f6889
 SHA512 (volatility-2.6.1.tar.gz) = 64d49de21a87fb6152ad430126466bf66bca06457f3fa2d54cee29b0e4a2eee53ab658570b6cbc782e85ca558f45fac5cf6e6625ebd85aa3ffc9f69768cfa844
 Size (volatility-2.6.1.tar.gz) = 5246187 bytes
 SHA1 (patch-setup.py) = 451c9d2eb77b14239d9aac778735be900b8b593c

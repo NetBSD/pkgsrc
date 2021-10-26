@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:18:00 nia Exp $
 
-RMD160 (blackbox-1.20181219.tar.gz) = 04ed5f0d107a080ed28dd73ade8621695b4e9736
+BLAKE2s (blackbox-1.20181219.tar.gz) = 00c3322b1dbdeff2f92d25aa74d6716f48c9ab09d2f39cd1dff078ed7f3dfe98
 SHA512 (blackbox-1.20181219.tar.gz) = aa3b74e62cbd52e2526e397ddee5ebf3d0151a23967bab189166fe9e0bfd99e70996c8cc303ac906d28bfaf626ca6f49768e59c7d16b017e3984957e1fab45c1
 Size (blackbox-1.20181219.tar.gz) = 42691 bytes

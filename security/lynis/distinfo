@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:18 nia Exp $
 
-RMD160 (lynis-2.6.2.tar.gz) = fb9c7c57a96d8b5f3c052b22dc4c1eab707cc7c0
+BLAKE2s (lynis-2.6.2.tar.gz) = 330aeb4d3a289b9c6fbb637823cc3069b4adf72f32bd807523e7135270997590
 SHA512 (lynis-2.6.2.tar.gz) = 3aeb94c416236f8fd30b6e6ede015fa539b6138a2b43eb659f609a41b60fbb05671256d8d2d72e632c4b90dad9e7201a3b932e8cbd53945752f5b7cf4e7a3970
 Size (lynis-2.6.2.tar.gz) = 271113 bytes
 SHA1 (patch-include_functions) = 157c720799d27adc8e90266f78de8da2db4b58cb

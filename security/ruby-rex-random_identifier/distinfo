@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:58 nia Exp $
 
-RMD160 (rex-random_identifier-0.1.8.gem) = c3bf7cb284ad6290188c27d3bb0cdc1353f071fe
+BLAKE2s (rex-random_identifier-0.1.8.gem) = 5e61b2c5e124c9f20bc7876579d154e1bed1b515cead3bc8924942fa0c38427b
 SHA512 (rex-random_identifier-0.1.8.gem) = 7fd30d9ed3b246e71fe694269fc0b0f77a1ed9986de7d5d2a05860d02df5fb0739a561914cfac312509c3a1f8d992061d98f66c4368d58e1481f67c79cff2364
 Size (rex-random_identifier-0.1.8.gem) = 17408 bytes

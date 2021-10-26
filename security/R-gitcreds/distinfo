@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:53:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:16:58 nia Exp $
 
-RMD160 (R/gitcreds_0.1.1.tar.gz) = 872653001f4d5e4140e2d9674bf90fa3c9130460
+BLAKE2s (R/gitcreds_0.1.1.tar.gz) = 12c545eb1be85c595b60c8de703159dacdbf9404ddcfd9f883ecf8db4ab30fbe
 SHA512 (R/gitcreds_0.1.1.tar.gz) = 28ab1ab4bfa5c8ba5c119a24d2dba647fdd81f49c72b7fba2aa395cb069e194ac8f6ac1afe854a2fcc319c4c1a4e3f220b2572fce37ffe256bedf77bb0f4f5c1
 Size (R/gitcreds_0.1.1.tar.gz) = 61913 bytes

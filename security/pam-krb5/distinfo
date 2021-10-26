@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:34 nia Exp $
 
-RMD160 (pam-krb5-4.6.tar.gz) = 9edec20d6999112c5eeb436df1d58f3368593164
+BLAKE2s (pam-krb5-4.6.tar.gz) = bd53ebff86a17d85fa8e565a3522a61604dcf2687535eab19104a841778f9f71
 SHA512 (pam-krb5-4.6.tar.gz) = d5dbd735f4d1e55ba0a09c22945bbb2bacc54942544f1cace186cd9d2e669923933af7ac448a566211486beda03c384abda2a0cc146294b0cb1f6d53403b7a60
 Size (pam-krb5-4.6.tar.gz) = 528901 bytes

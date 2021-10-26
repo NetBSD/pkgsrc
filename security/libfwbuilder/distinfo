@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:53:57 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:17:13 nia Exp $
 
-RMD160 (libfwbuilder-4.1.3.tar.gz) = ec8d2689868542d05ea584a39addcc2131555a7c
+BLAKE2s (libfwbuilder-4.1.3.tar.gz) = fd37fb58d8e716aab67ce58e2dbf26851889ab972f7c51a6660b94cce61eb6e9
 SHA512 (libfwbuilder-4.1.3.tar.gz) = 92cb5ad8f10e8d20e6c3122e0c9993734b55fb8ef96879530e7db836ae9bc84e9ef3fa0a5cd698b28ac7bdc88adb47703d9c00bf23bab980c6260a6756ef7e2b
 Size (libfwbuilder-4.1.3.tar.gz) = 363194 bytes
 SHA1 (patch-aa) = 9601dfd97124f2c0c6faf820e8624bdc79463658

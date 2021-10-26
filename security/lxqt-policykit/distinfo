@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:18 nia Exp $
 
-RMD160 (lxqt-policykit-0.17.0.tar.xz) = 661808bbe41d3dde059dea8e02505020ddb4d9ad
+BLAKE2s (lxqt-policykit-0.17.0.tar.xz) = 92b0631a68de99c709da7166b9e625202c87f42c25104a4527eb7dbd54ba6e9e
 SHA512 (lxqt-policykit-0.17.0.tar.xz) = 1cfd4b2d21840704e4b15ae71098e9c6f3d51031293f1fdf6e134ffee867fe4e845caaf24fbd2c107317372b90b6d415a76854977fa8f6b703e708bd09120328
 Size (lxqt-policykit-0.17.0.tar.xz) = 38272 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 6ec078b9a98a84fd73b9e512eceb4f632bc3721d

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:53:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:02 nia Exp $
 
-RMD160 (cracklib-2.9.7.tar.bz2) = 2b8b4657948ca18056e9b606d09ca975fba2b676
+BLAKE2s (cracklib-2.9.7.tar.bz2) = 1ebcae43dbf342d7e20eb83c8ac63e5bb1211064d87e999698e64f8e8a3f77ed
 SHA512 (cracklib-2.9.7.tar.bz2) = f6bf65ac092ba46ff78ddbc115692260fb76dc71219cd679d2ea935ebfb9e709fbb30259a7406743ed00dbdc415335b3ac9d9fcba1d204ea36d5eb96bf1333a2
 Size (cracklib-2.9.7.tar.bz2) = 603630 bytes
 SHA1 (patch-lib_fascist.c) = de37fed4f5d3b591dc0c3264f852b85d98488cc9

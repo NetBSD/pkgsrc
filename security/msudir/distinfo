@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:54:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:17:20 nia Exp $
 
-RMD160 (msudir-0.15.tbz) = bfba4bd50b59226b348b5e9462b9dfc763dbfe70
+BLAKE2s (msudir-0.15.tbz) = ae0249fdec4353b757e7c819ecff6743085e32d60cf455f136ce15835b30658a
 SHA512 (msudir-0.15.tbz) = b78d23b25644da203d4aff2ff73a4bdfa27df8787968ec54a35ceb83f3b6d8b018ab579590924a18eadbe95e59c925265e77e8747776c287f33abe9d2e15fafd
 Size (msudir-0.15.tbz) = 5088 bytes
 SHA1 (patch-Makefile) = ad00d68026a877ab22257e696be0898053de5e9b

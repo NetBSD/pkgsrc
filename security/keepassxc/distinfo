@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:53:55 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:17:11 nia Exp $
 
-RMD160 (keepassxc-2.6.6-src.tar.xz) = c3933aadf16a103f3ae4a5c2150a4c298e15dbe0
+BLAKE2s (keepassxc-2.6.6-src.tar.xz) = 83ce4acce5a94697de86d0189a40a577741f17af16b0273cae17c8769d64dbb1
 SHA512 (keepassxc-2.6.6-src.tar.xz) = 175702ef3ae5b048ba23a794ddf4e17d61f2640955de7ec21a3e49e4abe7cab8c93c9a2bc61c5c052c62382a69bd8dcb4a4f0cf6daa162f5e00cff3f7a1a713b
 Size (keepassxc-2.6.6-src.tar.xz) = 7640532 bytes

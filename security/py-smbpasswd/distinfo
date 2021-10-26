@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:50 nia Exp $
 
-RMD160 (py-smbpasswd-1.0.1.tar.gz) = 898046b6f1b2191354af0c49b996b5b2066a54b8
+BLAKE2s (py-smbpasswd-1.0.1.tar.gz) = 37e83357313bc898bf4391d3494e1811f391c873301d7bd0535fc021b6cf2896
 SHA512 (py-smbpasswd-1.0.1.tar.gz) = 31a71d49108503867969709d7aad13f7c6e900bd3ee45b8f67cd254d63a9347e0bd4f5a2eebcf90e2c73efd86c63c02d79cd7af518db3e7dad5402d4c53d7683
 Size (py-smbpasswd-1.0.1.tar.gz) = 13153 bytes

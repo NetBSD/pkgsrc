@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:36 nia Exp $
 
-RMD160 (pgpenvelope-2.10.2.tar.gz) = 465c420969001d5de477d58706b9358a913b5f27
+BLAKE2s (pgpenvelope-2.10.2.tar.gz) = d2391e39de4db0f562b45959feaddf36b47221d023bc985d78d93b05762263df
 SHA512 (pgpenvelope-2.10.2.tar.gz) = f16ac183bf0ec820ac88a5c0b7f7b390450d06d2554b46b8867e7f3a3419787af67dd2cad54c41020a05730a6764fe6fccadfc9f4737b19841694efd12470fc7
 Size (pgpenvelope-2.10.2.tar.gz) = 282070 bytes
 SHA1 (patch-aa) = 8a1a79f6276d24d6dbf8e5dacaeca227a139ae34

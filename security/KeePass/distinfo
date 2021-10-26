@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:53:40 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:16:57 nia Exp $
 
-RMD160 (KeePass-2.44.zip) = 1e31fef1eb0f38e524c377fba3b71ebad7d21741
+BLAKE2s (KeePass-2.44.zip) = 94fee8609d4a029d4b6b938b695d667e0d933a13382942e33e79faa7eff2552d
 SHA512 (KeePass-2.44.zip) = ec9cbdcf2e548ac781a80e14f15b213002d2e9affe3deb4740e404d6e17363bb55d9a2d27e0a9d2e8770e93cdcaa811ca751308de68670b8694b8f2fc061c496
 Size (KeePass-2.44.zip) = 3214311 bytes

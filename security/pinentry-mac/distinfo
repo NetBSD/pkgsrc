@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:37 nia Exp $
 
-RMD160 (pinentry-mac-0.9.4.zip) = 9b2e4dc378ebec9f314e1706a5d3d9a358f0e4b2
+BLAKE2s (pinentry-mac-0.9.4.zip) = 63bf7a6ddcc85eefcd4235ac71a01c2b81490629b318272cdc76ade30dee0194
 SHA512 (pinentry-mac-0.9.4.zip) = 6eaba116eb248a2b444e131c9f9f56f91c028783e37e5b600763f1c02b9162495a557517dfb96883cf4d22d8582907e4615d3491fc8aadaf85eee8b4464067bf
 Size (pinentry-mac-0.9.4.zip) = 312871 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:30 nia Exp $
 
-RMD160 (Digest-BubbleBabble-0.02.tar.gz) = 9f6e8b1b24b1f0df84af21f29e990602ff6e17e5
+BLAKE2s (Digest-BubbleBabble-0.02.tar.gz) = 34885bcffaca886fa8d0f0481fa6f3394a195ccf981ec80c8f5cc7b8cb094083
 SHA512 (Digest-BubbleBabble-0.02.tar.gz) = 7f5d7519184eed07e3b3ce302b7dd10980acf34af91f7ec8a317c2b7faf4a8a35dd4dadecf643c611456554ae7bfa82699afd80af195e801502047b243653ed5
 Size (Digest-BubbleBabble-0.02.tar.gz) = 45661 bytes

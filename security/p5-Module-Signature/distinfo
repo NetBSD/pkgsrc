@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:54:15 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:17:32 nia Exp $
 
-RMD160 (Module-Signature-0.87.tar.gz) = 0a52138061fde1ececd13ddba2ade9ee6e06f4cf
+BLAKE2s (Module-Signature-0.87.tar.gz) = 5828a5410396e39a63b893f2fb76f06dc0bab5306593e2b15fff8d3b9c5fe15f
 SHA512 (Module-Signature-0.87.tar.gz) = d0afeab528d0b8a46b8a6a1f9714ab7efefb386f5b93113e733fa18b23b38c98c6a13f10e9091c0cbf392956cd02484d09482d31cd9146ed6de11adb7cd81124
 Size (Module-Signature-0.87.tar.gz) = 97211 bytes

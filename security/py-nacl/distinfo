@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:47 nia Exp $
 
-RMD160 (PyNaCl-1.4.0.tar.gz) = d93981462dc0c6aa0282c792b9070583d752f3da
+BLAKE2s (PyNaCl-1.4.0.tar.gz) = 2638b0a50e7c49ab87a831eace293da5821212c89f6e8e4b5c47773136abb0b7
 SHA512 (PyNaCl-1.4.0.tar.gz) = 355b974010f94d551f631a2dd5ae792da3d4d0abf8ed70b6decc78aad24a9f965636988aebd14947b137ea14cdcbb73531775f08b1b4d5a9d72b5df3dba0b022
 Size (PyNaCl-1.4.0.tar.gz) = 3416950 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:40 nia Exp $
 
-RMD160 (pwsafe-0.2.0.tar.gz) = 5509379f0bb4acea855183e1249395cdc23954d2
+BLAKE2s (pwsafe-0.2.0.tar.gz) = def257010cbfd28c5a2f4ebe92a06549b284fda0ed71fe4bd7fbf661abc9d6d9
 SHA512 (pwsafe-0.2.0.tar.gz) = e8d3684f523f83def6317ef5561a02d1493685cfbda18707644bf335b7f45b1a548aae17a735838d9f6df345ddb17934607162a6e99348df625b34a9ad5f4cf3
 Size (pwsafe-0.2.0.tar.gz) = 127433 bytes
