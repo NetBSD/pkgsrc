@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5292 2021/10/26 18:45:05 tm Exp $
+$NetBSD: CHANGES-2021,v 1.5293 2021/10/26 19:51:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8056,3 +8056,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-structlog to 21.2.0 [adam 2021-10-26]
 	Updated editors/texmaker to 5.1.2 [nros 2021-10-26]
 	Updated mail/mailman to 2.1.35 [tm 2021-10-26]
+	Updated devel/py-xopen to 1.2.1 [adam 2021-10-26]
+	Updated devel/py-wheel to 0.37.0 [adam 2021-10-26]
