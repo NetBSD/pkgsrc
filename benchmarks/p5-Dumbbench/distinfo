@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:18:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:02:54 nia Exp $
 
-RMD160 (Dumbbench-0.111.tar.gz) = b629c66282168fe8964f2d5d684960344dccfd9e
+BLAKE2s (Dumbbench-0.111.tar.gz) = 1817738050b1a4667ea21538fef7871ff62bbcf1abf377b4c57a20af9e246a40
 SHA512 (Dumbbench-0.111.tar.gz) = 32d99c2336f3fa8af830f6505edbce367cfca7833d7a7cae131fc5fbccce1943476800899d21add8f566ab2f07b7532769c449ad062fdf39b4b917437b331b28
 Size (Dumbbench-0.111.tar.gz) = 35481 bytes

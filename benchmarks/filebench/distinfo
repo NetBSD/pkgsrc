@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:18:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:02:51 nia Exp $
 
-RMD160 (filebench-1.4.9.1.tar.gz) = 0621ce5646ad82c2d2e2cc1d7a128f204e5ebabd
+BLAKE2s (filebench-1.4.9.1.tar.gz) = 7742e730f0e76c60ef9b35ab84294bde4fcd247767f72c1e7f0d542104e262bb
 SHA512 (filebench-1.4.9.1.tar.gz) = a6400aba4266fcf98e46c4824796a594adc5d5e7f9605f6e1ab01973ce448e27948991e453b186947a8d89f8603a69a3ba955edf2a1abccd2935196af7b6f0d1
 Size (filebench-1.4.9.1.tar.gz) = 349535 bytes
 SHA1 (patch-configure.ac) = 6fb54b9513668c7dc3aaf3bbc626d8698c0ed6ff
