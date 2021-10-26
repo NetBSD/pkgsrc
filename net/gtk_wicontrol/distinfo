@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:41:33 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:05:42 nia Exp $
 
-RMD160 (gtk_wicontrol-0.17.tar.gz) = b2b36c9b7810c28fea48e505d48768b125500a42
+BLAKE2s (gtk_wicontrol-0.17.tar.gz) = 7b388fa85f7b43d899edbd728be11c673eb126c769313d4736931cfc4412b2da
 SHA512 (gtk_wicontrol-0.17.tar.gz) = 65a1c3f2fc736b3b1f4ceed5051fee468259b725f2bb7174c9a314484b6c05ad43135543d3abbb796f80dd3326dde3c2a06dfb092ecdfe5a6a9734951beb92ee
 Size (gtk_wicontrol-0.17.tar.gz) = 116130 bytes
 SHA1 (patch-aa) = b1b5a3f4764af06d345e6041e5cec0042334a7e2

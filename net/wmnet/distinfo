@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:43:04 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:07:11 nia Exp $
 
-RMD160 (wmnet-1.06.tar.gz) = a6ac89507370acecc9673f52fd26ae896cc5da5c
+BLAKE2s (wmnet-1.06.tar.gz) = c778bf467ac60120b7d4594ebf25197632f71d99537fc29b829547aa0a58eeea
 SHA512 (wmnet-1.06.tar.gz) = 1e62db5e7e3b843d47459fcfa9cc932ba3df8f8498d1b24dcb77602a334d528b90e9c93886b8b330ac7bd5baa4ad1cd3bc94e96c14a841fba8bb9172f624e10a
 Size (wmnet-1.06.tar.gz) = 27506 bytes
 SHA1 (patch-aa) = d999f66818c05f2f9a58571abc0e548bb2938a4b

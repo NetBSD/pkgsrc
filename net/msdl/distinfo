@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:41:52 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:06:02 nia Exp $
 
-RMD160 (msdl-1.2.7-r2.tar.gz) = 319fb464b620119ccd5fac641fcb357e332f0964
+BLAKE2s (msdl-1.2.7-r2.tar.gz) = 74952fb85806667fe4a12709cc1891d80fc6d587ee96efe1dcdc9f1c16ddc5fa
 SHA512 (msdl-1.2.7-r2.tar.gz) = 79c8996b2300bc0201dfd7e9046e0bbfdd19cce86d2f9b96526e5d9f0f325650040a109c6a294c97c51fb5b0ca6274978b6539f57eecccdb7860cf1af5794421
 Size (msdl-1.2.7-r2.tar.gz) = 207456 bytes
 SHA1 (patch-src_url.h) = fa72197f8d06b7617d10fee79d023dd923089362

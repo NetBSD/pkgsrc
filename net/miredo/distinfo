@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:41:50 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:06:00 nia Exp $
 
-RMD160 (miredo-1.2.6.tar.xz) = b02b96f233df2211f45c0dad981f0a5ab6aa1789
+BLAKE2s (miredo-1.2.6.tar.xz) = 9a956e14898e2c96fd85631164da422b5ddc9309d52130713bd20a57e56cc350
 SHA512 (miredo-1.2.6.tar.xz) = 9cbc604aecde566f921834a220be7675981e1c603cbcc81c3e2e9c58fdcdae2e78ec6ffc180939d5b8f6d7598ba3967270532b2c0c04de8b688a86c436719caf
 Size (miredo-1.2.6.tar.xz) = 477668 bytes
 SHA1 (patch-ab) = b9b1ed3d47ebe992e3eb33dec46a7419273e7d3c

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:07:03 nia Exp $
 
-RMD160 (torrentutils-0.3.0.tar.gz) = bc6dde481113a0a37a1a60fd520c6c28debea34e
+BLAKE2s (torrentutils-0.3.0.tar.gz) = 59601362abc6b947b572dbf5435bc1983b5fcda803a9ab1929f77a47c6452769
 SHA512 (torrentutils-0.3.0.tar.gz) = 479b1e2e865d65067c500760bdbd8bcf91234e418170a17c953480108c09eb79ce1f2e97468f73d8a5b6bc4aeffa1326d843c8c6067bf934d7f30721b1b078ed
 Size (torrentutils-0.3.0.tar.gz) = 21697 bytes
 SHA1 (patch-aa) = 23cbe86a3cb3fa7da1a97055ae05f3d2ab556fea

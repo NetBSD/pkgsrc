@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.66 2021/10/07 14:41:51 nia Exp $
+$NetBSD: distinfo,v 1.67 2021/10/26 11:06:00 nia Exp $
 
-RMD160 (mldonkey-3.1.5.tar.bz2) = 63a21aef47a7510b7f9867544345c8f03edc89c3
+BLAKE2s (mldonkey-3.1.5.tar.bz2) = 4d0a6d475147de0e8c2054a566c90affee9bbfb299724dc395fa484c3a15e09a
 SHA512 (mldonkey-3.1.5.tar.bz2) = 96e75acf91d7ecc41490f898e06d284da27404c7e567f173936d8113885a3b4b6bc93341358f92a30d3f699eef681d97ce56414a37bb02a535ad2da4d4ad13a3
 Size (mldonkey-3.1.5.tar.bz2) = 2847382 bytes
 SHA1 (patch-config_Makefile.in) = 84f235f7ad4e6a9cdec807a24d3f11f769a01399

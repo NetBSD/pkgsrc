@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:02 nia Exp $
 
-RMD160 (mydns-1.1.0.tar.bz2) = ffd7c5d42d5e004e06562d4fb497cc515f31fed9
+BLAKE2s (mydns-1.1.0.tar.bz2) = afb1fb2efb9d087be3a7bd7263a1f131d1321c9650cfc051c57670cb37bf3e44
 SHA512 (mydns-1.1.0.tar.bz2) = f7bc4c90e6aa2105bed59c9b5ca5644d59736cab5e0c893b20a71c11747c0988d3674af8acaafcebbe5c57589259829c90a25f73e84bc6b5c3a01a5a42d730e9
 Size (mydns-1.1.0.tar.bz2) = 573261 bytes
 SHA1 (patch-aa) = 76fc8010ef86169460735ec7012a7885b8d76924

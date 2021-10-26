@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:41:25 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:05:35 nia Exp $
 
-RMD160 (etherape-0.9.20.tar.gz) = 2c6aae91fa136d3cc4a25921b31b31ad69297548
+BLAKE2s (etherape-0.9.20.tar.gz) = bf08b3f69d30be19d9ef644c93cbba4a736dc049df1bcbbfbf8508bd00b32e32
 SHA512 (etherape-0.9.20.tar.gz) = 1dbfbb0efff7871a4b78ca90f81ac2155b57ace217b72e443cdc8b3d3807f7ab881c876bec12d93673500026a9dbf1111417a419891df62230e664af9b54b636
 Size (etherape-0.9.20.tar.gz) = 1480790 bytes
 SHA1 (patch-Makefile.in) = 6f83887002b4c72a96104928412cf0e5ef497acf

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.75 2021/10/07 14:41:43 nia Exp $
+$NetBSD: distinfo,v 1.76 2021/10/26 11:05:53 nia Exp $
 
-RMD160 (lftp-4.9.2.tar.xz) = 48ec8b568af0023ab41baaf2f4363a0400667c77
+BLAKE2s (lftp-4.9.2.tar.xz) = 03aa37d43f7ba4f15db9c19c9de7e4aa313e1d742cda65e9c2caab248007c0a3
 SHA512 (lftp-4.9.2.tar.xz) = cda8698e7e34d748715a6fe5dc06c758240302621c7957402f0cc67577acf1a96b436fda4282408dee8171dc84a31e0be432df99a30f0a10057a8e7ea9ec64ad
 Size (lftp-4.9.2.tar.xz) = 1654960 bytes
 SHA1 (patch-aa) = 988f4f2f5b9469d3c645ffa984d5449a219229bb

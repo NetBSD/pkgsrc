@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:49 nia Exp $
 
-RMD160 (jumpgate-0.7.tar.gz) = 1414be6f18e8dc4b335bd96dfa35ed56e7bf805d
+BLAKE2s (jumpgate-0.7.tar.gz) = 81670712a7e3966d1ff3743b295c1b4f5e9db0f7241a05e4eddb3e45c9db63f6
 SHA512 (jumpgate-0.7.tar.gz) = 63f236c8328b6c7824b4d533fa2750bc011130ea70787d5960928f74410be72d484a3261c18109d6f0c9d77864aa857ca7d0dddeefb0b56b78cd0300f1fdbb19
 Size (jumpgate-0.7.tar.gz) = 40789 bytes
 SHA1 (patch-aa) = 6d51f954f0ee02a255c1493de8d33d4838bec964

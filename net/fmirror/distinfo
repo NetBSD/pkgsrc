@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:36 nia Exp $
 
-RMD160 (fmirror-0.8.4.tar.gz) = f053b0d7f88d516890263e7b65e63a781dd2f044
+BLAKE2s (fmirror-0.8.4.tar.gz) = be612ded7c05cd5a74d1422303a2a2dcf0a31e37e8bf5cc9c93c9677afb1c6c2
 SHA512 (fmirror-0.8.4.tar.gz) = 069ce1f943b7cd614351dfbc7777b49fdeccd5aa2d7371b3050dd6133ced0c457eed9a92f9f89c364e9a73691bedfc70c471188dfcf17e881d33587e7d73d93b
 Size (fmirror-0.8.4.tar.gz) = 59831 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:59 nia Exp $
 
-RMD160 (syncffsd-0.8.tgz) = adcaf8e0a043344d70d8cabf30241336eae8e99c
+BLAKE2s (syncffsd-0.8.tgz) = e9c87a21198d12d52cb2b8885d6544f4ff61c028ef2a912e3fe92a8642f0e0c8
 SHA512 (syncffsd-0.8.tgz) = ecef3bb3a6baf07522a79fb0a30d091441da5787950ca7b68a3ef264b1ec1541073cd7a944317024cafde33d75eb5843017bae13cbb35b281eb81cf243a6ebbc
 Size (syncffsd-0.8.tgz) = 10401 bytes

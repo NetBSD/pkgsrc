@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:17 nia Exp $
 
-RMD160 (Net-DHCP-0.696.tar.gz) = bb1ca1620a124450fe709eec0ec8292957ef5873
+BLAKE2s (Net-DHCP-0.696.tar.gz) = 88c9296934e778997a5d5abf833fe0da5adbc59b1a4d5b313a09db870eeceef9
 SHA512 (Net-DHCP-0.696.tar.gz) = 4e9a0858cbbe3594fe2826234423be6fa3be8b477dcdc377fc63901fb627ac70946a06bebb6afd464202df624dd05c496a5729e78f85190ab34019d64bb17627
 Size (Net-DHCP-0.696.tar.gz) = 45683 bytes

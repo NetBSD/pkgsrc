@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:52 nia Exp $
 
-RMD160 (rubytter-1.5.1.gem) = 2c24b00864b7586a83a03a87567e966104a73a8a
+BLAKE2s (rubytter-1.5.1.gem) = 8c244fcc26e535bf3cb0c4a1c276007b41c06d1bc1f19d535955102a4234ba8f
 SHA512 (rubytter-1.5.1.gem) = 79be7b7803a53db654a14ff83da657e3e5016d5bda61e8c127dbf6d85231a8c115d38041aba99fdabd50825135b801cc444cca84c13d174004cda8cc4760bd2e
 Size (rubytter-1.5.1.gem) = 15872 bytes

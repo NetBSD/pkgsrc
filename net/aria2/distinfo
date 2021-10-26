@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2021/10/07 14:41:13 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/10/26 11:05:22 nia Exp $
 
-RMD160 (aria2-1.36.0.tar.xz) = dcde8da73d2300528d9cef8cc7bcbbbfb101e811
+BLAKE2s (aria2-1.36.0.tar.xz) = 632ae5342503f7aec38c86edb0aa4f2ec933a5d1ff745d543d5ce5d91a122871
 SHA512 (aria2-1.36.0.tar.xz) = 8203dbb75274455a78c50dd4f894e631de6931ac889f26896dceed78ec38c98cdbcf07e164744f308f2bfffeae1016beec1bfdbe8cad7f3280d11376aa0c2542
 Size (aria2-1.36.0.tar.xz) = 1619036 bytes

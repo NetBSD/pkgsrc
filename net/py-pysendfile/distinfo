@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:42 nia Exp $
 
-RMD160 (pysendfile-2.0.1.tar.gz) = ad3d649d310529821ee0ac202e700beef941c707
+BLAKE2s (pysendfile-2.0.1.tar.gz) = 5d788f17063c3b978da8b93a2f582be7d39001f66434937ff6935b9d295d434d
 SHA512 (pysendfile-2.0.1.tar.gz) = d6ee08eb251fac30c90a9ee829fd992f3620697eef2893ced5a2c6273486c3c5fd35c70962585a8d747d578817391f91c929bfeeba8c4485d52a15748229ca9c
 Size (pysendfile-2.0.1.tar.gz) = 19315 bytes

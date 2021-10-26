@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:40 nia Exp $
 
-RMD160 (gnet-1.1.8.tar.gz) = a967693f6cbfa6dab7f0c98bb56a7c2e8049cee9
+BLAKE2s (gnet-1.1.8.tar.gz) = 62043b6f5bfc1860c56a11d69b4f22b1ac0c3a92603c557c136f8fc99a66b32f
 SHA512 (gnet-1.1.8.tar.gz) = aec4ab87970d45e1cbb3e029685a2ba9399dc940e42d4371bc18376955b9aa0e00d54d8b47abe4e82e3dca7f134e54395a04ec04554376851585757249cb12e0
 Size (gnet-1.1.8.tar.gz) = 350091 bytes
 SHA1 (patch-aa) = b46a6ca9a9f1582d262763d59c1ff6e4111667f2

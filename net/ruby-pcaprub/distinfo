@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:51 nia Exp $
 
-RMD160 (pcaprub-0.13.0.gem) = b682e7cdab2ed24937f3eaad2584b3d07486095d
+BLAKE2s (pcaprub-0.13.0.gem) = d5c747b95c38c1704d136c89b3bb4bbed3c18bfc125d0ed3713892b929570036
 SHA512 (pcaprub-0.13.0.gem) = 6099996cca317194582a50ac89769d11ba802a9658c67f707e342b3c345bcaab26fba5ca2dc245a39eeb01f9ff6fdde1ae64a3a1ee4dd0e5243bae2ebed37e5f
 Size (pcaprub-0.13.0.gem) = 36864 bytes

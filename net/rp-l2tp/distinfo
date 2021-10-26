@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:48 nia Exp $
 
-RMD160 (rp-l2tp-0.3.tar.gz) = 25ed4a68a01c08f3acee1ce01a90673a568db55f
+BLAKE2s (rp-l2tp-0.3.tar.gz) = 7fc2d4429ce17ee7f6cc4af10ae91aea8a17c028e6606e022f14b57975dd6ca5
 SHA512 (rp-l2tp-0.3.tar.gz) = f83750be078e83e482f3232958ef19d58d6b545fe0cbea6b074b2e31011bab0978117c850181f7681693ec2f9aea7ccb81d75520c417da601c3ba74a5bbe420b
 Size (rp-l2tp-0.3.tar.gz) = 191418 bytes
 SHA1 (patch-aa) = a351d8bcea431bc47a0a375c770d07e059103841

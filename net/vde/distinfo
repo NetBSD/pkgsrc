@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:43:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:07:08 nia Exp $
 
-RMD160 (vde-1.5.9.tar.gz) = b829263dc074110d95687add76b8227ca85d00e1
+BLAKE2s (vde-1.5.9.tar.gz) = 0bfab01b656340e758766dac617eba20ac509480b505b2a483613ff5f30a53f1
 SHA512 (vde-1.5.9.tar.gz) = 6c18947b15b5f0708da1e3dbafeeadda2fc7ae1030de9b0ce7df846d828d79fdba493258e8005ee30ef51ce58a0a9e83dc8fc836b018de5261433357462e43f7
 Size (vde-1.5.9.tar.gz) = 437770 bytes
 SHA1 (patch-aa) = 934810045bd01e77fad382ec39ab09c1f2f5badb

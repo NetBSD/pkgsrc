@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:58 nia Exp $
 
-RMD160 (srsh-1.3.tar.gz) = b8dd3a3df49c47d1ec4ab5e33a7e6111f52cdb81
+BLAKE2s (srsh-1.3.tar.gz) = 14c568073baf17dd542124a23874dd07d82163a367a09bdce2a55b1711007328
 SHA512 (srsh-1.3.tar.gz) = 8b9ce7e028429a488cb82af7fc10be3ba8f7fa72343d2ab65c3745ce547574a7f9e5ce56555668ed454b4142a3de6adf20635f7fe1032c0be44ba2be977fa85d
 Size (srsh-1.3.tar.gz) = 686 bytes
 SHA1 (patch-aa) = dfe99342bb038989a147918441f996cb234a021b

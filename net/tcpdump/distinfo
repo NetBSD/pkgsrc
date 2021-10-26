@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:42:52 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:07:00 nia Exp $
 
-RMD160 (tcpdump-4.9.3.tar.gz) = d4221366c15321acaaa15f178f8a00bfd4e84598
+BLAKE2s (tcpdump-4.9.3.tar.gz) = 5d0cb60a29738c397d21efbf61c0eebfb3926276591c925c59ca986a224495ec
 SHA512 (tcpdump-4.9.3.tar.gz) = 3aec673f78b996a4df884b1240e5d0a26a2ca81ee7aca8a2e6d50255bb53476e008a5ced4409e278a956710d8a4d31d85bbb800c9f1aab92b0b1046b59292a22
 Size (tcpdump-4.9.3.tar.gz) = 2333119 bytes
 SHA1 (patch-ah) = 75dbc11440b32349014919ac04a628d8d4d8c45c

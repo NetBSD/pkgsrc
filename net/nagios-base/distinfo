@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2021/10/07 14:41:52 nia Exp $
+$NetBSD: distinfo,v 1.34 2021/10/26 11:06:02 nia Exp $
 
-RMD160 (nagios-4.3.2.tar.gz) = f6e8f13b3c6caed38a8d83112b880ab2a2e1c6c9
+BLAKE2s (nagios-4.3.2.tar.gz) = 2b996e68902ba89582a686fe47c25cb400c06b2ace7e5208c36d2060248f134f
 SHA512 (nagios-4.3.2.tar.gz) = 679e76f7a232b9b0dbbc2697f51b58d09ae3d3833e0e6922bb39d90768c81f2eb09b9ab36b7fdaeca893cebd93fc1edc1232f245498d4420980ba4659df60a31
 Size (nagios-4.3.2.tar.gz) = 11096863 bytes
-RMD160 (nagios-netbsd40-icons.tar.gz) = 96ad67a107dad095213ddbf58debcfd5b46d6dee
+BLAKE2s (nagios-netbsd40-icons.tar.gz) = f2b36e2dd9753ea56a0e531b047800166e84910f11ca4134daf498c7f36b5a82
 SHA512 (nagios-netbsd40-icons.tar.gz) = 27cd564ef6dbe076b43dc2207f8f4f49bfb575f216e90d03a157208e57e23930c1e5915353406f09bd762ad11e6306625544292bd919f8524a2239aac758afb1
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
 SHA1 (patch-Makefile.in) = 0bf706869847ad100a809f47c2415eb30e9db098

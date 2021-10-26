@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:02 nia Exp $
 
-RMD160 (terraform-provider-local-1.4.0.tar.gz) = 0f32d3807dc5e711984a88f73e2ee7bd2d027d57
+BLAKE2s (terraform-provider-local-1.4.0.tar.gz) = 74c0f157e438948b50d811665128d61a666345877f2b7bd349fd4a1d2efe99aa
 SHA512 (terraform-provider-local-1.4.0.tar.gz) = 543bc7f9e97bf95aa926edc3599a3583f0b636c042eaeef1a3989370bbc96e8b6b8668c77e131ed37917f630f2e2534194cdd128763d8fa2732b78f5e3bcfde6
 Size (terraform-provider-local-1.4.0.tar.gz) = 4897251 bytes

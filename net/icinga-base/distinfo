@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:47 nia Exp $
 
-RMD160 (icinga-1.9.4.tar.gz) = f118ef6e3f56764e47fc24304dff03c1a5d766e4
+BLAKE2s (icinga-1.9.4.tar.gz) = 1534e7427ff1f6537b4befc66f3d8b32429a13b093176a42928670c45ac4dd59
 SHA512 (icinga-1.9.4.tar.gz) = 973c752ec8547f840445678ef94434209d243d4cef200700d9f774148623531260a90591b27db06d8f46ec50e3f55fc060fbbc90016626298645b6430ba5126f
 Size (icinga-1.9.4.tar.gz) = 17082569 bytes
 SHA1 (patch-Makefile.in) = 0c3ed01f1e8b807710304f6b92011a44d3da0fda

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:18 nia Exp $
 
-RMD160 (Net-DRI-0.96.tar.gz) = a312fe76c3ee3dab8c010d0250970f0e747cce31
+BLAKE2s (Net-DRI-0.96.tar.gz) = 8dd82294aa5ca41a498f3f886bd5014a65ee6f1952a30c77bd638b9e4fab24f8
 SHA512 (Net-DRI-0.96.tar.gz) = 752ee008a1e2de7732117254919e8e82bc43492cd163a9829555d25f12fb76e0a7f16493d6defeed81c6810c726124f69de261601e5137a43008cdaeea563650
 Size (Net-DRI-0.96.tar.gz) = 446270 bytes

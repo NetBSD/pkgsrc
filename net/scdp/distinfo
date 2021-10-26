@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:55 nia Exp $
 
-RMD160 (scdp-1.0b.tar.gz) = 3a9c80ff442c2c23546d41a9767ab4b24cf8a880
+BLAKE2s (scdp-1.0b.tar.gz) = 97a95b6cb5e4b92e33a2ac10e320347eae03ad86a45e6cf7b2e71f4606bfcd8f
 SHA512 (scdp-1.0b.tar.gz) = f5cf286e9d4c89b1941797556c33a3de929c96ee0e19d04a7b9e7ba7f6ae17a0a6f6b61e307d40b525067eba7f23d6e13eb8e3724c2d750f6fc510c237830dab
 Size (scdp-1.0b.tar.gz) = 38669 bytes
 SHA1 (patch-aa) = d1ccb5e8a5d68f584ca4dd58fd89fc36ccf144da

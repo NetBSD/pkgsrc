@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:29 nia Exp $
 
-RMD160 (corkscrew-2.0.tar.gz) = c7b4ae4cc4df4b33f8ae9be19305004fd0ae20a0
+BLAKE2s (corkscrew-2.0.tar.gz) = b5d53e3926bc25da9c5b3b237244f884e1f0ae90a3bf6643e379de06e8a7864a
 SHA512 (corkscrew-2.0.tar.gz) = bfea81064601cdf67ba1730b49e3a5f7aa377423edbfb052ff0f6b2776b49e104852b7f126f4668d37541a706313ef37d9b4535126e94bb202db4ac38f693e6f
 Size (corkscrew-2.0.tar.gz) = 56749 bytes

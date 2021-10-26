@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:35 nia Exp $
 
-RMD160 (ez-ipupdate-3.0.11b7.tar.gz) = fdb0c0cec776690cd57b12d18d3733a1b61ad72a
+BLAKE2s (ez-ipupdate-3.0.11b7.tar.gz) = bb784403006649c3316364201ab5cff72744ae93924bfb34c0f16fe86d8d6ee9
 SHA512 (ez-ipupdate-3.0.11b7.tar.gz) = 1dc56508b8df2c1087121a8852c8f6458cf911433609f8aa55f59ed9749b172d32f19490bba6df5f239075543c213c065eb9d18b673694310a1da15c0b5c5e82
 Size (ez-ipupdate-3.0.11b7.tar.gz) = 82481 bytes
 SHA1 (patch-aa) = 4eba2e43f9dcd2da1f927a5cc09048d7025ad8a4

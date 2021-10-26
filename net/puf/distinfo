@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:32 nia Exp $
 
-RMD160 (puf-1.0.0.tar.gz) = bbe11a23bb486b7c29d786d43a2d37690e7a363f
+BLAKE2s (puf-1.0.0.tar.gz) = 11c57dc4ca5835984639e4038684a5607b94bea4888ee79fd740c6e621970f93
 SHA512 (puf-1.0.0.tar.gz) = c26a9c2dc0ae12ea20478cd4328891c88d32c0217e215bff1ee817463445a748e4d0893ac0af1fd47b8822e5bfed6a44c7cc2d22c915a825bf943b159d61e135
 Size (puf-1.0.0.tar.gz) = 153540 bytes

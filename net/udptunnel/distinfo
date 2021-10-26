@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:07:06 nia Exp $
 
-RMD160 (udptunnel-1.1.tar.gz) = af8e1b15447fdae52b6140c549849e56d43106f0
+BLAKE2s (udptunnel-1.1.tar.gz) = 15c11018909fe8fc9c1a2472d949fc07cd77742056164b37efb06f2ae59265f9
 SHA512 (udptunnel-1.1.tar.gz) = 9f9f978caede9085723c6222443b020b44d688e9364ffd57455cdfe0686d6f492e758c2ac502602cf4809ab28c3d47525e74feb00caa2b692358a272976eaa52
 Size (udptunnel-1.1.tar.gz) = 30910 bytes
 SHA1 (patch-aa) = cf6fe0651c6d1437ec81fbbcb8fbbbf6b05ebc41

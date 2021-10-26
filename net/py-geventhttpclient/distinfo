@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/11 06:51:41 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:36 nia Exp $
 
-RMD160 (geventhttpclient-1.5.3.tar.gz) = 47a63007ac225554c966ab503722b8245c6dffb6
+BLAKE2s (geventhttpclient-1.5.3.tar.gz) = 707fd4ad266cf9232d16e392a151560773e1682c0a7ae2bec50a1b0b9510f526
 SHA512 (geventhttpclient-1.5.3.tar.gz) = 9a0ed907f73f7f5ff8675502ef6fc82bff7b543d0a2d22e1eca5aba3592675a87fe09c48981f496b7f63a660e7eab5f68801ae74da8c33ac9d9bf55a0425eed1
 Size (geventhttpclient-1.5.3.tar.gz) = 58447 bytes

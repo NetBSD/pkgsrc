@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:05:29 nia Exp $
 
-RMD160 (coursera-dl-0.8.0.tar.gz) = f7ff3b388d0325cc06e311bdb78f341a91927aa0
+BLAKE2s (coursera-dl-0.8.0.tar.gz) = c0f75787392d457221277b69a2a5c014ce1cb2f449e3752bf13b80d7c4e5d803
 SHA512 (coursera-dl-0.8.0.tar.gz) = a88add229f69f810abc9a156878a57f891378ecd49572c7f5eb0df24250b214daf85fae4c47eac9c13aac23f2dcd92e99f7ef57e916efa5cf59187fc71a324da
 Size (coursera-dl-0.8.0.tar.gz) = 222829 bytes
