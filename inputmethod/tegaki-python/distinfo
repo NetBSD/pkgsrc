@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:44 nia Exp $
 
-RMD160 (tegaki-python-0.3.1.tar.gz) = da5d3c3ca32a5a7803820ebe5a839028384ce1aa
+BLAKE2s (tegaki-python-0.3.1.tar.gz) = 599daa30b8611811dcc5d840246769b89bc77fc126c529661dad3a43c2621949
 SHA512 (tegaki-python-0.3.1.tar.gz) = 3d20c56030ec4aa447f7943fc26fdee5217ae622aae5b9e9bde99d8b6f126e73062f043e16a168d44e2f05571113a5dc718ad2b4189d07bcbf6f93386217a9ba
 Size (tegaki-python-0.3.1.tar.gz) = 74691 bytes

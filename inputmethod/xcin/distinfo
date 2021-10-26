@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:19:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:49:47 nia Exp $
 
-RMD160 (xcin-2.5.3.pre2.tar.gz) = f1fb83d1e21a0f5dbb80c5eafdaa6c7f313ea865
+BLAKE2s (xcin-2.5.3.pre2.tar.gz) = fc0e2dece86f69c7bdc0a174009f4ee2b8529f11ffb72c409e8993e1d52b13b0
 SHA512 (xcin-2.5.3.pre2.tar.gz) = 01b44d0cf1e90fd42a7a45443bc32bb0e2eb85a500a7ee8ca3a4968becf43f8ffbc37f5beec9307a0687a51b7d0a28fba7ed6f9501786c2fbacf562d5dffec86
 Size (xcin-2.5.3.pre2.tar.gz) = 1433915 bytes
 SHA1 (patch-aa) = 9d0631ee59d376515cf260537f664dda9bd14a83

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:19:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:49:41 nia Exp $
 
-RMD160 (scim-ccinput-0.3.1.tar.bz2) = e85a186e70c392089133ca13f5b97012e0d4a26c
+BLAKE2s (scim-ccinput-0.3.1.tar.bz2) = 3e7ee628bb5f57ec4289b1b4ca17c10699b9b7da10b352dde62107ec8e6b3f01
 SHA512 (scim-ccinput-0.3.1.tar.bz2) = 10325c333f46da6ba18971fcd23530ce6803da3beaefa0b3c397d0bf2967d9347054696d3f53163d0856a7f85cf72b87bf449cca4bf452963d988d0a6b585a0e
 Size (scim-ccinput-0.3.1.tar.bz2) = 1426327 bytes
 SHA1 (patch-aa) = 4cd6f6cf6553aef0af449df8a83ce33f93274c28

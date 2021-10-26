@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:19:36 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:49:30 nia Exp $
 
-RMD160 (Chinput-3.0.tar.gz) = f51ee0f87bc38b760bf4d585466d25d4b6176518
+BLAKE2s (Chinput-3.0.tar.gz) = adf120d4f8fc6123113290144f5da706de4c81fcfe0c5c4f90b389c39adfd89e
 SHA512 (Chinput-3.0.tar.gz) = 386abfd5511845f4b06f06e1412f063359886ff3ad19ce14fb96f0814eac02ccc4bbf610c9e34b006d02a2dfaad0b56c90dfe90a45f0fd241768d1c43ff15354
 Size (Chinput-3.0.tar.gz) = 484374 bytes
 SHA1 (patch-aa) = c014ab66c2e6f32d66b55dec073ad9fccc1c5df0

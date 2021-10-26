@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:19:42 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:49:36 nia Exp $
 
-RMD160 (imhangul-2.0.0.tar.bz2) = 196d05c164d446d65be11ba99263eaf25e2fbafc
+BLAKE2s (imhangul-2.0.0.tar.bz2) = 06e3e98a8e88ee52cd7370e18eb7e24094e641bd7c922cb6193300dd30ef5502
 SHA512 (imhangul-2.0.0.tar.bz2) = 203d83ec714ee464d3caa304a462a93129712d2221188a4f5cbb1caac309fb91f3b49749ab81d01d3c8bc2feeaf80398e9b8bc5e09b79c228fbc13ed9fbc28d3
 Size (imhangul-2.0.0.tar.bz2) = 255591 bytes
 SHA1 (patch-aa) = 866f9183fc2e075ab6d00545f577950c6d58cdb2

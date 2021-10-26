@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:19:36 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:49:30 nia Exp $
 
-RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
+BLAKE2s (Canna37p3.tar.bz2) = e36a9f8479d9a201a030b5350bef41203879d291f4ca2c6367af59c1d4cf8050
 SHA512 (Canna37p3.tar.bz2) = 82846f2393aa2654dd2c97a93178098b8bd11e5409b584447f1b6fdf303adacc9802e2293cafd98b68af8b69622625ed00aa9712bf270feaa119adfdf4211158
 Size (Canna37p3.tar.bz2) = 1263065 bytes
 SHA1 (patch-Canna.conf) = 81b46285a2b91c07b8497dc6669eb26552391a6c

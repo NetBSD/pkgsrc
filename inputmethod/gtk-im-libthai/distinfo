@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:19:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:49:33 nia Exp $
 
-RMD160 (gtk-im-libthai-0.2.1.tar.gz) = 36e8fec8d020fd4d31398b61c96d60dfdbf30ed4
+BLAKE2s (gtk-im-libthai-0.2.1.tar.gz) = 228ebd81306d8d9cb5bd2f8badc0b1507825a8dee815b66c12d9befd83dbb9c7
 SHA512 (gtk-im-libthai-0.2.1.tar.gz) = a7565161da1d30cd45234cf862245855b93ee9fcfd0b19d8f52838dddd86af96dcf5f134ae1bf022dba46c3d6ea6abfa592b407e5de298c9ef2285829c4a3981
 Size (gtk-im-libthai-0.2.1.tar.gz) = 322601 bytes
 SHA1 (patch-aa) = 5e2cacd1e91b9e67cfb03fe50284a9e8003601ab
