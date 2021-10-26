@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:27:52 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:55:30 nia Exp $
 
-RMD160 (R/pixmap_0.4-12.tar.gz) = 87d0d421ad2c617651e8be9a7032a09126804019
+BLAKE2s (R/pixmap_0.4-12.tar.gz) = e101d6b37fd05faf3549caef8ce19ddae68c366f790c4f46e16dffcf50647265
 SHA512 (R/pixmap_0.4-12.tar.gz) = fd61fc1152814c5f56f0cd93bd8c0ebd1f3c683217d52b44cbdaad643aea9da72a15f76df753f10b9acafcb33d3b5ac37c1706c55689fcb3cd1cd29d215bb5fb
 Size (R/pixmap_0.4-12.tar.gz) = 34637 bytes

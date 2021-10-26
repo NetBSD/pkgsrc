@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:42 nia Exp $
 
-RMD160 (lag-2.1.zoo) = 95f2dcca6a273eae98bae2435d1dd586934d8b99
+BLAKE2s (lag-2.1.zoo) = 278b7324cd66094039fe4a679bcde0fc4e31bc85f70f1e1f166732edcc12f7d3
 SHA512 (lag-2.1.zoo) = 30ca0a1a32ae8d61e9ac55046cccda4d1871011d4160672022ec8cf2b689801dd05545d3f900b413c63ea270fc03ed5c1da9f43ba4cbc5bb29401bbc706f8ae5
 Size (lag-2.1.zoo) = 133792 bytes

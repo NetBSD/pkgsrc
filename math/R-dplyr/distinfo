@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:27:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:26 nia Exp $
 
-RMD160 (R/dplyr_1.0.7.tar.gz) = 707ab28047e53b06049ac469a8fd0c84511aac66
+BLAKE2s (R/dplyr_1.0.7.tar.gz) = 668e7af5b8e2b4d05005a9999e044a42e7608de8ee72335d9bf4e0e9e8a7172b
 SHA512 (R/dplyr_1.0.7.tar.gz) = a81765c414476fdf8a991b487ec0bbd98aaee6f2fd082e3969eb04b7ee4c658a3eb0997dcfef9c743343ade6220f2ea102887cc058c881da249480a5203cde57
 Size (R/dplyr_1.0.7.tar.gz) = 852103 bytes

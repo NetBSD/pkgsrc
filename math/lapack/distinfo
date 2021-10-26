@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:28:08 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 10:55:46 nia Exp $
 
-RMD160 (lapack-3.9.1.tar.gz) = 380a2072eb7d8358ec8bf100e3d114600fc71444
+BLAKE2s (lapack-3.9.1.tar.gz) = fe6fd47467781dfd9da6c1e521c9f4810b79874bb4df83f0f723a286f555f214
 SHA512 (lapack-3.9.1.tar.gz) = 1c70892ce22eb1f5c0be1e0384d00dc876622e6254e853616eb7c0379c5d1ecf2f1f94d06389dbfba06b78484daf625d899306a9dc0b31a0646320c814022fdb
 Size (lapack-3.9.1.tar.gz) = 7543209 bytes
 SHA1 (patch-BLAS_SRC_CMakeLists.txt) = 8773f93b1f907ed02d41677a3819f5bb655a331a

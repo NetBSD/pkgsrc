@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:57 nia Exp $
 
-RMD160 (Statistics-CaseResampling-0.15.tar.gz) = b24a1720263c5a26bb8090d367bd833e88cd5ab0
+BLAKE2s (Statistics-CaseResampling-0.15.tar.gz) = b3878e85be498f7fce0bc97a26497f7d051a62db680f4a1a3810fcda19c77525
 SHA512 (Statistics-CaseResampling-0.15.tar.gz) = 2e7baec4d87c74648963e3af8e88210182b9a6f22ce42c4a8652a2f802568c13736415d3d25f917843a6021921bbbe26d6b69742108569f649a41efe9e4168bf
 Size (Statistics-CaseResampling-0.15.tar.gz) = 58153 bytes

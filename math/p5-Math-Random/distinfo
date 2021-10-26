@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:28:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:55:54 nia Exp $
 
-RMD160 (Math-Random-0.72.tar.gz) = 08cf461515a073815aca7bba56d8482f6d72e248
+BLAKE2s (Math-Random-0.72.tar.gz) = 37d5b688cfc6713a92d7d5475ac3000e2c39f5e784fab542590510299f57b5c8
 SHA512 (Math-Random-0.72.tar.gz) = 6a24f59ba06b93027fe5907d41a36b2142c20c2813813a34a5adfa9ee06de25902d5f544009f307b518905c614238f63ad3717a1f199513f455f4c53119e2088
 Size (Math-Random-0.72.tar.gz) = 46907 bytes

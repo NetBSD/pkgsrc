@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:38 nia Exp $
 
-RMD160 (dfftpack-20001209.tar.gz) = 1e87fbe979e75e89e5a8f4b965aae0bc5b062b24
+BLAKE2s (dfftpack-20001209.tar.gz) = 4b91ecc2b96980c8ef7b5cc34a8ee10d3756c8a78b94f73157c3c00831c21f38
 SHA512 (dfftpack-20001209.tar.gz) = b0b177c46bf7fc031393d2fa79bcc983768521bfd3116785f6aba18fd9dcc7f0866d554bec6d79165275dc3dcf118ed646701fd2cd672415ab27598d1fbe7643
 Size (dfftpack-20001209.tar.gz) = 20475 bytes

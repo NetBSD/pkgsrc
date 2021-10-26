@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:56:06 nia Exp $
 
-RMD160 (xarray-0.18.2.tar.gz) = bdf6a1b4ab94ef82833eb8224a17c35a4173efc4
+BLAKE2s (xarray-0.18.2.tar.gz) = d178c4d1b40c9f9a569bbb83feada2f7864d2d8f94f0469f17d0818e39d976cb
 SHA512 (xarray-0.18.2.tar.gz) = 3cfd6a3b77c48a73eb72e6c39db33aba266925df7ce9b8270231dd14032a717094073a2c3686b09fcff25313b548a452f9ed902211e254254389d15f025d8d0d
 Size (xarray-0.18.2.tar.gz) = 2850065 bytes

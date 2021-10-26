@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:27:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:55:23 nia Exp $
 
-RMD160 (R/RPostgreSQL_0.7.tar.gz) = 8eafa7034503a27fe7d2d2e8d241f6b76196efb8
+BLAKE2s (R/RPostgreSQL_0.7.tar.gz) = 12b22cfeb2da299b464a2e2e9b27cb3bd84a19b00168f494f4faa41f40122899
 SHA512 (R/RPostgreSQL_0.7.tar.gz) = ea42d36cdefbf5a9aaa499e4cf9f02fa7db50dc240b481b2b7b13c5231f0192f6766e07dd99ae960d93571f31b18f13b334b17af4626e92b2529b37676ac53cf
 Size (R/RPostgreSQL_0.7.tar.gz) = 581710 bytes

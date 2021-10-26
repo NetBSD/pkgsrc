@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:54 nia Exp $
 
-RMD160 (Math-Random-MT-Auto-6.23.tar.gz) = 2e8d286777cf416f99824f0e725b79ca5dcf0d1b
+BLAKE2s (Math-Random-MT-Auto-6.23.tar.gz) = 1cbea0aa1cadf38941f33c039611cb1fe858a945c51aceee42458e416b10169d
 SHA512 (Math-Random-MT-Auto-6.23.tar.gz) = 3cdb0a1fee776f6aa91bb7a623bd5b0f2fafa6505fc83352c4b76bdb637b7eb94675fa87b32a0213a1e3baa90e60ddd6330c990f6581abb4dc3cdc7d6e7f8b80
 Size (Math-Random-MT-Auto-6.23.tar.gz) = 134273 bytes

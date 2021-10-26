@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:28:31 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (tasp-vsipl/tvcpp0p8.tar.gz) = 5443143cacb6612f0454a50d210e7ffaad23b5c2
+BLAKE2s (tasp-vsipl/tvcpp0p8.tar.gz) = b09e14d501ca746603c5bf24d7e0083f7b6f04827c6f441b10169b07ef4fb0c2
 SHA512 (tasp-vsipl/tvcpp0p8.tar.gz) = 3b520305c02451674f3d020d945eb8ccfb488a98b889ed193640003d3a96d8340f9953db6ad678f9fc321123604b41ecbc74eb6087e053077773510f1a273323
 Size (tasp-vsipl/tvcpp0p8.tar.gz) = 1461591 bytes
 SHA1 (patch-.._src_vsip_chold_f.c) = 657e9b65b5451eff2bb0708a03807ccd74569d43

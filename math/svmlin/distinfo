@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (svmlin-v1.0.tar.gz) = 730132b7c06e67436222abf88935570d9e425e7f
+BLAKE2s (svmlin-v1.0.tar.gz) = f6e0a4170e936b5f092c49b108215fadc3da13791fe112d14e6ab4c25089ec9f
 SHA512 (svmlin-v1.0.tar.gz) = f2438714924dd93ad2de8be71397800838d77044624263c26903faa9bd18dbe657a2d3e600016df8b5ee1f7daee11dd0b38b06b6e921ab03511fd89f4a268b32
 Size (svmlin-v1.0.tar.gz) = 1068173 bytes

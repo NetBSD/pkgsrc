@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:56:00 nia Exp $
 
-RMD160 (asteval-0.9.23.tar.gz) = 880f0f8100d6ae00b4b5559f7ebbbb3feda88d4e
+BLAKE2s (asteval-0.9.23.tar.gz) = 4ff2fd77b83285fdb5b30f162487cfb4ee3011aabce1ba696da9dd12622766be
 SHA512 (asteval-0.9.23.tar.gz) = b2755b4dbefff1e481558f886cc5724d9a6a953b145736afab237e16f7718d48d1f8f98a0b7355c5e871f8ed0862b60bd6a4d99554a5e0fd0875f9cfdfcbce55
 Size (asteval-0.9.23.tar.gz) = 55239 bytes

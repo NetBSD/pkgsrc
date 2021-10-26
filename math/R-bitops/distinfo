@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:27:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:24 nia Exp $
 
-RMD160 (R/bitops_1.0-7.tar.gz) = 469dc52142085e65dd812a37881f3454f6f33440
+BLAKE2s (R/bitops_1.0-7.tar.gz) = 964189d3f01277abb71b9e856e82e865726f61913dfda231af74d05d09650b16
 SHA512 (R/bitops_1.0-7.tar.gz) = 5a347adbfc8c5cd9f26b32ffbd35cce592540f319ec092edc08f321242b7c72226d648d0625e5cb1d43605a95e5b27ef469eefd2975f28f1196e806921c5daf8
 Size (R/bitops_1.0-7.tar.gz) = 10809 bytes

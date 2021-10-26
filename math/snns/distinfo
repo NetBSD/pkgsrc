@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:30 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (SNNSv4.3.tar.gz) = fe796c37b2220bac6ba8a2067c567a92ba2555c0
+BLAKE2s (SNNSv4.3.tar.gz) = 99c1dfaf75640d30bad218dc0a23f94e221bf71520a6cdec247d9242c2d5d173
 SHA512 (SNNSv4.3.tar.gz) = a057dc946b581eee01334956c33d6870b8b994d1b835834d58c37ae3a8585dfb1206f3082b17a49ee97b22f4c07c0efb47e4e3ae5aeb37e97f69472da3e21f0b
 Size (SNNSv4.3.tar.gz) = 5076669 bytes
 SHA1 (patch-aa) = 805db03fe9d0a00d9d5318f17487a1d4607ac8a7
