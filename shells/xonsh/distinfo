@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:56:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:18:39 nia Exp $
 
-RMD160 (xonsh-0.10.1.tar.gz) = b4a191c514eae9ce7bdee68ff407860aff2c9b53
+BLAKE2s (xonsh-0.10.1.tar.gz) = 0d4fcf646e7baad631583dbce00b07a634d0fc70855bd95f2138a72974dfbac9
 SHA512 (xonsh-0.10.1.tar.gz) = 6ccfa4fd30fac307b27db51f868e9516986c85831bc89fa72dcc28633fa429b928c09b8ff5bb55b86fc6e05f0a8e9ebe8810dcfac11fd97ae42bbd2e1aafc8a4
 Size (xonsh-0.10.1.tar.gz) = 12662490 bytes

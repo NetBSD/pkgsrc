@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:56:11 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:18:37 nia Exp $
 
-RMD160 (lshell-0.9.16.tar.gz) = 146439a1468ada9ce09413e00c6a8dee1443050c
+BLAKE2s (lshell-0.9.16.tar.gz) = b1e75c30d0f42f151971e3fe9353bbe16367708cd939880d6cbe2dd5ecc4c256
 SHA512 (lshell-0.9.16.tar.gz) = 90dbcf3bee91bac017ea1e39e94564d3f40bce5439eb683777983821f64c773c14df0040e746f25d28da5822da61e2b39f9323f8d04fec7b93ca42ab87cefa68
 Size (lshell-0.9.16.tar.gz) = 41766 bytes
