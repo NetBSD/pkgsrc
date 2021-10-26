@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:25:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:53:58 nia Exp $
 
-RMD160 (dk-milter-1.0.2.tar.gz) = 24c1b3f023257937f212e38e15b151b9a5e81caf
+BLAKE2s (dk-milter-1.0.2.tar.gz) = bd69096bf5cbd62af23add79157e9bfc4134b6da811f29be14d3a4f0d446e9e4
 SHA512 (dk-milter-1.0.2.tar.gz) = 76d91c13fd5255d6adb01db4511f0c7ef30808be6ee09d8c3cb71ed25c1c29077636fd58b310db7dfebd5aee22f0949d7c118cc34b21b6ca9cc974dc42c781f8
 Size (dk-milter-1.0.2.tar.gz) = 362255 bytes
 SHA1 (patch-aa) = b5d55642518f6ee4653ce97e7aa46b99043280b3

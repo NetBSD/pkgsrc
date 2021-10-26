@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:23 nia Exp $
 
-RMD160 (UkPostcodeParser-1.1.2.tar.gz) = 66dbc123fb35bafad998a525b3e9c43a92f0737e
+BLAKE2s (UkPostcodeParser-1.1.2.tar.gz) = 5842f31d55d2e7dadcb63ac0d9bb68081dd91cb8f4bdb7bb6609e1b3d7f88dce
 SHA512 (UkPostcodeParser-1.1.2.tar.gz) = c4f77748a3425540ad1ecdae9ef8f966854d8944ed88aa73f0637764a97e9fcf57d46ba64f78b4d052152e613317c04e273c97a69a870a9174783e2052754670
 Size (UkPostcodeParser-1.1.2.tar.gz) = 5952 bytes

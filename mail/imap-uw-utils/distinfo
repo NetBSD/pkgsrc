@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:54:03 nia Exp $
 
-RMD160 (imap-uw-utils-20050108/imap-utils.tar.Z) = eb00b3f90aad728be9df581514e076ed002e4bca
+BLAKE2s (imap-uw-utils-20050108/imap-utils.tar.Z) = fedbb099ef9308f22f6ecce58e86c2b5a0fef41a04c8b298b790486acfdf2173
 SHA512 (imap-uw-utils-20050108/imap-utils.tar.Z) = faea17f41ce0c016e5bb3c8b29c8710a53f57db89f9f47ae654ef9205304e5a4462d9570bd7d6a996d2d1d66e9e4a8e96299d8340b4b43fb34e0d95910b302e7
 Size (imap-uw-utils-20050108/imap-utils.tar.Z) = 14720 bytes

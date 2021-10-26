@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:25:22 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:54:04 nia Exp $
 
-RMD160 (libesmtp-1.0.6.tar.bz2) = 7489ef298b56085f8788a3af4d17aed4ef0f1077
+BLAKE2s (libesmtp-1.0.6.tar.bz2) = ab7915aad11aa1eb245fb4eedb95b9e0cd3a7e9397a3ba8bd2bbac6a998800fd
 SHA512 (libesmtp-1.0.6.tar.bz2) = c122fc5995b76771cce2db58c9e59597cc3a76d273feb6fc26b869f118e91bdf98a5721ee2d1de8175c376af018b5806b0379bbeba2f5da95108916028fd8dda
 Size (libesmtp-1.0.6.tar.bz2) = 365506 bytes
 SHA1 (patch-ab) = cc027b93ae55b84c1b569ddcdd2644d4f63a33a5

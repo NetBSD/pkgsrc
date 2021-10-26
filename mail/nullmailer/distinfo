@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:25:29 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:54:10 nia Exp $
 
-RMD160 (nullmailer-2.2.tar.gz) = e50701d5477c57136282ecc87618165057ec76a4
+BLAKE2s (nullmailer-2.2.tar.gz) = 2341e461f23373f325336b603c7e8136883c6e4c3d07b1c0da08d406baa8fe7d
 SHA512 (nullmailer-2.2.tar.gz) = 21b29d59f3c386c13ce4541ae11dc5cd69f842085479d7fc9a69a540abc608ce5c1825f06bd3566536b392931f7eeb1b2d35addd816849e6f431877bb18c8268
 Size (nullmailer-2.2.tar.gz) = 257740 bytes
 SHA1 (patch-Makefile.in) = 56ce789f85f4feccce623c540dfb41d84e655c1a

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:25:18 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:54:00 nia Exp $
 
-RMD160 (fdm-2.0.tar.gz) = b07dc4ee0b8de3362177d74bd935d1ae4dad961d
+BLAKE2s (fdm-2.0.tar.gz) = 7d5c256a0fc7be323419acf3e195d961f65d7e82c1d7a9747e3358ac3a98e169
 SHA512 (fdm-2.0.tar.gz) = 9c321dfd200af7b7d396524a43a3ac4b569cddda0a2096122b935e9d7bdb8101f269341fae5bbd4ad8a2947312774da2d49e03eddc67c6ecbce4e1ff9488ebe2
 Size (fdm-2.0.tar.gz) = 180662 bytes
 SHA1 (patch-MANUAL) = e7cc443a970b350be9ced14f73bb873023ab91e3

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.60 2021/10/07 14:25:18 nia Exp $
+$NetBSD: distinfo,v 1.61 2021/10/26 10:54:01 nia Exp $
 
-RMD160 (fetchmail-6.4.21.tar.xz) = c8c7e9ca1840e2f78a52b55a3db0eb10f35196a0
+BLAKE2s (fetchmail-6.4.21.tar.xz) = 0353dd795872580e40ae93870fc1b7512745c81a52db8fb4b5272faddc94fa2a
 SHA512 (fetchmail-6.4.21.tar.xz) = c9300f63c0e4073f199a9a7d9061774a7f88aad496b696cad96c0ee85107cae506461f0cd083903c60104b1e7654461213f3f759c1cdaffaf1c85fb1956faa67
 Size (fetchmail-6.4.21.tar.xz) = 1318996 bytes
 SHA1 (patch-Makefile.in) = 9cd2053a7c8bbbf6f71fcee03e33c0d29d235c4e

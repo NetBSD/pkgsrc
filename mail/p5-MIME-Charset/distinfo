@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:25:33 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:54:14 nia Exp $
 
-RMD160 (MIME-Charset-1.012.2.tar.gz) = 9838e4164e48b968c3ba3b212c9b07a26bd8a984
+BLAKE2s (MIME-Charset-1.012.2.tar.gz) = 6737c964f12455009c5b6e21a0f1dafbedd31492d99afdb85b2233c5987bf378
 SHA512 (MIME-Charset-1.012.2.tar.gz) = 2273bf0b86eb042e5aa8bcf958eefefde7dce6701eea5ae8c0fe9997e7d3e90d837a7791ade30f84536a15116175c796daee60da6625f409d214844dfedfde4d
 Size (MIME-Charset-1.012.2.tar.gz) = 55609 bytes

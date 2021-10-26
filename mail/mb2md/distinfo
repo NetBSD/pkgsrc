@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:25:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:54:07 nia Exp $
 
-RMD160 (mb2md-3.20.pl.gz) = 03ee1e543ba070c222aa7e20624aaf5fa390785c
+BLAKE2s (mb2md-3.20.pl.gz) = 662460a9607b8027214e1255c5c268a2937d7d3907cd39d5a4d16760ccd077d4
 SHA512 (mb2md-3.20.pl.gz) = 4c795ecd3c5eeab9902e8393622e5d7ab070a844af1b386e975a022f83f37b4abdad1285f7cbc97c489c0931ef2605d85145eb6c1a4b993889f35d50c670503d
 Size (mb2md-3.20.pl.gz) = 14977 bytes
