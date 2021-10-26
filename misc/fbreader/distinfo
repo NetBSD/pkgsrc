@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:35:19 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:59:03 nia Exp $
 
-RMD160 (fbreader-sources-0.99.4.tgz) = 90825fcb6b026785dd3a7329899b54a02b08e4ed
+BLAKE2s (fbreader-sources-0.99.4.tgz) = 4ccaf41a60b59740d46f391fbda0dc8e8174776ac8f71df204ec398734ce6c71
 SHA512 (fbreader-sources-0.99.4.tgz) = d4b11d7ab03df002ad4212db805b10b80a24ea4384e92122b12c25a3f817a0eb343509ae30e31d68417fd4ce27f77e043235436f0081ff2c785a2830d6211dc7
 Size (fbreader-sources-0.99.4.tgz) = 2345664 bytes
 SHA1 (patch-ab) = a23a87f2ea3e44471d93c83cdb9e65a5840e38f5

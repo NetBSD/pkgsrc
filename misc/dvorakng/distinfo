@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:01 nia Exp $
 
-RMD160 (dvorakng-0.6.0rc1.tar.bz2) = 0e482a7af4f4983653b79b6c0cd109217e088959
+BLAKE2s (dvorakng-0.6.0rc1.tar.bz2) = 5d7be109d9870da28b9f40fa120e990354821ce6eb643dd709cb03ec3145e7f7
 SHA512 (dvorakng-0.6.0rc1.tar.bz2) = 87f0bb2199188093ea4223d7dc47232f53b266aa9498170b643c25e724f547fa1ce5d0e1d4e7f275c712f6ec4850d825827b66f84407f186eb80b73ac973ded7
 Size (dvorakng-0.6.0rc1.tar.bz2) = 28994 bytes
 SHA1 (patch-aa) = 059d13035ff9a86225c414592c1094a7d4071a8e

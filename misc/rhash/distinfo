@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:35:43 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:59:27 nia Exp $
 
-RMD160 (rhash-1.4.2.tar.gz) = 0427c702fa88f53c9c4a16255f8ae3c20c225b47
+BLAKE2s (rhash-1.4.2.tar.gz) = b1500945094920b948c9e2c59ea2e7a32382e751895c6ee049915abffdc841a0
 SHA512 (rhash-1.4.2.tar.gz) = 41df57e8b3f32c93d8e6f2ac668b32aaa23eb2eaf90a83f109e61e511404a5036ea88bcf2854e19c1ade0f61960e0d9edf01f3d82e1c645fed36579e9d7a6a25
 Size (rhash-1.4.2.tar.gz) = 416853 bytes
 SHA1 (patch-configure) = 6f0c4abf3f487f046feea5aca5866481eda4546a

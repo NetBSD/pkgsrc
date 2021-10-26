@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:32 nia Exp $
 
-RMD160 (windows_error-0.1.2.gem) = 25616569e5bce695ed3bae2e3b8c480fc28a248a
+BLAKE2s (windows_error-0.1.2.gem) = d86f8221b504c73fa8c0ef16840acdefd9222135593c4a42bd04c4471d97b851
 SHA512 (windows_error-0.1.2.gem) = 32e94e561f53f77c5efff5457068e31e66b1d3c73531870b52af00297f69341e390b6d8419a0c0b78ec05f6b65be6456128b9055c143e7b65663520baeac90ad
 Size (windows_error-0.1.2.gem) = 227328 bytes

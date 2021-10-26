@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:35:34 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:59:18 nia Exp $
 
-RMD160 (Business-ISBN-Data-20210112.006.tar.gz) = c56ecf26fcadadb0007f76f997a8fd106f100c66
+BLAKE2s (Business-ISBN-Data-20210112.006.tar.gz) = 9591912b76f746214a6f87fe189ea9c67513a291119ba2463cd8718e7051ae65
 SHA512 (Business-ISBN-Data-20210112.006.tar.gz) = 36245caf60d0b210dfbbc1f2668e6b8a227e6641be3800d4e62f6a9902b6b95bc2e952bc48ccd2a61ba958c68b142f64592ffeec9da8bc35d7c8bc5d9b625c80
 Size (Business-ISBN-Data-20210112.006.tar.gz) = 29035 bytes

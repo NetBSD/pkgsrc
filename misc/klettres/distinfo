@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:35:26 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:59:10 nia Exp $
 
-RMD160 (klettres-20.12.3.tar.xz) = 2c9e78adcbb8272aaeeacdfdced0d0673b4dfb7e
+BLAKE2s (klettres-20.12.3.tar.xz) = 7b39bda200d4ab66de2b2abe85dc7215a00a06fd166dfe0fab7308ba66259c2f
 SHA512 (klettres-20.12.3.tar.xz) = 89e3b72f07f3594b83909e0cfb719a074d999a4ffc253d340d018ab3523293b41605d66fa3f0474974d9a9f0aab57c7bd443cbf58968495ccb69598e6f0da094
 Size (klettres-20.12.3.tar.xz) = 47059092 bytes

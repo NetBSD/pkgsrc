@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:00 nia Exp $
 
-RMD160 (cuecat-0.2.1.tar.gz) = db8bdeb764fb331b05121e6c32df8803b595fc53
+BLAKE2s (cuecat-0.2.1.tar.gz) = 603427f821097b51473c622513160ad18150a68e48b483598aff75f623cca88d
 SHA512 (cuecat-0.2.1.tar.gz) = 3cdaf8c6bf4b7957a4aef97f564006211eab4deb5ac5e9e4dfc4751f3404a2011b3c6d63cec10ede87abfda49d4cbebc2b7042f60bf00edf2adc7a7415930d18
 Size (cuecat-0.2.1.tar.gz) = 268495 bytes
 SHA1 (patch-aa) = b47bdbdfc04db7e96eab189ea7cb4411a976e533

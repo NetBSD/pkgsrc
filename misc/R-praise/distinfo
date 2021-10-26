@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:58:56 nia Exp $
 
-RMD160 (R/praise_1.0.0.tar.gz) = b13351fa747f0a17329484e3a24e9ae82a49940d
+BLAKE2s (R/praise_1.0.0.tar.gz) = 1adddaf13c71ac7535e9cd02bdde5259038dd8d2602d3eb38c51fd7743524e99
 SHA512 (R/praise_1.0.0.tar.gz) = 6405e733884e95b165ed285e1a9f6470b76d96abdf3516292bdbacd562667ccc747d78b4abe96d7d512aeb10dde8c6db06d04cbe3e774bbcdb0fc529365bb0b8
 Size (R/praise_1.0.0.tar.gz) = 6100 bytes

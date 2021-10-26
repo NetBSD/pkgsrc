@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:26 nia Exp $
 
-RMD160 (tryton-4.2/trytond_stock_location_sequence-4.2.0.tar.gz) = 740b6831212dc5203bb6df62ba3a4847af471895
+BLAKE2s (tryton-4.2/trytond_stock_location_sequence-4.2.0.tar.gz) = da179e9f586e36c621c318d6a1b5bce747ab1b0c0e1b83652570ca12b3bc8131
 SHA512 (tryton-4.2/trytond_stock_location_sequence-4.2.0.tar.gz) = 9cbf44bcd96524840883edbdb6e61f94e11fbdb4486fc2f8e0ad3efb21eb28dfe40f2701d7ed32190a8b06309cb3854fd0dc4902dec576eafe5ec34fc1a345b3
 Size (tryton-4.2/trytond_stock_location_sequence-4.2.0.tar.gz) = 18945 bytes
