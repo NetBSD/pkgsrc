@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:53:54 nia Exp $
 
-RMD160 (autorespond-2.0.5.tar.gz) = c86f56d02ac1f609605a4349a59b4293eff2ca15
+BLAKE2s (autorespond-2.0.5.tar.gz) = 95dca5be7fe0124a6c7c9cf004d73e49bbde3f4c3cb5462ce4adf072f79b111e
 SHA512 (autorespond-2.0.5.tar.gz) = c27565962677654251062538a76ebc0f5402cb8b0027352060e6aa51871be27c0e32c6898be7cee72d2a80680b79d1ce7bf23249abfb486a851d73005ef7e7bb
 Size (autorespond-2.0.5.tar.gz) = 9707 bytes
 SHA1 (patch-aa) = 66fe261b019a44f1a0521a54765a1636860810e6

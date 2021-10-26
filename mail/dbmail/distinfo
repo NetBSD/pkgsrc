@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:25:15 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:53:57 nia Exp $
 
-RMD160 (dbmail-3.2.5.tar.gz) = 314bb897d0235f09ad641d05a08ac086e16e4b32
+BLAKE2s (dbmail-3.2.5.tar.gz) = 5523243bbb8b5c53a8ef993635057b2566ab1e3887913fe0a15462c44e027dda
 SHA512 (dbmail-3.2.5.tar.gz) = 6b0d7e1f6f7449869db1e094ffce9e1ef315c60784ea5ae5f814f2cf9a18c358b4c5d107a420c7317961ffa343fc59c9083789177514aee96523927688f276a0
 Size (dbmail-3.2.5.tar.gz) = 2463966 bytes
 SHA1 (patch-src_dbmail.h.in) = 04feedc90991b5080c6528b01223f190813941a4

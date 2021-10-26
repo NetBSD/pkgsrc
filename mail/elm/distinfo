@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:25:16 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:53:58 nia Exp $
 
-RMD160 (elm2.5.8.tar.gz) = c12dbefd0bf9d47ee4438673507a4693c4a6808c
+BLAKE2s (elm2.5.8.tar.gz) = 29c1deee8c0d3bb93c5a2674a04d89f0fd922c61a64af64c623cebe4f463545e
 SHA512 (elm2.5.8.tar.gz) = f740ac3d2c9853fd6e7653f410e07f17d34d8d968a0fd54e6d3ebcfd6d006eb1ad60a8de2461e874bbb73cfcf2c43f76b058f6dde6ec7a73f748206cae5e2937
 Size (elm2.5.8.tar.gz) = 607078 bytes
 SHA1 (patch-aa) = d84d99098d567135db05cc67899cf1df5c1780b0

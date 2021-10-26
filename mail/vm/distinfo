@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:25:51 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:54:33 nia Exp $
 
-RMD160 (vm-8.2.0b.tgz) = d94e96c430cfdd615a4e6afe1b70337a1aad8bb5
+BLAKE2s (vm-8.2.0b.tgz) = 6d2d273087d9aead8cb90e23c69640e6b669def39370f4b841acd996b58253d6
 SHA512 (vm-8.2.0b.tgz) = 37b642975e8fe7e350c0a648f83608b28d8616417d376d9888c89b37c90d8bdb3c91cdc4c91a0f5072d29ac81bfea3d88f9b36699379bf8a5bdd15dd5a70858d
 Size (vm-8.2.0b.tgz) = 839789 bytes
 SHA1 (patch-info_vm-pcrisis.texinfo) = 13369e08a17b392a3dd2259f8b5326f9286a4f7b

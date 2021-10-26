@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:25:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:54:30 nia Exp $
 
-RMD160 (solid-pop3d-0.15.tar.gz) = c01c120bb835c0e7b139ff091e3f80aecada1b05
+BLAKE2s (solid-pop3d-0.15.tar.gz) = 6e2406eeec625231b38185d58559fe8218b31e92d71a2dd26dd620a871553f61
 SHA512 (solid-pop3d-0.15.tar.gz) = fa1f9a98b9e757b4233e89d21770baffce70138ce688e46aa9f84ba0d903c983f486ce86745c28295a93ab61ca0829f33947802bac140214c8a9db8c34221e53
 Size (solid-pop3d-0.15.tar.gz) = 102927 bytes
 SHA1 (patch-aa) = ce2a1959bfd917f99281c6b0f3e5ed9fd47511d8

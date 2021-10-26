@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:25:49 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:54:31 nia Exp $
 
-RMD160 (sympa-6.2.56.tar.gz) = 99c56f076ba28710ca1b04a777c74d7aaf612bd0
+BLAKE2s (sympa-6.2.56.tar.gz) = af69dbe7eaca31ea56c7d531bb8e14d8c650e0eee98e68d54b1d62299372eb9f
 SHA512 (sympa-6.2.56.tar.gz) = eb83e773bc23f1e5100fac8efd6091b7767f67ffbeeac42b26d6ec42629c61ff8e8372541924afbaccd5f34d208f53454dec40581dbd162fa58c85301e1a3414
 Size (sympa-6.2.56.tar.gz) = 12864493 bytes
 SHA1 (patch-aa) = 5a9dbd15705665e2c897b5f295cd8facab3ebcf1

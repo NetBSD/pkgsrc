@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:54:13 nia Exp $
 
-RMD160 (Email-Stuff-2.105.tar.gz) = da1a06fdba1da883826401ef930182012d8d69e9
+BLAKE2s (Email-Stuff-2.105.tar.gz) = ffa3f90b2fc1a5066a9a74c0c891e2771d61c9eadea19c21539f7befe8598516
 SHA512 (Email-Stuff-2.105.tar.gz) = 6b73337e0452c48e49d6d066f6b5155ea4a39825dc0ce7e610d0fe3e2944679f022a8ef0e24c7773a80b55282dc09fe5a5ab48111f2acec325ca85208e9b5a39
 Size (Email-Stuff-2.105.tar.gz) = 23805 bytes

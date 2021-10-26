@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:25:22 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:54:04 nia Exp $
 
-RMD160 (jchkmail-1.3.1a.tar.gz) = b707514f3a04d871f32db660be8b975577e1dbf3
+BLAKE2s (jchkmail-1.3.1a.tar.gz) = a72bcba411e5ab29e73db715bf41742f280631a5effd9c17f442db8178da305c
 SHA512 (jchkmail-1.3.1a.tar.gz) = 8dd5d49cde3395d0fe4e83bca1daee2db036300ff6aad64ad36c1a7d37bde69afb1602e702e5cdbaf0b2767cb32a15c1a720a778a51e2f95dabdd3d534d2a529
 Size (jchkmail-1.3.1a.tar.gz) = 420432 bytes
 SHA1 (patch-aa) = 19acb161de38b297d000ae4cc9a96106ff7b3a20

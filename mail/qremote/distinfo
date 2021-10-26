@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:25 nia Exp $
 
-RMD160 (qremote-20131231.tar.bz2) = 770a685bd91a9392b9225cc19319a0354eff5ba4
+BLAKE2s (qremote-20131231.tar.bz2) = 9832f87a3b4e627c85a4fa57ef44c2473b382826b139cbeb91b57a0a86781701
 SHA512 (qremote-20131231.tar.bz2) = 234691baf85c2256ac4a2dcfc23a3e136fecf22ecabac2b992dd157439d8bf83813c7ee2a1a8430386bbea6ce8526469cb407b67860605cb6a09963ec96df10c
 Size (qremote-20131231.tar.bz2) = 217306 bytes
 SHA1 (patch-Makefile) = d327047caa52b974e6017eb5e7b393a82059cdd4

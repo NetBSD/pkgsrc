@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:54:16 nia Exp $
 
-RMD160 (Mail-DeliveryStatus-BounceParser-1.543.tar.gz) = 3a05fa3935c54280acebd8a2a5e6e35f28fccf63
+BLAKE2s (Mail-DeliveryStatus-BounceParser-1.543.tar.gz) = e761df9abe5417b7e25616c5eb6ca1680a15900f0f88c706b8fe2faf5b69e017
 SHA512 (Mail-DeliveryStatus-BounceParser-1.543.tar.gz) = 177b2571a34b0aaae5992b6795bb2a02040d9f66ed59082f6fa3a62bb2562905e385b150bfc59eba881f4a897c638e0d2fe76307f3f623b5c0ad2150148e92d4
 Size (Mail-DeliveryStatus-BounceParser-1.543.tar.gz) = 141347 bytes

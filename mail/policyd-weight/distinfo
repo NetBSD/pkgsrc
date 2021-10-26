@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:25:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:54:21 nia Exp $
 
-RMD160 (policyd-weight-0.1.14.17.tar.gz) = c668feedab8d4df85502eb0258f0924b20c1fcbb
+BLAKE2s (policyd-weight-0.1.14.17.tar.gz) = e8926a97f703390f5dc7e9a915ca486e2ea2cff08e79e47254addc449943fe83
 SHA512 (policyd-weight-0.1.14.17.tar.gz) = b388f5cd091d6dbccff29656cdc4443b28eaca17860d69bfaecda13619ac97903890ca8c6931c2a3d7c1a96ab4adfebbf1091b01804b5641ac61075cfbb7875d
 Size (policyd-weight-0.1.14.17.tar.gz) = 54942 bytes

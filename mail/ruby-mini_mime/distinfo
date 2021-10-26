@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:28 nia Exp $
 
-RMD160 (mini_mime-1.0.3.gem) = 37c62fbd5bce269c75b47f51bfa8420f1c3e657c
+BLAKE2s (mini_mime-1.0.3.gem) = 95798e3482a8d7b8f972ecd5ba4d4b9937ec91cf3f07d9cc41d76e3eff06e45c
 SHA512 (mini_mime-1.0.3.gem) = 0312b37533eb4ef99e29538b98e6c9e7214ef7e30de13f29690921f3762d4f50dddb991ad890041e9b21e3932ca0e433cae8918bc3b2810cfed81c8df570e99a
 Size (mini_mime-1.0.3.gem) = 34816 bytes

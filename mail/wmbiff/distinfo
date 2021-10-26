@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:25:51 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:54:34 nia Exp $
 
-RMD160 (wmbiff-0.4.26.tar.gz) = f5ccb17fb6846283cb7cde7996310a65600a8883
+BLAKE2s (wmbiff-0.4.26.tar.gz) = bfb3b3bf10b619152211ade53a256438dd1d88d5fc1d4f98e1c8aa73cf255737
 SHA512 (wmbiff-0.4.26.tar.gz) = e9fb1c9b35cd3a7d6854339be46a3ea791f41c3ece565d3ac5a9eeb35f11a6e60050f17575c934f4ccc3b8e78692c8d3789b3ebc7540e54a8f195cc1c0e8406f
 Size (wmbiff-0.4.26.tar.gz) = 200237 bytes
 SHA1 (patch-aa) = 0a4607f2e5d6d3066d9b9994665b659dfbcc003b

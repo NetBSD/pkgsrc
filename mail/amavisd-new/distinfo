@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:12 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:53:54 nia Exp $
 
-RMD160 (amavisd-new-2.11.1.tar.bz2) = d8f3f35df53eedf60e6af64bea96c72dc353007b
+BLAKE2s (amavisd-new-2.11.1.tar.bz2) = 49ec6948a0f7671b1584e027c0f12a7fcc7cebcfe043322b2a5dc225b04c7d95
 SHA512 (amavisd-new-2.11.1.tar.bz2) = 06180a4efa777af2f91781ba6e3ea302041c5dd721981d960bab24cecb160c17df8a927e95df9dd7ee5ba64004b8edd3c6c0c5ef7f96fd702d1d84e4a856ea83
 Size (amavisd-new-2.11.1.tar.bz2) = 875204 bytes
 SHA1 (patch-aa) = 3be1325acb060370960fc0fb27d87bc360861320

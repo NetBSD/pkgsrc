@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:25:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:54:08 nia Exp $
 
-RMD160 (mimp-h3-1.1.4.tar.gz) = 226499d7b407254036c30d3b00d9783dbc68cce9
+BLAKE2s (mimp-h3-1.1.4.tar.gz) = 571181fe2891c04746e2ceb650d95d44d94bd4d6bba26521697019e05580725f
 SHA512 (mimp-h3-1.1.4.tar.gz) = e49e36f8d58c1a26e4acf0594dd06f73d4ee38cb1de59c3fe8d215d3011ee2fa0c63d180ab439aad3b9dd08e0a0f036db049127dd27c72fba7edbd711538cd17
 Size (mimp-h3-1.1.4.tar.gz) = 1249671 bytes

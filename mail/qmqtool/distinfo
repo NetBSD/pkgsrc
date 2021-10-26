@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:25:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:54:25 nia Exp $
 
-RMD160 (qmqtool-1.15.tgz) = 089f5584352c573308b09a29a92d5b1e42aa6640
+BLAKE2s (qmqtool-1.15.tgz) = c21db8346095777e2273de7f80210acba15cb090dfd4911c48561ba9141104a7
 SHA512 (qmqtool-1.15.tgz) = 613499629c9a651636fb5146c6a0faf41b183dbd0aacdb48227811ebb84401a9916fb66a3157f2521c36bc8b4326f3524b2db32e7b2f23250acac6adc251d29f
 Size (qmqtool-1.15.tgz) = 25884 bytes
 SHA1 (patch-configure) = 90a0a3ade3591957c8b76546ed7e414d6a57c019

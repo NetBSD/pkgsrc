@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:49 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:54:31 nia Exp $
 
-RMD160 (ssmtp_2.64.orig.tar.bz2) = ea6472e52a499c39d1d8ce7e13add9d8e9accbfb
+BLAKE2s (ssmtp_2.64.orig.tar.bz2) = af9152db8317b41d689188e9d2b8c38a9c93a95138da92198d9ea5b086658363
 SHA512 (ssmtp_2.64.orig.tar.bz2) = 911752e744420adf58552b9cf3a6e558d8b39103e5ad33a9ed4429b9a3a2091f7674aac11fe9bbd66747a61cdabe6bd638b80efcaadc86b057c12e2e235cca72
 Size (ssmtp_2.64.orig.tar.bz2) = 52501 bytes
 SHA1 (patch-ab) = b9e665c762ecfd4f2b63d90f39a563985e8a3560

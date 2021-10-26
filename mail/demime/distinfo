@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:53:57 nia Exp $
 
-RMD160 (demime-1.1d/demime.1.1d) = 494fab7b21ae20175610c28b416321457bf83b05
+BLAKE2s (demime-1.1d/demime.1.1d) = 8b3174b0bd11755471274fd2eba377a4a6848ac3d17c96bfcb1b78b2f374915d
 SHA512 (demime-1.1d/demime.1.1d) = 049727ca297255d6dc1c5051df8d05c62f59e4dfb1fa8dd2c1c012d2cc5b8da23f93e2957347f540c56638140693e085a66afdf7df7348f41c12470b44aa6279
 Size (demime-1.1d/demime.1.1d) = 93746 bytes
-RMD160 (demime-1.1d/demime_junkmail.cf) = 0fbc1f960f1835698906631058f937a743d75901
+BLAKE2s (demime-1.1d/demime_junkmail.cf) = 63e289d454c16df48825c23645fe0c3e2749347a386dc3b05f2375de53c5ce10
 SHA512 (demime-1.1d/demime_junkmail.cf) = acc4415197a52d391ebc19183c65324cae0640e99ff6a13c5d509d7b38b5053dd52b73607262dc7ef76c3f608e97cc5b36502893dcb49281b91455c03111f153
 Size (demime-1.1d/demime_junkmail.cf) = 15234 bytes
 SHA1 (patch-aa) = 97217714da00b4a0d58eab4c73e0ea61efcd6927

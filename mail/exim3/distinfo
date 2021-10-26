@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:25:17 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:54:00 nia Exp $
 
-RMD160 (exim-3.36.tar.bz2) = 2654601eaf54fc15c1ebeabfee53c828f2fd22dd
+BLAKE2s (exim-3.36.tar.bz2) = 75a58790866362d14bbc4693af5e7ef12f007cc4bf56cd26120070f68bb7e6f8
 SHA512 (exim-3.36.tar.bz2) = eeb5cc2311650881064c22a087123590e3176e2e0f67f3d2cb36e408bfd3212bcdca5f2ee74ea6320518449658f8a595ac51953da970992017f0e8db37538ece
 Size (exim-3.36.tar.bz2) = 982104 bytes
 SHA1 (patch-aa) = b0d23fa0763a16a932e051a79b70b2d708ab69fc

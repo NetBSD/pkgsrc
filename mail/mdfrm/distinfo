@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:25:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:54:07 nia Exp $
 
-RMD160 (mdfrm.pl) = c10af5b23348a97b62a276d5ef45db3bd6e780dc
+BLAKE2s (mdfrm.pl) = 4cfb572d2b3d02406be96c4adebd7622a29035e16131e20e161a0d9b63250abd
 SHA512 (mdfrm.pl) = 16ee298fada789710d1780aec5ca92ba26f5a1d6af790afafeaa1b972e2bf3c00c06ba578a80b64f4fbaccd2280020ea68b608f23618f008e3a20b81f852378a
 Size (mdfrm.pl) = 3989 bytes

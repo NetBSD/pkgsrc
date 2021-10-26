@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/10/20 16:15:52 tm Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:54:21 nia Exp $
 
-RMD160 (postgrey-1.37.tar.gz) = ec148e96d3d70e26d25f12f8fdf842f8c7444e60
+BLAKE2s (postgrey-1.37.tar.gz) = 10fc5ccabf8e516ef93a43c3699aaeb3ba001ae6883440be0492729af40a1154
 SHA512 (postgrey-1.37.tar.gz) = 369968212ea60539efc0d4a7ae84f7c3ce13f5622e6ee070a0089423ef81ca8f7541ebd20289291d0e6a3aec2ca30dbc9c0d9c0a6f0a686adfadb5d0dd7830ca
 Size (postgrey-1.37.tar.gz) = 41815 bytes
-RMD160 (targrey-0.31-postgrey-1.37.patch) = fa5c93cc1167834efe27ff71a88bdc758951c5ed
+BLAKE2s (targrey-0.31-postgrey-1.37.patch) = e91ce19fd224fd86206d5e20bec91ea02b9228051589335d9d9f837f1ac3b935
 SHA512 (targrey-0.31-postgrey-1.37.patch) = 4b993028df6217713a8ce9a054f1b9cd43099ef396cad0b3355647149c41c6564f633992aac9dc3eb8eb276975dae822195031ab06514824b8e6ce4b1258d539
 Size (targrey-0.31-postgrey-1.37.patch) = 8574 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:13 nia Exp $
 
-RMD160 (Email-MIME-Encodings-1.315.tar.gz) = 274f133ee6a6dad7ada4bf3b934ae5b1992a860c
+BLAKE2s (Email-MIME-Encodings-1.315.tar.gz) = b91264c38fb80f9ca0881e3cba0735750ead9f7dde73bb3035c872f6c0c369e3
 SHA512 (Email-MIME-Encodings-1.315.tar.gz) = 4cd787e099617b70963c8ef6372e2a16038c61170fdd343aad88a024ecd15c789fd2c8cc19830c3518b6648e428301eed1ae20f496fa97afbdd8bb7f3ae432aa
 Size (Email-MIME-Encodings-1.315.tar.gz) = 13564 bytes

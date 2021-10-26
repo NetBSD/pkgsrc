@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/10/07 14:25:13 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/10/26 10:53:55 nia Exp $
 
-RMD160 (claws-mail-4.0.0.tar.xz) = 4025b64ac0e78fe3d1687cdf8a47a52ce6c147c9
+BLAKE2s (claws-mail-4.0.0.tar.xz) = 559996ab6cabb5cd6c7dbc432917088cf54da94e5dfb52c2008c9dac43766cfc
 SHA512 (claws-mail-4.0.0.tar.xz) = 26d207fb8b5ce8b814a8a712843a209f58c8c9df3e9623387322b2e70ac351c71ac8b1ff77c52c5df9a14a46be7f65413efc0a4dbcda1e70ecb453f042da153e
 Size (claws-mail-4.0.0.tar.xz) = 6390300 bytes
 SHA1 (patch-po_Makefile.in.in) = 88cb5106595d2959f31d7825b7474861281b290c

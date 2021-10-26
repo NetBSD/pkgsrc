@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:40 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:54:22 nia Exp $
 
-RMD160 (proxsmtp-1.10.tar.gz) = 4779d102587fd8f1a01ae209172670b9dbb0a573
+BLAKE2s (proxsmtp-1.10.tar.gz) = 92ae403c9ba070fad047dc4967cc1b3095ac5392b3fd80924f229c707608c84d
 SHA512 (proxsmtp-1.10.tar.gz) = bbbbf3a11f518ba0e6ec881eb4757257ca514b2d2062ac505566c89d339dc81b206a78c736eb0b2dc242d1bcadfc535eefe8f6c2d5ab8b5d3d3e79dd1c38cc42
 Size (proxsmtp-1.10.tar.gz) = 181262 bytes
 SHA1 (patch-ab) = dd480c9d8fbe3af2f5afac3afc5dbc9f52d0332c

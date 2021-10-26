@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:20 nia Exp $
 
-RMD160 (pfqueue-0.5.6.tar.gz) = 6b2b539449fd9e0f127b23ba49de1761d769c27f
+BLAKE2s (pfqueue-0.5.6.tar.gz) = 2c330ad6b199c1b8844040afbf2c0dd59da8b696a612e1e63f2a95ca1dd92872
 SHA512 (pfqueue-0.5.6.tar.gz) = 1bb622bba6d72ff98ee862d794854debcebabeff24cb6f06cecb06513f453cbb09f0cb8e5fa4c26bfde03aadbc5e803692279427021ccda10749a6c5a326bfb9
 Size (pfqueue-0.5.6.tar.gz) = 298870 bytes
 SHA1 (patch-aa) = 51c1ae7a438ef596a6b1c0d4821440822315e2e4

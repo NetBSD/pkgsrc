@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:25:52 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:54:34 nia Exp $
 
-RMD160 (xfmail-1.5.5.tar.bz2) = bf3e866d6fa37b7b9959c532b1f4b82fb57eb307
+BLAKE2s (xfmail-1.5.5.tar.bz2) = c3191f591db5f6bdb9fe7f5b6d8f679c2d83291322ec9158d9731e1d6749cca2
 SHA512 (xfmail-1.5.5.tar.bz2) = 20a364eb8f2e22fb727c07f005d73eebf81b882f0e46c5b36ea01c4ad5590ba0c457fe351bdfc98c2b81735f1943a1837f62bad1b668ac9237cdf9212a5deac1
 Size (xfmail-1.5.5.tar.bz2) = 1185913 bytes
 SHA1 (patch-aa) = ac3689963fc7b4f15136893c8cd13de21d59493f

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:25:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:53:56 nia Exp $
 
-RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
+BLAKE2s (cone-0.90.tar.bz2) = e6229f93694dad9024f0ea621edfdb40a81e79be05ab5eeb8a35833fdad28e1e
 SHA512 (cone-0.90.tar.bz2) = 6446f868e07a54bda074e403ce48d590a55e97cf25b7e6172ba02df1242a232ade52840a837dd92e70253159cc637c17876876db01445c60374152262329ae27
 Size (cone-0.90.tar.bz2) = 3906323 bytes
 SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
