@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:56 nia Exp $
 
-RMD160 (gutcheck-0.991/gutcheck.zip) = 25b98d9083782e31190ce65a143c0bbbaa89c684
+BLAKE2s (gutcheck-0.991/gutcheck.zip) = 9b2e119786091d70744eea98662cdb67378c0f55127921389482703fe5c59730
 SHA512 (gutcheck-0.991/gutcheck.zip) = c4ff08ce6442a8bfae0b3054dd9e54df6f6daef64a179749248384ed3fe10a69f38bd36be6147676bc2f5d63ba7085a24262d90894227fca2723784ea6802624
 Size (gutcheck-0.991/gutcheck.zip) = 83093 bytes

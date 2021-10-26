@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:28 nia Exp $
 
-RMD160 (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = a758df957e2f9ddfd01017a14793f1d428cdb878
+BLAKE2s (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 19b70dcf193626ae3199d7b5957b4a568b26d10c2547f3197b807a44033e681c
 SHA512 (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 3deea4406f7f9dd55d22d60c169d3889be7ef802a43507fb8b608c45ecdff52f743c9cb3a4703f1e44cdcf033c4c64b4c993192fe1a39efc9eae78c6fb66ff3e
 Size (HTML-FormatText-WithLinks-AndTables-0.07.tar.gz) = 11934 bytes

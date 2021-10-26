@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:23 nia Exp $
 
-RMD160 (htmlentities-4.3.4.gem) = de3350e6138953aab3b6a30b4f37aeb7efda3958
+BLAKE2s (htmlentities-4.3.4.gem) = ba61858e20ce76e7092e97a9c13ed772ce1e4dee91c7b9a22fa76a56d5666111
 SHA512 (htmlentities-4.3.4.gem) = 0163d6c014ffebb4ee9bdb15d32884c8d6af60681f240d3f0177811d37647776b8f8fd0aa4f1c7559403f36a5538ce8da6926bc16cc8105bd6eed5c180db700b
 Size (htmlentities-4.3.4.gem) = 31744 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:02 nia Exp $
 
-RMD160 (prettyprinter-ansi-terminal-1.1.2.tar.gz) = 931fca07252c5514e99aedece72261e243f250bd
+BLAKE2s (prettyprinter-ansi-terminal-1.1.2.tar.gz) = a6021be40d90384ebb201b443ded39156457be5040f191050f98b3169718b9ce
 SHA512 (prettyprinter-ansi-terminal-1.1.2.tar.gz) = 6f3f077f3f171b6a2c1ca811d267f5311328cd3538ace0c174dd87960fd2617a6543e4bfe239f231ef68c6cce87ce563d0f2068631c084a1faa56a3e051f3fae
 Size (prettyprinter-ansi-terminal-1.1.2.tar.gz) = 8836 bytes

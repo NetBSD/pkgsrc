@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:42 nia Exp $
 
-RMD160 (Text-PDF-0.31.tar.gz) = 20462d9a30970c964e2ae90aea3617d92072ee90
+BLAKE2s (Text-PDF-0.31.tar.gz) = d37d40e4cbc336b47d921ecc949fedfd73bc32d1d12b62803f443a23a5c1f077
 SHA512 (Text-PDF-0.31.tar.gz) = 6413bddaefbb57918763d395b9c751ad630a2095970c2c1febb01235343339fd4eae2820a30b449775d95071cca000a0f11e955fe304c2c56a45e80b384308d5
 Size (Text-PDF-0.31.tar.gz) = 56267 bytes

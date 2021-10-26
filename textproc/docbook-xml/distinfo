@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:00:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:21:50 nia Exp $
 
-RMD160 (docbook-xml-4.2.zip) = 3ba17bf96ab2ab8fe6dc9ff82da8e22aaf9ce5e0
+BLAKE2s (docbook-xml-4.2.zip) = 09ce665154f03b9a78c916d8dbc63231f3fb5621433c93327b1c00d67d562cb1
 SHA512 (docbook-xml-4.2.zip) = 0c836346130d1e8f4e26e00959f6b4fd2c3c11269ba5cbf11cdc904724e189606f431c99cd5ab188877daa0eb44c58d0bc30556df3b51df480396818d61c4e0a
 Size (docbook-xml-4.2.zip) = 78428 bytes
-RMD160 (docbook-xml-4.3.zip) = deeb29ed336bcce6ed199c516f01bb1542ea16ee
+BLAKE2s (docbook-xml-4.3.zip) = eda208ab50bd547e6de52d437404eb69f564f7a06264e6ee4628e77ba6272b08
 SHA512 (docbook-xml-4.3.zip) = f5090fb74884bae3d4fac8a3c5060bffff5d6a74272de183c181a7642e4b91f4ed32ad028537d198010782c3d98575ce679672f76a9749ed124432195886a7cb
 Size (docbook-xml-4.3.zip) = 83865 bytes
-RMD160 (docbook-xml-4.4.zip) = 691a9230442be14d019af9d07e94f269824d85cc
+BLAKE2s (docbook-xml-4.4.zip) = cbd45d323bc30008f5d16911e82cfd15cf5b7049938dcc24e2d2c5ea70b83ffd
 SHA512 (docbook-xml-4.4.zip) = 7df5af4df24e4618b09814e4e20c147c722962531f03a40c28cd60f1db16b4c330420adf96adb7d66ed6eda84046ee91b467fd6f6fbfac2201537e2080735d76
 Size (docbook-xml-4.4.zip) = 96107 bytes
-RMD160 (docbook-xml-4.5.zip) = 723347ef17950c5c8e81a7c9d44812261dcadc5d
+BLAKE2s (docbook-xml-4.5.zip) = 21de7ae59c26fc0ab69e9b641191a7b373e87f2c0044bb6605946339fc61f62a
 SHA512 (docbook-xml-4.5.zip) = 1ee282fe86c9282610ee72c0e1d1acfc03f1afb9dc67166f438f2703109046479edb6329313ecb2949db27993077e077d111501c10b8769ebb20719eb6213d27
 Size (docbook-xml-4.5.zip) = 98497 bytes

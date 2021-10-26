@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:41 nia Exp $
 
-RMD160 (xslide-0.2.2.tar.gz) = 2f84ee05f989536ba957e736c25581747fd65b55
+BLAKE2s (xslide-0.2.2.tar.gz) = 598f985fa24441c1db16a3aaecd22296db99b5c6fc14321482a8a0f221c99b91
 SHA512 (xslide-0.2.2.tar.gz) = e0cc7b42eddcaf9fe7860fad4eff14dd3c963578302884c9aa1caf09eaef08e73b7a3f60d15de7e31ce39d735751dbef33db2181531947ace9af25d0c5092697
 Size (xslide-0.2.2.tar.gz) = 23469 bytes

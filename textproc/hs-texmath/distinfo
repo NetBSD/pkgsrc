@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:03 nia Exp $
 
-RMD160 (texmath-0.12.2.tar.gz) = aa953d6a9fddb1900f77bbf234640174c1780e0d
+BLAKE2s (texmath-0.12.2.tar.gz) = 43fbb549cfe1dfcd9808af0321e014277894ddabe96bd481fd789e86fbde0baf
 SHA512 (texmath-0.12.2.tar.gz) = 89f3dc5c1042980abf06f1e4d3ca6806922f2094c6d7ec2cc1e4673ac16a7aaf73693c5fa5526eac96d6f9f5c2f894f2341295bacebb7216ef49eb8be7cc0424
 Size (texmath-0.12.2.tar.gz) = 1807359 bytes

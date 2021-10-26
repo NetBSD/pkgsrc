@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:41 nia Exp $
 
-RMD160 (Text-Emoticon-MSN-0.04.tar.gz) = d19ffd7156b73d8e0a3f4ef1785199fb70d88c2b
+BLAKE2s (Text-Emoticon-MSN-0.04.tar.gz) = b6c512b0f7716f04f2c75e2ae3e08881390e8d714bd9749dfceb9ac7ea78cbdb
 SHA512 (Text-Emoticon-MSN-0.04.tar.gz) = 42c706fd8cc9f7821da9293d5e547c6a3bd625f2bbe3428f6ac83206458e441d0194fae24bf1e20f3a77f35ae0b825fdf4295a500ad32da3edd47bc9472d97df
 Size (Text-Emoticon-MSN-0.04.tar.gz) = 3103 bytes

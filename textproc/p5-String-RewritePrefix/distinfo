@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:01:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:22:36 nia Exp $
 
-RMD160 (String-RewritePrefix-0.008.tar.gz) = 7c4983820ab4c34a44412a3d326265e32c9732b3
+BLAKE2s (String-RewritePrefix-0.008.tar.gz) = 709db4d11553246b62fb13f790ed786e251ad3383fbba23afb67c04606d99fed
 SHA512 (String-RewritePrefix-0.008.tar.gz) = 9aa814c28863453f3e684f96914462bf09d72d909aa41452b08748e6a47a9c1c2aad5b6e56091dae546c62b0d3d9db0b087f8af12c085e86c69ac8e08c610611
 Size (String-RewritePrefix-0.008.tar.gz) = 16528 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:00:56 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:21:50 nia Exp $
 
-RMD160 (docbook-website-2.6.0.tar.gz) = 31d9f2e6a88e3e46bc8369599f33abb926ada883
+BLAKE2s (docbook-website-2.6.0.tar.gz) = 6fd43887001781ff070cc7a36ace0fe0694dfcf687a8181d7c583f5111119094
 SHA512 (docbook-website-2.6.0.tar.gz) = 3157d27f69d541385253a53893bf0888affc19fcbc7fce9d7039462f2b68bdfd67a2e8b1af6d045f9a6cb0bb8206e0609f17bc5e2022c9c36d695e5d76ad8d66
 Size (docbook-website-2.6.0.tar.gz) = 243138 bytes
 SHA1 (patch-aa) = 2789db80eacd75ab4c922a168e8ea2979f467b70

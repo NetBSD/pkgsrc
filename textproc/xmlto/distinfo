@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:02:47 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:23:40 nia Exp $
 
-RMD160 (xmlto-0.0.28.tar.bz2) = acba3cc9ff46505ae49b91108c611646aeac2b5d
+BLAKE2s (xmlto-0.0.28.tar.bz2) = 57302e4193959fe4de8f145fd259268ab89dadad1f63ce4dceb4fb9a95bfc590
 SHA512 (xmlto-0.0.28.tar.bz2) = 6e0c4968d4f1b7a3b132904182aa72a73f6167553eabdeb65cfafa6295ef7b960541685769d04144207963cca77b0c44db4f9fbb2796348ffcb37b3b399f18f1
 Size (xmlto-0.0.28.tar.bz2) = 127921 bytes
 SHA1 (patch-format_docbook_epub) = 25aeefbb6004ff4f31495d8f3f352abd4d80b2a8

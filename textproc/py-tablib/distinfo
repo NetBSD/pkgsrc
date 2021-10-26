@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:15 nia Exp $
 
-RMD160 (tablib-2.0.0.tar.gz) = 95fa1310979822e23634b7769405c7c0e517f20e
+BLAKE2s (tablib-2.0.0.tar.gz) = 34d2d5b5b697c5e14c9a8e42979c7b63521e80245743c11928ed2f23d0c52830
 SHA512 (tablib-2.0.0.tar.gz) = cfc4a8ac55a6a37644c3b23fceb1a45a78d52b18e76dd64c0a2e1ed82a710f559d4937c76a5803ad4f31ed0d3d49d0c95210a5b38ba380b24a488e56860c502d
 Size (tablib-2.0.0.tar.gz) = 86259 bytes

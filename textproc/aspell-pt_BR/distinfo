@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:41 nia Exp $
 
-RMD160 (aspell6-pt_BR-20131030-12-0.tar.bz2) = 37ea34282d7c8ed9d5cc79fec28a4ef3fcd25787
+BLAKE2s (aspell6-pt_BR-20131030-12-0.tar.bz2) = 5aa674ad66c1a15da8230d674c6a6d4dc8880e626c2bfb2ce0df54a265e9e5b3
 SHA512 (aspell6-pt_BR-20131030-12-0.tar.bz2) = 9cb54552d34239202e74ac1e2b7da112dfbecbe0df2da011828178db0b93f74dde9922d33ad18a7b37084e6d37cc7fd16419e30cc63aa46664b0b86fb0e6ee99
 Size (aspell6-pt_BR-20131030-12-0.tar.bz2) = 894604 bytes

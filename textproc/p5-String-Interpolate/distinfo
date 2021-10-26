@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:36 nia Exp $
 
-RMD160 (String-Interpolate-0.33.tar.gz) = 0ff616b1fc1a3dca1927af42a160acd3bfbaa142
+BLAKE2s (String-Interpolate-0.33.tar.gz) = 8f5f907e1771f55f1719d3b0b616f1a77abb97fd1d6ef1c7eb1327c74cc4a5e6
 SHA512 (String-Interpolate-0.33.tar.gz) = 49201f084d9cfc7cde39a9d1474f3f5ab3de05bbc1121403d9b7508125f178c3bd7d5c00097a011354ce119de1799b2b3c49ae6cfaead99a0e061cbdc6ec2efb
 Size (String-Interpolate-0.33.tar.gz) = 19810 bytes

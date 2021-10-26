@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:02:37 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:23:30 nia Exp $
 
-RMD160 (Sablot-1.0.2.tar.gz) = 314b925c46c17d23ba21507ea56c414264f3581f
+BLAKE2s (Sablot-1.0.2.tar.gz) = 00cc04870b6da6d47236e6e6ae417653b7ec97426a73df34b96c6a1c0e14937d
 SHA512 (Sablot-1.0.2.tar.gz) = 4919406cc307693f4c8daac63157d82e5b193423fcc7292f1db19f0c111e31e513c42344dc30ca0c6c34e923ae054934c5a45ed9ea9e8ac2f42710bffee7535a
 Size (Sablot-1.0.2.tar.gz) = 606814 bytes
 SHA1 (patch-aa) = 29f5a97eda642b925c8c5390c3b60706825ac30f

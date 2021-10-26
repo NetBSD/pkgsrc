@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:00:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:21:29 nia Exp $
 
-RMD160 (Markdown-1.0.1/Markdown_1.0.1.zip) = 8932eba5e4a2b8df4a222dcd69f6128c570e89b6
+BLAKE2s (Markdown-1.0.1/Markdown_1.0.1.zip) = ea420f4fa2ab744cc4f3bae26bf1bc698648c8f2a5c32aa64752b68181f94a46
 SHA512 (Markdown-1.0.1/Markdown_1.0.1.zip) = 962df356e641326fbf29cdedc36dafb5f04683f0b3f5eb1efb8e15994e1e000b5a6882c84f09db4a6f8f948811ebbe76759e27871c644e690884db31705eab1f
 Size (Markdown-1.0.1/Markdown_1.0.1.zip) = 17823 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:25 nia Exp $
 
-RMD160 (mab-0.0.3.gem) = 9c006c3fb32a7981faae75b3e606b990164a18f6
+BLAKE2s (mab-0.0.3.gem) = d61c324e48b4aaf1876b4f856ec8ec2366652e2d1e59ef4b2845059adc9deb0a
 SHA512 (mab-0.0.3.gem) = 0761a8de59243356981555ac5000cd98a0413f75bd9eb84848f8efd77be1895a44cf3b90f1182193f90c63a256ebe4a179e8f94a992a30f30ccaf4183b8d4c67
 Size (mab-0.0.3.gem) = 25088 bytes

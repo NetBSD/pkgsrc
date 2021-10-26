@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:03 nia Exp $
 
-RMD160 (generateDS-2.28b0.tar.gz) = 64bdc1d5c7048e6f9261fd836e2b37089f513ddf
+BLAKE2s (generateDS-2.28b0.tar.gz) = 2bb39c1e85c5e419c975c8369550ab695be993208381b7033987953f330a8587
 SHA512 (generateDS-2.28b0.tar.gz) = b363d4bcdc421a22abb14e41f0d6ce36aa456cd3826cd7ac46a6da30522751630ae0ca5d519b30e9d152e1eaa5f8867db6daa33dc8c77a31c2776c5dd7442bdd
 Size (generateDS-2.28b0.tar.gz) = 846693 bytes

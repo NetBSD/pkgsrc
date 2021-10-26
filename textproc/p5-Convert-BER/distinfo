@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:01:32 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:22:26 nia Exp $
 
-RMD160 (Convert-BER-1.32.tar.gz) = 1976d02bc236e7ed01a75d04957e49f21f9e195d
+BLAKE2s (Convert-BER-1.32.tar.gz) = 0c8a417ae3070b3700734313c21510d36e80ece06cc071ccaf03a742799f2893
 SHA512 (Convert-BER-1.32.tar.gz) = c9cf0640db640587d0d69b465d6f42dd2c09c2bc28adb81575508fa3d00c883fded7c66b1eba26aca36ef5b005b8678fcb74fd69f00d265f484b544d0086314c
 Size (Convert-BER-1.32.tar.gz) = 26983 bytes

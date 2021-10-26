@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:36 nia Exp $
 
-RMD160 (troffcvt-1.04.tar.gz) = fccf7150cc72f1d7cc69d7e60fc99185dc752d89
+BLAKE2s (troffcvt-1.04.tar.gz) = 2ed17896be51b8fc198c74b604e6454aae7202a240b7f8bbeebaac61259d4105
 SHA512 (troffcvt-1.04.tar.gz) = e8e2fb3fbfb8202c1589f29a940ca96af6c7e1119e0f02248be3cf6726a77c43e129208be9c266ee8c2816e89e0fc1e09bfcbbdf48303da2c57a0b020f860da3
 Size (troffcvt-1.04.tar.gz) = 298755 bytes
 SHA1 (patch-aa) = 66b78d40e3d6207f83fe97b2bc123d6a2f9dd07b

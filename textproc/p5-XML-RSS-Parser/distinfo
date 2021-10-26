@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:52 nia Exp $
 
-RMD160 (XML-RSS-Parser-4.0.tar.gz) = c21e59f4af48d8e2ff3ff70546f1a688ec55b45f
+BLAKE2s (XML-RSS-Parser-4.0.tar.gz) = dea215716fdf05a69a6f0cf2f41d7e41708b1b6101a437b39ef1a13b0e50a869
 SHA512 (XML-RSS-Parser-4.0.tar.gz) = ca95c78465c6055e4228a20f8099ccae7d45dc9de908ca6a458cec2c4abbf3825f56b31030f5555d71b8b82521a6589ff84030ee8824dccda0fb178b8b73c43b
 Size (XML-RSS-Parser-4.0.tar.gz) = 12744 bytes

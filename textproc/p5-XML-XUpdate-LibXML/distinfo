@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:55 nia Exp $
 
-RMD160 (XML-XUpdate-LibXML-0.6.0.tar.gz) = cc130ed0fd3553102c11bc62f307f6f01e00e53d
+BLAKE2s (XML-XUpdate-LibXML-0.6.0.tar.gz) = 4f6f739c2ae745b7b9c100e960d039c552ab4e08a4e7739fabe14804dcc6af86
 SHA512 (XML-XUpdate-LibXML-0.6.0.tar.gz) = 59678c854dc77ff99f65e497db3760cab2e433abbeae07b8b1fddb032d5458ba9b5d1191325a3e43ed92f54551e999b307a6880163bde41bff9592660fa8d40f
 Size (XML-XUpdate-LibXML-0.6.0.tar.gz) = 8378 bytes

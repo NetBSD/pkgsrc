@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:00:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:21:51 nia Exp $
 
-RMD160 (dwdiff-2.1.3.tar.bz2) = 853cc09ba21297b3b3e5232705c565b9bcdfe41d
+BLAKE2s (dwdiff-2.1.3.tar.bz2) = 6ef52d69691116e790acbc67475bf75f077048700a265b2a7bcc74ebbc54ace1
 SHA512 (dwdiff-2.1.3.tar.bz2) = e4375658ddb919d763bedacd122e5597a4c3cd40ddff2c954c6cc88e5047d20d4d3b18eaf75c6835be21e1f72e2622e25b212ae9882d8eaa36874af3f6de4b3f
 Size (dwdiff-2.1.3.tar.bz2) = 79862 bytes
 SHA1 (patch-config.pkg) = d65cabaf94ebd0283ccce54b7e982e2b3395b59d

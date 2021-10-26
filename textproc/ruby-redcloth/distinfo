@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:02:33 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:23:26 nia Exp $
 
-RMD160 (RedCloth-4.3.2.gem) = 4448e243f00b476ec8a9795b22fa2270443bff05
+BLAKE2s (RedCloth-4.3.2.gem) = c7a8a860434b56ebecdb35fb37af9821fed953c52a4f2cb8b94afc15f64bf06a
 SHA512 (RedCloth-4.3.2.gem) = 0c7ab2656d18941ccd3fb230f03c2128e6dab2187c0c48702b0778346ab5f9731b9aee03a0b1df3483f081b3140b3bc1f94f16255639004ac5d672180ff71d3d
 Size (RedCloth-4.3.2.gem) = 233472 bytes

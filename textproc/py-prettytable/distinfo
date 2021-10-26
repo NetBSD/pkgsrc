@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:02:33 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:23:10 nia Exp $
 
-RMD160 (prettytable-2.2.1.tar.gz) = 00ad957854decdb4376ae0e3c6543c7b81adf1f0
+BLAKE2s (prettytable-2.2.1.tar.gz) = d06e003f2861ec3abd25b34374a081f830e16401a7d3d3fa80516b6f153e9328
 SHA512 (prettytable-2.2.1.tar.gz) = 5496b1525342b9df4b88cc2cd6079d8c329787b20f7e581465dcdf447b90f78aad764c6505aab8a0e3c4cbb44c943720672373cf754d6f7313b68c28005a707c
 Size (prettytable-2.2.1.tar.gz) = 45102 bytes

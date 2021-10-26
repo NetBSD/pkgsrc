@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/15 15:05:59 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:23:04 nia Exp $
 
-RMD160 (html5-parser-0.4.10.tar.gz) = 066421330656bd66ca088ad3b2ba58f03689a351
+BLAKE2s (html5-parser-0.4.10.tar.gz) = 430080402a4c4dd7ef272877654aea784190e58fe5396617aa2a9288e3e9fad0
 SHA512 (html5-parser-0.4.10.tar.gz) = 45accb891261e1b82185de1cb0e06915e0ff487fe2cfc81b79f5653c8e9d7b9848349ab94657f8fb5eb116311b1d2b0d19f504f841ee8af0cf4a23601a5000aa
 Size (html5-parser-0.4.10.tar.gz) = 272814 bytes
 SHA1 (patch-setup.py) = 075e34e3e9528a99a7262cff7b1b40e076858b8e

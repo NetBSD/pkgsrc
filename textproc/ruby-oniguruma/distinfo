@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:26 nia Exp $
 
-RMD160 (oniguruma-1.1.0.gem) = 1c5353dc5785fc23c6c7b38fcf9190117da19982
+BLAKE2s (oniguruma-1.1.0.gem) = aa6539d34fc1f0a6310820c50b28ee0f4f937899966629f2c9352899d620feb8
 SHA512 (oniguruma-1.1.0.gem) = 73155273810db2c0ebacb7494cacab2590c1f8cd2e11a7e8f0b90c3ae08086e03d787c8c9c61cf228d03c7cd93dd7c107ffe38a7c3fb8edf30eabcdd1352f866
 Size (oniguruma-1.1.0.gem) = 24064 bytes
 SHA1 (patch-aa) = 8cafa2c01f2002c523eccff70d3deb6c71d6275a

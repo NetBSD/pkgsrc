@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:02 nia Exp $
 
-RMD160 (demjson-2.2.4.tar.gz) = 2d5f60a791671465dc91ab370a8ad7480ed81a26
+BLAKE2s (demjson-2.2.4.tar.gz) = b57a8d984d9a0e4f7f40444a9dd7c7ed0c0ce4acf7535e4a1f845c7ac635a487
 SHA512 (demjson-2.2.4.tar.gz) = d8a1cde062d0b062bdae29b6d79ad69fb9cc185428718a0009ccbed544ed37bd354fbb86edadb56bd98183ac8636b2edae322ed19aa5f07a7b6df668c7aa0029
 Size (demjson-2.2.4.tar.gz) = 131457 bytes
 SHA1 (patch-setup.py) = a25eaed1eb2d39c08dd96c7a0a756b8fff51d155

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:49 nia Exp $
 
-RMD160 (XML-Dumper-0.81.tar.gz) = 85b6a5ea85e5057ec53d5b4cbf997c1b03256fa2
+BLAKE2s (XML-Dumper-0.81.tar.gz) = a00b9469cfb530bfa68dcfc1672e53781c902827ee7a0805abef44da32c010a1
 SHA512 (XML-Dumper-0.81.tar.gz) = 757fe45bcfb607135e5db3fbbb821b50ad9eecd6e8773965fea4cb57dd5060b01fa7ee7819f1b094e29a5f536589d76c1cdf30b0f63ec29ce99ad1dd3559363a
 Size (XML-Dumper-0.81.tar.gz) = 17988 bytes

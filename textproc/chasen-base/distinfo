@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:00:52 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:21:47 nia Exp $
 
-RMD160 (chasen-2.4.5.tar.gz) = 9878b9fc37d9293a448be60b07fe8bfc1f85f91e
+BLAKE2s (chasen-2.4.5.tar.gz) = 2dd402367a4779ddbb41f4ec64862346e6b0e6fe3c7747199f425f9a4ec4e7bf
 SHA512 (chasen-2.4.5.tar.gz) = 54eb0788082629e030927460ccaf9b86c59f34e83435e53007627193921d42f03e90b44cedf70218abfa33286e2f93c2291523001ad1530228ccb7185f8a49ca
 Size (chasen-2.4.5.tar.gz) = 830940 bytes
 SHA1 (patch-ai) = 6983226e216732d66889c1d84143b34c26387019

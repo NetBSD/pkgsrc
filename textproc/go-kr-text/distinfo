@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:21:54 nia Exp $
 
-RMD160 (go-kr-text-0.2.0.tar.gz) = 0bc5cde23eebf988c07117d4ded61ef1c986c890
+BLAKE2s (go-kr-text-0.2.0.tar.gz) = 614c6ca24a14141f73124d63db207a69db86d6c18f5c8739cb4626a50836e149
 SHA512 (go-kr-text-0.2.0.tar.gz) = 69c73f437834b6c07a5c47c51bfd726ec1709939622d5bfa419deac449858e519f01fce0e5abe734ab502249914e526ae6437b8d3462f05cd5b414da9bb145c1
 Size (go-kr-text-0.2.0.tar.gz) = 8699 bytes

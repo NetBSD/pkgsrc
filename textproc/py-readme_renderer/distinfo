@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:12 nia Exp $
 
-RMD160 (readme_renderer-29.0.tar.gz) = fe5fafad3bfdfe9e1b4dd294f5a5212e3529a691
+BLAKE2s (readme_renderer-29.0.tar.gz) = 8bdac2db47d55981266f5c4858b8743b273b6498972ffd896630635e3bb711cd
 SHA512 (readme_renderer-29.0.tar.gz) = b5f462c3ee077f5711c18a4c0243b084730a705bf5476355265d18ce4bfd696edd30a28aaa8f3aaf96b531a2cbf32bd9ed143431bfbbf08cd7ac7234a2d57a7c
 Size (readme_renderer-29.0.tar.gz) = 27169 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:01:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:22:37 nia Exp $
 
-RMD160 (Syntax-Highlight-Engine-Kate-0.14.tar.gz) = 8b80f4dfc508fba11e85986fd4fc0b0a47aceefd
+BLAKE2s (Syntax-Highlight-Engine-Kate-0.14.tar.gz) = 2aa88f7dd2e5a59ba3d30d048a643cb6969356f854e6ffe3e375ac22c9b1a037
 SHA512 (Syntax-Highlight-Engine-Kate-0.14.tar.gz) = e215f0bc9c6fab97934c826c2bb2eb33c8562775c252db589db7e60de74c03123dad81f9d6ce2095db6ab23fc55d2831c47151e9b753efd8292a684ccc853e36
 Size (Syntax-Highlight-Engine-Kate-0.14.tar.gz) = 487295 bytes

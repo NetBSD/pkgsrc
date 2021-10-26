@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:40 nia Exp $
 
-RMD160 (xml2doc-20030510.tgz) = d2f7d13ace6dc0a68a3ca4aec993ca78b18930e6
+BLAKE2s (xml2doc-20030510.tgz) = 7c8cb7aacd3efe033e024db0eefdd44d6f801047ee479e168491077bc3e251e5
 SHA512 (xml2doc-20030510.tgz) = 9eb2970b7adef1669b9b0aede2b3d2b42ba234c8294f0f8e6e230d8fcc6cf878675b2f0bff87ee36a255ab29376be844d92d382be7aad0ab11972847cfe49dbd
 Size (xml2doc-20030510.tgz) = 53307 bytes
 SHA1 (patch-aa) = ca63abf9c7decaec9eb4dcf0afc448378f217060
