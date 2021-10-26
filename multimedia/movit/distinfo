@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:12 nia Exp $
 
-RMD160 (movit-1.6.3.tar.gz) = bba75c6e346dd2aa19de842bbea4f2e2cd66d8ec
+BLAKE2s (movit-1.6.3.tar.gz) = dba4f31dc6edf5013eb60d24ba140c7927a5f9f498082ea9c81405de54297d47
 SHA512 (movit-1.6.3.tar.gz) = 6f7169710fbb60f79c44393aea57619f4c83d64fb296ea946d591e78fb9a71b513869dc6325f90e4c2dc843b7ed4841eaef41ca69f64787c8a57f4fde583b1e5
 Size (movit-1.6.3.tar.gz) = 605922 bytes

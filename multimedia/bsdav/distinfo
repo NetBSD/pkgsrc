@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:32:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:00:58 nia Exp $
 
-RMD160 (bsdav-1.4.tar.bz2) = 686c4d79e580dda1eb9b2be1bfe46ce5d6a9a154
+BLAKE2s (bsdav-1.4.tar.bz2) = ba67fd9d9a0d53312f4e50469ec1d2e2daa68d442402aff70905a5830e8595cb
 SHA512 (bsdav-1.4.tar.bz2) = 52be5f531106766bb62aaab1afe022220e40b6768b3d9e97d81287aa5284f5d9d3eaae7fa4ee1e3c923e4c01c12c4af2b77147544033ac30fdc9c8bda264abc3
 Size (bsdav-1.4.tar.bz2) = 60807 bytes

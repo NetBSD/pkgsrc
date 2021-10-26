@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (divxplayer-0.2.0/divx-player-installer.tar.gz) = a48ba17ebe92f3dd7bd3871ba2c18b9e6b48f609
+BLAKE2s (divxplayer-0.2.0/divx-player-installer.tar.gz) = b5a6361e7474918906f32af012bf89f809e416321f633586934cd275c8100440
 SHA512 (divxplayer-0.2.0/divx-player-installer.tar.gz) = cec959b13cdc00d62a7eeef8eaf65d86a677a94a3293c3417838c297017049b6f6e6604c8fb5eb4cdc1a6dcf2f6cd565d4f30fcbf95212c0231c981aca1d09bb
 Size (divxplayer-0.2.0/divx-player-installer.tar.gz) = 3888848 bytes

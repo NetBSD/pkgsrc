@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/25 09:10:54 adam Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:01:01 nia Exp $
 
-RMD160 (ffmpeg-4.4.1.tar.xz) = ebb1f042b2ba4f13be86339d30522cd73eb6da3e
+BLAKE2s (ffmpeg-4.4.1.tar.xz) = e4ba404f328919a7bae4c84b60efc12eb5e622d44973bf9ff7a0fc4bab460e14
 SHA512 (ffmpeg-4.4.1.tar.xz) = c651c120b71db6991ffc54abc291986e7d35d776203af327f9a28853d1d0af468ca0956e2d3d893f55a211f70a40c041d5aa9aa9664ef581302b27494be9374e
 Size (ffmpeg-4.4.1.tar.xz) = 9557516 bytes
 SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:32:03 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:01:00 nia Exp $
 
-RMD160 (dvdrip-0.98.11.tar.gz) = 008afcecd1eaf6842e907d325b079cc60f4a6b1e
+BLAKE2s (dvdrip-0.98.11.tar.gz) = c84e77e31a71b2d74cd509f215ce076dfa658d1789d4204dd99276bd3d31e689
 SHA512 (dvdrip-0.98.11.tar.gz) = 8bb2e4cb72666ac3f7d1953e02ac868070503f00b05ea39b4961f54042088d07abd4ef020a9cefec11e96e965d84dd95d00288e7562d92551f480ccba88b9dce
 Size (dvdrip-0.98.11.tar.gz) = 2075302 bytes
 SHA1 (patch-aa) = 45ed212c5ef22950049fa34e871026b34bce188b

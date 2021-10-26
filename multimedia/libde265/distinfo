@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:07 nia Exp $
 
-RMD160 (libde265-1.0.8.tar.gz) = 5dc4fef504d7c0afe88e62a9580e72fe897b8758
+BLAKE2s (libde265-1.0.8.tar.gz) = f7595f21a1f8cea81a9884c48a3220148612a7d7f87bb3e723013ab02c02ebe3
 SHA512 (libde265-1.0.8.tar.gz) = bcb33493cbc337d29047c6765189aaba523b20c138aa4fd5c264b3c6aea64cd174cbe14ca2d88c76319e0a8bd5d2e6269f300f056876d2962217eea7934172da
 Size (libde265-1.0.8.tar.gz) = 837878 bytes

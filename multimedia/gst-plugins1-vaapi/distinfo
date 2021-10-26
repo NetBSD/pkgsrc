@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:04 nia Exp $
 
-RMD160 (gstreamer-vaapi-1.16.2.tar.xz) = 65433cbe4fdc69280528d3ecba158d9a19e64579
+BLAKE2s (gstreamer-vaapi-1.16.2.tar.xz) = 812621cf96f04919909fc464383e164091a3134fb8cbbc79c22baf6fa4ddb8e1
 SHA512 (gstreamer-vaapi-1.16.2.tar.xz) = 61554b5496dca595fa6e278a5634112e225784e9f0a7e731800fd04b395ba4e11dc467b8d074cb8cfed182fa9b9511c104192aecbba3ac755a4c32372061ac9f
 Size (gstreamer-vaapi-1.16.2.tar.xz) = 1095012 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.55 2021/10/07 14:32:20 nia Exp $
+$NetBSD: distinfo,v 1.56 2021/10/26 11:01:19 nia Exp $
 
-RMD160 (x264-snapshot-20191217-2245.tar.bz2) = 8565a3af522b47430cfc1527968e8ae851fc05c4
+BLAKE2s (x264-snapshot-20191217-2245.tar.bz2) = 7b9ecf06499f7e768c8fbf1d8180b09379c03fa02d3112ab3e49f02f2d989ebb
 SHA512 (x264-snapshot-20191217-2245.tar.bz2) = 89061f66fa86dfb868759e5b1dabbb6d1cd9d1240b1bf16afc789f1aa080b3940df5766ddb25e0f0faf0bc8b2603bc35b932848426eeaa4b603199066368f5f0
 Size (x264-snapshot-20191217-2245.tar.bz2) = 774081 bytes
 SHA1 (patch-common_cpu.c) = ef15bae000163e9c10d2e414e841486dd2920b80
