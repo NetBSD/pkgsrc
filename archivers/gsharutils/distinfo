@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 13:05:58 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 09:57:06 nia Exp $
 
-RMD160 (sharutils-4.15.2.tar.xz) = b154e7f3fb28d560a50c2c7a99da8b18257cb21c
+BLAKE2s (sharutils-4.15.2.tar.xz) = b39d43be2b45a1b3b6a22d5f878a73dcc04154566002ede05694be320e5c5dea
 SHA512 (sharutils-4.15.2.tar.xz) = 80d0b804a0617e11e5c23dc0d59b218bbf93e40aaf5e9a5401a18ef9cb700390aab711e2b2e2f26c8fd5b8ef99a91d3405e01d02cadabcba7639979314e59f8d
 Size (sharutils-4.15.2.tar.xz) = 1122476 bytes
 SHA1 (patch-libopts_libopts.c) = da5b86c5ba4dfdae5108476e46c1ed5e47a4254e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:06:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:14 nia Exp $
 
-RMD160 (bz2file-0.98.tar.gz) = 5fa4788ca3ebc2f3fbed7e37bc8e8ce13d11ccdf
+BLAKE2s (bz2file-0.98.tar.gz) = 90b4e0923e92851002bf028cc82ffb5fc7eaf26323aa6b0b1e91292a85a472d3
 SHA512 (bz2file-0.98.tar.gz) = 2d28e71fe71b5fea4008d65a1fa91d5c6fafcacc09f891c5deaaa985661576bd97f2e33fe9f8c5943841f09c153f2079a2511329c066e57c775fb0b089b30b20
 Size (bz2file-0.98.tar.gz) = 11333 bytes

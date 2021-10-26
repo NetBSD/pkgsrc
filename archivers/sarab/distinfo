@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:06:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:57:17 nia Exp $
 
-RMD160 (sarab-1.0.0.tar.gz) = c6c9d794980e91042231037da3bd2c6e11e03295
+BLAKE2s (sarab-1.0.0.tar.gz) = be7c02f40238d2b6433a669850b3236b078bf2fa51a056d3a982a457c619ea4c
 SHA512 (sarab-1.0.0.tar.gz) = 246abd1893127a8aaf73537b9eb0d43921da37ddee97a02513916db2d6abdde6dd45715fbe56c53809c5442531e8172467de1b05af264a50054ecbecaa8d319f
 Size (sarab-1.0.0.tar.gz) = 24738 bytes

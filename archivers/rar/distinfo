@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:06:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:57:16 nia Exp $
 
-RMD160 (rarlinux-4.1.1.tar.gz) = a0aa14bc85996ca242ce6a48c7d244b4b171ecb6
+BLAKE2s (rarlinux-4.1.1.tar.gz) = 94b3ce72982756cef6617090ef0c1feda74aa720b8bb7ac71f8b247aed53228d
 SHA512 (rarlinux-4.1.1.tar.gz) = c0cb5637463dc3124e429c6dc41f97d9ad1732e64fd83024b6e47a722b0b1375eb39d191919ef9935cde552e72efe9ddf89604ed4aa0702446a0550222ded9e5
 Size (rarlinux-4.1.1.tar.gz) = 915307 bytes
-RMD160 (rarlinux-x64-4.1.1.tar.gz) = c81ff0fe9f1d001db61a0b8f92357b0b529b3953
+BLAKE2s (rarlinux-x64-4.1.1.tar.gz) = 50be67ad00cfb33d434e855e2f0861bd9b1dcd9f6fd4fe9d8f650289688ff261
 SHA512 (rarlinux-x64-4.1.1.tar.gz) = 0d33f849ecf831c34ad95b97c15ea1564d08beaac2b02f4c55d757fc9b12fe8cc06b0b338da04b3d842f05101ddcc1d1135b65723ad229d6b75b2f7439f6f110
 Size (rarlinux-x64-4.1.1.tar.gz) = 952748 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:05:57 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:57:05 nia Exp $
 
-RMD160 (bunzip021.c.gz) = 32580bfeefc17094a4e8dc2532bdd7efcbd80063
+BLAKE2s (bunzip021.c.gz) = b8a2976b8e7838a2d5d752335cf63dad62c6dad88b6fab69bdd3276a49340565
 SHA512 (bunzip021.c.gz) = a434f95a512e8f05c1734723b19354f4fb67b6c6d9810d880ab1a722136d5e57581748eeef78d6e96ad342d293e2ecd43714471fcef59698fd26573ec6f17489
 Size (bunzip021.c.gz) = 20317 bytes
 SHA1 (patch-aa) = 9f131e7ae37a5ae061bdcb958ef6cf0c8ed14f75
