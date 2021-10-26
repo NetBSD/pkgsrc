@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:55 nia Exp $
 
-RMD160 (festvox_kallpc8k.tar.gz) = 7346b0a0ab78fbe2ee89c3ee21b09c3f3ddbeaae
+BLAKE2s (festvox_kallpc8k.tar.gz) = cec00357364512858cf9c4199835457b2a637118133a9129c736fc3c1698f0e2
 SHA512 (festvox_kallpc8k.tar.gz) = f8907d1e143c4b9c908dbcaf810b8fd41d59afb5e40dc42d9e773a98288c5d9bf474f5940498ba71a95092ffd46adede96807fbcbaaf22d7f65d5f2ee1e43ae7
 Size (festvox_kallpc8k.tar.gz) = 2362746 bytes

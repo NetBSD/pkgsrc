@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:10:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:37 nia Exp $
 
-RMD160 (xmms-mac-0.3.1.tar.gz) = a7b22cdf0a8196480016f02314a0f60dfcab9984
+BLAKE2s (xmms-mac-0.3.1.tar.gz) = a71f6cef0ab8af6169dc709a1614f57a9d8263b8c56c82f8ca02879ca92106ea
 SHA512 (xmms-mac-0.3.1.tar.gz) = ad0f3dbf94593c1349de67c7a0477ac8bad201cadd145156a1ae0913e6d6c71e2dc4714f70fd741bf9ed10c619bf6a1c2dad342dfa9fbc728cb45ede1c88d8b8
 Size (xmms-mac-0.3.1.tar.gz) = 299783 bytes
 SHA1 (patch-src_mac.cpp) = a264201b1e2e08df74744b94dc3da845ec360a62

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:09:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:58:44 nia Exp $
 
-RMD160 (SDL2_mixer-2.0.4.tar.gz) = d5674a92bc9a81e3aba0072c4d7e2314e56958d6
+BLAKE2s (SDL2_mixer-2.0.4.tar.gz) = 6e431787bc662aec5112a22f27925c9a23f096a632f81f899c34b1d2697d79f7
 SHA512 (SDL2_mixer-2.0.4.tar.gz) = 98c56069640668aaececa63748de21fc8f243c7d06386c45c43d0ee472bbb2595ccda644d9886ce5b95c3a3dee3c0a96903cf9a89ddc18d38f041133470699a3
 Size (SDL2_mixer-2.0.4.tar.gz) = 11125077 bytes
 SHA1 (patch-configure) = 1666d97f82c5f3dca03eb45dad6b9e73dc61dffd

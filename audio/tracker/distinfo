@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:09:57 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 09:59:33 nia Exp $
 
-RMD160 (tracker-5.3.tgz) = d089f514ace6f64dcb90866542121b51ab5f154c
+BLAKE2s (tracker-5.3.tgz) = 403f8ebafb3602dfd983ff28963c0c0183f28659cc853d46ac50f54c11ad161b
 SHA512 (tracker-5.3.tgz) = 0cba5f563aea0b733dfc4d3db54fa43e40414e059d5a05cf684a52c455d1123dddffb3817f3cbb3096550a35ef97f7a2c5c01de8552337b84ea66c895ab5e8a6
 Size (tracker-5.3.tgz) = 454803 bytes
 SHA1 (patch-aa) = 511aee63652fc86cd7f116e6b583a4b7f1e6425b

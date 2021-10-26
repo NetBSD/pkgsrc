@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:13 nia Exp $
 
-RMD160 (moodbar-1.2.tar.xz) = 6e8a8e337a8f0f0540dc547295f32dbbd247dfcf
+BLAKE2s (moodbar-1.2.tar.xz) = d459064170f18f2365a73a65784b735bd86af01f15e4245f116a1d617a9210e7
 SHA512 (moodbar-1.2.tar.xz) = 810dbc259e5224a5a5966d2f5f7fff0c0a364f264f536c566190d180ad1fdacc58e71d1a655ef5415eb8d029f442128adf97d10fbd6e840bda5a8cc3d78cb5c4
 Size (moodbar-1.2.tar.xz) = 26136 bytes

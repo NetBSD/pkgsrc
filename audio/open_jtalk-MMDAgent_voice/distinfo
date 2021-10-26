@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:19 nia Exp $
 
-RMD160 (MMDAgent_Example-1.8.zip) = b66c56b8478cee8fbc68836b516cdac778f4ffd7
+BLAKE2s (MMDAgent_Example-1.8.zip) = 03ea2ec606aaa1c0ccf00a4b9200b0623a15c5a633ad266609335c2e43161341
 SHA512 (MMDAgent_Example-1.8.zip) = 9ba4a3eade7e12418f4ca182bf1394a11ad2e5ac31bc8eef241debf4e17997685706e42912b086a0539919b38108ab505c12fb74cdf3bfec40a7041b48b5cf89
 Size (MMDAgent_Example-1.8.zip) = 30293611 bytes

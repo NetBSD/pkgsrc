@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:09:15 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (cmp3-2.0pre6.tar.gz) = c7d5f774c05734e8fca8ec8d536b2843cb99ad80
+BLAKE2s (cmp3-2.0pre6.tar.gz) = 97a504f1f262d10cf3d17f74d2423a7b6161bc53973ed4d220a76c1ae9863ee3
 SHA512 (cmp3-2.0pre6.tar.gz) = 809ceb9e141a13a3670a0fbc2b330a56470f3d0c643bab92160aa57cbf4d910e8766399048d34bcda4870b98689b6da21b6366bde7d554e9ed93dc2f339785ad
 Size (cmp3-2.0pre6.tar.gz) = 183749 bytes
 SHA1 (patch-aa) = e31bc4ba77b769ae3a45c21d90b87b46322233cc

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:09:26 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 09:59:00 nia Exp $
 
-RMD160 (gramofile-1.6P.tar.gz) = f4b81c78e6c6e80e2109d8921de8e03364910d61
+BLAKE2s (gramofile-1.6P.tar.gz) = 3b9bd00ec7a43e999d12427d757d096747e54f987cfbaea1e0e09e5310cef573
 SHA512 (gramofile-1.6P.tar.gz) = 7731cfd360cfcf8615ef5072d6d50423ae7192c7be233b2ad49bb10940ed9edb977f36dccad4c2d239868f3d0c3334feed6dd6f38b34a1ff6bfc144be07be38d
 Size (gramofile-1.6P.tar.gz) = 117822 bytes
 SHA1 (patch-Makefile) = f4fea45e1fd038c9a837c2f63f5d5030d54bc93b

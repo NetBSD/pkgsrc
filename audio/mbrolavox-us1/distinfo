@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:12 nia Exp $
 
-RMD160 (us1-980512.zip) = 32907bc8ba7af50318a32738035f23ba26126a4c
+BLAKE2s (us1-980512.zip) = 152cde4ea00abdab7a0c0ba78e61cedb132daa66326d2a30006500b35b8aefe9
 SHA512 (us1-980512.zip) = e2b1eb7325e9fe0b58f3b0e265899b0da1cf5ec1cb183f241bf73ba670528b56cd091277f432446e6651d81dca21f2b2ea8a84622dd655d125cedda0447cdb62
 Size (us1-980512.zip) = 6562915 bytes

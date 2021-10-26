@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:55 nia Exp $
 
-RMD160 (festvox-don-1.95/festvox_don.tar.gz) = b601a712d893e6d6f70c1d3a3fa87903aae81917
+BLAKE2s (festvox-don-1.95/festvox_don.tar.gz) = 8428fdf869a5ffce2d0f5138e1bdb45d8014205d36e54f3c15a14bedcb3ff143
 SHA512 (festvox-don-1.95/festvox_don.tar.gz) = b7d9f82ea7be7b0e7e9ac3172abbf754fb598c5060faefcbcd0ba8da19bd9cea8cdda1fef9edbbb19e7a20ad0ff2f6209993044f1d8244826800ae13b6e7983e
 Size (festvox-don-1.95/festvox_don.tar.gz) = 645583 bytes

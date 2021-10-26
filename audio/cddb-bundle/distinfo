@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:49 nia Exp $
 
-RMD160 (cddb.bundle-0.2.tar.gz) = 2de6c627b64dd644ba7612159b86fae83a79e6df
+BLAKE2s (cddb.bundle-0.2.tar.gz) = 4f85b1eeab4020dcdac672c82090ba3b16fd38b0819d082090ab4fb8715ce85e
 SHA512 (cddb.bundle-0.2.tar.gz) = a3abf5d20f8b802d82aa5bdc879439adc121069cfccd5e9cb8aeed51c2303bce35657c66a7efefd71697ae013173a366058ffde21236d753613805a2372f1975
 Size (cddb.bundle-0.2.tar.gz) = 16936 bytes
 SHA1 (patch-aa) = 10174afe64d9a5211af1947ddf569b9135d7fb24

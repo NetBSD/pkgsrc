@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:30 nia Exp $
 
-RMD160 (speexdsp-1.2.0.tar.gz) = ce46fb282f371be547cf31630fc30ea798051b7e
+BLAKE2s (speexdsp-1.2.0.tar.gz) = 8ef78efe31e612007ee5c75dd0dcabfbe7cee2d3143ebde23229f93cb6fa2518
 SHA512 (speexdsp-1.2.0.tar.gz) = e357cd5377415ea66c862302c7cf8bf6a10063cacd903f0846478975b87974cf5bdf00e2c6759d8f4f453c4c869cf284e9dc948a84a83d7b2ab96bd5405c05ec
 Size (speexdsp-1.2.0.tar.gz) = 919621 bytes

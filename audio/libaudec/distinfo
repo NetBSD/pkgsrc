@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:04 nia Exp $
 
-RMD160 (libaudec-0.3.4.tar.gz) = d871099c5fe653cb743efd4cbbeaeb5216ad7310
+BLAKE2s (libaudec-0.3.4.tar.gz) = 59f9da6c430fb970adadc854b0ffa991dc48a9359ce8133cf0d9b2660f57af24
 SHA512 (libaudec-0.3.4.tar.gz) = 9c50b866e2f0d1897d7a55a83263e74c3a1cf77772a52bd446632c9a92f2ccbbb3e2e1ecfde8b05fc41e59e4d60a57935a656ec8f40b6680fc4bbe201ea045ef
 Size (libaudec-0.3.4.tar.gz) = 627395 bytes

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:09:54 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:59:31 nia Exp $
 
-RMD160 (SPTK-3.9.tar.gz) = c19b651e653cf26b49e2220afd8cd435bd255089
+BLAKE2s (SPTK-3.9.tar.gz) = c102247dd6aca4dd884ad0a65c22927ec1aa50fff9337cc0e3a854726deb1a07
 SHA512 (SPTK-3.9.tar.gz) = b4005c83723d07c873240f48ab66af476017211151ee69b1b4abc2478604bae1c7794906a95d9e6ff4d2c7e4fd6687cab95470abb5f2f15cb75ad57327cae86e
 Size (SPTK-3.9.tar.gz) = 1077702 bytes
-RMD160 (SPTKexamples-3.9.pdf) = cf5cfbc4908246a380080195fa15ec8baa2967ae
+BLAKE2s (SPTKexamples-3.9.pdf) = 5466b8e6bf8083db907f35bc1da7aae07578d5bb1743f32376ebbc4afca261a4
 SHA512 (SPTKexamples-3.9.pdf) = 56d1e22d99567e46ff5fc050aebf72eb327aad6872635b1a627d69d89e008fd39e170f82bce7b4bb847bde8e7ab23e91afb84acb7046ef4dec1494e4f7d73e49
 Size (SPTKexamples-3.9.pdf) = 2752695 bytes
-RMD160 (SPTKref-3.9.pdf) = 4f6650ea5e648ebc602e60b1c51b7e334344b17e
+BLAKE2s (SPTKref-3.9.pdf) = 364001b610f34db9532fd97cac823ac912928ee5cce12399ae0118fea3facd69
 SHA512 (SPTKref-3.9.pdf) = d145adad6cfc78d8e04f546feb6eaf17e27f79a3f03e1af9ff86f213b675e4648d965670e1fa3f62d4101f9bacebf7a710947c70d7f302fe7c694c8f73e6d31c
 Size (SPTKref-3.9.pdf) = 1044287 bytes
 SHA1 (patch-bin_pitch_swipe_swipe.c) = af7013843ddf1a801be32d10c65f8ec525c481c2

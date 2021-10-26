@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:09:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:58:58 nia Exp $
 
-RMD160 (glyr-1.0.10.tar.gz) = aed1d05f7fb74e65829d66b3e6c392086ccc1eab
+BLAKE2s (glyr-1.0.10.tar.gz) = fd6ccc6c181b69781edb416430447da27f7b41ebacac56e6a4bdef734dc363d3
 SHA512 (glyr-1.0.10.tar.gz) = dc5a579c84c321de7c28861e42196d42ef73bbdbe86b5d662d7ace1d79efe8d6d8d0a8086092ed9c32af9651db8cb11bf1678c5582b17192b23e20a66812bb21
 Size (glyr-1.0.10.tar.gz) = 416414 bytes

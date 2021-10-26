@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:09:40 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 09:59:15 nia Exp $
 
-RMD160 (mp3splt-2.6.2.tar.gz) = 2ead469bfa7989a77459684dd4098a1fdce9eb7f
+BLAKE2s (mp3splt-2.6.2.tar.gz) = fcf71174be7e4cbcf54537765dc2b789840709c136d875aa6ee0199e81b216e3
 SHA512 (mp3splt-2.6.2.tar.gz) = c1cbdc905d4f19e8e20afeadf02a2967049d86e69613312c8855e03afc5b190a569ac63f970171384853961cbe6bf248fae47e5116c4fe9deb7a0787f299918b
 Size (mp3splt-2.6.2.tar.gz) = 260901 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:10:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:37 nia Exp $
 
-RMD160 (xmms-musepack-1.1.tar.bz2) = 116e036b12c58d4996e157ca8e7e292b5fcba382
+BLAKE2s (xmms-musepack-1.1.tar.bz2) = 64ce6adea4d3aff175c04d1179516860f3a8b678995f33d1f3391270b46d8040
 SHA512 (xmms-musepack-1.1.tar.bz2) = 6e0fe7481c46a6aa321f660e18b9e8e23f01ed14da6fd6f956892b6fcfcd60e572100308128c1ea5df926fe068750c9100515adc672fbf2ee824019c57c28758
 Size (xmms-musepack-1.1.tar.bz2) = 207369 bytes

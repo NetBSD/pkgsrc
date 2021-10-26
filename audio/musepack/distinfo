@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:09:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:17 nia Exp $
 
-RMD160 (musepack_src_r475.tar.gz) = 622d04eeb309beacd2b6bb650178dcdc42773db2
+BLAKE2s (musepack_src_r475.tar.gz) = 5380ecec6cc0985772c9df4a4158a07fc772539eb06dd01a52f5c5ef61d75d41
 SHA512 (musepack_src_r475.tar.gz) = 23aa16152b27ba99ff7f4672b8f91562ee9ad829bbe1ee066693eabf69844ee9f8e4b3eebf1bac78e6994119fbb53b034479a1b996576aeecbfba7d797f130b0
 Size (musepack_src_r475.tar.gz) = 188737 bytes
 SHA1 (patch-CMakeLists.txt) = c4a9dd61c1f8691d8321e6ee5f6939cd44eb7a15

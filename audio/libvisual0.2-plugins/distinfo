@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:10 nia Exp $
 
-RMD160 (libvisual-plugins-0.2.0.tar.gz) = 3f4835843e3719e6342a3b8f1478f89388423b37
+BLAKE2s (libvisual-plugins-0.2.0.tar.gz) = d7bc7785e7595c24eed1764c824e317cce88d25ee3b5e9e91b7a00135f2bc98e
 SHA512 (libvisual-plugins-0.2.0.tar.gz) = daf0ea66cfdd3d967dbee9b392f889f0a074c383078562ada6bd9d0cabdebfa60ef3c8d9a12d27452b5dcae41275d578d8e349300c01b865df3907e15d5f7ecf
 Size (libvisual-plugins-0.2.0.tar.gz) = 1021051 bytes
 SHA1 (patch-aa) = 68ffdb6261aafa219df0e5c4d313fc7f865ae734

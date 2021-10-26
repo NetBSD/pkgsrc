@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:09:32 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:59:06 nia Exp $
 
-RMD160 (libmatemixer-1.24.0.tar.xz) = 7764acc19b414757cbaa33b9228fc1592981c442
+BLAKE2s (libmatemixer-1.24.0.tar.xz) = 9d3afdb701347ff44f2a4fcee1cb8d4a14deccd22cb9d790b92a601a53d81ac7
 SHA512 (libmatemixer-1.24.0.tar.xz) = bf8c807bd45f3626bbf881eefa1e4638165daf61637bc63a704492d2a67eeec622e35e58c041649d33411294f96f79c99b3ea2406ae6fcf83294ec625cca9dbf
 Size (libmatemixer-1.24.0.tar.xz) = 484808 bytes
 SHA1 (patch-backends_oss_oss-backend.c) = 5a4d7212af7730db8ae632a3f42535f09513051d

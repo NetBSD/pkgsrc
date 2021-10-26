@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:01 nia Exp $
 
-RMD160 (hts_engine_API-1.10.tar.gz) = 0b36341db11fabb9fdbf8e0231f2f4bf06e27107
+BLAKE2s (hts_engine_API-1.10.tar.gz) = 3d3699ea11a7427e44125bda8d37db53489705c52fa5ea01ffa1b87a8fa5b9f9
 SHA512 (hts_engine_API-1.10.tar.gz) = fa43bc0a013bfae1392cc5c1195901aae7de50f1866f06d6ec060af5a5740eb2715632561a117d04c98f2863da32fffff05bcaf76ba6ac70e5649ce94dad544b
 Size (hts_engine_API-1.10.tar.gz) = 169852 bytes
 SHA1 (patch-lib_HTS__misc.c) = beff3709a9fd25bdc365a8a170834f9533ad363f

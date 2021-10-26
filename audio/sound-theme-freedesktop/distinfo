@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:29 nia Exp $
 
-RMD160 (sound-theme-freedesktop-0.8.tar.bz2) = f0b0afbc1c40e3155292673390107829c7b3aed0
+BLAKE2s (sound-theme-freedesktop-0.8.tar.bz2) = 8b6c4fbbe30d87b30c295b5dbc1997343067a9d3d0c55240d9429753c086839d
 SHA512 (sound-theme-freedesktop-0.8.tar.bz2) = 594b8e68a82094ce002260c2497c65b4a1739433d2a2f761a5d86abf0c2a3d76b5d99bc12f900f71a1b853afb10aaf2c51dec36c5e68a8e25762a4da807db3ad
 Size (sound-theme-freedesktop-0.8.tar.bz2) = 401119 bytes

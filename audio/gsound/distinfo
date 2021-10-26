@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:01 nia Exp $
 
-RMD160 (gsound-1.0.2.tar.xz) = ca5e21450ef2eceb83ac7be7e7f83e5da3d4e1f0
+BLAKE2s (gsound-1.0.2.tar.xz) = 603e84d1e9f690bf4332ecf602e1d2dc58553365cc0f005aa38d82014e5cc666
 SHA512 (gsound-1.0.2.tar.xz) = 3525598aade28129d605e745cd6e8ef292220c446d59b34129056fa2aba7b4aa808c3efd29f4916056e20d5e4046b0edf2a6c9b97c272c95e59af7f8ef62e6b0
 Size (gsound-1.0.2.tar.xz) = 282068 bytes
