@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5285 2021/10/25 16:52:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5286 2021/10/26 08:34:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8040,3 +8040,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-rapidjson to 1.5 [adam 2021-10-25]
 	Updated devel/thrift to 0.15.0 [adam 2021-10-25]
 	Updated textproc/py-colored to 1.4.3 [adam 2021-10-25]
+	Updated www/nghttp2 to 1.46.0 [adam 2021-10-26]
+	Updated www/nghttp2-tools to 1.46.0 [adam 2021-10-26]
+	Updated devel/py-traitlets to 5.1.1 [adam 2021-10-26]
