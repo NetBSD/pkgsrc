@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:18:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:02:56 nia Exp $
 
-RMD160 (whetstone.c) = bdc78a3775657a0e7529dfcea23b179f04347d1b
+BLAKE2s (whetstone.c) = f925a7df3b02ccdaf7816593b1942a742bd34be9b3d84a1df5ec9f959340b968
 SHA512 (whetstone.c) = f4d60f4ef58cc2450ff5e4dc5f8175d166aa7a3c80d499149055345ba6314cb9451efff04ecd5c8686757f364af37944f4d13ab73e8216041fae1ae7f9f0b937
 Size (whetstone.c) = 8121 bytes
 SHA1 (patch-aa) = d963b9c4c77558f264da085055cbb1a9ed36ac08
