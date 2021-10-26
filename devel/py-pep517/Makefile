@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/07/19 07:07:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/10/26 17:13:01 adam Exp $
 
-DISTNAME=	pep517-0.11.0
+DISTNAME=	pep517-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pep517/}
