@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:01 nia Exp $
 
-RMD160 (terraform-provider-archive-2.1.0.tar.gz) = 061430dab8c9f4acf918667eee6a3be4aff664c2
+BLAKE2s (terraform-provider-archive-2.1.0.tar.gz) = ac19b882d395fe75f1e1ed7e465db50ade21cadce224761a72fb01e23024b93d
 SHA512 (terraform-provider-archive-2.1.0.tar.gz) = 62876d00c69a618a961f7cd945c02705c35b8b005d6a4c06fd20a728f0054df4dfd5c36a36cde526dc05a6464497b04aa6c3d48c92382115249c7c1ae9f84b52
 Size (terraform-provider-archive-2.1.0.tar.gz) = 4472966 bytes

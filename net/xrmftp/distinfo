@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:43:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:07:13 nia Exp $
 
-RMD160 (xrmftp-1.2.4.src.tgz) = 21c97fb5422efb01e60dba38b826d91b318c07c9
+BLAKE2s (xrmftp-1.2.4.src.tgz) = cbd64389ee5470ab66ca8571bb8d2fe898f9fe46d8529bd3fa0f8198f9aeb360
 SHA512 (xrmftp-1.2.4.src.tgz) = 1875cdd0f8442b030ee39e1a492ce76b65f3007298fed5da6d4ac783700ab9ef0b9d6159e00231b969ace189e289725f37b1f1b293b2c379359b2ea5f4abb8ac
 Size (xrmftp-1.2.4.src.tgz) = 37171 bytes
 SHA1 (patch-aa) = dc4312962ea88f7de850b5efb4dc66717abd6447

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:04 nia Exp $
 
-RMD160 (check_raidctl-0.1.tgz) = 54d3f9e894e63046a028c923c7e62a23fdc9c2ae
+BLAKE2s (check_raidctl-0.1.tgz) = dd3bcafd4dd0f1913953e8562e41560727caa4e6f04a0d32ad8bb22f4641b8a5
 SHA512 (check_raidctl-0.1.tgz) = dd1063b30e5a451d79346a4dd300ec15610906ec36a61aff0c8a55e06548b47ed915b683c27a1ec7cb2368cd8f9e0497c53a9c73f173cddfd2a37167d60a28f1
 Size (check_raidctl-0.1.tgz) = 2068 bytes

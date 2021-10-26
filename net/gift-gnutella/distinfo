@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:38 nia Exp $
 
-RMD160 (gift-gnutella-0.0.11.tar.bz2) = f9c39fc8c1e056483b3cc82c5e801efeee1cdf2a
+BLAKE2s (gift-gnutella-0.0.11.tar.bz2) = 39a5c273a61251f1a8309a80e80f088f6399350b0d1351cf419d694fbae9c6f7
 SHA512 (gift-gnutella-0.0.11.tar.bz2) = 41a933580a2d2de1e925f7b4807e82dfc5570e3dbf2789738102f1131da142a51100550579ec59d7ee7331b424a21bf073d50900524fac39291197fcf6357308
 Size (gift-gnutella-0.0.11.tar.bz2) = 405742 bytes

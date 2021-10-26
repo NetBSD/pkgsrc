@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:44 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:54 nia Exp $
 
-RMD160 (libexosip2-5.2.0.tar.gz) = f5ba3544bc437e325f3c44dd7ea2f67711d14409
+BLAKE2s (libexosip2-5.2.0.tar.gz) = b182acda65a63685a0c6a61d4dee6c9928a2d95a8c39f50e20ccb798e809bfad
 SHA512 (libexosip2-5.2.0.tar.gz) = 0abfa695d466a10e67eb89ea5228578e42b713c0aab556e53a76919f7b96069338c3edc151f44566834894244a51cbacda1958612ae58dd2040caa654094d9af
 Size (libexosip2-5.2.0.tar.gz) = 641925 bytes
 SHA1 (patch-src_eXutils.c) = 4e60454423360f82799f2194308123b332d5ca5b

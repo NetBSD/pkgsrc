@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:42 nia Exp $
 
-RMD160 (pypiserver-1.4.2.zip) = 938fcbfc48b9bee2da8a2c0d6da8a0a58ccbbe04
+BLAKE2s (pypiserver-1.4.2.zip) = 536d93dfa80261ff022c5704e76a0868926af53b71f21a12e96c831f99938759
 SHA512 (pypiserver-1.4.2.zip) = f7e17dd894d62300ba27d99244e809b3789c658a5eba8d82236c8b978e28091877dd26526ce5574466dba470d70e03381982ec818a7c969071283370eb6d4cf2
 Size (pypiserver-1.4.2.zip) = 547599 bytes
 SHA1 (patch-setup.py) = 711949ce59a54a88e2cf4af347ddc7db24683357

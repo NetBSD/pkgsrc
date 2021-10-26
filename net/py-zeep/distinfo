@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:36 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:46 nia Exp $
 
-RMD160 (zeep-4.1.0.tar.gz) = a437f85fb8f57738deee41114428de995ade70ff
+BLAKE2s (zeep-4.1.0.tar.gz) = 0c88d883aab35627820589141e02cf6f4fa484788b8e65fb41d644d403f0bd7f
 SHA512 (zeep-4.1.0.tar.gz) = acc54f99d21fe401e06418223591bcf8e7f8819e225f892beb0f6e2a1ee359a0da6f9d0aa4212899197c084af37cc56126879b93a22cdad2458e57674bf66ed5
 Size (zeep-4.1.0.tar.gz) = 160333 bytes

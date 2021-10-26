@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:34 nia Exp $
 
-RMD160 (bonjour-py-0.3.tar.gz) = 6a2500f5c21f10782de5d0627ddd0724cc1b1ae1
+BLAKE2s (bonjour-py-0.3.tar.gz) = 629d28d9c98318813308dd46fabd71a2c6e65748ad012857d342253d0d479061
 SHA512 (bonjour-py-0.3.tar.gz) = 064d825ddc075ffb92f55449f6648e4e59d5d8da708db97788824fada2349269064d61da92edd68cb4232609796de6dc413ccce2ab97caa063cd9a3521878f85
 Size (bonjour-py-0.3.tar.gz) = 16343 bytes
 SHA1 (patch-setup.py) = f0d83c11e5ab0257c4bf2b183a52847713f106f0

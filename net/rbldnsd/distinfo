@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/18 08:16:49 tm Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:47 nia Exp $
 
-RMD160 (rbldnsd-0.998.tar.gz) = bdf9563b464f9f87fd6dc64607eb59bc892f890b
+BLAKE2s (rbldnsd-0.998.tar.gz) = 193d0b0955a2328f3453a6b7e34322d0eace6b6cabbd8d2d397da9af710f75d5
 SHA512 (rbldnsd-0.998.tar.gz) = 7b6fb106f8188b2ce6e05b622cf90a393a4642f00faa5bddc184ce02dbd2beee9d8de22cb09ae53a25c475f28f99d13fbf6252f0d4c1d72bf47ba23f769e7074
 Size (rbldnsd-0.998.tar.gz) = 145363 bytes

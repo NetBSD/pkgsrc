@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:41:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:05:44 nia Exp $
 
-RMD160 (howl-1.0.0.tar.gz) = f8eb6633d9edbb62038795ea66dcbf9dca4cffc1
+BLAKE2s (howl-1.0.0.tar.gz) = 0da8587ee3253b07f35c0d754e498f0c1948967dc87aaa7a49995da1fdcc48e3
 SHA512 (howl-1.0.0.tar.gz) = 80463b54649f6921b622b0e426b094586851e5526ef027d01c3e9ea7cbbf256b87665fe25ddf05454527fd0da5910fa2819eb39d802418500cfe364f953e1fde
 Size (howl-1.0.0.tar.gz) = 542782 bytes
 SHA1 (patch-aa) = 1766b2457f52a81f649e8b22c453a55342846a27

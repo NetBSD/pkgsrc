@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:45 nia Exp $
 
-RMD160 (network-3.1.2.1.tar.gz) = f7992326e85ba12dfb7ce2074dfd94e45170d421
+BLAKE2s (network-3.1.2.1.tar.gz) = d156f5b50978bbb9ecabb579dbc5faebddec37918b913a3eb2298bb0c1914262
 SHA512 (network-3.1.2.1.tar.gz) = 7c9f1a2fd417b5c03d430226ff6641ada06ce5f2a6e0ea90e6d92880a59656d54f186819715f6a4a80bb2a5b1d6c7236b0aa5112d7901d5ef698cc28cc10ce44
 Size (network-3.1.2.1.tar.gz) = 136889 bytes
 SHA1 (patch-Network_Socket_Syscall.hs) = 4a934a45ccd7ef04e9cfad4ef72c644e0bdb4f66

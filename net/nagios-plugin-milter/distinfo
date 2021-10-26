@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:03 nia Exp $
 
-RMD160 (check_milter-0.2.tgz) = 0ee5eb5210c018140d2ca37bdb0bfb8d43769292
+BLAKE2s (check_milter-0.2.tgz) = a7f24ed41a86be672cd60a7f26c395ce61e028bcdfc58038a0400f2af6dbd4d9
 SHA512 (check_milter-0.2.tgz) = 686f69fe8cf9978cd4e09ca6920ffc5fd9f088cc9a2a3f340250c6f78f8e3b11980d8f678d848916e7be4803f7652c8b32a96530123e2824cd7a49174526be71
 Size (check_milter-0.2.tgz) = 1915 bytes

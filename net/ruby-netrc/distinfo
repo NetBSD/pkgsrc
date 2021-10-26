@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:51 nia Exp $
 
-RMD160 (netrc-0.11.0.gem) = a1d21fe088d6e8b9582dc8cc5cccc951e0ce86ca
+BLAKE2s (netrc-0.11.0.gem) = dc3378c92383254d89a80e5ba2150599e0b688b5fc40ec4a523d6d2d7d8c518d
 SHA512 (netrc-0.11.0.gem) = 7f0df3f79d92b891d40a49e9b893ca7131077195cf15453b155e37e68e29f8cd3810ba791a06338058262c8cb8fed56c87c295e450c133b428b3398eb99e683a
 Size (netrc-0.11.0.gem) = 10752 bytes

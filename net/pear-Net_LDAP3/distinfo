@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:29 nia Exp $
 
-RMD160 (pear/Net_LDAP3-1.0.5.tgz) = a8a87a948764fb8f2693eba08993bb3416bac9b7
+BLAKE2s (pear/Net_LDAP3-1.0.5.tgz) = c1c24bcd887545c4ba38afd2f3a8a02eec3e528b959ae23729338a3f53ed3f47
 SHA512 (pear/Net_LDAP3-1.0.5.tgz) = a49f1e0641af00a5eb0a8d31b642750e0ee231dc2f27cbea60a398fbeb37dfc37e6e59e413875995535eaa4cd0280f2988fa6ef2f29f37d8a79c63f2b202a23a
 Size (pear/Net_LDAP3-1.0.5.tgz) = 36070 bytes

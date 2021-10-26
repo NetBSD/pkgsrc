@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.48 2021/10/07 14:41:32 nia Exp $
+$NetBSD: distinfo,v 1.49 2021/10/26 11:05:41 nia Exp $
 
-RMD160 (grpc-1.41.0.tar.gz) = 97584f3bf8276c236fc04b7bf80b82bbee2a7e25
+BLAKE2s (grpc-1.41.0.tar.gz) = debf77675d5278a65324ee37eb681249419f89b6254908578013354bd781ca20
 SHA512 (grpc-1.41.0.tar.gz) = bc353bfd8cc10d8b992e4cf680c656ef6ddbcecbaa640c94e9255664d532926e48f3839afc98ef6278ae4e2eb54d166ac67fec7315dc1d08640845ed8120d902
 Size (grpc-1.41.0.tar.gz) = 8347643 bytes
 SHA1 (patch-CMakeLists.txt) = d32a78bb8fdc28c0946aa2d62a5c810211692e62

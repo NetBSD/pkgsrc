@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:42:56 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:07:03 nia Exp $
 
-RMD160 (tf-40s1-mccp-patch.gz) = af0d27a8b3585c8cc61669c79f26a8382c272424
+BLAKE2s (tf-40s1-mccp-patch.gz) = 6123f9704a4a01dd8d3f697ff06e65ebe1d679789b5d600b5aee688eaf83d01f
 SHA512 (tf-40s1-mccp-patch.gz) = 494c3dfa1075b057fa2992ac4b34957452f159b9cf6bcc6d4437b3b1e3ecdd888578ac255b8f25b5cde45bdb57aa1d6c372c79eb2bc60ba15ca1a1a9eea20247
 Size (tf-40s1-mccp-patch.gz) = 7182 bytes
-RMD160 (tf-40s1.tar.gz) = 2852daa3363bb134f29cc25d3177e9599ecacc1f
+BLAKE2s (tf-40s1.tar.gz) = 9b0c4a31e33d591a95eb156b3a52277a26d92701bbd9566ac9ff74ba23f54a51
 SHA512 (tf-40s1.tar.gz) = cd51bdf60989891dd3f0f3a0e9f2fb92e6260a2dda120269713b29e58ba619abeebe9cb47a6381e26539a895071e02f34a23d914896fc5e089c5c801337b8581
 Size (tf-40s1.tar.gz) = 349239 bytes
 SHA1 (patch-aa) = 8e6d68c7017ab4f4294451bd0d808f48e413f9b6

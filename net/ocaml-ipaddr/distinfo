@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:42:01 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:06:10 nia Exp $
 
-RMD160 (ocaml-ipaddr-4.0.0.tar.gz) = 31061f349a7c491791c4cc969a29a8dfb02016e8
+BLAKE2s (ocaml-ipaddr-4.0.0.tar.gz) = e86bbc71d129d1bef24aeccb40e655497016fc0703557ad46763ddad1ba64a47
 SHA512 (ocaml-ipaddr-4.0.0.tar.gz) = 7818d85b0d85d66a4b0eb464248ac1b9b1b9cc61e9ea5b7488f04e5728e7687f6f0898e1b13807d3419f38eb43026ffca00b77ee88ccd6eed374d5a3a789b5e2
 Size (ocaml-ipaddr-4.0.0.tar.gz) = 29013 bytes

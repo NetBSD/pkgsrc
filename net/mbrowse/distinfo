@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:59 nia Exp $
 
-RMD160 (mbrowse-0.4.3.tar.gz) = 7726256f4cdf1ff2ba42dde90a3551a57744ce66
+BLAKE2s (mbrowse-0.4.3.tar.gz) = 3d091bdbd6c3d7fd0bd5d9e72d016108b2506defeab4e5575ee5bb4f7238770b
 SHA512 (mbrowse-0.4.3.tar.gz) = adccf8de707611034db0cbb6a37117f6a4741eb92656eab0e9e5c6a8268b17cc66080ed9663fe59a3fea9b110d83bcff9094b5fec133ca7ceb2650fd532a6cb4
 Size (mbrowse-0.4.3.tar.gz) = 146028 bytes

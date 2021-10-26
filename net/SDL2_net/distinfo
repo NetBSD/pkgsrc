@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:21 nia Exp $
 
-RMD160 (SDL2_net-2.0.1.tar.gz) = 58d27e62ddf40068243e68148fdd98cad0f89832
+BLAKE2s (SDL2_net-2.0.1.tar.gz) = bb35d5b7feacbb7e2b47eb25ec6a2ea78ee594df9c71f83efa1eda52345b8320
 SHA512 (SDL2_net-2.0.1.tar.gz) = d27faee3cddc3592dae38947e6c1df0cbaa95f82fde9c87db6d11f6312d868cea74f6830ad07ceeb3d0d75e9424cebf39e54fddf9a1147e8d9e664609de92b7a
 Size (SDL2_net-2.0.1.tar.gz) = 347436 bytes

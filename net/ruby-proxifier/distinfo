@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:51 nia Exp $
 
-RMD160 (proxifier-1.0.3.gem) = 70a381344864575a68ca8a3f5e40465fe1113141
+BLAKE2s (proxifier-1.0.3.gem) = 0aaa12d6b2a0a395fefee9c6699ffc7f5e9a04a7c8d3fabcc45a110f3e18a527
 SHA512 (proxifier-1.0.3.gem) = 7663c1a0ed670f5dbcfc5aa771c5ec101099f06bd7490ad6895c09d0b243d47f7c96ec78b9e24729a64cf6fb0dccb67ed9d6e5d69790fdbfdc2ec766d7e0752b
 Size (proxifier-1.0.3.gem) = 8192 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:43:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:07:10 nia Exp $
 
-RMD160 (whois3-3.2.2.tar.gz) = f6a42221f823168060bb732764403b39d52c8a45
+BLAKE2s (whois3-3.2.2.tar.gz) = 47234930cee8f2049f4947cbf025ca7ae8ff0a793a75b1fde7d7b87c3440129b
 SHA512 (whois3-3.2.2.tar.gz) = 1551ede89ec5824a15ccc3f151030d1747f78d7f27bc57d6590f71a9f3cb454d8f9595bdd334e4d0eae48ddeabca86876052328048271d33097124cdbe5fea18
 Size (whois3-3.2.2.tar.gz) = 94587 bytes
 SHA1 (patch-aa) = bd2fc58b55b4db8e3cba8a7f5f67d171e88fc52c

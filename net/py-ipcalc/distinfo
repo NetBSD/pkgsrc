@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:38 nia Exp $
 
-RMD160 (ipcalc-1.99.0.tar.gz) = f00d23a978bc69671b5939cdee64130de6050de1
+BLAKE2s (ipcalc-1.99.0.tar.gz) = 84bd35c20f8fe641e65dba20da5735afe18ab7f7a7e0ea02e22fbe20502a27d1
 SHA512 (ipcalc-1.99.0.tar.gz) = 14317b10775e7169633419ff46caf8da693efb0b46e3baced31adf1e7ed389cba9f8c265cc515b20062bf992bcf8e931fffe12d6656dad11585444d6e445b224
 Size (ipcalc-1.99.0.tar.gz) = 9827 bytes

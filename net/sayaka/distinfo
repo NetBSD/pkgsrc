@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:42:46 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:06:54 nia Exp $
 
-RMD160 (sayaka-3.5.2.tar.gz) = ec98d05a30e702462e58682be46495b80c5017fe
+BLAKE2s (sayaka-3.5.2.tar.gz) = 490af23436cf7d3e40fef331409cfa2bd4be168a78d0f267a5606f02bd4e6752
 SHA512 (sayaka-3.5.2.tar.gz) = 8df260ce64ef464be90bc63d13f4770b81f8531aa06ee187597657eda746787a19d81f4ce0af312a91dc2320399c3ee8d744ab4126a5164bce25bbfb0c1f22c6
 Size (sayaka-3.5.2.tar.gz) = 352206 bytes

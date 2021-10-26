@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:22 nia Exp $
 
-RMD160 (Net-Packet-3.28.tar.gz) = 2434a50fe3dcc0faa64df628239009beefa2c30b
+BLAKE2s (Net-Packet-3.28.tar.gz) = c6e590e351d63af9e02c6e62a72eb8b58fdb42cb453b7b15c558271f26339a93
 SHA512 (Net-Packet-3.28.tar.gz) = f0ef2da562049cd2630f25d5557ff092ed478d328ca35af78b46b91b36bb893596b47935a093c1ef00c3bca6871b16619c41cc1ebdebaf2c133c68ee1ff8aeed
 Size (Net-Packet-3.28.tar.gz) = 90503 bytes

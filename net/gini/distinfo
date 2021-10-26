@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:39 nia Exp $
 
-RMD160 (gini-0.5.1.tar.bz2) = 424dae03b77d278a5f4044dcdb0df683b9a46feb
+BLAKE2s (gini-0.5.1.tar.bz2) = 776f0ed86ce6d39618881615add589882ecd09f6dab6c94265ca378ca57dfe01
 SHA512 (gini-0.5.1.tar.bz2) = 085ca18aced3ea8c34350b46332d1299faa64ef28ca1bc3bbac0a21cdb423184481c9f818f778e0fbe451783eaf3a0527d37c3f61ea0ab6dbb6a6d5d0161cbf2
 Size (gini-0.5.1.tar.bz2) = 176675 bytes

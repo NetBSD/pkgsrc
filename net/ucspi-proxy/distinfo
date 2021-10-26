@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:05 nia Exp $
 
-RMD160 (ucspi-proxy-1.1.tar.gz) = 16ad1edb33f807b1639ec0d74eed03a8b816bde9
+BLAKE2s (ucspi-proxy-1.1.tar.gz) = 9e3ebf3784d38a36a5d9f9ac4bb00c9f2c50b6ed56b6b8b8f6452511ef4886da
 SHA512 (ucspi-proxy-1.1.tar.gz) = c9e6f98a73bf6868341b0d5c1653d0b9107aa92c21e8fe96c47a9ca0ae41b247aa10bccd819d84bdcf4e8d5902c1955bfbe9e4e3256d5303578cd3337220139c
 Size (ucspi-proxy-1.1.tar.gz) = 38351 bytes

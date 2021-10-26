@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:57 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:07:04 nia Exp $
 
-RMD160 (trafshow-5.2.3.tgz) = f1ae068f898160f16ae9b3cb5f9d73ae3aece6cb
+BLAKE2s (trafshow-5.2.3.tgz) = 4557dbce8084fdc6f9f0c8aa515550302dd0590357dc8c9540cd1ee77077d17d
 SHA512 (trafshow-5.2.3.tgz) = 9ea57c319cb177de2d29eaf2a09c06f0bd7efcfc3e50d5fa5cc18f193c6dfc0109d4388ccbaee7bf2db37b5418fc0f4b6ce47a5558b652ecf9e891a813ef8540
 Size (trafshow-5.2.3.tgz) = 142615 bytes
 SHA1 (patch-ai) = 6cfa14ad753bfd2b85e0e8c8cd8d8c25a697d6dd

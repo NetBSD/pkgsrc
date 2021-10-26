@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:44 nia Exp $
 
-RMD160 (hlfl-0.60.1.tar.bz2) = cfe4ad6903fe21a8dea57a9c991f7aec7bd76304
+BLAKE2s (hlfl-0.60.1.tar.bz2) = 473fa0959696491d58dae7079555d0186e6d33bf0cf1609ef0ab6d5527155a77
 SHA512 (hlfl-0.60.1.tar.bz2) = 732dc2144cd72d62856ae37c3049331482881150777404ece90aa9bcd345aeb4826b83d93744ff6f5284c718cc15c8c8a464e73825a6d2bb9cd9fc66ce097253
 Size (hlfl-0.60.1.tar.bz2) = 86954 bytes
 SHA1 (patch-aa) = d93814f84c2719a881e1fe469134ed7aebccc7aa

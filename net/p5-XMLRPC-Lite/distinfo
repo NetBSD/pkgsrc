@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:27 nia Exp $
 
-RMD160 (XMLRPC-Lite-0.717.tar.gz) = 7f3dac2db73d1b890447a9ac77add9082c1fc74d
+BLAKE2s (XMLRPC-Lite-0.717.tar.gz) = 5eb831131dde0aff46cf2cac73ee7337c46f7520240425bae197620c41110d2e
 SHA512 (XMLRPC-Lite-0.717.tar.gz) = bce50efb0e7fec81834c1fc2cdc987aed8530b11738c713446f6c2cf2bc503f4d05411f630eb78f4e109fe89eaf9bb835e8e0f069548f19c164ba8b182ab8b24
 Size (XMLRPC-Lite-0.717.tar.gz) = 10276 bytes

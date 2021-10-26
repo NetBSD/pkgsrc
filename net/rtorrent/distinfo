@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2021/10/07 14:42:40 nia Exp $
+$NetBSD: distinfo,v 1.40 2021/10/26 11:06:49 nia Exp $
 
-RMD160 (rtorrent-0.9.8.tar.gz) = fde07c9b9db00a90cb851b058402a87d447f92f7
+BLAKE2s (rtorrent-0.9.8.tar.gz) = efb96e697e5f1e6b963698a8eee014c68c6a6679339e5d65eddd0ccdf4bcd389
 SHA512 (rtorrent-0.9.8.tar.gz) = 016685948d0290694ab9635ae218c7acd876e6d45bea1bdba3a29c545e64f5d824c5e2f6693a4c2e9200196177881d54f312d72e0a19742bd74a03bd19ca05c7
 Size (rtorrent-0.9.8.tar.gz) = 647523 bytes
 SHA1 (patch-src_display_canvas.h) = 6b10c508158d594bcb0633c9e7f3e2885f8456d1

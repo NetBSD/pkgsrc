@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:42:22 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:06:32 nia Exp $
 
-RMD160 (pure-ftpd-1.0.49.tar.bz2) = b4af1d749a8bb5a441ad504a00a03081875d734d
+BLAKE2s (pure-ftpd-1.0.49.tar.bz2) = f847187165aedd826059325c4d0389a0e4396bf86423df582b5cca3076c81c92
 SHA512 (pure-ftpd-1.0.49.tar.bz2) = b44896d6fe2cda9169b1db93c5260bb892af14a173f2d25e60dd6530afe85d8e9156985609e35da7e5550dc123afb42bc5012beb9fca9011054cf0ed8b2eddef
 Size (pure-ftpd-1.0.49.tar.bz2) = 487958 bytes
 SHA1 (patch-Makefile.in) = 1fdd2463fe27605cc02ff445d55d5355617361c2

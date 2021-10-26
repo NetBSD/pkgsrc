@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:19 nia Exp $
 
-RMD160 (Net-Frame-Layer-IPv6-1.08.tar.gz) = 3738e9d85ab1f6aa60c294bd704584a773c32a71
+BLAKE2s (Net-Frame-Layer-IPv6-1.08.tar.gz) = fba8a68f4953dcebdbbf85dd5b379f8b967cae81af67976b1c35b28b53a5fc02
 SHA512 (Net-Frame-Layer-IPv6-1.08.tar.gz) = 0cb3de1fb34446e1000c30f625eb668fc4c67a098fb5fd1013b2ae115171f789492026929465a17563b4db69fdc7dcafb95a2cf7f7718a3ccabea1d20123f063
 Size (Net-Frame-Layer-IPv6-1.08.tar.gz) = 17900 bytes

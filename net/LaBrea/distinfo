@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:41:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:05:21 nia Exp $
 
-RMD160 (labrea-2.5-stable-1.tar.gz) = 27078ab4b4efdd3f0e8233cac228295bc5a5cf47
+BLAKE2s (labrea-2.5-stable-1.tar.gz) = 9540683ae6d21e6f8f3fa443409bb35277737adc0ac2da20a6cb7df805d2c163
 SHA512 (labrea-2.5-stable-1.tar.gz) = 63523f59e9e6ca31d2a5ea781f7b7087e7e41835aec24cd8cbf1cf7b65893fb1cedb2b13aa5fcfab458375ef27f5521a9ab88a71734b7317edf8eda2746c566c
 Size (labrea-2.5-stable-1.tar.gz) = 210494 bytes
 SHA1 (patch-aa) = f3b7b2556513a90b24b5adf73a99da28462d33e4

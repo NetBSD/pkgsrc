@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:41:14 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:05:23 nia Exp $
 
-RMD160 (avahi-0.8.tar.gz) = f060e7afbc20accc6befbbe6776d3ca7956b4962
+BLAKE2s (avahi-0.8.tar.gz) = d7f8334157bd36c5cdafbf804c293b593a7f2acd7b299454ac3823e9a705d608
 SHA512 (avahi-0.8.tar.gz) = c6ba76feb6e92f70289f94b3bf12e5f5c66c11628ce0aeb3cadfb72c13a5d1a9bd56d71bdf3072627a76cd103b9b056d9131aa49ffe11fa334c24ab3b596c7de
 Size (avahi-0.8.tar.gz) = 1591458 bytes
 SHA1 (patch-aa) = 95b883bf14dd1852cdf0ea8a364c57717eebb03f

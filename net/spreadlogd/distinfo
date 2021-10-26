@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:58 nia Exp $
 
-RMD160 (spreadlogd-2.0.0/spreadlogd.tar.gz) = 2f70a3a0b6768128b2152321e016d795540a6ada
+BLAKE2s (spreadlogd-2.0.0/spreadlogd.tar.gz) = db7da5758dc198ce685d2d9227be7014bd1f3b5bcdb9f76bebb917fe2a4c6c34
 SHA512 (spreadlogd-2.0.0/spreadlogd.tar.gz) = 2d7014886e82589d0f8d892e1140a9c62698bf862222a09f69c85b72e6fb9071d2df022745f97f8daac08b1c784dad7f7f0864b5382259d39e1aba095cdc08e8
 Size (spreadlogd-2.0.0/spreadlogd.tar.gz) = 79559 bytes
 SHA1 (patch-aa) = 952d46b24ec2a8bea5335290bc7ba4aedd9f3a7d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:42 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:51 nia Exp $
 
-RMD160 (net-ldap-0.17.0.gem) = b4b354f9b215ebb2902f707e043df66063c40960
+BLAKE2s (net-ldap-0.17.0.gem) = 1ef904a98175f15ce5880333a6bc8957f9d794f3c96a3d9a9cf3c8131ba602ea
 SHA512 (net-ldap-0.17.0.gem) = d1266393538f01b0c8ca62ef098f06f50c9e5a693627e1418d762a92fa6465b75a2b99c4f816fab45ede7013bec91285a351968fcfab944b8497ee123fd3fc41
 Size (net-ldap-0.17.0.gem) = 67072 bytes

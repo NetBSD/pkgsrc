@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:09 nia Exp $
 
-RMD160 (nstx-1.1-beta6.tgz) = 1392d7f96c9668cc40b65fa30cbaf8cf1b64feb2
+BLAKE2s (nstx-1.1-beta6.tgz) = 2db8ff81e089640ab4fd2b474aa903911d777cfbcba0bba6446e3b146ea5e07d
 SHA512 (nstx-1.1-beta6.tgz) = 93aa795446d1fe38239559c5a82e595ed59b37ab8ab674b1cb80c6a079ecb9e14bef87b670febe77920560239001206da4ce4875092ff5334770eb1f3447d45f
 Size (nstx-1.1-beta6.tgz) = 20458 bytes
 SHA1 (patch-aa) = 290be0cd9cd71d246656da154cfc9a1fe4a67a1e

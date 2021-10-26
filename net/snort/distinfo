@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.53 2021/10/07 14:42:48 nia Exp $
+$NetBSD: distinfo,v 1.54 2021/10/26 11:06:57 nia Exp $
 
-RMD160 (snort-2.9.16.1.tar.gz) = 0716e9647d86d56d82761b0ffc6e491dcd4985a0
+BLAKE2s (snort-2.9.16.1.tar.gz) = b16ef3efa589cb5a934af44d85965dcfb57bb93132263b16e21f47d6529e9c72
 SHA512 (snort-2.9.16.1.tar.gz) = 9462bd38a032c96298a6b6abea8502dadbab53f6f5163b90abb9ae247262c0e76afdeef31748a6bbd216a7c9d65d14e18b7096865135d88087ea27cc32596155
 Size (snort-2.9.16.1.tar.gz) = 6947960 bytes
 SHA1 (patch-src_dynamic-preprocessors_appid_service__plugins_service__rpc.c) = 73ba0e37d37cc919957d4bb5b660a581bc6af9a2

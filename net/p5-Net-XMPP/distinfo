@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:24 nia Exp $
 
-RMD160 (Net-XMPP-1.05.tar.gz) = be0c3a37bcff4f359bd77c41b79ea2a2c7eda255
+BLAKE2s (Net-XMPP-1.05.tar.gz) = 592adef6b2068e692858759daeaec34a019d8253c0ef824041271bbde98838a6
 SHA512 (Net-XMPP-1.05.tar.gz) = cdd5474fcbdf7ff6c7d1247f9828f5dfb1828c258af366a831bab8e5faab423b73aa16c34228818526ebcc3180ef0ccc52d6e6cb61e2fe689458b87ec7fab699
 Size (Net-XMPP-1.05.tar.gz) = 103876 bytes

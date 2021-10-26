@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.61 2021/10/07 19:30:52 adam Exp $
+$NetBSD: distinfo,v 1.62 2021/10/26 11:06:38 nia Exp $
 
-RMD160 (dns-lexicon-3.8.0.tar.gz) = 21537c2999ca64402b6a8ce89dcad165a421d6b7
+BLAKE2s (dns-lexicon-3.8.0.tar.gz) = df641f17ea58631cd9a78c92bf32f1aa0100fe59db03c12e4f696f39415e5c7d
 SHA512 (dns-lexicon-3.8.0.tar.gz) = 72c7ec2f9bfb54f082c7ce406ab9fd372bc96696b4c1f3ed17f93ed8a6560b8ac02335e245217fc018ad707c1b7984470050d7ad1399b78748b89ab6a28a8625
 Size (dns-lexicon-3.8.0.tar.gz) = 161233 bytes

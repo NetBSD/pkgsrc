@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:14 nia Exp $
 
-RMD160 (Data-Stream-Bulk-0.11.tar.gz) = 637ea2671bebc1c29e5ac84165be4deb5db98117
+BLAKE2s (Data-Stream-Bulk-0.11.tar.gz) = 965e1172ab40d8c3e4b3f2e97a45fd162da28750ae5909d81ca1b903eb30fa62
 SHA512 (Data-Stream-Bulk-0.11.tar.gz) = 7c14e3e1e8d6d805aa6cedd6caec3f8e09cf30c196abd3661b3f6f12871212a808ad938ae24d13e4c1d7114ead912debf0f859d34cc42e70ef5e748dcc9242d2
 Size (Data-Stream-Bulk-0.11.tar.gz) = 21692 bytes

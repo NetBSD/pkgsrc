@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:42:58 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:07:05 nia Exp $
 
-RMD160 (ucspi-tcp6-1.12.3.tgz) = 10b89a0628770a8b9c9fa8c5c458c92f0fe6542c
+BLAKE2s (ucspi-tcp6-1.12.3.tgz) = bb6054bcc33cd1d9e6f2fa22657869af6edfe09454ea84a0d0ee47567f8644bd
 SHA512 (ucspi-tcp6-1.12.3.tgz) = 9850784ce26df97a8a04821f022e68b65b35f40daf50039ef70c6c999efe16a4e677ddc8bd3ca02e1cae4487ed35f2f704c0c88eb4faac9b64352c2cd70b17bf
 Size (ucspi-tcp6-1.12.3.tgz) = 51200 bytes

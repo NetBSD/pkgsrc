@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:03 nia Exp $
 
-RMD160 (check_dnsmaster-0.1.tgz) = 4a44bdf8d29d13cfb90bc8bc7152f5fbd920dd99
+BLAKE2s (check_dnsmaster-0.1.tgz) = 1bb0b4105fa70fc02ceb4fd4877121eb4f291df573a3a480dd19e6ebb79d438a
 SHA512 (check_dnsmaster-0.1.tgz) = 1c9e9bf2d79774eff8a0b155f468d7aa12aa12382d9d28482125cd1877d0d76deb6a4028f62b3e71540ab48a0bf0d8e396790cb3b13271b02a0f562bd6b7fb7c
 Size (check_dnsmaster-0.1.tgz) = 5011 bytes

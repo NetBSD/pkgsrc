@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:10 nia Exp $
 
-RMD160 (ocaml-conduit-2.1.0.tar.gz) = 438e11bff637c78285abc0fafa265a2690bca4d3
+BLAKE2s (ocaml-conduit-2.1.0.tar.gz) = 2434fe9477719707a411fbfbc802bbc128a9f339b95a87129e4b4857d8cdaa6a
 SHA512 (ocaml-conduit-2.1.0.tar.gz) = c65f55933d00f17f281474d756064e89424226defa10a1e82716ed8f50ceb5f2c8c005b42f25ef32702ccb2ce827f605da4d88425e24198962c264689f48ac82
 Size (ocaml-conduit-2.1.0.tar.gz) = 41641 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:41:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:05:25 nia Exp $
 
-RMD160 (bounce-0.0.tar.gz) = 6d3151fdafa5751cf7c1be16d149af8fce1d148c
+BLAKE2s (bounce-0.0.tar.gz) = f99867cdfb49767d2fc6772e9433a02f0f8174181c10fbb44b2a52b11deebee8
 SHA512 (bounce-0.0.tar.gz) = 9898612f3dc8028d035f58944140ed4a83d04c321562a69859740969bce2d8eb65b28d6ecc7c9e21514742672be86f6cb79dabcae0c2ce5fa1ceed0003281fad
 Size (bounce-0.0.tar.gz) = 3439 bytes
 SHA1 (patch-aa) = 89469c2b8608796006a817dcbb5e5b3bf21007ef

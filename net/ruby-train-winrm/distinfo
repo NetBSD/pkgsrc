@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:53 nia Exp $
 
-RMD160 (train-winrm-0.2.12.gem) = 31c054379935fdc77996212106bf5412d1ae9dc7
+BLAKE2s (train-winrm-0.2.12.gem) = 8d0b9dbf789cc8d0a4ccef5cb1f33ea20ef60f6636bb054c1b66b134c6661480
 SHA512 (train-winrm-0.2.12.gem) = eacb07782e10b9e7b567fd31ea0fba9bc847ec6f8d0e3efae42c0eef4716a9bfb42a7ad47cf41148ad7bb0539f3c522f02874fdb39eb9d2ac3b92d29f1e8f6dd
 Size (train-winrm-0.2.12.gem) = 13824 bytes

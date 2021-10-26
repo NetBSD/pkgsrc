@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:56 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:05 nia Exp $
 
-RMD160 (nap-1.4.4.tar.gz) = 6c3fb2ddde757f7ab56a656ec647d10533bca9cc
+BLAKE2s (nap-1.4.4.tar.gz) = 287c96728439accf89614b3570c02a23d87ac72b03a24dbe362b9eba451ae559
 SHA512 (nap-1.4.4.tar.gz) = e7f8e61c08c9040b724a04a420eb1723a33e56230e100792e98e6db5431c4bfeab41651c89500d091d5baf55b9e0407d33193ed63383d1554a4024a0628327b3
 Size (nap-1.4.4.tar.gz) = 101334 bytes
 SHA1 (patch-aa) = a38d42d597e336b10b385f1f8b16a736eaf759f6

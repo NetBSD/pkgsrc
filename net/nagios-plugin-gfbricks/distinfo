@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:03 nia Exp $
 
-RMD160 (check_gfbricks-0.2.tgz) = 24a473760d6727dfcb2a5257d4cd963a0c4c8230
+BLAKE2s (check_gfbricks-0.2.tgz) = b716e04d75a6f5b8140c2beedf24ea93175e2c2de7db60ca6a2c11981271a39f
 SHA512 (check_gfbricks-0.2.tgz) = 5f6bb25caf215c00ed8b52dd6d56d83b2f69a63973e5b2efb1cc9934b4d6c8fcca3ed860c193b99501f4c2f8475f42d938bf33ea0ec54f38c7be1aed4dfe3c03
 Size (check_gfbricks-0.2.tgz) = 2300 bytes

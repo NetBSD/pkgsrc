@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:42:26 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:06:35 nia Exp $
 
-RMD160 (dnspython-1.16.0.tar.gz) = c3662f85998d51b437a3eaa0f5a04c3b0d61fd69
+BLAKE2s (dnspython-1.16.0.tar.gz) = 613ebe96056f553e83876ba4350caa0f1ff8c52f63e0e87fbbe2f4ec56ded148
 SHA512 (dnspython-1.16.0.tar.gz) = 41ddca2faf696d5d682551f517efd90c007011c1f6d9355d297d71a3fe84222a1e528945343d8c2276ad3957ceaab578f3df7c2c1709418ffcca01ccbb379359
 Size (dnspython-1.16.0.tar.gz) = 150524 bytes

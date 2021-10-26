@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:18 nia Exp $
 
-RMD160 (Net-DNSServer-0.11.tar.gz) = 8e563946f60186e1a7ff424391abd23b2b3afa4f
+BLAKE2s (Net-DNSServer-0.11.tar.gz) = b4fddb22fe3fdbd86553d251f79e56310b05863ad830ef8a134722e11d21855e
 SHA512 (Net-DNSServer-0.11.tar.gz) = bb22b25ac5fefb45464ab2a6247e669d1d5d9f70d3fea7c427e01ecccc4298f3a0f39bc9e7198f801bebc75d915ab2bd821ff5c69a5daa508a41a07b145a09cc
 Size (Net-DNSServer-0.11.tar.gz) = 25566 bytes

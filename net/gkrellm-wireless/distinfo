@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:05:39 nia Exp $
 
-RMD160 (gkrellmwireless-2.0.3.tar.gz) = 85fb1b4e9464dd6d886c5eaef5037f99387a1d08
+BLAKE2s (gkrellmwireless-2.0.3.tar.gz) = dcd3ab1eb017d0dd0f615fb9bf2e310acaa75e9286afb2f349a5356c9f6bc453
 SHA512 (gkrellmwireless-2.0.3.tar.gz) = 7d005502bd65ea16f589f94fba38e67dffec69974177d4e7b83bf50d805e431d64a8cd0795f21547100487a9cb4ed7c01883514cb2d66165f0a7b8aa91162ab1
 Size (gkrellmwireless-2.0.3.tar.gz) = 9557 bytes
 SHA1 (patch-aa) = 495f1a7e738ebc1c990985ed0f0131a72a32128e

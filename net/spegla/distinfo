@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:42:49 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:06:57 nia Exp $
 
-RMD160 (spegla-1.1p4.tar.gz) = 1e07b1a667a69d25df3b91bf2cb0a8b4bda8b839
+BLAKE2s (spegla-1.1p4.tar.gz) = 4ba2afa4c0b2fdf018ec87cd8231c7f50e3c72f1688118c6d9f367a931143ec9
 SHA512 (spegla-1.1p4.tar.gz) = 734046b9924f1a3fd9ecfa2f583a0fde8d0e93cbfbae26a08959f89f874dcc5126e42649ec1c4084685c536af6ed2df37c253b8518b1d1bec572205d33623f76
 Size (spegla-1.1p4.tar.gz) = 101515 bytes
 SHA1 (patch-aa) = c52aa11ed64f7ed3575aa868a1688c9777363d91

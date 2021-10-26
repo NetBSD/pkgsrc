@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:48 nia Exp $
 
-RMD160 (iperf-2.1.4.tar.gz) = 26262ed6c1b062555c27ea7979916566964f81e1
+BLAKE2s (iperf-2.1.4.tar.gz) = 6fdfda2813fac092245ecec5c537177cac93ad300891a898890d7866cfcfb202
 SHA512 (iperf-2.1.4.tar.gz) = 75a0e61eba649d843e23855dec3c578db573c1b34a59837d6a210b85c57b8bf92a244bacc61cf9b8796a9965982950d8d555abed69f1f9e4149f31391463ad6e
 Size (iperf-2.1.4.tar.gz) = 395909 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:20 nia Exp $
 
-RMD160 (Net-Jifty-0.14.tar.gz) = e5c208a1cf22459ebfd238715afe545807c53ca0
+BLAKE2s (Net-Jifty-0.14.tar.gz) = 184fa6e3dee3c11460a3dd10508f965d1e3e7f771e7628b3d2dbcc983ff51e81
 SHA512 (Net-Jifty-0.14.tar.gz) = 929cc705b274badbac5884884ee40412f2b12800a439896ebd610d0a4e1087916ec87d34b2b7e623466aa754a798280e6d3c42682e8537ff4b1e00d930b159fd
 Size (Net-Jifty-0.14.tar.gz) = 37362 bytes

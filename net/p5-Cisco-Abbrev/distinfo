@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:13 nia Exp $
 
-RMD160 (Cisco-Abbrev-0.03.tar.gz) = a84cee8285e89ba21b431f605de12877daa8f1ab
+BLAKE2s (Cisco-Abbrev-0.03.tar.gz) = c8a3d3ec92161f516e091a0c4aacbb8cfd3a4ebc4c93f5a46b6cd55ce83732da
 SHA512 (Cisco-Abbrev-0.03.tar.gz) = 7a264c3a3ed14d81f6444d0d0c44713ad3ed0e6dfbbce0274cc572a03dcec55b215bf3eab9d85d2b08e3eb55d1f4dccb6832624b9942e723525cb165d39a6664
 Size (Cisco-Abbrev-0.03.tar.gz) = 4412 bytes

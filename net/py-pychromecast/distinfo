@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:41 nia Exp $
 
-RMD160 (PyChromecast-4.1.0.tar.gz) = 83e98f2c36febd6b0655280749f7d77f6b42050d
+BLAKE2s (PyChromecast-4.1.0.tar.gz) = 58b28ffdda55c9d95299ee55dd56b198efbfd45fc8edcb3ad73c33657e7f6a43
 SHA512 (PyChromecast-4.1.0.tar.gz) = 688014a115f3189fed5535e70622a7323e4a29fd65678aa14a302047c5246dbc6a932a8f4eabb58f9fcecc0f4bdbe627d1496a4b6d28e680ad4fac6dd902c825
 Size (PyChromecast-4.1.0.tar.gz) = 44463 bytes

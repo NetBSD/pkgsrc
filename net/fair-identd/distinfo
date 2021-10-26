@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:35 nia Exp $
 
-RMD160 (identd.c) = 224dc9a515880ddadd1358a9024e5c1a285968dd
+BLAKE2s (identd.c) = f8b6c5e9b700f275c5673adfc60cc2b70a2753eaa38e48ba39e466d7208853aa
 SHA512 (identd.c) = b421cb6ae052d81b3ffa65f6c3283bb2a4ded2351dd7e4847566364d2bea0067b9b6c299f8b73db28347d7bd1f6d695ef23cb7f1983f818c7313bca51b4f96b4
 Size (identd.c) = 2535 bytes

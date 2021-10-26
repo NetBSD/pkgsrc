@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:22 nia Exp $
 
-RMD160 (vblade-14.tgz) = ad0fe6f0c4ab40fa31daa68c7b14143ad87f443c
+BLAKE2s (vblade-14.tgz) = b6067cd73a7640ec30f81786661a1ed27dc6b4f725407f9a1adbb54612f56840
 SHA512 (vblade-14.tgz) = 17eeff15c8ffb6fbf47298a26e5a33e518b92eb05867a610e9361631d12e487a9f98c5c539c2c893fc3a1744698236d7d361c6f72eeffe3ba3525c30f74fb633
 Size (vblade-14.tgz) = 20317 bytes
 SHA1 (patch-aa) = fe40105ed835cb54a23edb4861024f1d16ef1116

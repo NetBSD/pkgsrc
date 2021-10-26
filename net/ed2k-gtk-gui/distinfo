@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:41:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:05:34 nia Exp $
 
-RMD160 (ed2k-gtk-gui-0.6.3.tar.gz) = 98f69190e76b58b79aa3dd9a6d20b7abcb080208
+BLAKE2s (ed2k-gtk-gui-0.6.3.tar.gz) = 41deb5fa30a27bab72f482ecf4af0f66807b08021bf3374bd87f4a7338c5fde7
 SHA512 (ed2k-gtk-gui-0.6.3.tar.gz) = a6592bf7d431a63b170729ac4927308349f58c2d875c8692ec076ff11efa4cd2c884d39bc1cccfb62b4e9998769f0fda8a710a4867f7769eb7f183247f95aec9
 Size (ed2k-gtk-gui-0.6.3.tar.gz) = 1993079 bytes
 SHA1 (patch-aa) = d47d9302cd13a8ca3d9488f7e2563e0c33265e1d

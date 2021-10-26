@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/18 08:22:42 tm Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:05:46 nia Exp $
 
-RMD160 (httpstat-1.3.0.tar.gz) = b28578e6ee3d437c0c44ab9140d9ea015d689a49
+BLAKE2s (httpstat-1.3.0.tar.gz) = f81e074cd28adc928c75587a0016daf65c022c47b759ce9fa4a8e942f466d17e
 SHA512 (httpstat-1.3.0.tar.gz) = 6620f7d2da8740da9febdc5d0a177890cc5e85a3a41445c3182f6a8906cad05a475b7547737e60331957a5f48e668194d9592f4e53005a5666ef99b704afbc91
 Size (httpstat-1.3.0.tar.gz) = 97358 bytes

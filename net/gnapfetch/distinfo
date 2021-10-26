@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:39 nia Exp $
 
-RMD160 (gnapfetch-0.3.tar.gz) = 4c97cebbf1b695dc7fe8aa60b2f497f40d209f6c
+BLAKE2s (gnapfetch-0.3.tar.gz) = 1647a551b9043d8f1957053980352042894cd6dceee69d352d2a8182173184a7
 SHA512 (gnapfetch-0.3.tar.gz) = bca56198e79ab8e2ccdb8e308443d4aaf1eaa70e16add87c494440cd1e331d8fc43283bf4f653e30012d5d8f36ba4d93607996ef2af81bb4940da4a553121a7d
 Size (gnapfetch-0.3.tar.gz) = 2466 bytes

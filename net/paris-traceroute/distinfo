@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:28 nia Exp $
 
-RMD160 (paris-traceroute-0.92-dev.tar.gz) = 05fb22f0d8138950eb73ab69adf3c2d2cb50ff03
+BLAKE2s (paris-traceroute-0.92-dev.tar.gz) = 25c5a8d1a4620b38b03e81bca33b4760975e3b5460d916ceb1c6ee2a283576a5
 SHA512 (paris-traceroute-0.92-dev.tar.gz) = ecae447bb3f811f5668d2beb24fb0146e9267189e14c10b09fe930daad552e97dbcde7208be6020c83b3560b41395a866a87d4076e6ce6c5d574490a9e0d9128
 Size (paris-traceroute-0.92-dev.tar.gz) = 1063191 bytes
 SHA1 (patch-src_ConcurrentTracert.cc) = 411c26a3599056908e92b54e5bb553f1bd1569af

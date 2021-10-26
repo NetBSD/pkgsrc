@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:43:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:07:09 nia Exp $
 
-RMD160 (ap-utils-1.3.2.tar.bz2) = ce58feac694a05cb97bd0be9dc5fac99b9432919
+BLAKE2s (ap-utils-1.3.2.tar.bz2) = 2cb725147e440900822f01e3e77aa479f4f5700592c7ead2db5927433a8a01da
 SHA512 (ap-utils-1.3.2.tar.bz2) = e0157a2fda20e39b899701fbc590d70a61ef5599f324f5054c02253a1ced1ed49923c39d8bac6a46541bc1ca6b10ea7ddde1cb326b90366f3ec86ab8c6e1c7e9
 Size (ap-utils-1.3.2.tar.bz2) = 280243 bytes
 SHA1 (patch-aa) = 06ca4b5571d7f1cbf21b73288bc3be02d71b4182

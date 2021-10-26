@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:42:17 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:06:26 nia Exp $
 
-RMD160 (Socket6-0.29.tar.gz) = d7826bb4884748c56b1835b5f9800fef25eb7184
+BLAKE2s (Socket6-0.29.tar.gz) = 0fda48816acabd0c9cf444c7621a49f787f3be12789d06284191842e94da17cd
 SHA512 (Socket6-0.29.tar.gz) = 51d05a04563519010f515a50fb1082c4e72eb4537137ad55f117458c71ec8429a5674083bd68adcbbf2e57632a1cb1bf60693ea98364e7f96c826ff8c9655b33
 Size (Socket6-0.29.tar.gz) = 65359 bytes
 SHA1 (patch-Socket6.xs) = b3bc391e87ae5778d4301e5a6a0983deebf25bd4

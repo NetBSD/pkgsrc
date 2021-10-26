@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:34 nia Exp $
 
-RMD160 (caldav-0.2.1.tar.gz) = e3a7d24d75b3e5d261f63452abbe3d9f3f6515fe
+BLAKE2s (caldav-0.2.1.tar.gz) = 64140ff882bbe4e59376c1db4f962a830c8b564a02467717b1df087ee11c4f70
 SHA512 (caldav-0.2.1.tar.gz) = cbefe2fe2f9ed13268a2e41928a3c63f43cd8a42704d031afff8c8a28ba46190cda277ba5562fc679cf482fb4897e3cc0b7ca73aad0a46828cea9795ba140820
 Size (caldav-0.2.1.tar.gz) = 35698 bytes

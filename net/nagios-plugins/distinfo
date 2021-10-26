@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 14:41:55 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:06:04 nia Exp $
 
-RMD160 (nagios-plugins-2.2.1.tar.gz) = 39c364ac08854a1829d47562d4add1ae58a49334
+BLAKE2s (nagios-plugins-2.2.1.tar.gz) = 976274874f96d7614ac6359b7feb9692874e947677d88a6d2daa6e569bb61ce5
 SHA512 (nagios-plugins-2.2.1.tar.gz) = 6ffe313a56a305b382f62abc0f0958d7078f9050e1340f30721d6e6f71944b57b1650e90e6835c35dd7c9f3f4b4cee9f235b8382b0811db30b3729daaafc9bc3
 Size (nagios-plugins-2.2.1.tar.gz) = 2728818 bytes
 SHA1 (patch-ad) = cad52f9d8c5a6b53a1b512238df1590c0fa2177d

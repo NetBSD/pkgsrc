@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:42:40 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:06:49 nia Exp $
 
-RMD160 (amqp-1.8.0.gem) = 6e584ec99e740cbe7dccf9640a6148f453edcd60
+BLAKE2s (amqp-1.8.0.gem) = 7dd45fd67e5357b451afacea2dd9cfd80836873ea5c0e3db75f9700449b291d8
 SHA512 (amqp-1.8.0.gem) = 8575b3704cbaab5937a5880858bcc4610ecab4be66b9ef8633c1d49858a95fbb48b1245ba71ebce1b0d31e319cb6f133640097aaa779b8a32282f6d442098e7f
 Size (amqp-1.8.0.gem) = 1175040 bytes

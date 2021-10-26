@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:58 nia Exp $
 
-RMD160 (luasocket-3.0-rc1.tar.gz) = 27357eee7e52f091609f45a0b0fb7e04e9ea2bd8
+BLAKE2s (luasocket-3.0-rc1.tar.gz) = e63616d8206b9d242fd7a16ce6a439def91698968cb3920943039549172ff882
 SHA512 (luasocket-3.0-rc1.tar.gz) = f6efce259aaacaa11472911471f8a13b118fe009b8953a82c6aa18b9ec829cd1293180904e56935cb130d36d267e3f27c91db2d78e03f7488f3e100571ed0540
 Size (luasocket-3.0-rc1.tar.gz) = 328598 bytes
 SHA1 (patch-makefile) = 2a6380adfa8f7ef63e70e0de9ef4eb4e76eff334

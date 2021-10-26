@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:49 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:58 nia Exp $
 
-RMD160 (spread-src-3.17.3.tar.gz) = 92def613d602d743d4f7c433f70f0b234bf47feb
+BLAKE2s (spread-src-3.17.3.tar.gz) = 7fc337ee3471eb941d01c80f27174ab076099d3d7ca6af02db93048927d42624
 SHA512 (spread-src-3.17.3.tar.gz) = 319261e5ee2630dd1ea6c393cc1c499e02de554b7d64fa39a9de665422ff68ecee641575a64c4d3f5875fe9fe70fa68bac69311b4441de6c68abc76da780bd3d
 Size (spread-src-3.17.3.tar.gz) = 299975 bytes
 SHA1 (patch-ba) = 795938504e97da34e83e9e66b8b81ff894cbb5b4

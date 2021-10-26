@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:41:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:05:25 nia Exp $
 
-RMD160 (bmon-4.0.tar.gz) = 9f8639ef55c77f1085169d40c02f5702ac30cfc4
+BLAKE2s (bmon-4.0.tar.gz) = 0a3e481d71024b0560ca720f9eadbdcd86bf12b81587a257bb49113ff7c67993
 SHA512 (bmon-4.0.tar.gz) = 5b8cc965b0b05c4bc107d038bba4fcd3317a89bc5e33f77f45a05431c197ad7fa4054d5b0f4ca9b52e8779cb4463d0f429bf22c7a2047abb1ca39174220a46ad
 Size (bmon-4.0.tar.gz) = 202241 bytes
 SHA1 (patch-examples_Makefile.in) = f7dab570d8b141226f70774aed3a5f119793229f

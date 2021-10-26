@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:41:23 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:05:33 nia Exp $
 
-RMD160 (dtcp-20130602.tar.gz) = 3744d0af6c03ac5fe3cd6ea1269bfff3b32b27cc
+BLAKE2s (dtcp-20130602.tar.gz) = 234ebd7f29ac5db9b4e9d78d7c37490a9a6ab4e0e8196b4b8d795fd8ad0850ce
 SHA512 (dtcp-20130602.tar.gz) = 59153f17aa793d78aa22a47cf24b43b3aee1f156217eac860ef4bffd152927331b6f6d90df572cb8390661d5b79881ec8a38a32ca302789b309099e7c60228fb
 Size (dtcp-20130602.tar.gz) = 20914 bytes
 SHA1 (patch-aa) = 161dada810d985eaca431124335c839c74e6acd5

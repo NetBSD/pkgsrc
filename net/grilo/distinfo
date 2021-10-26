@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:41:31 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:05:41 nia Exp $
 
-RMD160 (grilo-0.3.11.tar.xz) = 83775f64304539d049133920290337cf83084127
+BLAKE2s (grilo-0.3.11.tar.xz) = 1824096e85552bc50ab326ef10feb8f99c9cf9e1fb4e074b55793107b2d0efed
 SHA512 (grilo-0.3.11.tar.xz) = fd46d035982b14ed19681acce3f4878cc678919babc031ce5eb577a21d14f97b905eb5094b344b7fc732bf317fb504dae940cffb7875de2d577bae431b7f9c36
 Size (grilo-0.3.11.tar.xz) = 233516 bytes

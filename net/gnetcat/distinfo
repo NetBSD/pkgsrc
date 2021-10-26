@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:40 nia Exp $
 
-RMD160 (netcat-0.7.1.tar.gz) = 9eabed2b4b5585a55062b4a82c8c6aee1b01e3b7
+BLAKE2s (netcat-0.7.1.tar.gz) = afc13ff7170d184b9362b45f788b9e45b9dc5659d19dd139dd884ea05050397e
 SHA512 (netcat-0.7.1.tar.gz) = b5a39284bf490c5d581f1d3e9e1fd74df63eae79f280a66b75347c4707320f48c5da32cea96c7c7e60bffe8e044eb50c6dc0d791e1812747457efc5ea3bb441c
 Size (netcat-0.7.1.tar.gz) = 398872 bytes
 SHA1 (patch-aa) = 08cd5e2fd5d2db28f56fc81f21990b70b2886444

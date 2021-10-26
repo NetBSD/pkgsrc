@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:28 nia Exp $
 
-RMD160 (CoilMQ-1.0.1.tar.gz) = d0c93e70c204f97e1813147eb31b016ece692a13
+BLAKE2s (CoilMQ-1.0.1.tar.gz) = 40e6cdf40ca23e5324c8e18d02c09fd12ebf432b17e7bd514f3aff2692c20ee7
 SHA512 (CoilMQ-1.0.1.tar.gz) = e639b97cc4aea40b1c951c73a404966aa073884eb8356fbadbe686ec168798dacb1e11e5b7e20d18a935c350e098eb4e0a2a2f11b6ca0bf0584cd4333c8d00d8
 Size (CoilMQ-1.0.1.tar.gz) = 30521 bytes
