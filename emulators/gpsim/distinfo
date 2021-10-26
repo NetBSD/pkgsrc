@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:49:29 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:23:51 nia Exp $
 
-RMD160 (gpsim-0.26.1.tar.gz) = 487de6a2508de2d51843a9ed684801778e4fe69a
+BLAKE2s (gpsim-0.26.1.tar.gz) = fee16e1ea91924f401ed930c1d989e36bdd3781b4cf83ce1f40e02bb903ed270
 SHA512 (gpsim-0.26.1.tar.gz) = ab710d57e5699e680674b97fb6c4eed19e45ee0bac05e40c2f8b4d58338b1023735e96aa7f9ce0c21048478d291a14fa41f216709b23d85d047d7c2b3e5e7d15
 Size (gpsim-0.26.1.tar.gz) = 2350841 bytes
 SHA1 (patch-cli_cmd__list.cc) = 73dd63cfb069ab42a059686d3b6618172b967be5

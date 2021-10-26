@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:24:03 nia Exp $
 
-RMD160 (suse100/i586/libxml2-2.6.20-4.i586.rpm) = 1e61d863274344ce428882c94cdf1e4511f2c808
+BLAKE2s (suse100/i586/libxml2-2.6.20-4.i586.rpm) = 555d2f29b687b937bc09044612dd6af8f182be03d7080adfbbd03cb035326d74
 SHA512 (suse100/i586/libxml2-2.6.20-4.i586.rpm) = b4ff17172bab02e91a5f7afa791bd5cbd5b48e63e35295fcb58c30c0c21fc891859af1f9362b1ba662ee963ed8b55bd4e016e96f77a00546059af3e90b1a5a3e
 Size (suse100/i586/libxml2-2.6.20-4.i586.rpm) = 597776 bytes
-RMD160 (suse100/ppc/libxml2-2.6.20-4.ppc.rpm) = d48a2e0a80d3a8e0c42a38d35c63469b8706d9c7
+BLAKE2s (suse100/ppc/libxml2-2.6.20-4.ppc.rpm) = 14aa0a76ebfb8d26bbbd99281eec30f980036f139bb8c2c69a2081e105331a5f
 SHA512 (suse100/ppc/libxml2-2.6.20-4.ppc.rpm) = 3ff8b9324ef52b9fef4e05a63d7b67eefbe547391529dee87d0fef88ba78b966fe49234a56f2b8098b5897775cdf08a8f0cd6e7b04af51ab78fe5095441bad93
 Size (suse100/ppc/libxml2-2.6.20-4.ppc.rpm) = 643318 bytes
-RMD160 (suse100/x86_64/libxml2-2.6.20-4.x86_64.rpm) = f1a42c1c22b4bfbcaaff780c7d12b9ede6a70c30
+BLAKE2s (suse100/x86_64/libxml2-2.6.20-4.x86_64.rpm) = dc6d36521092ff99a570dc5ac53d7f9cc4e10225cf75d3ad6e3057983586c724
 SHA512 (suse100/x86_64/libxml2-2.6.20-4.x86_64.rpm) = 516016660bde9d1737e6bff787a8f59a77daeb6fd540ffd8e1ce255f827c24c1290c689a912476db4ad7d3c9221e6408e6798210f8b848d26036d46cfec46c6c
 Size (suse100/x86_64/libxml2-2.6.20-4.x86_64.rpm) = 607167 bytes

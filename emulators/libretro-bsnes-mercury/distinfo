@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:23:54 nia Exp $
 
-RMD160 (libretro-bsnes-mercury-20180803-4e221df676ffc7b46d083cf2ae100131eabe5076.tar.gz) = 2b8b40ed19ec9aa1f3268a478ee60332ba6a4550
+BLAKE2s (libretro-bsnes-mercury-20180803-4e221df676ffc7b46d083cf2ae100131eabe5076.tar.gz) = 7fd51eedffefa6a005700a69f9ec779fb0ff52471672da266e8776111cb6bb4d
 SHA512 (libretro-bsnes-mercury-20180803-4e221df676ffc7b46d083cf2ae100131eabe5076.tar.gz) = c4b56d9bc4bbbb9e32a5d4923008e2e917a6db5d3ad92cb35333e389175593bf46a297dbe12eba21193881338cc79fe88ceecda8f32be0774ea9c5eac24a376e
 Size (libretro-bsnes-mercury-20180803-4e221df676ffc7b46d083cf2ae100131eabe5076.tar.gz) = 1337069 bytes
 SHA1 (patch-Makefile) = dca8b1f45f9d4ecc594563317ccf7609f1f8ab90

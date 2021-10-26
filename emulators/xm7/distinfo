@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:49:53 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:24:16 nia Exp $
 
-RMD160 (xm71020s.zip) = c65938b33081a7563dc13b0265b6f849ba4929e9
+BLAKE2s (xm71020s.zip) = c9a4a9c112f7c9a1c2f89e7fe00a1cb35a106fff1159b6f93c4573357c3718e8
 SHA512 (xm71020s.zip) = 8798e268d5b14f540cdb930c50e813044968ce3ddb160f96628e382ee4981e71c71db2d1c52e0a3f50452d7dac3a0ee43956f0ba6bcbc01d16cb8d1fc5c25690
 Size (xm71020s.zip) = 289896 bytes
 SHA1 (patch-aa) = b49f4dac3dde6395fcf1d4ab0c987d577e5e9ce4

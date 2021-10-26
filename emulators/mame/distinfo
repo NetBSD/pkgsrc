@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.111 2021/10/07 13:49:35 nia Exp $
+$NetBSD: distinfo,v 1.112 2021/10/26 10:23:58 nia Exp $
 
-RMD160 (mame-0.236.tar.gz) = a4fe0b38229d796fbca0b03bb46ed54e89bc37e4
+BLAKE2s (mame-0.236.tar.gz) = 8d3fe0e30207940c085d94c69a9767248a3894d3799fa4273d3749ae0fad1bf1
 SHA512 (mame-0.236.tar.gz) = ee5a61ae9f636c1b6f5d3dd5280c5b691e24a7f509956812248973b48b4c80b4bc0269be80c8cbba654793a4a3ff4d64f8a6af5a0152f172da245204c710f65c
 Size (mame-0.236.tar.gz) = 185713006 bytes
 SHA1 (patch-3rdparty_asio_include_asio_detail_config.hpp) = 9b0d6139e853d8efb9d51270bbfa5382feac42a7

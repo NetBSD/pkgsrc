@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:23:51 nia Exp $
 
-RMD160 (gpsp-rpi-20150205.zip) = 5a53e210f30a69f147d5c223a18fd51ea7d47a1e
+BLAKE2s (gpsp-rpi-20150205.zip) = ad9e31cf2227be4ffdaf9f6aaab20dbe483498a633ec5b2854a808e3db3bc97f
 SHA512 (gpsp-rpi-20150205.zip) = ce6da38a8a7184e05ad18afbb49bdcdad2c108ca4ed85465f26d9b0a627451c8b29fe673bd28dd4afa1d87030cab9c2882aaf3d372a4c5a242b1aeb482176361
 Size (gpsp-rpi-20150205.zip) = 350074 bytes
 SHA1 (patch-arm_warm.c) = b8c4eff30767fa78f54ad4114e00e8559349b10f

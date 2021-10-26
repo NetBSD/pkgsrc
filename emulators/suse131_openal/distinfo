@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:24:12 nia Exp $
 
-RMD160 (suse131/libopenal1-1.15.1-2.1.2.i586.rpm) = 6143c68593e0dfcc9e0317d1be61bcdd28e821b3
+BLAKE2s (suse131/libopenal1-1.15.1-2.1.2.i586.rpm) = f03903864085ef07b0fb6cd20f668e5c8a2b005d0a8336068d154279a2fd1b1e
 SHA512 (suse131/libopenal1-1.15.1-2.1.2.i586.rpm) = 912cfcec28053601db7f5a7dfa2e1752533bb1426b9383e26d7bd61e2b345aef73cabf92633357bffa3bdc24d7b6a38edc19be24c3e893143f5de27d75397e26
 Size (suse131/libopenal1-1.15.1-2.1.2.i586.rpm) = 162952 bytes
-RMD160 (suse131/libopenal1-1.15.1-2.1.2.x86_64.rpm) = 03109fb998bf9734c78ec4cac1e439b0d0493086
+BLAKE2s (suse131/libopenal1-1.15.1-2.1.2.x86_64.rpm) = ebf44de9107eb17a80f9b4e78a07618377ea303a8151671c90107f979a06b849
 SHA512 (suse131/libopenal1-1.15.1-2.1.2.x86_64.rpm) = 3ca9544aaac786f5677eeab4a8b0ec42f026d43428469443ade4257efb97ad1a12b273564a6da19d5935c23cf7f7d6ae4ef39dd1a64ab346e8034d3935f1f308
 Size (suse131/libopenal1-1.15.1-2.1.2.x86_64.rpm) = 166203 bytes
-RMD160 (suse131/openal-soft-1.15.1-2.1.2.i586.rpm) = a88095ca5115c56280000fa746afa95de5ea5c5e
+BLAKE2s (suse131/openal-soft-1.15.1-2.1.2.i586.rpm) = 1965fd5a67261a3c405c6e4dec3fd75e97ef83a4723a7fbd96f3048bfc23661b
 SHA512 (suse131/openal-soft-1.15.1-2.1.2.i586.rpm) = edf96a80e596ee24afdc818b72bd2c2e06bdefdb4f52b6e499eda972c34111267d41673067db7853b5daee330275c6fe12dfe2da58fb95d3bca8ca9e14695cd9
 Size (suse131/openal-soft-1.15.1-2.1.2.i586.rpm) = 33550 bytes
-RMD160 (suse131/openal-soft-1.15.1-2.1.2.x86_64.rpm) = 8aff9ada783289e91eab0a7270a432e479aa58f9
+BLAKE2s (suse131/openal-soft-1.15.1-2.1.2.x86_64.rpm) = 8665b2105f96ecff8993db61b7374f50bcfccf36c093e223ec84ce526ecddee8
 SHA512 (suse131/openal-soft-1.15.1-2.1.2.x86_64.rpm) = 69c08bb3e18aa650c184fadc459f3abaae29a0a30c614f8192e5d8b0ef016b457520bef088b72c444e593ea540857d941a995e4e69784c3c8560230e2ebcfc7d
 Size (suse131/openal-soft-1.15.1-2.1.2.x86_64.rpm) = 33612 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:49:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:23:45 nia Exp $
 
-RMD160 (rbuild214.zip) = bcc627c3fd3a402fd6682d2b8354801af6d8c7b4
+BLAKE2s (rbuild214.zip) = f653d5d606c46789d5c04044d411c60d3a36009c4c145ee194804ef37e4afb28
 SHA512 (rbuild214.zip) = 2c95d0bcf30f2f8eae54813f94eba3609fc8b6e078dc1bfbaa0d52b3acd06b9c919f32cfb2c2624e7c5de3437d7d3018d531f80eee35d7b119a8103aa559e8e3
 Size (rbuild214.zip) = 109798 bytes
 SHA1 (patch-aa) = 9c129cdef08805166cc2bed0d5992d357d2f8523
