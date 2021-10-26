@@ -1,13 +1,10 @@
-$NetBSD: patch-texmaker.h,v 1.1 2019/09/05 08:07:25 nros Exp $
+$NetBSD: patch-texmaker.h,v 1.2 2021/10/26 17:56:54 nros Exp $
+
 * use pkgsrc (system) hunspell, from openbsd ports
---- texmaker.h.orig	2019-09-03 13:27:59.000000000 +0000
+
+--- texmaker.h.orig	2021-08-13 06:55:34.000000000 +0000
 +++ texmaker.h
-@@ -1,3 +1,4 @@
-+
- /***************************************************************************
-  *   copyright       : (C) 2003-2017 by Pascal Brachet                     *
-  *   http://www.xm1math.net/texmaker/                                      *
-@@ -49,7 +50,7 @@
+@@ -50,7 +50,7 @@
  #include "usertagslistwidget.h"
  #include "xmltagslistwidget.h"
  #include "logeditor.h"

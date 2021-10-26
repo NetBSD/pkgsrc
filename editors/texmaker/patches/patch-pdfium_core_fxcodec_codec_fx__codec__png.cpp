@@ -1,5 +1,7 @@
-$NetBSD: patch-pdfium_core_fxcodec_codec_fx__codec__png.cpp,v 1.1 2019/09/05 08:07:25 nros Exp $
+$NetBSD: patch-pdfium_core_fxcodec_codec_fx__codec__png.cpp,v 1.2 2021/10/26 17:56:54 nros Exp $
+
 * use pkgsrc (system) libpng
+
 --- pdfium/core/fxcodec/codec/fx_codec_png.cpp.orig	2019-08-10 09:07:09.000000000 +0000
 +++ pdfium/core/fxcodec/codec/fx_codec_png.cpp
 @@ -12,7 +12,7 @@
