@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:18:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:02:55 nia Exp $
 
-RMD160 (ramspeed-2.6.0.tar.gz) = 997c437c359d3f9f9264768e64584e7c430e8d3a
+BLAKE2s (ramspeed-2.6.0.tar.gz) = 54c13e5b899842f435a074959470626dcb1dd69aa8c1de9b9de04c5c93f71b67
 SHA512 (ramspeed-2.6.0.tar.gz) = 9866e5525e0a9df1ab6a0e92085addfed50a987fb335d9127835ca0fb890f7614ad51bec15b7148648bbce8b4709b4f45114a51585bf0e881be56402934abdc4
 Size (ramspeed-2.6.0.tar.gz) = 77531 bytes
 SHA1 (patch-aa) = 371133ddde45b40c21205b677cf5edcc714d277a
