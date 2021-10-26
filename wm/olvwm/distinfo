@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:05:09 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:25:16 nia Exp $
 
-RMD160 (olvwm4.src4.tar.gz) = 6523adb9a2f08829dbe6099e88ac031b1dd232a4
+BLAKE2s (olvwm4.src4.tar.gz) = 6a37beeda9a0ec90497f3a1b3068d031c6487f92830464716ef875ff34202ab2
 SHA512 (olvwm4.src4.tar.gz) = 2ceea3f5bb81c2c467a72492b35dbe99b61e3757a1f13fb41b15daed5f5eef4685fae003371a27173e095463338b9a9f332925073e4f25a530726e44bfed66fb
 Size (olvwm4.src4.tar.gz) = 386560 bytes
 SHA1 (patch-aa) = 1a3f6f87ad6c39cb70923b6c54f66d6abdab5e9d

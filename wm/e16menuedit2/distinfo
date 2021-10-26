@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:05:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:25:12 nia Exp $
 
-RMD160 (e16menuedit2-0.0.3.tar.gz) = 008059b51bc5b90c61200c3fe12d2e2034af6aaa
+BLAKE2s (e16menuedit2-0.0.3.tar.gz) = 222794786b24ebe86d55b764007739c2237d3177681b56f7418726fb936346bd
 SHA512 (e16menuedit2-0.0.3.tar.gz) = 41942028e7d20b5aa46fce8f54f60af46bd08e292a1812d4845d68cbc670699c8fc70a8d71c2749df623a4a083b92bc9539b9241fd7daabbee0deb855ff1be99
 Size (e16menuedit2-0.0.3.tar.gz) = 370740 bytes
 SHA1 (patch-aa) = af682ed2d0225413fa4a93995864d52f4c701c6c

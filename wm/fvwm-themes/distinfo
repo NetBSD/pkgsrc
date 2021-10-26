@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:25:13 nia Exp $
 
-RMD160 (fvwm-themes-0.6.2.tar.bz2) = 49706c0d2a367d2a2877ea5d1030397314ec211f
+BLAKE2s (fvwm-themes-0.6.2.tar.bz2) = 598d86a0ab9d44e94fd0902c411f5d47de6e65c96f75a73404b5408f608948c6
 SHA512 (fvwm-themes-0.6.2.tar.bz2) = d2786ac95417019911382f9cc51d836dd932e291dcf8a111036587b61cb570a642db085dd22f1ca4ffb67aa25df4e61dc7d8806d59162ceb7e67c8948926a522
 Size (fvwm-themes-0.6.2.tar.bz2) = 592419 bytes
-RMD160 (fvwm-themes-extra-0.6.2.tar.bz2) = c78e47d355638760a990477c990e2f705dd347e7
+BLAKE2s (fvwm-themes-extra-0.6.2.tar.bz2) = cc088fbfbf5937ecc7d07459d0c51dcb96f1ac9906408efeda969053fd4de3c7
 SHA512 (fvwm-themes-extra-0.6.2.tar.bz2) = 514c09f618848993fc8cef844b2fa4a2da620f72e8151dba32a181bd7661c5b3dde6bc44038eeae3073244341d218ae1d6df6ce7182e9d140c9d2361ea9c7ae4
 Size (fvwm-themes-extra-0.6.2.tar.bz2) = 378884 bytes
 SHA1 (patch-Makefile.am) = 78d472478f75e84fdec3f921051ffb0fd52f75f3

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:05:08 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:25:15 nia Exp $
 
-RMD160 (mate-netbook-1.24.0.tar.xz) = 4e014b640ace1b8acc0e3ebbd311d1ccbee91498
+BLAKE2s (mate-netbook-1.24.0.tar.xz) = 7f22d3de0f8f8fb6c70a4a989ac70c94a9982a8b13aad73d54bced77d90b77ec
 SHA512 (mate-netbook-1.24.0.tar.xz) = fd2efbfaa3fb53f96bf9bff28eba70d3cd46b723a63e6748af0cb8314821cbafdc8d0122d402e89ac2742247685e630544f3d98149514114de5a3e38f7fbe471
 Size (mate-netbook-1.24.0.tar.xz) = 356072 bytes
 SHA1 (patch-maximus_xutils.c) = b44ac9b31e25ee1e7b93ffa8b16ac7f6da407e0a

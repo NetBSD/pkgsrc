@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:05:13 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:25:20 nia Exp $
 
-RMD160 (wm2-4.tar.gz) = 32b8f7c0ae3d280684505b3f69b2a82bafabacf1
+BLAKE2s (wm2-4.tar.gz) = 6d58f785fcd51839898701374ba8e0d02f471c434fafaf7d9b4bfeec9628e6a9
 SHA512 (wm2-4.tar.gz) = 9151267e5a6bf39587b15dc3e55b4acc05aa1b14a7a9bcb4e1ed25d474af8b0e7699343117f184c745645deb404d6f6e230809b88d9b7bb5c1f67ba0fbde72e9
 Size (wm2-4.tar.gz) = 32807 bytes
 SHA1 (patch-aa) = 3abf330bd012205dbb6eeff06b0be28fe27835d3

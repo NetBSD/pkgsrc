@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:05:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:25:12 nia Exp $
 
-RMD160 (cwm-6.7.tar.gz) = ace3484da689214c6c12a9d9cc66f6aef898df91
+BLAKE2s (cwm-6.7.tar.gz) = 3a865f88c4753bd146f266d6907f75860a91a6a938335bfbfb4d401f0f4cf46c
 SHA512 (cwm-6.7.tar.gz) = 5ad0fa56d9c96c36cc32e68128e58d4e3a7483f349bb26be1083c5b5c6d853ff05eec1a783b07ed928bd99a35a2e0b2d7053fc89b828aa9bdfe3589a318c4171
 Size (cwm-6.7.tar.gz) = 53172 bytes

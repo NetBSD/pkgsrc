@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:05:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:25:14 nia Exp $
 
-RMD160 (lwm-1.2.4.tar.gz) = 664b2f70bb176c2b966cd2ddeece35b61c25f33b
+BLAKE2s (lwm-1.2.4.tar.gz) = 8ae50b7c835f4591c0fb38443c43fca9f3455c62eec201295f2922007b018cde
 SHA512 (lwm-1.2.4.tar.gz) = bb4e394c43020b48dedf8c98702b68be7a580f9851d298ba2c6f0aacbd21719d8c772712e56cbbcc400e81a45ad7f4f29cb6e5f17d6dad76aef65029daf812c5
 Size (lwm-1.2.4.tar.gz) = 47519 bytes
 SHA1 (patch-aa) = 65693638a09e6f445513e7cc4ff5ad0dc0069090

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:05:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:25:21 nia Exp $
 
-RMD160 (wmutils-core-1.2.tar.gz) = 064149190ae07c70175951d7b17f2d30ab5c5351
+BLAKE2s (wmutils-core-1.2.tar.gz) = 4ce80490191df6ff0446e1b23e999ddd5642f8a4884901b88a378e27b7a2209b
 SHA512 (wmutils-core-1.2.tar.gz) = 78c6828b8b54290a6ddfe655e2015580ef7aee0a3d45e63f42874cecab85836c9ed1cdf6398d158611250fffcf0ea6567980464daa1c00ed744d0f10f728059b
 Size (wmutils-core-1.2.tar.gz) = 9475 bytes

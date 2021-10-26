@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:05:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:25:16 nia Exp $
 
-RMD160 (obpager-1.8.tar.gz) = 45ca48aa8745fae522e7b0caf7b5a99d956e5413
+BLAKE2s (obpager-1.8.tar.gz) = 1a23fbee3e9188c7cecd0e834dfc5c14330b0d0c864a1455a56dc5d519e4f3f3
 SHA512 (obpager-1.8.tar.gz) = da934b8777f7a2c7a35e4626488ce2281eb8a69a1c74917e5a71b7c991f5fb30aa366690188f0f222c2362a3bd9b66f9093c2adec874796df75158fc92c093f8
 Size (obpager-1.8.tar.gz) = 23773 bytes
 SHA1 (patch-aa) = 2f701f8e3b8f81335ba2ad2478d2b3faf66b2126

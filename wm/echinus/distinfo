@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:05:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:25:12 nia Exp $
 
-RMD160 (echinus-0.4.9.tar.gz) = 19810f2de7aed3e75e87f67168cf2445579959c5
+BLAKE2s (echinus-0.4.9.tar.gz) = 687352353fec0020e82530f5a444a8457cf09f82eb1cfd4b28635c53d7540bcd
 SHA512 (echinus-0.4.9.tar.gz) = a735291129bc287c6ed8c0f5d98c3d81db6da19d903a5fd5b44af5ec55d0b90dc7a559fc0cbd3e0dcced4a25783307adbd777a0c79fbd91ed78e9867544c47bf
 Size (echinus-0.4.9.tar.gz) = 32934 bytes

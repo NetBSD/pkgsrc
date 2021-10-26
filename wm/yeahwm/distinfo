@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:05:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:25:21 nia Exp $
 
-RMD160 (yeahwm_0.3.5.tar.gz) = 4af2e72dd12580faff7a87d9f3e4fa23525b153e
+BLAKE2s (yeahwm_0.3.5.tar.gz) = e4378d4abfac433c102c4be383bcdf1ab9c12471744864271d9af8333c6d49c3
 SHA512 (yeahwm_0.3.5.tar.gz) = bf75f484c0e21437d32ca590ebc79a127bc879738c4b845f9ea0bfd2de15d1b7455b131bf12d51b053008c6f6d60c071351ea13130bd3c5727932b419c54592a
 Size (yeahwm_0.3.5.tar.gz) = 23465 bytes
 SHA1 (patch-Makefile) = 4c42bdb58322706fd861e9915ba0ef1e03c9fe83

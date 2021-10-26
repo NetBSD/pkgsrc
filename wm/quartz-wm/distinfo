@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:05:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:25:17 nia Exp $
 
-RMD160 (quartz-wm-1.3.1.tar.xz) = bbc18e5cb4ebe6d3bb02f8209ad37e265122e7a1
+BLAKE2s (quartz-wm-1.3.1.tar.xz) = 01e35b48488bbd482dce65d8356566cdbaf72b6c736a39ea9f31852ab0ed2e49
 SHA512 (quartz-wm-1.3.1.tar.xz) = 5a76a32e0efafc5777dbc9b3e5baf73a9cf6addb2aed9822244f6987f830d9064f3d917abe4f25218b6bd2390027005a90cc83e729c9b6663aaef2c1b896420c
 Size (quartz-wm-1.3.1.tar.xz) = 166928 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:05:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:25:09 nia Exp $
 
-RMD160 (2bwm-0.3.tar.gz) = b08459ec98b8c4c1b9c4a0085b4cb261061a1baf
+BLAKE2s (2bwm-0.3.tar.gz) = 2b986351b300a15f50acd63bcc8542941afaeebda673bcba7c930b8c87a96065
 SHA512 (2bwm-0.3.tar.gz) = 088a97e5245287890c72e2b0685f7348a4cc0fd49582893b7ce7a081f80a4d7454a3c0eadf4609589314351ded02fd8b75548019b782e797350ad5db5c939f92
 Size (2bwm-0.3.tar.gz) = 41032 bytes

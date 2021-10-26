@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:05:14 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:25:20 nia Exp $
 
-RMD160 (wmi-10.tar.gz) = 49ba3c481c6149a815c89d9de5f3233ede25edeb
+BLAKE2s (wmi-10.tar.gz) = e68004d020a5495fa6b1c2c7a9b2f823893660406cb2d8c2afd3be945643203d
 SHA512 (wmi-10.tar.gz) = c50f722facfb119b00a40a7e1b6980f46691259da7c7a91d5f3e5feb204b85aa55e79465680a5724fa0375685d833b7169d0fd0be574b4cd00db7eba4f3237f0
 Size (wmi-10.tar.gz) = 193148 bytes
 SHA1 (patch-ab) = d0112ad98f1812aa9be96f0531670a02d01de71f

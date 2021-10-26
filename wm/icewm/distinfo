@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2021/10/07 15:05:07 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/10/26 11:25:13 nia Exp $
 
-RMD160 (icewm-1.2.38pre2.tar.gz) = e2b3fefdae7e1d368920e84d175058e3fe7c8d93
+BLAKE2s (icewm-1.2.38pre2.tar.gz) = 54f37c14ad1a124cdbf4afd3cf287387d6d140dc7c685d598bf12b7deb34d49c
 SHA512 (icewm-1.2.38pre2.tar.gz) = c86e9a3ab0fca4543c7c6d479f49e854fc28f90f4cf11acc01f4d5124b64900ec73fdc2612c77e1c856ee526869c27634555b515679020b5127584994bcf7f28
 Size (icewm-1.2.38pre2.tar.gz) = 854190 bytes
 SHA1 (patch-aa) = e89e30c88bec0a1f5ce9c184205c5a2a3e652b62

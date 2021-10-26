@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:05:14 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:25:21 nia Exp $
 
-RMD160 (wmx-8.tar.gz) = 268ffa0010e81b74a9d539f3c1f64f2dd1493c97
+BLAKE2s (wmx-8.tar.gz) = 5dadb8b04f2327a756247923cb804b05c7267dc8aa27261f457d2da49e3e5b6f
 SHA512 (wmx-8.tar.gz) = 48626c9eead163fea81760d30cfffa67a79a653db236e3238118fee3849de35633efe8eb8aa79c982aaa7c6c59cc517128374d02daccc775434af9e55951f305
 Size (wmx-8.tar.gz) = 140329 bytes
 SHA1 (patch-Border.C) = c89d13ee60cb79332ce8ef993f6ff77322bfdeea

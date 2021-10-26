@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:25:13 nia Exp $
 
-RMD160 (fvwm-2.6.9.tar.gz) = 6a3a554f94773c559ebc5284d00b4297491f3131
+BLAKE2s (fvwm-2.6.9.tar.gz) = 59e97f514d9192e4d8c6de287ab63a78ba6f742dfbce87597f26f6f5cf642915
 SHA512 (fvwm-2.6.9.tar.gz) = a9c2214ad19edd17da81446a6d4250284cc50b59b53c233212f2a9354c01143dbb870521392752f272f00af50bee2dd8f0b6bf6176b0d4b3075694d2a61a623e
 Size (fvwm-2.6.9.tar.gz) = 3942859 bytes
 SHA1 (patch-ab) = d9e960ed7be624a36af5a8a3ad4422f4ed4ce64e

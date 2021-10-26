@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:05:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:25:19 nia Exp $
 
-RMD160 (wampager-0.9.1.tar.gz) = 8bf4bccfed7db292c3f68f77d31f627856cece54
+BLAKE2s (wampager-0.9.1.tar.gz) = 3365da74419bcabc3dea2b19abb0d12c753bc9b85e7f6e74662dfb843a2407b8
 SHA512 (wampager-0.9.1.tar.gz) = 7ed2b33beeb0671125b6ccc23e13095bf267d1cf6c834ac5e6764462d7c761b6eeda47bc164ee8baa74bad2ad307e77438c2403ce621007079f9cf066a470d55
 Size (wampager-0.9.1.tar.gz) = 11697 bytes
