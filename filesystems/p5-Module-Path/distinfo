@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:51:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:25:30 nia Exp $
 
-RMD160 (Module-Path-0.19.tar.gz) = 3151dcaa78e18917e21511d6eb8a9c390daf0d51
+BLAKE2s (Module-Path-0.19.tar.gz) = d9c40cc7689dfbefbffd94c183c1379e1e97b40d1814b4391acc3e7452e5679d
 SHA512 (Module-Path-0.19.tar.gz) = fa71c67f6e8daab9df29a6ced09c557980873ea73ed6e9c28081d10009d153767adc24ddd6acbde0c1423ffbf9cc92f8ab5db29203b73a79643dfc98fc2b2935
 Size (Module-Path-0.19.tar.gz) = 14328 bytes

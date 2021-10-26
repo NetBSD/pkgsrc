@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:27 nia Exp $
 
-RMD160 (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = de3f73bb4e9e66c1b6f98beb7e5e6b647be91147
+BLAKE2s (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = 7dd0880338751b4169604fda7ae3bab973dda282882392f30c16f23ffd629e2a
 SHA512 (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = 1476b9f0f4ff3094713bcdde82e0330f8db4ce6edf3fac900f349d0bf081fe54d3893845662497dd0ea06134ce8289cd0d2a0046593386fca5c604f69075ea4c
 Size (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = 50309 bytes
 SHA1 (patch-src_HFSAttributeBTree.cpp) = 4f875eb6feaf9242f809a4e96727e50218664e71
