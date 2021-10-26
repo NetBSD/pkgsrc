@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:41 nia Exp $
 
-RMD160 (scim-sinhala-0.1.0.tar.gz) = bbb4df83ee7a25bfea2d79ebbbb56956e8a8c734
+BLAKE2s (scim-sinhala-0.1.0.tar.gz) = 136a4f477ed9e09c4f2c26d6d8ff45d0cb9d96872be00875a5172639bce52b89
 SHA512 (scim-sinhala-0.1.0.tar.gz) = ca88ad9775e0ec3ab6a938e504f21142d07ffef57d0a996aad0a8b47251515e93937b125cb921228c0fc1b60d15b81135d87dc7f8261d82e91083c930b6936ca
 Size (scim-sinhala-0.1.0.tar.gz) = 488409 bytes
 SHA1 (patch-aa) = 213bf2d512ec25c71b82fbd433195037ba80e1bc

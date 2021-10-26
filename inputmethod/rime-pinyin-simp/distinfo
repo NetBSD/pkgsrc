@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:39 nia Exp $
 
-RMD160 (rime-pinyin-simp-0.0.0.20201110-f5975ad8e324bbbc2c1eee94fdf8d66073efbbef.tar.gz) = e379bd67f6c9dda0aeb64bbb9d68a51e954d6822
+BLAKE2s (rime-pinyin-simp-0.0.0.20201110-f5975ad8e324bbbc2c1eee94fdf8d66073efbbef.tar.gz) = 0591f278528e44c5f11122ee5cafe676161b63138ba621f8c15bb253d4abe5a3
 SHA512 (rime-pinyin-simp-0.0.0.20201110-f5975ad8e324bbbc2c1eee94fdf8d66073efbbef.tar.gz) = 66ce32ba6c29039ce1e7c443996b0a36f25547cf66d018b718602d1568d643a65f17e4d5d9fb35d7ecd554d4997acb620dfb084d6f2254151218ad782b8a224d
 Size (rime-pinyin-simp-0.0.0.20201110-f5975ad8e324bbbc2c1eee94fdf8d66073efbbef.tar.gz) = 545305 bytes
