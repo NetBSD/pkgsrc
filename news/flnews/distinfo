@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:44:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:09:34 nia Exp $
 
-RMD160 (flnews-1.0.0.tar.bz2) = d6420d6b68a2a55cd343aaa0e5ec60866b1e0bb8
+BLAKE2s (flnews-1.0.0.tar.bz2) = a6bd5c2448cb233ff8bf94eecb4e6f09bcb8b44ca2a59860a57bec94b82ec7a8
 SHA512 (flnews-1.0.0.tar.bz2) = 097a9edaa2b628e0c74008fc2b38df236a5a785e80b25a90a4c1ff621403faba9ed9e3b4dd9dccdddadabd24e0b2b5f886560f825885916bd6b9e4196ef5770b
 Size (flnews-1.0.0.tar.bz2) = 1170870 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:44:59 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:09:37 nia Exp $
 
-RMD160 (trn-4.0-test77.tar.gz) = 291a8ded5ebbf2724f132e52b77db84b3079371d
+BLAKE2s (trn-4.0-test77.tar.gz) = be296a41d6bef98afdceb1a72389f48a66d661e930c7f626f9917b8083a68d1f
 SHA512 (trn-4.0-test77.tar.gz) = 9b76ba004fb47dfd162afcfec51630431e8ad7099e5151d4a21b55c8fa670227d6e0756029e57312872c8f4ea986112af50508144caf59adb065212a661f408a
 Size (trn-4.0-test77.tar.gz) = 564694 bytes
 SHA1 (patch-ac) = b6e06444f55242c1fe0dac194e04cd2c5f6a4c53
