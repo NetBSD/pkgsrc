@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:00 nia Exp $
 
-RMD160 (tex-frcursive-24559/frcursive.doc.tar.xz) = 646a097f92e8a94d3375f4f5343a69632cdf0162
+BLAKE2s (tex-frcursive-24559/frcursive.doc.tar.xz) = 9049e4686e066e7b9e8590d1816f34fddba3de7319af7d4866916de8599c11ee
 SHA512 (tex-frcursive-24559/frcursive.doc.tar.xz) = 431fe1b1d9b8bba64eb2aece48e20b197412e5aa28ed50a3cbcf80e8c211f156a8c2f0d3a229f421e3651750868716f1db7137d74e5be8682fed2fc2ce75d5fc
 Size (tex-frcursive-24559/frcursive.doc.tar.xz) = 322492 bytes

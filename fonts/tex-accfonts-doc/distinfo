@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:25 nia Exp $
 
-RMD160 (tex-accfonts-18835/accfonts.doc.tar.xz) = d3fd693c5545ebce8245aca6c96fc723167e73b5
+BLAKE2s (tex-accfonts-18835/accfonts.doc.tar.xz) = c1ee5b5bf9112f3acdb7a9da935a89a12675a57db736899464fa51e5c15f04a0
 SHA512 (tex-accfonts-18835/accfonts.doc.tar.xz) = 4b54213798da7e6538819f080bc1919a14e1207d6853e035d7f562fac74956505cc3230ef6f2daa5b2bb834452a1a7e31e5a52795418c73c8a12c4f0e4d20658
 Size (tex-accfonts-18835/accfonts.doc.tar.xz) = 15616 bytes

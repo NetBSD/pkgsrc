@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:05 nia Exp $
 
-RMD160 (tex-hfbright-29349/hfbright.tar.xz) = 6fac26d6058bc5aca83b7771c592e59b5cf86205
+BLAKE2s (tex-hfbright-29349/hfbright.tar.xz) = 9129d9371d11d9dad49d7cf93128aa48380c186295ba98b1b2ec69b920c59373
 SHA512 (tex-hfbright-29349/hfbright.tar.xz) = 2430453c296d76c2f4328e4f184c33dd07c202b922411dc0e0267057ca1963d67d4620c787777fbbf9f37421fbc46e35468bd28cdb14b03f5ce90068fcd56c7d
 Size (tex-hfbright-29349/hfbright.tar.xz) = 832796 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:28:08 nia Exp $
 
-RMD160 (tex-jmn-22719/jmn.tar.xz) = 6dbf621aabcd5f2fa68b23bee9e74c99b410398d
+BLAKE2s (tex-jmn-22719/jmn.tar.xz) = 24ae4f57bb4b0d91c9ff175be37d692b7f1879889db41ef81200f9eeaf978e4d
 SHA512 (tex-jmn-22719/jmn.tar.xz) = cdf252d2e61f53444be69c4b6c9ab1cdafd865365f1d59f0c7d428825858153f213a86a5871e93bb3bb261ac4afa9c5391b2adb21f1c59d81bc6592711aeef38
 Size (tex-jmn-22719/jmn.tar.xz) = 40024 bytes

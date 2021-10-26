@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:20 nia Exp $
 
-RMD160 (mplayer-fonts-20030714/font-arial-cp1250.tar.bz2) = a2fc7ae07b0d80936ea58e168e1047efccb9eb91
+BLAKE2s (mplayer-fonts-20030714/font-arial-cp1250.tar.bz2) = 597a0c2f85c86529463d4e399b45777f8f9db781715cbf11a734624295843950
 SHA512 (mplayer-fonts-20030714/font-arial-cp1250.tar.bz2) = 4f77ff5ceb8ec6e5d9f8f34d8950a6a6276d1fd5a947772fcbdb6554988b1ea665c12b82f45164f91fb7bd08000cb4afc26fa35beb4c760464160e22b9b8c340
 Size (mplayer-fonts-20030714/font-arial-cp1250.tar.bz2) = 249705 bytes
-RMD160 (mplayer-fonts-20030714/font-arial-iso-8859-1.tar.bz2) = 666697cd5efd9387057a898c714175e7c2aacbcd
+BLAKE2s (mplayer-fonts-20030714/font-arial-iso-8859-1.tar.bz2) = c1a5b8eae2bc48c9aabe2a264d59bbe94d3ed022aa8da55b8ad96c55c882df9d
 SHA512 (mplayer-fonts-20030714/font-arial-iso-8859-1.tar.bz2) = a1d03b6f09c48f48b7733f3bc0402ceab239a9abf88b860d852ea9fe69b4da690208a79d6f29d30204f5b37becf10672e8e8c0bfef201846d80ec54df617d029
 Size (mplayer-fonts-20030714/font-arial-iso-8859-1.tar.bz2) = 234242 bytes
-RMD160 (mplayer-fonts-20030714/font-arial-iso-8859-2.tar.bz2) = 562d4d92c4f5f3d537340fde3ad8d1495ac41acb
+BLAKE2s (mplayer-fonts-20030714/font-arial-iso-8859-2.tar.bz2) = 5b00ed107875177d2d89bdf3715c1e9e153d705b817729d5231c7abd123dc914
 SHA512 (mplayer-fonts-20030714/font-arial-iso-8859-2.tar.bz2) = 5671e628303fd816f64a51ad10e2f4dd9c3dc1b34c379a2ecf489b83931db7af668aaa4e00e96a00cacd63ed98daeae6b6a4d5925edfb06fc98d3a923f70257d
 Size (mplayer-fonts-20030714/font-arial-iso-8859-2.tar.bz2) = 222208 bytes
-RMD160 (mplayer-fonts-20030714/font-arial-iso-8859-7.tar.bz2) = 330f65ca0591ef59a07ed4e0268fe4fc3659d8f0
+BLAKE2s (mplayer-fonts-20030714/font-arial-iso-8859-7.tar.bz2) = 61187d8552134bbf89e00149440ff18c2235d18874ea040e4230f2863519d8b1
 SHA512 (mplayer-fonts-20030714/font-arial-iso-8859-7.tar.bz2) = d20f16be491e7d2f9bd1a84e7a1116ff8d88a1b483d7146c93beb95769f88ab601aa9e4cc39aa65518ce5b695439a1ecd19ec3b9d19bc306df11e92c2ff62fd0
 Size (mplayer-fonts-20030714/font-arial-iso-8859-7.tar.bz2) = 198950 bytes

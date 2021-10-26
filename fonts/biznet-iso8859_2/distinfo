@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:03:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:03 nia Exp $
 
-RMD160 (ISO8859-2-pcf.tar.gz) = 83823056f39d579fc235acc8d9e8e93662280dbe
+BLAKE2s (ISO8859-2-pcf.tar.gz) = 4a86118ac34dde9d03753ef76d9bb136f77d2adddf95098229f25ecdaa8c96b3
 SHA512 (ISO8859-2-pcf.tar.gz) = 8911069907f9ac622337c5f5b07ac98cff5b8715e3ff42ad65a2aa63bb2cec609cfe6ce86ffd65bbd667d686d6ac2be2e4de490246760723c19c4bd80054cbdc
 Size (ISO8859-2-pcf.tar.gz) = 1223243 bytes

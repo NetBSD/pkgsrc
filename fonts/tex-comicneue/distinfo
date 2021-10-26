@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:44 nia Exp $
 
-RMD160 (comicneue.r54891.tar.xz) = df1e313f3486c47f5b3d735fdddf94410611bef0
+BLAKE2s (comicneue.r54891.tar.xz) = 852bfc72bfbe17c435b16473577973f64c256a0f518b1a4755ab3b88966cbaae
 SHA512 (comicneue.r54891.tar.xz) = 5dc900d215fef53fe69ffda6e9120f1230173f40d220c71eaaa3d7eb21610b214591bdc043f27f0fe5259daf2a800b695167d2deee1810a67045997aff7c2a76
 Size (comicneue.r54891.tar.xz) = 872884 bytes

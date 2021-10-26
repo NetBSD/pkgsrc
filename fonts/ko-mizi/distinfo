@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:17 nia Exp $
 
-RMD160 (xfntmizi-1.1-2.noarch.rpm) = ffb144d9a67eca11052b93e3cb3a1cafc039fd37
+BLAKE2s (xfntmizi-1.1-2.noarch.rpm) = 3a7704dc16cf8e7378f4c784aca69cf10728a447949cd869f7ac1956d0946786
 SHA512 (xfntmizi-1.1-2.noarch.rpm) = e86464fd5f5cfe86ba02aa4e9c3f3b0dca2aec59eff03585421cc3bb00ec885116df83ddcd2dd9f6f3319b3bda1abdd392617edd02eb89e8e4d2eab92395d9eb
 Size (xfntmizi-1.1-2.noarch.rpm) = 1484554 bytes
 SHA1 (patch-aa) = f37e8845158dbe65e1ca9a66f537e5810d3cc612

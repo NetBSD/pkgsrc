@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:21 nia Exp $
 
-RMD160 (tex-opensans-51458/opensans.doc.tar.xz) = 725934ae66ce73096182d3952cf7ef07f1335c51
+BLAKE2s (tex-opensans-51458/opensans.doc.tar.xz) = 5f6390e6bc4fb135166c35064d5c88e539b31f5022fe424f72c0aa1da5a80643
 SHA512 (tex-opensans-51458/opensans.doc.tar.xz) = e8c005fe3c22ca88ffa9f313bd1735dc879167abb17e9c3ba1ad60d609fd95c61377fffbcac15cb5fe2f3e855765b0981c7a602235c3ba5eaceb759f3c92236c
 Size (tex-opensans-51458/opensans.doc.tar.xz) = 598548 bytes

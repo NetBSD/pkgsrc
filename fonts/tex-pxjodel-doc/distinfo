@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:05:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:28:26 nia Exp $
 
-RMD160 (pxjodel.doc.r55006.tar.xz) = e259135846aac8eb248e233ed1ab2e20ac2e1c22
+BLAKE2s (pxjodel.doc.r55006.tar.xz) = 4713ece42d4f3d3b7d43c8a7f5ffab4cdda2e45f1061d1505704cc892f1a48fe
 SHA512 (pxjodel.doc.r55006.tar.xz) = e7f8c3ae9e32ac296116743feaf6cca0be3b376b3c34adaa2a90e41f0c4aa329f1330e257e99fbd43025f46e340be48c1d7cb2f1131c7a722a4f7913ddea1a81
 Size (pxjodel.doc.r55006.tar.xz) = 110152 bytes

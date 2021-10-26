@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:30 nia Exp $
 
-RMD160 (ascmac.doc.r53411.tar.xz) = 4ef20193f469289d918d3a077629b3d32de9ab7f
+BLAKE2s (ascmac.doc.r53411.tar.xz) = b9a1173d7f12de78220ca619e5579dfc3859d25de04fb012620e676f322508b7
 SHA512 (ascmac.doc.r53411.tar.xz) = e35257d0992717350e78e611f31f864651a1762dcefb76ba60510180de177fab02f634423b0f3c78c03394fe0eeb6191db0d534190d4f168922263526a85b1b9
 Size (ascmac.doc.r53411.tar.xz) = 159960 bytes

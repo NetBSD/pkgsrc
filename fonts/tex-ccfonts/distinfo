@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:39 nia Exp $
 
-RMD160 (ccfonts.r54686.tar.xz) = 1205fe11e40927a6bc583143f190bb66d6625804
+BLAKE2s (ccfonts.r54686.tar.xz) = 48c6985f1a8fd62c4a416a16e662bfde352d2d77793b4a562cf92068c1b0b04a
 SHA512 (ccfonts.r54686.tar.xz) = abac4ad2c89e2d07281de95ac76922066713c511a77d067219dee9fff64e6ed54870da0db5cf83bacca89af11b2e720e352638eee1adfd4265e63a9e887ade14
 Size (ccfonts.r54686.tar.xz) = 2124 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.74 2021/10/07 14:04:01 nia Exp $
+$NetBSD: distinfo,v 1.75 2021/10/26 10:27:11 nia Exp $
 
-RMD160 (fontforge-20201107.tar.xz) = 25ef811489661aa66200c3d49a5e6f8951129d9c
+BLAKE2s (fontforge-20201107.tar.xz) = 9cf90373617736aa32d74eaf1c77eeba62cff7935c65c48e1ac1dd45289859e0
 SHA512 (fontforge-20201107.tar.xz) = cf9666395405ab02943f0160959f04251bd2a80e279a8f60431089ad19a4c5a232efd42097050ed9f6c1fb39d01488176262949fd81f5f0960fe853b497437dc
 Size (fontforge-20201107.tar.xz) = 14163424 bytes
 SHA1 (patch-fontforge_splinefont.h) = be7739b6145b3c622913efa9f2d679860c35cccb

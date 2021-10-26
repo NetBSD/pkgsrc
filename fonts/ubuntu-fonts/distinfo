@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:39 nia Exp $
 
-RMD160 (ubuntu-font-family-0.83.zip) = d44c6f8104399301379193afc66b591403a9e1e8
+BLAKE2s (ubuntu-font-family-0.83.zip) = 7122b3812e24e7a64f8d4ad7381add4458383400e3b65258c006f6268238906b
 SHA512 (ubuntu-font-family-0.83.zip) = d9ab7afc8aab55810de6e403aa02c0118bb35d94844cc14bb07b71daef4c6d63a9c927f0e81a9f97d29904512d94fa0226fbff2341351ac000fc233d2dc55727
 Size (ubuntu-font-family-0.83.zip) = 2092263 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:28 nia Exp $
 
-RMD160 (tex-antt-18651/antt.doc.tar.xz) = 809bd5bf831b030e2a5406b4d80aa6238e58639b
+BLAKE2s (tex-antt-18651/antt.doc.tar.xz) = 7f8b7d723ae59bdee213df94c45f8be4ba00a63684dafe1871a10e668c79fc41
 SHA512 (tex-antt-18651/antt.doc.tar.xz) = 60da1a08051be997e461808ce75d7a3c7c5671a53c49d8f53470073cd588a1af1801f8dc5ace9b452a7b095189f00c39da6ba7cc7aca71847b29942e9e98dcdf
 Size (tex-antt-18651/antt.doc.tar.xz) = 2473792 bytes

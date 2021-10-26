@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:09 nia Exp $
 
-RMD160 (font-isas-misc-1.0.3.tar.bz2) = 9ea7f4741eda86907d4bef6e3c7302956c394571
+BLAKE2s (font-isas-misc-1.0.3.tar.bz2) = 4b4a5498c681e38785ea96fcef1874d39e04d34ae8092c91abc9e9c7d20c6b90
 SHA512 (font-isas-misc-1.0.3.tar.bz2) = be6fb1d2c53550a462d1ab010fa7ac913990e83a22d4580c93b8f1f087aa6caa0e46bc87debca2b13b10e5611bd2fe7f6b4240367fb24f59b37f68ffb0e2586b
 Size (font-isas-misc-1.0.3.tar.bz2) = 845282 bytes

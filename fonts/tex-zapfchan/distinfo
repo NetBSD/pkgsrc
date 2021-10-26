@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:05:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:28:37 nia Exp $
 
-RMD160 (tex-zapfchan-31835/zapfchan.tar.xz) = 94765cbae3785df7acc4a17e356deedf4e58b316
+BLAKE2s (tex-zapfchan-31835/zapfchan.tar.xz) = 005010cd2598925225b10fd8ee376461cad24648914ee7468592110b1e2b8ada
 SHA512 (tex-zapfchan-31835/zapfchan.tar.xz) = f05763198eccdd9627babb8314e644988ba6009da3f16983845aff4dd268443031d68ba184a3865551a045fd919de89d99ef982206c31e62e979122f45155076
 Size (tex-zapfchan-31835/zapfchan.tar.xz) = 79904 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:10 nia Exp $
 
-RMD160 (librebaskerville.doc.r56018.tar.xz) = aa1fba33c3ab7ca546c266441417eb09e257dd40
+BLAKE2s (librebaskerville.doc.r56018.tar.xz) = 7033a30153b2eef6d5aae21496a771ca5dc12122e3f5413cbc4068c2ef4ff542
 SHA512 (librebaskerville.doc.r56018.tar.xz) = f90a5f6d2de21b15d53dc047771412fcd7ca7b5332a667efe1bab6c59eec59c474b5b6042fd1d81e70df86b3a571f3fd64799fd5e7ccac9362a9fe0b65da63ca
 Size (librebaskerville.doc.r56018.tar.xz) = 33176 bytes

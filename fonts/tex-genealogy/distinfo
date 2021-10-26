@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:00 nia Exp $
 
-RMD160 (tex-genealogy-25112/genealogy.tar.xz) = 294fd47981d2aa2e66e2b10c0abc9b9c1318cf78
+BLAKE2s (tex-genealogy-25112/genealogy.tar.xz) = 7e7234b8b5eee656f4dbf057c2a4057d35c50aecc79cf2c5df04fab45a51496e
 SHA512 (tex-genealogy-25112/genealogy.tar.xz) = ba12c17e29612e598c732deda4a8e8929afc7f0761777850b15178e7a481263bc8c5e9a1151b99cebf410dc9117da986f8da27c8bcb98f9295a292a7dd4eeb21
 Size (tex-genealogy-25112/genealogy.tar.xz) = 2532 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:05:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:28:26 nia Exp $
 
-RMD160 (tex-qpxqtx-15878/qpxqtx.doc.tar.xz) = fbbd4fd1a96ea8fa6f67a7a5a1583ff707bfde95
+BLAKE2s (tex-qpxqtx-15878/qpxqtx.doc.tar.xz) = 8e09b6444c2785db066d4fdbf0e63098340657d7dc6e88741b7b66dd4efc4a06
 SHA512 (tex-qpxqtx-15878/qpxqtx.doc.tar.xz) = 202ba787dde1189945ea0f1bacc74c40c9f9c8d3018e7449050b320676ae52d6f97491352409773418aa33874fef21c8d51266a83f239e82d5e72b793b1c06d1
 Size (tex-qpxqtx-15878/qpxqtx.doc.tar.xz) = 7044 bytes

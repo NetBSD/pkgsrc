@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:21 nia Exp $
 
-RMD160 (tex-orkhun-15878/orkhun.tar.xz) = f72cb0719d7ef54866f4e67e6b2cee603d60d46a
+BLAKE2s (tex-orkhun-15878/orkhun.tar.xz) = 341a8f99dbbcd69920e4deecc46f7aa0b9c251f5ace3797ea9c27b795658955c
 SHA512 (tex-orkhun-15878/orkhun.tar.xz) = 2c344b910491fa7f41a154f2dfe92188096d9c1da21bf0aa8ec2e5def36cc540df612c0679ac643df77cba3124b73a2a2a31c83f5f2f22de359fe6ad26f8ebc4
 Size (tex-orkhun-15878/orkhun.tar.xz) = 2768 bytes

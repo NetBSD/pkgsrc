@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:03:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:00 nia Exp $
 
-RMD160 (Inter-3.19.tar.gz) = b4875b1227d269eb1f784fc7d87c05b442a00747
+BLAKE2s (Inter-3.19.tar.gz) = 6f2db79d77987c05724094a7c289b91f04df318dcb92bf5da6cdbbf409101555
 SHA512 (Inter-3.19.tar.gz) = e35db3fd73b679e99a21c3166c19c37f91548ebb0fe338c933b58a3cd925709f3f134b83cc387e1d0f15773da104f99635859bd28162075780a947d4eb9d6fca
 Size (Inter-3.19.tar.gz) = 55636676 bytes

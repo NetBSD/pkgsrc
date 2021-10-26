@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:33 nia Exp $
 
-RMD160 (tex-bbold-17187/bbold.doc.tar.xz) = 6623b64afcae6a9f72152667795108e75d29e6d6
+BLAKE2s (tex-bbold-17187/bbold.doc.tar.xz) = 9acaa422819b5baa7b3824434c46da7be525392f3c0fc5ffc17822f77e499a67
 SHA512 (tex-bbold-17187/bbold.doc.tar.xz) = 5a8e52dd65647dfa0ed47526498631d6a7a2143b104f7912af9d3b745cb7ec1f5e9cddea11141ee71c3f00e2edb6212b8848eb4c994148e998dc6eff1aa36df7
 Size (tex-bbold-17187/bbold.doc.tar.xz) = 153068 bytes

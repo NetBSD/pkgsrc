@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:56 nia Exp $
 
-RMD160 (tex-fc-32796/fc.tar.xz) = 564d66edf973232fb60c364cba4eb57ef6146b85
+BLAKE2s (tex-fc-32796/fc.tar.xz) = dd6ef2da98503277b99239aa9a1b6f42ed06829ade502ba4dc19a6aae007d402
 SHA512 (tex-fc-32796/fc.tar.xz) = d06a2cb7df198ddf332a8c6349ea59b0797dcbc6d917b2fe0f171b4b84e7ec9870e9a923f8c8567edac46068866ba34951c68407b1fc68b6a42caef83361d515
 Size (tex-fc-32796/fc.tar.xz) = 128520 bytes
