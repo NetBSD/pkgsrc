@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:18:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:02:54 nia Exp $
 
-RMD160 (nsieve.c) = 9d3e72be9a28fa938d045dda59bb6a81d8092da8
+BLAKE2s (nsieve.c) = c75a49e1972be78e1c37a829b195a019ac092ec21c177ad389ca96e6b47ca0b2
 SHA512 (nsieve.c) = 5684a49e7d15c47e5ccbdd0445641ac4c4f61b0276eb1ca506615ea542da0052da1b56db1bfbee076c304de85ccef861cc6fb243e51e2a851fc047c0ed5997b0
 Size (nsieve.c) = 22452 bytes

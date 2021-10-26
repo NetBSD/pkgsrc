@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:18:29 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:02:51 nia Exp $
 
-RMD160 (bonnie++-1.98.tgz) = c70149db5cba5bdf433ca556f72e4e1d98e5a435
+BLAKE2s (bonnie++-1.98.tgz) = 18bd3fd99055e0dd2e09e534400a9f8d00fc4a12a631e996eb76aa52c41622f1
 SHA512 (bonnie++-1.98.tgz) = 3cf70be4a20c58c80e29a140ec6d3c3884f1b4101e0fb63da0ea831fe4a5eb4e275bda2ce4eaf7d9c2bfb65742e985249b491cda8bdad85984a62f2fc19756c0
 Size (bonnie++-1.98.tgz) = 100339 bytes
 SHA1 (patch-ab) = 18756a4f3efaf8d478c3edc5be424c099c47e374

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:18:33 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:02:55 nia Exp $
 
-RMD160 (postal-0.70.tgz) = 2b23ab0d60abfeaad32adf7ba65134d0f267294a
+BLAKE2s (postal-0.70.tgz) = b0e6594efa3c659dc65ca66595af57d84537e30598d5e090f0db801c31c40055
 SHA512 (postal-0.70.tgz) = 81356d32e56559a267994c2a18fa7b83c04556423f650404aeb7a8ce3d43d9fbd036b0fa545bccdc8caff8b375f95707031858046f4f99242f4cb23c7809bdb5
 Size (postal-0.70.tgz) = 99965 bytes
 SHA1 (patch-Makefile.in) = 45f7357ff4407033818599a76b9c929b6c09b127

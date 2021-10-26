@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:18:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:02:53 nia Exp $
 
-RMD160 (libmicro-0.4.0.tar.gz) = 5d844892cbe9fcc77fd3479c54d7135b196a0097
+BLAKE2s (libmicro-0.4.0.tar.gz) = 9a2110d22b64540f65333e6095a50237b61e270d7a8ab4e074a080249948c2e3
 SHA512 (libmicro-0.4.0.tar.gz) = 7623b0f36b78d704dcdd843b54c9e3bc9f816c11bfbde536717d7219c25f38d9c41dae0fa80ace4fc89b9c22b5b0bcd379efa2fe16bc90b7981f77b35973578e
 Size (libmicro-0.4.0.tar.gz) = 48858 bytes
 SHA1 (patch-Makefile.Darwin) = 6d166ec3ece56562878aef367c7de98c3c15f017

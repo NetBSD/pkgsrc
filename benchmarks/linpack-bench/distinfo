@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:18:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:02:53 nia Exp $
 
-RMD160 (linpackc) = d54385d1a20b062776edfe8d10a3ec8900163b8b
+BLAKE2s (linpackc) = fc507fda7ce8c9d6f83fe509bf4b6c825a15c4954c3a7b69faf56255326439d2
 SHA512 (linpackc) = 070271287420ccf2378602c565c21d5b628be46208ffa5466b0f61bc1c867e2e640e42cf62bc65543fe900cc843e46d85068e008448eac78894bf9cdd7536337
 Size (linpackc) = 20942 bytes
 SHA1 (patch-aa) = 8934879f4250cbcaba3783ce04bcd3217acc770a
