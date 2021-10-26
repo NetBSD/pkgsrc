@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:35:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:09:53 nia Exp $
 
-RMD160 (sqlalchemy-migrate-0.13.0.tar.gz) = 2bdb42599cb9a2e4dc73317948f958df498eb9e2
+BLAKE2s (sqlalchemy-migrate-0.13.0.tar.gz) = 0a3d1e2927687581a4d8348d1cc5bf867156dfdcd13c4870c074a015ecb8fb59
 SHA512 (sqlalchemy-migrate-0.13.0.tar.gz) = 1ca826a5d80c1373ffc4b2366dfb6d5dd24204964462873451c97d8ff4d75fc6c63f663c4769b7f6cc00002f6a98d425f41d759e5c010b4b81a8b74ffbb102b6
 Size (sqlalchemy-migrate-0.13.0.tar.gz) = 131424 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:33 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:50 nia Exp $
 
-RMD160 (kb-manager-0.1.6.tar.gz) = 307ae755993ca08007d08aa4f71d99d77b9fe081
+BLAKE2s (kb-manager-0.1.6.tar.gz) = a50c2739584d47807acc9987bc214220a4c7306892e6b034d36f161546d61e80
 SHA512 (kb-manager-0.1.6.tar.gz) = 543d1377675f0bb170b3bc4a95b10dd2edb74301215f9be38100449d833ad97cb867ff8c82991d07bfafc977113b70ee1c1ec3ac34fe8fdf0f2e8261862d2098
 Size (kb-manager-0.1.6.tar.gz) = 86846 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:14 nia Exp $
 
-RMD160 (SQLiteCpp-2.2.0.tar.gz) = 19f2761d842c60b9b6dd11c45ac2c0b521a5bae3
+BLAKE2s (SQLiteCpp-2.2.0.tar.gz) = a5aaf9c4fec3470799b982b8a1950ac17f9e73e4630dca3b09cd6e56e2440714
 SHA512 (SQLiteCpp-2.2.0.tar.gz) = 769857c50cc24596cbd7c6f057ca1e158a3bfecf00d7865d6ef0b90a2ff8ecb9ccb9e1d0e660bb9df8ecd50075a94a9bc9e3a71b96f2ef1c30780c6da9446cf0
 Size (SQLiteCpp-2.2.0.tar.gz) = 2141656 bytes

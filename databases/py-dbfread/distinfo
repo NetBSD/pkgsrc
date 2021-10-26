@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:37 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:50 nia Exp $
 
-RMD160 (dbfread-2.0.7.tar.gz) = 6599d0c691b9047c46ec75842ed380880c595567
+BLAKE2s (dbfread-2.0.7.tar.gz) = 531239a515c839cf359d3d37a47191f1c6f251c4fedb8b2c516340f8bd0cf58c
 SHA512 (dbfread-2.0.7.tar.gz) = 86c3a29e351b985984be67401a6dfe3e39cd92451a122788ade83d65313dde37a3706ce36c4365bd36ba1df62ee057b625f1e0f077aa4a248c7456258189f548
 Size (dbfread-2.0.7.tar.gz) = 33212 bytes

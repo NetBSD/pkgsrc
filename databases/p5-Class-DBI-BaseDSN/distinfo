@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:28 nia Exp $
 
-RMD160 (Class-DBI-BaseDSN-1.22.tar.gz) = 9e60e1eac9a0d6683b451895e0c7af43fc5661a1
+BLAKE2s (Class-DBI-BaseDSN-1.22.tar.gz) = 718c1a5e5654449fb2bad5e10294bcc6f570fad4225dd8daca4f9587d4019353
 SHA512 (Class-DBI-BaseDSN-1.22.tar.gz) = abaecb44b00104e98d5835ef0f6363c691cb072be3c5accf1188b469f1b8028c5b8980ef47435f55b4d8e8b93672d013eaf9400c2bf05c7477ceae669382d55c
 Size (Class-DBI-BaseDSN-1.22.tar.gz) = 3412 bytes

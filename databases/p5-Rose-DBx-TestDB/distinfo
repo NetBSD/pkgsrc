@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:40 nia Exp $
 
-RMD160 (Rose-DBx-TestDB-0.05.tar.gz) = 69037055446a18638aa88628f07d5ff3eeee3734
+BLAKE2s (Rose-DBx-TestDB-0.05.tar.gz) = af3cf231a751102774f4bb95bb30849579894dfef22f7de6c58cadde643b152a
 SHA512 (Rose-DBx-TestDB-0.05.tar.gz) = 3297eb0636972c74d2fde8674700cb823c5afad19e92c6b3ee8bc36bb25ba0de099b0927e980a1a82c7c44862cb5dad47d663871946b044b6badad080125eec7
 Size (Rose-DBx-TestDB-0.05.tar.gz) = 3805 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:55 nia Exp $
 
-RMD160 (qore-sqlite3-module-1.0.1.tar.gz) = 1e702691fdf4cdc51157f1549218ffb1ced50eb5
+BLAKE2s (qore-sqlite3-module-1.0.1.tar.gz) = e273e059369340aafe0fd7a77a55014d6043a5327851548a1c4130e465449262
 SHA512 (qore-sqlite3-module-1.0.1.tar.gz) = 564aabe4f107805a290c4bc969d1092d678abfdd66a1a9c99d7f2d597f385d14504bcd2391bc2f2079440f428810bdb479a2cae0ea9940b4f9291a428c1be483
 Size (qore-sqlite3-module-1.0.1.tar.gz) = 441570 bytes
 SHA1 (patch-configure) = 4cc1966b52fff9dc44aef00ab73afc4d655677f8

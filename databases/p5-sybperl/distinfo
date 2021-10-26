@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:42 nia Exp $
 
-RMD160 (sybperl-2.19.tar.gz) = 54a33d32aeaf69c6a131ca0ac400c20b180085bd
+BLAKE2s (sybperl-2.19.tar.gz) = 591cd5c406db2baac4a9faae97584abec53df438f3c2a1a48851a2ffc8b0820b
 SHA512 (sybperl-2.19.tar.gz) = 796d1a1e56041b62f99ba4ebb06cd0e5ff3ab9a42de0ddc2b06269e1c2cdfe430a0246a2317ef4b955df28dc540a0fd2aa971be25ea7ee880e18ff85f3cc4a53
 Size (sybperl-2.19.tar.gz) = 222404 bytes
 SHA1 (patch-CTlib_CTlib.xs) = d1ab08cda0a11a7a9142593c9ffdd1a0ae4f2734

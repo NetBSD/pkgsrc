@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:10:06 nia Exp $
 
-RMD160 (squirrelsql-3.7-standard.zip) = 68314d4f5a69101b5f0fb7ea2cb63c231c7a8804
+BLAKE2s (squirrelsql-3.7-standard.zip) = 67281f8c658ec98c36e2ad41f1218af01101e508ef3860b1a181a78071151673
 SHA512 (squirrelsql-3.7-standard.zip) = d035ce27a497cab0658660e61a41257d5a62d71640865bdfbbdfe1d497ffb1b7d38a09028ac8f32614e0c2f08fb4fca81863dd4bea3670070a575bc9b0637c45
 Size (squirrelsql-3.7-standard.zip) = 45556424 bytes
 SHA1 (patch-squirrel-sql.sh) = 6770fd0d24ab552e9c49e3808b7f065c1407604c

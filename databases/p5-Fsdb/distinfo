@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:35:25 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:09:37 nia Exp $
 
-RMD160 (Fsdb-2.69.tar.gz) = eb2f24ac66763626d61cbf3170c4fc2ad5a04996
+BLAKE2s (Fsdb-2.69.tar.gz) = f21a56ae24249bab5600aa3189a973bc6c29bea8b6ff5a43f21e210df5a2d87e
 SHA512 (Fsdb-2.69.tar.gz) = 9898352a1752bffdaf85f4131ffbd182a2884e0f98eec80eaac79a477724095b2d833f57dd447f6de0c8e1bde4fc6c9b89dd0225c4344f40c37f240c3cd9cde1
 Size (Fsdb-2.69.tar.gz) = 495708 bytes
