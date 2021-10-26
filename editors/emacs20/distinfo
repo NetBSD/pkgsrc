@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 13:47:38 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 10:21:27 nia Exp $
 
-RMD160 (emacs-20.7-mule-4.1b-elc.tar.gz) = c675b31dafaa4321a453af9d87eddf051ee71b1f
+BLAKE2s (emacs-20.7-mule-4.1b-elc.tar.gz) = 8d3116a8037014bdeece76148aeb0ae72adcb003fd67922650793302197d62bf
 SHA512 (emacs-20.7-mule-4.1b-elc.tar.gz) = db4020ef7e428c99dffd3873485ce5d0ee4ad2c2bf87ec3b5f84dbf36fa2c398f3c0e02651cae3565acd2e7cbf504f66507c08b578f91247e9a27280226fb8d4
 Size (emacs-20.7-mule-4.1b-elc.tar.gz) = 70474 bytes
-RMD160 (emacs-20.7-mule-4.1b.patch) = ffb90549dad55edef3042a2d68fd29d78b9cb500
+BLAKE2s (emacs-20.7-mule-4.1b.patch) = 1283ace8a636908265f84a0b6dc4bb08ed5de4a5518b0ea5a6d6b63c1e557ebd
 SHA512 (emacs-20.7-mule-4.1b.patch) = e3bb0da53c1db47b5ffbc467f5e1047896cda69b814abbbc77837f9b4ea76cb933040b22a31ee87d40c8bd66a804a1fdeb5d54f648ec040558cc4b79bc6f2368
 Size (emacs-20.7-mule-4.1b.patch) = 79729 bytes
-RMD160 (emacs-20.7.tar.gz) = f3b8ea8d6f6ad52ccdd7ca74c84e87a7409fc270
+BLAKE2s (emacs-20.7.tar.gz) = 42da52d0764c5ab4dc82919a2515fefa5b74205e33a56e8eef5833b3b1943538
 SHA512 (emacs-20.7.tar.gz) = d782acdaa496ba5f606efa29976a00434a6e571c632f5511bc0b67cb7db7fd77aa5aedb12dac31abdced55f48170f9201cc35d6d533e2bc0a67f78bbdaa7da2a
 Size (emacs-20.7.tar.gz) = 15043428 bytes
-RMD160 (emacs20-jumbo-patch-20170723.gz) = 0600bdc0fa3a21351a7d12af3835bf3ed0096a48
+BLAKE2s (emacs20-jumbo-patch-20170723.gz) = 9fdb9668672d92389fdbec8ce5b2114bee640d38a2afc7e0b972772faa89fbe1
 SHA512 (emacs20-jumbo-patch-20170723.gz) = b54b8a88c8c938cddcc4011a548f739458b143581a0e32f813d2b69ceeba95b068613ccea9495924d3207e43707184249726e13f7699cf6f0bb3f9345af29749
 Size (emacs20-jumbo-patch-20170723.gz) = 2463 bytes
-RMD160 (emacs20-xim-20000713.diff) = 5887a4d43ee92e8cad65d6412c9ecbce08e781da
+BLAKE2s (emacs20-xim-20000713.diff) = 22ddc9c54b5c3535bf9788af7c00dd3eea65fcbb2360aeed54feb5d800672b3c
 SHA512 (emacs20-xim-20000713.diff) = d6d3fb483db830ddcf07f6325901fb7faca1e112129f27036328eb4a6a53851a53318a31830a751525b9e0898256c6c9bfe5c3c333401d44a6dcbad44ba3c7a8
 Size (emacs20-xim-20000713.diff) = 21296 bytes
 SHA1 (patch-aa) = 3b3fd76c058a0a46e0458338ce4c2327a238fb3d

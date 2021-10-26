@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (padre-plugin-debugger-0.3.tar.gz) = 36020a12c66e91d631d4031ae6bb1e6862a4c0b3
+BLAKE2s (padre-plugin-debugger-0.3.tar.gz) = ee064a270d7664db70e5fbc3d2d00c855710139cdc6ff47eee007dbcc7d90f93
 SHA512 (padre-plugin-debugger-0.3.tar.gz) = d12db345fdf404a6c8ea76ebb078eef4fc270c4a3c1c5afe7d79e649d7560a4ac5d6144fba66df2c21e55616a1edf40a3093fb9d43335c68cbfd3e3a61105298
 Size (padre-plugin-debugger-0.3.tar.gz) = 7128 bytes
