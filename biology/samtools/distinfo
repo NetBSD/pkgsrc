@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:19:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:03:44 nia Exp $
 
-RMD160 (samtools-1.12.tar.gz) = 511ba541e9f3dbbab333d4a24a83f63c628b5b18
+BLAKE2s (samtools-1.12.tar.gz) = 5da0299084134f46286b6cae23738ff493b1144a660fea417f05d36bd78cc382
 SHA512 (samtools-1.12.tar.gz) = 7f468a4740610c2fdc42d8f020d3082e5b2b2e73b0c2dfc19b212ca259d703f34f7df0922e409a94500ccc0357d4d46306035be29c23a523ef6e959022f9d1db
 Size (samtools-1.12.tar.gz) = 4528460 bytes
 SHA1 (patch-Makefile) = 3fc1f1d67167c8ca8eff1ed17f7a084ec3d4579d

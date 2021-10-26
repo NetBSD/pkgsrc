@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:41 nia Exp $
 
-RMD160 (Molsketch-0.7.2-src.tar.gz) = d47e54a8d258f8f93197c6d84d651672b784e298
+BLAKE2s (Molsketch-0.7.2-src.tar.gz) = 7424647886d1c72c995acf793b3bc3ba4936b28ada516fdba5820f746d2e060c
 SHA512 (Molsketch-0.7.2-src.tar.gz) = 5e06f177ed4e7e8457215e07b623b1d92fa111f696fd7a106b0a6e8c56cc9c7d953fc33e0c0955c19766599d41a82519db95e12c0c49d3e4d3392311af3cc034
 Size (Molsketch-0.7.2-src.tar.gz) = 1907992 bytes

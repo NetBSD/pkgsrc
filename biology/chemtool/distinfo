@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:19:38 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:03:38 nia Exp $
 
-RMD160 (chemtool-1.6.14.tar.gz) = bd3560bbfe6d95f9eb5dbafbb2cc3710a52cd04c
+BLAKE2s (chemtool-1.6.14.tar.gz) = bdd94755baaf2bee3a0eb57b390c1e3b5a4fea4d1a30f88f5eed8f3a7c4ce511
 SHA512 (chemtool-1.6.14.tar.gz) = 066c83c61aced3134b081767e788143a047889a2fee4b6535c2b0a3166bccc73d75981e1cf35b7bcaa5b8fe2e0227b28693b659decd82f7783cb4082ac6ed2bd
 Size (chemtool-1.6.14.tar.gz) = 817735 bytes

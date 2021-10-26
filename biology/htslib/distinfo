@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:19:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:03:40 nia Exp $
 
-RMD160 (htslib-1.12.tar.bz2) = 3d93d91db8c382f42b8ad0843609cabd3b502b46
+BLAKE2s (htslib-1.12.tar.bz2) = 401ede511b47d29b4e3771f0fb32ef5b8265b38d10158d8c8fc645d3504c8fe8
 SHA512 (htslib-1.12.tar.bz2) = a810c646561f5c8b3a19b73ac22ec5f25b04d4e88e1314988881a8120c54106591d1d65aa708bbe2608f0065ca8abe92bdd70ef59a0dd0cdf63ff45c10957092
 Size (htslib-1.12.tar.bz2) = 4094458 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:19:41 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:03:41 nia Exp $
 
-RMD160 (nut-15.8.tar.gz) = f52845c8bc93a3ccce4566ae683d3b6cd38f4536
+BLAKE2s (nut-15.8.tar.gz) = 0b5d7d7488d2e38058c244a5d8aa7053432bafed3030a568b2efdbac554642a4
 SHA512 (nut-15.8.tar.gz) = 876159e6a568d8519b36d37b4774730b200ffe1088c79c565a9b7e0e62dd423e582d9d08e98e35e744c6af22881c84435b5fad01cab349a07fafc0ad34176a79
 Size (nut-15.8.tar.gz) = 1182225 bytes
 SHA1 (patch-ab) = 8f4af599da76c6b1c21564408e939159198d3df3
