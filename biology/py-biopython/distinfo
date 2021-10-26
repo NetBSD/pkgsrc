@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:19:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:03:43 nia Exp $
 
-RMD160 (biopython-1.74.tar.gz) = c9b2130d895ecea30e37bdd71524ad7c6ea1db2d
+BLAKE2s (biopython-1.74.tar.gz) = 1286b1f5ac5faacc86861bdca352a36c0f0b188d361f6c72955d7d16955f3310
 SHA512 (biopython-1.74.tar.gz) = a5611b993e383d76d2fdc9be22481624180748f06f107e603a062c51b7ca7cf8603d6d97e11d64cd011ae7bd2696c8bf3659b9c625c84c479164a6171d5e8415
 Size (biopython-1.74.tar.gz) = 16129257 bytes

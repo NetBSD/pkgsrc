@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:42 nia Exp $
 
-RMD160 (plink-1.07-src.zip) = ce22e2388fc711ac9938d21ffd3cb68512ba1150
+BLAKE2s (plink-1.07-src.zip) = a2eee6b172743e83087cf48b4c4586651a7b1cbe50aad75ddd5fd1133af2aaa6
 SHA512 (plink-1.07-src.zip) = 493f9f32ecd9eb20c5d11dc8ac98c47a9e695059cec3d1ad6f17465b71609577032368c0fee0d3d564e9451c3c07761e444717bec0f4628caefc587fceb1f6c3
 Size (plink-1.07-src.zip) = 2257297 bytes
 SHA1 (patch-Makefile) = cb01e12cea61d1fe41f352759481277284d9c187

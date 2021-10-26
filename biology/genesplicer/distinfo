@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:19:39 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:03:39 nia Exp $
 
-RMD160 (GeneSplicer.tar.gz) = 7ada20a18c742ca259a208ac5ea6fd53fd41a2c4
+BLAKE2s (GeneSplicer.tar.gz) = 27ca1a2846aba1d79515b2456e6ef24a06effd251db33f4c3e4e801cd89b548a
 SHA512 (GeneSplicer.tar.gz) = cb8794470cad712495a1fd7df1ee6bdfac54096ac86e561c3fac678ccc170885c8cdf6636d502234c6fbbbfe519a29c8e0456ec42649663dc85bc04bce41ba8e
 Size (GeneSplicer.tar.gz) = 9278730 bytes
 SHA1 (patch-aa) = 49823d73c45088f599ce288e9d1adb7917f20a3a

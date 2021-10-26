@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:44 nia Exp $
 
-RMD160 (stride.tar.gz) = 6fdcf064f37ce44529446a043b56663af9765054
+BLAKE2s (stride.tar.gz) = bf069f15b58803c6d1b6a3c86eeecb361edc5ab0d60582a0be10505a3d44f8e2
 SHA512 (stride.tar.gz) = cbd40fce4684728f363520540132fc1a0003126954a145d59aeff48adb20fdaa66520bd12b56ee5d2906e8ea97bf78a225204105b820f7f368aee5e790a6471b
 Size (stride.tar.gz) = 56441 bytes
 SHA1 (patch-aa) = b9f0469f078b4018af0de5e3aff524b831fc3703

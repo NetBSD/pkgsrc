@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:19:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:03:38 nia Exp $
 
-RMD160 (cdhit-4.6.4.tar.gz) = a94a29103393dded87000173d8eb4ec1a1e0614f
+BLAKE2s (cdhit-4.6.4.tar.gz) = bb6cdf9becde665d460c96beaa44f23c617c606e133a4094b162335bb57bf35a
 SHA512 (cdhit-4.6.4.tar.gz) = 01e4de21643667d943055a8dd3447610a57d6e0aac2f7a8133543c5d2c50b60e3a164accaf3131770b679553ec3c6863bd20ae2a57870de142282311b46c567d
 Size (cdhit-4.6.4.tar.gz) = 1148426 bytes

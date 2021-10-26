@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:19:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:03:43 nia Exp $
 
-RMD160 (racon-v1.4.3.tar.gz) = 40528de630d4063582e528b56ca0fdf815a002fe
+BLAKE2s (racon-v1.4.3.tar.gz) = f2eb8c4a5748c62be5509e79cc32e04ac5b67a23ca158e95911c839dbd8d9714
 SHA512 (racon-v1.4.3.tar.gz) = 4ac1b62b194f237e3436d8384e6fadbf86ba3ea1ceef64000aca15d04a67ba38b189aad19966172c5ef3124a3b284488ec28f000f67b5b374402d64f208b0395
 Size (racon-v1.4.3.tar.gz) = 51468817 bytes

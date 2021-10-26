@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:44 nia Exp $
 
-RMD160 (vsearch-2.13.4.tar.gz) = e65a908014cbab903bef81b55c9e67003bb55458
+BLAKE2s (vsearch-2.13.4.tar.gz) = 16fd625aa53e9b9d5b062c9db71dc201c7d458dc97fe82915e37ba6ca794b706
 SHA512 (vsearch-2.13.4.tar.gz) = 31cc321f96309385414f3847a4cb29a5b3e43e42870b3f41e34fa0e6b3a928b2dd306edeff896ffa6bca85ecea776b33655611fa62749e9b29e86bf1adbe7de3
 Size (vsearch-2.13.4.tar.gz) = 234364 bytes
 SHA1 (patch-configure.ac) = 536a8565514cf9b43f4f8892d1cba0444f752c5e

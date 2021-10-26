@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:39 nia Exp $
 
-RMD160 (fluctuate1.4.src.doc.tar.gz) = 39b11f768ad148319cefdee8058017c31d5ef14c
+BLAKE2s (fluctuate1.4.src.doc.tar.gz) = 42956b5189428308c5b65da096a882a77cb40b7827f95ddef0fa49f79a63a599
 SHA512 (fluctuate1.4.src.doc.tar.gz) = e354c467b9aaff984736276dea2a7388bb290b29bba7e14068e69948f145b1e5318b650223558e885e4007af621d7dd0fab241afae79a67282b192d821defb85
 Size (fluctuate1.4.src.doc.tar.gz) = 70690 bytes
 SHA1 (patch-aa) = d7637d2d2b47d9ceb920319393f13e84a60bfae0

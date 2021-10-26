@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:19:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:03:38 nia Exp $
 
-RMD160 (fastp-0.20.0.tar.gz) = 0ad6a0eb389e31855f1fa95a089aaa653164f88e
+BLAKE2s (fastp-0.20.0.tar.gz) = 1096c02c241da76f04cbf485abd3a348b1c87af88e7ba3adb2fe5b0ff811c327
 SHA512 (fastp-0.20.0.tar.gz) = 33349b761283a42fb9eaf045ab7f839d5ec335fb394e277519b87f8c95cf682027ab183b174a1b82d908a3e4d1d65ac63a88c30efea04d93a08f559c1a7a732c
 Size (fastp-0.20.0.tar.gz) = 139422 bytes
 SHA1 (patch-Makefile) = 52fa55ead7d384b8c758e7a2d14680a53f61e623
