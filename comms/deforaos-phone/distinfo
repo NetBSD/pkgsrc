@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:27:02 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:05:58 nia Exp $
 
-RMD160 (Phone-0.6.0.tar.gz) = 40ef6edc5f3d98e137ab29cba8b05d29f72e8695
+BLAKE2s (Phone-0.6.0.tar.gz) = aadb28781c4f5870935cf8909e5c69c1cd13548f1e1ba7d6735c4b225c918f54
 SHA512 (Phone-0.6.0.tar.gz) = 01482c8ba6d3ef8db6101af1fe43451562f5a3be119d37ee9ca308d395953ab70ce59f51646b59cecfa18b7d80913bdfec410eefc0d4a79a28bffd8899c496e6
 Size (Phone-0.6.0.tar.gz) = 325143 bytes

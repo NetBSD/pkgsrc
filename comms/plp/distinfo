@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:27:07 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:06:04 nia Exp $
 
-RMD160 (plp_1_8.tar.gz) = 1a29209fd7def352c9a1c6671b1a90efcd276456
+BLAKE2s (plp_1_8.tar.gz) = c0d9c61c1d242326b5778ddde3f331feb5f305769279de35126b1f8e6ad1866f
 SHA512 (plp_1_8.tar.gz) = bbeb2440698d48fd9e5e3363e3b76094c4fa466a8870770f78e0d494a8019bce79c882d8ccf1b25e28443d0790fd9ca125f0069a778741a6bcff9da20a529348
 Size (plp_1_8.tar.gz) = 58424 bytes
 SHA1 (patch-aa) = de823cbd6f27bfc4245af8d9de100a3a48ac258c
