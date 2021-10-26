@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:30:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:57:00 nia Exp $
 
-RMD160 (rtptools-1.21.tar.gz) = ce64f3c1d2299c1f4d4dadd3f57e0f99a75ffdfd
+BLAKE2s (rtptools-1.21.tar.gz) = 4c9cce09da97120cd4482b848139b0799e2c4af47cee6d6ffcacdcf11b262414
 SHA512 (rtptools-1.21.tar.gz) = 12ddef4ca8f668eadac772e49030584054def0a7ec16336c28b1e5b8d46da66ea93f83d9ee7aa8a92206e38561af08f5bb1eac03082eb66f39781264578183d6
 Size (rtptools-1.21.tar.gz) = 171901 bytes
 SHA1 (patch-aa) = 5f661e425b39b26eb1794297ebfcf40df8d281d6
