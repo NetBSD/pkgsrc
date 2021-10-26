@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:47:18 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:11:07 nia Exp $
 
-RMD160 (pkgnih-0.14.1.tar.gz) = 1325c00972486a8829eb17f1af0e900f2707921a
+BLAKE2s (pkgnih-0.14.1.tar.gz) = 1b8e3db84bdfc7cc00c4ff2ceb06879de72a31692530e7819a5093be38e537ff
 SHA512 (pkgnih-0.14.1.tar.gz) = 12949569cde257a4375a15e9cd024970eb12295fa854400a34433693e6e812b526673dd9b99e5bfe0310710583039492643da7911656e86e4f9fecd5bfad6ab2
 Size (pkgnih-0.14.1.tar.gz) = 53384 bytes
