@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:20:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:40 nia Exp $
 
-RMD160 (compiler-rt-6.0.0.src.tar.xz) = 47a79826fc076f71546700f403a9b488e63d4a3f
+BLAKE2s (compiler-rt-6.0.0.src.tar.xz) = 0179995b529fe893cd5a3f250d7c728c7afe0018b7eff8fa8d763b9e3a4e5ac8
 SHA512 (compiler-rt-6.0.0.src.tar.xz) = 717bed116ef43ebb2e18daf6fb737472edf57564947f53fe6368d3bbb080f63e986c0d1b94dbd087be998196ad7be54f4361854f8eb5214600b82449ba02c9c1
 Size (compiler-rt-6.0.0.src.tar.xz) = 1633096 bytes
 SHA1 (patch-lib_BlocksRuntime_config.h) = 8676862a391b671c955b009ee572530a8be9676e

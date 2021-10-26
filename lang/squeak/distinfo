@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:21:14 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:51:56 nia Exp $
 
-RMD160 (squeak/Squeak4.5-13680.zip) = df9af60d74aeb5f079151fdab3b314d17baa2504
+BLAKE2s (squeak/Squeak4.5-13680.zip) = b6cd01ec86698fcc9204410b6dc51c5c79e9233bb37f09edbbb7aa6d39b09e4c
 SHA512 (squeak/Squeak4.5-13680.zip) = 9de0a7a5ec5d3e13cace5be419c500f6c6074912acfedeec60732110438e8d712599d175f620d2fabac9827e3d54f3935a8c5c093c8b906e0374f4ec270d3456
 Size (squeak/Squeak4.5-13680.zip) = 11001798 bytes
-RMD160 (squeak/SqueakV41.sources.gz) = 8d2f192f75310d130964846bc5589f80e43f412f
+BLAKE2s (squeak/SqueakV41.sources.gz) = 783f08406acb6b64d2027cd588aa67351f0ba72f46f283f31b3e6ea94d638b73
 SHA512 (squeak/SqueakV41.sources.gz) = f2ec7320ddb73b2da8d8bbde190f44d502aec6b26f9a219960118d23410a3ee0f8dd708d65e36098b48ee56a58f41a270ed5ebaafe688b896b719d61e1161b24
 Size (squeak/SqueakV41.sources.gz) = 6641435 bytes

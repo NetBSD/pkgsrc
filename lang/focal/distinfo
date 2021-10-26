@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:20:51 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:51:35 nia Exp $
 
-RMD160 (focal.tar.gz) = 6b06cc08b2761035c315ae13b80d64a5e7a6004b
+BLAKE2s (focal.tar.gz) = ce7823d85379aa6169f1ef2f55be1698c75abc97e62b35eef0d679d265ce1f0a
 SHA512 (focal.tar.gz) = 5d1c04e1d27b62a29eb3694df262eef5a4bb01a10d28aa79e2b535571d81927136a18a0702fc8ea699bd0a00d6db6695015a7e7e207f01094e5a8c50d8cadd94
 Size (focal.tar.gz) = 12561 bytes
 SHA1 (patch-focal0_c) = 9e761e135665dad02b8cc700d80bf4eba69a0e7d

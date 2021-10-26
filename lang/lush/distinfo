@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:21:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:51:42 nia Exp $
 
-RMD160 (lush-1.2.1.tar.gz) = 22622b256aab3ad1712b3bbb0c2f892de017002f
+BLAKE2s (lush-1.2.1.tar.gz) = 23b48c458d9a6b177bb97c0587e78bd93f7b62edcdf1e71ecfc74ffa5bed1be7
 SHA512 (lush-1.2.1.tar.gz) = db052b5d4f215c24a2b8417d0539f0dbb552092d4dd80a32fc3f6837d45b893a5e99d2a2dac0aed1736b38807cec308740332c3ef06c8fbde766485837bc88ce
 Size (lush-1.2.1.tar.gz) = 4431778 bytes
 SHA1 (patch-ac) = 53590b03ff1fa4f182cdc30063d0b854d9681c72

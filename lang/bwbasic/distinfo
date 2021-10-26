@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:20:46 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:51:30 nia Exp $
 
-RMD160 (bwbasic-3.10.zip) = 1b0b279a5e559f189c1dba8e83a0b2689af8ac1c
+BLAKE2s (bwbasic-3.10.zip) = 128390c522769bea8e4b3850baf7559b8d856d5c55991bffb5b797098b1664f6
 SHA512 (bwbasic-3.10.zip) = 36e896bafaac370c1c03f066e1d7830e308b022c9a62833756c13ee179a80cb948cdae1f0ad3129bdd5f72a5f40432bc3989744fc183812ea4bf99807c75c7d8
 Size (bwbasic-3.10.zip) = 3158727 bytes
 SHA1 (patch-aa) = 948ffb5ccde6ffa371fc96c836314738bfdfd789

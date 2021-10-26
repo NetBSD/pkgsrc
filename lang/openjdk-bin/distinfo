@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:21:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:51:46 nia Exp $
 
-RMD160 (openjdk-16_linux-x64_bin.tar.gz) = 92cf4d2c812564e059084704ea631d9e2da06476
+BLAKE2s (openjdk-16_linux-x64_bin.tar.gz) = 03eb885b8a6e8571dfc5e9a231fa66361d08a26a8a86cde7a133b1b2d7b4cc4a
 SHA512 (openjdk-16_linux-x64_bin.tar.gz) = 6a4fb63377965870e7d225b07cc448db5dbe6f7ead547c41ede5a247c3569185d9468a37a112828eac431cb6f8ef6915739ed592bf3961b793602309ff755bd1
 Size (openjdk-16_linux-x64_bin.tar.gz) = 184303539 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:20:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:51:32 nia Exp $
 
-RMD160 (cparser-0.9.14.tar.bz2) = 93b8ebd3c069dd7f9d9ed1af39b2f54a222099b8
+BLAKE2s (cparser-0.9.14.tar.bz2) = e60945b7527dfef5494cc174f790ae2ec068bc5796ff5a7f92b3b82150131868
 SHA512 (cparser-0.9.14.tar.bz2) = 1bd436c9e2a36cb60341c62e9bb65e16dbc5f777918c3f43795c36321a5a8ce4cdf261469c2e45e329cd8560ccec44becffab2f924cd9d9bd9ff2d46d93ca4e9
 Size (cparser-0.9.14.tar.bz2) = 193745 bytes
 SHA1 (patch-aa) = 9f1f39561a6ffdaeb9dfc3d64934e8cdca501e3b
