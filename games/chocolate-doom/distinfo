@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:50 nia Exp $
 
-RMD160 (chocolate-doom-3.0.1.tar.gz) = 0dd6854a9ec22e5f2d5bb0b76c6d23c5fffe1beb
+BLAKE2s (chocolate-doom-3.0.1.tar.gz) = de9d6a04bf19e7bab6e8a85203619e19a638d8d2289c55a9a662def0fef7f28c
 SHA512 (chocolate-doom-3.0.1.tar.gz) = bec5daf5b26a8dd238780cb4e0c23ffc59b97825d323aa67bb6a3279cd243c18c03e899c4cb4b3106ac187330c6421915a14a6a7c0d34cb0ee75d6f29f9dc905
 Size (chocolate-doom-3.0.1.tar.gz) = 2514985 bytes

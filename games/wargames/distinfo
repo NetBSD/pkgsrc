@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:29 nia Exp $
 
-RMD160 (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 6cc1b7832f7f0d16c57b5abec380e1bc68a35fc3
+BLAKE2s (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 1b9b2dcae801a8a924893146fd114dee71c8e034d472a525cdb3bc9b4a5be741
 SHA512 (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 6597bd981e69731a8f1d5fffcec5e1005274e2bcda610f33f33ab116002539fc5cd41f5b1a8f75a974e25bc2036403700d080b0db1c4a2186f675db7452d865e
 Size (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 6293 bytes

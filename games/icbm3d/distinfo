@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:31 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:04 nia Exp $
 
-RMD160 (icbm3d.0.4.tar.gz) = 1acdc2e394168eea111dcbc612253b9d4b1a202a
+BLAKE2s (icbm3d.0.4.tar.gz) = f55cd0f051a81364e443d29fa12405dfe5e47a4e64258cfca10da77a78f76a72
 SHA512 (icbm3d.0.4.tar.gz) = 456c25127f43dcb0bf677e382bdf98fdcb4435a649b21a75472872df1aefc76a568dc90ccc2f2ea7760f55ea5da73bdf72ecb080c0cabe1176266f6f2d200b9c
 Size (icbm3d.0.4.tar.gz) = 31187 bytes
 SHA1 (patch-aa) = 1c466a7fc98586891f0fb8c004866934c1f499d9

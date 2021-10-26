@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:08:02 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:44:35 nia Exp $
 
-RMD160 (xroads-v0.5.tar.gz) = c0399b391d2113d93c08c25ad6370273791261b7
+BLAKE2s (xroads-v0.5.tar.gz) = 35cf3849ce4361cda2a7142453d14ba3f8a2973452c68e0db7e6b30c84ac7fbd
 SHA512 (xroads-v0.5.tar.gz) = 1685a8487da8391ca132535f98720e7f2312d088a68213f80105444d7bd5895ddd77344e3c57106ddd5ee60db1392ee7cb0c0d7be0f13b82e5b1e8014b9c01fa
 Size (xroads-v0.5.tar.gz) = 48641 bytes
 SHA1 (patch-aa) = 4484ea71864b6db650faddf793b850ab251f34ad

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:44:29 nia Exp $
 
-RMD160 (uqm/uqm-0.7.0-content.uqm) = 92d0e6bde471fd3c6b9147211f09263c1a9482f7
+BLAKE2s (uqm/uqm-0.7.0-content.uqm) = b55b7c0910695f6798ec7d7e0bb77ef22a7f9f85f17b88b6046df2f68f03e56f
 SHA512 (uqm/uqm-0.7.0-content.uqm) = c80aa9f1158d07534abc1ef625662dfcd5021cb5e8091d46b3e9a2d96a0fffbe7e9e6cc88680b43d810c8e68a580f7a0d4b62c08e9f7b948ae7f017e4ad20dd2
 Size (uqm/uqm-0.7.0-content.uqm) = 11538533 bytes
-RMD160 (uqm/uqm-0.7.0-source.tgz) = b760ad256075e4e225e44e5a738a013a9a5e6483
+BLAKE2s (uqm/uqm-0.7.0-source.tgz) = 16a4faf9db313183bb91760bf8f0f228519743ab49955961a9edc2496172d73d
 SHA512 (uqm/uqm-0.7.0-source.tgz) = 443ac13da401d45743f913755647b3309834c57f371fb673c3ea2cacb81184bf30430db10af9001de854363520d1f792f47faffd690c8c2b2f3d12d63b217815
 Size (uqm/uqm-0.7.0-source.tgz) = 1562003 bytes
 SHA1 (patch-build_unix_build__functions) = 373f53c2b1da5def252e212af077f7fdb4505f75

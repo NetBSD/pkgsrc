@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:54 nia Exp $
 
-RMD160 (doom2-pwad-preacher-20181129/preacher.zip) = 1dd64d9f18cf2411baeda7dee934f398f6053015
+BLAKE2s (doom2-pwad-preacher-20181129/preacher.zip) = b74624a6b2895adc0ea071e72e684ef52083ad2b284d2b15c25402c82bd03b7f
 SHA512 (doom2-pwad-preacher-20181129/preacher.zip) = 063212a34622d0798291675ec6461b6e73e3176ab9d85c3fd13db64fd2fc14fc473d844c9436b5238e80719a0e809e82491dcb3ad114c8fbb482ca1d24e6665b
 Size (doom2-pwad-preacher-20181129/preacher.zip) = 15743862 bytes

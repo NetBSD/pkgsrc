@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:51 nia Exp $
 
-RMD160 (cosmosmash-1.4.8.tar.gz) = d29171bfe41e827151d15f480c02116567a5b26b
+BLAKE2s (cosmosmash-1.4.8.tar.gz) = 48f032802420396d03b28a1be5910ec62f6b63dbc522fabcde9c6e65f719f25d
 SHA512 (cosmosmash-1.4.8.tar.gz) = 4b78cac18035ef4bdbdebd2a206ceb3c80646fa030f568e171208af7510a6b1da9ef3fd817f3ebae83fbb42b1ce2900e8f1ff33ec23a8fe735022409ab1120af
 Size (cosmosmash-1.4.8.tar.gz) = 921859 bytes

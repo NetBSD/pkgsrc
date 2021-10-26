@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:58 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:44:31 nia Exp $
 
-RMD160 (xbomber.0.8.tar.gz) = 5fd68d1c7376d3c510f2f04680d379b32462746d
+BLAKE2s (xbomber.0.8.tar.gz) = 6dc8a47307524e7dcb951ee9d07d3285ffea2baa3925bf58f812db7789c3dfc8
 SHA512 (xbomber.0.8.tar.gz) = 0461bdc1a5d833c193d0eb620738e9b4298e99c4ad48b7a48dd5ca16689aa56c5283b64817fedd7d24765550fc15d3eab31c2028fd0d75a35d5e884079366489
 Size (xbomber.0.8.tar.gz) = 241168 bytes
 SHA1 (patch-aa) = b32f9626d172f83b4850b69e06c9f4a3a1ead481

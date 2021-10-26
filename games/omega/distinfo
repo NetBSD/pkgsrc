@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:07:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:44:17 nia Exp $
 
-RMD160 (omega-0.90.4-src.tar.gz) = 04eb5dccb753da896f3cb3cce3a515a6f5699302
+BLAKE2s (omega-0.90.4-src.tar.gz) = b25a0473ec13721d5a703ae2e8ef301f794c083f8b58c3528756c40deaff29d1
 SHA512 (omega-0.90.4-src.tar.gz) = eb60b2fced7d3a4970f4a7554f9e757aeae81360b11179db43bfffe94b7e02259eb57762de2b226b557a12993f123a2ef5dd910cc495b611455355e4f0bbf4b7
 Size (omega-0.90.4-src.tar.gz) = 341346 bytes
 SHA1 (patch-aa) = 270141180de5e8d360b6a22088ab63631e066f71

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:26 nia Exp $
 
-RMD160 (sudoku-1.0.1.tgz) = 77ddc4069c4736fda0285936ae9ecde47f9d46f8
+BLAKE2s (sudoku-1.0.1.tgz) = cc4c96f708cac8f48c969dfabfc860a37cd56f80e78c0364c33c54857a48b7b9
 SHA512 (sudoku-1.0.1.tgz) = c38b419f5514a68653d90472687eefa31de376df733157d2bf9243263f817d5884590f963d0ae3acb953fd6c9b74069dad4ddf0feb8054f075f0d103e2d0585f
 Size (sudoku-1.0.1.tgz) = 31576 bytes
 SHA1 (patch-aa) = e5cf1e5f0a90c3beaf4888cef0300b0d12f8bdbb

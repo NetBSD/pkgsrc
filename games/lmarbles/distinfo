@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:39 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:12 nia Exp $
 
-RMD160 (lmarbles-1.0.8.tar.gz) = cc77687efa88cecb2aabf2385eb6cb6a6dd71a9c
+BLAKE2s (lmarbles-1.0.8.tar.gz) = 446cfc9889e27cef3aa8954acb425d3312f84853a97b4fdb203dd09496de5b89
 SHA512 (lmarbles-1.0.8.tar.gz) = d765b669a1b0039a0af8b28ede8209e9736c2f967b21d9f8372d1fc5475d49a766bef297615bff090532ade41fe44e084a458227b443566a54afebc3e989b57a
 Size (lmarbles-1.0.8.tar.gz) = 914238 bytes
 SHA1 (patch-aa) = b453e75a29848a470275d06bc97e9fe09a12e1b8

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:16 nia Exp $
 
-RMD160 (mrrescue1.02e.love) = 4305085a3a193098b46d4fd477273b3d2838530f
+BLAKE2s (mrrescue1.02e.love) = a5d0a2b1dd6cdcf67d0ede12d006b7b9c3ac3be6e61147ebe3431f11190c1a33
 SHA512 (mrrescue1.02e.love) = e8cae8ada240ad8c3e98a4dae55293ce63dd5fce7cfd9fd8a3c3af2448bbf60f4af1a40d6600f56cd24b584d7fd48593f0279820dd2201045f3b446d101489d5
 Size (mrrescue1.02e.love) = 11902585 bytes

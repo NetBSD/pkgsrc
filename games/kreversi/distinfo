@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:09 nia Exp $
 
-RMD160 (kreversi-20.12.3.tar.xz) = 6d8483c4e4c6720e40c886cc6991c64b1f81aa18
+BLAKE2s (kreversi-20.12.3.tar.xz) = 5edd9d91954784a29b02e0b313422a690dae58a2b167c21a039f4457bda37ee7
 SHA512 (kreversi-20.12.3.tar.xz) = 300704489db887d3738491a7dc0b62bf6d7056c803c778ea48bbb086c71b4c57a46517fe4350379982c2b6effd8fa8bfe109e506957905f168c341eb51e0dcd2
 Size (kreversi-20.12.3.tar.xz) = 953588 bytes

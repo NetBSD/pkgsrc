@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:44:19 nia Exp $
 
-RMD160 (pioneers-15.6.tar.gz) = cbef5e5c3bc240c522e532c8539f1e41d0fa0335
+BLAKE2s (pioneers-15.6.tar.gz) = b980a01e4ea9613914847fcc917e8fb95ea8b3b531851996905d513d6eb753b7
 SHA512 (pioneers-15.6.tar.gz) = 683ba851d4dc85244edea7f9b183d6c9b7ef93cdc948f3375f8434f2f455ac0a3688a6a914ab8ad8a86d5067bba8f563c181ef8c8ccf00df6a985e801dc1c213
 Size (pioneers-15.6.tar.gz) = 5054353 bytes

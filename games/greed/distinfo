@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:30 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:44:03 nia Exp $
 
-RMD160 (greed-3.4.tar.gz) = 13c432c030d333d0b6722263067dfab2fb2cf26e
+BLAKE2s (greed-3.4.tar.gz) = 9a84214dfc466822ade5518bd1ab589c30e83222b4cd3c1425194bab6effa42a
 SHA512 (greed-3.4.tar.gz) = 41afe78608c6786342fe59a6407804a8ea67b423647975f91aaf2a850d1c58da1efd7884a0cdb159a87d1c0f7a4fa3645634dd807b70ed474f922a40293ecf33
 Size (greed-3.4.tar.gz) = 11463 bytes
 SHA1 (patch-aa) = a3af5d13e44c760a8c28371588339c22fdf82ac0

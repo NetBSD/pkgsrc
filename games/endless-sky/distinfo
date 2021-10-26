@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:55 nia Exp $
 
-RMD160 (endless-sky-0.9.14.tar.gz) = 170ce01694af9127b5e1aed8e436c4c6cc85cf7b
+BLAKE2s (endless-sky-0.9.14.tar.gz) = de07937d27a82c5e1bdfae3fcd326424020675e0de171f83cfe716bd886c3115
 SHA512 (endless-sky-0.9.14.tar.gz) = 861fddc8e2f167d335247f3ce1efb59bb4a5951cb0aa5e4a10517fded096db7e69ac17cf0e813f2a1ec040bef57c5d6b6e8e90d952debc9b2caa38d1fb91abe5
 Size (endless-sky-0.9.14.tar.gz) = 124358153 bytes
 SHA1 (patch-source_Files.cpp) = 6adbe54302510e97a612cc949cf5a9c3d3b62c81

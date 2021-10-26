@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:07 nia Exp $
 
-RMD160 (kfourinline-20.12.3.tar.xz) = 8e263428e9c0362a4d7e5ebd96d1a4eedead6460
+BLAKE2s (kfourinline-20.12.3.tar.xz) = a2e786d811e9618af8f13e04411320f0dda3c1f45faf78d45f6d143694eb7889
 SHA512 (kfourinline-20.12.3.tar.xz) = 76792c00f6a2a0a5cd43d4441da5723b4c1ec79021d8fcdd66857ac222b25a80978014eb5878f05d4c091443a664d20fc5a2f25af8ec65f815d7a501775d3f83
 Size (kfourinline-20.12.3.tar.xz) = 643812 bytes

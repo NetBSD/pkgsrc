@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:07:50 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:44:23 nia Exp $
 
-RMD160 (squib-0.17.2.gem) = 59be936fef23ccab6e003e2fdb16c8d99ae7d8b9
+BLAKE2s (squib-0.17.2.gem) = 4c025bfb5f2698cf11e7e7ebf328a1ae8e95b79bb0f4b333df17da25bef48d3b
 SHA512 (squib-0.17.2.gem) = 94b930dfd0d13e0aa42fcf3452af96dd92cd7314e733ad5f1c8e1a3df3f55b687cf2d93a7312712fd5f1d755d76597b9de152132f3e885e09ece391b17c6f659
 Size (squib-0.17.2.gem) = 98304 bytes
