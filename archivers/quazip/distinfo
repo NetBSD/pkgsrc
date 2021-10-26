@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:06:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:15 nia Exp $
 
-RMD160 (quazip-0.9.tar.gz) = 5bff705bcf1471c7709d88bb8770fa9af7498a41
+BLAKE2s (quazip-0.9.tar.gz) = f57bea2cf7ad5711995d7ec22b8a0cd0a6c3bf68dc0d7f19387f9d1d944fdec7
 SHA512 (quazip-0.9.tar.gz) = 8045d36c018bb7bcc39c978bb8f336bad09f21bca4ea5f1327e3ba56d7d01bcc09ee0eca98d7c9065184bf3e15103c4520a81bfbe51286b91a4a82e4f61057f1
 Size (quazip-0.9.tar.gz) = 155764 bytes
 SHA1 (patch-CMakeLists.txt) = 6b77cd56f1d269ff658338a01a3d36a33c535775

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.40 2021/10/07 13:06:01 nia Exp $
+$NetBSD: distinfo,v 1.41 2021/10/26 09:57:09 nia Exp $
 
-RMD160 (libzip-1.8.0.tar.xz) = 2041a081ad92828d98ce1ec39199e80a57d52dd7
+BLAKE2s (libzip-1.8.0.tar.xz) = 77edd0b85fae3236982c65c85b1834bf628e40676a9e4fe4870ae77ce9c66747
 SHA512 (libzip-1.8.0.tar.xz) = fe94a26a2797dff7c9b27334f29982f8e523dd5095bf32ebcadc6443726864f0ff7b2e8bf243e52cad8f79297bc7a87d73fdbc35edae4ffc8ab6aa0bcc93b03e
 Size (libzip-1.8.0.tar.xz) = 760604 bytes
 SHA1 (patch-CMakeLists.txt) = 17745d56f98cd4a6298c54b8562b463207c5a7ee

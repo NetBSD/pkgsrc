@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:06:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:57:19 nia Exp $
 
-RMD160 (xpk-0.1.4.tar.gz) = 63f845edef5d869d816df0e4c6043c265d44fdbb
+BLAKE2s (xpk-0.1.4.tar.gz) = 487c43e87541862b94494b7e424ef315e1fc1c5400de12978f207383136e0ed1
 SHA512 (xpk-0.1.4.tar.gz) = bd48e70e05d289b2e84e6893dfb871bc060085fac8cc9d5ce02c0f3e8ad04ee5d26c3f6d4a9615ed721c25fc5b11cc9d463b4cf2fde46cb63e53caba25cdacdc
 Size (xpk-0.1.4.tar.gz) = 239341 bytes
 SHA1 (patch-shell_xquery_c) = da8a47fa2f5ac22c404cfbcda3f7b8ce86eb995d

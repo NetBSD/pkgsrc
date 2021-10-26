@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:05:59 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 09:57:07 nia Exp $
 
-RMD160 (hpack-0.79/hpack79src.tar.gz) = fcd1265ff858dcca3090bdede86e90da293cf3a2
+BLAKE2s (hpack-0.79/hpack79src.tar.gz) = 0177367b1edb292f5bae1f794867d5457edef416e613bbca0d593f6589b26044
 SHA512 (hpack-0.79/hpack79src.tar.gz) = a38e400b9498fd7fcccf2d08a18867f22541278532e89731a8e6a9efd2e321dd4f73b9b6e7df13a1a4fab91a039f1a30c4d8bbb8c07cad1f869dfbc985130a39
 Size (hpack-0.79/hpack79src.tar.gz) = 545648 bytes
 SHA1 (patch-aa) = 97cfb7de5acd8f6171a461b818d3ad4f1e8b181e

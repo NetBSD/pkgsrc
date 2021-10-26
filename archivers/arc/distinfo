@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:05:55 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 09:57:04 nia Exp $
 
-RMD160 (arc-5.21p.tar.gz) = c6a97105ab26cf1d2b6ad45d528894628cff0586
+BLAKE2s (arc-5.21p.tar.gz) = fe9c447c2c1ac5fcc9e03ed5311cf2e2ae37fad1813a9890ecc02ba2e1109b16
 SHA512 (arc-5.21p.tar.gz) = c70c01ec407cc27f6507e2715d8b553277609cb49369a1e65a83d007362a24b69bb09ef2bf168ee36ca6797bd4524644a89e9114d866351ae53fece193c2967c
 Size (arc-5.21p.tar.gz) = 84791 bytes
 SHA1 (patch-aa) = efbb7e0a3a715d871dc98ad4fad58d0ae49f5b02
