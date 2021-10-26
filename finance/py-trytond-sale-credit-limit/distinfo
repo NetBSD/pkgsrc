@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:54:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:10 nia Exp $
 
-RMD160 (tryton-4.2/trytond_sale_credit_limit-4.2.0.tar.gz) = e828c55ee4a99b97d8a5aeb716d758f9632c5e09
+BLAKE2s (tryton-4.2/trytond_sale_credit_limit-4.2.0.tar.gz) = 3ffa559b4984abf42470c3e8374e2cff1847ad57cc306fbd625f6f0e88092c2e
 SHA512 (tryton-4.2/trytond_sale_credit_limit-4.2.0.tar.gz) = 6c546a970f084281f15e2f8070ca93ef92011b5d43038ed2866fde3b29fe83d1aca53bd74a6aaf1999648182de7cdc9b9148cc9cd8d88d4063bf82de64dc3426
 Size (tryton-4.2/trytond_sale_credit_limit-4.2.0.tar.gz) = 18974 bytes
