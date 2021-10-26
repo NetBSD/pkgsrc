@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:23:27 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:05:19 nia Exp $
 
-RMD160 (libtlen-20041113.tar.gz) = b5fe22369e1515d6dc645eb272ea418b60fd734b
+BLAKE2s (libtlen-20041113.tar.gz) = d66dac6330041ac0b7cf68f4c3900f5b6e7108d98e3553ec933c171f23684bfc
 SHA512 (libtlen-20041113.tar.gz) = 9f9b1dfedb2b48871b31351ff9ac9227b175cfa2cb4e7ebc3ea16e1dd355ae94a9322fa608b0cb02bb548f1d5433397ad7cf0e4e75fb7816232d442beb285bf8
 Size (libtlen-20041113.tar.gz) = 160834 bytes
 SHA1 (patch-aa) = c661d9edf9430ab9d316397aecdc98ffb086d474

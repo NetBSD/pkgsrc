@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:23:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:05:13 nia Exp $
 
-RMD160 (epic4-help-20050315.tar.gz) = b4237357e905468ab4fd7710283d6bffee067c5e
+BLAKE2s (epic4-help-20050315.tar.gz) = dda02d85d877d5569726ee1cf24440c4f1a9ede4f7c7e733457a91c3099a4db3
 SHA512 (epic4-help-20050315.tar.gz) = f59339d4f2c339cb4c3cbc0cce7db8fadbfe469884c16ab9add42e98eb318851e48ce8a04b4920d33c42afff8b39ec41186744eda0460af544c43fe14658e7e6
 Size (epic4-help-20050315.tar.gz) = 332502 bytes

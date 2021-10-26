@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:27 nia Exp $
 
-RMD160 (tik-0.90.tar.gz) = 235eb57a9d894af18c61144d1ee4a2bd88a170ad
+BLAKE2s (tik-0.90.tar.gz) = 912d67687d87458ca4cacd5429adfb2ba0f0cf90d3566d777a7b877085f7526f
 SHA512 (tik-0.90.tar.gz) = fb6a7282f92932cd8a0ddd83a81f1d50d948a17fdc546723c6f7dab7a5a51b81217fb11752ba390fd54694ac8b9ded98a3d640cdd93579596769827fcd50f384
 Size (tik-0.90.tar.gz) = 265956 bytes

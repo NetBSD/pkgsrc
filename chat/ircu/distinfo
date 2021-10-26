@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:23:23 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:05:16 nia Exp $
 
-RMD160 (ircu2.10.12.12.tar.gz) = 263155d56ae96556b971aed40eed97ac56501224
+BLAKE2s (ircu2.10.12.12.tar.gz) = 7b8dd3cd006708b571c88d518fa8a0e7c7d9147c38e659d7e419666795e7f40d
 SHA512 (ircu2.10.12.12.tar.gz) = 5cf6f424c6915ed7a5f3f97caf39d3842e2f0dca78904e89d82b8f9e2027c42e8fbed59f33e2ef54f5ec3feeb11a3f229fcb81fb693a6d2758cfd8bb3d4f908b
 Size (ircu2.10.12.12.tar.gz) = 1013342 bytes
 SHA1 (patch-ah) = 2ffd8cc861bbe8aad697bd3b8ca63aa145104eea

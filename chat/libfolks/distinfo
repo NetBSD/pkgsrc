@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:18 nia Exp $
 
-RMD160 (folks-0.14.0.tar.xz) = 3c62587c6d0240459353bb5f5d18de04427e86e5
+BLAKE2s (folks-0.14.0.tar.xz) = bb5d7d2d7d07ae75829584f47703e619691396d4bc5fe8cc8237fa2deb00c48a
 SHA512 (folks-0.14.0.tar.xz) = 94dc025668ac34df203ea351430bf82dddb4e275d936e2b959a1b9a4cf0fff0218a4baa7d3a89c152a2cb21a94250d731c8e7470d50ac4b658fbe1448974a69e
 Size (folks-0.14.0.tar.xz) = 520924 bytes

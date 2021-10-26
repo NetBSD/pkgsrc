@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:28 nia Exp $
 
-RMD160 (toxcore-0.2.10.tar.gz) = 8258c43fb0b8072f5ed52131221c9169404008a3
+BLAKE2s (toxcore-0.2.10.tar.gz) = ab56bd9dcdeb517aa38d1be405deff6f81e4a5b3f38a7b988f7f6cd87aebb57a
 SHA512 (toxcore-0.2.10.tar.gz) = 8a6a78c52a67be0b727d0d3a8d1cece20ad716a2e694df0aa747eee7764f64c957458584f59db5e727a9803ed7b21adc1ad8d7e80fd6651e7774ca3504b38fc7
 Size (toxcore-0.2.10.tar.gz) = 515842 bytes

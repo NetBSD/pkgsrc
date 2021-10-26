@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:23:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:05:13 nia Exp $
 
-RMD160 (emech-3.0.3.tar.gz) = 902235c353bfb5796bba004992ff619e1ddc8613
+BLAKE2s (emech-3.0.3.tar.gz) = 5ce02b915c36c5ce553d4d772aa039de270f343ad3297adb308259a00a68a2f3
 SHA512 (emech-3.0.3.tar.gz) = ffe478c0c1800c8afb7afca62dbe08fce6af25a5878ca5fb44bb1271a302d11b96263c51a3848996db8f33f1cdab60d86c26d571d6342fe1505d4dcff83803a3
 Size (emech-3.0.3.tar.gz) = 228709 bytes
 SHA1 (patch-src_channel.c) = 2499c5ef15d2d05349ae87f540b31c9cc66721cf

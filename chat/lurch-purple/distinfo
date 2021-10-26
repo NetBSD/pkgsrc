@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:23:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:05:20 nia Exp $
 
-RMD160 (lurch-0.6.8-src.tar.gz) = 4868fede497f193037a4dcc8367aa793898e283b
+BLAKE2s (lurch-0.6.8-src.tar.gz) = dd64cc511c71d9616a31d09b57ae6979933adfe08e95ddba084082f9755c5e3e
 SHA512 (lurch-0.6.8-src.tar.gz) = 8b93523049d05a00f1d7286ec9d0d8d03c7ae46793ac72ea08c0d12cb5193324be4805fb6278d6c0f906d9c63db9d7ce6ca2a21442236df51e0ee0b48de6ef1d
 Size (lurch-0.6.8-src.tar.gz) = 398267 bytes
 SHA1 (patch-Makefile) = f2e73ad5cf22ff9f700f87d5d2664aaea2addf8b
