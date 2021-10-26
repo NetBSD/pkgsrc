@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:46:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:10:37 nia Exp $
 
-RMD160 (pocl-1.7.tar.gz) = 75555c802bf133298d615f5c146174dc0f959a72
+BLAKE2s (pocl-1.7.tar.gz) = b111e491fb84465f30bf56bb78c0bc05f1be26d7954c0891fda2e6990669e7cd
 SHA512 (pocl-1.7.tar.gz) = 23bb82b25a222186c001b2ed413f26253e1e0e16518e98c95173f51491e15d107e6ab1b334ffd490b41199743267d9ad64882a22fea327e17ec9604f9847fc38
 Size (pocl-1.7.tar.gz) = 1577676 bytes
 SHA1 (patch-CMakeLists.txt) = d722efb971d9ce35fd7dfe2e238cbce3660e1eb8

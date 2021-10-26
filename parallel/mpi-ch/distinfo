@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:46:46 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:10:36 nia Exp $
 
-RMD160 (mpich-3.2.1.tar.gz) = b830ba3f5cb5401c03898ad9abf87c60d5cf1e50
+BLAKE2s (mpich-3.2.1.tar.gz) = 7877617cdbac0de4f209427d263b7f449afe0baf5d95ea864be5b8c575448c3b
 SHA512 (mpich-3.2.1.tar.gz) = 659a11cf02302f27eb1db77667dd4c7a4f8008b1d73f5f0f0f28ee6b5d9cca2130bac3d010a132136ba15a25a738ec9cbda67255133aeb42f0d82a2ded23d23d
 Size (mpich-3.2.1.tar.gz) = 11908154 bytes
 SHA1 (patch-Makefile.in) = 7fee6ae5e86943f7ea1b3eef103c5b5b4b66490b

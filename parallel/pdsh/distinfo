@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:46:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:10:37 nia Exp $
 
-RMD160 (pdsh-2.31.tar.gz) = 964912fd35b41397ee52ade73ef66cb896ae55fb
+BLAKE2s (pdsh-2.31.tar.gz) = 91eabb05ff76fc1861263c1abb73fecbf7634ab10e137ffc3d60c97fbd1d4191
 SHA512 (pdsh-2.31.tar.gz) = 38b0aec1c1123ccb6e1bed0c76f88ea4bd3bc75711e09b72a41b1a247528ce702120b9bc35fa7c89f8fcea6e69dc25cb91d305f6f60810d1b9f6a044f3b4f282
 Size (pdsh-2.31.tar.gz) = 646112 bytes

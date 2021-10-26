@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:46:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:10:36 nia Exp $
 
-RMD160 (ocl-icd-2.3.0.tar.gz) = d72a75a2ff12c9cf30f8b91c65782473947ee633
+BLAKE2s (ocl-icd-2.3.0.tar.gz) = caa35152919bc104a2b53d01f63d0901a57858f0fc728ddcafc58bfd3159a187
 SHA512 (ocl-icd-2.3.0.tar.gz) = 003f3661b7086a7364e79d1058591f12a7095aa2c3decfc4b496f00a0863a91cd81080f33b9308e3948045f8aca5856868ed2725f478654230e51a60d654e613
 Size (ocl-icd-2.3.0.tar.gz) = 100848 bytes
 SHA1 (patch-OpenCL.pc.in) = 4cef1fd6d976b4953e7afc8a53d26ce27ef5530b
