@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:11 nia Exp $
 
-RMD160 (bitchbot-1.0.2.tar.gz) = 5977af6c80f8054b9f303860c472229ceb438465
+BLAKE2s (bitchbot-1.0.2.tar.gz) = db712fbd9f12c16dfb4aa93cf5b2531ed26b2bb5b9fb8d85fa86afbf15a83266
 SHA512 (bitchbot-1.0.2.tar.gz) = 071fc87425cf74d24ca2eb03a89eaa32ceece1f059c7c0688fcb619874576488780e45e7f2df3e14b44c4a422b344e20aeaa8c105ea76fc83fb6907f7b158dda
 Size (bitchbot-1.0.2.tar.gz) = 34325 bytes
 SHA1 (patch-aa) = 1d53d75ba42b3eb27a34db8b56ed0f22d5cf057a
