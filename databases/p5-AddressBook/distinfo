@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:26 nia Exp $
 
-RMD160 (AddressBook-0.16.tar.gz) = e75d9ac4d7c0ec274f332cc4c9ce4d4ced4f2638
+BLAKE2s (AddressBook-0.16.tar.gz) = 0ddafd7c4b640f59f0cd3ea667bb559dac9a432edefe2d7592b6b778b50f3a4c
 SHA512 (AddressBook-0.16.tar.gz) = dc71d2f63cf0cac5e4f806155960252db7cc2d7e08f5c930f73957cbcdbe21839f0889a052b9a26dde1902024153ed1e66c93ec1d4b6a5cea2dace67af54e5c7
 Size (AddressBook-0.16.tar.gz) = 32634 bytes
 SHA1 (patch-aa) = d5e38c7c9519de7663eee597e1584406ec613a39

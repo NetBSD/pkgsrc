@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:34 nia Exp $
 
-RMD160 (DBIx-Class-IntrospectableM2M-0.001002.tar.gz) = d57890bd4683bd6fe217168738c1b6033c1371b7
+BLAKE2s (DBIx-Class-IntrospectableM2M-0.001002.tar.gz) = 3d78aaf7f861846c8f4bbd24f0a7d8f59517caba63c00c1dff917059e04e18d4
 SHA512 (DBIx-Class-IntrospectableM2M-0.001002.tar.gz) = a6d0dc887d869316e1c5188a83e177100ac47edb1c8ac2229ce62231b4c2efd18544b987a4d26308018ebd2229426ddfb9f44e27985c7b9c5f9095a6bbf877e2
 Size (DBIx-Class-IntrospectableM2M-0.001002.tar.gz) = 20049 bytes

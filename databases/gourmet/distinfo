@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:19 nia Exp $
 
-RMD160 (gourmet-0.8.5.14.tar.gz) = 65741e06cc19cd65461e45ab6467b6dacbb208e8
+BLAKE2s (gourmet-0.8.5.14.tar.gz) = a881b891ab2d73b0584097ef8953301bc072d800d925cebcad0b2a2372b0968d
 SHA512 (gourmet-0.8.5.14.tar.gz) = 105bb8c9d193417447d4bba0601696ca1ca41ffa1bcca02d18f9d5749b11d59b93a1ec63e2d93b786433476cc1097a22c242104383f1eb00e8866ec95b21d8f3
 Size (gourmet-0.8.5.14.tar.gz) = 1081256 bytes
 SHA1 (patch-aa) = 76b9a7a69f30f8c17a750d64c8a24bc86822ebaf

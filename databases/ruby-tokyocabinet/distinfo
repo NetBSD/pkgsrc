@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:35:50 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:10:04 nia Exp $
 
-RMD160 (tokyocabinet-ruby-1.31.tar.gz) = 00e1d258c73f47dc347fc466fea42dbd1d43230a
+BLAKE2s (tokyocabinet-ruby-1.31.tar.gz) = 12aa66580d4078c7cbe439d06e1b1256c886a1d42ad7924d278767c6b7440e30
 SHA512 (tokyocabinet-ruby-1.31.tar.gz) = b1867978bcdc13c87ad641e58848324c388f2c44561ef5c203a07bcccf9468ce9a2ef5412fd03a35a62bfcc0c323b1a8f17a6a0b9bcf1ccf7c09a559f65345b9
 Size (tokyocabinet-ruby-1.31.tar.gz) = 98542 bytes

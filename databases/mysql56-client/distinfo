@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.60 2021/10/07 13:35:15 nia Exp $
+$NetBSD: distinfo,v 1.61 2021/10/26 10:09:24 nia Exp $
 
-RMD160 (mysql-5.6.51.tar.gz) = c6c43b04fc34fb9ceb55eb6f5be9ce4ea3bff56d
+BLAKE2s (mysql-5.6.51.tar.gz) = 332b772c6d4b9fe5cfbc49b6aed5fa647507854450b417d2d7dca40f61d485b1
 SHA512 (mysql-5.6.51.tar.gz) = 2a214750f3a1607fb750c0ee7a4a4469ef150b03761c717862c8f4710d6d63f60d9163cfa8f3b279c06c5ad00a7789a594f3429959e253f8250284245449c419
 Size (mysql-5.6.51.tar.gz) = 32411131 bytes
-RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
+BLAKE2s (sphinx-2.2.11-release.tar.gz) = 0399a166db059549b16b9e041182be23e3286fc5cb352b2246e58f7c8788ebd1
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
 Size (sphinx-2.2.11-release.tar.gz) = 3061998 bytes
 SHA1 (patch-CMakeLists.txt) = 5c947612d9bbe7599049b761c75840168c1d36e0

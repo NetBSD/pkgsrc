@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:22 nia Exp $
 
-RMD160 (libtcd-2.2.7-r2.tar.bz2) = 0160b9af26aa22e2cbf74fc5ae05493238cd2eb6
+BLAKE2s (libtcd-2.2.7-r2.tar.bz2) = f4d8065c8c1dec1b518da34bb0726d1197f9816431c875c88ece666f57799e4d
 SHA512 (libtcd-2.2.7-r2.tar.bz2) = b67e5b3d43cc51cf7405db5d71bec0a33f884d1a5654b01d7cddf54e7614d3b8d05fafec133e2299ca4687ee9a74295dbd0281c2ddff36906c77cc930bad9ed4
 Size (libtcd-2.2.7-r2.tar.bz2) = 308959 bytes
 SHA1 (patch-configure) = 2209673c29636fd83026cf33fd7afe9bfaeaa67d

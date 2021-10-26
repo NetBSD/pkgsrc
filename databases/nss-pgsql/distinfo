@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:25 nia Exp $
 
-RMD160 (libnss-pgsql-1.5.0-beta.tgz) = 9a81a636d69211a27e07084a3303f55e76e9786f
+BLAKE2s (libnss-pgsql-1.5.0-beta.tgz) = 793b24602d6c0b89207ce409986434bcedfc9f70525c956618e262187e86836f
 SHA512 (libnss-pgsql-1.5.0-beta.tgz) = cabc09337841aadb27790fb66bb55f7da70b52d4e28c717d83ad63b440ac65d8e72505e602b1324d8091ace8b9fe90510492ce0dec17148b74288a2524726cc8
 Size (libnss-pgsql-1.5.0-beta.tgz) = 305543 bytes
 SHA1 (patch-config.h.in) = 988a8f524d73b053b15617dfe83eeb80851fd941

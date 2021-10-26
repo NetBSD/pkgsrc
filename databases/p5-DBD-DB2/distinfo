@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:29 nia Exp $
 
-RMD160 (DBD-DB2-1.78.tar.gz) = 23ee57b64d54da836f1afef1b8da9aab3519486e
+BLAKE2s (DBD-DB2-1.78.tar.gz) = 9ca2c8eca93f5b71907d8211969ffea320dd62bce11344c459e36fa79dcec5dd
 SHA512 (DBD-DB2-1.78.tar.gz) = da8c5d52f708d9edc87561fef2f5f656734fa485d88cde39ace03bef25b92e84605bda08e2f6631b69a03622b6f1ce7a63d508fffd92bd3d6ed1c1899a24e4df
 Size (DBD-DB2-1.78.tar.gz) = 131380 bytes

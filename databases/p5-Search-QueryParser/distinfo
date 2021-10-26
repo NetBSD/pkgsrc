@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:41 nia Exp $
 
-RMD160 (Search-QueryParser-0.94.tar.gz) = 2521c03203461511af801baa45bf0bb959adcd52
+BLAKE2s (Search-QueryParser-0.94.tar.gz) = 42d30a19b81d31702b5a2d40ae3add4107b070164d9b018e47e32df32cc23662
 SHA512 (Search-QueryParser-0.94.tar.gz) = 67b31a4ae34186cc646aada1bed8f8a70fe7ddf32a23055d25eae04b818af8106a16b58774495ebe370d4494d2732ad8fea2b577e17c52dd08e262dbeab376bf
 Size (Search-QueryParser-0.94.tar.gz) = 7133 bytes

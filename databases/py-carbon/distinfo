@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:49 nia Exp $
 
-RMD160 (carbon-0.9.15.tar.gz) = 4a1b11d8ba06357f44e6eca3d45ee0f89dfef98a
+BLAKE2s (carbon-0.9.15.tar.gz) = 9f467db87f0430c621a821cf780ca7ab6a03a4fa5f9105e567acdecbb8a34b14
 SHA512 (carbon-0.9.15.tar.gz) = cc56257e703fc262dd27019d4a4e86d483daf55bb4c0792200be82533fc721b087b9eb5926cd007bf1e1c0f799729de871de5182f807fa9e0394ba08eccfa2fe
 Size (carbon-0.9.15.tar.gz) = 57328 bytes
 SHA1 (patch-carbon_conf_example) = 75153928e117e5a982dd00ae18b715f272854306

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:35:33 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:09:46 nia Exp $
 
-RMD160 (phpPgAdmin-7.13.0.tar.gz) = 3effa8622574bfab9dc55ab85965f4d56efca31d
+BLAKE2s (phpPgAdmin-7.13.0.tar.gz) = 190395d8201c4dbf7a1c169ce105fddf91d8964825da0780db7fb12b2cfe6425
 SHA512 (phpPgAdmin-7.13.0.tar.gz) = 744718b49cd3cb1aa23aea0c402076e1a911892c8b871bac9650e39bcf73c45853f6b24bf699ad3b9432f3e082362577ac899baa4e89f14a4da8cf2fb017fb19
 Size (phpPgAdmin-7.13.0.tar.gz) = 804431 bytes

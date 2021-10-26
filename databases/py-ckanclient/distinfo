@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:49 nia Exp $
 
-RMD160 (ckanclient-0.10.tar.gz) = 9d969eadc9f7c930cf6f87a822d417898f1b9b9e
+BLAKE2s (ckanclient-0.10.tar.gz) = a8a8fb1d21b0dd02b685fec889bfa14e4f78c2146e2b603836574d7a885844d6
 SHA512 (ckanclient-0.10.tar.gz) = 8246285860a9ad9697f4455386b1c16783c590e05ba2a2667ce9c88a0fbe4497494303381125956dbef294f166dd032a3644fbb55862f845d661242b7bdade86
 Size (ckanclient-0.10.tar.gz) = 16794 bytes

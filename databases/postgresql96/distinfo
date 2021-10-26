@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 13:35:35 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 10:09:47 nia Exp $
 
-RMD160 (postgresql-9.6.23.tar.bz2) = 59a9ca18b3085a23654d491d91f12c6abd0b2d31
+BLAKE2s (postgresql-9.6.23.tar.bz2) = 0fcbe6f3e8422d476ed74e6237394b6f756648e522ded804fe7e7d9856688aed
 SHA512 (postgresql-9.6.23.tar.bz2) = 205b47cf1c22519092f840a9b3bf6bdf95f455e5ba02a7e1bc1495f85bb25f8ccfe9f60c83dc2801f1366b88fc35e64c23eb9bdc89a4bb5d233243af4606d59c
 Size (postgresql-9.6.23.tar.bz2) = 19013235 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813

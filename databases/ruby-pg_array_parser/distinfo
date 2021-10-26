@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:10:03 nia Exp $
 
-RMD160 (pg_array_parser-0.0.9.gem) = d82fc8d18ef1ee81f96226bee91b4cf09c8b123c
+BLAKE2s (pg_array_parser-0.0.9.gem) = 342e0855c007fe695bc74084d69700dd7a532bd8e708c3d2615b47d16492899f
 SHA512 (pg_array_parser-0.0.9.gem) = a1503d9598e1658eb63b6294ce1cf6f8d2e7e5c59382407946ec10d25a46b029b4bb8a8c634b190b42bef4954c4aeea60b6ffa16c596e0c3bea2df4c882896ae
 Size (pg_array_parser-0.0.9.gem) = 8192 bytes

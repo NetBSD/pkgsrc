@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 13:35:52 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:10:07 nia Exp $
 
-RMD160 (tokyotyrant-1.1.41.tar.gz) = 679122c30104213991c640e4c9d4d0203308190a
+BLAKE2s (tokyotyrant-1.1.41.tar.gz) = 3dcca964cec22e8c29527a63026be78b45616e85ab0aa887a85433f4c4325725
 SHA512 (tokyotyrant-1.1.41.tar.gz) = fb181ecab19981733b4b478614f9b28d7f1f776bafe6c58c4bc3e26ed294301a6242d7cd1d47b7d6b55a93305474d2e8e0a75f2f01af21a8bc93d158c8f8179e
 Size (tokyotyrant-1.1.41.tar.gz) = 196196 bytes
 SHA1 (patch-aa) = 6f4657a2dcb62a789322233a4ae0941d2dfefdba

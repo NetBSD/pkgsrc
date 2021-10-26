@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:35:06 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:09:15 nia Exp $
 
-RMD160 (apache-couchdb-2.3.1.tar.gz) = 2d43affc236c536694c061ef7c1a89b489ef6bc9
+BLAKE2s (apache-couchdb-2.3.1.tar.gz) = 58701851e546e763526b960946530061f50b24a8ee5f170456f2837ece576b12
 SHA512 (apache-couchdb-2.3.1.tar.gz) = a34a8775b2be3c51f48c9f45c5ccaa01fbd8435d58aa326e1e53f1c82678fdbf657f90003d476ad43d3898bbd3cbedfc2dd9adbd2d98cec31f850ca743c8c64c
 Size (apache-couchdb-2.3.1.tar.gz) = 13473795 bytes
 SHA1 (patch-aa) = c657ce706e3ba0487aff6ac96628ebf3c97b1475

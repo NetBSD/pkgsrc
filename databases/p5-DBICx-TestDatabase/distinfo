@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:31 nia Exp $
 
-RMD160 (DBICx-TestDatabase-0.05.tar.gz) = 335e11046db124138ba14047cead8229de453c2c
+BLAKE2s (DBICx-TestDatabase-0.05.tar.gz) = e2205c736850a71f0ada80d1e73ba87ebe4735bbdac0545a0be12e8d5329a9e5
 SHA512 (DBICx-TestDatabase-0.05.tar.gz) = df17c75594998e4a17b284d5c20809019f31e5ab20dd354e2d7e159d1d76554e3c08bd1797277b9909efe8ecd10aa82b606b325e1759258521c7e3cd5995c2c1
 Size (DBICx-TestDatabase-0.05.tar.gz) = 21574 bytes

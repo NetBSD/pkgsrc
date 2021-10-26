@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:22 nia Exp $
 
-RMD160 (libdbi-drivers-0.9.0.tar.gz) = 9252bf6885fc365f41f7d7321be0fd3ed90030d1
+BLAKE2s (libdbi-drivers-0.9.0.tar.gz) = c52b9e08143e1d42bc6c79b492d1682b52f0e47ca13b50415e382007ae34e95c
 SHA512 (libdbi-drivers-0.9.0.tar.gz) = f4d3aaa71014697c53012a10bf9f0af398bcf5ee5872af165f8f43a682d2fb3045a9172ffea0e068dcbfcad52494878c037d8d90fadfaf176936e42f7f1e85c1
 Size (libdbi-drivers-0.9.0.tar.gz) = 1829864 bytes
 SHA1 (patch-configure) = 8dc1180722e758e5835094d1e9522f082cbb582a

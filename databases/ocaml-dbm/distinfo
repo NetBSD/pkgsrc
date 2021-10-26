@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:25 nia Exp $
 
-RMD160 (camldbm-1.0.tgz) = 0691f84ac43c97fddaf796c04729baa8bcb280ca
+BLAKE2s (camldbm-1.0.tgz) = 9af16f4d81bb42a34d22cb8d943c917ed8d059ba0984702bca56a35b500b54c7
 SHA512 (camldbm-1.0.tgz) = d0b752754650efb400f13f957e83fddccf1fc9ac9e1d11f453af94e9aa599546a316eb110685b3728b593c99cbf859cdc7bcf924c878cf8b6dead3dc413ccfbf
 Size (camldbm-1.0.tgz) = 14397 bytes
 SHA1 (patch-Makefile) = 20c4d5b50fea2829c69bb8c5bb69085dafca64b4

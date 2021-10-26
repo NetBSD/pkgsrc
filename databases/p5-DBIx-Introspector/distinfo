@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:36 nia Exp $
 
-RMD160 (DBIx-Introspector-0.001005.tar.gz) = d3636c72e0b648f215d762a45853a09278ad5169
+BLAKE2s (DBIx-Introspector-0.001005.tar.gz) = 475c9c24eb3be8e72ad4be7f459e8e47fe4b3d9896b489158037786f00cbee75
 SHA512 (DBIx-Introspector-0.001005.tar.gz) = ab96cd189ab6a43a3479c2f62de7053310e04788f576a152f21d0425081aad8bc5202c84ff3d264adb7becd6715654719b9888063f623eb578e2a2f7f3e17eb9
 Size (DBIx-Introspector-0.001005.tar.gz) = 16672 bytes

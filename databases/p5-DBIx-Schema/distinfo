@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:36 nia Exp $
 
-RMD160 (DBIx-Schema-0.07.tar.gz) = d8b2b732ab1a1a9ee2b94b82cf064d4308fdbd2b
+BLAKE2s (DBIx-Schema-0.07.tar.gz) = 0d9aeba62d9ae97d91005d8ac46451f11fe7855f7b6ec14370dbeeeed3d85f55
 SHA512 (DBIx-Schema-0.07.tar.gz) = 18de864bf45fca3f26562bb1d6765e1ff4da796635e91f950dcd0ea14f69e608c3b8cee1d1b27ca4030748acf9519e9fdb4fc01d90647b91583e6fc2d7d36477
 Size (DBIx-Schema-0.07.tar.gz) = 24234 bytes

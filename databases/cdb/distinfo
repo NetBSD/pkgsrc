@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:35:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:09:14 nia Exp $
 
-RMD160 (cdb-0.75.tar.gz) = d52288ee6df58fdc5a79efc16693cd5e305f9c65
+BLAKE2s (cdb-0.75.tar.gz) = f48cc4e973f3ea7133f67156ed3e6254973d6b873bb91286929b7ca1e016e214
 SHA512 (cdb-0.75.tar.gz) = 6faeab91a77457348b58f685e81000b83fb609691317198a06284c5c62dee1e4d6138f90be1e727021f279d740169c175a21b23c96adb39a654e3f7fafdf36c0
 Size (cdb-0.75.tar.gz) = 54162 bytes
 SHA1 (patch-cdbmake.c) = 08dfa3ab166bb7467d022a0ea20cac9426f30368

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:56 nia Exp $
 
-RMD160 (rrdtool-1.2.30.tar.gz) = ee4d492fee4e109da89ca85bd9dd561cb9ddfcec
+BLAKE2s (rrdtool-1.2.30.tar.gz) = ee5af395fb2e4d3c209878d548d9d6bd621f96f736a425b0bd834128a31a02f9
 SHA512 (rrdtool-1.2.30.tar.gz) = a28221d1e9ce95b3b3bec20458ab8c8606beddc5e1f710b9d1b144314416bb6db9dc7479c952d30f4194a4adbedbafb18e8c0701fa73b14a0185603db81924ae
 Size (rrdtool-1.2.30.tar.gz) = 1092483 bytes
 SHA1 (patch-al) = d60ff005ac635f0fcbc5222be419a9f08c326817

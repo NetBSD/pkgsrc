@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:40 nia Exp $
 
-RMD160 (SQL-ReservedWords-0.8.tar.gz) = 9af4c6dbb0d9de9af6728e3c00f6c736125c768e
+BLAKE2s (SQL-ReservedWords-0.8.tar.gz) = eb146f0df966c9fa32efcfb4acc0137c5477400e4b34f06e7c5da703635ff825
 SHA512 (SQL-ReservedWords-0.8.tar.gz) = 111a1984f959f5f2766c83f28973608101b78dbc370703381cdd9de21fa744f07000aadb56525c3cf774b759c9b14093f160616faf45f345d59081e99e8356f5
 Size (SQL-ReservedWords-0.8.tar.gz) = 27935 bytes

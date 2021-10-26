@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:33 nia Exp $
 
-RMD160 (DBIx-Class-InflateColumn-IP-0.02003.tar.gz) = db0d12325827ce918a6094f2d544a033f62b9075
+BLAKE2s (DBIx-Class-InflateColumn-IP-0.02003.tar.gz) = 01486b80cca827423af07d7cc931a401a5b2487fce70ebc72b168ff9475e6677
 SHA512 (DBIx-Class-InflateColumn-IP-0.02003.tar.gz) = 07a5f97f4e8fe148ca69ebbdf82276774e3ff68ad3956a6fc6523158ddf0a645b6a149d56a316fb5b23a52889f7dbd924e3ded6a940c9ca5d25d774cffc488d8
 Size (DBIx-Class-InflateColumn-IP-0.02003.tar.gz) = 24096 bytes

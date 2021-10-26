@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:42 nia Exp $
 
-RMD160 (pgsql_perl5-1.9.0.tar.gz) = 79adcaedbf873a59f372edf7a59dd7c33351a26e
+BLAKE2s (pgsql_perl5-1.9.0.tar.gz) = 5a4312e69e813b8b178cad3da4a131354192d2867460c2c27f2264d16743ce77
 SHA512 (pgsql_perl5-1.9.0.tar.gz) = 4bf4562a0f152222aae224fecaa26f31ce621478e6e2739d368f04973cfdca0b683742797df52a83776f31d78fd7b3358fa303ace59c57bd0b99efee63c75eca
 Size (pgsql_perl5-1.9.0.tar.gz) = 16860 bytes
 SHA1 (patch-aa) = 0e87750d181e72757f5ba4e2f06702481a7dfbd0

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:35:08 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:09:17 nia Exp $
 
-RMD160 (p1_pgsql-1.1.11.tar.gz) = c8c10f14066137053280b72485242be2735249a0
+BLAKE2s (p1_pgsql-1.1.11.tar.gz) = 532db6f68a6214c73e42cbe7176ae6175cf950e5ff267a64a0a90fb561ce6fa8
 SHA512 (p1_pgsql-1.1.11.tar.gz) = 7f59730fd46b9c86331957c9f8be8db8aac2374363308e587d35f5399fdcbf8deb605960266c176f2f036d15100c230918de98cfd9e713636ad50cdaa7795aaa
 Size (p1_pgsql-1.1.11.tar.gz) = 24415 bytes
