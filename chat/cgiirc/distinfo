@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:23:20 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:05:12 nia Exp $
 
-RMD160 (cgiirc-0.5.12.tar.gz) = 88eac3b130659130a0a8108c887ac387d0c70a16
+BLAKE2s (cgiirc-0.5.12.tar.gz) = b0a4abe52df56911ecc4609cca66609368d1cb4f96499f0e033f92c9b9d41183
 SHA512 (cgiirc-0.5.12.tar.gz) = ba156bbf036846e2bdd1d5f219d837bcfc23c690593740bccad375af95f3d4c56c3624621d03b47145b5dbb73e2fed5a16b6917f81ac784de04e0e9d6afdd2eb
 Size (cgiirc-0.5.12.tar.gz) = 140379 bytes

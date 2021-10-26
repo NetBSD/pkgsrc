@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:27 nia Exp $
 
-RMD160 (tkirc2.46.tar.gz) = 48aa98693eb6c2a975b9f7e7faa9ab8a1b029e9e
+BLAKE2s (tkirc2.46.tar.gz) = 4bf573409894414b9d07af5f5542361894763a32b5fe79e6db12517dab5159d3
 SHA512 (tkirc2.46.tar.gz) = f4f74129424b5df08caed789abfef5a9013aa229136a9114bfb5c3d027235a3debc4d2b532ff92590cb5777c6154cfded291c1bfe845823cfb2ad7e0f635cf1f
 Size (tkirc2.46.tar.gz) = 105399 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:22 nia Exp $
 
-RMD160 (pidgin-latex-1.2.1.tar.bz2) = a4eb3d5098315d860d081f7ae3acdc4d825084f9
+BLAKE2s (pidgin-latex-1.2.1.tar.bz2) = 586ed1dff8abd220d8d0093e99d8e126863d3ca3c06d1abb98851d47e3147256
 SHA512 (pidgin-latex-1.2.1.tar.bz2) = 14475d3ae12eb1d6dd706eb19303e873cf5d44cfff5d8aebf8a3909d40fd8fef52bbe28d39a4a0fc2fcfea070dda845f090e1c4ab334cf44bc40a1eefff47a75
 Size (pidgin-latex-1.2.1.tar.bz2) = 15770 bytes
 SHA1 (patch-Makefile) = af4ea09912d643ab4454fd10357522bf093b10fb

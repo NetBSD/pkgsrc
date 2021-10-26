@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:28 nia Exp $
 
-RMD160 (zenirc-2.112.tar.gz) = b7300841f4ccc661f202495905b817b35f8ff8fd
+BLAKE2s (zenirc-2.112.tar.gz) = 204501fa0c24519fdf03122c9c3fcef90abde3fd2d6ff1b7e83969b2b1d5d864
 SHA512 (zenirc-2.112.tar.gz) = 3859eb21ad80c8a32e473a272bf2b024039a7a5e4c87a168a71ee2d045f678397daebdce81358be3a50a0dae63c7f8f417600f0964250fdb505def2803a13fac
 Size (zenirc-2.112.tar.gz) = 270951 bytes
 SHA1 (patch-aa) = f81dd257b30e5f87329645750cf8d9e69a8b1f58

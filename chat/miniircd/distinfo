@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:21 nia Exp $
 
-RMD160 (miniircd-2.0.tar.gz) = c200bdb13b7a190c0e6152e6c17a2df9f61f9c09
+BLAKE2s (miniircd-2.0.tar.gz) = 055832b71a22e5dc007db4b279256a62a569697f14959b830b5dce4d38e697db
 SHA512 (miniircd-2.0.tar.gz) = b3a65d5b54d2e4163b878fb311221dd1e16bcdc9d53718b687e18d1af8ec3f331903b0ef73fd94e2540ff6d41693bf491a8de04b45d1e00c3215b7427108ff56
 Size (miniircd-2.0.tar.gz) = 22151 bytes
 SHA1 (patch-miniircd) = 39d26714e24fb280a754df79937db9cedcf691c7
