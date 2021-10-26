@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:41 nia Exp $
 
-RMD160 (google-apitools-0.5.32.tar.gz) = 07589fbf3a16cc9f6433a54c8c41795cce484e89
+BLAKE2s (google-apitools-0.5.32.tar.gz) = 37ea8bab4fa207109c9b23c0afa917e32f473eb9eb8813cde963402ad9d7ffba
 SHA512 (google-apitools-0.5.32.tar.gz) = 126b8c60b965afe2f24f4afd595326f1555f287f555a13c03f94ed9170fc0fbba7c9a62880a7d26344fab71ec1cb69e3a9f22b200f76a01ed2a71c56e7dd4d30
 Size (google-apitools-0.5.32.tar.gz) = 172810 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:09 nia Exp $
 
-RMD160 (LWP-Authen-Wsse-0.05.tar.gz) = 946da9337d1c120d080ef51ba89a2a307269c42a
+BLAKE2s (LWP-Authen-Wsse-0.05.tar.gz) = a8959860c5e93550131bdc83c2a2462e9a9e94d81198e81fcd368920eb376c1d
 SHA512 (LWP-Authen-Wsse-0.05.tar.gz) = b5612b2996ea84680e75accce386a575c08ba941281329f100b4acfeba8ac56fca91abf5bdb45355b5dea407f578e24df32b7be2a3e26e7900e92c4bb724e2e2
 Size (LWP-Authen-Wsse-0.05.tar.gz) = 11412 bytes
 SHA1 (patch-Makefile.PL) = da02ed73a262626cff5115524a1ae4466e3c3d3f

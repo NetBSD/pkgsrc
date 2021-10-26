@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:07:08 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:29:24 nia Exp $
 
-RMD160 (dansguardian-2.12.0.3.tar.bz2) = 312db0ce2db9d1b2ed537807f9b2eca5d76a4123
+BLAKE2s (dansguardian-2.12.0.3.tar.bz2) = e9a59e5bf0a819ae491669e1d2bb2f7c5ceed6d483789b4a79abb4101b5bca3f
 SHA512 (dansguardian-2.12.0.3.tar.bz2) = 37155ef4f1a6dd6bdd87f79c7199b77de49746e4bff0631c239a569c21bf26240cbc9eae5a2436653bfc3d170a664710af9d80c4cfac3082a0620caeaac6740b
 Size (dansguardian-2.12.0.3.tar.bz2) = 577701 bytes
 SHA1 (patch-configs_dansguardian.conf.in) = 8707f9506ea7d93b3ff2caca3612054d1b0724e7

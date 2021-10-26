@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 15:07:13 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 11:29:30 nia Exp $
 
-RMD160 (horde-3.3.13.tar.gz) = b6e14214c5c2151c53798f3ed99e1b94f671ebfb
+BLAKE2s (horde-3.3.13.tar.gz) = ad0a5d440b9b7029c7da143d9ef2c499c8892af3052ac4a692a4d86ddf64d4ac
 SHA512 (horde-3.3.13.tar.gz) = 5b42b778a9de8f57e117cb1b41c17265ecf1e5aa1706f808a95fd756997950c7f915e741aef45b13f67e971834d9b3cb7d576b5c557b5857cdf1c81c730e49ec
 Size (horde-3.3.13.tar.gz) = 8923715 bytes
 SHA1 (patch-aa) = 91150235a9739231e5c4da8622f9d48ec26f1115

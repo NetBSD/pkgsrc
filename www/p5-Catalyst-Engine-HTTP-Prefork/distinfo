@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:50 nia Exp $
 
-RMD160 (Catalyst-Engine-HTTP-Prefork-0.51.tar.gz) = ed328fef50abac5132bd2d30880448141755c324
+BLAKE2s (Catalyst-Engine-HTTP-Prefork-0.51.tar.gz) = 8eda79b76e2b909a21452d1bb77fb577185c31e6f6baca3bc46efcc3f86e2739
 SHA512 (Catalyst-Engine-HTTP-Prefork-0.51.tar.gz) = 90bb5b1ad3cdeaf5b6dea363e85ce6d6fc737d382aa44f8dcd0504587bb27c0cb1cb5f57df5a15a16b17e81dbbef0ffd785c31a2c57b2576d04699d79d9d3316
 Size (Catalyst-Engine-HTTP-Prefork-0.51.tar.gz) = 66503 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:52 nia Exp $
 
-RMD160 (wtforms-recaptcha-0.3.2.tar.gz) = b7ccfa509ff84eae82a0fb266443c0a37e171539
+BLAKE2s (wtforms-recaptcha-0.3.2.tar.gz) = ef86cc2fa2c1948bce8adddb47d960af6ea5066de97cb4d5d6d7ae192ebed977
 SHA512 (wtforms-recaptcha-0.3.2.tar.gz) = db7312626df4398251c6e131184d7f55f1d6f8ef8a023a6e50542874671b6b74162405878d5871134de22becbb7829773b8881916faed7edf9a8b8015947a697
 Size (wtforms-recaptcha-0.3.2.tar.gz) = 6339 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:09 nia Exp $
 
-RMD160 (LWP-MediaTypes-6.04.tar.gz) = 9ecd8df6d5b7e76e2c6e244900bb097765f12477
+BLAKE2s (LWP-MediaTypes-6.04.tar.gz) = 400de7214edd64c1cd1920ef42345d26cb1323da4afc3b57ae6804afeb9d0071
 SHA512 (LWP-MediaTypes-6.04.tar.gz) = 0610627ef3efdfde3c89bad273931c9cbde5c6da0bd782d59ce26dc4445cd538be9041d722f08206d96d69d5e3643b15150ef29b9e92e3968833f2ae1b6dc53f
 Size (LWP-MediaTypes-6.04.tar.gz) = 40000 bytes

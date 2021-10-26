@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:56 nia Exp $
 
-RMD160 (HTML-CalendarMonthSimple-1.26.tar.gz) = b1c79a85185eac1597a2b088df25381bc960a51b
+BLAKE2s (HTML-CalendarMonthSimple-1.26.tar.gz) = 572a030b35b9597362d888dd59bce5c7cd18cbf0c080c365b7e6de876c484b90
 SHA512 (HTML-CalendarMonthSimple-1.26.tar.gz) = 93a7c9fbfb1e1be22f99198a841936914e91c756ef936bd62c716ed957f8cf1ee2149b46ab472cff2752b135d9c7b8912319dc96c9955220f293933147c5cf31
 Size (HTML-CalendarMonthSimple-1.26.tar.gz) = 16672 bytes

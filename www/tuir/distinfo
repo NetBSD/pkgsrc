@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:31:11 nia Exp $
 
-RMD160 (tuir-1.29.0.tar.gz) = 55d833ad20a50b9675f8be750b56ee81cb93b4a9
+BLAKE2s (tuir-1.29.0.tar.gz) = 04f0f9bf903b6dccd9ba622d1b0091ba066cd9eb1926a3b9b92035b7893d3a63
 SHA512 (tuir-1.29.0.tar.gz) = ea7a531c8116d4a1fc6f209a80833289c366ed34811e7d74c977d10a658761e7ef6b6a890f46cfe0089e9176cfb63a25856128937be34bd05d529c8168dd26b4
 Size (tuir-1.29.0.tar.gz) = 17729141 bytes

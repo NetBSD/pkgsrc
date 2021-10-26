@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:05 nia Exp $
 
-RMD160 (HTTPD-User-Manage-1.66.tar.gz) = 162e8449a1a732b37562b91742c5c63a3a83a342
+BLAKE2s (HTTPD-User-Manage-1.66.tar.gz) = e10a170898de1b02c69631acd0e4615f5a0a548e08c606dad256e6eb1864c012
 SHA512 (HTTPD-User-Manage-1.66.tar.gz) = ed3518b62f7c904b88370ba952bc4ba52c26c6e81e19d406cbb78915f671acc82bd8fc535a21640a741494e368ef76001f358a6a3074eb9505337dde3f574c6f
 Size (HTTPD-User-Manage-1.66.tar.gz) = 114499 bytes
 SHA1 (patch-aa) = fc9338ddfdb4e16319fb2e215fbd028326c6077b

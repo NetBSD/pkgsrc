@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:37 nia Exp $
 
-RMD160 (Flask-Babel-1.0.0.tar.gz) = 85d6e2de03cd98e09e0a1177774ba7465ea5323d
+BLAKE2s (Flask-Babel-1.0.0.tar.gz) = 194fbc11314bbc66216341020b3bb772d83d42451ef87a4dbe0dd3a9744720e4
 SHA512 (Flask-Babel-1.0.0.tar.gz) = 3624b2e4877821551267e2719d76b714bda0a1da24e5a3c36d045273039823c4f3bbdf28cad5d8e0d4f0c896578248bfc40aebee720b543e500edf6de607ad8d
 Size (Flask-Babel-1.0.0.tar.gz) = 49680 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:27 nia Exp $
 
-RMD160 (Routes-2.4.1.tar.gz) = 1d3216bf7593c630503895db9eddacc3df869950
+BLAKE2s (Routes-2.4.1.tar.gz) = a93bea68dc32122cbb75da4a52977ec912b1703efbc51df9174bb2113389f0d3
 SHA512 (Routes-2.4.1.tar.gz) = b0566f10ca83af0459e9c59fa2217bdc5ebf349d944396bcb21ffa731ad189c642e409381979cb5da3153630c24f20aa974a99711f16aca9f91413976af2bb04
 Size (Routes-2.4.1.tar.gz) = 182403 bytes

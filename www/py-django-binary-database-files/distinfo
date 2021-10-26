@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:30 nia Exp $
 
-RMD160 (django-binary-database-files-1.0.15.tar.gz) = f981b8f2e2917960db4a534ca2264c95cbc4f0e6
+BLAKE2s (django-binary-database-files-1.0.15.tar.gz) = fcf0cdd3497a3355591c5c164011cf90d27fcb7d87b58a5fe090d6daffb9ff71
 SHA512 (django-binary-database-files-1.0.15.tar.gz) = 5fd0d1ad2cac0832327c635a2e0bb6e9322f3869668f5fefb4fd74eece800a32cc2c81320660939e69cef92a344c03073ef37d32315f46d6870273624de4093b
 Size (django-binary-database-files-1.0.15.tar.gz) = 34561 bytes

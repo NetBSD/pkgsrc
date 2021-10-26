@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:04 nia Exp $
 
-RMD160 (HTTP-Server-Simple-Recorder-0.03.tar.gz) = 9989deeab182ba25487cb410a636b4a3df4a70ca
+BLAKE2s (HTTP-Server-Simple-Recorder-0.03.tar.gz) = b0ad9d988a8985321e885aab1ed141d7346f76d5040ac0f2c7a8da913406d0f6
 SHA512 (HTTP-Server-Simple-Recorder-0.03.tar.gz) = dea502d9d5c9407c3b0e84ca7b2cdd884a603818e0b3c86ac37bee16dcd3cfd71ea5dfdf4b10f2db05403a6e5eac1c6e0fb209715d7e8a2399575588b1f1f9e6
 Size (HTTP-Server-Simple-Recorder-0.03.tar.gz) = 16327 bytes

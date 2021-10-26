@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:37 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:54 nia Exp $
 
-RMD160 (borges-1.1.0.tar.gz) = 30d29e15cc5b68d460822bd0bcd5c3156981e188
+BLAKE2s (borges-1.1.0.tar.gz) = 9a4d5eb5c8929209146677450eaf5cda2ac500bbfb05883458f0d3c9d23a1aa0
 SHA512 (borges-1.1.0.tar.gz) = 728dd0339ec189be18b02ce02150f7aa4284b5c61e92b45cfb9df975bee69a4ae560ea048be35cadf324beb89f06521b8fddf8031794cb45247b4d1a25ade293
 Size (borges-1.1.0.tar.gz) = 230401 bytes
 SHA1 (patch-setup.rb) = d3aa93b26b9c6de9b2209b382cd078d27e2d62f0

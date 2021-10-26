@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 15:08:09 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 11:30:26 nia Exp $
 
-RMD160 (privoxy-3.0.29-stable-src.tar.gz) = c0f43c5bb8f790f59795c89c6ab45fea7189a540
+BLAKE2s (privoxy-3.0.29-stable-src.tar.gz) = a153b3e25d0f286d342bd06384f41030f645e6a3a334a3be67b3edf08323c0a3
 SHA512 (privoxy-3.0.29-stable-src.tar.gz) = 2f483a37d697738815f4c58a775fbf116a34ac5e0e74d19814252c5ff1572350181066d468327189faf20c92d808d551b0017a9525ec98276330ee539554c1ba
 Size (privoxy-3.0.29-stable-src.tar.gz) = 1830550 bytes
 SHA1 (patch-aa) = d5296d7440b92b76c28136453d098c617d4e439b

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:29:17 nia Exp $
 
-RMD160 (mod_auth_kerb-5.4.tar.gz) = 13bebc9f5b77b11b1a3cd3a1197a7535e541037c
+BLAKE2s (mod_auth_kerb-5.4.tar.gz) = ec5333068c812701151febca7b7cd53035576d7510cc2fd800dd27fa010a88e0
 SHA512 (mod_auth_kerb-5.4.tar.gz) = 93fdf0e43af1c24e8c8204d09240b708747068ef99dd8d21b45cb4d132d31e6d582d49ea5e23b905f55cb0d4a20b1ecb58de1bcbfdad1d016e536fc622b63214
 Size (mod_auth_kerb-5.4.tar.gz) = 93033 bytes
 SHA1 (patch-aa) = 64c80c3fe355d114bdd590f7564725354c39567a

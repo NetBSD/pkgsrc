@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:08 nia Exp $
 
-RMD160 (Kwiki-Scode-0.03.tar.gz) = 51362ac255a31ea4ca26edad5cbaefbb7d64b5ff
+BLAKE2s (Kwiki-Scode-0.03.tar.gz) = 4ac0cc9c4196b59c296794f32ebf40aaa143eb451ef223d68fcd0408695ef0c5
 SHA512 (Kwiki-Scode-0.03.tar.gz) = 5da45df07c807db74ce723c304ae5c8d09d8528d3e34228e80cb03201b4b7900fc2cc0f0f99204ca8034fd4b4a76c37c622318a21f26afa66ecf75511af18726
 Size (Kwiki-Scode-0.03.tar.gz) = 9118 bytes

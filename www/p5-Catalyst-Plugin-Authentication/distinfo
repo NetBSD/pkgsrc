@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:07:35 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:29:51 nia Exp $
 
-RMD160 (Catalyst-Plugin-Authentication-0.10023.tar.gz) = cd6ee2378e435dd43fd3367f33f8a1fbc7668cbf
+BLAKE2s (Catalyst-Plugin-Authentication-0.10023.tar.gz) = 8170ef453692a02cf55841f65a7fde89fdec01a4a2ee1ef747d9bde096da7938
 SHA512 (Catalyst-Plugin-Authentication-0.10023.tar.gz) = b0882ea35409226e1592b5f5473bdf8fdf44a1ee228837d1eaba082a94f129315533271c9077f8895af19a695c279e3f5aa649c6100b2fa17a0a0b04884c279f
 Size (Catalyst-Plugin-Authentication-0.10023.tar.gz) = 80041 bytes

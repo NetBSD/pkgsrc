@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:51 nia Exp $
 
-RMD160 (web.py-0.37.tar.gz) = 8297ec3d2b87e209286562f523027cc94adf0f64
+BLAKE2s (web.py-0.37.tar.gz) = 397b9d3361e1f7b97de1884040a399403d5289b595fdc19e528209b9027766ad
 SHA512 (web.py-0.37.tar.gz) = 766e24d9df6ab1c3a214156794a19c23fcb16ca7a4ee7586a7723f802eab2ba0b8cda4653c2504ef63f773609436ac12dfd40bbe6cf20e2f93bf95493f041628
 Size (web.py-0.37.tar.gz) = 90232 bytes

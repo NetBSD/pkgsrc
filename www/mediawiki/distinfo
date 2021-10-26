@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.63 2021/10/07 15:07:22 nia Exp $
+$NetBSD: distinfo,v 1.64 2021/10/26 11:29:39 nia Exp $
 
-RMD160 (mediawiki-1.36.2.tar.gz) = dd386094189fd0c58d34fa7b5c638fae70dad306
+BLAKE2s (mediawiki-1.36.2.tar.gz) = 8c9b2ecbec252b3b0908267ffe9348161c209a928b9303ec9fd63f077182c9d2
 SHA512 (mediawiki-1.36.2.tar.gz) = e4f18425dad547c547cac4926d5bcb2f996fcedc5df84b1a55773954c9c98ea0db075e65d5352ae92e2040b5154393c0dfb4d25e48a44272233008b61d29df78
 Size (mediawiki-1.36.2.tar.gz) = 49653546 bytes

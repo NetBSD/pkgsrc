@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.139 2021/10/07 15:07:16 nia Exp $
+$NetBSD: distinfo,v 1.140 2021/10/26 11:29:34 nia Exp $
 
-RMD160 (ikiwiki_3.20200202.3.orig.tar.xz) = 3062c04b31e0ca6aea30d47405a6d47eb80127dc
+BLAKE2s (ikiwiki_3.20200202.3.orig.tar.xz) = 2a29fcde488ca19f3977450b73e423808568cb65938a4ad7ffd4ff5abd64a5b5
 SHA512 (ikiwiki_3.20200202.3.orig.tar.xz) = a1d89ccc0d02cddb3ef53c4c4a4a3349139d558fd4eb418263551a48cb635ed29ef430f8276ef6b42486a9232706908752e15e88590e919db6665e1a8844a4e5
 Size (ikiwiki_3.20200202.3.orig.tar.xz) = 2689636 bytes
 SHA1 (patch-IkiWiki_Plugin_highlight.pm) = 703510899170218bf72af6794fdb10f7f29727cb

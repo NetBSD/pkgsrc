@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:26 nia Exp $
 
-RMD160 (pup-0.4.0.tar.gz) = 8b34a54dad0aac9f633d02ac31e81715f9ce5ad6
+BLAKE2s (pup-0.4.0.tar.gz) = 2e5a350c641dbf14c63715aedfd3c6852d897dd3437e9efe651f4198c00c1c66
 SHA512 (pup-0.4.0.tar.gz) = 5228a283cdbc6425888b08154873e059f5808efd68eb86880d15572398e50b0a431922e6ef5e6acf04bc18c95bfd793590d5df2eccb9a041a64dc03731ec1874
 Size (pup-0.4.0.tar.gz) = 2762349 bytes

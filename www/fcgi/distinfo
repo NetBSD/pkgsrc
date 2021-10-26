@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:29:26 nia Exp $
 
-RMD160 (fcgi-2.4.0.tar.gz) = df5c01b197bc72fca7abee184a34ec14253dd0f0
+BLAKE2s (fcgi-2.4.0.tar.gz) = b7ad23adc8b6fda0a6c09d0dece60bb9a5cb60eada5565212424757d1dbd2024
 SHA512 (fcgi-2.4.0.tar.gz) = 38164d11112e834b30c6f809da4e184021e8d22ec8db2c49ad827895a75b99dc1824b94831304aa0ae1174176fe64d02a12882b1a00b780119600bdc39a90927
 Size (fcgi-2.4.0.tar.gz) = 468682 bytes
 SHA1 (patch-aa) = 13577b77ae3d124a5f27be0e456b470180c99550

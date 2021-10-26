@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:38 nia Exp $
 
-RMD160 (loggerhead-1.18.1.tar.gz) = a03a119ff82470cba2bccf215bce8c468daf7357
+BLAKE2s (loggerhead-1.18.1.tar.gz) = bcf17708a5ef3ee6eb1ea07bbc9f69bd7e848ae8f19cdcb75db261c0452be994
 SHA512 (loggerhead-1.18.1.tar.gz) = d265b3470bd744266ae8ee4c90a749b875b528f88924bae28f03417cbe460b82ea8649b00371b50dad679be386d56063f02a78b0f73466edb04aa75612df79e4
 Size (loggerhead-1.18.1.tar.gz) = 695475 bytes
 SHA1 (patch-aa) = 8cc7793fe682e9ed690be784eb510020b22fca39

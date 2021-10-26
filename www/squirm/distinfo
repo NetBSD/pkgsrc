@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:31:09 nia Exp $
 
-RMD160 (squirm-1.0betaB.tar.gz) = 821ee338c0c1b5c17fbc4d41a7ccfcec5009f816
+BLAKE2s (squirm-1.0betaB.tar.gz) = b7654600571013857218adf126a0b073b9fd1db6aa83d05bf6ec78f35a33b2a1
 SHA512 (squirm-1.0betaB.tar.gz) = d8dcc3a4775ef06b567328b13c245b64e04503c27b1d32ea3cc720e126bf9925148e4048c4940c0ce37bd900bebe6858108a36ba68ee8df464062daca2245cfe
 Size (squirm-1.0betaB.tar.gz) = 318142 bytes
 SHA1 (patch-aa) = 164ddea2e0253de018924ec8ef5dadfee5bf1ffa

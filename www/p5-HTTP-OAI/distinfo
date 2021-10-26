@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:07:47 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:03 nia Exp $
 
-RMD160 (HTTP-OAI-4.11.tar.gz) = 43307fffc53e73df50a7de7fb5c30fcd88d6668a
+BLAKE2s (HTTP-OAI-4.11.tar.gz) = 035c829d715daebc2edb7a3547446dc6dd33f41aa532fb04a7f8e278c0360ec4
 SHA512 (HTTP-OAI-4.11.tar.gz) = eb78b9c18e60b36e7346bc1463e21d5a0959b1660afe20dde2260ce8002dc176f197d338130371399b46e098ebcf52be4c8ebf14d3dc128f675a0dce4693b838
 Size (HTTP-OAI-4.11.tar.gz) = 46152 bytes

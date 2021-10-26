@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:46 nia Exp $
 
-RMD160 (recaptcha-client-1.0.6.tar.gz) = 7dffe66b7fd37f5be2a7d7b2bf24c3978f46c8e9
+BLAKE2s (recaptcha-client-1.0.6.tar.gz) = 88ec291b8106af65e5b6422ec9ece2661b2937a12c723597de33da1ac44fa753
 SHA512 (recaptcha-client-1.0.6.tar.gz) = c41954d722181ece934701df0701101b31cad74c15a123c2c641e671e5117a27ea23e1f52aa9126d7ddfd038438f951d45ec4112323306a91d81072e31b3f5bb
 Size (recaptcha-client-1.0.6.tar.gz) = 7389 bytes
