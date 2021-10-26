@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:36 nia Exp $
 
-RMD160 (xcursor-capitaine-2.1.tar.gz) = c795214e8877ea9514d59440769301a479566797
+BLAKE2s (xcursor-capitaine-2.1.tar.gz) = b35a3df5b1b35b8d35273d1134957b3182179732e6034b9095c4c322da0651e7
 SHA512 (xcursor-capitaine-2.1.tar.gz) = 3ad5bb93a597931bbf34b7382ce534cf9019e286e52f51541acee50ec5af77466aaa0fa8e349feb15aa3834b474846ed2203cc3f20a5634d2e6fcbd0cbfc71ad
 Size (xcursor-capitaine-2.1.tar.gz) = 514353 bytes

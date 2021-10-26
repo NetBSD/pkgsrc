@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 15:13:39 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:33:55 nia Exp $
 
-RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
+BLAKE2s (Daemon.README) = c333f7f722cabc6afe2918ff7d24ac9e46dce3b7ec0d83f0ca9782cca005b336
 SHA512 (Daemon.README) = 8aaf704a95c7cd25c85c4e0d789ed050b555f3ec0a3c11754b79d8b118b68c32d0eac1fbc3022124b10a7c588e78b592e77ad2f718ab4120a95b8859ca94fa5b
 Size (Daemon.README) = 2191 bytes
-RMD160 (Daemon.png) = eb317dc7ac501ee03aac1276856eee14674e3da7
+BLAKE2s (Daemon.png) = c54bff4509f43b33518c168e64b570d8a31645a57e829c5518295a9660fe0479
 SHA512 (Daemon.png) = 60a5406526f351644bb2c0bfd3d0b04ffe652bac9adf156e03c4f3c143671527db383e90e376475cfdcae5a94d1d39bd0a18318e46dd27c7ee1f89a08db52284
 Size (Daemon.png) = 15725 bytes
-RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
+BLAKE2s (NetBSD-flag-1.0.png) = ca708b84c3dc2620568bafdda743403215c773432f0e082ddd40a059092b5a1a
 SHA512 (NetBSD-flag-1.0.png) = 79921ca035a3aafba9f9c750fd9793d146ffbe64238cd76a11eab72d98f6eb89844efabb17f2b8c49bc5e638c7fbfc61ae29c68b862abc1aecd545ea65e61654
 Size (NetBSD-flag-1.0.png) = 4532 bytes
-RMD160 (kde-workspace-4.11.22.tar.xz) = 0e21e83765194f5ab7b06a725d70f1d791293b8f
+BLAKE2s (kde-workspace-4.11.22.tar.xz) = a66f86651cce2e5daa68f5cd38e5033d8849c81ed47b8dd2ccc8ef345f0f4f86
 SHA512 (kde-workspace-4.11.22.tar.xz) = 9def2cc8d1e597259966cd6cc44e9aad7ebe2c7cde5943e362c6782d1344e7da4fff0dddd0fe0c948bca159dba128d8a36006e1ae409415cd22f74955d0a9b95
 Size (kde-workspace-4.11.22.tar.xz) = 13553668 bytes
 SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead046a8e71

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:12 nia Exp $
 
-RMD160 (lxrandr-0.3.2.tar.xz) = 489dc2b7d20e3e40b47a182bafc5a47f29eb897e
+BLAKE2s (lxrandr-0.3.2.tar.xz) = 41c5c4841386a6aac9df1feb5768fb5ca8597f13e8b71ec27d7ff4271be28c5f
 SHA512 (lxrandr-0.3.2.tar.xz) = 9f00f885e4af3544d9bf8a7581d5b9e3049c1fac174c119dda8c85f2f94aa7be241b6e06e5fe86596a0fb65a38bfe1983ced91c064339a60b19f506ed337ee4f
 Size (lxrandr-0.3.2.tar.xz) = 134072 bytes

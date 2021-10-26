@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:13:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:05 nia Exp $
 
-RMD160 (libXdamage-1.1.5.tar.bz2) = b397ab11ebc0462a77d423c8a322c72cb78bc80c
+BLAKE2s (libXdamage-1.1.5.tar.bz2) = 8de461d50f77c52d7a6245fd10fd7de4285597c806ebb64a4b233581120fd7e1
 SHA512 (libXdamage-1.1.5.tar.bz2) = a3ca6cc33b1727f717a3e2aa5593f660508a81a47918a0aa949e9e8fba105e303fe5071983b48caac92feea0fe6e8e01620805e4d19b41f21f20d837b191c124
 Size (libXdamage-1.1.5.tar.bz2) = 303750 bytes

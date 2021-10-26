@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:14:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:43 nia Exp $
 
-RMD160 (xf86-video-suncg14-1.1.2.tar.bz2) = 661b68196e8d57bc7aa633308b84bf7a808e5f6a
+BLAKE2s (xf86-video-suncg14-1.1.2.tar.bz2) = 77f7ddf1fa2e35a7dc01039354bb9b77a5813585d015246c2bd448057428dd5d
 SHA512 (xf86-video-suncg14-1.1.2.tar.bz2) = 685a2675114e471ff0bc82b4ce73a18e5486f03621db148f3a7ce828e9aa62682d7b0ed608da40773e264957bb420f3d8920ab352d10fb0452540986b6b7d72f
 Size (xf86-video-suncg14-1.1.2.tar.bz2) = 281915 bytes

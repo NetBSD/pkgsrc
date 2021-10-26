@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:13:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:33:52 nia Exp $
 
-RMD160 (GTK2-Wonderland-Engine-1.0.tar.bz2) = 71bbe0cf864c51b4efc7471b061132e7cfba90db
+BLAKE2s (GTK2-Wonderland-Engine-1.0.tar.bz2) = 53a2c6720bee2809754a8fdc659f3ac090889f841dce38b61bfbc848e61adccf
 SHA512 (GTK2-Wonderland-Engine-1.0.tar.bz2) = 0dd6e6beb6b2d7cf868637288b8460d7f927d3063ecd8330b543976bdb8636ba48bfca787c106673a99d06583906965f77dffeab3f97e99dd038f19a3e1ee664
 Size (GTK2-Wonderland-Engine-1.0.tar.bz2) = 133187 bytes

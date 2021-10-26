@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:19 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:34 nia Exp $
 
-RMD160 (xcb-util-0.4.0.tar.bz2) = a4e700fd34b4fc5792f93155d87f738d227b3f25
+BLAKE2s (xcb-util-0.4.0.tar.bz2) = 111ca5142227086e9840fbbfaa0b987aeb2626f1d8cb38646c92c7154a52cab5
 SHA512 (xcb-util-0.4.0.tar.bz2) = e60aaa6f582eacd05896c5fd7c8417938318a1288146f3a5b339f77eed24e211c6099963f8813daa621c94173d2934228936b491c0ed79b09a8a67d835867d0e
 Size (xcb-util-0.4.0.tar.bz2) = 297412 bytes

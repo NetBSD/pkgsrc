@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:14:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:34:42 nia Exp $
 
-RMD160 (xf86-video-mach64-6.9.6.tar.bz2) = 1276b027d1caa629cedb350d1ea251fa31442d1b
+BLAKE2s (xf86-video-mach64-6.9.6.tar.bz2) = 5d21fa7f430057db83348720d271850a4c5f1844447bb436bc403f99b3554eca
 SHA512 (xf86-video-mach64-6.9.6.tar.bz2) = 687f6ac60491b704d5c4788463763d2f4bf725611e10bd2163156963fe0a8fdbffe0a1b7c737eff131f01759e43b5ec3544a7dabe66a67e85b286dcb969da2f1
 Size (xf86-video-mach64-6.9.6.tar.bz2) = 537768 bytes

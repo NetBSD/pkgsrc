@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:14:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:29 nia Exp $
 
-RMD160 (startup-notification-0.12.tar.gz) = a0251adf67a804b7b22f41eaabb8e3d59a4c1856
+BLAKE2s (startup-notification-0.12.tar.gz) = af591dea319ebb47b40385d73373b05661f1ead065fa97ac8f06d815f39e6be4
 SHA512 (startup-notification-0.12.tar.gz) = ea1246acdb50dafd9ced9914ec3c8f0d499c0ca3cfd447b43a444c768a6e9ea7135e5c42d9ca0089354698ac235bd86d42f12c70a3a17c9c79f998c07461f7ab
 Size (startup-notification-0.12.tar.gz) = 355285 bytes

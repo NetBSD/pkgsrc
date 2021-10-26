@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:14:02 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:34:17 nia Exp $
 
-RMD160 (oneko-1.1b.tar.Z) = 4e83faa1c4ac134bee436b291a50586146b30741
+BLAKE2s (oneko-1.1b.tar.Z) = 58807f3b109c075300497b760feff5c504c8c7f96f1bfd308aa3ca0a67e0ce75
 SHA512 (oneko-1.1b.tar.Z) = d99a20dfe28be3ad3377623e19f890af5bd9e338f90b079de92c2d03c0f10d5ef0a397346b6045e68eb2ca5ab37b839448dc72b79d6cb8de1a176701b006d3c6
 Size (oneko-1.1b.tar.Z) = 76477 bytes
-RMD160 (oneko-1.2.diff.gz) = d173dcbdee66ad09dd2345ecc6c266d08d6b0c19
+BLAKE2s (oneko-1.2.diff.gz) = 5201a9bab3fea37c7c23beee1fcfb1b5cb742e61ecd55df95275d7525439839f
 SHA512 (oneko-1.2.diff.gz) = eca934d174dd924ad279a103ca81cf3eea97e24f0bf59df4dd7411485b67f898f76929fec735b46f6b145ec3120707e09c21b3d6b468db276ca0076a45ec552f
 Size (oneko-1.2.diff.gz) = 12637 bytes
 SHA1 (patch-aa) = d4818a97e0f8c0c3ef41b31019d8e0ac18190a5f

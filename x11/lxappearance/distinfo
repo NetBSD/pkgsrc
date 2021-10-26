@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:11 nia Exp $
 
-RMD160 (lxappearance-0.6.3.tar.xz) = ff6f9ddddf57fbcd3afbabb6b466552a2507207b
+BLAKE2s (lxappearance-0.6.3.tar.xz) = 63dbaff1c7b0d4d8d9a858deca0c935e63a60a4642e1133c57d620869c9ed6ed
 SHA512 (lxappearance-0.6.3.tar.xz) = 035cc952a33ac25408a4158cb4e745b17af3f29b5ceedfbe6b37235d16c801658403e862cd35ad7c8ca20fe6186fab1dce74a6e8d3b2eec12a30d532fc21662c
 Size (lxappearance-0.6.3.tar.xz) = 165656 bytes

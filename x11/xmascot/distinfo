@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:52 nia Exp $
 
-RMD160 (xmascot2.6a.tar.gz) = 0e4c18ce075f89e8ce372bea4694fae45df69afb
+BLAKE2s (xmascot2.6a.tar.gz) = 249bbf5a999542082d44eea6e743c2fba729dea2c03abfef8eb97aa6e1331b69
 SHA512 (xmascot2.6a.tar.gz) = 2c2acd06ae18dd399f04f29438fa61f29251ab4197d510a253dd92b518c84f36620a4dbde4ec30166e3310940d5775850b8ac49d4e6a18eba9e15e430ffe064c
 Size (xmascot2.6a.tar.gz) = 238536 bytes

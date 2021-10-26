@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:04 nia Exp $
 
-RMD160 (labltk-8.06.3.tar.gz) = c77826d6fc658756a25a52d9930e5edc0fa19b65
+BLAKE2s (labltk-8.06.3.tar.gz) = cfe50b9af4423b61f822acfd384db3203694b727252937d050f2b425d4bb83e8
 SHA512 (labltk-8.06.3.tar.gz) = c2002d519c1fcfdd2b13ae6d5836880273dac2660f07f6ee0e7bb932e3fec6f5cc959202efdf712758a17d24dbe50c3f6697c7b125e3123fa8153130d7ece979
 Size (labltk-8.06.3.tar.gz) = 369924 bytes
 SHA1 (patch-browser-Makefile.shared) = c974757b4c05207bc0ad0ad70dc668e10bfa8396

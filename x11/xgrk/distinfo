@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:49 nia Exp $
 
-RMD160 (xgrk-1.6.3.tar.gz) = 70c6f41f29f04ccac5662544cfb45e10dbc5eb7c
+BLAKE2s (xgrk-1.6.3.tar.gz) = 8db12be7d104e0dcd53085ad3c1a81741a412273ae08a5fc11c4de4a97b953f3
 SHA512 (xgrk-1.6.3.tar.gz) = 929be2fcc2a08d537a0b0c4991849a9d5c377e89a7e8a305b7247c0efc0cd821a93745ff0f27b6210fd4085c06cbe47cd42f3e3548bd9f1114f75c4a58aa22f2
 Size (xgrk-1.6.3.tar.gz) = 25039 bytes
 SHA1 (patch-aa) = a0031b6ddda14c9b9803c2e2b18df7a5fdf17f3b
