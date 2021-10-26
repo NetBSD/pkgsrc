@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:49 nia Exp $
 
-RMD160 (tex-chemarrow-17146/chemarrow.tar.xz) = 5a097aef74f1a1b5ccbc160279156b19329d13f1
+BLAKE2s (tex-chemarrow-17146/chemarrow.tar.xz) = dd4cb2c513cb5e709d683a2e14017d3d4e4ebcf85562ff32418a4be2d4095faf
 SHA512 (tex-chemarrow-17146/chemarrow.tar.xz) = 8fd7aa4c0e8988fbbee8ce1cdc7a5fe961315bcde1778e422eb516940d03c2def97c59f229668c38244799d80febfc239d07b9da1fc5b9f3823d3cb8eece9db6
 Size (tex-chemarrow-17146/chemarrow.tar.xz) = 5200 bytes

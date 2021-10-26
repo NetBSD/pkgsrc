@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:51:37 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:14:48 nia Exp $
 
-RMD160 (tex4ht.doc.r59459.tar.xz) = f448c33fd832fd60f4ab800f806d0fa97f32a4c3
+BLAKE2s (tex4ht.doc.r59459.tar.xz) = 926727d0617d6287bf124ff5e495f5a64b333fbc077f295fc9954f3f605bf819
 SHA512 (tex4ht.doc.r59459.tar.xz) = de7c2fb855010f62d8dc7dda39826a549aa38daf5acb9e89abf19cf26724db5ac25f362a490058a1456a056ee9954eaa52985b9a05dcb89d6a947474593a77cb
 Size (tex4ht.doc.r59459.tar.xz) = 136388 bytes

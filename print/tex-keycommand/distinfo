@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:47 nia Exp $
 
-RMD160 (tex-keycommand-18042/keycommand.tar.xz) = f297e5b95de5ab015cb3081f9873ade2eef0554a
+BLAKE2s (tex-keycommand-18042/keycommand.tar.xz) = da74b5c7cf1d240ce10041871859ae908143d2c79a2ce08017469464cdce8d27
 SHA512 (tex-keycommand-18042/keycommand.tar.xz) = b521d46425102c3b7bb30df43f2bfa5178376a104aab10bd6a7010db591401df252e90b5a56408975d0fc37cf593df2eaa50412db1ecb3ef5d12b4940b1c45e2
 Size (tex-keycommand-18042/keycommand.tar.xz) = 4900 bytes

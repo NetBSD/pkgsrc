@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:12 nia Exp $
 
-RMD160 (tex-envlab-15878/envlab.doc.tar.xz) = be96f31c5c99b58c66705b5cbb455f93533f2eaf
+BLAKE2s (tex-envlab-15878/envlab.doc.tar.xz) = 88c1a42ba7a64efa5f4a6f2d06ee5821f9ef6ea18b9a9569ac346fdb22561a7d
 SHA512 (tex-envlab-15878/envlab.doc.tar.xz) = ce8fa9c85cfae12c4a68ee0f860e8017836badc95fe39f66cf366b4dcef407cb3717781595748f37fe023b3d6647e47b1e12325079e31247ec9df7beff67b394
 Size (tex-envlab-15878/envlab.doc.tar.xz) = 341332 bytes

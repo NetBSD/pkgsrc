@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:49:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:12:12 nia Exp $
 
-RMD160 (pdfjam_208.tgz) = 98452c703d3d799e8562763d2d828aa64e63b893
+BLAKE2s (pdfjam_208.tgz) = 1ec1db292b8305b4820478f5ca71ecd13a538b54a040ea558fea05e36bcc2693
 SHA512 (pdfjam_208.tgz) = 728c8d304c6d2af773980d20ef4a4be6e0a5dad286ad8cd00be9b1687f5024e00032a750c10c74dcd24431f081368d02b76f03cc5bb1c8725a060cd70be0fd8c
 Size (pdfjam_208.tgz) = 180725 bytes
 SHA1 (patch-bin_pdfjam) = c67988ea352e00bdcdce46b2d139b417b54579f0

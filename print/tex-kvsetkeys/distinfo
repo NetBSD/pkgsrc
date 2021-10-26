@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:49 nia Exp $
 
-RMD160 (kvsetkeys.r53166.tar.xz) = 84213cf5e17b4f9710d3790756ac9187da812242
+BLAKE2s (kvsetkeys.r53166.tar.xz) = 8b42012eb2dc61812e67be6a90bc0aa8ca8475d52e63037881fcd891637f81c0
 SHA512 (kvsetkeys.r53166.tar.xz) = c5e117a46ab54485b7748bafd5cfd381d28073564b571fd1cda78da70b42dcf48fe054538323cdee7e784aff91cb76dd24361908a4c97213df315f6cb91af583
 Size (kvsetkeys.r53166.tar.xz) = 3568 bytes

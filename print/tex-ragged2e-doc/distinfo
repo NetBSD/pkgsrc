@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:30 nia Exp $
 
-RMD160 (ragged2e.doc.r57638.tar.xz) = d58d1bb9e73d260a4fbee446e342cde56fd66bd5
+BLAKE2s (ragged2e.doc.r57638.tar.xz) = e0d9e13e07382c42d5356f9ad760b4c08e0f1b1d9f24af04e5a3c7aba644a6f7
 SHA512 (ragged2e.doc.r57638.tar.xz) = ecc36350f01e86f63ca54a2ae5ca1ccd17851756731af3997d9b172753673f39c05e82d9b3f736896b2be1c971bdd0c700678a6d44aec2226a7f57bcdc085e51
 Size (ragged2e.doc.r57638.tar.xz) = 664008 bytes

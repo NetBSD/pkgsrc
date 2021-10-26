@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:43 nia Exp $
 
-RMD160 (tex-subdocs-51480/subdocs.doc.tar.xz) = 849608029d458e5e60957130b74b2ce70bc45852
+BLAKE2s (tex-subdocs-51480/subdocs.doc.tar.xz) = 2bd49f35c28b491cc9f4aa7eac0db45459f55bafa436de633a4243b4870df5d9
 SHA512 (tex-subdocs-51480/subdocs.doc.tar.xz) = 46bde174536e96bb78ba40990ae3b4b8cc1fe2ef26803b193afe2fccfc05bdb6644a548a712522596786847a8fe6071a52599a17ea52134bbed2e5495bbc401e
 Size (tex-subdocs-51480/subdocs.doc.tar.xz) = 1160 bytes

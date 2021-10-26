@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:34 nia Exp $
 
-RMD160 (babel-swedish.r57647.tar.xz) = 0ada93b03d05018e98367ace72d3db433abb1fd6
+BLAKE2s (babel-swedish.r57647.tar.xz) = 154d743b133dc19e2f8991b0942fe1f3065c24a3ca5d8b0a5add33524644c469
 SHA512 (babel-swedish.r57647.tar.xz) = d3ccb281b9a5405866b0a4621cf0ea4fb75a085041de5d52ef0eb6db370cafacab05d1eebfef21f9558f4110e19b739e6c5cc424709e06640e8290a9c01722d6
 Size (babel-swedish.r57647.tar.xz) = 2700 bytes

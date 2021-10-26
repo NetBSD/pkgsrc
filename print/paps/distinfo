@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:12 nia Exp $
 
-RMD160 (paps-0.6.8.tar.gz) = f8dda178279a4e5903b45b803e8a3ae42df3afdd
+BLAKE2s (paps-0.6.8.tar.gz) = 94ef09ac9250601a698c958dbd8942b770e8623250461911cb1fc476515ae03b
 SHA512 (paps-0.6.8.tar.gz) = db657d90179e11fe42bbcdbebe09a84f1927c99d0b539c9e29b66b3cb8ffcf33ff500c9d81835ae5a0880382bf8f24801f04742517b76b8e005b125a139d8bba
 Size (paps-0.6.8.tar.gz) = 460062 bytes
 SHA1 (patch-src_libpaps.c) = 5bb4d91497500bfe53f25f03b33dff75c3431028

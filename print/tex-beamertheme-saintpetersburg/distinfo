@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-saintpetersburg.r45877.tar.xz) = 96a4b413a67d972fb21e045477d34dabc06fa0b7
+BLAKE2s (beamertheme-saintpetersburg.r45877.tar.xz) = d9a13d510e1e4bb35df371d63cb2f09d93a846a578f970c8ef2caa19320ae5b1
 SHA512 (beamertheme-saintpetersburg.r45877.tar.xz) = c258a4eee25ccdb2437625982e54def90aec87be003f697a47334be52b85ef223b377c7fc57d49c889121caea664fcd6353015ad2e62f5bee5379bc222958f53
 Size (beamertheme-saintpetersburg.r45877.tar.xz) = 3552 bytes

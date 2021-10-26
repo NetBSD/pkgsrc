@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:48:58 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:12:09 nia Exp $
 
-RMD160 (libpaper_1.1.28.tar.gz) = 36b669b51e81e1483232f73726952491304ab34a
+BLAKE2s (libpaper_1.1.28.tar.gz) = 79cd19a24dd124e6ac55ec7f926333492e0ed2a4e55f74824895cab8b97e24a0
 SHA512 (libpaper_1.1.28.tar.gz) = 3bf6ebb0af89931d2f72ea4a09a7fa958b2facda5f238983ec7bac39652e08614b33f0de3af74a03457b2a4203eee4950bf18a4b726e79aa64093ace6a1fb0bc
 Size (libpaper_1.1.28.tar.gz) = 42356 bytes

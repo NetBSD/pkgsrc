@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:46 nia Exp $
 
-RMD160 (tex-jurabib-15878/jurabib.tar.xz) = a8087db693a0a593382c6e092b2affe71285d638
+BLAKE2s (tex-jurabib-15878/jurabib.tar.xz) = 553b2e0fd9e77017a72b6ce4ed092c1d6965caa03951ba44189b7426d2082731
 SHA512 (tex-jurabib-15878/jurabib.tar.xz) = ce3153b636418557e0f6038e8a2d16e5f7079f70e45b88e0ba85ce84e3bbd3aee682888fd844f059e9f51852aa64cb01bed1108bf0f1b79a94c671fc30fbfc5b
 Size (tex-jurabib-15878/jurabib.tar.xz) = 51592 bytes

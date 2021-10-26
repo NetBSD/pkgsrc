@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:21 nia Exp $
 
-RMD160 (tex-acmconf-doc-1.3/acmconf.doc.tar.xz) = e96ef6b0cf9a8d1a649008025579c84252aa3a15
+BLAKE2s (tex-acmconf-doc-1.3/acmconf.doc.tar.xz) = b1e56924d9b59a6bcefb1572e681a52f7e4a7879e7190ec8353cc2ccf18eb60e
 SHA512 (tex-acmconf-doc-1.3/acmconf.doc.tar.xz) = 134a265c7bc285ea06d278e4dcd8ca45ec9b848e2693bbb5c9fa5e1187242afe1469422b0f2c6316e3774ab70654f896d9356229ef047f20ec7d41b912cf296f
 Size (tex-acmconf-doc-1.3/acmconf.doc.tar.xz) = 89956 bytes

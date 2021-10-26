@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:52 nia Exp $
 
-RMD160 (tex-cjkpunct-41119/cjkpunct.doc.tar.xz) = a2d923aaef3029f71c8a3601eb7d03d5cf594a90
+BLAKE2s (tex-cjkpunct-41119/cjkpunct.doc.tar.xz) = 2c76adad81be602f3677db1d98d59533f9964119964d13d7ac3da4f83c5f5de0
 SHA512 (tex-cjkpunct-41119/cjkpunct.doc.tar.xz) = 0972bc9fee331f74193bd1259459d89f3cdbfb26af356001c63d0bb6f06f5cbe7e534e8ec0f7a6c58cd406bb6fa8569df745474baa88dee09434e9ef0e850a17
 Size (tex-cjkpunct-41119/cjkpunct.doc.tar.xz) = 143536 bytes

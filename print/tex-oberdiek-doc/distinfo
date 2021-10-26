@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:51:01 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:14:12 nia Exp $
 
-RMD160 (oberdiek.doc.r56291.tar.xz) = 0ad829ad04961be8dec9ead0110415c58a99f25c
+BLAKE2s (oberdiek.doc.r56291.tar.xz) = 910314529042250f431e803fd7a65d7f99f44cefa274a12fabf477106273d7c9
 SHA512 (oberdiek.doc.r56291.tar.xz) = 631f11d270e5bd908b3d1c51d96205046793e529ba18a5e442280e6cbc1cb67850dab25984747f3871cf200dbae340e19cf327a21d5b66fa55140e1d76ae1503
 Size (oberdiek.doc.r56291.tar.xz) = 8949564 bytes

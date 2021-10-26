@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:12 nia Exp $
 
-RMD160 (tex-numprint-27498/numprint.doc.tar.xz) = 2454a5fc9f26563d8a23194378aa5541d348dd9b
+BLAKE2s (tex-numprint-27498/numprint.doc.tar.xz) = 675ede63bef36b022e9b076f60569745a7a6929150dba9ca38f2b3b1b58b4543
 SHA512 (tex-numprint-27498/numprint.doc.tar.xz) = 9514d5fff2d866efff7b0d6d4899dcebbfd4030345e86519380dbd30eae3960593e9d7185c1c876f7dfb08f6687cbdc52ff77f10811efb6f95c19d3e8cba6a2e
 Size (tex-numprint-27498/numprint.doc.tar.xz) = 1178604 bytes

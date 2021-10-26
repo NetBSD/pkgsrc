@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:00 nia Exp $
 
-RMD160 (magicnum.doc.r52983.tar.xz) = 3256e396ff620cfd63663d8febe69ac745e27723
+BLAKE2s (magicnum.doc.r52983.tar.xz) = 8eedbc2314bc1e68c264caab9c07b7b9f927b4bb8e115b312086c47bcf49ef75
 SHA512 (magicnum.doc.r52983.tar.xz) = 084bdeb7d422a5e79f4a53864ea0c94b09962e159e103fe3ea77163a9a549605f7139bb2ba9d1a57877b3453162a99470f48a691ff78289a1caa5389b2a7f67d
 Size (magicnum.doc.r52983.tar.xz) = 322116 bytes

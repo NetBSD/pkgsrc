@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:18 nia Exp $
 
-RMD160 (pdfcolmk.doc.r52912.tar.xz) = 2bfd007cee3842444df1fa435f066a30d16a9787
+BLAKE2s (pdfcolmk.doc.r52912.tar.xz) = 3203132534573e0b8ee281da0b3fde09632d364cf365f29d5f4da3ae34bc2c62
 SHA512 (pdfcolmk.doc.r52912.tar.xz) = e2bb876ad74381fb441d870422186f4cee76bb4cb5f721334b7119fe83b2ab0565ffd5300575ab52e8d25a263d87739a1e114cffed44ab3e25d8d5cff2006456
 Size (pdfcolmk.doc.r52912.tar.xz) = 468 bytes

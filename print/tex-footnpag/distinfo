@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:24 nia Exp $
 
-RMD160 (tex-footnpag-15878/footnpag.tar.xz) = 0e40683db20443067777c7e5734760131f78f4f2
+BLAKE2s (tex-footnpag-15878/footnpag.tar.xz) = 9bfaad09196abe37e87b7a02049339d62ea55850dc4cb21b03092b106ef45e5f
 SHA512 (tex-footnpag-15878/footnpag.tar.xz) = 4d0176b9a6f0b948d94eda82b60d5f9f39ef8a91298af003bcb6b9be11e9baf89a4d39b325a1cb488d1831d531bcbcea68a83b128a644a3e2110b9456c16c2ec
 Size (tex-footnpag-15878/footnpag.tar.xz) = 7716 bytes

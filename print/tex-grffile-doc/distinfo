@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:30 nia Exp $
 
-RMD160 (grffile.doc.r52756.tar.xz) = aea17d801ce66c01ea179199a76051af0dbaf00c
+BLAKE2s (grffile.doc.r52756.tar.xz) = ef02a78ecddfc965276cc8d2e60f1f9d9183fe09cdf0d6d239d0cae1e33b2d50
 SHA512 (grffile.doc.r52756.tar.xz) = 2f2285ad44d0c585cd02b85359eb31f885f7c704f6da5f906240c1094ef8d347d33ba6beb31cf34e09a5e39e618a27a7ea263a63d6a887638d8f761e3cd4b61b
 Size (grffile.doc.r52756.tar.xz) = 350320 bytes

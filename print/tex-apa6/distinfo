@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:26 nia Exp $
 
-RMD160 (apa6.r53406.tar.xz) = df6b5cbbe899a500eb3d39d4b5d11bbbae5559f5
+BLAKE2s (apa6.r53406.tar.xz) = ed5827ccfc4ed294ca9f87c0981d6188eda08685fef6d4e8172e7e307124514f
 SHA512 (apa6.r53406.tar.xz) = 76a307c077ebec0ef984e9296018e1b91a51e95db8d1955924a373e82feb5152ce453d1388e706e6b0ca46f3dcc71a8981bf68848a2022cd19e179fc9ecc0bee
 Size (apa6.r53406.tar.xz) = 13760 bytes

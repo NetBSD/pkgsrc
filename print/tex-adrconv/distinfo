@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:22 nia Exp $
 
-RMD160 (tex-adrconv-46817/adrconv.tar.xz) = 3fc5429141ae393fa9e1c35a17ed2f4136aa8e76
+BLAKE2s (tex-adrconv-46817/adrconv.tar.xz) = 109e9114f532742c7d371521f60b1be9ce07e31d09d88e363608dcdd375d92ef
 SHA512 (tex-adrconv-46817/adrconv.tar.xz) = 623d8782ef34f12ed89e8e621c52e07e246352f6e6a397eb587379ebc1d7dd44a44384a0ce03bf0fae36bb1c885f6b132cf775c6f65ae921df908ff8253e4bbc
 Size (tex-adrconv-46817/adrconv.tar.xz) = 2808 bytes

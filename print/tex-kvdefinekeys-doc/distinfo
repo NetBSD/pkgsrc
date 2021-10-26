@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:49 nia Exp $
 
-RMD160 (kvdefinekeys.doc.r53193.tar.xz) = d371c714f32b3745b19973a0f70d96f36094badd
+BLAKE2s (kvdefinekeys.doc.r53193.tar.xz) = 150ec737039484ba5da2221df4451cdb81333e4b0cd93e722bd18b1702465d29
 SHA512 (kvdefinekeys.doc.r53193.tar.xz) = c540045ec1c8bd7fea3000dd0ebc8adac64da7ccc24b0becb9b9c32c9dda6e5e11a77b57bee667bd2ddbddf347bd8af069907e087d543898a92ebaedf3fa4b7c
 Size (kvdefinekeys.doc.r53193.tar.xz) = 296808 bytes

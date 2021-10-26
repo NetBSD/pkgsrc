@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:53 nia Exp $
 
-RMD160 (tex-titlepages-19457/titlepages.doc.tar.xz) = c39d0c7c464f01c443a4a57f6c50e9758f3acc39
+BLAKE2s (tex-titlepages-19457/titlepages.doc.tar.xz) = 04f83eb3f448897d35f61baae635353a9dcf6068bc8472b359d80b2627f7fad7
 SHA512 (tex-titlepages-19457/titlepages.doc.tar.xz) = 92c861c1bd785062a53740a9a97e4d6727e0925d53e073373712e1e0941ae38eb07541f5af8bfc679a94d2a98ba75e1c5961fde3db3cb31759724aee472097aa
 Size (tex-titlepages-19457/titlepages.doc.tar.xz) = 887320 bytes

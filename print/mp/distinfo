@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:48:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:12:10 nia Exp $
 
-RMD160 (mpdist-3.7.1.tar.gz) = c6d8632dcadf814c18e67c9bf4540911e3b42b99
+BLAKE2s (mpdist-3.7.1.tar.gz) = b58049a122528a09c509f0f1de954ec4c1f642a18e55e3bfd56ed01c3ff269f3
 SHA512 (mpdist-3.7.1.tar.gz) = d424e1042cf0d0677670400bb0f787b9b23fd62e071cb6d816f507612174ab2458ddf76da260ff1c8aec1613bd85901241f033d4cfaf5f6a6fa4ed632a23ebd7
 Size (mpdist-3.7.1.tar.gz) = 402291 bytes
 SHA1 (patch-aa) = 9aa51c8ac443122b972087a7b74390abbc9d5253

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:52 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:03 nia Exp $
 
-RMD160 (tex-ctablestack-38514/ctablestack.tar.xz) = c3d0caa50acd7d51cfbb3d0516c39855f4c0970a
+BLAKE2s (tex-ctablestack-38514/ctablestack.tar.xz) = be363cd7d7cbbb91407e62b48fab50068561a5ec5a04ce074dae840c3e685ccd
 SHA512 (tex-ctablestack-38514/ctablestack.tar.xz) = 46c391d0a837da260bed005abd5ca48565899de566a4f188ce03307e32860edfa3bc47f32ced569a798def6319e777dd1fa345217c560eb4ccd1d00dd2610af7
 Size (tex-ctablestack-38514/ctablestack.tar.xz) = 1132 bytes

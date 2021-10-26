@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:47 nia Exp $
 
-RMD160 (cases.r54682.tar.xz) = 708133271dcfd042210aae0f740dea9daa190dc9
+BLAKE2s (cases.r54682.tar.xz) = f4b1c627f93e10a188feced7774c2896b146008a0d3bb07e4c15153a128a02aa
 SHA512 (cases.r54682.tar.xz) = 281f9d13741f16fa07f93bbd2628f4da34db07d5005b6c1d7994ec7713aa100f152efd066bf712417bf6dc3fafb496d0a80f65cd2127c4640ab28cca6a4ee1d5
 Size (cases.r54682.tar.xz) = 4068 bytes

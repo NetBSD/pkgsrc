@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:30 nia Exp $
 
-RMD160 (random.r54723.tar.xz) = 3d3581f383893de298156f9ea1bc0616b689eb73
+BLAKE2s (random.r54723.tar.xz) = 598c84ea4d7f0fb721db602ed0ebd53ae55b6d379f10327a67bd0270422de9d7
 SHA512 (random.r54723.tar.xz) = a93eb4d5b526285da18105f67bef5cb4451b7b71be50581936a4718ad99360dfd8141ee9437d374c56eb3db3aad9af4ec8e1555a4a5b8654711bf64aea3f419b
 Size (random.r54723.tar.xz) = 2224 bytes

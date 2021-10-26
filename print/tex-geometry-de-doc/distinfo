@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:27 nia Exp $
 
-RMD160 (tex-geometry-de-21882/geometry-de.doc.tar.xz) = cc5c9e7c41e01a0dfdabe3caf68d5e48e245cd17
+BLAKE2s (tex-geometry-de-21882/geometry-de.doc.tar.xz) = e26fa68e88d6f6601189f0546a8fde36e23d1b5becb9521697f3c119603850d8
 SHA512 (tex-geometry-de-21882/geometry-de.doc.tar.xz) = 756818677502d77fd457e59e82bb12f8a2c9e12eae9cb8fb71b4af38dace4721389fb4e21a34bf9e1165ac576d867183225d229d68a5e7d42f5f356ed915066e
 Size (tex-geometry-de-21882/geometry-de.doc.tar.xz) = 443132 bytes

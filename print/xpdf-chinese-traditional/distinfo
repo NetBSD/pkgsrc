@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:52:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:15:13 nia Exp $
 
-RMD160 (xpdf-chinese-traditional-2011-sep-02.tar.gz) = 7c1faff946ad8c7a4585c720307513419473726c
+BLAKE2s (xpdf-chinese-traditional-2011-sep-02.tar.gz) = c0fa1bd0c33c84eb8e51a23e33af7b23f97a2ffc2063a5177242c547037552cb
 SHA512 (xpdf-chinese-traditional-2011-sep-02.tar.gz) = dcd308c5b24e3a2684a1c24e67cbfdc6d27a6817302839ad8990b90ffccc1001ef43f64401b43cfc67cc66fa411bcb71e8e6df14ba377f4cb5bbc57bf5d06721
 Size (xpdf-chinese-traditional-2011-sep-02.tar.gz) = 913558 bytes

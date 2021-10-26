@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:33 nia Exp $
 
-RMD160 (babel-romanian.r58776.tar.xz) = 4cc682844b348790c5d634fc9f2f1af59b48b632
+BLAKE2s (babel-romanian.r58776.tar.xz) = f3e6db6f95f476e7f73ce7d6a3f0876b59597a94103828c09b1e71484bb530bf
 SHA512 (babel-romanian.r58776.tar.xz) = ca6318ca8453dae2286b305766c6ced299f18f390c0d0f44e77ddf8eb4b05c31c7a2b01ed52e271f68acd6b127650b370d15ea9bcb3b591fd01e5d3a50b17db5
 Size (babel-romanian.r58776.tar.xz) = 2124 bytes

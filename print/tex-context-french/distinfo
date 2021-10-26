@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:57 nia Exp $
 
-RMD160 (tex-context-french-24582/context-french.tar.xz) = 33f2b3565ef7dd20cf684d7f44aa427e29ddd987
+BLAKE2s (tex-context-french-24582/context-french.tar.xz) = 6a9da0ffb3a0eb58c2e3f259cd37eb89a5d6c326dd6f21f37fad7f894bce581d
 SHA512 (tex-context-french-24582/context-french.tar.xz) = dadae7fe3e99ea8fddbb42f7af77215d25b2bd3a700c368e413452ed44df40c0cc4405d70d03e6cc1512535cab31bb471002a266cd42e90896c15076cfa231fd
 Size (tex-context-french-24582/context-french.tar.xz) = 1704 bytes

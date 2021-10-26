@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:52 nia Exp $
 
-RMD160 (threeparttablex.doc.r34206.tar.xz) = 8e7582a48d7883aed7e162277a4706973b7de1b4
+BLAKE2s (threeparttablex.doc.r34206.tar.xz) = b2568b09cd2a71e4804ace38e57ab7bf6e09da629c76ba0e33077b6a43437914
 SHA512 (threeparttablex.doc.r34206.tar.xz) = 3dceb0aecfa2ef09bc20250cd38dd698e35b2cd2a33fb446e78a39fa654899c4f6658a18b95b39a5bff2279a0cbeeda71bcedcdb7fa91d148290302b73e7a64c
 Size (threeparttablex.doc.r34206.tar.xz) = 64400 bytes

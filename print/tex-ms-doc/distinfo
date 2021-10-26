@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:14:07 nia Exp $
 
-RMD160 (ms.doc.r57473.tar.xz) = 1387c61d28518e197349e4c6c0d4cea71d8cd998
+BLAKE2s (ms.doc.r57473.tar.xz) = 667037708fb6cfb5d27d2de58bdfc3dcdd9cea6d6ba561cde2321cef6a615374
 SHA512 (ms.doc.r57473.tar.xz) = d112ff182da85ee8d84d8e7cfc50e5c13ad2e555ffe4dd2867a3439d69193ec7bc24fa87d2527936a57dbdc8e98df8d2862a740f91d497a8eba7108973a637aa
 Size (ms.doc.r57473.tar.xz) = 573400 bytes
