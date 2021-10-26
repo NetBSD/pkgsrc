@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:05 nia Exp $
 
-RMD160 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = b0f1ddd4c1d894ae5ba3cf5e1242812f40210351
+BLAKE2s (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 68d7c4f21adae11ce943ee9da61e913695fd695ada1dd6106f91afb294e25f70
 SHA512 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = be0a46e79561a5ff34f812b892a781809606cc7e38c6bfed15bae7773f952b4b55aed0fa784922e72839121672c540496db1bac602630c5a83141f8517a4a543
 Size (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 301338 bytes
 SHA1 (patch-ytnef_Makefile.am) = 1a93de2ec27b3230f52e9bb7de279fd1584e0e6a

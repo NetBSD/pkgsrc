@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:25:45 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:54:27 nia Exp $
 
-RMD160 (mail-2.7.1.gem) = 4cc9d3cfb69625b87d3e5bbb5dd7747baf2f848c
+BLAKE2s (mail-2.7.1.gem) = c5a14c59c517eb6a04fe57845d16ca56708f5c115f4c78cc517919ecdd33eecd
 SHA512 (mail-2.7.1.gem) = b8018ad089517ba058e922ec32653e6052c76a480178ae92452fdd678e3ba7f4916ee6643efa59dd673a6a8550f907fc7a2121c21f468c70b3659bf5615991d7
 Size (mail-2.7.1.gem) = 389120 bytes

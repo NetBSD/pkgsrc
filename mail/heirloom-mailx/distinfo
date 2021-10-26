@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:02 nia Exp $
 
-RMD160 (heirloom-mailx_12.5.orig.tar.gz) = 9722c9ecd2cae6b2b47a598e5c32544c1320502f
+BLAKE2s (heirloom-mailx_12.5.orig.tar.gz) = e72b5cfbae36a3a3e6c6b3f2e84f6f2c942e09028ec363cfc04ee86368bb495c
 SHA512 (heirloom-mailx_12.5.orig.tar.gz) = eb4aea0c668354f6fe28137f72bf49d291ce58671a7b70c7775777532e17e59ac52156e68f02937256f0a2f90c132b7c0948553b55daad92a664bd8bbb64774f
 Size (heirloom-mailx_12.5.orig.tar.gz) = 324085 bytes
 SHA1 (patch-ac) = cb9d4b12f26bb5f90947e1dbcb06960de8144f11

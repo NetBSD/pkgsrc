@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:25:13 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 10:53:55 nia Exp $
 
-RMD160 (bogofilter-1.2.4.tar.bz2) = 00baa95c71f193081ccbf9562e9b493f852bb08c
+BLAKE2s (bogofilter-1.2.4.tar.bz2) = dadacaffe4290175a9e934245634e02321000d9038e727d2a858df24823f5c40
 SHA512 (bogofilter-1.2.4.tar.bz2) = e8c0b6bcc14f12fbbb2752e697a6d9065e17abfca3f70045ce9fe668d01c1cfad4adaa35c81546ecdd3639b0c28f3f4776bb5ed4699f21e9e2a5b19ca33479db
 Size (bogofilter-1.2.4.tar.bz2) = 887848 bytes
 SHA1 (patch-ab) = 5b8076d235e38d982eba602033f30a40a85d2d64

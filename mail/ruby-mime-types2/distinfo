@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:28 nia Exp $
 
-RMD160 (mime-types-2.6.2.gem) = 5db1923f293ec25e61295444c9432ea24c0ebc84
+BLAKE2s (mime-types-2.6.2.gem) = 48c8c445fc314c51c64c837b7ef8d6371bbda9f3938648d6a124c1edca5415cb
 SHA512 (mime-types-2.6.2.gem) = a083d865ba39e1b0e468c26823e82472d6bcb501e7dda047f1206b538e2f018d51d8bb31fd6734ba706a8352ade42bb40c52df1837402c3cb4fa01778772485c
 Size (mime-types-2.6.2.gem) = 190976 bytes

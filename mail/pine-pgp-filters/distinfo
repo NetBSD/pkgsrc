@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:25:38 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:54:21 nia Exp $
 
-RMD160 (pine-pgp-filters-1.8.tar.gz) = 7fe7c3585bda9e41af2011d800e64253c2f6a834
+BLAKE2s (pine-pgp-filters-1.8.tar.gz) = d6fda75c4cbda1996860d9c52359f1bd349d651a8324652fa9502989d34815d6
 SHA512 (pine-pgp-filters-1.8.tar.gz) = 217bac4eb6ca166761d7182232f423afe25c6ce1409e546ced04127288ba614cad1cfeb8d0043f7d2c0b56c7a93949ecf4533a584b1e77695fef219e9f750498
 Size (pine-pgp-filters-1.8.tar.gz) = 12059 bytes
 SHA1 (patch-ad) = 50a84dd2745463ad30d6ca4466dd927809070be2

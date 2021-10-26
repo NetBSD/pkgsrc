@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:25:22 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:54:04 nia Exp $
 
-RMD160 (kmbox-20.12.3.tar.xz) = 915ac2d4939a7981d47519a186449a8f1c91dc87
+BLAKE2s (kmbox-20.12.3.tar.xz) = 519e70f94423a0238b64bfb319e117ce3a6d389b67ac357f49f0f38607344587
 SHA512 (kmbox-20.12.3.tar.xz) = 6df398ec30bb0d892ef6f29586de345400bfa8bad4f5888d1aa2ce9b71c99e59dc96778bfbf4d08085aabaf32f0c8cd374afabe079b9956a13134c69b49d1fd1
 Size (kmbox-20.12.3.tar.xz) = 24792 bytes
