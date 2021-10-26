@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:20:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:04:17 nia Exp $
 
-RMD160 (verilator-4.100.tgz) = b23304d3e9550d6e32f851c6e98a4e523787e342
+BLAKE2s (verilator-4.100.tgz) = b2facd55d8e8e1d43796853fbb76e47ff4eca0e11fe02f4e40a54852dffcc0a4
 SHA512 (verilator-4.100.tgz) = 13f4547bfda1d8b4f251c1f6392f952a0d94e636844a72d4878a366e4d1feccea84cfaf24d6a3c4541e7d33c13ea6dab55d3dd7d646f79d7fb708656c722e316
 Size (verilator-4.100.tgz) = 2747140 bytes
 SHA1 (patch-Makefile.in) = 3c91715cdfaba04120ada7a328b46e0571767e06
