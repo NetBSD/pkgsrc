@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:18 nia Exp $
 
-RMD160 (WCMCommander-0.20.0.tar.gz) = 3f1f93d484846404542f3d4955abdb01f9d5417b
+BLAKE2s (WCMCommander-0.20.0.tar.gz) = 4536511589680497c7da07dcb33140e05d5ffd0e7f1c43af91afaafeb08bd846
 SHA512 (WCMCommander-0.20.0.tar.gz) = 4c57b741b9336d8c2e4fe69765bdc2a0b17c2785c71877bbd9b928cd26ab36d92dd2e16f53399a77a50762fa6d87bc52dfcd9037c5ba8179f6274b6480b314aa
 Size (WCMCommander-0.20.0.tar.gz) = 5005688 bytes
 SHA1 (patch-src_tcp__sock.cpp) = 5d0758a7f0e53255de1ea9a47ad12b7a7e3b4809

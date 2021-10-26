@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:57:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:22 nia Exp $
 
-RMD160 (bdfresize-1.5.tar.gz) = 4006de25bcbbe76e895147315d112a23899caf4a
+BLAKE2s (bdfresize-1.5.tar.gz) = 7812eb7039eab8d56bdf99c1d44c41018406322ec0a1b984aacb67e6354512fb
 SHA512 (bdfresize-1.5.tar.gz) = 94d483b65ed4a29315b0f6627b6118c147e6d80dda61c0c44ad34fa62f303e980d974c81c9b852a845d8f5cb678e043023c42bf300b10e6f18846bd8490ef878
 Size (bdfresize-1.5.tar.gz) = 50916 bytes
 SHA1 (patch-charresize.c) = dc13c596a15cf0ca5dc2d1ec66fad0dd80ad0ac0

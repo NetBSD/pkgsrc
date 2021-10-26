@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:25 nia Exp $
 
-RMD160 (checkpassword-0.90.tar.gz) = ed86f95a13f41fb2369374c6f8656a7d76f8cc6f
+BLAKE2s (checkpassword-0.90.tar.gz) = 2f15f0087b2a4df28e36e64fdd542bd17d3ee9725fe05e75d5375d6f01426e1f
 SHA512 (checkpassword-0.90.tar.gz) = 301d574c9f2c4c7fef6afb98818f424a43f644e456c6268234e73da898710b0f4b6797a80d240c270c5319398574349bedf6a2c9757e432f293f85ec8c01f51f
 Size (checkpassword-0.90.tar.gz) = 15631 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:52 nia Exp $
 
-RMD160 (mgm-1.1.tgz) = 4512d784a8a07f593448e8cd7c6376396dfe8274
+BLAKE2s (mgm-1.1.tgz) = 2e8925e3136752bfe8d161166623982cdf2e92e655b2210d90e56605e1ecbe0a
 SHA512 (mgm-1.1.tgz) = dbf33af03b94e1939ce82260667ce1698afccce12ce1ae6ae4f992d6bee0204b09c4710ddcf9692d1a117c4f6b109f232c0b89c94a29733f4469efe51a88dc47
 Size (mgm-1.1.tgz) = 171065 bytes

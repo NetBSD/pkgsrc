@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:20:17 nia Exp $
 
-RMD160 (tegra-firmware-20151018.tar.gz) = 01e6424cc58b309c958d390e2b177d4cf001a16a
+BLAKE2s (tegra-firmware-20151018.tar.gz) = c62c2e87a7b3377c377636a91f1d290938ab4fed32fc15b1706ed683e84bfdae
 SHA512 (tegra-firmware-20151018.tar.gz) = 47e53179a576a26018834dca057bbd63ff8a0252fce772704a050d69b767923187288e3378e4af076bd648562aaa387245cf3ba51ede95d2cdf91245a2470c03
 Size (tegra-firmware-20151018.tar.gz) = 185209 bytes

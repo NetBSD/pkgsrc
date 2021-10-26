@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.33 2021/10/07 14:58:43 nia Exp $
+$NetBSD: distinfo,v 1.34 2021/10/26 11:20:28 nia Exp $
 
-RMD160 (xosview-1.22.tar.gz) = 217ec543afee8b77bb36ad639c872a5af3b660a6
+BLAKE2s (xosview-1.22.tar.gz) = 100e66b3c4013aa3694a7f7894d7b714cbf10fe13031983334069e60e0b5b0cf
 SHA512 (xosview-1.22.tar.gz) = 40e668ff1d142b6986ea5d50475d4c82523c62269d328d2f6001c651808d9b5194ccd6f144fd0ff791110302c91688126aca5762d6645d9dbc3819cd15df343b
 Size (xosview-1.22.tar.gz) = 147492 bytes
 SHA1 (patch-bsd_kernel.cc) = 7a86aab574c2d7cf88fdb03b95a8ab46933d5e48

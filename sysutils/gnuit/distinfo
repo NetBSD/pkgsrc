@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:39 nia Exp $
 
-RMD160 (gnuit-4.9.5.tar.gz) = e6d5201ab82c0a7ede7f379b61e65c85ef4b5b81
+BLAKE2s (gnuit-4.9.5.tar.gz) = fb5d79d7f5466ac68178ecdb6a5ca791f080ba892f91bae82c47d71cdee03adc
 SHA512 (gnuit-4.9.5.tar.gz) = 91f1a86f45d5a2fab91941587aed3c1e57ae68271584bef38560c9a31fabbdfeba801d87cdf5640ba9f2041e43305e49c64953b8d5370f3f6a463b2fa2a7c5da
 Size (gnuit-4.9.5.tar.gz) = 894362 bytes
 SHA1 (patch-ab) = c100730e50684d62f8d5a56d51713b0ae92db5d3

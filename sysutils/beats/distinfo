@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 14:57:36 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 11:19:22 nia Exp $
 
-RMD160 (beats-6.8.13.tar.gz) = 52959989dcd8002c0e2320f738cd43b76be8553b
+BLAKE2s (beats-6.8.13.tar.gz) = a0d69c2877f1d2ee491c499672241bbe6fbd03a620b34e4cbd579d3eaff07c46
 SHA512 (beats-6.8.13.tar.gz) = 39f1ba06e1930ea498c13dda11cd835096adbcd075585672004fdc9e19d96971936e47f9c631ee02f59984c10858cfd914de136ddc356e8c39fe833401b42304
 Size (beats-6.8.13.tar.gz) = 35569151 bytes
 SHA1 (patch-libbeat_common_file_stderr__other.go) = 9e1f28a9721c996ba75a7712d39c70186f549067

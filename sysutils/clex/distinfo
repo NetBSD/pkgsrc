@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:26 nia Exp $
 
-RMD160 (clex-4.6.4.tar.gz) = 6f1ea4a1ca1c4b26f34c429ef458a04491950695
+BLAKE2s (clex-4.6.4.tar.gz) = c7828d1a99042df0dd85472391eebaf7ba94663ff7c84237c660d3567ea18a62
 SHA512 (clex-4.6.4.tar.gz) = 040ecf0ebcda7e4e241d2d6a23a413c50674e917ee4a715db57e8ec69ae3dfebd8d5cfe23847719f039331da8e637279b44714564f0171d55c42f27db007dfb9
 Size (clex-4.6.4.tar.gz) = 243297 bytes
 SHA1 (patch-src_cfg-clex) = 4fb8995131195b4f54a53c72eac85da2cd6f14a2

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:22 nia Exp $
 
-RMD160 (bfs-1.5.1.tar.gz) = 101a5bf416ae81db4b1654c76d6c7ff3293269ce
+BLAKE2s (bfs-1.5.1.tar.gz) = 7c4506daf5d0438e48189483439d4921d859098fa99a492b56db812154a61d5b
 SHA512 (bfs-1.5.1.tar.gz) = f501f2acaa19c772a350863539030c60299c3b001ebd3d473add4e8975f4fda3a79a6a524a0d1fbf729a66a943557cb66aa6d65a8aae41ab88b81a7740b17874
 Size (bfs-1.5.1.tar.gz) = 113824 bytes
 SHA1 (patch-mtab.c) = 591269c91adff55bae9c4b9ab7b66a621b11486f

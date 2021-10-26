@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:06 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:19:52 nia Exp $
 
-RMD160 (mktemp-1.7.tar.gz) = c6ad39326af4585a36e1846a6a6a8ce56d24265d
+BLAKE2s (mktemp-1.7.tar.gz) = 8dab65121bb55ea1b6d6c30e945974067d2dca8b23a388e4607d6be894bbc61a
 SHA512 (mktemp-1.7.tar.gz) = e4e39a30b58c9b7291d6037790fc32f857c7b6218e8dc20464ad4b5becd455ca76713f6d93d01ac8fa2e3ded03341a5f793ab10b42a32f1f4c64f2aba1766156
 Size (mktemp-1.7.tar.gz) = 78792 bytes

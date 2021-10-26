@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:23 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:20:08 nia Exp $
 
-RMD160 (rtty-3.2.tar.gz) = 03863b5fbaf27a6f254c620e91c3dcd364df926a
+BLAKE2s (rtty-3.2.tar.gz) = da5c9c2d6b19bdb70e87b13e795693d3f746736903451d0235bdd4f433c1b097
 SHA512 (rtty-3.2.tar.gz) = 11d1fa82ddce97320c1aa44f726a2b05e49c7dd67fc9a902a29531e934f7f16b3ad193f9e4f247d8d03fc61bd0337c165faa08e1585374820b8f306b1b5315a4
 Size (rtty-3.2.tar.gz) = 23445 bytes
 SHA1 (patch-aa) = 11cf781b562bfe35c1003db6f3ac94653c1f8e06

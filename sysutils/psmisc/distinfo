@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:58:16 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:20:01 nia Exp $
 
-RMD160 (psmisc-20.1.tar.gz) = 48698ad9f431c881bcb42394f5c912ef91b84d2b
+BLAKE2s (psmisc-20.1.tar.gz) = 455436f3fd78af0b4037878c3b71d0f0a9bca636351ea93b63060d5d137756ad
 SHA512 (psmisc-20.1.tar.gz) = 14553afd185d968042a10eefadaec089f4deb821fee70b69d520565ccbaa485c65137af2279bcfc2abbfdeb3e35bad2beaa5357372fbe6cfa587d10e9bdc2f9b
 Size (psmisc-20.1.tar.gz) = 57767 bytes
 SHA1 (patch-ab) = 74134f6cd2ea0270fdbaff8c0acb9e40767cc5cb

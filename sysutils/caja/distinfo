@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:57:38 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:19:24 nia Exp $
 
-RMD160 (caja-1.24.1.tar.xz) = cef0be5f46c466fa9aefa65367f68aceb0171f60
+BLAKE2s (caja-1.24.1.tar.xz) = 83e7082b478b2e52704d358e119d99d7a0eda7aaf535f16c6128d18bf5cb5a57
 SHA512 (caja-1.24.1.tar.xz) = 34ba1e384e3de4ee3e6dddafa4ef4ccd5f626352cf5b42d6178e96395762653478cbdabb109cd0f2418ed463fd4743ef8a34be0a6b4294ad5355fea6dbfd53cc
 Size (caja-1.24.1.tar.xz) = 5308268 bytes
 SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da

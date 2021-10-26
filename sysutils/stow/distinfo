@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:58:29 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:20:14 nia Exp $
 
-RMD160 (stow-2.2.2.tar.gz) = c8f64c35d81dca28030d5a731f3597f262ce33bd
+BLAKE2s (stow-2.2.2.tar.gz) = 70ae69f46d50db906247d8fa726e30e3be16583cf720da5bd441830c46ccb57f
 SHA512 (stow-2.2.2.tar.gz) = 8a3e5da6b5cb4c1ee1b512bae5a9859f83659d5de05f7a9af1dd09df2a32f6b8c6d43b79736db91232c43621d542041d4ef92eb088925796adad0676f200a9b5
 Size (stow-2.2.2.tar.gz) = 579324 bytes

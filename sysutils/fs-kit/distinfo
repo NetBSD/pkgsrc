@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:36 nia Exp $
 
-RMD160 (fs-kit-0.4.tgz) = 270e09ff438f3c7924476d7905a5458b3ee43fdd
+BLAKE2s (fs-kit-0.4.tgz) = 099acf78ec109f851059f1eb5d687f8e1c5988ba1cdf0f7998f13fa2b962fee6
 SHA512 (fs-kit-0.4.tgz) = a3a5f95810b7d58d3fb240aa00da953815fd4ee3158ca5c4a400a71c74f115ecef7f02bb8bb1cd42e27da37fd549809a3755b191a69394fd32cc6037d644be0d
 Size (fs-kit-0.4.tgz) = 73603 bytes
 SHA1 (patch-aa) = e666b3061ea9ddbfc0cda6d1bcd3512271ddee5a
