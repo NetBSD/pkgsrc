@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:44:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:09:36 nia Exp $
 
-RMD160 (nntpcache-3.0.2.tar.gz) = 03c191fbedd9325c12033493d57e01b5c5ecd5a9
+BLAKE2s (nntpcache-3.0.2.tar.gz) = 31e1cf6c446e987329710f029e85fd25537fc084108e715606ba88aaf6d55a35
 SHA512 (nntpcache-3.0.2.tar.gz) = bb34240f172525e7d76f29cccff5becbfc9400eb50e1c89819cfb622e884ef94d3bd7327ea7b32f3e9b7025c69bc94578a2f3b8de017cedf953d7f2c5630541f
 Size (nntpcache-3.0.2.tar.gz) = 1077641 bytes
 SHA1 (patch-aa) = 0cb955759a116c1695d2ff38e26fce8e7cda3610
