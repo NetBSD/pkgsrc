@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:06:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:57:19 nia Exp $
 
-RMD160 (unzoo.c) = f7cf751dc865e73d3c51e4476dd2472e409b20ff
+BLAKE2s (unzoo.c) = eefd7915679141e01a0abcb4f338515101f3b0df119474bfecb36d27cef1674e
 SHA512 (unzoo.c) = d293e244e44af131702550ddefdd035e32de3e7228f6c1c805139d448ba96357931405d313405572c30fc7c8d2ff005cc0ffc4d0ad209f47ee9ec1217ccaed21
 Size (unzoo.c) = 115328 bytes
 SHA1 (patch-unzoo.c) = 5b652586c919a8a5a5498c00ae2330620af39ea4

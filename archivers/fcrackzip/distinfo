@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:05:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:57:06 nia Exp $
 
-RMD160 (fcrackzip-1.0.tar.gz) = 8c784108816c990fcd09cfafc69a5d4a0ef1d33a
+BLAKE2s (fcrackzip-1.0.tar.gz) = 84e44bafe0dc309cacd72d84003b9a05d3ae0a2426bb0364acb6823c99bb9552
 SHA512 (fcrackzip-1.0.tar.gz) = c18d45b5a4ec46411d455a0c10cb9faa7a1060a48936a820fff9b1f8af7f7158ac09da44d39673e4bdfaf0f370ee425e8df0a0dbe98a2a930049ecc2a1419048
 Size (fcrackzip-1.0.tar.gz) = 114786 bytes
 SHA1 (patch-aa) = 619f03bc240dd6501b6e5fed4cf5735bb2ac58c3

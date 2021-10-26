@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 13:05:57 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 09:57:05 nia Exp $
 
-RMD160 (dar-2.4.13.tar.gz) = 20cf6492aedd82b3bc227603588c8e6f44560dde
+BLAKE2s (dar-2.4.13.tar.gz) = 8e4e48c3153dbb272e1e2e3a894161fe8d87def6b8090ec8929b72efab79e64b
 SHA512 (dar-2.4.13.tar.gz) = 28308101f5d73b7bb7ea181fc1df129ea2be888404d301b156938f8cfc47ed1ed2819be058ce910795c937c8bc267305e7e080c2b80f81a18df95ab9cfb7ad07
 Size (dar-2.4.13.tar.gz) = 1799774 bytes
 SHA1 (patch-aa) = 86370bb2515795b2c5645beaafeb8af08d9f209b

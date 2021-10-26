@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:06:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:57:13 nia Exp $
 
-RMD160 (ppsmall-1.0.tar.Z) = dbb774a9c94f1b4d313cfbd4b0a594d90ab841d2
+BLAKE2s (ppsmall-1.0.tar.Z) = 9e16f1be4a9516d269954564d37b12136682f73f322f8eb29d93c590e969fdd2
 SHA512 (ppsmall-1.0.tar.Z) = b5a2743cf9156e9480a5971b9ad4ebb10279f03db5e7ac73194c6da752fcee5ec803a96cdbbf844a6f78006feee03208fba90c4b793229aa848bbffcd52e03b4
 Size (ppsmall-1.0.tar.Z) = 5251 bytes
 SHA1 (patch-aa) = 9d35b54768ae1df1a66d8c042f9d3565b581b03c
