@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:36 nia Exp $
 
-RMD160 (foremost-1.4.tar.gz) = b2ea590ab78f96e74cb3842ad60dc4f1429244ef
+BLAKE2s (foremost-1.4.tar.gz) = 5ee8ad338da67addd9a7b20bb171f7b793456144f7e7655c4cf1f8f0145123d7
 SHA512 (foremost-1.4.tar.gz) = d5cac24059963a572c70c23a559163bd166db8262baaffa485208594a33013ddd492b989814f1747e9952a6fb58a90eaf8b7e6dceef00668abe34e454c771b8d
 Size (foremost-1.4.tar.gz) = 49521 bytes
 SHA1 (patch-aa) = 39f986d19d80efe431d92af7884ae0a395ff9576

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:58 nia Exp $
 
-RMD160 (Parse-Syslog-1.10.tar.gz) = ce04e5ec62fcbe53c62ba148565e239764f62b7e
+BLAKE2s (Parse-Syslog-1.10.tar.gz) = c46157bac1b93582db0e3379ebbd949091a29df612e8dfd60f5b2f7ccea0d58e
 SHA512 (Parse-Syslog-1.10.tar.gz) = 85d4f36aeb4873a51738cc909793a8b4a2029a0b6504105e4cae61bb3248cba5dbec18300f8333ff44a4877561d945ced04a8b49d05b2e65a4d1c54df1f961eb
 Size (Parse-Syslog-1.10.tar.gz) = 11202 bytes

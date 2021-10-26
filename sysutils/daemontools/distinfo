@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (daemontools-0.76-man-20020131.tar.gz) = d82f0bad55f0751fdfadfa0f3bf2883740fa65d9
+BLAKE2s (daemontools-0.76-man-20020131.tar.gz) = 8ee7328243c279426cb4b6ea48ec993886eaea1e2778dc877e1c32372f692e8f
 SHA512 (daemontools-0.76-man-20020131.tar.gz) = 1767fafb2d92902f903637f08363031971bda007d1b7b53059551c740976d1c643229ccc44171796c1dcb43cbd875a17178edc634e140671817e0ef0ba3ad80b
 Size (daemontools-0.76-man-20020131.tar.gz) = 8005 bytes
-RMD160 (daemontools-0.76.sigq12.patch) = 22707eca8b78bbf9c11a50070ede8bfb76436983
+BLAKE2s (daemontools-0.76.sigq12.patch) = 75e8390ab79738c88264128080309d13d3539f225659e764e8f4b7f64f929a9b
 SHA512 (daemontools-0.76.sigq12.patch) = 7a549b2d1fc754ee8e56c4ce0e7b232e2e4365355d5903ad1b307f449e58b13346389b29ce1d259a9fbbae5de997b37eebe347261c720f2d646bf958bea7385e
 Size (daemontools-0.76.sigq12.patch) = 1975 bytes
-RMD160 (daemontools-0.76.tar.gz) = 9819dae18b3f15a366e49fea81ecef76d5b4f53f
+BLAKE2s (daemontools-0.76.tar.gz) = de1cc5249edbdbe3b8a3f0ab33b90068c965b936c952c336672e122d37bca6b0
 SHA512 (daemontools-0.76.tar.gz) = e4a7938352b745a03ccc41acdddba1e6782f0ca245e5cae060de62ab6c5a23c841a994c30140298d274405a7f26d53ba7e84e5810a3d185b2c01e4c0feffe6c7
 Size (daemontools-0.76.tar.gz) = 36975 bytes
 SHA1 (patch-src_Makefile) = 63795c7546d3248911e0d47194baccd8440547f5

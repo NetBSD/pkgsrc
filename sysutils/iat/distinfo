@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:42 nia Exp $
 
-RMD160 (iat-0.1.7.tar.lzma) = 39a7abc6a1529bbe35ae7a49c78409b5254a3413
+BLAKE2s (iat-0.1.7.tar.lzma) = 3eac680e20fd067ae60e29e768e2ed49683e16a29825fe0ab033e7edec4467ee
 SHA512 (iat-0.1.7.tar.lzma) = c1028e467fc423b2b0e64f9a64f2d5750004af47466b74c162706640f312d39687f05a560e4c4f177dabbf96aeb2a4ba9888dc62b68bdcacd8bf3a07c56576ea
 Size (iat-0.1.7.tar.lzma) = 95012 bytes

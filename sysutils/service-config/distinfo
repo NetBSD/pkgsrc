@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:12 nia Exp $
 
-RMD160 (service-config-0.51.tar.gz) = fb809f136c8456369a027aecdfd9245bbea61261
+BLAKE2s (service-config-0.51.tar.gz) = 0710b8a23f89ba6e5686af8a78e447840c91676b799056543bf44beb52e9e338
 SHA512 (service-config-0.51.tar.gz) = 3c55282150941c0591cfae38dd2ab77cbd86f36290ec26cdc9b1f2ab5e9fbd5debad435ef4f4bff5e1c5461ee8395d523fff507e32ddc8d201e190c93bfc4a20
 Size (service-config-0.51.tar.gz) = 16486 bytes

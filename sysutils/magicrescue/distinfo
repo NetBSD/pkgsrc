@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:50 nia Exp $
 
-RMD160 (magicrescue-1.1.4.tar.gz) = ef8185ad19d4fb1bc277403b82eea3aa21f0e758
+BLAKE2s (magicrescue-1.1.4.tar.gz) = a0411157327339533257dcd9d9b3deb3a3288553895a6905236e4de01ac1f591
 SHA512 (magicrescue-1.1.4.tar.gz) = 357e448bb007f181e28070e3f7f1716992e91c0ce030046567719ab9ca4b9f1482029283c9d948f7738c875fcfe6c5c7649ff9c8582529869a572d85847014be
 Size (magicrescue-1.1.4.tar.gz) = 89965 bytes
 SHA1 (patch-Makefile.in) = 401d119063b14383213ca2050112b331b6e3cfd7

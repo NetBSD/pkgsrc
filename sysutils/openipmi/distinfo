@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:55 nia Exp $
 
-RMD160 (OpenIPMI-2.0.29.tar.gz) = 1a82606dca2e585a5075eeb40e23aa10029724db
+BLAKE2s (OpenIPMI-2.0.29.tar.gz) = feef48d7838eb545cc4dfca0846315aae5d4b2237f46d30830fb9e4518051d46
 SHA512 (OpenIPMI-2.0.29.tar.gz) = ff23aadfe4b9002574d1f06dda3d61f7a03ef1df2c61855516b7d67bd6d3272c53af74e3412e1045242dcb845f50b7c542083e918805c0efac424dd86e720a10
 Size (OpenIPMI-2.0.29.tar.gz) = 3119530 bytes
 SHA1 (patch-configure) = 644287934ea58b18aebad100cfe3f37c39eca3ff

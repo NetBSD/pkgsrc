@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (daemontools-encore-1.11.tar.gz) = 518f85f1502bf969ee60d5169642089752bd2d52
+BLAKE2s (daemontools-encore-1.11.tar.gz) = e9686b18c3df18cf15c5a34e44e53e14b410f8911e808d06d038b3809c9f728d
 SHA512 (daemontools-encore-1.11.tar.gz) = 1e1a96a948d551bfc38496740eaa85b7cae0d2469419293b133533da75ca03657fe6108129703ad7b773925c58ce84a4f242eb612133fb0c499f47ae50423a8a
 Size (daemontools-encore-1.11.tar.gz) = 94917 bytes
 SHA1 (patch-MAN) = 7c361a3365a43a992d7a0ccf938b79dc2a8691bc

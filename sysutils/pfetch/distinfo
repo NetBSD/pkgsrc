@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:00 nia Exp $
 
-RMD160 (pfetch-0.6.0.tar.gz) = 22c28104e9ce9536e474e5b0b019c15d20642003
+BLAKE2s (pfetch-0.6.0.tar.gz) = 56396685d56fa8267d01880c375cfcc5ebe9d1cfb580311d939f28c390666fcf
 SHA512 (pfetch-0.6.0.tar.gz) = 868901bec6ae8999ad40fcb94bdf804969a3dfd724dc554d62f59982daf48d359094764b2e45d4816983d4f46e38de30f0bcb646ecd95bf3263ba128b87a1ddf
 Size (pfetch-0.6.0.tar.gz) = 17431 bytes

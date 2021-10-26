@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:10 nia Exp $
 
-RMD160 (rb-appscript-0.6.1.gem) = 9148020831582e815c3c5ab68c53ca70df9e3209
+BLAKE2s (rb-appscript-0.6.1.gem) = a2da4dd6025158fe03163b0771dadf61e01fa470a96bb1337041f93721240f4b
 SHA512 (rb-appscript-0.6.1.gem) = 99b0a48d38b26feaa12e773f75eebe0ff30a327ce51edd37131156fa6cdefe6a5e5581b4c99193d9ca4a408d6cb7b56d4da6a754b44bf8e062e7794291b4ec49
 Size (rb-appscript-0.6.1.gem) = 223232 bytes

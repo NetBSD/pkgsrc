@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:31 nia Exp $
 
-RMD160 (dmsdos-0.9.2.3-pre2-alt2.tar.gz) = 9e06ba44e7bd6f9ee24a5ea66baa9a15b6e8a8d4
+BLAKE2s (dmsdos-0.9.2.3-pre2-alt2.tar.gz) = 5b6a5dc7d7956c63c5f0e9f6e37aa2fcb509983a3588d00b945fc21d4f398d7b
 SHA512 (dmsdos-0.9.2.3-pre2-alt2.tar.gz) = 8d1b12a412fe70c3dcc39c9dd99b7e7c05d2725afa57f2f51fb3a3310232da95dbaac2f8b7e5cdcbf7065a539a54e4693b11c1e7dafee3eab5e5a152b7e2ac76
 Size (dmsdos-0.9.2.3-pre2-alt2.tar.gz) = 288151 bytes

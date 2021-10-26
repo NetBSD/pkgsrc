@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:58:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:20:27 nia Exp $
 
-RMD160 (xfm-1.4.3.tar.gz) = b06c562b467e5085e5ecdd4273b64d554415ce69
+BLAKE2s (xfm-1.4.3.tar.gz) = ece0dee8a58ad46846032a88afb071d13a7c07760305c070d1b00dadba2ad8d3
 SHA512 (xfm-1.4.3.tar.gz) = 8d81a50c474712745d1d1fe6e84d772fd2faba6db31bec2bade799923d9455d772cd1b7cc68bd8014e0ab9f2840117ead0eb959945f800e13a62824d82c8955d
 Size (xfm-1.4.3.tar.gz) = 420962 bytes
-RMD160 (xfm-jumbo-patch-20181125.gz) = 0d6c70e6b3925050166d4bb48335e8a3e76a6891
+BLAKE2s (xfm-jumbo-patch-20181125.gz) = 130478531da50d780ee691ffdd57c9345e4503bca66252abebcf57bfc48a5a46
 SHA512 (xfm-jumbo-patch-20181125.gz) = 2e09e55dbbd99006b1e4e134b9c4749f3ee743c699cf346c2b9625ef69b3d338bfd268697fc63038b9d3b55de60365e7c8d148f9ae4309d8fb614b8bf3653105
 Size (xfm-jumbo-patch-20181125.gz) = 25181 bytes
 SHA1 (patch-aa) = 24ce4e78b18356db98ed2588f8da48380e1efd20

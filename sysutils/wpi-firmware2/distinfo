@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:23 nia Exp $
 
-RMD160 (iwlwifi-3945-ucode-2.14.4.tgz) = f9b9d3ab8d07d4f5ba667dfda3fe57ac791f03ce
+BLAKE2s (iwlwifi-3945-ucode-2.14.4.tgz) = 6ef81bec058dd0ebabbaf10d5be0559bada4c6468b4819a041e71df88ab2011c
 SHA512 (iwlwifi-3945-ucode-2.14.4.tgz) = a7c81caa9a6c8675e3180c3e933cc6d9fb8b63cf4ef6ea0409faf32e1ae791f5565b4d9eaf966e9ab3d9e8bccaada9714cf6501c528259cb238bc0a19ec292c8
 Size (iwlwifi-3945-ucode-2.14.4.tgz) = 66087 bytes

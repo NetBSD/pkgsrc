@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:17 nia Exp $
 
-RMD160 (testdisk-7.0.tar.bz2) = 56ff652a9ddf1c2b5cf96493e9aed8e7f7942d1f
+BLAKE2s (testdisk-7.0.tar.bz2) = 1b1e5e4326d57b2933372f7b2b062391a93b3756a247025341b6f980f70ef30e
 SHA512 (testdisk-7.0.tar.bz2) = b1ebe1d2fca453660a17623b70c06e0195cb5f07056fb7bc683d575c034fb71dfb793582c804dcff0ca57789a6de84bbf13b1a554353811660996e42199102e2
 Size (testdisk-7.0.tar.bz2) = 676990 bytes
 SHA1 (patch-aa) = 76105a444a099435f75bf230292742a92fdc6722

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:04 nia Exp $
 
-RMD160 (pefile-2021.5.24.tar.gz) = d6d0cb34caa9e3e387036b5dcf16cc6e70e35cb1
+BLAKE2s (pefile-2021.5.24.tar.gz) = 60a98b6857001a64393d7512d0a36861c5dd8aa1f1eccde6d28fc49061b63d75
 SHA512 (pefile-2021.5.24.tar.gz) = 614332a6009b5a30682b295272aa4d8fa7eb5eb9cc4981dc2c66887ef8ab17af8c463c1490f0df1a37fc4a9a6d3e8c12dd986657260f98e5b60e771244d791a8
 Size (pefile-2021.5.24.tar.gz) = 66130 bytes

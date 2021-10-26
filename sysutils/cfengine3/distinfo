@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:57:39 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:19:25 nia Exp $
 
-RMD160 (cfengine-3.15.2.tar.gz) = 9def499fdd6b02ec1e80ba6a8be6ac3667cb952f
+BLAKE2s (cfengine-3.15.2.tar.gz) = 510b89c347d7c8bf95b3a39eb0e3dc1000e1e57b412d5ae86ae09d74b806759d
 SHA512 (cfengine-3.15.2.tar.gz) = 894b626fb8cc64fc18ab3ed3e5af90abc2a83bf3a7ea6198e812d0de4c360bbc9c373921e5bd4d533d096e079af71e4ee0c3da1bd72866bab28e45b5e44b11b8
 Size (cfengine-3.15.2.tar.gz) = 3099121 bytes
-RMD160 (cfengine-masterfiles-3.15.2.tar.gz) = e8c80beb6c83f7d057707e4e1daaeb9bcfcc75cc
+BLAKE2s (cfengine-masterfiles-3.15.2.tar.gz) = fb1041fae9544b6ce26325914b08db1be069fb1a1d121b849a1e00032ffd2e01
 SHA512 (cfengine-masterfiles-3.15.2.tar.gz) = b5819188b0b825d16778f195046fe55b43d799afb926646b9654fb06363ab1defa5de93a053c0ae8c0cea13299b5628b7eec39116e30ba2d4927f26b3371c268
 Size (cfengine-masterfiles-3.15.2.tar.gz) = 483402 bytes
 SHA1 (patch-configure) = 084be6ef837fb4effb906f92888486f9229dc3f5

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:59 nia Exp $
 
-RMD160 (Unix-Processors-2.046.tar.gz) = 37a6d29cb69ea48844bc2914c47611f0495b0fe9
+BLAKE2s (Unix-Processors-2.046.tar.gz) = aeef2c96668c31d34eee3c8496bbc47a965d9d220e37f4e6b4bac2b56aa9623d
 SHA512 (Unix-Processors-2.046.tar.gz) = 2288927c1b0daffae312968e2c2ad6ba1604fc5657d2090ed6b25c81311818cb0d058770694fc56e2d95ecf93f22c25cd29aa311f113c75d967df6a2aa2600fb
 Size (Unix-Processors-2.046.tar.gz) = 14556 bytes

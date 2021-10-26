@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 14:57:52 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 11:19:37 nia Exp $
 
-RMD160 (gentoo-0.20.7.tar.gz) = 88a08b6139f385b2a5a65150200b88872edab2fb
+BLAKE2s (gentoo-0.20.7.tar.gz) = 6733250991e23a0f4ade3621d0515ce2330405ae2acd8c4649bf36b93ed03383
 SHA512 (gentoo-0.20.7.tar.gz) = 7a4d601526d7071392bc3f2f34fd86337f4186fc45e633ed359b32ba44f43faddc4760a9ebd2e20d08662755052dd4c02a06724d274f98db342ac53fa28e39b0
 Size (gentoo-0.20.7.tar.gz) = 1414198 bytes
 SHA1 (patch-Makefile.in) = 2cbc495151cdd95fda868b603bc5dcca3425477b

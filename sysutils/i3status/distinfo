@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:42 nia Exp $
 
-RMD160 (i3status-2.13.tar.bz2) = 8432809add78a0086ce8181160528f5e34b7c0d3
+BLAKE2s (i3status-2.13.tar.bz2) = 75d0bb8994ee49219b2605e397b39f8a0433f1e97dd20e2f9f6d19d5fa17f882
 SHA512 (i3status-2.13.tar.bz2) = 6dadff19e53499d169ba4f491e1f821014b4f92fc3c93d7947c85cbbbdeaba538d02bd8ab98fe266a8f80756a287fd5803ec77a8cd874d50082b5cad309875c2
 Size (i3status-2.13.tar.bz2) = 201409 bytes
 SHA1 (patch-Makefile.in) = e50ed614d41a1bcef33feb6414322affa5e20a92

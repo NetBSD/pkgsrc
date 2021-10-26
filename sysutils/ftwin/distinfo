@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:57:51 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:19:37 nia Exp $
 
-RMD160 (ftwin-0.8.8.tar.bz2) = a661d78eb9bf4aa53da25a40a8ad28a0971d70f5
+BLAKE2s (ftwin-0.8.8.tar.bz2) = 672c1008cd00ca5fb80879b064c8b1f85fa9d1ef62730fba80fb093088156ced
 SHA512 (ftwin-0.8.8.tar.bz2) = 4da042417230cfd4e694f73dcd27dc43d124a24df42b2bcbee2a310cfc5bda050f9d8fa256b5b97a7c2f25a778b73a4c2fdea20a044788c4f22f1341b3907a95
 Size (ftwin-0.8.8.tar.bz2) = 168461 bytes
 SHA1 (patch-aa) = 68fd349331a7e628bd246ad62d682d079dd2f3cf

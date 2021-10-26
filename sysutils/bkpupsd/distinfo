@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:57:36 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:19:22 nia Exp $
 
-RMD160 (bkpupsd-2.2.1.tar.bz2) = 0838a096e2ab3564ad1009c690123775c27b87c5
+BLAKE2s (bkpupsd-2.2.1.tar.bz2) = 59b6f84ca5cafab32d754b881ff74ab38bb586029c133709fc530d24f55da5c5
 SHA512 (bkpupsd-2.2.1.tar.bz2) = e5f5c0d9688a339f49c4152f1803d573fd4718cb59483ad15813a6434169aac25d7b03a563c266e26baad3778da4ee9e39c4b837c687dedffff737e194c88209
 Size (bkpupsd-2.2.1.tar.bz2) = 33796 bytes
 SHA1 (patch-aa) = 7261b6862d38fb88b2973ebe3875172f1e1bdaeb

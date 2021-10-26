@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:58:40 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:20:25 nia Exp $
 
-RMD160 (xfce4-appfinder-4.14.1.tar.bz2) = 138b9ee9fda837943519c72fb00c751e1fcd6f0c
+BLAKE2s (xfce4-appfinder-4.14.1.tar.bz2) = 65dadc856ea2ff74289a3b918cdf1e089d712c49c7316dcf345de4f080eabad1
 SHA512 (xfce4-appfinder-4.14.1.tar.bz2) = fbdf7a798dde4d25cceae451744243b34a9e37e7ae7dc05a5da70fa9a2ee8ce771d1a61c40fab6ad698d54e9ed4d96b5c5f38460bee8badc5764846861181fce
 Size (xfce4-appfinder-4.14.1.tar.bz2) = 516973 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:38 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:24 nia Exp $
 
-RMD160 (xbatt-1.3pr1.tar.gz) = 1757aeee7cb25f3500a2bde62939e0ac6a714752
+BLAKE2s (xbatt-1.3pr1.tar.gz) = 7f604b5f517da582fcd75d79ded474fe4284971817a518c5bca8ee05ee1aac6a
 SHA512 (xbatt-1.3pr1.tar.gz) = f6022a2d464e22a31c8246f20c4dcab2be381ec63a02fb9ac1d3e28dc9bdf26a949735b2eba800941f5dfde371913ea7a560413191197c44a0c156a58a60d41d
 Size (xbatt-1.3pr1.tar.gz) = 14412 bytes
 SHA1 (patch-aa) = b822b75668a3494a72b496d820b67720b732add4

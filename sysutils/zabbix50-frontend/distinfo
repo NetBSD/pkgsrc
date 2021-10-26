@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:29 nia Exp $
 
-RMD160 (zabbix-5.0.8.tar.gz) = 6dee86fd06a81820f02de7854b84384cdbb0831c
+BLAKE2s (zabbix-5.0.8.tar.gz) = 9d40094cab0655b2fbf32e48b1735db6afd07c0a9fb396d806e2deabea9f6260
 SHA512 (zabbix-5.0.8.tar.gz) = 19601ace704c8a887ffc9b57da8825d8a28a5d064aac3e59480994bee4156db186d37ecf4bee2208bbafc0cb76c0c7f47de964f99953ce78d0187457255d92e9
 Size (zabbix-5.0.8.tar.gz) = 19474050 bytes

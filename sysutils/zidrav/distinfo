@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:30 nia Exp $
 
-RMD160 (zidrav4unix-1.2.0.tar.gz) = 7043b122e8e1f394d6fe62ea81ed08d0052a199b
+BLAKE2s (zidrav4unix-1.2.0.tar.gz) = 98e5ecb4f8f8548e6993deb468d1259753ce5496e840d54a9be877f1a648efc2
 SHA512 (zidrav4unix-1.2.0.tar.gz) = f1fc2b2621e3d02bf51995241f7f95e40b58bca17132a0a296babb586c489d1667fbc2901b5dc02890f89e685ce1f4c068a950bb58e1e445d278acc234d03951
 Size (zidrav4unix-1.2.0.tar.gz) = 18448 bytes
 SHA1 (patch-aa) = 7e1c6bcb375d38a1aa7f3eaa4fa00e779465860a

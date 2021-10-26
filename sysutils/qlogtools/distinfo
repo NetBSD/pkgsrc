@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:06 nia Exp $
 
-RMD160 (qlogtools-3.1.tar.gz) = e420474b48d6efb04b382672e28d4276697e8098
+BLAKE2s (qlogtools-3.1.tar.gz) = d62b2f08bedf34b53d5e579de28f2aea3ceaef40d7302a9e9c7dd433713bc56b
 SHA512 (qlogtools-3.1.tar.gz) = aa080114d543d70879b091e3c1d4ddf7a3c1eaf0848c7215fb291e0dac49070833917f66bf02012bcfb1c5df63dadd0ab8c1c1642e5e1c4dd3c34c88bf2751e7
 Size (qlogtools-3.1.tar.gz) = 20868 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/24 07:48:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:17 nia Exp $
 
-RMD160 (tiramisu-2.0.20211019.tar.gz) = e9bca815a1727a7a652fa204c2450292ae617322
+BLAKE2s (tiramisu-2.0.20211019.tar.gz) = 7bdec62963ab616348bdfef9e60b23ad04fe5f9dc5a98e5f7c812d60f4cc6437
 SHA512 (tiramisu-2.0.20211019.tar.gz) = 47c2cbaa0619c6db6ef02c1c522133077d82e5f0498a3ffca87f94d625e2ecf74031279ac47f4b262f7cf444b3fc4bdc2dcfd92cee17b2d02a5f5f0fecb17186
 Size (tiramisu-2.0.20211019.tar.gz) = 3061568 bytes
 SHA1 (patch-Makefile) = 4777ea431d283fa8089ae15ddc9ca387f6a61553

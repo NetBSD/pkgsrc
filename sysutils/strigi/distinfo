@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:58:29 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:20:14 nia Exp $
 
-RMD160 (strigi-0.7.8.tar.bz2) = 34cbbe98e7a371467b115b18586baf299340d1b8
+BLAKE2s (strigi-0.7.8.tar.bz2) = 749d1731722ad8259eba92204e3f6b3efdc2e96f58ab7fb32c9a5acdf0e5e86c
 SHA512 (strigi-0.7.8.tar.bz2) = 536f5bd5ed13d87d30c2fa31b6dcb2a883df173e5d60deefe0fdeb843f40f29f7edd0041029dc013bb31a205572087ed95ca661bcdf6d989d9806931716b1043
 Size (strigi-0.7.8.tar.bz2) = 810574 bytes
 SHA1 (patch-libstreamanalyzer_cmake_MacroCheckGccVisibility.cmake) = 7d8371711bc9c5465f87b9e7e649b45de3652bb2

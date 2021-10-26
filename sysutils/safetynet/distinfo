@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:11 nia Exp $
 
-RMD160 (safetynet-1.15.tar.gz) = 744502170a8fb2a9f04531c51c21d6fe35989002
+BLAKE2s (safetynet-1.15.tar.gz) = 1b71bc86315f867a8c11aa050978f3718c1469776e89cb4c9e96bc45612773b2
 SHA512 (safetynet-1.15.tar.gz) = 68db636f6fff159ca121eeee839b5cbf27398089a93323e459ac2a8716c3a504db1918899b1951e45c7a7e115dc9a5129bc3e93c6fb562b83368708135773bb4
 Size (safetynet-1.15.tar.gz) = 12638 bytes

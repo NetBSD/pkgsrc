@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:19 nia Exp $
 
-RMD160 (u-boot/u-boot-apple-m1-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d.tar.gz) = 136f34807a3f1ee0b1d6d882aee46a434cf220ac
+BLAKE2s (u-boot/u-boot-apple-m1-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d.tar.gz) = a10f233d68f35a18a750c1ce7bcddb061c320268c12e7e59b983665cea41ee81
 SHA512 (u-boot/u-boot-apple-m1-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d.tar.gz) = 2aacd1c6be21f91e735e359bf41ce3ffafd0c0ad496a893d7c911dce4eba9bbda1e17caf8bf260cdb965182b1d51beb46562cb42d5860ff48e3c4295b1ff0c3d
 Size (u-boot/u-boot-apple-m1-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d-c6aa1280001d2a3a0f17c1853cd175fe5c21eb3d.tar.gz) = 21276320 bytes

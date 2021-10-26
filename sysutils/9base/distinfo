@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:57:31 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:19:17 nia Exp $
 
-RMD160 (9base-6.tar.gz) = 7a3686ac1630c52810eebca91b2e49a935dd0812
+BLAKE2s (9base-6.tar.gz) = 7eb2285054a52f2e97fd77e4e5d1451a0a3435212b64b503ba651d6e678312e6
 SHA512 (9base-6.tar.gz) = 38108a94118b56c6f3982e692beb1068c52f9aecd74447d6b552b77fae5e365eab72b4781bdf07d9696ac89d54371c1cae8cc0363de510b53988302acef50dba
 Size (9base-6.tar.gz) = 1045868 bytes
 SHA1 (patch-bb) = 4e277a72fc2552c177ade11f5ee14570a2b2650f

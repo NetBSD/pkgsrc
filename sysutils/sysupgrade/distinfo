@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:58:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:20:16 nia Exp $
 
-RMD160 (sysupgrade-1.5.tar.gz) = 5b1d7c6d45643f2f03bff1df16739a6751d0ceda
+BLAKE2s (sysupgrade-1.5.tar.gz) = 5fb73e83c7b9b1a891ce0cfb26422f07822061e2df42db6a4e3692468d028186
 SHA512 (sysupgrade-1.5.tar.gz) = 47f37ce6802b8ba74d6edd19a2c80d46394c992b58d3077e6d1316e4f5505afbe53a68d28b28779a10a78d7be05f2f5b9d2a55b5b2f845bcc59a78950a8306f8
 Size (sysupgrade-1.5.tar.gz) = 75833 bytes
 SHA1 (patch-default.conf) = 2457714998c86994192ef57c5dd22646f76828c4

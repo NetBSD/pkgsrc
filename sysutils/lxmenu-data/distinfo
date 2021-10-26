@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:49 nia Exp $
 
-RMD160 (lxmenu-data-0.1.5.tar.xz) = 3da3c8f815f7eaf694291ffb6d7c47b7f7fb4d6e
+BLAKE2s (lxmenu-data-0.1.5.tar.xz) = d2e2b2a9fc4f0fbceedd4d6907d2fafab1c404fbc4326d2387f5d307df092449
 SHA512 (lxmenu-data-0.1.5.tar.xz) = ea1a1ad511d9e56c7692a8d96feb52c53aa7bd7595f2312d4f41fc15a12a056551c70d6a2c55a30f849e2ac2fd1a06436751573472ae70e0158e069736578b40
 Size (lxmenu-data-0.1.5.tar.xz) = 199192 bytes
 SHA1 (patch-layout_Makefile.in) = e9a12569ca6bbee269d6ae7a7a4cf5072a0d4286

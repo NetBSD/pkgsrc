@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:57:47 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:19:33 nia Exp $
 
-RMD160 (lager-3.9.2.tar.gz) = 439094a15c676ae7eddb2d5152cc24bef658cfa4
+BLAKE2s (lager-3.9.2.tar.gz) = f0e164662e880de2029dd6bad6ec5a8b625fe008825872ad925a07fadd28d742
 SHA512 (lager-3.9.2.tar.gz) = 13b08145ab2316215f95de34838445f2922513e44f6800f338cd6941e6854653a9f8657447b439d5d508cb4569fbf4a0e03dc508d7c5d2ad48c9d4d14e17ca50
 Size (lager-3.9.2.tar.gz) = 273894 bytes
 SHA1 (patch-Makefile) = 179393d96e6bdee4b2e18f2d9f0f2f1ba9271ac2

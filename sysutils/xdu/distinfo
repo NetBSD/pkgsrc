@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:58:39 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:20:24 nia Exp $
 
-RMD160 (xdu-3.0.tar.Z) = 0c95ad79aaeb6e58433add71d852cc0b2312a5f9
+BLAKE2s (xdu-3.0.tar.Z) = c197fb6c7490f099bacf267046de62a55f71144abce4092462d6b6203845f1ea
 SHA512 (xdu-3.0.tar.Z) = 7351609121b701015cb1c707438a75d5ab89e2a6dafe412e2568647adb59901c02159bf4b3d854a6532496f576cb4dbb1da09fcd4cfd23f22cce2d37b6307238
 Size (xdu-3.0.tar.Z) = 20114 bytes
-RMD160 (xdu-3.0.dirname.patch) = fb233756b80a3c482503be702b80b7841a7d0d7b
+BLAKE2s (xdu-3.0.dirname.patch) = e35e0c8641a88e383e2d3ad6db291631d11a50ba11a726d6a628aace10400ee5
 SHA512 (xdu-3.0.dirname.patch) = 3f1bf889df12fcd6b7bf49f8ad8c199be97df0c3e72bcd544bd24b4cbe84e2cafbe20c9bc6a3e292fc3966409047e1c5b21419adf78edcc0ec33e97b47ad0c23
 Size (xdu-3.0.dirname.patch) = 1672 bytes
-RMD160 (xdu-3.0.i18n.patch) = a1ada2ae69331010dd7f3c0e77cb4410065a7254
+BLAKE2s (xdu-3.0.i18n.patch) = 1595c013f5cebfcb46087d0f32c754b39baf2299ed9d276cf96a3f6dbc98d60d
 SHA512 (xdu-3.0.i18n.patch) = 21e7eac54680d47a2bc8f357ee60bf3d43e36e25ab05fb33bae11100ce0c504718b146988e825b91ee2eb3a0a4b3ccb24a1b82fdf97f3a44cc107f757726de43
 Size (xdu-3.0.i18n.patch) = 2760 bytes
 SHA1 (patch-aa) = 2fd14aa8bfa5150166f96c816a4425975d1db164

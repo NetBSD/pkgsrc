@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:58:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:20:06 nia Exp $
 
-RMD160 (radeontool-1.5.tar.gz) = 1cdeeb7ad379afa7bc03e1cd79adbb09f6a9cb85
+BLAKE2s (radeontool-1.5.tar.gz) = c70fac965e396cedaabc4313f1b572dd0881b5099cd9b4f70dd7c5ca0df78145
 SHA512 (radeontool-1.5.tar.gz) = 985771cbaff3d6451563ac388b6b303410b7e1088c9a7404de63964c465f3708f9fede40fde7dfeaeb3779dff86a9007fcf982cced23cdc2f6bdd555494f78aa
 Size (radeontool-1.5.tar.gz) = 20869 bytes
 SHA1 (patch-aa) = b2b765131bfcb22eb0e5082d529fb0f01644a9a3

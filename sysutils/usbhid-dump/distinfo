@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:20:20 nia Exp $
 
-RMD160 (usbhid-dump-1.4.tar.gz) = b9d3694f4db81ee3b6dc29db4a9112e0c87aa4ab
+BLAKE2s (usbhid-dump-1.4.tar.gz) = f191d1f6ffea01fe6704ceb3fadaf7c5bc3ad0817b308a665b7d1b1ccd2bdd42
 SHA512 (usbhid-dump-1.4.tar.gz) = bc0e5af87833fea0146f006577ab28573a441c275eb39f84fb96cf30976dfa2e193f240b4f5600128362a1b65aaa8f14a02863ac262b92aa4886f1a526fa3c29
 Size (usbhid-dump-1.4.tar.gz) = 341411 bytes
 SHA1 (patch-src_usbhid-dump.c) = 4c8abcc7b45ea2b6e77b1917dcc74b1f77ef59f6

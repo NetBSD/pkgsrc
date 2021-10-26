@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:57:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:19:20 nia Exp $
 
-RMD160 (atitvout-0.4.tar.gz) = 594fbc3a20362275a2d9b4ca13ae0b7ae761bcf3
+BLAKE2s (atitvout-0.4.tar.gz) = 1ebfc606fd0b4ab9d4c1527edaca202045b198934b4122bdc9ab58b29733f966
 SHA512 (atitvout-0.4.tar.gz) = b2bf906d4348318f38c1ba7a1246dc9047519aa2952d3db49062184e32bd6f03a968ae2bacc6ac579f9369e6686920ce9cfa32f19a3abfa47e4a2a5050f60729
 Size (atitvout-0.4.tar.gz) = 27163 bytes
 SHA1 (patch-aa) = 68e79e289b1aadbba3aa1dbf3137fdf90c486afa

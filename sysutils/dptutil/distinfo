@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:57:46 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:19:32 nia Exp $
 
-RMD160 (raidmgt-3.31.tar.gz) = 387aee21d9b0730461b6cb77f88d9ec6b837db8f
+BLAKE2s (raidmgt-3.31.tar.gz) = 0a8c10305a7719f7622f554b4695db2391bd2957a22dbd20607814c347057b8a
 SHA512 (raidmgt-3.31.tar.gz) = 5d1a95036c2e9416a20eccebc6af84bbf20f0eaa8fff93ca5b7823607e8f3921bb67773249960dad49363a522acc5b3c5db6aa519f17455919b4c6f3064d1265
 Size (raidmgt-3.31.tar.gz) = 723349 bytes
 SHA1 (patch-aa) = 7ac7861299b90794ca58fb3004d9c1af8632558c

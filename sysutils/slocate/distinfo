@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:58:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:20:13 nia Exp $
 
-RMD160 (slocate-3.1.tar.gz) = d3b1e818cc35ce8e87ec1b0764f6b2145a319e13
+BLAKE2s (slocate-3.1.tar.gz) = 15249698993284cb19ec5476e0d602626fcff3a76b58b97b6a057d6e3ebdcbbc
 SHA512 (slocate-3.1.tar.gz) = faea4c1ec63d4d318340021e0d946dac6fb6d48273c557dfc6165c9850d9fd5a290b57b8a87a18dd0d521a84fcafbc739f4a86997dd92bff665b183ffa23aa1a
 Size (slocate-3.1.tar.gz) = 37748 bytes
 SHA1 (patch-ae) = a91bcc950628ee8bbe87e17066502a030b8b9c6d

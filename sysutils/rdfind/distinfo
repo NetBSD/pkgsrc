@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:06 nia Exp $
 
-RMD160 (rdfind-1.4.1.tar.gz) = 6208cb323f1ed45c3089d5e6ed7e33dd6838d359
+BLAKE2s (rdfind-1.4.1.tar.gz) = ade920579a09e3942a0ea21c5bdac4ec14cc3d78a0fb8fe42a1aa45957d49c79
 SHA512 (rdfind-1.4.1.tar.gz) = 38fceac92386b75cb66a85fb369dedc393e7ea08634f4972d83138c43c5ee04c3471df21aaf5192a8218714171fbc05cd7315c2422371d03c312d116c7902945
 Size (rdfind-1.4.1.tar.gz) = 136665 bytes

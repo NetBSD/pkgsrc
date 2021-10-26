@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:43 nia Exp $
 
-RMD160 (ir-account-0.2.tar.gz) = 8fcef7fedfc90acebb8ce79f69845fd83b4682b8
+BLAKE2s (ir-account-0.2.tar.gz) = aefd3a26bf8607eed26af006e39c732081b7f0ee501f91ec0de5020f816f0c1c
 SHA512 (ir-account-0.2.tar.gz) = 7a1a50915ef78cd8309396cc0b2876adbf1c04b6b239440e4a50c05fdc358b62d3e53d14d9ae4418cbc6441dd793f259df71d10032fe17042a4ddc514b1073a4
 Size (ir-account-0.2.tar.gz) = 59321 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (libpciaccess-0.16.tar.bz2) = 282070e213410b182eaa6f08877d79e7c07ed971
+BLAKE2s (libpciaccess-0.16.tar.bz2) = 10f6a04a6ac20c0f05bbe9eb391f2f67e07418faac2dc93c56fbba7362f996f8
 SHA512 (libpciaccess-0.16.tar.bz2) = 2f250048a270dfc0823d4bdd613aa272c58a80eaafd922850f56c4b6f7a45a263ed4cf521b52b49f04484ea44ebefb7407d079aa058318a5751ffb181e38fed1
 Size (libpciaccess-0.16.tar.bz2) = 366603 bytes
 SHA1 (patch-src_common__interface.c) = cac11689864531fa4721e09374ead730bd1691a6

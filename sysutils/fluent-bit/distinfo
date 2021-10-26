@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:36 nia Exp $
 
-RMD160 (fluent-bit-0.13.2.tar.gz) = ab64676e78ed86cd90cf1f89f711d88ba2e69c92
+BLAKE2s (fluent-bit-0.13.2.tar.gz) = 08519e04a5307d167d8eaca7aadb549d27681c9c5ba1864ed5d14c3b9868950e
 SHA512 (fluent-bit-0.13.2.tar.gz) = 787e1d8f1c50e39642f7b637938c5e5d4dd8400bd89c9ed929830bf19e4617baf0bd25503ab5be5711ea85c0030061872447203bbd20255bb87649615ab350e0
 Size (fluent-bit-0.13.2.tar.gz) = 8758919 bytes
 SHA1 (patch-CMakeLists.txt) = 8991f16aa7248fbadc4da85d1f85614a7205f290

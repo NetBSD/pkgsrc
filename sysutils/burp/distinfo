@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:23 nia Exp $
 
-RMD160 (burp-1.4.40.tar.bz2) = 3ba2a60605562bbff7bacc600ee511c3ce020995
+BLAKE2s (burp-1.4.40.tar.bz2) = d7a7a6f413fc36d9b7d6ec32d0203ba5ebaca8c14995017648115b0174804033
 SHA512 (burp-1.4.40.tar.bz2) = b44ba3a63d3b75f6fee55bbfef70ac07fa87e78ddb22a398e31a86670dfa3f2db1c9dbc58de3d0038cdc409bd5ae52c8e901cb26975fd7dbe0f773c4841af10c
 Size (burp-1.4.40.tar.bz2) = 712937 bytes
 SHA1 (patch-Makefile.in) = 3df0458b1fc50cc03d8f69a864830ab52e9d0f8d

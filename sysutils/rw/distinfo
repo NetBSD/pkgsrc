@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:20:11 nia Exp $
 
-RMD160 (rw-portable-1.0.tar.gz) = 271db6bea10b0ef28ec3d0d4b99167709c8f31a5
+BLAKE2s (rw-portable-1.0.tar.gz) = 89e08a87ff4f1a44a8b0b7176a47d5e91da07b75e6ea8abc807fe49a191e1f6b
 SHA512 (rw-portable-1.0.tar.gz) = b4358a8caad594dbfe7795008017c2ebaca498c9f843336cdb1d7e122e1c9be78b5c01a4ecf8c37f4238cb0ddbdacb1ba5e4281797113fa34b122e4ab3894a97
 Size (rw-portable-1.0.tar.gz) = 12993 bytes

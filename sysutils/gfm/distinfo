@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:57:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:38 nia Exp $
 
-RMD160 (gfm-1.06.tar.bz2) = 48495c810ef38f7a56536b0abace9880dac49798
+BLAKE2s (gfm-1.06.tar.bz2) = ef3e3cc95786f559d6d8ae060c907693b6be114ee8cbb955817fc091ef50654d
 SHA512 (gfm-1.06.tar.bz2) = be3584e976266af18132ed426eba8ab0fb0425ac40bb5dc10f2ecd490fe4d9ff1e986fc1d178db5dfd415778fb04a53b502ebc90d575ca727f1ee77d2fd76512
 Size (gfm-1.06.tar.bz2) = 481424 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:51 nia Exp $
 
-RMD160 (mdf2iso_0.3.1.orig.tar.gz) = d07bf6d072486382c71dc06ab04d529f769db180
+BLAKE2s (mdf2iso_0.3.1.orig.tar.gz) = 47c1b622b3cceb8a7974da056bb7abdb1267cfb97914696446c10f7bd21e100d
 SHA512 (mdf2iso_0.3.1.orig.tar.gz) = 0a18badb5b226c0184457daa6bc2ce497f559e57d53ff97374154a0c81881b7139197480a131b4e46aa7ab32cba610000f390244e61974edeffccd498fef2d64
 Size (mdf2iso_0.3.1.orig.tar.gz) = 193860 bytes

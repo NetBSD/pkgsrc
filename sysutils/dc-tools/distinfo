@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (dc-tools/1.6.tar.gz) = ca538169072c8124276dd460e0b55d31d6170850
+BLAKE2s (dc-tools/1.6.tar.gz) = 9f1f9762806139be68031938785f24f412b82683d02e8ad5dd223a05222a2338
 SHA512 (dc-tools/1.6.tar.gz) = b7d35d27a7a7e1137140913c46137037e4685a817cbab8692be1d167da085fc14e8cdba1a1199e9f8e7cf9259ee462da1dc73bb8c677c2ab716314fae4ef5f42
 Size (dc-tools/1.6.tar.gz) = 5677 bytes
-RMD160 (dc-tools/ip_slave.tar.gz) = 408603e6265bff935764c68f2bf4b0ebc6bd7088
+BLAKE2s (dc-tools/ip_slave.tar.gz) = 2c46c01dc36dee2958d087757adfe07d27b8eb320de55cdec9661ed3af3864a0
 SHA512 (dc-tools/ip_slave.tar.gz) = 8bcc922478f2da00cf979073f24c6de39c1bb7a3f4c6f87aec4d8c443129c052959f624f20ff8c235f83e6b56d45cddb6514bda12bf4ab5e200eba0dc63d600f
 Size (dc-tools/ip_slave.tar.gz) = 23008 bytes
-RMD160 (dc-tools/makeip.tar.gz) = 218bd7138fe7af45aa0cea522cd81370c395c2de
+BLAKE2s (dc-tools/makeip.tar.gz) = 5bbcfd218d9c1791eecdd86470a3d4318152e98f6145d3b63ad78674823b6cd1
 SHA512 (dc-tools/makeip.tar.gz) = bb4f4e9d99b0017a770000bf2098051880a81ef51c46f2f7417e56d73f97ed2dd078c913d783046c7c63a7709d4141068bcf72325ba2c89c2f60eefd33ca661a
 Size (dc-tools/makeip.tar.gz) = 10482 bytes
-RMD160 (dc-tools/scramble.c) = 2c3cd8448aadb1b02e504f1d5bc14a744020b836
+BLAKE2s (dc-tools/scramble.c) = 1c4df2a26c33c68b0de9f0d1182fe8c59e0ff82d953d960b66bc9511d1384f4f
 SHA512 (dc-tools/scramble.c) = 683af2b0914d57d0d54c50d30af0a9c528ef030a95429ee43b213d10ed23b0b7bfb5abb9713d66392808620a4bd9d783e4eb0f8719010eac83d5754e14b80eb2
 Size (dc-tools/scramble.c) = 4963 bytes
-RMD160 (dc-tools/serial_slave.tar.gz) = a5e06803ccb5bee7f6d76fa0619e90473358ae2a
+BLAKE2s (dc-tools/serial_slave.tar.gz) = 3299b6022135c27ec130c2fa179c4ab06d624ca088552c591363ed219fbc896e
 SHA512 (dc-tools/serial_slave.tar.gz) = d717297a1a70fabf2b613d89c31c3ff3da642be2b4cd1507378bedea0f1cfe4505a71a25540797ed1f2b14ab934ce12ba3ab1ff1db7b79c1fef7d7b7dd68373f
 Size (dc-tools/serial_slave.tar.gz) = 9524 bytes
 SHA1 (patch-makeip.c) = e058c4ad064bb98f87514d35f4cb202d63db06d2

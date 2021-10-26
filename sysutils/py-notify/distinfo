@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:04 nia Exp $
 
-RMD160 (py-notify-0.3.1.tar.gz) = 5a914c8742a36075c48daec75e5e129e63150c58
+BLAKE2s (py-notify-0.3.1.tar.gz) = 5dbeb22cc71a82df19571a52a430ee678284d79a1d17126037fede29285f6b1b
 SHA512 (py-notify-0.3.1.tar.gz) = ef325a0259e764f8ecef3c706eda0bf90984d15370c5a94ef3b9128de4a5ee43d1af170a2277fb190f1b373f84f2abb3475c15b0ce6e62822d546fc58d5a312b
 Size (py-notify-0.3.1.tar.gz) = 144952 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:57 nia Exp $
 
-RMD160 (GTop-0.18.tar.gz) = bb40ac4b90848d53701d68c04eb6bb69c9f117f0
+BLAKE2s (GTop-0.18.tar.gz) = 9b3c05f50ffd0ae5bdcbbe6b9c1560c1ab5c39fb85ec116e60b3888924e143e1
 SHA512 (GTop-0.18.tar.gz) = 478eace21f8836b38434c0521063303117489784567945f940f170aa3022f4a1241ec646368aee0353de6f5a791a79c3de27b273815af5be458e766799b5944f
 Size (GTop-0.18.tar.gz) = 18711 bytes

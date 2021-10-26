@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:24 nia Exp $
 
-RMD160 (ccze-0.2.1.tar.gz) = 22d89140ea0518c6a33c07464620a2a1fb212b94
+BLAKE2s (ccze-0.2.1.tar.gz) = 9cb3af072eb4d0081eb9636e4494644378d974dbd9ba772b036ec9e84fc85238
 SHA512 (ccze-0.2.1.tar.gz) = 1704da8d4c97a3403a57d7841db8a6e4ba6116e401f91d9ecf1b1371cc18b40641e5665c9414740d6a523874be6b6527f5c0d4f3a3796c7b96ed83192146b2b7
 Size (ccze-0.2.1.tar.gz) = 139795 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:58:06 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 11:19:52 nia Exp $
 
-RMD160 (mtools-4.0.35.tar.bz2) = b240291892cb0d09e5f1af2e5b734444abb91aaf
+BLAKE2s (mtools-4.0.35.tar.bz2) = 4263c937715b8aa423b0ede3220e0d5c7b8201846633be1f538b7543cfe7ecb7
 SHA512 (mtools-4.0.35.tar.bz2) = ef563b3319285667993c82d819e08cb819a6bcd71c466fc252568996b4218cfb3731107ffcd6150ba33c0837e012e02057def41e2b011f751eaf550bfa366a10
 Size (mtools-4.0.35.tar.bz2) = 455988 bytes
 SHA1 (patch-aa) = 493b06455ee3169e6db916a9d535dad5a124edbc

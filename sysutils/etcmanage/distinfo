@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:57:48 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:19:34 nia Exp $
 
-RMD160 (etcmanage-0.9.4.tar.gz) = 706198a9007eadb057d1f506ddfb5ff488ddbecf
+BLAKE2s (etcmanage-0.9.4.tar.gz) = 5fcef2741a6e17cbfbac858a015e69deb7fa8cf9a482e2f4811c49e688442901
 SHA512 (etcmanage-0.9.4.tar.gz) = d85ed9cd002d3f96b8f6a941a8b39212e34428543495351d52611848d0b28e79a9bd0f98f1780f59b4083515c0873096301f2576c87f162ed80efe69f384b1d8
 Size (etcmanage-0.9.4.tar.gz) = 102942 bytes
 SHA1 (patch-BUILD-NetBSD) = 8ad7636106ebc18d286a1b89a6006567e30fbe20

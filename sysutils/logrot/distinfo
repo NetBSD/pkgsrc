@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (logrot-1.7.tar.gz) = a3781410064a9b229766021f2c8bb2e7bc811489
+BLAKE2s (logrot-1.7.tar.gz) = f3e8cddf022b65fffea04e27fbd1a5a9d6312e7f8fbfd50e3a42b3e353b12342
 SHA512 (logrot-1.7.tar.gz) = 6d3221cce599f943108d38b5ff0637f9b85d5d98e1d4e4d79be9b2404fc3b50d7ec4b0bfedeb51dcc4600d452c6291e3f2da020148f1c98c40eda3a43284db81
 Size (logrot-1.7.tar.gz) = 35618 bytes

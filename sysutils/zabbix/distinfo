@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:58:43 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:20:29 nia Exp $
 
-RMD160 (zabbix-4.0.24.tar.gz) = 58adfbe295abd10cd99fbced97e829040537993c
+BLAKE2s (zabbix-4.0.24.tar.gz) = 99cbad42171b86b62636b6d498ba344c99762ea98ecff80c47497f6ef49f7c61
 SHA512 (zabbix-4.0.24.tar.gz) = ec4d4bbfc3ce1ea10a4e6cf96c10e4495ce2ea154dc297544ae107d4cb7451e3fc76e25d7822f40a809a87a268c54abb8a9d49869942f2009c0a7f92ff6abaf3
 Size (zabbix-4.0.24.tar.gz) = 17404177 bytes
 SHA1 (patch-frontends_php_locale_add__new__language.sh) = 71be94363ee58490d2ee3ef4bc6b800cfc99e90a

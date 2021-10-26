@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:19:27 nia Exp $
 
-RMD160 (crashme-2.4-shar) = 0a4252a7b03bddad60cd522565142279d18f91b8
+BLAKE2s (crashme-2.4-shar) = bc0050b0a364a6c99b73f4517c50d4a9e5cd7c6496dee18050305f67810ddd18
 SHA512 (crashme-2.4-shar) = e646888b3bfcf51d29832e1da3bd2841dd2039a458074e00ec9b325951982d692bb0387f0ad5fb7de55a2ac144fd82b95848e6842fcd22e6afb6cc54f07d80db
 Size (crashme-2.4-shar) = 57010 bytes
 SHA1 (patch-aa) = 4d7f31675b10e5a504e222ea54a737203b389f15
