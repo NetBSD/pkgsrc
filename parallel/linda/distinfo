@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:46:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:10:36 nia Exp $
 
-RMD160 (linda-0.1.1.tar.gz) = 0148408654945cebde41639ccbff4b792d35eada
+BLAKE2s (linda-0.1.1.tar.gz) = c5f1c1d3d31041670dfd75a84f7d9fa2fa81feceb6f2c353be98279d9e3f20ce
 SHA512 (linda-0.1.1.tar.gz) = bc0a232b6c545222bbc04520aa55e53941c3900a43e9b901a9134d70b49be5512cd897d69d365a4b237420415fbed23d7c0e9b8e06bd522a9c76cd9c31e55c72
 Size (linda-0.1.1.tar.gz) = 187939 bytes
 SHA1 (patch-src_tuplespace.c) = f8f7f6de36224ed8435776cb952d8fc862316ffa
