@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:33 nia Exp $
 
-RMD160 (Text-Password-Pronounceable-0.30.tar.gz) = e8411e5a467d4bb5c1146ee322f2456bf34addaa
+BLAKE2s (Text-Password-Pronounceable-0.30.tar.gz) = bf3c97cdd216e374df19d6a234e606b5a4167cce3848f74e1978a1dd57c71c32
 SHA512 (Text-Password-Pronounceable-0.30.tar.gz) = a591073afa9002ecd098d3b6acdc35656e5b10df63eed4a4f6a1df5dbfc9b990c65937d7297b3bd0e7428f97969250a98ee20f2420a45b08a00e287bb200a601
 Size (Text-Password-Pronounceable-0.30.tar.gz) = 21015 bytes
 SHA1 (patch-Makefile.PL) = 82c92bc63a360a44bbf9e352380ba6ff9fd6334f

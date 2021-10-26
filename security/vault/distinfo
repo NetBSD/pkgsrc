@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:54:48 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:18:05 nia Exp $
 
-RMD160 (vault-1.6.6.tar.gz) = 33e9b0f0e9c1f29c7cca9ad56343d0d21450d2d4
+BLAKE2s (vault-1.6.6.tar.gz) = e87ef33f22ba019e4d288cba38b0e8d0a05d2a1417423f4dbc23c3f08c4dc76a
 SHA512 (vault-1.6.6.tar.gz) = 820ec2f0b71defe6e6920bb4eefec55536d3d06345b676323d4af0c74c837c886871b0951b54f917e27b61bade9b4a8e9f36e3905a82a134b9e5f887ed744534
 Size (vault-1.6.6.tar.gz) = 39139148 bytes
 SHA1 (patch-scripts_gen__openapi.sh) = 1ad66480ef135adec05f58b088440e0bec6b4ab8

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:54:16 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:17:32 nia Exp $
 
-RMD160 (Net-DNS-SEC-1.18.tar.gz) = 3840c75341cf08ff448fbae771d6a167c6ef377b
+BLAKE2s (Net-DNS-SEC-1.18.tar.gz) = b3a9c62385856ab5ac18edfc1e7a7296aed7c58cc0a89a82e4573d17a757e0f1
 SHA512 (Net-DNS-SEC-1.18.tar.gz) = 44f1bbcd9b5c8759ccbb8a9c40efb3d0533a991d6d9aec63ec8b1347a4cbf314470efebe4e5bc59fb19427405a4b8d41682c5231427783cace8f9779bccdc893
 Size (Net-DNS-SEC-1.18.tar.gz) = 46301 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:53:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:02 nia Exp $
 
-RMD160 (codecrypt-1.8.tar.gz) = 4149bea89e52f44620e6ea3ff5a513af9872477a
+BLAKE2s (codecrypt-1.8.tar.gz) = 92b135661c804fca45c617d294619b9684831df395b9d7518b5c153bbd6e058c
 SHA512 (codecrypt-1.8.tar.gz) = e6b30fd06b9ac271c04da9e1052c9ffbc2827337a25902bb41c30f81e040d28678f9565d2fc647dc45352b72576a823151cc841c58e080b0df987f1cc7f5b463
 Size (codecrypt-1.8.tar.gz) = 20463145 bytes

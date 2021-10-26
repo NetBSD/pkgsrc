@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:29 nia Exp $
 
-RMD160 (Crypt-URandom-0.36.tar.gz) = 8f0eb1384361013f4998e605a3a1907544c67794
+BLAKE2s (Crypt-URandom-0.36.tar.gz) = 08b6e230fde51340a725cbabdef9beac8c0618174b44b68a144ef65b1e88a8dc
 SHA512 (Crypt-URandom-0.36.tar.gz) = 59e6773d808f34f242f2520ed236faeed804d623fbcf4f1b8e7b39ed215ff1cde9f76ce4a9f5f260dfac42b036229a56cdb49a7f6856d5e943ed4d50e3392adc
 Size (Crypt-URandom-0.36.tar.gz) = 6099 bytes

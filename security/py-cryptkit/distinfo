@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:44 nia Exp $
 
-RMD160 (cryptkit-0.9.tar.gz) = 9cf32689e4644b6d4dab24e6ddb17167563f1b58
+BLAKE2s (cryptkit-0.9.tar.gz) = ccf26477fb73c5426b735e845089d01dbeb2c808e7f8d4b67dd6550a8ebe79c3
 SHA512 (cryptkit-0.9.tar.gz) = 9d4e4eb5a68406061661d04d230dfbb4bd6cb05a1e16c3ec5c85bc9a4cec0d676f9c16de2b7775762a134652bc9eb9abaa626a808f8441d6a6fbe3d7cf270514
 Size (cryptkit-0.9.tar.gz) = 103627 bytes
 SHA1 (patch-sha256_src_sha2.c) = d8c517be3de78ff1c815f413c331e791d9c40fbf

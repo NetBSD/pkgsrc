@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:48 nia Exp $
 
-RMD160 (python-openid-2.2.5.tar.gz) = 6ba011970c99ac46141655d32d82e633e4bd408d
+BLAKE2s (python-openid-2.2.5.tar.gz) = 8f052892bbf837f2ec381ade1055c5ffb5ee06f5acc682638084ec2132417729
 SHA512 (python-openid-2.2.5.tar.gz) = 46ffeb07dc0e94c6e1160c824dfafd4a125746a05af1541e112bc2691bf655f75d0431ea273877899abc2956bb1f82369dea75d9b54282f33875f333f5166e7a
 Size (python-openid-2.2.5.tar.gz) = 300524 bytes

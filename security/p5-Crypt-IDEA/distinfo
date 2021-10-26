@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:54:10 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:17:27 nia Exp $
 
-RMD160 (Crypt-IDEA-1.10.tar.gz) = e1866fcc3c4f3e33f7a18063cc0ad96ecfdd641a
+BLAKE2s (Crypt-IDEA-1.10.tar.gz) = a43f3392d209fae4f73a6cb77ec6280e32a47cbd62a35707f2b2b85ed26e8d93
 SHA512 (Crypt-IDEA-1.10.tar.gz) = 2459f8f8ca088564b037101129796d6d3652062e80f9342173508df95b60ceb9ccb836b946d50127f86b38b239e25c58e1f4efde4eb73a5b24fc823a100fd018
 Size (Crypt-IDEA-1.10.tar.gz) = 7225 bytes

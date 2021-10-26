@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:53:54 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:10 nia Exp $
 
-RMD160 (hydra-7.5.tar.gz) = f5edc8473889ab90ef971226f4276683b193a466
+BLAKE2s (hydra-7.5.tar.gz) = f3180e39fdd5c6386a89533d0421a489c80fe06b4db11b8fea0be6d3869c6a3b
 SHA512 (hydra-7.5.tar.gz) = b15ca32da6f1cd675d7149e9ef32fbb7b3d01e1fa2d648a1ed12bb6ae38d131f1123d84ff125d5f98677f62cddc97597d98d9cee662fcd305342c6f3fd2e10f8
 Size (hydra-7.5.tar.gz) = 681784 bytes
 SHA1 (patch-Makefile.am) = 9ce2a3c8acfa672786729c161010e56c1055055e

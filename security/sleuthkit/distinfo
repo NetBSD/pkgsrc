@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:54:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:18:01 nia Exp $
 
-RMD160 (sleuthkit-4.1.3.tar.gz) = 223c6ffe22259ca057b6d9634813536e7ccd9dba
+BLAKE2s (sleuthkit-4.1.3.tar.gz) = d61dea97ba867e2d3d0e21517e575c9a42d3dd7c26e716f34d568320745bf03b
 SHA512 (sleuthkit-4.1.3.tar.gz) = 66f6ac32da5a21b3505390557ed6cf7bbcfcca69f231e20a7086fd48c5de45a3f064a716837d25eb582d0a89bae3b6ba7e89dcf3159e1cacdb4b5d452d0ce9a2
 Size (sleuthkit-4.1.3.tar.gz) = 7952733 bytes
 SHA1 (patch-configure) = aa08d433f3bdc2fa96bcfe6e39897006b9ac3b3f

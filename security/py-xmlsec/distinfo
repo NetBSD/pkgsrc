@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:51 nia Exp $
 
-RMD160 (pyxmlsec-0.3.1.tar.gz) = 5ec426e455f359d1a527a5dfaf43744c4c5974d4
+BLAKE2s (pyxmlsec-0.3.1.tar.gz) = 5d91843a8934ef83c8f9b6c188d60c1b6b5e5ceff0e54d0cefb7d5e940d84b27
 SHA512 (pyxmlsec-0.3.1.tar.gz) = be67cf493193995ff705edf4dd2eba8b7dccdfe04ad30ea91e7cf9710f5a25b9cfb30fa5366a92218173f57fedadba66fb7291260a96b3ae33081cd45847a312
 Size (pyxmlsec-0.3.1.tar.gz) = 228020 bytes
 SHA1 (patch-aa) = 7a3104efb9f3e587d848ae676b89057e113f93e5

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:55 nia Exp $
 
-RMD160 (nexpose-7.3.0.gem) = 5299051bce6a0dce794bc59cc38d94e39ea3ba93
+BLAKE2s (nexpose-7.3.0.gem) = b89122558c71eddfe994a8485d3b2f15fd6655d2f5e8972d171b3d9d27286c13
 SHA512 (nexpose-7.3.0.gem) = 3c9b147e9c1d67ef7885bfa8fd315ba68783f471f4a1485541262af9c808a0eda13df3fcdd58ddfd4f4dad62511fa8fe4231eaf14227e944cd78e87f92a99cd9
 Size (nexpose-7.3.0.gem) = 125440 bytes

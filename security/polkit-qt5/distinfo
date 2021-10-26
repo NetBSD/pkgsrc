@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:39 nia Exp $
 
-RMD160 (polkit-qt-1-0.112.0.tar.bz2) = 6104a17a0b5ae4bd8c21426d30dbb3e49a225fbb
+BLAKE2s (polkit-qt-1-0.112.0.tar.bz2) = ba47218eb5347e3b2421ee0fd63dca4748f28d2baa461a7433913250fa4e5711
 SHA512 (polkit-qt-1-0.112.0.tar.bz2) = 4cb17389b54a09c53052f6d72aa5cbfe09ccb19f7fd4edf8b43ccd4751f5e88609c5f89777f4af92167d32eb2ce1e78537cea7bcfb60a90072d1fe02d6a59b50
 Size (polkit-qt-1-0.112.0.tar.bz2) = 67725 bytes

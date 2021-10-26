@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:55 nia Exp $
 
-RMD160 (nessus_rest-0.1.6.gem) = 39198ddd1337c2b611b5d1e303cf4b55eec3d4e7
+BLAKE2s (nessus_rest-0.1.6.gem) = cc0b0213a27f5a2abe75020f6329f1b133d3f53164b3cf4419fa4a1c1b96e04a
 SHA512 (nessus_rest-0.1.6.gem) = 387d2d104f18401acf5299d034489c10484e0ed0b615e2c5256a37ce55938861e9732d2990ae1184f17b675ad861f75125fca13c5a1182da3b70339763346714
 Size (nessus_rest-0.1.6.gem) = 11264 bytes

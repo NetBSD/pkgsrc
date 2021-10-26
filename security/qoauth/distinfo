@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:52 nia Exp $
 
-RMD160 (qoauth-1.0.1-src.tar.bz2) = f6cb736a4c4ca036f7bb3bc840243cf005febd3b
+BLAKE2s (qoauth-1.0.1-src.tar.bz2) = e6929e3bf171943d4eaa0d713fe4723b91a7b5d4f6f2559f2868d2a224aa4a1f
 SHA512 (qoauth-1.0.1-src.tar.bz2) = 86869c82e6efd490888f3bb16cba5bb014821e35507d3d396a84f5112a2d0bd7cb1251ba5dff82a8913eeae77a0feeebfdf4a7d1e9870023fb3c106d603c3dd8
 Size (qoauth-1.0.1-src.tar.bz2) = 42298 bytes
 SHA1 (patch-src_src.pro) = 9fea8e0a290932af689e1dc67c339b9be5f2e213

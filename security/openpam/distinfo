@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:54:05 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:17:22 nia Exp $
 
-RMD160 (openpam-20190224.tar.gz) = 56f65b2a806dba8e8a2af3f16d7ed7b8183d5440
+BLAKE2s (openpam-20190224.tar.gz) = 589c73446bb2cb1cd2dc0383e05fdbe36126f4bf693ddfe27ef6ce26879b2328
 SHA512 (openpam-20190224.tar.gz) = 62787167e923bcbefdf620a0a73b1aa9342a55f233f4a98c269c1952294c22d4c07b883d0e91eec3ca268fbfaee860999bfc884bd0af1fc7658ee0ba5b1d696d
 Size (openpam-20190224.tar.gz) = 507353 bytes
 SHA1 (patch-doc_man_pam.conf.5) = 0c9ad45f67333ecbcd5085a536a25b5ed2b01b93
