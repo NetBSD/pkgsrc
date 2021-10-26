@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:32 nia Exp $
 
-RMD160 (django-kronos-1.0.tar.gz) = e8363a2fbdc5f78f9579bef92c631d960bdaf7e6
+BLAKE2s (django-kronos-1.0.tar.gz) = 3e75936ec2c1ea1a9a0e714ae2d3a4c7cb625b81c412111204dd744e6f7f6f48
 SHA512 (django-kronos-1.0.tar.gz) = 754753f0b65524d5396437cc0c6451c90ddc09c2202d6aa64cae1b9e8375f385f5bb8fa9e1d91886f2c0e0fa3370aa7f6ac0f615f78952069bd9f3babdfad0c3
 Size (django-kronos-1.0.tar.gz) = 10824 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:07 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:29:23 nia Exp $
 
-RMD160 (cppcms-1.0.4.tar.bz2) = 6efa445f8da113ba870010c3a770592587e4198f
+BLAKE2s (cppcms-1.0.4.tar.bz2) = 58a53624d96501491ebe2f742fc779dd78845fc5001093bcc4b95aa610eae690
 SHA512 (cppcms-1.0.4.tar.bz2) = 04c783d608f306071f8a77808547ec6c45e4f0bcaf8211737159e569d13b3aae5c9d0be7b109e582a9f7bea94584e36081056b225d709af29583100591721cf7
 Size (cppcms-1.0.4.tar.bz2) = 2331505 bytes
 SHA1 (patch-bin_cppcms__run) = 2b9033c82fab2c9aa11acbb200e9a44f9c6364cb

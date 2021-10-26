@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:53 nia Exp $
 
-RMD160 (Catalyst-Plugin-Session-Store-File-0.18.tar.gz) = 9a676f713588ef8f7f1eae8d195a2a8dfa017ed7
+BLAKE2s (Catalyst-Plugin-Session-Store-File-0.18.tar.gz) = 3ee4e28d555dc116786c10a588170bb5c59dd53ae70c96a526c3515c539dea1b
 SHA512 (Catalyst-Plugin-Session-Store-File-0.18.tar.gz) = cd57f24c75304952989147b39ca542aed8d1ab448e77cba876b34f8bf0ba3859f5b0ac7a10dd480eadb2046037ecdd137bea1a2ea7ecc67dec2f49989bde3118
 Size (Catalyst-Plugin-Session-Store-File-0.18.tar.gz) = 24344 bytes

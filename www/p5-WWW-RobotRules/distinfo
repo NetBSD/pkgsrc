@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:21 nia Exp $
 
-RMD160 (WWW-RobotRules-6.02.tar.gz) = dec9e82ddd551ec63dd3d541854ee0b52cab6214
+BLAKE2s (WWW-RobotRules-6.02.tar.gz) = 426a76db9c6319b86703d9ec934776324d085048d77b78e83c38472d99013f69
 SHA512 (WWW-RobotRules-6.02.tar.gz) = 781a2fc90e4efed901a91ecf4f2aaac2684409c6a75a8434ff140654838bb05d11f8fa760642e20eee96450d3ced6815a4dab11a4245bc8120c69ca68ab49e44
 Size (WWW-RobotRules-6.02.tar.gz) = 9059 bytes

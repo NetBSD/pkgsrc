@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:48 nia Exp $
 
-RMD160 (swish-e-0.5.tar.gz) = 8fde0930f5fb99f7066f03b3e87bf6353242f427
+BLAKE2s (swish-e-0.5.tar.gz) = d44bbaee792353c36afb553313b47ad2d5f15d28abb4bbfc1cede85bb21cdaa4
 SHA512 (swish-e-0.5.tar.gz) = c2194fff93096e9122d9d7515d63f175e625cd0b053473e669c3a5fd3b659fc795cdfa1c30d1c137871f743a891154b76f9374af32113a089bdf56a0509f12a9
 Size (swish-e-0.5.tar.gz) = 8784 bytes

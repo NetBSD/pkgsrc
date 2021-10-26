@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:08:48 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:31:05 nia Exp $
 
-RMD160 (sinatra-contrib-2.1.0.gem) = d76634a66478de842ccb5f0e832edcea305580a5
+BLAKE2s (sinatra-contrib-2.1.0.gem) = 1ec312e8a9c26e0b48c263d62411b867b595c88889005138f9df0afbb307f6b5
 SHA512 (sinatra-contrib-2.1.0.gem) = 03696d0d3b5ca39339e2ff0eed83520ffbe56e1e4af2a33f8be702cc487d69856b8d0704bae94528018f0ec7560a89c239b7694bbc15e5a365d1bf1ee054f682
 Size (sinatra-contrib-2.1.0.gem) = 34304 bytes

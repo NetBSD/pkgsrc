@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 15:07:22 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:29:40 nia Exp $
 
-RMD160 (xsp-4.7.1.tar.gz) = 9acfbb1ae7c442b4273c8104db46920e818a242e
+BLAKE2s (xsp-4.7.1.tar.gz) = 03e391e95e435c8e6f225e63c9fb9acc60ee8fd78df3aa21852be9df8c33956a
 SHA512 (xsp-4.7.1.tar.gz) = cdd7661372623dab42f048b9d80b41daba9388334f1d823d95df0b785a39a385b10142e0b994e072a622a29bcb737639a9b55348fc4ff18b4dc0520b5d28766e
 Size (xsp-4.7.1.tar.gz) = 750132 bytes

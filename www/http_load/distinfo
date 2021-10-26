@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:07:15 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:29:33 nia Exp $
 
-RMD160 (http_load-12mar2006.tar.gz) = 6202297454b24694315880258049da8dafc900b7
+BLAKE2s (http_load-12mar2006.tar.gz) = 1e7add4337768eb5d906d3da8f526fa0d9e89444735d20758a2df8aacf4a1b64
 SHA512 (http_load-12mar2006.tar.gz) = 3966ae3f16190de816f499eece7158de8d518178967b4a5b0e5ca5efd191eccdba1bcd7260a517487d0c0a7f240fa3bf0df30004e3c1321b0c127f3bbaa0efc1
 Size (http_load-12mar2006.tar.gz) = 17033 bytes
 SHA1 (patch-aa) = ca3967a62bd9cc0d2dceefe60a29e43bf3a888a1

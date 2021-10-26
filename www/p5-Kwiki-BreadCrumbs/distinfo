@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:06 nia Exp $
 
-RMD160 (Kwiki-BreadCrumbs-0.12.tar.gz) = e1feb769fc1e1e853ff1b35d777ae79615e2b3d2
+BLAKE2s (Kwiki-BreadCrumbs-0.12.tar.gz) = e8d7f15ab10159aa12996892236798cc82f6fe38a0f06586f3dfa3b5a13c840e
 SHA512 (Kwiki-BreadCrumbs-0.12.tar.gz) = 48f0096a978cb957ee9c3e975359f8469817aae77ff066573b6998a5bb123b64c702f186eb8a3cebfae16bc3856e404ebb15cc0ab9353c2ef703dfd08432a33b
 Size (Kwiki-BreadCrumbs-0.12.tar.gz) = 8168 bytes

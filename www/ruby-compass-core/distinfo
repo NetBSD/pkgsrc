@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:55 nia Exp $
 
-RMD160 (compass-core-1.0.3.gem) = 8e710de7b5bf5716c44bdf2645067eaa1cc2609b
+BLAKE2s (compass-core-1.0.3.gem) = ec8690666578c22c251388734147582a7539a3953bfa93ee9d515142e1f48f11
 SHA512 (compass-core-1.0.3.gem) = 90ee9fbd2266fc3e437162c8920710e4885446333c8d4b5ae22c652c7572b93ce3071574fa74f432b0036795865f92c888a6d648ee20bf5618cf58fb7b2b1dd1
 Size (compass-core-1.0.3.gem) = 137728 bytes

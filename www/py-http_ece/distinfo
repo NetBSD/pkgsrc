@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:41 nia Exp $
 
-RMD160 (http_ece-1.0.5.tar.gz) = a8fd466375ccb706b83ad53228a6750aaab51241
+BLAKE2s (http_ece-1.0.5.tar.gz) = dade4b096fc3816d07c30bb0b581160ecb505b3b677d2a0cb0108d6ab64ec538
 SHA512 (http_ece-1.0.5.tar.gz) = 3ef8f85a76c68574eedcff76f817d71f861971fbbc70b3bb6e8538c4d0db17cbbda26b71fd7b9b879b5427820296f87ea165b1f0359ed5b2a80bf3e6e09937e9
 Size (http_ece-1.0.5.tar.gz) = 4841 bytes

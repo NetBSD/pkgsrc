@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 15:07:22 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:29:39 nia Exp $
 
-RMD160 (midori-v9.0.tar.gz) = 3461c04d5cc16004c8a9e9d7f77b2d063eac2438
+BLAKE2s (midori-v9.0.tar.gz) = 2bad7ca88b1d43ee87d9932bf676813a38970b047f42ea5e58fa8531cedac023
 SHA512 (midori-v9.0.tar.gz) = 0cc28643593f53c47b453838152dcbe35a9a287bff38bda830844eb8f321a4f48c99b21e16a9b07bebdd0abc936d88fd759c3222a36325aa667a28ae00148be3
 Size (midori-v9.0.tar.gz) = 1902467 bytes
 SHA1 (patch-core_browser.vala) = 99062555f74637a04c91ee24efcc21c2cc2bc357

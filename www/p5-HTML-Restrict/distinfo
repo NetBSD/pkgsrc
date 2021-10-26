@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:29:58 nia Exp $
 
-RMD160 (HTML-Restrict-v3.0.0.tar.gz) = 7e7c24203a242e4babf77630f2d788a689530094
+BLAKE2s (HTML-Restrict-v3.0.0.tar.gz) = ae925ca8f4f389bcb659f27e41ece47cc88f8d738e374ed03e8bd032b8940d8f
 SHA512 (HTML-Restrict-v3.0.0.tar.gz) = dd24cd04b38fda5d8e4ad214f5d27e2e7f868bd7880b05f57856b71f96146488a832379f4a59d30d6ba819274259787b2d4fee677515b6a4d3c4a28bdaf29348
 Size (HTML-Restrict-v3.0.0.tar.gz) = 35667 bytes

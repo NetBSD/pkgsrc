@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:41 nia Exp $
 
-RMD160 (ocaml-cohttp-2.5.1.tar.gz) = 268e995911551358dee6badb4ff12af87d595695
+BLAKE2s (ocaml-cohttp-2.5.1.tar.gz) = 4d025e80a4f171d00a409ac23371dbf0ef9400ee74d9693cff0eca5169f56d21
 SHA512 (ocaml-cohttp-2.5.1.tar.gz) = 6a9a548ab66ceee311e7e689934ee57132d747598d24043b6a48314a1982149d08100c52f510bea2d12aa63ce0f22ea47537e88b8cae1367eeb4610ddaf0b4db
 Size (ocaml-cohttp-2.5.1.tar.gz) = 111677 bytes

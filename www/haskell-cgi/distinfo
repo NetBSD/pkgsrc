@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:30 nia Exp $
 
-RMD160 (haskell-cgi-20001206.tar.gz) = 228438f0e66158fa48b8ee2e17084359f2c25c07
+BLAKE2s (haskell-cgi-20001206.tar.gz) = 7d6c0d5e7e673fae0c4675ade6efcf3d748e8e3ff340d969d776cff5a461007d
 SHA512 (haskell-cgi-20001206.tar.gz) = 197186452a4c1e759af3fdec2934ea935498d659e568572446859a2edc6c100f58a2a0f17a5d463582714f90a1ed9c0858e83c0ae728bfe454fad4837437d767
 Size (haskell-cgi-20001206.tar.gz) = 9338 bytes

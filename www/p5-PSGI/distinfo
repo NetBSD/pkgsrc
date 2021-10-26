@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:11 nia Exp $
 
-RMD160 (PSGI-1.102.tar.gz) = 3f6ceb2b7a18472dda98e9f81b0a92a19c662dd3
+BLAKE2s (PSGI-1.102.tar.gz) = ccdc7974302406da6a6f178f931090f70a1d9c3e0e629e896072d1efa496d48e
 SHA512 (PSGI-1.102.tar.gz) = 8bebff9fe7ac57840e8c88c2a83296428b29cad1f724f03f546ba90ee5c07c0fbda12d88cb5b01e4d49110984c11c339cc01ab460bb4e33a32cd4c9c6badbdd9
 Size (PSGI-1.102.tar.gz) = 36710 bytes

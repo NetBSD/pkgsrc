@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.135 2021/10/11 20:19:18 schmonz Exp $
+$NetBSD: distinfo,v 1.136 2021/10/26 11:30:10 nia Exp $
 
-RMD160 (Mojolicious-9.21.tar.gz) = 7d67498ff188e27a7bda8e7fda5f7393c7cf8b26
+BLAKE2s (Mojolicious-9.21.tar.gz) = da7414ba2b9f6131e62b8999ab177f0ae859ab155419214388a5a4b31eb98dd5
 SHA512 (Mojolicious-9.21.tar.gz) = 39edad8c72df79a32b6c0a2a00c3496338a16c975df94d7803872df5132246351f222f56ed854a746cf3e15b8ad75707664b91e512002c69afbf7f47d23111d2
 Size (Mojolicious-9.21.tar.gz) = 841206 bytes

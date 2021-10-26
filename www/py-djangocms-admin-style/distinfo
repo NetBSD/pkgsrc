@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:08:18 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:30:34 nia Exp $
 
-RMD160 (djangocms-admin-style-2.0.2.tar.gz) = ace7eb447e4eae946ca9ce49504a24eaeb7f02c3
+BLAKE2s (djangocms-admin-style-2.0.2.tar.gz) = c35ad87747d9f31729a73bab0c1404da74f523ed8298ac0b8dfc240cffc07494
 SHA512 (djangocms-admin-style-2.0.2.tar.gz) = e6cd6def086d7195b3781feba891ff56349b6a5e39f8cfad8a129f7e3f158c0445aee7d182bfe2c6cf311aa3563dadda10474b95c557d7c61526d75dcf8285eb
 Size (djangocms-admin-style-2.0.2.tar.gz) = 313654 bytes
 SHA1 (patch-setup.py) = e54b746c04a07b061ec14a99d351223560ccb6fa

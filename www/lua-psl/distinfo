@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:38 nia Exp $
 
-RMD160 (lua-psl-0.3.tar.gz) = 978d648462ae6a20439ed0ae7056195340b87216
+BLAKE2s (lua-psl-0.3.tar.gz) = b475908780184a315a5ec08fcf787a0d8e11b802059e8843b191343e93f94b32
 SHA512 (lua-psl-0.3.tar.gz) = b77806f6deb4c668a7ce97583b41297494ef91a05a0f44041d17b52ef6542180f332169577195159bba554a0909fed697bd5f6e5e4de9174273b54739554f79f
 Size (lua-psl-0.3.tar.gz) = 9275 bytes

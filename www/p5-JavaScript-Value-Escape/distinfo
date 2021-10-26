@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:06 nia Exp $
 
-RMD160 (JavaScript-Value-Escape-0.07.tar.gz) = 0fd7caefe90a3092073eecb08024d96331585e21
+BLAKE2s (JavaScript-Value-Escape-0.07.tar.gz) = aa166d0e030b146011e63341d6ebc3e092e6b695a5097066e631ffc07cb4cb57
 SHA512 (JavaScript-Value-Escape-0.07.tar.gz) = 2a44dc9143f51dcdc55f0d961de7fb41577a7525116412fa9de2be8118e3f3a43528b3bcfccb887fb5f481f1e96ce355b36db72576b9e382deea514ab7b39454
 Size (JavaScript-Value-Escape-0.07.tar.gz) = 10789 bytes

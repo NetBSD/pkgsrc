@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:48 nia Exp $
 
-RMD160 (CSS-1.09.tar.gz) = 9188e697c214a2d2951dd0808714487a4219eb6b
+BLAKE2s (CSS-1.09.tar.gz) = c5313c16ef3fc6f8e0ed5ccffb048767f4fea087c8ac51cec1c8d2abed1cb621
 SHA512 (CSS-1.09.tar.gz) = 3169d7b56be09c847d36ae1f58bf5b1aefd191535941836e7ece103c1ab229d8847c3ab0a6422f51aeaa9e28c3a1983cc96a3c3bd60dd1f0b33a848bfb2c2df1
 Size (CSS-1.09.tar.gz) = 37808 bytes

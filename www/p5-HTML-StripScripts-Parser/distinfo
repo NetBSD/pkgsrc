@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:59 nia Exp $
 
-RMD160 (HTML-StripScripts-Parser-1.03.tar.gz) = 88052455291f1549d8e9a5bafe58d1a5f709ed6b
+BLAKE2s (HTML-StripScripts-Parser-1.03.tar.gz) = a86c58f63957e137c2dfb66c89218803ba30de7241b173bc543bc5655daf4251
 SHA512 (HTML-StripScripts-Parser-1.03.tar.gz) = 3bc766ff738623191b23c5212751cad32b76160bf5e3dcdfad5e161288c906deb1357fc092a962da87525b7364ba924de9ef68b94966c003ee7cb23e8035dc15
 Size (HTML-StripScripts-Parser-1.03.tar.gz) = 9524 bytes

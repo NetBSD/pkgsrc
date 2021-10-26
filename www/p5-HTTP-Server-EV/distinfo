@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:47 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:04 nia Exp $
 
-RMD160 (HTTP-Server-EV-0.69.tar.gz) = 824f47792f253bd96b30c1af07745cfc36e8b270
+BLAKE2s (HTTP-Server-EV-0.69.tar.gz) = c16ff408e41633b8cd2f2a3c7e1bd34977aa88036b7c03d58d515c95c641a005
 SHA512 (HTTP-Server-EV-0.69.tar.gz) = cf8d982e4b4e793d8d6d88c4369fd2968e1f284f6bf61a3d16cc2b1c471661a64e32064aa09d645a14e6ea2355d44e147ab6eaa88c1c1f78b8efa9e432ce518d
 Size (HTTP-Server-EV-0.69.tar.gz) = 23945 bytes

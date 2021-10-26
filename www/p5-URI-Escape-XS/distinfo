@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:08:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:19 nia Exp $
 
-RMD160 (URI-Escape-XS-0.14.tar.gz) = aa32a768d8116c2a3eddd93966d0c0a23a5789a7
+BLAKE2s (URI-Escape-XS-0.14.tar.gz) = c6c354745378967009fc31077fe948dee700e5b1302be8291ce4660d7b24c4d8
 SHA512 (URI-Escape-XS-0.14.tar.gz) = acd24c468a140c7fc84a1280a9db305d1fb2a68450ef988f9e78d6b384e20196bc41d6bc7af249b904131d42f7a257440ea8051a62ac0daf24fc2913e69f97ca
 Size (URI-Escape-XS-0.14.tar.gz) = 10336 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:07:01 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:29:18 nia Exp $
 
-RMD160 (mod_mono-3.13.tar.gz) = 98dc8554d50c632692f463dd55535c232f2e1797
+BLAKE2s (mod_mono-3.13.tar.gz) = 64ffe3f7b862bcb3d583f3e2119ad55da8a0ee773c2465fd9ba3002b7ba41889
 SHA512 (mod_mono-3.13.tar.gz) = 95fe05af8cdf7281e8a16471a47d619096bbf9d2d38f5583cab5f1310654fac8142cc89d4a6f672ce986689680d37431878848c08fc56a63ba807960fa539e0f
 Size (mod_mono-3.13.tar.gz) = 398042 bytes
 SHA1 (patch-aa) = b14fbf2752676b0b3ead4e8c3910785cc00ba4cc

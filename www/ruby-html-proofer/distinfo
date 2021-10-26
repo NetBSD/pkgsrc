@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:58 nia Exp $
 
-RMD160 (html-proofer-3.19.2.gem) = 4d619f8178d58710f29ac4ea4ec7c73d312f7e74
+BLAKE2s (html-proofer-3.19.2.gem) = a0480fb333f78d4f15966a7d981dfc7cb07f5b634bf4475806fd42d314d01308
 SHA512 (html-proofer-3.19.2.gem) = a2e5553ba11959b6b88f6ec6e83e1053c009b557ecd0d1ce039127793a0f484cb117a903ec10c9f7c3bc4f840253cf6fc8e8bbfbedf2c61b6d65c568e91f535a
 Size (html-proofer-3.19.2.gem) = 22016 bytes

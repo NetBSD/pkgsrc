@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:08 nia Exp $
 
-RMD160 (Kwiki-RecentChanges-0.14.tar.gz) = 46fcb91033e82efc18cd3122357dbc139b4cb423
+BLAKE2s (Kwiki-RecentChanges-0.14.tar.gz) = a2e4997ced7a449528995286aecac2f20625425ad7424a8a6bafe27b76b07c03
 SHA512 (Kwiki-RecentChanges-0.14.tar.gz) = 08a8850b075f9333b8450944047e0dd8407ae0350c2f640b8f935ba022774f24f85889b1b849200447476e3922468551e99a7f4dc82628edc858a1c697d8630f
 Size (Kwiki-RecentChanges-0.14.tar.gz) = 11764 bytes

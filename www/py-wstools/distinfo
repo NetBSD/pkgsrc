@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:51 nia Exp $
 
-RMD160 (wstools-0.4.8.tar.gz) = 9066875075b39268c6955b92bb75463a4351a147
+BLAKE2s (wstools-0.4.8.tar.gz) = e94429c926ecabc1d5a3e81c282f2616c7a716a4b31c9fb78db687879fb937d2
 SHA512 (wstools-0.4.8.tar.gz) = 0f86e91a2de7333aaf5a58558a715edd6a0cf97150f6d0cae4ecf8e0702648a98e610aa6d3295444079bd616656efcb2823ae7c02c5c3ffcb4789548ac40cd0a
 Size (wstools-0.4.8.tar.gz) = 199688 bytes

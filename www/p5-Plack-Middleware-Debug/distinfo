@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:56 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:12 nia Exp $
 
-RMD160 (Plack-Middleware-Debug-0.18.tar.gz) = a3271b283cd0cb315498e9063eebcb3e66d417cc
+BLAKE2s (Plack-Middleware-Debug-0.18.tar.gz) = d0eb9abb85283e23b392753b15d824ba6bc9f9290611a13197671985a111c2ce
 SHA512 (Plack-Middleware-Debug-0.18.tar.gz) = 802a9aafbebf7a0bcd49c82ab64f240444369128d45b52c6602ce740fe664d7eaec7d27fa17daf946182de0cc4ac73421c9f467dda897c270c5c3d933d39130a
 Size (Plack-Middleware-Debug-0.18.tar.gz) = 54336 bytes

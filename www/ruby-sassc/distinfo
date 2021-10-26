@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:31:05 nia Exp $
 
-RMD160 (sassc-2.4.0.gem) = 2fa1d26256e46310c921856a14e54d0219bd8fb1
+BLAKE2s (sassc-2.4.0.gem) = 01a9acf317301a25ce45bcc30678e794ee93e49a78d053e6ee602d4daa945796
 SHA512 (sassc-2.4.0.gem) = 835ba03d0fc5a791b2d620367f63202973f778bd8ebaa87c27f6a1de75b5895270205e8746fbb242d2739c9830a27d72453a75c1b536090840de581c52caade6
 Size (sassc-2.4.0.gem) = 304640 bytes
 SHA1 (patch-ext_extconf.rb) = 57af96d62fa5d1faf154681b403242bfcfd0fa68

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:08:22 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:38 nia Exp $
 
-RMD160 (Flask-FlatPages-0.7.3.tar.gz) = c5165e2a4e85659b38fd49427aa17712964eaf56
+BLAKE2s (Flask-FlatPages-0.7.3.tar.gz) = 39bffcd21bd6db227c8effba6de3448c53b453a4721d5c9f92c1a4638af39699
 SHA512 (Flask-FlatPages-0.7.3.tar.gz) = 9d75ba2ed2273aaff26beee203271e1b6e3fe41d7b319ee69d2337e8151582be85d95288bcfff7e7b4907b7824f9aa4bb2019f8050b137195e9ad5fae8291efa
 Size (Flask-FlatPages-0.7.3.tar.gz) = 18598 bytes

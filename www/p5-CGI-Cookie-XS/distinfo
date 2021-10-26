@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:47 nia Exp $
 
-RMD160 (CGI-Cookie-XS-0.18.tar.gz) = f5242f819e67d8bbc13da3cb160eb08658ab0dbe
+BLAKE2s (CGI-Cookie-XS-0.18.tar.gz) = 858e7a4ff9d46fb577e21cfef4d4479e92d5790dc7389c349010bce5124d6ee2
 SHA512 (CGI-Cookie-XS-0.18.tar.gz) = 41ac911369761095ed708961c8ae42fd6f2ecfafdf6164400976eaab8c68f87da597f9771c3e01534e5ed7c260097a7966e2cd2e70d67027c9787e5f5fa0713b
 Size (CGI-Cookie-XS-0.18.tar.gz) = 47890 bytes

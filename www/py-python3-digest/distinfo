@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:46 nia Exp $
 
-RMD160 (python3-digest-1.8b4.tar.gz) = d555adb881288b55150241594576a551e77fc47a
+BLAKE2s (python3-digest-1.8b4.tar.gz) = 5696deb671a79abcc7a9833f0a06975574ee0e2b142398c3dbdea0acef3bbfb9
 SHA512 (python3-digest-1.8b4.tar.gz) = e5ef049ca1717a24e82824ebca06b47ea0551ee967b7714e81524e13a715550e09045695be9c8133485925745647454d2810f565ff6b2e51045f18281da1e075
 Size (python3-digest-1.8b4.tar.gz) = 9846 bytes

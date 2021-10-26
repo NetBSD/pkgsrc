@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:19 nia Exp $
 
-RMD160 (URI-Find-20160806.tar.gz) = 1e3da1866cac4e4e898bad47db3d2618d86f2a34
+BLAKE2s (URI-Find-20160806.tar.gz) = 71640d47300a12ddabbf5c97d12ccc79dd803b27844f1de8cca88f81426d9f3a
 SHA512 (URI-Find-20160806.tar.gz) = 1d87ec7cadbe363a701fdf5edacdd3c52a13d43aa5d7d28e9b7a8b41936adb12d615e4d2a1615d280fccfcfea1cdc374d4e1839505bb5e58837ea3fe8718c8cc
 Size (URI-Find-20160806.tar.gz) = 37371 bytes

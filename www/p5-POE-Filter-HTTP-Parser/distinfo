@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:55 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:11 nia Exp $
 
-RMD160 (POE-Filter-HTTP-Parser-1.08.tar.gz) = 671920dbb1785eff5301def8723847ef651c0864
+BLAKE2s (POE-Filter-HTTP-Parser-1.08.tar.gz) = 2c2aa3168dbdc44ee4cf19c29a59c32d2fa96c17c3f1aada5720fd619b172da0
 SHA512 (POE-Filter-HTTP-Parser-1.08.tar.gz) = 536c8cbcefb602271edaefa09bc1880c620425372610d0d1b6d748eebe12874960d0183cbc96a1d9199828dbef724067681d27777bf876c92e7fd4c4b59a0ccb
 Size (POE-Filter-HTTP-Parser-1.08.tar.gz) = 15845 bytes

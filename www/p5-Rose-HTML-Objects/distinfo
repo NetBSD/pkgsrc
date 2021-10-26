@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:07:58 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:30:14 nia Exp $
 
-RMD160 (Rose-HTML-Objects-0.623.tar.gz) = c468fe02a5be0fd2ba0821b3b5d106859ff2567a
+BLAKE2s (Rose-HTML-Objects-0.623.tar.gz) = d98d408e34911f0d9c579f6cd170010c32844c6e63908e077089fb2223aceb1c
 SHA512 (Rose-HTML-Objects-0.623.tar.gz) = beba02c6f6c4fb923fcf256e2cceab3ddf285cf77b00c8087ecaa4a90a645c3f9aba139df882cc4e794dff922983ecb359f7eeb2792b9930f514d1076e3ecc48
 Size (Rose-HTML-Objects-0.623.tar.gz) = 204561 bytes

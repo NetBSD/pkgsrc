@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:05 nia Exp $
 
-RMD160 (HTTP-Tinyish-0.17.tar.gz) = ac2d88c7bcaba14ae1e91f6e0770bbb00620d261
+BLAKE2s (HTTP-Tinyish-0.17.tar.gz) = 34f8ff6cdcae2b5e80261328c11b6cef35cd83ea6d25c059341c0c4d9267d06f
 SHA512 (HTTP-Tinyish-0.17.tar.gz) = d7c42e053f4502ea0ad7fe2d402c469fb0c8ad38472ed8c430221c1573df90bc72aeed62f95e6af730ebc6da60b7b41ebe444d98aee7b46dd52e1b1acbb2a1be
 Size (HTTP-Tinyish-0.17.tar.gz) = 17341 bytes

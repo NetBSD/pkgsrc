@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:31:01 nia Exp $
 
-RMD160 (mustermann-1.1.1.gem) = 7923651f41af65a1a280787f5a104129a4bcf56f
+BLAKE2s (mustermann-1.1.1.gem) = 1fa676e7e863ce703b3c426456162674c6e381b13e52f9350e2bbf1b1f52446d
 SHA512 (mustermann-1.1.1.gem) = 55d5fd9b8309e0b806b2fb0af409fbc71b958b8f91116991439f2c66b1f71f17647a61020b0349a86132e7d3da383121719ea330538abb8f3c8bef5fbff0b747
 Size (mustermann-1.1.1.gem) = 51712 bytes

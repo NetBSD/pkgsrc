@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:45 nia Exp $
 
-RMD160 (pystache-0.5.4.tar.gz) = 07b303af8cb3841fb1afb1bf73c625cf54b6fe94
+BLAKE2s (pystache-0.5.4.tar.gz) = 5dd976b9ed5fb277d5cb8385fa57e5b4d3d792d83ae3eaba5da8464a6ecce2b9
 SHA512 (pystache-0.5.4.tar.gz) = 4ac325e1431f58f740218c9ec309821db82d89989ef4ca7fc3536dea0ef1c90e8e85ebaa7df27f33129ca02252b84bcbd7429a1ed999b496f62f174dd66502cb
 Size (pystache-0.5.4.tar.gz) = 75131 bytes

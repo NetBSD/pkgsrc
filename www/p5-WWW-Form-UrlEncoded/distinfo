@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:20 nia Exp $
 
-RMD160 (WWW-Form-UrlEncoded-0.26.tar.gz) = 442f24eb4e1a1067f6e257bd7b2d23f7de489118
+BLAKE2s (WWW-Form-UrlEncoded-0.26.tar.gz) = 7ca99c89ae580650d4129e02eb081a2955af5bf69faebe2a09a17b7c5b834f73
 SHA512 (WWW-Form-UrlEncoded-0.26.tar.gz) = 7980b42f53a7801fe02db30b87552ce4d5e7398413640a94d9abad2779085ebfc6208804ed66099161d8c3ba5e47ecb4bf8e8fa1f36f2e7297b864a25f3ac924
 Size (WWW-Form-UrlEncoded-0.26.tar.gz) = 15399 bytes

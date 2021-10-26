@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 15:07:12 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 11:29:28 nia Exp $
 
-RMD160 (geeklog-2.1.1.tar.gz) = 331e100026b697cd1c9d63badcbc30417d94ded0
+BLAKE2s (geeklog-2.1.1.tar.gz) = 5b4bc9361a88a6a0bd835ef091482b82a4f2bbf0600d5338f6bacdd5e83a4251
 SHA512 (geeklog-2.1.1.tar.gz) = 57ad03901706c3cdfeed941284d02441007956ce2d21afe916e49ccadffee532959ce3846a9ef41d4d93d8880b68cb1c42d74f1ec0e126c8fe43e2989f0d6ee8
 Size (geeklog-2.1.1.tar.gz) = 11801336 bytes
 SHA1 (patch-aa) = 61cc381e4c3def555806ed4589446f466f6f8368

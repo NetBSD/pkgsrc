@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:26 nia Exp $
 
-RMD160 (ClientForm-0.2.10.tar.gz) = 85b2c0174b0bc1377f71cb13586f28c79554a6e3
+BLAKE2s (ClientForm-0.2.10.tar.gz) = f38e275b7b497258f2d55a11a5d8e2631ff5be67f1bc09eddbd14033040cc85e
 SHA512 (ClientForm-0.2.10.tar.gz) = 6574ddcff14166a2193d361b427f0a53f179aa4b215d6761566b18fc919af54963218ee938c02f79a8728db836822917305236182a90adcc464f31f48729feff
 Size (ClientForm-0.2.10.tar.gz) = 104094 bytes

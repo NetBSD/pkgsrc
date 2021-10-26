@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:06:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:15 nia Exp $
 
-RMD160 (R/jquerylib_0.1.4.tar.gz) = 8a065af4afca5ad378231892350fdcf442fee011
+BLAKE2s (R/jquerylib_0.1.4.tar.gz) = 7f762c91ea212bceaf28054b1ca469c4cfdf2c6042e5dec002f919499d95b79a
 SHA512 (R/jquerylib_0.1.4.tar.gz) = 42434815ef9faaa7fe7da8c1314ba03c8e454e9bc47d617b1800086d3719fefa9a65d996c08ae3fc652178de30c1630ab9e27af8767663b1494a2f5717be4ff4
 Size (R/jquerylib_0.1.4.tar.gz) = 520207 bytes

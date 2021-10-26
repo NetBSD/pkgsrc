@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:36 nia Exp $
 
-RMD160 (djangocms-video-3.0.0.tar.gz) = 68016fed7f14a1dec73fa842953213dcf059d774
+BLAKE2s (djangocms-video-3.0.0.tar.gz) = c79b9a97f75d61b83a360c37b70f3774a3f3f62e03b2010fa82f838e9ecfdcab
 SHA512 (djangocms-video-3.0.0.tar.gz) = 35a3fba62e05f92191c3cd0c88b5463c874fe68afb79b24903d8f5ab4fa70c1a3825680d4cfa0bdc55500b3b88d47c62b8ff8768f2ee6342f7a8cc7c7eefc365
 Size (djangocms-video-3.0.0.tar.gz) = 39655 bytes
 SHA1 (patch-setup.py) = c315fb3b8dc13eea17a300832e6bf6d8487d50ac

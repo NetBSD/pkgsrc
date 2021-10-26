@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:50 nia Exp $
 
-RMD160 (Catalyst-Controller-BindLex-0.05.tar.gz) = ab192802424ecf7888ad9de1fc798b82ded64295
+BLAKE2s (Catalyst-Controller-BindLex-0.05.tar.gz) = d7cab0246cb97c16a2832b8c158837891833a823dd334ed52dbdd89f5798eca8
 SHA512 (Catalyst-Controller-BindLex-0.05.tar.gz) = e98ce18ce53d8de4cf3bf88725dfe1a5df0ffe89ec43c973004ebf382b0d8f5718bb710a6944f936ab9f8fbaad6b2628777734d0f3683e19d9b490a1f66207ea
 Size (Catalyst-Controller-BindLex-0.05.tar.gz) = 22293 bytes

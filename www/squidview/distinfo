@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:31:09 nia Exp $
 
-RMD160 (squidview-0.86.tar.gz) = 60a739c50a7ff91e3b1cea45a55e241499760f33
+BLAKE2s (squidview-0.86.tar.gz) = 078ebbd903425c54a2e1acf5f9c46ea6a0d77bc8d0010ebd2dd98313a91373ac
 SHA512 (squidview-0.86.tar.gz) = c020799e149a4884525b832a21ce990b90da5d3e1caac240913a37b8559bac4e3402b8f5732c3728308ecbea0a56a9e4b764ec7f36b15727c000d6d9e25a57a6
 Size (squidview-0.86.tar.gz) = 129911 bytes
 SHA1 (patch-squidview.1) = 9065a6a295d25bd1e76c548e2e92223131602065

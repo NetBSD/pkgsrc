@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:08:31 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:48 nia Exp $
 
-RMD160 (Scrapy-2.4.1.tar.gz) = 67e32fdb3f9c7828739a89f6d73e6241ab912534
+BLAKE2s (Scrapy-2.4.1.tar.gz) = 38d33dd75b56a710b0624558094c326b280669ad81fc29d5df2bf6037e93df8e
 SHA512 (Scrapy-2.4.1.tar.gz) = 65e1f6b92a7ca1b46b3edbe3e668e11cc5140fbf983ac7fce38c31282009a848c02883bda8d56ea3019c84658839ee10e7237c9290cfe9a8d6b6abee07566b2a
 Size (Scrapy-2.4.1.tar.gz) = 1044246 bytes

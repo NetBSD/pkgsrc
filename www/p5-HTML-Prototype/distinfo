@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:58 nia Exp $
 
-RMD160 (HTML-Prototype-1.48.tar.gz) = 5e41ff2ae12c1cbe0f36d7a2308d21b220e72e11
+BLAKE2s (HTML-Prototype-1.48.tar.gz) = 711a093e0b878ce7a6b180624125a591c3d7360d77635116d9c2fcbe6ee00e77
 SHA512 (HTML-Prototype-1.48.tar.gz) = 00463957ff395f54b2b52da19601f2a10b64a0f1852e283c5e55f2374aaf4542e551c66f8ff800c144f899da5f156f72f8b3c70e648c779bd04150f0d47933ce
 Size (HTML-Prototype-1.48.tar.gz) = 50429 bytes

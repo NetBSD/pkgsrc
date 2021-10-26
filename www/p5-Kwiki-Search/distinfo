@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:08 nia Exp $
 
-RMD160 (Kwiki-Search-0.12.tar.gz) = 3e25d2210c03b386c25aa45683832289d53c057b
+BLAKE2s (Kwiki-Search-0.12.tar.gz) = c08b06ccfc41873b9f695727b1546428916518d28a93d63cd829f07d97941636
 SHA512 (Kwiki-Search-0.12.tar.gz) = 96e711091c5443c4c00326843b7130c9f6054fdd1288796779983621f1cd205e9f3c9b6ca49e863eb5911e956e26206ce8ffcd847c94a27f328fd49d87e02167
 Size (Kwiki-Search-0.12.tar.gz) = 8180 bytes

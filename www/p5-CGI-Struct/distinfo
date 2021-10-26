@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:48 nia Exp $
 
-RMD160 (CGI-Struct-1.21.tar.gz) = 31719247981e6dda3f56818b97a613dff9934e1f
+BLAKE2s (CGI-Struct-1.21.tar.gz) = 7db7324894df7955d519d376c4fe8856c52f7dbb10ca289f5b043a07a8ed9773
 SHA512 (CGI-Struct-1.21.tar.gz) = 3d202c4b7284789c1352a2625c05d8a004ac410e02268bc8125e8ab568ce3d4111249e4799e3536caf35a1b6c85d76669cb714b2e582bae942e2c8b220e42dcd
 Size (CGI-Struct-1.21.tar.gz) = 13445 bytes

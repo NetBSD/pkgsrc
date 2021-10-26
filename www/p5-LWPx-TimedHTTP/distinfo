@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:10 nia Exp $
 
-RMD160 (LWPx-TimedHTTP-1.8.tar.gz) = a64c76cf3b8a32281959ac27c4713128c64953ab
+BLAKE2s (LWPx-TimedHTTP-1.8.tar.gz) = fad8a07094bb55b095ed40f4b90c651555d582ec8622bb8e87948d795b4a40a2
 SHA512 (LWPx-TimedHTTP-1.8.tar.gz) = 2e5273649eacfe6ae8b055237b9af946b45c390e73d08418a9bf5b2ecbb9d490b00062b20a5e68a2baa4057cf25ede2ea759ead056170c3283eb200a979ceec7
 Size (LWPx-TimedHTTP-1.8.tar.gz) = 9291 bytes

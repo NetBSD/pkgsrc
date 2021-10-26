@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:14 nia Exp $
 
-RMD160 (Plack-Test-ExternalServer-0.02.tar.gz) = 3d84e418303df04878f275cf743ccca17ada7e3f
+BLAKE2s (Plack-Test-ExternalServer-0.02.tar.gz) = 5d7553087b04c9a6980cf3e825d0c79d08e8fdd7de72de08a73dbdc656fa5de1
 SHA512 (Plack-Test-ExternalServer-0.02.tar.gz) = cc3596c3b8601ce20887dc3116a367313a13cb7be72f76b720d628e9820df016f35b1d3f207520a33f2854529becd47a44519fcd7297c608edd318015a1cb961
 Size (Plack-Test-ExternalServer-0.02.tar.gz) = 23526 bytes

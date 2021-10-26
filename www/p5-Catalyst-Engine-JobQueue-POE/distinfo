@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:51 nia Exp $
 
-RMD160 (Catalyst-Engine-JobQueue-POE-0.0.4.tar.gz) = 6b37482497dc03645b7376a8aeebb9e0dd7f79ee
+BLAKE2s (Catalyst-Engine-JobQueue-POE-0.0.4.tar.gz) = 33b16f455f7c32c63895f7cb6455e072afbecc943e41453ad1d5272b9eaef336
 SHA512 (Catalyst-Engine-JobQueue-POE-0.0.4.tar.gz) = 32a1492f506f1e53b08d39899cc27941077f9028be98934f40a47a287885c1ae8f831d54ce6da05f5fe06ba36d5a65cca2183d96a952dfd25e878fdb8acaea94
 Size (Catalyst-Engine-JobQueue-POE-0.0.4.tar.gz) = 35939 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:12 nia Exp $
 
-RMD160 (w3-4.0pre.47.tar.gz) = 4d7f7ada9704299b61c2b8925fc651cfa2c7d90f
+BLAKE2s (w3-4.0pre.47.tar.gz) = 8d460c685b8937d8a759fcf01f4b8a559c6d1da2df2629efc474fdfd536e6bf3
 SHA512 (w3-4.0pre.47.tar.gz) = 8ac2f58bebaa98bb3c7dee80578910ac04152f2d5844140f9bf419831b3e1344634781fd4d0145d52676cc21e8845858e1321b98665e19c6136dacfea59ba38f
 Size (w3-4.0pre.47.tar.gz) = 503062 bytes
 SHA1 (patch-aa) = 3b02015ed680630dbceb0e20e2f24850893beabd

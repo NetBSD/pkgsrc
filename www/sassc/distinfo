@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:08:50 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:31:07 nia Exp $
 
-RMD160 (sassc-3.6.2.tar.gz) = ccbd3b23c0f3ac740db034cd75b1f15ab754b29c
+BLAKE2s (sassc-3.6.2.tar.gz) = bf7a70073429041e498b6bfaead26ccc2bdd58c77547978800ed34f70ace5131
 SHA512 (sassc-3.6.2.tar.gz) = fff3995ce8608bdaed5f4f1352ae4f1f882de58663b932c598d6168df421e4dbf907ec0f8caebb1e56490a71ca11105726f291b475816dd53e705bc53121969f
 Size (sassc-3.6.2.tar.gz) = 26637 bytes

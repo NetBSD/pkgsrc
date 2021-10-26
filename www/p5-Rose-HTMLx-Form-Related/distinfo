@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:30:15 nia Exp $
 
-RMD160 (Rose-HTMLx-Form-Related-0.24.tar.gz) = a115e4847cebd6f2e6ad6d926f1ae1af7f4fb92f
+BLAKE2s (Rose-HTMLx-Form-Related-0.24.tar.gz) = 7fcfd9cbc8a83f3b7bcd0683d960e9615f610c6dae551a52d761fc6f38d1a0e7
 SHA512 (Rose-HTMLx-Form-Related-0.24.tar.gz) = 76b66bfd48d30d057d688006cca228ea30c1d83ef70d142411c6efca292ed7f551a0622dce4decfce419625eb88005c7fbae206ad12585165eece220eaeafa52
 Size (Rose-HTMLx-Form-Related-0.24.tar.gz) = 19908 bytes

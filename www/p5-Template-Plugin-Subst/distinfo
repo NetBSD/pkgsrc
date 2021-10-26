@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:17 nia Exp $
 
-RMD160 (Template-Plugin-Subst-0.02.tar.gz) = 7a39377e56839c121615b97b5639a731b30afba8
+BLAKE2s (Template-Plugin-Subst-0.02.tar.gz) = 07d069b08fa3f2cff658439d60e1d12fb167e72bce3e67f3fbd5c242e9e050b6
 SHA512 (Template-Plugin-Subst-0.02.tar.gz) = d9ae6236f0dba08e7cac65fc7ec6e7009f13b5b5e6449f39cc458a1728784e048486e820d75bb1f0a028bbb08d0e3650373d154129767aa545d7901d0647d6ba
 Size (Template-Plugin-Subst-0.02.tar.gz) = 6706 bytes

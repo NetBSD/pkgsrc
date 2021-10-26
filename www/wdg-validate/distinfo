@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:08:57 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:31:13 nia Exp $
 
-RMD160 (validate/validate-1.2.2) = 304aff3d4883ee056f156d7314329d62f2a9fc95
+BLAKE2s (validate/validate-1.2.2) = de042bce7296ace45eed6f830b7e2429ce9c796e222d56d1bcda015814912a42
 SHA512 (validate/validate-1.2.2) = 85574d2889be4d3ae1278ce359072c0246163252611d95857c05964ab10b870c954ad4c235fe82ccd481e96a13168ed29be3c6f884d50dbf227ba046e133b68c
 Size (validate/validate-1.2.2) = 23522 bytes
-RMD160 (validate/wdg-sgml-lib-1.1.4.tar.gz) = 0739ea7c7c7d7de5adfe761c63a9210b9b557491
+BLAKE2s (validate/wdg-sgml-lib-1.1.4.tar.gz) = 359ef51de26e74931a20ad0b5307990dc0696f975f6a58f7b275de223eaf4b6f
 SHA512 (validate/wdg-sgml-lib-1.1.4.tar.gz) = bcfcd34467dc1364dea6bc1d1280f305c017cf379747b5317a2574323e8f0f599ea89f8d2f6386c8ca8913c706899292b5716fa354b8479082ae8bf642a4d95a
 Size (validate/wdg-sgml-lib-1.1.4.tar.gz) = 319135 bytes
-RMD160 (validate/README) = a9037bf16ea09d477a320c0ced425584dcd78773
+BLAKE2s (validate/README) = 5ab4dda6faf657ba67a99ff3665b61881411c8b7c68b6ee2fb654880734f56da
 SHA512 (validate/README) = 9a4da3a5e736d2b9bb2d176e174085c36b08658e20a2c33a83e8d43c6ae6369edd7cf7f0d131a4d4a02fe607e32509ea3df76de27a09cec6c78a65f5f074b4ab
 Size (validate/README) = 2424 bytes

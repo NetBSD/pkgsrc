@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:45 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:01 nia Exp $
 
-RMD160 (HTTP-Cache-Transparent-1.4.tar.gz) = 3202a1f26ec3d8b237bfb6cd22439addefe8e2f9
+BLAKE2s (HTTP-Cache-Transparent-1.4.tar.gz) = 9deeca932b685b4c48c4c577bdfe20212751ffe2c255218eec9f59e4cb490ef3
 SHA512 (HTTP-Cache-Transparent-1.4.tar.gz) = bd48290de4aeffe64cc4748d2f4b054abef539770dd8679f88fd24d9478819c31d7201918335404ea5ed0251d4c4f7d19926ccdeb6b4da2cecf251d2618589a4
 Size (HTTP-Cache-Transparent-1.4.tar.gz) = 10289 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:11 nia Exp $
 
-RMD160 (POE-Component-Server-PSGI-0.6.tar.gz) = 9e3d3ed625761ea9c482c852eaec42237c41e050
+BLAKE2s (POE-Component-Server-PSGI-0.6.tar.gz) = c46584bcf239496609442e3d130739df1bd0e6eb4b8a79ab1a97770c1d136bb2
 SHA512 (POE-Component-Server-PSGI-0.6.tar.gz) = 6ef18479148193390a62595963d3c6e2cff09dba9dcf0f85e1625a3a7a61e24fc46883122717bd1606dce94467f4ebd5c8adc61a0dea456b405969443b04fe85
 Size (POE-Component-Server-PSGI-0.6.tar.gz) = 8983 bytes

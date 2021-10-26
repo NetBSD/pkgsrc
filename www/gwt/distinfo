@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:29 nia Exp $
 
-RMD160 (gwt-2.7.0.zip) = 4c730e3ca663f4e2d8dd61f40efd16b804cfe9a4
+BLAKE2s (gwt-2.7.0.zip) = 4d0c625db29eb7e51a1ac268b52be0bec7fc18c6fade2c54676de9a829734b43
 SHA512 (gwt-2.7.0.zip) = a1eed5cc25c888cf81d4f22b1f9494d5d8567b911f7aeb1d164a6359120543668280afe1a3ffc9ed87b139c7db67fbcaaabde2066e3279909d7cd6fc22eaf499
 Size (gwt-2.7.0.zip) = 108818328 bytes

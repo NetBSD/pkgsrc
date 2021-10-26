@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:26 nia Exp $
 
-RMD160 (ffproxy-1.6.tar.gz) = ee04548d22a5d9dd12d6ffc6a36a638b59dc46a5
+BLAKE2s (ffproxy-1.6.tar.gz) = ecaa0a73929129ff236113abfb291fd23a1de8ad5c1ed429ef3012f6351c29a3
 SHA512 (ffproxy-1.6.tar.gz) = cdee483d8b6153f23531e6c2efc9c1369b9fc3b65815f760e0e8edcdc4c4db67946e3a6555a173c4dcc924d90f1e292aceff720fe82135b244f23649d0e57c3f
 Size (ffproxy-1.6.tar.gz) = 77535 bytes
 SHA1 (patch-aa) = 63d861ee3c9307f5eb0ad7e7946a120ef35a78a0

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 15:07:25 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:29:41 nia Exp $
 
-RMD160 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = a9d79dcd31efc4b1a9b71e29694eff9c8555b10d
+BLAKE2s (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = 0b13574f16805a58cc2fde39ef1bfd355b70d09fb55cec3f0c6620f1bbd021a2
 SHA512 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = 5b514f3a8dd2aad5f395181984995bdaa2cbe9f357d2767c88f2ac5f4c28f513b3023144ea9135ad2e7d0f854efa209dafe3fe00314bb7f0742174d7fc3769c1
 Size (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = 179439 bytes
-RMD160 (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = a5fc4473a462f91f838f8b34faa2bb7bdcab9494
+BLAKE2s (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = 927dd35ab3d9c433fd66c9ae8c948a40edecca795cbb8539fe080ee8e6fb1031
 SHA512 (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = a95295cf3a63cf982e8b04794c5010554d5ea1ab741ae5b3e89acc7c014d3deafe152ffca1abed966052b1c424a94e8440c9371529dd870a9efb1fd1caad9735
 Size (nspluginwrapper-1.4.4-suse121-generic.x86_64.tar.gz) = 161846 bytes
-RMD160 (nspluginwrapper-1.4.4.tar.gz) = 6acd93653aa8466e1e3703c2b794f32691c10d12
+BLAKE2s (nspluginwrapper-1.4.4.tar.gz) = d512457a56bd3f8555dc19070a145150f55718d8f7ee52a087679c2e70518b6e
 SHA512 (nspluginwrapper-1.4.4.tar.gz) = 41126d98284cae6d25d23233b08ccca0dea841d457d4e41210282c6ab4c0fbf020f2ab4173ce39db8a47a1db20840bcc856f9c7309aa2e6ef2a777e3f2ebf503
 Size (nspluginwrapper-1.4.4.tar.gz) = 412513 bytes
 SHA1 (patch-aa) = b39ff156d0a769e44140a713b8ffc2b50a8022d4

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:30 nia Exp $
 
-RMD160 (django-appconf-0.6.tar.gz) = 50b537abd2131daa9a8d776e27c1fdc79a7c6a01
+BLAKE2s (django-appconf-0.6.tar.gz) = 916d90948a7cb2426295595520ba5501a4fdeb9a649aff0204f4b2ece4c9755a
 SHA512 (django-appconf-0.6.tar.gz) = d2a4aea07eeabdc32ed85cf0625702f3e7861b82d1e47660f3761dedff42a3bd3bfcc54dc3d46072758bea1a34af160f7a908bf0925c05b7409f1224f4a7245d
 Size (django-appconf-0.6.tar.gz) = 14072 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:37 nia Exp $
 
-RMD160 (Flask-API-1.1.tar.gz) = d7911965373ce7d27613b2846dbc4116b34c031d
+BLAKE2s (Flask-API-1.1.tar.gz) = e32154895b6b0193b1fa3ac4e184bb3ebe2f31478cdf206d993aed52c9ceee60
 SHA512 (Flask-API-1.1.tar.gz) = fa55fcab452fa8bedb40225183d3a5c4c97af8a2e1a07620e67ab7991688432fd53f898551dad867a1636bf6ddd51056dfb38526fc5dfbdf1b4bb06fe897cafc
 Size (Flask-API-1.1.tar.gz) = 110060 bytes

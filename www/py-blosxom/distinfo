@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:08:12 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:28 nia Exp $
 
-RMD160 (pyblosxom-1.5.3/pyblosxom-1.5.3.tar.gz) = fcf6be7c8d9c9fa1ec4e59d34b11afe173ced382
+BLAKE2s (pyblosxom-1.5.3/pyblosxom-1.5.3.tar.gz) = 603d8e36446ac0c0ee7ad0dafc60cc1befb6e973a646c5f0ca2a9737f272590f
 SHA512 (pyblosxom-1.5.3/pyblosxom-1.5.3.tar.gz) = d7829cc5fbcf7a277087bc3cd372bf7ad9f3c98429642d1304047b2b3a80473180c9a7694f9c691b57aa858a2f067a5e8fd07c2935c93861cb41ea851c107e26
 Size (pyblosxom-1.5.3/pyblosxom-1.5.3.tar.gz) = 210669 bytes
 SHA1 (patch-Pyblosxom_plugins_readmore.py) = 768a7fa63e11cd971668ee4a493eb968395e7ce5

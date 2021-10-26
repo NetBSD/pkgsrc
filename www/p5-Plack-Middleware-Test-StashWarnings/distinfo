@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:13 nia Exp $
 
-RMD160 (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = c2017c9ac98b9c4494d871f589d3e1e1a7761d19
+BLAKE2s (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 048dc7f354893f94dca53034fd668b7b1ef7ab44ce4663ceea8652a0f9e4eb21
 SHA512 (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 6dc272355c545eb406ad5fce9cc1f40dea9beabe3d8a9d73a2055904098dae7833046d64a69e508f57e3b6edd0814cb004a635c39f49dfc39848f5b6c2e7934b
 Size (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 23970 bytes

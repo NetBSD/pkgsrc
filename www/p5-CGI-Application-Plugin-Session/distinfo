@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:45 nia Exp $
 
-RMD160 (CGI-Application-Plugin-Session-1.05.tar.gz) = 248d0b3c2cf6a877936f2b95ddabd969bb02ed99
+BLAKE2s (CGI-Application-Plugin-Session-1.05.tar.gz) = 2843ce3d36cf77287526d0c115200169bfa1413fe8fe5399d8879f7b56048865
 SHA512 (CGI-Application-Plugin-Session-1.05.tar.gz) = d21369f3bbe89d4269da8071b37222e1881fce0a6933b7122dc1f976b8c862a794069348a413721716ff2d4b6778ff749564ea587cb02eadf969ed8cfcd07c05
 Size (CGI-Application-Plugin-Session-1.05.tar.gz) = 22671 bytes

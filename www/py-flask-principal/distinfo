@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:38 nia Exp $
 
-RMD160 (Flask-Principal-0.4.0.tar.gz) = e62c000fedecee251e66a893a8121368017edab6
+BLAKE2s (Flask-Principal-0.4.0.tar.gz) = d5ca4ff610f183eec72e47c3eaf90a08b4da3ee6c5981696dbb6a4650359e9b1
 SHA512 (Flask-Principal-0.4.0.tar.gz) = 18f8f7766af62f99ccd52e34919e3f161ffb727c227c2714d651fad9bf6df3958289389e9b9cfe22d01a150985d1a631db3222626be1c4b12daea22434e4c85e
 Size (Flask-Principal-0.4.0.tar.gz) = 5452 bytes
