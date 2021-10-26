@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:57:53 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:19:38 nia Exp $
 
-RMD160 (gnome-menus-2.30.5.tar.bz2) = f3fafb467a7d9aaf0168236dab46f8bf82f71c26
+BLAKE2s (gnome-menus-2.30.5.tar.bz2) = fb698a138fd12c500e3f88d84df3b8bf863a797a594cc788f11872c9fc9a9b1b
 SHA512 (gnome-menus-2.30.5.tar.bz2) = e2722f8fc11d99b58de601171e10f87efd64e8752c26d3e2126ff909a4c263cd8be4842d3592b1029396fecf832aa094630fec2e47ea711a363cd03de2980a22
 Size (gnome-menus-2.30.5.tar.bz2) = 471327 bytes
 SHA1 (patch-aa) = 84d53f03b1b45172e810f5bc66dd4b648c605bd2

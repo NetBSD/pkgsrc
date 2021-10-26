@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:30 nia Exp $
 
-RMD160 (direvent-5.1.tar.gz) = 5621c3667b4b467dd26d16525c2af78f26b0c61f
+BLAKE2s (direvent-5.1.tar.gz) = c9d1863364bb249f61e1a2c808dc0e2c2c0d691a8b78b373535ec22c931f2da7
 SHA512 (direvent-5.1.tar.gz) = 21fd9fd2c6d7de3f8c52a56496121809456467184bf56cd5f9242a769424a72ca5a29deb5a6b10ae381ea99bc754dd1d5843aa38b478c2d7e5aa0a8ee7c9ba4d
 Size (direvent-5.1.tar.gz) = 846246 bytes

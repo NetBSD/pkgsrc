@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:35 nia Exp $
 
-RMD160 (fastfs.c) = d0aed43e37042291570eabc90b72c54a9480086f
+BLAKE2s (fastfs.c) = d556444e06c4061358a63b0d701a9fb5ab468bd873abfd6a0d684564d5c004bf
 SHA512 (fastfs.c) = f2357071432cf0ba988affd1913eaa1376474ddff37b0964efd639db38f69e1e65769a638a31369e666b67ccf875c0eab1ae5cbb5eba5e6d6894ed9a4e6f83ae
 Size (fastfs.c) = 3564 bytes

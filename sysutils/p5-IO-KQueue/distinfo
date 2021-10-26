@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:11 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:57 nia Exp $
 
-RMD160 (IO-KQueue-0.39.tar.gz) = 267eef6558f634609db9f7d30e6ce0d9c3e38560
+BLAKE2s (IO-KQueue-0.39.tar.gz) = 4733cb693269d36c6f8d83667521575f2add94dfeb9c3a56e3057fed558dabc6
 SHA512 (IO-KQueue-0.39.tar.gz) = 3bc060e726ec4407b9a84c786b277bcf53839815330dd89982f605b2abf054bcfef82f39aa6b4b7eb2c91b213c5b6eba88a13de5e71b3ea0cadd1b6c7bcba216
 Size (IO-KQueue-0.39.tar.gz) = 9496 bytes

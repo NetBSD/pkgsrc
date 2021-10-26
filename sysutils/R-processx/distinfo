@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:18 nia Exp $
 
-RMD160 (R/processx_3.5.2.tar.gz) = 0faae8fdd3af414fbfa102f81d948e869dc6830a
+BLAKE2s (R/processx_3.5.2.tar.gz) = 85c58c8e69d4957f3334caeec78901f2ce7d6128d66369db7732c12195849425
 SHA512 (R/processx_3.5.2.tar.gz) = 1f7bcbc6acbb28e34286525e4b43979afec077f8ace823516ed8779cbae75f6252363aa4d722e6fad3049f8835190700b4abe094188ccb68ce6436bfa7ad0c7b
 Size (R/processx_3.5.2.tar.gz) = 141424 bytes

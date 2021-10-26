@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:09 nia Exp $
 
-RMD160 (chef-telemetry-1.1.1.gem) = 1e3fb447828de79d513ac375d0a8552a10084ba5
+BLAKE2s (chef-telemetry-1.1.1.gem) = dd2f3101728abc5ecc5cd5d4c336b5e4092bb40918a82dfd7a8c13ed581fb245
 SHA512 (chef-telemetry-1.1.1.gem) = 7bf12aaf907a07980ace70e3d6b6947de969724c88830355b979f9c88413aa18f0806b80df253a970e65ed92bda942ece5401bee995601b0e87b7d20b0627c7c
 Size (chef-telemetry-1.1.1.gem) = 13312 bytes

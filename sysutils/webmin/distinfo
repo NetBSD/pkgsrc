@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 14:58:37 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:20:22 nia Exp $
 
-RMD160 (webmin-1.960.tar.gz) = ac862e11732ac7f5b25e703748e13466779b6032
+BLAKE2s (webmin-1.960.tar.gz) = d0228dcd8b5758cbf2dccac5958e23b45645003ad048a5ab522cdbf2b19e23d4
 SHA512 (webmin-1.960.tar.gz) = 430404ee7a068868f927188d3cc9b048ea48b4782de0d2d775dddec4aa5d0e682fd47bae615cc71a629c9b309cf2325a57a1b9fc6ff8585d608eef4c95a600d1
 Size (webmin-1.960.tar.gz) = 46897761 bytes
 SHA1 (patch-aa) = 74a647da70fcd5afc9fa878554bc1288ec5ba979

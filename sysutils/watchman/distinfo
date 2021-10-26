@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:37 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:20:22 nia Exp $
 
-RMD160 (watchman-4.7.0.tar.gz) = d2398aba63074636c73466183dd09521c0ddcdc2
+BLAKE2s (watchman-4.7.0.tar.gz) = 7343d4cf0b957bcc949cc3b0764649ce7f4061bcb81541935e22231ed9dcd634
 SHA512 (watchman-4.7.0.tar.gz) = 1b0729bfba28948619ab910e0d21b8ff1392c3a4d1b39b77241e5465337d76ea54c51ad4a4b1458dd25ad231a3f4eb5c9fa68b3d6b0941f95f89ab80e8a4c0cb
 Size (watchman-4.7.0.tar.gz) = 3412446 bytes
 SHA1 (patch-Makefile.am) = d044bad6b6e317b64d891fe0b9d67ca125de00d8

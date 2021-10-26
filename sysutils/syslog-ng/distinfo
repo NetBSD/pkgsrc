@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:58:30 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:20:16 nia Exp $
 
-RMD160 (syslog-ng-3.34.1.tar.gz) = 2e8759268de8a57d631eab7d6ea3577ad5feb401
+BLAKE2s (syslog-ng-3.34.1.tar.gz) = 3e341d0822818efffb3227aa7727dd5784b575f04bb66cf0f7dc8046a4094221
 SHA512 (syslog-ng-3.34.1.tar.gz) = f4df871f780b2e55e847d3ac108d0647659cac2493180d29436f04a4b75d38b90aba8adcd38f6337dce8f69d6aba9ff33fd3d8dc0f86021a29f60a21747e9a10
 Size (syslog-ng-3.34.1.tar.gz) = 5903489 bytes
 SHA1 (patch-ac) = 1f70075860999e854629faa7f293ef51243b398d

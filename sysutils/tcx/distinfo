@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:17 nia Exp $
 
-RMD160 (tcx-linux.tar.gz) = e331acb338582391909d39fbe69f252370b81abc
+BLAKE2s (tcx-linux.tar.gz) = a0a09471eabb423dbb9c2a76b489f0beb7e5728466ecdd79aa0d3ff9a87d9e39
 SHA512 (tcx-linux.tar.gz) = 786a0e672147ca7101d7cb96d5a82261ce91d46738ffae6bd37efdea1b1a749b2cf70df25d6037b6179c2a472870727d99af35f0b75d14dc8b19dbe639ca4994
 Size (tcx-linux.tar.gz) = 21028 bytes
 SHA1 (patch-aa) = ee2bd5713af9473925d6fa775074c1e4d4bcf2fe

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (logfinder-0.1.tar.gz) = 6d842d7059761092767e335efd545d3a336e9c8b
+BLAKE2s (logfinder-0.1.tar.gz) = 1aece8a87a7ae2a8e5c4bdeb26a54fdabc83532cf7eb831494c2435eb624efdd
 SHA512 (logfinder-0.1.tar.gz) = 48405faf45aee4e562194f91f3b1042f281325e8ec292ec9df0dd88cbbeaafab3f60b37178f0e5dbd342afe602f0bc75e245670f54d87913b2492b7c7ddffa0d
 Size (logfinder-0.1.tar.gz) = 14006 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:57:59 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:19:45 nia Exp $
 
-RMD160 (kfloppy-20.12.3.tar.xz) = 4201adc7e349303b4f8034f252e8e7189f5559c6
+BLAKE2s (kfloppy-20.12.3.tar.xz) = 03c7d6ed7dfaddbc0bbac7ebcb7b18c2aae7b2af035469756bc381e72cc8de86
 SHA512 (kfloppy-20.12.3.tar.xz) = 5220a465fbcb9feeed5f572d26ae4c2cf4eaf2aad68d66e102e3b6d24521d6997582bcb27484c39bb257ffdb19b93239dfe791890edec94af68879e8e10179c6
 Size (kfloppy-20.12.3.tar.xz) = 204260 bytes

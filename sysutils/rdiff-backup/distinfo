@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:58:21 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:20:07 nia Exp $
 
-RMD160 (rdiff-backup-1.2.8.tar.gz) = f7fb7a894afe17b495611a3738c85263ae72b2b5
+BLAKE2s (rdiff-backup-1.2.8.tar.gz) = 9116883d5c5c62ee82a2cbefad46cec2823d3ae6b7c0e683ac8afb7bd2ae5f5b
 SHA512 (rdiff-backup-1.2.8.tar.gz) = 4230bdfca7fc2a5ffd7bdc92ca899cde3276042115b4f488255a201e6ea361eab4ce4ebaae15841c357f189e1c88ad037e2727dec0a05c61b1c6016fa807739c
 Size (rdiff-backup-1.2.8.tar.gz) = 196526 bytes
 SHA1 (patch-__librsyncmodule.c) = 765a6160708f0fd0a1bd5e17883954723c722e69

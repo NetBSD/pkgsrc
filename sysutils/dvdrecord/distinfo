@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:57:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:19:33 nia Exp $
 
-RMD160 (dvdrtools-0.1.5.tar.bz2) = ca39253f7bc553b147dadce1c608f577e97fe320
+BLAKE2s (dvdrtools-0.1.5.tar.bz2) = 9d913e07e97121a23341eda39cbc6c60c97085fe5c3a5e998bf99d6e46d64cb3
 SHA512 (dvdrtools-0.1.5.tar.bz2) = 8adbf5d7d83f90b80e27ee9af7afe2a06107440f596ce8c3e294d949edc7fc2063b9ab3987033ce438e2f43b39e3061c48f57527345c118e97a4b16907d6da8d
 Size (dvdrtools-0.1.5.tar.bz2) = 1166308 bytes
 SHA1 (patch-aa) = 6463dd7852df43089724976c75a24ea41d9a66bc

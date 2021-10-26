@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:18 nia Exp $
 
-RMD160 (tpb-0.6.4.tar.gz) = 09cf46ed1933d568ced7756f85fef35b23c1ded2
+BLAKE2s (tpb-0.6.4.tar.gz) = 24ea5ab99074fb7ab6a2ff9c4d456bff1ba0f4340f7d3441afcd01652d29b572
 SHA512 (tpb-0.6.4.tar.gz) = 1a12f4231b86bc3da2867670d5800f8f99f347743cf40b229c92485b6fe52e12b0222356d95d071ec26162ac778d2fe40867b4e635701620bc52236dbdb7b76a
 Size (tpb-0.6.4.tar.gz) = 280316 bytes
 SHA1 (patch-aa) = 9bef74177f7754bea5f38df6de113eef8fec905d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:23 nia Exp $
 
-RMD160 (ipw3945-ucode-1.14.2.tgz) = 09192b4ad0516eb04df62e6138f655f05ae7ef16
+BLAKE2s (ipw3945-ucode-1.14.2.tgz) = 5069d699831356e942947ca16918030e2242914c2c23574b1268ff0ed953cab4
 SHA512 (ipw3945-ucode-1.14.2.tgz) = 9631e86ede7c4cf382b497e3557b7f66a502359099eb262f1d234e9d7e1f363743ba4bf16e1b1e9e07e6557907dfdffa6f1354c2ccd6bdb5e3b6048b6e481b09
 Size (ipw3945-ucode-1.14.2.tgz) = 63871 bytes

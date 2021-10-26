@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:54 nia Exp $
 
-RMD160 (node_exporter-1.0.1.tar.gz) = c1bf34bc93f44db6fefc47a0fac86cd03de5b049
+BLAKE2s (node_exporter-1.0.1.tar.gz) = 07743b81a9e267063428ad5577212b8203b4a79b1997eb2396778e5cccd92c55
 SHA512 (node_exporter-1.0.1.tar.gz) = 0643042a04494a65d1ebdedf78671a1e3473b7ac6f3bc606fa2c52e893dfc68b591ef7e38ac6768c4c529c25b831811c01839475a4fde9baeb0a6c581a57839f
 Size (node_exporter-1.0.1.tar.gz) = 2792033 bytes

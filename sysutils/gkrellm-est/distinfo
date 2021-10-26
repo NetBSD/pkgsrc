@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:38 nia Exp $
 
-RMD160 (gkrellm-est-20040710.tar.gz) = 728227012e93c700039045c4faac973462a20e56
+BLAKE2s (gkrellm-est-20040710.tar.gz) = 3a981f742f2d329f9a025b6feeaaf9d161bc7d736616f474031c76244998673f
 SHA512 (gkrellm-est-20040710.tar.gz) = 07da156c78d14843c1bffe46955c5fdea28a63dbf6edc159dca00e0995032e130a419ca6d21a1250f863faa8dfa6283bad41e9a03ad8024a587dbc65ca2cf6aa
 Size (gkrellm-est-20040710.tar.gz) = 3375 bytes

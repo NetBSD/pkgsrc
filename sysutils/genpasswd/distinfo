@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:37 nia Exp $
 
-RMD160 (genpasswd-1.5.tar.gz) = 2add119a36db70f16e66cbc5bc4be96a57f5bb28
+BLAKE2s (genpasswd-1.5.tar.gz) = 4462cce32d51f274b849daff6c0ea0ac240282ef136d7fbef2af11ec6673d177
 SHA512 (genpasswd-1.5.tar.gz) = 86600e340836a154a249c152145b4e674b6ea203395f3cf2335f4e53ed143735752665228fb5999d058a8ce439304350833f47a6ba30d09407e870e8e27f00a1
 Size (genpasswd-1.5.tar.gz) = 2724 bytes

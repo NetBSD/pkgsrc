@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:58:39 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:20:25 nia Exp $
 
-RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
+BLAKE2s (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 4a7456f18df85a639d003b3e8c926414f421cd77e032da9813fdc9beaf871795
 SHA512 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = bbcce5e55040e7e29adebd4a5253a046016a6e2e7ff34cf801a42d147e1ec1af57e0297318249bfa9c5bbeac969fe4b37c18cbf845a80b2136d65387a4fc31da
 Size (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 3732065 bytes
-RMD160 (xen411/xen-4.11.4.tar.gz) = 49819fcd1de3985d4dea370be962548c862f2933
+BLAKE2s (xen411/xen-4.11.4.tar.gz) = 15747b7b714afba7235363546f2025048a7b19701a3de118aa3c302874c6a1fe
 SHA512 (xen411/xen-4.11.4.tar.gz) = 8383f0b369fa08c8ecfdd68f902a2aaad140146a183131c50c020fe04c2f1e829c219b9bd9923fa8f1c180e1e7c6e73d0d68b7015fc39fd3b7f59e55c680cedb
 Size (xen411/xen-4.11.4.tar.gz) = 25184564 bytes
 SHA1 (patch-.._ipxe_src_core_settings.c) = 1eab2fbd8b22dde2b8aa830ae7701603486f74e4

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 14:57:54 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:19:40 nia Exp $
 
-RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
+BLAKE2s (hal-0.5.14.tar.bz2) = e236aed5c9d555bb9b35b056c9f50599d30827e7b7ff8348f393885a90909366
 SHA512 (hal-0.5.14.tar.bz2) = fe34e0dd0a630b943ea1ce2a2af71260309144fb76ae0f482c475610f0347f403f2a3bac81d27a95868bf640fca78e6e8de0051e8e1a3f39ff6804232ecc333c
 Size (hal-0.5.14.tar.bz2) = 942954 bytes
 SHA1 (patch-aa) = 83d20e99943be5c4e9eaeff7a86d79a8912d9c99

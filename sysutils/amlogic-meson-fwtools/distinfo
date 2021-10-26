@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:57:33 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:19 nia Exp $
 
-RMD160 (libretech-cc-aml_encrypt_gxl) = 8efc8f51ea062320a7626a761ba245508d21ebf6
+BLAKE2s (libretech-cc-aml_encrypt_gxl) = 25a9ec4f1f23d5cb7ac09c3b9666d7d3ff57352d7922c7b7639e927569e490a9
 SHA512 (libretech-cc-aml_encrypt_gxl) = 041a9558d314f24234a79a57bdeda91f2326fc52376d4d12b64223741af510883a13e98a39390594d00f78b4eef09c543981020f8320345c45c6d859b422d270
 Size (libretech-cc-aml_encrypt_gxl) = 1883448 bytes
-RMD160 (odroidc2-v2015.01-aml_encrypt_gxb) = 5cb9ffcb6e8486de42796a448c2e42ed86c5c1bc
+BLAKE2s (odroidc2-v2015.01-aml_encrypt_gxb) = e8b83084c07ff3357def1b82ae7e84e424795ab838a428289950c503220acda1
 SHA512 (odroidc2-v2015.01-aml_encrypt_gxb) = 195957f44d93f523f9492b4b305b20a18384995001391466ccbcd152147fae132e612e09dd79987fe745f835ef4324ae2f5bc3c3c1f0824acdaf651bcf16c10b
 Size (odroidc2-v2015.01-aml_encrypt_gxb) = 1011765 bytes
-RMD160 (odroidc2-v2015.01-fip_create) = ade537dd04484331ff050d1d41f562f700c9808e
+BLAKE2s (odroidc2-v2015.01-fip_create) = 72ffb7eb4c9b905414377b61fca3408e778652731c0117458258225108b8fbc6
 SHA512 (odroidc2-v2015.01-fip_create) = 1d8a4dd5e23b191b2f2bc1737936a4549251c105eee47abd74db73d6695c912ecbd167489eb2b3ede323d0942b30a4eb75b8e673a7502472ece8e3777be3a9a7
 Size (odroidc2-v2015.01-fip_create) = 14176 bytes
