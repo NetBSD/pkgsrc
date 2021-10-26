@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:36 nia Exp $
 
-RMD160 (bxjatoucs.doc.r52509.tar.xz) = 05557f4d9706cdedd5689e8d688b8c6258638594
+BLAKE2s (bxjatoucs.doc.r52509.tar.xz) = aedd45d5ec64703c5b72cce98334b935f58ff25b4d7a020975d2358cbd76e06c
 SHA512 (bxjatoucs.doc.r52509.tar.xz) = 9c281fdda182269c7a048e1ef422f0c403ecef7d8fd8dc462ebe39b861fba013ede2ef351baa5ad4537b2e1495f1f0572c7edc6fa6407031ff19053bd6dfdc02
 Size (bxjatoucs.doc.r52509.tar.xz) = 2068 bytes

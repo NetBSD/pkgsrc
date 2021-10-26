@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:19 nia Exp $
 
-RMD160 (newtxtt.doc.r54512.tar.xz) = 3ed6b24cfdd204dbf5e6f779829156a95a5d897d
+BLAKE2s (newtxtt.doc.r54512.tar.xz) = 64abd419df9f3268ea4495b565117687049ce5120307bd182a52d6fff337ef94
 SHA512 (newtxtt.doc.r54512.tar.xz) = 0a29f11edadeec4284ac9c9c04230a925517b198eb3653a456ab68bf495a9dd0b846cea4c3e1a425539f0b834d37f8f9a7f20e5945e8c8efea7ab4bb9342f6fd
 Size (newtxtt.doc.r54512.tar.xz) = 171356 bytes

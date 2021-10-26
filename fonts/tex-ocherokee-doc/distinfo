@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:05:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:28:20 nia Exp $
 
-RMD160 (tex-ocherokee-25689/ocherokee.doc.tar.xz) = 872ad2eed89fa2ace7fe20f0b5772caeb5c0a06f
+BLAKE2s (tex-ocherokee-25689/ocherokee.doc.tar.xz) = ea2a3013debde4ef20e2319b309f97bd190dea27ed2bd56d82141bc087138adb
 SHA512 (tex-ocherokee-25689/ocherokee.doc.tar.xz) = 4114dd408f07aaadc44c7ba92e2d91a5db4a9a9f773f48cb0c1d3155aaf392d543402dac71d705a5b80e669f3d827fccf575a1d57946ab2d398719d9c987023a
 Size (tex-ocherokee-25689/ocherokee.doc.tar.xz) = 53440 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:04:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:27:56 nia Exp $
 
-RMD160 (fbb.doc.r55728.tar.xz) = 1855efbb74ba9eef8f603d77e2af159b3f1766c3
+BLAKE2s (fbb.doc.r55728.tar.xz) = 741da179001a3172be61f1b344bdb85da6505c060978ae1b11cc5881150d5db7
 SHA512 (fbb.doc.r55728.tar.xz) = c63214ea5a91ea6bab66a866a65c2ee43c64f49afbc3235e2f55cc0de89fb3a269bea45fb7d67ccbcda4bac3249b2f2ab14f780fde7cbd112231b16e58eac67c
 Size (fbb.doc.r55728.tar.xz) = 470700 bytes

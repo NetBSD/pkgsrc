@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:29 nia Exp $
 
-RMD160 (tex-arev-15878/arev.doc.tar.xz) = 5cc320d1e83b739e0f7fc4ab834ec061e93ef47f
+BLAKE2s (tex-arev-15878/arev.doc.tar.xz) = 35f2aba0cb9b6637dd5d3af82b521e67e08ad075fde2e67e8aff653028d183f9
 SHA512 (tex-arev-15878/arev.doc.tar.xz) = 55bd30ce97092fb83bf0691d508decbeffd203014fe6ad9e21d16d6c8923752c081df492a1aee73801d7a9b1083dd0236187f8ef3f5db0408d02cc0b85bce0d3
 Size (tex-arev-15878/arev.doc.tar.xz) = 524156 bytes

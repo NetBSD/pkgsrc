@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:00 nia Exp $
 
-RMD160 (EBGaramond-0.016.zip) = 36a3a1c00db0609dc24e22788c73b0b7b4745706
+BLAKE2s (EBGaramond-0.016.zip) = 3bf415865a6ea6758fee01211e24844db7793e293bdaca58a61737cad8582409
 SHA512 (EBGaramond-0.016.zip) = f7d67d6fb47ff7aa614b08d97f953cd50122935b40ff191c7b226ad0714b738a5b359b04342ebea10109e7ab8b4260256ce0f8592fd70dc3e7fe29c77188a955
 Size (EBGaramond-0.016.zip) = 2640545 bytes

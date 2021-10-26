@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:14 nia Exp $
 
-RMD160 (ja-klee-ttf-20201216/KleeOne-Regular.ttf) = d919575d93543de994a6b1df7fcc3a3ad9b20751
+BLAKE2s (ja-klee-ttf-20201216/KleeOne-Regular.ttf) = 73ecf6f6db2637eb739b153d4b9442e7fdf907f2ef75cfc42bfce2e5403e1abd
 SHA512 (ja-klee-ttf-20201216/KleeOne-Regular.ttf) = 617aba75dd8ddcfdd7952a22c42ca65d4848ae2e012e9e3c99368a54b125265c78109b535be6226de1999533eff6f02da610d6c4c40060b073a004f14c587d6c
 Size (ja-klee-ttf-20201216/KleeOne-Regular.ttf) = 20903724 bytes
-RMD160 (ja-klee-ttf-20201216/KleeOne-SemiBold.ttf) = 984e9c9666dc36353e39392d6e79b9a086079970
+BLAKE2s (ja-klee-ttf-20201216/KleeOne-SemiBold.ttf) = be634e66213ff60fa0585de4395a9f9062f008e701c16ba08afa8b2ad5bcca6c
 SHA512 (ja-klee-ttf-20201216/KleeOne-SemiBold.ttf) = 33f0e792d4cb77b488fd3441bdd49c8ff0755afd216362ec7ea6f77e3eeb8137aa8e4a7e20160527b597be119c25906380590480da6dbddd1ce359880bbabb51
 Size (ja-klee-ttf-20201216/KleeOne-SemiBold.ttf) = 21891112 bytes

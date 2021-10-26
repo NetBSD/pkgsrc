@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:35 nia Exp $
 
-RMD160 (tex-bookhands-46480/bookhands.tar.xz) = a9f2f31d92cf89874bf3923dfac76d5eb26f4ed5
+BLAKE2s (tex-bookhands-46480/bookhands.tar.xz) = 4cb2cb841bd6ba02edc81780764ca3b0f09b47290bddae3b576956eb0b7a340e
 SHA512 (tex-bookhands-46480/bookhands.tar.xz) = 8baeca1a73b00888b5978f4e4fd309e5b3d812049046ae2a35b0c31e5e4f4781c199ad7564f715f86702875ceaa8fec5f458328c41e7c7bc4271644ed7743629
 Size (tex-bookhands-46480/bookhands.tar.xz) = 139752 bytes

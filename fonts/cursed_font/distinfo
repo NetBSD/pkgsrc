@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:03:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:04 nia Exp $
 
-RMD160 (cursed-0.1.0.tar.gz) = 7e4977e92112d90b80eed4bdca777c9fdf0faab9
+BLAKE2s (cursed-0.1.0.tar.gz) = a5f03ef1a78c4e0652e1463c7502ff994f74c993c70f51f09658971ff60251e1
 SHA512 (cursed-0.1.0.tar.gz) = a24261196f11268e6cfcf9425c6b090f40bff2565643c5d4a128904c81417226b47fe4e20af70d714a6896fcb44cbc2120631e36c2d7a4c3f7aaf484db81b65a
 Size (cursed-0.1.0.tar.gz) = 2527338 bytes

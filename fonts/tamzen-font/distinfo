@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:03:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:24 nia Exp $
 
-RMD160 (Tamzen-1.11.5.tar.gz) = 80792d1422936902c9b71d8ab01f71891ece0c09
+BLAKE2s (Tamzen-1.11.5.tar.gz) = b7243ffe8681ec980a93d4807a1891e976f7d4e034ea3e30e1a76e8c71b547fe
 SHA512 (Tamzen-1.11.5.tar.gz) = bf4765664bcea165e329b443bfffca774cacf888dc67f8767b0a1562013270159775a8d7d57331983c69976c7499a5481b6a9401c93d8dc49d39bbf7c1c06268
 Size (Tamzen-1.11.5.tar.gz) = 393833 bytes

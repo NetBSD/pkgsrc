@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:26 nia Exp $
 
-RMD160 (quattrocento.r56020.tar.xz) = 855ea51add2545fed83b042d64640638265e45c7
+BLAKE2s (quattrocento.r56020.tar.xz) = 820e6daefa4a83ffdac9777785dd4648e31efe0cbb7303e3c0d53ebfe790e71b
 SHA512 (quattrocento.r56020.tar.xz) = 8ef86d388e28f0fcfd66bfbf190f4a997029224387d3c18e81f7f1790d6440aeff72125608b471817911cb2deec1f0641e7a1c166bd0e04b8ce550800169a691
 Size (quattrocento.r56020.tar.xz) = 729188 bytes

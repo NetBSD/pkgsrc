@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:27 nia Exp $
 
-RMD160 (albatross.doc.r57416.tar.xz) = d1ba473132fb8bf7a12d55ea0a9ed4b02eca654c
+BLAKE2s (albatross.doc.r57416.tar.xz) = 7682b11e75f8e078b21ec1738ff74b647ecbf6bce8a8aee686edee30d6b74f68
 SHA512 (albatross.doc.r57416.tar.xz) = 3501da3f5dd2ed9830029f4880e59ec6a837ae6063fc7abf6b3d2cee0357c2fab2c7747676a0a1d719e68cb512e680fd0a2eb77ba09993f86f5e32ae5f8e40bc
 Size (albatross.doc.r57416.tar.xz) = 99644 bytes

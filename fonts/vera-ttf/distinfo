@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:40 nia Exp $
 
-RMD160 (ttf-bitstream-vera-1.10.tar.bz2) = 23f7f609794388b68f539d70b600bc3c37dfe37e
+BLAKE2s (ttf-bitstream-vera-1.10.tar.bz2) = db8ea01f8493d2256908b9cb239d712194e60fabe19c76d765a0c30568e5e79a
 SHA512 (ttf-bitstream-vera-1.10.tar.bz2) = 75b481553dbe27711ff779c13990397f76d59de819085e55092fb2ee86d2780232512487a5dce33b29e38edfcc73e34efbba07f7016e7ff4e59bb35301e7a392
 Size (ttf-bitstream-vera-1.10.tar.bz2) = 264276 bytes

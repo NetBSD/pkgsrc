@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:41 nia Exp $
 
-RMD160 (tex-cm-unicode-19445/cm-unicode.tar.xz) = a7d1031047eae13dd5af0f9d7b2adc2323156467
+BLAKE2s (tex-cm-unicode-19445/cm-unicode.tar.xz) = 3e3d4246fa2a47c173bf98e82cd8b9f73498b4537af00683781d8a8f8fe237b7
 SHA512 (tex-cm-unicode-19445/cm-unicode.tar.xz) = 8a69fa7b1e2e36c4d2630b871132967b05c262963bbbf5bcc0956329b8f5bd50840a7a5ee3697c1521084b19a1f5bc1b3e0a3df5bf557d49274c11b884d6a83d
 Size (tex-cm-unicode-19445/cm-unicode.tar.xz) = 14122188 bytes

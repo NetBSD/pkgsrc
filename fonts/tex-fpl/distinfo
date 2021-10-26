@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:00 nia Exp $
 
-RMD160 (tex-fpl-49603/fpl.tar.xz) = 78fe540e47b90c250bd94bcbdd2f76cca79356e2
+BLAKE2s (tex-fpl-49603/fpl.tar.xz) = 14bd6ede89eecbba50b33b8d7754fedcf588ef43680b17ad610efbd845f232ce
 SHA512 (tex-fpl-49603/fpl.tar.xz) = 459008efa5ebe60dbf45a5d3abea7bf4c857f71d50ededb4bea5f90f23877f7eb311c3427fd3ab3a67a04cd2bc9906b8dee325a7153d8339e329befc8edbb15e
 Size (tex-fpl-49603/fpl.tar.xz) = 288444 bytes

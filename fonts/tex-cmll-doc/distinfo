@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:43 nia Exp $
 
-RMD160 (tex-cmll-17964/cmll.doc.tar.xz) = 57e6f04507b7d95a6acd3ac617e3b73c275e6587
+BLAKE2s (tex-cmll-17964/cmll.doc.tar.xz) = 3d036f8eb91cc4f40abd0c760c78031cdccc8c49de3b5fec86b5dcff083a29ba
 SHA512 (tex-cmll-17964/cmll.doc.tar.xz) = 3d1923b9a16d0123f929a976f09f747c3fce8eef27514c722a2cb1fc1237aaafc7fba21e5506923d3a9e7f446c7151d803c046e38f26f7f6025cf082289a2057
 Size (tex-cmll-17964/cmll.doc.tar.xz) = 96496 bytes

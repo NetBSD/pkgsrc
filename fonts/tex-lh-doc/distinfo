@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:10 nia Exp $
 
-RMD160 (tex-lh-15878/lh.doc.tar.xz) = 5e717e32900f7cd49c6fe5e683a317f8e5381b89
+BLAKE2s (tex-lh-15878/lh.doc.tar.xz) = 85f7b6139175cd698210e56308054e2d195af2c5ecf3f3bbb7f558f1131ae0b3
 SHA512 (tex-lh-15878/lh.doc.tar.xz) = 21506cf863212d1e8da9c6a975808981b94ff13ba102a1b32e68727af360753575871ff5270aa68394597d747d26ccda3c8b645087a50b406df76a4516ef4b88
 Size (tex-lh-15878/lh.doc.tar.xz) = 55468 bytes

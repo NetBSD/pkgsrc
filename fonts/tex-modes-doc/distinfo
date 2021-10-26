@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:17 nia Exp $
 
-RMD160 (modes.doc.r56303.tar.xz) = ae32ac02a4f8e5714bc63e26f6bfbfaa2ecbd819
+BLAKE2s (modes.doc.r56303.tar.xz) = 8faa45470681ec430784df5f37e881884a2f07f339d622d83d96c03b2fa81fdd
 SHA512 (modes.doc.r56303.tar.xz) = dd7d78b8b355d7d056d288c0026d83115878abf91ceb183b48a3505620f0be4c8ef04ed0259a8f5a079c6191f33fc1331e9a3b1660b9312d165914b9176524e8
 Size (modes.doc.r56303.tar.xz) = 275948 bytes

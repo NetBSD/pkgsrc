@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:14 nia Exp $
 
-RMD160 (tex-mdputu-20298/mdputu.tar.xz) = 8a3435dc11969e88c4a6d49d11db8fa8262ba103
+BLAKE2s (tex-mdputu-20298/mdputu.tar.xz) = df93e63dcc6bbb4352b9fb1205d720da4fb6174c3671e6cdd3f9d3580d223c08
 SHA512 (tex-mdputu-20298/mdputu.tar.xz) = b1f8c2dca23fac05a917ebe07ae3979e44fcd7cd88a5044a11a897c04a9955bf9f1b6203c44a9d39049923a264bc6e3f5562216e89b1967261c6aeff5a98a05c
 Size (tex-mdputu-20298/mdputu.tar.xz) = 16952 bytes

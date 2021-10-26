@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:39 nia Exp $
 
-RMD160 (uni-vga.tgz) = 94a2b7ca0710690ccb6f79f93f926b2c0e136720
+BLAKE2s (uni-vga.tgz) = e75607823aaf5e3a896167dc58e304d820b6b9aa14c49f25a2c5ed74ad40287f
 SHA512 (uni-vga.tgz) = 56f0c859a0b3b13fc567f394d4ba4f5b18049da363a3fd9d1d998c268e1b7e1dd17dcbdfac4f121ae1c03a076cfa02ab311f85c7bdc759b9e1b2af299077f8b6
 Size (uni-vga.tgz) = 45055 bytes

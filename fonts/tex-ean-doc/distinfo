@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:50 nia Exp $
 
-RMD160 (tex-ean-20851/ean.doc.tar.xz) = a4d57a12798f4ac4d4385b6078e8b7d4110ab3de
+BLAKE2s (tex-ean-20851/ean.doc.tar.xz) = 01515e7f000dad472034434f8dd40040b29173d31baa1c9d017cb2b3172e03a4
 SHA512 (tex-ean-20851/ean.doc.tar.xz) = 215230a3c9b25a6556f644ecaf605318310441bd91222495ae2056fdd45fe367a6cb5b6816212bcdce629edab5cdd9c51e7ec07279cc9e903caa5089823bb6a0
 Size (tex-ean-20851/ean.doc.tar.xz) = 952 bytes

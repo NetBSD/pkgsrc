@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:23 nia Exp $
 
-RMD160 (sgi-fonts-1.0-457.src.rpm) = 6d6c2751825ded61a0a1c0500fb40af91c595765
+BLAKE2s (sgi-fonts-1.0-457.src.rpm) = 40516e63de1707904ffc6b21ad5ba202229ad68b4e358887651c39c85bd6391c
 SHA512 (sgi-fonts-1.0-457.src.rpm) = 4599116c3acbfdc75506f12e4eb090e2159124391d5c95e793417fc139744baafcfbc1402603fb1e3c327de80d052fb9bf3b2f36af29aec49b75c84f4a89c7cb
 Size (sgi-fonts-1.0-457.src.rpm) = 68579 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:08 nia Exp $
 
-RMD160 (font-bitstream-75dpi-1.0.3.tar.bz2) = d534b82e03ede5f9e69859ce824e9b92b0f58a24
+BLAKE2s (font-bitstream-75dpi-1.0.3.tar.bz2) = 1f1138062a4795070c665a0bcefdd8d6a4e10cec5a85c695693974f85bb0662a
 SHA512 (font-bitstream-75dpi-1.0.3.tar.bz2) = 9311a5b0cbe1613aca87fdf7fd9ab263eb1129e3c3eacbce54547f2185e151fb1237128b1b6d39f716f28694a486909564ecc9a0aef061438622d11b5661d650
 Size (font-bitstream-75dpi-1.0.3.tar.bz2) = 174603 bytes

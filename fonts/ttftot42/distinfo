@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:38 nia Exp $
 
-RMD160 (ttftot42-0.3.1.tar.gz) = 254ea7942d7f6b005ebb912970e898b3a2a41bf8
+BLAKE2s (ttftot42-0.3.1.tar.gz) = 6925a724f4e315c9cf6d6df7dc218e151c282943a2292e02e1d4db581c790a13
 SHA512 (ttftot42-0.3.1.tar.gz) = 6b49abb764817e6d4f3ec0c9ec1cd9971d681c186910881c187b7947e27cd8c0cb4eb4283adb2c8466c1d8b2a3a669aca399ad7aaf9ef813a56fed753fae2506
 Size (ttftot42-0.3.1.tar.gz) = 54489 bytes

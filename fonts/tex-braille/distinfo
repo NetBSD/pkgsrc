@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:36 nia Exp $
 
-RMD160 (tex-braille-20655/braille.tar.xz) = b3afd4d617a4180c8c85d23e37e0ae869026a9f4
+BLAKE2s (tex-braille-20655/braille.tar.xz) = d92833da1c8cb961677713b68c8ab664512f53017609210190b945b70a179d0c
 SHA512 (tex-braille-20655/braille.tar.xz) = f3bcb8e822da614c8660d6e7d16466a0696eb232bf673e65432da781dbd704f6448899d65df1451791642b520d5319e33f01b359bf5ad506b223d59eafa87f0c
 Size (tex-braille-20655/braille.tar.xz) = 5964 bytes

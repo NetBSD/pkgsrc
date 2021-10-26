@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:11 nia Exp $
 
-RMD160 (font-sun-misc-1.0.3.tar.bz2) = eefc8fd421bdd6fd7581a8b9603c9216767b21c1
+BLAKE2s (font-sun-misc-1.0.3.tar.bz2) = 0889127fc1f64ce517ddd2222bea254744b41f9bd2763741d8b0b2ebcb88cdf1
 SHA512 (font-sun-misc-1.0.3.tar.bz2) = 52c4a38e49a94831999652d9830da841949c319083ea40492e83690e1e5c2d31ea1979046a420af0e51bc105b8697bb06b4a438485e82b130d7469ad4519e275
 Size (font-sun-misc-1.0.3.tar.bz2) = 116360 bytes

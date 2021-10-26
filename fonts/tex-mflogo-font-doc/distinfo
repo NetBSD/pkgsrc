@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:16 nia Exp $
 
-RMD160 (tex-mflogo-font-36898/mflogo-font.doc.tar.xz) = 44df46a455f608d82420f309b531fddd25988f19
+BLAKE2s (tex-mflogo-font-36898/mflogo-font.doc.tar.xz) = 6d70abdb0c8d0b4a7a98438db9db3e8797aa4b1c26ddfdadc3cd801f4dcd4d3b
 SHA512 (tex-mflogo-font-36898/mflogo-font.doc.tar.xz) = 9b80d91061ba16a22d6b3ae25a6b535826b110c1fcadd68a37ebb21479bd2736197b36f05df27f95e36413e96d314206f1437e7df842a07a1502cc91d843d9f6
 Size (tex-mflogo-font-36898/mflogo-font.doc.tar.xz) = 1072 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:51 nia Exp $
 
-RMD160 (tex-ecc-15878/ecc.doc.tar.xz) = f06aa315ffe07ed7aa9fd744c44238279454d6af
+BLAKE2s (tex-ecc-15878/ecc.doc.tar.xz) = 7f7cc0eaa058601b9b3c9393e05542820d47b36810a023b4ce08aca9819d7d52
 SHA512 (tex-ecc-15878/ecc.doc.tar.xz) = 03b8e32e4e82885c44b333c722b3a8aa1344149b11b14d4c47a5a152abe1ac60a43e88e76b3bcd797e8e2c1a81a8dcfdbe5367b9d95deda7c25ca3714a0d1ba1
 Size (tex-ecc-15878/ecc.doc.tar.xz) = 2952 bytes

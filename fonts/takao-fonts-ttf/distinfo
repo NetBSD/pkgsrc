@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:24 nia Exp $
 
-RMD160 (TakaoFonts_00303.01.tar.xz) = bd9893e2f699de15f44a4e0ec99050881d8b6d6c
+BLAKE2s (TakaoFonts_00303.01.tar.xz) = 90f52035a165adda090072c2a554a27a8c33298c6aab3e3a48384b2d32083dbf
 SHA512 (TakaoFonts_00303.01.tar.xz) = 376385586a9589842ec15265f648d8ba0ffdf73af98248d1dad59bec537bc03485ff64538b547c698e8763e3058e6d976c8ea5839d818a2b375d184836d40fd1
 Size (TakaoFonts_00303.01.tar.xz) = 11296836 bytes

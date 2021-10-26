@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:38 nia Exp $
 
-RMD160 (tex-cbfonts-fd-44917/cbfonts-fd.tar.xz) = cd7e6c3b9d05bc7000a0119a0628f4dea012fe8a
+BLAKE2s (tex-cbfonts-fd-44917/cbfonts-fd.tar.xz) = c32b6ee335bbb398b2f622cfad15bcc06cf374d63d879b1e00eec15952e8d080
 SHA512 (tex-cbfonts-fd-44917/cbfonts-fd.tar.xz) = 47da74fc10763b78a1975f68840d0f92dd27c4bac67304ea6bba5a8522dabdcb21ce628b2083f5487d450960d4d9f7e9745dfa883544b8439655bf151a3aa73c
 Size (tex-cbfonts-fd-44917/cbfonts-fd.tar.xz) = 3304 bytes
